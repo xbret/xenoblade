@@ -1,0 +1,7 @@
+#ifndef TRK_PPC_TARGIMPL
+#define TRK_PPC_TARGIMPL
+
+#define DS_KERNEL_MAJOR_VERSION     0
+#define DS_KERNEL_MINOR_VERSION     4
+
+#endif

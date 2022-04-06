@@ -1,0 +1,40 @@
+#ifndef _NEW
+#define _NEW
+
+#include <exception>
+#include <cstddef>
+
+namespace std{
+    class bad_alloc : public exception {
+    public:
+        virtual ~bad_alloc(){}
+        virtual const char* what() const{
+            return "bad_alloc";
+        }
+    };
+
+    struct nothrow_t {};
+    extern const nothrow_t nothrow;
+}
+
+/*
+void* operator new(std::size_t size, void* ptr);
+void* operator new(std::size_t size, const std::nothrow_t&) throw();
+
+void  operator delete(void* ptr) throw();
+void  operator delete(void* ptr, const std::nothrow_t&) throw();
+
+void* operator new[](std::size_t size) throw(std::bad_alloc);
+void* operator new[](std::size_t size, const std::nothrow_t&) throw();
+
+void  operator delete[](void* ptr) throw();
+void  operator delete[](void* ptr, const std::nothrow_t&) throw();
+
+void* operator new  (std::size_t size, void* ptr) throw();
+void* operator new[](std::size_t size, void* ptr) throw();
+
+void  operator delete  (void* ptr, void*) throw();
+void  operator delete[](void* ptr, void*) throw();
+*/
+
+#endif

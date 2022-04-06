@@ -1,0 +1,28 @@
+{
+    "[c]": {
+        "files.encoding": "utf8"
+    },
+    "[cpp]": {
+        "files.encoding": "utf8"
+    },
+    "editor.tabSize": 4,
+	"files.exclude": {
+        "**/CVS": false,
+		"**/*.ctx": true
+	},
+    "files.insertFinalNewline": true,
+    "files.associations": {
+        "*.cp": "cpp",
+        "*.asm": "wla-dx-asm",
+        "*.inc": "cpp",
+        "dstypes.h": "c"
+    },
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+        "build/*/config.json": true,
+        "build/**/*.MAP": true,
+        "build.ninja": true,
+        ".ninja_*": true,
+        "objdiff.json": true
+    }
+}
