@@ -1,0 +1,93 @@
+struct RelHeader
+{
+    /* 0x00 */ uint32_t moduleId;               // unique module identifier
+    /* 0x04 */ uint32_t nextModule;             // always 0; filled in at runtime
+    /* 0x08 */ uint32_t prevModule;             // always 0; filled in at runtime
+    /* 0x0C */ uint32_t sectionCount;           // number of sections in the section table
+    /* 0x10 */ uint32_t sectionTableOffset;     // file position of section table
+    /* 0x14 */ uint32_t moduleNameOffset;       // offset of the module name in the string table (not in this file)
+    /* 0x18 */ uint32_t moduleNameSize;         // size of the module name in the string table (not in this file)
+    /* 0x1C */ uint32_t formatVersion;          // REL format version
+    /* 0x20 */ uint32_t bssSize;                // size of the BSS section
+    /* 0x24 */ uint32_t relocationTableOffset;  // file position of relocation entries
+    /* 0x28 */ uint32_t importTableOffset;      // file position of import table
+    /* 0x2C */ uint32_t importTableSize;        // size of import table
+    /* 0x30 */ uint8_t  prologSection;          // section in which the _prolog function is in, or 0 if absent
+    /* 0x31 */ uint8_t  epilogSection;          // section in which the _epilog function is in, or 0 if absent
+    /* 0x32 */ uint8_t  unresolvedSection;      // section in which the _unresolved function is in, or 0 if absent
+    /* 0x33 */ uint8_t  pad33;
+    /* 0x34 */ uint32_t prologOffset;           // offset of the _prolog function in its section
+    /* 0x38 */ uint32_t epilogOffset;           // offset of the _epilog function in its section
+    /* 0x3C */ uint32_t unresolvedOffset;       // offset of the _unresolved function in its section
+    /* 0x40 */ uint32_t align;
+    /* 0x44 */ uint32_t bssAlign;
+};
+
+order sections should be in
+.text
+.ctors
+.dtors
+.rodata //0xDC in length
+.balign 32
+.data //0x311D in length
+.relocationTable //size 0x1DB0
+.importTable //size 0x10
+
+
+
+START OF REL HEADER ===================================
+    /* 0x00 */ 00000001 - moduleID
+    /* 0x04 */ 00000000 - nextModule
+    /* 0x08 */ 00000000 - prevModule
+    /* 0x0C */ 0000000E - sectionCount
+    /* 0x10 */ 00000048 - sectionTableOffset
+    /* 0x14 */ 00000000 - moduleNameOffset
+    /* 0x18 */ 0000002F - moduleNameSize
+    /* 0x1C */ 00000002 - formatVersion
+    /* 0x20 */ 0000005C - bssSize
+    /* 0x24 */ 00005C9D - relocationTableOffset
+    /* 0x28 */ 00007A4D - importTableOffset
+    /* 0x2C */ 00000010 - importTableSize
+    /* 0x30 */ 01       - prologSection
+    /* 0x31 */ 01       - epilogSection
+    /* 0x32 */ 0000     - unresolvedSection
+    /* 0x34 */ 00000000 - prologOffset
+    /* 0x38 */ 00000054 - epilogOffset
+    /* 0x3C */ 00000000 - unresolvedOffset
+    /* 0x40 */ 00000020 - align
+    /* 0x44 */ 00000008 - bssAlign
+
+START OF SECTION TABLE ===============================
+    /* 0x48 */ 00000000 always0Offset
+    /* 0x4C */ 00000000 always0Size
+    /* 0x50 */ 000000B9 .textOffset (bit 1 being on means executable)
+    /* 0x54 */ 000029C8 .textSize
+    /* 0x58 */ 00002A80 .ctorsOffset
+    /* 0x5C */ 00000004 .ctorsSize
+    /* 0x60 */ 00002A84 .dtorsOffset
+    /* 0x64 */ 00000004 .dtorsSize
+    /* 0x68 */ 00002A88 .rodataOffset
+    /* 0x6C */ 000000DC .rodataSize
+    /* 0x70 */ 00002B80 .dataOffset
+    /* 0x74 */ 0000311D .dataSize
+    /* 0x78 */ 00000000 .bssOffset
+    /* 0x7C */ 0000005C .bssSize
+
+    //all sections below this are blank
+    /* 0x80 */ 00000000 unk_80_Offset
+    /* 0x84 */ 00000000 unk_80_Size
+    /* 0x88 */ 00000000 unk_88_Offset
+    /* 0x8C */ 00000000 unk_88_Size
+    /* 0x90 */ 00000000 unk_90_Offset
+    /* 0x94 */ 00000000 unk_90_Size
+    /* 0x98 */ 00000000 unk_98_Offset
+    /* 0x9C */ 00000000 unk_98_Size
+    /* 0xA0 */ 00000000 unk_A0_Offset
+    /* 0xA4 */ 00000000 unk_A0_Size
+    /* 0xA8 */ 00000000 unk_A8_Offset
+    /* 0xAC */ 00000000 unk_A8_Size
+    /* 0xB0 */ 00000000 unk_B0_Offset
+    /* 0xB4 */ 00000000 unk_B0_Size
+START OF .TEXT SECTION =============================
+    /* 0xB8 */ 
+
