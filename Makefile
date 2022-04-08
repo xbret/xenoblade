@@ -70,16 +70,17 @@ ifeq ($(WINDOWS),1)
   WINE :=
   AS      := $(DEVKITPPC)/bin/powerpc-eabi-as.exe
   CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp.exe -P
+  SHA1SUM := sha1sum
 else
   WINE ?= wine
   AS      := /opt/devkitpro/devkitPPC/bin/powerpc-eabi-as
   CPP     := /opt/devkitpro/devkitPPC/bin/powerpc-eabi-cpp -P
+  SHA1SUM := shasum
 endif
 CC      = $(WINE) tools/mwcc_compiler/Wii/$(MWCC_VERSION)/mwcceppc.exe
 LD      := $(WINE) tools/mwcc_compiler/Wii/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 ELF2REL := tools/elf2rel
-SHA1SUM := shasum
 PYTHON  := python3
 
 # Options
