@@ -140,6 +140,15 @@ blacklistedInsns = {
     PPC_INS_VADDUHM, PPC_INS_XXPERMDI, PPC_INS_XVMADDASP, PPC_INS_XVMADDMSP,
     PPC_INS_XVCMPGTSP, PPC_INS_XXMRGHD, PPC_INS_XSMSUBMDP, PPC_INS_XSTDIVDP,
     PPC_INS_XVADDSP, PPC_INS_XVCMPEQSP, PPC_INS_XVMSUBASP, PPC_INS_XVCMPGESP,
+    #Added instructions
+    PPC_INS_VMRGHB, PPC_INS_MFTB, PPC_INS_MFTBU, PPC_INS_VPKUHUM,
+    PPC_INS_XSCMPODP, PPC_INS_XSCMPUDP, PPC_INS_XSMADDADP, PPC_INS_XSMADDMDP,
+    PPC_INS_XSMSUBADP, PPC_INS_XSNMADDADP, PPC_INS_XVCMPEQDP, PPC_INS_XVCMPGEDP,
+    PPC_INS_XVCMPGTDP, PPC_INS_XVMADDADP, PPC_INS_XVMADDMDP, PPC_INS_XVMSUBADP,
+    PPC_INS_XVMSUBMDP, PPC_INS_XVMSUBMSP, PPC_INS_XVNMADDADP, PPC_INS_XVNMADDMDP,
+    PPC_INS_XVNMSUBADP, PPC_INS_XVNMSUBASP, PPC_INS_XVNMSUBMDP, PPC_INS_XVNMSUBMSP,
+    PPC_INS_XVTDIVSP, PPC_INS_XVDIVDP, PPC_INS_VMADDFP, PPC_INS_XXMRGHW,
+    PPC_INS_VADDUBM, PPC_INS_XSSUBDP, PPC_INS_VADDUWM,
 
     # Instructions that Capstone gets wrong
     PPC_INS_MFESR, PPC_INS_MFDEAR, PPC_INS_MTESR, PPC_INS_MTDEAR, PPC_INS_MFICCR, PPC_INS_MFASR
@@ -374,7 +383,7 @@ def disasm_ps(inst):
     opcode = (inst >> 1) & 0x1F
     if opcode == 6:  # doesn't seem to be used
         mnemonic = 'psq_lux' if inst & 0x40 else 'psq_lx'
-        return '%s f%i, (r%i + r%i), %i, qr%i' % (mnemonic, FD, RA, RB, WX, IX)
+        return '%s f%i, r%i, r%i, %i, qr%i' % (mnemonic, FD, RA, RB, WX, IX)
     if opcode == 7:
         mnemonic = 'psq_stux' if inst & 0x40 else 'psq_stx'
         return '%s f%i, r%i, r%i, %i, qr%i' % (mnemonic, FS, RA, RB, WX, IX)
@@ -385,7 +394,7 @@ def disasm_ps(inst):
     if opcode == 21:
         return 'ps_add f%i, f%i, f%i' % (FD, FA, FB)
     if opcode == 23:
-        return 'ps_sel f%i, f%i, f%i' % (FD, FA, FC)
+        return 'ps_sel f%i, f%i, f%i, f%i' % (FD, FA, FC, FB)
     if opcode == 24:
         return 'ps_res f%i, f%i' % (FD, FB)
     if opcode == 25:

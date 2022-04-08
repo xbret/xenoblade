@@ -9,7 +9,7 @@ import sys
 
 # Reads a bytearray from baserom.dol
 def read_baserom(start, size):
-    with open('../baserom.dol', 'rb') as f:
+    with open('baserom.dol', 'rb') as f:
         f.seek(start, os.SEEK_SET)
         return bytearray(f.read(size))
 
@@ -20,6 +20,9 @@ if len(sys.argv) != 2:
 # reads a 32-bit big endian value starting at pos
 def read_u32(data, pos):
     return (data[pos]<<24) | (data[pos+1]<<16) | (data[pos+2]<<8) | (data[pos+3])
+
+def read_u16(data, pos):
+    return (data[pos]<<8) | (data[pos+1])
 
 def is_ascii(code):
     if code >= 0x20 and code <= 0x7E:  # normal characters
@@ -65,6 +68,19 @@ def convert_data(data, offset):
     text = ''
     size = len(data)
     pos = 0
+
+     #If the incbin is just 1 byte, interpret it as a single 8 bit value
+    if size == 1:
+        val = data[pos]
+        text += '\t.byte 0x%02X\n' % val
+        return text
+
+     #If the incbin is just 2 bytes, interpret it as a single 16 bit value
+    if size == 2:
+        val = read_u16(data, pos)
+        text += '\t.2byte 0x%04X\n' % val
+        return text
+
     while pos < size:
         # pad unaligned
         pad = []
@@ -106,13 +122,20 @@ with open(sys.argv[1], 'rt') as f:
         m = re.match(r'\s*\.section\s+([\._A-Za-z0-9]+)', line)
         if m:
             currSection = m.groups()[0]
-        elif currSection in ['.rodata', '.data', '.sdata', '.sdata2', '.ctors', '.dtors', 'extab_', 'extabindex_']:
+        elif currSection in ['.rodata', '.data', '.sdata', '.sdata2', '.ctors', '.dtors', 'extab_', 'extabindex_',
+        '.data0', '.data1', '.data2', '.data3', '.data4', '.data5', '.data6', '.data7']:
             # Incbin directive
+            print()
             m = re.match(r'\s*\.incbin\s+"baserom.dol"\s*,\s*([^,]+),\s*([^,]+)', line)
             if m:
                 g = m.groups()
                 start = int(g[0], 0)
                 size = int(g[1], 0)
+
+                if size == 3:
+                    print(line)
+                    continue
+                
                 data = read_baserom(start, size)
                 print('\t# ROM: 0x%X' % start)
                 print(convert_data(data, start))
