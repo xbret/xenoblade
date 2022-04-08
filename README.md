@@ -1,2 +1,31 @@
-# xenoblade
+# Xenoblade
 WIP Decompilation of Xenoblade (JP)
+
+```diff
+- INFORMATION! -
+
+The ROM this repository builds cannot be shifted yet.
+```
+
+It builds the following DOL:
+
+xenoblade.jp.dol: `sha1: a564033aee46988743d8f5e6fdc50a8c65791160`
+
+## Building
+
+### Required Tools
+* [devkitPro](https://devkitpro.org/wiki/Getting_Started)
+* gcc
+
+### Instructions
+
+* WINDOWS ONLY STEP:
+	- Launch msys2(Provided by devkitPro) and run the command `pacman -S gcc`.
+	
+1. Download GC_WII_COMPILERS.zip from (https://cdn.discordapp.com/attachments/727918646525165659/917185027656286218/GC_WII_COMPILERS.zip) and extract the GC folder to tools/mwcc_compiler/.
+2. Run `make -j` in a command prompt or terminal.
+	- -j Allows make to use multiple threads, speeding up the process.
+
+* OPTIONAL:
+	- Obtain a clean DOL of Xenoblade (JP) and place it in the base working directory and rename it to `baserom.dol`.
+	- To generate a linker map (takes a considerable amount of time), run `make MAPGENFLAG=1 -j`
