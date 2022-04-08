@@ -1953,4 +1953,4 @@ lbl_80664148:
 	.skip 0x10
 .global lbl_80664158
 lbl_80664158:
-	.skip 0x24A8
+	.skip 0x10

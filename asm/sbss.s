@@ -1,6 +1,6 @@
 .include "macros.inc"
 
-.section .sbss, "wa"  # 0x80666600 -
+.section .sbss, "wa"  # 0x80666600 - 0x8066837f
 .global lbl_80666600
 lbl_80666600:
 	.skip 0x4
@@ -4431,4 +4431,5 @@ lbl_80668368:
 	.skip 0x4
 .global lbl_8066836C
 lbl_8066836C:
-	.skip 0x597C
+	.skip 0x14
+	#.skip 0x597C

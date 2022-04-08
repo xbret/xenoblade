@@ -30,6 +30,6 @@ SECTIONS
     .sdata 0x80664180 : { *(.sdata) } : sdata
     .sbss 0x80666600 (NOLOAD) : { *(.sbss) } : sbss
     .sdata2 0x80668380 : { *(.sdata2) } : sdata2
-    .sbss2 0x8066DCE8 (NOLOAD) : { *(.sbss2) } : sbss2
+    .sbss2 0x8066DCE0 (NOLOAD) : { *(.sbss2) } : sbss2
     .bss 0x80573C80 (NOLOAD) : { *(.bss) } : bss
 }
