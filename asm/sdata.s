@@ -5134,7 +5134,9 @@ lbl_80665E38:
 
 lbl_80665E39:
 
-	.incbin "baserom.dol", 0x571A19, 0x3
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
 
 .global lbl_80665E3C
 

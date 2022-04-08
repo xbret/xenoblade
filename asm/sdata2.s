@@ -21027,8 +21027,9 @@ lbl_8066BF7C:
 .global lbl_8066BF7D
 
 lbl_8066BF7D:
-
-	.incbin "baserom.dol", 0x575DDD, 0x3
+	.byte 0xFF
+	.byte 0x00
+	.byte 0x00
 
 .global lbl_8066BF80
 
