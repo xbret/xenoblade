@@ -32082,6 +32082,3 @@ lbl_8066DCC8:
 	.4byte 0x80000000
 	.asciz "/tmp/"
 	.balign 4
-	.4byte 0
-	.4byte 0
-

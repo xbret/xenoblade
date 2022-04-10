@@ -36,56 +36,63 @@ lbl_80006604:
 
 .global rom_copy_info
 rom_copy_info:
-	# ROM: 0x2724
-	.4byte 0x80004000  ;# ptr
-	.4byte 0x80004000  ;# ptr
-	.4byte 0x000026C8
-	.4byte 0x800066E0  ;# ptr
-	.4byte 0x800066E0  ;# ptr
-	.4byte 0x0001A938
-	.4byte 0x80021020  ;# ptr
-	.4byte 0x80021020  ;# ptr
-	.4byte 0x00018200
-	.4byte 0x80039220  ;# ptr
-	.4byte 0x80039220  ;# ptr
-	.4byte 0x004BC6CC
-	.4byte 0x804F5900
-	.4byte 0x804F5900
-	.4byte 0x000001F4
-	.4byte 0x804F5B00
-	.4byte 0x804F5B00
-	.4byte 0x0000000C
-	.4byte 0x804F5B20
-	.4byte 0x804F5B20
-	.4byte 0x000326A8
-	.4byte 0x805281E0
-	.4byte 0x805281E0
-	.4byte 0x0004BA74
-	.4byte 0x80664180
-	.4byte 0x80664180
-	.4byte 0x00002480
-	.4byte 0x80668380
-	.4byte 0x80668380
-	.4byte 0x00005958
-	.4byte 0
-	.4byte 0
-	.4byte 0
+#init
+.4byte _f_init
+.4byte _f_init_rom
+.4byte sz_init
+#extab
+.4byte _fextab_
+.4byte _fextab__rom
+.4byte szextab_
+#extabindex
+.4byte _fextabindex_
+.4byte _fextabindex__rom
+.4byte szextabindex_
+#text
+.4byte _f_text
+.4byte _f_text_rom
+.4byte sz_text
+#ctors
+.4byte _f_ctors
+.4byte _f_ctors_rom
+.4byte sz_ctors
+#dtors
+.4byte _f_dtors
+.4byte _f_dtors_rom
+.4byte sz_dtors
+#rodata
+.4byte _f_rodata
+.4byte _f_rodata_rom
+.4byte sz_rodata
+#.data
+.4byte _f_data
+.4byte _f_data_rom
+.4byte sz_data
+#sdata
+.4byte _f_sdata
+.4byte _f_sdata_rom
+.4byte sz_sdata
+#sdata2
+.4byte _f_sdata2
+.4byte _f_sdata2_rom
+.4byte sz_sdata2
+#Empty section
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
 
 
 .global bss_init_info
 bss_init_info:
-	# ROM: 0x27A8
-	.4byte 0x80573C80
-	.4byte 0x000F04FC
-	.4byte 0x80666600
-	.4byte 0x00001D70
-	.4byte 0x8066DCE0
-	.4byte 0x0000001C
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
+#bss
+.4byte _f_bss
+.4byte sz_bss
+#sbss
+.4byte _f_sbss
+.4byte sz_sbss
+#sbss2
+.4byte _f_sbss2
+.4byte sz_sbss2
+#Empty section
+.4byte 0
+.4byte 0

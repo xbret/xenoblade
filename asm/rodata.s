@@ -38762,9 +38762,3 @@ lbl_805281B0:
 	.asciz "CNBanner"
 	.balign 4
 	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0

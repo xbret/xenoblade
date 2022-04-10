@@ -10,8 +10,3 @@ lbl_804F5B00:
 	.4byte 0x802B96B4  ;# ptr
 	.4byte 0x802BA7B0  ;# ptr
 	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0

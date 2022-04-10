@@ -132,7 +132,3 @@ lbl_804F5900:
 	.4byte 0x804F01C8
 	.4byte 0x804F5140
 	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-

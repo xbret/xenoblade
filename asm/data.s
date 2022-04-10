@@ -79691,7 +79691,3 @@ lbl_80573BC0:
 	.4byte 0x806641A8
 	.4byte 0
 	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-

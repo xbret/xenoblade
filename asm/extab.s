@@ -27217,6 +27217,3 @@
 	.4byte 0
 	.4byte 0x30080000
 	.4byte 0
-	.4byte 0
-	.4byte 0
-
