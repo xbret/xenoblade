@@ -16,12 +16,11 @@ lbl_804F5B5C:
 
 	# ROM: 0x4F1C5C
 	.asciz "CGameRestart"
-	.byte 0x00, 0x34, 0x33
-	.4byte 0x00617263
-	.4byte 0x00345F33
-	.asciz "mode.brlyt"
-	.byte 0x43
-	.asciz "Game"
+	.byte 0x00
+	.asciz "43"
+	.asciz "arc"
+	.asciz "4_3mode.brlyt"
+	.asciz "CGame"
 	.balign 4
 	.4byte 0x8351815B
 	.4byte 0x83808381
@@ -199,34 +198,26 @@ lbl_804F6014:
 	.asciz "FLD_npclist"
 	.4byte 0x6E706300
 	.asciz "remove"
-	.byte 0x42
-	.asciz "TL_enelist"
-	.byte 0x65
-	.4byte 0x6E650042
-	.asciz "TL_pclist"
-	.byte 0x70, 0x63
-	.4byte 0x00706C61
-	.4byte 0x79657200
+	.asciz "BTL_enelist"
+	.asciz "ene"
+	.asciz "BTL_pclist"
+	.asciz "pc"
+	.asciz "player"
 	.asciz "JUhead"
-	.byte 0x4A
-	.asciz "UheadA"
-	.byte 0x6D
-	.4byte 0x6F766500
-	.4byte 0x6F626A00
+	.asciz "JUheadA"
+	.asciz "move"
+	.asciz "obj"
 	.asciz "point"
-	.byte 0x65, 0x66
-	.asciz "fect"
-	.byte 0x61, 0x74, 0x74
-	.4byte 0x7200756E
-	.4byte 0x69740046
-	.asciz "LD_pointlist"
-	.byte 0x70, 0x6F, 0x69
-	.asciz "ntDirect"
-	.byte 0x6D, 0x61, 0x70
-	.4byte 0x00656D00
+	.asciz "effect"
+	.asciz "attr"
+	.asciz "unit"
+	.asciz "FLD_pointlist"
+	.asciz "pointDirect"
+	.asciz "map"
+	.asciz "em"
 	.asciz "common"
-	.byte 0x65
-	.4byte 0x72000000
+	.asciz "er"
+	.2byte 0
 	.4byte 0
 	.asciz "_reslist_base<cf::CfObject *>"
 	.balign 4
@@ -38777,4 +38768,3 @@ lbl_805281B0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-

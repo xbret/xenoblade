@@ -1,0 +1,91 @@
+.include "macros.inc"
+
+.section .init, "ax"  # 0x80004000 - 0x800066E0
+
+.global __init_hardware
+__init_hardware:
+/* 800065C0 000026C0  7C 00 00 A6 */	mfmsr r0
+/* 800065C4 000026C4  60 00 20 00 */	ori r0, r0, 0x2000
+/* 800065C8 000026C8  7C 00 01 24 */	mtmsr r0
+/* 800065CC 000026CC  7F E8 02 A6 */	mflr r31
+/* 800065D0 000026D0  48 34 C6 C1 */	bl func_80352C90
+/* 800065D4 000026D4  48 34 B2 AD */	bl func_80351880
+/* 800065D8 000026D8  48 34 DE F9 */	bl func_803544D0
+/* 800065DC 000026DC  7F E8 03 A6 */	mtlr r31
+/* 800065E0 000026E0  4E 80 00 20 */	blr 
+/* 800065E4 000026E4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+/* 800065E8 000026E8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+/* 800065EC 000026EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.global __flush_cache
+__flush_cache:
+/* 800065F0 000026F0  3C A0 FF FF */	lis r5, 0xFFFFFFF1@h
+/* 800065F4 000026F4  60 A5 FF F1 */	ori r5, r5, 0xFFFFFFF1@l
+/* 800065F8 000026F8  7C A5 18 38 */	and r5, r5, r3
+/* 800065FC 000026FC  7C 65 18 50 */	subf r3, r5, r3
+/* 80006600 00002700  7C 84 1A 14 */	add r4, r4, r3
+lbl_80006604:
+/* 80006604 00002704  7C 00 28 6C */	dcbst 0, r5
+/* 80006608 00002708  7C 00 04 AC */	sync 0
+/* 8000660C 0000270C  7C 00 2F AC */	icbi 0, r5
+/* 80006610 00002710  30 A5 00 08 */	addic r5, r5, 8
+/* 80006614 00002714  34 84 FF F8 */	addic. r4, r4, -8
+/* 80006618 00002718  40 80 FF EC */	bge lbl_80006604
+/* 8000661C 0000271C  4C 00 01 2C */	isync 
+/* 80006620 00002720  4E 80 00 20 */	blr 
+
+.global rom_copy_info
+rom_copy_info:
+	# ROM: 0x2724
+	.4byte 0x80004000  ;# ptr
+	.4byte 0x80004000  ;# ptr
+	.4byte 0x000026C8
+	.4byte 0x800066E0  ;# ptr
+	.4byte 0x800066E0  ;# ptr
+	.4byte 0x0001A938
+	.4byte 0x80021020  ;# ptr
+	.4byte 0x80021020  ;# ptr
+	.4byte 0x00018200
+	.4byte 0x80039220  ;# ptr
+	.4byte 0x80039220  ;# ptr
+	.4byte 0x004BC6CC
+	.4byte 0x804F5900
+	.4byte 0x804F5900
+	.4byte 0x000001F4
+	.4byte 0x804F5B00
+	.4byte 0x804F5B00
+	.4byte 0x0000000C
+	.4byte 0x804F5B20
+	.4byte 0x804F5B20
+	.4byte 0x000326A8
+	.4byte 0x805281E0
+	.4byte 0x805281E0
+	.4byte 0x0004BA74
+	.4byte 0x80664180
+	.4byte 0x80664180
+	.4byte 0x00002480
+	.4byte 0x80668380
+	.4byte 0x80668380
+	.4byte 0x00005958
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global bss_init_info
+bss_init_info:
+	# ROM: 0x27A8
+	.4byte 0x80573C80
+	.4byte 0x000F04FC
+	.4byte 0x80666600
+	.4byte 0x00001D70
+	.4byte 0x8066DCE0
+	.4byte 0x0000001C
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
