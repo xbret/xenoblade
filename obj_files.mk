@@ -1,9 +1,10 @@
 INIT_O_FILES :=\
 	$(BUILD_DIR)/asm/init.o \
-	$(BUILD_DIR)/asm/RevoSDK/TRK/dolphin_trk.o \
-	$(BUILD_DIR)/asm/RevoSDK/TRK/__exception.o \
-	$(BUILD_DIR)/asm/RevoSDK/TRK/__start.o \
-	$(BUILD_DIR)/asm/RevoSDK/TRK/__ppc_eabi_init.o
+	$(BUILD_DIR)/asm/Dolphin/mem_TRK.o \
+	$(BUILD_DIR)/asm/Dolphin/__mem.o \
+	$(BUILD_DIR)/asm/Dolphin/__exception.o \
+	$(BUILD_DIR)/asm/Dolphin/__start.o \
+	$(BUILD_DIR)/asm/Dolphin/__ppc_eabi_init.o
 
 TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/text.o
