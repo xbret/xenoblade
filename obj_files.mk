@@ -7,7 +7,9 @@ INIT_O_FILES :=\
 	$(BUILD_DIR)/asm/Dolphin/__ppc_eabi_init.o
 
 TEXT_O_FILES :=\
-	$(BUILD_DIR)/asm/text.o
+	$(BUILD_DIR)/asm/text.o \
+	$(BUILD_DIR)/asm/text_2.o \
+	$(BUILD_DIR)/asm/text_3.o
 
 EXTAB_O_FILES :=\
 	$(BUILD_DIR)/asm/extab.o
