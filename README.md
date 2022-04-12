@@ -27,5 +27,4 @@ xenoblade.jp.dol: `sha1: a564033aee46988743d8f5e6fdc50a8c65791160`
 	- -j Allows make to use multiple threads, speeding up the process.
 
 * OPTIONAL:
-	- Obtain a clean DOL of Xenoblade (JP) and place it in the base working directory and rename it to `baserom.dol`.
 	- To generate a linker map (takes a considerable amount of time), run `make MAPGENFLAG=1 -j`
