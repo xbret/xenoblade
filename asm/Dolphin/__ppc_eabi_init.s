@@ -2,6 +2,8 @@
 
 .section .init, "ax"  # 0x80004000 - 0x800066E0
 
+.balign 32, 0
+
 .global __init_hardware
 __init_hardware:
 /* 800065C0 000026C0  7C 00 00 A6 */	mfmsr r0
@@ -32,67 +34,4 @@ lbl_80006604:
 /* 80006614 00002714  34 84 FF F8 */	addic. r4, r4, -8
 /* 80006618 00002718  40 80 FF EC */	bge lbl_80006604
 /* 8000661C 0000271C  4C 00 01 2C */	isync 
-/* 80006620 00002720  4E 80 00 20 */	blr 
-
-.global rom_copy_info
-rom_copy_info:
-#init
-.4byte _f_init
-.4byte _f_init_rom
-.4byte sz_init
-#extab
-.4byte _fextab_
-.4byte _fextab__rom
-.4byte szextab_
-#extabindex
-.4byte _fextabindex_
-.4byte _fextabindex__rom
-.4byte szextabindex_
-#text
-.4byte _f_text
-.4byte _f_text_rom
-.4byte sz_text
-#ctors
-.4byte _f_ctors
-.4byte _f_ctors_rom
-.4byte sz_ctors
-#dtors
-.4byte _f_dtors
-.4byte _f_dtors_rom
-.4byte sz_dtors
-#rodata
-.4byte _f_rodata
-.4byte _f_rodata_rom
-.4byte sz_rodata
-#.data
-.4byte _f_data
-.4byte _f_data_rom
-.4byte sz_data
-#sdata
-.4byte _f_sdata
-.4byte _f_sdata_rom
-.4byte sz_sdata
-#sdata2
-.4byte _f_sdata2
-.4byte _f_sdata2_rom
-.4byte sz_sdata2
-#Empty section
-.4byte 0x00000000
-.4byte 0x00000000
-.4byte 0x00000000
-
-
-.global bss_init_info
-bss_init_info:
-#bss
-.4byte _f_bss
-.4byte sz_bss
-#sbss
-.4byte _f_sbss
-.4byte sz_sbss
-#sbss2
-.4byte _f_sbss2
-.4byte sz_sbss2
-#Empty section
-.4byte 0
-.4byte 0
+/* 80006620 00002720  4E 80 00 20 */	blr

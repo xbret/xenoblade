@@ -2,8 +2,8 @@
 
 .section .init, "ax"  # 0x80004000 - 0x800066E0
 
-.global func_80004000
-func_80004000:
+.global memcpy
+memcpy:
 /* 80004000 00000100  28 85 00 00 */	cmplwi cr1, r5, 0
 /* 80004004 00000104  4D 86 00 20 */	beqlr cr1
 /* 80004008 00000108  7C 84 18 40 */	cmplw cr1, r4, r3

@@ -2,8 +2,8 @@
 .section .init, "ax"  # 0x80003100 - 0x80005600
 
 
-.global memcpy
-memcpy:
+.global memset
+memset:
 /* 80004350 00000450  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80004354 00000454  7C 08 02 A6 */	mflr r0
 /* 80004358 00000458  90 01 00 14 */	stw r0, 0x14(r1)
