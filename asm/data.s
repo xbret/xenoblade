@@ -29872,19 +29872,9 @@ lbl_8053FFA8:
 
 
 .global lbl_80540000
-
 lbl_80540000:
-
-	# ROM: 0x53C100
-	.4byte 0x41524349
-
-
-.global lbl_80540004
-
-lbl_80540004:
-
 	# ROM: 0x53C104
-	.asciz "nitHandle: bad archive format"
+	.asciz "ARCInitHandle: bad archive format"
 	.balign 4
 
 
