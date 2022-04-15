@@ -18,7 +18,13 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/Dolphin/OSInterrupt.o \
 	$(BUILD_DIR)/asm/text_6.o \
 	$(BUILD_DIR)/asm/text_7.o \
-	$(BUILD_DIR)/asm/text_8.o
+	$(BUILD_DIR)/asm/nw4r/math/math_arithmetic.o \
+	$(BUILD_DIR)/asm/nw4r/math/math_triangular.o \
+	$(BUILD_DIR)/asm/nw4r/math/math_types.o \
+	$(BUILD_DIR)/asm/nw4r/math/math_geometry.o \
+	$(BUILD_DIR)/asm/nw4r/snd/snd_AxManager.o \
+	$(BUILD_DIR)/asm/text_8.o \
+	$(BUILD_DIR)/asm/text_9.o
 
 EXTAB_O_FILES :=\
 	$(BUILD_DIR)/asm/extab.o

@@ -1,0 +1,92 @@
+.include "macros.inc"
+
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
+
+.global FExp__Q34nw4r4math6detailFf
+FExp__Q34nw4r4math6detailFf:
+/* 8040ABF0 003D41B0  C0 02 C2 80 */	lfs f0, lbl_8066C600@sda21(r2)
+/* 8040ABF4 003D41B4  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 8040ABF8 003D41B8  EC 00 00 72 */	fmuls f0, f0, f1
+/* 8040ABFC 003D41BC  F0 01 D0 18 */	psq_st f0, 24(r1), 1, qr5
+/* 8040AC00 003D41C0  A8 01 00 18 */	lha r0, 0x18(r1)
+/* 8040AC04 003D41C4  B0 01 00 0A */	sth r0, 0xa(r1)
+/* 8040AC08 003D41C8  E0 41 D0 0A */	psq_l f2, 10(r1), 1, qr5
+/* 8040AC0C 003D41CC  C0 62 C2 84 */	lfs f3, lbl_8066C604@sda21(r2)
+/* 8040AC10 003D41D0  C0 02 C2 88 */	lfs f0, lbl_8066C608@sda21(r2)
+/* 8040AC14 003D41D4  EC 43 00 B2 */	fmuls f2, f3, f2
+/* 8040AC18 003D41D8  EC 21 10 28 */	fsubs f1, f1, f2
+/* 8040AC1C 003D41DC  EC 23 08 2A */	fadds f1, f3, f1
+/* 8040AC20 003D41E0  EC 20 00 72 */	fmuls f1, f0, f1
+/* 8040AC24 003D41E4  F0 21 B0 14 */	psq_st f1, 20(r1), 1, qr3
+/* 8040AC28 003D41E8  A0 61 00 14 */	lhz r3, 0x14(r1)
+/* 8040AC2C 003D41EC  B0 61 00 08 */	sth r3, 8(r1)
+/* 8040AC30 003D41F0  E0 01 B0 08 */	psq_l f0, 8(r1), 1, qr3
+/* 8040AC34 003D41F4  3C A0 80 57 */	lis r5, lbl_8056D5B0@ha
+/* 8040AC38 003D41F8  54 66 18 38 */	slwi r6, r3, 3
+/* 8040AC3C 003D41FC  54 03 B8 10 */	slwi r3, r0, 0x17
+/* 8040AC40 003D4200  38 A5 D5 B0 */	addi r5, r5, lbl_8056D5B0@l
+/* 8040AC44 003D4204  EC 41 00 28 */	fsubs f2, f1, f0
+/* 8040AC48 003D4208  7C 85 32 14 */	add r4, r5, r6
+/* 8040AC4C 003D420C  7C 05 34 2E */	lfsx f0, r5, r6
+/* 8040AC50 003D4210  C0 24 00 04 */	lfs f1, 4(r4)
+/* 8040AC54 003D4214  EC 22 00 72 */	fmuls f1, f2, f1
+/* 8040AC58 003D4218  EC 00 08 2A */	fadds f0, f0, f1
+/* 8040AC5C 003D421C  D0 01 00 10 */	stfs f0, 0x10(r1)
+/* 8040AC60 003D4220  80 01 00 10 */	lwz r0, 0x10(r1)
+/* 8040AC64 003D4224  7C 03 02 14 */	add r0, r3, r0
+/* 8040AC68 003D4228  54 00 00 7E */	clrlwi r0, r0, 1
+/* 8040AC6C 003D422C  90 01 00 0C */	stw r0, 0xc(r1)
+/* 8040AC70 003D4230  C0 21 00 0C */	lfs f1, 0xc(r1)
+/* 8040AC74 003D4234  38 21 00 20 */	addi r1, r1, 0x20
+/* 8040AC78 003D4238  4E 80 00 20 */	blr 
+
+.global FLog__Q34nw4r4math6detailFf
+FLog__Q34nw4r4math6detailFf:
+/* 8040AC7C 003D423C  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 8040AC80 003D4240  D0 21 00 18 */	stfs f1, 0x18(r1)
+/* 8040AC84 003D4244  D0 21 00 10 */	stfs f1, 0x10(r1)
+/* 8040AC88 003D4248  80 61 00 18 */	lwz r3, 0x18(r1)
+/* 8040AC8C 003D424C  80 01 00 10 */	lwz r0, 0x10(r1)
+/* 8040AC90 003D4250  54 63 4E 3E */	rlwinm r3, r3, 9, 0x18, 0x1f
+/* 8040AC94 003D4254  54 00 02 40 */	rlwinm r0, r0, 0, 9, 0
+/* 8040AC98 003D4258  38 63 FF 81 */	addi r3, r3, -127
+/* 8040AC9C 003D425C  64 00 3F 80 */	oris r0, r0, 0x3f80
+/* 8040ACA0 003D4260  B0 61 00 0A */	sth r3, 0xa(r1)
+/* 8040ACA4 003D4264  90 01 00 14 */	stw r0, 0x14(r1)
+/* 8040ACA8 003D4268  C0 41 00 14 */	lfs f2, 0x14(r1)
+/* 8040ACAC 003D426C  E0 61 D0 0A */	psq_l f3, 10(r1), 1, qr5
+/* 8040ACB0 003D4270  C0 22 C2 90 */	lfs f1, lbl_8066C610@sda21(r2)
+/* 8040ACB4 003D4274  C0 02 C2 8C */	lfs f0, lbl_8066C60C@sda21(r2)
+/* 8040ACB8 003D4278  EC 22 08 28 */	fsubs f1, f2, f1
+/* 8040ACBC 003D427C  EC 40 00 72 */	fmuls f2, f0, f1
+/* 8040ACC0 003D4280  F0 41 B0 0C */	psq_st f2, 12(r1), 1, qr3
+/* 8040ACC4 003D4284  A0 01 00 0C */	lhz r0, 0xc(r1)
+/* 8040ACC8 003D4288  B0 01 00 08 */	sth r0, 8(r1)
+/* 8040ACCC 003D428C  E0 21 B0 08 */	psq_l f1, 8(r1), 1, qr3
+/* 8040ACD0 003D4290  3C 80 80 57 */	lis r4, lbl_8056D6B8@ha
+/* 8040ACD4 003D4294  C0 02 C2 84 */	lfs f0, lbl_8066C604@sda21(r2)
+/* 8040ACD8 003D4298  54 00 18 38 */	slwi r0, r0, 3
+/* 8040ACDC 003D429C  38 84 D6 B8 */	addi r4, r4, lbl_8056D6B8@l
+/* 8040ACE0 003D42A0  EC 82 08 28 */	fsubs f4, f2, f1
+/* 8040ACE4 003D42A4  7C 64 02 14 */	add r3, r4, r0
+/* 8040ACE8 003D42A8  7C 24 04 2E */	lfsx f1, r4, r0
+/* 8040ACEC 003D42AC  C0 43 00 04 */	lfs f2, 4(r3)
+/* 8040ACF0 003D42B0  EC 00 00 F2 */	fmuls f0, f0, f3
+/* 8040ACF4 003D42B4  EC 44 00 B2 */	fmuls f2, f4, f2
+/* 8040ACF8 003D42B8  EC 21 10 2A */	fadds f1, f1, f2
+/* 8040ACFC 003D42BC  EC 21 00 2A */	fadds f1, f1, f0
+/* 8040AD00 003D42C0  38 21 00 20 */	addi r1, r1, 0x20
+/* 8040AD04 003D42C4  4E 80 00 20 */	blr 
+
+.global FrSqrt__Q24nw4r4mathFf
+FrSqrt__Q24nw4r4mathFf:
+/* 8040AD08 003D42C8  FC 00 08 34 */	frsqrte f0, f1
+/* 8040AD0C 003D42CC  C0 42 C2 94 */	lfs f2, lbl_8066C614@sda21(r2)
+/* 8040AD10 003D42D0  C0 62 C2 98 */	lfs f3, lbl_8066C618@sda21(r2)
+/* 8040AD14 003D42D4  EC 80 00 32 */	fmuls f4, f0, f0
+/* 8040AD18 003D42D8  EC 00 00 B2 */	fmuls f0, f0, f2
+/* 8040AD1C 003D42DC  EC 84 18 7C */	fnmsubs f4, f4, f1, f3
+/* 8040AD20 003D42E0  EC 04 00 32 */	fmuls f0, f4, f0
+/* 8040AD24 003D42E4  FC 20 00 90 */	fmr f1, f0
+/* 8040AD28 003D42E8  4E 80 00 20 */	blr 
