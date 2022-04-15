@@ -11,9 +11,14 @@ INIT_O_FILES :=\
 TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/text.o \
 	$(BUILD_DIR)/asm/text_2.o \
-	$(BUILD_DIR)/asm/Dolphin/OSInterrupt.o \
 	$(BUILD_DIR)/asm/text_3.o \
-	$(BUILD_DIR)/asm/text_4.o
+	$(BUILD_DIR)/asm/text/printf.o \
+	$(BUILD_DIR)/asm/text_4.o \
+	$(BUILD_DIR)/asm/text_5.o \
+	$(BUILD_DIR)/asm/Dolphin/OSInterrupt.o \
+	$(BUILD_DIR)/asm/text_6.o \
+	$(BUILD_DIR)/asm/text_7.o \
+	$(BUILD_DIR)/asm/text_8.o
 
 EXTAB_O_FILES :=\
 	$(BUILD_DIR)/asm/extab.o

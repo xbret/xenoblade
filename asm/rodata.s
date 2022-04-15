@@ -2,6 +2,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+
+.global lbl_804F5B20
+lbl_804F5B20:
 	# ROM: 0x4F1C20
 	.asciz "@unnamed@CGame_cpp@::CGameRestart"
 	.balign 4
