@@ -1,5 +1,54 @@
 .include "macros.inc"
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+.global lbl_80664180
+lbl_80664180:
+
+	# ROM: 0x56FD60
+	.4byte 0x80668380
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80666600
+lbl_80666600:
+	.skip 0x4
+.global lbl_80666604
+lbl_80666604:
+	.skip 0x4
+.global lbl_80666608
+lbl_80666608:
+	.skip 0x4
+.global lbl_8066660C
+lbl_8066660C:
+	.skip 0x4
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.global lbl_80668380
+
+lbl_80668380:
+	# ROM: 0x5721E0
+	.4byte 0x8B90905F
+	.4byte 0
+
+
+.global lbl_80668388
+
+lbl_80668388:
+
+	# ROM: 0x5721E8
+	.float 1.0
+
+
+.global lbl_8066838C
+
+lbl_8066838C:
+
+	# ROM: 0x5721EC
+	.4byte 0
+	.asciz "CGame"
+	.balign 4
+	.asciz "CProc"
+
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .global func_80039220
