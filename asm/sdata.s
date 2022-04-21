@@ -1,14 +1,12 @@
 .include "macros.inc"
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
+	
+.global lbl_80664188
 
-.global lbl_80664180
+lbl_80664188:
 
-lbl_80664180:
-
-	# ROM: 0x56FD60
-	.4byte 0x80668380
-	.4byte 0
+	# ROM: 0x56FD68
 	.4byte 0x804F5B20
 	.4byte 0x80528280
 	.4byte 0x80668390
@@ -6199,13 +6197,11 @@ lbl_80666414:
 	.4byte 0
 
 
-.global lbl_80666438
+.global lbl_80666438 # main.s
 lbl_80666438:
 	.byte 0x01
-	
-	.byte 0x00, 0x00, 0x00
-	.4byte 0
 
+.balign 8
 .global lbl_80666440
 lbl_80666440:
 	.4byte 0x8066D938

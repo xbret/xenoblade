@@ -1,4 +1,10 @@
 .include "macros.inc"
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.balign 4
+.global lbl_806683A0
+lbl_806683A0:
+	.4byte lbl_804F5B98
+	.4byte 0
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 

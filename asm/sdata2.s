@@ -2,37 +2,9 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-	# ROM: 0x5721E0
-	.4byte 0x8B90905F
-	.4byte 0
-
-
-.global lbl_80668388
-
-lbl_80668388:
-
-	# ROM: 0x5721E8
-	.4byte 0x3F800000
-
-
-.global lbl_8066838C
-
-lbl_8066838C:
-
-	# ROM: 0x5721EC
-	.4byte 0
-	.asciz "CGame"
-	.balign 4
-	.asciz "CProc"
-	.balign 4
-
-
-.global lbl_806683A0
-lbl_806683A0:
-	.4byte lbl_804F5B98
-	.4byte 0
-
-
+.balign 4
+.global lbl_806683A8
+lbl_806683A8:
 	.asciz "ahx.pkh"
 	.asciz "adx.pkh"
 	.asciz "chr.pkh"
@@ -199,7 +171,7 @@ lbl_806685DC:
 lbl_80668604:
 
 	# ROM: 0x572464
-	.4byte 0x3F800000
+	.float 1.0
 
 
 .global lbl_80668608
@@ -207,7 +179,7 @@ lbl_80668604:
 lbl_80668608:
 
 	# ROM: 0x572468
-	.4byte 0x41200000
+	.float 10.0
 
 
 .global lbl_8066860C
@@ -249,7 +221,7 @@ lbl_80668620:
 lbl_80668624:
 
 	# ROM: 0x572484
-	.4byte 0x3F800000
+	.float 1.0
 
 
 .global lbl_80668628
