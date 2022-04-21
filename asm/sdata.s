@@ -6200,16 +6200,24 @@ lbl_80666414:
 
 
 .global lbl_80666438
-
 lbl_80666438:
-
-	# ROM: 0x572018
-	.4byte 0x01000000
+	.byte 0x01
+	
+	.byte 0x00, 0x00, 0x00
 	.4byte 0
+
+.global lbl_80666440
+lbl_80666440:
 	.4byte 0x8066D938
 	.4byte 0
+
+.global lbl_80666448
+lbl_80666448:
 	.4byte 0x80527E50
 	.4byte 0x805734A0
+
+.global lbl_80666450
+lbl_80666450:
 	.4byte 0x80527E68
 	.4byte 0
 

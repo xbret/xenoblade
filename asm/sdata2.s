@@ -28,12 +28,11 @@ lbl_8066838C:
 
 
 .global lbl_806683A0
-
 lbl_806683A0:
-
-	# ROM: 0x572200
-	.4byte 0x804F5B98
+	.4byte lbl_804F5B98
 	.4byte 0
+
+
 	.asciz "ahx.pkh"
 	.asciz "adx.pkh"
 	.asciz "chr.pkh"

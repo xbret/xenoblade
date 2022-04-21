@@ -169,8 +169,8 @@ lbl_80528390:
 	.4byte 0x80668400
 	.4byte 0x804F5CA4
 	.4byte 0x00000001
-	.4byte 0x80039F5C  ;# ptr
-	.4byte 0x80039F60  ;# ptr
+	.4byte func_80039F5C  ;# ptr
+	.4byte func_80039F60  ;# ptr
 	.4byte 0x80668408
 	.4byte 0x804F5CB8
 	.4byte 0x00000001
@@ -179,8 +179,8 @@ lbl_80528390:
 	.4byte 0x80668410
 	.4byte 0x804F5CD8
 	.4byte 0x00000001
-	.4byte 0x80039F64  ;# ptr
-	.4byte 0x80039F68  ;# ptr
+	.4byte func_80039F64  ;# ptr
+	.4byte func_80039F68  ;# ptr
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -78960,7 +78960,7 @@ lbl_80573458:
 lbl_80573488:
 
 	# ROM: 0x56F588
-	.4byte 0x80666440
+	.4byte lbl_80666440
 	.4byte 0
 	.4byte 0x804D728C
 
@@ -78970,10 +78970,10 @@ lbl_80573488:
 lbl_80573494:
 
 	# ROM: 0x56F594
-	.4byte 0x80666448
+	.4byte lbl_80666448
 	.4byte 0
 	.4byte 0x804D71CC
-	.4byte 0x80666450
+	.4byte lbl_80666450
 	.4byte 0
 	.4byte 0
 
@@ -78983,7 +78983,7 @@ lbl_80573494:
 lbl_805734AC:
 
 	# ROM: 0x56F5AC
-	.4byte 0x80666450
+	.4byte lbl_80666450
 	.4byte 0
 	.4byte 0x804D7110
 

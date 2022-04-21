@@ -1,5 +1,5 @@
 INIT_O_FILES :=\
-	$(BUILD_DIR)/asm/init.o \
+	$(BUILD_DIR)/asm/Dolphin/memcpy.o \
 	$(BUILD_DIR)/asm/Dolphin/mem_TRK.o \
 	$(BUILD_DIR)/asm/Dolphin/__mem.o \
 	$(BUILD_DIR)/asm/Dolphin/__exception.o \
@@ -9,6 +9,8 @@ INIT_O_FILES :=\
 	$(BUILD_DIR)/asm/Dolphin/__ppc_eabi_init.o
 
 TEXT_O_FILES :=\
+	$(BUILD_DIR)/asm/text_main.o \
+	$(BUILD_DIR)/asm/main.o \
 	$(BUILD_DIR)/asm/text.o \
 	$(BUILD_DIR)/asm/text_2.o \
 	$(BUILD_DIR)/asm/text_3.o \
@@ -39,7 +41,8 @@ DTORS_O_FILES :=\
 	$(BUILD_DIR)/asm/dtors.o
 
 RODATA_O_FILES :=\
-	$(BUILD_DIR)/asm/rodata.o
+	$(BUILD_DIR)/asm/rodata.o \
+	$(BUILD_DIR)/asm/rodata_2.o
 
 DATA_O_FILES :=\
 	$(BUILD_DIR)/asm/data.o
