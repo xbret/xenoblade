@@ -15,6 +15,15 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/text/printf.o \
 	$(BUILD_DIR)/asm/text_4.o \
 	$(BUILD_DIR)/asm/text_5.o \
+	$(BUILD_DIR)/asm/Dolphin/dvd/dvdfs.o \
+	$(BUILD_DIR)/asm/Dolphin/dvd/dvd.o \
+	$(BUILD_DIR)/asm/Dolphin/dvd/dvdqueue.o \
+	$(BUILD_DIR)/asm/Dolphin/dvd/dvderror.o \
+	$(BUILD_DIR)/asm/Dolphin/dvd/dvdidutils.o \
+	$(BUILD_DIR)/asm/Dolphin/dvd/dvdFatal.o \
+	$(BUILD_DIR)/asm/Dolphin/dvd/dvdDeviceError.o \
+	$(BUILD_DIR)/asm/Dolphin/dvd/dvd_broadway.o \
+	$(BUILD_DIR)/asm/text_5_1.o \
 	$(BUILD_DIR)/asm/Dolphin/OSInterrupt.o \
 	$(BUILD_DIR)/asm/text_6.o \
 	$(BUILD_DIR)/asm/text_7.o \
@@ -39,8 +48,7 @@ DTORS_O_FILES :=\
 	$(BUILD_DIR)/asm/dtors.o
 
 RODATA_O_FILES :=\
-	$(BUILD_DIR)/asm/rodata.o \
-	$(BUILD_DIR)/asm/rodata_2.o
+	$(BUILD_DIR)/asm/rodata.o
 
 DATA_O_FILES :=\
 	$(BUILD_DIR)/asm/data.o

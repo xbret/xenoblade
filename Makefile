@@ -41,7 +41,7 @@ REL_LDFLAGS := -nodefaults -fp hard -r1 -m _prolog -g
 # Outputs
 DOL     := $(BUILD_DIR)/main.dol
 ELF     := $(DOL:.dol=.elf)
-MAP     := $(BUILD_DIR)/xenoblade.jp.MAP
+MAP     := $(BUILD_DIR)/$(NAME).$(VERSION).MAP
 
 
 ifeq ($(MAPGENFLAG),1)
@@ -132,7 +132,7 @@ $(DOL): $(ELF) | tools
 	$(QUIET) $(ELF2DOL) $< $@
 	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
 ifneq ($(findstring -map,$(LDFLAGS)),)
-#	$(QUIET) $(PYTHON) tools/calcprogress.py $@
+	$(QUIET) $(PYTHON) tools/calcprogress.py $@ $(MAP)
 endif
 
 clean:

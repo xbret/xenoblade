@@ -2,7 +2,7 @@
 
 .section .init, "ax"  # 0x80004000 - 0x800066E0
 
-/* This is very likely handwritten */
+#This is very likely handwritten
 .global memcpy
 memcpy:
 /* 80004000 00000100  28 85 00 00 */	cmplwi cr1, r5, 0
@@ -139,7 +139,7 @@ lbl_800041C0:
 /* 800041D4 000002D4  D8 2C FF F8 */	stfd f1, -8(r12)
 /* 800041D8 000002D8  D8 4C FF F0 */	stfd f2, -0x10(r12)
 /* 800041DC 000002DC  D8 6C FF E8 */	stfd f3, -0x18(r12)
-/* 800041E0 000002E0  DC 8C FF E0 */	stfdu f4, -0x20(r12)
+/* 800041E0 000002E0  DC 8C FF E0 */	stfdu f4, -0x20(r12) #why?
 /* 800041E4 000002E4  42 00 FF DC */	bdnz lbl_800041C0
 /* 800041E8 000002E8  70 A6 00 1F */	andi. r6, r5, 0x1f
 /* 800041EC 000002EC  4D 82 00 20 */	beqlr 
@@ -177,7 +177,7 @@ lbl_80004244:
 /* 80004258 00000358  91 2C FF FC */	stw r9, -4(r12)
 /* 8000425C 0000035C  91 4C FF F8 */	stw r10, -8(r12)
 /* 80004260 00000360  91 6C FF F4 */	stw r11, -0xc(r12)
-/* 80004264 00000364  95 0C FF F0 */	stwu r8, -0x10(r12)
+/* 80004264 00000364  95 0C FF F0 */	stwu r8, -0x10(r12) #also why?
 /* 80004268 00000368  42 00 FF DC */	bdnz lbl_80004244
 /* 8000426C 0000036C  70 A6 00 0F */	andi. r6, r5, 0xf
 /* 80004270 00000370  4D 82 00 20 */	beqlr 

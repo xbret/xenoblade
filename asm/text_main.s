@@ -48,6 +48,46 @@ lbl_8066838C:
 	.asciz "CGame"
 	.balign 4
 	.asciz "CProc"
+	.balign 4
+
+#0x806683A0
+.global staticArcStrPtr
+staticArcStrPtr:
+	.4byte staticArcStr
+	.4byte 0
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F5B20
+lbl_804F5B20:
+	# ROM: 0x4F1C20
+	.asciz "@unnamed@CGame_cpp@::CGameRestart"
+	.balign 4
+	.asciz "CWorkThread"
+	.asciz "IWorkEvent"
+	.balign 4
+
+
+.global lbl_804F5B5C
+lbl_804F5B5C:
+	# ROM: 0x4F1C5C
+	.asciz "CGameRestart"
+	.byte 0x00
+	.asciz "43"
+	.asciz "arc"
+	.asciz "4_3mode.brlyt"
+	.asciz "CGame"
+	.balign 4
+	.4byte 0x8351815B
+	.4byte 0x83808381
+	.4byte 0x83438393
+	.4byte 0
+
+#0x804F5B98
+.global staticArcStr
+staticArcStr:
+	.asciz "static.arc"
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 

@@ -1,10 +1,4 @@
 .include "macros.inc"
-.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-.balign 4
-.global lbl_806683A0
-lbl_806683A0:
-	.4byte lbl_804F5B98
-	.4byte 0
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
@@ -47,7 +41,7 @@ main:
 /* 8003A01C 000035DC  38 63 9F 6C */	addi r3, r3, lbl_80039F6C@l
 /* 8003A020 000035E0  38 84 9F 90 */	addi r4, r4, lbl_80039F90@l
 /* 8003A024 000035E4  48 42 62 19 */	bl func_8046023C
-/* 8003A028 000035E8  38 62 80 20 */	addi r3, r2, lbl_806683A0@sda21
+/* 8003A028 000035E8  38 62 80 20 */	addi r3, r2, staticArcStrPtr@sda21
 /* 8003A02C 000035EC  48 4A 3E 09 */	bl func_804DDE34
 /* 8003A030 000035F0  3C 60 80 4F */	lis r3, lbl_804F5BE0@ha
 /* 8003A034 000035F4  38 63 5B E0 */	addi r3, r3, lbl_804F5BE0@l
