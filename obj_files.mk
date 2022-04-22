@@ -15,6 +15,8 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/text/printf.o \
 	$(BUILD_DIR)/asm/text_4.o \
 	$(BUILD_DIR)/asm/text_5.o \
+	$(BUILD_DIR)/asm/PPCArch.o \
+	$(BUILD_DIR)/asm/text_5_1.o \
 	$(BUILD_DIR)/asm/Dolphin/dvd/dvdfs.o \
 	$(BUILD_DIR)/asm/Dolphin/dvd/dvd.o \
 	$(BUILD_DIR)/asm/Dolphin/dvd/dvdqueue.o \
@@ -23,8 +25,21 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/Dolphin/dvd/dvdFatal.o \
 	$(BUILD_DIR)/asm/Dolphin/dvd/dvdDeviceError.o \
 	$(BUILD_DIR)/asm/Dolphin/dvd/dvd_broadway.o \
-	$(BUILD_DIR)/asm/text_5_1.o \
+	$(BUILD_DIR)/asm/text_5_2.o \
+	$(BUILD_DIR)/asm/Dolphin/OS.o \
+	$(BUILD_DIR)/asm/Dolphin/OSAlarm.o \
+	$(BUILD_DIR)/asm/Dolphin/func_803535D0.o \
+	$(BUILD_DIR)/asm/Dolphin/OSAlloc.o \
+	$(BUILD_DIR)/asm/Dolphin/OSArena.o \
+	$(BUILD_DIR)/asm/Dolphin/OSAudioSystem.o \
+	$(BUILD_DIR)/asm/Dolphin/OSCache.o \
+	$(BUILD_DIR)/asm/Dolphin/OSContext.o \
+	$(BUILD_DIR)/asm/Dolphin/OSError.o \
+	$(BUILD_DIR)/asm/Dolphin/OSExec.o \
+	$(BUILD_DIR)/asm/Dolphin/OSFatal.o \
+	$(BUILD_DIR)/asm/Dolphin/OSFont.o \
 	$(BUILD_DIR)/asm/Dolphin/OSInterrupt.o \
+	$(BUILD_DIR)/asm/Dolphin/OSMessage.o \
 	$(BUILD_DIR)/asm/text_6.o \
 	$(BUILD_DIR)/asm/text_7.o \
 	$(BUILD_DIR)/asm/nw4r/math/math_arithmetic.o \

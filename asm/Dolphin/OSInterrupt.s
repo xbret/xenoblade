@@ -7,8 +7,10 @@ OSDisableInterrupts:
 /* 803589B0 00321F70  7C 60 00 A6 */	mfmsr r3
 /* 803589B4 00321F74  54 64 04 5E */	rlwinm r4, r3, 0, 0x11, 0xf
 /* 803589B8 00321F78  7C 80 01 24 */	mtmsr r4
-.global lbl_803589BC
-lbl_803589BC:
+
+
+.global __RAS_OSDisableInterrupts_end
+__RAS_OSDisableInterrupts_end:
 /* 803589BC 00321F7C  54 63 8F FE */	rlwinm r3, r3, 0x11, 0x1f, 0x1f
 /* 803589C0 00321F80  4E 80 00 20 */	blr 
 /* 803589C4 00321F84  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
@@ -43,8 +45,8 @@ lbl_80358A08:
 /* 80358A18 00321FD8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80358A1C 00321FDC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80358A20
-func_80358A20:
+.global __OSSetInterruptHandler
+__OSSetInterruptHandler:
 /* 80358A20 00321FE0  80 AD B9 20 */	lwz r5, lbl_80667AA0@sda21(r13)
 /* 80358A24 00321FE4  54 60 10 3A */	slwi r0, r3, 2
 /* 80358A28 00321FE8  7C 65 00 2E */	lwzx r3, r5, r0
@@ -54,15 +56,15 @@ func_80358A20:
 /* 80358A38 00321FF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80358A3C 00321FFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80358A40
-func_80358A40:
+.global __OSGetInterruptHandler
+__OSGetInterruptHandler:
 /* 80358A40 00322000  80 8D B9 20 */	lwz r4, lbl_80667AA0@sda21(r13)
 /* 80358A44 00322004  54 60 10 3A */	slwi r0, r3, 2
 /* 80358A48 00322008  7C 64 00 2E */	lwzx r3, r4, r0
 /* 80358A4C 0032200C  4E 80 00 20 */	blr 
 
-.global func_80358A50
-func_80358A50:
+.global __OSInterruptInit
+__OSInterruptInit:
 /* 80358A50 00322010  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80358A54 00322014  7C 08 02 A6 */	mflr r0
 /* 80358A58 00322018  38 80 00 00 */	li r4, 0
@@ -106,7 +108,7 @@ lbl_80358AD8:
 /* 80358AE8 003220A8  3C 80 80 36 */	lis r4, ExternalInterruptHandler@ha
 /* 80358AEC 003220AC  38 60 00 04 */	li r3, 4
 /* 80358AF0 003220B0  38 84 91 30 */	addi r4, r4, ExternalInterruptHandler@l
-/* 80358AF4 003220B4  4B FF A0 6D */	bl func_80352B60
+/* 80358AF4 003220B4  4B FF A0 6D */	bl __OSSetExceptionHandler
 /* 80358AF8 003220B8  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80358AFC 003220BC  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80358B00 003220C0  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -131,8 +133,6 @@ SetInterruptMask:
 /* 80358B40 00322100  2C 00 00 00 */	cmpwi r0, 0
 /* 80358B44 00322104  40 80 00 28 */	bge lbl_80358B6C
 /* 80358B48 00322108  4E 80 00 20 */	blr
-
-.global lbl_80358B4C
 lbl_80358B4C:
 /* 80358B4C 0032210C  2C 00 00 11 */	cmpwi r0, 0x11
 /* 80358B50 00322110  40 80 00 10 */	bge lbl_80358B60
@@ -169,8 +169,6 @@ lbl_80358BAC:
 /* 80358BB0 00322170  54 63 01 7E */	clrlwi r3, r3, 5
 /* 80358BB4 00322174  B0 A4 40 1C */	sth r5, 0xCC00401C@l(r4)
 /* 80358BB8 00322178  4E 80 00 20 */	blr
-
-.global lbl_80358BBC
 lbl_80358BBC:
 /* 80358BBC 0032217C  3C A0 CC 00 */	lis r5, 0xCC00500A@ha
 /* 80358BC0 00322180  54 80 01 4B */	rlwinm. r0, r4, 0, 5, 5
@@ -191,8 +189,6 @@ lbl_80358BEC:
 /* 80358BF0 003221B0  54 63 02 08 */	rlwinm r3, r3, 0, 8, 4
 /* 80358BF4 003221B4  B0 A4 50 0A */	sth r5, 0xCC00500A@l(r4)
 /* 80358BF8 003221B8  4E 80 00 20 */	blr
-
-.global lbl_80358BFC
 lbl_80358BFC:
 /* 80358BFC 003221BC  54 80 02 11 */	rlwinm. r0, r4, 0, 8, 8
 /* 80358C00 003221C0  3C 80 CD 00 */	lis r4, 0xCD006C00@ha
@@ -206,8 +202,6 @@ lbl_80358C18:
 /* 80358C1C 003221DC  54 63 02 4E */	rlwinm r3, r3, 0, 9, 7
 /* 80358C20 003221E0  90 A4 6C 00 */	stw r5, 0xCD006C00@l(r4)
 /* 80358C24 003221E4  4E 80 00 20 */	blr
-
-.global lbl_80358C28
 lbl_80358C28:
 /* 80358C28 003221E8  54 80 02 53 */	rlwinm. r0, r4, 0, 9, 9
 /* 80358C2C 003221EC  3C A0 CD 00 */	lis r5, 0xCD006800@ha
@@ -229,8 +223,6 @@ lbl_80358C5C:
 /* 80358C60 00322220  54 63 03 10 */	rlwinm r3, r3, 0, 0xc, 8
 /* 80358C64 00322224  90 A4 68 00 */	stw r5, 0xCD006800@l(r4)
 /* 80358C68 00322228  4E 80 00 20 */	blr
-
-.global lbl_80358C6C
 lbl_80358C6C:
 /* 80358C6C 0032222C  54 80 03 19 */	rlwinm. r0, r4, 0, 0xc, 0xc
 /* 80358C70 00322230  3C A0 CD 00 */	lis r5, 0xCD006814@ha
@@ -252,8 +244,6 @@ lbl_80358CA0:
 /* 80358CA4 00322264  54 63 03 D6 */	rlwinm r3, r3, 0, 0xf, 0xb
 /* 80358CA8 00322268  90 A4 68 14 */	stw r5, 0xCD006814@l(r4)
 /* 80358CAC 0032226C  4E 80 00 20 */	blr
-
-.global lbl_80358CB0
 lbl_80358CB0:
 /* 80358CB0 00322270  3C A0 CD 00 */	lis r5, 0xCD006828@ha
 /* 80358CB4 00322274  54 80 03 DF */	rlwinm. r0, r4, 0, 0xf, 0xf
@@ -270,8 +260,6 @@ lbl_80358CD4:
 /* 80358CD8 00322298  54 63 04 5C */	rlwinm r3, r3, 0, 0x11, 0xe
 /* 80358CDC 0032229C  90 A4 68 28 */	stw r5, 0xCD006828@l(r4)
 /* 80358CE0 003222A0  4E 80 00 20 */	blr
-
-.global lbl_80358CE4
 lbl_80358CE4:
 /* 80358CE4 003222A4  54 80 04 63 */	rlwinm. r0, r4, 0, 0x11, 0x11
 /* 80358CE8 003222A8  38 A0 00 F0 */	li r5, 0xf0
@@ -631,8 +619,8 @@ ExternalInterruptHandler:
 /* 80359178 00322738  94 21 FF F8 */	stwu r1, -8(r1)
 /* 8035917C 0032273C  4B FF FD 04 */	b __OSDispatchInterrupt
 
-.global func_80359180
-func_80359180:
+.global __OSModuleInit
+__OSModuleInit:
 /* 80359180 00322740  3C 60 80 00 */	lis r3, 0x800030CC@ha
 /* 80359184 00322744  38 00 00 00 */	li r0, 0
 /* 80359188 00322748  90 03 30 CC */	stw r0, 0x800030CC@l(r3)
