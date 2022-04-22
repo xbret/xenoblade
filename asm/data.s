@@ -44767,7 +44767,7 @@ lbl_80552AB0:
 lbl_80552AE0:
 
 	# ROM: 0x54EBE0
-	.4byte 0x803594B0
+	.4byte OnShutdown
 	.4byte 0x0000007F
 	.4byte 0
 	.4byte 0
@@ -57137,17 +57137,13 @@ lbl_8055ECEC:
 
 
 .global lbl_8055ED08
-
 lbl_8055ED08:
-
 	# ROM: 0x55AE08
 	.asciz "/title/00000001/00000002/data/state.dat"
 
 
 .global lbl_8055ED30
-
 lbl_8055ED30:
-
 	# ROM: 0x55AE30
 	.asciz "Failed to register network shutdown function. %d\n"
 	.balign 4

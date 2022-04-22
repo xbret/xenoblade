@@ -4415,7 +4415,7 @@ lbl_80665B88:
 lbl_80665B90:
 
 	# ROM: 0x571770
-	.4byte 0x8035B330
+	.4byte DefaultSwitchThreadCallback
 	.4byte 0
 
 
