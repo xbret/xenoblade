@@ -337,22 +337,22 @@ def insn_to_text(insn, raw):
         if insn.id == PPC_INS_ADDI and insn.operands[1].reg == PPC_REG_R13:
             value = r13_addr + sign_extend_16(insn.operands[2].imm)
             if value in labels:
-                return "%s %s, %s, %s-_SDA_BASE_" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.reg_name(insn.operands[1].reg), addr_to_label(value))
+                return "%s %s, %s, %s@sda21" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.reg_name(insn.operands[1].reg), addr_to_label(value))
         if is_load_store_reg_offset(insn, PPC_REG_R13):
             value = r13_addr + sign_extend_16(insn.operands[1].mem.disp)
             if value in labels:
-                return "%s %s, %s-_SDA_BASE_(%s)" % (insn.mnemonic, insn.reg_name(insn.operands[0].value.reg), addr_to_label(value), insn.reg_name(insn.operands[1].mem.base))
+                return "%s %s, %s@sda21(%s)" % (insn.mnemonic, insn.reg_name(insn.operands[0].value.reg), addr_to_label(value), insn.reg_name(insn.operands[1].mem.base))
 
     # r2 offset loads
     if r2_addr != None:
         if insn.id == PPC_INS_ADDI and insn.operands[1].reg == PPC_REG_R2:
             value = r2_addr + sign_extend_16(insn.operands[2].imm)
             if value in labels:
-                return "%s %s, %s, %s-_SDA2_BASE_" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.reg_name(insn.operands[1].reg), addr_to_label(value))
+                return "%s %s, %s, %s@sda21" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.reg_name(insn.operands[1].reg), addr_to_label(value))
         if is_load_store_reg_offset(insn, PPC_REG_R2):
             value = r2_addr + sign_extend_16(insn.operands[1].mem.disp)
             if value in labels:
-                return "%s %s, %s-_SDA2_BASE_(%s)" % (insn.mnemonic, insn.reg_name(insn.operands[0].value.reg), addr_to_label(value), insn.reg_name(insn.operands[1].mem.base))
+                return "%s %s, %s@sda21(%s)" % (insn.mnemonic, insn.reg_name(insn.operands[0].value.reg), addr_to_label(value), insn.reg_name(insn.operands[1].mem.base))
 
     # Sign-extend immediate values because Capstone is an idiot and doesn't do that automatically
     if insn.id in {PPC_INS_ADDI, PPC_INS_ADDIC, PPC_INS_SUBFIC, PPC_INS_MULLI} and (insn.operands[2].imm & 0x8000):
