@@ -58,6 +58,58 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/Dolphin/Pad.o \
 	$(BUILD_DIR)/asm/text_6.o \
 	$(BUILD_DIR)/asm/text_7.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_rescommon.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resdict.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_resfile.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_resmdl.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_resshp.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_restev.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_resmat.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_resvtx.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_restex.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resnode.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_resanm.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmclr.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmtexpat.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmtexsrt.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmchr.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmamblight.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmlight.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmfog.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmcamera.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmscn.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmshp.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmclr.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/code_803E3398.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmscn.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_obj.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_anmobj.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_gpu.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_cpu.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_state.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_draw1mat1shp.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_calcview.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_dcc.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_workmem.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_calcworld.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_draw.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_camera.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_basic.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_maya.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_xsi.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_3dsmax.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_scnobj.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_scnroot.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_scnmdlsmpl.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_scnmdl.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_scnmdlexpand.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_calcmaterial.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_init.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_scnproc.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_fog.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_light.o \
+    $(BUILD_DIR)/asm/nw4r/g3d/g3d_calcvtx.o \
+	$(BUILD_DIR)/asm/text_7_1.o \
 	$(BUILD_DIR)/asm/nw4r/math/math_arithmetic.o \
 	$(BUILD_DIR)/asm/nw4r/math/math_triangular.o \
 	$(BUILD_DIR)/asm/nw4r/math/math_types.o \
