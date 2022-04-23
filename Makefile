@@ -5,6 +5,8 @@ ifneq ($(findstring MSYS,$(shell uname)),)
   WINDOWS := 1
 endif
 
+NON_MATCHING ?= 0
+
 # If 0, tells the console to chill out. (Quiets the make process.)
 VERBOSE ?= 0
 
@@ -97,6 +99,9 @@ ifeq ($(VERBOSE),0)
 LDFLAGS := $(MAPGEN) -fp hard -nodefaults -w off
 endif
 CFLAGS   = -Cpp_exceptions off -enum int -inline on -proc gekko -RTTI off -fp hard -rostr -O4,p -nodefaults $(INCLUDES)
+ifeq ($(NON_MATCHING),1)
+CFLAGS += -DNON_MATCHING
+endif
 
 ifeq ($(VERBOSE),0)
 # this set of ASFLAGS generates no warnings.
