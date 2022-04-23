@@ -96,12 +96,14 @@ ifeq ($(VERBOSE),0)
 # this set of LDFLAGS generates no warnings.
 LDFLAGS := $(MAPGEN) -fp hard -nodefaults -w off
 endif
-CFLAGS   = -Cpp_exceptions off -enum int -inline on -proc gekko -RTTI off -fp hard -rostr -O4,p -nodefaults $(INCLUDES)
+CFLAGS   = -Cpp_exceptions off -enum int -inline on -proc gekko -RTTI off -fp hard -rostr -O4,p -nodefaults -func_align 4 $(INCLUDES)
 
 ifeq ($(VERBOSE),0)
 # this set of ASFLAGS generates no warnings.
 ASFLAGS += -W
 endif
+
+$(BUILD_DIR)/src/Dolphin/__start.o: CFLAGS += -func_align 16
 
 #-------------------------------------------------------------------------------
 # Recipes

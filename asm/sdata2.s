@@ -2,7 +2,7 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.balign 4
+.balign 8
 .global lbl_806683A8
 lbl_806683A8:
 	.asciz "ahx.pkh"
