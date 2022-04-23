@@ -5,10 +5,6 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/Dolphin/__exception.o \
 	$(BUILD_DIR)/asm/text_main.o \
 	$(BUILD_DIR)/src/main.o \
-<<<<<<< Updated upstream
-	$(BUILD_DIR)/asm/textsus.o \
-=======
->>>>>>> Stashed changes
 	$(BUILD_DIR)/asm/text.o \
 	$(BUILD_DIR)/asm/sbss.o \
 	$(BUILD_DIR)/asm/text_2.o \
