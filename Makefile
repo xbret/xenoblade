@@ -98,7 +98,7 @@ ifeq ($(VERBOSE),0)
 # this set of LDFLAGS generates no warnings.
 LDFLAGS := $(MAPGEN) -fp hard -nodefaults -w off
 endif
-CFLAGS   = -Cpp_exceptions off -enum int -inline on -proc gekko -RTTI off -fp hard -rostr -O4,p -nodefaults $(INCLUDES)
+CFLAGS   = -Cpp_exceptions off -enum int -inline on -proc gekko -RTTI off -fp hard -rostr -O4,p -nodefaults -func_align 4 $(INCLUDES)
 ifeq ($(NON_MATCHING),1)
 CFLAGS += -DNON_MATCHING
 endif
