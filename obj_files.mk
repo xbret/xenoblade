@@ -4,7 +4,8 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/Dolphin/__mem.o \
 	$(BUILD_DIR)/asm/Dolphin/__exception.o \
 	$(BUILD_DIR)/asm/text_main.o \
-	$(BUILD_DIR)/asm/main.o \
+	$(BUILD_DIR)/src/main.o \
+	$(BUILD_DIR)/asm/textsus.o \
 	$(BUILD_DIR)/asm/text.o \
 	$(BUILD_DIR)/asm/sbss.o \
 	$(BUILD_DIR)/asm/text_2.o \

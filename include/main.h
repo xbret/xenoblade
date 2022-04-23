@@ -22,7 +22,7 @@ extern void func_804DAA90();
 extern void func_804DAA98();
 extern void func_804DAAA0();
 extern void func_804DDE2C(s32*);
-extern void func_804DDE34(const char**);
+extern void func_804DDE34(const char* const*);
 
 extern s32 lbl_80039F6C[];
 extern s32 lbl_80039F90[];
@@ -31,5 +31,6 @@ extern u32 lbl_80528380[];
 extern u32 lbl_80528390[];
 extern s8 lbl_80666438;
 
+void main(int argc, char* argv[]);
 
-const char* staticArcStr = "static.arc";
+const char* const staticArcStr = "static.arc";
