@@ -48,14 +48,6 @@ lbl_8066838C:
 	.asciz "CGame"
 	.balign 4
 	.asciz "CProc"
-	.balign 4
-
-#0x806683A0
-.global staticArcStrPtr
-staticArcStrPtr:
-	.4byte staticArcStr
-	.4byte 0
-
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -84,10 +76,7 @@ lbl_804F5B5C:
 	.4byte 0x83438393
 	.4byte 0
 
-#0x804F5B98
-.global staticArcStr
-staticArcStr:
-	.asciz "static.arc"
+
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 

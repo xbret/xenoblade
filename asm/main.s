@@ -1,5 +1,19 @@
 .include "macros.inc"
 
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+#0x804F5B98
+.global staticArcStr
+staticArcStr:
+	.asciz "static.arc"
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.balign 4
+#0x806683A0
+.global staticArcStrPtr
+staticArcStrPtr:
+	.4byte staticArcStr
+	.4byte 0
+
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .global main

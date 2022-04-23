@@ -11,6 +11,7 @@ build/
 # Temporary files
 *.swp
 *.dump
+include/*.s
 
 # IDE
 .vscode/
