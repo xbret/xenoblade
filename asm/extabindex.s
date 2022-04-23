@@ -72,10 +72,10 @@
 	.4byte 0x80039F94  ;# ptr
 	.4byte 0x000000C8
 	.4byte 0x800067DC  ;# ptr
-	.4byte 0x8003A064  ;# ptr
+	.4byte func_8003A064  ;# ptr
 	.4byte 0x00000034
 	.4byte 0x800067E4  ;# ptr
-	.4byte 0x8003A098  ;# ptr
+	.4byte func_8003A098  ;# ptr
 	.4byte 0x00000034
 	.4byte 0x800067EC  ;# ptr
 	.4byte 0x8003A0E0  ;# ptr

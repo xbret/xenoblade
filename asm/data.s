@@ -194,11 +194,11 @@ lbl_80528458:
 
 	# ROM: 0x524558
 	.4byte 0x80668418
-	.4byte 0x8003A05C  ;# ptr
+	.4byte func_8003A05C  ;# ptr
 	.4byte 0x804F5CF0
-	.4byte 0x8003A064  ;# ptr
+	.4byte func_8003A064  ;# ptr
 	.4byte 0x804F5D04
-	.4byte 0x8003A098  ;# ptr
+	.4byte func_8003A098  ;# ptr
 	.4byte 0
 	.4byte 0
 
