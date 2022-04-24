@@ -64,8 +64,9 @@ O_FILES := $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES) $(TEXT_O_FILES) \
 # Tools
 #-------------------------------------------------------------------------------
 
-MWCC_VERSION := 1.0
-MWLD_VERSION := 1.0
+# Could also be 1.0?
+MWCC_VERSION := 1.1
+MWLD_VERSION := 1.1
 
 # Programs
 ifeq ($(WINDOWS),1)
