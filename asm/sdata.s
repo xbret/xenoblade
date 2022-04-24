@@ -3667,7 +3667,7 @@ lbl_80665984:
 lbl_80665988:
 
 	# ROM: 0x571568
-	.4byte 0x8030A960
+	.4byte defaultOptionalCommandChecker
 
 
 .global lbl_8066598C

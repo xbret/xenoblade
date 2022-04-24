@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80309DA0
-func_80309DA0:
+.global __DVDFSInit
+__DVDFSInit:
 /* 80309DA0 002D3360  3C 60 80 00 */	lis r3, 0x80000038@ha
 /* 80309DA4 002D3364  90 6D B6 44 */	stw r3, lbl_806677C4@sda21(r13)
 /* 80309DA8 002D3368  80 63 00 38 */	lwz r3, 0x80000038@l(r3)
@@ -17,8 +17,8 @@ func_80309DA0:
 /* 80309DC8 002D3388  90 0D B6 3C */	stw r0, lbl_806677BC@sda21(r13)
 /* 80309DCC 002D338C  4E 80 00 20 */	blr 
 
-.global func_80309DD0
-func_80309DD0:
+.global DVDConvertPathToEntrynum
+DVDConvertPathToEntrynum:
 /* 80309DD0 002D3390  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80309DD4 002D3394  7C 08 02 A6 */	mflr r0
 /* 80309DD8 002D3398  90 01 00 34 */	stw r0, 0x34(r1)
@@ -246,7 +246,7 @@ lbl_8030A0B0:
 /* 8030A0BC 002D367C  4B FF FD 40 */	b lbl_80309DFC
 lbl_8030A0C0:
 /* 8030A0C0 002D3680  39 61 00 30 */	addi r11, r1, 0x30
-/* 8030A0C4 002D3684  4B FB 00 CD */	bl func_802BA190
+/* 8030A0C4 002D3684  4B FB 00 CD */	bl _restgpr_23
 /* 8030A0C8 002D3688  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 8030A0CC 002D368C  7C 08 03 A6 */	mtlr r0
 /* 8030A0D0 002D3690  38 21 00 30 */	addi r1, r1, 0x30
@@ -254,8 +254,8 @@ lbl_8030A0C0:
 /* 8030A0D8 002D3698  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8030A0DC 002D369C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030A0E0
-func_8030A0E0:
+.global DVDFastOpen
+DVDFastOpen:
 /* 8030A0E0 002D36A0  2C 03 00 00 */	cmpwi r3, 0
 /* 8030A0E4 002D36A4  41 80 00 24 */	blt lbl_8030A108
 /* 8030A0E8 002D36A8  80 0D B6 38 */	lwz r0, lbl_806677B8@sda21(r13)
@@ -269,8 +269,6 @@ func_8030A0E0:
 lbl_8030A108:
 /* 8030A108 002D36C8  38 60 00 00 */	li r3, 0
 /* 8030A10C 002D36CC  4E 80 00 20 */	blr
-
-.global lbl_8030A110
 lbl_8030A110:
 /* 8030A110 002D36D0  7C 63 3A 14 */	add r3, r3, r7
 /* 8030A114 002D36D4  80 AD B6 98 */	lwz r5, lbl_80667818@sda21(r13)
@@ -289,8 +287,8 @@ lbl_8030A110:
 /* 8030A148 002D3708  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8030A14C 002D370C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030A150
-func_8030A150:
+.global DVDOpen
+DVDOpen:
 /* 8030A150 002D3710  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 8030A154 002D3714  7C 08 02 A6 */	mflr r0
 /* 8030A158 002D3718  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -298,7 +296,7 @@ func_8030A150:
 /* 8030A160 002D3720  4B FA FF F5 */	bl _savegpr_27
 /* 8030A164 002D3724  7C 7C 1B 78 */	mr r28, r3
 /* 8030A168 002D3728  7C 9B 23 78 */	mr r27, r4
-/* 8030A16C 002D372C  4B FF FC 65 */	bl func_80309DD0
+/* 8030A16C 002D372C  4B FF FC 65 */	bl DVDConvertPathToEntrynum
 /* 8030A170 002D3730  2C 03 00 00 */	cmpwi r3, 0
 /* 8030A174 002D3734  40 80 02 28 */	bge lbl_8030A39C
 /* 8030A178 002D3738  83 AD B6 28 */	lwz r29, lbl_806677A8@sda21(r13)
@@ -337,7 +335,7 @@ lbl_8030A1E0:
 /* 8030A1F0 002D37B0  7C 66 18 2E */	lwzx r3, r6, r3
 /* 8030A1F4 002D37B4  54 00 02 3E */	clrlwi r0, r0, 8
 /* 8030A1F8 002D37B8  7F 67 02 14 */	add r27, r7, r0
-/* 8030A1FC 002D37BC  48 00 02 45 */	bl func_8030A440
+/* 8030A1FC 002D37BC  48 00 02 45 */	bl entryToPath
 /* 8030A200 002D37C0  28 03 00 80 */	cmplwi r3, 0x80
 /* 8030A204 002D37C4  7C 64 1B 78 */	mr r4, r3
 /* 8030A208 002D37C8  40 82 00 08 */	bne lbl_8030A210
@@ -484,7 +482,7 @@ lbl_8030A3B8:
 /* 8030A3E8 002D39A8  90 1B 00 0C */	stw r0, 0xc(r27)
 lbl_8030A3EC:
 /* 8030A3EC 002D39AC  39 61 00 A0 */	addi r11, r1, 0xa0
-/* 8030A3F0 002D39B0  4B FA FD B1 */	bl func_802BA1A0
+/* 8030A3F0 002D39B0  4B FA FD B1 */	bl _restgpr_27
 /* 8030A3F4 002D39B4  80 01 00 A4 */	lwz r0, 0xa4(r1)
 /* 8030A3F8 002D39B8  7C 08 03 A6 */	mtlr r0
 /* 8030A3FC 002D39BC  38 21 00 A0 */	addi r1, r1, 0xa0
@@ -493,12 +491,12 @@ lbl_8030A3EC:
 /* 8030A408 002D39C8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8030A40C 002D39CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030A410
-func_8030A410:
+.global DVDClose
+DVDClose:
 /* 8030A410 002D39D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030A414 002D39D4  7C 08 02 A6 */	mflr r0
 /* 8030A418 002D39D8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8030A41C 002D39DC  48 00 4B F5 */	bl func_8030F010
+/* 8030A41C 002D39DC  48 00 4B F5 */	bl DVDCancel
 /* 8030A420 002D39E0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8030A424 002D39E4  38 60 00 01 */	li r3, 1
 /* 8030A428 002D39E8  7C 08 03 A6 */	mtlr r0
@@ -508,8 +506,8 @@ func_8030A410:
 /* 8030A438 002D39F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8030A43C 002D39FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030A440
-func_8030A440:
+.global entryToPath
+entryToPath:
 /* 8030A440 002D3A00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030A444 002D3A04  7C 08 02 A6 */	mflr r0
 /* 8030A448 002D3A08  90 01 00 24 */	stw r0, 0x24(r1)
@@ -550,7 +548,7 @@ lbl_8030A4C0:
 /* 8030A4C8 002D3A88  7C 66 18 2E */	lwzx r3, r6, r3
 /* 8030A4CC 002D3A8C  54 00 02 3E */	clrlwi r0, r0, 8
 /* 8030A4D0 002D3A90  7F 67 02 14 */	add r27, r7, r0
-/* 8030A4D4 002D3A94  4B FF FF 6D */	bl func_8030A440
+/* 8030A4D4 002D3A94  4B FF FF 6D */	bl entryToPath
 /* 8030A4D8 002D3A98  7C 03 E8 40 */	cmplw r3, r29
 /* 8030A4DC 002D3A9C  7C 64 1B 78 */	mr r4, r3
 /* 8030A4E0 002D3AA0  40 82 00 08 */	bne lbl_8030A4E8
@@ -637,7 +635,7 @@ lbl_8030A5E8:
 /* 8030A5EC 002D3BAC  7C 66 02 14 */	add r3, r6, r0
 lbl_8030A5F0:
 /* 8030A5F0 002D3BB0  39 61 00 20 */	addi r11, r1, 0x20
-/* 8030A5F4 002D3BB4  4B FA FB AD */	bl func_802BA1A0
+/* 8030A5F4 002D3BB4  4B FA FB AD */	bl _restgpr_27
 /* 8030A5F8 002D3BB8  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8030A5FC 002D3BBC  7C 08 03 A6 */	mtlr r0
 /* 8030A600 002D3BC0  38 21 00 20 */	addi r1, r1, 0x20
@@ -645,8 +643,8 @@ lbl_8030A5F0:
 /* 8030A608 002D3BC8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8030A60C 002D3BCC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030A610
-func_8030A610:
+.global DVDReadAsyncPrio
+DVDReadAsyncPrio:
 /* 8030A610 002D3BD0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030A614 002D3BD4  7C 08 02 A6 */	mflr r0
 /* 8030A618 002D3BD8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -687,25 +685,25 @@ lbl_8030A680:
 lbl_8030A698:
 /* 8030A698 002D3C58  80 DA 00 30 */	lwz r6, 0x30(r26)
 /* 8030A69C 002D3C5C  7F A0 16 70 */	srawi r0, r29, 2
-/* 8030A6A0 002D3C60  3C E0 80 31 */	lis r7, lbl_8030A6E0@ha
+/* 8030A6A0 002D3C60  3C E0 80 31 */	lis r7, cbForReadAsync@ha
 /* 8030A6A4 002D3C64  93 DA 00 38 */	stw r30, 0x38(r26)
 /* 8030A6A8 002D3C68  7F 43 D3 78 */	mr r3, r26
 /* 8030A6AC 002D3C6C  7F 64 DB 78 */	mr r4, r27
 /* 8030A6B0 002D3C70  7F 85 E3 78 */	mr r5, r28
 /* 8030A6B4 002D3C74  7F E8 FB 78 */	mr r8, r31
 /* 8030A6B8 002D3C78  7C C6 02 14 */	add r6, r6, r0
-/* 8030A6BC 002D3C7C  38 E7 A6 E0 */	addi r7, r7, lbl_8030A6E0@l
+/* 8030A6BC 002D3C7C  38 E7 A6 E0 */	addi r7, r7, cbForReadAsync@l
 /* 8030A6C0 002D3C80  48 00 42 41 */	bl func_8030E900
 /* 8030A6C4 002D3C84  39 61 00 20 */	addi r11, r1, 0x20
 /* 8030A6C8 002D3C88  38 60 00 01 */	li r3, 1
-/* 8030A6CC 002D3C8C  4B FA FA D1 */	bl func_802BA19C
+/* 8030A6CC 002D3C8C  4B FA FA D1 */	bl _restgpr_26
 /* 8030A6D0 002D3C90  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8030A6D4 002D3C94  7C 08 03 A6 */	mtlr r0
 /* 8030A6D8 002D3C98  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030A6DC 002D3C9C  4E 80 00 20 */	blr
 
-.global lbl_8030A6E0
-lbl_8030A6E0:
+.global cbForReadAsync
+cbForReadAsync:
 /* 8030A6E0 002D3CA0  81 84 00 38 */	lwz r12, 0x38(r4)
 /* 8030A6E4 002D3CA4  2C 0C 00 00 */	cmpwi r12, 0
 /* 8030A6E8 002D3CA8  4D 82 00 20 */	beqlr 
@@ -756,13 +754,13 @@ lbl_8030A76C:
 lbl_8030A784:
 /* 8030A784 002D3D44  80 DB 00 30 */	lwz r6, 0x30(r27)
 /* 8030A788 002D3D48  7F E0 16 70 */	srawi r0, r31, 2
-/* 8030A78C 002D3D4C  3C E0 80 31 */	lis r7, lbl_8030A830@ha
+/* 8030A78C 002D3D4C  3C E0 80 31 */	lis r7, cbForReadSync@ha
 /* 8030A790 002D3D50  7F 63 DB 78 */	mr r3, r27
 /* 8030A794 002D3D54  7F 84 E3 78 */	mr r4, r28
 /* 8030A798 002D3D58  7F A5 EB 78 */	mr r5, r29
 /* 8030A79C 002D3D5C  7F C8 F3 78 */	mr r8, r30
 /* 8030A7A0 002D3D60  7C C6 02 14 */	add r6, r6, r0
-/* 8030A7A4 002D3D64  38 E7 A8 30 */	addi r7, r7, lbl_8030A830@l
+/* 8030A7A4 002D3D64  38 E7 A8 30 */	addi r7, r7, cbForReadSync@l
 /* 8030A7A8 002D3D68  48 00 41 59 */	bl func_8030E900
 /* 8030A7AC 002D3D6C  2C 03 00 00 */	cmpwi r3, 0
 /* 8030A7B0 002D3D70  40 82 00 0C */	bne lbl_8030A7BC
@@ -797,16 +795,19 @@ lbl_8030A804:
 /* 8030A80C 002D3DCC  7F C3 F3 78 */	mr r3, r30
 lbl_8030A810:
 /* 8030A810 002D3DD0  39 61 00 20 */	addi r11, r1, 0x20
-/* 8030A814 002D3DD4  4B FA F9 8D */	bl func_802BA1A0
+/* 8030A814 002D3DD4  4B FA F9 8D */	bl _restgpr_27
 /* 8030A818 002D3DD8  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8030A81C 002D3DDC  7C 08 03 A6 */	mtlr r0
 /* 8030A820 002D3DE0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030A824 002D3DE4  4E 80 00 20 */	blr 
 /* 8030A828 002D3DE8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8030A82C 002D3DEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030A830:
+
+
+.global cbForReadSync
+cbForReadSync:
 /* 8030A830 002D3DF0  38 6D B6 30 */	addi r3, r13, lbl_806677B0@sda21
-/* 8030A834 002D3DF4  48 05 1F 2C */	b func_8035C760
+/* 8030A834 002D3DF4  48 05 1F 2C */	b OSWakeupThread
 /* 8030A838 002D3DF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8030A83C 002D3DFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
