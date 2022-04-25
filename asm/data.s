@@ -37837,9 +37837,7 @@ lbl_8054A6C0:
 
 
 .global lbl_8054A720
-
 lbl_8054A720:
-
 	# ROM: 0x546820
 	.asciz "(DVDLowFinish) Error: IOS_Close failed\n"
 	.asciz "IPCCltInit returned error: %d\n"

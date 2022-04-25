@@ -14176,8 +14176,7 @@ lbl_8050C190:
 	.byte 0x74, 0x78, 0x74
 	.asciz "_btntit"
 	.asciz "fileID_2"
-	.byte 0x66, 0x69, 0x6C
-	.asciz "eID_1"
+	.asciz "fileID_1"
 	.byte 0x4D, 0x4E
 	.asciz "U_kyeassign"
 	.asciz "pic_soatbtn"
@@ -14238,6 +14237,9 @@ lbl_8050C2D8:
 	.balign 4
 	.asciz "iconTexture[7].tpl"
 	.balign 4
+
+.global lbl_8050C458
+lbl_8050C458:
 	.4byte 0x30BC30CE
 	.4byte 0x30D630EC
 	.4byte 0x30A430C9
@@ -14250,6 +14252,9 @@ lbl_8050C2D8:
 	.4byte 0x30603055
 	.4byte 0x30443002
 	.4byte 0
+
+.global lbl_8050C488
+lbl_8050C488:
 	.4byte 0x30C730A3
 	.4byte 0x30B930AF
 	.4byte 0x30928AAD
@@ -14258,8 +14263,8 @@ lbl_8050C2D8:
 	.4byte 0x30673057
 	.4byte 0x305F3002
 	.4byte 0x00268A73
-	.asciz "0W0O0o"
-	.byte 0x57
+	.4byte 0x3057304F
+	.4byte 0x306F0057
 	.4byte 0x00690069
 	.4byte 0x672C4F53
 	.4byte 0x306E53D6
@@ -14270,6 +14275,9 @@ lbl_8050C2D8:
 	.4byte 0x304F3060
 	.4byte 0x30553044
 	.4byte 0x30020000
+
+.global lbl_8050C4D8
+lbl_8050C4D8:
 	.4byte 0x30C730A3
 	.4byte 0x30B930AF
 	.4byte 0x306E8AAD

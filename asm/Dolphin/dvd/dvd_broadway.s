@@ -57,8 +57,8 @@ lbl_80310698:
 /* 803106B8 002D9C78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 803106BC 002D9C7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-
-lbl_803106C0:
+.global doPrepareCoverRegisterCallback
+doPrepareCoverRegisterCallback:
 /* 803106C0 002D9C80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803106C4 002D9C84  7C 08 02 A6 */	mflr r0
 /* 803106C8 002D9C88  3C A0 80 5D */	lis r5, lbl_805CCCE0@ha
@@ -111,8 +111,8 @@ lbl_8031075C:
 /* 80310778 002D9D38  4E 80 00 20 */	blr 
 /* 8031077C 002D9D3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80310780
-func_80310780:
+.global DVDLowFinish
+DVDLowFinish:
 /* 80310780 002D9D40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80310784 002D9D44  7C 08 02 A6 */	mflr r0
 /* 80310788 002D9D48  90 01 00 14 */	stw r0, 0x14(r1)
@@ -136,8 +136,8 @@ lbl_803107C0:
 /* 803107C8 002D9D88  38 21 00 10 */	addi r1, r1, 0x10
 /* 803107CC 002D9D8C  4E 80 00 20 */	blr 
 
-.global func_803107D0
-func_803107D0:
+.global DVDLowInit
+DVDLowInit:
 /* 803107D0 002D9D90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803107D4 002D9D94  7C 08 02 A6 */	mflr r0
 /* 803107D8 002D9D98  90 01 00 14 */	stw r0, 0x14(r1)
@@ -312,8 +312,8 @@ lbl_80310A1C:
 /* 80310A38 002D9FF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80310A3C 002D9FFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80310A40
-func_80310A40:
+.global DVDLowReadDiskID
+DVDLowReadDiskID:
 /* 80310A40 002DA000  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80310A44 002DA004  7C 08 02 A6 */	mflr r0
 /* 80310A48 002DA008  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
@@ -424,8 +424,8 @@ lbl_80310BB0:
 /* 80310BC8 002DA188  4E 80 00 20 */	blr 
 /* 80310BCC 002DA18C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80310BD0
-func_80310BD0:
+.global DVDLowOpenPartition
+DVDLowOpenPartition:
 /* 80310BD0 002DA190  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80310BD4 002DA194  7C 08 02 A6 */	mflr r0
 /* 80310BD8 002DA198  3D 20 80 5D */	lis r9, lbl_805CCC60@ha
@@ -598,8 +598,8 @@ lbl_80310E1C:
 /* 80310E38 002DA3F8  4E 80 00 20 */	blr 
 /* 80310E3C 002DA3FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80310E40
-func_80310E40:
+.global DVDLowOpenPartitionWithTmdAndTicketView
+DVDLowOpenPartitionWithTmdAndTicketView:
 /* 80310E40 002DA400  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80310E44 002DA404  7C 08 02 A6 */	mflr r0
 /* 80310E48 002DA408  90 01 00 24 */	stw r0, 0x24(r1)
@@ -772,8 +772,8 @@ lbl_8031108C:
 /* 803110A8 002DA668  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 803110AC 002DA66C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803110B0
-func_803110B0:
+.global DVDLowGetNoDiscBufferSizes
+DVDLowGetNoDiscBufferSizes:
 /* 803110B0 002DA670  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803110B4 002DA674  7C 08 02 A6 */	mflr r0
 /* 803110B8 002DA678  2C 04 00 00 */	cmpwi r4, 0
@@ -919,8 +919,8 @@ lbl_803112A8:
 /* 803112B8 002DA878  38 21 00 10 */	addi r1, r1, 0x10
 /* 803112BC 002DA87C  4E 80 00 20 */	blr 
 
-.global func_803112C0
-func_803112C0:
+.global DVDLowGetNoDiscOpenPartitionParams
+DVDLowGetNoDiscOpenPartitionParams:
 /* 803112C0 002DA880  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803112C4 002DA884  7C 08 02 A6 */	mflr r0
 /* 803112C8 002DA888  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1102,8 +1102,8 @@ lbl_80311540:
 /* 80311558 002DAB18  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8031155C 002DAB1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80311560
-func_80311560:
+.global DVDLowClosePartition
+DVDLowClosePartition:
 /* 80311560 002DAB20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80311564 002DAB24  7C 08 02 A6 */	mflr r0
 /* 80311568 002DAB28  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1205,8 +1205,8 @@ lbl_803116B0:
 /* 803116C8 002DAC88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 803116CC 002DAC8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803116D0
-func_803116D0:
+.global DVDLowUnencryptedRead
+DVDLowUnencryptedRead:
 /* 803116D0 002DAC90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803116D4 002DAC94  7C 08 02 A6 */	mflr r0
 /* 803116D8 002DAC98  3D 20 80 5D */	lis r9, lbl_805CCC60@ha
@@ -1320,8 +1320,8 @@ lbl_80311850:
 /* 80311868 002DAE28  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8031186C 002DAE2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80311870
-func_80311870:
+.global DVDLowStopMotor
+DVDLowStopMotor:
 /* 80311870 002DAE30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80311874 002DAE34  7C 08 02 A6 */	mflr r0
 /* 80311878 002DAE38  3D 00 80 5D */	lis r8, lbl_805CCC60@ha
@@ -1435,8 +1435,8 @@ lbl_803119F0:
 /* 80311A08 002DAFC8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80311A0C 002DAFCC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80311A10
-func_80311A10:
+.global DVDLowInquiry
+DVDLowInquiry:
 /* 80311A10 002DAFD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80311A14 002DAFD4  7C 08 02 A6 */	mflr r0
 /* 80311A18 002DAFD8  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
@@ -1538,8 +1538,8 @@ lbl_80311B64:
 /* 80311B78 002DB138  4E 80 00 20 */	blr 
 /* 80311B7C 002DB13C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80311B80
-func_80311B80:
+.global DVDLowRequestError
+DVDLowRequestError:
 /* 80311B80 002DB140  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80311B84 002DB144  7C 08 02 A6 */	mflr r0
 /* 80311B88 002DB148  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
@@ -1641,15 +1641,15 @@ lbl_80311CD0:
 /* 80311CE8 002DB2A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80311CEC 002DB2AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80311CF0
-func_80311CF0:
+.global DVDLowSetSpinupFlag
+DVDLowSetSpinupFlag:
 /* 80311CF0 002DB2B0  90 6D B7 28 */	stw r3, lbl_806678A8@sda21(r13)
 /* 80311CF4 002DB2B4  38 60 00 01 */	li r3, 1
 /* 80311CF8 002DB2B8  4E 80 00 20 */	blr 
 /* 80311CFC 002DB2BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80311D00
-func_80311D00:
+.global DVDLowReset
+DVDLowReset:
 /* 80311D00 002DB2C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80311D04 002DB2C4  7C 08 02 A6 */	mflr r0
 /* 80311D08 002DB2C8  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
@@ -1755,8 +1755,8 @@ lbl_80311E64:
 /* 80311E78 002DB438  4E 80 00 20 */	blr 
 /* 80311E7C 002DB43C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80311E80
-func_80311E80:
+.global DVDLowAudioBufferConfig
+DVDLowAudioBufferConfig:
 /* 80311E80 002DB440  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80311E84 002DB444  7C 08 02 A6 */	mflr r0
 /* 80311E88 002DB448  3D 00 80 5D */	lis r8, lbl_805CCC60@ha
@@ -1870,8 +1870,8 @@ lbl_80312000:
 /* 80312018 002DB5D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8031201C 002DB5DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80312020
-func_80312020:
+.global DVDLowReportKey
+DVDLowReportKey:
 /* 80312020 002DB5E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80312024 002DB5E4  7C 08 02 A6 */	mflr r0
 /* 80312028 002DB5E8  3D 20 80 5D */	lis r9, lbl_805CCC60@ha
@@ -1985,8 +1985,8 @@ lbl_803121A0:
 /* 803121B8 002DB778  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 803121BC 002DB77C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803121C0
-func_803121C0:
+.global DVDLowSetMaximumRotation
+DVDLowSetMaximumRotation:
 /* 803121C0 002DB780  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803121C4 002DB784  7C 08 02 A6 */	mflr r0
 /* 803121C8 002DB788  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
@@ -2096,8 +2096,8 @@ lbl_8031232C:
 /* 80312348 002DB908  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8031234C 002DB90C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80312350
-func_80312350:
+.global DVDLowRead
+DVDLowRead:
 /* 80312350 002DB910  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80312354 002DB914  7C 08 02 A6 */	mflr r0
 /* 80312358 002DB918  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2216,8 +2216,8 @@ lbl_803124E8:
 /* 803124F8 002DBAB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803124FC 002DBABC  4E 80 00 20 */	blr 
 
-.global func_80312500
-func_80312500:
+.global DVDLowSeek
+DVDLowSeek:
 /* 80312500 002DBAC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80312504 002DBAC4  7C 08 02 A6 */	mflr r0
 /* 80312508 002DBAC8  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
@@ -2323,15 +2323,15 @@ lbl_80312668:
 /* 80312678 002DBC38  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031267C 002DBC3C  4E 80 00 20 */	blr 
 
-.global func_80312680
-func_80312680:
+.global DVDLowGetCoverRegister
+DVDLowGetCoverRegister:
 /* 80312680 002DBC40  3C 60 80 5D */	lis r3, lbl_805CCCE0@ha
 /* 80312684 002DBC44  38 63 CC E0 */	addi r3, r3, lbl_805CCCE0@l
 /* 80312688 002DBC48  80 63 00 04 */	lwz r3, 4(r3)
 /* 8031268C 002DBC4C  4E 80 00 20 */	blr 
 
-.global func_80312690
-func_80312690:
+.global DVDLowGetStatusRegister
+DVDLowGetStatusRegister:
 /* 80312690 002DBC50  3C 60 80 5D */	lis r3, lbl_805CCDE0@ha
 /* 80312694 002DBC54  80 63 CD E0 */	lwz r3, lbl_805CCDE0@l(r3)
 /* 80312698 002DBC58  4E 80 00 20 */	blr 
@@ -2344,8 +2344,8 @@ func_803126A0:
 /* 803126A8 002DBC68  4E 80 00 20 */	blr 
 /* 803126AC 002DBC6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803126B0
-func_803126B0:
+.global DVDLowPrepareCoverRegister
+DVDLowPrepareCoverRegister:
 /* 803126B0 002DBC70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803126B4 002DBC74  7C 08 02 A6 */	mflr r0
 /* 803126B8 002DBC78  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2416,12 +2416,12 @@ lbl_80312790:
 /* 803127A4 002DBD64  3C E0 80 5D */	lis r7, lbl_805CCD00@ha
 /* 803127A8 002DBD68  7F C3 2A 14 */	add r30, r3, r5
 /* 803127AC 002DBD6C  54 00 28 34 */	slwi r0, r0, 5
-/* 803127B0 002DBD70  3D 20 80 31 */	lis r9, lbl_803106C0@ha
+/* 803127B0 002DBD70  3D 20 80 31 */	lis r9, doPrepareCoverRegisterCallback@ha
 /* 803127B4 002DBD74  80 6D 98 28 */	lwz r3, lbl_806659A8@sda21(r13)
 /* 803127B8 002DBD78  7C A4 02 14 */	add r5, r4, r0
 /* 803127BC 002DBD7C  7F CA F3 78 */	mr r10, r30
 /* 803127C0 002DBD80  38 E7 CD 00 */	addi r7, r7, lbl_805CCD00@l
-/* 803127C4 002DBD84  39 29 06 C0 */	addi r9, r9, lbl_803106C0@l
+/* 803127C4 002DBD84  39 29 06 C0 */	addi r9, r9, doPrepareCoverRegisterCallback@l
 /* 803127C8 002DBD88  38 80 00 7A */	li r4, 0x7a
 /* 803127CC 002DBD8C  38 C0 00 20 */	li r6, 0x20
 /* 803127D0 002DBD90  39 00 00 20 */	li r8, 0x20
@@ -2447,8 +2447,8 @@ lbl_80312804:
 /* 80312818 002DBDD8  4E 80 00 20 */	blr 
 /* 8031281C 002DBDDC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80312820
-func_80312820:
+.global DVDLowPrepareStatusRegister
+DVDLowPrepareStatusRegister:
 /* 80312820 002DBDE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80312824 002DBDE4  7C 08 02 A6 */	mflr r0
 /* 80312828 002DBDE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2550,8 +2550,8 @@ lbl_80312974:
 /* 80312988 002DBF48  4E 80 00 20 */	blr 
 /* 8031298C 002DBF4C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80312990
-func_80312990:
+.global newContext
+newContext:
 /* 80312990 002DBF50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80312994 002DBF54  7C 08 02 A6 */	mflr r0
 /* 80312998 002DBF58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2653,29 +2653,29 @@ lbl_80312AE4:
 /* 80312AF8 002DC0B8  4E 80 00 20 */	blr 
 /* 80312AFC 002DC0BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80312B00
-func_80312B00:
+.global DVDLowGetImmBufferReg
+DVDLowGetImmBufferReg:
 /* 80312B00 002DC0C0  3C 60 80 5D */	lis r3, lbl_805CCCE0@ha
 /* 80312B04 002DC0C4  80 63 CC E0 */	lwz r3, lbl_805CCCE0@l(r3)
 /* 80312B08 002DC0C8  4E 80 00 20 */	blr 
 /* 80312B0C 002DC0CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80312B10
-func_80312B10:
+.global DVDLowUnmaskStatusInterrupts
+DVDLowUnmaskStatusInterrupts:
 /* 80312B10 002DC0D0  38 60 00 01 */	li r3, 1
 /* 80312B14 002DC0D4  4E 80 00 20 */	blr 
 /* 80312B18 002DC0D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80312B1C 002DC0DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80312B20
-func_80312B20:
+.global DVDLowMaskCoverInterrupt
+DVDLowMaskCoverInterrupt:
 /* 80312B20 002DC0E0  38 60 00 01 */	li r3, 1
 /* 80312B24 002DC0E4  4E 80 00 20 */	blr 
 /* 80312B28 002DC0E8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80312B2C 002DC0EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80312B30
-func_80312B30:
+.global DVDLowClearCoverInterrupt
+DVDLowClearCoverInterrupt:
 /* 80312B30 002DC0F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80312B34 002DC0F4  7C 08 02 A6 */	mflr r0
 /* 80312B38 002DC0F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2777,8 +2777,8 @@ lbl_80312C80:
 /* 80312C98 002DC258  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80312C9C 002DC25C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_80312CA0
-lbl_80312CA0:
+.global __DVDLowTestAlarm
+__DVDLowTestAlarm:
 /* 80312CA0 002DC260  38 60 00 00 */	li r3, 0
 /* 80312CA4 002DC264  4E 80 00 20 */	blr 
 /* 80312CA8 002DC268  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */

@@ -3123,7 +3123,7 @@ lbl_80665700:
 lbl_80665708:
 
 	# ROM: 0x5712E8
-	.4byte 0x8050C458
+	.4byte lbl_8050C458
 
 
 .global lbl_8066570C
@@ -3131,7 +3131,7 @@ lbl_80665708:
 lbl_8066570C:
 
 	# ROM: 0x5712EC
-	.4byte 0x8050C488
+	.4byte lbl_8050C488
 
 
 .global lbl_80665710
@@ -3139,7 +3139,7 @@ lbl_8066570C:
 lbl_80665710:
 
 	# ROM: 0x5712F0
-	.4byte 0x8050C4D8
+	.4byte lbl_8050C4D8
 
 
 .global lbl_80665714

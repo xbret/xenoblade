@@ -1,8 +1,8 @@
 #ifndef _TYPES_H
 #define _TYPES_H
 
-// r2 is  8051E360
-// r13 is 8051C680
+// r2 is  80670380
+// r13 is 8066C180
 
 typedef signed char s8;
 typedef signed short s16;

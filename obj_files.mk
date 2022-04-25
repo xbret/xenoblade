@@ -11,6 +11,8 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/src/Dolphin/__start.o \
 	$(BUILD_DIR)/asm/sbss_1.o \
 	$(BUILD_DIR)/asm/text_3.o \
+	$(BUILD_DIR)/src/code_802AEB74.o \
+	$(BUILD_DIR)/asm/text_3_1.o \
 	$(BUILD_DIR)/asm/text/printf.o \
 	$(BUILD_DIR)/asm/text_4.o \
 	$(BUILD_DIR)/asm/text_5.o \
