@@ -172,11 +172,7 @@ $(BUILD_DIR)/%.o: %.s
 
 $(BUILD_DIR)/%.o: %.c
 	@echo "Compiling " $<
-	$(QUIET) $(CC) $(CFLAGS) -c -o $@ $<
-
-$(BUILD_DIR)/%.o: %.cp
-	@echo "Compiling " $<
-	$(QUIET) $(CC) $(CFLAGS) -c -o $@ $<
+	$(QUIET) $(CC) $(CFLAGS) -lang=c99 -c -o $@ $<
 	
 $(BUILD_DIR)/%.o: %.cpp
 	@echo "Compiling " $<

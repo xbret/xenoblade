@@ -4,8 +4,10 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/Dolphin/__mem.o \
 	$(BUILD_DIR)/asm/Dolphin/__exception.o \
 	$(BUILD_DIR)/asm/text_main.o \
+	$(BUILD_DIR)/asm/sdata.o \
 	$(BUILD_DIR)/src/main.o \
 	$(BUILD_DIR)/asm/text.o \
+	$(BUILD_DIR)/asm/sdata_1.o \
 	$(BUILD_DIR)/asm/sbss.o \
 	$(BUILD_DIR)/asm/text_2.o \
 	$(BUILD_DIR)/src/Dolphin/__start.o \
@@ -192,11 +194,6 @@ DATA_O_FILES :=\
 
 BSS_O_FILES :=\
 	$(BUILD_DIR)/asm/bss.o
-
-SDATA_O_FILES :=\
-    $(BUILD_DIR)/asm/sdata.o
-
-SBSS_O_FILES :=
 
 SDATA2_O_FILES :=\
     $(BUILD_DIR)/asm/sdata2.o
