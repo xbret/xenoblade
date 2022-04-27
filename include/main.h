@@ -1,13 +1,11 @@
 #include "types.h"
 #include "code_802AEB74.h"
+#include "code_80450B14.h"
 
 extern void func_80057CDC();
 extern void func_804336E4(u32, u32);
 extern void func_804442D8();
 extern void func_80448E78(u32);
-extern void func_80450B14(u32**);
-extern void func_80450B1C(u32**);
-extern void func_80450B24(u32**);
 extern void func_804559A8(u32, u32);
 extern void func_80455FC8(u32*, u32);
 extern void func_8045D5C8(u32);

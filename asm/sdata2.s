@@ -25833,20 +25833,19 @@ lbl_8066CB9C:
 
 
 .global lbl_8066CBA0
-
 lbl_8066CBA0:
-
 	# ROM: 0x576A00
 	.4byte 0x3DCCCCCD
 
 
 .global lbl_8066CBA4
-
 lbl_8066CBA4:
-
 	# ROM: 0x576A04
 	.4byte 0x447A0000
 	.asciz "CDevice"
+
+.global lbl_8066CBB0
+lbl_8066CBB0:
 	.4byte 0
 	.4byte 0
 

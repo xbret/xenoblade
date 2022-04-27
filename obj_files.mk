@@ -172,6 +172,7 @@ TEXT_O_FILES :=\
     $(BUILD_DIR)/asm/nw4r/snd/snd_WsdPlayer.o \
     $(BUILD_DIR)/asm/nw4r/snd/snd_adpcm.o \
 	$(BUILD_DIR)/asm/text_8.o \
+	$(BUILD_DIR)/src/code_80450B14.o \
 	$(BUILD_DIR)/asm/text_9.o
 
 EXTAB_O_FILES :=\

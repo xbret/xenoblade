@@ -9,6 +9,11 @@ const char* const staticArcStr = "static.arc";
 
 
 void main(int argc, char* argv[]) {
+    /*
+    The first two functions store the array pointers in variables,
+    which are then passed into the function func_80457CA4 in the register r4
+    through the function func_8044F744.
+    */
     u32** ptr = func_802AEB74();
     func_80450B14(ptr);
     u32** ptr1 = func_802AEB7C();
