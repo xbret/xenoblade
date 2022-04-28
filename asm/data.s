@@ -38823,7 +38823,7 @@ lbl_8054ECA0:
 .global lbl_8054ECD0
 lbl_8054ECD0:
 	# ROM: 0x54ADD0
-	.4byte 0x8054ED50
+	.4byte lbl_8054ED50
 	.4byte 0
 	.4byte 0x80338800
 	.4byte 0x80338B60
@@ -38845,25 +38845,50 @@ lbl_8054ECD0:
 	.4byte 0x80338D70
 	.4byte 0x80338E70
 	.4byte 0x80338F20
+
+#dol offset: 0x54ae28
+.global lbl_8054ED28
+lbl_8054ED28:
 	.asciz "nw4hbm::ut::ResFont"
-	.4byte 0x8054EDA8
+
+.global lbl_8054ED3C
+lbl_8054ED3C:
+	.4byte lbl_8054EDA8
 	.4byte 0
-	.4byte 0x8054ED88
+	.4byte lbl_8054ED88
 	.4byte 0
 	.4byte 0
-	.4byte 0x8054ED28
-	.4byte 0x8054ED3C
+
+.global lbl_8054ED50
+lbl_8054ED50:
+	.4byte lbl_8054ED28
+	.4byte lbl_8054ED3C
+
+.global lbl_8054ED58
+lbl_8054ED58:
 	.asciz "nw4hbm::ut::detail::ResFontBase"
-	.4byte 0x8054EDA8
+
+.global lbl_8054ED78
+lbl_8054ED78:
+	.4byte lbl_8054EDA8
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0x8054ED58
-	.4byte 0x8054ED78
+
+.global lbl_8054ED88
+lbl_8054ED88:
+	.4byte lbl_8054ED58
+	.4byte lbl_8054ED78
+
+.global lbl_8054ED90
+lbl_8054ED90:
 	.asciz "nw4hbm::ut::Font"
 	.balign 4
 	.4byte 0
-	.4byte 0x8054ED90
+
+.global lbl_8054EDA8
+lbl_8054EDA8:
+	.4byte lbl_8054ED90
 	.4byte 0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -38874,7 +38899,7 @@ lbl_8054ECD0:
 .global lbl_8054EDC0
 lbl_8054EDC0:
 	# ROM: 0x54AEC0
-	.4byte 0x8054ED88
+	.4byte lbl_8054ED88
 	.4byte 0
 	.4byte 0x80338B10
 	.4byte 0x80338B60
@@ -38901,7 +38926,7 @@ lbl_8054EDC0:
 .global lbl_8054EE18
 lbl_8054EE18:
 	# ROM: 0x54AF18
-	.4byte 0x8054EDA8
+	.4byte lbl_8054EDA8
 	.4byte 0
 	.4byte 0x80333F60
 	.4byte 0

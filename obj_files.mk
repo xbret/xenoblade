@@ -28,8 +28,9 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/Dolphin/dvd/dvdFatal.o \
 	$(BUILD_DIR)/asm/Dolphin/dvd/dvdDeviceError.o \
 	$(BUILD_DIR)/asm/Dolphin/dvd/dvd_broadway.o \
-	$(BUILD_DIR)/asm/text_5_2.o \
+    $(BUILD_DIR)/asm/text_5_2.o \
 	$(BUILD_DIR)/asm/text_5_3.o \
+	$(BUILD_DIR)/asm/text_5_4.o \
 	$(BUILD_DIR)/asm/Dolphin/OS/OS.o \
 	$(BUILD_DIR)/asm/Dolphin/OS/OSAlarm.o \
 	$(BUILD_DIR)/asm/Dolphin/OS/func_803535D0.o \
@@ -186,6 +187,16 @@ TEXT_O_FILES :=\
     $(BUILD_DIR)/asm/nw4r/snd/snd_WsdFile.o \
     $(BUILD_DIR)/asm/nw4r/snd/snd_WsdPlayer.o \
     $(BUILD_DIR)/asm/nw4r/snd/snd_adpcm.o \
+    $(BUILD_DIR)/asm/nw4r/ut/ut_LinkList.o \
+    $(BUILD_DIR)/asm/nw4r/ut/ut_CharStrmReader.o \
+    $(BUILD_DIR)/asm/nw4r/ut/ut_IOStream.o \
+    $(BUILD_DIR)/asm/nw4r/ut/ut_FileStream.o \
+    $(BUILD_DIR)/asm/nw4r/ut/ut_LockedCache.o \
+    $(BUILD_DIR)/asm/nw4r/ut/ut_Font.o \
+    $(BUILD_DIR)/asm/nw4r/ut/ut_ResFontBase.o \
+    $(BUILD_DIR)/asm/nw4r/ut/ut_ResFont.o \
+    $(BUILD_DIR)/asm/nw4r/ut/code_8042CC2C.o \
+    $(BUILD_DIR)/asm/nw4r/ut/ut_CharWriter.o \
 	$(BUILD_DIR)/asm/text_8.o \
 	$(BUILD_DIR)/src/code_80450B14.o \
 	$(BUILD_DIR)/asm/text_9.o
