@@ -34,7 +34,7 @@ void main(int argc, char* argv[]) {
     func_80455FC8(lbl_80528380, 1);
     func_8045FBB0(lbl_80528390);
     func_8046023C(&lbl_80039F6C, &lbl_80039F90);
-    func_804DDE34(&staticArcStr);
+    SaveStaticArcFilenameString(&staticArcStr);
     func_804DDE2C(lbl_804F5BE0);
     func_80057CDC();
     func_8045D5C8(1);

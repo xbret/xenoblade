@@ -62,7 +62,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/Dolphin/__ppc_eabi_init.o \
 	$(BUILD_DIR)/asm/Dolphin/Pad.o \
 	$(BUILD_DIR)/asm/text_6.o \
-	$(BUILD_DIR)/asm/text_7.o \
+	$(BUILD_DIR)/asm/CriWare.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_rescommon.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resdict.o \
     $(BUILD_DIR)/asm/nw4r/g3d/g3d_resfile.o \
@@ -114,7 +114,22 @@ TEXT_O_FILES :=\
     $(BUILD_DIR)/asm/nw4r/g3d/g3d_fog.o \
     $(BUILD_DIR)/asm/nw4r/g3d/g3d_light.o \
     $(BUILD_DIR)/asm/nw4r/g3d/g3d_calcvtx.o \
-	$(BUILD_DIR)/asm/text_7_1.o \
+	$(BUILD_DIR)/asm/code_803FE8B0.o \
+	$(BUILD_DIR)/asm/nw4r/lyt/lyt_pane.o \
+    $(BUILD_DIR)/asm/nw4r/lyt/lyt_group.o \
+    $(BUILD_DIR)/asm/nw4r/lyt/lyt_layout.o \
+    $(BUILD_DIR)/asm/nw4r/lyt/lyt_picture.o \
+    $(BUILD_DIR)/asm/nw4r/lyt/lyt_textBox.o \
+    $(BUILD_DIR)/asm/nw4r/lyt/lyt_window.o \
+    $(BUILD_DIR)/asm/nw4r/lyt/lyt_bounding.o \
+    $(BUILD_DIR)/asm/nw4r/lyt/lyt_material.o \
+    $(BUILD_DIR)/asm/nw4r/lyt/lyt_texMap.o \
+    $(BUILD_DIR)/asm/nw4r/lyt/lyt_drawInfo.o \
+    $(BUILD_DIR)/asm/nw4r/lyt/lyt_animation.o \
+	$(BUILD_DIR)/asm/nw4r/lyt/code_804093D8.o \
+    $(BUILD_DIR)/asm/nw4r/lyt/lyt_resourceAccessor.o \
+    $(BUILD_DIR)/asm/nw4r/lyt/lyt_arcResourceAccessor.o \
+    $(BUILD_DIR)/asm/nw4r/lyt/lyt_common.o \
 	$(BUILD_DIR)/asm/nw4r/math/math_arithmetic.o \
 	$(BUILD_DIR)/asm/nw4r/math/math_triangular.o \
 	$(BUILD_DIR)/asm/nw4r/math/math_types.o \

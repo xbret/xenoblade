@@ -24,25 +24,19 @@ lbl_8066660C:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global lbl_80668380
-
-lbl_80668380:
-	# ROM: 0x5721E0
+lbl_80668380:	# ROM: 0x5721E0
 	.4byte 0x8B90905F
 	.4byte 0
 
 
 .global lbl_80668388
-
 lbl_80668388:
-
 	# ROM: 0x5721E8
 	.float 1.0
 
 
 .global lbl_8066838C
-
 lbl_8066838C:
-
 	# ROM: 0x5721EC
 	.4byte 0
 	.asciz "CGame"

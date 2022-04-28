@@ -1304,8 +1304,8 @@ lbl_806682E8:
 .global lbl_806682EC
 lbl_806682EC:
 	.skip 0x4
-.global lbl_806682F0
-lbl_806682F0:
+.global staticArcFilenameString
+staticArcFilenameString:
 	.skip 0x8
 .global lbl_806682F8
 lbl_806682F8:

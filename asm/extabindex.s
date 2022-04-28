@@ -24702,9 +24702,7 @@
 
 
 .global lbl_80039200
-
 lbl_80039200:
-
 	# ROM: 0x4F19E0
 	.4byte 0x80021020  ;# ptr
 	.4byte 0x80039200  ;# ptr

@@ -3,9 +3,7 @@
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 .global lbl_805281E0
-
 lbl_805281E0:
-
 	# ROM: 0x5242E0
 	.4byte 0x80664188
 	.4byte 0
@@ -58,9 +56,7 @@ lbl_805281E0:
 
 
 .global lbl_805282A0
-
 lbl_805282A0:
-
 	# ROM: 0x5243A0
 	.4byte 0x80664190
 	.4byte 0
@@ -121,9 +117,7 @@ lbl_805282A0:
 
 
 .global lbl_80528380
-
 lbl_80528380:
-
 	# ROM: 0x524480
 	.4byte 0x804F5B88
 	.4byte 0x80039A30  ;# ptr
@@ -132,9 +126,7 @@ lbl_80528380:
 
 
 .global lbl_80528390
-
 lbl_80528390:
-
 	# ROM: 0x524490
 	.4byte 0x806683E0
 	.4byte 0x804F5C14
@@ -189,9 +181,7 @@ lbl_80528390:
 
 
 .global lbl_80528458
-
 lbl_80528458:
-
 	# ROM: 0x524558
 	.4byte 0x80668418
 	.4byte func_8003A05C  ;# ptr
@@ -204,9 +194,7 @@ lbl_80528458:
 
 
 .global lbl_80528478
-
 lbl_80528478:
-
 	# ROM: 0x524578
 	.4byte 0x80668420
 	.4byte 0x8003A0E0  ;# ptr
@@ -227,9 +215,7 @@ lbl_80528478:
 
 
 .global lbl_805284B8
-
 lbl_805284B8:
-
 	# ROM: 0x5245B8
 	.4byte 0x80668428
 	.4byte 0
@@ -260,9 +246,7 @@ lbl_805284B8:
 
 
 .global lbl_80528520
-
 lbl_80528520:
-
 	# ROM: 0x524620
 	.4byte 0x80668460
 	.4byte 0x8003A310  ;# ptr
@@ -301,9 +285,7 @@ lbl_80528520:
 
 
 .global lbl_805285A8
-
 lbl_805285A8:
-
 	# ROM: 0x5246A8
 	.4byte 0x80668498
 	.4byte 0x8003A53C  ;# ptr
@@ -346,9 +328,7 @@ lbl_805285A8:
 
 
 .global lbl_80528640
-
 lbl_80528640:
-
 	# ROM: 0x524740
 	.4byte 0x806684B0
 	.4byte 0x8003A7B4  ;# ptr
@@ -375,9 +355,7 @@ lbl_80528640:
 
 
 .global lbl_80528698
-
 lbl_80528698:
-
 	# ROM: 0x524798
 	.4byte 0x806684C0
 	.4byte 0x8003B8EC  ;# ptr
@@ -386,9 +364,7 @@ lbl_80528698:
 
 
 .global lbl_805286A8
-
 lbl_805286A8:
-
 	# ROM: 0x5247A8
 	.4byte 0x806684DC
 	.4byte 0x8003C044  ;# ptr
@@ -847,9 +823,7 @@ lbl_805286A8:
 
 
 .global lbl_80528DC0
-
 lbl_80528DC0:
-
 	# ROM: 0x524EC0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -1043,9 +1017,7 @@ lbl_80528DC0:
 
 
 .global lbl_805290B4
-
 lbl_805290B4:
-
 	# ROM: 0x5251B4
 	.4byte 0x80664210
 	.4byte 0
@@ -1053,9 +1025,7 @@ lbl_805290B4:
 
 
 .global lbl_805290C0
-
 lbl_805290C0:
-
 	# ROM: 0x5251C0
 	.4byte 0x80664218
 	.4byte 0
@@ -1133,9 +1103,7 @@ lbl_805290C0:
 
 
 .global lbl_805291E4
-
 lbl_805291E4:
-
 	# ROM: 0x5252E4
 	.4byte 0x80664220
 	.4byte 0
@@ -1169,9 +1137,7 @@ lbl_805291E4:
 
 
 .global lbl_80529258
-
 lbl_80529258:
-
 	# ROM: 0x525358
 	.4byte 0x80664240
 	.4byte 0
@@ -1180,9 +1146,7 @@ lbl_80529258:
 
 
 .global lbl_80529268
-
 lbl_80529268:
-
 	# ROM: 0x525368
 	.4byte 0x806641A8
 	.4byte 0
@@ -1268,9 +1232,7 @@ lbl_80529268:
 
 
 .global lbl_805293AC
-
 lbl_805293AC:
-
 	# ROM: 0x5254AC
 	.4byte 0x80664260
 	.4byte 0
@@ -1293,9 +1255,7 @@ lbl_805293AC:
 
 
 .global lbl_805293F4
-
 lbl_805293F4:
-
 	# ROM: 0x5254F4
 	.4byte 0x80664268
 	.4byte 0
@@ -1324,9 +1284,7 @@ lbl_805293F4:
 
 
 .global lbl_80529454
-
 lbl_80529454:
-
 	# ROM: 0x525554
 	.4byte 0x80664278
 	.4byte 0
@@ -1359,9 +1317,7 @@ lbl_80529454:
 
 
 .global lbl_805294C4
-
 lbl_805294C4:
-
 	# ROM: 0x5255C4
 	.4byte 0x80664280
 	.4byte 0
@@ -1372,9 +1328,7 @@ lbl_805294C4:
 
 
 .global lbl_805294DC
-
 lbl_805294DC:
-
 	# ROM: 0x5255DC
 	.4byte 0x80664288
 	.4byte 0
@@ -1382,9 +1336,7 @@ lbl_805294DC:
 
 
 .global lbl_805294E8
-
 lbl_805294E8:
-
 	# ROM: 0x5255E8
 	.4byte 0x80664290
 	.4byte 0
@@ -1396,9 +1348,7 @@ lbl_805294E8:
 
 
 .global lbl_80529504
-
 lbl_80529504:
-
 	# ROM: 0x525604
 	.4byte 0x80664298
 	.4byte 0
@@ -1446,9 +1396,7 @@ lbl_80529504:
 
 
 .global lbl_805295B0
-
 lbl_805295B0:
-
 	# ROM: 0x5256B0
 	.4byte 0x80668648
 	.4byte 0x80045560  ;# ptr
@@ -1457,9 +1405,7 @@ lbl_805295B0:
 
 
 .global lbl_805295C0
-
 lbl_805295C0:
-
 	# ROM: 0x5256C0
 	.4byte 0x80668660
 	.4byte 0x80045884  ;# ptr
@@ -1560,9 +1506,7 @@ lbl_805295C0:
 
 
 .global lbl_80529740
-
 lbl_80529740:
-
 	# ROM: 0x525840
 	.4byte 0x80668698
 	.4byte 0x800468E0  ;# ptr
@@ -1607,9 +1551,7 @@ lbl_80529740:
 
 
 .global lbl_805297E0
-
 lbl_805297E0:
-
 	# ROM: 0x5258E0
 	.4byte 0x806686E8
 	.4byte 0x80048474  ;# ptr
@@ -1744,9 +1686,7 @@ lbl_805297E0:
 
 
 .global lbl_805299E8
-
 lbl_805299E8:
-
 	# ROM: 0x525AE8
 	.4byte 0x80668720
 	.4byte 0x8004AF8C  ;# ptr
@@ -1755,9 +1695,7 @@ lbl_805299E8:
 
 
 .global lbl_805299F8
-
 lbl_805299F8:
-
 	# ROM: 0x525AF8
 	.4byte 0x806642A8
 	.4byte 0
@@ -1826,36 +1764,28 @@ lbl_805299F8:
 
 
 .global lbl_80529AF8
-
 lbl_80529AF8:
-
 	# ROM: 0x525BF8
 	.asciz "AcosRad: Input is out of the domain."
 	.balign 4
 
 
 .global lbl_80529B20
-
 lbl_80529B20:
-
 	# ROM: 0x525C20
 	.asciz "triangular.h"
 	.balign 4
 
 
 .global lbl_80529B30
-
 lbl_80529B30:
-
 	# ROM: 0x525C30
 	.asciz "FSqrt: Input is out of the domain."
 	.balign 4
 
 
 .global lbl_80529B54
-
 lbl_80529B54:
-
 	# ROM: 0x525C54
 	.asciz "arithmetic.h"
 	.balign 4
@@ -1863,9 +1793,7 @@ lbl_80529B54:
 
 
 .global lbl_80529B68
-
 lbl_80529B68:
-
 	# ROM: 0x525C68
 	.4byte 0x806642B8
 	.4byte 0
@@ -1874,9 +1802,7 @@ lbl_80529B68:
 
 
 .global lbl_80529B78
-
 lbl_80529B78:
-
 	# ROM: 0x525C78
 	.4byte 0x806642C0
 	.4byte 0
@@ -1884,27 +1810,21 @@ lbl_80529B78:
 
 
 .global lbl_80529B84
-
 lbl_80529B84:
-
 	# ROM: 0x525C84
 	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
 	.balign 4
 
 
 .global lbl_80529BAC
-
 lbl_80529BAC:
-
 	# ROM: 0x525CAC
 	.asciz "g3d_resfile_ac.h"
 	.balign 4
 
 
 .global lbl_80529BC0
-
 lbl_80529BC0:
-
 	# ROM: 0x525CC0
 	.4byte 0x806642C8
 	.4byte 0
@@ -1927,9 +1847,7 @@ lbl_80529BC0:
 
 
 .global lbl_80529C08
-
 lbl_80529C08:
-
 	# ROM: 0x525D08
 	.4byte 0x806642D0
 	.4byte 0
@@ -1950,9 +1868,7 @@ lbl_80529C08:
 
 
 .global lbl_80529C48
-
 lbl_80529C48:
-
 	# ROM: 0x525D48
 	.4byte 0x806642D8
 	.4byte 0
@@ -1963,9 +1879,7 @@ lbl_80529C48:
 
 
 .global lbl_80529C60
-
 lbl_80529C60:
-
 	# ROM: 0x525D60
 	.4byte 0x806642E8
 	.4byte 0
@@ -1976,9 +1890,7 @@ lbl_80529C60:
 
 
 .global lbl_80529C78
-
 lbl_80529C78:
-
 	# ROM: 0x525D78
 	.4byte 0x806642F0
 	.4byte 0
@@ -1987,9 +1899,7 @@ lbl_80529C78:
 
 
 .global lbl_80529C88
-
 lbl_80529C88:
-
 	# ROM: 0x525D88
 	.4byte 0x80664308
 	.4byte 0
@@ -2060,9 +1970,7 @@ lbl_80529C88:
 
 
 .global lbl_80529D90
-
 lbl_80529D90:
-
 	# ROM: 0x525E90
 	.4byte 0x80668A08
 	.4byte 0x800602B8  ;# ptr
@@ -2109,9 +2017,7 @@ lbl_80529D90:
 
 
 .global lbl_80529E38
-
 lbl_80529E38:
-
 	# ROM: 0x525F38
 	.4byte 0x80664310
 	.4byte 0
@@ -2134,9 +2040,7 @@ lbl_80529E38:
 
 
 .global lbl_80529E80
-
 lbl_80529E80:
-
 	# ROM: 0x525F80
 	.4byte 0x80664318
 	.4byte 0
@@ -2157,9 +2061,7 @@ lbl_80529E80:
 
 
 .global lbl_80529EC0
-
 lbl_80529EC0:
-
 	# ROM: 0x525FC0
 	.4byte 0x80668A68
 	.4byte 0x800616E0  ;# ptr
@@ -2170,9 +2072,7 @@ lbl_80529EC0:
 
 
 .global lbl_80529ED8
-
 lbl_80529ED8:
-
 	# ROM: 0x525FD8
 	.4byte 0x800642E8  ;# ptr
 	.4byte 0x800642E8  ;# ptr
@@ -2197,9 +2097,7 @@ lbl_80529ED8:
 
 
 .global lbl_80529F28
-
 lbl_80529F28:
-
 	# ROM: 0x526028
 	.4byte 0x80064258  ;# ptr
 	.4byte 0x80064244  ;# ptr
@@ -2224,9 +2122,7 @@ lbl_80529F28:
 
 
 .global lbl_80529F78
-
 lbl_80529F78:
-
 	# ROM: 0x526078
 	.4byte 0x80064570  ;# ptr
 	.4byte 0x80064570  ;# ptr
@@ -2254,9 +2150,7 @@ lbl_80529F78:
 
 
 .global lbl_80529FD4
-
 lbl_80529FD4:
-
 	# ROM: 0x5260D4
 	.4byte 0x80664328
 	.4byte 0
@@ -2279,9 +2173,7 @@ lbl_80529FD4:
 
 
 .global lbl_8052A01C
-
 lbl_8052A01C:
-
 	# ROM: 0x52611C
 	.4byte 0x80664330
 	.4byte 0
@@ -2303,9 +2195,7 @@ lbl_8052A01C:
 
 
 .global lbl_8052A060
-
 lbl_8052A060:
-
 	# ROM: 0x526160
 	.4byte 0x80664338
 	.4byte 0
@@ -2348,9 +2238,7 @@ lbl_8052A060:
 
 
 .global lbl_8052A0F8
-
 lbl_8052A0F8:
-
 	# ROM: 0x5261F8
 	.4byte 0x800660A4  ;# ptr
 	.4byte 0x80065FF8  ;# ptr
@@ -2366,9 +2254,7 @@ lbl_8052A0F8:
 
 
 .global lbl_8052A124
-
 lbl_8052A124:
-
 	# ROM: 0x526224
 	.4byte 0x8006620C  ;# ptr
 	.4byte 0x800661E8  ;# ptr
@@ -2384,9 +2270,7 @@ lbl_8052A124:
 
 
 .global lbl_8052A150
-
 lbl_8052A150:
-
 	# ROM: 0x526250
 	.4byte 0x80664348
 	.4byte 0
@@ -2397,9 +2281,7 @@ lbl_8052A150:
 
 
 .global lbl_8052A168
-
 lbl_8052A168:
-
 	# ROM: 0x526268
 	.4byte 0x80664350
 	.4byte 0
@@ -2407,9 +2289,7 @@ lbl_8052A168:
 
 
 .global lbl_8052A174
-
 lbl_8052A174:
-
 	# ROM: 0x526274
 	.4byte 0x80664358
 	.4byte 0
@@ -2440,9 +2320,7 @@ lbl_8052A174:
 
 
 .global lbl_8052A1DC
-
 lbl_8052A1DC:
-
 	# ROM: 0x5262DC
 	.4byte 0x80664360
 	.4byte 0
@@ -2472,9 +2350,7 @@ lbl_8052A1DC:
 
 
 .global lbl_8052A240
-
 lbl_8052A240:
-
 	# ROM: 0x526340
 	.4byte 0x80664368
 	.4byte 0
@@ -2503,9 +2379,7 @@ lbl_8052A240:
 
 
 .global lbl_8052A2A0
-
 lbl_8052A2A0:
-
 	# ROM: 0x5263A0
 	.4byte 0x80664370
 	.4byte 0
@@ -2534,9 +2408,7 @@ lbl_8052A2A0:
 
 
 .global lbl_8052A300
-
 lbl_8052A300:
-
 	# ROM: 0x526400
 	.4byte 0x80664378
 	.4byte 0
@@ -2565,9 +2437,7 @@ lbl_8052A300:
 
 
 .global lbl_8052A360
-
 lbl_8052A360:
-
 	# ROM: 0x526460
 	.4byte 0x80664380
 	.4byte 0
@@ -2596,9 +2466,7 @@ lbl_8052A360:
 
 
 .global lbl_8052A3C0
-
 lbl_8052A3C0:
-
 	# ROM: 0x5264C0
 	.4byte 0x80664388
 	.4byte 0
@@ -2627,9 +2495,7 @@ lbl_8052A3C0:
 
 
 .global lbl_8052A420
-
 lbl_8052A420:
-
 	# ROM: 0x526520
 	.4byte 0x80664390
 	.4byte 0
@@ -2658,9 +2524,7 @@ lbl_8052A420:
 
 
 .global lbl_8052A480
-
 lbl_8052A480:
-
 	# ROM: 0x526580
 	.4byte 0x80664398
 	.4byte 0
@@ -2689,9 +2553,7 @@ lbl_8052A480:
 
 
 .global lbl_8052A4E0
-
 lbl_8052A4E0:
-
 	# ROM: 0x5265E0
 	.4byte 0x806643A0
 	.4byte 0
@@ -2720,9 +2582,7 @@ lbl_8052A4E0:
 
 
 .global lbl_8052A540
-
 lbl_8052A540:
-
 	# ROM: 0x526640
 	.4byte 0x806643A8
 	.4byte 0
@@ -2751,9 +2611,7 @@ lbl_8052A540:
 
 
 .global lbl_8052A5A0
-
 lbl_8052A5A0:
-
 	# ROM: 0x5266A0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -2764,9 +2622,7 @@ lbl_8052A5A0:
 
 
 .global lbl_8052A5B8
-
 lbl_8052A5B8:
-
 	# ROM: 0x5266B8
 	.4byte 0x806643C0
 	.4byte 0
@@ -2809,9 +2665,7 @@ lbl_8052A5B8:
 
 
 .global lbl_8052A650
-
 lbl_8052A650:
-
 	# ROM: 0x526750
 	.4byte 0x806643D0
 	.4byte 0
@@ -2870,9 +2724,7 @@ lbl_8052A650:
 
 
 .global lbl_8052A728
-
 lbl_8052A728:
-
 	# ROM: 0x526828
 	.4byte 0x806643D8
 	.4byte 0
@@ -2893,9 +2745,7 @@ lbl_8052A728:
 
 
 .global lbl_8052A768
-
 lbl_8052A768:
-
 	# ROM: 0x526868
 	.4byte 0x806643E0
 	.4byte 0
@@ -2938,9 +2788,7 @@ lbl_8052A768:
 
 
 .global lbl_8052A800
-
 lbl_8052A800:
-
 	# ROM: 0x526900
 	.4byte 0x0006000C
 	.4byte 0x00120000
@@ -2948,9 +2796,7 @@ lbl_8052A800:
 
 
 .global lbl_8052A80C
-
 lbl_8052A80C:
-
 	# ROM: 0x52690C
 	.4byte 0x001E001E
 	.4byte 0x001E001E
@@ -2958,9 +2804,7 @@ lbl_8052A80C:
 
 
 .global lbl_8052A818
-
 lbl_8052A818:
-
 	# ROM: 0x526918
 	.4byte 0x806643F8
 	.4byte 0
@@ -3001,9 +2845,7 @@ lbl_8052A818:
 
 
 .global lbl_8052A8A8
-
 lbl_8052A8A8:
-
 	# ROM: 0x5269A8
 	.4byte 0x80664400
 	.4byte 0
@@ -3020,9 +2862,7 @@ lbl_8052A8A8:
 
 
 .global lbl_8052A8D8
-
 lbl_8052A8D8:
-
 	# ROM: 0x5269D8
 	.4byte 0x80664408
 	.4byte 0
@@ -3037,9 +2877,7 @@ lbl_8052A8D8:
 
 
 .global lbl_8052A900
-
 lbl_8052A900:
-
 	# ROM: 0x526A00
 	.4byte 0x80664410
 	.4byte 0
@@ -3056,9 +2894,7 @@ lbl_8052A900:
 
 
 .global lbl_8052A930
-
 lbl_8052A930:
-
 	# ROM: 0x526A30
 	.4byte 0x3F800000
 	.4byte 0
@@ -3102,9 +2938,7 @@ lbl_8052A930:
 
 
 .global lbl_8052A9CC
-
 lbl_8052A9CC:
-
 	# ROM: 0x526ACC
 	.4byte 0x80668B10
 	.4byte 0x80668B18
@@ -3112,9 +2946,7 @@ lbl_8052A9CC:
 
 
 .global lbl_8052A9D8
-
 lbl_8052A9D8:
-
 	# ROM: 0x526AD8
 	.4byte 0x3DCCCCCD
 	.4byte 0x3DA3D70A
@@ -3124,9 +2956,7 @@ lbl_8052A9D8:
 
 
 .global lbl_8052A9EC
-
 lbl_8052A9EC:
-
 	# ROM: 0x526AEC
 	.4byte 0x3D8F5C29
 	.4byte 0x3D4CCCCD
@@ -3136,9 +2966,7 @@ lbl_8052A9EC:
 
 
 .global lbl_8052AA00
-
 lbl_8052AA00:
-
 	# ROM: 0x526B00
 	.4byte 0x3E8A3D71
 	.4byte 0x3E4CCCCD
@@ -3148,9 +2976,7 @@ lbl_8052AA00:
 
 
 .global lbl_8052AA14
-
 lbl_8052AA14:
-
 	# ROM: 0x526B14
 	.4byte 0x80668C60
 	.4byte 0x80668C64
@@ -3162,9 +2988,7 @@ lbl_8052AA14:
 
 
 .global lbl_8052AA30
-
 lbl_8052AA30:
-
 	# ROM: 0x526B30
 	.4byte 0x80664420
 	.4byte 0
@@ -3203,9 +3027,7 @@ lbl_8052AA30:
 
 
 .global lbl_8052AAB8
-
 lbl_8052AAB8:
-
 	# ROM: 0x526BB8
 	.4byte 0x80664428
 	.4byte 0
@@ -3247,9 +3069,7 @@ lbl_8052AAB8:
 
 
 .global lbl_8052AB98
-
 lbl_8052AB98:
-
 	# ROM: 0x526C98
 	.4byte 0x3F800000
 	.4byte 0
@@ -3410,9 +3230,7 @@ lbl_8052AB98:
 
 
 .global lbl_8052AE08
-
 lbl_8052AE08:
-
 	# ROM: 0x526F08
 	.asciz "cam_name1"
 	.balign 4
@@ -3420,9 +3238,7 @@ lbl_8052AE08:
 
 
 .global lbl_8052AE18
-
 lbl_8052AE18:
-
 	# ROM: 0x526F18
 	.4byte 0x80668D30
 	.4byte 0
@@ -3469,9 +3285,7 @@ lbl_8052AE18:
 
 
 .global lbl_8052AEC0
-
 lbl_8052AEC0:
-
 	# ROM: 0x526FC0
 	.4byte 0
 	.4byte 0
@@ -3494,9 +3308,7 @@ lbl_8052AEC0:
 
 
 .global lbl_8052AF08
-
 lbl_8052AF08:
-
 	# ROM: 0x527008
 	.4byte 0x806644F0
 	.4byte 0
@@ -3553,9 +3365,7 @@ lbl_8052AF08:
 
 
 .global lbl_8052AFD8
-
 lbl_8052AFD8:
-
 	# ROM: 0x5270D8
 	.4byte 0x80664510
 	.4byte 0
@@ -3563,9 +3373,7 @@ lbl_8052AFD8:
 
 
 .global lbl_8052AFE4
-
 lbl_8052AFE4:
-
 	# ROM: 0x5270E4
 	.4byte 0x80664518
 	.4byte 0
@@ -3577,9 +3385,7 @@ lbl_8052AFE4:
 
 
 .global lbl_8052B000
-
 lbl_8052B000:
-
 	# ROM: 0x527100
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -3648,9 +3454,7 @@ lbl_8052B000:
 
 
 .global lbl_8052B100
-
 lbl_8052B100:
-
 	# ROM: 0x527200
 	.asciz "?333?333?333@"
 	.balign 4
@@ -3704,9 +3508,7 @@ lbl_8052B100:
 
 
 .global lbl_8052B1CC
-
 lbl_8052B1CC:
-
 	# ROM: 0x5272CC
 	.4byte 0x80664530
 	.4byte 0
@@ -3721,9 +3523,7 @@ lbl_8052B1CC:
 
 
 .global lbl_8052B218
-
 lbl_8052B218:
-
 	# ROM: 0x527318
 	.4byte 0x804F72C8
 	.4byte 0x804F72D4
@@ -3734,9 +3534,7 @@ lbl_8052B218:
 
 
 .global lbl_8052B230
-
 lbl_8052B230:
-
 	# ROM: 0x527330
 	.4byte 0x804F7310
 	.4byte 0x804F731C
@@ -3749,9 +3547,7 @@ lbl_8052B230:
 
 
 .global lbl_8052B250
-
 lbl_8052B250:
-
 	# ROM: 0x527350
 	.4byte 0x804F7310
 	.4byte 0x804F731C
@@ -3764,9 +3560,7 @@ lbl_8052B250:
 
 
 .global lbl_8052B270
-
 lbl_8052B270:
-
 	# ROM: 0x527370
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -3777,9 +3571,7 @@ lbl_8052B270:
 
 
 .global lbl_8052B288
-
 lbl_8052B288:
-
 	# ROM: 0x527388
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -3794,9 +3586,7 @@ lbl_8052B288:
 
 
 .global lbl_8052B2B0
-
 lbl_8052B2B0:
-
 	# ROM: 0x5273B0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -3813,9 +3603,7 @@ lbl_8052B2B0:
 
 
 .global lbl_8052B2E0
-
 lbl_8052B2E0:
-
 	# ROM: 0x5273E0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -3830,9 +3618,7 @@ lbl_8052B2E0:
 
 
 .global lbl_8052B308
-
 lbl_8052B308:
-
 	# ROM: 0x527408
 	.4byte 0x80664538
 	.4byte 0
@@ -3867,9 +3653,7 @@ lbl_8052B308:
 
 
 .global lbl_8052B380
-
 lbl_8052B380:
-
 	# ROM: 0x527480
 	.4byte 0x80664500
 	.4byte 0
@@ -3896,9 +3680,7 @@ lbl_8052B380:
 
 
 .global lbl_8052B3D8
-
 lbl_8052B3D8:
-
 	# ROM: 0x5274D8
 	.4byte 0
 	.4byte 0
@@ -3933,9 +3715,7 @@ lbl_8052B3D8:
 
 
 .global lbl_8052B450
-
 lbl_8052B450:
-
 	# ROM: 0x527550
 	.4byte 0x80664540
 	.4byte 0
@@ -4016,9 +3796,7 @@ lbl_8052B450:
 
 
 .global lbl_8052B580
-
 lbl_8052B580:
-
 	# ROM: 0x527680
 	.4byte 0x80664550
 	.4byte 0
@@ -4081,9 +3859,7 @@ lbl_8052B580:
 
 
 .global lbl_8052B668
-
 lbl_8052B668:
-
 	# ROM: 0x527768
 	.4byte 0
 	.4byte 0x00000020
@@ -4118,9 +3894,7 @@ lbl_8052B668:
 
 
 .global lbl_8052B6E0
-
 lbl_8052B6E0:
-
 	# ROM: 0x5277E0
 	.4byte 0
 	.4byte 0x00000020
@@ -4155,9 +3929,7 @@ lbl_8052B6E0:
 
 
 .global lbl_8052B758
-
 lbl_8052B758:
-
 	# ROM: 0x527858
 	.4byte 0x80664548
 	.4byte 0
@@ -4210,9 +3982,7 @@ lbl_8052B758:
 
 
 .global lbl_8052B818
-
 lbl_8052B818:
-
 	# ROM: 0x527918
 	.4byte 0x000000FF
 	.4byte 0x0000FF00
@@ -4221,9 +3991,7 @@ lbl_8052B818:
 
 
 .global lbl_8052B828
-
 lbl_8052B828:
-
 	# ROM: 0x527928
 	.4byte 0x00000001
 	.4byte 0x00000002
@@ -4260,9 +4028,7 @@ lbl_8052B828:
 
 
 .global lbl_8052B8A8
-
 lbl_8052B8A8:
-
 	# ROM: 0x5279A8
 	.4byte 0x80669038
 	.4byte 0x804F7498
@@ -4271,9 +4037,7 @@ lbl_8052B8A8:
 
 
 .global lbl_8052B8B8
-
 lbl_8052B8B8:
-
 	# ROM: 0x5279B8
 	.4byte 0x806641F8
 	.4byte 0
@@ -4299,9 +4063,7 @@ lbl_8052B8B8:
 
 
 .global lbl_8052B90C
-
 lbl_8052B90C:
-
 	# ROM: 0x527A0C
 	.4byte 0x80664200
 	.4byte 0
@@ -4321,9 +4083,7 @@ lbl_8052B90C:
 
 
 .global lbl_8052B948
-
 lbl_8052B948:
-
 	# ROM: 0x527A48
 	.4byte 0x3F800000
 	.4byte 0x3FD9999A
@@ -4402,9 +4162,7 @@ lbl_8052B948:
 
 
 .global lbl_8052BA70
-
 lbl_8052BA70:
-
 	# ROM: 0x527B70
 	.4byte 0x8052B958
 	.4byte 0x8052B990
@@ -4471,9 +4229,7 @@ lbl_8052BA70:
 
 
 .global lbl_8052BB68
-
 lbl_8052BB68:
-
 	# ROM: 0x527C68
 	.4byte 0x80576440
 	.4byte 0x8052BA88
@@ -4484,9 +4240,7 @@ lbl_8052BB68:
 
 
 .global lbl_8052BB80
-
 lbl_8052BB80:
-
 	# ROM: 0x527C80
 	.4byte 0
 	.4byte 0x806690B0
@@ -4615,9 +4369,7 @@ lbl_8052BB80:
 
 
 .global lbl_8052BD70
-
 lbl_8052BD70:
-
 	# ROM: 0x527E70
 	.4byte 0x800AA074  ;# ptr
 	.4byte 0x800AA0AC  ;# ptr
@@ -4631,9 +4383,7 @@ lbl_8052BD70:
 
 
 .global lbl_8052BD94
-
 lbl_8052BD94:
-
 	# ROM: 0x527E94
 	.4byte 0x800AA8BC  ;# ptr
 	.4byte 0x800AA914  ;# ptr
@@ -4647,9 +4397,7 @@ lbl_8052BD94:
 
 
 .global lbl_8052BDB8
-
 lbl_8052BDB8:
-
 	# ROM: 0x527EB8
 	.4byte 0x806667AC
 	.4byte 0x806667A4
@@ -4660,9 +4408,7 @@ lbl_8052BDB8:
 
 
 .global lbl_8052BDD0
-
 lbl_8052BDD0:
-
 	# ROM: 0x527ED0
 	.4byte 0x80664570
 	.4byte 0
@@ -4771,9 +4517,7 @@ lbl_8052BDD0:
 
 
 .global lbl_8052BF70
-
 lbl_8052BF70:
-
 	# ROM: 0x528070
 	.4byte 0x80664578
 	.4byte 0
@@ -4786,9 +4530,7 @@ lbl_8052BF70:
 
 
 .global lbl_8052BF90
-
 lbl_8052BF90:
-
 	# ROM: 0x528090
 	.4byte 0x80664580
 	.4byte 0
@@ -4801,9 +4543,7 @@ lbl_8052BF90:
 
 
 .global lbl_8052BFB0
-
 lbl_8052BFB0:
-
 	# ROM: 0x5280B0
 	.4byte 0x80664588
 	.4byte 0
@@ -4816,9 +4556,7 @@ lbl_8052BFB0:
 
 
 .global lbl_8052BFD0
-
 lbl_8052BFD0:
-
 	# ROM: 0x5280D0
 	.4byte 0x80664590
 	.4byte 0
@@ -4831,9 +4569,7 @@ lbl_8052BFD0:
 
 
 .global lbl_8052BFF0
-
 lbl_8052BFF0:
-
 	# ROM: 0x5280F0
 	.4byte 0x80664598
 	.4byte 0
@@ -4852,9 +4588,7 @@ lbl_8052BFF0:
 
 
 .global lbl_8052C028
-
 lbl_8052C028:
-
 	# ROM: 0x528128
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -4865,9 +4599,7 @@ lbl_8052C028:
 
 
 .global lbl_8052C040
-
 lbl_8052C040:
-
 	# ROM: 0x528140
 	.4byte 0x80664270
 	.4byte 0
@@ -4978,9 +4710,7 @@ lbl_8052C040:
 
 
 .global lbl_8052C1E8
-
 lbl_8052C1E8:
-
 	# ROM: 0x5282E8
 	.4byte 0x806645B8
 	.4byte 0
@@ -5385,9 +5115,7 @@ lbl_8052C1E8:
 
 
 .global lbl_8052C828
-
 lbl_8052C828:
-
 	# ROM: 0x528928
 	.4byte 0x800B982C  ;# ptr
 	.4byte 0x800B982C  ;# ptr
@@ -5410,9 +5138,7 @@ lbl_8052C828:
 
 
 .global lbl_8052C870
-
 lbl_8052C870:
-
 	# ROM: 0x528970
 	.4byte 0x806645D8
 	.4byte 0
@@ -5423,9 +5149,7 @@ lbl_8052C870:
 
 
 .global lbl_8052C888
-
 lbl_8052C888:
-
 	# ROM: 0x528988
 	.4byte 0x806645E0
 	.4byte 0
@@ -5433,9 +5157,7 @@ lbl_8052C888:
 
 
 .global lbl_8052C894
-
 lbl_8052C894:
-
 	# ROM: 0x528994
 	.4byte 0x806645E8
 	.4byte 0
@@ -5446,9 +5168,7 @@ lbl_8052C894:
 
 
 .global lbl_8052C8AC
-
 lbl_8052C8AC:
-
 	# ROM: 0x5289AC
 	.4byte 0x806645F0
 	.4byte 0
@@ -5456,9 +5176,7 @@ lbl_8052C8AC:
 
 
 .global lbl_8052C8B8
-
 lbl_8052C8B8:
-
 	# ROM: 0x5289B8
 	.4byte 0x806645F8
 	.4byte 0
@@ -5469,9 +5187,7 @@ lbl_8052C8B8:
 
 
 .global lbl_8052C8D0
-
 lbl_8052C8D0:
-
 	# ROM: 0x5289D0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -5486,9 +5202,7 @@ lbl_8052C8D0:
 
 
 .global lbl_8052C8F8
-
 lbl_8052C8F8:
-
 	# ROM: 0x5289F8
 	.4byte 0x80664600
 	.4byte 0
@@ -5617,9 +5331,7 @@ lbl_8052C8F8:
 
 
 .global lbl_8052CAE8
-
 lbl_8052CAE8:
-
 	# ROM: 0x528BE8
 	.4byte 0x806641E8
 	.4byte 0
@@ -5738,9 +5450,7 @@ lbl_8052CAE8:
 
 
 .global lbl_8052CCB0
-
 lbl_8052CCB0:
-
 	# ROM: 0x528DB0
 	.4byte 0x806641F0
 	.4byte 0
@@ -5839,17 +5549,13 @@ lbl_8052CCB0:
 
 
 .global lbl_8052CE28
-
 lbl_8052CE28:
-
 	# ROM: 0x528F28
 	.asciz "NW4R:Failed assertion IsValid()"
 
 
 .global lbl_8052CE48
-
 lbl_8052CE48:
-
 	# ROM: 0x528F48
 	.asciz "g3d_resnode_ac.h"
 	.balign 4
@@ -5857,9 +5563,7 @@ lbl_8052CE48:
 
 
 .global lbl_8052CE60
-
 lbl_8052CE60:
-
 	# ROM: 0x528F60
 	.4byte 0x806641D8
 	.4byte 0
@@ -6002,9 +5706,7 @@ lbl_8052CE60:
 
 
 .global lbl_8052D088
-
 lbl_8052D088:
-
 	# ROM: 0x529188
 	.4byte 0x80664608
 	.4byte 0
@@ -6174,9 +5876,7 @@ lbl_8052D088:
 
 
 .global lbl_8052D31C
-
 lbl_8052D31C:
-
 	# ROM: 0x52941C
 	.4byte 0x80664618
 	.4byte 0
@@ -6330,9 +6030,7 @@ lbl_8052D31C:
 
 
 .global lbl_8052D570
-
 lbl_8052D570:
-
 	# ROM: 0x529670
 	.4byte 0x806642A0
 	.4byte 0
@@ -6725,9 +6423,7 @@ lbl_8052D570:
 
 
 .global lbl_8052DB80
-
 lbl_8052DB80:
-
 	# ROM: 0x529C80
 	.4byte 0x806645A8
 	.4byte 0
@@ -6826,9 +6522,7 @@ lbl_8052DB80:
 
 
 .global lbl_8052DCF8
-
 lbl_8052DCF8:
-
 	# ROM: 0x529DF8
 	.4byte 0x80669420
 	.4byte 0
@@ -6845,9 +6539,7 @@ lbl_8052DCF8:
 
 
 .global lbl_8052DD28
-
 lbl_8052DD28:
-
 	# ROM: 0x529E28
 	.4byte 0x80664620
 	.4byte 0
@@ -6930,9 +6622,7 @@ lbl_8052DD28:
 
 
 .global lbl_8052DE60
-
 lbl_8052DE60:
-
 	# ROM: 0x529F60
 	.4byte 0x800C86D0  ;# ptr
 	.4byte 0x800C83E0  ;# ptr
@@ -6987,9 +6677,7 @@ lbl_8052DE60:
 
 
 .global lbl_8052DF28
-
 lbl_8052DF28:
-
 	# ROM: 0x52A028
 	.4byte 0x800CA238  ;# ptr
 	.4byte 0x800CA250  ;# ptr
@@ -7030,9 +6718,7 @@ lbl_8052DF28:
 
 
 .global lbl_8052DFB8
-
 lbl_8052DFB8:
-
 	# ROM: 0x52A0B8
 	.4byte 0x80664558
 	.4byte 0
@@ -7101,9 +6787,7 @@ lbl_8052DFB8:
 
 
 .global lbl_8052E0B8
-
 lbl_8052E0B8:
-
 	# ROM: 0x52A1B8
 	.4byte 0x80664628
 	.4byte 0
@@ -7178,9 +6862,7 @@ lbl_8052E0B8:
 
 
 .global lbl_8052E1D0
-
 lbl_8052E1D0:
-
 	# ROM: 0x52A2D0
 	.4byte 0x806694D0
 	.4byte 0x806694D8
@@ -7195,9 +6877,7 @@ lbl_8052E1D0:
 
 
 .global lbl_8052E1F8
-
 lbl_8052E1F8:
-
 	# ROM: 0x52A2F8
 	.4byte 0x80664630
 	.4byte 0
@@ -7272,9 +6952,7 @@ lbl_8052E1F8:
 
 
 .global lbl_8052E310
-
 lbl_8052E310:
-
 	# ROM: 0x52A410
 	.4byte 0x800CAEE8  ;# ptr
 	.4byte 0x800CB1DC  ;# ptr
@@ -7290,9 +6968,7 @@ lbl_8052E310:
 
 
 .global lbl_8052E33C
-
 lbl_8052E33C:
-
 	# ROM: 0x52A43C
 	.4byte 0x800CC9C0  ;# ptr
 	.4byte 0x800CC9CC  ;# ptr
@@ -7322,9 +6998,7 @@ lbl_8052E33C:
 
 
 .global lbl_8052E3A0
-
 lbl_8052E3A0:
-
 	# ROM: 0x52A4A0
 	.4byte 0x800CE444  ;# ptr
 	.4byte 0x800CD9E8  ;# ptr
@@ -7379,9 +7053,7 @@ lbl_8052E3A0:
 
 
 .global lbl_8052E468
-
 lbl_8052E468:
-
 	# ROM: 0x52A568
 	.4byte 0x80664560
 	.4byte 0
@@ -7446,27 +7118,21 @@ lbl_8052E468:
 
 
 .global lbl_8052E558
-
 lbl_8052E558:
-
 	# ROM: 0x52A658
 	.asciz "AsinRad: Input is out of the domain."
 	.balign 4
 
 
 .global lbl_8052E580
-
 lbl_8052E580:
-
 	# ROM: 0x52A680
 	.asciz "triangular.h"
 	.balign 4
 
 
 .global lbl_8052E590
-
 lbl_8052E590:
-
 	# ROM: 0x52A690
 	.4byte 0x80664648
 	.4byte 0
@@ -7547,9 +7213,7 @@ lbl_8052E590:
 
 
 .global lbl_8052E6C0
-
 lbl_8052E6C0:
-
 	# ROM: 0x52A7C0
 	.4byte 0x800D29C0  ;# ptr
 	.4byte 0x800D29C0  ;# ptr
@@ -7643,9 +7307,7 @@ lbl_8052E6C0:
 
 
 .global lbl_8052E824
-
 lbl_8052E824:
-
 	# ROM: 0x52A924
 	.4byte 0x800D3758  ;# ptr
 	.4byte 0x800D3620  ;# ptr
@@ -7661,9 +7323,7 @@ lbl_8052E824:
 
 
 .global lbl_8052E850
-
 lbl_8052E850:
-
 	# ROM: 0x52A950
 	.4byte 0x806644F8
 	.4byte 0
@@ -7761,9 +7421,7 @@ lbl_8052E850:
 
 
 .global lbl_8052E9C4
-
 lbl_8052E9C4:
-
 	# ROM: 0x52AAC4
 	.4byte 0x800DEE38  ;# ptr
 	.4byte 0x800DED90  ;# ptr
@@ -7778,9 +7436,7 @@ lbl_8052E9C4:
 
 
 .global lbl_8052E9EC
-
 lbl_8052E9EC:
-
 	# ROM: 0x52AAEC
 	.4byte 0x800DECE8  ;# ptr
 	.4byte 0x800DEC40  ;# ptr
@@ -7795,9 +7451,7 @@ lbl_8052E9EC:
 
 
 .global lbl_8052EA14
-
 lbl_8052EA14:
-
 	# ROM: 0x52AB14
 	.4byte 0x800DEBE8  ;# ptr
 	.4byte 0x800DEB40  ;# ptr
@@ -7812,9 +7466,7 @@ lbl_8052EA14:
 
 
 .global lbl_8052EA3C
-
 lbl_8052EA3C:
-
 	# ROM: 0x52AB3C
 	.4byte 0x800DEA98  ;# ptr
 	.4byte 0x800DE9F0  ;# ptr
@@ -7829,9 +7481,7 @@ lbl_8052EA3C:
 
 
 .global lbl_8052EA64
-
 lbl_8052EA64:
-
 	# ROM: 0x52AB64
 	.4byte 0x800DE988  ;# ptr
 	.4byte 0x800DE8E0  ;# ptr
@@ -7846,9 +7496,7 @@ lbl_8052EA64:
 
 
 .global lbl_8052EA8C
-
 lbl_8052EA8C:
-
 	# ROM: 0x52AB8C
 	.4byte 0x800DE838  ;# ptr
 	.4byte 0x800DE790  ;# ptr
@@ -7863,9 +7511,7 @@ lbl_8052EA8C:
 
 
 .global lbl_8052EAB4
-
 lbl_8052EAB4:
-
 	# ROM: 0x52ABB4
 	.4byte 0x800DDA8C  ;# ptr
 	.4byte 0x800DD9E4  ;# ptr
@@ -7880,9 +7526,7 @@ lbl_8052EAB4:
 
 
 .global lbl_8052EADC
-
 lbl_8052EADC:
-
 	# ROM: 0x52ABDC
 	.4byte 0x800DD93C  ;# ptr
 	.4byte 0x800DD894  ;# ptr
@@ -7897,9 +7541,7 @@ lbl_8052EADC:
 
 
 .global lbl_8052EB04
-
 lbl_8052EB04:
-
 	# ROM: 0x52AC04
 	.4byte 0x800DD83C  ;# ptr
 	.4byte 0x800DD794  ;# ptr
@@ -7914,9 +7556,7 @@ lbl_8052EB04:
 
 
 .global lbl_8052EB2C
-
 lbl_8052EB2C:
-
 	# ROM: 0x52AC2C
 	.4byte 0x800DD6EC  ;# ptr
 	.4byte 0x800DD644  ;# ptr
@@ -7931,9 +7571,7 @@ lbl_8052EB2C:
 
 
 .global lbl_8052EB54
-
 lbl_8052EB54:
-
 	# ROM: 0x52AC54
 	.4byte 0x800DD5DC  ;# ptr
 	.4byte 0x800DD534  ;# ptr
@@ -7948,9 +7586,7 @@ lbl_8052EB54:
 
 
 .global lbl_8052EB7C
-
 lbl_8052EB7C:
-
 	# ROM: 0x52AC7C
 	.4byte 0x800DD48C  ;# ptr
 	.4byte 0x800DD3E4  ;# ptr
@@ -7965,9 +7601,7 @@ lbl_8052EB7C:
 
 
 .global lbl_8052EBA4
-
 lbl_8052EBA4:
-
 	# ROM: 0x52ACA4
 	.4byte 0x800E0BBC  ;# ptr
 	.4byte 0x800E0AD8  ;# ptr
@@ -7998,9 +7632,7 @@ lbl_8052EBA4:
 
 
 .global lbl_8052EC0C
-
 lbl_8052EC0C:
-
 	# ROM: 0x52AD0C
 	.4byte 0x800E4EF4  ;# ptr
 	.4byte 0x800E4EAC  ;# ptr
@@ -8015,9 +7647,7 @@ lbl_8052EC0C:
 
 
 .global lbl_8052EC34
-
 lbl_8052EC34:
-
 	# ROM: 0x52AD34
 	.4byte 0x800E4DA8  ;# ptr
 	.4byte 0x800E4D54  ;# ptr
@@ -8077,9 +7707,7 @@ lbl_8052EC34:
 
 
 .global lbl_8052ED10
-
 lbl_8052ED10:
-
 	# ROM: 0x52AE10
 	.4byte 0x800E7E8C  ;# ptr
 	.4byte 0x800E7D9C  ;# ptr
@@ -8098,9 +7726,7 @@ lbl_8052ED10:
 
 
 .global lbl_8052ED48
-
 lbl_8052ED48:
-
 	# ROM: 0x52AE48
 	.4byte 0x800E7748  ;# ptr
 	.4byte 0x800E764C  ;# ptr
@@ -8131,9 +7757,7 @@ lbl_8052ED48:
 
 
 .global lbl_8052EDB0
-
 lbl_8052EDB0:
-
 	# ROM: 0x52AEB0
 	.4byte 0x800E74D4  ;# ptr
 	.4byte 0x800E748C  ;# ptr
@@ -8148,9 +7772,7 @@ lbl_8052EDB0:
 
 
 .global lbl_8052EDD8
-
 lbl_8052EDD8:
-
 	# ROM: 0x52AED8
 	.4byte 0x800E7388  ;# ptr
 	.4byte 0x800E72E0  ;# ptr
@@ -8210,9 +7832,7 @@ lbl_8052EDD8:
 
 
 .global lbl_8052EEB4
-
 lbl_8052EEB4:
-
 	# ROM: 0x52AFB4
 	.4byte 0x800EB074  ;# ptr
 	.4byte 0x800EB020  ;# ptr
@@ -8227,9 +7847,7 @@ lbl_8052EEB4:
 
 
 .global lbl_8052EEDC
-
 lbl_8052EEDC:
-
 	# ROM: 0x52AFDC
 	.4byte 0x800EAF78  ;# ptr
 	.4byte 0x800EAF24  ;# ptr
@@ -8244,9 +7862,7 @@ lbl_8052EEDC:
 
 
 .global lbl_8052EF04
-
 lbl_8052EF04:
-
 	# ROM: 0x52B004
 	.4byte 0x800EAEE0  ;# ptr
 	.4byte 0x800EAE8C  ;# ptr
@@ -8261,9 +7877,7 @@ lbl_8052EF04:
 
 
 .global lbl_8052EF2C
-
 lbl_8052EF2C:
-
 	# ROM: 0x52B02C
 	.4byte 0x800EADE4  ;# ptr
 	.4byte 0x800EAD90  ;# ptr
@@ -8284,9 +7898,7 @@ lbl_8052EF2C:
 
 
 .global lbl_8052EF6C
-
 lbl_8052EF6C:
-
 	# ROM: 0x52B06C
 	.4byte 0x800ED6B8  ;# ptr
 	.4byte 0x800F3518  ;# ptr
@@ -8587,9 +8199,7 @@ lbl_8052EF6C:
 
 
 .global lbl_8052F40C
-
 lbl_8052F40C:
-
 	# ROM: 0x52B50C
 	.4byte 0x800ED248  ;# ptr
 	.4byte 0x800ED1F4  ;# ptr
@@ -8604,9 +8214,7 @@ lbl_8052F40C:
 
 
 .global lbl_8052F434
-
 lbl_8052F434:
-
 	# ROM: 0x52B534
 	.4byte 0x800ED14C  ;# ptr
 	.4byte 0x800ED0F8  ;# ptr
@@ -8621,9 +8229,7 @@ lbl_8052F434:
 
 
 .global lbl_8052F45C
-
 lbl_8052F45C:
-
 	# ROM: 0x52B55C
 	.4byte 0x800ED0AC  ;# ptr
 	.4byte 0x800ED058  ;# ptr
@@ -8638,9 +8244,7 @@ lbl_8052F45C:
 
 
 .global lbl_8052F484
-
 lbl_8052F484:
-
 	# ROM: 0x52B584
 	.4byte 0x800ECFB0  ;# ptr
 	.4byte 0x800ECF5C  ;# ptr
@@ -8656,9 +8260,7 @@ lbl_8052F484:
 
 
 .global lbl_8052F4B0
-
 lbl_8052F4B0:
-
 	# ROM: 0x52B5B0
 	.4byte 0x80664650
 	.4byte 0
@@ -8682,9 +8284,7 @@ lbl_8052F4B0:
 
 
 .global lbl_8052F4FC
-
 lbl_8052F4FC:
-
 	# ROM: 0x52B5FC
 	.4byte 0x80664658
 	.4byte 0
@@ -8695,9 +8295,7 @@ lbl_8052F4FC:
 
 
 .global lbl_8052F514
-
 lbl_8052F514:
-
 	# ROM: 0x52B614
 	.4byte 0x80664660
 	.4byte 0
@@ -8705,9 +8303,7 @@ lbl_8052F514:
 
 
 .global lbl_8052F520
-
 lbl_8052F520:
-
 	# ROM: 0x52B620
 	.4byte 0x80664668
 	.4byte 0
@@ -8718,9 +8314,7 @@ lbl_8052F520:
 
 
 .global lbl_8052F538
-
 lbl_8052F538:
-
 	# ROM: 0x52B638
 	.4byte 0x80664670
 	.4byte 0
@@ -8728,9 +8322,7 @@ lbl_8052F538:
 
 
 .global lbl_8052F544
-
 lbl_8052F544:
-
 	# ROM: 0x52B644
 	.4byte 0x80664678
 	.4byte 0
@@ -8738,9 +8330,7 @@ lbl_8052F544:
 
 
 .global lbl_8052F550
-
 lbl_8052F550:
-
 	# ROM: 0x52B650
 	.4byte 0x80664688
 	.4byte 0
@@ -8753,9 +8343,7 @@ lbl_8052F550:
 
 
 .global lbl_8052F570
-
 lbl_8052F570:
-
 	# ROM: 0x52B670
 	.4byte 0x80664690
 	.4byte 0
@@ -8774,9 +8362,7 @@ lbl_8052F570:
 
 
 .global lbl_8052F5A8
-
 lbl_8052F5A8:
-
 	# ROM: 0x52B6A8
 	.4byte 0x806646B0
 	.4byte 0
@@ -8791,9 +8377,7 @@ lbl_8052F5A8:
 
 
 .global lbl_8052F5D0
-
 lbl_8052F5D0:
-
 	# ROM: 0x52B6D0
 	.4byte 0x800FF088  ;# ptr
 	.4byte 0x800FF09C  ;# ptr
@@ -8807,9 +8391,7 @@ lbl_8052F5D0:
 
 
 .global lbl_8052F5F4
-
 lbl_8052F5F4:
-
 	# ROM: 0x52B6F4
 	.4byte 0x806646C0
 	.4byte 0
@@ -8879,9 +8461,7 @@ lbl_8052F5F4:
 
 
 .global lbl_8052F6F8
-
 lbl_8052F6F8:
-
 	# ROM: 0x52B7F8
 	.4byte 0x806646C8
 	.4byte 0
@@ -8904,9 +8484,7 @@ lbl_8052F6F8:
 
 
 .global lbl_8052F740
-
 lbl_8052F740:
-
 	# ROM: 0x52B840
 	.4byte 0x806646E0
 	.4byte 0
@@ -8927,9 +8505,7 @@ lbl_8052F740:
 
 
 .global lbl_8052F780
-
 lbl_8052F780:
-
 	# ROM: 0x52B880
 	.4byte 0x80103498  ;# ptr
 	.4byte 0x801034CC  ;# ptr
@@ -8943,9 +8519,7 @@ lbl_8052F780:
 
 
 .global lbl_8052F7A4
-
 lbl_8052F7A4:
-
 	# ROM: 0x52B8A4
 	.4byte 0x8010743C  ;# ptr
 	.4byte 0x80107444  ;# ptr
@@ -8959,9 +8533,7 @@ lbl_8052F7A4:
 
 
 .global lbl_8052F7C8
-
 lbl_8052F7C8:
-
 	# ROM: 0x52B8C8
 	.4byte 0x80107488  ;# ptr
 	.4byte 0x80107344  ;# ptr
@@ -8979,9 +8551,7 @@ lbl_8052F7C8:
 
 
 .global lbl_8052F7FC
-
 lbl_8052F7FC:
-
 	# ROM: 0x52B8FC
 	.4byte 0x80107738  ;# ptr
 	.4byte 0x80107740  ;# ptr
@@ -8995,9 +8565,7 @@ lbl_8052F7FC:
 
 
 .global lbl_8052F820
-
 lbl_8052F820:
-
 	# ROM: 0x52B920
 	.4byte 0x80107784  ;# ptr
 	.4byte 0x80107640  ;# ptr
@@ -9015,9 +8583,7 @@ lbl_8052F820:
 
 
 .global lbl_8052F854
-
 lbl_8052F854:
-
 	# ROM: 0x52B954
 	.4byte 0x806646E8
 	.4byte 0
@@ -9101,9 +8667,7 @@ lbl_8052F854:
 
 
 .global lbl_8052F990
-
 lbl_8052F990:
-
 	# ROM: 0x52BA90
 	.4byte 0x806646F8
 	.4byte 0
@@ -9124,9 +8688,7 @@ lbl_8052F990:
 
 
 .global lbl_8052F9D0
-
 lbl_8052F9D0:
-
 	# ROM: 0x52BAD0
 	.4byte 0x80109D0C  ;# ptr
 	.4byte 0x80109D30  ;# ptr
@@ -9143,9 +8705,7 @@ lbl_8052F9D0:
 
 
 .global lbl_8052FA00
-
 lbl_8052FA00:
-
 	# ROM: 0x52BB00
 	.4byte 0x80664708
 	.4byte 0
@@ -9214,9 +8774,7 @@ lbl_8052FA00:
 
 
 .global lbl_8052FB00
-
 lbl_8052FB00:
-
 	# ROM: 0x52BC00
 	.4byte 0x80664710
 	.4byte 0
@@ -9284,9 +8842,7 @@ lbl_8052FB00:
 
 
 .global lbl_8052FBFC
-
 lbl_8052FBFC:
-
 	# ROM: 0x52BCFC
 	.4byte 0x80664718
 	.4byte 0
@@ -9294,9 +8850,7 @@ lbl_8052FBFC:
 
 
 .global lbl_8052FC08
-
 lbl_8052FC08:
-
 	# ROM: 0x52BD08
 	.4byte 0x80664720
 	.4byte 0
@@ -9364,9 +8918,7 @@ lbl_8052FC08:
 
 
 .global lbl_8052FD04
-
 lbl_8052FD04:
-
 	# ROM: 0x52BE04
 	.4byte 0x80664728
 	.4byte 0
@@ -9374,9 +8926,7 @@ lbl_8052FD04:
 
 
 .global lbl_8052FD10
-
 lbl_8052FD10:
-
 	# ROM: 0x52BE10
 	.4byte 0x80664730
 	.4byte 0
@@ -9445,9 +8995,7 @@ lbl_8052FD10:
 
 
 .global lbl_8052FE10
-
 lbl_8052FE10:
-
 	# ROM: 0x52BF10
 	.4byte 0x80664738
 	.4byte 0
@@ -9516,9 +9064,7 @@ lbl_8052FE10:
 
 
 .global lbl_8052FF10
-
 lbl_8052FF10:
-
 	# ROM: 0x52C010
 	.4byte 0x00000065
 	.4byte 0x00C9012D
@@ -9541,9 +9087,7 @@ lbl_8052FF10:
 
 
 .global lbl_8052FF58
-
 lbl_8052FF58:
-
 	# ROM: 0x52C058
 	.4byte 0x80669950
 	.4byte 0x804F97F0
@@ -9560,9 +9104,7 @@ lbl_8052FF58:
 
 
 .global lbl_8052FF88
-
 lbl_8052FF88:
-
 	# ROM: 0x52C088
 	.4byte 0x80669950
 	.4byte 0x804F97FC
@@ -9579,9 +9121,7 @@ lbl_8052FF88:
 
 
 .global lbl_8052FFB8
-
 lbl_8052FFB8:
-
 	# ROM: 0x52C0B8
 	.4byte 0x804F986C
 	.4byte 0x804F987C
@@ -9605,9 +9145,7 @@ lbl_8052FFB8:
 
 
 .global lbl_80530004
-
 lbl_80530004:
-
 	# ROM: 0x52C104
 	.4byte 0x804F998C
 	.4byte 0x804F999C
@@ -9621,9 +9159,7 @@ lbl_80530004:
 
 
 .global lbl_80530028
-
 lbl_80530028:
-
 	# ROM: 0x52C128
 	.4byte 0x80664748
 	.4byte 0
@@ -9692,9 +9228,7 @@ lbl_80530028:
 
 
 .global lbl_80530128
-
 lbl_80530128:
-
 	# ROM: 0x52C228
 	.4byte 0x80664750
 	.4byte 0
@@ -9737,9 +9271,7 @@ lbl_80530128:
 
 
 .global lbl_805301C0
-
 lbl_805301C0:
-
 	# ROM: 0x52C2C0
 	.4byte 0x80664758
 	.4byte 0
@@ -9782,9 +9314,7 @@ lbl_805301C0:
 
 
 .global lbl_80530258
-
 lbl_80530258:
-
 	# ROM: 0x52C358
 	.4byte 0x80664760
 	.4byte 0
@@ -9826,72 +9356,56 @@ lbl_80530258:
 
 
 .global lbl_805302EC
-
 lbl_805302EC:
-
 	# ROM: 0x52C3EC
 	.asciz "NW4R:Pointer must not be NULL (p)"
 	.balign 4
 
 
 .global lbl_80530310
-
 lbl_80530310:
-
 	# ROM: 0x52C410
 	.asciz "LinkList.h"
 	.balign 4
 
 
 .global lbl_8053031C
-
 lbl_8053031C:
-
 	# ROM: 0x52C41C
 	.asciz "NW4R:Failed assertion texMapIdx < mGXMemNum.texMap"
 	.balign 4
 
 
 .global lbl_80530350
-
 lbl_80530350:
-
 	# ROM: 0x52C450
 	.asciz "material.h"
 	.balign 4
 
 
 .global lbl_8053035C
-
 lbl_8053035C:
-
 	# ROM: 0x52C45C
 	.asciz "NW4R:Failed assertion texSRTIdx < mGXMemNum.texSRT"
 	.balign 4
 
 
 .global lbl_80530390
-
 lbl_80530390:
-
 	# ROM: 0x52C490
 	.asciz "material.h"
 	.balign 4
 
 
 .global lbl_8053039C
-
 lbl_8053039C:
-
 	# ROM: 0x52C49C
 	.asciz "NW4R:Failed assertion texSRTIdx < mGXMemNum.texSRT"
 	.balign 4
 
 
 .global lbl_805303D0
-
 lbl_805303D0:
-
 	# ROM: 0x52C4D0
 	.asciz "material.h"
 	.balign 4
@@ -9899,9 +9413,7 @@ lbl_805303D0:
 
 
 .global lbl_805303E0
-
 lbl_805303E0:
-
 	# ROM: 0x52C4E0
 	.4byte 0x8011CB88  ;# ptr
 	.4byte 0x8011CB94  ;# ptr
@@ -9916,9 +9428,7 @@ lbl_805303E0:
 
 
 .global lbl_80530408
-
 lbl_80530408:
-
 	# ROM: 0x52C508
 	.4byte 0x80664768
 	.4byte 0
@@ -9951,9 +9461,7 @@ lbl_80530408:
 
 
 .global lbl_80530478
-
 lbl_80530478:
-
 	# ROM: 0x52C578
 	.4byte 0x804F9D68
 	.4byte 0x804F9D78
@@ -9994,9 +9502,7 @@ lbl_80530478:
 
 
 .global lbl_80530508
-
 lbl_80530508:
-
 	# ROM: 0x52C608
 	.4byte 0x3F800000
 	.4byte 0x3F800000
@@ -10007,9 +9513,7 @@ lbl_80530508:
 
 
 .global lbl_80530520
-
 lbl_80530520:
-
 	# ROM: 0x52C620
 	.4byte 0x80664770
 	.4byte 0
@@ -10039,9 +9543,7 @@ lbl_80530520:
 
 
 .global lbl_80530584
-
 lbl_80530584:
-
 	# ROM: 0x52C684
 	.4byte 0x80664778
 	.4byte 0
@@ -10063,9 +9565,7 @@ lbl_80530584:
 
 
 .global lbl_805305C8
-
 lbl_805305C8:
-
 	# ROM: 0x52C6C8
 	.4byte 0x80664780
 	.4byte 0
@@ -10133,62 +9633,48 @@ lbl_805305C8:
 
 
 .global lbl_805306C4
-
 lbl_805306C4:
-
 	# ROM: 0x52C7C4
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
 .global lbl_805306E0
-
 lbl_805306E0:
-
 	# ROM: 0x52C7E0
 	.asciz "g3d_restex_ac.h"
 
 
 .global lbl_805306F0
-
 lbl_805306F0:
-
 	# ROM: 0x52C7F0
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
 .global lbl_8053070C
-
 lbl_8053070C:
-
 	# ROM: 0x52C80C
 	.asciz "g3d_respltt_ac.h"
 	.balign 4
 
 
 .global lbl_80530720
-
 lbl_80530720:
-
 	# ROM: 0x52C820
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
 .global lbl_8053073C
-
 lbl_8053073C:
-
 	# ROM: 0x52C83C
 	.asciz "g3d_respltt_ac.h"
 	.balign 4
 
 
 .global lbl_80530750
-
 lbl_80530750:
-
 	# ROM: 0x52C850
 	.4byte 0x804FA05C
 	.4byte 0x804FA078
@@ -10222,9 +9708,7 @@ lbl_80530750:
 
 
 .global lbl_805307C4
-
 lbl_805307C4:
-
 	# ROM: 0x52C8C4
 	.4byte 0x804FA350
 	.4byte 0x804FA35C
@@ -10292,9 +9776,7 @@ lbl_805307C4:
 
 
 .global lbl_805308C0
-
 lbl_805308C0:
-
 	# ROM: 0x52C9C0
 	.4byte 0x806647B8
 	.4byte 0
@@ -10363,9 +9845,7 @@ lbl_805308C0:
 
 
 .global lbl_805309C0
-
 lbl_805309C0:
-
 	# ROM: 0x52CAC0
 	.4byte 0x806647C0
 	.4byte 0
@@ -10388,9 +9868,7 @@ lbl_805309C0:
 
 
 .global lbl_80530A08
-
 lbl_80530A08:
-
 	# ROM: 0x52CB08
 	.4byte 0x806647C8
 	.4byte 0
@@ -10411,9 +9889,7 @@ lbl_80530A08:
 
 
 .global lbl_80530A48
-
 lbl_80530A48:
-
 	# ROM: 0x52CB48
 	.4byte 0x806647D0
 	.4byte 0
@@ -10482,9 +9958,7 @@ lbl_80530A48:
 
 
 .global lbl_80530B48
-
 lbl_80530B48:
-
 	# ROM: 0x52CC48
 	.4byte 0x806647D8
 	.4byte 0
@@ -10553,9 +10027,7 @@ lbl_80530B48:
 
 
 .global lbl_80530C48
-
 lbl_80530C48:
-
 	# ROM: 0x52CD48
 	.4byte 0
 	.4byte 0x80669A58
@@ -10649,9 +10121,7 @@ lbl_80530C48:
 
 
 .global lbl_80530DAC
-
 lbl_80530DAC:
-
 	# ROM: 0x52CEAC
 	.4byte 0x80127568  ;# ptr
 	.4byte 0x801263F4  ;# ptr
@@ -10671,9 +10141,7 @@ lbl_80530DAC:
 
 
 .global lbl_80530DE8
-
 lbl_80530DE8:
-
 	# ROM: 0x52CEE8
 	.4byte 0x806647E0
 	.4byte 0
@@ -10688,9 +10156,7 @@ lbl_80530DE8:
 
 
 .global lbl_80530E10
-
 lbl_80530E10:
-
 	# ROM: 0x52CF10
 	.4byte 0x806647E8
 	.4byte 0
@@ -10705,9 +10171,7 @@ lbl_80530E10:
 
 
 .global lbl_80530E38
-
 lbl_80530E38:
-
 	# ROM: 0x52CF38
 	.4byte 0x806647F0
 	.4byte 0
@@ -10722,9 +10186,7 @@ lbl_80530E38:
 
 
 .global lbl_80530E60
-
 lbl_80530E60:
-
 	# ROM: 0x52CF60
 	.4byte 0x806647F8
 	.4byte 0
@@ -10739,9 +10201,7 @@ lbl_80530E60:
 
 
 .global lbl_80530E88
-
 lbl_80530E88:
-
 	# ROM: 0x52CF88
 	.4byte 0x80664800
 	.4byte 0
@@ -10756,9 +10216,7 @@ lbl_80530E88:
 
 
 .global lbl_80530EB0
-
 lbl_80530EB0:
-
 	# ROM: 0x52CFB0
 	.4byte 0x80664808
 	.4byte 0
@@ -10773,9 +10231,7 @@ lbl_80530EB0:
 
 
 .global lbl_80530ED8
-
 lbl_80530ED8:
-
 	# ROM: 0x52CFD8
 	.4byte 0x80664810
 	.4byte 0
@@ -10790,9 +10246,7 @@ lbl_80530ED8:
 
 
 .global lbl_80530F00
-
 lbl_80530F00:
-
 	# ROM: 0x52D000
 	.4byte 0x80664818
 	.4byte 0
@@ -10807,9 +10261,7 @@ lbl_80530F00:
 
 
 .global lbl_80530F28
-
 lbl_80530F28:
-
 	# ROM: 0x52D028
 	.4byte 0x80664820
 	.4byte 0
@@ -10824,9 +10276,7 @@ lbl_80530F28:
 
 
 .global lbl_80530F50
-
 lbl_80530F50:
-
 	# ROM: 0x52D050
 	.4byte 0x80664828
 	.4byte 0
@@ -10841,9 +10291,7 @@ lbl_80530F50:
 
 
 .global lbl_80530F78
-
 lbl_80530F78:
-
 	# ROM: 0x52D078
 	.4byte 0x80664830
 	.4byte 0
@@ -10858,9 +10306,7 @@ lbl_80530F78:
 
 
 .global lbl_80530FA0
-
 lbl_80530FA0:
-
 	# ROM: 0x52D0A0
 	.4byte 0x80664838
 	.4byte 0
@@ -10875,9 +10321,7 @@ lbl_80530FA0:
 
 
 .global lbl_80530FC8
-
 lbl_80530FC8:
-
 	# ROM: 0x52D0C8
 	.4byte 0x80664840
 	.4byte 0
@@ -10892,9 +10336,7 @@ lbl_80530FC8:
 
 
 .global lbl_80530FF0
-
 lbl_80530FF0:
-
 	# ROM: 0x52D0F0
 	.4byte 0x80664848
 	.4byte 0
@@ -10909,9 +10351,7 @@ lbl_80530FF0:
 
 
 .global lbl_80531018
-
 lbl_80531018:
-
 	# ROM: 0x52D118
 	.4byte 0x80664850
 	.4byte 0
@@ -10926,9 +10366,7 @@ lbl_80531018:
 
 
 .global lbl_80531040
-
 lbl_80531040:
-
 	# ROM: 0x52D140
 	.4byte 0x80664858
 	.4byte 0
@@ -10943,9 +10381,7 @@ lbl_80531040:
 
 
 .global lbl_80531068
-
 lbl_80531068:
-
 	# ROM: 0x52D168
 	.4byte 0x80664860
 	.4byte 0
@@ -10982,9 +10418,7 @@ lbl_80531068:
 
 
 .global lbl_805310E8
-
 lbl_805310E8:
-
 	# ROM: 0x52D1E8
 	.4byte 0x80664868
 	.4byte 0
@@ -10999,9 +10433,7 @@ lbl_805310E8:
 
 
 .global lbl_80531110
-
 lbl_80531110:
-
 	# ROM: 0x52D210
 	.4byte 0x80664870
 	.4byte 0
@@ -11016,9 +10448,7 @@ lbl_80531110:
 
 
 .global lbl_80531138
-
 lbl_80531138:
-
 	# ROM: 0x52D238
 	.4byte 0x80664878
 	.4byte 0
@@ -11033,9 +10463,7 @@ lbl_80531138:
 
 
 .global lbl_80531160
-
 lbl_80531160:
-
 	# ROM: 0x52D260
 	.4byte 0x80664880
 	.4byte 0
@@ -11050,9 +10478,7 @@ lbl_80531160:
 
 
 .global lbl_80531188
-
 lbl_80531188:
-
 	# ROM: 0x52D288
 	.4byte 0x80664888
 	.4byte 0
@@ -11067,9 +10493,7 @@ lbl_80531188:
 
 
 .global lbl_805311B0
-
 lbl_805311B0:
-
 	# ROM: 0x52D2B0
 	.4byte 0x80664890
 	.4byte 0
@@ -11084,9 +10508,7 @@ lbl_805311B0:
 
 
 .global lbl_805311D8
-
 lbl_805311D8:
-
 	# ROM: 0x52D2D8
 	.4byte 0x806648A0
 	.4byte 0
@@ -11103,9 +10525,7 @@ lbl_805311D8:
 
 
 .global lbl_80531208
-
 lbl_80531208:
-
 	# ROM: 0x52D308
 	.4byte 0x806648A8
 	.4byte 0
@@ -11122,9 +10542,7 @@ lbl_80531208:
 
 
 .global lbl_80531238
-
 lbl_80531238:
-
 	# ROM: 0x52D338
 	.4byte 0x806648B0
 	.4byte 0
@@ -11138,333 +10556,259 @@ lbl_80531238:
 
 
 .global lbl_8053125C
-
 lbl_8053125C:
-
 	# ROM: 0x52D35C
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_80531290
-
 lbl_80531290:
-
 	# ROM: 0x52D390
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
 .global lbl_805312A4
-
 lbl_805312A4:
-
 	# ROM: 0x52D3A4
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_805312D8
-
 lbl_805312D8:
-
 	# ROM: 0x52D3D8
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
 .global lbl_805312EC
-
 lbl_805312EC:
-
 	# ROM: 0x52D3EC
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_80531320
-
 lbl_80531320:
-
 	# ROM: 0x52D420
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
 .global lbl_80531334
-
 lbl_80531334:
-
 	# ROM: 0x52D434
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_80531368
-
 lbl_80531368:
-
 	# ROM: 0x52D468
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
 .global lbl_8053137C
-
 lbl_8053137C:
-
 	# ROM: 0x52D47C
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_805313B0
-
 lbl_805313B0:
-
 	# ROM: 0x52D4B0
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
 .global lbl_805313C4
-
 lbl_805313C4:
-
 	# ROM: 0x52D4C4
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_805313F8
-
 lbl_805313F8:
-
 	# ROM: 0x52D4F8
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
 .global lbl_8053140C
-
 lbl_8053140C:
-
 	# ROM: 0x52D50C
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_80531440
-
 lbl_80531440:
-
 	# ROM: 0x52D540
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
 .global lbl_80531454
-
 lbl_80531454:
-
 	# ROM: 0x52D554
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_80531488
-
 lbl_80531488:
-
 	# ROM: 0x52D588
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_80531498
-
 lbl_80531498:
-
 	# ROM: 0x52D598
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_805314CC
-
 lbl_805314CC:
-
 	# ROM: 0x52D5CC
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_805314DC
-
 lbl_805314DC:
-
 	# ROM: 0x52D5DC
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_80531510
-
 lbl_80531510:
-
 	# ROM: 0x52D610
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_80531520
-
 lbl_80531520:
-
 	# ROM: 0x52D620
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_80531554
-
 lbl_80531554:
-
 	# ROM: 0x52D654
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_80531564
-
 lbl_80531564:
-
 	# ROM: 0x52D664
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_80531598
-
 lbl_80531598:
-
 	# ROM: 0x52D698
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_805315A8
-
 lbl_805315A8:
-
 	# ROM: 0x52D6A8
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_805315DC
-
 lbl_805315DC:
-
 	# ROM: 0x52D6DC
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_805315EC
-
 lbl_805315EC:
-
 	# ROM: 0x52D6EC
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_80531620
-
 lbl_80531620:
-
 	# ROM: 0x52D720
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_80531630
-
 lbl_80531630:
-
 	# ROM: 0x52D730
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_80531664
-
 lbl_80531664:
-
 	# ROM: 0x52D764
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_80531674
-
 lbl_80531674:
-
 	# ROM: 0x52D774
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_805316A8
-
 lbl_805316A8:
-
 	# ROM: 0x52D7A8
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_805316B8
-
 lbl_805316B8:
-
 	# ROM: 0x52D7B8
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_805316EC
-
 lbl_805316EC:
-
 	# ROM: 0x52D7EC
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_805316FC
-
 lbl_805316FC:
-
 	# ROM: 0x52D7FC
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_80531730
-
 lbl_80531730:
-
 	# ROM: 0x52D830
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_80531740
-
 lbl_80531740:
-
 	# ROM: 0x52D840
 	.4byte 0x80669B30
 	.4byte 0x80669B38
@@ -11473,9 +10817,7 @@ lbl_80531740:
 
 
 .global lbl_80531750
-
 lbl_80531750:
-
 	# ROM: 0x52D850
 	.4byte 0x8012BF50  ;# ptr
 	.4byte 0x8012BE94  ;# ptr
@@ -11490,9 +10832,7 @@ lbl_80531750:
 
 
 .global lbl_80531778
-
 lbl_80531778:
-
 	# ROM: 0x52D878
 	.4byte 0x80664A68
 	.4byte 0
@@ -11567,9 +10907,7 @@ lbl_80531778:
 
 
 .global lbl_80531890
-
 lbl_80531890:
-
 	# ROM: 0x52D990
 	.4byte 0x80664A70
 	.4byte 0
@@ -11629,9 +10967,7 @@ lbl_80531890:
 
 
 .global lbl_8053196C
-
 lbl_8053196C:
-
 	# ROM: 0x52DA6C
 	.4byte 0x80664A78
 	.4byte 0
@@ -11642,9 +10978,7 @@ lbl_8053196C:
 
 
 .global lbl_80531984
-
 lbl_80531984:
-
 	# ROM: 0x52DA84
 	.4byte 0x80664A80
 	.4byte 0
@@ -11652,9 +10986,7 @@ lbl_80531984:
 
 
 .global lbl_80531990
-
 lbl_80531990:
-
 	# ROM: 0x52DA90
 	.4byte 0x80664A88
 	.4byte 0
@@ -11677,9 +11009,7 @@ lbl_80531990:
 
 
 .global lbl_805319D8
-
 lbl_805319D8:
-
 	# ROM: 0x52DAD8
 	.4byte 0x80664A90
 	.4byte 0
@@ -11700,9 +11030,7 @@ lbl_805319D8:
 
 
 .global lbl_80531A18
-
 lbl_80531A18:
-
 	# ROM: 0x52DB18
 	.4byte 0x80664A98
 	.4byte 0
@@ -11729,9 +11057,7 @@ lbl_80531A18:
 
 
 .global lbl_80531A70
-
 lbl_80531A70:
-
 	# ROM: 0x52DB70
 	.4byte 0x80664AA8
 	.4byte 0
@@ -11798,9 +11124,7 @@ lbl_80531A70:
 
 
 .global lbl_80531B68
-
 lbl_80531B68:
-
 	# ROM: 0x52DC68
 	.4byte 0x80664AB0
 	.4byte 0
@@ -11811,9 +11135,7 @@ lbl_80531B68:
 
 
 .global lbl_80531B80
-
 lbl_80531B80:
-
 	# ROM: 0x52DC80
 	.4byte 0x80664AB8
 	.4byte 0
@@ -11821,9 +11143,7 @@ lbl_80531B80:
 
 
 .global lbl_80531B8C
-
 lbl_80531B8C:
-
 	# ROM: 0x52DC8C
 	.4byte 0x80664AC0
 	.4byte 0
@@ -11846,9 +11166,7 @@ lbl_80531B8C:
 
 
 .global lbl_80531BD4
-
 lbl_80531BD4:
-
 	# ROM: 0x52DCD4
 	.4byte 0x80664AC8
 	.4byte 0
@@ -11869,9 +11187,7 @@ lbl_80531BD4:
 
 
 .global lbl_80531C14
-
 lbl_80531C14:
-
 	# ROM: 0x52DD14
 	.4byte 0x80664AD0
 	.4byte 0
@@ -11893,9 +11209,7 @@ lbl_80531C14:
 
 
 .global lbl_80531C58
-
 lbl_80531C58:
-
 	# ROM: 0x52DD58
 	.4byte 0x801394B0  ;# ptr
 	.4byte 0x8013944C  ;# ptr
@@ -11918,35 +11232,27 @@ lbl_80531C58:
 
 
 .global lbl_80531CC0
-
 lbl_80531CC0:
-
 	# ROM: 0x52DDC0
 	.asciz "NW4R:Failed assertion texMapIdx < mGXMemNum.texMap"
 	.balign 4
 
 
 .global lbl_80531CF4
-
 lbl_80531CF4:
-
 	# ROM: 0x52DDF4
 	.asciz "material.h"
 	.balign 4
 
 
 .global lbl_80531D00
-
 lbl_80531D00:
-
 	# ROM: 0x52DE00
 	.asciz "NW4R:Failed assertion idx < TevColorMax"
 
 
 .global lbl_80531D28
-
 lbl_80531D28:
-
 	# ROM: 0x52DE28
 	.asciz "material.h"
 	.balign 4
@@ -11954,17 +11260,13 @@ lbl_80531D28:
 
 
 .global lbl_80531D38
-
 lbl_80531D38:
-
 	# ROM: 0x52DE38
 	.asciz "NW4R:Failed assertion idx < TevColorMax"
 
 
 .global lbl_80531D60
-
 lbl_80531D60:
-
 	# ROM: 0x52DE60
 	.asciz "material.h"
 	.balign 4
@@ -11972,9 +11274,7 @@ lbl_80531D60:
 
 
 .global lbl_80531D70
-
 lbl_80531D70:
-
 	# ROM: 0x52DE70
 	.4byte 0x80664AF0
 	.4byte 0
@@ -12004,9 +11304,7 @@ lbl_80531D70:
 
 
 .global lbl_80531DD4
-
 lbl_80531DD4:
-
 	# ROM: 0x52DED4
 	.4byte 0x80664AF8
 	.4byte 0
@@ -12017,9 +11315,7 @@ lbl_80531DD4:
 
 
 .global lbl_80531DEC
-
 lbl_80531DEC:
-
 	# ROM: 0x52DEEC
 	.4byte 0x80664B00
 	.4byte 0
@@ -12027,9 +11323,7 @@ lbl_80531DEC:
 
 
 .global lbl_80531DF8
-
 lbl_80531DF8:
-
 	# ROM: 0x52DEF8
 	.4byte 0x80664B08
 	.4byte 0
@@ -12052,9 +11346,7 @@ lbl_80531DF8:
 
 
 .global lbl_80531E40
-
 lbl_80531E40:
-
 	# ROM: 0x52DF40
 	.4byte 0x80664B10
 	.4byte 0
@@ -12075,9 +11367,7 @@ lbl_80531E40:
 
 
 .global lbl_80531E80
-
 lbl_80531E80:
-
 	# ROM: 0x52DF80
 	.4byte 0x80664B18
 	.4byte 0
@@ -12098,9 +11388,7 @@ lbl_80531E80:
 
 
 .global lbl_80531EC0
-
 lbl_80531EC0:
-
 	# ROM: 0x52DFC0
 	.4byte 0x80669C2C
 	.4byte 0x80669C30
@@ -12115,9 +11403,7 @@ lbl_80531EC0:
 
 
 .global lbl_80531EE8
-
 lbl_80531EE8:
-
 	# ROM: 0x52DFE8
 	.4byte 0x80664B28
 	.4byte 0
@@ -12160,9 +11446,7 @@ lbl_80531EE8:
 
 
 .global lbl_80531F80
-
 lbl_80531F80:
-
 	# ROM: 0x52E080
 	.4byte 0x80664B30
 	.4byte 0
@@ -12231,9 +11515,7 @@ lbl_80531F80:
 
 
 .global lbl_80532080
-
 lbl_80532080:
-
 	# ROM: 0x52E180
 	.4byte 0x80664B38
 	.4byte 0
@@ -12302,9 +11584,7 @@ lbl_80532080:
 
 
 .global lbl_80532180
-
 lbl_80532180:
-
 	# ROM: 0x52E280
 	.4byte 0x806641D0
 	.4byte 0
@@ -12345,9 +11625,7 @@ lbl_80532180:
 
 
 .global lbl_80532210
-
 lbl_80532210:
-
 	# ROM: 0x52E310
 	.4byte 0x80664B48
 	.4byte 0
@@ -12496,9 +11774,7 @@ lbl_80532210:
 
 
 .global lbl_80532450
-
 lbl_80532450:
-
 	# ROM: 0x52E550
 	.4byte 0x801505E4  ;# ptr
 	.4byte 0x8014E260  ;# ptr
@@ -12655,9 +11931,7 @@ lbl_80532450:
 
 
 .global lbl_805326B0
-
 lbl_805326B0:
-
 	# ROM: 0x52E7B0
 	.4byte 0x80151C9C  ;# ptr
 	.4byte 0x80150F70  ;# ptr
@@ -12841,9 +12115,7 @@ lbl_805326B0:
 
 
 .global lbl_8053297C
-
 lbl_8053297C:
-
 	# ROM: 0x52EA7C
 	.4byte 0x80150F1C  ;# ptr
 	.4byte 0x80150C3C  ;# ptr
@@ -12883,9 +12155,7 @@ lbl_8053297C:
 
 
 .global lbl_80532A08
-
 lbl_80532A08:
-
 	# ROM: 0x52EB08
 	.4byte 0x80153760  ;# ptr
 	.4byte 0x80152A78  ;# ptr
@@ -13069,9 +12339,7 @@ lbl_80532A08:
 
 
 .global lbl_80532CD4
-
 lbl_80532CD4:
-
 	# ROM: 0x52EDD4
 	.4byte 0x80152900  ;# ptr
 	.4byte 0x801524AC  ;# ptr
@@ -13113,9 +12381,7 @@ lbl_80532CD4:
 
 
 .global lbl_80532D68
-
 lbl_80532D68:
-
 	# ROM: 0x52EE68
 	.4byte 0x806641E0
 	.4byte 0
@@ -13124,9 +12390,7 @@ lbl_80532D68:
 
 
 .global lbl_80532D78
-
 lbl_80532D78:
-
 	# ROM: 0x52EE78
 	.4byte 0x80664B50
 	.4byte 0
@@ -13137,9 +12401,7 @@ lbl_80532D78:
 
 
 .global lbl_80532D90
-
 lbl_80532D90:
-
 	# ROM: 0x52EE90
 	.4byte 0x80664B60
 	.4byte 0
@@ -13150,9 +12412,7 @@ lbl_80532D90:
 
 
 .global lbl_80532DA8
-
 lbl_80532DA8:
-
 	# ROM: 0x52EEA8
 	.4byte 0x80664B68
 	.4byte 0
@@ -13161,9 +12421,7 @@ lbl_80532DA8:
 
 
 .global lbl_80532DB8
-
 lbl_80532DB8:
-
 	# ROM: 0x52EEB8
 	.4byte 0x80664B70
 	.4byte 0
@@ -13178,9 +12436,7 @@ lbl_80532DB8:
 
 
 .global lbl_80532DE0
-
 lbl_80532DE0:
-
 	# ROM: 0x52EEE0
 	.4byte 0x80664B78
 	.4byte 0
@@ -13191,9 +12447,7 @@ lbl_80532DE0:
 
 
 .global lbl_80532DF8
-
 lbl_80532DF8:
-
 	# ROM: 0x52EEF8
 	.4byte 0x80669D68
 	.4byte 0x80669D70
@@ -13205,9 +12459,7 @@ lbl_80532DF8:
 
 
 .global lbl_80532E14
-
 lbl_80532E14:
-
 	# ROM: 0x52EF14
 	.4byte 0x80669D68
 	.4byte 0x80669DA0
@@ -13219,9 +12471,7 @@ lbl_80532E14:
 
 
 .global lbl_80532E30
-
 lbl_80532E30:
-
 	# ROM: 0x52EF30
 	.4byte 0x80669D68
 	.4byte 0x804FD2DC
@@ -13233,9 +12483,7 @@ lbl_80532E30:
 
 
 .global lbl_80532E4C
-
 lbl_80532E4C:
-
 	# ROM: 0x52EF4C
 	.4byte 0x80666AB0
 	.4byte 0x80666AB8
@@ -13255,9 +12503,7 @@ lbl_80532E4C:
 
 
 .global lbl_80532E88
-
 lbl_80532E88:
-
 	# ROM: 0x52EF88
 	.4byte 0x00030005
 	.4byte 0x00060007
@@ -13265,9 +12511,7 @@ lbl_80532E88:
 
 
 .global lbl_80532E94
-
 lbl_80532E94:
-
 	# ROM: 0x52EF94
 	.4byte 0x80157BF0  ;# ptr
 	.4byte 0x80157BF0  ;# ptr
@@ -13286,9 +12530,7 @@ lbl_80532E94:
 
 
 .global lbl_80532ECC
-
 lbl_80532ECC:
-
 	# ROM: 0x52EFCC
 	.4byte 0x80157CAC  ;# ptr
 	.4byte 0x80157CAC  ;# ptr
@@ -13307,9 +12549,7 @@ lbl_80532ECC:
 
 
 .global lbl_80532F04
-
 lbl_80532F04:
-
 	# ROM: 0x52F004
 	.4byte 0x80157FC8  ;# ptr
 	.4byte 0x80157FC8  ;# ptr
@@ -13329,9 +12569,7 @@ lbl_80532F04:
 
 
 .global lbl_80532F40
-
 lbl_80532F40:
-
 	# ROM: 0x52F040
 	.4byte 0x80664BE0
 	.4byte 0
@@ -13382,9 +12620,7 @@ lbl_80532F40:
 
 
 .global lbl_80532FF8
-
 lbl_80532FF8:
-
 	# ROM: 0x52F0F8
 	.4byte 0x80664BE8
 	.4byte 0
@@ -13433,9 +12669,7 @@ lbl_80532FF8:
 
 
 .global lbl_805330A8
-
 lbl_805330A8:
-
 	# ROM: 0x52F1A8
 	.4byte 0x80664BF0
 	.4byte 0
@@ -13486,9 +12720,7 @@ lbl_805330A8:
 
 
 .global lbl_80533160
-
 lbl_80533160:
-
 	# ROM: 0x52F260
 	.4byte 0x80664BF8
 	.4byte 0
@@ -13539,9 +12771,7 @@ lbl_80533160:
 
 
 .global lbl_80533218
-
 lbl_80533218:
-
 	# ROM: 0x52F318
 	.4byte 0x80664C00
 	.4byte 0
@@ -13590,9 +12820,7 @@ lbl_80533218:
 
 
 .global lbl_805332C8
-
 lbl_805332C8:
-
 	# ROM: 0x52F3C8
 	.4byte 0x80664C08
 	.4byte 0
@@ -13641,9 +12869,7 @@ lbl_805332C8:
 
 
 .global lbl_80533378
-
 lbl_80533378:
-
 	# ROM: 0x52F478
 	.4byte 0x80664C10
 	.4byte 0
@@ -13692,9 +12918,7 @@ lbl_80533378:
 
 
 .global lbl_80533428
-
 lbl_80533428:
-
 	# ROM: 0x52F528
 	.4byte 0x80664C18
 	.4byte 0
@@ -13743,9 +12967,7 @@ lbl_80533428:
 
 
 .global lbl_805334D8
-
 lbl_805334D8:
-
 	# ROM: 0x52F5D8
 	.4byte 0
 	.4byte 0
@@ -13794,9 +13016,7 @@ lbl_805334D8:
 
 
 .global lbl_80533588
-
 lbl_80533588:
-
 	# ROM: 0x52F688
 	.4byte 0x80664C28
 	.4byte 0
@@ -13809,9 +13029,7 @@ lbl_80533588:
 
 
 .global lbl_805335A8
-
 lbl_805335A8:
-
 	# ROM: 0x52F6A8
 	.4byte 0x80664C30
 	.4byte 0
@@ -13828,9 +13046,7 @@ lbl_805335A8:
 
 
 .global lbl_805335D8
-
 lbl_805335D8:
-
 	# ROM: 0x52F6D8
 	.4byte 0x80664C38
 	.4byte 0
@@ -13847,9 +13063,7 @@ lbl_805335D8:
 
 
 .global lbl_80533608
-
 lbl_80533608:
-
 	# ROM: 0x52F708
 	.4byte 0x80664C40
 	.4byte 0
@@ -13866,9 +13080,7 @@ lbl_80533608:
 
 
 .global lbl_80533638
-
 lbl_80533638:
-
 	# ROM: 0x52F738
 	.4byte 0x80664C48
 	.4byte 0
@@ -13885,9 +13097,7 @@ lbl_80533638:
 
 
 .global lbl_80533668
-
 lbl_80533668:
-
 	# ROM: 0x52F768
 	.4byte 0x8015EF80  ;# ptr
 	.4byte 0x8015EF94  ;# ptr
@@ -13933,9 +13143,7 @@ lbl_80533668:
 
 
 .global lbl_8053370C
-
 lbl_8053370C:
-
 	# ROM: 0x52F80C
 	.4byte 0x80664C58
 	.4byte 0
@@ -13996,9 +13204,7 @@ lbl_8053370C:
 
 
 .global lbl_805337EC
-
 lbl_805337EC:
-
 	# ROM: 0x52F8EC
 	.4byte 0x80664C60
 	.4byte 0
@@ -14067,9 +13273,7 @@ lbl_805337EC:
 
 
 .global lbl_805338EC
-
 lbl_805338EC:
-
 	# ROM: 0x52F9EC
 	.4byte 0x80664C68
 	.4byte 0
@@ -14138,9 +13342,7 @@ lbl_805338EC:
 
 
 .global lbl_805339EC
-
 lbl_805339EC:
-
 	# ROM: 0x52FAEC
 	.4byte 0x80664C70
 	.4byte 0
@@ -14202,9 +13404,7 @@ lbl_805339EC:
 
 
 .global lbl_80533AD0
-
 lbl_80533AD0:
-
 	# ROM: 0x52FBD0
 	.4byte 0x804FDF80
 	.4byte 0x804FDD20
@@ -14285,9 +13485,7 @@ lbl_80533AD0:
 
 
 .global lbl_80533C00
-
 lbl_80533C00:
-
 	# ROM: 0x52FD00
 	.4byte 0x00010203
 	.4byte 0x04050607
@@ -14302,9 +13500,7 @@ lbl_80533C00:
 
 
 .global lbl_80533C28
-
 lbl_80533C28:
-
 	# ROM: 0x52FD28
 	.4byte 0x804FDF98
 	.4byte 0x804FDFA4
@@ -14483,9 +13679,7 @@ lbl_80533C28:
 
 
 .global lbl_80533EE0
-
 lbl_80533EE0:
-
 	# ROM: 0x52FFE0
 	.4byte 0x804FDFA4
 	.4byte 0x804FDFC8
@@ -14522,9 +13716,7 @@ lbl_80533EE0:
 
 
 .global lbl_80533F60
-
 lbl_80533F60:
-
 	# ROM: 0x530060
 	.4byte 0x80664C80
 	.4byte 0
@@ -14599,9 +13791,7 @@ lbl_80533F60:
 
 
 .global lbl_80534078
-
 lbl_80534078:
-
 	# ROM: 0x530178
 	.4byte 0x80664C88
 	.4byte 0
@@ -14672,9 +13862,7 @@ lbl_80534078:
 
 
 .global lbl_80534180
-
 lbl_80534180:
-
 	# ROM: 0x530280
 	.4byte 0x80664C90
 	.4byte 0
@@ -14683,9 +13871,7 @@ lbl_80534180:
 
 
 .global lbl_80534190
-
 lbl_80534190:
-
 	# ROM: 0x530290
 	.4byte 0x80664C98
 	.4byte 0
@@ -14718,9 +13904,7 @@ lbl_80534190:
 
 
 .global lbl_80534200
-
 lbl_80534200:
-
 	# ROM: 0x530300
 	.4byte 0x80664CA0
 	.4byte 0
@@ -14729,9 +13913,7 @@ lbl_80534200:
 
 
 .global lbl_80534210
-
 lbl_80534210:
-
 	# ROM: 0x530310
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -14787,9 +13969,7 @@ lbl_80534210:
 
 
 .global lbl_805342DC
-
 lbl_805342DC:
-
 	# ROM: 0x5303DC
 	.4byte 0x80664CA8
 	.4byte 0
@@ -14852,9 +14032,7 @@ lbl_805342DC:
 
 
 .global lbl_805343C4
-
 lbl_805343C4:
-
 	# ROM: 0x5304C4
 	.4byte 0x80664CB0
 	.4byte 0
@@ -14922,159 +14100,123 @@ lbl_805343C4:
 
 
 .global lbl_805344C0
-
 lbl_805344C0:
-
 	# ROM: 0x5305C0
 	.asciz "ResUserData"
 
 
 .global lbl_805344CC
-
 lbl_805344CC:
-
 	# ROM: 0x5305CC
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
 .global lbl_805344E8
-
 lbl_805344E8:
-
 	# ROM: 0x5305E8
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
 
 
 .global lbl_805344FC
-
 lbl_805344FC:
-
 	# ROM: 0x5305FC
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
 
 
 .global lbl_80534524
-
 lbl_80534524:
-
 	# ROM: 0x530624
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
 
 
 .global lbl_80534538
-
 lbl_80534538:
-
 	# ROM: 0x530638
 	.asciz "ResUserDataItem"
 
 
 .global lbl_80534548
-
 lbl_80534548:
-
 	# ROM: 0x530648
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
 .global lbl_80534564
-
 lbl_80534564:
-
 	# ROM: 0x530664
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
 
 
 .global lbl_80534578
-
 lbl_80534578:
-
 	# ROM: 0x530678
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
 .global lbl_80534594
-
 lbl_80534594:
-
 	# ROM: 0x530694
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
 
 
 .global lbl_805345A8
-
 lbl_805345A8:
-
 	# ROM: 0x5306A8
 	.asciz "NW4R:Failed assertion GetValueType() == ResUserDataItemData::S32"
 	.balign 4
 
 
 .global lbl_805345EC
-
 lbl_805345EC:
-
 	# ROM: 0x5306EC
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
 
 
 .global lbl_80534600
-
 lbl_80534600:
-
 	# ROM: 0x530700
 	.asciz "NW4R:Failed assertion GetValueType() == ResUserDataItemData::F32"
 	.balign 4
 
 
 .global lbl_80534644
-
 lbl_80534644:
-
 	# ROM: 0x530744
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
 
 
 .global lbl_80534658
-
 lbl_80534658:
-
 	# ROM: 0x530758
 	.asciz "NW4R:Failed assertion GetValueType() == ResUserDataItemData::STRING"
 
 
 .global lbl_8053469C
-
 lbl_8053469C:
-
 	# ROM: 0x53079C
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
 
 
 .global lbl_805346B0
-
 lbl_805346B0:
-
 	# ROM: 0x5307B0
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
 
 
 .global lbl_805346D8
-
 lbl_805346D8:
-
 	# ROM: 0x5307D8
 	.asciz "g3d_resdict_ac.h"
 	.balign 4
@@ -15082,9 +14224,7 @@ lbl_805346D8:
 
 
 .global lbl_805346F0
-
 lbl_805346F0:
-
 	# ROM: 0x5307F0
 	.4byte 0
 	.4byte 0
@@ -15099,9 +14239,7 @@ lbl_805346F0:
 
 
 .global lbl_80534718
-
 lbl_80534718:
-
 	# ROM: 0x530818
 	.4byte 0x80664CC8
 	.4byte 0
@@ -15136,9 +14274,7 @@ lbl_80534718:
 
 
 .global lbl_80534790
-
 lbl_80534790:
-
 	# ROM: 0x530890
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -15155,9 +14291,7 @@ lbl_80534790:
 
 
 .global lbl_805347C0
-
 lbl_805347C0:
-
 	# ROM: 0x5308C0
 	.4byte 0x80664CD8
 	.4byte 0
@@ -15192,9 +14326,7 @@ lbl_805347C0:
 
 
 .global lbl_80534838
-
 lbl_80534838:
-
 	# ROM: 0x530938
 	.4byte 0x80669F98
 	.4byte 0x80669F9C
@@ -15205,9 +14337,7 @@ lbl_80534838:
 
 
 .global lbl_80534850
-
 lbl_80534850:
-
 	# ROM: 0x530950
 	.4byte 0x80664CE8
 	.4byte 0
@@ -15219,9 +14349,7 @@ lbl_80534850:
 
 
 .global lbl_8053486C
-
 lbl_8053486C:
-
 	# ROM: 0x53096C
 	.4byte 0x806641B0
 	.4byte 0
@@ -15602,9 +14730,7 @@ lbl_8053486C:
 
 
 .global lbl_80534E4C
-
 lbl_80534E4C:
-
 	# ROM: 0x530F4C
 	.4byte 0x80664D00
 	.4byte 0
@@ -15630,9 +14756,7 @@ lbl_80534E4C:
 
 
 .global lbl_80534EA0
-
 lbl_80534EA0:
-
 	# ROM: 0x530FA0
 	.4byte 0x80664D28
 	.4byte 0
@@ -15647,9 +14771,7 @@ lbl_80534EA0:
 
 
 .global lbl_80534EC8
-
 lbl_80534EC8:
-
 	# ROM: 0x530FC8
 	.4byte 0x80664D30
 	.4byte 0
@@ -15660,9 +14782,7 @@ lbl_80534EC8:
 
 
 .global lbl_80534EE0
-
 lbl_80534EE0:
-
 	# ROM: 0x530FE0
 	.4byte 0x80174D24  ;# ptr
 	.4byte 0x80174D60  ;# ptr
@@ -15755,9 +14875,7 @@ lbl_80534EE0:
 
 
 .global lbl_80535040
-
 lbl_80535040:
-
 	# ROM: 0x531140
 	.4byte 0x806641B8
 	.4byte 0
@@ -15981,9 +15099,7 @@ lbl_80535040:
 
 
 .global lbl_805353AC
-
 lbl_805353AC:
-
 	# ROM: 0x5314AC
 	.4byte 0x806641C8
 	.4byte 0
@@ -15991,9 +15107,7 @@ lbl_805353AC:
 
 
 .global lbl_805353B8
-
 lbl_805353B8:
-
 	# ROM: 0x5314B8
 	.4byte 0x80664D38
 	.4byte 0
@@ -16062,9 +15176,7 @@ lbl_805353B8:
 
 
 .global lbl_805354B8
-
 lbl_805354B8:
-
 	# ROM: 0x5315B8
 	.4byte 0x80664D48
 	.4byte 0
@@ -16083,9 +15195,7 @@ lbl_805354B8:
 
 
 .global lbl_805354F0
-
 lbl_805354F0:
-
 	# ROM: 0x5315F0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -16114,9 +15224,7 @@ lbl_805354F0:
 
 
 .global lbl_80535550
-
 lbl_80535550:
-
 	# ROM: 0x531650
 	.4byte 0x80664D50
 	.4byte 0
@@ -16215,9 +15323,7 @@ lbl_80535550:
 
 
 .global lbl_805356C8
-
 lbl_805356C8:
-
 	# ROM: 0x5317C8
 	.4byte 0x8066A190
 	.4byte 0x8066A194
@@ -16226,9 +15332,7 @@ lbl_805356C8:
 
 
 .global lbl_805356D8
-
 lbl_805356D8:
-
 	# ROM: 0x5317D8
 	.4byte 0x8066A19C
 	.4byte 0x8066A1A4
@@ -16250,9 +15354,7 @@ lbl_805356D8:
 
 
 .global lbl_8053571C
-
 lbl_8053571C:
-
 	# ROM: 0x53181C
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -16260,9 +15362,7 @@ lbl_8053571C:
 
 
 .global lbl_80535728
-
 lbl_80535728:
-
 	# ROM: 0x531828
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -16279,9 +15379,7 @@ lbl_80535728:
 
 
 .global lbl_80535758
-
 lbl_80535758:
-
 	# ROM: 0x531858
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -16289,9 +15387,7 @@ lbl_80535758:
 
 
 .global lbl_80535764
-
 lbl_80535764:
-
 	# ROM: 0x531864
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -16299,9 +15395,7 @@ lbl_80535764:
 
 
 .global lbl_80535770
-
 lbl_80535770:
-
 	# ROM: 0x531870
 	.4byte 0x80664D58
 	.4byte 0
@@ -16421,9 +15515,7 @@ lbl_80535770:
 
 
 .global lbl_80535968
-
 lbl_80535968:
-
 	# ROM: 0x531A68
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -16431,9 +15523,7 @@ lbl_80535968:
 
 
 .global lbl_80535974
-
 lbl_80535974:
-
 	# ROM: 0x531A74
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -16457,9 +15547,7 @@ lbl_80535974:
 
 
 .global lbl_805359C0
-
 lbl_805359C0:
-
 	# ROM: 0x531AC0
 	.4byte 0x80664D60
 	.4byte 0
@@ -16522,9 +15610,7 @@ lbl_805359C0:
 
 
 .global lbl_80535AA8
-
 lbl_80535AA8:
-
 	# ROM: 0x531BA8
 	.4byte 0x80664D78
 	.4byte 0
@@ -16547,9 +15633,7 @@ lbl_80535AA8:
 
 
 .global lbl_80535AF0
-
 lbl_80535AF0:
-
 	# ROM: 0x531BF0
 	.4byte 0x80664D08
 	.4byte 0
@@ -16564,9 +15648,7 @@ lbl_80535AF0:
 
 
 .global lbl_80535B18
-
 lbl_80535B18:
-
 	# ROM: 0x531C18
 	.4byte 0x8066A228
 	.4byte 0x80185760  ;# ptr
@@ -16577,9 +15659,7 @@ lbl_80535B18:
 
 
 .global lbl_80535B30
-
 lbl_80535B30:
-
 	# ROM: 0x531C30
 	.4byte 0x804FF048
 	.4byte 0x80185808  ;# ptr
@@ -16622,9 +15702,7 @@ lbl_80535B30:
 
 
 .global lbl_80535BC8
-
 lbl_80535BC8:
-
 	# ROM: 0x531CC8
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -16639,9 +15717,7 @@ lbl_80535BC8:
 
 
 .global lbl_80535BF0
-
 lbl_80535BF0:
-
 	# ROM: 0x531CF0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -16658,9 +15734,7 @@ lbl_80535BF0:
 
 
 .global lbl_80535C20
-
 lbl_80535C20:
-
 	# ROM: 0x531D20
 	.4byte 0x80664D80
 	.4byte 0
@@ -16729,9 +15803,7 @@ lbl_80535C20:
 
 
 .global lbl_80535D20
-
 lbl_80535D20:
-
 	# ROM: 0x531E20
 	.4byte 0x80664DA0
 	.4byte 0
@@ -16800,9 +15872,7 @@ lbl_80535D20:
 
 
 .global lbl_80535E20
-
 lbl_80535E20:
-
 	# ROM: 0x531F20
 	.4byte 0x80664DA8
 	.4byte 0
@@ -16835,9 +15905,7 @@ lbl_80535E20:
 
 
 .global lbl_80535E90
-
 lbl_80535E90:
-
 	# ROM: 0x531F90
 	.4byte 0x80664DB0
 	.4byte 0
@@ -16870,9 +15938,7 @@ lbl_80535E90:
 
 
 .global lbl_80535F00
-
 lbl_80535F00:
-
 	# ROM: 0x532000
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -16895,9 +15961,7 @@ lbl_80535F00:
 
 
 .global lbl_80535F48
-
 lbl_80535F48:
-
 	# ROM: 0x532048
 	.4byte 0x80664DC0
 	.4byte 0
@@ -16934,9 +15998,7 @@ lbl_80535F48:
 
 
 .global lbl_80535FC8
-
 lbl_80535FC8:
-
 	# ROM: 0x5320C8
 	.4byte 0x00000072
 	.4byte 0x000E0001
@@ -16957,9 +16019,7 @@ lbl_80535FC8:
 
 
 .global lbl_80536008
-
 lbl_80536008:
-
 	# ROM: 0x532108
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -17086,9 +16146,7 @@ lbl_80536008:
 
 
 .global lbl_805361F0
-
 lbl_805361F0:
-
 	# ROM: 0x5322F0
 	.4byte 0x80664DD8
 	.4byte 0
@@ -17121,9 +16179,7 @@ lbl_805361F0:
 
 
 .global lbl_80536260
-
 lbl_80536260:
-
 	# ROM: 0x532360
 	.4byte 0x80664DE8
 	.4byte 0
@@ -17132,9 +16188,7 @@ lbl_80536260:
 
 
 .global lbl_80536270
-
 lbl_80536270:
-
 	# ROM: 0x532370
 	.4byte 0x3F800000
 	.4byte 0x3F400000
@@ -17144,9 +16198,7 @@ lbl_80536270:
 
 
 .global lbl_80536284
-
 lbl_80536284:
-
 	# ROM: 0x532384
 	.4byte 0x80664E28
 	.4byte 0
@@ -17157,9 +16209,7 @@ lbl_80536284:
 
 
 .global lbl_8053629C
-
 lbl_8053629C:
-
 	# ROM: 0x53239C
 	.4byte 0x80664E30
 	.4byte 0
@@ -17167,9 +16217,7 @@ lbl_8053629C:
 
 
 .global lbl_805362A8
-
 lbl_805362A8:
-
 	# ROM: 0x5323A8
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -17202,9 +16250,7 @@ lbl_805362A8:
 
 
 .global lbl_80536318
-
 lbl_80536318:
-
 	# ROM: 0x532418
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -17335,9 +16381,7 @@ lbl_80536318:
 
 
 .global lbl_80536510
-
 lbl_80536510:
-
 	# ROM: 0x532610
 	.4byte 0x80664E38
 	.4byte 0
@@ -17356,9 +16400,7 @@ lbl_80536510:
 
 
 .global lbl_8053656C
-
 lbl_8053656C:
-
 	# ROM: 0x53266C
 	.4byte 0x80664E40
 	.4byte 0
@@ -17370,9 +16412,7 @@ lbl_8053656C:
 
 
 .global lbl_80536588
-
 lbl_80536588:
-
 	# ROM: 0x532688
 	.4byte 0x80664E48
 	.4byte 0
@@ -17441,9 +16481,7 @@ lbl_80536588:
 
 
 .global lbl_80536688
-
 lbl_80536688:
-
 	# ROM: 0x532788
 	.4byte 0x80664E50
 	.4byte 0
@@ -17452,9 +16490,7 @@ lbl_80536688:
 
 
 .global lbl_80536698
-
 lbl_80536698:
-
 	# ROM: 0x532798
 	.4byte 0x80664E58
 	.4byte 0
@@ -17523,9 +16559,7 @@ lbl_80536698:
 
 
 .global lbl_80536798
-
 lbl_80536798:
-
 	# ROM: 0x532898
 	.4byte 0x80664E60
 	.4byte 0
@@ -17596,9 +16630,7 @@ lbl_80536798:
 
 
 .global lbl_805368A0
-
 lbl_805368A0:
-
 	# ROM: 0x5329A0
 	.4byte 0x80664E68
 	.4byte 0
@@ -17619,9 +16651,7 @@ lbl_805368A0:
 
 
 .global lbl_805368E0
-
 lbl_805368E0:
-
 	# ROM: 0x5329E0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -17732,9 +16762,7 @@ lbl_805368E0:
 
 
 .global lbl_80536A88
-
 lbl_80536A88:
-
 	# ROM: 0x532B88
 	.4byte 0x80664E70
 	.4byte 0
@@ -17813,9 +16841,7 @@ lbl_80536A88:
 
 
 .global lbl_80536BB0
-
 lbl_80536BB0:
-
 	# ROM: 0x532CB0
 	.4byte 0x8066A668
 	.4byte 0x801AAD20  ;# ptr
@@ -17858,9 +16884,7 @@ lbl_80536BB0:
 
 
 .global lbl_80536C48
-
 lbl_80536C48:
-
 	# ROM: 0x532D48
 	.4byte 0x8066A678
 	.4byte 0x801ABDE4  ;# ptr
@@ -17869,9 +16893,7 @@ lbl_80536C48:
 
 
 .global lbl_80536C58
-
 lbl_80536C58:
-
 	# ROM: 0x532D58
 	.4byte 0x801AEB44  ;# ptr
 	.4byte 0x801AE90C  ;# ptr
@@ -17888,9 +16910,7 @@ lbl_80536C58:
 
 
 .global lbl_80536C88
-
 lbl_80536C88:
-
 	# ROM: 0x532D88
 	.4byte 0x801AEB44  ;# ptr
 	.4byte 0x801AE298  ;# ptr
@@ -17908,9 +16928,7 @@ lbl_80536C88:
 
 
 .global lbl_80536CBC
-
 lbl_80536CBC:
-
 	# ROM: 0x532DBC
 	.4byte 0x801ADC64  ;# ptr
 	.4byte 0x801AD628  ;# ptr
@@ -17928,9 +16946,7 @@ lbl_80536CBC:
 
 
 .global lbl_80536CF0
-
 lbl_80536CF0:
-
 	# ROM: 0x532DF0
 	.4byte 0x80664EB0
 	.4byte 0
@@ -17999,9 +17015,7 @@ lbl_80536CF0:
 
 
 .global lbl_80536DF0
-
 lbl_80536DF0:
-
 	# ROM: 0x532EF0
 	.4byte 0x80664EB8
 	.4byte 0
@@ -18070,9 +17084,7 @@ lbl_80536DF0:
 
 
 .global lbl_80536EF0
-
 lbl_80536EF0:
-
 	# ROM: 0x532FF0
 	.4byte 0x000000C8
 	.4byte 0x000000C9
@@ -18080,9 +17092,7 @@ lbl_80536EF0:
 
 
 .global lbl_80536EFC
-
 lbl_80536EFC:
-
 	# ROM: 0x532FFC
 	.4byte 0x80664EC0
 	.4byte 0
@@ -18132,9 +17142,7 @@ lbl_80536EFC:
 
 
 .global lbl_80536FB0
-
 lbl_80536FB0:
-
 	# ROM: 0x5330B0
 	.4byte 0x801B412C  ;# ptr
 	.4byte 0x801B415C  ;# ptr
@@ -18179,9 +17187,7 @@ lbl_80536FB0:
 
 
 .global lbl_80537050
-
 lbl_80537050:
-
 	# ROM: 0x533150
 	.4byte 0x801B6F20  ;# ptr
 	.4byte 0x801B6F38  ;# ptr
@@ -18195,9 +17201,7 @@ lbl_80537050:
 
 
 .global lbl_80537074
-
 lbl_80537074:
-
 	# ROM: 0x533174
 	.4byte 0x80664ED0
 	.4byte 0
@@ -18267,9 +17271,7 @@ lbl_80537074:
 
 
 .global lbl_80537178
-
 lbl_80537178:
-
 	# ROM: 0x533278
 	.4byte 0x80664F08
 	.4byte 0
@@ -18328,9 +17330,7 @@ lbl_80537178:
 
 
 .global lbl_80537250
-
 lbl_80537250:
-
 	# ROM: 0x533350
 	.4byte 0x80664F10
 	.4byte 0
@@ -18399,9 +17399,7 @@ lbl_80537250:
 
 
 .global lbl_80537350
-
 lbl_80537350:
-
 	# ROM: 0x533450
 	.4byte 0x801BEC94  ;# ptr
 	.4byte 0x801BECA0  ;# ptr
@@ -18416,9 +17414,7 @@ lbl_80537350:
 
 
 .global lbl_80537378
-
 lbl_80537378:
-
 	# ROM: 0x533478
 	.4byte 0x80664F18
 	.4byte 0
@@ -18459,9 +17455,7 @@ lbl_80537378:
 
 
 .global lbl_80537448
-
 lbl_80537448:
-
 	# ROM: 0x533548
 	.4byte 0x80664F30
 	.4byte 0
@@ -18496,9 +17490,7 @@ lbl_80537448:
 
 
 .global lbl_805374C0
-
 lbl_805374C0:
-
 	# ROM: 0x5335C0
 	.4byte 0x80664F38
 	.4byte 0
@@ -18519,27 +17511,21 @@ lbl_805374C0:
 
 
 .global lbl_80537500
-
 lbl_80537500:
-
 	# ROM: 0x533600
 	.asciz "bus is out of bounds(%d)\n%d <= bus < %d not satisfied."
 	.balign 4
 
 
 .global lbl_80537538
-
 lbl_80537538:
-
 	# ROM: 0x533638
 	.asciz "AxManager.h"
 	.4byte 0
 
 
 .global lbl_80537548
-
 lbl_80537548:
-
 	# ROM: 0x533648
 	.4byte 0x80664F40
 	.4byte 0
@@ -18558,9 +17544,7 @@ lbl_80537548:
 
 
 .global lbl_80537580
-
 lbl_80537580:
-
 	# ROM: 0x533680
 	.4byte 0x80664F48
 	.4byte 0
@@ -18603,9 +17587,7 @@ lbl_80537580:
 
 
 .global lbl_80537618
-
 lbl_80537618:
-
 	# ROM: 0x533718
 	.4byte 0
 	.4byte 0
@@ -19034,9 +18016,7 @@ lbl_80537618:
 
 
 .global lbl_80537CB8
-
 lbl_80537CB8:
-
 	# ROM: 0x533DB8
 	.4byte 0x80664F50
 	.4byte 0
@@ -19079,9 +18059,7 @@ lbl_80537CB8:
 
 
 .global lbl_80537D50
-
 lbl_80537D50:
-
 	# ROM: 0x533E50
 	.4byte 0x801C7274  ;# ptr
 	.4byte 0x801C7280  ;# ptr
@@ -19098,9 +18076,7 @@ lbl_80537D50:
 
 
 .global lbl_80537D80
-
 lbl_80537D80:
-
 	# ROM: 0x533E80
 	.4byte 0x801C771C  ;# ptr
 	.4byte 0x801C7040  ;# ptr
@@ -19115,9 +18091,7 @@ lbl_80537D80:
 
 
 .global lbl_80537DA8
-
 lbl_80537DA8:
-
 	# ROM: 0x533EA8
 	.4byte 0x801C771C  ;# ptr
 	.4byte 0x801C771C  ;# ptr
@@ -19136,9 +18110,7 @@ lbl_80537DA8:
 
 
 .global lbl_80537DE0
-
 lbl_80537DE0:
-
 	# ROM: 0x533EE0
 	.4byte 0x801CACF8  ;# ptr
 	.4byte 0x801CAC14  ;# ptr
@@ -19170,9 +18142,7 @@ lbl_80537DE0:
 
 
 .global lbl_80537E4C
-
 lbl_80537E4C:
-
 	# ROM: 0x533F4C
 	.4byte 0x801CFBE4  ;# ptr
 	.4byte 0x801CFBE4  ;# ptr
@@ -19191,9 +18161,7 @@ lbl_80537E4C:
 
 
 .global lbl_80537E84
-
 lbl_80537E84:
-
 	# ROM: 0x533F84
 	.4byte 0x801D0DD4  ;# ptr
 	.4byte 0x801D0DD4  ;# ptr
@@ -19212,9 +18180,7 @@ lbl_80537E84:
 
 
 .global lbl_80537EBC
-
 lbl_80537EBC:
-
 	# ROM: 0x533FBC
 	.4byte 0x801D12B0  ;# ptr
 	.4byte 0x801D12B0  ;# ptr
@@ -19234,9 +18200,7 @@ lbl_80537EBC:
 
 
 .global lbl_80537EF8
-
 lbl_80537EF8:
-
 	# ROM: 0x533FF8
 	.4byte 0x80664F58
 	.4byte 0
@@ -19279,9 +18243,7 @@ lbl_80537EF8:
 
 
 .global lbl_80537F90
-
 lbl_80537F90:
-
 	# ROM: 0x534090
 	.4byte 0x80664F60
 	.4byte 0
@@ -19294,9 +18256,7 @@ lbl_80537F90:
 
 
 .global lbl_80537FB0
-
 lbl_80537FB0:
-
 	# ROM: 0x5340B0
 	.4byte 0x80664F68
 	.4byte 0
@@ -19309,9 +18269,7 @@ lbl_80537FB0:
 
 
 .global lbl_80537FD0
-
 lbl_80537FD0:
-
 	# ROM: 0x5340D0
 	.4byte 0x80664F70
 	.4byte 0
@@ -19320,9 +18278,7 @@ lbl_80537FD0:
 
 
 .global lbl_80537FE0
-
 lbl_80537FE0:
-
 	# ROM: 0x5340E0
 	.4byte 0x80501588
 	.4byte 0x80501594
@@ -19331,9 +18287,7 @@ lbl_80537FE0:
 
 
 .global lbl_80537FF0
-
 lbl_80537FF0:
-
 	# ROM: 0x5340F0
 	.4byte 0x80664F78
 	.4byte 0
@@ -19347,9 +18301,7 @@ lbl_80537FF0:
 
 
 .global lbl_80538014
-
 lbl_80538014:
-
 	# ROM: 0x534114
 	.4byte 0x80664F80
 	.4byte 0
@@ -19364,9 +18316,7 @@ lbl_80538014:
 
 
 .global lbl_8053803C
-
 lbl_8053803C:
-
 	# ROM: 0x53413C
 	.4byte 0x80664F88
 	.4byte 0
@@ -19382,9 +18332,7 @@ lbl_8053803C:
 
 
 .global lbl_80538068
-
 lbl_80538068:
-
 	# ROM: 0x534168
 	.4byte 0x80664F90
 	.4byte 0
@@ -19399,9 +18347,7 @@ lbl_80538068:
 
 
 .global lbl_80538090
-
 lbl_80538090:
-
 	# ROM: 0x534190
 	.4byte 0x80664F98
 	.4byte 0
@@ -19416,9 +18362,7 @@ lbl_80538090:
 
 
 .global lbl_805380B8
-
 lbl_805380B8:
-
 	# ROM: 0x5341B8
 	.4byte 0x80664FA0
 	.4byte 0
@@ -19433,9 +18377,7 @@ lbl_805380B8:
 
 
 .global lbl_805380E0
-
 lbl_805380E0:
-
 	# ROM: 0x5341E0
 	.4byte 0x80664FA8
 	.4byte 0
@@ -19450,9 +18392,7 @@ lbl_805380E0:
 
 
 .global lbl_80538108
-
 lbl_80538108:
-
 	# ROM: 0x534208
 	.4byte 0x80664FB0
 	.4byte 0
@@ -19467,9 +18407,7 @@ lbl_80538108:
 
 
 .global lbl_80538130
-
 lbl_80538130:
-
 	# ROM: 0x534230
 	.4byte 0x80664FB8
 	.4byte 0
@@ -19484,9 +18422,7 @@ lbl_80538130:
 
 
 .global lbl_80538158
-
 lbl_80538158:
-
 	# ROM: 0x534258
 	.4byte 0x806646D0
 	.4byte 0
@@ -19497,9 +18433,7 @@ lbl_80538158:
 
 
 .global lbl_80538170
-
 lbl_80538170:
-
 	# ROM: 0x534270
 	.4byte 0x805019C0
 	.4byte 0x805019D0
@@ -19510,9 +18444,7 @@ lbl_80538170:
 
 
 .global lbl_80538188
-
 lbl_80538188:
-
 	# ROM: 0x534288
 	.4byte 0x80664FC0
 	.4byte 0
@@ -19555,9 +18487,7 @@ lbl_80538188:
 
 
 .global lbl_80538220
-
 lbl_80538220:
-
 	# ROM: 0x534320
 	.4byte 0x801D655C  ;# ptr
 	.4byte 0x801D6574  ;# ptr
@@ -19572,9 +18502,7 @@ lbl_80538220:
 
 
 .global lbl_80538248
-
 lbl_80538248:
-
 	# ROM: 0x534348
 	.4byte 0x80664FC8
 	.4byte 0
@@ -19617,9 +18545,7 @@ lbl_80538248:
 
 
 .global lbl_805382E0
-
 lbl_805382E0:
-
 	# ROM: 0x5343E0
 	.4byte 0x80664FD0
 	.4byte 0
@@ -19662,9 +18588,7 @@ lbl_805382E0:
 
 
 .global lbl_80538378
-
 lbl_80538378:
-
 	# ROM: 0x534478
 	.4byte 0x80664FD8
 	.4byte 0
@@ -19707,9 +18631,7 @@ lbl_80538378:
 
 
 .global lbl_80538410
-
 lbl_80538410:
-
 	# ROM: 0x534510
 	.4byte 0x801ED490  ;# ptr
 	.4byte 0x801ED42C  ;# ptr
@@ -19726,9 +18648,7 @@ lbl_80538410:
 
 
 .global lbl_80538440
-
 lbl_80538440:
-
 	# ROM: 0x534540
 	.4byte 0x801EFCB0  ;# ptr
 	.4byte 0x801EFCB0  ;# ptr
@@ -19747,9 +18667,7 @@ lbl_80538440:
 
 
 .global lbl_80538478
-
 lbl_80538478:
-
 	# ROM: 0x534578
 	.4byte 0x801F1CCC  ;# ptr
 	.4byte 0x801F1CE4  ;# ptr
@@ -19764,9 +18682,7 @@ lbl_80538478:
 
 
 .global lbl_805384A0
-
 lbl_805384A0:
-
 	# ROM: 0x5345A0
 	.4byte 0x80664FE0
 	.4byte 0
@@ -19809,9 +18725,7 @@ lbl_805384A0:
 
 
 .global lbl_80538538
-
 lbl_80538538:
-
 	# ROM: 0x534638
 	.4byte 0x80664FE8
 	.4byte 0
@@ -19826,9 +18740,7 @@ lbl_80538538:
 
 
 .global lbl_80538560
-
 lbl_80538560:
-
 	# ROM: 0x534660
 	.4byte 0x805030F0
 	.4byte 0x805030FC
@@ -19839,9 +18751,7 @@ lbl_80538560:
 
 
 .global lbl_80538578
-
 lbl_80538578:
-
 	# ROM: 0x534678
 	.4byte 0x80503138
 	.4byte 0x80503148
@@ -19852,9 +18762,7 @@ lbl_80538578:
 
 
 .global lbl_80538590
-
 lbl_80538590:
-
 	# ROM: 0x534690
 	.4byte 0x80664FF0
 	.4byte 0
@@ -19897,9 +18805,7 @@ lbl_80538590:
 
 
 .global lbl_80538628
-
 lbl_80538628:
-
 	# ROM: 0x534728
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -19922,9 +18828,7 @@ lbl_80538628:
 
 
 .global lbl_80538670
-
 lbl_80538670:
-
 	# ROM: 0x534770
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -19947,9 +18851,7 @@ lbl_80538670:
 
 
 .global lbl_805386B8
-
 lbl_805386B8:
-
 	# ROM: 0x5347B8
 	.4byte 0x805031F8
 	.4byte 0x80503208
@@ -19962,9 +18864,7 @@ lbl_805386B8:
 
 
 .global lbl_805386D8
-
 lbl_805386D8:
-
 	# ROM: 0x5347D8
 	.4byte 0x80503264
 	.4byte 0x8066AA30
@@ -19979,9 +18879,7 @@ lbl_805386D8:
 
 
 .global lbl_80538700
-
 lbl_80538700:
-
 	# ROM: 0x534800
 	.4byte 0x801F728C  ;# ptr
 	.4byte 0x801F6EAC  ;# ptr
@@ -19996,9 +18894,7 @@ lbl_80538700:
 
 
 .global lbl_80538728
-
 lbl_80538728:
-
 	# ROM: 0x534828
 	.4byte 0x80664FF8
 	.4byte 0
@@ -20021,9 +18917,7 @@ lbl_80538728:
 
 
 .global lbl_80538770
-
 lbl_80538770:
-
 	# ROM: 0x534870
 	.4byte 0x80664610
 	.4byte 0
@@ -20166,9 +19060,7 @@ lbl_80538770:
 
 
 .global lbl_80538998
-
 lbl_80538998:
-
 	# ROM: 0x534A98
 	.4byte 0
 	.4byte 0
@@ -20183,9 +19075,7 @@ lbl_80538998:
 
 
 .global lbl_805389C0
-
 lbl_805389C0:
-
 	# ROM: 0x534AC0
 	.4byte 0x80665008
 	.4byte 0
@@ -20222,9 +19112,7 @@ lbl_805389C0:
 
 
 .global lbl_80538A40
-
 lbl_80538A40:
-
 	# ROM: 0x534B40
 	.4byte 0x801FA370  ;# ptr
 	.4byte 0x801FA378  ;# ptr
@@ -20250,9 +19138,7 @@ lbl_80538A40:
 
 
 .global lbl_80538A94
-
 lbl_80538A94:
-
 	# ROM: 0x534B94
 	.4byte 0x80665010
 	.4byte 0
@@ -20302,9 +19188,7 @@ lbl_80538A94:
 
 
 .global lbl_80538B48
-
 lbl_80538B48:
-
 	# ROM: 0x534C48
 	.4byte 0x80665018
 	.4byte 0
@@ -20323,9 +19207,7 @@ lbl_80538B48:
 
 
 .global lbl_80538B80
-
 lbl_80538B80:
-
 	# ROM: 0x534C80
 	.4byte 0x80665028
 	.4byte 0
@@ -20368,9 +19250,7 @@ lbl_80538B80:
 
 
 .global lbl_80538C18
-
 lbl_80538C18:
-
 	# ROM: 0x534D18
 	.4byte 0x8066AB20
 	.4byte 0x801FE8F4  ;# ptr
@@ -20401,9 +19281,7 @@ lbl_80538C18:
 
 
 .global lbl_80538C80
-
 lbl_80538C80:
-
 	# ROM: 0x534D80
 	.4byte 0x80665038
 	.4byte 0
@@ -20466,9 +19344,7 @@ lbl_80538C80:
 
 
 .global lbl_80538D68
-
 lbl_80538D68:
-
 	# ROM: 0x534E68
 	.4byte 0x80202190  ;# ptr
 	.4byte 0x80202154  ;# ptr
@@ -20484,9 +19360,7 @@ lbl_80538D68:
 
 
 .global lbl_80538D94
-
 lbl_80538D94:
-
 	# ROM: 0x534E94
 	.4byte 0x80202950  ;# ptr
 	.4byte 0x8020295C  ;# ptr
@@ -20505,9 +19379,7 @@ lbl_80538D94:
 
 
 .global lbl_80538DCC
-
 lbl_80538DCC:
-
 	# ROM: 0x534ECC
 	.4byte 0x80202ADC  ;# ptr
 	.4byte 0x80202AE8  ;# ptr
@@ -20526,9 +19398,7 @@ lbl_80538DCC:
 
 
 .global lbl_80538E04
-
 lbl_80538E04:
-
 	# ROM: 0x534F04
 	.4byte 0x80203208  ;# ptr
 	.4byte 0x802031C8  ;# ptr
@@ -20548,9 +19418,7 @@ lbl_80538E04:
 
 
 .global lbl_80538E40
-
 lbl_80538E40:
-
 	# ROM: 0x534F40
 	.4byte 0x80665040
 	.4byte 0
@@ -20593,18 +19461,14 @@ lbl_80538E40:
 
 
 .global lbl_80538ED8
-
 lbl_80538ED8:
-
 	# ROM: 0x534FD8
 	.asciz "skill1_per"
 	.balign 4
 
 
 .global lbl_80538EE4
-
 lbl_80538EE4:
-
 	# ROM: 0x534FE4
 	.4byte 0x80665060
 	.4byte 0
@@ -20615,9 +19479,7 @@ lbl_80538EE4:
 
 
 .global lbl_80538EFC
-
 lbl_80538EFC:
-
 	# ROM: 0x534FFC
 	.4byte 0x80665068
 	.4byte 0
@@ -20625,9 +19487,7 @@ lbl_80538EFC:
 
 
 .global lbl_80538F08
-
 lbl_80538F08:
-
 	# ROM: 0x535008
 	.4byte 0x80665070
 	.4byte 0
@@ -20670,9 +19530,7 @@ lbl_80538F08:
 
 
 .global lbl_80538FA0
-
 lbl_80538FA0:
-
 	# ROM: 0x5350A0
 	.4byte 0x8066ABE0
 	.4byte 0x8066ABE8
@@ -20695,9 +19553,7 @@ lbl_80538FA0:
 
 
 .global lbl_80538FE8
-
 lbl_80538FE8:
-
 	# ROM: 0x5350E8
 	.4byte 0x8020A8AC  ;# ptr
 	.4byte 0x8020A8B4  ;# ptr
@@ -20707,9 +19563,7 @@ lbl_80538FE8:
 
 
 .global lbl_80538FFC
-
 lbl_80538FFC:
-
 	# ROM: 0x5350FC
 	.4byte 0x80665000
 	.4byte 0
@@ -20723,9 +19577,7 @@ lbl_80538FFC:
 
 
 .global lbl_80539020
-
 lbl_80539020:
-
 	# ROM: 0x535120
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -20754,9 +19606,7 @@ lbl_80539020:
 
 
 .global lbl_80539080
-
 lbl_80539080:
-
 	# ROM: 0x535180
 	.4byte 0x80665088
 	.4byte 0
@@ -20775,9 +19625,7 @@ lbl_80539080:
 
 
 .global lbl_805390B8
-
 lbl_805390B8:
-
 	# ROM: 0x5351B8
 	.4byte 0x80665098
 	.4byte 0
@@ -20796,9 +19644,7 @@ lbl_805390B8:
 
 
 .global lbl_805390F0
-
 lbl_805390F0:
-
 	# ROM: 0x5351F0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -20833,9 +19679,7 @@ lbl_805390F0:
 
 
 .global lbl_80539168
-
 lbl_80539168:
-
 	# ROM: 0x535268
 	.4byte 0x806650A0
 	.4byte 0
@@ -20854,9 +19698,7 @@ lbl_80539168:
 
 
 .global lbl_805391A0
-
 lbl_805391A0:
-
 	# ROM: 0x5352A0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -20873,9 +19715,7 @@ lbl_805391A0:
 
 
 .global lbl_805391D0
-
 lbl_805391D0:
-
 	# ROM: 0x5352D0
 	.4byte 0x806650A8
 	.4byte 0
@@ -20894,9 +19734,7 @@ lbl_805391D0:
 
 
 .global lbl_80539208
-
 lbl_80539208:
-
 	# ROM: 0x535308
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -20919,9 +19757,7 @@ lbl_80539208:
 
 
 .global lbl_80539250
-
 lbl_80539250:
-
 	# ROM: 0x535350
 	.4byte 0x806650B8
 	.4byte 0
@@ -20940,9 +19776,7 @@ lbl_80539250:
 
 
 .global lbl_80539288
-
 lbl_80539288:
-
 	# ROM: 0x535388
 	.4byte 0x806650C0
 	.4byte 0
@@ -20975,9 +19809,7 @@ lbl_80539288:
 
 
 .global lbl_805392F8
-
 lbl_805392F8:
-
 	# ROM: 0x5353F8
 	.4byte 0x80212AA0  ;# ptr
 	.4byte 0x80212AA8  ;# ptr
@@ -20994,9 +19826,7 @@ lbl_805392F8:
 
 
 .global lbl_80539328
-
 lbl_80539328:
-
 	# ROM: 0x535428
 	.4byte 0x806650C8
 	.4byte 0
@@ -21045,9 +19875,7 @@ lbl_80539328:
 
 
 .global lbl_805393D8
-
 lbl_805393D8:
-
 	# ROM: 0x5354D8
 	.4byte 0x8021438C  ;# ptr
 	.4byte 0x80214310  ;# ptr
@@ -21068,9 +19896,7 @@ lbl_805393D8:
 
 
 .global lbl_80539418
-
 lbl_80539418:
-
 	# ROM: 0x535518
 	.4byte 0x806650D0
 	.4byte 0
@@ -21113,9 +19939,7 @@ lbl_80539418:
 
 
 .global lbl_805394B0
-
 lbl_805394B0:
-
 	# ROM: 0x5355B0
 	.4byte 0x806650D8
 	.4byte 0
@@ -21158,9 +19982,7 @@ lbl_805394B0:
 
 
 .global lbl_80539548
-
 lbl_80539548:
-
 	# ROM: 0x535648
 	.4byte 0x19193250
 	.4byte 0x0A0A055A
@@ -21171,9 +19993,7 @@ lbl_80539548:
 
 
 .global lbl_80539560
-
 lbl_80539560:
-
 	# ROM: 0x535660
 	.4byte 0x8021FF14  ;# ptr
 	.4byte 0x8021FF1C  ;# ptr
@@ -21219,9 +20039,7 @@ lbl_80539560:
 
 
 .global lbl_80539604
-
 lbl_80539604:
-
 	# ROM: 0x535704
 	.4byte 0x802209AC  ;# ptr
 	.4byte 0x802209B8  ;# ptr
@@ -21235,9 +20053,7 @@ lbl_80539604:
 
 
 .global lbl_80539628
-
 lbl_80539628:
-
 	# ROM: 0x535728
 	.4byte 0x806650E0
 	.4byte 0
@@ -21296,9 +20112,7 @@ lbl_80539628:
 
 
 .global lbl_80539700
-
 lbl_80539700:
-
 	# ROM: 0x535800
 	.4byte 0x806650E8
 	.4byte 0
@@ -21307,9 +20121,7 @@ lbl_80539700:
 
 
 .global lbl_80539710
-
 lbl_80539710:
-
 	# ROM: 0x535810
 	.4byte 0x80222938  ;# ptr
 	.4byte 0x802228FC  ;# ptr
@@ -21324,9 +20136,7 @@ lbl_80539710:
 
 
 .global lbl_80539738
-
 lbl_80539738:
-
 	# ROM: 0x535838
 	.4byte 0x806650F0
 	.4byte 0
@@ -21369,9 +20179,7 @@ lbl_80539738:
 
 
 .global lbl_805397D0
-
 lbl_805397D0:
-
 	# ROM: 0x5358D0
 	.4byte 0x806650F8
 	.4byte 0
@@ -21380,9 +20188,7 @@ lbl_805397D0:
 
 
 .global lbl_805397E0
-
 lbl_805397E0:
-
 	# ROM: 0x5358E0
 	.4byte 0x80665100
 	.4byte 0
@@ -21395,9 +20201,7 @@ lbl_805397E0:
 
 
 .global lbl_80539800
-
 lbl_80539800:
-
 	# ROM: 0x535900
 	.4byte 0x80665108
 	.4byte 0
@@ -21410,9 +20214,7 @@ lbl_80539800:
 
 
 .global lbl_80539820
-
 lbl_80539820:
-
 	# ROM: 0x535920
 	.4byte 0x80665110
 	.4byte 0
@@ -21421,9 +20223,7 @@ lbl_80539820:
 
 
 .global lbl_80539830
-
 lbl_80539830:
-
 	# ROM: 0x535930
 	.4byte 0x80665118
 	.4byte 0
@@ -21436,9 +20236,7 @@ lbl_80539830:
 
 
 .global lbl_80539850
-
 lbl_80539850:
-
 	# ROM: 0x535950
 	.4byte 0x80665120
 	.4byte 0
@@ -21447,9 +20245,7 @@ lbl_80539850:
 
 
 .global lbl_80539860
-
 lbl_80539860:
-
 	# ROM: 0x535960
 	.4byte 0x80665128
 	.4byte 0
@@ -21457,9 +20253,7 @@ lbl_80539860:
 
 
 .global lbl_8053986C
-
 lbl_8053986C:
-
 	# ROM: 0x53596C
 	.4byte 0x80665130
 	.4byte 0
@@ -21472,9 +20266,7 @@ lbl_8053986C:
 
 
 .global lbl_8053988C
-
 lbl_8053988C:
-
 	# ROM: 0x53598C
 	.4byte 0x80665138
 	.4byte 0
@@ -21487,9 +20279,7 @@ lbl_8053988C:
 
 
 .global lbl_805398AC
-
 lbl_805398AC:
-
 	# ROM: 0x5359AC
 	.4byte 0x80665140
 	.4byte 0
@@ -21502,9 +20292,7 @@ lbl_805398AC:
 
 
 .global lbl_805398CC
-
 lbl_805398CC:
-
 	# ROM: 0x5359CC
 	.4byte 0x80665148
 	.4byte 0
@@ -21514,9 +20302,7 @@ lbl_805398CC:
 
 
 .global lbl_805398E0
-
 lbl_805398E0:
-
 	# ROM: 0x5359E0
 	.4byte 0x80665150
 	.4byte 0
@@ -21609,9 +20395,7 @@ lbl_805398E0:
 
 
 .global lbl_80539A40
-
 lbl_80539A40:
-
 	# ROM: 0x535B40
 	.4byte 0x80665160
 	.4byte 0
@@ -21654,9 +20438,7 @@ lbl_80539A40:
 
 
 .global lbl_80539AD8
-
 lbl_80539AD8:
-
 	# ROM: 0x535BD8
 	.4byte 0x80505380
 	.4byte 0x8050539C
@@ -21691,9 +20473,7 @@ lbl_80539AD8:
 
 
 .global lbl_80539B50
-
 lbl_80539B50:
-
 	# ROM: 0x535C50
 	.4byte 0x80505674
 	.4byte 0x80505680
@@ -21754,9 +20534,7 @@ lbl_80539B50:
 
 
 .global lbl_80539C30
-
 lbl_80539C30:
-
 	# ROM: 0x535D30
 	.4byte 0x80665168
 	.4byte 0
@@ -21799,9 +20577,7 @@ lbl_80539C30:
 
 
 .global lbl_80539CC8
-
 lbl_80539CC8:
-
 	# ROM: 0x535DC8
 	.4byte 0x80665170
 	.4byte 0
@@ -21844,9 +20620,7 @@ lbl_80539CC8:
 
 
 .global lbl_80539D60
-
 lbl_80539D60:
-
 	# ROM: 0x535E60
 	.4byte 0x80665178
 	.4byte 0
@@ -21889,9 +20663,7 @@ lbl_80539D60:
 
 
 .global lbl_80539DF8
-
 lbl_80539DF8:
-
 	# ROM: 0x535EF8
 	.4byte 0x80665180
 	.4byte 0
@@ -21934,9 +20706,7 @@ lbl_80539DF8:
 
 
 .global lbl_80539E90
-
 lbl_80539E90:
-
 	# ROM: 0x535F90
 	.4byte 0x80665188
 	.4byte 0
@@ -21979,9 +20749,7 @@ lbl_80539E90:
 
 
 .global lbl_80539F28
-
 lbl_80539F28:
-
 	# ROM: 0x536028
 	.4byte 0x80665190
 	.4byte 0
@@ -22024,9 +20792,7 @@ lbl_80539F28:
 
 
 .global lbl_80539FC0
-
 lbl_80539FC0:
-
 	# ROM: 0x5360C0
 	.4byte 0x80665198
 	.4byte 0
@@ -22059,9 +20825,7 @@ lbl_80539FC0:
 
 
 .global lbl_8053A030
-
 lbl_8053A030:
-
 	# ROM: 0x536130
 	.4byte 0x80230BF0  ;# ptr
 	.4byte 0x80230BF8  ;# ptr
@@ -22075,9 +20839,7 @@ lbl_8053A030:
 
 
 .global lbl_8053A054
-
 lbl_8053A054:
-
 	# ROM: 0x536154
 	.4byte 0x80230C3C  ;# ptr
 	.4byte 0x80230B10  ;# ptr
@@ -22091,9 +20853,7 @@ lbl_8053A054:
 
 
 .global lbl_8053A078
-
 lbl_8053A078:
-
 	# ROM: 0x536178
 	.4byte 0x8023116C  ;# ptr
 	.4byte 0x80231174  ;# ptr
@@ -22107,9 +20867,7 @@ lbl_8053A078:
 
 
 .global lbl_8053A09C
-
 lbl_8053A09C:
-
 	# ROM: 0x53619C
 	.4byte 0x8023120C  ;# ptr
 	.4byte 0x8023108C  ;# ptr
@@ -22123,9 +20881,7 @@ lbl_8053A09C:
 
 
 .global lbl_8053A0C0
-
 lbl_8053A0C0:
-
 	# ROM: 0x5361C0
 	.4byte 0x806651A8
 	.4byte 0
@@ -22168,9 +20924,7 @@ lbl_8053A0C0:
 
 
 .global lbl_8053A158
-
 lbl_8053A158:
-
 	# ROM: 0x536258
 	.4byte 0x8023590C  ;# ptr
 	.4byte 0x802358C0  ;# ptr
@@ -22188,9 +20942,7 @@ lbl_8053A158:
 
 
 .global lbl_8053A18C
-
 lbl_8053A18C:
-
 	# ROM: 0x53628C
 	.4byte 0x802379F8  ;# ptr
 	.4byte 0x80237664  ;# ptr
@@ -22240,9 +20992,7 @@ lbl_8053A18C:
 
 
 .global lbl_8053A240
-
 lbl_8053A240:
-
 	# ROM: 0x536340
 	.4byte 0x806651B0
 	.4byte 0
@@ -22288,9 +21038,7 @@ lbl_8053A240:
 
 
 .global lbl_8053A2E4
-
 lbl_8053A2E4:
-
 	# ROM: 0x5363E4
 	.4byte 0x8023EB74  ;# ptr
 	.4byte 0x8023EB34  ;# ptr
@@ -22331,9 +21079,7 @@ lbl_8053A2E4:
 
 
 .global lbl_8053A374
-
 lbl_8053A374:
-
 	# ROM: 0x536474
 	.4byte 0x806651C0
 	.4byte 0
@@ -22400,9 +21146,7 @@ lbl_8053A374:
 
 
 .global lbl_8053A46C
-
 lbl_8053A46C:
-
 	# ROM: 0x53656C
 	.4byte 0x806651C8
 	.4byte 0
@@ -22424,9 +21168,7 @@ lbl_8053A46C:
 
 
 .global lbl_8053A4B0
-
 lbl_8053A4B0:
-
 	# ROM: 0x5365B0
 	.4byte 0x80241E94  ;# ptr
 	.4byte 0x80241F00  ;# ptr
@@ -22443,9 +21185,7 @@ lbl_8053A4B0:
 
 
 .global lbl_8053A4E0
-
 lbl_8053A4E0:
-
 	# ROM: 0x5365E0
 	.4byte 0x806651D0
 	.4byte 0
@@ -22508,9 +21248,7 @@ lbl_8053A4E0:
 
 
 .global lbl_8053A5C8
-
 lbl_8053A5C8:
-
 	# ROM: 0x5366C8
 	.4byte 0x806651D8
 	.4byte 0
@@ -22553,9 +21291,7 @@ lbl_8053A5C8:
 
 
 .global lbl_8053A660
-
 lbl_8053A660:
-
 	# ROM: 0x536760
 	.4byte 0x806651E0
 	.4byte 0
@@ -22598,9 +21334,7 @@ lbl_8053A660:
 
 
 .global lbl_8053A6F8
-
 lbl_8053A6F8:
-
 	# ROM: 0x5367F8
 	.4byte 0x80506CE8
 	.4byte 0x80506CF8
@@ -22633,9 +21367,7 @@ lbl_8053A6F8:
 
 
 .global lbl_8053A768
-
 lbl_8053A768:
-
 	# ROM: 0x536868
 	.4byte 0x8024F520  ;# ptr
 	.4byte 0x8024F520  ;# ptr
@@ -22670,9 +21402,7 @@ lbl_8053A768:
 
 
 .global lbl_8053A7E0
-
 lbl_8053A7E0:
-
 	# ROM: 0x5368E0
 	.4byte 0x806651E8
 	.4byte 0
@@ -22714,9 +21444,7 @@ lbl_8053A7E0:
 
 
 .global lbl_8053A874
-
 lbl_8053A874:
-
 	# ROM: 0x536974
 	.4byte 0x806651F0
 	.4byte 0
@@ -22727,9 +21455,7 @@ lbl_8053A874:
 
 
 .global lbl_8053A88C
-
 lbl_8053A88C:
-
 	# ROM: 0x53698C
 	.4byte 0x806651F8
 	.4byte 0
@@ -22740,9 +21466,7 @@ lbl_8053A88C:
 
 
 .global lbl_8053A8A4
-
 lbl_8053A8A4:
-
 	# ROM: 0x5369A4
 	.4byte 0x80665200
 	.4byte 0
@@ -22753,9 +21477,7 @@ lbl_8053A8A4:
 
 
 .global lbl_8053A8BC
-
 lbl_8053A8BC:
-
 	# ROM: 0x5369BC
 	.4byte 0x80665208
 	.4byte 0
@@ -22763,9 +21485,7 @@ lbl_8053A8BC:
 
 
 .global lbl_8053A8C8
-
 lbl_8053A8C8:
-
 	# ROM: 0x5369C8
 	.4byte 0x80251398  ;# ptr
 	.4byte 0x802513A4  ;# ptr
@@ -22778,9 +21498,7 @@ lbl_8053A8C8:
 
 
 .global lbl_8053A8E8
-
 lbl_8053A8E8:
-
 	# ROM: 0x5369E8
 	.4byte 0x80665210
 	.4byte 0
@@ -22813,9 +21531,7 @@ lbl_8053A8E8:
 
 
 .global lbl_8053A958
-
 lbl_8053A958:
-
 	# ROM: 0x536A58
 	.4byte 0x80665218
 	.4byte 0
@@ -22884,9 +21600,7 @@ lbl_8053A958:
 
 
 .global lbl_8053AA58
-
 lbl_8053AA58:
-
 	# ROM: 0x536B58
 	.4byte 0x80665220
 	.4byte 0
@@ -22945,9 +21659,7 @@ lbl_8053AA58:
 
 
 .global lbl_8053AB30
-
 lbl_8053AB30:
-
 	# ROM: 0x536C30
 	.4byte 0x80254B10  ;# ptr
 	.4byte 0x80254A6C  ;# ptr
@@ -22969,9 +21681,7 @@ lbl_8053AB30:
 
 
 .global lbl_8053AB74
-
 lbl_8053AB74:
-
 	# ROM: 0x536C74
 	.4byte 0x8025551C  ;# ptr
 	.4byte 0x802554C0  ;# ptr
@@ -22985,9 +21695,7 @@ lbl_8053AB74:
 
 
 .global lbl_8053AB98
-
 lbl_8053AB98:
-
 	# ROM: 0x536C98
 	.4byte 0x80665228
 	.4byte 0
@@ -23029,9 +21737,7 @@ lbl_8053AB98:
 
 
 .global lbl_8053AC2C
-
 lbl_8053AC2C:
-
 	# ROM: 0x536D2C
 	.4byte 0x80665230
 	.4byte 0
@@ -23039,9 +21745,7 @@ lbl_8053AC2C:
 
 
 .global lbl_8053AC38
-
 lbl_8053AC38:
-
 	# ROM: 0x536D38
 	.4byte 0x802570FC  ;# ptr
 	.4byte 0x80257108  ;# ptr
@@ -23058,9 +21762,7 @@ lbl_8053AC38:
 
 
 .global lbl_8053AC68
-
 lbl_8053AC68:
-
 	# ROM: 0x536D68
 	.4byte 0x80665238
 	.4byte 0
@@ -23093,9 +21795,7 @@ lbl_8053AC68:
 
 
 .global lbl_8053ACD8
-
 lbl_8053ACD8:
-
 	# ROM: 0x536DD8
 	.4byte 0x8025BD94  ;# ptr
 	.4byte 0x8025BDAC  ;# ptr
@@ -23112,9 +21812,7 @@ lbl_8053ACD8:
 
 
 .global lbl_8053AD08
-
 lbl_8053AD08:
-
 	# ROM: 0x536E08
 	.4byte 0x80665240
 	.4byte 0
@@ -23156,9 +21854,7 @@ lbl_8053AD08:
 
 
 .global lbl_8053AD9C
-
 lbl_8053AD9C:
-
 	# ROM: 0x536E9C
 	.4byte 0x80665248
 	.4byte 0
@@ -23166,9 +21862,7 @@ lbl_8053AD9C:
 
 
 .global lbl_8053ADA8
-
 lbl_8053ADA8:
-
 	# ROM: 0x536EA8
 	.4byte 0x80665250
 	.4byte 0
@@ -23176,9 +21870,7 @@ lbl_8053ADA8:
 
 
 .global lbl_8053ADB4
-
 lbl_8053ADB4:
-
 	# ROM: 0x536EB4
 	.4byte 0x80665258
 	.4byte 0
@@ -23186,9 +21878,7 @@ lbl_8053ADB4:
 
 
 .global lbl_8053ADC0
-
 lbl_8053ADC0:
-
 	# ROM: 0x536EC0
 	.4byte 0x80665260
 	.4byte 0
@@ -23197,9 +21887,7 @@ lbl_8053ADC0:
 
 
 .global lbl_8053ADD0
-
 lbl_8053ADD0:
-
 	# ROM: 0x536ED0
 	.4byte 0x80665268
 	.4byte 0
@@ -23241,9 +21929,7 @@ lbl_8053ADD0:
 
 
 .global lbl_8053AE64
-
 lbl_8053AE64:
-
 	# ROM: 0x536F64
 	.4byte 0x80665270
 	.4byte 0
@@ -23251,135 +21937,105 @@ lbl_8053AE64:
 
 
 .global lbl_8053AE70
-
 lbl_8053AE70:
-
 	# ROM: 0x536F70
 	.asciz "NW4R:Pointer Error\nstr(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_8053AEA4
-
 lbl_8053AEA4:
-
 	# ROM: 0x536FA4
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
 .global lbl_8053AEB8
-
 lbl_8053AEB8:
-
 	# ROM: 0x536FB8
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_8053AEEC
-
 lbl_8053AEEC:
-
 	# ROM: 0x536FEC
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
 .global lbl_8053AF00
-
 lbl_8053AF00:
-
 	# ROM: 0x537000
 	.asciz "NW4R:Pointer Error\ntagProcessor(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_8053AF3C
-
 lbl_8053AF3C:
-
 	# ROM: 0x53703C
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
 .global lbl_8053AF50
-
 lbl_8053AF50:
-
 	# ROM: 0x537050
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_8053AF84
-
 lbl_8053AF84:
-
 	# ROM: 0x537084
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
 .global lbl_8053AF98
-
 lbl_8053AF98:
-
 	# ROM: 0x537098
 	.asciz "NW4R:Pointer Error\n& font(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_8053AFD0
-
 lbl_8053AFD0:
-
 	# ROM: 0x5370D0
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_8053AFE0
-
 lbl_8053AFE0:
-
 	# ROM: 0x5370E0
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_8053B014
-
 lbl_8053B014:
-
 	# ROM: 0x537114
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_8053B024
-
 lbl_8053B024:
-
 	# ROM: 0x537124
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_8053B058
-
 lbl_8053B058:
-
 	# ROM: 0x537158
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_8053B068
-
 lbl_8053B068:
-
 	# ROM: 0x537168
 	.4byte 0x80665280
 	.4byte 0
@@ -23412,9 +22068,7 @@ lbl_8053B068:
 
 
 .global lbl_8053B0D8
-
 lbl_8053B0D8:
-
 	# ROM: 0x5371D8
 	.4byte 0x80267418  ;# ptr
 	.4byte 0x802673A4  ;# ptr
@@ -23437,9 +22091,7 @@ lbl_8053B0D8:
 
 
 .global lbl_8053B120
-
 lbl_8053B120:
-
 	# ROM: 0x537220
 	.4byte 0x80665288
 	.4byte 0
@@ -23481,9 +22133,7 @@ lbl_8053B120:
 
 
 .global lbl_8053B1B4
-
 lbl_8053B1B4:
-
 	# ROM: 0x5372B4
 	.4byte 0x80665290
 	.4byte 0
@@ -23491,9 +22141,7 @@ lbl_8053B1B4:
 
 
 .global lbl_8053B1C0
-
 lbl_8053B1C0:
-
 	# ROM: 0x5372C0
 	.4byte 0x80665298
 	.4byte 0
@@ -23501,9 +22149,7 @@ lbl_8053B1C0:
 
 
 .global lbl_8053B1CC
-
 lbl_8053B1CC:
-
 	# ROM: 0x5372CC
 	.4byte 0x806652A0
 	.4byte 0
@@ -23511,9 +22157,7 @@ lbl_8053B1CC:
 
 
 .global lbl_8053B1D8
-
 lbl_8053B1D8:
-
 	# ROM: 0x5372D8
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -23536,9 +22180,7 @@ lbl_8053B1D8:
 
 
 .global lbl_8053B220
-
 lbl_8053B220:
-
 	# ROM: 0x537320
 	.4byte 0x8066B1F0
 	.4byte 0x8066B1F8
@@ -23547,9 +22189,7 @@ lbl_8053B220:
 
 
 .global lbl_8053B230
-
 lbl_8053B230:
-
 	# ROM: 0x537330
 	.4byte 0x806652B0
 	.4byte 0
@@ -23568,9 +22208,7 @@ lbl_8053B230:
 
 
 .global lbl_8053B268
-
 lbl_8053B268:
-
 	# ROM: 0x537368
 	.4byte 0x806652B8
 	.4byte 0
@@ -23639,9 +22277,7 @@ lbl_8053B268:
 
 
 .global lbl_8053B368
-
 lbl_8053B368:
-
 	# ROM: 0x537468
 	.4byte 0x806652C0
 	.4byte 0
@@ -23674,9 +22310,7 @@ lbl_8053B368:
 
 
 .global lbl_8053B3D8
-
 lbl_8053B3D8:
-
 	# ROM: 0x5374D8
 	.4byte 0x806652C8
 	.4byte 0
@@ -23719,9 +22353,7 @@ lbl_8053B3D8:
 
 
 .global lbl_8053B470
-
 lbl_8053B470:
-
 	# ROM: 0x537570
 	.4byte 0x806652D0
 	.4byte 0
@@ -23754,9 +22386,7 @@ lbl_8053B470:
 
 
 .global lbl_8053B4E0
-
 lbl_8053B4E0:
-
 	# ROM: 0x5375E0
 	.4byte 0x806652D8
 	.4byte 0
@@ -23799,9 +22429,7 @@ lbl_8053B4E0:
 
 
 .global lbl_8053B578
-
 lbl_8053B578:
-
 	# ROM: 0x537678
 	.4byte 0x806652E0
 	.4byte 0
@@ -23870,9 +22498,7 @@ lbl_8053B578:
 
 
 .global lbl_8053B678
-
 lbl_8053B678:
-
 	# ROM: 0x537778
 	.4byte 0x806671DC
 	.4byte 0x806671E4
@@ -23881,9 +22507,7 @@ lbl_8053B678:
 
 
 .global lbl_8053B688
-
 lbl_8053B688:
-
 	# ROM: 0x537788
 	.4byte 0x806652E8
 	.4byte 0
@@ -23904,9 +22528,7 @@ lbl_8053B688:
 
 
 .global lbl_8053B6C8
-
 lbl_8053B6C8:
-
 	# ROM: 0x5377C8
 	.4byte 0x806652F0
 	.4byte 0
@@ -23929,9 +22551,7 @@ lbl_8053B6C8:
 
 
 .global lbl_8053B710
-
 lbl_8053B710:
-
 	# ROM: 0x537810
 	.4byte 0x806652F8
 	.4byte 0
@@ -23952,9 +22572,7 @@ lbl_8053B710:
 
 
 .global lbl_8053B750
-
 lbl_8053B750:
-
 	# ROM: 0x537850
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -23965,9 +22583,7 @@ lbl_8053B750:
 
 
 .global lbl_8053B768
-
 lbl_8053B768:
-
 	# ROM: 0x537868
 	.4byte 0x80665308
 	.4byte 0
@@ -24042,9 +22658,7 @@ lbl_8053B768:
 
 
 .global lbl_8053B880
-
 lbl_8053B880:
-
 	# ROM: 0x537980
 	.4byte 0x80665310
 	.4byte 0
@@ -24113,9 +22727,7 @@ lbl_8053B880:
 
 
 .global lbl_8053B980
-
 lbl_8053B980:
-
 	# ROM: 0x537A80
 	.4byte 0x000007DB
 	.4byte 0x000007DC
@@ -24123,9 +22735,7 @@ lbl_8053B980:
 
 
 .global lbl_8053B98C
-
 lbl_8053B98C:
-
 	# ROM: 0x537A8C
 	.4byte 0x80276F3C  ;# ptr
 	.4byte 0x80276EA4  ;# ptr
@@ -24141,9 +22751,7 @@ lbl_8053B98C:
 
 
 .global lbl_8053B9B8
-
 lbl_8053B9B8:
-
 	# ROM: 0x537AB8
 	.4byte 0x80278DE8  ;# ptr
 	.4byte 0x80277CDC  ;# ptr
@@ -24175,9 +22783,7 @@ lbl_8053B9B8:
 
 
 .global lbl_8053BA24
-
 lbl_8053BA24:
-
 	# ROM: 0x537B24
 	.4byte 0x80665338
 	.4byte 0
@@ -24185,9 +22791,7 @@ lbl_8053BA24:
 
 
 .global lbl_8053BA30
-
 lbl_8053BA30:
-
 	# ROM: 0x537B30
 	.4byte 0x80665340
 	.4byte 0
@@ -24195,9 +22799,7 @@ lbl_8053BA30:
 
 
 .global lbl_8053BA3C
-
 lbl_8053BA3C:
-
 	# ROM: 0x537B3C
 	.4byte 0x80665348
 	.4byte 0
@@ -24205,9 +22807,7 @@ lbl_8053BA3C:
 
 
 .global lbl_8053BA48
-
 lbl_8053BA48:
-
 	# ROM: 0x537B48
 	.4byte 0x80665350
 	.4byte 0
@@ -24242,9 +22842,7 @@ lbl_8053BA48:
 
 
 .global lbl_8053BAC0
-
 lbl_8053BAC0:
-
 	# ROM: 0x537BC0
 	.4byte 0x80665358
 	.4byte 0
@@ -24252,9 +22850,7 @@ lbl_8053BAC0:
 
 
 .global lbl_8053BACC
-
 lbl_8053BACC:
-
 	# ROM: 0x537BCC
 	.4byte 0x80665360
 	.4byte 0
@@ -24265,9 +22861,7 @@ lbl_8053BACC:
 
 
 .global lbl_8053BAE4
-
 lbl_8053BAE4:
-
 	# ROM: 0x537BE4
 	.4byte 0x80665368
 	.4byte 0
@@ -24275,9 +22869,7 @@ lbl_8053BAE4:
 
 
 .global lbl_8053BAF0
-
 lbl_8053BAF0:
-
 	# ROM: 0x537BF0
 	.4byte 0x80665370
 	.4byte 0
@@ -24286,9 +22878,7 @@ lbl_8053BAF0:
 
 
 .global lbl_8053BB00
-
 lbl_8053BB00:
-
 	# ROM: 0x537C00
 	.4byte 0x80665380
 	.4byte 0
@@ -24297,9 +22887,7 @@ lbl_8053BB00:
 
 
 .global lbl_8053BB10
-
 lbl_8053BB10:
-
 	# ROM: 0x537C10
 	.4byte 0x80665388
 	.4byte 0
@@ -24368,9 +22956,7 @@ lbl_8053BB10:
 
 
 .global lbl_8053BC10
-
 lbl_8053BC10:
-
 	# ROM: 0x537D10
 	.4byte 0x80665390
 	.4byte 0
@@ -24409,9 +22995,7 @@ lbl_8053BC10:
 
 
 .global lbl_8053BC98
-
 lbl_8053BC98:
-
 	# ROM: 0x537D98
 	.4byte 0x80665398
 	.4byte 0
@@ -24450,9 +23034,7 @@ lbl_8053BC98:
 
 
 .global lbl_8053BD20
-
 lbl_8053BD20:
-
 	# ROM: 0x537E20
 	.4byte 0x8028383C  ;# ptr
 	.4byte 0x80283848  ;# ptr
@@ -24469,9 +23051,7 @@ lbl_8053BD20:
 
 
 .global lbl_8053BD50
-
 lbl_8053BD50:
-
 	# ROM: 0x537E50
 	.4byte 0x80283B10  ;# ptr
 	.4byte 0x80283608  ;# ptr
@@ -24486,9 +23066,7 @@ lbl_8053BD50:
 
 
 .global lbl_8053BD78
-
 lbl_8053BD78:
-
 	# ROM: 0x537E78
 	.4byte 0x8028A500  ;# ptr
 	.4byte 0x8028A500  ;# ptr
@@ -24507,9 +23085,7 @@ lbl_8053BD78:
 
 
 .global lbl_8053BDB0
-
 lbl_8053BDB0:
-
 	# ROM: 0x537EB0
 	.4byte 0x8028BCD8  ;# ptr
 	.4byte 0x8028BCF0  ;# ptr
@@ -24523,9 +23099,7 @@ lbl_8053BDB0:
 
 
 .global lbl_8053BDD4
-
 lbl_8053BDD4:
-
 	# ROM: 0x537ED4
 	.4byte 0x8028D17C  ;# ptr
 	.4byte 0x8028D17C  ;# ptr
@@ -24545,9 +23119,7 @@ lbl_8053BDD4:
 
 
 .global lbl_8053BE10
-
 lbl_8053BE10:
-
 	# ROM: 0x537F10
 	.4byte 0x806653A0
 	.4byte 0
@@ -24589,9 +23161,7 @@ lbl_8053BE10:
 
 
 .global lbl_8053BEA4
-
 lbl_8053BEA4:
-
 	# ROM: 0x537FA4
 	.4byte 0x806653A8
 	.4byte 0
@@ -24602,9 +23172,7 @@ lbl_8053BEA4:
 
 
 .global lbl_8053BEBC
-
 lbl_8053BEBC:
-
 	# ROM: 0x537FBC
 	.4byte 0x806653B0
 	.4byte 0
@@ -24612,9 +23180,7 @@ lbl_8053BEBC:
 
 
 .global lbl_8053BEC8
-
 lbl_8053BEC8:
-
 	# ROM: 0x537FC8
 	.4byte 0x806653B8
 	.4byte 0
@@ -24647,9 +23213,7 @@ lbl_8053BEC8:
 
 
 .global lbl_8053BF38
-
 lbl_8053BF38:
-
 	# ROM: 0x538038
 	.4byte 0x8028F378  ;# ptr
 	.4byte 0x8028F310  ;# ptr
@@ -24668,9 +23232,7 @@ lbl_8053BF38:
 
 
 .global lbl_8053BF70
-
 lbl_8053BF70:
-
 	# ROM: 0x538070
 	.4byte 0x806653D0
 	.4byte 0
@@ -24712,9 +23274,7 @@ lbl_8053BF70:
 
 
 .global lbl_8053C004
-
 lbl_8053C004:
-
 	# ROM: 0x538104
 	.4byte 0x806653D8
 	.4byte 0
@@ -24722,9 +23282,7 @@ lbl_8053C004:
 
 
 .global lbl_8053C010
-
 lbl_8053C010:
-
 	# ROM: 0x538110
 	.4byte 0x806653E0
 	.4byte 0
@@ -24741,9 +23299,7 @@ lbl_8053C010:
 
 
 .global lbl_8053C040
-
 lbl_8053C040:
-
 	# ROM: 0x538140
 	.4byte 0x806653F8
 	.4byte 0
@@ -24812,9 +23368,7 @@ lbl_8053C040:
 
 
 .global lbl_8053C140
-
 lbl_8053C140:
-
 	# ROM: 0x538240
 	.4byte 0x00000708
 	.4byte 0x000004B0
@@ -24822,9 +23376,7 @@ lbl_8053C140:
 
 
 .global lbl_8053C14C
-
 lbl_8053C14C:
-
 	# ROM: 0x53824C
 	.4byte 0x80665400
 	.4byte 0
@@ -24832,9 +23384,7 @@ lbl_8053C14C:
 
 
 .global lbl_8053C158
-
 lbl_8053C158:
-
 	# ROM: 0x538258
 	.4byte 0x80665408
 	.4byte 0
@@ -24903,9 +23453,7 @@ lbl_8053C158:
 
 
 .global lbl_8053C258
-
 lbl_8053C258:
-
 	# ROM: 0x538358
 	.4byte 0x80665410
 	.4byte 0
@@ -24924,9 +23472,7 @@ lbl_8053C258:
 
 
 .global lbl_8053C290
-
 lbl_8053C290:
-
 	# ROM: 0x538390
 	.4byte 0x80665418
 	.4byte 0
@@ -24989,9 +23535,7 @@ lbl_8053C290:
 
 
 .global lbl_8053C378
-
 lbl_8053C378:
-
 	# ROM: 0x538478
 	.4byte 0x80665420
 	.4byte 0
@@ -25012,9 +23556,7 @@ lbl_8053C378:
 
 
 .global lbl_8053C3B8
-
 lbl_8053C3B8:
-
 	# ROM: 0x5384B8
 	.4byte 0x80665428
 	.4byte 0
@@ -25077,9 +23619,7 @@ lbl_8053C3B8:
 
 
 .global lbl_8053C4A0
-
 lbl_8053C4A0:
-
 	# ROM: 0x5385A0
 	.4byte 0x80665430
 	.4byte 0
@@ -25166,9 +23706,7 @@ lbl_8053C4A0:
 
 
 .global lbl_8053C5E8
-
 lbl_8053C5E8:
-
 	# ROM: 0x5386E8
 	.4byte 0x8057A82C
 	.4byte 0x8057A838
@@ -25197,9 +23735,7 @@ lbl_8053C5E8:
 
 
 .global lbl_8053C648
-
 lbl_8053C648:
-
 	# ROM: 0x538748
 	.4byte 0x00000003
 	.4byte 0x8053C4E0
@@ -25270,9 +23806,7 @@ lbl_8053C648:
 
 
 .global lbl_8053C750
-
 lbl_8053C750:
-
 	# ROM: 0x538850
 	.4byte 0x806654D0
 	.4byte 0
@@ -25292,9 +23826,7 @@ lbl_8053C750:
 
 
 .global lbl_8053C78C
-
 lbl_8053C78C:
-
 	# ROM: 0x53888C
 	.4byte 0x806654E0
 	.4byte 0
@@ -25320,9 +23852,7 @@ lbl_8053C78C:
 
 
 .global lbl_8053C7E0
-
 lbl_8053C7E0:
-
 	# ROM: 0x5388E0
 	.4byte 0x806654F0
 	.4byte 0
@@ -25342,9 +23872,7 @@ lbl_8053C7E0:
 
 
 .global lbl_8053C81C
-
 lbl_8053C81C:
-
 	# ROM: 0x53891C
 	.4byte 0x80665500
 	.4byte 0
@@ -25370,9 +23898,7 @@ lbl_8053C81C:
 
 
 .global lbl_8053C870
-
 lbl_8053C870:
-
 	# ROM: 0x538970
 	.4byte 0x80665510
 	.4byte 0
@@ -25389,9 +23915,7 @@ lbl_8053C870:
 
 
 .global lbl_8053C8A0
-
 lbl_8053C8A0:
-
 	# ROM: 0x5389A0
 	.4byte 0x80665518
 	.4byte 0
@@ -25409,9 +23933,7 @@ lbl_8053C8A0:
 
 
 .global lbl_8053C8D4
-
 lbl_8053C8D4:
-
 	# ROM: 0x5389D4
 	.4byte 0x80665530
 	.4byte 0
@@ -25419,9 +23941,7 @@ lbl_8053C8D4:
 
 
 .global lbl_8053C8E0
-
 lbl_8053C8E0:
-
 	# ROM: 0x5389E0
 	.4byte 0x80665538
 	.4byte 0
@@ -25464,9 +23984,7 @@ lbl_8053C8E0:
 
 
 .global lbl_8053C978
-
 lbl_8053C978:
-
 	# ROM: 0x538A78
 	.4byte 0x80665540
 	.4byte 0
@@ -25499,9 +24017,7 @@ lbl_8053C978:
 
 
 .global lbl_8053C9E8
-
 lbl_8053C9E8:
-
 	# ROM: 0x538AE8
 	.4byte 0x80665548
 	.4byte 0
@@ -25544,9 +24060,7 @@ lbl_8053C9E8:
 
 
 .global lbl_8053CA80
-
 lbl_8053CA80:
-
 	# ROM: 0x538B80
 	.4byte 0x80665550
 	.4byte 0
@@ -25579,9 +24093,7 @@ lbl_8053CA80:
 
 
 .global lbl_8053CAF0
-
 lbl_8053CAF0:
-
 	# ROM: 0x538BF0
 	.4byte 0x0089003C
 	.4byte 0
@@ -25666,9 +24178,7 @@ lbl_8053CAF0:
 
 
 .global lbl_8053CC30
-
 lbl_8053CC30:
-
 	# ROM: 0x538D30
 	.4byte 0x10020202
 	.4byte 0x02020202
@@ -25683,9 +24193,7 @@ lbl_8053CC30:
 
 
 .global lbl_8053CC58
-
 lbl_8053CC58:
-
 	# ROM: 0x538D58
 	.4byte 0x8029C574  ;# ptr
 	.4byte 0x8029C538  ;# ptr
@@ -25701,9 +24209,7 @@ lbl_8053CC58:
 
 
 .global lbl_8053CC84
-
 lbl_8053CC84:
-
 	# ROM: 0x538D84
 	.4byte 0x8029D654  ;# ptr
 	.4byte 0x8029D6B4  ;# ptr
@@ -25728,9 +24234,7 @@ lbl_8053CC84:
 
 
 .global lbl_8053CCD4
-
 lbl_8053CCD4:
-
 	# ROM: 0x538DD4
 	.4byte 0x8029D830  ;# ptr
 	.4byte 0x8029D840  ;# ptr
@@ -25755,9 +24259,7 @@ lbl_8053CCD4:
 
 
 .global lbl_8053CD24
-
 lbl_8053CD24:
-
 	# ROM: 0x538E24
 	.4byte 0x8029D9E0  ;# ptr
 	.4byte 0x8029DA0C  ;# ptr
@@ -25782,9 +24284,7 @@ lbl_8053CD24:
 
 
 .global lbl_8053CD74
-
 lbl_8053CD74:
-
 	# ROM: 0x538E74
 	.4byte 0x8029DDBC  ;# ptr
 	.4byte 0x8029DDE4  ;# ptr
@@ -25810,9 +24310,7 @@ lbl_8053CD74:
 
 
 .global lbl_8053CDC8
-
 lbl_8053CDC8:
-
 	# ROM: 0x538EC8
 	.4byte 0x80665558
 	.4byte 0
@@ -25855,9 +24353,7 @@ lbl_8053CDC8:
 
 
 .global lbl_8053CE60
-
 lbl_8053CE60:
-
 	# ROM: 0x538F60
 	.4byte 0x80665560
 	.4byte 0
@@ -25906,9 +24402,7 @@ lbl_8053CE60:
 
 
 .global lbl_8053CF10
-
 lbl_8053CF10:
-
 	# ROM: 0x539010
 	.4byte 0x80665568
 	.4byte 0
@@ -25941,9 +24435,7 @@ lbl_8053CF10:
 
 
 .global lbl_8053CF80
-
 lbl_8053CF80:
-
 	# ROM: 0x539080
 	.4byte 0x80665578
 	.4byte 0
@@ -25985,9 +24477,7 @@ lbl_8053CF80:
 
 
 .global lbl_8053D014
-
 lbl_8053D014:
-
 	# ROM: 0x539114
 	.4byte 0x80665580
 	.4byte 0
@@ -25995,9 +24485,7 @@ lbl_8053D014:
 
 
 .global lbl_8053D020
-
 lbl_8053D020:
-
 	# ROM: 0x539120
 	.4byte 0x80665588
 	.4byte 0
@@ -26010,9 +24498,7 @@ lbl_8053D020:
 
 
 .global lbl_8053D040
-
 lbl_8053D040:
-
 	# ROM: 0x539140
 	.4byte 0x80665598
 	.4byte 0
@@ -26024,9 +24510,7 @@ lbl_8053D040:
 
 
 .global lbl_8053D05C
-
 lbl_8053D05C:
-
 	# ROM: 0x53915C
 	.4byte 0x806655A0
 	.4byte 0
@@ -26042,9 +24526,7 @@ lbl_8053D05C:
 
 
 .global lbl_8053D088
-
 lbl_8053D088:
-
 	# ROM: 0x539188
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26055,9 +24537,7 @@ lbl_8053D088:
 
 
 .global lbl_8053D0A0
-
 lbl_8053D0A0:
-
 	# ROM: 0x5391A0
 	.4byte 0x806655B8
 	.4byte 0
@@ -26070,9 +24550,7 @@ lbl_8053D0A0:
 
 
 .global lbl_8053D0C0
-
 lbl_8053D0C0:
-
 	# ROM: 0x5391C0
 	.4byte 0x802A4654  ;# ptr
 	.4byte 0x802A4668  ;# ptr
@@ -26087,9 +24565,7 @@ lbl_8053D0C0:
 
 
 .global lbl_8053D0E8
-
 lbl_8053D0E8:
-
 	# ROM: 0x5391E8
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26106,9 +24582,7 @@ lbl_8053D0E8:
 
 
 .global lbl_8053D118
-
 lbl_8053D118:
-
 	# ROM: 0x539218
 	.4byte 0x00000B55
 	.4byte 0x00000B56
@@ -26121,9 +24595,7 @@ lbl_8053D118:
 
 
 .global lbl_8053D138
-
 lbl_8053D138:
-
 	# ROM: 0x539238
 	.4byte 0x00000B5B
 	.4byte 0x00000B5C
@@ -26132,9 +24604,7 @@ lbl_8053D138:
 
 
 .global lbl_8053D148
-
 lbl_8053D148:
-
 	# ROM: 0x539248
 	.4byte 0x806655D0
 	.4byte 0
@@ -26149,9 +24619,7 @@ lbl_8053D148:
 
 
 .global lbl_8053D170
-
 lbl_8053D170:
-
 	# ROM: 0x539270
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26165,9 +24633,7 @@ lbl_8053D170:
 
 
 .global lbl_8053D194
-
 lbl_8053D194:
-
 	# ROM: 0x539294
 	.4byte 0x806655D8
 	.4byte 0
@@ -26183,9 +24649,7 @@ lbl_8053D194:
 
 
 .global lbl_8053D1C0
-
 lbl_8053D1C0:
-
 	# ROM: 0x5392C0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26193,9 +24657,7 @@ lbl_8053D1C0:
 
 
 .global lbl_8053D1CC
-
 lbl_8053D1CC:
-
 	# ROM: 0x5392CC
 	.4byte 0x806655E0
 	.4byte 0
@@ -26211,9 +24673,7 @@ lbl_8053D1CC:
 
 
 .global lbl_8053D1F8
-
 lbl_8053D1F8:
-
 	# ROM: 0x5392F8
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26227,9 +24687,7 @@ lbl_8053D1F8:
 
 
 .global lbl_8053D21C
-
 lbl_8053D21C:
-
 	# ROM: 0x53931C
 	.4byte 0x806655E8
 	.4byte 0
@@ -26245,9 +24703,7 @@ lbl_8053D21C:
 
 
 .global lbl_8053D248
-
 lbl_8053D248:
-
 	# ROM: 0x539348
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26264,9 +24720,7 @@ lbl_8053D248:
 
 
 .global lbl_8053D278
-
 lbl_8053D278:
-
 	# ROM: 0x539378
 	.4byte 0x802A652C  ;# ptr
 	.4byte 0x802A64B8  ;# ptr
@@ -26288,9 +24742,7 @@ lbl_8053D278:
 
 
 .global lbl_8053D2BC
-
 lbl_8053D2BC:
-
 	# ROM: 0x5393BC
 	.4byte 0x806655F0
 	.4byte 0
@@ -26306,9 +24758,7 @@ lbl_8053D2BC:
 
 
 .global lbl_8053D2E8
-
 lbl_8053D2E8:
-
 	# ROM: 0x5393E8
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26322,9 +24772,7 @@ lbl_8053D2E8:
 
 
 .global lbl_8053D30C
-
 lbl_8053D30C:
-
 	# ROM: 0x53940C
 	.4byte 0x806655F8
 	.4byte 0
@@ -26340,9 +24788,7 @@ lbl_8053D30C:
 
 
 .global lbl_8053D338
-
 lbl_8053D338:
-
 	# ROM: 0x539438
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26356,9 +24802,7 @@ lbl_8053D338:
 
 
 .global lbl_8053D35C
-
 lbl_8053D35C:
-
 	# ROM: 0x53945C
 	.4byte 0x80665600
 	.4byte 0
@@ -26374,9 +24818,7 @@ lbl_8053D35C:
 
 
 .global lbl_8053D388
-
 lbl_8053D388:
-
 	# ROM: 0x539488
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26390,9 +24832,7 @@ lbl_8053D388:
 
 
 .global lbl_8053D3AC
-
 lbl_8053D3AC:
-
 	# ROM: 0x5394AC
 	.4byte 0x80665608
 	.4byte 0
@@ -26408,9 +24848,7 @@ lbl_8053D3AC:
 
 
 .global lbl_8053D3D8
-
 lbl_8053D3D8:
-
 	# ROM: 0x5394D8
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26424,9 +24862,7 @@ lbl_8053D3D8:
 
 
 .global lbl_8053D3FC
-
 lbl_8053D3FC:
-
 	# ROM: 0x5394FC
 	.4byte 0x80665618
 	.4byte 0
@@ -26442,9 +24878,7 @@ lbl_8053D3FC:
 
 
 .global lbl_8053D428
-
 lbl_8053D428:
-
 	# ROM: 0x539528
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26458,9 +24892,7 @@ lbl_8053D428:
 
 
 .global lbl_8053D44C
-
 lbl_8053D44C:
-
 	# ROM: 0x53954C
 	.4byte 0x80665620
 	.4byte 0
@@ -26476,9 +24908,7 @@ lbl_8053D44C:
 
 
 .global lbl_8053D478
-
 lbl_8053D478:
-
 	# ROM: 0x539578
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26486,9 +24916,7 @@ lbl_8053D478:
 
 
 .global lbl_8053D484
-
 lbl_8053D484:
-
 	# ROM: 0x539584
 	.4byte 0x80665628
 	.4byte 0
@@ -26504,9 +24932,7 @@ lbl_8053D484:
 
 
 .global lbl_8053D4B0
-
 lbl_8053D4B0:
-
 	# ROM: 0x5395B0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26520,9 +24946,7 @@ lbl_8053D4B0:
 
 
 .global lbl_8053D4D4
-
 lbl_8053D4D4:
-
 	# ROM: 0x5395D4
 	.4byte 0x80665630
 	.4byte 0
@@ -26538,9 +24962,7 @@ lbl_8053D4D4:
 
 
 .global lbl_8053D500
-
 lbl_8053D500:
-
 	# ROM: 0x539600
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26551,9 +24973,7 @@ lbl_8053D500:
 
 
 .global lbl_8053D518
-
 lbl_8053D518:
-
 	# ROM: 0x539618
 	.4byte 0x80665648
 	.4byte 0
@@ -26568,9 +24988,7 @@ lbl_8053D518:
 
 
 .global lbl_8053D540
-
 lbl_8053D540:
-
 	# ROM: 0x539640
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26584,9 +25002,7 @@ lbl_8053D540:
 
 
 .global lbl_8053D564
-
 lbl_8053D564:
-
 	# ROM: 0x539664
 	.4byte 0x80665660
 	.4byte 0
@@ -26602,9 +25018,7 @@ lbl_8053D564:
 
 
 .global lbl_8053D590
-
 lbl_8053D590:
-
 	# ROM: 0x539690
 	.4byte 0x802A9FA0  ;# ptr
 	.4byte 0x802AA030  ;# ptr
@@ -26618,9 +25032,7 @@ lbl_8053D590:
 
 
 .global lbl_8053D5B4
-
 lbl_8053D5B4:
-
 	# ROM: 0x5396B4
 	.4byte 0x802AAC60  ;# ptr
 	.4byte 0x802AA5C4  ;# ptr
@@ -26634,9 +25046,7 @@ lbl_8053D5B4:
 
 
 .global lbl_8053D5D8
-
 lbl_8053D5D8:
-
 	# ROM: 0x5396D8
 	.4byte 0x806656C8
 	.4byte 0
@@ -26815,9 +25225,7 @@ lbl_8053D5D8:
 
 
 .global lbl_8053D890
-
 lbl_8053D890:
-
 	# ROM: 0x539990
 	.4byte 0x8053D6D8
 	.4byte 0x8053D6EC
@@ -26859,9 +25267,7 @@ lbl_8053D890:
 
 
 .global lbl_8053D924
-
 lbl_8053D924:
-
 	# ROM: 0x539A24
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -26875,9 +25281,7 @@ lbl_8053D924:
 
 
 .global lbl_8053D948
-
 lbl_8053D948:
-
 	# ROM: 0x539A48
 	.4byte 0x806656D0
 	.4byte 0
@@ -26892,9 +25296,7 @@ lbl_8053D948:
 
 
 .global lbl_8053D970
-
 lbl_8053D970:
-
 	# ROM: 0x539A70
 	.4byte 0x806656D8
 	.4byte 0
@@ -26913,9 +25315,7 @@ lbl_8053D970:
 
 
 .global lbl_8053D9A8
-
 lbl_8053D9A8:
-
 	# ROM: 0x539AA8
 	.4byte 0x802AC354  ;# ptr
 	.4byte 0x802AC360  ;# ptr
@@ -26928,9 +25328,7 @@ lbl_8053D9A8:
 
 
 .global lbl_8053D9C8
-
 lbl_8053D9C8:
-
 	# ROM: 0x539AC8
 	.4byte 0x806656E0
 	.4byte 0
@@ -26963,9 +25361,7 @@ lbl_8053D9C8:
 
 
 .global lbl_8053DA38
-
 lbl_8053DA38:
-
 	# ROM: 0x539B38
 	.4byte 0x806656E8
 	.4byte 0
@@ -27008,9 +25404,7 @@ lbl_8053DA38:
 
 
 .global lbl_8053DAD0
-
 lbl_8053DAD0:
-
 	# ROM: 0x539BD0
 	.4byte 0x806656F0
 	.4byte 0
@@ -27053,9 +25447,7 @@ lbl_8053DAD0:
 
 
 .global lbl_8053DB68
-
 lbl_8053DB68:
-
 	# ROM: 0x539C68
 	.4byte 0x8050C3B8
 	.4byte 0x8050C3CC
@@ -27069,9 +25461,7 @@ lbl_8053DB68:
 
 
 .global lbl_8053DB8C
-
 lbl_8053DB8C:
-
 	# ROM: 0x539C8C
 	.4byte 0x00000002
 	.4byte 0x00000002
@@ -27085,9 +25475,7 @@ lbl_8053DB8C:
 
 
 .global lbl_8053DBB0
-
 lbl_8053DBB0:
-
 	# ROM: 0x539CB0
 	.4byte 0x8050C880
 	.4byte 0x802AEBC4  ;# ptr
@@ -27100,9 +25488,7 @@ lbl_8053DBB0:
 
 
 .global lbl_8053DBD0
-
 lbl_8053DBD0:
-
 	# ROM: 0x539CD0
 	.4byte 0x0000010C
 	.4byte 0x00D300C9
@@ -27467,9 +25853,7 @@ lbl_8053DBD0:
 
 
 .global lbl_8053E170
-
 lbl_8053E170:
-
 	# ROM: 0x53A270
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -27483,9 +25867,7 @@ lbl_8053E170:
 
 
 .global lbl_8053E194
-
 lbl_8053E194:
-
 	# ROM: 0x53A294
 	.4byte 0x80665730
 	.4byte 0
@@ -27501,9 +25883,7 @@ lbl_8053E194:
 
 
 .global lbl_8053E1C0
-
 lbl_8053E1C0:
-
 	# ROM: 0x53A2C0
 	.4byte 0
 	.4byte 0x00000002
@@ -27628,9 +26008,7 @@ lbl_8053E1C0:
 
 
 .global lbl_8053E3A0
-
 lbl_8053E3A0:
-
 	# ROM: 0x53A4A0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -27647,9 +26025,7 @@ lbl_8053E3A0:
 
 
 .global lbl_8053E3D0
-
 lbl_8053E3D0:
-
 	# ROM: 0x53A4D0
 	.4byte 0x80665738
 	.4byte 0
@@ -27674,9 +26050,7 @@ lbl_8053E3D0:
 
 
 .global lbl_8053E420
-
 lbl_8053E420:
-
 	# ROM: 0x53A520
 	.4byte 0x80665750
 	.4byte 0
@@ -27709,9 +26083,7 @@ lbl_8053E420:
 
 
 .global lbl_8053E490
-
 lbl_8053E490:
-
 	# ROM: 0x53A590
 	.4byte 0x802B14A4  ;# ptr
 	.4byte 0x802B154C  ;# ptr
@@ -27758,9 +26130,7 @@ lbl_8053E490:
 
 
 .global lbl_8053E538
-
 lbl_8053E538:
-
 	# ROM: 0x53A638
 	.4byte 0x80665758
 	.4byte 0
@@ -27793,9 +26163,7 @@ lbl_8053E538:
 
 
 .global lbl_8053E5A8
-
 lbl_8053E5A8:
-
 	# ROM: 0x53A6A8
 	.4byte 0x80665760
 	.4byte 0
@@ -27808,9 +26176,7 @@ lbl_8053E5A8:
 
 
 .global lbl_8053E5C8
-
 lbl_8053E5C8:
-
 	# ROM: 0x53A6C8
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -27837,9 +26203,7 @@ lbl_8053E5C8:
 
 
 .global lbl_8053E620
-
 lbl_8053E620:
-
 	# ROM: 0x53A720
 	.4byte 0x80665768
 	.4byte 0
@@ -27905,9 +26269,7 @@ lbl_8053E620:
 
 
 .global lbl_8053E714
-
 lbl_8053E714:
-
 	# ROM: 0x53A814
 	.4byte 0x80665770
 	.4byte 0
@@ -27929,9 +26291,7 @@ lbl_8053E714:
 
 
 .global lbl_8053E758
-
 lbl_8053E758:
-
 	# ROM: 0x53A858
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -27966,9 +26326,7 @@ lbl_8053E758:
 
 
 .global lbl_8053E7D0
-
 lbl_8053E7D0:
-
 	# ROM: 0x53A8D0
 	.4byte 0x80665778
 	.4byte 0
@@ -28034,9 +26392,7 @@ lbl_8053E7D0:
 
 
 .global lbl_8053E8C4
-
 lbl_8053E8C4:
-
 	# ROM: 0x53A9C4
 	.4byte 0x80665780
 	.4byte 0
@@ -28058,9 +26414,7 @@ lbl_8053E8C4:
 
 
 .global lbl_8053E908
-
 lbl_8053E908:
-
 	# ROM: 0x53AA08
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -28077,9 +26431,7 @@ lbl_8053E908:
 
 
 .global lbl_8053E938
-
 lbl_8053E938:
-
 	# ROM: 0x53AA38
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -28105,9 +26457,7 @@ lbl_8053E938:
 
 
 .global lbl_8053E98C
-
 lbl_8053E98C:
-
 	# ROM: 0x53AA8C
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -28133,9 +26483,7 @@ lbl_8053E98C:
 
 
 .global lbl_8053E9E0
-
 lbl_8053E9E0:
-
 	# ROM: 0x53AAE0
 	.4byte 0x80665788
 	.4byte 0
@@ -28177,9 +26525,7 @@ lbl_8053E9E0:
 
 
 .global lbl_8053EA74
-
 lbl_8053EA74:
-
 	# ROM: 0x53AB74
 	.4byte 0x80665790
 	.4byte 0
@@ -28187,9 +26533,7 @@ lbl_8053EA74:
 
 
 .global lbl_8053EA80
-
 lbl_8053EA80:
-
 	# ROM: 0x53AB80
 	.4byte 0x80665798
 	.4byte 0
@@ -28198,9 +26542,7 @@ lbl_8053EA80:
 
 
 .global lbl_8053EA90
-
 lbl_8053EA90:
-
 	# ROM: 0x53AB90
 	.4byte 0x806657A0
 	.4byte 0
@@ -28215,9 +26557,7 @@ lbl_8053EA90:
 
 
 .global lbl_8053EAB8
-
 lbl_8053EAB8:
-
 	# ROM: 0x53ABB8
 	.4byte 0x80665528
 	.4byte 0
@@ -28230,9 +26570,7 @@ lbl_8053EAB8:
 
 
 .global lbl_8053EAD8
-
 lbl_8053EAD8:
-
 	# ROM: 0x53ABD8
 	.4byte 0x806657A8
 	.4byte 0
@@ -28251,9 +26589,7 @@ lbl_8053EAD8:
 
 
 .global lbl_8053EB10
-
 lbl_8053EB10:
-
 	# ROM: 0x53AC10
 	.4byte 0x806657B0
 	.4byte 0
@@ -28268,9 +26604,7 @@ lbl_8053EB10:
 
 
 .global lbl_8053EB38
-
 lbl_8053EB38:
-
 	# ROM: 0x53AC38
 	.4byte 0x806657B8
 	.4byte 0
@@ -28289,9 +26623,7 @@ lbl_8053EB38:
 
 
 .global lbl_8053EB70
-
 lbl_8053EB70:
-
 	# ROM: 0x53AC70
 	.4byte 0x806657C0
 	.4byte 0
@@ -28310,9 +26642,7 @@ lbl_8053EB70:
 
 
 .global lbl_8053EBA8
-
 lbl_8053EBA8:
-
 	# ROM: 0x53ACA8
 	.4byte 0x806657C8
 	.4byte 0
@@ -28331,9 +26661,7 @@ lbl_8053EBA8:
 
 
 .global lbl_8053EBE0
-
 lbl_8053EBE0:
-
 	# ROM: 0x53ACE0
 	.4byte 0x80665508
 	.4byte 0
@@ -28348,9 +26676,7 @@ lbl_8053EBE0:
 
 
 .global lbl_8053EC08
-
 lbl_8053EC08:
-
 	# ROM: 0x53AD08
 	.4byte 0x806657D0
 	.4byte 0
@@ -28365,9 +26691,7 @@ lbl_8053EC08:
 
 
 .global lbl_8053EC30
-
 lbl_8053EC30:
-
 	# ROM: 0x53AD30
 	.4byte 0x806657D8
 	.4byte 0
@@ -28382,9 +26706,7 @@ lbl_8053EC30:
 
 
 .global lbl_8053EC58
-
 lbl_8053EC58:
-
 	# ROM: 0x53AD58
 	.4byte 0x806654D8
 	.4byte 0
@@ -28397,9 +26719,7 @@ lbl_8053EC58:
 
 
 .global lbl_8053EC78
-
 lbl_8053EC78:
-
 	# ROM: 0x53AD78
 	.4byte 0x806657E0
 	.4byte 0
@@ -28414,9 +26734,7 @@ lbl_8053EC78:
 
 
 .global lbl_8053ECA0
-
 lbl_8053ECA0:
-
 	# ROM: 0x53ADA0
 	.4byte 0x806657E8
 	.4byte 0
@@ -28431,9 +26749,7 @@ lbl_8053ECA0:
 
 
 .global lbl_8053ECC8
-
 lbl_8053ECC8:
-
 	# ROM: 0x53ADC8
 	.4byte 0x806657F0
 	.4byte 0
@@ -28448,9 +26764,7 @@ lbl_8053ECC8:
 
 
 .global lbl_8053ECF0
-
 lbl_8053ECF0:
-
 	# ROM: 0x53ADF0
 	.4byte 0x806654F8
 	.4byte 0
@@ -28463,9 +26777,7 @@ lbl_8053ECF0:
 
 
 .global lbl_8053ED10
-
 lbl_8053ED10:
-
 	# ROM: 0x53AE10
 	.4byte 0x806657F8
 	.4byte 0
@@ -28486,9 +26798,7 @@ lbl_8053ED10:
 
 
 .global lbl_8053ED50
-
 lbl_8053ED50:
-
 	# ROM: 0x53AE50
 	.4byte 0x80665800
 	.4byte 0
@@ -28503,9 +26813,7 @@ lbl_8053ED50:
 
 
 .global lbl_8053ED78
-
 lbl_8053ED78:
-
 	# ROM: 0x53AE78
 	.4byte 0x80665808
 	.4byte 0
@@ -28524,9 +26832,7 @@ lbl_8053ED78:
 
 
 .global lbl_8053EDB0
-
 lbl_8053EDB0:
-
 	# ROM: 0x53AEB0
 	.4byte 0x80665810
 	.4byte 0
@@ -28541,9 +26847,7 @@ lbl_8053EDB0:
 
 
 .global lbl_8053EDD8
-
 lbl_8053EDD8:
-
 	# ROM: 0x53AED8
 	.4byte 0x80665818
 	.4byte 0
@@ -28558,9 +26862,7 @@ lbl_8053EDD8:
 
 
 .global lbl_8053EE00
-
 lbl_8053EE00:
-
 	# ROM: 0x53AF00
 	.4byte 0x80665820
 	.4byte 0
@@ -28579,9 +26881,7 @@ lbl_8053EE00:
 
 
 .global lbl_8053EE38
-
 lbl_8053EE38:
-
 	# ROM: 0x53AF38
 	.4byte 0x80665828
 	.4byte 0
@@ -28596,9 +26896,7 @@ lbl_8053EE38:
 
 
 .global lbl_8053EE60
-
 lbl_8053EE60:
-
 	# ROM: 0x53AF60
 	.4byte 0x80665830
 	.4byte 0
@@ -28613,9 +26911,7 @@ lbl_8053EE60:
 
 
 .global lbl_8053EE88
-
 lbl_8053EE88:
-
 	# ROM: 0x53AF88
 	.4byte 0x80665838
 	.4byte 0
@@ -28630,9 +26926,7 @@ lbl_8053EE88:
 
 
 .global lbl_8053EEB0
-
 lbl_8053EEB0:
-
 	# ROM: 0x53AFB0
 	.4byte 0x806654E8
 	.4byte 0
@@ -28647,9 +26941,7 @@ lbl_8053EEB0:
 
 
 .global lbl_8053EED8
-
 lbl_8053EED8:
-
 	# ROM: 0x53AFD8
 	.4byte 0x80665840
 	.4byte 0
@@ -28664,9 +26956,7 @@ lbl_8053EED8:
 
 
 .global lbl_8053EF00
-
 lbl_8053EF00:
-
 	# ROM: 0x53B000
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -28674,9 +26964,7 @@ lbl_8053EF00:
 
 
 .global lbl_8053EF0C
-
 lbl_8053EF0C:
-
 	# ROM: 0x53B00C
 	.4byte 0x000009C5
 	.4byte 0x000009C6
@@ -28690,9 +26978,7 @@ lbl_8053EF0C:
 
 
 .global lbl_8053EF30
-
 lbl_8053EF30:
-
 	# ROM: 0x53B030
 	.4byte 0x80665848
 	.4byte 0
@@ -28707,9 +26993,7 @@ lbl_8053EF30:
 
 
 .global lbl_8053EF58
-
 lbl_8053EF58:
-
 	# ROM: 0x53B058
 	.4byte 0x0000001E
 	.4byte 0x00010FA1
@@ -28730,9 +27014,7 @@ lbl_8053EF58:
 
 
 .global lbl_8053EF98
-
 lbl_8053EF98:
-
 	# ROM: 0x53B098
 	.4byte 0x8066B810
 	.4byte 0x802B8F70  ;# ptr
@@ -28741,9 +27023,7 @@ lbl_8053EF98:
 
 
 .global lbl_8053EFA8
-
 lbl_8053EFA8:
-
 	# ROM: 0x53B0A8
 	.4byte 0x80665850
 	.4byte 0
@@ -28786,9 +27066,7 @@ lbl_8053EFA8:
 
 
 .global lbl_8053F040
-
 lbl_8053F040:
-
 	# ROM: 0x53B140
 	.4byte 0x80665868
 	.4byte 0
@@ -28800,18 +27078,14 @@ lbl_8053F040:
 
 
 .global lbl_8053F05C
-
 lbl_8053F05C:
-
 	# ROM: 0x53B15C
 	.asciz "bad_cast"
 	.balign 4
 
 
 .global lbl_8053F068
-
 lbl_8053F068:
-
 	# ROM: 0x53B168
 	.4byte 0x802BAC08  ;# ptr
 	.4byte 0x802BAC08  ;# ptr
@@ -28850,9 +27124,7 @@ lbl_8053F068:
 
 
 .global lbl_8053F0F0
-
 lbl_8053F0F0:
-
 	# ROM: 0x53B1F0
 	.4byte 0
 	.4byte 0x0A800000
@@ -28937,9 +27209,7 @@ lbl_8053F0F0:
 
 
 .global lbl_8053F230
-
 lbl_8053F230:
-
 	# ROM: 0x53B330
 	.4byte 0x802BC86C  ;# ptr
 	.4byte 0x802BCA60  ;# ptr
@@ -29018,9 +27288,7 @@ lbl_8053F230:
 
 
 .global lbl_8053F358
-
 lbl_8053F358:
-
 	# ROM: 0x53B458
 	.4byte 0x40240000
 	.4byte 0
@@ -29041,9 +27309,7 @@ lbl_8053F358:
 
 
 .global lbl_8053F398
-
 lbl_8053F398:
-
 	# ROM: 0x53B498
 	.4byte 0x8066B858
 	.4byte 0x8066B85C
@@ -29156,9 +27422,7 @@ lbl_8053F398:
 
 
 .global lbl_8053F548
-
 lbl_8053F548:
-
 	# ROM: 0x53B648
 	.4byte 0
 	.4byte 0x43000000
@@ -29181,9 +27445,7 @@ lbl_8053F548:
 
 
 .global lbl_8053F590
-
 lbl_8053F590:
-
 	# ROM: 0x53B690
 	.4byte 0x802BF070  ;# ptr
 	.4byte 0x802BF1C0  ;# ptr
@@ -29328,9 +27590,7 @@ lbl_8053F590:
 
 
 .global lbl_8053F7C0
-
 lbl_8053F7C0:
-
 	# ROM: 0x53B8C0
 	.4byte 0x802C141C  ;# ptr
 	.4byte 0x802C1754  ;# ptr
@@ -29391,9 +27651,7 @@ lbl_8053F7C0:
 
 
 .global lbl_8053F8A0
-
 lbl_8053F8A0:
-
 	# ROM: 0x53B9A0
 	.4byte 0x802C1D2C  ;# ptr
 	.4byte 0x802C1D34  ;# ptr
@@ -29406,9 +27664,7 @@ lbl_8053F8A0:
 
 
 .global lbl_8053F8C0
-
 lbl_8053F8C0:
-
 	# ROM: 0x53B9C0
 	.4byte 0x802C1B94  ;# ptr
 	.4byte 0x802C1B9C  ;# ptr
@@ -29421,9 +27677,7 @@ lbl_8053F8C0:
 
 
 .global lbl_8053F8E0
-
 lbl_8053F8E0:
-
 	# ROM: 0x53B9E0
 	.4byte 0x802C1FE8  ;# ptr
 	.4byte 0x802C240C  ;# ptr
@@ -29512,9 +27766,7 @@ lbl_8053F8E0:
 
 
 .global lbl_8053FA30
-
 lbl_8053FA30:
-
 	# ROM: 0x53BB30
 	.4byte 0x802C50F0  ;# ptr
 	.4byte 0x802C5250  ;# ptr
@@ -29659,9 +27911,7 @@ lbl_8053FA30:
 
 
 .global lbl_8053FC60
-
 lbl_8053FC60:
-
 	# ROM: 0x53BD60
 	.4byte 0x002D0030
 	.4byte 0x00580030
@@ -29694,9 +27944,7 @@ lbl_8053FC60:
 
 
 .global lbl_8053FCD0
-
 lbl_8053FCD0:
-
 	# ROM: 0x53BDD0
 	.4byte 0x802CBEE4  ;# ptr
 	.4byte 0x802CBE28  ;# ptr
@@ -29729,9 +27977,7 @@ lbl_8053FCD0:
 
 
 .global lbl_8053FD40
-
 lbl_8053FD40:
-
 	# ROM: 0x53BE40
 	.4byte 0x00000100
 	.4byte 0x00000200
@@ -29752,9 +27998,7 @@ lbl_8053FD40:
 
 
 .global lbl_8053FD80
-
 lbl_8053FD80:
-
 	# ROM: 0x53BE80
 	.asciz "Devkit set to : %ld\n"
 	.byte 0x4D, 0x65, 0x74
@@ -29773,27 +28017,21 @@ lbl_8053FD80:
 
 
 .global lbl_8053FE68
-
 lbl_8053FE68:
-
 	# ROM: 0x53BF68
 	.asciz "MetroTRK - Event Queue full\n"
 	.balign 4
 
 
 .global lbl_8053FE88
-
 lbl_8053FE88:
-
 	# ROM: 0x53BF88
 	.asciz "MetroTRK for Revolution v0.4"
 	.balign 4
 
 
 .global lbl_8053FEA8
-
 lbl_8053FEA8:
-
 	# ROM: 0x53BFA8
 	.asciz "MetroTRK - bad reply size %ld\n"
 	.byte 0x4D
@@ -29803,25 +28041,19 @@ lbl_8053FEA8:
 
 
 .global lbl_8053FEF0
-
 lbl_8053FEF0:
-
 	# ROM: 0x53BFF0
 	.asciz "MetroTRK - TRK_WriteUARTN returned %ld\n"
 
 
 .global lbl_8053FF18
-
 lbl_8053FF18:
-
 	# ROM: 0x53C018
 	.asciz "MetroTRK - ERROR : No buffer available\n"
 
 
 .global lbl_8053FF40
-
 lbl_8053FF40:
-
 	# ROM: 0x53C040
 	.4byte 0x802CE000  ;# ptr
 	.4byte 0x802CE020  ;# ptr
@@ -29833,9 +28065,7 @@ lbl_8053FF40:
 
 
 .global lbl_8053FF5C
-
 lbl_8053FF5C:
-
 	# ROM: 0x53C05C
 	.4byte 0x802CE210  ;# ptr
 	.4byte 0x802CE230  ;# ptr
@@ -29847,9 +28077,7 @@ lbl_8053FF5C:
 
 
 .global lbl_8053FF78
-
 lbl_8053FF78:
-
 	# ROM: 0x53C078
 	.asciz "\nMetroTRK Option : SerialIO - "
 	.byte 0x45
@@ -29859,9 +28087,7 @@ lbl_8053FF78:
 
 
 .global lbl_8053FFA8
-
 lbl_8053FFA8:
-
 	# ROM: 0x53C0A8
 	.4byte 0
 	.4byte 0
@@ -29879,9 +28105,7 @@ lbl_80540000:
 
 
 .global lbl_80540024
-
 lbl_80540024:
-
 	# ROM: 0x53C124
 	.asciz "Warning: ARCOpen(): file '%s' was not found under %s in the archive.\n"
 	.balign 4
@@ -29891,9 +28115,7 @@ lbl_80540024:
 
 
 .global lbl_805400B8
-
 lbl_805400B8:
-
 	# ROM: 0x53C1B8
 	.4byte 0x00000002
 	.4byte 0x00000198
@@ -29930,9 +28152,7 @@ lbl_805400B8:
 
 
 .global lbl_80540138
-
 lbl_80540138:
-
 	# ROM: 0x53C238
 	.4byte 0x00000004
 	.4byte 0x00000056
@@ -29947,9 +28167,7 @@ lbl_80540138:
 
 
 .global lbl_80540160
-
 lbl_80540160:
-
 	# ROM: 0x53C260
 	.4byte 0x7F637EC7
 	.4byte 0x7E2B7D91
@@ -30962,9 +29180,7 @@ lbl_80540160:
 
 
 .global lbl_80541120
-
 lbl_80541120:
-
 	# ROM: 0x53D220
 	.4byte 0
 	.4byte 0x029F0F3A
@@ -33017,9 +31233,7 @@ lbl_80541120:
 
 
 .global lbl_80543120
-
 lbl_80543120:
-
 	# ROM: 0x53F220
 	.4byte 0x0000009D
 	.4byte 0x000001DF
@@ -33072,9 +31286,7 @@ lbl_80543120:
 
 
 .global lbl_805431E0
-
 lbl_805431E0:
-
 	# ROM: 0x53F2E0
 	.4byte 0x000006FD
 	.4byte 0x000007CF
@@ -33135,9 +31347,7 @@ lbl_805431E0:
 
 
 .global lbl_805432C0
-
 lbl_805432C0:
-
 	# ROM: 0x53F3C0
 	.4byte 0x000000A3
 	.4byte 0x0000013D
@@ -33150,9 +31360,7 @@ lbl_805432C0:
 
 
 .global lbl_805432E0
-
 lbl_805432E0:
-
 	# ROM: 0x53F3E0
 	.4byte 0x000006FD
 	.4byte 0x000007CF
@@ -33185,9 +31393,7 @@ lbl_805432E0:
 
 
 .global lbl_80543350
-
 lbl_80543350:
-
 	# ROM: 0x53F450
 	.4byte 0x000000A3
 	.4byte 0x0000013D
@@ -33200,9 +31406,7 @@ lbl_80543350:
 
 
 .global lbl_80543370
-
 lbl_80543370:
-
 	# ROM: 0x53F470
 	.4byte 0x000006FD
 	.4byte 0x000007CF
@@ -33235,9 +31439,7 @@ lbl_80543370:
 
 
 .global lbl_805433E0
-
 lbl_805433E0:
-
 	# ROM: 0x53F4E0
 	.4byte 0
 	.4byte 0x00064855
@@ -33370,9 +31572,7 @@ lbl_805433E0:
 
 
 .global lbl_805435E0
-
 lbl_805435E0:
-
 	# ROM: 0x53F6E0
 	.4byte 0x3DC7B000
 	.4byte 0x3F4D5E00
@@ -33889,27 +32089,21 @@ lbl_805435E0:
 
 
 .global lbl_80543DE0
-
 lbl_80543DE0:
-
 	# ROM: 0x53FEE0
 	.asciz "H4A should not be cleared because of Broadway errata.\n"
 	.balign 4
 
 
 .global lbl_80543E18
-
 lbl_80543E18:
-
 	# ROM: 0x53FF18
 	.asciz "getbuf: Size is zero"
 	.balign 4
 
 
 .global lbl_80543E30
-
 lbl_80543E30:
-
 	# ROM: 0x53FF30
 	.asciz "getbuf: Size is too big"
 	.asciz "Free - Buf Corrupted"
@@ -33924,27 +32118,21 @@ lbl_80543E30:
 
 
 .global lbl_80543EC8
-
 lbl_80543EC8:
-
 	# ROM: 0x53FFC8
 	.asciz "Enqueue - Buffer corrupted"
 	.balign 4
 
 
 .global lbl_80543EE4
-
 lbl_80543EE4:
-
 	# ROM: 0x53FFE4
 	.asciz "Eneueue - buf already linked"
 	.balign 4
 
 
 .global lbl_80543F04
-
 lbl_80543F04:
-
 	# ROM: 0x540004
 	.asciz "Eneueue head - buf already linked"
 	.balign 4
@@ -33953,9 +32141,7 @@ lbl_80543F04:
 
 
 .global lbl_80543F48
-
 lbl_80543F48:
-
 	# ROM: 0x540048
 	.asciz "Deleting bad pool"
 	.balign 4
@@ -33965,9 +32151,7 @@ lbl_80543F48:
 
 
 .global lbl_80543F9C
-
 lbl_80543F9C:
-
 	# ROM: 0x54009C
 	.asciz "HCIS: Invalid length for incoming HCI message."
 	.balign 4
@@ -33975,81 +32159,63 @@ lbl_80543F9C:
 
 
 .global lbl_80543FD0
-
 lbl_80543FD0:
-
 	# ROM: 0x5400D0
 	.asciz "BTA got event 0x%x"
 	.balign 4
 
 
 .global lbl_80543FE4
-
 lbl_80543FE4:
-
 	# ROM: 0x5400E4
 	.asciz "BTA got unregistered event id %d"
 	.balign 4
 
 
 .global lbl_80544008
-
 lbl_80544008:
-
 	# ROM: 0x540108
 	.asciz " bta_dm_disable_timer_cback  "
 	.balign 4
 
 
 .global lbl_80544028
-
 lbl_80544028:
-
 	# ROM: 0x540128
 	.asciz " bta_dm_search_timer_cback  "
 	.balign 4
 
 
 .global lbl_80544048
-
 lbl_80544048:
-
 	# ROM: 0x540148
 	.asciz " bta_dm_pin_cback() -> Failed to start Remote Name Request  "
 	.balign 4
 
 
 .global lbl_80544088
-
 lbl_80544088:
-
 	# ROM: 0x540188
 	.asciz " timer stopped  "
 	.balign 4
 
 
 .global lbl_8054409C
-
 lbl_8054409C:
-
 	# ROM: 0x54019C
 	.asciz "bta_dm_l2cap_server_compress_cback, BTA ID %d"
 	.balign 4
 
 
 .global lbl_805440CC
-
 lbl_805440CC:
-
 	# ROM: 0x5401CC
 	.asciz "bta_dm_compress_cback open app_id %d, BTA id %d, state %d"
 	.balign 4
 
 
 .global lbl_80544108
-
 lbl_80544108:
-
 	# ROM: 0x540208
 	.asciz "bta_dm_compress_cback close app_id %d, BTA id %d, state %d"
 	.balign 4
@@ -34057,18 +32223,14 @@ lbl_80544108:
 
 
 .global lbl_80544148
-
 lbl_80544148:
-
 	# ROM: 0x540248
 	.asciz "bta_dm_act no more connected service cbs"
 	.balign 4
 
 
 .global lbl_80544174
-
 lbl_80544174:
-
 	# ROM: 0x540274
 	.asciz "bta_dm_act no more pm timers"
 	.balign 4
@@ -34076,54 +32238,42 @@ lbl_80544174:
 
 
 .global lbl_80544198
-
 lbl_80544198:
-
 	# ROM: 0x540298
 	.asciz "bta_hh_sdp_cback: p_cb: %d result 0x%02x,                             attr_mask 0x%02x"
 	.balign 4
 
 
 .global lbl_805441F0
-
 lbl_805441F0:
-
 	# ROM: 0x5402F0
 	.asciz "bta_hh_start_sdp:: skip SDP for known devices"
 	.balign 4
 
 
 .global lbl_80544220
-
 lbl_80544220:
-
 	# ROM: 0x540320
 	.asciz "bta_hh_start_sdp:  HID_HostGetSDPRecord failed:                 Status 0x%2X"
 	.balign 4
 
 
 .global lbl_80544270
-
 lbl_80544270:
-
 	# ROM: 0x540370
 	.asciz "bta_hh_sdp_cmpl:  status 0x%2X"
 	.balign 4
 
 
 .global lbl_80544290
-
 lbl_80544290:
-
 	# ROM: 0x540390
 	.asciz "bta_hh_sdp_cmpl:  HID_HostOpenDev failed:                     Status 0x%2X"
 	.balign 4
 
 
 .global lbl_805442DC
-
 lbl_805442DC:
-
 	# ROM: 0x5403DC
 	.asciz "bta_hh_open_act:  Device[%d] connected"
 	.balign 4
@@ -34147,9 +32297,7 @@ lbl_805442DC:
 
 
 .global lbl_805443F0
-
 lbl_805443F0:
-
 	# ROM: 0x5404F0
 	.4byte 0x802E2CF8  ;# ptr
 	.4byte 0x802E2CF8  ;# ptr
@@ -34164,9 +32312,7 @@ lbl_805443F0:
 
 
 .global lbl_80544418
-
 lbl_80544418:
-
 	# ROM: 0x540518
 	.4byte 0x802E2B64  ;# ptr
 	.4byte 0x802E2B64  ;# ptr
@@ -34185,9 +32331,7 @@ lbl_80544418:
 
 
 .global lbl_8054449C
-
 lbl_8054449C:
-
 	# ROM: 0x54059C
 	.4byte 0x802E2EBC  ;# ptr
 	.4byte 0x802E2EBC  ;# ptr
@@ -34202,9 +32346,7 @@ lbl_8054449C:
 
 
 .global lbl_805444C4
-
 lbl_805444C4:
-
 	# ROM: 0x5405C4
 	.4byte 0x802E2DD8  ;# ptr
 	.4byte 0x802E2DD8  ;# ptr
@@ -34220,26 +32362,20 @@ lbl_805444C4:
 
 
 .global lbl_805444F0
-
 lbl_805444F0:
-
 	# ROM: 0x5405F0
 	.asciz "invalid command"
 
 
 .global lbl_80544500
-
 lbl_80544500:
-
 	# ROM: 0x540600
 	.asciz "HID_HostWriteDev Error %d"
 	.balign 4
 
 
 .global lbl_8054451C
-
 lbl_8054451C:
-
 	# ROM: 0x54061C
 	.asciz "bta_hh_write_dev_act:: cmd type = %d"
 	.balign 4
@@ -34268,9 +32404,7 @@ lbl_8054451C:
 
 
 .global lbl_80544648
-
 lbl_80544648:
-
 	# ROM: 0x540748
 	.4byte 0x802E3674  ;# ptr
 	.4byte 0x802E367C  ;# ptr
@@ -34284,9 +32418,7 @@ lbl_80544648:
 
 
 .global lbl_8054466C
-
 lbl_8054466C:
-
 	# ROM: 0x54076C
 	.4byte 0x802E35FC  ;# ptr
 	.4byte 0x802E3604  ;# ptr
@@ -34300,18 +32432,14 @@ lbl_8054466C:
 
 
 .global lbl_80544690
-
 lbl_80544690:
-
 	# ROM: 0x540790
 	.asciz "No resource to send HID host Connect request."
 	.balign 4
 
 
 .global lbl_805446C0
-
 lbl_805446C0:
-
 	# ROM: 0x5407C0
 	.asciz "wrong device handle: [%d]"
 	.balign 4
@@ -34332,9 +32460,7 @@ lbl_805446C0:
 
 
 .global lbl_8054479C
-
 lbl_8054479C:
-
 	# ROM: 0x54089C
 	.asciz "bta_hh_hdl_event:: handle = %d dev_cb[%d] "
 	.balign 4
@@ -34369,9 +32495,7 @@ lbl_8054479C:
 
 
 .global lbl_80544960
-
 lbl_80544960:
-
 	# ROM: 0x540A60
 	.4byte 0x802E40DC  ;# ptr
 	.4byte 0x802E40E4  ;# ptr
@@ -34392,9 +32516,7 @@ lbl_80544960:
 
 
 .global lbl_805449A0
-
 lbl_805449A0:
-
 	# ROM: 0x540AA0
 	.asciz "found kdev_cb[%d] hid_handle = %d "
 	.balign 4
@@ -34404,9 +32526,7 @@ lbl_805449A0:
 
 
 .global lbl_80544A24
-
 lbl_80544A24:
-
 	# ROM: 0x540B24
 	.asciz "subclass = 0x%2x"
 	.balign 4
@@ -34435,27 +32555,21 @@ lbl_80544A24:
 
 
 .global lbl_80544C60
-
 lbl_80544C60:
-
 	# ROM: 0x540D60
 	.asciz "Duplicate btm_acl_created: RemBdAddr: %02x%02x%02x%02x%02x%02x"
 	.balign 4
 
 
 .global lbl_80544CA0
-
 lbl_80544CA0:
-
 	# ROM: 0x540DA0
 	.asciz "SetPacketType Mask -> 0x%04x"
 	.balign 4
 
 
 .global lbl_80544CC0
-
 lbl_80544CC0:
-
 	# ROM: 0x540DC0
 	.asciz "Role change request declined since the previous request for this device is not completed "
 	.balign 4
@@ -34470,18 +32584,14 @@ lbl_80544CC0:
 
 
 .global lbl_80544E40
-
 lbl_80544E40:
-
 	# ROM: 0x540F40
 	.asciz "BTM_ReadClockOffset: RemBdAddr: %02x%02x%02x%02x%02x%02x"
 	.balign 4
 
 
 .global lbl_80544E7C
-
 lbl_80544E7C:
-
 	# ROM: 0x540F7C
 	.asciz "Role Switch Event: new_role 0x%02x, HCI Status 0x%02x"
 	.balign 4
@@ -34490,45 +32600,35 @@ lbl_80544E7C:
 
 
 .global lbl_80544EE4
-
 lbl_80544EE4:
-
 	# ROM: 0x540FE4
 	.asciz "BTM: p_flow->delay_variation: 0x%02x"
 	.balign 4
 
 
 .global lbl_80544F0C
-
 lbl_80544F0C:
-
 	# ROM: 0x54100C
 	.asciz "BTM_ReadRSSI: RemBdAddr: %02x%02x%02x%02x%02x%02x"
 	.balign 4
 
 
 .global lbl_80544F40
-
 lbl_80544F40:
-
 	# ROM: 0x541040
 	.asciz "BTM_ReadLinkQuality: RemBdAddr: %02x%02x%02x%02x%02x%02x"
 	.balign 4
 
 
 .global lbl_80544F7C
-
 lbl_80544F7C:
-
 	# ROM: 0x54107C
 	.asciz "BTM RSSI Complete: rssi %d, hci status 0x%02x"
 	.balign 4
 
 
 .global lbl_80544FAC
-
 lbl_80544FAC:
-
 	# ROM: 0x5410AC
 	.asciz "BTM Link Quality Complete: Link Quality %d, hci status 0x%02x"
 	.balign 4
@@ -34541,17 +32641,13 @@ lbl_80544FAC:
 
 
 .global lbl_80545080
-
 lbl_80545080:
-
 	# ROM: 0x541180
 	.asciz "BTM_SetAfhChannels first: %d (%d) last: %d (%d)"
 
 
 .global lbl_805450B0
-
 lbl_805450B0:
-
 	# ROM: 0x5411B0
 	.asciz "btm_reset_complete"
 	.balign 4
@@ -34562,36 +32658,28 @@ lbl_805450B0:
 
 
 .global lbl_8054511C
-
 lbl_8054511C:
-
 	# ROM: 0x54121C
 	.asciz "BTM: BTM_VendorSpecificCommand: Opcode: 0x%04X, ParamLen: %i."
 	.balign 4
 
 
 .global lbl_8054515C
-
 lbl_8054515C:
-
 	# ROM: 0x54125C
 	.asciz "BTM: Unable to send vendor specific command (controller is busy)."
 	.balign 4
 
 
 .global lbl_805451A0
-
 lbl_805451A0:
-
 	# ROM: 0x5412A0
 	.asciz "BTM Event: Received a vendor specific event from controller"
 	.4byte 0
 
 
 .global lbl_805451E0
-
 lbl_805451E0:
-
 	# ROM: 0x5412E0
 	.asciz "BTM: BTM_WritePageTimeout: Timeout: %d."
 	.asciz "BTM: BTM_WriteVoiceSettings: Settings: 0x%04x."
@@ -34600,27 +32688,21 @@ lbl_805451E0:
 
 
 .global lbl_80545250
-
 lbl_80545250:
-
 	# ROM: 0x541350
 	.asciz "BTM: BTM_ReadStoredLinkKey: Read_All: %s"
 	.balign 4
 
 
 .global lbl_8054527C
-
 lbl_8054527C:
-
 	# ROM: 0x54137C
 	.asciz "BTM: BTM_WriteStoredLinkKey: num_keys: %d"
 	.balign 4
 
 
 .global lbl_805452A8
-
 lbl_805452A8:
-
 	# ROM: 0x5413A8
 	.asciz "BTM: BTM_DeleteStoredLinkKey: delete_all_flag: %s"
 	.balign 4
@@ -34628,81 +32710,63 @@ lbl_805452A8:
 
 
 .global lbl_805452E0
-
 lbl_805452E0:
-
 	# ROM: 0x5413E0
 	.asciz "BTM_SetDiscoverability: mode %d [NonDisc-0, Lim-1, Gen-2], window 0x%04x, interval 0x%04x"
 	.balign 4
 
 
 .global lbl_8054533C
-
 lbl_8054533C:
-
 	# ROM: 0x54143C
 	.asciz "BTM_SetConnectability: mode %d [NonConn-0, Conn-1], window 0x%04x, interval 0x%04x"
 	.balign 4
 
 
 .global lbl_80545390
-
 lbl_80545390:
-
 	# ROM: 0x541490
 	.asciz "BTM_CancelInquiry called"
 	.balign 4
 
 
 .global lbl_805453AC
-
 lbl_805453AC:
-
 	# ROM: 0x5414AC
 	.asciz "BTM_StartInquiry: mode: %d, dur: %d, rsps: %d, flt: %d"
 	.balign 4
 
 
 .global lbl_805453E4
-
 lbl_805453E4:
-
 	# ROM: 0x5414E4
 	.asciz "BTM_ReadRemoteDeviceName: bd addr [%02x%02x%02x%02x%02x%02x]"
 	.balign 4
 
 
 .global lbl_80545424
-
 lbl_80545424:
-
 	# ROM: 0x541524
 	.asciz "BTM_CancelRemoteDeviceName()"
 	.balign 4
 
 
 .global lbl_80545444
-
 lbl_80545444:
-
 	# ROM: 0x541544
 	.asciz "BTM_InqDbRead: bd addr [%02x%02x%02x%02x%02x%02x]"
 	.balign 4
 
 
 .global lbl_80545478
-
 lbl_80545478:
-
 	# ROM: 0x541578
 	.asciz "BTM Warning: Set Event Filter Failed (HCI returned 0x%x)"
 	.balign 4
 
 
 .global lbl_805454B4
-
 lbl_805454B4:
-
 	# ROM: 0x5415B4
 	.asciz "BTM Inq Compl Callback: status 0x%02x, num results %d"
 	.balign 4
@@ -34710,18 +32774,14 @@ lbl_805454B4:
 
 
 .global lbl_805454F0
-
 lbl_805454F0:
-
 	# ROM: 0x5415F0
 	.asciz "btm mode change AFTER unsniffing; hci hdl 0x%x, types 0x%02x"
 	.balign 4
 
 
 .global lbl_80545530
-
 lbl_80545530:
-
 	# ROM: 0x541630
 	.asciz "btm_esco_conn_rsp -> No Resources"
 	.balign 4
@@ -34734,9 +32794,7 @@ lbl_80545530:
 
 
 .global lbl_8054565C
-
 lbl_8054565C:
-
 	# ROM: 0x54175C
 	.asciz "btm_sco_conn_req: No one wants this SCO connection; rejecting it"
 	.balign 4
@@ -34755,9 +32813,7 @@ lbl_8054565C:
 
 
 .global lbl_805457F4
-
 lbl_805457F4:
-
 	# ROM: 0x5418F4
 	.asciz "btm_esco_proc_conn_chg -> handle 0x%04x, status 0x%02x"
 	.balign 4
@@ -34765,9 +32821,7 @@ lbl_805457F4:
 
 
 .global lbl_80545830
-
 lbl_80545830:
-
 	# ROM: 0x541930
 	.asciz "BTM_Sec: application registered"
 	.asciz "BTM_SetSecurityMode: mode:%d"
@@ -34778,9 +32832,7 @@ lbl_80545830:
 
 
 .global lbl_805458C8
-
 lbl_805458C8:
-
 	# ROM: 0x5419C8
 	.asciz "BTM_SetPinType: pin type %d [variable-0, fixed-1], code %s, length %d"
 	.balign 4
@@ -34793,17 +32845,13 @@ lbl_805458C8:
 
 
 .global lbl_805459D0
-
 lbl_805459D0:
-
 	# ROM: 0x541AD0
 	.asciz "Security Manager: Attempting Authorization of Unknown Device Address [%02x%02x%02x%02x%02x%02x]"
 
 
 .global lbl_80545A30
-
 lbl_80545A30:
-
 	# ROM: 0x541B30
 	.asciz "Security Manager: authorized status:%d State:%d"
 	.asciz "BTM_SecBond BDA: %02x:%02x:%02x:%02x:%02x:%02x"
@@ -34820,9 +32868,7 @@ lbl_80545A30:
 
 
 .global lbl_80545B2C
-
 lbl_80545B2C:
-
 	# ROM: 0x541C2C
 	.asciz "btm_restore_mode: Authen Enable -> %d"
 	.balign 4
@@ -34845,96 +32891,74 @@ lbl_80545B2C:
 
 
 .global lbl_80545D88
-
 lbl_80545D88:
-
 	# ROM: 0x541E88
 	.asciz "Security Manager: MX service not found PSM:%d Proto:%d SCN:%d"
 	.balign 4
 
 
 .global lbl_80545DC8
-
 lbl_80545DC8:
-
 	# ROM: 0x541EC8
 	.asciz "Security Manager: connect request from not paired device"
 	.balign 4
 
 
 .global lbl_80545E04
-
 lbl_80545E04:
-
 	# ROM: 0x541F04
 	.asciz "Security Manager: rmt_name_complete status:%d State:%d"
 	.balign 4
 
 
 .global lbl_80545E3C
-
 lbl_80545E3C:
-
 	# ROM: 0x541F3C
 	.asciz "Security Manager: auth_complete status:%d State:%d"
 	.balign 4
 
 
 .global lbl_80545E70
-
 lbl_80545E70:
-
 	# ROM: 0x541F70
 	.asciz "Security Manager: mkey comp status:%d State:%d"
 	.balign 4
 
 
 .global lbl_80545EA0
-
 lbl_80545EA0:
-
 	# ROM: 0x541FA0
 	.asciz "Security Manager: encrypt_change status:%d State:%d"
 
 
 .global lbl_80545ED4
-
 lbl_80545ED4:
-
 	# ROM: 0x541FD4
 	.asciz "Security Manager: btm_sec_connected handle:%d status:%d enc_mode:%d"
 
 
 .global lbl_80545F18
-
 lbl_80545F18:
-
 	# ROM: 0x542018
 	.asciz "btm_sec_link_key_notification()  BDA: %02x:%02x:%02x:%02x:%02x:%02x"
 
 
 .global lbl_80545F5C
-
 lbl_80545F5C:
-
 	# ROM: 0x54205C
 	.asciz "                                TYPE: %d"
 	.balign 4
 
 
 .global lbl_80545F88
-
 lbl_80545F88:
-
 	# ROM: 0x542088
 	.asciz "btm_sec_link_key_request()  BDA: %02x:%02x:%02x:%02x:%02x:%02x"
 	.balign 4
 
 
 .global lbl_80545FC8
-
 lbl_80545FC8:
-
 	# ROM: 0x5420C8
 	.asciz "btm_sec_pin_code_request_timeout()"
 	.balign 4
@@ -34965,79 +32989,61 @@ lbl_80545FC8:
 
 
 .global lbl_80546224
-
 lbl_80546224:
-
 	# ROM: 0x542324
 	.asciz "btm_sec_collision_timeout()"
 
 
 .global lbl_80546240
-
 lbl_80546240:
-
 	# ROM: 0x542340
 	.asciz "Ctlr H/w error event"
 	.balign 4
 
 
 .global lbl_80546258
-
 lbl_80546258:
-
 	# ROM: 0x542358
 	.asciz "Event mismatch opcode=%X cmd opcode=%X"
 	.balign 4
 
 
 .global lbl_80546280
-
 lbl_80546280:
-
 	# ROM: 0x542380
 	.asciz "Cmd timeout; no cmd in queue"
 	.balign 4
 
 
 .global lbl_805462A0
-
 lbl_805462A0:
-
 	# ROM: 0x5423A0
 	.asciz "BTU HCI command timeout - cmd opcode = 0x%02x"
 	.balign 4
 
 
 .global lbl_805462D0
-
 lbl_805462D0:
-
 	# ROM: 0x5423D0
 	.asciz "WARNING: GAP Conn Indication for Unexpected Bd Addr...Disconnecting"
 
 
 .global lbl_80546314
-
 lbl_80546314:
-
 	# ROM: 0x542414
 	.asciz "GAP_CONN - Rcvd L2CAP conn ind, CID: 0x%x"
 	.balign 4
 
 
 .global lbl_80546340
-
 lbl_80546340:
-
 	# ROM: 0x542440
 	.asciz "GAP_CONN - Rcvd L2CAP disc, CID: 0x%x"
 	.balign 4
 
 
 .global lbl_80546368
-
 lbl_80546368:
-
 	# ROM: 0x542468
 	.asciz "GAP_CONN - Rcvd L2CAP Is Congested (%d), CID: 0x%x"
 	.balign 4
@@ -35045,9 +33051,7 @@ lbl_80546368:
 
 
 .global lbl_805463A0
-
 lbl_805463A0:
-
 	# ROM: 0x5424A0
 	.asciz "   GAP Inquiry Complete Event (Status 0x%04x, Result(s) %d)"
 	.asciz "   GAP Discovery Complete Event(SDP Result: 0x%04x)"
@@ -35057,9 +33061,7 @@ lbl_805463A0:
 
 
 .global lbl_8054646C
-
 lbl_8054646C:
-
 	# ROM: 0x54256C
 	.4byte 0x802F09CC  ;# ptr
 	.4byte 0x802F09D4  ;# ptr
@@ -35077,26 +33079,20 @@ lbl_8054646C:
 
 
 .global lbl_80546518
-
 lbl_80546518:
-
 	# ROM: 0x542618
 	.asciz "   GAP: FindAddrByName Rem Name Cmpl Evt (Status 0x%04x, Name [%s])"
 
 
 .global lbl_8054655C
-
 lbl_8054655C:
-
 	# ROM: 0x54265C
 	.asciz "   GAP: FindAddrByName Rem Name Cmpl Evt (Status 0x%04x)"
 	.balign 4
 
 
 .global lbl_80546598
-
 lbl_80546598:
-
 	# ROM: 0x542698
 	.4byte 0x802F0C24  ;# ptr
 	.4byte 0x802F0C2C  ;# ptr
@@ -35110,9 +33106,7 @@ lbl_80546598:
 
 
 .global lbl_805465BC
-
 lbl_805465BC:
-
 	# ROM: 0x5426BC
 	.4byte 0x802F0B8C  ;# ptr
 	.4byte 0x802F0B94  ;# ptr
@@ -35126,18 +33120,14 @@ lbl_805465BC:
 
 
 .global lbl_805465E0
-
 lbl_805465E0:
-
 	# ROM: 0x5426E0
 	.asciz "   GAP: FindAddrByName Inq Cmpl Evt (Status 0x%04x, Result(s) %d)"
 	.balign 4
 
 
 .global lbl_80546624
-
 lbl_80546624:
-
 	# ROM: 0x542724
 	.4byte 0x802F0DD8  ;# ptr
 	.4byte 0x802F0DE0  ;# ptr
@@ -35151,9 +33141,7 @@ lbl_80546624:
 
 
 .global lbl_80546648
-
 lbl_80546648:
-
 	# ROM: 0x542748
 	.4byte 0x802F0D68  ;# ptr
 	.4byte 0x802F0D70  ;# ptr
@@ -35167,9 +33155,7 @@ lbl_80546648:
 
 
 .global lbl_8054666C
-
 lbl_8054666C:
-
 	# ROM: 0x54276C
 	.4byte 0x802F0E7C  ;# ptr
 	.4byte 0x802F0E84  ;# ptr
@@ -35183,26 +33169,20 @@ lbl_8054666C:
 
 
 .global lbl_80546690
-
 lbl_80546690:
-
 	# ROM: 0x542790
 	.asciz "HID - Originate started"
 
 
 .global lbl_805466A8
-
 lbl_805466A8:
-
 	# ROM: 0x5427A8
 	.asciz "HID - Originate failed"
 	.balign 4
 
 
 .global lbl_805466C0
-
 lbl_805466C0:
-
 	# ROM: 0x5427C0
 	.asciz "hidd_proc_repage_timeout"
 	.balign 4
@@ -35210,9 +33190,7 @@ lbl_805466C0:
 
 
 .global lbl_805466E0
-
 lbl_805466E0:
-
 	# ROM: 0x5427E0
 	.asciz "HID_ERR_NOT_REGISTERED"
 	.balign 4
@@ -35235,26 +33213,20 @@ lbl_805466E0:
 
 
 .global lbl_805467F8
-
 lbl_805467F8:
-
 	# ROM: 0x5428F8
 	.asciz "HID Control Registration failed"
 
 
 .global lbl_80546818
-
 lbl_80546818:
-
 	# ROM: 0x542918
 	.asciz "HID Interrupt Registration failed"
 	.balign 4
 
 
 .global lbl_8054683C
-
 lbl_8054683C:
-
 	# ROM: 0x54293C
 	.asciz "HID - disconnect"
 	.balign 4
@@ -35270,9 +33242,7 @@ lbl_8054683C:
 
 
 .global lbl_8054695C
-
 lbl_8054695C:
-
 	# ROM: 0x542A5C
 	.asciz "HID - Originate failed"
 	.balign 4
@@ -35286,17 +33256,13 @@ lbl_8054695C:
 
 
 .global lbl_80546A14
-
 lbl_80546A14:
-
 	# ROM: 0x542B14
 	.asciz "HID - Rcvd L2CAP cfg ind, unknown CID: 0x%x"
 
 
 .global lbl_80546A40
-
 lbl_80546A40:
-
 	# ROM: 0x542B40
 	.asciz "HID - Rcvd cfg ind, sent cfg cfm, CID: 0x%x"
 	.asciz "HID - Rcvd cfg cfm, CID: 0x%x  Result: %d"
@@ -35304,62 +33270,48 @@ lbl_80546A40:
 
 
 .global lbl_80546A98
-
 lbl_80546A98:
-
 	# ROM: 0x542B98
 	.asciz "HID - Rcvd L2CAP disc, unknown CID: 0x%x"
 	.balign 4
 
 
 .global lbl_80546AC4
-
 lbl_80546AC4:
-
 	# ROM: 0x542BC4
 	.asciz "HID - Rcvd L2CAP disc, CID: 0x%x"
 	.balign 4
 
 
 .global lbl_80546AE8
-
 lbl_80546AE8:
-
 	# ROM: 0x542BE8
 	.asciz "HID - Rcvd L2CAP disc cfm, unknown CID: 0x%x"
 	.balign 4
 
 
 .global lbl_80546B18
-
 lbl_80546B18:
-
 	# ROM: 0x542C18
 	.asciz "HID - Rcvd L2CAP disc cfm, CID: 0x%x"
 	.balign 4
 
 
 .global lbl_80546B40
-
 lbl_80546B40:
-
 	# ROM: 0x542C40
 	.asciz "HID - Rcvd L2CAP congestion status, unknown CID: 0x%x"
 	.balign 4
 
 
 .global lbl_80546B78
-
 lbl_80546B78:
-
 	# ROM: 0x542C78
 	.asciz "HID - Rcvd L2CAP congestion status, CID: 0x%x  Cong: %d"
 
 
 .global lbl_80546BB0
-
 lbl_80546BB0:
-
 	# ROM: 0x542CB0
 	.asciz "HID - Rcvd L2CAP data, unknown CID: 0x%x"
 	.balign 4
@@ -35367,9 +33319,7 @@ lbl_80546BB0:
 
 
 .global lbl_80546BE0
-
 lbl_80546BE0:
-
 	# ROM: 0x542CE0
 	.asciz "L2CAP - L2CA_Register() called for PSM: 0x%04x"
 	.balign 4
@@ -35382,18 +33332,14 @@ lbl_80546BE0:
 
 
 .global lbl_80546C88
-
 lbl_80546C88:
-
 	# ROM: 0x542D88
 	.asciz "L2CAP - L2CA_Deregister() called for PSM: 0x%04x"
 	.balign 4
 
 
 .global lbl_80546CBC
-
 lbl_80546CBC:
-
 	# ROM: 0x542DBC
 	.asciz "L2CAP - PSM: 0x%04x not found for deregistration"
 	.balign 4
@@ -35425,72 +33371,56 @@ lbl_80546CBC:
 
 
 .global lbl_80546F38
-
 lbl_80546F38:
-
 	# ROM: 0x543038
 	.asciz "L2CA_ConfigReq()  CID: 0x%04x"
 	.balign 4
 
 
 .global lbl_80546F58
-
 lbl_80546F58:
-
 	# ROM: 0x543058
 	.asciz "L2CAP - no CCB for L2CA_cfg_req, CID: %d"
 	.balign 4
 
 
 .global lbl_80546F84
-
 lbl_80546F84:
-
 	# ROM: 0x543084
 	.asciz "L2CA_ConfigRsp()  CID: 0x%04x  Result: %d"
 	.balign 4
 
 
 .global lbl_80546FB0
-
 lbl_80546FB0:
-
 	# ROM: 0x5430B0
 	.asciz "L2CAP - no CCB for L2CA_cfg_rsp, CID: %d"
 	.balign 4
 
 
 .global lbl_80546FDC
-
 lbl_80546FDC:
-
 	# ROM: 0x5430DC
 	.asciz "L2CA_DisconnectReq()  CID: 0x%04x"
 	.balign 4
 
 
 .global lbl_80547000
-
 lbl_80547000:
-
 	# ROM: 0x543100
 	.asciz "L2CAP - no CCB for L2CA_disc_req, CID: %d"
 	.balign 4
 
 
 .global lbl_8054702C
-
 lbl_8054702C:
-
 	# ROM: 0x54312C
 	.asciz "L2CA_DisconnectRsp()  CID: 0x%04x"
 	.balign 4
 
 
 .global lbl_80547050
-
 lbl_80547050:
-
 	# ROM: 0x543150
 	.asciz "L2CAP - no CCB for L2CA_disc_rsp, CID: %d"
 	.balign 4
@@ -35509,9 +33439,7 @@ lbl_80547050:
 
 
 .global lbl_805471B0
-
 lbl_805471B0:
-
 	# ROM: 0x5432B0
 	.asciz "L2CAP - no CCB for L2CA_SetIdleTimeout, CID: %d"
 	.asciz "L2CA_SetAclPriority()  bdaddr: %02x%02x%02x%02x%02x%02x"
@@ -35530,9 +33458,7 @@ lbl_805471B0:
 
 
 .global lbl_80547370
-
 lbl_80547370:
-
 	# ROM: 0x543470
 	.4byte 0x802F74F4
 	.4byte 0x802F74F8
@@ -35548,9 +33474,7 @@ lbl_80547370:
 
 
 .global lbl_805473B0
-
 lbl_805473B0:
-
 	# ROM: 0x5434B0
 	.asciz "L2CAP - Calling Disconnect_Ind_Cb(), CID: 0x%04x  No Conf Needed"
 	.balign 4
@@ -35559,9 +33483,7 @@ lbl_805473B0:
 
 
 .global lbl_80547430
-
 lbl_80547430:
-
 	# ROM: 0x543530
 	.4byte 0x802F75DC
 	.4byte 0x802F760C
@@ -35599,9 +33521,7 @@ lbl_80547430:
 
 
 .global lbl_805474D4
-
 lbl_805474D4:
-
 	# ROM: 0x5435D4
 	.4byte 0x802F7830
 	.4byte 0x802F7908
@@ -35633,27 +33553,21 @@ lbl_805474D4:
 
 
 .global lbl_80547540
-
 lbl_80547540:
-
 	# ROM: 0x543640
 	.asciz "L2CAP - st: TERM_W4_SEC_COMP evt: %d"
 	.balign 4
 
 
 .global lbl_80547568
-
 lbl_80547568:
-
 	# ROM: 0x543668
 	.asciz "L2CAP - Calling Connect_Ind_Cb(), CID: 0x%04x"
 	.balign 4
 
 
 .global lbl_80547598
-
 lbl_80547598:
-
 	# ROM: 0x543698
 	.4byte 0x802F7990
 	.4byte 0x802F7A6C
@@ -35694,9 +33608,7 @@ lbl_80547598:
 
 
 .global lbl_80547700
-
 lbl_80547700:
-
 	# ROM: 0x543800
 	.4byte 0x802F7B08
 	.4byte 0x802F7CB4
@@ -35729,17 +33641,13 @@ lbl_80547700:
 
 
 .global lbl_80547770
-
 lbl_80547770:
-
 	# ROM: 0x543870
 	.asciz "L2CAP - st: W4_L2CA_CON_RSP evt: %d"
 
 
 .global lbl_80547794
-
 lbl_80547794:
-
 	# ROM: 0x543894
 	.4byte 0x802F7D44
 	.4byte 0x802F7E8C
@@ -35784,9 +33692,7 @@ lbl_80547794:
 
 
 .global lbl_80547928
-
 lbl_80547928:
-
 	# ROM: 0x543A28
 	.4byte 0x802F7F20
 	.4byte 0x802F8254
@@ -35821,9 +33727,7 @@ lbl_80547928:
 
 
 .global lbl_805479B4
-
 lbl_805479B4:
-
 	# ROM: 0x543AB4
 	.4byte 0x802F82E8
 	.4byte 0x802F84B0
@@ -35858,9 +33762,7 @@ lbl_805479B4:
 
 
 .global lbl_80547A78
-
 lbl_80547A78:
-
 	# ROM: 0x543B78
 	.4byte 0x802F8548
 	.4byte 0x802F8694
@@ -35893,18 +33795,14 @@ lbl_80547A78:
 
 
 .global lbl_80547AE8
-
 lbl_80547AE8:
-
 	# ROM: 0x543BE8
 	.asciz "L2CAP - st: W4_L2CA_DISC_RSP evt: %d"
 	.balign 4
 
 
 .global lbl_80547B10
-
 lbl_80547B10:
-
 	# ROM: 0x543C10
 	.4byte 0x802F8724
 	.4byte 0x802F87F0
@@ -35939,18 +33837,14 @@ lbl_80547B10:
 
 
 .global lbl_80547BA8
-
 lbl_80547BA8:
-
 	# ROM: 0x543CA8
 	.asciz "L2CAP failed to allocate LCB"
 	.balign 4
 
 
 .global lbl_80547BC8
-
 lbl_80547BC8:
-
 	# ROM: 0x543CC8
 	.asciz "L2CAP got conn_req while connected"
 	.balign 4
@@ -35958,35 +33852,27 @@ lbl_80547BC8:
 
 
 .global lbl_80547BF0
-
 lbl_80547BF0:
-
 	# ROM: 0x543CF0
 	.asciz "L2CAP got conn_comp for unknown BD_ADDR"
 
 
 .global lbl_80547C18
-
 lbl_80547C18:
-
 	# ROM: 0x543D18
 	.asciz "L2CAP got conn_comp in bad state: %d  status: 0x%d"
 	.balign 4
 
 
 .global lbl_80547C4C
-
 lbl_80547C4C:
-
 	# ROM: 0x543D4C
 	.asciz "L2CAP got sec_comp for unknown BD_ADDR"
 	.balign 4
 
 
 .global lbl_80547C74
-
 lbl_80547C74:
-
 	# ROM: 0x543D74
 	.asciz "L2CAP - ping timeout"
 	.balign 4
@@ -36002,26 +33888,20 @@ lbl_80547C74:
 
 
 .global lbl_80547DA0
-
 lbl_80547DA0:
-
 	# ROM: 0x543EA0
 	.asciz "L2CAP - dropping incomplete pkt"
 
 
 .global lbl_80547DC0
-
 lbl_80547DC0:
-
 	# ROM: 0x543EC0
 	.asciz "L2CAP - dropping too long pkt"
 	.balign 4
 
 
 .global lbl_80547DE0
-
 lbl_80547DE0:
-
 	# ROM: 0x543EE0
 	.asciz "L2CAP - rcvd segment complete, unknown handle: %d"
 	.balign 4
@@ -36029,9 +33909,7 @@ lbl_80547DE0:
 
 
 .global lbl_80547E18
-
 lbl_80547E18:
-
 	# ROM: 0x543F18
 	.asciz "L2CAP - expected pkt start, got: %d"
 	.asciz "L2CAP - holding ACL for unknown handle:%d ls:%d cid:%d opcode:%d cur count:%d"
@@ -36076,17 +33954,13 @@ lbl_80547E18:
 
 
 .global lbl_805480EC
-
 lbl_805480EC:
-
 	# ROM: 0x5441EC
 	.asciz "L2CAP HOLD CONTINUE"
 
 
 .global lbl_80548100
-
 lbl_80548100:
-
 	# ROM: 0x544200
 	.asciz "L2CAP HOLD TIMEOUT"
 	.balign 4
@@ -36094,36 +33968,28 @@ lbl_80548100:
 
 
 .global lbl_80548118
-
 lbl_80548118:
-
 	# ROM: 0x544218
 	.asciz "L2CAP - no buffer cmd_rej"
 	.balign 4
 
 
 .global lbl_80548134
-
 lbl_80548134:
-
 	# ROM: 0x544234
 	.asciz "L2CAP - no buffer for conn_req"
 	.balign 4
 
 
 .global lbl_80548154
-
 lbl_80548154:
-
 	# ROM: 0x544254
 	.asciz "L2CAP - no buffer for cfg_rej"
 	.balign 4
 
 
 .global lbl_80548174
-
 lbl_80548174:
-
 	# ROM: 0x544274
 	.asciz "L2CAP - no buffer for echo_req"
 	.balign 4
@@ -36131,18 +33997,14 @@ lbl_80548174:
 
 
 .global lbl_805481D8
-
 lbl_805481D8:
-
 	# ROM: 0x5442D8
 	.asciz "L2CAP - no buffer for l2cu_create_conn"
 	.balign 4
 
 
 .global lbl_80548200
-
 lbl_80548200:
-
 	# ROM: 0x544300
 	.asciz "port_open_continue"
 	.balign 4
@@ -36151,9 +34013,7 @@ lbl_80548200:
 
 
 .global lbl_80548238
-
 lbl_80548238:
-
 	# ROM: 0x544338
 	.asciz "PORT_StartCnf result:%d"
 	.asciz "PORT_StartCnf failed result:%d"
@@ -36161,62 +34021,48 @@ lbl_80548238:
 
 
 .global lbl_80548270
-
 lbl_80548270:
-
 	# ROM: 0x544370
 	.asciz "PORT_StartInd"
 	.balign 4
 
 
 .global lbl_80548280
-
 lbl_80548280:
-
 	# ROM: 0x544380
 	.asciz "PORT_ParNegInd dlci:%d mtu:%d"
 	.balign 4
 
 
 .global lbl_805482A0
-
 lbl_805482A0:
-
 	# ROM: 0x5443A0
 	.asciz "PORT_ParNegInd: port not found"
 	.balign 4
 
 
 .global lbl_805482C0
-
 lbl_805482C0:
-
 	# ROM: 0x5443C0
 	.asciz "PORT_ParNegCnf dlci:%d mtu:%d cl: %d k: %d"
 	.balign 4
 
 
 .global lbl_805482EC
-
 lbl_805482EC:
-
 	# ROM: 0x5443EC
 	.asciz "PORT_DlcEstablishInd dlci:%d mtu:%d"
 
 
 .global lbl_80548310
-
 lbl_80548310:
-
 	# ROM: 0x544410
 	.asciz "PORT_DlcEstablishCnf dlci:%d mtu:%d result:%d"
 	.balign 4
 
 
 .global lbl_80548340
-
 lbl_80548340:
-
 	# ROM: 0x544440
 	.asciz "PORT_PortNegInd"
 	.asciz "PORT_PortNegCnf"
@@ -36226,88 +34072,68 @@ lbl_80548340:
 
 
 .global lbl_805483A0
-
 lbl_805483A0:
-
 	# ROM: 0x5444A0
 	.asciz "PORT_ControlInd"
 
 
 .global lbl_805483B0
-
 lbl_805483B0:
-
 	# ROM: 0x5444B0
 	.asciz "PORT_ControlInd DTR_DSR : %d, RTS_CTS : %d, RI : %d, DCD : %d"
 	.balign 4
 
 
 .global lbl_805483F0
-
 lbl_805483F0:
-
 	# ROM: 0x5444F0
 	.asciz "PORT_ControlCnf"
 
 
 .global lbl_80548400
-
 lbl_80548400:
-
 	# ROM: 0x544500
 	.asciz "PORT_LineStatusInd"
 	.balign 4
 
 
 .global lbl_80548414
-
 lbl_80548414:
-
 	# ROM: 0x544514
 	.asciz "PORT_DlcReleaseInd"
 	.balign 4
 
 
 .global lbl_80548428
-
 lbl_80548428:
-
 	# ROM: 0x544528
 	.asciz "PORT_CloseInd"
 	.balign 4
 
 
 .global lbl_80548438
-
 lbl_80548438:
-
 	# ROM: 0x544538
 	.asciz "Port_TimeOutCloseMux"
 	.balign 4
 
 
 .global lbl_80548450
-
 lbl_80548450:
-
 	# ROM: 0x544550
 	.asciz "PORT_DataInd with data length %d"
 	.balign 4
 
 
 .global lbl_80548474
-
 lbl_80548474:
-
 	# ROM: 0x544574
 	.asciz "PORT_DataInd. Buffer over run. Dropping the buffer"
 	.balign 4
 
 
 .global lbl_805484A8
-
 lbl_805484A8:
-
 	# ROM: 0x5445A8
 	.asciz "PORT_FlowInd fc:%d"
 	.balign 4
@@ -36316,18 +34142,14 @@ lbl_805484A8:
 
 
 .global lbl_805484D4
-
 lbl_805484D4:
-
 	# ROM: 0x5445D4
 	.asciz "port_rfc_closed in OPENING state ignored"
 	.balign 4
 
 
 .global lbl_80548500
-
 lbl_80548500:
-
 	# ROM: 0x544600
 	.asciz "port_rfc_closed state:%d sending events:%x"
 	.balign 4
@@ -36335,9 +34157,7 @@ lbl_80548500:
 
 
 .global lbl_80548530
-
 lbl_80548530:
-
 	# ROM: 0x544630
 	.asciz "port_select_mtu bad packet size"
 	.asciz "port_select_mtu selected %d based on connection speed"
@@ -36350,27 +34170,21 @@ lbl_80548530:
 
 
 .global lbl_80548630
-
 lbl_80548630:
-
 	# ROM: 0x544730
 	.asciz "rfc_port_closed DONE"
 	.balign 4
 
 
 .global lbl_80548648
-
 lbl_80548648:
-
 	# ROM: 0x544748
 	.asciz "PORT_DataInd Data reached HW. Sending FC set."
 	.balign 4
 
 
 .global lbl_80548678
-
 lbl_80548678:
-
 	# ROM: 0x544778
 	.asciz "rfc_find_lcid_mcb LCID:0x%x"
 	.asciz "rfc_find_lcid_mcb LCID reused LCID:0x%x current:0x%x"
@@ -36391,9 +34205,7 @@ lbl_80548678:
 
 
 .global lbl_805487B8
-
 lbl_805487B8:
-
 	# ROM: 0x5448B8
 	.4byte 0x802FEDA8
 	.4byte 0x802FEDAC
@@ -36411,18 +34223,14 @@ lbl_805487B8:
 
 
 .global lbl_80548828
-
 lbl_80548828:
-
 	# ROM: 0x544928
 	.asciz "RFCOMM MX ignored - evt:%d in state:%d"
 	.balign 4
 
 
 .global lbl_80548850
-
 lbl_80548850:
-
 	# ROM: 0x544950
 	.4byte 0x802FEF90
 	.4byte 0x802FEF64
@@ -36444,9 +34252,7 @@ lbl_80548850:
 
 
 .global lbl_805488D0
-
 lbl_805488D0:
-
 	# ROM: 0x5449D0
 	.4byte 0x802FF214
 	.4byte 0x802FF274
@@ -36462,9 +34268,7 @@ lbl_805488D0:
 
 
 .global lbl_80548918
-
 lbl_80548918:
-
 	# ROM: 0x544A18
 	.4byte 0x802FF3E8
 	.4byte 0x802FF398
@@ -36484,26 +34288,20 @@ lbl_80548918:
 
 
 .global lbl_80548954
-
 lbl_80548954:
-
 	# ROM: 0x544A54
 	.asciz "rfc_mx_sm_state_wait_sabme - evt:%d"
 
 
 .global lbl_80548978
-
 lbl_80548978:
-
 	# ROM: 0x544A78
 	.asciz "rfc_mx_sm_state_connected - evt:%d"
 	.balign 4
 
 
 .global lbl_8054899C
-
 lbl_8054899C:
-
 	# ROM: 0x544A9C
 	.4byte 0x802FF5F8
 	.4byte 0x802FF624
@@ -36520,18 +34318,14 @@ lbl_8054899C:
 
 
 .global lbl_805489CC
-
 lbl_805489CC:
-
 	# ROM: 0x544ACC
 	.asciz "rfc_mx_sm_state_disc_wait_ua - evt:%d"
 	.balign 4
 
 
 .global lbl_805489F4
-
 lbl_805489F4:
-
 	# ROM: 0x544AF4
 	.4byte 0x802FF798
 	.4byte 0x802FF6DC
@@ -36551,54 +34345,42 @@ lbl_805489F4:
 
 
 .global lbl_80548A30
-
 lbl_80548A30:
-
 	# ROM: 0x544B30
 	.asciz "rfc_mx_conf_cnf p_cfg:%08x res:%d "
 	.balign 4
 
 
 .global lbl_80548A54
-
 lbl_80548A54:
-
 	# ROM: 0x544B54
 	.asciz "rfc_mx_conf_ind p_cfg:%0x"
 	.balign 4
 
 
 .global lbl_80548A70
-
 lbl_80548A70:
-
 	# ROM: 0x544B70
 	.asciz "NULL port event %d"
 	.balign 4
 
 
 .global lbl_80548A84
-
 lbl_80548A84:
-
 	# ROM: 0x544B84
 	.asciz "Port error state %d event %d"
 	.balign 4
 
 
 .global lbl_80548AA4
-
 lbl_80548AA4:
-
 	# ROM: 0x544BA4
 	.asciz "Port state closed Event ignored %d"
 	.balign 4
 
 
 .global lbl_80548AC8
-
 lbl_80548AC8:
-
 	# ROM: 0x544BC8
 	.4byte 0x802FFADC
 	.4byte 0x802FFB14
@@ -36618,18 +34400,14 @@ lbl_80548AC8:
 
 
 .global lbl_80548B04
-
 lbl_80548B04:
-
 	# ROM: 0x544C04
 	.asciz "Port state sabme_wait_ua Event ignored %d"
 	.balign 4
 
 
 .global lbl_80548B30
-
 lbl_80548B30:
-
 	# ROM: 0x544C30
 	.4byte 0x802FFCE4
 	.4byte 0x802FFC74
@@ -36652,9 +34430,7 @@ lbl_80548B30:
 
 
 .global lbl_80548BC8
-
 lbl_80548BC8:
-
 	# ROM: 0x544CC8
 	.4byte 0x802FFE64
 	.4byte 0x802FFEE4
@@ -36679,9 +34455,7 @@ lbl_80548BC8:
 
 
 .global lbl_80548C68
-
 lbl_80548C68:
-
 	# ROM: 0x544D68
 	.4byte 0x802FFFB8
 	.4byte 0x80300034
@@ -36702,18 +34476,14 @@ lbl_80548C68:
 
 
 .global lbl_80548CA8
-
 lbl_80548CA8:
-
 	# ROM: 0x544DA8
 	.asciz "Port state opened Event ignored %d"
 	.balign 4
 
 
 .global lbl_80548CCC
-
 lbl_80548CCC:
-
 	# ROM: 0x544DCC
 	.4byte 0x80300188
 	.4byte 0x80300184
@@ -36733,18 +34503,14 @@ lbl_80548CCC:
 
 
 .global lbl_80548D08
-
 lbl_80548D08:
-
 	# ROM: 0x544E08
 	.asciz "Port state disc_wait_ua Event ignored %d"
 	.balign 4
 
 
 .global lbl_80548D34
-
 lbl_80548D34:
-
 	# ROM: 0x544E34
 	.4byte 0x803002F0
 	.4byte 0x803002D8
@@ -36764,18 +34530,14 @@ lbl_80548D34:
 
 
 .global lbl_80548D70
-
 lbl_80548D70:
-
 	# ROM: 0x544E70
 	.asciz "***** MX PN while disconnecting *****"
 	.balign 4
 
 
 .global lbl_80548D98
-
 lbl_80548D98:
-
 	# ROM: 0x544E98
 	.asciz "Bad Length1: %d"
 	.asciz "Bad Length2 %d %d"
@@ -36803,45 +34565,35 @@ lbl_80548D98:
 
 
 .global lbl_80548E70
-
 lbl_80548E70:
-
 	# ROM: 0x544F70
 	.asciz "rfc_timer_stop"
 	.balign 4
 
 
 .global lbl_80548E80
-
 lbl_80548E80:
-
 	# ROM: 0x544F80
 	.asciz "rfc_timer_start - timeout:%d"
 	.balign 4
 
 
 .global lbl_80548EA0
-
 lbl_80548EA0:
-
 	# ROM: 0x544FA0
 	.asciz "rfc_port_timer_start - timeout:%d"
 	.balign 4
 
 
 .global lbl_80548EC4
-
 lbl_80548EC4:
-
 	# ROM: 0x544FC4
 	.asciz "rfc_port_timer_stop"
 	.asciz "rfc_port_closed"
 
 
 .global lbl_80548EE8
-
 lbl_80548EE8:
-
 	# ROM: 0x544FE8
 	.asciz "rfc_inc_credit:%d"
 	.balign 4
@@ -36849,27 +34601,21 @@ lbl_80548EE8:
 
 
 .global lbl_80548F00
-
 lbl_80548F00:
-
 	# ROM: 0x545000
 	.asciz "SDP_InitDiscoveryDb Illegal param: p_db 0x%x, len %d, num_uuid %d, num_attr %d"
 	.balign 4
 
 
 .global lbl_80548F50
-
 lbl_80548F50:
-
 	# ROM: 0x545050
 	.asciz "SDP_AddAttribute: attr_len:%d too long. truncate to (%d)"
 	.balign 4
 
 
 .global lbl_80548F8C
-
 lbl_80548F8C:
-
 	# ROM: 0x54508C
 	.asciz "SDP_AddUuidSequence - too long, add %d uuids of %d"
 	.balign 4
@@ -36877,9 +34623,7 @@ lbl_80548F8C:
 
 
 .global lbl_80548FE8
-
 lbl_80548FE8:
-
 	# ROM: 0x5450E8
 	.asciz "SDP - Unexp. PDU: %d in state: %d"
 	.balign 4
@@ -36887,17 +34631,13 @@ lbl_80548FE8:
 
 
 .global lbl_80549010
-
 lbl_80549010:
-
 	# ROM: 0x545110
 	.asciz "SDP - Rcvd ServiceSearchRsp, no matches"
 
 
 .global lbl_80549038
-
 lbl_80549038:
-
 	# ROM: 0x545138
 	.asciz "SDP - Wrong type: 0x%02x in attr_rsp"
 	.balign 4
@@ -36915,9 +34655,7 @@ lbl_80549038:
 
 
 .global lbl_80549120
-
 lbl_80549120:
-
 	# ROM: 0x545220
 	.4byte 0x80305BD0
 	.4byte 0x8030579C
@@ -36932,9 +34670,7 @@ lbl_80549120:
 
 
 .global lbl_80549148
-
 lbl_80549148:
-
 	# ROM: 0x545248
 	.asciz "Service Discovery"
 	.balign 4
@@ -36944,9 +34680,7 @@ lbl_80549148:
 
 
 .global lbl_805491C0
-
 lbl_805491C0:
-
 	# ROM: 0x5452C0
 	.asciz "SDP - Rcvd L2CAP conn ind, sent config req, CID 0x%x"
 	.balign 4
@@ -36958,17 +34692,13 @@ lbl_805491C0:
 
 
 .global lbl_80549280
-
 lbl_80549280:
-
 	# ROM: 0x545380
 	.asciz "SDP - Rcvd L2CAP cfg ind, unknown CID: 0x%x"
 
 
 .global lbl_805492AC
-
 lbl_805492AC:
-
 	# ROM: 0x5453AC
 	.asciz "SDP - Rcvd cfg ind, sent cfg cfm, CID: 0x%x"
 	.asciz "SDP - Rcvd cfg cfm, CID: 0x%x  Result: %d"
@@ -36976,44 +34706,34 @@ lbl_805492AC:
 
 
 .global lbl_80549304
-
 lbl_80549304:
-
 	# ROM: 0x545404
 	.asciz "SDP - disconnect  CID: 0x%x"
 
 
 .global lbl_80549320
-
 lbl_80549320:
-
 	# ROM: 0x545420
 	.asciz "SDP - Rcvd L2CAP disc, unknown CID: 0x%x"
 	.balign 4
 
 
 .global lbl_8054934C
-
 lbl_8054934C:
-
 	# ROM: 0x54544C
 	.asciz "SDP - Rcvd L2CAP disc, CID: 0x%x"
 	.balign 4
 
 
 .global lbl_80549370
-
 lbl_80549370:
-
 	# ROM: 0x545470
 	.asciz "SDP - Ignored L2CAP data while in state: %d, CID: 0x%x"
 	.balign 4
 
 
 .global lbl_805493A8
-
 lbl_805493A8:
-
 	# ROM: 0x5454A8
 	.asciz "SDP - Rcvd L2CAP data, unknown CID: 0x%x"
 	.balign 4
@@ -37024,27 +34744,21 @@ lbl_805493A8:
 
 
 .global lbl_80549420
-
 lbl_80549420:
-
 	# ROM: 0x545520
 	.asciz "SDP - Rcvd L2CAP disc cfm, unknown CID: 0x%x"
 	.balign 4
 
 
 .global lbl_80549450
-
 lbl_80549450:
-
 	# ROM: 0x545550
 	.asciz "SDP - Rcvd L2CAP disc cfm, CID: 0x%x"
 	.balign 4
 
 
 .global lbl_80549478
-
 lbl_80549478:
-
 	# ROM: 0x545578
 	.asciz "SDP - CCB timeout in state: %d  CID: 0x%x"
 	.balign 4
@@ -37052,26 +34766,20 @@ lbl_80549478:
 
 
 .global lbl_805494A8
-
 lbl_805494A8:
-
 	# ROM: 0x5455A8
 	.asciz "SDP - server got unknown PDU: 0x%x"
 	.balign 4
 
 
 .global lbl_805494CC
-
 lbl_805494CC:
-
 	# ROM: 0x5455CC
 	.asciz "SDP - no buf for search rsp"
 
 
 .global lbl_805494E8
-
 lbl_805494E8:
-
 	# ROM: 0x5455E8
 	.4byte 0x803078FC
 	.4byte 0x8030789C
@@ -37093,18 +34801,14 @@ lbl_805494E8:
 
 
 .global lbl_8054952C
-
 lbl_8054952C:
-
 	# ROM: 0x54562C
 	.asciz "SDP - sdpu_build_n_send_error  code: 0x%x  CID: 0x%x"
 	.balign 4
 
 
 .global lbl_80549564
-
 lbl_80549564:
-
 	# ROM: 0x545664
 	.asciz "SDP - no buf for err msg"
 	.balign 4
@@ -37119,9 +34823,7 @@ lbl_80549564:
 
 
 .global lbl_805495A0
-
 lbl_805495A0:
-
 	# ROM: 0x5456A0
 	.4byte 0x80307B38
 	.4byte 0x80307AC8
@@ -37134,9 +34836,7 @@ lbl_805495A0:
 
 
 .global lbl_805495C0
-
 lbl_805495C0:
-
 	# ROM: 0x5456C0
 	.4byte 0x80308048
 	.4byte 0x80308054
@@ -37149,17 +34849,13 @@ lbl_805495C0:
 
 
 .global lbl_805495E0
-
 lbl_805495E0:
-
 	# ROM: 0x5456E0
 	.asciz "DBExceptionDestination\n"
 
 
 .global lbl_805495F8
-
 lbl_805495F8:
-
 	# ROM: 0x5456F8
 	.asciz "<< RVL_SDK - DSP \trelease build: Feb 27 2009 10:01:57 (0x4302_145) >>"
 	.balign 4
@@ -37171,9 +34867,7 @@ lbl_805495F8:
 
 
 .global lbl_80549678
-
 lbl_80549678:
-
 	# ROM: 0x545778
 	.asciz "DSP is booting task: 0x%08X\n"
 	.balign 4
@@ -37194,26 +34888,20 @@ lbl_80549678:
 
 
 .global lbl_80549880
-
 lbl_80549880:
-
 	# ROM: 0x545980
 	.asciz "Warning: DVDOpen(): file '%s' was not found under %s.\n"
 	.balign 4
 
 
 .global lbl_805498B8
-
 lbl_805498B8:
-
 	# ROM: 0x5459B8
 	.asciz "DVDReadAsync(): specified area is out of the file  "
 
 
 .global lbl_805498EC
-
 lbl_805498EC:
-
 	# ROM: 0x5459EC
 	.asciz "DVDRead(): specified area is out of the file  "
 	.balign 4
@@ -37223,17 +34911,13 @@ lbl_805498EC:
 
 
 .global lbl_80549968
-
 lbl_80549968:
-
 	# ROM: 0x545A68
 	.asciz "DVDChangeDisk(): FST in the new disc is too big.   "
 
 
 .global lbl_8054999C
-
 lbl_8054999C:
-
 	# ROM: 0x545A9C
 	.4byte 0x8030CBA8
 	.4byte 0x8030CB9C
@@ -37281,9 +34965,7 @@ lbl_8054999C:
 
 
 .global lbl_80549A48
-
 lbl_80549A48:
-
 	# ROM: 0x545B48
 	.4byte 0x8030DEF0
 	.4byte 0x8030DA84
@@ -37331,9 +35013,7 @@ lbl_80549A48:
 
 
 .global lbl_80549AF4
-
 lbl_80549AF4:
-
 	# ROM: 0x545BF4
 	.4byte 0x8030DA3C
 	.4byte 0x8030DA3C
@@ -37384,9 +35064,7 @@ lbl_80549AF4:
 
 
 .global lbl_80549BAC
-
 lbl_80549BAC:
-
 	# ROM: 0x545CAC
 	.4byte 0x8030EE64
 	.4byte 0x8030EE04
@@ -37434,9 +35112,7 @@ lbl_80549BAC:
 
 
 .global lbl_80549C58
-
 lbl_80549C58:
-
 	# ROM: 0x545D58
 	.4byte 0x8030ECF0
 	.4byte 0x8030ECF0
@@ -37495,17 +35171,13 @@ lbl_80549C58:
 
 
 .global lbl_80549D30
-
 lbl_80549D30:
-
 	# ROM: 0x545E30
 	.asciz "/shared2/test2/dvderror.dat"
 
 
 .global lbl_80549D4C
-
 lbl_80549D4C:
-
 	# ROM: 0x545E4C
 	.asciz "/shared2/test2"
 	.balign 4
@@ -37827,9 +35499,7 @@ lbl_80549D4C:
 
 
 .global lbl_8054A6C0
-
 lbl_8054A6C0:
-
 	# ROM: 0x5467C0
 	.asciz "(doTransactionCallback) Error - context mangled!\n"
 	.balign 4
@@ -37973,9 +35643,7 @@ lbl_8054A720:
 
 
 .global lbl_8054B658
-
 lbl_8054B658:
-
 	# ROM: 0x547758
 	.asciz "APP ERROR: Not enough IPC arena\n"
 	.balign 4
@@ -37983,9 +35651,7 @@ lbl_8054B658:
 
 
 .global lbl_8054B680
-
 lbl_8054B680:
-
 	# ROM: 0x547780
 	.asciz "<< RVL_SDK - GX \trelease build: Feb 27 2009 10:04:13 (0x4302_145) >>"
 	.balign 4
@@ -38066,9 +35732,7 @@ lbl_8054B680:
 
 
 .global lbl_8054B7F0
-
 lbl_8054B7F0:
-
 	# ROM: 0x5478F0
 	.4byte 0
 	.4byte 0x00010000
@@ -38121,9 +35785,7 @@ lbl_8054B7F0:
 
 
 .global lbl_8054B8B0
-
 lbl_8054B8B0:
-
 	# ROM: 0x5479B0
 	.4byte 0x80317590
 	.4byte 0x0000007F
@@ -38132,27 +35794,21 @@ lbl_8054B8B0:
 
 
 .global lbl_8054B8C0
-
 lbl_8054B8C0:
-
 	# ROM: 0x5479C0
 	.asciz "CPUFifo: %08X - %08X\n"
 	.balign 4
 
 
 .global lbl_8054B8D8
-
 lbl_8054B8D8:
-
 	# ROM: 0x5479D8
 	.asciz "GP Fifo: %08X - %08X\n"
 	.balign 4
 
 
 .global lbl_8054B8F0
-
 lbl_8054B8F0:
-
 	# ROM: 0x5479F0
 	.4byte 0x80319250
 	.4byte 0x80319264
@@ -38183,9 +35839,7 @@ lbl_8054B8F0:
 
 
 .global lbl_8054B958
-
 lbl_8054B958:
-
 	# ROM: 0x547A58
 	.4byte 0x803196F0
 	.4byte 0x80319708
@@ -38224,9 +35878,7 @@ lbl_8054B958:
 
 
 .global lbl_8054B9E0
-
 lbl_8054B9E0:
-
 	# ROM: 0x547AE0
 	.4byte 0x80319B2C
 	.4byte 0x80319B38
@@ -38268,9 +35920,7 @@ lbl_8054B9E0:
 
 
 .global lbl_8054BA74
-
 lbl_8054BA74:
-
 	# ROM: 0x547B74
 	.4byte 0
 	.4byte 0x028001E0
@@ -38290,9 +35940,7 @@ lbl_8054BA74:
 
 
 .global lbl_8054BAB0
-
 lbl_8054BAB0:
-
 	# ROM: 0x547BB0
 	.4byte 0
 	.4byte 0x028001E0
@@ -38357,9 +36005,7 @@ lbl_8054BAB0:
 
 
 .global lbl_8054BBA0
-
 lbl_8054BBA0:
-
 	# ROM: 0x547CA0
 	.4byte 0x00000008
 	.4byte 0x028001E0
@@ -38439,9 +36085,7 @@ lbl_8054BBA0:
 
 
 .global lbl_8054BCCC
-
 lbl_8054BCCC:
-
 	# ROM: 0x547DCC
 	.4byte 0x00000004
 	.4byte 0x02800210
@@ -38491,9 +36135,7 @@ lbl_8054BCCC:
 
 
 .global lbl_8054BD80
-
 lbl_8054BD80:
-
 	# ROM: 0x547E80
 	.4byte 0x00000014
 	.4byte 0x028001E0
@@ -38558,9 +36200,7 @@ lbl_8054BD80:
 
 
 .global lbl_8054BE70
-
 lbl_8054BE70:
-
 	# ROM: 0x547F70
 	.4byte 0x8031C0E0
 	.4byte 0x8031C0EC
@@ -38626,9 +36266,7 @@ lbl_8054BE70:
 
 
 .global lbl_8054BF64
-
 lbl_8054BF64:
-
 	# ROM: 0x548064
 	.4byte 0x8031C210
 	.4byte 0x8031C21C
@@ -38694,9 +36332,7 @@ lbl_8054BF64:
 
 
 .global lbl_8054C058
-
 lbl_8054C058:
-
 	# ROM: 0x548158
 	.4byte 0x8031C3F4
 	.4byte 0x8031C408
@@ -38717,9 +36353,7 @@ lbl_8054C058:
 
 
 .global lbl_8054C098
-
 lbl_8054C098:
-
 	# ROM: 0x548198
 	.4byte 0xC008F8AF
 	.4byte 0xC008A89F
@@ -38744,9 +36378,7 @@ lbl_8054C098:
 
 
 .global lbl_8054C0E8
-
 lbl_8054C0E8:
-
 	# ROM: 0x5481E8
 	.4byte 0
 	.4byte 0x00000001
@@ -38761,9 +36393,7 @@ lbl_8054C0E8:
 
 
 .global lbl_8054C110
-
 lbl_8054C110:
-
 	# ROM: 0x548210
 	.4byte 0
 	.4byte 0x00000001
@@ -38776,9 +36406,7 @@ lbl_8054C110:
 
 
 .global lbl_8054C130
-
 lbl_8054C130:
-
 	# ROM: 0x548230
 	.4byte 0x8031EFB0
 	.4byte 0x8031EFCC
@@ -38805,9 +36433,7 @@ lbl_8054C130:
 
 
 .global lbl_8054C188
-
 lbl_8054C188:
-
 	# ROM: 0x548288
 	.4byte 0x8031EB8C
 	.4byte 0x8031EBAC
@@ -38852,9 +36478,7 @@ lbl_8054C188:
 
 
 .global lbl_8054C240
-
 lbl_8054C240:
-
 	# ROM: 0x548340
 	.4byte 0x8054C280
 	.4byte 0
@@ -38871,9 +36495,7 @@ lbl_8054C240:
 
 
 .global lbl_8054C288
-
 lbl_8054C288:
-
 	# ROM: 0x548388
 	.4byte 0x8054C328
 	.4byte 0
@@ -38914,9 +36536,7 @@ lbl_8054C288:
 
 
 .global lbl_8054C330
-
 lbl_8054C330:
-
 	# ROM: 0x548430
 	.4byte 0x8054C3C8
 	.4byte 0
@@ -38955,9 +36575,7 @@ lbl_8054C330:
 
 
 .global lbl_8054C3D0
-
 lbl_8054C3D0:
-
 	# ROM: 0x5484D0
 	.4byte 0x8054C438
 	.4byte 0
@@ -38985,9 +36603,7 @@ lbl_8054C3D0:
 
 
 .global lbl_8054C440
-
 lbl_8054C440:
-
 	# ROM: 0x548540
 	.4byte 0x8054C4C8
 	.4byte 0
@@ -39028,9 +36644,7 @@ lbl_8054C440:
 
 
 .global lbl_8054C4F8
-
 lbl_8054C4F8:
-
 	# ROM: 0x5485F8
 	.4byte 0x8054C520
 	.4byte 0
@@ -39094,9 +36708,7 @@ lbl_8054C4F8:
 
 
 .global lbl_8054C808
-
 lbl_8054C808:
-
 	# ROM: 0x548908
 	.4byte 0x8054C528
 	.4byte 0x8054C540
@@ -39131,25 +36743,19 @@ lbl_8054C808:
 
 
 .global lbl_8054C8C0
-
 lbl_8054C8C0:
-
 	# ROM: 0x5489C0
 	.4byte 0x8054C878
 
 
 .global lbl_8054C8C4
-
 lbl_8054C8C4:
-
 	# ROM: 0x5489C4
 	.4byte 0x805CD758
 
 
 .global lbl_8054C8C8
-
 lbl_8054C8C8:
-
 	# ROM: 0x5489C8
 	.asciz "P1_Def.brlyt"
 	.balign 4
@@ -39180,9 +36786,7 @@ lbl_8054C8C8:
 
 
 .global lbl_8054C960
-
 lbl_8054C960:
-
 	# ROM: 0x548A60
 	.4byte 0x8054C93C
 	.4byte 0x8054C948
@@ -39507,9 +37111,7 @@ lbl_8054C960:
 
 
 .global lbl_8054D260
-
 lbl_8054D260:
-
 	# ROM: 0x549360
 	.4byte 0x8054D1DC
 	.4byte 0x8054D1E8
@@ -39530,9 +37132,7 @@ lbl_8054D260:
 
 
 .global lbl_8054D2AC
-
 lbl_8054D2AC:
-
 	# ROM: 0x5493AC
 	.4byte 0x8054D288
 	.4byte 0x8054D294
@@ -39572,9 +37172,7 @@ lbl_8054D2AC:
 
 
 .global lbl_8054D3B8
-
 lbl_8054D3B8:
-
 	# ROM: 0x5494B8
 	.4byte 0x8054D2B8
 	.4byte 0x8054D2C8
@@ -39603,9 +37201,7 @@ lbl_8054D3B8:
 
 
 .global lbl_8054D428
-
 lbl_8054D428:
-
 	# ROM: 0x549528
 	.4byte 0x80324E0C
 	.4byte 0x80324FD8
@@ -39630,9 +37226,7 @@ lbl_8054D428:
 
 
 .global lbl_8054D478
-
 lbl_8054D478:
-
 	# ROM: 0x549578
 	.4byte 0x80328514
 	.4byte 0x803285D4
@@ -39647,9 +37241,7 @@ lbl_8054D478:
 
 
 .global lbl_8054D4A0
-
 lbl_8054D4A0:
-
 	# ROM: 0x5495A0
 	.4byte 0x80329364
 	.4byte 0x803293D8
@@ -39664,9 +37256,7 @@ lbl_8054D4A0:
 
 
 .global lbl_8054D4C8
-
 lbl_8054D4C8:
-
 	# ROM: 0x5495C8
 	.4byte 0x80329FD4
 	.4byte 0x8032A068
@@ -39681,9 +37271,7 @@ lbl_8054D4C8:
 
 
 .global lbl_8054D4F0
-
 lbl_8054D4F0:
-
 	# ROM: 0x5495F0
 	.4byte 0x8054D530
 	.4byte 0
@@ -39720,9 +37308,7 @@ lbl_8054D4F0:
 
 
 .global lbl_8054D5B8
-
 lbl_8054D5B8:
-
 	# ROM: 0x5496B8
 	.4byte 0x8054D608
 	.4byte 0
@@ -39747,25 +37333,19 @@ lbl_8054D5B8:
 
 
 .global lbl_8054D638
-
 lbl_8054D638:
-
 	# ROM: 0x549738
 	.4byte 0x2E000000
 
 
 .global lbl_8054D63C
-
 lbl_8054D63C:
-
 	# ROM: 0x54973C
 	.4byte 0x2E2E0000
 
 
 .global lbl_8054D640
-
 lbl_8054D640:
-
 	# ROM: 0x549740
 	.4byte 0x8054D688
 	.4byte 0
@@ -39787,9 +37367,7 @@ lbl_8054D640:
 
 
 .global lbl_8054D6B8
-
 lbl_8054D6B8:
-
 	# ROM: 0x5497B8
 	.4byte 0x8054D748
 	.4byte 0
@@ -39839,9 +37417,7 @@ lbl_8054D6B8:
 
 
 .global lbl_8054D7A0
-
 lbl_8054D7A0:
-
 	# ROM: 0x5498A0
 	.4byte 0x8054D7C8
 	.4byte 0
@@ -39854,9 +37430,7 @@ lbl_8054D7A0:
 
 
 .global lbl_8054D7D0
-
 lbl_8054D7D0:
-
 	# ROM: 0x5498D0
 	.4byte 0x8054D7F0
 	.4byte 0
@@ -39868,9 +37442,7 @@ lbl_8054D7D0:
 
 
 .global lbl_8054D7F8
-
 lbl_8054D7F8:
-
 	# ROM: 0x5498F8
 	.4byte 0x8054D840
 	.4byte 0
@@ -39891,9 +37463,7 @@ lbl_8054D7F8:
 
 
 .global lbl_8054D848
-
 lbl_8054D848:
-
 	# ROM: 0x549948
 	.4byte 0x0000001F
 	.4byte 0x0000001B
@@ -39906,9 +37476,7 @@ lbl_8054D848:
 
 
 .global lbl_8054D868
-
 lbl_8054D868:
-
 	# ROM: 0x549968
 	.4byte 0x0000001F
 	.4byte 0x0000001B
@@ -39921,9 +37489,7 @@ lbl_8054D868:
 
 
 .global lbl_8054D888
-
 lbl_8054D888:
-
 	# ROM: 0x549988
 	.4byte 0x8054D8C8
 	.4byte 0
@@ -39942,9 +37508,7 @@ lbl_8054D888:
 
 
 .global lbl_8054D8D0
-
 lbl_8054D8D0:
-
 	# ROM: 0x5499D0
 	.4byte 0x8054D770
 	.4byte 0
@@ -39975,9 +37539,7 @@ lbl_8054D8D0:
 
 
 .global lbl_8054D938
-
 lbl_8054D938:
-
 	# ROM: 0x549A38
 	.4byte 0x8054D9D0
 	.4byte 0
@@ -40018,9 +37580,7 @@ lbl_8054D938:
 
 
 .global lbl_8054D9D8
-
 lbl_8054D9D8:
-
 	# ROM: 0x549AD8
 	.4byte 0x8054D6B0
 	.4byte 0
@@ -40032,9 +37592,7 @@ lbl_8054D9D8:
 
 
 .global lbl_8054D9F4
-
 lbl_8054D9F4:
-
 	# ROM: 0x549AF4
 	.4byte 0x8054DA98
 	.4byte 0
@@ -40078,9 +37636,7 @@ lbl_8054D9F4:
 
 
 .global lbl_8054DAA0
-
 lbl_8054DAA0:
-
 	# ROM: 0x549BA0
 	.4byte 0x00000100
 	.4byte 0x00010101
@@ -40100,9 +37656,7 @@ lbl_8054DAA0:
 
 
 .global lbl_8054DADC
-
 lbl_8054DADC:
-
 	# ROM: 0x549BDC
 	.4byte 0x8054DB80
 	.4byte 0
@@ -40146,9 +37700,7 @@ lbl_8054DADC:
 
 
 .global lbl_8054DB88
-
 lbl_8054DB88:
-
 	# ROM: 0x549C88
 	.4byte 0
 	.4byte 0x3F800000
@@ -41181,9 +38733,7 @@ lbl_8054DB88:
 
 
 .global lbl_8054EB98
-
 lbl_8054EB98:
-
 	# ROM: 0x54AC98
 	.4byte 0
 	.4byte 0x3FA2EBF1
@@ -41254,9 +38804,7 @@ lbl_8054EB98:
 
 
 .global lbl_8054ECA0
-
 lbl_8054ECA0:
-
 	# ROM: 0x54ADA0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -41273,9 +38821,7 @@ lbl_8054ECA0:
 
 
 .global lbl_8054ECD0
-
 lbl_8054ECD0:
-
 	# ROM: 0x54ADD0
 	.4byte 0x8054ED50
 	.4byte 0
@@ -41326,9 +38872,7 @@ lbl_8054ECD0:
 
 
 .global lbl_8054EDC0
-
 lbl_8054EDC0:
-
 	# ROM: 0x54AEC0
 	.4byte 0x8054ED88
 	.4byte 0
@@ -41355,9 +38899,7 @@ lbl_8054EDC0:
 
 
 .global lbl_8054EE18
-
 lbl_8054EE18:
-
 	# ROM: 0x54AF18
 	.4byte 0x8054EDA8
 	.4byte 0
@@ -41384,9 +38926,7 @@ lbl_8054EE18:
 
 
 .global lbl_8054EE70
-
 lbl_8054EE70:
-
 	# ROM: 0x54AF70
 	.4byte 0x8054EEB0
 	.4byte 0
@@ -41401,9 +38941,7 @@ lbl_8054EE70:
 
 
 .global lbl_8054EEB8
-
 lbl_8054EEB8:
-
 	# ROM: 0x54AFB8
 	.4byte 0x8054EEF0
 	.4byte 0
@@ -41417,25 +38955,19 @@ lbl_8054EEB8:
 
 
 .global lbl_8054EEF8
-
 lbl_8054EEF8:
-
 	# ROM: 0x54AFF8
 	.4byte 0x00000100
 
 
 .global lbl_8054EEFC
-
 lbl_8054EEFC:
-
 	# ROM: 0x54AFFC
 	.4byte 0x00000100
 
 
 .global lbl_8054EF00
-
 lbl_8054EF00:
-
 	# ROM: 0x54B000
 	.4byte 0x00000001
 	.4byte 0x00010001
@@ -42180,9 +39712,7 @@ lbl_8054EF00:
 
 
 .global lbl_8054FA90
-
 lbl_8054FA90:
-
 	# ROM: 0x54BB90
 	.4byte 0
 	.4byte 0x3C000219
@@ -42315,9 +39845,7 @@ lbl_8054FA90:
 
 
 .global lbl_8054FC90
-
 lbl_8054FC90:
-
 	# ROM: 0x54BD90
 	.4byte 0xFC400000
 	.4byte 0xFCB67A80
@@ -42450,9 +39978,7 @@ lbl_8054FC90:
 
 
 .global lbl_8054FE90
-
 lbl_8054FE90:
-
 	# ROM: 0x54BF90
 	.4byte 0xFC400000
 	.4byte 0xFE70DF7B
@@ -42550,9 +40076,7 @@ lbl_8054FE90:
 
 
 .global lbl_80550004
-
 lbl_80550004:
-
 	# ROM: 0x54C104
 	.4byte 0xFFFA91CF
 	.4byte 0xFFFB7FA0
@@ -42564,9 +40088,7 @@ lbl_80550004:
 
 
 .global lbl_80550020
-
 lbl_80550020:
-
 	# ROM: 0x54C120
 	.4byte 0x3F800000
 	.4byte 0x3F8012F1
@@ -42823,9 +40345,7 @@ lbl_80550020:
 
 
 .global lbl_80550410
-
 lbl_80550410:
-
 	# ROM: 0x54C510
 	.4byte 0x02020202
 	.4byte 0x02020202
@@ -42864,9 +40384,7 @@ lbl_80550410:
 
 
 .global lbl_805504D8
-
 lbl_805504D8:
-
 	# ROM: 0x54C5D8
 	.4byte 0x00010302
 	.4byte 0x00040105
@@ -42877,9 +40395,7 @@ lbl_805504D8:
 
 
 .global lbl_805504F0
-
 lbl_805504F0:
-
 	# ROM: 0x54C5F0
 	.4byte 0x00000001
 	.4byte 0x00010001
@@ -43624,9 +41140,7 @@ lbl_805504F0:
 
 
 .global lbl_80551080
-
 lbl_80551080:
-
 	# ROM: 0x54D180
 	.asciz "<< RVL_SDK - NAND \trelease build: Feb 27 2009 10:05:16 (0x4302_145) >>"
 	.balign 4
@@ -43639,9 +41153,7 @@ lbl_80551080:
 
 
 .global lbl_805510E0
-
 lbl_805510E0:
-
 	# ROM: 0x54D1E0
 	.4byte 0x2F000000
 	.4byte 0
@@ -43666,18 +41178,14 @@ lbl_805510E0:
 
 
 .global lbl_80551130
-
 lbl_80551130:
-
 	# ROM: 0x54D230
 	.asciz "/shared2"
 	.balign 4
 
 
 .global lbl_8055113C
-
 lbl_8055113C:
-
 	# ROM: 0x54D23C
 	.asciz "/shared2/"
 	.balign 4
@@ -43700,9 +41208,7 @@ lbl_8055113C:
 
 
 .global lbl_80551250
-
 lbl_80551250:
-
 	# ROM: 0x54D350
 	.4byte 0x80665B10
 	.4byte 0x80665B18
@@ -43718,36 +41224,28 @@ lbl_80551250:
 
 
 .global lbl_8055127C
-
 lbl_8055127C:
-
 	# ROM: 0x54D37C
 	.asciz "nandUserAreaCallback"
 	.balign 4
 
 
 .global lbl_80551294
-
 lbl_80551294:
-
 	# ROM: 0x54D394
 	.asciz "Illegal status is detected at %s()"
 	.balign 4
 
 
 .global lbl_805512B8
-
 lbl_805512B8:
-
 	# ROM: 0x54D3B8
 	.asciz "/shared2/test2/nanderr.log"
 	.balign 4
 
 
 .global lbl_805512D4
-
 lbl_805512D4:
-
 	# ROM: 0x54D3D4
 	.asciz "%d %04d/%02d/%02d %02d:%02d:%02d %s %s"
 	.balign 4
@@ -43755,9 +41253,7 @@ lbl_805512D4:
 
 
 .global lbl_80551300
-
 lbl_80551300:
-
 	# ROM: 0x54D400
 	.asciz "<< RVL_SDK - OS \trelease build: Feb 27 2009 10:04:29 (0x4302_145) >>"
 	.balign 4
@@ -43836,9 +41332,7 @@ lbl_80551300:
 
 
 .global lbl_805517A8
-
 lbl_805517A8:
-
 	# ROM: 0x54D8A8
 	.4byte 0x80353520
 	.4byte 0xFFFFFFFF
@@ -43847,9 +41341,7 @@ lbl_805517A8:
 
 
 .global lbl_805517B8
-
 lbl_805517B8:
-
 	# ROM: 0x54D8B8
 	.4byte 0x029F0010
 	.4byte 0x029F0033
@@ -43886,9 +41378,7 @@ lbl_805517B8:
 
 
 .global lbl_80551838
-
 lbl_80551838:
-
 	# ROM: 0x54D938
 	.asciz ">>> L2 INVALIDATE : SHOULD NEVER HAPPEN\n"
 	.balign 4
@@ -43921,9 +41411,7 @@ lbl_80551838:
 
 
 .global lbl_80551A70
-
 lbl_80551A70:
-
 	# ROM: 0x54DB70
 	.asciz "------------------------- Context 0x%08x -------------------------\n"
 	.4byte 0
@@ -43950,9 +41438,7 @@ lbl_80551A70:
 
 
 .global lbl_80551C28
-
 lbl_80551C28:
-
 	# ROM: 0x54DD28
 	.asciz "FPU-unavailable handler installed\n"
 	.balign 4
@@ -43960,9 +41446,7 @@ lbl_80551C28:
 
 
 .global lbl_80551C50
-
 lbl_80551C50:
-
 	# ROM: 0x54DD50
 	.asciz " in \"%s\" on line %d.\n"
 	.balign 4
@@ -43993,26 +41477,20 @@ lbl_80551C50:
 
 
 .global lbl_80551F30
-
 lbl_80551F30:
-
 	# ROM: 0x54E030
 	.asciz "\nOSExec(): Failed to exec %d in %d\n"
 
 
 .global lbl_80551F54
-
 lbl_80551F54:
-
 	# ROM: 0x54E054
 	.asciz "\nOSExec(): The specified game doesn't exist in the disc\n"
 	.balign 4
 
 
 .global lbl_80551F90
-
 lbl_80551F90:
-
 	# ROM: 0x54E090
 	.asciz "2004/02/01"
 	.balign 4
@@ -44020,9 +41498,7 @@ lbl_80551F90:
 
 
 .global lbl_80551FA0
-
 lbl_80551FA0:
-
 	# ROM: 0x54E0A0
 	.4byte 0x020C020D
 	.4byte 0x020E020F
@@ -44123,9 +41599,7 @@ lbl_80551FA0:
 
 
 .global lbl_80552120
-
 lbl_80552120:
-
 	# ROM: 0x54E220
 	.4byte 0x00000001
 	.4byte 0x00020003
@@ -44742,9 +42216,7 @@ lbl_80552120:
 
 
 .global lbl_80552AB0
-
 lbl_80552AB0:
-
 	# ROM: 0x54EBB0
 	.4byte 0x00000100
 	.4byte 0x00000040
@@ -44761,9 +42233,7 @@ lbl_80552AB0:
 
 
 .global lbl_80552AE0
-
 lbl_80552AE0:
-
 	# ROM: 0x54EBE0
 	.4byte OnShutdown
 	.4byte 0x0000007F
@@ -44772,18 +42242,14 @@ lbl_80552AE0:
 
 
 .global lbl_80552AF0
-
 lbl_80552AF0:
-
 	# ROM: 0x54EBF0
 	.asciz "OSReset.c"
 	.balign 4
 
 
 .global lbl_80552AFC
-
 lbl_80552AFC:
-
 	# ROM: 0x54EBFC
 	.asciz "__OSHotReset(): Falied to reset system.\n"
 	.balign 4
@@ -44792,9 +42258,7 @@ lbl_80552AFC:
 
 
 .global lbl_80552B5C
-
 lbl_80552B5C:
-
 	# ROM: 0x54EC5C
 	.asciz "OSReturnToMenu(): Falied to boot system menu.\n"
 	.balign 4
@@ -44819,9 +42283,7 @@ lbl_80552B5C:
 
 
 .global lbl_80552CDC
-
 lbl_80552CDC:
-
 	# ROM: 0x54EDDC
 	.asciz "OSResetSystem() is obsoleted. It doesn't work any longer.\n"
 	.balign 4
@@ -44831,9 +42293,7 @@ lbl_80552CDC:
 
 
 .global lbl_80552D58
-
 lbl_80552D58:
-
 	# ROM: 0x54EE58
 	.4byte 0
 	.4byte 0x0000001F
@@ -44850,9 +42310,7 @@ lbl_80552D58:
 
 
 .global lbl_80552D88
-
 lbl_80552D88:
-
 	# ROM: 0x54EE88
 	.4byte 0
 	.4byte 0x0000001F
@@ -44869,9 +42327,7 @@ lbl_80552D88:
 
 
 .global lbl_80552DB8
-
 lbl_80552DB8:
-
 	# ROM: 0x54EEB8
 	.4byte 0x20AC0000
 	.4byte 0x201A0192
@@ -56796,9 +54252,7 @@ lbl_80552DB8:
 
 
 .global lbl_8055E7F8
-
 lbl_8055E7F8:
-
 	# ROM: 0x55A8F8
 	.4byte 0x80552DF8
 	.4byte 0
@@ -57059,71 +54513,55 @@ lbl_8055E7F8:
 
 
 .global lbl_8055EBF8
-
 lbl_8055EBF8:
-
 	# ROM: 0x55ACF8
 	.asciz "/dev/stm/immediate"
 	.balign 4
 
 
 .global lbl_8055EC0C
-
 lbl_8055EC0C:
-
 	# ROM: 0x55AD0C
 	.asciz "/dev/stm/eventhook"
 	.balign 4
 
 
 .global lbl_8055EC20
-
 lbl_8055EC20:
-
 	# ROM: 0x55AD20
 	.asciz "OSStateTM.c"
 
 
 .global lbl_8055EC2C
-
 lbl_8055EC2C:
-
 	# ROM: 0x55AD2C
 	.asciz "Error: The firmware doesn't support shutdown feature.\n"
 	.balign 4
 
 
 .global lbl_8055EC64
-
 lbl_8055EC64:
-
 	# ROM: 0x55AD64
 	.asciz "Error: The firmware doesn't support reboot feature.\n"
 	.balign 4
 
 
 .global lbl_8055EC9C
-
 lbl_8055EC9C:
-
 	# ROM: 0x55AD9C
 	.asciz "Error on STM state event handler\n"
 	.balign 4
 
 
 .global lbl_8055ECC0
-
 lbl_8055ECC0:
-
 	# ROM: 0x55ADC0
 	.asciz "/title/00000001/00000002/data/play_rec.dat"
 	.balign 4
 
 
 .global lbl_8055ECEC
-
 lbl_8055ECEC:
-
 	# ROM: 0x55ADEC
 	.4byte 0x8035D7B0
 	.4byte 0x8035D7BC
@@ -57154,9 +54592,7 @@ lbl_8055ED30:
 
 
 .global lbl_8055EDF0
-
 lbl_8055EDF0:
-
 	# ROM: 0x55AEF0
 	.asciz "/dev/net/kd/request"
 	.asciz "NWC24SuspendScheduler"
@@ -57168,9 +54604,7 @@ lbl_8055EDF0:
 
 
 .global lbl_8055EE4C
-
 lbl_8055EE4C:
-
 	# ROM: 0x55AF4C
 	.asciz "NWC24Shutdown_: Give up!\n"
 	.balign 4
@@ -57179,9 +54613,7 @@ lbl_8055EE4C:
 
 
 .global lbl_8055EE80
-
 lbl_8055EE80:
-
 	# ROM: 0x55AF80
 	.asciz "/dev/net/kd/time"
 	.balign 4
@@ -57189,9 +54621,7 @@ lbl_8055EE80:
 
 
 .global lbl_8055EE98
-
 lbl_8055EE98:
-
 	# ROM: 0x55AF98
 	.asciz "/shared2/sys/NANDBOOTINFO"
 	.balign 4
@@ -57199,27 +54629,21 @@ lbl_8055EE98:
 
 
 .global lbl_8055EEB8
-
 lbl_8055EEB8:
-
 	# ROM: 0x55AFB8
 	.asciz "/shared2/expired"
 	.balign 4
 
 
 .global lbl_8055EECC
-
 lbl_8055EECC:
-
 	# ROM: 0x55AFCC
 	.asciz "OSPlayTime.c"
 	.balign 4
 
 
 .global lbl_8055EEDC
-
 lbl_8055EEDC:
-
 	# ROM: 0x55AFDC
 	.asciz "PlayTime: %d seconds left\n"
 	.balign 4
@@ -57240,9 +54664,7 @@ lbl_8055EEDC:
 
 
 .global lbl_8055EF88
-
 lbl_8055EF88:
-
 	# ROM: 0x55B088
 	.4byte 0x80665BC4
 	.4byte 0
@@ -57321,9 +54743,7 @@ lbl_8055EF88:
 
 
 .global lbl_8055F0B0
-
 lbl_8055F0B0:
-
 	# ROM: 0x55B1B0
 	.4byte 0x80360BC0
 	.4byte 0x80360C04
@@ -57338,9 +54758,7 @@ lbl_8055F0B0:
 
 
 .global lbl_8055F0D8
-
 lbl_8055F0D8:
-
 	# ROM: 0x55B1D8
 	.4byte 0x004A504E
 	.4byte 0x00015553
@@ -57363,9 +54781,7 @@ lbl_8055F0D8:
 
 
 .global lbl_8055F120
-
 lbl_8055F120:
-
 	# ROM: 0x55B220
 	.4byte 0x004A5000
 	.4byte 0x01555300
@@ -57378,9 +54794,7 @@ lbl_8055F120:
 
 
 .global lbl_8055F180
-
 lbl_8055F180:
-
 	# ROM: 0x55B280
 	.4byte 0xFFFFFFFF
 	.4byte 0
@@ -57391,9 +54805,7 @@ lbl_8055F180:
 
 
 .global lbl_8055F198
-
 lbl_8055F198:
-
 	# ROM: 0x55B298
 	.4byte 0x00000008
 	.4byte 0x00000008
@@ -57402,9 +54814,7 @@ lbl_8055F198:
 
 
 .global lbl_8055F1A8
-
 lbl_8055F1A8:
-
 	# ROM: 0x55B2A8
 	.4byte 0x00F60200
 	.4byte 0x000E1300
@@ -57436,9 +54846,7 @@ lbl_8055F1A8:
 
 
 .global lbl_8055F240
-
 lbl_8055F240:
-
 	# ROM: 0x55B340
 	.asciz "invalid version number for texture palette"
 	.balign 4
@@ -57446,9 +54854,7 @@ lbl_8055F240:
 
 
 .global lbl_8055F270
-
 lbl_8055F270:
-
 	# ROM: 0x55B370
 	.asciz "USB ERR: "
 	.balign 4
@@ -57570,18 +54976,14 @@ lbl_8055F270:
 
 
 .global lbl_8055FAA0
-
 lbl_8055FAA0:
-
 	# ROM: 0x55BBA0
 	.asciz "<< RVL_SDK - VI \trelease build: Feb 27 2009 10:04:46 (0x4302_145) >>"
 	.balign 4
 
 
 .global lbl_8055FAE8
-
 lbl_8055FAE8:
-
 	# ROM: 0x55BBE8
 	.4byte 0x060000F0
 	.4byte 0x00180019
@@ -57691,9 +55093,7 @@ lbl_8055FAE8:
 
 
 .global lbl_8055FC8C
-
 lbl_8055FC8C:
-
 	# ROM: 0x55BD8C
 	.4byte 0x01F001DC
 	.4byte 0x01AE0174
@@ -57757,9 +55157,7 @@ lbl_8055FC8C:
 
 
 .global lbl_8055FD78
-
 lbl_8055FD78:
-
 	# ROM: 0x55BE78
 	.4byte 0x80363F30
 	.4byte 0x0000007F
@@ -57768,9 +55166,7 @@ lbl_8055FD78:
 
 
 .global lbl_8055FD88
-
 lbl_8055FD88:
-
 	# ROM: 0x55BE88
 	.4byte 0x80364420
 	.4byte 0x80364428
@@ -57784,9 +55180,7 @@ lbl_8055FD88:
 
 
 .global lbl_8055FDAC
-
 lbl_8055FDAC:
-
 	# ROM: 0x55BEAC
 	.4byte 0x803649A0
 	.4byte 0x803649AC
@@ -57826,9 +55220,7 @@ lbl_8055FDAC:
 
 
 .global lbl_8055FE38
-
 lbl_8055FE38:
-
 	# ROM: 0x55BF38
 	.4byte 0x80365134
 	.4byte 0x8036513C
@@ -57856,9 +55248,7 @@ lbl_8055FE38:
 
 
 .global lbl_8055FFB0
-
 lbl_8055FFB0:
-
 	# ROM: 0x55C0B0
 	.4byte 0x80366538
 	.4byte 0x80366540
@@ -57872,9 +55262,7 @@ lbl_8055FFB0:
 
 
 .global lbl_8055FFD4
-
 lbl_8055FFD4:
-
 	# ROM: 0x55C0D4
 	.4byte 0x80366914
 	.4byte 0x8036691C
@@ -57888,9 +55276,7 @@ lbl_8055FFD4:
 
 
 .global lbl_8055FFF8
-
 lbl_8055FFF8:
-
 	# ROM: 0x55C0F8
 	.4byte 0
 	.4byte 0
@@ -58254,54 +55640,42 @@ lbl_8055FFF8:
 
 
 .global lbl_80560608
-
 lbl_80560608:
-
 	# ROM: 0x55C708
 	.asciz "<< RVL_SDK - WPAD \trelease build: Jun 22 2009 18:33:21 (0x4302_145) >>"
 	.balign 4
 
 
 .global lbl_80560650
-
 lbl_80560650:
-
 	# ROM: 0x55C750
 	.asciz "WBCReadDummy\n"
 	.balign 4
 
 
 .global lbl_80560660
-
 lbl_80560660:
-
 	# ROM: 0x55C760
 	.asciz "WBCSetZEROPointDummy\n"
 	.balign 4
 
 
 .global lbl_80560678
-
 lbl_80560678:
-
 	# ROM: 0x55C778
 	.asciz "WBCGetTGCWeightDummy\n"
 	.balign 4
 
 
 .global lbl_80560690
-
 lbl_80560690:
-
 	# ROM: 0x55C790
 	.asciz "Wait for %d ms until start reconnect!\n"
 	.balign 4
 
 
 .global lbl_805606B8
-
 lbl_805606B8:
-
 	# ROM: 0x55C7B8
 	.4byte 0x80368E90
 	.4byte 0x0000007F
@@ -58310,18 +55684,14 @@ lbl_805606B8:
 
 
 .global lbl_805606C8
-
 lbl_805606C8:
-
 	# ROM: 0x55C7C8
 	.asciz "handle = %d, repid = %02x\n"
 	.balign 4
 
 
 .global lbl_805606E4
-
 lbl_805606E4:
-
 	# ROM: 0x55C7E4
 	.4byte 0x803696E0
 	.4byte 0x803696E0
@@ -58344,35 +55714,27 @@ lbl_805606E4:
 
 
 .global lbl_80560770
-
 lbl_80560770:
-
 	# ROM: 0x55C870
 	.asciz "WPADInit()\n"
 
 
 .global lbl_8056077C
-
 lbl_8056077C:
-
 	# ROM: 0x55C87C
 	.asciz " ==>this error means that the firmware is for NDEV %s\n"
 	.balign 4
 
 
 .global lbl_805607B4
-
 lbl_805607B4:
-
 	# ROM: 0x55C8B4
 	.asciz "2.1 or later"
 	.balign 4
 
 
 .global lbl_805607C4
-
 lbl_805607C4:
-
 	# ROM: 0x55C8C4
 	.asciz "Nintendo RVL-WBC"
 	.balign 4
@@ -58387,43 +55749,33 @@ lbl_805607C4:
 
 
 .global lbl_80560860
-
 lbl_80560860:
-
 	# ROM: 0x55C960
 	.asciz "HID Parser reports: %d\n"
 
 
 .global lbl_80560878
-
 lbl_80560878:
-
 	# ROM: 0x55C978
 	.asciz "WARNING: Overwritten the callback needed by KPAD.\n"
 	.balign 4
 
 
 .global lbl_805608AC
-
 lbl_805608AC:
-
 	# ROM: 0x55C9AC
 	.asciz "         Please call KPADSetSamplingCallback instead of WPADSetSamplingCallback.\n"
 	.balign 4
 
 
 .global lbl_80560900
-
 lbl_80560900:
-
 	# ROM: 0x55CA00
 	.asciz "         Please call KPADSetConnectCallback instead of WPADSetConnectCallback.\n"
 
 
 .global lbl_80560950
-
 lbl_80560950:
-
 	# ROM: 0x55CA50
 	.4byte 0x8036CBE4
 	.4byte 0x8036CBE4
@@ -58441,9 +55793,7 @@ lbl_80560950:
 
 
 .global lbl_80560984
-
 lbl_80560984:
-
 	# ROM: 0x55CA84
 	.4byte 0x8036CCD0
 	.4byte 0x8036CCD0
@@ -58461,9 +55811,7 @@ lbl_80560984:
 
 
 .global lbl_805609B8
-
 lbl_805609B8:
-
 	# ROM: 0x55CAB8
 	.4byte 0x8036CFA4
 	.4byte 0x8036CFA4
@@ -58481,9 +55829,7 @@ lbl_805609B8:
 
 
 .global lbl_805609EC
-
 lbl_805609EC:
-
 	# ROM: 0x55CAEC
 	.4byte 0x8036FF58
 	.4byte 0x8036FF64
@@ -58505,9 +55851,7 @@ lbl_805609EC:
 
 
 .global lbl_80560A30
-
 lbl_80560A30:
-
 	# ROM: 0x55CB30
 	.4byte 0x80371FB0
 	.4byte 0x803722F0
@@ -58544,9 +55888,7 @@ lbl_80560A30:
 
 
 .global lbl_80560AB0
-
 lbl_80560AB0:
-
 	# ROM: 0x55CBB0
 	.asciz "detaching extension during initialization.\n"
 	.asciz "Dpd Setting is ok.\n"
@@ -58604,17 +55946,13 @@ lbl_80560AB0:
 
 
 .global lbl_80560E68
-
 lbl_80560E68:
-
 	# ROM: 0x55CF68
 	.asciz "Received report 20\n"
 
 
 .global lbl_80560E7C
-
 lbl_80560E7C:
-
 	# ROM: 0x55CF7C
 	.asciz "initialize attachment\n"
 	.balign 4
@@ -58643,9 +55981,7 @@ lbl_80560E7C:
 
 
 .global lbl_80560FA0
-
 lbl_80560FA0:
-
 	# ROM: 0x55D0A0
 	.4byte 0xA877A6E0
 	.4byte 0xF7435A35
@@ -59838,9 +57174,7 @@ lbl_80560FA0:
 
 
 .global lbl_805622C8
-
 lbl_805622C8:
-
 	# ROM: 0x55E3C8
 	.4byte 0x05010905
 	.4byte 0xA1018510
@@ -59980,27 +57314,21 @@ lbl_805622C8:
 
 
 .global lbl_805624E4
-
 lbl_805624E4:
-
 	# ROM: 0x55E5E4
 	.asciz "App_MEMalloc\n"
 	.balign 4
 
 
 .global lbl_805624F4
-
 lbl_805624F4:
-
 	# ROM: 0x55E5F4
 	.asciz "App_MEMfree\n"
 	.balign 4
 
 
 .global lbl_80562504
-
 lbl_80562504:
-
 	# ROM: 0x55E604
 	.asciz "__wudSyncFlushCallback() : %d, Sync: %d\n"
 	.balign 4
@@ -60009,9 +57337,7 @@ lbl_80562504:
 
 
 .global lbl_80562544
-
 lbl_80562544:
-
 	# ROM: 0x55E644
 	.asciz "Nintendo RVL-WBC"
 	.balign 4
@@ -60024,9 +57350,7 @@ lbl_80562544:
 
 
 .global lbl_805625AC
-
 lbl_805625AC:
-
 	# ROM: 0x55E6AC
 	.asciz "%d devices is stored into SC.\n"
 	.balign 4
@@ -60034,43 +57358,33 @@ lbl_805625AC:
 
 
 .global lbl_805625D0
-
 lbl_805625D0:
-
 	# ROM: 0x55E6D0
 	.asciz "NANDOpen. [%d]\n"
 
 
 .global lbl_805625E0
-
 lbl_805625E0:
-
 	# ROM: 0x55E6E0
 	.asciz "NANDSeek. [%d]\n"
 
 
 .global lbl_805625F0
-
 lbl_805625F0:
-
 	# ROM: 0x55E6F0
 	.asciz "NANDWrite. [%d]\n"
 	.balign 4
 
 
 .global lbl_80562604
-
 lbl_80562604:
-
 	# ROM: 0x55E704
 	.asciz "NANDClose. [%d]\n"
 	.balign 4
 
 
 .global lbl_80562618
-
 lbl_80562618:
-
 	# ROM: 0x55E718
 	.asciz "Pairing Done\n"
 	.balign 4
@@ -60097,9 +57411,7 @@ lbl_80562618:
 
 
 .global lbl_805627BC
-
 lbl_805627BC:
-
 	# ROM: 0x55E8BC
 	.asciz "__wudDeleteFlushCallback() : %d, Delete: %d\n"
 	.balign 4
@@ -60118,9 +57430,7 @@ lbl_805627BC:
 
 
 .global lbl_8056288C
-
 lbl_8056288C:
-
 	# ROM: 0x55E98C
 	.asciz "__wudInitFlushCallback() : %d, Init: %d\n"
 	.balign 4
@@ -60144,9 +57454,7 @@ lbl_8056288C:
 
 
 .global lbl_805629E8
-
 lbl_805629E8:
-
 	# ROM: 0x55EAE8
 	.asciz "__wudShutdownFlushCallback() : %d, Shutdown: %d\n"
 	.balign 4
@@ -60154,43 +57462,33 @@ lbl_805629E8:
 
 
 .global lbl_80562A20
-
 lbl_80562A20:
-
 	# ROM: 0x55EB20
 	.asciz "__wudClearControlBlock\n"
 
 
 .global lbl_80562A38
-
 lbl_80562A38:
-
 	# ROM: 0x55EB38
 	.asciz "BTA_Init() is started\n"
 	.balign 4
 
 
 .global lbl_80562A50
-
 lbl_80562A50:
-
 	# ROM: 0x55EB50
 	.asciz "BTA_Init() is done\n"
 
 
 .global lbl_80562A64
-
 lbl_80562A64:
-
 	# ROM: 0x55EB64
 	.asciz "WUDShutdown()\n"
 	.balign 4
 
 
 .global lbl_80562A74
-
 lbl_80562A74:
-
 	# ROM: 0x55EB74
 	.asciz "WUDSetSyncDeviceCallback\n"
 	.balign 4
@@ -60203,44 +57501,34 @@ lbl_80562A74:
 
 
 .global lbl_80562AE0
-
 lbl_80562AE0:
-
 	# ROM: 0x55EBE0
 	.asciz "WUDSetDisableChannel()\n"
 
 
 .global lbl_80562AF8
-
 lbl_80562AF8:
-
 	# ROM: 0x55EBF8
 	.asciz "BTM_SetAfhChannels() : %d\n"
 	.balign 4
 
 
 .global lbl_80562B14
-
 lbl_80562B14:
-
 	# ROM: 0x55EC14
 	.asciz "WUDSetHidRecvCallback()\n"
 	.balign 4
 
 
 .global lbl_80562B30
-
 lbl_80562B30:
-
 	# ROM: 0x55EC30
 	.asciz "WUDSetHidConnCallback()\n"
 	.balign 4
 
 
 .global lbl_80562B4C
-
 lbl_80562B4C:
-
 	# ROM: 0x55EC4C
 	.asciz "Initialize the BCM2045 firmware complete.\n"
 	.balign 4
@@ -60255,17 +57543,13 @@ lbl_80562B4C:
 
 
 .global lbl_80562BD8
-
 lbl_80562BD8:
-
 	# ROM: 0x55ECD8
 	.asciz "SuperPeekPoke Callback\n"
 
 
 .global lbl_80562BF0
-
 lbl_80562BF0:
-
 	# ROM: 0x55ECF0
 	.asciz "RemovePatch\n"
 	.balign 4
@@ -60276,9 +57560,7 @@ lbl_80562BF0:
 
 
 .global lbl_80562C2C
-
 lbl_80562C2C:
-
 	# ROM: 0x55ED2C
 	.asciz "start __wudInitSub()\n"
 	.balign 4
@@ -60301,9 +57583,7 @@ lbl_80562C2C:
 
 
 .global lbl_80562D24
-
 lbl_80562D24:
-
 	# ROM: 0x55EE24
 	.asciz "WARNING: USB_CLOSE_FAILURE!\n"
 	.balign 4
@@ -60346,9 +57626,7 @@ lbl_80562D24:
 
 
 .global lbl_80562FA0
-
 lbl_80562FA0:
-
 	# ROM: 0x55F0A0
 	.4byte 0x8037AE1C
 	.4byte 0x8037AEC8
@@ -60375,18 +57653,14 @@ lbl_80562FA0:
 
 
 .global lbl_805630F4
-
 lbl_805630F4:
-
 	# ROM: 0x55F1F4
 	.asciz "__wudDeviceStatusEventStackCallback\n"
 	.balign 4
 
 
 .global lbl_8056311C
-
 lbl_8056311C:
-
 	# ROM: 0x55F21C
 	.asciz "---- WARNING: USB FATAL ERROR! ----\n"
 	.balign 4
@@ -60437,9 +57711,7 @@ lbl_8056311C:
 
 
 .global lbl_80563470
-
 lbl_80563470:
-
 	# ROM: 0x55F570
 	.asciz "BTA_HH_ENABLE_EVT\n"
 	.balign 4
@@ -60479,9 +57751,7 @@ lbl_80563470:
 
 
 .global lbl_80563688
-
 lbl_80563688:
-
 	# ROM: 0x55F788
 	.4byte 0x8037C030
 	.4byte 0x8037C04C
@@ -60502,45 +57772,35 @@ lbl_80563688:
 
 
 .global lbl_805636C8
-
 lbl_805636C8:
-
 	# ROM: 0x55F7C8
 	.asciz "Invalid app_id [%d]\n"
 	.balign 4
 
 
 .global lbl_805636E0
-
 lbl_805636E0:
-
 	# ROM: 0x55F7E0
 	.asciz "bta_hh_co_open()\n"
 	.balign 4
 
 
 .global lbl_805636F4
-
 lbl_805636F4:
-
 	# ROM: 0x55F7F4
 	.asciz "bta_hh_co_close()\n"
 	.balign 4
 
 
 .global lbl_80563708
-
 lbl_80563708:
-
 	# ROM: 0x55F808
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
 
 .global lbl_80563710
-
 lbl_80563710:
-
 	# ROM: 0x55F810
 	.4byte 0x00000018
 	.4byte 0x00000018
@@ -60549,33 +57809,25 @@ lbl_80563710:
 
 
 .global lbl_80563720
-
 lbl_80563720:
-
 	# ROM: 0x55F820
 	.4byte 0x00000019
 
 
 .global lbl_80563724
-
 lbl_80563724:
-
 	# ROM: 0x55F824
 	.4byte 0x00000001
 
 
 .global lbl_80563728
-
 lbl_80563728:
-
 	# ROM: 0x55F828
 	.4byte 0x8051AA78
 
 
 .global lbl_8056372C
-
 lbl_8056372C:
-
 	# ROM: 0x55F82C
 	.4byte 0x8051AA80
 	.4byte 0x3F3504F4
@@ -62661,25 +59913,19 @@ lbl_8056372C:
 
 
 .global lbl_805657B0
-
 lbl_805657B0:
-
 	# ROM: 0x5618B0
 	.4byte 0x80563730
 
 
 .global lbl_805657B4
-
 lbl_805657B4:
-
 	# ROM: 0x5618B4
 	.4byte 0x00002080
 
 
 .global lbl_805657B8
-
 lbl_805657B8:
-
 	# ROM: 0x5618B8
 	.4byte 0x8038AEA8
 	.4byte 0x8038AFF4
@@ -63244,17 +60490,13 @@ lbl_805657B8:
 
 
 .global lbl_80566078
-
 lbl_80566078:
-
 	# ROM: 0x562178
 	.4byte 0x805657F8
 
 
 .global lbl_8056607C
-
 lbl_8056607C:
-
 	# ROM: 0x56217C
 	.4byte 0x00000880
 	.4byte 0
@@ -66396,41 +63638,31 @@ lbl_8056607C:
 
 
 .global lbl_80569180
-
 lbl_80569180:
-
 	# ROM: 0x565280
 	.4byte 0x80566080
 
 
 .global lbl_80569184
-
 lbl_80569184:
-
 	# ROM: 0x565284
 	.4byte 0x00003000
 
 
 .global lbl_80569188
-
 lbl_80569188:
-
 	# ROM: 0x565288
 	.4byte 0x80569080
 
 
 .global lbl_8056918C
-
 lbl_8056918C:
-
 	# ROM: 0x56528C
 	.4byte 0x00000100
 
 
 .global lbl_80569190
-
 lbl_80569190:
-
 	# ROM: 0x565290
 	.4byte 0x00005622
 	.4byte 0x00005DC0
@@ -66443,9 +63675,7 @@ lbl_80569190:
 
 
 .global lbl_805691B0
-
 lbl_805691B0:
-
 	# ROM: 0x5652B0
 	.4byte 0x00000004
 	.4byte 0x00000008
@@ -66462,9 +63692,7 @@ lbl_805691B0:
 
 
 .global lbl_805691E0
-
 lbl_805691E0:
-
 	# ROM: 0x5652E0
 	.4byte 0
 	.4byte 0x00000001
@@ -66479,9 +63707,7 @@ lbl_805691E0:
 
 
 .global lbl_80569208
-
 lbl_80569208:
-
 	# ROM: 0x565308
 	.4byte 0x80390B40
 	.4byte 0x80390B9C
@@ -66512,9 +63738,7 @@ lbl_80569208:
 
 
 .global lbl_80569270
-
 lbl_80569270:
-
 	# ROM: 0x565370
 	.4byte 0x803928A4
 	.4byte 0x803928A8
@@ -66545,9 +63769,7 @@ lbl_80569270:
 
 
 .global lbl_805692D8
-
 lbl_805692D8:
-
 	# ROM: 0x5653D8
 	.4byte 0
 	.4byte 0
@@ -66564,9 +63786,7 @@ lbl_805692D8:
 
 
 .global lbl_80569308
-
 lbl_80569308:
-
 	# ROM: 0x565408
 	.4byte 0
 	.4byte 0
@@ -66583,9 +63803,7 @@ lbl_80569308:
 
 
 .global lbl_80569338
-
 lbl_80569338:
-
 	# ROM: 0x565438
 	.4byte 0
 	.4byte 0
@@ -66602,9 +63820,7 @@ lbl_80569338:
 
 
 .global lbl_80569368
-
 lbl_80569368:
-
 	# ROM: 0x565468
 	.4byte 0
 	.4byte 0
@@ -66721,9 +63937,7 @@ lbl_80569368:
 
 
 .global lbl_80569528
-
 lbl_80569528:
-
 	# ROM: 0x565628
 	.4byte 0x82848684
 	.4byte 0x8A848E84
@@ -66856,17 +64070,13 @@ lbl_80569528:
 
 
 .global lbl_80569728
-
 lbl_80569728:
-
 	# ROM: 0x565828
 	.4byte 0x00000001
 
 
 .global lbl_8056972C
-
 lbl_8056972C:
-
 	# ROM: 0x56582C
 	.4byte 0
 	.4byte 0x00000004
@@ -66902,9 +64112,7 @@ lbl_8056972C:
 
 
 .global lbl_805697A8
-
 lbl_805697A8:
-
 	# ROM: 0x5658A8
 	.4byte 0x8039C878
 	.4byte 0x8039C860
@@ -66919,9 +64127,7 @@ lbl_805697A8:
 
 
 .global lbl_805697D0
-
 lbl_805697D0:
-
 	# ROM: 0x5658D0
 	.4byte 0x8051DA00
 	.4byte 0
@@ -67000,9 +64206,7 @@ lbl_805697D0:
 
 
 .global lbl_805698F8
-
 lbl_805698F8:
-
 	# ROM: 0x5659F8
 	.4byte 0x8039F84C
 	.4byte 0x8039F84C
@@ -67019,9 +64223,7 @@ lbl_805698F8:
 
 
 .global lbl_80569928
-
 lbl_80569928:
-
 	# ROM: 0x565A28
 	.4byte 0x8039F70C
 	.4byte 0x8039F70C
@@ -67038,9 +64240,7 @@ lbl_80569928:
 
 
 .global lbl_80569958
-
 lbl_80569958:
-
 	# ROM: 0x565A58
 	.4byte 0x8051E17C
 	.4byte 0
@@ -67098,9 +64298,7 @@ lbl_80569958:
 
 
 .global lbl_80569A2C
-
 lbl_80569A2C:
-
 	# ROM: 0x565B2C
 	.4byte 0x8051E1A0
 	.4byte 0
@@ -67158,9 +64356,7 @@ lbl_80569A2C:
 
 
 .global lbl_80569B00
-
 lbl_80569B00:
-
 	# ROM: 0x565C00
 	.4byte 0x8051E1CC
 	.4byte 0
@@ -67218,9 +64414,7 @@ lbl_80569B00:
 
 
 .global lbl_80569BD4
-
 lbl_80569BD4:
-
 	# ROM: 0x565CD4
 	.4byte 0x8051E1E0
 	.4byte 0
@@ -67278,9 +64472,7 @@ lbl_80569BD4:
 
 
 .global lbl_80569CA8
-
 lbl_80569CA8:
-
 	# ROM: 0x565DA8
 	.4byte 0x8051E274
 	.4byte 0
@@ -67338,9 +64530,7 @@ lbl_80569CA8:
 
 
 .global lbl_80569D7C
-
 lbl_80569D7C:
-
 	# ROM: 0x565E7C
 	.4byte 0x8051E288
 	.4byte 0
@@ -67398,9 +64588,7 @@ lbl_80569D7C:
 
 
 .global lbl_80569E50
-
 lbl_80569E50:
-
 	# ROM: 0x565F50
 	.4byte 0x8051E2C0
 	.4byte 0
@@ -67458,9 +64646,7 @@ lbl_80569E50:
 
 
 .global lbl_80569F24
-
 lbl_80569F24:
-
 	# ROM: 0x566024
 	.4byte 0x8051E2D0
 	.4byte 0
@@ -67518,9 +64704,7 @@ lbl_80569F24:
 
 
 .global lbl_80569FF8
-
 lbl_80569FF8:
-
 	# ROM: 0x5660F8
 	.4byte 0x8051E2E4
 	.4byte 0
@@ -67578,9 +64762,7 @@ lbl_80569FF8:
 
 
 .global lbl_8056A0CC
-
 lbl_8056A0CC:
-
 	# ROM: 0x5661CC
 	.4byte 0x8051E2FC
 	.4byte 0
@@ -67638,9 +64820,7 @@ lbl_8056A0CC:
 
 
 .global lbl_8056A1A0
-
 lbl_8056A1A0:
-
 	# ROM: 0x5662A0
 	.4byte 0x8051E318
 	.4byte 0
@@ -67698,9 +64878,7 @@ lbl_8056A1A0:
 
 
 .global lbl_8056A274
-
 lbl_8056A274:
-
 	# ROM: 0x566374
 	.4byte 0x8051E338
 	.4byte 0
@@ -67758,9 +64936,7 @@ lbl_8056A274:
 
 
 .global lbl_8056A348
-
 lbl_8056A348:
-
 	# ROM: 0x566448
 	.4byte 0x8051E350
 	.4byte 0
@@ -67818,9 +64994,7 @@ lbl_8056A348:
 
 
 .global lbl_8056A41C
-
 lbl_8056A41C:
-
 	# ROM: 0x56651C
 	.4byte 0x8051E368
 	.4byte 0
@@ -67878,9 +65052,7 @@ lbl_8056A41C:
 
 
 .global lbl_8056A4F0
-
 lbl_8056A4F0:
-
 	# ROM: 0x5665F0
 	.4byte 0x8051E394
 	.4byte 0
@@ -67938,9 +65110,7 @@ lbl_8056A4F0:
 
 
 .global lbl_8056A5C4
-
 lbl_8056A5C4:
-
 	# ROM: 0x5666C4
 	.4byte 0x8051E3AC
 	.4byte 0
@@ -67998,9 +65168,7 @@ lbl_8056A5C4:
 
 
 .global lbl_8056A698
-
 lbl_8056A698:
-
 	# ROM: 0x566798
 	.4byte 0x8051E3C4
 	.4byte 0
@@ -68058,9 +65226,7 @@ lbl_8056A698:
 
 
 .global lbl_8056A76C
-
 lbl_8056A76C:
-
 	# ROM: 0x56686C
 	.4byte 0x8051E3DC
 	.4byte 0
@@ -68118,9 +65284,7 @@ lbl_8056A76C:
 
 
 .global lbl_8056A840
-
 lbl_8056A840:
-
 	# ROM: 0x566940
 	.4byte 0x8051E3F0
 	.4byte 0
@@ -68179,9 +65343,7 @@ lbl_8056A840:
 
 
 .global lbl_8056A918
-
 lbl_8056A918:
-
 	# ROM: 0x566A18
 	.4byte 0x803A8A64
 	.4byte 0x803A8C70
@@ -68194,9 +65356,7 @@ lbl_8056A918:
 
 
 .global lbl_8056A938
-
 lbl_8056A938:
-
 	# ROM: 0x566A38
 	.4byte 0x803ADEB4
 	.4byte 0x803AE3B4
@@ -69001,9 +66161,7 @@ lbl_8056A938:
 
 
 .global lbl_8056B5B8
-
 lbl_8056B5B8:
-
 	# ROM: 0x5676B8
 	.4byte 0x8051FFD8
 	.4byte 0
@@ -69061,9 +66219,7 @@ lbl_8056B5B8:
 
 
 .global lbl_8056B68C
-
 lbl_8056B68C:
-
 	# ROM: 0x56778C
 	.4byte 0x8051FFFC
 	.4byte 0
@@ -69121,9 +66277,7 @@ lbl_8056B68C:
 
 
 .global lbl_8056B760
-
 lbl_8056B760:
-
 	# ROM: 0x567860
 	.4byte 0x80520020
 	.4byte 0
@@ -69181,9 +66335,7 @@ lbl_8056B760:
 
 
 .global lbl_8056B834
-
 lbl_8056B834:
-
 	# ROM: 0x567934
 	.4byte 0x8052002C
 	.4byte 0
@@ -69241,9 +66393,7 @@ lbl_8056B834:
 
 
 .global lbl_8056B908
-
 lbl_8056B908:
-
 	# ROM: 0x567A08
 	.4byte 0x80520038
 	.4byte 0
@@ -69301,9 +66451,7 @@ lbl_8056B908:
 
 
 .global lbl_8056B9DC
-
 lbl_8056B9DC:
-
 	# ROM: 0x567ADC
 	.4byte 0x80520048
 	.4byte 0
@@ -69361,9 +66509,7 @@ lbl_8056B9DC:
 
 
 .global lbl_8056BAB0
-
 lbl_8056BAB0:
-
 	# ROM: 0x567BB0
 	.4byte 0x80520058
 	.4byte 0
@@ -69421,9 +66567,7 @@ lbl_8056BAB0:
 
 
 .global lbl_8056BB84
-
 lbl_8056BB84:
-
 	# ROM: 0x567C84
 	.4byte 0x80520068
 	.4byte 0
@@ -69481,9 +66625,7 @@ lbl_8056BB84:
 
 
 .global lbl_8056BC58
-
 lbl_8056BC58:
-
 	# ROM: 0x567D58
 	.4byte 0x8052008C
 	.4byte 0
@@ -69541,9 +66683,7 @@ lbl_8056BC58:
 
 
 .global lbl_8056BD2C
-
 lbl_8056BD2C:
-
 	# ROM: 0x567E2C
 	.4byte 0x80520098
 	.4byte 0
@@ -69601,9 +66741,7 @@ lbl_8056BD2C:
 
 
 .global lbl_8056BE00
-
 lbl_8056BE00:
-
 	# ROM: 0x567F00
 	.4byte 0x805200A4
 	.4byte 0
@@ -69661,9 +66799,7 @@ lbl_8056BE00:
 
 
 .global lbl_8056BED4
-
 lbl_8056BED4:
-
 	# ROM: 0x567FD4
 	.4byte 0x805200B4
 	.4byte 0
@@ -69721,9 +66857,7 @@ lbl_8056BED4:
 
 
 .global lbl_8056BFA8
-
 lbl_8056BFA8:
-
 	# ROM: 0x5680A8
 	.4byte 0x805200EC
 	.4byte 0
@@ -69781,9 +66915,7 @@ lbl_8056BFA8:
 
 
 .global lbl_8056C07C
-
 lbl_8056C07C:
-
 	# ROM: 0x56817C
 	.4byte 0x80520100
 	.4byte 0
@@ -69841,9 +66973,7 @@ lbl_8056C07C:
 
 
 .global lbl_8056C150
-
 lbl_8056C150:
-
 	# ROM: 0x568250
 	.4byte 0x80520114
 	.4byte 0
@@ -69901,9 +67031,7 @@ lbl_8056C150:
 
 
 .global lbl_8056C224
-
 lbl_8056C224:
-
 	# ROM: 0x568324
 	.4byte 0x80520150
 	.4byte 0
@@ -69961,9 +67089,7 @@ lbl_8056C224:
 
 
 .global lbl_8056C2F8
-
 lbl_8056C2F8:
-
 	# ROM: 0x5683F8
 	.4byte 0x8052019C
 	.4byte 0
@@ -69995,9 +67121,7 @@ lbl_8056C2F8:
 
 
 .global lbl_8056C364
-
 lbl_8056C364:
-
 	# ROM: 0x568464
 	.4byte 0x805201C4
 	.4byte 0
@@ -70029,9 +67153,7 @@ lbl_8056C364:
 
 
 .global lbl_8056C3D0
-
 lbl_8056C3D0:
-
 	# ROM: 0x5684D0
 	.4byte 0x805201FC
 	.4byte 0
@@ -70063,9 +67185,7 @@ lbl_8056C3D0:
 
 
 .global lbl_8056C43C
-
 lbl_8056C43C:
-
 	# ROM: 0x56853C
 	.4byte 0x80520210
 	.4byte 0
@@ -70097,9 +67217,7 @@ lbl_8056C43C:
 
 
 .global lbl_8056C4A8
-
 lbl_8056C4A8:
-
 	# ROM: 0x5685A8
 	.4byte 0x80520220
 	.4byte 0
@@ -70131,9 +67249,7 @@ lbl_8056C4A8:
 
 
 .global lbl_8056C514
-
 lbl_8056C514:
-
 	# ROM: 0x568614
 	.4byte 0x80520230
 	.4byte 0
@@ -70165,9 +67281,7 @@ lbl_8056C514:
 
 
 .global lbl_8056C580
-
 lbl_8056C580:
-
 	# ROM: 0x568680
 	.4byte 0x80520278
 	.4byte 0
@@ -70200,9 +67314,7 @@ lbl_8056C580:
 
 
 .global lbl_8056C5F0
-
 lbl_8056C5F0:
-
 	# ROM: 0x5686F0
 	.4byte 0x803C95C8
 	.4byte 0x803C923C
@@ -70215,9 +67327,7 @@ lbl_8056C5F0:
 
 
 .global lbl_8056C610
-
 lbl_8056C610:
-
 	# ROM: 0x568710
 	.asciz "tst, help_time_sec, help_time_msec, help_time_64, help_time, mt_max, master_time, out_time,  mt_ot, mtmax_ot,  diff_l_max, diff_l_min, diff_a_max, tst->diff_a_min, pastat, adjmode, resethist, excesserr, adj_limit, adj_front, adj_rear,  movave_1st, movave_2nd,  adxt_stat \n\n"
 	.balign 4
@@ -70225,9 +67335,7 @@ lbl_8056C610:
 
 
 .global lbl_8056C728
-
 lbl_8056C728:
-
 	# ROM: 0x568828
 	.4byte 0x803D1D7C
 	.4byte 0x803D1D84
@@ -70239,9 +67347,7 @@ lbl_8056C728:
 
 
 .global lbl_8056C744
-
 lbl_8056C744:
-
 	# ROM: 0x568844
 	.4byte 0x803D2D04
 	.4byte 0x803D2CB8
@@ -70255,9 +67361,7 @@ lbl_8056C744:
 
 
 .global lbl_8056C768
-
 lbl_8056C768:
-
 	# ROM: 0x568868
 	.4byte 0x803D3A9C
 	.4byte 0x803D3AA4
@@ -70269,9 +67373,7 @@ lbl_8056C768:
 
 
 .global lbl_8056C784
-
 lbl_8056C784:
-
 	# ROM: 0x568884
 	.4byte 0x803D3D48
 	.4byte 0x803D3D50
@@ -70287,9 +67389,7 @@ lbl_8056C784:
 
 
 .global lbl_8056C7B0
-
 lbl_8056C7B0:
-
 	# ROM: 0x5688B0
 	.asciz "-------------------------------- TRACE\n"
 	.asciz "Address:   BackChain   LR save\n"
@@ -70298,18 +67398,14 @@ lbl_8056C7B0:
 
 
 .global lbl_8056C810
-
 lbl_8056C810:
-
 	# ROM: 0x568910
 	.asciz "%s:%d Panic:"
 	.balign 4
 
 
 .global lbl_8056C820
-
 lbl_8056C820:
-
 	# ROM: 0x568920
 	.asciz "%s:%d Warning:"
 	.balign 4
@@ -70320,9 +67416,7 @@ lbl_8056C820:
 
 
 .global lbl_8056C840
-
 lbl_8056C840:
-
 	# ROM: 0x568940
 	.4byte 0x0000000E
 	.asciz "3DModels(NW4R)"
@@ -70333,9 +67427,7 @@ lbl_8056C840:
 
 
 .global lbl_8056C860
-
 lbl_8056C860:
-
 	# ROM: 0x568960
 	.4byte 0x0000000E
 	.asciz "Palettes(NW4R)"
@@ -70346,9 +67438,7 @@ lbl_8056C860:
 
 
 .global lbl_8056C880
-
 lbl_8056C880:
-
 	# ROM: 0x568980
 	.4byte 0x0000000E
 	.asciz "Textures(NW4R)"
@@ -70359,9 +67449,7 @@ lbl_8056C880:
 
 
 .global lbl_8056C8A0
-
 lbl_8056C8A0:
-
 	# ROM: 0x5689A0
 	.4byte 0x0000000C
 	.asciz "AnmChr(NW4R)"
@@ -70378,9 +67466,7 @@ lbl_8056C8A0:
 
 
 .global lbl_8056C8E0
-
 lbl_8056C8E0:
-
 	# ROM: 0x5689E0
 	.4byte 0x0000000C
 	.asciz "AnmClr(NW4R)"
@@ -70391,9 +67477,7 @@ lbl_8056C8E0:
 
 
 .global lbl_8056C900
-
 lbl_8056C900:
-
 	# ROM: 0x568A00
 	.4byte 0x0000000F
 	.asciz "AnmTexPat(NW4R)"
@@ -70403,9 +67487,7 @@ lbl_8056C900:
 
 
 .global lbl_8056C920
-
 lbl_8056C920:
-
 	# ROM: 0x568A20
 	.4byte 0x0000000F
 	.asciz "AnmTexSrt(NW4R)"
@@ -70415,9 +67497,7 @@ lbl_8056C920:
 
 
 .global lbl_8056C940
-
 lbl_8056C940:
-
 	# ROM: 0x568A40
 	.4byte 0x0000000C
 	.asciz "AnmShp(NW4R)"
@@ -70428,9 +67508,7 @@ lbl_8056C940:
 
 
 .global lbl_8056C960
-
 lbl_8056C960:
-
 	# ROM: 0x568A60
 	.4byte 0x0000000C
 	.asciz "AnmScn(NW4R)"
@@ -70448,9 +67526,7 @@ lbl_8056C960:
 
 
 .global lbl_8056C9A0
-
 lbl_8056C9A0:
-
 	# ROM: 0x568AA0
 	.4byte 0x00010001
 	.4byte 0x00010705
@@ -70463,9 +67539,7 @@ lbl_8056C9A0:
 
 
 .global lbl_8056C9C0
-
 lbl_8056C9C0:
-
 	# ROM: 0x568AC0
 	.4byte 0x0000000E
 	.asciz "LightSet(NW4R)"
@@ -70476,9 +67550,7 @@ lbl_8056C9C0:
 
 
 .global lbl_8056C9E0
-
 lbl_8056C9E0:
-
 	# ROM: 0x568AE0
 	.4byte 0x0000000F
 	.asciz "AmbLights(NW4R)"
@@ -70488,9 +67560,7 @@ lbl_8056C9E0:
 
 
 .global lbl_8056CA00
-
 lbl_8056CA00:
-
 	# ROM: 0x568B00
 	.4byte 0x0000000C
 	.asciz "Lights(NW4R)"
@@ -70501,9 +67571,7 @@ lbl_8056CA00:
 
 
 .global lbl_8056CA20
-
 lbl_8056CA20:
-
 	# ROM: 0x568B20
 	.4byte 0x0000000A
 	.asciz "Fogs(NW4R)"
@@ -70515,9 +67583,7 @@ lbl_8056CA20:
 
 
 .global lbl_8056CA40
-
 lbl_8056CA40:
-
 	# ROM: 0x568B40
 	.4byte 0x0000000D
 	.asciz "Cameras(NW4R)"
@@ -70528,9 +67594,7 @@ lbl_8056CA40:
 
 
 .global lbl_8056CA60
-
 lbl_8056CA60:
-
 	# ROM: 0x568B60
 	.4byte 0
 	.4byte 0
@@ -70553,9 +67617,7 @@ lbl_8056CA60:
 
 
 .global lbl_8056CAA8
-
 lbl_8056CAA8:
-
 	# ROM: 0x568BA8
 	.4byte 0
 	.4byte 0
@@ -70578,9 +67640,7 @@ lbl_8056CAA8:
 
 
 .global lbl_8056CAF0
-
 lbl_8056CAF0:
-
 	# ROM: 0x568BF0
 	.4byte 0
 	.4byte 0
@@ -70603,9 +67663,7 @@ lbl_8056CAF0:
 
 
 .global lbl_8056CB38
-
 lbl_8056CB38:
-
 	# ROM: 0x568C38
 	.4byte 0
 	.4byte 0
@@ -70628,9 +67686,7 @@ lbl_8056CB38:
 
 
 .global lbl_8056CB80
-
 lbl_8056CB80:
-
 	# ROM: 0x568C80
 	.4byte 0
 	.4byte 0
@@ -70653,9 +67709,7 @@ lbl_8056CB80:
 
 
 .global lbl_8056CBC8
-
 lbl_8056CBC8:
-
 	# ROM: 0x568CC8
 	.4byte 0
 	.4byte 0
@@ -70678,9 +67732,7 @@ lbl_8056CBC8:
 
 
 .global lbl_8056CC10
-
 lbl_8056CC10:
-
 	# ROM: 0x568D10
 	.4byte 0
 	.4byte 0
@@ -70707,9 +67759,7 @@ lbl_8056CC10:
 
 
 .global lbl_8056CC68
-
 lbl_8056CC68:
-
 	# ROM: 0x568D68
 	.4byte 0
 	.4byte 0
@@ -70736,9 +67786,7 @@ lbl_8056CC68:
 
 
 .global lbl_8056CCC0
-
 lbl_8056CCC0:
-
 	# ROM: 0x568DC0
 	.4byte 0
 	.4byte 0
@@ -70765,9 +67813,7 @@ lbl_8056CCC0:
 
 
 .global lbl_8056CD18
-
 lbl_8056CD18:
-
 	# ROM: 0x568E18
 	.4byte 0
 	.4byte 0
@@ -70794,9 +67840,7 @@ lbl_8056CD18:
 
 
 .global lbl_8056CD70
-
 lbl_8056CD70:
-
 	# ROM: 0x568E70
 	.4byte 0
 	.4byte 0
@@ -70837,9 +67881,7 @@ lbl_8056CD70:
 
 
 .global lbl_8056CE00
-
 lbl_8056CE00:
-
 	# ROM: 0x568F00
 	.4byte 0
 	.4byte 0
@@ -70880,9 +67922,7 @@ lbl_8056CE00:
 
 
 .global lbl_8056CE90
-
 lbl_8056CE90:
-
 	# ROM: 0x568F90
 	.4byte 0
 	.4byte 0
@@ -70895,9 +67935,7 @@ lbl_8056CE90:
 
 
 .global lbl_8056CEB0
-
 lbl_8056CEB0:
-
 	# ROM: 0x568FB0
 	.4byte 0
 	.4byte 0
@@ -70908,9 +67946,7 @@ lbl_8056CEB0:
 
 
 .global lbl_8056CEC8
-
 lbl_8056CEC8:
-
 	# ROM: 0x568FC8
 	.asciz "NodeTree"
 	.balign 4
@@ -70918,9 +67954,7 @@ lbl_8056CEC8:
 
 
 .global lbl_8056CED8
-
 lbl_8056CED8:
-
 	# ROM: 0x568FD8
 	.4byte 0x803F4800
 	.4byte 0x803F4698
@@ -70935,9 +67969,7 @@ lbl_8056CED8:
 
 
 .global lbl_8056CF00
-
 lbl_8056CF00:
-
 	# ROM: 0x569000
 	.4byte 0x803F48D0
 	.4byte 0x803F4840
@@ -70952,9 +67984,7 @@ lbl_8056CF00:
 
 
 .global lbl_8056CF28
-
 lbl_8056CF28:
-
 	# ROM: 0x569028
 	.4byte 0
 	.4byte 0
@@ -70975,9 +68005,7 @@ lbl_8056CF28:
 
 
 .global lbl_8056CF68
-
 lbl_8056CF68:
-
 	# ROM: 0x569068
 	.4byte 0
 	.4byte 0
@@ -70996,9 +68024,7 @@ lbl_8056CF68:
 
 
 .global lbl_8056CFA0
-
 lbl_8056CFA0:
-
 	# ROM: 0x5690A0
 	.4byte 0
 	.4byte 0
@@ -71015,9 +68041,7 @@ lbl_8056CFA0:
 
 
 .global lbl_8056CFD0
-
 lbl_8056CFD0:
-
 	# ROM: 0x5690D0
 	.4byte 0
 	.4byte 0
@@ -71038,9 +68062,7 @@ lbl_8056CFD0:
 
 
 .global lbl_8056D010
-
 lbl_8056D010:
-
 	# ROM: 0x569110
 	.4byte 0x803F8690
 	.4byte 0x803F86E8
@@ -71052,18 +68074,14 @@ lbl_8056D010:
 
 
 .global lbl_8056D02C
-
 lbl_8056D02C:
-
 	# ROM: 0x56912C
 	.asciz "NodeTree"
 	.balign 4
 
 
 .global lbl_8056D038
-
 lbl_8056D038:
-
 	# ROM: 0x569138
 	.4byte 0
 	.4byte 0
@@ -71086,9 +68104,7 @@ lbl_8056D038:
 
 
 .global lbl_8056D080
-
 lbl_8056D080:
-
 	# ROM: 0x569180
 	.4byte 0
 	.4byte 0
@@ -71111,9 +68127,7 @@ lbl_8056D080:
 
 
 .global lbl_8056D0C8
-
 lbl_8056D0C8:
-
 	# ROM: 0x5691C8
 	.4byte 0
 	.4byte 0
@@ -71135,9 +68149,7 @@ lbl_8056D0C8:
 
 
 .global lbl_8056D150
-
 lbl_8056D150:
-
 	# ROM: 0x569250
 	.4byte 0
 	.4byte 0
@@ -71157,9 +68169,7 @@ lbl_8056D150:
 
 
 .global lbl_8056D1D0
-
 lbl_8056D1D0:
-
 	# ROM: 0x5692D0
 	.4byte 0
 	.4byte 0
@@ -71194,9 +68204,7 @@ lbl_8056D1D0:
 
 
 .global lbl_8056D248
-
 lbl_8056D248:
-
 	# ROM: 0x569348
 	.4byte 0
 	.4byte 0
@@ -71205,13 +68213,11 @@ lbl_8056D248:
 
 
 .global lbl_8056D258
-
 lbl_8056D258:
-
 	# ROM: 0x569358
 	.4byte 0
 	.4byte 0
-	.4byte 0x803FFF28
+	.4byte nw4r3lyt6LayoutFv$7__dt
 	.4byte 0x80400050
 	.4byte 0x80400390
 	.4byte 0x80400410
@@ -71228,9 +68234,7 @@ lbl_8056D258:
 
 
 .global lbl_8056D298
-
 lbl_8056D298:
-
 	# ROM: 0x569398
 	.4byte 0
 	.4byte 0
@@ -71265,9 +68269,7 @@ lbl_8056D298:
 
 
 .global lbl_8056D310
-
 lbl_8056D310:
-
 	# ROM: 0x569410
 	.4byte 0
 	.4byte 0
@@ -71306,9 +68308,7 @@ lbl_8056D310:
 
 
 .global lbl_8056D398
-
 lbl_8056D398:
-
 	# ROM: 0x569498
 	.4byte 0x00000100
 	.4byte 0x00010101
@@ -71328,9 +68328,7 @@ lbl_8056D398:
 
 
 .global lbl_8056D3D4
-
 lbl_8056D3D4:
-
 	# ROM: 0x5694D4
 	.4byte 0
 	.4byte 0
@@ -71370,9 +68368,7 @@ lbl_8056D3D4:
 
 
 .global lbl_8056D460
-
 lbl_8056D460:
-
 	# ROM: 0x569560
 	.4byte 0
 	.4byte 0
@@ -71407,9 +68403,7 @@ lbl_8056D460:
 
 
 .global lbl_8056D4D8
-
 lbl_8056D4D8:
-
 	# ROM: 0x5695D8
 	.4byte 0x0000001F
 	.4byte 0x0000001B
@@ -71422,9 +68416,7 @@ lbl_8056D4D8:
 
 
 .global lbl_8056D4F8
-
 lbl_8056D4F8:
-
 	# ROM: 0x5695F8
 	.4byte 0x0000001F
 	.4byte 0x0000001B
@@ -71437,9 +68429,7 @@ lbl_8056D4F8:
 
 
 .global lbl_8056D518
-
 lbl_8056D518:
-
 	# ROM: 0x569618
 	.4byte 0
 	.4byte 0
@@ -71456,9 +68446,7 @@ lbl_8056D518:
 
 
 .global lbl_8056D548
-
 lbl_8056D548:
-
 	# ROM: 0x569648
 	.4byte 0
 	.4byte 0
@@ -71467,9 +68455,7 @@ lbl_8056D548:
 
 
 .global lbl_8056D558
-
 lbl_8056D558:
-
 	# ROM: 0x569658
 	.4byte 0
 	.4byte 0
@@ -71484,9 +68470,7 @@ lbl_8056D558:
 
 
 .global lbl_8056D580
-
 lbl_8056D580:
-
 	# ROM: 0x569680
 	.4byte 0
 	.4byte 0
@@ -71497,9 +68481,7 @@ lbl_8056D580:
 
 
 .global lbl_8056D598
-
 lbl_8056D598:
-
 	# ROM: 0x569698
 	.4byte 0
 	.4byte 0
@@ -71510,9 +68492,7 @@ lbl_8056D598:
 
 
 .global lbl_8056D5B0
-
 lbl_8056D5B0:
-
 	# ROM: 0x5696B0
 	.4byte 0x3F000000
 	.4byte 0x3CB5586D
@@ -71583,9 +68563,7 @@ lbl_8056D5B0:
 
 
 .global lbl_8056D6B8
-
 lbl_8056D6B8:
-
 	# ROM: 0x5697B8
 	.4byte 0
 	.4byte 0x3B7F8053
@@ -72104,9 +69082,7 @@ lbl_8056D6B8:
 
 
 .global lbl_8056DEC0
-
 lbl_8056DEC0:
-
 	# ROM: 0x569FC0
 	.4byte 0
 	.4byte 0x3FA2EBF1
@@ -72177,9 +69153,7 @@ lbl_8056DEC0:
 
 
 .global lbl_8056DFC8
-
 lbl_8056DFC8:
-
 	# ROM: 0x56A0C8
 	.4byte 0
 	.4byte 0
@@ -72194,9 +69168,7 @@ lbl_8056DFC8:
 
 
 .global lbl_8056DFF0
-
 lbl_8056DFF0:
-
 	# ROM: 0x56A0F0
 	.4byte 0
 	.4byte 0
@@ -72215,9 +69187,7 @@ lbl_8056DFF0:
 
 
 .global lbl_8056E028
-
 lbl_8056E028:
-
 	# ROM: 0x56A128
 	.4byte 0
 	.4byte 0
@@ -72226,9 +69196,7 @@ lbl_8056E028:
 
 
 .global lbl_8056E038
-
 lbl_8056E038:
-
 	# ROM: 0x56A138
 	.4byte 0
 	.4byte 0
@@ -72237,9 +69205,7 @@ lbl_8056E038:
 
 
 .global lbl_8056E048
-
 lbl_8056E048:
-
 	# ROM: 0x56A148
 	.4byte 0
 	.4byte 0
@@ -72248,9 +69214,7 @@ lbl_8056E048:
 
 
 .global lbl_8056E058
-
 lbl_8056E058:
-
 	# ROM: 0x56A158
 	.4byte 0
 	.4byte 0
@@ -72259,9 +69223,7 @@ lbl_8056E058:
 
 
 .global lbl_8056E068
-
 lbl_8056E068:
-
 	# ROM: 0x56A168
 	.4byte 0
 	.4byte 0
@@ -72270,9 +69232,7 @@ lbl_8056E068:
 
 
 .global lbl_8056E078
-
 lbl_8056E078:
-
 	# ROM: 0x56A178
 	.4byte 0
 	.4byte 0
@@ -72287,9 +69247,7 @@ lbl_8056E078:
 
 
 .global lbl_8056E0A0
-
 lbl_8056E0A0:
-
 	# ROM: 0x56A1A0
 	.4byte 0
 	.4byte 0
@@ -72304,9 +69262,7 @@ lbl_8056E0A0:
 
 
 .global lbl_8056E0C8
-
 lbl_8056E0C8:
-
 	# ROM: 0x56A1C8
 	.4byte 0
 	.4byte 0
@@ -72321,9 +69277,7 @@ lbl_8056E0C8:
 
 
 .global lbl_8056E0F0
-
 lbl_8056E0F0:
-
 	# ROM: 0x56A1F0
 	.4byte 0
 	.4byte 0
@@ -72352,9 +69306,7 @@ lbl_8056E0F0:
 
 
 .global lbl_8056E150
-
 lbl_8056E150:
-
 	# ROM: 0x56A250
 	.4byte 0
 	.4byte 0
@@ -72367,18 +69319,14 @@ lbl_8056E150:
 
 
 .global lbl_8056E170
-
 lbl_8056E170:
-
 	# ROM: 0x56A270
 	.asciz "#%08x[%d]: printvar %sVAR_%d(%d) = %d\n"
 	.balign 4
 
 
 .global lbl_8056E198
-
 lbl_8056E198:
-
 	# ROM: 0x56A298
 	.4byte 0x80417D48
 	.4byte 0x804185BC
@@ -72509,9 +69457,7 @@ lbl_8056E198:
 
 
 .global lbl_8056E390
-
 lbl_8056E390:
-
 	# ROM: 0x56A490
 	.4byte 0
 	.4byte 0
@@ -72520,9 +69466,7 @@ lbl_8056E390:
 
 
 .global lbl_8056E3A0
-
 lbl_8056E3A0:
-
 	# ROM: 0x56A4A0
 	.4byte 0
 	.4byte 0
@@ -72531,9 +69475,7 @@ lbl_8056E3A0:
 
 
 .global lbl_8056E3B0
-
 lbl_8056E3B0:
-
 	# ROM: 0x56A4B0
 	.4byte 0
 	.4byte 0
@@ -72544,9 +69486,7 @@ lbl_8056E3B0:
 
 
 .global lbl_8056E3C8
-
 lbl_8056E3C8:
-
 	# ROM: 0x56A4C8
 	.4byte 0
 	.4byte 0
@@ -72555,9 +69495,7 @@ lbl_8056E3C8:
 
 
 .global lbl_8056E3D8
-
 lbl_8056E3D8:
-
 	# ROM: 0x56A4D8
 	.4byte 0
 	.4byte 0
@@ -72588,9 +69526,7 @@ lbl_8056E3D8:
 
 
 .global lbl_8056E440
-
 lbl_8056E440:
-
 	# ROM: 0x56A540
 	.4byte 0
 	.4byte 0
@@ -72609,9 +69545,7 @@ lbl_8056E440:
 
 
 .global lbl_8056E478
-
 lbl_8056E478:
-
 	# ROM: 0x56A578
 	.4byte 0
 	.4byte 0
@@ -72622,9 +69556,7 @@ lbl_8056E478:
 
 
 .global lbl_8056E490
-
 lbl_8056E490:
-
 	# ROM: 0x56A590
 	.4byte 0
 	.4byte 0
@@ -72633,9 +69565,7 @@ lbl_8056E490:
 
 
 .global lbl_8056E4A0
-
 lbl_8056E4A0:
-
 	# ROM: 0x56A5A0
 	.4byte 0
 	.4byte 0
@@ -72648,9 +69578,7 @@ lbl_8056E4A0:
 
 
 .global lbl_8056E4C0
-
 lbl_8056E4C0:
-
 	# ROM: 0x56A5C0
 	.4byte 0
 	.4byte 0
@@ -72667,9 +69595,7 @@ lbl_8056E4C0:
 
 
 .global lbl_8056E4F0
-
 lbl_8056E4F0:
-
 	# ROM: 0x56A5F0
 	.4byte 0
 	.4byte 0
@@ -72678,9 +69604,7 @@ lbl_8056E4F0:
 
 
 .global lbl_8056E500
-
 lbl_8056E500:
-
 	# ROM: 0x56A600
 	.4byte 0
 	.4byte 0
@@ -72690,9 +69614,7 @@ lbl_8056E500:
 
 
 .global lbl_8056E558
-
 lbl_8056E558:
-
 	# ROM: 0x56A658
 	.4byte 0
 	.4byte 0
@@ -72715,9 +69637,7 @@ lbl_8056E558:
 
 
 .global lbl_8056E5A0
-
 lbl_8056E5A0:
-
 	# ROM: 0x56A6A0
 	.4byte 0
 	.4byte 0
@@ -72728,9 +69648,7 @@ lbl_8056E5A0:
 
 
 .global lbl_8056E5B8
-
 lbl_8056E5B8:
-
 	# ROM: 0x56A6B8
 	.4byte 0
 	.4byte 0
@@ -72741,9 +69659,7 @@ lbl_8056E5B8:
 
 
 .global lbl_8056E5D0
-
 lbl_8056E5D0:
-
 	# ROM: 0x56A6D0
 	.4byte 0
 	.4byte 0
@@ -72762,9 +69678,7 @@ lbl_8056E5D0:
 
 
 .global lbl_8056E608
-
 lbl_8056E608:
-
 	# ROM: 0x56A708
 	.4byte 0x80428170
 	.4byte 0x80428178
@@ -72778,9 +69692,7 @@ lbl_8056E608:
 
 
 .global lbl_8056E62C
-
 lbl_8056E62C:
-
 	# ROM: 0x56A72C
 	.4byte 0
 	.4byte 0
@@ -72790,9 +69702,7 @@ lbl_8056E62C:
 
 
 .global lbl_8056E640
-
 lbl_8056E640:
-
 	# ROM: 0x56A740
 	.4byte 0x80524BEC
 	.4byte 0x80524FF0
@@ -72801,9 +69711,7 @@ lbl_8056E640:
 
 
 .global lbl_8056E650
-
 lbl_8056E650:
-
 	# ROM: 0x56A750
 	.4byte 0
 	.4byte 0
@@ -72822,9 +69730,7 @@ lbl_8056E650:
 
 
 .global lbl_8056E688
-
 lbl_8056E688:
-
 	# ROM: 0x56A788
 	.4byte 0
 	.4byte 0
@@ -72853,9 +69759,7 @@ lbl_8056E688:
 
 
 .global lbl_8056E6E8
-
 lbl_8056E6E8:
-
 	# ROM: 0x56A7E8
 	.4byte 0
 	.4byte 0
@@ -72865,9 +69769,7 @@ lbl_8056E6E8:
 
 
 .global lbl_8056E6FC
-
 lbl_8056E6FC:
-
 	# ROM: 0x56A7FC
 	.4byte 0
 	.4byte 0
@@ -72877,9 +69779,7 @@ lbl_8056E6FC:
 
 
 .global lbl_8056E710
-
 lbl_8056E710:
-
 	# ROM: 0x56A810
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -72896,9 +69796,7 @@ lbl_8056E710:
 
 
 .global lbl_8056E740
-
 lbl_8056E740:
-
 	# ROM: 0x56A840
 	.4byte 0
 	.4byte 0
@@ -72930,9 +69828,7 @@ lbl_8056E740:
 
 
 .global lbl_8056E7AC
-
 lbl_8056E7AC:
-
 	# ROM: 0x56A8AC
 	.4byte 0
 	.4byte 0
@@ -72960,9 +69856,7 @@ lbl_8056E7AC:
 
 
 .global lbl_8056E808
-
 lbl_8056E808:
-
 	# ROM: 0x56A908
 	.4byte 0
 	.4byte 0
@@ -72991,9 +69885,7 @@ lbl_8056E808:
 
 
 .global lbl_8056E868
-
 lbl_8056E868:
-
 	# ROM: 0x56A968
 	.4byte 0
 	.4byte 0
@@ -73035,9 +69927,7 @@ lbl_8056E868:
 
 
 .global lbl_8056E8FC
-
 lbl_8056E8FC:
-
 	# ROM: 0x56A9FC
 	.4byte 0
 	.4byte 0
@@ -73077,9 +69967,7 @@ lbl_8056E8FC:
 
 
 .global lbl_8056E988
-
 lbl_8056E988:
-
 	# ROM: 0x56AA88
 	.4byte 0x806641A0
 	.4byte 0
@@ -73124,9 +70012,7 @@ lbl_8056E988:
 
 
 .global lbl_8056EA28
-
 lbl_8056EA28:
-
 	# ROM: 0x56AB28
 	.4byte 0x80665E48
 	.4byte 0
@@ -73134,9 +70020,7 @@ lbl_8056EA28:
 
 
 .global lbl_8056EA34
-
 lbl_8056EA34:
-
 	# ROM: 0x56AB34
 	.4byte 0x80665E50
 	.4byte 0
@@ -73147,9 +70031,7 @@ lbl_8056EA34:
 
 
 .global lbl_8056EA4C
-
 lbl_8056EA4C:
-
 	# ROM: 0x56AB4C
 	.4byte 0x80665E58
 	.4byte 0
@@ -73157,9 +70039,7 @@ lbl_8056EA4C:
 
 
 .global lbl_8056EA58
-
 lbl_8056EA58:
-
 	# ROM: 0x56AB58
 	.4byte 0x80664198
 	.4byte 0
@@ -73204,9 +70084,7 @@ lbl_8056EA58:
 
 
 .global lbl_8056EAF8
-
 lbl_8056EAF8:
-
 	# ROM: 0x56ABF8
 	.4byte 0x80665E60
 	.4byte 0
@@ -73217,9 +70095,7 @@ lbl_8056EAF8:
 
 
 .global lbl_8056EB10
-
 lbl_8056EB10:
-
 	# ROM: 0x56AC10
 	.4byte 0x80665E68
 	.4byte 0
@@ -73228,9 +70104,7 @@ lbl_8056EB10:
 
 
 .global lbl_8056EB20
-
 lbl_8056EB20:
-
 	# ROM: 0x56AC20
 	.4byte 0x80665E70
 	.4byte 0
@@ -73281,9 +70155,7 @@ lbl_8056EB20:
 
 
 .global lbl_8056EBD8
-
 lbl_8056EBD8:
-
 	# ROM: 0x56ACD8
 	.4byte 0x80665E78
 	.4byte 0
@@ -73334,9 +70206,7 @@ lbl_8056EBD8:
 
 
 .global lbl_8056EC90
-
 lbl_8056EC90:
-
 	# ROM: 0x56AD90
 	.4byte 0x80665E80
 	.4byte 0
@@ -73387,9 +70257,7 @@ lbl_8056EC90:
 
 
 .global lbl_8056ED48
-
 lbl_8056ED48:
-
 	# ROM: 0x56AE48
 	.4byte 0x8066CA88
 	.4byte 0x8066CA90
@@ -73417,9 +70285,7 @@ lbl_8056ED48:
 
 
 .global lbl_8056EDA4
-
 lbl_8056EDA4:
-
 	# ROM: 0x56AEA4
 	.4byte 0x80665E88
 	.4byte 0
@@ -73427,9 +70293,7 @@ lbl_8056EDA4:
 
 
 .global lbl_8056EDB0
-
 lbl_8056EDB0:
-
 	# ROM: 0x56AEB0
 	.4byte 0x80665E90
 	.4byte 0
@@ -73452,9 +70316,7 @@ lbl_8056EDB0:
 
 
 .global lbl_8056EDF8
-
 lbl_8056EDF8:
-
 	# ROM: 0x56AEF8
 	.4byte 0x80665E98
 	.4byte 0
@@ -73475,9 +70337,7 @@ lbl_8056EDF8:
 
 
 .global lbl_8056EE38
-
 lbl_8056EE38:
-
 	# ROM: 0x56AF38
 	.4byte 0x8043D1A8
 	.4byte 0x8043D4D0
@@ -73490,9 +70350,7 @@ lbl_8056EE38:
 
 
 .global lbl_8056EE58
-
 lbl_8056EE58:
-
 	# ROM: 0x56AF58
 	.4byte 0x80665EA0
 	.4byte 0
@@ -73556,9 +70414,7 @@ lbl_8056EE58:
 
 
 .global lbl_8056EF44
-
 lbl_8056EF44:
-
 	# ROM: 0x56B044
 	.4byte 0x80665EA8
 	.4byte 0
@@ -73566,9 +70422,7 @@ lbl_8056EF44:
 
 
 .global lbl_8056EF50
-
 lbl_8056EF50:
-
 	# ROM: 0x56B050
 	.4byte 0x80665EB0
 	.4byte 0
@@ -73579,9 +70433,7 @@ lbl_8056EF50:
 
 
 .global lbl_8056EF68
-
 lbl_8056EF68:
-
 	# ROM: 0x56B068
 	.4byte 0x80665EB8
 	.4byte 0
@@ -73590,9 +70442,7 @@ lbl_8056EF68:
 
 
 .global lbl_8056EF78
-
 lbl_8056EF78:
-
 	# ROM: 0x56B078
 	.4byte 0x80665EC8
 	.4byte 0
@@ -73601,9 +70451,7 @@ lbl_8056EF78:
 
 
 .global lbl_8056EF88
-
 lbl_8056EF88:
-
 	# ROM: 0x56B088
 	.4byte 0x80665ED0
 	.4byte 0
@@ -73654,9 +70502,7 @@ lbl_8056EF88:
 
 
 .global lbl_8056F040
-
 lbl_8056F040:
-
 	# ROM: 0x56B140
 	.4byte 0x80665ED8
 	.4byte 0
@@ -73707,9 +70553,7 @@ lbl_8056F040:
 
 
 .global lbl_8056F0F8
-
 lbl_8056F0F8:
-
 	# ROM: 0x56B1F8
 	.4byte 0x80665EE0
 	.4byte 0
@@ -73760,9 +70604,7 @@ lbl_8056F0F8:
 
 
 .global lbl_8056F1B0
-
 lbl_8056F1B0:
-
 	# ROM: 0x56B2B0
 	.4byte 0x80665EE8
 	.4byte 0
@@ -73813,9 +70655,7 @@ lbl_8056F1B0:
 
 
 .global lbl_8056F268
-
 lbl_8056F268:
-
 	# ROM: 0x56B368
 	.4byte 0x80665EF0
 	.4byte 0
@@ -73866,9 +70706,7 @@ lbl_8056F268:
 
 
 .global lbl_8056F320
-
 lbl_8056F320:
-
 	# ROM: 0x56B420
 	.4byte 0x80665EF8
 	.4byte 0
@@ -73919,9 +70757,7 @@ lbl_8056F320:
 
 
 .global lbl_8056F3D8
-
 lbl_8056F3D8:
-
 	# ROM: 0x56B4D8
 	.4byte 0x80664248
 	.4byte 0
@@ -73935,9 +70771,7 @@ lbl_8056F3D8:
 
 
 .global lbl_8056F3FC
-
 lbl_8056F3FC:
-
 	# ROM: 0x56B4FC
 	.4byte 0x80665F00
 	.4byte 0
@@ -73945,9 +70779,7 @@ lbl_8056F3FC:
 
 
 .global lbl_8056F408
-
 lbl_8056F408:
-
 	# ROM: 0x56B508
 	.4byte 0x80664258
 	.4byte 0
@@ -73956,9 +70788,7 @@ lbl_8056F408:
 
 
 .global lbl_8056F418
-
 lbl_8056F418:
-
 	# ROM: 0x56B518
 	.4byte 0x80664250
 	.4byte 0
@@ -73967,9 +70797,7 @@ lbl_8056F418:
 
 
 .global lbl_8056F428
-
 lbl_8056F428:
-
 	# ROM: 0x56B528
 	.4byte 0x80665F08
 	.4byte 0
@@ -73978,9 +70806,7 @@ lbl_8056F428:
 
 
 .global lbl_8056F438
-
 lbl_8056F438:
-
 	# ROM: 0x56B538
 	.4byte 0x80665F10
 	.4byte 0
@@ -74033,9 +70859,7 @@ lbl_8056F438:
 
 
 .global lbl_8056F4F8
-
 lbl_8056F4F8:
-
 	# ROM: 0x56B5F8
 	.4byte 0x80665F18
 	.4byte 0
@@ -74086,9 +70910,7 @@ lbl_8056F4F8:
 
 
 .global lbl_8056F5B0
-
 lbl_8056F5B0:
-
 	# ROM: 0x56B6B0
 	.4byte 0x80665F20
 	.4byte 0
@@ -74141,9 +70963,7 @@ lbl_8056F5B0:
 
 
 .global lbl_8056F670
-
 lbl_8056F670:
-
 	# ROM: 0x56B770
 	.4byte 0x8054BA38
 	.4byte 0x8054BAB0
@@ -74164,9 +70984,7 @@ lbl_8056F670:
 
 
 .global lbl_8056F6B0
-
 lbl_8056F6B0:
-
 	# ROM: 0x56B7B0
 	.4byte 0x80665F28
 	.4byte 0
@@ -74223,9 +71041,7 @@ lbl_8056F6B0:
 
 
 .global lbl_8056F780
-
 lbl_8056F780:
-
 	# ROM: 0x56B880
 	.4byte 0x80665F30
 	.4byte 0
@@ -74236,9 +71052,7 @@ lbl_8056F780:
 
 
 .global lbl_8056F798
-
 lbl_8056F798:
-
 	# ROM: 0x56B898
 	.4byte 0x80665F38
 	.4byte 0
@@ -74247,9 +71061,7 @@ lbl_8056F798:
 
 
 .global lbl_8056F7A8
-
 lbl_8056F7A8:
-
 	# ROM: 0x56B8A8
 	.4byte 0x80665F40
 	.4byte 0
@@ -74260,9 +71072,7 @@ lbl_8056F7A8:
 
 
 .global lbl_8056F7C0
-
 lbl_8056F7C0:
-
 	# ROM: 0x56B8C0
 	.4byte 0x80665EC0
 	.4byte 0
@@ -74271,9 +71081,7 @@ lbl_8056F7C0:
 
 
 .global lbl_8056F7D0
-
 lbl_8056F7D0:
-
 	# ROM: 0x56B8D0
 	.4byte 0x80449DB4
 	.4byte 0x80449DCC
@@ -74292,9 +71100,7 @@ lbl_8056F7D0:
 
 
 .global lbl_8056F808
-
 lbl_8056F808:
-
 	# ROM: 0x56B908
 	.4byte 0x80665F80
 	.4byte 0
@@ -74306,9 +71112,7 @@ lbl_8056F808:
 
 
 .global lbl_8056F824
-
 lbl_8056F824:
-
 	# ROM: 0x56B924
 	.4byte 0x80665F88
 	.4byte 0
@@ -74316,9 +71120,7 @@ lbl_8056F824:
 
 
 .global lbl_8056F830
-
 lbl_8056F830:
-
 	# ROM: 0x56B930
 	.4byte 0x80665F90
 	.4byte 0
@@ -74327,9 +71129,7 @@ lbl_8056F830:
 
 
 .global lbl_8056F840
-
 lbl_8056F840:
-
 	# ROM: 0x56B940
 	.4byte 0x80665FA8
 	.4byte 0
@@ -74380,9 +71180,7 @@ lbl_8056F840:
 
 
 .global lbl_8056F8F8
-
 lbl_8056F8F8:
-
 	# ROM: 0x56B9F8
 	.4byte 0x80665FB0
 	.4byte 0
@@ -74433,9 +71231,7 @@ lbl_8056F8F8:
 
 
 .global lbl_8056F9B0
-
 lbl_8056F9B0:
-
 	# ROM: 0x56BAB0
 	.4byte 0x80665FB8
 	.4byte 0
@@ -74487,9 +71283,7 @@ lbl_8056F9B0:
 
 
 .global lbl_8056FA6C
-
 lbl_8056FA6C:
-
 	# ROM: 0x56BB6C
 	.4byte 0x80665FC0
 	.4byte 0
@@ -74500,9 +71294,7 @@ lbl_8056FA6C:
 
 
 .global lbl_8056FA84
-
 lbl_8056FA84:
-
 	# ROM: 0x56BB84
 	.4byte 0x80665FC8
 	.4byte 0
@@ -74510,9 +71302,7 @@ lbl_8056FA84:
 
 
 .global lbl_8056FA90
-
 lbl_8056FA90:
-
 	# ROM: 0x56BB90
 	.4byte 0x80665FD8
 	.4byte 0
@@ -74564,9 +71354,7 @@ lbl_8056FA90:
 
 
 .global lbl_8056FB4C
-
 lbl_8056FB4C:
-
 	# ROM: 0x56BC4C
 	.4byte 0x80665FE0
 	.4byte 0
@@ -74577,9 +71365,7 @@ lbl_8056FB4C:
 
 
 .global lbl_8056FB64
-
 lbl_8056FB64:
-
 	# ROM: 0x56BC64
 	.4byte 0x80665FE8
 	.4byte 0
@@ -74587,9 +71373,7 @@ lbl_8056FB64:
 
 
 .global lbl_8056FB70
-
 lbl_8056FB70:
-
 	# ROM: 0x56BC70
 	.4byte 0x80450638
 	.4byte 0x80450780
@@ -74603,9 +71387,7 @@ lbl_8056FB70:
 
 
 .global lbl_8056FB94
-
 lbl_8056FB94:
-
 	# ROM: 0x56BC94
 	.4byte 0x80666000
 	.4byte 0
@@ -74660,9 +71442,7 @@ lbl_8056FB94:
 
 
 .global lbl_8056FC5C
-
 lbl_8056FC5C:
-
 	# ROM: 0x56BD5C
 	.4byte 0x00460041
 	.4byte 0x00540041
@@ -74670,9 +71450,7 @@ lbl_8056FC5C:
 
 
 .global lbl_8056FC68
-
 lbl_8056FC68:
-
 	# ROM: 0x56BD68
 	.4byte 0x80666008
 	.4byte 0
@@ -74723,9 +71501,7 @@ lbl_8056FC68:
 
 
 .global lbl_8056FD20
-
 lbl_8056FD20:
-
 	# ROM: 0x56BE20
 	.4byte 0x80666010
 	.4byte 0
@@ -74778,9 +71554,7 @@ lbl_8056FD20:
 
 
 .global lbl_8056FDE0
-
 lbl_8056FDE0:
-
 	# ROM: 0x56BEE0
 	.4byte 0x80666018
 	.4byte 0
@@ -74835,9 +71609,7 @@ lbl_8056FDE0:
 
 
 .global lbl_8056FEA8
-
 lbl_8056FEA8:
-
 	# ROM: 0x56BFA8
 	.4byte 0x80666028
 	.4byte 0
@@ -74889,9 +71661,7 @@ lbl_8056FEA8:
 
 
 .global lbl_8056FF64
-
 lbl_8056FF64:
-
 	# ROM: 0x56C064
 	.4byte 0x80666030
 	.4byte 0
@@ -74902,9 +71672,7 @@ lbl_8056FF64:
 
 
 .global lbl_8056FF7C
-
 lbl_8056FF7C:
-
 	# ROM: 0x56C07C
 	.4byte 0x80666038
 	.4byte 0
@@ -74912,9 +71680,7 @@ lbl_8056FF7C:
 
 
 .global lbl_8056FF88
-
 lbl_8056FF88:
-
 	# ROM: 0x56C088
 	.4byte 0x80666040
 	.4byte 0
@@ -74937,9 +71703,7 @@ lbl_8056FF88:
 
 
 .global lbl_8056FFD0
-
 lbl_8056FFD0:
-
 	# ROM: 0x56C0D0
 	.4byte 0x80666050
 	.4byte 0
@@ -74957,9 +71721,7 @@ lbl_8056FFD0:
 
 
 .global lbl_80570004
-
 lbl_80570004:
-
 	# ROM: 0x56C104
 	.4byte 0x804537C0
 	.4byte 0x804537D4
@@ -74969,9 +71731,7 @@ lbl_80570004:
 
 
 .global lbl_80570018
-
 lbl_80570018:
-
 	# ROM: 0x56C118
 	.4byte 0x80666058
 	.4byte 0
@@ -75021,9 +71781,7 @@ lbl_80570018:
 
 
 .global lbl_805700CC
-
 lbl_805700CC:
-
 	# ROM: 0x56C1CC
 	.4byte 0x80666060
 	.4byte 0
@@ -75034,9 +71792,7 @@ lbl_805700CC:
 
 
 .global lbl_805700E4
-
 lbl_805700E4:
-
 	# ROM: 0x56C1E4
 	.4byte 0x80666068
 	.4byte 0
@@ -75044,9 +71800,7 @@ lbl_805700E4:
 
 
 .global lbl_805700F0
-
 lbl_805700F0:
-
 	# ROM: 0x56C1F0
 	.4byte 0x80666070
 	.4byte 0
@@ -75097,9 +71851,7 @@ lbl_805700F0:
 
 
 .global lbl_805701A8
-
 lbl_805701A8:
-
 	# ROM: 0x56C2A8
 	.4byte 0x80666080
 	.4byte 0
@@ -75162,9 +71914,7 @@ lbl_805701A8:
 
 
 .global lbl_80570290
-
 lbl_80570290:
-
 	# ROM: 0x56C390
 	.4byte 0x80666090
 	.4byte 0
@@ -75217,9 +71967,7 @@ lbl_80570290:
 
 
 .global lbl_80570350
-
 lbl_80570350:
-
 	# ROM: 0x56C450
 	.4byte 0x80666098
 	.4byte 0
@@ -75272,9 +72020,7 @@ lbl_80570350:
 
 
 .global lbl_80570410
-
 lbl_80570410:
-
 	# ROM: 0x56C510
 	.4byte 0x806660A0
 	.4byte 0
@@ -75327,9 +72073,7 @@ lbl_80570410:
 
 
 .global lbl_805704D0
-
 lbl_805704D0:
-
 	# ROM: 0x56C5D0
 	.4byte 0x8045676C
 	.4byte 0x8045670C
@@ -75345,9 +72089,7 @@ lbl_805704D0:
 
 
 .global lbl_805704FC
-
 lbl_805704FC:
-
 	# ROM: 0x56C5FC
 	.4byte 0x804566EC
 	.4byte 0x80456628
@@ -75363,9 +72105,7 @@ lbl_805704FC:
 
 
 .global lbl_80570528
-
 lbl_80570528:
-
 	# ROM: 0x56C628
 	.4byte 0x806660A8
 	.4byte 0
@@ -75418,9 +72158,7 @@ lbl_80570528:
 
 
 .global lbl_805705E8
-
 lbl_805705E8:
-
 	# ROM: 0x56C6E8
 	.4byte 0x806660B0
 	.4byte 0
@@ -75471,9 +72209,7 @@ lbl_805705E8:
 
 
 .global lbl_805706A0
-
 lbl_805706A0:
-
 	# ROM: 0x56C7A0
 	.4byte 0x806660B8
 	.4byte 0
@@ -75538,9 +72274,7 @@ lbl_805706A0:
 
 
 .global lbl_80570790
-
 lbl_80570790:
-
 	# ROM: 0x56C890
 	.4byte 0x806660C0
 	.4byte 0
@@ -75601,9 +72335,7 @@ lbl_80570790:
 
 
 .global lbl_80570870
-
 lbl_80570870:
-
 	# ROM: 0x56C970
 	.4byte 0x806660D0
 	.4byte 0
@@ -75658,9 +72390,7 @@ lbl_80570870:
 
 
 .global lbl_80570938
-
 lbl_80570938:
-
 	# ROM: 0x56CA38
 	.4byte 0x806660D8
 	.4byte 0
@@ -75711,9 +72441,7 @@ lbl_80570938:
 
 
 .global lbl_805709F0
-
 lbl_805709F0:
-
 	# ROM: 0x56CAF0
 	.4byte 0x806660E8
 	.4byte 0
@@ -75776,9 +72504,7 @@ lbl_805709F0:
 
 
 .global lbl_80570AD8
-
 lbl_80570AD8:
-
 	# ROM: 0x56CBD8
 	.4byte 0x806660F0
 	.4byte 0
@@ -75831,9 +72557,7 @@ lbl_80570AD8:
 
 
 .global lbl_80570B98
-
 lbl_80570B98:
-
 	# ROM: 0x56CC98
 	.4byte 0x806660F8
 	.4byte 0
@@ -75884,9 +72608,7 @@ lbl_80570B98:
 
 
 .global lbl_80570C50
-
 lbl_80570C50:
-
 	# ROM: 0x56CD50
 	.4byte 0x80666100
 	.4byte 0
@@ -75937,9 +72659,7 @@ lbl_80570C50:
 
 
 .global lbl_80570D08
-
 lbl_80570D08:
-
 	# ROM: 0x56CE08
 	.4byte 0x80666108
 	.4byte 0
@@ -75978,9 +72698,7 @@ lbl_80570D08:
 
 
 .global lbl_80570D90
-
 lbl_80570D90:
-
 	# ROM: 0x56CE90
 	.4byte 0x80666110
 	.4byte 0
@@ -76031,9 +72749,7 @@ lbl_80570D90:
 
 
 .global lbl_80570E48
-
 lbl_80570E48:
-
 	# ROM: 0x56CF48
 	.4byte 0x80461054
 	.4byte 0x80461E8C
@@ -76068,9 +72784,7 @@ lbl_80570E48:
 
 
 .global lbl_80570EC0
-
 lbl_80570EC0:
-
 	# ROM: 0x56CFC0
 	.4byte 0x80666118
 	.4byte 0
@@ -76093,9 +72807,7 @@ lbl_80570EC0:
 
 
 .global lbl_80570F08
-
 lbl_80570F08:
-
 	# ROM: 0x56D008
 	.4byte 0x80666120
 	.4byte 0
@@ -76116,9 +72828,7 @@ lbl_80570F08:
 
 
 .global lbl_80570F48
-
 lbl_80570F48:
-
 	# ROM: 0x56D048
 	.4byte 0x8046374C
 	.4byte 0x8046375C
@@ -76127,9 +72837,7 @@ lbl_80570F48:
 
 
 .global lbl_80570F58
-
 lbl_80570F58:
-
 	# ROM: 0x56D058
 	.4byte 0x804645CC
 	.4byte 0x80468434
@@ -76137,9 +72845,7 @@ lbl_80570F58:
 
 
 .global lbl_80570F64
-
 lbl_80570F64:
-
 	# ROM: 0x56D064
 	.4byte 0x80463FF8
 	.4byte 0x8046892C
@@ -76147,9 +72853,7 @@ lbl_80570F64:
 
 
 .global lbl_80570F70
-
 lbl_80570F70:
-
 	# ROM: 0x56D070
 	.4byte 0x80466F8C
 	.4byte 0x80466FF8
@@ -76167,9 +72871,7 @@ lbl_80570F70:
 
 
 .global lbl_80570FA4
-
 lbl_80570FA4:
-
 	# ROM: 0x56D0A4
 	.4byte 0x80466590
 	.4byte 0x80466638
@@ -76193,9 +72895,7 @@ lbl_80570FA4:
 
 
 .global lbl_80570FF0
-
 lbl_80570FF0:
-
 	# ROM: 0x56D0F0
 	.4byte 0x804676A4
 	.4byte 0x804676BC
@@ -76272,9 +72972,7 @@ lbl_80570FF0:
 
 
 .global lbl_805711C8
-
 lbl_805711C8:
-
 	# ROM: 0x56D2C8
 	.4byte 0x804689D4
 	.4byte 0x80468BDC
@@ -76285,9 +72983,7 @@ lbl_805711C8:
 
 
 .global lbl_805711E0
-
 lbl_805711E0:
-
 	# ROM: 0x56D2E0
 	.4byte 0x8046A02C
 	.4byte 0x8046A11C
@@ -76298,9 +72994,7 @@ lbl_805711E0:
 
 
 .global lbl_805711F8
-
 lbl_805711F8:
-
 	# ROM: 0x56D2F8
 	.4byte 0x8046A224
 	.4byte 0x8046A280
@@ -76332,9 +73026,7 @@ lbl_805711F8:
 
 
 .global lbl_80571350
-
 lbl_80571350:
-
 	# ROM: 0x56D450
 	.4byte 0x80666168
 	.4byte 0
@@ -76377,9 +73069,7 @@ lbl_80571350:
 
 
 .global lbl_805713E8
-
 lbl_805713E8:
-
 	# ROM: 0x56D4E8
 	.4byte 0x80666188
 	.4byte 0
@@ -76392,9 +73082,7 @@ lbl_805713E8:
 
 
 .global lbl_80571408
-
 lbl_80571408:
-
 	# ROM: 0x56D508
 	.4byte 0x80666198
 	.4byte 0
@@ -76407,9 +73095,7 @@ lbl_80571408:
 
 
 .global lbl_80571428
-
 lbl_80571428:
-
 	# ROM: 0x56D528
 	.4byte 0x806661A0
 	.4byte 0
@@ -76422,9 +73108,7 @@ lbl_80571428:
 
 
 .global lbl_80571448
-
 lbl_80571448:
-
 	# ROM: 0x56D548
 	.4byte 0x806661A8
 	.4byte 0
@@ -76439,9 +73123,7 @@ lbl_80571448:
 
 
 .global lbl_80571470
-
 lbl_80571470:
-
 	# ROM: 0x56D570
 	.4byte 0x806661B0
 	.4byte 0
@@ -76454,9 +73136,7 @@ lbl_80571470:
 
 
 .global lbl_80571490
-
 lbl_80571490:
-
 	# ROM: 0x56D590
 	.4byte 0x806661B8
 	.4byte 0
@@ -76479,9 +73159,7 @@ lbl_80571490:
 
 
 .global lbl_805714D8
-
 lbl_805714D8:
-
 	# ROM: 0x56D5D8
 	.4byte 0x806661C8
 	.4byte 0
@@ -76504,9 +73182,7 @@ lbl_805714D8:
 
 
 .global lbl_80571520
-
 lbl_80571520:
-
 	# ROM: 0x56D620
 	.4byte 0x806661D8
 	.4byte 0
@@ -76523,9 +73199,7 @@ lbl_80571520:
 
 
 .global lbl_80571550
-
 lbl_80571550:
-
 	# ROM: 0x56D650
 	.4byte 0x806661E0
 	.4byte 0
@@ -76542,9 +73216,7 @@ lbl_80571550:
 
 
 .global lbl_80571580
-
 lbl_80571580:
-
 	# ROM: 0x56D680
 	.4byte 0x806661E8
 	.4byte 0
@@ -76563,9 +73235,7 @@ lbl_80571580:
 
 
 .global lbl_805715B8
-
 lbl_805715B8:
-
 	# ROM: 0x56D6B8
 	.4byte 0x80664DC8
 	.4byte 0
@@ -76626,9 +73296,7 @@ lbl_805715B8:
 
 
 .global lbl_80571698
-
 lbl_80571698:
-
 	# ROM: 0x56D798
 	.asciz "?333?"
 	.balign 4
@@ -76645,9 +73313,7 @@ lbl_80571698:
 
 
 .global lbl_805716C8
-
 lbl_805716C8:
-
 	# ROM: 0x56D7C8
 	.4byte 0x80664DB8
 	.4byte 0
@@ -76750,61 +73416,47 @@ lbl_805716C8:
 
 
 .global lbl_80571850
-
 lbl_80571850:
-
 	# ROM: 0x56D950
 	.asciz "NW4R:Pointer Error\nfunc(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_80571884
-
 lbl_80571884:
-
 	# ROM: 0x56D984
 	.asciz "g3d_anmobj.h"
 	.balign 4
 
 
 .global lbl_80571894
-
 lbl_80571894:
-
 	# ROM: 0x56D994
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
 .global lbl_805718B0
-
 lbl_805718B0:
-
 	# ROM: 0x56D9B0
 	.asciz "g3d_resmat_ac.h"
 
 
 .global lbl_805718C0
-
 lbl_805718C0:
-
 	# ROM: 0x56D9C0
 	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
 	.balign 4
 
 
 .global lbl_805718E8
-
 lbl_805718E8:
-
 	# ROM: 0x56D9E8
 	.asciz "g3d_resmat_ac.h"
 
 
 .global lbl_805718F8
-
 lbl_805718F8:
-
 	# ROM: 0x56D9F8
 	.asciz "%s::%s: Object not valid."
 	.balign 4
@@ -76812,17 +73464,13 @@ lbl_805718F8:
 
 
 .global lbl_80571918
-
 lbl_80571918:
-
 	# ROM: 0x56DA18
 	.asciz "g3d_restev_ac.h"
 
 
 .global lbl_80571928
-
 lbl_80571928:
-
 	# ROM: 0x56DA28
 	.asciz "%s::%s: Object not valid."
 	.balign 4
@@ -76830,17 +73478,13 @@ lbl_80571928:
 
 
 .global lbl_80571948
-
 lbl_80571948:
-
 	# ROM: 0x56DA48
 	.asciz "g3d_resmdl_ac.h"
 
 
 .global lbl_80571958
-
 lbl_80571958:
-
 	# ROM: 0x56DA58
 	.asciz "%s::%s: Object not valid."
 	.balign 4
@@ -76848,60 +73492,46 @@ lbl_80571958:
 
 
 .global lbl_80571978
-
 lbl_80571978:
-
 	# ROM: 0x56DA78
 	.asciz "g3d_resmdl_ac.h"
 
 
 .global lbl_80571988
-
 lbl_80571988:
-
 	# ROM: 0x56DA88
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
 
 
 .global lbl_805719B0
-
 lbl_805719B0:
-
 	# ROM: 0x56DAB0
 	.asciz "g3d_resmdl_ac.h"
 
 
 .global lbl_805719C0
-
 lbl_805719C0:
-
 	# ROM: 0x56DAC0
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
 .global lbl_805719DC
-
 lbl_805719DC:
-
 	# ROM: 0x56DADC
 	.asciz "g3d_resnode_ac.h"
 	.balign 4
 
 
 .global lbl_805719F0
-
 lbl_805719F0:
-
 	# ROM: 0x56DAF0
 	.asciz "NW4R:Failed assertion IsValid()"
 
 
 .global lbl_80571A10
-
 lbl_80571A10:
-
 	# ROM: 0x56DB10
 	.asciz "g3d_resnode_ac.h"
 	.balign 4
@@ -76940,17 +73570,13 @@ lbl_80571A10:
 
 
 .global lbl_80571BE0
-
 lbl_80571BE0:
-
 	# ROM: 0x56DCE0
 	.asciz "idx is out of bounds(%d)\n%d <= idx <= %d not satisfied."
 
 
 .global lbl_80571C18
-
 lbl_80571C18:
-
 	# ROM: 0x56DD18
 	.asciz "g3d_resdict_ac.h"
 	.balign 4
@@ -76970,9 +73596,7 @@ lbl_80571C18:
 
 
 .global lbl_80571CD0
-
 lbl_80571CD0:
-
 	# ROM: 0x56DDD0
 	.4byte 0x80666258
 	.4byte 0
@@ -77023,9 +73647,7 @@ lbl_80571CD0:
 
 
 .global lbl_80571D88
-
 lbl_80571D88:
-
 	# ROM: 0x56DE88
 	.4byte 0x80666260
 	.4byte 0
@@ -77036,9 +73658,7 @@ lbl_80571D88:
 
 
 .global lbl_80571DA0
-
 lbl_80571DA0:
-
 	# ROM: 0x56DEA0
 	.4byte 0x80666268
 	.4byte 0
@@ -77047,9 +73667,7 @@ lbl_80571DA0:
 
 
 .global lbl_80571DB0
-
 lbl_80571DB0:
-
 	# ROM: 0x56DEB0
 	.4byte 0x80666270
 	.4byte 0
@@ -77058,9 +73676,7 @@ lbl_80571DB0:
 
 
 .global lbl_80571DC0
-
 lbl_80571DC0:
-
 	# ROM: 0x56DEC0
 	.4byte 0x8066D118
 	.4byte 0x8066D120
@@ -77073,9 +73689,7 @@ lbl_80571DC0:
 
 
 .global lbl_80571DE0
-
 lbl_80571DE0:
-
 	# ROM: 0x56DEE0
 	.4byte 0x80664CF0
 	.4byte 0
@@ -77088,9 +73702,7 @@ lbl_80571DE0:
 
 
 .global lbl_80571E00
-
 lbl_80571E00:
-
 	# ROM: 0x56DF00
 	.4byte 0x80666298
 	.4byte 0
@@ -77099,9 +73711,7 @@ lbl_80571E00:
 
 
 .global lbl_80571E10
-
 lbl_80571E10:
-
 	# ROM: 0x56DF10
 	.4byte 0x806662A0
 	.4byte 0
@@ -77182,27 +73792,21 @@ lbl_80571E10:
 
 
 .global lbl_80571F40
-
 lbl_80571F40:
-
 	# ROM: 0x56E040
 	.asciz "NW4R:Failed assertion idx < mNumScnObj"
 	.balign 4
 
 
 .global lbl_80571F68
-
 lbl_80571F68:
-
 	# ROM: 0x56E068
 	.asciz "g3d_scnobj.h"
 	.balign 4
 
 
 .global lbl_80571F78
-
 lbl_80571F78:
-
 	# ROM: 0x56E078
 	.4byte 0x806662B8
 	.4byte 0
@@ -77221,9 +73825,7 @@ lbl_80571F78:
 
 
 .global lbl_80571FB0
-
 lbl_80571FB0:
-
 	# ROM: 0x56E0B0
 	.4byte 0x806662C0
 	.4byte 0
@@ -77254,9 +73856,7 @@ lbl_80571FB0:
 
 
 .global lbl_80572018
-
 lbl_80572018:
-
 	# ROM: 0x56E118
 	.4byte 0x806662D0
 	.4byte 0
@@ -77271,36 +73871,28 @@ lbl_80572018:
 
 
 .global lbl_80572040
-
 lbl_80572040:
-
 	# ROM: 0x56E140
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
 
 
 .global lbl_80572068
-
 lbl_80572068:
-
 	# ROM: 0x56E168
 	.asciz "g3d_resnode_ac.h"
 	.balign 4
 
 
 .global lbl_8057207C
-
 lbl_8057207C:
-
 	# ROM: 0x56E17C
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
 .global lbl_80572098
-
 lbl_80572098:
-
 	# ROM: 0x56E198
 	.asciz "g3d_resnode_ac.h"
 	.balign 4
@@ -77308,9 +73900,7 @@ lbl_80572098:
 
 
 .global lbl_805720B0
-
 lbl_805720B0:
-
 	# ROM: 0x56E1B0
 	.4byte 0x806662E0
 	.4byte 0
@@ -77319,9 +73909,7 @@ lbl_805720B0:
 
 
 .global lbl_805720C0
-
 lbl_805720C0:
-
 	# ROM: 0x56E1C0
 	.4byte 0x806662E8
 	.4byte 0
@@ -77334,9 +73922,7 @@ lbl_805720C0:
 
 
 .global lbl_805720E0
-
 lbl_805720E0:
-
 	# ROM: 0x56E1E0
 	.4byte 0x806662F8
 	.4byte 0
@@ -77349,9 +73935,7 @@ lbl_805720E0:
 
 
 .global lbl_80572100
-
 lbl_80572100:
-
 	# ROM: 0x56E200
 	.4byte 0x806662F0
 	.4byte 0
@@ -77362,9 +73946,7 @@ lbl_80572100:
 
 
 .global lbl_80572118
-
 lbl_80572118:
-
 	# ROM: 0x56E218
 	.4byte 0x806662A8
 	.4byte 0
@@ -77414,9 +73996,7 @@ lbl_80572118:
 
 
 .global lbl_805721CC
-
 lbl_805721CC:
-
 	# ROM: 0x56E2CC
 	.4byte 0x806662B0
 	.4byte 0
@@ -77430,27 +74010,21 @@ lbl_805721CC:
 
 
 .global lbl_805721F0
-
 lbl_805721F0:
-
 	# ROM: 0x56E2F0
 	.asciz "ResAnmChr"
 	.balign 4
 
 
 .global lbl_805721FC
-
 lbl_805721FC:
-
 	# ROM: 0x56E2FC
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
 .global lbl_80572218
-
 lbl_80572218:
-
 	# ROM: 0x56E318
 	.asciz "g3d_resanmchr_ac.h"
 	.balign 4
@@ -77458,9 +74032,7 @@ lbl_80572218:
 
 
 .global lbl_80572230
-
 lbl_80572230:
-
 	# ROM: 0x56E330
 	.4byte 0x80666308
 	.4byte 0
@@ -77473,9 +74045,7 @@ lbl_80572230:
 
 
 .global lbl_80572250
-
 lbl_80572250:
-
 	# ROM: 0x56E350
 	.4byte 0x80666318
 	.4byte 0
@@ -77494,9 +74064,7 @@ lbl_80572250:
 
 
 .global lbl_80572288
-
 lbl_80572288:
-
 	# ROM: 0x56E388
 	.4byte 0x80666330
 	.4byte 0
@@ -77539,9 +74107,7 @@ lbl_80572288:
 
 
 .global lbl_80572320
-
 lbl_80572320:
-
 	# ROM: 0x56E420
 	.4byte 0x80666340
 	.4byte 0
@@ -77576,9 +74142,7 @@ lbl_80572320:
 
 
 .global lbl_80572398
-
 lbl_80572398:
-
 	# ROM: 0x56E498
 	.4byte 0x80666358
 	.4byte 0
@@ -77587,9 +74151,7 @@ lbl_80572398:
 
 
 .global lbl_805723A8
-
 lbl_805723A8:
-
 	# ROM: 0x56E4A8
 	.4byte 0x80666310
 	.4byte 0
@@ -77600,9 +74162,7 @@ lbl_805723A8:
 
 
 .global lbl_805723C0
-
 lbl_805723C0:
-
 	# ROM: 0x56E4C0
 	.4byte 0x80666360
 	.4byte 0
@@ -77611,9 +74171,7 @@ lbl_805723C0:
 
 
 .global lbl_805723D0
-
 lbl_805723D0:
-
 	# ROM: 0x56E4D0
 	.4byte 0x80666368
 	.4byte 0
@@ -77624,9 +74182,7 @@ lbl_805723D0:
 
 
 .global lbl_805723E8
-
 lbl_805723E8:
-
 	# ROM: 0x56E4E8
 	.4byte 0x80666370
 	.4byte 0
@@ -77634,9 +74190,7 @@ lbl_805723E8:
 
 
 .global lbl_805723F4
-
 lbl_805723F4:
-
 	# ROM: 0x56E4F4
 	.4byte 0x80666378
 	.4byte 0
@@ -77647,9 +74201,7 @@ lbl_805723F4:
 
 
 .global lbl_8057240C
-
 lbl_8057240C:
-
 	# ROM: 0x56E50C
 	.4byte 0x80666380
 	.4byte 0
@@ -77657,9 +74209,7 @@ lbl_8057240C:
 
 
 .global lbl_80572418
-
 lbl_80572418:
-
 	# ROM: 0x56E518
 	.4byte 0x80666388
 	.4byte 0
@@ -77668,17 +74218,13 @@ lbl_80572418:
 
 
 .global lbl_80572428
-
 lbl_80572428:
-
 	# ROM: 0x56E528
 	.asciz "NW4R:Failed assertion IsValid()"
 
 
 .global lbl_80572448
-
 lbl_80572448:
-
 	# ROM: 0x56E548
 	.asciz "g3d_fog.h"
 	.balign 4
@@ -77686,17 +74232,13 @@ lbl_80572448:
 
 
 .global lbl_80572458
-
 lbl_80572458:
-
 	# ROM: 0x56E558
 	.asciz "NW4R:Failed assertion IsValid()"
 
 
 .global lbl_80572478
-
 lbl_80572478:
-
 	# ROM: 0x56E578
 	.asciz "g3d_fog.h"
 	.balign 4
@@ -77704,17 +74246,13 @@ lbl_80572478:
 
 
 .global lbl_80572488
-
 lbl_80572488:
-
 	# ROM: 0x56E588
 	.asciz "NW4R:Failed assertion IsValid()"
 
 
 .global lbl_805724A8
-
 lbl_805724A8:
-
 	# ROM: 0x56E5A8
 	.asciz "g3d_fog.h"
 	.balign 4
@@ -77722,9 +74260,7 @@ lbl_805724A8:
 
 
 .global lbl_805724B8
-
 lbl_805724B8:
-
 	# ROM: 0x56E5B8
 	.4byte 0x80666390
 	.4byte 0
@@ -77733,9 +74269,7 @@ lbl_805724B8:
 
 
 .global lbl_805724C8
-
 lbl_805724C8:
-
 	# ROM: 0x56E5C8
 	.4byte 0x80666398
 	.4byte 0
@@ -77744,9 +74278,7 @@ lbl_805724C8:
 
 
 .global lbl_805724D8
-
 lbl_805724D8:
-
 	# ROM: 0x56E5D8
 	.4byte 0x806663A0
 	.4byte 0
@@ -77763,9 +74295,7 @@ lbl_805724D8:
 
 
 .global lbl_80572508
-
 lbl_80572508:
-
 	# ROM: 0x56E608
 	.4byte 0x806661D0
 	.4byte 0
@@ -77780,9 +74310,7 @@ lbl_80572508:
 
 
 .global lbl_80572530
-
 lbl_80572530:
-
 	# ROM: 0x56E630
 	.4byte 0x8066D3F0
 	.4byte 0
@@ -77979,9 +74507,7 @@ lbl_80572530:
 
 
 .global lbl_80572830
-
 lbl_80572830:
-
 	# ROM: 0x56E930
 	.4byte 0x8066D590
 	.4byte 0x8066D594
@@ -77997,9 +74523,7 @@ lbl_80572830:
 
 
 .global lbl_8057285C
-
 lbl_8057285C:
-
 	# ROM: 0x56E95C
 	.4byte 0x804A40D8
 	.4byte 0x804A40E0
@@ -78013,9 +74537,7 @@ lbl_8057285C:
 
 
 .global lbl_80572880
-
 lbl_80572880:
-
 	# ROM: 0x56E980
 	.4byte 0x804A1CD0
 	.4byte 0x804A1CFC
@@ -78116,9 +74638,7 @@ lbl_80572880:
 
 
 .global lbl_80572A00
-
 lbl_80572A00:
-
 	# ROM: 0x56EB00
 	.4byte 0x804A6DC0
 	.4byte 0x804A6E20
@@ -78131,9 +74651,7 @@ lbl_80572A00:
 
 
 .global lbl_80572A20
-
 lbl_80572A20:
-
 	# ROM: 0x56EB20
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -78244,9 +74762,7 @@ lbl_80572A20:
 
 
 .global lbl_80572BC8
-
 lbl_80572BC8:
-
 	# ROM: 0x56ECC8
 	.4byte 0x806663B8
 	.4byte 0
@@ -78257,9 +74773,7 @@ lbl_80572BC8:
 
 
 .global lbl_80572BE0
-
 lbl_80572BE0:
-
 	# ROM: 0x56ECE0
 	.4byte 0x80664520
 	.4byte 0
@@ -78268,9 +74782,7 @@ lbl_80572BE0:
 
 
 .global lbl_80572BF0
-
 lbl_80572BF0:
-
 	# ROM: 0x56ECF0
 	.4byte 0x806663C0
 	.4byte 0
@@ -78281,9 +74793,7 @@ lbl_80572BF0:
 
 
 .global lbl_80572C08
-
 lbl_80572C08:
-
 	# ROM: 0x56ED08
 	.4byte 0x00040010
 	.4byte 0x000C0018
@@ -78293,9 +74803,7 @@ lbl_80572C08:
 
 
 .global lbl_80572C1C
-
 lbl_80572C1C:
-
 	# ROM: 0x56ED1C
 	.4byte 0x00140014
 	.4byte 0x001C001C
@@ -78305,9 +74813,7 @@ lbl_80572C1C:
 
 
 .global lbl_80572C30
-
 lbl_80572C30:
-
 	# ROM: 0x56ED30
 	.4byte 0
 	.4byte 0x00010001
@@ -78317,9 +74823,7 @@ lbl_80572C30:
 
 
 .global lbl_80572C44
-
 lbl_80572C44:
-
 	# ROM: 0x56ED44
 	.4byte 0x804B30CC
 	.4byte 0x804B30CC
@@ -78333,9 +74837,7 @@ lbl_80572C44:
 
 
 .global lbl_80572C68
-
 lbl_80572C68:
-
 	# ROM: 0x56ED68
 	.4byte 0x804B34F4
 	.4byte 0x804B3658
@@ -78349,9 +74851,7 @@ lbl_80572C68:
 
 
 .global lbl_80572C8C
-
 lbl_80572C8C:
-
 	# ROM: 0x56ED8C
 	.4byte 0x804B43B4
 	.4byte 0x804B43B4
@@ -78365,9 +74865,7 @@ lbl_80572C8C:
 
 
 .global lbl_80572CB0
-
 lbl_80572CB0:
-
 	# ROM: 0x56EDB0
 	.4byte 0x806663D0
 	.4byte 0
@@ -78390,9 +74888,7 @@ lbl_80572CB0:
 
 
 .global lbl_80572CF8
-
 lbl_80572CF8:
-
 	# ROM: 0x56EDF8
 	.4byte 0x806663D8
 	.4byte 0
@@ -78413,9 +74909,7 @@ lbl_80572CF8:
 
 
 .global lbl_80572D38
-
 lbl_80572D38:
-
 	# ROM: 0x56EE38
 	.4byte 0x806663E0
 	.4byte 0
@@ -78426,9 +74920,7 @@ lbl_80572D38:
 
 
 .global lbl_80572D50
-
 lbl_80572D50:
-
 	# ROM: 0x56EE50
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -78703,9 +75195,7 @@ lbl_80572D50:
 
 
 .global lbl_80573188
-
 lbl_80573188:
-
 	# ROM: 0x56F288
 	.4byte 0x3F19999A
 	.4byte 0x3E4CCCCD
@@ -78714,9 +75204,7 @@ lbl_80573188:
 
 
 .global lbl_80573198
-
 lbl_80573198:
-
 	# ROM: 0x56F298
 	.4byte 0x80666400
 	.4byte 0
@@ -78725,9 +75213,7 @@ lbl_80573198:
 
 
 .global lbl_805731A8
-
 lbl_805731A8:
-
 	# ROM: 0x56F2A8
 	.4byte 0x80666418
 	.4byte 0
@@ -78738,9 +75224,7 @@ lbl_805731A8:
 
 
 .global lbl_805731C0
-
 lbl_805731C0:
-
 	# ROM: 0x56F2C0
 	.4byte 0x80666420
 	.4byte 0
@@ -78749,17 +75233,13 @@ lbl_805731C0:
 
 
 .global lbl_805731D0
-
 lbl_805731D0:
-
 	# ROM: 0x56F2D0
 	.asciz "NW4R:Failed assertion IsValid()"
 
 
 .global lbl_805731F0
-
 lbl_805731F0:
-
 	# ROM: 0x56F2F0
 	.asciz "g3d_fog.h"
 	.balign 4
@@ -78767,9 +75247,7 @@ lbl_805731F0:
 
 
 .global lbl_80573200
-
 lbl_80573200:
-
 	# ROM: 0x56F300
 	.4byte 0x80666428
 	.4byte 0
@@ -78818,9 +75296,7 @@ lbl_80573200:
 
 
 .global lbl_805732B0
-
 lbl_805732B0:
-
 	# ROM: 0x56F3B0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -78931,9 +75407,7 @@ lbl_805732B0:
 
 
 .global lbl_80573458
-
 lbl_80573458:
-
 	# ROM: 0x56F558
 	.4byte 0x804CE564
 	.4byte 0x804CE564
@@ -78950,9 +75424,7 @@ lbl_80573458:
 
 
 .global lbl_80573488
-
 lbl_80573488:
-
 	# ROM: 0x56F588
 	.4byte lbl_80666440
 	.4byte 0
@@ -78960,9 +75432,7 @@ lbl_80573488:
 
 
 .global lbl_80573494
-
 lbl_80573494:
-
 	# ROM: 0x56F594
 	.4byte lbl_80666448
 	.4byte 0
@@ -78973,9 +75443,7 @@ lbl_80573494:
 
 
 .global lbl_805734AC
-
 lbl_805734AC:
-
 	# ROM: 0x56F5AC
 	.4byte lbl_80666450
 	.4byte 0
@@ -78983,9 +75451,7 @@ lbl_805734AC:
 
 
 .global lbl_805734B8
-
 lbl_805734B8:
-
 	# ROM: 0x56F5B8
 	.4byte 0x80666460
 	.4byte 0
@@ -79035,9 +75501,7 @@ lbl_805734B8:
 
 
 .global lbl_8057356C
-
 lbl_8057356C:
-
 	# ROM: 0x56F66C
 	.4byte 0x80666468
 	.4byte 0
@@ -79048,9 +75512,7 @@ lbl_8057356C:
 
 
 .global lbl_80573584
-
 lbl_80573584:
-
 	# ROM: 0x56F684
 	.4byte 0x80666470
 	.4byte 0
@@ -79058,9 +75520,7 @@ lbl_80573584:
 
 
 .global lbl_80573590
-
 lbl_80573590:
-
 	# ROM: 0x56F690
 	.4byte 0x80666478
 	.4byte 0
@@ -79069,9 +75529,7 @@ lbl_80573590:
 
 
 .global lbl_805735A0
-
 lbl_805735A0:
-
 	# ROM: 0x56F6A0
 	.4byte 0x80666498
 	.4byte 0
@@ -79080,9 +75538,7 @@ lbl_805735A0:
 
 
 .global lbl_805735B0
-
 lbl_805735B0:
-
 	# ROM: 0x56F6B0
 	.4byte 0x806664A8
 	.4byte 0
@@ -79095,9 +75551,7 @@ lbl_805735B0:
 
 
 .global lbl_805735D0
-
 lbl_805735D0:
-
 	# ROM: 0x56F6D0
 	.4byte 0x806664B0
 	.4byte 0
@@ -79110,9 +75564,7 @@ lbl_805735D0:
 
 
 .global lbl_805735F0
-
 lbl_805735F0:
-
 	# ROM: 0x56F6F0
 	.4byte 0x806664B8
 	.4byte 0
@@ -79125,9 +75577,7 @@ lbl_805735F0:
 
 
 .global lbl_80573610
-
 lbl_80573610:
-
 	# ROM: 0x56F710
 	.4byte 0x806664C0
 	.4byte 0
@@ -79140,9 +75590,7 @@ lbl_80573610:
 
 
 .global lbl_80573630
-
 lbl_80573630:
-
 	# ROM: 0x56F730
 	.4byte 0x806664C8
 	.4byte 0
@@ -79155,9 +75603,7 @@ lbl_80573630:
 
 
 .global lbl_80573650
-
 lbl_80573650:
-
 	# ROM: 0x56F750
 	.4byte 0x806664D0
 	.4byte 0
@@ -79172,9 +75618,7 @@ lbl_80573650:
 
 
 .global lbl_80573678
-
 lbl_80573678:
-
 	# ROM: 0x56F778
 	.4byte 0x806664E0
 	.4byte 0
@@ -79189,9 +75633,7 @@ lbl_80573678:
 
 
 .global lbl_805736A0
-
 lbl_805736A0:
-
 	# ROM: 0x56F7A0
 	.4byte 0x806664E8
 	.4byte 0
@@ -79241,9 +75683,7 @@ lbl_805736A0:
 
 
 .global lbl_80573754
-
 lbl_80573754:
-
 	# ROM: 0x56F854
 	.4byte 0x806664F0
 	.4byte 0
@@ -79254,9 +75694,7 @@ lbl_80573754:
 
 
 .global lbl_8057376C
-
 lbl_8057376C:
-
 	# ROM: 0x56F86C
 	.4byte 0x806664F8
 	.4byte 0
@@ -79264,9 +75702,7 @@ lbl_8057376C:
 
 
 .global lbl_80573778
-
 lbl_80573778:
-
 	# ROM: 0x56F878
 	.4byte 0x80666500
 	.4byte 0
@@ -79277,9 +75713,7 @@ lbl_80573778:
 
 
 .global lbl_80573790
-
 lbl_80573790:
-
 	# ROM: 0x56F890
 	.4byte 0x80666508
 	.4byte 0
@@ -79288,9 +75722,7 @@ lbl_80573790:
 
 
 .global lbl_805737A0
-
 lbl_805737A0:
-
 	# ROM: 0x56F8A0
 	.4byte 0x80666510
 	.4byte 0
@@ -79329,9 +75761,7 @@ lbl_805737A0:
 
 
 .global lbl_80573828
-
 lbl_80573828:
-
 	# ROM: 0x56F928
 	.4byte 0x80666518
 	.4byte 0
@@ -79370,9 +75800,7 @@ lbl_80573828:
 
 
 .global lbl_805738B0
-
 lbl_805738B0:
-
 	# ROM: 0x56F9B0
 	.4byte 0x80666520
 	.4byte 0
@@ -79381,9 +75809,7 @@ lbl_805738B0:
 
 
 .global lbl_805738C0
-
 lbl_805738C0:
-
 	# ROM: 0x56F9C0
 	.4byte 0x80666528
 	.4byte 0
@@ -79403,9 +75829,7 @@ lbl_805738C0:
 
 
 .global lbl_805738FC
-
 lbl_805738FC:
-
 	# ROM: 0x56F9FC
 	.4byte 0x80666530
 	.4byte 0
@@ -79416,9 +75840,7 @@ lbl_805738FC:
 
 
 .global lbl_80573914
-
 lbl_80573914:
-
 	# ROM: 0x56FA14
 	.4byte 0x80666538
 	.4byte 0
@@ -79426,9 +75848,7 @@ lbl_80573914:
 
 
 .global lbl_80573920
-
 lbl_80573920:
-
 	# ROM: 0x56FA20
 	.4byte 0x80666550
 	.4byte 0
@@ -79447,9 +75867,7 @@ lbl_80573920:
 
 
 .global lbl_805739F8
-
 lbl_805739F8:
-
 	# ROM: 0x56FAF8
 	.4byte 0x80666578
 	.4byte 0
@@ -79458,9 +75876,7 @@ lbl_805739F8:
 
 
 .global lbl_80573A08
-
 lbl_80573A08:
-
 	# ROM: 0x56FB08
 	.4byte 0x80666590
 	.4byte 0
@@ -79469,9 +75885,7 @@ lbl_80573A08:
 
 
 .global lbl_80573A18
-
 lbl_80573A18:
-
 	# ROM: 0x56FB18
 	.4byte 0x806665A8
 	.4byte 0
@@ -79480,9 +75894,7 @@ lbl_80573A18:
 
 
 .global lbl_80573A28
-
 lbl_80573A28:
-
 	# ROM: 0x56FB28
 	.4byte 0x806665B8
 	.4byte 0
@@ -79491,9 +75903,7 @@ lbl_80573A28:
 
 
 .global lbl_80573A38
-
 lbl_80573A38:
-
 	# ROM: 0x56FB38
 	.4byte 0x8066DB60
 	.4byte 0x8066DB68
@@ -79501,9 +75911,7 @@ lbl_80573A38:
 
 
 .global lbl_80573A44
-
 lbl_80573A44:
-
 	# ROM: 0x56FB44
 	.4byte 0x806665C8
 	.4byte 0
@@ -79511,18 +75919,14 @@ lbl_80573A44:
 
 
 .global lbl_80573A50
-
 lbl_80573A50:
-
 	# ROM: 0x56FB50
 	.asciz "NW4R:Pointer must not be NULL (mpData)"
 	.balign 4
 
 
 .global lbl_80573A78
-
 lbl_80573A78:
-
 	# ROM: 0x56FB78
 	.asciz "g3d_rescommon_ac.h"
 	.balign 4
@@ -79530,9 +75934,7 @@ lbl_80573A78:
 
 
 .global lbl_80573A90
-
 lbl_80573A90:
-
 	# ROM: 0x56FB90
 	.4byte 0x804EE70C
 	.4byte 0x804EE8D0
@@ -79565,9 +75967,7 @@ lbl_80573A90:
 
 
 .global lbl_80573B00
-
 lbl_80573B00:
-
 	# ROM: 0x56FC00
 	.4byte 0x804EE94C
 	.4byte 0x804EEAA0
@@ -79600,9 +76000,7 @@ lbl_80573B00:
 
 
 .global lbl_80573B70
-
 lbl_80573B70:
-
 	# ROM: 0x56FC70
 	.4byte 0x804F4E90
 	.4byte 0x804F4EC4
@@ -79619,9 +76017,7 @@ lbl_80573B70:
 
 
 .global lbl_80573BA0
-
 lbl_80573BA0:
-
 	# ROM: 0x56FCA0
 	.4byte 0x806665F0
 	.4byte 0
@@ -79634,9 +76030,7 @@ lbl_80573BA0:
 
 
 .global lbl_80573BC0
-
 lbl_80573BC0:
-
 	# ROM: 0x56FCC0
 	.4byte 0x806665F8
 	.4byte 0
