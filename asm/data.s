@@ -35182,6 +35182,7 @@ lbl_80549D4C:
 	.asciz "/shared2/test2"
 	.balign 4
 	.4byte 0
+	#"\n\n\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
 	.4byte 0x0A0A0A83
 	.4byte 0x47838981
 	.4byte 0x5B82AA94
@@ -35219,7 +35220,9 @@ lbl_80549D4C:
 	.4byte 0x82B382A2
 	.4byte 0x81420000
 	.asciz "\n\n\nAn error has occurred.\nPress the Eject Button, remove the\nGame Disc, and turn off the power to the\nconsole. Please read the Wii Operations\nManual for further instructions."
+	
 	.balign 4
+	#"\n\n\nEin Fehler ist aufgetreten.\nDrücke den Ausgabeknopf, entnimm die\nDisc und schalte die Wii-Konsole aus.\nBitte lies die Wii-Bedienungsanleitung,\num weitere Informationen zu erhalten."
 	.4byte 0x0A0A0A45
 	.4byte 0x696E2046
 	.4byte 0x65686C65
@@ -35230,6 +35233,8 @@ lbl_80549D4C:
 	.4byte 0x6E2E0A44
 	.4byte 0x72FC636B
 	.asciz "e den Ausgabeknopf, entnimm die\nDisc und schalte die Wii-Konsole aus.\nBitte lies die Wii-Bedienungsanleitung,\num weitere Informationen zu erhalten."
+
+	#.asciz "\n\n\nUne erreur est survenue.\nAppuyez sur le bouton EJECT, retirez\nle disque et éteignez la console.\nVeuillez vous référer au Mode d'emploi\nde la Wii pour plus de détails."
 	.4byte 0x0A0A0A55
 	.4byte 0x6E652065
 	.4byte 0x72726575
@@ -35274,6 +35279,8 @@ lbl_80549D4C:
 	.asciz "ails."
 	.balign 4
 	.4byte 0
+	
+	#"\n\n\nOcurrió un Error.\nOprime el Botón EJECT, saca el disco\ny apaga la consola. Consulta el manual\nde operaciones de la consola Wii para\nobtener más información."
 	.4byte 0x0A0A0A4F
 	.4byte 0x63757272
 	.4byte 0x69F32075
@@ -35314,13 +35321,19 @@ lbl_80549D4C:
 	.4byte 0x6E666F72
 	.4byte 0x6D616369
 	.4byte 0xF36E2E00
+
+	#"\n\n\nSi è verificato un errore.\nPremi il pulsante EJECT, estrai il disco\ne spegni la console. Per maggiori\ninformazioni, consulta il manuale di\nistruzioni della console Wii."
 	.4byte 0x0A0A0A53
 	.4byte 0x6920E820
 	.asciz "verificato un errore.\nPremi il pulsante EJECT, estrai il disco\ne spegni la console. Per maggiori\ninformazioni, consulta il manuale di\nistruzioni della console Wii."
+
+
 	.asciz "\n\n\nEr is een fout opgetreden.\nDruk op de EJECT-knop, verwijder de\ndisk en zet het Wii-systeem uit. Lees\nde Wii-handleiding voor meer informatie."
 	.balign 4
 	.asciz "\n\n\nAn error has occurred.\nPress the EJECT Button, remove the Disc,\nand turn off the power to the console.\nPlease refer to the Wii Operations Manual\nfor details."
 	.balign 4
+
+	#"\n\n\nUne erreur est survenue.\nAppuyez sur le bouton EJECT, retirez\nle disque et éteignez la console.\nVeuillez vous référer au mode d'emploi\nWii pour plus de détails."
 	.4byte 0x0A0A0A55
 	.4byte 0x6E652065
 	.4byte 0x72726575
@@ -35362,6 +35375,9 @@ lbl_80549D4C:
 	.4byte 0x64652064
 	.4byte 0xE9746169
 	.4byte 0x6C732E00
+
+	#"\n\n\nSe ha producido un error.\nPulsa el Botón EJECT, extrae el disco y\napaga la consola. Consulta el manual de\ninstrucciones de la consola Wii para\nobtener más información."
+	#.byte 0
 	.4byte 0x0A0A0A53
 	.4byte 0x65206861
 	.4byte 0x2070726F
@@ -35405,6 +35421,8 @@ lbl_80549D4C:
 	.4byte 0x666F726D
 	.4byte 0x616369F3
 	.4byte 0x6E2E0000
+	
+	#"\n\nエラーコード１０４。\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
 	.4byte 0x0A0A8347
 	.4byte 0x8389815B
 	.4byte 0x8352815B
@@ -35446,8 +35464,10 @@ lbl_80549D4C:
 	.4byte 0x82AD82BE
 	.4byte 0x82B382A2
 	.4byte 0x81420000
+
 	.asciz "\n\nError #104,\nAn error has occurred.\nPress the EJECT Button, remove the\nGame Disc, and turn the power off.\nPlease read the Wii Operations Manual\nfor more information."
 	.balign 4
+	#"\n\n\nエラーコード００１。\n不明なデバイスが見つかりました。"
 	.4byte 0x0A0A0A83
 	.4byte 0x47838981
 	.4byte 0x5B835281
@@ -35464,7 +35484,9 @@ lbl_80549D4C:
 	.4byte 0x82BD8142
 	.4byte 0
 	.asciz "\n\n\nError #001,\nunauthorized device has been detected."
+	
 	.balign 4
+	#"\n\n\nFehler #001:\nEs wurde eine unzulässige Komponente\nentdeckt."
 	.4byte 0x0A0A0A46
 	.4byte 0x65686C65
 	.4byte 0x72202330
@@ -35475,7 +35497,9 @@ lbl_80549D4C:
 	.4byte 0x6520756E
 	.4byte 0x7A756CE4
 	.asciz "ssige Komponente\nentdeckt."
+
 	.balign 4
+	#.asciz "\n\n\nErreur 001:\nun dispositif non autorisé a été détecté."
 	.4byte 0x0A0A0A45
 	.4byte 0x72726575
 	.4byte 0x72203030

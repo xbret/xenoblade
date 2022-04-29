@@ -631,37 +631,45 @@ lbl_804F6C30:
 lbl_804F6D00:
 	# ROM: 0x4F2E00
 	.asciz "opt_camlist"
-	.4byte 0x61740070
-	.asciz "itch"
-	.byte 0x43, 0x52, 0x4F
-	.asciz "SS WATER"
-	.byte 0x57, 0x41, 0x54
-	.asciz "ER AT"
+	.asciz "at"
+	.asciz "pitch"
+	.asciz "CROSS WATER"
+	.asciz "WATER AT"
+	#observation point unregistered?
+	#"注視点潜り\n"
 	.byte 0x92, 0x8D
 	.4byte 0x8E8B935F
 	.4byte 0x90F682E8
-	.4byte 0x0A007761
-	.4byte 0x74657297
-	.4byte 0x4490E620
-	.asciz "wa:%.3f map:%.3f %.2f %.2f\n"
+	.2byte 0x0A00
+	#water priority 
+	#"water優先 wa:%.3f map:%.3f %.2f %.2f\n"
+	.byte 0x77
+	.4byte 0x61746572
+	.4byte 0x974490E6
+	.asciz " wa:%.3f map:%.3f %.2f %.2f\n"
 	.asciz "blend:%.2f l:%.2f"
-	.byte 0x77, 0x61
-	.asciz "ter:%.2f y:%.3f"
+	.asciz "water:%.2f y:%.3f"
 	.asciz "blend:%.2f %.1f"
+	#cliff correction?
+	#"崖補正:%d"
 	.4byte 0x8A5295E2
 	.4byte 0x90B33A25
-	.4byte 0x64007761
-	.4byte 0x74657200
+	.2byte 0x6400
+	.asciz "water"
 	.asciz "[%.2f %.2f %.2f] [%.2f %.2f %.2f] l:%.3f %.3f"
-	.byte 0x91, 0x4F
+	#last obstacle
+	#"前障害物%d[%.2f %.2f %.2f] nml:%d pos[%.2f %.2f %.2f]"
+	.2byte 0x914F
 	.4byte 0x8FE18A51
-	.4byte 0x95A82564
-	.asciz "[%.2f %.2f %.2f] nml:%d pos[%.2f %.2f %.2f]"
+	.2byte 0x95A8
+	.asciz "%d[%.2f %.2f %.2f] nml:%d pos[%.2f %.2f %.2f]"
 	.asciz "WALL [%.2f %.2f %.2f]"
+	#ground correction
+	#"地面補正 ny:%.2f gy:%.2f wy:%.2f"
 	.byte 0x92, 0x6E
 	.4byte 0x96CA95E2
-	.4byte 0x90B3206E
-	.asciz "y:%.2f gy:%.2f wy:%.2f"
+	.2byte 0x90B3
+	.asciz " ny:%.2f gy:%.2f wy:%.2f"
 	.balign 4
 	.4byte 0
 
@@ -671,8 +679,7 @@ lbl_804F6E40:
 	# ROM: 0x4F2F40
 	.asciz "camType"
 	.asciz "enemy_size"
-	.byte 0x72
-	.asciz "ange"
+	.asciz "range"
 	.byte 0x63, 0x61, 0x6D
 	.asciz "move"
 	.byte 0x63, 0x61, 0x6D
@@ -2236,8 +2243,7 @@ lbl_804F8F68:
 	.byte 0x74, 0x78, 0x74
 	.4byte 0x5F617000
 	.asciz "txt_pp"
-	.byte 0x43
-	.asciz "MenuBattlePlayerState"
+	.asciz "CMenuBattlePlayerState"
 	.byte 0x6D, 0x66
 	.asciz "71_battle60_pcinfo_base.brlyt"
 	.byte 0x6D, 0x66
@@ -2743,8 +2749,7 @@ lbl_804F9F60:
 	.asciz "arkerlist"
 	.byte 0x53, 0x59
 	.asciz "S_iconlist"
-	.byte 0x43
-	.asciz "MenuSymbolMark"
+	.asciz "CMenuSymbolMark"
 	.byte 0x6D
 	.asciz "f70_cf10_tagicon.brlyt"
 	.byte 0x66
@@ -4122,8 +4127,7 @@ lbl_804FBE94:
 	.asciz "nimap_rate"
 	.byte 0x68
 	.asciz "eight"
-	.byte 0x43, 0x4C
-	.asciz "6_materiallist"
+	.asciz "CL6_materiallist"
 	.byte 0x6D
 	.asciz "oney"
 	.byte 0x6D, 0x61, 0x74
@@ -5146,8 +5150,7 @@ lbl_804FD880:
 	.asciz "t_%02d"
 	.byte 0x6E
 	.asciz "ul_proportion"
-	.byte 0x43, 0x4C
-	.asciz "6_hintlist"
+	.asciz "CL6_hintlist"
 	.byte 0x55
 	.4byte 0x5F494400
 	.asciz "CCol6Hint"
@@ -8727,8 +8730,7 @@ lbl_805032B8:
 lbl_805033EC:
 	# ROM: 0x4FF4EC
 	.asciz "CPartyStateWin"
-	.byte 0x43
-	.asciz "PartyStateScn"
+	.asciz "CPartyStateScn"
 	.byte 0x4D, 0x4E
 	.asciz "U_party"
 	.asciz "name"
@@ -9395,8 +9397,7 @@ lbl_80503FAC:
 	.asciz "_pcname02"
 	.byte 0x70, 0x69
 	.asciz "c_pghole10"
-	.byte 0x43
-	.asciz "MCCrystalBoxTex"
+	.asciz "CMCCrystalBoxTex"
 	.asciz "MNU_item_mes_a"
 	.byte 0x4D
 	.asciz "NU_skill"
@@ -9608,8 +9609,7 @@ lbl_805049D0:
 	.asciz "f10_cry00_heat.tpl"
 	.byte 0x6D
 	.asciz "f10_cry00_mega.tpl"
-	.byte 0x43
-	.asciz "MCCrystalList"
+	.asciz "CMCCrystalList"
 	.byte 0x61, 0x72
 	.4byte 0x63006D66
 	.asciz "10_cry00_inf01.brlyt"
@@ -9630,8 +9630,7 @@ lbl_805049D0:
 	.asciz "txt_listname00"
 	.byte 0x74
 	.asciz "xt_listvalue00"
-	.byte 0x43
-	.asciz "ItemBoxInfoTex"
+	.asciz "CItemBoxInfoTex"
 	.balign 4
 	.4byte 0
 	.asciz "CMCEffCylinder"
@@ -10765,8 +10764,7 @@ lbl_80506BA8:
 	.byte 0x2F
 	.asciz "menu/tpl/%s"
 	.asciz "nul_proportion"
-	.byte 0x43
-	.asciz "MapSel"
+	.asciz "CMapSel"
 	.byte 0x61
 	.4byte 0x7263006D
 	.asciz "f03_map00_mpslct.brlyt"
@@ -10782,8 +10780,7 @@ lbl_80506BA8:
 lbl_80506CA0:
 	# ROM: 0x502DA0
 	.asciz "/menu/Fade.arc"
-	.byte 0x43
-	.asciz "Fade"
+	.asciz "CFade"
 	.byte 0x61, 0x72, 0x63
 	.4byte 0x006D6630
 	.asciz "0_fade.brlyt"
@@ -11185,12 +11182,10 @@ lbl_80507540:
 	.asciz "flg1"
 	.byte 0x43, 0x4F, 0x4C
 	.asciz "6_FLG1_NO1"
-	.byte 0x43
-	.asciz "OL6_FLG1"
+	.asciz "COL6_FLG1"
 	.byte 0x43, 0x4F, 0x4C
 	.asciz "6_FLG1_NO2"
-	.byte 0x43
-	.asciz "OL6_FLG2"
+	.asciz "COL6_FLG2"
 	.byte 0x43, 0x4F, 0x4C
 	.asciz "6_FLG1_NO3"
 	.byte 0x71
@@ -11314,8 +11309,7 @@ lbl_80507540:
 	.asciz "inimaplist2301"
 	.byte 0x6D
 	.asciz "inimaplist2401"
-	.byte 0x43
-	.asciz "FloorMapLyt"
+	.asciz "CFloorMapLyt"
 	.4byte 0x61726300
 	.asciz "CFloorMapMap"
 	.balign 4
@@ -11860,8 +11854,7 @@ lbl_805081A8:
 	.asciz "nu/tpl/KizunaFaceData.arc"
 	.byte 0x2F, 0x6D
 	.asciz "enu/Kizunagram.arc"
-	.byte 0x43
-	.asciz "Kizunagram"
+	.asciz "CKizunagram"
 	.byte 0x61
 	.4byte 0x72630043
 	.asciz "Kizunagram_tex"
@@ -12274,8 +12267,7 @@ lbl_805092B8:
 	.byte 0x2F, 0x6D, 0x65
 	.asciz "nu/PassiveSkill.arc"
 	.asciz "common/jp/bdat_psv.bin"
-	.byte 0x43
-	.asciz "PassiveSkill"
+	.asciz "CPassiveSkill"
 	.byte 0x61, 0x72, 0x63
 	.4byte 0x004D4E55
 	.asciz "_PSskil"
@@ -12584,8 +12576,7 @@ lbl_8050A4A8:
 	.asciz "fileID_1"
 	.byte 0x70, 0x69, 0x63
 	.asciz "_btn00"
-	.byte 0x43
-	.asciz "SysWinScenarioLog"
+	.asciz "CSysWinScenarioLog"
 	.byte 0x61, 0x72
 	.4byte 0x63006D66
 	.asciz "70_cf60_syswin14.brlyt"
@@ -12900,8 +12891,7 @@ lbl_8050A654:
 	.asciz "pic_tbbcof01"
 	.byte 0x74, 0x78, 0x74
 	.asciz "_num01"
-	.byte 0x43
-	.asciz "EquipItemBoxTex"
+	.asciz "CEquipItemBoxTex"
 	.asciz "MNU_skill"
 	.balign 4
 	.4byte 0
@@ -13661,8 +13651,7 @@ lbl_8050C190:
 lbl_8050C2D8:
 	# ROM: 0x5083D8
 	.asciz "/menu/Load.arc"
-	.byte 0x43
-	.asciz "Load"
+	.asciz "CLoad"
 	.byte 0x61, 0x72, 0x63
 	.4byte 0x006D6630
 	.asciz "0_load01.brlyt"
@@ -13677,10 +13666,18 @@ lbl_8050C2D8:
 	.byte 0x6D, 0x66
 	.asciz "00_load00_roop.brlan"
 	.balign 4
+
+	#Xenoblade
+	#"ゼノブレイド"
 	.4byte 0x835B836D
 	.4byte 0x8375838C
 	.4byte 0x83438368
-	.4byte 0
+	.byte 0
+
+	.byte 0x00,0x00,0x00
+
+	#The Bionis and Mechonis's Monados cut the future open
+	#"巨神と機神　モナドが未来を斬り開く"
 	.4byte 0x8B90905F
 	.4byte 0x82C68B40
 	.4byte 0x905F8140
@@ -13689,7 +13686,10 @@ lbl_8050C2D8:
 	.4byte 0x96A29788
 	.4byte 0x82F08E61
 	.4byte 0x82E88A4A
-	.4byte 0x82AD0000
+	.2byte 0x82AD
+	.byte 0x00
+
+	.byte 0x00
 	.asciz "bannerTexture.tpl"
 	.balign 4
 	.asciz "iconTexture[0].tpl"
@@ -14119,8 +14119,7 @@ lbl_8050CA50:
 	.asciz "nul_proportion"
 	.byte 0x2F
 	.asciz "menu/Title.arc"
-	.byte 0x43
-	.asciz "Title"
+	.asciz "CTitle"
 	.byte 0x61, 0x72
 	.4byte 0x63000000
 	.asciz "cf::CHelp_ToAttack"
@@ -14194,8 +14193,7 @@ lbl_8050CDC8:
 	.asciz "/menu/Battery.arc"
 	.byte 0x70, 0x69
 	.asciz "c_%02d"
-	.byte 0x43
-	.asciz "Battery"
+	.asciz "CBattery"
 	.4byte 0x61726300
 	.asciz "mf00_btry.brlyt"
 	.asciz "std::exception"
@@ -14415,6 +14413,8 @@ lbl_8050CFF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
+	#seems like an ascii uppercase/lowercase conversion table
 	.4byte 0x00010203
 	.4byte 0x04050607
 	.4byte 0x08090A0B
@@ -29785,8 +29785,7 @@ lbl_805206E8:
 lbl_80520778:
 	# ROM: 0x51C878
 	.asciz "before seeki"
-	.byte 0x61, 0x66, 0x74
-	.asciz "er seeki"
+	.asciz "after seeki"
 	.balign 4
 	.4byte 0
 
@@ -35267,6 +35266,8 @@ lbl_80525CF8:
 .global lbl_80525D28
 lbl_80525D28:
 	# ROM: 0x521E28
+
+	#"プログラム領域残り %x / 最大 %x\n"
 	.4byte 0x8376838D
 	.4byte 0x834F8389
 	.4byte 0x838097CC
@@ -35275,6 +35276,8 @@ lbl_80525D28:
 	.4byte 0x78202F20
 	.4byte 0x8DC591E5
 	.asciz " %x\n"
+
+	#"プログラム領域が限界を超えました"
 	.byte 0x83, 0x76, 0x83
 	.4byte 0x8D834F83
 	.4byte 0x89838097
@@ -35283,7 +35286,8 @@ lbl_80525D28:
 	.4byte 0x4582F092
 	.4byte 0xB482A682
 	.4byte 0xDC82B582
-	.4byte 0xBD000000
+	.2byte 0xBD00
+	.2byte 0
 	.4byte 0
 
 
@@ -35327,8 +35331,7 @@ lbl_80525E18:
 lbl_80525E2C:
 	# ROM: 0x521F2C
 	.asciz "CDesktop"
-	.byte 0x43, 0x50, 0x72
-	.asciz "ocRoot"
+	.asciz "CProcRoot"
 	.balign 4
 	.asciz "CRsrcData"
 	.balign 4
@@ -35379,13 +35382,17 @@ lbl_80525E70:
 .global lbl_80525F48
 lbl_80525F48:
 	# ROM: 0x522048
+
+	#"ログアウトに失敗しました"
 	.4byte 0x838D834F
 	.4byte 0x83418345
 	.4byte 0x836782C9
 	.4byte 0x8EB89473
 	.4byte 0x82B582DC
 	.4byte 0x82B582BD
-	.4byte 0
+	.byte 0x00
+
+	.byte 0x00,0x00,0x00
 	.4byte 0
 	.asciz "CViewFrame"
 	.balign 4
@@ -35408,13 +35415,10 @@ lbl_80525FA0:
 	# ROM: 0x5220A0
 	.asciz "CWorkFlowTvMode"
 	.asciz "CWorkFlowSetup"
-	.byte 0x43
-	.asciz "WorkFlowShutdownAll"
+	.asciz "CWorkFlowShutdownAll"
 	.asciz "CWorkFlowWiiMenu"
-	.byte 0x43, 0x57, 0x6F
-	.asciz "rkFlowWiiReset"
-	.byte 0x43
-	.asciz "WorkFlowWiiPowerOff"
+	.asciz "CWorkFlowWiiReset"
+	.asciz "CWorkFlowWiiPowerOff"
 	.asciz "CWorkControl"
 	.balign 4
 	.4byte 0
@@ -35428,14 +35432,10 @@ lbl_80525FA0:
 lbl_8052605C:
 	# ROM: 0x52215C
 	.asciz "CWorkRoot"
-	.byte 0x65, 0x78
-	.asciz "it wii menu\n"
-	.byte 0x65, 0x78, 0x69
-	.asciz "t wii reset\n"
-	.byte 0x65, 0x78, 0x69
-	.asciz "t wii power off\n"
-	.byte 0x65, 0x78, 0x69
-	.asciz "t prog end\n"
+	.asciz "exit wii menu\n"
+	.asciz "exit wii reset\n"
+	.asciz "exit wii power off\n"
+	.asciz "exit prog end\n"
 	.asciz "CWorkSystem"
 
 
@@ -35445,17 +35445,17 @@ lbl_805260B4:
 	.asciz "exit wii power off\n"
 	.asciz "exit wii reset\n"
 	.asciz "CWorkSystemMem"
-	.byte 0x43
-	.asciz "WorkSystemCache"
+	.asciz "CWorkSystemCache"
 	.asciz "CWorkSystemPack"
+	#"ログアウトに失敗しました"
 	.4byte 0x838D834F
 	.4byte 0x83418345
 	.4byte 0x836782C9
 	.4byte 0x8EB89473
 	.4byte 0x82B582DC
 	.4byte 0x82B582BD
-	.4byte 0x0043576F
-	.asciz "rkSystem"
+	.byte 0x00
+	.asciz "CWorkSystem"
 	.balign 4
 	.asciz "CWorkSystemMem"
 	.balign 4
@@ -35601,19 +35601,15 @@ lbl_805262A8:
 lbl_805263E8:
 	# ROM: 0x5224E8
 	.asciz "CDeviceVI"
-	.byte 0x43, 0x44
-	.asciz "eviceGX"
+	.asciz "CDeviceGX"
 	.asciz "CDeviceRemotePAD"
-	.byte 0x43, 0x44, 0x65
-	.asciz "viceClock"
-	.byte 0x43, 0x44
-	.asciz "eviceSC"
+	.asciz "CDeviceClock"
+	.asciz "CDeviceSC"
 	.asciz "CDeviceFont"
 	.asciz "CDeviceFile"
 	.asciz "CLibCri"
 	.asciz "CDeviceException"
-	.byte 0x43, 0x44, 0x65
-	.asciz "vice"
+	.asciz "CDevice"
 	.balign 4
 	.asciz "CDeviceClock"
 	.balign 4
@@ -35633,19 +35629,14 @@ lbl_805263E8:
 lbl_805264FC:
 	# ROM: 0x5225FC
 	.asciz "USBKEY"
-	.byte 0x43
-	.asciz "DeviceFileJobReadDvd"
-	.byte 0x2F, 0x00, 0x43
-	.asciz "DeviceFileJobValidPathDvd"
-	.byte 0x43, 0x44
-	.asciz "eviceFileJobValidPathCri"
-	.byte 0x43, 0x44, 0x65
-	.asciz "viceFileJobValidFileDvd"
+	.asciz "CDeviceFileJobReadDvd"
+	.asciz "/"
+	.asciz "CDeviceFileJobValidPathDvd"
+	.asciz "CDeviceFileJobValidPathCri"
+	.asciz "CDeviceFileJobValidFileDvd"
 	.asciz "CDeviceFileJobValidFileCri"
-	.byte 0x43
-	.asciz "DeviceFileDvd"
-	.byte 0x43, 0x44
-	.asciz "eviceFileCri"
+	.asciz "CDeviceFileDvd"
+	.asciz "CDeviceFileCri"
 	.balign 4
 	.asciz "CDeviceFileCri"
 	.balign 4
@@ -35663,12 +35654,20 @@ lbl_805265B8:
 .global lbl_805265D0
 lbl_805265D0:
 	# ROM: 0x5226D0
+
+	#An error has occured?
+	#"エラーが発生しました。"
 	.4byte 0x83478389
 	.4byte 0x815B82AA
 	.4byte 0x94AD90B6
 	.4byte 0x82B582DC
 	.4byte 0x82B582BD
-	.4byte 0x8142008B
+	.2byte 0x8142
+	.byte 0x00
+
+	#Please insert the Bionis disc.
+	#"巨神のディスクをセットしてください。"
+	.byte 0x8B
 	.4byte 0x90905F82
 	.4byte 0xCC836683
 	.4byte 0x42835883
@@ -35678,13 +35677,20 @@ lbl_805265D0:
 	.4byte 0xC482AD82
 	.4byte 0xBE82B382
 	.4byte 0xA2814200
+
+	#The motor is stopping.
+	#"モーターが止まっています。"
 	.4byte 0x8382815B
 	.4byte 0x835E815B
 	.4byte 0x82AA8E7E
 	.4byte 0x82DC82C1
 	.4byte 0x82C482A2
 	.4byte 0x82DC82B7
-	.4byte 0x81420083
+	.2byte 0x8142
+	.byte 0x00
+
+	#"ディスクを読めませんでした。詳しくは・・・"
+	.byte 0x83
 	.4byte 0x66834283
 	.4byte 0x58834E82
 	.4byte 0xF093C782
@@ -35695,7 +35701,9 @@ lbl_805265D0:
 	.4byte 0xDA82B582
 	.4byte 0xAD82CD81
 	.4byte 0x45814581
-	.4byte 0x45000000
+	.2byte 0x4500
+
+	.2byte 0
 	.4byte 0
 	.asciz "CDeviceFileJob"
 	.balign 4
@@ -35715,8 +35723,7 @@ lbl_805265D0:
 lbl_805266F4:
 	# ROM: 0x5227F4
 	.asciz "CDeviceFontLayer"
-	.byte 0x43, 0x44, 0x65
-	.asciz "viceFontLoader"
+	.asciz "CDeviceFontLoader"
 	.balign 4
 	.asciz "CDeviceFontInfoExt"
 	.balign 4
@@ -35749,8 +35756,7 @@ lbl_805266F4:
 lbl_8052685C:
 	# ROM: 0x52295C
 	.asciz "CDesktopBackGround"
-	.byte 0x43
-	.asciz "DesktopException"
+	.asciz "CDesktopException"
 	.balign 4
 	.4byte 0
 	.asciz "CException"
@@ -35772,10 +35778,9 @@ lbl_805268A8:
 	.asciz "CLibHbm"
 	.asciz "CLibG3d"
 	.asciz "CLibLayout"
-	.byte 0x43
-	.asciz "LibVM"
-	.byte 0x43, 0x4C
-	.asciz "ibStaticData"
+	.asciz "CLibVM"
+	.asciz "CLibStaticData"
+	#"ログアウトに失敗しました"
 	.byte 0x83, 0x8D, 0x83
 	.4byte 0x4F834183
 	.4byte 0x45836782
@@ -35790,10 +35795,8 @@ lbl_805268A8:
 lbl_805268F8:
 	# ROM: 0x5229F8
 	.asciz ".ahx"
-	.byte 0x43, 0x4C, 0x69
-	.asciz "bCriMoviePlay"
-	.byte 0x43, 0x4C
-	.asciz "ibCriStreamingPlay"
+	.asciz "CLibCriMoviePlay"
+	.asciz "CLibCriStreamingPlay"
 	.balign 4
 	.4byte 0
 	.asciz "CLibCriMoviePlay"
@@ -35803,18 +35806,34 @@ lbl_805268F8:
 .global lbl_8052693C
 lbl_8052693C:
 	# ROM: 0x522A3C
+	#"停止中"
 	.4byte 0x92E28E7E
-	.4byte 0x9286008D
+	.2byte 0x9286
+	.byte 0x00
+
+	#"再生準備中"
+	.byte 0x8D
 	.4byte 0xC490B68F
 	.4byte 0x8094F592
-	.4byte 0x86008DC4
+	.2byte 0x8600
+
+	#"再生中"
+	.2byte 0x8DC4
 	.4byte 0x90B69286
-	.4byte 0x008DC490
-	.4byte 0xB68F4997
-	.4byte 0xB9008347
+	.byte 0x00
+
+	#"再生終了"
+	.4byte 0x8DC490B6
+	.4byte 0x8F4997B9
+	.byte 0x00
+
+	#"エラー発生"
+	.2byte 0x8347
 	.4byte 0x8389815B
 	.4byte 0x94AD90B6
-	.4byte 0
+	.byte 0x00
+
+	.byte 0x00, 0x00, 0x00
 	.4byte 0
 
 
@@ -35848,29 +35867,53 @@ lbl_80526970:
 .global lbl_805269D8
 lbl_805269D8:
 	# ROM: 0x522AD8
+	
+	#"停止中"
 	.4byte 0x92E28E7E
-	.4byte 0x92860041
+	.2byte 0x9286
+	.byte 00
+	
+	#"ADX のヘッダ情報取得中"
+	.byte 0x41
 	.4byte 0x44582082
 	.4byte 0xCC837783
 	.4byte 0x62835F8F
 	.4byte 0xEE95F18E
 	.4byte 0xE693BE92
-	.4byte 0x86008DC4
+	.2byte 0x8600
+	
+	#"生準備中"
+	.2byte 0x8DC4
 	.4byte 0x90B68F80
 	.4byte 0x94F59286
-	.4byte 0x00836683
+	.byte 0x00
+
+	#"デコード＆再生中"
+	.byte 0x83,0x66,0x83
 	.4byte 0x52815B83
 	.4byte 0x6881958D
 	.4byte 0xC490B692
-	.4byte 0x86008366
+	.2byte 0x8600
+
+	#"デコード終了"
+	.2byte 0x8366
 	.4byte 0x8352815B
 	.4byte 0x83688F49
-	.4byte 0x97B9008D
+	.2byte 0x97B9
+	.byte 0x00
+
+	#"再生終了"
+	.byte 0x8D
 	.4byte 0xC490B68F
 	.4byte 0x4997B900
+
+	#"エラー発生"
 	.4byte 0x83478389
 	.4byte 0x815B94AD
-	.4byte 0x90B60000
+	.2byte 0x90B6
+	.byte 0x00
+	
+	.byte 0
 	.4byte 0
 
 
@@ -35895,10 +35938,8 @@ lbl_80526A38:
 lbl_80526AA8:
 	# ROM: 0x522BA8
 	.asciz "exit wii menu\n"
-	.byte 0x65
-	.asciz "xit wii reset\n"
-	.byte 0x43
-	.asciz "LibHbmControl"
+	.asciz "exit wii reset\n"
+	.asciz "CLibHbmControl"
 	.balign 4
 	.asciz "CLibLayout"
 	.balign 4
@@ -35908,8 +35949,7 @@ lbl_80526AA8:
 lbl_80526AE4:
 	# ROM: 0x522BE4
 	.asciz "Layout Mem"
-	.byte 0x4C
-	.asciz "AYOUT"
+	.asciz "LAYOUT"
 	.balign 4
 	.asciz "CLibStaticData"
 	.balign 4
@@ -35921,8 +35961,7 @@ lbl_80526AE4:
 lbl_80526B20:
 	# ROM: 0x522C20
 	.asciz "invalid distance too far back"
-	.byte 0x69, 0x6E
-	.asciz "valid distance code"
+	.asciz "invalid distance code"
 	.asciz "invalid literal/length code"
 	.4byte 0x60070000
 	.4byte 0x00080050
@@ -36706,12 +36745,9 @@ lbl_805278C0:
 lbl_80527908:
 	# ROM: 0x523A08
 	.asciz "NW4R Mem"
-	.byte 0x4E, 0x57, 0x34
-	.asciz "R Mem(P)"
-	.byte 0x4E, 0x57, 0x34
-	.asciz "R Mem(S)"
-	.byte 0x4E, 0x57, 0x34
-	.asciz "R Mem(A)"
+	.asciz "NW4R Mem(P)"
+	.asciz "NW4R Mem(S)"
+	.asciz "NW4R Mem(A)"
 	.balign 4
 	.asciz "CScnTexWorkMan"
 	.balign 4
