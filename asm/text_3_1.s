@@ -18176,8 +18176,8 @@ lbl_802BE81C:
 /* 802BE824 00287DE4  38 60 00 00 */	li r3, 0
 /* 802BE828 00287DE8  4E 80 00 20 */	blr 
 
-.global func_802BE82C
-func_802BE82C:
+.global memcmp
+memcmp:
 /* 802BE82C 00287DEC  38 E4 FF FF */	addi r7, r4, -1
 /* 802BE830 00287DF0  38 C3 FF FF */	addi r6, r3, -1
 /* 802BE834 00287DF4  38 85 00 01 */	addi r4, r5, 1

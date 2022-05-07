@@ -1,8 +1,8 @@
 TEXT_O_FILES :=\
-	$(BUILD_DIR)/asm/Dolphin/memcpy.o \
-	$(BUILD_DIR)/asm/Dolphin/mem_TRK.o \
-	$(BUILD_DIR)/asm/Dolphin/__mem.o \
-	$(BUILD_DIR)/asm/Dolphin/__exception.o \
+	$(BUILD_DIR)/asm/RevoSDK/memcpy.o \
+	$(BUILD_DIR)/asm/RevoSDK/TRK/mem_TRK.o \
+	$(BUILD_DIR)/asm/RevoSDK/TRK/__mem.o \
+	$(BUILD_DIR)/asm/RevoSDK/TRK/__exception.o \
 	$(BUILD_DIR)/asm/text_main.o \
 	$(BUILD_DIR)/asm/sdata.o \
 	$(BUILD_DIR)/src/main.o \
@@ -10,7 +10,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sdata_1.o \
 	$(BUILD_DIR)/asm/sbss.o \
 	$(BUILD_DIR)/asm/text_2.o \
-	$(BUILD_DIR)/src/Dolphin/__start.o \
+	$(BUILD_DIR)/src/RevoSDK/__start.o \
 	$(BUILD_DIR)/asm/sbss_1.o \
 	$(BUILD_DIR)/asm/text_3.o \
 	$(BUILD_DIR)/src/code_802AEB74.o \
@@ -19,49 +19,118 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/text_4.o \
 	$(BUILD_DIR)/asm/text_5.o \
 	$(BUILD_DIR)/asm/PPCArch.o \
-	$(BUILD_DIR)/asm/text_5_1.o \
-	$(BUILD_DIR)/asm/Dolphin/dvd/dvdfs.o \
-	$(BUILD_DIR)/asm/Dolphin/dvd/dvd.o \
-	$(BUILD_DIR)/asm/Dolphin/dvd/dvdqueue.o \
-	$(BUILD_DIR)/asm/Dolphin/dvd/dvderror.o \
-	$(BUILD_DIR)/asm/Dolphin/dvd/dvdidutils.o \
-	$(BUILD_DIR)/asm/Dolphin/dvd/dvdFatal.o \
-	$(BUILD_DIR)/asm/Dolphin/dvd/dvdDeviceError.o \
-	$(BUILD_DIR)/asm/Dolphin/dvd/dvd_broadway.o \
+	$(BUILD_DIR)/asm/RevoSDK/gki/gki_buffer.o \
+    $(BUILD_DIR)/asm/RevoSDK/gki/gki_time.o \
+    $(BUILD_DIR)/asm/RevoSDK/gki/gki_ppc.o \
+    $(BUILD_DIR)/asm/RevoSDK/hcisu_h2.o \
+    $(BUILD_DIR)/asm/RevoSDK/uusb_ppc.o \
+    $(BUILD_DIR)/asm/RevoSDK/bte/bte_hcisu.o \
+    $(BUILD_DIR)/asm/RevoSDK/bte/bte_init.o \
+    $(BUILD_DIR)/asm/RevoSDK/bte/bte_logmsg.o \
+    $(BUILD_DIR)/asm/RevoSDK/bte/bte_main.o \
+    $(BUILD_DIR)/asm/RevoSDK/btu/btu_task1.o \
+    $(BUILD_DIR)/asm/RevoSDK/bd.o \
+    $(BUILD_DIR)/asm/RevoSDK/bta/bta_sys_conn.o \
+    $(BUILD_DIR)/asm/RevoSDK/bta/bta_sys_main.o \
+    $(BUILD_DIR)/asm/RevoSDK/ptim.o \
+    $(BUILD_DIR)/asm/RevoSDK/utl.o \
+    $(BUILD_DIR)/asm/RevoSDK/bta/bta_dm_act.o \
+    $(BUILD_DIR)/asm/RevoSDK/bta/bta_dm_api.o \
+    $(BUILD_DIR)/asm/RevoSDK/bta/bta_dm_main.o \
+    $(BUILD_DIR)/asm/RevoSDK/bta/bta_dm_pm.o \
+    $(BUILD_DIR)/asm/RevoSDK/bta/bta_hh_act.o \
+    $(BUILD_DIR)/asm/RevoSDK/bta/bta_hh_api.o \
+    $(BUILD_DIR)/asm/RevoSDK/bta/bta_hh_main.o \
+    $(BUILD_DIR)/asm/RevoSDK/bta/bta_hh_utils.o \
+    $(BUILD_DIR)/asm/RevoSDK/btm/btm_acl.o \
+    $(BUILD_DIR)/asm/RevoSDK/btm/btm_dev.o \
+    $(BUILD_DIR)/asm/RevoSDK/btm/btm_devctl.o \
+    $(BUILD_DIR)/asm/RevoSDK/btm/btm_discovery.o \
+    $(BUILD_DIR)/asm/RevoSDK/btm/btm_inq.o \
+    $(BUILD_DIR)/asm/RevoSDK/btm/btm_main.o \
+    $(BUILD_DIR)/asm/RevoSDK/btm/btm_pm.o \
+    $(BUILD_DIR)/asm/RevoSDK/btm/btm_sco.o \
+    $(BUILD_DIR)/asm/RevoSDK/btm/btm_sec.o \
+    $(BUILD_DIR)/asm/RevoSDK/btu/btu_hcif.o \
+    $(BUILD_DIR)/asm/RevoSDK/btu/btu_init.o \
+    $(BUILD_DIR)/asm/RevoSDK/wbt_ext.o \
+    $(BUILD_DIR)/asm/RevoSDK/gap/gap_api.o \
+    $(BUILD_DIR)/asm/RevoSDK/gap/gap_conn.o \
+    $(BUILD_DIR)/asm/RevoSDK/gap/gap_utils.o \
+    $(BUILD_DIR)/asm/RevoSDK/hcicmds.o \
+    $(BUILD_DIR)/asm/RevoSDK/hidd/hidd_api.o \
+    $(BUILD_DIR)/asm/RevoSDK/hidd/hidd_conn.o \
+    $(BUILD_DIR)/asm/RevoSDK/hidd/hidd_mgmt.o \
+    $(BUILD_DIR)/asm/RevoSDK/hidd/hidd_pm.o \
+    $(BUILD_DIR)/asm/RevoSDK/hidh/hidh_api.o \
+    $(BUILD_DIR)/asm/RevoSDK/hidh/hidh_conn.o \
+    $(BUILD_DIR)/asm/RevoSDK/l2c/l2c_api.o \
+    $(BUILD_DIR)/asm/RevoSDK/l2c/l2c_csm.o \
+    $(BUILD_DIR)/asm/RevoSDK/l2c/l2c_link.o \
+    $(BUILD_DIR)/asm/RevoSDK/l2c/l2c_main.o \
+    $(BUILD_DIR)/asm/RevoSDK/l2c/l2c_utils.o \
+    $(BUILD_DIR)/asm/RevoSDK/port/port_api.o \
+    $(BUILD_DIR)/asm/RevoSDK/port/port_rfc.o \
+    $(BUILD_DIR)/asm/RevoSDK/port/port_utils.o \
+    $(BUILD_DIR)/asm/RevoSDK/rfc/rfc_l2cap_if.o \
+    $(BUILD_DIR)/asm/RevoSDK/rfc/rfc_mx_fsm.o \
+    $(BUILD_DIR)/asm/RevoSDK/rfc/rfc_port_fsm.o \
+    $(BUILD_DIR)/asm/RevoSDK/rfc/rfc_port_if.o \
+    $(BUILD_DIR)/asm/RevoSDK/rfc/rfc_ts_frames.o \
+    $(BUILD_DIR)/asm/RevoSDK/rfc/rfc_utils.o \
+    $(BUILD_DIR)/asm/RevoSDK/sdp/sdp_api.o \
+    $(BUILD_DIR)/asm/RevoSDK/sdp/sdp_db.o \
+    $(BUILD_DIR)/asm/RevoSDK/sdp/sdp_discovery.o \
+    $(BUILD_DIR)/asm/RevoSDK/sdp/sdp_main.o \
+    $(BUILD_DIR)/asm/RevoSDK/sdp/sdp_server.o \
+    $(BUILD_DIR)/asm/RevoSDK/sdp/sdp_utils.o \
+    $(BUILD_DIR)/asm/code_80308530.o \
+    $(BUILD_DIR)/asm/RevoSDK/db.o \
+    $(BUILD_DIR)/asm/RevoSDK/dsp/dsp.o \
+    $(BUILD_DIR)/asm/RevoSDK/dsp/dsp_debug.o \
+    $(BUILD_DIR)/asm/RevoSDK/dsp/dsp_task.o \
+	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdfs.o \
+	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd.o \
+	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdqueue.o \
+	$(BUILD_DIR)/asm/RevoSDK/dvd/dvderror.o \
+	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdidutils.o \
+	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdFatal.o \
+	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdDeviceError.o \
+	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd_broadway.o \
     $(BUILD_DIR)/asm/text_5_2.o \
 	$(BUILD_DIR)/asm/text_5_3.o \
 	$(BUILD_DIR)/asm/text_5_4.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OS.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSAlarm.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/func_803535D0.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSAlloc.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSArena.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSAudioSystem.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSCache.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSContext.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSError.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSExec.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSFatal.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSFont.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSInterrupt.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSMessage.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSMemory.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSMutex.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSReboot.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSReset.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSRtc.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSSync.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSThread.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSTime.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSUtf.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSIpc.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSStateTM.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSPlayRecord.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSStateFlags.o \
-	$(BUILD_DIR)/asm/Dolphin/OS/OSNet.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OS.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSAlarm.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/func_803535D0.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSAlloc.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSArena.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSAudioSystem.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSCache.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSContext.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSError.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSExec.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSFatal.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSFont.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSInterrupt.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSMessage.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSMemory.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSMutex.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSReboot.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSReset.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSRtc.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSSync.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSThread.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSTime.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSUtf.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSIpc.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSStateTM.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSPlayRecord.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSStateFlags.o \
+	$(BUILD_DIR)/asm/RevoSDK/OS/OSNet.o \
 	$(BUILD_DIR)/asm/code_8035E1F0.o \
-	$(BUILD_DIR)/asm/Dolphin/__ppc_eabi_init.o \
-	$(BUILD_DIR)/asm/Dolphin/Pad.o \
+	$(BUILD_DIR)/asm/RevoSDK/TRK/__ppc_eabi_init.o \
+	$(BUILD_DIR)/asm/RevoSDK/Pad.o \
 	$(BUILD_DIR)/asm/text_6.o \
 	$(BUILD_DIR)/asm/CriWare.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_rescommon.o \
