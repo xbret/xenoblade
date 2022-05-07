@@ -1583,8 +1583,8 @@ lbl_802C26A0:
 /* 802C26B0 0028BC70  38 21 00 10 */	addi r1, r1, 0x10
 /* 802C26B4 0028BC74  4E 80 00 20 */	blr 
 
-.global func_802C26B8
-func_802C26B8:
+.global strcpy
+strcpy:
 /* 802C26B8 0028BC78  54 60 07 BE */	clrlwi r0, r3, 0x1e
 /* 802C26BC 0028BC7C  54 85 07 BE */	clrlwi r5, r4, 0x1e
 /* 802C26C0 0028BC80  7C 00 28 40 */	cmplw r0, r5
