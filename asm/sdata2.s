@@ -6,15 +6,36 @@
 .global lbl_806683A8
 lbl_806683A8:
 	.asciz "ahx.pkh"
+
+.global lbl_806683B0
+lbl_806683B0:
 	.asciz "adx.pkh"
+
+.global lbl_806683B8
+lbl_806683B8:
 	.asciz "chr.pkh"
+
+.global lbl_806683C0
+lbl_806683C0:
 	.asciz "eff.pkh"
+
+.global lbl_806683C8
+lbl_806683C8:
 	.asciz "map.pkh"
+
+.global lbl_806683D0
+lbl_806683D0:
 	.asciz "obj.pkh"
+
+.global lbl_806683D8
+lbl_806683D8:
 	.asciz "snd.pkh"
-	.4byte 0x53484100
-	.4byte 0x43414D00
-	.4byte 0x45464600
+
+.global lbl_806683E0
+lbl_806683E0:
+	.asciz "SHA"
+	.asciz "CAM"
+	.asciz "EFF"
 	.asciz "ARROW"
 	.balign 4
 	.4byte 0x34330000

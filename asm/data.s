@@ -119,8 +119,8 @@ lbl_805282A0:
 .global lbl_80528380
 lbl_80528380:
 	# ROM: 0x524480
-	.4byte 0x804F5B88
-	.4byte 0x80039A30  ;# ptr
+	.4byte lbl_804F5B88
+	.4byte func_80039A30  ;# ptr
 	.4byte 0
 	.4byte 0
 
@@ -128,7 +128,9 @@ lbl_80528380:
 .global lbl_80528390
 lbl_80528390:
 	# ROM: 0x524490
-	.4byte 0x806683E0
+	.4byte lbl_806683E0
+
+
 	.4byte 0x804F5C14
 	.4byte 0x00000001
 	.4byte 0

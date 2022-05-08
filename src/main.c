@@ -1,9 +1,26 @@
 #include "main.h"
 
 
-extern s32 lbl_804F5BE0[];
+extern char* pkhFilenames[];
 extern u32 lbl_80528380[];
 extern u32 lbl_80528390[];
+
+/*
+char* pkhFilenames[] = {
+    "ahx.pkh",
+    "adx.pkh",
+    "chr.pkh",
+    "common.pkh",
+    "eff.pkh",
+    "font.pkh",
+    "map.pkh",
+    "menu.pkh",
+    "obj.pkh",
+    "script.pkh",
+    "snd.pkh",
+    "work.pkh"
+}
+*/
 s8 lbl_80666438 = 1;
 const char* const staticArcStr = "static.arc";
 
@@ -35,7 +52,7 @@ void main(int argc, char* argv[]) {
     func_8045FBB0(lbl_80528390);
     func_8046023C(&lbl_80039F6C, &lbl_80039F90);
     SaveStaticArcFilenameString(&staticArcStr);
-    func_804DDE2C(lbl_804F5BE0);
+    func_804DDE2C(pkhFilenames);
     func_80057CDC();
     func_8045D5C8(1);
     func_804442D8();

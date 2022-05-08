@@ -2,35 +2,52 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-	.balign 4
+.balign 4
+
+.global lbl_804F5BA4
+lbl_804F5BA4:
 	.asciz "common.pkh"
 	.balign 4
+
+.global lbl_804F5BB0
+lbl_804F5BB0:
 	.asciz "font.pkh"
 	.balign 4
+
+.global lbl_804F5BBC
+lbl_804F5BBC:
 	.asciz "menu.pkh"
 	.balign 4
+
+.global lbl_804F5BC8
+lbl_804F5BC8:
 	.asciz "script.pkh"
 	.balign 4
+
+.global lbl_804F5BD4
+lbl_804F5BD4:
 	.asciz "work.pkh"
 	.balign 4
 
 
-.global lbl_804F5BE0
-lbl_804F5BE0:
+.global pkhFilenames
+pkhFilenames:
 	# ROM: 0x4F1CE0
-	.4byte 0x806683A8
-	.4byte 0x806683B0
-	.4byte 0x806683B8
-	.4byte 0x804F5BA4
-	.4byte 0x806683C0
-	.4byte 0x804F5BB0
-	.4byte 0x806683C8
-	.4byte 0x804F5BBC
-	.4byte 0x806683D0
-	.4byte 0x804F5BC8
-	.4byte 0x806683D8
-	.4byte 0x804F5BD4
+	.4byte lbl_806683A8
+	.4byte lbl_806683B0
+	.4byte lbl_806683B8
+	.4byte lbl_804F5BA4
+	.4byte lbl_806683C0
+	.4byte lbl_804F5BB0
+	.4byte lbl_806683C8
+	.4byte lbl_804F5BBC
+	.4byte lbl_806683D0
+	.4byte lbl_804F5BC8
+	.4byte lbl_806683D8
+	.4byte lbl_804F5BD4
 	.4byte 0
+
+
 	.asciz "dvddata/etc/shadow.sha"
 	.balign 4
 	.asciz "dvddata/etc/cam.chr"

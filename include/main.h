@@ -14,7 +14,7 @@ extern void func_8046023C(void*, void*);
 extern void func_804DAA90(u32**);
 extern void func_804DAA98(u32**);
 extern void func_804DAAA0(u32**);
-extern void func_804DDE2C(s32*);
+extern void func_804DDE2C(char**);
 extern void SaveStaticArcFilenameString(const char* const*);
 extern void lbl_80039F6C();
 extern void lbl_80039F90();
