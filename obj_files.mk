@@ -111,7 +111,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdFatal.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdDeviceError.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd_broadway.o \
-	$(BUILD_DIR)/asm/RevoSDK/code_80312CB0.o \
+	$(BUILD_DIR)/asm/RevoSDK/enc/enc.o \
 	$(BUILD_DIR)/asm/RevoSDK/esp.o \
 	$(BUILD_DIR)/asm/RevoSDK/euart.o \
 	$(BUILD_DIR)/asm/RevoSDK/exi/EXIBios.o \

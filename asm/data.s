@@ -35665,6 +35665,9 @@ lbl_8054A720:
 	.balign 4
 	.asciz "@@@ (DVDLowEnableDvdVideo) IOS_IoctlAsync returned error: %d\n"
 	.balign 4
+
+.global lbl_8054B5C8
+lbl_8054B5C8:
 	.asciz "<< RVL_SDK - ENC \trelease build: Feb 27 2009 10:05:42 (0x4302_145) >>"
 	.balign 4
 	.asciz "<< RVL_SDK - EXI \trelease build: Feb 27 2009 10:02:03 (0x4302_145) >>"
