@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80353680
-func_80353680:
+.global DLInsert
+DLInsert:
 /* 80353680 0031CC40  7C 67 1B 78 */	mr r7, r3
 /* 80353684 0031CC44  38 C0 00 00 */	li r6, 0
 /* 80353688 0031CC48  48 00 00 18 */	b lbl_803536A0
@@ -50,14 +50,12 @@ lbl_803536EC:
 /* 8035371C 0031CCDC  4D 82 00 20 */	beqlr 
 /* 80353720 0031CCE0  90 C7 00 00 */	stw r6, 0(r7)
 /* 80353724 0031CCE4  4E 80 00 20 */	blr
-
-.global lbl_80353728
 lbl_80353728:
 /* 80353728 0031CCE8  7C 83 23 78 */	mr r3, r4
 /* 8035372C 0031CCEC  4E 80 00 20 */	blr
 
-.global lbl_80353730
-lbl_80353730:
+.global OSAllocFromHeap
+OSAllocFromHeap:
 /* 80353730 0031CCF0  1C 63 00 0C */	mulli r3, r3, 0xc
 /* 80353734 0031CCF4  80 AD B8 DC */	lwz r5, lbl_80667A5C@sda21(r13)
 /* 80353738 0031CCF8  38 04 00 3F */	addi r0, r4, 0x3f
@@ -79,8 +77,6 @@ lbl_80353768:
 /* 8035376C 0031CD2C  40 82 00 0C */	bne lbl_80353778
 /* 80353770 0031CD30  38 60 00 00 */	li r3, 0
 /* 80353774 0031CD34  4E 80 00 20 */	blr
-
-.global lbl_80353778
 lbl_80353778:
 /* 80353778 0031CD38  80 06 00 08 */	lwz r0, 8(r6)
 /* 8035377C 0031CD3C  7C 04 00 50 */	subf r0, r4, r0
@@ -137,8 +133,8 @@ lbl_8035381C:
 /* 80353828 0031CDE8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8035382C 0031CDEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80353830
-func_80353830:
+.global OSFreeToHeap
+OSFreeToHeap:
 /* 80353830 0031CDF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80353834 0031CDF4  7C 08 02 A6 */	mflr r0
 /* 80353838 0031CDF8  38 84 FF E0 */	addi r4, r4, -32
@@ -165,7 +161,7 @@ lbl_8035387C:
 lbl_80353884:
 /* 80353884 0031CE44  90 7F 00 08 */	stw r3, 8(r31)
 /* 80353888 0031CE48  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8035388C 0031CE4C  4B FF FD F5 */	bl func_80353680
+/* 8035388C 0031CE4C  4B FF FD F5 */	bl DLInsert
 /* 80353890 0031CE50  90 7F 00 04 */	stw r3, 4(r31)
 /* 80353894 0031CE54  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80353898 0031CE58  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -175,15 +171,15 @@ lbl_80353884:
 /* 803538A8 0031CE68  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 803538AC 0031CE6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803538B0
-func_803538B0:
+.global OSSetCurrentHeap
+OSSetCurrentHeap:
 /* 803538B0 0031CE70  80 0D 99 D8 */	lwz r0, lbl_80665B58@sda21(r13)
 /* 803538B4 0031CE74  90 6D 99 D8 */	stw r3, lbl_80665B58@sda21(r13)
 /* 803538B8 0031CE78  7C 03 03 78 */	mr r3, r0
 /* 803538BC 0031CE7C  4E 80 00 20 */	blr 
 
-.global func_803538C0
-func_803538C0:
+.global OSInitAlloc
+OSInitAlloc:
 /* 803538C0 0031CE80  1C E5 00 0C */	mulli r7, r5, 0xc
 /* 803538C4 0031CE84  90 6D B8 DC */	stw r3, lbl_80667A5C@sda21(r13)
 /* 803538C8 0031CE88  39 00 00 00 */	li r8, 0
@@ -215,8 +211,8 @@ lbl_803538FC:
 /* 80353928 0031CEE8  90 6D B8 D4 */	stw r3, lbl_80667A54@sda21(r13)
 /* 8035392C 0031CEEC  4E 80 00 20 */	blr 
 
-.global func_80353930
-func_80353930:
+.global OSCreateHeap
+OSCreateHeap:
 /* 80353930 0031CEF0  80 CD B8 D8 */	lwz r6, lbl_80667A58@sda21(r13)
 /* 80353934 0031CEF4  38 03 00 1F */	addi r0, r3, 0x1f
 /* 80353938 0031CEF8  54 07 00 34 */	rlwinm r7, r0, 0, 0, 0x1a
@@ -241,8 +237,6 @@ lbl_80353958:
 /* 80353980 0031CF40  90 E5 00 04 */	stw r7, 4(r5)
 /* 80353984 0031CF44  90 85 00 08 */	stw r4, 8(r5)
 /* 80353988 0031CF48  4E 80 00 20 */	blr
-
-.global lbl_8035398C
 lbl_8035398C:
 /* 8035398C 0031CF4C  38 A5 00 0C */	addi r5, r5, 0xc
 /* 80353990 0031CF50  38 63 00 01 */	addi r3, r3, 1

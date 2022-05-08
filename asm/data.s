@@ -41220,7 +41220,7 @@ lbl_805510E0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0x80350590
+	.4byte nandOnShutdown
 	.4byte 0x000000FF
 	.4byte 0
 	.4byte 0

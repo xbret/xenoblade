@@ -17,6 +17,17 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/text_3_1.o \
 	$(BUILD_DIR)/asm/text/printf.o \
 	$(BUILD_DIR)/asm/text_4.o \
+	$(BUILD_DIR)/asm/RevoSDK/arc__105.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AX.o \
+    $(BUILD_DIR)/asm/RevoSDK/ax/AXAlloc.o \
+    $(BUILD_DIR)/asm/RevoSDK/ax/AXAux.o \
+    $(BUILD_DIR)/asm/RevoSDK/ax/AXCL.o \
+    $(BUILD_DIR)/asm/RevoSDK/ax/AXOut.o \
+    $(BUILD_DIR)/asm/RevoSDK/ax/AXSPB.o \
+    $(BUILD_DIR)/asm/RevoSDK/ax/AXVPB.o \
+    $(BUILD_DIR)/asm/RevoSDK/ax/AXProf.o \
+    $(BUILD_DIR)/asm/RevoSDK/ax/AXFXReverbHi.o \
+    $(BUILD_DIR)/asm/RevoSDK/ax/AXFXReverbHiExp.o \
 	$(BUILD_DIR)/asm/text_5.o \
 	$(BUILD_DIR)/asm/RevoSDK/PPCArch.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/gki_buffer.o \
@@ -105,7 +116,31 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/exi/EXICommon.o \
 	$(BUILD_DIR)/asm/RevoSDK/fs.o \
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXInit.o \
+	$(BUILD_DIR)/asm/RevoSDK/gx/GXFifo.o \
+    $(BUILD_DIR)/asm/RevoSDK/gx/GXAttr.o \
+    $(BUILD_DIR)/asm/RevoSDK/gx/GXMisc.o \
+    $(BUILD_DIR)/asm/RevoSDK/gx/GXGeometry.o \
+    $(BUILD_DIR)/asm/RevoSDK/gx/GXFrameBuf.o \
+    $(BUILD_DIR)/asm/RevoSDK/gx/GXLight.o \
+    $(BUILD_DIR)/asm/RevoSDK/gx/GXTexture.o \
+    $(BUILD_DIR)/asm/RevoSDK/gx/GXBump.o \
+    $(BUILD_DIR)/asm/RevoSDK/gx/GXTev.o \
+    $(BUILD_DIR)/asm/RevoSDK/gx/GXPixel.o \
+    $(BUILD_DIR)/asm/RevoSDK/gx/GXDisplayList.o \
+    $(BUILD_DIR)/asm/RevoSDK/gx/GXTransform.o \
+    $(BUILD_DIR)/asm/RevoSDK/gx/GXPerf.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMFrameController.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMAnmController.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMGUIManager.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMController.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMRemoteSpk.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/code_803222B0.o \
 	$(BUILD_DIR)/asm/text_5_1.o \
+	$(BUILD_DIR)/asm/RevoSDK/nand/nand.o \
+	$(BUILD_DIR)/asm/RevoSDK/nand/NANDOpenClose__103.o \
+    $(BUILD_DIR)/asm/RevoSDK/nand/NANDCore.o \
+    $(BUILD_DIR)/asm/RevoSDK/nand/NANDCheck.o \
+	$(BUILD_DIR)/asm/RevoSDK/nand/NANDLogging.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OS.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSAlarm.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/func_803535D0.o \

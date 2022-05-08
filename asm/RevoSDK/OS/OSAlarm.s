@@ -30,8 +30,8 @@ lbl_80352E08:
 /* 80352E18 0031C3D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80352E1C 0031C3DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80352E20
-func_80352E20:
+.global OSCreateAlarm
+OSCreateAlarm:
 /* 80352E20 0031C3E0  38 00 00 00 */	li r0, 0
 /* 80352E24 0031C3E4  90 03 00 00 */	stw r0, 0(r3)
 /* 80352E28 0031C3E8  90 03 00 04 */	stw r0, 4(r3)
@@ -269,8 +269,8 @@ func_803530F0:
 /* 80353178 0031C738  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8035317C 0031C73C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80353180
-func_80353180:
+.global OSCancelAlarm
+OSCancelAlarm:
 /* 80353180 0031C740  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80353184 0031C744  7C 08 02 A6 */	mflr r0
 /* 80353188 0031C748  90 01 00 24 */	stw r0, 0x24(r1)
@@ -545,7 +545,7 @@ lbl_80353558:
 /* 80353560 0031CB20  2C 03 00 00 */	cmpwi r3, 0
 /* 80353564 0031CB24  40 82 00 0C */	bne lbl_80353570
 /* 80353568 0031CB28  7F E3 FB 78 */	mr r3, r31
-/* 8035356C 0031CB2C  4B FF FC 15 */	bl func_80353180
+/* 8035356C 0031CB2C  4B FF FC 15 */	bl OSCancelAlarm
 lbl_80353570:
 /* 80353570 0031CB30  2C 1E 00 00 */	cmpwi r30, 0
 /* 80353574 0031CB34  7F DF F3 78 */	mr r31, r30

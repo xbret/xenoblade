@@ -13,8 +13,8 @@ func_80353F60:
 /* 80353F78 0031D538  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80353F7C 0031D53C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80353F80
-func_80353F80:
+.global DCInvalidateRange
+DCInvalidateRange:
 /* 80353F80 0031D540  28 04 00 00 */	cmplwi r4, 0
 /* 80353F84 0031D544  4C 81 00 20 */	blelr 
 /* 80353F88 0031D548  54 65 06 FE */	clrlwi r5, r3, 0x1b
@@ -29,8 +29,8 @@ lbl_80353F9C:
 /* 80353FA8 0031D568  4E 80 00 20 */	blr 
 /* 80353FAC 0031D56C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80353FB0
-func_80353FB0:
+.global DCFlushRange
+DCFlushRange:
 /* 80353FB0 0031D570  28 04 00 00 */	cmplwi r4, 0
 /* 80353FB4 0031D574  4C 81 00 20 */	blelr 
 /* 80353FB8 0031D578  54 65 06 FE */	clrlwi r5, r3, 0x1b
