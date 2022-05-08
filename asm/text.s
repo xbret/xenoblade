@@ -70,6 +70,7 @@ lbl_804F5B5C:
 
 .global lbl_804F5B88
 lbl_804F5B88:
+	#ゲームメイン
 	.4byte 0x8351815B
 	.4byte 0x83808381
 	.4byte 0x83438393
