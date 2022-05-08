@@ -2829,7 +2829,7 @@ lbl_806658A8:
 .global lbl_806658B0
 lbl_806658B0:
 	# ROM: 0x571490
-	.4byte 0x80540070
+	.4byte lbl_80540070
 	.4byte 0
 
 

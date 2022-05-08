@@ -2,15 +2,15 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8035CFE0
-func_8035CFE0:
+.global __OSGetIPCBufferHi
+__OSGetIPCBufferHi:
 /* 8035CFE0 003265A0  80 6D B9 58 */	lwz r3, lbl_80667AD8@sda21(r13)
 /* 8035CFE4 003265A4  4E 80 00 20 */	blr 
 /* 8035CFE8 003265A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8035CFEC 003265AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035CFF0
-func_8035CFF0:
+.global __OSGetIPCBufferLo
+__OSGetIPCBufferLo:
 /* 8035CFF0 003265B0  80 6D 9A 18 */	lwz r3, lbl_80665B98@sda21(r13)
 /* 8035CFF4 003265B4  4E 80 00 20 */	blr 
 /* 8035CFF8 003265B8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */

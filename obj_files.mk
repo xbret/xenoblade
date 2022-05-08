@@ -26,9 +26,12 @@ TEXT_O_FILES :=\
     $(BUILD_DIR)/asm/RevoSDK/ax/AXSPB.o \
     $(BUILD_DIR)/asm/RevoSDK/ax/AXVPB.o \
     $(BUILD_DIR)/asm/RevoSDK/ax/AXProf.o \
-    $(BUILD_DIR)/asm/RevoSDK/ax/AXFXReverbHi.o \
-    $(BUILD_DIR)/asm/RevoSDK/ax/AXFXReverbHiExp.o \
-	$(BUILD_DIR)/asm/text_5.o \
+    $(BUILD_DIR)/asm/RevoSDK/axfx/AXFXReverbHi.o \
+    $(BUILD_DIR)/asm/RevoSDK/axfx/AXFXReverbHiExp.o \
+	$(BUILD_DIR)/asm/RevoSDK/axfx/code_802D65F0.o \
+	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXLfoTable.o \
+	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXSrcCoef.o \
+	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXHooks.o \
 	$(BUILD_DIR)/asm/RevoSDK/PPCArch.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/gki_buffer.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/gki_time.o \
@@ -136,6 +139,23 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMRemoteSpk.o \
 	$(BUILD_DIR)/asm/RevoSDK/hbm/code_803222B0.o \
 	$(BUILD_DIR)/asm/text_5_1.o \
+	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcMain.o \
+	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcclt.o \
+	$(BUILD_DIR)/asm/RevoSDK/ipc/memory.o \
+	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcProfile.o \
+	$(BUILD_DIR)/asm/RevoSDK/kpad/kpad.o \
+	$(BUILD_DIR)/asm/RevoSDK/mem/mem_heapCommon.o \
+    $(BUILD_DIR)/asm/RevoSDK/mem/mem_expHeap.o \
+    $(BUILD_DIR)/asm/RevoSDK/mem/mem_frameHeap.o \
+    $(BUILD_DIR)/asm/RevoSDK/mem/mem_allocator.o \
+    $(BUILD_DIR)/asm/RevoSDK/mem/mem_list.o \
+	$(BUILD_DIR)/asm/RevoSDK/mix/mix.o \
+	$(BUILD_DIR)/asm/RevoSDK/mix/remote.o \
+	$(BUILD_DIR)/asm/RevoSDK/mtx/mtx.o \
+	$(BUILD_DIR)/asm/RevoSDK/mtx/mtxvec.o \
+	$(BUILD_DIR)/asm/RevoSDK/mtx/mtx44.o \
+	$(BUILD_DIR)/asm/RevoSDK/mtx/vec.o \
+	$(BUILD_DIR)/asm/RevoSDK/mtx/quat.o \
 	$(BUILD_DIR)/asm/RevoSDK/nand/nand.o \
 	$(BUILD_DIR)/asm/RevoSDK/nand/NANDOpenClose__103.o \
     $(BUILD_DIR)/asm/RevoSDK/nand/NANDCore.o \

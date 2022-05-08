@@ -28110,6 +28110,9 @@ lbl_80540024:
 	.asciz "Warning: ARCOpen(): file '%s' was not found under %s in the archive.\n"
 	.balign 4
 	.4byte 0
+
+.global lbl_80540070
+lbl_80540070:
 	.asciz "<< RVL_SDK - AX \trelease build: Feb 27 2009 10:01:36 (0x4302_145) >>"
 	.balign 4
 
