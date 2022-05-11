@@ -229,12 +229,10 @@ lbl_804F6014:
 lbl_804F6158:
 	# ROM: 0x4F2258
 	.asciz "abcd"
-	.byte 0x2F, 0x6D, 0x65
-	.asciz "nu/tpl/strap_a.tpl"
-	.byte 0x2F
-	.asciz "menu/tpl/strap_b.tpl"
-	.byte 0x00, 0x73, 0x6E
-	.asciz "d/adx/e02_loop.adx"
+	.asciz "/menu/tpl/strap_a.tpl"
+	.asciz "/menu/tpl/strap_b.tpl"
+	.byte 0x00
+	.asciz "snd/adx/e02_loop.adx"
 	.byte 0x5F
 	.4byte 0x00300025
 	.4byte 0x64006163
@@ -323,13 +321,10 @@ lbl_804F6158:
 lbl_804F6454:
 	# ROM: 0x4F2554
 	.asciz "name"
-	.byte 0x70, 0x63, 0x5F
-	.asciz "arts"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_sysmes"
+	.asciz "pc_arts"
+	.asciz "MNU_sysmes"
 	.asciz "%s%s%s"
-	.byte 0x72
-	.asciz "lt_meet"
+	.asciz "rlt_meet"
 	.4byte 0x75690000
 	.asciz "getAwardFlagF16"
 	.asciz "addAwardFlagF16"
@@ -592,8 +587,7 @@ lbl_804F6B90:
 lbl_804F6BB4:
 	# ROM: 0x4F2CB4
 	.asciz "%02d%02df"
-	.byte 0x65, 0x76
-	.asciz "entView"
+	.asciz "eventView"
 	.asciz "abcd_00"
 	.asciz "%s%s"
 	.byte 0x2E, 0x73, 0x62
@@ -619,14 +613,11 @@ lbl_804F6C1C:
 lbl_804F6C30:
 	# ROM: 0x4F2D30
 	.asciz "morning_h"
-	.byte 0x6D, 0x6F
-	.asciz "rning_m"
+	.asciz "morning_m"
 	.asciz "daytime_h"
-	.byte 0x64, 0x61
-	.asciz "ytime_m"
+	.asciz "daytime_m"
 	.asciz "evening_h"
-	.byte 0x65, 0x76
-	.asciz "ening_m"
+	.asciz "evening_m"
 	.asciz "night_h"
 	.asciz "night_m"
 	.4byte 0
@@ -697,8 +688,7 @@ lbl_804F6E40:
 	.asciz "camType"
 	.asciz "enemy_size"
 	.asciz "range"
-	.byte 0x63, 0x61, 0x6D
-	.asciz "move"
+	.asciz "cammove"
 	.byte 0x63, 0x61, 0x6D
 	.4byte 0x41545200
 	.asciz "coltype"
@@ -706,87 +696,56 @@ lbl_804F6E40:
 	.byte 0x70, 0x61, 0x74
 	.4byte 0x6800735F
 	.asciz "ofspostype"
-	.byte 0x73
-	.asciz "_ofslooktype"
-	.byte 0x65, 0x5F, 0x6F
-	.asciz "fspostype"
-	.byte 0x65, 0x5F
-	.asciz "ofslooktype"
+	.asciz "s_ofslooktype"
+	.asciz "e_ofspostype"
+	.asciz "e_ofslooktype"
 	.asciz "s_fov"
 	.byte 0x65, 0x5F
 	.4byte 0x666F7600
 	.asciz "s_posz"
-	.byte 0x73
-	.asciz "_posy"
-	.byte 0x73, 0x5F
-	.asciz "posx"
-	.byte 0x73, 0x5F, 0x6C
-	.asciz "ookz"
-	.byte 0x73, 0x5F, 0x6C
-	.asciz "ooky"
-	.byte 0x73, 0x5F, 0x6C
-	.asciz "ookx"
+	.asciz "s_posy"
+	.asciz "s_posx"
+	.asciz "s_lookz"
+	.asciz "s_looky"
+	.asciz "s_lookx"
 	.byte 0x65, 0x5F, 0x70
 	.4byte 0x6F737A00
 	.asciz "e_posy"
-	.byte 0x65
-	.asciz "_posx"
-	.byte 0x65, 0x5F
-	.asciz "lookz"
-	.byte 0x65, 0x5F
-	.asciz "looky"
-	.byte 0x65, 0x5F
-	.asciz "lookx"
-	.byte 0x73, 0x68
-	.asciz "akePOW"
-	.byte 0x73
-	.asciz "hakeStart"
-	.byte 0x73, 0x68
-	.asciz "akeTIME"
+	.asciz "e_posx"
+	.asciz "e_lookz"
+	.asciz "e_looky"
+	.asciz "e_lookx"
+	.asciz "shakePOW"
+	.asciz "shakeStart"
+	.asciz "shakeTIME"
 	.asciz "pos1X"
 	.byte 0x70, 0x6F
 	.4byte 0x73315900
 	.asciz "pos1Z"
-	.byte 0x6C, 0x6F
-	.asciz "ok1X"
+	.asciz "look1X"
 	.byte 0x6C, 0x6F, 0x6F
 	.4byte 0x6B315900
 	.asciz "look1Z"
-	.byte 0x73
-	.asciz "hake1Type"
-	.byte 0x73, 0x68
-	.asciz "ake1Stime"
-	.byte 0x73, 0x68
-	.asciz "ake1Etime"
-	.byte 0x63, 0x6F
-	.asciz "llision"
+	.asciz "shake1Type"
+	.asciz "shake1Stime"
+	.asciz "shake1Etime"
+	.asciz "collision"
 	.asciz "startCutChange"
-	.byte 0x73
-	.asciz "tartFrame"
-	.byte 0x70, 0x6F
-	.asciz "s%dX"
+	.asciz "startFrame"
+	.asciz "pos%dX"
 	.byte 0x70, 0x6F, 0x73
 	.4byte 0x25645900
 	.asciz "pos%dZ"
-	.byte 0x6C
-	.asciz "ook%dX"
-	.byte 0x6C
-	.asciz "ook%dY"
-	.byte 0x6C
-	.asciz "ook%dZ"
-	.byte 0x66
-	.asciz "ov%d"
-	.byte 0x63, 0x61, 0x6D
-	.asciz "%dTime"
-	.byte 0x73
-	.asciz "hake%dType"
-	.byte 0x73
-	.asciz "hake%dStime"
+	.asciz "look%dX"
+	.asciz "look%dY"
+	.asciz "look%dZ"
+	.asciz "fov%d"
+	.asciz "cam%dTime"
+	.asciz "shake%dType"
+	.asciz "shake%dStime"
 	.asciz "shake%dEtime"
-	.byte 0x65, 0x6E, 0x64
-	.asciz "CutChange"
-	.byte 0x72, 0x65
-	.asciz "setFrame"
+	.asciz "endCutChange"
+	.asciz "resetFrame"
 	.balign 4
 	.4byte 0xFF010203
 	.4byte 0x04050602
@@ -816,48 +775,30 @@ lbl_804F7094:
 	# ROM: 0x4F3194
 	.asciz "bgmlist"
 	.asciz "file_name"
-	.byte 0x65, 0x25
-	.asciz "02d_loop"
-	.byte 0x62, 0x25, 0x30
-	.asciz "2d_loop"
+	.asciz "e%02d_loop"
+	.asciz "b%02d_loop"
 	.asciz "def_head"
-	.byte 0x64, 0x65, 0x66
-	.asciz "_body"
-	.byte 0x64, 0x65
-	.asciz "f_arm"
-	.byte 0x64, 0x65
-	.asciz "f_waist"
+	.asciz "def_body"
+	.asciz "def_arm"
+	.asciz "def_waist"
 	.asciz "def_legg"
-	.byte 0x64, 0x65, 0x66
-	.asciz "_wpn"
-	.byte 0x25, 0x73, 0x5F
-	.asciz "%02d"
-	.byte 0x25, 0x30, 0x32
-	.asciz "d%02df"
-	.byte 0x42
-	.asciz "TL_pclist"
-	.byte 0x64, 0x65
-	.asciz "f_mount"
+	.asciz "def_wpn"
+	.asciz "%s_%02d"
+	.asciz "%02d%02df"
+	.asciz "BTL_pclist"
+	.asciz "def_mount"
 	.asciz "resource"
-	.byte 0x25, 0x73, 0x25
-	.asciz "02d%02d"
+	.asciz "%s%02d%02d"
 	.asciz "poplist%02d%02d"
 	.asciz "ma%02d%02d"
 	.asciz "mapID"
-	.byte 0x72, 0x6C, 0x74
-	.asciz "_lnd"
-	.byte 0x6A, 0x75, 0x6D
-	.asciz "p_posX"
-	.byte 0x6A
-	.asciz "ump_posY"
-	.byte 0x6A, 0x75, 0x6D
-	.asciz "p_posZ"
-	.byte 0x6A
-	.asciz "ump_rotY"
-	.byte 0x2F, 0x65, 0x76
-	.asciz "/realtime/%s.rev"
-	.byte 0x63, 0x61, 0x74
-	.asciz "egory"
+	.asciz "rlt_lnd"
+	.asciz "jump_posX"
+	.asciz "jump_posY"
+	.asciz "jump_posZ"
+	.asciz "jump_rotY"
+	.asciz "/ev/realtime/%s.rev"
+	.asciz "category"
 	.byte 0x70, 0x6F
 	.4byte 0x73580070
 	.4byte 0x6F735900
@@ -900,22 +841,16 @@ lbl_804F7238:
 lbl_804F7258:
 	# ROM: 0x4F3358
 	.asciz "move_type"
-	.byte 0x72, 0x6E
-	.asciz "dwalkR"
-	.byte 0x72
-	.asciz "outeID"
-	.byte 0x70
-	.asciz "_type"
+	.asciz "rndwalkR"
+	.asciz "routeID"
+	.asciz "p_type"
 	.byte 0x70, 0x6F
 	.4byte 0x73580070
 	.4byte 0x6F735900
 	.asciz "posZ"
-	.byte 0x6C, 0x69, 0x6E
-	.asciz "e_type"
-	.byte 0x77
-	.asciz "ait_time"
-	.byte 0x70, 0x61, 0x74
-	.asciz "_time"
+	.asciz "line_type"
+	.asciz "wait_time"
+	.asciz "pat_time"
 	.byte 0x70, 0x61
 	.4byte 0x74520073
 	.4byte 0x6E617000
@@ -959,36 +894,26 @@ lbl_804F7258:
 lbl_804F737C:
 	# ROM: 0x4F347C
 	.asciz "JUhead"
-	.byte 0x46
-	.asciz "LD_npclist"
-	.byte 0x61
-	.asciz "utotalklist%02d%02d"
+	.asciz "FLD_npclist"
+	.asciz "autotalklist%02d%02d"
 	.asciz "scenario_s"
-	.byte 0x73
-	.asciz "cenario_e"
-	.byte 0x71, 0x75
-	.asciz "est_no"
-	.byte 0x72
-	.asciz "elate_no"
+	.asciz "scenario_e"
+	.asciz "quest_no"
+	.asciz "relate_no"
 	.byte 0x72, 0x65, 0x6C
 	.4byte 0x61746500
 	.asciz "select_no"
-	.byte 0x73, 0x65
-	.asciz "lect"
-	.byte 0x70, 0x6F, 0x70
-	.asciz "ular_no"
+	.asciz "select"
+	.asciz "popular_no"
 	.asciz "popular"
 	.asciz "npcmeet_no"
 	.asciz "col6_h_no"
 	.byte 0x63, 0x6F, 0x6C
 	.4byte 0x365F6800
 	.asciz "col6_k_no"
-	.byte 0x63, 0x6F
-	.asciz "l6_k"
-	.byte 0x61, 0x75, 0x74
-	.asciz "o_mes"
-	.byte 0x6E, 0x6F
-	.asciz " name"
+	.asciz "col6_k"
+	.asciz "auto_mes"
+	.asciz "no name"
 	.balign 4
 	.asciz "cf::CtrlPad"
 	.asciz "cf::CtrlRemote"
@@ -1044,15 +969,11 @@ lbl_804F7490:
 lbl_804F7520:
 	# ROM: 0x4F3620
 	.asciz "flag"
-	.byte 0x68, 0x69, 0x74
-	.asciz "_range_near"
+	.asciz "hit_range_near"
 	.asciz "hit_range_far"
-	.byte 0x64, 0x6D
-	.asciz "g_low"
-	.byte 0x64, 0x6D
-	.asciz "g_hi"
-	.byte 0x61, 0x74, 0x74
-	.asciz "_lev"
+	.asciz "dmg_low"
+	.asciz "dmg_hi"
+	.asciz "att_lev"
 	.byte 0x73, 0x70, 0x65
 	.4byte 0x65640067
 	.asciz "rd_rate"
@@ -1062,25 +983,19 @@ lbl_804F7520:
 	.byte 0x65, 0x6C, 0x65
 	.4byte 0x6D006172
 	.asciz "m_type"
-	.byte 0x65
-	.asciz "va_rate"
+	.asciz "eva_rate"
 	.asciz "BTL_pclist"
 	.byte 0x6C
 	.4byte 0x76006E61
 	.4byte 0x6D650063
 	.asciz "hest_height"
 	.asciz "icon_type"
-	.byte 0x74, 0x70
-	.asciz "_atk"
-	.byte 0x74, 0x70, 0x5F
-	.asciz "arts"
-	.byte 0x74, 0x70, 0x5F
-	.asciz "atkdmg"
+	.asciz "tp_atk"
+	.asciz "tp_arts"
+	.asciz "tp_atkdmg"
 	.asciz "tp_artsdmg"
-	.byte 0x74, 0x73
-	.asciz "_high"
-	.byte 0x74, 0x73
-	.asciz "_nrm"
+	.asciz "ts_high"
+	.asciz "ts_nrm"
 	.byte 0x74, 0x73, 0x5F
 	.4byte 0x6C6F7700
 	.asciz "guest"
@@ -1090,10 +1005,8 @@ lbl_804F7520:
 	.4byte 0x00657468
 	.4byte 0x0064626C
 	.asciz "_atk"
-	.byte 0x63, 0x6E, 0x74
-	.asciz "_atk"
-	.byte 0x70, 0x63, 0x5F
-	.asciz "arts"
+	.asciz "cnt_atk"
+	.asciz "pc_arts"
 	.byte 0x69, 0x64, 0x78
 	.4byte 0x00636173
 	.4byte 0x74007265
@@ -1104,16 +1017,12 @@ lbl_804F7520:
 	.byte 0x72, 0x61
 	.4byte 0x74653200
 	.asciz "arts_type"
-	.byte 0x61, 0x74
-	.asciz "k_type"
+	.asciz "atk_type"
 	.asciz "chain_type"
-	.byte 0x64, 0x6D
-	.asciz "g_type"
-	.byte 0x64
-	.asciz "mg_time"
+	.asciz "dmg_type"
+	.asciz "dmg_time"
 	.asciz "hate"
-	.byte 0x6B, 0x62, 0x5F
-	.asciz "type"
+	.asciz "kb_type"
 	.byte 0x6B, 0x62, 0x5F
 	.4byte 0x6C760074
 	.4byte 0x67740072
@@ -1124,27 +1033,20 @@ lbl_804F7520:
 	.byte 0x68, 0x65
 	.4byte 0x6C700073
 	.asciz "t_type"
-	.byte 0x73
-	.asciz "t_val"
-	.byte 0x73, 0x74
-	.asciz "_val2"
-	.byte 0x73, 0x74
-	.asciz "_time"
-	.byte 0x73, 0x74
-	.asciz "_itv"
+	.asciz "st_val"
+	.asciz "st_val2"
+	.asciz "st_time"
+	.asciz "st_itv"
 	.byte 0x73, 0x70, 0x5F
 	.4byte 0x636E6400
 	.asciz "sp_proc"
 	.asciz "sp_val1"
 	.asciz "sp_val2"
 	.asciz "grow_powl"
-	.byte 0x67, 0x72
-	.asciz "ow_powh"
+	.asciz "grow_powh"
 	.asciz "grow_st_time"
-	.byte 0x67, 0x72, 0x6F
-	.asciz "w_st_val"
-	.byte 0x67, 0x6C, 0x6F
-	.asciz "w_recast"
+	.asciz "grow_st_val"
+	.asciz "glow_recast"
 	.byte 0x69, 0x63, 0x6F
 	.4byte 0x6E006963
 	.asciz "on_base"
@@ -1164,17 +1066,13 @@ lbl_804F7520:
 	.byte 0x65, 0x6E, 0x5F
 	.4byte 0x6170006C
 	.asciz "evel_exp"
-	.byte 0x70, 0x6F, 0x69
-	.asciz "nt_PP"
-	.byte 0x72, 0x76
-	.asciz "s_status"
-	.byte 0x61, 0x74, 0x72
-	.asciz "_type"
+	.asciz "point_PP"
+	.asciz "rvs_status"
+	.asciz "atr_type"
 	.byte 0x6D, 0x61
 	.4byte 0x78007661
 	.asciz "l_type"
-	.byte 0x61
-	.asciz "ccum"
+	.asciz "accum"
 	.byte 0x61, 0x74, 0x74
 	.4byte 0x61636800
 	.4byte 0
@@ -1212,10 +1110,8 @@ lbl_804F786C:
 	.4byte 0x32640025
 	.asciz "03d%03d"
 	.asciz "%02d%03d%03d"
-	.byte 0x25, 0x30, 0x32
-	.asciz "d%03d"
-	.byte 0x25, 0x30
-	.asciz "2d%02d"
+	.asciz "%02d%03d"
+	.asciz "%02d%02d"
 	.balign 4
 	.4byte 0
 	.asciz "cf::CfObjectColl"
@@ -1257,83 +1153,53 @@ lbl_804F7990:
 	.4byte 0x65007363
 	.4byte 0x616C6500
 	.asciz "family"
-	.byte 0x6E
-	.asciz "amed"
+	.asciz "named"
 	.byte 0x66, 0x6C, 0x61
 	.4byte 0x67006D6F
 	.asciz "ve_speed"
-	.byte 0x72, 0x75, 0x6E
-	.asciz "_speed"
-	.byte 0x64
-	.asciz "etects"
-	.byte 0x61
-	.asciz "ssist"
-	.byte 0x73, 0x65
-	.asciz "arch_range"
-	.byte 0x73
-	.asciz "earch_angle"
+	.asciz "run_speed"
+	.asciz "detects"
+	.asciz "assist"
+	.asciz "search_range"
+	.asciz "search_angle"
 	.asciz "faint_grd"
-	.byte 0x64, 0x6F
-	.asciz "wn_grd"
-	.byte 0x65
-	.asciz "lem_tol_dir"
+	.asciz "down_grd"
+	.asciz "elem_tol_dir"
 	.asciz "anti_state"
-	.byte 0x72
-	.asciz "esi_state"
-	.byte 0x66, 0x72
-	.asciz "ont_angle"
+	.asciz "resi_state"
+	.asciz "front_angle"
 	.byte 0x6C, 0x76
 	.4byte 0x00687000
 	.4byte 0x73747200
 	.4byte 0x61676900
 	.4byte 0x65746800
 	.asciz "delay"
-	.byte 0x68, 0x69
-	.asciz "t_range_near"
-	.byte 0x68, 0x69, 0x74
-	.asciz "_range_far"
-	.byte 0x64
-	.asciz "bl_atk"
+	.asciz "hit_range_near"
+	.asciz "hit_range_far"
+	.asciz "dbl_atk"
 	.asciz "cnt_atk"
-	.byte 0x65
-	.asciz "lem_phx"
+	.asciz "elem_phx"
 	.asciz "elem_eth"
-	.byte 0x65, 0x6C, 0x65
-	.asciz "m_tol"
-	.byte 0x4C, 0x76
-	.asciz "_up_hp"
-	.byte 0x4C
-	.asciz "v_up_str"
-	.byte 0x4C, 0x76, 0x5F
-	.asciz "up_agi"
-	.byte 0x4C
-	.asciz "v_up_eth"
-	.byte 0x65, 0x6E, 0x65
-	.asciz "_type"
-	.byte 0x65, 0x6E
-	.asciz "_exp"
+	.asciz "elem_tol"
+	.asciz "Lv_up_hp"
+	.asciz "Lv_up_str"
+	.asciz "Lv_up_agi"
+	.asciz "Lv_up_eth"
+	.asciz "ene_type"
+	.asciz "en_exp"
 	.byte 0x65, 0x6E, 0x5F
 	.4byte 0x61700065
 	.4byte 0x78700073
 	.asciz "pike_elem"
-	.byte 0x73, 0x70
-	.asciz "ike_type"
-	.byte 0x73, 0x70, 0x69
-	.asciz "ke_range"
-	.byte 0x73, 0x70, 0x69
-	.asciz "ke_dmg"
-	.byte 0x73
-	.asciz "pike_state"
-	.byte 0x73
-	.asciz "pike_state_val"
-	.byte 0x6C
-	.asciz "imit"
-	.byte 0x64, 0x72, 0x6F
-	.asciz "p_vlb"
-	.byte 0x63, 0x68
-	.asciz "est_height"
-	.byte 0x61
-	.asciz "rts1"
+	.asciz "spike_type"
+	.asciz "spike_range"
+	.asciz "spike_dmg"
+	.asciz "spike_state"
+	.asciz "spike_state_val"
+	.asciz "limit"
+	.asciz "drop_vlb"
+	.asciz "chest_height"
+	.asciz "arts1"
 	.byte 0x61, 0x72, 0x74
 	.4byte 0x73320061
 	.asciz "rts3"
@@ -1355,14 +1221,12 @@ lbl_804F7990:
 	.byte 0x72, 0x61, 0x74
 	.4byte 0x65320061
 	.asciz "rts_type"
-	.byte 0x61, 0x74, 0x6B
-	.asciz "_type"
+	.asciz "atk_type"
 	.byte 0x65, 0x6C
 	.4byte 0x656D0064
 	.asciz "mg_type"
 	.asciz "dmg_time"
-	.byte 0x6B, 0x62, 0x5F
-	.asciz "type"
+	.asciz "kb_type"
 	.byte 0x6B, 0x62, 0x5F
 	.4byte 0x6C760074
 	.4byte 0x67740072
@@ -1370,26 +1234,19 @@ lbl_804F7990:
 	.byte 0x72, 0x61
 	.4byte 0x6E676500
 	.asciz "range_val"
-	.byte 0x61, 0x63
-	.asciz "t_idx"
+	.asciz "act_idx"
 	.byte 0x69, 0x64
 	.4byte 0x78007374
 	.asciz "_type"
-	.byte 0x73, 0x74
-	.asciz "_val"
-	.byte 0x73, 0x74, 0x5F
-	.asciz "val2"
-	.byte 0x73, 0x74, 0x5F
-	.asciz "time"
+	.asciz "st_val"
+	.asciz "st_val2"
+	.asciz "st_time"
 	.byte 0x73, 0x74, 0x5F
 	.4byte 0x69747600
 	.asciz "sp_cnd"
-	.byte 0x73
-	.asciz "p_proc"
-	.byte 0x73
-	.asciz "p_val1"
-	.byte 0x73
-	.asciz "p_val2"
+	.asciz "sp_proc"
+	.asciz "sp_val1"
+	.asciz "sp_val2"
 	.byte 0x61
 	.4byte 0x746B3100
 	.asciz "atk2"
@@ -1419,18 +1276,13 @@ lbl_804F7990:
 lbl_804F7D00:
 	# ROM: 0x4F3E00
 	.asciz "ene_disp_r"
-	.byte 0x65
-	.asciz "ne_release_h"
-	.byte 0x65, 0x6E, 0x65
-	.asciz "_release_r"
-	.byte 0x6E
-	.asciz "pc_release_r"
-	.byte 0x70, 0x6F, 0x70
-	.asciz "test"
-	.byte 0x00, 0x65, 0x6E
-	.asciz "e_type"
-	.byte 0x50
-	.asciz "OP_TIME"
+	.asciz "ene_release_h"
+	.asciz "ene_release_r"
+	.asciz "npc_release_r"
+	.asciz "poptest"
+	.byte 0x00
+	.asciz "ene_type"
+	.asciz "POP_TIME"
 	.asciz "cf::CfObjectMap"
 
 
@@ -1454,10 +1306,8 @@ lbl_804F7D70:
 lbl_804F7D78:
 	# ROM: 0x4F3E78
 	.asciz "mapATR"
-	.byte 0x64
-	.asciz "ef_mount"
-	.byte 0x62, 0x61, 0x74
-	.asciz "_mount"
+	.asciz "def_mount"
+	.asciz "bat_mount"
 	.balign 4
 	.4byte 0
 	.asciz "cf::CfObjectNpc"
@@ -1470,12 +1320,9 @@ lbl_804F7DA8:
 	.byte 0x6E
 	.4byte 0x616D6500
 	.asciz "move_speed"
-	.byte 0x73
-	.asciz "cale"
-	.byte 0x69, 0x63, 0x6F
-	.asciz "n_type"
-	.byte 0x72
-	.asciz "lt_meet"
+	.asciz "scale"
+	.asciz "icon_type"
+	.asciz "rlt_meet"
 	.asciz "cf::CfObjectTbox"
 	.balign 4
 	.4byte 0
@@ -1491,14 +1338,12 @@ lbl_804F7E0C:
 	.asciz "tp_atk"
 	.asciz "tp_arts"
 	.asciz "tp_atkdmg"
-	.byte 0x74, 0x70, 0x5F
-	.asciz "artsdmg"
+	.asciz "tp_artsdmg"
 	.asciz "wpn_type"
 	.byte 0x4A, 0x55, 0x68
 	.4byte 0x65616400
 	.asciz "level_exp"
-	.byte 0x6D, 0x61
-	.asciz "t_no"
+	.asciz "mat_no"
 	.byte 0x6D, 0x61, 0x70
 	.4byte 0x00696E74
 	.asciz "erval"
@@ -1511,8 +1356,7 @@ lbl_804F7E0C:
 lbl_804F7E68:
 	# ROM: 0x4F3F68
 	.asciz "name"
-	.byte 0x69, 0x63, 0x6F
-	.asciz "n_type"
+	.asciz "icon_type"
 	.balign 4
 	.asciz "pctalk_01"
 	.balign 4
@@ -1533,23 +1377,17 @@ lbl_804F7EB4:
 	.4byte 0x79706500
 	.asciz "server"
 	.asciz "message"
-	.byte 0x72
-	.asciz "eceiver"
+	.asciz "receiver"
 	.asciz "low_receiver"
-	.byte 0x68, 0x69, 0x67
-	.asciz "h_receiver"
-	.byte 0x68
-	.asciz "igh_server"
-	.byte 0x65
-	.asciz "xc_talk_id"
-	.byte 0x65
-	.asciz "xc_talk1"
+	.asciz "high_receiver"
+	.asciz "high_server"
+	.asciz "exc_talk_id"
+	.asciz "exc_talk1"
 	.byte 0x3C, 0x65, 0x78
 	.4byte 0x3E006578
 	.asciz "c_talk2"
 	.asciz "exc_talk3"
-	.byte 0x70, 0x72
-	.asciz "esent"
+	.asciz "present"
 	.balign 4
 	.4byte 0x00000125
 	.4byte 0x00000126
@@ -1579,11 +1417,9 @@ lbl_804F7F78:
 	.byte 0x48, 0x45
 	.4byte 0x4C500052
 	.asciz "EVIVE"
-	.byte 0x52, 0x45
-	.asciz "VIVE_ME"
+	.asciz "REVIVE_ME"
 	.asciz "REVIVE_END"
-	.byte 0x46
-	.asciz "ISHING"
+	.asciz "FISHING"
 	.byte 0x63
 	.4byte 0x6F726500
 	.asciz "cf::CfObjectImplObj"
@@ -1879,8 +1715,7 @@ lbl_804F8268:
 lbl_804F8498:
 	# ROM: 0x4F4598
 	.asciz "Lv_up_str"
-	.byte 0x4C, 0x76
-	.asciz "_up_agi"
+	.asciz "Lv_up_agi"
 	.asciz "Lv_up_eth"
 	.balign 4
 	.asciz "cf::CfObjEnumList"
@@ -1961,30 +1796,25 @@ lbl_804F857C:
 lbl_804F86DC:
 	# ROM: 0x4F47DC
 	.asciz "mf01_main21_cursor.brlyt"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "1_main21_cursor_roop.brlan"
+	.asciz "mf01_main21_cursor_roop.brlan"
 	.asciz "mf01_main21_cursor_on.brlan"
 	.asciz "txt_cursor"
-	.byte 0x4D, 0x4E
-	.asciz "U_main"
+	.asciz "MNU_main"
 	.byte 0x6E
 	.4byte 0x616D6500
 	.asciz "help"
 	.asciz "txt_suject"
 	.asciz "txt_helpmess"
-	.byte 0x00, 0x43, 0x4D
-	.asciz "ainMenu"
+	.byte 0x00
+	.asciz "CMainMenu"
 	.4byte 0x61726300
 	.asciz "mf01_main00_icon.brlyt"
 	.asciz "mf01_main00_icon_in.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "1_main00_icon_out.brlan"
+	.asciz "mf01_main00_icon_out.brlan"
 	.asciz "mf01_main00_icon_sub_in.brlan"
 	.asciz "mf01_main00_icon_sub_out.brlan"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_base%02d_%02d"
-	.byte 0x6E
-	.asciz "ul_proportion"
+	.asciz "pic_base%02d_%02d"
+	.asciz "nul_proportion"
 	.asciz "pic_base02_01"
 	.asciz "pic_base02_02"
 	.asciz "pic_base02_03"
@@ -2075,50 +1905,38 @@ lbl_804F8A00:
 	.asciz "mf15_arts22_cursor.brlyt"
 	.asciz "mf15_arts22_cursor_on.brlan"
 	.asciz "mf15_arts22_cursor_roop.brlan"
-	.byte 0x6E
-	.asciz "ul_arts00"
+	.asciz "nul_arts00"
 	.asciz "mf15_arts26_effect_gage.brlyt"
 	.asciz "mf15_arts26_effect_gage_full.brlan"
 	.asciz "mf15_arts26_effect_gage_full_in.brlan"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_gage"
+	.asciz "nul_gage"
 	.asciz "mf15_arts28_effect_lock.brlyt"
 	.asciz "mf15_arts28_effect_lock_in.brlan"
 	.asciz "mf15_arts28_effect_lock_out.brlan"
-	.byte 0x6E
-	.asciz "ul_lock"
+	.asciz "nul_lock"
 	.asciz "mf15_arts29_effect_range.brlyt"
 	.asciz "mf15_arts29_effect_range_in.brlan"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_range"
+	.asciz "nul_range"
 	.asciz "mf15_arts25_effect_kizuna.brlyt"
 	.asciz "mf15_arts25_effect_kizuna_in_out.brlan"
-	.byte 0x6E, 0x75
-	.asciz "l_kizuna"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_battle"
+	.asciz "nul_kizuna"
+	.asciz "MNU_battle"
 	.asciz "name"
 	.byte 0x68, 0x65, 0x6C
 	.4byte 0x70007069
 	.asciz "c_arrow_o00"
 	.asciz "pic_arrow_u00"
 	.asciz "pic_gage"
-	.byte 0x70
-	.asciz "ic_gage01"
-	.byte 0x61, 0x72
-	.asciz "m_type"
-	.byte 0x70
-	.asciz "c_arts"
-	.byte 0x69
-	.asciz "con_base"
+	.asciz "pic_gage01"
+	.asciz "arm_type"
+	.asciz "pc_arts"
+	.asciz "icon_base"
 	.byte 0x69, 0x63, 0x6F
 	.4byte 0x6E007069
 	.asciz "c_arts00"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_icon00"
+	.asciz "pic_icon00"
 	.asciz "pic_arts%02d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_icon%02d"
+	.asciz "pic_icon%02d"
 	.asciz "pic_ref%02d"
 	.asciz "pic_messwin00"
 	.asciz "pic_messwin01"
@@ -2209,15 +2027,12 @@ lbl_804F8F68:
 	.asciz "CPcSelectCursor01"
 	.asciz "mf80_info00_target01_pc.brlyt"
 	.asciz "mf80_info00_target01_pc_in.brlan"
-	.byte 0x6D, 0x66, 0x38
-	.asciz "0_info00_target01_pc_on.brlan"
+	.asciz "mf80_info00_target01_pc_on.brlan"
 	.asciz "mf80_info00_target01_pc_roop.brlan"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_crs_side"
+	.asciz "nul_crs_side"
 	.asciz "mf71_battle17_exp01.brlyt"
 	.asciz "mf71_battle17_exp01_in.brlan"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_all"
+	.asciz "nul_all"
 	.asciz "txt_exp"
 	.byte 0x74, 0x78, 0x74
 	.4byte 0x5F617000
@@ -2236,18 +2051,13 @@ lbl_804F8F68:
 	.byte 0x74, 0x78, 0x74
 	.4byte 0x5F687000
 	.asciz "txt_hp01"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_gage_skl"
+	.asciz "pic_gage_skl"
 	.asciz "pic_gage_exp"
-	.byte 0x70
-	.asciz "ic_face_d00"
+	.asciz "pic_face_d00"
 	.asciz "pic_face_d01"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_face_00"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_face_01"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_status_b"
+	.asciz "pic_face_00"
+	.asciz "pic_face_01"
+	.asciz "pic_status_b"
 	.asciz "pic_status_g"
 	.asciz "mf71_battle63_pcinfo_tension.brlyt"
 	.asciz "mf71_battle63_pcinfo_tension_in.brlan"
@@ -2262,15 +2072,12 @@ lbl_804F8F68:
 	.4byte 0x64004D4E
 	.asciz "U_party"
 	.asciz "name"
-	.byte 0x42, 0x54, 0x4C
-	.asciz "_PSVskill"
-	.byte 0x70, 0x6F
-	.asciz "int_PP"
+	.asciz "BTL_PSVskill"
+	.asciz "point_PP"
 	.byte 0x69
 	.4byte 0x636F6E00
 	.asciz "nul_icon_l"
-	.byte 0x6E
-	.asciz "ul_icon_h"
+	.asciz "nul_icon_h"
 	.balign 4
 	.asciz "mf71_btl00_pnmk00.tpl"
 	.balign 4
@@ -2295,62 +2102,45 @@ lbl_804F9440:
 	.asciz "mf80_info00_target_pc.brlyt"
 	.asciz "mf80_info00_target_pc_in.brlan"
 	.asciz "mf80_info00_target_pc_on.brlan"
-	.byte 0x6E, 0x75
-	.asciz "l_crs"
-	.byte 0x6E, 0x75
-	.asciz "l_crs_f"
+	.asciz "nul_crs"
+	.asciz "nul_crs_f"
 	.asciz "pic_crs02"
 	.asciz "pic_crs03"
 	.asciz "pic_crs_f02"
 	.asciz "pic_crs_f03"
 	.asciz "CMenuEnemyState"
 	.asciz "mf71_battle10_hpgage.brlyt"
-	.byte 0x70
-	.asciz "ic_pcbar"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_enbar"
-	.byte 0x70
-	.asciz "ic_tgbar_f"
-	.byte 0x70
-	.asciz "ic_pic_death"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_panic"
-	.byte 0x6E
-	.asciz "ul_pc"
-	.byte 0x6E, 0x75
-	.asciz "l_enemmy"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_tgbar"
-	.byte 0x6E
-	.asciz "ul_tg"
+	.asciz "pic_pcbar"
+	.asciz "pic_enbar"
+	.asciz "pic_tgbar_f"
+	.asciz "pic_pic_death"
+	.asciz "pic_panic"
+	.asciz "nul_pc"
+	.asciz "nul_enemmy"
+	.asciz "pic_tgbar"
+	.asciz "nul_tg"
 	.asciz "mf80_info00_target.brlyt"
-	.byte 0x70
-	.asciz "ic_crs00"
+	.asciz "pic_crs00"
 	.byte 0x70, 0x69, 0x63
 	.4byte 0x5F627300
 	.asciz "pic_sns"
 	.asciz "nul_mkgr"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_crs_s"
+	.asciz "pic_crs_s"
 	.asciz "mf80_info00_targetinfo.brlyt"
 	.asciz "mf80_info00_targetinfo_roop.brlan"
 	.asciz "txt_lv00"
 	.asciz "txt_lv01"
 	.asciz "nul_npc"
 	.asciz "nul_en_s"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_en_g"
+	.asciz "nul_en_g"
 	.asciz "pic_gr_e00"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_gr_e01"
+	.asciz "pic_gr_e01"
 	.asciz "pic_status_b"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_status_g"
+	.asciz "pic_status_g"
 	.asciz "mf80_tginf00_enmk00.tpl"
 	.asciz "mf80_tginf00_enmk01.tpl"
 	.asciz "mf80_tginf00_enmk02.tpl"
-	.byte 0x4D, 0x4E
-	.asciz "U_battle"
+	.asciz "MNU_battle"
 	.byte 0x6E, 0x61, 0x6D
 	.4byte 0x65007478
 	.asciz "t_name_npc"
@@ -2371,11 +2161,9 @@ lbl_804F9440:
 lbl_804F96F0:
 	# ROM: 0x4F57F0
 	.asciz "CMenuFade"
-	.byte 0x66, 0x61
-	.asciz "deout.brlyt"
+	.asciz "fadeout.brlyt"
 	.asciz "fadeout.brlan"
-	.byte 0x77, 0x69
-	.asciz "n_black"
+	.asciz "win_black"
 	.asciz "CMenuKeyAssign"
 	.balign 4
 
@@ -2385,17 +2173,12 @@ lbl_804F9730:
 	# ROM: 0x4F5830
 	.asciz "CMenuKeyAssign"
 	.asciz "mf70_cf40_keyassign.brlyt"
-	.byte 0x66, 0x69, 0x6C
-	.asciz "eID_1"
-	.byte 0x66, 0x69
-	.asciz "leID_2"
+	.asciz "fileID_1"
+	.asciz "fileID_2"
 	.asciz "MNU_kyeassign"
-	.byte 0x53, 0x59, 0x53
-	.asciz "_filelist"
-	.byte 0x66, 0x69
-	.asciz "lename"
-	.byte 0x25
-	.asciz "s.tpl"
+	.asciz "SYS_filelist"
+	.asciz "filename"
+	.asciz "%s.tpl"
 	.asciz "pic_pos%02d"
 	.byte 0x68, 0x65
 	.4byte 0x6C700074
@@ -2495,29 +2278,21 @@ lbl_804F9A44:
 	.byte 0x6D, 0x61
 	.4byte 0x70494400
 	.asciz "category"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_land%d"
+	.asciz "pic_land%d"
 	.asciz "height"
 	.asciz "txt_qst3"
 	.asciz "type"
 	.byte 0x6D, 0x61, 0x72
 	.4byte 0x6B657200
 	.asciz "quest_no"
-	.byte 0x71, 0x73, 0x74
-	.asciz "_genre"
-	.byte 0x72
-	.asciz "elate_no"
+	.asciz "qst_genre"
+	.asciz "relate_no"
 	.asciz "txt_scene"
-	.byte 0x70
-	.asciz "ic_obj%d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_point%d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pop%d"
-	.byte 0x46
-	.asciz "LD_valpoplist"
-	.byte 0x69, 0x74
-	.asciz "m1ID"
+	.asciz "pic_obj%d"
+	.asciz "pic_point%d"
+	.asciz "pic_pop%d"
+	.asciz "FLD_valpoplist"
+	.asciz "itm1ID"
 	.byte 0x70, 0x6F, 0x73
 	.4byte 0x5800706F
 	.4byte 0x73590070
@@ -2525,39 +2300,30 @@ lbl_804F9A44:
 	.asciz "pic_val%d"
 	.asciz "pic_gmk%d"
 	.asciz "/menu/mmClock.arc"
-	.byte 0x43, 0x4D
-	.asciz "MClock"
+	.asciz "CMMClock"
 	.byte 0x61
 	.4byte 0x7263006D
 	.asciz "f70_cf30_clock00.brlyt"
 	.asciz "mf70_cf30_clock00_clock_in.brlan"
 	.asciz "mf70_cf30_clock00_time_all.brlan"
-	.byte 0x6D, 0x69, 0x6E
-	.asciz "imaplist%04d"
+	.asciz "minimaplist%04d"
 	.byte 0x73, 0x66, 0x6C
 	.4byte 0x61670071
 	.asciz "flag1"
 	.byte 0x76, 0x61
 	.4byte 0x6C31006D
 	.asciz "apimg"
-	.byte 0x6D, 0x61
-	.asciz "pimg1"
-	.byte 0x6D, 0x61
-	.asciz "pimg2"
-	.byte 0x2F, 0x6D
-	.asciz "enu/tpl/%s"
+	.asciz "mapimg1"
+	.asciz "mapimg2"
+	.asciz "/menu/tpl/%s"
 	.asciz "minimap_x"
-	.byte 0x6D, 0x69, 0x6E
-	.asciz "imap_y"
+	.asciz "minimap_y"
 	.asciz "minimap_rate"
 	.asciz "scmarkerlist"
-	.byte 0x4D, 0x69, 0x6E
-	.asciz "iMap2"
-	.byte 0x4D, 0x69
-	.asciz "niMap2_ObjM"
+	.asciz "MiniMap2"
+	.asciz "MiniMap2_ObjM"
 	.asciz "/menu/mm%04d.arc"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_com00_dmy.tpl"
+	.asciz "mf00_com00_dmy.tpl"
 	.asciz "pic_map"
 	.asciz "pic_cam"
 	.asciz "txt_rot"
@@ -2565,22 +2331,19 @@ lbl_804F9A44:
 	.asciz "mf75_minimap00_ma%04d_f01.brlyt"
 	.asciz "mf75_minimap00_ma%04d_f01_in.brlan"
 	.asciz "mf75_minimap00_ma%04d_f01_fade.brlan"
-	.byte 0x6E
-	.asciz "ul_all"
+	.asciz "nul_all"
 	.byte 0x6D
 	.4byte 0x61700070
 	.asciz "ic_attr%d"
 	.asciz "pic_objnpc%d"
-	.byte 0x70
-	.asciz "ic_objpcnpc%d"
+	.asciz "pic_objpcnpc%d"
 	.asciz "txt_commu"
 	.asciz "npc_id"
 	.asciz "txt_qst1"
 	.asciz "txt_shop"
 	.asciz "txt_crystal"
 	.asciz "txt_obj"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_map_jump%d"
+	.asciz "pic_map_jump%d"
 	.asciz "txt_map_jump"
 	.balign 4
 	.asciz "CMenuQuestLog"
@@ -2673,33 +2436,23 @@ lbl_804F9F60:
 	.balign 4
 	.asciz "pic_other"
 	.asciz "pic_qest"
-	.byte 0x71
-	.asciz "st_genre"
-	.byte 0x73, 0x63, 0x6D
-	.asciz "arkerlist"
-	.byte 0x53, 0x59
-	.asciz "S_iconlist"
+	.asciz "qst_genre"
+	.asciz "scmarkerlist"
+	.asciz "SYS_iconlist"
 	.asciz "CMenuSymbolMark"
 	.asciz "mf70_cf10_tagicon.brlyt"
-	.byte 0x66
-	.asciz "ilename_1"
-	.byte 0x25, 0x73
-	.asciz ".tpl"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_icon"
+	.asciz "filename_1"
+	.asciz "%s.tpl"
+	.asciz "pic_icon"
 	.byte 0x74, 0x79
 	.4byte 0x7065006D
 	.4byte 0x6170006D
 	.asciz "arker"
-	.byte 0x6E, 0x70
-	.asciz "c_id"
-	.byte 0x71, 0x75, 0x65
-	.asciz "st_no"
-	.byte 0x72, 0x65
-	.asciz "late_no"
+	.asciz "npc_id"
+	.asciz "quest_no"
+	.asciz "relate_no"
 	.asciz "FLD_valpoplist"
-	.byte 0x69
-	.asciz "tm1ID"
+	.asciz "itm1ID"
 	.byte 0x70, 0x6F
 	.4byte 0x73580070
 	.4byte 0x6F735900
@@ -2839,52 +2592,38 @@ lbl_804FA4C4:
 	.asciz "name"
 	.asciz "txt_next"
 	.asciz "txt_purpose"
-	.byte 0x71, 0x73
-	.asciz "t_genre"
+	.asciz "qst_genre"
 	.asciz "MNU_col6"
-	.byte 0x72, 0x65, 0x77
-	.asciz "ard_exp"
+	.asciz "reward_exp"
 	.asciz "reward_money"
-	.byte 0x72, 0x65, 0x77
-	.asciz "ard_mes"
+	.asciz "reward_mes"
 	.asciz "win_main"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_head"
-	.byte 0x77, 0x69
-	.asciz "n_main01"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_head01"
+	.asciz "pic_head"
+	.asciz "win_main01"
+	.asciz "pic_head01"
 	.asciz "mf00_reg00_qt01.tpl"
 	.asciz "mf00_reg00_qt02.tpl"
 	.asciz "mf00_reg00_qt03.tpl"
 	.asciz "pic_tit"
 	.asciz "force"
-	.byte 0x4D, 0x4E
-	.asciz "U_quest"
+	.asciz "MNU_quest"
 	.asciz "txt_head"
 	.byte 0x74, 0x69, 0x74
 	.4byte 0x6C650074
 	.asciz "xt_questtitle"
-	.byte 0x6E, 0x70
-	.asciz "c_id"
+	.asciz "npc_id"
 	.asciz "txt_irai"
-	.byte 0x70, 0x75
-	.asciz "rpose"
-	.byte 0x69, 0x6E
-	.asciz "fo_end_B"
-	.byte 0x69, 0x6E, 0x66
-	.asciz "o_end_A"
+	.asciz "purpose"
+	.asciz "info_end_B"
+	.asciz "info_end_A"
 	.asciz "order_succ_A"
-	.byte 0x69, 0x6E, 0x66
-	.asciz "o_prog"
+	.asciz "info_prog"
 	.asciz "txt_reward01"
 	.4byte 0x00747874
 	.asciz "_reward02"
 	.asciz "txt_reward03"
-	.byte 0x72
-	.asciz "eward_B%d"
-	.byte 0x72, 0x65
-	.asciz "ward_A%d"
+	.asciz "reward_B%d"
+	.asciz "reward_A%d"
 	.asciz "txt_reward%02d"
 	.asciz "rankType"
 	.byte 0x25, 0x73, 0x25
@@ -2894,38 +2633,27 @@ lbl_804FA4C4:
 	.byte 0x74, 0x78, 0x74
 	.4byte 0x5F6E6F00
 	.asciz "txt_yes2"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_kyeassign"
+	.asciz "MNU_kyeassign"
 	.byte 0x68
 	.4byte 0x656C7000
 	.asciz "txt_close1"
 	.asciz "txt_close2"
-	.byte 0x66, 0x69
-	.asciz "leID_2"
-	.byte 0x66
-	.asciz "ileID_1"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
 	.asciz "pic_btn1"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_btn2"
-	.byte 0x66, 0x6C
-	.asciz "g_relate_B%d"
-	.byte 0x66, 0x6C, 0x67
-	.asciz "_relate_A%d"
+	.asciz "pic_btn2"
+	.asciz "flg_relate_B%d"
+	.asciz "flg_relate_A%d"
 	.asciz "up_relate_B%d"
-	.byte 0x75, 0x70
-	.asciz "_relate_A%d"
+	.asciz "up_relate_A%d"
 	.asciz "up_famous_B"
 	.asciz "up_famous_A"
 	.asciz "nul_select"
-	.byte 0x6E
-	.asciz "ul_select2"
-	.byte 0x70
-	.asciz "ic_comp"
+	.asciz "nul_select2"
+	.asciz "pic_comp"
 	.asciz "pic_chbx01"
-	.byte 0x6E
-	.asciz "ul_proportion"
-	.byte 0x6E, 0x75
-	.asciz "l_yes2"
+	.asciz "nul_proportion"
+	.asciz "nul_yes2"
 	.balign 4
 	.4byte 0
 	.asciz "CSysWinSelect"
@@ -3523,10 +3251,8 @@ lbl_804FB488:
 	# ROM: 0x4F7588
 	.asciz "JNL_trustup"
 	.asciz "trust_up"
-	.byte 0x43, 0x54, 0x61
-	.asciz "gProcessor.cpp"
-	.byte 0x4E
-	.asciz "W4R:Failed assertion rubyLen > 0"
+	.asciz "CTagProcessor.cpp"
+	.asciz "NW4R:Failed assertion rubyLen > 0"
 	.balign 4
 	.4byte 0
 	.asciz "CTalkWindow"
@@ -3554,8 +3280,7 @@ lbl_804FB4E4:
 	.asciz "txt_mess03"
 	.asciz "pic_tail_over"
 	.asciz "pic_tail_under"
-	.byte 0x77
-	.asciz "in_n"
+	.asciz "win_n"
 	.byte 0x77, 0x69, 0x6E
 	.4byte 0x5F61006D
 	.asciz "f70_cf00_twin_tail_n.tpl"
@@ -3564,8 +3289,7 @@ lbl_804FB4E4:
 	.asciz "mf70_cf00_twin_line_a.tpl"
 	.asciz "mf70_cf00_twin_tail_t.tpl"
 	.asciz "mf70_cf00_twin_line_t.tpl"
-	.byte 0x65
-	.asciz "p100"
+	.asciz "ep100"
 	.balign 4
 	.asciz "CUIBattleManager"
 	.balign 4
@@ -3583,16 +3307,14 @@ lbl_804FB4E4:
 lbl_804FB76C:
 	# ROM: 0x4F786C
 	.asciz "ARTS_FACE"
-	.byte 0x6D, 0x65
-	.asciz "nu/tpl/arts_elem.arc"
+	.asciz "menu/tpl/arts_elem.arc"
 	.asciz "menu/tpl/arts_sys.arc"
 	.asciz "menu/tpl/arts_pc%02d.arc"
 	.asciz "/menu/tpl/face_pc%02d.arc"
 	.byte 0x61, 0x72
 	.4byte 0x63006963
 	.asciz "on_type2"
-	.byte 0x69, 0x63, 0x6F
-	.asciz "n_type3"
+	.asciz "icon_type3"
 	.asciz "icon_type"
 	.balign 4
 	.4byte 0
@@ -3632,14 +3354,10 @@ lbl_804FB8E0:
 	.4byte 0x25730061
 	.4byte 0x72630062
 	.asciz "attle_font01.brfna"
-	.byte 0x62
-	.asciz "attle_font02.brfna"
-	.byte 0x62
-	.asciz "attle_font03.brfna"
-	.byte 0x71
-	.asciz "st_genre"
-	.byte 0x4A, 0x4E, 0x4C
-	.asciz "_playaward"
+	.asciz "battle_font02.brfna"
+	.asciz "battle_font03.brfna"
+	.asciz "qst_genre"
+	.asciz "JNL_playaward"
 	.byte 0x65
 	.4byte 0x78700000
 
@@ -3931,28 +3649,21 @@ lbl_804FBE94:
 	.4byte 0x6400252E
 	.4byte 0x3166006D
 	.asciz "apID"
-	.byte 0x6C, 0x61, 0x6E
-	.asciz "dmarklist"
-	.byte 0x72, 0x6C
-	.asciz "t_lnd"
+	.asciz "landmarklist"
+	.asciz "rlt_lnd"
 	.byte 0x66, 0x6C
 	.4byte 0x675F7300
 	.asciz "cnd_questID"
 	.asciz "flg_famous"
 	.asciz "cnd_famous"
-	.byte 0x6E, 0x70
-	.asciz "cmeetID1"
-	.byte 0x6E, 0x70, 0x63
-	.asciz "meetID2"
+	.asciz "npcmeetID1"
+	.asciz "npcmeetID2"
 	.asciz "flg_relate"
 	.asciz "cnd_relate"
-	.byte 0x72, 0x6C
-	.asciz "t_meet"
+	.asciz "rlt_meet"
 	.asciz "main_PC"
-	.byte 0x73
-	.asciz "cenario_s"
-	.byte 0x73, 0x63
-	.asciz "enario_e"
+	.asciz "scenario_s"
+	.asciz "scenario_e"
 	.byte 0x74, 0x79, 0x70
 	.4byte 0x6500464C
 	.asciz "D_valpoplist"
@@ -3961,18 +3672,13 @@ lbl_804FBE94:
 	.asciz "popTime"
 	.asciz "wtrType"
 	.asciz "OCLOCK_21"
-	.byte 0x4F, 0x43
-	.asciz "LOCK_18"
+	.asciz "OCLOCK_18"
 	.asciz "OCLOCK_15"
-	.byte 0x4F, 0x43
-	.asciz "LOCK_12"
+	.asciz "OCLOCK_12"
 	.asciz "OCLOCK_9"
-	.byte 0x4F, 0x43, 0x4C
-	.asciz "OCK_6"
-	.byte 0x4F, 0x43
-	.asciz "LOCK_3"
-	.byte 0x4F
-	.asciz "CLOCK_0"
+	.asciz "OCLOCK_6"
+	.asciz "OCLOCK_3"
+	.asciz "OCLOCK_0"
 	.asciz "quest_no"
 	.byte 0x71, 0x75, 0x65
 	.4byte 0x73740073
@@ -3980,54 +3686,37 @@ lbl_804FBE94:
 	.byte 0x73, 0x65, 0x6C
 	.4byte 0x65637400
 	.asciz "popular_no"
-	.byte 0x70
-	.asciz "opular"
-	.byte 0x6E
-	.asciz "pcmeet_no"
-	.byte 0x63, 0x6F
-	.asciz "l6_h_no"
+	.asciz "popular"
+	.asciz "npcmeet_no"
+	.asciz "col6_h_no"
 	.asciz "col6_h"
 	.asciz "col6_k_no"
 	.byte 0x63, 0x6F, 0x6C
 	.4byte 0x365F6B00
 	.asciz "name"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_name"
-	.byte 0x72, 0x6C
-	.asciz "t_sex"
-	.byte 0x53, 0x59
-	.asciz "S_filelist"
-	.byte 0x66
-	.asciz "ilename"
+	.asciz "MNU_name"
+	.asciz "rlt_sex"
+	.asciz "SYS_filelist"
+	.asciz "filename"
 	.asciz "%s.tpl"
-	.byte 0x53
-	.asciz "YS_iconlist"
+	.asciz "SYS_iconlist"
 	.asciz "filename_1"
-	.byte 0x66
-	.asciz "ilename_2"
-	.byte 0x69, 0x74
-	.asciz "emType"
-	.byte 0x69
-	.asciz "temID"
-	.byte 0x72, 0x61
-	.asciz "nkType"
+	.asciz "filename_2"
+	.asciz "itemType"
+	.asciz "itemID"
+	.asciz "rankType"
 	.asciz "MNU_item"
 	.asciz "%s%s"
-	.byte 0x43, 0x4C, 0x36
-	.asciz "_uplist"
+	.asciz "CL6_uplist"
 	.asciz "flg_s1"
-	.byte 0x4A
-	.asciz "NL_PCrelatelist"
+	.asciz "JNL_PCrelatelist"
 	.asciz "JNL_PClinelist"
 	.asciz "minimap_origin"
-	.byte 0x6D, 0x69
-	.asciz "nimap_rate"
-	.byte 0x68
-	.asciz "eight"
+	.asciz "minimap_rate"
+	.asciz "height"
 	.asciz "CL6_materiallist"
 	.asciz "money"
-	.byte 0x6D, 0x61, 0x74
-	.asciz "erial%d"
+	.asciz "material%d"
 	.asciz "number%d"
 	.balign 4
 	.asciz "CUIWindowManager"
@@ -4046,8 +3735,7 @@ lbl_804FBE94:
 lbl_804FC1AC:
 	# ROM: 0x4F82AC
 	.asciz "qst_genre"
-	.byte 0x6C, 0x61
-	.asciz "ndmarklist"
+	.asciz "landmarklist"
 	.asciz "mapID"
 	.balign 4
 	.4byte 0
@@ -4111,118 +3799,75 @@ lbl_804FC260:
 lbl_804FC280:
 	# ROM: 0x4F8380
 	.asciz "rlt_meet"
-	.byte 0x69, 0x74, 0x65
-	.asciz "mType"
-	.byte 0x71, 0x73
-	.asciz "t_genre"
+	.asciz "itemType"
+	.asciz "qst_genre"
 	.asciz "non_auto"
 	.byte 0x74, 0x69, 0x74
 	.4byte 0x6C65006E
 	.asciz "o_map"
-	.byte 0x6E, 0x70
-	.asciz "c_id"
-	.byte 0x6D, 0x65, 0x73
-	.asciz "_refuse"
+	.asciz "npc_id"
+	.asciz "mes_refuse"
 	.asciz "flg_s"
-	.byte 0x63, 0x6E
-	.asciz "d_questID"
-	.byte 0x66, 0x6C
-	.asciz "g_famous"
-	.byte 0x63, 0x6E, 0x64
-	.asciz "_famous"
+	.asciz "cnd_questID"
+	.asciz "flg_famous"
+	.asciz "cnd_famous"
 	.asciz "npcmeetID1"
-	.byte 0x6E
-	.asciz "pcmeetID2"
-	.byte 0x66, 0x6C
-	.asciz "g_relate"
-	.byte 0x63, 0x6E, 0x64
-	.asciz "_relate"
+	.asciz "npcmeetID2"
+	.asciz "flg_relate"
+	.asciz "cnd_relate"
 	.asciz "up_questID"
-	.byte 0x75
-	.asciz "p_questID2"
-	.byte 0x6E
-	.asciz "o_report"
-	.byte 0x74, 0x79, 0x70
-	.asciz "e_succ_A1"
-	.byte 0x63, 0x6E
-	.asciz "d_succ_A1"
-	.byte 0x6E, 0x75
-	.asciz "m_succ_A1"
-	.byte 0x66, 0x6C
-	.asciz "g_relate_A1"
+	.asciz "up_questID2"
+	.asciz "no_report"
+	.asciz "type_succ_A1"
+	.asciz "cnd_succ_A1"
+	.asciz "num_succ_A1"
+	.asciz "flg_relate_A1"
 	.asciz "up_relate_A1"
-	.byte 0x6F, 0x72, 0x64
-	.asciz "er_succ_A"
-	.byte 0x75, 0x70
-	.asciz "_famous_A"
-	.byte 0x72, 0x65
-	.asciz "ward_A1"
+	.asciz "order_succ_A"
+	.asciz "up_famous_A"
+	.asciz "reward_A1"
 	.asciz "reward_A2"
-	.byte 0x72, 0x65
-	.asciz "ward_A3"
+	.asciz "reward_A3"
 	.asciz "type_succ_A2"
-	.byte 0x63, 0x6E, 0x64
-	.asciz "_succ_A2"
-	.byte 0x6E, 0x75, 0x6D
-	.asciz "_succ_A2"
-	.byte 0x66, 0x6C, 0x67
-	.asciz "_relate_A2"
-	.byte 0x75
-	.asciz "p_relate_A2"
+	.asciz "cnd_succ_A2"
+	.asciz "num_succ_A2"
+	.asciz "flg_relate_A2"
+	.asciz "up_relate_A2"
 	.asciz "type_succ_A3"
-	.byte 0x63, 0x6E, 0x64
-	.asciz "_succ_A3"
-	.byte 0x6E, 0x75, 0x6D
-	.asciz "_succ_A3"
-	.byte 0x66, 0x6C, 0x67
-	.asciz "_relate_A3"
-	.byte 0x75
-	.asciz "p_relate_A3"
+	.asciz "cnd_succ_A3"
+	.asciz "num_succ_A3"
+	.asciz "flg_relate_A3"
+	.asciz "up_relate_A3"
 	.asciz "type_succ_A4"
-	.byte 0x63, 0x6E, 0x64
-	.asciz "_succ_A4"
-	.byte 0x6E, 0x75, 0x6D
-	.asciz "_succ_A4"
-	.byte 0x66, 0x6C, 0x67
-	.asciz "_relate_A4"
-	.byte 0x75
-	.asciz "p_relate_A4"
+	.asciz "cnd_succ_A4"
+	.asciz "num_succ_A4"
+	.asciz "flg_relate_A4"
+	.asciz "up_relate_A4"
 	.asciz "type_succ_B1"
-	.byte 0x63, 0x6E, 0x64
-	.asciz "_succ_B1"
-	.byte 0x6E, 0x75, 0x6D
-	.asciz "_succ_B1"
-	.byte 0x66, 0x6C, 0x67
-	.asciz "_relate_B1"
-	.byte 0x75
-	.asciz "p_relate_B1"
+	.asciz "cnd_succ_B1"
+	.asciz "num_succ_B1"
+	.asciz "flg_relate_B1"
+	.asciz "up_relate_B1"
 	.asciz "order_succ_B"
-	.byte 0x75, 0x70, 0x5F
-	.asciz "famous_B"
-	.byte 0x72, 0x65, 0x77
-	.asciz "ard_B1"
-	.byte 0x72
-	.asciz "eward_B2"
-	.byte 0x72, 0x65, 0x77
-	.asciz "ard_B3"
+	.asciz "up_famous_B"
+	.asciz "reward_B1"
+	.asciz "reward_B2"
+	.asciz "reward_B3"
 	.asciz "type_succ_B2"
 	.asciz "cnd_succ_B2"
 	.asciz "num_succ_B2"
 	.asciz "flg_relate_B2"
-	.byte 0x75, 0x70
-	.asciz "_relate_B2"
+	.asciz "up_relate_B2"
 	.asciz "type_succ_B3"
 	.asciz "cnd_succ_B3"
 	.asciz "num_succ_B3"
 	.asciz "flg_relate_B3"
-	.byte 0x75, 0x70
-	.asciz "_relate_B3"
+	.asciz "up_relate_B3"
 	.asciz "type_succ_B4"
 	.asciz "cnd_succ_B4"
 	.asciz "num_succ_B4"
 	.asciz "flg_relate_B4"
-	.byte 0x75, 0x70
-	.asciz "_relate_B4"
+	.asciz "up_relate_B4"
 	.balign 4
 	.asciz "JNL_quest0000"
 	.balign 4
@@ -4319,112 +3964,68 @@ lbl_804FC758:
 lbl_804FC7D4:
 	# ROM: 0x4F88D4
 	.asciz "BTL_pclist"
-	.byte 0x42
-	.asciz "TL_enelist"
-	.byte 0x42
-	.asciz "TL_skilllist"
-	.byte 0x42, 0x54, 0x4C
-	.asciz "_growlist"
-	.byte 0x42, 0x54
-	.asciz "L_bufflist"
-	.byte 0x46
-	.asciz "LD_pointlist"
-	.byte 0x46, 0x4C, 0x44
-	.asciz "_tboxlist"
-	.byte 0x42, 0x54
-	.asciz "L_camlist"
-	.byte 0x42, 0x54
-	.asciz "L_camdatalist"
-	.byte 0x42, 0x54
-	.asciz "L_crystalnamelist"
-	.byte 0x4D, 0x4E
-	.asciz "U_item"
-	.byte 0x46
-	.asciz "LD_npclist"
-	.byte 0x46
-	.asciz "LD_maplist"
-	.byte 0x6C
-	.asciz "andmarklist"
+	.asciz "BTL_enelist"
+	.asciz "BTL_skilllist"
+	.asciz "BTL_growlist"
+	.asciz "BTL_bufflist"
+	.asciz "FLD_pointlist"
+	.asciz "FLD_tboxlist"
+	.asciz "BTL_camlist"
+	.asciz "BTL_camdatalist"
+	.asciz "BTL_crystalnamelist"
+	.asciz "MNU_item"
+	.asciz "FLD_npclist"
+	.asciz "FLD_maplist"
+	.asciz "landmarklist"
 	.asciz "FLD_valpoplist"
-	.byte 0x46
-	.asciz "LD_dmobjlist"
-	.byte 0x49, 0x54, 0x4D
-	.asciz "_itemlist"
-	.byte 0x49, 0x54
-	.asciz "M_wpnlist"
-	.byte 0x49, 0x54
-	.asciz "M_equiplist"
+	.asciz "FLD_dmobjlist"
+	.asciz "ITM_itemlist"
+	.asciz "ITM_wpnlist"
+	.asciz "ITM_equiplist"
 	.asciz "ITM_crystallist"
 	.asciz "ITM_dropcrystallist"
 	.asciz "ITM_collectlist"
 	.asciz "ITM_materiallist"
-	.byte 0x49, 0x54, 0x4D
-	.asciz "_valuablelist"
-	.byte 0x49, 0x54
-	.asciz "M_artslist"
-	.byte 0x49
-	.asciz "TM_headlist"
+	.asciz "ITM_valuablelist"
+	.asciz "ITM_artslist"
+	.asciz "ITM_headlist"
 	.asciz "ITM_bodylist"
-	.byte 0x49, 0x54, 0x4D
-	.asciz "_armlist"
-	.byte 0x49, 0x54, 0x4D
-	.asciz "_waistlist"
-	.byte 0x49
-	.asciz "TM_legglist"
+	.asciz "ITM_armlist"
+	.asciz "ITM_waistlist"
+	.asciz "ITM_legglist"
 	.asciz "BTL_PSVskill"
-	.byte 0x42, 0x54, 0x4C
-	.asciz "_PSVlink"
-	.byte 0x42, 0x54, 0x4C
-	.asciz "_PSSlist"
-	.byte 0x72, 0x6F, 0x75
-	.asciz "telist%02d%02d"
+	.asciz "BTL_PSVlink"
+	.asciz "BTL_PSSlist"
+	.asciz "routelist%02d%02d"
 	.asciz "mapefflist%02d%02d"
-	.byte 0x6D, 0x61
-	.asciz "pobjlist%02d%02d"
-	.byte 0x6D, 0x61, 0x70
-	.asciz "lodlist%02d%02d"
+	.asciz "mapobjlist%02d%02d"
+	.asciz "maplodlist%02d%02d"
 	.asciz "mapselist%02d%02d"
-	.byte 0x46, 0x4C
-	.asciz "D_GimCamList%02d%02d"
-	.byte 0x4C, 0x69, 0x74
-	.asciz "emlist%02d%02d"
-	.byte 0x65
-	.asciz "xtalklist%02d%02d"
-	.byte 0x6D, 0x69
-	.asciz "nelist%02d%02d"
-	.byte 0x42
-	.asciz "TL_enelist%02d%02d"
-	.byte 0x47
-	.asciz "imlist%02d%02d"
-	.byte 0x46
-	.asciz "ieldLock%02d%02d"
-	.byte 0x45, 0x6C, 0x76
-	.asciz "Gm%02d%02d"
-	.byte 0x57
-	.asciz "arpGm%02d%02d"
-	.byte 0x4A, 0x75
-	.asciz "mpGm%02d%02d"
-	.byte 0x49, 0x74, 0x65
-	.asciz "mGm%02d%02d"
+	.asciz "FLD_GimCamList%02d%02d"
+	.asciz "Litemlist%02d%02d"
+	.asciz "extalklist%02d%02d"
+	.asciz "minelist%02d%02d"
+	.asciz "BTL_enelist%02d%02d"
+	.asciz "Gimlist%02d%02d"
+	.asciz "FieldLock%02d%02d"
+	.asciz "ElvGm%02d%02d"
+	.asciz "WarpGm%02d%02d"
+	.asciz "JumpGm%02d%02d"
+	.asciz "ItemGm%02d%02d"
 	.asciz "GimSVoff%02d%02d"
-	.byte 0x47, 0x69, 0x6D
-	.asciz "Ene%02d%02d"
+	.asciz "GimEne%02d%02d"
 	.asciz "GimMess%02d%02d"
 	.asciz "drop_nmllist%02d%02d"
-	.byte 0x64, 0x72, 0x6F
-	.asciz "p_rarlist%02d%02d"
-	.byte 0x64, 0x72
-	.asciz "op_sprlist%02d%02d"
-	.byte 0x72
-	.asciz "esource"
+	.asciz "drop_rarlist%02d%02d"
+	.asciz "drop_sprlist%02d%02d"
+	.asciz "resource"
 	.asciz "posX"
 	.byte 0x70, 0x6F, 0x73
 	.4byte 0x5900706F
 	.4byte 0x735A0070
 	.4byte 0x63256400
 	.asciz "parts"
-	.byte 0x62, 0x61
-	.asciz "t_mount"
+	.asciz "bat_mount"
 	.asciz "def_mount"
 	.byte 0x6E, 0x61
 	.4byte 0x6D650069
@@ -4436,8 +4037,7 @@ lbl_804FC7D4:
 	.4byte 0x43836583
 	.4byte 0x8000636F  ;# ptr
 	.asciz "mmon/jp/bdat_eve.bin"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_eve_start"
+	.asciz "MNU_eve_start"
 	.asciz "MNU_eve_table"
 	.balign 4
 	.4byte 0
@@ -4464,47 +4064,34 @@ lbl_804FCBF8:
 	.byte 0x25, 0x73, 0x2E
 	.4byte 0x74706C00
 	.asciz "fileID_2"
-	.byte 0x66, 0x69, 0x6C
-	.asciz "eID_1"
-	.byte 0x4D, 0x4E
-	.asciz "U_kyeassign"
+	.asciz "fileID_1"
+	.asciz "MNU_kyeassign"
 	.asciz "pic_button_q"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_button_g"
+	.asciz "pic_button_g"
 	.asciz "pic_button_b"
 	.asciz "txt_kakunin_q"
 	.asciz "txt_kakunin_g"
 	.asciz "txt_kakunin_b"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_kizuna"
+	.asciz "nul_kizuna"
 	.asciz "nul_quest"
-	.byte 0x6E, 0x75
-	.asciz "l_gram"
-	.byte 0x6E
-	.asciz "ul_buf"
+	.asciz "nul_gram"
+	.asciz "nul_buf"
 	.asciz "mf70_cf52_sideinfo03.tpl"
 	.asciz "pic_icon_g"
 	.asciz "mf00_com12_face_area"
 	.asciz "SYS_filelist"
-	.byte 0x66, 0x69, 0x6C
-	.asciz "ename"
+	.asciz "filename"
 	.asciz "pic_face00"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_face01"
+	.asciz "pic_face01"
 	.asciz "mf00_com12_face_area01.tpl"
 	.asciz "mf00_com12_face_area02.tpl"
 	.asciz "mf00_com12_face_area03.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_com12_face_area04.tpl"
+	.asciz "mf00_com12_face_area04.tpl"
 	.asciz "mf00_com12_face_area05.tpl"
-	.byte 0x6E
-	.asciz "ul_anim_b"
-	.byte 0x6E, 0x75
-	.asciz "l_anim_g"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_kiz_b"
-	.byte 0x70
-	.asciz "ic_rp_b"
+	.asciz "nul_anim_b"
+	.asciz "nul_anim_g"
+	.asciz "pic_kiz_b"
+	.asciz "pic_rp_b"
 	.asciz "mf00_com00_rp03.tpl"
 	.asciz "mf00_com00_rp02.tpl"
 	.asciz "mf00_com00_rp01.tpl"
@@ -4512,11 +4099,9 @@ lbl_804FCBF8:
 	.asciz "pic_rp_g"
 	.asciz "mf00_com00_rp00.tpl"
 	.asciz "mf00_com00_rp04.tpl"
-	.byte 0x4A
-	.asciz "NL_PCrelatelist"
+	.asciz "JNL_PCrelatelist"
 	.asciz "flg_s1"
-	.byte 0x4A
-	.asciz "NL_PClinelist"
+	.asciz "JNL_PClinelist"
 	.asciz "mf00_com00_kizp04.tpl"
 	.asciz "mf00_com00_kizp02.tpl"
 	.asciz "mf00_com00_kizp01.tpl"
@@ -4524,8 +4109,7 @@ lbl_804FCBF8:
 	.asciz "mf00_com00_kizp03.tpl"
 	.asciz "txt_buf"
 	.asciz "name"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_tut.tpl"
+	.asciz "mf00_reg00_tut.tpl"
 	.asciz "CMenuLandTelop"
 	.balign 4
 
@@ -4540,22 +4124,15 @@ lbl_804FCF50:
 	.byte 0x67, 0x65, 0x74
 	.4byte 0x41500067
 	.asciz "etPP"
-	.byte 0x73, 0x6E, 0x64
-	.asciz "/adx/j04.adx"
-	.byte 0x73, 0x6E, 0x64
-	.asciz "/adx/j05.adx"
-	.byte 0x73, 0x6E, 0x64
-	.asciz "/adx/j03.adx"
-	.byte 0x43, 0x4D, 0x65
-	.asciz "nuLandTelop"
+	.asciz "snd/adx/j04.adx"
+	.asciz "snd/adx/j05.adx"
+	.asciz "snd/adx/j03.adx"
+	.asciz "CMenuLandTelop"
 	.asciz "mf70_cf60_syswin11.brlyt"
 	.asciz "mf70_cf60_syswin11_land_mes.brlan"
-	.byte 0x6E
-	.asciz "ul_land00"
-	.byte 0x6E, 0x75
-	.asciz "l_land01"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_land02"
+	.asciz "nul_land00"
+	.asciz "nul_land01"
+	.asciz "nul_land02"
 	.asciz "MNU_update"
 	.byte 0x69
 	.4byte 0x6E666F00
@@ -4570,8 +4147,7 @@ lbl_804FCF50:
 	.asciz "mf70_cf51_sideinfo.brlyt"
 	.asciz "mf70_cf51_sideinfo_in.brlan"
 	.asciz "pic_landmark"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_secret"
+	.asciz "pic_secret"
 	.asciz "pic_area"
 	.asciz "txt_landmark"
 	.asciz "txt_area"
@@ -4759,58 +4335,41 @@ lbl_804FD208:
 lbl_804FD488:
 	# ROM: 0x4F9588
 	.asciz "drop_nml"
-	.byte 0x64, 0x72, 0x6F
-	.asciz "p_rar"
-	.byte 0x64, 0x72
-	.asciz "op_spr"
-	.byte 0x64
-	.asciz "rop_nml_per"
+	.asciz "drop_rar"
+	.asciz "drop_spr"
+	.asciz "drop_nml_per"
 	.asciz "drop_rar_per"
-	.byte 0x64, 0x72, 0x6F
-	.asciz "p_spr_per"
-	.byte 0x70, 0x65
-	.asciz "rcent"
-	.byte 0x69, 0x74
-	.asciz "emID"
-	.byte 0x72, 0x61, 0x6E
-	.asciz "kType"
-	.byte 0x6A, 0x77
-	.asciz "l_slot"
+	.asciz "drop_spr_per"
+	.asciz "percent"
+	.asciz "itemID"
+	.asciz "rankType"
+	.asciz "jwl_slot"
 	.balign 4
 	.asciz "crs_type"
-	.byte 0x61, 0x74, 0x72
-	.asciz "_type"
-	.byte 0x72, 0x61
-	.asciz "nk_type_low"
+	.asciz "atr_type"
+	.asciz "rank_type_low"
 	.asciz "rank_type_up"
-	.byte 0x73, 0x6B, 0x69
-	.asciz "ll_max"
+	.asciz "skill_max"
 	.byte 0x72
 	.4byte 0x616E6B00
 	.asciz "cylinder"
 	.byte 0x73, 0x6B, 0x69
 	.4byte 0x6C6C3100
 	.asciz "skill2"
-	.byte 0x6E
-	.asciz "amed"
-	.byte 0x69, 0x74, 0x65
-	.asciz "mType"
+	.asciz "named"
+	.asciz "itemType"
 	.byte 0x83, 0x47
 	.4byte 0x815B8365
 	.4byte 0x838B8D7A
 	.4byte 0x90CE006E
 	.4byte 0x616D6500
 	.asciz "qst_name"
-	.byte 0x63, 0x79, 0x6C
-	.asciz "inder_name"
+	.asciz "cylinder_name"
 	.asciz "c_name_id"
-	.byte 0x65, 0x71, 0x75
-	.asciz "ip_per"
-	.byte 0x77
-	.asciz "pn_per"
+	.asciz "equip_per"
+	.asciz "wpn_per"
 	.asciz "crystal_per"
-	.byte 0x61
-	.asciz "rts_per"
+	.asciz "arts_per"
 	.asciz "uni_wpn_per"
 	.asciz "uni_equip_per"
 	.byte 0x67, 0x69
@@ -5011,8 +4570,7 @@ lbl_804FD880:
 	.byte 0x6E, 0x61, 0x6D
 	.4byte 0x65007478
 	.asciz "t_%02d"
-	.byte 0x6E
-	.asciz "ul_proportion"
+	.asciz "nul_proportion"
 	.asciz "CL6_hintlist"
 	.byte 0x55
 	.4byte 0x5F494400
@@ -5021,26 +4579,21 @@ lbl_804FD880:
 	.4byte 0x63006D66
 	.asciz "35_rv00.brlyt"
 	.asciz "mf35_rv00_in.brlan"
-	.byte 0x6D, 0x66, 0x33
-	.asciz "5_rv00_info_in.brlan"
+	.asciz "mf35_rv00_info_in.brlan"
 	.asciz "txt_title"
 	.asciz "txt_help"
 	.asciz "nul_inf01"
 	.byte 0x66, 0x6C
 	.4byte 0x61670074
 	.asciz "itle"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_sel%02d"
-	.byte 0x25, 0x73, 0x3C
-	.asciz "n>%s"
-	.byte 0x43, 0x4C, 0x36
-	.asciz "_rwdlist"
+	.asciz "nul_sel%02d"
+	.asciz "%s<n>%s"
+	.asciz "CL6_rwdlist"
 	.byte 0x69, 0x74, 0x65
 	.4byte 0x6D494400
 	.asciz "CCol6System"
 	.asciz "mf35_rv00_next.brlan"
-	.byte 0x6D, 0x66, 0x33
-	.asciz "5_rv00_out.brlan"
+	.asciz "mf35_rv00_out.brlan"
 	.asciz "txt_now02"
 	.asciz "txt_now_val01"
 	.asciz "txt_now_val02"
@@ -5089,55 +4642,36 @@ lbl_804FD880:
 	.asciz "txt_mat_val%02d"
 	.asciz "txt_mat_val%02d_01"
 	.asciz "material%d"
-	.byte 0x6E
-	.asciz "umber%d"
+	.asciz "number%d"
 	.asciz "CL6_uplist"
-	.byte 0x72
-	.asciz "ev_LV"
-	.byte 0x72, 0x65
-	.asciz "v_people"
-	.byte 0x72, 0x65, 0x76
-	.asciz "_effflag1"
-	.byte 0x72, 0x65
-	.asciz "v_selflag"
-	.byte 0x72, 0x65
-	.asciz "v_qstflag"
-	.byte 0x72, 0x65
-	.asciz "v_sound"
+	.asciz "rev_LV"
+	.asciz "rev_people"
+	.asciz "rev_effflag1"
+	.asciz "rev_selflag"
+	.asciz "rev_qstflag"
+	.asciz "rev_sound"
 	.asciz "rev_cam1x"
-	.byte 0x72, 0x65
-	.asciz "v_cam1y"
+	.asciz "rev_cam1y"
 	.asciz "rev_cam1z"
-	.byte 0x72, 0x65
-	.asciz "v_cam1rx"
-	.byte 0x72, 0x65, 0x76
-	.asciz "_cam1ry"
+	.asciz "rev_cam1rx"
+	.asciz "rev_cam1ry"
 	.asciz "rev_cam2x"
-	.byte 0x72, 0x65
-	.asciz "v_cam2y"
+	.asciz "rev_cam2y"
 	.asciz "rev_cam2z"
-	.byte 0x72, 0x65
-	.asciz "v_cam2rx"
-	.byte 0x72, 0x65, 0x76
-	.asciz "_cam2ry"
+	.asciz "rev_cam2rx"
+	.asciz "rev_cam2ry"
 	.asciz "rev_cam2flm"
 	.asciz "rev_cam2key"
 	.asciz "rev_cam3x"
-	.byte 0x72, 0x65
-	.asciz "v_cam3y"
+	.asciz "rev_cam3y"
 	.asciz "rev_cam3z"
-	.byte 0x72, 0x65
-	.asciz "v_cam3rx"
-	.byte 0x72, 0x65, 0x76
-	.asciz "_cam3ry"
+	.asciz "rev_cam3rx"
+	.asciz "rev_cam3ry"
 	.asciz "rev_cam4x"
-	.byte 0x72, 0x65
-	.asciz "v_cam4y"
+	.asciz "rev_cam4y"
 	.asciz "rev_cam4z"
-	.byte 0x72, 0x65
-	.asciz "v_cam4rx"
-	.byte 0x72, 0x65, 0x76
-	.asciz "_cam4ry"
+	.asciz "rev_cam4rx"
+	.asciz "rev_cam4ry"
 	.asciz "rev_cam4flm"
 	.asciz "rev_cam4key"
 	.asciz "%s<n>%s<n>%s +%d<n>%s +%d"
@@ -5710,19 +5244,13 @@ lbl_804FE86C:
 lbl_804FE8C8:
 	# ROM: 0x4FA9C8
 	.asciz "vs17240100"
-	.byte 0x76
-	.asciz "s17220100"
-	.byte 0x76, 0x73
-	.asciz "16010100"
-	.byte 0x70, 0x63, 0x31
-	.asciz "00101"
-	.byte 0x6E, 0x70
-	.asciz "620109"
-	.byte 0x70
-	.asciz "c090101"
+	.asciz "vs17220100"
+	.asciz "vs16010100"
+	.asciz "pc100101"
+	.asciz "np620109"
+	.asciz "pc090101"
 	.asciz "np730109"
-	.byte 0x76, 0x73, 0x31
-	.asciz "7210100"
+	.asciz "vs17210100"
 	.4byte 0x25643A00
 	.4byte 0x30002564
 	.4byte 0x0074696D
@@ -5742,30 +5270,18 @@ lbl_804FE8C8:
 lbl_804FE970:
 	# ROM: 0x4FAA70
 	.asciz "NONE"
-	.byte 0x77, 0x62, 0x5F
-	.asciz "size_X"
-	.byte 0x77
-	.asciz "b_size_Y"
-	.byte 0x77, 0x62, 0x5F
-	.asciz "size_Z"
-	.byte 0x77
-	.asciz "b_radius"
-	.byte 0x77, 0x61, 0x5F
-	.asciz "size_X"
-	.byte 0x77
-	.asciz "a_size_Y"
-	.byte 0x77, 0x61, 0x5F
-	.asciz "size_Z"
-	.byte 0x77
-	.asciz "a_radius"
-	.byte 0x61, 0x5F, 0x53
-	.asciz "_FLG_MIN"
-	.byte 0x61, 0x5F, 0x53
-	.asciz "_FLG_MAX"
-	.byte 0x62, 0x5F, 0x53
-	.asciz "_FLG_MIN"
-	.byte 0x62, 0x5F, 0x53
-	.asciz "_FLG_MAX"
+	.asciz "wb_size_X"
+	.asciz "wb_size_Y"
+	.asciz "wb_size_Z"
+	.asciz "wb_radius"
+	.asciz "wa_size_X"
+	.asciz "wa_size_Y"
+	.asciz "wa_size_Z"
+	.asciz "wa_radius"
+	.asciz "a_S_FLG_MIN"
+	.asciz "a_S_FLG_MAX"
+	.asciz "b_S_FLG_MIN"
+	.asciz "b_S_FLG_MAX"
 	.byte 0x6D, 0x61, 0x70
 	.4byte 0x41545200
 	.asciz "wb_time"
@@ -5788,8 +5304,7 @@ lbl_804FEA78:
 	# ROM: 0x4FAB78
 	.asciz "questID"
 	.asciz "qst_sflg"
-	.byte 0x71, 0x73, 0x74
-	.asciz "_eflg"
+	.asciz "qst_eflg"
 	.byte 0x73, 0x66
 	.4byte 0x6C673100
 	.asciz "eflg1"
@@ -5801,16 +5316,11 @@ lbl_804FEA78:
 	.asciz "pack_no"
 	.asciz "weather"
 	.asciz "loop"
-	.byte 0x66, 0x6C, 0x67
-	.asciz "_eff"
-	.byte 0x70, 0x6C, 0x61
-	.asciz "ytime1"
-	.byte 0x70
-	.asciz "laytime2"
-	.byte 0x70, 0x6C, 0x61
-	.asciz "ytime3"
-	.byte 0x70
-	.asciz "rogframe"
+	.asciz "flg_eff"
+	.asciz "playtime1"
+	.asciz "playtime2"
+	.asciz "playtime3"
+	.asciz "progframe"
 	.byte 0x63, 0x61, 0x73
 	.4byte 0x74657200
 	.asciz "posX"
@@ -5840,14 +5350,12 @@ lbl_804FEB74:
 	# ROM: 0x4FAC74
 	.asciz "Monochrome"
 	.asciz "MonoRGB"
-	.byte 0x6E
-	.asciz "oDynamics"
+	.asciz "noDynamics"
 	.byte 0x4C, 0x67
 	.4byte 0x74494400
 	.asciz "SdwType"
 	.asciz "SdwRadius"
-	.byte 0x53, 0x64
-	.asciz "wPow"
+	.asciz "SdwPow"
 	.byte 0x48, 0x69, 0x64
 	.4byte 0x65505400
 	.asciz "core"
@@ -5876,11 +5384,9 @@ lbl_804FEBF0:
 	.asciz "questID"
 	.asciz "quest_STFLG"
 	.asciz "gimmickID"
-	.byte 0x53, 0x5F
-	.asciz "FLG_MIN"
+	.asciz "S_FLG_MIN"
 	.asciz "S_FLG_MAX"
-	.byte 0x65, 0x5F
-	.asciz "repoptime"
+	.asciz "e_repoptime"
 	.balign 4
 
 
@@ -5913,13 +5419,11 @@ lbl_804FEC84:
 	.asciz "mf71_battle91_chance_hit_glow_in.brlan"
 	.asciz "mf71_btl90_chn_btn_c01.tpl"
 	.asciz "mf71_btl90_chn_btn_r01.tpl"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_button_r"
+	.asciz "pic_button_r"
 	.asciz "mf71_btl90_chn_btngl_c00.tpl"
 	.asciz "mf71_btl90_chn_btngl_r00.tpl"
 	.asciz "pic_line_r00"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_line_r01"
+	.asciz "pic_line_r01"
 	.asciz "pic_pointer_def"
 	.balign 4
 	.4byte 0
@@ -5932,15 +5436,12 @@ lbl_804FEF08:
 	.4byte 0x43414D00
 	.asciz "Monochrome"
 	.asciz "MonoRGB"
-	.byte 0x65
-	.asciz "nvLGT"
-	.byte 0x48, 0x69
-	.asciz "deMPF"
+	.asciz "envLGT"
+	.asciz "HideMPF"
 	.byte 0x54, 0x69
 	.4byte 0x6D650048
 	.asciz "ideLOD"
-	.byte 0x53
-	.asciz "howLOD"
+	.asciz "ShowLOD"
 	.balign 4
 	.4byte 0
 	.asciz "cf::CREvtModelMap"
@@ -5965,11 +5466,9 @@ lbl_804FEF5C:
 lbl_804FEF8C:
 	# ROM: 0x4FB08C
 	.asciz "eff/rec/ev/evwpn01.rec"
-	.byte 0x2F
-	.asciz "chr/en/"
+	.asciz "/chr/en/"
 	.asciz "/chr/np/"
-	.byte 0x2F, 0x63, 0x68
-	.asciz "r/wp/"
+	.asciz "/chr/wp/"
 	.byte 0x2F, 0x6F
 	.4byte 0x626A2F00
 	.4byte 0x2E6B7000
@@ -6047,8 +5546,7 @@ lbl_804FF0D8:
 lbl_804FF0F0:
 	# ROM: 0x4FB1F0
 	.asciz "model"
-	.byte 0x6D, 0x6F
-	.asciz "tion"
+	.asciz "motion"
 	.byte 0x70, 0x6F, 0x73
 	.4byte 0x5800706F
 	.4byte 0x73590070
@@ -6058,35 +5556,26 @@ lbl_804FF0F0:
 	.4byte 0x5900726F
 	.4byte 0x745A0067
 	.asciz "round"
-	.byte 0x67, 0x72
-	.asciz "avity"
+	.asciz "gravity"
 	.byte 0x73, 0x63
 	.4byte 0x616C6500
 	.asciz "disp"
 	.byte 0x65, 0x72, 0x61
 	.4byte 0x73650061
 	.asciz "ction"
-	.byte 0x61, 0x63
-	.asciz "t_questID"
-	.byte 0x61, 0x63
-	.asciz "t_qst_sflg"
-	.byte 0x61
-	.asciz "ct_qst_eflg"
+	.asciz "act_questID"
+	.asciz "act_qst_sflg"
+	.asciz "act_qst_eflg"
 	.asciz "act_sflg1"
-	.byte 0x61, 0x63
-	.asciz "t_eflg1"
+	.asciz "act_eflg1"
 	.asciz "act_sflg2"
-	.byte 0x61, 0x63
-	.asciz "t_eflg2"
+	.asciz "act_eflg2"
 	.asciz "pos_questID"
 	.asciz "pos_qst_sflg"
-	.byte 0x70, 0x6F, 0x73
-	.asciz "_qst_eflg"
-	.byte 0x70, 0x6F
-	.asciz "s_sflg1"
+	.asciz "pos_qst_eflg"
+	.asciz "pos_sflg1"
 	.asciz "pos_eflg1"
-	.byte 0x70, 0x6F
-	.asciz "s_sflg2"
+	.asciz "pos_sflg2"
 	.asciz "pos_eflg2"
 	.balign 4
 	.asciz "CMenuPTGauge"
@@ -6115,8 +5604,7 @@ lbl_804FF2D8:
 	.4byte 0x002E6164
 	.4byte 0x78002573
 	.asciz "%s%s"
-	.byte 0x73, 0x6E, 0x64
-	.asciz "/adx/"
+	.asciz "snd/adx/"
 	.byte 0x6C, 0x6F
 	.4byte 0x6F700000
 	.asciz "CMenuSelectShop"
@@ -6184,8 +5672,7 @@ lbl_804FF358:
 lbl_804FF3EC:
 	# ROM: 0x4FB4EC
 	.asciz "%s(%x)"
-	.byte 0x4A
-	.asciz "UspA"
+	.asciz "JUspA"
 	.balign 4
 	.4byte 0
 	.asciz "CMenuPTState"
@@ -6210,16 +5697,13 @@ lbl_804FF470:
 	.4byte 0x5900706F
 	.4byte 0x735A0052
 	.asciz "adius"
-	.byte 0x70, 0x6F
-	.asciz "p_type"
-	.byte 0x65
-	.asciz "ne_type"
+	.asciz "pop_type"
+	.asciz "ene_type"
 	.asciz "form"
 	.byte 0x70, 0x6F, 0x73
 	.4byte 0x41545200
 	.asciz "named"
-	.byte 0x72, 0x65
-	.asciz "source"
+	.asciz "resource"
 	.byte 0x73
 	.4byte 0x6E617000
 	.4byte 0x44697200
@@ -6228,15 +5712,11 @@ lbl_804FF470:
 	.asciz "questID"
 	.asciz "quest_STFLG"
 	.asciz "S_FLG_MIN"
-	.byte 0x53, 0x5F
-	.asciz "FLG_MAX"
+	.asciz "S_FLG_MAX"
 	.asciz "POP_TIME"
-	.byte 0x6D, 0x6F, 0x76
-	.asciz "e_type"
-	.byte 0x66
-	.asciz "orm_range"
-	.byte 0x4E, 0x41
-	.asciz "MED_FLG"
+	.asciz "move_type"
+	.asciz "form_range"
+	.asciz "NAMED_FLG"
 	.asciz "child_ID"
 	.balign 4
 	.asciz "cf::CtrlMovePC"
@@ -6248,12 +5728,9 @@ lbl_804FF470:
 lbl_804FF558:
 	# ROM: 0x4FB658
 	.asciz "erase"
-	.byte 0x71, 0x75
-	.asciz "estID"
-	.byte 0x71, 0x73
-	.asciz "t_sflg"
-	.byte 0x71
-	.asciz "st_eflg"
+	.asciz "questID"
+	.asciz "qst_sflg"
+	.asciz "qst_eflg"
 	.asciz "sflg1"
 	.byte 0x65, 0x66
 	.4byte 0x6C673100
@@ -6341,10 +5818,8 @@ lbl_804FF788:
 lbl_804FF7C8:
 	# ROM: 0x4FB8C8
 	.asciz "PosX_L%d"
-	.byte 0x50, 0x6F, 0x73
-	.asciz "Y_L%d"
-	.byte 0x50, 0x6F
-	.asciz "sZ_L%d"
+	.asciz "PosY_L%d"
+	.asciz "PosZ_L%d"
 	.byte 0x70
 	.4byte 0x6F735800
 	.asciz "posY"
@@ -6360,30 +5835,18 @@ lbl_804FF7C8:
 	.byte 0x69, 0x6E, 0x5F
 	.4byte 0x6F757400
 	.asciz "caster"
-	.byte 0x73
-	.asciz "e_TYPE"
-	.byte 0x77
-	.asciz "eather"
-	.byte 0x70
-	.asciz "laytime1"
-	.byte 0x70, 0x6C, 0x61
-	.asciz "ytime2"
-	.byte 0x70
-	.asciz "laytime3"
-	.byte 0x70, 0x6F, 0x73
-	.asciz "_questID"
-	.byte 0x70, 0x6F, 0x73
-	.asciz "_qst_sflg"
-	.byte 0x70, 0x6F
-	.asciz "s_qst_eflg"
-	.byte 0x70
-	.asciz "os_sflg1"
-	.byte 0x70, 0x6F, 0x73
-	.asciz "_eflg1"
-	.byte 0x70
-	.asciz "os_sflg2"
-	.byte 0x70, 0x6F, 0x73
-	.asciz "_eflg2"
+	.asciz "se_TYPE"
+	.asciz "weather"
+	.asciz "playtime1"
+	.asciz "playtime2"
+	.asciz "playtime3"
+	.asciz "pos_questID"
+	.asciz "pos_qst_sflg"
+	.asciz "pos_qst_eflg"
+	.asciz "pos_sflg1"
+	.asciz "pos_eflg1"
+	.asciz "pos_sflg2"
+	.asciz "pos_eflg2"
 	.balign 4
 	.4byte 0
 	.asciz "setFieldBgm"
@@ -6483,17 +5946,12 @@ lbl_804FFA90:
 	.asciz "mf71_battle81_future_base_change_in.brlan"
 	.asciz "mf71_battle81_future_base_break.brlan"
 	.asciz "mf71_battle81_future_base_time_stop.brlan"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_enemmy"
+	.asciz "nul_enemmy"
 	.asciz "nul_action"
-	.byte 0x6E
-	.asciz "ul_target"
-	.byte 0x6E, 0x75
-	.asciz "l_damage"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_timegage"
-	.byte 0x6E, 0x75
-	.asciz "l_time"
+	.asciz "nul_target"
+	.asciz "nul_damage"
+	.asciz "nul_timegage"
+	.asciz "nul_time"
 	.asciz "txt_action_u"
 	.asciz "txt_action_o"
 	.asciz "txt_action_l"
@@ -6502,8 +5960,7 @@ lbl_804FFA90:
 	.asciz "txt_action_01"
 	.asciz "txt_damage_g"
 	.asciz "txt_time_num"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_bar"
+	.asciz "pic_bar"
 	.asciz "mf71_btl81_god01.tpl"
 	.asciz "mf71_btl81_enm00.tpl"
 	.asciz "mf71_btl81_enm05.tpl"
@@ -6524,8 +5981,7 @@ lbl_804FFA90:
 	.asciz "mf71_btl81_enm14.tpl"
 	.asciz "mf71_btl81_enm15.tpl"
 	.asciz "mf71_btl81_enm17.tpl"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_enemmyicon"
+	.asciz "pic_enemmyicon"
 	.asciz "mf71_btl81_rng00.tpl"
 	.asciz "mf71_btl81_rng01.tpl"
 	.asciz "mf71_btl81_rng02.tpl"
@@ -6545,12 +6001,10 @@ lbl_804FFA90:
 	.asciz "mf71_btl81_pc10.tpl"
 	.asciz "mf71_btl81_pc11.tpl"
 	.asciz "pic_status_b"
-	.byte 0x70
-	.asciz "ic_status_b01"
+	.asciz "pic_status_b01"
 	.asciz "pic_panic"
 	.asciz "pic_infinity"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pic_death"
+	.asciz "pic_pic_death"
 	.byte 0x4D
 	.4byte 0x4E555F62
 	.4byte 0x6174746C
@@ -6587,8 +6041,7 @@ lbl_80500024:
 	.asciz "pic_button_r"
 	.asciz "mf71_btl90_chn_btngl_c00.tpl"
 	.asciz "pic_line_r00"
-	.byte 0x70
-	.asciz "ic_line_r01"
+	.asciz "pic_line_r01"
 	.asciz "mf71_btl90_chn_btn_r00.tpl"
 	.asciz "mf71_btl90_chn_btngl_r00.tpl"
 	.asciz "MNU_kyeassign"
@@ -6617,8 +6070,7 @@ lbl_80500218:
 lbl_8050025C:
 	# ROM: 0x4FC35C
 	.asciz "CMenuGetItemMulti"
-	.byte 0x63, 0x6F
-	.asciz "mmon/jp/bdat_mes.bin"
+	.asciz "common/jp/bdat_mes.bin"
 	.asciz "mf70_cf60_syswin09.brlyt"
 	.asciz "mf70_cf60_syswin09_in.brlan"
 	.asciz "txt_num01"
@@ -6639,24 +6091,20 @@ lbl_8050025C:
 	.asciz "txt_value32"
 	.asciz "txt_value33"
 	.asciz "txt_value34"
-	.byte 0x4D, 0x4E
-	.asciz "U_kyeassign"
+	.asciz "MNU_kyeassign"
 	.asciz "help"
 	.asciz "txt_help"
-	.byte 0x66, 0x69
-	.asciz "leID_2"
-	.byte 0x66
-	.asciz "ileID_1"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
 	.asciz "pic_btn00"
 	.asciz "txt_close00"
-	.byte 0x4D, 0x4E
-	.asciz "U_sysmes"
+	.asciz "MNU_sysmes"
 	.byte 0x6E, 0x61, 0x6D
 	.4byte 0x65007478
 	.asciz "t_item05"
 	.asciz "txt_item%02d"
-	.byte 0x00, 0x74
-	.asciz "xt_num%02d"
+	.byte 0x00
+	.asciz "txt_num%02d"
 	.asciz "MNU_collect"
 	.asciz "txt_have"
 	.asciz "MNU_item"
@@ -6671,70 +6119,49 @@ lbl_8050025C:
 	.asciz "txt_para61"
 	.asciz "txt_para30"
 	.asciz "txt_para23"
-	.byte 0x4D, 0x4E
-	.asciz "U_main"
+	.asciz "MNU_main"
 	.asciz "txt_titlemes"
 	.asciz "%s%s"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_item%02d"
+	.asciz "pic_item%02d"
 	.asciz "mf00_com00_dmy.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg20_cat00.tpl"
+	.asciz "mf00_reg20_cat00.tpl"
 	.asciz "mf00_reg20_cat07.tpl"
 	.asciz "mf00_reg20_cat01.tpl"
 	.asciz "mf00_reg20_cat02.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg20_cat03.tpl"
+	.asciz "mf00_reg20_cat03.tpl"
 	.asciz "mf00_reg20_cat04.tpl"
 	.asciz "mf00_reg20_cat05.tpl"
 	.asciz "mf00_reg20_cat06.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg20_cat09.tpl"
+	.asciz "mf00_reg20_cat09.tpl"
 	.byte 0x72, 0x61
 	.4byte 0x7265006D
 	.asciz "f00_reg20_cat12.tpl"
 	.asciz "mf00_reg20_cat10.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg20_cat11.tpl"
+	.asciz "mf00_reg20_cat11.tpl"
 	.asciz "mf00_reg20_cat08.tpl"
 	.byte 0x53
 	.4byte 0x00550069
 	.asciz "tem_keep"
-	.byte 0x6A, 0x77, 0x6C
-	.asciz "_slot"
-	.byte 0x6A, 0x77
-	.asciz "l_skill%d"
-	.byte 0x72, 0x61
-	.asciz "nkType"
-	.byte 0x70
-	.asciz "ic_full%02d"
+	.asciz "jwl_slot"
+	.asciz "jwl_skill%d"
+	.asciz "rankType"
+	.asciz "pic_full%02d"
 	.asciz "nul_item%02d"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_proportion"
+	.asciz "nul_proportion"
 	.asciz "MNU_skill"
-	.byte 0x77, 0x69
-	.asciz "n_main"
-	.byte 0x6E
-	.asciz "ul_close00"
-	.byte 0x6E
-	.asciz "ul_inf"
-	.byte 0x6E
-	.asciz "ul_para_01"
-	.byte 0x6E
-	.asciz "ul_para_30"
-	.byte 0x6E
-	.asciz "ul_para_50"
-	.byte 0x6E
-	.asciz "ul_para_60"
-	.byte 0x6E
-	.asciz "ul_para_80"
+	.asciz "win_main"
+	.asciz "nul_close00"
+	.asciz "nul_inf"
+	.asciz "nul_para_01"
+	.asciz "nul_para_30"
+	.asciz "nul_para_50"
+	.asciz "nul_para_60"
+	.asciz "nul_para_80"
 	.asciz "txt_para24"
 	.asciz "txt_para25"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_ethcol01"
+	.asciz "pic_ethcol01"
 	.asciz "pic_ethcol02"
-	.byte 0x70
-	.asciz "ic_ethcol03"
+	.asciz "pic_ethcol03"
 	.asciz "txt_eth01"
 	.asciz "txt_eth02"
 	.asciz "txt_eth03"
@@ -6745,30 +6172,21 @@ lbl_8050025C:
 	.asciz "txt_value%02d"
 	.asciz "dmg_low"
 	.asciz "dmg_hi"
-	.byte 0x61
-	.asciz "rm_phy"
-	.byte 0x61
-	.asciz "rm_eth"
-	.byte 0x61
-	.asciz "tt_lev"
-	.byte 0x73
-	.asciz "peed"
-	.byte 0x67, 0x72, 0x64
-	.asciz "_rate"
+	.asciz "arm_phy"
+	.asciz "arm_eth"
+	.asciz "att_lev"
+	.asciz "speed"
+	.asciz "grd_rate"
 	.byte 0x66, 0x6C
 	.4byte 0x61670065
 	.asciz "quip_pc%d"
-	.byte 0x25, 0x64
-	.asciz "%s%d"
+	.asciz "%d%s%d"
 	.byte 0x25, 0x73, 0x25
 	.4byte 0x64257300
 	.asciz "%d%s"
-	.byte 0x65, 0x76, 0x61
-	.asciz "_rate"
-	.byte 0x61, 0x72
-	.asciz "m_type"
-	.byte 0x70
-	.asciz "c_arts"
+	.asciz "eva_rate"
+	.asciz "arm_type"
+	.asciz "pc_arts"
 	.byte 0x6D
 	.4byte 0x6178004D
 	.asciz "NU_shop"
@@ -6777,34 +6195,25 @@ lbl_8050025C:
 	.byte 0x74, 0x79
 	.4byte 0x7065006D
 	.asciz "apID"
-	.byte 0x6D, 0x65, 0x6D
-	.asciz "ory_type"
-	.byte 0x70, 0x63, 0x5F
-	.asciz "type"
-	.byte 0x67, 0x65, 0x74
-	.asciz "_arts"
+	.asciz "memory_type"
+	.asciz "pc_type"
+	.asciz "get_arts"
 	.byte 0x69, 0x64
 	.4byte 0x78007478
 	.asciz "t_para80"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_ethcol%02d"
+	.asciz "pic_ethcol%02d"
 	.asciz "atr_type"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys00.tpl"
+	.asciz "mf00_reg30_crys00.tpl"
 	.asciz "mf00_reg30_crys01.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys02.tpl"
+	.asciz "mf00_reg30_crys02.tpl"
 	.asciz "mf00_reg30_crys03.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys04.tpl"
+	.asciz "mf00_reg30_crys04.tpl"
 	.asciz "mf00_reg30_crys05.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys06.tpl"
+	.asciz "mf00_reg30_crys06.tpl"
 	.byte 0x25
 	.4byte 0x73007478
 	.asciz "t_eth%02d"
-	.byte 0x70, 0x65
-	.asciz "rcent"
+	.asciz "percent"
 	.balign 4
 
 
@@ -6834,8 +6243,7 @@ lbl_805008D0:
 lbl_80500938:
 	# ROM: 0x4FCA38
 	.asciz "common/jp/bdat_kzn.bin"
-	.byte 0x2F
-	.asciz "menu/KizunaTalk.arc"
+	.asciz "/menu/KizunaTalk.arc"
 	.asciz "MNU_sysmes"
 	.byte 0x6E
 	.4byte 0x616D6500
@@ -6844,8 +6252,7 @@ lbl_80500938:
 	.4byte 0x61670063
 	.asciz "hara_01"
 	.asciz "chara_02"
-	.byte 0x66, 0x72, 0x69
-	.asciz "endly"
+	.asciz "friendly"
 	.byte 0x74, 0x69
 	.4byte 0x6D650043
 	.asciz "MenuKizunaTalk"
@@ -6865,20 +6272,16 @@ lbl_80500938:
 	.asciz "mf40_kiz_pcicon_c00.tpl"
 	.asciz "mf40_kiz_pcicon_b00.tpl"
 	.asciz "mf40_kiz_pcicon_a00.tpl"
-	.byte 0x70
-	.asciz "ic_kizicon"
+	.asciz "pic_kizicon"
 	.asciz "txt_sysmes04_00"
 	.asciz "MNU_kyeassign"
 	.byte 0x68, 0x65, 0x6C
 	.4byte 0x70007478
 	.asciz "t_close00"
-	.byte 0x66, 0x69
-	.asciz "leID_2"
-	.byte 0x66
-	.asciz "ileID_1"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
 	.asciz "pic_btn00"
-	.byte 0x4A, 0x4E
-	.asciz "L_kizunalist"
+	.asciz "JNL_kizunalist"
 	.balign 4
 	.asciz "CMenuItemExchange"
 	.balign 4
@@ -6912,17 +6315,13 @@ lbl_80500B88:
 	.asciz "mf00_reg_bg05.brlyt"
 	.asciz "pic_ptm00"
 	.asciz "pic_ptm01"
-	.byte 0x2F, 0x6D
-	.asciz "enu/BgTex06.arc"
+	.asciz "/menu/BgTex06.arc"
 	.asciz "/menu/BgTex07.arc"
-	.byte 0x2F, 0x6D
-	.asciz "enu/BgTex01.arc"
+	.asciz "/menu/BgTex01.arc"
 	.asciz "/menu/BgTex02.arc"
-	.byte 0x2F, 0x6D
-	.asciz "enu/BgTex03.arc"
+	.asciz "/menu/BgTex03.arc"
 	.asciz "/menu/BgTex04.arc"
-	.byte 0x2F, 0x6D
-	.asciz "enu/BgTex05.arc"
+	.asciz "/menu/BgTex05.arc"
 	.4byte 0x61726300
 	.4byte 0
 	.asciz "CTitleAHelp"
@@ -6933,27 +6332,21 @@ lbl_80500CC4:
 	# ROM: 0x4FCDC4
 	.asciz "/menu/TitleAHelp.arc"
 	.asciz "txt_tit"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_btn%02d"
+	.asciz "pic_btn%02d"
 	.asciz "txt_hlp%02d"
-	.byte 0x66, 0x69, 0x6C
-	.asciz "eID_1"
-	.byte 0x66, 0x69
-	.asciz "leID_2"
+	.asciz "fileID_1"
+	.asciz "fileID_2"
 	.asciz "MNU_kyeassign"
 	.byte 0x68, 0x65, 0x6C
 	.4byte 0x70006E75
 	.asciz "l_ttl"
 	.asciz "txt_caution"
-	.byte 0x6E, 0x75
-	.asciz "l_caution"
-	.byte 0x43, 0x54
-	.asciz "itleAHelp"
+	.asciz "nul_caution"
+	.asciz "CTitleAHelp"
 	.byte 0x61, 0x72
 	.4byte 0x63006D66
 	.asciz "00_hlp_tit.brlyt"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_hlp_tit_in.brlan"
+	.asciz "mf00_hlp_tit_in.brlan"
 	.asciz "mf00_hlp_tit_change.brlan"
 	.balign 4
 	.4byte 0
@@ -7020,49 +6413,32 @@ lbl_80500E14:
 lbl_80500E74:
 	# ROM: 0x4FCF74
 	.asciz "type_succ_B1"
-	.byte 0x74, 0x79, 0x70
-	.asciz "e_succ_A1"
-	.byte 0x63, 0x6E
-	.asciz "d_succ_A1"
-	.byte 0x63, 0x6E
-	.asciz "d_succ_B1"
-	.byte 0x74, 0x79
-	.asciz "pe_succ_A2"
+	.asciz "type_succ_A1"
+	.asciz "cnd_succ_A1"
+	.asciz "cnd_succ_B1"
+	.asciz "type_succ_A2"
 	.asciz "cnd_succ_A2"
 	.asciz "type_succ_A3"
 	.asciz "cnd_succ_A3"
 	.asciz "type_succ_A4"
-	.byte 0x63, 0x6E, 0x64
-	.asciz "_succ_A4"
-	.byte 0x74, 0x79, 0x70
-	.asciz "e_succ_B2"
-	.byte 0x63, 0x6E
-	.asciz "d_succ_B2"
-	.byte 0x74, 0x79
-	.asciz "pe_succ_B3"
+	.asciz "cnd_succ_A4"
+	.asciz "type_succ_B2"
+	.asciz "cnd_succ_B2"
+	.asciz "type_succ_B3"
 	.asciz "cnd_succ_B3"
 	.asciz "type_succ_B4"
 	.asciz "cnd_succ_B4"
 	.asciz "order_succ_A"
-	.byte 0x4D, 0x4D, 0x55
-	.asciz "_questeve"
-	.byte 0x71, 0x75
-	.asciz "estID"
-	.byte 0x71, 0x75
-	.asciz "estval"
+	.asciz "MMU_questeve"
+	.asciz "questID"
+	.asciz "questval"
 	.asciz "col6ID"
-	.byte 0x63, 0x6F
-	.asciz "l6val"
-	.byte 0x69, 0x74
-	.asciz "emID"
-	.byte 0x6D, 0x65, 0x6D
-	.asciz "ory_type"
-	.byte 0x70, 0x63, 0x5F
-	.asciz "type"
-	.byte 0x67, 0x65, 0x74
-	.asciz "_arts"
-	.byte 0x70, 0x63
-	.asciz "_arts"
+	.asciz "col6val"
+	.asciz "itemID"
+	.asciz "memory_type"
+	.asciz "pc_type"
+	.asciz "get_arts"
+	.asciz "pc_arts"
 	.byte 0x69, 0x64
 	.4byte 0x78006571
 	.asciz "uip_pc%d"
@@ -7076,68 +6452,46 @@ lbl_80500E74:
 	.4byte 0x73002564
 	.4byte 0x00727673
 	.asciz "_type"
-	.byte 0x72, 0x76
-	.asciz "s_caption"
-	.byte 0x3C, 0x63
-	.asciz "ol=red>%s<col=def2>"
+	.asciz "rvs_caption"
+	.asciz "<col=red>%s<col=def2>"
 	.asciz "<col=red>%s%%<col=def2>"
 	.asciz "<col=red>%d%%<col=def2>"
 	.asciz "comment"
 	.asciz "money"
-	.byte 0x72, 0x61
-	.asciz "nkType"
-	.byte 0x6A
-	.asciz "wl_slot"
+	.asciz "rankType"
+	.asciz "jwl_slot"
 	.asciz "type"
-	.byte 0x63, 0x61, 0x74
-	.asciz "egory"
-	.byte 0x61, 0x74
-	.asciz "tach"
-	.byte 0x61, 0x74, 0x74
-	.asciz "_lev"
-	.byte 0x67, 0x72, 0x64
-	.asciz "_rate"
-	.byte 0x61, 0x72
-	.asciz "m_phy"
-	.byte 0x61, 0x72
-	.asciz "m_eth"
-	.byte 0x61, 0x72
-	.asciz "m_type"
-	.byte 0x65
-	.asciz "va_rate"
+	.asciz "category"
+	.asciz "attach"
+	.asciz "att_lev"
+	.asciz "grd_rate"
+	.asciz "arm_phy"
+	.asciz "arm_eth"
+	.asciz "arm_type"
+	.asciz "eva_rate"
 	.asciz "dmg_hi"
 	.byte 0x66
 	.4byte 0x6C616700
 	.asciz "/menu/ItemBoxGrid.arc"
-	.byte 0x2F, 0x6D
-	.asciz "enu/tpl/ItemIcon.arc"
-	.byte 0x63, 0x6F, 0x6D
-	.asciz "mon/jp/bdat_item.bin"
-	.byte 0x63, 0x6F, 0x6D
-	.asciz "mon/jp/bdat_mes.bin"
+	.asciz "/menu/tpl/ItemIcon.arc"
+	.asciz "common/jp/bdat_item.bin"
+	.asciz "common/jp/bdat_mes.bin"
 	.asciz "MNU_item_mes_a"
 	.asciz "MNU_item_mes_b"
-	.byte 0x4D, 0x4E
-	.asciz "U_skill"
+	.asciz "MNU_skill"
 	.asciz "nul_sort"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_proportion"
+	.asciz "nul_proportion"
 	.asciz "MNU_shop"
-	.byte 0x70, 0x72, 0x65
-	.asciz "sent"
+	.asciz "present"
 	.byte 0x68, 0x65, 0x6C
 	.4byte 0x70004D4E
 	.asciz "U_battle"
-	.byte 0x61, 0x74, 0x72
-	.asciz "_type"
+	.asciz "atr_type"
 	.asciz "mf00_com00_dmy.tpl"
-	.byte 0x69, 0x63, 0x6F
-	.asciz "n_base"
+	.asciz "icon_base"
 	.asciz "mf00_reg10_base21.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg10_base20.tpl"
-	.byte 0x70
-	.asciz "ic_btnbs%02d"
+	.asciz "mf00_reg10_base20.tpl"
+	.asciz "pic_btnbs%02d"
 	.byte 0x69, 0x63, 0x6F
 	.4byte 0x6E007069
 	.asciz "c_icon%02d"
@@ -7151,29 +6505,22 @@ lbl_80500E74:
 	.asciz "mf00_reg00_eq02.tpl"
 	.asciz "mf00_reg20_cat00.tpl"
 	.asciz "mf00_reg20_cat07.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg20_cat01.tpl"
+	.asciz "mf00_reg20_cat01.tpl"
 	.asciz "mf00_reg20_cat02.tpl"
 	.asciz "mf00_reg20_cat03.tpl"
 	.asciz "mf00_reg20_cat04.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg20_cat05.tpl"
+	.asciz "mf00_reg20_cat05.tpl"
 	.asciz "mf00_reg20_cat06.tpl"
 	.asciz "mf00_reg20_cat09.tpl"
 	.asciz "mf00_reg20_cat10.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg20_cat11.tpl"
+	.asciz "mf00_reg20_cat11.tpl"
 	.asciz "mf00_reg20_cat08.tpl"
-	.byte 0x70
-	.asciz "ic_cat%02d"
-	.byte 0x70
-	.asciz "ic_slct%02d"
+	.asciz "pic_cat%02d"
+	.asciz "pic_slct%02d"
 	.asciz "pic_tbbcon%02d"
-	.byte 0x70
-	.asciz "ic_tbbcof%02d"
+	.asciz "pic_tbbcof%02d"
 	.asciz "txt_pg01"
-	.byte 0x6E
-	.asciz "ul_pg"
+	.asciz "nul_pg"
 	.asciz "pic_pghole%02d"
 	.asciz "txt_pg00"
 	.asciz "pic_pghole_on"
@@ -7193,14 +6540,11 @@ lbl_80500E74:
 	.asciz "pic_bxbco07"
 	.asciz "pic_bxbco08"
 	.asciz "pic_hole01"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_hole02"
+	.asciz "pic_hole02"
 	.asciz "pic_hole03"
-	.byte 0x6E
-	.asciz "ul_button"
+	.asciz "nul_button"
 	.asciz "txt_soat01"
-	.byte 0x43, 0x49, 0x74
-	.asciz "emBoxGrid"
+	.asciz "CItemBoxGrid"
 	.byte 0x61, 0x72
 	.4byte 0x63006D66
 	.asciz "02_box01_box.brlyt"
@@ -7209,20 +6553,15 @@ lbl_80500E74:
 	.asciz "mf02_box01_box_slct.brlan"
 	.asciz "txt_buyvalue01"
 	.asciz "txt_soattit"
-	.byte 0x66, 0x69, 0x6C
-	.asciz "eID_2"
-	.byte 0x66, 0x69
-	.asciz "leID_1"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
 	.asciz "MNU_kyeassign"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_soatbtn"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pghole10"
+	.asciz "pic_soatbtn"
+	.asciz "pic_pghole10"
 	.asciz "pic_tbbcof01"
 	.asciz "txt_num01"
 	.asciz "txt_button00"
-	.byte 0x43, 0x49
-	.asciz "temBoxGridTex"
+	.asciz "CItemBoxGridTex"
 	.balign 4
 	.4byte 0
 	.asciz "nul_curs06s"
@@ -7236,71 +6575,45 @@ lbl_805015B8:
 	# ROM: 0x4FD6B8
 	.asciz "mf00_reg00_curs08.brlyt"
 	.asciz "mf00_reg00_curs08_roop.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs08_on.brlan"
+	.asciz "mf00_reg00_curs08_on.brlan"
 	.asciz "mf00_reg00_curs07.brlyt"
 	.asciz "mf00_reg00_curs07_roop.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs07_on.brlan"
+	.asciz "mf00_reg00_curs07_on.brlan"
 	.asciz "mf00_reg00_curs09.brlyt"
 	.asciz "mf00_reg00_curs09_roop.brlan"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pgarw_r"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pgarw_l"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs11.brlyt"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs11_roop.brlan"
+	.asciz "pic_pgarw_r"
+	.asciz "pic_pgarw_l"
+	.asciz "mf00_reg00_curs11.brlyt"
+	.asciz "mf00_reg00_curs11_roop.brlan"
 	.asciz "mf00_reg00_curs11_on.brlan"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_arrow08_l00"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_arrow08_r00"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs14.brlyt"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs14_roop.brlan"
+	.asciz "pic_arrow08_l00"
+	.asciz "pic_arrow08_r00"
+	.asciz "mf00_reg00_curs14.brlyt"
+	.asciz "mf00_reg00_curs14_roop.brlan"
 	.asciz "mf00_reg00_curs14_on.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs15.brlyt"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs15_roop.brlan"
+	.asciz "mf00_reg00_curs15.brlyt"
+	.asciz "mf00_reg00_curs15_roop.brlan"
 	.asciz "mf00_reg00_curs15_on.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs16.brlyt"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs16_roop.brlan"
+	.asciz "mf00_reg00_curs16.brlyt"
+	.asciz "mf00_reg00_curs16_roop.brlan"
 	.asciz "mf00_reg00_curs16_on.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs17.brlyt"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs17_roop.brlan"
+	.asciz "mf00_reg00_curs17.brlyt"
+	.asciz "mf00_reg00_curs17_roop.brlan"
 	.asciz "mf00_reg00_curs17_on.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs18.brlyt"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs18_roop.brlan"
+	.asciz "mf00_reg00_curs18.brlyt"
+	.asciz "mf00_reg00_curs18_roop.brlan"
 	.asciz "mf00_reg00_curs18_on.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs21.brlyt"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs21_roop.brlan"
+	.asciz "mf00_reg00_curs21.brlyt"
+	.asciz "mf00_reg00_curs21_roop.brlan"
 	.asciz "mf00_reg00_curs21_on.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs22.brlyt"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs22_roop.brlan"
+	.asciz "mf00_reg00_curs22.brlyt"
+	.asciz "mf00_reg00_curs22_roop.brlan"
 	.asciz "mf00_reg00_curs22_on.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "1_main22_subcursor.brlyt"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "1_main22_subcursor_roop.brlan"
+	.asciz "mf01_main22_subcursor.brlyt"
+	.asciz "mf01_main22_subcursor_roop.brlan"
 	.asciz "mf01_main22_subcursor_on.brlan"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_arrow_l00"
-	.byte 0x70
-	.asciz "ic_arrow_r00"
+	.asciz "pic_arrow_l00"
+	.asciz "pic_arrow_r00"
 	.balign 4
 	.asciz "txt_menu01_01"
 	.balign 4
@@ -7321,10 +6634,8 @@ lbl_805015B8:
 lbl_80501A20:
 	# ROM: 0x4FDB20
 	.asciz "/menu/SortMenu.arc"
-	.byte 0x6E
-	.asciz "ul_scr"
-	.byte 0x6E
-	.asciz "ul_proportion"
+	.asciz "nul_scr"
+	.asciz "nul_proportion"
 	.byte 0x25, 0x73
 	.4byte 0x0077696E
 	.asciz "_sortmenu01"
@@ -7333,8 +6644,7 @@ lbl_80501A20:
 	.byte 0x61
 	.4byte 0x7263006D
 	.asciz "f00_reg00_sort.brlyt"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_sort_in.brlan"
+	.asciz "mf00_reg00_sort_in.brlan"
 	.asciz "mf00_reg00_sort_info_in.brlan"
 	.asciz "percent_E"
 	.balign 4
@@ -7410,92 +6720,64 @@ lbl_80501B8C:
 	.4byte 0x2573003C
 	.asciz "col=red>%s<col=def>"
 	.asciz "<col=red>%s%%<col=def>"
-	.byte 0x3C
-	.asciz "col=red>%d%%<col=def>"
-	.byte 0x2F, 0x6D
-	.asciz "enu/ItemBoxInfo.arc"
+	.asciz "<col=red>%d%%<col=def>"
+	.asciz "/menu/ItemBoxInfo.arc"
 	.asciz "/menu/tpl/CrystalIcon.arc"
-	.byte 0x6E, 0x75
-	.asciz "l_para_01"
-	.byte 0x6E, 0x75
-	.asciz "l_para_30"
-	.byte 0x6E, 0x75
-	.asciz "l_para_50"
-	.byte 0x6E, 0x75
-	.asciz "l_para_60"
-	.byte 0x6E, 0x75
-	.asciz "l_para_80"
-	.byte 0x6E, 0x75
-	.asciz "l_para_700"
-	.byte 0x6E
-	.asciz "ul_eth"
-	.byte 0x6E
-	.asciz "ul_infbcln01"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_infbcln700"
+	.asciz "nul_para_01"
+	.asciz "nul_para_30"
+	.asciz "nul_para_50"
+	.asciz "nul_para_60"
+	.asciz "nul_para_80"
+	.asciz "nul_para_700"
+	.asciz "nul_eth"
+	.asciz "nul_infbcln01"
+	.asciz "nul_infbcln700"
 	.asciz "MNU_item"
 	.byte 0x6E, 0x61, 0x6D
 	.4byte 0x65002564
 	.4byte 0x25730074
 	.asciz "xt_gold01_00"
 	.asciz "txt_excange%02d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pcbs%02d"
-	.byte 0x6E, 0x75
-	.asciz "l_proportion"
+	.asciz "pic_pcbs%02d"
+	.asciz "nul_proportion"
 	.asciz "txt_scnd01"
 	.asciz "txt_scnd03"
-	.byte 0x6E
-	.asciz "ul_scnd"
+	.asciz "nul_scnd"
 	.asciz "dmg_low"
 	.asciz "dmg_hi"
-	.byte 0x61
-	.asciz "rm_phy"
-	.byte 0x61
-	.asciz "rm_eth"
-	.byte 0x61
-	.asciz "tt_lev"
-	.byte 0x73
-	.asciz "peed"
-	.byte 0x67, 0x72, 0x64
-	.asciz "_rate"
+	.asciz "arm_phy"
+	.asciz "arm_eth"
+	.asciz "att_lev"
+	.asciz "speed"
+	.asciz "grd_rate"
 	.byte 0x66, 0x6C
 	.4byte 0x61670065
 	.asciz "quip_pc%d"
-	.byte 0x65, 0x76
-	.asciz "a_rate"
-	.byte 0x61
-	.asciz "rm_type"
+	.asciz "eva_rate"
+	.asciz "arm_type"
 	.asciz "pc%d"
-	.byte 0x72, 0x61, 0x6E
-	.asciz "kType"
-	.byte 0x4D, 0x4E
-	.asciz "U_shop"
-	.byte 0x61
-	.asciz "tr_type"
+	.asciz "rankType"
+	.asciz "MNU_shop"
+	.asciz "atr_type"
 	.asciz "type"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_collect"
+	.asciz "MNU_collect"
 	.byte 0x6D, 0x61, 0x70
 	.4byte 0x4944006D
 	.asciz "emory_type"
-	.byte 0x70
-	.asciz "c_type"
-	.byte 0x67
-	.asciz "et_arts"
+	.asciz "pc_type"
+	.asciz "get_arts"
 	.asciz "pc_arts"
 	.4byte 0x69647800
 	.asciz "%d%s%d"
 	.asciz "txt_value02"
 	.asciz "txt_value08"
 	.asciz "txt_value09"
-	.byte 0x25
-	.asciz "s%d%s"
+	.asciz "%s%d%s"
 	.asciz "txt_value04"
 	.asciz "txt_value07"
 	.asciz "txt_value22"
-	.byte 0x00, 0x74
-	.asciz "xt_para25"
+	.byte 0x00
+	.asciz "txt_para25"
 	.asciz "txt_para01"
 	.asciz "txt_para10"
 	.asciz "txt_para11"
@@ -7503,18 +6785,13 @@ lbl_80501B8C:
 	.asciz "txt_para08"
 	.asciz "txt_para22"
 	.asciz "txt_para23"
-	.byte 0x70
-	.asciz "ic_pc%02d"
+	.asciz "pic_pc%02d"
 	.asciz "pic_eq%02d"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_eq01.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_eq00.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_com00_dmy.tpl"
+	.asciz "mf00_reg00_eq01.tpl"
+	.asciz "mf00_reg00_eq00.tpl"
+	.asciz "mf00_com00_dmy.tpl"
 	.asciz "txt_para24"
-	.byte 0x70
-	.asciz "ic_ethcol%02d"
+	.asciz "pic_ethcol%02d"
 	.asciz "mf00_reg30_crys00.tpl"
 	.asciz "mf00_reg30_crys01.tpl"
 	.asciz "mf00_reg30_crys02.tpl"
@@ -7528,12 +6805,9 @@ lbl_80501B8C:
 	.4byte 0x20002564
 	.4byte 0x20007478
 	.asciz "t_eth%02d"
-	.byte 0x6A, 0x77
-	.asciz "l_slot"
-	.byte 0x6A
-	.asciz "wl_skill%d"
-	.byte 0x70
-	.asciz "ercent"
+	.asciz "jwl_slot"
+	.asciz "jwl_skill%d"
+	.asciz "percent"
 	.asciz "txt_para80"
 	.asciz "txt_value50"
 	.asciz "txt_value51"
@@ -7546,8 +6820,7 @@ lbl_80501B8C:
 	.asciz "txt_value30"
 	.asciz "txt_para%02d"
 	.asciz "txt_value%02d"
-	.byte 0x74, 0x61
-	.asciz "g_icon"
+	.asciz "tag_icon"
 	.asciz "txt_para736"
 	.asciz "txt_value700"
 	.asciz "txt_value702"
@@ -7589,10 +6862,8 @@ lbl_80501B8C:
 	.asciz "txt_value723"
 	.asciz "txt_para704"
 	.asciz "txt_scnd02"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_shop"
-	.byte 0x6E, 0x75
-	.asciz "l_excange"
+	.asciz "nul_shop"
+	.asciz "nul_excange"
 	.asciz "txt_para30"
 	.asciz "txt_para50"
 	.asciz "txt_para60"
@@ -7608,8 +6879,7 @@ lbl_80501B8C:
 	.asciz "txt_para713"
 	.asciz "txt_para716"
 	.asciz "txt_para717"
-	.byte 0x4D, 0x4E
-	.asciz "U_relate"
+	.asciz "MNU_relate"
 	.asciz "txt_npctype"
 	.asciz "txt_npcname"
 	.asciz "txt_npcframe"
@@ -7619,10 +6889,8 @@ lbl_80501B8C:
 	.asciz "txt_scnd00"
 	.asciz "CItemBoxInfoTex"
 	.asciz "itemID"
-	.byte 0x6A
-	.asciz "wl_skill1"
-	.byte 0x43, 0x49
-	.asciz "temBoxInfo2"
+	.asciz "jwl_skill1"
+	.asciz "CItemBoxInfo2"
 	.asciz "CItemBoxInfo2Tex"
 	.balign 4
 	.asciz "CNumSelect"
@@ -7641,22 +6909,18 @@ lbl_805023B0:
 	.4byte 0x65002564
 	.4byte 0x25730074
 	.asciz "xt_total"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_arrow_o01"
-	.byte 0x70
-	.asciz "ic_arrow_u01"
+	.asciz "pic_arrow_o01"
+	.asciz "pic_arrow_u01"
 	.byte 0x70, 0x69, 0x63
 	.4byte 0x5F757000
 	.asciz "pic_down"
-	.byte 0x43, 0x4E, 0x75
-	.asciz "mSelect"
+	.asciz "CNumSelect"
 	.4byte 0x61726300
 	.asciz "mf70_cf60_syswin05.brlyt"
 	.asciz "mf70_cf60_syswin05_in_value.brlan"
 	.asciz "mf70_cf60_syswin05_roop.brlan"
 	.asciz "mf70_cf60_syswin05_on.brlan"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_shslct"
+	.asciz "nul_shslct"
 	.asciz "MNU_shop"
 	.asciz "txt_buy01"
 	.asciz "txt_buy02"
@@ -7666,10 +6930,8 @@ lbl_805023B0:
 	.4byte 0x70007478
 	.asciz "t_close00"
 	.asciz "txt_close01"
-	.byte 0x66, 0x69
-	.asciz "leID_2"
-	.byte 0x66
-	.asciz "ileID_1"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
 	.asciz "pic_btn00"
 	.asciz "pic_btn01"
 
@@ -7861,62 +7123,46 @@ lbl_805028F4:
 lbl_80502944:
 	# ROM: 0x4FEA44
 	.asciz "%s%d"
-	.byte 0x73, 0x68, 0x6F
-	.asciz "plist"
-	.byte 0x70, 0x63
-	.asciz "_type"
-	.byte 0x65, 0x71
-	.asciz "uip_pc%d"
+	.asciz "shoplist"
+	.asciz "pc_type"
+	.asciz "equip_pc%d"
 	.byte 0x70, 0x63, 0x25
 	.4byte 0x64006172
 	.asciz "m_type"
-	.byte 0x65
-	.asciz "xc_id5"
-	.byte 0x65
-	.asciz "xc_id4"
-	.byte 0x65
-	.asciz "xc_id3"
-	.byte 0x65
-	.asciz "xc_id2"
-	.byte 0x65
-	.asciz "xc_id1"
+	.asciz "exc_id5"
+	.asciz "exc_id4"
+	.asciz "exc_id3"
+	.asciz "exc_id2"
+	.asciz "exc_id1"
 	.byte 0x25
 	.4byte 0x73007261
 	.asciz "nkType"
 	.asciz "MNU_shop"
 	.asciz "name"
-	.byte 0x72, 0x76, 0x73
-	.asciz "_type"
-	.byte 0x72, 0x76
-	.asciz "s_caption"
-	.byte 0x3C, 0x63
-	.asciz "ol=red>%s<col=def2>"
+	.asciz "rvs_type"
+	.asciz "rvs_caption"
+	.asciz "<col=red>%s<col=def2>"
 	.asciz "<col=red>%s%%<col=def2>"
 	.asciz "<col=red>%d%%<col=def2>"
 	.asciz "comment"
 	.asciz "jwl_slot"
-	.byte 0x6A, 0x77, 0x6C
-	.asciz "_skill%d"
+	.asciz "jwl_skill%d"
 	.byte 0x6D, 0x6F, 0x6E
 	.4byte 0x6579006D
 	.asciz "f00_reg00_curs07.brlyt"
 	.asciz "mf00_reg00_curs07_roop.brlan"
 	.asciz "mf00_reg00_curs07_on.brlan"
-	.byte 0x2F
-	.asciz "menu/ItemBoxLine.arc"
-	.byte 0x2F, 0x6D, 0x65
-	.asciz "nu/tpl/ItemIcon.arc"
+	.asciz "/menu/ItemBoxLine.arc"
+	.asciz "/menu/tpl/ItemIcon.arc"
 	.asciz "common/jp/bdat_item.bin"
 	.asciz "common/jp/bdat_mes.bin"
 	.asciz "MNU_sysmes"
-	.byte 0x4D, 0x4E
-	.asciz "U_party"
+	.asciz "MNU_party"
 	.asciz "MNU_skill"
 	.byte 0x68, 0x65
 	.4byte 0x6C700069
 	.asciz "con_base"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_com00_dmy.tpl"
+	.asciz "mf00_com00_dmy.tpl"
 	.asciz "pic_btnbs%02d"
 	.byte 0x69, 0x63
 	.4byte 0x6F6E0070
@@ -7930,22 +7176,17 @@ lbl_80502944:
 	.asciz "mf00_reg20_cat07.tpl"
 	.asciz "mf00_reg20_cat01.tpl"
 	.asciz "mf00_reg20_cat02.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg20_cat03.tpl"
+	.asciz "mf00_reg20_cat03.tpl"
 	.asciz "mf00_reg20_cat04.tpl"
 	.asciz "mf00_reg20_cat05.tpl"
 	.asciz "mf00_reg20_cat06.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg20_cat09.tpl"
+	.asciz "mf00_reg20_cat09.tpl"
 	.asciz "mf00_reg20_cat10.tpl"
 	.asciz "mf00_reg20_cat11.tpl"
 	.asciz "mf00_reg20_cat08.tpl"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_cat%02d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_off%02d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_tbbcon%02d"
+	.asciz "pic_cat%02d"
+	.asciz "pic_off%02d"
+	.asciz "pic_tbbcon%02d"
 	.asciz "pic_tbbcof%02d"
 	.asciz "mf02_box00_tabemp.tpl"
 	.asciz "txt_name%02d"
@@ -7954,22 +7195,15 @@ lbl_80502944:
 	.4byte 0x64257300
 	.asciz "txt_comment"
 	.asciz "nul_proportion"
-	.byte 0x6E
-	.asciz "ulbtn%02d"
+	.asciz "nulbtn%02d"
 	.asciz "txt_havenum"
-	.byte 0x6E, 0x75
-	.asciz "l_bcln01"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_bcln50"
+	.asciz "nul_bcln01"
+	.asciz "nul_bcln50"
 	.asciz "nul_bcln60"
-	.byte 0x6E
-	.asciz "ul_para_01"
-	.byte 0x6E
-	.asciz "ul_para_50"
-	.byte 0x6E
-	.asciz "ul_para_60"
-	.byte 0x6E
-	.asciz "ul_para_80"
+	.asciz "nul_para_01"
+	.asciz "nul_para_50"
+	.asciz "nul_para_60"
+	.asciz "nul_para_80"
 	.asciz "txt_para01"
 	.asciz "txt_para04"
 	.asciz "txt_para08"
@@ -7986,8 +7220,7 @@ lbl_80502944:
 	.asciz "txt_value09"
 	.asciz "txt_value22"
 	.asciz "pic_ethcol01"
-	.byte 0x70
-	.asciz "ic_ethcol02"
+	.asciz "pic_ethcol02"
 	.asciz "pic_ethcol03"
 	.asciz "txt_eth01"
 	.asciz "txt_eth02"
@@ -8000,16 +7233,11 @@ lbl_80502944:
 	.asciz "txt_para61"
 	.asciz "txt_value60"
 	.asciz "txt_value61"
-	.byte 0x64
-	.asciz "mg_low"
-	.byte 0x64
-	.asciz "mg_hi"
-	.byte 0x61, 0x72
-	.asciz "m_phy"
-	.byte 0x61, 0x72
-	.asciz "m_eth"
-	.byte 0x61, 0x74
-	.asciz "t_lev"
+	.asciz "dmg_low"
+	.asciz "dmg_hi"
+	.asciz "arm_phy"
+	.asciz "arm_eth"
+	.asciz "att_lev"
 	.byte 0x73, 0x70
 	.4byte 0x65656400
 	.asciz "grd_rate"
@@ -8019,8 +7247,7 @@ lbl_80502944:
 	.byte 0x25, 0x73, 0x25
 	.4byte 0x64257300
 	.asciz "eva_rate"
-	.byte 0x70, 0x63, 0x5F
-	.asciz "arts"
+	.asciz "pc_arts"
 	.byte 0x6D, 0x61, 0x78
 	.4byte 0x00617474
 	.4byte 0x61636800
@@ -8029,18 +7256,14 @@ lbl_80502944:
 	.4byte 0x79706500
 	.asciz "MNU_collect"
 	.asciz "mapID"
-	.byte 0x6D, 0x65
-	.asciz "mory_type"
-	.byte 0x67, 0x65
-	.asciz "t_arts"
+	.asciz "memory_type"
+	.asciz "get_arts"
 	.byte 0x69
 	.4byte 0x64780074
 	.asciz "xt_para80"
 	.asciz "pic_ethcol%02d"
-	.byte 0x70, 0x65, 0x72
-	.asciz "cent"
-	.byte 0x61, 0x74, 0x72
-	.asciz "_type"
+	.asciz "percent"
+	.asciz "atr_type"
 	.asciz "mf00_reg30_crys00.tpl"
 	.asciz "mf00_reg30_crys01.tpl"
 	.asciz "mf00_reg30_crys02.tpl"
@@ -8055,8 +7278,7 @@ lbl_80502944:
 	.asciz "2_box01_boxsh.brlyt"
 	.asciz "mf02_box01_boxsh_in.brlan"
 	.asciz "mf02_box01_boxsh_info_in.brlan"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_cat01"
+	.asciz "pic_cat01"
 	.asciz "txt_num01"
 	.asciz "txt_num02"
 	.asciz "txt_num03"
@@ -8065,12 +7287,9 @@ lbl_80502944:
 	.asciz "txt_num06"
 	.asciz "txt_num07"
 	.asciz "txt_have"
-	.byte 0x43, 0x49
-	.asciz "temBoxLineTex"
-	.byte 0x4D, 0x4E
-	.asciz "U_item_mes_a"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_item_mes_b"
+	.asciz "CItemBoxLineTex"
+	.asciz "MNU_item_mes_a"
+	.asciz "MNU_item_mes_b"
 	.asciz "nul_scr00"
 	.balign 4
 	.asciz "nul_scr01"
@@ -8143,47 +7362,30 @@ lbl_805032B8:
 	.asciz "rectype"
 	.4byte 0x63740076
 	.asciz "isible"
-	.byte 0x6E
-	.asciz "amed_FLG"
-	.byte 0x70, 0x6F, 0x70
-	.asciz "STIME"
-	.byte 0x70, 0x6F
-	.asciz "pETIME"
+	.asciz "named_FLG"
+	.asciz "popSTIME"
+	.asciz "popETIME"
 	.asciz "mapOBJ"
-	.byte 0x4C, 0x4F
-	.asciz "DOBJ"
-	.byte 0x4C, 0x4F, 0x44
-	.asciz "OBJ2"
-	.byte 0x73, 0x31, 0x4D
-	.asciz "SGID"
-	.byte 0x73, 0x32, 0x4D
-	.asciz "SGID"
-	.byte 0x73, 0x33, 0x63
-	.asciz "leartype"
-	.byte 0x73, 0x34, 0x63
-	.asciz "leartype"
-	.byte 0x73, 0x33, 0x67
-	.asciz "imENskip"
-	.byte 0x73, 0x33, 0x67
-	.asciz "imENID1"
+	.asciz "LODOBJ"
+	.asciz "LODOBJ2"
+	.asciz "s1MSGID"
+	.asciz "s2MSGID"
+	.asciz "s3cleartype"
+	.asciz "s4cleartype"
+	.asciz "s3gimENskip"
+	.asciz "s3gimENID1"
 	.asciz "s3gimENID2"
-	.byte 0x73
-	.asciz "3gimENID3"
-	.byte 0x73, 0x35
-	.asciz "gimENID1"
-	.byte 0x73, 0x35, 0x67
-	.asciz "imENID2"
+	.asciz "s3gimENID3"
+	.asciz "s5gimENID1"
+	.asciz "s5gimENID2"
 	.asciz "s5gimENID3"
-	.byte 0x73
-	.asciz "3touchSE"
+	.asciz "s3touchSE"
 	.byte 0x73, 0x33, 0x77
 	.4byte 0x61697400
 	.asciz "s4wait"
-	.byte 0x6E
-	.asciz "extqFLG"
+	.asciz "nextqFLG"
 	.asciz "nextqstFLG"
-	.byte 0x6E
-	.asciz "extwait"
+	.asciz "nextwait"
 	.asciz "s2lockPC"
 	.balign 4
 	.4byte 0
@@ -8202,11 +7404,9 @@ lbl_805033EC:
 	# ROM: 0x4FF4EC
 	.asciz "CPartyStateWin"
 	.asciz "CPartyStateScn"
-	.byte 0x4D, 0x4E
-	.asciz "U_party"
+	.asciz "MNU_party"
 	.asciz "name"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_item"
+	.asciz "MNU_item"
 	.balign 4
 	.4byte 0
 	.4byte 0x00000010
@@ -8252,28 +7452,20 @@ lbl_80503498:
 	.asciz "txt_pc%02dvalue703"
 	.asciz "txt_pc%02dvalue704"
 	.asciz "txt_pc%02dpara705"
-	.byte 0x70
-	.asciz "ic_gage_skl%02d"
+	.asciz "pic_gage_skl%02d"
 	.asciz "pic_gage_exp%02d"
-	.byte 0x69, 0x63, 0x6F
-	.asciz "n_type2"
+	.asciz "icon_type2"
 	.asciz "pic_face%02d"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_sklcat%02d"
+	.asciz "nul_sklcat%02d"
 	.asciz "mf20_skl01_pc%02dcat%02d.tpl"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_sklcat%02d"
+	.asciz "pic_sklcat%02d"
 	.asciz "pic_guest%02d_bs"
-	.byte 0x72, 0x6C, 0x74
-	.asciz "_texture"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_guest%02d_face"
+	.asciz "rlt_texture"
+	.asciz "pic_guest%02d_face"
 	.asciz "txt_othval02"
 	.asciz "txt_othval03"
-	.byte 0x42, 0x54
-	.asciz "L_PSVskill"
-	.byte 0x70
-	.asciz "oint_PP"
+	.asciz "BTL_PSVskill"
+	.asciz "point_PP"
 	.asciz "CPartyState"
 	.4byte 0x61726300
 	.asciz "mf02_pt00.brlyt"
@@ -8283,8 +7475,7 @@ lbl_80503498:
 	.asciz "txt_othval01"
 	.asciz "txt_pc%02dpara704"
 	.asciz "txt_pc%02dpara700"
-	.byte 0x4D, 0x4E
-	.asciz "U_party"
+	.asciz "MNU_party"
 	.asciz "name"
 	.asciz "txt_pc%02dpara703"
 	.byte 0x25
@@ -8332,14 +7523,11 @@ lbl_80503750:
 	.4byte 0x46464600
 	.4byte 0x41414100
 	.asciz "core"
-	.byte 0x2F, 0x63, 0x68
-	.asciz "r/pc/mp%02d%02d%02d.mca"
+	.asciz "/chr/pc/mp%02d%02d%02d.mca"
 	.asciz "ITM_wpnlist"
 	.asciz "resource"
-	.byte 0x2F, 0x63, 0x68
-	.asciz "r/wp/mw%s.mca"
-	.byte 0x64, 0x65
-	.asciz "f_mount"
+	.asciz "/chr/wp/mw%s.mca"
+	.asciz "def_mount"
 	.asciz "bat_mount"
 	.balign 4
 	.4byte 0x00000010
@@ -8401,13 +7589,10 @@ lbl_80503870:
 lbl_805038B8:
 	# ROM: 0x4FF9B8
 	.asciz "/menu/EquipChange.arc"
-	.byte 0x2F, 0x6D
-	.asciz "enu/tpl/CrystalIcon.arc"
+	.asciz "/menu/tpl/CrystalIcon.arc"
 	.asciz "item_keep"
-	.byte 0x6E, 0x75
-	.asciz "l_btn"
-	.byte 0x6E, 0x75
-	.asciz "l_proportion"
+	.asciz "nul_btn"
+	.asciz "nul_proportion"
 	.asciz "txt_num00"
 	.balign 4
 	.asciz "txt_num01"
@@ -8420,8 +7605,7 @@ lbl_805038B8:
 	.4byte 0x00747874
 	.asciz "_crysname%02d"
 	.asciz "pic_crys%02d"
-	.byte 0x70
-	.asciz "ic_slot%02d"
+	.asciz "pic_slot%02d"
 	.asciz "mf00_com00_dmy.tpl"
 	.asciz "MNU_item"
 	.asciz "name"
@@ -8429,31 +7613,25 @@ lbl_805038B8:
 	.4byte 0x73006174
 	.asciz "r_type"
 	.asciz "mf00_reg30_crys00.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys01.tpl"
+	.asciz "mf00_reg30_crys01.tpl"
 	.asciz "mf00_reg30_crys02.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys03.tpl"
+	.asciz "mf00_reg30_crys03.tpl"
 	.asciz "mf00_reg30_crys04.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys05.tpl"
+	.asciz "mf00_reg30_crys05.tpl"
 	.asciz "mf00_reg30_crys06.tpl"
 	.byte 0x55, 0x00, 0x25
 	.4byte 0x73007478
 	.asciz "t_wpname%02d"
 	.asciz "txt_num%02d"
-	.byte 0x69, 0x74, 0x65
-	.asciz "mType"
-	.byte 0x43, 0x45
-	.asciz "quipChange"
+	.asciz "itemType"
+	.asciz "CEquipChange"
 	.byte 0x61
 	.4byte 0x7263006D
 	.asciz "f02_eq00.brlyt"
 	.asciz "mf02_eq00_in.brlan"
 	.asciz "mf02_eq00_info_in.brlan"
 	.asciz "mf02_eq00_box_in.brlan"
-	.byte 0x43, 0x45, 0x71
-	.asciz "uipChangeTex"
+	.asciz "CEquipChangeTex"
 	.balign 4
 	.asciz "reslist<cf::CfMapMineManager::MinePoint>"
 	.balign 4
@@ -8471,14 +7649,10 @@ lbl_80503B44:
 	.4byte 0x5900706F
 	.4byte 0x735A0067
 	.asciz "et_id"
-	.byte 0x6F, 0x62
-	.asciz "j_id"
-	.byte 0x6D, 0x69, 0x6E
-	.asciz "e_type"
-	.byte 0x46
-	.asciz "LD_pointlist"
-	.byte 0x70, 0x6F, 0x69
-	.asciz "nt_id"
+	.asciz "obj_id"
+	.asciz "mine_type"
+	.asciz "FLD_pointlist"
+	.asciz "point_id"
 	.byte 0x6E, 0x61
 	.4byte 0x6D650072
 	.asciz "ank_type_up"
@@ -8497,29 +7671,24 @@ lbl_80503BDC:
 	.asciz "mf70_cf60_syswin07.brlyt"
 	.asciz "mf70_cf60_syswin07_in.brlan"
 	.asciz "txt_point"
-	.byte 0x6E
-	.asciz "ul_proportion"
+	.asciz "nul_proportion"
 	.asciz "txt_slct01"
 	.asciz "txt_slct02"
 	.asciz "txt_slct03"
-	.byte 0x6E
-	.asciz "ul_coll"
+	.asciz "nul_coll"
 	.asciz "MNU_kyeassign"
 	.byte 0x68, 0x65
 	.4byte 0x6C700074
 	.asciz "xt_close01"
-	.byte 0x66
-	.asciz "ileID_2"
+	.asciz "fileID_2"
 	.asciz "fileID_1"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_btn01"
+	.asciz "pic_btn01"
 	.balign 4
 	.asciz "MNU_item"
 	.byte 0x6E, 0x61, 0x6D
 	.4byte 0x65007769
 	.asciz "n_slct"
-	.byte 0x6E
-	.asciz "ul_close01"
+	.asciz "nul_close01"
 	.balign 4
 	.4byte 0
 	.asciz "A_area_x"
@@ -8553,10 +7722,8 @@ lbl_80503BDC:
 lbl_80503D54:
 	# ROM: 0x4FFE54
 	.asciz "cl_area_x"
-	.byte 0x63, 0x6C
-	.asciz "_area_py"
-	.byte 0x63, 0x6C, 0x5F
-	.asciz "area_my"
+	.asciz "cl_area_py"
+	.asciz "cl_area_my"
 	.asciz "cl_area_z"
 	.byte 0x25, 0x73
 	.4byte 0
@@ -8569,25 +7736,18 @@ lbl_80503D54:
 lbl_80503D9C:
 	# ROM: 0x4FFE9C
 	.asciz "mapObj"
-	.byte 0x4C
-	.asciz "IFTLOD"
-	.byte 0x73
-	.asciz "htALOD"
-	.byte 0x73
-	.asciz "htBLOD"
-	.byte 0x73
-	.asciz "wtLOD"
-	.byte 0x73, 0x77
-	.asciz "itchEF"
-	.byte 0x73
-	.asciz "witchSE"
+	.asciz "LIFTLOD"
+	.asciz "shtALOD"
+	.asciz "shtBLOD"
+	.asciz "swtLOD"
+	.asciz "switchEF"
+	.asciz "switchSE"
 	.asciz "shtSE"
 	.byte 0x4C, 0x53
 	.4byte 0x5345004C
 	.4byte 0x4C534500
 	.asciz "LESE"
-	.byte 0x4C, 0x4F, 0x44
-	.asciz "STOP"
+	.asciz "LODSTOP"
 	.balign 4
 	.4byte 0
 	.asciz "cf::CfGimmickLock"
@@ -8607,10 +7767,8 @@ lbl_80503E0C:
 lbl_80503E2C:
 	# ROM: 0x4FFF2C
 	.asciz "warpEF"
-	.byte 0x77
-	.asciz "arpSE"
-	.byte 0x41, 0x5F
-	.asciz "roty"
+	.asciz "warpSE"
+	.asciz "A_roty"
 	.byte 0x42, 0x5F, 0x72
 	.4byte 0x6F747900
 	.asciz "cf::CfGimmickJump"
@@ -8621,10 +7779,8 @@ lbl_80503E2C:
 lbl_80503E5C:
 	# ROM: 0x4FFF5C
 	.asciz "lnPosX"
-	.byte 0x6C
-	.asciz "nPosY"
-	.byte 0x6C, 0x6E
-	.asciz "PosZ"
+	.asciz "lnPosY"
+	.asciz "lnPosZ"
 	.byte 0x6C, 0x6E, 0x52
 	.4byte 0x6F745900
 	.asciz "rectype"
@@ -8668,8 +7824,7 @@ lbl_80503ECC:
 	.byte 0x63, 0x74
 	.4byte 0x00717565
 	.asciz "st_Max"
-	.byte 0x71
-	.asciz "uest_Min"
+	.asciz "quest_Min"
 	.balign 4
 	.asciz "CMenuMakeCrystal"
 	.balign 4
@@ -8699,79 +7854,57 @@ lbl_80503FAC:
 	.4byte 0x25730063
 	.asciz "ategory"
 	.asciz "/menu/McCrystalBox.arc"
-	.byte 0x2F
-	.asciz "menu/tpl/ItemIcon.arc"
-	.byte 0x63, 0x6F
-	.asciz "mmon/jp/bdat_mes.bin"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_sort"
-	.byte 0x6E, 0x75
-	.asciz "l_proportion"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_msk01"
-	.byte 0x70
-	.asciz "ic_msk00"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_tbbcon%02d"
+	.asciz "/menu/tpl/ItemIcon.arc"
+	.asciz "common/jp/bdat_mes.bin"
+	.asciz "nul_sort"
+	.asciz "nul_proportion"
+	.asciz "pic_msk01"
+	.asciz "pic_msk00"
+	.asciz "pic_tbbcon%02d"
 	.asciz "pic_tbbcof%02d"
 	.byte 0x68
 	.4byte 0x656C7000
 	.asciz "mf00_com00_dmy.tpl"
-	.byte 0x69
-	.asciz "con_base"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_btnbs%02d"
-	.byte 0x70
-	.asciz "ic_setbs%02d"
+	.asciz "icon_base"
+	.asciz "pic_btnbs%02d"
+	.asciz "pic_setbs%02d"
 	.byte 0x69, 0x63, 0x6F
 	.4byte 0x6E007069
 	.asciz "c_icon%02d"
 	.asciz "MNU_item"
 	.asciz "name"
 	.asciz "txt_num%02d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_seticon%02d"
+	.asciz "pic_seticon%02d"
 	.asciz "txt_num_set%02d"
 	.asciz "txt_pg01"
-	.byte 0x6E, 0x75
-	.asciz "l_pg"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pghole%02d"
+	.asciz "nul_pg"
+	.asciz "pic_pghole%02d"
 	.asciz "txt_pg00"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pghole_on"
-	.byte 0x70
-	.asciz "ic_off%02d"
-	.byte 0x70
-	.asciz "ic_rcm%02d_00"
+	.asciz "pic_pghole_on"
+	.asciz "pic_off%02d"
+	.asciz "pic_rcm%02d_00"
 	.asciz "pic_rcm%02d_01"
 	.asciz "txt_name"
-	.byte 0x6E, 0x75
-	.asciz "l_button"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_cat%02d"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_pcface%02d"
+	.asciz "nul_button"
+	.asciz "pic_cat%02d"
+	.asciz "nul_pcface%02d"
 	.asciz "txt_button01"
 	.asciz "txt_soat01"
 	.asciz "MNU_crystal"
 	.asciz "info"
 	.asciz "txt_pccmt01_00"
 	.asciz "txt_pccmt01_01"
-	.byte 0x69
-	.asciz "con_type2"
+	.asciz "icon_type2"
 	.asciz "pic_pcface01"
 	.asciz "txt_pccmt02_00"
-	.byte 0x00, 0x74
-	.asciz "xt_pccmt02_01"
+	.byte 0x00
+	.asciz "txt_pccmt02_01"
 	.asciz "txt_pccmt02_02"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pcface02"
+	.asciz "pic_pcface02"
 	.asciz "txt_kizuna01"
 	.asciz "mf40_kiz_pclin_e.tpl"
 	.asciz "mf40_kiz_pclin_d.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_pclin_c.tpl"
+	.asciz "mf40_kiz_pclin_c.tpl"
 	.asciz "mf40_kiz_pclin_b.tpl"
 	.asciz "mf40_kiz_pclin_a.tpl"
 	.asciz "pic_kizline"
@@ -8803,10 +7936,8 @@ lbl_80503FAC:
 	.asciz "txt_fr01"
 	.asciz "txt_soattit"
 	.asciz "fileID_2"
-	.byte 0x66, 0x69, 0x6C
-	.asciz "eID_1"
-	.byte 0x4D, 0x4E
-	.asciz "U_kyeassign"
+	.asciz "fileID_1"
+	.asciz "MNU_kyeassign"
 	.asciz "pic_soatbtn"
 	.asciz "txt_pcname01"
 	.asciz "txt_pcname02"
@@ -8831,30 +7962,22 @@ lbl_80504510:
 	.asciz "txt_listpara%02d"
 	.asciz "MNU_item"
 	.asciz "atr_type"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys00.tpl"
+	.asciz "mf00_reg30_crys00.tpl"
 	.asciz "mf00_reg30_crys01.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys02.tpl"
+	.asciz "mf00_reg30_crys02.tpl"
 	.asciz "mf00_reg30_crys03.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys04.tpl"
+	.asciz "mf00_reg30_crys04.tpl"
 	.asciz "mf00_reg30_crys05.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys06.tpl"
-	.byte 0x70
-	.asciz "ic_ethcol%02d"
-	.byte 0x00, 0x6D
-	.asciz "f00_com00_dmy.tpl"
-	.byte 0x6E, 0x75
-	.asciz "l_list%02d"
-	.byte 0x6E
-	.asciz "ul_proportion"
+	.asciz "mf00_reg30_crys06.tpl"
+	.asciz "pic_ethcol%02d"
+	.byte 0x00
+	.asciz "mf00_com00_dmy.tpl"
+	.asciz "nul_list%02d"
+	.asciz "nul_proportion"
 	.asciz "txt_value30"
 	.asciz "txt_para%02d"
 	.asciz "txt_value%02d"
-	.byte 0x43, 0x4D, 0x43
-	.asciz "CrystalInfo"
+	.asciz "CMCCrystalInfo"
 	.4byte 0x61726300
 	.asciz "mf10_cry00_inf00.brlyt"
 	.asciz "mf10_cry00_inf00_in.brlan"
@@ -8870,8 +7993,7 @@ lbl_80504510:
 	.asciz "txt_para36"
 	.asciz "txt_para38"
 	.asciz "txt_para30"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_crystal"
+	.asciz "MNU_crystal"
 	.byte 0x69, 0x6E, 0x66
 	.4byte 0x6F007478
 	.asciz "t_listname00"
@@ -8891,11 +8013,9 @@ lbl_80504510:
 lbl_80504814:
 	# ROM: 0x500914
 	.asciz "obj/oj820002.chr"
-	.byte 0x65, 0x66, 0x66
-	.asciz "/rec/eu/eu01.rec"
+	.asciz "eff/rec/eu/eu01.rec"
 	.asciz "menu/McData.arc"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_skill"
+	.asciz "MNU_skill"
 	.byte 0x68
 	.4byte 0x656C7000
 	.asciz "MNU_sysmes"
@@ -8903,34 +8023,20 @@ lbl_80504814:
 	.4byte 0x616D6500
 	.asciz "MNU_crystal"
 	.asciz "info"
-	.byte 0x69, 0x74, 0x65
-	.asciz "mType"
-	.byte 0x6C, 0x6F
-	.asciz "wer_E"
-	.byte 0x75, 0x70
-	.asciz "per_E"
-	.byte 0x6C, 0x6F
-	.asciz "wer_D"
-	.byte 0x75, 0x70
-	.asciz "per_D"
-	.byte 0x6C, 0x6F
-	.asciz "wer_C"
-	.byte 0x75, 0x70
-	.asciz "per_C"
-	.byte 0x6C, 0x6F
-	.asciz "wer_B"
-	.byte 0x75, 0x70
-	.asciz "per_B"
-	.byte 0x6C, 0x6F
-	.asciz "wer_A"
-	.byte 0x75, 0x70
-	.asciz "per_A"
-	.byte 0x6C, 0x6F
-	.asciz "wer_S"
-	.byte 0x75, 0x70
-	.asciz "per_S"
-	.byte 0x2F, 0x63
-	.asciz "hr/pc/mu%02d%02d%02d.mca"
+	.asciz "itemType"
+	.asciz "lower_E"
+	.asciz "upper_E"
+	.asciz "lower_D"
+	.asciz "upper_D"
+	.asciz "lower_C"
+	.asciz "upper_C"
+	.asciz "lower_B"
+	.asciz "upper_B"
+	.asciz "lower_A"
+	.asciz "upper_A"
+	.asciz "lower_S"
+	.asciz "upper_S"
+	.asciz "/chr/pc/mu%02d%02d%02d.mca"
 	.byte 0x41, 0x4E, 0x4D
 	.4byte 0x00434D6F
 	.asciz "delDispMakeCrystal"
@@ -8967,24 +8073,18 @@ lbl_805049D0:
 	.asciz "txt_listpara%02d"
 	.asciz "MNU_item"
 	.asciz "atr_type"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys00.tpl"
+	.asciz "mf00_reg30_crys00.tpl"
 	.asciz "mf00_reg30_crys01.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys02.tpl"
+	.asciz "mf00_reg30_crys02.tpl"
 	.asciz "mf00_reg30_crys03.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys04.tpl"
+	.asciz "mf00_reg30_crys04.tpl"
 	.asciz "mf00_reg30_crys05.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys06.tpl"
-	.byte 0x70
-	.asciz "ic_ethcol%02d"
-	.byte 0x00, 0x6D
-	.asciz "f00_com00_dmy.tpl"
+	.asciz "mf00_reg30_crys06.tpl"
+	.asciz "pic_ethcol%02d"
+	.byte 0x00
+	.asciz "mf00_com00_dmy.tpl"
 	.asciz "pic_heat%02d"
-	.byte 0x6E
-	.asciz "ul_list%02d"
+	.asciz "nul_list%02d"
 	.asciz "nul_proportion"
 	.asciz "mf10_cry00_heat.tpl"
 	.asciz "mf10_cry00_mega.tpl"
@@ -9055,16 +8155,13 @@ lbl_80504CFC:
 	.asciz "mf10_cry03_crys_out.brlan"
 	.asciz "mf10_cry04_lst.brlyt"
 	.asciz "mf10_cry04_lst_roop.brlan"
-	.byte 0x6E, 0x75
-	.asciz "l_trc01"
+	.asciz "nul_trc01"
 	.asciz "name"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_item"
+	.asciz "MNU_item"
 	.byte 0x25, 0x73
 	.4byte 0x25730074
 	.asciz "xt_listname01"
-	.byte 0x61, 0x74
-	.asciz "r_type"
+	.asciz "atr_type"
 	.asciz "mf00_com00_dmy.tpl"
 	.asciz "mf10_cry00_crys01.tpl"
 	.asciz "mf10_cry00_crys02.tpl"
@@ -9119,25 +8216,19 @@ lbl_805051C4:
 	.4byte 0x2573002F
 	.asciz "menu/QstLogList.arc"
 	.asciz "nul_sort"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_proportion"
+	.asciz "nul_proportion"
 	.asciz "title"
 	.asciz "txt_tit%02d"
-	.byte 0x6E, 0x70
-	.asciz "c_id"
-	.byte 0x72, 0x6C, 0x74
-	.asciz "_lnd"
-	.byte 0x6C, 0x61, 0x6E
-	.asciz "dmarklist"
+	.asciz "npc_id"
+	.asciz "rlt_lnd"
+	.asciz "landmarklist"
 	.byte 0x6D, 0x61
 	.4byte 0x70494400
 	.asciz "name"
 	.asciz "txt_map%02d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_icon%02d"
+	.asciz "pic_icon%02d"
 	.asciz "mf00_reg00_new.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_cmp.tpl"
+	.asciz "mf00_reg00_cmp.tpl"
 	.asciz "pic_icon%02d_00"
 	.asciz "mf00_reg00_qt01.tpl"
 	.asciz "mf00_reg00_qt02.tpl"
@@ -9148,19 +8239,14 @@ lbl_805051C4:
 	.4byte 0x61726300
 	.asciz "mf30_qst_all.brlyt"
 	.asciz "mf30_qst_all_in.brlan"
-	.byte 0x6D, 0x66, 0x33
-	.asciz "0_qst_all_info_in.brlan"
+	.asciz "mf30_qst_all_info_in.brlan"
 	.asciz "MNU_quest"
-	.byte 0x63, 0x61
-	.asciz "tegory"
+	.asciz "category"
 	.asciz "txt_soattit"
-	.byte 0x66
-	.asciz "ileID_2"
+	.asciz "fileID_2"
 	.asciz "fileID_1"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_kyeassign"
-	.byte 0x70
-	.asciz "ic_soatbtn"
+	.asciz "MNU_kyeassign"
+	.asciz "pic_soatbtn"
 	.asciz "txt_tit01"
 	.balign 4
 	.asciz "/common/jp/bdat_qs0000.bin"
@@ -9281,86 +8367,59 @@ lbl_805057C4:
 	.byte 0x74, 0x69, 0x74
 	.4byte 0x6C650074
 	.asciz "xt_tit"
-	.byte 0x70
-	.asciz "ic_icon_tit"
+	.asciz "pic_icon_tit"
 	.asciz "qst_genre"
 	.asciz "mf00_reg00_qt01.tpl"
 	.asciz "mf00_reg00_qt02.tpl"
 	.asciz "mf00_reg00_qt03.tpl"
-	.byte 0x6E, 0x70
-	.asciz "c_id"
+	.asciz "npc_id"
 	.byte 0x6E, 0x61, 0x6D
 	.4byte 0x65007478
 	.asciz "t_man"
-	.byte 0x4D, 0x4E
-	.asciz "U_quest"
+	.asciz "MNU_quest"
 	.asciz "rlt_lnd"
 	.asciz "landmarklist"
 	.asciz "txt_map"
-	.byte 0x70, 0x75, 0x72
-	.asciz "pose"
+	.asciz "purpose"
 	.asciz "txt_exp"
-	.byte 0x6F, 0x72, 0x64
-	.asciz "er_succ_A"
-	.byte 0x69, 0x6E
-	.asciz "fo_prog"
+	.asciz "order_succ_A"
+	.asciz "info_prog"
 	.asciz "txt_subtit01"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_chbx01"
+	.asciz "pic_chbx01"
 	.asciz "pic_ch01"
-	.byte 0x74, 0x79, 0x70
-	.asciz "e_succ_A2"
-	.byte 0x74, 0x79
-	.asciz "pe_succ_B2"
-	.byte 0x69
-	.asciz "nfo_succ_A1"
+	.asciz "type_succ_A2"
+	.asciz "type_succ_B2"
+	.asciz "info_succ_A1"
 	.asciz "info_succ_B1"
 	.asciz "txt_subtit%02d"
 	.asciz "pic_chbx%02d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_ch%02d"
+	.asciz "pic_ch%02d"
 	.asciz "type_succ_A3"
-	.byte 0x74, 0x79, 0x70
-	.asciz "e_succ_B3"
-	.byte 0x69, 0x6E
-	.asciz "fo_succ_A2"
-	.byte 0x69
-	.asciz "nfo_succ_B2"
+	.asciz "type_succ_B3"
+	.asciz "info_succ_A2"
+	.asciz "info_succ_B2"
 	.asciz "type_succ_A4"
-	.byte 0x74, 0x79, 0x70
-	.asciz "e_succ_B4"
-	.byte 0x69, 0x6E
-	.asciz "fo_succ_A3"
-	.byte 0x69
-	.asciz "nfo_succ_B3"
+	.asciz "type_succ_B4"
+	.asciz "info_succ_A3"
+	.asciz "info_succ_B3"
 	.asciz "no_report"
-	.byte 0x69, 0x6E
-	.asciz "fo_report"
-	.byte 0x69, 0x6E
-	.asciz "fo_end_B"
-	.byte 0x69, 0x6E, 0x66
-	.asciz "o_end_A"
+	.asciz "info_report"
+	.asciz "info_end_B"
+	.asciz "info_end_A"
 	.asciz "type_succ_A%d"
-	.byte 0x74, 0x79
-	.asciz "pe_succ_B%d"
+	.asciz "type_succ_B%d"
 	.asciz "info_succ_A%d"
-	.byte 0x69, 0x6E
-	.asciz "fo_succ_B%d"
+	.asciz "info_succ_B%d"
 	.asciz "reward_mes"
 	.asciz "txt_item01"
 	.asciz "txt_gold00"
 	.asciz "txt_exp01"
-	.byte 0x72
-	.asciz "eward_exp"
-	.byte 0x72, 0x65
-	.asciz "ward_money"
-	.byte 0x72
-	.asciz "eward_B%d"
-	.byte 0x72, 0x65
-	.asciz "ward_A%d"
+	.asciz "reward_exp"
+	.asciz "reward_money"
+	.asciz "reward_B%d"
+	.asciz "reward_A%d"
 	.asciz "txt_item%02d"
-	.byte 0x72, 0x61
-	.asciz "nkType"
+	.asciz "rankType"
 	.asciz "MNU_item"
 	.asciz "%s%s"
 	.byte 0x25, 0x73, 0x00
@@ -9371,28 +8430,22 @@ lbl_805057C4:
 	.asciz "txt_subtit05"
 	.asciz "txt_subtit06"
 	.asciz "pic_chbx02"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_chbx03"
+	.asciz "pic_chbx03"
 	.asciz "pic_chbx04"
-	.byte 0x70
-	.asciz "ic_chbx05"
+	.asciz "pic_chbx05"
 	.asciz "pic_chbx06"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_ch02"
+	.asciz "pic_ch02"
 	.asciz "pic_ch03"
-	.byte 0x70
-	.asciz "ic_ch04"
+	.asciz "pic_ch04"
 	.asciz "pic_ch05"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_ch06"
+	.asciz "pic_ch06"
 	.asciz "txt_item02"
 	.asciz "txt_item03"
 	.asciz "CQstLogInfo"
 	.4byte 0x61726300
 	.asciz "mf30_qst_dtl.brlyt"
 	.asciz "mf30_qst_dtl_in.brlan"
-	.byte 0x6D, 0x66, 0x33
-	.asciz "0_qst_dtl_info_in.brlan"
+	.asciz "mf30_qst_dtl_info_in.brlan"
 	.asciz "txt_gold01"
 	.balign 4
 
@@ -9401,8 +8454,7 @@ lbl_805057C4:
 lbl_80505B80:
 	# ROM: 0x501C80
 	.asciz "/menu/SysWin.arc"
-	.byte 0x77, 0x69, 0x6E
-	.asciz "_main"
+	.asciz "win_main"
 	.asciz "txt_sysmes01"
 	.asciz "txt_sysmes02_00"
 	.balign 4
@@ -9417,25 +8469,20 @@ lbl_80505B80:
 	.4byte 0x70007478
 	.asciz "t_close00"
 	.asciz "txt_close01"
-	.byte 0x66, 0x69
-	.asciz "leID_2"
-	.byte 0x66
-	.asciz "ileID_1"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
 	.asciz "pic_btn00"
 	.asciz "pic_btn01"
 	.asciz "txt_slct%02d"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_proportion"
+	.asciz "nul_proportion"
 	.asciz "nul_close00"
 	.asciz "nul_slct"
-	.byte 0x43, 0x53, 0x79
-	.asciz "sWin"
+	.asciz "CSysWin"
 	.byte 0x61, 0x72, 0x63
 	.4byte 0x006D6637
 	.asciz "0_cf60_syswin01.brlyt"
 	.asciz "mf70_cf60_syswin01_in.brlan"
-	.byte 0x2F, 0x6D
-	.asciz "enu/SysWin2.arc"
+	.asciz "/menu/SysWin2.arc"
 	.asciz "CSysWin2"
 	.asciz "mf70_cf60_syswin00.brlyt"
 	.asciz "mf70_cf60_syswin00_in.brlan"
@@ -9448,19 +8495,15 @@ lbl_80505D2C:
 	# ROM: 0x501E2C
 	.asciz "/menu/ShopSubWin.arc"
 	.asciz "txt_%02d"
-	.byte 0x6E, 0x75
-	.asciz "l_proportion"
-	.byte 0x43, 0x53, 0x65
-	.asciz "lShopWin"
+	.asciz "nul_proportion"
+	.asciz "CSelShopWin"
 	.byte 0x61, 0x72, 0x63
 	.4byte 0x006D6637
 	.asciz "0_cf60_syswin05.brlyt"
 	.asciz "mf70_cf60_syswin05_in.brlan"
-	.byte 0x6E, 0x75
-	.asciz "l_value"
+	.asciz "nul_value"
 	.asciz "txt_titlemes"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_shop"
+	.asciz "MNU_shop"
 	.byte 0x6E, 0x61
 	.4byte 0x6D650074
 	.asciz "xt_01"
@@ -9472,13 +8515,10 @@ lbl_80505D2C:
 	.4byte 0x6C700074
 	.asciz "xt_close00"
 	.asciz "txt_close01"
-	.byte 0x66
-	.asciz "ileID_2"
+	.asciz "fileID_2"
 	.asciz "fileID_1"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_btn00"
-	.byte 0x70
-	.asciz "ic_btn01"
+	.asciz "pic_btn00"
+	.asciz "pic_btn01"
 	.balign 4
 	.4byte 0
 	.asciz "CExchangeWin"
@@ -9490,8 +8530,7 @@ lbl_80505E40:
 	# ROM: 0x501F40
 	.asciz "/menu/ExchangeWin.arc"
 	.asciz "txt_slct%02d"
-	.byte 0x6E
-	.asciz "ul_proportion"
+	.asciz "nul_proportion"
 	.asciz "txt_sysmes00"
 	.asciz "txt_sysmes01"
 	.asciz "CExchangeWin"
@@ -9499,8 +8538,7 @@ lbl_80505E40:
 	.4byte 0x006D6637
 	.asciz "0_cf60_syswin06.brlyt"
 	.asciz "mf70_cf60_syswin06_in.brlan"
-	.byte 0x4D, 0x4E
-	.asciz "U_shop"
+	.asciz "MNU_shop"
 	.byte 0x6E
 	.4byte 0x616D6500
 	.asciz "txt_sysmes02"
@@ -9510,10 +8548,8 @@ lbl_80505E40:
 	.byte 0x68, 0x65, 0x6C
 	.4byte 0x70007478
 	.asciz "t_close00"
-	.byte 0x66, 0x69
-	.asciz "leID_2"
-	.byte 0x66
-	.asciz "ileID_1"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
 	.asciz "pic_btn00"
 	.balign 4
 	.asciz "CPresentWin"
@@ -9525,18 +8561,14 @@ lbl_80505F4C:
 	.asciz "mf70_cf60_syswin07.brlyt"
 	.asciz "mf70_cf60_syswin07_in.brlan"
 	.asciz "mf70_cf60_syswin07_ef.brlan"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_proportion"
+	.asciz "nul_proportion"
 	.asciz "nul_pcface01"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_pcface02"
+	.asciz "nul_pcface02"
 	.asciz "txt_pcname01"
 	.asciz "txt_pcname02"
 	.asciz "pic_pcface01"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pcface02"
-	.byte 0x6E, 0x75
-	.asciz "l_slct"
+	.asciz "pic_pcface02"
+	.asciz "nul_slct"
 	.asciz "txt_sysmes00"
 	.4byte 0x004D4E55
 	.asciz "_kyeassign"
@@ -9544,30 +8576,21 @@ lbl_80505F4C:
 	.4byte 0x656C7000
 	.asciz "txt_close00"
 	.asciz "fileID_2"
-	.byte 0x66, 0x69, 0x6C
-	.asciz "eID_1"
+	.asciz "fileID_1"
 	.asciz "pic_btn00"
 	.asciz "txt_change00"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_btn02"
+	.asciz "pic_btn02"
 	.asciz "mf00_com00_dmy.tpl"
-	.byte 0x46, 0x53
-	.asciz "plus%d"
-	.byte 0x6E
-	.asciz "ul_anim_b"
-	.byte 0x6E, 0x75
-	.asciz "l_anim_g"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_kiz_b"
+	.asciz "FSplus%d"
+	.asciz "nul_anim_b"
+	.asciz "nul_anim_g"
+	.asciz "pic_kiz_b"
 	.asciz "mf00_com00_kizp04.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_com00_kizp02.tpl"
+	.asciz "mf00_com00_kizp02.tpl"
 	.asciz "mf00_com00_kizp01.tpl"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_kiz_g"
+	.asciz "pic_kiz_g"
 	.asciz "mf00_com00_kizp00.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_com00_kizp03.tpl"
+	.asciz "mf00_com00_kizp03.tpl"
 	.byte 0x6E
 	.4byte 0x616D6500
 	.asciz "icon_type2"
@@ -9581,8 +8604,7 @@ lbl_8050613C:
 	# ROM: 0x50223C
 	.asciz "mf10_cry02_sup.brlyt"
 	.asciz "mf10_cry02_sup_in.brlan"
-	.byte 0x69, 0x63, 0x6F
-	.asciz "n_type3"
+	.asciz "icon_type3"
 	.asciz "pic_pcface01"
 	.balign 4
 	.4byte 0
@@ -9723,8 +8745,7 @@ lbl_8050636C:
 	# ROM: 0x50246C
 	.asciz "mf00_reg00_curs01.brlyt"
 	.asciz "mf00_reg00_curs01_roop.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs01_on.brlan"
+	.asciz "mf00_reg00_curs01_on.brlan"
 	.asciz "MNU_battle"
 	.byte 0x6E
 	.4byte 0x616D6500
@@ -9733,25 +8754,17 @@ lbl_8050636C:
 	.4byte 0x25730074
 	.asciz "xt_ap00"
 	.asciz "nul_01"
-	.byte 0x70
-	.asciz "ic_arrow00_l01"
-	.byte 0x70
-	.asciz "ic_arrow00_r01"
-	.byte 0x6E
-	.asciz "ul_pc"
-	.byte 0x6E, 0x75
-	.asciz "l_proportion"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pcbs01"
+	.asciz "pic_arrow00_l01"
+	.asciz "pic_arrow00_r01"
+	.asciz "nul_pc"
+	.asciz "nul_proportion"
+	.asciz "pic_pcbs01"
 	.asciz "pic_pcbs02"
-	.byte 0x69
-	.asciz "con_type2"
+	.asciz "icon_type2"
 	.asciz "pic_face00"
-	.byte 0x74, 0x61, 0x67
-	.asciz "_icon"
+	.asciz "tag_icon"
 	.asciz "pic_face01"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_face02"
+	.asciz "pic_face02"
 	.asciz "txt_pt00"
 	.asciz "mf15_arts22_cursor.brlyt"
 	.asciz "mf15_arts22_cursor_roop.brlan"
@@ -9760,43 +8773,33 @@ lbl_8050636C:
 	.asciz "pic_arrow_u00"
 	.asciz "mf00_reg00_curs02.brlyt"
 	.asciz "mf00_reg00_curs02_roop.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs02_on.brlan"
+	.asciz "mf00_reg00_curs02_on.brlan"
 	.asciz "pc_arts"
 	.asciz "icon"
-	.byte 0x69, 0x63, 0x6F
-	.asciz "n_base"
-	.byte 0x61
-	.asciz "rm_type"
+	.asciz "icon_base"
+	.asciz "arm_type"
 	.asciz "pic_arts00"
-	.byte 0x70
-	.asciz "ic_icon00"
+	.asciz "pic_icon00"
 	.byte 0x69, 0x64
 	.4byte 0x78007069
 	.asciz "c_arrow_l00"
 	.asciz "pic_arrow_r00"
-	.byte 0x67, 0x72
-	.asciz "ow_arts_base"
+	.asciz "grow_arts_base"
 	.byte 0x76, 0x61, 0x6C
 	.4byte 0x75650069
 	.asciz "dx_%02d"
 	.asciz "grow_arts_rate"
-	.byte 0x6E
-	.asciz "ul_inf%02d"
-	.byte 0x70
-	.asciz "ic_icon%02d"
+	.asciz "nul_inf%02d"
+	.asciz "pic_icon%02d"
 	.asciz "pic_arts%02d"
 	.asciz "txt_name%02d"
 	.asciz "pic_set%02d"
 	.asciz "txt_ap%02d"
 	.asciz "txt_pt%02d"
 	.asciz "pic_on%02d"
-	.byte 0x70
-	.asciz "ic_unlock%02d"
-	.byte 0x2F, 0x6D
-	.asciz "enu/ArtsList.arc"
-	.byte 0x43, 0x41, 0x72
-	.asciz "tsList"
+	.asciz "pic_unlock%02d"
+	.asciz "/menu/ArtsList.arc"
+	.asciz "CArtsList"
 	.byte 0x61
 	.4byte 0x7263006D
 	.asciz "f15_arts30_set_box.brlyt"
@@ -9829,8 +8832,8 @@ lbl_8050670C:
 	.4byte 0x64257300
 	.asciz "txt_ap00"
 	.asciz "txt_tit"
-	.byte 0x00, 0x74, 0x78
-	.asciz "t_para00"
+	.byte 0x00
+	.asciz "txt_para00"
 	.asciz "txt_para01_00"
 	.asciz "txt_para01_01"
 	.asciz "txt_para02"
@@ -9865,8 +8868,7 @@ lbl_8050670C:
 	.asciz "tagStr"
 	.asciz "tag%d"
 	.asciz "txt_slct%02d"
-	.byte 0x6E, 0x75
-	.asciz "l_proportion"
+	.asciz "nul_proportion"
 	.byte 0x6D, 0x61, 0x78
 	.4byte 0x00726174
 	.4byte 0x65310067
@@ -9874,8 +8876,7 @@ lbl_8050670C:
 	.byte 0x72, 0x61, 0x74
 	.4byte 0x65320067
 	.asciz "row_powh"
-	.byte 0x64, 0x6D, 0x67
-	.asciz "_low"
+	.asciz "dmg_low"
 	.byte 0x66, 0x6C, 0x61
 	.4byte 0x6700646D
 	.asciz "g_hi"
@@ -9883,8 +8884,7 @@ lbl_8050670C:
 	.4byte 0x46530074
 	.asciz "agBS"
 	.asciz "txt_para%02d"
-	.byte 0x74, 0x61
-	.asciz "gCALC"
+	.asciz "tagCALC"
 	.byte 0x63, 0x61
 	.4byte 0x73740025
 	.asciz "s%.1f%s"
@@ -9895,14 +8895,10 @@ lbl_8050670C:
 	.asciz "glow_recast"
 	.4byte 0x74700025
 	.asciz "s%d%s"
-	.byte 0x73, 0x74
-	.asciz "_time"
-	.byte 0x67, 0x72
-	.asciz "ow_st_time"
-	.byte 0x25
-	.asciz "d%s%d"
-	.byte 0x73, 0x74
-	.asciz "_val"
+	.asciz "st_time"
+	.asciz "grow_st_time"
+	.asciz "%d%s%d"
+	.asciz "st_val"
 	.byte 0x73, 0x74, 0x5F
 	.4byte 0x69747600
 	.asciz "st_type"
@@ -9910,10 +8906,8 @@ lbl_8050670C:
 	.asciz "st_val2"
 	.asciz "sp_val1"
 	.asciz "%s%.2f%s"
-	.byte 0x73, 0x70, 0x5F
-	.asciz "val2"
-	.byte 0x43, 0x41, 0x72
-	.asciz "tsInfo"
+	.asciz "sp_val2"
+	.asciz "CArtsInfo"
 	.byte 0x61
 	.4byte 0x7263006D
 	.asciz "f15_arts30_set_inf.brlyt"
@@ -9929,14 +8923,11 @@ lbl_8050670C:
 	.byte 0x68, 0x65, 0x6C
 	.4byte 0x70007478
 	.asciz "t_close00"
-	.byte 0x66, 0x69
-	.asciz "leID_2"
-	.byte 0x66
-	.asciz "ileID_1"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
 	.asciz "pic_btn00"
 	.asciz "mf15_arts30_set_inf_lvup.brlan"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_inf"
+	.asciz "nul_inf"
 	.byte 0x70, 0x69, 0x63
 	.4byte 0x5F626C00
 	.asciz "nul_arw"
@@ -9955,8 +8946,7 @@ lbl_8050670C:
 lbl_80506B70:
 	# ROM: 0x502C70
 	.asciz "%s%02d"
-	.byte 0x62
-	.asciz "anner.bin"
+	.asciz "banner.bin"
 	.byte 0x6E, 0x61
 	.4byte 0x6D650000
 	.asciz "CMenuMapSelect"
@@ -9988,8 +8978,7 @@ lbl_80506BA8:
 	.asciz "0_com00_dmy.tpl"
 	.asciz "pic_map"
 	.asciz "map_fileID"
-	.byte 0x2F
-	.asciz "menu/tpl/%s"
+	.asciz "/menu/tpl/%s"
 	.asciz "nul_proportion"
 	.asciz "CMapSel"
 	.byte 0x61
@@ -10009,8 +8998,7 @@ lbl_80506CA0:
 	.byte 0x61, 0x72, 0x63
 	.4byte 0x006D6630
 	.asciz "0_fade.brlyt"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_fade_fade_in.brlan"
+	.asciz "mf00_fade_fade_in.brlan"
 	.balign 4
 	.4byte 0
 	.asciz "markerlist0000"
@@ -10290,165 +9278,110 @@ lbl_80507540:
 	.asciz "mf00_reg00_curs03.brlyt"
 	.asciz "mf00_reg00_curs03_roop.brlan"
 	.asciz "mf00_reg00_curs03_on.brlan"
-	.byte 0x6E, 0x75
-	.asciz "l_curs01"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_curs02"
+	.asciz "nul_curs01"
+	.asciz "nul_curs02"
 	.asciz "nul_pcpos"
-	.byte 0x6E, 0x75
-	.asciz "l_arw00"
+	.asciz "nul_arw00"
 	.asciz "txt_flr"
 	.asciz "nul_curs00"
 	.asciz "mf03_map01_win.brlyt"
 	.asciz "pic_flr01"
 	.asciz "pic_flr%02d"
-	.byte 0x6E, 0x75
-	.asciz "l_proportion"
+	.asciz "nul_proportion"
 	.asciz "txt_tit"
 	.asciz "txt_land%02d"
-	.byte 0x68, 0x65
-	.asciz "ight"
-	.byte 0x66, 0x6C, 0x6F
-	.asciz "orname"
-	.byte 0x70
-	.asciz "ic_god00"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_god01"
-	.byte 0x6C
-	.asciz "andmarklist"
+	.asciz "height"
+	.asciz "floorname"
+	.asciz "pic_god00"
+	.asciz "pic_god01"
+	.asciz "landmarklist"
 	.asciz "mapID"
-	.byte 0x63, 0x61
-	.asciz "tegory"
+	.asciz "category"
 	.byte 0x70
 	.4byte 0x6F735800
 	.asciz "posY"
 	.byte 0x70, 0x6F, 0x73
 	.4byte 0x5A00535F
 	.asciz "FLG_MIN1"
-	.byte 0x53, 0x5F, 0x46
-	.asciz "LG_MAX1"
+	.asciz "S_FLG_MAX1"
 	.4byte 0x006D6630
 	.asciz "3_map01_area.brlyt"
 	.asciz "txt_area01"
-	.byte 0x6D, 0x69
-	.asciz "nimap_painx"
+	.asciz "minimap_painx"
 	.asciz "minimap_painy"
-	.byte 0x6D, 0x69
-	.asciz "nimap_rate"
-	.byte 0x55
-	.asciz "I_posX"
-	.byte 0x55
-	.asciz "I_posY"
-	.byte 0x6E
-	.asciz "ul_all"
+	.asciz "minimap_rate"
+	.asciz "UI_posX"
+	.asciz "UI_posY"
+	.asciz "nul_all"
 	.byte 0x25
 	.4byte 0x73007069
 	.asciz "c_areabs00"
-	.byte 0x70
-	.asciz "ic_areabs01"
+	.asciz "pic_areabs01"
 	.asciz "pic_areabs02"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "3_map01_mask.brlyt"
-	.byte 0x69
-	.asciz "co_root"
+	.asciz "mf03_map01_mask.brlyt"
+	.asciz "ico_root"
 	.asciz "ico_land"
-	.byte 0x69, 0x63, 0x6F
-	.asciz "_mapjump"
-	.byte 0x69, 0x63, 0x6F
-	.asciz "_mine"
-	.byte 0x69, 0x63
-	.asciz "o_shop"
-	.byte 0x69
-	.asciz "co_elevator"
+	.asciz "ico_mapjump"
+	.asciz "ico_mine"
+	.asciz "ico_shop"
+	.asciz "ico_elevator"
 	.asciz "ico_kizuna"
-	.byte 0x69
-	.asciz "co_qst2"
+	.asciz "ico_qst2"
 	.asciz "ico_qst1"
-	.byte 0x69, 0x63, 0x6F
-	.asciz "_scene"
-	.byte 0x69
-	.asciz "co_cam"
-	.byte 0x69
-	.asciz "co_pc"
-	.byte 0x69, 0x63
-	.asciz "o_rot"
+	.asciz "ico_scene"
+	.asciz "ico_cam"
+	.asciz "ico_pc"
+	.asciz "ico_rot"
 	.asciz "pic_mask%02d"
-	.byte 0x70
-	.asciz "ic_land%d"
-	.byte 0x53, 0x59
-	.asciz "S_iconlist"
-	.byte 0x66
-	.asciz "ilename_1"
-	.byte 0x25, 0x73
-	.asciz ".tpl"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_mappoint"
-	.byte 0x6D, 0x61
-	.asciz "p_id"
+	.asciz "pic_land%d"
+	.asciz "SYS_iconlist"
+	.asciz "filename_1"
+	.asciz "%s.tpl"
+	.asciz "MNU_mappoint"
+	.asciz "map_id"
 	.byte 0x73, 0x66, 0x6C
 	.4byte 0x67310065
 	.asciz "flg1"
-	.byte 0x43, 0x4F, 0x4C
-	.asciz "6_FLG1_NO1"
+	.asciz "COL6_FLG1_NO1"
 	.asciz "COL6_FLG1"
-	.byte 0x43, 0x4F, 0x4C
-	.asciz "6_FLG1_NO2"
+	.asciz "COL6_FLG1_NO2"
 	.asciz "COL6_FLG2"
-	.byte 0x43, 0x4F, 0x4C
-	.asciz "6_FLG1_NO3"
-	.byte 0x71
-	.asciz "uest_FLG"
+	.asciz "COL6_FLG1_NO3"
+	.asciz "quest_FLG"
 	.byte 0x74, 0x79, 0x70
 	.4byte 0x65007069
 	.asciz "c_mapjump%d"
 	.asciz "pic_mine%d"
-	.byte 0x70
-	.asciz "ic_shop%d"
+	.asciz "pic_shop%d"
 	.asciz "pic_elevator%d"
 	.byte 0x6E, 0x70, 0x63
 	.4byte 0x5F696400
 	.asciz "pic_npc%d"
-	.byte 0x46, 0x4C
-	.asciz "D_npclist"
-	.byte 0x72, 0x6C
-	.asciz "t_lnd"
+	.asciz "FLD_npclist"
+	.asciz "rlt_lnd"
 	.asciz "pic_npc_b%d"
-	.byte 0x6D, 0x61
-	.asciz "rker"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_point%d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pop%d"
-	.byte 0x46
-	.asciz "LD_valpoplist"
-	.byte 0x69, 0x74
-	.asciz "m1ID"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_val%d"
-	.byte 0x70
-	.asciz "ic_gmk%d"
-	.byte 0x71, 0x75, 0x65
-	.asciz "st_no"
-	.byte 0x71, 0x73
-	.asciz "t_genre"
+	.asciz "marker"
+	.asciz "pic_point%d"
+	.asciz "pic_pop%d"
+	.asciz "FLD_valpoplist"
+	.asciz "itm1ID"
+	.asciz "pic_val%d"
+	.asciz "pic_gmk%d"
+	.asciz "quest_no"
+	.asciz "qst_genre"
 	.asciz "relate_no"
-	.byte 0x73, 0x63
-	.asciz "markerlist"
+	.asciz "scmarkerlist"
 	.byte 0x6D
 	.4byte 0x61700070
 	.asciz "ic_attr%d"
 	.asciz "pic_scene"
 	.asciz "pic_cam"
 	.asciz "pic_pc"
-	.byte 0x70
-	.asciz "ic_map"
-	.byte 0x6E
-	.asciz "ul_f%02d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_obj00"
+	.asciz "pic_map"
+	.asciz "nul_f%02d"
+	.asciz "pic_obj00"
 	.asciz "mf03_map01_bg.brlyt"
-	.byte 0x73
-	.asciz "flag"
+	.asciz "sflag"
 	.byte 0x71, 0x66, 0x6C
 	.4byte 0x61673100
 	.asciz "val1"
@@ -10457,8 +9390,7 @@ lbl_80507540:
 	.asciz "mapimg1"
 	.asciz "mapimg2"
 	.asciz "/menu/tpl/%s"
-	.byte 0x2F, 0x6D, 0x65
-	.asciz "nu/FloorMap.arc"
+	.asciz "/menu/FloorMap.arc"
 	.asciz "/common/jp/bdat_map.bin"
 	.asciz "MNU_sysmes"
 	.asciz "minimaplist0101"
@@ -10518,17 +9450,13 @@ lbl_80507C58:
 	.byte 0x6E
 	.4byte 0x616D6500
 	.asciz "txt_titlemes"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_kyeassign"
+	.asciz "MNU_kyeassign"
 	.byte 0x68
 	.4byte 0x656C7000
 	.asciz "txt_sysmes00"
-	.byte 0x66, 0x69, 0x6C
-	.asciz "eID_2"
-	.byte 0x66, 0x69
-	.asciz "leID_1"
-	.byte 0x70
-	.asciz "ic_btn00"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "pic_btn00"
 	.asciz "txt_sysmes01"
 	.asciz "pic_btn01"
 	.asciz "CMenuCollepedia"
@@ -10569,16 +9497,13 @@ lbl_80507D78:
 	# ROM: 0x503E78
 	.asciz "mf00_reg00_curs09.brlyt"
 	.asciz "mf00_reg00_curs09_roop.brlan"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pgarw_r"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pgarw_l"
+	.asciz "pic_pgarw_r"
+	.asciz "pic_pgarw_l"
 	.asciz "mf70_cf60_syswin12.brlyt"
 	.asciz "mf70_cf60_syswin12_in.brlan"
 	.asciz "txt_sysmes03_00"
 	.asciz "txt_sysmes04_00"
-	.byte 0x4D, 0x4E
-	.asciz "U_collect"
+	.asciz "MNU_collect"
 	.byte 0x6E, 0x61
 	.4byte 0x6D650074
 	.asciz "xt_sysmes02"
@@ -10590,40 +9515,33 @@ lbl_80507D78:
 	.byte 0x68, 0x65
 	.4byte 0x6C700074
 	.asciz "xt_close00"
-	.byte 0x66
-	.asciz "ileID_2"
+	.asciz "fileID_2"
 	.asciz "fileID_1"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_btn00"
+	.asciz "pic_btn00"
 	.asciz "txt_sysmes01"
 	.asciz "pic_btnbs01"
 	.asciz "pic_icon01"
 	.asciz "txt_slct%02d"
 	.asciz "nul_proportion"
 	.asciz "mapID"
-	.byte 0x63, 0x61, 0x74
-	.asciz "egory"
+	.asciz "category"
 	.byte 0x69, 0x6E
 	.4byte 0x64657800
 	.asciz "type"
-	.byte 0x69, 0x63, 0x6F
-	.asciz "n_base"
+	.asciz "icon_base"
 	.asciz "comment"
 	.byte 0x69
 	.4byte 0x636F6E00
 	.asciz "/menu/Collepedia.arc"
-	.byte 0x2F, 0x6D, 0x65
-	.asciz "nu/tpl/ItemIcon.arc"
+	.asciz "/menu/tpl/ItemIcon.arc"
 	.asciz "common/jp/bdat_item.bin"
 	.asciz "snd/adx/j01.adx"
 	.asciz "itemID"
-	.byte 0x73
-	.asciz "nd/adx/j02.adx"
+	.asciz "snd/adx/j02.adx"
 	.asciz "mf55_sys01_icbsno00.tpl"
 	.asciz "mf55_sys01_icbsof00.tpl"
 	.asciz "mf55_sys01_icbs00.tpl"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_btnbs%02d"
+	.asciz "pic_btnbs%02d"
 	.asciz "mf00_com00_dmy.tpl"
 	.asciz "pic_icon%02d"
 	.asciz "txt_pg00"
@@ -10633,30 +9551,24 @@ lbl_80507D78:
 	.4byte 0x25730074
 	.asciz "xt_cmp"
 	.asciz "txt_ct%02d"
-	.byte 0x6E, 0x75
-	.asciz "l_icon%02d"
-	.byte 0x70
-	.asciz "ic_cmpbs%02d"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_compall"
+	.asciz "nul_icon%02d"
+	.asciz "pic_cmpbs%02d"
+	.asciz "nul_compall"
 	.asciz "txt_name"
 	.asciz "txt_comment"
 	.asciz "pic_pghole%02d"
 	.asciz "txt_pg01"
-	.byte 0x43, 0x43
-	.asciz "ollepedia"
+	.asciz "CCollepedia"
 	.byte 0x61, 0x72
 	.4byte 0x63006D66
 	.asciz "55_sys01_cl00.brlyt"
 	.asciz "mf55_sys01_cl00_in.brlan"
-	.byte 0x6D, 0x66, 0x35
-	.asciz "5_sys01_cl00_in_info.brlan"
+	.asciz "mf55_sys01_cl00_in_info.brlan"
 	.asciz "mf55_sys01_cl00_compall.brlan"
 	.asciz "txt_cmptit"
 	.asciz "CCollepediaTex"
 	.asciz "MNU_item_mes_b"
-	.byte 0x4D, 0x4E
-	.asciz "U_col"
+	.asciz "MNU_col"
 	.balign 4
 	.4byte 0
 	.asciz "CMenuKizunagram"
@@ -10685,28 +9597,20 @@ lbl_80508140:
 lbl_805081A8:
 	# ROM: 0x5042A8
 	.asciz "mf40_kiz_rdr.brlyt"
-	.byte 0x77
-	.asciz "in_rdr01"
-	.byte 0x77, 0x69, 0x6E
-	.asciz "_rdr00"
+	.asciz "win_rdr01"
+	.asciz "win_rdr00"
 	.asciz "mf00_reg00_curs04.brlyt"
 	.asciz "mf00_reg00_curs04_roop.brlan"
 	.asciz "mf40_kiz_line.brlyt"
 	.asciz "mf40_kiz_line_scale1.brlan"
-	.byte 0x6E
-	.asciz "ul_all"
-	.byte 0x70
-	.asciz "ic_bg"
-	.byte 0x66, 0x61
-	.asciz "ce_icon"
+	.asciz "nul_all"
+	.asciz "pic_bg"
+	.asciz "face_icon"
 	.asciz "nul_scroll"
-	.byte 0x72
-	.asciz "lt_posX"
+	.asciz "rlt_posX"
 	.asciz "rlt_posY"
-	.byte 0x72, 0x6C, 0x74
-	.asciz "_meet"
-	.byte 0x72, 0x6C
-	.asciz "t_face"
+	.asciz "rlt_meet"
+	.asciz "rlt_face"
 	.balign 4
 	.asciz "rlt_texture"
 	.4byte 0x25730070
@@ -10719,8 +9623,7 @@ lbl_805081A8:
 	.asciz "mf40_kiz_pc00.tpl"
 	.asciz "mf40_kiz_pc01.tpl"
 	.asciz "pic_pc"
-	.byte 0x70, 0x63, 0x5F
-	.asciz "map%02d"
+	.asciz "pc_map%02d"
 	.asciz "mapicon_%02d"
 	.asciz "txt_area01_00"
 	.asciz "txt_area02_00"
@@ -10747,13 +9650,10 @@ lbl_805081A8:
 	.asciz "txt_area03_00l"
 	.asciz "txt_area04_00l"
 	.asciz "txt_area05_00l"
-	.byte 0x72
-	.asciz "lt_lnd"
-	.byte 0x6C
-	.asciz "andmarklist"
+	.asciz "rlt_lnd"
+	.asciz "landmarklist"
 	.asciz "mapID"
-	.byte 0x4D, 0x4E
-	.asciz "U_relate"
+	.asciz "MNU_relate"
 	.byte 0x6E, 0x61, 0x6D
 	.4byte 0x65007478
 	.asciz "t_area%02d_00"
@@ -10764,19 +9664,15 @@ lbl_805081A8:
 	.asciz "mf40_kiz_pclin_e.tpl"
 	.asciz "mf40_kiz_pclin_d.tpl"
 	.asciz "mf40_kiz_pclin_c.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_pclin_b.tpl"
+	.asciz "mf40_kiz_pclin_b.tpl"
 	.asciz "mf40_kiz_pclin_a.tpl"
-	.byte 0x70
-	.asciz "ic_est%02d_m%02d"
+	.asciz "pic_est%02d_m%02d"
 	.asciz "txt_relate01"
-	.byte 0x4A, 0x4E
-	.asciz "L_relatelist"
+	.asciz "JNL_relatelist"
 	.byte 0x70, 0x61, 0x69
 	.4byte 0x6E310070
 	.asciz "ain_txt1"
-	.byte 0x70, 0x61, 0x69
-	.asciz "n_txt2"
+	.asciz "pain_txt2"
 	.asciz "caption%d"
 	.byte 0x25, 0x73, 0x75
 	.4byte 0x0025736F
@@ -10789,8 +9685,7 @@ lbl_805081A8:
 	.asciz "txt_relate%02dr"
 	.asciz "txt_relate%02dl"
 	.asciz "txt_relate07"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_000line_e00.tpl"
+	.asciz "mf40_kiz_000line_e00.tpl"
 	.asciz "txt_relate13"
 	.asciz "txt_relate05"
 	.asciz "mf40_kiz_018line_e00.tpl"
@@ -10802,79 +9697,64 @@ lbl_805081A8:
 	.asciz "mf40_kiz_135line_e00.tpl"
 	.asciz "txt_relate15"
 	.asciz "txt_relate04"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_162line_e00.tpl"
+	.asciz "mf40_kiz_162line_e00.tpl"
 	.byte 0x6E, 0x6F
 	.4byte 0x6E65006D
 	.asciz "f40_kiz_000line_d00.tpl"
 	.asciz "mf40_kiz_018line_d00.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_045line_d00.tpl"
+	.asciz "mf40_kiz_045line_d00.tpl"
 	.asciz "mf40_kiz_090line_d00.tpl"
 	.asciz "mf40_kiz_135line_d00.tpl"
 	.asciz "mf40_kiz_162line_d00.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_000line_c00.tpl"
+	.asciz "mf40_kiz_000line_c00.tpl"
 	.asciz "mf40_kiz_018line_c00.tpl"
 	.asciz "mf40_kiz_045line_c00.tpl"
 	.asciz "mf40_kiz_090line_c00.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_135line_c00.tpl"
+	.asciz "mf40_kiz_135line_c00.tpl"
 	.asciz "mf40_kiz_162line_c00.tpl"
 	.asciz "mf40_kiz_000line_b00.tpl"
 	.asciz "mf40_kiz_018line_b00.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_045line_b00.tpl"
+	.asciz "mf40_kiz_045line_b00.tpl"
 	.asciz "mf40_kiz_090line_b00.tpl"
 	.asciz "mf40_kiz_135line_b00.tpl"
 	.asciz "mf40_kiz_162line_b00.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_000line_a00.tpl"
+	.asciz "mf40_kiz_000line_a00.tpl"
 	.asciz "mf40_kiz_018line_a00.tpl"
 	.asciz "mf40_kiz_045line_a00.tpl"
 	.asciz "mf40_kiz_090line_a00.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_135line_a00.tpl"
+	.asciz "mf40_kiz_135line_a00.tpl"
 	.asciz "mf40_kiz_162line_a00.tpl"
 	.asciz "mf40_kiz_000line_e%02d.tpl"
 	.asciz "mf40_kiz_018line_e%02d.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_045line_e%02d.tpl"
+	.asciz "mf40_kiz_045line_e%02d.tpl"
 	.asciz "mf40_kiz_090line_e%02d.tpl"
 	.asciz "mf40_kiz_135line_e%02d.tpl"
 	.asciz "mf40_kiz_162line_e%02d.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_000line_d%02d.tpl"
+	.asciz "mf40_kiz_000line_d%02d.tpl"
 	.asciz "mf40_kiz_018line_d%02d.tpl"
 	.asciz "mf40_kiz_045line_d%02d.tpl"
 	.asciz "mf40_kiz_090line_d%02d.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_135line_d%02d.tpl"
+	.asciz "mf40_kiz_135line_d%02d.tpl"
 	.asciz "mf40_kiz_162line_d%02d.tpl"
 	.asciz "mf40_kiz_000line_c%02d.tpl"
 	.asciz "mf40_kiz_018line_c%02d.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_045line_c%02d.tpl"
+	.asciz "mf40_kiz_045line_c%02d.tpl"
 	.asciz "mf40_kiz_090line_c%02d.tpl"
 	.asciz "mf40_kiz_135line_c%02d.tpl"
 	.asciz "mf40_kiz_162line_c%02d.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_000line_b%02d.tpl"
+	.asciz "mf40_kiz_000line_b%02d.tpl"
 	.asciz "mf40_kiz_018line_b%02d.tpl"
 	.asciz "mf40_kiz_045line_b%02d.tpl"
 	.asciz "mf40_kiz_090line_b%02d.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_135line_b%02d.tpl"
+	.asciz "mf40_kiz_135line_b%02d.tpl"
 	.asciz "mf40_kiz_162line_b%02d.tpl"
 	.asciz "mf40_kiz_000line_a%02d.tpl"
 	.asciz "mf40_kiz_018line_a%02d.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_045line_a%02d.tpl"
+	.asciz "mf40_kiz_045line_a%02d.tpl"
 	.asciz "mf40_kiz_090line_a%02d.tpl"
 	.asciz "mf40_kiz_135line_a%02d.tpl"
 	.asciz "mf40_kiz_162line_a%02d.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_win.brlyt"
+	.asciz "mf40_kiz_win.brlyt"
 	.asciz "mf40_kiz_win_in.brlan"
 	.asciz "mf40_kiz_win_info_in.brlan"
 	.asciz "txt_info03_00"
@@ -10897,23 +9777,16 @@ lbl_805081A8:
 	.asciz "txt_info02"
 	.asciz "pic_npcicon"
 	.asciz "mf00_com12_face_area01.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_com12_face_area02.tpl"
+	.asciz "mf00_com12_face_area02.tpl"
 	.asciz "mf00_com12_face_area03.tpl"
 	.asciz "mf00_com12_face_area04.tpl"
 	.asciz "mf00_com12_face_area05.tpl"
-	.byte 0x72, 0x6C, 0x74
-	.asciz "_age"
-	.byte 0x72, 0x6C, 0x74
-	.asciz "_job"
-	.byte 0x72, 0x61, 0x6E
-	.asciz "ge_s"
-	.byte 0x72, 0x61, 0x6E
-	.asciz "ge_e"
-	.byte 0x2F, 0x6D, 0x65
-	.asciz "nu/tpl/KizunaFaceData.arc"
-	.byte 0x2F, 0x6D
-	.asciz "enu/Kizunagram.arc"
+	.asciz "rlt_age"
+	.asciz "rlt_job"
+	.asciz "range_s"
+	.asciz "range_e"
+	.asciz "/menu/tpl/KizunaFaceData.arc"
+	.asciz "/menu/Kizunagram.arc"
 	.asciz "CKizunagram"
 	.byte 0x61
 	.4byte 0x72630043
@@ -10930,57 +9803,45 @@ lbl_80508F00:
 	# ROM: 0x505000
 	.asciz "mf00_reg00_curs04.brlyt"
 	.asciz "mf00_reg00_curs04_roop.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs04_on.brlan"
+	.asciz "mf00_reg00_curs04_on.brlan"
 	.asciz "nul_curs02"
-	.byte 0x6E
-	.asciz "ul_curs03"
-	.byte 0x2F, 0x6D
-	.asciz "enu/PcKizunagram.arc"
-	.byte 0x4A, 0x4E, 0x4C
-	.asciz "_PCrelatelist"
+	.asciz "nul_curs03"
+	.asciz "/menu/PcKizunagram.arc"
+	.asciz "JNL_PCrelatelist"
 	.byte 0x70, 0x61
 	.4byte 0x696E3100
 	.asciz "on_pain%d"
-	.byte 0x4A, 0x4E
-	.asciz "L_PClinelist"
+	.asciz "JNL_PClinelist"
 	.byte 0x70, 0x61, 0x69
 	.4byte 0x6E32006D
 	.asciz "f40_kiz_pclin_n.tpl"
 	.asciz "icon_pain"
 	.asciz "txt_pain"
-	.byte 0x66
-	.asciz "lg_s1"
+	.asciz "flg_s1"
 	.asciz "mf40_kiz_pclin_e.tpl"
 	.asciz "mf40_kiz_pclin_d.tpl"
 	.asciz "mf40_kiz_pclin_c.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_pclin_b.tpl"
+	.asciz "mf40_kiz_pclin_b.tpl"
 	.asciz "mf40_kiz_pclin_a.tpl"
 	.asciz "mf40_kiz_pcicon_e00.tpl"
 	.asciz "mf40_kiz_pcicon_d00.tpl"
 	.asciz "mf40_kiz_pcicon_c00.tpl"
 	.asciz "mf40_kiz_pcicon_b00.tpl"
 	.asciz "mf40_kiz_pcicon_a00.tpl"
-	.byte 0x6E
-	.asciz "ul_proportion"
+	.asciz "nul_proportion"
 	.asciz "mf40_kiz_pcicon_e%02d.tpl"
 	.asciz "mf40_kiz_pcicon_d%02d.tpl"
 	.asciz "mf40_kiz_pcicon_c%02d.tpl"
 	.asciz "mf40_kiz_pcicon_b%02d.tpl"
 	.asciz "mf40_kiz_pcicon_a%02d.tpl"
 	.asciz "flg_e1"
-	.byte 0x66
-	.asciz "lg_s2"
-	.byte 0x66, 0x6C
-	.asciz "g_e2"
-	.byte 0x43, 0x50, 0x63
-	.asciz "Kizunagram"
+	.asciz "flg_s2"
+	.asciz "flg_e2"
+	.asciz "CPcKizunagram"
 	.byte 0x61
 	.4byte 0x7263006D
 	.asciz "f40_kiz_pcline.brlyt"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_pcline_in.brlan"
+	.asciz "mf40_kiz_pcline_in.brlan"
 	.balign 4
 	.4byte 0
 
@@ -11049,22 +9910,17 @@ lbl_805092B8:
 	# ROM: 0x5053B8
 	.asciz "mf00_reg00_curs05.brlyt"
 	.asciz "mf00_reg00_curs05_roop.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs05_on.brlan"
+	.asciz "mf00_reg00_curs05_on.brlan"
 	.asciz "mf00_reg00_curs01.brlyt"
 	.asciz "mf00_reg00_curs01_roop.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs01_on.brlan"
+	.asciz "mf00_reg00_curs01_on.brlan"
 	.asciz "nul_00"
-	.byte 0x70
-	.asciz "ic_arrow01_l01"
-	.byte 0x70
-	.asciz "ic_arrow01_r01"
+	.asciz "pic_arrow01_l01"
+	.asciz "pic_arrow01_r01"
 	.asciz "mf20_skl02_inf.brlyt"
 	.asciz "mf20_skl02_inf_in.brlan"
 	.asciz "mf20_skl02_inf_info_in.brlan"
-	.byte 0x6D, 0x66, 0x32
-	.asciz "0_skl02_inf_change.brlan"
+	.asciz "mf20_skl02_inf_change.brlan"
 	.asciz "txt_value01"
 	.asciz "txt_value02"
 	.asciz "txt_value02_01"
@@ -11072,24 +9928,19 @@ lbl_805092B8:
 	.asciz "txt_value04"
 	.asciz "txt_value05"
 	.asciz "txt_exp06"
-	.byte 0x00, 0x74
-	.asciz "xt_exp07"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_sort"
-	.byte 0x4D, 0x4E
-	.asciz "U_kyeassign"
+	.byte 0x00
+	.asciz "txt_exp07"
+	.asciz "nul_sort"
+	.asciz "MNU_kyeassign"
 	.asciz "help"
 	.asciz "txt_soat01"
 	.asciz "fileID_2"
-	.byte 0x66, 0x69, 0x6C
-	.asciz "eID_1"
+	.asciz "fileID_1"
 	.asciz "pic_soatbtn"
 	.asciz "pic_pcbs01"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pcbs02"
+	.asciz "pic_pcbs02"
 	.asciz "tag_icon"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_face02"
+	.asciz "pic_face02"
 	.asciz "pic_face01"
 	.byte 0x6E
 	.4byte 0x616D6500
@@ -11100,8 +9951,7 @@ lbl_805092B8:
 	.byte 0x73, 0x6B, 0x69
 	.4byte 0x6C6C0074
 	.asciz "xt_exp03"
-	.byte 0x76, 0x61, 0x6C
-	.asciz "_type"
+	.asciz "val_type"
 	.byte 0x76, 0x61
 	.4byte 0x6C256400
 	.asciz "txt_exp04"
@@ -11115,34 +9965,24 @@ lbl_805092B8:
 	.4byte 0x6C320076
 	.4byte 0x616C3100
 	.asciz "time"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_pcicon_e00.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_pcicon_d00.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_pcicon_c00.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_pcicon_b00.tpl"
-	.byte 0x6D, 0x66, 0x34
-	.asciz "0_kiz_pcicon_a00.tpl"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_kizicon"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_chsele"
+	.asciz "mf40_kiz_pcicon_e00.tpl"
+	.asciz "mf40_kiz_pcicon_d00.tpl"
+	.asciz "mf40_kiz_pcicon_c00.tpl"
+	.asciz "mf40_kiz_pcicon_b00.tpl"
+	.asciz "mf40_kiz_pcicon_a00.tpl"
+	.asciz "pic_kizicon"
+	.asciz "nul_chsele"
 	.asciz "point_SP"
 	.byte 0x25, 0x64, 0x25
 	.4byte 0x73256400
 	.asciz "txt_unt01"
 	.asciz "txt_hd01"
-	.byte 0x25
-	.asciz "s%s%s%s"
+	.asciz "%s%s%s%s"
 	.asciz "point_PP"
-	.byte 0x25, 0x64, 0x25
-	.asciz "s%d%s"
+	.asciz "%d%s%d%s"
 	.asciz "txt_hd02"
 	.asciz "txt_unt02"
-	.byte 0x6D, 0x66, 0x32
-	.asciz "0_skl00_slf.brlyt"
+	.asciz "mf20_skl00_slf.brlyt"
 	.asciz "mf20_skl00_slf_in.brlan"
 	.asciz "mf20_skl00_slf_fade_out.brlan"
 	.asciz "mf20_skl00_slf_roop.brlan"
@@ -11150,127 +9990,91 @@ lbl_805092B8:
 	.asciz "mf20_skl01_frnd_fade_in.brlan"
 	.asciz "mf20_skl03_msk.brlyt"
 	.asciz "mf20_skl03_msk_full.brlan"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_icbs_sl%02d_%02d"
+	.asciz "pic_icbs_sl%02d_%02d"
 	.asciz "pic_lock00"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_lock01"
+	.asciz "pic_lock01"
 	.asciz "pic_lock02"
-	.byte 0x70
-	.asciz "ic_lock03"
+	.asciz "pic_lock03"
 	.asciz "pic_lock04"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_line_pt01"
-	.byte 0x6E
-	.asciz "ul_fc_slpt"
-	.byte 0x70
-	.asciz "ic_fcbs_sl00"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_proportion"
+	.asciz "pic_line_pt01"
+	.asciz "nul_fc_slpt"
+	.asciz "pic_fcbs_sl00"
+	.asciz "nul_proportion"
 	.asciz "icon_type2"
-	.byte 0x70
-	.asciz "ic_fc_sl00"
-	.byte 0x70
-	.asciz "ic_fc_sl02"
-	.byte 0x70
-	.asciz "ic_fc_sl01"
+	.asciz "pic_fc_sl00"
+	.asciz "pic_fc_sl02"
+	.asciz "pic_fc_sl01"
 	.asciz "mf20_skl01_pc%02dcat%02d.tpl"
 	.asciz "pic_cat%02d"
 	.asciz "flag"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_cat04"
+	.asciz "nul_cat04"
 	.asciz "mf20_skl00_plbs02.tpl"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_bis02"
+	.asciz "pic_bis02"
 	.asciz "mf20_skl00_plbs04.tpl"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_cat05"
+	.asciz "nul_cat05"
 	.asciz "mf20_skl00_plbs03.tpl"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_bis03"
+	.asciz "pic_bis03"
 	.asciz "mf20_skl00_plbs05.tpl"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_ef%02d_00"
-	.byte 0x70
-	.asciz "ic_ef%02d_01"
+	.asciz "pic_ef%02d_00"
+	.asciz "pic_ef%02d_01"
 	.byte 0x73, 0x68, 0x61
 	.4byte 0x70650074
 	.asciz "arget"
 	.asciz "mf20_skl02_icnbs_c00.tpl"
 	.asciz "mf20_skl02_icnbs_c01.tpl"
 	.asciz "mf20_skl02_icnbs_c02.tpl"
-	.byte 0x6D, 0x66, 0x32
-	.asciz "0_skl02_icnbs_c03.tpl"
+	.asciz "mf20_skl02_icnbs_c03.tpl"
 	.asciz "mf20_skl02_icnbs_c04.tpl"
 	.asciz "mf20_skl02_icnbs_a00.tpl"
 	.asciz "mf20_skl02_icnbs_a01.tpl"
-	.byte 0x6D, 0x66, 0x32
-	.asciz "0_skl02_icnbs_a02.tpl"
+	.asciz "mf20_skl02_icnbs_a02.tpl"
 	.asciz "mf20_skl02_icnbs_a03.tpl"
 	.asciz "mf20_skl02_icnbs_a04.tpl"
 	.asciz "mf20_skl02_icnbs_b00.tpl"
-	.byte 0x6D, 0x66, 0x32
-	.asciz "0_skl02_icnbs_b01.tpl"
+	.asciz "mf20_skl02_icnbs_b01.tpl"
 	.asciz "mf20_skl02_icnbs_b02.tpl"
 	.asciz "mf20_skl02_icnbs_b03.tpl"
 	.asciz "mf20_skl02_icnbs_b04.tpl"
 	.byte 0x69, 0x63, 0x6F
 	.4byte 0x6E007069
 	.asciz "c_ic_sl%02d_%02d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_msk_sl%02d_%02d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_curs_sl%02d_%02d"
-	.byte 0x72, 0x76
-	.asciz "s_effect%02d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_fc_pt00"
-	.byte 0x6D, 0x66, 0x32
-	.asciz "0_skl02_lck00.tpl"
+	.asciz "pic_msk_sl%02d_%02d"
+	.asciz "pic_curs_sl%02d_%02d"
+	.asciz "rvs_effect%02d"
+	.asciz "pic_fc_pt00"
+	.asciz "mf20_skl02_lck00.tpl"
 	.asciz "mf20_skl02_lck01.tpl"
 	.asciz "mf20_skl02_lck02.tpl"
 	.asciz "mf20_skl02_lck03.tpl"
-	.byte 0x6D, 0x66, 0x32
-	.asciz "0_skl02_lck04.tpl"
+	.asciz "mf20_skl02_lck04.tpl"
 	.asciz "mf20_skl00_curs03.tpl"
 	.asciz "mf20_skl00_curs01.tpl"
 	.asciz "mf20_skl00_curs02.tpl"
 	.asciz "nul_pt01"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_pt02"
-	.byte 0x6E, 0x75
-	.asciz "l_pt03"
-	.byte 0x6E
-	.asciz "ul_pt04"
+	.asciz "nul_pt02"
+	.asciz "nul_pt03"
+	.asciz "nul_pt04"
 	.asciz "nul_pt05"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_pt06"
-	.byte 0x6E, 0x75
-	.asciz "l_pt%02d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_fc_pt%02d"
+	.asciz "nul_pt06"
+	.asciz "nul_pt%02d"
+	.asciz "pic_fc_pt%02d"
 	.asciz "mf20_skl02_icnbs_e00.tpl"
 	.asciz "mf20_skl02_icnbs_e01.tpl"
-	.byte 0x6D, 0x66, 0x32
-	.asciz "0_skl02_icnbs_e02.tpl"
+	.asciz "mf20_skl02_icnbs_e02.tpl"
 	.asciz "mf20_skl02_icnbs_e03.tpl"
 	.asciz "mf20_skl02_icnbs_e04.tpl"
 	.asciz "mf00_com00_dmy.tpl"
 	.asciz "mf20_skl02_icnbs_d00.tpl"
 	.asciz "mf20_skl02_icnbs_d01.tpl"
-	.byte 0x6D, 0x66, 0x32
-	.asciz "0_skl02_icnbs_d02.tpl"
+	.asciz "mf20_skl02_icnbs_d02.tpl"
 	.asciz "mf20_skl02_icnbs_d03.tpl"
 	.asciz "mf20_skl02_icnbs_d04.tpl"
 	.asciz "pic_icbs_pt%02d_%02d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_ic_pt%02d_%02d"
+	.asciz "pic_ic_pt%02d_%02d"
 	.asciz "pic_line_pt%02d"
 	.asciz "arm_type"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_all"
-	.byte 0x2F, 0x6D, 0x65
-	.asciz "nu/PassiveSkill.arc"
+	.asciz "nul_all"
+	.asciz "/menu/PassiveSkill.arc"
 	.asciz "common/jp/bdat_psv.bin"
 	.asciz "CPassiveSkill"
 	.byte 0x61, 0x72, 0x63
@@ -11278,12 +10082,9 @@ lbl_805092B8:
 	.asciz "_PSskil"
 	.asciz "MNU_PSlink"
 	.asciz "MNU_PSset"
-	.byte 0x42, 0x54, 0x4C
-	.asciz "_PSVskill"
-	.byte 0x42, 0x54
-	.asciz "L_PSVlink"
-	.byte 0x42, 0x54
-	.asciz "L_PSSlist"
+	.asciz "BTL_PSVskill"
+	.asciz "BTL_PSVlink"
+	.asciz "BTL_PSSlist"
 	.balign 4
 	.4byte 0
 	.asciz "cf::CfGimmickEne"
@@ -11349,44 +10150,34 @@ lbl_80509E50:
 	.byte 0x69
 	.4byte 0x6E666F00
 	.asciz "genre"
-	.byte 0x63, 0x6F
-	.asciz "m1_terms1"
-	.byte 0x63, 0x6F
-	.asciz "m1_terms2"
+	.asciz "com1_terms1"
+	.asciz "com1_terms2"
 	.byte 0x74, 0x69
 	.4byte 0x746C6500
 	.asciz "comment2"
-	.byte 0x63, 0x6F, 0x6D
-	.asciz "ment1"
-	.byte 0x2F, 0x6D
-	.asciz "enu/PlayAwardList.arc"
-	.byte 0x2F, 0x63
-	.asciz "ommon/jp/bdat_award.bin"
+	.asciz "comment1"
+	.asciz "/menu/PlayAwardList.arc"
+	.asciz "/common/jp/bdat_award.bin"
 	.asciz "txt_tit%02d"
 	.asciz "txt_exp%02d"
 	.asciz "nul_proportion"
 	.asciz "txt_cat00"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_kyeassign"
+	.asciz "MNU_kyeassign"
 	.byte 0x68
 	.4byte 0x656C7000
 	.asciz "fileID_2"
-	.byte 0x66, 0x69, 0x6C
-	.asciz "eID_1"
+	.asciz "fileID_1"
 	.asciz "pic_soatbtn"
 	.asciz "txt_btn"
-	.byte 0x4D, 0x4E
-	.asciz "U_battle"
+	.asciz "MNU_battle"
 	.byte 0x6E, 0x61, 0x6D
 	.4byte 0x65007478
 	.asciz "t_btntit"
-	.byte 0x43, 0x50, 0x6C
-	.asciz "ayAwardList"
+	.asciz "CPlayAwardList"
 	.4byte 0x61726300
 	.asciz "mf31_award00.brlyt"
 	.asciz "mf31_award00_in.brlan"
-	.byte 0x6D, 0x66, 0x33
-	.asciz "1_award00_info_in.brlan"
+	.asciz "mf31_award00_info_in.brlan"
 	.asciz "txt_val01"
 	.asciz "txt_cat01"
 	.asciz "MNU_playaward"
@@ -11412,10 +10203,8 @@ lbl_8050A018:
 	.byte 0x69
 	.4byte 0x6E666F00
 	.asciz "flag"
-	.byte 0x66, 0x72, 0x69
-	.asciz "endly"
-	.byte 0x63, 0x68
-	.asciz "ara_01"
+	.asciz "friendly"
+	.asciz "chara_01"
 	.asciz "chara_02"
 	.asciz "mapID"
 	.byte 0x6E, 0x61
@@ -11423,17 +10212,12 @@ lbl_8050A018:
 	.4byte 0x69737400
 	.asciz "title"
 	.asciz "mf31_kiztalk_face00.tpl"
-	.byte 0x74, 0x61
-	.asciz "g_icon"
-	.byte 0x2F
-	.asciz "menu/KizunaTalkList.arc"
+	.asciz "tag_icon"
+	.asciz "/menu/KizunaTalkList.arc"
 	.asciz "common/jp/bdat_kzn.bin"
-	.byte 0x70
-	.asciz "ic_pcbs%02d_00"
-	.byte 0x70
-	.asciz "ic_pcbs%02d_01"
-	.byte 0x70
-	.asciz "ic_chbx%02d"
+	.asciz "pic_pcbs%02d_00"
+	.asciz "pic_pcbs%02d_01"
+	.asciz "pic_chbx%02d"
 	.asciz "txt_tit%02d"
 	.asciz "txt_exp%02d"
 	.asciz "pic_pc%02d_00"
@@ -11446,10 +10230,8 @@ lbl_8050A018:
 	.asciz "mf40_kiz_pcicon_b00.tpl"
 	.asciz "mf40_kiz_pcicon_a00.tpl"
 	.asciz "pic_ch%02d"
-	.byte 0x6E
-	.asciz "ul_proportion"
-	.byte 0x43, 0x4B
-	.asciz "izunaTalkList"
+	.asciz "nul_proportion"
+	.asciz "CKizunaTalkList"
 	.byte 0x61, 0x72
 	.4byte 0x63006D66
 	.asciz "31_kiztalk00.brlyt"
@@ -11465,8 +10247,7 @@ lbl_8050A244:
 	# ROM: 0x506344
 	.asciz "/common/jp/bdat_mes.bin"
 	.asciz "help"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_buff"
+	.asciz "MNU_buff"
 	.balign 4
 	.4byte 0
 	.asciz "cf::ICamControlClassic"
@@ -11495,11 +10276,9 @@ lbl_8050A2F0:
 	.asciz "pic_kiz00"
 	.asciz "pic_kiz01"
 	.asciz "pic_ps00"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_ps01"
+	.asciz "pic_ps01"
 	.asciz "pic_at00"
-	.byte 0x70
-	.asciz "ic_at01"
+	.asciz "pic_at01"
 	.asciz "cf::CChainChance"
 	.balign 4
 	.4byte 0
@@ -11545,8 +10324,7 @@ lbl_8050A460:
 lbl_8050A4A8:
 	# ROM: 0x5065A8
 	.asciz "/menu/ScenarioLog.arc"
-	.byte 0x2F, 0x63
-	.asciz "ommon/jp/bdat_slog.bin"
+	.asciz "/common/jp/bdat_slog.bin"
 	.byte 0x66
 	.4byte 0x6C616700
 	.asciz "MNU_main"
@@ -11556,14 +10334,11 @@ lbl_8050A4A8:
 	.byte 0x68
 	.4byte 0x656C7000
 	.asciz "txt_sysmes01"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_kyeassign"
+	.asciz "MNU_kyeassign"
 	.asciz "txt_close00"
-	.byte 0x66
-	.asciz "ileID_2"
+	.asciz "fileID_2"
 	.asciz "fileID_1"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_btn00"
+	.asciz "pic_btn00"
 	.asciz "CSysWinScenarioLog"
 	.byte 0x61, 0x72
 	.4byte 0x63006D66
@@ -11628,8 +10403,7 @@ lbl_8050A608:
 lbl_8050A654:
 	# ROM: 0x506754
 	.asciz "attach"
-	.byte 0x65
-	.asciz "quip_pc%d"
+	.asciz "equip_pc%d"
 	.byte 0x70, 0x63
 	.4byte 0x25640061
 	.asciz "rm_type"
@@ -11641,23 +10415,15 @@ lbl_8050A654:
 	.4byte 0x6D650025
 	.4byte 0x73257300
 	.asciz "money"
-	.byte 0x72, 0x61
-	.asciz "nkType"
-	.byte 0x6A
-	.asciz "wl_slot"
+	.asciz "rankType"
+	.asciz "jwl_slot"
 	.asciz "category"
-	.byte 0x61, 0x74, 0x74
-	.asciz "_lev"
-	.byte 0x67, 0x72, 0x64
-	.asciz "_rate"
-	.byte 0x61, 0x72
-	.asciz "m_phy"
-	.byte 0x61, 0x72
-	.asciz "m_eth"
-	.byte 0x65, 0x76
-	.asciz "a_rate"
-	.byte 0x64
-	.asciz "mg_hi"
+	.asciz "att_lev"
+	.asciz "grd_rate"
+	.asciz "arm_phy"
+	.asciz "arm_eth"
+	.asciz "eva_rate"
+	.asciz "dmg_hi"
 	.byte 0x66, 0x6C
 	.4byte 0x6167006D
 	.asciz "f00_reg00_curs07.brlyt"
@@ -11668,22 +10434,16 @@ lbl_8050A654:
 	.asciz "pic_pgarw_r"
 	.asciz "pic_pgarw_l"
 	.asciz "/menu/EquipItemBox.arc"
-	.byte 0x2F
-	.asciz "menu/tpl/ItemIcon.arc"
-	.byte 0x63, 0x6F
-	.asciz "mmon/jp/bdat_mes.bin"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_inf"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_sort"
-	.byte 0x6E, 0x75
-	.asciz "l_proportion"
+	.asciz "/menu/tpl/ItemIcon.arc"
+	.asciz "common/jp/bdat_mes.bin"
+	.asciz "nul_inf"
+	.asciz "nul_sort"
+	.asciz "nul_proportion"
 	.byte 0x68, 0x65, 0x6C
 	.4byte 0x70006174
 	.asciz "r_type"
 	.asciz "mf00_com00_dmy.tpl"
-	.byte 0x69, 0x63
-	.asciz "on_base"
+	.asciz "icon_base"
 	.asciz "mf00_reg10_base21.tpl"
 	.asciz "mf00_reg10_base20.tpl"
 	.asciz "pic_btnbs%02d"
@@ -11697,37 +10457,28 @@ lbl_8050A654:
 	.asciz "mf00_reg00_eq01.tpl"
 	.asciz "mf00_reg00_eq00.tpl"
 	.asciz "mf00_reg00_eq03.tpl"
-	.byte 0x70
-	.asciz "ic_off%02d"
+	.asciz "pic_off%02d"
 	.asciz "txt_pg01"
 	.asciz "nul_pg"
-	.byte 0x70
-	.asciz "ic_pghole%02d"
+	.asciz "pic_pghole%02d"
 	.asciz "txt_pg00"
-	.byte 0x70
-	.asciz "ic_pghole_on"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_hole%02d"
+	.asciz "pic_pghole_on"
+	.asciz "pic_hole%02d"
 	.asciz "txt_name"
-	.byte 0x70
-	.asciz "ic_cat%02d"
+	.asciz "pic_cat%02d"
 	.asciz "txt_soat01"
 	.asciz "pic_tbbcon%02d"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_tbbcof%02d"
+	.asciz "pic_tbbcof%02d"
 	.asciz "mf00_reg20_cat00.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg20_cat07.tpl"
+	.asciz "mf00_reg20_cat07.tpl"
 	.asciz "mf00_reg20_cat01.tpl"
 	.asciz "mf00_reg20_cat02.tpl"
 	.asciz "mf00_reg20_cat03.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg20_cat04.tpl"
+	.asciz "mf00_reg20_cat04.tpl"
 	.asciz "mf00_reg20_cat05.tpl"
 	.asciz "mf00_reg20_cat06.tpl"
 	.asciz "mf00_reg20_cat09.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg20_cat10.tpl"
+	.asciz "mf00_reg20_cat10.tpl"
 	.asciz "mf00_reg20_cat11.tpl"
 	.asciz "mf00_reg20_cat08.tpl"
 	.asciz "pic_bxbco00"
@@ -11740,18 +10491,13 @@ lbl_8050A654:
 	.asciz "pic_bxbco07"
 	.asciz "pic_bxbco08"
 	.asciz "pic_hole01"
-	.byte 0x70
-	.asciz "ic_hole02"
+	.asciz "pic_hole02"
 	.asciz "pic_hole03"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_hole04"
+	.asciz "pic_hole04"
 	.asciz "pic_hole05"
-	.byte 0x70
-	.asciz "ic_hole06"
-	.byte 0x6E, 0x75
-	.asciz "l_para_01"
-	.byte 0x6E, 0x75
-	.asciz "l_para_50"
+	.asciz "pic_hole06"
+	.asciz "nul_para_01"
+	.asciz "nul_para_50"
 	.asciz "txt_para01"
 	.asciz "txt_para04"
 	.asciz "txt_para08"
@@ -11767,11 +10513,9 @@ lbl_8050A654:
 	.asciz "txt_value08"
 	.asciz "txt_value09"
 	.asciz "txt_value22"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_ethcol01"
+	.asciz "pic_ethcol01"
 	.asciz "pic_ethcol02"
-	.byte 0x70
-	.asciz "ic_ethcol03"
+	.asciz "pic_ethcol03"
 	.asciz "txt_eth01"
 	.asciz "txt_eth02"
 	.asciz "txt_eth03"
@@ -11782,33 +10526,26 @@ lbl_8050A654:
 	.asciz "txt_para51"
 	.asciz "txt_value50"
 	.asciz "txt_value51"
-	.byte 0x64, 0x6D, 0x67
-	.asciz "_low"
+	.asciz "dmg_low"
 	.byte 0x73, 0x70, 0x65
 	.4byte 0x65640025
 	.asciz "d%s%d"
-	.byte 0x25, 0x73
-	.asciz "%d%s"
+	.asciz "%s%d%s"
 	.byte 0x25, 0x64, 0x25
 	.4byte 0x73007063
 	.asciz "_arts"
-	.byte 0x72, 0x76
-	.asciz "s_type"
+	.asciz "rvs_type"
 	.byte 0x25
 	.4byte 0x64200074
 	.asciz "xt_para52"
 	.asciz "pic_ethcol%02d"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys00.tpl"
+	.asciz "mf00_reg30_crys00.tpl"
 	.asciz "mf00_reg30_crys01.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys02.tpl"
+	.asciz "mf00_reg30_crys02.tpl"
 	.asciz "mf00_reg30_crys03.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys04.tpl"
+	.asciz "mf00_reg30_crys04.tpl"
 	.asciz "mf00_reg30_crys05.tpl"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg30_crys06.tpl"
+	.asciz "mf00_reg30_crys06.tpl"
 	.asciz "txt_ethvalue%02d"
 	.asciz "txt_eth%02d"
 	.asciz "CEquipItemBox"
@@ -11817,15 +10554,11 @@ lbl_8050A654:
 	.asciz "02_eqbox.brlyt"
 	.asciz "mf02_eqbox_box_in.brlan"
 	.asciz "txt_soattit"
-	.byte 0x66
-	.asciz "ileID_2"
+	.asciz "fileID_2"
 	.asciz "fileID_1"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_kyeassign"
-	.byte 0x70
-	.asciz "ic_soatbtn"
-	.byte 0x70
-	.asciz "ic_pghole10"
+	.asciz "MNU_kyeassign"
+	.asciz "pic_soatbtn"
+	.asciz "pic_pghole10"
 	.asciz "pic_tbbcof01"
 	.asciz "txt_num01"
 	.asciz "CEquipItemBoxTex"
@@ -11852,20 +10585,15 @@ lbl_8050AE44:
 	# ROM: 0x506F44
 	.asciz "mf00_reg00_curs13.brlyt"
 	.asciz "mf00_reg00_curs13_roop.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs13_on.brlan"
+	.asciz "mf00_reg00_curs13_on.brlan"
 	.asciz "mf70_cf60_syswin16.brlyt"
 	.asciz "mf70_cf60_syswin16_in.brlan"
 	.asciz "txt_sysmes01"
-	.byte 0x2F, 0x6D
-	.asciz "enu/SaveLoad.arc"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_sysmes"
+	.asciz "/menu/SaveLoad.arc"
+	.asciz "MNU_sysmes"
 	.asciz "name"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_shbs%02d"
-	.byte 0x6E, 0x75
-	.asciz "l_proportion"
+	.asciz "pic_shbs%02d"
+	.asciz "nul_proportion"
 	.asciz "txt_lv%02d"
 	.asciz "%s%s"
 	.asciz "txt_lvpara%02d"
@@ -11873,12 +10601,10 @@ lbl_8050AE44:
 	.balign 4
 	.asciz "%s%s%s%s%s"
 	.asciz "txt_tm%02d_00"
-	.byte 0x25, 0x73, 0x25
-	.asciz "s%s%s%s%s%s%s%s%s"
+	.asciz "%s%s%s%s%s%s%s%s%s%s"
 	.asciz "txt_date%02d"
 	.asciz "txt_date%02d_01"
-	.byte 0x70
-	.asciz "ic_facebs%02d_%02d"
+	.asciz "pic_facebs%02d_%02d"
 	.asciz "txt_map%02d"
 	.asciz "mf95_sys10_new.tpl"
 	.asciz "pic_sh16_%02d"
@@ -11886,21 +10612,16 @@ lbl_8050AE44:
 	.byte 0x25, 0x30, 0x32
 	.4byte 0x64002530
 	.asciz "2d%s%02d"
-	.byte 0x25, 0x30, 0x34
-	.asciz "d%s%02d%s%02d"
-	.byte 0x74, 0x61
-	.asciz "g_icon"
-	.byte 0x70
-	.asciz "ic_face%02d_%02d"
-	.byte 0x6D, 0x66, 0x39
-	.asciz "5_sys10_sys.tpl"
+	.asciz "%04d%s%02d%s%02d"
+	.asciz "tag_icon"
+	.asciz "pic_face%02d_%02d"
+	.asciz "mf95_sys10_sys.tpl"
 	.asciz "CSaveLoad"
 	.byte 0x61, 0x72
 	.4byte 0x63006D66
 	.asciz "95_sys10_sv00.brlyt"
 	.asciz "mf95_sys10_sv00_in.brlan"
-	.byte 0x6D, 0x66, 0x39
-	.asciz "5_sys10_sv00_info_in.brlan"
+	.asciz "mf95_sys10_sv00_info_in.brlan"
 	.asciz "txt_lv01"
 	.asciz "txt_lvpara01"
 	.asciz "txt_lv02"
@@ -11948,22 +10669,17 @@ lbl_8050B258:
 	.4byte 0x61726300
 	.asciz "mf70_cf60_syswin15.brlyt"
 	.asciz "mf70_cf60_syswin15_in.brlan"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_party"
+	.asciz "MNU_party"
 	.byte 0x6E
 	.4byte 0x616D6500
 	.asciz "txt_sysmes01"
 	.asciz "txt_titlemes"
-	.byte 0x4D, 0x4E
-	.asciz "U_kyeassign"
+	.asciz "MNU_kyeassign"
 	.asciz "help"
 	.asciz "txt_close00"
-	.byte 0x66, 0x69, 0x6C
-	.asciz "eID_2"
-	.byte 0x66, 0x69
-	.asciz "leID_1"
-	.byte 0x70
-	.asciz "ic_btn00"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "pic_btn00"
 	.byte 0x74, 0x78, 0x74
 	.4byte 0x5F707400
 	.asciz "pic_btn01"
@@ -11971,14 +10687,10 @@ lbl_8050B258:
 	.asciz "pic_rs%02d_bs"
 	.asciz "pic_bm%02d_fc"
 	.asciz "pic_rs%02d_fc"
-	.byte 0x69, 0x63
-	.asciz "on_type2"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_gs%02d_bs"
-	.byte 0x70
-	.asciz "ic_gs%02d_fc"
-	.byte 0x72, 0x6C, 0x74
-	.asciz "_texture"
+	.asciz "icon_type2"
+	.asciz "pic_gs%02d_bs"
+	.asciz "pic_gs%02d_fc"
+	.asciz "rlt_texture"
 	.balign 4
 	.asciz "cf::CChainCombo"
 	.asciz "CSysWinSave"
@@ -12082,49 +10794,36 @@ lbl_8050B5C4:
 	.byte 0x25, 0x64
 	.4byte 0x00727673
 	.asciz "_type"
-	.byte 0x72, 0x76
-	.asciz "s_caption"
-	.byte 0x3C, 0x63
-	.asciz "ol=red>%s<col=def2>"
+	.asciz "rvs_caption"
+	.asciz "<col=red>%s<col=def2>"
 	.asciz "<col=red>%s%%<col=def2>"
 	.asciz "<col=red>%d%%<col=def2>"
 	.asciz "/menu/McGetItemBox.arc"
-	.byte 0x2F
-	.asciz "menu/tpl/ItemIcon.arc"
-	.byte 0x63, 0x6F
-	.asciz "mmon/jp/bdat_item.bin"
-	.byte 0x63, 0x6F
-	.asciz "mmon/jp/bdat_mes.bin"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_skill"
+	.asciz "/menu/tpl/ItemIcon.arc"
+	.asciz "common/jp/bdat_item.bin"
+	.asciz "common/jp/bdat_mes.bin"
+	.asciz "MNU_skill"
 	.byte 0x68
 	.4byte 0x656C7000
 	.asciz "atr_type"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_com00_dmy.tpl"
+	.asciz "mf00_com00_dmy.tpl"
 	.asciz "icon_base"
 	.asciz "pic_btnbs%02d"
 	.asciz "icon"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_icon%02d"
+	.asciz "pic_icon%02d"
 	.asciz "txt_num%02d"
-	.byte 0x00, 0x74
-	.asciz "xt_pg01"
+	.byte 0x00
+	.asciz "txt_pg01"
 	.asciz "nul_bxbc_c"
-	.byte 0x6E
-	.asciz "ul_bxbc_s"
-	.byte 0x6E, 0x75
-	.asciz "l_pg"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pghole%02d"
+	.asciz "nul_bxbc_s"
+	.asciz "nul_pg"
+	.asciz "pic_pghole%02d"
 	.asciz "txt_pg00"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pghole_on"
+	.asciz "pic_pghole_on"
 	.asciz "txt_name"
 	.asciz "txt_comment"
 	.asciz "nul_button00"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_proportion"
+	.asciz "nul_proportion"
 	.asciz "CMCGetItemBox"
 	.byte 0x61, 0x72
 	.4byte 0x63006D66
@@ -12132,16 +10831,12 @@ lbl_8050B5C4:
 	.asciz "mf10_cry01_box01_in.brlan"
 	.asciz "mf10_cry01_box01_info_in.brlan"
 	.asciz "txt_buyvalue02"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_sysmes"
+	.asciz "MNU_sysmes"
 	.asciz "txt_button00"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_pghole03"
-	.byte 0x43, 0x4D
-	.asciz "CGetItemBoxTex"
+	.asciz "pic_pghole03"
+	.asciz "CMCGetItemBoxTex"
 	.asciz "MNU_item_mes_a"
-	.byte 0x4D, 0x4E
-	.asciz "U_item_mes_b"
+	.asciz "MNU_item_mes_b"
 	.balign 4
 	.4byte 0
 	.asciz "CMenuTutorial"
@@ -12165,27 +10860,22 @@ lbl_8050B858:
 lbl_8050B884:
 	# ROM: 0x507984
 	.asciz "/menu/Tutorial.arc"
-	.byte 0x2F
-	.asciz "common/jp/bdat_ttrl.bin"
+	.asciz "/common/jp/bdat_ttrl.bin"
 	.asciz "/menu/tpl/c_ttrl_%03d.arc"
-	.byte 0x2F, 0x6D
-	.asciz "enu/tpl/r_ttrl_%03d.arc"
+	.asciz "/menu/tpl/r_ttrl_%03d.arc"
 	.asciz "MNU_ttrl"
 	.byte 0x70, 0x61, 0x67
 	.4byte 0x65007478
 	.asciz "t_pg00"
 	.asciz "txt_pg01"
 	.asciz "cttrl_i%03d_%02d.tpl"
-	.byte 0x72, 0x74, 0x74
-	.asciz "rl_i%03d_%02d.tpl"
+	.asciz "rttrl_i%03d_%02d.tpl"
 	.asciz "pic_cap"
-	.byte 0x43, 0x54
-	.asciz "utorial"
+	.asciz "CTutorial"
 	.4byte 0x61726300
 	.asciz "mf85_opt01_tut01.brlyt"
 	.asciz "mf85_opt01_tut01_in.brlan"
-	.byte 0x6D, 0x66, 0x38
-	.asciz "5_opt01_tut01_info_in.brlan"
+	.asciz "mf85_opt01_tut01_info_in.brlan"
 	.asciz "CTutorialTex"
 	.balign 4
 	.4byte 0
@@ -12206,13 +10896,11 @@ lbl_8050B9C8:
 	# ROM: 0x507AC8
 	.asciz "mf00_reg00_curs19.brlyt"
 	.asciz "mf00_reg00_curs19_roop.brlan"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_reg00_curs19_on.brlan"
+	.asciz "mf00_reg00_curs19_on.brlan"
 	.asciz "pic_arw00_l01"
 	.asciz "pic_arw00_r01"
 	.asciz "/menu/Option.arc"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_main"
+	.asciz "MNU_main"
 	.byte 0x6E, 0x61
 	.4byte 0x6D650070
 	.asciz "ic_cat%02d"
@@ -12223,12 +10911,9 @@ lbl_8050B9C8:
 	.byte 0x68, 0x65, 0x6C
 	.4byte 0x70007478
 	.asciz "t_comment"
-	.byte 0x6E, 0x75
-	.asciz "l_btn%02d"
-	.byte 0x6E, 0x75
-	.asciz "l_proportion"
-	.byte 0x43, 0x4F, 0x70
-	.asciz "tion"
+	.asciz "nul_btn%02d"
+	.asciz "nul_proportion"
+	.asciz "COption"
 	.byte 0x61, 0x72, 0x63
 	.4byte 0x006D6638
 	.asciz "5_opt00_opt00.brlyt"
@@ -12256,32 +10941,22 @@ lbl_8050BB58:
 	# ROM: 0x507C58
 	.asciz "CSkipTimer2"
 	.asciz "mf85_opt00_clock01.brlyt"
-	.byte 0x6D, 0x66, 0x38
-	.asciz "5_opt00_clock01_in.brlan"
+	.asciz "mf85_opt00_clock01_in.brlan"
 	.asciz "txt_time"
 	.asciz "pic_apm"
-	.byte 0x25, 0x64
-	.asciz ":%02d"
+	.asciz "%d:%02d"
 	.asciz "mf85_opt00_pm.tpl"
 	.asciz "mf85_opt00_am.tpl"
-	.byte 0x6E, 0x75
-	.asciz "l_all"
-	.byte 0x6E, 0x75
-	.asciz "l_bg00"
-	.byte 0x6E
-	.asciz "ul_bg01"
+	.asciz "nul_all"
+	.asciz "nul_bg00"
+	.asciz "nul_bg01"
 	.asciz "nul_bg02"
-	.byte 0x6E, 0x75, 0x6C
-	.asciz "_bg03"
-	.byte 0x6E, 0x75
-	.asciz "l_bg04"
-	.byte 0x6E
-	.asciz "ul_bg05"
+	.asciz "nul_bg03"
+	.asciz "nul_bg04"
+	.asciz "nul_bg05"
 	.asciz "nul_bg06"
-	.byte 0x2F, 0x6D, 0x65
-	.asciz "nu/SkipTimer.arc"
-	.byte 0x4D, 0x4E, 0x55
-	.asciz "_main"
+	.asciz "/menu/SkipTimer.arc"
+	.asciz "MNU_main"
 	.byte 0x6E, 0x61
 	.4byte 0x6D650043
 	.asciz "SkipTimer"
@@ -12365,8 +11040,7 @@ lbl_8050BEA4:
 	.asciz "txt_num"
 	.asciz "pic_ic_gl"
 	.asciz "pic_chain00_gl"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_chain01_gl"
+	.asciz "pic_chain01_gl"
 	.asciz "pic_chain02_gl"
 	.asciz "txt_num_gl"
 	.balign 4
@@ -12478,12 +11152,9 @@ lbl_8050C190:
 	.byte 0x6F, 0x72, 0x64
 	.4byte 0x6572002F
 	.asciz "menu/TutorialList.arc"
-	.byte 0x2F, 0x63
-	.asciz "ommon/jp/bdat_ttrl.bin"
-	.byte 0x6E
-	.asciz "ul_btn"
-	.byte 0x6E
-	.asciz "ul_proportion"
+	.asciz "/common/jp/bdat_ttrl.bin"
+	.asciz "nul_btn"
+	.asciz "nul_proportion"
 	.asciz "pic_icon%02d"
 	.asciz "txt_tit%02d"
 	.balign 4
@@ -12494,8 +11165,7 @@ lbl_8050C190:
 	.asciz "MNU_main"
 	.asciz "name"
 	.asciz "txt_btn"
-	.byte 0x43, 0x54, 0x75
-	.asciz "torialList"
+	.asciz "CTutorialList"
 	.byte 0x61
 	.4byte 0x7263006D
 	.asciz "f85_opt01_tutlist.brlyt"
@@ -12504,8 +11174,7 @@ lbl_8050C190:
 	.asciz "txt_btntit"
 	.asciz "fileID_2"
 	.asciz "fileID_1"
-	.byte 0x4D, 0x4E
-	.asciz "U_kyeassign"
+	.asciz "MNU_kyeassign"
 	.asciz "pic_soatbtn"
 	.asciz "MNU_ttrl"
 	.balign 4
@@ -12520,8 +11189,7 @@ lbl_8050C2D8:
 	.4byte 0x006D6630
 	.asciz "0_load01.brlyt"
 	.asciz "mf00_load00.brlyt"
-	.byte 0x6D, 0x66, 0x30
-	.asciz "0_load01_in.brlan"
+	.asciz "mf00_load01_in.brlan"
 	.asciz "mf00_load00_in.brlan"
 	.asciz "mf00_load01_roop.brlan"
 	.asciz "mf00_load00_roop.brlan"
@@ -12884,8 +11552,7 @@ lbl_8050C924:
 lbl_8050C948:
 	# ROM: 0x508A48
 	.asciz "JNL_playaward"
-	.byte 0x63, 0x6C
-	.asciz "ear_flg"
+	.asciz "clear_flg"
 	.asciz "pc_arts"
 	.4byte 0x69647800
 	.asciz "CMenuGameClear"
@@ -12955,10 +11622,8 @@ lbl_8050CA50:
 	# ROM: 0x508B50
 	.asciz "mf99_title00.brlyt"
 	.asciz "mf99_title00_in.brlan"
-	.byte 0x6D, 0x66, 0x39
-	.asciz "9_title00_roop.brlan"
-	.byte 0x6D, 0x66, 0x39
-	.asciz "9_title00_out.brlan"
+	.asciz "mf99_title00_roop.brlan"
+	.asciz "mf99_title00_out.brlan"
 	.asciz "mf99_title01.brlyt"
 	.asciz "mf99_title01_anykey_in.brlan"
 	.asciz "mf99_title01_anykey_roop.brlan"
@@ -12966,13 +11631,10 @@ lbl_8050CA50:
 	.asciz "mf99_title01_in.brlan"
 	.asciz "mf99_title01_roop.brlan"
 	.asciz "mf99_title01_out.brlan"
-	.byte 0x70, 0x69, 0x63
-	.asciz "_menu01_00"
-	.byte 0x6E
-	.asciz "ul_menu%02d"
+	.asciz "pic_menu01_00"
+	.asciz "nul_menu%02d"
 	.asciz "nul_proportion"
-	.byte 0x2F
-	.asciz "menu/Title.arc"
+	.asciz "/menu/Title.arc"
 	.asciz "CTitle"
 	.byte 0x61, 0x72
 	.4byte 0x63000000
@@ -13069,8 +11731,7 @@ lbl_8050CE30:
 	# ROM: 0x508F30
 	.4byte 0x3F3F3F00
 	.asciz "!std::exception!!std::bad_typeid!!"
-	.byte 0x21
-	.asciz "std::exception!!std::bad_cast!!"
+	.asciz "!std::exception!!std::bad_cast!!"
 
 
 .global lbl_8050CE78
@@ -13088,8 +11749,8 @@ lbl_8050CE78:
 lbl_8050CE90:
 	# ROM: 0x508F90
 	.asciz "GCN_Mem_Alloc.c : InitDefaultHeap. No Heap Available\n"
-	.byte 0x4D, 0x65
-	.asciz "trowerks CW runtime library initializing default heap\n"
+	.asciz "Metrowerks CW runtime library initializing default heap
+"
 	.balign 4
 
 
@@ -13108,14 +11769,10 @@ lbl_8050CF00:
 lbl_8050CF18:
 	# ROM: 0x509018
 	.asciz "542101086242752217003726400434970855712890625"
-	.byte 0x31, 0x31
-	.asciz "102230246251565404236316680908203125"
-	.byte 0x32, 0x33, 0x32
-	.asciz "83064365386962890625"
-	.byte 0x31, 0x35, 0x32
-	.asciz "587890625"
-	.byte 0x33, 0x39
-	.asciz "0625"
+	.asciz "11102230246251565404236316680908203125"
+	.asciz "23283064365386962890625"
+	.asciz "152587890625"
+	.asciz "390625"
 	.byte 0x37, 0x38, 0x31
 	.4byte 0x32350031
 	.asciz "5625"
@@ -25754,10 +24411,8 @@ lbl_80519650:
 lbl_805196A8:
 	# ROM: 0x5157A8
 	.asciz "adxt_exec_tsvr"
-	.byte 0x61
-	.asciz "dxt_exec_fssvr"
-	.byte 0x61
-	.asciz "dxt_exec_main_thrd"
+	.asciz "adxt_exec_fssvr"
+	.asciz "adxt_exec_main_thrd"
 	.asciz "E2006100201: ADXT_Finish function has been executed before initialization."
 	.asciz "E2005041230: ADXT handle is still active."
 
@@ -25766,8 +24421,7 @@ lbl_805196A8:
 lbl_80519750:
 	# ROM: 0x515850
 	.asciz "E03010901 ADXB_DecodeHeader: "
-	.byte 0x43, 0x61
-	.asciz "n not decode this file format."
+	.asciz "Can not decode this file format."
 	.asciz "E07021901 adxsjd_decexec_start: "
 	.asciz "8 or 4bit WAV file can't playback continuously."
 
@@ -26911,26 +25565,16 @@ lbl_8051C440:
 lbl_8051C590:
 	# ROM: 0x518690
 	.asciz "2103102:SVM:svm_unlock:lock type miss match.(type org=%d, type now=%d)"
-	.byte 0x31
-	.asciz "071205:SVM_SetCbSvrId:illegal svtype"
-	.byte 0x55, 0x6E, 0x6B
-	.asciz "nown"
-	.byte 0x31, 0x30, 0x35
-	.asciz "1001:SVM_SetCbSvr:too many server function"
-	.byte 0x31
-	.asciz "051002:SVM_DelCbSvr:illegal id"
-	.byte 0x31
-	.asciz "071206:SVM_SetCbSvrId:illegal svtype"
-	.byte 0x31, 0x30, 0x37
-	.asciz "1201:SVM_SetCbSvrId:illegal id"
-	.byte 0x31
-	.asciz "071202:SVM_SetCbSvrId:illegal svtype"
-	.byte 0x32, 0x31, 0x30
-	.asciz "0801:SVM_SetCbSvrId:over write callback function."
-	.byte 0x31, 0x30
-	.asciz "71301:SVM_ExecSvrFuncId:illegal id"
-	.byte 0x31
-	.asciz "071302:SVM_ExecSvrFuncId:illegal svtype"
+	.asciz "1071205:SVM_SetCbSvrId:illegal svtype"
+	.asciz "Unknown"
+	.asciz "1051001:SVM_SetCbSvr:too many server function"
+	.asciz "1051002:SVM_DelCbSvr:illegal id"
+	.asciz "1071206:SVM_SetCbSvrId:illegal svtype"
+	.asciz "1071201:SVM_SetCbSvrId:illegal id"
+	.asciz "1071202:SVM_SetCbSvrId:illegal svtype"
+	.asciz "2100801:SVM_SetCbSvrId:over write callback function."
+	.asciz "1071301:SVM_ExecSvrFuncId:illegal id"
+	.asciz "1071302:SVM_ExecSvrFuncId:illegal svtype"
 	.4byte 0
 
 
@@ -27068,8 +25712,8 @@ lbl_8051CDF0:
 lbl_8051CE58:
 	# ROM: 0x518F58
 	.asciz "\nCRI CFT/WII Ver.2.11 Build:Nov 13 2008 18:21:14\n"
-	.byte 0x41, 0x70
-	.asciz "pend: MW4199 WII30Jul2008Patch02\n"
+	.asciz "Append: MW4199 WII30Jul2008Patch02
+"
 	.balign 4
 
 
@@ -27116,8 +25760,7 @@ lbl_8051D1D0:
 	.asciz "E407024 mwPlyStartFnameRangeLp: handle is invalid."
 	.asciz "E1122637 mwPlyGetSlFname: handle is invalid."
 	.asciz "E10821B : Invalid value of stm_no : %d"
-	.byte 0x25, 0x30, 0x38
-	.asciz "x.%08x"
+	.asciz "%08x.%08x"
 	.asciz "E05080801 framerate of movie is invalid."
 	.4byte 0
 
@@ -27144,16 +25787,11 @@ lbl_8051D508:
 	.asciz "E2011920 mwPlyFxSetOutZoffset: handle is invalid."
 	.asciz "E2011921 mwPlyFxGetOutZoffset: handle is invalid."
 	.asciz "E201211 mwPlyCreate: can't create AddInfSJ"
-	.byte 0x53, 0x46, 0x58
-	.asciz "INFS"
-	.byte 0x53, 0x46, 0x58
-	.asciz "INFE"
-	.byte 0x43, 0x52, 0x49
-	.asciz "TAGS"
-	.byte 0x43, 0x52, 0x49
-	.asciz "TAGE"
-	.byte 0x57, 0x32, 0x31
-	.asciz "21001 mwPlyAttachAddInfBuf(): bufsize is short."
+	.asciz "SFXINFS"
+	.asciz "SFXINFE"
+	.asciz "CRITAGS"
+	.asciz "CRITAGE"
+	.asciz "W2121001 mwPlyAttachAddInfBuf(): bufsize is short."
 	.asciz "E202283 MWSFD_MakeTblZ16: handle is invalid."
 	.asciz "E202284 MWSFD_MakeTblZ16: getfrm is failed."
 	.asciz "E202285 MWSFD_MakeTblZ32: handle is invalid."
@@ -27226,8 +25864,7 @@ lbl_8051DA78:
 	.asciz "E20010703E MWSFCRE_DestroySfd"
 	.asciz "E0203261 MWSFCRE_ResetSfdHn: SFD_Stop() failed."
 	.asciz "E0203262 MWSFCRE_ResetSfdHn: SFD_SetErrFn() failed."
-	.byte 0x25, 0x6C, 0x64
-	.asciz ", %ld, %ld, %ld, %ld, %ld, %p, %ld, %ld, %d, %ld, %ld, %p"
+	.asciz "%ld, %ld, %ld, %ld, %ld, %ld, %p, %ld, %ld, %d, %ld, %ld, %p"
 	.asciz "E1122612 mwPlyCreateSofdec : cprm is NULL."
 	.asciz "E3012102 Buffer format is invalid."
 	.asciz "E4110901 Number of frame pool exceeds 14."
@@ -27370,27 +26007,19 @@ lbl_8051E408:
 	.asciz "E2005 mwPlyInitSfdFx: can't init GSC"
 	.asciz "ERR20010421A mwPlyInitSfdFx"
 	.asciz "MWSFSVR_VsyncThrdProc"
-	.byte 0x4D, 0x57
-	.asciz "SFSVR_MainThrdProc"
+	.asciz "MWSFSVR_MainThrdProc"
 	.asciz "MWSFSVR_IdleThrdProc"
 	.asciz "2.080"
 	.asciz "E011081 mwPlySfdInit: Not compatible SFD Version."
 	.asciz "DATA ERROR(%08X)"
-	.byte 0x53, 0x46, 0x44
-	.asciz " ERROR(%08X): 'max_width, max_height' of creation parameter is short. Increase this value."
-	.byte 0x53
-	.asciz "FD ERROR(%08X): 'max_width, max_height' of creation parameter is short. This movie size is %d x %d."
+	.asciz "SFD ERROR(%08X): 'max_width, max_height' of creation parameter is short. Increase this value."
+	.asciz "SFD ERROR(%08X): 'max_width, max_height' of creation parameter is short. This movie size is %d x %d."
 	.asciz "SFD ERROR(%08X): Read buffer is small. Increase 'max_bps' of creation parameter."
-	.byte 0x53, 0x46, 0x44
-	.asciz " ERROR(%08X): Frame pool size is incorrect. Set positive integer to 'nfrm_pool_wk' of creation parameter."
-	.byte 0x53, 0x46
-	.asciz "D ERROR(%08X): Number of ADXT handles exceeds its maximum number. MWPLY handle uses one ADXT handle(stereo) for MWSFD_FTYPE_SFD."
-	.byte 0x53, 0x46, 0x44
-	.asciz " ERROR(%08X): mwPlyRelFrm() was called twice to the same frame ID."
-	.byte 0x53
-	.asciz "FD ERROR(%08X): Decode picture error. For example, this library can't decode MPEG-2 video."
-	.byte 0x53
-	.asciz "FD ERROR(%08X)"
+	.asciz "SFD ERROR(%08X): Frame pool size is incorrect. Set positive integer to 'nfrm_pool_wk' of creation parameter."
+	.asciz "SFD ERROR(%08X): Number of ADXT handles exceeds its maximum number. MWPLY handle uses one ADXT handle(stereo) for MWSFD_FTYPE_SFD."
+	.asciz "SFD ERROR(%08X): mwPlyRelFrm() was called twice to the same frame ID."
+	.asciz "SFD ERROR(%08X): Decode picture error. For example, this library can't decode MPEG-2 video."
+	.asciz "SFD ERROR(%08X)"
 	.balign 4
 
 
@@ -28422,8 +27051,7 @@ lbl_805203C0:
 	.byte 0x70, 0x74, 0x79
 	.4byte 0x70650065
 	.asciz "mpty B"
-	.byte 0x64
-	.asciz "efect"
+	.asciz "defect"
 	.byte 0x6C, 0x61
 	.4byte 0x74650000
 	.4byte 0
@@ -28646,12 +27274,9 @@ lbl_80520778:
 lbl_80520798:
 	# ROM: 0x51C898
 	.asciz "(nbyte > 0) && (nbyte < 5)"
-	.byte 0x73
-	.asciz "fh_local.c"
-	.byte 0x28
-	.asciz "nbyte > 0) && (nbyte < 9)"
-	.byte 0x28, 0x73
-	.asciz "ize > 0) && (size < 9)"
+	.asciz "sfh_local.c"
+	.asciz "(nbyte > 0) && (nbyte < 9)"
+	.asciz "(size > 0) && (size < 9)"
 	.balign 4
 	.4byte 0
 
@@ -28683,8 +27308,7 @@ lbl_80520838:
 lbl_80520840:
 	# ROM: 0x51C940
 	.asciz "SFXZ"
-	.byte 0x53, 0x46, 0x58
-	.asciz "INFE"
+	.asciz "SFXINFE"
 	.balign 4
 
 
@@ -28775,17 +27399,13 @@ lbl_80520B38:
 lbl_80520B6C:
 	# ROM: 0x51CC6C
 	.asciz "ZMHDR"
-	.byte 0x53, 0x46
-	.asciz "XINFE"
-	.byte 0x5A, 0x4D
-	.asciz "VFRM"
-	.byte 0x5A, 0x4D, 0x46
-	.asciz "SIZE"
+	.asciz "SFXINFE"
+	.asciz "ZMVFRM"
+	.asciz "ZMFSIZE"
 	.byte 0x25, 0x6C, 0x78
 	.4byte 0x005A4D46
 	.asciz "DATA"
-	.byte 0x25, 0x6C, 0x78
-	.asciz " %lx %lx"
+	.asciz "%lx %lx %lx"
 	.asciz "E201314: SFXZ_SetZclip : zclip is invalid."
 	.asciz "COMPO"
 	.asciz "E201315: sfxcnv_CnvFrmZcmn : zclip is not set."
@@ -34775,10 +33395,8 @@ lbl_80526A38:
 	.asciz "hbm.arc"
 	.asciz "hbm/homeBtn.arc"
 	.asciz "hbm/SpeakerSe.arc"
-	.byte 0x68, 0x62
-	.asciz "m/HomeButtonSe.arc"
-	.byte 0x68
-	.asciz "bm/home.csv"
+	.asciz "hbm/HomeButtonSe.arc"
+	.asciz "hbm/home.csv"
 	.asciz "hbm/config.txt"
 	.balign 4
 	.4byte 0
@@ -35380,30 +33998,20 @@ lbl_805273F0:
 lbl_80527418:
 	# ROM: 0x523518
 	.asciz "1.2.3"
-	.byte 0x69, 0x6E
-	.asciz "correct header check"
-	.byte 0x75, 0x6E, 0x6B
-	.asciz "nown compression method"
+	.asciz "incorrect header check"
+	.asciz "unknown compression method"
 	.asciz "invalid window size"
 	.asciz "invalid block type"
-	.byte 0x69
-	.asciz "nvalid stored block lengths"
+	.asciz "invalid stored block lengths"
 	.asciz "too many length or distance symbols"
 	.asciz "invalid code lengths set"
-	.byte 0x69, 0x6E, 0x76
-	.asciz "alid bit length repeat"
-	.byte 0x69
-	.asciz "nvalid literal/lengths set"
-	.byte 0x69
-	.asciz "nvalid distances set"
-	.byte 0x69, 0x6E, 0x76
-	.asciz "alid literal/length code"
-	.byte 0x69, 0x6E, 0x76
-	.asciz "alid distance code"
-	.byte 0x69
-	.asciz "nvalid distance too far back"
-	.byte 0x69, 0x6E, 0x63
-	.asciz "orrect data check"
+	.asciz "invalid bit length repeat"
+	.asciz "invalid literal/lengths set"
+	.asciz "invalid distances set"
+	.asciz "invalid literal/length code"
+	.asciz "invalid distance code"
+	.asciz "invalid distance too far back"
+	.asciz "incorrect data check"
 	.balign 4
 	.4byte 0
 
@@ -35942,8 +34550,7 @@ lbl_805280EC:
 lbl_80528114:
 	# ROM: 0x524214
 	.asciz "JUspA"
-	.byte 0x4A, 0x55
-	.asciz "head"
+	.asciz "JUhead"
 	.byte 0x6D, 0x6F, 0x76
 	.4byte 0x65000000
 	.asciz "CMdlDynamics"
