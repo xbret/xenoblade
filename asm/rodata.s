@@ -11749,8 +11749,7 @@ lbl_8050CE78:
 lbl_8050CE90:
 	# ROM: 0x508F90
 	.asciz "GCN_Mem_Alloc.c : InitDefaultHeap. No Heap Available\n"
-	.asciz "Metrowerks CW runtime library initializing default heap
-"
+	.asciz "Metrowerks CW runtime library initializing default heap\n"
 	.balign 4
 
 
@@ -25712,8 +25711,7 @@ lbl_8051CDF0:
 lbl_8051CE58:
 	# ROM: 0x518F58
 	.asciz "\nCRI CFT/WII Ver.2.11 Build:Nov 13 2008 18:21:14\n"
-	.asciz "Append: MW4199 WII30Jul2008Patch02
-"
+	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
 
 
