@@ -2937,7 +2937,7 @@ lbl_80665900:
 .global lbl_80665908
 lbl_80665908:
 	# ROM: 0x5714E8
-	.4byte 0x25730A00
+	.asciz "%s\n"
 	.4byte 0
 
 
@@ -3547,7 +3547,7 @@ lbl_80665B34:
 .global lbl_80665B3C
 lbl_80665B3C:
 	# ROM: 0x57171C
-	.4byte 0x25730A00
+	.asciz "%s\n"
 
 
 .global lbl_80665B40
@@ -3613,7 +3613,7 @@ lbl_80665B78:
 .global lbl_80665B80
 lbl_80665B80:
 	# ROM: 0x571760
-	.4byte 0x25730A00
+	.asciz "%s\n"
 	.4byte 0
 
 

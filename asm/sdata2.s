@@ -22283,9 +22283,9 @@ lbl_8066D3E0:
 .global lbl_8066D3E8
 lbl_8066D3E8:
 	# ROM: 0x577248
-	.4byte 0x41A00000
+	.float 20.0
 	.4byte 0
-	.4byte 0x4E4F5000
+	.asciz "NOP"
 	.4byte 0
 	.asciz "CONST_0"
 	.asciz "CONST_1"
@@ -22330,21 +22330,28 @@ lbl_8066D3E8:
 	.asciz "NOT"
 	.asciz "L_NOT"
 	.balign 4
-	.4byte 0x41444400
-	.4byte 0x53554200
-	.4byte 0x4D554C00
-	.4byte 0x44495600
-	.4byte 0x4D4F4400
-	.4byte 0x4F520000
-	.4byte 0x414E4400
+	.asciz "ADD"
+	.asciz "SUB"
+	.asciz "MUL"
+	.asciz "DIV"
+	.asciz "MOD"
+	.asciz "OR"
+	.balign 4
+	.asciz "AND"
 	.asciz "R_SHIFT"
 	.asciz "L_SHIFT"
-	.4byte 0x45510000
-	.4byte 0x4E450000
-	.4byte 0x47540000
-	.4byte 0x4C540000
-	.4byte 0x47450000
-	.4byte 0x4C450000
+	.asciz "EQ"
+	.balign 4
+	.asciz "NE"
+	.balign 4
+	.asciz "GT"
+	.balign 4
+	.asciz "LT"
+	.balign 4
+	.asciz "GE"
+	.balign 4
+	.asciz "LE"
+	.balign 4
 	.asciz "L_OR"
 	.balign 4
 	.asciz "L_AND"
@@ -22381,7 +22388,7 @@ lbl_8066D3E8:
 	.asciz "EXIT"
 	.balign 4
 	.asciz "BP"
-	.byte 0x00
+	.balign 4
 	.asciz "nil"
 	.asciz "true"
 	.balign 4
@@ -22396,8 +22403,9 @@ lbl_8066D3E8:
 	.balign 4
 	.asciz "plugin"
 	.balign 4
-	.4byte 0x4F430000
-	.4byte 0x73797300
+	.asciz "OC"
+	.balign 4
+	.asciz "sys"
 
 
 .global lbl_8066D5D0
