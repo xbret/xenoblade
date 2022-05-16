@@ -356,7 +356,7 @@ lbl_804F6454:
 .global lbl_804F6550
 lbl_804F6550:
 	# ROM: 0x4F2650
-	.4byte 0x65766500
+	.asciz "eve"
 	.4byte 0
 	.asciz "setMapJumpArea"
 	.balign 4
@@ -517,7 +517,7 @@ lbl_804F6890:
 .global lbl_804F69E4
 lbl_804F69E4:
 	# ROM: 0x4F2AE4
-	.4byte 0x63616D00
+	.asciz "cam"
 	.asciz "CTaskGameEffAfter"
 	.balign 4
 	.asciz "CTTask<CTaskGameEffAfter>"
@@ -527,7 +527,7 @@ lbl_804F69E4:
 .global lbl_804F6A18
 lbl_804F6A18:
 	# ROM: 0x4F2B18
-	.4byte 0x70616400
+	.asciz "pad"
 	.4byte 0
 	.asciz "cf::CfResTask"
 	.balign 4
@@ -1354,9 +1354,9 @@ lbl_804F7EB4:
 .global lbl_804F7F78
 lbl_804F7F78:
 	# ROM: 0x4F4078
-	.4byte 0x00494E50
-	.4byte 0x55540045
-	.4byte 0x4E434F00
+	.byte 0x00
+	.asciz "INPUT"
+	.asciz "ENCO"
 	.asciz "AWAKE"
 	.asciz "HELP"
 	.asciz "REVIVE"
@@ -3266,9 +3266,9 @@ lbl_804FB76C:
 .global lbl_804FB8E0
 lbl_804FB8E0:
 	# ROM: 0x4F79E0
-	.4byte 0x25730061
-	.4byte 0x72630062
-	.asciz "attle_font01.brfna"
+	.asciz "%s"
+	.asciz "arc"
+	.asciz "battle_font01.brfna"
 	.asciz "battle_font02.brfna"
 	.asciz "battle_font03.brfna"
 	.asciz "qst_genre"
@@ -3559,11 +3559,11 @@ lbl_804FBDD8:
 .global lbl_804FBE94
 lbl_804FBE94:
 	# ROM: 0x4F7F94
-	.4byte 0x25730054
-	.4byte 0x58540025
-	.4byte 0x6400252E
-	.4byte 0x3166006D
-	.asciz "apID"
+	.asciz "%s"
+	.asciz "TXT"
+	.asciz "%d"
+	.asciz "%.1f"
+	.asciz "mapID"
 	.asciz "landmarklist"
 	.asciz "rlt_lnd"
 	.asciz "flg_s"
@@ -4089,8 +4089,8 @@ lbl_804FD100:
 .global lbl_804FD198
 lbl_804FD198:
 	# ROM: 0x4F9298
-	.4byte 0x0061726D
-	.asciz "_type"
+	.byte 0x00
+	.asciz "arm_type"
 	.balign 4
 	.4byte 0
 
@@ -5105,8 +5105,8 @@ lbl_804FE7C0:
 .global lbl_804FE838
 lbl_804FE838:
 	# ROM: 0x4FA938
-	.4byte 0x76730076
-	.4byte 0x73303000
+	.asciz "vs"
+	.asciz "vs00"
 	.asciz ".rev"
 	.byte 0x00
 	.asciz "abcd"
@@ -5274,8 +5274,8 @@ lbl_804FEBF0:
 .global lbl_804FEC68
 lbl_804FEC68:
 	# ROM: 0x4FAD68
-	.4byte 0x006C6576
-	.asciz "el_exp"
+	.byte 0x00
+	.asciz "level_exp"
 	.balign 4
 	.4byte 0
 	.asciz "CMenuZeal"
@@ -5314,7 +5314,7 @@ lbl_804FEC84:
 .global lbl_804FEF08
 lbl_804FEF08:
 	# ROM: 0x4FB008
-	.4byte 0x43414D00
+	.asciz "CAM"
 	.asciz "Monochrome"
 	.asciz "MonoRGB"
 	.asciz "envLGT"
@@ -5378,7 +5378,7 @@ lbl_804FEFD0:
 .global lbl_804FF028
 lbl_804FF028:
 	# ROM: 0x4FB128
-	.4byte 0x45464600
+	.asciz "EFF"
 	.asciz "Monochrome"
 	.asciz "MonoRGB"
 	.balign 4
@@ -5474,10 +5474,11 @@ lbl_804FF1F0:
 .global lbl_804FF2D8
 lbl_804FF2D8:
 	# ROM: 0x4FB3D8
-	.4byte 0x2E002F00
-	.4byte 0x002E6164
-	.4byte 0x78002573
-	.asciz "%s%s"
+	.asciz "."
+	.asciz "/"
+	.byte 0x00
+	.asciz ".adx"
+	.asciz "%s%s%s"
 	.asciz "snd/adx/"
 	.asciz "loop"
 	.byte 0x00
@@ -5910,10 +5911,14 @@ lbl_80500024:
 .global lbl_80500218
 lbl_80500218:
 	# ROM: 0x4FC318
-	.4byte 0x00640065
-	.4byte 0x0066006C
-	.4byte 0x006D006E
-	.4byte 0
+	.byte 0x00
+	.asciz "d"
+	.asciz "e"
+	.asciz "f"
+	.asciz "l"
+	.asciz "m"
+	.asciz "n"
+	.byte 0x00, 0x00, 0x00
 	.asciz "cf::CPcEffect07"
 	.asciz "cf::IPcEffect"
 	.balign 4
@@ -6331,7 +6336,8 @@ lbl_80500E74:
 	.asciz "pic_icon%02d"
 	.asciz "txt_num%02d"
 	.balign 4
-	.4byte 0x53005500
+	.asciz "S"
+	.asciz "U"
 	.asciz "pic_eq%02d"
 	.asciz "mf00_reg00_eq00.tpl"
 	.asciz "mf00_reg00_eq03.tpl"
@@ -6544,8 +6550,8 @@ lbl_80501B50:
 .global lbl_80501B8C
 lbl_80501B8C:
 	# ROM: 0x4FDC8C
-	.4byte 0x25640072
-	.asciz "vs_type"
+	.asciz "%d"
+	.asciz "rvs_type"
 	.asciz "rvs_caption"
 	.asciz "%s"
 	.asciz "<col=red>%s<col=def>"
@@ -7228,9 +7234,9 @@ lbl_805033EC:
 .global lbl_8050344C
 lbl_8050344C:
 	# ROM: 0x4FF54C
-	.4byte 0x42424200
-	.4byte 0x46464600
-	.4byte 0x41414100
+	.asciz "BBB"
+	.asciz "FFF"
+	.asciz "AAA"
 	.asciz "core"
 	.balign 4
 	.asciz "/menu/PartyState.arc"
@@ -7323,9 +7329,9 @@ lbl_80503718:
 .global lbl_80503750
 lbl_80503750:
 	# ROM: 0x4FF850
-	.4byte 0x42424200
-	.4byte 0x46464600
-	.4byte 0x41414100
+	.asciz "BBB"
+	.asciz "FFF"
+	.asciz "AAA"
 	.asciz "core"
 	.asciz "/chr/pc/mp%02d%02d%02d.mca"
 	.asciz "ITM_wpnlist"
@@ -7636,8 +7642,8 @@ lbl_80503F58:
 .global lbl_80503FAC
 lbl_80503FAC:
 	# ROM: 0x5000AC
-	.4byte 0x25730063
-	.asciz "ategory"
+	.asciz "%s"
+	.asciz "category"
 	.asciz "/menu/McCrystalBox.arc"
 	.asciz "/menu/tpl/ItemIcon.arc"
 	.asciz "common/jp/bdat_mes.bin"
@@ -10449,8 +10455,8 @@ lbl_8050B598:
 .global lbl_8050B5C4
 lbl_8050B5C4:
 	# ROM: 0x5076C4
-	.4byte 0x2573004D
-	.asciz "NU_item"
+	.asciz "%s"
+	.asciz "MNU_item"
 	.asciz "name"
 	.asciz "%s%s"
 	.asciz "comment"
@@ -11375,7 +11381,7 @@ lbl_8050CE10:
 .global lbl_8050CE30
 lbl_8050CE30:
 	# ROM: 0x508F30
-	.4byte 0x3F3F3F00
+	.asciz "???"
 	.asciz "!std::exception!!std::bad_typeid!!"
 	.asciz "!std::exception!!std::bad_cast!!"
 
@@ -24805,8 +24811,9 @@ lbl_8051ABC0:
 .global lbl_8051ABD0
 lbl_8051ABD0:
 	# ROM: 0x516CD0
-	.4byte 0x4F000000
+	.asciz "O"
 	.4byte 0
+	.2byte 0
 	.asciz "\nAHX/WII Ver.1.89 Build:Nov 13 2008 10:52:54\n"
 	.balign 4
 
@@ -25586,15 +25593,15 @@ lbl_8051E170:
 	.balign 4
 	.asciz "addr"
 	.balign 4
-	.4byte 0x6C656E00
+	.asciz "len"
 	.asciz "mwPlyStartSj"
 	.balign 4
-	.4byte 0x736A6900
+	.asciz "sji"
 	.asciz "mwPlyStartAfs"
 	.balign 4
 	.asciz "patid"
 	.balign 4
-	.4byte 0x66696400
+	.asciz "fid"
 	.asciz "mwPlyStartFnameLp"
 	.balign 4
 	.asciz "mwPlyReleaseLp"
@@ -26503,7 +26510,8 @@ lbl_8051FF80:
 .global lbl_80520004
 lbl_80520004:
 	# ROM: 0x51C104
-	.4byte 0x74650000
+	.asciz "te"
+	.byte 0x00
 	.asciz "cpara_members"
 	.balign 4
 	.asciz "sfdhn"
@@ -32408,8 +32416,9 @@ lbl_80525D28:
 .global lbl_80525D70
 lbl_80525D70:
 	# ROM: 0x521E70
-	.4byte 0x2E000000
+	.asciz "."
 	.4byte 0
+	.2byte 0
 	.asciz "WorkThreadSystem"
 	.balign 4
 	.asciz "CMsgParam<8>"
@@ -32424,8 +32433,9 @@ lbl_80525D70:
 .global lbl_80525DD8
 lbl_80525DD8:
 	# ROM: 0x521ED8
-	.4byte 0x20000000
+	.asciz " "
 	.4byte 0
+	.2byte 0
 	.asciz "reslist<unsigned long>"
 	.balign 4
 	.asciz "_reslist_base<unsigned long>"
@@ -32506,8 +32516,8 @@ lbl_80525F48:
 	.4byte 0x82B582BD
 	.byte 0x00
 
-	.byte 0x00,0x00,0x00
 	.4byte 0
+	.byte 0x00, 0x00, 0x00
 	.asciz "CViewFrame"
 	.balign 4
 	.4byte 0
@@ -32759,8 +32769,9 @@ lbl_805264FC:
 .global lbl_805265B8
 lbl_805265B8:
 	# ROM: 0x5226B8
-	.4byte 0x2F000000
+	.asciz "/"
 	.4byte 0
+	.2byte 0
 	.asciz "CDeviceFileDvd"
 	.balign 4
 
@@ -34123,8 +34134,8 @@ lbl_80527F08:
 .global lbl_80528014
 lbl_80528014:
 	# ROM: 0x524114
-	.4byte 0x61647800
-	.4byte 0x61687800
+	.asciz "adx"
+	.asciz "ahx"
 	.asciz ".pkb"
 	.balign 4
 	.4byte 0

@@ -38,7 +38,8 @@ lbl_806683E0:
 	.asciz "EFF"
 	.asciz "ARROW"
 	.balign 4
-	.4byte 0x34330000
+	.asciz "43"
+	.byte 0x00
 	.asciz "BDAT"
 	.balign 4
 	.asciz "AIDAT"
@@ -46,14 +47,14 @@ lbl_806683E0:
 	.asciz "HIKARI"
 	.balign 4
 	.asciz "HBMSTOP"
-	.4byte 0x70757400
+	.asciz "put"
 	.4byte 0
 	.asciz "frame"
 	.balign 4
 	.asciz "builtin"
 	.asciz "start"
 	.balign 4
-	.4byte 0x656E6400
+	.asciz "end"
 	.4byte 0
 	.asciz "isAlive"
 	.asciz "join"
@@ -64,8 +65,9 @@ lbl_806683E0:
 	.balign 4
 	.asciz "thread"
 	.balign 4
-	.4byte 0x61747200
-	.4byte 0x6E6F0000
+	.asciz "atr"
+	.asciz "no"
+	.byte 0x00
 	.asciz "send"
 	.balign 4
 	.asciz "receive"
@@ -75,10 +77,11 @@ lbl_806683E0:
 	.balign 4
 	.asciz "isEmpty"
 	.asciz "msgYuka"
-	.4byte 0x69640000
+	.asciz "id"
+	.byte 0x00
 	.asciz "talk"
 	.balign 4
-	.4byte 0x64697200
+	.asciz "dir"
 	.asciz "msgNpc"
 	.balign 4
 	.asciz "getVal"
@@ -104,18 +107,24 @@ lbl_806684D0:
 .global lbl_806684D8
 lbl_806684D8:
 	# ROM: 0x572338
-	.4byte 0x447A0000
-	.4byte 0x78000000
-	.4byte 0x79000000
-	.4byte 0x7A000000
-	.4byte 0x64697200
+	.asciz "Dz"
+	.byte 0x00
+	.asciz "x"
+	.2byte 0
+	.asciz "y"
+	.2byte 0
+	.asciz "z"
+	.2byte 0
+	.asciz "dir"
 	.asciz "name"
 	.balign 4
 	.asciz "bdid"
 	.balign 4
-	.4byte 0x49440000
-	.4byte 0x48500000
+	.asciz "ID"
+	.byte 0x00
+	.asciz "HP"
 	.4byte 0
+	.byte 0x00
 	.asciz "isValid"
 	.asciz "dispOn"
 	.balign 4
@@ -152,7 +161,7 @@ lbl_806684D8:
 	.asciz "setRot"
 	.balign 4
 	.asciz "gravity"
-	.4byte 0x6F626A00
+	.asciz "obj"
 	.asciz "point"
 	.balign 4
 	.asciz "signal"
@@ -235,7 +244,7 @@ lbl_8066862C:
 	.4byte 0
 	.asciz "hour"
 	.balign 4
-	.4byte 0x6D696E00
+	.asciz "min"
 	.4byte 0
 	.asciz "timeIdx"
 	.4byte 0x63667000
@@ -1396,11 +1405,11 @@ lbl_80668A04:
 	.balign 4
 	.asciz "shake"
 	.balign 4
-	.4byte 0x67657400
+	.asciz "get"
 	.asciz "enable"
 	.balign 4
 	.4byte 0
-	.4byte 0x4B595000
+	.asciz "KYP"
 	.asciz "DAP1"
 	.balign 4
 	.4byte 0
@@ -3363,37 +3372,49 @@ lbl_806690A8:
 	.balign 4
 	.asciz ".dap"
 	.balign 4
-	.4byte 0x70630000
+	.asciz "pc"
 	.4byte 0
+	.byte 0x00
 	.asciz "chr/pc/"
 	.asciz ".chr"
 	.balign 4
-	.4byte 0x6E700000
+	.asciz "np"
 	.4byte 0
+	.byte 0x00
 	.asciz "chr/np/"
-	.4byte 0x2E6B7000
-	.4byte 0x656E0000
+	.asciz ".kp"
+	.asciz "en"
+	.byte 0x00
 	.asciz "chr/en/"
-	.4byte 0x77700000
+	.asciz "wp"
 	.4byte 0
+	.byte 0x00
 	.asciz "chr/wp/"
-	.4byte 0x6F6A0000
+	.asciz "oj"
 	.4byte 0
+	.byte 0x00
 	.asciz "chr/oj/"
-	.4byte 0x6D700000
+	.asciz "mp"
+	.byte 0x00
 	.asciz ".mca"
 	.balign 4
-	.4byte 0x6D6E0000
-	.4byte 0x6D650000
-	.4byte 0x6D6F0000
+	.asciz "mn"
+	.byte 0x00
+	.asciz "me"
+	.byte 0x00
+	.asciz "mo"
+	.byte 0x00
 	.asciz "chr/mo/"
-	.4byte 0x6D770000
-	.4byte 0x656D0000
+	.asciz "mw"
+	.byte 0x00
+	.asciz "em"
+	.byte 0x00
 	.asciz "eff/em/"
 	.asciz ".rec"
 	.balign 4
-	.4byte 0x65670000
+	.asciz "eg"
 	.4byte 0
+	.byte 0x00
 	.asciz "eff/eg/"
 	.4byte 0x65720000
 	.4byte 0x65700000
@@ -8002,7 +8023,7 @@ lbl_8066A238:
 	.4byte 0x80000000
 	.asciz "isEnd"
 	.balign 4
-	.4byte 0x656E6400
+	.asciz "end"
 	.asciz "attack"
 	.balign 4
 	.asciz "vision"
@@ -10175,12 +10196,12 @@ lbl_8066A950:
 	# ROM: 0x5747B0
 	.4byte 0x43300000
 	.4byte 0
-	.4byte 0x77706E00
+	.asciz "wpn"
 	.asciz "head"
 	.balign 4
 	.asciz "body"
 	.balign 4
-	.4byte 0x61726D00
+	.asciz "arm"
 	.asciz "waist"
 	.balign 4
 	.asciz "legg"
@@ -10944,8 +10965,9 @@ lbl_8066AC5C:
 .global lbl_8066AC60
 lbl_8066AC60:
 	# ROM: 0x574AC0
-	.4byte 0x44610000
+	.asciz "Da"
 	.4byte 0
+	.byte 0x00
 	.asciz "popID1"
 	.balign 4
 
@@ -19778,7 +19800,8 @@ lbl_8066CBA0:
 .global lbl_8066CBA4
 lbl_8066CBA4:
 	# ROM: 0x576A04
-	.4byte 0x447A0000
+	.asciz "Dz"
+	.byte 0x00
 	.asciz "CDevice"
 
 .global lbl_8066CBB0
@@ -20097,8 +20120,9 @@ lbl_8066CCD8:
 .global lbl_8066CCE0
 lbl_8066CCE0:
 	# ROM: 0x576B40
-	.4byte 0x41700000
+	.asciz "Ap"
 	.4byte 0
+	.byte 0x00
 	.asciz "CLibG3d"
 
 
@@ -22269,8 +22293,10 @@ lbl_8066D3E8:
 	.asciz "CONST_3"
 	.asciz "CONST_4"
 	.asciz "CONST_I"
-	.4byte 0x4C440000
-	.4byte 0x53540000
+	.asciz "LD"
+	.byte 0x00
+	.asciz "ST"
+	.byte 0x00
 	.asciz "LD_ARG"
 	.balign 4
 	.asciz "ST_ARG"
@@ -22301,7 +22327,7 @@ lbl_8066D3E8:
 	.asciz "LD_FUNC"
 	.asciz "MINUS"
 	.balign 4
-	.4byte 0x4E4F5400
+	.asciz "NOT"
 	.asciz "L_NOT"
 	.balign 4
 	.4byte 0x41444400
@@ -22323,13 +22349,13 @@ lbl_8066D3E8:
 	.balign 4
 	.asciz "L_AND"
 	.balign 4
-	.4byte 0x4A4D5000
-	.4byte 0x4A504600
+	.asciz "JMP"
+	.asciz "JPF"
 	.asciz "CALL"
 	.balign 4
 	.asciz "CALL_W"
 	.balign 4
-	.4byte 0x52455400
+	.asciz "RET"
 	.asciz "NEXT"
 	.balign 4
 	.asciz "PLUGIN"
@@ -22350,17 +22376,18 @@ lbl_8066D3E8:
 	.balign 4
 	.asciz "SWITCH"
 	.balign 4
-	.4byte 0x494E4300
-	.4byte 0x44454300
+	.asciz "INC"
+	.asciz "DEC"
 	.asciz "EXIT"
 	.balign 4
-	.4byte 0x42500000
-	.4byte 0x6E696C00
+	.asciz "BP"
+	.byte 0x00
+	.asciz "nil"
 	.asciz "true"
 	.balign 4
 	.asciz "false"
 	.balign 4
-	.4byte 0x696E7400
+	.asciz "int"
 	.asciz "fixed"
 	.balign 4
 	.asciz "string"

@@ -28003,18 +28003,13 @@ lbl_8053FD40:
 lbl_8053FD80:
 	# ROM: 0x53BE80
 	.asciz "Devkit set to : %ld\n"
-	.byte 0x4D, 0x65, 0x74
-	.asciz "roTRK : Sizeof Reply - %ld bytes\n"
-	.byte 0x4D, 0x65
-	.asciz "troTRK : Set to NDEV hardware\n"
-	.byte 0x4D
-	.asciz "etroTRK : Set to UNKNOWN hardware. (%ld)\n"
-	.byte 0x4D, 0x65
-	.asciz "troTRK : Invalid hardware ID passed from OS\n"
-	.byte 0x4D, 0x65, 0x74
-	.asciz "roTRK : Defaulting to GDEV Hardware\n"
-	.byte 0x25, 0x73, 0x0A
-	.4byte 0
+	.asciz "MetroTRK : Sizeof Reply - %ld bytes\n"
+	.asciz "MetroTRK : Set to NDEV hardware\n"
+	.asciz "MetroTRK : Set to UNKNOWN hardware. (%ld)\n"
+	.asciz "MetroTRK : Invalid hardware ID passed from OS\n"
+	.asciz "MetroTRK : Defaulting to GDEV Hardware\n"
+	.asciz "%s\n"
+	.byte 0x00, 0x00, 0x00
 	.4byte 0
 
 
@@ -28036,8 +28031,7 @@ lbl_8053FE88:
 lbl_8053FEA8:
 	# ROM: 0x53BFA8
 	.asciz "MetroTRK - bad reply size %ld\n"
-	.byte 0x4D
-	.asciz "etroTRK - failed in RequestSend\n"
+	.asciz "MetroTRK - failed in RequestSend\n"
 	.balign 4
 	.4byte 0
 
@@ -28082,10 +28076,8 @@ lbl_8053FF5C:
 lbl_8053FF78:
 	# ROM: 0x53C078
 	.asciz "\nMetroTRK Option : SerialIO - "
-	.byte 0x45
-	.asciz "nable\n"
-	.byte 0x44
-	.asciz "isable\n"
+	.asciz "Enable\n"
+	.asciz "Disable\n"
 
 
 .global lbl_8053FFA8
