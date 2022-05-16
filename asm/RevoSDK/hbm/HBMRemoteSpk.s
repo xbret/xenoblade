@@ -245,6 +245,8 @@ lbl_80321CA8:
 /* 80321CEC 002EB2AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
+.global lbl_80321CF0
+lbl_80321CF0:
 /* 80321CF0 002EB2B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80321CF4 002EB2B4  7C 08 02 A6 */	mflr r0
 /* 80321CF8 002EB2B8  2C 03 00 00 */	cmpwi r3, 0

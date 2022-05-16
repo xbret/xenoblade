@@ -89,6 +89,8 @@ lbl_80317570:
 /* 80317584 002E0B44  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80317588 002E0B48  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8031758C 002E0B4C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.global lbl_80317590
+lbl_80317590:
 /* 80317590 002E0B50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80317594 002E0B54  7C 08 02 A6 */	mflr r0
 /* 80317598 002E0B58  2C 03 00 00 */	cmpwi r3, 0

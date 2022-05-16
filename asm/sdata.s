@@ -3987,8 +3987,8 @@ lbl_80665D84:
 .global lbl_80665D88
 lbl_80665D88:
 	# ROM: 0x571968
-	.4byte 0x803E73B0
-	.4byte 0x803E73B8
+	.4byte lbl_803E73B0
+	.4byte lbl_803E73B8
 
 
 .global lbl_80665D90
@@ -5015,7 +5015,7 @@ lbl_806663F4:
 .global lbl_806663F8
 lbl_806663F8:
 	# ROM: 0x571FD8
-	.4byte 0x804BF274
+	.4byte lbl_804BF274
 	.4byte 0
 	.4byte 0x8066D774
 	.4byte 0

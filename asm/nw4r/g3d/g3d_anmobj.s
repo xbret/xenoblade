@@ -2,6 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.global lbl_803E73B0
+lbl_803E73B0:
 /* 803E73B0 003B0970  FC 20 18 90 */	fmr f1, f3
 /* 803E73B4 003B0974  4E 80 00 20 */	blr
 

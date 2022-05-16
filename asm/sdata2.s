@@ -16604,8 +16604,8 @@ lbl_8066C11C:
 .global lbl_8066C120
 lbl_8066C120:
 	# ROM: 0x575F80
-	.4byte 0x80349A70
-	.4byte 0x80349A80
+	.4byte lbl_80349A70
+	.4byte lbl_80349A80
 
 
 .global lbl_8066C128

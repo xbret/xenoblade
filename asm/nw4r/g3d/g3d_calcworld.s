@@ -399,8 +399,14 @@ lbl_803EEC80:
 /* 803EEC94 003B8254  7C 08 03 A6 */	mtlr r0
 /* 803EEC98 003B8258  38 21 00 D0 */	addi r1, r1, 0xd0
 /* 803EEC9C 003B825C  4E 80 00 20 */	blr 
+.global lbl_803EECA0
+lbl_803EECA0:
 /* 803EECA0 003B8260  4E 80 00 20 */	blr 
+.global lbl_803EECA4
+lbl_803EECA4:
 /* 803EECA4 003B8264  4E 80 00 20 */	blr 
+.global lbl_803EECA8
+lbl_803EECA8:
 /* 803EECA8 003B8268  4E 80 00 20 */	blr 
 
 .global func_803EECAC
