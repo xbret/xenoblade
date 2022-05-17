@@ -4008,8 +4008,8 @@ lbl_803EB39C:
 /* 803EB3B0 003B4970  4E 80 00 20 */	blr
 
 
-.global lbl_803EB3B4
-lbl_803EB3B4:
+.global ctor_803EB3B4
+ctor_803EB3B4:
 /* 803EB3B4 003B4974  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803EB3B8 003B4978  7C 08 02 A6 */	mflr r0
 /* 803EB3BC 003B497C  38 80 00 00 */	li r4, 0

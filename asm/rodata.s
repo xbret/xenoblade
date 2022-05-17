@@ -33972,69 +33972,175 @@ lbl_80527B80:
 	.asciz "Camera%d"
 	.balign 4
 	.4byte 0
+
+.global lbl_80527B90
+lbl_80527B90:
 	.asciz "CONST_I_W"
 	.balign 4
+
+.global lbl_80527B9C
+lbl_80527B9C:
 	.asciz "POOL_INT"
 	.balign 4
+
+.global lbl_80527BA8
+lbl_80527BA8:
 	.asciz "POOL_INT_W"
 	.balign 4
+
+.global lbl_80527BB4
+lbl_80527BB4:
 	.asciz "POOL_FIXED"
 	.balign 4
+
+.global lbl_80527BC0
+lbl_80527BC0:
 	.asciz "POOL_FIXED_W"
 	.balign 4
+
+.global lbl_80527BD0
+lbl_80527BD0:
 	.asciz "POOL_STR"
 	.balign 4
+
+.global lbl_80527BDC
+lbl_80527BDC:
 	.asciz "POOL_STR_W"
 	.balign 4
+
+.global lbl_80527BE8
+lbl_80527BE8:
 	.asciz "ST_ARG_OMIT"
+
+.global lbl_80527BF4
+lbl_80527BF4:
 	.asciz "LD_ARG_0"
 	.balign 4
+
+.global lbl_80527C00
+lbl_80527C00:
 	.asciz "LD_ARG_1"
 	.balign 4
+
+.global lbl_80527C0C
+lbl_80527C0C:
 	.asciz "LD_ARG_2"
 	.balign 4
+
+.global lbl_80527C18
+lbl_80527C18:
 	.asciz "LD_ARG_3"
 	.balign 4
+
+.global lbl_80527C24
+lbl_80527C24:
 	.asciz "ST_ARG_0"
 	.balign 4
+
+.global lbl_80527C30
+lbl_80527C30:
 	.asciz "ST_ARG_1"
 	.balign 4
+
+.global lbl_80527C3C
+lbl_80527C3C:
 	.asciz "ST_ARG_2"
 	.balign 4
+
+.global lbl_80527C48
+lbl_80527C48:
 	.asciz "ST_ARG_3"
 	.balign 4
+
+.global lbl_80527C54
+lbl_80527C54:
 	.asciz "LD_STATIC"
 	.balign 4
+
+.global lbl_80527C60
+lbl_80527C60:
 	.asciz "LD_STATIC_W"
+
+.global lbl_80527C6C
+lbl_80527C6C:
 	.asciz "ST_STATIC"
 	.balign 4
+
+.global lbl_80527C78
+lbl_80527C78:
 	.asciz "ST_STATIC_W"
+
+.global lbl_80527C84
+lbl_80527C84:
 	.asciz "LD_FALSE"
 	.balign 4
+
+.global lbl_80527C90
+lbl_80527C90:
 	.asciz "LD_FUNC_W"
 	.balign 4
+
+.global lbl_80527C9C
+lbl_80527C9C:
 	.asciz "LD_PLUGIN"
 	.balign 4
+
+.global lbl_80527CA8
+lbl_80527CA8:
 	.asciz "LD_PLUGIN_W"
+
+.global lbl_80527CB4
+lbl_80527CB4:
 	.asciz "LD_FUNC_FAR"
+
+.global lbl_80527CC0
+lbl_80527CC0:
 	.asciz "LD_FUNC_FAR_W"
 	.balign 4
+
+.global lbl_80527CD0
+lbl_80527CD0:
 	.asciz "CALL_IND"
 	.balign 4
+
+.global lbl_80527CDC
+lbl_80527CDC:
 	.asciz "PLUGIN_W"
 	.balign 4
+
+.global lbl_80527CE8
+lbl_80527CE8:
 	.asciz "CALL_FAR"
 	.balign 4
+
+.global lbl_80527CF4
+lbl_80527CF4:
 	.asciz "CALL_FAR_W"
 	.balign 4
+
+.global lbl_80527D00
+lbl_80527D00:
 	.asciz "GET_OC_W"
 	.balign 4
+
+.global lbl_80527D0C
+lbl_80527D0C:
 	.asciz "GETTER_W"
 	.balign 4
+
+.global lbl_80527D18
+lbl_80527D18:
 	.asciz "SETTER_W"
 	.balign 4
+
+
+
+.global lbl_80527D24
+lbl_80527D24:
 	.asciz "function"
 	.balign 4
+
+
 	.asciz "CColiObjCall"
 	.balign 4
 	.asciz "CColiResCall"

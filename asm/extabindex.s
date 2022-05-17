@@ -19242,10 +19242,10 @@
 	.4byte func_80435FA4
 	.4byte 0x000000B4
 	.4byte 0x8001C098  ;# ptr
-	.4byte lbl_80436058
+	.4byte ctor_80436058
 	.4byte 0x000000E0
 	.4byte 0x8001C0A0  ;# ptr
-	.4byte lbl_80436138
+	.4byte ctor_80436138
 	.4byte 0x00000128
 	.4byte 0x8001C0A8  ;# ptr
 	.4byte func_80436260
@@ -19716,7 +19716,7 @@
 	.4byte lbl_8044438C
 	.4byte 0x00000044
 	.4byte 0x8001C828  ;# ptr
-	.4byte lbl_804443D0
+	.4byte ctor_804443D0
 	.4byte 0x00000048
 	.4byte 0x8001C830  ;# ptr
 	.4byte func_80444418
@@ -19800,7 +19800,7 @@
 	.4byte func_8044629C
 	.4byte 0x00000218
 	.4byte 0x8001C98C  ;# ptr
-	.4byte lbl_804464B4
+	.4byte ctor_804464B4
 	.4byte 0x00000084
 	.4byte 0x8001C994  ;# ptr
 	.4byte lbl_80446538
@@ -20913,7 +20913,7 @@
 	.4byte func_804643D8
 	.4byte 0x00000144
 	.4byte 0x8001DAAC  ;# ptr
-	.4byte lbl_8046456C
+	.4byte ctor_8046456C
 	.4byte 0x00000060
 	.4byte 0x8001DAB4  ;# ptr
 	.4byte lbl_804645CC
@@ -21483,7 +21483,7 @@
 	.4byte func_8047C904
 	.4byte 0x00000128
 	.4byte 0x8001E0D0  ;# ptr
-	.4byte lbl_8047CA2C
+	.4byte ctor_8047CA2C
 	.4byte 0x0000005C
 	.4byte 0x8001E0D8  ;# ptr
 	.4byte func_8047CAA8
@@ -23064,7 +23064,7 @@
 	.4byte lbl_804B24A4
 	.4byte 0x00000080
 	.4byte 0x8001FC40  ;# ptr
-	.4byte lbl_804B2524
+	.4byte ctor_804B2524
 	.4byte 0x00000054
 	.4byte 0x8001FC48  ;# ptr
 	.4byte func_804B25BC
@@ -23085,7 +23085,7 @@
 	.4byte func_804B2E3C
 	.4byte 0x00000144
 	.4byte 0x8001FC78  ;# ptr
-	.4byte lbl_804B2FB4
+	.4byte ctor_804B2FB4
 	.4byte 0x0000003C
 	.4byte 0x8001FC80  ;# ptr
 	.4byte lbl_804B2FF0
@@ -23172,7 +23172,7 @@
 	.4byte lbl_804B5944
 	.4byte 0x00000048
 	.4byte 0x8001FD74  ;# ptr
-	.4byte lbl_804B598C
+	.4byte ctor_804B598C
 	.4byte 0x0000003C
 	.4byte 0x8001FD7C  ;# ptr
 	.4byte lbl_804B59C8
@@ -23286,7 +23286,7 @@
 	.4byte lbl_804BA8B4
 	.4byte 0x000004EC
 	.4byte 0x8001FEB8  ;# ptr
-	.4byte lbl_804BADB4
+	.4byte ctor_804BADB4
 	.4byte 0x0000005C
 	.4byte 0x8001FEC0  ;# ptr
 	.4byte func_804BAE1C
@@ -23325,7 +23325,7 @@
 	.4byte func_804BCC78
 	.4byte 0x00000C28
 	.4byte 0x8001FF34  ;# ptr
-	.4byte lbl_804BD8A0
+	.4byte ctor_804BD8A0
 	.4byte 0x00000048
 	.4byte 0x8001FF3C  ;# ptr
 	.4byte lbl_804BD8E8
@@ -23355,7 +23355,7 @@
 	.4byte func_804BF3EC
 	.4byte 0x00000154
 	.4byte 0x8001FF84  ;# ptr
-	.4byte lbl_804BF540
+	.4byte ctor_804BF540
 	.4byte 0x0000005C
 	.4byte 0x8001FF8C  ;# ptr
 	.4byte func_804BF5A0
@@ -23613,7 +23613,7 @@
 	.4byte func_804C8054
 	.4byte 0x00000120
 	.4byte 0x800202D8  ;# ptr
-	.4byte lbl_804C8174
+	.4byte ctor_804C8174
 	.4byte 0x00000510
 	.4byte 0x800202E0  ;# ptr
 	.4byte func_804C8790

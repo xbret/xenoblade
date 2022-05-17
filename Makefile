@@ -109,7 +109,7 @@ ifeq ($(VERBOSE),0)
 ASFLAGS += -W
 endif
 
-$(BUILD_DIR)/src/RevoSDK/__start.o: CFLAGS += -func_align 16
+$(BUILD_DIR)/src/Runtime/__start.o: CFLAGS += -func_align 16
 
 #-------------------------------------------------------------------------------
 # Recipes

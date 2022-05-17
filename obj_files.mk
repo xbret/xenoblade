@@ -1,94 +1,163 @@
 TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/memcpy.o \
-	$(BUILD_DIR)/asm/RevoSDK/TRK/mem_TRK.o \
-	$(BUILD_DIR)/asm/RevoSDK/TRK/__mem.o \
-	$(BUILD_DIR)/asm/RevoSDK/TRK/__exception.o \
+	$(BUILD_DIR)/asm/MetroTRK/mem_TRK.o \
+	$(BUILD_DIR)/asm/Runtime/__mem.o \
+	$(BUILD_DIR)/asm/Runtime/__exception.o \
 	$(BUILD_DIR)/asm/text.o \
-	$(BUILD_DIR)/asm/code/code_80039EE0.o \
+	$(BUILD_DIR)/asm/code/code_80039EEC.o \
 	$(BUILD_DIR)/asm/sdata.o \
 	$(BUILD_DIR)/src/main.o \
 	$(BUILD_DIR)/asm/sdata_1.o \
 	$(BUILD_DIR)/asm/code/code_8003A05C.o \
 	$(BUILD_DIR)/asm/sbss.o \
-	$(BUILD_DIR)/src/RevoSDK/__start.o \
+	$(BUILD_DIR)/src/Runtime/__start.o \
 	$(BUILD_DIR)/asm/sbss_1.o \
-	$(BUILD_DIR)/asm/code/code_8003A4F8.o \
-	$(BUILD_DIR)/asm/code/code_800539E0.o \
-	$(BUILD_DIR)/asm/code/code_80059D60.o \
-	$(BUILD_DIR)/asm/code/code_800696C8.o \
-	$(BUILD_DIR)/asm/code/code_8006A820.o \
-	$(BUILD_DIR)/asm/code/code_80074D7C.o \
-	$(BUILD_DIR)/asm/code/code_8007BE74.o \
-	$(BUILD_DIR)/asm/code/code_80087470.o \
-	$(BUILD_DIR)/asm/code/code_8008A0C8.o \
-	$(BUILD_DIR)/asm/code/code_800A9F40.o \
-	$(BUILD_DIR)/asm/code/code_800AABBC.o \
-	$(BUILD_DIR)/asm/code/code_800B9A40.o \
-	$(BUILD_DIR)/asm/code/code_800C1F2C.o \
-	$(BUILD_DIR)/asm/code/code_800D79B4.o \
-	$(BUILD_DIR)/asm/code/code_800FEA14.o \
-	$(BUILD_DIR)/asm/code/code_8010E9F8.o \
-	$(BUILD_DIR)/asm/code/code_801134E8.o \
-	$(BUILD_DIR)/asm/code/code_8011C418.o \
-	$(BUILD_DIR)/asm/code/code_8012BA00.o \
-	$(BUILD_DIR)/asm/code/code_8012DE98.o \
-	$(BUILD_DIR)/asm/code/code_801413F8.o \
-	$(BUILD_DIR)/asm/code/code_80142544.o \
-	$(BUILD_DIR)/asm/code/code_801555E4.o \
-	$(BUILD_DIR)/asm/code/code_8015B9D8.o \
-	$(BUILD_DIR)/asm/code/code_8016ED44.o \
-	$(BUILD_DIR)/asm/code/code_80189D68.o \
-	$(BUILD_DIR)/asm/code/code_801A1818.o \
-	$(BUILD_DIR)/asm/code/code_801A3038.o \
-	$(BUILD_DIR)/asm/code/code_801AFCE8.o \
-	$(BUILD_DIR)/asm/code/code_801B9FC8.o \
-	$(BUILD_DIR)/asm/code/code_801BC86C.o \
-	$(BUILD_DIR)/asm/code/code_801C183C.o \
-	$(BUILD_DIR)/asm/code/code_801C4AE4.o \
-	$(BUILD_DIR)/asm/code/code_801D1E30.o \
-	$(BUILD_DIR)/asm/code/code_801EABC4.o \
-	$(BUILD_DIR)/asm/code/code_801F32EC.o \
-	$(BUILD_DIR)/asm/code/code_802019F8.o \
-	$(BUILD_DIR)/asm/code/code_802059E8.o \
-	$(BUILD_DIR)/asm/code/code_8020AB7C.o \
-	$(BUILD_DIR)/asm/code/code_8021BBC4.o \
-	$(BUILD_DIR)/asm/code/code_80221DDC.o \
-	$(BUILD_DIR)/asm/code/code_80229378.o \
-	$(BUILD_DIR)/asm/code/code_8023BC8C.o \
-	$(BUILD_DIR)/asm/code/code_802405F0.o \
-	$(BUILD_DIR)/asm/code/code_80250CB4.o \
-	$(BUILD_DIR)/asm/code/code_8025D304.o \
-	$(BUILD_DIR)/asm/code/code_80274458.o \
-	$(BUILD_DIR)/asm/code/code_8028DAB0.o \
-	$(BUILD_DIR)/asm/code/code_802930E0.o \
-	$(BUILD_DIR)/asm/code/code_80295DB0.o \
-	$(BUILD_DIR)/asm/code/code_80296B38.o \
-	$(BUILD_DIR)/asm/code/code_8029E7D8.o \
-	$(BUILD_DIR)/asm/code/code_802A07D8.o \
-	$(BUILD_DIR)/asm/code/code_802AAF24.o \
-	$(BUILD_DIR)/asm/code/code_802AEA88.o \
+	$(BUILD_DIR)/asm/code/code_8003AA00.o \
+	$(BUILD_DIR)/asm/code/code_800539EC.o \
+	$(BUILD_DIR)/asm/code/code_80059EB8.o \
+	$(BUILD_DIR)/asm/code/code_80069768.o \
+	$(BUILD_DIR)/asm/code/code_8006A960.o \
+	$(BUILD_DIR)/asm/code/code_80074F4C.o \
+	$(BUILD_DIR)/asm/code/code_8007C0F8.o \
+	$(BUILD_DIR)/asm/code/code_8008753C.o \
+	$(BUILD_DIR)/asm/code/code_8008A104.o \
+	$(BUILD_DIR)/asm/code/code_800AA008.o \
+	$(BUILD_DIR)/asm/code/code_800AB3D0.o \
+	$(BUILD_DIR)/asm/code/code_800B9C14.o \
+	$(BUILD_DIR)/asm/code/code_800C2C90.o \
+	$(BUILD_DIR)/asm/code/code_800D7A04.o \
+	$(BUILD_DIR)/asm/code/code_800FEB84.o \
+	$(BUILD_DIR)/asm/code/code_8010EA64.o \
+	$(BUILD_DIR)/asm/code/code_801135E0.o \
+	$(BUILD_DIR)/asm/code/code_8011C44C.o \
+	$(BUILD_DIR)/asm/code/code_8012BAD4.o \
+	$(BUILD_DIR)/asm/code/code_8012DF90.o \
+	$(BUILD_DIR)/asm/code/code_801414CC.o \
+	$(BUILD_DIR)/asm/code/code_8014255C.o \
+	$(BUILD_DIR)/asm/code/code_80155660.o \
+	$(BUILD_DIR)/asm/code/code_8015BAA8.o \
+	$(BUILD_DIR)/asm/code/code_8016ED50.o \
+	$(BUILD_DIR)/asm/code/code_80189DE8.o \
+	$(BUILD_DIR)/asm/code/code_801A1864.o \
+	$(BUILD_DIR)/asm/code/code_801A30D8.o \
+	$(BUILD_DIR)/asm/code/code_801AFE1C.o \
+	$(BUILD_DIR)/asm/code/code_801BA14C.o \
+	$(BUILD_DIR)/asm/code/code_801BCA38.o \
+	$(BUILD_DIR)/asm/code/code_801C189C.o \
+	$(BUILD_DIR)/asm/code/code_801C4B60.o \
+	$(BUILD_DIR)/asm/code/code_801D1F9C.o \
+	$(BUILD_DIR)/asm/code/code_801EADC0.o \
+	$(BUILD_DIR)/asm/code/code_801F3410.o \
+	$(BUILD_DIR)/asm/code/code_80201A84.o \
+	$(BUILD_DIR)/asm/code/code_80205A7C.o \
+	$(BUILD_DIR)/asm/code/code_8020AB80.o \
+	$(BUILD_DIR)/asm/code/code_8021BC70.o \
+	$(BUILD_DIR)/asm/code/code_80221E38.o \
+	$(BUILD_DIR)/asm/code/code_802293F0.o \
+	$(BUILD_DIR)/asm/code/code_8023BCF0.o \
+	$(BUILD_DIR)/asm/code/code_802405F4.o \
+	$(BUILD_DIR)/asm/code/code_80250D24.o \
+	$(BUILD_DIR)/asm/code/code_8025D470.o \
+	$(BUILD_DIR)/asm/code/code_802744D4.o \
+	$(BUILD_DIR)/asm/code/code_8028DCAC.o \
+	$(BUILD_DIR)/asm/code/code_80293140.o \
+	$(BUILD_DIR)/asm/code/code_80296898.o \
+	$(BUILD_DIR)/asm/code/code_80296B44.o \
+	$(BUILD_DIR)/asm/code/code_8029E7E4.o \
+	$(BUILD_DIR)/asm/code/code_802A07F4.o \
+	$(BUILD_DIR)/asm/code/code_802AB3B8.o \
+	$(BUILD_DIR)/asm/code/code_802AEB1C.o \
 	$(BUILD_DIR)/src/code_802AEB74.o \
 	$(BUILD_DIR)/asm/code/code_802AEBC4.o \
-	$(BUILD_DIR)/asm/code/code_802B46E0.o \
-	$(BUILD_DIR)/asm/text_3_1.o \
+	$(BUILD_DIR)/asm/code/code_802B48A0.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/code_802BA7E4.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/ansi_files.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/ansi_fp.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/arith.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/buffer_io.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/direct_io.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/file_io.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/file_pos.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/mbstring.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/mem.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/mem_funcs.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/math_api.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/misc_io.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/printf.o \
-	$(BUILD_DIR)/asm/text_4.o \
-	$(BUILD_DIR)/asm/RevoSDK/arc__105.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/rand.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/scanf.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/string.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/strtold.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/strtoul.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/code_802C47D4.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/wstring.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/wchar_io.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/uart_console_io_gcn.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/code_802C71E8.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/math_sun.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_acos.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_asin.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_atan2.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_fmod.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/code_802C7DD4.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/code_802C8088.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_pow.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_rem_pio2.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/k_cos.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/k_rem_pio2.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/k_sin.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/k_tan.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_atan.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/code_802CAA3C.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_copysign.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_cos.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_floor.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_frexp.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_ldexp.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/code_802CAFC0.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_sin.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_tan.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_acos.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_asin.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_atan2.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_fmod.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_func_802C7DD4.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_func_802C8088.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_pow.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_sqrt.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/math_ppc.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_sqrt.o \
+	$(BUILD_DIR)/asm/MetroTRK/code_802CB46C.o \
+	$(BUILD_DIR)/asm/MetroTRK/MWCriticalSection_gc.o \
+	$(BUILD_DIR)/asm/MetroTRK/CircleBuffer.o \
+	$(BUILD_DIR)/asm/MetroTRK/flush_cache.o \
+	$(BUILD_DIR)/asm/MetroTRK/main_TRK.o \
+	$(BUILD_DIR)/asm/MetroTRK/mainloop.o \
+	$(BUILD_DIR)/asm/MetroTRK/code_802CBB7C.o \
+	$(BUILD_DIR)/asm/MetroTRK/dolphin_trk.o \
+	$(BUILD_DIR)/asm/MetroTRK/dolphin_trk_glue.o \
+	$(BUILD_DIR)/asm/MetroTRK/nubinit.o \
+	$(BUILD_DIR)/asm/MetroTRK/MetroTRK_802CC93C.o \
+	$(BUILD_DIR)/asm/NdevExi2A/DebuggerDriver.o \
+	$(BUILD_DIR)/asm/NdevExi2A/exi2.o \
+	$(BUILD_DIR)/asm/RevoSDK/ai/ai.o \
+	$(BUILD_DIR)/asm/RevoSDK/arc/arc.o \
+	$(BUILD_DIR)/asm/RevoSDK/arc/arc__105.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AX.o \
-    $(BUILD_DIR)/asm/RevoSDK/ax/AXAlloc.o \
-    $(BUILD_DIR)/asm/RevoSDK/ax/AXAux.o \
-    $(BUILD_DIR)/asm/RevoSDK/ax/AXCL.o \
-    $(BUILD_DIR)/asm/RevoSDK/ax/AXOut.o \
-    $(BUILD_DIR)/asm/RevoSDK/ax/AXSPB.o \
-    $(BUILD_DIR)/asm/RevoSDK/ax/AXVPB.o \
-    $(BUILD_DIR)/asm/RevoSDK/ax/AXProf.o \
-    $(BUILD_DIR)/asm/RevoSDK/axfx/AXFXReverbHi.o \
-    $(BUILD_DIR)/asm/RevoSDK/axfx/AXFXReverbHiExp.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXAlloc.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXAux.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXCL.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXOut.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXSPB.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXVPB.o \
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXProf.o \
+	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXReverbHi.o \
+	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXReverbHiExp.o \
 	$(BUILD_DIR)/asm/RevoSDK/axfx/code_802D65F0.o \
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXLfoTable.o \
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXSrcCoef.o \
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXHooks.o \
-	$(BUILD_DIR)/asm/RevoSDK/PPCArch.o \
+	$(BUILD_DIR)/asm/RevoSDK/base/PPCArch.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/gki_buffer.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/gki_time.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/gki_ppc.o \
@@ -169,25 +238,25 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd_broadway.o \
 	$(BUILD_DIR)/asm/RevoSDK/enc/enc.o \
 	$(BUILD_DIR)/asm/RevoSDK/esp.o \
-	$(BUILD_DIR)/asm/RevoSDK/euart.o \
+	$(BUILD_DIR)/asm/RevoSDK/euart/euart.o \
 	$(BUILD_DIR)/asm/RevoSDK/exi/EXIBios.o \
 	$(BUILD_DIR)/asm/RevoSDK/exi/EXIUart.o \
 	$(BUILD_DIR)/asm/RevoSDK/exi/EXICommon.o \
-	$(BUILD_DIR)/asm/RevoSDK/fs.o \
+	$(BUILD_DIR)/asm/RevoSDK/fs/fs.o \
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXInit.o \
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXFifo.o \
-    $(BUILD_DIR)/asm/RevoSDK/gx/GXAttr.o \
-    $(BUILD_DIR)/asm/RevoSDK/gx/GXMisc.o \
-    $(BUILD_DIR)/asm/RevoSDK/gx/GXGeometry.o \
-    $(BUILD_DIR)/asm/RevoSDK/gx/GXFrameBuf.o \
-    $(BUILD_DIR)/asm/RevoSDK/gx/GXLight.o \
-    $(BUILD_DIR)/asm/RevoSDK/gx/GXTexture.o \
-    $(BUILD_DIR)/asm/RevoSDK/gx/GXBump.o \
-    $(BUILD_DIR)/asm/RevoSDK/gx/GXTev.o \
-    $(BUILD_DIR)/asm/RevoSDK/gx/GXPixel.o \
-    $(BUILD_DIR)/asm/RevoSDK/gx/GXDisplayList.o \
-    $(BUILD_DIR)/asm/RevoSDK/gx/GXTransform.o \
-    $(BUILD_DIR)/asm/RevoSDK/gx/GXPerf.o \
+	$(BUILD_DIR)/asm/RevoSDK/gx/GXAttr.o \
+	$(BUILD_DIR)/asm/RevoSDK/gx/GXMisc.o \
+	$(BUILD_DIR)/asm/RevoSDK/gx/GXGeometry.o \
+	$(BUILD_DIR)/asm/RevoSDK/gx/GXFrameBuf.o \
+	$(BUILD_DIR)/asm/RevoSDK/gx/GXLight.o \
+	$(BUILD_DIR)/asm/RevoSDK/gx/GXTexture.o \
+	$(BUILD_DIR)/asm/RevoSDK/gx/GXBump.o \
+	$(BUILD_DIR)/asm/RevoSDK/gx/GXTev.o \
+	$(BUILD_DIR)/asm/RevoSDK/gx/GXPixel.o \
+	$(BUILD_DIR)/asm/RevoSDK/gx/GXDisplayList.o \
+	$(BUILD_DIR)/asm/RevoSDK/gx/GXTransform.o \
+	$(BUILD_DIR)/asm/RevoSDK/gx/GXPerf.o \
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMFrameController.o \
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMAnmController.o \
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMGUIManager.o \
@@ -201,10 +270,10 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcProfile.o \
 	$(BUILD_DIR)/asm/RevoSDK/kpad/kpad.o \
 	$(BUILD_DIR)/asm/RevoSDK/mem/mem_heapCommon.o \
-    $(BUILD_DIR)/asm/RevoSDK/mem/mem_expHeap.o \
-    $(BUILD_DIR)/asm/RevoSDK/mem/mem_frameHeap.o \
-    $(BUILD_DIR)/asm/RevoSDK/mem/mem_allocator.o \
-    $(BUILD_DIR)/asm/RevoSDK/mem/mem_list.o \
+	$(BUILD_DIR)/asm/RevoSDK/mem/mem_expHeap.o \
+	$(BUILD_DIR)/asm/RevoSDK/mem/mem_frameHeap.o \
+	$(BUILD_DIR)/asm/RevoSDK/mem/mem_allocator.o \
+	$(BUILD_DIR)/asm/RevoSDK/mem/mem_list.o \
 	$(BUILD_DIR)/asm/RevoSDK/mix/mix.o \
 	$(BUILD_DIR)/asm/RevoSDK/mix/remote.o \
 	$(BUILD_DIR)/asm/RevoSDK/mtx/mtx.o \
@@ -214,8 +283,8 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/mtx/quat.o \
 	$(BUILD_DIR)/asm/RevoSDK/nand/nand.o \
 	$(BUILD_DIR)/asm/RevoSDK/nand/NANDOpenClose__103.o \
-    $(BUILD_DIR)/asm/RevoSDK/nand/NANDCore.o \
-    $(BUILD_DIR)/asm/RevoSDK/nand/NANDCheck.o \
+	$(BUILD_DIR)/asm/RevoSDK/nand/NANDCore.o \
+	$(BUILD_DIR)/asm/RevoSDK/nand/NANDCheck.o \
 	$(BUILD_DIR)/asm/RevoSDK/nand/NANDLogging.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OS.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSAlarm.o \
@@ -246,10 +315,10 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSStateFlags.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSNet.o \
 	$(BUILD_DIR)/asm/code/code_8035E1F0.o \
-	$(BUILD_DIR)/asm/RevoSDK/TRK/__ppc_eabi_init.o \
+	$(BUILD_DIR)/asm/Runtime/__ppc_eabi_init.o \
 	$(BUILD_DIR)/asm/RevoSDK/pad/Pad.o \
 	$(BUILD_DIR)/asm/text_6.o \
-	$(BUILD_DIR)/asm/CriWare.o \
+	$(BUILD_DIR)/asm/CriWare/CriWare.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_rescommon.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resdict.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resfile.o \
@@ -383,9 +452,52 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/ut/ut_ResFont.o \
 	$(BUILD_DIR)/asm/nw4r/ut/code_8042CC2C.o \
 	$(BUILD_DIR)/asm/nw4r/ut/ut_CharWriter.o \
-	$(BUILD_DIR)/asm/text_8.o \
+	$(BUILD_DIR)/asm/code/code_80432678.o \
+	$(BUILD_DIR)/asm/code/code_80435D28.o \
+	$(BUILD_DIR)/asm/code/code_80435DF8.o \
+	$(BUILD_DIR)/asm/code/code_80435E70.o \
+	$(BUILD_DIR)/asm/code/code_80436138.o \
+	$(BUILD_DIR)/asm/code/code_80436260.o \
+	$(BUILD_DIR)/asm/code/code_80436E84.o \
+	$(BUILD_DIR)/asm/code/code_80436F20.o \
+	$(BUILD_DIR)/asm/code/code_8043738C.o \
+	$(BUILD_DIR)/asm/code/code_8043FBC4.o \
+	$(BUILD_DIR)/asm/code/code_80444418.o \
+	$(BUILD_DIR)/asm/code/code_80446538.o \
+	$(BUILD_DIR)/asm/code/code_80448F30.o \
+	$(BUILD_DIR)/asm/code/code_8044DB24.o \
 	$(BUILD_DIR)/src/code_80450B14.o \
-	$(BUILD_DIR)/asm/text_9.o
+	$(BUILD_DIR)/asm/code/code_80450B2C.o \
+	$(BUILD_DIR)/asm/code/code_80450B44.o \
+	$(BUILD_DIR)/asm/code/code_804645CC.o \
+	$(BUILD_DIR)/asm/code/code_80468434.o \
+	$(BUILD_DIR)/asm/code/code_8046A530.o \
+	$(BUILD_DIR)/asm/code/code_80474F80.o \
+	$(BUILD_DIR)/asm/code/code_8047CA88.o \
+	$(BUILD_DIR)/asm/code/code_8047D2AC.o \
+	$(BUILD_DIR)/asm/code/code_80481E6C.o \
+	$(BUILD_DIR)/asm/code/code_8048EAA8.o \
+	$(BUILD_DIR)/asm/code/code_8049431C.o \
+	$(BUILD_DIR)/asm/code/code_8049FCAC.o \
+	$(BUILD_DIR)/asm/code/code_804B2578.o \
+	$(BUILD_DIR)/asm/code/code_804B2FF0.o \
+	$(BUILD_DIR)/asm/code/code_804B59C8.o \
+	$(BUILD_DIR)/asm/code/code_804BAE10.o \
+	$(BUILD_DIR)/asm/code/code_804BC9EC.o \
+	$(BUILD_DIR)/asm/code/code_804BD8E8.o \
+	$(BUILD_DIR)/asm/code/code_804BF59C.o \
+	$(BUILD_DIR)/asm/code/code_804C8684.o \
+	$(BUILD_DIR)/asm/code/code_804C8718.o \
+	$(BUILD_DIR)/asm/code/code_804CC2B8.o \
+	$(BUILD_DIR)/asm/code/code_804DA4CC.o \
+	$(BUILD_DIR)/asm/code/code_804DAF70.o \
+	$(BUILD_DIR)/asm/code/code_804DB0F0.o \
+	$(BUILD_DIR)/asm/code/code_804DB240.o \
+	$(BUILD_DIR)/asm/code/code_804DB348.o \
+	$(BUILD_DIR)/asm/code/code_804DB438.o \
+	$(BUILD_DIR)/asm/code/code_804DB938.o \
+	$(BUILD_DIR)/asm/code/code_804F0258.o \
+	$(BUILD_DIR)/asm/code/code_804F5158.o \
 
 EXTAB_O_FILES :=\
 	$(BUILD_DIR)/asm/extab.o

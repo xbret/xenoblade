@@ -22285,126 +22285,347 @@ lbl_8066D3E8:
 	# ROM: 0x577248
 	.float 20.0
 	.4byte 0
+
+.global lbl_8066D3F0
+lbl_8066D3F0:
 	.asciz "NOP"
 	.4byte 0
+
+.global lbl_8066D3F8
+lbl_8066D3F8:
 	.asciz "CONST_0"
+
+.global lbl_8066D400
+lbl_8066D400:
 	.asciz "CONST_1"
+
+.global lbl_8066D408
+lbl_8066D408:
 	.asciz "CONST_2"
+
+.global lbl_8066D410
+lbl_8066D410:
 	.asciz "CONST_3"
+
+.global lbl_8066D418
+lbl_8066D418:
 	.asciz "CONST_4"
+
+.global lbl_8066D420
+lbl_8066D420:
 	.asciz "CONST_I"
+
+.global lbl_8066D428
+lbl_8066D428:
 	.asciz "LD"
 	.byte 0x00
+
+.global lbl_8066D42C
+lbl_8066D42C:
 	.asciz "ST"
 	.byte 0x00
+
+.global lbl_8066D430
+lbl_8066D430:
 	.asciz "LD_ARG"
 	.balign 4
+
+.global lbl_8066D438
+lbl_8066D438:
 	.asciz "ST_ARG"
 	.balign 4
+
+.global lbl_8066D440
+lbl_8066D440:
 	.asciz "LD_0"
 	.balign 4
+
+.global lbl_8066D448
+lbl_8066D448:
 	.asciz "LD_1"
 	.balign 4
+
+.global lbl_8066D450
+lbl_8066D450:
 	.asciz "LD_2"
 	.balign 4
+
+.global lbl_8066D458
+lbl_8066D458:
 	.asciz "LD_3"
 	.balign 4
+
+.global lbl_8066D460
+lbl_8066D460:
 	.asciz "ST_0"
 	.balign 4
+
+.global lbl_8066D468
+lbl_8066D468:
 	.asciz "ST_1"
 	.balign 4
+
+.global lbl_8066D470
+lbl_8066D470:
 	.asciz "ST_2"
 	.balign 4
+
+.global lbl_8066D478
+lbl_8066D478:
 	.asciz "ST_3"
 	.balign 4
+
+.global lbl_8066D480
+lbl_8066D480:
 	.asciz "LD_AR"
 	.balign 4
+
+.global lbl_8066D488
+lbl_8066D488:
 	.asciz "ST_AR"
 	.balign 4
+
+.global lbl_8066D490
+lbl_8066D490:
 	.asciz "LD_NIL"
 	.balign 4
+
+.global lbl_8066D498
+lbl_8066D498:
 	.asciz "LD_TRUE"
+
+.global lbl_8066D4A0
+lbl_8066D4A0:
 	.asciz "LD_FUNC"
+
+.global lbl_8066D4A8
+lbl_8066D4A8:
 	.asciz "MINUS"
 	.balign 4
+
+.global lbl_8066D4B0
+lbl_8066D4B0:
 	.asciz "NOT"
+
+.global lbl_8066D4B4
+lbl_8066D4B4:
 	.asciz "L_NOT"
 	.balign 4
+
+.global lbl_8066D4BC
+lbl_8066D4BC:
 	.asciz "ADD"
+
+.global lbl_8066D4C0
+lbl_8066D4C0:
 	.asciz "SUB"
+
+.global lbl_8066D4C4
+lbl_8066D4C4:
 	.asciz "MUL"
+
+.global lbl_8066D4C8
+lbl_8066D4C8:
 	.asciz "DIV"
+
+.global lbl_8066D4CC
+lbl_8066D4CC:
 	.asciz "MOD"
+
+.global lbl_8066D4D0
+lbl_8066D4D0:
 	.asciz "OR"
 	.balign 4
+
+.global lbl_8066D4D4
+lbl_8066D4D4:
 	.asciz "AND"
+
+.global lbl_8066D4D8
+lbl_8066D4D8:
 	.asciz "R_SHIFT"
+
+.global lbl_8066D4E0
+lbl_8066D4E0:
 	.asciz "L_SHIFT"
+
+.global lbl_8066D4E8
+lbl_8066D4E8:
 	.asciz "EQ"
 	.balign 4
+
+.global lbl_8066D4EC
+lbl_8066D4EC:
 	.asciz "NE"
 	.balign 4
+
+.global lbl_8066D4F0
+lbl_8066D4F0:
 	.asciz "GT"
 	.balign 4
+
+.global lbl_8066D4F4
+lbl_8066D4F4:
 	.asciz "LT"
 	.balign 4
+
+.global lbl_8066D4F8
+lbl_8066D4F8:
 	.asciz "GE"
 	.balign 4
+
+.global lbl_8066D4FC
+lbl_8066D4FC:
 	.asciz "LE"
 	.balign 4
+
+.global lbl_8066D500
+lbl_8066D500:
 	.asciz "L_OR"
 	.balign 4
+
+.global lbl_8066D508
+lbl_8066D508:
 	.asciz "L_AND"
 	.balign 4
+
+.global lbl_8066D510
+lbl_8066D510:
 	.asciz "JMP"
+
+.global lbl_8066D514
+lbl_8066D514:
 	.asciz "JPF"
+
+.global lbl_8066D518
+lbl_8066D518:
 	.asciz "CALL"
 	.balign 4
+
+.global lbl_8066D520
+lbl_8066D520:
 	.asciz "CALL_W"
 	.balign 4
+
+.global lbl_8066D528
+lbl_8066D528:
 	.asciz "RET"
+
+.global lbl_8066D52C
+lbl_8066D52C:
 	.asciz "NEXT"
 	.balign 4
+
+.global lbl_8066D534
+lbl_8066D534:
 	.asciz "PLUGIN"
 	.balign 4
+
+.global lbl_8066D53C
+lbl_8066D53C:
 	.asciz "GET_OC"
 	.balign 4
+
+.global lbl_8066D544
+lbl_8066D544:
 	.asciz "GETTER"
 	.balign 4
+
+.global lbl_8066D54C
+lbl_8066D54C:
 	.asciz "SETTER"
 	.balign 4
+
+.global lbl_8066D554
+lbl_8066D554:
 	.asciz "SEND"
 	.balign 4
+
+.global lbl_8066D55C
+lbl_8066D55C:
 	.asciz "SEND_W"
 	.balign 4
+
+.global lbl_8066D564
+lbl_8066D564:
 	.asciz "TYPEOF"
 	.balign 4
+
+.global lbl_8066D56C
+lbl_8066D56C:
 	.asciz "SIZEOF"
 	.balign 4
+
+.global lbl_8066D574
+lbl_8066D574:
 	.asciz "SWITCH"
 	.balign 4
+
+.global lbl_8066D57C
+lbl_8066D57C:
 	.asciz "INC"
+
+.global lbl_8066D580
+lbl_8066D580:
 	.asciz "DEC"
+
+.global lbl_8066D584
+lbl_8066D584:
 	.asciz "EXIT"
 	.balign 4
+
+.global lbl_8066D58C
+lbl_8066D58C:
 	.asciz "BP"
 	.balign 4
+
+
+
+.global lbl_8066D590
+lbl_8066D590:
 	.asciz "nil"
+
+.global lbl_8066D594
+lbl_8066D594:
 	.asciz "true"
 	.balign 4
+
+.global lbl_8066D59C
+lbl_8066D59C:
 	.asciz "false"
 	.balign 4
+
+.global lbl_8066D5A4
+lbl_8066D5A4:
 	.asciz "int"
+
+.global lbl_8066D5A8
+lbl_8066D5A8:
 	.asciz "fixed"
 	.balign 4
+
+.global lbl_8066D5B0
+lbl_8066D5B0:
 	.asciz "string"
 	.balign 4
+
+.global lbl_8066D5B8
+lbl_8066D5B8:
 	.asciz "array"
 	.balign 4
+
+.global lbl_8066D5C0
+lbl_8066D5C0:
 	.asciz "plugin"
 	.balign 4
+
+.global lbl_8066D5C8
+lbl_8066D5C8:
 	.asciz "OC"
 	.balign 4
+
+.global lbl_8066D5CC
+lbl_8066D5CC:
 	.asciz "sys"
 
 

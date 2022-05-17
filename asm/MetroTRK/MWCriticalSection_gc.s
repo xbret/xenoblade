@@ -1,0 +1,34 @@
+.include "macros.inc"
+
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
+.global lbl_802CB780
+lbl_802CB780:
+/* 802CB780 00294D40  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 802CB784 00294D44  7C 08 02 A6 */	mflr r0
+/* 802CB788 00294D48  90 01 00 14 */	stw r0, 0x14(r1)
+/* 802CB78C 00294D4C  48 00 4E ED */	bl func_802D0678
+/* 802CB790 00294D50  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 802CB794 00294D54  38 60 00 00 */	li r3, 0
+/* 802CB798 00294D58  7C 08 03 A6 */	mtlr r0
+/* 802CB79C 00294D5C  38 21 00 10 */	addi r1, r1, 0x10
+/* 802CB7A0 00294D60  4E 80 00 20 */	blr
+
+.global MWInitializeCriticalSection
+MWInitializeCriticalSection:
+/* 802CB7A4 00294D64  4E 80 00 20 */	blr 
+
+.global MWEnterCriticalSection
+MWEnterCriticalSection:
+/* 802CB7A8 00294D68  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 802CB7AC 00294D6C  7C 08 02 A6 */	mflr r0
+/* 802CB7B0 00294D70  90 01 00 14 */	stw r0, 0x14(r1)
+/* 802CB7B4 00294D74  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 802CB7B8 00294D78  7C 7F 1B 78 */	mr r31, r3
+/* 802CB7BC 00294D7C  48 08 D1 F5 */	bl OSDisableInterrupts
+/* 802CB7C0 00294D80  90 7F 00 00 */	stw r3, 0(r31)
+/* 802CB7C4 00294D84  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 802CB7C8 00294D88  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 802CB7CC 00294D8C  7C 08 03 A6 */	mtlr r0
+/* 802CB7D0 00294D90  38 21 00 10 */	addi r1, r1, 0x10
+/* 802CB7D4 00294D94  4E 80 00 20 */	blr 
