@@ -4,18 +4,74 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/TRK/__mem.o \
 	$(BUILD_DIR)/asm/RevoSDK/TRK/__exception.o \
 	$(BUILD_DIR)/asm/text.o \
+	$(BUILD_DIR)/asm/code/code_80039EE0.o \
 	$(BUILD_DIR)/asm/sdata.o \
 	$(BUILD_DIR)/src/main.o \
-	$(BUILD_DIR)/asm/text_1.o \
 	$(BUILD_DIR)/asm/sdata_1.o \
+	$(BUILD_DIR)/asm/code/code_8003A05C.o \
 	$(BUILD_DIR)/asm/sbss.o \
-	$(BUILD_DIR)/asm/text_2.o \
 	$(BUILD_DIR)/src/RevoSDK/__start.o \
 	$(BUILD_DIR)/asm/sbss_1.o \
-	$(BUILD_DIR)/asm/text_3.o \
+	$(BUILD_DIR)/asm/code/code_8003A4F8.o \
+	$(BUILD_DIR)/asm/code/code_800539E0.o \
+	$(BUILD_DIR)/asm/code/code_80059D60.o \
+	$(BUILD_DIR)/asm/code/code_800696C8.o \
+	$(BUILD_DIR)/asm/code/code_8006A820.o \
+	$(BUILD_DIR)/asm/code/code_80074D7C.o \
+	$(BUILD_DIR)/asm/code/code_8007BE74.o \
+	$(BUILD_DIR)/asm/code/code_80087470.o \
+	$(BUILD_DIR)/asm/code/code_8008A0C8.o \
+	$(BUILD_DIR)/asm/code/code_800A9F40.o \
+	$(BUILD_DIR)/asm/code/code_800AABBC.o \
+	$(BUILD_DIR)/asm/code/code_800B9A40.o \
+	$(BUILD_DIR)/asm/code/code_800C1F2C.o \
+	$(BUILD_DIR)/asm/code/code_800D79B4.o \
+	$(BUILD_DIR)/asm/code/code_800FEA14.o \
+	$(BUILD_DIR)/asm/code/code_8010E9F8.o \
+	$(BUILD_DIR)/asm/code/code_801134E8.o \
+	$(BUILD_DIR)/asm/code/code_8011C418.o \
+	$(BUILD_DIR)/asm/code/code_8012BA00.o \
+	$(BUILD_DIR)/asm/code/code_8012DE98.o \
+	$(BUILD_DIR)/asm/code/code_801413F8.o \
+	$(BUILD_DIR)/asm/code/code_80142544.o \
+	$(BUILD_DIR)/asm/code/code_801555E4.o \
+	$(BUILD_DIR)/asm/code/code_8015B9D8.o \
+	$(BUILD_DIR)/asm/code/code_8016ED44.o \
+	$(BUILD_DIR)/asm/code/code_80189D68.o \
+	$(BUILD_DIR)/asm/code/code_801A1818.o \
+	$(BUILD_DIR)/asm/code/code_801A3038.o \
+	$(BUILD_DIR)/asm/code/code_801AFCE8.o \
+	$(BUILD_DIR)/asm/code/code_801B9FC8.o \
+	$(BUILD_DIR)/asm/code/code_801BC86C.o \
+	$(BUILD_DIR)/asm/code/code_801C183C.o \
+	$(BUILD_DIR)/asm/code/code_801C4AE4.o \
+	$(BUILD_DIR)/asm/code/code_801D1E30.o \
+	$(BUILD_DIR)/asm/code/code_801EABC4.o \
+	$(BUILD_DIR)/asm/code/code_801F32EC.o \
+	$(BUILD_DIR)/asm/code/code_802019F8.o \
+	$(BUILD_DIR)/asm/code/code_802059E8.o \
+	$(BUILD_DIR)/asm/code/code_8020AB7C.o \
+	$(BUILD_DIR)/asm/code/code_8021BBC4.o \
+	$(BUILD_DIR)/asm/code/code_80221DDC.o \
+	$(BUILD_DIR)/asm/code/code_80229378.o \
+	$(BUILD_DIR)/asm/code/code_8023BC8C.o \
+	$(BUILD_DIR)/asm/code/code_802405F0.o \
+	$(BUILD_DIR)/asm/code/code_80250CB4.o \
+	$(BUILD_DIR)/asm/code/code_8025D304.o \
+	$(BUILD_DIR)/asm/code/code_80274458.o \
+	$(BUILD_DIR)/asm/code/code_8028DAB0.o \
+	$(BUILD_DIR)/asm/code/code_802930E0.o \
+	$(BUILD_DIR)/asm/code/code_80295DB0.o \
+	$(BUILD_DIR)/asm/code/code_80296B38.o \
+	$(BUILD_DIR)/asm/code/code_8029E7D8.o \
+	$(BUILD_DIR)/asm/code/code_802A07D8.o \
+	$(BUILD_DIR)/asm/code/code_802AAF24.o \
+	$(BUILD_DIR)/asm/code/code_802AEA88.o \
 	$(BUILD_DIR)/src/code_802AEB74.o \
+	$(BUILD_DIR)/asm/code/code_802AEBC4.o \
+	$(BUILD_DIR)/asm/code/code_802B46E0.o \
 	$(BUILD_DIR)/asm/text_3_1.o \
-	$(BUILD_DIR)/asm/text/printf.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/printf.o \
 	$(BUILD_DIR)/asm/text_4.o \
 	$(BUILD_DIR)/asm/RevoSDK/arc__105.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AX.o \
@@ -98,7 +154,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/bte/sdp_main.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/sdp_server.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/sdp_utils.o \
-	$(BUILD_DIR)/asm/code_80308530.o \
+	$(BUILD_DIR)/asm/code/code_80308530.o \
 	$(BUILD_DIR)/asm/RevoSDK/db/db.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp_debug.o \
@@ -189,7 +245,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayRecord.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSStateFlags.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSNet.o \
-	$(BUILD_DIR)/asm/code_8035E1F0.o \
+	$(BUILD_DIR)/asm/code/code_8035E1F0.o \
 	$(BUILD_DIR)/asm/RevoSDK/TRK/__ppc_eabi_init.o \
 	$(BUILD_DIR)/asm/RevoSDK/pad/Pad.o \
 	$(BUILD_DIR)/asm/text_6.o \
@@ -245,7 +301,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_fog.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_light.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_calcvtx.o \
-	$(BUILD_DIR)/asm/code_803FE8B0.o \
+	$(BUILD_DIR)/asm/code/code_803FE8B0.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_pane.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_group.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_layout.o \

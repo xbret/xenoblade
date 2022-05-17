@@ -10850,15 +10850,18 @@ lbl_8050C2D8:
 
 	#Xenoblade
 	#"ゼノブレイド"
+.global lbl_8050C370
+lbl_8050C370:
 	.4byte 0x835B836D
 	.4byte 0x8375838C
 	.4byte 0x83438368
 	.byte 0
-
 	.byte 0x00,0x00,0x00
 
-	#The Bionis and Mechonis's Monados cut the future open
-	#"巨神と機神　モナドが未来を斬り開く"
+#The Bionis and Mechonis's Monados cut the future open
+#"巨神と機神　モナドが未来を斬り開く"
+.global lbl_8050C380
+lbl_8050C380:
 	.4byte 0x8B90905F
 	.4byte 0x82C68B40
 	.4byte 0x905F8140
@@ -10869,8 +10872,10 @@ lbl_8050C2D8:
 	.4byte 0x82E88A4A
 	.2byte 0x82AD
 	.byte 0x00
-
 	.byte 0x00
+
+.global lbl_8050C3A4
+lbl_8050C3A4:
 	.asciz "bannerTexture.tpl"
 	.balign 4
 	.asciz "iconTexture[0].tpl"
@@ -10937,6 +10942,9 @@ lbl_8050C4D8:
 	.4byte 0x307F4E2D
 	.4byte 0x30673059
 	.4byte 0x30020000
+
+.global lbl_8050C4F4
+lbl_8050C4F4:
 	.4byte 0x00570069
 	.4byte 0x006930EA
 	.4byte 0x30E230B3
@@ -10946,6 +10954,9 @@ lbl_8050C4D8:
 	.4byte 0x308C307E
 	.4byte 0x3057305F
 	.4byte 0x30020000
+
+.global lbl_8050C518
+lbl_8050C518:
 	.4byte 0x00570069
 	.4byte 0x006930EA
 	.4byte 0x30E230B3
@@ -11001,6 +11012,9 @@ lbl_8050C4D8:
 	.4byte 0x30603055
 	.4byte 0x30443002
 	.4byte 0
+
+.global lbl_8050C5F4
+lbl_8050C5F4:
 	.4byte 0x00570069
 	.4byte 0x006930EA
 	.4byte 0x30E230B3
@@ -11053,6 +11067,9 @@ lbl_8050C4D8:
 	.4byte 0x30603055
 	.4byte 0x30443002
 	.4byte 0
+
+.global lbl_8050C6C4
+lbl_8050C6C4:
 	.4byte 0x00570069
 	.4byte 0x006930EA
 	.4byte 0x30E230B3
@@ -11082,6 +11099,9 @@ lbl_8050C4D8:
 	.4byte 0x304F3060
 	.4byte 0x30553044
 	.4byte 0x30020000
+
+.global lbl_8050C738
+lbl_8050C738:
 	.4byte 0x00570069
 	.4byte 0x0069672C
 	.4byte 0x4F534FDD
@@ -11104,6 +11124,9 @@ lbl_8050C4D8:
 	.4byte 0x304F3060
 	.4byte 0x30553044
 	.4byte 0x30020000
+
+.global lbl_8050C790
+lbl_8050C790:
 	.4byte 0x00570069
 	.4byte 0x0069672C
 	.4byte 0x4F534FDD
@@ -11134,6 +11157,9 @@ lbl_8050C4D8:
 	.4byte 0x30443002
 	.4byte 0
 	.4byte 0
+
+.global lbl_8050C808
+lbl_8050C808:
 	.4byte 0x00570069
 	.4byte 0x0069672C
 	.4byte 0x4F534FDD
@@ -11197,6 +11223,9 @@ lbl_8050C924:
 	.asciz "name"
 	.4byte 0
 	.2byte 0
+
+.global lbl_8050C938
+lbl_8050C938:
 	.asciz "CMenuGameClear"
 	.balign 4
 
@@ -12453,7 +12482,7 @@ lbl_8050DF48:
 	.4byte 0x00000300
 	.4byte 0
 	.4byte 0x04000000
-	.4byte 0x806658F0
+	.4byte lbl_806658F0
 	.4byte 0x04000000
 	.4byte 0
 
