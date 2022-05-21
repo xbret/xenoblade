@@ -388,6 +388,8 @@ lbl_802DCFF4:
 /* 802DD004 002A65C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DD008 002A65C8  4E 80 00 20 */	blr 
 /* 802DD00C 002A65CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.global lbl_802DD010
+lbl_802DD010:
 /* 802DD010 002A65D0  3C C0 80 5C */	lis r6, lbl_805BBC20@ha
 /* 802DD014 002A65D4  38 00 00 00 */	li r0, 0
 /* 802DD018 002A65D8  38 C6 BC 20 */	addi r6, r6, lbl_805BBC20@l
@@ -400,6 +402,8 @@ lbl_802DCFF4:
 /* 802DD034 002A65F4  B0 A6 00 12 */	sth r5, 0x12(r6)
 /* 802DD038 002A65F8  4E 80 00 20 */	blr 
 /* 802DD03C 002A65FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.global lbl_802DD040
+lbl_802DD040:
 /* 802DD040 002A6600  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DD044 002A6604  7C 08 02 A6 */	mflr r0
 /* 802DD048 002A6608  3C A0 80 5C */	lis r5, lbl_805BBC20@ha
@@ -428,6 +432,8 @@ lbl_802DCFF4:
 /* 802DD0A4 002A6664  4E 80 00 20 */	blr 
 /* 802DD0A8 002A6668  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802DD0AC 002A666C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.global lbl_802DD0B0
+lbl_802DD0B0:
 /* 802DD0B0 002A6670  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD0B4 002A6674  7C 08 02 A6 */	mflr r0
 /* 802DD0B8 002A6678  3C 60 80 5C */	lis r3, lbl_805BBC20@ha
@@ -444,6 +450,8 @@ lbl_802DCFF4:
 /* 802DD0E4 002A66A4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802DD0E8 002A66A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802DD0EC 002A66AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.global lbl_802DD0F0
+lbl_802DD0F0:
 /* 802DD0F0 002A66B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD0F4 002A66B4  7C 08 02 A6 */	mflr r0
 /* 802DD0F8 002A66B8  3C A0 80 5C */	lis r5, lbl_805BBC20@ha
@@ -456,6 +464,8 @@ lbl_802DCFF4:
 /* 802DD114 002A66D4  7C 08 03 A6 */	mtlr r0
 /* 802DD118 002A66D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD11C 002A66DC  4E 80 00 20 */	blr 
+.global lbl_802DD120
+lbl_802DD120:
 /* 802DD120 002A66E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD124 002A66E4  7C 08 02 A6 */	mflr r0
 /* 802DD128 002A66E8  3C 80 80 5C */	lis r4, lbl_805BBC20@ha

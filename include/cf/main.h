@@ -1,6 +1,6 @@
 #include "types.h"
-#include "code_802AEB74.h"
-#include "code_80450B14.h"
+#include "cf/code_802AEB74.h"
+#include "CLib/code_80450B14.h"
 
 extern void func_80057CDC();
 extern void func_804336E4(u32, u32);
@@ -14,7 +14,7 @@ extern void func_8046023C(void*, void*);
 extern void func_804DAA90(u32**);
 extern void func_804DAA98(u32**);
 extern void func_804DAAA0(u32**);
-extern void func_804DDE2C(char**);
+extern void func_804DDE2C(char*[]);
 extern void SaveStaticArcFilenameString(const char* const*);
 extern void lbl_80039F6C();
 extern void lbl_80039F90();

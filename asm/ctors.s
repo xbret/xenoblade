@@ -5,64 +5,64 @@
 .global lbl_804F5900
 lbl_804F5900:
 	# ROM: 0x4F1A00
-	.4byte ctor_802BA774  ;# ptr
-	.4byte ctor_80039EE0  ;# ptr
-	.4byte ctor_8003A4F8  ;# ptr
-	.4byte ctor_800539E0  ;# ptr
-	.4byte ctor_80059D60  ;# ptr
-	.4byte ctor_800696C8  ;# ptr
-	.4byte ctor_8006A820  ;# ptr
-	.4byte ctor_80074D7C  ;# ptr
-	.4byte ctor_8007BE74  ;# ptr
-	.4byte ctor_80087470  ;# ptr
-	.4byte ctor_8008A0C8  ;# ptr
-	.4byte ctor_800A9F40  ;# ptr
-	.4byte ctor_800AABBC  ;# ptr
-	.4byte ctor_800B9A40  ;# ptr
-	.4byte ctor_800C1F2C  ;# ptr
-	.4byte ctor_800D79B4  ;# ptr
-	.4byte ctor_800FEA14  ;# ptr
-	.4byte ctor_8010E9F8  ;# ptr
-	.4byte ctor_801134E8  ;# ptr
-	.4byte ctor_8011C418  ;# ptr
-	.4byte ctor_8012BA00  ;# ptr
-	.4byte ctor_8012DE98  ;# ptr
-	.4byte ctor_801413F8  ;# ptr
-	.4byte ctor_80142544  ;# ptr
-	.4byte ctor_801555E4  ;# ptr
-	.4byte ctor_8015B9D8  ;# ptr
-	.4byte ctor_8016ED44  ;# ptr
-	.4byte ctor_80189D68  ;# ptr
-	.4byte ctor_801A1818  ;# ptr
-	.4byte ctor_801A3038  ;# ptr
-	.4byte ctor_801AFCE8  ;# ptr
-	.4byte ctor_801B9FC8  ;# ptr
-	.4byte ctor_801BC86C  ;# ptr
-	.4byte ctor_801C183C  ;# ptr
-	.4byte ctor_801C4AE4  ;# ptr
-	.4byte ctor_801D1E30  ;# ptr
-	.4byte ctor_801EABC4  ;# ptr
-	.4byte ctor_801F32EC  ;# ptr
-	.4byte ctor_802019F8  ;# ptr
-	.4byte ctor_802059E8  ;# ptr
-	.4byte ctor_8020AB7C  ;# ptr
-	.4byte ctor_8021BBC4  ;# ptr
-	.4byte ctor_80221DDC  ;# ptr
-	.4byte ctor_80229378  ;# ptr
-	.4byte ctor_8023BC8C  ;# ptr
-	.4byte ctor_802405F0  ;# ptr
-	.4byte ctor_80250CB4  ;# ptr
-	.4byte ctor_8025D304  ;# ptr
-	.4byte ctor_80274458  ;# ptr
-	.4byte ctor_8028DAB0  ;# ptr
-	.4byte ctor_802930E0  ;# ptr
-	.4byte ctor_80295DB0  ;# ptr
-	.4byte ctor_80296B38  ;# ptr
-	.4byte ctor_8029E7D8  ;# ptr
-	.4byte ctor_802A07D8  ;# ptr
-	.4byte ctor_802AAF24  ;# ptr
-	.4byte ctor_802AEA88  ;# ptr
-	.4byte ctor_802B46E0  ;# ptr
+	.4byte ctor_802BA774
+	.4byte ctor_80039EE0
+	.4byte ctor_8003A4F8
+	.4byte ctor_800539E0
+	.4byte ctor_80059D60
+	.4byte ctor_800696C8
+	.4byte ctor_8006A820
+	.4byte ctor_80074D7C
+	.4byte ctor_8007BE74
+	.4byte ctor_80087470
+	.4byte ctor_8008A0C8
+	.4byte ctor_800A9F40
+	.4byte ctor_800AABBC
+	.4byte ctor_800B9A40
+	.4byte ctor_800C1F2C
+	.4byte ctor_800D79B4
+	.4byte ctor_800FEA14
+	.4byte ctor_8010E9F8
+	.4byte ctor_801134E8
+	.4byte ctor_8011C418
+	.4byte ctor_8012BA00
+	.4byte ctor_8012DE98
+	.4byte ctor_801413F8
+	.4byte ctor_80142544
+	.4byte ctor_801555E4
+	.4byte ctor_8015B9D8
+	.4byte ctor_8016ED44
+	.4byte ctor_80189D68
+	.4byte ctor_801A1818
+	.4byte ctor_801A3038
+	.4byte ctor_801AFCE8
+	.4byte ctor_801B9FC8
+	.4byte ctor_801BC86C
+	.4byte ctor_801C183C
+	.4byte ctor_801C4AE4
+	.4byte ctor_801D1E30
+	.4byte ctor_801EABC4
+	.4byte ctor_801F32EC
+	.4byte ctor_802019F8
+	.4byte ctor_802059E8
+	.4byte ctor_8020AB7C
+	.4byte ctor_8021BBC4
+	.4byte ctor_80221DDC
+	.4byte ctor_80229378
+	.4byte ctor_8023BC8C
+	.4byte ctor_802405F0
+	.4byte ctor_80250CB4
+	.4byte ctor_8025D304
+	.4byte ctor_80274458
+	.4byte ctor_8028DAB0
+	.4byte ctor_802930E0
+	.4byte ctor_80295DB0
+	.4byte ctor_80296B38
+	.4byte ctor_8029E7D8
+	.4byte ctor_802A07D8
+	.4byte ctor_802AAF24
+	.4byte ctor_802AEA88
+	.4byte ctor_802B46E0
 	.4byte ctor_8032C570
 	.4byte ctor_80332720
 	.4byte ctor_80332C70

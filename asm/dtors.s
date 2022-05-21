@@ -5,6 +5,6 @@
 .global lbl_804F5B00
 lbl_804F5B00:
 	# ROM: 0x4F1C00
-	.4byte 0x802B96B4  ;# ptr
-	.4byte 0x802BA7B0  ;# ptr
+	.4byte lbl_802B96B4
+	.4byte lbl_802BA7B0
 	.4byte 0

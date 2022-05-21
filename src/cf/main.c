@@ -1,26 +1,10 @@
-#include "main.h"
+#include "cf/main.h"
 
 
 extern char* pkhFilenames[];
 extern u32 lbl_80528380[];
 extern u32 lbl_80528390[];
 
-/*
-char* pkhFilenames[] = {
-    "ahx.pkh",
-    "adx.pkh",
-    "chr.pkh",
-    "common.pkh",
-    "eff.pkh",
-    "font.pkh",
-    "map.pkh",
-    "menu.pkh",
-    "obj.pkh",
-    "script.pkh",
-    "snd.pkh",
-    "work.pkh"
-}
-*/
 s8 lbl_80666438 = 1;
 const char* const staticArcStr = "static.arc";
 

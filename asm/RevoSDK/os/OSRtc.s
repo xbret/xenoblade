@@ -96,7 +96,7 @@ lbl_8035A900:
 .global lbl_8035A91C
 lbl_8035A91C:
 	# ROM: 0x323EDC
-	.4byte 0x80010024  ;# ptr
+	.4byte 0x80010024
 	.4byte 0x83E1001C
 	.4byte 0x83C10018
 	.4byte 0x83A10014

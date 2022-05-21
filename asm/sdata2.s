@@ -16932,22 +16932,22 @@ lbl_8066BF4A:
 .global lbl_8066BF50
 lbl_8066BF50:
 	# ROM: 0x575DB0
-	.4byte 0x802E156C  ;# ptr
+	.4byte bta_dm_sm_execute
 	.4byte 0
 
 
 .global lbl_8066BF58
 lbl_8066BF58:
 	# ROM: 0x575DB8
-	.4byte 0x802E1604  ;# ptr
+	.4byte lbl_802E1604
 	.4byte 0
 
 
 .global lbl_8066BF60
 lbl_8066BF60:
 	# ROM: 0x575DC0
-	.4byte 0x802E3F54  ;# ptr
-	.4byte 0x802E38B8  ;# ptr
+	.4byte lbl_802E3F54
+	.4byte lbl_802E38B8
 
 
 .global lbl_8066BF68

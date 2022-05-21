@@ -3823,7 +3823,7 @@ lbl_80665858:
 .global lbl_80665860
 lbl_80665860:
 	# ROM: 0x571440
-	.4byte 0x802B96FC  ;# ptr
+	.4byte lbl_802B96FC
 	.4byte 0
 
 .global lbl_80665868
@@ -3923,13 +3923,13 @@ lbl_806658BC:
 .global lbl_806658C0
 lbl_806658C0:
 	# ROM: 0x5714A0
-	.4byte 0x802DAB00  ;# ptr
+	.4byte lbl_802DAB00
 
 
 .global lbl_806658C4
 lbl_806658C4:
 	# ROM: 0x5714A4
-	.4byte 0x802DAB10  ;# ptr
+	.4byte lbl_802DAB10
 
 
 .global lbl_806658C8
