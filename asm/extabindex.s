@@ -60,7 +60,7 @@
 	.4byte 0x80039E90  ;# ptr
 	.4byte 0x00000050
 	.4byte 0x800067BC  ;# ptr
-	.4byte 0x80039EFC  ;# ptr
+	.4byte func_80039EFC  ;# ptr
 	.4byte 0x00000038
 	.4byte 0x800067C4  ;# ptr
 	.4byte 0x80039F34  ;# ptr

@@ -126,7 +126,10 @@ lbl_80576380:
 	.skip 0xC
 .global lbl_8057638C
 lbl_8057638C:
-	.skip 0xEC
+	.skip 0xB4
+.global lbl_80576440
+lbl_80576440:
+	.skip 0x38
 .global lbl_80576478
 lbl_80576478:
 	.skip 0x48
@@ -261,7 +264,220 @@ lbl_8057A3F8:
 	.skip 0x10
 .global lbl_8057A408
 lbl_8057A408:
-	.skip 0x5C0
+	.skip 0x10
+.global lbl_8057A418
+lbl_8057A418:
+	.skip 0x10
+.global lbl_8057A428
+lbl_8057A428:
+	.skip 0x10
+.global lbl_8057A438
+lbl_8057A438:
+	.skip 0x10
+.global lbl_8057A448
+lbl_8057A448:
+	.skip 0x10
+.global lbl_8057A458
+lbl_8057A458:
+	.skip 0x10
+.global lbl_8057A468
+lbl_8057A468:
+	.skip 0x10
+.global lbl_8057A478
+lbl_8057A478:
+	.skip 0x14
+.global lbl_8057A48C
+lbl_8057A48C:
+	.skip 0xC
+.global lbl_8057A498
+lbl_8057A498:
+	.skip 0x10
+.global lbl_8057A4A8
+lbl_8057A4A8:
+	.skip 0x14
+.global lbl_8057A4BC
+lbl_8057A4BC:
+	.skip 0xC
+.global lbl_8057A4C8
+lbl_8057A4C8:
+	.skip 0xC
+.global lbl_8057A4D4
+lbl_8057A4D4:
+	.skip 0xC
+.global lbl_8057A4E0
+lbl_8057A4E0:
+	.skip 0xC
+.global lbl_8057A4EC
+lbl_8057A4EC:
+	.skip 0xC
+.global lbl_8057A4F8
+lbl_8057A4F8:
+	.skip 0xC
+.global lbl_8057A504
+lbl_8057A504:
+	.skip 0xC
+.global lbl_8057A510
+lbl_8057A510:
+	.skip 0x10
+.global lbl_8057A520
+lbl_8057A520:
+	.skip 0xC
+.global lbl_8057A52C
+lbl_8057A52C:
+	.skip 0x1C
+.global lbl_8057A548
+lbl_8057A548:
+	.skip 0x14
+.global lbl_8057A55C
+lbl_8057A55C:
+	.skip 0xC
+.global lbl_8057A568
+lbl_8057A568:
+	.skip 0x10
+.global lbl_8057A578
+lbl_8057A578:
+	.skip 0xC
+.global lbl_8057A584
+lbl_8057A584:
+	.skip 0xC
+.global lbl_8057A590
+lbl_8057A590:
+	.skip 0xC
+.global lbl_8057A59C
+lbl_8057A59C:
+	.skip 0xC
+.global lbl_8057A5A8
+lbl_8057A5A8:
+	.skip 0x10
+.global lbl_8057A5B8
+lbl_8057A5B8:
+	.skip 0xC
+.global lbl_8057A5C4
+lbl_8057A5C4:
+	.skip 0xC
+.global lbl_8057A5D0
+lbl_8057A5D0:
+	.skip 0x10
+.global lbl_8057A5E0
+lbl_8057A5E0:
+	.skip 0x10
+.global lbl_8057A5F0
+lbl_8057A5F0:
+	.skip 0xC
+.global lbl_8057A5FC
+lbl_8057A5FC:
+	.skip 0x14
+.global lbl_8057A610
+lbl_8057A610:
+	.skip 0xC
+.global lbl_8057A61C
+lbl_8057A61C:
+	.skip 0x54
+.global lbl_8057A670
+lbl_8057A670:
+	.skip 0x14
+.global lbl_8057A684
+lbl_8057A684:
+	.skip 0x5C
+.global lbl_8057A6E0
+lbl_8057A6E0:
+	.skip 0x10
+.global lbl_8057A6F0
+lbl_8057A6F0:
+	.skip 0x10
+.global lbl_8057A700
+lbl_8057A700:
+	.skip 0x10
+.global lbl_8057A710
+lbl_8057A710:
+	.skip 0xC
+.global lbl_8057A71C
+lbl_8057A71C:
+	.skip 0x20
+.global lbl_8057A73C
+lbl_8057A73C:
+	.skip 0x14
+.global lbl_8057A750
+lbl_8057A750:
+	.skip 0xC
+.global lbl_8057A75C
+lbl_8057A75C:
+	.skip 0x64
+.global lbl_8057A7C0
+lbl_8057A7C0:
+	.skip 0x14
+.global lbl_8057A7D4
+lbl_8057A7D4:
+	.skip 0x58
+.global lbl_8057A82C
+lbl_8057A82C:
+	.skip 0xC
+.global lbl_8057A838
+lbl_8057A838:
+	.skip 0xC
+.global lbl_8057A844
+lbl_8057A844:
+	.skip 0xC
+.global lbl_8057A850
+lbl_8057A850:
+	.skip 0xC
+.global lbl_8057A85C
+lbl_8057A85C:
+	.skip 0xC
+.global lbl_8057A868
+lbl_8057A868:
+	.skip 0x18
+.global lbl_8057A880
+lbl_8057A880:
+	.skip 0x10
+.global lbl_8057A890
+lbl_8057A890:
+	.skip 0x10
+.global lbl_8057A8A0
+lbl_8057A8A0:
+	.skip 0x1C
+.global lbl_8057A8BC
+lbl_8057A8BC:
+	.skip 0x1C
+.global lbl_8057A8D8
+lbl_8057A8D8:
+	.skip 0x10
+.global lbl_8057A8E8
+lbl_8057A8E8:
+	.skip 0x10
+.global lbl_8057A8F8
+lbl_8057A8F8:
+	.skip 0x18
+.global lbl_8057A910
+lbl_8057A910:
+	.skip 0x14
+.global lbl_8057A924
+lbl_8057A924:
+	.skip 0x14
+.global lbl_8057A938
+lbl_8057A938:
+	.skip 0x10
+.global lbl_8057A948
+lbl_8057A948:
+	.skip 0x10
+.global lbl_8057A958
+lbl_8057A958:
+	.skip 0x18
+.global lbl_8057A970
+lbl_8057A970:
+	.skip 0x18
+.global lbl_8057A988
+lbl_8057A988:
+	.skip 0x18
+.global lbl_8057A9A0
+lbl_8057A9A0:
+	.skip 0xC
+.global lbl_8057A9AC
+lbl_8057A9AC:
+	.skip 0xC
+.global lbl_8057A9B8
+lbl_8057A9B8:
+	.skip 0x10
 .global lbl_8057A9C8
 lbl_8057A9C8:
 	.skip 0x40
@@ -285,7 +501,16 @@ lbl_8057AE90:
 	.skip 0x180
 .global lbl_8057B010
 lbl_8057B010:
-	.skip 0x338
+	.skip 0x38
+.global lbl_8057B048
+lbl_8057B048:
+	.skip 0x100
+.global lbl_8057B148
+lbl_8057B148:
+	.skip 0x100
+.global lbl_8057B248
+lbl_8057B248:
+	.skip 0x100
 .global lbl_8057B348
 lbl_8057B348:
 	.skip 0x20
