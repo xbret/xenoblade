@@ -39,6 +39,7 @@ lbl_80668388:
 lbl_8066838C:
 	# ROM: 0x5721EC
 	.4byte 0
+
 .global lbl_80668390
 lbl_80668390:
 	.asciz "CGame"
