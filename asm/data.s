@@ -3619,8 +3619,10 @@ lbl_8052B000:
 
 .global lbl_8052B100
 lbl_8052B100:
-	.asciz "?333?333?333@"
-	.balign 4
+	.4byte 0x3F333333
+	.4byte 0x3F333333
+	.4byte 0x3F333333
+	.4byte 0x40000000
 	.4byte 0x40900000
 	.4byte 0x40900000
 	.4byte 0

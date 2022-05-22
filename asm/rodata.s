@@ -14033,8 +14033,8 @@ lbl_8050C738:
 	.4byte 0x3057305F
 	.4byte 0x30020026
 	.4byte 0x304F308F
-	.asciz "0W0O0o"
-	.byte 0x57
+	.4byte 0x3057304F
+	.4byte 0x306F0057
 	.4byte 0x00690069
 	.4byte 0x672C4F53
 	.4byte 0x306E53D6
@@ -14065,8 +14065,8 @@ lbl_8050C790:
 	.4byte 0x305F3002
 	.4byte 0x0026304F
 	.4byte 0x308F3057
-	.asciz "0O0o"
-	.byte 0x57, 0x00, 0x69
+	.4byte 0x304F306F
+	.4byte 0x00570069
 	.4byte 0x0069672C
 	.4byte 0x4F53306E
 	.4byte 0x53D66271
@@ -14099,8 +14099,8 @@ lbl_8050C808:
 	.4byte 0x3057305F
 	.4byte 0x30020026
 	.4byte 0x304F308F
-	.asciz "0W0O0o"
-	.byte 0x57
+	.4byte 0x3057304F
+	.4byte 0x306F0057
 	.4byte 0x00690069
 	.4byte 0x672C4F53
 	.4byte 0x306E53D6
@@ -14111,6 +14111,7 @@ lbl_8050C808:
 	.4byte 0x304F3060
 	.4byte 0x30553044
 	.4byte 0x30020000
+	
 .global lbl_8050C880
 lbl_8050C880:
 	.asciz "gameStart"
@@ -15312,16 +15313,16 @@ lbl_8050DD58:
 	.4byte 0x00000006
 	.4byte 0x3FF921FB
 	.4byte 0x40000000
-	.asciz ">tD-"
-	.balign 4
+	.4byte 0x3E74442D
+	.4byte 0
 	.4byte 0x3CF84698
 	.4byte 0x80000000
 	.4byte 0x3B78CC51
 	.4byte 0x60000000
 	.4byte 0x39F01B83
 	.4byte 0x80000000
-	.asciz "8z% @"
-	.balign 4
+	.4byte 0x387A2520
+	.4byte 0x40000000
 	.4byte 0x36E38222
 	.4byte 0x80000000
 	.4byte 0x3569F31D
@@ -15907,8 +15908,8 @@ lbl_8050E400:
 	.4byte 0xFF1CFF1E
 	.4byte 0x22662267
 	.4byte 0x221E2234
-	.asciz "&B&@"
-	.byte 0xB0, 0x20, 0x32
+	.4byte 0x26422640
+	.4byte 0x00B02032
 	.4byte 0x20332103
 	.4byte 0xFFE5FF04
 	.4byte 0xFFE0FFE1
@@ -15954,13 +15955,15 @@ lbl_8050E400:
 	.4byte 0x226A226B
 	.4byte 0x221A223D
 	.4byte 0x221D2235
-	.asciz "\"+\","
-	.balign 4
+	.4byte 0x222B222C
+	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0x0000212B
-	.asciz " 0&o&m&j   !"
-	.byte 0xB6, 0x00, 0x00
+	.4byte 0x2030266F
+	.4byte 0x266D266A
+	.4byte 0x20202021
+	.4byte 0x00B60000
 	.4byte 0
 	.4byte 0x000025EF
 	.4byte 0
@@ -16212,8 +16215,8 @@ lbl_8050E400:
 	.4byte 0x2520252F
 	.4byte 0x25282537
 	.4byte 0x253F251D
-	.asciz "%0%%%8%B"
-	.balign 4
+	.4byte 0x25302525
+	.4byte 0x25382542
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -16432,8 +16435,23 @@ lbl_8050E400:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.asciz "$`$a$b$c$d$e$f$g$h$i$j$k$l$m$n$o$p$q$r$s!`!a!b!c!d!e!f!g!h!i"
-	.byte 0x00, 0x33, 0x49
+	.4byte 0
+	.4byte 0x24602461
+	.4byte 0x24622463
+	.4byte 0x24642465
+	.4byte 0x24662467
+	.4byte 0x24682469
+	.4byte 0x246A246B
+	.4byte 0x246C246D
+	.4byte 0x246E246F
+	.4byte 0x24702471
+	.4byte 0x24722473
+	.4byte 0x21602161
+	.4byte 0x21622163
+	.4byte 0x21642165
+	.4byte 0x21662167
+	.4byte 0x21682169
+	.4byte 0x00003349
 	.4byte 0x33143322
 	.4byte 0x334D3318
 	.4byte 0x33273303
@@ -16463,8 +16481,8 @@ lbl_8050E400:
 	.4byte 0x221A22A5
 	.4byte 0x2220221F
 	.4byte 0x22BF2235
-	.asciz "\")\"*"
-	.balign 4
+	.4byte 0x2229222A
+	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -16797,8 +16815,8 @@ lbl_8050E400:
 	.4byte 0x6A5F5E30
 	.4byte 0x6BC56C17
 	.4byte 0x6C7D757F
-	.asciz "yH[cz"
-	.byte 0x7D, 0x00
+	.4byte 0x79485B63
+	.4byte 0x7A007D00
 	.4byte 0x5FBD898F
 	.4byte 0x8A188CB4
 	.4byte 0x8D778ECC
