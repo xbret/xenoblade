@@ -11,7 +11,7 @@ NON_MATCHING ?= 0
 VERBOSE ?= 0
 
 # If MAPGENFLAG set to 1, tells LDFLAGS to generate a mapfile, which makes linking take several minutes.
-MAPGENFLAG ?= 1
+MAPGENFLAG ?= 0
 
 ifeq ($(VERBOSE),0)
   QUIET := @

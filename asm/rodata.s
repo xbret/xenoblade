@@ -92,15 +92,9 @@ lbl_804F5D04:
 
 .global lbl_804F5D14
 lbl_804F5D14:
-	# ROM: 0x4F1E14
-.global lbl_804F5D14
-lbl_804F5D14:
 	.asciz "deb"
 
 
-.global lbl_804F5D18
-lbl_804F5D18:
-	# ROM: 0x4F1E18
 .global lbl_804F5D18
 lbl_804F5D18:
 	.asciz "wait"
@@ -300,9 +294,6 @@ lbl_804F6000:
 
 .global lbl_804F6014
 lbl_804F6014:
-	# ROM: 0x4F2114
-.global lbl_804F6014
-lbl_804F6014:
 	.asciz "FLD_npclist"
 	.asciz "npc"
 	.asciz "remove"
@@ -369,9 +360,6 @@ lbl_804F6148:
 	.asciz "CDoubleListNode"
 
 
-.global lbl_804F6158
-lbl_804F6158:
-	# ROM: 0x4F2258
 .global lbl_804F6158
 lbl_804F6158:
 	.asciz "abcd"
@@ -546,9 +534,6 @@ lbl_804F6444:
 
 .global lbl_804F6454
 lbl_804F6454:
-	# ROM: 0x4F2554
-.global lbl_804F6454
-lbl_804F6454:
 	.asciz "name"
 	.asciz "pc_arts"
 	.asciz "MNU_sysmes"
@@ -607,9 +592,6 @@ lbl_804F6544:
 	.balign 4
 
 
-.global lbl_804F6550
-lbl_804F6550:
-	# ROM: 0x4F2650
 .global lbl_804F6550
 lbl_804F6550:
 	.asciz "eve"
@@ -842,9 +824,6 @@ lbl_804F6884:
 
 .global lbl_804F6890
 lbl_804F6890:
-	# ROM: 0x4F2990
-.global lbl_804F6890
-lbl_804F6890:
 	.asciz "math"
 	.balign 4
 .global lbl_804F6898
@@ -926,9 +905,6 @@ lbl_804F69D8:
 
 .global lbl_804F69E4
 lbl_804F69E4:
-	# ROM: 0x4F2AE4
-.global lbl_804F69E4
-lbl_804F69E4:
 	.asciz "cam"
 .global lbl_804F69E8
 lbl_804F69E8:
@@ -940,9 +916,6 @@ lbl_804F69FC:
 	.balign 4
 
 
-.global lbl_804F6A18
-lbl_804F6A18:
-	# ROM: 0x4F2B18
 .global lbl_804F6A18
 lbl_804F6A18:
 	.asciz "pad"
@@ -961,9 +934,6 @@ lbl_804F6A48:
 	.balign 4
 
 
-.global lbl_804F6A54
-lbl_804F6A54:
-	# ROM: 0x4F2B54
 .global lbl_804F6A54
 lbl_804F6A54:
 	.asciz "map"
@@ -1032,9 +1002,6 @@ lbl_804F6B80:
 
 .global lbl_804F6B90
 lbl_804F6B90:
-	# ROM: 0x4F2C90
-.global lbl_804F6B90
-lbl_804F6B90:
 	.asciz "KYP"
 	.4byte 0
 .global lbl_804F6B98
@@ -1046,9 +1013,6 @@ lbl_804F6BA4:
 	.balign 4
 
 
-.global lbl_804F6BB4
-lbl_804F6BB4:
-	# ROM: 0x4F2CB4
 .global lbl_804F6BB4
 lbl_804F6BB4:
 	.asciz "%02d%02df"
@@ -1074,16 +1038,10 @@ lbl_804F6C10:
 
 .global lbl_804F6C1C
 lbl_804F6C1C:
-	# ROM: 0x4F2D1C
-.global lbl_804F6C1C
-lbl_804F6C1C:
 	.asciz "script/%02d%02d.t"
 	.balign 4
 
 
-.global lbl_804F6C30
-lbl_804F6C30:
-	# ROM: 0x4F2D30
 .global lbl_804F6C30
 lbl_804F6C30:
 	.asciz "morning_h"
@@ -1123,9 +1081,6 @@ lbl_804F6CF0:
 	.4byte 0
 
 
-.global lbl_804F6D00
-lbl_804F6D00:
-	# ROM: 0x4F2E00
 .global lbl_804F6D00
 lbl_804F6D00:
 	.asciz "opt_camlist"
@@ -1172,9 +1127,6 @@ lbl_804F6D00:
 	.4byte 0
 
 
-.global lbl_804F6E40
-lbl_804F6E40:
-	# ROM: 0x4F2F40
 .global lbl_804F6E40
 lbl_804F6E40:
 	.asciz "camType"
@@ -1263,9 +1215,6 @@ lbl_804F7084:
 
 .global lbl_804F7094
 lbl_804F7094:
-	# ROM: 0x4F3194
-.global lbl_804F7094
-lbl_804F7094:
 	.asciz "bgmlist"
 	.asciz "file_name"
 	.asciz "e%02d_loop"
@@ -1343,9 +1292,6 @@ lbl_804F7248:
 	.asciz "cf::CtrlMoveEne"
 
 
-.global lbl_804F7258
-lbl_804F7258:
-	# ROM: 0x4F3358
 .global lbl_804F7258
 lbl_804F7258:
 	.asciz "move_type"
@@ -1427,9 +1373,6 @@ lbl_804F7370:
 
 .global lbl_804F737C
 lbl_804F737C:
-	# ROM: 0x4F347C
-.global lbl_804F737C
-lbl_804F737C:
 	.asciz "JUhead"
 	.asciz "FLD_npclist"
 	.asciz "autotalklist%02d%02d"
@@ -1474,9 +1417,6 @@ lbl_804F7474:
 
 .global lbl_804F7490
 lbl_804F7490:
-	# ROM: 0x4F3590
-.global lbl_804F7490
-lbl_804F7490:
 	.asciz "1.2.3"
 	.balign 4
 .global lbl_804F7498
@@ -1518,9 +1458,6 @@ lbl_804F74B0:
 	.4byte 0x00000007
 
 
-.global lbl_804F7520
-lbl_804F7520:
-	# ROM: 0x4F3620
 .global lbl_804F7520
 lbl_804F7520:
 	.asciz "flag"
@@ -1619,9 +1556,6 @@ lbl_804F7520:
 
 .global lbl_804F77D0
 lbl_804F77D0:
-	# ROM: 0x4F38D0
-.global lbl_804F77D0
-lbl_804F77D0:
 	.asciz "CF_MEM1"
 	.asciz "CF_MEM2"
 	.asciz "CF_BDAT"
@@ -1662,9 +1596,6 @@ lbl_804F7860:
 	.balign 4
 
 
-.global lbl_804F786C
-lbl_804F786C:
-	# ROM: 0x4F396C
 .global lbl_804F786C
 lbl_804F786C:
 	.asciz "%02d%02d%02d"
@@ -1712,9 +1643,6 @@ lbl_804F7948:
 
 .global lbl_804F795C
 lbl_804F795C:
-	# ROM: 0x4F3A5C
-.global lbl_804F795C
-lbl_804F795C:
 	.asciz "%02d%02df"
 	.asciz "%s"
 	.4byte 0
@@ -1729,9 +1657,6 @@ lbl_804F7980:
 	.asciz "cf::CfObjectEne"
 
 
-.global lbl_804F7990
-lbl_804F7990:
-	# ROM: 0x4F3A90
 .global lbl_804F7990
 lbl_804F7990:
 	.asciz "name"
@@ -1852,9 +1777,6 @@ lbl_804F7CE8:
 
 .global lbl_804F7D00
 lbl_804F7D00:
-	# ROM: 0x4F3E00
-.global lbl_804F7D00
-lbl_804F7D00:
 	.asciz "ene_disp_r"
 	.asciz "ene_release_h"
 	.asciz "ene_release_r"
@@ -1868,9 +1790,6 @@ lbl_804F7D50:
 	.asciz "cf::CfObjectMap"
 
 
-.global lbl_804F7D60
-lbl_804F7D60:
-	# ROM: 0x4F3E60
 .global lbl_804F7D60
 lbl_804F7D60:
 	.asciz ".lod"
@@ -1887,9 +1806,6 @@ lbl_804F7D70:
 
 .global lbl_804F7D78
 lbl_804F7D78:
-	# ROM: 0x4F3E78
-.global lbl_804F7D78
-lbl_804F7D78:
 	.asciz "mapATR"
 	.asciz "def_mount"
 	.asciz "bat_mount"
@@ -1900,9 +1816,6 @@ lbl_804F7D98:
 	.asciz "cf::CfObjectNpc"
 
 
-.global lbl_804F7DA8
-lbl_804F7DA8:
-	# ROM: 0x4F3EA8
 .global lbl_804F7DA8
 lbl_804F7DA8:
 	.asciz "JUhead"
@@ -1926,9 +1839,6 @@ lbl_804F7DF0:
 
 .global lbl_804F7E0C
 lbl_804F7E0C:
-	# ROM: 0x4F3F0C
-.global lbl_804F7E0C
-lbl_804F7E0C:
 	.asciz "tp_atk"
 	.asciz "tp_arts"
 	.asciz "tp_atkdmg"
@@ -1944,9 +1854,6 @@ lbl_804F7E0C:
 	.4byte 0
 
 
-.global lbl_804F7E68
-lbl_804F7E68:
-	# ROM: 0x4F3F68
 .global lbl_804F7E68
 lbl_804F7E68:
 	.asciz "name"
@@ -1969,9 +1876,6 @@ lbl_804F7E9C:
 	.balign 4
 
 
-.global lbl_804F7EB4
-lbl_804F7EB4:
-	# ROM: 0x4F3FB4
 .global lbl_804F7EB4
 lbl_804F7EB4:
 	.asciz "JUhead"
@@ -2046,9 +1950,6 @@ lbl_804F7FF8:
 
 .global lbl_804F800C
 lbl_804F800C:
-	# ROM: 0x4F410C
-.global lbl_804F800C
-lbl_804F800C:
 	.asciz "core"
 	.balign 4
 	.4byte 0
@@ -2056,14 +1957,14 @@ lbl_804F800C:
 lbl_804F8018:
 	.asciz "cf::CfObjectImplEne"
 	.4byte 0
+
+.global lbl_804F8030
+lbl_804F8030:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
 
 
-.global lbl_804F803C
-lbl_804F803C:
-	# ROM: 0x4F413C
 .global lbl_804F803C
 lbl_804F803C:
 	.asciz "JUhead"
@@ -2261,12 +2162,21 @@ lbl_804F8268:
 	.4byte 0x41000000
 	.4byte 0x40800000
 	.4byte 0x40000000
+
+.global lbl_804F82F8
+lbl_804F82F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0x00000064
+
+.global lbl_804F8304
+lbl_804F8304:
 	.4byte 0x41000000
 	.4byte 0x40800000
 	.4byte 0x40000000
+
+.global lbl_804F8310
+lbl_804F8310:
 	.4byte 0x00000050
 	.4byte 0x0000003C
 	.4byte 0x00000028
@@ -2295,6 +2205,8 @@ lbl_804F8268:
 	.4byte 0x00000128
 	.4byte 0x00000129
 	.4byte 0x0000012A
+
+
 	.asciz "cf::CfObjectEff"
 .global lbl_804F8390
 lbl_804F8390:
@@ -2335,9 +2247,6 @@ lbl_804F8484:
 
 .global lbl_804F8498
 lbl_804F8498:
-	# ROM: 0x4F4598
-.global lbl_804F8498
-lbl_804F8498:
 	.asciz "Lv_up_str"
 	.asciz "Lv_up_agi"
 	.asciz "Lv_up_eth"
@@ -2375,6 +2284,7 @@ lbl_804F857C:
 	.4byte 0xFFC00000
 	.4byte 0x00400080
 	.4byte 0x00C00000
+
 .global lbl_804F858C
 lbl_804F858C:
 	.asciz "pic_icon02_01"
@@ -2432,6 +2342,9 @@ lbl_804F865C:
 	.asciz "pic_icon07_03"
 	.balign 4
 	.4byte 0
+
+.global lbl_804F8670
+lbl_804F8670:
 	.4byte lbl_804F858C
 	.4byte lbl_804F859C
 	.4byte lbl_804F85AC
@@ -2446,6 +2359,7 @@ lbl_804F865C:
 	.4byte lbl_804F863C
 	.4byte lbl_804F864C
 	.4byte lbl_804F865C
+
 .global lbl_804F86A8
 lbl_804F86A8:
 	.asciz "CMainMenu"
@@ -2464,9 +2378,6 @@ lbl_804F86CC:
 	.balign 4
 
 
-.global lbl_804F86DC
-lbl_804F86DC:
-	# ROM: 0x4F47DC
 .global lbl_804F86DC
 lbl_804F86DC:
 	.asciz "mf01_main21_cursor.brlyt"
@@ -2536,18 +2447,28 @@ lbl_804F893C:
 	.4byte 0x00010002
 	.4byte 0x00030004
 	.4byte 0x00010000
+
+.global lbl_804F8948
+lbl_804F8948:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
 	.4byte 0
+
+.global lbl_804F8958
+lbl_804F8958:
 	.4byte 0x008C008D
 	.4byte 0x008E008F
 	.4byte 0x008C008C
 	.4byte 0x008C008C
+
+.global lbl_804F8968
+lbl_804F8968:
 	.4byte 0x00880089
 	.4byte 0x008A008B
 	.4byte 0x007D007D
 	.4byte 0x007D007D
+
 .global lbl_804F8978
 lbl_804F8978:
 	.asciz "CMenuArtsSelect"
@@ -2555,10 +2476,12 @@ lbl_804F8978:
 	.balign 4
 	.4byte 0
 	.asciz "cf::IObjectInfo"
+
 .global lbl_804F89A8
 lbl_804F89A8:
 	.asciz "IUIBattle"
 	.balign 4
+
 .global lbl_804F89B4
 lbl_804F89B4:
 	.asciz "CTTask<IUIBattle>"
@@ -2572,9 +2495,6 @@ lbl_804F89B4:
 	.asciz "CDoubleListNode"
 
 
-.global lbl_804F8A00
-lbl_804F8A00:
-	# ROM: 0x4F4B00
 .global lbl_804F8A00
 lbl_804F8A00:
 	.asciz "CMenuArtsSelect"
@@ -2628,9 +2548,6 @@ lbl_804F8D30:
 	.balign 4
 
 
-.global lbl_804F8D44
-lbl_804F8D44:
-	# ROM: 0x4F4E44
 .global lbl_804F8D44
 lbl_804F8D44:
 	.asciz "CMenuBattleDamage"
@@ -2693,24 +2610,27 @@ lbl_804F8D44:
 	.asciz "mf00_com00_dmy.tpl"
 	.asciz "pic_ic"
 	.balign 4
+
+.global lbl_804F8F28
+lbl_804F8F28:
 	.4byte 0
 	.4byte 0x41880000
 	.4byte 0x42080000
 	.4byte 0x424C0000
 	.4byte 0x42880000
+
+
 .global lbl_804F8F3C
 lbl_804F8F3C:
 	.asciz "CMenuBattlePlayerState"
 	.balign 4
+
 .global lbl_804F8F54
 lbl_804F8F54:
 	.asciz "CPcSelectCursor01"
 	.balign 4
 
 
-.global lbl_804F8F68
-lbl_804F8F68:
-	# ROM: 0x4F5068
 .global lbl_804F8F68
 lbl_804F8F68:
 	.asciz "CPcSelectCursor01"
@@ -2780,10 +2700,14 @@ lbl_804F93E0:
 lbl_804F93F8:
 	.asciz "mf71_btl00_pnmk03.tpl"
 	.balign 4
+
+.global lbl_804F9410
+lbl_804F9410:
 	.4byte lbl_804F93B0
 	.4byte lbl_804F93C8
 	.4byte lbl_804F93E0
 	.4byte lbl_804F93F8
+
 .global lbl_804F9420
 lbl_804F9420:
 	.asciz "CMenuEnemyState"
@@ -2792,9 +2716,6 @@ lbl_804F9430:
 	.asciz "CPcSelectCursor"
 
 
-.global lbl_804F9440
-lbl_804F9440:
-	# ROM: 0x4F5540
 .global lbl_804F9440
 lbl_804F9440:
 	.asciz "CPcSelectCursor"
@@ -2857,9 +2778,6 @@ lbl_804F96E0:
 
 .global lbl_804F96F0
 lbl_804F96F0:
-	# ROM: 0x4F57F0
-.global lbl_804F96F0
-lbl_804F96F0:
 	.asciz "CMenuFade"
 	.asciz "fadeout.brlyt"
 	.asciz "fadeout.brlan"
@@ -2870,9 +2788,6 @@ lbl_804F9720:
 	.balign 4
 
 
-.global lbl_804F9730
-lbl_804F9730:
-	# ROM: 0x4F5830
 .global lbl_804F9730
 lbl_804F9730:
 	.asciz "CMenuKeyAssign"
@@ -3055,9 +2970,6 @@ lbl_804F9A38:
 
 .global lbl_804F9A44
 lbl_804F9A44:
-	# ROM: 0x4F5B44
-.global lbl_804F9A44
-lbl_804F9A44:
 	.asciz "landmarklist"
 	.asciz "txt_land"
 	.asciz "mapID"
@@ -3130,9 +3042,6 @@ lbl_804F9D48:
 	.balign 4
 
 
-.global lbl_804F9D58
-lbl_804F9D58:
-	# ROM: 0x4F5E58
 .global lbl_804F9D58
 lbl_804F9D58:
 	.asciz "MNU_quest"
@@ -3270,9 +3179,6 @@ lbl_804F9F50:
 	.asciz "CMenuSymbolMark"
 
 
-.global lbl_804F9F60
-lbl_804F9F60:
-	# ROM: 0x4F6060
 .global lbl_804F9F60
 lbl_804F9F60:
 	.asciz "mf70_cf10_dst.brlyt"
@@ -3534,9 +3440,6 @@ lbl_804FA4B0:
 	.balign 4
 
 
-.global lbl_804FA4C4
-lbl_804FA4C4:
-	# ROM: 0x4F65C4
 .global lbl_804FA4C4
 lbl_804FA4C4:
 	.asciz "CQuestWindow"
@@ -4447,9 +4350,6 @@ lbl_804FB464:
 
 .global lbl_804FB488
 lbl_804FB488:
-	# ROM: 0x4F7588
-.global lbl_804FB488
-lbl_804FB488:
 	.asciz "JNL_trustup"
 	.asciz "trust_up"
 	.asciz "CTagProcessor.cpp"
@@ -4461,9 +4361,6 @@ lbl_804FB4D8:
 	.asciz "CTalkWindow"
 
 
-.global lbl_804FB4E4
-lbl_804FB4E4:
-	# ROM: 0x4F75E4
 .global lbl_804FB4E4
 lbl_804FB4E4:
 	.asciz "CTalkWindow"
@@ -4521,9 +4418,6 @@ lbl_804FB750:
 
 .global lbl_804FB76C
 lbl_804FB76C:
-	# ROM: 0x4F786C
-.global lbl_804FB76C
-lbl_804FB76C:
 	.asciz "ARTS_FACE"
 	.asciz "menu/tpl/arts_elem.arc"
 	.asciz "menu/tpl/arts_sys.arc"
@@ -4535,10 +4429,14 @@ lbl_804FB76C:
 	.asciz "icon_type"
 	.balign 4
 	.4byte 0
+
 .global lbl_804FB800
 lbl_804FB800:
 	.asciz "/menu/common.arc"
 	.balign 4
+
+.global lbl_804FB814
+lbl_804FB814:
 	.4byte 0x000C000D
 	.4byte 0x000F0010
 	.4byte 0x001A001F
@@ -4553,6 +4451,7 @@ lbl_804FB800:
 	.4byte 0x0171019E
 	.4byte 0x02240225
 	.4byte 0
+
 .global lbl_804FB84C
 lbl_804FB84C:
 	.asciz "CUICfManager"
@@ -4581,9 +4480,6 @@ lbl_804FB8D0:
 	.balign 4
 
 
-.global lbl_804FB8E0
-lbl_804FB8E0:
-	# ROM: 0x4F79E0
 .global lbl_804FB8E0
 lbl_804FB8E0:
 	.asciz "%s"
@@ -4630,6 +4526,9 @@ lbl_804FB940:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte 0
+
+.global lbl_804FB9B8
+lbl_804FB9B8:
 	.4byte 0x00000001
 	.4byte 0x00560074
 	.4byte 0x00AE0105
@@ -4677,12 +4576,16 @@ lbl_804FB9F0:
 	.4byte 0x000003C1
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
+.global lbl_804FBA60
+lbl_804FBA60:
 	.4byte 0x00010203
 	.4byte 0x04050607
 	.4byte 0x08090A47
 	.4byte 0x48494A4B
 	.4byte 0x51525354
 	.4byte 0xFF000000
+
 .global lbl_804FBA78
 lbl_804FBA78:
 	.asciz "face_n01"
@@ -4772,6 +4675,7 @@ lbl_804FBC08:
 lbl_804FBC18:
 	.asciz "minimaplist2401"
 	.4byte 0
+
 	.4byte lbl_804FBAA8
 	.4byte lbl_804FBAB8
 	.4byte lbl_804FBAC8
@@ -4781,6 +4685,7 @@ lbl_804FBC18:
 	.4byte lbl_804FBB08
 	.4byte lbl_804FBB18
 	.4byte 0
+
 	.4byte lbl_804FBB28
 	.4byte lbl_804FBB38
 	.4byte lbl_804FBB48
@@ -4793,6 +4698,7 @@ lbl_804FBC18:
 	.4byte lbl_804FBBA8
 	.4byte lbl_804FBBB8
 	.4byte 0
+
 	.4byte lbl_804FBBC8
 	.4byte lbl_804FBBD8
 	.4byte lbl_804FBBE8
@@ -4820,6 +4726,7 @@ lbl_804FBCB0:
 	.4byte lbl_804FBB08
 	.4byte lbl_804FBB18
 	.4byte 0
+
 	.4byte lbl_804FBB28
 	.4byte lbl_804FBB38
 	.4byte lbl_804FBB48
@@ -4832,6 +4739,7 @@ lbl_804FBCB0:
 	.4byte lbl_804FBBA8
 	.4byte lbl_804FBBB8
 	.4byte 0
+
 	.4byte lbl_804FBBC8
 	.4byte lbl_804FBBD8
 	.4byte lbl_804FBBE8
@@ -4842,6 +4750,7 @@ lbl_804FBCB0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
 .global lbl_804FBD30
 lbl_804FBD30:
 	.asciz "minimaplist0801"
@@ -4849,6 +4758,7 @@ lbl_804FBD30:
 lbl_804FBD40:
 	.asciz "minimaplist1801"
 	.4byte 0
+
 	.4byte lbl_804FBAA8
 	.4byte lbl_804FBAB8
 	.4byte lbl_804FBAC8
@@ -4897,6 +4807,7 @@ lbl_804FBDD8:
 	.4byte lbl_804FBB08
 	.4byte lbl_804FBB18
 	.4byte 0
+
 	.4byte lbl_804FBB28
 	.4byte lbl_804FBB38
 	.4byte lbl_804FBB48
@@ -4909,6 +4820,7 @@ lbl_804FBDD8:
 	.4byte lbl_804FBBA8
 	.4byte lbl_804FBBB8
 	.4byte 0
+
 	.4byte lbl_804FBBC8
 	.4byte lbl_804FBBD8
 	.4byte lbl_804FBBE8
@@ -4921,6 +4833,9 @@ lbl_804FBDD8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
+.global lbl_804FBE60
+lbl_804FBE60:
 	.4byte 0x3FC00000
 	.4byte 0x40000000
 	.4byte 0x3FD9999A
@@ -4936,9 +4851,6 @@ lbl_804FBDD8:
 	.4byte 0x3FD9999A
 
 
-.global lbl_804FBE94
-lbl_804FBE94:
-	# ROM: 0x4F7F94
 .global lbl_804FBE94
 lbl_804FBE94:
 	.asciz "%s"
@@ -5036,9 +4948,6 @@ lbl_804FC190:
 
 .global lbl_804FC1AC
 lbl_804FC1AC:
-	# ROM: 0x4F82AC
-.global lbl_804FC1AC
-lbl_804FC1AC:
 	.asciz "qst_genre"
 	.asciz "landmarklist"
 	.asciz "mapID"
@@ -5100,9 +5009,6 @@ lbl_804FC260:
 	.4byte 0x0000008E
 
 
-.global lbl_804FC280
-lbl_804FC280:
-	# ROM: 0x4F8380
 .global lbl_804FC280
 lbl_804FC280:
 	.asciz "rlt_meet"
@@ -5324,9 +5230,6 @@ lbl_804FC7C8:
 
 .global lbl_804FC7D4
 lbl_804FC7D4:
-	# ROM: 0x4F88D4
-.global lbl_804FC7D4
-lbl_804FC7D4:
 	.asciz "BTL_pclist"
 	.asciz "BTL_enelist"
 	.asciz "BTL_skilllist"
@@ -5428,9 +5331,6 @@ lbl_804FCBE8:
 
 .global lbl_804FCBF8
 lbl_804FCBF8:
-	# ROM: 0x4F8CF8
-.global lbl_804FCBF8
-lbl_804FCBF8:
 	.asciz "CMenuUpdate"
 	.asciz "mf70_cf52_sideinfo.brlyt"
 	.asciz "mf70_cf52_sideinfo_in.brlan"
@@ -5492,9 +5392,6 @@ lbl_804FCF40:
 
 .global lbl_804FCF50
 lbl_804FCF50:
-	# ROM: 0x4F9050
-.global lbl_804FCF50
-lbl_804FCF50:
 	.asciz "landmarklist"
 	.asciz "getEXP"
 	.asciz "category"
@@ -5530,9 +5427,6 @@ lbl_804FCF50:
 
 .global lbl_804FD0D8
 lbl_804FD0D8:
-	# ROM: 0x4F91D8
-.global lbl_804FD0D8
-lbl_804FD0D8:
 	.asciz "name_dbg"
 	.asciz "name"
 	.byte 0x00
@@ -5544,9 +5438,6 @@ lbl_804FD0F0:
 	.balign 4
 
 
-.global lbl_804FD100
-lbl_804FD100:
-	# ROM: 0x4F9200
 .global lbl_804FD100
 lbl_804FD100:
 	.asciz "CMenuGetItem"
@@ -5644,6 +5535,8 @@ lbl_804FD208:
 	.4byte 0
 	.4byte 0x00000020
 	.4byte 0x00000100
+
+
 .global lbl_804FD268
 lbl_804FD268:
 	.asciz "cf::CAttackSet"
@@ -5781,9 +5674,6 @@ lbl_804FD478:
 
 .global lbl_804FD488
 lbl_804FD488:
-	# ROM: 0x4F9588
-.global lbl_804FD488
-lbl_804FD488:
 	.asciz "drop_nml"
 	.asciz "drop_rar"
 	.asciz "drop_spr"
@@ -5878,9 +5768,6 @@ lbl_804FD658:
 	.asciz "cf::CCharEffect"
 
 
-.global lbl_804FD668
-lbl_804FD668:
-	# ROM: 0x4F9768
 .global lbl_804FD668
 lbl_804FD668:
 	.asciz "en014911"
@@ -6034,9 +5921,6 @@ lbl_804FD870:
 	.balign 4
 
 
-.global lbl_804FD880
-lbl_804FD880:
-	# ROM: 0x4F9980
 .global lbl_804FD880
 lbl_804FD880:
 	.asciz "MNU_col6"
@@ -7068,9 +6952,6 @@ lbl_804FE820:
 
 .global lbl_804FE838
 lbl_804FE838:
-	# ROM: 0x4FA938
-.global lbl_804FE838
-lbl_804FE838:
 	.asciz "vs"
 	.asciz "vs00"
 	.asciz ".rev"
@@ -7088,9 +6969,6 @@ lbl_804FE860:
 	.balign 4
 
 
-.global lbl_804FE86C
-lbl_804FE86C:
-	# ROM: 0x4FA96C
 .global lbl_804FE86C
 lbl_804FE86C:
 	.asciz "MNU_item"
@@ -7111,9 +6989,6 @@ lbl_804FE8A8:
 	.balign 4
 
 
-.global lbl_804FE8C8
-lbl_804FE8C8:
-	# ROM: 0x4FA9C8
 .global lbl_804FE8C8
 lbl_804FE8C8:
 	.asciz "vs17240100"
@@ -7147,9 +7022,6 @@ lbl_804FE958:
 
 .global lbl_804FE970
 lbl_804FE970:
-	# ROM: 0x4FAA70
-.global lbl_804FE970
-lbl_804FE970:
 	.asciz "NONE"
 	.asciz "wb_size_X"
 	.asciz "wb_size_Y"
@@ -7181,9 +7053,6 @@ lbl_804FEA60:
 	.balign 4
 
 
-.global lbl_804FEA78
-lbl_804FEA78:
-	# ROM: 0x4FAB78
 .global lbl_804FEA78
 lbl_804FEA78:
 	.asciz "questID"
@@ -7233,9 +7102,6 @@ lbl_804FEB64:
 
 .global lbl_804FEB74
 lbl_804FEB74:
-	# ROM: 0x4FAC74
-.global lbl_804FEB74
-lbl_804FEB74:
 	.asciz "Monochrome"
 	.asciz "MonoRGB"
 	.asciz "noDynamics"
@@ -7256,9 +7122,6 @@ lbl_804FEBD8:
 	.balign 4
 
 
-.global lbl_804FEBF0
-lbl_804FEBF0:
-	# ROM: 0x4FACF0
 .global lbl_804FEBF0
 lbl_804FEBF0:
 	.asciz "posX"
@@ -7294,9 +7157,6 @@ lbl_804FEC78:
 
 .global lbl_804FEC84
 lbl_804FEC84:
-	# ROM: 0x4FAD84
-.global lbl_804FEC84
-lbl_804FEC84:
 	.asciz "CMenuZeal"
 	.asciz "mf71_battle90_chance_gage.brlyt"
 	.asciz "mf71_battle90_chance_gage_in.brlan"
@@ -7327,9 +7187,6 @@ lbl_804FEEF8:
 
 .global lbl_804FEF08
 lbl_804FEF08:
-	# ROM: 0x4FB008
-.global lbl_804FEF08
-lbl_804FEF08:
 	.asciz "CAM"
 	.asciz "Monochrome"
 	.asciz "MonoRGB"
@@ -7348,9 +7205,6 @@ lbl_804FEF48:
 
 .global lbl_804FEF5C
 lbl_804FEF5C:
-	# ROM: 0x4FB05C
-.global lbl_804FEF5C
-lbl_804FEF5C:
 	.asciz ".lod"
 	.asciz "/obj/"
 	.asciz ".map"
@@ -7363,9 +7217,6 @@ lbl_804FEF78:
 	.balign 4
 
 
-.global lbl_804FEF8C
-lbl_804FEF8C:
-	# ROM: 0x4FB08C
 .global lbl_804FEF8C
 lbl_804FEF8C:
 	.asciz "eff/rec/ev/evwpn01.rec"
@@ -7405,18 +7256,12 @@ lbl_804FF018:
 
 .global lbl_804FF028
 lbl_804FF028:
-	# ROM: 0x4FB128
-.global lbl_804FF028
-lbl_804FF028:
 	.asciz "EFF"
 	.asciz "Monochrome"
 	.asciz "MonoRGB"
 	.balign 4
 
 
-.global lbl_804FF040
-lbl_804FF040:
-	# ROM: 0x4FB140
 .global lbl_804FF040
 lbl_804FF040:
 	.asciz "time"
@@ -7464,9 +7309,6 @@ lbl_804FF0CC:
 
 .global lbl_804FF0D8
 lbl_804FF0D8:
-	# ROM: 0x4FB1D8
-.global lbl_804FF0D8
-lbl_804FF0D8:
 	.asciz "ene_arts"
 	.asciz "name"
 	.asciz "btl"
@@ -7474,9 +7316,6 @@ lbl_804FF0D8:
 	.4byte 0
 
 
-.global lbl_804FF0F0
-lbl_804FF0F0:
-	# ROM: 0x4FB1F0
 .global lbl_804FF0F0
 lbl_804FF0F0:
 	.asciz "model"
@@ -7516,9 +7355,6 @@ lbl_804FF1E0:
 
 .global lbl_804FF1F0
 lbl_804FF1F0:
-	# ROM: 0x4FB2F0
-.global lbl_804FF1F0
-lbl_804FF1F0:
 	.asciz "CMenuPTGauge"
 	.asciz "mf71_battle70_party00.brlyt"
 	.asciz "mf71_battle70_party00_in.brlan"
@@ -7531,9 +7367,6 @@ lbl_804FF1F0:
 	.4byte 0
 
 
-.global lbl_804FF2D8
-lbl_804FF2D8:
-	# ROM: 0x4FB3D8
 .global lbl_804FF2D8
 lbl_804FF2D8:
 	.asciz "."
@@ -7551,9 +7384,6 @@ lbl_804FF2F8:
 
 .global lbl_804FF308
 lbl_804FF308:
-	# ROM: 0x4FB408
-.global lbl_804FF308
-lbl_804FF308:
 	.asciz "CMenuSelectShop"
 .global lbl_804FF318
 lbl_804FF318:
@@ -7561,9 +7391,6 @@ lbl_804FF318:
 	.balign 4
 
 
-.global lbl_804FF328
-lbl_804FF328:
-	# ROM: 0x4FB428
 .global lbl_804FF328
 lbl_804FF328:
 	.asciz "MNU_shop"
@@ -7575,9 +7402,6 @@ lbl_804FF338:
 	.balign 4
 
 
-.global lbl_804FF348
-lbl_804FF348:
-	# ROM: 0x4FB448
 .global lbl_804FF348
 lbl_804FF348:
 	.asciz "MNU_shop"
@@ -7628,9 +7452,6 @@ lbl_804FF3E0:
 
 .global lbl_804FF3EC
 lbl_804FF3EC:
-	# ROM: 0x4FB4EC
-.global lbl_804FF3EC
-lbl_804FF3EC:
 	.asciz "%s(%x)"
 	.asciz "JUspA"
 	.balign 4
@@ -7656,9 +7477,6 @@ lbl_804FF44C:
 	.balign 4
 
 
-.global lbl_804FF470
-lbl_804FF470:
-	# ROM: 0x4FB570
 .global lbl_804FF470
 lbl_804FF470:
 	.asciz "e_repoptime"
@@ -7697,9 +7515,6 @@ lbl_804FF548:
 
 .global lbl_804FF558
 lbl_804FF558:
-	# ROM: 0x4FB658
-.global lbl_804FF558
-lbl_804FF558:
 	.asciz "erase"
 	.asciz "questID"
 	.asciz "qst_sflg"
@@ -7717,9 +7532,6 @@ lbl_804FF598:
 
 .global lbl_804FF5A8
 lbl_804FF5A8:
-	# ROM: 0x4FB6A8
-.global lbl_804FF5A8
-lbl_804FF5A8:
 	.asciz "CMenuBattleMode"
 	.asciz "mf71_battle40_mark.brlyt"
 	.asciz "mf71_battle40_mark_in.brlan"
@@ -7733,9 +7545,6 @@ lbl_804FF610:
 
 .global lbl_804FF61C
 lbl_804FF61C:
-	# ROM: 0x4FB71C
-.global lbl_804FF61C
-lbl_804FF61C:
 	.asciz "OCC_CULL"
 	.balign 4
 .global lbl_804FF628
@@ -7744,9 +7553,6 @@ lbl_804FF628:
 	.balign 4
 
 
-.global lbl_804FF63C
-lbl_804FF63C:
-	# ROM: 0x4FB73C
 .global lbl_804FF63C
 lbl_804FF63C:
 	.asciz "CSimpleEveTalkWin"
@@ -7793,19 +7599,20 @@ lbl_804FF788:
 	.4byte 0x000000B8
 	.4byte 0x000000BD
 	.4byte 0x000000BD
+
+.global lbl_804FF7A8
+lbl_804FF7A8:
 	.4byte 0x3CF5C28F
 	.4byte 0x3D75C28F
 	.4byte 0x3DB851EC
 	.4byte 0x3DF5C28F
 	.4byte 0x3E19999A
+
 .global lbl_804FF7BC
 lbl_804FF7BC:
 	.asciz "cf::CVision"
 
 
-.global lbl_804FF7C8
-lbl_804FF7C8:
-	# ROM: 0x4FB8C8
 .global lbl_804FF7C8
 lbl_804FF7C8:
 	.asciz "PosX_L%d"
@@ -7900,18 +7707,12 @@ lbl_804FF964:
 
 .global lbl_804FF970
 lbl_804FF970:
-	# ROM: 0x4FBA70
-.global lbl_804FF970
-lbl_804FF970:
 	.asciz "snd/ahx/ev/%s/%s.ahx"
 	.asciz "snd"
 	.byte 0x00, 0x00, 0x00
 	.4byte 0
 
 
-.global lbl_804FF990
-lbl_804FF990:
-	# ROM: 0x4FBA90
 .global lbl_804FF990
 lbl_804FF990:
 	.asciz "game"
@@ -7941,12 +7742,16 @@ lbl_804FF9D8:
 	.asciz "nul_time"
 	.balign 4
 	.4byte 0
+
+.global lbl_804FF9E8
+lbl_804FF9E8:
 	.4byte lbl_804FF998
 	.4byte lbl_804FF9A4
 	.4byte lbl_804FF9B0
 	.4byte lbl_804FF9BC
 	.4byte lbl_804FF9C8
 	.4byte lbl_804FF9D8
+
 .global lbl_804FFA00
 lbl_804FFA00:
 	.asciz "mf71_btl00_pnmk00.tpl"
@@ -7963,23 +7768,27 @@ lbl_804FFA30:
 lbl_804FFA48:
 	.asciz "mf71_btl00_pnmk03.tpl"
 	.balign 4
+
+.global lbl_804FFA60
+lbl_804FFA60:
 	.4byte lbl_804FFA00
 	.4byte lbl_804FFA18
 	.4byte lbl_804FFA30
 	.4byte lbl_804FFA48
+
+.global lbl_804FFA70
+lbl_804FFA70:
 	.4byte lbl_804FFA00
 	.4byte lbl_804FFA18
 	.4byte lbl_804FFA30
 	.4byte lbl_804FFA48
+
 .global lbl_804FFA80
 lbl_804FFA80:
 	.asciz "CMenuVision"
 	.4byte 0
 
 
-.global lbl_804FFA90
-lbl_804FFA90:
-	# ROM: 0x4FBB90
 .global lbl_804FFA90
 lbl_804FFA90:
 	.asciz "MenuVision"
@@ -8054,15 +7863,13 @@ lbl_804FFA90:
 	.asciz "MNU_battle"
 	.asciz "name"
 	.asciz "icon"
+
 .global lbl_80500010
 lbl_80500010:
 	.asciz "CMenuBattleCommu"
 	.balign 4
 
 
-.global lbl_80500024
-lbl_80500024:
-	# ROM: 0x4FC124
 .global lbl_80500024
 lbl_80500024:
 	.asciz "MenuBattleCommu"
@@ -8117,9 +7924,6 @@ lbl_80500248:
 	.balign 4
 
 
-.global lbl_8050025C
-lbl_8050025C:
-	# ROM: 0x4FC35C
 .global lbl_8050025C
 lbl_8050025C:
 	.asciz "CMenuGetItemMulti"
@@ -8290,9 +8094,6 @@ lbl_80500928:
 
 .global lbl_80500938
 lbl_80500938:
-	# ROM: 0x4FCA38
-.global lbl_80500938
-lbl_80500938:
 	.asciz "common/jp/bdat_kzn.bin"
 	.asciz "/menu/KizunaTalk.arc"
 	.asciz "MNU_sysmes"
@@ -8337,9 +8138,6 @@ lbl_80500B28:
 
 .global lbl_80500B3C
 lbl_80500B3C:
-	# ROM: 0x4FCC3C
-.global lbl_80500B3C
-lbl_80500B3C:
 	.asciz "MNU_shop"
 	.asciz "name"
 	.4byte 0
@@ -8358,9 +8156,6 @@ lbl_80500B78:
 	.balign 4
 
 
-.global lbl_80500B88
-lbl_80500B88:
-	# ROM: 0x4FCC88
 .global lbl_80500B88
 lbl_80500B88:
 	.asciz "CBgTexLyt"
@@ -8387,9 +8182,6 @@ lbl_80500CB8:
 	.asciz "CTitleAHelp"
 
 
-.global lbl_80500CC4
-lbl_80500CC4:
-	# ROM: 0x4FCDC4
 .global lbl_80500CC4
 lbl_80500CC4:
 	.asciz "/menu/TitleAHelp.arc"
@@ -8469,9 +8261,13 @@ lbl_80500E14:
 	.4byte 0x3FE66666
 	.4byte 0x40000000
 	.4byte 0x40200000
+
+.global lbl_80500E30
+lbl_80500E30:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+
 .global lbl_80500E3C
 lbl_80500E3C:
 	.asciz "CItemBoxGrid"
@@ -8489,9 +8285,6 @@ lbl_80500E68:
 	.balign 4
 
 
-.global lbl_80500E74
-lbl_80500E74:
-	# ROM: 0x4FCF74
 .global lbl_80500E74
 lbl_80500E74:
 	.asciz "type_succ_B1"
@@ -8655,9 +8448,6 @@ lbl_805015AC:
 
 .global lbl_805015B8
 lbl_805015B8:
-	# ROM: 0x4FD6B8
-.global lbl_805015B8
-lbl_805015B8:
 	.asciz "mf00_reg00_curs08.brlyt"
 	.asciz "mf00_reg00_curs08_roop.brlan"
 	.asciz "mf00_reg00_curs08_on.brlan"
@@ -8727,9 +8517,6 @@ lbl_80501A10:
 	.4byte 0
 
 
-.global lbl_80501A20
-lbl_80501A20:
-	# ROM: 0x4FDB20
 .global lbl_80501A20
 lbl_80501A20:
 	.asciz "/menu/SortMenu.arc"
@@ -8824,9 +8611,6 @@ lbl_80501B7C:
 	.balign 4
 
 
-.global lbl_80501B8C
-lbl_80501B8C:
-	# ROM: 0x4FDC8C
 .global lbl_80501B8C
 lbl_80501B8C:
 	.asciz "%d"
@@ -9008,9 +8792,6 @@ lbl_805023A0:
 	.4byte 0
 
 
-.global lbl_805023B0
-lbl_805023B0:
-	# ROM: 0x4FE4B0
 .global lbl_805023B0
 lbl_805023B0:
 	.asciz "/menu/ShopSubWin.arc"
@@ -9310,9 +9091,6 @@ lbl_80502920:
 
 .global lbl_80502944
 lbl_80502944:
-	# ROM: 0x4FEA44
-.global lbl_80502944
-lbl_80502944:
 	.asciz "%s%d"
 	.asciz "shoplist"
 	.asciz "pc_type"
@@ -9525,9 +9303,6 @@ lbl_80503198:
 
 .global lbl_805031A4
 lbl_805031A4:
-	# ROM: 0x4FF2A4
-.global lbl_805031A4
-lbl_805031A4:
 	.asciz "/menu/ScrollBar.arc"
 	.asciz "CScrollBar"
 	.asciz "arc"
@@ -9590,9 +9365,6 @@ lbl_805032A8:
 
 .global lbl_805032B8
 lbl_805032B8:
-	# ROM: 0x4FF3B8
-.global lbl_805032B8
-lbl_805032B8:
 	.asciz "rectype"
 	.asciz "ct"
 	.asciz "visible"
@@ -9627,18 +9399,19 @@ lbl_805033B8:
 	.asciz "cf::CfResTboxImpl"
 	.balign 4
 	.4byte 0
+
+.global lbl_805033D0
+lbl_805033D0:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+
 .global lbl_805033DC
 lbl_805033DC:
 	.asciz "CPartyStateWin"
 	.balign 4
 
 
-.global lbl_805033EC
-lbl_805033EC:
-	# ROM: 0x4FF4EC
 .global lbl_805033EC
 lbl_805033EC:
 	.asciz "CPartyStateWin"
@@ -9648,21 +9421,25 @@ lbl_805033EC:
 	.asciz "MNU_item"
 	.balign 4
 	.4byte 0
+
+.global lbl_80503428
+lbl_80503428:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+
+.global lbl_80503434
+lbl_80503434:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+
 .global lbl_80503440
 lbl_80503440:
 	.asciz "CModelDisp"
 	.balign 4
 
 
-.global lbl_8050344C
-lbl_8050344C:
-	# ROM: 0x4FF54C
 .global lbl_8050344C
 lbl_8050344C:
 	.asciz "BBB"
@@ -9689,9 +9466,6 @@ lbl_8050348C:
 	.asciz "CPartyState"
 
 
-.global lbl_80503498
-lbl_80503498:
-	# ROM: 0x4FF598
 .global lbl_80503498
 lbl_80503498:
 	.asciz "nul_pc%02d"
@@ -9770,26 +9544,27 @@ lbl_80503708:
 
 .global lbl_80503718
 lbl_80503718:
-	# ROM: 0x4FF818
-.global lbl_80503718
-lbl_80503718:
 	.asciz "pc_arts"
 	.4byte 0x70630075
 	.4byte 0x6E697400
+
+.global lbl_80503728
+lbl_80503728:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+
+.global lbl_80503734
+lbl_80503734:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+
 .global lbl_80503740
 lbl_80503740:
 	.asciz "CModelDispEquip"
 
 
-.global lbl_80503750
-lbl_80503750:
-	# ROM: 0x4FF850
 .global lbl_80503750
 lbl_80503750:
 	.asciz "BBB"
@@ -9803,9 +9578,13 @@ lbl_80503750:
 	.asciz "def_mount"
 	.asciz "bat_mount"
 	.balign 4
+
+.global lbl_805037B8
+lbl_805037B8:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+
 .global lbl_805037C4
 lbl_805037C4:
 	.asciz "pic_btn00"
@@ -9890,9 +9669,6 @@ lbl_805038A8:
 
 .global lbl_805038B8
 lbl_805038B8:
-	# ROM: 0x4FF9B8
-.global lbl_805038B8
-lbl_805038B8:
 	.asciz "/menu/EquipChange.arc"
 	.asciz "/menu/tpl/CrystalIcon.arc"
 	.asciz "item_keep"
@@ -9947,9 +9723,6 @@ lbl_80503B14:
 
 .global lbl_80503B44
 lbl_80503B44:
-	# ROM: 0x4FFC44
-.global lbl_80503B44
-lbl_80503B44:
 	.asciz "cnt_min"
 	.asciz "cnt_max"
 	.asciz "posX"
@@ -9972,9 +9745,6 @@ lbl_80503BC8:
 	.asciz "CItemBoxGridSubMenu"
 
 
-.global lbl_80503BDC
-lbl_80503BDC:
-	# ROM: 0x4FFCDC
 .global lbl_80503BDC
 lbl_80503BDC:
 	.asciz "mf70_cf60_syswin07.brlyt"
@@ -10053,9 +9823,6 @@ lbl_80503D48:
 
 .global lbl_80503D54
 lbl_80503D54:
-	# ROM: 0x4FFE54
-.global lbl_80503D54
-lbl_80503D54:
 	.asciz "cl_area_x"
 	.asciz "cl_area_py"
 	.asciz "cl_area_my"
@@ -10069,9 +9836,6 @@ lbl_80503D88:
 	.balign 4
 
 
-.global lbl_80503D9C
-lbl_80503D9C:
-	# ROM: 0x4FFE9C
 .global lbl_80503D9C
 lbl_80503D9C:
 	.asciz "mapObj"
@@ -10096,9 +9860,6 @@ lbl_80503DF8:
 
 .global lbl_80503E0C
 lbl_80503E0C:
-	# ROM: 0x4FFF0C
-.global lbl_80503E0C
-lbl_80503E0C:
 	.asciz "rockTYPE"
 	.balign 4
 .global lbl_80503E18
@@ -10107,9 +9868,6 @@ lbl_80503E18:
 	.balign 4
 
 
-.global lbl_80503E2C
-lbl_80503E2C:
-	# ROM: 0x4FFF2C
 .global lbl_80503E2C
 lbl_80503E2C:
 	.asciz "warpEF"
@@ -10122,9 +9880,6 @@ lbl_80503E48:
 	.balign 4
 
 
-.global lbl_80503E5C
-lbl_80503E5C:
-	# ROM: 0x4FFF5C
 .global lbl_80503E5C
 lbl_80503E5C:
 	.asciz "lnPosX"
@@ -10149,9 +9904,6 @@ lbl_80503EB8:
 	.balign 4
 
 
-.global lbl_80503ECC
-lbl_80503ECC:
-	# ROM: 0x4FFFCC
 .global lbl_80503ECC
 lbl_80503ECC:
 	.asciz "rectype"
@@ -10182,27 +9934,25 @@ lbl_80503F48:
 
 .global lbl_80503F58
 lbl_80503F58:
-	# ROM: 0x500058
-.global lbl_80503F58
-lbl_80503F58:
 	.asciz "CMakeCrystalWin"
 	.asciz "CMakeCrystalScn"
 	.asciz "MNU_crystal"
 	.asciz "info"
 	.balign 4
 	.4byte 0
+
+.global lbl_80503F90
+lbl_80503F90:
 	.4byte 0x00000044
 	.4byte 0x00000058
 	.4byte 0
+
 .global lbl_80503F9C
 lbl_80503F9C:
 	.asciz "CMCCrystalBox"
 	.balign 4
 
 
-.global lbl_80503FAC
-lbl_80503FAC:
-	# ROM: 0x5000AC
 .global lbl_80503FAC
 lbl_80503FAC:
 	.asciz "%s"
@@ -10304,9 +10054,6 @@ lbl_80504500:
 
 .global lbl_80504510
 lbl_80504510:
-	# ROM: 0x500610
-.global lbl_80504510
-lbl_80504510:
 	.asciz "/menu/McCrystalInfo.arc"
 	.asciz "/menu/tpl/CrystalIcon.arc"
 	.asciz "name"
@@ -10354,18 +10101,19 @@ lbl_80504510:
 	.asciz "txt_listvalue01"
 	.asciz "CItemBoxInfoTex"
 	.4byte 0
+
+.global lbl_805047F0
+lbl_805047F0:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+
 .global lbl_805047FC
 lbl_805047FC:
 	.asciz "CModelDispMakeCrystal"
 	.balign 4
 
 
-.global lbl_80504814
-lbl_80504814:
-	# ROM: 0x500914
 .global lbl_80504814
 lbl_80504814:
 	.asciz "obj/oj820002.chr"
@@ -10404,9 +10152,6 @@ lbl_80504920:
 
 .global lbl_80504934
 lbl_80504934:
-	# ROM: 0x500A34
-.global lbl_80504934
-lbl_80504934:
 	.asciz "mf10_cry01_gage.brlyt"
 	.asciz "mf10_cry01_gage_in.brlan"
 	.asciz "mf10_cry01_gage_up.brlan"
@@ -10420,9 +10165,6 @@ lbl_805049C0:
 	.balign 4
 
 
-.global lbl_805049D0
-lbl_805049D0:
-	# ROM: 0x500AD0
 .global lbl_805049D0
 lbl_805049D0:
 	.asciz "/menu/MCCrystalList.arc"
@@ -10508,9 +10250,6 @@ lbl_80504CF0:
 
 .global lbl_80504CFC
 lbl_80504CFC:
-	# ROM: 0x500DFC
-.global lbl_80504CFC
-lbl_80504CFC:
 	.asciz "mf10_cry06_start.brlyt"
 	.asciz "mf10_cry06_start_in.brlan"
 	.asciz "mf10_cry02_prt00.brlyt"
@@ -10571,9 +10310,6 @@ lbl_80505110:
 
 .global lbl_80505120
 lbl_80505120:
-	# ROM: 0x501220
-.global lbl_80505120
-lbl_80505120:
 	.asciz "CMenuQstCnt"
 	.asciz "mf70_cf60_qst_cunt.brlyt"
 	.asciz "mf70_cf60_qst_cunt_in.brlan"
@@ -10592,9 +10328,6 @@ lbl_805051B8:
 	.asciz "CQstLogList"
 
 
-.global lbl_805051C4
-lbl_805051C4:
-	# ROM: 0x5012C4
 .global lbl_805051C4
 lbl_805051C4:
 	.asciz "qst_genre"
@@ -10857,9 +10590,6 @@ lbl_805057B8:
 
 .global lbl_805057C4
 lbl_805057C4:
-	# ROM: 0x5018C4
-.global lbl_805057C4
-lbl_805057C4:
 	.asciz "/menu/QstLogInfo.arc"
 	.asciz "title"
 	.asciz "txt_tit"
@@ -10947,9 +10677,6 @@ lbl_805057C4:
 
 .global lbl_80505B80
 lbl_80505B80:
-	# ROM: 0x501C80
-.global lbl_80505B80
-lbl_80505B80:
 	.asciz "/menu/SysWin.arc"
 	.asciz "win_main"
 	.asciz "txt_sysmes01"
@@ -10989,9 +10716,6 @@ lbl_80505D20:
 
 .global lbl_80505D2C
 lbl_80505D2C:
-	# ROM: 0x501E2C
-.global lbl_80505D2C
-lbl_80505D2C:
 	.asciz "/menu/ShopSubWin.arc"
 	.asciz "txt_%02d"
 	.asciz "nul_proportion"
@@ -11024,9 +10748,6 @@ lbl_80505E30:
 
 .global lbl_80505E40
 lbl_80505E40:
-	# ROM: 0x501F40
-.global lbl_80505E40
-lbl_80505E40:
 	.asciz "/menu/ExchangeWin.arc"
 	.asciz "txt_slct%02d"
 	.asciz "nul_proportion"
@@ -11053,9 +10774,6 @@ lbl_80505F40:
 	.asciz "CPresentWin"
 
 
-.global lbl_80505F4C
-lbl_80505F4C:
-	# ROM: 0x50204C
 .global lbl_80505F4C
 lbl_80505F4C:
 	.asciz "mf70_cf60_syswin07.brlyt"
@@ -11101,9 +10819,6 @@ lbl_80506128:
 
 .global lbl_8050613C
 lbl_8050613C:
-	# ROM: 0x50223C
-.global lbl_8050613C
-lbl_8050613C:
 	.asciz "mf10_cry02_sup.brlyt"
 	.asciz "mf10_cry02_sup_in.brlan"
 	.asciz "icon_type3"
@@ -11116,9 +10831,6 @@ lbl_80506188:
 	.balign 4
 
 
-.global lbl_80506198
-lbl_80506198:
-	# ROM: 0x502298
 .global lbl_80506198
 lbl_80506198:
 	.asciz "MNU_battle"
@@ -11293,9 +11005,6 @@ lbl_80506360:
 
 .global lbl_8050636C
 lbl_8050636C:
-	# ROM: 0x50246C
-.global lbl_8050636C
-lbl_8050636C:
 	.asciz "mf00_reg00_curs01.brlyt"
 	.asciz "mf00_reg00_curs01_roop.brlan"
 	.asciz "mf00_reg00_curs01_on.brlan"
@@ -11371,9 +11080,6 @@ lbl_80506700:
 	.balign 4
 
 
-.global lbl_8050670C
-lbl_8050670C:
-	# ROM: 0x50280C
 .global lbl_8050670C
 lbl_8050670C:
 	.asciz "/menu/ArtsInfo.arc"
@@ -11487,9 +11193,6 @@ lbl_80506B54:
 
 .global lbl_80506B70
 lbl_80506B70:
-	# ROM: 0x502C70
-.global lbl_80506B70
-lbl_80506B70:
 	.asciz "%s%02d"
 	.asciz "banner.bin"
 	.asciz "name"
@@ -11502,17 +11205,11 @@ lbl_80506B88:
 
 .global lbl_80506B98
 lbl_80506B98:
-	# ROM: 0x502C98
-.global lbl_80506B98
-lbl_80506B98:
 	.asciz "MNU_map"
 	.asciz "name"
 	.balign 4
 
 
-.global lbl_80506BA8
-lbl_80506BA8:
-	# ROM: 0x502CA8
 .global lbl_80506BA8
 lbl_80506BA8:
 	.asciz "mapID"
@@ -11538,9 +11235,6 @@ lbl_80506BA8:
 	.4byte 0
 
 
-.global lbl_80506CA0
-lbl_80506CA0:
-	# ROM: 0x502DA0
 .global lbl_80506CA0
 lbl_80506CA0:
 	.asciz "/menu/Fade.arc"
@@ -11977,9 +11671,6 @@ lbl_80507534:
 
 .global lbl_80507540
 lbl_80507540:
-	# ROM: 0x503640
-.global lbl_80507540
-lbl_80507540:
 	.asciz "mf03_map01_win01.brlyt"
 	.asciz "MNU_map"
 	.asciz "name"
@@ -12141,9 +11832,6 @@ lbl_80507C20:
 
 .global lbl_80507C34
 lbl_80507C34:
-	# ROM: 0x503D34
-.global lbl_80507C34
-lbl_80507C34:
 	.asciz "MNU_map"
 	.asciz "name"
 	.balign 4
@@ -12155,9 +11843,6 @@ lbl_80507C48:
 	.4byte 0
 
 
-.global lbl_80507C58
-lbl_80507C58:
-	# ROM: 0x503D58
 .global lbl_80507C58
 lbl_80507C58:
 	.asciz "CMenuPause"
@@ -12179,9 +11864,6 @@ lbl_80507D08:
 	.asciz "CMenuCollepedia"
 
 
-.global lbl_80507D18
-lbl_80507D18:
-	# ROM: 0x503E18
 .global lbl_80507D18
 lbl_80507D18:
 	.asciz "MNU_collect"
@@ -12213,9 +11895,6 @@ lbl_80507D6C:
 	.asciz "CCollepedia"
 
 
-.global lbl_80507D78
-lbl_80507D78:
-	# ROM: 0x503E78
 .global lbl_80507D78
 lbl_80507D78:
 	.asciz "mf00_reg00_curs09.brlyt"
@@ -12288,14 +11967,13 @@ lbl_80507D78:
 	.asciz "MNU_col"
 	.balign 4
 	.4byte 0
+
+	
 .global lbl_80508130
 lbl_80508130:
 	.asciz "CMenuKizunagram"
 
 
-.global lbl_80508140
-lbl_80508140:
-	# ROM: 0x504240
 .global lbl_80508140
 lbl_80508140:
 	.asciz "MNU_relate"
@@ -12327,9 +12005,6 @@ lbl_80508198:
 	.balign 4
 
 
-.global lbl_805081A8
-lbl_805081A8:
-	# ROM: 0x5042A8
 .global lbl_805081A8
 lbl_805081A8:
 	.asciz "mf40_kiz_rdr.brlyt"
@@ -12523,19 +12198,18 @@ lbl_805081A8:
 	.asciz "arc"
 	.asciz "CKizunagram_tex"
 	.balign 4
+
 .global lbl_80508EE0
 lbl_80508EE0:
 	.asciz "CPcKizunagram"
 	.balign 4
+
 .global lbl_80508EF0
 lbl_80508EF0:
 	.asciz "CPcKizunaCur"
 	.balign 4
 
 
-.global lbl_80508F00
-lbl_80508F00:
-	# ROM: 0x505000
 .global lbl_80508F00
 lbl_80508F00:
 	.asciz "mf00_reg00_curs04.brlyt"
@@ -12582,9 +12256,6 @@ lbl_80508F00:
 
 .global lbl_805091B0
 lbl_805091B0:
-	# ROM: 0x5052B0
-.global lbl_805091B0
-lbl_805091B0:
 	.asciz "name"
 	.byte 0x00
 	.asciz "skill"
@@ -12598,9 +12269,6 @@ lbl_805091D0:
 	.balign 4
 
 
-.global lbl_805091E4
-lbl_805091E4:
-	# ROM: 0x5052E4
 .global lbl_805091E4
 lbl_805091E4:
 	.asciz "MNU_passive"
@@ -12656,9 +12324,6 @@ lbl_805092A0:
 	.balign 4
 
 
-.global lbl_805092B8
-lbl_805092B8:
-	# ROM: 0x5053B8
 .global lbl_805092B8
 lbl_805092B8:
 	.asciz "mf00_reg00_curs05.brlyt"
@@ -12831,15 +12496,13 @@ lbl_805092B8:
 	.asciz "BTL_PSSlist"
 	.balign 4
 	.4byte 0
+
 .global lbl_80509D20
 lbl_80509D20:
 	.asciz "cf::CfGimmickEne"
 	.balign 4
 
 
-.global lbl_80509D34
-lbl_80509D34:
-	# ROM: 0x505E34
 .global lbl_80509D34
 lbl_80509D34:
 	.asciz "eneID"
@@ -12864,9 +12527,6 @@ lbl_80509D78:
 
 .global lbl_80509D88
 lbl_80509D88:
-	# ROM: 0x505E88
-.global lbl_80509D88
-lbl_80509D88:
 	.asciz "CMenuBattleEnd"
 	.asciz "mf70_cf53_sideinfo.brlyt"
 	.asciz "mf70_cf53_sideinfo_battle.brlan"
@@ -12883,9 +12543,6 @@ lbl_80509E20:
 
 .global lbl_80509E30
 lbl_80509E30:
-	# ROM: 0x505F30
-.global lbl_80509E30
-lbl_80509E30:
 	.asciz "MNU_update"
 	.asciz "info"
 .global lbl_80509E40
@@ -12894,9 +12551,6 @@ lbl_80509E40:
 	.balign 4
 
 
-.global lbl_80509E50
-lbl_80509E50:
-	# ROM: 0x505F50
 .global lbl_80509E50
 lbl_80509E50:
 	.asciz "JNL_playaward"
@@ -12942,9 +12596,6 @@ lbl_80509FE0:
 
 .global lbl_80509FF8
 lbl_80509FF8:
-	# ROM: 0x5060F8
-.global lbl_80509FF8
-lbl_80509FF8:
 	.asciz "MNU_update"
 	.asciz "info"
 .global lbl_8050A008
@@ -12952,9 +12603,6 @@ lbl_8050A008:
 	.asciz "CKizunaTalkList"
 
 
-.global lbl_8050A018
-lbl_8050A018:
-	# ROM: 0x506118
 .global lbl_8050A018
 lbl_8050A018:
 	.asciz "MNU_update"
@@ -13001,9 +12649,6 @@ lbl_8050A238:
 
 .global lbl_8050A244
 lbl_8050A244:
-	# ROM: 0x506344
-.global lbl_8050A244
-lbl_8050A244:
 	.asciz "/common/jp/bdat_mes.bin"
 	.asciz "help"
 	.asciz "MNU_buff"
@@ -13036,9 +12681,6 @@ lbl_8050A2E0:
 	.4byte 0
 
 
-.global lbl_8050A2F0
-lbl_8050A2F0:
-	# ROM: 0x5063F0
 .global lbl_8050A2F0
 lbl_8050A2F0:
 	.asciz "CMenuLvUp"
@@ -13113,9 +12755,6 @@ lbl_8050A490:
 	.4byte 0
 
 
-.global lbl_8050A4A8
-lbl_8050A4A8:
-	# ROM: 0x5065A8
 .global lbl_8050A4A8
 lbl_8050A4A8:
 	.asciz "/menu/ScenarioLog.arc"
@@ -13198,9 +12837,6 @@ lbl_8050A648:
 	.asciz "CEIBPageCur"
 
 
-.global lbl_8050A654
-lbl_8050A654:
-	# ROM: 0x506754
 .global lbl_8050A654
 lbl_8050A654:
 	.asciz "attach"
@@ -13367,9 +13003,6 @@ lbl_8050AE18:
 
 .global lbl_8050AE28
 lbl_8050AE28:
-	# ROM: 0x506F28
-.global lbl_8050AE28
-lbl_8050AE28:
 	.asciz "MNU_sysmes"
 	.asciz "name"
 .global lbl_8050AE38
@@ -13378,9 +13011,6 @@ lbl_8050AE38:
 	.balign 4
 
 
-.global lbl_8050AE44
-lbl_8050AE44:
-	# ROM: 0x506F44
 .global lbl_8050AE44
 lbl_8050AE44:
 	.asciz "mf00_reg00_curs13.brlyt"
@@ -13470,9 +13100,6 @@ lbl_8050B244:
 
 .global lbl_8050B258
 lbl_8050B258:
-	# ROM: 0x507358
-.global lbl_8050B258
-lbl_8050B258:
 	.asciz "CMenuPTChangeNotice"
 	.asciz "arc"
 	.asciz "mf70_cf60_syswin15.brlyt"
@@ -13508,9 +13135,6 @@ lbl_8050B398:
 
 .global lbl_8050B3A4
 lbl_8050B3A4:
-	# ROM: 0x5074A4
-.global lbl_8050B3A4
-lbl_8050B3A4:
 	.asciz "CSysWinSave"
 	.asciz "MNU_sysmes"
 	.asciz "name"
@@ -13520,9 +13144,6 @@ lbl_8050B3C0:
 	.balign 4
 
 
-.global lbl_8050B3D0
-lbl_8050B3D0:
-	# ROM: 0x5074D0
 .global lbl_8050B3D0
 lbl_8050B3D0:
 	.asciz "/ev/realtime/"
@@ -13599,9 +13220,6 @@ lbl_8050B52C:
 
 .global lbl_8050B540
 lbl_8050B540:
-	# ROM: 0x507640
-.global lbl_8050B540
-lbl_8050B540:
 	.asciz "vs01240050"
 	.balign 4
 	.4byte 0
@@ -13647,9 +13265,6 @@ lbl_8050B5B4:
 	.balign 4
 
 
-.global lbl_8050B5C4
-lbl_8050B5C4:
-	# ROM: 0x5076C4
 .global lbl_8050B5C4
 lbl_8050B5C4:
 	.asciz "%s"
@@ -13710,9 +13325,6 @@ lbl_8050B848:
 
 .global lbl_8050B858
 lbl_8050B858:
-	# ROM: 0x507958
-.global lbl_8050B858
-lbl_8050B858:
 	.asciz "MNU_main"
 	.asciz "name"
 	.asciz "MNU_ttrl"
@@ -13724,9 +13336,6 @@ lbl_8050B878:
 	.balign 4
 
 
-.global lbl_8050B884
-lbl_8050B884:
-	# ROM: 0x507984
 .global lbl_8050B884
 lbl_8050B884:
 	.asciz "/menu/Tutorial.arc"
@@ -13755,18 +13364,12 @@ lbl_8050B9A8:
 
 .global lbl_8050B9B4
 lbl_8050B9B4:
-	# ROM: 0x507AB4
-.global lbl_8050B9B4
-lbl_8050B9B4:
 	.asciz "MNU_main"
 	.asciz "name"
 	.2byte 0
 	.4byte 0
 
 
-.global lbl_8050B9C8
-lbl_8050B9C8:
-	# ROM: 0x507AC8
 .global lbl_8050B9C8
 lbl_8050B9C8:
 	.asciz "mf00_reg00_curs19.brlyt"
@@ -13801,9 +13404,6 @@ lbl_8050BB20:
 
 .global lbl_8050BB30
 lbl_8050BB30:
-	# ROM: 0x507C30
-.global lbl_8050BB30
-lbl_8050BB30:
 	.asciz "MNU_main"
 	.asciz "name"
 	.2byte 0
@@ -13816,9 +13416,6 @@ lbl_8050BB4C:
 	.asciz "CSkipTimer2"
 
 
-.global lbl_8050BB58
-lbl_8050BB58:
-	# ROM: 0x507C58
 .global lbl_8050BB58
 lbl_8050BB58:
 	.asciz "CSkipTimer2"
@@ -13942,9 +13539,6 @@ lbl_8050BE90:
 	.balign 4
 
 
-.global lbl_8050BEA4
-lbl_8050BEA4:
-	# ROM: 0x507FA4
 .global lbl_8050BEA4
 lbl_8050BEA4:
 	.asciz "CMenuBattleChain"
@@ -14094,9 +13688,6 @@ lbl_8050C128:
 
 .global lbl_8050C140
 lbl_8050C140:
-	# ROM: 0x508240
-.global lbl_8050C140
-lbl_8050C140:
 	.asciz "naviOff"
 .global lbl_8050C148
 lbl_8050C148:
@@ -14104,9 +13695,6 @@ lbl_8050C148:
 	.balign 4
 
 
-.global lbl_8050C15C
-lbl_8050C15C:
-	# ROM: 0x50825C
 .global lbl_8050C15C
 lbl_8050C15C:
 	.asciz "MNU_main"
@@ -14121,9 +13709,6 @@ lbl_8050C180:
 	.balign 4
 
 
-.global lbl_8050C190
-lbl_8050C190:
-	# ROM: 0x508290
 .global lbl_8050C190
 lbl_8050C190:
 	.asciz "type_cat"
@@ -14155,9 +13740,6 @@ lbl_8050C190:
 	.balign 4
 
 
-.global lbl_8050C2D8
-lbl_8050C2D8:
-	# ROM: 0x5083D8
 .global lbl_8050C2D8
 lbl_8050C2D8:
 	.asciz "/menu/Load.arc"
@@ -14545,9 +14127,6 @@ lbl_8050C898:
 
 .global lbl_8050C8A4
 lbl_8050C8A4:
-	# ROM: 0x5089A4
-.global lbl_8050C8A4
-lbl_8050C8A4:
 	.asciz "help"
 	.balign 4
 	.4byte 0
@@ -14575,9 +14154,6 @@ lbl_8050C918:
 
 .global lbl_8050C924
 lbl_8050C924:
-	# ROM: 0x508A24
-.global lbl_8050C924
-lbl_8050C924:
 	.asciz "MNU_item"
 	.asciz "name"
 	.4byte 0
@@ -14589,9 +14165,6 @@ lbl_8050C938:
 	.balign 4
 
 
-.global lbl_8050C948
-lbl_8050C948:
-	# ROM: 0x508A48
 .global lbl_8050C948
 lbl_8050C948:
 	.asciz "JNL_playaward"
@@ -14608,9 +14181,6 @@ lbl_8050C990:
 	.asciz "cf::CfHikariItemManager"
 
 
-.global lbl_8050C9A8
-lbl_8050C9A8:
-	# ROM: 0x508AA8
 .global lbl_8050C9A8
 lbl_8050C9A8:
 	.asciz "HIKARI"
@@ -14654,9 +14224,6 @@ lbl_8050C9F0:
 
 .global lbl_8050CA08
 lbl_8050CA08:
-	# ROM: 0x508B08
-.global lbl_8050CA08
-lbl_8050CA08:
 	.asciz "MNU_sysmes"
 	.asciz "name"
 .global lbl_8050CA18
@@ -14677,9 +14244,6 @@ lbl_8050CA44:
 	.balign 4
 
 
-.global lbl_8050CA50
-lbl_8050CA50:
-	# ROM: 0x508B50
 .global lbl_8050CA50
 lbl_8050CA50:
 	.asciz "mf99_title00.brlyt"
@@ -14801,9 +14365,6 @@ lbl_8050CD98:
 
 .global lbl_8050CDB0
 lbl_8050CDB0:
-	# ROM: 0x508EB0
-.global lbl_8050CDB0
-lbl_8050CDB0:
 	.asciz "voice"
 	.balign 4
 .global lbl_8050CDB8
@@ -14813,9 +14374,6 @@ lbl_8050CDB8:
 	.4byte 0
 
 
-.global lbl_8050CDC8
-lbl_8050CDC8:
-	# ROM: 0x508EC8
 .global lbl_8050CDC8
 lbl_8050CDC8:
 	.asciz "/menu/Battery.arc"
@@ -14844,9 +14402,6 @@ lbl_8050CE20:
 
 .global lbl_8050CE30
 lbl_8050CE30:
-	# ROM: 0x508F30
-.global lbl_8050CE30
-lbl_8050CE30:
 	.asciz "???"
 	.asciz "!std::exception!!std::bad_typeid!!"
 	.asciz "!std::exception!!std::bad_cast!!"
@@ -14865,9 +14420,6 @@ lbl_8050CE78:
 
 .global lbl_8050CE90
 lbl_8050CE90:
-	# ROM: 0x508F90
-.global lbl_8050CE90
-lbl_8050CE90:
 	.asciz "GCN_Mem_Alloc.c : InitDefaultHeap. No Heap Available\n"
 	.asciz "Metrowerks CW runtime library initializing default heap\n"
 	.balign 4
@@ -14884,9 +14436,6 @@ lbl_8050CF00:
 	.4byte 0x00000044
 
 
-.global lbl_8050CF18
-lbl_8050CF18:
-	# ROM: 0x509018
 .global lbl_8050CF18
 lbl_8050CF18:
 	.asciz "542101086242752217003726400434970855712890625"
@@ -14914,9 +14463,6 @@ lbl_8050CF18:
 	.balign 4
 
 
-.global lbl_8050CFF8
-lbl_8050CFF8:
-	# ROM: 0x5090F8
 .global lbl_8050CFF8
 lbl_8050CFF8:
 	.asciz "Assertion (%s) failed in \"%s\", line %d\n"
@@ -15205,9 +14751,6 @@ lbl_8050D4A0:
 	.balign 4
 
 
-.global lbl_8050D528
-lbl_8050D528:
-	# ROM: 0x509628
 .global lbl_8050D528
 lbl_8050D528:
 	.asciz "-INF"
@@ -16291,37 +15834,37 @@ lbl_8050E398:
 .global lbl_8050E3A8
 lbl_8050E3A8:
 	# ROM: 0x50A4A8
-	.4byte 0x80549D60
-	.4byte 0x80549DF0
-	.4byte 0x80549EA0
-	.4byte 0x80549F58
-	.4byte 0x8054A008
-	.4byte 0x8054A0A8
-	.4byte 0x8054A154
+	.4byte lbl_80549D60
+	.4byte lbl_80549DF0
+	.4byte lbl_80549EA0
+	.4byte lbl_80549F58
+	.4byte lbl_8054A008
+	.4byte lbl_8054A0A8
+	.4byte lbl_8054A154
 
 
 .global lbl_8050E3C4
 lbl_8050E3C4:
 	# ROM: 0x50A4C4
 	.4byte lbl_80549D60
-	.4byte 0x8054A1E8
-	.4byte 0x80549EA0
-	.4byte 0x8054A28C
-	.4byte 0x8054A330
-	.4byte 0x8054A0A8
-	.4byte 0x8054A154
+	.4byte lbl_8054A1E8
+	.4byte lbl_80549EA0
+	.4byte lbl_8054A28C
+	.4byte lbl_8054A330
+	.4byte lbl_8054A0A8
+	.4byte lbl_8054A154
 
 
 .global lbl_8050E3E0
 lbl_8050E3E0:
 	# ROM: 0x50A4E0
-	.4byte 0x8054A528
-	.4byte 0x8054A564
-	.4byte 0x8054A59C
-	.4byte 0x8054A5DC
-	.4byte 0x8054A618
-	.4byte 0x8054A654
-	.4byte 0x8054A690
+	.4byte lbl_8054A528
+	.4byte lbl_8054A564
+	.4byte lbl_8054A59C
+	.4byte lbl_8054A5DC
+	.4byte lbl_8054A618
+	.4byte lbl_8054A654
+	.4byte lbl_8054A690
 	.4byte 0
 
 
@@ -17781,7 +17324,7 @@ lbl_8050E400:
 	.4byte 0x6B636E05
 	.4byte 0x7272751F
 	.4byte 0x76DB7CBE
-	.4byte lbl_805658F0
+	.4byte 0x805658F0
 	.4byte 0x88FD897F
 	.4byte 0x8AA08A93
 	.4byte 0x8ACB901D
@@ -19581,7 +19124,7 @@ lbl_80510004:
 	.4byte 0x7FE17FE6
 	.4byte 0x7FE97FF3
 	.4byte 0x7FF998DC
-	.4byte lbl_80068004
+	.4byte 0x80068004
 	.4byte 0x800B8012
 	.4byte 0x80188019
 	.4byte 0x801C8021
@@ -26764,16 +26307,10 @@ lbl_8051868C:
 
 .global lbl_80518690
 lbl_80518690:
-	# ROM: 0x514790
-.global lbl_80518690
-lbl_80518690:
 	.asciz "wt\\HomeButtonSe.wt"
 	.balign 4
 
 
-.global lbl_805186A4
-lbl_805186A4:
-	# ROM: 0x5147A4
 .global lbl_805186A4
 lbl_805186A4:
 	.asciz "wt\\HomeButtonSe.pcm"
@@ -27440,25 +26977,16 @@ lbl_80518D10:
 
 .global lbl_80518D30
 lbl_80518D30:
-	# ROM: 0x514E30
-.global lbl_80518D30
-lbl_80518D30:
 	.asciz "/shared2/sys"
 	.balign 4
 
 
 .global lbl_80518D40
 lbl_80518D40:
-	# ROM: 0x514E40
-.global lbl_80518D40
-lbl_80518D40:
 	.asciz "/shared2/sys/SYSCONF"
 	.balign 4
 
 
-.global lbl_80518D58
-lbl_80518D58:
-	# ROM: 0x514E58
 .global lbl_80518D58
 lbl_80518D58:
 	.asciz "/title/00000001/00000002/data/setting.txt"
@@ -27521,18 +27049,12 @@ lbl_80518E08:
 
 .global lbl_80518E20
 lbl_80518E20:
-	# ROM: 0x514F20
-.global lbl_80518E20
-lbl_80518E20:
 	.asciz "\nADXF/WII Ver.7.71 Build:Nov 13 2008 10:52:48\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
 	.4byte 0
 
 
-.global lbl_80518E78
-lbl_80518E78:
-	# ROM: 0x514F78
 .global lbl_80518E78
 lbl_80518E78:
 	.asciz "E9040801:partition ID is range outside.(adxf_ChkPrmPt)"
@@ -27587,17 +27109,11 @@ lbl_80518E78:
 
 .global lbl_80519650
 lbl_80519650:
-	# ROM: 0x515750
-.global lbl_80519650
-lbl_80519650:
 	.asciz "\nADXT/WII Ver.10.67 Build:Nov 13 2008 10:52:50\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.4byte 0
 
 
-.global lbl_805196A8
-lbl_805196A8:
-	# ROM: 0x5157A8
 .global lbl_805196A8
 lbl_805196A8:
 	.asciz "adxt_exec_tsvr"
@@ -27609,9 +27125,6 @@ lbl_805196A8:
 
 .global lbl_80519750
 lbl_80519750:
-	# ROM: 0x515850
-.global lbl_80519750
-lbl_80519750:
 	.asciz "E03010901 ADXB_DecodeHeader: "
 	.asciz "Can not decode this file format."
 	.asciz "E07021901 adxsjd_decexec_start: "
@@ -27620,18 +27133,12 @@ lbl_80519750:
 
 .global lbl_805197E0
 lbl_805197E0:
-	# ROM: 0x5158E0
-.global lbl_805197E0
-lbl_805197E0:
 	.asciz "E02110501 adxstmf_stat_exec: can't open "
 	.asciz "E05072801 adxstmf_stat_exec: can't open "
 	.balign 4
 	.4byte 0
 
 
-.global lbl_80519838
-lbl_80519838:
-	# ROM: 0x515938
 .global lbl_80519838
 lbl_80519838:
 	.asciz "E02080811 adxt_StartAfs: parameter error"
@@ -27670,9 +27177,6 @@ lbl_80519988:
 	.4byte 0xBF800000
 
 
-.global lbl_80519990
-lbl_80519990:
-	# ROM: 0x515A90
 .global lbl_80519990
 lbl_80519990:
 	.asciz "E02080804 adxt_Create: parameter error"
@@ -27724,9 +27228,6 @@ lbl_80519990:
 
 .global lbl_8051A120
 lbl_8051A120:
-	# ROM: 0x516220
-.global lbl_8051A120
-lbl_8051A120:
 	.asciz "E8101201 adxt_trap_entry: not enough data"
 	.asciz "E9081001 adxt_stat_decinfo: can't play this number of channels"
 	.asciz "E02080842 adxt_ExecHndl: parameter error"
@@ -27734,9 +27235,6 @@ lbl_8051A120:
 	.4byte 0
 
 
-.global lbl_8051A1B8
-lbl_8051A1B8:
-	# ROM: 0x5162B8
 .global lbl_8051A1B8
 lbl_8051A1B8:
 	.asciz "FORM"
@@ -28264,9 +27762,6 @@ lbl_8051A1C8:
 
 .global lbl_8051A9C8
 lbl_8051A9C8:
-	# ROM: 0x516AC8
-.global lbl_8051A9C8
-lbl_8051A9C8:
 	.asciz "E04102501 adxsjd_decode_prep: "
 	.asciz "The data alignment is illegal."
 	.asciz "E1060101 ADXB_DecodeHeaderAdx: "
@@ -28284,9 +27779,6 @@ lbl_8051AA80:
 	.balign 4
 
 
-.global lbl_8051AA88
-lbl_8051AA88:
-	# ROM: 0x516B88
 .global lbl_8051AA88
 lbl_8051AA88:
 	.asciz "RIFF"
@@ -28335,16 +27827,10 @@ lbl_8051AAD8:
 
 .global lbl_8051AB08
 lbl_8051AB08:
-	# ROM: 0x516C08
-.global lbl_8051AB08
-lbl_8051AB08:
 	.asciz "Error"
 	.byte 0x20, 0x00
 
 
-.global lbl_8051AB10
-lbl_8051AB10:
-	# ROM: 0x516C10
 .global lbl_8051AB10
 lbl_8051AB10:
 	.asciz "E2005092203 : NULL pointer is passed."
@@ -28370,9 +27856,6 @@ lbl_8051ABC0:
 	.4byte 0
 
 
-.global lbl_8051ABD0
-lbl_8051ABD0:
-	# ROM: 0x516CD0
 .global lbl_8051ABD0
 lbl_8051ABD0:
 	.asciz "O"
@@ -28446,16 +27929,10 @@ lbl_8051ACA0:
 
 .global lbl_8051ACA8
 lbl_8051ACA8:
-	# ROM: 0x516DA8
-.global lbl_8051ACA8
-lbl_8051ACA8:
 	.asciz "CRI-MW"
 	.balign 4
 
 
-.global lbl_8051ACB0
-lbl_8051ACB0:
-	# ROM: 0x516DB0
 .global lbl_8051ACB0
 lbl_8051ACB0:
 	.asciz "cvFsAddDev #1:illegal device name"
@@ -28553,9 +28030,6 @@ lbl_8051ACB0:
 
 .global lbl_8051B830
 lbl_8051B830:
-	# ROM: 0x517930
-.global lbl_8051B830
-lbl_8051B830:
 	.asciz "E0092901:fname is null.(gcCiGetFileSize)"
 	.asciz "E0040201:can't open a file.(gcCiGetFileSize)"
 	.asciz "E0040202:can't close a file.(gcCiGetFileSize)"
@@ -28588,17 +28062,11 @@ lbl_8051BA58:
 
 .global lbl_8051BA60
 lbl_8051BA60:
-	# ROM: 0x517B60
-.global lbl_8051BA60
-lbl_8051BA60:
 	.asciz "E0013: '%s' is different from entry file name.(LSC_ExecServer)\n"
 	.asciz "E0007: lsc->fp=NULL\n"
 	.balign 4
 
 
-.global lbl_8051BAB8
-lbl_8051BAB8:
-	# ROM: 0x517BB8
 .global lbl_8051BAB8
 lbl_8051BAB8:
 	.asciz "E2005012801: Invalid parameter=sj (LSC_Create)\n"
@@ -28639,9 +28107,6 @@ lbl_8051BE80:
 
 .global lbl_8051BE84
 lbl_8051BE84:
-	# ROM: 0x517F84
-.global lbl_8051BE84
-lbl_8051BE84:
 	.asciz "E01100308:length of '%s' is over %d bytes.(mfci_get_adr_size)"
 	.asciz "E01100301:fname is null.(mfCiOpen)"
 	.asciz "E01100302:rw is illigal.(mfCiOpen)"
@@ -28669,9 +28134,6 @@ lbl_8051C098:
 	.4byte 0x089448BC
 
 
-.global lbl_8051C0A8
-lbl_8051C0A8:
-	# ROM: 0x5181A8
 .global lbl_8051C0A8
 lbl_8051C0A8:
 	.asciz "SJMEM Error"
@@ -28711,9 +28173,6 @@ lbl_8051C1F8:
 	.4byte 0x53540000
 
 
-.global lbl_8051C208
-lbl_8051C208:
-	# ROM: 0x518308
 .global lbl_8051C208
 lbl_8051C208:
 	.asciz "SJRBF Error"
@@ -28771,9 +28230,6 @@ lbl_8051C430:
 
 .global lbl_8051C440
 lbl_8051C440:
-	# ROM: 0x518540
-.global lbl_8051C440
-lbl_8051C440:
 	.asciz "SJUNI Error"
 	.asciz " : NULL pointer is passed."
 	.asciz "E2004090261"
@@ -28804,9 +28260,6 @@ lbl_8051C440:
 
 .global lbl_8051C590
 lbl_8051C590:
-	# ROM: 0x518690
-.global lbl_8051C590
-lbl_8051C590:
 	.asciz "2103102:SVM:svm_unlock:lock type miss match.(type org=%d, type now=%d)"
 	.asciz "1071205:SVM_SetCbSvrId:illegal svtype"
 	.asciz "Unknown"
@@ -28823,16 +28276,10 @@ lbl_8051C590:
 
 .global lbl_8051C748
 lbl_8051C748:
-	# ROM: 0x518848
-.global lbl_8051C748
-lbl_8051C748:
 	.asciz "SPSD"
 	.balign 4
 
 
-.global lbl_8051C750
-lbl_8051C750:
-	# ROM: 0x518850
 .global lbl_8051C750
 lbl_8051C750:
 	.asciz ".snd"
@@ -28850,9 +28297,6 @@ lbl_8051C78C:
 	.4byte lbl_8051C760
 
 
-.global lbl_8051C790
-lbl_8051C790:
-	# ROM: 0x518890
 .global lbl_8051C790
 lbl_8051C790:
 	.asciz "E1070301:Invalid parameter(maxnch<=0).\n"
@@ -28902,9 +28346,6 @@ lbl_8051CD10:
 
 .global lbl_8051CD14
 lbl_8051CD14:
-	# ROM: 0x518E14
-.global lbl_8051CD14
-lbl_8051CD14:
 	.asciz "1060102: Internal Error: adxm_goto_mwidle_border"
 	.balign 4
 .global lbl_8051CD48
@@ -28925,9 +28366,6 @@ lbl_8051CD88:
 	.4byte 0x47434400
 
 
-.global lbl_8051CD90
-lbl_8051CD90:
-	# ROM: 0x518E90
 .global lbl_8051CD90
 lbl_8051CD90:
 	.asciz "\nCRI CRW:STD/WII Ver.0.83 Build:Nov 13 2008 10:53:02\n"
@@ -28969,17 +28407,11 @@ lbl_8051CDF0:
 
 .global lbl_8051CE58
 lbl_8051CE58:
-	# ROM: 0x518F58
-.global lbl_8051CE58
-lbl_8051CE58:
 	.asciz "\nCRI CFT/WII Ver.2.11 Build:Nov 13 2008 18:21:14\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
 
 
-.global lbl_8051CEB0
-lbl_8051CEB0:
-	# ROM: 0x518FB0
 .global lbl_8051CEB0
 lbl_8051CEB0:
 	.asciz "E1122629 mwPlySetFrmSync: handle is invalid."
@@ -29004,9 +28436,6 @@ lbl_8051CEB0:
 
 .global lbl_8051D1D0
 lbl_8051D1D0:
-	# ROM: 0x5192D0
-.global lbl_8051D1D0
-lbl_8051D1D0:
 	.asciz "E1122633 mwPlyEntryFname: handle is invalid."
 	.asciz "E10915B mwPlyEntryFname: fname is NULL."
 	.asciz "E204021: mwPlyEntryFname: Can't entry file'%s'"
@@ -29029,9 +28458,6 @@ lbl_8051D1D0:
 	.4byte 0
 
 
-.global lbl_8051D508
-lbl_8051D508:
-	# ROM: 0x519608
 .global lbl_8051D508
 lbl_8051D508:
 	.asciz "E201184 MwsfdBufFmt value is invalid."
@@ -29116,9 +28542,6 @@ lbl_8051DA70:
 
 .global lbl_8051DA78
 lbl_8051DA78:
-	# ROM: 0x519B78
-.global lbl_8051DA78
-lbl_8051DA78:
 	.asciz "E206011 MwsfdCrePrm: illigal buffmt."
 	.asciz "E1122613 mwPlyCalcWorkCprmSfd: cprm is NULL."
 	.asciz "E7092501 mwPlyCalcWorkCprmSfd: M4V is not support."
@@ -29163,11 +28586,11 @@ lbl_8051DA78:
 
 .global lbl_8051E0E0
 lbl_8051E0E0:
-	# ROM: 0x51A1E0
-.global lbl_8051E0E0
-lbl_8051E0E0:
 	.asciz "\nMWSFD/WII Ver.4.75 Build:Nov 13 2008 18:21:20\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
+
+.global lbl_8051E134
+lbl_8051E134:
 	.4byte lbl_805202A0
 	.4byte lbl_805202D8
 	.4byte lbl_80520320
@@ -29188,7 +28611,7 @@ lbl_8051E0E0:
 .global lbl_8051E170
 lbl_8051E170:
 	# ROM: 0x51A270
-	.4byte 0x8051E134
+	.4byte lbl_8051E134
 	.4byte 0x0000EA24
 	.4byte 0x00000670
 .global lbl_8051E17C
@@ -29328,9 +28751,6 @@ lbl_8051E404:
 
 .global lbl_8051E408
 lbl_8051E408:
-	# ROM: 0x51A508
-.global lbl_8051E408
-lbl_8051E408:
 	.asciz "E1122611 mwPlyInitSfdFx: iprm is NULL."
 	.asciz "E2005 mwPlyInitSfdFx: can't init GSC"
 	.asciz "ERR20010421A mwPlyInitSfdFx"
@@ -29365,9 +28785,6 @@ lbl_8051E7B8:
 	.4byte 0x80000000
 
 
-.global lbl_8051E7C0
-lbl_8051E7C0:
-	# ROM: 0x51A8C0
 .global lbl_8051E7C0
 lbl_8051E7C0:
 	.asciz "E20010703F mwPlySfdStandby"
@@ -29409,9 +28826,6 @@ lbl_8051E7C0:
 	.4byte 0
 
 
-.global lbl_8051ED98
-lbl_8051ED98:
-	# ROM: 0x51AE98
 .global lbl_8051ED98
 lbl_8051ED98:
 	.asciz "E1122617 mwPlySetAudioSw: handle is invalid."
@@ -29457,9 +28871,6 @@ lbl_8051ED98:
 
 .global lbl_8051F450
 lbl_8051F450:
-	# ROM: 0x51B550
-.global lbl_8051F450
-lbl_8051F450:
 	.asciz "E211141 MWSTM_ReqStart: can't start '%s'"
 	.asciz "E1071901 mwPlyExecSvrHndl: NULL handle."
 	.asciz "E2011101 MWSFSVR_IsSvrBdrHndl: handle is invalid."
@@ -29467,9 +28878,6 @@ lbl_8051F450:
 	.balign 4
 
 
-.global lbl_8051F510
-lbl_8051F510:
-	# ROM: 0x51B610
 .global lbl_8051F510
 lbl_8051F510:
 	.asciz "E2053001 MWSFD_Malloc: cnt over."
@@ -29537,9 +28945,6 @@ lbl_8051F5F8:
 	.4byte lbl_803A44C4
 
 
-.global lbl_8051F600
-lbl_8051F600:
-	# ROM: 0x51B700
 .global lbl_8051F600
 lbl_8051F600:
 	.asciz "2.059"
@@ -29651,16 +29056,10 @@ lbl_8051F750:
 
 .global lbl_8051F768
 lbl_8051F768:
-	# ROM: 0x51B868
-.global lbl_8051F768
-lbl_8051F768:
 	.asciz "IDCPREC"
 	.asciz "STCCODE"
 
 
-.global lbl_8051F778
-lbl_8051F778:
-	# ROM: 0x51B878
 .global lbl_8051F778
 lbl_8051F778:
 	.asciz "\nCRI MPV/WII Ver.2.059 Build:Nov 13 2008 18:21:44\n"
@@ -29690,9 +29089,6 @@ lbl_8051F7D0:
 	.4byte 0x5A5A5A5A
 
 
-.global lbl_8051F814
-lbl_8051F814:
-	# ROM: 0x51B914
 .global lbl_8051F814
 lbl_8051F814:
 	.asciz "2.059"
@@ -30125,17 +29521,11 @@ lbl_8051F928:
 
 .global lbl_8051FE30
 lbl_8051FE30:
-	# ROM: 0x51BF30
-.global lbl_8051FE30
-lbl_8051FE30:
 	.asciz "\nCRI DCT/WII Ver.2.034 Build:Nov 13 2008 18:21:26\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
 
 
-.global lbl_8051FE88
-lbl_8051FE88:
-	# ROM: 0x51BF88
 .global lbl_8051FE88
 lbl_8051FE88:
 	.asciz "\nCRI MPS/WII Ver.2.064 Build:Nov 13 2008 18:21:29\n"
@@ -30192,9 +29582,6 @@ lbl_8051FF48:
 
 .global lbl_8051FF80
 lbl_8051FF80:
-	# ROM: 0x51C080
-.global lbl_8051FF80
-lbl_8051FF80:
 	.asciz "\nCRI SFD/WII Ver.2.080 Build:Nov 13 2008 18:21:32\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
@@ -30215,9 +29602,6 @@ lbl_8051FFFC:
 	.4byte 0x43726561
 
 
-.global lbl_80520004
-lbl_80520004:
-	# ROM: 0x51C104
 .global lbl_80520004
 lbl_80520004:
 	.asciz "te"
@@ -30515,9 +29899,6 @@ lbl_80520358:
 
 .global lbl_805203C0
 lbl_805203C0:
-	# ROM: 0x51C4C0
-.global lbl_805203C0
-lbl_805203C0:
 	.asciz "before seek time"
 	.asciz "ptype"
 	.asciz "empty B"
@@ -30641,9 +30022,6 @@ lbl_80520584:
 
 .global lbl_80520588
 lbl_80520588:
-	# ROM: 0x51C688
-.global lbl_80520588
-lbl_80520588:
 	.asciz "%p, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %d, %p, %ld"
 	.4byte 0
 
@@ -30732,16 +30110,10 @@ lbl_805206B0:
 
 .global lbl_805206E8
 lbl_805206E8:
-	# ROM: 0x51C7E8
-.global lbl_805206E8
-lbl_805206E8:
 	.asciz "%p, %ld, %ld, 0x%08lX%08lX, %ld, %ld, %ld, %ld,   %ld, %ld,   %ld, %ld, %ld, %ld,   %ld, %ld,   %ld, %ld, %ld, %ld, %ld,   %ld, %ld,   %ld \n"
 	.balign 4
 
 
-.global lbl_80520778
-lbl_80520778:
-	# ROM: 0x51C878
 .global lbl_80520778
 lbl_80520778:
 	.asciz "before seeki"
@@ -30750,9 +30122,6 @@ lbl_80520778:
 	.4byte 0
 
 
-.global lbl_80520798
-lbl_80520798:
-	# ROM: 0x51C898
 .global lbl_80520798
 lbl_80520798:
 	.asciz "(nbyte > 0) && (nbyte < 5)"
@@ -30765,17 +30134,11 @@ lbl_80520798:
 
 .global lbl_805207F8
 lbl_805207F8:
-	# ROM: 0x51C8F8
-.global lbl_805207F8
-lbl_805207F8:
 	.asciz "SofdecStream            "
 	.asciz "Ver."
 	.2byte 0
 
 
-.global lbl_80520818
-lbl_80520818:
-	# ROM: 0x51C918
 .global lbl_80520818
 lbl_80520818:
 	.asciz "SofdecStream2           "
@@ -30785,16 +30148,10 @@ lbl_80520818:
 
 .global lbl_80520838
 lbl_80520838:
-	# ROM: 0x51C938
-.global lbl_80520838
-lbl_80520838:
 	.asciz "TMR_CH"
 	.balign 4
 
 
-.global lbl_80520840
-lbl_80520840:
-	# ROM: 0x51C940
 .global lbl_80520840
 lbl_80520840:
 	.asciz "SFXZ"
@@ -30823,9 +30180,6 @@ lbl_80520858:
 
 .global lbl_80520860
 lbl_80520860:
-	# ROM: 0x51C960
-.global lbl_80520860
-lbl_80520860:
 	.asciz "E201312: sfxcnv_IsCnvUpHalf : compo is invalid."
 	.asciz "E201311: sfxcnv_MakeTable : compo is not support."
 	.asciz "E202282: SFX_MakeTblZ16 : zclip is not set."
@@ -30841,16 +30195,10 @@ lbl_80520860:
 
 .global lbl_80520A90
 lbl_80520A90:
-	# ROM: 0x51CB90
-.global lbl_80520A90
-lbl_80520A90:
 	.asciz "\nCRI SFX/WII Ver.2.48 Build:Nov 13 2008 18:22:09\n"
 	.balign 4
 
 
-.global lbl_80520AC4
-lbl_80520AC4:
-	# ROM: 0x51CBC4
 .global lbl_80520AC4
 lbl_80520AC4:
 	.asciz "E201194: sfx_InitHn: work size is short."
@@ -30892,9 +30240,6 @@ lbl_80520B38:
 
 .global lbl_80520B6C
 lbl_80520B6C:
-	# ROM: 0x51CC6C
-.global lbl_80520B6C
-lbl_80520B6C:
 	.asciz "ZMHDR"
 	.asciz "SFXINFE"
 	.asciz "ZMVFRM"
@@ -30917,16 +30262,10 @@ lbl_80520B6C:
 
 .global lbl_80520D60
 lbl_80520D60:
-	# ROM: 0x51CE60
-.global lbl_80520D60
-lbl_80520D60:
 	.asciz "\nCRI SUD/WII Ver.0.05 Build:Nov 13 2008 18:22:10\n"
 	.balign 4
 
 
-.global lbl_80520D94
-lbl_80520D94:
-	# ROM: 0x51CE94
 .global lbl_80520D94
 lbl_80520D94:
 	.asciz "<SUDPS_>"
@@ -36273,9 +35612,6 @@ lbl_80525D28:
 
 .global lbl_80525D70
 lbl_80525D70:
-	# ROM: 0x521E70
-.global lbl_80525D70
-lbl_80525D70:
 	.asciz "."
 	.4byte 0
 	.2byte 0
@@ -36300,9 +35636,6 @@ lbl_80525DB4:
 
 .global lbl_80525DD8
 lbl_80525DD8:
-	# ROM: 0x521ED8
-.global lbl_80525DD8
-lbl_80525DD8:
 	.asciz " "
 	.4byte 0
 	.2byte 0
@@ -36318,9 +35651,6 @@ lbl_80525DF8:
 
 .global lbl_80525E18
 lbl_80525E18:
-	# ROM: 0x521F18
-.global lbl_80525E18
-lbl_80525E18:
 	.asciz "(View)"
 	.balign 4
 .global lbl_80525E20
@@ -36329,9 +35659,6 @@ lbl_80525E20:
 	.balign 4
 
 
-.global lbl_80525E2C
-lbl_80525E2C:
-	# ROM: 0x521F2C
 .global lbl_80525E2C
 lbl_80525E2C:
 	.asciz "CDesktop"
@@ -36345,9 +35672,6 @@ lbl_80525E40:
 
 .global lbl_80525E4C
 lbl_80525E4C:
-	# ROM: 0x521F4C
-.global lbl_80525E4C
-lbl_80525E4C:
 	.asciz "CRsrcData"
 	.balign 4
 .global lbl_80525E58
@@ -36355,9 +35679,6 @@ lbl_80525E58:
 	.asciz "CScriptCode"
 
 
-.global lbl_80525E64
-lbl_80525E64:
-	# ROM: 0x521F64
 .global lbl_80525E64
 lbl_80525E64:
 	.asciz "CScriptCode"
@@ -36433,9 +35754,6 @@ lbl_80525F78:
 
 .global lbl_80525F84
 lbl_80525F84:
-	# ROM: 0x522084
-.global lbl_80525F84
-lbl_80525F84:
 	.asciz "CViewRoot"
 	.balign 4
 .global lbl_80525F90
@@ -36444,9 +35762,6 @@ lbl_80525F90:
 	.balign 4
 
 
-.global lbl_80525FA0
-lbl_80525FA0:
-	# ROM: 0x5220A0
 .global lbl_80525FA0
 lbl_80525FA0:
 	.asciz "CWorkFlowTvMode"
@@ -36470,9 +35785,6 @@ lbl_80526030:
 
 .global lbl_8052605C
 lbl_8052605C:
-	# ROM: 0x52215C
-.global lbl_8052605C
-lbl_8052605C:
 	.asciz "CWorkRoot"
 	.asciz "exit wii menu\n"
 	.asciz "exit wii reset\n"
@@ -36483,9 +35795,6 @@ lbl_805260A8:
 	.asciz "CWorkSystem"
 
 
-.global lbl_805260B4
-lbl_805260B4:
-	# ROM: 0x5221B4
 .global lbl_805260B4
 lbl_805260B4:
 	.asciz "exit wii power off\n"
@@ -36677,9 +35986,6 @@ lbl_805263C0:
 
 .global lbl_805263E8
 lbl_805263E8:
-	# ROM: 0x5224E8
-.global lbl_805263E8
-lbl_805263E8:
 	.asciz "CDeviceVI"
 	.asciz "CDeviceGX"
 	.asciz "CDeviceRemotePAD"
@@ -36719,9 +36025,6 @@ lbl_805264DC:
 
 .global lbl_805264FC
 lbl_805264FC:
-	# ROM: 0x5225FC
-.global lbl_805264FC
-lbl_805264FC:
 	.asciz "USBKEY"
 	.asciz "CDeviceFileJobReadDvd"
 	.asciz "/"
@@ -36738,9 +36041,6 @@ lbl_805265A8:
 	.balign 4
 
 
-.global lbl_805265B8
-lbl_805265B8:
-	# ROM: 0x5226B8
 .global lbl_805265B8
 lbl_805265B8:
 	.asciz "/"
@@ -36838,9 +36138,6 @@ lbl_805266D0:
 
 .global lbl_805266F4
 lbl_805266F4:
-	# ROM: 0x5227F4
-.global lbl_805266F4
-lbl_805266F4:
 	.asciz "CDeviceFontLayer"
 	.asciz "CDeviceFontLoader"
 	.balign 4
@@ -36895,9 +36192,6 @@ lbl_80526850:
 
 .global lbl_8052685C
 lbl_8052685C:
-	# ROM: 0x52295C
-.global lbl_8052685C
-lbl_8052685C:
 	.asciz "CDesktopBackGround"
 	.asciz "CDesktopException"
 	.balign 4
@@ -36910,18 +36204,12 @@ lbl_80526888:
 
 .global lbl_80526894
 lbl_80526894:
-	# ROM: 0x522994
-.global lbl_80526894
-lbl_80526894:
 	.asciz "CException"
 	.asciz "&"
 	.byte 0x00, 0x00, 0x00
 	.4byte 0
 
 
-.global lbl_805268A8
-lbl_805268A8:
-	# ROM: 0x5229A8
 .global lbl_805268A8
 lbl_805268A8:
 	.asciz "CLibHbm"
@@ -36940,9 +36228,6 @@ lbl_805268A8:
 	.4byte 0x69620000
 
 
-.global lbl_805268F8
-lbl_805268F8:
-	# ROM: 0x5229F8
 .global lbl_805268F8
 lbl_805268F8:
 	.asciz ".ahx"
@@ -37078,9 +36363,6 @@ lbl_805269D8:
 
 .global lbl_80526A38
 lbl_80526A38:
-	# ROM: 0x522B38
-.global lbl_80526A38
-lbl_80526A38:
 	.asciz "hbm.arc"
 	.asciz "hbm/homeBtn.arc"
 	.asciz "hbm/SpeakerSe.arc"
@@ -37097,9 +36379,6 @@ lbl_80526A98:
 
 .global lbl_80526AA8
 lbl_80526AA8:
-	# ROM: 0x522BA8
-.global lbl_80526AA8
-lbl_80526AA8:
 	.asciz "exit wii menu\n"
 	.asciz "exit wii reset\n"
 	.asciz "CLibHbmControl"
@@ -37110,9 +36389,6 @@ lbl_80526AD8:
 	.balign 4
 
 
-.global lbl_80526AE4
-lbl_80526AE4:
-	# ROM: 0x522BE4
 .global lbl_80526AE4
 lbl_80526AE4:
 	.asciz "Layout Mem"
@@ -37128,9 +36404,6 @@ lbl_80526B08:
 	.balign 4
 
 
-.global lbl_80526B20
-lbl_80526B20:
-	# ROM: 0x522C20
 .global lbl_80526B20
 lbl_80526B20:
 	.asciz "invalid distance too far back"
@@ -37699,9 +36972,6 @@ lbl_805273F0:
 
 .global lbl_80527418
 lbl_80527418:
-	# ROM: 0x523518
-.global lbl_80527418
-lbl_80527418:
 	.asciz "1.2.3"
 	.asciz "incorrect header check"
 	.asciz "unknown compression method"
@@ -37884,9 +37154,6 @@ lbl_805277E0:
 
 .global lbl_805277F4
 lbl_805277F4:
-	# ROM: 0x5238F4
-.global lbl_805277F4
-lbl_805277F4:
 	.asciz "Global(%d)"
 	.balign 4
 .global lbl_80527800
@@ -37938,9 +37205,6 @@ lbl_805278BC:
 
 .global lbl_805278C0
 lbl_805278C0:
-	# ROM: 0x5239C0
-.global lbl_805278C0
-lbl_805278C0:
 	.asciz "CScnMem"
 .global lbl_805278C8
 lbl_805278C8:
@@ -37964,9 +37228,6 @@ lbl_805278F8:
 
 .global lbl_80527908
 lbl_80527908:
-	# ROM: 0x523A08
-.global lbl_80527908
-lbl_80527908:
 	.asciz "NW4R Mem"
 	.asciz "NW4R Mem(P)"
 	.asciz "NW4R Mem(S)"
@@ -37980,9 +37241,6 @@ lbl_80527938:
 
 .global lbl_80527948
 lbl_80527948:
-	# ROM: 0x523A48
-.global lbl_80527948
-lbl_80527948:
 	.asciz "CScnTexWorkMan"
 	.balign 4
 .global lbl_80527958
@@ -37991,9 +37249,6 @@ lbl_80527958:
 	.balign 4
 
 
-.global lbl_8052796C
-lbl_8052796C:
-	# ROM: 0x523A6C
 .global lbl_8052796C
 lbl_8052796C:
 	.asciz "VLGT Mem"
@@ -38013,9 +37268,6 @@ lbl_805279A0:
 	.4byte 0
 
 
-.global lbl_805279B8
-lbl_805279B8:
-	# ROM: 0x523AB8
 .global lbl_805279B8
 lbl_805279B8:
 	.asciz "%s(%s)"
@@ -38099,9 +37351,6 @@ lbl_80527B70:
 	.balign 4
 
 
-.global lbl_80527B80
-lbl_80527B80:
-	# ROM: 0x523C80
 .global lbl_80527B80
 lbl_80527B80:
 	.asciz "Camera%d"
@@ -38335,9 +37584,6 @@ lbl_80527DF8:
 
 .global lbl_80527E08
 lbl_80527E08:
-	# ROM: 0x523F08
-.global lbl_80527E08
-lbl_80527E08:
 	.asciz "CEffectHeap"
 	.4byte 0
 	.4byte 0
@@ -38390,9 +37636,6 @@ lbl_80527ED0:
 
 .global lbl_80527EDC
 lbl_80527EDC:
-	# ROM: 0x523FDC
-.global lbl_80527EDC
-lbl_80527EDC:
 	.asciz "%s/%s"
 	.balign 4
 	.4byte 0
@@ -38407,9 +37650,6 @@ lbl_80527EF8:
 	.balign 4
 
 
-.global lbl_80527F08
-lbl_80527F08:
-	# ROM: 0x524008
 .global lbl_80527F08
 lbl_80527F08:
 	.asciz "%s%s"
@@ -38471,9 +37711,6 @@ lbl_80528008:
 
 .global lbl_80528014
 lbl_80528014:
-	# ROM: 0x524114
-.global lbl_80528014
-lbl_80528014:
 	.asciz "adx"
 	.asciz "ahx"
 	.asciz ".pkb"
@@ -38529,9 +37766,6 @@ lbl_805280C8:
 
 .global lbl_805280D4
 lbl_805280D4:
-	# ROM: 0x5241D4
-.global lbl_805280D4
-lbl_805280D4:
 	.asciz "%s%d%d"
 	.balign 4
 	.4byte 0
@@ -38564,9 +37798,6 @@ lbl_80528108:
 
 .global lbl_80528114
 lbl_80528114:
-	# ROM: 0x524214
-.global lbl_80528114
-lbl_80528114:
 	.asciz "JUspA"
 	.asciz "JUhead"
 	.asciz "move"
@@ -38577,9 +37808,6 @@ lbl_80528128:
 	.balign 4
 
 
-.global lbl_80528138
-lbl_80528138:
-	# ROM: 0x524238
 .global lbl_80528138
 lbl_80528138:
 	.asciz "Dwet"
@@ -38596,9 +37824,6 @@ lbl_80528138:
 
 .global lbl_80528168
 lbl_80528168:
-	# ROM: 0x524268
-.global lbl_80528168
-lbl_80528168:
 	.asciz "exit wii reset\n"
 	.asciz " in \"%s\" on line %d.\n"
 	.balign 4
@@ -38611,9 +37836,6 @@ lbl_8052819C:
 	.asciz "CNReqtaskSaveBanner"
 
 
-.global lbl_805281B0
-lbl_805281B0:
-	# ROM: 0x5242B0
 .global lbl_805281B0
 lbl_805281B0:
 	.asciz "%s%s"

@@ -2,10 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.include "macros.inc"
-
-.section .text, "ax"  # 0x80039220 - 0x804F5900
-
 .global parse_format
 parse_format:
 /* 802BEC4C 0028820C  94 21 FF D0 */	stwu r1, -0x30(r1)

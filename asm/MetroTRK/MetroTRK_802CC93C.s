@@ -595,8 +595,8 @@ TRKSaveExtended1Block:
 /* 802CD138 002966F8  7F CE 04 A6 */	mfsr r30, 0xe
 /* 802CD13C 002966FC  7F EF 04 A6 */	mfsr r31, 0xf
 /* 802CD140 00296700  BE 02 01 A8 */	stmw r16, 0x1a8(r2)
-/* 802CD144 00296704  7F 6C 42 E6 */	.4byte 0x7F6C42E6  /* unknown instruction */
-/* 802CD148 00296708  7F 8D 42 E6 */	.4byte 0x7F8D42E6  /* unknown instruction */
+/* 802CD144 00296704  7F 6C 42 E6 */	mftbl r27
+/* 802CD148 00296708  7F 8D 42 E6 */	mftbu r28
 /* 802CD14C 0029670C  7F B0 FA A6 */	mfspr r29, 0x3f0
 /* 802CD150 00296710  7F D1 FA A6 */	mfspr r30, 0x3f1
 /* 802CD154 00296714  7F FB 02 A6 */	mfspr r31, 0x1b

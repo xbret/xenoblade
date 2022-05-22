@@ -170,9 +170,6 @@ lbl_806684D0:
 
 .global lbl_806684D8
 lbl_806684D8:
-	# ROM: 0x572338
-.global lbl_806684D8
-lbl_806684D8:
 	.asciz "Dz"
 	.byte 0x00
 .global lbl_806684DC
@@ -352,9 +349,6 @@ lbl_8066860C:
 	.4byte 0
 
 
-.global lbl_80668610
-lbl_80668610:
-	# ROM: 0x572470
 .global lbl_80668610
 lbl_80668610:
 	.asciz "?fff"
@@ -4879,9 +4873,6 @@ lbl_80669548:
 	.4byte 0x80000000
 
 
-.global lbl_80669550
-lbl_80669550:
-	# ROM: 0x5733B0
 .global lbl_80669550
 lbl_80669550:
 	.asciz "?fff"
@@ -10316,9 +10307,6 @@ lbl_8066A774:
 
 .global lbl_8066A778
 lbl_8066A778:
-	# ROM: 0x5745D8
-.global lbl_8066A778
-lbl_8066A778:
 	.asciz "?333"
 	.balign 4
 
@@ -11684,9 +11672,6 @@ lbl_8066AC5C:
 	.4byte 0x43480000
 
 
-.global lbl_8066AC60
-lbl_8066AC60:
-	# ROM: 0x574AC0
 .global lbl_8066AC60
 lbl_8066AC60:
 	.asciz "Da"
@@ -14726,9 +14711,6 @@ lbl_8066B6B8:
 
 .global lbl_8066B6C0
 lbl_8066B6C0:
-	# ROM: 0x575520
-.global lbl_8066B6C0
-lbl_8066B6C0:
 	.asciz "%&'("
 	.balign 4
 
@@ -16538,9 +16520,6 @@ lbl_8066BE08:
 
 .global lbl_8066BE10
 lbl_8066BE10:
-	# ROM: 0x575C70
-.global lbl_8066BE10
-lbl_8066BE10:
 	.asciz "?s33"
 	.balign 4
 
@@ -16578,9 +16557,6 @@ lbl_8066BE2C:
 
 .global lbl_8066BE30
 lbl_8066BE30:
-	# ROM: 0x575C90
-.global lbl_8066BE30
-lbl_8066BE30:
 	.asciz "?s33"
 	.balign 4
 
@@ -16609,9 +16585,6 @@ lbl_8066BE44:
 	.4byte 0x43000000
 
 
-.global lbl_8066BE48
-lbl_8066BE48:
-	# ROM: 0x575CA8
 .global lbl_8066BE48
 lbl_8066BE48:
 	.asciz "?s33"
@@ -16675,9 +16648,6 @@ lbl_8066BE78:
 	.4byte 0
 
 
-.global lbl_8066BE80
-lbl_8066BE80:
-	# ROM: 0x575CE0
 .global lbl_8066BE80
 lbl_8066BE80:
 	.asciz "?s33"
@@ -16748,9 +16718,6 @@ lbl_8066BEB8:
 	.4byte 0
 
 
-.global lbl_8066BEC0
-lbl_8066BEC0:
-	# ROM: 0x575D20
 .global lbl_8066BEC0
 lbl_8066BEC0:
 	.asciz "?s33"
@@ -17041,7 +17008,7 @@ lbl_8066BF98:
 .global lbl_8066BFA0
 lbl_8066BFA0:
 	# ROM: 0x575E00
-	.4byte 0x805CCF60
+	.4byte lbl_805CCF60
 
 
 .global lbl_8066BFA4
@@ -20722,9 +20689,6 @@ lbl_8066CBA0:
 
 .global lbl_8066CBA4
 lbl_8066CBA4:
-	# ROM: 0x576A04
-.global lbl_8066CBA4
-lbl_8066CBA4:
 	.asciz "Dz"
 	.byte 0x00
 .global lbl_8066CBA8
@@ -21055,9 +21019,6 @@ lbl_8066CCD8:
 	.4byte 0x80000000
 
 
-.global lbl_8066CCE0
-lbl_8066CCE0:
-	# ROM: 0x576B40
 .global lbl_8066CCE0
 lbl_8066CCE0:
 	.asciz "Ap"

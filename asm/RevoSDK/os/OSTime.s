@@ -4,9 +4,9 @@
 
 .global OSGetTime
 OSGetTime:
-/* 8035C960 00325F20  7C 6D 42 E6 */	.4byte 0x7C6D42E6  /* unknown instruction */
-/* 8035C964 00325F24  7C 8C 42 E6 */	.4byte 0x7C8C42E6  /* unknown instruction */
-/* 8035C968 00325F28  7C AD 42 E6 */	.4byte 0x7CAD42E6  /* unknown instruction */
+/* 8035C960 00325F20  7C 6D 42 E6 */	mftbu r3
+/* 8035C964 00325F24  7C 8C 42 E6 */	mftb r4, 0x10c
+/* 8035C968 00325F28  7C AD 42 E6 */	mftbu r5
 /* 8035C96C 00325F2C  7C 03 28 00 */	cmpw r3, r5
 /* 8035C970 00325F30  40 82 FF F0 */	bne OSGetTime
 /* 8035C974 00325F34  4E 80 00 20 */	blr 
@@ -15,7 +15,7 @@ OSGetTime:
 
 .global OSGetTick
 OSGetTick:
-/* 8035C980 00325F40  7C 6C 42 E6 */	.4byte 0x7C6C42E6  /* unknown instruction */
+/* 8035C980 00325F40  7C 6C 42 E6 */	mftb r3, 0x10c
 /* 8035C984 00325F44  4E 80 00 20 */	blr 
 /* 8035C988 00325F48  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8035C98C 00325F4C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */

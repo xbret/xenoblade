@@ -324,7 +324,10 @@ lbl_8057A520:
 	.skip 0xC
 .global lbl_8057A52C
 lbl_8057A52C:
-	.skip 0x1C
+	.skip 0xC
+.global lbl_8057A538
+lbl_8057A538:
+	.skip 0x10
 .global lbl_8057A548
 lbl_8057A548:
 	.skip 0x14
@@ -372,13 +375,37 @@ lbl_8057A610:
 	.skip 0xC
 .global lbl_8057A61C
 lbl_8057A61C:
-	.skip 0x54
+	.skip 0xC
+.global lbl_8057A628
+lbl_8057A628:
+	.skip 0x14
+.global lbl_8057A63C
+lbl_8057A63C:
+	.skip 0x14
+.global lbl_8057A650
+lbl_8057A650:
+	.skip 0x10
+.global lbl_8057A660
+lbl_8057A660:
+	.skip 0x10
 .global lbl_8057A670
 lbl_8057A670:
 	.skip 0x14
 .global lbl_8057A684
 lbl_8057A684:
-	.skip 0x5C
+	.skip 0xC
+.global lbl_8057A690
+lbl_8057A690:
+	.skip 0x18
+.global lbl_8057A6A8
+lbl_8057A6A8:
+	.skip 0x10
+.global lbl_8057A6B8
+lbl_8057A6B8:
+	.skip 0x10
+.global lbl_8057A6C8
+lbl_8057A6C8:
+	.skip 0x18
 .global lbl_8057A6E0
 lbl_8057A6E0:
 	.skip 0x10
@@ -393,7 +420,10 @@ lbl_8057A710:
 	.skip 0xC
 .global lbl_8057A71C
 lbl_8057A71C:
-	.skip 0x20
+	.skip 0xC
+.global lbl_8057A728
+lbl_8057A728:
+	.skip 0x14
 .global lbl_8057A73C
 lbl_8057A73C:
 	.skip 0x14
@@ -402,13 +432,40 @@ lbl_8057A750:
 	.skip 0xC
 .global lbl_8057A75C
 lbl_8057A75C:
-	.skip 0x64
+	.skip 0xC
+.global lbl_8057A768
+lbl_8057A768:
+	.skip 0x14
+.global lbl_8057A77C
+lbl_8057A77C:
+	.skip 0xC
+.global lbl_8057A788
+lbl_8057A788:
+	.skip 0x18
+.global lbl_8057A7A0
+lbl_8057A7A0:
+	.skip 0x10
+.global lbl_8057A7B0
+lbl_8057A7B0:
+	.skip 0x10
 .global lbl_8057A7C0
 lbl_8057A7C0:
 	.skip 0x14
 .global lbl_8057A7D4
 lbl_8057A7D4:
-	.skip 0x58
+	.skip 0xC
+.global lbl_8057A7E0
+lbl_8057A7E0:
+	.skip 0x14
+.global lbl_8057A7F4
+lbl_8057A7F4:
+	.skip 0x14
+.global lbl_8057A808
+lbl_8057A808:
+	.skip 0x10
+.global lbl_8057A818
+lbl_8057A818:
+	.skip 0x14
 .global lbl_8057A82C
 lbl_8057A82C:
 	.skip 0xC
@@ -732,7 +789,10 @@ lbl_805CCE20:
 	.skip 0xC0
 .global lbl_805CCEE0
 lbl_805CCEE0:
-	.skip 0x680
+	.skip 0x80
+.global lbl_805CCF60
+lbl_805CCF60:
+	.skip 0x600
 .global lbl_805CD560
 lbl_805CD560:
 	.skip 0x24
@@ -1746,7 +1806,10 @@ lbl_806211C0:
 	.skip 0x1A34
 .global lbl_80622BF4
 lbl_80622BF4:
-	.skip 0xE4
+	.skip 0x4C
+.global lbl_80622C40
+lbl_80622C40:
+	.skip 0x98
 .global lbl_80622CD8
 lbl_80622CD8:
 	.skip 0x28

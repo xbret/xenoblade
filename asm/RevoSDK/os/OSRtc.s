@@ -2,109 +2,92 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global lbl_8035A800
-lbl_8035A800:
-	# ROM: 0x323DC0
-	.4byte 0x9421FFE0
-	.4byte 0x7C0802A6
-	.4byte 0x3CC0805D
-	.4byte 0x3CA08036
-	.4byte 0x90010024
-	.4byte 0x38C64700
-	.4byte 0x38600000
-	.4byte 0x38A5A800
-	.4byte 0x93E1001C
-	.4byte 0x38800001
-	.4byte 0x93C10018
-	.4byte 0x93A10014
-	.4byte 0x83E60040
-	.4byte 0x23BF0040
-	.4byte 0x7FC6FA14
-	.4byte 0x4BFBABF5
-	.4byte 0x2C030000
-	.4byte 0x4082000C
-	.4byte 0x38000000
-	.4byte 0x480000B4
-
-
-.global lbl_8035A850
+.global func_8035A800
+func_8035A800:
+/* 8035a800  94 21 ff e0 */		stwu r1, -0x20(r1)
+/* 8035a804  7c 08 02 a6 */		mflr r0
+/* 8035a808  3c c0 80 5d */		lis r6, lbl_805D4700@ha
+/* 8035a80c  3c a0 80 36 */		lis r5, func_8035A800@ha
+/* 8035a810  90 01 00 24 */		stw r0,36(r1)
+/* 8035a814  38 c6 47 00 */		addi r6,r6,lbl_805D4700@l
+/* 8035a818  38 60 00 00 */		li r3,0
+/* 8035a81c  38 a5 a8 00 */		addi r5,r5,func_8035A800@l
+/* 8035a820  93 e1 00 1c */		stw r31,28(r1)
+/* 8035a824  38 80 00 01 */		li r4,1
+/* 8035a828  93 c1 00 18 */		stw r30,24(r1)
+/* 8035a82c  93 a1 00 14 */		stw r29,20(r1)
+/* 8035a830  83 e6 00 40 */		lwz r31,64(r6)
+/* 8035a834  23 bf 00 40 */		subfic r29,r31,64
+/* 8035a838  7f c6 fa 14 */		add r30,r6,r31
+/* 8035a83c  4b fb ab f5 */		bl func_80315430
+/* 8035a840  2c 03 00 00 */		cmpwi r3,0
+/* 8035a844  40 82 00 0c */		bne lbl_8035A850
+/* 8035a848  38 00 00 00 */		li r0,0
+/* 8035a84c  48 00 00 b4 */		b lbl_8035A900
 lbl_8035A850:
-	# ROM: 0x323E10
-	.4byte 0x38600000
-	.4byte 0x38800001
-	.4byte 0x38A00003
-	.4byte 0x4BFBA425
-	.4byte 0x2C030000
-	.4byte 0x40820014
-	.4byte 0x38600000
-	.4byte 0x4BFBACC5
-	.4byte 0x38000000
-	.4byte 0x4800008C
-
-
-.global lbl_8035A878
+/* 8035a850  38 60 00 00 */		li r3,0
+/* 8035a854  38 80 00 01 */		li r4,1
+/* 8035a858  38 a0 00 03 */		li r5,3
+/* 8035a85c  4b fb a4 25 */		bl func_80314C80
+/* 8035a860  2c 03 00 00 */		cmpwi r3,0
+/* 8035a864  40 82 00 14 */		bne lbl_8035A878
+/* 8035a868  38 60 00 00 */		li r3,0
+/* 8035a86c  4b fb ac c5 */		bl func_80315530
+/* 8035a870  38 00 00 00 */		li r0,0
+/* 8035a874  48 00 00 8c */		b lbl_8035A900
 lbl_8035A878:
-	# ROM: 0x323E38
-	.4byte 0x57E33032
-	.4byte 0x38810008
-	.4byte 0x38030100
-	.4byte 0x38A00004
-	.4byte 0x6400A000
-	.4byte 0x90010008
-	.4byte 0x38600000
-	.4byte 0x38C00001
-	.4byte 0x38E00000
-	.4byte 0x4BFB9945
-	.4byte 0x7C600034
-	.4byte 0x38600000
-	.4byte 0x541FD97E
-	.4byte 0x4BFB9D65
-	.4byte 0x7C600034
-	.4byte 0x7FC4F378
-	.4byte 0x5400D97E
-	.4byte 0x7FA5EB78
-	.4byte 0x7FFD0378
-	.4byte 0x38600000
-	.4byte 0x38C00001
-	.4byte 0x4BFB9B95
-	.4byte 0x7C600034
-	.4byte 0x38600000
-	.4byte 0x5400D97E
-	.4byte 0x7FBD0378
-	.4byte 0x4BFBA4D1
-	.4byte 0x7C600034
-	.4byte 0x38600000
-	.4byte 0x5400D97E
-	.4byte 0x7FBD0378
-	.4byte 0x4BFBAC3D
-	.4byte 0x7FA00034
-	.4byte 0x5400D97E
-
-
-.global lbl_8035A900
+/* 8035a878  57 e3 30 32 */		rlwinm r3,r31,6,0,25
+/* 8035a87c  38 81 00 08 */		addi r4,r1,8
+/* 8035a880  38 03 01 00 */		addi r0,r3,256
+/* 8035a884  38 a0 00 04 */		li r5,4
+/* 8035a888  64 00 a0 00 */		oris r0,r0,40960
+/* 8035a88c  90 01 00 08 */		stw r0,8(r1)
+/* 8035a890  38 60 00 00 */		li r3,0
+/* 8035a894  38 c0 00 01 */		li r6,1
+/* 8035a898  38 e0 00 00 */		li r7,0
+/* 8035a89c  4b fb 99 45 */		bl func_803141E0
+/* 8035a8a0  7c 60 00 34 */		cntlzw r0,r3
+/* 8035a8a4  38 60 00 00 */		li r3,0
+/* 8035a8a8  54 1f d9 7e */		rlwinm r31,r0,27,5,31
+/* 8035a8ac  4b fb 9d 65 */		bl func_80314610
+/* 8035a8b0  7c 60 00 34 */		cntlzw r0,r3
+/* 8035a8b4  7f c4 f3 78 */		mr r4,r30
+/* 8035a8b8  54 00 d9 7e */		rlwinm r0,r0,27,5,31
+/* 8035a8bc  7f a5 eb 78 */		mr r5,r29
+/* 8035a8c0  7f fd 03 78 */		or r29,r31,r0
+/* 8035a8c4  38 60 00 00 */		li r3,0
+/* 8035a8c8  38 c0 00 01 */		li r6,1
+/* 8035a8cc  4b fb 9b 95 */		bl func_80314460
+/* 8035a8d0  7c 60 00 34 */		cntlzw r0,r3
+/* 8035a8d4  38 60 00 00 */		li r3,0
+/* 8035a8d8  54 00 d9 7e */		rlwinm r0,r0,27,5,31
+/* 8035a8dc  7f bd 03 78 */		or r29,r29,r0
+/* 8035a8e0  4b fb a4 d1 */		bl func_80314DB0
+/* 8035a8e4  7c 60 00 34 */		cntlzw r0,r3
+/* 8035a8e8  38 60 00 00 */		li r3,0
+/* 8035a8ec  54 00 d9 7e */		rlwinm r0,r0,27,5,31
+/* 8035a8f0  7f bd 03 78 */		or r29,r29,r0
+/* 8035a8f4  4b fb ac 3d */		bl func_80315530
+/* 8035a8f8  7f a0 00 34 */		cntlzw r0,r29
+/* 8035a8fc  54 00 d9 7e */		rlwinm r0,r0,27,5,31
 lbl_8035A900:
-	# ROM: 0x323EC0
-	.4byte 0x3C60805D
-	.4byte 0x2C000000
-	.4byte 0x38634700
-	.4byte 0x9003004C
-	.4byte 0x4182000C
-	.4byte 0x38000040
-	.4byte 0x90030040
-
-
-.global lbl_8035A91C
+/* 8035a900  3c 60 80 5d */		lis r3, lbl_805D4700@ha
+/* 8035a904  2c 00 00 00 */		cmpwi r0,0
+/* 8035a908  38 63 47 00 */		addi r3,r3, lbl_805D4700@l
+/* 8035a90c  90 03 00 4c */		stw r0,76(r3)
+/* 8035a910  41 82 00 0c */		beq lbl_8035A91C
+/* 8035a914  38 00 00 40 */		li r0,64
+/* 8035a918  90 03 00 40 */		stw r0,64(r3)
 lbl_8035A91C:
-	# ROM: 0x323EDC
-	.4byte 0x80010024
-	.4byte 0x83E1001C
-	.4byte 0x83C10018
-	.4byte 0x83A10014
-	.4byte 0x7C0803A6
-	.4byte 0x38210020
-	.4byte 0x4E800020
-	.4byte 0
-	.4byte 0
+/* 8035a91c  80 01 00 24 */		lwz r0,36(r1)
+/* 8035a920  83 e1 00 1c */		lwz r31,28(r1)
+/* 8035a924  83 c1 00 18 */		lwz r30,24(r1)
+/* 8035a928  83 a1 00 14 */		lwz r29,20(r1)
+/* 8035a92c  7c 08 03 a6 */		mtlr r0
+/* 8035a930  38 21 00 20 */		addi r1,r1,32
+/* 8035a934  4e 80 00 20 */		blr
+.4byte 0
+.4byte 0
 
 .global __OSInitSram
 __OSInitSram:
@@ -364,11 +347,11 @@ lbl_8035ACDC:
 /* 8035ACE0 003242A0  B0 04 00 3C */	sth r0, 0x3c(r4)
 lbl_8035ACE4:
 /* 8035ACE4 003242A4  3C C0 80 5D */	lis r6, lbl_805D4700@ha
-/* 8035ACE8 003242A8  3C A0 80 36 */	lis r5, lbl_8035A800@ha
+/* 8035ACE8 003242A8  3C A0 80 36 */	lis r5, func_8035A800@ha
 /* 8035ACEC 003242AC  38 C6 47 00 */	addi r6, r6, lbl_805D4700@l
 /* 8035ACF0 003242B0  38 60 00 00 */	li r3, 0
 /* 8035ACF4 003242B4  83 E6 00 40 */	lwz r31, 0x40(r6)
-/* 8035ACF8 003242B8  38 A5 A8 00 */	addi r5, r5, lbl_8035A800@l
+/* 8035ACF8 003242B8  38 A5 A8 00 */	addi r5, r5, func_8035A800@l
 /* 8035ACFC 003242BC  38 80 00 01 */	li r4, 1
 /* 8035AD00 003242C0  23 BF 00 40 */	subfic r29, r31, 0x40
 /* 8035AD04 003242C4  7F C6 FA 14 */	add r30, r6, r31

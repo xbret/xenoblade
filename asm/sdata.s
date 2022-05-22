@@ -1,7 +1,7 @@
 .include "macros.inc"
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
-	
+
 .global lbl_80664188
 lbl_80664188:
 	# ROM: 0x56FD68
@@ -618,9 +618,6 @@ lbl_806644AC:
 
 .global lbl_806644B0
 lbl_806644B0:
-	# ROM: 0x570090
-.global lbl_806644B0
-lbl_806644B0:
 	.asciz "rate1"
 	.balign 4
 
@@ -1086,16 +1083,10 @@ lbl_80664780:
 
 .global lbl_80664788
 lbl_80664788:
-	# ROM: 0x570368
-.global lbl_80664788
-lbl_80664788:
 	.asciz "ARROW"
 	.balign 4
 
 
-.global lbl_80664790
-lbl_80664790:
-	# ROM: 0x570370
 .global lbl_80664790
 lbl_80664790:
 	.asciz "ResTex"
@@ -1109,9 +1100,6 @@ lbl_80664798:
 	.4byte 0
 
 
-.global lbl_806647A0
-lbl_806647A0:
-	# ROM: 0x570380
 .global lbl_806647A0
 lbl_806647A0:
 	.asciz "ResPltt"
@@ -1891,16 +1879,10 @@ lbl_80664D14:
 
 .global lbl_80664D18
 lbl_80664D18:
-	# ROM: 0x5708F8
-.global lbl_80664D18
-lbl_80664D18:
 	.asciz "itm?ID"
 	.balign 4
 
 
-.global lbl_80664D20
-lbl_80664D20:
-	# ROM: 0x570900
 .global lbl_80664D20
 lbl_80664D20:
 	.asciz "itm?Per"
@@ -2070,24 +2052,15 @@ lbl_80664DF4:
 
 .global lbl_80664DF8
 lbl_80664DF8:
-	# ROM: 0x5709D8
-.global lbl_80664DF8
-lbl_80664DF8:
 	.asciz "ene?ID"
 	.balign 4
 
 
 .global lbl_80664E00
 lbl_80664E00:
-	# ROM: 0x5709E0
-.global lbl_80664E00
-lbl_80664E00:
 	.asciz "ene?Per"
 
 
-.global lbl_80664E08
-lbl_80664E08:
-	# ROM: 0x5709E8
 .global lbl_80664E08
 lbl_80664E08:
 	.asciz "ene?num"
@@ -2105,9 +2078,6 @@ lbl_80664E14:
 	.4byte 0xFFFFFFFC
 
 
-.global lbl_80664E18
-lbl_80664E18:
-	# ROM: 0x5709F8
 .global lbl_80664E18
 lbl_80664E18:
 	.asciz "ene?ID"
@@ -2491,9 +2461,6 @@ lbl_80665048:
 	.4byte 0x505A5C63
 
 
-.global lbl_80665050
-lbl_80665050:
-	# ROM: 0x570C30
 .global lbl_80665050
 lbl_80665050:
 	.asciz "skill1"
@@ -3065,79 +3032,79 @@ lbl_80665430:
 	.4byte lbl_8053C4C4
 .global lbl_80665438
 lbl_80665438:
-	.4byte 0x8057A538
+	.4byte lbl_8057A538
 	.4byte 0
 .global lbl_80665440
 lbl_80665440:
-	.4byte 0x8057A628
+	.4byte lbl_8057A628
 	.4byte 0
 .global lbl_80665448
 lbl_80665448:
-	.4byte 0x8057A63C
+	.4byte lbl_8057A63C
 	.4byte 0
 .global lbl_80665450
 lbl_80665450:
-	.4byte 0x8057A650
+	.4byte lbl_8057A650
 	.4byte 0
 .global lbl_80665458
 lbl_80665458:
-	.4byte 0x8057A660
+	.4byte lbl_8057A660
 	.4byte 0
 .global lbl_80665460
 lbl_80665460:
-	.4byte 0x8057A690
+	.4byte lbl_8057A690
 	.4byte 0
 .global lbl_80665468
 lbl_80665468:
-	.4byte 0x8057A6A8
+	.4byte lbl_8057A6A8
 	.4byte 0
 .global lbl_80665470
 lbl_80665470:
-	.4byte 0x8057A6B8
+	.4byte lbl_8057A6B8
 	.4byte 0
 .global lbl_80665478
 lbl_80665478:
-	.4byte 0x8057A6C8
+	.4byte lbl_8057A6C8
 	.4byte 0
 .global lbl_80665480
 lbl_80665480:
-	.4byte 0x8057A728
+	.4byte lbl_8057A728
 	.4byte 0
 .global lbl_80665488
 lbl_80665488:
-	.4byte 0x8057A768
+	.4byte lbl_8057A768
 	.4byte 0
 .global lbl_80665490
 lbl_80665490:
-	.4byte 0x8057A77C
+	.4byte lbl_8057A77C
 	.4byte 0
 .global lbl_80665498
 lbl_80665498:
-	.4byte 0x8057A788
+	.4byte lbl_8057A788
 	.4byte 0
 .global lbl_806654A0
 lbl_806654A0:
-	.4byte 0x8057A7A0
+	.4byte lbl_8057A7A0
 	.4byte 0
 .global lbl_806654A8
 lbl_806654A8:
-	.4byte 0x8057A7B0
+	.4byte lbl_8057A7B0
 	.4byte 0
 .global lbl_806654B0
 lbl_806654B0:
-	.4byte 0x8057A7E0
+	.4byte lbl_8057A7E0
 	.4byte 0
 .global lbl_806654B8
 lbl_806654B8:
-	.4byte 0x8057A7F4
+	.4byte lbl_8057A7F4
 	.4byte 0
 .global lbl_806654C0
 lbl_806654C0:
-	.4byte 0x8057A808
+	.4byte lbl_8057A808
 	.4byte 0
 .global lbl_806654C8
 lbl_806654C8:
-	.4byte 0x8057A818
+	.4byte lbl_8057A818
 	.4byte 0
 .global lbl_806654D0
 lbl_806654D0:
@@ -3888,9 +3855,6 @@ lbl_806658A0:
 
 .global lbl_806658A8
 lbl_806658A8:
-	# ROM: 0x571488
-.global lbl_806658A8
-lbl_806658A8:
 	.asciz "arc.c"
 	.balign 4
 
@@ -4008,9 +3972,6 @@ lbl_80665900:
 
 .global lbl_80665908
 lbl_80665908:
-	# ROM: 0x5714E8
-.global lbl_80665908
-lbl_80665908:
 	.asciz "%s\n"
 	.4byte 0
 
@@ -4049,16 +4010,10 @@ lbl_80665928:
 
 .global lbl_8066592C
 lbl_8066592C:
-	# ROM: 0x57150C
-.global lbl_8066592C
-lbl_8066592C:
 	.asciz "TRUE"
 	.balign 4
 
 
-.global lbl_80665934
-lbl_80665934:
-	# ROM: 0x571514
 .global lbl_80665934
 lbl_80665934:
 	.asciz "FALSE"
@@ -4068,15 +4023,9 @@ lbl_80665934:
 
 .global lbl_80665940
 lbl_80665940:
-	# ROM: 0x571520
-.global lbl_80665940
-lbl_80665940:
 	.asciz "*******"
 
 
-.global lbl_80665948
-lbl_80665948:
-	# ROM: 0x571528
 .global lbl_80665948
 lbl_80665948:
 	.asciz "TRUE"
@@ -4085,25 +4034,16 @@ lbl_80665948:
 
 .global lbl_80665950
 lbl_80665950:
-	# ROM: 0x571530
-.global lbl_80665950
-lbl_80665950:
 	.asciz "FALSE"
 	.balign 4
 
 
 .global lbl_80665958
 lbl_80665958:
-	# ROM: 0x571538
-.global lbl_80665958
-lbl_80665958:
 	.asciz "Bad UA"
 	.balign 4
 
 
-.global lbl_80665960
-lbl_80665960:
-	# ROM: 0x571540
 .global lbl_80665960
 lbl_80665960:
 	.asciz "Bad DM"
@@ -4124,9 +4064,6 @@ lbl_80665970:
 	.4byte 0
 
 
-.global lbl_80665978
-lbl_80665978:
-	# ROM: 0x571558
 .global lbl_80665978
 lbl_80665978:
 	.asciz "dvdfs.c"
@@ -4152,9 +4089,6 @@ lbl_80665988:
 
 .global lbl_8066598C
 lbl_8066598C:
-	# ROM: 0x57156C
-.global lbl_8066598C
-lbl_8066598C:
 	.asciz "dvd.c"
 	.balign 4
 
@@ -4168,8 +4102,8 @@ lbl_80665994:
 .global lbl_80665998
 lbl_80665998:
 	# ROM: 0x571578
-	.4byte 0x8054A3DC
-	.4byte 0x8054A480
+	.4byte lbl_8054A3DC
+	.4byte lbl_8054A480
 
 
 .global lbl_806659A0
@@ -4186,9 +4120,6 @@ lbl_806659A8:
 	.4byte 0
 
 
-.global lbl_806659B0
-lbl_806659B0:
-	# ROM: 0x571590
 .global lbl_806659B0
 lbl_806659B0:
 	.asciz "/dev/di"
@@ -4217,9 +4148,6 @@ lbl_806659C8:
 
 .global lbl_806659D0
 lbl_806659D0:
-	# ROM: 0x5715B0
-.global lbl_806659D0
-lbl_806659D0:
 	.asciz "/dev/es"
 
 
@@ -4237,9 +4165,6 @@ lbl_806659E0:
 	.4byte 0
 
 
-.global lbl_806659E8
-lbl_806659E8:
-	# ROM: 0x5715C8
 .global lbl_806659E8
 lbl_806659E8:
 	.asciz "/dev/fs"
@@ -4595,9 +4520,6 @@ lbl_80665AFC:
 
 .global lbl_80665B00
 lbl_80665B00:
-	# ROM: 0x5716E0
-.global lbl_80665B00
-lbl_80665B00:
 	.asciz "%s/%s"
 	.balign 4
 
@@ -4636,16 +4558,10 @@ lbl_80665B28:
 
 .global lbl_80665B2C
 lbl_80665B2C:
-	# ROM: 0x57170C
-.global lbl_80665B2C
-lbl_80665B2C:
 	.asciz "RVA 1\n"
 	.balign 4
 
 
-.global lbl_80665B34
-lbl_80665B34:
-	# ROM: 0x571714
 .global lbl_80665B34
 lbl_80665B34:
 	.asciz "%08x\n"
@@ -4654,15 +4570,9 @@ lbl_80665B34:
 
 .global lbl_80665B3C
 lbl_80665B3C:
-	# ROM: 0x57171C
-.global lbl_80665B3C
-lbl_80665B3C:
 	.asciz "%s\n"
 
 
-.global lbl_80665B40
-lbl_80665B40:
-	# ROM: 0x571720
 .global lbl_80665B40
 lbl_80665B40:
 	.asciz "OS.c"
@@ -4713,9 +4623,6 @@ lbl_80665B6C:
 
 .global lbl_80665B70
 lbl_80665B70:
-	# ROM: 0x571750
-.global lbl_80665B70
-lbl_80665B70:
 	.asciz "%016llx"
 
 
@@ -4726,9 +4633,6 @@ lbl_80665B78:
 	.4byte 0
 
 
-.global lbl_80665B80
-lbl_80665B80:
-	# ROM: 0x571760
 .global lbl_80665B80
 lbl_80665B80:
 	.asciz "%s\n"
@@ -4770,9 +4674,6 @@ lbl_80665BA8:
 	.4byte 0
 
 
-.global lbl_80665BB0
-lbl_80665BB0:
-	# ROM: 0x571790
 .global lbl_80665BB0
 lbl_80665BB0:
 	.asciz "Expired"
@@ -4899,16 +4800,10 @@ lbl_80665CB8:
 
 .global lbl_80665CC0
 lbl_80665CC0:
-	# ROM: 0x5718A0
-.global lbl_80665CC0
-lbl_80665CC0:
 	.asciz "SCv0"
 	.balign 4
 
 
-.global lbl_80665CC8
-lbl_80665CC8:
-	# ROM: 0x5718A8
 .global lbl_80665CC8
 lbl_80665CC8:
 	.asciz "SCed"
@@ -4917,16 +4812,10 @@ lbl_80665CC8:
 
 .global lbl_80665CD0
 lbl_80665CD0:
-	# ROM: 0x5718B0
-.global lbl_80665CD0
-lbl_80665CD0:
 	.asciz "AREA"
 	.balign 4
 
 
-.global lbl_80665CD8
-lbl_80665CD8:
-	# ROM: 0x5718B8
 .global lbl_80665CD8
 lbl_80665CD8:
 	.asciz "GAME"
@@ -4940,9 +4829,6 @@ lbl_80665CE0:
 	.4byte 0
 
 
-.global lbl_80665CE8
-lbl_80665CE8:
-	# ROM: 0x5718C8
 .global lbl_80665CE8
 lbl_80665CE8:
 	.asciz "TPL.c"
@@ -4961,9 +4847,6 @@ lbl_80665CF4:
 	.4byte 0x01000000
 
 
-.global lbl_80665CF8
-lbl_80665CF8:
-	# ROM: 0x5718D8
 .global lbl_80665CF8
 lbl_80665CF8:
 	.asciz "USB: "
@@ -5006,9 +4889,6 @@ lbl_80665D14:
 	.4byte 0x00000001
 
 
-.global lbl_80665D18
-lbl_80665D18:
-	# ROM: 0x5718F8
 .global lbl_80665D18
 lbl_80665D18:
 	.asciz "vi.c"
@@ -5134,16 +5014,10 @@ lbl_80665D50:
 
 .global lbl_80665D54
 lbl_80665D54:
-	# ROM: 0x571934
-.global lbl_80665D54
-lbl_80665D54:
 	.asciz "opened"
 	.balign 4
 
 
-.global lbl_80665D5C
-lbl_80665D5C:
-	# ROM: 0x57193C
 .global lbl_80665D5C
 lbl_80665D5C:
 	.asciz "closed"
@@ -5153,25 +5027,16 @@ lbl_80665D5C:
 
 .global lbl_80665D68
 lbl_80665D68:
-	# ROM: 0x571948
-.global lbl_80665D68
-lbl_80665D68:
 	.asciz " %s\n"
 	.balign 4
 
 
 .global lbl_80665D70
 lbl_80665D70:
-	# ROM: 0x571950
-.global lbl_80665D70
-lbl_80665D70:
 	.asciz "RFNJ"
 	.balign 4
 
 
-.global lbl_80665D78
-lbl_80665D78:
-	# ROM: 0x571958
 .global lbl_80665D78
 lbl_80665D78:
 	.asciz "WUD.c"
@@ -5213,12 +5078,9 @@ lbl_80665D98:
 .global lbl_80665D9C
 lbl_80665D9C:
 	# ROM: 0x57197C
-	.4byte 0x80622C40
+	.4byte lbl_80622C40
 
 
-.global lbl_80665DA0
-lbl_80665DA0:
-	# ROM: 0x571980
 .global lbl_80665DA0
 lbl_80665DA0:
 	.asciz "NodeMix"
@@ -5262,23 +5124,14 @@ lbl_80665DBC:
 
 .global lbl_80665DC0
 lbl_80665DC0:
-	# ROM: 0x5719A0
-.global lbl_80665DC0
-lbl_80665DC0:
 	.asciz "NodeMix"
 
 
 .global lbl_80665DC8
 lbl_80665DC8:
-	# ROM: 0x5719A8
-.global lbl_80665DC8
-lbl_80665DC8:
 	.asciz "DrawOpa"
 
 
-.global lbl_80665DD0
-lbl_80665DD0:
-	# ROM: 0x5719B0
 .global lbl_80665DD0
 lbl_80665DD0:
 	.asciz "DrawXlu"
@@ -6090,9 +5943,6 @@ lbl_80666200:
 
 .global lbl_80666208
 lbl_80666208:
-	# ROM: 0x571DE8
-.global lbl_80666208
-lbl_80666208:
 	.asciz "ResMat"
 	.balign 4
 
@@ -6105,9 +5955,6 @@ lbl_80666210:
 
 .global lbl_80666214
 lbl_80666214:
-	# ROM: 0x571DF4
-.global lbl_80666214
-lbl_80666214:
 	.asciz "ResTev"
 	.balign 4
 
@@ -6118,9 +5965,6 @@ lbl_8066621C:
 	.4byte 0x72656600
 
 
-.global lbl_80666220
-lbl_80666220:
-	# ROM: 0x571E00
 .global lbl_80666220
 lbl_80666220:
 	.asciz "ResMdl"
@@ -6139,9 +5983,6 @@ lbl_8066622C:
 	.4byte 0x72656600
 
 
-.global lbl_80666230
-lbl_80666230:
-	# ROM: 0x571E10
 .global lbl_80666230
 lbl_80666230:
 	.asciz "ResNode"
@@ -6171,9 +6012,6 @@ lbl_80666244:
 	.4byte 0x72656600
 
 
-.global lbl_80666248
-lbl_80666248:
-	# ROM: 0x571E28
 .global lbl_80666248
 lbl_80666248:
 	.asciz "ResDic"

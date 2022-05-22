@@ -6,8 +6,8 @@
 InitMetroTRK:
 /* 802CBF00  38 21 FF FC */		addi r1,r1,-4
 /* 802CBF04  90 61 00 00 */		stw r3,0(r1)
-/* 802CBF08  3C 60 80 57 */		lis r3, 0x8057D3F8@h
-/* 802CBF0C  60 63 D3 F8 */		ori r3,r3, 0x8057D3F8@l
+/* 802CBF08  3C 60 80 57 */		lis r3, lbl_8057D3F8@h
+/* 802CBF0C  60 63 D3 F8 */		ori r3,r3, lbl_8057D3F8@l
 /* 802CBF10  BC 03 00 00 */		stmw r0,0(r3)
 /* 802CBF14  80 81 00 00 */		lwz r4,0(r1)
 /* 802CBF18  38 21 00 04 */		addi r1,r1,4
@@ -24,14 +24,14 @@ InitMetroTRK:
 /* 802CBF44  7C 60 01 24 */		mtmsr r3
 /* 802CBF48  7C 9B 03 A6 */		mtsrr1 r4
 /* 802CBF4C  48 00 11 AD */		bl TRKSaveExtended1Block
-/* 802CBF50  3C 60 80 57 */		lis r3, 0x8057D3F8@h
-/* 802CBF54  60 63 D3 F8 */		ori r3,r3, 0x8057D3F8@l
+/* 802CBF50  3C 60 80 57 */		lis r3, lbl_8057D3F8@h
+/* 802CBF54  60 63 D3 F8 */		ori r3,r3, lbl_8057D3F8@l
 /* 802CBF58  B8 03 00 00 */		.4byte 0xB8030000  /* illegal lmw r0, 0(r3) */
 /* 802CBF5C  38 00 00 00 */		li r0,0
 /* 802CBF60  7C 12 FB A6 */		mtspr 0x3f2 ,r0
 /* 802CBF64  7C 15 FB A6 */		mtspr 0x3f5 ,r0
-/* 802CBF68  3C 20 80 67 */		lis r1, 0x8067FD00@h
-/* 802CBF6C  60 21 FD 00 */		ori r1,r1, 0x8067FD00@l
+/* 802CBF68  3C 20 80 67 */		lis r1, _db_stack_addr@h
+/* 802CBF6C  60 21 FD 00 */		ori r1,r1, _db_stack_addr@l
 /* 802CBF70  7C A3 2B 78 */		mr r3,r5
 /* 802CBF74  48 00 03 71 */		bl InitMetroTRKCommTable
 /* 802CBF78  2C 03 00 01 */		cmpwi r3,1
@@ -71,8 +71,8 @@ InitMetroTRK_BBA:
 /* 802CBFF0 002955B0  38 00 00 00 */	li r0, 0
 /* 802CBFF4 002955B4  7C 12 FB A6 */	mtspr 0x3f2, r0
 /* 802CBFF8 002955B8  7C 15 FB A6 */	mtspr 0x3f5, r0
-/* 802CBFFC 002955BC  3C 20 80 67 */	lis r1, 0x8067FD00@h
-/* 802CC000 002955C0  60 21 FD 00 */	ori r1, r1, 0x8067FD00@l
+/* 802CBFFC 002955BC  3C 20 80 67 */	lis r1, _db_stack_addr@h
+/* 802CC000 002955C0  60 21 FD 00 */	ori r1, r1, _db_stack_addr@l
 /* 802CC004 002955C4  38 60 00 02 */	li r3, 2
 /* 802CC008 002955C8  48 00 02 DD */	bl InitMetroTRKCommTable
 /* 802CC00C 002955CC  2C 03 00 01 */	cmpwi r3, 1

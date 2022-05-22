@@ -7,6 +7,7 @@ lbl_805281E0:
 	# ROM: 0x5242E0
 	.4byte lbl_80664188
 	.4byte 0
+
 	.4byte lbl_80039E90
 	.4byte lbl_80039E28
 	.4byte lbl_80039E20
@@ -124,7 +125,6 @@ lbl_80528370:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-
 
 .global lbl_80528380
 lbl_80528380:
@@ -1864,16 +1864,10 @@ lbl_80529AEC:
 
 .global lbl_80529AF8
 lbl_80529AF8:
-	# ROM: 0x525BF8
-.global lbl_80529AF8
-lbl_80529AF8:
 	.asciz "AcosRad: Input is out of the domain."
 	.balign 4
 
 
-.global lbl_80529B20
-lbl_80529B20:
-	# ROM: 0x525C20
 .global lbl_80529B20
 lbl_80529B20:
 	.asciz "triangular.h"
@@ -1882,16 +1876,10 @@ lbl_80529B20:
 
 .global lbl_80529B30
 lbl_80529B30:
-	# ROM: 0x525C30
-.global lbl_80529B30
-lbl_80529B30:
 	.asciz "FSqrt: Input is out of the domain."
 	.balign 4
 
 
-.global lbl_80529B54
-lbl_80529B54:
-	# ROM: 0x525C54
 .global lbl_80529B54
 lbl_80529B54:
 	.asciz "arithmetic.h"
@@ -1918,16 +1906,10 @@ lbl_80529B78:
 
 .global lbl_80529B84
 lbl_80529B84:
-	# ROM: 0x525C84
-.global lbl_80529B84
-lbl_80529B84:
 	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
 	.balign 4
 
 
-.global lbl_80529BAC
-lbl_80529BAC:
-	# ROM: 0x525CAC
 .global lbl_80529BAC
 lbl_80529BAC:
 	.asciz "g3d_resfile_ac.h"
@@ -3404,9 +3386,6 @@ lbl_8052AB98:
 
 .global lbl_8052AE08
 lbl_8052AE08:
-	# ROM: 0x526F08
-.global lbl_8052AE08
-lbl_8052AE08:
 	.asciz "cam_name1"
 	.balign 4
 	.4byte 0
@@ -3638,9 +3617,6 @@ lbl_8052B000:
 	.4byte 0
 
 
-.global lbl_8052B100
-lbl_8052B100:
-	# ROM: 0x527200
 .global lbl_8052B100
 lbl_8052B100:
 	.asciz "?333?333?333@"
@@ -5791,15 +5767,9 @@ lbl_8052CCB0:
 
 .global lbl_8052CE28
 lbl_8052CE28:
-	# ROM: 0x528F28
-.global lbl_8052CE28
-lbl_8052CE28:
 	.asciz "NW4R:Failed assertion IsValid()"
 
 
-.global lbl_8052CE48
-lbl_8052CE48:
-	# ROM: 0x528F48
 .global lbl_8052CE48
 lbl_8052CE48:
 	.asciz "g3d_resnode_ac.h"
@@ -7376,16 +7346,10 @@ lbl_8052E468:
 
 .global lbl_8052E558
 lbl_8052E558:
-	# ROM: 0x52A658
-.global lbl_8052E558
-lbl_8052E558:
 	.asciz "AsinRad: Input is out of the domain."
 	.balign 4
 
 
-.global lbl_8052E580
-lbl_8052E580:
-	# ROM: 0x52A680
 .global lbl_8052E580
 lbl_8052E580:
 	.asciz "triangular.h"
@@ -9662,16 +9626,10 @@ lbl_805302E0:
 
 .global lbl_805302EC
 lbl_805302EC:
-	# ROM: 0x52C3EC
-.global lbl_805302EC
-lbl_805302EC:
 	.asciz "NW4R:Pointer must not be NULL (p)"
 	.balign 4
 
 
-.global lbl_80530310
-lbl_80530310:
-	# ROM: 0x52C410
 .global lbl_80530310
 lbl_80530310:
 	.asciz "LinkList.h"
@@ -9680,25 +9638,16 @@ lbl_80530310:
 
 .global lbl_8053031C
 lbl_8053031C:
-	# ROM: 0x52C41C
-.global lbl_8053031C
-lbl_8053031C:
 	.asciz "NW4R:Failed assertion texMapIdx < mGXMemNum.texMap"
 	.balign 4
 
 
 .global lbl_80530350
 lbl_80530350:
-	# ROM: 0x52C450
-.global lbl_80530350
-lbl_80530350:
 	.asciz "material.h"
 	.balign 4
 
 
-.global lbl_8053035C
-lbl_8053035C:
-	# ROM: 0x52C45C
 .global lbl_8053035C
 lbl_8053035C:
 	.asciz "NW4R:Failed assertion texSRTIdx < mGXMemNum.texSRT"
@@ -9707,25 +9656,16 @@ lbl_8053035C:
 
 .global lbl_80530390
 lbl_80530390:
-	# ROM: 0x52C490
-.global lbl_80530390
-lbl_80530390:
 	.asciz "material.h"
 	.balign 4
 
 
 .global lbl_8053039C
 lbl_8053039C:
-	# ROM: 0x52C49C
-.global lbl_8053039C
-lbl_8053039C:
 	.asciz "NW4R:Failed assertion texSRTIdx < mGXMemNum.texSRT"
 	.balign 4
 
 
-.global lbl_805303D0
-lbl_805303D0:
-	# ROM: 0x52C4D0
 .global lbl_805303D0
 lbl_805303D0:
 	.asciz "material.h"
@@ -9963,16 +9903,10 @@ lbl_80530688:
 
 .global lbl_805306C4
 lbl_805306C4:
-	# ROM: 0x52C7C4
-.global lbl_805306C4
-lbl_805306C4:
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
-.global lbl_805306E0
-lbl_805306E0:
-	# ROM: 0x52C7E0
 .global lbl_805306E0
 lbl_805306E0:
 	.asciz "g3d_restex_ac.h"
@@ -9980,16 +9914,10 @@ lbl_805306E0:
 
 .global lbl_805306F0
 lbl_805306F0:
-	# ROM: 0x52C7F0
-.global lbl_805306F0
-lbl_805306F0:
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
-.global lbl_8053070C
-lbl_8053070C:
-	# ROM: 0x52C80C
 .global lbl_8053070C
 lbl_8053070C:
 	.asciz "g3d_respltt_ac.h"
@@ -9998,16 +9926,10 @@ lbl_8053070C:
 
 .global lbl_80530720
 lbl_80530720:
-	# ROM: 0x52C820
-.global lbl_80530720
-lbl_80530720:
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
-.global lbl_8053073C
-lbl_8053073C:
-	# ROM: 0x52C83C
 .global lbl_8053073C
 lbl_8053073C:
 	.asciz "g3d_respltt_ac.h"
@@ -10960,16 +10882,10 @@ lbl_80531250:
 
 .global lbl_8053125C
 lbl_8053125C:
-	# ROM: 0x52D35C
-.global lbl_8053125C
-lbl_8053125C:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_80531290
-lbl_80531290:
-	# ROM: 0x52D390
 .global lbl_80531290
 lbl_80531290:
 	.asciz "TextWriterBase.h"
@@ -10978,16 +10894,10 @@ lbl_80531290:
 
 .global lbl_805312A4
 lbl_805312A4:
-	# ROM: 0x52D3A4
-.global lbl_805312A4
-lbl_805312A4:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_805312D8
-lbl_805312D8:
-	# ROM: 0x52D3D8
 .global lbl_805312D8
 lbl_805312D8:
 	.asciz "TextWriterBase.h"
@@ -10996,16 +10906,10 @@ lbl_805312D8:
 
 .global lbl_805312EC
 lbl_805312EC:
-	# ROM: 0x52D3EC
-.global lbl_805312EC
-lbl_805312EC:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_80531320
-lbl_80531320:
-	# ROM: 0x52D420
 .global lbl_80531320
 lbl_80531320:
 	.asciz "TextWriterBase.h"
@@ -11014,16 +10918,10 @@ lbl_80531320:
 
 .global lbl_80531334
 lbl_80531334:
-	# ROM: 0x52D434
-.global lbl_80531334
-lbl_80531334:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_80531368
-lbl_80531368:
-	# ROM: 0x52D468
 .global lbl_80531368
 lbl_80531368:
 	.asciz "TextWriterBase.h"
@@ -11032,16 +10930,10 @@ lbl_80531368:
 
 .global lbl_8053137C
 lbl_8053137C:
-	# ROM: 0x52D47C
-.global lbl_8053137C
-lbl_8053137C:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_805313B0
-lbl_805313B0:
-	# ROM: 0x52D4B0
 .global lbl_805313B0
 lbl_805313B0:
 	.asciz "TextWriterBase.h"
@@ -11050,16 +10942,10 @@ lbl_805313B0:
 
 .global lbl_805313C4
 lbl_805313C4:
-	# ROM: 0x52D4C4
-.global lbl_805313C4
-lbl_805313C4:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_805313F8
-lbl_805313F8:
-	# ROM: 0x52D4F8
 .global lbl_805313F8
 lbl_805313F8:
 	.asciz "TextWriterBase.h"
@@ -11068,16 +10954,10 @@ lbl_805313F8:
 
 .global lbl_8053140C
 lbl_8053140C:
-	# ROM: 0x52D50C
-.global lbl_8053140C
-lbl_8053140C:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_80531440
-lbl_80531440:
-	# ROM: 0x52D540
 .global lbl_80531440
 lbl_80531440:
 	.asciz "TextWriterBase.h"
@@ -11086,16 +10966,10 @@ lbl_80531440:
 
 .global lbl_80531454
 lbl_80531454:
-	# ROM: 0x52D554
-.global lbl_80531454
-lbl_80531454:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_80531488
-lbl_80531488:
-	# ROM: 0x52D588
 .global lbl_80531488
 lbl_80531488:
 	.asciz "CharWriter.h"
@@ -11104,16 +10978,10 @@ lbl_80531488:
 
 .global lbl_80531498
 lbl_80531498:
-	# ROM: 0x52D598
-.global lbl_80531498
-lbl_80531498:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_805314CC
-lbl_805314CC:
-	# ROM: 0x52D5CC
 .global lbl_805314CC
 lbl_805314CC:
 	.asciz "CharWriter.h"
@@ -11122,16 +10990,10 @@ lbl_805314CC:
 
 .global lbl_805314DC
 lbl_805314DC:
-	# ROM: 0x52D5DC
-.global lbl_805314DC
-lbl_805314DC:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_80531510
-lbl_80531510:
-	# ROM: 0x52D610
 .global lbl_80531510
 lbl_80531510:
 	.asciz "CharWriter.h"
@@ -11140,16 +11002,10 @@ lbl_80531510:
 
 .global lbl_80531520
 lbl_80531520:
-	# ROM: 0x52D620
-.global lbl_80531520
-lbl_80531520:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_80531554
-lbl_80531554:
-	# ROM: 0x52D654
 .global lbl_80531554
 lbl_80531554:
 	.asciz "CharWriter.h"
@@ -11158,16 +11014,10 @@ lbl_80531554:
 
 .global lbl_80531564
 lbl_80531564:
-	# ROM: 0x52D664
-.global lbl_80531564
-lbl_80531564:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_80531598
-lbl_80531598:
-	# ROM: 0x52D698
 .global lbl_80531598
 lbl_80531598:
 	.asciz "CharWriter.h"
@@ -11176,16 +11026,10 @@ lbl_80531598:
 
 .global lbl_805315A8
 lbl_805315A8:
-	# ROM: 0x52D6A8
-.global lbl_805315A8
-lbl_805315A8:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_805315DC
-lbl_805315DC:
-	# ROM: 0x52D6DC
 .global lbl_805315DC
 lbl_805315DC:
 	.asciz "CharWriter.h"
@@ -11194,16 +11038,10 @@ lbl_805315DC:
 
 .global lbl_805315EC
 lbl_805315EC:
-	# ROM: 0x52D6EC
-.global lbl_805315EC
-lbl_805315EC:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_80531620
-lbl_80531620:
-	# ROM: 0x52D720
 .global lbl_80531620
 lbl_80531620:
 	.asciz "CharWriter.h"
@@ -11212,16 +11050,10 @@ lbl_80531620:
 
 .global lbl_80531630
 lbl_80531630:
-	# ROM: 0x52D730
-.global lbl_80531630
-lbl_80531630:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_80531664
-lbl_80531664:
-	# ROM: 0x52D764
 .global lbl_80531664
 lbl_80531664:
 	.asciz "CharWriter.h"
@@ -11230,16 +11062,10 @@ lbl_80531664:
 
 .global lbl_80531674
 lbl_80531674:
-	# ROM: 0x52D774
-.global lbl_80531674
-lbl_80531674:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_805316A8
-lbl_805316A8:
-	# ROM: 0x52D7A8
 .global lbl_805316A8
 lbl_805316A8:
 	.asciz "CharWriter.h"
@@ -11248,16 +11074,10 @@ lbl_805316A8:
 
 .global lbl_805316B8
 lbl_805316B8:
-	# ROM: 0x52D7B8
-.global lbl_805316B8
-lbl_805316B8:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_805316EC
-lbl_805316EC:
-	# ROM: 0x52D7EC
 .global lbl_805316EC
 lbl_805316EC:
 	.asciz "CharWriter.h"
@@ -11266,16 +11086,10 @@ lbl_805316EC:
 
 .global lbl_805316FC
 lbl_805316FC:
-	# ROM: 0x52D7FC
-.global lbl_805316FC
-lbl_805316FC:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_80531730
-lbl_80531730:
-	# ROM: 0x52D830
 .global lbl_80531730
 lbl_80531730:
 	.asciz "CharWriter.h"
@@ -11730,16 +11544,10 @@ lbl_80531C58:
 
 .global lbl_80531CC0
 lbl_80531CC0:
-	# ROM: 0x52DDC0
-.global lbl_80531CC0
-lbl_80531CC0:
 	.asciz "NW4R:Failed assertion texMapIdx < mGXMemNum.texMap"
 	.balign 4
 
 
-.global lbl_80531CF4
-lbl_80531CF4:
-	# ROM: 0x52DDF4
 .global lbl_80531CF4
 lbl_80531CF4:
 	.asciz "material.h"
@@ -11748,15 +11556,9 @@ lbl_80531CF4:
 
 .global lbl_80531D00
 lbl_80531D00:
-	# ROM: 0x52DE00
-.global lbl_80531D00
-lbl_80531D00:
 	.asciz "NW4R:Failed assertion idx < TevColorMax"
 
 
-.global lbl_80531D28
-lbl_80531D28:
-	# ROM: 0x52DE28
 .global lbl_80531D28
 lbl_80531D28:
 	.asciz "material.h"
@@ -11766,15 +11568,9 @@ lbl_80531D28:
 
 .global lbl_80531D38
 lbl_80531D38:
-	# ROM: 0x52DE38
-.global lbl_80531D38
-lbl_80531D38:
 	.asciz "NW4R:Failed assertion idx < TevColorMax"
 
 
-.global lbl_80531D60
-lbl_80531D60:
-	# ROM: 0x52DE60
 .global lbl_80531D60
 lbl_80531D60:
 	.asciz "material.h"
@@ -14676,15 +14472,9 @@ lbl_805343E8:
 
 .global lbl_805344C0
 lbl_805344C0:
-	# ROM: 0x5305C0
-.global lbl_805344C0
-lbl_805344C0:
 	.asciz "ResUserData"
 
 
-.global lbl_805344CC
-lbl_805344CC:
-	# ROM: 0x5305CC
 .global lbl_805344CC
 lbl_805344CC:
 	.asciz "%s::%s: Object not valid."
@@ -14693,16 +14483,10 @@ lbl_805344CC:
 
 .global lbl_805344E8
 lbl_805344E8:
-	# ROM: 0x5305E8
-.global lbl_805344E8
-lbl_805344E8:
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
 
 
-.global lbl_805344FC
-lbl_805344FC:
-	# ROM: 0x5305FC
 .global lbl_805344FC
 lbl_805344FC:
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
@@ -14711,16 +14495,10 @@ lbl_805344FC:
 
 .global lbl_80534524
 lbl_80534524:
-	# ROM: 0x530624
-.global lbl_80534524
-lbl_80534524:
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
 
 
-.global lbl_80534538
-lbl_80534538:
-	# ROM: 0x530638
 .global lbl_80534538
 lbl_80534538:
 	.asciz "ResUserDataItem"
@@ -14728,16 +14506,10 @@ lbl_80534538:
 
 .global lbl_80534548
 lbl_80534548:
-	# ROM: 0x530648
-.global lbl_80534548
-lbl_80534548:
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
-.global lbl_80534564
-lbl_80534564:
-	# ROM: 0x530664
 .global lbl_80534564
 lbl_80534564:
 	.asciz "g3d_resuser_ac.h"
@@ -14746,25 +14518,16 @@ lbl_80534564:
 
 .global lbl_80534578
 lbl_80534578:
-	# ROM: 0x530678
-.global lbl_80534578
-lbl_80534578:
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
 .global lbl_80534594
 lbl_80534594:
-	# ROM: 0x530694
-.global lbl_80534594
-lbl_80534594:
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
 
 
-.global lbl_805345A8
-lbl_805345A8:
-	# ROM: 0x5306A8
 .global lbl_805345A8
 lbl_805345A8:
 	.asciz "NW4R:Failed assertion GetValueType() == ResUserDataItemData::S32"
@@ -14773,16 +14536,10 @@ lbl_805345A8:
 
 .global lbl_805345EC
 lbl_805345EC:
-	# ROM: 0x5306EC
-.global lbl_805345EC
-lbl_805345EC:
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
 
 
-.global lbl_80534600
-lbl_80534600:
-	# ROM: 0x530700
 .global lbl_80534600
 lbl_80534600:
 	.asciz "NW4R:Failed assertion GetValueType() == ResUserDataItemData::F32"
@@ -14791,16 +14548,10 @@ lbl_80534600:
 
 .global lbl_80534644
 lbl_80534644:
-	# ROM: 0x530744
-.global lbl_80534644
-lbl_80534644:
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
 
 
-.global lbl_80534658
-lbl_80534658:
-	# ROM: 0x530758
 .global lbl_80534658
 lbl_80534658:
 	.asciz "NW4R:Failed assertion GetValueType() == ResUserDataItemData::STRING"
@@ -14808,25 +14559,16 @@ lbl_80534658:
 
 .global lbl_8053469C
 lbl_8053469C:
-	# ROM: 0x53079C
-.global lbl_8053469C
-lbl_8053469C:
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
 
 
 .global lbl_805346B0
 lbl_805346B0:
-	# ROM: 0x5307B0
-.global lbl_805346B0
-lbl_805346B0:
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
 
 
-.global lbl_805346D8
-lbl_805346D8:
-	# ROM: 0x5307D8
 .global lbl_805346D8
 lbl_805346D8:
 	.asciz "g3d_resdict_ac.h"
@@ -18195,16 +17937,10 @@ lbl_805374E4:
 
 .global lbl_80537500
 lbl_80537500:
-	# ROM: 0x533600
-.global lbl_80537500
-lbl_80537500:
 	.asciz "bus is out of bounds(%d)\n%d <= bus < %d not satisfied."
 	.balign 4
 
 
-.global lbl_80537538
-lbl_80537538:
-	# ROM: 0x533638
 .global lbl_80537538
 lbl_80537538:
 	.asciz "AxManager.h"
@@ -20207,9 +19943,6 @@ lbl_80538EC8:
 	.4byte 0
 
 
-.global lbl_80538ED8
-lbl_80538ED8:
-	# ROM: 0x534FD8
 .global lbl_80538ED8
 lbl_80538ED8:
 	.asciz "skill1_per"
@@ -22779,25 +22512,16 @@ lbl_8053AE64:
 
 .global lbl_8053AE70
 lbl_8053AE70:
-	# ROM: 0x536F70
-.global lbl_8053AE70
-lbl_8053AE70:
 	.asciz "NW4R:Pointer Error\nstr(=%p) is not valid pointer."
 	.balign 4
 
 
 .global lbl_8053AEA4
 lbl_8053AEA4:
-	# ROM: 0x536FA4
-.global lbl_8053AEA4
-lbl_8053AEA4:
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
-.global lbl_8053AEB8
-lbl_8053AEB8:
-	# ROM: 0x536FB8
 .global lbl_8053AEB8
 lbl_8053AEB8:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
@@ -22806,16 +22530,10 @@ lbl_8053AEB8:
 
 .global lbl_8053AEEC
 lbl_8053AEEC:
-	# ROM: 0x536FEC
-.global lbl_8053AEEC
-lbl_8053AEEC:
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
-.global lbl_8053AF00
-lbl_8053AF00:
-	# ROM: 0x537000
 .global lbl_8053AF00
 lbl_8053AF00:
 	.asciz "NW4R:Pointer Error\ntagProcessor(=%p) is not valid pointer."
@@ -22824,16 +22542,10 @@ lbl_8053AF00:
 
 .global lbl_8053AF3C
 lbl_8053AF3C:
-	# ROM: 0x53703C
-.global lbl_8053AF3C
-lbl_8053AF3C:
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
-.global lbl_8053AF50
-lbl_8053AF50:
-	# ROM: 0x537050
 .global lbl_8053AF50
 lbl_8053AF50:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
@@ -22842,16 +22554,10 @@ lbl_8053AF50:
 
 .global lbl_8053AF84
 lbl_8053AF84:
-	# ROM: 0x537084
-.global lbl_8053AF84
-lbl_8053AF84:
 	.asciz "TextWriterBase.h"
 	.balign 4
 
 
-.global lbl_8053AF98
-lbl_8053AF98:
-	# ROM: 0x537098
 .global lbl_8053AF98
 lbl_8053AF98:
 	.asciz "NW4R:Pointer Error\n& font(=%p) is not valid pointer."
@@ -22860,16 +22566,10 @@ lbl_8053AF98:
 
 .global lbl_8053AFD0
 lbl_8053AFD0:
-	# ROM: 0x5370D0
-.global lbl_8053AFD0
-lbl_8053AFD0:
 	.asciz "CharWriter.h"
 	.balign 4
 
 
-.global lbl_8053AFE0
-lbl_8053AFE0:
-	# ROM: 0x5370E0
 .global lbl_8053AFE0
 lbl_8053AFE0:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
@@ -22878,25 +22578,16 @@ lbl_8053AFE0:
 
 .global lbl_8053B014
 lbl_8053B014:
-	# ROM: 0x537114
-.global lbl_8053B014
-lbl_8053B014:
 	.asciz "CharWriter.h"
 	.balign 4
 
 
 .global lbl_8053B024
 lbl_8053B024:
-	# ROM: 0x537124
-.global lbl_8053B024
-lbl_8053B024:
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_8053B058
-lbl_8053B058:
-	# ROM: 0x537158
 .global lbl_8053B058
 lbl_8053B058:
 	.asciz "CharWriter.h"
@@ -25315,6 +25006,8 @@ lbl_8053CDC8:
 	.4byte lbl_80039DCC
 	.4byte lbl_80039DC4
 	.4byte lbl_80039DBC
+.global lbl_8053CE10
+lbl_8053CE10:
 	.4byte lbl_80039DB4
 	.4byte lbl_80039DAC
 	.4byte lbl_80039DA4
@@ -25528,7 +25221,12 @@ lbl_8053D088:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A13B8
+
+.global lbl_8053D094
+lbl_8053D094:
 	.4byte 0
+.global lbl_8053D098
+lbl_8053D098:
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A13B8
 
@@ -25567,12 +25265,18 @@ lbl_8053D0E8:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A497C
+.global lbl_8053D0F4
+lbl_8053D0F4:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A4A78
+.global lbl_8053D100
+lbl_8053D100:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A4D04
+.global lbl_8053D10C
+lbl_8053D10C:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A4A78
@@ -25623,9 +25327,13 @@ lbl_8053D170:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A4FA4
+.global lbl_8053D17C
+lbl_8053D17C:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A5060
+.global lbl_8053D188
+lbl_8053D188:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A4FA4
@@ -25681,9 +25389,13 @@ lbl_8053D1F8:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A5C90
+.global lbl_8053D204
+lbl_8053D204:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A5D4C
+.global lbl_8053D210
+lbl_8053D210:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A5E0C
@@ -25713,12 +25425,18 @@ lbl_8053D248:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A617C
+.global lbl_8053D254
+lbl_8053D254:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A6408
+.global lbl_8053D260
+lbl_8053D260:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A6650
+.global lbl_8053D26C
+lbl_8053D26C:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A658C
@@ -25738,9 +25456,13 @@ lbl_8053D278:
 	.4byte lbl_802A6514
 	.4byte lbl_802A651C
 	.4byte lbl_802A6524
+.global lbl_8053D2A4
+lbl_8053D2A4:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A6408
+.global lbl_8053D2B0
+lbl_8053D2B0:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A6718
@@ -25770,9 +25492,13 @@ lbl_8053D2E8:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A6BB0
+.global lbl_8053D2F4
+lbl_8053D2F4:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A6C6C
+.global lbl_8053D300
+lbl_8053D300:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A6D2C
@@ -25802,9 +25528,13 @@ lbl_8053D338:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A6F8C
+.global lbl_8053D344
+lbl_8053D344:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A70C8
+.global lbl_8053D350
+lbl_8053D350:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A718C
@@ -25834,9 +25564,13 @@ lbl_8053D388:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A7464
+.global lbl_8053D394
+lbl_8053D394:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A7508
+.global lbl_8053D3A0
+lbl_8053D3A0:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A75CC
@@ -25866,9 +25600,13 @@ lbl_8053D3D8:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A82D4
+.global lbl_8053D3E4
+lbl_8053D3E4:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A83CC
+.global lbl_8053D3F0
+lbl_8053D3F0:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A8560
@@ -25898,9 +25636,13 @@ lbl_8053D428:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A87D4
+.global lbl_8053D434
+lbl_8053D434:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A8904
+.global lbl_8053D440
+lbl_8053D440:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A8A00
@@ -25956,9 +25698,13 @@ lbl_8053D4B0:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A8EEC
+.global lbl_8053D4BC
+lbl_8053D4BC:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A9030
+.global lbl_8053D4C8
+lbl_8053D4C8:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A9230
@@ -25988,6 +25734,8 @@ lbl_8053D500:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A93FC
+.global lbl_8053D50C
+lbl_8053D50C:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A955C
@@ -26016,9 +25764,13 @@ lbl_8053D540:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A97A0
+.global lbl_8053D54C
+lbl_8053D54C:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A9924
+.global lbl_8053D558
+lbl_8053D558:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802A9AC4
@@ -26371,9 +26123,13 @@ lbl_8053D924:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802AB900
+.global lbl_8053D930
+lbl_8053D930:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802ABA70
+.global lbl_8053D93C
+lbl_8053D93C:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802AB900
@@ -26967,9 +26723,13 @@ lbl_8053E170:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802AF724
+.global lbl_8053E17C
+lbl_8053E17C:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802AF844
+.global lbl_8053E188
+lbl_8053E188:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802AF980
@@ -27124,12 +26884,18 @@ lbl_8053E3A0:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802AFC54
+.global lbl_8053E3AC
+lbl_8053E3AC:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802AFCC8
+.global lbl_8053E3B8
+lbl_8053E3B8:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802B00EC
+.global lbl_8053E3C4
+lbl_8053E3C4:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802AFCC8
@@ -28142,9 +27908,13 @@ lbl_8053EF0C:
 	.4byte 0x000009C5
 	.4byte 0x000009C6
 	.4byte 0xFFFFFFFF
+.global lbl_8053EF18
+lbl_8053EF18:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802B8C00
+.global lbl_8053EF24
+lbl_8053EF24:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte lbl_802B8CFC
@@ -28256,9 +28026,6 @@ lbl_8053F050:
 	.4byte 0
 
 
-.global lbl_8053F05C
-lbl_8053F05C:
-	# ROM: 0x53B15C
 .global lbl_8053F05C
 lbl_8053F05C:
 	.asciz "bad_cast"
@@ -29198,9 +28965,6 @@ lbl_8053FD40:
 
 .global lbl_8053FD80
 lbl_8053FD80:
-	# ROM: 0x53BE80
-.global lbl_8053FD80
-lbl_8053FD80:
 	.asciz "Devkit set to : %ld\n"
 	.asciz "MetroTRK : Sizeof Reply - %ld bytes\n"
 	.asciz "MetroTRK : Set to NDEV hardware\n"
@@ -29214,25 +28978,16 @@ lbl_8053FD80:
 
 .global lbl_8053FE68
 lbl_8053FE68:
-	# ROM: 0x53BF68
-.global lbl_8053FE68
-lbl_8053FE68:
 	.asciz "MetroTRK - Event Queue full\n"
 	.balign 4
 
 
 .global lbl_8053FE88
 lbl_8053FE88:
-	# ROM: 0x53BF88
-.global lbl_8053FE88
-lbl_8053FE88:
 	.asciz "MetroTRK for Revolution v0.4"
 	.balign 4
 
 
-.global lbl_8053FEA8
-lbl_8053FEA8:
-	# ROM: 0x53BFA8
 .global lbl_8053FEA8
 lbl_8053FEA8:
 	.asciz "MetroTRK - bad reply size %ld\n"
@@ -29243,15 +28998,9 @@ lbl_8053FEA8:
 
 .global lbl_8053FEF0
 lbl_8053FEF0:
-	# ROM: 0x53BFF0
-.global lbl_8053FEF0
-lbl_8053FEF0:
 	.asciz "MetroTRK - TRK_WriteUARTN returned %ld\n"
 
 
-.global lbl_8053FF18
-lbl_8053FF18:
-	# ROM: 0x53C018
 .global lbl_8053FF18
 lbl_8053FF18:
 	.asciz "MetroTRK - ERROR : No buffer available\n"
@@ -29283,9 +29032,6 @@ lbl_8053FF5C:
 
 .global lbl_8053FF78
 lbl_8053FF78:
-	# ROM: 0x53C078
-.global lbl_8053FF78
-lbl_8053FF78:
 	.asciz "\nMetroTRK Option : SerialIO - "
 	.asciz "Enable\n"
 	.asciz "Disable\n"
@@ -29306,16 +29052,10 @@ lbl_8053FFB8:
 
 .global lbl_80540000
 lbl_80540000:
-	# ROM: 0x53C104
-.global lbl_80540000
-lbl_80540000:
 	.asciz "ARCInitHandle: bad archive format"
 	.balign 4
 
 
-.global lbl_80540024
-lbl_80540024:
-	# ROM: 0x53C124
 .global lbl_80540024
 lbl_80540024:
 	.asciz "Warning: ARCOpen(): file '%s' was not found under %s in the archive.\n"
@@ -33304,25 +33044,16 @@ lbl_805435E0:
 
 .global lbl_80543DE0
 lbl_80543DE0:
-	# ROM: 0x53FEE0
-.global lbl_80543DE0
-lbl_80543DE0:
 	.asciz "H4A should not be cleared because of Broadway errata.\n"
 	.balign 4
 
 
 .global lbl_80543E18
 lbl_80543E18:
-	# ROM: 0x53FF18
-.global lbl_80543E18
-lbl_80543E18:
 	.asciz "getbuf: Size is zero"
 	.balign 4
 
 
-.global lbl_80543E30
-lbl_80543E30:
-	# ROM: 0x53FF30
 .global lbl_80543E30
 lbl_80543E30:
 	.asciz "getbuf: Size is too big"
@@ -33339,16 +33070,10 @@ lbl_80543E30:
 
 .global lbl_80543EC8
 lbl_80543EC8:
-	# ROM: 0x53FFC8
-.global lbl_80543EC8
-lbl_80543EC8:
 	.asciz "Enqueue - Buffer corrupted"
 	.balign 4
 
 
-.global lbl_80543EE4
-lbl_80543EE4:
-	# ROM: 0x53FFE4
 .global lbl_80543EE4
 lbl_80543EE4:
 	.asciz "Eneueue - buf already linked"
@@ -33357,18 +33082,12 @@ lbl_80543EE4:
 
 .global lbl_80543F04
 lbl_80543F04:
-	# ROM: 0x540004
-.global lbl_80543F04
-lbl_80543F04:
 	.asciz "Eneueue head - buf already linked"
 	.balign 4
 	.asciz "GKI_get_buf_start:: bad addr"
 	.balign 4
 
 
-.global lbl_80543F48
-lbl_80543F48:
-	# ROM: 0x540048
 .global lbl_80543F48
 lbl_80543F48:
 	.asciz "Deleting bad pool"
@@ -33380,17 +33099,11 @@ lbl_80543F48:
 
 .global lbl_80543F9C
 lbl_80543F9C:
-	# ROM: 0x54009C
-.global lbl_80543F9C
-lbl_80543F9C:
 	.asciz "HCIS: Invalid length for incoming HCI message."
 	.balign 4
 	.4byte 0
 
 
-.global lbl_80543FD0
-lbl_80543FD0:
-	# ROM: 0x5400D0
 .global lbl_80543FD0
 lbl_80543FD0:
 	.asciz "BTA got event 0x%x"
@@ -33399,16 +33112,10 @@ lbl_80543FD0:
 
 .global lbl_80543FE4
 lbl_80543FE4:
-	# ROM: 0x5400E4
-.global lbl_80543FE4
-lbl_80543FE4:
 	.asciz "BTA got unregistered event id %d"
 	.balign 4
 
 
-.global lbl_80544008
-lbl_80544008:
-	# ROM: 0x540108
 .global lbl_80544008
 lbl_80544008:
 	.asciz " bta_dm_disable_timer_cback  "
@@ -33417,16 +33124,10 @@ lbl_80544008:
 
 .global lbl_80544028
 lbl_80544028:
-	# ROM: 0x540128
-.global lbl_80544028
-lbl_80544028:
 	.asciz " bta_dm_search_timer_cback  "
 	.balign 4
 
 
-.global lbl_80544048
-lbl_80544048:
-	# ROM: 0x540148
 .global lbl_80544048
 lbl_80544048:
 	.asciz " bta_dm_pin_cback() -> Failed to start Remote Name Request  "
@@ -33435,16 +33136,10 @@ lbl_80544048:
 
 .global lbl_80544088
 lbl_80544088:
-	# ROM: 0x540188
-.global lbl_80544088
-lbl_80544088:
 	.asciz " timer stopped  "
 	.balign 4
 
 
-.global lbl_8054409C
-lbl_8054409C:
-	# ROM: 0x54019C
 .global lbl_8054409C
 lbl_8054409C:
 	.asciz "bta_dm_l2cap_server_compress_cback, BTA ID %d"
@@ -33453,16 +33148,10 @@ lbl_8054409C:
 
 .global lbl_805440CC
 lbl_805440CC:
-	# ROM: 0x5401CC
-.global lbl_805440CC
-lbl_805440CC:
 	.asciz "bta_dm_compress_cback open app_id %d, BTA id %d, state %d"
 	.balign 4
 
 
-.global lbl_80544108
-lbl_80544108:
-	# ROM: 0x540208
 .global lbl_80544108
 lbl_80544108:
 	.asciz "bta_dm_compress_cback close app_id %d, BTA id %d, state %d"
@@ -33472,16 +33161,10 @@ lbl_80544108:
 
 .global lbl_80544148
 lbl_80544148:
-	# ROM: 0x540248
-.global lbl_80544148
-lbl_80544148:
 	.asciz "bta_dm_act no more connected service cbs"
 	.balign 4
 
 
-.global lbl_80544174
-lbl_80544174:
-	# ROM: 0x540274
 .global lbl_80544174
 lbl_80544174:
 	.asciz "bta_dm_act no more pm timers"
@@ -33491,16 +33174,10 @@ lbl_80544174:
 
 .global lbl_80544198
 lbl_80544198:
-	# ROM: 0x540298
-.global lbl_80544198
-lbl_80544198:
 	.asciz "bta_hh_sdp_cback: p_cb: %d result 0x%02x,                             attr_mask 0x%02x"
 	.balign 4
 
 
-.global lbl_805441F0
-lbl_805441F0:
-	# ROM: 0x5402F0
 .global lbl_805441F0
 lbl_805441F0:
 	.asciz "bta_hh_start_sdp:: skip SDP for known devices"
@@ -33509,16 +33186,10 @@ lbl_805441F0:
 
 .global lbl_80544220
 lbl_80544220:
-	# ROM: 0x540320
-.global lbl_80544220
-lbl_80544220:
 	.asciz "bta_hh_start_sdp:  HID_HostGetSDPRecord failed:                 Status 0x%2X"
 	.balign 4
 
 
-.global lbl_80544270
-lbl_80544270:
-	# ROM: 0x540370
 .global lbl_80544270
 lbl_80544270:
 	.asciz "bta_hh_sdp_cmpl:  status 0x%2X"
@@ -33527,16 +33198,10 @@ lbl_80544270:
 
 .global lbl_80544290
 lbl_80544290:
-	# ROM: 0x540390
-.global lbl_80544290
-lbl_80544290:
 	.asciz "bta_hh_sdp_cmpl:  HID_HostOpenDev failed:                     Status 0x%2X"
 	.balign 4
 
 
-.global lbl_805442DC
-lbl_805442DC:
-	# ROM: 0x5403DC
 .global lbl_805442DC
 lbl_805442DC:
 	.asciz "bta_hh_open_act:  Device[%d] connected"
@@ -33627,24 +33292,15 @@ lbl_805444C4:
 
 .global lbl_805444F0
 lbl_805444F0:
-	# ROM: 0x5405F0
-.global lbl_805444F0
-lbl_805444F0:
 	.asciz "invalid command"
 
 
-.global lbl_80544500
-lbl_80544500:
-	# ROM: 0x540600
 .global lbl_80544500
 lbl_80544500:
 	.asciz "HID_HostWriteDev Error %d"
 	.balign 4
 
 
-.global lbl_8054451C
-lbl_8054451C:
-	# ROM: 0x54061C
 .global lbl_8054451C
 lbl_8054451C:
 	.asciz "bta_hh_write_dev_act:: cmd type = %d"
@@ -33703,16 +33359,10 @@ lbl_8054466C:
 
 .global lbl_80544690
 lbl_80544690:
-	# ROM: 0x540790
-.global lbl_80544690
-lbl_80544690:
 	.asciz "No resource to send HID host Connect request."
 	.balign 4
 
 
-.global lbl_805446C0
-lbl_805446C0:
-	# ROM: 0x5407C0
 .global lbl_805446C0
 lbl_805446C0:
 	.asciz "wrong device handle: [%d]"
@@ -33733,9 +33383,6 @@ lbl_805446C0:
 	.balign 4
 
 
-.global lbl_8054479C
-lbl_8054479C:
-	# ROM: 0x54089C
 .global lbl_8054479C
 lbl_8054479C:
 	.asciz "bta_hh_hdl_event:: handle = %d dev_cb[%d] "
@@ -33793,9 +33440,6 @@ lbl_80544960:
 
 .global lbl_805449A0
 lbl_805449A0:
-	# ROM: 0x540AA0
-.global lbl_805449A0
-lbl_805449A0:
 	.asciz "found kdev_cb[%d] hid_handle = %d "
 	.balign 4
 	.asciz "in_use ? [%d] kdev[%d].hid_handle = %d state = [%d]"
@@ -33803,9 +33447,6 @@ lbl_805449A0:
 	.balign 4
 
 
-.global lbl_80544A24
-lbl_80544A24:
-	# ROM: 0x540B24
 .global lbl_80544A24
 lbl_80544A24:
 	.asciz "subclass = 0x%2x"
@@ -33836,25 +33477,16 @@ lbl_80544A24:
 
 .global lbl_80544C60
 lbl_80544C60:
-	# ROM: 0x540D60
-.global lbl_80544C60
-lbl_80544C60:
 	.asciz "Duplicate btm_acl_created: RemBdAddr: %02x%02x%02x%02x%02x%02x"
 	.balign 4
 
 
 .global lbl_80544CA0
 lbl_80544CA0:
-	# ROM: 0x540DA0
-.global lbl_80544CA0
-lbl_80544CA0:
 	.asciz "SetPacketType Mask -> 0x%04x"
 	.balign 4
 
 
-.global lbl_80544CC0
-lbl_80544CC0:
-	# ROM: 0x540DC0
 .global lbl_80544CC0
 lbl_80544CC0:
 	.asciz "Role change request declined since the previous request for this device is not completed "
@@ -33871,16 +33503,10 @@ lbl_80544CC0:
 
 .global lbl_80544E40
 lbl_80544E40:
-	# ROM: 0x540F40
-.global lbl_80544E40
-lbl_80544E40:
 	.asciz "BTM_ReadClockOffset: RemBdAddr: %02x%02x%02x%02x%02x%02x"
 	.balign 4
 
 
-.global lbl_80544E7C
-lbl_80544E7C:
-	# ROM: 0x540F7C
 .global lbl_80544E7C
 lbl_80544E7C:
 	.asciz "Role Switch Event: new_role 0x%02x, HCI Status 0x%02x"
@@ -33891,16 +33517,10 @@ lbl_80544E7C:
 
 .global lbl_80544EE4
 lbl_80544EE4:
-	# ROM: 0x540FE4
-.global lbl_80544EE4
-lbl_80544EE4:
 	.asciz "BTM: p_flow->delay_variation: 0x%02x"
 	.balign 4
 
 
-.global lbl_80544F0C
-lbl_80544F0C:
-	# ROM: 0x54100C
 .global lbl_80544F0C
 lbl_80544F0C:
 	.asciz "BTM_ReadRSSI: RemBdAddr: %02x%02x%02x%02x%02x%02x"
@@ -33909,25 +33529,16 @@ lbl_80544F0C:
 
 .global lbl_80544F40
 lbl_80544F40:
-	# ROM: 0x541040
-.global lbl_80544F40
-lbl_80544F40:
 	.asciz "BTM_ReadLinkQuality: RemBdAddr: %02x%02x%02x%02x%02x%02x"
 	.balign 4
 
 
 .global lbl_80544F7C
 lbl_80544F7C:
-	# ROM: 0x54107C
-.global lbl_80544F7C
-lbl_80544F7C:
 	.asciz "BTM RSSI Complete: rssi %d, hci status 0x%02x"
 	.balign 4
 
 
-.global lbl_80544FAC
-lbl_80544FAC:
-	# ROM: 0x5410AC
 .global lbl_80544FAC
 lbl_80544FAC:
 	.asciz "BTM Link Quality Complete: Link Quality %d, hci status 0x%02x"
@@ -33942,15 +33553,9 @@ lbl_80544FAC:
 
 .global lbl_80545080
 lbl_80545080:
-	# ROM: 0x541180
-.global lbl_80545080
-lbl_80545080:
 	.asciz "BTM_SetAfhChannels first: %d (%d) last: %d (%d)"
 
 
-.global lbl_805450B0
-lbl_805450B0:
-	# ROM: 0x5411B0
 .global lbl_805450B0
 lbl_805450B0:
 	.asciz "btm_reset_complete"
@@ -33963,16 +33568,10 @@ lbl_805450B0:
 
 .global lbl_8054511C
 lbl_8054511C:
-	# ROM: 0x54121C
-.global lbl_8054511C
-lbl_8054511C:
 	.asciz "BTM: BTM_VendorSpecificCommand: Opcode: 0x%04X, ParamLen: %i."
 	.balign 4
 
 
-.global lbl_8054515C
-lbl_8054515C:
-	# ROM: 0x54125C
 .global lbl_8054515C
 lbl_8054515C:
 	.asciz "BTM: Unable to send vendor specific command (controller is busy)."
@@ -33981,16 +33580,10 @@ lbl_8054515C:
 
 .global lbl_805451A0
 lbl_805451A0:
-	# ROM: 0x5412A0
-.global lbl_805451A0
-lbl_805451A0:
 	.asciz "BTM Event: Received a vendor specific event from controller"
 	.4byte 0
 
 
-.global lbl_805451E0
-lbl_805451E0:
-	# ROM: 0x5412E0
 .global lbl_805451E0
 lbl_805451E0:
 	.asciz "BTM: BTM_WritePageTimeout: Timeout: %d."
@@ -34001,25 +33594,16 @@ lbl_805451E0:
 
 .global lbl_80545250
 lbl_80545250:
-	# ROM: 0x541350
-.global lbl_80545250
-lbl_80545250:
 	.asciz "BTM: BTM_ReadStoredLinkKey: Read_All: %s"
 	.balign 4
 
 
 .global lbl_8054527C
 lbl_8054527C:
-	# ROM: 0x54137C
-.global lbl_8054527C
-lbl_8054527C:
 	.asciz "BTM: BTM_WriteStoredLinkKey: num_keys: %d"
 	.balign 4
 
 
-.global lbl_805452A8
-lbl_805452A8:
-	# ROM: 0x5413A8
 .global lbl_805452A8
 lbl_805452A8:
 	.asciz "BTM: BTM_DeleteStoredLinkKey: delete_all_flag: %s"
@@ -34029,16 +33613,10 @@ lbl_805452A8:
 
 .global lbl_805452E0
 lbl_805452E0:
-	# ROM: 0x5413E0
-.global lbl_805452E0
-lbl_805452E0:
 	.asciz "BTM_SetDiscoverability: mode %d [NonDisc-0, Lim-1, Gen-2], window 0x%04x, interval 0x%04x"
 	.balign 4
 
 
-.global lbl_8054533C
-lbl_8054533C:
-	# ROM: 0x54143C
 .global lbl_8054533C
 lbl_8054533C:
 	.asciz "BTM_SetConnectability: mode %d [NonConn-0, Conn-1], window 0x%04x, interval 0x%04x"
@@ -34047,16 +33625,10 @@ lbl_8054533C:
 
 .global lbl_80545390
 lbl_80545390:
-	# ROM: 0x541490
-.global lbl_80545390
-lbl_80545390:
 	.asciz "BTM_CancelInquiry called"
 	.balign 4
 
 
-.global lbl_805453AC
-lbl_805453AC:
-	# ROM: 0x5414AC
 .global lbl_805453AC
 lbl_805453AC:
 	.asciz "BTM_StartInquiry: mode: %d, dur: %d, rsps: %d, flt: %d"
@@ -34065,16 +33637,10 @@ lbl_805453AC:
 
 .global lbl_805453E4
 lbl_805453E4:
-	# ROM: 0x5414E4
-.global lbl_805453E4
-lbl_805453E4:
 	.asciz "BTM_ReadRemoteDeviceName: bd addr [%02x%02x%02x%02x%02x%02x]"
 	.balign 4
 
 
-.global lbl_80545424
-lbl_80545424:
-	# ROM: 0x541524
 .global lbl_80545424
 lbl_80545424:
 	.asciz "BTM_CancelRemoteDeviceName()"
@@ -34083,25 +33649,16 @@ lbl_80545424:
 
 .global lbl_80545444
 lbl_80545444:
-	# ROM: 0x541544
-.global lbl_80545444
-lbl_80545444:
 	.asciz "BTM_InqDbRead: bd addr [%02x%02x%02x%02x%02x%02x]"
 	.balign 4
 
 
 .global lbl_80545478
 lbl_80545478:
-	# ROM: 0x541578
-.global lbl_80545478
-lbl_80545478:
 	.asciz "BTM Warning: Set Event Filter Failed (HCI returned 0x%x)"
 	.balign 4
 
 
-.global lbl_805454B4
-lbl_805454B4:
-	# ROM: 0x5415B4
 .global lbl_805454B4
 lbl_805454B4:
 	.asciz "BTM Inq Compl Callback: status 0x%02x, num results %d"
@@ -34111,16 +33668,10 @@ lbl_805454B4:
 
 .global lbl_805454F0
 lbl_805454F0:
-	# ROM: 0x5415F0
-.global lbl_805454F0
-lbl_805454F0:
 	.asciz "btm mode change AFTER unsniffing; hci hdl 0x%x, types 0x%02x"
 	.balign 4
 
 
-.global lbl_80545530
-lbl_80545530:
-	# ROM: 0x541630
 .global lbl_80545530
 lbl_80545530:
 	.asciz "btm_esco_conn_rsp -> No Resources"
@@ -34133,9 +33684,6 @@ lbl_80545530:
 	.balign 4
 
 
-.global lbl_8054565C
-lbl_8054565C:
-	# ROM: 0x54175C
 .global lbl_8054565C
 lbl_8054565C:
 	.asciz "btm_sco_conn_req: No one wants this SCO connection; rejecting it"
@@ -34156,17 +33704,11 @@ lbl_8054565C:
 
 .global lbl_805457F4
 lbl_805457F4:
-	# ROM: 0x5418F4
-.global lbl_805457F4
-lbl_805457F4:
 	.asciz "btm_esco_proc_conn_chg -> handle 0x%04x, status 0x%02x"
 	.balign 4
 	.4byte 0
 
 
-.global lbl_80545830
-lbl_80545830:
-	# ROM: 0x541930
 .global lbl_80545830
 lbl_80545830:
 	.asciz "BTM_Sec: application registered"
@@ -34177,9 +33719,6 @@ lbl_80545830:
 	.balign 4
 
 
-.global lbl_805458C8
-lbl_805458C8:
-	# ROM: 0x5419C8
 .global lbl_805458C8
 lbl_805458C8:
 	.asciz "BTM_SetPinType: pin type %d [variable-0, fixed-1], code %s, length %d"
@@ -34194,15 +33733,9 @@ lbl_805458C8:
 
 .global lbl_805459D0
 lbl_805459D0:
-	# ROM: 0x541AD0
-.global lbl_805459D0
-lbl_805459D0:
 	.asciz "Security Manager: Attempting Authorization of Unknown Device Address [%02x%02x%02x%02x%02x%02x]"
 
 
-.global lbl_80545A30
-lbl_80545A30:
-	# ROM: 0x541B30
 .global lbl_80545A30
 lbl_80545A30:
 	.asciz "Security Manager: authorized status:%d State:%d"
@@ -34219,9 +33752,6 @@ lbl_80545A30:
 	.balign 4
 
 
-.global lbl_80545B2C
-lbl_80545B2C:
-	# ROM: 0x541C2C
 .global lbl_80545B2C
 lbl_80545B2C:
 	.asciz "btm_restore_mode: Authen Enable -> %d"
@@ -34246,16 +33776,10 @@ lbl_80545B2C:
 
 .global lbl_80545D88
 lbl_80545D88:
-	# ROM: 0x541E88
-.global lbl_80545D88
-lbl_80545D88:
 	.asciz "Security Manager: MX service not found PSM:%d Proto:%d SCN:%d"
 	.balign 4
 
 
-.global lbl_80545DC8
-lbl_80545DC8:
-	# ROM: 0x541EC8
 .global lbl_80545DC8
 lbl_80545DC8:
 	.asciz "Security Manager: connect request from not paired device"
@@ -34264,16 +33788,10 @@ lbl_80545DC8:
 
 .global lbl_80545E04
 lbl_80545E04:
-	# ROM: 0x541F04
-.global lbl_80545E04
-lbl_80545E04:
 	.asciz "Security Manager: rmt_name_complete status:%d State:%d"
 	.balign 4
 
 
-.global lbl_80545E3C
-lbl_80545E3C:
-	# ROM: 0x541F3C
 .global lbl_80545E3C
 lbl_80545E3C:
 	.asciz "Security Manager: auth_complete status:%d State:%d"
@@ -34282,16 +33800,10 @@ lbl_80545E3C:
 
 .global lbl_80545E70
 lbl_80545E70:
-	# ROM: 0x541F70
-.global lbl_80545E70
-lbl_80545E70:
 	.asciz "Security Manager: mkey comp status:%d State:%d"
 	.balign 4
 
 
-.global lbl_80545EA0
-lbl_80545EA0:
-	# ROM: 0x541FA0
 .global lbl_80545EA0
 lbl_80545EA0:
 	.asciz "Security Manager: encrypt_change status:%d State:%d"
@@ -34299,23 +33811,14 @@ lbl_80545EA0:
 
 .global lbl_80545ED4
 lbl_80545ED4:
-	# ROM: 0x541FD4
-.global lbl_80545ED4
-lbl_80545ED4:
 	.asciz "Security Manager: btm_sec_connected handle:%d status:%d enc_mode:%d"
 
 
 .global lbl_80545F18
 lbl_80545F18:
-	# ROM: 0x542018
-.global lbl_80545F18
-lbl_80545F18:
 	.asciz "btm_sec_link_key_notification()  BDA: %02x:%02x:%02x:%02x:%02x:%02x"
 
 
-.global lbl_80545F5C
-lbl_80545F5C:
-	# ROM: 0x54205C
 .global lbl_80545F5C
 lbl_80545F5C:
 	.asciz "                                TYPE: %d"
@@ -34324,16 +33827,10 @@ lbl_80545F5C:
 
 .global lbl_80545F88
 lbl_80545F88:
-	# ROM: 0x542088
-.global lbl_80545F88
-lbl_80545F88:
 	.asciz "btm_sec_link_key_request()  BDA: %02x:%02x:%02x:%02x:%02x:%02x"
 	.balign 4
 
 
-.global lbl_80545FC8
-lbl_80545FC8:
-	# ROM: 0x5420C8
 .global lbl_80545FC8
 lbl_80545FC8:
 	.asciz "btm_sec_pin_code_request_timeout()"
@@ -34366,15 +33863,9 @@ lbl_80545FC8:
 
 .global lbl_80546224
 lbl_80546224:
-	# ROM: 0x542324
-.global lbl_80546224
-lbl_80546224:
 	.asciz "btm_sec_collision_timeout()"
 
 
-.global lbl_80546240
-lbl_80546240:
-	# ROM: 0x542340
 .global lbl_80546240
 lbl_80546240:
 	.asciz "Ctlr H/w error event"
@@ -34383,16 +33874,10 @@ lbl_80546240:
 
 .global lbl_80546258
 lbl_80546258:
-	# ROM: 0x542358
-.global lbl_80546258
-lbl_80546258:
 	.asciz "Event mismatch opcode=%X cmd opcode=%X"
 	.balign 4
 
 
-.global lbl_80546280
-lbl_80546280:
-	# ROM: 0x542380
 .global lbl_80546280
 lbl_80546280:
 	.asciz "Cmd timeout; no cmd in queue"
@@ -34401,24 +33886,15 @@ lbl_80546280:
 
 .global lbl_805462A0
 lbl_805462A0:
-	# ROM: 0x5423A0
-.global lbl_805462A0
-lbl_805462A0:
 	.asciz "BTU HCI command timeout - cmd opcode = 0x%02x"
 	.balign 4
 
 
 .global lbl_805462D0
 lbl_805462D0:
-	# ROM: 0x5423D0
-.global lbl_805462D0
-lbl_805462D0:
 	.asciz "WARNING: GAP Conn Indication for Unexpected Bd Addr...Disconnecting"
 
 
-.global lbl_80546314
-lbl_80546314:
-	# ROM: 0x542414
 .global lbl_80546314
 lbl_80546314:
 	.asciz "GAP_CONN - Rcvd L2CAP conn ind, CID: 0x%x"
@@ -34427,16 +33903,10 @@ lbl_80546314:
 
 .global lbl_80546340
 lbl_80546340:
-	# ROM: 0x542440
-.global lbl_80546340
-lbl_80546340:
 	.asciz "GAP_CONN - Rcvd L2CAP disc, CID: 0x%x"
 	.balign 4
 
 
-.global lbl_80546368
-lbl_80546368:
-	# ROM: 0x542468
 .global lbl_80546368
 lbl_80546368:
 	.asciz "GAP_CONN - Rcvd L2CAP Is Congested (%d), CID: 0x%x"
@@ -34444,9 +33914,6 @@ lbl_80546368:
 	.4byte 0
 
 
-.global lbl_805463A0
-lbl_805463A0:
-	# ROM: 0x5424A0
 .global lbl_805463A0
 lbl_805463A0:
 	.asciz "   GAP Inquiry Complete Event (Status 0x%04x, Result(s) %d)"
@@ -34476,15 +33943,9 @@ lbl_8054646C:
 
 .global lbl_80546518
 lbl_80546518:
-	# ROM: 0x542618
-.global lbl_80546518
-lbl_80546518:
 	.asciz "   GAP: FindAddrByName Rem Name Cmpl Evt (Status 0x%04x, Name [%s])"
 
 
-.global lbl_8054655C
-lbl_8054655C:
-	# ROM: 0x54265C
 .global lbl_8054655C
 lbl_8054655C:
 	.asciz "   GAP: FindAddrByName Rem Name Cmpl Evt (Status 0x%04x)"
@@ -34519,9 +33980,6 @@ lbl_805465BC:
 	.4byte lbl_802F0BBC
 
 
-.global lbl_805465E0
-lbl_805465E0:
-	# ROM: 0x5426E0
 .global lbl_805465E0
 lbl_805465E0:
 	.asciz "   GAP: FindAddrByName Inq Cmpl Evt (Status 0x%04x, Result(s) %d)"
@@ -34572,15 +34030,9 @@ lbl_8054666C:
 
 .global lbl_80546690
 lbl_80546690:
-	# ROM: 0x542790
-.global lbl_80546690
-lbl_80546690:
 	.asciz "HID - Originate started"
 
 
-.global lbl_805466A8
-lbl_805466A8:
-	# ROM: 0x5427A8
 .global lbl_805466A8
 lbl_805466A8:
 	.asciz "HID - Originate failed"
@@ -34589,17 +34041,11 @@ lbl_805466A8:
 
 .global lbl_805466C0
 lbl_805466C0:
-	# ROM: 0x5427C0
-.global lbl_805466C0
-lbl_805466C0:
 	.asciz "hidd_proc_repage_timeout"
 	.balign 4
 	.4byte 0
 
 
-.global lbl_805466E0
-lbl_805466E0:
-	# ROM: 0x5427E0
 .global lbl_805466E0
 lbl_805466E0:
 	.asciz "HID_ERR_NOT_REGISTERED"
@@ -34624,24 +34070,15 @@ lbl_805466E0:
 
 .global lbl_805467F8
 lbl_805467F8:
-	# ROM: 0x5428F8
-.global lbl_805467F8
-lbl_805467F8:
 	.asciz "HID Control Registration failed"
 
 
-.global lbl_80546818
-lbl_80546818:
-	# ROM: 0x542918
 .global lbl_80546818
 lbl_80546818:
 	.asciz "HID Interrupt Registration failed"
 	.balign 4
 
 
-.global lbl_8054683C
-lbl_8054683C:
-	# ROM: 0x54293C
 .global lbl_8054683C
 lbl_8054683C:
 	.asciz "HID - disconnect"
@@ -34659,9 +34096,6 @@ lbl_8054683C:
 
 .global lbl_8054695C
 lbl_8054695C:
-	# ROM: 0x542A5C
-.global lbl_8054695C
-lbl_8054695C:
 	.asciz "HID - Originate failed"
 	.balign 4
 	.4byte 0
@@ -34675,15 +34109,9 @@ lbl_8054695C:
 
 .global lbl_80546A14
 lbl_80546A14:
-	# ROM: 0x542B14
-.global lbl_80546A14
-lbl_80546A14:
 	.asciz "HID - Rcvd L2CAP cfg ind, unknown CID: 0x%x"
 
 
-.global lbl_80546A40
-lbl_80546A40:
-	# ROM: 0x542B40
 .global lbl_80546A40
 lbl_80546A40:
 	.asciz "HID - Rcvd cfg ind, sent cfg cfm, CID: 0x%x"
@@ -34693,16 +34121,10 @@ lbl_80546A40:
 
 .global lbl_80546A98
 lbl_80546A98:
-	# ROM: 0x542B98
-.global lbl_80546A98
-lbl_80546A98:
 	.asciz "HID - Rcvd L2CAP disc, unknown CID: 0x%x"
 	.balign 4
 
 
-.global lbl_80546AC4
-lbl_80546AC4:
-	# ROM: 0x542BC4
 .global lbl_80546AC4
 lbl_80546AC4:
 	.asciz "HID - Rcvd L2CAP disc, CID: 0x%x"
@@ -34711,16 +34133,10 @@ lbl_80546AC4:
 
 .global lbl_80546AE8
 lbl_80546AE8:
-	# ROM: 0x542BE8
-.global lbl_80546AE8
-lbl_80546AE8:
 	.asciz "HID - Rcvd L2CAP disc cfm, unknown CID: 0x%x"
 	.balign 4
 
 
-.global lbl_80546B18
-lbl_80546B18:
-	# ROM: 0x542C18
 .global lbl_80546B18
 lbl_80546B18:
 	.asciz "HID - Rcvd L2CAP disc cfm, CID: 0x%x"
@@ -34729,16 +34145,10 @@ lbl_80546B18:
 
 .global lbl_80546B40
 lbl_80546B40:
-	# ROM: 0x542C40
-.global lbl_80546B40
-lbl_80546B40:
 	.asciz "HID - Rcvd L2CAP congestion status, unknown CID: 0x%x"
 	.balign 4
 
 
-.global lbl_80546B78
-lbl_80546B78:
-	# ROM: 0x542C78
 .global lbl_80546B78
 lbl_80546B78:
 	.asciz "HID - Rcvd L2CAP congestion status, CID: 0x%x  Cong: %d"
@@ -34746,17 +34156,11 @@ lbl_80546B78:
 
 .global lbl_80546BB0
 lbl_80546BB0:
-	# ROM: 0x542CB0
-.global lbl_80546BB0
-lbl_80546BB0:
 	.asciz "HID - Rcvd L2CAP data, unknown CID: 0x%x"
 	.balign 4
 	.4byte 0
 
 
-.global lbl_80546BE0
-lbl_80546BE0:
-	# ROM: 0x542CE0
 .global lbl_80546BE0
 lbl_80546BE0:
 	.asciz "L2CAP - L2CA_Register() called for PSM: 0x%04x"
@@ -34771,16 +34175,10 @@ lbl_80546BE0:
 
 .global lbl_80546C88
 lbl_80546C88:
-	# ROM: 0x542D88
-.global lbl_80546C88
-lbl_80546C88:
 	.asciz "L2CAP - L2CA_Deregister() called for PSM: 0x%04x"
 	.balign 4
 
 
-.global lbl_80546CBC
-lbl_80546CBC:
-	# ROM: 0x542DBC
 .global lbl_80546CBC
 lbl_80546CBC:
 	.asciz "L2CAP - PSM: 0x%04x not found for deregistration"
@@ -34814,16 +34212,10 @@ lbl_80546CBC:
 
 .global lbl_80546F38
 lbl_80546F38:
-	# ROM: 0x543038
-.global lbl_80546F38
-lbl_80546F38:
 	.asciz "L2CA_ConfigReq()  CID: 0x%04x"
 	.balign 4
 
 
-.global lbl_80546F58
-lbl_80546F58:
-	# ROM: 0x543058
 .global lbl_80546F58
 lbl_80546F58:
 	.asciz "L2CAP - no CCB for L2CA_cfg_req, CID: %d"
@@ -34832,16 +34224,10 @@ lbl_80546F58:
 
 .global lbl_80546F84
 lbl_80546F84:
-	# ROM: 0x543084
-.global lbl_80546F84
-lbl_80546F84:
 	.asciz "L2CA_ConfigRsp()  CID: 0x%04x  Result: %d"
 	.balign 4
 
 
-.global lbl_80546FB0
-lbl_80546FB0:
-	# ROM: 0x5430B0
 .global lbl_80546FB0
 lbl_80546FB0:
 	.asciz "L2CAP - no CCB for L2CA_cfg_rsp, CID: %d"
@@ -34850,16 +34236,10 @@ lbl_80546FB0:
 
 .global lbl_80546FDC
 lbl_80546FDC:
-	# ROM: 0x5430DC
-.global lbl_80546FDC
-lbl_80546FDC:
 	.asciz "L2CA_DisconnectReq()  CID: 0x%04x"
 	.balign 4
 
 
-.global lbl_80547000
-lbl_80547000:
-	# ROM: 0x543100
 .global lbl_80547000
 lbl_80547000:
 	.asciz "L2CAP - no CCB for L2CA_disc_req, CID: %d"
@@ -34868,16 +34248,10 @@ lbl_80547000:
 
 .global lbl_8054702C
 lbl_8054702C:
-	# ROM: 0x54312C
-.global lbl_8054702C
-lbl_8054702C:
 	.asciz "L2CA_DisconnectRsp()  CID: 0x%04x"
 	.balign 4
 
 
-.global lbl_80547050
-lbl_80547050:
-	# ROM: 0x543150
 .global lbl_80547050
 lbl_80547050:
 	.asciz "L2CAP - no CCB for L2CA_disc_rsp, CID: %d"
@@ -34896,9 +34270,6 @@ lbl_80547050:
 	.asciz "L2CAP - L2CA_ping rejected - link disconnecting"
 
 
-.global lbl_805471B0
-lbl_805471B0:
-	# ROM: 0x5432B0
 .global lbl_805471B0
 lbl_805471B0:
 	.asciz "L2CAP - no CCB for L2CA_SetIdleTimeout, CID: %d"
@@ -34933,9 +34304,6 @@ lbl_80547370:
 	.balign 4
 
 
-.global lbl_805473B0
-lbl_805473B0:
-	# ROM: 0x5434B0
 .global lbl_805473B0
 lbl_805473B0:
 	.asciz "L2CAP - Calling Disconnect_Ind_Cb(), CID: 0x%04x  No Conf Needed"
@@ -35016,16 +34384,10 @@ lbl_805474D4:
 
 .global lbl_80547540
 lbl_80547540:
-	# ROM: 0x543640
-.global lbl_80547540
-lbl_80547540:
 	.asciz "L2CAP - st: TERM_W4_SEC_COMP evt: %d"
 	.balign 4
 
 
-.global lbl_80547568
-lbl_80547568:
-	# ROM: 0x543668
 .global lbl_80547568
 lbl_80547568:
 	.asciz "L2CAP - Calling Connect_Ind_Cb(), CID: 0x%04x"
@@ -35106,9 +34468,6 @@ lbl_80547700:
 	.4byte lbl_802F7C54
 
 
-.global lbl_80547770
-lbl_80547770:
-	# ROM: 0x543870
 .global lbl_80547770
 lbl_80547770:
 	.asciz "L2CAP - st: W4_L2CA_CON_RSP evt: %d"
@@ -35264,9 +34623,6 @@ lbl_80547A78:
 
 .global lbl_80547AE8
 lbl_80547AE8:
-	# ROM: 0x543BE8
-.global lbl_80547AE8
-lbl_80547AE8:
 	.asciz "L2CAP - st: W4_L2CA_DISC_RSP evt: %d"
 	.balign 4
 
@@ -35308,16 +34664,10 @@ lbl_80547B10:
 
 .global lbl_80547BA8
 lbl_80547BA8:
-	# ROM: 0x543CA8
-.global lbl_80547BA8
-lbl_80547BA8:
 	.asciz "L2CAP failed to allocate LCB"
 	.balign 4
 
 
-.global lbl_80547BC8
-lbl_80547BC8:
-	# ROM: 0x543CC8
 .global lbl_80547BC8
 lbl_80547BC8:
 	.asciz "L2CAP got conn_req while connected"
@@ -35327,15 +34677,9 @@ lbl_80547BC8:
 
 .global lbl_80547BF0
 lbl_80547BF0:
-	# ROM: 0x543CF0
-.global lbl_80547BF0
-lbl_80547BF0:
 	.asciz "L2CAP got conn_comp for unknown BD_ADDR"
 
 
-.global lbl_80547C18
-lbl_80547C18:
-	# ROM: 0x543D18
 .global lbl_80547C18
 lbl_80547C18:
 	.asciz "L2CAP got conn_comp in bad state: %d  status: 0x%d"
@@ -35344,16 +34688,10 @@ lbl_80547C18:
 
 .global lbl_80547C4C
 lbl_80547C4C:
-	# ROM: 0x543D4C
-.global lbl_80547C4C
-lbl_80547C4C:
 	.asciz "L2CAP got sec_comp for unknown BD_ADDR"
 	.balign 4
 
 
-.global lbl_80547C74
-lbl_80547C74:
-	# ROM: 0x543D74
 .global lbl_80547C74
 lbl_80547C74:
 	.asciz "L2CAP - ping timeout"
@@ -35371,15 +34709,9 @@ lbl_80547C74:
 
 .global lbl_80547DA0
 lbl_80547DA0:
-	# ROM: 0x543EA0
-.global lbl_80547DA0
-lbl_80547DA0:
 	.asciz "L2CAP - dropping incomplete pkt"
 
 
-.global lbl_80547DC0
-lbl_80547DC0:
-	# ROM: 0x543EC0
 .global lbl_80547DC0
 lbl_80547DC0:
 	.asciz "L2CAP - dropping too long pkt"
@@ -35388,17 +34720,11 @@ lbl_80547DC0:
 
 .global lbl_80547DE0
 lbl_80547DE0:
-	# ROM: 0x543EE0
-.global lbl_80547DE0
-lbl_80547DE0:
 	.asciz "L2CAP - rcvd segment complete, unknown handle: %d"
 	.balign 4
 	.4byte 0
 
 
-.global lbl_80547E18
-lbl_80547E18:
-	# ROM: 0x543F18
 .global lbl_80547E18
 lbl_80547E18:
 	.asciz "L2CAP - expected pkt start, got: %d"
@@ -35445,15 +34771,9 @@ lbl_80547E18:
 
 .global lbl_805480EC
 lbl_805480EC:
-	# ROM: 0x5441EC
-.global lbl_805480EC
-lbl_805480EC:
 	.asciz "L2CAP HOLD CONTINUE"
 
 
-.global lbl_80548100
-lbl_80548100:
-	# ROM: 0x544200
 .global lbl_80548100
 lbl_80548100:
 	.asciz "L2CAP HOLD TIMEOUT"
@@ -35463,16 +34783,10 @@ lbl_80548100:
 
 .global lbl_80548118
 lbl_80548118:
-	# ROM: 0x544218
-.global lbl_80548118
-lbl_80548118:
 	.asciz "L2CAP - no buffer cmd_rej"
 	.balign 4
 
 
-.global lbl_80548134
-lbl_80548134:
-	# ROM: 0x544234
 .global lbl_80548134
 lbl_80548134:
 	.asciz "L2CAP - no buffer for conn_req"
@@ -35481,16 +34795,10 @@ lbl_80548134:
 
 .global lbl_80548154
 lbl_80548154:
-	# ROM: 0x544254
-.global lbl_80548154
-lbl_80548154:
 	.asciz "L2CAP - no buffer for cfg_rej"
 	.balign 4
 
 
-.global lbl_80548174
-lbl_80548174:
-	# ROM: 0x544274
 .global lbl_80548174
 lbl_80548174:
 	.asciz "L2CAP - no buffer for echo_req"
@@ -35500,16 +34808,10 @@ lbl_80548174:
 
 .global lbl_805481D8
 lbl_805481D8:
-	# ROM: 0x5442D8
-.global lbl_805481D8
-lbl_805481D8:
 	.asciz "L2CAP - no buffer for l2cu_create_conn"
 	.balign 4
 
 
-.global lbl_80548200
-lbl_80548200:
-	# ROM: 0x544300
 .global lbl_80548200
 lbl_80548200:
 	.asciz "port_open_continue"
@@ -35520,17 +34822,11 @@ lbl_80548200:
 
 .global lbl_80548238
 lbl_80548238:
-	# ROM: 0x544338
-.global lbl_80548238
-lbl_80548238:
 	.asciz "PORT_StartCnf result:%d"
 	.asciz "PORT_StartCnf failed result:%d"
 	.balign 4
 
 
-.global lbl_80548270
-lbl_80548270:
-	# ROM: 0x544370
 .global lbl_80548270
 lbl_80548270:
 	.asciz "PORT_StartInd"
@@ -35539,16 +34835,10 @@ lbl_80548270:
 
 .global lbl_80548280
 lbl_80548280:
-	# ROM: 0x544380
-.global lbl_80548280
-lbl_80548280:
 	.asciz "PORT_ParNegInd dlci:%d mtu:%d"
 	.balign 4
 
 
-.global lbl_805482A0
-lbl_805482A0:
-	# ROM: 0x5443A0
 .global lbl_805482A0
 lbl_805482A0:
 	.asciz "PORT_ParNegInd: port not found"
@@ -35557,16 +34847,10 @@ lbl_805482A0:
 
 .global lbl_805482C0
 lbl_805482C0:
-	# ROM: 0x5443C0
-.global lbl_805482C0
-lbl_805482C0:
 	.asciz "PORT_ParNegCnf dlci:%d mtu:%d cl: %d k: %d"
 	.balign 4
 
 
-.global lbl_805482EC
-lbl_805482EC:
-	# ROM: 0x5443EC
 .global lbl_805482EC
 lbl_805482EC:
 	.asciz "PORT_DlcEstablishInd dlci:%d mtu:%d"
@@ -35574,16 +34858,10 @@ lbl_805482EC:
 
 .global lbl_80548310
 lbl_80548310:
-	# ROM: 0x544410
-.global lbl_80548310
-lbl_80548310:
 	.asciz "PORT_DlcEstablishCnf dlci:%d mtu:%d result:%d"
 	.balign 4
 
 
-.global lbl_80548340
-lbl_80548340:
-	# ROM: 0x544440
 .global lbl_80548340
 lbl_80548340:
 	.asciz "PORT_PortNegInd"
@@ -35595,15 +34873,9 @@ lbl_80548340:
 
 .global lbl_805483A0
 lbl_805483A0:
-	# ROM: 0x5444A0
-.global lbl_805483A0
-lbl_805483A0:
 	.asciz "PORT_ControlInd"
 
 
-.global lbl_805483B0
-lbl_805483B0:
-	# ROM: 0x5444B0
 .global lbl_805483B0
 lbl_805483B0:
 	.asciz "PORT_ControlInd DTR_DSR : %d, RTS_CTS : %d, RI : %d, DCD : %d"
@@ -35612,15 +34884,9 @@ lbl_805483B0:
 
 .global lbl_805483F0
 lbl_805483F0:
-	# ROM: 0x5444F0
-.global lbl_805483F0
-lbl_805483F0:
 	.asciz "PORT_ControlCnf"
 
 
-.global lbl_80548400
-lbl_80548400:
-	# ROM: 0x544500
 .global lbl_80548400
 lbl_80548400:
 	.asciz "PORT_LineStatusInd"
@@ -35629,16 +34895,10 @@ lbl_80548400:
 
 .global lbl_80548414
 lbl_80548414:
-	# ROM: 0x544514
-.global lbl_80548414
-lbl_80548414:
 	.asciz "PORT_DlcReleaseInd"
 	.balign 4
 
 
-.global lbl_80548428
-lbl_80548428:
-	# ROM: 0x544528
 .global lbl_80548428
 lbl_80548428:
 	.asciz "PORT_CloseInd"
@@ -35647,16 +34907,10 @@ lbl_80548428:
 
 .global lbl_80548438
 lbl_80548438:
-	# ROM: 0x544538
-.global lbl_80548438
-lbl_80548438:
 	.asciz "Port_TimeOutCloseMux"
 	.balign 4
 
 
-.global lbl_80548450
-lbl_80548450:
-	# ROM: 0x544550
 .global lbl_80548450
 lbl_80548450:
 	.asciz "PORT_DataInd with data length %d"
@@ -35665,16 +34919,10 @@ lbl_80548450:
 
 .global lbl_80548474
 lbl_80548474:
-	# ROM: 0x544574
-.global lbl_80548474
-lbl_80548474:
 	.asciz "PORT_DataInd. Buffer over run. Dropping the buffer"
 	.balign 4
 
 
-.global lbl_805484A8
-lbl_805484A8:
-	# ROM: 0x5445A8
 .global lbl_805484A8
 lbl_805484A8:
 	.asciz "PORT_FlowInd fc:%d"
@@ -35685,16 +34933,10 @@ lbl_805484A8:
 
 .global lbl_805484D4
 lbl_805484D4:
-	# ROM: 0x5445D4
-.global lbl_805484D4
-lbl_805484D4:
 	.asciz "port_rfc_closed in OPENING state ignored"
 	.balign 4
 
 
-.global lbl_80548500
-lbl_80548500:
-	# ROM: 0x544600
 .global lbl_80548500
 lbl_80548500:
 	.asciz "port_rfc_closed state:%d sending events:%x"
@@ -35702,9 +34944,6 @@ lbl_80548500:
 	.4byte 0
 
 
-.global lbl_80548530
-lbl_80548530:
-	# ROM: 0x544630
 .global lbl_80548530
 lbl_80548530:
 	.asciz "port_select_mtu bad packet size"
@@ -35719,25 +34958,16 @@ lbl_80548530:
 
 .global lbl_80548630
 lbl_80548630:
-	# ROM: 0x544730
-.global lbl_80548630
-lbl_80548630:
 	.asciz "rfc_port_closed DONE"
 	.balign 4
 
 
 .global lbl_80548648
 lbl_80548648:
-	# ROM: 0x544748
-.global lbl_80548648
-lbl_80548648:
 	.asciz "PORT_DataInd Data reached HW. Sending FC set."
 	.balign 4
 
 
-.global lbl_80548678
-lbl_80548678:
-	# ROM: 0x544778
 .global lbl_80548678
 lbl_80548678:
 	.asciz "rfc_find_lcid_mcb LCID:0x%x"
@@ -35776,9 +35006,6 @@ lbl_805487B8:
 	.balign 4
 
 
-.global lbl_80548828
-lbl_80548828:
-	# ROM: 0x544928
 .global lbl_80548828
 lbl_80548828:
 	.asciz "RFCOMM MX ignored - evt:%d in state:%d"
@@ -35845,15 +35072,9 @@ lbl_80548918:
 
 .global lbl_80548954
 lbl_80548954:
-	# ROM: 0x544A54
-.global lbl_80548954
-lbl_80548954:
 	.asciz "rfc_mx_sm_state_wait_sabme - evt:%d"
 
 
-.global lbl_80548978
-lbl_80548978:
-	# ROM: 0x544A78
 .global lbl_80548978
 lbl_80548978:
 	.asciz "rfc_mx_sm_state_connected - evt:%d"
@@ -35877,9 +35098,6 @@ lbl_8054899C:
 	.4byte lbl_802FF5E4
 
 
-.global lbl_805489CC
-lbl_805489CC:
-	# ROM: 0x544ACC
 .global lbl_805489CC
 lbl_805489CC:
 	.asciz "rfc_mx_sm_state_disc_wait_ua - evt:%d"
@@ -35908,16 +35126,10 @@ lbl_805489F4:
 
 .global lbl_80548A30
 lbl_80548A30:
-	# ROM: 0x544B30
-.global lbl_80548A30
-lbl_80548A30:
 	.asciz "rfc_mx_conf_cnf p_cfg:%08x res:%d "
 	.balign 4
 
 
-.global lbl_80548A54
-lbl_80548A54:
-	# ROM: 0x544B54
 .global lbl_80548A54
 lbl_80548A54:
 	.asciz "rfc_mx_conf_ind p_cfg:%0x"
@@ -35926,25 +35138,16 @@ lbl_80548A54:
 
 .global lbl_80548A70
 lbl_80548A70:
-	# ROM: 0x544B70
-.global lbl_80548A70
-lbl_80548A70:
 	.asciz "NULL port event %d"
 	.balign 4
 
 
 .global lbl_80548A84
 lbl_80548A84:
-	# ROM: 0x544B84
-.global lbl_80548A84
-lbl_80548A84:
 	.asciz "Port error state %d event %d"
 	.balign 4
 
 
-.global lbl_80548AA4
-lbl_80548AA4:
-	# ROM: 0x544BA4
 .global lbl_80548AA4
 lbl_80548AA4:
 	.asciz "Port state closed Event ignored %d"
@@ -35971,9 +35174,6 @@ lbl_80548AC8:
 	.4byte lbl_802FFAD0
 
 
-.global lbl_80548B04
-lbl_80548B04:
-	# ROM: 0x544C04
 .global lbl_80548B04
 lbl_80548B04:
 	.asciz "Port state sabme_wait_ua Event ignored %d"
@@ -36051,9 +35251,6 @@ lbl_80548C68:
 
 .global lbl_80548CA8
 lbl_80548CA8:
-	# ROM: 0x544DA8
-.global lbl_80548CA8
-lbl_80548CA8:
 	.asciz "Port state opened Event ignored %d"
 	.balign 4
 
@@ -36078,9 +35275,6 @@ lbl_80548CCC:
 	.4byte lbl_80300110
 
 
-.global lbl_80548D08
-lbl_80548D08:
-	# ROM: 0x544E08
 .global lbl_80548D08
 lbl_80548D08:
 	.asciz "Port state disc_wait_ua Event ignored %d"
@@ -36109,16 +35303,10 @@ lbl_80548D34:
 
 .global lbl_80548D70
 lbl_80548D70:
-	# ROM: 0x544E70
-.global lbl_80548D70
-lbl_80548D70:
 	.asciz "***** MX PN while disconnecting *****"
 	.balign 4
 
 
-.global lbl_80548D98
-lbl_80548D98:
-	# ROM: 0x544E98
 .global lbl_80548D98
 lbl_80548D98:
 	.asciz "Bad Length1: %d"
@@ -36148,16 +35336,10 @@ lbl_80548D98:
 
 .global lbl_80548E70
 lbl_80548E70:
-	# ROM: 0x544F70
-.global lbl_80548E70
-lbl_80548E70:
 	.asciz "rfc_timer_stop"
 	.balign 4
 
 
-.global lbl_80548E80
-lbl_80548E80:
-	# ROM: 0x544F80
 .global lbl_80548E80
 lbl_80548E80:
 	.asciz "rfc_timer_start - timeout:%d"
@@ -36166,25 +35348,16 @@ lbl_80548E80:
 
 .global lbl_80548EA0
 lbl_80548EA0:
-	# ROM: 0x544FA0
-.global lbl_80548EA0
-lbl_80548EA0:
 	.asciz "rfc_port_timer_start - timeout:%d"
 	.balign 4
 
 
 .global lbl_80548EC4
 lbl_80548EC4:
-	# ROM: 0x544FC4
-.global lbl_80548EC4
-lbl_80548EC4:
 	.asciz "rfc_port_timer_stop"
 	.asciz "rfc_port_closed"
 
 
-.global lbl_80548EE8
-lbl_80548EE8:
-	# ROM: 0x544FE8
 .global lbl_80548EE8
 lbl_80548EE8:
 	.asciz "rfc_inc_credit:%d"
@@ -36194,25 +35367,16 @@ lbl_80548EE8:
 
 .global lbl_80548F00
 lbl_80548F00:
-	# ROM: 0x545000
-.global lbl_80548F00
-lbl_80548F00:
 	.asciz "SDP_InitDiscoveryDb Illegal param: p_db 0x%x, len %d, num_uuid %d, num_attr %d"
 	.balign 4
 
 
 .global lbl_80548F50
 lbl_80548F50:
-	# ROM: 0x545050
-.global lbl_80548F50
-lbl_80548F50:
 	.asciz "SDP_AddAttribute: attr_len:%d too long. truncate to (%d)"
 	.balign 4
 
 
-.global lbl_80548F8C
-lbl_80548F8C:
-	# ROM: 0x54508C
 .global lbl_80548F8C
 lbl_80548F8C:
 	.asciz "SDP_AddUuidSequence - too long, add %d uuids of %d"
@@ -36222,9 +35386,6 @@ lbl_80548F8C:
 
 .global lbl_80548FE8
 lbl_80548FE8:
-	# ROM: 0x5450E8
-.global lbl_80548FE8
-lbl_80548FE8:
 	.asciz "SDP - Unexp. PDU: %d in state: %d"
 	.balign 4
 	.4byte 0
@@ -36232,15 +35393,9 @@ lbl_80548FE8:
 
 .global lbl_80549010
 lbl_80549010:
-	# ROM: 0x545110
-.global lbl_80549010
-lbl_80549010:
 	.asciz "SDP - Rcvd ServiceSearchRsp, no matches"
 
 
-.global lbl_80549038
-lbl_80549038:
-	# ROM: 0x545138
 .global lbl_80549038
 lbl_80549038:
 	.asciz "SDP - Wrong type: 0x%02x in attr_rsp"
@@ -36275,9 +35430,6 @@ lbl_80549120:
 
 .global lbl_80549148
 lbl_80549148:
-	# ROM: 0x545248
-.global lbl_80549148
-lbl_80549148:
 	.asciz "Service Discovery"
 	.balign 4
 	.asciz "Security Registration Server failed"
@@ -36285,9 +35437,6 @@ lbl_80549148:
 	.asciz "SDP Registration failed"
 
 
-.global lbl_805491C0
-lbl_805491C0:
-	# ROM: 0x5452C0
 .global lbl_805491C0
 lbl_805491C0:
 	.asciz "SDP - Rcvd L2CAP conn ind, sent config req, CID 0x%x"
@@ -36301,15 +35450,9 @@ lbl_805491C0:
 
 .global lbl_80549280
 lbl_80549280:
-	# ROM: 0x545380
-.global lbl_80549280
-lbl_80549280:
 	.asciz "SDP - Rcvd L2CAP cfg ind, unknown CID: 0x%x"
 
 
-.global lbl_805492AC
-lbl_805492AC:
-	# ROM: 0x5453AC
 .global lbl_805492AC
 lbl_805492AC:
 	.asciz "SDP - Rcvd cfg ind, sent cfg cfm, CID: 0x%x"
@@ -36319,15 +35462,9 @@ lbl_805492AC:
 
 .global lbl_80549304
 lbl_80549304:
-	# ROM: 0x545404
-.global lbl_80549304
-lbl_80549304:
 	.asciz "SDP - disconnect  CID: 0x%x"
 
 
-.global lbl_80549320
-lbl_80549320:
-	# ROM: 0x545420
 .global lbl_80549320
 lbl_80549320:
 	.asciz "SDP - Rcvd L2CAP disc, unknown CID: 0x%x"
@@ -36336,25 +35473,16 @@ lbl_80549320:
 
 .global lbl_8054934C
 lbl_8054934C:
-	# ROM: 0x54544C
-.global lbl_8054934C
-lbl_8054934C:
 	.asciz "SDP - Rcvd L2CAP disc, CID: 0x%x"
 	.balign 4
 
 
 .global lbl_80549370
 lbl_80549370:
-	# ROM: 0x545470
-.global lbl_80549370
-lbl_80549370:
 	.asciz "SDP - Ignored L2CAP data while in state: %d, CID: 0x%x"
 	.balign 4
 
 
-.global lbl_805493A8
-lbl_805493A8:
-	# ROM: 0x5454A8
 .global lbl_805493A8
 lbl_805493A8:
 	.asciz "SDP - Rcvd L2CAP data, unknown CID: 0x%x"
@@ -36367,25 +35495,16 @@ lbl_805493A8:
 
 .global lbl_80549420
 lbl_80549420:
-	# ROM: 0x545520
-.global lbl_80549420
-lbl_80549420:
 	.asciz "SDP - Rcvd L2CAP disc cfm, unknown CID: 0x%x"
 	.balign 4
 
 
 .global lbl_80549450
 lbl_80549450:
-	# ROM: 0x545550
-.global lbl_80549450
-lbl_80549450:
 	.asciz "SDP - Rcvd L2CAP disc cfm, CID: 0x%x"
 	.balign 4
 
 
-.global lbl_80549478
-lbl_80549478:
-	# ROM: 0x545578
 .global lbl_80549478
 lbl_80549478:
 	.asciz "SDP - CCB timeout in state: %d  CID: 0x%x"
@@ -36395,16 +35514,10 @@ lbl_80549478:
 
 .global lbl_805494A8
 lbl_805494A8:
-	# ROM: 0x5455A8
-.global lbl_805494A8
-lbl_805494A8:
 	.asciz "SDP - server got unknown PDU: 0x%x"
 	.balign 4
 
 
-.global lbl_805494CC
-lbl_805494CC:
-	# ROM: 0x5455CC
 .global lbl_805494CC
 lbl_805494CC:
 	.asciz "SDP - no buf for search rsp"
@@ -36434,16 +35547,10 @@ lbl_805494E8:
 
 .global lbl_8054952C
 lbl_8054952C:
-	# ROM: 0x54562C
-.global lbl_8054952C
-lbl_8054952C:
 	.asciz "SDP - sdpu_build_n_send_error  code: 0x%x  CID: 0x%x"
 	.balign 4
 
 
-.global lbl_80549564
-lbl_80549564:
-	# ROM: 0x545664
 .global lbl_80549564
 lbl_80549564:
 	.asciz "SDP - no buf for err msg"
@@ -36486,15 +35593,9 @@ lbl_805495C0:
 
 .global lbl_805495E0
 lbl_805495E0:
-	# ROM: 0x5456E0
-.global lbl_805495E0
-lbl_805495E0:
 	.asciz "DBExceptionDestination\n"
 
 
-.global lbl_805495F8
-lbl_805495F8:
-	# ROM: 0x5456F8
 .global lbl_805495F8
 lbl_805495F8:
 	.asciz "<< RVL_SDK - DSP \trelease build: Feb 27 2009 10:01:57 (0x4302_145) >>"
@@ -36506,9 +35607,6 @@ lbl_805495F8:
 	.balign 4
 
 
-.global lbl_80549678
-lbl_80549678:
-	# ROM: 0x545778
 .global lbl_80549678
 lbl_80549678:
 	.asciz "DSP is booting task: 0x%08X\n"
@@ -36531,24 +35629,15 @@ lbl_80549678:
 
 .global lbl_80549880
 lbl_80549880:
-	# ROM: 0x545980
-.global lbl_80549880
-lbl_80549880:
 	.asciz "Warning: DVDOpen(): file '%s' was not found under %s.\n"
 	.balign 4
 
 
 .global lbl_805498B8
 lbl_805498B8:
-	# ROM: 0x5459B8
-.global lbl_805498B8
-lbl_805498B8:
 	.asciz "DVDReadAsync(): specified area is out of the file  "
 
 
-.global lbl_805498EC
-lbl_805498EC:
-	# ROM: 0x5459EC
 .global lbl_805498EC
 lbl_805498EC:
 	.asciz "DVDRead(): specified area is out of the file  "
@@ -36560,9 +35649,6 @@ lbl_80549920:
 	.balign 4
 
 
-.global lbl_80549968
-lbl_80549968:
-	# ROM: 0x545A68
 .global lbl_80549968
 lbl_80549968:
 	.asciz "DVDChangeDisk(): FST in the new disc is too big.   "
@@ -36838,6 +35924,8 @@ lbl_80549D4C:
 .global lbl_80549D60
 lbl_80549D60:
 	#"\n\n\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
+.global lbl_80549D60
+lbl_80549D60:
 	.4byte 0x0A0A0A83
 	.4byte 0x47838981
 	.4byte 0x5B82AA94
@@ -36874,10 +35962,17 @@ lbl_80549D60:
 	.4byte 0x82AD82BE
 	.4byte 0x82B382A2
 	.4byte 0x81420000
+
+.global lbl_80549DF0
+lbl_80549DF0:
 	.asciz "\n\n\nAn error has occurred.\nPress the Eject Button, remove the\nGame Disc, and turn off the power to the\nconsole. Please read the Wii Operations\nManual for further instructions."
-	
 	.balign 4
+
+.global lbl_80549EA0
+lbl_80549EA0:
 	#"\n\n\nEin Fehler ist aufgetreten.\nDrücke den Ausgabeknopf, entnimm die\nDisc und schalte die Wii-Konsole aus.\nBitte lies die Wii-Bedienungsanleitung,\num weitere Informationen zu erhalten."
+.global lbl_80549EA0
+lbl_80549EA0:
 	.4byte 0x0A0A0A45
 	.4byte 0x696E2046
 	.4byte 0x65686C65
@@ -36889,7 +35984,11 @@ lbl_80549D60:
 	.4byte 0x72FC636B
 	.asciz "e den Ausgabeknopf, entnimm die\nDisc und schalte die Wii-Konsole aus.\nBitte lies die Wii-Bedienungsanleitung,\num weitere Informationen zu erhalten."
 
+.global lbl_80549F58
+lbl_80549F58:
 	#.asciz "\n\n\nUne erreur est survenue.\nAppuyez sur le bouton EJECT, retirez\nle disque et éteignez la console.\nVeuillez vous référer au Mode d'emploi\nde la Wii pour plus de détails."
+.global lbl_80549F58
+lbl_80549F58:
 	.4byte 0x0A0A0A55
 	.4byte 0x6E652065
 	.4byte 0x72726575
@@ -36934,8 +36033,12 @@ lbl_80549D60:
 	.asciz "ails."
 	.balign 4
 	.4byte 0
-	
+
+.global lbl_8054A008
+lbl_8054A008:
 	#"\n\n\nOcurrió un Error.\nOprime el Botón EJECT, saca el disco\ny apaga la consola. Consulta el manual\nde operaciones de la consola Wii para\nobtener más información."
+.global lbl_8054A008
+lbl_8054A008:
 	.4byte 0x0A0A0A4F
 	.4byte 0x63757272
 	.4byte 0x69F32075
@@ -36977,18 +36080,30 @@ lbl_80549D60:
 	.4byte 0x6D616369
 	.4byte 0xF36E2E00
 
+.global lbl_8054A0A8
+lbl_8054A0A8:
 	#"\n\n\nSi è verificato un errore.\nPremi il pulsante EJECT, estrai il disco\ne spegni la console. Per maggiori\ninformazioni, consulta il manuale di\nistruzioni della console Wii."
+.global lbl_8054A0A8
+lbl_8054A0A8:
 	.4byte 0x0A0A0A53
 	.4byte 0x6920E820
 	.asciz "verificato un errore.\nPremi il pulsante EJECT, estrai il disco\ne spegni la console. Per maggiori\ninformazioni, consulta il manuale di\nistruzioni della console Wii."
 
-
+.global lbl_8054A154
+lbl_8054A154:
 	.asciz "\n\n\nEr is een fout opgetreden.\nDruk op de EJECT-knop, verwijder de\ndisk en zet het Wii-systeem uit. Lees\nde Wii-handleiding voor meer informatie."
 	.balign 4
+
+.global lbl_8054A1E8
+lbl_8054A1E8:
 	.asciz "\n\n\nAn error has occurred.\nPress the EJECT Button, remove the Disc,\nand turn off the power to the console.\nPlease refer to the Wii Operations Manual\nfor details."
 	.balign 4
 
+.global lbl_8054A28C
+lbl_8054A28C:
 	#"\n\n\nUne erreur est survenue.\nAppuyez sur le bouton EJECT, retirez\nle disque et éteignez la console.\nVeuillez vous référer au mode d'emploi\nWii pour plus de détails."
+.global lbl_8054A28C
+lbl_8054A28C:
 	.4byte 0x0A0A0A55
 	.4byte 0x6E652065
 	.4byte 0x72726575
@@ -37031,8 +36146,12 @@ lbl_80549D60:
 	.4byte 0xE9746169
 	.4byte 0x6C732E00
 
+.global lbl_8054A330
+lbl_8054A330:
 	#"\n\n\nSe ha producido un error.\nPulsa el Botón EJECT, extrae el disco y\napaga la consola. Consulta el manual de\ninstrucciones de la consola Wii para\nobtener más información."
 	#.byte 0
+.global lbl_8054A330
+lbl_8054A330:
 	.4byte 0x0A0A0A53
 	.4byte 0x65206861
 	.4byte 0x2070726F
@@ -37077,7 +36196,11 @@ lbl_80549D60:
 	.4byte 0x616369F3
 	.4byte 0x6E2E0000
 	
+.global lbl_8054A3DC
+lbl_8054A3DC:
 	#"\n\nエラーコード１０４。\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
+.global lbl_8054A3DC
+lbl_8054A3DC:
 	.4byte 0x0A0A8347
 	.4byte 0x8389815B
 	.4byte 0x8352815B
@@ -37120,9 +36243,16 @@ lbl_80549D60:
 	.4byte 0x82B382A2
 	.4byte 0x81420000
 
+.global lbl_8054A480
+lbl_8054A480:
 	.asciz "\n\nError #104,\nAn error has occurred.\nPress the EJECT Button, remove the\nGame Disc, and turn the power off.\nPlease read the Wii Operations Manual\nfor more information."
 	.balign 4
+
+.global lbl_8054A528
+lbl_8054A528:
 	#"\n\n\nエラーコード００１。\n不明なデバイスが見つかりました。"
+.global lbl_8054A528
+lbl_8054A528:
 	.4byte 0x0A0A0A83
 	.4byte 0x47838981
 	.4byte 0x5B835281
@@ -37138,10 +36268,14 @@ lbl_80549D60:
 	.4byte 0x82DC82B5
 	.4byte 0x82BD8142
 	.4byte 0
+
+.global lbl_8054A564
+lbl_8054A564:
 	.asciz "\n\n\nError #001,\nunauthorized device has been detected."
-	
 	.balign 4
 
+.global lbl_8054A59C
+lbl_8054A59C:
 	#"\n\n\nFehler #001:\nEs wurde eine unzulässige Komponente\nentdeckt."
 	.4byte 0x0A0A0A46
 	.4byte 0x65686C65
@@ -37153,8 +36287,10 @@ lbl_80549D60:
 	.4byte 0x6520756E
 	.4byte 0x7A756CE4
 	.asciz "ssige Komponente\nentdeckt."
-
 	.balign 4
+
+.global lbl_8054A5DC
+lbl_8054A5DC:
 	#.asciz "\n\n\nErreur 001:\nun dispositif non autorisé a été détecté."
 	.4byte 0x0A0A0A45
 	.4byte 0x72726575
@@ -37171,16 +36307,22 @@ lbl_80549D60:
 	.4byte 0x64E97465
 	.4byte 0x6374E92E
 	.4byte 0
+
+.global lbl_8054A618
+lbl_8054A618:
 	.asciz "\n\n\nError 001:\nSe ha detectado un dispositivo no\nautorizado."
+	
+.global lbl_8054A654
+lbl_8054A654:
 	.asciz "\n\n\nErrore #001:\nrilevato un dispositivo non autorizzato."
 	.balign 4
+
+.global lbl_8054A690
+lbl_8054A690:
 	.asciz "\n\n\nFout #001:\nongeoorloofd onderdeel gevonden."
 	.balign 4
 
 
-.global lbl_8054A6C0
-lbl_8054A6C0:
-	# ROM: 0x5467C0
 .global lbl_8054A6C0
 lbl_8054A6C0:
 	.asciz "(doTransactionCallback) Error - context mangled!\n"
@@ -37188,9 +36330,6 @@ lbl_8054A6C0:
 	.asciz "(doCoverCallback) Error - context mangled!\n"
 
 
-.global lbl_8054A720
-lbl_8054A720:
-	# ROM: 0x546820
 .global lbl_8054A720
 lbl_8054A720:
 	.asciz "(DVDLowFinish) Error: IOS_Close failed\n"
@@ -37333,17 +36472,11 @@ lbl_8054B610:
 
 .global lbl_8054B658
 lbl_8054B658:
-	# ROM: 0x547758
-.global lbl_8054B658
-lbl_8054B658:
 	.asciz "APP ERROR: Not enough IPC arena\n"
 	.balign 4
 	.4byte 0
 
 
-.global lbl_8054B680
-lbl_8054B680:
-	# ROM: 0x547780
 .global lbl_8054B680
 lbl_8054B680:
 	.asciz "<< RVL_SDK - GX \trelease build: Feb 27 2009 10:04:13 (0x4302_145) >>"
@@ -37488,16 +36621,10 @@ lbl_8054B8B0:
 
 .global lbl_8054B8C0
 lbl_8054B8C0:
-	# ROM: 0x5479C0
-.global lbl_8054B8C0
-lbl_8054B8C0:
 	.asciz "CPUFifo: %08X - %08X\n"
 	.balign 4
 
 
-.global lbl_8054B8D8
-lbl_8054B8D8:
-	# ROM: 0x5479D8
 .global lbl_8054B8D8
 lbl_8054B8D8:
 	.asciz "GP Fifo: %08X - %08X\n"
@@ -38226,7 +37353,6 @@ lbl_8054C280:
 	.4byte lbl_8054C250
 	.4byte lbl_8054C270
 
-
 .global lbl_8054C288
 lbl_8054C288:
 	# ROM: 0x548388
@@ -38577,9 +37703,6 @@ lbl_8054C8C4:
 	.4byte lbl_805CD758
 
 
-.global lbl_8054C8C8
-lbl_8054C8C8:
-	# ROM: 0x5489C8
 .global lbl_8054C8C8
 lbl_8054C8C8:
 	.asciz "P1_Def.brlyt"
@@ -43365,9 +42488,6 @@ lbl_805504F0:
 
 .global lbl_80551080
 lbl_80551080:
-	# ROM: 0x54D180
-.global lbl_80551080
-lbl_80551080:
 	.asciz "<< RVL_SDK - NAND \trelease build: Feb 27 2009 10:05:16 (0x4302_145) >>"
 	.balign 4
 	.4byte 0
@@ -43405,16 +42525,10 @@ lbl_805510E0:
 
 .global lbl_80551130
 lbl_80551130:
-	# ROM: 0x54D230
-.global lbl_80551130
-lbl_80551130:
 	.asciz "/shared2"
 	.balign 4
 
 
-.global lbl_8055113C
-lbl_8055113C:
-	# ROM: 0x54D23C
 .global lbl_8055113C
 lbl_8055113C:
 	.asciz "/shared2/"
@@ -43471,16 +42585,10 @@ lbl_80551250:
 
 .global lbl_8055127C
 lbl_8055127C:
-	# ROM: 0x54D37C
-.global lbl_8055127C
-lbl_8055127C:
 	.asciz "nandUserAreaCallback"
 	.balign 4
 
 
-.global lbl_80551294
-lbl_80551294:
-	# ROM: 0x54D394
 .global lbl_80551294
 lbl_80551294:
 	.asciz "Illegal status is detected at %s()"
@@ -43489,16 +42597,10 @@ lbl_80551294:
 
 .global lbl_805512B8
 lbl_805512B8:
-	# ROM: 0x54D3B8
-.global lbl_805512B8
-lbl_805512B8:
 	.asciz "/shared2/test2/nanderr.log"
 	.balign 4
 
 
-.global lbl_805512D4
-lbl_805512D4:
-	# ROM: 0x54D3D4
 .global lbl_805512D4
 lbl_805512D4:
 	.asciz "%d %04d/%02d/%02d %02d:%02d:%02d %s %s"
@@ -43506,9 +42608,6 @@ lbl_805512D4:
 	.4byte 0
 
 
-.global lbl_80551300
-lbl_80551300:
-	# ROM: 0x54D400
 .global lbl_80551300
 lbl_80551300:
 	.asciz "<< RVL_SDK - OS \trelease build: Feb 27 2009 10:04:29 (0x4302_145) >>"
@@ -43635,9 +42734,6 @@ lbl_805517B8:
 
 .global lbl_80551838
 lbl_80551838:
-	# ROM: 0x54D938
-.global lbl_80551838
-lbl_80551838:
 	.asciz ">>> L2 INVALIDATE : SHOULD NEVER HAPPEN\n"
 	.balign 4
 	.4byte 0
@@ -43670,9 +42766,6 @@ lbl_80551838:
 
 .global lbl_80551A70
 lbl_80551A70:
-	# ROM: 0x54DB70
-.global lbl_80551A70
-lbl_80551A70:
 	.asciz "------------------------- Context 0x%08x -------------------------\n"
 	.4byte 0
 	.asciz "r%-2d  = 0x%08x (%14d)  r%-2d  = 0x%08x (%14d)\n"
@@ -43699,17 +42792,11 @@ lbl_80551A70:
 
 .global lbl_80551C28
 lbl_80551C28:
-	# ROM: 0x54DD28
-.global lbl_80551C28
-lbl_80551C28:
 	.asciz "FPU-unavailable handler installed\n"
 	.balign 4
 	.4byte 0
 
 
-.global lbl_80551C50
-lbl_80551C50:
-	# ROM: 0x54DD50
 .global lbl_80551C50
 lbl_80551C50:
 	.asciz " in \"%s\" on line %d.\n"
@@ -43742,24 +42829,15 @@ lbl_80551C50:
 
 .global lbl_80551F30
 lbl_80551F30:
-	# ROM: 0x54E030
-.global lbl_80551F30
-lbl_80551F30:
 	.asciz "\nOSExec(): Failed to exec %d in %d\n"
 
 
-.global lbl_80551F54
-lbl_80551F54:
-	# ROM: 0x54E054
 .global lbl_80551F54
 lbl_80551F54:
 	.asciz "\nOSExec(): The specified game doesn't exist in the disc\n"
 	.balign 4
 
 
-.global lbl_80551F90
-lbl_80551F90:
-	# ROM: 0x54E090
 .global lbl_80551F90
 lbl_80551F90:
 	.asciz "2004/02/01"
@@ -44513,16 +43591,10 @@ lbl_80552AE0:
 
 .global lbl_80552AF0
 lbl_80552AF0:
-	# ROM: 0x54EBF0
-.global lbl_80552AF0
-lbl_80552AF0:
 	.asciz "OSReset.c"
 	.balign 4
 
 
-.global lbl_80552AFC
-lbl_80552AFC:
-	# ROM: 0x54EBFC
 .global lbl_80552AFC
 lbl_80552AFC:
 	.asciz "__OSHotReset(): Falied to reset system.\n"
@@ -44531,9 +43603,6 @@ lbl_80552AFC:
 	.balign 4
 
 
-.global lbl_80552B5C
-lbl_80552B5C:
-	# ROM: 0x54EC5C
 .global lbl_80552B5C
 lbl_80552B5C:
 	.asciz "OSReturnToMenu(): Falied to boot system menu.\n"
@@ -44557,7 +43626,8 @@ lbl_80552B5C:
 	.asciz "OSReturnToSetting(): You can't specify %d.  \n"
 	.balign 4
 
-
+.global lbl_80552CDC
+lbl_80552CDC:
 	# ROM: 0x54EDDC
 	.asciz "OSResetSystem() is obsoleted. It doesn't work any longer.\n"
 	.balign 4
@@ -45661,6 +44731,8 @@ lbl_80553BF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.global lbl_80553DF8
+lbl_80553DF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0x0000819A
@@ -45919,6 +44991,8 @@ lbl_80553FF8:
 	.4byte 0x00008145
 	.4byte 0x815B8152
 	.4byte 0x81530000
+.global lbl_805541F8
+lbl_805541F8:
 	.4byte 0x88EA929A
 	.4byte 0x00008EB5
 	.4byte 0
@@ -46047,6 +45121,8 @@ lbl_80553FF8:
 	.4byte 0x00009443
 	.4byte 0
 	.4byte 0
+.global lbl_805543F8
+lbl_805543F8:
 	.4byte 0x00008AE9
 	.4byte 0
 	.4byte 0
@@ -46175,6 +45251,8 @@ lbl_80553FF8:
 	.4byte 0x89B40000
 	.4byte 0
 	.4byte 0x98EA0000
+.global lbl_805545F8
+lbl_805545F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0x000098E4
@@ -46303,6 +45381,8 @@ lbl_80553FF8:
 	.4byte 0x000095C6
 	.4byte 0
 	.4byte 0
+.global lbl_805547F8
+lbl_805547F8:
 	.4byte 0x8B56994D
 	.4byte 0x994E0000
 	.4byte 0x89AD0000
@@ -46431,6 +45511,8 @@ lbl_80553FF8:
 	.4byte 0x8F6F0000
 	.4byte 0x0000949F
 	.4byte 0x99820000
+.global lbl_805549F8
+lbl_805549F8:
 	.4byte 0x93810000
 	.4byte 0x0000906E
 	.4byte 0x99830000
@@ -46559,6 +45641,8 @@ lbl_80553FF8:
 	.4byte 0x8ED90000
 	.4byte 0
 	.4byte 0x8CF996DC
+.global lbl_80554BF8
+lbl_80554BF8:
 	.4byte 0x000096E6
 	.4byte 0x93F50000
 	.4byte 0x000095EF
@@ -46687,6 +45771,8 @@ lbl_80553FF8:
 	.4byte 0x99DB0000
 	.4byte 0
 	.4byte 0
+.global lbl_80554DF8
+lbl_80554DF8:
 	.4byte 0x000099DC
 	.4byte 0x00008B68
 	.4byte 0x8A650000
@@ -46815,6 +45901,8 @@ lbl_80553FF8:
 	.4byte 0x9A4D0000
 	.4byte 0x00009A4A
 	.4byte 0
+.global lbl_80554FF8
+lbl_80554FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0x89530000
@@ -46943,6 +46031,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0x00009A75
 	.4byte 0x9A740000
+.global lbl_805551F8
+lbl_805551F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -47071,6 +46161,8 @@ lbl_80553FF8:
 	.4byte 0x8CC50000
 	.4byte 0x00008D91
 	.4byte 0x00009A9C
+.global lbl_805553F8
+lbl_805553F8:
 	.4byte 0x9A9B0000
 	.4byte 0x000095DE
 	.4byte 0x9A9D0000
@@ -47199,6 +46291,8 @@ lbl_80553FF8:
 	.4byte 0x8AEE0000
 	.4byte 0x8DE90000
 	.4byte 0
+.global lbl_805555F8
+lbl_805555F8:
 	.4byte 0x96780000
 	.4byte 0x93B00000
 	.4byte 0x00008C98
@@ -47327,6 +46421,8 @@ lbl_80553FF8:
 	.4byte 0x9AE29AE4
 	.4byte 0x9AE59AE6
 	.4byte 0
+.global lbl_805557F8
+lbl_805557F8:
 	.4byte 0
 	.4byte 0x9AE70000
 	.4byte 0
@@ -47455,6 +46551,8 @@ lbl_80553FF8:
 	.4byte 0x000088F7
 	.4byte 0
 	.4byte 0x00008E70
+.global lbl_805559F8
+lbl_805559F8:
 	.4byte 0x000088D0
 	.4byte 0x000088A1
 	.4byte 0
@@ -47583,6 +46681,8 @@ lbl_80553FF8:
 	.4byte 0x9B659B66
 	.4byte 0
 	.4byte 0
+.global lbl_80555BF8
+lbl_80555BF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -47711,6 +46811,8 @@ lbl_80553FF8:
 	.4byte 0x8E9B0000
 	.4byte 0
 	.4byte 0x91CE8EF5
+.global lbl_80555DF8
+lbl_80555DF8:
 	.4byte 0x00009595
 	.4byte 0x90EA0000
 	.4byte 0x8ECB9B91
@@ -47839,6 +46941,8 @@ lbl_80553FF8:
 	.4byte 0x9BB68F73
 	.4byte 0x00009BB5
 	.4byte 0
+.global lbl_80555FF8
+lbl_80555FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -47967,6 +47071,8 @@ lbl_80553FF8:
 	.4byte 0x00008AAA
 	.4byte 0x00009246
 	.4byte 0x8BD00000
+.global lbl_805561F8
+lbl_805561F8:
 	.4byte 0
 	.4byte 0x8E73957A
 	.4byte 0
@@ -48095,6 +47201,8 @@ lbl_80553FF8:
 	.4byte 0x8C9A89F4
 	.4byte 0x94550000
 	.4byte 0x9C4F93F9
+.global lbl_805563F8
+lbl_805563F8:
 	.4byte 0x000095D9
 	.4byte 0x00009C50
 	.4byte 0x984D0000
@@ -48223,6 +47331,8 @@ lbl_80553FF8:
 	.4byte 0x00009C76
 	.4byte 0x00008D9A
 	.4byte 0x00009C7C
+.global lbl_805565F8
+lbl_805565F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -48351,6 +47461,8 @@ lbl_80553FF8:
 	.4byte 0x9CB79CBA
 	.4byte 0
 	.4byte 0
+.global lbl_805567F8
+lbl_805567F8:
 	.4byte 0x9CB58F44
 	.4byte 0x00009CB8
 	.4byte 0
@@ -48479,6 +47591,8 @@ lbl_80553FF8:
 	.4byte 0x9CF00000
 	.4byte 0x9CF49CF3
 	.4byte 0x9CF59CF2
+.global lbl_805569F8
+lbl_805569F8:
 	.4byte 0x9CF60000
 	.4byte 0
 	.4byte 0
@@ -48607,6 +47721,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0x8F459D5C
+.global lbl_80556BF8
+lbl_80556BF8:
 	.4byte 0x00008E9D
 	.4byte 0x9D6B0000
 	.4byte 0
@@ -48735,6 +47851,8 @@ lbl_80553FF8:
 	.4byte 0x97680000
 	.4byte 0
 	.4byte 0
+.global lbl_80556DF8
+lbl_80556DF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -48863,6 +47981,8 @@ lbl_80553FF8:
 	.4byte 0x9DB20000
 	.4byte 0x00009DB4
 	.4byte 0x8FEF0000
+.global lbl_80556FF8
+lbl_80556FF8:
 	.4byte 0x9DB30000
 	.4byte 0
 	.4byte 0x00009DB7
@@ -48991,6 +48111,8 @@ lbl_80553FF8:
 	.4byte 0x89A09DDF
 	.4byte 0
 	.4byte 0
+.global lbl_805571F8
+lbl_805571F8:
 	.4byte 0
 	.4byte 0x8D569DDE
 	.4byte 0
@@ -49119,6 +48241,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0x99D6915D
 	.4byte 0x915C91D6
+.global lbl_805573F8
+lbl_805573F8:
 	.4byte 0x8DC50000
 	.4byte 0x000098F0
 	.4byte 0
@@ -49247,6 +48371,8 @@ lbl_80553FF8:
 	.4byte 0x00008DB8
 	.4byte 0
 	.4byte 0x968F8A60
+.global lbl_805575F8
+lbl_805575F8:
 	.4byte 0
 	.4byte 0x92CC93C8
 	.4byte 0x89680000
@@ -49375,6 +48501,8 @@ lbl_80553FF8:
 	.4byte 0x8ABB0000
 	.4byte 0
 	.4byte 0
+.global lbl_805577F8
+lbl_805577F8:
 	.4byte 0x986F9E96
 	.4byte 0
 	.4byte 0x9EA488D6
@@ -49503,6 +48631,8 @@ lbl_80553FF8:
 	.4byte 0x000092CE
 	.4byte 0x00009185
 	.4byte 0x00009EDB
+.global lbl_805579F8
+lbl_805579F8:
 	.4byte 0
 	.4byte 0x9ED90000
 	.4byte 0x00009EE0
@@ -49631,6 +48761,8 @@ lbl_80553FF8:
 	.4byte 0x9F519F4E
 	.4byte 0
 	.4byte 0
+.global lbl_80557BF8
+lbl_80557BF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0x97939F4F
@@ -49759,6 +48891,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.global lbl_80557DF8
+lbl_80557DF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -49887,6 +49021,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.global lbl_80557FF8
+lbl_80557FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -50015,6 +49151,8 @@ lbl_80553FF8:
 	.4byte 0x9FC79359
 	.4byte 0
 	.4byte 0
+.global lbl_805581F8
+lbl_805581F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0x000090B4
@@ -50143,6 +49281,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0x9FF69FDE
+.global lbl_805583F8
+lbl_805583F8:
 	.4byte 0x00008B99
 	.4byte 0x95590000
 	.4byte 0
@@ -50271,6 +49411,8 @@ lbl_80553FF8:
 	.4byte 0xE0640000
 	.4byte 0
 	.4byte 0xE0680000
+.global lbl_805585F8
+lbl_805585F8:
 	.4byte 0x0000E066
 	.4byte 0
 	.4byte 0
@@ -50399,6 +49541,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0x0000E082
 	.4byte 0
+.global lbl_805587F8
+lbl_805587F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -50527,6 +49671,8 @@ lbl_80553FF8:
 	.4byte 0x0000E08E
 	.4byte 0xE09E0000
 	.4byte 0x0000E0A0
+.global lbl_805589F8
+lbl_805589F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -50655,6 +49801,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0x98549482
 	.4byte 0
+.global lbl_80558BF8
+lbl_80558BF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -50783,6 +49931,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0x8CBB0000
+.global lbl_80558DF8
+lbl_80558DF8:
 	.4byte 0
 	.4byte 0x00008B85
 	.4byte 0x0000E0E4
@@ -50911,6 +50061,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.global lbl_80558FF8
+lbl_80558FF8:
 	.4byte 0
 	.4byte 0x0000E14B
 	.4byte 0xE14AE14C
@@ -51039,6 +50191,8 @@ lbl_80553FF8:
 	.4byte 0xE1830000
 	.4byte 0xE1800000
 	.4byte 0xE17DE17E
+.global lbl_805591F8
+lbl_805591F8:
 	.4byte 0x0000E181
 	.4byte 0
 	.4byte 0
@@ -51167,6 +50321,8 @@ lbl_80553FF8:
 	.4byte 0x0000E1BB
 	.4byte 0
 	.4byte 0x8F820000
+.global lbl_805593F8
+lbl_805593F8:
 	.4byte 0x00008FC8
 	.4byte 0
 	.4byte 0xE1BE0000
@@ -51295,6 +50451,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0xE1E30000
 	.4byte 0
+.global lbl_805595F8
+lbl_805595F8:
 	.4byte 0
 	.4byte 0x8DBB0000
 	.4byte 0
@@ -51423,6 +50581,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0x0000E242
 	.4byte 0
+.global lbl_805597F8
+lbl_805597F8:
 	.4byte 0x00008FCA
 	.4byte 0
 	.4byte 0
@@ -51551,6 +50711,8 @@ lbl_80553FF8:
 	.4byte 0x000088DA
 	.4byte 0
 	.4byte 0
+.global lbl_805599F8
+lbl_805599F8:
 	.4byte 0x8B480000
 	.4byte 0
 	.4byte 0
@@ -51679,6 +50841,8 @@ lbl_80553FF8:
 	.4byte 0x8EB10000
 	.4byte 0
 	.4byte 0x00008AC6
+.global lbl_80559BF8
+lbl_80559BF8:
 	.4byte 0
 	.4byte 0xE2930000
 	.4byte 0xE2A00000
@@ -51807,6 +50971,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.global lbl_80559DF8
+lbl_80559DF8:
 	.4byte 0xE2C50000
 	.4byte 0
 	.4byte 0
@@ -51935,6 +51101,8 @@ lbl_80553FF8:
 	.4byte 0xE2FB8C6E
 	.4byte 0
 	.4byte 0x8B8A0000
+.global lbl_80559FF8
+lbl_80559FF8:
 	.4byte 0x8B490000
 	.4byte 0xE3400000
 	.4byte 0x96F18D67
@@ -52063,6 +51231,8 @@ lbl_80553FF8:
 	.4byte 0x0000E36B
 	.4byte 0
 	.4byte 0
+.global lbl_8055A1F8
+lbl_8055A1F8:
 	.4byte 0x0000898F
 	.4byte 0
 	.4byte 0x93EAE36E
@@ -52191,6 +51361,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.global lbl_8055A3F8
+lbl_8055A3F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -52319,6 +51491,8 @@ lbl_80553FF8:
 	.4byte 0x0000967C
 	.4byte 0x97830000
 	.4byte 0
+.global lbl_8055A5F8
+lbl_8055A5F8:
 	.4byte 0x97739856
 	.4byte 0x00008D6C
 	.4byte 0xE3CC8ED2
@@ -52447,6 +51621,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0xE445945C
 	.4byte 0
+.global lbl_8055A7F8
+lbl_8055A7F8:
 	.4byte 0
 	.4byte 0x8E890000
 	.4byte 0x00008BBA
@@ -52575,6 +51751,8 @@ lbl_80553FF8:
 	.4byte 0xE469E46A
 	.4byte 0x89500000
 	.4byte 0xE46B0000
+.global lbl_8055A9F8
+lbl_8055A9F8:
 	.4byte 0x0000E46C
 	.4byte 0xE46D0000
 	.4byte 0x0000E46E
@@ -52703,6 +51881,8 @@ lbl_80553FF8:
 	.4byte 0xE495E498
 	.4byte 0
 	.4byte 0
+.global lbl_8055ABF8
+lbl_8055ABF8:
 	.4byte 0
 	.4byte 0x96CEE497
 	.4byte 0x89D68A9D
@@ -52831,6 +52011,8 @@ lbl_80553FF8:
 	.4byte 0x0000E4D0
 	.4byte 0x0000E4C1
 	.4byte 0
+.global lbl_8055ADF8
+lbl_8055ADF8:
 	.4byte 0
 	.4byte 0x0000E4C2
 	.4byte 0x93B80000
@@ -52959,6 +52141,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0xE4F80000
 	.4byte 0x0000E4F0
+.global lbl_8055AFF8
+lbl_8055AFF8:
 	.4byte 0x8EC10000
 	.4byte 0
 	.4byte 0
@@ -53087,6 +52271,8 @@ lbl_80553FF8:
 	.4byte 0xE5619194
 	.4byte 0
 	.4byte 0xE5600000
+.global lbl_8055B1F8
+lbl_8055B1F8:
 	.4byte 0
 	.4byte 0xE5410000
 	.4byte 0
@@ -53215,6 +52401,8 @@ lbl_80553FF8:
 	.4byte 0x0000E588
 	.4byte 0
 	.4byte 0x89E90000
+.global lbl_8055B3F8
+lbl_8055B3F8:
 	.4byte 0xE5860000
 	.4byte 0x9649E587
 	.4byte 0
@@ -53343,6 +52531,8 @@ lbl_80553FF8:
 	.4byte 0x00008B61
 	.4byte 0
 	.4byte 0xE5B70000
+.global lbl_8055B5F8
+lbl_8055B5F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0x0000E5A2
@@ -53471,6 +52661,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0xE5E790BB
 	.4byte 0x909E0000
+.global lbl_8055B7F8
+lbl_8055B7F8:
 	.4byte 0
 	.4byte 0xE5E60000
 	.4byte 0xE5EB0000
@@ -53599,6 +52791,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.global lbl_8055B9F8
+lbl_8055B9F8:
 	.4byte 0x8CBE0000
 	.4byte 0x92F9E65D
 	.4byte 0
@@ -53727,6 +52921,9 @@ lbl_80553FF8:
 	.4byte 0x8CBF0000
 	.4byte 0
 	.4byte 0x91F80000
+
+.global lbl_8055BBF8
+lbl_8055BBF8:
 	.4byte 0x96648979
 	.4byte 0x88E00000
 	.4byte 0x93A30000
@@ -53855,6 +53052,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.global lbl_8055BDF8
+lbl_8055BDF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -53983,6 +53182,8 @@ lbl_80553FF8:
 	.4byte 0xE6CFE6D0
 	.4byte 0x8D77E6CE
 	.4byte 0
+.global lbl_8055BFF8
+lbl_8055BFF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0xE6D1E6D2
@@ -54111,6 +53312,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0xE6F00000
 	.4byte 0x0000E6F3
+.global lbl_8055C1F8
+lbl_8055C1F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -54239,6 +53442,8 @@ lbl_80553FF8:
 	.4byte 0x0000E765
 	.4byte 0xE7648C79
 	.4byte 0xE7670000
+.global lbl_8055C3F8
+lbl_8055C3F8:
 	.4byte 0
 	.4byte 0x00008A72
 	.4byte 0x0000E769
@@ -54367,6 +53572,8 @@ lbl_80553FF8:
 	.4byte 0xE7920000
 	.4byte 0x000092C7
 	.4byte 0
+.global lbl_8055C5F8
+lbl_8055C5F8:
 	.4byte 0x91DE9197
 	.4byte 0x000093A6
 	.4byte 0x0000E790
@@ -54495,6 +53702,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0x00009373
 	.4byte 0
+.global lbl_8055C7F8
+lbl_8055C7F8:
 	.4byte 0
 	.4byte 0xE7BD0000
 	.4byte 0
@@ -54623,6 +53832,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0xE7DD0000
 	.4byte 0x0000E7E1
+.global lbl_8055C9F8
+lbl_8055C9F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -54751,6 +53962,8 @@ lbl_80553FF8:
 	.4byte 0xE7FA0000
 	.4byte 0x8D7C0000
 	.4byte 0
+.global lbl_8055CBF8
+lbl_8055CBF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -54879,6 +54092,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.global lbl_8055CDF8
+lbl_8055CDF8:
 	.4byte 0
 	.4byte 0x0000E85E
 	.4byte 0
@@ -55007,6 +54222,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.global lbl_8055CFF8
+lbl_8055CFF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -55135,6 +54352,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.global lbl_8055D1F8
+lbl_8055D1F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -55263,6 +54482,8 @@ lbl_80553FF8:
 	.4byte 0x00009364
 	.4byte 0
 	.4byte 0
+.global lbl_8055D3F8
+lbl_8055D3F8:
 	.4byte 0x8EF90000
 	.4byte 0
 	.4byte 0xE8BA0000
@@ -55391,6 +54612,8 @@ lbl_80553FF8:
 	.4byte 0x00008943
 	.4byte 0
 	.4byte 0x00008BBF
+.global lbl_8055D5F8
+lbl_8055D5F8:
 	.4byte 0x000095C5
 	.4byte 0x92B88DA0
 	.4byte 0x00008D80
@@ -55519,6 +54742,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0x8E94964F
 	.4byte 0x8FFC0000
+.global lbl_8055D7F8
+lbl_8055D7F8:
 	.4byte 0
 	.4byte 0x0000E94C
 	.4byte 0x000096DD
@@ -55647,6 +54872,8 @@ lbl_80553FF8:
 	.4byte 0x0000E972
 	.4byte 0
 	.4byte 0x00008F78
+.global lbl_8055D9F8
+lbl_8055D9F8:
 	.4byte 0x0000E974
 	.4byte 0
 	.4byte 0x0000E976
@@ -55775,6 +55002,8 @@ lbl_80553FF8:
 	.4byte 0x0000E99F
 	.4byte 0
 	.4byte 0
+.global lbl_8055DBF8
+lbl_8055DBF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -55903,6 +55132,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.global lbl_8055DDF8
+lbl_8055DDF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0xE9D80000
@@ -56031,6 +55262,8 @@ lbl_80553FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.global lbl_8055DFF8
+lbl_8055DFF8:
 	.4byte 0
 	.4byte 0x0000E9EE
 	.4byte 0
@@ -56159,6 +55392,8 @@ lbl_80553FF8:
 	.4byte 0x8DEB0000
 	.4byte 0x0000EA5E
 	.4byte 0
+.global lbl_8055E1F8
+lbl_8055E1F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -56287,6 +55522,8 @@ lbl_80553FF8:
 	.4byte 0x0000EA84
 	.4byte 0xEA85EA86
 	.4byte 0
+.global lbl_8055E3F8
+lbl_8055E3F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -56588,7 +55825,7 @@ lbl_8055E7F8:
 	.4byte lbl_805539F8
 	.4byte 0
 	.4byte lbl_80553BF8
-	.4byte 0x80553DF8
+	.4byte lbl_80553DF8
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -56628,88 +55865,88 @@ lbl_8055E7F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0x805541F8
-	.4byte 0x805543F8
-	.4byte 0x805545F8
-	.4byte 0x805547F8
-	.4byte 0x805549F8
-	.4byte 0x80554BF8
-	.4byte 0x80554DF8
-	.4byte 0x80554FF8
-	.4byte 0x805551F8
-	.4byte 0x805553F8
-	.4byte 0x805555F8
-	.4byte 0x805557F8
-	.4byte 0x805559F8
-	.4byte 0x80555BF8
-	.4byte 0x80555DF8
-	.4byte 0x80555FF8
-	.4byte 0x805561F8
-	.4byte 0x805563F8
-	.4byte 0x805565F8
-	.4byte 0x805567F8
-	.4byte 0x805569F8
-	.4byte 0x80556BF8
-	.4byte 0x80556DF8
-	.4byte 0x80556FF8
-	.4byte 0x805571F8
-	.4byte 0x805573F8
-	.4byte 0x805575F8
-	.4byte 0x805577F8
-	.4byte 0x805579F8
-	.4byte 0x80557BF8
-	.4byte 0x80557DF8
-	.4byte 0x80557FF8
-	.4byte 0x805581F8
-	.4byte 0x805583F8
-	.4byte 0x805585F8
-	.4byte 0x805587F8
-	.4byte 0x805589F8
-	.4byte 0x80558BF8
-	.4byte 0x80558DF8
-	.4byte 0x80558FF8
-	.4byte 0x805591F8
-	.4byte 0x805593F8
-	.4byte 0x805595F8
-	.4byte 0x805597F8
-	.4byte 0x805599F8
-	.4byte 0x80559BF8
-	.4byte 0x80559DF8
-	.4byte 0x80559FF8
-	.4byte 0x8055A1F8
-	.4byte 0x8055A3F8
-	.4byte 0x8055A5F8
-	.4byte 0x8055A7F8
-	.4byte 0x8055A9F8
-	.4byte 0x8055ABF8
-	.4byte 0x8055ADF8
-	.4byte 0x8055AFF8
-	.4byte 0x8055B1F8
-	.4byte 0x8055B3F8
-	.4byte 0x8055B5F8
-	.4byte 0x8055B7F8
-	.4byte 0x8055B9F8
-	.4byte 0x8055BBF8
-	.4byte 0x8055BDF8
-	.4byte 0x8055BFF8
-	.4byte 0x8055C1F8
-	.4byte 0x8055C3F8
-	.4byte 0x8055C5F8
-	.4byte 0x8055C7F8
-	.4byte 0x8055C9F8
-	.4byte 0x8055CBF8
-	.4byte 0x8055CDF8
-	.4byte 0x8055CFF8
-	.4byte 0x8055D1F8
-	.4byte 0x8055D3F8
-	.4byte 0x8055D5F8
-	.4byte 0x8055D7F8
-	.4byte 0x8055D9F8
-	.4byte 0x8055DBF8
-	.4byte 0x8055DDF8
-	.4byte 0x8055DFF8
-	.4byte 0x8055E1F8
-	.4byte 0x8055E3F8
+	.4byte lbl_805541F8
+	.4byte lbl_805543F8
+	.4byte lbl_805545F8
+	.4byte lbl_805547F8
+	.4byte lbl_805549F8
+	.4byte lbl_80554BF8
+	.4byte lbl_80554DF8
+	.4byte lbl_80554FF8
+	.4byte lbl_805551F8
+	.4byte lbl_805553F8
+	.4byte lbl_805555F8
+	.4byte lbl_805557F8
+	.4byte lbl_805559F8
+	.4byte lbl_80555BF8
+	.4byte lbl_80555DF8
+	.4byte lbl_80555FF8
+	.4byte lbl_805561F8
+	.4byte lbl_805563F8
+	.4byte lbl_805565F8
+	.4byte lbl_805567F8
+	.4byte lbl_805569F8
+	.4byte lbl_80556BF8
+	.4byte lbl_80556DF8
+	.4byte lbl_80556FF8
+	.4byte lbl_805571F8
+	.4byte lbl_805573F8
+	.4byte lbl_805575F8
+	.4byte lbl_805577F8
+	.4byte lbl_805579F8
+	.4byte lbl_80557BF8
+	.4byte lbl_80557DF8
+	.4byte lbl_80557FF8
+	.4byte lbl_805581F8
+	.4byte lbl_805583F8
+	.4byte lbl_805585F8
+	.4byte lbl_805587F8
+	.4byte lbl_805589F8
+	.4byte lbl_80558BF8
+	.4byte lbl_80558DF8
+	.4byte lbl_80558FF8
+	.4byte lbl_805591F8
+	.4byte lbl_805593F8
+	.4byte lbl_805595F8
+	.4byte lbl_805597F8
+	.4byte lbl_805599F8
+	.4byte lbl_80559BF8
+	.4byte lbl_80559DF8
+	.4byte lbl_80559FF8
+	.4byte lbl_8055A1F8
+	.4byte lbl_8055A3F8
+	.4byte lbl_8055A5F8
+	.4byte lbl_8055A7F8
+	.4byte lbl_8055A9F8
+	.4byte lbl_8055ABF8
+	.4byte lbl_8055ADF8
+	.4byte lbl_8055AFF8
+	.4byte lbl_8055B1F8
+	.4byte lbl_8055B3F8
+	.4byte lbl_8055B5F8
+	.4byte lbl_8055B7F8
+	.4byte lbl_8055B9F8
+	.4byte lbl_8055BBF8
+	.4byte lbl_8055BDF8
+	.4byte lbl_8055BFF8
+	.4byte lbl_8055C1F8
+	.4byte lbl_8055C3F8
+	.4byte lbl_8055C5F8
+	.4byte lbl_8055C7F8
+	.4byte lbl_8055C9F8
+	.4byte lbl_8055CBF8
+	.4byte lbl_8055CDF8
+	.4byte lbl_8055CFF8
+	.4byte lbl_8055D1F8
+	.4byte lbl_8055D3F8
+	.4byte lbl_8055D5F8
+	.4byte lbl_8055D7F8
+	.4byte lbl_8055D9F8
+	.4byte lbl_8055DBF8
+	.4byte lbl_8055DDF8
+	.4byte lbl_8055DFF8
+	.4byte lbl_8055E1F8
+	.4byte lbl_8055E3F8
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -56810,16 +56047,10 @@ lbl_8055E7F8:
 
 .global lbl_8055EBF8
 lbl_8055EBF8:
-	# ROM: 0x55ACF8
-.global lbl_8055EBF8
-lbl_8055EBF8:
 	.asciz "/dev/stm/immediate"
 	.balign 4
 
 
-.global lbl_8055EC0C
-lbl_8055EC0C:
-	# ROM: 0x55AD0C
 .global lbl_8055EC0C
 lbl_8055EC0C:
 	.asciz "/dev/stm/eventhook"
@@ -56828,15 +56059,9 @@ lbl_8055EC0C:
 
 .global lbl_8055EC20
 lbl_8055EC20:
-	# ROM: 0x55AD20
-.global lbl_8055EC20
-lbl_8055EC20:
 	.asciz "OSStateTM.c"
 
 
-.global lbl_8055EC2C
-lbl_8055EC2C:
-	# ROM: 0x55AD2C
 .global lbl_8055EC2C
 lbl_8055EC2C:
 	.asciz "Error: The firmware doesn't support shutdown feature.\n"
@@ -56845,25 +56070,16 @@ lbl_8055EC2C:
 
 .global lbl_8055EC64
 lbl_8055EC64:
-	# ROM: 0x55AD64
-.global lbl_8055EC64
-lbl_8055EC64:
 	.asciz "Error: The firmware doesn't support reboot feature.\n"
 	.balign 4
 
 
 .global lbl_8055EC9C
 lbl_8055EC9C:
-	# ROM: 0x55AD9C
-.global lbl_8055EC9C
-lbl_8055EC9C:
 	.asciz "Error on STM state event handler\n"
 	.balign 4
 
 
-.global lbl_8055ECC0
-lbl_8055ECC0:
-	# ROM: 0x55ADC0
 .global lbl_8055ECC0
 lbl_8055ECC0:
 	.asciz "/title/00000001/00000002/data/play_rec.dat"
@@ -56884,15 +56100,9 @@ lbl_8055ECEC:
 
 .global lbl_8055ED08
 lbl_8055ED08:
-	# ROM: 0x55AE08
-.global lbl_8055ED08
-lbl_8055ED08:
 	.asciz "/title/00000001/00000002/data/state.dat"
 
 
-.global lbl_8055ED30
-lbl_8055ED30:
-	# ROM: 0x55AE30
 .global lbl_8055ED30
 lbl_8055ED30:
 	.asciz "Failed to register network shutdown function. %d\n"
@@ -56907,9 +56117,6 @@ lbl_8055ED30:
 
 .global lbl_8055EDF0
 lbl_8055EDF0:
-	# ROM: 0x55AEF0
-.global lbl_8055EDF0
-lbl_8055EDF0:
 	.asciz "/dev/net/kd/request"
 	.asciz "NWC24SuspendScheduler"
 	.balign 4
@@ -56921,18 +56128,12 @@ lbl_8055EDF0:
 
 .global lbl_8055EE4C
 lbl_8055EE4C:
-	# ROM: 0x55AF4C
-.global lbl_8055EE4C
-lbl_8055EE4C:
 	.asciz "NWC24Shutdown_: Give up!\n"
 	.balign 4
 	.asciz "NWC24iSetRtcCounter_"
 	.balign 4
 
 
-.global lbl_8055EE80
-lbl_8055EE80:
-	# ROM: 0x55AF80
 .global lbl_8055EE80
 lbl_8055EE80:
 	.asciz "/dev/net/kd/time"
@@ -56942,17 +56143,11 @@ lbl_8055EE80:
 
 .global lbl_8055EE98
 lbl_8055EE98:
-	# ROM: 0x55AF98
-.global lbl_8055EE98
-lbl_8055EE98:
 	.asciz "/shared2/sys/NANDBOOTINFO"
 	.balign 4
 	.4byte 0
 
 
-.global lbl_8055EEB8
-lbl_8055EEB8:
-	# ROM: 0x55AFB8
 .global lbl_8055EEB8
 lbl_8055EEB8:
 	.asciz "/shared2/expired"
@@ -56961,16 +56156,10 @@ lbl_8055EEB8:
 
 .global lbl_8055EECC
 lbl_8055EECC:
-	# ROM: 0x55AFCC
-.global lbl_8055EECC
-lbl_8055EECC:
 	.asciz "OSPlayTime.c"
 	.balign 4
 
 
-.global lbl_8055EEDC
-lbl_8055EEDC:
-	# ROM: 0x55AFDC
 .global lbl_8055EEDC
 lbl_8055EEDC:
 	.asciz "PlayTime: %d seconds left\n"
@@ -57191,17 +56380,11 @@ lbl_8055F1A8:
 
 .global lbl_8055F240
 lbl_8055F240:
-	# ROM: 0x55B340
-.global lbl_8055F240
-lbl_8055F240:
 	.asciz "invalid version number for texture palette"
 	.balign 4
 	.4byte 0
 
 
-.global lbl_8055F270
-lbl_8055F270:
-	# ROM: 0x55B370
 .global lbl_8055F270
 lbl_8055F270:
 	.asciz "USB ERR: "
@@ -57323,9 +56506,6 @@ lbl_8055F270:
 	.balign 4
 
 
-.global lbl_8055FAA0
-lbl_8055FAA0:
-	# ROM: 0x55BBA0
 .global lbl_8055FAA0
 lbl_8055FAA0:
 	.asciz "<< RVL_SDK - VI \trelease build: Feb 27 2009 10:04:46 (0x4302_145) >>"
@@ -57991,16 +57171,10 @@ lbl_8055FFF8:
 
 .global lbl_80560608
 lbl_80560608:
-	# ROM: 0x55C708
-.global lbl_80560608
-lbl_80560608:
 	.asciz "<< RVL_SDK - WPAD \trelease build: Jun 22 2009 18:33:21 (0x4302_145) >>"
 	.balign 4
 
 
-.global lbl_80560650
-lbl_80560650:
-	# ROM: 0x55C750
 .global lbl_80560650
 lbl_80560650:
 	.asciz "WBCReadDummy\n"
@@ -58009,25 +57183,16 @@ lbl_80560650:
 
 .global lbl_80560660
 lbl_80560660:
-	# ROM: 0x55C760
-.global lbl_80560660
-lbl_80560660:
 	.asciz "WBCSetZEROPointDummy\n"
 	.balign 4
 
 
 .global lbl_80560678
 lbl_80560678:
-	# ROM: 0x55C778
-.global lbl_80560678
-lbl_80560678:
 	.asciz "WBCGetTGCWeightDummy\n"
 	.balign 4
 
 
-.global lbl_80560690
-lbl_80560690:
-	# ROM: 0x55C790
 .global lbl_80560690
 lbl_80560690:
 	.asciz "Wait for %d ms until start reconnect!\n"
@@ -58043,9 +57208,6 @@ lbl_805606B8:
 	.4byte 0
 
 
-.global lbl_805606C8
-lbl_805606C8:
-	# ROM: 0x55C7C8
 .global lbl_805606C8
 lbl_805606C8:
 	.asciz "handle = %d, repid = %02x\n"
@@ -58077,15 +57239,9 @@ lbl_805606E4:
 
 .global lbl_80560770
 lbl_80560770:
-	# ROM: 0x55C870
-.global lbl_80560770
-lbl_80560770:
 	.asciz "WPADInit()\n"
 
 
-.global lbl_8056077C
-lbl_8056077C:
-	# ROM: 0x55C87C
 .global lbl_8056077C
 lbl_8056077C:
 	.asciz " ==>this error means that the firmware is for NDEV %s\n"
@@ -58094,16 +57250,10 @@ lbl_8056077C:
 
 .global lbl_805607B4
 lbl_805607B4:
-	# ROM: 0x55C8B4
-.global lbl_805607B4
-lbl_805607B4:
 	.asciz "2.1 or later"
 	.balign 4
 
 
-.global lbl_805607C4
-lbl_805607C4:
-	# ROM: 0x55C8C4
 .global lbl_805607C4
 lbl_805607C4:
 	.asciz "Nintendo RVL-WBC"
@@ -58120,15 +57270,9 @@ lbl_805607C4:
 
 .global lbl_80560860
 lbl_80560860:
-	# ROM: 0x55C960
-.global lbl_80560860
-lbl_80560860:
 	.asciz "HID Parser reports: %d\n"
 
 
-.global lbl_80560878
-lbl_80560878:
-	# ROM: 0x55C978
 .global lbl_80560878
 lbl_80560878:
 	.asciz "WARNING: Overwritten the callback needed by KPAD.\n"
@@ -58137,16 +57281,10 @@ lbl_80560878:
 
 .global lbl_805608AC
 lbl_805608AC:
-	# ROM: 0x55C9AC
-.global lbl_805608AC
-lbl_805608AC:
 	.asciz "         Please call KPADSetSamplingCallback instead of WPADSetSamplingCallback.\n"
 	.balign 4
 
 
-.global lbl_80560900
-lbl_80560900:
-	# ROM: 0x55CA00
 .global lbl_80560900
 lbl_80560900:
 	.asciz "         Please call KPADSetConnectCallback instead of WPADSetConnectCallback.\n"
@@ -58267,9 +57405,6 @@ lbl_80560A30:
 
 .global lbl_80560AB0
 lbl_80560AB0:
-	# ROM: 0x55CBB0
-.global lbl_80560AB0
-lbl_80560AB0:
 	.asciz "detaching extension during initialization.\n"
 	.asciz "Dpd Setting is ok.\n"
 	.asciz "Dpd Setting is broken.\n"
@@ -58327,15 +57462,9 @@ lbl_80560AB0:
 
 .global lbl_80560E68
 lbl_80560E68:
-	# ROM: 0x55CF68
-.global lbl_80560E68
-lbl_80560E68:
 	.asciz "Received report 20\n"
 
 
-.global lbl_80560E7C
-lbl_80560E7C:
-	# ROM: 0x55CF7C
 .global lbl_80560E7C
 lbl_80560E7C:
 	.asciz "initialize attachment\n"
@@ -59699,16 +58828,10 @@ lbl_805622C8:
 
 .global lbl_805624E4
 lbl_805624E4:
-	# ROM: 0x55E5E4
-.global lbl_805624E4
-lbl_805624E4:
 	.asciz "App_MEMalloc\n"
 	.balign 4
 
 
-.global lbl_805624F4
-lbl_805624F4:
-	# ROM: 0x55E5F4
 .global lbl_805624F4
 lbl_805624F4:
 	.asciz "App_MEMfree\n"
@@ -59717,18 +58840,12 @@ lbl_805624F4:
 
 .global lbl_80562504
 lbl_80562504:
-	# ROM: 0x55E604
-.global lbl_80562504
-lbl_80562504:
 	.asciz "__wudSyncFlushCallback() : %d, Sync: %d\n"
 	.balign 4
 	.asciz "Nintendo RVL-CNT"
 	.balign 4
 
 
-.global lbl_80562544
-lbl_80562544:
-	# ROM: 0x55E644
 .global lbl_80562544
 lbl_80562544:
 	.asciz "Nintendo RVL-WBC"
@@ -59743,9 +58860,6 @@ lbl_80562544:
 
 .global lbl_805625AC
 lbl_805625AC:
-	# ROM: 0x55E6AC
-.global lbl_805625AC
-lbl_805625AC:
 	.asciz "%d devices is stored into SC.\n"
 	.balign 4
 	.4byte 0
@@ -59753,23 +58867,14 @@ lbl_805625AC:
 
 .global lbl_805625D0
 lbl_805625D0:
-	# ROM: 0x55E6D0
-.global lbl_805625D0
-lbl_805625D0:
 	.asciz "NANDOpen. [%d]\n"
 
 
 .global lbl_805625E0
 lbl_805625E0:
-	# ROM: 0x55E6E0
-.global lbl_805625E0
-lbl_805625E0:
 	.asciz "NANDSeek. [%d]\n"
 
 
-.global lbl_805625F0
-lbl_805625F0:
-	# ROM: 0x55E6F0
 .global lbl_805625F0
 lbl_805625F0:
 	.asciz "NANDWrite. [%d]\n"
@@ -59778,16 +58883,10 @@ lbl_805625F0:
 
 .global lbl_80562604
 lbl_80562604:
-	# ROM: 0x55E704
-.global lbl_80562604
-lbl_80562604:
 	.asciz "NANDClose. [%d]\n"
 	.balign 4
 
 
-.global lbl_80562618
-lbl_80562618:
-	# ROM: 0x55E718
 .global lbl_80562618
 lbl_80562618:
 	.asciz "Pairing Done\n"
@@ -59816,9 +58915,6 @@ lbl_80562618:
 
 .global lbl_805627BC
 lbl_805627BC:
-	# ROM: 0x55E8BC
-.global lbl_805627BC
-lbl_805627BC:
 	.asciz "__wudDeleteFlushCallback() : %d, Delete: %d\n"
 	.balign 4
 	.asciz "hci_version   : %02x\n"
@@ -59835,9 +58931,6 @@ lbl_805627BC:
 	.balign 4
 
 
-.global lbl_8056288C
-lbl_8056288C:
-	# ROM: 0x55E98C
 .global lbl_8056288C
 lbl_8056288C:
 	.asciz "__wudInitFlushCallback() : %d, Init: %d\n"
@@ -59863,9 +58956,6 @@ lbl_8056288C:
 
 .global lbl_805629E8
 lbl_805629E8:
-	# ROM: 0x55EAE8
-.global lbl_805629E8
-lbl_805629E8:
 	.asciz "__wudShutdownFlushCallback() : %d, Shutdown: %d\n"
 	.balign 4
 	.4byte 0
@@ -59873,15 +58963,9 @@ lbl_805629E8:
 
 .global lbl_80562A20
 lbl_80562A20:
-	# ROM: 0x55EB20
-.global lbl_80562A20
-lbl_80562A20:
 	.asciz "__wudClearControlBlock\n"
 
 
-.global lbl_80562A38
-lbl_80562A38:
-	# ROM: 0x55EB38
 .global lbl_80562A38
 lbl_80562A38:
 	.asciz "BTA_Init() is started\n"
@@ -59890,24 +58974,15 @@ lbl_80562A38:
 
 .global lbl_80562A50
 lbl_80562A50:
-	# ROM: 0x55EB50
-.global lbl_80562A50
-lbl_80562A50:
 	.asciz "BTA_Init() is done\n"
 
 
-.global lbl_80562A64
-lbl_80562A64:
-	# ROM: 0x55EB64
 .global lbl_80562A64
 lbl_80562A64:
 	.asciz "WUDShutdown()\n"
 	.balign 4
 
 
-.global lbl_80562A74
-lbl_80562A74:
-	# ROM: 0x55EB74
 .global lbl_80562A74
 lbl_80562A74:
 	.asciz "WUDSetSyncDeviceCallback\n"
@@ -59922,15 +58997,9 @@ lbl_80562A74:
 
 .global lbl_80562AE0
 lbl_80562AE0:
-	# ROM: 0x55EBE0
-.global lbl_80562AE0
-lbl_80562AE0:
 	.asciz "WUDSetDisableChannel()\n"
 
 
-.global lbl_80562AF8
-lbl_80562AF8:
-	# ROM: 0x55EBF8
 .global lbl_80562AF8
 lbl_80562AF8:
 	.asciz "BTM_SetAfhChannels() : %d\n"
@@ -59939,25 +59008,16 @@ lbl_80562AF8:
 
 .global lbl_80562B14
 lbl_80562B14:
-	# ROM: 0x55EC14
-.global lbl_80562B14
-lbl_80562B14:
 	.asciz "WUDSetHidRecvCallback()\n"
 	.balign 4
 
 
 .global lbl_80562B30
 lbl_80562B30:
-	# ROM: 0x55EC30
-.global lbl_80562B30
-lbl_80562B30:
 	.asciz "WUDSetHidConnCallback()\n"
 	.balign 4
 
 
-.global lbl_80562B4C
-lbl_80562B4C:
-	# ROM: 0x55EC4C
 .global lbl_80562B4C
 lbl_80562B4C:
 	.asciz "Initialize the BCM2045 firmware complete.\n"
@@ -59974,15 +59034,9 @@ lbl_80562B4C:
 
 .global lbl_80562BD8
 lbl_80562BD8:
-	# ROM: 0x55ECD8
-.global lbl_80562BD8
-lbl_80562BD8:
 	.asciz "SuperPeekPoke Callback\n"
 
 
-.global lbl_80562BF0
-lbl_80562BF0:
-	# ROM: 0x55ECF0
 .global lbl_80562BF0
 lbl_80562BF0:
 	.asciz "RemovePatch\n"
@@ -59993,9 +59047,6 @@ lbl_80562BF0:
 	.balign 4
 
 
-.global lbl_80562C2C
-lbl_80562C2C:
-	# ROM: 0x55ED2C
 .global lbl_80562C2C
 lbl_80562C2C:
 	.asciz "start __wudInitSub()\n"
@@ -60018,9 +59069,6 @@ lbl_80562C2C:
 	.balign 4
 
 
-.global lbl_80562D24
-lbl_80562D24:
-	# ROM: 0x55EE24
 .global lbl_80562D24
 lbl_80562D24:
 	.asciz "WARNING: USB_CLOSE_FAILURE!\n"
@@ -60092,16 +59140,10 @@ lbl_80562FA0:
 
 .global lbl_805630F4
 lbl_805630F4:
-	# ROM: 0x55F1F4
-.global lbl_805630F4
-lbl_805630F4:
 	.asciz "__wudDeviceStatusEventStackCallback\n"
 	.balign 4
 
 
-.global lbl_8056311C
-lbl_8056311C:
-	# ROM: 0x55F21C
 .global lbl_8056311C
 lbl_8056311C:
 	.asciz "---- WARNING: USB FATAL ERROR! ----\n"
@@ -60152,9 +59194,6 @@ lbl_8056311C:
 	.balign 4
 
 
-.global lbl_80563470
-lbl_80563470:
-	# ROM: 0x55F570
 .global lbl_80563470
 lbl_80563470:
 	.asciz "BTA_HH_ENABLE_EVT\n"
@@ -60217,25 +59256,16 @@ lbl_80563688:
 
 .global lbl_805636C8
 lbl_805636C8:
-	# ROM: 0x55F7C8
-.global lbl_805636C8
-lbl_805636C8:
 	.asciz "Invalid app_id [%d]\n"
 	.balign 4
 
 
 .global lbl_805636E0
 lbl_805636E0:
-	# ROM: 0x55F7E0
-.global lbl_805636E0
-lbl_805636E0:
 	.asciz "bta_hh_co_open()\n"
 	.balign 4
 
 
-.global lbl_805636F4
-lbl_805636F4:
-	# ROM: 0x55F7F4
 .global lbl_805636F4
 lbl_805636F4:
 	.asciz "bta_hh_co_close()\n"
@@ -62395,6 +61425,8 @@ lbl_805657B8:
 	.4byte lbl_8038BF84
 	.4byte lbl_8038C0D0
 	.4byte lbl_8038C21C
+.global lbl_805657F8
+lbl_805657F8:
 	.4byte 0
 	.4byte 0xB9E80004
 	.4byte 0x3B550000
@@ -62946,13 +61978,15 @@ lbl_805658F0:
 .global lbl_80566078
 lbl_80566078:
 	# ROM: 0x562178
-	.4byte 0x805657F8
+	.4byte lbl_805657F8
 
 
 .global lbl_8056607C
 lbl_8056607C:
 	# ROM: 0x56217C
 	.4byte 0x00000880
+.global lbl_80566080
+lbl_80566080:
 	.4byte 0
 	.4byte 0x00000004
 	.4byte 0
@@ -66096,7 +65130,7 @@ lbl_80569080:
 .global lbl_80569180
 lbl_80569180:
 	# ROM: 0x565280
-	.4byte 0x80566080
+	.4byte lbl_80566080
 
 
 .global lbl_80569184
@@ -66659,7 +65693,6 @@ lbl_805697D0:
 	.4byte 0x0000C1C0
 	.4byte 0
 	.4byte 0x00000800
-
 
 .global lbl_805698F8
 lbl_805698F8:
@@ -67796,7 +66829,6 @@ lbl_8056A840:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-
 
 .global lbl_8056A918
 lbl_8056A918:
@@ -69784,9 +68816,6 @@ lbl_8056C5F0:
 
 .global lbl_8056C610
 lbl_8056C610:
-	# ROM: 0x568710
-.global lbl_8056C610
-lbl_8056C610:
 	.asciz "tst, help_time_sec, help_time_msec, help_time_64, help_time, mt_max, master_time, out_time,  mt_ot, mtmax_ot,  diff_l_max, diff_l_min, diff_a_max, tst->diff_a_min, pastat, adjmode, resethist, excesserr, adj_limit, adj_front, adj_rear,  movave_1st, movave_2nd,  adxt_stat \n\n"
 	.balign 4
 	.4byte 0
@@ -69845,10 +68874,6 @@ lbl_8056C784:
 	.4byte lbl_803D3D78
 	.4byte 0
 
-
-.global lbl_8056C7B0
-lbl_8056C7B0:
-	# ROM: 0x5688B0
 .global lbl_8056C7B0
 lbl_8056C7B0:
 	.asciz "-------------------------------- TRACE\n"
@@ -69859,16 +68884,10 @@ lbl_8056C7B0:
 
 .global lbl_8056C810
 lbl_8056C810:
-	# ROM: 0x568910
-.global lbl_8056C810
-lbl_8056C810:
 	.asciz "%s:%d Panic:"
 	.balign 4
 
 
-.global lbl_8056C820
-lbl_8056C820:
-	# ROM: 0x568920
 .global lbl_8056C820
 lbl_8056C820:
 	.asciz "%s:%d Warning:"
@@ -70411,9 +69430,6 @@ lbl_8056CEB0:
 
 .global lbl_8056CEC8
 lbl_8056CEC8:
-	# ROM: 0x568FC8
-.global lbl_8056CEC8
-lbl_8056CEC8:
 	.asciz "NodeTree"
 	.balign 4
 	.4byte 0
@@ -70539,9 +69555,6 @@ lbl_8056D010:
 	.4byte lbl_803F8844
 
 
-.global lbl_8056D02C
-lbl_8056D02C:
-	# ROM: 0x56912C
 .global lbl_8056D02C
 lbl_8056D02C:
 	.asciz "NodeTree"
@@ -70898,7 +69911,6 @@ lbl_8056D4F8:
 	.4byte 0x0000001A
 	.4byte 0x00000016
 	.4byte 0x00000012
-
 
 .global lbl_8056D518
 lbl_8056D518:
@@ -71792,9 +70804,6 @@ lbl_8056E150:
 
 .global lbl_8056E170
 lbl_8056E170:
-	# ROM: 0x56A270
-.global lbl_8056E170
-lbl_8056E170:
 	.asciz "#%08x[%d]: printvar %sVAR_%d(%d) = %d\n"
 	.balign 4
 
@@ -72084,6 +71093,8 @@ lbl_8056E500:
 	.4byte 0
 	.4byte lbl_8041DCBC
 	.4byte lbl_804200F4
+
+
 .global lbl_8056E510
 lbl_8056E510:
 	.asciz "<< NW4R    - SND \tfinal   build: Nov 20 2008 03:40:00 (0x4199_60831) >>"
@@ -72486,7 +71497,6 @@ lbl_8056E988:
 	.4byte func_80438A24
 	.4byte lbl_80039E30
 
-
 .global lbl_8056EA28
 lbl_8056EA28:
 	# ROM: 0x56AB28
@@ -72824,7 +71834,6 @@ lbl_8056EE1C:
 	.4byte lbl_80664248
 	.4byte 0
 	.4byte 0
-
 
 .global lbl_8056EE38
 lbl_8056EE38:
@@ -73417,7 +72426,6 @@ lbl_8056F598:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-
 
 .global lbl_8056F5B0
 lbl_8056F5B0:
@@ -75076,7 +74084,6 @@ lbl_80570A90:
 	.4byte lbl_8045E7BC
 	.4byte 0
 
-
 .global lbl_80570AD8
 lbl_80570AD8:
 	# ROM: 0x56CBD8
@@ -75907,9 +74914,6 @@ lbl_805715B8:
 
 .global lbl_80571698
 lbl_80571698:
-	# ROM: 0x56D798
-.global lbl_80571698
-lbl_80571698:
 	.asciz "?333?"
 	.balign 4
 	.4byte 0x3F000000
@@ -76029,16 +75033,10 @@ lbl_805716C8:
 
 .global lbl_80571850
 lbl_80571850:
-	# ROM: 0x56D950
-.global lbl_80571850
-lbl_80571850:
 	.asciz "NW4R:Pointer Error\nfunc(=%p) is not valid pointer."
 	.balign 4
 
 
-.global lbl_80571884
-lbl_80571884:
-	# ROM: 0x56D984
 .global lbl_80571884
 lbl_80571884:
 	.asciz "g3d_anmobj.h"
@@ -76047,24 +75045,15 @@ lbl_80571884:
 
 .global lbl_80571894
 lbl_80571894:
-	# ROM: 0x56D994
-.global lbl_80571894
-lbl_80571894:
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
 .global lbl_805718B0
 lbl_805718B0:
-	# ROM: 0x56D9B0
-.global lbl_805718B0
-lbl_805718B0:
 	.asciz "g3d_resmat_ac.h"
 
 
-.global lbl_805718C0
-lbl_805718C0:
-	# ROM: 0x56D9C0
 .global lbl_805718C0
 lbl_805718C0:
 	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
@@ -76073,15 +75062,9 @@ lbl_805718C0:
 
 .global lbl_805718E8
 lbl_805718E8:
-	# ROM: 0x56D9E8
-.global lbl_805718E8
-lbl_805718E8:
 	.asciz "g3d_resmat_ac.h"
 
 
-.global lbl_805718F8
-lbl_805718F8:
-	# ROM: 0x56D9F8
 .global lbl_805718F8
 lbl_805718F8:
 	.asciz "%s::%s: Object not valid."
@@ -76089,9 +75072,6 @@ lbl_805718F8:
 	.4byte 0
 
 
-.global lbl_80571918
-lbl_80571918:
-	# ROM: 0x56DA18
 .global lbl_80571918
 lbl_80571918:
 	.asciz "g3d_restev_ac.h"
@@ -76099,9 +75079,6 @@ lbl_80571918:
 
 .global lbl_80571928
 lbl_80571928:
-	# ROM: 0x56DA28
-.global lbl_80571928
-lbl_80571928:
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 	.4byte 0
@@ -76109,15 +75086,9 @@ lbl_80571928:
 
 .global lbl_80571948
 lbl_80571948:
-	# ROM: 0x56DA48
-.global lbl_80571948
-lbl_80571948:
 	.asciz "g3d_resmdl_ac.h"
 
 
-.global lbl_80571958
-lbl_80571958:
-	# ROM: 0x56DA58
 .global lbl_80571958
 lbl_80571958:
 	.asciz "%s::%s: Object not valid."
@@ -76127,15 +75098,9 @@ lbl_80571958:
 
 .global lbl_80571978
 lbl_80571978:
-	# ROM: 0x56DA78
-.global lbl_80571978
-lbl_80571978:
 	.asciz "g3d_resmdl_ac.h"
 
 
-.global lbl_80571988
-lbl_80571988:
-	# ROM: 0x56DA88
 .global lbl_80571988
 lbl_80571988:
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
@@ -76144,15 +75109,9 @@ lbl_80571988:
 
 .global lbl_805719B0
 lbl_805719B0:
-	# ROM: 0x56DAB0
-.global lbl_805719B0
-lbl_805719B0:
 	.asciz "g3d_resmdl_ac.h"
 
 
-.global lbl_805719C0
-lbl_805719C0:
-	# ROM: 0x56DAC0
 .global lbl_805719C0
 lbl_805719C0:
 	.asciz "%s::%s: Object not valid."
@@ -76161,24 +75120,15 @@ lbl_805719C0:
 
 .global lbl_805719DC
 lbl_805719DC:
-	# ROM: 0x56DADC
-.global lbl_805719DC
-lbl_805719DC:
 	.asciz "g3d_resnode_ac.h"
 	.balign 4
 
 
 .global lbl_805719F0
 lbl_805719F0:
-	# ROM: 0x56DAF0
-.global lbl_805719F0
-lbl_805719F0:
 	.asciz "NW4R:Failed assertion IsValid()"
 
 
-.global lbl_80571A10
-lbl_80571A10:
-	# ROM: 0x56DB10
 .global lbl_80571A10
 lbl_80571A10:
 	.asciz "g3d_resnode_ac.h"
@@ -76219,15 +75169,9 @@ lbl_80571A10:
 
 .global lbl_80571BE0
 lbl_80571BE0:
-	# ROM: 0x56DCE0
-.global lbl_80571BE0
-lbl_80571BE0:
 	.asciz "idx is out of bounds(%d)\n%d <= idx <= %d not satisfied."
 
 
-.global lbl_80571C18
-lbl_80571C18:
-	# ROM: 0x56DD18
 .global lbl_80571C18
 lbl_80571C18:
 	.asciz "g3d_resdict_ac.h"
@@ -76455,16 +75399,10 @@ lbl_80571F24:
 
 .global lbl_80571F40
 lbl_80571F40:
-	# ROM: 0x56E040
-.global lbl_80571F40
-lbl_80571F40:
 	.asciz "NW4R:Failed assertion idx < mNumScnObj"
 	.balign 4
 
 
-.global lbl_80571F68
-lbl_80571F68:
-	# ROM: 0x56E068
 .global lbl_80571F68
 lbl_80571F68:
 	.asciz "g3d_scnobj.h"
@@ -76542,16 +75480,10 @@ lbl_80572030:
 
 .global lbl_80572040
 lbl_80572040:
-	# ROM: 0x56E140
-.global lbl_80572040
-lbl_80572040:
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
 
 
-.global lbl_80572068
-lbl_80572068:
-	# ROM: 0x56E168
 .global lbl_80572068
 lbl_80572068:
 	.asciz "g3d_resnode_ac.h"
@@ -76560,16 +75492,10 @@ lbl_80572068:
 
 .global lbl_8057207C
 lbl_8057207C:
-	# ROM: 0x56E17C
-.global lbl_8057207C
-lbl_8057207C:
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
-.global lbl_80572098
-lbl_80572098:
-	# ROM: 0x56E198
 .global lbl_80572098
 lbl_80572098:
 	.asciz "g3d_resnode_ac.h"
@@ -76693,25 +75619,16 @@ lbl_805721CC:
 
 .global lbl_805721F0
 lbl_805721F0:
-	# ROM: 0x56E2F0
-.global lbl_805721F0
-lbl_805721F0:
 	.asciz "ResAnmChr"
 	.balign 4
 
 
 .global lbl_805721FC
 lbl_805721FC:
-	# ROM: 0x56E2FC
-.global lbl_805721FC
-lbl_805721FC:
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 
 
-.global lbl_80572218
-lbl_80572218:
-	# ROM: 0x56E318
 .global lbl_80572218
 lbl_80572218:
 	.asciz "g3d_resanmchr_ac.h"
@@ -76919,15 +75836,9 @@ lbl_80572418:
 
 .global lbl_80572428
 lbl_80572428:
-	# ROM: 0x56E528
-.global lbl_80572428
-lbl_80572428:
 	.asciz "NW4R:Failed assertion IsValid()"
 
 
-.global lbl_80572448
-lbl_80572448:
-	# ROM: 0x56E548
 .global lbl_80572448
 lbl_80572448:
 	.asciz "g3d_fog.h"
@@ -76937,15 +75848,9 @@ lbl_80572448:
 
 .global lbl_80572458
 lbl_80572458:
-	# ROM: 0x56E558
-.global lbl_80572458
-lbl_80572458:
 	.asciz "NW4R:Failed assertion IsValid()"
 
 
-.global lbl_80572478
-lbl_80572478:
-	# ROM: 0x56E578
 .global lbl_80572478
 lbl_80572478:
 	.asciz "g3d_fog.h"
@@ -76955,15 +75860,9 @@ lbl_80572478:
 
 .global lbl_80572488
 lbl_80572488:
-	# ROM: 0x56E588
-.global lbl_80572488
-lbl_80572488:
 	.asciz "NW4R:Failed assertion IsValid()"
 
 
-.global lbl_805724A8
-lbl_805724A8:
-	# ROM: 0x56E5A8
 .global lbl_805724A8
 lbl_805724A8:
 	.asciz "g3d_fog.h"
@@ -77960,15 +76859,9 @@ lbl_805731C0:
 
 .global lbl_805731D0
 lbl_805731D0:
-	# ROM: 0x56F2D0
-.global lbl_805731D0
-lbl_805731D0:
 	.asciz "NW4R:Failed assertion IsValid()"
 
 
-.global lbl_805731F0
-lbl_805731F0:
-	# ROM: 0x56F2F0
 .global lbl_805731F0
 lbl_805731F0:
 	.asciz "g3d_fog.h"
@@ -78698,16 +77591,10 @@ lbl_80573A44:
 
 .global lbl_80573A50
 lbl_80573A50:
-	# ROM: 0x56FB50
-.global lbl_80573A50
-lbl_80573A50:
 	.asciz "NW4R:Pointer must not be NULL (mpData)"
 	.balign 4
 
 
-.global lbl_80573A78
-lbl_80573A78:
-	# ROM: 0x56FB78
 .global lbl_80573A78
 lbl_80573A78:
 	.asciz "g3d_rescommon_ac.h"
@@ -78746,7 +77633,6 @@ lbl_80573A90:
 	.4byte lbl_804EE8D0
 	.4byte lbl_804EE894
 	.4byte lbl_804EE8B4
-
 
 .global lbl_80573B00
 lbl_80573B00:

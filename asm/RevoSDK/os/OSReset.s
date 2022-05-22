@@ -660,12 +660,11 @@ lbl_8035A7D0:
 
 .global OSResetSystem
 OSResetSystem:
-	# ROM: 0x323DA0
-	.4byte 0x3C608055
-	.4byte 0x3CA08055
-	.4byte 0x38632AF0
-	.4byte 0x388004A1
-	.4byte 0x38A52CDC
-	.4byte 0x4CC63182
-	.4byte 0x48193C9C
-	.4byte 0
+/* 802703C0 00323DA0  3C 60 80 55 */	lis r3, lbl_80552AF0@ha
+/* 802703C4 00323DA4  3C A0 80 55 */	lis r5, lbl_80552CDC@ha
+/* 802703C8 00323DA8  38 63 2A F0 */	addi r3, r3, lbl_80552AF0@l
+/* 802703CC 00323DAC  38 80 03 FC */	li r4, 0x4a1
+/* 802703D0 00323DB0  38 A5 2C DC */	addi r5, r5, lbl_80552CDC@l
+/* 802703D4 00323DB4  4C C6 31 82 */	crclr 6
+/* 802703D8 00323DB8  4B FF B0 C4 */	b OSPanic
+.4byte 0
