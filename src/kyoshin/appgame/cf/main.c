@@ -1,4 +1,4 @@
-#include "cf/main.h"
+#include "kyoshin/appgame/cf/main.h"
 
 
 extern char* pkhFilenames[];

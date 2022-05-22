@@ -1,6 +1,6 @@
 #include "types.h"
-#include "cf/code_802AEB74.h"
-#include "CLib/code_80450B14.h"
+#include "kyoshin/appgame/cf/code_802AEB74.h"
+#include "monolithlib/code_80450B14.h"
 
 extern void func_80057CDC();
 extern void func_804336E4(u32, u32);

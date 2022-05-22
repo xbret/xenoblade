@@ -1184,6 +1184,7 @@ lbl_804F6E40:
 	.asciz "endCutChange"
 	.asciz "resetFrame"
 	.balign 4
+	
 	.4byte 0xFF010203
 	.4byte 0x04050602
 	.4byte 0x01FF0708
@@ -1200,6 +1201,7 @@ lbl_804F6E40:
 	.4byte 0x1415FF0F
 	.4byte 0x0207FF0C
 	.4byte 0x0D0E0FFF
+
 .global lbl_804F7060
 lbl_804F7060:
 	.asciz "cf::IObjectInfo"
@@ -7903,14 +7905,13 @@ lbl_80500024:
 .global lbl_80500218
 lbl_80500218:
 	# ROM: 0x4FC318
-	.byte 0x00
-	.asciz "d"
-	.asciz "e"
-	.asciz "f"
-	.asciz "l"
-	.asciz "m"
-	.asciz "n"
-	.byte 0x00, 0x00, 0x00
+	.2byte 0x0064
+	.2byte 0x0065
+	.2byte 0x0066
+	.2byte 0x006C
+	.2byte 0x006D
+	.2byte 0x006E
+	.4byte 0
 .global lbl_80500228
 lbl_80500228:
 	.asciz "cf::CPcEffect07"
@@ -30026,8 +30027,8 @@ lbl_805203F0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.asciz "ZZZZ"
-	.balign 4
+	.4byte 0x5A5A5A5A
+	.4byte 0
 	.4byte 0
 	.4byte 0
 
@@ -32788,8 +32789,8 @@ lbl_805231B4:
 	.4byte 0xC4AF0907
 	.4byte 0x36A23ABB
 	.4byte 0x0000C545
-	.asciz "\n15v:("
-	.balign 4
+	.4byte 0x0A313576
+	.4byte 0x3A280000
 	.4byte 0xC5D80B53
 	.4byte 0x3451399A
 	.4byte 0x0000C666

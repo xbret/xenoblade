@@ -1,4 +1,4 @@
-#include "cf/code_802AEB74.h"
+#include "kyoshin/appgame/cf/code_802AEB74.h"
 
 u32** func_802AEB74(){
     return lbl_80665708;

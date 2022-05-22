@@ -74916,8 +74916,8 @@ lbl_805715B8:
 
 .global lbl_80571698
 lbl_80571698:
-	.asciz "?333?"
-	.balign 4
+	.4byte 0x3F333333
+	.4byte 0x3F000000
 	.4byte 0x3F000000
 	.4byte 0x3F400000
 	.4byte 0x3F800000
