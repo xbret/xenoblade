@@ -126,6 +126,9 @@ lbl_804F5D78:
 	.asciz "getIdTop"
 	.balign 4
 	.4byte 0
+	
+.global lbl_804F5D88
+lbl_804F5D88:
 	.4byte 0
 	.4byte 0x00000002
 	.4byte 0x00000003
@@ -410,6 +413,8 @@ lbl_804F6260:
 lbl_804F6270:
 	.asciz "getTimeIdxMax"
 	.balign 4
+.global lbl_804F6280
+lbl_804F6280:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
@@ -1185,6 +1190,8 @@ lbl_804F6E40:
 	.asciz "resetFrame"
 	.balign 4
 	
+.global lbl_804F7020
+lbl_804F7020:
 	.4byte 0xFF010203
 	.4byte 0x04050602
 	.4byte 0x01FF0708
@@ -1434,6 +1441,8 @@ lbl_804F74B0:
 	.asciz "eth_lv99"
 	.balign 4
 	.4byte 0
+.global lbl_804F74C0
+lbl_804F74C0:
 	.4byte 0x00000003
 	.4byte 0x00000004
 	.4byte 0x00000002
@@ -1442,6 +1451,8 @@ lbl_804F74B0:
 	.4byte 0x00000006
 	.4byte 0
 	.4byte 0x00000007
+.global lbl_804F74E0
+lbl_804F74E0:
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000002
@@ -1450,6 +1461,8 @@ lbl_804F74B0:
 	.4byte 0x00000005
 	.4byte 0x00000006
 	.4byte 0x00000007
+.global lbl_804F7500
+lbl_804F7500:
 	.4byte 0x00000003
 	.4byte 0x00000004
 	.4byte 0x00000002
@@ -1834,6 +1847,9 @@ lbl_804F7DD8:
 .global lbl_804F7DF0
 lbl_804F7DF0:
 	.asciz "cf::CfObjectObj"
+
+.global lbl_804F7E00
+lbl_804F7E00:
 	.4byte 0x0014000A
 	.4byte 0x0000000A
 	.4byte 0x00140000
@@ -1869,6 +1885,8 @@ lbl_804F7E78:
 lbl_804F7E84:
 	.asciz "pctalk_02"
 	.balign 4
+.global lbl_804F7E90
+lbl_804F7E90:
 	.4byte lbl_804F7E78
 	.4byte lbl_804F7E84
 	.4byte lbl_804F7E84
@@ -1895,12 +1913,16 @@ lbl_804F7EB4:
 	.asciz "exc_talk3"
 	.asciz "present"
 	.balign 4
+.global lbl_804F7F38
+lbl_804F7F38:
 	.4byte 0x00000125
 	.4byte 0x00000126
 	.4byte 0x00000127
 	.4byte 0x00000128
 	.4byte 0x00000129
 	.4byte 0x0000012A
+.global lbl_804F7F50
+lbl_804F7F50:
 	.4byte 0
 	.4byte 0x0000003D
 	.4byte 0x0000003D
@@ -12304,6 +12326,8 @@ lbl_80509238:
 lbl_80509244:
 	.asciz "nul_curs01"
 	.balign 4
+.global lbl_80509250
+lbl_80509250:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
@@ -12809,6 +12833,8 @@ lbl_8050A5E0:
 	.4byte 0x3FE66666
 	.4byte 0x40000000
 	.4byte 0x40200000
+.global lbl_8050A5FC
+lbl_8050A5FC:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
@@ -12826,6 +12852,8 @@ lbl_8050A608:
 	.4byte 0x07000000
 	.4byte 0x07000800
 	.4byte 0x00000800
+.global lbl_8050A62C
+lbl_8050A62C:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
@@ -14764,6 +14792,8 @@ lbl_8050D528:
 	.asciz "NAN"
 	.asciz "nan"
 	.4byte 0
+.global lbl_8050D550
+lbl_8050D550:
 	.4byte 0
 	.4byte 0x7FFFFFFF
 	.4byte 0
@@ -14774,6 +14804,8 @@ lbl_8050D528:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.global lbl_8050D578
+lbl_8050D578:
 	.asciz "INFINITY"
 	.balign 4
 	.4byte 0
@@ -15411,6 +15443,8 @@ lbl_8050DEA8:
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000001
 	.4byte 0x00000001
+.global lbl_8050DEB8
+lbl_8050DEB8:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
@@ -15421,6 +15455,8 @@ lbl_8050DEA8:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
+.global lbl_8050DEE0
+lbl_8050DEE0:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
@@ -15431,6 +15467,8 @@ lbl_8050DEA8:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
+.global lbl_8050DF08
+lbl_8050DF08:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
@@ -15725,6 +15763,8 @@ lbl_8050E240:
 	.4byte 0x03010102
 	.4byte 0x03000000
 	.4byte 0
+.global lbl_8050E250
+lbl_8050E250:
 	.4byte 0x00001F40
 	.4byte 0x00001F40
 	.4byte 0x000A0060
@@ -17666,11 +17706,6 @@ lbl_8050E400:
 	.4byte 0x79B07962
 	.4byte 0x5BE78471
 	.4byte 0x732B71B1
-
-
-.global lbl_80510004
-lbl_80510004:
-	# ROM: 0x50C104
 	.4byte 0x5E745FF5
 	.4byte 0x637B649A
 	.4byte 0x71C37C98
@@ -26888,6 +26923,8 @@ lbl_80518B90:
 	.4byte 0x80000000
 	.4byte 0x467A0000
 	.4byte 0
+.global lbl_80518BB8
+lbl_80518BB8:
 	.4byte 0x00000001
 	.4byte 0x00000002
 	.4byte 0
@@ -27011,6 +27048,8 @@ lbl_80518D58:
 	.asciz "/title/00000001/00000002/data/setting.txt"
 	.balign 4
 	.4byte 0
+.global lbl_80518D88
+lbl_80518D88:
 	.4byte 0x3FECC000
 	.4byte 0
 	.4byte 0x3FECC000
@@ -29617,14 +29656,8 @@ lbl_8051FFF0:
 	.asciz "sfd_errcode"
 .global lbl_8051FFFC
 lbl_8051FFFC:
-	.4byte 0x5346445F
-	.4byte 0x43726561
-
-
-.global lbl_80520004
-lbl_80520004:
-	.asciz "te"
-	.byte 0x00
+	.asciz "SFD_Create"
+	.balign 4
 .global lbl_80520008
 lbl_80520008:
 	.asciz "cpara_members"
@@ -30494,6 +30527,8 @@ lbl_80520F78:
 	.4byte 0
 	.4byte 0
 	.4byte 0x3F800000
+.global lbl_80520FA8
+lbl_80520FA8:
 	.4byte 0
 	.4byte 0x00000002
 	.4byte 0x00000001
@@ -33220,6 +33255,8 @@ lbl_80523858:
 	.4byte 0x7D7E7E7F
 	.4byte 0x7F000000
 	.4byte 0
+.global lbl_80523880
+lbl_80523880:
 	.4byte 0
 	.4byte 0
 	.4byte 0

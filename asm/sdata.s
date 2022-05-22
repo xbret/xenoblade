@@ -2663,6 +2663,7 @@ lbl_806651A0:
 lbl_806651A8:
 	.4byte lbl_80506360
 	.4byte lbl_8053A148
+	
 .global lbl_806651B0
 lbl_806651B0:
 	.4byte lbl_80506700
@@ -3600,7 +3601,6 @@ lbl_8066572C:
 lbl_80665730:
 	.4byte lbl_8050C8B0
 	.4byte lbl_8053E1B0
-
 .global lbl_80665738
 lbl_80665738:
 	.4byte lbl_8050C8D0
