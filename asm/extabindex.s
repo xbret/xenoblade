@@ -24709,7 +24709,7 @@ lbl_80039200:
 	.4byte lbl_80021020
 	.4byte lbl_80039200
 	.4byte func_80039220
-	.4byte sz_text
+	.4byte 0x004BC6CC
 	.4byte 0
 	.4byte 0
 	.4byte 0
