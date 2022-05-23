@@ -30,6 +30,7 @@ lbl_80666458:
 lbl_8066645C:
 	# ROM: 0x57203C
 	.4byte 0x01000000
+
 .global lbl_80666460
 lbl_80666460:
 	.4byte lbl_80527E88

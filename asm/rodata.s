@@ -138,6 +138,7 @@ lbl_804F5D88:
 	.4byte 0x00000001
 	.4byte 0x00000004
 	.4byte 0x00000005
+
 .global lbl_804F5DA0
 lbl_804F5DA0:
 	.asciz "setGround"
@@ -426,6 +427,7 @@ lbl_804F6280:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+
 .global lbl_804F628C
 lbl_804F628C:
 	.asciz "winTalkWait"
@@ -1470,6 +1472,7 @@ lbl_804F74C0:
 	.4byte 0x00000006
 	.4byte 0
 	.4byte 0x00000007
+
 .global lbl_804F74E0
 lbl_804F74E0:
 	.4byte 0
@@ -1480,6 +1483,7 @@ lbl_804F74E0:
 	.4byte 0x00000005
 	.4byte 0x00000006
 	.4byte 0x00000007
+
 .global lbl_804F7500
 lbl_804F7500:
 	.4byte 0x00000003
@@ -1584,6 +1588,8 @@ lbl_804F7520:
 	.asciz "accum"
 	.asciz "attach"
 	.4byte 0
+.global lbl_804F77C8
+lbl_804F77C8:
 	.asciz "KEY:%d"
 	.balign 4
 
@@ -1913,6 +1919,7 @@ lbl_804F7E90:
 	.4byte lbl_804F7E78
 	.4byte lbl_804F7E84
 	.4byte lbl_804F7E84
+
 .global lbl_804F7E9C
 lbl_804F7E9C:
 	.asciz "cf::CfObjectImplWalker"
@@ -1944,6 +1951,7 @@ lbl_804F7F38:
 	.4byte 0x00000128
 	.4byte 0x00000129
 	.4byte 0x0000012A
+
 .global lbl_804F7F50
 lbl_804F7F50:
 	.4byte 0
@@ -1990,6 +1998,7 @@ lbl_804F7FD0:
 	.4byte 0x3ECCCCCD
 	.4byte 0x3ECCCCCD
 	.4byte 0x3DCCCCCD
+
 .global lbl_804F7FF8
 lbl_804F7FF8:
 	.asciz "cf::CfObjectImplNpc"
@@ -2313,6 +2322,8 @@ lbl_804F84E8:
 lbl_804F8514:
 	.asciz "fixvector<cf::CfObjEnumList::sObjInfo *, 384>"
 	.balign 4
+.global lbl_804F8544
+lbl_804F8544:
 	.asciz "move"
 	.balign 4
 	.4byte 0
@@ -3216,6 +3227,7 @@ lbl_804F9F18:
 	.4byte 0xBE3851EC
 	.4byte 0x3FE147AE
 	.4byte 0xC3A92666
+
 .global lbl_804F9F30
 lbl_804F9F30:
 	.asciz "CArrow3D"
@@ -4127,6 +4139,7 @@ lbl_804FADC0:
 	.4byte 0x00540052
 	.4byte 0x00550053
 	.4byte 0x00540000
+
 .global lbl_804FADCC
 lbl_804FADCC:
 	.4byte 0x00540059
@@ -4158,12 +4171,14 @@ lbl_804FADFC:
 	.4byte 0x00530054
 	.4byte 0x00410052
 	.4byte 0x00540000
+
 .global lbl_804FAE10
 lbl_804FAE10:
 	.4byte 0x00500052
 	.4byte 0x00450053
 	.4byte 0x0045004E
 	.4byte 0x00540000
+
 .global lbl_804FAE20
 lbl_804FAE20:
 	.4byte 0x00540041
@@ -4297,6 +4312,7 @@ lbl_804FAF20:
 	.4byte 0x00000063
 	.4byte 0x00000064
 	.4byte 0x00000065
+
 .global lbl_804FAFF8
 lbl_804FAFF8:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeMakeCrystal"
@@ -5047,6 +5063,8 @@ lbl_804FC1D0:
 	.4byte 0x000003C1
 	.4byte 0
 	.4byte 0
+.global lbl_804FC240
+lbl_804FC240:
 	.4byte 0x0000006F
 	.4byte 0x00000070
 	.4byte 0x00000079
@@ -5283,6 +5301,7 @@ lbl_804FC758:
 	.4byte lbl_804FC728
 	.4byte lbl_804FC738
 	.4byte lbl_804FC748
+
 .global lbl_804FC7C8
 lbl_804FC7C8:
 	.asciz "cf::CfBdat"
@@ -5865,6 +5884,7 @@ lbl_804FD678:
 	.4byte 0
 	.4byte 0x005A0054
 	.4byte 0x00530000
+
 .global lbl_804FD6D0
 lbl_804FD6D0:
 	.asciz "cf::CCharEffectEne"
@@ -5897,6 +5917,7 @@ lbl_804FD6E8:
 	.4byte 0
 	.4byte 0x005A0054
 	.4byte 0x00530000
+
 .global lbl_804FD740
 lbl_804FD740:
 	.asciz "cf::CCharEffectNpc"
@@ -5929,6 +5950,7 @@ lbl_804FD758:
 	.4byte 0
 	.4byte 0x005A0054
 	.4byte 0x00530000
+
 .global lbl_804FD7B0
 lbl_804FD7B0:
 	.asciz "cf::CCharEffectObj"
@@ -5961,6 +5983,7 @@ lbl_804FD7C8:
 	.4byte 0
 	.4byte 0x005A0054
 	.4byte 0x00530000
+
 .global lbl_804FD820
 lbl_804FD820:
 	.asciz "cf::CCharEffectPc"
@@ -6106,6 +6129,7 @@ lbl_804FDD20:
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDD48
 lbl_804FDD48:
 	.4byte 0x00003E80
@@ -6114,6 +6138,7 @@ lbl_804FDD48:
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDD60
 lbl_804FDD60:
 	.4byte 0x00003E80
@@ -6126,6 +6151,7 @@ lbl_804FDD60:
 	.4byte 0x0000012C
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDD88
 lbl_804FDD88:
 	.4byte 0x00004268
@@ -6138,6 +6164,7 @@ lbl_804FDD88:
 	.4byte 0x0000012C
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDDB0
 lbl_804FDDB0:
 	.4byte 0x00004268
@@ -6150,6 +6177,7 @@ lbl_804FDDB0:
 	.4byte 0x0000012C
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDDD8
 lbl_804FDDD8:
 	.4byte 0x00003A98
@@ -6162,6 +6190,7 @@ lbl_804FDDD8:
 	.4byte 0x000000F0
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDE00
 lbl_804FDE00:
 	.4byte 0x00004E20
@@ -6174,6 +6203,7 @@ lbl_804FDE00:
 	.4byte 0x000000F0
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDE28
 lbl_804FDE28:
 	.4byte 0x00003E80
@@ -6186,6 +6216,7 @@ lbl_804FDE28:
 	.4byte 0x0000012C
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDE50
 lbl_804FDE50:
 	.4byte 0x00005208
@@ -6194,6 +6225,7 @@ lbl_804FDE50:
 	.4byte 0x0000003C
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDE68
 lbl_804FDE68:
 	.4byte 0x00005208
@@ -6202,6 +6234,7 @@ lbl_804FDE68:
 	.4byte 0x0000003C
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDE80
 lbl_804FDE80:
 	.4byte 0x00003E80
@@ -6214,6 +6247,7 @@ lbl_804FDE80:
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDEA8
 lbl_804FDEA8:
 	.4byte 0x00003E80
@@ -6222,6 +6256,7 @@ lbl_804FDEA8:
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDEC0
 lbl_804FDEC0:
 	.4byte 0x00003E80
@@ -6234,6 +6269,7 @@ lbl_804FDEC0:
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDEE8
 lbl_804FDEE8:
 	.4byte 0x00004650
@@ -6248,6 +6284,7 @@ lbl_804FDEE8:
 	.4byte 0x0000014A
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDF18
 lbl_804FDF18:
 	.4byte 0x00003E80
@@ -6260,6 +6297,7 @@ lbl_804FDF18:
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDF40
 lbl_804FDF40:
 	.4byte 0x00003E80
@@ -6272,6 +6310,7 @@ lbl_804FDF40:
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDF68
 lbl_804FDF68:
 	.4byte 0x00003E80
@@ -6280,6 +6319,7 @@ lbl_804FDF68:
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDF80
 lbl_804FDF80:
 	.4byte 0x0000157C
@@ -6288,6 +6328,7 @@ lbl_804FDF80:
 	.4byte 0x00001964
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_804FDF98
 lbl_804FDF98:
 	.asciz "01000000"
@@ -7005,6 +7046,7 @@ lbl_804FE7C0:
 	.4byte 0x01520152
 	.4byte 0x01520152
 	.4byte 0x01520152
+
 .global lbl_804FE800
 lbl_804FE800:
 	.asciz "/ev/realtime/"
@@ -7510,6 +7552,7 @@ lbl_804FF358:
 	.4byte 0x3F666666
 	.4byte 0x3DCCCCCD
 	.4byte 0x3F666666
+
 .global lbl_804FF3A8
 lbl_804FF3A8:
 	.asciz "CScnItemModelNw4r"
@@ -7544,6 +7587,8 @@ lbl_804FF400:
 lbl_804FF410:
 	.asciz "cf::CPartsChange"
 	.balign 4
+.global lbl_804FF424
+lbl_804FF424:
 	.asciz "%s%s"
 	.balign 4
 	.4byte 0
@@ -8165,6 +8210,7 @@ lbl_805008D0:
 	.4byte 0x0E1A0E1D
 	.4byte 0x0E1C0105
 	.4byte 0x0DAF0000
+
 .global lbl_80500904
 lbl_80500904:
 	.asciz "cf::CSuddenCommu"
@@ -8297,6 +8343,7 @@ lbl_80500D98:
 	.4byte 0x00000006
 	.4byte 0x00000007
 	.4byte 0x00000008
+
 .global lbl_80500DB0
 lbl_80500DB0:
 	.asciz "percent_E"
@@ -8686,6 +8733,7 @@ lbl_80501B50:
 	.4byte lbl_80501AD0
 	.4byte lbl_80501AC4
 	.4byte lbl_80501AB8
+
 .global lbl_80501B6C
 lbl_80501B6C:
 	.asciz "CItemBoxInfo2"
@@ -8928,6 +8976,7 @@ lbl_80502528:
 	.4byte 0
 	.4byte 0
 	.4byte lbl_8066A980
+
 .global lbl_80502560
 lbl_80502560:
 	.asciz "exchangelist0000"
@@ -9059,6 +9108,7 @@ lbl_80502754:
 	.4byte lbl_8050272C
 	.4byte lbl_80502740
 	.4byte lbl_80502754
+
 .global lbl_805027D4
 lbl_805027D4:
 	.asciz "kessyou1"
@@ -9161,6 +9211,7 @@ lbl_805028F4:
 	.4byte 0x3FE66666
 	.4byte 0x40000000
 	.4byte 0x40200000
+
 .global lbl_80502910
 lbl_80502910:
 	.asciz "CItemBoxLine"
@@ -9549,6 +9600,7 @@ lbl_80503478:
 	.4byte 0x42080000
 	.4byte 0x424C0000
 	.4byte 0x42880000
+
 .global lbl_8050348C
 lbl_8050348C:
 	.asciz "CPartyState"
@@ -9750,6 +9802,7 @@ lbl_80503870:
 	.4byte lbl_80503848
 	.4byte lbl_80503854
 	.4byte lbl_80503860
+
 .global lbl_805038A8
 lbl_805038A8:
 	.asciz "CEquipChange"
@@ -10977,6 +11030,7 @@ lbl_80506208:
 	.4byte lbl_805061E4
 	.4byte lbl_805061F0
 	.4byte lbl_805061FC
+
 .global lbl_80506228
 lbl_80506228:
 	.asciz "pic_icon01"
@@ -11022,6 +11076,7 @@ lbl_80506288:
 	.4byte lbl_80506264
 	.4byte lbl_80506270
 	.4byte lbl_8050627C
+
 .global lbl_805062A8
 lbl_805062A8:
 	.asciz "pic_arts00"
@@ -11064,6 +11119,7 @@ lbl_805062FC:
 	.4byte 0x2D103F10
 	.4byte 0x50106710
 	.4byte lbl_80100000
+
 .global lbl_80506310
 lbl_80506310:
 	.asciz "pic_arts09"
@@ -11094,6 +11150,7 @@ lbl_8050634C:
 	.4byte lbl_80506328
 	.4byte lbl_80506334
 	.4byte lbl_80506340
+
 .global lbl_80506360
 lbl_80506360:
 	.asciz "CArtsList"
@@ -11472,6 +11529,7 @@ lbl_80506E98:
 	.4byte 0x0182019A
 	.4byte 0x01A90000
 	.4byte 0x01AF0000
+
 .global lbl_80506ED4
 lbl_80506ED4:
 	.asciz "mf03_map01_flr0101.brlyt"
@@ -11610,6 +11668,7 @@ lbl_805071B0:
 	.4byte lbl_80507158
 	.4byte lbl_80507174
 	.4byte lbl_80507190
+
 .global lbl_80507220
 lbl_80507220:
 	.asciz "/menu/floor_ma0101.arc"
@@ -11747,6 +11806,7 @@ lbl_80507490:
 	.4byte lbl_80507448
 	.4byte lbl_80507460
 	.4byte lbl_80507478
+
 .global lbl_80507500
 lbl_80507500:
 	.asciz "CFloorMap"
@@ -12398,6 +12458,7 @@ lbl_805091F8:
 	.4byte 0x03040005
 	.4byte 0x00010002
 	.4byte 0x03050400
+
 .global lbl_80509238
 lbl_80509238:
 	.asciz "nul_curs00"
@@ -12411,6 +12472,7 @@ lbl_80509250:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+
 .global lbl_8050925C
 lbl_8050925C:
 	.asciz "UI::CPassiveSkill"
@@ -12854,6 +12916,7 @@ lbl_8050A460:
 	.4byte 0x3F99999A
 	.4byte 0x3FB33333
 	.4byte 0x3FCCCCCD
+
 .global lbl_8050A470
 lbl_8050A470:
 	.asciz "cf::Flusher<cf::CfObjectActor>"
@@ -12919,6 +12982,7 @@ lbl_8050A5E0:
 	.4byte 0x3FE66666
 	.4byte 0x40000000
 	.4byte 0x40200000
+
 .global lbl_8050A5FC
 lbl_8050A5FC:
 	.4byte 0x00000010
@@ -12938,11 +13002,13 @@ lbl_8050A608:
 	.4byte 0x07000000
 	.4byte 0x07000800
 	.4byte 0x00000800
+
 .global lbl_8050A62C
 lbl_8050A62C:
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+
 .global lbl_8050A638
 lbl_8050A638:
 	.asciz "CEquipItemBox"
@@ -13378,6 +13444,7 @@ lbl_8050B598:
 	.4byte lbl_8050B574
 	.4byte lbl_8050B580
 	.4byte lbl_8050B58C
+
 .global lbl_8050B5B4
 lbl_8050B5B4:
 	.asciz "CMCGetItemBox"
@@ -13707,6 +13774,7 @@ lbl_8050BFF4:
 	.4byte 0x02060108
 	.4byte 0x04010109
 	.4byte 0x02F90000
+
 .global lbl_8050C000
 lbl_8050C000:
 	.4byte 0x02080501
@@ -13718,11 +13786,13 @@ lbl_8050C00C:
 	.4byte 0x0601020A
 	.4byte 0x0602020B
 	.4byte 0x010B0000
+
 .global lbl_8050C018
 lbl_8050C018:
 	.4byte 0x010C0701
 	.4byte 0x0702020C
 	.4byte 0x010D0000
+
 .global lbl_8050C024
 lbl_8050C024:
 	.4byte 0x04020303
@@ -13743,6 +13813,7 @@ lbl_8050C044:
 	.4byte 0x06040112
 	.4byte 0x0605010A
 	.4byte 0x03F70000
+
 .global lbl_8050C054
 lbl_8050C054:
 	.4byte 0x0113030A
@@ -13811,6 +13882,7 @@ lbl_8050C0D8:
 	.4byte 0x070B060E
 	.4byte 0x021C060F
 	.4byte 0x021D0000
+
 .global lbl_8050C0E4
 lbl_8050C0E4:
 	.4byte 0x0610040B
@@ -14370,6 +14442,7 @@ lbl_8050C9D0:
 	.4byte 0x42200000
 	.4byte 0x3DCCCCCD
 	.4byte 0x3D088889
+
 .global lbl_8050C9E0
 lbl_8050C9E0:
 	.asciz "CUIErrMesWin"
@@ -14486,8 +14559,12 @@ lbl_8050CCA8:
 .global lbl_8050CCC0
 lbl_8050CCC0:
 	.asciz "cf::CHelp_LearnArts"
+
+.global lbl_8050CCD4
+lbl_8050CCD4:
 	.asciz "wpn_type"
 	.balign 4
+
 .global lbl_8050CCE0
 lbl_8050CCE0:
 	.asciz "cf::CHelp_ClosePartyMenu"
@@ -14833,6 +14910,7 @@ lbl_8050D220:
 	.4byte 0xF4F5F6F7
 	.4byte 0xF8F9FAFB
 	.4byte 0xFCFDFEFF
+
 .global lbl_8050D320
 lbl_8050D320:
 	.4byte 0x00010203
@@ -14899,6 +14977,7 @@ lbl_8050D320:
 	.4byte 0xF4F5F6F7
 	.4byte 0xF8F9FAFB
 	.4byte 0xFCFDFEFF
+
 .global lbl_8050D420
 lbl_8050D420:
 	.asciz "%a %b %e %T %Y"
@@ -15212,6 +15291,7 @@ lbl_8050D788:
 	.4byte 0x00FA00FB
 	.4byte 0x00FC00FD
 	.4byte 0x00FE00FF
+
 .global lbl_8050D988
 lbl_8050D988:
 	.4byte 0x00000001
@@ -15342,6 +15422,8 @@ lbl_8050D988:
 	.4byte 0x00FA00FB
 	.4byte 0x00FC00FD
 	.4byte 0x00FE00FF
+.global lbl_8050DB88
+lbl_8050DB88:
 	.4byte 0
 	.4byte 0
 
@@ -15487,6 +15569,8 @@ lbl_8050DD58:
 	.4byte 0x00000003
 	.4byte 0x00000004
 	.4byte 0x00000006
+.global lbl_8050DD68
+lbl_8050DD68:
 	.4byte 0x3FF921FB
 	.4byte 0x40000000
 	.4byte 0x3E74442D
@@ -15586,6 +15670,7 @@ lbl_8050DEA8:
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000001
 	.4byte 0x00000001
+
 .global lbl_8050DEB8
 lbl_8050DEB8:
 	.4byte 0x60000000
@@ -15598,6 +15683,7 @@ lbl_8050DEB8:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
+
 .global lbl_8050DEE0
 lbl_8050DEE0:
 	.4byte 0x60000000
@@ -15610,6 +15696,7 @@ lbl_8050DEE0:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
+
 .global lbl_8050DF08
 lbl_8050DF08:
 	.4byte 0x60000000
@@ -15641,11 +15728,13 @@ lbl_8050DF48:
 	.4byte 0x40020400
 	.4byte 0x000F2000
 	.4byte 0x13880000
+
 .global lbl_8050DF54
 lbl_8050DF54:
 	.4byte 0x0002010E
 	.4byte 0x01020E02
 	.4byte 0x0212FF01
+
 .global lbl_8050DF60
 lbl_8050DF60:
 	.4byte 0x0005000A
@@ -15653,6 +15742,7 @@ lbl_8050DF60:
 	.4byte 0x0106FF01
 	.4byte 0x07FF0112
 	.4byte 0xFF020000
+
 .global lbl_8050DF74
 lbl_8050DF74:
 	.4byte 0x03000200
@@ -15804,6 +15894,7 @@ lbl_8050E0F0:
 	.4byte lbl_802DFD5C
 	.4byte lbl_802DF7F8
 	.4byte lbl_802E02C8
+
 .global lbl_8050E138
 lbl_8050E138:
 	.4byte 0x0012010E
@@ -15813,6 +15904,7 @@ lbl_8050E138:
 	.4byte 0x12000712
 	.4byte 0x00121200
 	.4byte 0x12120000
+
 .global lbl_8050E154
 lbl_8050E154:
 	.4byte 0x12120101
@@ -15822,6 +15914,7 @@ lbl_8050E154:
 	.4byte 0x12010512
 	.4byte 0x01061200
 	.4byte 0x09120100
+
 .global lbl_8050E170
 lbl_8050E170:
 	.4byte 0x0A12020C
@@ -15831,6 +15924,7 @@ lbl_8050E170:
 	.4byte 0x12020F0D
 	.4byte 0x000D1200
 	.4byte 0x0D120000
+
 .global lbl_8050E18C
 lbl_8050E18C:
 	.4byte 0x1212030E
@@ -15866,6 +15960,7 @@ lbl_8050E1B8:
 	.4byte lbl_802E3134
 	.4byte lbl_802E3150
 	.4byte lbl_802E289C
+
 .global lbl_8050E1E8
 lbl_8050E1E8:
 	.4byte 0x06020C01
@@ -15874,6 +15969,7 @@ lbl_8050E1E8:
 	.4byte 0x0C010C01
 	.4byte 0x0C010C01
 	.4byte 0x0A010C01
+
 .global lbl_8050E200
 lbl_8050E200:
 	.4byte 0x0C020C01
@@ -15882,6 +15978,7 @@ lbl_8050E200:
 	.4byte 0x0C020702
 	.4byte 0x0C020C02
 	.4byte 0x0A010B03
+
 .global lbl_8050E218
 lbl_8050E218:
 	.4byte 0x0C030003
@@ -28714,6 +28811,7 @@ lbl_8051DA00:
 	.4byte lbl_805206B0
 	.4byte lbl_8051FF48
 	.4byte lbl_80520678
+
 .global lbl_8051DA24
 lbl_8051DA24:
 	.4byte lbl_805202A0
@@ -28826,6 +28924,7 @@ lbl_8051E170:
 	.4byte lbl_8051E134
 	.4byte 0x0000EA24
 	.4byte 0x00000670
+
 .global lbl_8051E17C
 lbl_8051E17C:
 	.asciz "mwPlyInitSfdFx"
@@ -29763,6 +29862,8 @@ lbl_8051FEE0:
 	.4byte lbl_803BE7D4
 	.4byte lbl_803BE7E0
 	.4byte lbl_803BE7EC
+.global lbl_8051FF18
+lbl_8051FF18:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -30029,6 +30130,7 @@ lbl_805202A0:
 	.4byte lbl_803C0ED0
 	.4byte lbl_803C0EDC
 	.4byte lbl_803C0EE8
+
 .global lbl_805202D8
 lbl_805202D8:
 	.4byte lbl_803C0F7C
@@ -30303,6 +30405,7 @@ lbl_80520678:
 	.4byte lbl_803CEC7C
 	.4byte lbl_803CEC88
 	.4byte lbl_803CEC94
+
 .global lbl_805206B0
 lbl_805206B0:
 	.4byte lbl_803CEC9C
@@ -34677,6 +34780,7 @@ lbl_80523CD8:
 	.4byte 0x3FF99482
 	.4byte 0x3FFC7859
 	.4byte 0x3FFF64C1
+
 .global lbl_80524BEC
 lbl_80524BEC:
 	.float 1.0
@@ -36168,6 +36272,7 @@ lbl_805262A8:
 	.4byte 0x0000001C
 	.4byte 0x0000001D
 	.4byte 0x0000001E
+
 .global lbl_80526320
 lbl_80526320:
 	.asciz "CDeviceVI"
@@ -36535,6 +36640,7 @@ lbl_80526970:
 	.4byte 0xFFFFFC40
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
 .global lbl_805269C0
 lbl_805269C0:
 	.asciz "CLibCriStreamingPlay"
@@ -36645,6 +36751,8 @@ lbl_80526B20:
 	.asciz "invalid distance too far back"
 	.asciz "invalid distance code"
 	.asciz "invalid literal/length code"
+.global lbl_80526B70
+lbl_80526B70:
 	.4byte 0x60070000
 	.4byte 0x00080050
 	.4byte 0x00080010
@@ -37157,6 +37265,8 @@ lbl_80526B20:
 	.4byte 0x0008008F
 	.4byte 0x0008004F
 	.4byte 0x000900FF
+.global lbl_80527370
+lbl_80527370:
 	.4byte 0x10050001
 	.4byte 0x17050101
 	.4byte 0x13050011
@@ -37309,6 +37419,7 @@ lbl_80527648:
 	.4byte 0x001C001C
 	.4byte 0x001D001D
 	.4byte 0x00400040
+
 .global lbl_80527688
 lbl_80527688:
 	.asciz "CTaskLOD"
@@ -37346,10 +37457,14 @@ lbl_80527708:
 	.asciz "mpfsys::MPFDrawMdlNoColor"
 	.balign 4
 	.4byte 0
+.global lbl_80527728
+lbl_80527728:
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000002
 	.4byte 0x00000003
+.global lbl_80527738
+lbl_80527738:
 	.4byte 0x00000003
 	.4byte 0x00000002
 	.4byte 0x00000001
@@ -38044,6 +38159,7 @@ lbl_805280EC:
 	.4byte 0
 	.4byte 0xBE000000
 	.4byte 0xBE800000
+
 .global lbl_805280F8
 lbl_805280F8:
 	.asciz "CMdlAnmEye"
@@ -38104,4 +38220,6 @@ lbl_805281B0:
 lbl_805281B8:
 	.asciz "CNBanner"
 	.balign 4
+.global lbl_805281C4
+lbl_805281C4:
 	.4byte 0

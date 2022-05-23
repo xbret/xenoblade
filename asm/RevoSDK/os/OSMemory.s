@@ -514,16 +514,16 @@ __OSInitMemoryProtection:
 /* 80359B98 00323158  38 60 00 00 */	li r3, 0
 /* 80359B9C 0032315C  38 9F 94 F0 */	addi r4, r31, MEMIntrruptHandler@l
 /* 80359BA0 00323160  4B FF EE 81 */	bl __OSSetInterruptHandler
-/* 80359BA4 00323164  38 9F 94 F0 */	addi r4, r31, -27408
+/* 80359BA4 00323164  38 9F 94 F0 */	addi r4, r31, MEMIntrruptHandler@l
 /* 80359BA8 00323168  38 60 00 01 */	li r3, 1
 /* 80359BAC 0032316C  4B FF EE 75 */	bl __OSSetInterruptHandler
-/* 80359BB0 00323170  38 9F 94 F0 */	addi r4, r31, -27408
+/* 80359BB0 00323170  38 9F 94 F0 */	addi r4, r31, MEMIntrruptHandler@l
 /* 80359BB4 00323174  38 60 00 02 */	li r3, 2
 /* 80359BB8 00323178  4B FF EE 69 */	bl __OSSetInterruptHandler
-/* 80359BBC 0032317C  38 9F 94 F0 */	addi r4, r31, -27408
+/* 80359BBC 0032317C  38 9F 94 F0 */	addi r4, r31, MEMIntrruptHandler@l
 /* 80359BC0 00323180  38 60 00 03 */	li r3, 3
 /* 80359BC4 00323184  4B FF EE 5D */	bl __OSSetInterruptHandler
-/* 80359BC8 00323188  38 9F 94 F0 */	addi r4, r31, -27408
+/* 80359BC8 00323188  38 9F 94 F0 */	addi r4, r31, MEMIntrruptHandler@l
 /* 80359BCC 0032318C  38 60 00 04 */	li r3, 4
 /* 80359BD0 00323190  4B FF EE 51 */	bl __OSSetInterruptHandler
 /* 80359BD4 00323194  3C 60 80 55 */	lis r3, lbl_80552AE0@ha

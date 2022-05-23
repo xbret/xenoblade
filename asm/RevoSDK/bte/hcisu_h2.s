@@ -39,7 +39,7 @@ lbl_802DCAF0:
 /* 802DCB18 002A60D8  3B 82 BB B0 */	addi r28, r2, lbl_8066BF30@sda21
 /* 802DCB1C 002A60DC  3B 20 00 03 */	li r25, 3
 /* 802DCB20 002A60E0  3B 00 00 02 */	li r24, 2
-/* 802DCB24 002A60E4  3D C0 80 54 */	lis r14, 0x8054
+/* 802DCB24 002A60E4  3D C0 80 54 */	lis r14, lbl_80543F60@ha
 /* 802DCB28 002A60E8  3B 42 BB B8 */	addi r26, r2, lbl_8066BF38@sda21
 /* 802DCB2C 002A60EC  3B 60 00 01 */	li r27, 1
 lbl_802DCB30:
@@ -102,7 +102,7 @@ lbl_802DCBD0:
 /* 802DCC00 002A61C0  9B 76 00 1A */	stb r27, 0x1a(r22)
 /* 802DCC04 002A61C4  48 00 00 14 */	b lbl_802DCC18
 lbl_802DCC08:
-/* 802DCC08 002A61C8  38 8E 3F 60 */	addi r4, r14, 0x3f60
+/* 802DCC08 002A61C8  38 8E 3F 60 */	addi r4, r14, lbl_80543F60@l
 /* 802DCC0C 002A61CC  3C 60 00 07 */	lis r3, 7
 /* 802DCC10 002A61D0  48 00 13 91 */	bl func_802DDFA0
 /* 802DCC14 002A61D4  9B 16 00 1A */	stb r24, 0x1a(r22)
@@ -388,6 +388,7 @@ lbl_802DCFF4:
 /* 802DD004 002A65C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DD008 002A65C8  4E 80 00 20 */	blr 
 /* 802DD00C 002A65CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
 .global lbl_802DD010
 lbl_802DD010:
 /* 802DD010 002A65D0  3C C0 80 5C */	lis r6, lbl_805BBC20@ha
@@ -402,6 +403,7 @@ lbl_802DD010:
 /* 802DD034 002A65F4  B0 A6 00 12 */	sth r5, 0x12(r6)
 /* 802DD038 002A65F8  4E 80 00 20 */	blr 
 /* 802DD03C 002A65FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
 .global lbl_802DD040
 lbl_802DD040:
 /* 802DD040 002A6600  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -432,6 +434,7 @@ lbl_802DD040:
 /* 802DD0A4 002A6664  4E 80 00 20 */	blr 
 /* 802DD0A8 002A6668  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802DD0AC 002A666C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
 .global lbl_802DD0B0
 lbl_802DD0B0:
 /* 802DD0B0 002A6670  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -450,6 +453,7 @@ lbl_802DD0B0:
 /* 802DD0E4 002A66A4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802DD0E8 002A66A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802DD0EC 002A66AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
 .global lbl_802DD0F0
 lbl_802DD0F0:
 /* 802DD0F0 002A66B0  94 21 FF F0 */	stwu r1, -0x10(r1)

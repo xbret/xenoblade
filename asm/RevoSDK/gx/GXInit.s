@@ -89,6 +89,7 @@ lbl_80317570:
 /* 80317584 002E0B44  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80317588 002E0B48  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8031758C 002E0B4C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
 .global lbl_80317590
 lbl_80317590:
 /* 80317590 002E0B50  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -307,9 +308,9 @@ func_80317830:
 /* 803178AC 002E0E6C  7F 45 D3 78 */	mr r5, r26
 /* 803178B0 002E0E70  38 7C CE E0 */	addi r3, r28, lbl_805CCEE0@l
 /* 803178B4 002E0E74  48 00 0E AD */	bl func_80318760
-/* 803178B8 002E0E78  38 7C CE E0 */	addi r3, r28, -12576
+/* 803178B8 002E0E78  38 7C CE E0 */	addi r3, r28, lbl_805CCEE0@l
 /* 803178BC 002E0E7C  48 00 10 35 */	bl func_803188F0
-/* 803178C0 002E0E80  38 7C CE E0 */	addi r3, r28, -12576
+/* 803178C0 002E0E80  38 7C CE E0 */	addi r3, r28, lbl_805CCEE0@l
 /* 803178C4 002E0E84  48 00 12 0D */	bl func_80318AD0
 /* 803178C8 002E0E88  80 0D B7 AC */	lwz r0, lbl_8066792C@sda21(r13)
 /* 803178CC 002E0E8C  2C 00 00 00 */	cmpwi r0, 0

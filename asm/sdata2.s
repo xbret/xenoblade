@@ -418,6 +418,7 @@ lbl_80668658:
 	# ROM: 0x5724B8
 	.4byte 0x43300000
 	.4byte 0x80000000
+
 .global lbl_80668660
 lbl_80668660:
 	.asciz "winTalk"
@@ -1801,6 +1802,7 @@ lbl_80668B08:
 lbl_80668B0C:
 	# ROM: 0x57296C
 	.4byte 0x40A00000
+
 .global lbl_80668B10
 lbl_80668B10:
 	.asciz "High"
@@ -2504,63 +2506,83 @@ lbl_80668D28:
 lbl_80668D2C:
 	# ROM: 0x572B8C
 	.4byte 0x42700000
+
 .global lbl_80668D30
 lbl_80668D30:
 	.4byte 0x62303100
+
 .global lbl_80668D34
 lbl_80668D34:
 	.4byte 0x62303200
+
 .global lbl_80668D38
 lbl_80668D38:
 	.4byte 0x62303300
+
 .global lbl_80668D3C
 lbl_80668D3C:
 	.4byte 0x62303400
+
 .global lbl_80668D40
 lbl_80668D40:
 	.4byte 0x62303500
+
 .global lbl_80668D44
 lbl_80668D44:
 	.4byte 0x62303600
+
 .global lbl_80668D48
 lbl_80668D48:
 	.4byte 0x62303700
+
 .global lbl_80668D4C
 lbl_80668D4C:
 	.4byte 0x62303800
+
 .global lbl_80668D50
 lbl_80668D50:
 	.4byte 0x62303900
+
 .global lbl_80668D54
 lbl_80668D54:
 	.4byte 0x62313000
+
 .global lbl_80668D58
 lbl_80668D58:
 	.4byte 0x62313100
+
 .global lbl_80668D5C
 lbl_80668D5C:
 	.4byte 0x62313200
+
 .global lbl_80668D60
 lbl_80668D60:
 	.4byte 0x62313300
+
 .global lbl_80668D64
 lbl_80668D64:
 	.4byte 0x62313400
+
 .global lbl_80668D68
 lbl_80668D68:
 	.4byte 0x62313500
+
 .global lbl_80668D6C
 lbl_80668D6C:
 	.4byte 0x62313600
+
 .global lbl_80668D70
 lbl_80668D70:
 	.4byte 0x62313700
+
 .global lbl_80668D74
 lbl_80668D74:
 	.4byte 0x62313800
+
 .global lbl_80668D78
 lbl_80668D78:
 	.4byte 0x62313900
+
 .global lbl_80668D7C
 lbl_80668D7C:
 	.4byte 0x62323000
@@ -3668,6 +3690,7 @@ lbl_806690B0:
 .global lbl_806690B4
 lbl_806690B4:
 	.4byte 0x6D610000
+
 .global lbl_806690B8
 lbl_806690B8:
 	.asciz "map/"
@@ -3771,15 +3794,19 @@ lbl_80669160:
 .global lbl_80669168
 lbl_80669168:
 	.4byte 0x65720000
+
 .global lbl_8066916C
 lbl_8066916C:
 	.4byte 0x65700000
+
 .global lbl_80669170
 lbl_80669170:
 	.4byte 0x65650000
+
 .global lbl_80669174
 lbl_80669174:
 	.4byte 0x656C0000
+
 .global lbl_80669178
 lbl_80669178:
 	.4byte 0x73730000
@@ -3791,21 +3818,27 @@ lbl_80669180:
 .global lbl_80669188
 lbl_80669188:
 	.4byte 0x2E736500
+
 .global lbl_8066918C
 lbl_8066918C:
 	.4byte 0x736D0000
+
 .global lbl_80669190
 lbl_80669190:
 	.4byte 0x73700000
+
 .global lbl_80669194
 lbl_80669194:
 	.4byte 0x73650000
+
 .global lbl_80669198
 lbl_80669198:
 	.4byte 0x736E0000
+
 .global lbl_8066919C
 lbl_8066919C:
 	.4byte 0x666C0000
+
 .global lbl_806691A0
 lbl_806691A0:
 	.asciz ".bgm"
@@ -3813,21 +3846,27 @@ lbl_806691A0:
 .global lbl_806691A8
 lbl_806691A8:
 	.4byte 0x76650000
+
 .global lbl_806691AC
 lbl_806691AC:
 	.4byte 0x62740000
+
 .global lbl_806691B0
 lbl_806691B0:
 	.4byte 0x646E0000
+
 .global lbl_806691B4
 lbl_806691B4:
 	.4byte 0x74770000
+
 .global lbl_806691B8
 lbl_806691B8:
 	.4byte 0x76730000
+
 .global lbl_806691BC
 lbl_806691BC:
 	.4byte 0x2E740000
+
 .global lbl_806691C0
 lbl_806691C0:
 	.4byte 0x6D640000
@@ -3975,6 +4014,7 @@ lbl_80669234:
 lbl_80669238:
 	# ROM: 0x573098
 	.4byte 0x3FE66666
+
 .global lbl_8066923C
 lbl_8066923C:
 	.asciz "ene1Lv"
@@ -4612,12 +4652,15 @@ lbl_80669418:
 .global lbl_80669420
 lbl_80669420:
 	.4byte 0x63687200
+
 .global lbl_80669424
 lbl_80669424:
 	.4byte 0x616E6D00
+
 .global lbl_80669428
 lbl_80669428:
 	.4byte 0x6F626A00
+
 .global lbl_8066942C
 lbl_8066942C:
 	.asciz "effect"
@@ -6532,20 +6575,25 @@ lbl_80669A50:
 lbl_80669A54:
 	# ROM: 0x5738B4
 	.4byte 0x00FF0000
+
 .global lbl_80669A58
 lbl_80669A58:
 	.4byte 0x004E0000
+
 .global lbl_80669A5C
 lbl_80669A5C:
 	.4byte 0x00500000
+
 .global lbl_80669A60
 lbl_80669A60:
 	.4byte 0x00440045
 	.4byte 0x004C0000
+
 .global lbl_80669A68
 lbl_80669A68:
 	.4byte 0x0043004F
 	.4byte 0x004C0000
+
 .global lbl_80669A70
 lbl_80669A70:
 	.4byte 0x00430000
@@ -6555,26 +6603,32 @@ lbl_80669A70:
 lbl_80669A78:
 	.4byte 0x0050004F
 	.4byte 0x00530000
+
 .global lbl_80669A80
 lbl_80669A80:
 	.4byte 0x004A0041
 	.4byte 0x00570000
+
 .global lbl_80669A88
 lbl_80669A88:
 	.4byte 0x00530045
 	.4byte 0x004C0000
+
 .global lbl_80669A90
 lbl_80669A90:
 	.4byte 0x00410043
 	.4byte 0x00540000
+
 .global lbl_80669A98
 lbl_80669A98:
 	.4byte 0x00510053
 	.4byte 0x00540000
+
 .global lbl_80669AA0
 lbl_80669AA0:
 	.4byte 0x0049004E
 	.4byte 0x00560000
+
 .global lbl_80669AA8
 lbl_80669AA8:
 	.4byte 0x00450058
@@ -6754,6 +6808,7 @@ lbl_80669B28:
 lbl_80669B2C:
 	# ROM: 0x57398C
 	.4byte 0x3F19999A
+
 .global lbl_80669B30
 lbl_80669B30:
 	.asciz "win_n"
@@ -7432,6 +7487,7 @@ lbl_80669D58:
 	# ROM: 0x573BB8
 	.4byte 0x43300000
 	.4byte 0x80000000
+
 .global lbl_80669D60
 lbl_80669D60:
 	.asciz "name"
@@ -7621,6 +7677,7 @@ lbl_80669E40:
 	# ROM: 0x573CA0
 	.4byte 0x43300000
 	.4byte 0x80000000
+
 .global lbl_80669E48
 lbl_80669E48:
 	.asciz "title0"
@@ -7920,6 +7977,7 @@ lbl_80669F90:
 	# ROM: 0x573DF0
 	.4byte 0x43300000
 	.4byte 0x80000000
+
 .global lbl_80669F98
 lbl_80669F98:
 	.4byte 0
@@ -8494,15 +8552,19 @@ lbl_8066A188:
 	# ROM: 0x573FE8
 	.4byte 0x43300000
 	.4byte 0x80000000
+
 .global lbl_8066A190
 lbl_8066A190:
 	.4byte 0x656E0000
+
 .global lbl_8066A194
 lbl_8066A194:
 	.4byte 0x6E700000
+
 .global lbl_8066A198
 lbl_8066A198:
 	.4byte 0x6F6A0000
+
 .global lbl_8066A19C
 lbl_8066A19C:
 	.asciz "wp42"
@@ -8562,6 +8624,7 @@ lbl_8066A1E0:
 	# ROM: 0x574040
 	.4byte 0x43300000
 	.4byte 0x80000000
+
 .global lbl_8066A1E8
 lbl_8066A1E8:
 	.asciz "effTgt"
@@ -8645,6 +8708,7 @@ lbl_8066A238:
 	# ROM: 0x574098
 	.4byte 0x43300000
 	.4byte 0x80000000
+
 .global lbl_8066A240
 lbl_8066A240:
 	.asciz "isEnd"
@@ -11065,6 +11129,7 @@ lbl_8066AA20:
 lbl_8066AA24:
 	# ROM: 0x574884
 	.4byte 0x40600000
+
 .global lbl_8066AA28
 lbl_8066AA28:
 	.asciz "r1_item"
@@ -11333,6 +11398,7 @@ lbl_8066AB18:
 	# ROM: 0x574978
 	.4byte 0x43300000
 	.4byte 0x80000000
+
 .global lbl_8066AB20
 lbl_8066AB20:
 	.asciz "getPcHp"
@@ -12837,6 +12903,7 @@ lbl_8066AFF8:
 lbl_8066AFFC:
 	# ROM: 0x574E5C
 	.4byte 0x42F60000
+
 .global lbl_8066B000
 lbl_8066B000:
 	.asciz "CMapSel"
@@ -13087,6 +13154,7 @@ lbl_8066B0C8:
 	# ROM: 0x574F28
 	.4byte 0x43300000
 	.4byte 0x80000000
+
 .global lbl_8066B0D0
 lbl_8066B0D0:
 	.asciz "CCLPCur"
@@ -13461,6 +13529,7 @@ lbl_8066B200:
 .global lbl_8066B208
 lbl_8066B208:
 	.4byte 0x61434C00
+
 .global lbl_8066B20C
 lbl_8066B20C:
 	.4byte 0x636C3100
@@ -14080,6 +14149,7 @@ lbl_8066B400:
 lbl_8066B404:
 	# ROM: 0x575264
 	.4byte 0x07080000
+
 .global lbl_8066B408
 lbl_8066B408:
 	.asciz "CEIBCur"
@@ -14107,6 +14177,7 @@ lbl_8066B418:
 lbl_8066B41C:
 	# ROM: 0x57527C
 	.4byte 0x42EC0000
+
 .global lbl_8066B420
 lbl_8066B420:
 	.asciz "CSLCur"
@@ -14475,6 +14546,7 @@ lbl_8066B55C:
 .global lbl_8066B560
 lbl_8066B560:
 	.4byte 0x02010200
+
 .global lbl_8066B564
 lbl_8066B564:
 	.4byte 0x01010201
@@ -14484,9 +14556,11 @@ lbl_8066B564:
 lbl_8066B56C:
 	.4byte 0x01020202
 	.4byte 0x01030000
+
 .global lbl_8066B574
 lbl_8066B574:
 	.4byte 0x02010300
+
 .global lbl_8066B578
 lbl_8066B578:
 	.4byte 0x01060301
@@ -14495,67 +14569,87 @@ lbl_8066B578:
 .global lbl_8066B580
 lbl_8066B580:
 	.4byte 0x03010203
+
 .global lbl_8066B584
 lbl_8066B584:
 	.4byte 0x02050302
 	.4byte 0x01070000
+
 .global lbl_8066B58C
 lbl_8066B58C:
 	.4byte 0x03010204
+
 .global lbl_8066B590
 lbl_8066B590:
 	.4byte 0x03010205
+
 .global lbl_8066B594
 lbl_8066B594:
 	.4byte 0x03010206
+
 .global lbl_8066B598
 lbl_8066B598:
 	.4byte 0x03010207
+
 .global lbl_8066B59C
 lbl_8066B59C:
 	.4byte 0x03010304
+
 .global lbl_8066B5A0
 lbl_8066B5A0:
 	.4byte 0x03010305
+
 .global lbl_8066B5A4
 lbl_8066B5A4:
 	.4byte 0x03010306
+
 .global lbl_8066B5A8
 lbl_8066B5A8:
 	.4byte 0x03010307
+
 .global lbl_8066B5AC
 lbl_8066B5AC:
 	.4byte 0x03010405
+
 .global lbl_8066B5B0
 lbl_8066B5B0:
 	.4byte 0x03010406
+
 .global lbl_8066B5B4
 lbl_8066B5B4:
 	.4byte 0x04040606
 	.4byte 0x01170000
+
 .global lbl_8066B5BC
 lbl_8066B5BC:
 	.4byte 0x03010407
+
 .global lbl_8066B5C0
 lbl_8066B5C0:
 	.4byte 0x03010506
+
 .global lbl_8066B5C4
 lbl_8066B5C4:
 	.4byte 0x03010507
+
 .global lbl_8066B5C8
 lbl_8066B5C8:
 	.4byte 0x0706011A
 	.4byte 0x05060000
+
 .global lbl_8066B5D0
 lbl_8066B5D0:
 	.4byte 0x03010607
+
 .global lbl_8066B5D4
 lbl_8066B5D4:
 	.4byte 0x06090707
 	.4byte 0x011B0000
+
 .global lbl_8066B5DC
 lbl_8066B5DC:
 	.4byte 0x02030500
+
 .global lbl_8066B5E0
 lbl_8066B5E0:
 	.4byte 0x020D0507
@@ -14564,72 +14658,93 @@ lbl_8066B5E0:
 .global lbl_8066B5E8
 lbl_8066B5E8:
 	.4byte 0x03020304
+
 .global lbl_8066B5EC
 lbl_8066B5EC:
 	.4byte 0x03020305
+
 .global lbl_8066B5F0
 lbl_8066B5F0:
 	.4byte 0x02100508
 	.4byte 0x030D0000
+
 .global lbl_8066B5F8
 lbl_8066B5F8:
 	.4byte 0x03020306
+
 .global lbl_8066B5FC
 lbl_8066B5FC:
 	.4byte 0x03020307
+
 .global lbl_8066B600
 lbl_8066B600:
 	.4byte 0x03020405
+
 .global lbl_8066B604
 lbl_8066B604:
 	.4byte 0x03020406
+
 .global lbl_8066B608
 lbl_8066B608:
 	.4byte 0x0217060C
 	.4byte 0x04080000
+
 .global lbl_8066B610
 lbl_8066B610:
 	.4byte 0x03020407
+
 .global lbl_8066B614
 lbl_8066B614:
 	.4byte 0x02180709
 	.4byte 0x04090000
+
 .global lbl_8066B61C
 lbl_8066B61C:
 	.4byte 0x03020506
+
 .global lbl_8066B620
 lbl_8066B620:
 	.4byte 0x03020507
+
 .global lbl_8066B624
 lbl_8066B624:
 	.4byte 0x03020607
+
 .global lbl_8066B628
 lbl_8066B628:
 	.4byte 0x03030405
+
 .global lbl_8066B62C
 lbl_8066B62C:
 	.4byte 0x040A0311
 	.4byte 0x050D0000
+
 .global lbl_8066B634
 lbl_8066B634:
 	.4byte 0x03030406
+
 .global lbl_8066B638
 lbl_8066B638:
 	.4byte 0x03030407
+
 .global lbl_8066B63C
 lbl_8066B63C:
 	.4byte 0x070C040C
 	.4byte 0x03130000
+
 .global lbl_8066B644
 lbl_8066B644:
 	.4byte 0x03030607
+
 .global lbl_8066B648
 lbl_8066B648:
 	.4byte 0x070D0612
 	.4byte 0x03140000
+
 .global lbl_8066B650
 lbl_8066B650:
 	.4byte 0x03040506
+
 .global lbl_8066B654
 lbl_8066B654:
 	.4byte 0x03040507
@@ -14640,13 +14755,16 @@ lbl_8066B658:
 	# ROM: 0x5754B8
 	.4byte 0x050F040E
 	.4byte 0x070E0000
+
 .global lbl_8066B660
 lbl_8066B660:
 	.4byte 0x03040607
+
 .global lbl_8066B664
 lbl_8066B664:
 	.4byte 0x040F070F
 	.4byte 0x06150000
+
 .global lbl_8066B66C
 lbl_8066B66C:
 	.4byte 0x03050607
@@ -15189,6 +15307,7 @@ lbl_8066B808:
 lbl_8066B80C:
 	# ROM: 0x57566C
 	.4byte 0x41F00000
+
 .global lbl_8066B810
 lbl_8066B810:
 	.asciz "play"
@@ -15254,9 +15373,11 @@ lbl_8066B850:
 	# ROM: 0x5756B0
 	.4byte 0x43300000
 	.4byte 0x80000000
+
 .global lbl_8066B858
 lbl_8066B858:
 	.4byte 0x2E000000
+
 .global lbl_8066B85C
 lbl_8066B85C:
 	.4byte 0
@@ -16920,6 +17041,7 @@ lbl_8066BF38:
 	# ROM: 0x575D98
 	.4byte 0x13001100
 	.4byte 0x12001000
+
 .global lbl_8066BF40
 lbl_8066BF40:
 	.4byte 0x00040201
@@ -20432,6 +20554,7 @@ lbl_8066CA80:
 	# ROM: 0x5768E0
 	.4byte 0x43300000
 	.4byte 0x80000000
+
 .global lbl_8066CA88
 lbl_8066CA88:
 	.asciz "????"
@@ -20439,27 +20562,35 @@ lbl_8066CA88:
 .global lbl_8066CA90
 lbl_8066CA90:
 	.4byte 0x25660000
+
 .global lbl_8066CA94
 lbl_8066CA94:
 	.4byte 0x25640000
+
 .global lbl_8066CA98
 lbl_8066CA98:
 	.4byte 0x25780000
+
 .global lbl_8066CA9C
 lbl_8066CA9C:
 	.4byte 0x25763300
+
 .global lbl_8066CAA0
 lbl_8066CAA0:
 	.4byte 0x25766100
+
 .global lbl_8066CAA4
 lbl_8066CAA4:
 	.4byte 0x25763400
+
 .global lbl_8066CAA8
 lbl_8066CAA8:
 	.4byte 0x25693300
+
 .global lbl_8066CAAC
 lbl_8066CAAC:
 	.4byte 0x25693400
+
 .global lbl_8066CAB0
 lbl_8066CAB0:
 	.asciz "%rect"
@@ -20475,6 +20606,7 @@ lbl_8066CAC0:
 	# ROM: 0x576920
 	.4byte 0x43300000
 	.4byte 0x80000000
+
 .global lbl_8066CAC8
 lbl_8066CAC8:
 	.asciz "CToken"
@@ -20491,6 +20623,7 @@ lbl_8066CAD0:
 lbl_8066CAD4:
 	# ROM: 0x576934
 	.4byte 0x3F19999A
+
 .global lbl_8066CAD8
 lbl_8066CAD8:
 	.asciz "CView"
@@ -21143,6 +21276,7 @@ lbl_8066CD20:
 	# ROM: 0x576B80
 	.4byte 0x43300000
 	.4byte 0x80000000
+
 .global lbl_8066CD28
 lbl_8066CD28:
 	.asciz "CLibHbm"
@@ -23042,6 +23176,7 @@ lbl_8066D328:
 lbl_8066D32C:
 	# ROM: 0x57718C
 	.4byte 0x3F726E98
+
 .global lbl_8066D330
 lbl_8066D330:
 	.4byte 0x65700000
@@ -24172,6 +24307,7 @@ lbl_8066D76C:
 lbl_8066D770:
 	# ROM: 0x5775D0
 	.4byte 0x437F0000
+
 .global lbl_8066D774
 lbl_8066D774:
 	.asciz "CLight"
@@ -25363,6 +25499,7 @@ lbl_8066DB58:
 lbl_8066DB5C:
 	# ROM: 0x5779BC
 	.4byte 0x3CC90FDB
+
 .global lbl_8066DB60
 lbl_8066DB60:
 	.asciz "DCbal"
@@ -25806,6 +25943,7 @@ lbl_8066DCC8:
 	# ROM: 0x577B28
 	.4byte 0x43300000
 	.4byte 0x80000000
+
 .global lbl_8066DCD0
 lbl_8066DCD0:
 	.asciz "/tmp/"
