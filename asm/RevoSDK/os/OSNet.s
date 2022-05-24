@@ -69,7 +69,7 @@ NWC24iPrepareShutdown:
 /* 8035E14C 0032770C  38 A5 E4 00 */	addi r5, r5, lbl_8035E400@l
 /* 8035E150 00327710  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8035E154 00327714  3B E0 00 00 */	li r31, 0
-/* 8035E158 00327718  90 A4 54 40 */	stw r5, 0x5440(r4)
+/* 8035E158 00327718  90 A4 54 40 */	stw r5, lbl_805D5440@l(r4)
 /* 8035E15C 0032771C  90 03 00 04 */	stw r0, 4(r3)
 /* 8035E160 00327720  4B FF BD B1 */	bl OSRegisterShutdownFunction
 /* 8035E164 00327724  80 0D 9A 28 */	lwz r0, lbl_80665BA8@sda21(r13)
