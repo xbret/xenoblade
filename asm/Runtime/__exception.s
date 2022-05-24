@@ -3,7 +3,6 @@
 .section .init, "ax"  # 0x80004000 - 0x800064E0
 
 .global gTRKInterruptVectorTable
-
 gTRKInterruptVectorTable:
 .string "Metrowerks Target Resident Kernel for PowerPC"
 .balign 4, 0
