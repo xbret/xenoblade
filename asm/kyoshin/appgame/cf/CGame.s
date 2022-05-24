@@ -44,6 +44,7 @@ lbl_8066838C:
 lbl_80668390:
 	.asciz "CGame"
 	.balign 4
+
 .global lbl_80668398
 lbl_80668398:
 	.asciz "CProc"
@@ -57,6 +58,7 @@ lbl_804F5B20:
 	# ROM: 0x4F1C20
 	.asciz "@unnamed@CGame_cpp@::CGameRestart"
 	.balign 4
+
 .global lbl_804F5B44
 lbl_804F5B44:
 	.asciz "CWorkThread"

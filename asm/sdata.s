@@ -2107,6 +2107,7 @@ lbl_80664D18:
 .global lbl_80664D20
 lbl_80664D20:
 	.asciz "itm?Per"
+
 .global lbl_80664D28
 lbl_80664D28:
 	.4byte lbl_804FEBC0
@@ -4996,6 +4997,7 @@ lbl_80665B0C:
 lbl_80665B10:
 	.asciz "/meta"
 	.balign 4
+
 .global lbl_80665B18
 lbl_80665B18:
 	.asciz "/ticket"
@@ -5035,6 +5037,7 @@ lbl_80665B3C:
 lbl_80665B40:
 	.asciz "OS.c"
 	.balign 4
+
 .global lbl_80665B48
 lbl_80665B48:
 	.asciz "HAEA"
@@ -5158,6 +5161,7 @@ lbl_80665BC0:
 lbl_80665BC4:
 	.asciz "IPL.CB"
 	.balign 4
+
 .global lbl_80665BCC
 lbl_80665BCC:
 	.asciz "IPL.AR"
@@ -5167,92 +5171,120 @@ lbl_80665BCC:
 .global lbl_80665BD8
 lbl_80665BD8:
 	.asciz "IPL.ARN"
+
 .global lbl_80665BE0
 lbl_80665BE0:
 	.asciz "IPL.CD"
 	.balign 4
+
 .global lbl_80665BE8
 lbl_80665BE8:
 	.asciz "IPL.CD2"
+
 .global lbl_80665BF0
 lbl_80665BF0:
 	.asciz "IPL.DH"
 	.balign 4
+
 .global lbl_80665BF8
 lbl_80665BF8:
 	.asciz "IPL.E60"
+
 .global lbl_80665C00
 lbl_80665C00:
 	.asciz "IPL.FRC"
+
 .global lbl_80665C08
 lbl_80665C08:
 	.asciz "IPL.IDL"
+
 .global lbl_80665C10
 lbl_80665C10:
 	.asciz "IPL.INC"
+
 .global lbl_80665C18
 lbl_80665C18:
 	.asciz "IPL.LNG"
+
 .global lbl_80665C20
 lbl_80665C20:
 	.asciz "IPL.NIK"
+
 .global lbl_80665C28
 lbl_80665C28:
 	.asciz "IPL.PC"
 	.balign 4
+
 .global lbl_80665C30
 lbl_80665C30:
 	.asciz "IPL.PGS"
+
 .global lbl_80665C38
 lbl_80665C38:
 	.asciz "IPL.SSV"
+
 .global lbl_80665C40
 lbl_80665C40:
 	.asciz "IPL.SND"
+
 .global lbl_80665C48
 lbl_80665C48:
 	.asciz "IPL.UPT"
+
 .global lbl_80665C50
 lbl_80665C50:
 	.asciz "NET.CNF"
+
 .global lbl_80665C58
 lbl_80665C58:
 	.asciz "DEV.BTM"
+
 .global lbl_80665C60
 lbl_80665C60:
 	.asciz "DEV.VIM"
+
 .global lbl_80665C68
 lbl_80665C68:
 	.asciz "DEV.CTC"
+
 .global lbl_80665C70
 lbl_80665C70:
 	.asciz "DEV.DSM"
+
 .global lbl_80665C78
 lbl_80665C78:
 	.asciz "BT.DINF"
+
 .global lbl_80665C80
 lbl_80665C80:
 	.asciz "BT.CDIF"
+
 .global lbl_80665C88
 lbl_80665C88:
 	.asciz "BT.SENS"
+
 .global lbl_80665C90
 lbl_80665C90:
 	.asciz "BT.SPKV"
+
 .global lbl_80665C98
 lbl_80665C98:
 	.asciz "BT.MOT"
 	.balign 4
+
 .global lbl_80665CA0
 lbl_80665CA0:
 	.asciz "BT.BAR"
 	.balign 4
+
 .global lbl_80665CA8
 lbl_80665CA8:
 	.asciz "DVD.CNF"
+
 .global lbl_80665CB0
 lbl_80665CB0:
 	.asciz "WWW.RST"
+
 .global lbl_80665CB8
 lbl_80665CB8:
 	.asciz "IPL.TID"

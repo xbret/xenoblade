@@ -34,16 +34,20 @@ lbl_806683D8:
 .global lbl_806683E0
 lbl_806683E0:
 	.asciz "SHA"
+
 .global lbl_806683E4
 lbl_806683E4:
 	.asciz "CAM"
+
 .global lbl_806683E8
 lbl_806683E8:
 	.asciz "EFF"
+
 .global lbl_806683EC
 lbl_806683EC:
 	.asciz "ARROW"
 	.balign 4
+
 .global lbl_806683F4
 lbl_806683F4:
 	.asciz "43"
@@ -52,17 +56,21 @@ lbl_806683F4:
 lbl_806683F8:
 	.asciz "BDAT"
 	.balign 4
+
 .global lbl_80668400
 lbl_80668400:
 	.asciz "AIDAT"
 	.balign 4
+
 .global lbl_80668408
 lbl_80668408:
 	.asciz "HIKARI"
 	.balign 4
+
 .global lbl_80668410
 lbl_80668410:
 	.asciz "HBMSTOP"
+
 .global lbl_80668418
 lbl_80668418:
 	.asciz "put"
@@ -72,13 +80,16 @@ lbl_80668418:
 lbl_80668420:
 	.asciz "frame"
 	.balign 4
+
 .global lbl_80668428
 lbl_80668428:
 	.asciz "builtin"
+
 .global lbl_80668430
 lbl_80668430:
 	.asciz "start"
 	.balign 4
+
 .global lbl_80668438
 lbl_80668438:
 	.asciz "end"
@@ -87,25 +98,31 @@ lbl_80668438:
 .global lbl_80668440
 lbl_80668440:
 	.asciz "isAlive"
+
 .global lbl_80668448
 lbl_80668448:
 	.asciz "join"
 	.balign 4
+
 .global lbl_80668450
 lbl_80668450:
 	.asciz "sleep"
 	.balign 4
+
 .global lbl_80668458
 lbl_80668458:
 	.asciz "wakeup"
 	.balign 4
+
 .global lbl_80668460
 lbl_80668460:
 	.asciz "thread"
 	.balign 4
+
 .global lbl_80668468
 lbl_80668468:
 	.asciz "atr"
+
 .global lbl_8066846C
 lbl_8066846C:
 	.asciz "no"
@@ -114,23 +131,29 @@ lbl_8066846C:
 lbl_80668470:
 	.asciz "send"
 	.balign 4
+
 .global lbl_80668478
 lbl_80668478:
 	.asciz "receive"
+
 .global lbl_80668480
 lbl_80668480:
 	.asciz "init"
 	.balign 4
+
 .global lbl_80668488
 lbl_80668488:
 	.asciz "isFull"
 	.balign 4
+
 .global lbl_80668490
 lbl_80668490:
 	.asciz "isEmpty"
+
 .global lbl_80668498
 lbl_80668498:
 	.asciz "msgYuka"
+
 .global lbl_806684A0
 lbl_806684A0:
 	.asciz "id"
@@ -139,17 +162,21 @@ lbl_806684A0:
 lbl_806684A4:
 	.asciz "talk"
 	.balign 4
+
 .global lbl_806684AC
 lbl_806684AC:
 	.asciz "dir"
+
 .global lbl_806684B0
 lbl_806684B0:
 	.asciz "msgNpc"
 	.balign 4
+
 .global lbl_806684B8
 lbl_806684B8:
 	.asciz "getVal"
 	.balign 4
+
 .global lbl_806684C0
 lbl_806684C0:
 	.asciz "bdat"
@@ -189,14 +216,17 @@ lbl_806684E4:
 .global lbl_806684E8
 lbl_806684E8:
 	.asciz "dir"
+
 .global lbl_806684EC
 lbl_806684EC:
 	.asciz "name"
 	.balign 4
+
 .global lbl_806684F4
 lbl_806684F4:
 	.asciz "bdid"
 	.balign 4
+
 .global lbl_806684FC
 lbl_806684FC:
 	.asciz "ID"
@@ -209,100 +239,126 @@ lbl_80668500:
 .global lbl_80668508
 lbl_80668508:
 	.asciz "isValid"
+
 .global lbl_80668510
 lbl_80668510:
 	.asciz "dispOn"
 	.balign 4
+
 .global lbl_80668518
 lbl_80668518:
 	.asciz "dispOff"
+
 .global lbl_80668520
 lbl_80668520:
 	.asciz "walkR"
 	.balign 4
+
 .global lbl_80668528
 lbl_80668528:
 	.asciz "moveTo"
 	.balign 4
+
 .global lbl_80668530
 lbl_80668530:
 	.asciz "isTalk"
 	.balign 4
+
 .global lbl_80668538
 lbl_80668538:
 	.asciz "winTalk"
+
 .global lbl_80668540
 lbl_80668540:
 	.asciz "onEvent"
+
 .global lbl_80668548
 lbl_80668548:
 	.asciz "setAct"
 	.balign 4
+
 .global lbl_80668550
 lbl_80668550:
 	.asciz "lookAt"
 	.balign 4
+
 .global lbl_80668558
 lbl_80668558:
 	.asciz "turn"
 	.balign 4
+
 .global lbl_80668560
 lbl_80668560:
 	.asciz "isPC"
 	.balign 4
+
 .global lbl_80668568
 lbl_80668568:
 	.asciz "isNPC"
 	.balign 4
+
 .global lbl_80668570
 lbl_80668570:
 	.asciz "isENE"
 	.balign 4
+
 .global lbl_80668578
 lbl_80668578:
 	.asciz "isPT"
 	.balign 4
+
 .global lbl_80668580
 lbl_80668580:
 	.asciz "invin"
 	.balign 4
+
 .global lbl_80668588
 lbl_80668588:
 	.asciz "setColi"
+
 .global lbl_80668590
 lbl_80668590:
 	.asciz "setEye"
 	.balign 4
+
 .global lbl_80668598
 lbl_80668598:
 	.asciz "unit"
 	.balign 4
+
 .global lbl_806685A0
 lbl_806685A0:
 	.asciz "setRot"
 	.balign 4
+
 .global lbl_806685A8
 lbl_806685A8:
 	.asciz "gravity"
+
 .global lbl_806685B0
 lbl_806685B0:
 	.asciz "obj"
+
 .global lbl_806685B4
 lbl_806685B4:
 	.asciz "point"
 	.balign 4
+
 .global lbl_806685BC
 lbl_806685BC:
 	.asciz "signal"
 	.balign 4
+
 .global lbl_806685C4
 lbl_806685C4:
 	.asciz "setCas"
 	.balign 4
+
 .global lbl_806685CC
 lbl_806685CC:
 	.asciz "setTgt"
 	.balign 4
+
 .global lbl_806685D4
 lbl_806685D4:
 	.asciz "effect"
@@ -317,18 +373,22 @@ lbl_806685DC:
 .global lbl_806685E0
 lbl_806685E0:
 	.asciz "setSize"
+
 .global lbl_806685E8
 lbl_806685E8:
 	.asciz "setBox"
 	.balign 4
+
 .global lbl_806685F0
 lbl_806685F0:
 	.asciz "inside"
 	.balign 4
+
 .global lbl_806685F8
 lbl_806685F8:
 	.asciz "attr"
 	.balign 4
+
 .global lbl_80668600
 lbl_80668600:
 	.4byte 0x474D0000
@@ -392,6 +452,7 @@ lbl_8066862C:
 lbl_80668630:
 	.asciz "hour"
 	.balign 4
+
 .global lbl_80668638
 lbl_80668638:
 	.asciz "min"
@@ -400,6 +461,7 @@ lbl_80668638:
 .global lbl_80668640
 lbl_80668640:
 	.asciz "timeIdx"
+
 .global lbl_80668648
 lbl_80668648:
 	.4byte 0x63667000
@@ -422,21 +484,26 @@ lbl_80668658:
 .global lbl_80668660
 lbl_80668660:
 	.asciz "winTalk"
+
 .global lbl_80668668
 lbl_80668668:
 	.asciz "pcTalk"
 	.balign 4
+
 .global lbl_80668670
 lbl_80668670:
 	.asciz "fadeIn"
 	.balign 4
+
 .global lbl_80668678
 lbl_80668678:
 	.asciz "fadeOut"
+
 .global lbl_80668680
 lbl_80668680:
 	.asciz "winSys"
 	.balign 4
+
 .global lbl_80668688
 lbl_80668688:
 	.asciz "save"
@@ -456,20 +523,25 @@ lbl_80668694:
 .global lbl_80668698
 lbl_80668698:
 	.asciz "getFlag"
+
 .global lbl_806686A0
 lbl_806686A0:
 	.asciz "setFlag"
+
 .global lbl_806686A8
 lbl_806686A8:
 	.asciz "isEvent"
+
 .global lbl_806686B0
 lbl_806686B0:
 	.asciz "onTalk"
 	.balign 4
+
 .global lbl_806686B8
 lbl_806686B8:
 	.asciz "fadeIn"
 	.balign 4
+
 .global lbl_806686C0
 lbl_806686C0:
 	.asciz "fadeOut"
@@ -520,24 +592,31 @@ lbl_806686E4:
 .global lbl_806686E8
 lbl_806686E8:
 	.asciz "mapJump"
+
 .global lbl_806686F0
 lbl_806686F0:
 	.asciz "delAttr"
+
 .global lbl_806686F8
 lbl_806686F8:
 	.asciz "setMono"
+
 .global lbl_80668700
 lbl_80668700:
 	.asciz "addItem"
+
 .global lbl_80668708
 lbl_80668708:
 	.asciz "delItem"
+
 .global lbl_80668710
 lbl_80668710:
 	.asciz "setFade"
+
 .global lbl_80668718
 lbl_80668718:
 	.asciz "waitPop"
+
 .global lbl_80668720
 lbl_80668720:
 	.asciz "random"
@@ -1585,50 +1664,63 @@ lbl_80668A04:
 lbl_80668A08:
 	.asciz "select"
 	.balign 4
+
 .global lbl_80668A10
 lbl_80668A10:
 	.asciz "restore"
+
 .global lbl_80668A18
 lbl_80668A18:
 	.asciz "setPos"
 	.balign 4
+
 .global lbl_80668A20
 lbl_80668A20:
 	.asciz "setDir"
 	.balign 4
+
 .global lbl_80668A28
 lbl_80668A28:
 	.asciz "setRotX"
+
 .global lbl_80668A30
 lbl_80668A30:
 	.asciz "setRotY"
+
 .global lbl_80668A38
 lbl_80668A38:
 	.asciz "setFov"
 	.balign 4
+
 .global lbl_80668A40
 lbl_80668A40:
 	.asciz "getPos"
 	.balign 4
+
 .global lbl_80668A48
 lbl_80668A48:
 	.asciz "getRot"
 	.balign 4
+
 .global lbl_80668A50
 lbl_80668A50:
 	.asciz "keyEnd"
 	.balign 4
+
 .global lbl_80668A58
 lbl_80668A58:
 	.asciz "keyAdd"
 	.balign 4
+
 .global lbl_80668A60
 lbl_80668A60:
 	.asciz "shake"
 	.balign 4
+
 .global lbl_80668A68
 lbl_80668A68:
 	.asciz "get"
+
 .global lbl_80668A6C
 lbl_80668A6C:
 	.asciz "enable"
@@ -1638,6 +1730,7 @@ lbl_80668A6C:
 .global lbl_80668A78
 lbl_80668A78:
 	.asciz "KYP"
+
 .global lbl_80668A7C
 lbl_80668A7C:
 	.asciz "DAP1"
@@ -1807,10 +1900,12 @@ lbl_80668B0C:
 lbl_80668B10:
 	.asciz "High"
 	.balign 4
+
 .global lbl_80668B18
 lbl_80668B18:
 	.asciz "Normal"
 	.balign 4
+
 .global lbl_80668B20
 lbl_80668B20:
 	.4byte 0x4C6F7700
@@ -2272,22 +2367,27 @@ lbl_80668C60:
 lbl_80668C64:
 	.asciz "JUhead"
 	.balign 4
+
 .global lbl_80668C6C
 lbl_80668C6C:
 	.asciz "JUhd_L"
 	.balign 4
+
 .global lbl_80668C74
 lbl_80668C74:
 	.asciz "JUhd_R"
 	.balign 4
+
 .global lbl_80668C7C
 lbl_80668C7C:
 	.asciz "JLhip"
 	.balign 4
+
 .global lbl_80668C84
 lbl_80668C84:
 	.asciz "JLft_L"
 	.balign 4
+
 .global lbl_80668C8C
 lbl_80668C8C:
 	.asciz "JLft_R"
@@ -3695,10 +3795,12 @@ lbl_806690B4:
 lbl_806690B8:
 	.asciz "map/"
 	.balign 4
+
 .global lbl_806690C0
 lbl_806690C0:
 	.asciz ".dap"
 	.balign 4
+
 .global lbl_806690C8
 lbl_806690C8:
 	.asciz "pc"
@@ -3707,10 +3809,12 @@ lbl_806690C8:
 .global lbl_806690D0
 lbl_806690D0:
 	.asciz "chr/pc/"
+
 .global lbl_806690D8
 lbl_806690D8:
 	.asciz ".chr"
 	.balign 4
+
 .global lbl_806690E0
 lbl_806690E0:
 	.asciz "np"
@@ -3719,9 +3823,11 @@ lbl_806690E0:
 .global lbl_806690E8
 lbl_806690E8:
 	.asciz "chr/np/"
+
 .global lbl_806690F0
 lbl_806690F0:
 	.asciz ".kp"
+
 .global lbl_806690F4
 lbl_806690F4:
 	.asciz "en"
@@ -3729,6 +3835,7 @@ lbl_806690F4:
 .global lbl_806690F8
 lbl_806690F8:
 	.asciz "chr/en/"
+
 .global lbl_80669100
 lbl_80669100:
 	.asciz "wp"
@@ -3737,6 +3844,7 @@ lbl_80669100:
 .global lbl_80669108
 lbl_80669108:
 	.asciz "chr/wp/"
+
 .global lbl_80669110
 lbl_80669110:
 	.asciz "oj"
@@ -3745,6 +3853,7 @@ lbl_80669110:
 .global lbl_80669118
 lbl_80669118:
 	.asciz "chr/oj/"
+
 .global lbl_80669120
 lbl_80669120:
 	.asciz "mp"
@@ -3753,6 +3862,7 @@ lbl_80669120:
 lbl_80669124:
 	.asciz ".mca"
 	.balign 4
+
 .global lbl_8066912C
 lbl_8066912C:
 	.asciz "mn"
@@ -3768,6 +3878,7 @@ lbl_80669134:
 .global lbl_80669138
 lbl_80669138:
 	.asciz "chr/mo/"
+
 .global lbl_80669140
 lbl_80669140:
 	.asciz "mw"
@@ -3779,10 +3890,12 @@ lbl_80669144:
 .global lbl_80669148
 lbl_80669148:
 	.asciz "eff/em/"
+
 .global lbl_80669150
 lbl_80669150:
 	.asciz ".rec"
 	.balign 4
+
 .global lbl_80669158
 lbl_80669158:
 	.asciz "eg"
@@ -3791,6 +3904,7 @@ lbl_80669158:
 .global lbl_80669160
 lbl_80669160:
 	.asciz "eff/eg/"
+
 .global lbl_80669168
 lbl_80669168:
 	.4byte 0x65720000
@@ -3815,6 +3929,7 @@ lbl_80669178:
 .global lbl_80669180
 lbl_80669180:
 	.asciz "snd/se/"
+
 .global lbl_80669188
 lbl_80669188:
 	.4byte 0x2E736500
@@ -3843,6 +3958,7 @@ lbl_8066919C:
 lbl_806691A0:
 	.asciz ".bgm"
 	.balign 4
+
 .global lbl_806691A8
 lbl_806691A8:
 	.4byte 0x76650000
@@ -3875,6 +3991,7 @@ lbl_806691C0:
 .global lbl_806691C8
 lbl_806691C8:
 	.asciz "map/md/"
+
 .global lbl_806691D0
 lbl_806691D0:
 	.4byte 0x63630000
@@ -4665,10 +4782,12 @@ lbl_80669428:
 lbl_8066942C:
 	.asciz "effect"
 	.balign 4
+
 .global lbl_80669434
 lbl_80669434:
 	.asciz "mapse"
 	.balign 4
+
 .global lbl_8066943C
 lbl_8066943C:
 	.asciz "pack"
@@ -4842,33 +4961,43 @@ lbl_806694C8:
 .global lbl_806694D0
 lbl_806694D0:
 	.asciz "np02030"
+
 .global lbl_806694D8
 lbl_806694D8:
 	.asciz "np63010"
+
 .global lbl_806694E0
 lbl_806694E0:
 	.asciz "np66010"
+
 .global lbl_806694E8
 lbl_806694E8:
 	.asciz "np67010"
+
 .global lbl_806694F0
 lbl_806694F0:
 	.asciz "np71010"
+
 .global lbl_806694F8
 lbl_806694F8:
 	.asciz "np73010"
+
 .global lbl_80669500
 lbl_80669500:
 	.asciz "np76010"
+
 .global lbl_80669508
 lbl_80669508:
 	.asciz "np77010"
+
 .global lbl_80669510
 lbl_80669510:
 	.asciz "np81010"
+
 .global lbl_80669518
 lbl_80669518:
 	.asciz "np45080"
+
 .global lbl_80669520
 lbl_80669520:
 	.asciz "JUneck"
@@ -6542,6 +6671,7 @@ lbl_80669A28:
 .global lbl_80669A30
 lbl_80669A30:
 	.asciz "nul_yes"
+
 .global lbl_80669A38
 lbl_80669A38:
 	.asciz "nul_no"
@@ -6813,6 +6943,7 @@ lbl_80669B2C:
 lbl_80669B30:
 	.asciz "win_n"
 	.balign 4
+
 .global lbl_80669B38
 lbl_80669B38:
 	.asciz "win_a"
@@ -7150,21 +7281,26 @@ lbl_80669C2C:
 lbl_80669C30:
 	.asciz "EXwp_L"
 	.balign 4
+
 .global lbl_80669C38
 lbl_80669C38:
 	.asciz "EXwp_R"
 	.balign 4
+
 .global lbl_80669C40
 lbl_80669C40:
 	.asciz "EXwp_S"
 	.balign 4
+
 .global lbl_80669C48
 lbl_80669C48:
 	.asciz "EXwp_H"
 	.balign 4
+
 .global lbl_80669C50
 lbl_80669C50:
 	.asciz "EXwp_HL"
+
 .global lbl_80669C58
 lbl_80669C58:
 	.asciz "EXwp_HR"
@@ -7492,6 +7628,7 @@ lbl_80669D58:
 lbl_80669D60:
 	.asciz "name"
 	.balign 4
+
 .global lbl_80669D68
 lbl_80669D68:
 	.4byte 0
@@ -7500,50 +7637,65 @@ lbl_80669D68:
 .global lbl_80669D70
 lbl_80669D70:
 	.asciz "lower_E"
+
 .global lbl_80669D78
 lbl_80669D78:
 	.asciz "lower_D"
+
 .global lbl_80669D80
 lbl_80669D80:
 	.asciz "lower_C"
+
 .global lbl_80669D88
 lbl_80669D88:
 	.asciz "lower_B"
+
 .global lbl_80669D90
 lbl_80669D90:
 	.asciz "lower_A"
+
 .global lbl_80669D98
 lbl_80669D98:
 	.asciz "lower_S"
+
 .global lbl_80669DA0
 lbl_80669DA0:
 	.asciz "upper_E"
+
 .global lbl_80669DA8
 lbl_80669DA8:
 	.asciz "upper_D"
+
 .global lbl_80669DB0
 lbl_80669DB0:
 	.asciz "upper_C"
+
 .global lbl_80669DB8
 lbl_80669DB8:
 	.asciz "upper_B"
+
 .global lbl_80669DC0
 lbl_80669DC0:
 	.asciz "upper_A"
+
 .global lbl_80669DC8
 lbl_80669DC8:
 	.asciz "upper_S"
+
 .global lbl_80669DD0
 lbl_80669DD0:
 	.asciz "wpn1"
 	.balign 4
+
 .global lbl_80669DD8
 lbl_80669DD8:
 	.asciz "wpn1Per"
+
 .global lbl_80669DE0
 lbl_80669DE0:
 	.asciz "equip1"
 	.balign 4
+
 .global lbl_80669DE8
 lbl_80669DE8:
 	.asciz "arts1"
@@ -7682,78 +7834,97 @@ lbl_80669E40:
 lbl_80669E48:
 	.asciz "title0"
 	.balign 4
+
 .global lbl_80669E50
 lbl_80669E50:
 	.asciz "ma0101"
 	.balign 4
+
 .global lbl_80669E58
 lbl_80669E58:
 	.asciz "ma0201"
 	.balign 4
+
 .global lbl_80669E60
 lbl_80669E60:
 	.asciz "ma0301"
 	.balign 4
+
 .global lbl_80669E68
 lbl_80669E68:
 	.asciz "ma0401"
 	.balign 4
+
 .global lbl_80669E70
 lbl_80669E70:
 	.asciz "ma0402"
 	.balign 4
+
 .global lbl_80669E78
 lbl_80669E78:
 	.asciz "ma0501"
 	.balign 4
+
 .global lbl_80669E80
 lbl_80669E80:
 	.asciz "ma0601"
 	.balign 4
+
 .global lbl_80669E88
 lbl_80669E88:
 	.asciz "ma0701"
 	.balign 4
+
 .global lbl_80669E90
 lbl_80669E90:
 	.asciz "ma1001"
 	.balign 4
+
 .global lbl_80669E98
 lbl_80669E98:
 	.asciz "ma1101"
 	.balign 4
+
 .global lbl_80669EA0
 lbl_80669EA0:
 	.asciz "ma1201"
 	.balign 4
+
 .global lbl_80669EA8
 lbl_80669EA8:
 	.asciz "ma1301"
 	.balign 4
+
 .global lbl_80669EB0
 lbl_80669EB0:
 	.asciz "ma1401"
 	.balign 4
+
 .global lbl_80669EB8
 lbl_80669EB8:
 	.asciz "ma1501"
 	.balign 4
+
 .global lbl_80669EC0
 lbl_80669EC0:
 	.asciz "ma1601"
 	.balign 4
+
 .global lbl_80669EC8
 lbl_80669EC8:
 	.asciz "ma1701"
 	.balign 4
+
 .global lbl_80669ED0
 lbl_80669ED0:
 	.asciz "ma1901"
 	.balign 4
+
 .global lbl_80669ED8
 lbl_80669ED8:
 	.asciz "ma2001"
 	.balign 4
+
 .global lbl_80669EE0
 lbl_80669EE0:
 	.asciz "demo01"
@@ -7986,14 +8157,17 @@ lbl_80669F98:
 lbl_80669F9C:
 	.asciz "wind_M"
 	.balign 4
+
 .global lbl_80669FA4
 lbl_80669FA4:
 	.asciz "wind_D"
 	.balign 4
+
 .global lbl_80669FAC
 lbl_80669FAC:
 	.asciz "wind_E"
 	.balign 4
+
 .global lbl_80669FB4
 lbl_80669FB4:
 	.asciz "wind_N"
@@ -8503,6 +8677,7 @@ lbl_8066A150:
 lbl_8066A158:
 	.asciz "camAtr"
 	.balign 4
+
 .global lbl_8066A160
 lbl_8066A160:
 	.4byte 0x63616D00
@@ -8569,18 +8744,22 @@ lbl_8066A198:
 lbl_8066A19C:
 	.asciz "wp42"
 	.balign 4
+
 .global lbl_8066A1A4
 lbl_8066A1A4:
 	.asciz "wp82"
 	.balign 4
+
 .global lbl_8066A1AC
 lbl_8066A1AC:
 	.asciz "wp83"
 	.balign 4
+
 .global lbl_8066A1B4
 lbl_8066A1B4:
 	.asciz "wp84"
 	.balign 4
+
 .global lbl_8066A1BC
 lbl_8066A1BC:
 	.asciz "np62"
@@ -8629,10 +8808,12 @@ lbl_8066A1E0:
 lbl_8066A1E8:
 	.asciz "effTgt"
 	.balign 4
+
 .global lbl_8066A1F0
 lbl_8066A1F0:
 	.asciz "effAtr"
 	.balign 4
+
 .global lbl_8066A1F8
 lbl_8066A1F8:
 	.4byte 0x65666600
@@ -8697,6 +8878,7 @@ lbl_8066A220:
 lbl_8066A228:
 	.asciz "range"
 	.balign 4
+
 .global lbl_8066A230
 lbl_8066A230:
 	.asciz "hour"
@@ -8713,29 +8895,36 @@ lbl_8066A238:
 lbl_8066A240:
 	.asciz "isEnd"
 	.balign 4
+
 .global lbl_8066A248
 lbl_8066A248:
 	.asciz "end"
+
 .global lbl_8066A24C
 lbl_8066A24C:
 	.asciz "attack"
 	.balign 4
+
 .global lbl_8066A254
 lbl_8066A254:
 	.asciz "vision"
 	.balign 4
+
 .global lbl_8066A25C
 lbl_8066A25C:
 	.asciz "setTP"
 	.balign 4
+
 .global lbl_8066A264
 lbl_8066A264:
 	.asciz "setPTG"
 	.balign 4
+
 .global lbl_8066A26C
 lbl_8066A26C:
 	.asciz "getPTG"
 	.balign 4
+
 .global lbl_8066A274
 lbl_8066A274:
 	.asciz "test"
@@ -9089,6 +9278,7 @@ lbl_8066A394:
 lbl_8066A398:
 	.asciz "ene?ID"
 	.balign 4
+
 .global lbl_8066A3A0
 lbl_8066A3A0:
 	.asciz "ene?num"
@@ -10062,9 +10252,11 @@ lbl_8066A660:
 .global lbl_8066A668
 lbl_8066A668:
 	.asciz "playBgm"
+
 .global lbl_8066A670
 lbl_8066A670:
 	.asciz "stopBgm"
+
 .global lbl_8066A678
 lbl_8066A678:
 	.4byte 0x636D6400
@@ -10695,34 +10887,42 @@ lbl_8066A864:
 .global lbl_8066A868
 lbl_8066A868:
 	.asciz "CSubCur"
+
 .global lbl_8066A870
 lbl_8066A870:
 	.asciz "CCur22"
 	.balign 4
+
 .global lbl_8066A878
 lbl_8066A878:
 	.asciz "CCur18"
 	.balign 4
+
 .global lbl_8066A880
 lbl_8066A880:
 	.asciz "CCur16"
 	.balign 4
+
 .global lbl_8066A888
 lbl_8066A888:
 	.asciz "CCur15"
 	.balign 4
+
 .global lbl_8066A890
 lbl_8066A890:
 	.asciz "CCur14"
 	.balign 4
+
 .global lbl_8066A898
 lbl_8066A898:
 	.asciz "CCur11"
 	.balign 4
+
 .global lbl_8066A8A0
 lbl_8066A8A0:
 	.asciz "CCur09"
 	.balign 4
+
 .global lbl_8066A8A8
 lbl_8066A8A8:
 	.asciz "CCur07"
@@ -10946,49 +11146,61 @@ lbl_8066A950:
 .global lbl_8066A958
 lbl_8066A958:
 	.asciz "wpn"
+
 .global lbl_8066A95C
 lbl_8066A95C:
 	.asciz "head"
 	.balign 4
+
 .global lbl_8066A964
 lbl_8066A964:
 	.asciz "body"
 	.balign 4
+
 .global lbl_8066A96C
 lbl_8066A96C:
 	.asciz "arm"
+
 .global lbl_8066A970
 lbl_8066A970:
 	.asciz "waist"
 	.balign 4
+
 .global lbl_8066A978
 lbl_8066A978:
 	.asciz "legg"
 	.balign 4
+
 .global lbl_8066A980
 lbl_8066A980:
 	.asciz "arts"
 	.balign 4
+
 .global lbl_8066A988
 lbl_8066A988:
 	.asciz "wpn1"
 	.balign 4
+
 .global lbl_8066A990
 lbl_8066A990:
 	.asciz "head1"
 	.balign 4
+
 .global lbl_8066A998
 lbl_8066A998:
 	.asciz "body1"
 	.balign 4
+
 .global lbl_8066A9A0
 lbl_8066A9A0:
 	.asciz "arm1"
 	.balign 4
+
 .global lbl_8066A9A8
 lbl_8066A9A8:
 	.asciz "waist1"
 	.balign 4
+
 .global lbl_8066A9B0
 lbl_8066A9B0:
 	.asciz "legg1"
@@ -11133,24 +11345,30 @@ lbl_8066AA24:
 .global lbl_8066AA28
 lbl_8066AA28:
 	.asciz "r1_item"
+
 .global lbl_8066AA30
 lbl_8066AA30:
 	.asciz "s1camID"
+
 .global lbl_8066AA38
 lbl_8066AA38:
 	.asciz "s1ACT"
 	.balign 4
+
 .global lbl_8066AA40
 lbl_8066AA40:
 	.asciz "s1EF"
 	.balign 4
+
 .global lbl_8066AA48
 lbl_8066AA48:
 	.asciz "s1EFATR"
+
 .global lbl_8066AA50
 lbl_8066AA50:
 	.asciz "s1SE"
 	.balign 4
+
 .global lbl_8066AA58
 lbl_8066AA58:
 	.asciz "s1SEATR"
@@ -11402,6 +11620,7 @@ lbl_8066AB18:
 .global lbl_8066AB20
 lbl_8066AB20:
 	.asciz "getPcHp"
+
 .global lbl_8066AB28
 lbl_8066AB28:
 	.asciz "synchro"
@@ -11648,22 +11867,27 @@ lbl_8066ABDC:
 lbl_8066ABE0:
 	.asciz "A_posX"
 	.balign 4
+
 .global lbl_8066ABE8
 lbl_8066ABE8:
 	.asciz "A_posY"
 	.balign 4
+
 .global lbl_8066ABF0
 lbl_8066ABF0:
 	.asciz "A_posZ"
 	.balign 4
+
 .global lbl_8066ABF8
 lbl_8066ABF8:
 	.asciz "gimID"
 	.balign 4
+
 .global lbl_8066AC00
 lbl_8066AC00:
 	.asciz "MSGID"
 	.balign 4
+
 .global lbl_8066AC08
 lbl_8066AC08:
 	.asciz "name1"
@@ -11958,6 +12182,7 @@ lbl_8066ACF0:
 lbl_8066ACF8:
 	.asciz "A_Item"
 	.balign 4
+
 .global lbl_8066AD00
 lbl_8066AD00:
 	.asciz "A_Lost"
@@ -13518,14 +13743,17 @@ lbl_8066B1E8:
 lbl_8066B1F0:
 	.asciz "aLOD1"
 	.balign 4
+
 .global lbl_8066B1F8
 lbl_8066B1F8:
 	.asciz "aType"
 	.balign 4
+
 .global lbl_8066B200
 lbl_8066B200:
 	.asciz "aSpd"
 	.balign 4
+
 .global lbl_8066B208
 lbl_8066B208:
 	.4byte 0x61434C00
@@ -15386,6 +15614,7 @@ lbl_8066B85C:
 lbl_8066B860:
 	.asciz "AM|PM"
 	.balign 4
+
 .global lbl_8066B868
 lbl_8066B868:
 	.4byte 0x25540000
@@ -20303,6 +20532,7 @@ lbl_8066C9A0:
 lbl_8066C9A8:
 	.asciz "Mem1"
 	.balign 4
+
 .global lbl_8066C9B0
 lbl_8066C9B0:
 	.asciz "Mem2"
@@ -20559,6 +20789,7 @@ lbl_8066CA80:
 lbl_8066CA88:
 	.asciz "????"
 	.balign 4
+
 .global lbl_8066CA90
 lbl_8066CA90:
 	.4byte 0x25660000
@@ -20595,6 +20826,7 @@ lbl_8066CAAC:
 lbl_8066CAB0:
 	.asciz "%rect"
 	.balign 4
+
 .global lbl_8066CAB8
 lbl_8066CAB8:
 	.4byte 0x25730000
@@ -21108,6 +21340,7 @@ lbl_8066CC80:
 lbl_8066CC88:
 	.asciz "CLib"
 	.balign 4
+
 .global lbl_8066CC90
 lbl_8066CC90:
 	.asciz "CLibCri"
@@ -22414,6 +22647,7 @@ lbl_8066D088:
 lbl_8066D090:
 	.asciz "bloom"
 	.balign 4
+
 .global lbl_8066D098
 lbl_8066D098:
 	.asciz "move"
@@ -22528,6 +22762,7 @@ lbl_8066D0E8:
 lbl_8066D0F0:
 	.asciz "SHIF"
 	.balign 4
+
 .global lbl_8066D0F8
 lbl_8066D0F8:
 	.asciz "SHTY"
@@ -22563,26 +22798,32 @@ lbl_8066D110:
 lbl_8066D118:
 	.asciz "move"
 	.balign 4
+
 .global lbl_8066D120
 lbl_8066D120:
 	.asciz "JUam_L"
 	.balign 4
+
 .global lbl_8066D128
 lbl_8066D128:
 	.asciz "JUam_R"
 	.balign 4
+
 .global lbl_8066D130
 lbl_8066D130:
 	.asciz "JLlg_L"
 	.balign 4
+
 .global lbl_8066D138
 lbl_8066D138:
 	.asciz "JLlg_R"
 	.balign 4
+
 .global lbl_8066D140
 lbl_8066D140:
 	.asciz "JLft_L"
 	.balign 4
+
 .global lbl_8066D148
 lbl_8066D148:
 	.asciz "JLft_R"
@@ -22679,6 +22920,7 @@ lbl_8066D190:
 .global lbl_8066D198
 lbl_8066D198:
 	.asciz "CScnMem"
+
 .global lbl_8066D1A0
 lbl_8066D1A0:
 	.asciz "CScn"
@@ -25346,6 +25588,7 @@ lbl_8066DAE0:
 lbl_8066DAE8:
 	.asciz "JUview"
 	.balign 4
+
 .global lbl_8066DAF0
 lbl_8066DAF0:
 	.asciz "mtIris"
@@ -25504,10 +25747,12 @@ lbl_8066DB5C:
 lbl_8066DB60:
 	.asciz "DCbal"
 	.balign 4
+
 .global lbl_8066DB68
 lbl_8066DB68:
 	.asciz "DCpla"
 	.balign 4
+
 .global lbl_8066DB70
 lbl_8066DB70:
 	.asciz "DCcyl"

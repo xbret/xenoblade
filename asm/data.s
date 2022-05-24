@@ -11981,6 +11981,7 @@ lbl_80531C58:
 lbl_80531C90:
 	.asciz "NW4R:Pointer must not be NULL (p)"
 	.balign 4
+
 .global lbl_80531CB4
 lbl_80531CB4:
 	.asciz "LinkList.h"
@@ -18601,14 +18602,17 @@ lbl_805373B0:
 lbl_805373E8:
 	.asciz "NW4R:Pointer must not be NULL (p)"
 	.balign 4
+
 .global lbl_8053740C
 lbl_8053740C:
 	.asciz "LinkList.h"
 	.balign 4
+
 .global lbl_80537418
 lbl_80537418:
 	.asciz "NW4R:Pointer must not be NULL (p)"
 	.balign 4
+
 .global lbl_8053743C
 lbl_8053743C:
 	.asciz "LinkList.h"
@@ -25897,9 +25901,6 @@ lbl_8053CDC8:
 	.4byte lbl_80039DCC
 	.4byte lbl_80039DC4
 	.4byte lbl_80039DBC
-
-.global lbl_8053CE10
-lbl_8053CE10:
 	.4byte lbl_80039DB4
 	.4byte lbl_80039DAC
 	.4byte lbl_80039DA4
@@ -34724,10 +34725,12 @@ lbl_80545530:
 	.balign 4
 	.asciz "TCS accept SCO: Packet Types 0x%04x"
 	.asciz "BTM_CreateSco -> (e)SCO Link for ACL handle 0x%04x, Desired Type %d"
+
 .global lbl_805455BC
 lbl_805455BC:
 	.asciz "      txbw 0x%x, rxbw 0x%x, lat 0x%x, voice 0x%x, retrans 0x%02x, pkt 0x%04x"
 	.balign 4
+
 .global lbl_8054560C
 lbl_8054560C:
 	.asciz "btm_sco_chk_pend_unpark -> (e)SCO Link for ACL handle 0x%04x, Desired Type %d"
@@ -35474,6 +35477,8 @@ lbl_80547598:
 	.4byte lbl_802F7A6C
 	.4byte lbl_802F7A6C
 	.4byte lbl_802F7A2C
+
+	#0x80547604
 	.asciz "L2CAP - st: W4_L2CAP_CON_RSP evt: %d"
 	.balign 4
 	.asciz "L2CAP - Calling Connect_Cfm_Cb(), CID: 0x%04x, Success"
@@ -35810,6 +35815,7 @@ lbl_80547E18:
 	.balign 4
 	.asciz "L2CAP - bad cmd code: %d"
 	.balign 4
+
 .global lbl_805480BC
 lbl_805480BC:
 	.4byte lbl_802FA998
@@ -35860,6 +35866,7 @@ lbl_80548154:
 lbl_80548174:
 	.asciz "L2CAP - no buffer for echo_req"
 	.balign 4
+
 .global lbl_80548194
 lbl_80548194:
 	.asciz "l2cu_create_conn - btm_is_sco_active_by_bdaddr() is_sco_active = %s"
@@ -35990,6 +35997,7 @@ lbl_80548474:
 lbl_805484A8:
 	.asciz "PORT_FlowInd fc:%d"
 	.balign 4
+
 .global lbl_805484BC
 lbl_805484BC:
 	.asciz "Sending RFCOMM_DataReq"
@@ -36446,6 +36454,7 @@ lbl_80548F50:
 lbl_80548F8C:
 	.asciz "SDP_AddUuidSequence - too long, add %d uuids of %d"
 	.balign 4
+
 .global lbl_80548FC0
 lbl_80548FC0:
 	.asciz "Deleting attr_id 0x%04x for handle 0x%x"
@@ -36622,6 +36631,7 @@ lbl_8054952C:
 lbl_80549564:
 	.asciz "SDP - no buf for err msg"
 	.balign 4
+
 .global lbl_80549580
 lbl_80549580:
 	.4byte lbl_80307C0C
@@ -37540,6 +37550,7 @@ lbl_8054A720:
 lbl_8054B5C8:
 	.asciz "<< RVL_SDK - ENC \trelease build: Feb 27 2009 10:05:42 (0x4302_145) >>"
 	.balign 4
+
 .global lbl_8054B610
 lbl_8054B610:
 	.asciz "<< RVL_SDK - EXI \trelease build: Feb 27 2009 10:02:03 (0x4302_145) >>"
@@ -38436,6 +38447,7 @@ lbl_8054C240:
 lbl_8054C250:
 	.asciz "homebutton::GroupAnmController"
 	.balign 4
+
 .global lbl_8054C270
 lbl_8054C270:
 	.4byte lbl_8054C238
@@ -38482,6 +38494,7 @@ lbl_8054C288:
 lbl_8054C2F0:
 	.asciz "homebutton::gui::PaneComponent"
 	.balign 4
+
 .global lbl_8054C310
 lbl_8054C310:
 	.4byte lbl_8054C4F0
@@ -38530,6 +38543,7 @@ lbl_8054C330:
 lbl_8054C394:
 	.asciz "homebutton::gui::PaneManager"
 	.balign 4
+
 .global lbl_8054C3B4
 lbl_8054C3B4:
 	.4byte lbl_8054C4F0
@@ -38568,6 +38582,7 @@ lbl_8054C3D0:
 lbl_8054C410:
 	.asciz "homebutton::gui::Manager"
 	.balign 4
+
 .global lbl_8054C42C
 lbl_8054C42C:
 	.4byte lbl_8054C4F0
@@ -38612,6 +38627,7 @@ lbl_8054C440:
 lbl_8054C4A0:
 	.asciz "homebutton::gui::Component"
 	.balign 4
+
 .global lbl_8054C4BC
 lbl_8054C4BC:
 	.4byte lbl_8054C4F0
@@ -38656,106 +38672,133 @@ lbl_8054C520:
 .global lbl_8054C528
 lbl_8054C528:
 	.asciz "midi\\00_home_button.mid"
+
 .global lbl_8054C540
 lbl_8054C540:
 	.asciz "midi\\01_return_app.mid"
 	.balign 4
+
 .global lbl_8054C558
 lbl_8054C558:
 	.asciz "midi\\02_goto_menu.mid"
 	.balign 4
+
 .global lbl_8054C570
 lbl_8054C570:
 	.asciz "midi\\03_reset_app.mid"
 	.balign 4
+
 .global lbl_8054C588
 lbl_8054C588:
 	.asciz "midi\\04_focus.mid"
 	.balign 4
+
 .global lbl_8054C59C
 lbl_8054C59C:
 	.asciz "midi\\05_select.mid"
 	.balign 4
+
 .global lbl_8054C5B0
 lbl_8054C5B0:
 	.asciz "midi\\06_cancel.mid"
 	.balign 4
+
 .global lbl_8054C5C4
 lbl_8054C5C4:
 	.asciz "midi\\07_open_controller.mid"
+
 .global lbl_8054C5E0
 lbl_8054C5E0:
 	.asciz "midi\\08_close_controller.mid"
 	.balign 4
+
 .global lbl_8054C600
 lbl_8054C600:
 	.asciz "midi\\09_volume_plus.mid"
+
 .global lbl_8054C618
 lbl_8054C618:
 	.asciz "midi\\10_volume_minus.mid"
 	.balign 4
+
 .global lbl_8054C634
 lbl_8054C634:
 	.asciz "midi\\11_volume_plus_limit.mid"
 	.balign 4
+
 .global lbl_8054C654
 lbl_8054C654:
 	.asciz "midi\\12_volume_minus_limit.mid"
 	.balign 4
+
 .global lbl_8054C674
 lbl_8054C674:
 	.asciz "midi\\13_nothing_done.mid"
 	.balign 4
+
 .global lbl_8054C690
 lbl_8054C690:
 	.asciz "midi\\14_vibe_on.mid"
+
 .global lbl_8054C6A4
 lbl_8054C6A4:
 	.asciz "midi\\15_vibe_off.mid"
 	.balign 4
+
 .global lbl_8054C6BC
 lbl_8054C6BC:
 	.asciz "midi\\16_start_connect_window.mid"
 	.balign 4
+
 .global lbl_8054C6E0
 lbl_8054C6E0:
 	.asciz "midi\\17_connected1.mid"
 	.balign 4
+
 .global lbl_8054C6F8
 lbl_8054C6F8:
 	.asciz "midi\\18_connected2.mid"
 	.balign 4
+
 .global lbl_8054C710
 lbl_8054C710:
 	.asciz "midi\\19_connected3.mid"
 	.balign 4
+
 .global lbl_8054C728
 lbl_8054C728:
 	.asciz "midi\\20_connected4.mid"
 	.balign 4
+
 .global lbl_8054C740
 lbl_8054C740:
 	.asciz "midi\\21_end_connect_window.mid"
 	.balign 4
+
 .global lbl_8054C760
 lbl_8054C760:
 	.asciz "midi\\22_manual_open.mid"
+
 .global lbl_8054C778
 lbl_8054C778:
 	.asciz "midi\\23_manual_focus.mid"
 	.balign 4
+
 .global lbl_8054C794
 lbl_8054C794:
 	.asciz "midi\\24_manual_select.mid"
 	.balign 4
+
 .global lbl_8054C7B0
 lbl_8054C7B0:
 	.asciz "midi\\25_manual_scroll.mid"
 	.balign 4
+
 .global lbl_8054C7CC
 lbl_8054C7CC:
 	.asciz "midi\\26_manual_cancel.mid"
 	.balign 4
+
 .global lbl_8054C7E8
 lbl_8054C7E8:
 	.asciz "midi\\27_manual_return_app.mid"
@@ -38816,14 +38859,17 @@ lbl_8054C8C4:
 lbl_8054C8C8:
 	.asciz "P1_Def.brlyt"
 	.balign 4
+
 .global lbl_8054C8D8
 lbl_8054C8D8:
 	.asciz "P2_Def.brlyt"
 	.balign 4
+
 .global lbl_8054C8E8
 lbl_8054C8E8:
 	.asciz "P3_Def.brlyt"
 	.balign 4
+
 .global lbl_8054C8F8
 lbl_8054C8F8:
 	.asciz "P4_Def.brlyt"
@@ -38836,6 +38882,7 @@ lbl_8054C8F8:
 .global lbl_8054C918
 lbl_8054C918:
 	.asciz "N_Trans"
+
 .global lbl_8054C920
 lbl_8054C920:
 	.4byte lbl_8054C918
@@ -38856,10 +38903,12 @@ lbl_8054C930:
 lbl_8054C93C:
 	.asciz "B_btnL_00"
 	.balign 4
+
 .global lbl_8054C948
 lbl_8054C948:
 	.asciz "B_btnL_01"
 	.balign 4
+
 .global lbl_8054C954
 lbl_8054C954:
 	.asciz "B_btnL_10"
@@ -38878,10 +38927,12 @@ lbl_8054C960:
 lbl_8054C970:
 	.asciz "T_btnL_00"
 	.balign 4
+
 .global lbl_8054C97C
 lbl_8054C97C:
 	.asciz "T_btnL_01"
 	.balign 4
+
 .global lbl_8054C988
 lbl_8054C988:
 	.asciz "T_btnL_10"
@@ -38896,27 +38947,34 @@ lbl_8054C988:
 lbl_8054C9A8:
 	.asciz "btnL_00_inOut"
 	.balign 4
+
 .global lbl_8054C9B8
 lbl_8054C9B8:
 	.asciz "btnL_01_inOut"
 	.balign 4
+
 .global lbl_8054C9C8
 lbl_8054C9C8:
 	.asciz "btnL_10_inOut"
 	.balign 4
+
 .global lbl_8054C9D8
 lbl_8054C9D8:
 	.asciz "btnL_11_inOut"
 	.balign 4
+
 .global lbl_8054C9E8
 lbl_8054C9E8:
 	.asciz "btnL_00_psh"
+
 .global lbl_8054C9F4
 lbl_8054C9F4:
 	.asciz "btnL_01_psh"
+
 .global lbl_8054CA00
 lbl_8054CA00:
 	.asciz "btnL_10_psh"
+
 .global lbl_8054CA0C
 lbl_8054CA0C:
 	.asciz "btnL_11_psh"
@@ -38933,10 +38991,12 @@ lbl_8054CA0C:
 lbl_8054CA38:
 	.asciz "_cntBtn_in.brlan"
 	.balign 4
+
 .global lbl_8054CA4C
 lbl_8054CA4C:
 	.asciz "_cntBtn_psh.brlan"
 	.balign 4
+
 .global lbl_8054CA60
 lbl_8054CA60:
 	.asciz "_cntBtn_out.brlan"
@@ -38949,54 +39009,68 @@ lbl_8054CA60:
 lbl_8054CA80:
 	.asciz "_ltrIcn_on.brlan"
 	.balign 4
+
 .global lbl_8054CA94
 lbl_8054CA94:
 	.asciz "_optn_bar_psh.brlan"
+
 .global lbl_8054CAA8
 lbl_8054CAA8:
 	.asciz "_close_bar_psh.brlan"
 	.balign 4
+
 .global lbl_8054CAC0
 lbl_8054CAC0:
 	.asciz "_hmMenu_bar_in.brlan"
 	.balign 4
+
 .global lbl_8054CAD8
 lbl_8054CAD8:
 	.asciz "_hmMenu_bar_psh.brlan"
 	.balign 4
+
 .global lbl_8054CAF0
 lbl_8054CAF0:
 	.asciz "_link_msg_in.brlan"
 	.balign 4
+
 .global lbl_8054CB04
 lbl_8054CB04:
 	.asciz "_link_msg_out.brlan"
+
 .global lbl_8054CB18
 lbl_8054CB18:
 	.asciz "_cmn_msg_in.brlan"
 	.balign 4
+
 .global lbl_8054CB2C
 lbl_8054CB2C:
 	.asciz "_cmn_msg_out.brlan"
 	.balign 4
+
 .global lbl_8054CB40
 lbl_8054CB40:
 	.asciz "_cntrl_up.brlan"
+
 .global lbl_8054CB50
 lbl_8054CB50:
 	.asciz "_cntrl_wndw_opn.brlan"
 	.balign 4
+
 .global lbl_8054CB68
 lbl_8054CB68:
 	.asciz "_cntrl_dwn.brlan"
 	.balign 4
+
 .global lbl_8054CB7C
 lbl_8054CB7C:
 	.asciz "_hmMenu_bar_out.brlan"
 	.balign 4
+
 .global lbl_8054CB94
 lbl_8054CB94:
 	.asciz "_cmn_msg_rtrn.brlan"
+
 .global lbl_8054CBA8
 lbl_8054CBA8:
 	.asciz "_12btn_on.brlan"
@@ -39020,56 +39094,70 @@ lbl_8054CBA8:
 lbl_8054CBF4:
 	.asciz "ltrIcn_on"
 	.balign 4
+
 .global lbl_8054CC00
 lbl_8054CC00:
 	.asciz "optn_bar_psh"
 	.balign 4
+
 .global lbl_8054CC10
 lbl_8054CC10:
 	.asciz "close_bar_psh"
 	.balign 4
+
 .global lbl_8054CC20
 lbl_8054CC20:
 	.asciz "hmMenu_bar_in"
 	.balign 4
+
 .global lbl_8054CC30
 lbl_8054CC30:
 	.asciz "hmMenu_bar_psh"
 	.balign 4
+
 .global lbl_8054CC40
 lbl_8054CC40:
 	.asciz "link_msg_in"
+
 .global lbl_8054CC4C
 lbl_8054CC4C:
 	.asciz "link_msg_out"
 	.balign 4
+
 .global lbl_8054CC5C
 lbl_8054CC5C:
 	.asciz "cmn_msg_in"
 	.balign 4
+
 .global lbl_8054CC68
 lbl_8054CC68:
 	.asciz "cmn_msg_out"
+
 .global lbl_8054CC74
 lbl_8054CC74:
 	.asciz "cntrl_up"
 	.balign 4
+
 .global lbl_8054CC80
 lbl_8054CC80:
 	.asciz "cntrl_wndw_opn"
 	.balign 4
+
 .global lbl_8054CC90
 lbl_8054CC90:
 	.asciz "cntrl_dwn"
 	.balign 4
+
 .global lbl_8054CC9C
 lbl_8054CC9C:
 	.asciz "hmMenu_bar_out"
 	.balign 4
+
 .global lbl_8054CCAC
 lbl_8054CCAC:
 	.asciz "cmn_msg_rtrn"
 	.balign 4
+
 .global lbl_8054CCBC
 lbl_8054CCBC:
 	.asciz "12btn_on"
@@ -39094,59 +39182,74 @@ lbl_8054CCBC:
 lbl_8054CD04:
 	.asciz "_hmMenu_strt.brlan"
 	.balign 4
+
 .global lbl_8054CD18
 lbl_8054CD18:
 	.asciz "_hmMenu_fnsh.brlan"
 	.balign 4
+
 .global lbl_8054CD2C
 lbl_8054CD2C:
 	.asciz "_optn_bar_in.brlan"
 	.balign 4
+
 .global lbl_8054CD40
 lbl_8054CD40:
 	.asciz "_optn_bar_out.brlan"
+
 .global lbl_8054CD54
 lbl_8054CD54:
 	.asciz "_optn_btn_in.brlan"
 	.balign 4
+
 .global lbl_8054CD68
 lbl_8054CD68:
 	.asciz "_optn_btn_psh.brlan"
+
 .global lbl_8054CD7C
 lbl_8054CD7C:
 	.asciz "_vb_btn_wht_psh.brlan"
 	.balign 4
+
 .global lbl_8054CD94
 lbl_8054CD94:
 	.asciz "_optn_btn_out.brlan"
+
 .global lbl_8054CDA8
 lbl_8054CDA8:
 	.asciz "_vb_btn_ylw_psh.brlan"
 	.balign 4
+
 .global lbl_8054CDC0
 lbl_8054CDC0:
 	.asciz "_sound_gry.brlan"
 	.balign 4
+
 .global lbl_8054CDD4
 lbl_8054CDD4:
 	.asciz "_sound_ylw.brlan"
 	.balign 4
+
 .global lbl_8054CDE8
 lbl_8054CDE8:
 	.asciz "_cmn_msg_btn_in.brlan"
 	.balign 4
+
 .global lbl_8054CE00
 lbl_8054CE00:
 	.asciz "_cmn_msg_btn_out.brlan"
 	.balign 4
+
 .global lbl_8054CE18
 lbl_8054CE18:
 	.asciz "_cmn_msg_btn_psh.brlan"
 	.balign 4
+
 .global lbl_8054CE30
 lbl_8054CE30:
 	.asciz "_vb_btn_ylw_ylw.brlan"
 	.balign 4
+
 .global lbl_8054CE48
 lbl_8054CE48:
 	.asciz "_btry_wink.brlan"
@@ -39156,16 +39259,20 @@ lbl_8054CE48:
 .global lbl_8054CE60
 lbl_8054CE60:
 	.asciz "_btry_gry.brlan"
+
 .global lbl_8054CE70
 lbl_8054CE70:
 	.asciz "_btry_wht.brlan"
+
 .global lbl_8054CE80
 lbl_8054CE80:
 	.asciz "_btry_wink_gry.brlan"
 	.balign 4
+
 .global lbl_8054CE98
 lbl_8054CE98:
 	.asciz "_close_bar_in.brlan"
+
 .global lbl_8054CEAC
 lbl_8054CEAC:
 	.asciz "_close_bar_out.brlan"
@@ -39201,64 +39308,80 @@ lbl_8054CEC8:
 .global lbl_8054CF30
 lbl_8054CF30:
 	.asciz "hmMenu_strt"
+
 .global lbl_8054CF3C
 lbl_8054CF3C:
 	.asciz "hmMenu_fnsh"
+
 .global lbl_8054CF48
 lbl_8054CF48:
 	.asciz "hmMenuBck_strt"
 	.balign 4
+
 .global lbl_8054CF58
 lbl_8054CF58:
 	.asciz "hmMenuBck_fnsh"
 	.balign 4
+
 .global lbl_8054CF68
 lbl_8054CF68:
 	.asciz "optn_bar_in"
+
 .global lbl_8054CF74
 lbl_8054CF74:
 	.asciz "optn_bar_out"
 	.balign 4
+
 .global lbl_8054CF84
 lbl_8054CF84:
 	.asciz "optnBtn_00_inOut"
 	.balign 4
+
 .global lbl_8054CF98
 lbl_8054CF98:
 	.asciz "optnBtn_01_inOut"
 	.balign 4
+
 .global lbl_8054CFAC
 lbl_8054CFAC:
 	.asciz "optnBtn_10_inOut"
 	.balign 4
+
 .global lbl_8054CFC0
 lbl_8054CFC0:
 	.asciz "optnBtn_11_inOut"
 	.balign 4
+
 .global lbl_8054CFD4
 lbl_8054CFD4:
 	.asciz "optnBtn_20_inOut"
 	.balign 4
+
 .global lbl_8054CFE8
 lbl_8054CFE8:
 	.asciz "optnBtn_00_psh"
 	.balign 4
+
 .global lbl_8054CFF8
 lbl_8054CFF8:
 	.asciz "optnBtn_01_psh"
 	.balign 4
+
 .global lbl_8054D008
 lbl_8054D008:
 	.asciz "optnBtn_10_psh"
 	.balign 4
+
 .global lbl_8054D018
 lbl_8054D018:
 	.asciz "optnBtn_11_psh"
 	.balign 4
+
 .global lbl_8054D028
 lbl_8054D028:
 	.asciz "optnBtn_20_psh"
 	.balign 4
+
 .global lbl_8054D038
 lbl_8054D038:
 	.asciz "optnBtn_10_cntrl"
@@ -39268,66 +39391,83 @@ lbl_8054D038:
 .global lbl_8054D050
 lbl_8054D050:
 	.asciz "msgBtn_00_inOut"
+
 .global lbl_8054D060
 lbl_8054D060:
 	.asciz "msgBtn_01_inOut"
+
 .global lbl_8054D070
 lbl_8054D070:
 	.asciz "msgBtn_00_psh"
 	.balign 4
+
 .global lbl_8054D080
 lbl_8054D080:
 	.asciz "msgBtn_01_psh"
 	.balign 4
+
 .global lbl_8054D090
 lbl_8054D090:
 	.asciz "vol_00"
 	.balign 4
+
 .global lbl_8054D098
 lbl_8054D098:
 	.asciz "vol_01"
 	.balign 4
+
 .global lbl_8054D0A0
 lbl_8054D0A0:
 	.asciz "vol_02"
 	.balign 4
+
 .global lbl_8054D0A8
 lbl_8054D0A8:
 	.asciz "vol_03"
 	.balign 4
+
 .global lbl_8054D0B0
 lbl_8054D0B0:
 	.asciz "vol_04"
 	.balign 4
+
 .global lbl_8054D0B8
 lbl_8054D0B8:
 	.asciz "vol_05"
 	.balign 4
+
 .global lbl_8054D0C0
 lbl_8054D0C0:
 	.asciz "vol_06"
 	.balign 4
+
 .global lbl_8054D0C8
 lbl_8054D0C8:
 	.asciz "vol_07"
 	.balign 4
+
 .global lbl_8054D0D0
 lbl_8054D0D0:
 	.asciz "vol_08"
 	.balign 4
+
 .global lbl_8054D0D8
 lbl_8054D0D8:
 	.asciz "vol_09"
 	.balign 4
+
 .global lbl_8054D0E0
 lbl_8054D0E0:
 	.asciz "plyr_00"
+
 .global lbl_8054D0E8
 lbl_8054D0E8:
 	.asciz "plyr_01"
+
 .global lbl_8054D0F0
 lbl_8054D0F0:
 	.asciz "plyr_02"
+
 .global lbl_8054D0F8
 lbl_8054D0F8:
 	.asciz "plyr_03"
@@ -39371,18 +39511,22 @@ lbl_8054D0F8:
 lbl_8054D18C:
 	.asciz "let_icn_00"
 	.balign 4
+
 .global lbl_8054D198
 lbl_8054D198:
 	.asciz "N_plyr_00"
 	.balign 4
+
 .global lbl_8054D1A4
 lbl_8054D1A4:
 	.asciz "N_plyr_01"
 	.balign 4
+
 .global lbl_8054D1B0
 lbl_8054D1B0:
 	.asciz "N_plyr_02"
 	.balign 4
+
 .global lbl_8054D1BC
 lbl_8054D1BC:
 	.asciz "N_plyr_03"
@@ -39397,38 +39541,47 @@ lbl_8054D1BC:
 lbl_8054D1DC:
 	.asciz "B_btn_00"
 	.balign 4
+
 .global lbl_8054D1E8
 lbl_8054D1E8:
 	.asciz "B_bar_10"
 	.balign 4
+
 .global lbl_8054D1F4
 lbl_8054D1F4:
 	.asciz "B_optnBtn_00"
 	.balign 4
+
 .global lbl_8054D204
 lbl_8054D204:
 	.asciz "B_optnBtn_01"
 	.balign 4
+
 .global lbl_8054D214
 lbl_8054D214:
 	.asciz "B_optnBtn_10"
 	.balign 4
+
 .global lbl_8054D224
 lbl_8054D224:
 	.asciz "B_optnBtn_11"
 	.balign 4
+
 .global lbl_8054D234
 lbl_8054D234:
 	.asciz "B_optnBtn_20"
 	.balign 4
+
 .global lbl_8054D244
 lbl_8054D244:
 	.asciz "B_BtnA"
 	.balign 4
+
 .global lbl_8054D24C
 lbl_8054D24C:
 	.asciz "B_BtnB"
 	.balign 4
+
 .global lbl_8054D254
 lbl_8054D254:
 	.asciz "cntrl_00"
@@ -39453,10 +39606,12 @@ lbl_8054D260:
 lbl_8054D288:
 	.asciz "T_msg_00"
 	.balign 4
+
 .global lbl_8054D294
 lbl_8054D294:
 	.asciz "T_msg_01"
 	.balign 4
+
 .global lbl_8054D2A0
 lbl_8054D2A0:
 	.asciz "T_Dialog"
@@ -39474,62 +39629,77 @@ lbl_8054D2AC:
 lbl_8054D2B8:
 	.asciz "btryPwr_00_0"
 	.balign 4
+
 .global lbl_8054D2C8
 lbl_8054D2C8:
 	.asciz "btryPwr_00_1"
 	.balign 4
+
 .global lbl_8054D2D8
 lbl_8054D2D8:
 	.asciz "btryPwr_00_2"
 	.balign 4
+
 .global lbl_8054D2E8
 lbl_8054D2E8:
 	.asciz "btryPwr_00_3"
 	.balign 4
+
 .global lbl_8054D2F8
 lbl_8054D2F8:
 	.asciz "btryPwr_01_0"
 	.balign 4
+
 .global lbl_8054D308
 lbl_8054D308:
 	.asciz "btryPwr_01_1"
 	.balign 4
+
 .global lbl_8054D318
 lbl_8054D318:
 	.asciz "btryPwr_01_2"
 	.balign 4
+
 .global lbl_8054D328
 lbl_8054D328:
 	.asciz "btryPwr_01_3"
 	.balign 4
+
 .global lbl_8054D338
 lbl_8054D338:
 	.asciz "btryPwr_02_0"
 	.balign 4
+
 .global lbl_8054D348
 lbl_8054D348:
 	.asciz "btryPwr_02_1"
 	.balign 4
+
 .global lbl_8054D358
 lbl_8054D358:
 	.asciz "btryPwr_02_2"
 	.balign 4
+
 .global lbl_8054D368
 lbl_8054D368:
 	.asciz "btryPwr_02_3"
 	.balign 4
+
 .global lbl_8054D378
 lbl_8054D378:
 	.asciz "btryPwr_03_0"
 	.balign 4
+
 .global lbl_8054D388
 lbl_8054D388:
 	.asciz "btryPwr_03_1"
 	.balign 4
+
 .global lbl_8054D398
 lbl_8054D398:
 	.asciz "btryPwr_03_2"
 	.balign 4
+
 .global lbl_8054D3A8
 lbl_8054D3A8:
 	.asciz "btryPwr_03_3"
@@ -39647,6 +39817,7 @@ lbl_8054D4F0:
 lbl_8054D500:
 	.asciz "homebutton::HomeButtonEventHandler"
 	.balign 4
+
 .global lbl_8054D524
 lbl_8054D524:
 	.4byte lbl_8054D568
@@ -39666,6 +39837,7 @@ lbl_8054D530:
 lbl_8054D548:
 	.asciz "homebutton::gui::EventHandler"
 	.balign 4
+
 .global lbl_8054D568
 lbl_8054D568:
 	.4byte lbl_8054D548
@@ -39700,6 +39872,7 @@ lbl_8054D5B8:
 .global lbl_8054D5D8
 lbl_8054D5D8:
 	.asciz "nw4hbm::lyt::AnimTransformBasic"
+
 .global lbl_8054D5F8
 lbl_8054D5F8:
 	.4byte lbl_8054D630
@@ -39749,6 +39922,7 @@ lbl_8054D640:
 lbl_8054D654:
 	.asciz "nw4hbm::lyt::ArcResourceAccessor"
 	.balign 4
+
 .global lbl_8054D678
 lbl_8054D678:
 	.4byte lbl_8054D6B0
@@ -39765,6 +39939,7 @@ lbl_8054D688:
 lbl_8054D690:
 	.asciz "nw4hbm::lyt::ResourceAccessor"
 	.balign 4
+
 .global lbl_8054D6B0
 lbl_8054D6B0:
 	.4byte lbl_8054D690
@@ -39804,6 +39979,7 @@ lbl_8054D6B8:
 lbl_8054D71C:
 	.asciz "nw4hbm::lyt::Bounding"
 	.balign 4
+
 .global lbl_8054D734
 lbl_8054D734:
 	.4byte lbl_8054D798
@@ -39821,6 +39997,7 @@ lbl_8054D748:
 lbl_8054D750:
 	.asciz "nw4hbm::lyt::Pane"
 	.balign 4
+
 .global lbl_8054D764
 lbl_8054D764:
 	.4byte lbl_8054D798
@@ -39836,6 +40013,7 @@ lbl_8054D770:
 lbl_8054D778:
 	.asciz "nw4hbm::lyt::detail::PaneBase"
 	.balign 4
+
 .global lbl_8054D798
 lbl_8054D798:
 	.4byte lbl_8054D778
@@ -39872,6 +40050,7 @@ lbl_8054D7D0:
 lbl_8054D7DC:
 	.asciz "nw4hbm::lyt::Group"
 	.balign 4
+
 .global lbl_8054D7F0
 lbl_8054D7F0:
 	.4byte lbl_8054D7DC
@@ -39898,6 +40077,7 @@ lbl_8054D7F8:
 .global lbl_8054D82C
 lbl_8054D82C:
 	.asciz "nw4hbm::lyt::Layout"
+
 .global lbl_8054D840
 lbl_8054D840:
 	.4byte lbl_8054D82C
@@ -39947,6 +40127,7 @@ lbl_8054D888:
 lbl_8054D8B0:
 	.asciz "nw4hbm::lyt::Material"
 	.balign 4
+
 .global lbl_8054D8C8
 lbl_8054D8C8:
 	.4byte lbl_8054D8B0
@@ -40019,6 +40200,7 @@ lbl_8054D938:
 lbl_8054D9A4:
 	.asciz "nw4hbm::lyt::Picture"
 	.balign 4
+
 .global lbl_8054D9BC
 lbl_8054D9BC:
 	.4byte lbl_8054D798
@@ -40084,6 +40266,7 @@ lbl_8054D9F4:
 lbl_8054DA68:
 	.asciz "nw4hbm::lyt::TextBox"
 	.balign 4
+
 .global lbl_8054DA80
 lbl_8054DA80:
 	.4byte lbl_8054D798
@@ -40157,6 +40340,7 @@ lbl_8054DADC:
 .global lbl_8054DB58
 lbl_8054DB58:
 	.asciz "nw4hbm::lyt::Window"
+
 .global lbl_8054DB6C
 lbl_8054DB6C:
 	.4byte lbl_8054D798
@@ -41458,6 +41642,7 @@ lbl_8054EEB8:
 lbl_8054EECC:
 	.asciz "nw4hbm::ut::TagProcessorBase<char>"
 	.balign 4
+
 .global lbl_8054EEF0
 lbl_8054EEF0:
 	.4byte lbl_8054EECC
@@ -43701,27 +43886,35 @@ lbl_8055113C:
 	.balign 4
 	.asciz "Failed to set home directory.\n"
 	.balign 4
+
 .global lbl_805511D0
 lbl_805511D0:
 	.asciz "/title/00010000"
+
 .global lbl_805511E0
 lbl_805511E0:
 	.asciz "/title/00010001"
+
 .global lbl_805511F0
 lbl_805511F0:
 	.asciz "/title/00010003"
+
 .global lbl_80551200
 lbl_80551200:
 	.asciz "/title/00010004"
+
 .global lbl_80551210
 lbl_80551210:
 	.asciz "/title/00010005"
+
 .global lbl_80551220
 lbl_80551220:
 	.asciz "/title/00010006"
+
 .global lbl_80551230
 lbl_80551230:
 	.asciz "/title/00010007"
+
 .global lbl_80551240
 lbl_80551240:
 	.asciz "/shared2/title"
@@ -57416,30 +57609,37 @@ lbl_8055EECC:
 lbl_8055EEDC:
 	.asciz "PlayTime: %d seconds left\n"
 	.balign 4
+
 .global lbl_8055EEF8
 lbl_8055EEF8:
 	.asciz "<< RVL_SDK - SC \trelease build: Feb 27 2009 10:05:17 (0x4302_145) >>"
 	.balign 4
+
 .global lbl_8055EF40
 lbl_8055EF40:
 	.asciz "IPL.EULA"
 	.balign 4
+
 .global lbl_8055EF4C
 lbl_8055EF4C:
 	.asciz "IPL.SADR"
 	.balign 4
+
 .global lbl_8055EF58
 lbl_8055EF58:
 	.asciz "NET.CTPC"
 	.balign 4
+
 .global lbl_8055EF64
 lbl_8055EF64:
 	.asciz "NET.PROF"
 	.balign 4
+
 .global lbl_8055EF70
 lbl_8055EF70:
 	.asciz "NET.WCPC"
 	.balign 4
+
 .global lbl_8055EF7C
 lbl_8055EF7C:
 	.asciz "NET.WCFG"
@@ -60095,6 +60295,7 @@ lbl_805624F4:
 lbl_80562504:
 	.asciz "__wudSyncFlushCallback() : %d, Sync: %d\n"
 	.balign 4
+
 .global lbl_80562530
 lbl_80562530:
 	.asciz "Nintendo RVL-CNT"
@@ -75925,6 +76126,7 @@ lbl_805711F8:
 lbl_80571208:
 	.asciz "ResTexPlttInfoOffset"
 	.balign 4
+
 .global lbl_80571220
 lbl_80571220:
 	.asciz "%s::%s: Object not valid."
@@ -75933,6 +76135,7 @@ lbl_80571220:
 .global lbl_80571240
 lbl_80571240:
 	.asciz "g3d_restexplttinfo_ac.h"
+
 .global lbl_80571258
 lbl_80571258:
 	.asciz "%s::%s: Object not valid."
@@ -75941,6 +76144,7 @@ lbl_80571258:
 .global lbl_80571278
 lbl_80571278:
 	.asciz "g3d_restexplttinfo_ac.h"
+
 .global lbl_80571290
 lbl_80571290:
 	.asciz "NW4R:Failed assertion idx < GetNumOffset()"
@@ -75949,17 +76153,21 @@ lbl_80571290:
 .global lbl_805712C0
 lbl_805712C0:
 	.asciz "g3d_restexplttinfo_ac.h"
+
 .global lbl_805712D8
 lbl_805712D8:
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
+
 .global lbl_80571300
 lbl_80571300:
 	.asciz "g3d_resmat_ac.h"
+
 .global lbl_80571310
 lbl_80571310:
 	.asciz "ResTexPlttInfo"
 	.balign 4
+
 .global lbl_80571320
 lbl_80571320:
 	.asciz "%s::%s: Object not valid."
@@ -76553,10 +76761,12 @@ lbl_80571C18:
 	.balign 4
 	.asciz "g3d_resdict_ac.h"
 	.balign 4
+
 .global lbl_80571C68
 lbl_80571C68:
 	.asciz "%s::%s: Object not valid."
 	.balign 4
+
 .global lbl_80571C84
 lbl_80571C84:
 	.asciz "g3d_resdict_ac.h"
@@ -78930,26 +79140,33 @@ lbl_80573920:
 lbl_8057392C:
 	.asciz "%s::%s: Object not valid."
 	.balign 4
+
 .global lbl_80573948
 lbl_80573948:
 	.asciz "g3d_resmat_ac.h"
+
 .global lbl_80573958
 lbl_80573958:
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
+
 .global lbl_80573980
 lbl_80573980:
 	.asciz "g3d_resmat_ac.h"
+
 .global lbl_80573990
 lbl_80573990:
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
+
 .global lbl_805739B8
 lbl_805739B8:
 	.asciz "g3d_resmat_ac.h"
+
 .global lbl_805739C8
 lbl_805739C8:
 	.asciz "NW4R:Failed assertion IsValid()"
+
 .global lbl_805739E8
 lbl_805739E8:
 	.asciz "g3d_resmat_ac.h"

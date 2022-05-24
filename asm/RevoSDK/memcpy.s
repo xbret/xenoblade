@@ -2,7 +2,6 @@
 
 .section .init, "ax"  # 0x80004000 - 0x800066E0
 
-
 #This is very likely handwritten
 .global memcpy
 memcpy:
