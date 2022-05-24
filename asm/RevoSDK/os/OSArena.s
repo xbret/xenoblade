@@ -86,8 +86,8 @@ OSSetArenaLo:
 /* 80353A58 0031D018  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80353A5C 0031D01C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80353A60
-func_80353A60:
+.global OSAllocFromMEM1ArenaLo
+OSAllocFromMEM1ArenaLo:
 /* 80353A60 0031D020  80 0D 99 E0 */	lwz r0, lbl_80665B60@sda21(r13)
 /* 80353A64 0031D024  38 A4 FF FF */	addi r5, r4, -1
 /* 80353A68 0031D028  7C A6 28 F8 */	nor r6, r5, r5

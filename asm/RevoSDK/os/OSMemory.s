@@ -63,7 +63,7 @@ MEMIntrruptHandler:
 /* 8035952C 00322AEC  4E 80 04 20 */	bctr 
 lbl_80359530:
 /* 80359530 00322AF0  38 60 00 0F */	li r3, 0xf
-/* 80359534 00322AF4  4B FF BC DC */	b lbl_80355210
+/* 80359534 00322AF4  4B FF BC DC */	b __OSUnhandledException
 /* 80359538 00322AF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8035953C 00322AFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 

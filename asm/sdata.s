@@ -4248,7 +4248,7 @@ lbl_80665858:
 .global lbl_80665860
 lbl_80665860:
 	# ROM: 0x571440
-	.4byte lbl_802B96FC
+	.4byte std$7dthandler
 	.4byte 0
 
 .global lbl_80665868

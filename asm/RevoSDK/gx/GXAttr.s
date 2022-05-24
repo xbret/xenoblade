@@ -904,8 +904,8 @@ lbl_80319D34:
 /* 80319D48 002E3308  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80319D4C 002E330C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80319D50
-func_80319D50:
+.global GXSetNumTexGens
+GXSetNumTexGens:
 /* 80319D50 002E3310  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 80319D54 002E3314  80 04 02 54 */	lwz r0, 0x254(r4)
 /* 80319D58 002E3318  50 60 07 3E */	rlwimi r0, r3, 0, 0x1c, 0x1f

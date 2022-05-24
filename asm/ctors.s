@@ -5,7 +5,7 @@
 .global lbl_804F5900
 lbl_804F5900:
 	# ROM: 0x4F1A00
-	.4byte ctor_802BA774
+	.4byte __init_cpp_exceptions_tmp
 	.4byte ctor_80039EE0
 	.4byte ctor_8003A4F8
 	.4byte ctor_800539E0

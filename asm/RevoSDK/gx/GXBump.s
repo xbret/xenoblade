@@ -252,8 +252,8 @@ lbl_8031D4A8:
 /* 8031D4D8 002E6A98  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8031D4DC 002E6A9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8031D4E0
-func_8031D4E0:
+.global GXSetNumIndStages
+GXSetNumIndStages:
 /* 8031D4E0 002E6AA0  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031D4E4 002E6AA4  80 04 02 54 */	lwz r0, 0x254(r4)
 /* 8031D4E8 002E6AA8  50 60 83 5E */	rlwimi r0, r3, 0x10, 0xd, 0xf

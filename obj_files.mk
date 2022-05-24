@@ -70,6 +70,14 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/src/kyoshin/appgame/cf/code_802AEB74.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802AEBC4.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802B48A0.o \
+	$(BUILD_DIR)/asm/Runtime/strlen.o \
+	$(BUILD_DIR)/asm/Runtime/__va_arg.o \
+	$(BUILD_DIR)/asm/Runtime/global_destructor_chain.o \
+	$(BUILD_DIR)/asm/Runtime/NMWException.o \
+	$(BUILD_DIR)/asm/Runtime/ptmf.o \
+	$(BUILD_DIR)/asm/Runtime/MWRTTI.o \
+	$(BUILD_DIR)/asm/Runtime/runtime.o \
+	$(BUILD_DIR)/asm/Runtime/__init_cpp_exceptions.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/code_802BA7E4.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/ansi_files.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/ansi_fp.o \
@@ -263,7 +271,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMController.o \
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMRemoteSpk.o \
 	$(BUILD_DIR)/asm/RevoSDK/hbm/code_803222B0.o \
-	$(BUILD_DIR)/asm/text_5_1.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMBase.o \
 	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcMain.o \
 	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcclt.o \
 	$(BUILD_DIR)/asm/RevoSDK/ipc/memory.o \
@@ -317,8 +325,39 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/code/code_8035E1F0.o \
 	$(BUILD_DIR)/asm/Runtime/__ppc_eabi_init.o \
 	$(BUILD_DIR)/asm/RevoSDK/pad/Pad.o \
-	$(BUILD_DIR)/asm/text_6.o \
-	$(BUILD_DIR)/asm/CriWare/CriWare.o \
+	$(BUILD_DIR)/asm/RevoSDK/sc/scsystem.o \
+	$(BUILD_DIR)/asm/RevoSDK/sc/scapi.o \
+	$(BUILD_DIR)/asm/RevoSDK/sc/scapi_prdinfo.o \
+	$(BUILD_DIR)/asm/RevoSDK/si/SIBios.o \
+	$(BUILD_DIR)/asm/RevoSDK/si/SISamplingRate.o \
+	$(BUILD_DIR)/asm/RevoSDK/tpl/TPL.o \
+	$(BUILD_DIR)/asm/RevoSDK/usb/usb.o \
+	$(BUILD_DIR)/asm/RevoSDK/vi/vi.o \
+	$(BUILD_DIR)/asm/RevoSDK/vi/i2c.o \
+	$(BUILD_DIR)/asm/RevoSDK/vi/vi3in1.o \
+	$(BUILD_DIR)/asm/RevoSDK/wenc/wenc.o \
+	$(BUILD_DIR)/asm/RevoSDK/wpad/WPAD.o \
+	$(BUILD_DIR)/asm/RevoSDK/wpad/WPADHIDParser.o \
+	$(BUILD_DIR)/asm/RevoSDK/wpad/WPADEncrypt.o \
+	$(BUILD_DIR)/asm/RevoSDK/wpad/code_80375A90.o \
+	$(BUILD_DIR)/asm/RevoSDK/wpad/debug_msg.o \
+	$(BUILD_DIR)/asm/RevoSDK/wud/wud.o \
+	$(BUILD_DIR)/asm/RevoSDK/wud/WUDHidHost.o \
+	$(BUILD_DIR)/asm/RevoSDK/wud/debug_msg.o \
+	$(BUILD_DIR)/asm/CriWare/ADXF.o \
+	$(BUILD_DIR)/asm/CriWare/ADXT.o \
+	$(BUILD_DIR)/asm/CriWare/AHX.o \
+	$(BUILD_DIR)/asm/CriWare/LSC.o \
+	$(BUILD_DIR)/asm/CriWare/MFCI.o \
+	$(BUILD_DIR)/asm/CriWare/CRI_std.o \
+	$(BUILD_DIR)/asm/CriWare/CFT.o \
+	$(BUILD_DIR)/asm/CriWare/MWSFD.o \
+	$(BUILD_DIR)/asm/CriWare/MPV.o \
+	$(BUILD_DIR)/asm/CriWare/DCT.o \
+	$(BUILD_DIR)/asm/CriWare/MPS.o \
+	$(BUILD_DIR)/asm/CriWare/SFD.o \
+	$(BUILD_DIR)/asm/CriWare/SFX.o \
+	$(BUILD_DIR)/asm/CriWare/SUD.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_rescommon.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resdict.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resfile.o \

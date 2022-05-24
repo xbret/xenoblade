@@ -285,7 +285,7 @@ func_8031B0E0:
 /* 8031B150 002E4710  7C 7C 1B 78 */	mr r28, r3
 /* 8031B154 002E4714  7F BE EB 78 */	mr r30, r29
 /* 8031B158 002E4718  EC 20 E0 24 */	fdivs f1, f0, f28
-/* 8031B15C 002E471C  4B F9 EE D1 */	bl func_802BA02C
+/* 8031B15C 002E471C  4B F9 EE D1 */	bl __cvt_fp2unsigned
 /* 8031B160 002E4720  38 1C FF FF */	addi r0, r28, -1
 /* 8031B164 002E4724  54 64 05 FE */	clrlwi r4, r3, 0x17
 /* 8031B168 002E4728  54 1F 40 2E */	slwi r31, r0, 8
@@ -324,7 +324,7 @@ lbl_8031B1C0:
 /* 8031B1D8 002E4798  EC 21 F8 28 */	fsubs f1, f1, f31
 /* 8031B1DC 002E479C  EF 81 00 24 */	fdivs f28, f1, f0
 /* 8031B1E0 002E47A0  EC 3E E0 24 */	fdivs f1, f30, f28
-/* 8031B1E4 002E47A4  4B F9 EE 49 */	bl func_802BA02C
+/* 8031B1E4 002E47A4  4B F9 EE 49 */	bl __cvt_fp2unsigned
 /* 8031B1E8 002E47A8  54 64 05 FE */	clrlwi r4, r3, 0x17
 /* 8031B1EC 002E47AC  7C 7F 23 96 */	divwu r3, r31, r4
 /* 8031B1F0 002E47B0  38 04 FF 7F */	addi r0, r4, -129
@@ -365,7 +365,7 @@ lbl_8031B24C:
 /* 8031B268 002E4828  EC 21 F0 28 */	fsubs f1, f1, f30
 /* 8031B26C 002E482C  EF 81 00 24 */	fdivs f28, f1, f0
 /* 8031B270 002E4830  EC 3F E0 24 */	fdivs f1, f31, f28
-/* 8031B274 002E4834  4B F9 ED B9 */	bl func_802BA02C
+/* 8031B274 002E4834  4B F9 ED B9 */	bl __cvt_fp2unsigned
 /* 8031B278 002E4838  54 64 05 FE */	clrlwi r4, r3, 0x17
 /* 8031B27C 002E483C  7C 7F 23 96 */	divwu r3, r31, r4
 /* 8031B280 002E4840  38 04 FF 7F */	addi r0, r4, -129
@@ -416,7 +416,7 @@ func_8031B310:
 /* 8031B318 002E48D8  C0 02 BC 48 */	lfs f0, lbl_8066BFC8@sda21(r2)
 /* 8031B31C 002E48DC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8031B320 002E48E0  EC 20 08 24 */	fdivs f1, f0, f1
-/* 8031B324 002E48E4  4B F9 ED 09 */	bl func_802BA02C
+/* 8031B324 002E48E4  4B F9 ED 09 */	bl __cvt_fp2unsigned
 /* 8031B328 002E48E8  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031B32C 002E48EC  38 00 00 61 */	li r0, 0x61
 /* 8031B330 002E48F0  98 04 80 00 */	stb r0, 0xCC008000@l(r4)
@@ -634,8 +634,8 @@ lbl_8031B61C:
 /* 8031B648 002E4C08  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8031B64C 002E4C0C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8031B650
-func_8031B650:
+.global GXSetDispCopyGamma
+GXSetDispCopyGamma:
 /* 8031B650 002E4C10  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031B654 002E4C14  80 04 02 3C */	lwz r0, 0x23c(r4)
 /* 8031B658 002E4C18  50 60 3D F0 */	rlwimi r0, r3, 7, 0x17, 0x18

@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80354610
-func_80354610:
+.global __OSLoadFPUContext
+__OSLoadFPUContext:
 /* 80354610 0031DBD0  A0 A4 01 A2 */	lhz r5, 0x1a2(r4)
 /* 80354614 0031DBD4  54 A5 07 FF */	clrlwi. r5, r5, 0x1f
 /* 80354618 0031DBD8  41 82 01 18 */	beq lbl_80354730
@@ -83,8 +83,8 @@ lbl_80354730:
 /* 80354738 0031DCF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8035473C 0031DCFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80354740
-func_80354740:
+.global __OSSaveFPUContext
+__OSSaveFPUContext:
 /* 80354740 0031DD00  A0 65 01 A2 */	lhz r3, 0x1a2(r5)
 /* 80354744 0031DD04  60 63 00 01 */	ori r3, r3, 1
 /* 80354748 0031DD08  B0 65 01 A2 */	sth r3, 0x1a2(r5)
@@ -163,10 +163,10 @@ lbl_80354864:
 /* 80354868 0031DE28  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8035486C 0031DE2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80354870
-func_80354870:
+.global OSSaveFPUContext
+OSSaveFPUContext:
 /* 80354870 0031DE30  38 A3 00 00 */	addi r5, r3, 0
-/* 80354874 0031DE34  4B FF FE CC */	b func_80354740
+/* 80354874 0031DE34  4B FF FE CC */	b __OSSaveFPUContext
 /* 80354878 0031DE38  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8035487C 0031DE3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
@@ -186,8 +186,6 @@ OSSetCurrentContext:
 /* 803548AC 0031DE6C  60 C6 00 02 */	ori r6, r6, 2
 /* 803548B0 0031DE70  7C C0 01 24 */	mtmsr r6
 /* 803548B4 0031DE74  4E 80 00 20 */	blr
-
-.global lbl_803548B8
 lbl_803548B8:
 /* 803548B8 0031DE78  80 C3 01 9C */	lwz r6, 0x19c(r3)
 /* 803548BC 0031DE7C  54 C6 04 E2 */	rlwinm r6, r6, 0, 0x13, 0x11
@@ -200,15 +198,15 @@ lbl_803548B8:
 /* 803548D8 0031DE98  4E 80 00 20 */	blr 
 /* 803548DC 0031DE9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803548E0
-func_803548E0:
+.global OSGetCurrentContext
+OSGetCurrentContext:
 /* 803548E0 0031DEA0  3C 60 80 00 */	lis r3, 0x800000D4@ha
 /* 803548E4 0031DEA4  80 63 00 D4 */	lwz r3, 0x800000D4@l(r3)
 /* 803548E8 0031DEA8  4E 80 00 20 */	blr 
 /* 803548EC 0031DEAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803548F0
-func_803548F0:
+.global OSSaveContext
+OSSaveContext:
 /* 803548F0 0031DEB0  BD A3 00 34 */	stmw r13, 0x34(r3)
 /* 803548F4 0031DEB4  7C 11 E2 A6 */	mfspr r0, 0x391
 /* 803548F8 0031DEB8  90 03 01 A8 */	stw r0, 0x1a8(r3)
@@ -242,8 +240,8 @@ func_803548F0:
 /* 80354968 0031DF28  38 60 00 00 */	li r3, 0
 /* 8035496C 0031DF2C  4E 80 00 20 */	blr 
 
-.global func_80354970
-func_80354970:
+.global OSLoadContext
+OSLoadContext:
 /* 80354970 0031DF30  3C 80 80 36 */	lis r4, OSDisableInterrupts@ha
 /* 80354974 0031DF34  80 C3 01 98 */	lwz r6, 0x198(r3)
 /* 80354978 0031DF38  38 A4 89 B0 */	addi r5, r4, OSDisableInterrupts@l
@@ -304,15 +302,15 @@ lbl_803549C4:
 /* 80354A48 0031E008  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80354A4C 0031E00C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80354A50
-func_80354A50:
+.global OSGetStackPointer
+OSGetStackPointer:
 /* 80354A50 0031E010  7C 23 0B 78 */	mr r3, r1
 /* 80354A54 0031E014  4E 80 00 20 */	blr 
 /* 80354A58 0031E018  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80354A5C 0031E01C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80354A60
-func_80354A60:
+.global OSSwitchFiber
+OSSwitchFiber:
 /* 80354A60 0031E020  7C 08 02 A6 */	mflr r0
 /* 80354A64 0031E024  7C 25 0B 78 */	mr r5, r1
 /* 80354A68 0031E028  94 A4 FF F8 */	stwu r5, -8(r4)
@@ -326,8 +324,8 @@ func_80354A60:
 /* 80354A88 0031E048  7C A1 2B 78 */	mr r1, r5
 /* 80354A8C 0031E04C  4E 80 00 20 */	blr 
 
-.global func_80354A90
-func_80354A90:
+.global OSSwitchFiberEx
+OSSwitchFiberEx:
 /* 80354A90 0031E050  7C 08 02 A6 */	mflr r0
 /* 80354A94 0031E054  7C 29 0B 78 */	mr r9, r1
 /* 80354A98 0031E058  95 28 FF F8 */	stwu r9, -8(r8)
@@ -356,8 +354,8 @@ OSClearContext:
 /* 80354AE8 0031E0A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80354AEC 0031E0AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80354AF0
-func_80354AF0:
+.global OSInitContext
+OSInitContext:
 /* 80354AF0 0031E0B0  90 83 01 98 */	stw r4, 0x198(r3)
 /* 80354AF4 0031E0B4  90 A3 00 04 */	stw r5, 4(r3)
 /* 80354AF8 0031E0B8  39 60 00 00 */	li r11, 0
@@ -489,10 +487,10 @@ lbl_80354CC0:
 /* 80354CD8 0031E298  3B 20 00 00 */	li r25, 0
 lbl_80354CDC:
 /* 80354CDC 0031E29C  C8 3A 00 98 */	lfd f1, 0x98(r26)
-/* 80354CE0 0031E2A0  4B F6 53 4D */	bl func_802BA02C
+/* 80354CE0 0031E2A0  4B F6 53 4D */	bl __cvt_fp2unsigned
 /* 80354CE4 0031E2A4  C8 3A 00 90 */	lfd f1, 0x90(r26)
 /* 80354CE8 0031E2A8  7C 7D 1B 78 */	mr r29, r3
-/* 80354CEC 0031E2AC  4B F6 53 41 */	bl func_802BA02C
+/* 80354CEC 0031E2AC  4B F6 53 41 */	bl __cvt_fp2unsigned
 /* 80354CF0 0031E2B0  7C 65 1B 78 */	mr r5, r3
 /* 80354CF4 0031E2B4  7F 24 CB 78 */	mr r4, r25
 /* 80354CF8 0031E2B8  7F A7 EB 78 */	mr r7, r29
@@ -511,10 +509,10 @@ lbl_80354CDC:
 /* 80354D2C 0031E2EC  3B 20 00 00 */	li r25, 0
 lbl_80354D30:
 /* 80354D30 0031E2F0  C8 3A 01 D0 */	lfd f1, 0x1d0(r26)
-/* 80354D34 0031E2F4  4B F6 52 F9 */	bl func_802BA02C
+/* 80354D34 0031E2F4  4B F6 52 F9 */	bl __cvt_fp2unsigned
 /* 80354D38 0031E2F8  C8 3A 01 C8 */	lfd f1, 0x1c8(r26)
 /* 80354D3C 0031E2FC  7C 7D 1B 78 */	mr r29, r3
-/* 80354D40 0031E300  4B F6 52 ED */	bl func_802BA02C
+/* 80354D40 0031E300  4B F6 52 ED */	bl __cvt_fp2unsigned
 /* 80354D44 0031E304  7C 65 1B 78 */	mr r5, r3
 /* 80354D48 0031E308  7F 24 CB 78 */	mr r4, r25
 /* 80354D4C 0031E30C  7F A7 EB 78 */	mr r7, r29
@@ -572,8 +570,8 @@ lbl_80354DF8:
 /* 80354E08 0031E3C8  38 21 02 F0 */	addi r1, r1, 0x2f0
 /* 80354E0C 0031E3CC  4E 80 00 20 */	blr
 
-.global lbl_80354E10
-lbl_80354E10:
+.global OSSwitchFPUContext
+OSSwitchFPUContext:
 /* 80354E10 0031E3D0  7C A0 00 A6 */	mfmsr r5
 /* 80354E14 0031E3D4  60 A5 20 00 */	ori r5, r5, 0x2000
 /* 80354E18 0031E3D8  7C A0 01 24 */	mtmsr r5
@@ -588,9 +586,9 @@ lbl_80354E10:
 /* 80354E3C 0031E3FC  41 82 00 14 */	beq lbl_80354E50
 /* 80354E40 0031E400  2C 05 00 00 */	cmpwi r5, 0
 /* 80354E44 0031E404  41 82 00 08 */	beq lbl_80354E4C
-/* 80354E48 0031E408  4B FF F8 F9 */	bl func_80354740
+/* 80354E48 0031E408  4B FF F8 F9 */	bl __OSSaveFPUContext
 lbl_80354E4C:
-/* 80354E4C 0031E40C  4B FF F7 C5 */	bl func_80354610
+/* 80354E4C 0031E40C  4B FF F7 C5 */	bl __OSLoadFPUContext
 lbl_80354E50:
 /* 80354E50 0031E410  80 64 00 80 */	lwz r3, 0x80(r4)
 /* 80354E54 0031E414  7C 6F F1 20 */	mtcrf 0xff, r3
@@ -617,10 +615,10 @@ lbl_80354E50:
 __OSContextInit:
 /* 80354EA0 0031E460  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80354EA4 0031E464  7C 08 02 A6 */	mflr r0
-/* 80354EA8 0031E468  3C 80 80 35 */	lis r4, lbl_80354E10@ha
+/* 80354EA8 0031E468  3C 80 80 35 */	lis r4, OSSwitchFPUContext@ha
 /* 80354EAC 0031E46C  38 60 00 07 */	li r3, 7
 /* 80354EB0 0031E470  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80354EB4 0031E474  38 84 4E 10 */	addi r4, r4, lbl_80354E10@l
+/* 80354EB4 0031E474  38 84 4E 10 */	addi r4, r4, OSSwitchFPUContext@l
 /* 80354EB8 0031E478  4B FF DC A9 */	bl __OSSetExceptionHandler
 /* 80354EBC 0031E47C  3C 80 80 00 */	lis r4, 0x800000D8@ha
 /* 80354EC0 0031E480  38 00 00 00 */	li r0, 0

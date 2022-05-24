@@ -2880,8 +2880,8 @@ lbl_80434DCC:
 /* 80434DD8 003FE398  38 21 00 10 */	addi r1, r1, 0x10
 /* 80434DDC 003FE39C  4E 80 00 20 */	blr 
 
-.global func_80434DE0
-func_80434DE0:
+.global __dla__FPv
+__dla__FPv:
 /* 80434DE0 003FE3A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80434DE4 003FE3A4  7C 08 02 A6 */	mflr r0
 /* 80434DE8 003FE3A8  2C 03 00 00 */	cmpwi r3, 0

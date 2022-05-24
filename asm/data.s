@@ -2,7 +2,6 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-
 .global lbl_805281E0
 lbl_805281E0:
 	# ROM: 0x5242E0
@@ -29045,7 +29044,7 @@ lbl_8053F040:
 	# ROM: 0x53B140
 	.4byte lbl_80665868
 	.4byte 0
-	.4byte lbl_802B9FE0
+	.4byte std8bad_castFv$7__dt
 	.4byte lbl_802BA020
 
 .global lbl_8053F050
@@ -35363,7 +35362,6 @@ lbl_805473B0:
 	.balign 4
 	.asciz "L2CAP - Calling ConnectCfm_Cb(), CID: 0x%04x  Status: %d"
 	.balign 4
-
 
 .global lbl_80547430
 lbl_80547430:
@@ -44043,7 +44041,7 @@ lbl_80551300:
 .global lbl_805517A8
 lbl_805517A8:
 	# ROM: 0x54D8A8
-	.4byte lbl_80353520
+	.4byte OnReset
 	.4byte 0xFFFFFFFF
 	.4byte 0
 	.4byte 0
@@ -58854,7 +58852,6 @@ lbl_80560A30:
 	.4byte lbl_80374530
 	.4byte lbl_80374650
 	.4byte lbl_80374810
-
 
 .global lbl_80560AB0
 lbl_80560AB0:
@@ -74784,6 +74781,7 @@ lbl_8056FFD0:
 	.4byte lbl_804537C0
 	.4byte lbl_804537D4
 
+
 .global lbl_8057000C
 lbl_8057000C:
 	.4byte lbl_80666048
@@ -76070,6 +76068,10 @@ lbl_80570FF0:
 	.4byte 0x00000002
 	.4byte 0x00000002
 	.4byte 0xFFFFFFFF
+
+
+.global lbl_805710BC
+lbl_805710BC:
 	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
 	.balign 4
 	.4byte 0
@@ -76122,6 +76124,7 @@ lbl_805711F8:
 	.4byte lbl_8046A280
 	.4byte lbl_8046A318
 	.4byte 0
+
 .global lbl_80571208
 lbl_80571208:
 	.asciz "ResTexPlttInfoOffset"
@@ -76340,7 +76343,6 @@ lbl_805714C8:
 	.4byte lbl_804813E8
 	.4byte 0
 
-
 .global lbl_805714D8
 lbl_805714D8:
 	# ROM: 0x56D5D8
@@ -76492,7 +76494,6 @@ lbl_805715B8:
 	.4byte func_804857F0
 	.4byte 0
 
-
 .global lbl_80571698
 lbl_80571698:
 	.float 0.7
@@ -76507,7 +76508,6 @@ lbl_80571698:
 	.float 0.3
 	.float 0.7
 	.float 0.7
-
 
 .global lbl_805716C8
 lbl_805716C8:
@@ -78147,7 +78147,6 @@ lbl_80572D44:
 	.4byte lbl_80664520
 	.4byte 0
 	.4byte 0
-
 
 .global lbl_80572D50
 lbl_80572D50:

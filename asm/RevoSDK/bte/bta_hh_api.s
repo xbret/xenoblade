@@ -253,8 +253,8 @@ lbl_802E3B94:
 /* 802E3BA4 002AD164  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E3BA8 002AD168  4E 80 00 20 */	blr 
 
-.global func_802E3BAC
-func_802E3BAC:
+.global BTA_HhGetAclQueueInfo
+BTA_HhGetAclQueueInfo:
 /* 802E3BAC 002AD16C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E3BB0 002AD170  7C 08 02 A6 */	mflr r0
 /* 802E3BB4 002AD174  38 60 00 08 */	li r3, 8

@@ -19100,25 +19100,25 @@ lbl_80021020:
 	.4byte lbl_802B94D0
 	.4byte 0x000000E8
 	.4byte lbl_8001BED0
-	.4byte func_802B9940
+	.4byte __construct_new_array
 	.4byte 0x00000104
 	.4byte lbl_8001BEE8
-	.4byte lbl_802B9A44
+	.4byte __partial_array_destructor$7__dt
 	.4byte 0x000000BC
 	.4byte lbl_8001BF00
-	.4byte func_802B9B00
+	.4byte __construct_array
 	.4byte 0x000000F8
 	.4byte lbl_8001BF08
-	.4byte func_802B9BF8
+	.4byte __destroy_arr
 	.4byte 0x00000078
 	.4byte lbl_8001BF20
-	.4byte func_802B9C70
+	.4byte __destroy_new_array
 	.4byte 0x00000080
 	.4byte lbl_8001BF28
-	.4byte func_802B9D84
+	.4byte __dynamic_cast
 	.4byte 0x0000025C
 	.4byte lbl_8001BF30
-	.4byte lbl_802B9FE0
+	.4byte std8bad_castFv$7__dt
 	.4byte 0x00000040
 	.4byte lbl_8001BF38
 	.4byte func_802BA8F0
@@ -19193,7 +19193,7 @@ lbl_80021020:
 	.4byte func_80434C2C
 	.4byte 0x000001B4
 	.4byte lbl_8001C010
-	.4byte func_80434DE0
+	.4byte __dla__FPv
 	.4byte 0x000001B4
 	.4byte lbl_8001C018
 	.4byte func_80434F94

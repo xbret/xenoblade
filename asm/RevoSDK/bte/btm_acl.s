@@ -1949,8 +1949,8 @@ lbl_802E5F48:
 /* 802E5F60 002AF520  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E5F64 002AF524  4E 80 00 20 */	blr 
 
-.global func_802E5F68
-func_802E5F68:
+.global btm_remove_acl
+btm_remove_acl:
 /* 802E5F68 002AF528  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E5F6C 002AF52C  7C 08 02 A6 */	mflr r0
 /* 802E5F70 002AF530  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha

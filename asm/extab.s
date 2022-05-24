@@ -41123,7 +41123,7 @@ lbl_8001BEE8:
 	.4byte 0x00000010
 	.4byte 0
 	.4byte 0x82000008
-	.4byte lbl_802B9A44
+	.4byte __partial_array_destructor$7__dt
 
 .global lbl_8001BF00
 lbl_8001BF00:
@@ -41137,7 +41137,7 @@ lbl_8001BF08:
 	.4byte 0x00000010
 	.4byte 0
 	.4byte 0x82000008
-	.4byte lbl_802B9A44
+	.4byte __partial_array_destructor$7__dt
 
 .global lbl_8001BF20
 lbl_8001BF20:

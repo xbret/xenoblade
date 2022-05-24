@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80353AA0
-func_80353AA0:
+.global __AIClockInit
+__AIClockInit:
 /* 80353AA0 0031D060  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80353AA4 0031D064  7C 08 02 A6 */	mflr r0
 /* 80353AA8 0031D068  3C 80 CD 80 */	lis r4, 0xCD800180@ha
@@ -158,7 +158,7 @@ __OSInitAudioSystem:
 /* 80353CD4 0031D294  2C 00 00 00 */	cmpwi r0, 0
 /* 80353CD8 0031D298  40 82 00 0C */	bne lbl_80353CE4
 /* 80353CDC 0031D29C  38 60 00 01 */	li r3, 1
-/* 80353CE0 0031D2A0  4B FF FD C1 */	bl func_80353AA0
+/* 80353CE0 0031D2A0  4B FF FD C1 */	bl __AIClockInit
 lbl_80353CE4:
 /* 80353CE4 0031D2A4  4B FF FC DD */	bl OSGetArenaHi
 /* 80353CE8 0031D2A8  3C 80 81 00 */	lis r4, 0x8100

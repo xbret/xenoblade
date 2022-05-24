@@ -95,7 +95,7 @@ lbl_8031DDF8:
 /* 8031DE24 002E73E4  EC 00 10 28 */	fsubs f0, f0, f2
 /* 8031DE28 002E73E8  EC 03 00 24 */	fdivs f0, f3, f0
 /* 8031DE2C 002E73EC  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 8031DE30 002E73F0  4B F9 C1 FD */	bl func_802BA02C
+/* 8031DE30 002E73F0  4B F9 C1 FD */	bl __cvt_fp2unsigned
 /* 8031DE34 002E73F4  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031DE38 002E73F8  38 00 00 61 */	li r0, 0x61
 /* 8031DE3C 002E73FC  98 04 80 00 */	stb r0, 0xCC008000@l(r4)
@@ -224,7 +224,7 @@ lbl_8031DFE0:
 /* 8031E00C 002E75CC  4B FA D4 5D */	bl func_802CB468
 /* 8031E010 002E75D0  FC 00 08 18 */	frsp f0, f1
 /* 8031E014 002E75D4  EC 3F 00 32 */	fmuls f1, f31, f0
-/* 8031E018 002E75D8  4B F9 C0 15 */	bl func_802BA02C
+/* 8031E018 002E75D8  4B F9 C0 15 */	bl __cvt_fp2unsigned
 /* 8031E01C 002E75DC  3B BD 00 01 */	addi r29, r29, 1
 /* 8031E020 002E75E0  54 60 05 3E */	clrlwi r0, r3, 0x14
 /* 8031E024 002E75E4  28 1D 00 0A */	cmplwi r29, 0xa
@@ -323,8 +323,8 @@ lbl_8031E158:
 /* 8031E188 002E7748  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031E18C 002E774C  4E 80 00 20 */	blr 
 
-.global func_8031E190
-func_8031E190:
+.global GXSetBlendMode
+GXSetBlendMode:
 /* 8031E190 002E7750  81 42 BC 20 */	lwz r10, lbl_8066BFA0@sda21(r2)
 /* 8031E194 002E7754  38 03 FF FD */	addi r0, r3, -3
 /* 8031E198 002E7758  39 03 FF FE */	addi r8, r3, -2
@@ -361,8 +361,8 @@ func_8031E1E0:
 /* 8031E208 002E77C8  4E 80 00 20 */	blr 
 /* 8031E20C 002E77CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8031E210
-func_8031E210:
+.global GXSetAlphaUpdate
+GXSetAlphaUpdate:
 /* 8031E210 002E77D0  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
 /* 8031E214 002E77D4  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031E218 002E77D8  38 A0 00 61 */	li r5, 0x61
@@ -376,8 +376,8 @@ func_8031E210:
 /* 8031E238 002E77F8  4E 80 00 20 */	blr 
 /* 8031E23C 002E77FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8031E240
-func_8031E240:
+.global GXSetZMode
+GXSetZMode:
 /* 8031E240 002E7800  81 22 BC 20 */	lwz r9, lbl_8066BFA0@sda21(r2)
 /* 8031E244 002E7804  3C C0 CC 01 */	lis r6, 0xCC008000@ha
 /* 8031E248 002E7808  38 E0 00 61 */	li r7, 0x61
