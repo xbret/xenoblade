@@ -1,17 +1,10 @@
-TEXT_O_FILES :=\
-	$(BUILD_DIR)/asm/RevoSDK/memcpy.o \
-	$(BUILD_DIR)/asm/MetroTRK/mem_TRK.o \
-	$(BUILD_DIR)/asm/Runtime/__mem.o \
-	$(BUILD_DIR)/asm/Runtime/__exception.o \
+GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CGame.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80039EEC.o \
 	$(BUILD_DIR)/asm/sdata.o \
 	$(BUILD_DIR)/src/kyoshin/appgame/cf/main.o \
 	$(BUILD_DIR)/asm/sdata_1.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8003A05C.o \
-	$(BUILD_DIR)/asm/sbss.o \
-	$(BUILD_DIR)/src/Runtime/__start.o \
-	$(BUILD_DIR)/asm/sbss_1.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8003AA00.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800539EC.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80059EB8.o \
@@ -70,6 +63,16 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/src/kyoshin/appgame/cf/code_802AEB74.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802AEBC4.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802B48A0.o \
+
+
+MW_O_FILES :=\
+	$(BUILD_DIR)/asm/RevoSDK/memcpy.o \
+	$(BUILD_DIR)/asm/MetroTRK/mem_TRK.o \
+	$(BUILD_DIR)/asm/Runtime/__mem.o \
+	$(BUILD_DIR)/asm/Runtime/__exception.o \
+	$(BUILD_DIR)/asm/sbss.o \
+	$(BUILD_DIR)/src/Runtime/__start.o \
+	$(BUILD_DIR)/asm/sbss_1.o \
 	$(BUILD_DIR)/asm/Runtime/strlen.o \
 	$(BUILD_DIR)/asm/Runtime/__va_arg.o \
 	$(BUILD_DIR)/asm/Runtime/global_destructor_chain.o \
@@ -148,6 +151,8 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/MetroTRK/MetroTRK_802CC93C.o \
 	$(BUILD_DIR)/asm/NdevExi2A/DebuggerDriver.o \
 	$(BUILD_DIR)/asm/NdevExi2A/exi2.o \
+
+RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/ai/ai.o \
 	$(BUILD_DIR)/asm/RevoSDK/arc/arc.o \
 	$(BUILD_DIR)/asm/RevoSDK/arc/arc__105.o \
@@ -343,7 +348,9 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/wpad/debug_msg.o \
 	$(BUILD_DIR)/asm/RevoSDK/wud/wud.o \
 	$(BUILD_DIR)/asm/RevoSDK/wud/WUDHidHost.o \
-	$(BUILD_DIR)/asm/RevoSDK/wud/debug_msg.o \
+	$(BUILD_DIR)/asm/RevoSDK/wud/debug_msg.o
+
+CRIWARE_O_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/ADXF.o \
 	$(BUILD_DIR)/asm/CriWare/ADXT.o \
 	$(BUILD_DIR)/asm/CriWare/AHX.o \
@@ -357,7 +364,10 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/MPS.o \
 	$(BUILD_DIR)/asm/CriWare/SFD.o \
 	$(BUILD_DIR)/asm/CriWare/SFX.o \
-	$(BUILD_DIR)/asm/CriWare/SUD.o \
+	$(BUILD_DIR)/asm/CriWare/SUD.o
+
+
+NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_rescommon.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resdict.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resfile.o \
@@ -490,7 +500,9 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/ut/ut_ResFontBase.o \
 	$(BUILD_DIR)/asm/nw4r/ut/ut_ResFont.o \
 	$(BUILD_DIR)/asm/nw4r/ut/code_8042CC2C.o \
-	$(BUILD_DIR)/asm/nw4r/ut/ut_CharWriter.o \
+	$(BUILD_DIR)/asm/nw4r/ut/ut_CharWriter.o
+
+MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_80432678.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80435D28.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80435DF8.o \
@@ -536,7 +548,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_804DB438.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804DB938.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804F0258.o \
-	$(BUILD_DIR)/asm/monolithlib/code_804F5158.o \
+	$(BUILD_DIR)/asm/monolithlib/code_804F5158.o
 
 EXTAB_O_FILES :=\
 	$(BUILD_DIR)/asm/extab.o
@@ -546,9 +558,6 @@ EXTABINDEX_O_FILES :=\
 
 CTORS_O_FILES :=\
 	$(BUILD_DIR)/asm/ctors.o
-
-DTORS_O_FILES :=\
-	$(BUILD_DIR)/asm/dtors.o
 
 RODATA_O_FILES :=\
 	$(BUILD_DIR)/asm/rodata.o

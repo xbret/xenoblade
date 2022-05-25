@@ -141,8 +141,6 @@ lbl_80528380:
 lbl_80528390:
 	# ROM: 0x524490
 	.4byte lbl_806683E0
-
-
 	.4byte lbl_804F5C14
 	.4byte 0x00000001
 	.4byte 0
