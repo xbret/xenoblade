@@ -22,8 +22,9 @@ func_804DAF70:
 /* 804DAFAC 004A456C  7C 08 03 A6 */	mtlr r0
 /* 804DAFB0 004A4570  38 21 00 20 */	addi r1, r1, 0x20
 /* 804DAFB4 004A4574  4E 80 00 20 */	blr 
-.global lbl_804DAFB8
-lbl_804DAFB8:
+
+.global func_804DAFB8
+func_804DAFB8:
 /* 804DAFB8 004A4578  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DAFBC 004A457C  7C 08 02 A6 */	mflr r0
 /* 804DAFC0 004A4580  90 01 00 14 */	stw r0, 0x14(r1)

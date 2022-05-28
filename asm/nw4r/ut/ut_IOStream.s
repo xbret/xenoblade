@@ -2,23 +2,23 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global lbl_8042BDD0
-lbl_8042BDD0:
+.global func_8042BDD0
+func_8042BDD0:
 /* 8042BDD0 003F5390  38 60 00 00 */	li r3, 0
 /* 8042BDD4 003F5394  4E 80 00 20 */	blr
 
-.global lbl_8042BDD8
-lbl_8042BDD8:
+.global func_8042BDD8
+func_8042BDD8:
 /* 8042BDD8 003F5398  38 60 00 00 */	li r3, 0
 /* 8042BDDC 003F539C  4E 80 00 20 */	blr
 
-.global lbl_8042BDE0
-lbl_8042BDE0:
+.global func_8042BDE0
+func_8042BDE0:
 /* 8042BDE0 003F53A0  38 60 00 00 */	li r3, 0
 /* 8042BDE4 003F53A4  4E 80 00 20 */	blr
 
-.global lbl_8042BDE8
-lbl_8042BDE8:
+.global func_8042BDE8
+func_8042BDE8:
 /* 8042BDE8 003F53A8  38 60 00 00 */	li r3, 0
 /* 8042BDEC 003F53AC  4E 80 00 20 */	blr
 

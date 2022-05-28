@@ -204,15 +204,15 @@ lbl_80368D30:
 /* 80368D68 00332328  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80368D6C 0033232C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_80368D70
-lbl_80368D70:
+.global func_80368D70
+func_80368D70:
 /* 80368D70 00332330  38 60 00 00 */	li r3, 0
 /* 80368D74 00332334  4E 80 00 20 */	blr 
 /* 80368D78 00332338  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80368D7C 0033233C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_80368D80
-lbl_80368D80:
+.global func_80368D80
+func_80368D80:
 /* 80368D80 00332340  38 60 00 00 */	li r3, 0
 /* 80368D84 00332344  4E 80 00 20 */	blr 
 /* 80368D88 00332348  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */

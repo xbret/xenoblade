@@ -69,7 +69,7 @@ TRKTerminateNub:
 TRKNubWelcome:
 /* 802CC8BC 00295E7C  3C 60 80 54 */	lis r3, lbl_8053FE88@ha
 /* 802CC8C0 00295E80  38 63 FE 88 */	addi r3, r3, lbl_8053FE88@l
-/* 802CC8C4 00295E84  4B FF FC 90 */	b lbl_802CC554
+/* 802CC8C4 00295E84  4B FF FC 90 */	b func_802CC554
 
 .global usr_put_initialize
 usr_put_initialize:

@@ -6,8 +6,8 @@
 func_804C8684:
 /* 804C8684 00491C44  4E 80 00 20 */	blr
 
-.global lbl_804C8688
-lbl_804C8688:
+.global func_804C8688
+func_804C8688:
 /* 804C8688 00491C48  4E 80 00 20 */	blr 
 
 .global func_804C868C

@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global lbl_8035B2B0
-lbl_8035B2B0:
+.global func_8035B2B0
+func_8035B2B0:
 /* 8035B2B0 00324870  7D 30 FA A6 */	mfspr r9, 0x3f0
 /* 8035B2B4 00324874  61 2A 00 08 */	ori r10, r9, 8
 /* 8035B2B8 00324878  7D 50 FB A6 */	mtspr 0x3f0, r10
@@ -18,10 +18,10 @@ lbl_8035B2CC:
 __OSInitSystemCall:
 /* 8035B2D0 00324890  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035B2D4 00324894  7C 08 02 A6 */	mflr r0
-/* 8035B2D8 00324898  3C 80 80 36 */	lis r4, lbl_8035B2B0@ha
+/* 8035B2D8 00324898  3C 80 80 36 */	lis r4, func_8035B2B0@ha
 /* 8035B2DC 0032489C  3C A0 80 36 */	lis r5, lbl_8035B2CC@ha
 /* 8035B2E0 003248A0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8035B2E4 003248A4  38 84 B2 B0 */	addi r4, r4, lbl_8035B2B0@l
+/* 8035B2E4 003248A4  38 84 B2 B0 */	addi r4, r4, func_8035B2B0@l
 /* 8035B2E8 003248A8  38 A5 B2 CC */	addi r5, r5, lbl_8035B2CC@l
 /* 8035B2EC 003248AC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8035B2F0 003248B0  3F E0 80 00 */	lis r31, 0x80000C00@ha

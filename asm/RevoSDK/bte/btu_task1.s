@@ -21,8 +21,8 @@ func_802DE1F0:
 /* 802DE228 002A77E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DE22C 002A77EC  4E 80 00 20 */	blr
 
-.global lbl_802DE230
-lbl_802DE230:
+.global func_802DE230
+func_802DE230:
 /* 802DE230 002A77F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DE234 002A77F4  7C 08 02 A6 */	mflr r0
 /* 802DE238 002A77F8  90 01 00 24 */	stw r0, 0x24(r1)

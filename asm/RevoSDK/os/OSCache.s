@@ -239,8 +239,8 @@ lbl_8035422C:
 /* 80354248 0031D808  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8035424C 0031D80C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_80354250
-lbl_80354250:
+.global func_80354250
+func_80354250:
 /* 80354250 0031D810  54 A6 F6 FE */	rlwinm r6, r5, 0x1e, 0x1b, 0x1f
 /* 80354254 0031D814  54 84 00 FE */	clrlwi r4, r4, 3
 /* 80354258 0031D818  7C C6 23 78 */	or r6, r6, r4

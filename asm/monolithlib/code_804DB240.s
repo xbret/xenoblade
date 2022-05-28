@@ -18,8 +18,9 @@ func_804DB240:
 /* 804DB26C 004A482C  7C 08 03 A6 */	mtlr r0
 /* 804DB270 004A4830  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB274 004A4834  4E 80 00 20 */	blr 
-.global lbl_804DB278
-lbl_804DB278:
+
+.global func_804DB278
+func_804DB278:
 /* 804DB278 004A4838  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB27C 004A483C  7C 08 02 A6 */	mflr r0
 /* 804DB280 004A4840  90 01 00 14 */	stw r0, 0x14(r1)

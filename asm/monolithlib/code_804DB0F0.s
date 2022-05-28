@@ -13,8 +13,9 @@ func_804DB0F0:
 /* 804DB108 004A46C8  98 04 00 00 */	stb r0, 0(r4)
 /* 804DB10C 004A46CC  90 06 00 00 */	stw r0, 0(r6)
 /* 804DB110 004A46D0  4E 80 00 20 */	blr 
-.global lbl_804DB114
-lbl_804DB114:
+
+.global func_804DB114
+func_804DB114:
 /* 804DB114 004A46D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB118 004A46D8  7C 08 02 A6 */	mflr r0
 /* 804DB11C 004A46DC  90 01 00 14 */	stw r0, 0x14(r1)

@@ -246,12 +246,12 @@ func_8034D500:
 /* 8034D55C 00316B1C  11 21 49 38 */	ps_msub f9, f1, f4, f9
 /* 8034D560 00316B20  11 00 40 F8 */	ps_msub f8, f0, f3, f8
 /* 8034D564 00316B24  10 07 30 40 */	ps_cmpo0 cr0, f7, f6
-/* 8034D568 00316B28  40 82 00 0C */	bne lbl_8034D574
+/* 8034D568 00316B28  40 82 00 0C */	bne func_8034D574
 /* 8034D56C 00316B2C  38 60 00 00 */	li r3, 0
 /* 8034D570 00316B30  4E 80 00 20 */	blr
 
-.global lbl_8034D574
-lbl_8034D574:
+.global func_8034D574
+func_8034D574:
 /* 8034D574 00316B34  EC 00 38 30 */	fres f0, f7
 /* 8034D578 00316B38  10 C0 00 2A */	ps_add f6, f0, f0
 /* 8034D57C 00316B3C  10 A7 00 32 */	ps_mul f5, f7, f0
@@ -332,15 +332,15 @@ func_8034D680:
 /* 8034D690 00316C50  C0 02 BD AC */	lfs f0, lbl_8066C12C@sda21(r2)
 /* 8034D694 00316C54  10 40 28 50 */	ps_neg f2, f5
 /* 8034D698 00316C58  C0 22 BD A8 */	lfs f1, lbl_8066C128@sda21(r2)
-/* 8034D69C 00316C5C  41 82 00 18 */	beq lbl_8034D6B4
+/* 8034D69C 00316C5C  41 82 00 18 */	beq func_8034D6B4
 /* 8034D6A0 00316C60  28 00 00 79 */	cmplwi r0, 0x79
-/* 8034D6A4 00316C64  41 82 00 38 */	beq lbl_8034D6DC
+/* 8034D6A4 00316C64  41 82 00 38 */	beq func_8034D6DC
 /* 8034D6A8 00316C68  28 00 00 7A */	cmplwi r0, 0x7a
-/* 8034D6AC 00316C6C  41 82 00 5C */	beq lbl_8034D708
+/* 8034D6AC 00316C6C  41 82 00 5C */	beq func_8034D708
 /* 8034D6B0 00316C70  4E 80 00 20 */	blr
 
-.global lbl_8034D6B4
-lbl_8034D6B4:
+.global func_8034D6B4
+func_8034D6B4:
 /* 8034D6B4 00316C74  10 65 24 20 */	ps_merge00 f3, f5, f4
 /* 8034D6B8 00316C78  F0 23 80 00 */	psq_st f1, 0(r3), 1, qr0
 /* 8034D6BC 00316C7C  10 24 14 20 */	ps_merge00 f1, f4, f2
@@ -352,8 +352,8 @@ lbl_8034D6B4:
 /* 8034D6D4 00316C94  F0 23 00 14 */	psq_st f1, 20(r3), 0, qr0
 /* 8034D6D8 00316C98  4E 80 00 20 */	blr
 
-.global lbl_8034D6DC
-lbl_8034D6DC:
+.global func_8034D6DC
+func_8034D6DC:
 /* 8034D6DC 00316C9C  10 64 04 20 */	ps_merge00 f3, f4, f0
 /* 8034D6E0 00316CA0  F0 03 00 18 */	psq_st f0, 24(r3), 0, qr0
 /* 8034D6E4 00316CA4  10 20 0C 20 */	ps_merge00 f1, f0, f1
@@ -366,8 +366,8 @@ lbl_8034D6DC:
 /* 8034D700 00316CC0  F0 43 00 20 */	psq_st f2, 32(r3), 0, qr0
 /* 8034D704 00316CC4  4E 80 00 20 */	blr
 
-.global lbl_8034D708
-lbl_8034D708:
+.global func_8034D708
+func_8034D708:
 /* 8034D708 00316CC8  10 65 24 20 */	ps_merge00 f3, f5, f4
 /* 8034D70C 00316CCC  F0 03 00 08 */	psq_st f0, 8(r3), 0, qr0
 /* 8034D710 00316CD0  10 44 14 20 */	ps_merge00 f2, f4, f2

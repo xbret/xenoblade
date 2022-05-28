@@ -2,12 +2,12 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global lbl_802DE080
-lbl_802DE080:
+.global func_802DE080
+func_802DE080:
 /* 802DE080 002A7640  3C 80 80 5C */	lis r4, lbl_805BE4A0@ha
-/* 802DE084 002A7644  3C 60 80 2E */	lis r3, lbl_802DE230@ha
+/* 802DE084 002A7644  3C 60 80 2E */	lis r3, func_802DE230@ha
 /* 802DE088 002A7648  38 84 E4 A0 */	addi r4, r4, lbl_805BE4A0@l
-/* 802DE08C 002A764C  38 63 E2 30 */	addi r3, r3, lbl_802DE230@l
+/* 802DE08C 002A764C  38 63 E2 30 */	addi r3, r3, func_802DE230@l
 /* 802DE090 002A7650  38 84 10 00 */	addi r4, r4, 0x1000
 /* 802DE094 002A7654  48 07 69 CC */	b OSSwitchFiber
 /* 802DE098 002A7658  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
@@ -45,11 +45,11 @@ lbl_802DE0EC:
 /* 802DE104 002A76C4  48 07 4D 1D */	bl OSCreateAlarm
 /* 802DE108 002A76C8  48 07 E8 59 */	bl OSGetTime
 /* 802DE10C 002A76CC  3C A0 80 00 */	lis r5, 0x800000F8@ha
-/* 802DE110 002A76D0  3D 20 80 2E */	lis r9, lbl_802DE080@ha
+/* 802DE110 002A76D0  3D 20 80 2E */	lis r9, func_802DE080@ha
 /* 802DE114 002A76D4  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
 /* 802DE118 002A76D8  3C C0 10 62 */	lis r6, 0x10624DD3@ha
 /* 802DE11C 002A76DC  7C 65 1B 78 */	mr r5, r3
-/* 802DE120 002A76E0  39 29 E0 80 */	addi r9, r9, lbl_802DE080@l
+/* 802DE120 002A76E0  39 29 E0 80 */	addi r9, r9, func_802DE080@l
 /* 802DE124 002A76E4  38 66 4D D3 */	addi r3, r6, 0x10624DD3@l
 /* 802DE128 002A76E8  54 00 F0 BE */	srwi r0, r0, 2
 /* 802DE12C 002A76EC  7C 03 00 16 */	mulhwu r0, r3, r0
@@ -95,8 +95,8 @@ func_802DE180:
 /* 802DE1B8 002A7778  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802DE1BC 002A777C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_802DE1C0
-lbl_802DE1C0:
+.global func_802DE1C0
+func_802DE1C0:
 /* 802DE1C0 002A7780  81 8D B5 EC */	lwz r12, lbl_8066776C@sda21(r13)
 /* 802DE1C4 002A7784  2C 0C 00 00 */	cmpwi r12, 0
 /* 802DE1C8 002A7788  4D 82 00 20 */	beqlr 

@@ -62,8 +62,8 @@ func_802DDE70:
 /* 802DDE98 002A7458  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802DDE9C 002A745C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_802DDEA0
-lbl_802DDEA0:
+.global func_802DDEA0
+func_802DDEA0:
 /* 802DDEA0 002A7460  7C 65 1B 78 */	mr r5, r3
 /* 802DDEA4 002A7464  38 60 00 02 */	li r3, 2
 /* 802DDEA8 002A7468  38 80 00 00 */	li r4, 0

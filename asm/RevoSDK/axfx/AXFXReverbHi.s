@@ -28,7 +28,7 @@ func_802D5710:
 /* 802D5764 0029ED24  90 03 01 3C */	stw r0, 0x13c(r3)
 /* 802D5768 0029ED28  D0 03 01 40 */	stfs f0, 0x140(r3)
 /* 802D576C 0029ED2C  D0 43 01 44 */	stfs f2, 0x144(r3)
-/* 802D5770 0029ED30  48 00 00 50 */	b lbl_802D57C0
+/* 802D5770 0029ED30  48 00 00 50 */	b func_802D57C0
 /* 802D5774 0029ED34  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802D5778 0029ED38  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802D577C 0029ED3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
@@ -48,9 +48,9 @@ func_802D5780:
 /* 802D57A8 0029ED68  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802D57AC 0029ED6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_802D57B0
-lbl_802D57B0:
-/* 802D57B0 0029ED70  48 00 02 10 */	b lbl_802D59C0
+.global func_802D57B0
+func_802D57B0:
+/* 802D57B0 0029ED70  48 00 02 10 */	b func_802D59C0
 /* 802D57B4 0029ED74  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802D57B8 0029ED78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802D57BC 0029ED7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */

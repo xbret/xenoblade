@@ -157,8 +157,8 @@ lbl_8031DE74:
 /* 8031DF18 002E74D8  4E 80 00 20 */	blr 
 /* 8031DF1C 002E74DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_8031DF20
-lbl_8031DF20:
+.global func_8031DF20
+func_8031DF20:
 /* 8031DF20 002E74E0  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 8031DF24 002E74E4  7C 08 02 A6 */	mflr r0
 /* 8031DF28 002E74E8  C8 22 BD 08 */	lfd f1, lbl_8066C088@sda21(r2)

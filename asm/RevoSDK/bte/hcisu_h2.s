@@ -5,7 +5,7 @@ lbl_802DCAA0:.include "macros.inc"
 /* 802DCAA0 002A6060  2C 03 00 04 */	cmpwi r3, 4
 /* 802DCAA4 002A6064  4C 82 00 20 */	bnelr 
 /* 802DCAA8 002A6068  7C 83 07 74 */	extsb r3, r4
-/* 802DCAAC 002A606C  48 00 17 14 */	b lbl_802DE1C0
+/* 802DCAAC 002A606C  48 00 17 14 */	b func_802DE1C0
 /* 802DCAB0 002A6070  4E 80 00 20 */	blr 
 /* 802DCAB4 002A6074  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802DCAB8 002A6078  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
@@ -389,8 +389,8 @@ lbl_802DCFF4:
 /* 802DD008 002A65C8  4E 80 00 20 */	blr 
 /* 802DD00C 002A65CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_802DD010
-lbl_802DD010:
+.global func_802DD010
+func_802DD010:
 /* 802DD010 002A65D0  3C C0 80 5C */	lis r6, lbl_805BBC20@ha
 /* 802DD014 002A65D4  38 00 00 00 */	li r0, 0
 /* 802DD018 002A65D8  38 C6 BC 20 */	addi r6, r6, lbl_805BBC20@l
@@ -404,8 +404,8 @@ lbl_802DD010:
 /* 802DD038 002A65F8  4E 80 00 20 */	blr 
 /* 802DD03C 002A65FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_802DD040
-lbl_802DD040:
+.global func_802DD040
+func_802DD040:
 /* 802DD040 002A6600  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DD044 002A6604  7C 08 02 A6 */	mflr r0
 /* 802DD048 002A6608  3C A0 80 5C */	lis r5, lbl_805BBC20@ha
@@ -435,8 +435,8 @@ lbl_802DD040:
 /* 802DD0A8 002A6668  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802DD0AC 002A666C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_802DD0B0
-lbl_802DD0B0:
+.global func_802DD0B0
+func_802DD0B0:
 /* 802DD0B0 002A6670  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD0B4 002A6674  7C 08 02 A6 */	mflr r0
 /* 802DD0B8 002A6678  3C 60 80 5C */	lis r3, lbl_805BBC20@ha
@@ -454,8 +454,8 @@ lbl_802DD0B0:
 /* 802DD0E8 002A66A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802DD0EC 002A66AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_802DD0F0
-lbl_802DD0F0:
+.global func_802DD0F0
+func_802DD0F0:
 /* 802DD0F0 002A66B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD0F4 002A66B4  7C 08 02 A6 */	mflr r0
 /* 802DD0F8 002A66B8  3C A0 80 5C */	lis r5, lbl_805BBC20@ha
@@ -468,8 +468,9 @@ lbl_802DD0F0:
 /* 802DD114 002A66D4  7C 08 03 A6 */	mtlr r0
 /* 802DD118 002A66D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD11C 002A66DC  4E 80 00 20 */	blr 
-.global lbl_802DD120
-lbl_802DD120:
+
+.global func_802DD120
+func_802DD120:
 /* 802DD120 002A66E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD124 002A66E4  7C 08 02 A6 */	mflr r0
 /* 802DD128 002A66E8  3C 80 80 5C */	lis r4, lbl_805BBC20@ha

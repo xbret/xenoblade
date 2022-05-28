@@ -11,8 +11,9 @@ func_804DB348:
 /* 804DB358 004A4918  98 03 00 0C */	stb r0, 0xc(r3)
 /* 804DB35C 004A491C  38 6D C1 58 */	addi r3, r13, lbl_806682D8@sda21
 /* 804DB360 004A4920  4E 80 00 20 */	blr 
-.global lbl_804DB364
-lbl_804DB364:
+
+.global func_804DB364
+func_804DB364:
 /* 804DB364 004A4924  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB368 004A4928  7C 08 02 A6 */	mflr r0
 /* 804DB36C 004A492C  90 01 00 14 */	stw r0, 0x14(r1)

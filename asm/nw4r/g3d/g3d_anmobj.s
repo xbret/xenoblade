@@ -2,13 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global lbl_803E73B0
-lbl_803E73B0:
+.global func_803E73B0
+func_803E73B0:
 /* 803E73B0 003B0970  FC 20 18 90 */	fmr f1, f3
 /* 803E73B4 003B0974  4E 80 00 20 */	blr
 
-.global lbl_803E73B8
-lbl_803E73B8:
+.global func_803E73B8
+func_803E73B8:
 /* 803E73B8 003B0978  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803E73BC 003B097C  7C 08 02 A6 */	mflr r0
 /* 803E73C0 003B0980  90 01 00 24 */	stw r0, 0x24(r1)
@@ -43,14 +43,14 @@ lbl_803E7410:
 .global func_803E7428
 func_803E7428:
 /* 803E7428 003B09E8  2C 05 00 00 */	cmpwi r5, 0
-/* 803E742C 003B09EC  41 82 00 14 */	beq lbl_803E7440
+/* 803E742C 003B09EC  41 82 00 14 */	beq func_803E7440
 /* 803E7430 003B09F0  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 803E7434 003B09F4  7C 00 23 78 */	or r0, r0, r4
 /* 803E7438 003B09F8  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803E743C 003B09FC  4E 80 00 20 */	blr
 
-.global lbl_803E7440
-lbl_803E7440:
+.global func_803E7440
+func_803E7440:
 /* 803E7440 003B0A00  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 803E7444 003B0A04  7C 00 20 78 */	andc r0, r0, r4
 /* 803E7448 003B0A08  90 03 00 0C */	stw r0, 0xc(r3)

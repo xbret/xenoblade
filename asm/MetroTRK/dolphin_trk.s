@@ -87,7 +87,7 @@ lbl_802CC024:
 
 .global EnableMetroTRKInterrupts
 EnableMetroTRKInterrupts:
-/* 802CC02C 002955EC  48 00 04 48 */	b lbl_802CC474
+/* 802CC02C 002955EC  48 00 04 48 */	b func_802CC474
 
 .global func_802CC030
 func_802CC030:
@@ -105,13 +105,13 @@ func_802CC030:
 lbl_802CC05C:
 /* 802CC05C 0029561C  3C 00 03 00 */	lis r0, 0x300
 /* 802CC060 00295620  7C 03 00 40 */	cmplw r3, r0
-/* 802CC064 00295624  40 80 00 10 */	bge lbl_802CC074
+/* 802CC064 00295624  40 80 00 10 */	bge func_802CC074
 /* 802CC068 00295628  54 60 00 BE */	clrlwi r0, r3, 2
 /* 802CC06C 0029562C  64 03 80 00 */	oris r3, r0, 0x8000
 /* 802CC070 00295630  4E 80 00 20 */	blr
 
-.global lbl_802CC074
-lbl_802CC074:
+.global func_802CC074
+func_802CC074:
 /* 802CC074 00295634  3C 00 10 00 */	lis r0, 0x1000
 /* 802CC078 00295638  7C 03 00 40 */	cmplw r3, r0
 /* 802CC07C 0029563C  4D 80 00 20 */	bltlr 

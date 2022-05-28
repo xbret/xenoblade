@@ -113,8 +113,8 @@ lbl_802969E8:
 /* 802969FC 0025FFBC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80296A00 0025FFC0  4E 80 00 20 */	blr
 
-.global lbl_80296A04
-lbl_80296A04:
+.global func_80296A04
+func_80296A04:
 /* 80296A04 0025FFC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80296A08 0025FFC8  7C 08 02 A6 */	mflr r0
 /* 80296A0C 0025FFCC  90 01 00 14 */	stw r0, 0x14(r1)

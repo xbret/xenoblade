@@ -546,8 +546,8 @@ lbl_80322A18:
 /* 80322A38 002EBFF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80322A3C 002EBFFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_80322A40
-lbl_80322A40:
+.global func_80322A40
+func_80322A40:
 /* 80322A40 002EC000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322A44 002EC004  7C 08 02 A6 */	mflr r0
 /* 80322A48 002EC008  90 01 00 14 */	stw r0, 0x14(r1)
@@ -817,7 +817,7 @@ lbl_80322DB0:
 
 .global func_80322DD0
 func_80322DD0:
-/* 80322DD0 002EC390  48 01 C5 30 */	b lbl_8033F300
+/* 80322DD0 002EC390  48 01 C5 30 */	b func_8033F300
 /* 80322DD4 002EC394  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80322DD8 002EC398  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80322DDC 002EC39C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */

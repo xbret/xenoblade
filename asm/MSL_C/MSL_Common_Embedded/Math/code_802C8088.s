@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global lbl_802C8088
-lbl_802C8088:
+.global func_802C8088
+func_802C8088:
 /* 802C8088 00291648  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802C808C 0029164C  7C 08 02 A6 */	mflr r0
 /* 802C8090 00291650  90 01 00 24 */	stw r0, 0x24(r1)

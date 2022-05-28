@@ -41,8 +41,8 @@ func_80310330:
 /* 80310348 002D9908  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8031034C 002D990C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_80310350
-lbl_80310350:
+.global func_80310350
+func_80310350:
 /* 80310350 002D9910  81 8D B7 08 */	lwz r12, lbl_80667888@sda21(r13)
 /* 80310354 002D9914  2C 0C 00 00 */	cmpwi r12, 0
 /* 80310358 002D9918  4D 82 00 20 */	beqlr 

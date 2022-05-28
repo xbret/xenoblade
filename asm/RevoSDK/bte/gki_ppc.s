@@ -237,7 +237,7 @@ lbl_802DCA7C:
 
 .global func_802DCA90
 func_802DCA90:
-/* 802DCA90 002A6050  48 09 91 B0 */	b lbl_80375C40
+/* 802DCA90 002A6050  48 09 91 B0 */	b func_80375C40
 /* 802DCA94 002A6054  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802DCA98 002A6058  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802DCA9C 002A605C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */

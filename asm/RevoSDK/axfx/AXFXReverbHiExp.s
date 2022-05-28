@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global lbl_802D57C0
-lbl_802D57C0:
+.global func_802D57C0
+func_802D57C0:
 /* 802D57C0 0029ED80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D57C4 0029ED84  7C 08 02 A6 */	mflr r0
 /* 802D57C8 0029ED88  90 01 00 24 */	stw r0, 0x24(r1)
@@ -140,8 +140,8 @@ func_802D5960:
 /* 802D59B8 0029EF78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 802D59BC 0029EF7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_802D59C0
-lbl_802D59C0:
+.global func_802D59C0
+func_802D59C0:
 /* 802D59C0 0029EF80  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802D59C4 0029EF84  7C 08 02 A6 */	mflr r0
 /* 802D59C8 0029EF88  90 01 00 74 */	stw r0, 0x74(r1)

@@ -163,8 +163,8 @@ lbl_8035E3EC:
 /* 8035E3F8 003279B8  4E 80 00 20 */	blr 
 /* 8035E3FC 003279BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global lbl_8035E400
-lbl_8035E400:
+.global func_8035E400
+func_8035E400:
 /* 8035E400 003279C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035E404 003279C4  7C 08 02 A6 */	mflr r0
 /* 8035E408 003279C8  2C 03 00 00 */	cmpwi r3, 0

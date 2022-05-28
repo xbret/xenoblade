@@ -14,8 +14,8 @@ func_8031F450:
 /* 8031F46C 002E8A2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
 
-.global lbl_8031F470
-lbl_8031F470:
+.global func_8031F470
+func_8031F470:
 /* 8031F470 002E8A30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031F474 002E8A34  7C 08 02 A6 */	mflr r0
 /* 8031F478 002E8A38  2C 03 00 00 */	cmpwi r3, 0

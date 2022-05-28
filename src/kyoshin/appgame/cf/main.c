@@ -63,7 +63,7 @@ void main(int argc, char* argv[]) {
     func_804559A8(0, 0x180000);
     func_80455FC8(lbl_80528380, 1);
     func_8045FBB0(lbl_80528390);
-    func_8046023C(&lbl_80039F6C, &lbl_80039F90);
+    func_8046023C(&func_80039F6C, &func_80039F90);
     SaveStaticArcFilenameString(&staticArcStr);
     func_804DDE2C(pkhFilenames);
     func_80057CDC();

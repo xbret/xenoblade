@@ -17300,15 +17300,15 @@ lbl_8066BF50:
 .global lbl_8066BF58
 lbl_8066BF58:
 	# ROM: 0x575DB8
-	.4byte lbl_802E1604
+	.4byte func_802E1604
 	.4byte 0
 
 
 .global lbl_8066BF60
 lbl_8066BF60:
 	# ROM: 0x575DC0
-	.4byte lbl_802E3F54
-	.4byte lbl_802E38B8
+	.4byte func_802E3F54
+	.4byte func_802E38B8
 
 
 .global lbl_8066BF68
@@ -17858,8 +17858,8 @@ lbl_8066C11C:
 .global lbl_8066C120
 lbl_8066C120:
 	# ROM: 0x575F80
-	.4byte lbl_80349A70
-	.4byte lbl_80349A80
+	.4byte func_80349A70
+	.4byte func_80349A80
 
 
 .global lbl_8066C128
