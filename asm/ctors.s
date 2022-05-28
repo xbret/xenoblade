@@ -63,7 +63,7 @@ lbl_804F5900:
 	.4byte ctor_802AAF24
 	.4byte ctor_802AEA88
 	.4byte ctor_802B46E0
-	.4byte ctor_8032C570
+	.4byte HBMBase_ctor
 	.4byte ctor_80332720
 	.4byte ctor_80332C70
 	.4byte ctor_80334120
