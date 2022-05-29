@@ -174,7 +174,7 @@ lbl_802B9F98:
 /* 802B9FB8 00283578  38 63 00 27 */	addi r3, r3, 0x27
 /* 802B9FBC 0028357C  38 81 00 08 */	addi r4, r1, 8
 /* 802B9FC0 00283580  38 A5 9F E0 */	addi r5, r5, std8bad_castFv$7__dt@l
-/* 802B9FC4 00283584  48 00 1B F9 */	bl func_802BBBBC
+/* 802B9FC4 00283584  48 00 1B F9 */	bl __throw
 lbl_802B9FC8:
 /* 802B9FC8 00283588  38 60 00 00 */	li r3, 0
 lbl_802B9FCC:

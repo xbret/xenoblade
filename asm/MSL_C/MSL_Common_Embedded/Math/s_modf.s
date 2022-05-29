@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802CAFC0
-func_802CAFC0:
+.global modf
+modf:
 /* 802CAFC0 00294580  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CAFC4 00294584  D8 21 00 08 */	stfd f1, 8(r1)
 /* 802CAFC8 00294588  80 A1 00 08 */	lwz r5, 8(r1)

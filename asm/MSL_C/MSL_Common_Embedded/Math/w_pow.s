@@ -4,4 +4,4 @@
 
 .global func_802CB218
 func_802CB218:
-/* 802CB218 002947D8  4B FF CF 84 */	b func_802C819C
+/* 802CB218 002947D8  4B FF CF 84 */	b __ieee754_pow

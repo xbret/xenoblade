@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802CB188
-func_802CB188:
+.global tan
+tan:
 /* 802CB188 00294748  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CB18C 0029474C  7C 08 02 A6 */	mflr r0
 /* 802CB190 00294750  3C 60 3F E9 */	lis r3, 0x3FE921FB@ha
@@ -26,7 +26,7 @@ lbl_802CB1C0:
 /* 802CB1D0 00294790  48 00 00 20 */	b lbl_802CB1F0
 lbl_802CB1D4:
 /* 802CB1D4 00294794  38 61 00 10 */	addi r3, r1, 0x10
-/* 802CB1D8 00294798  4B FF D7 D9 */	bl func_802C89B0
+/* 802CB1D8 00294798  4B FF D7 D9 */	bl __ieee754_rem_pio2
 /* 802CB1DC 0029479C  54 60 0F BC */	rlwinm r0, r3, 1, 0x1e, 0x1e
 /* 802CB1E0 002947A0  C8 21 00 10 */	lfd f1, 0x10(r1)
 /* 802CB1E4 002947A4  C8 41 00 18 */	lfd f2, 0x18(r1)

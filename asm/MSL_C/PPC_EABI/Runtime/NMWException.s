@@ -6,8 +6,8 @@
 std$7dthandler:
 /* 802B96FC 00282CBC  48 00 DA EC */	b func_802C71E8
 
-.global std$std$7terminate
-std$std$7terminate:
+.global std$7terminate
+std$7terminate:
 /* 802B9700 00282CC0  81 8D 96 E0 */	lwz r12, lbl_80665860@sda21(r13)
 /* 802B9704 00282CC4  7D 89 03 A6 */	mtctr r12
 /* 802B9708 00282CC8  4E 80 04 20 */	bctr 

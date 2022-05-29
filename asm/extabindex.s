@@ -19121,19 +19121,19 @@ lbl_80021020:
 	.4byte std8bad_castFv$7__dt
 	.4byte 0x00000040
 	.4byte lbl_8001BF38
-	.4byte func_802BA8F0
+	.4byte MWExceptionInfo$7ExPPC_FindExceptionRecord
 	.4byte 0x000001B0
 	.4byte lbl_8001BF40
-	.4byte func_802BAAA0
+	.4byte ActionIterator$7ExPPC_NextAction
 	.4byte 0x000001B0
 	.4byte lbl_8001BF48
-	.4byte func_802BAC50
+	.4byte ThrowContext$7ExPPC_PopStackFrame
 	.4byte 0x00000554
 	.4byte lbl_8001BF50
-	.4byte func_802BB1A4
+	.4byte ThrowContext$7ExPPC_UnwindStack
 	.4byte 0x0000050C
 	.4byte lbl_8001BF58
-	.4byte func_802BB7B4
+	.4byte ThrowContext$7ExPPC_ThrowHandler
 	.4byte 0x00000408
 	.4byte lbl_8001BF6C
 	.4byte func_80432678

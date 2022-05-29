@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802C7564
-func_802C7564:
+.global __ieee754_asin
+__ieee754_asin:
 /* 802C7564 00290B24  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802C7568 00290B28  7C 08 02 A6 */	mflr r0
 /* 802C756C 00290B2C  90 01 00 54 */	stw r0, 0x54(r1)

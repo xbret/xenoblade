@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802CAA3C
-func_802CAA3C:
+.global ceil
+ceil:
 /* 802CAA3C 00293FFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CAA40 00294000  D8 21 00 08 */	stfd f1, 8(r1)
 /* 802CAA44 00294004  80 A1 00 08 */	lwz r5, 8(r1)

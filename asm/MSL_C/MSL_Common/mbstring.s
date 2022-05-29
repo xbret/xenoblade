@@ -49,8 +49,8 @@ lbl_802BE584:
 /* 802BE58C 00287B4C  4E 80 00 20 */	blr 
 
 
-.global func_802BE590
-func_802BE590:
+.global mbstowc
+mbstowc:
 /* 802BE590 00287B50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BE594 00287B54  7C 08 02 A6 */	mflr r0
 /* 802BE598 00287B58  90 01 00 24 */	stw r0, 0x24(r1)

@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802CB21C
-func_802CB21C:
+.global __ieee754_sqrt
+__ieee754_sqrt:
 /* 802CB21C 002947DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CB220 002947E0  D8 21 00 08 */	stfd f1, 8(r1)
 /* 802CB224 002947E4  80 C1 00 08 */	lwz r6, 8(r1)

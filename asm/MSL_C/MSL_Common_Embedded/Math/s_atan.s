@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802CA80C
-func_802CA80C:
+.global atan
+atan:
 /* 802CA80C 00293DCC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CA810 00293DD0  3C A0 80 51 */	lis r5, lbl_8050DE10@ha
 /* 802CA814 00293DD4  3C 00 44 10 */	lis r0, 0x4410

@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802C8D34
-func_802C8D34:
+.global __kernel_cos
+__kernel_cos:
 /* 802C8D34 002922F4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802C8D38 002922F8  3C 00 3E 40 */	lis r0, 0x3e40
 /* 802C8D3C 002922FC  D8 21 00 08 */	stfd f1, 8(r1)

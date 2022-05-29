@@ -26,7 +26,7 @@ __init_cpp_exceptions_tmp: #__init_cpp_exceptions
 /* 802BA78C 00283D4C  3C 60 80 04 */	lis r3, lbl_80039200@ha
 /* 802BA790 00283D50  7C 44 13 78 */	mr r4, r2
 /* 802BA794 00283D54  38 63 92 00 */	addi r3, r3, lbl_80039200@l
-/* 802BA798 00283D58  48 00 00 4D */	bl func_802BA7E4
+/* 802BA798 00283D58  48 00 00 4D */	bl __register_fragment
 /* 802BA79C 00283D5C  90 6D 96 F0 */	stw r3, lbl_80665870@sda21(r13)
 lbl_802BA7A0:
 /* 802BA7A0 00283D60  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -46,7 +46,7 @@ __fini_cpp_exceptions_tmp: #__fini_cpp_exceptions
 /* 802BA7BC 00283D7C  80 6D 96 F0 */	lwz r3, lbl_80665870@sda21(r13)
 /* 802BA7C0 00283D80  2C 03 FF FE */	cmpwi r3, -2
 /* 802BA7C4 00283D84  41 82 00 10 */	beq lbl_802BA7D4
-/* 802BA7C8 00283D88  48 00 00 69 */	bl func_802BA830
+/* 802BA7C8 00283D88  48 00 00 69 */	bl __unregister_fragment
 /* 802BA7CC 00283D8C  38 00 FF FE */	li r0, -2
 /* 802BA7D0 00283D90  90 0D 96 F0 */	stw r0, lbl_80665870@sda21(r13)
 lbl_802BA7D4:

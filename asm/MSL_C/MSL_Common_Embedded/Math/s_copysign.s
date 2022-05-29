@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802CAB88
-func_802CAB88:
+.global copysign
+copysign:
 /* 802CAB88 00294148  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CAB8C 0029414C  D8 21 00 08 */	stfd f1, 8(r1)
 /* 802CAB90 00294150  D8 41 00 10 */	stfd f2, 0x10(r1)

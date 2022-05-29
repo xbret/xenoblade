@@ -7,7 +7,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8003A05C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8003AA00.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800539EC.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80059EB8.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfScript.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80069768.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8006A960.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80074F4C.o \
@@ -68,20 +68,22 @@ GAME_O_FILES :=\
 MW_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/memcpy.o \
 	$(BUILD_DIR)/asm/MetroTRK/mem_TRK.o \
-	$(BUILD_DIR)/asm/Runtime/__mem.o \
-	$(BUILD_DIR)/asm/Runtime/__exception.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/__mem.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/__exception.o \
 	$(BUILD_DIR)/asm/sbss.o \
-	$(BUILD_DIR)/src/Runtime/__start.o \
+	$(BUILD_DIR)/src/MSL_C/PPC_EABI/Runtime/__start.o \
 	$(BUILD_DIR)/asm/sbss_1.o \
-	$(BUILD_DIR)/asm/Runtime/strlen.o \
-	$(BUILD_DIR)/asm/Runtime/__va_arg.o \
-	$(BUILD_DIR)/asm/Runtime/global_destructor_chain.o \
-	$(BUILD_DIR)/asm/Runtime/NMWException.o \
-	$(BUILD_DIR)/asm/Runtime/ptmf.o \
-	$(BUILD_DIR)/asm/Runtime/MWRTTI.o \
-	$(BUILD_DIR)/asm/Runtime/runtime.o \
-	$(BUILD_DIR)/asm/Runtime/__init_cpp_exceptions.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common/code_802BA7E4.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/strlen.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/__va_arg.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/global_destructor_chain.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/NMWException.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/ptmf.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/MWRTTI.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/runtime.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/__init_cpp_exceptions.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/Gecko_ExceptionPPC.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/GCN_mem_alloc.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/alloc.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/ansi_files.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/ansi_fp.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/arith.o \
@@ -101,6 +103,8 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/strtold.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/strtoul.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/code_802C47D4.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/wmem.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/wprintf.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/wstring.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/wchar_io.o \
 	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/uart_console_io_gcn.o \
@@ -110,8 +114,8 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_asin.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_atan2.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_fmod.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/code_802C7DD4.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/code_802C8088.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_log.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_log10.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_pow.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_rem_pio2.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/k_cos.o \
@@ -119,21 +123,21 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/k_sin.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/k_tan.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_atan.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/code_802CAA3C.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_ceil.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_copysign.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_cos.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_floor.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_frexp.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_ldexp.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/code_802CAFC0.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_modf.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_sin.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_tan.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_acos.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_asin.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_atan2.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_fmod.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_func_802C7DD4.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_func_802C8088.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_log.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_log10.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_pow.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_sqrt.o \
 	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/math_ppc.o \
@@ -329,7 +333,7 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSStateFlags.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSNet.o \
 	$(BUILD_DIR)/asm/code/code_8035E1F0.o \
-	$(BUILD_DIR)/asm/Runtime/__ppc_eabi_init.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/__ppc_eabi_init.o \
 	$(BUILD_DIR)/asm/RevoSDK/pad/Pad.o \
 	$(BUILD_DIR)/asm/RevoSDK/sc/scsystem.o \
 	$(BUILD_DIR)/asm/RevoSDK/sc/scapi.o \

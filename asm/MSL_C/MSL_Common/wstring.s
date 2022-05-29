@@ -13,8 +13,8 @@ lbl_802C6FC4:
 /* 802C6FD0 00290590  40 82 FF F4 */	bne lbl_802C6FC4
 /* 802C6FD4 00290594  4E 80 00 20 */	blr 
 
-.global func_802C6FD8
-func_802C6FD8:
+.global wcscpy
+wcscpy:
 /* 802C6FD8 00290598  38 84 FF FE */	addi r4, r4, -2
 /* 802C6FDC 0029059C  38 A3 FF FE */	addi r5, r3, -2
 lbl_802C6FE0:
@@ -66,8 +66,8 @@ lbl_802C7054:
 /* 802C7064 00290624  7C 60 18 50 */	subf r3, r0, r3
 /* 802C7068 00290628  4E 80 00 20 */	blr 
 
-.global func_802C706C
-func_802C706C:
+.global wcschr
+wcschr:
 /* 802C706C 0029062C  38 63 FF FE */	addi r3, r3, -2
 /* 802C7070 00290630  48 00 00 0C */	b lbl_802C707C
 lbl_802C7074:

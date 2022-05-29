@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802C89B0
-func_802C89B0:
+.global __ieee754_rem_pio2
+__ieee754_rem_pio2:
 /* 802C89B0 00291F70  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802C89B4 00291F74  7C 08 02 A6 */	mflr r0
 /* 802C89B8 00291F78  3C 80 3F E9 */	lis r4, 0x3FE921FB@ha
@@ -227,7 +227,7 @@ lbl_802C8CD4:
 /* 802C8CE8 002922A8  38 61 00 18 */	addi r3, r1, 0x18
 /* 802C8CEC 002922AC  38 E0 00 02 */	li r7, 2
 /* 802C8CF0 002922B0  39 08 DB D0 */	addi r8, r8, lbl_8050DBD0@l
-/* 802C8CF4 002922B4  48 00 01 51 */	bl func_802C8E44
+/* 802C8CF4 002922B4  48 00 01 51 */	bl __kernel_rem_pio2
 /* 802C8CF8 002922B8  2C 1F 00 00 */	cmpwi r31, 0
 /* 802C8CFC 002922BC  40 80 00 20 */	bge lbl_802C8D1C
 /* 802C8D00 002922C0  C8 3E 00 00 */	lfd f1, 0(r30)

@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802C7DD4
-func_802C7DD4:
+.global __ieee754_log
+__ieee754_log:
 /* 802C7DD4 00291394  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802C7DD8 00291398  3C 00 00 10 */	lis r0, 0x10
 /* 802C7DDC 0029139C  38 E0 00 00 */	li r7, 0

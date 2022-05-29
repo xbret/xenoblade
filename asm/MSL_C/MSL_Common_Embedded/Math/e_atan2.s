@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802C77FC
-func_802C77FC:
+.global __ieee754_atan2
+__ieee754_atan2:
 /* 802C77FC 00290DBC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802C7800 00290DC0  7C 08 02 A6 */	mflr r0
 /* 802C7804 00290DC4  3C 60 7F F0 */	lis r3, 0x7ff0
@@ -36,7 +36,7 @@ lbl_802C7868:
 /* 802C7868 00290E28  3C 04 C0 10 */	addis r0, r4, 0xc010
 /* 802C786C 00290E2C  7C 00 43 79 */	or. r0, r0, r8
 /* 802C7870 00290E30  40 82 00 0C */	bne lbl_802C787C
-/* 802C7874 00290E34  48 00 2F 99 */	bl func_802CA80C
+/* 802C7874 00290E34  48 00 2F 99 */	bl atan
 /* 802C7878 00290E38  48 00 01 C8 */	b lbl_802C7A40
 lbl_802C787C:
 /* 802C787C 00290E3C  7C E0 4B 79 */	or. r0, r7, r9
@@ -147,7 +147,7 @@ lbl_802C79BC:
 lbl_802C79D8:
 /* 802C79D8 00290F98  FC 01 10 24 */	fdiv f0, f1, f2
 /* 802C79DC 00290F9C  FC 20 02 10 */	fabs f1, f0
-/* 802C79E0 00290FA0  48 00 2E 2D */	bl func_802CA80C
+/* 802C79E0 00290FA0  48 00 2E 2D */	bl atan
 /* 802C79E4 00290FA4  D8 21 00 18 */	stfd f1, 0x18(r1)
 lbl_802C79E8:
 /* 802C79E8 00290FA8  2C 1F 00 00 */	cmpwi r31, 0

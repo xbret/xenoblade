@@ -1,4 +1,4 @@
-#include "Runtime/__start.h"
+#include "MSL_C/PPC_EABI/Runtime/__start.h"
 
 #pragma section code_type ".init"
 

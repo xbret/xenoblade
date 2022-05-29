@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802CAC7C
-func_802CAC7C:
+.global floor
+floor:
 /* 802CAC7C 0029423C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CAC80 00294240  D8 21 00 08 */	stfd f1, 8(r1)
 /* 802CAC84 00294244  80 A1 00 08 */	lwz r5, 8(r1)

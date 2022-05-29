@@ -1488,6 +1488,7 @@ lbl_804F7094:
 	.asciz "areaZ"
 	.asciz "rotY"
 	.2byte 0x0000
+	
 .global lbl_804F71C8
 lbl_804F71C8:
 	.asciz "cf::CtrlEnemy"
@@ -16631,6 +16632,7 @@ lbl_8050D988:
 	.4byte 0x00FA00FB
 	.4byte 0x00FC00FD
 	.4byte 0x00FE00FF
+	
 .global lbl_8050DB88
 lbl_8050DB88:
 	.4byte 0
