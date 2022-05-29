@@ -48,9 +48,8 @@ lbl_80362A74:
 /* 80362A7C 0032C03C  7C 08 03 A6 */	mtlr r0
 /* 80362A80 0032C040  38 21 00 80 */	addi r1, r1, 0x80
 /* 80362A84 0032C044  4E 80 00 20 */	blr 
-/* 80362A88 0032C048  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80362A8C 0032C04C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global USB_ERR
 USB_ERR:
 /* 80362A90 0032C050  94 21 FF 80 */	stwu r1, -0x80(r1)
@@ -98,8 +97,8 @@ lbl_80362B28:
 /* 80362B30 0032C0F0  7C 08 03 A6 */	mtlr r0
 /* 80362B34 0032C0F4  38 21 00 80 */	addi r1, r1, 0x80
 /* 80362B38 0032C0F8  4E 80 00 20 */	blr 
-/* 80362B3C 0032C0FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global IUSB_OpenLib
 IUSB_OpenLib:
 /* 80362B40 0032C100  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -168,15 +167,13 @@ lbl_80362C10:
 /* 80362C2C 0032C1EC  7C 08 03 A6 */	mtlr r0
 /* 80362C30 0032C1F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80362C34 0032C1F4  4E 80 00 20 */	blr 
-/* 80362C38 0032C1F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80362C3C 0032C1FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global IUSB_CloseLib
 IUSB_CloseLib:
 /* 80362C40 0032C200  38 60 00 00 */	li r3, 0
 /* 80362C44 0032C204  4E 80 00 20 */	blr 
-/* 80362C48 0032C208  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80362C4C 0032C20C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 
 
 
@@ -292,8 +289,8 @@ lbl_80362DD0:
 /* 80362DE0 0032C3A0  7C 08 03 A6 */	mtlr r0
 /* 80362DE4 0032C3A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80362DE8 0032C3A8  4E 80 00 20 */	blr 
-/* 80362DEC 0032C3AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global IUSB_OpenDeviceIds
 IUSB_OpenDeviceIds:
 /* 80362DF0 0032C3B0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -382,10 +379,8 @@ lbl_80362F18:
 /* 80362F28 0032C4E8  7C 08 03 A6 */	mtlr r0
 /* 80362F2C 0032C4EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80362F30 0032C4F0  4E 80 00 20 */	blr 
-/* 80362F34 0032C4F4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80362F38 0032C4F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80362F3C 0032C4FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global IUSB_CloseDeviceAsync
 IUSB_CloseDeviceAsync:
 /* 80362F40 0032C500  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -464,10 +459,8 @@ lbl_80363048:
 /* 80363058 0032C618  7C 08 03 A6 */	mtlr r0
 /* 8036305C 0032C61C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80363060 0032C620  4E 80 00 20 */	blr 
-/* 80363064 0032C624  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80363068 0032C628  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036306C 0032C62C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80363070
 func_80363070:
 /* 80363070 0032C630  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -696,10 +689,8 @@ lbl_803633A8:
 /* 803633B8 0032C978  7C 08 03 A6 */	mtlr r0
 /* 803633BC 0032C97C  38 21 00 40 */	addi r1, r1, 0x40
 /* 803633C0 0032C980  4E 80 00 20 */	blr 
-/* 803633C4 0032C984  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803633C8 0032C988  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803633CC 0032C98C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __IntrBlkMsgInt
 __IntrBlkMsgInt:
 /* 803633D0 0032C990  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -929,9 +920,8 @@ lbl_8036370C:
 /* 8036371C 0032CCDC  7C 08 03 A6 */	mtlr r0
 /* 80363720 0032CCE0  38 21 00 40 */	addi r1, r1, 0x40
 /* 80363724 0032CCE4  4E 80 00 20 */	blr 
-/* 80363728 0032CCE8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036372C 0032CCEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global IUSB_ReadIntrMsgAsync
 IUSB_ReadIntrMsgAsync:
 /* 80363730 0032CCF0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -963,10 +953,8 @@ IUSB_ReadIntrMsgAsync:
 /* 80363798 0032CD58  7C 08 03 A6 */	mtlr r0
 /* 8036379C 0032CD5C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803637A0 0032CD60  4E 80 00 20 */	blr 
-/* 803637A4 0032CD64  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803637A8 0032CD68  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803637AC 0032CD6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global IUSB_ReadBlkMsgAsync
 IUSB_ReadBlkMsgAsync:
 /* 803637B0 0032CD70  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1443,10 +1431,8 @@ lbl_80363E78:
 /* 80363E88 0032D448  7C 08 03 A6 */	mtlr r0
 /* 80363E8C 0032D44C  38 21 00 50 */	addi r1, r1, 0x50
 /* 80363E90 0032D450  4E 80 00 20 */	blr 
-/* 80363E94 0032D454  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80363E98 0032D458  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80363E9C 0032D45C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global IUSB_WriteCtrlMsgAsync
 IUSB_WriteCtrlMsgAsync:
 /* 80363EA0 0032D460  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1484,4 +1470,4 @@ IUSB_WriteCtrlMsgAsync:
 /* 80363F20 0032D4E0  7C 08 03 A6 */	mtlr r0
 /* 80363F24 0032D4E4  38 21 00 40 */	addi r1, r1, 0x40
 /* 80363F28 0032D4E8  4E 80 00 20 */	blr 
-/* 80363F2C 0032D4EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

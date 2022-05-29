@@ -11,9 +11,8 @@ func_8031F450:
 /* 8031F460 002E8A20  90 03 00 20 */	stw r0, 0x20(r3)
 /* 8031F464 002E8A24  90 03 00 24 */	stw r0, 0x24(r3)
 /* 8031F468 002E8A28  4E 80 00 20 */	blr 
-/* 8031F46C 002E8A2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-
+.balign 16, 0
 .global func_8031F470
 func_8031F470:
 /* 8031F470 002E8A30  94 21 FF F0 */	stwu r1, -0x10(r1)

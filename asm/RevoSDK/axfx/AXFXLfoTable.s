@@ -7,4 +7,4 @@ func_802DAAD0:
 /* 802DAAD0 002A4090  3C 60 80 54 */	lis r3, lbl_805433E0@ha
 /* 802DAAD4 002A4094  38 63 33 E0 */	addi r3, r3, lbl_805433E0@l
 /* 802DAAD8 002A4098  4E 80 00 20 */	blr 
-/* 802DAADC 002A409C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

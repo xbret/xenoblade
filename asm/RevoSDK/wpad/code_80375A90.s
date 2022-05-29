@@ -15,8 +15,8 @@ func_80375A90:
 /* 80375AB0 0033F070  90 03 09 A4 */	stw r0, 0x9a4(r3)
 /* 80375AB4 0033F074  90 03 09 A8 */	stw r0, 0x9a8(r3)
 /* 80375AB8 0033F078  4E 80 00 20 */	blr 
-/* 80375ABC 0033F07C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80375AC0
 func_80375AC0:
 /* 80375AC0 0033F080  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -73,4 +73,4 @@ lbl_80375B70:
 /* 80375B80 0033F140  7C 08 03 A6 */	mtlr r0
 /* 80375B84 0033F144  38 21 00 30 */	addi r1, r1, 0x30
 /* 80375B88 0033F148  4E 80 00 20 */	blr 
-/* 80375B8C 0033F14C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

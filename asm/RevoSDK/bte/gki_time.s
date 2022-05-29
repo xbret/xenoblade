@@ -51,8 +51,8 @@ func_802DC200:
 /* 802DC2B0 002A5870  90 03 88 BC */	stw r0, -0x7744(r3)
 /* 802DC2B4 002A5874  90 03 88 DC */	stw r0, -0x7724(r3)
 /* 802DC2B8 002A5878  4E 80 00 20 */	blr 
-/* 802DC2BC 002A587C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_802DC2C0
 func_802DC2C0:
 /* 802DC2C0 002A5880  3C 60 80 59 */	lis r3, lbl_80593140@ha
@@ -60,10 +60,8 @@ func_802DC2C0:
 /* 802DC2C8 002A5888  3C 63 00 03 */	addis r3, r3, 3
 /* 802DC2CC 002A588C  80 63 88 28 */	lwz r3, -0x77d8(r3)
 /* 802DC2D0 002A5890  4E 80 00 20 */	blr 
-/* 802DC2D4 002A5894  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DC2D8 002A5898  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DC2DC 002A589C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_802DC2E0
 func_802DC2E0:
 /* 802DC2E0 002A58A0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -157,8 +155,8 @@ lbl_802DC410:
 /* 802DC420 002A59E0  7C 08 03 A6 */	mtlr r0
 /* 802DC424 002A59E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DC428 002A59E8  4E 80 00 20 */	blr 
-/* 802DC42C 002A59EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_802DC430
 func_802DC430:
 /* 802DC430 002A59F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -197,10 +195,8 @@ lbl_802DC4A0:
 /* 802DC4A8 002A5A68  7C 08 03 A6 */	mtlr r0
 /* 802DC4AC 002A5A6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DC4B0 002A5A70  4E 80 00 20 */	blr 
-/* 802DC4B4 002A5A74  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DC4B8 002A5A78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DC4BC 002A5A7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_802DC4C0
 func_802DC4C0:
 /* 802DC4C0 002A5A80  38 00 00 00 */	li r0, 0
@@ -208,10 +204,8 @@ func_802DC4C0:
 /* 802DC4C8 002A5A88  90 03 00 04 */	stw r0, 4(r3)
 /* 802DC4CC 002A5A8C  90 03 00 08 */	stw r0, 8(r3)
 /* 802DC4D0 002A5A90  4E 80 00 20 */	blr 
-/* 802DC4D4 002A5A94  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DC4D8 002A5A98  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DC4DC 002A5A9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_802DC4E0
 func_802DC4E0:
 /* 802DC4E0 002A5AA0  80 C3 00 00 */	lwz r6, 0(r3)
@@ -330,8 +324,8 @@ lbl_802DC650:
 /* 802DC650 002A5C10  38 00 00 01 */	li r0, 1
 /* 802DC654 002A5C14  98 04 00 16 */	stb r0, 0x16(r4)
 /* 802DC658 002A5C18  4E 80 00 20 */	blr 
-/* 802DC65C 002A5C1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_802DC660
 func_802DC660:
 /* 802DC660 002A5C20  2C 04 00 00 */	cmpwi r4, 0
@@ -421,6 +415,4 @@ func_802DC768:
 /* 802DC778 002A5D38  90 04 00 0C */	stw r0, 0xc(r4)
 /* 802DC77C 002A5D3C  98 64 00 16 */	stb r3, 0x16(r4)
 /* 802DC780 002A5D40  4E 80 00 20 */	blr 
-/* 802DC784 002A5D44  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DC788 002A5D48  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DC78C 002A5D4C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

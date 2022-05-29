@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802DDEE0
-func_802DDEE0:
+.global LogMsg
+LogMsg:
 /* 802DDEE0 002A74A0  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 802DDEE4 002A74A4  7C 08 02 A6 */	mflr r0
 /* 802DDEE8 002A74A8  90 01 00 84 */	stw r0, 0x84(r1)
@@ -50,83 +50,74 @@ lbl_802DDF14:
 /* 802DDF88 002A7548  7C 08 03 A6 */	mtlr r0
 /* 802DDF8C 002A754C  38 21 00 80 */	addi r1, r1, 0x80
 /* 802DDF90 002A7550  4E 80 00 20 */	blr 
-/* 802DDF94 002A7554  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DDF98 002A7558  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DDF9C 002A755C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802DDFA0
-func_802DDFA0:
+.balign 16, 0
+.global LogMsg_0
+LogMsg_0:
 /* 802DDFA0 002A7560  88 0D B5 E8 */	lbz r0, lbl_80667768@sda21(r13)
 /* 802DDFA4 002A7564  2C 00 00 00 */	cmpwi r0, 0
 /* 802DDFA8 002A7568  4C 82 00 20 */	bnelr 
 /* 802DDFAC 002A756C  4C C6 31 82 */	crclr 6
-/* 802DDFB0 002A7570  4B FF FF 30 */	b func_802DDEE0
+/* 802DDFB0 002A7570  4B FF FF 30 */	b LogMsg
 /* 802DDFB4 002A7574  4E 80 00 20 */	blr 
-/* 802DDFB8 002A7578  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DDFBC 002A757C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802DDFC0
-func_802DDFC0:
+.balign 16, 0
+.global LogMsg_1
+LogMsg_1:
 /* 802DDFC0 002A7580  88 0D B5 E8 */	lbz r0, lbl_80667768@sda21(r13)
 /* 802DDFC4 002A7584  2C 00 00 00 */	cmpwi r0, 0
 /* 802DDFC8 002A7588  4C 82 00 20 */	bnelr 
 /* 802DDFCC 002A758C  4C C6 31 82 */	crclr 6
-/* 802DDFD0 002A7590  4B FF FF 10 */	b func_802DDEE0
+/* 802DDFD0 002A7590  4B FF FF 10 */	b LogMsg
 /* 802DDFD4 002A7594  4E 80 00 20 */	blr 
-/* 802DDFD8 002A7598  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DDFDC 002A759C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802DDFE0
-func_802DDFE0:
+.balign 16, 0
+.global LogMsg_2
+LogMsg_2:
 /* 802DDFE0 002A75A0  88 0D B5 E8 */	lbz r0, lbl_80667768@sda21(r13)
 /* 802DDFE4 002A75A4  2C 00 00 00 */	cmpwi r0, 0
 /* 802DDFE8 002A75A8  4C 82 00 20 */	bnelr 
 /* 802DDFEC 002A75AC  4C C6 31 82 */	crclr 6
-/* 802DDFF0 002A75B0  4B FF FE F0 */	b func_802DDEE0
+/* 802DDFF0 002A75B0  4B FF FE F0 */	b LogMsg
 /* 802DDFF4 002A75B4  4E 80 00 20 */	blr 
-/* 802DDFF8 002A75B8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DDFFC 002A75BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802DE000
-func_802DE000:
+.balign 16, 0
+.global LogMsg_3
+LogMsg_3:
 /* 802DE000 002A75C0  88 0D B5 E8 */	lbz r0, lbl_80667768@sda21(r13)
 /* 802DE004 002A75C4  2C 00 00 00 */	cmpwi r0, 0
 /* 802DE008 002A75C8  4C 82 00 20 */	bnelr 
 /* 802DE00C 002A75CC  4C C6 31 82 */	crclr 6
-/* 802DE010 002A75D0  4B FF FE D0 */	b func_802DDEE0
+/* 802DE010 002A75D0  4B FF FE D0 */	b LogMsg
 /* 802DE014 002A75D4  4E 80 00 20 */	blr 
-/* 802DE018 002A75D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DE01C 002A75DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802DE020
-func_802DE020:
+.balign 16, 0
+.global LogMsg_4
+LogMsg_4:
 /* 802DE020 002A75E0  88 0D B5 E8 */	lbz r0, lbl_80667768@sda21(r13)
 /* 802DE024 002A75E4  2C 00 00 00 */	cmpwi r0, 0
 /* 802DE028 002A75E8  4C 82 00 20 */	bnelr 
 /* 802DE02C 002A75EC  4C C6 31 82 */	crclr 6
-/* 802DE030 002A75F0  4B FF FE B0 */	b func_802DDEE0
+/* 802DE030 002A75F0  4B FF FE B0 */	b LogMsg
 /* 802DE034 002A75F4  4E 80 00 20 */	blr 
-/* 802DE038 002A75F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DE03C 002A75FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802DE040
-func_802DE040:
+.balign 16, 0
+.global LogMsg_5
+LogMsg_5:
 /* 802DE040 002A7600  88 0D B5 E8 */	lbz r0, lbl_80667768@sda21(r13)
 /* 802DE044 002A7604  2C 00 00 00 */	cmpwi r0, 0
 /* 802DE048 002A7608  4C 82 00 20 */	bnelr 
 /* 802DE04C 002A760C  4C C6 31 82 */	crclr 6
-/* 802DE050 002A7610  4B FF FE 90 */	b func_802DDEE0
+/* 802DE050 002A7610  4B FF FE 90 */	b LogMsg
 /* 802DE054 002A7614  4E 80 00 20 */	blr 
-/* 802DE058 002A7618  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DE05C 002A761C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802DE060
-func_802DE060:
+.balign 16, 0
+.global LogMsg_6
+LogMsg_6:
 /* 802DE060 002A7620  88 0D B5 E8 */	lbz r0, lbl_80667768@sda21(r13)
 /* 802DE064 002A7624  2C 00 00 00 */	cmpwi r0, 0
 /* 802DE068 002A7628  4C 82 00 20 */	bnelr 
 /* 802DE06C 002A762C  4C C6 31 82 */	crclr 6
-/* 802DE070 002A7630  4B FF FE 70 */	b func_802DDEE0
+/* 802DE070 002A7630  4B FF FE 70 */	b LogMsg
 /* 802DE074 002A7634  4E 80 00 20 */	blr 
-/* 802DE078 002A7638  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DE07C 002A763C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

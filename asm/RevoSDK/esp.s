@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80313750
-func_80313750:
+.global ESP_InitLib
+ESP_InitLib:
 /* 80313750 002DCD10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80313754 002DCD14  7C 08 02 A6 */	mflr r0
 /* 80313758 002DCD18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -26,12 +26,10 @@ lbl_8031378C:
 /* 80313798 002DCD58  7C 08 03 A6 */	mtlr r0
 /* 8031379C 002DCD5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803137A0 002DCD60  4E 80 00 20 */	blr 
-/* 803137A4 002DCD64  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803137A8 002DCD68  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803137AC 002DCD6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803137B0
-func_803137B0:
+.balign 16, 0
+.global ESP_CloseLib
+ESP_CloseLib:
 /* 803137B0 002DCD70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803137B4 002DCD74  7C 08 02 A6 */	mflr r0
 /* 803137B8 002DCD78  38 80 00 00 */	li r4, 0
@@ -51,11 +49,10 @@ lbl_803137E4:
 /* 803137EC 002DCDAC  7C 08 03 A6 */	mtlr r0
 /* 803137F0 002DCDB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803137F4 002DCDB4  4E 80 00 20 */	blr 
-/* 803137F8 002DCDB8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803137FC 002DCDBC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80313800
-func_80313800:
+.balign 16, 0
+.global ESP_LaunchTitle
+ESP_LaunchTitle:
 /* 80313800 002DCDC0  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 80313804 002DCDC4  7C 2C 0B 78 */	mr r12, r1
 /* 80313808 002DCDC8  21 6B FE E0 */	subfic r11, r11, -288
@@ -96,12 +93,10 @@ lbl_80313880:
 /* 80313888 002DCE48  7C 08 03 A6 */	mtlr r0
 /* 8031388C 002DCE4C  7D 41 53 78 */	mr r1, r10
 /* 80313890 002DCE50  4E 80 00 20 */	blr 
-/* 80313894 002DCE54  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80313898 002DCE58  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031389C 002DCE5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803138A0
-func_803138A0:
+.balign 16, 0
+.global ESP_GetTicketViews
+ESP_GetTicketViews:
 /* 803138A0 002DCE60  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 803138A4 002DCE64  7C 2C 0B 78 */	mr r12, r1
 /* 803138A8 002DCE68  21 6B FE C0 */	subfic r11, r11, -320
@@ -177,12 +172,10 @@ lbl_8031399C:
 /* 803139A8 002DCF68  7C 08 03 A6 */	mtlr r0
 /* 803139AC 002DCF6C  7D 41 53 78 */	mr r1, r10
 /* 803139B0 002DCF70  4E 80 00 20 */	blr 
-/* 803139B4 002DCF74  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803139B8 002DCF78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803139BC 002DCF7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803139C0
-func_803139C0:
+.balign 16, 0
+.global ESP_DiGetTicketView
+ESP_DiGetTicketView:
 /* 803139C0 002DCF80  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 803139C4 002DCF84  7C 2C 0B 78 */	mr r12, r1
 /* 803139C8 002DCF88  21 6B FE E0 */	subfic r11, r11, -288
@@ -231,10 +224,8 @@ lbl_80313A50:
 /* 80313A58 002DD018  7C 08 03 A6 */	mtlr r0
 /* 80313A5C 002DD01C  7D 41 53 78 */	mr r1, r10
 /* 80313A60 002DD020  4E 80 00 20 */	blr 
-/* 80313A64 002DD024  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80313A68 002DD028  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80313A6C 002DD02C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80313A70
 func_80313A70:
 /* 80313A70 002DD030  54 2B 06 FE */	clrlwi r11, r1, 0x1b
@@ -302,8 +293,8 @@ lbl_80313B44:
 /* 80313B50 002DD110  7C 08 03 A6 */	mtlr r0
 /* 80313B54 002DD114  7D 41 53 78 */	mr r1, r10
 /* 80313B58 002DD118  4E 80 00 20 */	blr 
-/* 80313B5C 002DD11C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80313B60
 func_80313B60:
 /* 80313B60 002DD120  54 2B 06 FE */	clrlwi r11, r1, 0x1b
@@ -348,9 +339,8 @@ lbl_80313BE4:
 /* 80313BEC 002DD1AC  7C 08 03 A6 */	mtlr r0
 /* 80313BF0 002DD1B0  7D 41 53 78 */	mr r1, r10
 /* 80313BF4 002DD1B4  4E 80 00 20 */	blr 
-/* 80313BF8 002DD1B8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80313BFC 002DD1BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80313C00
 func_80313C00:
 /* 80313C00 002DD1C0  54 2B 06 FE */	clrlwi r11, r1, 0x1b
@@ -394,9 +384,8 @@ lbl_80313C80:
 /* 80313C8C 002DD24C  7C 08 03 A6 */	mtlr r0
 /* 80313C90 002DD250  7D 41 53 78 */	mr r1, r10
 /* 80313C94 002DD254  4E 80 00 20 */	blr 
-/* 80313C98 002DD258  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80313C9C 002DD25C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80313CA0
 func_80313CA0:
 /* 80313CA0 002DD260  54 2B 06 FE */	clrlwi r11, r1, 0x1b

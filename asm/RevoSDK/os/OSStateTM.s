@@ -19,8 +19,8 @@ OSSetResetCallback:
 /* 8035D050 00326610  93 ED B9 7C */	stw r31, lbl_80667AFC@sda21(r13)
 /* 8035D054 00326614  48 00 00 10 */	b lbl_8035D064
 lbl_8035D058:
-/* 8035D058 00326618  3C 60 80 36 */	lis r3, func_8035D5B0@ha
-/* 8035D05C 0032661C  38 63 D5 B0 */	addi r3, r3, func_8035D5B0@l
+/* 8035D058 00326618  3C 60 80 36 */	lis r3, __OSDefaultResetCallback@ha
+/* 8035D05C 0032661C  38 63 D5 B0 */	addi r3, r3, __OSDefaultResetCallback@l
 /* 8035D060 00326620  90 6D B9 7C */	stw r3, lbl_80667AFC@sda21(r13)
 lbl_8035D064:
 /* 8035D064 00326624  80 0D B9 70 */	lwz r0, lbl_80667AF0@sda21(r13)
@@ -30,11 +30,11 @@ lbl_8035D064:
 /* 8035D074 00326634  7C 7F 1B 78 */	mr r31, r3
 /* 8035D078 00326638  3C A0 80 5D */	lis r5, lbl_805D5160@ha
 /* 8035D07C 0032663C  3C E0 80 5D */	lis r7, lbl_805D5180@ha
-/* 8035D080 00326640  3D 20 80 36 */	lis r9, lbl_8035D5D0@ha
+/* 8035D080 00326640  3D 20 80 36 */	lis r9, __OSStateEventHandler@ha
 /* 8035D084 00326644  80 6D B9 6C */	lwz r3, lbl_80667AEC@sda21(r13)
 /* 8035D088 00326648  38 A5 51 60 */	addi r5, r5, lbl_805D5160@l
 /* 8035D08C 0032664C  38 E7 51 80 */	addi r7, r7, lbl_805D5180@l
-/* 8035D090 00326650  39 29 D5 D0 */	addi r9, r9, lbl_8035D5D0@l
+/* 8035D090 00326650  39 29 D5 D0 */	addi r9, r9, __OSStateEventHandler@l
 /* 8035D094 00326654  38 80 10 00 */	li r4, 0x1000
 /* 8035D098 00326658  38 C0 00 20 */	li r6, 0x20
 /* 8035D09C 0032665C  39 00 00 20 */	li r8, 0x20
@@ -54,8 +54,8 @@ lbl_8035D0C4:
 lbl_8035D0CC:
 /* 8035D0CC 0032668C  7F C3 F3 78 */	mr r3, r30
 /* 8035D0D0 00326690  4B FF B9 21 */	bl OSRestoreInterrupts
-/* 8035D0D4 00326694  3C 60 80 36 */	lis r3, func_8035D5B0@ha
-/* 8035D0D8 00326698  38 63 D5 B0 */	addi r3, r3, func_8035D5B0@l
+/* 8035D0D4 00326694  3C 60 80 36 */	lis r3, __OSDefaultResetCallback@ha
+/* 8035D0D8 00326698  38 63 D5 B0 */	addi r3, r3, __OSDefaultResetCallback@l
 /* 8035D0DC 0032669C  7C 1D 18 40 */	cmplw r29, r3
 /* 8035D0E0 003266A0  40 82 00 0C */	bne lbl_8035D0EC
 /* 8035D0E4 003266A4  38 60 00 00 */	li r3, 0
@@ -70,10 +70,10 @@ lbl_8035D0F0:
 /* 8035D100 003266C0  7C 08 03 A6 */	mtlr r0
 /* 8035D104 003266C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035D108 003266C8  4E 80 00 20 */	blr 
-/* 8035D10C 003266CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035D110
-func_8035D110:
+.balign 16, 0
+.global OSSetPowerCallback
+OSSetPowerCallback:
 /* 8035D110 003266D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035D114 003266D4  7C 08 02 A6 */	mflr r0
 /* 8035D118 003266D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -89,8 +89,8 @@ func_8035D110:
 /* 8035D140 00326700  93 ED B9 78 */	stw r31, lbl_80667AF8@sda21(r13)
 /* 8035D144 00326704  48 00 00 10 */	b lbl_8035D154
 lbl_8035D148:
-/* 8035D148 00326708  3C 60 80 36 */	lis r3, lbl_8035D5C0@ha
-/* 8035D14C 0032670C  38 63 D5 C0 */	addi r3, r3, lbl_8035D5C0@l
+/* 8035D148 00326708  3C 60 80 36 */	lis r3, __OSDefaultPowerCallback@ha
+/* 8035D14C 0032670C  38 63 D5 C0 */	addi r3, r3, __OSDefaultPowerCallback@l
 /* 8035D150 00326710  90 6D B9 78 */	stw r3, lbl_80667AF8@sda21(r13)
 lbl_8035D154:
 /* 8035D154 00326714  80 0D B9 70 */	lwz r0, lbl_80667AF0@sda21(r13)
@@ -100,11 +100,11 @@ lbl_8035D154:
 /* 8035D164 00326724  7C 7F 1B 78 */	mr r31, r3
 /* 8035D168 00326728  3C A0 80 5D */	lis r5, lbl_805D5160@ha
 /* 8035D16C 0032672C  3C E0 80 5D */	lis r7, lbl_805D5180@ha
-/* 8035D170 00326730  3D 20 80 36 */	lis r9, lbl_8035D5D0@ha
+/* 8035D170 00326730  3D 20 80 36 */	lis r9, __OSStateEventHandler@ha
 /* 8035D174 00326734  80 6D B9 6C */	lwz r3, lbl_80667AEC@sda21(r13)
 /* 8035D178 00326738  38 A5 51 60 */	addi r5, r5, lbl_805D5160@l
 /* 8035D17C 0032673C  38 E7 51 80 */	addi r7, r7, lbl_805D5180@l
-/* 8035D180 00326740  39 29 D5 D0 */	addi r9, r9, lbl_8035D5D0@l
+/* 8035D180 00326740  39 29 D5 D0 */	addi r9, r9, __OSStateEventHandler@l
 /* 8035D184 00326744  38 80 10 00 */	li r4, 0x1000
 /* 8035D188 00326748  38 C0 00 20 */	li r6, 0x20
 /* 8035D18C 0032674C  39 00 00 20 */	li r8, 0x20
@@ -124,8 +124,8 @@ lbl_8035D1B4:
 lbl_8035D1BC:
 /* 8035D1BC 0032677C  7F C3 F3 78 */	mr r3, r30
 /* 8035D1C0 00326780  4B FF B8 31 */	bl OSRestoreInterrupts
-/* 8035D1C4 00326784  3C 60 80 36 */	lis r3, lbl_8035D5C0@ha
-/* 8035D1C8 00326788  38 63 D5 C0 */	addi r3, r3, lbl_8035D5C0@l
+/* 8035D1C4 00326784  3C 60 80 36 */	lis r3, __OSDefaultPowerCallback@ha
+/* 8035D1C8 00326788  38 63 D5 C0 */	addi r3, r3, __OSDefaultPowerCallback@l
 /* 8035D1CC 0032678C  7C 1D 18 40 */	cmplw r29, r3
 /* 8035D1D0 00326790  40 82 00 0C */	bne lbl_8035D1DC
 /* 8035D1D4 00326794  38 60 00 00 */	li r3, 0
@@ -140,17 +140,17 @@ lbl_8035D1E0:
 /* 8035D1F0 003267B0  7C 08 03 A6 */	mtlr r0
 /* 8035D1F4 003267B4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035D1F8 003267B8  4E 80 00 20 */	blr 
-/* 8035D1FC 003267BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSInitSTM
 __OSInitSTM:
 /* 8035D200 003267C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035D204 003267C4  7C 08 02 A6 */	mflr r0
-/* 8035D208 003267C8  3C 80 80 36 */	lis r4, lbl_8035D5C0@ha
-/* 8035D20C 003267CC  3C 60 80 36 */	lis r3, func_8035D5B0@ha
+/* 8035D208 003267C8  3C 80 80 36 */	lis r4, __OSDefaultPowerCallback@ha
+/* 8035D20C 003267CC  3C 60 80 36 */	lis r3, __OSDefaultResetCallback@ha
 /* 8035D210 003267D0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8035D214 003267D4  38 84 D5 C0 */	addi r4, r4, lbl_8035D5C0@l
-/* 8035D218 003267D8  38 63 D5 B0 */	addi r3, r3, func_8035D5B0@l
+/* 8035D214 003267D4  38 84 D5 C0 */	addi r4, r4, __OSDefaultPowerCallback@l
+/* 8035D218 003267D8  38 63 D5 B0 */	addi r3, r3, __OSDefaultResetCallback@l
 /* 8035D21C 003267DC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8035D220 003267E0  3B E0 00 00 */	li r31, 0
 /* 8035D224 003267E4  93 C1 00 08 */	stw r30, 8(r1)
@@ -190,11 +190,11 @@ lbl_8035D29C:
 /* 8035D2A0 00326860  7C 7E 1B 78 */	mr r30, r3
 /* 8035D2A4 00326864  3C A0 80 5D */	lis r5, lbl_805D5160@ha
 /* 8035D2A8 00326868  3C E0 80 5D */	lis r7, lbl_805D5180@ha
-/* 8035D2AC 0032686C  3D 20 80 36 */	lis r9, lbl_8035D5D0@ha
+/* 8035D2AC 0032686C  3D 20 80 36 */	lis r9, __OSStateEventHandler@ha
 /* 8035D2B0 00326870  80 6D B9 6C */	lwz r3, lbl_80667AEC@sda21(r13)
 /* 8035D2B4 00326874  38 A5 51 60 */	addi r5, r5, lbl_805D5160@l
 /* 8035D2B8 00326878  38 E7 51 80 */	addi r7, r7, lbl_805D5180@l
-/* 8035D2BC 0032687C  39 29 D5 D0 */	addi r9, r9, lbl_8035D5D0@l
+/* 8035D2BC 0032687C  39 29 D5 D0 */	addi r9, r9, __OSStateEventHandler@l
 /* 8035D2C0 00326880  38 80 10 00 */	li r4, 0x1000
 /* 8035D2C4 00326884  38 C0 00 20 */	li r6, 0x20
 /* 8035D2C8 00326888  39 00 00 20 */	li r8, 0x20
@@ -220,11 +220,10 @@ lbl_8035D300:
 /* 8035D30C 003268CC  7C 08 03 A6 */	mtlr r0
 /* 8035D310 003268D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035D314 003268D4  4E 80 00 20 */	blr 
-/* 8035D318 003268D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035D31C 003268DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035D320
-func_8035D320:
+.balign 16, 0
+.global __OSShutdownToSBY
+__OSShutdownToSBY:
 /* 8035D320 003268E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035D324 003268E4  7C 08 02 A6 */	mflr r0
 /* 8035D328 003268E8  3C 60 CC 00 */	lis r3, 0xCC002002@ha
@@ -258,8 +257,8 @@ lbl_8035D360:
 /* 8035D394 00326954  60 00 00 00 */	nop 
 lbl_8035D398:
 /* 8035D398 00326958  48 00 00 00 */	b lbl_8035D398
-/* 8035D39C 0032695C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSHotReset
 __OSHotReset:
 /* 8035D3A0 00326960  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -293,12 +292,10 @@ lbl_8035D3E0:
 /* 8035D40C 003269CC  60 00 00 00 */	nop 
 lbl_8035D410:
 /* 8035D410 003269D0  48 00 00 00 */	b lbl_8035D410
-/* 8035D414 003269D4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035D418 003269D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035D41C 003269DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035D420
-func_8035D420:
+.balign 16, 0
+.global __OSSetVIForceDimming
+__OSSetVIForceDimming:
 /* 8035D420 003269E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035D424 003269E4  7C 08 02 A6 */	mflr r0
 /* 8035D428 003269E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -336,11 +333,11 @@ lbl_8035D474:
 /* 8035D4A0 00326A60  39 60 FF FF */	li r11, -1
 /* 8035D4A4 00326A64  3C 00 FF FF */	lis r0, 0xffff
 /* 8035D4A8 00326A68  3C E0 80 5D */	lis r7, lbl_805D5200@ha
-/* 8035D4AC 00326A6C  3D 20 80 36 */	lis r9, lbl_8035D5A0@ha
+/* 8035D4AC 00326A6C  3D 20 80 36 */	lis r9, __OSVIDimReplyHandler@ha
 /* 8035D4B0 00326A70  80 6D B9 68 */	lwz r3, lbl_80667AE8@sda21(r13)
 /* 8035D4B4 00326A74  38 E7 52 00 */	addi r7, r7, lbl_805D5200@l
 /* 8035D4B8 00326A78  91 85 00 04 */	stw r12, 4(r5)
-/* 8035D4BC 00326A7C  39 29 D5 A0 */	addi r9, r9, lbl_8035D5A0@l
+/* 8035D4BC 00326A7C  39 29 D5 A0 */	addi r9, r9, __OSVIDimReplyHandler@l
 /* 8035D4C0 00326A80  38 80 50 01 */	li r4, 0x5001
 /* 8035D4C4 00326A84  38 C0 00 20 */	li r6, 0x20
 /* 8035D4C8 00326A88  91 85 00 08 */	stw r12, 8(r5)
@@ -365,9 +362,8 @@ lbl_8035D4FC:
 /* 8035D50C 00326ACC  7C 08 03 A6 */	mtlr r0
 /* 8035D510 00326AD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035D514 00326AD4  4E 80 00 20 */	blr 
-/* 8035D518 00326AD8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035D51C 00326ADC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSUnRegisterStateEvent
 __OSUnRegisterStateEvent:
 /* 8035D520 00326AE0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -403,26 +399,27 @@ lbl_8035D588:
 /* 8035D58C 00326B4C  7C 08 03 A6 */	mtlr r0
 /* 8035D590 00326B50  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035D594 00326B54  4E 80 00 20 */	blr 
-/* 8035D598 00326B58  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035D59C 00326B5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8035D5A0:
+
+.balign 16, 0
+.global __OSVIDimReplyHandler
+__OSVIDimReplyHandler:
 /* 8035D5A0 00326B60  38 00 00 00 */	li r0, 0
 /* 8035D5A4 00326B64  90 0D B9 74 */	stw r0, lbl_80667AF4@sda21(r13)
 /* 8035D5A8 00326B68  38 60 00 00 */	li r3, 0
 /* 8035D5AC 00326B6C  4E 80 00 20 */	blr
 
-.global func_8035D5B0
-func_8035D5B0:
+.global __OSDefaultResetCallback
+__OSDefaultResetCallback:
 /* 8035D5B0 00326B70  4E 80 00 20 */	blr 
-/* 8035D5B4 00326B74  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035D5B8 00326B78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035D5BC 00326B7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8035D5C0:
+
+.balign 16, 0
+.global __OSDefaultPowerCallback
+__OSDefaultPowerCallback:
 /* 8035D5C0 00326B80  4E 80 00 20 */	blr 
-/* 8035D5C4 00326B84  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035D5C8 00326B88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035D5CC 00326B8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8035D5D0:
+
+.balign 16, 0
+.global __OSStateEventHandler
+__OSStateEventHandler:
 /* 8035D5D0 00326B90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035D5D4 00326B94  7C 08 02 A6 */	mflr r0
 /* 8035D5D8 00326B98  2C 03 00 00 */	cmpwi r3, 0
@@ -457,8 +454,8 @@ lbl_8035D63C:
 /* 8035D640 00326C00  41 82 00 38 */	beq lbl_8035D678
 /* 8035D644 00326C04  4B FF B3 6D */	bl OSDisableInterrupts
 /* 8035D648 00326C08  81 8D B9 7C */	lwz r12, lbl_80667AFC@sda21(r13)
-/* 8035D64C 00326C0C  3C 80 80 36 */	lis r4, func_8035D5B0@ha
-/* 8035D650 00326C10  38 84 D5 B0 */	addi r4, r4, func_8035D5B0@l
+/* 8035D64C 00326C0C  3C 80 80 36 */	lis r4, __OSDefaultResetCallback@ha
+/* 8035D650 00326C10  38 84 D5 B0 */	addi r4, r4, __OSDefaultResetCallback@l
 /* 8035D654 00326C14  38 00 00 01 */	li r0, 1
 /* 8035D658 00326C18  7C 7F 1B 78 */	mr r31, r3
 /* 8035D65C 00326C1C  90 0D B9 60 */	stw r0, lbl_80667AE0@sda21(r13)
@@ -467,17 +464,17 @@ lbl_8035D63C:
 /* 8035D668 00326C28  4E 80 04 21 */	bctrl 
 /* 8035D66C 00326C2C  7F E3 FB 78 */	mr r3, r31
 /* 8035D670 00326C30  4B FF B3 81 */	bl OSRestoreInterrupts
-/* 8035D674 00326C34  48 00 93 5D */	bl func_803669D0
+/* 8035D674 00326C34  48 00 93 5D */	bl VIResetDimmingCount
 lbl_8035D678:
 /* 8035D678 00326C38  4B FF B3 39 */	bl OSDisableInterrupts
 /* 8035D67C 00326C3C  7C 7F 1B 78 */	mr r31, r3
 /* 8035D680 00326C40  3C A0 80 5D */	lis r5, lbl_805D5160@ha
 /* 8035D684 00326C44  3C E0 80 5D */	lis r7, lbl_805D5180@ha
-/* 8035D688 00326C48  3D 20 80 36 */	lis r9, lbl_8035D5D0@ha
+/* 8035D688 00326C48  3D 20 80 36 */	lis r9, __OSStateEventHandler@ha
 /* 8035D68C 00326C4C  80 6D B9 6C */	lwz r3, lbl_80667AEC@sda21(r13)
 /* 8035D690 00326C50  38 A5 51 60 */	addi r5, r5, lbl_805D5160@l
 /* 8035D694 00326C54  38 E7 51 80 */	addi r7, r7, lbl_805D5180@l
-/* 8035D698 00326C58  39 29 D5 D0 */	addi r9, r9, lbl_8035D5D0@l
+/* 8035D698 00326C58  39 29 D5 D0 */	addi r9, r9, __OSStateEventHandler@l
 /* 8035D69C 00326C5C  38 80 10 00 */	li r4, 0x1000
 /* 8035D6A0 00326C60  38 C0 00 20 */	li r6, 0x20
 /* 8035D6A4 00326C64  39 00 00 20 */	li r8, 0x20
@@ -501,8 +498,8 @@ lbl_8035D6D4:
 /* 8035D6E0 00326CA0  40 82 00 2C */	bne lbl_8035D70C
 /* 8035D6E4 00326CA4  4B FF B2 CD */	bl OSDisableInterrupts
 /* 8035D6E8 00326CA8  81 8D B9 78 */	lwz r12, lbl_80667AF8@sda21(r13)
-/* 8035D6EC 00326CAC  3C 80 80 36 */	lis r4, lbl_8035D5C0@ha
-/* 8035D6F0 00326CB0  38 84 D5 C0 */	addi r4, r4, lbl_8035D5C0@l
+/* 8035D6EC 00326CAC  3C 80 80 36 */	lis r4, __OSDefaultPowerCallback@ha
+/* 8035D6F0 00326CB0  38 84 D5 C0 */	addi r4, r4, __OSDefaultPowerCallback@l
 /* 8035D6F4 00326CB4  7C 7F 1B 78 */	mr r31, r3
 /* 8035D6F8 00326CB8  90 8D B9 78 */	stw r4, lbl_80667AF8@sda21(r13)
 /* 8035D6FC 00326CBC  7D 89 03 A6 */	mtctr r12
@@ -516,6 +513,4 @@ lbl_8035D70C:
 /* 8035D718 00326CD8  7C 08 03 A6 */	mtlr r0
 /* 8035D71C 00326CDC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035D720 00326CE0  4E 80 00 20 */	blr 
-/* 8035D724 00326CE4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035D728 00326CE8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035D72C 00326CEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

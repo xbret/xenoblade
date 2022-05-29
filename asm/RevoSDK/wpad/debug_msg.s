@@ -30,5 +30,4 @@ lbl_80375BB8:
 func_80375BE0:
 /* 80375BE0 0033F1A0  80 6D BB 78 */	lwz r3, lbl_80667CF8@sda21(r13)
 /* 80375BE4 0033F1A4  4E 80 00 20 */	blr 
-/* 80375BE8 0033F1A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80375BEC 0033F1AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

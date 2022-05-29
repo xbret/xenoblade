@@ -151,10 +151,8 @@ lbl_803615AC:
 /* 803615B8 0032AB78  7C 08 03 A6 */	mtlr r0
 /* 803615BC 0032AB7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803615C0 0032AB80  4E 80 00 20 */	blr 
-/* 803615C4 0032AB84  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803615C8 0032AB88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803615CC 0032AB8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803615D0
 func_803615D0:
 /* 803615D0 0032AB90  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -195,6 +193,4 @@ lbl_8036163C:
 /* 80361648 0032AC08  7C 08 03 A6 */	mtlr r0
 /* 8036164C 0032AC0C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80361650 0032AC10  4E 80 00 20 */	blr 
-/* 80361654 0032AC14  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80361658 0032AC18  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036165C 0032AC1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

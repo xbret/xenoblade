@@ -53,9 +53,8 @@ lbl_8035F4A4:
 /* 8035F4BC 00328A7C  7C 08 03 A6 */	mtlr r0
 /* 8035F4C0 00328A80  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035F4C4 00328A84  4E 80 00 20 */	blr 
-/* 8035F4C8 00328A88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035F4CC 00328A8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __PADDisableRecalibration
 __PADDisableRecalibration:
 /* 8035F4D0 00328A90  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -82,4 +81,4 @@ lbl_8035F510:
 /* 8035F520 00328AE0  7C 08 03 A6 */	mtlr r0
 /* 8035F524 00328AE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035F528 00328AE8  4E 80 00 20 */	blr 
-/* 8035F52C 00328AEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

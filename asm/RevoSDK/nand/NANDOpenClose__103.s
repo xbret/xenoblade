@@ -72,10 +72,8 @@ lbl_8034F41C:
 /* 8034F438 003189F8  7C 08 03 A6 */	mtlr r0
 /* 8034F43C 003189FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034F440 00318A00  4E 80 00 20 */	blr 
-/* 8034F444 00318A04  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034F448 00318A08  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034F44C 00318A0C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8034F450
 func_8034F450:
 /* 8034F450 00318A10  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -146,10 +144,8 @@ lbl_8034F520:
 lbl_8034F52C:
 /* 8034F52C 00318AEC  98 E3 00 00 */	stb r7, 0(r3)
 /* 8034F530 00318AF0  4E 80 00 20 */	blr 
-/* 8034F534 00318AF4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034F538 00318AF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034F53C 00318AFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8034F540
 func_8034F540:
 /* 8034F540 00318B00  54 60 06 F7 */	rlwinm. r0, r3, 0, 0x1b, 0x1b
@@ -192,8 +188,8 @@ lbl_8034F5B4:
 /* 8034F5C0 00318B80  60 00 00 02 */	ori r0, r0, 2
 /* 8034F5C4 00318B84  90 06 00 00 */	stw r0, 0(r6)
 /* 8034F5C8 00318B88  4E 80 00 20 */	blr 
-/* 8034F5CC 00318B8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8034F5D0
 func_8034F5D0:
 /* 8034F5D0 00318B90  94 21 FF 90 */	stwu r1, -0x70(r1)
@@ -285,9 +281,7 @@ lbl_8034F704:
 /* 8034F718 00318CD8  7C 08 03 A6 */	mtlr r0
 /* 8034F71C 00318CDC  38 21 00 70 */	addi r1, r1, 0x70
 /* 8034F720 00318CE0  4E 80 00 20 */	blr 
-/* 8034F724 00318CE4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034F728 00318CE8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034F72C 00318CEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_8034F730:
 /* 8034F730 00318CF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034F734 00318CF4  7C 08 02 A6 */	mflr r0
@@ -319,10 +313,8 @@ lbl_8034F774:
 /* 8034F798 00318D58  7C 08 03 A6 */	mtlr r0
 /* 8034F79C 00318D5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034F7A0 00318D60  4E 80 00 20 */	blr 
-/* 8034F7A4 00318D64  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034F7A8 00318D68  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034F7AC 00318D6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8034F7B0
 func_8034F7B0:
 /* 8034F7B0 00318D70  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -352,10 +344,8 @@ lbl_8034F7FC:
 /* 8034F808 00318DC8  7C 08 03 A6 */	mtlr r0
 /* 8034F80C 00318DCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034F810 00318DD0  4E 80 00 20 */	blr 
-/* 8034F814 00318DD4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034F818 00318DD8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034F81C 00318DDC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8034F820
 func_8034F820:
 /* 8034F820 00318DE0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -393,10 +383,8 @@ lbl_8034F884:
 /* 8034F898 00318E58  7C 08 03 A6 */	mtlr r0
 /* 8034F89C 00318E5C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034F8A0 00318E60  4E 80 00 20 */	blr 
-/* 8034F8A4 00318E64  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034F8A8 00318E68  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034F8AC 00318E6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8034F8B0
 func_8034F8B0:
 /* 8034F8B0 00318E70  94 21 FF A0 */	stwu r1, -0x60(r1)
@@ -515,10 +503,10 @@ lbl_8034FA30:
 /* 8034FA40 00319000  7C 08 03 A6 */	mtlr r0
 /* 8034FA44 00319004  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034FA48 00319008  4E 80 00 20 */	blr 
-/* 8034FA4C 0031900C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8034FA50
-func_8034FA50:
+.balign 16, 0
+.global NANDPrivateOpen
+NANDPrivateOpen:
 /* 8034FA50 00319010  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034FA54 00319014  7C 08 02 A6 */	mflr r0
 /* 8034FA58 00319018  90 01 00 24 */	stw r0, 0x24(r1)
@@ -557,10 +545,10 @@ lbl_8034FAC0:
 /* 8034FAD0 00319090  7C 08 03 A6 */	mtlr r0
 /* 8034FAD4 00319094  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034FAD8 00319098  4E 80 00 20 */	blr 
-/* 8034FADC 0031909C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8034FAE0
-func_8034FAE0:
+.balign 16, 0
+.global NANDOpenAsync
+NANDOpenAsync:
 /* 8034FAE0 003190A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034FAE4 003190A4  7C 08 02 A6 */	mflr r0
 /* 8034FAE8 003190A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -593,9 +581,8 @@ lbl_8034FB40:
 /* 8034FB4C 0031910C  7C 08 03 A6 */	mtlr r0
 /* 8034FB50 00319110  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034FB54 00319114  4E 80 00 20 */	blr 
-/* 8034FB58 00319118  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034FB5C 0031911C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8034FB60
 func_8034FB60:
 /* 8034FB60 00319120  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -630,8 +617,7 @@ lbl_8034FBC0:
 /* 8034FBCC 0031918C  7C 08 03 A6 */	mtlr r0
 /* 8034FBD0 00319190  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034FBD4 00319194  4E 80 00 20 */	blr 
-/* 8034FBD8 00319198  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034FBDC 0031919C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_8034FBE0:
 /* 8034FBE0 003191A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034FBE4 003191A4  7C 08 02 A6 */	mflr r0
@@ -665,11 +651,10 @@ lbl_8034FC44:
 /* 8034FC4C 0031920C  7C 08 03 A6 */	mtlr r0
 /* 8034FC50 00319210  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034FC54 00319214  4E 80 00 20 */	blr 
-/* 8034FC58 00319218  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034FC5C 0031921C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8034FC60
-func_8034FC60:
+.balign 16, 0
+.global NANDClose
+NANDClose:
 /* 8034FC60 00319220  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034FC64 00319224  7C 08 02 A6 */	mflr r0
 /* 8034FC68 00319228  90 01 00 14 */	stw r0, 0x14(r1)
@@ -701,10 +686,10 @@ lbl_8034FCB8:
 /* 8034FCC0 00319280  7C 08 03 A6 */	mtlr r0
 /* 8034FCC4 00319284  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034FCC8 00319288  4E 80 00 20 */	blr 
-/* 8034FCCC 0031928C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8034FCD0
-func_8034FCD0:
+.balign 16, 0
+.global NANDCloseAsync
+NANDCloseAsync:
 /* 8034FCD0 00319290  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034FCD4 00319294  7C 08 02 A6 */	mflr r0
 /* 8034FCD8 00319298  90 01 00 24 */	stw r0, 0x24(r1)
@@ -742,8 +727,7 @@ lbl_8034FD3C:
 /* 8034FD4C 0031930C  7C 08 03 A6 */	mtlr r0
 /* 8034FD50 00319310  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034FD54 00319314  4E 80 00 20 */	blr 
-/* 8034FD58 00319318  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034FD5C 0031931C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_8034FD60:
 /* 8034FD60 00319320  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034FD64 00319324  7C 08 02 A6 */	mflr r0
@@ -769,4 +753,4 @@ lbl_8034FD94:
 /* 8034FDB0 00319370  7C 08 03 A6 */	mtlr r0
 /* 8034FDB4 00319374  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034FDB8 00319378  4E 80 00 20 */	blr 
-/* 8034FDBC 0031937C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

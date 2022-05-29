@@ -79,10 +79,8 @@ lbl_803546B0:
 /* 8035472C 0031DCEC  CB E4 01 88 */	lfd f31, 0x188(r4)
 lbl_80354730:
 /* 80354730 0031DCF0  4E 80 00 20 */	blr 
-/* 80354734 0031DCF4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80354738 0031DCF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035473C 0031DCFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSSaveFPUContext
 __OSSaveFPUContext:
 /* 80354740 0031DD00  A0 65 01 A2 */	lhz r3, 0x1a2(r5)
@@ -160,16 +158,14 @@ __OSSaveFPUContext:
 /* 80354860 0031DE20  F3 E5 02 C0 */	psq_st f31, 704(r5), 0, qr0
 lbl_80354864:
 /* 80354864 0031DE24  4E 80 00 20 */	blr 
-/* 80354868 0031DE28  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035486C 0031DE2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSSaveFPUContext
 OSSaveFPUContext:
 /* 80354870 0031DE30  38 A3 00 00 */	addi r5, r3, 0
 /* 80354874 0031DE34  4B FF FE CC */	b __OSSaveFPUContext
-/* 80354878 0031DE38  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035487C 0031DE3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSSetCurrentContext
 OSSetCurrentContext:
 /* 80354880 0031DE40  3C 80 80 00 */	lis r4, 0x800000D4@ha
@@ -196,15 +192,15 @@ lbl_803548B8:
 /* 803548D0 0031DE90  7C C0 01 24 */	mtmsr r6
 /* 803548D4 0031DE94  4C 00 01 2C */	isync 
 /* 803548D8 0031DE98  4E 80 00 20 */	blr 
-/* 803548DC 0031DE9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSGetCurrentContext
 OSGetCurrentContext:
 /* 803548E0 0031DEA0  3C 60 80 00 */	lis r3, 0x800000D4@ha
 /* 803548E4 0031DEA4  80 63 00 D4 */	lwz r3, 0x800000D4@l(r3)
 /* 803548E8 0031DEA8  4E 80 00 20 */	blr 
-/* 803548EC 0031DEAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSSaveContext
 OSSaveContext:
 /* 803548F0 0031DEB0  BD A3 00 34 */	stmw r13, 0x34(r3)
@@ -299,16 +295,14 @@ lbl_803549C4:
 /* 80354A3C 0031DFFC  80 83 00 10 */	lwz r4, 0x10(r3)
 /* 80354A40 0031E000  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 80354A44 0031E004  4C 00 00 64 */	rfi 
-/* 80354A48 0031E008  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80354A4C 0031E00C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSGetStackPointer
 OSGetStackPointer:
 /* 80354A50 0031E010  7C 23 0B 78 */	mr r3, r1
 /* 80354A54 0031E014  4E 80 00 20 */	blr 
-/* 80354A58 0031E018  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80354A5C 0031E01C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSSwitchFiber
 OSSwitchFiber:
 /* 80354A60 0031E020  7C 08 02 A6 */	mflr r0
@@ -350,10 +344,8 @@ OSClearContext:
 /* 80354AD8 0031E098  4C 82 00 20 */	bnelr 
 /* 80354ADC 0031E09C  90 A4 00 D8 */	stw r5, 0xd8(r4)
 /* 80354AE0 0031E0A0  4E 80 00 20 */	blr 
-/* 80354AE4 0031E0A4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80354AE8 0031E0A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80354AEC 0031E0AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSInitContext
 OSInitContext:
 /* 80354AF0 0031E0B0  90 83 01 98 */	stw r4, 0x198(r3)
@@ -403,8 +395,8 @@ OSInitContext:
 /* 80354BA0 0031E160  90 03 01 BC */	stw r0, 0x1bc(r3)
 /* 80354BA4 0031E164  90 03 01 C0 */	stw r0, 0x1c0(r3)
 /* 80354BA8 0031E168  4B FF FF 18 */	b OSClearContext
-/* 80354BAC 0031E16C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSDumpContext
 OSDumpContext:
 /* 80354BB0 0031E170  94 21 FD 10 */	stwu r1, -0x2f0(r1)
@@ -607,10 +599,8 @@ lbl_80354E50:
 /* 80354E88 0031E448  80 64 00 0C */	lwz r3, 0xc(r4)
 /* 80354E8C 0031E44C  80 84 00 10 */	lwz r4, 0x10(r4)
 /* 80354E90 0031E450  4C 00 00 64 */	rfi 
-/* 80354E94 0031E454  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80354E98 0031E458  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80354E9C 0031E45C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSContextInit
 __OSContextInit:
 /* 80354EA0 0031E460  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -631,5 +621,4 @@ __OSContextInit:
 /* 80354EDC 0031E49C  7C 08 03 A6 */	mtlr r0
 /* 80354EE0 0031E4A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80354EE4 0031E4A4  4E 80 00 20 */	blr 
-/* 80354EE8 0031E4A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80354EEC 0031E4AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

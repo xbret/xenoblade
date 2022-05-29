@@ -10,9 +10,8 @@ func_80349AD0:
 /* 80349ADC 0031309C  B0 03 00 08 */	sth r0, 8(r3)
 /* 80349AE0 003130A0  B0 83 00 0A */	sth r4, 0xa(r3)
 /* 80349AE4 003130A4  4E 80 00 20 */	blr 
-/* 80349AE8 003130A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80349AEC 003130AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80349AF0
 func_80349AF0:
 /* 80349AF0 003130B0  80 03 00 00 */	lwz r0, 0(r3)
@@ -80,8 +79,8 @@ lbl_80349BB0:
 /* 80349BC0 00313180  38 04 FF FF */	addi r0, r4, -1
 /* 80349BC4 00313184  B0 03 00 08 */	sth r0, 8(r3)
 /* 80349BC8 00313188  4E 80 00 20 */	blr 
-/* 80349BCC 0031318C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80349BD0
 func_80349BD0:
 /* 80349BD0 00313190  2C 04 00 00 */	cmpwi r4, 0

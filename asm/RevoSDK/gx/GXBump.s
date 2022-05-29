@@ -30,9 +30,8 @@ func_8031D160:
 /* 8031D1BC 002E677C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8031D1C0 002E6780  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031D1C4 002E6784  4E 80 00 20 */	blr 
-/* 8031D1C8 002E6788  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D1CC 002E678C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8031D1D0
 func_8031D1D0:
 /* 8031D1D0 002E6790  38 C3 FF FF */	addi r6, r3, -1
@@ -249,9 +248,8 @@ lbl_8031D4A8:
 /* 8031D4CC 002E6A8C  90 65 05 FC */	stw r3, 0x5fc(r5)
 /* 8031D4D0 002E6A90  B0 05 00 02 */	sth r0, 2(r5)
 /* 8031D4D4 002E6A94  4E 80 00 20 */	blr 
-/* 8031D4D8 002E6A98  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D4DC 002E6A9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetNumIndStages
 GXSetNumIndStages:
 /* 8031D4E0 002E6AA0  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
@@ -283,9 +281,8 @@ func_8031D500:
 /* 8031D53C 002E6AFC  7C 08 03 A6 */	mtlr r0
 /* 8031D540 002E6B00  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031D544 002E6B04  4E 80 00 20 */	blr 
-/* 8031D548 002E6B08  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D54C 002E6B0C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8031D550
 func_8031D550:
 /* 8031D550 002E6B10  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -311,17 +308,13 @@ lbl_8031D588:
 /* 8031D598 002E6B58  7C 08 03 A6 */	mtlr r0
 /* 8031D59C 002E6B5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031D5A0 002E6B60  4E 80 00 20 */	blr 
-/* 8031D5A4 002E6B64  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D5A8 002E6B68  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D5AC 002E6B6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8031D5B0
 func_8031D5B0:
 /* 8031D5B0 002E6B70  4E 80 00 20 */	blr 
-/* 8031D5B4 002E6B74  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D5B8 002E6B78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D5BC 002E6B7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8031D5C0
 func_8031D5C0:
 /* 8031D5C0 002E6B80  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
@@ -348,6 +341,4 @@ func_8031D5F0:
 /* 8031D608 002E6BC8  90 64 80 00 */	stw r3, -0x8000(r4)
 /* 8031D60C 002E6BCC  B0 05 00 02 */	sth r0, 2(r5)
 /* 8031D610 002E6BD0  4E 80 00 20 */	blr 
-/* 8031D614 002E6BD4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D618 002E6BD8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D61C 002E6BDC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

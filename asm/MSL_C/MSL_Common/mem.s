@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802BE708
-func_802BE708:
+.global memmove
+memmove:
 /* 802BE708 00287CC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BE70C 00287CCC  7C 08 02 A6 */	mflr r0
 /* 802BE710 00287CD0  7C 66 22 78 */	xor r6, r3, r4

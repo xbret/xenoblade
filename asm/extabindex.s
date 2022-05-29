@@ -19160,7 +19160,7 @@ lbl_80021020:
 	.4byte func_80433B98
 	.4byte 0x00000180
 	.4byte lbl_8001BFB8
-	.4byte func_80433D18
+	.4byte PrintArenaMemoryInfo
 	.4byte 0x000002C8
 	.4byte lbl_8001BFC0
 	.4byte func_80433FE0
@@ -24581,10 +24581,10 @@ lbl_80021020:
 	.4byte func_804EE14C
 	.4byte 0x00000048
 	.4byte lbl_80020EBC
-	.4byte func_804EE220
+	.4byte SetOSErrorHandlers1
 	.4byte 0x00000090
 	.4byte lbl_80020EC4
-	.4byte func_804EE2B0
+	.4byte SetOSErrorHandlers2
 	.4byte 0x00000088
 	.4byte lbl_80020ECC
 	.4byte func_804EE338

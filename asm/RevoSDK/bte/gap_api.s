@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802EFD04
-func_802EFD04:
+.global GAP_Init
+GAP_Init:
 /* 802EFD04 002B92C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EFD08 002B92C8  7C 08 02 A6 */	mflr r0
 /* 802EFD0C 002B92CC  38 80 00 00 */	li r4, 0

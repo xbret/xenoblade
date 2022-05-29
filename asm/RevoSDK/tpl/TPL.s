@@ -79,9 +79,8 @@ lbl_803628B4:
 /* 803628CC 0032BE8C  7C 08 03 A6 */	mtlr r0
 /* 803628D0 0032BE90  38 21 00 10 */	addi r1, r1, 0x10
 /* 803628D4 0032BE94  4E 80 00 20 */	blr 
-/* 803628D8 0032BE98  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803628DC 0032BE9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803628E0
 func_803628E0:
 /* 803628E0 0032BEA0  80 A3 00 04 */	lwz r5, 4(r3)

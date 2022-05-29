@@ -116,8 +116,7 @@ lbl_803640B0:
 /* 803640BC 0032D67C  7C 08 03 A6 */	mtlr r0
 /* 803640C0 0032D680  38 21 00 20 */	addi r1, r1, 0x20
 /* 803640C4 0032D684  4E 80 00 20 */	blr 
-/* 803640C8 0032D688  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803640CC 0032D68C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_803640D0:
 /* 803640D0 0032D690  94 21 FD 10 */	stwu r1, -0x2f0(r1)
 /* 803640D4 0032D694  7C 08 02 A6 */	mflr r0
@@ -528,7 +527,7 @@ lbl_80364614:
 /* 80364638 0032DBF8  38 60 00 00 */	li r3, 0
 /* 8036463C 0032DBFC  38 80 00 00 */	li r4, 0
 /* 80364640 0032DC00  38 A0 00 00 */	li r5, 0
-/* 80364644 0032DC04  4B FF 8D DD */	bl func_8035D420
+/* 80364644 0032DC04  4B FF 8D DD */	bl __OSSetVIForceDimming
 /* 80364648 0032DC08  2C 03 00 01 */	cmpwi r3, 1
 /* 8036464C 0032DC0C  40 82 00 10 */	bne lbl_8036465C
 /* 80364650 0032DC10  38 00 00 00 */	li r0, 0
@@ -592,7 +591,7 @@ lbl_80364718:
 /* 8036471C 0032DCDC  80 0D BA 30 */	lwz r0, lbl_80667BB0@sda21(r13)
 /* 80364720 0032DCE0  7C 03 00 40 */	cmplw r3, r0
 /* 80364724 0032DCE4  41 80 00 08 */	blt lbl_8036472C
-/* 80364728 0032DCE8  4B FA AD 39 */	bl func_8030F460
+/* 80364728 0032DCE8  4B FA AD 39 */	bl __DVDRestartMotor
 lbl_8036472C:
 /* 8036472C 0032DCEC  38 00 00 00 */	li r0, 0
 /* 80364730 0032DCF0  90 0D BA 34 */	stw r0, lbl_80667BB4@sda21(r13)
@@ -632,7 +631,7 @@ lbl_8036479C:
 /* 803647A8 0032DD68  38 60 00 00 */	li r3, 0
 /* 803647AC 0032DD6C  38 80 00 02 */	li r4, 2
 /* 803647B0 0032DD70  38 A0 00 02 */	li r5, 2
-/* 803647B4 0032DD74  4B FF 8C 6D */	bl func_8035D420
+/* 803647B4 0032DD74  4B FF 8C 6D */	bl __OSSetVIForceDimming
 /* 803647B8 0032DD78  2C 03 00 01 */	cmpwi r3, 1
 /* 803647BC 0032DD7C  40 82 00 10 */	bne lbl_803647CC
 /* 803647C0 0032DD80  38 00 00 00 */	li r0, 0
@@ -645,7 +644,7 @@ lbl_803647CC:
 /* 803647D8 0032DD98  38 60 00 01 */	li r3, 1
 /* 803647DC 0032DD9C  38 80 00 02 */	li r4, 2
 /* 803647E0 0032DDA0  38 A0 00 02 */	li r5, 2
-/* 803647E4 0032DDA4  4B FF 8C 3D */	bl func_8035D420
+/* 803647E4 0032DDA4  4B FF 8C 3D */	bl __OSSetVIForceDimming
 /* 803647E8 0032DDA8  2C 03 00 01 */	cmpwi r3, 1
 /* 803647EC 0032DDAC  40 82 00 14 */	bne lbl_80364800
 /* 803647F0 0032DDB0  38 60 00 00 */	li r3, 0
@@ -664,7 +663,7 @@ lbl_80364800:
 /* 80364820 0032DDE0  80 0D BA 30 */	lwz r0, lbl_80667BB0@sda21(r13)
 /* 80364824 0032DDE4  7C 03 00 40 */	cmplw r3, r0
 /* 80364828 0032DDE8  41 80 00 08 */	blt lbl_80364830
-/* 8036482C 0032DDEC  4B FA AC 35 */	bl func_8030F460
+/* 8036482C 0032DDEC  4B FA AC 35 */	bl __DVDRestartMotor
 lbl_80364830:
 /* 80364830 0032DDF0  38 00 00 00 */	li r0, 0
 /* 80364834 0032DDF4  90 0D BA 38 */	stw r0, lbl_80667BB8@sda21(r13)
@@ -676,7 +675,7 @@ lbl_80364838:
 /* 80364848 0032DE08  3C 60 80 5D */	lis r3, lbl_805CC950@ha
 /* 8036484C 0032DE0C  38 80 00 00 */	li r4, 0
 /* 80364850 0032DE10  38 63 C9 50 */	addi r3, r3, lbl_805CC950@l
-/* 80364854 0032DE14  4B FA AB FD */	bl func_8030F450
+/* 80364854 0032DE14  4B FA AB FD */	bl __DVDStopMotorAsync
 lbl_80364858:
 /* 80364858 0032DE18  38 00 00 01 */	li r0, 1
 /* 8036485C 0032DE1C  90 0D BA AC */	stw r0, lbl_80667C2C@sda21(r13)
@@ -712,10 +711,10 @@ lbl_803648C4:
 /* 803648D0 0032DE90  7C 08 03 A6 */	mtlr r0
 /* 803648D4 0032DE94  38 21 02 F0 */	addi r1, r1, 0x2f0
 /* 803648D8 0032DE98  4E 80 00 20 */	blr 
-/* 803648DC 0032DE9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803648E0
-func_803648E0:
+.balign 16, 0
+.global VISetPreRetraceCallback
+VISetPreRetraceCallback:
 /* 803648E0 0032DEA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803648E4 0032DEA4  7C 08 02 A6 */	mflr r0
 /* 803648E8 0032DEA8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -733,12 +732,10 @@ func_803648E0:
 /* 80364918 0032DED8  7C 08 03 A6 */	mtlr r0
 /* 8036491C 0032DEDC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80364920 0032DEE0  4E 80 00 20 */	blr 
-/* 80364924 0032DEE4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80364928 0032DEE8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036492C 0032DEEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80364930
-func_80364930:
+.balign 16, 0
+.global VISetPostRetraceCallback
+VISetPostRetraceCallback:
 /* 80364930 0032DEF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80364934 0032DEF4  7C 08 02 A6 */	mflr r0
 /* 80364938 0032DEF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -756,10 +753,8 @@ func_80364930:
 /* 80364968 0032DF28  7C 08 03 A6 */	mtlr r0
 /* 8036496C 0032DF2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80364970 0032DF30  4E 80 00 20 */	blr 
-/* 80364974 0032DF34  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80364978 0032DF38  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036497C 0032DF3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80364980
 func_80364980:
 /* 80364980 0032DF40  28 03 00 22 */	cmplwi r3, 0x22
@@ -883,9 +878,8 @@ func_80364A88:
 func_80364A90:
 /* 80364A90 0032E050  38 60 00 00 */	li r3, 0
 /* 80364A94 0032E054  4E 80 00 20 */	blr 
-/* 80364A98 0032E058  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80364A9C 0032E05C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80364AA0
 func_80364AA0:
 /* 80364AA0 0032E060  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1022,8 +1016,8 @@ lbl_80364C88:
 /* 80364C98 0032E258  38 21 00 20 */	addi r1, r1, 0x20
 /* 80364C9C 0032E25C  4E 80 00 20 */	blr 
 
-.global func_80364CA0
-func_80364CA0:
+.global VIInit
+VIInit:
 /* 80364CA0 0032E260  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80364CA4 0032E264  7C 08 02 A6 */	mflr r0
 /* 80364CA8 0032E268  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1384,11 +1378,10 @@ lbl_803651D0:
 /* 803651DC 0032E79C  7C 08 03 A6 */	mtlr r0
 /* 803651E0 0032E7A0  38 21 00 30 */	addi r1, r1, 0x30
 /* 803651E4 0032E7A4  4E 80 00 20 */	blr 
-/* 803651E8 0032E7A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803651EC 0032E7AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803651F0
-func_803651F0:
+.balign 16, 0
+.global VIWaitForRetrace
+VIWaitForRetrace:
 /* 803651F0 0032E7B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803651F4 0032E7B4  7C 08 02 A6 */	mflr r0
 /* 803651F8 0032E7B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1399,7 +1392,7 @@ func_803651F0:
 /* 8036520C 0032E7CC  83 CD BA C4 */	lwz r30, lbl_80667C44@sda21(r13)
 lbl_80365210:
 /* 80365210 0032E7D0  38 6D BA A0 */	addi r3, r13, lbl_80667C20@sda21
-/* 80365214 0032E7D4  4B FF 74 5D */	bl func_8035C670
+/* 80365214 0032E7D4  4B FF 74 5D */	bl OSSleepThread
 /* 80365218 0032E7D8  80 0D BA C4 */	lwz r0, lbl_80667C44@sda21(r13)
 /* 8036521C 0032E7DC  7C 1E 00 40 */	cmplw r30, r0
 /* 80365220 0032E7E0  41 82 FF F0 */	beq lbl_80365210
@@ -1411,10 +1404,8 @@ lbl_80365210:
 /* 80365238 0032E7F8  7C 08 03 A6 */	mtlr r0
 /* 8036523C 0032E7FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80365240 0032E800  4E 80 00 20 */	blr 
-/* 80365244 0032E804  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80365248 0032E808  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036524C 0032E80C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80365250
 func_80365250:
 /* 80365250 0032E810  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1598,9 +1589,8 @@ lbl_803654EC:
 /* 803654EC 0032EAAC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 803654F0 0032EAB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803654F4 0032EAB4  4E 80 00 20 */	blr 
-/* 803654F8 0032EAB8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803654FC 0032EABC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80365500
 func_80365500:
 /* 80365500 0032EAC0  80 ED BA 50 */	lwz r7, lbl_80667BD0@sda21(r13)
@@ -1770,10 +1760,8 @@ lbl_803656D8:
 /* 80365768 0032ED28  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8036576C 0032ED2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80365770 0032ED30  4E 80 00 20 */	blr 
-/* 80365774 0032ED34  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80365778 0032ED38  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036577C 0032ED3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80365780
 func_80365780:
 /* 80365780 0032ED40  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -2240,8 +2228,8 @@ lbl_80365DF8:
 /* 80365E40 0032F400  7C 08 03 A6 */	mtlr r0
 /* 80365E44 0032F404  38 21 00 30 */	addi r1, r1, 0x30
 /* 80365E48 0032F408  4E 80 00 20 */	blr 
-/* 80365E4C 0032F40C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80365E50
 func_80365E50:
 /* 80365E50 0032F410  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -2469,12 +2457,10 @@ lbl_80366150:
 /* 80366198 0032F758  7C 08 03 A6 */	mtlr r0
 /* 8036619C 0032F75C  38 21 00 30 */	addi r1, r1, 0x30
 /* 803661A0 0032F760  4E 80 00 20 */	blr 
-/* 803661A4 0032F764  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803661A8 0032F768  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803661AC 0032F76C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803661B0
-func_803661B0:
+.balign 16, 0
+.global VIFlush
+VIFlush:
 /* 803661B0 0032F770  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803661B4 0032F774  7C 08 02 A6 */	mflr r0
 /* 803661B8 0032F778  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2548,12 +2534,10 @@ lbl_8036627C:
 /* 803662B8 0032F878  7C 08 03 A6 */	mtlr r0
 /* 803662BC 0032F87C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803662C0 0032F880  4E 80 00 20 */	blr 
-/* 803662C4 0032F884  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803662C8 0032F888  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803662CC 0032F88C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803662D0
-func_803662D0:
+.balign 16, 0
+.global VISetNextFrameBuffer
+VISetNextFrameBuffer:
 /* 803662D0 0032F890  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803662D4 0032F894  7C 08 02 A6 */	mflr r0
 /* 803662D8 0032F898  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2581,10 +2565,10 @@ func_803662D0:
 /* 80366330 0032F8F0  7C 08 03 A6 */	mtlr r0
 /* 80366334 0032F8F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80366338 0032F8F8  4E 80 00 20 */	blr 
-/* 8036633C 0032F8FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80366340
-func_80366340:
+.balign 16, 0
+.global VISetBlack
+VISetBlack:
 /* 80366340 0032F900  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80366344 0032F904  7C 08 02 A6 */	mflr r0
 /* 80366348 0032F908  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2615,16 +2599,14 @@ func_80366340:
 /* 803663AC 0032F96C  7C 08 03 A6 */	mtlr r0
 /* 803663B0 0032F970  38 21 00 20 */	addi r1, r1, 0x20
 /* 803663B4 0032F974  4E 80 00 20 */	blr 
-/* 803663B8 0032F978  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803663BC 0032F97C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803663C0
-func_803663C0:
+.balign 16, 0
+.global VIGetRetraceCount
+VIGetRetraceCount:
 /* 803663C0 0032F980  80 6D BA C4 */	lwz r3, lbl_80667C44@sda21(r13)
 /* 803663C4 0032F984  4E 80 00 20 */	blr 
-/* 803663C8 0032F988  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803663CC 0032F98C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803663D0
 func_803663D0:
 /* 803663D0 0032F990  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2667,8 +2649,8 @@ lbl_803663F0:
 /* 80366460 0032FA20  7C 08 03 A6 */	mtlr r0
 /* 80366464 0032FA24  38 21 00 10 */	addi r1, r1, 0x10
 /* 80366468 0032FA28  4E 80 00 20 */	blr 
-/* 8036646C 0032FA2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80366470
 func_80366470:
 /* 80366470 0032FA30  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2791,8 +2773,8 @@ func_803665C0:
 /* 803665F0 0032FBB0  7C 08 03 A6 */	mtlr r0
 /* 803665F4 0032FBB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803665F8 0032FBB8  4E 80 00 20 */	blr 
-/* 803665FC 0032FBBC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80366600
 func_80366600:
 /* 80366600 0032FBC0  80 ED BA 8C */	lwz r7, lbl_80667C0C@sda21(r13)
@@ -2952,10 +2934,8 @@ lbl_80366828:
 /* 80366828 0032FDE8  38 03 FF FF */	addi r0, r3, -1
 /* 8036682C 0032FDEC  B0 05 00 00 */	sth r0, 0(r5)
 /* 80366830 0032FDF0  4E 80 00 20 */	blr 
-/* 80366834 0032FDF4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80366838 0032FDF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036683C 0032FDFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80366840
 func_80366840:
 /* 80366840 0032FE00  80 0D BA 34 */	lwz r0, lbl_80667BB4@sda21(r13)
@@ -2968,9 +2948,8 @@ func_80366840:
 /* 8036685C 0032FE1C  7C 03 00 50 */	subf r0, r3, r0
 /* 80366860 0032FE20  7C 03 20 78 */	andc r3, r0, r4
 /* 80366864 0032FE24  4E 80 00 20 */	blr 
-/* 80366868 0032FE28  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036686C 0032FE2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80366870
 func_80366870:
 /* 80366870 0032FE30  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2995,10 +2974,8 @@ lbl_803668A4:
 /* 803668B8 0032FE78  7C 08 03 A6 */	mtlr r0
 /* 803668BC 0032FE7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803668C0 0032FE80  4E 80 00 20 */	blr 
-/* 803668C4 0032FE84  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803668C8 0032FE88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803668CC 0032FE8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803668D0
 func_803668D0:
 /* 803668D0 0032FE90  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3079,20 +3056,17 @@ lbl_803669AC:
 /* 803669BC 0032FF7C  7C 08 03 A6 */	mtlr r0
 /* 803669C0 0032FF80  38 21 00 10 */	addi r1, r1, 0x10
 /* 803669C4 0032FF84  4E 80 00 20 */	blr 
-/* 803669C8 0032FF88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803669CC 0032FF8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803669D0
-func_803669D0:
+.balign 16, 0
+.global VIResetDimmingCount
+VIResetDimmingCount:
 /* 803669D0 0032FF90  3C 60 80 5E */	lis r3, lbl_805DDA48@ha
 /* 803669D4 0032FF94  38 00 00 00 */	li r0, 0
 /* 803669D8 0032FF98  90 03 DA 48 */	stw r0, lbl_805DDA48@l(r3)
 /* 803669DC 0032FF9C  38 60 00 01 */	li r3, 1
-/* 803669E0 0032FFA0  4E 80 00 20 */	blr 
-/* 803669E4 0032FFA4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803669E8 0032FFA8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803669EC 0032FFAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+/* 803669E0 0032FFA0  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global func_803669F0
 func_803669F0:
 /* 803669F0 0032FFB0  38 00 00 00 */	li r0, 0

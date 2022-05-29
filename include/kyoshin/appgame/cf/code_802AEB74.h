@@ -1,5 +1,9 @@
+#ifndef _CF_CODE_802AEB74_H
+#define _CF_CODE_802AEB74_H
+
 #include "types.h"
 
+//namespace cf {
 extern u32** lbl_80665708;
 extern u32** lbl_8066570C;
 extern u32** lbl_80665710;
@@ -21,3 +25,6 @@ u32** func_802AEBA4();
 u32** func_802AEBAC();
 u32** func_802AEBB4();
 u32** func_802AEBBC();
+//}
+
+#endif

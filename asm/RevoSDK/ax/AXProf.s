@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802D56D0
-func_802D56D0:
+.global __AXGetCurrentProfile
+__AXGetCurrentProfile:
 /* 802D56D0 0029EC90  80 0D B5 B8 */	lwz r0, lbl_80667738@sda21(r13)
 /* 802D56D4 0029EC94  2C 00 00 00 */	cmpwi r0, 0
 /* 802D56D8 0029EC98  41 82 00 30 */	beq lbl_802D5708

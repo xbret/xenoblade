@@ -5,12 +5,10 @@ lbl_802DCAA0:.include "macros.inc"
 /* 802DCAA0 002A6060  2C 03 00 04 */	cmpwi r3, 4
 /* 802DCAA4 002A6064  4C 82 00 20 */	bnelr 
 /* 802DCAA8 002A6068  7C 83 07 74 */	extsb r3, r4
-/* 802DCAAC 002A606C  48 00 17 14 */	b func_802DE1C0
+/* 802DCAAC 002A606C  48 00 17 14 */	b bta_usb_close_evt
 /* 802DCAB0 002A6070  4E 80 00 20 */	blr 
-/* 802DCAB4 002A6074  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DCAB8 002A6078  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DCABC 002A607C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_802DCAC0
 func_802DCAC0:
 /* 802DCAC0 002A6080  94 21 FF A0 */	stwu r1, -0x60(r1)
@@ -104,7 +102,7 @@ lbl_802DCBD0:
 lbl_802DCC08:
 /* 802DCC08 002A61C8  38 8E 3F 60 */	addi r4, r14, lbl_80543F60@l
 /* 802DCC0C 002A61CC  3C 60 00 07 */	lis r3, 7
-/* 802DCC10 002A61D0  48 00 13 91 */	bl func_802DDFA0
+/* 802DCC10 002A61D0  48 00 13 91 */	bl LogMsg_0
 /* 802DCC14 002A61D4  9B 16 00 1A */	stb r24, 0x1a(r22)
 lbl_802DCC18:
 /* 802DCC18 002A61D8  88 16 00 14 */	lbz r0, 0x14(r22)
@@ -158,13 +156,13 @@ lbl_802DCCA8:
 /* 802DCCCC 002A628C  7C 00 20 40 */	cmplw r0, r4
 /* 802DCCD0 002A6290  40 81 00 28 */	ble lbl_802DCCF8
 /* 802DCCD4 002A6294  7C 6F B8 2E */	lwzx r3, r15, r23
-/* 802DCCD8 002A6298  4B FF E8 09 */	bl func_802DB4E0
+/* 802DCCD8 002A6298  4B FF E8 09 */	bl GKI_freebuf
 /* 802DCCDC 002A629C  7F AF B9 2E */	stwx r29, r15, r23
 /* 802DCCE0 002A62A0  3C 60 80 54 */	lis r3, lbl_80543F9C@ha
 /* 802DCCE4 002A62A4  38 83 3F 9C */	addi r4, r3, lbl_80543F9C@l
 /* 802DCCE8 002A62A8  9B D6 00 1A */	stb r30, 0x1a(r22)
 /* 802DCCEC 002A62AC  3C 60 00 07 */	lis r3, 7
-/* 802DCCF0 002A62B0  48 00 12 B1 */	bl func_802DDFA0
+/* 802DCCF0 002A62B0  48 00 12 B1 */	bl LogMsg_0
 /* 802DCCF4 002A62B4  48 00 01 28 */	b lbl_802DCE1C
 lbl_802DCCF8:
 /* 802DCCF8 002A62B8  2C 12 00 00 */	cmpwi r18, 0
@@ -266,9 +264,8 @@ lbl_802DCE40:
 /* 802DCE4C 002A640C  7C 08 03 A6 */	mtlr r0
 /* 802DCE50 002A6410  38 21 00 60 */	addi r1, r1, 0x60
 /* 802DCE54 002A6414  4E 80 00 20 */	blr 
-/* 802DCE58 002A6418  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DCE5C 002A641C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_802DCE60
 func_802DCE60:
 /* 802DCE60 002A6420  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -379,7 +376,7 @@ lbl_802DCFD8:
 /* 802DCFE4 002A65A4  7F 66 DB 78 */	mr r6, r27
 /* 802DCFE8 002A65A8  48 00 0A E9 */	bl func_802DDAD0
 /* 802DCFEC 002A65AC  7F 63 DB 78 */	mr r3, r27
-/* 802DCFF0 002A65B0  4B FF E4 F1 */	bl func_802DB4E0
+/* 802DCFF0 002A65B0  4B FF E4 F1 */	bl GKI_freebuf
 lbl_802DCFF4:
 /* 802DCFF4 002A65B4  39 61 00 20 */	addi r11, r1, 0x20
 /* 802DCFF8 002A65B8  4B FD D1 A9 */	bl _restgpr_27
@@ -387,8 +384,8 @@ lbl_802DCFF4:
 /* 802DD000 002A65C0  7C 08 03 A6 */	mtlr r0
 /* 802DD004 002A65C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DD008 002A65C8  4E 80 00 20 */	blr 
-/* 802DD00C 002A65CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_802DD010
 func_802DD010:
 /* 802DD010 002A65D0  3C C0 80 5C */	lis r6, lbl_805BBC20@ha
@@ -402,8 +399,8 @@ func_802DD010:
 /* 802DD030 002A65F0  98 86 00 20 */	stb r4, 0x20(r6)
 /* 802DD034 002A65F4  B0 A6 00 12 */	sth r5, 0x12(r6)
 /* 802DD038 002A65F8  4E 80 00 20 */	blr 
-/* 802DD03C 002A65FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_802DD040
 func_802DD040:
 /* 802DD040 002A6600  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -432,9 +429,8 @@ func_802DD040:
 /* 802DD09C 002A665C  7C 08 03 A6 */	mtlr r0
 /* 802DD0A0 002A6660  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DD0A4 002A6664  4E 80 00 20 */	blr 
-/* 802DD0A8 002A6668  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DD0AC 002A666C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_802DD0B0
 func_802DD0B0:
 /* 802DD0B0 002A6670  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -450,10 +446,8 @@ func_802DD0B0:
 /* 802DD0D8 002A6698  7C 08 03 A6 */	mtlr r0
 /* 802DD0DC 002A669C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD0E0 002A66A0  4E 80 00 20 */	blr 
-/* 802DD0E4 002A66A4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DD0E8 002A66A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DD0EC 002A66AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_802DD0F0
 func_802DD0F0:
 /* 802DD0F0 002A66B0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -486,4 +480,4 @@ func_802DD120:
 /* 802DD150 002A6710  7C 08 03 A6 */	mtlr r0
 /* 802DD154 002A6714  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD158 002A6718  4E 80 00 20 */	blr 
-/* 802DD15C 002A671C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

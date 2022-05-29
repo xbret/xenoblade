@@ -38,13 +38,11 @@ lbl_80354F20:
 /* 80354F68 0031E528  38 21 00 80 */	addi r1, r1, 0x80
 /* 80354F6C 0031E52C  4E 80 00 20 */	blr 
 
-.global func_80354F70
-func_80354F70:
+.global OSVReport
+OSVReport:
 /* 80354F70 0031E530  4B F6 BE 4C */	b vprintf
-/* 80354F74 0031E534  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80354F78 0031E538  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80354F7C 0031E53C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSSetErrorHandler
 OSSetErrorHandler:
 /* 80354F80 0031E540  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -219,8 +217,8 @@ lbl_803551E0:
 /* 80355200 0031E7C0  7C 08 03 A6 */	mtlr r0
 /* 80355204 0031E7C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80355208 0031E7C8  4E 80 00 20 */	blr 
-/* 8035520C 0031E7CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSUnhandledException
 __OSUnhandledException:
 /* 80355210 0031E7D0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -428,4 +426,4 @@ lbl_803554D4:
 /* 80355500 0031EAC0  7C 08 03 A6 */	mtlr r0
 /* 80355504 0031EAC4  38 21 00 30 */	addi r1, r1, 0x30
 /* 80355508 0031EAC8  4E 80 00 20 */	blr 
-/* 8035550C 0031EACC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

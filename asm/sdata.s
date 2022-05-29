@@ -4345,13 +4345,13 @@ lbl_806658BC:
 .global lbl_806658C0
 lbl_806658C0:
 	# ROM: 0x5714A0
-	.4byte func_802DAB00
+	.4byte __AXFXAllocFunction
 
 
 .global lbl_806658C4
 lbl_806658C4:
 	# ROM: 0x5714A4
-	.4byte func_802DAB10
+	.4byte __AXFXFreeFunction
 
 
 .global lbl_806658C8
@@ -5745,8 +5745,8 @@ lbl_80665E39:
 	.byte 0x00
 	.byte 0x00
 
-.global lbl_80665E3C
-lbl_80665E3C:
+.global arenaMemorySize
+arenaMemorySize:
 	# ROM: 0x571A1C
 	.4byte 0x00600000
 

@@ -43,10 +43,8 @@ lbl_8031D65C:
 /* 8031D6A8 002E6C68  91 06 01 C0 */	stw r8, 0x1c0(r6)
 /* 8031D6AC 002E6C6C  B0 07 00 02 */	sth r0, 2(r7)
 /* 8031D6B0 002E6C70  4E 80 00 20 */	blr 
-/* 8031D6B4 002E6C74  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D6B8 002E6C78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D6BC 002E6C7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetTevColorIn
 GXSetTevColorIn:
 /* 8031D6C0 002E6C80  81 62 BC 20 */	lwz r11, lbl_8066BFA0@sda21(r2)
@@ -111,9 +109,8 @@ lbl_8031D770:
 /* 8031D78C 002E6D4C  91 69 01 80 */	stw r11, 0x180(r9)
 /* 8031D790 002E6D50  B0 0A 00 02 */	sth r0, 2(r10)
 /* 8031D794 002E6D54  4E 80 00 20 */	blr 
-/* 8031D798 002E6D58  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D79C 002E6D5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetTevAlphaOp
 GXSetTevAlphaOp:
 /* 8031D7A0 002E6D60  81 42 BC 20 */	lwz r10, lbl_8066BFA0@sda21(r2)
@@ -140,9 +137,8 @@ lbl_8031D7D0:
 /* 8031D7EC 002E6DAC  91 69 01 C0 */	stw r11, 0x1c0(r9)
 /* 8031D7F0 002E6DB0  B0 0A 00 02 */	sth r0, 2(r10)
 /* 8031D7F4 002E6DB4  4E 80 00 20 */	blr 
-/* 8031D7F8 002E6DB8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D7FC 002E6DBC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8031D800
 func_8031D800:
 /* 8031D800 002E6DC0  81 04 00 00 */	lwz r8, 0(r4)
@@ -197,10 +193,8 @@ func_8031D860:
 /* 8031D8B8 002E6E78  90 C5 80 00 */	stw r6, -0x8000(r5)
 /* 8031D8BC 002E6E7C  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031D8C0 002E6E80  4E 80 00 20 */	blr 
-/* 8031D8C4 002E6E84  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D8C8 002E6E88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031D8CC 002E6E8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8031D8D0
 func_8031D8D0:
 /* 8031D8D0 002E6E90  81 24 00 00 */	lwz r9, 0(r4)
@@ -226,8 +220,8 @@ func_8031D8D0:
 /* 8031D920 002E6EE0  90 C4 80 00 */	stw r6, -0x8000(r4)
 /* 8031D924 002E6EE4  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031D928 002E6EE8  4E 80 00 20 */	blr 
-/* 8031D92C 002E6EEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8031D930
 func_8031D930:
 /* 8031D930 002E6EF0  54 60 07 FF */	clrlwi. r0, r3, 0x1f
@@ -295,8 +289,8 @@ GXSetTevSwapMode:
 /* 8031DA00 002E6FC0  90 66 80 00 */	stw r3, -0x8000(r6)
 /* 8031DA04 002E6FC4  B0 09 00 02 */	sth r0, 2(r9)
 /* 8031DA08 002E6FC8  4E 80 00 20 */	blr 
-/* 8031DA0C 002E6FCC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetTevSwapModeTable
 GXSetTevSwapModeTable:
 /* 8031DA10 002E6FD0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -330,8 +324,8 @@ GXSetTevSwapModeTable:
 /* 8031DA80 002E7040  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8031DA84 002E7044  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031DA88 002E7048  4E 80 00 20 */	blr 
-/* 8031DA8C 002E704C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetAlphaCompare
 GXSetAlphaCompare:
 /* 8031DA90 002E7050  3D 00 CC 01 */	lis r8, 0xCC008000@ha
@@ -348,9 +342,8 @@ GXSetAlphaCompare:
 /* 8031DABC 002E707C  91 28 80 00 */	stw r9, -0x8000(r8)
 /* 8031DAC0 002E7080  B0 04 00 02 */	sth r0, 2(r4)
 /* 8031DAC4 002E7084  4E 80 00 20 */	blr 
-/* 8031DAC8 002E7088  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031DACC 002E708C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8031DAD0
 func_8031DAD0:
 /* 8031DAD0 002E7090  2C 04 00 11 */	cmpwi r4, 0x11
@@ -391,10 +384,8 @@ lbl_8031DB18:
 /* 8031DB48 002E7108  90 C4 80 00 */	stw r6, -0x8000(r4)
 /* 8031DB4C 002E710C  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031DB50 002E7110  4E 80 00 20 */	blr 
-/* 8031DB54 002E7114  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031DB58 002E7118  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031DB5C 002E711C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetTevOrder
 GXSetTevOrder:
 /* 8031DB60 002E7120  54 AB 06 2C */	rlwinm r11, r5, 0, 0x18, 0x16
@@ -494,8 +485,8 @@ lbl_8031DC8C:
 /* 8031DCB0 002E7270  60 00 00 01 */	ori r0, r0, 1
 /* 8031DCB4 002E7274  90 05 05 FC */	stw r0, 0x5fc(r5)
 /* 8031DCB8 002E7278  4E 80 00 20 */	blr 
-/* 8031DCBC 002E727C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetNumTevStages
 GXSetNumTevStages:
 /* 8031DCC0 002E7280  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
@@ -507,6 +498,4 @@ GXSetNumTevStages:
 /* 8031DCD8 002E7298  60 00 00 04 */	ori r0, r0, 4
 /* 8031DCDC 002E729C  90 04 05 FC */	stw r0, 0x5fc(r4)
 /* 8031DCE0 002E72A0  4E 80 00 20 */	blr 
-/* 8031DCE4 002E72A4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031DCE8 002E72A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031DCEC 002E72AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

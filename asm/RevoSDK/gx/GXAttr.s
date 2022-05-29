@@ -230,10 +230,8 @@ lbl_80319484:
 /* 80319488 002E2A48  60 00 00 08 */	ori r0, r0, 8
 /* 8031948C 002E2A4C  90 04 05 FC */	stw r0, 0x5fc(r4)
 /* 80319490 002E2A50  4E 80 00 20 */	blr 
-/* 80319494 002E2A54  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80319498 002E2A58  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031949C 002E2A5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803194A0
 func_803194A0:
 /* 803194A0 002E2A60  3C A0 CC 01 */	lis r5, 0xCC008000@ha
@@ -362,8 +360,8 @@ lbl_80319670:
 /* 80319670 002E2C30  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80319674 002E2C34  38 21 00 10 */	addi r1, r1, 0x10
 /* 80319678 002E2C38  4E 80 00 20 */	blr 
-/* 8031967C 002E2C3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXClearVtxDesc
 GXClearVtxDesc:
 /* 80319680 002E2C40  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
@@ -379,10 +377,8 @@ GXClearVtxDesc:
 /* 803196A8 002E2C68  60 00 00 08 */	ori r0, r0, 8
 /* 803196AC 002E2C6C  90 05 05 FC */	stw r0, 0x5fc(r5)
 /* 803196B0 002E2C70  4E 80 00 20 */	blr 
-/* 803196B4 002E2C74  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803196B8 002E2C78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803196BC 002E2C7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetVtxAttrFmt
 GXSetVtxAttrFmt:
 /* 803196C0 002E2C80  38 04 FF F7 */	addi r0, r4, -9
@@ -686,9 +682,8 @@ lbl_803199EC:
 /* 80319A1C 002E2FDC  7C 60 03 78 */	or r0, r3, r0
 /* 80319A20 002E2FE0  98 05 05 FB */	stb r0, 0x5fb(r5)
 /* 80319A24 002E2FE4  4E 80 00 20 */	blr 
-/* 80319A28 002E2FE8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80319A2C 002E2FEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80319A30
 func_80319A30:
 /* 80319A30 002E2FF0  81 02 BC 20 */	lwz r8, lbl_8066BFA0@sda21(r2)
@@ -960,10 +955,8 @@ lbl_80319D34:
 /* 80319D38 002E32F8  64 00 04 00 */	oris r0, r0, 0x400
 /* 80319D3C 002E32FC  90 09 05 FC */	stw r0, 0x5fc(r9)
 /* 80319D40 002E3300  4E 80 00 20 */	blr 
-/* 80319D44 002E3304  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80319D48 002E3308  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80319D4C 002E330C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetNumTexGens
 GXSetNumTexGens:
 /* 80319D50 002E3310  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
@@ -975,6 +968,4 @@ GXSetNumTexGens:
 /* 80319D68 002E3328  60 00 00 04 */	ori r0, r0, 4
 /* 80319D6C 002E332C  90 04 05 FC */	stw r0, 0x5fc(r4)
 /* 80319D70 002E3330  4E 80 00 20 */	blr 
-/* 80319D74 002E3334  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80319D78 002E3338  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80319D7C 002E333C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

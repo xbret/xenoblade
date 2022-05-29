@@ -14,8 +14,7 @@ DBInit:
 /* 8030912C 002D26EC  38 00 00 01 */	li r0, 1
 /* 80309130 002D26F0  90 0D B6 04 */	stw r0, lbl_80667784@sda21(r13)
 /* 80309134 002D26F4  4E 80 00 20 */	blr 
-/* 80309138 002D26F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030913C 002D26FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 __DBExceptionDestinationAux:
 /* 80309140 002D2700  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80309144 002D2704  7C 08 02 A6 */	mflr r0
@@ -35,8 +34,7 @@ __DBExceptionDestinationAux:
 /* 8030917C 002D273C  7C 08 03 A6 */	mtlr r0
 /* 80309180 002D2740  38 21 00 10 */	addi r1, r1, 0x10
 /* 80309184 002D2744  4E 80 00 20 */	blr 
-/* 80309188 002D2748  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030918C 002D274C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_80309190:
 /* 80309190 002D2750  7C 60 00 A6 */	mfmsr r3
 /* 80309194 002D2754  60 63 00 30 */	ori r3, r3, 0x30
@@ -51,9 +49,8 @@ __DBIsExceptionMarked:
 /* 803091AC 002D276C  80 64 00 04 */	lwz r3, 4(r4)
 /* 803091B0 002D2770  7C 63 00 38 */	and r3, r3, r0
 /* 803091B4 002D2774  4E 80 00 20 */	blr 
-/* 803091B8 002D2778  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803091BC 002D277C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global DBPrintf
 DBPrintf:
 /* 803091C0 002D2780  94 21 FF 90 */	stwu r1, -0x70(r1)

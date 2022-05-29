@@ -155,8 +155,8 @@ lbl_8031DE74:
 /* 8031DF10 002E74D0  7C 08 03 A6 */	mtlr r0
 /* 8031DF14 002E74D4  38 21 00 40 */	addi r1, r1, 0x40
 /* 8031DF18 002E74D8  4E 80 00 20 */	blr 
-/* 8031DF1C 002E74DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8031DF20
 func_8031DF20:
 /* 8031DF20 002E74E0  94 21 FF 80 */	stwu r1, -0x80(r1)
@@ -359,8 +359,8 @@ func_8031E1E0:
 /* 8031E200 002E77C0  90 C7 02 20 */	stw r6, 0x220(r7)
 /* 8031E204 002E77C4  B0 07 00 02 */	sth r0, 2(r7)
 /* 8031E208 002E77C8  4E 80 00 20 */	blr 
-/* 8031E20C 002E77CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetAlphaUpdate
 GXSetAlphaUpdate:
 /* 8031E210 002E77D0  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
@@ -374,8 +374,8 @@ GXSetAlphaUpdate:
 /* 8031E230 002E77F0  90 C7 02 20 */	stw r6, 0x220(r7)
 /* 8031E234 002E77F4  B0 07 00 02 */	sth r0, 2(r7)
 /* 8031E238 002E77F8  4E 80 00 20 */	blr 
-/* 8031E23C 002E77FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetZMode
 GXSetZMode:
 /* 8031E240 002E7800  81 22 BC 20 */	lwz r9, lbl_8066BFA0@sda21(r2)
@@ -391,10 +391,8 @@ GXSetZMode:
 /* 8031E268 002E7828  91 09 02 28 */	stw r8, 0x228(r9)
 /* 8031E26C 002E782C  B0 09 00 02 */	sth r0, 2(r9)
 /* 8031E270 002E7830  4E 80 00 20 */	blr 
-/* 8031E274 002E7834  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E278 002E7838  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E27C 002E783C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8031E280
 func_8031E280:
 /* 8031E280 002E7840  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
@@ -456,9 +454,8 @@ lbl_8031E34C:
 /* 8031E34C 002E790C  38 00 00 00 */	li r0, 0
 /* 8031E350 002E7910  B0 09 00 02 */	sth r0, 2(r9)
 /* 8031E354 002E7914  4E 80 00 20 */	blr 
-/* 8031E358 002E7918  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E35C 002E791C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8031E360
 func_8031E360:
 /* 8031E360 002E7920  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
@@ -472,8 +469,8 @@ func_8031E360:
 /* 8031E380 002E7940  90 C7 02 20 */	stw r6, 0x220(r7)
 /* 8031E384 002E7944  B0 07 00 02 */	sth r0, 2(r7)
 /* 8031E388 002E7948  4E 80 00 20 */	blr 
-/* 8031E38C 002E794C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8031E390
 func_8031E390:
 /* 8031E390 002E7950  81 02 BC 20 */	lwz r8, lbl_8066BFA0@sda21(r2)
@@ -504,10 +501,8 @@ func_8031E3C0:
 /* 8031E3E8 002E79A8  38 00 00 00 */	li r0, 0
 /* 8031E3EC 002E79AC  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031E3F0 002E79B0  4E 80 00 20 */	blr 
-/* 8031E3F4 002E79B4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E3F8 002E79B8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E3FC 002E79BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8031E400
 func_8031E400:
 /* 8031E400 002E79C0  94 21 FF E0 */	stwu r1, -0x20(r1)

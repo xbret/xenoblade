@@ -1,6 +1,6 @@
 #include "kyoshin/appgame/cf/main.h"
 
-
+//namespace cf {
 extern char* pkhFilenames[];
 extern u32 lbl_80528380[];
 extern u32 lbl_80528390[];
@@ -37,6 +37,8 @@ void func_80039F34(void) {
 }
 */
 
+extern void OSReport(char*);
+
 
 void main(int argc, char* argv[]) {
     /*
@@ -58,15 +60,16 @@ void main(int argc, char* argv[]) {
     func_804DAAA0(ptr5);
     
     lbl_80666438 = 0;
-    func_804336E4(0x680000, 0);
+    SetArenaMemorySize(0x680000, 0);
     func_80448E78(0);
     func_804559A8(0, 0x180000);
     func_80455FC8(lbl_80528380, 1);
     func_8045FBB0(lbl_80528390);
     func_8046023C(&func_80039F6C, &func_80039F90);
-    SaveStaticArcFilenameString(&staticArcStr);
-    func_804DDE2C(pkhFilenames);
+    SaveStaticArcFilenameStringPtr(&staticArcStr);
+    SavePkhFilenamesArrayPtr(pkhFilenames);
     func_80057CDC();
     func_8045D5C8(1);
     func_804442D8();
 }
+//}

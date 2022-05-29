@@ -9,10 +9,8 @@ DCEnable:
 /* 80353F68 0031D528  60 63 40 00 */	ori r3, r3, 0x4000
 /* 80353F6C 0031D52C  7C 70 FB A6 */	mtspr 0x3f0, r3
 /* 80353F70 0031D530  4E 80 00 20 */	blr 
-/* 80353F74 0031D534  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80353F78 0031D538  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80353F7C 0031D53C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global DCInvalidateRange
 DCInvalidateRange:
 /* 80353F80 0031D540  28 04 00 00 */	cmplwi r4, 0
@@ -27,8 +25,8 @@ lbl_80353F9C:
 /* 80353FA0 0031D560  38 63 00 20 */	addi r3, r3, 0x20
 /* 80353FA4 0031D564  42 00 FF F8 */	bdnz lbl_80353F9C
 /* 80353FA8 0031D568  4E 80 00 20 */	blr 
-/* 80353FAC 0031D56C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global DCFlushRange
 DCFlushRange:
 /* 80353FB0 0031D570  28 04 00 00 */	cmplwi r4, 0
@@ -75,8 +73,8 @@ lbl_8035402C:
 /* 80354030 0031D5F0  38 63 00 20 */	addi r3, r3, 0x20
 /* 80354034 0031D5F4  42 00 FF F8 */	bdnz lbl_8035402C
 /* 80354038 0031D5F8  4E 80 00 20 */	blr 
-/* 8035403C 0031D5FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global DCStoreRangeNoSync
 DCStoreRangeNoSync:
 /* 80354040 0031D600  28 04 00 00 */	cmplwi r4, 0
@@ -91,8 +89,8 @@ lbl_8035405C:
 /* 80354060 0031D620  38 63 00 20 */	addi r3, r3, 0x20
 /* 80354064 0031D624  42 00 FF F8 */	bdnz lbl_8035405C
 /* 80354068 0031D628  4E 80 00 20 */	blr 
-/* 8035406C 0031D62C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global DCZeroRange
 DCZeroRange:
 /* 80354070 0031D630  28 04 00 00 */	cmplwi r4, 0
@@ -107,8 +105,8 @@ lbl_8035408C:
 /* 80354090 0031D650  38 63 00 20 */	addi r3, r3, 0x20
 /* 80354094 0031D654  42 00 FF F8 */	bdnz lbl_8035408C
 /* 80354098 0031D658  4E 80 00 20 */	blr 
-/* 8035409C 0031D65C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global ICInvalidateRange
 ICInvalidateRange:
 /* 803540A0 0031D660  28 04 00 00 */	cmplwi r4, 0
@@ -125,10 +123,8 @@ lbl_803540BC:
 /* 803540C8 0031D688  7C 00 04 AC */	sync 0
 /* 803540CC 0031D68C  4C 00 01 2C */	isync 
 /* 803540D0 0031D690  4E 80 00 20 */	blr 
-/* 803540D4 0031D694  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803540D8 0031D698  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803540DC 0031D69C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global ICFlashInvalidate
 ICFlashInvalidate:
 /* 803540E0 0031D6A0  7C 70 FA A6 */	mfspr r3, 0x3f0
@@ -143,10 +139,8 @@ ICEnable:
 /* 803540F8 0031D6B8  60 63 80 00 */	ori r3, r3, 0x8000
 /* 803540FC 0031D6BC  7C 70 FB A6 */	mtspr 0x3f0, r3
 /* 80354100 0031D6C0  4E 80 00 20 */	blr 
-/* 80354104 0031D6C4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80354108 0031D6C8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035410C 0031D6CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __LCEnable
 __LCEnable:
 /* 80354110 0031D6D0  7C A0 00 A6 */	mfmsr r5
@@ -202,8 +196,8 @@ lbl_8035419C:
 /* 803541D0 0031D790  60 00 00 00 */	nop 
 /* 803541D4 0031D794  60 00 00 00 */	nop 
 /* 803541D8 0031D798  4E 80 00 20 */	blr 
-/* 803541DC 0031D79C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global LCEnable
 LCEnable:
 /* 803541E0 0031D7A0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -220,9 +214,8 @@ LCEnable:
 /* 8035420C 0031D7CC  7C 08 03 A6 */	mtlr r0
 /* 80354210 0031D7D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80354214 0031D7D4  4E 80 00 20 */	blr 
-/* 80354218 0031D7D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035421C 0031D7DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global LCDisable
 LCDisable:
 /* 80354220 0031D7E0  3C 60 E0 00 */	lis r3, 0xE0000020@ha
@@ -236,9 +229,8 @@ lbl_8035422C:
 /* 8035423C 0031D7FC  54 84 01 04 */	rlwinm r4, r4, 0, 4, 2
 /* 80354240 0031D800  7C 98 E3 A6 */	mtspr 0x398, r4
 /* 80354244 0031D804  4E 80 00 20 */	blr 
-/* 80354248 0031D808  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035424C 0031D80C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80354250
 func_80354250:
 /* 80354250 0031D810  54 A6 F6 FE */	rlwinm r6, r5, 0x1e, 0x1b, 0x1f
@@ -250,10 +242,8 @@ func_80354250:
 /* 80354268 0031D828  60 C6 00 12 */	ori r6, r6, 0x12
 /* 8035426C 0031D82C  7C DB E3 A6 */	mtspr 0x39b, r6
 /* 80354270 0031D830  4E 80 00 20 */	blr 
-/* 80354274 0031D834  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80354278 0031D838  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035427C 0031D83C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global LCStoreBlocks
 LCStoreBlocks:
 /* 80354280 0031D840  54 A6 F6 FE */	rlwinm r6, r5, 0x1e, 0x1b, 0x1f
@@ -265,10 +255,8 @@ LCStoreBlocks:
 /* 80354298 0031D858  60 C6 00 02 */	ori r6, r6, 2
 /* 8035429C 0031D85C  7C DB E3 A6 */	mtspr 0x39b, r6
 /* 803542A0 0031D860  4E 80 00 20 */	blr 
-/* 803542A4 0031D864  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803542A8 0031D868  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803542AC 0031D86C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global LCStoreData
 LCStoreData:
 /* 803542B0 0031D870  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -320,8 +308,8 @@ LCQueueWait:
 /* 80354350 0031D910  7C 98 E2 A6 */	mfspr r4, 0x398
 /* 80354354 0031D914  54 83 47 3E */	rlwinm r3, r4, 8, 0x1c, 0x1f
 /* 80354358 0031D918  4E 80 00 20 */	blr 
-/* 8035435C 0031D91C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global DMAErrorHandler
 DMAErrorHandler:
 /* 80354360 0031D920  7C 98 E2 A6 */	mfspr r4, 0x398
@@ -329,9 +317,7 @@ DMAErrorHandler:
 /* 80354368 0031D928  7C 04 18 00 */	cmpw r4, r3
 /* 8035436C 0031D92C  41 81 FF F4 */	bgt DMAErrorHandler
 /* 80354370 0031D930  4E 80 00 20 */	blr 
-/* 80354374 0031D934  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80354378 0031D938  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035437C 0031D93C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_80354380:
 /* 80354380 0031D940  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80354384 0031D944  7C 08 02 A6 */	mflr r0
@@ -422,9 +408,8 @@ lbl_803544A4:
 /* 803544BC 0031DA7C  7C 08 03 A6 */	mtlr r0
 /* 803544C0 0031DA80  38 21 00 80 */	addi r1, r1, 0x80
 /* 803544C4 0031DA84  4E 80 00 20 */	blr 
-/* 803544C8 0031DA88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803544CC 0031DA8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSCacheInit
 __OSCacheInit:
 /* 803544D0 0031DA90  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -511,5 +496,4 @@ lbl_803545D4:
 /* 803545FC 0031DBBC  7C 08 03 A6 */	mtlr r0
 /* 80354600 0031DBC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80354604 0031DBC4  4E 80 00 20 */	blr 
-/* 80354608 0031DBC8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035460C 0031DBCC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

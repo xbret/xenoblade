@@ -23,10 +23,8 @@ DSPReadMailFromDSP:
 /* 80309238 002D27F8  A0 63 50 06 */	lhz r3, 0x5006(r3)
 /* 8030923C 002D27FC  50 03 80 1E */	rlwimi r3, r0, 0x10, 0, 0xf
 /* 80309240 002D2800  4E 80 00 20 */	blr 
-/* 80309244 002D2804  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80309248 002D2808  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030924C 002D280C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global DSPSendMailToDSP
 DSPSendMailToDSP:
 /* 80309250 002D2810  3C 80 CC 00 */	lis r4, 0xCC005000@ha
@@ -34,10 +32,8 @@ DSPSendMailToDSP:
 /* 80309258 002D2818  B0 04 50 00 */	sth r0, 0xCC005000@l(r4)
 /* 8030925C 002D281C  B0 64 50 02 */	sth r3, 0x5002(r4)
 /* 80309260 002D2820  4E 80 00 20 */	blr 
-/* 80309264 002D2824  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80309268 002D2828  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030926C 002D282C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global DSPInit
 DSPInit:
 /* 80309270 002D2830  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -90,15 +86,14 @@ lbl_8030931C:
 /* 80309328 002D28E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030932C 002D28EC  4E 80 00 20 */	blr 
 
-.global func_80309330
-func_80309330:
+.global DSPCheckInit
+DSPCheckInit:
 /* 80309330 002D28F0  80 6D B6 08 */	lwz r3, lbl_80667788@sda21(r13)
 /* 80309334 002D28F4  4E 80 00 20 */	blr 
-/* 80309338 002D28F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030933C 002D28FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80309340
-func_80309340:
+.balign 16, 0
+.global DSPAddTask
+DSPAddTask:
 /* 80309340 002D2900  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80309344 002D2904  7C 08 02 A6 */	mflr r0
 /* 80309348 002D2908  90 01 00 14 */	stw r0, 0x14(r1)
@@ -148,8 +143,8 @@ func_803093B0:
 /* 803093E8 002D29A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803093EC 002D29AC  4E 80 00 20 */	blr 
 
-.global func_803093F0
-func_803093F0:
+.global DSPAssertTask
+DSPAssertTask:
 /* 803093F0 002D29B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803093F4 002D29B4  7C 08 02 A6 */	mflr r0
 /* 803093F8 002D29B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -201,4 +196,4 @@ lbl_80309494:
 /* 803094A0 002D2A60  7C 08 03 A6 */	mtlr r0
 /* 803094A4 002D2A64  38 21 00 10 */	addi r1, r1, 0x10
 /* 803094A8 002D2A68  4E 80 00 20 */	blr 
-/* 803094AC 002D2A6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

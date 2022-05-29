@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802F35D8
-func_802F35D8:
+.global HID_DevInit
+HID_DevInit:
 /* 802F35D8 002BCB98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F35DC 002BCB9C  7C 08 02 A6 */	mflr r0
 /* 802F35E0 002BCBA0  38 80 00 00 */	li r4, 0

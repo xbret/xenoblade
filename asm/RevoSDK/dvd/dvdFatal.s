@@ -2,8 +2,70 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803102D0
-func_803102D0:
+.global __DVDShowFatalMessage
+__DVDShowFatalMessage:
+/* 80310200 002D97C0  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 80310204 002D97C4  7C 08 02 A6 */	mflr r0
+/* 80310208 002D97C8  90 01 00 24 */	stw r0, 0x24(r1)
+/* 8031020C 002D97CC  93 E1 00 1C */	stw r31, 0x1c(r1)
+/* 80310210 002D97D0  3B E0 00 00 */	li r31, 0
+/* 80310214 002D97D4  93 C1 00 18 */	stw r30, 0x18(r1)
+/* 80310218 002D97D8  83 C2 BC 08 */	lwz r30, lbl_8066BF88@sda21(r2)
+/* 8031021C 002D97DC  93 A1 00 14 */	stw r29, 0x14(r1)
+/* 80310220 002D97E0  48 05 0D F1 */	bl func_80361010
+/* 80310224 002D97E4  54 60 06 3F */	clrlwi. r0, r3, 0x18
+/* 80310228 002D97E8  40 82 00 10 */	bne lbl_80310238
+/* 8031022C 002D97EC  38 60 00 01 */	li r3, 1
+/* 80310230 002D97F0  48 04 77 E1 */	bl func_80357A10
+/* 80310234 002D97F4  48 00 00 0C */	b lbl_80310240
+lbl_80310238:
+/* 80310238 002D97F8  38 60 00 00 */	li r3, 0
+/* 8031023C 002D97FC  48 04 77 D5 */	bl func_80357A10
+lbl_80310240:
+/* 80310240 002D9800  48 05 13 91 */	bl func_803615D0
+/* 80310244 002D9804  7C 63 07 74 */	extsb r3, r3
+/* 80310248 002D9808  38 03 FF FC */	addi r0, r3, -4
+/* 8031024C 002D980C  28 00 00 01 */	cmplwi r0, 1
+/* 80310250 002D9810  40 81 00 24 */	ble lbl_80310274
+/* 80310254 002D9814  2C 03 00 02 */	cmpwi r3, 2
+/* 80310258 002D9818  41 82 00 10 */	beq lbl_80310268
+/* 8031025C 002D981C  3F A0 80 51 */	lis r29, lbl_8050E3A8@ha
+/* 80310260 002D9820  3B BD E3 A8 */	addi r29, r29, lbl_8050E3A8@l
+/* 80310264 002D9824  48 00 00 14 */	b lbl_80310278
+lbl_80310268:
+/* 80310268 002D9828  3F A0 80 51 */	lis r29, lbl_8050E3C4@ha
+/* 8031026C 002D982C  3B BD E3 C4 */	addi r29, r29, lbl_8050E3C4@l
+/* 80310270 002D9830  48 00 00 08 */	b lbl_80310278
+lbl_80310274:
+/* 80310274 002D9834  3B AD 98 18 */	addi r29, r13, lbl_80665998@sda21
+lbl_80310278:
+/* 80310278 002D9838  48 05 0D 99 */	bl func_80361010
+/* 8031027C 002D983C  54 60 06 3E */	clrlwi r0, r3, 0x18
+/* 80310280 002D9840  28 00 00 06 */	cmplwi r0, 6
+/* 80310284 002D9844  40 81 00 0C */	ble lbl_80310290
+/* 80310288 002D9848  80 BD 00 04 */	lwz r5, 4(r29)
+/* 8031028C 002D984C  48 00 00 10 */	b lbl_8031029C
+lbl_80310290:
+/* 80310290 002D9850  48 05 0D 81 */	bl func_80361010
+/* 80310294 002D9854  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
+/* 80310298 002D9858  7C BD 00 2E */	lwzx r5, r29, r0
+lbl_8031029C:
+/* 8031029C 002D985C  93 E1 00 08 */	stw r31, 8(r1)
+/* 803102A0 002D9860  38 61 00 0C */	addi r3, r1, 0xc
+/* 803102A4 002D9864  38 81 00 08 */	addi r4, r1, 8
+/* 803102A8 002D9868  93 C1 00 0C */	stw r30, 0xc(r1)
+/* 803102AC 002D986C  48 04 6C 95 */	bl OSFatal
+/* 803102B0 002D9870  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 803102B4 002D9874  83 E1 00 1C */	lwz r31, 0x1c(r1)
+/* 803102B8 002D9878  83 C1 00 18 */	lwz r30, 0x18(r1)
+/* 803102BC 002D987C  83 A1 00 14 */	lwz r29, 0x14(r1)
+/* 803102C0 002D9880  7C 08 03 A6 */	mtlr r0
+/* 803102C4 002D9884  38 21 00 20 */	addi r1, r1, 0x20
+/* 803102C8 002D9888  4E 80 00 20 */	blr 
+
+.balign 16, 0
+.global DVDSetAutoFatalMessaging
+DVDSetAutoFatalMessaging:
 /* 803102D0 002D9890  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803102D4 002D9894  7C 08 02 A6 */	mflr r0
 /* 803102D8 002D9898  90 01 00 14 */	stw r0, 0x14(r1)
@@ -17,8 +79,8 @@ func_803102D0:
 /* 803102F8 002D98B8  7C 00 2B 78 */	or r0, r0, r5
 /* 803102FC 002D98BC  54 1F 0F FE */	srwi r31, r0, 0x1f
 /* 80310300 002D98C0  41 82 00 0C */	beq lbl_8031030C
-/* 80310304 002D98C4  3C 80 80 31 */	lis r4, func_80310200@ha
-/* 80310308 002D98C8  38 84 02 00 */	addi r4, r4, func_80310200@l
+/* 80310304 002D98C4  3C 80 80 31 */	lis r4, __DVDShowFatalMessage@ha
+/* 80310308 002D98C8  38 84 02 00 */	addi r4, r4, __DVDShowFatalMessage@l
 lbl_8031030C:
 /* 8031030C 002D98CC  90 8D B7 08 */	stw r4, lbl_80667888@sda21(r13)
 /* 80310310 002D98D0  48 04 86 E1 */	bl OSRestoreInterrupts
@@ -28,26 +90,23 @@ lbl_8031030C:
 /* 80310320 002D98E0  7C 08 03 A6 */	mtlr r0
 /* 80310324 002D98E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80310328 002D98E8  4E 80 00 20 */	blr 
-/* 8031032C 002D98EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80310330
-func_80310330:
+.balign 16, 0
+.global __DVDGetAutoFatalMessaging
+__DVDGetAutoFatalMessaging:
 /* 80310330 002D98F0  80 6D B7 08 */	lwz r3, lbl_80667888@sda21(r13)
 /* 80310334 002D98F4  7C 03 00 D0 */	neg r0, r3
 /* 80310338 002D98F8  7C 00 1B 78 */	or r0, r0, r3
 /* 8031033C 002D98FC  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 80310340 002D9900  4E 80 00 20 */	blr 
-/* 80310344 002D9904  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80310348 002D9908  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031034C 002D990C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80310350
-func_80310350:
+.balign 16, 0
+.global __DVDPrintFatalMessage
+__DVDPrintFatalMessage:
 /* 80310350 002D9910  81 8D B7 08 */	lwz r12, lbl_80667888@sda21(r13)
 /* 80310354 002D9914  2C 0C 00 00 */	cmpwi r12, 0
 /* 80310358 002D9918  4D 82 00 20 */	beqlr 
 /* 8031035C 002D991C  7D 89 03 A6 */	mtctr r12
 /* 80310360 002D9920  4E 80 04 20 */	bctr 
 /* 80310364 002D9924  4E 80 00 20 */	blr 
-/* 80310368 002D9928  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031036C 002D992C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

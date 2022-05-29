@@ -21,7 +21,7 @@ func_80318600:
 /* 80318638 002E1BF8  54 00 FF FF */	rlwinm. r0, r0, 0x1f, 0x1f, 0x1f
 /* 8031863C 002E1BFC  41 82 00 44 */	beq lbl_80318680
 /* 80318640 002E1C00  80 6D B7 C4 */	lwz r3, lbl_80667944@sda21(r13)
-/* 80318644 002E1C04  48 04 3B FD */	bl func_8035C240
+/* 80318644 002E1C04  48 04 3B FD */	bl OSResumeThread
 /* 80318648 002E1C08  38 00 00 00 */	li r0, 0
 /* 8031864C 002E1C0C  90 0D B7 C0 */	stw r0, lbl_80667940@sda21(r13)
 /* 80318650 002E1C10  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
@@ -62,7 +62,7 @@ lbl_80318680:
 /* 803186D8 002E1C98  B0 83 00 04 */	sth r4, 4(r3)
 /* 803186DC 002E1C9C  90 0D B7 C0 */	stw r0, lbl_80667940@sda21(r13)
 /* 803186E0 002E1CA0  80 6D B7 C4 */	lwz r3, lbl_80667944@sda21(r13)
-/* 803186E4 002E1CA4  48 04 3D FD */	bl func_8035C4E0
+/* 803186E4 002E1CA4  48 04 3D FD */	bl OSSuspendThread
 lbl_803186E8:
 /* 803186E8 002E1CA8  80 7F 00 08 */	lwz r3, 8(r31)
 /* 803186EC 002E1CAC  54 60 DF FF */	rlwinm. r0, r3, 0x1b, 0x1f, 0x1f
@@ -134,8 +134,8 @@ lbl_803187CC:
 /* 803187E0 002E1DA0  7C 08 03 A6 */	mtlr r0
 /* 803187E4 002E1DA4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803187E8 002E1DA8  4E 80 00 20 */	blr 
-/* 803187EC 002E1DAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803187F0
 func_803187F0:
 /* 803187F0 002E1DB0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -210,9 +210,8 @@ lbl_803188D8:
 /* 803188DC 002E1E9C  7C 08 03 A6 */	mtlr r0
 /* 803188E0 002E1EA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803188E4 002E1EA4  4E 80 00 20 */	blr 
-/* 803188E8 002E1EA8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803188EC 002E1EAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803188F0
 func_803188F0:
 /* 803188F0 002E1EB0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -587,9 +586,8 @@ lbl_80318E4C:
 func_80318E60:
 /* 80318E60 002E2420  88 6D B7 B1 */	lbz r3, lbl_80667931@sda21(r13)
 /* 80318E64 002E2424  4E 80 00 20 */	blr 
-/* 80318E68 002E2428  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80318E6C 002E242C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80318E70
 func_80318E70:
 /* 80318E70 002E2430  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -638,10 +636,8 @@ func_80318F00:
 /* 80318F08 002E24C8  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 80318F0C 002E24CC  90 05 00 00 */	stw r0, 0(r5)
 /* 80318F10 002E24D0  4E 80 00 20 */	blr 
-/* 80318F14 002E24D4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80318F18 002E24D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80318F1C 002E24DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80318F20
 func_80318F20:
 /* 80318F20 002E24E0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -661,10 +657,8 @@ func_80318F20:
 /* 80318F58 002E2518  7C 08 03 A6 */	mtlr r0
 /* 80318F5C 002E251C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80318F60 002E2520  4E 80 00 20 */	blr 
-/* 80318F64 002E2524  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80318F68 002E2528  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80318F6C 002E252C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80318F70
 func_80318F70:
 /* 80318F70 002E2530  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -720,7 +714,7 @@ func_80319010:
 /* 8031902C 002E25EC  48 03 F9 F5 */	bl __OSSetInterruptHandler
 /* 80319030 002E25F0  38 60 40 00 */	li r3, 0x4000
 /* 80319034 002E25F4  48 03 FD CD */	bl __OSUnmaskInterrupts
-/* 80319038 002E25F8  48 04 25 A9 */	bl func_8035B5E0
+/* 80319038 002E25F8  48 04 25 A9 */	bl OSGetCurrentThread
 /* 8031903C 002E25FC  3B E0 00 00 */	li r31, 0
 /* 80319040 002E2600  90 6D B7 C4 */	stw r3, lbl_80667944@sda21(r13)
 /* 80319044 002E2604  3C 60 80 5D */	lis r3, lbl_805CD584@ha
@@ -741,8 +735,8 @@ func_80319010:
 /* 80319080 002E2640  7C 08 03 A6 */	mtlr r0
 /* 80319084 002E2644  38 21 00 10 */	addi r1, r1, 0x10
 /* 80319088 002E2648  4E 80 00 20 */	blr 
-/* 8031908C 002E264C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80319090
 func_80319090:
 /* 80319090 002E2650  94 21 FF E0 */	stwu r1, -0x20(r1)

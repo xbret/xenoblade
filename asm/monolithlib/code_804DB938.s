@@ -2536,13 +2536,13 @@ lbl_804DDE24:
 /* 804DDE24 004A73E4  38 60 00 00 */	li r3, 0
 /* 804DDE28 004A73E8  4E 80 00 20 */	blr 
 
-.global func_804DDE2C
-func_804DDE2C:
+.global SavePkhFilenamesArrayPtr
+SavePkhFilenamesArrayPtr:
 /* 804DDE2C 004A73EC  90 6D C1 6C */	stw r3, lbl_806682EC@sda21(r13)
 /* 804DDE30 004A73F0  4E 80 00 20 */	blr 
 
-.global SaveStaticArcFilenameString
-SaveStaticArcFilenameString:
+.global SaveStaticArcFilenameStringPtr
+SaveStaticArcFilenameStringPtr:
 /* 804DDE34 004A73F4  90 6D C1 70 */	stw r3, staticArcFilenameString@sda21(r13)
 /* 804DDE38 004A73F8  4E 80 00 20 */	blr 
 
@@ -21184,7 +21184,7 @@ func_804EE0F4:
 /* 804EE118 004B76D8  38 64 E4 6C */	addi r3, r4, func_804EE46C@l
 /* 804EE11C 004B76DC  98 0D C1 BC */	stb r0, lbl_8066833C@sda21(r13)
 /* 804EE120 004B76E0  98 0D C1 BD */	stb r0, lbl_8066833D@sda21(r13)
-/* 804EE124 004B76E4  4B E6 EF ED */	bl func_8035D110
+/* 804EE124 004B76E4  4B E6 EF ED */	bl OSSetPowerCallback
 /* 804EE128 004B76E8  3C 60 80 4F */	lis r3, func_804EE480@ha
 /* 804EE12C 004B76EC  38 63 E4 80 */	addi r3, r3, func_804EE480@l
 /* 804EE130 004B76F0  4B E6 EE F1 */	bl OSSetResetCallback
@@ -21264,8 +21264,8 @@ func_804EE210:
 /* 804EE218 004B77D8  42 00 FF B4 */	bdnz lbl_804EE1CC
 /* 804EE21C 004B77DC  4E 80 00 20 */	blr 
 
-.global func_804EE220
-func_804EE220:
+.global SetOSErrorHandlers1
+SetOSErrorHandlers1:
 /* 804EE220 004B77E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804EE224 004B77E4  7C 08 02 A6 */	mflr r0
 /* 804EE228 004B77E8  38 60 00 00 */	li r3, 0
@@ -21303,8 +21303,8 @@ func_804EE220:
 /* 804EE2A8 004B7868  38 21 00 10 */	addi r1, r1, 0x10
 /* 804EE2AC 004B786C  4E 80 00 20 */	blr 
 
-.global func_804EE2B0
-func_804EE2B0:
+.global SetOSErrorHandlers2
+SetOSErrorHandlers2:
 /* 804EE2B0 004B7870  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804EE2B4 004B7874  7C 08 02 A6 */	mflr r0
 /* 804EE2B8 004B7878  38 60 00 00 */	li r3, 0
@@ -21405,14 +21405,14 @@ func_804EE410:
 /* 804EE418 004B79D8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804EE41C 004B79DC  4B F5 64 61 */	bl func_8044487C
 /* 804EE420 004B79E0  38 60 00 01 */	li r3, 1
-/* 804EE424 004B79E4  4B E7 7F 1D */	bl func_80366340
-/* 804EE428 004B79E8  4B E7 7D 89 */	bl func_803661B0
-/* 804EE42C 004B79EC  4B E7 6D C5 */	bl func_803651F0
-/* 804EE430 004B79F0  4B E7 6D C1 */	bl func_803651F0
-/* 804EE434 004B79F4  4B E7 6D BD */	bl func_803651F0
-/* 804EE438 004B79F8  4B E7 6D B9 */	bl func_803651F0
-/* 804EE43C 004B79FC  4B E7 6D B5 */	bl func_803651F0
-/* 804EE440 004B7A00  4B E7 6D B1 */	bl func_803651F0
+/* 804EE424 004B79E4  4B E7 7F 1D */	bl VISetBlack
+/* 804EE428 004B79E8  4B E7 7D 89 */	bl VIFlush
+/* 804EE42C 004B79EC  4B E7 6D C5 */	bl VIWaitForRetrace
+/* 804EE430 004B79F0  4B E7 6D C1 */	bl VIWaitForRetrace
+/* 804EE434 004B79F4  4B E7 6D BD */	bl VIWaitForRetrace
+/* 804EE438 004B79F8  4B E7 6D B9 */	bl VIWaitForRetrace
+/* 804EE43C 004B79FC  4B E7 6D B5 */	bl VIWaitForRetrace
+/* 804EE440 004B7A00  4B E7 6D B1 */	bl VIWaitForRetrace
 /* 804EE444 004B7A04  3C 60 80 53 */	lis r3, lbl_80528168@ha
 /* 804EE448 004B7A08  38 63 81 68 */	addi r3, r3, lbl_80528168@l
 /* 804EE44C 004B7A0C  4C C6 31 82 */	crclr 6

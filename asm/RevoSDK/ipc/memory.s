@@ -228,15 +228,13 @@ lbl_803446B4:
 /* 803446D0 0030DC90  7C 08 03 A6 */	mtlr r0
 /* 803446D4 0030DC94  38 21 00 20 */	addi r1, r1, 0x20
 /* 803446D8 0030DC98  4E 80 00 20 */	blr 
-/* 803446DC 0030DC9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global iosAllocAligned
 iosAllocAligned:
 /* 803446E0 0030DCA0  4B FF FE 00 */	b func_803444E0
-/* 803446E4 0030DCA4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803446E8 0030DCA8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803446EC 0030DCAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803446F0
 func_803446F0:
 /* 803446F0 0030DCB0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -374,5 +372,4 @@ lbl_803448B4:
 /* 803448CC 0030DE8C  7C 08 03 A6 */	mtlr r0
 /* 803448D0 0030DE90  38 21 00 20 */	addi r1, r1, 0x20
 /* 803448D4 0030DE94  4E 80 00 20 */	blr 
-/* 803448D8 0030DE98  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803448DC 0030DE9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

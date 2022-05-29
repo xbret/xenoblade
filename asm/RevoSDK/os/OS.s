@@ -79,9 +79,8 @@ lbl_80351920:
 /* 8035199C 0031AF5C  FF E0 00 90 */	fmr f31, f0
 /* 803519A0 0031AF60  FD FE 05 8E */	mtfsf 0xff, f0
 /* 803519A4 0031AF64  4E 80 00 20 */	blr 
-/* 803519A8 0031AF68  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803519AC 0031AF6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSGetIOSRev
 __OSGetIOSRev:
 /* 803519B0 0031AF70  3C 80 C0 00 */	lis r4, 0xC0003144@ha
@@ -111,8 +110,8 @@ __OSGetIOSRev:
 /* 80351A10 0031AFD0  98 83 00 05 */	stb r4, 5(r3)
 /* 80351A14 0031AFD4  B0 03 00 06 */	sth r0, 6(r3)
 /* 80351A18 0031AFD8  4E 80 00 20 */	blr 
-/* 80351A1C 0031AFDC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSGetConsoleType
 OSGetConsoleType:
 /* 80351A20 0031AFE0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -220,7 +219,7 @@ lbl_80351B74:
 /* 80351B74 0031B134  38 60 01 00 */	li r3, 0x100
 /* 80351B78 0031B138  48 00 00 E8 */	b lbl_80351C60
 lbl_80351B7C:
-/* 80351B7C 0031B13C  48 00 79 05 */	bl func_80359480
+/* 80351B7C 0031B13C  48 00 79 05 */	bl OSGetPhysicalMem2Size
 /* 80351B80 0031B140  2C 1F 00 00 */	cmpwi r31, 0
 /* 80351B84 0031B144  41 82 00 28 */	beq lbl_80351BAC
 /* 80351B88 0031B148  28 1F 00 01 */	cmplwi r31, 1
@@ -290,10 +289,8 @@ lbl_80351C60:
 /* 80351C68 0031B228  7C 08 03 A6 */	mtlr r0
 /* 80351C6C 0031B22C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80351C70 0031B230  4E 80 00 20 */	blr 
-/* 80351C74 0031B234  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80351C78 0031B238  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80351C7C 0031B23C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global ClearArena
 ClearArena:
 /* 80351C80 0031B240  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -430,8 +427,8 @@ lbl_80351E44:
 /* 80351E50 0031B410  7C 08 03 A6 */	mtlr r0
 /* 80351E54 0031B414  38 21 00 10 */	addi r1, r1, 0x10
 /* 80351E58 0031B418  4E 80 00 20 */	blr 
-/* 80351E5C 0031B41C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global ClearMEM2Arena
 ClearMEM2Arena:
 /* 80351E60 0031B420  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -570,10 +567,8 @@ lbl_8035202C:
 /* 80352038 0031B5F8  7C 08 03 A6 */	mtlr r0
 /* 8035203C 0031B5FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80352040 0031B600  4E 80 00 20 */	blr 
-/* 80352044 0031B604  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352048 0031B608  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035204C 0031B60C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global InquiryCallback
 InquiryCallback:
 /* 80352050 0031B610  80 04 00 0C */	lwz r0, 0xc(r4)
@@ -593,8 +588,8 @@ lbl_8035207C:
 /* 80352080 0031B640  38 00 00 01 */	li r0, 1
 /* 80352084 0031B644  B0 03 30 E6 */	sth r0, 0x800030E6@l(r3)
 /* 80352088 0031B648  4E 80 00 20 */	blr 
-/* 8035208C 0031B64C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global ReportOSInfo
 ReportOSInfo:
 /* 80352090 0031B650  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -753,9 +748,9 @@ lbl_8035224C:
 /* 803522B0 0031B870  54 05 06 3E */	clrlwi r5, r0, 0x18
 /* 803522B4 0031B874  4C C6 31 82 */	crclr 6
 /* 803522B8 0031B878  48 00 2C 39 */	bl OSReport
-/* 803522BC 0031B87C  48 00 71 E5 */	bl func_803594A0
+/* 803522BC 0031B87C  48 00 71 E5 */	bl OSGetConsoleSimulatedMem2Size
 /* 803522C0 0031B880  7C 7E 1B 78 */	mr r30, r3
-/* 803522C4 0031B884  48 00 71 CD */	bl func_80359490
+/* 803522C4 0031B884  48 00 71 CD */	bl OSGetConsoleSimulatedMem1Size
 /* 803522C8 0031B888  7C 03 F2 14 */	add r0, r3, r30
 /* 803522CC 0031B88C  38 7F 01 A8 */	addi r3, r31, 0x1a8
 /* 803522D0 0031B890  54 04 65 3E */	srwi r4, r0, 0x14
@@ -783,10 +778,8 @@ lbl_8035224C:
 /* 80352328 0031B8E8  7C 08 03 A6 */	mtlr r0
 /* 8035232C 0031B8EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80352330 0031B8F0  4E 80 00 20 */	blr 
-/* 80352334 0031B8F4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352338 0031B8F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035233C 0031B8FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSInit
 OSInit:
 /* 80352340 0031B900  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -997,7 +990,7 @@ lbl_8035261C:
 /* 8035263C 0031BBFC  48 00 AB C5 */	bl __OSInitSTM
 /* 80352640 0031BC00  48 00 CE F1 */	bl SCInit
 lbl_80352644:
-/* 80352644 0031BC04  48 00 CF 8D */	bl func_8035F5D0
+/* 80352644 0031BC04  48 00 CF 8D */	bl SCCheckStatus
 /* 80352648 0031BC08  28 03 00 01 */	cmplwi r3, 1
 /* 8035264C 0031BC0C  41 82 FF F8 */	beq lbl_80352644
 /* 80352650 0031BC10  48 00 BA 21 */	bl __OSInitNet
@@ -1083,7 +1076,7 @@ lbl_80352764:
 /* 80352778 0031BD38  38 61 00 08 */	addi r3, r1, 8
 /* 8035277C 0031BD3C  38 BF 03 10 */	addi r5, r31, 0x310
 /* 80352780 0031BD40  93 81 00 08 */	stw r28, 8(r1)
-/* 80352784 0031BD44  48 00 47 BD */	bl func_80356F40
+/* 80352784 0031BD44  48 00 47 BD */	bl OSFatal
 /* 80352788 0031BD48  38 BF 02 40 */	addi r5, r31, 0x240
 /* 8035278C 0031BD4C  38 6D 99 C0 */	addi r3, r13, lbl_80665B40@sda21
 /* 80352790 0031BD50  38 80 04 D4 */	li r4, 0x4d4
@@ -1111,7 +1104,7 @@ lbl_803527C0:
 /* 803527E0 0031BDA0  38 7E 00 40 */	addi r3, r30, 0x40
 /* 803527E4 0031BDA4  38 9E 00 20 */	addi r4, r30, 0x20
 /* 803527E8 0031BDA8  38 A5 20 50 */	addi r5, r5, InquiryCallback@l
-/* 803527EC 0031BDAC  4B FB C2 05 */	bl func_8030E9F0
+/* 803527EC 0031BDAC  4B FB C2 05 */	bl DVDInquiryAsync
 lbl_803527F0:
 /* 803527F0 0031BDB0  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
 /* 803527F4 0031BDB4  2C 00 00 00 */	cmpwi r0, 0
@@ -1127,7 +1120,7 @@ lbl_8035280C:
 /* 80352814 0031BDD4  80 0D B8 F4 */	lwz r0, lbl_80667A74@sda21(r13)
 /* 80352818 0031BDD8  2C 00 00 00 */	cmpwi r0, 0
 /* 8035281C 0031BDDC  40 82 00 14 */	bne lbl_80352830
-/* 80352820 0031BDE0  4B FB DB 61 */	bl func_80310380
+/* 80352820 0031BDE0  4B FB DB 61 */	bl __DVDCheckDevice
 /* 80352824 0031BDE4  2C 03 00 00 */	cmpwi r3, 0
 /* 80352828 0031BDE8  40 82 00 08 */	bne lbl_80352830
 /* 8035282C 0031BDEC  48 00 7E 35 */	bl OSReturnToMenu
@@ -1138,7 +1131,7 @@ lbl_80352830:
 /* 8035283C 0031BDFC  80 0D B8 84 */	lwz r0, lbl_80667A04@sda21(r13)
 /* 80352840 0031BE00  2C 00 00 00 */	cmpwi r0, 0
 /* 80352844 0031BE04  40 82 00 08 */	bne lbl_8035284C
-/* 80352848 0031BE08  48 00 C6 59 */	bl func_8035EEA0
+/* 80352848 0031BE08  48 00 C6 59 */	bl __OSInitPlayTime
 lbl_8035284C:
 /* 8035284C 0031BE0C  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
 /* 80352850 0031BE10  2C 00 00 00 */	cmpwi r0, 0
@@ -1149,7 +1142,7 @@ lbl_8035284C:
 /* 80352864 0031BE24  80 0D B8 F4 */	lwz r0, lbl_80667A74@sda21(r13)
 /* 80352868 0031BE28  2C 00 00 00 */	cmpwi r0, 0
 /* 8035286C 0031BE2C  40 82 00 08 */	bne lbl_80352874
-/* 80352870 0031BE30  48 00 B3 91 */	bl func_8035DC00
+/* 80352870 0031BE30  48 00 B3 91 */	bl __OSStartPlayRecord
 lbl_80352874:
 /* 80352874 0031BE34  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 80352878 0031BE38  83 E1 00 2C */	lwz r31, 0x2c(r1)
@@ -1159,10 +1152,8 @@ lbl_80352874:
 /* 80352888 0031BE48  7C 08 03 A6 */	mtlr r0
 /* 8035288C 0031BE4C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80352890 0031BE50  4E 80 00 20 */	blr 
-/* 80352894 0031BE54  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352898 0031BE58  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035289C 0031BE5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSExceptionInit
 OSExceptionInit:
 /* 803528A0 0031BE60  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1349,18 +1340,12 @@ __OSDBIntegrator:
 
 .global __OSDBJump1
 __OSDBJump1:
-/* 80352B44 0031C104  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352B48 0031C108  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352B4C 0031C10C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-
+.balign 16, 0
 .global __OSDBJump
 __OSDBJump:
 /* 80352B50 0031C110  48 00 00 63 */	bla 0x60
 lbl_80352B54:
-/* 80352B54 0031C114  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352B58 0031C118  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352B5C 0031C11C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-
+.balign 16, 0
 .global __OSSetExceptionHandler
 __OSSetExceptionHandler:
 /* 80352B60 0031C120  80 AD B8 90 */	lwz r5, lbl_80667A10@sda21(r13)
@@ -1368,10 +1353,8 @@ __OSSetExceptionHandler:
 /* 80352B68 0031C128  7C 65 00 2E */	lwzx r3, r5, r0
 /* 80352B6C 0031C12C  7C 85 01 2E */	stwx r4, r5, r0
 /* 80352B70 0031C130  4E 80 00 20 */	blr 
-/* 80352B74 0031C134  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352B78 0031C138  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352B7C 0031C13C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSGetExceptionHandler
 __OSGetExceptionHandler:
 /* 80352B80 0031C140  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
@@ -1430,8 +1413,8 @@ lbl_80352C18:
 .global __OSEVEnd
 __OSEVEnd:
 /* 80352C28 0031C1E8  60 00 00 00 */	nop 
-/* 80352C2C 0031C1EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSDefaultExceptionHandler
 OSDefaultExceptionHandler:
 /* 80352C30 0031C1F0  90 04 00 00 */	stw r0, 0(r4)
@@ -1456,9 +1439,8 @@ OSDefaultExceptionHandler:
 /* 80352C7C 0031C23C  7C D3 02 A6 */	mfdar r6
 /* 80352C80 0031C240  94 21 FF F8 */	stwu r1, -8(r1)
 /* 80352C84 0031C244  48 00 25 8C */	b __OSUnhandledException
-/* 80352C88 0031C248  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352C8C 0031C24C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSPSInit
 __OSPSInit:
 /* 80352C90 0031C250  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1482,10 +1464,8 @@ __OSPSInit:
 /* 80352CD8 0031C298  7C 08 03 A6 */	mtlr r0
 /* 80352CDC 0031C29C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80352CE0 0031C2A0  4E 80 00 20 */	blr 
-/* 80352CE4 0031C2A4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352CE8 0031C2A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352CEC 0031C2AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSGetDIConfig
 __OSGetDIConfig:
 /* 80352CF0 0031C2B0  3C 60 CD 00 */	lis r3, 0xCD006024@ha
@@ -1539,10 +1519,8 @@ lbl_80352D60:
 /* 80352D88 0031C348  98 85 00 03 */	stb r4, 3(r5)
 /* 80352D8C 0031C34C  98 05 00 04 */	stb r0, 4(r5)
 /* 80352D90 0031C350  4E 80 00 20 */	blr 
-/* 80352D94 0031C354  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352D98 0031C358  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352D9C 0031C35C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSGetAppType
 OSGetAppType:
 /* 80352DA0 0031C360  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)

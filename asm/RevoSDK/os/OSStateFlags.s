@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8035DE50
-func_8035DE50:
+.global __OSWriteStateFlags
+__OSWriteStateFlags:
 /* 8035DE50 00327410  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 8035DE54 00327414  7C 08 02 A6 */	mflr r0
 /* 8035DE58 00327418  7C 64 1B 78 */	mr r4, r3
@@ -39,16 +39,16 @@ func_8035DE50:
 /* 8035DED0 00327490  7F E4 FB 78 */	mr r4, r31
 /* 8035DED4 00327494  38 61 00 08 */	addi r3, r1, 8
 /* 8035DED8 00327498  38 A0 00 20 */	li r5, 0x20
-/* 8035DEDC 0032749C  4B FF 0F 45 */	bl func_8034EE20
+/* 8035DEDC 0032749C  4B FF 0F 45 */	bl NANDWrite
 /* 8035DEE0 003274A0  28 03 00 20 */	cmplwi r3, 0x20
 /* 8035DEE4 003274A4  41 82 00 14 */	beq lbl_8035DEF8
 /* 8035DEE8 003274A8  38 61 00 08 */	addi r3, r1, 8
-/* 8035DEEC 003274AC  4B FF 1D 75 */	bl func_8034FC60
+/* 8035DEEC 003274AC  4B FF 1D 75 */	bl NANDClose
 /* 8035DEF0 003274B0  38 60 00 00 */	li r3, 0
 /* 8035DEF4 003274B4  48 00 00 28 */	b lbl_8035DF1C
 lbl_8035DEF8:
 /* 8035DEF8 003274B8  38 61 00 08 */	addi r3, r1, 8
-/* 8035DEFC 003274BC  4B FF 1D 65 */	bl func_8034FC60
+/* 8035DEFC 003274BC  4B FF 1D 65 */	bl NANDClose
 /* 8035DF00 003274C0  2C 03 00 00 */	cmpwi r3, 0
 /* 8035DF04 003274C4  41 82 00 14 */	beq lbl_8035DF18
 /* 8035DF08 003274C8  38 60 00 00 */	li r3, 0
@@ -65,12 +65,10 @@ lbl_8035DF1C:
 /* 8035DF28 003274E8  7C 08 03 A6 */	mtlr r0
 /* 8035DF2C 003274EC  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 8035DF30 003274F0  4E 80 00 20 */	blr 
-/* 8035DF34 003274F4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035DF38 003274F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035DF3C 003274FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035DF40
-func_8035DF40:
+.balign 16, 0
+.global __OSReadStateFlags
+__OSReadStateFlags:
 /* 8035DF40 00327500  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 8035DF44 00327504  7C 08 02 A6 */	mflr r0
 /* 8035DF48 00327508  38 A0 00 01 */	li r5, 1
@@ -93,7 +91,7 @@ func_8035DF40:
 /* 8035DF8C 0032754C  4B FF 0D A5 */	bl func_8034ED30
 /* 8035DF90 00327550  7C 7F 1B 78 */	mr r31, r3
 /* 8035DF94 00327554  38 61 00 08 */	addi r3, r1, 8
-/* 8035DF98 00327558  4B FF 1C C9 */	bl func_8034FC60
+/* 8035DF98 00327558  4B FF 1C C9 */	bl NANDClose
 /* 8035DF9C 0032755C  28 1F 00 20 */	cmplwi r31, 0x20
 /* 8035DFA0 00327560  41 82 00 3C */	beq lbl_8035DFDC
 /* 8035DFA4 00327564  38 7D ED 08 */	addi r3, r29, lbl_8055ED08@l
@@ -149,5 +147,4 @@ lbl_8035E048:
 /* 8035E05C 0032761C  7C 08 03 A6 */	mtlr r0
 /* 8035E060 00327620  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 8035E064 00327624  4E 80 00 20 */	blr 
-/* 8035E068 00327628  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035E06C 0032762C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

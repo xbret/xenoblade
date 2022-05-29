@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8030F470
-func_8030F470:
+.global __DVDClearWaitingQueue
+__DVDClearWaitingQueue:
 /* 8030F470 002D8A30  3C C0 80 5D */	lis r6, lbl_805CC9B0@ha
 /* 8030F474 002D8A34  38 C6 C9 B0 */	addi r6, r6, lbl_805CC9B0@l
 /* 8030F478 002D8A38  90 C6 00 00 */	stw r6, 0(r6)
@@ -18,11 +18,10 @@ func_8030F470:
 /* 8030F49C 002D8A5C  90 63 00 00 */	stw r3, 0(r3)
 /* 8030F4A0 002D8A60  90 63 00 04 */	stw r3, 4(r3)
 /* 8030F4A4 002D8A64  4E 80 00 20 */	blr 
-/* 8030F4A8 002D8A68  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030F4AC 002D8A6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030F4B0
-func_8030F4B0:
+.balign 16, 0
+.global __DVDPushWaitingQueue
+__DVDPushWaitingQueue:
 /* 8030F4B0 002D8A70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030F4B4 002D8A74  7C 08 02 A6 */	mflr r0
 /* 8030F4B8 002D8A78  90 01 00 14 */	stw r0, 0x14(r1)
@@ -49,11 +48,10 @@ func_8030F4B0:
 /* 8030F50C 002D8ACC  7C 08 03 A6 */	mtlr r0
 /* 8030F510 002D8AD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030F514 002D8AD4  4E 80 00 20 */	blr 
-/* 8030F518 002D8AD8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030F51C 002D8ADC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030F520
-func_8030F520:
+.balign 16, 0
+.global __DVDPopWaitingQueue
+__DVDPopWaitingQueue:
 /* 8030F520 002D8AE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030F524 002D8AE4  7C 08 02 A6 */	mflr r0
 /* 8030F528 002D8AE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -98,8 +96,8 @@ lbl_8030F5AC:
 /* 8030F5B8 002D8B78  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030F5BC 002D8B7C  4E 80 00 20 */	blr 
 
-.global func_8030F5C0
-func_8030F5C0:
+.global __DVDCheckWaitingQueue
+__DVDCheckWaitingQueue:
 /* 8030F5C0 002D8B80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030F5C4 002D8B84  7C 08 02 A6 */	mflr r0
 /* 8030F5C8 002D8B88  90 01 00 14 */	stw r0, 0x14(r1)
@@ -125,11 +123,10 @@ lbl_8030F608:
 /* 8030F60C 002D8BCC  7C 08 03 A6 */	mtlr r0
 /* 8030F610 002D8BD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030F614 002D8BD4  4E 80 00 20 */	blr 
-/* 8030F618 002D8BD8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030F61C 002D8BDC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030F620
-func_8030F620:
+.balign 16, 0
+.global __DVDGetNextWaitingQueue
+__DVDGetNextWaitingQueue:
 /* 8030F620 002D8BE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030F624 002D8BE4  7C 08 02 A6 */	mflr r0
 /* 8030F628 002D8BE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -158,12 +155,10 @@ lbl_8030F670:
 /* 8030F678 002D8C38  7C 08 03 A6 */	mtlr r0
 /* 8030F67C 002D8C3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030F680 002D8C40  4E 80 00 20 */	blr 
-/* 8030F684 002D8C44  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030F688 002D8C48  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030F68C 002D8C4C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030F690
-func_8030F690:
+.balign 16, 0
+.global __DVDDequeueWaitingQueue
+__DVDDequeueWaitingQueue:
 /* 8030F690 002D8C50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030F694 002D8C54  7C 08 02 A6 */	mflr r0
 /* 8030F698 002D8C58  90 01 00 14 */	stw r0, 0x14(r1)

@@ -62,10 +62,8 @@ lbl_8034FE78:
 /* 8034FE88 00319448  7C 08 03 A6 */	mtlr r0
 /* 8034FE8C 0031944C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034FE90 00319450  4E 80 00 20 */	blr 
-/* 8034FE94 00319454  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034FE98 00319458  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034FE9C 0031945C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandGetHeadToken
 nandGetHeadToken:
 /* 8034FEA0 00319460  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -127,10 +125,8 @@ lbl_8034FF5C:
 /* 8034FF68 00319528  7C 08 03 A6 */	mtlr r0
 /* 8034FF6C 0031952C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034FF70 00319530  4E 80 00 20 */	blr 
-/* 8034FF74 00319534  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034FF78 00319538  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034FF7C 0031953C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandGetRelativeName
 nandGetRelativeName:
 /* 8034FF80 00319540  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -175,9 +171,8 @@ lbl_80350000:
 /* 8035000C 003195CC  7C 08 03 A6 */	mtlr r0
 /* 80350010 003195D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350014 003195D4  4E 80 00 20 */	blr 
-/* 80350018 003195D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035001C 003195DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandConvertPath
 nandConvertPath:
 /* 80350020 003195E0  94 21 FD E0 */	stwu r1, -0x220(r1)
@@ -266,8 +261,8 @@ lbl_80350140:
 /* 80350150 00319710  7C 08 03 A6 */	mtlr r0
 /* 80350154 00319714  38 21 02 20 */	addi r1, r1, 0x220
 /* 80350158 00319718  4E 80 00 20 */	blr 
-/* 8035015C 0031971C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandIsPrivatePath
 nandIsPrivatePath:
 /* 80350160 00319720  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -283,10 +278,8 @@ nandIsPrivatePath:
 /* 80350188 00319748  7C 08 03 A6 */	mtlr r0
 /* 8035018C 0031974C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350190 00319750  4E 80 00 20 */	blr 
-/* 80350194 00319754  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80350198 00319758  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035019C 0031975C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandIsUnderPrivatePath
 nandIsUnderPrivatePath:
 /* 803501A0 00319760  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -313,9 +306,8 @@ lbl_803501E4:
 /* 803501EC 003197AC  7C 08 03 A6 */	mtlr r0
 /* 803501F0 003197B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803501F4 003197B4  4E 80 00 20 */	blr 
-/* 803501F8 003197B8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803501FC 003197BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandIsInitialized
 nandIsInitialized:
 /* 80350200 003197C0  80 6D B8 70 */	lwz r3, lbl_806679F0@sda21(r13)
@@ -323,10 +315,8 @@ nandIsInitialized:
 /* 80350208 003197C8  7C 00 00 34 */	cntlzw r0, r0
 /* 8035020C 003197CC  54 03 D9 7E */	srwi r3, r0, 5
 /* 80350210 003197D0  4E 80 00 20 */	blr 
-/* 80350214 003197D4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80350218 003197D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035021C 003197DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandConvertErrorCode
 nandConvertErrorCode:
 /* 80350220 003197E0  54 2B 06 BE */	clrlwi r11, r1, 0x1a
@@ -428,9 +418,8 @@ lbl_80350368:
 /* 8035037C 0031993C  7C 08 03 A6 */	mtlr r0
 /* 80350380 00319940  7D 41 53 78 */	mr r1, r10
 /* 80350384 00319944  4E 80 00 20 */	blr 
-/* 80350388 00319948  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035038C 0031994C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandGenerateAbsPath
 nandGenerateAbsPath:
 /* 80350390 00319950  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -488,9 +477,8 @@ lbl_80350440:
 /* 8035044C 00319A0C  7C 08 03 A6 */	mtlr r0
 /* 80350450 00319A10  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350454 00319A14  4E 80 00 20 */	blr 
-/* 80350458 00319A18  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035045C 00319A1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global NANDInit
 NANDInit:
 /* 80350460 00319A20  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -521,7 +509,7 @@ lbl_803504AC:
 /* 803504BC 00319A7C  2C 03 00 00 */	cmpwi r3, 0
 /* 803504C0 00319A80  7C 7E 1B 78 */	mr r30, r3
 /* 803504C4 00319A84  40 82 00 98 */	bne lbl_8035055C
-/* 803504C8 00319A88  4B FC 32 89 */	bl func_80313750
+/* 803504C8 00319A88  4B FC 32 89 */	bl ESP_InitLib
 /* 803504CC 00319A8C  2C 03 00 00 */	cmpwi r3, 0
 /* 803504D0 00319A90  7C 7E 1B 78 */	mr r30, r3
 /* 803504D4 00319A94  40 82 00 10 */	bne lbl_803504E4
@@ -545,7 +533,7 @@ lbl_80350504:
 /* 80350514 00319AD4  38 84 40 00 */	addi r4, r4, lbl_805D4000@l
 /* 80350518 00319AD8  4B F7 21 A1 */	bl strcpy
 lbl_8035051C:
-/* 8035051C 00319ADC  4B FC 32 95 */	bl func_803137B0
+/* 8035051C 00319ADC  4B FC 32 95 */	bl ESP_CloseLib
 /* 80350520 00319AE0  2C 1E 00 00 */	cmpwi r30, 0
 /* 80350524 00319AE4  41 82 00 10 */	beq lbl_80350534
 /* 80350528 00319AE8  38 7F 01 30 */	addi r3, r31, 0x130
@@ -576,8 +564,8 @@ lbl_80350574:
 /* 80350580 00319B40  7C 08 03 A6 */	mtlr r0
 /* 80350584 00319B44  38 21 00 20 */	addi r1, r1, 0x20
 /* 80350588 00319B48  4E 80 00 20 */	blr 
-/* 8035058C 00319B4C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandOnShutdown
 nandOnShutdown:
 /* 80350590 00319B50  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -636,15 +624,15 @@ lbl_80350644:
 /* 80350650 00319C10  7C 08 03 A6 */	mtlr r0
 /* 80350654 00319C14  38 21 00 30 */	addi r1, r1, 0x30
 /* 80350658 00319C18  4E 80 00 20 */	blr 
-/* 8035065C 00319C1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandShutdownCallback
 nandShutdownCallback:
 /* 80350660 00319C20  38 00 00 01 */	li r0, 1
 /* 80350664 00319C24  90 04 00 00 */	stw r0, 0(r4)
 /* 80350668 00319C28  4E 80 00 20 */	blr 
-/* 8035066C 00319C2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandChangeDir
 nandChangeDir:
 /* 80350670 00319C30  94 21 FF A0 */	stwu r1, -0x60(r1)
@@ -831,10 +819,8 @@ lbl_803508E8:
 /* 803508F8 00319EB8  7C 08 03 A6 */	mtlr r0
 /* 803508FC 00319EBC  38 21 00 60 */	addi r1, r1, 0x60
 /* 80350900 00319EC0  4E 80 00 20 */	blr 
-/* 80350904 00319EC4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80350908 00319EC8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035090C 00319ECC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global NANDChangeDir
 NANDChangeDir:
 /* 80350910 00319ED0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -857,9 +843,8 @@ lbl_80350948:
 /* 8035094C 00319F0C  7C 08 03 A6 */	mtlr r0
 /* 80350950 00319F10  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350954 00319F14  4E 80 00 20 */	blr 
-/* 80350958 00319F18  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035095C 00319F1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandChangeDirCallback
 nandChangeDirCallback:
 /* 80350960 00319F20  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -894,8 +879,8 @@ lbl_803509A8:
 /* 803509D0 00319F90  7C 08 03 A6 */	mtlr r0
 /* 803509D4 00319F94  38 21 00 20 */	addi r1, r1, 0x20
 /* 803509D8 00319F98  4E 80 00 20 */	blr 
-/* 803509DC 00319F9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global NANDGetCurrentDir
 NANDGetCurrentDir:
 /* 803509E0 00319FA0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -933,8 +918,8 @@ lbl_80350A44:
 /* 80350A50 0031A010  7C 08 03 A6 */	mtlr r0
 /* 80350A54 0031A014  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350A58 0031A018  4E 80 00 20 */	blr 
-/* 80350A5C 0031A01C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global NANDGetHomeDir
 NANDGetHomeDir:
 /* 80350A60 0031A020  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -962,10 +947,8 @@ lbl_80350AA4:
 /* 80350AA8 0031A068  7C 08 03 A6 */	mtlr r0
 /* 80350AAC 0031A06C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350AB0 0031A070  4E 80 00 20 */	blr 
-/* 80350AB4 0031A074  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80350AB8 0031A078  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80350ABC 0031A07C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandCallback
 nandCallback:
 /* 80350AC0 0031A080  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -983,8 +966,8 @@ nandCallback:
 /* 80350AF0 0031A0B0  7C 08 03 A6 */	mtlr r0
 /* 80350AF4 0031A0B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350AF8 0031A0B8  4E 80 00 20 */	blr 
-/* 80350AFC 0031A0BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandGetType
 nandGetType:
 /* 80350B00 0031A0C0  94 21 FF 90 */	stwu r1, -0x70(r1)
@@ -1189,10 +1172,8 @@ lbl_80350DBC:
 /* 80350DC8 0031A388  7C 08 03 A6 */	mtlr r0
 /* 80350DCC 0031A38C  38 21 00 70 */	addi r1, r1, 0x70
 /* 80350DD0 0031A390  4E 80 00 20 */	blr 
-/* 80350DD4 0031A394  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80350DD8 0031A398  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80350DDC 0031A39C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global NANDPrivateGetTypeAsync
 NANDPrivateGetTypeAsync:
 /* 80350DE0 0031A3A0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1215,9 +1196,8 @@ lbl_80350E18:
 /* 80350E1C 0031A3DC  7C 08 03 A6 */	mtlr r0
 /* 80350E20 0031A3E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350E24 0031A3E4  4E 80 00 20 */	blr 
-/* 80350E28 0031A3E8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80350E2C 0031A3EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandGetTypeCallback
 nandGetTypeCallback:
 /* 80350E30 0031A3F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1253,17 +1233,15 @@ lbl_80350E80:
 /* 80350E9C 0031A45C  7C 08 03 A6 */	mtlr r0
 /* 80350EA0 0031A460  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350EA4 0031A464  4E 80 00 20 */	blr 
-/* 80350EA8 0031A468  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80350EAC 0031A46C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global nandGetHomeDir
 nandGetHomeDir:
 /* 80350EB0 0031A470  3C 60 80 5D */	lis r3, lbl_805D4000@ha
 /* 80350EB4 0031A474  38 63 40 00 */	addi r3, r3, lbl_805D4000@l
 /* 80350EB8 0031A478  4E 80 00 20 */	blr 
-/* 80350EBC 0031A47C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-
+.balign 16, 0
 .global func_80350EC0
 func_80350EC0:
 /* 80350EC0 0031A480  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1325,4 +1303,4 @@ lbl_80350F7C:
 /* 80350F90 0031A550  7C 08 03 A6 */	mtlr r0
 /* 80350F94 0031A554  38 21 00 20 */	addi r1, r1, 0x20
 /* 80350F98 0031A558  4E 80 00 20 */	blr 
-/* 80350F9C 0031A55C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

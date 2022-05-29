@@ -537,6 +537,7 @@ lbl_802D1054:
 /* 802D1088 0029A648  7C 08 03 A6 */	mtlr r0
 /* 802D108C 0029A64C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D1090 0029A650  4E 80 00 20 */	blr 
-/* 802D1094 0029A654  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D1098 0029A658  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D109C 0029A65C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+#.balign 16, 0
+.4byte 0
+.4byte 0
+.4byte 0

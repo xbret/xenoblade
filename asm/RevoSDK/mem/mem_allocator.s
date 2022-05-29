@@ -13,9 +13,8 @@ func_80349A70:
 func_80349A80:
 /* 80349A80 00313040  80 63 00 04 */	lwz r3, 4(r3)
 /* 80349A84 00313044  4B FF FC 1C */	b func_803496A0
-/* 80349A88 00313048  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80349A8C 0031304C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80349A90
 func_80349A90:
 /* 80349A90 00313050  80 A3 00 00 */	lwz r5, 0(r3)
@@ -39,4 +38,4 @@ func_80349AB0:
 /* 80349AC0 00313080  90 A3 00 08 */	stw r5, 8(r3)
 /* 80349AC4 00313084  90 03 00 0C */	stw r0, 0xc(r3)
 /* 80349AC8 00313088  4E 80 00 20 */	blr 
-/* 80349ACC 0031308C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

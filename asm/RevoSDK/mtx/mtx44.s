@@ -43,8 +43,8 @@ func_8034DE50:
 /* 8034DEE0 003174A0  D0 23 00 28 */	stfs f1, 0x28(r3)
 /* 8034DEE4 003174A4  D0 03 00 2C */	stfs f0, 0x2c(r3)
 /* 8034DEE8 003174A8  4E 80 00 20 */	blr 
-/* 8034DEEC 003174AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8034DEF0
 func_8034DEF0:
 /* 8034DEF0 003174B0  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -106,8 +106,8 @@ func_8034DEF0:
 /* 8034DFD0 00317590  7C 08 03 A6 */	mtlr r0
 /* 8034DFD4 00317594  38 21 00 40 */	addi r1, r1, 0x40
 /* 8034DFD8 00317598  4E 80 00 20 */	blr 
-/* 8034DFDC 0031759C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8034DFE0
 func_8034DFE0:
 /* 8034DFE0 003175A0  ED 64 18 28 */	fsubs f11, f4, f3
@@ -148,5 +148,4 @@ func_8034DFE0:
 /* 8034E06C 0031762C  D0 43 00 1C */	stfs f2, 0x1c(r3)
 /* 8034E070 00317630  D0 23 00 28 */	stfs f1, 0x28(r3)
 /* 8034E074 00317634  4E 80 00 20 */	blr 
-/* 8034E078 00317638  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034E07C 0031763C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

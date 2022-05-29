@@ -866,6 +866,4 @@ lbl_803090F0:
 /* 803090F8 002D26B8  83 A1 00 94 */	lwz r29, 0x94(r1)
 /* 803090FC 002D26BC  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 80309100 002D26C0  4E 80 00 20 */	blr 
-/* 80309104 002D26C4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80309108 002D26C8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030910C 002D26CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

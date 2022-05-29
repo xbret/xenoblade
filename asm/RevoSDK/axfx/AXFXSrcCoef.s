@@ -9,6 +9,4 @@ func_802DAAE0:
 /* 802DAAE8 002A40A8  38 84 35 E0 */	addi r4, r4, lbl_805435E0@l
 /* 802DAAEC 002A40AC  7C 64 02 14 */	add r3, r4, r0
 /* 802DAAF0 002A40B0  4E 80 00 20 */	blr 
-/* 802DAAF4 002A40B4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DAAF8 002A40B8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DAAFC 002A40BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

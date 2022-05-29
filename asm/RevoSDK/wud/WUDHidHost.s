@@ -446,8 +446,8 @@ lbl_8037C584:
 /* 8037C590 00345B50  4C C6 31 82 */	crclr 6
 /* 8037C594 00345B54  48 00 00 3C */	b WUD_DEBUGPrint
 /* 8037C598 00345B58  4E 80 00 20 */	blr 
-/* 8037C59C 00345B5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8037C5A0
 func_8037C5A0:
 /* 8037C5A0 00345B60  3C 60 80 56 */	lis r3, lbl_805636E0@ha
@@ -466,5 +466,4 @@ func_8037C5B0:
 func_8037C5C0:
 /* 8037C5C0 00345B80  38 60 00 00 */	li r3, 0
 /* 8037C5C4 00345B84  4E 80 00 20 */	blr 
-/* 8037C5C8 00345B88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8037C5CC 00345B8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

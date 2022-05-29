@@ -10,16 +10,14 @@ OSGetTime:
 /* 8035C96C 00325F2C  7C 03 28 00 */	cmpw r3, r5
 /* 8035C970 00325F30  40 82 FF F0 */	bne OSGetTime
 /* 8035C974 00325F34  4E 80 00 20 */	blr 
-/* 8035C978 00325F38  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035C97C 00325F3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSGetTick
 OSGetTick:
 /* 8035C980 00325F40  7C 6C 42 E6 */	mftb r3, 0x10c
 /* 8035C984 00325F44  4E 80 00 20 */	blr 
-/* 8035C988 00325F48  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035C98C 00325F4C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSGetSystemTime
 __OSGetSystemTime:
 /* 8035C990 00325F50  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -47,10 +45,8 @@ __OSGetSystemTime:
 /* 8035C9E8 00325FA8  7C 08 03 A6 */	mtlr r0
 /* 8035C9EC 00325FAC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035C9F0 00325FB0  4E 80 00 20 */	blr 
-/* 8035C9F4 00325FB4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035C9F8 00325FB8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035C9FC 00325FBC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSTimeToSystemTime
 __OSTimeToSystemTime:
 /* 8035CA00 00325FC0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -75,9 +71,8 @@ __OSTimeToSystemTime:
 /* 8035CA4C 0032600C  7C 08 03 A6 */	mtlr r0
 /* 8035CA50 00326010  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035CA54 00326014  4E 80 00 20 */	blr 
-/* 8035CA58 00326018  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035CA5C 0032601C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSTicksToCalendarTime
 OSTicksToCalendarTime:
 /* 8035CA60 00326020  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -294,4 +289,4 @@ lbl_8035CCE8:
 /* 8035CD80 00326340  7C 08 03 A6 */	mtlr r0
 /* 8035CD84 00326344  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035CD88 00326348  4E 80 00 20 */	blr 
-/* 8035CD8C 0032634C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

@@ -5,10 +5,8 @@
 .global DefaultSwitchThreadCallback
 DefaultSwitchThreadCallback:
 /* 8035B330 003248F0  4E 80 00 20 */	blr 
-/* 8035B334 003248F4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035B338 003248F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035B33C 003248FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSThreadInit
 __OSThreadInit:
 /* 8035B340 00324900  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -180,10 +178,8 @@ lbl_8035B588:
 /* 8035B5B8 00324B78  7C 08 03 A6 */	mtlr r0
 /* 8035B5BC 00324B7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035B5C0 00324B80  4E 80 00 20 */	blr 
-/* 8035B5C4 00324B84  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035B5C8 00324B88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035B5CC 00324B8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSInitThreadQueue
 OSInitThreadQueue:
 /* 8035B5D0 00324B90  38 00 00 00 */	li r0, 0
@@ -191,13 +187,13 @@ OSInitThreadQueue:
 /* 8035B5D8 00324B98  90 03 00 00 */	stw r0, 0(r3)
 /* 8035B5DC 00324B9C  4E 80 00 20 */	blr 
 
-.global func_8035B5E0
-func_8035B5E0:
+.global OSGetCurrentThread
+OSGetCurrentThread:
 /* 8035B5E0 00324BA0  3C 60 80 00 */	lis r3, 0x800000E4@ha
 /* 8035B5E4 00324BA4  80 63 00 E4 */	lwz r3, 0x800000E4@l(r3)
 /* 8035B5E8 00324BA8  4E 80 00 20 */	blr 
-/* 8035B5EC 00324BAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSDisableScheduler
 OSDisableScheduler:
 /* 8035B5F0 00324BB0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -215,8 +211,8 @@ OSDisableScheduler:
 /* 8035B620 00324BE0  7C 08 03 A6 */	mtlr r0
 /* 8035B624 00324BE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035B628 00324BE8  4E 80 00 20 */	blr 
-/* 8035B62C 00324BEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSEnableScheduler
 OSEnableScheduler:
 /* 8035B630 00324BF0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -234,10 +230,10 @@ OSEnableScheduler:
 /* 8035B660 00324C20  7C 08 03 A6 */	mtlr r0
 /* 8035B664 00324C24  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035B668 00324C28  4E 80 00 20 */	blr 
-/* 8035B66C 00324C2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035B670
-func_8035B670:
+.balign 16, 0
+.global UnsetRun
+UnsetRun:
 /* 8035B670 00324C30  80 A3 02 E0 */	lwz r5, 0x2e0(r3)
 /* 8035B674 00324C34  80 83 02 DC */	lwz r4, 0x2dc(r3)
 /* 8035B678 00324C38  2C 05 00 00 */	cmpwi r5, 0
@@ -269,11 +265,10 @@ lbl_8035B6CC:
 /* 8035B6CC 00324C8C  38 00 00 00 */	li r0, 0
 /* 8035B6D0 00324C90  90 03 02 DC */	stw r0, 0x2dc(r3)
 /* 8035B6D4 00324C94  4E 80 00 20 */	blr 
-/* 8035B6D8 00324C98  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035B6DC 00324C9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035B6E0
-func_8035B6E0:
+.balign 16, 0
+.global __OSGetEffectivePriority
+__OSGetEffectivePriority:
 /* 8035B6E0 00324CA0  80 83 02 D4 */	lwz r4, 0x2d4(r3)
 /* 8035B6E4 00324CA4  80 63 02 F4 */	lwz r3, 0x2f4(r3)
 /* 8035B6E8 00324CA8  48 00 00 28 */	b lbl_8035B710
@@ -294,8 +289,8 @@ lbl_8035B710:
 /* 8035B718 00324CD8  7C 83 23 78 */	mr r3, r4
 /* 8035B71C 00324CDC  4E 80 00 20 */	blr 
 
-.global func_8035B720
-func_8035B720:
+.global SetEffectivePriority
+SetEffectivePriority:
 /* 8035B720 00324CE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035B724 00324CE4  7C 08 02 A6 */	mflr r0
 /* 8035B728 00324CE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -312,7 +307,7 @@ func_8035B720:
 /* 8035B754 00324D14  41 82 01 4C */	beq lbl_8035B8A0
 /* 8035B758 00324D18  48 00 01 54 */	b lbl_8035B8AC
 lbl_8035B75C:
-/* 8035B75C 00324D1C  4B FF FF 15 */	bl func_8035B670
+/* 8035B75C 00324D1C  4B FF FF 15 */	bl UnsetRun
 /* 8035B760 00324D20  3C 60 80 5D */	lis r3, lbl_805D4A70@ha
 /* 8035B764 00324D24  57 E0 18 38 */	slwi r0, r31, 3
 /* 8035B768 00324D28  38 63 4A 70 */	addi r3, r3, lbl_805D4A70@l
@@ -421,11 +416,10 @@ lbl_8035B8B0:
 /* 8035B8BC 00324E7C  7C 08 03 A6 */	mtlr r0
 /* 8035B8C0 00324E80  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035B8C4 00324E84  4E 80 00 20 */	blr 
-/* 8035B8C8 00324E88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035B8CC 00324E8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035B8D0
-func_8035B8D0:
+.balign 16, 0
+.global __OSPromoteThread
+__OSPromoteThread:
 /* 8035B8D0 00324E90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035B8D4 00324E94  7C 08 02 A6 */	mflr r0
 /* 8035B8D8 00324E98  90 01 00 14 */	stw r0, 0x14(r1)
@@ -439,7 +433,7 @@ lbl_8035B8E4:
 /* 8035B8F4 00324EB4  7C 00 F8 00 */	cmpw r0, r31
 /* 8035B8F8 00324EB8  40 81 00 14 */	ble lbl_8035B90C
 /* 8035B8FC 00324EBC  7F E4 FB 78 */	mr r4, r31
-/* 8035B900 00324EC0  4B FF FE 21 */	bl func_8035B720
+/* 8035B900 00324EC0  4B FF FE 21 */	bl SetEffectivePriority
 /* 8035B904 00324EC4  2C 03 00 00 */	cmpwi r3, 0
 /* 8035B908 00324EC8  40 82 FF DC */	bne lbl_8035B8E4
 lbl_8035B90C:
@@ -449,8 +443,8 @@ lbl_8035B90C:
 /* 8035B918 00324ED8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035B91C 00324EDC  4E 80 00 20 */	blr 
 
-.global func_8035B920
-func_8035B920:
+.global SelectThread
+SelectThread:
 /* 8035B920 00324EE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035B924 00324EE4  7C 08 02 A6 */	mflr r0
 /* 8035B928 00324EE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -604,21 +598,20 @@ lbl_8035BB34:
 /* 8035BB40 00325100  7C 08 03 A6 */	mtlr r0
 /* 8035BB44 00325104  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035BB48 00325108  4E 80 00 20 */	blr 
-/* 8035BB4C 0032510C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSReschedule
 __OSReschedule:
 /* 8035BB50 00325110  80 0D B9 4C */	lwz r0, lbl_80667ACC@sda21(r13)
 /* 8035BB54 00325114  2C 00 00 00 */	cmpwi r0, 0
 /* 8035BB58 00325118  4D 82 00 20 */	beqlr 
 /* 8035BB5C 0032511C  38 60 00 00 */	li r3, 0
-/* 8035BB60 00325120  4B FF FD C0 */	b func_8035B920
+/* 8035BB60 00325120  4B FF FD C0 */	b SelectThread
 /* 8035BB64 00325124  4E 80 00 20 */	blr 
-/* 8035BB68 00325128  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035BB6C 0032512C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035BB70
-func_8035BB70:
+.balign 16, 0
+.global OSYieldThread
+OSYieldThread:
 /* 8035BB70 00325130  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035BB74 00325134  7C 08 02 A6 */	mflr r0
 /* 8035BB78 00325138  90 01 00 14 */	stw r0, 0x14(r1)
@@ -626,7 +619,7 @@ func_8035BB70:
 /* 8035BB80 00325140  4B FF CE 31 */	bl OSDisableInterrupts
 /* 8035BB84 00325144  7C 7F 1B 78 */	mr r31, r3
 /* 8035BB88 00325148  38 60 00 01 */	li r3, 1
-/* 8035BB8C 0032514C  4B FF FD 95 */	bl func_8035B920
+/* 8035BB8C 0032514C  4B FF FD 95 */	bl SelectThread
 /* 8035BB90 00325150  7F E3 FB 78 */	mr r3, r31
 /* 8035BB94 00325154  4B FF CE 5D */	bl OSRestoreInterrupts
 /* 8035BB98 00325158  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -634,10 +627,10 @@ func_8035BB70:
 /* 8035BBA0 00325160  7C 08 03 A6 */	mtlr r0
 /* 8035BBA4 00325164  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035BBA8 00325168  4E 80 00 20 */	blr 
-/* 8035BBAC 0032516C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035BBB0
-func_8035BBB0:
+.balign 16, 0
+.global OSCreateThread
+OSCreateThread:
 /* 8035BBB0 00325170  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035BBB4 00325174  7C 08 02 A6 */	mflr r0
 /* 8035BBB8 00325178  90 01 00 24 */	stw r0, 0x24(r1)
@@ -675,9 +668,9 @@ lbl_8035BBEC:
 /* 8035BC30 003251F0  93 C6 FF F8 */	stw r30, -8(r6)
 /* 8035BC34 003251F4  93 C6 FF FC */	stw r30, -4(r6)
 /* 8035BC38 003251F8  4B FF 8E B9 */	bl OSInitContext
-/* 8035BC3C 003251FC  3C 60 80 36 */	lis r3, lbl_8035BE20@ha
+/* 8035BC3C 003251FC  3C 60 80 36 */	lis r3, OSExitThread@ha
 /* 8035BC40 00325200  7C 9C D8 50 */	subf r4, r28, r27
-/* 8035BC44 00325204  38 63 BE 20 */	addi r3, r3, lbl_8035BE20@l
+/* 8035BC44 00325204  38 63 BE 20 */	addi r3, r3, OSExitThread@l
 /* 8035BC48 00325208  90 7F 00 84 */	stw r3, 0x84(r31)
 /* 8035BC4C 0032520C  3C 60 DE AE */	lis r3, 0xDEADBABE@ha
 /* 8035BC50 00325210  93 5F 00 0C */	stw r26, 0xc(r31)
@@ -800,8 +793,10 @@ lbl_8035BE04:
 /* 8035BE10 003253D0  7C 08 03 A6 */	mtlr r0
 /* 8035BE14 003253D4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035BE18 003253D8  4E 80 00 20 */	blr 
-/* 8035BE1C 003253DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8035BE20:
+
+.balign 16, 0
+.global OSExitThread
+OSExitThread:
 /* 8035BE20 003253E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035BE24 003253E4  7C 08 02 A6 */	mflr r0
 /* 8035BE28 003253E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -854,7 +849,7 @@ lbl_8035BEB0:
 /* 8035BECC 0032548C  2C 00 00 00 */	cmpwi r0, 0
 /* 8035BED0 00325490  41 82 00 0C */	beq lbl_8035BEDC
 /* 8035BED4 00325494  38 60 00 00 */	li r3, 0
-/* 8035BED8 00325498  4B FF FA 49 */	bl func_8035B920
+/* 8035BED8 00325498  4B FF FA 49 */	bl SelectThread
 lbl_8035BEDC:
 /* 8035BEDC 0032549C  7F A3 EB 78 */	mr r3, r29
 /* 8035BEE0 003254A0  4B FF CB 11 */	bl OSRestoreInterrupts
@@ -866,10 +861,8 @@ lbl_8035BEDC:
 /* 8035BEF8 003254B8  7C 08 03 A6 */	mtlr r0
 /* 8035BEFC 003254BC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035BF00 003254C0  4E 80 00 20 */	blr 
-/* 8035BF04 003254C4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035BF08 003254C8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035BF0C 003254CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSCancelThread
 OSCancelThread:
 /* 8035BF10 003254D0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -881,7 +874,7 @@ OSCancelThread:
 /* 8035BF28 003254E8  4B FF CA 89 */	bl OSDisableInterrupts
 /* 8035BF2C 003254EC  7C 7F 1B 78 */	mr r31, r3
 /* 8035BF30 003254F0  7F C3 F3 78 */	mr r3, r30
-/* 8035BF34 003254F4  4B FF 76 9D */	bl func_803535D0
+/* 8035BF34 003254F4  4B FF 76 9D */	bl __OSCancelInternalAlarms
 /* 8035BF38 003254F8  A0 1E 02 C8 */	lhz r0, 0x2c8(r30)
 /* 8035BF3C 003254FC  2C 00 00 01 */	cmpwi r0, 1
 /* 8035BF40 00325500  41 82 00 18 */	beq lbl_8035BF58
@@ -895,7 +888,7 @@ lbl_8035BF58:
 /* 8035BF5C 0032551C  2C 00 00 00 */	cmpwi r0, 0
 /* 8035BF60 00325520  41 81 00 E0 */	bgt lbl_8035C040
 /* 8035BF64 00325524  7F C3 F3 78 */	mr r3, r30
-/* 8035BF68 00325528  4B FF F7 09 */	bl func_8035B670
+/* 8035BF68 00325528  4B FF F7 09 */	bl UnsetRun
 /* 8035BF6C 0032552C  48 00 00 D4 */	b lbl_8035C040
 lbl_8035BF70:
 /* 8035BF70 00325530  38 00 00 01 */	li r0, 1
@@ -952,7 +945,7 @@ lbl_8035C010:
 /* 8035C018 003255D8  80 03 02 D0 */	lwz r0, 0x2d0(r3)
 /* 8035C01C 003255DC  7C 00 20 00 */	cmpw r0, r4
 /* 8035C020 003255E0  41 82 00 20 */	beq lbl_8035C040
-/* 8035C024 003255E4  4B FF F6 FD */	bl func_8035B720
+/* 8035C024 003255E4  4B FF F6 FD */	bl SetEffectivePriority
 /* 8035C028 003255E8  2C 03 00 00 */	cmpwi r3, 0
 /* 8035C02C 003255EC  40 82 FF AC */	bne lbl_8035BFD8
 /* 8035C030 003255F0  48 00 00 10 */	b lbl_8035C040
@@ -999,7 +992,7 @@ lbl_8035C0A0:
 /* 8035C0B4 00325674  2C 00 00 00 */	cmpwi r0, 0
 /* 8035C0B8 00325678  41 82 00 0C */	beq lbl_8035C0C4
 /* 8035C0BC 0032567C  38 60 00 00 */	li r3, 0
-/* 8035C0C0 00325680  4B FF F8 61 */	bl func_8035B920
+/* 8035C0C0 00325680  4B FF F8 61 */	bl SelectThread
 lbl_8035C0C4:
 /* 8035C0C4 00325684  7F E3 FB 78 */	mr r3, r31
 /* 8035C0C8 00325688  4B FF C9 29 */	bl OSRestoreInterrupts
@@ -1010,12 +1003,10 @@ lbl_8035C0CC:
 /* 8035C0D8 00325698  7C 08 03 A6 */	mtlr r0
 /* 8035C0DC 0032569C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035C0E0 003256A0  4E 80 00 20 */	blr 
-/* 8035C0E4 003256A4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035C0E8 003256A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035C0EC 003256AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035C0F0
-func_8035C0F0:
+.balign 16, 0
+.global OSJoinThread
+OSJoinThread:
 /* 8035C0F0 003256B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035C0F4 003256B4  7C 08 02 A6 */	mflr r0
 /* 8035C0F8 003256B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1036,7 +1027,7 @@ func_8035C0F0:
 /* 8035C134 003256F4  2C 00 00 00 */	cmpwi r0, 0
 /* 8035C138 003256F8  40 82 00 68 */	bne lbl_8035C1A0
 /* 8035C13C 003256FC  38 7F 02 E8 */	addi r3, r31, 0x2e8
-/* 8035C140 00325700  48 00 05 31 */	bl func_8035C670
+/* 8035C140 00325700  48 00 05 31 */	bl OSSleepThread
 /* 8035C144 00325704  A0 1F 02 C8 */	lhz r0, 0x2c8(r31)
 /* 8035C148 00325708  2C 00 00 00 */	cmpwi r0, 0
 /* 8035C14C 0032570C  40 82 00 0C */	bne lbl_8035C158
@@ -1110,12 +1101,10 @@ lbl_8035C218:
 /* 8035C228 003257E8  7C 08 03 A6 */	mtlr r0
 /* 8035C22C 003257EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035C230 003257F0  4E 80 00 20 */	blr 
-/* 8035C234 003257F4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035C238 003257F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035C23C 003257FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035C240
-func_8035C240:
+.balign 16, 0
+.global OSResumeThread
+OSResumeThread:
 /* 8035C240 00325800  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035C244 00325804  7C 08 02 A6 */	mflr r0
 /* 8035C248 00325808  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1292,7 +1281,7 @@ lbl_8035C480:
 /* 8035C488 00325A48  80 03 02 D0 */	lwz r0, 0x2d0(r3)
 /* 8035C48C 00325A4C  7C 00 20 00 */	cmpw r0, r4
 /* 8035C490 00325A50  41 82 00 10 */	beq lbl_8035C4A0
-/* 8035C494 00325A54  4B FF F2 8D */	bl func_8035B720
+/* 8035C494 00325A54  4B FF F2 8D */	bl SetEffectivePriority
 /* 8035C498 00325A58  2C 03 00 00 */	cmpwi r3, 0
 /* 8035C49C 00325A5C  40 82 FF A8 */	bne lbl_8035C444
 lbl_8035C4A0:
@@ -1300,7 +1289,7 @@ lbl_8035C4A0:
 /* 8035C4A4 00325A64  2C 00 00 00 */	cmpwi r0, 0
 /* 8035C4A8 00325A68  41 82 00 0C */	beq lbl_8035C4B4
 /* 8035C4AC 00325A6C  38 60 00 00 */	li r3, 0
-/* 8035C4B0 00325A70  4B FF F4 71 */	bl func_8035B920
+/* 8035C4B0 00325A70  4B FF F4 71 */	bl SelectThread
 lbl_8035C4B4:
 /* 8035C4B4 00325A74  7F E3 FB 78 */	mr r3, r31
 /* 8035C4B8 00325A78  4B FF C5 39 */	bl OSRestoreInterrupts
@@ -1312,10 +1301,10 @@ lbl_8035C4B4:
 /* 8035C4D0 00325A90  7C 08 03 A6 */	mtlr r0
 /* 8035C4D4 00325A94  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035C4D8 00325A98  4E 80 00 20 */	blr 
-/* 8035C4DC 00325A9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035C4E0
-func_8035C4E0:
+.balign 16, 0
+.global OSSuspendThread
+OSSuspendThread:
 /* 8035C4E0 00325AA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035C4E4 00325AA4  7C 08 02 A6 */	mflr r0
 /* 8035C4E8 00325AA8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1345,7 +1334,7 @@ lbl_8035C538:
 /* 8035C544 00325B04  48 00 00 EC */	b lbl_8035C630
 lbl_8035C548:
 /* 8035C548 00325B08  7F A3 EB 78 */	mr r3, r29
-/* 8035C54C 00325B0C  4B FF F1 25 */	bl func_8035B670
+/* 8035C54C 00325B0C  4B FF F1 25 */	bl UnsetRun
 /* 8035C550 00325B10  48 00 00 E0 */	b lbl_8035C630
 lbl_8035C554:
 /* 8035C554 00325B14  80 9D 02 E0 */	lwz r4, 0x2e0(r29)
@@ -1410,7 +1399,7 @@ lbl_8035C610:
 /* 8035C618 00325BD8  80 03 02 D0 */	lwz r0, 0x2d0(r3)
 /* 8035C61C 00325BDC  7C 00 20 00 */	cmpw r0, r4
 /* 8035C620 00325BE0  41 82 00 10 */	beq lbl_8035C630
-/* 8035C624 00325BE4  4B FF F0 FD */	bl func_8035B720
+/* 8035C624 00325BE4  4B FF F0 FD */	bl SetEffectivePriority
 /* 8035C628 00325BE8  2C 03 00 00 */	cmpwi r3, 0
 /* 8035C62C 00325BEC  40 82 FF A8 */	bne lbl_8035C5D4
 lbl_8035C630:
@@ -1418,7 +1407,7 @@ lbl_8035C630:
 /* 8035C634 00325BF4  2C 00 00 00 */	cmpwi r0, 0
 /* 8035C638 00325BF8  41 82 00 0C */	beq lbl_8035C644
 /* 8035C63C 00325BFC  38 60 00 00 */	li r3, 0
-/* 8035C640 00325C00  4B FF F2 E1 */	bl func_8035B920
+/* 8035C640 00325C00  4B FF F2 E1 */	bl SelectThread
 lbl_8035C644:
 /* 8035C644 00325C04  7F E3 FB 78 */	mr r3, r31
 /* 8035C648 00325C08  4B FF C3 A9 */	bl OSRestoreInterrupts
@@ -1430,10 +1419,10 @@ lbl_8035C644:
 /* 8035C660 00325C20  7C 08 03 A6 */	mtlr r0
 /* 8035C664 00325C24  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035C668 00325C28  4E 80 00 20 */	blr 
-/* 8035C66C 00325C2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035C670
-func_8035C670:
+.balign 16, 0
+.global OSSleepThread
+OSSleepThread:
 /* 8035C670 00325C30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035C674 00325C34  7C 08 02 A6 */	mflr r0
 /* 8035C678 00325C38  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1493,7 +1482,7 @@ lbl_8035C724:
 /* 8035C730 00325CF0  2C 00 00 00 */	cmpwi r0, 0
 /* 8035C734 00325CF4  41 82 00 0C */	beq lbl_8035C740
 /* 8035C738 00325CF8  38 60 00 00 */	li r3, 0
-/* 8035C73C 00325CFC  4B FF F1 E5 */	bl func_8035B920
+/* 8035C73C 00325CFC  4B FF F1 E5 */	bl SelectThread
 lbl_8035C740:
 /* 8035C740 00325D00  7F E3 FB 78 */	mr r3, r31
 /* 8035C744 00325D04  4B FF C2 AD */	bl OSRestoreInterrupts
@@ -1565,7 +1554,7 @@ lbl_8035C818:
 /* 8035C828 00325DE8  2C 00 00 00 */	cmpwi r0, 0
 /* 8035C82C 00325DEC  41 82 00 0C */	beq lbl_8035C838
 /* 8035C830 00325DF0  38 60 00 00 */	li r3, 0
-/* 8035C834 00325DF4  4B FF F0 ED */	bl func_8035B920
+/* 8035C834 00325DF4  4B FF F0 ED */	bl SelectThread
 lbl_8035C838:
 /* 8035C838 00325DF8  7F E3 FB 78 */	mr r3, r31
 /* 8035C83C 00325DFC  4B FF C1 B5 */	bl OSRestoreInterrupts
@@ -1575,11 +1564,10 @@ lbl_8035C838:
 /* 8035C84C 00325E0C  7C 08 03 A6 */	mtlr r0
 /* 8035C850 00325E10  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035C854 00325E14  4E 80 00 20 */	blr 
-/* 8035C858 00325E18  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035C85C 00325E1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8035C860
-func_8035C860:
+.balign 16, 0
+.global OSSetThreadPriority
+OSSetThreadPriority:
 /* 8035C860 00325E20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035C864 00325E24  7C 08 02 A6 */	mflr r0
 /* 8035C868 00325E28  2C 04 00 00 */	cmpwi r4, 0
@@ -1626,7 +1614,7 @@ lbl_8035C8E8:
 /* 8035C8F4 00325EB4  7C 00 20 00 */	cmpw r0, r4
 /* 8035C8F8 00325EB8  41 82 00 18 */	beq lbl_8035C910
 /* 8035C8FC 00325EBC  7F A3 EB 78 */	mr r3, r29
-/* 8035C900 00325EC0  4B FF EE 21 */	bl func_8035B720
+/* 8035C900 00325EC0  4B FF EE 21 */	bl SetEffectivePriority
 /* 8035C904 00325EC4  2C 03 00 00 */	cmpwi r3, 0
 /* 8035C908 00325EC8  7C 7D 1B 78 */	mr r29, r3
 /* 8035C90C 00325ECC  40 82 FF A4 */	bne lbl_8035C8B0
@@ -1635,7 +1623,7 @@ lbl_8035C910:
 /* 8035C914 00325ED4  2C 00 00 00 */	cmpwi r0, 0
 /* 8035C918 00325ED8  41 82 00 0C */	beq lbl_8035C924
 /* 8035C91C 00325EDC  38 60 00 00 */	li r3, 0
-/* 8035C920 00325EE0  4B FF F0 01 */	bl func_8035B920
+/* 8035C920 00325EE0  4B FF F0 01 */	bl SelectThread
 lbl_8035C924:
 /* 8035C924 00325EE4  7F E3 FB 78 */	mr r3, r31
 /* 8035C928 00325EE8  4B FF C0 C9 */	bl OSRestoreInterrupts
@@ -1648,11 +1636,10 @@ lbl_8035C930:
 /* 8035C940 00325F00  7C 08 03 A6 */	mtlr r0
 /* 8035C944 00325F04  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035C948 00325F08  4E 80 00 20 */	blr 
-/* 8035C94C 00325F0C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8035C950
 func_8035C950:
 /* 8035C950 00325F10  80 63 02 D4 */	lwz r3, 0x2d4(r3)
 /* 8035C954 00325F14  4E 80 00 20 */	blr 
-/* 8035C958 00325F18  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035C95C 00325F1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

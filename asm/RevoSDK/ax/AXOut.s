@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802D3A70
-func_802D3A70:
+.global __AXOutNewFrame
+__AXOutNewFrame:
 /* 802D3A70 0029D030  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D3A74 0029D034  7C 08 02 A6 */	mflr r0
 /* 802D3A78 0029D038  90 01 00 34 */	stw r0, 0x34(r1)
@@ -16,7 +16,7 @@ func_802D3A70:
 /* 802D3A94 0029D054  38 BF 00 00 */	addi r5, r31, 0
 /* 802D3A98 0029D058  90 7F 00 00 */	stw r3, 0(r31)
 /* 802D3A9C 0029D05C  90 85 00 04 */	stw r4, 4(r5)
-/* 802D3AA0 0029D060  4B FF D7 11 */	bl func_802D11B0
+/* 802D3AA0 0029D060  4B FF D7 11 */	bl AIGetDMABytesLeft
 /* 802D3AA4 0029D064  54 63 F0 BE */	srwi r3, r3, 2
 /* 802D3AA8 0029D068  80 0D B5 18 */	lwz r0, lbl_80667698@sda21(r13)
 /* 802D3AAC 0029D06C  20 63 00 60 */	subfic r3, r3, 0x60
@@ -24,14 +24,14 @@ func_802D3A70:
 /* 802D3AB4 0029D074  1F C3 0E D5 */	mulli r30, r3, 0xed5
 /* 802D3AB8 0029D078  40 82 00 10 */	bne lbl_802D3AC8
 /* 802D3ABC 0029D07C  38 60 00 00 */	li r3, 0
-/* 802D3AC0 0029D080  48 00 12 01 */	bl func_802D4CC0
+/* 802D3AC0 0029D080  48 00 12 01 */	bl __AXSyncPBs
 /* 802D3AC4 0029D084  48 00 00 0C */	b lbl_802D3AD0
 lbl_802D3AC8:
 /* 802D3AC8 0029D088  38 60 5F 50 */	li r3, 0x5f50
-/* 802D3ACC 0029D08C  48 00 11 F5 */	bl func_802D4CC0
+/* 802D3ACC 0029D08C  48 00 11 F5 */	bl __AXSyncPBs
 lbl_802D3AD0:
-/* 802D3AD0 0029D090  48 00 09 41 */	bl func_802D4410
-/* 802D3AD4 0029D094  4B FF F4 AD */	bl func_802D2F80
+/* 802D3AD0 0029D090  48 00 09 41 */	bl __AXPrintStudio
+/* 802D3AD4 0029D094  4B FF F4 AD */	bl __AXGetCommandListAddress
 /* 802D3AD8 0029D098  3C 80 BA BE */	lis r4, 0xBABE0080@ha
 /* 802D3ADC 0029D09C  7C 7D 1B 78 */	mr r29, r3
 /* 802D3AE0 0029D0A0  38 64 00 80 */	addi r3, r4, 0xBABE0080@l
@@ -46,7 +46,7 @@ lbl_802D3AFC:
 /* 802D3AFC 0029D0BC  48 03 57 15 */	bl DSPCheckMailToDSP
 /* 802D3B00 0029D0C0  2C 03 00 00 */	cmpwi r3, 0
 /* 802D3B04 0029D0C4  40 82 FF F8 */	bne lbl_802D3AFC
-/* 802D3B08 0029D0C8  4B FF E6 29 */	bl func_802D2130
+/* 802D3B08 0029D0C8  4B FF E6 29 */	bl __AXServiceCallbackStack
 /* 802D3B0C 0029D0CC  48 08 8E 55 */	bl OSGetTime
 /* 802D3B10 0029D0D0  3B BF 00 00 */	addi r29, r31, 0
 /* 802D3B14 0029D0D4  90 9D 00 0C */	stw r4, 0xc(r29)
@@ -101,7 +101,7 @@ lbl_802D3BBC:
 /* 802D3BCC 0029D18C  1C 00 01 80 */	mulli r0, r0, 0x180
 /* 802D3BD0 0029D190  38 A1 00 08 */	addi r5, r1, 8
 /* 802D3BD4 0029D194  7C 9D 02 14 */	add r4, r29, r0
-/* 802D3BD8 0029D198  4B FF F3 D9 */	bl func_802D2FB0
+/* 802D3BD8 0029D198  4B FF F3 D9 */	bl __AXNextFrame
 /* 802D3BDC 0029D19C  80 0D B5 18 */	lwz r0, lbl_80667698@sda21(r13)
 /* 802D3BE0 0029D1A0  80 6D B5 40 */	lwz r3, lbl_806676C0@sda21(r13)
 /* 802D3BE4 0029D1A4  28 00 00 01 */	cmplwi r0, 1
@@ -131,9 +131,9 @@ lbl_802D3C38:
 /* 802D3C3C 0029D1FC  3B BF 00 00 */	addi r29, r31, 0
 /* 802D3C40 0029D200  90 9D 00 2C */	stw r4, 0x2c(r29)
 /* 802D3C44 0029D204  90 7D 00 28 */	stw r3, 0x28(r29)
-/* 802D3C48 0029D208  48 00 0B 19 */	bl func_802D4760
+/* 802D3C48 0029D208  48 00 0B 19 */	bl __AXGetNumVoices
 /* 802D3C4C 0029D20C  90 7D 00 30 */	stw r3, 0x30(r29)
-/* 802D3C50 0029D210  48 00 1A 81 */	bl func_802D56D0
+/* 802D3C50 0029D210  48 00 1A 81 */	bl __AXGetCurrentProfile
 /* 802D3C54 0029D214  2C 03 00 00 */	cmpwi r3, 0
 /* 802D3C58 0029D218  41 82 00 58 */	beq lbl_802D3CB0
 /* 802D3C5C 0029D21C  38 00 00 07 */	li r0, 7
@@ -168,8 +168,8 @@ lbl_802D3CB0:
 /* 802D3CC8 0029D288  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D3CCC 0029D28C  4E 80 00 20 */	blr
 
-.global func_802D3CD0
-func_802D3CD0:
+.global __AXOutAiCallback
+__AXOutAiCallback:
 /* 802D3CD0 0029D290  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D3CD4 0029D294  7C 08 02 A6 */	mflr r0
 /* 802D3CD8 0029D298  90 01 00 14 */	stw r0, 0x14(r1)
@@ -181,14 +181,14 @@ func_802D3CD0:
 /* 802D3CF0 0029D2B0  40 82 00 14 */	bne lbl_802D3D04
 /* 802D3CF4 0029D2B4  38 00 00 00 */	li r0, 0
 /* 802D3CF8 0029D2B8  90 0D B5 38 */	stw r0, lbl_806676B8@sda21(r13)
-/* 802D3CFC 0029D2BC  4B FF FD 75 */	bl func_802D3A70
+/* 802D3CFC 0029D2BC  4B FF FD 75 */	bl __AXOutNewFrame
 /* 802D3D00 0029D2C0  48 00 00 18 */	b lbl_802D3D18
 lbl_802D3D04:
 /* 802D3D04 0029D2C4  38 00 00 02 */	li r0, 2
 /* 802D3D08 0029D2C8  3C 60 80 58 */	lis r3, lbl_80581920@ha
 /* 802D3D0C 0029D2CC  90 0D B5 38 */	stw r0, lbl_806676B8@sda21(r13)
 /* 802D3D10 0029D2D0  38 63 19 20 */	addi r3, r3, lbl_80581920@l
-/* 802D3D14 0029D2D4  48 03 56 DD */	bl func_803093F0
+/* 802D3D14 0029D2D4  48 03 56 DD */	bl DSPAssertTask
 lbl_802D3D18:
 /* 802D3D18 0029D2D8  80 0D B5 18 */	lwz r0, lbl_80667698@sda21(r13)
 /* 802D3D1C 0029D2DC  28 00 00 01 */	cmplwi r0, 1
@@ -218,13 +218,15 @@ lbl_802D3D70:
 /* 802D3D78 0029D338  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D3D7C 0029D33C  4E 80 00 20 */	blr
 
-.global func_802D3D80
-func_802D3D80:
+.global __AXDSPInitCallback
+__AXDSPInitCallback:
 /* 802D3D80 0029D340  38 00 00 01 */	li r0, 1
 /* 802D3D84 0029D344  90 0D B5 30 */	stw r0, lbl_806676B0@sda21(r13)
 /* 802D3D88 0029D348  4E 80 00 20 */	blr 
-/* 802D3D8C 0029D34C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_802D3D90:
+
+.balign 16, 0
+.global __AXDSPResumeCallback
+__AXDSPResumeCallback:
 /* 802D3D90 0029D350  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D3D94 0029D354  7C 08 02 A6 */	mflr r0
 /* 802D3D98 0029D358  90 01 00 14 */	stw r0, 0x14(r1)
@@ -233,7 +235,7 @@ lbl_802D3D90:
 /* 802D3DA4 0029D364  40 82 00 28 */	bne lbl_802D3DCC
 /* 802D3DA8 0029D368  38 00 00 00 */	li r0, 0
 /* 802D3DAC 0029D36C  90 0D B5 38 */	stw r0, lbl_806676B8@sda21(r13)
-/* 802D3DB0 0029D370  4B FF FC C1 */	bl func_802D3A70
+/* 802D3DB0 0029D370  4B FF FC C1 */	bl __AXOutNewFrame
 /* 802D3DB4 0029D374  81 8D B5 08 */	lwz r12, lbl_80667688@sda21(r13)
 /* 802D3DB8 0029D378  2C 0C 00 00 */	cmpwi r12, 0
 /* 802D3DBC 0029D37C  41 82 00 18 */	beq lbl_802D3DD4
@@ -248,30 +250,30 @@ lbl_802D3DD4:
 /* 802D3DD8 0029D398  7C 08 03 A6 */	mtlr r0
 /* 802D3DDC 0029D39C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D3DE0 0029D3A0  4E 80 00 20 */	blr 
-/* 802D3DE4 0029D3A4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D3DE8 0029D3A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D3DEC 0029D3AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_802D3DF0:
+
+.balign 16, 0
+.global __AXDSPDoneCallback
+__AXDSPDoneCallback:
 /* 802D3DF0 0029D3B0  38 00 00 01 */	li r0, 1
 /* 802D3DF4 0029D3B4  90 0D B5 2C */	stw r0, lbl_806676AC@sda21(r13)
 /* 802D3DF8 0029D3B8  38 6D B5 20 */	addi r3, r13, lbl_806676A0@sda21
 /* 802D3DFC 0029D3BC  48 08 89 64 */	b OSWakeupThread
-lbl_802D3E00:
-/* 802D3E00 0029D3C0  4E 80 00 20 */	blr 
-/* 802D3E04 0029D3C4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D3E08 0029D3C8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D3E0C 0029D3CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D3E10
-func_802D3E10:
+.global __AXDSPRequestCallback
+__AXDSPRequestCallback:
+/* 802D3E00 0029D3C0  4E 80 00 20 */	blr 
+
+.balign 16, 0
+.global __AXOutInitDSP
+__AXOutInitDSP:
 /* 802D3E10 0029D3D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D3E14 0029D3D4  7C 08 02 A6 */	mflr r0
 /* 802D3E18 0029D3D8  3D 60 80 58 */	lis r11, lbl_80581980@ha
-/* 802D3E1C 0029D3DC  3C E0 80 2D */	lis r7, func_802D3D80@ha
+/* 802D3E1C 0029D3DC  3C E0 80 2D */	lis r7, __AXDSPInitCallback@ha
 /* 802D3E20 0029D3E0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802D3E24 0029D3E4  3C C0 80 2D */	lis r6, lbl_802D3D90@ha
-/* 802D3E28 0029D3E8  3C A0 80 2D */	lis r5, lbl_802D3DF0@ha
-/* 802D3E2C 0029D3EC  3C 80 80 2D */	lis r4, lbl_802D3E00@ha
+/* 802D3E24 0029D3E4  3C C0 80 2D */	lis r6, __AXDSPResumeCallback@ha
+/* 802D3E28 0029D3E8  3C A0 80 2D */	lis r5, __AXDSPDoneCallback@ha
+/* 802D3E2C 0029D3EC  3C 80 80 2D */	lis r4, __AXDSPRequestCallback@ha
 /* 802D3E30 0029D3F0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802D3E34 0029D3F4  3F E0 80 58 */	lis r31, lbl_80581920@ha
 /* 802D3E38 0029D3F8  3B FF 19 20 */	addi r31, r31, lbl_80581920@l
@@ -281,13 +283,13 @@ func_802D3E10:
 /* 802D3E48 0029D408  3B DE 11 20 */	addi r30, r30, lbl_80541120@l
 /* 802D3E4C 0029D40C  39 6B 19 80 */	addi r11, r11, lbl_80581980@l
 /* 802D3E50 0029D410  A0 6D 97 3C */	lhz r3, lbl_806658BC@sda21(r13)
-/* 802D3E54 0029D414  38 E7 3D 80 */	addi r7, r7, func_802D3D80@l
+/* 802D3E54 0029D414  38 E7 3D 80 */	addi r7, r7, __AXDSPInitCallback@l
 /* 802D3E58 0029D418  A1 0D 97 38 */	lhz r8, lbl_806658B8@sda21(r13)
-/* 802D3E5C 0029D41C  38 C6 3D 90 */	addi r6, r6, lbl_802D3D90@l
+/* 802D3E5C 0029D41C  38 C6 3D 90 */	addi r6, r6, __AXDSPResumeCallback@l
 /* 802D3E60 0029D420  A0 0D 97 3A */	lhz r0, lbl_806658BA@sda21(r13)
-/* 802D3E64 0029D424  38 A5 3D F0 */	addi r5, r5, lbl_802D3DF0@l
+/* 802D3E64 0029D424  38 A5 3D F0 */	addi r5, r5, __AXDSPDoneCallback@l
 /* 802D3E68 0029D428  91 9F 00 04 */	stw r12, 4(r31)
-/* 802D3E6C 0029D42C  38 84 3E 00 */	addi r4, r4, lbl_802D3E00@l
+/* 802D3E6C 0029D42C  38 84 3E 00 */	addi r4, r4, __AXDSPRequestCallback@l
 /* 802D3E70 0029D430  39 40 00 40 */	li r10, 0x40
 /* 802D3E74 0029D434  39 20 0C D2 */	li r9, 0xcd2
 /* 802D3E78 0029D438  91 8D B5 30 */	stw r12, lbl_806676B0@sda21(r13)
@@ -306,14 +308,14 @@ func_802D3E10:
 /* 802D3EAC 0029D46C  90 9F 00 34 */	stw r4, 0x34(r31)
 /* 802D3EB0 0029D470  91 8D B5 2C */	stw r12, lbl_806676AC@sda21(r13)
 /* 802D3EB4 0029D474  48 08 77 1D */	bl OSInitThreadQueue
-/* 802D3EB8 0029D478  48 03 54 79 */	bl func_80309330
+/* 802D3EB8 0029D478  48 03 54 79 */	bl DSPCheckInit
 /* 802D3EBC 0029D47C  2C 03 00 00 */	cmpwi r3, 0
 /* 802D3EC0 0029D480  40 82 00 08 */	bne lbl_802D3EC8
 /* 802D3EC4 0029D484  48 03 53 AD */	bl DSPInit
 lbl_802D3EC8:
 /* 802D3EC8 0029D488  3C 60 80 58 */	lis r3, lbl_80581920@ha
 /* 802D3ECC 0029D48C  38 63 19 20 */	addi r3, r3, lbl_80581920@l
-/* 802D3ED0 0029D490  48 03 54 71 */	bl func_80309340
+/* 802D3ED0 0029D490  48 03 54 71 */	bl DSPAddTask
 /* 802D3ED4 0029D494  60 00 00 00 */	nop 
 lbl_802D3ED8:
 /* 802D3ED8 0029D498  80 0D B5 30 */	lwz r0, lbl_806676B0@sda21(r13)
@@ -325,10 +327,10 @@ lbl_802D3ED8:
 /* 802D3EF0 0029D4B0  7C 08 03 A6 */	mtlr r0
 /* 802D3EF4 0029D4B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D3EF8 0029D4B8  4E 80 00 20 */	blr 
-/* 802D3EFC 0029D4BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D3F00
-func_802D3F00:
+.balign 16, 0
+.global __AXOutInit
+__AXOutInit:
 /* 802D3F00 0029D4C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D3F04 0029D4C4  7C 08 02 A6 */	mflr r0
 /* 802D3F08 0029D4C8  38 80 00 00 */	li r4, 0
@@ -396,9 +398,9 @@ lbl_802D3FC4:
 /* 802D3FF4 0029D5B4  38 7F 00 40 */	addi r3, r31, 0x40
 /* 802D3FF8 0029D5B8  38 80 05 A0 */	li r4, 0x5a0
 /* 802D3FFC 0029D5BC  48 07 FF B5 */	bl DCFlushRange
-/* 802D4000 0029D5C0  4B FF FE 11 */	bl func_802D3E10
-/* 802D4004 0029D5C4  3C 60 80 2D */	lis r3, func_802D3CD0@ha
-/* 802D4008 0029D5C8  38 63 3C D0 */	addi r3, r3, func_802D3CD0@l
+/* 802D4000 0029D5C0  4B FF FE 11 */	bl __AXOutInitDSP
+/* 802D4004 0029D5C4  3C 60 80 2D */	lis r3, __AXOutAiCallback@ha
+/* 802D4008 0029D5C8  38 63 3C D0 */	addi r3, r3, __AXOutAiCallback@l
 /* 802D400C 0029D5CC  4B FF D0 95 */	bl AIRegisterDMACallback
 /* 802D4010 0029D5D0  80 0D B5 18 */	lwz r0, lbl_80667698@sda21(r13)
 /* 802D4014 0029D5D4  38 FF 00 40 */	addi r7, r31, 0x40
@@ -420,14 +422,14 @@ lbl_802D3FC4:
 /* 802D4054 0029D614  38 7F 05 E0 */	addi r3, r31, 0x5e0
 /* 802D4058 0029D618  38 84 03 00 */	addi r4, r4, 0x300
 /* 802D405C 0029D61C  38 A1 00 08 */	addi r5, r1, 8
-/* 802D4060 0029D620  4B FF EF 51 */	bl func_802D2FB0
+/* 802D4060 0029D620  4B FF EF 51 */	bl __AXNextFrame
 /* 802D4064 0029D624  48 00 00 18 */	b lbl_802D407C
 lbl_802D4068:
 /* 802D4068 0029D628  38 9F 08 E0 */	addi r4, r31, 0x8e0
 /* 802D406C 0029D62C  38 7F 05 E0 */	addi r3, r31, 0x5e0
 /* 802D4070 0029D630  38 84 01 80 */	addi r4, r4, 0x180
 /* 802D4074 0029D634  38 A1 00 08 */	addi r5, r1, 8
-/* 802D4078 0029D638  4B FF EF 39 */	bl func_802D2FB0
+/* 802D4078 0029D638  4B FF EF 39 */	bl __AXNextFrame
 lbl_802D407C:
 /* 802D407C 0029D63C  80 0D B5 18 */	lwz r0, lbl_80667698@sda21(r13)
 /* 802D4080 0029D640  38 80 00 01 */	li r4, 1
@@ -454,7 +456,7 @@ lbl_802D40C0:
 /* 802D40D0 0029D690  7C 60 1A 14 */	add r3, r0, r3
 /* 802D40D4 0029D694  4B FF D0 1D */	bl AIInitDMA
 lbl_802D40D8:
-/* 802D40D8 0029D698  4B FF D0 99 */	bl func_802D1170
+/* 802D40D8 0029D698  4B FF D0 99 */	bl AIStartDMA
 /* 802D40DC 0029D69C  38 00 00 00 */	li r0, 0
 /* 802D40E0 0029D6A0  90 0D B5 08 */	stw r0, lbl_80667688@sda21(r13)
 /* 802D40E4 0029D6A4  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -462,11 +464,10 @@ lbl_802D40D8:
 /* 802D40EC 0029D6AC  7C 08 03 A6 */	mtlr r0
 /* 802D40F0 0029D6B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D40F4 0029D6B4  4E 80 00 20 */	blr 
-/* 802D40F8 0029D6B8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D40FC 0029D6BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D4100
-func_802D4100:
+.balign 16, 0
+.global __AXOutQuit
+__AXOutQuit:
 /* 802D4100 0029D6C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D4104 0029D6C4  7C 08 02 A6 */	mflr r0
 /* 802D4108 0029D6C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -480,10 +481,10 @@ func_802D4100:
 /* 802D4128 0029D6E8  38 64 19 20 */	addi r3, r4, lbl_80581920@l
 /* 802D412C 0029D6EC  48 03 52 85 */	bl func_803093B0
 /* 802D4130 0029D6F0  38 6D B5 20 */	addi r3, r13, lbl_806676A0@sda21
-/* 802D4134 0029D6F4  48 08 85 3D */	bl func_8035C670
+/* 802D4134 0029D6F4  48 08 85 3D */	bl OSSleepThread
 /* 802D4138 0029D6F8  38 60 00 00 */	li r3, 0
 /* 802D413C 0029D6FC  4B FF CF 65 */	bl AIRegisterDMACallback
-/* 802D4140 0029D700  4B FF D0 51 */	bl func_802D1190
+/* 802D4140 0029D700  4B FF D0 51 */	bl AIStopDMA
 /* 802D4144 0029D704  93 ED B5 08 */	stw r31, lbl_80667688@sda21(r13)
 /* 802D4148 0029D708  7F C3 F3 78 */	mr r3, r30
 /* 802D414C 0029D70C  48 08 48 A5 */	bl OSRestoreInterrupts
@@ -493,11 +494,10 @@ func_802D4100:
 /* 802D415C 0029D71C  7C 08 03 A6 */	mtlr r0
 /* 802D4160 0029D720  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D4164 0029D724  4E 80 00 20 */	blr 
-/* 802D4168 0029D728  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D416C 0029D72C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D4170
-func_802D4170:
+.balign 16, 0
+.global AXRegisterCallback
+AXRegisterCallback:
 /* 802D4170 0029D730  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D4174 0029D734  7C 08 02 A6 */	mflr r0
 /* 802D4178 0029D738  90 01 00 14 */	stw r0, 0x14(r1)
@@ -515,12 +515,10 @@ func_802D4170:
 /* 802D41A8 0029D768  7C 08 03 A6 */	mtlr r0
 /* 802D41AC 0029D76C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D41B0 0029D770  4E 80 00 20 */	blr 
-/* 802D41B4 0029D774  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D41B8 0029D778  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D41BC 0029D77C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D41C0
-func_802D41C0:
+.balign 16, 0
+.global AXRmtGetSamplesLeft
+AXRmtGetSamplesLeft:
 /* 802D41C0 0029D780  80 6D B5 10 */	lwz r3, lbl_80667690@sda21(r13)
 /* 802D41C4 0029D784  34 63 FF DC */	addic. r3, r3, -36
 /* 802D41C8 0029D788  40 80 00 0C */	bge lbl_802D41D4
@@ -533,10 +531,10 @@ lbl_802D41D4:
 /* 802D41E0 0029D7A0  80 0D B5 14 */	lwz r0, lbl_80667694@sda21(r13)
 /* 802D41E4 0029D7A4  7C 63 02 14 */	add r3, r3, r0
 /* 802D41E8 0029D7A8  4E 80 00 20 */	blr 
-/* 802D41EC 0029D7AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D41F0
-func_802D41F0:
+.balign 16, 0
+.global AXRmtGetSamples
+AXRmtGetSamples:
 /* 802D41F0 0029D7B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D41F4 0029D7B4  7C 08 02 A6 */	mflr r0
 /* 802D41F8 0029D7B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -593,12 +591,10 @@ lbl_802D4280:
 /* 802D42A8 0029D868  7C 08 03 A6 */	mtlr r0
 /* 802D42AC 0029D86C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D42B0 0029D870  4E 80 00 20 */	blr 
-/* 802D42B4 0029D874  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D42B8 0029D878  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D42BC 0029D87C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D42C0
-func_802D42C0:
+.balign 16, 0
+.global AXRmtAdvancePtr
+AXRmtAdvancePtr:
 /* 802D42C0 0029D880  80 8D B5 10 */	lwz r4, lbl_80667690@sda21(r13)
 /* 802D42C4 0029D884  34 84 FF DC */	addic. r4, r4, -36
 /* 802D42C8 0029D888  40 80 00 0C */	bge lbl_802D42D4
@@ -624,5 +620,4 @@ lbl_802D42F4:
 /* 802D430C 0029D8CC  7C 04 00 50 */	subf r0, r4, r0
 /* 802D4310 0029D8D0  90 0D B5 0C */	stw r0, lbl_8066768C@sda21(r13)
 /* 802D4314 0029D8D4  4E 80 00 20 */	blr 
-/* 802D4318 0029D8D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D431C 0029D8DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

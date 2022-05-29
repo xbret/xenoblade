@@ -39,9 +39,8 @@ lbl_80366A28:
 /* 80366A7C 0033003C  7C 08 03 A6 */	mtlr r0
 /* 80366A80 00330040  38 21 00 20 */	addi r1, r1, 0x20
 /* 80366A84 00330044  4E 80 00 20 */	blr 
-/* 80366A88 00330048  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80366A8C 0033004C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global sendSlaveAddr
 sendSlaveAddr:
 /* 80366A90 00330050  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -270,9 +269,8 @@ lbl_80366DC0:
 /* 80366DCC 0033038C  7C 08 03 A6 */	mtlr r0
 /* 80366DD0 00330390  38 21 00 30 */	addi r1, r1, 0x30
 /* 80366DD4 00330394  4E 80 00 20 */	blr 
-/* 80366DD8 00330398  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80366DDC 0033039C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __VISendI2CData
 __VISendI2CData:
 /* 80366DE0 003303A0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -635,6 +633,7 @@ lbl_803672FC:
 /* 80367308 003308C8  7C 08 03 A6 */	mtlr r0
 /* 8036730C 003308CC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80367310 003308D0  4E 80 00 20 */	blr 
-/* 80367314 003308D4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80367318 003308D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036731C 003308DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.4byte 0
+.4byte 0
+.4byte 0
+#.balign 16, 0

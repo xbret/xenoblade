@@ -205,9 +205,7 @@ lbl_80361934:
 /* 80361948 0032AF08  7C 08 03 A6 */	mtlr r0
 /* 8036194C 0032AF0C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80361950 0032AF10  4E 80 00 20 */	blr 
-/* 80361954 0032AF14  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80361958 0032AF18  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036195C 0032AF1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_80361960:
 /* 80361960 0032AF20  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80361964 0032AF24  7C 08 02 A6 */	mflr r0
@@ -479,8 +477,8 @@ lbl_80361D34:
 /* 80361D40 0032B300  7C 08 03 A6 */	mtlr r0
 /* 80361D44 0032B304  38 21 00 50 */	addi r1, r1, 0x50
 /* 80361D48 0032B308  4E 80 00 20 */	blr 
-/* 80361D4C 0032B30C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global SIInit
 SIInit:
 /* 80361D50 0032B310  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -658,10 +656,8 @@ func_80361FC0:
 /* 80361FC8 0032B588  7C 60 1A 14 */	add r3, r0, r3
 /* 80361FCC 0032B58C  90 83 64 00 */	stw r4, 0x6400(r3)
 /* 80361FD0 0032B590  4E 80 00 20 */	blr 
-/* 80361FD4 0032B594  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80361FD8 0032B598  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80361FDC 0032B59C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80361FE0
 func_80361FE0:
 /* 80361FE0 0032B5A0  3C 60 CD 00 */	lis r3, 0xCD006438@ha
@@ -694,7 +690,7 @@ SISetXY:
 /* 80362040 0032B600  7C 08 03 A6 */	mtlr r0
 /* 80362044 0032B604  38 21 00 10 */	addi r1, r1, 0x10
 /* 80362048 0032B608  4E 80 00 20 */	blr 
-/* 8036204C 0032B60C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_80362050:
 /* 80362050 0032B610  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80362054 0032B614  7C 08 02 A6 */	mflr r0
@@ -732,8 +728,8 @@ lbl_803620C8:
 /* 803620D0 0032B690  7C 08 03 A6 */	mtlr r0
 /* 803620D4 0032B694  38 21 00 10 */	addi r1, r1, 0x10
 /* 803620D8 0032B698  4E 80 00 20 */	blr 
-/* 803620DC 0032B69C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803620E0
 func_803620E0:
 /* 803620E0 0032B6A0  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -834,7 +830,7 @@ lbl_80362234:
 /* 80362240 0032B800  7C 08 03 A6 */	mtlr r0
 /* 80362244 0032B804  38 21 00 40 */	addi r1, r1, 0x40
 /* 80362248 0032B808  4E 80 00 20 */	blr 
-/* 8036224C 0032B80C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_80362250:
 /* 80362250 0032B810  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80362254 0032B814  7C 08 02 A6 */	mflr r0
@@ -878,7 +874,7 @@ lbl_80362250:
 lbl_803622EC:
 /* 803622EC 0032B8AC  7F 43 D3 78 */	mr r3, r26
 /* 803622F0 0032B8B0  38 80 00 00 */	li r4, 0
-/* 803622F4 0032B8B4  4B FF 8C ED */	bl func_8035AFE0
+/* 803622F4 0032B8B4  4B FF 8C ED */	bl OSSetWirelessID
 /* 803622F8 0032B8B8  7F 9F E8 2E */	lwzx r28, r31, r29
 /* 803622FC 0032B8BC  57 43 20 36 */	slwi r3, r26, 4
 /* 80362300 0032B8C0  38 1E 01 E0 */	addi r0, r30, 0x1e0
@@ -902,7 +898,7 @@ lbl_80362330:
 /* 80362340 0032B900  48 00 01 AC */	b lbl_803624EC
 lbl_80362344:
 /* 80362344 0032B904  7F 43 D3 78 */	mr r3, r26
-/* 80362348 0032B908  4B FF 8C 19 */	bl func_8035AF60
+/* 80362348 0032B908  4B FF 8C 19 */	bl OSGetWirelessID
 /* 8036234C 0032B90C  2C 1B 00 00 */	cmpwi r27, 0
 /* 80362350 0032B910  54 7B 42 2E */	rlwinm r27, r3, 8, 8, 0x17
 /* 80362354 0032B914  41 82 00 58 */	beq lbl_803623AC
@@ -941,7 +937,7 @@ lbl_803623AC:
 /* 803623D4 0032B994  64 7B 00 10 */	oris r27, r3, 0x10
 /* 803623D8 0032B998  7F 43 D3 78 */	mr r3, r26
 /* 803623DC 0032B99C  57 64 C4 3E */	rlwinm r4, r27, 0x18, 0x10, 0x1f
-/* 803623E0 0032B9A0  4B FF 8C 01 */	bl func_8035AFE0
+/* 803623E0 0032B9A0  4B FF 8C 01 */	bl OSSetWirelessID
 lbl_803623E4:
 /* 803623E4 0032B9A4  3C 60 80 56 */	lis r3, lbl_8055F198@ha
 /* 803623E8 0032B9A8  38 1E 01 D0 */	addi r0, r30, 0x1d0
@@ -970,7 +966,7 @@ lbl_8036242C:
 /* 80362440 0032BA00  7F 9B 00 38 */	and r27, r28, r0
 /* 80362444 0032BA04  67 7B 00 10 */	oris r27, r27, 0x10
 /* 80362448 0032BA08  57 64 C4 3E */	rlwinm r4, r27, 0x18, 0x10, 0x1f
-/* 8036244C 0032BA0C  4B FF 8B 95 */	bl func_8035AFE0
+/* 8036244C 0032BA0C  4B FF 8B 95 */	bl OSSetWirelessID
 /* 80362450 0032BA10  3C 60 80 56 */	lis r3, lbl_8055F198@ha
 /* 80362454 0032BA14  38 1E 01 D0 */	addi r0, r30, 0x1d0
 /* 80362458 0032BA18  38 63 F1 98 */	addi r3, r3, lbl_8055F198@l
@@ -992,7 +988,7 @@ lbl_8036242C:
 lbl_80362498:
 /* 80362498 0032BA58  7F 43 D3 78 */	mr r3, r26
 /* 8036249C 0032BA5C  38 80 00 00 */	li r4, 0
-/* 803624A0 0032BA60  4B FF 8B 41 */	bl func_8035AFE0
+/* 803624A0 0032BA60  4B FF 8B 41 */	bl OSSetWirelessID
 lbl_803624A4:
 /* 803624A4 0032BA64  7F 9F E8 2E */	lwzx r28, r31, r29
 /* 803624A8 0032BA68  57 43 20 36 */	slwi r3, r26, 4
@@ -1021,10 +1017,8 @@ lbl_803624EC:
 /* 803624F8 0032BAB8  7C 08 03 A6 */	mtlr r0
 /* 803624FC 0032BABC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80362500 0032BAC0  4E 80 00 20 */	blr 
-/* 80362504 0032BAC4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80362508 0032BAC8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036250C 0032BACC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80362510
 func_80362510:
 /* 80362510 0032BAD0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1142,6 +1136,4 @@ lbl_803626AC:
 /* 803626B8 0032BC78  7C 08 03 A6 */	mtlr r0
 /* 803626BC 0032BC7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803626C0 0032BC80  4E 80 00 20 */	blr 
-/* 803626C4 0032BC84  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803626C8 0032BC88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803626CC 0032BC8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

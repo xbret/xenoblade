@@ -49,8 +49,8 @@ lbl_8035F5BC:
 /* 8035F5C8 00328B88  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035F5CC 00328B8C  4E 80 00 20 */	blr 
 
-.global func_8035F5D0
-func_8035F5D0:
+.global SCCheckStatus
+SCCheckStatus:
 /* 8035F5D0 00328B90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035F5D4 00328B94  7C 08 02 A6 */	mflr r0
 /* 8035F5D8 00328B98  90 01 00 24 */	stw r0, 0x24(r1)
@@ -128,8 +128,8 @@ lbl_8035F6CC:
 /* 8035F6E0 00328CA0  7C 08 03 A6 */	mtlr r0
 /* 8035F6E4 00328CA4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035F6E8 00328CA8  4E 80 00 20 */	blr 
-/* 8035F6EC 00328CAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8035F6F0
 func_8035F6F0:
 /* 8035F6F0 00328CB0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -203,9 +203,7 @@ lbl_8035F7E8:
 /* 8035F7F8 00328DB8  7C 08 03 A6 */	mtlr r0
 /* 8035F7FC 00328DBC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035F800 00328DC0  4E 80 00 20 */	blr 
-/* 8035F804 00328DC4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035F808 00328DC8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035F80C 00328DCC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_8035F810:
 /* 8035F810 00328DD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035F814 00328DD4  7C 08 02 A6 */	mflr r0
@@ -227,7 +225,7 @@ lbl_8035F810:
 /* 8035F854 00328E14  7C A4 02 14 */	add r5, r4, r0
 /* 8035F858 00328E18  80 85 01 6C */	lwz r4, 0x16c(r5)
 /* 8035F85C 00328E1C  80 A5 01 74 */	lwz r5, 0x174(r5)
-/* 8035F860 00328E20  4B FE F5 41 */	bl func_8034EDA0
+/* 8035F860 00328E20  4B FE F5 41 */	bl NANDReadAsync
 /* 8035F864 00328E24  2C 03 00 00 */	cmpwi r3, 0
 /* 8035F868 00328E28  41 82 00 64 */	beq lbl_8035F8CC
 lbl_8035F86C:
@@ -252,7 +250,7 @@ lbl_8035F884:
 /* 8035F8B0 00328E70  38 65 00 08 */	addi r3, r5, 8
 /* 8035F8B4 00328E74  38 84 FB 90 */	addi r4, r4, lbl_8035FB90@l
 /* 8035F8B8 00328E78  38 A5 00 94 */	addi r5, r5, 0x94
-/* 8035F8BC 00328E7C  4B FF 04 15 */	bl func_8034FCD0
+/* 8035F8BC 00328E7C  4B FF 04 15 */	bl NANDCloseAsync
 /* 8035F8C0 00328E80  2C 03 00 00 */	cmpwi r3, 0
 /* 8035F8C4 00328E84  41 82 00 08 */	beq lbl_8035F8CC
 lbl_8035F8C8:
@@ -286,7 +284,7 @@ func_8035F8E0:
 /* 8035F924 00328EE4  98 05 01 59 */	stb r0, 0x159(r5)
 /* 8035F928 00328EE8  38 84 F9 D0 */	addi r4, r4, lbl_8035F9D0@l
 /* 8035F92C 00328EEC  38 A5 00 94 */	addi r5, r5, 0x94
-/* 8035F930 00328EF0  4B FF 03 A1 */	bl func_8034FCD0
+/* 8035F930 00328EF0  4B FF 03 A1 */	bl NANDCloseAsync
 /* 8035F934 00328EF4  2C 03 00 00 */	cmpwi r3, 0
 /* 8035F938 00328EF8  41 82 00 7C */	beq lbl_8035F9B4
 lbl_8035F93C:
@@ -318,7 +316,7 @@ lbl_8035F96C:
 /* 8035F998 00328F58  38 65 00 08 */	addi r3, r5, 8
 /* 8035F99C 00328F5C  38 84 FB 90 */	addi r4, r4, lbl_8035FB90@l
 /* 8035F9A0 00328F60  38 A5 00 94 */	addi r5, r5, 0x94
-/* 8035F9A4 00328F64  4B FF 03 2D */	bl func_8034FCD0
+/* 8035F9A4 00328F64  4B FF 03 2D */	bl NANDCloseAsync
 /* 8035F9A8 00328F68  2C 03 00 00 */	cmpwi r3, 0
 /* 8035F9AC 00328F6C  41 82 00 08 */	beq lbl_8035F9B4
 lbl_8035F9B0:
@@ -329,8 +327,7 @@ lbl_8035F9B4:
 /* 8035F9BC 00328F7C  7C 08 03 A6 */	mtlr r0
 /* 8035F9C0 00328F80  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035F9C4 00328F84  4E 80 00 20 */	blr 
-/* 8035F9C8 00328F88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035F9CC 00328F8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_8035F9D0:
 /* 8035F9D0 00328F90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035F9D4 00328F94  7C 08 02 A6 */	mflr r0
@@ -361,7 +358,7 @@ lbl_8035FA04:
 /* 8035FA30 00328FF0  38 65 00 08 */	addi r3, r5, 8
 /* 8035FA34 00328FF4  38 84 FB 90 */	addi r4, r4, lbl_8035FB90@l
 /* 8035FA38 00328FF8  38 A5 00 94 */	addi r5, r5, 0x94
-/* 8035FA3C 00328FFC  4B FF 02 95 */	bl func_8034FCD0
+/* 8035FA3C 00328FFC  4B FF 02 95 */	bl NANDCloseAsync
 /* 8035FA40 00329000  2C 03 00 00 */	cmpwi r3, 0
 /* 8035FA44 00329004  41 82 00 08 */	beq lbl_8035FA4C
 lbl_8035FA48:
@@ -371,8 +368,8 @@ lbl_8035FA4C:
 /* 8035FA50 00329010  7C 08 03 A6 */	mtlr r0
 /* 8035FA54 00329014  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035FA58 00329018  4E 80 00 20 */	blr 
-/* 8035FA5C 0032901C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8035FA60
 func_8035FA60:
 /* 8035FA60 00329020  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -454,15 +451,11 @@ lbl_8035FB64:
 /* 8035FB78 00329138  7C 08 03 A6 */	mtlr r0
 /* 8035FB7C 0032913C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035FB80 00329140  4E 80 00 20 */	blr 
-/* 8035FB84 00329144  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035FB88 00329148  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035FB8C 0032914C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_8035FB90:
 /* 8035FB90 00329150  4B FF FE D0 */	b func_8035FA60
-/* 8035FB94 00329154  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035FB98 00329158  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035FB9C 0032915C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8035FBA0
 func_8035FBA0:
 /* 8035FBA0 00329160  94 21 FF A0 */	stwu r1, -0x60(r1)
@@ -625,9 +618,8 @@ lbl_8035FDD0:
 /* 8035FDDC 0032939C  7C 08 03 A6 */	mtlr r0
 /* 8035FDE0 003293A0  38 21 00 60 */	addi r1, r1, 0x60
 /* 8035FDE4 003293A4  4E 80 00 20 */	blr 
-/* 8035FDE8 003293A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035FDEC 003293AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8035FDF0
 func_8035FDF0:
 /* 8035FDF0 003293B0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -776,7 +768,7 @@ func_8035FF70:
 /* 8035FFF4 003295B4  7C A0 28 50 */	subf r5, r0, r5
 /* 8035FFF8 003295B8  3B A6 00 02 */	addi r29, r6, 2
 /* 8035FFFC 003295BC  38 84 00 02 */	addi r4, r4, 2
-/* 80360000 003295C0  4B F5 E7 09 */	bl func_802BE708
+/* 80360000 003295C0  4B F5 E7 09 */	bl memmove
 /* 80360004 003295C4  38 98 FF FE */	addi r4, r24, -2
 /* 80360008 003295C8  38 04 00 02 */	addi r0, r4, 2
 /* 8036000C 003295CC  7C 19 00 50 */	subf r0, r25, r0
@@ -805,7 +797,7 @@ lbl_8036004C:
 /* 80360058 00329618  7C 7F 2A 14 */	add r3, r31, r5
 /* 8036005C 0032961C  7C 85 22 14 */	add r4, r5, r4
 /* 80360060 00329620  7C A0 D0 50 */	subf r5, r0, r26
-/* 80360064 00329624  4B F5 E6 A5 */	bl func_802BE708
+/* 80360064 00329624  4B F5 E6 A5 */	bl memmove
 /* 80360068 00329628  7C 1D D0 50 */	subf r0, r29, r26
 /* 8036006C 0032962C  7F A5 EB 78 */	mr r5, r29
 /* 80360070 00329630  7C 7F 02 14 */	add r3, r31, r0
@@ -850,10 +842,8 @@ lbl_803600EC:
 /* 803600F8 003296B8  7C 08 03 A6 */	mtlr r0
 /* 803600FC 003296BC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80360100 003296C0  4E 80 00 20 */	blr 
-/* 80360104 003296C4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80360108 003296C8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036010C 003296CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80360110
 func_80360110:
 /* 80360110 003296D0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -963,7 +953,7 @@ lbl_80360234:
 /* 80360280 00329840  7F 76 1A 14 */	add r27, r22, r3
 /* 80360284 00329844  38 64 00 02 */	addi r3, r4, 2
 /* 80360288 00329848  7C A0 28 50 */	subf r5, r0, r5
-/* 8036028C 0032984C  4B F5 E4 7D */	bl func_802BE708
+/* 8036028C 0032984C  4B F5 E4 7D */	bl memmove
 lbl_80360290:
 /* 80360290 00329850  A0 76 00 00 */	lhz r3, 0(r22)
 /* 80360294 00329854  38 03 00 02 */	addi r0, r3, 2
@@ -1031,9 +1021,8 @@ lbl_80360370:
 /* 8036037C 0032993C  7C 08 03 A6 */	mtlr r0
 /* 80360380 00329940  38 21 00 30 */	addi r1, r1, 0x30
 /* 80360384 00329944  4E 80 00 20 */	blr 
-/* 80360388 00329948  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036038C 0032994C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80360390
 func_80360390:
 /* 80360390 00329950  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1177,10 +1166,8 @@ lbl_80360570:
 /* 80360588 00329B48  7C 08 03 A6 */	mtlr r0
 /* 8036058C 00329B4C  38 21 00 40 */	addi r1, r1, 0x40
 /* 80360590 00329B50  4E 80 00 20 */	blr 
-/* 80360594 00329B54  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80360598 00329B58  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036059C 00329B5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803605A0
 func_803605A0:
 /* 803605A0 00329B60  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1239,10 +1226,8 @@ lbl_80360648:
 /* 80360668 00329C28  7C 08 03 A6 */	mtlr r0
 /* 8036066C 00329C2C  38 21 00 40 */	addi r1, r1, 0x40
 /* 80360670 00329C30  4E 80 00 20 */	blr 
-/* 80360674 00329C34  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80360678 00329C38  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036067C 00329C3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80360680
 func_80360680:
 /* 80360680 00329C40  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1301,10 +1286,8 @@ lbl_80360728:
 /* 80360748 00329D08  7C 08 03 A6 */	mtlr r0
 /* 8036074C 00329D0C  38 21 00 40 */	addi r1, r1, 0x40
 /* 80360750 00329D10  4E 80 00 20 */	blr 
-/* 80360754 00329D14  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80360758 00329D18  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036075C 00329D1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80360760
 func_80360760:
 /* 80360760 00329D20  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1363,10 +1346,8 @@ lbl_80360808:
 /* 80360828 00329DE8  7C 08 03 A6 */	mtlr r0
 /* 8036082C 00329DEC  38 21 00 40 */	addi r1, r1, 0x40
 /* 80360830 00329DF0  4E 80 00 20 */	blr 
-/* 80360834 00329DF4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80360838 00329DF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036083C 00329DFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80360840
 func_80360840:
 /* 80360840 00329E00  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1440,15 +1421,13 @@ lbl_80360920:
 /* 80360938 00329EF8  7C 08 03 A6 */	mtlr r0
 /* 8036093C 00329EFC  38 21 00 40 */	addi r1, r1, 0x40
 /* 80360940 00329F00  4E 80 00 20 */	blr 
-/* 80360944 00329F04  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80360948 00329F08  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8036094C 00329F0C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_80360950:
 /* 80360950 00329F10  3C 60 80 5D */	lis r3, lbl_805D5540@ha
 /* 80360954 00329F14  38 63 55 40 */	addi r3, r3, lbl_805D5540@l
 /* 80360958 00329F18  4B FF BE 08 */	b OSWakeupThread
-/* 8036095C 00329F1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80360960
 func_80360960:
 /* 80360960 00329F20  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1547,7 +1526,7 @@ lbl_80360A54:
 /* 80360ABC 0032A07C  38 65 00 08 */	addi r3, r5, 8
 /* 80360AC0 0032A080  38 9F 0B 80 */	addi r4, r31, lbl_80360B80@l
 /* 80360AC4 0032A084  38 A5 00 94 */	addi r5, r5, 0x94
-/* 80360AC8 0032A088  4B FE F2 09 */	bl func_8034FCD0
+/* 80360AC8 0032A088  4B FE F2 09 */	bl NANDCloseAsync
 /* 80360ACC 0032A08C  2C 03 00 00 */	cmpwi r3, 0
 /* 80360AD0 0032A090  41 82 00 8C */	beq lbl_80360B5C
 lbl_80360AD4:
@@ -1600,7 +1579,7 @@ lbl_80360B5C:
 /* 80360B70 0032A130  7C 08 03 A6 */	mtlr r0
 /* 80360B74 0032A134  38 21 00 20 */	addi r1, r1, 0x20
 /* 80360B78 0032A138  4E 80 00 20 */	blr 
-/* 80360B7C 0032A13C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_80360B80:
 /* 80360B80 0032A140  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80360B84 0032A144  7C 08 02 A6 */	mflr r0
@@ -1743,7 +1722,7 @@ func_80360D24:
 /* 80360D4C 0032A30C  98 07 01 58 */	stb r0, 0x158(r7)
 /* 80360D50 0032A310  38 C6 0B 80 */	addi r6, r6, lbl_80360B80@l
 /* 80360D54 0032A314  38 E7 00 94 */	addi r7, r7, 0x94
-/* 80360D58 0032A318  4B FE E1 39 */	bl func_8034EE90
+/* 80360D58 0032A318  4B FE E1 39 */	bl NANDWriteAsync
 /* 80360D5C 0032A31C  2C 03 00 00 */	cmpwi r3, 0
 /* 80360D60 0032A320  40 82 00 A8 */	bne lbl_80360E08
 /* 80360D64 0032A324  48 00 01 3C */	b lbl_80360EA0
@@ -1761,7 +1740,7 @@ func_80360D68:
 /* 80360D88 0032A348  38 A7 00 94 */	addi r5, r7, 0x94
 /* 80360D8C 0032A34C  98 07 01 58 */	stb r0, 0x158(r7)
 /* 80360D90 0032A350  38 84 0B 80 */	addi r4, r4, lbl_80360B80@l
-/* 80360D94 0032A354  4B FE EF 3D */	bl func_8034FCD0
+/* 80360D94 0032A354  4B FE EF 3D */	bl NANDCloseAsync
 /* 80360D98 0032A358  2C 03 00 00 */	cmpwi r3, 0
 /* 80360D9C 0032A35C  40 82 00 6C */	bne lbl_80360E08
 /* 80360DA0 0032A360  48 00 01 00 */	b lbl_80360EA0
@@ -1811,7 +1790,7 @@ lbl_80360E08:
 /* 80360E30 0032A3F0  38 65 00 08 */	addi r3, r5, 8
 /* 80360E34 0032A3F4  38 84 0B 80 */	addi r4, r4, lbl_80360B80@l
 /* 80360E38 0032A3F8  38 A5 00 94 */	addi r5, r5, 0x94
-/* 80360E3C 0032A3FC  4B FE EE 95 */	bl func_8034FCD0
+/* 80360E3C 0032A3FC  4B FE EE 95 */	bl NANDCloseAsync
 /* 80360E40 0032A400  2C 03 00 00 */	cmpwi r3, 0
 /* 80360E44 0032A404  41 82 00 5C */	beq lbl_80360EA0
 lbl_80360E48:
@@ -1846,5 +1825,4 @@ lbl_80360EA0:
 /* 80360EAC 0032A46C  7C 08 03 A6 */	mtlr r0
 /* 80360EB0 0032A470  38 21 00 10 */	addi r1, r1, 0x10
 /* 80360EB4 0032A474  4E 80 00 20 */	blr 
-/* 80360EB8 0032A478  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80360EBC 0032A47C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

@@ -2,19 +2,17 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802D2110
-func_802D2110:
+.global __AXGetStackHead
+__AXGetStackHead:
 /* 802D2110 0029B6D0  3C 80 80 58 */	lis r4, lbl_8057D828@ha
 /* 802D2114 0029B6D4  54 60 10 3A */	slwi r0, r3, 2
 /* 802D2118 0029B6D8  38 84 D8 28 */	addi r4, r4, lbl_8057D828@l
 /* 802D211C 0029B6DC  7C 64 00 2E */	lwzx r3, r4, r0
 /* 802D2120 0029B6E0  4E 80 00 20 */	blr 
-/* 802D2124 0029B6E4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D2128 0029B6E8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D212C 0029B6EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D2130
-func_802D2130:
+.balign 16, 0
+.global __AXServiceCallbackStack
+__AXServiceCallbackStack:
 /* 802D2130 0029B6F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D2134 0029B6F4  7C 08 02 A6 */	mflr r0
 /* 802D2138 0029B6F8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -42,7 +40,7 @@ lbl_802D2168:
 /* 802D2188 0029B748  4E 80 04 21 */	bctrl 
 lbl_802D218C:
 /* 802D218C 0029B74C  7F A3 EB 78 */	mr r3, r29
-/* 802D2190 0029B750  48 00 01 E1 */	bl func_802D2370
+/* 802D2190 0029B750  48 00 01 E1 */	bl __AXRemoveFromStack
 /* 802D2194 0029B754  80 1E D8 28 */	lwz r0, lbl_8057D828@l(r30)
 /* 802D2198 0029B758  90 1D 00 00 */	stw r0, 0(r29)
 /* 802D219C 0029B75C  93 BE D8 28 */	stw r29, lbl_8057D828@l(r30)
@@ -63,10 +61,10 @@ lbl_802D21B8:
 /* 802D21D0 0029B790  7C 08 03 A6 */	mtlr r0
 /* 802D21D4 0029B794  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D21D8 0029B798  4E 80 00 20 */	blr 
-/* 802D21DC 0029B79C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D21E0
-func_802D21E0:
+.balign 16, 0
+.global __AXAllocInit
+__AXAllocInit:
 /* 802D21E0 0029B7A0  3C 80 80 58 */	lis r4, lbl_8057D8A8@ha
 /* 802D21E4 0029B7A4  3C A0 80 58 */	lis r5, lbl_8057D828@ha
 /* 802D21E8 0029B7A8  38 60 00 00 */	li r3, 0
@@ -113,8 +111,8 @@ lbl_802D2200:
 /* 802D2288 0029B848  42 00 FF 78 */	bdnz lbl_802D2200
 /* 802D228C 0029B84C  4E 80 00 20 */	blr 
 
-.global func_802D2290
-func_802D2290:
+.global __AXAllocQuit
+__AXAllocQuit:
 /* 802D2290 0029B850  3C 80 80 58 */	lis r4, lbl_8057D8A8@ha
 /* 802D2294 0029B854  3C A0 80 58 */	lis r5, lbl_8057D828@ha
 /* 802D2298 0029B858  38 60 00 00 */	li r3, 0
@@ -161,8 +159,8 @@ lbl_802D22B0:
 /* 802D2338 0029B8F8  42 00 FF 78 */	bdnz lbl_802D22B0
 /* 802D233C 0029B8FC  4E 80 00 20 */	blr 
 
-.global func_802D2340
-func_802D2340:
+.global __AXPushFreeStack
+__AXPushFreeStack:
 /* 802D2340 0029B900  3C A0 80 58 */	lis r5, lbl_8057D828@ha
 /* 802D2344 0029B904  38 00 00 00 */	li r0, 0
 /* 802D2348 0029B908  80 85 D8 28 */	lwz r4, lbl_8057D828@l(r5)
@@ -170,17 +168,17 @@ func_802D2340:
 /* 802D2350 0029B910  90 65 D8 28 */	stw r3, lbl_8057D828@l(r5)
 /* 802D2354 0029B914  90 03 00 0C */	stw r0, 0xc(r3)
 /* 802D2358 0029B918  4E 80 00 20 */	blr 
-/* 802D235C 0029B91C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D2360
-func_802D2360:
+.balign 16, 0
+.global __AXPushCallbackStack
+__AXPushCallbackStack:
 /* 802D2360 0029B920  80 0D B4 90 */	lwz r0, lbl_80667610@sda21(r13)
 /* 802D2364 0029B924  90 03 00 08 */	stw r0, 8(r3)
 /* 802D2368 0029B928  90 6D B4 90 */	stw r3, lbl_80667610@sda21(r13)
 /* 802D236C 0029B92C  4E 80 00 20 */	blr 
 
-.global func_802D2370
-func_802D2370:
+.global __AXRemoveFromStack
+__AXRemoveFromStack:
 /* 802D2370 0029B930  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 802D2374 0029B934  3C A0 80 58 */	lis r5, lbl_8057D828@ha
 /* 802D2378 0029B938  3C 80 80 58 */	lis r4, lbl_8057D8A8@ha
@@ -190,45 +188,37 @@ func_802D2370:
 /* 802D2388 0029B948  7C 05 30 2E */	lwzx r0, r5, r6
 /* 802D238C 0029B94C  7C E4 30 2E */	lwzx r7, r4, r6
 /* 802D2390 0029B950  7C 00 38 40 */	cmplw r0, r7
-/* 802D2394 0029B954  40 82 00 14 */	bne func_802D23A8
+/* 802D2394 0029B954  40 82 00 14 */	bne lbl_802D23A8
 /* 802D2398 0029B958  38 00 00 00 */	li r0, 0
 /* 802D239C 0029B95C  7C 04 31 2E */	stwx r0, r4, r6
 /* 802D23A0 0029B960  7C 05 31 2E */	stwx r0, r5, r6
 /* 802D23A4 0029B964  4E 80 00 20 */	blr
-
-.global func_802D23A8
-func_802D23A8:
+lbl_802D23A8:
 /* 802D23A8 0029B968  7C 03 00 40 */	cmplw r3, r0
-/* 802D23AC 0029B96C  40 82 00 18 */	bne func_802D23C4
+/* 802D23AC 0029B96C  40 82 00 18 */	bne lbl_802D23C4
 /* 802D23B0 0029B970  80 63 00 00 */	lwz r3, 0(r3)
 /* 802D23B4 0029B974  38 00 00 00 */	li r0, 0
 /* 802D23B8 0029B978  7C 65 31 2E */	stwx r3, r5, r6
 /* 802D23BC 0029B97C  90 03 00 04 */	stw r0, 4(r3)
 /* 802D23C0 0029B980  4E 80 00 20 */	blr
-
-.global func_802D23C4
-func_802D23C4:
+lbl_802D23C4:
 /* 802D23C4 0029B984  7C 03 38 40 */	cmplw r3, r7
-/* 802D23C8 0029B988  40 82 00 18 */	bne func_802D23E0
+/* 802D23C8 0029B988  40 82 00 18 */	bne lbl_802D23E0
 /* 802D23CC 0029B98C  80 63 00 04 */	lwz r3, 4(r3)
 /* 802D23D0 0029B990  38 00 00 00 */	li r0, 0
 /* 802D23D4 0029B994  7C 64 31 2E */	stwx r3, r4, r6
 /* 802D23D8 0029B998  90 03 00 00 */	stw r0, 0(r3)
 /* 802D23DC 0029B99C  4E 80 00 20 */	blr
-
-.global func_802D23E0
-func_802D23E0:
+lbl_802D23E0:
 /* 802D23E0 0029B9A0  80 83 00 04 */	lwz r4, 4(r3)
 /* 802D23E4 0029B9A4  80 63 00 00 */	lwz r3, 0(r3)
 /* 802D23E8 0029B9A8  90 64 00 00 */	stw r3, 0(r4)
 /* 802D23EC 0029B9AC  90 83 00 04 */	stw r4, 4(r3)
 /* 802D23F0 0029B9B0  4E 80 00 20 */	blr 
-/* 802D23F4 0029B9B4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D23F8 0029B9B8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D23FC 0029B9BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D2400
-func_802D2400:
+.balign 16, 0
+.global AXFreeVoice
+AXFreeVoice:
 /* 802D2400 0029B9C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D2404 0029B9C4  7C 08 02 A6 */	mflr r0
 /* 802D2408 0029B9C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -238,7 +228,7 @@ func_802D2400:
 /* 802D2418 0029B9D8  48 08 65 99 */	bl OSDisableInterrupts
 /* 802D241C 0029B9DC  7C 7F 1B 78 */	mr r31, r3
 /* 802D2420 0029B9E0  7F C3 F3 78 */	mr r3, r30
-/* 802D2424 0029B9E4  4B FF FF 4D */	bl func_802D2370
+/* 802D2424 0029B9E4  4B FF FF 4D */	bl __AXRemoveFromStack
 /* 802D2428 0029B9E8  A0 1E 00 38 */	lhz r0, 0x38(r30)
 /* 802D242C 0029B9EC  28 00 00 01 */	cmplwi r0, 1
 /* 802D2430 0029B9F0  40 82 00 0C */	bne lbl_802D243C
@@ -246,7 +236,7 @@ func_802D2400:
 /* 802D2438 0029B9F8  90 1E 00 20 */	stw r0, 0x20(r30)
 lbl_802D243C:
 /* 802D243C 0029B9FC  7F C3 F3 78 */	mr r3, r30
-/* 802D2440 0029BA00  48 00 2B A1 */	bl func_802D4FE0
+/* 802D2440 0029BA00  48 00 2B A1 */	bl __AXSetPBDefault
 /* 802D2444 0029BA04  3C A0 80 58 */	lis r5, lbl_8057D828@ha
 /* 802D2448 0029BA08  38 00 00 00 */	li r0, 0
 /* 802D244C 0029BA0C  80 85 D8 28 */	lwz r4, lbl_8057D828@l(r5)
@@ -261,10 +251,10 @@ lbl_802D243C:
 /* 802D2470 0029BA30  7C 08 03 A6 */	mtlr r0
 /* 802D2474 0029BA34  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D2478 0029BA38  4E 80 00 20 */	blr 
-/* 802D247C 0029BA3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D2480
-func_802D2480:
+.balign 16, 0
+.global AXAcquireVoice
+AXAcquireVoice:
 /* 802D2480 0029BA40  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D2484 0029BA44  7C 08 02 A6 */	mflr r0
 /* 802D2488 0029BA48  90 01 00 24 */	stw r0, 0x24(r1)
@@ -361,7 +351,7 @@ lbl_802D25CC:
 /* 802D25D0 0029BB90  7F C3 F3 78 */	mr r3, r30
 /* 802D25D4 0029BB94  93 9E 00 10 */	stw r28, 0x10(r30)
 /* 802D25D8 0029BB98  93 BE 00 14 */	stw r29, 0x14(r30)
-/* 802D25DC 0029BB9C  48 00 2A 05 */	bl func_802D4FE0
+/* 802D25DC 0029BB9C  48 00 2A 05 */	bl __AXSetPBDefault
 lbl_802D25E0:
 /* 802D25E0 0029BBA0  7F E3 FB 78 */	mr r3, r31
 /* 802D25E4 0029BBA4  48 08 64 0D */	bl OSRestoreInterrupts
@@ -372,12 +362,10 @@ lbl_802D25E0:
 /* 802D25F8 0029BBB8  7C 08 03 A6 */	mtlr r0
 /* 802D25FC 0029BBBC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D2600 0029BBC0  4E 80 00 20 */	blr 
-/* 802D2604 0029BBC4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D2608 0029BBC8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D260C 0029BBCC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D2610
-func_802D2610:
+.balign 16, 0
+.global AXSetVoicePriority
+AXSetVoicePriority:
 /* 802D2610 0029BBD0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D2614 0029BBD4  7C 08 02 A6 */	mflr r0
 /* 802D2618 0029BBD8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -389,7 +377,7 @@ func_802D2610:
 /* 802D2630 0029BBF0  48 08 63 81 */	bl OSDisableInterrupts
 /* 802D2634 0029BBF4  7C 7F 1B 78 */	mr r31, r3
 /* 802D2638 0029BBF8  7F A3 EB 78 */	mr r3, r29
-/* 802D263C 0029BBFC  4B FF FD 35 */	bl func_802D2370
+/* 802D263C 0029BBFC  4B FF FD 35 */	bl __AXRemoveFromStack
 /* 802D2640 0029BC00  3C 80 80 58 */	lis r4, lbl_8057D828@ha
 /* 802D2644 0029BC04  57 C5 10 3A */	slwi r5, r30, 2
 /* 802D2648 0029BC08  38 84 D8 28 */	addi r4, r4, lbl_8057D828@l
@@ -419,4 +407,4 @@ lbl_802D2684:
 /* 802D26A0 0029BC60  7C 08 03 A6 */	mtlr r0
 /* 802D26A4 0029BC64  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D26A8 0029BC68  4E 80 00 20 */	blr 
-/* 802D26AC 0029BC6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

@@ -8,7 +8,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8003AA00.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800539EC.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfScript.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80069768.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80069710.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8006A960.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80074F4C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8007C0F8.o \
@@ -159,7 +159,6 @@ MW_O_FILES :=\
 RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/ai/ai.o \
 	$(BUILD_DIR)/asm/RevoSDK/arc/arc.o \
-	$(BUILD_DIR)/asm/RevoSDK/arc/arc__105.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AX.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXAlloc.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXAux.o \
@@ -306,7 +305,6 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/nand/NANDLogging.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OS.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSAlarm.o \
-	$(BUILD_DIR)/asm/RevoSDK/os/func_803535D0.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSAlloc.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSArena.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSAudioSystem.o \
@@ -332,7 +330,17 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayRecord.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSStateFlags.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSNet.o \
-	$(BUILD_DIR)/asm/code/code_8035E1F0.o \
+	$(BUILD_DIR)/asm/RevoSDK/NWC24/NWC24System.o \
+	$(BUILD_DIR)/asm/RevoSDK/NWC24/NWC24Time.o \
+	$(BUILD_DIR)/asm/RevoSDK/NWC24/NWC24Schedule.o \
+	$(BUILD_DIR)/asm/RevoSDK/NWC24/NWC24Ipc.o \
+	$(BUILD_DIR)/asm/RevoSDK/NWC24/NWC24System1.o \
+	$(BUILD_DIR)/asm/RevoSDK/NWC24/NWC24Time1.o \
+	$(BUILD_DIR)/asm/RevoSDK/NWC24/NWC24Ipc1.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSNandbootInfo.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayTime.o \
+	$(BUILD_DIR)/asm/RevoSDK/crc.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSExec1.o \
 	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/__ppc_eabi_init.o \
 	$(BUILD_DIR)/asm/RevoSDK/pad/Pad.o \
 	$(BUILD_DIR)/asm/RevoSDK/sc/scsystem.o \

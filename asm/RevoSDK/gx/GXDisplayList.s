@@ -35,6 +35,4 @@ lbl_8031E4B4:
 /* 8031E4D8 002E7A98  7C 08 03 A6 */	mtlr r0
 /* 8031E4DC 002E7A9C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031E4E0 002E7AA0  4E 80 00 20 */	blr 
-/* 8031E4E4 002E7AA4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E4E8 002E7AA8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E4EC 002E7AAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

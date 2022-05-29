@@ -899,9 +899,8 @@ lbl_80375188:
 /* 803757AC 0033ED6C  7C 08 03 A6 */	mtlr r0
 /* 803757B0 0033ED70  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 803757B4 0033ED74  4E 80 00 20 */	blr 
-/* 803757B8 0033ED78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803757BC 0033ED7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803757C0
 func_803757C0:
 /* 803757C0 0033ED80  94 21 FF E0 */	stwu r1, -0x20(r1)

@@ -18,8 +18,8 @@ lbl_80342ABC:
 lbl_80342AD4:
 /* 80342AD4 0030C094  7C 63 28 50 */	subf r3, r3, r5
 /* 80342AD8 0030C098  4E 80 00 20 */	blr 
-/* 80342ADC 0030C09C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80342AE0
 func_80342AE0:
 /* 80342AE0 0030C0A0  94 21 FD 20 */	stwu r1, -0x2e0(r1)
@@ -190,8 +190,7 @@ lbl_80342D18:
 /* 80342D2C 0030C2EC  7C 08 03 A6 */	mtlr r0
 /* 80342D30 0030C2F0  38 21 02 E0 */	addi r1, r1, 0x2e0
 /* 80342D34 0030C2F4  4E 80 00 20 */	blr 
-/* 80342D38 0030C2F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80342D3C 0030C2FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0
 lbl_80342D40:
 /* 80342D40 0030C300  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80342D44 0030C304  7C 08 02 A6 */	mflr r0
@@ -307,8 +306,8 @@ lbl_80342ED4:
 /* 80342EE0 0030C4A0  7C 08 03 A6 */	mtlr r0
 /* 80342EE4 0030C4A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80342EE8 0030C4A8  4E 80 00 20 */	blr 
-/* 80342EEC 0030C4AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global IPCCltInit
 IPCCltInit:
 /* 80342EF0 0030C4B0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -362,8 +361,8 @@ lbl_80342F90:
 /* 80342FA8 0030C568  38 21 00 20 */	addi r1, r1, 0x20
 /* 80342FAC 0030C56C  4E 80 00 20 */	blr 
 
-.global func_80342FB0
-func_80342FB0:
+.global IPCCltReInit
+IPCCltReInit:
 /* 80342FB0 0030C570  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80342FB4 0030C574  7C 08 02 A6 */	mflr r0
 /* 80342FB8 0030C578  90 01 00 24 */	stw r0, 0x24(r1)
@@ -395,10 +394,8 @@ lbl_80343004:
 /* 80343018 0030C5D8  7C 08 03 A6 */	mtlr r0
 /* 8034301C 0030C5DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80343020 0030C5E0  4E 80 00 20 */	blr 
-/* 80343024 0030C5E4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80343028 0030C5E8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034302C 0030C5EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80343030
 func_80343030:
 /* 80343030 0030C5F0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -534,7 +531,7 @@ lbl_8034320C:
 /* 8034320C 0030C7CC  2C 1D 00 00 */	cmpwi r29, 0
 /* 80343210 0030C7D0  40 82 00 0C */	bne lbl_8034321C
 /* 80343214 0030C7D4  38 7C 00 2C */	addi r3, r28, 0x2c
-/* 80343218 0030C7D8  48 01 94 59 */	bl func_8035C670
+/* 80343218 0030C7D8  48 01 94 59 */	bl OSSleepThread
 lbl_8034321C:
 /* 8034321C 0030C7DC  7F C3 F3 78 */	mr r3, r30
 /* 80343220 0030C7E0  48 01 57 D1 */	bl OSRestoreInterrupts
@@ -642,8 +639,8 @@ lbl_80343370:
 /* 80343380 0030C940  7C 08 03 A6 */	mtlr r0
 /* 80343384 0030C944  38 21 00 30 */	addi r1, r1, 0x30
 /* 80343388 0030C948  4E 80 00 20 */	blr 
-/* 8034338C 0030C94C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global IOS_Open
 IOS_Open:
 /* 80343390 0030C950  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -728,10 +725,8 @@ lbl_80343490:
 /* 803434A8 0030CA68  7C 08 03 A6 */	mtlr r0
 /* 803434AC 0030CA6C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803434B0 0030CA70  4E 80 00 20 */	blr 
-/* 803434B4 0030CA74  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803434B8 0030CA78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803434BC 0030CA7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global IOS_CloseAsync
 IOS_CloseAsync:
 /* 803434C0 0030CA80  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -835,9 +830,8 @@ lbl_8034360C:
 /* 8034361C 0030CBDC  7C 08 03 A6 */	mtlr r0
 /* 80343620 0030CBE0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80343624 0030CBE4  4E 80 00 20 */	blr 
-/* 80343628 0030CBE8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034362C 0030CBEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80343630
 func_80343630:
 /* 80343630 0030CBF0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -989,9 +983,8 @@ lbl_80343814:
 /* 8034382C 0030CDEC  7C 08 03 A6 */	mtlr r0
 /* 80343830 0030CDF0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80343834 0030CDF4  4E 80 00 20 */	blr 
-/* 80343838 0030CDF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034383C 0030CDFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global IOS_WriteAsync
 IOS_WriteAsync:
 /* 80343840 0030CE00  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1143,9 +1136,8 @@ lbl_80343A24:
 /* 80343A3C 0030CFFC  7C 08 03 A6 */	mtlr r0
 /* 80343A40 0030D000  38 21 00 20 */	addi r1, r1, 0x20
 /* 80343A44 0030D004  4E 80 00 20 */	blr 
-/* 80343A48 0030D008  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80343A4C 0030D00C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global IOS_SeekAsync
 IOS_SeekAsync:
 /* 80343A50 0030D010  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1301,9 +1293,8 @@ lbl_80343C4C:
 /* 80343C5C 0030D21C  7C 08 03 A6 */	mtlr r0
 /* 80343C60 0030D220  38 21 00 40 */	addi r1, r1, 0x40
 /* 80343C64 0030D224  4E 80 00 20 */	blr 
-/* 80343C68 0030D228  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80343C6C 0030D22C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80343C70
 func_80343C70:
 /* 80343C70 0030D230  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1486,8 +1477,8 @@ lbl_80343EC0:
 /* 80343ED0 0030D490  7C 08 03 A6 */	mtlr r0
 /* 80343ED4 0030D494  38 21 00 20 */	addi r1, r1, 0x20
 /* 80343ED8 0030D498  4E 80 00 20 */	blr 
-/* 80343EDC 0030D49C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80343EE0
 func_80343EE0:
 /* 80343EE0 0030D4A0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1551,10 +1542,8 @@ lbl_80343FA8:
 /* 80343FB8 0030D578  7C 08 03 A6 */	mtlr r0
 /* 80343FBC 0030D57C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80343FC0 0030D580  4E 80 00 20 */	blr 
-/* 80343FC4 0030D584  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80343FC8 0030D588  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80343FCC 0030D58C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80343FD0
 func_80343FD0:
 /* 80343FD0 0030D590  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1616,8 +1605,8 @@ lbl_80344090:
 /* 803440A0 0030D660  7C 08 03 A6 */	mtlr r0
 /* 803440A4 0030D664  38 21 00 30 */	addi r1, r1, 0x30
 /* 803440A8 0030D668  4E 80 00 20 */	blr 
-/* 803440AC 0030D66C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803440B0
 func_803440B0:
 /* 803440B0 0030D670  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1802,7 +1791,7 @@ lbl_803442F8:
 lbl_8034434C:
 /* 8034434C 0030D90C  80 6D B8 04 */	lwz r3, lbl_80667984@sda21(r13)
 /* 80344350 0030D910  38 63 00 2C */	addi r3, r3, 0x2c
-/* 80344354 0030D914  48 01 83 1D */	bl func_8035C670
+/* 80344354 0030D914  48 01 83 1D */	bl OSSleepThread
 /* 80344358 0030D918  7F C3 F3 78 */	mr r3, r30
 /* 8034435C 0030D91C  48 01 46 95 */	bl OSRestoreInterrupts
 /* 80344360 0030D920  80 6D B8 04 */	lwz r3, lbl_80667984@sda21(r13)
@@ -1826,4 +1815,4 @@ lbl_80344390:
 /* 803443A0 0030D960  7C 08 03 A6 */	mtlr r0
 /* 803443A4 0030D964  38 21 00 30 */	addi r1, r1, 0x30
 /* 803443A8 0030D968  4E 80 00 20 */	blr 
-/* 803443AC 0030D96C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

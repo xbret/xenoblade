@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802D57C0
-func_802D57C0:
+.global AXFXReverbHiExpInit
+AXFXReverbHiExpInit:
 /* 802D57C0 0029ED80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D57C4 0029ED84  7C 08 02 A6 */	mflr r0
 /* 802D57C8 0029ED88  90 01 00 24 */	stw r0, 0x24(r1)
@@ -25,7 +25,7 @@ func_802D57C0:
 /* 802D5808 0029EDC8  7F C3 F3 78 */	mr r3, r30
 /* 802D580C 0029EDCC  60 00 00 01 */	ori r0, r0, 1
 /* 802D5810 0029EDD0  90 1E 01 0C */	stw r0, 0x10c(r30)
-/* 802D5814 0029EDD4  48 00 09 8D */	bl func_802D61A0
+/* 802D5814 0029EDD4  48 00 09 8D */	bl __FreeDelayLine
 /* 802D5818 0029EDD8  7F A3 EB 78 */	mr r3, r29
 /* 802D581C 0029EDDC  48 08 31 D5 */	bl OSRestoreInterrupts
 /* 802D5820 0029EDE0  7F E3 FB 78 */	mr r3, r31
@@ -60,7 +60,7 @@ lbl_802D5830:
 /* 802D5890 0029EE50  90 1E 00 F0 */	stw r0, 0xf0(r30)
 /* 802D5894 0029EE54  80 04 00 DC */	lwz r0, 0xdc(r4)
 /* 802D5898 0029EE58  90 1E 00 F4 */	stw r0, 0xf4(r30)
-/* 802D589C 0029EE5C  48 00 06 55 */	bl func_802D5EF0
+/* 802D589C 0029EE5C  48 00 06 55 */	bl __AllocDelayLine
 /* 802D58A0 0029EE60  2C 03 00 00 */	cmpwi r3, 0
 /* 802D58A4 0029EE64  40 82 00 38 */	bne lbl_802D58DC
 /* 802D58A8 0029EE68  48 08 31 09 */	bl OSDisableInterrupts
@@ -69,7 +69,7 @@ lbl_802D5830:
 /* 802D58B4 0029EE74  7F C3 F3 78 */	mr r3, r30
 /* 802D58B8 0029EE78  60 00 00 01 */	ori r0, r0, 1
 /* 802D58BC 0029EE7C  90 1E 01 0C */	stw r0, 0x10c(r30)
-/* 802D58C0 0029EE80  48 00 08 E1 */	bl func_802D61A0
+/* 802D58C0 0029EE80  48 00 08 E1 */	bl __FreeDelayLine
 /* 802D58C4 0029EE84  7F A3 EB 78 */	mr r3, r29
 /* 802D58C8 0029EE88  48 08 31 29 */	bl OSRestoreInterrupts
 /* 802D58CC 0029EE8C  7F E3 FB 78 */	mr r3, r31
@@ -78,9 +78,9 @@ lbl_802D5830:
 /* 802D58D8 0029EE98  48 00 00 68 */	b lbl_802D5940
 lbl_802D58DC:
 /* 802D58DC 0029EE9C  7F C3 F3 78 */	mr r3, r30
-/* 802D58E0 0029EEA0  48 00 07 91 */	bl func_802D6070
+/* 802D58E0 0029EEA0  48 00 07 91 */	bl __BzeroDelayLines
 /* 802D58E4 0029EEA4  7F C3 F3 78 */	mr r3, r30
-/* 802D58E8 0029EEA8  48 00 09 D9 */	bl func_802D62C0
+/* 802D58E8 0029EEA8  48 00 09 D9 */	bl __InitParams
 /* 802D58EC 0029EEAC  2C 03 00 00 */	cmpwi r3, 0
 /* 802D58F0 0029EEB0  40 82 00 38 */	bne lbl_802D5928
 /* 802D58F4 0029EEB4  48 08 30 BD */	bl OSDisableInterrupts
@@ -89,7 +89,7 @@ lbl_802D58DC:
 /* 802D5900 0029EEC0  7F C3 F3 78 */	mr r3, r30
 /* 802D5904 0029EEC4  60 00 00 01 */	ori r0, r0, 1
 /* 802D5908 0029EEC8  90 1E 01 0C */	stw r0, 0x10c(r30)
-/* 802D590C 0029EECC  48 00 08 95 */	bl func_802D61A0
+/* 802D590C 0029EECC  48 00 08 95 */	bl __FreeDelayLine
 /* 802D5910 0029EED0  7F A3 EB 78 */	mr r3, r29
 /* 802D5914 0029EED4  48 08 30 DD */	bl OSRestoreInterrupts
 /* 802D5918 0029EED8  7F E3 FB 78 */	mr r3, r31
@@ -111,10 +111,10 @@ lbl_802D5940:
 /* 802D5950 0029EF10  7C 08 03 A6 */	mtlr r0
 /* 802D5954 0029EF14  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D5958 0029EF18  4E 80 00 20 */	blr 
-/* 802D595C 0029EF1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D5960
-func_802D5960:
+.balign 16, 0
+.global AXFXReverbHiExpShutdown
+AXFXReverbHiExpShutdown:
 /* 802D5960 0029EF20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D5964 0029EF24  7C 08 02 A6 */	mflr r0
 /* 802D5968 0029EF28  90 01 00 14 */	stw r0, 0x14(r1)
@@ -127,7 +127,7 @@ func_802D5960:
 /* 802D5984 0029EF44  7F C3 F3 78 */	mr r3, r30
 /* 802D5988 0029EF48  60 00 00 01 */	ori r0, r0, 1
 /* 802D598C 0029EF4C  90 1E 01 0C */	stw r0, 0x10c(r30)
-/* 802D5990 0029EF50  48 00 08 11 */	bl func_802D61A0
+/* 802D5990 0029EF50  48 00 08 11 */	bl __FreeDelayLine
 /* 802D5994 0029EF54  7F E3 FB 78 */	mr r3, r31
 /* 802D5998 0029EF58  48 08 30 59 */	bl OSRestoreInterrupts
 /* 802D599C 0029EF5C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -136,12 +136,10 @@ func_802D5960:
 /* 802D59A8 0029EF68  7C 08 03 A6 */	mtlr r0
 /* 802D59AC 0029EF6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D59B0 0029EF70  4E 80 00 20 */	blr 
-/* 802D59B4 0029EF74  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D59B8 0029EF78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D59BC 0029EF7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D59C0
-func_802D59C0:
+.balign 16, 0
+.global AXFXReverbHiExpCallback
+AXFXReverbHiExpCallback:
 /* 802D59C0 0029EF80  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802D59C4 0029EF84  7C 08 02 A6 */	mflr r0
 /* 802D59C8 0029EF88  90 01 00 74 */	stw r0, 0x74(r1)
@@ -492,12 +490,10 @@ lbl_802D5ECC:
 /* 802D5ED8 0029F498  7C 08 03 A6 */	mtlr r0
 /* 802D5EDC 0029F49C  38 21 00 70 */	addi r1, r1, 0x70
 /* 802D5EE0 0029F4A0  4E 80 00 20 */	blr 
-/* 802D5EE4 0029F4A4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D5EE8 0029F4A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D5EEC 0029F4AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D5EF0
-func_802D5EF0:
+.balign 16, 0
+.global __AllocDelayLine
+__AllocDelayLine:
 /* 802D5EF0 0029F4B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D5EF4 0029F4B4  7C 08 02 A6 */	mflr r0
 /* 802D5EF8 0029F4B8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -601,12 +597,10 @@ lbl_802D604C:
 /* 802D6058 0029F618  7C 08 03 A6 */	mtlr r0
 /* 802D605C 0029F61C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D6060 0029F620  4E 80 00 20 */	blr 
-/* 802D6064 0029F624  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D6068 0029F628  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D606C 0029F62C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D6070
-func_802D6070:
+.balign 16, 0
+.global __BzeroDelayLines
+__BzeroDelayLines:
 /* 802D6070 0029F630  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D6074 0029F634  7C 08 02 A6 */	mflr r0
 /* 802D6078 0029F638  90 01 00 34 */	stw r0, 0x34(r1)
@@ -688,12 +682,10 @@ lbl_802D6164:
 /* 802D6188 0029F748  7C 08 03 A6 */	mtlr r0
 /* 802D618C 0029F74C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D6190 0029F750  4E 80 00 20 */	blr 
-/* 802D6194 0029F754  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D6198 0029F758  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D619C 0029F75C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D61A0
-func_802D61A0:
+.balign 16, 0
+.global __FreeDelayLine
+__FreeDelayLine:
 /* 802D61A0 0029F760  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D61A4 0029F764  7C 08 02 A6 */	mflr r0
 /* 802D61A8 0029F768  90 01 00 34 */	stw r0, 0x34(r1)
@@ -771,12 +763,10 @@ lbl_802D6284:
 /* 802D62A8 0029F868  7C 08 03 A6 */	mtlr r0
 /* 802D62AC 0029F86C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D62B0 0029F870  4E 80 00 20 */	blr 
-/* 802D62B4 0029F874  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D62B8 0029F878  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D62BC 0029F87C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D62C0
-func_802D62C0:
+.balign 16, 0
+.global __InitParams
+__InitParams:
 /* 802D62C0 0029F880  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802D62C4 0029F884  7C 08 02 A6 */	mflr r0
 /* 802D62C8 0029F888  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1000,6 +990,4 @@ lbl_802D65B4:
 /* 802D65D8 0029FB98  7C 08 03 A6 */	mtlr r0
 /* 802D65DC 0029FB9C  38 21 00 60 */	addi r1, r1, 0x60
 /* 802D65E0 0029FBA0  4E 80 00 20 */	blr 
-/* 802D65E4 0029FBA4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D65E8 0029FBA8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D65EC 0029FBAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

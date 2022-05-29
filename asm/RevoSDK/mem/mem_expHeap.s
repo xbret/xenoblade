@@ -165,8 +165,8 @@ lbl_803491D0:
 /* 803491E0 003127A0  7C 08 03 A6 */	mtlr r0
 /* 803491E4 003127A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803491E8 003127A8  4E 80 00 20 */	blr 
-/* 803491EC 003127AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803491F0
 func_803491F0:
 /* 803491F0 003127B0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -230,8 +230,8 @@ lbl_803492B0:
 /* 803492C0 00312880  7C 08 03 A6 */	mtlr r0
 /* 803492C4 00312884  38 21 00 20 */	addi r1, r1, 0x20
 /* 803492C8 00312888  4E 80 00 20 */	blr 
-/* 803492CC 0031288C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803492D0
 func_803492D0:
 /* 803492D0 00312890  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -290,9 +290,8 @@ lbl_80349380:
 /* 8034938C 0031294C  7C 08 03 A6 */	mtlr r0
 /* 80349390 00312950  38 21 00 10 */	addi r1, r1, 0x10
 /* 80349394 00312954  4E 80 00 20 */	blr 
-/* 80349398 00312958  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034939C 0031295C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803493A0
 func_803493A0:
 /* 803493A0 00312960  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -404,9 +403,8 @@ lbl_803494FC:
 lbl_80349500:
 /* 80349500 00312AC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80349504 00312AC4  4E 80 00 20 */	blr 
-/* 80349508 00312AC8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034950C 00312ACC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80349510
 func_80349510:
 /* 80349510 00312AD0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -581,6 +579,4 @@ lbl_8034974C:
 /* 80349758 00312D18  7C 08 03 A6 */	mtlr r0
 /* 8034975C 00312D1C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80349760 00312D20  4E 80 00 20 */	blr 
-/* 80349764 00312D24  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80349768 00312D28  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034976C 00312D2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

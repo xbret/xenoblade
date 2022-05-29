@@ -2,15 +2,14 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802D2F70
-func_802D2F70:
+.global __AXGetCommandListCycles
+__AXGetCommandListCycles:
 /* 802D2F70 0029C530  80 6D B4 F4 */	lwz r3, lbl_80667674@sda21(r13)
 /* 802D2F74 0029C534  4E 80 00 20 */	blr 
-/* 802D2F78 0029C538  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D2F7C 0029C53C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D2F80
-func_802D2F80:
+.balign 16, 0
+.global __AXGetCommandListAddress
+__AXGetCommandListAddress:
 /* 802D2F80 0029C540  80 AD B5 00 */	lwz r5, lbl_80667680@sda21(r13)
 /* 802D2F84 0029C544  3C 80 80 58 */	lis r4, lbl_80580AC0@ha
 /* 802D2F88 0029C548  38 84 0A C0 */	addi r4, r4, lbl_80580AC0@l
@@ -24,8 +23,8 @@ func_802D2F80:
 /* 802D2FA8 0029C568  7C 64 2A 14 */	add r3, r4, r5
 /* 802D2FAC 0029C56C  4E 80 00 20 */	blr 
 
-.global func_802D2FB0
-func_802D2FB0:
+.global __AXNextFrame
+__AXNextFrame:
 /* 802D2FB0 0029C570  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D2FB4 0029C574  7C 08 02 A6 */	mflr r0
 /* 802D2FB8 0029C578  90 01 00 24 */	stw r0, 0x24(r1)
@@ -39,7 +38,7 @@ func_802D2FB0:
 /* 802D2FD8 0029C598  7C 7C 1B 78 */	mr r28, r3
 /* 802D2FDC 0029C59C  90 0D B4 F4 */	stw r0, lbl_80667674@sda21(r13)
 /* 802D2FE0 0029C5A0  83 ED B4 FC */	lwz r31, lbl_8066767C@sda21(r13)
-/* 802D2FE4 0029C5A4  48 00 13 3D */	bl func_802D4320
+/* 802D2FE4 0029C5A4  48 00 13 3D */	bl __AXGetStudio
 /* 802D2FE8 0029C5A8  90 61 00 08 */	stw r3, 8(r1)
 /* 802D2FEC 0029C5AC  38 00 00 00 */	li r0, 0
 /* 802D2FF0 0029C5B0  80 6D B4 FC */	lwz r3, lbl_8066767C@sda21(r13)
@@ -126,7 +125,7 @@ lbl_802D30EC:
 /* 802D3128 0029C6E8  38 03 03 9D */	addi r0, r3, 0x39d
 /* 802D312C 0029C6EC  90 0D B4 F4 */	stw r0, lbl_80667674@sda21(r13)
 lbl_802D3130:
-/* 802D3130 0029C6F0  48 00 1E A1 */	bl func_802D4FD0
+/* 802D3130 0029C6F0  48 00 1E A1 */	bl __AXGetPBs
 /* 802D3134 0029C6F4  90 61 00 08 */	stw r3, 8(r1)
 /* 802D3138 0029C6F8  38 00 00 04 */	li r0, 4
 /* 802D313C 0029C6FC  80 6D B4 FC */	lwz r3, lbl_8066767C@sda21(r13)
@@ -661,10 +660,10 @@ lbl_802D3920:
 /* 802D3960 0029CF20  7C 08 03 A6 */	mtlr r0
 /* 802D3964 0029CF24  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D3968 0029CF28  4E 80 00 20 */	blr 
-/* 802D396C 0029CF2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D3970
-func_802D3970:
+.balign 16, 0
+.global __AXClInit
+__AXClInit:
 /* 802D3970 0029CF30  3C C0 80 58 */	lis r6, lbl_80580AC0@ha
 /* 802D3974 0029CF34  3C 80 80 54 */	lis r4, lbl_80540160@ha
 /* 802D3978 0029CF38  38 E0 00 00 */	li r7, 0
@@ -686,50 +685,43 @@ func_802D3970:
 /* 802D39B8 0029CF78  B0 0D B4 E0 */	sth r0, lbl_80667660@sda21(r13)
 /* 802D39BC 0029CF7C  4E 80 00 20 */	blr 
 
-.global func_802D39C0
-func_802D39C0:
+.global __AXClQuit
+__AXClQuit:
 /* 802D39C0 0029CF80  4E 80 00 20 */	blr 
-/* 802D39C4 0029CF84  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D39C8 0029CF88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D39CC 0029CF8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D39D0
-func_802D39D0:
+.balign 16, 0
+.global AXSetMode
+AXSetMode:
 /* 802D39D0 0029CF90  90 6D B4 F8 */	stw r3, lbl_80667678@sda21(r13)
 /* 802D39D4 0029CF94  4E 80 00 20 */	blr 
-/* 802D39D8 0029CF98  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D39DC 0029CF9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D39E0
-func_802D39E0:
+.balign 16, 0
+.global AXGetMode
+AXGetMode:
 /* 802D39E0 0029CFA0  80 6D B4 F8 */	lwz r3, lbl_80667678@sda21(r13)
 /* 802D39E4 0029CFA4  4E 80 00 20 */	blr 
-/* 802D39E8 0029CFA8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D39EC 0029CFAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D39F0
-func_802D39F0:
+.balign 16, 0
+.global AXGetAuxAReturnVolume
+AXGetAuxAReturnVolume:
 /* 802D39F0 0029CFB0  A0 6D B4 E4 */	lhz r3, lbl_80667664@sda21(r13)
 /* 802D39F4 0029CFB4  4E 80 00 20 */	blr 
-/* 802D39F8 0029CFB8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D39FC 0029CFBC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D3A00
-func_802D3A00:
+.balign 16, 0
+.global AXGetAuxBReturnVolume
+AXGetAuxBReturnVolume:
 /* 802D3A00 0029CFC0  A0 6D B4 E2 */	lhz r3, lbl_80667662@sda21(r13)
 /* 802D3A04 0029CFC4  4E 80 00 20 */	blr 
-/* 802D3A08 0029CFC8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D3A0C 0029CFCC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D3A10
-func_802D3A10:
+.balign 16, 0
+.global AXGetAuxCReturnVolume
+AXGetAuxCReturnVolume:
 /* 802D3A10 0029CFD0  A0 6D B4 E0 */	lhz r3, lbl_80667660@sda21(r13)
 /* 802D3A14 0029CFD4  4E 80 00 20 */	blr 
-/* 802D3A18 0029CFD8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D3A1C 0029CFDC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D3A20
-func_802D3A20:
+.balign 16, 0
+.global AXSetMasterVolume
+AXSetMasterVolume:
 /* 802D3A20 0029CFE0  28 03 80 00 */	cmplwi r3, 0x8000
 /* 802D3A24 0029CFE4  40 81 00 0C */	ble lbl_802D3A30
 /* 802D3A28 0029CFE8  3C 60 00 01 */	lis r3, 0x00008000@ha
@@ -737,26 +729,22 @@ func_802D3A20:
 lbl_802D3A30:
 /* 802D3A30 0029CFF0  B0 6D B4 E6 */	sth r3, lbl_80667666@sda21(r13)
 /* 802D3A34 0029CFF4  4E 80 00 20 */	blr 
-/* 802D3A38 0029CFF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D3A3C 0029CFFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D3A40
-func_802D3A40:
+.balign 16, 0
+.global AXSetAuxAReturnVolume
+AXSetAuxAReturnVolume:
 /* 802D3A40 0029D000  B0 6D B4 E4 */	sth r3, lbl_80667664@sda21(r13)
 /* 802D3A44 0029D004  4E 80 00 20 */	blr 
-/* 802D3A48 0029D008  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D3A4C 0029D00C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D3A50
-func_802D3A50:
+.balign 16, 0
+.global AXSetAuxBReturnVolume
+AXSetAuxBReturnVolume:
 /* 802D3A50 0029D010  B0 6D B4 E2 */	sth r3, lbl_80667662@sda21(r13)
 /* 802D3A54 0029D014  4E 80 00 20 */	blr 
-/* 802D3A58 0029D018  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D3A5C 0029D01C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D3A60
-func_802D3A60:
+.balign 16, 0
+.global AXSetAuxCReturnVolume
+AXSetAuxCReturnVolume:
 /* 802D3A60 0029D020  B0 6D B4 E0 */	sth r3, lbl_80667660@sda21(r13)
 /* 802D3A64 0029D024  4E 80 00 20 */	blr 
-/* 802D3A68 0029D028  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D3A6C 0029D02C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

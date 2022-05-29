@@ -25,6 +25,4 @@ func_8034DDF0:
 /* 8034DE38 003173F8  10 C5 29 94 */	ps_sum0 f6, f5, f6, f5
 /* 8034DE3C 003173FC  F0 C5 80 08 */	psq_st f6, 8(r5), 1, qr0
 /* 8034DE40 00317400  4E 80 00 20 */	blr 
-/* 8034DE44 00317404  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034DE48 00317408  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034DE4C 0031740C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

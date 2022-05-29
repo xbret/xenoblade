@@ -17300,14 +17300,14 @@ lbl_8066BF50:
 .global lbl_8066BF58
 lbl_8066BF58:
 	# ROM: 0x575DB8
-	.4byte func_802E1604
+	.4byte bta_dm_search_sm_execute
 	.4byte 0
 
 
 .global lbl_8066BF60
 lbl_8066BF60:
 	# ROM: 0x575DC0
-	.4byte func_802E3F54
+	.4byte bta_hh_hdl_event
 	.4byte func_802E38B8
 
 

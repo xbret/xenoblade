@@ -51,9 +51,8 @@ lbl_80344908:
 /* 8034498C 0030DF4C  38 C6 00 40 */	addi r6, r6, 0x40
 /* 80344990 0030DF50  42 00 FF 78 */	bdnz lbl_80344908
 /* 80344994 0030DF54  4E 80 00 20 */	blr 
-/* 80344998 0030DF58  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034499C 0030DF5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803449A0
 func_803449A0:
 /* 803449A0 0030DF60  80 CD B8 10 */	lwz r6, lbl_80667990@sda21(r13)
@@ -93,10 +92,8 @@ func_80344A10:
 /* 80344A18 0030DFD8  38 E7 00 01 */	addi r7, r7, 1
 /* 80344A1C 0030DFDC  42 00 FF BC */	bdnz lbl_803449D8
 /* 80344A20 0030DFE0  4E 80 00 20 */	blr 
-/* 80344A24 0030DFE4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80344A28 0030DFE8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80344A2C 0030DFEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80344A30
 func_80344A30:
 /* 80344A30 0030DFF0  80 6D B8 14 */	lwz r3, lbl_80667994@sda21(r13)
@@ -141,4 +138,4 @@ func_80344AA8:
 /* 80344AB0 0030E070  38 A5 00 01 */	addi r5, r5, 1
 /* 80344AB4 0030E074  42 00 FF B4 */	bdnz lbl_80344A68
 /* 80344AB8 0030E078  4E 80 00 20 */	blr 
-/* 80344ABC 0030E07C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

@@ -13,10 +13,8 @@ func_8034E080:
 /* 8034E098 00317658  10 E3 28 2A */	ps_add f7, f3, f5
 /* 8034E09C 0031765C  F0 E5 80 08 */	psq_st f7, 8(r5), 1, qr0
 /* 8034E0A0 00317660  4E 80 00 20 */	blr 
-/* 8034E0A4 00317664  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034E0A8 00317668  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034E0AC 0031766C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8034E0B0
 func_8034E0B0:
 /* 8034E0B0 00317670  E0 43 00 00 */	psq_l f2, 0(r3), 0, qr0
@@ -36,10 +34,8 @@ func_8034E0B0:
 /* 8034E0E8 003176A8  F0 44 00 00 */	psq_st f2, 0(r4), 0, qr0
 /* 8034E0EC 003176AC  F0 64 80 08 */	psq_st f3, 8(r4), 1, qr0
 /* 8034E0F0 003176B0  4E 80 00 20 */	blr 
-/* 8034E0F4 003176B4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034E0F8 003176B8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034E0FC 003176BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8034E100
 func_8034E100:
 /* 8034E100 003176C0  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
@@ -59,10 +55,8 @@ func_8034E100:
 /* 8034E138 003176F8  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8034E13C 003176FC  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8034E140 00317700  4E 80 00 20 */	blr 
-/* 8034E144 00317704  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034E148 00317708  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034E14C 0031770C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8034E150
 func_8034E150:
 /* 8034E150 00317710  E0 43 00 04 */	psq_l f2, 4(r3), 0, qr0
@@ -91,8 +85,8 @@ func_8034E170:
 /* 8034E1A0 00317760  11 40 50 50 */	ps_neg f10, f10
 /* 8034E1A4 00317764  F1 45 00 04 */	psq_st f10, 4(r5), 0, qr0
 /* 8034E1A8 00317768  4E 80 00 20 */	blr 
-/* 8034E1AC 0031776C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8034E1B0
 func_8034E1B0:
 /* 8034E1B0 00317770  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -151,9 +145,8 @@ lbl_8034E274:
 /* 8034E27C 0031783C  7C 08 03 A6 */	mtlr r0
 /* 8034E280 00317840  38 21 00 40 */	addi r1, r1, 0x40
 /* 8034E284 00317844  4E 80 00 20 */	blr 
-/* 8034E288 00317848  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034E28C 0031784C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_8034E290
 func_8034E290:
 /* 8034E290 00317850  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
@@ -165,6 +158,4 @@ func_8034E290:
 /* 8034E2A8 00317868  F0 05 00 00 */	psq_st f0, 0(r5), 0, qr0
 /* 8034E2AC 0031786C  F0 25 00 08 */	psq_st f1, 8(r5), 0, qr0
 /* 8034E2B0 00317870  4E 80 00 20 */	blr 
-/* 8034E2B4 00317874  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034E2B8 00317878  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8034E2BC 0031787C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

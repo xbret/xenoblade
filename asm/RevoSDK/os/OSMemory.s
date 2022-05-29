@@ -2,27 +2,27 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80359480
-func_80359480:
+.global OSGetPhysicalMem2Size
+OSGetPhysicalMem2Size:
 /* 80359480 00322A40  3C 60 80 00 */	lis r3, 0x80003118@ha
 /* 80359484 00322A44  80 63 31 18 */	lwz r3, 0x80003118@l(r3)
 /* 80359488 00322A48  4E 80 00 20 */	blr 
-/* 8035948C 00322A4C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80359490
-func_80359490:
+.balign 16, 0
+.global OSGetConsoleSimulatedMem1Size
+OSGetConsoleSimulatedMem1Size:
 /* 80359490 00322A50  3C 60 80 00 */	lis r3, 0x80003104@ha
 /* 80359494 00322A54  80 63 31 04 */	lwz r3, 0x80003104@l(r3)
 /* 80359498 00322A58  4E 80 00 20 */	blr 
-/* 8035949C 00322A5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_803594A0
-func_803594A0:
+.balign 16, 0
+.global OSGetConsoleSimulatedMem2Size
+OSGetConsoleSimulatedMem2Size:
 /* 803594A0 00322A60  3C 60 80 00 */	lis r3, 0x8000311C@ha
 /* 803594A4 00322A64  80 63 31 1C */	lwz r3, 0x8000311C@l(r3)
 /* 803594A8 00322A68  4E 80 00 20 */	blr 
-/* 803594AC 00322A6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OnShutdown
 OnShutdown:
 /* 803594B0 00322A70  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -41,13 +41,13 @@ lbl_803594D8:
 /* 803594E0 00322AA0  7C 08 03 A6 */	mtlr r0
 /* 803594E4 00322AA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803594E8 00322AA8  4E 80 00 20 */	blr 
-/* 803594EC 00322AAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global MEMIntrruptHandler
 MEMIntrruptHandler:
-/* 803594F0 00322AB0  3D 00 CC 00 */	lis r8, 0xCC00401E@ha
+/* 803594F0 00322AB0  3D 00 CC 00 */	lis r8, 0xCC00
 /* 803594F4 00322AB4  3C 60 80 5D */	lis r3, lbl_805D43B0@ha
-/* 803594F8 00322AB8  A0 A8 40 1E */	lhz r5, 0xCC00401E@l(r8)
+/* 803594F8 00322AB8  A0 A8 40 1E */	lhz r5, 0x401E(r8)
 /* 803594FC 00322ABC  38 00 00 00 */	li r0, 0
 /* 80359500 00322AC0  A0 E8 40 24 */	lhz r7, 0x4024(r8)
 /* 80359504 00322AC4  38 63 43 B0 */	addi r3, r3, lbl_805D43B0@l
@@ -64,9 +64,8 @@ MEMIntrruptHandler:
 lbl_80359530:
 /* 80359530 00322AF0  38 60 00 0F */	li r3, 0xf
 /* 80359534 00322AF4  4B FF BC DC */	b __OSUnhandledException
-/* 80359538 00322AF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035953C 00322AFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global ConfigMEM1_24MB
 ConfigMEM1_24MB:
 /* 80359540 00322B00  38 E0 00 00 */	li r7, 0
@@ -157,10 +156,8 @@ ConfigMEM2_52MB:
 /* 80359688 00322C48  7C 68 02 A6 */	mflr r3
 /* 8035968C 00322C4C  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 80359690 00322C50  4C 00 00 64 */	rfi 
-/* 80359694 00322C54  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80359698 00322C58  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035969C 00322C5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global ConfigMEM2_56MB
 ConfigMEM2_56MB:
 /* 803596A0 00322C60  38 E0 00 00 */	li r7, 0
@@ -216,10 +213,8 @@ ConfigMEM2_56MB:
 /* 80359768 00322D28  7C 68 02 A6 */	mflr r3
 /* 8035976C 00322D2C  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 80359770 00322D30  4C 00 00 64 */	rfi 
-/* 80359774 00322D34  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80359778 00322D38  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035977C 00322D3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global ConfigMEM2_64MB
 ConfigMEM2_64MB:
 /* 80359780 00322D40  38 E0 00 00 */	li r7, 0
@@ -264,9 +259,8 @@ ConfigMEM2_64MB:
 /* 8035981C 00322DDC  7C 68 02 A6 */	mflr r3
 /* 80359820 00322DE0  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 80359824 00322DE4  4C 00 00 64 */	rfi 
-/* 80359828 00322DE8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035982C 00322DEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global ConfigMEM2_112MB
 ConfigMEM2_112MB:
 /* 80359830 00322DF0  38 E0 00 00 */	li r7, 0
@@ -322,10 +316,8 @@ ConfigMEM2_112MB:
 /* 803598F8 00322EB8  7C 68 02 A6 */	mflr r3
 /* 803598FC 00322EBC  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 80359900 00322EC0  4C 00 00 64 */	rfi 
-/* 80359904 00322EC4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80359908 00322EC8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035990C 00322ECC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global ConfigMEM2_128MB
 ConfigMEM2_128MB:
 /* 80359910 00322ED0  38 E0 00 00 */	li r7, 0
@@ -370,9 +362,8 @@ ConfigMEM2_128MB:
 /* 803599AC 00322F6C  7C 68 02 A6 */	mflr r3
 /* 803599B0 00322F70  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 803599B4 00322F74  4C 00 00 64 */	rfi 
-/* 803599B8 00322F78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803599BC 00322F7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global RealMode
 RealMode:
 /* 803599C0 00322F80  54 63 00 BE */	clrlwi r3, r3, 2
@@ -381,9 +372,8 @@ RealMode:
 /* 803599CC 00322F8C  54 63 07 32 */	rlwinm r3, r3, 0, 0x1c, 0x19
 /* 803599D0 00322F90  7C 7B 03 A6 */	mtspr 0x1b, r3
 /* 803599D4 00322F94  4C 00 00 64 */	rfi 
-/* 803599D8 00322F98  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803599DC 00322F9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global BATConfig
 BATConfig:
 /* 803599E0 00322FA0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -487,10 +477,8 @@ lbl_80359B28:
 /* 80359B38 003230F8  7C 08 03 A6 */	mtlr r0
 /* 80359B3C 003230FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80359B40 00323100  4E 80 00 20 */	blr 
-/* 80359B44 00323104  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80359B48 00323108  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80359B4C 0032310C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSInitMemoryProtection
 __OSInitMemoryProtection:
 /* 80359B50 00323110  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -545,4 +533,4 @@ lbl_80359C04:
 /* 80359C10 003231D0  7C 08 03 A6 */	mtlr r0
 /* 80359C14 003231D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80359C18 003231D8  4E 80 00 20 */	blr 
-/* 80359C1C 003231DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

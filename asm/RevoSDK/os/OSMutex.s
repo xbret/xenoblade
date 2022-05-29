@@ -18,9 +18,8 @@ OSInitMutex:
 /* 80359C4C 0032320C  7C 08 03 A6 */	mtlr r0
 /* 80359C50 00323210  38 21 00 10 */	addi r1, r1, 0x10
 /* 80359C54 00323214  4E 80 00 20 */	blr 
-/* 80359C58 00323218  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80359C5C 0032321C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSLockMutex
 OSLockMutex:
 /* 80359C60 00323220  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -33,7 +32,7 @@ OSLockMutex:
 /* 80359C7C 0032323C  7C 7C 1B 78 */	mr r28, r3
 /* 80359C80 00323240  4B FF ED 31 */	bl OSDisableInterrupts
 /* 80359C84 00323244  7C 7D 1B 78 */	mr r29, r3
-/* 80359C88 00323248  48 00 19 59 */	bl func_8035B5E0
+/* 80359C88 00323248  48 00 19 59 */	bl OSGetCurrentThread
 /* 80359C8C 0032324C  7C 7E 1B 78 */	mr r30, r3
 /* 80359C90 00323250  3B E0 00 00 */	li r31, 0
 lbl_80359C94:
@@ -68,9 +67,9 @@ lbl_80359CF4:
 /* 80359CF4 003232B4  93 9E 02 F0 */	stw r28, 0x2f0(r30)
 /* 80359CF8 003232B8  80 7C 00 08 */	lwz r3, 8(r28)
 /* 80359CFC 003232BC  80 9E 02 D0 */	lwz r4, 0x2d0(r30)
-/* 80359D00 003232C0  48 00 1B D1 */	bl func_8035B8D0
+/* 80359D00 003232C0  48 00 1B D1 */	bl __OSPromoteThread
 /* 80359D04 003232C4  7F 83 E3 78 */	mr r3, r28
-/* 80359D08 003232C8  48 00 29 69 */	bl func_8035C670
+/* 80359D08 003232C8  48 00 29 69 */	bl OSSleepThread
 /* 80359D0C 003232CC  93 FE 02 F0 */	stw r31, 0x2f0(r30)
 /* 80359D10 003232D0  4B FF FF 84 */	b lbl_80359C94
 lbl_80359D14:
@@ -84,8 +83,8 @@ lbl_80359D14:
 /* 80359D30 003232F0  7C 08 03 A6 */	mtlr r0
 /* 80359D34 003232F4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80359D38 003232F8  4E 80 00 20 */	blr 
-/* 80359D3C 003232FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSUnlockMutex
 OSUnlockMutex:
 /* 80359D40 00323300  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -97,7 +96,7 @@ OSUnlockMutex:
 /* 80359D58 00323318  7C 7D 1B 78 */	mr r29, r3
 /* 80359D5C 0032331C  4B FF EC 55 */	bl OSDisableInterrupts
 /* 80359D60 00323320  7C 7F 1B 78 */	mr r31, r3
-/* 80359D64 00323324  48 00 18 7D */	bl func_8035B5E0
+/* 80359D64 00323324  48 00 18 7D */	bl OSGetCurrentThread
 /* 80359D68 00323328  80 1D 00 08 */	lwz r0, 8(r29)
 /* 80359D6C 0032332C  7C 7E 1B 78 */	mr r30, r3
 /* 80359D70 00323330  7C 00 18 40 */	cmplw r0, r3
@@ -129,7 +128,7 @@ lbl_80359DB8:
 /* 80359DC8 00323388  7C 04 00 00 */	cmpw r4, r0
 /* 80359DCC 0032338C  40 80 00 10 */	bge lbl_80359DDC
 /* 80359DD0 00323390  7F C3 F3 78 */	mr r3, r30
-/* 80359DD4 00323394  48 00 19 0D */	bl func_8035B6E0
+/* 80359DD4 00323394  48 00 19 0D */	bl __OSGetEffectivePriority
 /* 80359DD8 00323398  90 7E 02 D0 */	stw r3, 0x2d0(r30)
 lbl_80359DDC:
 /* 80359DDC 0032339C  7F A3 EB 78 */	mr r3, r29
@@ -144,9 +143,8 @@ lbl_80359DE4:
 /* 80359DFC 003233BC  7C 08 03 A6 */	mtlr r0
 /* 80359E00 003233C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80359E04 003233C4  4E 80 00 20 */	blr 
-/* 80359E08 003233C8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80359E0C 003233CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSUnlockAllMutex
 __OSUnlockAllMutex:
 /* 80359E10 003233D0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -180,4 +178,4 @@ lbl_80359E58:
 /* 80359E70 00323430  7C 08 03 A6 */	mtlr r0
 /* 80359E74 00323434  38 21 00 10 */	addi r1, r1, 0x10
 /* 80359E78 00323438  4E 80 00 20 */	blr 
-/* 80359E7C 0032343C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

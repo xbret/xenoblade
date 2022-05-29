@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80342A10
-func_80342A10:
+.global IPCReInit
+IPCReInit:
 /* 80342A10 0030BFD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80342A14 0030BFD4  7C 08 02 A6 */	mflr r0
 /* 80342A18 0030BFD8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -22,9 +22,8 @@ func_80342A10:
 /* 80342A4C 0030C00C  7C 08 03 A6 */	mtlr r0
 /* 80342A50 0030C010  38 21 00 10 */	addi r1, r1, 0x10
 /* 80342A54 0030C014  4E 80 00 20 */	blr 
-/* 80342A58 0030C018  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80342A5C 0030C01C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80342A60
 func_80342A60:
 /* 80342A60 0030C020  54 60 10 3A */	slwi r0, r3, 2
@@ -43,19 +42,16 @@ func_80342A70:
 IPCGetBufferHi:
 /* 80342A80 0030C040  80 6D B7 F0 */	lwz r3, lbl_80667970@sda21(r13)
 /* 80342A84 0030C044  4E 80 00 20 */	blr 
-/* 80342A88 0030C048  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80342A8C 0030C04C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global IPCGetBufferLo
 IPCGetBufferLo:
 /* 80342A90 0030C050  80 6D B7 EC */	lwz r3, lbl_8066796C@sda21(r13)
 /* 80342A94 0030C054  4E 80 00 20 */	blr 
-/* 80342A98 0030C058  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80342A9C 0030C05C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global IPCSetBufferLo
 IPCSetBufferLo:
 /* 80342AA0 0030C060  90 6D B7 EC */	stw r3, lbl_8066796C@sda21(r13)
 /* 80342AA4 0030C064  4E 80 00 20 */	blr 
-/* 80342AA8 0030C068  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80342AAC 0030C06C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

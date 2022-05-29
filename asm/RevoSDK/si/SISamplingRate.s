@@ -62,13 +62,10 @@ lbl_80362758:
 /* 80362798 0032BD58  7C 08 03 A6 */	mtlr r0
 /* 8036279C 0032BD5C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803627A0 0032BD60  4E 80 00 20 */	blr 
-/* 803627A4 0032BD64  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803627A8 0032BD68  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803627AC 0032BD6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_803627B0
 func_803627B0:
 /* 803627B0 0032BD70  80 6D BA 00 */	lwz r3, lbl_80667B80@sda21(r13)
 /* 803627B4 0032BD74  4B FF FF 1C */	b func_803626D0
-/* 803627B8 0032BD78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803627BC 0032BD7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

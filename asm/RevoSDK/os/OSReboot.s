@@ -24,22 +24,20 @@ __OSReboot:
 /* 80359EC4 00323484  67 C4 80 00 */	oris r4, r30, 0x8000
 /* 80359EC8 00323488  90 0D B8 E8 */	stw r0, lbl_80667A68@sda21(r13)
 /* 80359ECC 0032348C  38 A1 00 08 */	addi r5, r1, 8
-/* 80359ED0 00323490  4B FF CA 41 */	bl func_80356910
+/* 80359ED0 00323490  4B FF CA 41 */	bl __OSBootDol
 /* 80359ED4 00323494  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80359ED8 00323498  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80359EDC 0032349C  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 80359EE0 003234A0  7C 08 03 A6 */	mtlr r0
 /* 80359EE4 003234A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80359EE8 003234A8  4E 80 00 20 */	blr 
-/* 80359EEC 003234AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_80359EF0
-func_80359EF0:
+.balign 16, 0
+.global OSGetSaveRegion
+OSGetSaveRegion:
 /* 80359EF0 003234B0  80 0D B9 30 */	lwz r0, lbl_80667AB0@sda21(r13)
 /* 80359EF4 003234B4  90 03 00 00 */	stw r0, 0(r3)
 /* 80359EF8 003234B8  80 0D B9 34 */	lwz r0, lbl_80667AB4@sda21(r13)
 /* 80359EFC 003234BC  90 04 00 00 */	stw r0, 0(r4)
 /* 80359F00 003234C0  4E 80 00 20 */	blr 
-/* 80359F04 003234C4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80359F08 003234C8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80359F0C 003234CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

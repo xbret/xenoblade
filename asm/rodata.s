@@ -17042,11 +17042,11 @@ lbl_8050E018:
 .global lbl_8050E078
 lbl_8050E078:
 	# ROM: 0x50A178
-	.4byte func_802E02CC
-	.4byte func_802E0454
-	.4byte func_802E058C
-	.4byte func_802E0584
-	.4byte func_802E0628
+	.4byte bta_dm_authorize_cback
+	.4byte bta_dm_pin_cback
+	.4byte bta_dm_new_link_key_cback
+	.4byte bta_dm_link_key_request_cback
+	.4byte bta_dm_authentication_complete_cback
 	.4byte 0
 
 
@@ -17054,17 +17054,17 @@ lbl_8050E078:
 lbl_8050E090:
 	# ROM: 0x50A190
 	.4byte bta_dm_enable
-	.4byte func_802DEED4
-	.4byte func_802DF040
-	.4byte func_802DF048
-	.4byte func_802DF090
-	.4byte func_802DF100
-	.4byte func_802DF19C
-	.4byte func_802E06D4
-	.4byte func_802E0874
-	.4byte func_802E1FBC
-	.4byte func_802E20DC
-	.4byte func_802E100C
+	.4byte bta_dm_disable
+	.4byte bta_dm_set_dev_name
+	.4byte bta_dm_set_visibility
+	.4byte bta_dm_bond
+	.4byte bta_dm_pin_reply
+	.4byte bta_dm_auth_reply
+	.4byte bta_dm_signal_strength
+	.4byte bta_dm_acl_change
+	.4byte bta_dm_pm_btm_status
+	.4byte bta_dm_pm_timer
+	.4byte bta_dm_keep_acl
 	.4byte bta_dm_send_hci_reset
 
 
@@ -17087,24 +17087,24 @@ lbl_8050E0C4:
 .global lbl_8050E0F0
 lbl_8050E0F0:
 	# ROM: 0x50A1F0
-	.4byte func_802DF270
-	.4byte func_802DF2D0
-	.4byte func_802DF354
-	.4byte func_802DF468
-	.4byte func_802DF68C
-	.4byte func_802DF85C
-	.4byte func_802DFAC4
-	.4byte func_802DFC00
-	.4byte func_802DFADC
-	.4byte func_802DFB2C
-	.4byte func_802DFC44
-	.4byte func_802DFC8C
-	.4byte func_802DFCD4
-	.4byte func_802DFD18
-	.4byte func_802DFDB8
-	.4byte func_802DFD5C
-	.4byte func_802DF7F8
-	.4byte func_802E02C8
+	.4byte bta_dm_search_start
+	.4byte bta_dm_search_cancel
+	.4byte bta_dm_discover
+	.4byte bta_dm_inq_cmpl
+	.4byte bta_dm_rmt_name
+	.4byte bta_dm_sdp_result
+	.4byte bta_dm_search_cmpl
+	.4byte bta_dm_free_sdp_db
+	.4byte bta_dm_disc_result
+	.4byte bta_dm_search_result
+	.4byte bta_dm_queue_search
+	.4byte bta_dm_queue_disc
+	.4byte bta_dm_search_clear_queue
+	.4byte bta_dm_search_cancel_cmpl
+	.4byte bta_dm_search_cancel_notify
+	.4byte bta_dm_search_cancel_transac_cmpl
+	.4byte bta_dm_disc_rmt_name
+	.4byte bta_dm_cancel_rmt_name
 
 .global lbl_8050E138
 lbl_8050E138:
@@ -17159,18 +17159,18 @@ lbl_8050E1A8:
 .global lbl_8050E1B8
 lbl_8050E1B8:
 	# ROM: 0x50A2B8
-	.4byte func_802E2834
-	.4byte func_802E29C4
-	.4byte func_802E2F34
-	.4byte func_802E2A7C
-	.4byte func_802E2D3C
-	.4byte func_802E2AD4
-	.4byte func_802E2538
-	.4byte func_802E26CC
-	.4byte func_802E33D0
-	.4byte func_802E3134
-	.4byte func_802E3150
-	.4byte func_802E289C
+	.4byte bta_hh_api_disc_act
+	.4byte bta_hh_open_act
+	.4byte bta_hh_close_act
+	.4byte bta_hh_data_act
+	.4byte bta_hh_ctrl_dat_act
+	.4byte bta_hh_handsk_act
+	.4byte bta_hh_start_sdp
+	.4byte bta_hh_sdp_cmpl
+	.4byte bta_hh_write_dev_act
+	.4byte bta_hh_get_dscp_act
+	.4byte bta_hh_maint_dev_act
+	.4byte bta_hh_open_cmpl_act
 
 .global lbl_8050E1E8
 lbl_8050E1E8:

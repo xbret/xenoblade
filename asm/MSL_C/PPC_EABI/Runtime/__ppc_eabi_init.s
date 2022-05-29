@@ -14,11 +14,9 @@ __init_hardware:
 /* 800065D4 000026D4  48 34 B2 AD */	bl __OSFPRInit
 /* 800065D8 000026D8  48 34 DE F9 */	bl __OSCacheInit
 /* 800065DC 000026DC  7F E8 03 A6 */	mtlr r31
-/* 800065E0 000026E0  4E 80 00 20 */	blr 
-/* 800065E4 000026E4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800065E8 000026E8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800065EC 000026EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+/* 800065E0 000026E0  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global __flush_cache
 __flush_cache:
 /* 800065F0 000026F0  3C A0 FF FF */	lis r5, 0xFFFFFFF1@h
@@ -73,9 +71,8 @@ lbl_8035F398:
 /* 8035F3AC 0032896C  7C 08 03 A6 */	mtlr r0
 /* 8035F3B0 00328970  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035F3B4 00328974  4E 80 00 20 */	blr 
-/* 8035F3B8 00328978  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035F3BC 0032897C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global exit
 exit:
 /* 8035F3C0 00328980  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -99,4 +96,4 @@ lbl_8035F3E8:
 /* 8035F400 003289C0  7C 08 03 A6 */	mtlr r0
 /* 8035F404 003289C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035F408 003289C8  4E 80 00 20 */	blr 
-/* 8035F40C 003289CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

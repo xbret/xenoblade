@@ -13,10 +13,8 @@ OSDisableInterrupts:
 __RAS_OSDisableInterrupts_end:
 /* 803589BC 00321F7C  54 63 8F FE */	rlwinm r3, r3, 0x11, 0x1f, 0x1f
 /* 803589C0 00321F80  4E 80 00 20 */	blr 
-/* 803589C4 00321F84  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803589C8 00321F88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803589CC 00321F8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSEnableInterrupts
 OSEnableInterrupts:
 /* 803589D0 00321F90  7C 60 00 A6 */	mfmsr r3
@@ -24,10 +22,8 @@ OSEnableInterrupts:
 /* 803589D8 00321F98  7C 80 01 24 */	mtmsr r4
 /* 803589DC 00321F9C  54 63 8F FE */	rlwinm r3, r3, 0x11, 0x1f, 0x1f
 /* 803589E0 00321FA0  4E 80 00 20 */	blr 
-/* 803589E4 00321FA4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803589E8 00321FA8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803589EC 00321FAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSRestoreInterrupts
 OSRestoreInterrupts:
 /* 803589F0 00321FB0  2C 03 00 00 */	cmpwi r3, 0
@@ -41,10 +37,8 @@ lbl_80358A08:
 /* 80358A08 00321FC8  7C A0 01 24 */	mtmsr r5
 /* 80358A0C 00321FCC  54 83 8F FE */	rlwinm r3, r4, 0x11, 0x1f, 0x1f
 /* 80358A10 00321FD0  4E 80 00 20 */	blr 
-/* 80358A14 00321FD4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80358A18 00321FD8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80358A1C 00321FDC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSSetInterruptHandler
 __OSSetInterruptHandler:
 /* 80358A20 00321FE0  80 AD B9 20 */	lwz r5, lbl_80667AA0@sda21(r13)
@@ -52,10 +46,8 @@ __OSSetInterruptHandler:
 /* 80358A28 00321FE8  7C 65 00 2E */	lwzx r3, r5, r0
 /* 80358A2C 00321FEC  7C 85 01 2E */	stwx r4, r5, r0
 /* 80358A30 00321FF0  4E 80 00 20 */	blr 
-/* 80358A34 00321FF4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80358A38 00321FF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80358A3C 00321FFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSGetInterruptHandler
 __OSGetInterruptHandler:
 /* 80358A40 00322000  80 8D B9 20 */	lwz r4, lbl_80667AA0@sda21(r13)
@@ -116,10 +108,8 @@ lbl_80358AD8:
 /* 80358B08 003220C8  7C 08 03 A6 */	mtlr r0
 /* 80358B0C 003220CC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80358B10 003220D0  4E 80 00 20 */	blr 
-/* 80358B14 003220D4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80358B18 003220D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80358B1C 003220DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global SetInterruptMask
 SetInterruptMask:
 /* 80358B20 003220E0  7C 60 00 34 */	cntlzw r0, r3
@@ -310,8 +300,8 @@ lbl_80358D6C:
 /* 80358D70 00322330  54 63 07 20 */	rlwinm r3, r3, 0, 0x1c, 0x10
 /* 80358D74 00322334  90 A4 30 04 */	stw r5, 0xCC003004@l(r4)
 /* 80358D78 00322338  4E 80 00 20 */	blr 
-/* 80358D7C 0032233C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __OSMaskInterrupts
 __OSMaskInterrupts:
 /* 80358D80 00322340  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -593,9 +583,8 @@ lbl_80359104:
 /* 8035911C 003226DC  7C 08 03 A6 */	mtlr r0
 /* 80359120 003226E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80359124 003226E4  4E 80 00 20 */	blr 
-/* 80359128 003226E8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035912C 003226EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global ExternalInterruptHandler
 ExternalInterruptHandler:
 /* 80359130 003226F0  90 04 00 00 */	stw r0, 0(r4)
@@ -627,5 +616,4 @@ __OSModuleInit:
 /* 8035918C 0032274C  90 03 30 C8 */	stw r0, 0x30c8(r3)
 /* 80359190 00322750  90 03 30 D0 */	stw r0, 0x30d0(r3)
 /* 80359194 00322754  4E 80 00 20 */	blr 
-/* 80359198 00322758  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035919C 0032275C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

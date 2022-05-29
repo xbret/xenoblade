@@ -27,9 +27,8 @@ lbl_80352E08:
 /* 80352E0C 0031C3CC  7C 08 03 A6 */	mtlr r0
 /* 80352E10 0031C3D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80352E14 0031C3D4  4E 80 00 20 */	blr 
-/* 80352E18 0031C3D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80352E1C 0031C3DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSCreateAlarm
 OSCreateAlarm:
 /* 80352E20 0031C3E0  38 00 00 00 */	li r0, 0
@@ -265,10 +264,8 @@ OSSetPeriodicAlarm:
 /* 80353168 0031C728  7C 08 03 A6 */	mtlr r0
 /* 8035316C 0031C72C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80353170 0031C730  4E 80 00 20 */	blr 
-/* 80353174 0031C734  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80353178 0031C738  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035317C 0031C73C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSCancelAlarm
 OSCancelAlarm:
 /* 80353180 0031C740  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -349,9 +346,8 @@ lbl_8035327C:
 /* 8035328C 0031C84C  7C 08 03 A6 */	mtlr r0
 /* 80353290 0031C850  38 21 00 20 */	addi r1, r1, 0x20
 /* 80353294 0031C854  4E 80 00 20 */	blr 
-/* 80353298 0031C858  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035329C 0031C85C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global DecrementerExceptionCallback
 DecrementerExceptionCallback:
 /* 803532A0 0031C860  94 21 FD 20 */	stwu r1, -0x2e0(r1)
@@ -504,8 +500,8 @@ lbl_80353464:
 /* 803534C0 0031CA80  7C 08 03 A6 */	mtlr r0
 /* 803534C4 0031CA84  38 21 02 E0 */	addi r1, r1, 0x2e0
 /* 803534C8 0031CA88  4E 80 00 20 */	blr 
-/* 803534CC 0031CA8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global DecrementerExceptionHandler
 DecrementerExceptionHandler:
 /* 803534D0 0031CA90  90 04 00 00 */	stw r0, 0(r4)
@@ -573,18 +569,67 @@ lbl_80353590:
 /* 803535A0 0031CB60  7C 08 03 A6 */	mtlr r0
 /* 803535A4 0031CB64  38 21 00 10 */	addi r1, r1, 0x10
 /* 803535A8 0031CB68  4E 80 00 20 */	blr 
-/* 803535AC 0031CB6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSSetAlarmUserData
 OSSetAlarmUserData:
 /* 803535B0 0031CB70  90 83 00 28 */	stw r4, 0x28(r3)
 /* 803535B4 0031CB74  4E 80 00 20 */	blr 
-/* 803535B8 0031CB78  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803535BC 0031CB7C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSGetAlarmUserData
 OSGetAlarmUserData:
 /* 803535C0 0031CB80  80 63 00 28 */	lwz r3, 0x28(r3)
 /* 803535C4 0031CB84  4E 80 00 20 */	blr 
-/* 803535C8 0031CB88  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803535CC 0031CB8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+
+.balign 16, 0
+.global __OSCancelInternalAlarms
+__OSCancelInternalAlarms:
+/* 803535D0 0031CB90  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 803535D4 0031CB94  7C 08 02 A6 */	mflr r0
+/* 803535D8 0031CB98  90 01 00 24 */	stw r0, 0x24(r1)
+/* 803535DC 0031CB9C  93 E1 00 1C */	stw r31, 0x1c(r1)
+/* 803535E0 0031CBA0  93 C1 00 18 */	stw r30, 0x18(r1)
+/* 803535E4 0031CBA4  93 A1 00 14 */	stw r29, 0x14(r1)
+/* 803535E8 0031CBA8  7C 7D 1B 78 */	mr r29, r3
+/* 803535EC 0031CBAC  48 00 53 C5 */	bl OSDisableInterrupts
+/* 803535F0 0031CBB0  80 8D B8 C8 */	lwz r4, lbl_80667A48@sda21(r13)
+/* 803535F4 0031CBB4  7C 7F 1B 78 */	mr r31, r3
+/* 803535F8 0031CBB8  2C 04 00 00 */	cmpwi r4, 0
+/* 803535FC 0031CBBC  41 82 00 0C */	beq lbl_80353608
+/* 80353600 0031CBC0  83 C4 00 14 */	lwz r30, 0x14(r4)
+/* 80353604 0031CBC4  48 00 00 48 */	b lbl_8035364C
+lbl_80353608:
+/* 80353608 0031CBC8  3B C0 00 00 */	li r30, 0
+/* 8035360C 0031CBCC  48 00 00 40 */	b lbl_8035364C
+lbl_80353610:
+/* 80353610 0031CBD0  80 64 00 04 */	lwz r3, 4(r4)
+/* 80353614 0031CBD4  3C 03 00 01 */	addis r0, r3, 1
+/* 80353618 0031CBD8  28 00 FF FF */	cmplwi r0, 0xffff
+/* 8035361C 0031CBDC  40 82 00 18 */	bne lbl_80353634
+/* 80353620 0031CBE0  80 04 00 28 */	lwz r0, 0x28(r4)
+/* 80353624 0031CBE4  7C 00 E8 40 */	cmplw r0, r29
+/* 80353628 0031CBE8  40 82 00 0C */	bne lbl_80353634
+/* 8035362C 0031CBEC  7C 83 23 78 */	mr r3, r4
+/* 80353630 0031CBF0  4B FF FB 51 */	bl OSCancelAlarm
+lbl_80353634:
+/* 80353634 0031CBF4  2C 1E 00 00 */	cmpwi r30, 0
+/* 80353638 0031CBF8  7F C4 F3 78 */	mr r4, r30
+/* 8035363C 0031CBFC  41 82 00 0C */	beq lbl_80353648
+/* 80353640 0031CC00  83 DE 00 14 */	lwz r30, 0x14(r30)
+/* 80353644 0031CC04  48 00 00 08 */	b lbl_8035364C
+lbl_80353648:
+/* 80353648 0031CC08  3B C0 00 00 */	li r30, 0
+lbl_8035364C:
+/* 8035364C 0031CC0C  2C 04 00 00 */	cmpwi r4, 0
+/* 80353650 0031CC10  40 82 FF C0 */	bne lbl_80353610
+/* 80353654 0031CC14  7F E3 FB 78 */	mr r3, r31
+/* 80353658 0031CC18  48 00 53 99 */	bl OSRestoreInterrupts
+/* 8035365C 0031CC1C  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 80353660 0031CC20  83 E1 00 1C */	lwz r31, 0x1c(r1)
+/* 80353664 0031CC24  83 C1 00 18 */	lwz r30, 0x18(r1)
+/* 80353668 0031CC28  83 A1 00 14 */	lwz r29, 0x14(r1)
+/* 8035366C 0031CC2C  7C 08 03 A6 */	mtlr r0
+/* 80353670 0031CC30  38 21 00 20 */	addi r1, r1, 0x20
+/* 80353674 0031CC34  4E 80 00 20 */	blr 
+.balign 16, 0

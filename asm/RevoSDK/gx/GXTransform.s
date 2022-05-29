@@ -21,10 +21,8 @@ __GXSetProjection:
 /* 8031E528 002E7AE8  80 03 05 28 */	lwz r0, 0x528(r3)
 /* 8031E52C 002E7AEC  90 04 80 00 */	stw r0, -0x8000(r4)
 /* 8031E530 002E7AF0  4E 80 00 20 */	blr 
-/* 8031E534 002E7AF4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E538 002E7AF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E53C 002E7AFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetProjection
 GXSetProjection:
 /* 8031E540 002E7B00  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
@@ -54,10 +52,8 @@ lbl_8031E594:
 /* 8031E598 002E7B58  64 00 08 00 */	oris r0, r0, 0x800
 /* 8031E59C 002E7B5C  90 05 05 FC */	stw r0, 0x5fc(r5)
 /* 8031E5A0 002E7B60  4E 80 00 20 */	blr 
-/* 8031E5A4 002E7B64  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E5A8 002E7B68  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E5AC 002E7B6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetProjectionv
 GXSetProjectionv:
 /* 8031E5B0 002E7B70  C0 22 BD 20 */	lfs f1, lbl_8066C0A0@sda21(r2)
@@ -81,8 +77,8 @@ lbl_8031E5CC:
 /* 8031E5F0 002E7BB0  64 00 08 00 */	oris r0, r0, 0x800
 /* 8031E5F4 002E7BB4  90 04 05 FC */	stw r0, 0x5fc(r4)
 /* 8031E5F8 002E7BB8  4E 80 00 20 */	blr 
-/* 8031E5FC 002E7BBC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXLoadPosMtxImm
 GXLoadPosMtxImm:
 /* 8031E600 002E7BC0  3C A0 CC 01 */	lis r5, 0xCC008000@ha
@@ -119,8 +115,8 @@ GXLoadPosMtxIndx:
 /* 8031E670 002E7C30  50 64 80 1E */	rlwimi r4, r3, 0x10, 0, 0xf
 /* 8031E674 002E7C34  90 85 80 00 */	stw r4, -0x8000(r5)
 /* 8031E678 002E7C38  4E 80 00 20 */	blr 
-/* 8031E67C 002E7C3C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXLoadNrmMtxImm
 GXLoadNrmMtxImm:
 /* 8031E680 002E7C40  54 80 10 3A */	slwi r0, r4, 2
@@ -145,9 +141,8 @@ GXLoadNrmMtxImm:
 /* 8031E6CC 002E7C8C  F0 24 00 00 */	psq_st f1, 0(r4), 0, qr0
 /* 8031E6D0 002E7C90  D0 05 80 00 */	stfs f0, -0x8000(r5)
 /* 8031E6D4 002E7C94  4E 80 00 20 */	blr 
-/* 8031E6D8 002E7C98  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E6DC 002E7C9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXLoadNrmMtxIndx3x3
 GXLoadNrmMtxIndx3x3:
 /* 8031E6E0 002E7CA0  54 80 10 3A */	slwi r0, r4, 2
@@ -163,10 +158,8 @@ GXLoadNrmMtxIndx3x3:
 /* 8031E708 002E7CC8  50 66 80 1E */	rlwimi r6, r3, 0x10, 0, 0xf
 /* 8031E70C 002E7CCC  90 C5 80 00 */	stw r6, -0x8000(r5)
 /* 8031E710 002E7CD0  4E 80 00 20 */	blr 
-/* 8031E714 002E7CD4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E718 002E7CD8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E71C 002E7CDC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetCurrentMtx
 GXSetCurrentMtx:
 /* 8031E720 002E7CE0  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
@@ -230,10 +223,8 @@ lbl_8031E7CC:
 /* 8031E7E8 002E7DA8  F0 24 00 00 */	psq_st f1, 0(r4), 0, qr0
 /* 8031E7EC 002E7DAC  F0 04 00 00 */	psq_st f0, 0(r4), 0, qr0
 /* 8031E7F0 002E7DB0  4E 80 00 20 */	blr 
-/* 8031E7F4 002E7DB4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E7F8 002E7DB8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E7FC 002E7DBC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __GXSetViewport
 __GXSetViewport:
 /* 8031E800 002E7DC0  80 C2 BC 20 */	lwz r6, lbl_8066BFA0@sda21(r2)
@@ -291,8 +282,8 @@ lbl_8031E8A0:
 /* 8031E8C0 002E7E80  64 00 10 00 */	oris r0, r0, 0x1000
 /* 8031E8C4 002E7E84  90 03 05 FC */	stw r0, 0x5fc(r3)
 /* 8031E8C8 002E7E88  4E 80 00 20 */	blr 
-/* 8031E8CC 002E7E8C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetViewport
 GXSetViewport:
 /* 8031E8D0 002E7E90  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
@@ -306,8 +297,8 @@ GXSetViewport:
 /* 8031E8F0 002E7EB0  64 00 10 00 */	oris r0, r0, 0x1000
 /* 8031E8F4 002E7EB4  90 03 05 FC */	stw r0, 0x5fc(r3)
 /* 8031E8F8 002E7EB8  4E 80 00 20 */	blr 
-/* 8031E8FC 002E7EBC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetScissor
 GXSetScissor:
 /* 8031E900 002E7EC0  81 02 BC 20 */	lwz r8, lbl_8066BFA0@sda21(r2)
@@ -336,9 +327,8 @@ GXSetScissor:
 /* 8031E95C 002E7F1C  90 67 80 00 */	stw r3, -0x8000(r7)
 /* 8031E960 002E7F20  B0 08 00 02 */	sth r0, 2(r8)
 /* 8031E964 002E7F24  4E 80 00 20 */	blr 
-/* 8031E968 002E7F28  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E96C 002E7F2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetScissorBoxOffset
 GXSetScissorBoxOffset:
 /* 8031E970 002E7F30  3C A0 CC 01 */	lis r5, 0xCC008000@ha
@@ -356,8 +346,8 @@ GXSetScissorBoxOffset:
 /* 8031E9A0 002E7F60  90 C5 80 00 */	stw r6, -0x8000(r5)
 /* 8031E9A4 002E7F64  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031E9A8 002E7F68  4E 80 00 20 */	blr 
-/* 8031E9AC 002E7F6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global GXSetClipMode
 GXSetClipMode:
 /* 8031E9B0 002E7F70  3C C0 CC 01 */	lis r6, 0xCC008000@ha
@@ -370,9 +360,8 @@ GXSetClipMode:
 /* 8031E9CC 002E7F8C  90 66 80 00 */	stw r3, -0x8000(r6)
 /* 8031E9D0 002E7F90  B0 04 00 02 */	sth r0, 2(r4)
 /* 8031E9D4 002E7F94  4E 80 00 20 */	blr 
-/* 8031E9D8 002E7F98  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031E9DC 002E7F9C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __GXSetMatrixIndex
 __GXSetMatrixIndex:
 /* 8031E9E0 002E7FA0  2C 03 00 05 */	cmpwi r3, 5
@@ -411,5 +400,4 @@ lbl_8031EA5C:
 /* 8031EA5C 002E801C  38 00 00 01 */	li r0, 1
 /* 8031EA60 002E8020  B0 06 00 02 */	sth r0, 2(r6)
 /* 8031EA64 002E8024  4E 80 00 20 */	blr 
-/* 8031EA68 002E8028  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8031EA6C 002E802C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

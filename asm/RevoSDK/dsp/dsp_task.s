@@ -300,8 +300,8 @@ lbl_80309908:
 /* 80309920 002D2EE0  7C 08 03 A6 */	mtlr r0
 /* 80309924 002D2EE4  38 21 02 E0 */	addi r1, r1, 0x2e0
 /* 80309928 002D2EE8  4E 80 00 20 */	blr 
-/* 8030992C 002D2EEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __DSP_exec_task
 __DSP_exec_task:
 /* 80309930 002D2EF0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -430,10 +430,8 @@ lbl_80309ABC:
 /* 80309AC8 002D3088  7C 08 03 A6 */	mtlr r0
 /* 80309ACC 002D308C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80309AD0 002D3090  4E 80 00 20 */	blr 
-/* 80309AD4 002D3094  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80309AD8 002D3098  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80309ADC 002D309C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global func_80309AE0
 func_80309AE0:
 /* 80309AE0 002D30A0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -546,8 +544,8 @@ lbl_80309BE8:
 /* 80309C60 002D3220  7C 08 03 A6 */	mtlr r0
 /* 80309C64 002D3224  38 21 00 20 */	addi r1, r1, 0x20
 /* 80309C68 002D3228  4E 80 00 20 */	blr 
-/* 80309C6C 002D322C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __DSP_insert_task
 __DSP_insert_task:
 /* 80309C70 002D3230  80 AD B6 20 */	lwz r5, lbl_806677A0@sda21(r13)
@@ -635,5 +633,4 @@ lbl_80309D78:
 /* 80309D8C 002D334C  80 03 00 3C */	lwz r0, 0x3c(r3)
 /* 80309D90 002D3350  90 04 00 3C */	stw r0, 0x3c(r4)
 /* 80309D94 002D3354  4E 80 00 20 */	blr 
-/* 80309D98 002D3358  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80309D9C 002D335C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

@@ -50,18 +50,13 @@ lbl_8030A8DC:
 /* 8030A948 002D3F08  7C 08 03 A6 */	mtlr r0
 /* 8030A94C 002D3F0C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030A950 002D3F10  4E 80 00 20 */	blr 
-/* 8030A954 002D3F14  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030A958 002D3F18  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030A95C 002D3F1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-
+.balign 16, 0
 .global defaultOptionalCommandChecker
 defaultOptionalCommandChecker:
 /* 8030A960 002D3F20  4E 80 00 20 */	blr 
-/* 8030A964 002D3F24  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030A968 002D3F28  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030A96C 002D3F2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global DVDInit
 DVDInit:
 /* 8030A970 002D3F30  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -84,13 +79,13 @@ DVDInit:
 /* 8030A9B4 002D3F74  88 03 31 87 */	lbz r0, 0x80003187@l(r3)
 /* 8030A9B8 002D3F78  28 00 00 80 */	cmplwi r0, 0x80
 /* 8030A9BC 002D3F7C  40 82 00 50 */	bne lbl_8030AA0C
-/* 8030A9C0 002D3F80  48 00 8D 91 */	bl func_80313750
+/* 8030A9C0 002D3F80  48 00 8D 91 */	bl ESP_InitLib
 /* 8030A9C4 002D3F84  2C 03 00 00 */	cmpwi r3, 0
 /* 8030A9C8 002D3F88  40 82 00 14 */	bne lbl_8030A9DC
 /* 8030A9CC 002D3F8C  3C 80 80 5C */	lis r4, lbl_805C7D00@ha
 /* 8030A9D0 002D3F90  38 60 00 00 */	li r3, 0
 /* 8030A9D4 002D3F94  38 84 7D 00 */	addi r4, r4, lbl_805C7D00@l
-/* 8030A9D8 002D3F98  48 00 8F E9 */	bl func_803139C0
+/* 8030A9D8 002D3F98  48 00 8F E9 */	bl ESP_DiGetTicketView
 lbl_8030A9DC:
 /* 8030A9DC 002D3F9C  2C 03 00 00 */	cmpwi r3, 0
 /* 8030A9E0 002D3FA0  40 82 00 10 */	bne lbl_8030A9F0
@@ -105,10 +100,10 @@ lbl_8030A9F0:
 /* 8030AA00 002D3FC0  38 63 7E 00 */	addi r3, r3, lbl_805C7E00@l
 /* 8030AA04 002D3FC4  48 00 90 6D */	bl func_80313A70
 lbl_8030AA08:
-/* 8030AA08 002D3FC8  48 00 8D A9 */	bl func_803137B0
+/* 8030AA08 002D3FC8  48 00 8D A9 */	bl ESP_CloseLib
 lbl_8030AA0C:
 /* 8030AA0C 002D3FCC  4B FF F3 95 */	bl __DVDFSInit
-/* 8030AA10 002D3FD0  48 00 4A 61 */	bl func_8030F470
+/* 8030AA10 002D3FD0  48 00 4A 61 */	bl __DVDClearWaitingQueue
 /* 8030AA14 002D3FD4  3C 00 80 00 */	lis r0, 0x8000
 /* 8030AA18 002D3FD8  38 60 00 00 */	li r3, 0
 /* 8030AA1C 002D3FDC  90 6D B6 D0 */	stw r3, lbl_80667850@sda21(r13)
@@ -147,7 +142,7 @@ lbl_8030AA60:
 /* 8030AA9C 002D405C  88 9E 00 07 */	lbz r4, 7(r30)
 /* 8030AAA0 002D4060  98 85 00 05 */	stb r4, 5(r5)
 /* 8030AAA4 002D4064  90 0D B6 98 */	stw r0, lbl_80667818@sda21(r13)
-/* 8030AAA8 002D4068  48 00 58 29 */	bl func_803102D0
+/* 8030AAA8 002D4068  48 00 58 29 */	bl DVDSetAutoFatalMessaging
 lbl_8030AAAC:
 /* 8030AAAC 002D406C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8030AAB0 002D4070  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -155,10 +150,8 @@ lbl_8030AAAC:
 /* 8030AAB8 002D4078  7C 08 03 A6 */	mtlr r0
 /* 8030AABC 002D407C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030AAC0 002D4080  4E 80 00 20 */	blr 
-/* 8030AAC4 002D4084  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030AAC8 002D4088  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030AACC 002D408C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global stateReadingFST
 stateReadingFST:
 /* 8030AAD0 002D4090  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -257,9 +250,8 @@ lbl_8030AB80:
 /* 8030AC3C 002D41FC  7C 08 03 A6 */	mtlr r0
 /* 8030AC40 002D4200  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030AC44 002D4204  4E 80 00 20 */	blr 
-/* 8030AC48 002D4208  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030AC4C 002D420C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global cbForStateReadingFST
 cbForStateReadingFST:
 /* 8030AC50 002D4210  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -291,7 +283,7 @@ lbl_8030ACA0:
 /* 8030ACB0 002D4270  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030ACB4 002D4274  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030ACB8 002D4278  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030ACBC 002D427C  48 00 53 E5 */	bl func_803100A0
+/* 8030ACBC 002D427C  48 00 53 E5 */	bl __DVDStoreErrorCode
 /* 8030ACC0 002D4280  48 00 00 FC */	b lbl_8030ADBC
 lbl_8030ACC4:
 /* 8030ACC4 002D4284  28 1E 00 20 */	cmplwi r30, 0x20
@@ -300,7 +292,7 @@ lbl_8030ACC4:
 /* 8030ACD0 002D4290  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030ACD4 002D4294  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030ACD8 002D4298  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030ACDC 002D429C  48 00 53 C5 */	bl func_803100A0
+/* 8030ACDC 002D429C  48 00 53 C5 */	bl __DVDStoreErrorCode
 /* 8030ACE0 002D42A0  48 00 00 DC */	b lbl_8030ADBC
 lbl_8030ACE4:
 /* 8030ACE4 002D42A4  57 C0 07 FF */	clrlwi. r0, r30, 0x1f
@@ -320,7 +312,7 @@ lbl_8030ACE4:
 /* 8030AD1C 002D42DC  7D 89 03 A6 */	mtctr r12
 /* 8030AD20 002D42E0  4E 80 04 21 */	bctrl 
 lbl_8030AD24:
-/* 8030AD24 002D42E4  48 00 29 2D */	bl func_8030D650
+/* 8030AD24 002D42E4  48 00 29 2D */	bl stateReady
 /* 8030AD28 002D42E8  48 00 00 94 */	b lbl_8030ADBC
 lbl_8030AD2C:
 /* 8030AD2C 002D42EC  48 04 DC 85 */	bl OSDisableInterrupts
@@ -357,8 +349,8 @@ lbl_8030AD48:
 /* 8030ADA4 002D4364  90 64 00 2C */	stw r3, 0x2c(r4)
 /* 8030ADA8 002D4368  7F E3 FB 78 */	mr r3, r31
 /* 8030ADAC 002D436C  48 04 DC 45 */	bl OSRestoreInterrupts
-/* 8030ADB0 002D4370  3C 60 80 31 */	lis r3, lbl_8030B130@ha
-/* 8030ADB4 002D4374  38 63 B1 30 */	addi r3, r3, lbl_8030B130@l
+/* 8030ADB0 002D4370  3C 60 80 31 */	lis r3, cbForStateGettingError@ha
+/* 8030ADB4 002D4374  38 63 B1 30 */	addi r3, r3, cbForStateGettingError@l
 /* 8030ADB8 002D4378  48 00 6D C9 */	bl DVDLowRequestError
 lbl_8030ADBC:
 /* 8030ADBC 002D437C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -367,17 +359,13 @@ lbl_8030ADBC:
 /* 8030ADC8 002D4388  7C 08 03 A6 */	mtlr r0
 /* 8030ADCC 002D438C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030ADD0 002D4390  4E 80 00 20 */	blr 
-/* 8030ADD4 002D4394  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030ADD8 002D4398  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030ADDC 002D439C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global FatalAlarmHandler
 FatalAlarmHandler:
-/* 8030ADE0 002D43A0  48 00 55 70 */	b func_80310350
-/* 8030ADE4 002D43A4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030ADE8 002D43A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030ADEC 002D43AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+/* 8030ADE0 002D43A0  48 00 55 70 */	b __DVDPrintFatalMessage
 
+.balign 16, 0
 .global cbForStateError
 cbForStateError:
 /* 8030ADF0 002D43B0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -385,7 +373,7 @@ cbForStateError:
 /* 8030ADF8 002D43B8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8030ADFC 002D43BC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8030AE00 002D43C0  7C 7F 1B 78 */	mr r31, r3
-/* 8030AE04 002D43C4  48 00 55 2D */	bl func_80310330
+/* 8030AE04 002D43C4  48 00 55 2D */	bl __DVDGetAutoFatalMessaging
 /* 8030AE08 002D43C8  2C 03 00 00 */	cmpwi r3, 0
 /* 8030AE0C 002D43CC  41 82 00 2C */	beq lbl_8030AE38
 /* 8030AE10 002D43D0  3F E0 80 5D */	lis r31, lbl_805CC850@ha
@@ -408,7 +396,7 @@ lbl_8030AE38:
 /* 8030AE50 002D4410  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030AE54 002D4414  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030AE58 002D4418  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030AE5C 002D441C  48 00 52 45 */	bl func_803100A0
+/* 8030AE5C 002D441C  48 00 52 45 */	bl __DVDStoreErrorCode
 /* 8030AE60 002D4420  48 00 00 8C */	b lbl_8030AEEC
 lbl_8030AE64:
 /* 8030AE64 002D4424  28 1F 00 20 */	cmplwi r31, 0x20
@@ -417,7 +405,7 @@ lbl_8030AE64:
 /* 8030AE70 002D4430  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030AE74 002D4434  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030AE78 002D4438  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030AE7C 002D443C  48 00 52 25 */	bl func_803100A0
+/* 8030AE7C 002D443C  48 00 52 25 */	bl __DVDStoreErrorCode
 /* 8030AE80 002D4440  48 00 00 6C */	b lbl_8030AEEC
 lbl_8030AE84:
 /* 8030AE84 002D4444  83 ED B6 F0 */	lwz r31, lbl_80667870@sda21(r13)
@@ -447,7 +435,7 @@ lbl_8030AEB8:
 /* 8030AEE0 002D44A0  7D 89 03 A6 */	mtctr r12
 /* 8030AEE4 002D44A4  4E 80 04 21 */	bctrl 
 lbl_8030AEE8:
-/* 8030AEE8 002D44A8  48 00 27 69 */	bl func_8030D650
+/* 8030AEE8 002D44A8  48 00 27 69 */	bl stateReady
 lbl_8030AEEC:
 /* 8030AEEC 002D44AC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8030AEF0 002D44B0  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -462,10 +450,8 @@ cbForStoreErrorCode1:
 /* 8030AF08 002D44C8  38 A5 AD F0 */	addi r5, r5, cbForStateError@l
 /* 8030AF0C 002D44CC  38 80 00 00 */	li r4, 0
 /* 8030AF10 002D44D0  48 00 69 60 */	b DVDLowStopMotor
-/* 8030AF14 002D44D4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030AF18 002D44D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030AF1C 002D44DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global cbForStoreErrorCode2
 cbForStoreErrorCode2:
 /* 8030AF20 002D44E0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -483,8 +469,8 @@ cbForStoreErrorCode2:
 /* 8030AF50 002D4510  7C 08 03 A6 */	mtlr r0
 /* 8030AF54 002D4514  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030AF58 002D4518  4E 80 00 20 */	blr 
-/* 8030AF5C 002D451C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global CategorizeError
 CategorizeError:
 /* 8030AF60 002D4520  3C 03 FF FE */	addis r0, r3, 0xfffe
@@ -506,51 +492,43 @@ lbl_8030AF78:
 /* 8030AF9C 002D455C  41 82 00 10 */	beq lbl_8030AFAC
 /* 8030AFA0 002D4560  3C 04 FF F5 */	addis r0, r4, 0xfff5
 /* 8030AFA4 002D4564  28 00 5A 01 */	cmplwi r0, 0x5a01
-/* 8030AFA8 002D4568  40 82 00 0C */	bne func_8030AFB4
+/* 8030AFA8 002D4568  40 82 00 0C */	bne lbl_8030AFB4
 lbl_8030AFAC:
 /* 8030AFAC 002D456C  38 60 00 00 */	li r3, 0
 /* 8030AFB0 002D4570  4E 80 00 20 */	blr
-
-.global func_8030AFB4
-func_8030AFB4:
+lbl_8030AFB4:
 /* 8030AFB4 002D4574  28 03 20 00 */	cmplwi r3, 0x2000
-/* 8030AFB8 002D4578  40 82 00 30 */	bne func_8030AFE8
+/* 8030AFB8 002D4578  40 82 00 30 */	bne lbl_8030AFE8
 /* 8030AFBC 002D457C  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
 /* 8030AFC0 002D4580  80 03 00 08 */	lwz r0, 8(r3)
 /* 8030AFC4 002D4584  28 00 00 25 */	cmplwi r0, 0x25
 /* 8030AFC8 002D4588  41 82 00 18 */	beq lbl_8030AFE0
-/* 8030AFCC 002D458C  3C 60 80 31 */	lis r3, lbl_8030CF20@ha
+/* 8030AFCC 002D458C  3C 60 80 31 */	lis r3, stateDownRotation@ha
 /* 8030AFD0 002D4590  80 0D B6 F4 */	lwz r0, lbl_80667874@sda21(r13)
-/* 8030AFD4 002D4594  38 63 CF 20 */	addi r3, r3, lbl_8030CF20@l
+/* 8030AFD4 002D4594  38 63 CF 20 */	addi r3, r3, stateDownRotation@l
 /* 8030AFD8 002D4598  7C 00 18 40 */	cmplw r0, r3
-/* 8030AFDC 002D459C  40 82 00 0C */	bne func_8030AFE8
+/* 8030AFDC 002D459C  40 82 00 0C */	bne lbl_8030AFE8
 lbl_8030AFE0:
 /* 8030AFE0 002D45A0  38 60 00 00 */	li r3, 0
 /* 8030AFE4 002D45A4  4E 80 00 20 */	blr
-
-.global func_8030AFE8
-func_8030AFE8:
+lbl_8030AFE8:
 /* 8030AFE8 002D45A8  80 6D B6 78 */	lwz r3, lbl_806677F8@sda21(r13)
 /* 8030AFEC 002D45AC  38 03 00 01 */	addi r0, r3, 1
 /* 8030AFF0 002D45B0  90 0D B6 78 */	stw r0, lbl_806677F8@sda21(r13)
 /* 8030AFF4 002D45B4  80 0D B6 78 */	lwz r0, lbl_806677F8@sda21(r13)
 /* 8030AFF8 002D45B8  2C 00 00 02 */	cmpwi r0, 2
-/* 8030AFFC 002D45BC  40 82 00 28 */	bne func_8030B024
+/* 8030AFFC 002D45BC  40 82 00 28 */	bne lbl_8030B024
 /* 8030B000 002D45C0  80 0D B6 D8 */	lwz r0, lbl_80667858@sda21(r13)
 /* 8030B004 002D45C4  7C 04 00 40 */	cmplw r4, r0
-/* 8030B008 002D45C8  40 82 00 10 */	bne func_8030B018
+/* 8030B008 002D45C8  40 82 00 10 */	bne lbl_8030B018
 /* 8030B00C 002D45CC  90 8D B6 D8 */	stw r4, lbl_80667858@sda21(r13)
 /* 8030B010 002D45D0  38 60 00 01 */	li r3, 1
 /* 8030B014 002D45D4  4E 80 00 20 */	blr
-
-.global func_8030B018
-func_8030B018:
+lbl_8030B018:
 /* 8030B018 002D45D8  90 8D B6 D8 */	stw r4, lbl_80667858@sda21(r13)
 /* 8030B01C 002D45DC  38 60 00 02 */	li r3, 2
 /* 8030B020 002D45E0  4E 80 00 20 */	blr
-
-.global func_8030B024
-func_8030B024:
+lbl_8030B024:
 /* 8030B024 002D45E4  3C 04 FF FD */	addis r0, r4, 0xfffd
 /* 8030B028 002D45E8  90 8D B6 D8 */	stw r4, lbl_80667858@sda21(r13)
 /* 8030B02C 002D45EC  28 00 11 00 */	cmplwi r0, 0x1100
@@ -558,19 +536,17 @@ func_8030B024:
 /* 8030B034 002D45F4  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
 /* 8030B038 002D45F8  80 03 00 08 */	lwz r0, 8(r3)
 /* 8030B03C 002D45FC  28 00 00 05 */	cmplwi r0, 5
-/* 8030B040 002D4600  40 82 00 0C */	bne func_8030B04C
+/* 8030B040 002D4600  40 82 00 0C */	bne lbl_8030B04C
 lbl_8030B044:
 /* 8030B044 002D4604  38 60 00 02 */	li r3, 2
 /* 8030B048 002D4608  4E 80 00 20 */	blr
-
-.global func_8030B04C
-func_8030B04C:
+lbl_8030B04C:
 /* 8030B04C 002D460C  38 60 00 03 */	li r3, 3
 /* 8030B050 002D4610  4E 80 00 20 */	blr 
-/* 8030B054 002D4614  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030B058 002D4618  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030B05C 002D461C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030B060:
+
+.balign 16, 0
+.global cbForStoreErrorCode3
+cbForStoreErrorCode3:
 /* 8030B060 002D4620  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030B064 002D4624  7C 08 02 A6 */	mflr r0
 /* 8030B068 002D4628  90 01 00 14 */	stw r0, 0x14(r1)
@@ -610,9 +586,9 @@ lbl_8030B090:
 /* 8030B0EC 002D46AC  90 64 00 2C */	stw r3, 0x2c(r4)
 /* 8030B0F0 002D46B0  7F E3 FB 78 */	mr r3, r31
 /* 8030B0F4 002D46B4  48 04 D8 FD */	bl OSRestoreInterrupts
-/* 8030B0F8 002D46B8  3C A0 80 31 */	lis r5, lbl_8030B900@ha
+/* 8030B0F8 002D46B8  3C A0 80 31 */	lis r5, cbForStateGoToRetry@ha
 /* 8030B0FC 002D46BC  38 60 00 00 */	li r3, 0
-/* 8030B100 002D46C0  38 A5 B9 00 */	addi r5, r5, lbl_8030B900@l
+/* 8030B100 002D46C0  38 A5 B9 00 */	addi r5, r5, cbForStateGoToRetry@l
 /* 8030B104 002D46C4  38 80 00 00 */	li r4, 0
 /* 8030B108 002D46C8  48 00 67 69 */	bl DVDLowStopMotor
 /* 8030B10C 002D46CC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -621,10 +597,10 @@ lbl_8030B090:
 /* 8030B118 002D46D8  7C 08 03 A6 */	mtlr r0
 /* 8030B11C 002D46DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030B120 002D46E0  4E 80 00 20 */	blr 
-/* 8030B124 002D46E4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030B128 002D46E8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030B12C 002D46EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030B130:
+
+.balign 16, 0
+.global cbForStateGettingError
+cbForStateGettingError:
 /* 8030B130 002D46F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030B134 002D46F4  7C 08 02 A6 */	mflr r0
 /* 8030B138 002D46F8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -656,7 +632,7 @@ lbl_8030B188:
 /* 8030B198 002D4758  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030B19C 002D475C  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030B1A0 002D4760  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030B1A4 002D4764  48 00 4E FD */	bl func_803100A0
+/* 8030B1A4 002D4764  48 00 4E FD */	bl __DVDStoreErrorCode
 /* 8030B1A8 002D4768  48 00 04 6C */	b lbl_8030B614
 lbl_8030B1AC:
 /* 8030B1AC 002D476C  28 1C 00 20 */	cmplwi r28, 0x20
@@ -665,7 +641,7 @@ lbl_8030B1AC:
 /* 8030B1B8 002D4778  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030B1BC 002D477C  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030B1C0 002D4780  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030B1C4 002D4784  48 00 4E DD */	bl func_803100A0
+/* 8030B1C4 002D4784  48 00 4E DD */	bl __DVDStoreErrorCode
 /* 8030B1C8 002D4788  48 00 04 4C */	b lbl_8030B614
 lbl_8030B1CC:
 /* 8030B1CC 002D478C  57 80 07 BD */	rlwinm. r0, r28, 0, 0x1e, 0x1e
@@ -674,7 +650,7 @@ lbl_8030B1CC:
 /* 8030B1D8 002D4798  3C 80 80 31 */	lis r4, cbForStoreErrorCode1@ha
 /* 8030B1DC 002D479C  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 8030B1E0 002D47A0  38 84 AF 00 */	addi r4, r4, cbForStoreErrorCode1@l
-/* 8030B1E4 002D47A4  48 00 4E BD */	bl func_803100A0
+/* 8030B1E4 002D47A4  48 00 4E BD */	bl __DVDStoreErrorCode
 /* 8030B1E8 002D47A8  48 00 04 2C */	b lbl_8030B614
 lbl_8030B1EC:
 /* 8030B1EC 002D47AC  48 00 79 15 */	bl DVDLowGetImmBufferReg
@@ -687,7 +663,7 @@ lbl_8030B1EC:
 /* 8030B208 002D47C8  3C 80 80 31 */	lis r4, cbForStoreErrorCode1@ha
 /* 8030B20C 002D47CC  7F A3 EB 78 */	mr r3, r29
 /* 8030B210 002D47D0  38 84 AF 00 */	addi r4, r4, cbForStoreErrorCode1@l
-/* 8030B214 002D47D4  48 00 4E 8D */	bl func_803100A0
+/* 8030B214 002D47D4  48 00 4E 8D */	bl __DVDStoreErrorCode
 /* 8030B218 002D47D8  48 00 03 FC */	b lbl_8030B614
 lbl_8030B21C:
 /* 8030B21C 002D47DC  38 03 FF FE */	addi r0, r3, -2
@@ -755,7 +731,7 @@ lbl_8030B2E0:
 /* 8030B2F4 002D48B4  7D 89 03 A6 */	mtctr r12
 /* 8030B2F8 002D48B8  4E 80 04 21 */	bctrl 
 lbl_8030B2FC:
-/* 8030B2FC 002D48BC  48 00 23 55 */	bl func_8030D650
+/* 8030B2FC 002D48BC  48 00 23 55 */	bl stateReady
 /* 8030B300 002D48C0  38 00 00 01 */	li r0, 1
 /* 8030B304 002D48C4  48 00 00 08 */	b lbl_8030B30C
 lbl_8030B308:
@@ -765,10 +741,10 @@ lbl_8030B30C:
 /* 8030B310 002D48D0  40 82 03 04 */	bne lbl_8030B614
 /* 8030B314 002D48D4  28 1E 00 02 */	cmplwi r30, 2
 /* 8030B318 002D48D8  40 82 00 18 */	bne lbl_8030B330
-/* 8030B31C 002D48DC  3C 80 80 31 */	lis r4, lbl_8030B060@ha
+/* 8030B31C 002D48DC  3C 80 80 31 */	lis r4, cbForStoreErrorCode3@ha
 /* 8030B320 002D48E0  7F A3 EB 78 */	mr r3, r29
-/* 8030B324 002D48E4  38 84 B0 60 */	addi r4, r4, lbl_8030B060@l
-/* 8030B328 002D48E8  48 00 4D 79 */	bl func_803100A0
+/* 8030B324 002D48E4  38 84 B0 60 */	addi r4, r4, cbForStoreErrorCode3@l
+/* 8030B328 002D48E8  48 00 4D 79 */	bl __DVDStoreErrorCode
 /* 8030B32C 002D48EC  48 00 02 E8 */	b lbl_8030B614
 lbl_8030B330:
 /* 8030B330 002D48F0  28 1E 00 03 */	cmplwi r30, 3
@@ -814,8 +790,8 @@ lbl_8030B36C:
 /* 8030B3CC 002D498C  7F E3 FB 78 */	mr r3, r31
 /* 8030B3D0 002D4990  48 04 D6 21 */	bl OSRestoreInterrupts
 /* 8030B3D4 002D4994  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
-/* 8030B3D8 002D4998  3C 80 80 31 */	lis r4, lbl_8030B640@ha
-/* 8030B3DC 002D499C  38 84 B6 40 */	addi r4, r4, lbl_8030B640@l
+/* 8030B3D8 002D4998  3C 80 80 31 */	lis r4, cbForUnrecoveredError@ha
+/* 8030B3DC 002D499C  38 84 B6 40 */	addi r4, r4, cbForUnrecoveredError@l
 /* 8030B3E0 002D49A0  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8030B3E4 002D49A4  48 00 71 1D */	bl DVDLowSeek
 /* 8030B3E8 002D49A8  48 00 02 2C */	b lbl_8030B614
@@ -848,13 +824,13 @@ lbl_8030B400:
 /* 8030B44C 002D4A0C  3C A0 80 00 */	lis r5, 0x800000F8@ha
 /* 8030B450 002D4A10  3C 80 10 62 */	lis r4, 0x10624DD3@ha
 /* 8030B454 002D4A14  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
-/* 8030B458 002D4A18  3D 20 80 31 */	lis r9, lbl_8030D620@ha
+/* 8030B458 002D4A18  3D 20 80 31 */	lis r9, CoverAlarmHandler@ha
 /* 8030B45C 002D4A1C  7C 66 1B 78 */	mr r6, r3
 /* 8030B460 002D4A20  38 84 4D D3 */	addi r4, r4, 0x10624DD3@l
 /* 8030B464 002D4A24  54 00 F0 BE */	srwi r0, r0, 2
 /* 8030B468 002D4A28  38 7E C8 80 */	addi r3, r30, lbl_805CC880@l
 /* 8030B46C 002D4A2C  7C 04 00 16 */	mulhwu r0, r4, r0
-/* 8030B470 002D4A30  39 29 D6 20 */	addi r9, r9, lbl_8030D620@l
+/* 8030B470 002D4A30  39 29 D6 20 */	addi r9, r9, CoverAlarmHandler@l
 /* 8030B474 002D4A34  38 A0 00 00 */	li r5, 0
 /* 8030B478 002D4A38  38 E0 00 00 */	li r7, 0
 /* 8030B47C 002D4A3C  54 00 D1 BE */	srwi r0, r0, 6
@@ -868,7 +844,7 @@ lbl_8030B48C:
 /* 8030B498 002D4A58  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
 /* 8030B49C 002D4A5C  38 00 00 03 */	li r0, 3
 /* 8030B4A0 002D4A60  90 03 00 0C */	stw r0, 0xc(r3)
-/* 8030B4A4 002D4A64  48 00 16 6D */	bl func_8030CB10
+/* 8030B4A4 002D4A64  48 00 16 6D */	bl stateCoverClosed
 /* 8030B4A8 002D4A68  48 00 01 6C */	b lbl_8030B614
 lbl_8030B4AC:
 /* 8030B4AC 002D4A6C  3C 1C FD 00 */	addis r0, r28, 0xfd00
@@ -893,13 +869,13 @@ lbl_8030B4AC:
 /* 8030B4F8 002D4AB8  3C A0 80 00 */	lis r5, 0x800000F8@ha
 /* 8030B4FC 002D4ABC  3C 80 10 62 */	lis r4, 0x10624DD3@ha
 /* 8030B500 002D4AC0  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
-/* 8030B504 002D4AC4  3D 20 80 31 */	lis r9, lbl_8030D620@ha
+/* 8030B504 002D4AC4  3D 20 80 31 */	lis r9, CoverAlarmHandler@ha
 /* 8030B508 002D4AC8  7C 66 1B 78 */	mr r6, r3
 /* 8030B50C 002D4ACC  38 84 4D D3 */	addi r4, r4, 0x10624DD3@l
 /* 8030B510 002D4AD0  54 00 F0 BE */	srwi r0, r0, 2
 /* 8030B514 002D4AD4  38 7E C8 80 */	addi r3, r30, lbl_805CC880@l
 /* 8030B518 002D4AD8  7C 04 00 16 */	mulhwu r0, r4, r0
-/* 8030B51C 002D4ADC  39 29 D6 20 */	addi r9, r9, lbl_8030D620@l
+/* 8030B51C 002D4ADC  39 29 D6 20 */	addi r9, r9, CoverAlarmHandler@l
 /* 8030B520 002D4AE0  38 A0 00 00 */	li r5, 0
 /* 8030B524 002D4AE4  38 E0 00 00 */	li r7, 0
 /* 8030B528 002D4AE8  54 00 D1 BE */	srwi r0, r0, 6
@@ -946,9 +922,9 @@ lbl_8030B568:
 /* 8030B5C4 002D4B84  90 64 00 2C */	stw r3, 0x2c(r4)
 /* 8030B5C8 002D4B88  7F E3 FB 78 */	mr r3, r31
 /* 8030B5CC 002D4B8C  48 04 D4 25 */	bl OSRestoreInterrupts
-/* 8030B5D0 002D4B90  3C A0 80 31 */	lis r5, lbl_8030C7A0@ha
+/* 8030B5D0 002D4B90  3C A0 80 31 */	lis r5, cbForStateCheckID1@ha
 /* 8030B5D4 002D4B94  38 60 00 00 */	li r3, 0
-/* 8030B5D8 002D4B98  38 A5 C7 A0 */	addi r5, r5, lbl_8030C7A0@l
+/* 8030B5D8 002D4B98  38 A5 C7 A0 */	addi r5, r5, cbForStateCheckID1@l
 /* 8030B5DC 002D4B9C  38 80 00 00 */	li r4, 0
 /* 8030B5E0 002D4BA0  48 00 62 91 */	bl DVDLowStopMotor
 /* 8030B5E4 002D4BA4  48 00 00 30 */	b lbl_8030B614
@@ -957,14 +933,14 @@ lbl_8030B5E8:
 /* 8030B5EC 002D4BAC  3C 80 80 31 */	lis r4, cbForStoreErrorCode1@ha
 /* 8030B5F0 002D4BB0  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 8030B5F4 002D4BB4  38 84 AF 00 */	addi r4, r4, cbForStoreErrorCode1@l
-/* 8030B5F8 002D4BB8  48 00 4A A9 */	bl func_803100A0
+/* 8030B5F8 002D4BB8  48 00 4A A9 */	bl __DVDStoreErrorCode
 /* 8030B5FC 002D4BBC  48 00 00 18 */	b lbl_8030B614
 lbl_8030B600:
 /* 8030B600 002D4BC0  3C 60 01 23 */	lis r3, 0x01234567@ha
 /* 8030B604 002D4BC4  3C 80 80 31 */	lis r4, cbForStoreErrorCode1@ha
 /* 8030B608 002D4BC8  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 8030B60C 002D4BCC  38 84 AF 00 */	addi r4, r4, cbForStoreErrorCode1@l
-/* 8030B610 002D4BD0  48 00 4A 91 */	bl func_803100A0
+/* 8030B610 002D4BD0  48 00 4A 91 */	bl __DVDStoreErrorCode
 lbl_8030B614:
 /* 8030B614 002D4BD4  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8030B618 002D4BD8  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -974,10 +950,10 @@ lbl_8030B614:
 /* 8030B628 002D4BE8  7C 08 03 A6 */	mtlr r0
 /* 8030B62C 002D4BEC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030B630 002D4BF0  4E 80 00 20 */	blr 
-/* 8030B634 002D4BF4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030B638 002D4BF8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030B63C 002D4BFC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030B640:
+
+.balign 16, 0
+.global cbForUnrecoveredError
+cbForUnrecoveredError:
 /* 8030B640 002D4C00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030B644 002D4C04  7C 08 02 A6 */	mflr r0
 /* 8030B648 002D4C08  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1007,7 +983,7 @@ lbl_8030B690:
 /* 8030B6A0 002D4C60  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030B6A4 002D4C64  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030B6A8 002D4C68  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030B6AC 002D4C6C  48 00 49 F5 */	bl func_803100A0
+/* 8030B6AC 002D4C6C  48 00 49 F5 */	bl __DVDStoreErrorCode
 /* 8030B6B0 002D4C70  48 00 01 58 */	b lbl_8030B808
 lbl_8030B6B4:
 /* 8030B6B4 002D4C74  28 1E 00 20 */	cmplwi r30, 0x20
@@ -1016,7 +992,7 @@ lbl_8030B6B4:
 /* 8030B6C0 002D4C80  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030B6C4 002D4C84  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030B6C8 002D4C88  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030B6CC 002D4C8C  48 00 49 D5 */	bl func_803100A0
+/* 8030B6CC 002D4C8C  48 00 49 D5 */	bl __DVDStoreErrorCode
 /* 8030B6D0 002D4C90  48 00 01 38 */	b lbl_8030B808
 lbl_8030B6D4:
 /* 8030B6D4 002D4C94  57 C0 07 FF */	clrlwi. r0, r30, 0x1f
@@ -1055,9 +1031,9 @@ lbl_8030B6F8:
 /* 8030B754 002D4D14  90 64 00 2C */	stw r3, 0x2c(r4)
 /* 8030B758 002D4D18  7F E3 FB 78 */	mr r3, r31
 /* 8030B75C 002D4D1C  48 04 D2 95 */	bl OSRestoreInterrupts
-/* 8030B760 002D4D20  3C A0 80 31 */	lis r5, lbl_8030B900@ha
+/* 8030B760 002D4D20  3C A0 80 31 */	lis r5, cbForStateGoToRetry@ha
 /* 8030B764 002D4D24  38 60 00 00 */	li r3, 0
-/* 8030B768 002D4D28  38 A5 B9 00 */	addi r5, r5, lbl_8030B900@l
+/* 8030B768 002D4D28  38 A5 B9 00 */	addi r5, r5, cbForStateGoToRetry@l
 /* 8030B76C 002D4D2C  38 80 00 00 */	li r4, 0
 /* 8030B770 002D4D30  48 00 61 01 */	bl DVDLowStopMotor
 /* 8030B774 002D4D34  48 00 00 94 */	b lbl_8030B808
@@ -1096,8 +1072,8 @@ lbl_8030B794:
 /* 8030B7F0 002D4DB0  90 64 00 2C */	stw r3, 0x2c(r4)
 /* 8030B7F4 002D4DB4  7F E3 FB 78 */	mr r3, r31
 /* 8030B7F8 002D4DB8  48 04 D1 F9 */	bl OSRestoreInterrupts
-/* 8030B7FC 002D4DBC  3C 60 80 31 */	lis r3, func_8030B820@ha
-/* 8030B800 002D4DC0  38 63 B8 20 */	addi r3, r3, func_8030B820@l
+/* 8030B7FC 002D4DBC  3C 60 80 31 */	lis r3, cbForUnrecoveredErrorRetry@ha
+/* 8030B800 002D4DC0  38 63 B8 20 */	addi r3, r3, cbForUnrecoveredErrorRetry@l
 /* 8030B804 002D4DC4  48 00 63 7D */	bl DVDLowRequestError
 lbl_8030B808:
 /* 8030B808 002D4DC8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1107,8 +1083,8 @@ lbl_8030B808:
 /* 8030B818 002D4DD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030B81C 002D4DDC  4E 80 00 20 */	blr
 
-.global func_8030B820
-func_8030B820:
+.global cbForUnrecoveredErrorRetry
+cbForUnrecoveredErrorRetry:
 /* 8030B820 002D4DE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030B824 002D4DE4  7C 08 02 A6 */	mflr r0
 /* 8030B828 002D4DE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1137,7 +1113,7 @@ lbl_8030B86C:
 /* 8030B87C 002D4E3C  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030B880 002D4E40  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030B884 002D4E44  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030B888 002D4E48  48 00 48 19 */	bl func_803100A0
+/* 8030B888 002D4E48  48 00 48 19 */	bl __DVDStoreErrorCode
 /* 8030B88C 002D4E4C  48 00 00 54 */	b lbl_8030B8E0
 lbl_8030B890:
 /* 8030B890 002D4E50  28 1F 00 20 */	cmplwi r31, 0x20
@@ -1146,7 +1122,7 @@ lbl_8030B890:
 /* 8030B89C 002D4E5C  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030B8A0 002D4E60  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030B8A4 002D4E64  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030B8A8 002D4E68  48 00 47 F9 */	bl func_803100A0
+/* 8030B8A8 002D4E68  48 00 47 F9 */	bl __DVDStoreErrorCode
 /* 8030B8AC 002D4E6C  48 00 00 34 */	b lbl_8030B8E0
 lbl_8030B8B0:
 /* 8030B8B0 002D4E70  57 E0 07 BD */	rlwinm. r0, r31, 0, 0x1e, 0x1e
@@ -1155,23 +1131,23 @@ lbl_8030B8B0:
 /* 8030B8BC 002D4E7C  3C 80 80 31 */	lis r4, cbForStoreErrorCode1@ha
 /* 8030B8C0 002D4E80  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 8030B8C4 002D4E84  38 84 AF 00 */	addi r4, r4, cbForStoreErrorCode1@l
-/* 8030B8C8 002D4E88  48 00 47 D9 */	bl func_803100A0
+/* 8030B8C8 002D4E88  48 00 47 D9 */	bl __DVDStoreErrorCode
 /* 8030B8CC 002D4E8C  48 00 00 14 */	b lbl_8030B8E0
 lbl_8030B8D0:
 /* 8030B8D0 002D4E90  48 00 72 31 */	bl DVDLowGetImmBufferReg
 /* 8030B8D4 002D4E94  3C 80 80 31 */	lis r4, cbForStoreErrorCode1@ha
 /* 8030B8D8 002D4E98  38 84 AF 00 */	addi r4, r4, cbForStoreErrorCode1@l
-/* 8030B8DC 002D4E9C  48 00 47 C5 */	bl func_803100A0
+/* 8030B8DC 002D4E9C  48 00 47 C5 */	bl __DVDStoreErrorCode
 lbl_8030B8E0:
 /* 8030B8E0 002D4EA0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8030B8E4 002D4EA4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8030B8E8 002D4EA8  7C 08 03 A6 */	mtlr r0
 /* 8030B8EC 002D4EAC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030B8F0 002D4EB0  4E 80 00 20 */	blr 
-/* 8030B8F4 002D4EB4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030B8F8 002D4EB8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030B8FC 002D4EBC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030B900:
+
+.balign 16, 0
+.global cbForStateGoToRetry
+cbForStateGoToRetry:
 /* 8030B900 002D4EC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030B904 002D4EC4  7C 08 02 A6 */	mflr r0
 /* 8030B908 002D4EC8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1200,7 +1176,7 @@ lbl_8030B94C:
 /* 8030B95C 002D4F1C  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030B960 002D4F20  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030B964 002D4F24  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030B968 002D4F28  48 00 47 39 */	bl func_803100A0
+/* 8030B968 002D4F28  48 00 47 39 */	bl __DVDStoreErrorCode
 /* 8030B96C 002D4F2C  48 00 01 C0 */	b lbl_8030BB2C
 lbl_8030B970:
 /* 8030B970 002D4F30  28 1F 00 20 */	cmplwi r31, 0x20
@@ -1209,7 +1185,7 @@ lbl_8030B970:
 /* 8030B97C 002D4F3C  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030B980 002D4F40  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030B984 002D4F44  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030B988 002D4F48  48 00 47 19 */	bl func_803100A0
+/* 8030B988 002D4F48  48 00 47 19 */	bl __DVDStoreErrorCode
 /* 8030B98C 002D4F4C  48 00 01 A0 */	b lbl_8030BB2C
 lbl_8030B990:
 /* 8030B990 002D4F50  57 E0 07 BD */	rlwinm. r0, r31, 0, 0x1e, 0x1e
@@ -1218,7 +1194,7 @@ lbl_8030B990:
 /* 8030B99C 002D4F5C  3C 80 80 31 */	lis r4, cbForStoreErrorCode1@ha
 /* 8030B9A0 002D4F60  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 8030B9A4 002D4F64  38 84 AF 00 */	addi r4, r4, cbForStoreErrorCode1@l
-/* 8030B9A8 002D4F68  48 00 46 F9 */	bl func_803100A0
+/* 8030B9A8 002D4F68  48 00 46 F9 */	bl __DVDStoreErrorCode
 /* 8030B9AC 002D4F6C  48 00 01 80 */	b lbl_8030BB2C
 lbl_8030B9B0:
 /* 8030B9B0 002D4F70  38 00 00 00 */	li r0, 0
@@ -1283,7 +1259,7 @@ lbl_8030BA7C:
 /* 8030BA90 002D5050  7D 89 03 A6 */	mtctr r12
 /* 8030BA94 002D5054  4E 80 04 21 */	bctrl 
 lbl_8030BA98:
-/* 8030BA98 002D5058  48 00 1B B9 */	bl func_8030D650
+/* 8030BA98 002D5058  48 00 1B B9 */	bl stateReady
 /* 8030BA9C 002D505C  38 00 00 01 */	li r0, 1
 /* 8030BAA0 002D5060  48 00 00 08 */	b lbl_8030BAA8
 lbl_8030BAA4:
@@ -1310,13 +1286,13 @@ lbl_8030BAA8:
 /* 8030BAF0 002D50B0  3C A0 80 00 */	lis r5, 0x800000F8@ha
 /* 8030BAF4 002D50B4  3C 80 10 62 */	lis r4, 0x10624DD3@ha
 /* 8030BAF8 002D50B8  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
-/* 8030BAFC 002D50BC  3D 20 80 31 */	lis r9, lbl_8030D620@ha
+/* 8030BAFC 002D50BC  3D 20 80 31 */	lis r9, CoverAlarmHandler@ha
 /* 8030BB00 002D50C0  7C 66 1B 78 */	mr r6, r3
 /* 8030BB04 002D50C4  38 84 4D D3 */	addi r4, r4, 0x10624DD3@l
 /* 8030BB08 002D50C8  54 00 F0 BE */	srwi r0, r0, 2
 /* 8030BB0C 002D50CC  38 7F C8 80 */	addi r3, r31, lbl_805CC880@l
 /* 8030BB10 002D50D0  7C 04 00 16 */	mulhwu r0, r4, r0
-/* 8030BB14 002D50D4  39 29 D6 20 */	addi r9, r9, lbl_8030D620@l
+/* 8030BB14 002D50D4  39 29 D6 20 */	addi r9, r9, CoverAlarmHandler@l
 /* 8030BB18 002D50D8  38 A0 00 00 */	li r5, 0
 /* 8030BB1C 002D50DC  38 E0 00 00 */	li r7, 0
 /* 8030BB20 002D50E0  54 00 D1 BE */	srwi r0, r0, 6
@@ -1329,8 +1305,8 @@ lbl_8030BB2C:
 /* 8030BB38 002D50F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030BB3C 002D50FC  4E 80 00 20 */	blr 
 
-.global func_8030BB40
-func_8030BB40:
+.global stateCheckID
+stateCheckID:
 /* 8030BB40 002D5100  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030BB44 002D5104  7C 08 02 A6 */	mflr r0
 /* 8030BB48 002D5108  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1349,7 +1325,7 @@ lbl_8030BB70:
 /* 8030BB78 002D5138  80 8D B6 F0 */	lwz r4, lbl_80667870@sda21(r13)
 /* 8030BB7C 002D513C  38 7E 4B C0 */	addi r3, r30, 0x4bc0
 /* 8030BB80 002D5140  80 84 00 24 */	lwz r4, 0x24(r4)
-/* 8030BB84 002D5144  48 00 45 8D */	bl func_80310110
+/* 8030BB84 002D5144  48 00 45 8D */	bl DVDCompareDiskID
 /* 8030BB88 002D5148  2C 03 00 00 */	cmpwi r3, 0
 /* 8030BB8C 002D514C  41 82 00 D8 */	beq lbl_8030BC64
 /* 8030BB90 002D5150  80 6D B6 EC */	lwz r3, lbl_8066786C@sda21(r13)
@@ -1399,9 +1375,9 @@ lbl_8030BBDC:
 /* 8030BC3C 002D51FC  90 64 00 2C */	stw r3, 0x2c(r4)
 /* 8030BC40 002D5200  7F A3 EB 78 */	mr r3, r29
 /* 8030BC44 002D5204  48 04 CD AD */	bl OSRestoreInterrupts
-/* 8030BC48 002D5208  3C C0 80 31 */	lis r6, lbl_8030BE80@ha
+/* 8030BC48 002D5208  3C C0 80 31 */	lis r6, cbForStateReadingTOC@ha
 /* 8030BC4C 002D520C  38 7E 4B E0 */	addi r3, r30, 0x4be0
-/* 8030BC50 002D5210  38 C6 BE 80 */	addi r6, r6, lbl_8030BE80@l
+/* 8030BC50 002D5210  38 C6 BE 80 */	addi r6, r6, cbForStateReadingTOC@l
 /* 8030BC54 002D5214  38 80 00 20 */	li r4, 0x20
 /* 8030BC58 002D5218  3C A0 00 01 */	lis r5, 1
 /* 8030BC5C 002D521C  48 00 5A 75 */	bl DVDLowUnencryptedRead
@@ -1440,9 +1416,9 @@ lbl_8030BC7C:
 /* 8030BCD8 002D5298  90 64 00 2C */	stw r3, 0x2c(r4)
 /* 8030BCDC 002D529C  7F A3 EB 78 */	mr r3, r29
 /* 8030BCE0 002D52A0  48 04 CD 11 */	bl OSRestoreInterrupts
-/* 8030BCE4 002D52A4  3C A0 80 31 */	lis r5, lbl_8030C7A0@ha
+/* 8030BCE4 002D52A4  3C A0 80 31 */	lis r5, cbForStateCheckID1@ha
 /* 8030BCE8 002D52A8  38 60 00 00 */	li r3, 0
-/* 8030BCEC 002D52AC  38 A5 C7 A0 */	addi r5, r5, lbl_8030C7A0@l
+/* 8030BCEC 002D52AC  38 A5 C7 A0 */	addi r5, r5, cbForStateCheckID1@l
 /* 8030BCF0 002D52B0  38 80 00 00 */	li r4, 0
 /* 8030BCF4 002D52B4  48 00 5B 7D */	bl DVDLowStopMotor
 /* 8030BCF8 002D52B8  48 00 01 64 */	b lbl_8030BE5C
@@ -1487,9 +1463,9 @@ lbl_8030BD30:
 /* 8030BD8C 002D534C  90 64 00 2C */	stw r3, 0x2c(r4)
 /* 8030BD90 002D5350  7F A3 EB 78 */	mr r3, r29
 /* 8030BD94 002D5354  48 04 CC 5D */	bl OSRestoreInterrupts
-/* 8030BD98 002D5358  3C A0 80 31 */	lis r5, lbl_8030C7A0@ha
+/* 8030BD98 002D5358  3C A0 80 31 */	lis r5, cbForStateCheckID1@ha
 /* 8030BD9C 002D535C  38 60 00 00 */	li r3, 0
-/* 8030BDA0 002D5360  38 A5 C7 A0 */	addi r5, r5, lbl_8030C7A0@l
+/* 8030BDA0 002D5360  38 A5 C7 A0 */	addi r5, r5, cbForStateCheckID1@l
 /* 8030BDA4 002D5364  38 80 00 00 */	li r4, 0
 /* 8030BDA8 002D5368  48 00 5A C9 */	bl DVDLowStopMotor
 /* 8030BDAC 002D536C  48 00 00 B0 */	b lbl_8030BE5C
@@ -1532,9 +1508,9 @@ lbl_8030BDD8:
 /* 8030BE38 002D53F8  90 64 00 2C */	stw r3, 0x2c(r4)
 /* 8030BE3C 002D53FC  7F A3 EB 78 */	mr r3, r29
 /* 8030BE40 002D5400  48 04 CB B1 */	bl OSRestoreInterrupts
-/* 8030BE44 002D5404  3C C0 80 31 */	lis r6, lbl_8030BE80@ha
+/* 8030BE44 002D5404  3C C0 80 31 */	lis r6, cbForStateReadingTOC@ha
 /* 8030BE48 002D5408  38 7E 4B E0 */	addi r3, r30, 0x4be0
-/* 8030BE4C 002D540C  38 C6 BE 80 */	addi r6, r6, lbl_8030BE80@l
+/* 8030BE4C 002D540C  38 C6 BE 80 */	addi r6, r6, cbForStateReadingTOC@l
 /* 8030BE50 002D5410  38 80 00 20 */	li r4, 0x20
 /* 8030BE54 002D5414  3C A0 00 01 */	lis r5, 1
 /* 8030BE58 002D5418  48 00 58 79 */	bl DVDLowUnencryptedRead
@@ -1546,9 +1522,8 @@ lbl_8030BE5C:
 /* 8030BE6C 002D542C  7C 08 03 A6 */	mtlr r0
 /* 8030BE70 002D5430  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030BE74 002D5434  4E 80 00 20 */	blr 
-/* 8030BE78 002D5438  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030BE7C 002D543C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030BE80:
+.balign 16, 0
+cbForStateReadingTOC:
 /* 8030BE80 002D5440  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030BE84 002D5444  7C 08 02 A6 */	mflr r0
 /* 8030BE88 002D5448  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1580,7 +1555,7 @@ lbl_8030BED8:
 /* 8030BEE8 002D54A8  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030BEEC 002D54AC  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030BEF0 002D54B0  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030BEF4 002D54B4  48 00 41 AD */	bl func_803100A0
+/* 8030BEF4 002D54B4  48 00 41 AD */	bl __DVDStoreErrorCode
 /* 8030BEF8 002D54B8  48 00 01 0C */	b lbl_8030C004
 lbl_8030BEFC:
 /* 8030BEFC 002D54BC  28 1D 00 20 */	cmplwi r29, 0x20
@@ -1589,7 +1564,7 @@ lbl_8030BEFC:
 /* 8030BF08 002D54C8  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030BF0C 002D54CC  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030BF10 002D54D0  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030BF14 002D54D4  48 00 41 8D */	bl func_803100A0
+/* 8030BF14 002D54D4  48 00 41 8D */	bl __DVDStoreErrorCode
 /* 8030BF18 002D54D8  48 00 00 EC */	b lbl_8030C004
 lbl_8030BF1C:
 /* 8030BF1C 002D54DC  57 A0 07 FF */	clrlwi. r0, r29, 0x1f
@@ -1637,11 +1612,11 @@ lbl_8030BF58:
 /* 8030BFC0 002D5580  7F C3 F3 78 */	mr r3, r30
 /* 8030BFC4 002D5584  48 04 CA 2D */	bl OSRestoreInterrupts
 /* 8030BFC8 002D5588  3C 60 80 5D */	lis r3, lbl_805CC900@ha
-/* 8030BFCC 002D558C  3C C0 80 31 */	lis r6, func_8030C020@ha
+/* 8030BFCC 002D558C  3C C0 80 31 */	lis r6, cbForStateReadingPartitionInfo@ha
 /* 8030BFD0 002D5590  38 BD 00 08 */	addi r5, r29, 8
 /* 8030BFD4 002D5594  38 80 00 20 */	li r4, 0x20
 /* 8030BFD8 002D5598  38 63 C9 00 */	addi r3, r3, lbl_805CC900@l
-/* 8030BFDC 002D559C  38 C6 C0 20 */	addi r6, r6, func_8030C020@l
+/* 8030BFDC 002D559C  38 C6 C0 20 */	addi r6, r6, cbForStateReadingPartitionInfo@l
 /* 8030BFE0 002D55A0  48 00 56 F1 */	bl DVDLowUnencryptedRead
 /* 8030BFE4 002D55A4  48 00 00 20 */	b lbl_8030C004
 lbl_8030BFE8:
@@ -1649,8 +1624,8 @@ lbl_8030BFE8:
 /* 8030BFEC 002D55AC  38 80 00 00 */	li r4, 0
 /* 8030BFF0 002D55B0  38 A0 00 00 */	li r5, 0
 /* 8030BFF4 002D55B4  4B FF E8 AD */	bl StampCommand
-/* 8030BFF8 002D55B8  3C 60 80 31 */	lis r3, lbl_8030B130@ha
-/* 8030BFFC 002D55BC  38 63 B1 30 */	addi r3, r3, lbl_8030B130@l
+/* 8030BFF8 002D55B8  3C 60 80 31 */	lis r3, cbForStateGettingError@ha
+/* 8030BFFC 002D55BC  38 63 B1 30 */	addi r3, r3, cbForStateGettingError@l
 /* 8030C000 002D55C0  48 00 5B 81 */	bl DVDLowRequestError
 lbl_8030C004:
 /* 8030C004 002D55C4  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -1661,8 +1636,8 @@ lbl_8030C004:
 /* 8030C018 002D55D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030C01C 002D55DC  4E 80 00 20 */	blr
 
-.global func_8030C020
-func_8030C020:
+.global cbForStateReadingPartitionInfo
+cbForStateReadingPartitionInfo:
 /* 8030C020 002D55E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030C024 002D55E4  7C 08 02 A6 */	mflr r0
 /* 8030C028 002D55E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1697,7 +1672,7 @@ lbl_8030C084:
 /* 8030C094 002D5654  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030C098 002D5658  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030C09C 002D565C  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030C0A0 002D5660  48 00 40 01 */	bl func_803100A0
+/* 8030C0A0 002D5660  48 00 40 01 */	bl __DVDStoreErrorCode
 /* 8030C0A4 002D5664  48 00 03 D8 */	b lbl_8030C47C
 lbl_8030C0A8:
 /* 8030C0A8 002D5668  28 1C 00 20 */	cmplwi r28, 0x20
@@ -1706,7 +1681,7 @@ lbl_8030C0A8:
 /* 8030C0B4 002D5674  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030C0B8 002D5678  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030C0BC 002D567C  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030C0C0 002D5680  48 00 3F E1 */	bl func_803100A0
+/* 8030C0C0 002D5680  48 00 3F E1 */	bl __DVDStoreErrorCode
 /* 8030C0C4 002D5684  48 00 03 B8 */	b lbl_8030C47C
 lbl_8030C0C8:
 /* 8030C0C8 002D5688  57 80 07 FF */	clrlwi. r0, r28, 0x1f
@@ -1800,23 +1775,23 @@ lbl_8030C19C:
 /* 8030C20C 002D57CC  28 00 00 80 */	cmplwi r0, 0x80
 /* 8030C210 002D57D0  40 82 00 30 */	bne lbl_8030C240
 /* 8030C214 002D57D4  80 6D B6 A8 */	lwz r3, lbl_80667828@sda21(r13)
-/* 8030C218 002D57D8  3D 20 80 31 */	lis r9, lbl_8030C4A0@ha
+/* 8030C218 002D57D8  3D 20 80 31 */	lis r9, cbForStateOpenPartition@ha
 /* 8030C21C 002D57DC  80 AD B6 C0 */	lwz r5, lbl_80667840@sda21(r13)
 /* 8030C220 002D57E0  38 9F 00 00 */	addi r4, r31, 0
 /* 8030C224 002D57E4  80 63 00 00 */	lwz r3, 0(r3)
 /* 8030C228 002D57E8  38 DF 01 00 */	addi r6, r31, 0x100
-/* 8030C22C 002D57EC  39 29 C4 A0 */	addi r9, r9, lbl_8030C4A0@l
+/* 8030C22C 002D57EC  39 29 C4 A0 */	addi r9, r9, cbForStateOpenPartition@l
 /* 8030C230 002D57F0  38 E0 00 00 */	li r7, 0
 /* 8030C234 002D57F4  39 00 00 00 */	li r8, 0
 /* 8030C238 002D57F8  48 00 4C 09 */	bl DVDLowOpenPartitionWithTmdAndTicketView
 /* 8030C23C 002D57FC  48 00 02 40 */	b lbl_8030C47C
 lbl_8030C240:
 /* 8030C240 002D5800  80 6D B6 A8 */	lwz r3, lbl_80667828@sda21(r13)
-/* 8030C244 002D5804  3D 00 80 31 */	lis r8, lbl_8030C4A0@ha
+/* 8030C244 002D5804  3D 00 80 31 */	lis r8, cbForStateOpenPartition@ha
 /* 8030C248 002D5808  38 FF 01 00 */	addi r7, r31, 0x100
 /* 8030C24C 002D580C  38 80 00 00 */	li r4, 0
 /* 8030C250 002D5810  80 63 00 00 */	lwz r3, 0(r3)
-/* 8030C254 002D5814  39 08 C4 A0 */	addi r8, r8, lbl_8030C4A0@l
+/* 8030C254 002D5814  39 08 C4 A0 */	addi r8, r8, cbForStateOpenPartition@l
 /* 8030C258 002D5818  38 A0 00 00 */	li r5, 0
 /* 8030C25C 002D581C  38 C0 00 00 */	li r6, 0
 /* 8030C260 002D5820  48 00 49 71 */	bl DVDLowOpenPartition
@@ -1866,23 +1841,23 @@ lbl_8030C298:
 /* 8030C308 002D58C8  28 00 00 80 */	cmplwi r0, 0x80
 /* 8030C30C 002D58CC  40 82 00 30 */	bne lbl_8030C33C
 /* 8030C310 002D58D0  80 6D B6 A8 */	lwz r3, lbl_80667828@sda21(r13)
-/* 8030C314 002D58D4  3D 20 80 31 */	lis r9, lbl_8030C630@ha
+/* 8030C314 002D58D4  3D 20 80 31 */	lis r9, cbForStateOpenPartition2@ha
 /* 8030C318 002D58D8  80 AD B6 C0 */	lwz r5, lbl_80667840@sda21(r13)
 /* 8030C31C 002D58DC  38 9F 00 00 */	addi r4, r31, 0
 /* 8030C320 002D58E0  80 63 00 00 */	lwz r3, 0(r3)
 /* 8030C324 002D58E4  38 DF 01 00 */	addi r6, r31, 0x100
-/* 8030C328 002D58E8  39 29 C6 30 */	addi r9, r9, lbl_8030C630@l
+/* 8030C328 002D58E8  39 29 C6 30 */	addi r9, r9, cbForStateOpenPartition2@l
 /* 8030C32C 002D58EC  38 E0 00 00 */	li r7, 0
 /* 8030C330 002D58F0  39 00 00 00 */	li r8, 0
 /* 8030C334 002D58F4  48 00 4B 0D */	bl DVDLowOpenPartitionWithTmdAndTicketView
 /* 8030C338 002D58F8  48 00 01 44 */	b lbl_8030C47C
 lbl_8030C33C:
 /* 8030C33C 002D58FC  80 6D B6 A8 */	lwz r3, lbl_80667828@sda21(r13)
-/* 8030C340 002D5900  3D 00 80 31 */	lis r8, lbl_8030C630@ha
+/* 8030C340 002D5900  3D 00 80 31 */	lis r8, cbForStateOpenPartition2@ha
 /* 8030C344 002D5904  38 FF 01 00 */	addi r7, r31, 0x100
 /* 8030C348 002D5908  38 80 00 00 */	li r4, 0
 /* 8030C34C 002D590C  80 63 00 00 */	lwz r3, 0(r3)
-/* 8030C350 002D5910  39 08 C6 30 */	addi r8, r8, lbl_8030C630@l
+/* 8030C350 002D5910  39 08 C6 30 */	addi r8, r8, cbForStateOpenPartition2@l
 /* 8030C354 002D5914  38 A0 00 00 */	li r5, 0
 /* 8030C358 002D5918  38 C0 00 00 */	li r6, 0
 /* 8030C35C 002D591C  48 00 48 75 */	bl DVDLowOpenPartition
@@ -1916,7 +1891,7 @@ lbl_8030C3B0:
 /* 8030C3C4 002D5984  7D 89 03 A6 */	mtctr r12
 /* 8030C3C8 002D5988  4E 80 04 21 */	bctrl 
 lbl_8030C3CC:
-/* 8030C3CC 002D598C  48 00 12 85 */	bl func_8030D650
+/* 8030C3CC 002D598C  48 00 12 85 */	bl stateReady
 /* 8030C3D0 002D5990  38 00 00 01 */	li r0, 1
 /* 8030C3D4 002D5994  48 00 00 08 */	b lbl_8030C3DC
 lbl_8030C3D8:
@@ -1942,13 +1917,13 @@ lbl_8030C3DC:
 /* 8030C420 002D59E0  3C A0 80 00 */	lis r5, 0x800000F8@ha
 /* 8030C424 002D59E4  3C 80 10 62 */	lis r4, 0x10624DD3@ha
 /* 8030C428 002D59E8  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
-/* 8030C42C 002D59EC  3D 20 80 31 */	lis r9, lbl_8030D620@ha
+/* 8030C42C 002D59EC  3D 20 80 31 */	lis r9, CoverAlarmHandler@ha
 /* 8030C430 002D59F0  7C 66 1B 78 */	mr r6, r3
 /* 8030C434 002D59F4  38 84 4D D3 */	addi r4, r4, 0x10624DD3@l
 /* 8030C438 002D59F8  54 00 F0 BE */	srwi r0, r0, 2
 /* 8030C43C 002D59FC  38 7F 4B 80 */	addi r3, r31, 0x4b80
 /* 8030C440 002D5A00  7C 04 00 16 */	mulhwu r0, r4, r0
-/* 8030C444 002D5A04  39 29 D6 20 */	addi r9, r9, lbl_8030D620@l
+/* 8030C444 002D5A04  39 29 D6 20 */	addi r9, r9, CoverAlarmHandler@l
 /* 8030C448 002D5A08  38 A0 00 00 */	li r5, 0
 /* 8030C44C 002D5A0C  38 E0 00 00 */	li r7, 0
 /* 8030C450 002D5A10  54 00 D1 BE */	srwi r0, r0, 6
@@ -1960,8 +1935,8 @@ lbl_8030C460:
 /* 8030C464 002D5A24  38 80 00 00 */	li r4, 0
 /* 8030C468 002D5A28  38 A0 00 00 */	li r5, 0
 /* 8030C46C 002D5A2C  4B FF E4 35 */	bl StampCommand
-/* 8030C470 002D5A30  3C 60 80 31 */	lis r3, lbl_8030B130@ha
-/* 8030C474 002D5A34  38 63 B1 30 */	addi r3, r3, lbl_8030B130@l
+/* 8030C470 002D5A30  3C 60 80 31 */	lis r3, cbForStateGettingError@ha
+/* 8030C474 002D5A34  38 63 B1 30 */	addi r3, r3, cbForStateGettingError@l
 /* 8030C478 002D5A38  48 00 57 09 */	bl DVDLowRequestError
 lbl_8030C47C:
 /* 8030C47C 002D5A3C  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -1972,8 +1947,8 @@ lbl_8030C47C:
 /* 8030C490 002D5A50  7C 08 03 A6 */	mtlr r0
 /* 8030C494 002D5A54  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030C498 002D5A58  4E 80 00 20 */	blr 
-/* 8030C49C 002D5A5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030C4A0:
+.balign 16, 0
+cbForStateOpenPartition:
 /* 8030C4A0 002D5A60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030C4A4 002D5A64  7C 08 02 A6 */	mflr r0
 /* 8030C4A8 002D5A68  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2004,7 +1979,7 @@ lbl_8030C4F4:
 /* 8030C504 002D5AC4  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030C508 002D5AC8  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030C50C 002D5ACC  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030C510 002D5AD0  48 00 3B 91 */	bl func_803100A0
+/* 8030C510 002D5AD0  48 00 3B 91 */	bl __DVDStoreErrorCode
 /* 8030C514 002D5AD4  48 00 00 FC */	b lbl_8030C610
 lbl_8030C518:
 /* 8030C518 002D5AD8  28 1E 00 20 */	cmplwi r30, 0x20
@@ -2013,7 +1988,7 @@ lbl_8030C518:
 /* 8030C524 002D5AE4  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030C528 002D5AE8  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030C52C 002D5AEC  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030C530 002D5AF0  48 00 3B 71 */	bl func_803100A0
+/* 8030C530 002D5AF0  48 00 3B 71 */	bl __DVDStoreErrorCode
 /* 8030C534 002D5AF4  48 00 00 DC */	b lbl_8030C610
 lbl_8030C538:
 /* 8030C538 002D5AF8  57 C0 07 FF */	clrlwi. r0, r30, 0x1f
@@ -2057,10 +2032,10 @@ lbl_8030C568:
 /* 8030C5CC 002D5B8C  7F E3 FB 78 */	mr r3, r31
 /* 8030C5D0 002D5B90  48 04 C4 21 */	bl OSRestoreInterrupts
 /* 8030C5D4 002D5B94  3C 60 80 5D */	lis r3, lbl_805CC800@ha
-/* 8030C5D8 002D5B98  3C C0 80 31 */	lis r6, lbl_8030C970@ha
+/* 8030C5D8 002D5B98  3C C0 80 31 */	lis r6, cbForStateCheckID2@ha
 /* 8030C5DC 002D5B9C  38 63 C8 00 */	addi r3, r3, lbl_805CC800@l
 /* 8030C5E0 002D5BA0  38 80 00 20 */	li r4, 0x20
-/* 8030C5E4 002D5BA4  38 C6 C9 70 */	addi r6, r6, lbl_8030C970@l
+/* 8030C5E4 002D5BA4  38 C6 C9 70 */	addi r6, r6, cbForStateCheckID2@l
 /* 8030C5E8 002D5BA8  38 A0 01 08 */	li r5, 0x108
 /* 8030C5EC 002D5BAC  48 00 5D 65 */	bl DVDLowRead
 /* 8030C5F0 002D5BB0  48 00 00 20 */	b lbl_8030C610
@@ -2069,8 +2044,8 @@ lbl_8030C5F4:
 /* 8030C5F8 002D5BB8  38 80 00 00 */	li r4, 0
 /* 8030C5FC 002D5BBC  38 A0 00 00 */	li r5, 0
 /* 8030C600 002D5BC0  4B FF E2 A1 */	bl StampCommand
-/* 8030C604 002D5BC4  3C 60 80 31 */	lis r3, lbl_8030B130@ha
-/* 8030C608 002D5BC8  38 63 B1 30 */	addi r3, r3, lbl_8030B130@l
+/* 8030C604 002D5BC4  3C 60 80 31 */	lis r3, cbForStateGettingError@ha
+/* 8030C608 002D5BC8  38 63 B1 30 */	addi r3, r3, cbForStateGettingError@l
 /* 8030C60C 002D5BCC  48 00 55 75 */	bl DVDLowRequestError
 lbl_8030C610:
 /* 8030C610 002D5BD0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2079,9 +2054,8 @@ lbl_8030C610:
 /* 8030C61C 002D5BDC  7C 08 03 A6 */	mtlr r0
 /* 8030C620 002D5BE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030C624 002D5BE4  4E 80 00 20 */	blr 
-/* 8030C628 002D5BE8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030C62C 002D5BEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030C630:
+.balign 16, 0
+cbForStateOpenPartition2:
 /* 8030C630 002D5BF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030C634 002D5BF4  7C 08 02 A6 */	mflr r0
 /* 8030C638 002D5BF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2110,7 +2084,7 @@ lbl_8030C67C:
 /* 8030C68C 002D5C4C  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030C690 002D5C50  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030C694 002D5C54  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030C698 002D5C58  48 00 3A 09 */	bl func_803100A0
+/* 8030C698 002D5C58  48 00 3A 09 */	bl __DVDStoreErrorCode
 /* 8030C69C 002D5C5C  48 00 00 E4 */	b lbl_8030C780
 lbl_8030C6A0:
 /* 8030C6A0 002D5C60  28 1F 00 20 */	cmplwi r31, 0x20
@@ -2119,7 +2093,7 @@ lbl_8030C6A0:
 /* 8030C6AC 002D5C6C  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030C6B0 002D5C70  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030C6B4 002D5C74  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030C6B8 002D5C78  48 00 39 E9 */	bl func_803100A0
+/* 8030C6B8 002D5C78  48 00 39 E9 */	bl __DVDStoreErrorCode
 /* 8030C6BC 002D5C7C  48 00 00 C4 */	b lbl_8030C780
 lbl_8030C6C0:
 /* 8030C6C0 002D5C80  57 E0 07 FF */	clrlwi. r0, r31, 0x1f
@@ -2153,7 +2127,7 @@ lbl_8030C718:
 /* 8030C72C 002D5CEC  7D 89 03 A6 */	mtctr r12
 /* 8030C730 002D5CF0  4E 80 04 21 */	bctrl 
 lbl_8030C734:
-/* 8030C734 002D5CF4  48 00 0F 1D */	bl func_8030D650
+/* 8030C734 002D5CF4  48 00 0F 1D */	bl stateReady
 /* 8030C738 002D5CF8  38 00 00 01 */	li r0, 1
 /* 8030C73C 002D5CFC  48 00 00 08 */	b lbl_8030C744
 lbl_8030C740:
@@ -2165,15 +2139,15 @@ lbl_8030C744:
 /* 8030C750 002D5D10  38 00 00 01 */	li r0, 1
 /* 8030C754 002D5D14  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8030C758 002D5D18  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
-/* 8030C75C 002D5D1C  48 00 12 15 */	bl func_8030D970
+/* 8030C75C 002D5D1C  48 00 12 15 */	bl stateBusy
 /* 8030C760 002D5D20  48 00 00 20 */	b lbl_8030C780
 lbl_8030C764:
 /* 8030C764 002D5D24  38 60 00 27 */	li r3, 0x27
 /* 8030C768 002D5D28  38 80 00 00 */	li r4, 0
 /* 8030C76C 002D5D2C  38 A0 00 00 */	li r5, 0
 /* 8030C770 002D5D30  4B FF E1 31 */	bl StampCommand
-/* 8030C774 002D5D34  3C 60 80 31 */	lis r3, lbl_8030B130@ha
-/* 8030C778 002D5D38  38 63 B1 30 */	addi r3, r3, lbl_8030B130@l
+/* 8030C774 002D5D34  3C 60 80 31 */	lis r3, cbForStateGettingError@ha
+/* 8030C778 002D5D38  38 63 B1 30 */	addi r3, r3, cbForStateGettingError@l
 /* 8030C77C 002D5D3C  48 00 54 05 */	bl DVDLowRequestError
 lbl_8030C780:
 /* 8030C780 002D5D40  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2181,10 +2155,10 @@ lbl_8030C780:
 /* 8030C788 002D5D48  7C 08 03 A6 */	mtlr r0
 /* 8030C78C 002D5D4C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030C790 002D5D50  4E 80 00 20 */	blr 
-/* 8030C794 002D5D54  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030C798 002D5D58  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030C79C 002D5D5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030C7A0:
+
+.balign 16, 0
+.global cbForStateCheckID1
+cbForStateCheckID1:
 /* 8030C7A0 002D5D60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030C7A4 002D5D64  7C 08 02 A6 */	mflr r0
 /* 8030C7A8 002D5D68  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2213,7 +2187,7 @@ lbl_8030C7EC:
 /* 8030C7FC 002D5DBC  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030C800 002D5DC0  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030C804 002D5DC4  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030C808 002D5DC8  48 00 38 99 */	bl func_803100A0
+/* 8030C808 002D5DC8  48 00 38 99 */	bl __DVDStoreErrorCode
 /* 8030C80C 002D5DCC  48 00 01 48 */	b lbl_8030C954
 lbl_8030C810:
 /* 8030C810 002D5DD0  28 1F 00 20 */	cmplwi r31, 0x20
@@ -2222,7 +2196,7 @@ lbl_8030C810:
 /* 8030C81C 002D5DDC  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030C820 002D5DE0  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030C824 002D5DE4  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030C828 002D5DE8  48 00 38 79 */	bl func_803100A0
+/* 8030C828 002D5DE8  48 00 38 79 */	bl __DVDStoreErrorCode
 /* 8030C82C 002D5DEC  48 00 01 28 */	b lbl_8030C954
 lbl_8030C830:
 /* 8030C830 002D5DF0  57 E0 07 BD */	rlwinm. r0, r31, 0, 0x1e, 0x1e
@@ -2231,7 +2205,7 @@ lbl_8030C830:
 /* 8030C83C 002D5DFC  3C 80 80 31 */	lis r4, cbForStoreErrorCode1@ha
 /* 8030C840 002D5E00  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 8030C844 002D5E04  38 84 AF 00 */	addi r4, r4, cbForStoreErrorCode1@l
-/* 8030C848 002D5E08  48 00 38 59 */	bl func_803100A0
+/* 8030C848 002D5E08  48 00 38 59 */	bl __DVDStoreErrorCode
 /* 8030C84C 002D5E0C  48 00 01 08 */	b lbl_8030C954
 lbl_8030C850:
 /* 8030C850 002D5E10  38 80 00 00 */	li r4, 0
@@ -2264,7 +2238,7 @@ lbl_8030C8A4:
 /* 8030C8B8 002D5E78  7D 89 03 A6 */	mtctr r12
 /* 8030C8BC 002D5E7C  4E 80 04 21 */	bctrl 
 lbl_8030C8C0:
-/* 8030C8C0 002D5E80  48 00 0D 91 */	bl func_8030D650
+/* 8030C8C0 002D5E80  48 00 0D 91 */	bl stateReady
 /* 8030C8C4 002D5E84  38 00 00 01 */	li r0, 1
 /* 8030C8C8 002D5E88  48 00 00 08 */	b lbl_8030C8D0
 lbl_8030C8CC:
@@ -2291,13 +2265,13 @@ lbl_8030C8D0:
 /* 8030C918 002D5ED8  3C A0 80 00 */	lis r5, 0x800000F8@ha
 /* 8030C91C 002D5EDC  3C 80 10 62 */	lis r4, 0x10624DD3@ha
 /* 8030C920 002D5EE0  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
-/* 8030C924 002D5EE4  3D 20 80 31 */	lis r9, lbl_8030D620@ha
+/* 8030C924 002D5EE4  3D 20 80 31 */	lis r9, CoverAlarmHandler@ha
 /* 8030C928 002D5EE8  7C 66 1B 78 */	mr r6, r3
 /* 8030C92C 002D5EEC  38 84 4D D3 */	addi r4, r4, 0x10624DD3@l
 /* 8030C930 002D5EF0  54 00 F0 BE */	srwi r0, r0, 2
 /* 8030C934 002D5EF4  38 7F C8 80 */	addi r3, r31, lbl_805CC880@l
 /* 8030C938 002D5EF8  7C 04 00 16 */	mulhwu r0, r4, r0
-/* 8030C93C 002D5EFC  39 29 D6 20 */	addi r9, r9, lbl_8030D620@l
+/* 8030C93C 002D5EFC  39 29 D6 20 */	addi r9, r9, CoverAlarmHandler@l
 /* 8030C940 002D5F00  38 A0 00 00 */	li r5, 0
 /* 8030C944 002D5F04  38 E0 00 00 */	li r7, 0
 /* 8030C948 002D5F08  54 00 D1 BE */	srwi r0, r0, 6
@@ -2309,9 +2283,10 @@ lbl_8030C954:
 /* 8030C95C 002D5F1C  7C 08 03 A6 */	mtlr r0
 /* 8030C960 002D5F20  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030C964 002D5F24  4E 80 00 20 */	blr 
-/* 8030C968 002D5F28  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030C96C 002D5F2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030C970:
+
+.balign 16, 0
+.global cbForStateCheckID2
+cbForStateCheckID2:
 /* 8030C970 002D5F30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030C974 002D5F34  7C 08 02 A6 */	mflr r0
 /* 8030C978 002D5F38  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2341,7 +2316,7 @@ lbl_8030C9C0:
 /* 8030C9D0 002D5F90  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030C9D4 002D5F94  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030C9D8 002D5F98  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030C9DC 002D5F9C  48 00 36 C5 */	bl func_803100A0
+/* 8030C9DC 002D5F9C  48 00 36 C5 */	bl __DVDStoreErrorCode
 /* 8030C9E0 002D5FA0  48 00 01 10 */	b lbl_8030CAF0
 lbl_8030C9E4:
 /* 8030C9E4 002D5FA4  28 1F 00 20 */	cmplwi r31, 0x20
@@ -2350,7 +2325,7 @@ lbl_8030C9E4:
 /* 8030C9F0 002D5FB0  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030C9F4 002D5FB4  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030C9F8 002D5FB8  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030C9FC 002D5FBC  48 00 36 A5 */	bl func_803100A0
+/* 8030C9FC 002D5FBC  48 00 36 A5 */	bl __DVDStoreErrorCode
 /* 8030CA00 002D5FC0  48 00 00 F0 */	b lbl_8030CAF0
 lbl_8030CA04:
 /* 8030CA04 002D5FC4  57 E0 07 FF */	clrlwi. r0, r31, 0x1f
@@ -2411,8 +2386,8 @@ lbl_8030CAD4:
 /* 8030CAD8 002D6098  38 80 00 00 */	li r4, 0
 /* 8030CADC 002D609C  38 A0 00 00 */	li r5, 0
 /* 8030CAE0 002D60A0  4B FF DD C1 */	bl StampCommand
-/* 8030CAE4 002D60A4  3C 60 80 31 */	lis r3, lbl_8030B130@ha
-/* 8030CAE8 002D60A8  38 63 B1 30 */	addi r3, r3, lbl_8030B130@l
+/* 8030CAE4 002D60A4  3C 60 80 31 */	lis r3, cbForStateGettingError@ha
+/* 8030CAE8 002D60A8  38 63 B1 30 */	addi r3, r3, cbForStateGettingError@l
 /* 8030CAEC 002D60AC  48 00 50 95 */	bl DVDLowRequestError
 lbl_8030CAF0:
 /* 8030CAF0 002D60B0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2420,12 +2395,10 @@ lbl_8030CAF0:
 /* 8030CAF8 002D60B8  7C 08 03 A6 */	mtlr r0
 /* 8030CAFC 002D60BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030CB00 002D60C0  4E 80 00 20 */	blr 
-/* 8030CB04 002D60C4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030CB08 002D60C8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030CB0C 002D60CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030CB10
-func_8030CB10:
+.balign 16, 0
+.global stateCoverClosed
+stateCoverClosed:
 /* 8030CB10 002D60D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030CB14 002D60D4  7C 08 02 A6 */	mflr r0
 /* 8030CB18 002D60D8  38 60 00 01 */	li r3, 1
@@ -2433,17 +2406,16 @@ func_8030CB10:
 /* 8030CB20 002D60E0  80 0D B6 E4 */	lwz r0, lbl_80667864@sda21(r13)
 /* 8030CB24 002D60E4  90 6D B6 D0 */	stw r3, lbl_80667850@sda21(r13)
 /* 8030CB28 002D60E8  28 00 00 2A */	cmplwi r0, 0x2a
-/* 8030CB2C 002D60EC  41 81 00 7C */	bgt func_8030CBA8
+/* 8030CB2C 002D60EC  41 81 00 7C */	bgt lbl_8030CBA8
 /* 8030CB30 002D60F0  3C 60 80 55 */	lis r3, lbl_8054999C@ha
 /* 8030CB34 002D60F4  54 00 10 3A */	slwi r0, r0, 2
 /* 8030CB38 002D60F8  38 63 99 9C */	addi r3, r3, lbl_8054999C@l
 /* 8030CB3C 002D60FC  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8030CB40 002D6100  7C 69 03 A6 */	mtctr r3
 /* 8030CB44 002D6104  4E 80 04 20 */	bctr 
-
-.global func_8030CB48
-func_8030CB48:
-/* 8030CB48 002D6108  48 00 29 29 */	bl func_8030F470
+.global lbl_8030CB48
+lbl_8030CB48:
+/* 8030CB48 002D6108  48 00 29 29 */	bl __DVDClearWaitingQueue
 /* 8030CB4C 002D610C  80 8D B6 F0 */	lwz r4, lbl_80667870@sda21(r13)
 /* 8030CB50 002D6110  3C 60 80 5D */	lis r3, lbl_805CC820@ha
 /* 8030CB54 002D6114  38 63 C8 20 */	addi r3, r3, lbl_805CC820@l
@@ -2455,45 +2427,43 @@ func_8030CB48:
 /* 8030CB6C 002D612C  7D 89 03 A6 */	mtctr r12
 /* 8030CB70 002D6130  4E 80 04 21 */	bctrl 
 lbl_8030CB74:
-/* 8030CB74 002D6134  48 00 0A DD */	bl func_8030D650
+/* 8030CB74 002D6134  48 00 0A DD */	bl stateReady
 /* 8030CB78 002D6138  48 00 00 4C */	b lbl_8030CBC4
-
-.global func_8030CB7C
-func_8030CB7C:
+.global lbl_8030CB7C
+lbl_8030CB7C:
 /* 8030CB7C 002D613C  38 00 00 00 */	li r0, 0
 /* 8030CB80 002D6140  90 0D B6 D0 */	stw r0, lbl_80667850@sda21(r13)
-.global func_8030CB84
-func_8030CB84:
+.global lbl_8030CB84
+lbl_8030CB84:
 /* 8030CB84 002D6144  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
 /* 8030CB88 002D6148  38 00 00 01 */	li r0, 1
 /* 8030CB8C 002D614C  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8030CB90 002D6150  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
-/* 8030CB94 002D6154  48 00 0D DD */	bl func_8030D970
+/* 8030CB94 002D6154  48 00 0D DD */	bl stateBusy
 /* 8030CB98 002D6158  48 00 00 2C */	b lbl_8030CBC4
-
-.global func_8030CB9C
-func_8030CB9C:
+.global lbl_8030CB9C
+lbl_8030CB9C:
 /* 8030CB9C 002D615C  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
 /* 8030CBA0 002D6160  2C 00 00 00 */	cmpwi r0, 0
 /* 8030CBA4 002D6164  40 82 00 20 */	bne lbl_8030CBC4
-.global func_8030CBA8
-func_8030CBA8:
+.global lbl_8030CBA8
+lbl_8030CBA8:
 /* 8030CBA8 002D6168  38 00 00 00 */	li r0, 0
 /* 8030CBAC 002D616C  90 0D B6 D0 */	stw r0, lbl_80667850@sda21(r13)
 /* 8030CBB0 002D6170  38 60 00 01 */	li r3, 1
 /* 8030CBB4 002D6174  48 00 51 3D */	bl DVDLowSetSpinupFlag
-/* 8030CBB8 002D6178  3C 60 80 31 */	lis r3, func_8030CE30@ha
-/* 8030CBBC 002D617C  38 63 CE 30 */	addi r3, r3, func_8030CE30@l
+/* 8030CBB8 002D6178  3C 60 80 31 */	lis r3, cbForStateReset@ha
+/* 8030CBBC 002D617C  38 63 CE 30 */	addi r3, r3, cbForStateReset@l
 /* 8030CBC0 002D6180  48 00 51 41 */	bl DVDLowReset
 lbl_8030CBC4:
 /* 8030CBC4 002D6184  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8030CBC8 002D6188  7C 08 03 A6 */	mtlr r0
 /* 8030CBCC 002D618C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030CBD0 002D6190  4E 80 00 20 */	blr 
-/* 8030CBD4 002D6194  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030CBD8 002D6198  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030CBDC 002D619C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030CBE0:
+
+.balign 16, 0
+.global ResetAlarmHandler
+ResetAlarmHandler:
 /* 8030CBE0 002D61A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030CBE4 002D61A4  7C 08 02 A6 */	mflr r0
 /* 8030CBE8 002D61A8  3C 60 80 00 */	lis r3, 0x800030E6@ha
@@ -2503,9 +2473,9 @@ lbl_8030CBE0:
 /* 8030CBF8 002D61B8  A0 03 30 E6 */	lhz r0, 0x800030E6@l(r3)
 /* 8030CBFC 002D61BC  28 00 80 03 */	cmplwi r0, 0x8003
 /* 8030CC00 002D61C0  40 82 00 B0 */	bne lbl_8030CCB0
-/* 8030CC04 002D61C4  3C 80 80 31 */	lis r4, lbl_8030CF20@ha
+/* 8030CC04 002D61C4  3C 80 80 31 */	lis r4, stateDownRotation@ha
 /* 8030CC08 002D61C8  38 60 00 00 */	li r3, 0
-/* 8030CC0C 002D61CC  38 84 CF 20 */	addi r4, r4, lbl_8030CF20@l
+/* 8030CC0C 002D61CC  38 84 CF 20 */	addi r4, r4, stateDownRotation@l
 /* 8030CC10 002D61D0  90 8D B6 F4 */	stw r4, lbl_80667874@sda21(r13)
 /* 8030CC14 002D61D4  48 00 5F 1D */	bl DVDLowClearCoverInterrupt
 /* 8030CC18 002D61D8  48 04 BD 99 */	bl OSDisableInterrupts
@@ -2542,9 +2512,9 @@ lbl_8030CC34:
 /* 8030CC90 002D6250  90 64 00 2C */	stw r3, 0x2c(r4)
 /* 8030CC94 002D6254  7F E3 FB 78 */	mr r3, r31
 /* 8030CC98 002D6258  48 04 BD 59 */	bl OSRestoreInterrupts
-/* 8030CC9C 002D625C  3C 80 80 31 */	lis r4, lbl_8030CFF0@ha
+/* 8030CC9C 002D625C  3C 80 80 31 */	lis r4, cbForStateDownRotation@ha
 /* 8030CCA0 002D6260  3C 60 00 02 */	lis r3, 2
-/* 8030CCA4 002D6264  38 84 CF F0 */	addi r4, r4, lbl_8030CFF0@l
+/* 8030CCA4 002D6264  38 84 CF F0 */	addi r4, r4, cbForStateDownRotation@l
 /* 8030CCA8 002D6268  48 00 55 19 */	bl DVDLowSetMaximumRotation
 /* 8030CCAC 002D626C  48 00 01 6C */	b lbl_8030CE18
 lbl_8030CCB0:
@@ -2553,8 +2523,8 @@ lbl_8030CCB0:
 /* 8030CCB8 002D6278  38 63 C8 C0 */	addi r3, r3, lbl_805CC8C0@l
 /* 8030CCBC 002D627C  48 04 72 C5 */	bl DCInvalidateRange
 /* 8030CCC0 002D6280  80 0D B6 E4 */	lwz r0, lbl_80667864@sda21(r13)
-/* 8030CCC4 002D6284  3C 60 80 31 */	lis r3, func_8030D230@ha
-/* 8030CCC8 002D6288  38 63 D2 30 */	addi r3, r3, func_8030D230@l
+/* 8030CCC4 002D6284  3C 60 80 31 */	lis r3, stateCoverClosed_CMD@ha
+/* 8030CCC8 002D6288  38 63 D2 30 */	addi r3, r3, stateCoverClosed_CMD@l
 /* 8030CCCC 002D628C  90 6D B6 F4 */	stw r3, lbl_80667874@sda21(r13)
 /* 8030CCD0 002D6290  28 00 00 28 */	cmplwi r0, 0x28
 /* 8030CCD4 002D6294  40 82 00 A0 */	bne lbl_8030CD74
@@ -2587,7 +2557,7 @@ lbl_8030CD28:
 /* 8030CD3C 002D62FC  7D 89 03 A6 */	mtctr r12
 /* 8030CD40 002D6300  4E 80 04 21 */	bctrl 
 lbl_8030CD44:
-/* 8030CD44 002D6304  48 00 09 0D */	bl func_8030D650
+/* 8030CD44 002D6304  48 00 09 0D */	bl stateReady
 /* 8030CD48 002D6308  38 00 00 01 */	li r0, 1
 /* 8030CD4C 002D630C  48 00 00 08 */	b lbl_8030CD54
 lbl_8030CD50:
@@ -2599,7 +2569,7 @@ lbl_8030CD54:
 /* 8030CD60 002D6320  38 00 00 01 */	li r0, 1
 /* 8030CD64 002D6324  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8030CD68 002D6328  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
-/* 8030CD6C 002D632C  48 00 0C 05 */	bl func_8030D970
+/* 8030CD6C 002D632C  48 00 0C 05 */	bl stateBusy
 /* 8030CD70 002D6330  48 00 00 A8 */	b lbl_8030CE18
 lbl_8030CD74:
 /* 8030CD74 002D6334  38 60 00 00 */	li r3, 0
@@ -2640,9 +2610,9 @@ lbl_8030CD98:
 /* 8030CDFC 002D63BC  7F E3 FB 78 */	mr r3, r31
 /* 8030CE00 002D63C0  48 04 BB F1 */	bl OSRestoreInterrupts
 /* 8030CE04 002D63C4  3C 60 80 5D */	lis r3, lbl_805CC8C0@ha
-/* 8030CE08 002D63C8  3C 80 80 31 */	lis r4, lbl_8030D3B0@ha
+/* 8030CE08 002D63C8  3C 80 80 31 */	lis r4, cbForStateCoverClosed@ha
 /* 8030CE0C 002D63CC  38 63 C8 C0 */	addi r3, r3, lbl_805CC8C0@l
-/* 8030CE10 002D63D0  38 84 D3 B0 */	addi r4, r4, lbl_8030D3B0@l
+/* 8030CE10 002D63D0  38 84 D3 B0 */	addi r4, r4, cbForStateCoverClosed@l
 /* 8030CE14 002D63D4  48 00 3C 2D */	bl DVDLowReadDiskID
 lbl_8030CE18:
 /* 8030CE18 002D63D8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2652,8 +2622,8 @@ lbl_8030CE18:
 /* 8030CE28 002D63E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030CE2C 002D63EC  4E 80 00 20 */	blr
 
-.global func_8030CE30
-func_8030CE30:
+.global cbForStateReset
+cbForStateReset:
 /* 8030CE30 002D63F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030CE34 002D63F4  7C 08 02 A6 */	mflr r0
 /* 8030CE38 002D63F8  28 03 00 10 */	cmplwi r3, 0x10
@@ -2664,7 +2634,7 @@ func_8030CE30:
 /* 8030CE4C 002D640C  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030CE50 002D6410  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030CE54 002D6414  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030CE58 002D6418  48 00 32 49 */	bl func_803100A0
+/* 8030CE58 002D6418  48 00 32 49 */	bl __DVDStoreErrorCode
 /* 8030CE5C 002D641C  48 00 00 A4 */	b lbl_8030CF00
 lbl_8030CE60:
 /* 8030CE60 002D6420  28 03 00 20 */	cmplwi r3, 0x20
@@ -2673,7 +2643,7 @@ lbl_8030CE60:
 /* 8030CE6C 002D642C  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030CE70 002D6430  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030CE74 002D6434  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030CE78 002D6438  48 00 32 29 */	bl func_803100A0
+/* 8030CE78 002D6438  48 00 32 29 */	bl __DVDStoreErrorCode
 /* 8030CE7C 002D643C  48 00 00 84 */	b lbl_8030CF00
 lbl_8030CE80:
 /* 8030CE80 002D6440  54 60 07 FF */	clrlwi. r0, r3, 0x1f
@@ -2688,11 +2658,11 @@ lbl_8030CE80:
 /* 8030CEA4 002D6464  90 0D B6 74 */	stw r0, lbl_806677F4@sda21(r13)
 /* 8030CEA8 002D6468  48 04 5F 79 */	bl OSCreateAlarm
 /* 8030CEAC 002D646C  3C 80 80 00 */	lis r4, 0x800000F8@ha
-/* 8030CEB0 002D6470  3C E0 80 31 */	lis r7, lbl_8030CBE0@ha
+/* 8030CEB0 002D6470  3C E0 80 31 */	lis r7, ResetAlarmHandler@ha
 /* 8030CEB4 002D6474  80 04 00 F8 */	lwz r0, 0x800000F8@l(r4)
 /* 8030CEB8 002D6478  3C 60 10 62 */	lis r3, 0x10624DD3@ha
 /* 8030CEBC 002D647C  38 83 4D D3 */	addi r4, r3, 0x10624DD3@l
-/* 8030CEC0 002D6480  38 E7 CB E0 */	addi r7, r7, lbl_8030CBE0@l
+/* 8030CEC0 002D6480  38 E7 CB E0 */	addi r7, r7, ResetAlarmHandler@l
 /* 8030CEC4 002D6484  54 00 F0 BE */	srwi r0, r0, 2
 /* 8030CEC8 002D6488  38 7F C9 20 */	addi r3, r31, lbl_805CC920@l
 /* 8030CECC 002D648C  7C 04 00 16 */	mulhwu r0, r4, r0
@@ -2706,8 +2676,8 @@ lbl_8030CEE4:
 /* 8030CEE8 002D64A8  38 80 00 00 */	li r4, 0
 /* 8030CEEC 002D64AC  38 A0 00 00 */	li r5, 0
 /* 8030CEF0 002D64B0  4B FF D9 B1 */	bl StampCommand
-/* 8030CEF4 002D64B4  3C 60 80 31 */	lis r3, lbl_8030B130@ha
-/* 8030CEF8 002D64B8  38 63 B1 30 */	addi r3, r3, lbl_8030B130@l
+/* 8030CEF4 002D64B4  3C 60 80 31 */	lis r3, cbForStateGettingError@ha
+/* 8030CEF8 002D64B8  38 63 B1 30 */	addi r3, r3, cbForStateGettingError@l
 /* 8030CEFC 002D64BC  48 00 4C 85 */	bl DVDLowRequestError
 lbl_8030CF00:
 /* 8030CF00 002D64C0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2715,10 +2685,10 @@ lbl_8030CF00:
 /* 8030CF08 002D64C8  7C 08 03 A6 */	mtlr r0
 /* 8030CF0C 002D64CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030CF10 002D64D0  4E 80 00 20 */	blr 
-/* 8030CF14 002D64D4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030CF18 002D64D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030CF1C 002D64DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030CF20:
+
+.balign 16, 0
+.global stateDownRotation
+stateDownRotation:
 /* 8030CF20 002D64E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030CF24 002D64E4  7C 08 02 A6 */	mflr r0
 /* 8030CF28 002D64E8  38 60 00 00 */	li r3, 0
@@ -2760,9 +2730,9 @@ lbl_8030CF58:
 /* 8030CFB4 002D6574  90 64 00 2C */	stw r3, 0x2c(r4)
 /* 8030CFB8 002D6578  7F E3 FB 78 */	mr r3, r31
 /* 8030CFBC 002D657C  48 04 BA 35 */	bl OSRestoreInterrupts
-/* 8030CFC0 002D6580  3C 80 80 31 */	lis r4, lbl_8030CFF0@ha
+/* 8030CFC0 002D6580  3C 80 80 31 */	lis r4, cbForStateDownRotation@ha
 /* 8030CFC4 002D6584  3C 60 00 02 */	lis r3, 2
-/* 8030CFC8 002D6588  38 84 CF F0 */	addi r4, r4, lbl_8030CFF0@l
+/* 8030CFC8 002D6588  38 84 CF F0 */	addi r4, r4, cbForStateDownRotation@l
 /* 8030CFCC 002D658C  48 00 51 F5 */	bl DVDLowSetMaximumRotation
 /* 8030CFD0 002D6590  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8030CFD4 002D6594  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -2770,9 +2740,10 @@ lbl_8030CF58:
 /* 8030CFDC 002D659C  7C 08 03 A6 */	mtlr r0
 /* 8030CFE0 002D65A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030CFE4 002D65A4  4E 80 00 20 */	blr 
-/* 8030CFE8 002D65A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030CFEC 002D65AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030CFF0:
+
+.balign 16, 0
+.global cbForStateDownRotation
+cbForStateDownRotation:
 /* 8030CFF0 002D65B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030CFF4 002D65B4  7C 08 02 A6 */	mflr r0
 /* 8030CFF8 002D65B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2803,7 +2774,7 @@ lbl_8030D044:
 /* 8030D054 002D6614  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030D058 002D6618  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030D05C 002D661C  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030D060 002D6620  48 00 30 41 */	bl func_803100A0
+/* 8030D060 002D6620  48 00 30 41 */	bl __DVDStoreErrorCode
 /* 8030D064 002D6624  48 00 01 B4 */	b lbl_8030D218
 lbl_8030D068:
 /* 8030D068 002D6628  28 1E 00 20 */	cmplwi r30, 0x20
@@ -2812,7 +2783,7 @@ lbl_8030D068:
 /* 8030D074 002D6634  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030D078 002D6638  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030D07C 002D663C  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030D080 002D6640  48 00 30 21 */	bl func_803100A0
+/* 8030D080 002D6640  48 00 30 21 */	bl __DVDStoreErrorCode
 /* 8030D084 002D6644  48 00 01 94 */	b lbl_8030D218
 lbl_8030D088:
 /* 8030D088 002D6648  57 C0 07 FF */	clrlwi. r0, r30, 0x1f
@@ -2822,8 +2793,8 @@ lbl_8030D088:
 /* 8030D098 002D6658  38 63 C8 C0 */	addi r3, r3, lbl_805CC8C0@l
 /* 8030D09C 002D665C  48 04 6E E5 */	bl DCInvalidateRange
 /* 8030D0A0 002D6660  80 0D B6 E4 */	lwz r0, lbl_80667864@sda21(r13)
-/* 8030D0A4 002D6664  3C 60 80 31 */	lis r3, func_8030D230@ha
-/* 8030D0A8 002D6668  38 63 D2 30 */	addi r3, r3, func_8030D230@l
+/* 8030D0A4 002D6664  3C 60 80 31 */	lis r3, stateCoverClosed_CMD@ha
+/* 8030D0A8 002D6668  38 63 D2 30 */	addi r3, r3, stateCoverClosed_CMD@l
 /* 8030D0AC 002D666C  90 6D B6 F4 */	stw r3, lbl_80667874@sda21(r13)
 /* 8030D0B0 002D6670  28 00 00 28 */	cmplwi r0, 0x28
 /* 8030D0B4 002D6674  40 82 00 A0 */	bne lbl_8030D154
@@ -2856,7 +2827,7 @@ lbl_8030D108:
 /* 8030D11C 002D66DC  7D 89 03 A6 */	mtctr r12
 /* 8030D120 002D66E0  4E 80 04 21 */	bctrl 
 lbl_8030D124:
-/* 8030D124 002D66E4  48 00 05 2D */	bl func_8030D650
+/* 8030D124 002D66E4  48 00 05 2D */	bl stateReady
 /* 8030D128 002D66E8  38 00 00 01 */	li r0, 1
 /* 8030D12C 002D66EC  48 00 00 08 */	b lbl_8030D134
 lbl_8030D130:
@@ -2868,7 +2839,7 @@ lbl_8030D134:
 /* 8030D140 002D6700  38 00 00 01 */	li r0, 1
 /* 8030D144 002D6704  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8030D148 002D6708  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
-/* 8030D14C 002D670C  48 00 08 25 */	bl func_8030D970
+/* 8030D14C 002D670C  48 00 08 25 */	bl stateBusy
 /* 8030D150 002D6710  48 00 00 C8 */	b lbl_8030D218
 lbl_8030D154:
 /* 8030D154 002D6714  38 60 00 00 */	li r3, 0
@@ -2909,9 +2880,9 @@ lbl_8030D178:
 /* 8030D1DC 002D679C  7F E3 FB 78 */	mr r3, r31
 /* 8030D1E0 002D67A0  48 04 B8 11 */	bl OSRestoreInterrupts
 /* 8030D1E4 002D67A4  3C 60 80 5D */	lis r3, lbl_805CC8C0@ha
-/* 8030D1E8 002D67A8  3C 80 80 31 */	lis r4, lbl_8030D3B0@ha
+/* 8030D1E8 002D67A8  3C 80 80 31 */	lis r4, cbForStateCoverClosed@ha
 /* 8030D1EC 002D67AC  38 63 C8 C0 */	addi r3, r3, lbl_805CC8C0@l
-/* 8030D1F0 002D67B0  38 84 D3 B0 */	addi r4, r4, lbl_8030D3B0@l
+/* 8030D1F0 002D67B0  38 84 D3 B0 */	addi r4, r4, cbForStateCoverClosed@l
 /* 8030D1F4 002D67B4  48 00 38 4D */	bl DVDLowReadDiskID
 /* 8030D1F8 002D67B8  48 00 00 20 */	b lbl_8030D218
 lbl_8030D1FC:
@@ -2919,8 +2890,8 @@ lbl_8030D1FC:
 /* 8030D200 002D67C0  38 80 00 00 */	li r4, 0
 /* 8030D204 002D67C4  38 A0 00 00 */	li r5, 0
 /* 8030D208 002D67C8  4B FF D6 99 */	bl StampCommand
-/* 8030D20C 002D67CC  3C 60 80 31 */	lis r3, lbl_8030B130@ha
-/* 8030D210 002D67D0  38 63 B1 30 */	addi r3, r3, lbl_8030B130@l
+/* 8030D20C 002D67CC  3C 60 80 31 */	lis r3, cbForStateGettingError@ha
+/* 8030D210 002D67D0  38 63 B1 30 */	addi r3, r3, cbForStateGettingError@l
 /* 8030D214 002D67D4  48 00 49 6D */	bl DVDLowRequestError
 lbl_8030D218:
 /* 8030D218 002D67D8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2930,8 +2901,8 @@ lbl_8030D218:
 /* 8030D228 002D67E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030D22C 002D67EC  4E 80 00 20 */	blr
 
-.global func_8030D230
-func_8030D230:
+.global stateCoverClosed_CMD
+stateCoverClosed_CMD:
 /* 8030D230 002D67F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030D234 002D67F4  7C 08 02 A6 */	mflr r0
 /* 8030D238 002D67F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2969,7 +2940,7 @@ lbl_8030D2A0:
 /* 8030D2B4 002D6874  7D 89 03 A6 */	mtctr r12
 /* 8030D2B8 002D6878  4E 80 04 21 */	bctrl 
 lbl_8030D2BC:
-/* 8030D2BC 002D687C  48 00 03 95 */	bl func_8030D650
+/* 8030D2BC 002D687C  48 00 03 95 */	bl stateReady
 /* 8030D2C0 002D6880  38 00 00 01 */	li r0, 1
 /* 8030D2C4 002D6884  48 00 00 08 */	b lbl_8030D2CC
 lbl_8030D2C8:
@@ -2981,7 +2952,7 @@ lbl_8030D2CC:
 /* 8030D2D8 002D6898  38 00 00 01 */	li r0, 1
 /* 8030D2DC 002D689C  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8030D2E0 002D68A0  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
-/* 8030D2E4 002D68A4  48 00 06 8D */	bl func_8030D970
+/* 8030D2E4 002D68A4  48 00 06 8D */	bl stateBusy
 /* 8030D2E8 002D68A8  48 00 00 A8 */	b lbl_8030D390
 lbl_8030D2EC:
 /* 8030D2EC 002D68AC  38 60 00 00 */	li r3, 0
@@ -3022,9 +2993,9 @@ lbl_8030D310:
 /* 8030D374 002D6934  7F E3 FB 78 */	mr r3, r31
 /* 8030D378 002D6938  48 04 B6 79 */	bl OSRestoreInterrupts
 /* 8030D37C 002D693C  3C 60 80 5D */	lis r3, lbl_805CC8C0@ha
-/* 8030D380 002D6940  3C 80 80 31 */	lis r4, lbl_8030D3B0@ha
+/* 8030D380 002D6940  3C 80 80 31 */	lis r4, cbForStateCoverClosed@ha
 /* 8030D384 002D6944  38 63 C8 C0 */	addi r3, r3, lbl_805CC8C0@l
-/* 8030D388 002D6948  38 84 D3 B0 */	addi r4, r4, lbl_8030D3B0@l
+/* 8030D388 002D6948  38 84 D3 B0 */	addi r4, r4, cbForStateCoverClosed@l
 /* 8030D38C 002D694C  48 00 36 B5 */	bl DVDLowReadDiskID
 lbl_8030D390:
 /* 8030D390 002D6950  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3033,9 +3004,10 @@ lbl_8030D390:
 /* 8030D39C 002D695C  7C 08 03 A6 */	mtlr r0
 /* 8030D3A0 002D6960  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030D3A4 002D6964  4E 80 00 20 */	blr 
-/* 8030D3A8 002D6968  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030D3AC 002D696C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030D3B0:
+
+.balign 16, 0
+.global cbForStateCoverClosed
+cbForStateCoverClosed:
 /* 8030D3B0 002D6970  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030D3B4 002D6974  7C 08 02 A6 */	mflr r0
 /* 8030D3B8 002D6978  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3064,7 +3036,7 @@ lbl_8030D3FC:
 /* 8030D40C 002D69CC  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030D410 002D69D0  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030D414 002D69D4  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030D418 002D69D8  48 00 2C 89 */	bl func_803100A0
+/* 8030D418 002D69D8  48 00 2C 89 */	bl __DVDStoreErrorCode
 /* 8030D41C 002D69DC  48 00 00 58 */	b lbl_8030D474
 lbl_8030D420:
 /* 8030D420 002D69E0  28 1F 00 20 */	cmplwi r31, 0x20
@@ -3073,22 +3045,22 @@ lbl_8030D420:
 /* 8030D42C 002D69EC  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030D430 002D69F0  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030D434 002D69F4  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030D438 002D69F8  48 00 2C 69 */	bl func_803100A0
+/* 8030D438 002D69F8  48 00 2C 69 */	bl __DVDStoreErrorCode
 /* 8030D43C 002D69FC  48 00 00 38 */	b lbl_8030D474
 lbl_8030D440:
 /* 8030D440 002D6A00  57 E0 07 FF */	clrlwi. r0, r31, 0x1f
 /* 8030D444 002D6A04  41 82 00 14 */	beq lbl_8030D458
 /* 8030D448 002D6A08  38 00 00 00 */	li r0, 0
 /* 8030D44C 002D6A0C  90 0D B6 78 */	stw r0, lbl_806677F8@sda21(r13)
-/* 8030D450 002D6A10  4B FF E6 F1 */	bl func_8030BB40
+/* 8030D450 002D6A10  4B FF E6 F1 */	bl stateCheckID
 /* 8030D454 002D6A14  48 00 00 20 */	b lbl_8030D474
 lbl_8030D458:
 /* 8030D458 002D6A18  38 60 00 27 */	li r3, 0x27
 /* 8030D45C 002D6A1C  38 80 00 00 */	li r4, 0
 /* 8030D460 002D6A20  38 A0 00 00 */	li r5, 0
 /* 8030D464 002D6A24  4B FF D4 3D */	bl StampCommand
-/* 8030D468 002D6A28  3C 60 80 31 */	lis r3, lbl_8030B130@ha
-/* 8030D46C 002D6A2C  38 63 B1 30 */	addi r3, r3, lbl_8030B130@l
+/* 8030D468 002D6A28  3C 60 80 31 */	lis r3, cbForStateGettingError@ha
+/* 8030D46C 002D6A2C  38 63 B1 30 */	addi r3, r3, cbForStateGettingError@l
 /* 8030D470 002D6A30  48 00 47 11 */	bl DVDLowRequestError
 lbl_8030D474:
 /* 8030D474 002D6A34  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3096,9 +3068,8 @@ lbl_8030D474:
 /* 8030D47C 002D6A3C  7C 08 03 A6 */	mtlr r0
 /* 8030D480 002D6A40  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030D484 002D6A44  4E 80 00 20 */	blr 
-/* 8030D488 002D6A48  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030D48C 002D6A4C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030D490:
+.balign 16, 0
+cbForPrepareCoverRegister:
 /* 8030D490 002D6A50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030D494 002D6A54  7C 08 02 A6 */	mflr r0
 /* 8030D498 002D6A58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3138,7 +3109,7 @@ lbl_8030D50C:
 /* 8030D518 002D6AD8  41 82 00 14 */	beq lbl_8030D52C
 /* 8030D51C 002D6ADC  38 00 00 03 */	li r0, 3
 /* 8030D520 002D6AE0  90 03 00 0C */	stw r0, 0xc(r3)
-/* 8030D524 002D6AE4  4B FF F5 ED */	bl func_8030CB10
+/* 8030D524 002D6AE4  4B FF F5 ED */	bl stateCoverClosed
 /* 8030D528 002D6AE8  48 00 00 DC */	b lbl_8030D604
 lbl_8030D52C:
 /* 8030D52C 002D6AEC  38 00 00 07 */	li r0, 7
@@ -3196,7 +3167,7 @@ lbl_8030D5DC:
 /* 8030D5E8 002D6BA8  41 82 00 14 */	beq lbl_8030D5FC
 /* 8030D5EC 002D6BAC  38 00 00 03 */	li r0, 3
 /* 8030D5F0 002D6BB0  90 03 00 0C */	stw r0, 0xc(r3)
-/* 8030D5F4 002D6BB4  4B FF F5 1D */	bl func_8030CB10
+/* 8030D5F4 002D6BB4  4B FF F5 1D */	bl stateCoverClosed
 /* 8030D5F8 002D6BB8  48 00 00 0C */	b lbl_8030D604
 lbl_8030D5FC:
 /* 8030D5FC 002D6BBC  38 00 00 07 */	li r0, 7
@@ -3207,24 +3178,21 @@ lbl_8030D604:
 /* 8030D60C 002D6BCC  7C 08 03 A6 */	mtlr r0
 /* 8030D610 002D6BD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030D614 002D6BD4  4E 80 00 20 */	blr 
-/* 8030D618 002D6BD8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030D61C 002D6BDC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030D620:
+.balign 16, 0
+CoverAlarmHandler:
 /* 8030D620 002D6BE0  80 0D B6 94 */	lwz r0, lbl_80667814@sda21(r13)
 /* 8030D624 002D6BE4  2C 00 00 00 */	cmpwi r0, 0
 /* 8030D628 002D6BE8  4C 82 00 20 */	bnelr 
 /* 8030D62C 002D6BEC  38 00 00 01 */	li r0, 1
-/* 8030D630 002D6BF0  3C 60 80 31 */	lis r3, lbl_8030D490@ha
+/* 8030D630 002D6BF0  3C 60 80 31 */	lis r3, cbForPrepareCoverRegister@ha
 /* 8030D634 002D6BF4  90 0D B6 94 */	stw r0, lbl_80667814@sda21(r13)
-/* 8030D638 002D6BF8  38 63 D4 90 */	addi r3, r3, lbl_8030D490@l
+/* 8030D638 002D6BF8  38 63 D4 90 */	addi r3, r3, cbForPrepareCoverRegister@l
 /* 8030D63C 002D6BFC  48 00 50 74 */	b DVDLowPrepareCoverRegister
 /* 8030D640 002D6C00  4E 80 00 20 */	blr 
-/* 8030D644 002D6C04  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030D648 002D6C08  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030D64C 002D6C0C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030D650
-func_8030D650:
+.balign 16, 0
+.global stateReady
+stateReady:
 /* 8030D650 002D6C10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030D654 002D6C14  7C 08 02 A6 */	mflr r0
 /* 8030D658 002D6C18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3238,14 +3206,14 @@ func_8030D650:
 /* 8030D678 002D6C38  90 0D B6 F0 */	stw r0, lbl_80667870@sda21(r13)
 /* 8030D67C 002D6C3C  48 00 02 DC */	b lbl_8030D958
 lbl_8030D680:
-/* 8030D680 002D6C40  48 00 1F 41 */	bl func_8030F5C0
+/* 8030D680 002D6C40  48 00 1F 41 */	bl __DVDCheckWaitingQueue
 /* 8030D684 002D6C44  2C 03 00 00 */	cmpwi r3, 0
 /* 8030D688 002D6C48  40 82 00 10 */	bne lbl_8030D698
 /* 8030D68C 002D6C4C  38 00 00 00 */	li r0, 0
 /* 8030D690 002D6C50  90 0D B6 F0 */	stw r0, lbl_80667870@sda21(r13)
 /* 8030D694 002D6C54  48 00 02 C4 */	b lbl_8030D958
 lbl_8030D698:
-/* 8030D698 002D6C58  48 00 1E 89 */	bl func_8030F520
+/* 8030D698 002D6C58  48 00 1E 89 */	bl __DVDPopWaitingQueue
 /* 8030D69C 002D6C5C  80 0D B6 6C */	lwz r0, lbl_806677EC@sda21(r13)
 /* 8030D6A0 002D6C60  90 6D B6 F0 */	stw r3, lbl_80667870@sda21(r13)
 /* 8030D6A4 002D6C64  2C 00 00 00 */	cmpwi r0, 0
@@ -3263,7 +3231,7 @@ lbl_8030D698:
 /* 8030D6D4 002D6C94  7D 89 03 A6 */	mtctr r12
 /* 8030D6D8 002D6C98  4E 80 04 21 */	bctrl 
 lbl_8030D6DC:
-/* 8030D6DC 002D6C9C  4B FF FF 75 */	bl func_8030D650
+/* 8030D6DC 002D6C9C  4B FF FF 75 */	bl stateReady
 /* 8030D6E0 002D6CA0  48 00 02 78 */	b lbl_8030D958
 lbl_8030D6E4:
 /* 8030D6E4 002D6CA4  80 03 00 08 */	lwz r0, 8(r3)
@@ -3318,13 +3286,13 @@ lbl_8030D760:
 /* 8030D79C 002D6D5C  3C A0 80 00 */	lis r5, 0x800000F8@ha
 /* 8030D7A0 002D6D60  3C 80 10 62 */	lis r4, 0x10624DD3@ha
 /* 8030D7A4 002D6D64  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
-/* 8030D7A8 002D6D68  3D 20 80 31 */	lis r9, lbl_8030D620@ha
+/* 8030D7A8 002D6D68  3D 20 80 31 */	lis r9, CoverAlarmHandler@ha
 /* 8030D7AC 002D6D6C  7C 66 1B 78 */	mr r6, r3
 /* 8030D7B0 002D6D70  38 84 4D D3 */	addi r4, r4, 0x10624DD3@l
 /* 8030D7B4 002D6D74  54 00 F0 BE */	srwi r0, r0, 2
 /* 8030D7B8 002D6D78  38 7F C8 80 */	addi r3, r31, lbl_805CC880@l
 /* 8030D7BC 002D6D7C  7C 04 00 16 */	mulhwu r0, r4, r0
-/* 8030D7C0 002D6D80  39 29 D6 20 */	addi r9, r9, lbl_8030D620@l
+/* 8030D7C0 002D6D80  39 29 D6 20 */	addi r9, r9, CoverAlarmHandler@l
 /* 8030D7C4 002D6D84  38 A0 00 00 */	li r5, 0
 /* 8030D7C8 002D6D88  38 E0 00 00 */	li r7, 0
 /* 8030D7CC 002D6D8C  54 00 D1 BE */	srwi r0, r0, 6
@@ -3350,13 +3318,13 @@ lbl_8030D7DC:
 /* 8030D818 002D6DD8  3C A0 80 00 */	lis r5, 0x800000F8@ha
 /* 8030D81C 002D6DDC  3C 80 10 62 */	lis r4, 0x10624DD3@ha
 /* 8030D820 002D6DE0  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
-/* 8030D824 002D6DE4  3D 20 80 31 */	lis r9, lbl_8030D620@ha
+/* 8030D824 002D6DE4  3D 20 80 31 */	lis r9, CoverAlarmHandler@ha
 /* 8030D828 002D6DE8  7C 66 1B 78 */	mr r6, r3
 /* 8030D82C 002D6DEC  38 84 4D D3 */	addi r4, r4, 0x10624DD3@l
 /* 8030D830 002D6DF0  54 00 F0 BE */	srwi r0, r0, 2
 /* 8030D834 002D6DF4  38 7F C8 80 */	addi r3, r31, lbl_805CC880@l
 /* 8030D838 002D6DF8  7C 04 00 16 */	mulhwu r0, r4, r0
-/* 8030D83C 002D6DFC  39 29 D6 20 */	addi r9, r9, lbl_8030D620@l
+/* 8030D83C 002D6DFC  39 29 D6 20 */	addi r9, r9, CoverAlarmHandler@l
 /* 8030D840 002D6E00  38 A0 00 00 */	li r5, 0
 /* 8030D844 002D6E04  38 E0 00 00 */	li r7, 0
 /* 8030D848 002D6E08  54 00 D1 BE */	srwi r0, r0, 6
@@ -3382,13 +3350,13 @@ lbl_8030D858:
 /* 8030D894 002D6E54  3C A0 80 00 */	lis r5, 0x800000F8@ha
 /* 8030D898 002D6E58  3C 80 10 62 */	lis r4, 0x10624DD3@ha
 /* 8030D89C 002D6E5C  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
-/* 8030D8A0 002D6E60  3D 20 80 31 */	lis r9, lbl_8030D620@ha
+/* 8030D8A0 002D6E60  3D 20 80 31 */	lis r9, CoverAlarmHandler@ha
 /* 8030D8A4 002D6E64  7C 66 1B 78 */	mr r6, r3
 /* 8030D8A8 002D6E68  38 84 4D D3 */	addi r4, r4, 0x10624DD3@l
 /* 8030D8AC 002D6E6C  54 00 F0 BE */	srwi r0, r0, 2
 /* 8030D8B0 002D6E70  38 7F C8 80 */	addi r3, r31, lbl_805CC880@l
 /* 8030D8B4 002D6E74  7C 04 00 16 */	mulhwu r0, r4, r0
-/* 8030D8B8 002D6E78  39 29 D6 20 */	addi r9, r9, lbl_8030D620@l
+/* 8030D8B8 002D6E78  39 29 D6 20 */	addi r9, r9, CoverAlarmHandler@l
 /* 8030D8BC 002D6E7C  38 A0 00 00 */	li r5, 0
 /* 8030D8C0 002D6E80  38 E0 00 00 */	li r7, 0
 /* 8030D8C4 002D6E84  54 00 D1 BE */	srwi r0, r0, 6
@@ -3398,13 +3366,13 @@ lbl_8030D858:
 lbl_8030D8D4:
 /* 8030D8D4 002D6E94  38 00 00 03 */	li r0, 3
 /* 8030D8D8 002D6E98  90 03 00 0C */	stw r0, 0xc(r3)
-/* 8030D8DC 002D6E9C  4B FF F2 35 */	bl func_8030CB10
+/* 8030D8DC 002D6E9C  4B FF F2 35 */	bl stateCoverClosed
 /* 8030D8E0 002D6EA0  48 00 00 14 */	b lbl_8030D8F4
 lbl_8030D8E4:
 /* 8030D8E4 002D6EA4  3C 80 80 31 */	lis r4, cbForStoreErrorCode1@ha
 /* 8030D8E8 002D6EA8  80 6D B6 DC */	lwz r3, lbl_8066785C@sda21(r13)
 /* 8030D8EC 002D6EAC  38 84 AF 00 */	addi r4, r4, cbForStoreErrorCode1@l
-/* 8030D8F0 002D6EB0  48 00 27 B1 */	bl func_803100A0
+/* 8030D8F0 002D6EB0  48 00 27 B1 */	bl __DVDStoreErrorCode
 lbl_8030D8F4:
 /* 8030D8F4 002D6EB4  38 00 00 00 */	li r0, 0
 /* 8030D8F8 002D6EB8  90 0D B6 74 */	stw r0, lbl_806677F4@sda21(r13)
@@ -3426,47 +3394,46 @@ lbl_8030D918:
 lbl_8030D930:
 /* 8030D930 002D6EF0  38 00 00 03 */	li r0, 3
 /* 8030D934 002D6EF4  90 03 00 0C */	stw r0, 0xc(r3)
-/* 8030D938 002D6EF8  4B FF F1 D9 */	bl func_8030CB10
+/* 8030D938 002D6EF8  4B FF F1 D9 */	bl stateCoverClosed
 /* 8030D93C 002D6EFC  48 00 00 1C */	b lbl_8030D958
 lbl_8030D940:
 /* 8030D940 002D6F00  38 00 00 01 */	li r0, 1
 /* 8030D944 002D6F04  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8030D948 002D6F08  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
-/* 8030D94C 002D6F0C  48 00 00 25 */	bl func_8030D970
+/* 8030D94C 002D6F0C  48 00 00 25 */	bl stateBusy
 /* 8030D950 002D6F10  48 00 00 08 */	b lbl_8030D958
 lbl_8030D954:
-/* 8030D954 002D6F14  4B FF F1 BD */	bl func_8030CB10
+/* 8030D954 002D6F14  4B FF F1 BD */	bl stateCoverClosed
 lbl_8030D958:
 /* 8030D958 002D6F18  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8030D95C 002D6F1C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8030D960 002D6F20  7C 08 03 A6 */	mtlr r0
 /* 8030D964 002D6F24  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030D968 002D6F28  4E 80 00 20 */	blr 
-/* 8030D96C 002D6F2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030D970
-func_8030D970:
+.balign 16, 0
+.global stateBusy
+stateBusy:
 /* 8030D970 002D6F30  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8030D974 002D6F34  7C 08 02 A6 */	mflr r0
 /* 8030D978 002D6F38  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8030D97C 002D6F3C  39 61 00 30 */	addi r11, r1, 0x30
 /* 8030D980 002D6F40  4B FA C7 D1 */	bl _savegpr_26
-/* 8030D984 002D6F44  3C 80 80 31 */	lis r4, func_8030D970@ha
+/* 8030D984 002D6F44  3C 80 80 31 */	lis r4, stateBusy@ha
 /* 8030D988 002D6F48  7C 7D 1B 78 */	mr r29, r3
-/* 8030D98C 002D6F4C  38 84 D9 70 */	addi r4, r4, func_8030D970@l
+/* 8030D98C 002D6F4C  38 84 D9 70 */	addi r4, r4, stateBusy@l
 /* 8030D990 002D6F50  90 8D B6 F4 */	stw r4, lbl_80667874@sda21(r13)
 /* 8030D994 002D6F54  83 C3 00 08 */	lwz r30, 8(r3)
 /* 8030D998 002D6F58  28 1E 00 2A */	cmplwi r30, 0x2a
-/* 8030D99C 002D6F5C  41 81 00 A0 */	bgt func_8030DA3C
+/* 8030D99C 002D6F5C  41 81 00 A0 */	bgt lbl_8030DA3C
 /* 8030D9A0 002D6F60  3C 80 80 55 */	lis r4, lbl_80549AF4@ha
 /* 8030D9A4 002D6F64  57 C0 10 3A */	slwi r0, r30, 2
 /* 8030D9A8 002D6F68  38 84 9A F4 */	addi r4, r4, lbl_80549AF4@l
 /* 8030D9AC 002D6F6C  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8030D9B0 002D6F70  7C 89 03 A6 */	mtctr r4
 /* 8030D9B4 002D6F74  4E 80 04 20 */	bctr 
-
-.global func_8030D9B8
-func_8030D9B8:
+.global lbl_8030D9B8
+lbl_8030D9B8:
 /* 8030D9B8 002D6F78  83 43 00 14 */	lwz r26, 0x14(r3)
 /* 8030D9BC 002D6F7C  83 63 00 10 */	lwz r27, 0x10(r3)
 /* 8030D9C0 002D6F80  48 04 AF F1 */	bl OSDisableInterrupts
@@ -3501,32 +3468,30 @@ lbl_8030D9DC:
 /* 8030DA30 002D6FF0  90 64 00 2C */	stw r3, 0x2c(r4)
 /* 8030DA34 002D6FF4  7F E3 FB 78 */	mr r3, r31
 /* 8030DA38 002D6FF8  48 04 AF B9 */	bl OSRestoreInterrupts
-.global func_8030DA3C
-func_8030DA3C:
+.global lbl_8030DA3C
+lbl_8030DA3C:
 /* 8030DA3C 002D6FFC  80 1D 00 08 */	lwz r0, 8(r29)
 /* 8030DA40 002D7000  28 00 00 2A */	cmplwi r0, 0x2a
-/* 8030DA44 002D7004  41 81 04 AC */	bgt func_8030DEF0
+/* 8030DA44 002D7004  41 81 04 AC */	bgt lbl_8030DEF0
 /* 8030DA48 002D7008  3C 60 80 55 */	lis r3, lbl_80549A48@ha
 /* 8030DA4C 002D700C  54 00 10 3A */	slwi r0, r0, 2
 /* 8030DA50 002D7010  38 63 9A 48 */	addi r3, r3, lbl_80549A48@l
 /* 8030DA54 002D7014  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8030DA58 002D7018  7C 69 03 A6 */	mtctr r3
 /* 8030DA5C 002D701C  4E 80 04 20 */	bctr 
-
-.global func_8030DA60
-func_8030DA60:
+.global lbl_8030DA60
+lbl_8030DA60:
 /* 8030DA60 002D7020  38 60 00 00 */	li r3, 0
 /* 8030DA64 002D7024  48 00 50 CD */	bl DVDLowClearCoverInterrupt
 /* 8030DA68 002D7028  38 00 00 20 */	li r0, 0x20
-/* 8030DA6C 002D702C  3C 80 80 31 */	lis r4, func_8030DF20@ha
+/* 8030DA6C 002D702C  3C 80 80 31 */	lis r4, cbForStateBusy@ha
 /* 8030DA70 002D7030  90 1D 00 1C */	stw r0, 0x1c(r29)
-/* 8030DA74 002D7034  38 84 DF 20 */	addi r4, r4, func_8030DF20@l
+/* 8030DA74 002D7034  38 84 DF 20 */	addi r4, r4, cbForStateBusy@l
 /* 8030DA78 002D7038  80 7D 00 18 */	lwz r3, 0x18(r29)
 /* 8030DA7C 002D703C  48 00 2F C5 */	bl DVDLowReadDiskID
 /* 8030DA80 002D7040  48 00 04 88 */	b lbl_8030DF08
-
-.global func_8030DA84
-func_8030DA84:
+.global lbl_8030DA84
+lbl_8030DA84:
 /* 8030DA84 002D7044  80 1D 00 14 */	lwz r0, 0x14(r29)
 /* 8030DA88 002D7048  2C 00 00 00 */	cmpwi r0, 0
 /* 8030DA8C 002D704C  40 82 00 3C */	bne lbl_8030DAC8
@@ -3543,7 +3508,7 @@ func_8030DA84:
 /* 8030DAB8 002D7078  7D 89 03 A6 */	mtctr r12
 /* 8030DABC 002D707C  4E 80 04 21 */	bctrl 
 lbl_8030DAC0:
-/* 8030DAC0 002D7080  4B FF FB 91 */	bl func_8030D650
+/* 8030DAC0 002D7080  4B FF FB 91 */	bl stateReady
 /* 8030DAC4 002D7084  48 00 04 44 */	b lbl_8030DF08
 lbl_8030DAC8:
 /* 8030DAC8 002D7088  38 60 00 00 */	li r3, 0
@@ -3595,9 +3560,9 @@ lbl_8030DB20:
 /* 8030DB78 002D7138  7F E3 FB 78 */	mr r3, r31
 /* 8030DB7C 002D713C  48 04 AE 75 */	bl OSRestoreInterrupts
 /* 8030DB80 002D7140  80 7D 00 20 */	lwz r3, 0x20(r29)
-/* 8030DB84 002D7144  3C C0 80 31 */	lis r6, func_8030DF20@ha
+/* 8030DB84 002D7144  3C C0 80 31 */	lis r6, cbForStateBusy@ha
 /* 8030DB88 002D7148  80 FD 00 18 */	lwz r7, 0x18(r29)
-/* 8030DB8C 002D714C  38 C6 DF 20 */	addi r6, r6, func_8030DF20@l
+/* 8030DB8C 002D714C  38 C6 DF 20 */	addi r6, r6, cbForStateBusy@l
 /* 8030DB90 002D7150  54 60 F0 BE */	srwi r0, r3, 2
 /* 8030DB94 002D7154  80 BD 00 10 */	lwz r5, 0x10(r29)
 /* 8030DB98 002D7158  80 9D 00 1C */	lwz r4, 0x1c(r29)
@@ -3605,80 +3570,72 @@ lbl_8030DB20:
 /* 8030DBA0 002D7160  7C A5 02 14 */	add r5, r5, r0
 /* 8030DBA4 002D7164  48 00 47 AD */	bl DVDLowRead
 /* 8030DBA8 002D7168  48 00 03 60 */	b lbl_8030DF08
-
-.global func_8030DBAC
-func_8030DBAC:
+.global lbl_8030DBAC
+lbl_8030DBAC:
 /* 8030DBAC 002D716C  38 60 00 00 */	li r3, 0
 /* 8030DBB0 002D7170  48 00 4F 81 */	bl DVDLowClearCoverInterrupt
-/* 8030DBB4 002D7174  3C 80 80 31 */	lis r4, func_8030DF20@ha
+/* 8030DBB4 002D7174  3C 80 80 31 */	lis r4, cbForStateBusy@ha
 /* 8030DBB8 002D7178  80 7D 00 10 */	lwz r3, 0x10(r29)
-/* 8030DBBC 002D717C  38 84 DF 20 */	addi r4, r4, func_8030DF20@l
+/* 8030DBBC 002D717C  38 84 DF 20 */	addi r4, r4, cbForStateBusy@l
 /* 8030DBC0 002D7180  48 00 49 41 */	bl DVDLowSeek
 /* 8030DBC4 002D7184  48 00 03 44 */	b lbl_8030DF08
-
-.global func_8030DBC8
-func_8030DBC8:
-/* 8030DBC8 002D7188  3C A0 80 31 */	lis r5, func_8030DF20@ha
+.global lbl_8030DBC8
+lbl_8030DBC8:
+/* 8030DBC8 002D7188  3C A0 80 31 */	lis r5, cbForStateBusy@ha
 /* 8030DBCC 002D718C  38 60 00 00 */	li r3, 0
-/* 8030DBD0 002D7190  38 A5 DF 20 */	addi r5, r5, func_8030DF20@l
+/* 8030DBD0 002D7190  38 A5 DF 20 */	addi r5, r5, cbForStateBusy@l
 /* 8030DBD4 002D7194  38 80 00 00 */	li r4, 0
 /* 8030DBD8 002D7198  48 00 3C 99 */	bl DVDLowStopMotor
 /* 8030DBDC 002D719C  48 00 03 2C */	b lbl_8030DF08
-
-.global func_8030DBE0
-func_8030DBE0:
-/* 8030DBE0 002D71A0  3C A0 80 31 */	lis r5, func_8030DF20@ha
+.global lbl_8030DBE0
+lbl_8030DBE0:
+/* 8030DBE0 002D71A0  3C A0 80 31 */	lis r5, cbForStateBusy@ha
 /* 8030DBE4 002D71A4  38 60 00 00 */	li r3, 0
-/* 8030DBE8 002D71A8  38 A5 DF 20 */	addi r5, r5, func_8030DF20@l
+/* 8030DBE8 002D71A8  38 A5 DF 20 */	addi r5, r5, cbForStateBusy@l
 /* 8030DBEC 002D71AC  38 80 00 00 */	li r4, 0
 /* 8030DBF0 002D71B0  48 00 3C 81 */	bl DVDLowStopMotor
 /* 8030DBF4 002D71B4  48 00 03 14 */	b lbl_8030DF08
-
-.global func_8030DBF8
-func_8030DBF8:
+.global lbl_8030DBF8
+lbl_8030DBF8:
 /* 8030DBF8 002D71B8  38 60 00 00 */	li r3, 0
 /* 8030DBFC 002D71BC  48 00 4F 35 */	bl DVDLowClearCoverInterrupt
-/* 8030DC00 002D71C0  3C A0 80 31 */	lis r5, func_8030DF20@ha
+/* 8030DC00 002D71C0  3C A0 80 31 */	lis r5, cbForStateBusy@ha
 /* 8030DC04 002D71C4  80 7D 00 10 */	lwz r3, 0x10(r29)
 /* 8030DC08 002D71C8  80 9D 00 14 */	lwz r4, 0x14(r29)
-/* 8030DC0C 002D71CC  38 A5 DF 20 */	addi r5, r5, func_8030DF20@l
+/* 8030DC0C 002D71CC  38 A5 DF 20 */	addi r5, r5, cbForStateBusy@l
 /* 8030DC10 002D71D0  48 00 42 71 */	bl DVDLowAudioBufferConfig
 /* 8030DC14 002D71D4  48 00 02 F4 */	b lbl_8030DF08
-
-.global func_8030DC18
-func_8030DC18:
+.global lbl_8030DC18
+lbl_8030DC18:
 /* 8030DC18 002D71D8  38 60 00 00 */	li r3, 0
 /* 8030DC1C 002D71DC  48 00 4F 15 */	bl DVDLowClearCoverInterrupt
 /* 8030DC20 002D71E0  38 00 00 20 */	li r0, 0x20
-/* 8030DC24 002D71E4  3C 80 80 31 */	lis r4, func_8030DF20@ha
+/* 8030DC24 002D71E4  3C 80 80 31 */	lis r4, cbForStateBusy@ha
 /* 8030DC28 002D71E8  90 1D 00 1C */	stw r0, 0x1c(r29)
-/* 8030DC2C 002D71EC  38 84 DF 20 */	addi r4, r4, func_8030DF20@l
+/* 8030DC2C 002D71EC  38 84 DF 20 */	addi r4, r4, cbForStateBusy@l
 /* 8030DC30 002D71F0  80 7D 00 18 */	lwz r3, 0x18(r29)
 /* 8030DC34 002D71F4  48 00 3D DD */	bl DVDLowInquiry
 /* 8030DC38 002D71F8  48 00 02 D0 */	b lbl_8030DF08
-
-.global func_8030DC3C
-func_8030DC3C:
+.global lbl_8030DC3C
+lbl_8030DC3C:
 /* 8030DC3C 002D71FC  38 60 00 00 */	li r3, 0
 /* 8030DC40 002D7200  48 00 4E F1 */	bl DVDLowClearCoverInterrupt
-/* 8030DC44 002D7204  3C A0 80 31 */	lis r5, func_8030DF20@ha
+/* 8030DC44 002D7204  3C A0 80 31 */	lis r5, cbForStateBusy@ha
 /* 8030DC48 002D7208  38 60 00 00 */	li r3, 0
-/* 8030DC4C 002D720C  38 A5 DF 20 */	addi r5, r5, func_8030DF20@l
+/* 8030DC4C 002D720C  38 A5 DF 20 */	addi r5, r5, cbForStateBusy@l
 /* 8030DC50 002D7210  38 80 00 00 */	li r4, 0
 /* 8030DC54 002D7214  48 00 3C 1D */	bl DVDLowStopMotor
 /* 8030DC58 002D7218  48 00 02 B0 */	b lbl_8030DF08
-
-.global func_8030DC5C
-func_8030DC5C:
+.global lbl_8030DC5C
+lbl_8030DC5C:
 /* 8030DC5C 002D721C  38 60 00 01 */	li r3, 1
 /* 8030DC60 002D7220  48 00 40 91 */	bl DVDLowSetSpinupFlag
-/* 8030DC64 002D7224  3C 60 80 31 */	lis r3, func_8030DF20@ha
-/* 8030DC68 002D7228  38 63 DF 20 */	addi r3, r3, func_8030DF20@l
+/* 8030DC64 002D7224  3C 60 80 31 */	lis r3, cbForStateBusy@ha
+/* 8030DC68 002D7228  38 63 DF 20 */	addi r3, r3, cbForStateBusy@l
 /* 8030DC6C 002D722C  48 00 40 95 */	bl DVDLowReset
 /* 8030DC70 002D7230  48 00 02 98 */	b lbl_8030DF08
-
-.global func_8030DC74
-func_8030DC74:
+.global lbl_8030DC74
+lbl_8030DC74:
 /* 8030DC74 002D7234  80 1D 00 14 */	lwz r0, 0x14(r29)
 /* 8030DC78 002D7238  2C 00 00 00 */	cmpwi r0, 0
 /* 8030DC7C 002D723C  40 82 00 3C */	bne lbl_8030DCB8
@@ -3695,7 +3652,7 @@ func_8030DC74:
 /* 8030DCA8 002D7268  7D 89 03 A6 */	mtctr r12
 /* 8030DCAC 002D726C  4E 80 04 21 */	bctrl 
 lbl_8030DCB0:
-/* 8030DCB0 002D7270  4B FF F9 A1 */	bl func_8030D650
+/* 8030DCB0 002D7270  4B FF F9 A1 */	bl stateReady
 /* 8030DCB4 002D7274  48 00 02 54 */	b lbl_8030DF08
 lbl_8030DCB8:
 /* 8030DCB8 002D7278  38 60 00 00 */	li r3, 0
@@ -3747,9 +3704,9 @@ lbl_8030DD10:
 /* 8030DD68 002D7328  7F E3 FB 78 */	mr r3, r31
 /* 8030DD6C 002D732C  48 04 AC 85 */	bl OSRestoreInterrupts
 /* 8030DD70 002D7330  80 7D 00 20 */	lwz r3, 0x20(r29)
-/* 8030DD74 002D7334  3C C0 80 31 */	lis r6, func_8030DF20@ha
+/* 8030DD74 002D7334  3C C0 80 31 */	lis r6, cbForStateBusy@ha
 /* 8030DD78 002D7338  80 FD 00 18 */	lwz r7, 0x18(r29)
-/* 8030DD7C 002D733C  38 C6 DF 20 */	addi r6, r6, func_8030DF20@l
+/* 8030DD7C 002D733C  38 C6 DF 20 */	addi r6, r6, cbForStateBusy@l
 /* 8030DD80 002D7340  54 60 F0 BE */	srwi r0, r3, 2
 /* 8030DD84 002D7344  80 BD 00 10 */	lwz r5, 0x10(r29)
 /* 8030DD88 002D7348  80 9D 00 1C */	lwz r4, 0x1c(r29)
@@ -3757,70 +3714,63 @@ lbl_8030DD10:
 /* 8030DD90 002D7350  7C A5 02 14 */	add r5, r5, r0
 /* 8030DD94 002D7354  48 00 39 3D */	bl DVDLowUnencryptedRead
 /* 8030DD98 002D7358  48 00 01 70 */	b lbl_8030DF08
-
-.global func_8030DD9C
-func_8030DD9C:
+.global lbl_8030DD9C
+lbl_8030DD9C:
 /* 8030DD9C 002D735C  38 60 00 00 */	li r3, 0
 /* 8030DDA0 002D7360  48 00 4D 91 */	bl DVDLowClearCoverInterrupt
-/* 8030DDA4 002D7364  3D 00 80 31 */	lis r8, func_8030DF20@ha
+/* 8030DDA4 002D7364  3D 00 80 31 */	lis r8, cbForStateBusy@ha
 /* 8030DDA8 002D7368  80 7D 00 10 */	lwz r3, 0x10(r29)
 /* 8030DDAC 002D736C  80 FD 00 18 */	lwz r7, 0x18(r29)
-/* 8030DDB0 002D7370  39 08 DF 20 */	addi r8, r8, func_8030DF20@l
+/* 8030DDB0 002D7370  39 08 DF 20 */	addi r8, r8, cbForStateBusy@l
 /* 8030DDB4 002D7374  38 80 00 00 */	li r4, 0
 /* 8030DDB8 002D7378  38 A0 00 00 */	li r5, 0
 /* 8030DDBC 002D737C  38 C0 00 00 */	li r6, 0
 /* 8030DDC0 002D7380  48 00 2E 11 */	bl DVDLowOpenPartition
 /* 8030DDC4 002D7384  48 00 01 44 */	b lbl_8030DF08
-
-.global func_8030DDC8
-func_8030DDC8:
+.global lbl_8030DDC8
+lbl_8030DDC8:
 /* 8030DDC8 002D7388  38 60 00 00 */	li r3, 0
 /* 8030DDCC 002D738C  48 00 4D 65 */	bl DVDLowClearCoverInterrupt
-/* 8030DDD0 002D7390  3C 60 80 31 */	lis r3, func_8030DF20@ha
-/* 8030DDD4 002D7394  38 63 DF 20 */	addi r3, r3, func_8030DF20@l
+/* 8030DDD0 002D7390  3C 60 80 31 */	lis r3, cbForStateBusy@ha
+/* 8030DDD4 002D7394  38 63 DF 20 */	addi r3, r3, cbForStateBusy@l
 /* 8030DDD8 002D7398  48 00 37 89 */	bl DVDLowClosePartition
 /* 8030DDDC 002D739C  48 00 01 2C */	b lbl_8030DF08
-
-.global func_8030DDE0
-func_8030DDE0:
-/* 8030DDE0 002D73A0  3C 60 80 31 */	lis r3, func_8030DF20@ha
-/* 8030DDE4 002D73A4  38 63 DF 20 */	addi r3, r3, func_8030DF20@l
+.global lbl_8030DDE0
+lbl_8030DDE0:
+/* 8030DDE0 002D73A0  3C 60 80 31 */	lis r3, cbForStateBusy@ha
+/* 8030DDE4 002D73A4  38 63 DF 20 */	addi r3, r3, cbForStateBusy@l
 /* 8030DDE8 002D73A8  48 00 48 C9 */	bl DVDLowPrepareCoverRegister
 /* 8030DDEC 002D73AC  48 00 01 1C */	b lbl_8030DF08
-
-.global func_8030DDF0
-func_8030DDF0:
-/* 8030DDF0 002D73B0  3C 60 80 31 */	lis r3, func_8030DF20@ha
-/* 8030DDF4 002D73B4  38 63 DF 20 */	addi r3, r3, func_8030DF20@l
+.global lbl_8030DDF0
+lbl_8030DDF0:
+/* 8030DDF0 002D73B0  3C 60 80 31 */	lis r3, cbForStateBusy@ha
+/* 8030DDF4 002D73B4  38 63 DF 20 */	addi r3, r3, cbForStateBusy@l
 /* 8030DDF8 002D73B8  48 00 48 B9 */	bl DVDLowPrepareCoverRegister
 /* 8030DDFC 002D73BC  48 00 01 0C */	b lbl_8030DF08
-
-.global func_8030DE00
-func_8030DE00:
+.global lbl_8030DE00
+lbl_8030DE00:
 /* 8030DE00 002D73C0  38 60 00 00 */	li r3, 0
 /* 8030DE04 002D73C4  48 00 4D 2D */	bl DVDLowClearCoverInterrupt
-/* 8030DE08 002D73C8  3C 80 80 31 */	lis r4, func_8030DF20@ha
+/* 8030DE08 002D73C8  3C 80 80 31 */	lis r4, cbForStateBusy@ha
 /* 8030DE0C 002D73CC  3C 60 00 02 */	lis r3, 2
-/* 8030DE10 002D73D0  38 84 DF 20 */	addi r4, r4, func_8030DF20@l
+/* 8030DE10 002D73D0  38 84 DF 20 */	addi r4, r4, cbForStateBusy@l
 /* 8030DE14 002D73D4  48 00 43 AD */	bl DVDLowSetMaximumRotation
 /* 8030DE18 002D73D8  48 00 00 F0 */	b lbl_8030DF08
-
-.global func_8030DE1C
-func_8030DE1C:
+.global lbl_8030DE1C
+lbl_8030DE1C:
 /* 8030DE1C 002D73DC  38 60 00 00 */	li r3, 0
 /* 8030DE20 002D73E0  48 00 4D 11 */	bl DVDLowClearCoverInterrupt
 /* 8030DE24 002D73E4  3C 60 80 5D */	lis r3, lbl_805CC8C0@ha
 /* 8030DE28 002D73E8  38 00 00 20 */	li r0, 0x20
 /* 8030DE2C 002D73EC  38 63 C8 C0 */	addi r3, r3, lbl_805CC8C0@l
-/* 8030DE30 002D73F0  3C 80 80 31 */	lis r4, func_8030DF20@ha
+/* 8030DE30 002D73F0  3C 80 80 31 */	lis r4, cbForStateBusy@ha
 /* 8030DE34 002D73F4  90 7D 00 18 */	stw r3, 0x18(r29)
-/* 8030DE38 002D73F8  38 84 DF 20 */	addi r4, r4, func_8030DF20@l
+/* 8030DE38 002D73F8  38 84 DF 20 */	addi r4, r4, cbForStateBusy@l
 /* 8030DE3C 002D73FC  90 1D 00 1C */	stw r0, 0x1c(r29)
 /* 8030DE40 002D7400  48 00 2C 01 */	bl DVDLowReadDiskID
 /* 8030DE44 002D7404  48 00 00 C4 */	b lbl_8030DF08
-
-.global func_8030DE48
-func_8030DE48:
+.global lbl_8030DE48
+lbl_8030DE48:
 /* 8030DE48 002D7408  38 60 00 00 */	li r3, 0
 /* 8030DE4C 002D740C  48 00 4C E5 */	bl DVDLowClearCoverInterrupt
 /* 8030DE50 002D7410  81 5D 00 18 */	lwz r10, 0x18(r29)
@@ -3830,17 +3780,17 @@ func_8030DE48:
 /* 8030DE60 002D7420  80 0A 4D C0 */	lwz r0, 0x4dc0(r10)
 /* 8030DE64 002D7424  2C 00 00 00 */	cmpwi r0, 0
 /* 8030DE68 002D7428  40 82 00 20 */	bne lbl_8030DE88
-/* 8030DE6C 002D742C  3C C0 80 31 */	lis r6, func_8030DF20@ha
+/* 8030DE6C 002D742C  3C C0 80 31 */	lis r6, cbForStateBusy@ha
 /* 8030DE70 002D7430  80 7D 00 10 */	lwz r3, 0x10(r29)
 /* 8030DE74 002D7434  38 8A 03 A0 */	addi r4, r10, 0x3a0
 /* 8030DE78 002D7438  38 AA 4D C0 */	addi r5, r10, 0x4dc0
-/* 8030DE7C 002D743C  38 C6 DF 20 */	addi r6, r6, func_8030DF20@l
+/* 8030DE7C 002D743C  38 C6 DF 20 */	addi r6, r6, cbForStateBusy@l
 /* 8030DE80 002D7440  48 00 32 31 */	bl DVDLowGetNoDiscBufferSizes
 /* 8030DE84 002D7444  48 00 00 84 */	b lbl_8030DF08
 lbl_8030DE88:
-/* 8030DE88 002D7448  3C 60 80 31 */	lis r3, func_8030DF20@ha
+/* 8030DE88 002D7448  3C 60 80 31 */	lis r3, cbForStateBusy@ha
 /* 8030DE8C 002D744C  7D 44 53 78 */	mr r4, r10
-/* 8030DE90 002D7450  38 63 DF 20 */	addi r3, r3, func_8030DF20@l
+/* 8030DE90 002D7450  38 63 DF 20 */	addi r3, r3, cbForStateBusy@l
 /* 8030DE94 002D7454  90 61 00 08 */	stw r3, 8(r1)
 /* 8030DE98 002D7458  38 AA 03 A0 */	addi r5, r10, 0x3a0
 /* 8030DE9C 002D745C  38 CA 03 C0 */	addi r6, r10, 0x3c0
@@ -3851,15 +3801,14 @@ lbl_8030DE88:
 /* 8030DEB0 002D7470  39 4A 5E 00 */	addi r10, r10, 0x5e00
 /* 8030DEB4 002D7474  48 00 34 0D */	bl DVDLowGetNoDiscOpenPartitionParams
 /* 8030DEB8 002D7478  48 00 00 50 */	b lbl_8030DF08
-
-.global func_8030DEBC
-func_8030DEBC:
+.global lbl_8030DEBC
+lbl_8030DEBC:
 /* 8030DEBC 002D747C  38 60 00 00 */	li r3, 0
 /* 8030DEC0 002D7480  48 00 4C 71 */	bl DVDLowClearCoverInterrupt
 /* 8030DEC4 002D7484  81 1D 00 18 */	lwz r8, 0x18(r29)
-/* 8030DEC8 002D7488  3D 20 80 31 */	lis r9, func_8030DF20@ha
+/* 8030DEC8 002D7488  3D 20 80 31 */	lis r9, cbForStateBusy@ha
 /* 8030DECC 002D748C  80 7D 00 10 */	lwz r3, 0x10(r29)
-/* 8030DED0 002D7490  39 29 DF 20 */	addi r9, r9, func_8030DF20@l
+/* 8030DED0 002D7490  39 29 DF 20 */	addi r9, r9, cbForStateBusy@l
 /* 8030DED4 002D7494  80 A8 03 A0 */	lwz r5, 0x3a0(r8)
 /* 8030DED8 002D7498  38 88 02 C0 */	addi r4, r8, 0x2c0
 /* 8030DEDC 002D749C  80 E8 4D C0 */	lwz r7, 0x4dc0(r8)
@@ -3867,13 +3816,12 @@ func_8030DEBC:
 /* 8030DEE4 002D74A4  39 08 4D E0 */	addi r8, r8, 0x4de0
 /* 8030DEE8 002D74A8  48 00 2F 59 */	bl DVDLowOpenPartitionWithTmdAndTicketView
 /* 8030DEEC 002D74AC  48 00 00 1C */	b lbl_8030DF08
-
-.global func_8030DEF0
-func_8030DEF0:
+.global lbl_8030DEF0
+lbl_8030DEF0:
 /* 8030DEF0 002D74B0  81 8D 98 08 */	lwz r12, lbl_80665988@sda21(r13)
-/* 8030DEF4 002D74B4  3C 80 80 31 */	lis r4, func_8030DF20@ha
+/* 8030DEF4 002D74B4  3C 80 80 31 */	lis r4, cbForStateBusy@ha
 /* 8030DEF8 002D74B8  7F A3 EB 78 */	mr r3, r29
-/* 8030DEFC 002D74BC  38 84 DF 20 */	addi r4, r4, func_8030DF20@l
+/* 8030DEFC 002D74BC  38 84 DF 20 */	addi r4, r4, cbForStateBusy@l
 /* 8030DF00 002D74C0  7D 89 03 A6 */	mtctr r12
 /* 8030DF04 002D74C4  4E 80 04 21 */	bctrl 
 lbl_8030DF08:
@@ -3884,8 +3832,9 @@ lbl_8030DF08:
 /* 8030DF18 002D74D8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8030DF1C 002D74DC  4E 80 00 20 */	blr
 
-.global func_8030DF20
-func_8030DF20:
+
+.global cbForStateBusy
+cbForStateBusy:
 /* 8030DF20 002D74E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030DF24 002D74E4  7C 08 02 A6 */	mflr r0
 /* 8030DF28 002D74E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -3919,7 +3868,7 @@ lbl_8030DF80:
 /* 8030DF90 002D7550  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030DF94 002D7554  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8030DF98 002D7558  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030DF9C 002D755C  48 00 21 05 */	bl func_803100A0
+/* 8030DF9C 002D755C  48 00 21 05 */	bl __DVDStoreErrorCode
 /* 8030DFA0 002D7560  48 00 09 44 */	b lbl_8030E8E4
 lbl_8030DFA4:
 /* 8030DFA4 002D7564  28 1F 00 20 */	cmplwi r31, 0x20
@@ -3928,7 +3877,7 @@ lbl_8030DFA4:
 /* 8030DFB0 002D7570  3C 80 80 31 */	lis r4, cbForStoreErrorCode2@ha
 /* 8030DFB4 002D7574  38 63 45 69 */	addi r3, r3, 0x01234569@l
 /* 8030DFB8 002D7578  38 84 AF 20 */	addi r4, r4, cbForStoreErrorCode2@l
-/* 8030DFBC 002D757C  48 00 20 E5 */	bl func_803100A0
+/* 8030DFBC 002D757C  48 00 20 E5 */	bl __DVDStoreErrorCode
 /* 8030DFC0 002D7580  48 00 09 24 */	b lbl_8030E8E4
 lbl_8030DFC4:
 /* 8030DFC4 002D7584  80 0D B6 E4 */	lwz r0, lbl_80667864@sda21(r13)
@@ -3944,7 +3893,7 @@ lbl_8030DFDC:
 /* 8030DFE8 002D75A8  3C 80 80 31 */	lis r4, cbForStoreErrorCode1@ha
 /* 8030DFEC 002D75AC  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 8030DFF0 002D75B0  38 84 AF 00 */	addi r4, r4, cbForStoreErrorCode1@l
-/* 8030DFF4 002D75B4  48 00 20 AD */	bl func_803100A0
+/* 8030DFF4 002D75B4  48 00 20 AD */	bl __DVDStoreErrorCode
 /* 8030DFF8 002D75B8  48 00 08 EC */	b lbl_8030E8E4
 lbl_8030DFFC:
 /* 8030DFFC 002D75BC  38 00 00 00 */	li r0, 0
@@ -3983,7 +3932,7 @@ lbl_8030E064:
 /* 8030E078 002D7638  7D 89 03 A6 */	mtctr r12
 /* 8030E07C 002D763C  4E 80 04 21 */	bctrl 
 lbl_8030E080:
-/* 8030E080 002D7640  4B FF F5 D1 */	bl func_8030D650
+/* 8030E080 002D7640  4B FF F5 D1 */	bl stateReady
 /* 8030E084 002D7644  38 00 00 01 */	li r0, 1
 /* 8030E088 002D7648  48 00 00 08 */	b lbl_8030E090
 lbl_8030E08C:
@@ -4012,13 +3961,13 @@ lbl_8030E090:
 /* 8030E0E0 002D76A0  3C A0 80 00 */	lis r5, 0x800000F8@ha
 /* 8030E0E4 002D76A4  3C 80 10 62 */	lis r4, 0x10624DD3@ha
 /* 8030E0E8 002D76A8  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
-/* 8030E0EC 002D76AC  3D 20 80 31 */	lis r9, lbl_8030D620@ha
+/* 8030E0EC 002D76AC  3D 20 80 31 */	lis r9, CoverAlarmHandler@ha
 /* 8030E0F0 002D76B0  7C 66 1B 78 */	mr r6, r3
 /* 8030E0F4 002D76B4  38 84 4D D3 */	addi r4, r4, 0x10624DD3@l
 /* 8030E0F8 002D76B8  54 00 F0 BE */	srwi r0, r0, 2
 /* 8030E0FC 002D76BC  38 7E 4B 80 */	addi r3, r30, 0x4b80
 /* 8030E100 002D76C0  7C 04 00 16 */	mulhwu r0, r4, r0
-/* 8030E104 002D76C4  39 29 D6 20 */	addi r9, r9, lbl_8030D620@l
+/* 8030E104 002D76C4  39 29 D6 20 */	addi r9, r9, CoverAlarmHandler@l
 /* 8030E108 002D76C8  38 A0 00 00 */	li r5, 0
 /* 8030E10C 002D76CC  38 E0 00 00 */	li r7, 0
 /* 8030E110 002D76D0  54 00 D1 BE */	srwi r0, r0, 6
@@ -4091,7 +4040,7 @@ lbl_8030E1E4:
 /* 8030E1F8 002D77B8  7D 89 03 A6 */	mtctr r12
 /* 8030E1FC 002D77BC  4E 80 04 21 */	bctrl 
 lbl_8030E200:
-/* 8030E200 002D77C0  4B FF F4 51 */	bl func_8030D650
+/* 8030E200 002D77C0  4B FF F4 51 */	bl stateReady
 /* 8030E204 002D77C4  48 00 06 E0 */	b lbl_8030E8E4
 lbl_8030E208:
 /* 8030E208 002D77C8  57 E0 07 FF */	clrlwi. r0, r31, 0x1f
@@ -4125,7 +4074,7 @@ lbl_8030E248:
 /* 8030E270 002D7830  7D 89 03 A6 */	mtctr r12
 /* 8030E274 002D7834  4E 80 04 21 */	bctrl 
 lbl_8030E278:
-/* 8030E278 002D7838  4B FF F3 D9 */	bl func_8030D650
+/* 8030E278 002D7838  4B FF F3 D9 */	bl stateReady
 /* 8030E27C 002D783C  48 00 06 68 */	b lbl_8030E8E4
 lbl_8030E280:
 /* 8030E280 002D7840  80 0D B6 E4 */	lwz r0, lbl_80667864@sda21(r13)
@@ -4148,7 +4097,7 @@ lbl_8030E280:
 /* 8030E2C4 002D7884  7D 89 03 A6 */	mtctr r12
 /* 8030E2C8 002D7888  4E 80 04 21 */	bctrl 
 lbl_8030E2CC:
-/* 8030E2CC 002D788C  4B FF F3 85 */	bl func_8030D650
+/* 8030E2CC 002D788C  4B FF F3 85 */	bl stateReady
 /* 8030E2D0 002D7890  48 00 06 14 */	b lbl_8030E8E4
 lbl_8030E2D4:
 /* 8030E2D4 002D7894  80 0D B6 70 */	lwz r0, lbl_806677F0@sda21(r13)
@@ -4177,7 +4126,7 @@ lbl_8030E318:
 /* 8030E32C 002D78EC  7D 89 03 A6 */	mtctr r12
 /* 8030E330 002D78F0  4E 80 04 21 */	bctrl 
 lbl_8030E334:
-/* 8030E334 002D78F4  4B FF F3 1D */	bl func_8030D650
+/* 8030E334 002D78F4  4B FF F3 1D */	bl stateReady
 /* 8030E338 002D78F8  38 00 00 01 */	li r0, 1
 /* 8030E33C 002D78FC  48 00 00 08 */	b lbl_8030E344
 lbl_8030E340:
@@ -4234,7 +4183,7 @@ lbl_8030E3D0:
 /* 8030E3F8 002D79B8  7D 89 03 A6 */	mtctr r12
 /* 8030E3FC 002D79BC  4E 80 04 21 */	bctrl 
 lbl_8030E400:
-/* 8030E400 002D79C0  4B FF F2 51 */	bl func_8030D650
+/* 8030E400 002D79C0  4B FF F2 51 */	bl stateReady
 /* 8030E404 002D79C4  48 00 04 E0 */	b lbl_8030E8E4
 lbl_8030E408:
 /* 8030E408 002D79C8  80 0D B6 E4 */	lwz r0, lbl_80667864@sda21(r13)
@@ -4270,7 +4219,7 @@ lbl_8030E448:
 /* 8030E470 002D7A30  7D 89 03 A6 */	mtctr r12
 /* 8030E474 002D7A34  4E 80 04 21 */	bctrl 
 lbl_8030E478:
-/* 8030E478 002D7A38  4B FF F1 D9 */	bl func_8030D650
+/* 8030E478 002D7A38  4B FF F1 D9 */	bl stateReady
 /* 8030E47C 002D7A3C  48 00 04 68 */	b lbl_8030E8E4
 lbl_8030E480:
 /* 8030E480 002D7A40  80 0D B6 E4 */	lwz r0, lbl_80667864@sda21(r13)
@@ -4279,7 +4228,7 @@ lbl_8030E480:
 /* 8030E48C 002D7A4C  80 8D B6 F0 */	lwz r4, lbl_80667870@sda21(r13)
 /* 8030E490 002D7A50  38 7E 4B C0 */	addi r3, r30, 0x4bc0
 /* 8030E494 002D7A54  80 84 00 24 */	lwz r4, 0x24(r4)
-/* 8030E498 002D7A58  48 00 1C 79 */	bl func_80310110
+/* 8030E498 002D7A58  48 00 1C 79 */	bl DVDCompareDiskID
 /* 8030E49C 002D7A5C  2C 03 00 00 */	cmpwi r3, 0
 /* 8030E4A0 002D7A60  41 82 00 5C */	beq lbl_8030E4FC
 /* 8030E4A4 002D7A64  80 6D B6 EC */	lwz r3, lbl_8066786C@sda21(r13)
@@ -4303,7 +4252,7 @@ lbl_8030E480:
 lbl_8030E4EC:
 /* 8030E4EC 002D7AAC  38 00 00 00 */	li r0, 0
 /* 8030E4F0 002D7AB0  90 0D B6 78 */	stw r0, lbl_806677F8@sda21(r13)
-/* 8030E4F4 002D7AB4  4B FF F1 5D */	bl func_8030D650
+/* 8030E4F4 002D7AB4  4B FF F1 5D */	bl stateReady
 /* 8030E4F8 002D7AB8  48 00 03 EC */	b lbl_8030E8E4
 lbl_8030E4FC:
 /* 8030E4FC 002D7ABC  48 04 A4 B5 */	bl OSDisableInterrupts
@@ -4340,9 +4289,9 @@ lbl_8030E518:
 /* 8030E574 002D7B34  90 64 00 2C */	stw r3, 0x2c(r4)
 /* 8030E578 002D7B38  7F C3 F3 78 */	mr r3, r30
 /* 8030E57C 002D7B3C  48 04 A4 75 */	bl OSRestoreInterrupts
-/* 8030E580 002D7B40  3C A0 80 31 */	lis r5, lbl_8030C7A0@ha
+/* 8030E580 002D7B40  3C A0 80 31 */	lis r5, cbForStateCheckID1@ha
 /* 8030E584 002D7B44  38 60 00 00 */	li r3, 0
-/* 8030E588 002D7B48  38 A5 C7 A0 */	addi r5, r5, lbl_8030C7A0@l
+/* 8030E588 002D7B48  38 A5 C7 A0 */	addi r5, r5, cbForStateCheckID1@l
 /* 8030E58C 002D7B4C  38 80 00 00 */	li r4, 0
 /* 8030E590 002D7B50  48 00 32 E1 */	bl DVDLowStopMotor
 /* 8030E594 002D7B54  48 00 03 50 */	b lbl_8030E8E4
@@ -4355,7 +4304,7 @@ lbl_8030E598:
 /* 8030E5AC 002D7B6C  80 04 5D E0 */	lwz r0, 0x5de0(r4)
 /* 8030E5B0 002D7B70  2C 00 00 00 */	cmpwi r0, 0
 /* 8030E5B4 002D7B74  40 82 00 0C */	bne lbl_8030E5C0
-/* 8030E5B8 002D7B78  4B FF F3 B9 */	bl func_8030D970
+/* 8030E5B8 002D7B78  4B FF F3 B9 */	bl stateBusy
 /* 8030E5BC 002D7B7C  48 00 03 28 */	b lbl_8030E8E4
 lbl_8030E5C0:
 /* 8030E5C0 002D7B80  38 1E 4B 20 */	addi r0, r30, 0x4b20
@@ -4370,7 +4319,7 @@ lbl_8030E5C0:
 /* 8030E5E4 002D7BA4  7D 89 03 A6 */	mtctr r12
 /* 8030E5E8 002D7BA8  4E 80 04 21 */	bctrl 
 lbl_8030E5EC:
-/* 8030E5EC 002D7BAC  4B FF F0 65 */	bl func_8030D650
+/* 8030E5EC 002D7BAC  4B FF F0 65 */	bl stateReady
 /* 8030E5F0 002D7BB0  48 00 02 F4 */	b lbl_8030E8E4
 lbl_8030E5F4:
 /* 8030E5F4 002D7BB4  80 8D B6 E4 */	lwz r4, lbl_80667864@sda21(r13)
@@ -4403,7 +4352,7 @@ lbl_8030E640:
 /* 8030E650 002D7C10  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 8030E654 002D7C14  7C 04 00 40 */	cmplw r4, r0
 /* 8030E658 002D7C18  41 82 00 0C */	beq lbl_8030E664
-/* 8030E65C 002D7C1C  4B FF F3 15 */	bl func_8030D970
+/* 8030E65C 002D7C1C  4B FF F3 15 */	bl stateBusy
 /* 8030E660 002D7C20  48 00 02 84 */	b lbl_8030E8E4
 lbl_8030E664:
 /* 8030E664 002D7C24  38 1E 4B 20 */	addi r0, r30, 0x4b20
@@ -4418,7 +4367,7 @@ lbl_8030E664:
 /* 8030E688 002D7C48  7D 89 03 A6 */	mtctr r12
 /* 8030E68C 002D7C4C  4E 80 04 21 */	bctrl 
 lbl_8030E690:
-/* 8030E690 002D7C50  4B FF EF C1 */	bl func_8030D650
+/* 8030E690 002D7C50  4B FF EF C1 */	bl stateReady
 /* 8030E694 002D7C54  48 00 02 50 */	b lbl_8030E8E4
 lbl_8030E698:
 /* 8030E698 002D7C58  80 8D B6 E4 */	lwz r4, lbl_80667864@sda21(r13)
@@ -4482,7 +4431,7 @@ lbl_8030E738:
 /* 8030E75C 002D7D1C  7D 89 03 A6 */	mtctr r12
 /* 8030E760 002D7D20  4E 80 04 21 */	bctrl 
 lbl_8030E764:
-/* 8030E764 002D7D24  4B FF EE ED */	bl func_8030D650
+/* 8030E764 002D7D24  4B FF EE ED */	bl stateReady
 /* 8030E768 002D7D28  48 00 01 7C */	b lbl_8030E8E4
 lbl_8030E76C:
 /* 8030E76C 002D7D2C  83 ED B6 F0 */	lwz r31, lbl_80667870@sda21(r13)
@@ -4498,7 +4447,7 @@ lbl_8030E76C:
 /* 8030E794 002D7D54  7D 89 03 A6 */	mtctr r12
 /* 8030E798 002D7D58  4E 80 04 21 */	bctrl 
 lbl_8030E79C:
-/* 8030E79C 002D7D5C  4B FF EE B5 */	bl func_8030D650
+/* 8030E79C 002D7D5C  4B FF EE B5 */	bl stateReady
 /* 8030E7A0 002D7D60  48 00 01 44 */	b lbl_8030E8E4
 lbl_8030E7A4:
 /* 8030E7A4 002D7D64  80 0D B6 E4 */	lwz r0, lbl_80667864@sda21(r13)
@@ -4508,7 +4457,7 @@ lbl_8030E7A4:
 /* 8030E7B4 002D7D74  3C 80 80 31 */	lis r4, cbForStoreErrorCode1@ha
 /* 8030E7B8 002D7D78  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 8030E7BC 002D7D7C  38 84 AF 00 */	addi r4, r4, cbForStoreErrorCode1@l
-/* 8030E7C0 002D7D80  48 00 18 E1 */	bl func_803100A0
+/* 8030E7C0 002D7D80  48 00 18 E1 */	bl __DVDStoreErrorCode
 /* 8030E7C4 002D7D84  48 00 01 20 */	b lbl_8030E8E4
 lbl_8030E7C8:
 /* 8030E7C8 002D7D88  80 0D B6 E4 */	lwz r0, lbl_80667864@sda21(r13)
@@ -4558,7 +4507,7 @@ lbl_8030E85C:
 /* 8030E870 002D7E30  7D 89 03 A6 */	mtctr r12
 /* 8030E874 002D7E34  4E 80 04 21 */	bctrl 
 lbl_8030E878:
-/* 8030E878 002D7E38  4B FF ED D9 */	bl func_8030D650
+/* 8030E878 002D7E38  4B FF ED D9 */	bl stateReady
 /* 8030E87C 002D7E3C  38 00 00 01 */	li r0, 1
 /* 8030E880 002D7E40  48 00 00 08 */	b lbl_8030E888
 lbl_8030E884:
@@ -4579,15 +4528,15 @@ lbl_8030E888:
 /* 8030E8B8 002D7E78  7D 89 03 A6 */	mtctr r12
 /* 8030E8BC 002D7E7C  4E 80 04 21 */	bctrl 
 lbl_8030E8C0:
-/* 8030E8C0 002D7E80  4B FF ED 91 */	bl func_8030D650
+/* 8030E8C0 002D7E80  4B FF ED 91 */	bl stateReady
 /* 8030E8C4 002D7E84  48 00 00 20 */	b lbl_8030E8E4
 lbl_8030E8C8:
 /* 8030E8C8 002D7E88  38 60 00 27 */	li r3, 0x27
 /* 8030E8CC 002D7E8C  38 80 00 00 */	li r4, 0
 /* 8030E8D0 002D7E90  38 A0 00 00 */	li r5, 0
 /* 8030E8D4 002D7E94  4B FF BF CD */	bl StampCommand
-/* 8030E8D8 002D7E98  3C 60 80 31 */	lis r3, lbl_8030B130@ha
-/* 8030E8DC 002D7E9C  38 63 B1 30 */	addi r3, r3, lbl_8030B130@l
+/* 8030E8D8 002D7E98  3C 60 80 31 */	lis r3, cbForStateGettingError@ha
+/* 8030E8DC 002D7E9C  38 63 B1 30 */	addi r3, r3, cbForStateGettingError@l
 /* 8030E8E0 002D7EA0  48 00 32 A1 */	bl DVDLowRequestError
 lbl_8030E8E4:
 /* 8030E8E4 002D7EA4  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -4598,8 +4547,8 @@ lbl_8030E8E4:
 /* 8030E8F8 002D7EB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030E8FC 002D7EBC  4E 80 00 20 */	blr 
 
-.global func_8030E900
-func_8030E900:
+.global DVDReadAbsAsyncPrio
+DVDReadAbsAsyncPrio:
 /* 8030E900 002D7EC0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030E904 002D7EC4  7C 08 02 A6 */	mflr r0
 /* 8030E908 002D7EC8  39 20 00 01 */	li r9, 1
@@ -4640,7 +4589,7 @@ lbl_8030E980:
 /* 8030E98C 002D7F4C  7C 7E 1B 78 */	mr r30, r3
 /* 8030E990 002D7F50  7F E3 FB 78 */	mr r3, r31
 /* 8030E994 002D7F54  7F A4 EB 78 */	mr r4, r29
-/* 8030E998 002D7F58  48 00 0B 19 */	bl func_8030F4B0
+/* 8030E998 002D7F58  48 00 0B 19 */	bl __DVDPushWaitingQueue
 /* 8030E99C 002D7F5C  80 0D B6 F0 */	lwz r0, lbl_80667870@sda21(r13)
 /* 8030E9A0 002D7F60  7C 7F 1B 78 */	mr r31, r3
 /* 8030E9A4 002D7F64  2C 00 00 00 */	cmpwi r0, 0
@@ -4648,7 +4597,7 @@ lbl_8030E980:
 /* 8030E9AC 002D7F6C  80 0D B6 64 */	lwz r0, lbl_806677E4@sda21(r13)
 /* 8030E9B0 002D7F70  2C 00 00 00 */	cmpwi r0, 0
 /* 8030E9B4 002D7F74  40 82 00 08 */	bne lbl_8030E9BC
-/* 8030E9B8 002D7F78  4B FF EC 99 */	bl func_8030D650
+/* 8030E9B8 002D7F78  4B FF EC 99 */	bl stateReady
 lbl_8030E9BC:
 /* 8030E9BC 002D7F7C  7F C3 F3 78 */	mr r3, r30
 /* 8030E9C0 002D7F80  48 04 A0 31 */	bl OSRestoreInterrupts
@@ -4660,12 +4609,10 @@ lbl_8030E9BC:
 /* 8030E9D8 002D7F98  7C 08 03 A6 */	mtlr r0
 /* 8030E9DC 002D7F9C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030E9E0 002D7FA0  4E 80 00 20 */	blr 
-/* 8030E9E4 002D7FA4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030E9E8 002D7FA8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030E9EC 002D7FAC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030E9F0
-func_8030E9F0:
+.balign 16, 0
+.global DVDInquiryAsync
+DVDInquiryAsync:
 /* 8030E9F0 002D7FB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030E9F4 002D7FB4  7C 08 02 A6 */	mflr r0
 /* 8030E9F8 002D7FB8  38 E0 00 0E */	li r7, 0xe
@@ -4704,7 +4651,7 @@ lbl_8030EA68:
 /* 8030EA74 002D8034  7C 7E 1B 78 */	mr r30, r3
 /* 8030EA78 002D8038  7F E4 FB 78 */	mr r4, r31
 /* 8030EA7C 002D803C  38 60 00 02 */	li r3, 2
-/* 8030EA80 002D8040  48 00 0A 31 */	bl func_8030F4B0
+/* 8030EA80 002D8040  48 00 0A 31 */	bl __DVDPushWaitingQueue
 /* 8030EA84 002D8044  80 0D B6 F0 */	lwz r0, lbl_80667870@sda21(r13)
 /* 8030EA88 002D8048  7C 7F 1B 78 */	mr r31, r3
 /* 8030EA8C 002D804C  2C 00 00 00 */	cmpwi r0, 0
@@ -4712,7 +4659,7 @@ lbl_8030EA68:
 /* 8030EA94 002D8054  80 0D B6 64 */	lwz r0, lbl_806677E4@sda21(r13)
 /* 8030EA98 002D8058  2C 00 00 00 */	cmpwi r0, 0
 /* 8030EA9C 002D805C  40 82 00 08 */	bne lbl_8030EAA4
-/* 8030EAA0 002D8060  4B FF EB B1 */	bl func_8030D650
+/* 8030EAA0 002D8060  4B FF EB B1 */	bl stateReady
 lbl_8030EAA4:
 /* 8030EAA4 002D8064  7F C3 F3 78 */	mr r3, r30
 /* 8030EAA8 002D8068  48 04 9F 49 */	bl OSRestoreInterrupts
@@ -4723,11 +4670,10 @@ lbl_8030EAA4:
 /* 8030EABC 002D807C  7C 08 03 A6 */	mtlr r0
 /* 8030EAC0 002D8080  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030EAC4 002D8084  4E 80 00 20 */	blr 
-/* 8030EAC8 002D8088  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030EACC 002D808C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030EAD0
-func_8030EAD0:
+.balign 16, 0
+.global DVDGetCommandBlockStatus
+DVDGetCommandBlockStatus:
 /* 8030EAD0 002D8090  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030EAD4 002D8094  7C 08 02 A6 */	mflr r0
 /* 8030EAD8 002D8098  90 01 00 24 */	stw r0, 0x24(r1)
@@ -4754,7 +4700,7 @@ lbl_8030EB1C:
 /* 8030EB24 002D80E4  3B FF C9 50 */	addi r31, r31, lbl_805CC950@l
 /* 8030EB28 002D80E8  7C 00 F8 40 */	cmplw r0, r31
 /* 8030EB2C 002D80EC  40 82 00 40 */	bne lbl_8030EB6C
-/* 8030EB30 002D80F0  48 00 0A F1 */	bl func_8030F620
+/* 8030EB30 002D80F0  48 00 0A F1 */	bl __DVDGetNextWaitingQueue
 /* 8030EB34 002D80F4  2C 03 00 00 */	cmpwi r3, 0
 /* 8030EB38 002D80F8  41 82 00 1C */	beq lbl_8030EB54
 /* 8030EB3C 002D80FC  7C 1D 18 40 */	cmplw r29, r3
@@ -4785,11 +4731,10 @@ lbl_8030EB70:
 /* 8030EB8C 002D814C  7C 08 03 A6 */	mtlr r0
 /* 8030EB90 002D8150  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030EB94 002D8154  4E 80 00 20 */	blr 
-/* 8030EB98 002D8158  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030EB9C 002D815C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030EBA0
-func_8030EBA0:
+.balign 16, 0
+.global DVDGetDriveStatus
+DVDGetDriveStatus:
 /* 8030EBA0 002D8160  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030EBA4 002D8164  7C 08 02 A6 */	mflr r0
 /* 8030EBA8 002D8168  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4822,7 +4767,7 @@ lbl_8030EBF8:
 /* 8030EC08 002D81C8  38 60 00 00 */	li r3, 0
 /* 8030EC0C 002D81CC  48 00 00 08 */	b lbl_8030EC14
 lbl_8030EC10:
-/* 8030EC10 002D81D0  4B FF FE C1 */	bl func_8030EAD0
+/* 8030EC10 002D81D0  4B FF FE C1 */	bl DVDGetCommandBlockStatus
 lbl_8030EC14:
 /* 8030EC14 002D81D4  7C 7E 1B 78 */	mr r30, r3
 lbl_8030EC18:
@@ -4835,17 +4780,17 @@ lbl_8030EC18:
 /* 8030EC30 002D81F0  7C 08 03 A6 */	mtlr r0
 /* 8030EC34 002D81F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030EC38 002D81F8  4E 80 00 20 */	blr 
-/* 8030EC3C 002D81FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030EC40
-func_8030EC40:
+.balign 16, 0
+.global DVDSetAutoInvalidation
+DVDSetAutoInvalidation:
 /* 8030EC40 002D8200  7C 60 1B 78 */	mr r0, r3
 /* 8030EC44 002D8204  80 6D 98 04 */	lwz r3, lbl_80665984@sda21(r13)
 /* 8030EC48 002D8208  90 0D 98 04 */	stw r0, lbl_80665984@sda21(r13)
 /* 8030EC4C 002D820C  4E 80 00 20 */	blr 
 
-.global func_8030EC50
-func_8030EC50:
+.global DVDResume
+DVDResume:
 /* 8030EC50 002D8210  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030EC54 002D8214  7C 08 02 A6 */	mflr r0
 /* 8030EC58 002D8218  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4858,7 +4803,7 @@ func_8030EC50:
 /* 8030EC74 002D8234  2C 00 00 00 */	cmpwi r0, 0
 /* 8030EC78 002D8238  41 82 00 0C */	beq lbl_8030EC84
 /* 8030EC7C 002D823C  90 8D B6 68 */	stw r4, lbl_806677E8@sda21(r13)
-/* 8030EC80 002D8240  4B FF E9 D1 */	bl func_8030D650
+/* 8030EC80 002D8240  4B FF E9 D1 */	bl stateReady
 lbl_8030EC84:
 /* 8030EC84 002D8244  7F E3 FB 78 */	mr r3, r31
 /* 8030EC88 002D8248  48 04 9D 69 */	bl OSRestoreInterrupts
@@ -4868,8 +4813,8 @@ lbl_8030EC84:
 /* 8030EC98 002D8258  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030EC9C 002D825C  4E 80 00 20 */	blr 
 
-.global func_8030ECA0
-func_8030ECA0:
+.global DVDCancelAsync
+DVDCancelAsync:
 /* 8030ECA0 002D8260  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030ECA4 002D8264  7C 08 02 A6 */	mflr r0
 /* 8030ECA8 002D8268  90 01 00 24 */	stw r0, 0x24(r1)
@@ -4883,27 +4828,25 @@ func_8030ECA0:
 /* 8030ECC8 002D8288  7C 7F 1B 78 */	mr r31, r3
 /* 8030ECCC 002D828C  38 04 00 01 */	addi r0, r4, 1
 /* 8030ECD0 002D8290  28 00 00 0D */	cmplwi r0, 0xd
-/* 8030ECD4 002D8294  41 81 03 08 */	bgt func_8030EFDC
+/* 8030ECD4 002D8294  41 81 03 08 */	bgt lbl_8030EFDC
 /* 8030ECD8 002D8298  3C 80 80 55 */	lis r4, lbl_80549C58@ha
 /* 8030ECDC 002D829C  54 00 10 3A */	slwi r0, r0, 2
 /* 8030ECE0 002D82A0  38 84 9C 58 */	addi r4, r4, lbl_80549C58@l
 /* 8030ECE4 002D82A4  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8030ECE8 002D82A8  7C 89 03 A6 */	mtctr r4
 /* 8030ECEC 002D82AC  4E 80 04 20 */	bctr 
-
-.global func_8030ECF0
-func_8030ECF0:
+.global lbl_8030ECF0
+lbl_8030ECF0:
 /* 8030ECF0 002D82B0  2C 1E 00 00 */	cmpwi r30, 0
-/* 8030ECF4 002D82B4  41 82 02 E8 */	beq func_8030EFDC
+/* 8030ECF4 002D82B4  41 82 02 E8 */	beq lbl_8030EFDC
 /* 8030ECF8 002D82B8  7F CC F3 78 */	mr r12, r30
 /* 8030ECFC 002D82BC  7F A4 EB 78 */	mr r4, r29
 /* 8030ED00 002D82C0  38 60 00 00 */	li r3, 0
 /* 8030ED04 002D82C4  7D 89 03 A6 */	mtctr r12
 /* 8030ED08 002D82C8  4E 80 04 21 */	bctrl 
-/* 8030ED0C 002D82CC  48 00 02 D0 */	b func_8030EFDC
-
-.global func_8030ED10
-func_8030ED10:
+/* 8030ED0C 002D82CC  48 00 02 D0 */	b lbl_8030EFDC
+.global lbl_8030ED10
+lbl_8030ED10:
 /* 8030ED10 002D82D0  80 0D B6 70 */	lwz r0, lbl_806677F0@sda21(r13)
 /* 8030ED14 002D82D4  2C 00 00 00 */	cmpwi r0, 0
 /* 8030ED18 002D82D8  41 82 00 10 */	beq lbl_8030ED28
@@ -4926,16 +4869,15 @@ lbl_8030ED28:
 /* 8030ED58 002D8318  28 00 00 2A */	cmplwi r0, 0x2a
 /* 8030ED5C 002D831C  41 82 00 0C */	beq lbl_8030ED68
 /* 8030ED60 002D8320  28 00 00 01 */	cmplwi r0, 1
-/* 8030ED64 002D8324  40 82 02 78 */	bne func_8030EFDC
+/* 8030ED64 002D8324  40 82 02 78 */	bne lbl_8030EFDC
 lbl_8030ED68:
 /* 8030ED68 002D8328  38 00 00 01 */	li r0, 1
 /* 8030ED6C 002D832C  90 0D B6 80 */	stw r0, lbl_80667800@sda21(r13)
-/* 8030ED70 002D8330  48 00 02 6C */	b func_8030EFDC
-
-.global func_8030ED74
-func_8030ED74:
+/* 8030ED70 002D8330  48 00 02 6C */	b lbl_8030EFDC
+.global lbl_8030ED74
+lbl_8030ED74:
 /* 8030ED74 002D8334  7F A3 EB 78 */	mr r3, r29
-/* 8030ED78 002D8338  48 00 09 19 */	bl func_8030F690
+/* 8030ED78 002D8338  48 00 09 19 */	bl __DVDDequeueWaitingQueue
 /* 8030ED7C 002D833C  81 9D 00 28 */	lwz r12, 0x28(r29)
 /* 8030ED80 002D8340  38 00 00 0A */	li r0, 0xa
 /* 8030ED84 002D8344  90 1D 00 0C */	stw r0, 0xc(r29)
@@ -4947,42 +4889,39 @@ func_8030ED74:
 /* 8030ED9C 002D835C  4E 80 04 21 */	bctrl 
 lbl_8030EDA0:
 /* 8030EDA0 002D8360  2C 1E 00 00 */	cmpwi r30, 0
-/* 8030EDA4 002D8364  41 82 02 38 */	beq func_8030EFDC
+/* 8030EDA4 002D8364  41 82 02 38 */	beq lbl_8030EFDC
 /* 8030EDA8 002D8368  7F CC F3 78 */	mr r12, r30
 /* 8030EDAC 002D836C  7F A4 EB 78 */	mr r4, r29
 /* 8030EDB0 002D8370  38 60 00 00 */	li r3, 0
 /* 8030EDB4 002D8374  7D 89 03 A6 */	mtctr r12
 /* 8030EDB8 002D8378  4E 80 04 21 */	bctrl 
-/* 8030EDBC 002D837C  48 00 02 20 */	b func_8030EFDC
-
-.global func_8030EDC0
-func_8030EDC0:
+/* 8030EDBC 002D837C  48 00 02 20 */	b lbl_8030EFDC
+.global lbl_8030EDC0
+lbl_8030EDC0:
 /* 8030EDC0 002D8380  80 1D 00 08 */	lwz r0, 8(r29)
 /* 8030EDC4 002D8384  28 00 00 2A */	cmplwi r0, 0x2a
-/* 8030EDC8 002D8388  41 81 00 9C */	bgt func_8030EE64
+/* 8030EDC8 002D8388  41 81 00 9C */	bgt lbl_8030EE64
 /* 8030EDCC 002D838C  3C 60 80 55 */	lis r3, lbl_80549BAC@ha
 /* 8030EDD0 002D8390  54 00 10 3A */	slwi r0, r0, 2
 /* 8030EDD4 002D8394  38 63 9B AC */	addi r3, r3, lbl_80549BAC@l
 /* 8030EDD8 002D8398  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8030EDDC 002D839C  7C 69 03 A6 */	mtctr r3
 /* 8030EDE0 002D83A0  4E 80 04 20 */	bctr 
-
-.global func_8030EDE4
-func_8030EDE4:
+.global lbl_8030EDE4
+lbl_8030EDE4:
 /* 8030EDE4 002D83A4  2C 1E 00 00 */	cmpwi r30, 0
-/* 8030EDE8 002D83A8  41 82 01 F4 */	beq func_8030EFDC
+/* 8030EDE8 002D83A8  41 82 01 F4 */	beq lbl_8030EFDC
 /* 8030EDEC 002D83AC  7F CC F3 78 */	mr r12, r30
 /* 8030EDF0 002D83B0  7F A4 EB 78 */	mr r4, r29
 /* 8030EDF4 002D83B4  38 60 00 00 */	li r3, 0
 /* 8030EDF8 002D83B8  7D 89 03 A6 */	mtctr r12
 /* 8030EDFC 002D83BC  4E 80 04 21 */	bctrl 
-/* 8030EE00 002D83C0  48 00 01 DC */	b func_8030EFDC
-
-.global func_8030EE04
-func_8030EE04:
+/* 8030EE00 002D83C0  48 00 01 DC */	b lbl_8030EFDC
+.global lbl_8030EE04
+lbl_8030EE04:
 /* 8030EE04 002D83C4  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
 /* 8030EE08 002D83C8  2C 00 00 00 */	cmpwi r0, 0
-/* 8030EE0C 002D83CC  41 82 00 58 */	beq func_8030EE64
+/* 8030EE0C 002D83CC  41 82 00 58 */	beq lbl_8030EE64
 /* 8030EE10 002D83D0  3C 60 80 5D */	lis r3, lbl_805CC820@ha
 /* 8030EE14 002D83D4  38 00 00 0A */	li r0, 0xa
 /* 8030EE18 002D83D8  38 63 C8 20 */	addi r3, r3, lbl_805CC820@l
@@ -5004,11 +4943,10 @@ lbl_8030EE40:
 /* 8030EE54 002D8414  7D 89 03 A6 */	mtctr r12
 /* 8030EE58 002D8418  4E 80 04 21 */	bctrl 
 lbl_8030EE5C:
-/* 8030EE5C 002D841C  4B FF E7 F5 */	bl func_8030D650
-/* 8030EE60 002D8420  48 00 01 7C */	b func_8030EFDC
-
-.global func_8030EE64
-func_8030EE64:
+/* 8030EE5C 002D841C  4B FF E7 F5 */	bl stateReady
+/* 8030EE60 002D8420  48 00 01 7C */	b lbl_8030EFDC
+.global lbl_8030EE64
+lbl_8030EE64:
 /* 8030EE64 002D8424  80 0D B6 70 */	lwz r0, lbl_806677F0@sda21(r13)
 /* 8030EE68 002D8428  2C 00 00 00 */	cmpwi r0, 0
 /* 8030EE6C 002D842C  41 82 00 14 */	beq lbl_8030EE80
@@ -5020,10 +4958,9 @@ lbl_8030EE80:
 /* 8030EE80 002D8440  38 00 00 01 */	li r0, 1
 /* 8030EE84 002D8444  90 0D B6 70 */	stw r0, lbl_806677F0@sda21(r13)
 /* 8030EE88 002D8448  93 CD B6 E0 */	stw r30, lbl_80667860@sda21(r13)
-/* 8030EE8C 002D844C  48 00 01 50 */	b func_8030EFDC
-
-.global func_8030EE90
-func_8030EE90:
+/* 8030EE8C 002D844C  48 00 01 50 */	b lbl_8030EFDC
+.global lbl_8030EE90
+lbl_8030EE90:
 /* 8030EE90 002D8450  80 0D B6 88 */	lwz r0, lbl_80667808@sda21(r13)
 /* 8030EE94 002D8454  2C 00 00 00 */	cmpwi r0, 0
 /* 8030EE98 002D8458  40 82 00 1C */	bne lbl_8030EEB4
@@ -5094,11 +5031,10 @@ lbl_8030EF68:
 /* 8030EF7C 002D853C  7D 89 03 A6 */	mtctr r12
 /* 8030EF80 002D8540  4E 80 04 21 */	bctrl 
 lbl_8030EF84:
-/* 8030EF84 002D8544  4B FF E6 CD */	bl func_8030D650
-/* 8030EF88 002D8548  48 00 00 54 */	b func_8030EFDC
-
-.global func_8030EF8C
-func_8030EF8C:
+/* 8030EF84 002D8544  4B FF E6 CD */	bl stateReady
+/* 8030EF88 002D8548  48 00 00 54 */	b lbl_8030EFDC
+.global lbl_8030EF8C
+lbl_8030EF8C:
 /* 8030EF8C 002D854C  3C 60 80 5D */	lis r3, lbl_805CC820@ha
 /* 8030EF90 002D8550  38 00 00 0A */	li r0, 0xa
 /* 8030EF94 002D8554  38 63 C8 20 */	addi r3, r3, lbl_805CC820@l
@@ -5120,9 +5056,9 @@ lbl_8030EFBC:
 /* 8030EFD0 002D8590  7D 89 03 A6 */	mtctr r12
 /* 8030EFD4 002D8594  4E 80 04 21 */	bctrl 
 lbl_8030EFD8:
-/* 8030EFD8 002D8598  4B FF E6 79 */	bl func_8030D650
-.global func_8030EFDC
-func_8030EFDC:
+/* 8030EFD8 002D8598  4B FF E6 79 */	bl stateReady
+.global lbl_8030EFDC
+lbl_8030EFDC:
 /* 8030EFDC 002D859C  7F E3 FB 78 */	mr r3, r31
 /* 8030EFE0 002D85A0  48 04 9A 11 */	bl OSRestoreInterrupts
 /* 8030EFE4 002D85A4  38 60 00 01 */	li r3, 1
@@ -5134,22 +5070,20 @@ lbl_8030EFE8:
 /* 8030EFF8 002D85B8  7C 08 03 A6 */	mtlr r0
 /* 8030EFFC 002D85BC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030F000 002D85C0  4E 80 00 20 */	blr 
-/* 8030F004 002D85C4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030F008 002D85C8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030F00C 002D85CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global DVDCancel
 DVDCancel:
 /* 8030F010 002D85D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030F014 002D85D4  7C 08 02 A6 */	mflr r0
-/* 8030F018 002D85D8  3C 80 80 31 */	lis r4, func_8030F0D0@ha
+/* 8030F018 002D85D8  3C 80 80 31 */	lis r4, cbForCancelSync@ha
 /* 8030F01C 002D85DC  90 01 00 24 */	stw r0, 0x24(r1)
-/* 8030F020 002D85E0  38 84 F0 D0 */	addi r4, r4, func_8030F0D0@l
+/* 8030F020 002D85E0  38 84 F0 D0 */	addi r4, r4, cbForCancelSync@l
 /* 8030F024 002D85E4  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8030F028 002D85E8  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8030F02C 002D85EC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8030F030 002D85F0  7C 7D 1B 78 */	mr r29, r3
-/* 8030F034 002D85F4  4B FF FC 6D */	bl func_8030ECA0
+/* 8030F034 002D85F4  4B FF FC 6D */	bl DVDCancelAsync
 /* 8030F038 002D85F8  2C 03 00 00 */	cmpwi r3, 0
 /* 8030F03C 002D85FC  40 82 00 0C */	bne lbl_8030F048
 /* 8030F040 002D8600  38 60 FF FF */	li r3, -1
@@ -5161,31 +5095,29 @@ lbl_8030F048:
 lbl_8030F054:
 /* 8030F054 002D8614  80 1D 00 0C */	lwz r0, 0xc(r29)
 /* 8030F058 002D8618  2C 00 00 00 */	cmpwi r0, 0
-/* 8030F05C 002D861C  41 82 00 4C */	beq func_8030F0A8
+/* 8030F05C 002D861C  41 82 00 4C */	beq lbl_8030F0A8
 /* 8030F060 002D8620  2C 00 FF FF */	cmpwi r0, -1
-/* 8030F064 002D8624  41 82 00 44 */	beq func_8030F0A8
+/* 8030F064 002D8624  41 82 00 44 */	beq lbl_8030F0A8
 /* 8030F068 002D8628  2C 00 00 0A */	cmpwi r0, 0xa
-/* 8030F06C 002D862C  41 82 00 3C */	beq func_8030F0A8
+/* 8030F06C 002D862C  41 82 00 3C */	beq lbl_8030F0A8
 /* 8030F070 002D8630  2C 00 00 03 */	cmpwi r0, 3
-/* 8030F074 002D8634  40 82 00 28 */	bne func_8030F09C
+/* 8030F074 002D8634  40 82 00 28 */	bne lbl_8030F09C
 /* 8030F078 002D8638  80 7D 00 08 */	lwz r3, 8(r29)
 /* 8030F07C 002D863C  38 03 FF FC */	addi r0, r3, -4
 /* 8030F080 002D8640  28 00 00 26 */	cmplwi r0, 0x26
-/* 8030F084 002D8644  41 81 00 18 */	bgt func_8030F09C
+/* 8030F084 002D8644  41 81 00 18 */	bgt lbl_8030F09C
 /* 8030F088 002D8648  38 7F 9C 90 */	addi r3, r31, lbl_80549C90@l
 /* 8030F08C 002D864C  54 00 10 3A */	slwi r0, r0, 2
 /* 8030F090 002D8650  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8030F094 002D8654  7C 69 03 A6 */	mtctr r3
 /* 8030F098 002D8658  4E 80 04 20 */	bctr 
-
-.global func_8030F09C
-func_8030F09C:
+.global lbl_8030F09C
+lbl_8030F09C:
 /* 8030F09C 002D865C  38 6D B6 30 */	addi r3, r13, lbl_806677B0@sda21
-/* 8030F0A0 002D8660  48 04 D5 D1 */	bl func_8035C670
+/* 8030F0A0 002D8660  48 04 D5 D1 */	bl OSSleepThread
 /* 8030F0A4 002D8664  4B FF FF B0 */	b lbl_8030F054
-
-.global func_8030F0A8
-func_8030F0A8:
+.global lbl_8030F0A8
+lbl_8030F0A8:
 /* 8030F0A8 002D8668  7F C3 F3 78 */	mr r3, r30
 /* 8030F0AC 002D866C  48 04 99 45 */	bl OSRestoreInterrupts
 /* 8030F0B0 002D8670  38 60 00 00 */	li r3, 0
@@ -5198,26 +5130,26 @@ lbl_8030F0B4:
 /* 8030F0C8 002D8688  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030F0CC 002D868C  4E 80 00 20 */	blr
 
-.global func_8030F0D0
-func_8030F0D0:
+.global cbForCancelSync
+cbForCancelSync:
 /* 8030F0D0 002D8690  38 6D B6 30 */	addi r3, r13, lbl_806677B0@sda21
 /* 8030F0D4 002D8694  48 04 D6 8C */	b OSWakeupThread
-/* 8030F0D8 002D8698  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030F0DC 002D869C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030F0E0:
+
+.balign 16, 0
+.global __BS2DVDLowCallback
+__BS2DVDLowCallback:
 /* 8030F0E0 002D86A0  90 6D B6 A0 */	stw r3, lbl_80667820@sda21(r13)
 /* 8030F0E4 002D86A4  4E 80 00 20 */	blr 
-/* 8030F0E8 002D86A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030F0EC 002D86AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030F0F0
-func_8030F0F0:
+.balign 16, 0
+.global __DVDGetCoverStatus
+__DVDGetCoverStatus:
 /* 8030F0F0 002D86B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030F0F4 002D86B4  7C 08 02 A6 */	mflr r0
-/* 8030F0F8 002D86B8  3C 60 80 31 */	lis r3, lbl_8030F0E0@ha
+/* 8030F0F8 002D86B8  3C 60 80 31 */	lis r3, __BS2DVDLowCallback@ha
 /* 8030F0FC 002D86BC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8030F100 002D86C0  38 00 00 00 */	li r0, 0
-/* 8030F104 002D86C4  38 63 F0 E0 */	addi r3, r3, lbl_8030F0E0@l
+/* 8030F104 002D86C4  38 63 F0 E0 */	addi r3, r3, __BS2DVDLowCallback@l
 /* 8030F108 002D86C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8030F10C 002D86CC  90 0D B6 A0 */	stw r0, lbl_80667820@sda21(r13)
 /* 8030F110 002D86D0  48 00 35 A1 */	bl DVDLowPrepareCoverRegister
@@ -5267,10 +5199,10 @@ lbl_8030F1A8:
 /* 8030F1B0 002D8770  7C 08 03 A6 */	mtlr r0
 /* 8030F1B4 002D8774  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030F1B8 002D8778  4E 80 00 20 */	blr 
-/* 8030F1BC 002D877C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030F1C0
-func_8030F1C0:
+.balign 16, 0
+.global __DVDPrepareResetAsync
+__DVDPrepareResetAsync:
 /* 8030F1C0 002D8780  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030F1C4 002D8784  7C 08 02 A6 */	mflr r0
 /* 8030F1C8 002D8788  90 01 00 24 */	stw r0, 0x24(r1)
@@ -5280,7 +5212,7 @@ func_8030F1C0:
 /* 8030F1D8 002D8798  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8030F1DC 002D879C  48 04 97 D5 */	bl OSDisableInterrupts
 /* 8030F1E0 002D87A0  7C 7D 1B 78 */	mr r29, r3
-/* 8030F1E4 002D87A4  48 00 02 8D */	bl func_8030F470
+/* 8030F1E4 002D87A4  48 00 02 8D */	bl __DVDClearWaitingQueue
 /* 8030F1E8 002D87A8  80 0D B6 70 */	lwz r0, lbl_806677F0@sda21(r13)
 /* 8030F1EC 002D87AC  2C 00 00 00 */	cmpwi r0, 0
 /* 8030F1F0 002D87B0  41 82 00 0C */	beq lbl_8030F1FC
@@ -5307,16 +5239,16 @@ lbl_8030F234:
 /* 8030F238 002D87F8  48 00 00 0C */	b lbl_8030F244
 lbl_8030F23C:
 /* 8030F23C 002D87FC  38 80 00 00 */	li r4, 0
-/* 8030F240 002D8800  4B FF FA 61 */	bl func_8030ECA0
+/* 8030F240 002D8800  4B FF FA 61 */	bl DVDCancelAsync
 lbl_8030F244:
-/* 8030F244 002D8804  48 00 02 DD */	bl func_8030F520
+/* 8030F244 002D8804  48 00 02 DD */	bl __DVDPopWaitingQueue
 /* 8030F248 002D8808  2C 03 00 00 */	cmpwi r3, 0
 /* 8030F24C 002D880C  40 82 FF F0 */	bne lbl_8030F23C
 /* 8030F250 002D8810  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
 /* 8030F254 002D8814  2C 03 00 00 */	cmpwi r3, 0
 /* 8030F258 002D8818  41 82 00 10 */	beq lbl_8030F268
 /* 8030F25C 002D881C  7F E4 FB 78 */	mr r4, r31
-/* 8030F260 002D8820  4B FF FA 41 */	bl func_8030ECA0
+/* 8030F260 002D8820  4B FF FA 41 */	bl DVDCancelAsync
 /* 8030F264 002D8824  48 00 00 20 */	b lbl_8030F284
 lbl_8030F268:
 /* 8030F268 002D8828  2C 1F 00 00 */	cmpwi r31, 0
@@ -5335,7 +5267,7 @@ lbl_8030F284:
 /* 8030F298 002D8858  2C 00 00 00 */	cmpwi r0, 0
 /* 8030F29C 002D885C  41 82 00 0C */	beq lbl_8030F2A8
 /* 8030F2A0 002D8860  90 8D B6 68 */	stw r4, lbl_806677E8@sda21(r13)
-/* 8030F2A4 002D8864  4B FF E3 AD */	bl func_8030D650
+/* 8030F2A4 002D8864  4B FF E3 AD */	bl stateReady
 lbl_8030F2A8:
 /* 8030F2A8 002D8868  7F E3 FB 78 */	mr r3, r31
 /* 8030F2AC 002D886C  48 04 97 45 */	bl OSRestoreInterrupts
@@ -5350,16 +5282,18 @@ lbl_8030F2B8:
 /* 8030F2CC 002D888C  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 8030F2D0 002D8890  7C 08 03 A6 */	mtlr r0
 /* 8030F2D4 002D8894  38 21 00 20 */	addi r1, r1, 0x20
-/* 8030F2D8 002D8898  4E 80 00 20 */	blr 
-/* 8030F2DC 002D889C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-lbl_8030F2E0:
+/* 8030F2D8 002D8898  4E 80 00 20 */	blr
+
+.balign 16, 0
+.global Callback
+Callback:
 /* 8030F2E0 002D88A0  38 00 00 01 */	li r0, 1
 /* 8030F2E4 002D88A4  90 0D B6 A4 */	stw r0, lbl_80667824@sda21(r13)
-/* 8030F2E8 002D88A8  4E 80 00 20 */	blr 
-/* 8030F2EC 002D88AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+/* 8030F2E8 002D88A8  4E 80 00 20 */	blr
 
-.global func_8030F2F0
-func_8030F2F0:
+.balign 16, 0
+.global __DVDPrepareReset
+__DVDPrepareReset:
 /* 8030F2F0 002D88B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030F2F4 002D88B4  7C 08 02 A6 */	mflr r0
 /* 8030F2F8 002D88B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -5371,12 +5305,12 @@ func_8030F2F0:
 /* 8030F310 002D88D0  93 ED B6 A4 */	stw r31, lbl_80667824@sda21(r13)
 /* 8030F314 002D88D4  48 04 96 9D */	bl OSDisableInterrupts
 /* 8030F318 002D88D8  7C 7D 1B 78 */	mr r29, r3
-/* 8030F31C 002D88DC  48 00 01 55 */	bl func_8030F470
+/* 8030F31C 002D88DC  48 00 01 55 */	bl __DVDClearWaitingQueue
 /* 8030F320 002D88E0  80 0D B6 70 */	lwz r0, lbl_806677F0@sda21(r13)
 /* 8030F324 002D88E4  2C 00 00 00 */	cmpwi r0, 0
 /* 8030F328 002D88E8  41 82 00 14 */	beq lbl_8030F33C
-/* 8030F32C 002D88EC  3C 60 80 31 */	lis r3, lbl_8030F2E0@ha
-/* 8030F330 002D88F0  38 63 F2 E0 */	addi r3, r3, lbl_8030F2E0@l
+/* 8030F32C 002D88EC  3C 60 80 31 */	lis r3, Callback@ha
+/* 8030F330 002D88F0  38 63 F2 E0 */	addi r3, r3, Callback@l
 /* 8030F334 002D88F4  90 6D B6 E0 */	stw r3, lbl_80667860@sda21(r13)
 /* 8030F338 002D88F8  48 00 00 B8 */	b lbl_8030F3F0
 lbl_8030F33C:
@@ -5399,21 +5333,21 @@ lbl_8030F370:
 /* 8030F374 002D8934  48 00 00 0C */	b lbl_8030F380
 lbl_8030F378:
 /* 8030F378 002D8938  38 80 00 00 */	li r4, 0
-/* 8030F37C 002D893C  4B FF F9 25 */	bl func_8030ECA0
+/* 8030F37C 002D893C  4B FF F9 25 */	bl DVDCancelAsync
 lbl_8030F380:
-/* 8030F380 002D8940  48 00 01 A1 */	bl func_8030F520
+/* 8030F380 002D8940  48 00 01 A1 */	bl __DVDPopWaitingQueue
 /* 8030F384 002D8944  2C 03 00 00 */	cmpwi r3, 0
 /* 8030F388 002D8948  40 82 FF F0 */	bne lbl_8030F378
 /* 8030F38C 002D894C  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
 /* 8030F390 002D8950  2C 03 00 00 */	cmpwi r3, 0
 /* 8030F394 002D8954  41 82 00 14 */	beq lbl_8030F3A8
-/* 8030F398 002D8958  3C 80 80 31 */	lis r4, lbl_8030F2E0@ha
-/* 8030F39C 002D895C  38 84 F2 E0 */	addi r4, r4, lbl_8030F2E0@l
-/* 8030F3A0 002D8960  4B FF F9 01 */	bl func_8030ECA0
+/* 8030F398 002D8958  3C 80 80 31 */	lis r4, Callback@ha
+/* 8030F39C 002D895C  38 84 F2 E0 */	addi r4, r4, Callback@l
+/* 8030F3A0 002D8960  4B FF F9 01 */	bl DVDCancelAsync
 /* 8030F3A4 002D8964  48 00 00 18 */	b lbl_8030F3BC
 lbl_8030F3A8:
-/* 8030F3A8 002D8968  3C 00 80 31 */	lis r0, lbl_8030F2E0@ha
-/* 8030F3AC 002D896C  34 00 F2 E0 */	addic. r0, r0, lbl_8030F2E0@l
+/* 8030F3A8 002D8968  3C 00 80 31 */	lis r0, Callback@ha
+/* 8030F3AC 002D896C  34 00 F2 E0 */	addic. r0, r0, Callback@l
 /* 8030F3B0 002D8970  41 82 00 0C */	beq lbl_8030F3BC
 /* 8030F3B4 002D8974  38 00 00 01 */	li r0, 1
 /* 8030F3B8 002D8978  90 0D B6 A4 */	stw r0, lbl_80667824@sda21(r13)
@@ -5426,7 +5360,7 @@ lbl_8030F3BC:
 /* 8030F3D0 002D8990  2C 00 00 00 */	cmpwi r0, 0
 /* 8030F3D4 002D8994  41 82 00 0C */	beq lbl_8030F3E0
 /* 8030F3D8 002D8998  90 8D B6 68 */	stw r4, lbl_806677E8@sda21(r13)
-/* 8030F3DC 002D899C  4B FF E2 75 */	bl func_8030D650
+/* 8030F3DC 002D899C  4B FF E2 75 */	bl stateReady
 lbl_8030F3E0:
 /* 8030F3E0 002D89A0  7F C3 F3 78 */	mr r3, r30
 /* 8030F3E4 002D89A4  48 04 96 0D */	bl OSRestoreInterrupts
@@ -5448,33 +5382,27 @@ lbl_8030F400:
 /* 8030F41C 002D89DC  7C 08 03 A6 */	mtlr r0
 /* 8030F420 002D89E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030F424 002D89E4  4E 80 00 20 */	blr 
-/* 8030F428 002D89E8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030F42C 002D89EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global __DVDTestAlarm
 __DVDTestAlarm:
 /* 8030F430 002D89F0  3C 80 80 5D */	lis r4, lbl_805CC920@ha
 /* 8030F434 002D89F4  38 84 C9 20 */	addi r4, r4, lbl_805CC920@l
 /* 8030F438 002D89F8  7C 03 20 40 */	cmplw r3, r4
-/* 8030F43C 002D89FC  40 82 00 0C */	bne func_8030F448
+/* 8030F43C 002D89FC  40 82 00 0C */	bne lbl_8030F448
 /* 8030F440 002D8A00  38 60 00 01 */	li r3, 1
 /* 8030F444 002D8A04  4E 80 00 20 */	blr
-
-.global func_8030F448
-func_8030F448:
+lbl_8030F448:
 /* 8030F448 002D8A08  48 00 38 58 */	b __DVDLowTestAlarm
 /* 8030F44C 002D8A0C  4E 80 00 20 */	blr 
 
-.global func_8030F450
-func_8030F450:
+.global __DVDStopMotorAsync
+__DVDStopMotorAsync:
 /* 8030F450 002D8A10  38 60 00 01 */	li r3, 1
 /* 8030F454 002D8A14  4E 80 00 20 */	blr 
-/* 8030F458 002D8A18  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030F45C 002D8A1C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_8030F460
-func_8030F460:
+.balign 16, 0
+.global __DVDRestartMotor
+__DVDRestartMotor:
 /* 8030F460 002D8A20  4E 80 00 20 */	blr 
-/* 8030F464 002D8A24  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030F468 002D8A28  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8030F46C 002D8A2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

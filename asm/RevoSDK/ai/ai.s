@@ -21,10 +21,8 @@ AIRegisterDMACallback:
 /* 802D10D8 0029A698  7C 08 03 A6 */	mtlr r0
 /* 802D10DC 0029A69C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D10E0 0029A6A0  4E 80 00 20 */	blr 
-/* 802D10E4 0029A6A4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D10E8 0029A6A8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D10EC 0029A6AC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global AIInitDMA
 AIInitDMA:
 /* 802D10F0 0029A6B0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -58,64 +56,58 @@ AIInitDMA:
 /* 802D1160 0029A720  7C 08 03 A6 */	mtlr r0
 /* 802D1164 0029A724  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D1168 0029A728  4E 80 00 20 */	blr 
-/* 802D116C 0029A72C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D1170
-func_802D1170:
+.balign 16, 0
+.global AIStartDMA
+AIStartDMA:
 /* 802D1170 0029A730  3C 60 CC 00 */	lis r3, 0xCC005036@ha
 /* 802D1174 0029A734  A0 03 50 36 */	lhz r0, 0xCC005036@l(r3)
 /* 802D1178 0029A738  60 00 80 00 */	ori r0, r0, 0x8000
 /* 802D117C 0029A73C  B0 03 50 36 */	sth r0, 0x5036(r3)
 /* 802D1180 0029A740  4E 80 00 20 */	blr 
-/* 802D1184 0029A744  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D1188 0029A748  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D118C 0029A74C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D1190
-func_802D1190:
+.balign 16, 0
+.global AIStopDMA
+AIStopDMA:
 /* 802D1190 0029A750  3C 60 CC 00 */	lis r3, 0xCC005036@ha
 /* 802D1194 0029A754  A0 03 50 36 */	lhz r0, 0xCC005036@l(r3)
 /* 802D1198 0029A758  54 00 04 7E */	clrlwi r0, r0, 0x11
 /* 802D119C 0029A75C  B0 03 50 36 */	sth r0, 0x5036(r3)
 /* 802D11A0 0029A760  4E 80 00 20 */	blr 
-/* 802D11A4 0029A764  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D11A8 0029A768  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D11AC 0029A76C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D11B0
-func_802D11B0:
+.balign 16, 0
+.global AIGetDMABytesLeft
+AIGetDMABytesLeft:
 /* 802D11B0 0029A770  3C 60 CC 00 */	lis r3, 0xCC00503A@ha
 /* 802D11B4 0029A774  A0 03 50 3A */	lhz r0, 0xCC00503A@l(r3)
 /* 802D11B8 0029A778  54 03 2B 34 */	rlwinm r3, r0, 5, 0xc, 0x1a
 /* 802D11BC 0029A77C  4E 80 00 20 */	blr 
 
-.global func_802D11C0
-func_802D11C0:
+.global AIGetDMAStartAddr
+AIGetDMAStartAddr:
 /* 802D11C0 0029A780  3C 60 CC 00 */	lis r3, 0xCC005030@ha
 /* 802D11C4 0029A784  A0 83 50 30 */	lhz r4, 0xCC005030@l(r3)
 /* 802D11C8 0029A788  A0 03 50 32 */	lhz r0, 0x5032(r3)
 /* 802D11CC 0029A78C  54 03 04 34 */	rlwinm r3, r0, 0, 0x10, 0x1a
 /* 802D11D0 0029A790  50 83 80 DE */	rlwimi r3, r4, 0x10, 3, 0xf
 /* 802D11D4 0029A794  4E 80 00 20 */	blr 
-/* 802D11D8 0029A798  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D11DC 0029A79C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D11E0
-func_802D11E0:
+.balign 16, 0
+.global AIGetDMALength
+AIGetDMALength:
 /* 802D11E0 0029A7A0  3C 60 CC 00 */	lis r3, 0xCC005036@ha
 /* 802D11E4 0029A7A4  A0 03 50 36 */	lhz r0, 0xCC005036@l(r3)
 /* 802D11E8 0029A7A8  54 03 2B 34 */	rlwinm r3, r0, 5, 0xc, 0x1a
 /* 802D11EC 0029A7AC  4E 80 00 20 */	blr 
 
-.global func_802D11F0
-func_802D11F0:
+.global AICheckInit
+AICheckInit:
 /* 802D11F0 0029A7B0  80 6D B4 48 */	lwz r3, lbl_806675C8@sda21(r13)
 /* 802D11F4 0029A7B4  4E 80 00 20 */	blr 
-/* 802D11F8 0029A7B8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D11FC 0029A7BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D1200
-func_802D1200:
+.balign 16, 0
+.global AIInit
+AIInit:
 /* 802D1200 0029A7C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D1204 0029A7C4  7C 08 02 A6 */	mflr r0
 /* 802D1208 0029A7C8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -188,7 +180,7 @@ func_802D1200:
 /* 802D1314 0029A8D4  90 1E 6C 00 */	stw r0, 0x6c00(r30)
 /* 802D1318 0029A8D8  48 08 76 99 */	bl OSDisableInterrupts
 /* 802D131C 0029A8DC  7C 7D 1B 78 */	mr r29, r3
-/* 802D1320 0029A8E0  48 00 01 81 */	bl func_802D14A0
+/* 802D1320 0029A8E0  48 00 01 81 */	bl __AI_SRC_INIT
 /* 802D1324 0029A8E4  80 1E 6C 00 */	lwz r0, 0x6c00(r30)
 /* 802D1328 0029A8E8  7F A3 EB 78 */	mr r3, r29
 /* 802D132C 0029A8EC  60 00 00 40 */	ori r0, r0, 0x40
@@ -196,9 +188,9 @@ func_802D1200:
 /* 802D1334 0029A8F4  48 08 76 BD */	bl OSRestoreInterrupts
 lbl_802D1338:
 /* 802D1338 0029A8F8  38 00 00 00 */	li r0, 0
-/* 802D133C 0029A8FC  3C 80 80 2D */	lis r4, func_802D1380@ha
+/* 802D133C 0029A8FC  3C 80 80 2D */	lis r4, __AIDHandler@ha
 /* 802D1340 0029A900  90 0D B4 80 */	stw r0, lbl_80667600@sda21(r13)
-/* 802D1344 0029A904  38 84 13 80 */	addi r4, r4, func_802D1380@l
+/* 802D1344 0029A904  38 84 13 80 */	addi r4, r4, __AIDHandler@l
 /* 802D1348 0029A908  38 60 00 05 */	li r3, 5
 /* 802D134C 0029A90C  93 ED B4 7C */	stw r31, lbl_806675FC@sda21(r13)
 /* 802D1350 0029A910  48 08 76 D1 */	bl __OSSetInterruptHandler
@@ -215,8 +207,8 @@ lbl_802D1364:
 /* 802D1378 0029A938  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D137C 0029A93C  4E 80 00 20 */	blr
 
-.global func_802D1380
-func_802D1380:
+.global __AIDHandler
+__AIDHandler:
 /* 802D1380 0029A940  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 802D1384 0029A944  7C 08 02 A6 */	mflr r0
 /* 802D1388 0029A948  3C C0 CC 00 */	lis r6, 0xCC00500A@ha
@@ -243,7 +235,7 @@ func_802D1380:
 /* 802D13DC 0029A99C  90 8D B4 4C */	stw r4, lbl_806675CC@sda21(r13)
 /* 802D13E0 0029A9A0  2C 00 00 00 */	cmpwi r0, 0
 /* 802D13E4 0029A9A4  41 82 00 0C */	beq lbl_802D13F0
-/* 802D13E8 0029A9A8  48 00 00 49 */	bl func_802D1430
+/* 802D13E8 0029A9A8  48 00 00 49 */	bl __AICallbackStackSwitch
 /* 802D13EC 0029A9AC  48 00 00 10 */	b lbl_802D13FC
 lbl_802D13F0:
 /* 802D13F0 0029A9B0  7C 6C 1B 78 */	mr r12, r3
@@ -262,11 +254,10 @@ lbl_802D1404:
 /* 802D141C 0029A9DC  7C 08 03 A6 */	mtlr r0
 /* 802D1420 0029A9E0  38 21 02 E0 */	addi r1, r1, 0x2e0
 /* 802D1424 0029A9E4  4E 80 00 20 */	blr 
-/* 802D1428 0029A9E8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D142C 0029A9EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D1430
-func_802D1430:
+.balign 16, 0
+.global __AICallbackStackSwitch
+__AICallbackStackSwitch:
 /* 802D1430 0029A9F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D1434 0029A9F4  7C 08 02 A6 */	mflr r0
 /* 802D1438 0029A9F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -292,12 +283,10 @@ func_802D1430:
 /* 802D1488 0029AA48  7D 41 53 78 */	mr r1, r10
 /* 802D148C 0029AA4C  7C 08 03 A6 */	mtlr r0
 /* 802D1490 0029AA50  4E 80 00 20 */	blr 
-/* 802D1494 0029AA54  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D1498 0029AA58  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802D149C 0029AA5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802D14A0
-func_802D14A0:
+.balign 16, 0
+.global __AI_SRC_INIT
+__AI_SRC_INIT:
 /* 802D14A0 0029AA60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D14A4 0029AA64  7C 08 02 A6 */	mflr r0
 /* 802D14A8 0029AA68  90 01 00 24 */	stw r0, 0x24(r1)
@@ -420,4 +409,4 @@ lbl_802D1634:
 /* 802D1660 0029AC20  7C 08 03 A6 */	mtlr r0
 /* 802D1664 0029AC24  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D1668 0029AC28  4E 80 00 20 */	blr 
-/* 802D166C 0029AC2C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.balign 16, 0

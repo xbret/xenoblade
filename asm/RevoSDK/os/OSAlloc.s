@@ -130,9 +130,8 @@ lbl_8035381C:
 /* 8035381C 0031CDDC  90 C5 00 08 */	stw r6, 8(r5)
 /* 80353820 0031CDE0  38 66 00 20 */	addi r3, r6, 0x20
 /* 80353824 0031CDE4  4E 80 00 20 */	blr 
-/* 80353828 0031CDE8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8035382C 0031CDEC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSFreeToHeap
 OSFreeToHeap:
 /* 80353830 0031CDF0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -168,9 +167,8 @@ lbl_80353884:
 /* 8035389C 0031CE5C  7C 08 03 A6 */	mtlr r0
 /* 803538A0 0031CE60  38 21 00 10 */	addi r1, r1, 0x10
 /* 803538A4 0031CE64  4E 80 00 20 */	blr 
-/* 803538A8 0031CE68  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 803538AC 0031CE6C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
+.balign 16, 0
 .global OSSetCurrentHeap
 OSSetCurrentHeap:
 /* 803538B0 0031CE70  80 0D 99 D8 */	lwz r0, lbl_80665B58@sda21(r13)

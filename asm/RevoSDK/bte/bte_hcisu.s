@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802DDDE0
-func_802DDDE0:
+.global bte_hcisu_send
+bte_hcisu_send:
 /* 802DDDE0 002A73A0  B0 83 00 00 */	sth r4, 0(r3)
 /* 802DDDE4 002A73A4  80 8D B5 E0 */	lwz r4, lbl_80667760@sda21(r13)
 /* 802DDDE8 002A73A8  2C 04 00 00 */	cmpwi r4, 0
@@ -12,10 +12,10 @@ func_802DDDE0:
 /* 802DDDF4 002A73B4  7D 89 03 A6 */	mtctr r12
 /* 802DDDF8 002A73B8  4E 80 04 20 */	bctr 
 lbl_802DDDFC:
-/* 802DDDFC 002A73BC  4B FF D6 E4 */	b func_802DB4E0
+/* 802DDDFC 002A73BC  4B FF D6 E4 */	b GKI_freebuf
 
-.global func_802DDE00
-func_802DDE00:
+.global bte_hcisu_task
+bte_hcisu_task:
 /* 802DDE00 002A73C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DDE04 002A73C4  7C 08 02 A6 */	mflr r0
 /* 802DDE08 002A73C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -43,12 +43,10 @@ lbl_802DDE54:
 /* 802DDE58 002A7418  7C 08 03 A6 */	mtlr r0
 /* 802DDE5C 002A741C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DDE60 002A7420  4E 80 00 20 */	blr 
-/* 802DDE64 002A7424  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DDE68 002A7428  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DDE6C 002A742C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802DDE70
-func_802DDE70:
+.balign 16, 0
+.global bte_hcisu_close
+bte_hcisu_close:
 /* 802DDE70 002A7430  80 6D B5 E0 */	lwz r3, lbl_80667760@sda21(r13)
 /* 802DDE74 002A7434  2C 03 00 00 */	cmpwi r3, 0
 /* 802DDE78 002A7438  4D 82 00 20 */	beqlr 
@@ -58,12 +56,10 @@ func_802DDE70:
 /* 802DDE88 002A7448  7D 89 03 A6 */	mtctr r12
 /* 802DDE8C 002A744C  4E 80 04 20 */	bctr 
 /* 802DDE90 002A7450  4E 80 00 20 */	blr 
-/* 802DDE94 002A7454  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DDE98 002A7458  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 802DDE9C 002A745C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-.global func_802DDEA0
-func_802DDEA0:
+.balign 16, 0
+.global bta_ci_hci_msg_handler
+bta_ci_hci_msg_handler:
 /* 802DDEA0 002A7460  7C 65 1B 78 */	mr r5, r3
 /* 802DDEA4 002A7464  38 60 00 02 */	li r3, 2
 /* 802DDEA8 002A7468  38 80 00 00 */	li r4, 0
