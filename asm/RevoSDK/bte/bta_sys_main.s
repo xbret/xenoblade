@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#.balign 16, 0
 .global bta_sys_init
 bta_sys_init:
 /* 802DE95C 002A7F1C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -31,7 +30,6 @@ bta_sys_init:
 /* 802DE9B8 002A7F78  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DE9BC 002A7F7C  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global bta_sys_event
 bta_sys_event:
 /* 802DE9C0 002A7F80  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -100,7 +98,6 @@ lbl_802DEA94:
 /* 802DEAA4 002A8064  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DEAA8 002A8068  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global bta_sys_timer_update
 bta_sys_timer_update:
 /* 802DEAAC 002A806C  3C 60 80 5C */	lis r3, lbl_805BF558@ha
@@ -112,7 +109,6 @@ bta_sys_timer_update:
 /* 802DEAC4 002A8084  48 00 01 28 */	b func_802DEBEC
 /* 802DEAC8 002A8088  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global bta_sys_register
 bta_sys_register:
 /* 802DEACC 002A808C  3C A0 80 5C */	lis r5, lbl_805BF558@ha
@@ -121,7 +117,6 @@ bta_sys_register:
 /* 802DEAD8 002A8098  7C 85 01 2E */	stwx r4, r5, r0
 /* 802DEADC 002A809C  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global bta_sys_sendmsg
 bta_sys_sendmsg:
 /* 802DEAE0 002A80A0  80 8D 97 80 */	lwz r4, lbl_80665900@sda21(r13)
@@ -132,7 +127,6 @@ bta_sys_sendmsg:
 /* 802DEAF4 002A80B4  88 84 00 02 */	lbz r4, 2(r4)
 /* 802DEAF8 002A80B8  4B FF CB A8 */	b func_802DB6A0
 
-#.balign 16, 0
 .global bta_sys_start_timer
 bta_sys_start_timer:
 /* 802DEAFC 002A80BC  3C E0 80 5C */	lis r7, lbl_805BF558@ha
@@ -144,7 +138,6 @@ bta_sys_start_timer:
 /* 802DEB14 002A80D4  38 67 00 68 */	addi r3, r7, 0x68
 /* 802DEB18 002A80D8  48 00 01 88 */	b func_802DECA0
 
-#.balign 16, 0
 .global bta_sys_stop_timer
 bta_sys_stop_timer:
 /* 802DEB1C 002A80DC  3C A0 80 5C */	lis r5, lbl_805BF558@ha
@@ -153,7 +146,6 @@ bta_sys_stop_timer:
 /* 802DEB28 002A80E8  38 65 00 68 */	addi r3, r5, 0x68
 /* 802DEB2C 002A80EC  48 00 02 14 */	b func_802DED40
 
-#.balign 16, 0
 .global bta_sys_disable
 bta_sys_disable:
 /* 802DEB30 002A80F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -185,7 +177,6 @@ lbl_802DEB70:
 /* 802DEB90 002A8150  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DEB94 002A8154  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global bta_sys_set_trace_level
 bta_sys_set_trace_level:
 /* 802DEB98 002A8158  98 6D B5 F8 */	stb r3, lbl_80667778@sda21(r13)

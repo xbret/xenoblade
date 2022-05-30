@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#.balign 16, 0
 .global btm_acl_init
 btm_acl_init:
 /* 802E4500 002ADAC0  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
@@ -13,7 +12,6 @@ btm_acl_init:
 /* 802E4514 002ADAD4  98 03 27 BF */	stb r0, 0x27bf(r3)
 /* 802E4518 002ADAD8  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_handle_to_acl_index
 btm_handle_to_acl_index:
 /* 802E451C 002ADADC  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -55,7 +53,6 @@ lbl_802E4598:
 /* 802E4598 002ADB58  7C A3 2B 78 */	mr r3, r5
 /* 802E459C 002ADB5C  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_acl_created
 btm_acl_created:
 /* 802E45A0 002ADB60  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -276,7 +273,6 @@ lbl_802E489C:
 /* 802E48AC 002ADE6C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E48B0 002ADE70  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_acl_removed
 btm_acl_removed:
 /* 802E48B4 002ADE74  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -333,7 +329,6 @@ lbl_802E495C:
 /* 802E4970 002ADF30  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E4974 002ADF34  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_acl_device_down
 btm_acl_device_down:
 /* 802E4978 002ADF38  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -364,7 +359,6 @@ lbl_802E49B4:
 /* 802E49D4 002ADF94  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E49D8 002ADF98  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTM_SwitchRole
 BTM_SwitchRole:
 /* 802E49DC 002ADF9C  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -520,7 +514,6 @@ lbl_802E4BE0:
 /* 802E4BF0 002AE1B0  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E4BF4 002AE1B4  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_acl_encrypt_change
 btm_acl_encrypt_change:
 /* 802E4BF8 002AE1B8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -626,7 +619,6 @@ lbl_802E4D4C:
 /* 802E4D60 002AE320  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E4D64 002AE324  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTM_SetLinkPolicy
 BTM_SetLinkPolicy:
 /* 802E4D68 002AE328  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -763,7 +755,6 @@ lbl_802E4F38:
 /* 802E4F50 002AE510  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E4F54 002AE514  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTM_SetDefaultLinkPolicy
 BTM_SetDefaultLinkPolicy:
 /* 802E4F58 002AE518  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -771,7 +762,6 @@ BTM_SetDefaultLinkPolicy:
 /* 802E4F60 002AE520  B0 64 04 C4 */	sth r3, 0x4c4(r4)
 /* 802E4F64 002AE524  4E 80 00 20 */	blr
 
-#.balign 16, 0
 .global btm_read_link_policy_complete
 btm_read_link_policy_complete:
 /* 802E4F68 002AE528  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -845,7 +835,6 @@ lbl_802E504C:
 /* 802E5064 002AE624  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E5068 002AE628  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_read_remote_version_complete
 btm_read_remote_version_complete:
 /* 802E506C 002AE62C  88 03 00 00 */	lbz r0, 0(r3)
@@ -886,7 +875,6 @@ lbl_802E50EC:
 /* 802E50F0 002AE6B0  42 00 FF B0 */	bdnz lbl_802E50A0
 /* 802E50F4 002AE6B4  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_read_remote_features_complete
 btm_read_remote_features_complete:
 /* 802E50F8 002AE6B8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1041,7 +1029,6 @@ lbl_802E5304:
 /* 802E531C 002AE8DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E5320 002AE8E0  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTM_SetDefaultLinkSuperTout
 BTM_SetDefaultLinkSuperTout:
 /* 802E5324 002AE8E4  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -1049,7 +1036,6 @@ BTM_SetDefaultLinkSuperTout:
 /* 802E532C 002AE8EC  B0 64 04 C6 */	sth r3, 0x4c6(r4)
 /* 802E5330 002AE8F0  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTM_IsAclConnectionUp
 BTM_IsAclConnectionUp:
 /* 802E5334 002AE8F4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1113,7 +1099,6 @@ lbl_802E53F0:
 /* 802E5404 002AE9C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E5408 002AE9C8  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTM_GetNumAclLinks
 BTM_GetNumAclLinks:
 /* 802E540C 002AE9CC  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -1143,7 +1128,6 @@ lbl_802E5450:
 /* 802E5460 002AEA20  54 03 04 3E */	clrlwi r3, r0, 0x10
 /* 802E5464 002AEA24  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_get_acl_disc_reason_code
 btm_get_acl_disc_reason_code:
 /* 802E5468 002AEA28  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
@@ -1151,7 +1135,6 @@ btm_get_acl_disc_reason_code:
 /* 802E5470 002AEA30  88 63 27 BF */	lbz r3, 0x27bf(r3)
 /* 802E5474 002AEA34  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTM_GetHCIConnHandle
 BTM_GetHCIConnHandle:
 /* 802E5478 002AEA38  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1199,7 +1182,6 @@ lbl_802E54F8:
 /* 802E550C 002AEACC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E5510 002AEAD0  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_process_clk_off_comp_evt
 btm_process_clk_off_comp_evt:
 /* 802E5514 002AEAD4  3C A0 80 5C */	lis r5, lbl_805BF9F8@ha
@@ -1247,7 +1229,6 @@ lbl_802E5590:
 /* 802E55A8 002AEB68  B0 83 00 3A */	sth r4, 0x3a(r3)
 /* 802E55AC 002AEB6C  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_acl_role_changed
 btm_acl_role_changed:
 /* 802E55B0 002AEB70  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1390,7 +1371,6 @@ lbl_802E578C:
 /* 802E579C 002AED5C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E57A0 002AED60  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_acl_timeout
 btm_acl_timeout:
 /* 802E57A4 002AED64  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1418,7 +1398,6 @@ lbl_802E57F0:
 /* 802E57F8 002AEDB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E57FC 002AEDBC  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_get_max_packet_size
 btm_get_max_packet_size:
 /* 802E5800 002AEDC0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1544,7 +1523,6 @@ lbl_802E5984:
 /* 802E5998 002AEF58  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E599C 002AEF5C  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTM_AclRegisterForChanges
 BTM_AclRegisterForChanges:
 /* 802E59A0 002AEF60  2C 03 00 00 */	cmpwi r3, 0
@@ -1568,7 +1546,6 @@ lbl_802E59DC:
 /* 802E59DC 002AEF9C  38 60 00 00 */	li r3, 0
 /* 802E59E0 002AEFA0  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_qos_setup_complete
 btm_qos_setup_complete:
 /* 802E59E4 002AEFA4  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1629,7 +1606,6 @@ lbl_802E5AA4:
 /* 802E5AB4 002AF074  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E5AB8 002AF078  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTM_ReadRSSI
 BTM_ReadRSSI:
 /* 802E5ABC 002AF07C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1720,7 +1696,6 @@ lbl_802E5BD8:
 /* 802E5BF0 002AF1B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E5BF4 002AF1B4  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTM_ReadLinkQuality
 BTM_ReadLinkQuality:
 /* 802E5BF8 002AF1B8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1811,7 +1786,6 @@ lbl_802E5D14:
 /* 802E5D2C 002AF2EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E5D30 002AF2F0  4E 80 00 20 */	blr
 
-#.balign 16, 0
 .global btm_read_rssi_complete
 btm_read_rssi_complete:
 /* 802E5D34 002AF2F4  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1892,7 +1866,6 @@ lbl_802E5E30:
 /* 802E5E48 002AF408  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E5E4C 002AF40C  4E 80 00 20 */	blr
 
-#.balign 16, 0
 .global btm_read_link_quality_complete
 btm_read_link_quality_complete:
 /* 802E5E50 002AF410  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1972,7 +1945,6 @@ lbl_802E5F48:
 /* 802E5F60 002AF520  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E5F64 002AF524  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_remove_acl
 btm_remove_acl:
 /* 802E5F68 002AF528  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2030,7 +2002,6 @@ lbl_802E6008:
 /* 802E601C 002AF5DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E6020 002AF5E0  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global btm_chg_all_acl_pkt_types
 btm_chg_all_acl_pkt_types:
 /* 802E6024 002AF5E4  94 21 FF C0 */	stwu r1, -0x40(r1)

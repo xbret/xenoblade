@@ -222,4 +222,3 @@ lbl_802DCA7C:
 .global func_802DCA90
 func_802DCA90:
 /* 802DCA90 002A6050  48 09 91 B0 */	b func_80375C40
-#.balign 16, 0

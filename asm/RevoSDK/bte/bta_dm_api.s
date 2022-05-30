@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#.balign 16, 0
 .global BTA_EnableBluetooth
 BTA_EnableBluetooth:
 /* 802E1100 002AA6C0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -42,7 +41,6 @@ lbl_802E1174:
 /* 802E1180 002AA740  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E1184 002AA744  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTA_DisableBluetooth
 BTA_DisableBluetooth:
 /* 802E1188 002AA748  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -61,7 +59,6 @@ lbl_802E11B0:
 /* 802E11B8 002AA778  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E11BC 002AA77C  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTA_DmIsDeviceUp
 BTA_DmIsDeviceUp:
 /* 802E11C0 002AA780  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -79,7 +76,6 @@ BTA_DmIsDeviceUp:
 /* 802E11F0 002AA7B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E11F4 002AA7B4  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTA_DmSetDeviceName
 BTA_DmSetDeviceName:
 /* 802E11F8 002AA7B8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -109,7 +105,6 @@ lbl_802E1244:
 /* 802E1254 002AA814  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E1258 002AA818  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTA_DmSetVisibility
 BTA_DmSetVisibility:
 /* 802E125C 002AA81C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -136,7 +131,6 @@ lbl_802E129C:
 /* 802E12AC 002AA86C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E12B0 002AA870  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTA_DmSearch
 BTA_DmSearch:
 /* 802E12B4 002AA874  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -174,7 +168,6 @@ lbl_802E1318:
 /* 802E1330 002AA8F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E1334 002AA8F4  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTA_DmSearchCancel
 BTA_DmSearchCancel:
 /* 802E1338 002AA8F8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -193,7 +186,6 @@ lbl_802E1360:
 /* 802E1368 002AA928  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E136C 002AA92C  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTA_DmPinReply
 BTA_DmPinReply:
 /* 802E1370 002AA930  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -234,7 +226,6 @@ lbl_802E13E4:
 /* 802E13F4 002AA9B4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E13F8 002AA9B8  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTA_DmAddDevice
 BTA_DmAddDevice:
 /* 802E13FC 002AA9BC  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -302,7 +293,6 @@ lbl_802E14A0:
 /* 802E14E4 002AAAA4  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E14E8 002AAAA8  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global BTA_DmRemoveDevice
 BTA_DmRemoveDevice:
 /* 802E14EC 002AAAAC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -324,7 +314,6 @@ BTA_DmRemoveDevice:
 /* 802E152C 002AAAEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E1530 002AAAF0  4E 80 00 20 */	blr
 
-#.balign 16, 0
 .global BTA_DmSendHciReset
 BTA_DmSendHciReset:
 /* 802E1534 002AAAF4  94 21 FF F0 */	stwu r1, -0x10(r1)

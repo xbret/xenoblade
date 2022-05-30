@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#.balign 16, 0
 .global func_80302EBC
 func_80302EBC:
 /* 80302EBC 002CC47C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -240,7 +239,6 @@ lbl_8030321C:
 /* 8030322C 002CC7EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80303230 002CC7F0  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_80303234
 func_80303234:
 /* 80303234 002CC7F4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -269,7 +267,6 @@ lbl_80303278:
 /* 80303288 002CC848  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030328C 002CC84C  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_80303290
 func_80303290:
 /* 80303290 002CC850  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -300,7 +297,6 @@ lbl_803032DC:
 /* 803032EC 002CC8AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803032F0 002CC8B0  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_803032F4
 func_803032F4:
 /* 803032F4 002CC8B4  80 63 00 00 */	lwz r3, 0(r3)
@@ -316,7 +312,6 @@ lbl_8030330C:
 /* 80303314 002CC8D4  38 60 00 00 */	li r3, 0
 /* 80303318 002CC8D8  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_8030331C
 func_8030331C:
 /* 8030331C 002CC8DC  2C 05 00 00 */	cmpwi r5, 0
@@ -382,7 +377,6 @@ lbl_803033D8:
 /* 803033E0 002CC9A0  38 60 00 00 */	li r3, 0
 /* 803033E4 002CC9A4  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_803033E8
 func_803033E8:
 /* 803033E8 002CC9A8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -464,7 +458,6 @@ lbl_803034D4:
 /* 803034E8 002CCAA8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803034EC 002CCAAC  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_803034F0
 func_803034F0:
 /* 803034F0 002CCAB0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -703,7 +696,6 @@ lbl_80303830:
 /* 80303848 002CCE08  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030384C 002CCE0C  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_80303850
 func_80303850:
 /* 80303850 002CCE10  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1033,7 +1025,6 @@ lbl_80303CDC:
 /* 80303CF8 002CD2B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80303CFC 002CD2BC  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_80303D00
 func_80303D00:
 /* 80303D00 002CD2C0  28 03 00 FF */	cmplwi r3, 0xff

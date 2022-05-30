@@ -1400,7 +1400,6 @@ __DBVECTOR:
 /* 80352BF0 0031C1B0  60 63 00 30 */	ori r3, r3, 0x30
 /* 80352BF4 0031C1B4  7C 7B 03 A6 */	mtspr 0x1b, r3
 
-#.balign 16, 0
 .global __OSEVSetNumber
 __OSEVSetNumber:
 /* 80352BF8 0031C1B8  38 60 00 00 */	li r3, 0

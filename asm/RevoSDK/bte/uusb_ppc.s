@@ -877,4 +877,3 @@ func_802DDD90:
 /* 802DDDC8 002A7388  7C 08 03 A6 */	mtlr r0
 /* 802DDDCC 002A738C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DDDD0 002A7390  4E 80 00 20 */	blr 
-#.balign 16, 0

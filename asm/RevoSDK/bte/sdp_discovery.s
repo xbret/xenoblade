@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#.balign 16, 0
 .global func_803049F0
 func_803049F0:
 /* 803049F0 002CDFB0  38 00 00 35 */	li r0, 0x35
@@ -72,7 +71,6 @@ lbl_80304AC8:
 /* 80304AD4 002CE094  98 0A 00 00 */	stb r0, 0(r10)
 /* 80304AD8 002CE098  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_80304ADC
 func_80304ADC:
 /* 80304ADC 002CE09C  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -155,7 +153,6 @@ lbl_80304BF4:
 /* 80304C04 002CE1C4  38 21 00 30 */	addi r1, r1, 0x30
 /* 80304C08 002CE1C8  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_80304C0C
 func_80304C0C:
 /* 80304C0C 002CE1CC  88 03 04 75 */	lbz r0, 0x475(r3)
@@ -173,7 +170,6 @@ lbl_80304C2C:
 /* 80304C38 002CE1F8  38 A0 00 00 */	li r5, 0
 /* 80304C3C 002CE1FC  4B FF FE A0 */	b func_80304ADC
 
-#.balign 16, 0
 .global func_80304C40
 func_80304C40:
 /* 80304C40 002CE200  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -264,7 +260,6 @@ lbl_80304D60:
 /* 80304D78 002CE338  38 21 00 20 */	addi r1, r1, 0x20
 /* 80304D7C 002CE33C  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_80304D80
 func_80304D80:
 /* 80304D80 002CE340  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -357,7 +352,6 @@ lbl_80304EB4:
 /* 80304EC0 002CE480  38 21 00 10 */	addi r1, r1, 0x10
 /* 80304EC4 002CE484  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_80304EC8
 func_80304EC8:
 /* 80304EC8 002CE488  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -543,7 +537,6 @@ lbl_80305158:
 /* 80305168 002CE728  38 21 00 30 */	addi r1, r1, 0x30
 /* 8030516C 002CE72C  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_80305170
 func_80305170:
 /* 80305170 002CE730  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -742,7 +735,6 @@ lbl_8030542C:
 /* 8030543C 002CE9FC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80305440 002CEA00  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_80305444
 func_80305444:
 /* 80305444 002CEA04  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -882,7 +874,6 @@ lbl_80305618:
 /* 80305628 002CEBE8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8030562C 002CEBEC  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_80305630
 func_80305630:
 /* 80305630 002CEBF0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -931,7 +922,6 @@ lbl_803056B8:
 /* 803056C8 002CEC88  38 21 00 10 */	addi r1, r1, 0x10
 /* 803056CC 002CEC8C  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_803056D0
 func_803056D0:
 /* 803056D0 002CEC90  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -988,7 +978,6 @@ lbl_80305758:
 /* 80305794 002CED54  7C A9 03 A6 */	mtctr r5
 /* 80305798 002CED58  4E 80 04 20 */	bctr 
 
-#.balign 16, 0
 .global func_8030579C
 func_8030579C:
 /* 8030579C 002CED5C  2C 1C 00 00 */	cmpwi r28, 0
@@ -1038,7 +1027,6 @@ lbl_80305824:
 /* 80305844 002CEE04  7C 76 1B 78 */	mr r22, r3
 /* 80305848 002CEE08  48 00 03 88 */	b func_80305BD0
 
-#.balign 16, 0
 .global func_8030584C
 func_8030584C:
 /* 8030584C 002CEE0C  80 01 00 08 */	lwz r0, 8(r1)
@@ -1096,7 +1084,6 @@ lbl_803058F8:
 /* 80305900 002CEEC0  41 80 FF E4 */	blt lbl_803058E4
 /* 80305904 002CEEC4  48 00 02 CC */	b func_80305BD0
 
-#.balign 16, 0
 .global func_80305908
 func_80305908:
 /* 80305908 002CEEC8  80 A1 00 08 */	lwz r5, 8(r1)
@@ -1211,7 +1198,6 @@ lbl_80305A90:
 /* 80305A94 002CF054  7C 76 02 14 */	add r3, r22, r0
 /* 80305A98 002CF058  48 00 01 B8 */	b lbl_80305C50
 
-#.balign 16, 0
 .global func_80305A9C
 func_80305A9C:
 /* 80305A9C 002CF05C  80 B7 00 68 */	lwz r5, 0x68(r23)
@@ -1266,7 +1252,6 @@ lbl_80305B44:
 /* 80305B48 002CF108  41 80 FF CC */	blt lbl_80305B14
 /* 80305B4C 002CF10C  48 00 00 84 */	b func_80305BD0
 
-#.balign 16, 0
 .global func_80305B50
 func_80305B50:
 /* 80305B50 002CF110  38 7D 00 08 */	addi r3, r29, 8
@@ -1284,7 +1269,6 @@ lbl_80305B70:
 /* 80305B78 002CF138  41 80 FF E4 */	blt lbl_80305B5C
 /* 80305B7C 002CF13C  48 00 00 54 */	b func_80305BD0
 
-#.balign 16, 0
 .global func_80305B80
 func_80305B80:
 /* 80305B80 002CF140  80 A1 00 08 */	lwz r5, 8(r1)
@@ -1311,7 +1295,6 @@ lbl_80305BC4:
 /* 80305BC8 002CF188  7C 76 02 14 */	add r3, r22, r0
 /* 80305BCC 002CF18C  48 00 00 84 */	b lbl_80305C50
 
-#.balign 16, 0
 .global func_80305BD0
 func_80305BD0:
 /* 80305BD0 002CF190  80 77 00 68 */	lwz r3, 0x68(r23)

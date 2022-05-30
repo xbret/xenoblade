@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#.balign 16, 0
 .global func_802F48C4
 func_802F48C4:
 /* 802F48C4 002BDE84  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -97,7 +96,6 @@ lbl_802F4A04:
 /* 802F4A14 002BDFD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F4A18 002BDFD8  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_802F4A1C
 func_802F4A1C:
 /* 802F4A1C 002BDFDC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -147,7 +145,6 @@ lbl_802F4AA8:
 /* 802F4AB8 002BE078  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F4ABC 002BE07C  4E 80 00 20 */	blr
 
-#.balign 16, 0
 .global func_802F4AC0
 func_802F4AC0:
 /* 802F4AC0 002BE080  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -233,7 +230,6 @@ lbl_802F4BD8:
 /* 802F4BE8 002BE1A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F4BEC 002BE1AC  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_802F4BF0
 func_802F4BF0:
 /* 802F4BF0 002BE1B0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -401,7 +397,6 @@ lbl_802F4E30:
 /* 802F4E40 002BE400  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F4E44 002BE404  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_802F4E48
 func_802F4E48:
 /* 802F4E48 002BE408  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -491,7 +486,6 @@ lbl_802F4F2C:
 /* 802F4F8C 002BE54C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F4F90 002BE550  4E 80 00 20 */	blr
 
-#.balign 16, 0
 .global func_802F4F94
 func_802F4F94:
 /* 802F4F94 002BE554  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -642,7 +636,6 @@ lbl_802F5190:
 /* 802F51A0 002BE760  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F51A4 002BE764  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_802F51A8
 func_802F51A8:
 /* 802F51A8 002BE768  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -877,7 +870,6 @@ lbl_802F54D0:
 /* 802F54E8 002BEAA8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F54EC 002BEAAC  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_802F54F0
 func_802F54F0:
 /* 802F54F0 002BEAB0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1066,7 +1058,6 @@ lbl_802F5778:
 /* 802F5790 002BED50  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F5794 002BED54  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_802F5798
 func_802F5798:
 /* 802F5798 002BED58  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1283,7 +1274,6 @@ lbl_802F5A8C:
 /* 802F5A9C 002BF05C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F5AA0 002BF060  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_802F5AA4
 func_802F5AA4:
 /* 802F5AA4 002BF064  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1480,7 +1470,6 @@ lbl_802F5D50:
 /* 802F5D60 002BF320  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F5D64 002BF324  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_802F5D68
 func_802F5D68:
 /* 802F5D68 002BF328  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1642,7 +1631,6 @@ lbl_802F5F94:
 /* 802F5FA8 002BF568  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F5FAC 002BF56C  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_802F5FB0
 func_802F5FB0:
 /* 802F5FB0 002BF570  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1783,7 +1771,6 @@ lbl_802F6190:
 /* 802F61A0 002BF760  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F61A4 002BF764  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_802F61A8
 func_802F61A8:
 /* 802F61A8 002BF768  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2042,7 +2029,6 @@ lbl_802F6524:
 /* 802F6538 002BFAF8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F653C 002BFAFC  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_802F6540
 func_802F6540:
 /* 802F6540 002BFB00  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -2238,7 +2224,6 @@ lbl_802F67C4:
 /* 802F67D4 002BFD94  38 21 00 50 */	addi r1, r1, 0x50
 /* 802F67D8 002BFD98  4E 80 00 20 */	blr
 
-#.balign 16, 0
 .global func_802F67DC
 func_802F67DC:
 /* 802F67DC 002BFD9C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2310,7 +2295,6 @@ lbl_802F68BC:
 /* 802F68D0 002BFE90  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F68D4 002BFE94  4E 80 00 20 */	blr 
 
-#.balign 16, 0
 .global func_802F68D8
 func_802F68D8:
 /* 802F68D8 002BFE98  94 21 FF F0 */	stwu r1, -0x10(r1)

@@ -86,7 +86,6 @@ func_803192DC:
 /* 803192E8 002E28A8  90 03 00 14 */	stw r0, 0x14(r3)
 /* 803192EC 002E28AC  48 00 01 58 */	b func_80319444
 
-##balign 16, 0
 .global func_803192F0
 func_803192F0:
 /* 803192F0 002E28B0  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)

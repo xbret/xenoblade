@@ -121,4 +121,3 @@ LogMsg_6:
 /* 802DE06C 002A762C  4C C6 31 82 */	crclr 6
 /* 802DE070 002A7630  4B FF FE 70 */	b LogMsg
 /* 802DE074 002A7634  4E 80 00 20 */	blr 
-#.balign 16, 0
