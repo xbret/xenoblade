@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global StampCommand
 StampCommand:
 /* 8030A8A0 002D3E60  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -443,6 +444,7 @@ lbl_8030AEEC:
 /* 8030AEF8 002D44B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030AEFC 002D44BC  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global cbForStoreErrorCode1
 cbForStoreErrorCode1:
 /* 8030AF00 002D44C0  3C A0 80 31 */	lis r5, cbForStateError@ha
@@ -1083,6 +1085,7 @@ lbl_8030B808:
 /* 8030B818 002D4DD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030B81C 002D4DDC  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global cbForUnrecoveredErrorRetry
 cbForUnrecoveredErrorRetry:
 /* 8030B820 002D4DE0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1305,6 +1308,7 @@ lbl_8030BB2C:
 /* 8030BB38 002D50F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030BB3C 002D50FC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global stateCheckID
 stateCheckID:
 /* 8030BB40 002D5100  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1636,6 +1640,7 @@ lbl_8030C004:
 /* 8030C018 002D55D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030C01C 002D55DC  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global cbForStateReadingPartitionInfo
 cbForStateReadingPartitionInfo:
 /* 8030C020 002D55E0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2622,6 +2627,7 @@ lbl_8030CE18:
 /* 8030CE28 002D63E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030CE2C 002D63EC  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global cbForStateReset
 cbForStateReset:
 /* 8030CE30 002D63F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2901,6 +2907,7 @@ lbl_8030D218:
 /* 8030D228 002D67E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030D22C 002D67EC  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global stateCoverClosed_CMD
 stateCoverClosed_CMD:
 /* 8030D230 002D67F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3833,6 +3840,7 @@ lbl_8030DF08:
 /* 8030DF1C 002D74DC  4E 80 00 20 */	blr
 
 
+.balign 16, 0
 .global cbForStateBusy
 cbForStateBusy:
 /* 8030DF20 002D74E0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -4547,6 +4555,7 @@ lbl_8030E8E4:
 /* 8030E8F8 002D7EB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030E8FC 002D7EBC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DVDReadAbsAsyncPrio
 DVDReadAbsAsyncPrio:
 /* 8030E900 002D7EC0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -4789,6 +4798,7 @@ DVDSetAutoInvalidation:
 /* 8030EC48 002D8208  90 0D 98 04 */	stw r0, lbl_80665984@sda21(r13)
 /* 8030EC4C 002D820C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DVDResume
 DVDResume:
 /* 8030EC50 002D8210  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -4813,6 +4823,7 @@ lbl_8030EC84:
 /* 8030EC98 002D8258  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030EC9C 002D825C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DVDCancelAsync
 DVDCancelAsync:
 /* 8030ECA0 002D8260  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -5130,6 +5141,7 @@ lbl_8030F0B4:
 /* 8030F0C8 002D8688  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030F0CC 002D868C  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global cbForCancelSync
 cbForCancelSync:
 /* 8030F0D0 002D8690  38 6D B6 30 */	addi r3, r13, lbl_806677B0@sda21
@@ -5396,6 +5408,7 @@ lbl_8030F448:
 /* 8030F448 002D8A08  48 00 38 58 */	b __DVDLowTestAlarm
 /* 8030F44C 002D8A0C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __DVDStopMotorAsync
 __DVDStopMotorAsync:
 /* 8030F450 002D8A10  38 60 00 01 */	li r3, 1

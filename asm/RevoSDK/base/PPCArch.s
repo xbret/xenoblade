@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global PPCMfmsr
 PPCMfmsr:
 /* 802DAB50 002A4110  7C 60 00 A6 */	mfmsr r3
@@ -107,6 +108,7 @@ PPCMffpscr:
 /* 802DAC68 002A4228  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DAC6C 002A422C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global PPCMtfpscr
 PPCMtfpscr:
 /* 802DAC70 002A4230  94 21 FF E0 */	stwu r1, -0x20(r1)

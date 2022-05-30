@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global DefaultSwitchThreadCallback
 DefaultSwitchThreadCallback:
 /* 8035B330 003248F0  4E 80 00 20 */	blr 
@@ -187,6 +188,7 @@ OSInitThreadQueue:
 /* 8035B5D8 00324B98  90 03 00 00 */	stw r0, 0(r3)
 /* 8035B5DC 00324B9C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSGetCurrentThread
 OSGetCurrentThread:
 /* 8035B5E0 00324BA0  3C 60 80 00 */	lis r3, 0x800000E4@ha
@@ -289,6 +291,7 @@ lbl_8035B710:
 /* 8035B718 00324CD8  7C 83 23 78 */	mr r3, r4
 /* 8035B71C 00324CDC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global SetEffectivePriority
 SetEffectivePriority:
 /* 8035B720 00324CE0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -443,6 +446,7 @@ lbl_8035B90C:
 /* 8035B918 00324ED8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035B91C 00324EDC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global SelectThread
 SelectThread:
 /* 8035B920 00324EE0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1493,6 +1497,7 @@ lbl_8035C740:
 /* 8035C758 00325D18  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035C75C 00325D1C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSWakeupThread
 OSWakeupThread:
 /* 8035C760 00325D20  94 21 FF F0 */	stwu r1, -0x10(r1)

@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global OSGetMEM1ArenaHi
 OSGetMEM1ArenaHi:
 /* 803539A0 0031CF60  80 6D B8 E0 */	lwz r3, lbl_80667A60@sda21(r13)

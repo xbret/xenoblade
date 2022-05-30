@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global OSInitMessageQueue
 OSInitMessageQueue:
 /* 803591A0 00322760  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -29,6 +30,7 @@ OSInitMessageQueue:
 /* 803591F8 003227B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803591FC 003227BC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSSendMessage
 OSSendMessage:
 /* 80359200 003227C0  94 21 FF E0 */	stwu r1, -0x20(r1)

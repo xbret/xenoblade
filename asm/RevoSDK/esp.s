@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#.balign 16, 0
 .global ESP_InitLib
 ESP_InitLib:
 /* 80313750 002DCD10  94 21 FF F0 */	stwu r1, -0x10(r1)

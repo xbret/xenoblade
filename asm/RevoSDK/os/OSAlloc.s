@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global DLInsert
 DLInsert:
 /* 80353680 0031CC40  7C 67 1B 78 */	mr r7, r3
@@ -54,6 +55,7 @@ lbl_80353728:
 /* 80353728 0031CCE8  7C 83 23 78 */	mr r3, r4
 /* 8035372C 0031CCEC  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global OSAllocFromHeap
 OSAllocFromHeap:
 /* 80353730 0031CCF0  1C 63 00 0C */	mulli r3, r3, 0xc
@@ -176,6 +178,7 @@ OSSetCurrentHeap:
 /* 803538B8 0031CE78  7C 03 03 78 */	mr r3, r0
 /* 803538BC 0031CE7C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSInitAlloc
 OSInitAlloc:
 /* 803538C0 0031CE80  1C E5 00 0C */	mulli r7, r5, 0xc
@@ -209,6 +212,7 @@ lbl_803538FC:
 /* 80353928 0031CEE8  90 6D B8 D4 */	stw r3, lbl_80667A54@sda21(r13)
 /* 8035392C 0031CEEC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSCreateHeap
 OSCreateHeap:
 /* 80353930 0031CEF0  80 CD B8 D8 */	lwz r6, lbl_80667A58@sda21(r13)

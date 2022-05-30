@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __AIClockInit
 __AIClockInit:
 /* 80353AA0 0031D060  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -148,6 +149,7 @@ lbl_80353C78:
 /* 80353CB8 0031D278  38 21 00 20 */	addi r1, r1, 0x20
 /* 80353CBC 0031D27C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __OSInitAudioSystem
 __OSInitAudioSystem:
 /* 80353CC0 0031D280  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -279,6 +281,7 @@ lbl_80353E58:
 /* 80353E88 0031D448  38 21 00 10 */	addi r1, r1, 0x10
 /* 80353E8C 0031D44C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __OSStopAudioSystem
 __OSStopAudioSystem:
 /* 80353E90 0031D450  94 21 FF F0 */	stwu r1, -0x10(r1)

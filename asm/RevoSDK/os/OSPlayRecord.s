@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global PlayRecordAlarmCallback
 PlayRecordAlarmCallback:
 /* 8035D730 00326CF0  38 60 00 00 */	li r3, 0

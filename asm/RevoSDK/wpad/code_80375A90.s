@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_80375A90
 func_80375A90:
 /* 80375A90 0033F050  3C 80 80 5E */	lis r4, lbl_805DDAD0@ha

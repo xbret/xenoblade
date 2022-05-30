@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __AXGetCommandListCycles
 __AXGetCommandListCycles:
 /* 802D2F70 0029C530  80 6D B4 F4 */	lwz r3, lbl_80667674@sda21(r13)
@@ -23,6 +24,7 @@ __AXGetCommandListAddress:
 /* 802D2FA8 0029C568  7C 64 2A 14 */	add r3, r4, r5
 /* 802D2FAC 0029C56C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __AXNextFrame
 __AXNextFrame:
 /* 802D2FB0 0029C570  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -685,6 +687,7 @@ __AXClInit:
 /* 802D39B8 0029CF78  B0 0D B4 E0 */	sth r0, lbl_80667660@sda21(r13)
 /* 802D39BC 0029CF7C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __AXClQuit
 __AXClQuit:
 /* 802D39C0 0029CF80  4E 80 00 20 */	blr 

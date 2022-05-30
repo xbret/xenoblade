@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global AXFXReverbHiInit
 AXFXReverbHiInit:
 /* 802D5710 0029ECD0  C0 E3 01 58 */	lfs f7, 0x158(r3)

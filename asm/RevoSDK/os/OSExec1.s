@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __OSRelaunchTitle
 __OSRelaunchTitle:
 /* 8035F140 00328700  54 2B 06 FE */	clrlwi r11, r1, 0x1b

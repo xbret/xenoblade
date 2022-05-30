@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+
 .global WENCGetEncodeData
 WENCGetEncodeData:
 /* 80368A8C 0033204C  94 21 FF 70 */	stwu r1, -0x90(r1)
@@ -273,6 +274,3 @@ func_80368DE0:
 func_80368DF0:
 /* 80368DF0 003323B0  38 60 00 00 */	li r3, 0
 /* 80368DF4 003323B4  4E 80 00 20 */	blr 
-#.balign 16, 0
-.4byte 0
-.4byte 0

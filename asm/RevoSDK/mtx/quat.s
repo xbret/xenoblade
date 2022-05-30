@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_8034E2C0
 func_8034E2C0:
 /* 8034E2C0 00317880  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
@@ -51,6 +52,7 @@ func_8034E340:
 /* 8034E358 00317918  10 21 08 54 */	ps_sum0 f1, f1, f1, f1
 /* 8034E35C 0031791C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8034E360
 func_8034E360:
 /* 8034E360 00317920  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0

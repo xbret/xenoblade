@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global DCEnable
 DCEnable:
 /* 80353F60 0031D520  7C 00 04 AC */	sync 0
@@ -43,6 +44,7 @@ lbl_80353FCC:
 /* 80353FD8 0031D598  44 00 00 02 */	sc 
 /* 80353FDC 0031D59C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DCStoreRange
 DCStoreRange:
 /* 80353FE0 0031D5A0  28 04 00 00 */	cmplwi r4, 0
@@ -59,6 +61,7 @@ lbl_80353FFC:
 /* 80354008 0031D5C8  44 00 00 02 */	sc 
 /* 8035400C 0031D5CC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DCFlushRangeNoSync
 DCFlushRangeNoSync:
 /* 80354010 0031D5D0  28 04 00 00 */	cmplwi r4, 0
@@ -132,6 +135,7 @@ ICFlashInvalidate:
 /* 803540E8 0031D6A8  7C 70 FB A6 */	mtspr 0x3f0, r3
 /* 803540EC 0031D6AC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global ICEnable
 ICEnable:
 /* 803540F0 0031D6B0  4C 00 01 2C */	isync 
@@ -303,6 +307,7 @@ lbl_80354324:
 /* 80354348 0031D908  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035434C 0031D90C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global LCQueueWait
 LCQueueWait:
 /* 80354350 0031D910  7C 98 E2 A6 */	mfspr r4, 0x398

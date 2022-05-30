@@ -3,6 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
+.balign 16, 0
 .global __OSCreateNandbootInfo
 __OSCreateNandbootInfo:
 /* 8035E610 00327BD0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -55,6 +56,7 @@ lbl_8035E6B0:
 /* 8035E6B8 00327C78  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035E6BC 00327C7C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __OSWriteNandbootInfo
 __OSWriteNandbootInfo:
 /* 8035E6C0 00327C80  94 21 FF 60 */	stwu r1, -0xa0(r1)

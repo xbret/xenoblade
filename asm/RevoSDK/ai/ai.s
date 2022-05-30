@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global AIRegisterDMACallback
 AIRegisterDMACallback:
 /* 802D10A0 0029A660  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -83,6 +84,7 @@ AIGetDMABytesLeft:
 /* 802D11B8 0029A778  54 03 2B 34 */	rlwinm r3, r0, 5, 0xc, 0x1a
 /* 802D11BC 0029A77C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global AIGetDMAStartAddr
 AIGetDMAStartAddr:
 /* 802D11C0 0029A780  3C 60 CC 00 */	lis r3, 0xCC005030@ha
@@ -100,6 +102,7 @@ AIGetDMALength:
 /* 802D11E8 0029A7A8  54 03 2B 34 */	rlwinm r3, r0, 5, 0xc, 0x1a
 /* 802D11EC 0029A7AC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global AICheckInit
 AICheckInit:
 /* 802D11F0 0029A7B0  80 6D B4 48 */	lwz r3, lbl_806675C8@sda21(r13)
@@ -207,6 +210,7 @@ lbl_802D1364:
 /* 802D1378 0029A938  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D137C 0029A93C  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global __AIDHandler
 __AIDHandler:
 /* 802D1380 0029A940  94 21 FD 20 */	stwu r1, -0x2e0(r1)

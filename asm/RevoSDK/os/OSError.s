@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global OSReport
 OSReport:
 /* 80354EF0 0031E4B0  94 21 FF 80 */	stwu r1, -0x80(r1)
@@ -38,6 +39,7 @@ lbl_80354F20:
 /* 80354F68 0031E528  38 21 00 80 */	addi r1, r1, 0x80
 /* 80354F6C 0031E52C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSVReport
 OSVReport:
 /* 80354F70 0031E530  4B F6 BE 4C */	b vprintf

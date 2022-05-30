@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_80348FC0
 func_80348FC0:
 /* 80348FC0 00312580  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -455,6 +456,7 @@ lbl_803495AC:
 /* 803495B8 00312B78  38 21 00 10 */	addi r1, r1, 0x10
 /* 803495BC 00312B7C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_803495C0
 func_803495C0:
 /* 803495C0 00312B80  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -470,6 +472,7 @@ func_803495C0:
 /* 803495E8 00312BA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803495EC 00312BAC  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global func_803495F0
 func_803495F0:
 /* 803495F0 00312BB0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -522,6 +525,7 @@ lbl_80349680:
 /* 80349698 00312C58  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034969C 00312C5C  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global func_803496A0
 func_803496A0:
 /* 803496A0 00312C60  94 21 FF E0 */	stwu r1, -0x20(r1)

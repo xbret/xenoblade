@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global OSGetTime
 OSGetTime:
 /* 8035C960 00325F20  7C 6D 42 E6 */	mftbu r3

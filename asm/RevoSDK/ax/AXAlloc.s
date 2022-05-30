@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __AXGetStackHead
 __AXGetStackHead:
 /* 802D2110 0029B6D0  3C 80 80 58 */	lis r4, lbl_8057D828@ha
@@ -111,6 +112,7 @@ lbl_802D2200:
 /* 802D2288 0029B848  42 00 FF 78 */	bdnz lbl_802D2200
 /* 802D228C 0029B84C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __AXAllocQuit
 __AXAllocQuit:
 /* 802D2290 0029B850  3C 80 80 58 */	lis r4, lbl_8057D8A8@ha
@@ -159,6 +161,7 @@ lbl_802D22B0:
 /* 802D2338 0029B8F8  42 00 FF 78 */	bdnz lbl_802D22B0
 /* 802D233C 0029B8FC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __AXPushFreeStack
 __AXPushFreeStack:
 /* 802D2340 0029B900  3C A0 80 58 */	lis r5, lbl_8057D828@ha
@@ -177,6 +180,7 @@ __AXPushCallbackStack:
 /* 802D2368 0029B928  90 6D B4 90 */	stw r3, lbl_80667610@sda21(r13)
 /* 802D236C 0029B92C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __AXRemoveFromStack
 __AXRemoveFromStack:
 /* 802D2370 0029B930  80 03 00 0C */	lwz r0, 0xc(r3)

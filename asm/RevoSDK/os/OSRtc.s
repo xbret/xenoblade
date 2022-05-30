@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global WriteSramCallback
 WriteSramCallback:
 /* 8035a800  94 21 ff e0 */		stwu r1, -0x20(r1)
@@ -89,6 +90,7 @@ lbl_8035A91C:
 .4byte 0
 .4byte 0
 
+.balign 16, 0
 .global __OSInitSram
 __OSInitSram:
 /* 8035A940 00323F00  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -231,6 +233,7 @@ lbl_8035AB28:
 /* 8035AB38 003240F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035AB3C 003240FC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global UnlockSram
 UnlockSram:
 /* 8035AB40 00324100  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -430,6 +433,7 @@ lbl_8035ADE8:
 /* 8035AE18 003243D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035AE1C 003243DC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __OSSyncSram
 __OSSyncSram:
 /* 8035AE20 003243E0  3C 60 80 5D */	lis r3, lbl_805D4700@ha
@@ -437,6 +441,7 @@ __OSSyncSram:
 /* 8035AE28 003243E8  80 63 00 4C */	lwz r3, 0x4c(r3)
 /* 8035AE2C 003243EC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __OSReadROM
 __OSReadROM:
 /* 8035AE30 003243F0  94 21 FF E0 */	stwu r1, -0x20(r1)

@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global OSSetResetCallback
 OSSetResetCallback:
 /* 8035D020 003265E0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -408,6 +409,7 @@ __OSVIDimReplyHandler:
 /* 8035D5A8 00326B68  38 60 00 00 */	li r3, 0
 /* 8035D5AC 00326B6C  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global __OSDefaultResetCallback
 __OSDefaultResetCallback:
 /* 8035D5B0 00326B70  4E 80 00 20 */	blr 

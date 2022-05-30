@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global DBInit
 DBInit:
 /* 80309110 002D26D0  3C 80 80 00 */	lis r4, 0x80000040@ha
@@ -41,6 +42,7 @@ lbl_80309190:
 /* 80309198 002D2758  7C 60 01 24 */	mtmsr r3
 /* 8030919C 002D275C  4B FF FF A4 */	b __DBExceptionDestinationAux
 
+.balign 16, 0
 .global __DBIsExceptionMarked
 __DBIsExceptionMarked:
 /* 803091A0 002D2760  80 8D B6 00 */	lwz r4, lbl_80667780@sda21(r13)

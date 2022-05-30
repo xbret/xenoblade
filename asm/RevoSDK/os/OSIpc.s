@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __OSGetIPCBufferHi
 __OSGetIPCBufferHi:
 /* 8035CFE0 003265A0  80 6D B9 58 */	lwz r3, lbl_80667AD8@sda21(r13)

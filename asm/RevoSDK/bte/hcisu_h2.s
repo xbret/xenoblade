@@ -2,6 +2,9 @@ lbl_802DCAA0:.include "macros.inc"
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
+.global func_802DCAA0
+func_802DCAA0:
 /* 802DCAA0 002A6060  2C 03 00 04 */	cmpwi r3, 4
 /* 802DCAA4 002A6064  4C 82 00 20 */	bnelr 
 /* 802DCAA8 002A6068  7C 83 07 74 */	extsb r3, r4
@@ -463,6 +466,7 @@ func_802DD0F0:
 /* 802DD118 002A66D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD11C 002A66DC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_802DD120
 func_802DD120:
 /* 802DD120 002A66E0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -480,4 +484,4 @@ func_802DD120:
 /* 802DD150 002A6710  7C 08 03 A6 */	mtlr r0
 /* 802DD154 002A6714  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD158 002A6718  4E 80 00 20 */	blr 
-.balign 16, 0
+#.balign 16, 0

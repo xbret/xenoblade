@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_80309500
 func_80309500:
 /* 80309500 002D2AC0  94 21 FD 20 */	stwu r1, -0x2e0(r1)
@@ -594,6 +595,7 @@ lbl_80309CE8:
 /* 80309D08 002D32C8  90 6D B6 1C */	stw r3, lbl_8066779C@sda21(r13)
 /* 80309D0C 002D32CC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __DSP_remove_task
 __DSP_remove_task:
 /* 80309D10 002D32D0  38 80 00 00 */	li r4, 0

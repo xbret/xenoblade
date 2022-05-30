@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_8034D1E0
 func_8034D1E0:
 /* 8034D1E0 003167A0  C0 02 BD AC */	lfs f0, lbl_8066C12C@sda21(r2)
@@ -215,6 +216,7 @@ func_8034D4B0:
 /* 8034D4F8 00316AB8  D0 64 00 28 */	stfs f3, 0x28(r4)
 /* 8034D4FC 00316ABC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8034D500
 func_8034D500:
 /* 8034D500 00316AC0  E0 03 80 00 */	psq_l f0, 0(r3), 1, qr0
@@ -246,6 +248,7 @@ func_8034D500:
 /* 8034D568 00316B28  40 82 00 0C */	bne func_8034D574
 /* 8034D56C 00316B2C  38 60 00 00 */	li r3, 0
 /* 8034D570 00316B30  4E 80 00 20 */	blr
+
 
 .global func_8034D574
 func_8034D574:
@@ -335,6 +338,7 @@ func_8034D680:
 /* 8034D6AC 00316C6C  41 82 00 5C */	beq func_8034D708
 /* 8034D6B0 00316C70  4E 80 00 20 */	blr
 
+
 .global func_8034D6B4
 func_8034D6B4:
 /* 8034D6B4 00316C74  10 65 24 20 */	ps_merge00 f3, f5, f4
@@ -347,6 +351,7 @@ func_8034D6B4:
 /* 8034D6D0 00316C90  F0 63 00 24 */	psq_st f3, 36(r3), 0, qr0
 /* 8034D6D4 00316C94  F0 23 00 14 */	psq_st f1, 20(r3), 0, qr0
 /* 8034D6D8 00316C98  4E 80 00 20 */	blr
+
 
 .global func_8034D6DC
 func_8034D6DC:
@@ -362,6 +367,7 @@ func_8034D6DC:
 /* 8034D700 00316CC0  F0 43 00 20 */	psq_st f2, 32(r3), 0, qr0
 /* 8034D704 00316CC4  4E 80 00 20 */	blr
 
+
 .global func_8034D708
 func_8034D708:
 /* 8034D708 00316CC8  10 65 24 20 */	ps_merge00 f3, f5, f4
@@ -375,6 +381,7 @@ func_8034D708:
 /* 8034D728 00316CE8  F0 23 00 28 */	psq_st f1, 40(r3), 0, qr0
 /* 8034D72C 00316CEC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8034D730
 func_8034D730:
 /* 8034D730 00316CF0  E0 64 00 00 */	psq_l f3, 0(r4), 0, qr0
@@ -422,6 +429,7 @@ func_8034D730:
 /* 8034D7D8 00316D98  F0 E3 00 28 */	psq_st f7, 40(r3), 0, qr0
 /* 8034D7DC 00316D9C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8034D7E0
 func_8034D7E0:
 /* 8034D7E0 00316DA0  94 21 FF D0 */	stwu r1, -0x30(r1)

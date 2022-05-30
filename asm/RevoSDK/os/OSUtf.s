@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global OSUTF8to32
 OSUTF8to32:
 /* 8035CD90 00326350  88 C3 00 00 */	lbz r6, 0(r3)
@@ -126,6 +127,7 @@ lbl_8035CF18:
 /* 8035CF1C 003264DC  4E 80 00 20 */	blr 
 
 
+.balign 16, 0
 .global OSUTF32toANSI
 OSUTF32toANSI:
 /* 8035CF20 003264E0  28 03 00 FF */	cmplwi r3, 0xff

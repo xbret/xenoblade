@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global USB_LOG
 USB_LOG:
 /* 803629E0 0032BFA0  94 21 FF 80 */	stwu r1, -0x80(r1)
@@ -1000,6 +1001,7 @@ lbl_80363838:
 /* 80363848 0032CE08  38 21 00 20 */	addi r1, r1, 0x20
 /* 8036384C 0032CE0C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global IUSB_WriteBlkMsgAsync
 IUSB_WriteBlkMsgAsync:
 /* 80363850 0032CE10  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1045,6 +1047,7 @@ lbl_803638D8:
 /* 803638E8 0032CEA8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803638EC 0032CEAC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __CtrlMsgInt
 __CtrlMsgInt:
 /* 803638F0 0032CEB0  94 21 FF B0 */	stwu r1, -0x50(r1)

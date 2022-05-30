@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global OSPlayTimeIsLimited
 OSPlayTimeIsLimited:
 /* 8035E820 00327DE0  80 0D B9 C8 */	lwz r0, lbl_80667B48@sda21(r13)
@@ -337,6 +338,7 @@ lbl_8035ECBC:
 /* 8035ECC8 00328288  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035ECCC 0032828C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __OSGetPlayTime
 __OSGetPlayTime:
 /* 8035ECD0 00328290  54 2B 06 FE */	clrlwi r11, r1, 0x1b

@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __GXSetProjection
 __GXSetProjection:
 /* 8031E4F0 002E7AB0  3C 80 CC 01 */	lis r4, 0xCC008000@ha
@@ -102,6 +103,7 @@ GXLoadPosMtxImm:
 /* 8031E648 002E7C08  F0 04 00 00 */	psq_st f0, 0(r4), 0, qr0
 /* 8031E64C 002E7C0C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global GXLoadPosMtxIndx
 GXLoadPosMtxIndx:
 /* 8031E650 002E7C10  3C A0 CC 01 */	lis r5, 0xCC008000@ha
@@ -171,6 +173,7 @@ GXSetCurrentMtx:
 /* 8031E738 002E7CF8  90 04 05 FC */	stw r0, 0x5fc(r4)
 /* 8031E73C 002E7CFC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global GXLoadTexMtxImm
 GXLoadTexMtxImm:
 /* 8031E740 002E7D00  28 04 00 40 */	cmplwi r4, 0x40
@@ -264,6 +267,7 @@ __GXSetViewport:
 /* 8031E888 002E7E48  D0 04 80 00 */	stfs f0, -0x8000(r4)
 /* 8031E88C 002E7E4C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global GXSetViewportJitter
 GXSetViewportJitter:
 /* 8031E890 002E7E50  2C 03 00 00 */	cmpwi r3, 0

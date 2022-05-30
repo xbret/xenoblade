@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#.balign 16, 0
 .global bta_hh_find_cb
 bta_hh_find_cb:
 /* 802E4154 002AD714  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -93,6 +94,7 @@ lbl_802E4278:
 /* 802E4288 002AD848  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E428C 002AD84C  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_clean_up_kdev
 bta_hh_clean_up_kdev:
 /* 802E4290 002AD850  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -129,6 +131,7 @@ lbl_802E42C8:
 /* 802E4308 002AD8C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E430C 002AD8CC  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_add_device_to_list
 bta_hh_add_device_to_list:
 /* 802E4310 002AD8D0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -181,6 +184,7 @@ lbl_802E43B4:
 /* 802E43C4 002AD984  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E43C8 002AD988  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_tod_spt
 bta_hh_tod_spt:
 /* 802E43CC 002AD98C  80 ED 97 78 */	lwz r7, lbl_806658F8@sda21(r13)
@@ -208,6 +212,7 @@ lbl_802E440C:
 /* 802E4418 002AD9D8  38 60 00 00 */	li r3, 0
 /* 802E441C 002AD9DC  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_trace_dev_db
 bta_hh_trace_dev_db:
 /* 802E4420 002AD9E0  94 21 FF E0 */	stwu r1, -0x20(r1)

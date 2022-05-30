@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global NETCalcCRC16
 NETCalcCRC16:
 /* 8035F000 003285C0  2C 04 00 00 */	cmpwi r4, 0

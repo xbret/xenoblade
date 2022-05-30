@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global SystemCallVector
 SystemCallVector:
 /* 8035B2B0 00324870  7D 30 FA A6 */	mfspr r9, 0x3f0
@@ -12,10 +13,12 @@ SystemCallVector:
 /* 8035B2C4 00324884  7D 30 FB A6 */	mtspr 0x3f0, r9
 /* 8035B2C8 00324888  4C 00 00 64 */	rfi 
 
+
 .global __OSSystemCallVectorEnd
 __OSSystemCallVectorEnd:
 /* 8035B2CC 0032488C  60 00 00 00 */	nop 
 
+.balign 16, 0
 .global __OSInitSystemCall
 __OSInitSystemCall:
 /* 8035B2D0 00324890  94 21 FF F0 */	stwu r1, -0x10(r1)

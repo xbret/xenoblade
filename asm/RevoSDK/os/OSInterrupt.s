@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global OSDisableInterrupts
 OSDisableInterrupts:
 /* 803589B0 00321F70  7C 60 00 A6 */	mfmsr r3
@@ -55,6 +56,7 @@ __OSGetInterruptHandler:
 /* 80358A48 00322008  7C 64 00 2E */	lwzx r3, r4, r0
 /* 80358A4C 0032200C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __OSInterruptInit
 __OSInterruptInit:
 /* 80358A50 00322010  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -339,6 +341,7 @@ lbl_80358DD0:
 /* 80358DF8 003223B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80358DFC 003223BC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __OSUnmaskInterrupts
 __OSUnmaskInterrupts:
 /* 80358E00 003223C0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -376,6 +379,7 @@ lbl_80358E50:
 /* 80358E78 00322438  38 21 00 20 */	addi r1, r1, 0x20
 /* 80358E7C 0032243C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __OSDispatchInterrupt
 __OSDispatchInterrupt:
 /* 80358E80 00322440  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -608,6 +612,7 @@ ExternalInterruptHandler:
 /* 80359178 00322738  94 21 FF F8 */	stwu r1, -8(r1)
 /* 8035917C 0032273C  4B FF FD 04 */	b __OSDispatchInterrupt
 
+.balign 16, 0
 .global __OSModuleInit
 __OSModuleInit:
 /* 80359180 00322740  3C 60 80 00 */	lis r3, 0x800030CC@ha

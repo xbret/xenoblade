@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global IPCReInit
 IPCReInit:
 /* 80342A10 0030BFD0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -31,6 +32,7 @@ func_80342A60:
 /* 80342A68 0030C028  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80342A6C 0030C02C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_80342A70
 func_80342A70:
 /* 80342A70 0030C030  54 60 10 3A */	slwi r0, r3, 2
@@ -38,6 +40,7 @@ func_80342A70:
 /* 80342A78 0030C038  7C 83 01 2E */	stwx r4, r3, r0
 /* 80342A7C 0030C03C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global IPCGetBufferHi
 IPCGetBufferHi:
 /* 80342A80 0030C040  80 6D B7 F0 */	lwz r3, lbl_80667970@sda21(r13)

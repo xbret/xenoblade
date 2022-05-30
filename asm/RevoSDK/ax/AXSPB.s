@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __AXGetStudio
 __AXGetStudio:
 /* 802D4320 0029D8E0  3C 60 80 58 */	lis r3, lbl_805819C0@ha

@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global DSPCheckMailToDSP
 DSPCheckMailToDSP:
 /* 80309210 002D27D0  3C 60 CC 00 */	lis r3, 0xCC005000@ha
@@ -9,6 +10,7 @@ DSPCheckMailToDSP:
 /* 80309218 002D27D8  54 03 8F FE */	rlwinm r3, r0, 0x11, 0x1f, 0x1f
 /* 8030921C 002D27DC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DSPCheckMailFromDSP
 DSPCheckMailFromDSP:
 /* 80309220 002D27E0  3C 60 CC 00 */	lis r3, 0xCC005004@ha
@@ -16,6 +18,7 @@ DSPCheckMailFromDSP:
 /* 80309228 002D27E8  54 03 8F FE */	rlwinm r3, r0, 0x11, 0x1f, 0x1f
 /* 8030922C 002D27EC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DSPReadMailFromDSP
 DSPReadMailFromDSP:
 /* 80309230 002D27F0  3C 60 CC 00 */	lis r3, 0xCC005004@ha
@@ -86,6 +89,7 @@ lbl_8030931C:
 /* 80309328 002D28E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030932C 002D28EC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DSPCheckInit
 DSPCheckInit:
 /* 80309330 002D28F0  80 6D B6 08 */	lwz r3, lbl_80667788@sda21(r13)
@@ -124,6 +128,7 @@ lbl_80309394:
 /* 803093A8 002D2968  38 21 00 10 */	addi r1, r1, 0x10
 /* 803093AC 002D296C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_803093B0
 func_803093B0:
 /* 803093B0 002D2970  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -143,6 +148,7 @@ func_803093B0:
 /* 803093E8 002D29A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803093EC 002D29AC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DSPAssertTask
 DSPAssertTask:
 /* 803093F0 002D29B0  94 21 FF F0 */	stwu r1, -0x10(r1)

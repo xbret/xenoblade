@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global doTransactionCallback
 doTransactionCallback:
 /* 80310600 002D9BC0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -135,6 +136,7 @@ lbl_803107C0:
 /* 803107C8 002D9D88  38 21 00 10 */	addi r1, r1, 0x10
 /* 803107CC 002D9D8C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DVDLowInit
 DVDLowInit:
 /* 803107D0 002D9D90  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -914,6 +916,7 @@ lbl_803112A8:
 /* 803112B8 002DA878  38 21 00 10 */	addi r1, r1, 0x10
 /* 803112BC 002DA87C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DVDLowGetNoDiscOpenPartitionParams
 DVDLowGetNoDiscOpenPartitionParams:
 /* 803112C0 002DA880  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -2202,6 +2205,7 @@ lbl_803124E8:
 /* 803124F8 002DBAB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803124FC 002DBABC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DVDLowSeek
 DVDLowSeek:
 /* 80312500 002DBAC0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2309,6 +2313,7 @@ lbl_80312668:
 /* 80312678 002DBC38  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031267C 002DBC3C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DVDLowGetCoverRegister
 DVDLowGetCoverRegister:
 /* 80312680 002DBC40  3C 60 80 5D */	lis r3, lbl_805CCCE0@ha
@@ -2316,6 +2321,7 @@ DVDLowGetCoverRegister:
 /* 80312688 002DBC48  80 63 00 04 */	lwz r3, 4(r3)
 /* 8031268C 002DBC4C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DVDLowGetStatusRegister
 DVDLowGetStatusRegister:
 /* 80312690 002DBC50  3C 60 80 5D */	lis r3, lbl_805CCDE0@ha

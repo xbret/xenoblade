@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global BTE_InitStack
 BTE_InitStack:
 /* 802DDEB0 002A7470  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -15,4 +16,4 @@ BTE_InitStack:
 /* 802DDED0 002A7490  7C 08 03 A6 */	mtlr r0
 /* 802DDED4 002A7494  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DDED8 002A7498  4E 80 00 20 */	blr 
-.balign 16, 0
+#.balign 16, 0

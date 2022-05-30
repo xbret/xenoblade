@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global CallbackAsyncIpc
 CallbackAsyncIpc:
 /* 8035E5F0 00327BB0  2C 04 00 00 */	cmpwi r4, 0

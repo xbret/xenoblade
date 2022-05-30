@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#.balign 16, 0
 .global func_802F9B38
 func_802F9B38:
 /* 802F9B38 002C30F8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -74,6 +75,7 @@ func_802F9B38:
 /* 802F9C44 002C3204  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F9C48 002C3208  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global func_802F9C4C
 func_802F9C4C:
 /* 802F9C4C 002C320C  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -299,6 +301,7 @@ lbl_802F9F64:
 /* 802F9F74 002C3534  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F9F78 002C3538  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global func_802F9F7C
 func_802F9F7C:
 /* 802F9F7C 002C353C  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -356,6 +359,7 @@ lbl_802FA02C:
 /* 802FA040 002C3600  7C 69 03 A6 */	mtctr r3
 /* 802FA044 002C3604  4E 80 04 20 */	bctr 
 
+#.balign 16, 0
 .global func_802FA048
 func_802FA048:
 /* 802FA048 002C3608  88 10 00 05 */	lbz r0, 5(r16)
@@ -414,6 +418,7 @@ lbl_802FA0EC:
 /* 802FA114 002C36D4  4B FF D3 BD */	bl func_802F74D0
 /* 802FA118 002C36D8  4B FF FE B0 */	b func_802F9FC8
 
+#.balign 16, 0
 .global func_802FA11C
 func_802FA11C:
 /* 802FA11C 002C36DC  88 10 00 05 */	lbz r0, 5(r16)
@@ -472,6 +477,7 @@ lbl_802FA1CC:
 /* 802FA1E0 002C37A0  4B FF D2 F1 */	bl func_802F74D0
 /* 802FA1E4 002C37A4  4B FF FD E4 */	b func_802F9FC8
 
+#.balign 16, 0
 .global func_802FA1E8
 func_802FA1E8:
 /* 802FA1E8 002C37A8  88 10 00 05 */	lbz r0, 5(r16)
@@ -541,6 +547,7 @@ lbl_802FA2D0:
 /* 802FA2D8 002C3898  4B FF D1 F9 */	bl func_802F74D0
 /* 802FA2DC 002C389C  4B FF FC EC */	b func_802F9FC8
 
+#.balign 16, 0
 .global func_802FA2E0
 func_802FA2E0:
 /* 802FA2E0 002C38A0  88 10 00 07 */	lbz r0, 7(r16)
@@ -727,6 +734,7 @@ lbl_802FA574:
 /* 802FA588 002C3B48  48 00 09 A1 */	bl func_802FAF28
 /* 802FA58C 002C3B4C  4B FF FA 3C */	b func_802F9FC8
 
+#.balign 16, 0
 .global func_802FA590
 func_802FA590:
 /* 802FA590 002C3B50  88 10 00 07 */	lbz r0, 7(r16)
@@ -912,6 +920,7 @@ lbl_802FA820:
 /* 802FA838 002C3DF8  4B FE 37 89 */	bl LogMsg_1
 /* 802FA83C 002C3DFC  4B FF F7 8C */	b func_802F9FC8
 
+#.balign 16, 0
 .global func_802FA840
 func_802FA840:
 /* 802FA840 002C3E00  88 90 00 05 */	lbz r4, 5(r16)
@@ -945,6 +954,7 @@ lbl_802FA89C:
 /* 802FA8AC 002C3E6C  48 00 12 4D */	bl func_802FBAF8
 /* 802FA8B0 002C3E70  4B FF F7 18 */	b func_802F9FC8
 
+#.balign 16, 0
 .global func_802FA8B4
 func_802FA8B4:
 /* 802FA8B4 002C3E74  88 90 00 05 */	lbz r4, 5(r16)
@@ -972,6 +982,7 @@ func_802FA8B4:
 /* 802FA90C 002C3ECC  4B FF CB C5 */	bl func_802F74D0
 /* 802FA910 002C3ED0  4B FF F6 B8 */	b func_802F9FC8
 
+#.balign 16, 0
 .global func_802FA914
 func_802FA914:
 /* 802FA914 002C3ED4  A0 7E 00 7E */	lhz r3, 0x7e(r30)
@@ -992,6 +1003,7 @@ lbl_802FA93C:
 /* 802FA94C 002C3F0C  48 00 13 DD */	bl func_802FBD28
 /* 802FA950 002C3F10  4B FF F6 78 */	b func_802F9FC8
 
+#.balign 16, 0
 .global func_802FA954
 func_802FA954:
 /* 802FA954 002C3F14  81 8F 00 54 */	lwz r12, 0x54(r15)
@@ -1003,6 +1015,7 @@ func_802FA954:
 /* 802FA96C 002C3F2C  4E 80 04 21 */	bctrl 
 /* 802FA970 002C3F30  4B FF F6 58 */	b func_802F9FC8
 
+#.balign 16, 0
 .global func_802FA974
 func_802FA974:
 /* 802FA974 002C3F34  88 10 00 05 */	lbz r0, 5(r16)
@@ -1015,6 +1028,7 @@ func_802FA974:
 /* 802FA990 002C3F50  48 00 15 35 */	bl func_802FBEC4
 /* 802FA994 002C3F54  4B FF F6 34 */	b func_802F9FC8
 
+#.balign 16, 0
 .global func_802FA998
 func_802FA998:
 /* 802FA998 002C3F58  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
@@ -1041,6 +1055,7 @@ lbl_802FA9D4:
 /* 802FA9E4 002C3FA4  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 802FA9E8 002C3FA8  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global func_802FA9EC
 func_802FA9EC:
 /* 802FA9EC 002C3FAC  A0 03 00 14 */	lhz r0, 0x14(r3)
@@ -1052,12 +1067,14 @@ func_802FA9EC:
 /* 802FAA04 002C3FC4  40 80 00 1C */	bge lbl_802FAA20
 /* 802FAA08 002C3FC8  4E 80 00 20 */	blr
 
+#.balign 16, 0
 .global func_802FAA0C
 func_802FAA0C:
 /* 802FAA0C 002C3FCC  2C 00 00 49 */	cmpwi r0, 0x49
 /* 802FAA10 002C3FD0  4D 82 00 20 */	beqlr 
 /* 802FAA14 002C3FD4  4E 80 00 20 */	blr
 
+#.balign 16, 0
 .global func_802FAA18
 func_802FAA18:
 /* 802FAA18 002C3FD8  80 63 00 10 */	lwz r3, 0x10(r3)
@@ -1072,6 +1089,7 @@ lbl_802FAA30:
 /* 802FAA34 002C3FF4  48 00 00 08 */	b func_802FAA3C
 /* 802FAA38 002C3FF8  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global func_802FAA3C
 func_802FAA3C:
 /* 802FAA3C 002C3FFC  94 21 FF E0 */	stwu r1, -0x20(r1)

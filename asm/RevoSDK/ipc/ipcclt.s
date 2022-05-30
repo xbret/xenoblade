@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_80342AB0
 func_80342AB0:
 /* 80342AB0 0030C070  7C 65 1B 78 */	mr r5, r3
@@ -361,6 +362,7 @@ lbl_80342F90:
 /* 80342FA8 0030C568  38 21 00 20 */	addi r1, r1, 0x20
 /* 80342FAC 0030C56C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global IPCCltReInit
 IPCCltReInit:
 /* 80342FB0 0030C570  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -557,6 +559,7 @@ lbl_8034324C:
 /* 80343268 0030C828  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034326C 0030C82C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global IOS_OpenAsync
 IOS_OpenAsync:
 /* 80343270 0030C830  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -782,6 +785,7 @@ lbl_8034355C:
 /* 80343578 0030CB38  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034357C 0030CB3C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global IOS_Close
 IOS_Close:
 /* 80343580 0030CB40  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -907,6 +911,7 @@ lbl_80343714:
 /* 80343728 0030CCE8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8034372C 0030CCEC  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global func_80343730
 func_80343730:
 /* 80343730 0030CCF0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1060,6 +1065,7 @@ lbl_80343924:
 /* 80343938 0030CEF8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8034393C 0030CEFC  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global ENCiWriteBreakType
 ENCiWriteBreakType:
 /* 80343940 0030CF00  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1203,6 +1209,7 @@ lbl_80343B14:
 /* 80343B28 0030D0E8  38 21 00 30 */	addi r1, r1, 0x30
 /* 80343B2C 0030D0EC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global IOS_IoctlAsync
 IOS_IoctlAsync:
 /* 80343B30 0030D0F0  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1384,6 +1391,7 @@ lbl_80343D84:
 /* 80343D98 0030D358  38 21 00 30 */	addi r1, r1, 0x30
 /* 80343D9C 0030D35C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_80343DA0
 func_80343DA0:
 /* 80343DA0 0030D360  94 21 FF E0 */	stwu r1, -0x20(r1)

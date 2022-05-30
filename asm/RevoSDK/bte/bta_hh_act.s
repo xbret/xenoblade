@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#.balign 16, 0
 .global bta_hh_api_enable
 bta_hh_api_enable:
 /* 802E20E8 002AB6A8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -100,6 +101,7 @@ lbl_802E2224:
 /* 802E2254 002AB814  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E2258 002AB818  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_api_disable
 bta_hh_api_disable:
 /* 802E225C 002AB81C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -174,6 +176,7 @@ lbl_802E2348:
 /* 802E2358 002AB918  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E235C 002AB91C  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_disc_cmpl
 bta_hh_disc_cmpl:
 /* 802E2360 002AB920  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -220,6 +223,7 @@ lbl_802E239C:
 /* 802E23FC 002AB9BC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E2400 002AB9C0  4E 80 00 20 */	blr
 
+#.balign 16, 0
 .global bta_hh_sdp_cback
 bta_hh_sdp_cback:
 /* 802E2404 002AB9C4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -305,6 +309,7 @@ lbl_802E24FC:
 /* 802E2530 002ABAF0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E2534 002ABAF4  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_start_sdp
 bta_hh_start_sdp:
 /* 802E2538 002ABAF8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -415,6 +420,7 @@ lbl_802E26B0:
 /* 802E26C4 002ABC84  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E26C8 002ABC88  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_sdp_cmpl
 bta_hh_sdp_cmpl:
 /* 802E26CC 002ABC8C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -516,6 +522,7 @@ lbl_802E2818:
 /* 802E282C 002ABDEC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E2830 002ABDF0  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_api_disc_act
 bta_hh_api_disc_act:
 /* 802E2834 002ABDF4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -548,6 +555,7 @@ lbl_802E288C:
 /* 802E2894 002ABE54  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E2898 002ABE58  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_open_cmpl_act
 bta_hh_open_cmpl_act:
 /* 802E289C 002ABE5C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -630,6 +638,7 @@ lbl_802E29A0:
 /* 802E29BC 002ABF7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E29C0 002ABF80  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_open_act
 bta_hh_open_act:
 /* 802E29C4 002ABF84  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -684,6 +693,7 @@ lbl_802E2A64:
 /* 802E2A74 002AC034  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E2A78 002AC038  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_data_act
 bta_hh_data_act:
 /* 802E2A7C 002AC03C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -709,6 +719,7 @@ bta_hh_data_act:
 /* 802E2ACC 002AC08C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E2AD0 002AC090  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_handsk_act
 bta_hh_handsk_act:
 /* 802E2AD4 002AC094  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -904,6 +915,7 @@ lbl_802E2D10:
 /* 802E2D34 002AC2F4  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E2D38 002AC2F8  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_ctrl_dat_act
 bta_hh_ctrl_dat_act:
 /* 802E2D3C 002AC2FC  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1073,6 +1085,7 @@ lbl_802E2ECC:
 /* 802E2F2C 002AC4EC  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E2F30 002AC4F0  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_close_act
 bta_hh_close_act:
 /* 802E2F34 002AC4F4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1213,6 +1226,7 @@ lbl_802E311C:
 /* 802E312C 002AC6EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E3130 002AC6F0  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_get_dscp_act
 bta_hh_get_dscp_act:
 /* 802E3134 002AC6F4  3C A0 80 5C */	lis r5, lbl_805BF7C8@ha
@@ -1223,6 +1237,7 @@ bta_hh_get_dscp_act:
 /* 802E3148 002AC708  7D 89 03 A6 */	mtctr r12
 /* 802E314C 002AC70C  4E 80 04 20 */	bctr 
 
+#.balign 16, 0
 .global bta_hh_maint_dev_act
 bta_hh_maint_dev_act:
 /* 802E3150 002AC710  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1321,6 +1336,7 @@ lbl_802E3280:
 /* 802E32AC 002AC86C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E32B0 002AC870  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_get_acl_q_info
 bta_hh_get_acl_q_info:
 /* 802E32B4 002AC874  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1398,6 +1414,7 @@ lbl_802E3370:
 /* 802E33C8 002AC988  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E33CC 002AC98C  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_write_dev_act
 bta_hh_write_dev_act:
 /* 802E33D0 002AC990  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1525,6 +1542,7 @@ lbl_802E357C:
 /* 802E3590 002ACB50  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E3594 002ACB54  4E 80 00 20 */	blr
 
+#.balign 16, 0
 .global bta_hh_cback
 bta_hh_cback:
 /* 802E3598 002ACB58  94 21 FF E0 */	stwu r1, -0x20(r1)

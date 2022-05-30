@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global ARCInitHandle
 ARCInitHandle:
 /* 802D1670 0029AC30  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -46,6 +47,7 @@ lbl_802D16B4:
 /* 802D1708 0029ACC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D170C 0029ACCC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global ARCOpen
 ARCOpen:
 /* 802D1710 0029ACD0  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -271,6 +273,7 @@ lbl_802D19F0:
 /* 802D1A08 0029AFC8  90 05 00 08 */	stw r0, 8(r5)
 /* 802D1A0C 0029AFCC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global ARCConvertPathToEntrynum
 ARCConvertPathToEntrynum:
 /* 802D1A10 0029AFD0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -604,6 +607,7 @@ lbl_802D1E48:
 /* 802D1E58 0029B418  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D1E5C 0029B41C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global ARCGetStartAddrInMem
 ARCGetStartAddrInMem:
 /* 802D1E60 0029B420  80 83 00 00 */	lwz r4, 0(r3)

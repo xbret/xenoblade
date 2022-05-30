@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __DVDFSInit
 __DVDFSInit:
 /* 80309DA0 002D3360  3C 60 80 00 */	lis r3, 0x80000038@ha
@@ -17,6 +18,7 @@ __DVDFSInit:
 /* 80309DC8 002D3388  90 0D B6 3C */	stw r0, lbl_806677BC@sda21(r13)
 /* 80309DCC 002D338C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global DVDConvertPathToEntrynum
 DVDConvertPathToEntrynum:
 /* 80309DD0 002D3390  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -695,6 +697,7 @@ lbl_8030A698:
 /* 8030A6D8 002D3C98  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030A6DC 002D3C9C  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global cbForReadAsync
 cbForReadAsync:
 /* 8030A6E0 002D3CA0  81 84 00 38 */	lwz r12, 0x38(r4)

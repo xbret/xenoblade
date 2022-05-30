@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __OSLoadFPUContext
 __OSLoadFPUContext:
 /* 80354610 0031DBD0  A0 A4 01 A2 */	lhz r5, 0x1a2(r4)
@@ -236,6 +237,7 @@ OSSaveContext:
 /* 80354968 0031DF28  38 60 00 00 */	li r3, 0
 /* 8035496C 0031DF2C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSLoadContext
 OSLoadContext:
 /* 80354970 0031DF30  3C 80 80 36 */	lis r4, OSDisableInterrupts@ha
@@ -318,6 +320,7 @@ OSSwitchFiber:
 /* 80354A88 0031E048  7C A1 2B 78 */	mr r1, r5
 /* 80354A8C 0031E04C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSSwitchFiberEx
 OSSwitchFiberEx:
 /* 80354A90 0031E050  7C 08 02 A6 */	mflr r0
@@ -333,6 +336,7 @@ OSSwitchFiberEx:
 /* 80354AB8 0031E078  7C A1 2B 78 */	mr r1, r5
 /* 80354ABC 0031E07C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSClearContext
 OSClearContext:
 /* 80354AC0 0031E080  38 A0 00 00 */	li r5, 0
@@ -562,6 +566,7 @@ lbl_80354DF8:
 /* 80354E08 0031E3C8  38 21 02 F0 */	addi r1, r1, 0x2f0
 /* 80354E0C 0031E3CC  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global OSSwitchFPUContext
 OSSwitchFPUContext:
 /* 80354E10 0031E3D0  7C A0 00 A6 */	mfmsr r5

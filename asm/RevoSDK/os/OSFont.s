@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global GetFontCode
 GetFontCode:
 /* 80357720 00320CE0  28 03 00 01 */	cmplwi r3, 1
@@ -467,6 +468,7 @@ lbl_80357D88:
 /* 80357D98 00321358  38 21 00 30 */	addi r1, r1, 0x30
 /* 80357D9C 0032135C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSLoadFont
 OSLoadFont:
 /* 80357DA0 00321360  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1227,6 +1229,7 @@ lbl_8035884C:
 /* 80358858 00321E18  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035885C 00321E1C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSGetFontTexture
 OSGetFontTexture:
 /* 80358860 00321E20  94 21 FF E0 */	stwu r1, -0x20(r1)

@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_8031D620
 func_8031D620:
 /* 8031D620 002E6BE0  2C 03 00 00 */	cmpwi r3, 0
@@ -64,6 +65,7 @@ GXSetTevColorIn:
 /* 8031D6F8 002E6CB8  B0 0B 00 02 */	sth r0, 2(r11)
 /* 8031D6FC 002E6CBC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global GXSetTevAlphaIn
 GXSetTevAlphaIn:
 /* 8031D700 002E6CC0  81 62 BC 20 */	lwz r11, lbl_8066BFA0@sda21(r2)
@@ -83,6 +85,7 @@ GXSetTevAlphaIn:
 /* 8031D738 002E6CF8  B0 0B 00 02 */	sth r0, 2(r11)
 /* 8031D73C 002E6CFC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global GXSetTevColorOp
 GXSetTevColorOp:
 /* 8031D740 002E6D00  81 42 BC 20 */	lwz r10, lbl_8066BFA0@sda21(r2)
@@ -166,6 +169,7 @@ func_8031D800:
 /* 8031D858 002E6E18  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031D85C 002E6E1C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8031D860
 func_8031D860:
 /* 8031D860 002E6E20  81 04 00 00 */	lwz r8, 0(r4)
@@ -247,6 +251,7 @@ lbl_8031D960:
 /* 8031D978 002E6F38  B0 05 00 02 */	sth r0, 2(r5)
 /* 8031D97C 002E6F3C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8031D980
 func_8031D980:
 /* 8031D980 002E6F40  54 60 07 FF */	clrlwi. r0, r3, 0x1f
@@ -272,6 +277,7 @@ lbl_8031D9B0:
 /* 8031D9C8 002E6F88  B0 05 00 02 */	sth r0, 2(r5)
 /* 8031D9CC 002E6F8C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global GXSetTevSwapMode
 GXSetTevSwapMode:
 /* 8031D9D0 002E6F90  81 22 BC 20 */	lwz r9, lbl_8066BFA0@sda21(r2)

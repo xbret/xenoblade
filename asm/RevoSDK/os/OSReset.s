@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global OSRegisterShutdownFunction
 OSRegisterShutdownFunction:
 /* 80359F10 003234D0  80 AD B9 40 */	lwz r5, lbl_80667AC0@sda21(r13)
@@ -98,6 +99,7 @@ lbl_8035A018:
 /* 8035A048 00323608  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035A04C 0032360C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __OSShutdownDevices
 __OSShutdownDevices:
 /* 8035A050 00323610  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -215,6 +217,7 @@ lbl_8035A1B0:
 /* 8035A1C8 00323788  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035A1CC 0032378C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSShutdownSystem
 OSShutdownSystem:
 /* 8035A1D0 00323790  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -556,6 +559,7 @@ OSReturnToMenu:
 /* 8035A698 00323C58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035A69C 00323C5C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __OSReturnToMenuForError
 __OSReturnToMenuForError:
 /* 8035A6A0 00323C60  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -647,6 +651,7 @@ lbl_8035A7D0:
 /* 8035A7D8 00323D98  54 03 E8 FE */	srwi r3, r0, 3
 /* 8035A7DC 00323D9C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSResetSystem
 OSResetSystem:
 /* 802703C0 00323DA0  3C 60 80 55 */	lis r3, lbl_80552AF0@ha

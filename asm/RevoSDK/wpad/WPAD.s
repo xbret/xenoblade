@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_80368E00
 func_80368E00:
 /* 80368E00 003323C0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -17,6 +18,7 @@ func_80368E00:
 /* 80368E28 003323E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80368E2C 003323EC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_80368E30
 func_80368E30:
 /* 80368E30 003323F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -32,6 +34,7 @@ func_80368E30:
 /* 80368E58 00332418  38 21 00 10 */	addi r1, r1, 0x10
 /* 80368E5C 0033241C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_80368E60
 func_80368E60:
 /* 80368E60 00332420  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -47,6 +50,7 @@ func_80368E60:
 /* 80368E88 00332448  38 21 00 10 */	addi r1, r1, 0x10
 /* 80368E8C 0033244C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_80368E90
 func_80368E90:
 /* 80368E90 00332450  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -389,6 +393,7 @@ lbl_80369320:
 /* 80369348 00332908  98 87 08 CE */	stb r4, 0x8ce(r7)
 /* 8036934C 0033290C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global IsControllerDataChanged
 IsControllerDataChanged:
 /* 80369350 00332910  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -640,6 +645,7 @@ lbl_803696A0:
 /* 803696D8 00332C98  7C C9 03 A6 */	mtctr r6
 /* 803696DC 00332C9C  4E 80 04 20 */	bctr 
 
+.balign 16, 0
 .global func_803696E0
 func_803696E0:
 /* 803696E0 00332CA0  A8 C5 00 2C */	lha r6, 0x2c(r5)
@@ -744,6 +750,7 @@ lbl_8036983C:
 /* 8036984C 00332E0C  54 00 0F FE */	srwi r0, r0, 0x1f
 /* 80369850 00332E10  7D 4A 03 78 */	or r10, r10, r0
 /* 80369854 00332E14  48 00 03 D8 */	b func_80369C2C
+
 
 .global func_80369858
 func_80369858:
@@ -861,6 +868,7 @@ lbl_803699D8:
 /* 803699EC 00332FAC  7D 4A 03 78 */	or r10, r10, r0
 /* 803699F0 00332FB0  48 00 02 3C */	b func_80369C2C
 
+
 .global func_803699F4
 func_803699F4:
 /* 803699F4 00332FB4  A0 C4 00 2A */	lhz r6, 0x2a(r4)
@@ -895,6 +903,7 @@ lbl_80369A50:
 /* 80369A60 00333020  54 00 0F FE */	srwi r0, r0, 0x1f
 /* 80369A64 00333024  7D 4A 03 78 */	or r10, r10, r0
 /* 80369A68 00333028  48 00 01 C4 */	b func_80369C2C
+
 
 .global func_80369A6C
 func_80369A6C:
@@ -985,6 +994,7 @@ lbl_80369B9C:
 /* 80369BA0 00333160  54 0A 06 3E */	clrlwi r10, r0, 0x18
 /* 80369BA4 00333164  48 00 00 88 */	b func_80369C2C
 
+
 .global func_80369BA8
 func_80369BA8:
 /* 80369BA8 00333168  88 C4 00 46 */	lbz r6, 0x46(r4)
@@ -1023,6 +1033,7 @@ lbl_80369C0C:
 /* 80369C20 003331E0  54 00 0F FE */	srwi r0, r0, 0x1f
 /* 80369C24 003331E4  7D 4A 03 78 */	or r10, r10, r0
 /* 80369C28 003331E8  42 00 FF D0 */	bdnz lbl_80369BF8
+
 
 .global func_80369C2C
 func_80369C2C:
@@ -1897,6 +1908,7 @@ WPADiManageHandler0:
 /* 8036A8A8 00333E68  39 08 10 00 */	addi r8, r8, 0x1000
 /* 8036A8AC 00333E6C  4B FE A1 E4 */	b OSSwitchFiberEx
 
+.balign 16, 0
 .global __ClearControlBlock
 __ClearControlBlock:
 /* 8036A8B0 00333E70  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2255,6 +2267,7 @@ lbl_8036ADEC:
 /* 8036ADF8 003343B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8036ADFC 003343BC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global WPADStartFastSimpleSync
 WPADStartFastSimpleSync:
 /* 8036AE00 003343C0  48 00 E6 C0 */	b WUDStartFastSyncSimple
@@ -3469,6 +3482,7 @@ lbl_8036BFC0:
 /* 8036BFC8 00335588  38 21 00 10 */	addi r1, r1, 0x10
 /* 8036BFCC 0033558C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global WPADGetAccGravityUnit
 WPADGetAccGravityUnit:
 /* 8036BFD0 00335590  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -3593,6 +3607,7 @@ lbl_8036C180:
 /* 8036C198 00335758  38 21 00 20 */	addi r1, r1, 0x20
 /* 8036C19C 0033575C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8036C1A0
 func_8036C1A0:
 /* 8036C1A0 00335760  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -4004,6 +4019,7 @@ lbl_8036C764:
 /* 8036C778 00335D38  38 21 00 90 */	addi r1, r1, 0x90
 /* 8036C77C 00335D3C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global WPADControlMotor
 WPADControlMotor:
 /* 8036C780 00335D40  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -4315,30 +4331,36 @@ WPADRead:
 /* 8036CBDC 0033619C  7C 69 03 A6 */	mtctr r3
 /* 8036CBE0 003361A0  4E 80 04 20 */	bctr 
 
+
 .global func_8036CBE4
 func_8036CBE4:
 /* 8036CBE4 003361A4  38 A0 00 32 */	li r5, 0x32
 /* 8036CBE8 003361A8  48 00 00 30 */	b lbl_8036CC18
+
 
 .global func_8036CBEC
 func_8036CBEC:
 /* 8036CBEC 003361AC  38 A0 00 36 */	li r5, 0x36
 /* 8036CBF0 003361B0  48 00 00 28 */	b lbl_8036CC18
 
+
 .global func_8036CBF4
 func_8036CBF4:
 /* 8036CBF4 003361B4  38 A0 00 2E */	li r5, 0x2e
 /* 8036CBF8 003361B8  48 00 00 20 */	b lbl_8036CC18
+
 
 .global func_8036CBFC
 func_8036CBFC:
 /* 8036CBFC 003361BC  38 A0 00 34 */	li r5, 0x34
 /* 8036CC00 003361C0  48 00 00 18 */	b lbl_8036CC18
 
+
 .global func_8036CC04
 func_8036CC04:
 /* 8036CC04 003361C4  38 A0 00 4A */	li r5, 0x4a
 /* 8036CC08 003361C8  48 00 00 10 */	b lbl_8036CC18
+
 
 .global func_8036CC0C
 func_8036CC0C:
@@ -4397,30 +4419,36 @@ lbl_8036CCA8:
 /* 8036CCC8 00336288  7C 69 03 A6 */	mtctr r3
 /* 8036CCCC 0033628C  4E 80 04 20 */	bctr 
 
+
 .global func_8036CCD0
 func_8036CCD0:
 /* 8036CCD0 00336290  3B A0 00 32 */	li r29, 0x32
 /* 8036CCD4 00336294  48 00 00 30 */	b lbl_8036CD04
+
 
 .global func_8036CCD8
 func_8036CCD8:
 /* 8036CCD8 00336298  3B A0 00 36 */	li r29, 0x36
 /* 8036CCDC 0033629C  48 00 00 28 */	b lbl_8036CD04
 
+
 .global func_8036CCE0
 func_8036CCE0:
 /* 8036CCE0 003362A0  3B A0 00 2E */	li r29, 0x2e
 /* 8036CCE4 003362A4  48 00 00 20 */	b lbl_8036CD04
+
 
 .global func_8036CCE8
 func_8036CCE8:
 /* 8036CCE8 003362A8  3B A0 00 34 */	li r29, 0x34
 /* 8036CCEC 003362AC  48 00 00 18 */	b lbl_8036CD04
 
+
 .global func_8036CCF0
 func_8036CCF0:
 /* 8036CCF0 003362B0  3B A0 00 4A */	li r29, 0x4a
 /* 8036CCF4 003362B4  48 00 00 10 */	b lbl_8036CD04
+
 
 .global func_8036CCF8
 func_8036CCF8:
@@ -4614,30 +4642,36 @@ WPADiCopyOut:
 /* 8036CF9C 0033655C  7C 69 03 A6 */	mtctr r3
 /* 8036CFA0 00336560  4E 80 04 20 */	bctr 
 
+
 .global func_8036CFA4
 func_8036CFA4:
 /* 8036CFA4 00336564  38 A0 00 32 */	li r5, 0x32
 /* 8036CFA8 00336568  48 00 00 30 */	b lbl_8036CFD8
+
 
 .global func_8036CFAC
 func_8036CFAC:
 /* 8036CFAC 0033656C  38 A0 00 36 */	li r5, 0x36
 /* 8036CFB0 00336570  48 00 00 28 */	b lbl_8036CFD8
 
+
 .global func_8036CFB4
 func_8036CFB4:
 /* 8036CFB4 00336574  38 A0 00 2E */	li r5, 0x2e
 /* 8036CFB8 00336578  48 00 00 20 */	b lbl_8036CFD8
+
 
 .global func_8036CFBC
 func_8036CFBC:
 /* 8036CFBC 0033657C  38 A0 00 34 */	li r5, 0x34
 /* 8036CFC0 00336580  48 00 00 18 */	b lbl_8036CFD8
 
+
 .global func_8036CFC4
 func_8036CFC4:
 /* 8036CFC4 00336584  38 A0 00 4A */	li r5, 0x4a
 /* 8036CFC8 00336588  48 00 00 10 */	b lbl_8036CFD8
+
 
 .global func_8036CFCC
 func_8036CFCC:
@@ -4689,6 +4723,7 @@ lbl_8036D040:
 /* 8036D068 00336628  38 21 00 20 */	addi r1, r1, 0x20
 /* 8036D06C 0033662C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global WPADIsSpeakerEnabled
 WPADIsSpeakerEnabled:
 /* 8036D070 00336630  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -6225,6 +6260,7 @@ lbl_8036E734:
 /* 8036E748 00337D08  38 21 00 10 */	addi r1, r1, 0x10
 /* 8036E74C 00337D0C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global IsBusyStream
 IsBusyStream:
 /* 8036E750 00337D10  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -6497,6 +6533,7 @@ lbl_8036EB18:
 /* 8036EB28 003380E8  38 21 00 80 */	addi r1, r1, 0x80
 /* 8036EB2C 003380EC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8036EB30
 func_8036EB30:
 /* 8036EB30 003380F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -7681,6 +7718,7 @@ lbl_8036FCC8:
 /* 8036FCD8 00339298  38 21 04 70 */	addi r1, r1, 0x470
 /* 8036FCDC 0033929C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8036FCE0
 func_8036FCE0:
 /* 8036FCE0 003392A0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -7857,11 +7895,13 @@ WPADiSendSetReportType:
 /* 8036FF50 00339510  7C 69 03 A6 */	mtctr r3
 /* 8036FF54 00339514  4E 80 04 20 */	bctr 
 
+
 .global func_8036FF58
 func_8036FF58:
 /* 8036FF58 00339518  38 00 00 30 */	li r0, 0x30
 /* 8036FF5C 0033951C  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 8036FF60 00339520  48 00 00 B4 */	b lbl_80370014
+
 
 .global func_8036FF64
 func_8036FF64:
@@ -7869,11 +7909,13 @@ func_8036FF64:
 /* 8036FF68 00339528  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 8036FF6C 0033952C  48 00 00 A8 */	b lbl_80370014
 
+
 .global func_8036FF70
 func_8036FF70:
 /* 8036FF70 00339530  38 00 00 33 */	li r0, 0x33
 /* 8036FF74 00339534  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 8036FF78 00339538  48 00 00 9C */	b lbl_80370014
+
 
 .global func_8036FF7C
 func_8036FF7C:
@@ -7881,11 +7923,13 @@ func_8036FF7C:
 /* 8036FF80 00339540  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 8036FF84 00339544  48 00 00 90 */	b lbl_80370014
 
+
 .global func_8036FF88
 func_8036FF88:
 /* 8036FF88 00339548  38 00 00 35 */	li r0, 0x35
 /* 8036FF8C 0033954C  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 8036FF90 00339550  48 00 00 84 */	b lbl_80370014
+
 
 .global func_8036FF94
 func_8036FF94:
@@ -7893,11 +7937,13 @@ func_8036FF94:
 /* 8036FF98 00339558  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 8036FF9C 0033955C  48 00 00 78 */	b lbl_80370014
 
+
 .global func_8036FFA0
 func_8036FFA0:
 /* 8036FFA0 00339560  38 00 00 32 */	li r0, 0x32
 /* 8036FFA4 00339564  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 8036FFA8 00339568  48 00 00 6C */	b lbl_80370014
+
 
 .global func_8036FFAC
 func_8036FFAC:
@@ -7905,11 +7951,13 @@ func_8036FFAC:
 /* 8036FFB0 00339570  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 8036FFB4 00339574  48 00 00 60 */	b lbl_80370014
 
+
 .global func_8036FFB8
 func_8036FFB8:
 /* 8036FFB8 00339578  38 00 00 37 */	li r0, 0x37
 /* 8036FFBC 0033957C  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 8036FFC0 00339580  48 00 00 54 */	b lbl_80370014
+
 
 .global func_8036FFC4
 func_8036FFC4:
@@ -7917,11 +7965,13 @@ func_8036FFC4:
 /* 8036FFC8 00339588  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 8036FFCC 0033958C  48 00 00 48 */	b lbl_80370014
 
+
 .global func_8036FFD0
 func_8036FFD0:
 /* 8036FFD0 00339590  38 00 00 32 */	li r0, 0x32
 /* 8036FFD4 00339594  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 8036FFD8 00339598  48 00 00 3C */	b lbl_80370014
+
 
 .global func_8036FFDC
 func_8036FFDC:
@@ -7929,11 +7979,13 @@ func_8036FFDC:
 /* 8036FFE0 003395A0  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 8036FFE4 003395A4  48 00 00 30 */	b lbl_80370014
 
+
 .global func_8036FFE8
 func_8036FFE8:
 /* 8036FFE8 003395A8  38 00 00 37 */	li r0, 0x37
 /* 8036FFEC 003395AC  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 8036FFF0 003395B0  48 00 00 24 */	b lbl_80370014
+
 
 .global func_8036FFF4
 func_8036FFF4:
@@ -7941,11 +7993,13 @@ func_8036FFF4:
 /* 8036FFF8 003395B8  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 8036FFFC 003395BC  48 00 00 18 */	b lbl_80370014
 
+
 .global func_80370000
 func_80370000:
 /* 80370000 003395C0  38 00 00 35 */	li r0, 0x35
 /* 80370004 003395C4  98 01 00 3D */	stb r0, 0x3d(r1)
 /* 80370008 003395C8  48 00 00 0C */	b lbl_80370014
+
 
 .global func_8037000C
 func_8037000C:
@@ -8412,10 +8466,11 @@ WPADiClearQueue:
 /* 803706E8 00339CA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803706EC 00339CAC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_803706F0
 func_803706F0:
 /* 803706F0 00339CB0  90 6D BB 20 */	stw r3, lbl_80667CA0@sda21(r13)
 /* 803706F4 00339CB4  4E 80 00 20 */	blr 
-#.balign 16, 0
-.4byte 0
-.4byte 0
+.balign 16, 0
+#.4byte 0
+#.4byte 0

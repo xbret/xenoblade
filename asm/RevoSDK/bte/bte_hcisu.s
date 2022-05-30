@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global bte_hcisu_send
 bte_hcisu_send:
 /* 802DDDE0 002A73A0  B0 83 00 00 */	sth r4, 0(r3)
@@ -14,6 +15,7 @@ bte_hcisu_send:
 lbl_802DDDFC:
 /* 802DDDFC 002A73BC  4B FF D6 E4 */	b GKI_freebuf
 
+.balign 16, 0
 .global bte_hcisu_task
 bte_hcisu_task:
 /* 802DDE00 002A73C0  94 21 FF F0 */	stwu r1, -0x10(r1)

@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global iosCreateHeap
 iosCreateHeap:
 /* 803443B0 0030D970  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -84,6 +85,7 @@ lbl_803444BC:
 /* 803444D8 0030DA98  38 21 00 20 */	addi r1, r1, 0x20
 /* 803444DC 0030DA9C  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global func_803444E0
 func_803444E0:
 /* 803444E0 0030DAA0  94 21 FF E0 */	stwu r1, -0x20(r1)

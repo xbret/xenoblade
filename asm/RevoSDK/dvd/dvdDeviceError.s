@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_80310370
 func_80310370:
 /* 80310370 002D9930  90 6D B7 10 */	stw r3, lbl_80667890@sda21(r13)
@@ -9,6 +10,7 @@ func_80310370:
 /* 80310378 002D9938  90 0D 98 20 */	stw r0, lbl_806659A0@sda21(r13)
 /* 8031037C 002D993C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __DVDCheckDevice
 __DVDCheckDevice:
 /* 80310380 002D9940  94 21 FF D0 */	stwu r1, -0x30(r1)

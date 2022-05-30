@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __OSFPRInit
 __OSFPRInit:
 /* 80351880 0031AE40  7C 60 00 A6 */	mfmsr r3
@@ -1326,6 +1327,7 @@ lbl_80352A64:
 /* 80352B18 0031C0D8  38 21 00 40 */	addi r1, r1, 0x40
 /* 80352B1C 0031C0DC  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global __OSDBIntegrator
 __OSDBIntegrator:
 /* 80352B20 0031C0E0  38 A0 00 40 */	li r5, 0x40
@@ -1338,12 +1340,14 @@ __OSDBIntegrator:
 /* 80352B3C 0031C0FC  7C 60 01 24 */	mtmsr r3
 /* 80352B40 0031C100  4E 80 00 20 */	blr
 
+
 .global __OSDBJump1
 __OSDBJump1:
 .balign 16, 0
 .global __OSDBJump
 __OSDBJump:
 /* 80352B50 0031C110  48 00 00 63 */	bla 0x60
+
 lbl_80352B54:
 .balign 16, 0
 .global __OSSetExceptionHandler
@@ -1362,6 +1366,7 @@ __OSGetExceptionHandler:
 /* 80352B88 0031C148  7C 64 00 2E */	lwzx r3, r4, r0
 /* 80352B8C 0031C14C  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global OSExceptionVector
 OSExceptionVector:
 /* 80352B90 0031C150  7C 90 43 A6 */	mtspr 0x110, r4
@@ -1387,6 +1392,7 @@ OSExceptionVector:
 /* 80352BE0 0031C1A0  90 64 01 9C */	stw r3, 0x19c(r4)
 /* 80352BE4 0031C1A4  7C 65 1B 78 */	mr r5, r3
 
+
 .global __DBVECTOR
 __DBVECTOR:
 /* 80352BE8 0031C1A8  60 00 00 00 */	nop 
@@ -1394,6 +1400,7 @@ __DBVECTOR:
 /* 80352BF0 0031C1B0  60 63 00 30 */	ori r3, r3, 0x30
 /* 80352BF4 0031C1B4  7C 7B 03 A6 */	mtspr 0x1b, r3
 
+#.balign 16, 0
 .global __OSEVSetNumber
 __OSEVSetNumber:
 /* 80352BF8 0031C1B8  38 60 00 00 */	li r3, 0
@@ -1409,6 +1416,7 @@ lbl_80352C18:
 /* 80352C1C 0031C1DC  80 A5 30 00 */	lwz r5, 0x3000(r5)
 /* 80352C20 0031C1E0  7C BA 03 A6 */	mtspr 0x1a, r5
 /* 80352C24 0031C1E4  4C 00 00 64 */	rfi 
+
 
 .global __OSEVEnd
 __OSEVEnd:
@@ -1473,6 +1481,7 @@ __OSGetDIConfig:
 /* 80352CF8 0031C2B8  54 03 06 3E */	clrlwi r3, r0, 0x18
 /* 80352CFC 0031C2BC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSRegisterVersion
 OSRegisterVersion:
 /* 80352D00 0031C2C0  7C 64 1B 78 */	mr r4, r3
@@ -1480,6 +1489,7 @@ OSRegisterVersion:
 /* 80352D08 0031C2C8  4C C6 31 82 */	crclr 6
 /* 80352D0C 0031C2CC  48 00 21 E4 */	b OSReport
 
+.balign 16, 0
 .global OSGetAppGamename
 OSGetAppGamename:
 /* 80352D10 0031C2D0  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)

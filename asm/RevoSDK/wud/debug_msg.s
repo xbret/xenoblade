@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global WUD_DEBUGPrint
 WUD_DEBUGPrint:
 /* 8037C5D0 00345B90  94 21 FF 90 */	stwu r1, -0x70(r1)

@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __OSWriteStateFlags
 __OSWriteStateFlags:
 /* 8035DE50 00327410  94 21 FF 60 */	stwu r1, -0xa0(r1)

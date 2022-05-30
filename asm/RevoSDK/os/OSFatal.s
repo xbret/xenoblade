@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global ScreenReport
 ScreenReport:
 /* 80356AF0 003200B0  94 21 FE 80 */	stwu r1, -0x180(r1)
@@ -300,6 +301,7 @@ lbl_80356F14:
 /* 80356F38 003204F8  38 21 00 50 */	addi r1, r1, 0x50
 /* 80356F3C 003204FC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSFatal
 OSFatal:
 /* 80356F40 00320500  94 21 FF D0 */	stwu r1, -0x30(r1)

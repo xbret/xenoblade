@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#.balign 16, 0
 .global bta_dm_sm_execute
 bta_dm_sm_execute:
 /* 802E156C 002AAB2C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -46,6 +47,7 @@ lbl_802E15E0:
 /* 802E1600 002AABC0  4E 80 00 20 */	blr
 
 
+#.balign 16, 0
 .global bta_dm_search_sm_execute
 bta_dm_search_sm_execute:
 /* 802E1604 002AABC4  94 21 FF E0 */	stwu r1, -0x20(r1)

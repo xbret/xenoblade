@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global OSGetPhysicalMem2Size
 OSGetPhysicalMem2Size:
 /* 80359480 00322A40  3C 60 80 00 */	lis r3, 0x80003118@ha
@@ -101,6 +102,7 @@ ConfigMEM1_24MB:
 /* 803595B8 00322B78  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 803595BC 00322B7C  4C 00 00 64 */	rfi
 
+.balign 16, 0
 .global ConfigMEM2_52MB
 ConfigMEM2_52MB:
 /* 803595C0 00322B80  38 E0 00 00 */	li r7, 0
@@ -457,6 +459,7 @@ lbl_80359AE0:
 /* 80359AF8 003230B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80359AFC 003230BC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_80359B00
 func_80359B00:
 /* 80359B00 003230C0  94 21 FF F0 */	stwu r1, -0x10(r1)

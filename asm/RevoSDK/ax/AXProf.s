@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __AXGetCurrentProfile
 __AXGetCurrentProfile:
 /* 802D56D0 0029EC90  80 0D B5 B8 */	lwz r0, lbl_80667738@sda21(r13)

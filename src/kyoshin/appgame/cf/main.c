@@ -37,9 +37,6 @@ void func_80039F34(void) {
 }
 */
 
-extern void OSReport(char*);
-
-
 void main(int argc, char* argv[]) {
     /*
     The first two functions store the array pointers in variables,

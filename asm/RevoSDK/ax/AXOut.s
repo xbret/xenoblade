@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __AXOutNewFrame
 __AXOutNewFrame:
 /* 802D3A70 0029D030  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -168,6 +169,7 @@ lbl_802D3CB0:
 /* 802D3CC8 0029D288  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D3CCC 0029D28C  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global __AXOutAiCallback
 __AXOutAiCallback:
 /* 802D3CD0 0029D290  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -218,6 +220,7 @@ lbl_802D3D70:
 /* 802D3D78 0029D338  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D3D7C 0029D33C  4E 80 00 20 */	blr
 
+.balign 16, 0
 .global __AXDSPInitCallback
 __AXDSPInitCallback:
 /* 802D3D80 0029D340  38 00 00 01 */	li r0, 1
@@ -259,6 +262,7 @@ __AXDSPDoneCallback:
 /* 802D3DF8 0029D3B8  38 6D B5 20 */	addi r3, r13, lbl_806676A0@sda21
 /* 802D3DFC 0029D3BC  48 08 89 64 */	b OSWakeupThread
 
+.balign 16, 0
 .global __AXDSPRequestCallback
 __AXDSPRequestCallback:
 /* 802D3E00 0029D3C0  4E 80 00 20 */	blr 

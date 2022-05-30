@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#.balign 16, 0
 .global bta_hh_sm_execute
 bta_hh_sm_execute:
 /* 802E3C00 002AD1C0  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -253,6 +254,7 @@ lbl_802E3F3C:
 /* 802E3F4C 002AD50C  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E3F50 002AD510  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_hdl_event
 bta_hh_hdl_event:
 /* 802E3F54 002AD514  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -352,6 +354,7 @@ lbl_802E4084:
 /* 802E4098 002AD658  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E409C 002AD65C  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bta_hh_evt_code
 bta_hh_evt_code:
 /* 802E40A0 002AD660  38 03 E9 00 */	addi r0, r3, -5888

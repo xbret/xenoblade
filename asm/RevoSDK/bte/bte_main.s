@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global BTUInterruptHandler
 BTUInterruptHandler:
 /* 802DE080 002A7640  3C 80 80 5C */	lis r4, lbl_805BE4A0@ha

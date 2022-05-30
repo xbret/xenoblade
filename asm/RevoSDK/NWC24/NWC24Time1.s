@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global NWC24iSetRtcCounter
 NWC24iSetRtcCounter:
 /* 8035E4C0 00327A80  94 21 FF E0 */	stwu r1, -0x20(r1)

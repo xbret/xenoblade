@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global DEBUGPrint
 DEBUGPrint:
 /* 80375B90 0033F150  94 21 FF 90 */	stwu r1, -0x70(r1)
@@ -26,6 +27,7 @@ lbl_80375BB8:
 /* 80375BD8 0033F198  38 21 00 70 */	addi r1, r1, 0x70
 /* 80375BDC 0033F19C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_80375BE0
 func_80375BE0:
 /* 80375BE0 0033F1A0  80 6D BB 78 */	lwz r3, lbl_80667CF8@sda21(r13)

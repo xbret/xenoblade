@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __DVDClearWaitingQueue
 __DVDClearWaitingQueue:
 /* 8030F470 002D8A30  3C C0 80 5D */	lis r6, lbl_805CC9B0@ha
@@ -96,6 +97,7 @@ lbl_8030F5AC:
 /* 8030F5B8 002D8B78  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030F5BC 002D8B7C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __DVDCheckWaitingQueue
 __DVDCheckWaitingQueue:
 /* 8030F5C0 002D8B80  94 21 FF F0 */	stwu r1, -0x10(r1)

@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __DSP_debug_printf
 __DSP_debug_printf:
 /* 803094B0 002D2A70  94 21 FF 90 */	stwu r1, -0x70(r1)

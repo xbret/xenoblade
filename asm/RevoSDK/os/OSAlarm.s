@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __OSInitAlarm
 __OSInitAlarm:
 /* 80352DC0 0031C380  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -36,6 +37,7 @@ OSCreateAlarm:
 /* 80352E28 0031C3E8  90 03 00 04 */	stw r0, 4(r3)
 /* 80352E2C 0031C3EC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global InsertAlarm
 InsertAlarm:
 /* 80352E30 0031C3F0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -198,6 +200,7 @@ lbl_80353068:
 /* 80353078 0031C638  38 21 00 30 */	addi r1, r1, 0x30
 /* 8035307C 0031C63C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSSetAlarm
 OSSetAlarm:
 /* 80353080 0031C640  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -229,6 +232,7 @@ OSSetAlarm:
 /* 803530E8 0031C6A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803530EC 0031C6AC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global OSSetPeriodicAlarm
 OSSetPeriodicAlarm:
 /* 803530F0 0031C6B0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -526,6 +530,7 @@ DecrementerExceptionHandler:
 /* 8035351C 0031CADC  4B FF FD 84 */	b DecrementerExceptionCallback
 
 
+.balign 16, 0
 .global OnReset
 OnReset:
 /* 80353520 0031CAE0  94 21 FF F0 */	stwu r1, -0x10(r1)

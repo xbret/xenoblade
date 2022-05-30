@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __AXAuxInit
 __AXAuxInit:
 /* 802D26B0 0029BC70  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -125,6 +126,7 @@ func_802D2850:
 /* 802D2868 0029BE28  90 03 00 00 */	stw r0, 0(r3)
 /* 802D286C 0029BE2C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_802D2870
 func_802D2870:
 /* 802D2870 0029BE30  80 0D B4 9C */	lwz r0, lbl_8066761C@sda21(r13)
@@ -136,6 +138,7 @@ func_802D2870:
 /* 802D2888 0029BE48  90 03 00 00 */	stw r0, 0(r3)
 /* 802D288C 0029BE4C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_802D2890
 func_802D2890:
 /* 802D2890 0029BE50  80 0D B4 9C */	lwz r0, lbl_8066761C@sda21(r13)
@@ -147,6 +150,7 @@ func_802D2890:
 /* 802D28A8 0029BE68  90 03 00 00 */	stw r0, 0(r3)
 /* 802D28AC 0029BE6C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_802D28B0
 func_802D28B0:
 /* 802D28B0 0029BE70  80 0D B4 9C */	lwz r0, lbl_8066761C@sda21(r13)
@@ -158,6 +162,7 @@ func_802D28B0:
 /* 802D28C8 0029BE88  90 03 00 00 */	stw r0, 0(r3)
 /* 802D28CC 0029BE8C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_802D28D0
 func_802D28D0:
 /* 802D28D0 0029BE90  80 0D B4 CC */	lwz r0, lbl_8066764C@sda21(r13)
@@ -198,6 +203,7 @@ func_802D2930:
 /* 802D2948 0029BF08  90 03 00 00 */	stw r0, 0(r3)
 /* 802D294C 0029BF0C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_802D2950
 func_802D2950:
 /* 802D2950 0029BF10  80 0D B4 9C */	lwz r0, lbl_8066761C@sda21(r13)
@@ -209,6 +215,7 @@ func_802D2950:
 /* 802D2968 0029BF28  90 03 00 00 */	stw r0, 0(r3)
 /* 802D296C 0029BF2C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_802D2970
 func_802D2970:
 /* 802D2970 0029BF30  80 0D B4 9C */	lwz r0, lbl_8066761C@sda21(r13)
@@ -220,6 +227,7 @@ func_802D2970:
 /* 802D2988 0029BF48  90 03 00 00 */	stw r0, 0(r3)
 /* 802D298C 0029BF4C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_802D2990
 func_802D2990:
 /* 802D2990 0029BF50  80 0D B4 9C */	lwz r0, lbl_8066761C@sda21(r13)
@@ -231,6 +239,7 @@ func_802D2990:
 /* 802D29A8 0029BF68  90 03 00 00 */	stw r0, 0(r3)
 /* 802D29AC 0029BF6C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_802D29B0
 func_802D29B0:
 /* 802D29B0 0029BF70  80 0D B4 C8 */	lwz r0, lbl_80667648@sda21(r13)

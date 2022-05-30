@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_8034DDF0
 func_8034DDF0:
 /* 8034DDF0 003173B0  E0 04 00 00 */	psq_l f0, 0(r4), 0, qr0

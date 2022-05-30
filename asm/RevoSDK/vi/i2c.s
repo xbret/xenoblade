@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global WaitMicroTime
 WaitMicroTime:
 /* 80366A00 0032FFC0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -633,7 +634,7 @@ lbl_803672FC:
 /* 80367308 003308C8  7C 08 03 A6 */	mtlr r0
 /* 8036730C 003308CC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80367310 003308D0  4E 80 00 20 */	blr 
-.4byte 0
-.4byte 0
-.4byte 0
-#.balign 16, 0
+#.4byte 0
+#.4byte 0
+#.4byte 0
+.balign 16, 0

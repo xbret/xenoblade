@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_8034DE50
 func_8034DE50:
 /* 8034DE50 00317410  EC 04 18 28 */	fsubs f0, f4, f3

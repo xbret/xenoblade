@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global LogMsg
 LogMsg:
 /* 802DDEE0 002A74A0  94 21 FF 80 */	stwu r1, -0x80(r1)
@@ -120,4 +121,4 @@ LogMsg_6:
 /* 802DE06C 002A762C  4C C6 31 82 */	crclr 6
 /* 802DE070 002A7630  4B FF FE 70 */	b LogMsg
 /* 802DE074 002A7634  4E 80 00 20 */	blr 
-.balign 16, 0
+#.balign 16, 0

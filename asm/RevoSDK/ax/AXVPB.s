@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __AXGetNumVoices
 __AXGetNumVoices:
 /* 802D4760 0029DD20  80 6D B5 A8 */	lwz r3, lbl_80667728@sda21(r13)
@@ -387,6 +388,7 @@ lbl_802D4CA0:
 /* 802D4CB8 0029E278  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D4CBC 0029E27C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __AXSyncPBs
 __AXSyncPBs:
 /* 802D4CC0 0029E280  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -606,6 +608,7 @@ lbl_802D4F90:
 /* 802D4FC8 0029E588  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D4FCC 0029E58C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __AXGetPBs
 __AXGetPBs:
 /* 802D4FD0 0029E590  80 6D B5 98 */	lwz r3, lbl_80667718@sda21(r13)
@@ -631,6 +634,7 @@ __AXSetPBDefault:
 /* 802D5018 0029E5D8  B0 A3 01 3A */	sth r5, 0x13a(r3)
 /* 802D501C 0029E5DC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global __AXVPBInitSpecifyMem
 __AXVPBInitSpecifyMem:
 /* 802D5020 0029E5E0  3C A0 80 58 */	lis r5, lbl_80581A40@ha
@@ -646,6 +650,7 @@ __AXVPBInitSpecifyMem:
 /* 802D5048 0029E608  90 6D B5 A0 */	stw r3, lbl_80667720@sda21(r13)
 /* 802D504C 0029E60C  48 00 00 04 */	b __AXVPBInitCommon
 
+.balign 16, 0
 .global __AXVPBInitCommon
 __AXVPBInitCommon:
 /* 802D5050 0029E610  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -896,6 +901,7 @@ lbl_802D5398:
 /* 802D53B8 0029E978  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D53BC 0029E97C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global AXSetVoiceState
 AXSetVoiceState:
 /* 802D53C0 0029E980  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -930,6 +936,7 @@ lbl_802D5418:
 /* 802D5428 0029E9E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D542C 0029E9EC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global AXSetVoiceAddr
 AXSetVoiceAddr:
 /* 802D5430 0029E9F0  94 21 FF F0 */	stwu r1, -0x10(r1)

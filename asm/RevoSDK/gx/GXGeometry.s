@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_8031A760
 func_8031A760:
 /* 8031A760 002E3D20  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -189,6 +190,7 @@ lbl_8031A9C0:
 /* 8031A9D8 002E3F98  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031A9DC 002E3F9C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8031A9E0
 func_8031A9E0:
 /* 8031A9E0 002E3FA0  94 21 FF E0 */	stwu r1, -0x20(r1)

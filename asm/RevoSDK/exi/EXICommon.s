@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_80315D30
 func_80315D30:
 /* 80315D30 002DF2F0  94 21 FF E0 */	stwu r1, -0x20(r1)

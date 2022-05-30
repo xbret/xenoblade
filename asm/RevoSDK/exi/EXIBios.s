@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_803140F0
 func_803140F0:
 /* 803140F0 002DD6B0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -690,6 +691,7 @@ lbl_80314A80:
 /* 80314A98 002DE058  38 21 00 20 */	addi r1, r1, 0x20
 /* 80314A9C 002DE05C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_80314AA0
 func_80314AA0:
 /* 80314AA0 002DE060  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1228,6 +1230,7 @@ lbl_80315240:
 /* 80315258 002DE818  38 21 02 E0 */	addi r1, r1, 0x2e0
 /* 8031525C 002DE81C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global EXIInit
 EXIInit:
 /* 80315260 002DE820  94 21 FF E0 */	stwu r1, -0x20(r1)

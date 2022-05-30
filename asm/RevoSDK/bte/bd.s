@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#.balign 16, 0
 .global bdcpy
 bdcpy:
 /* 802DE634 002A7BF4  89 24 00 00 */	lbz r9, 0(r4)
@@ -18,6 +19,7 @@ bdcpy:
 /* 802DE660 002A7C20  98 03 00 05 */	stb r0, 5(r3)
 /* 802DE664 002A7C24  4E 80 00 20 */	blr 
 
+#.balign 16, 0
 .global bdcmp
 bdcmp:
 /* 802DE668 002A7C28  88 A3 00 00 */	lbz r5, 0(r3)

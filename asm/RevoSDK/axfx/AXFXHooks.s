@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __AXFXAllocFunction
 __AXFXAllocFunction:
 /* 802DAB00 002A40C0  7C 64 1B 78 */	mr r4, r3

@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global PackArgs
 PackArgs:
 /* 80355510 0031EAD0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -109,6 +110,7 @@ lbl_80355674:
 /* 80355688 0031EC48  38 21 00 30 */	addi r1, r1, 0x30
 /* 8035568C 0031EC4C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global Utf16ToArg
 Utf16ToArg:
 /* 80355690 0031EC50  2C 04 00 00 */	cmpwi r4, 0

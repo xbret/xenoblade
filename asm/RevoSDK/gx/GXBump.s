@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_8031D160
 func_8031D160:
 /* 8031D160 002E6720  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -117,6 +118,7 @@ lbl_8031D20C:
 /* 8031D308 002E68C8  38 21 00 40 */	addi r1, r1, 0x40
 /* 8031D30C 002E68CC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8031D310
 func_8031D310:
 /* 8031D310 002E68D0  2C 03 00 00 */	cmpwi r3, 0
@@ -189,6 +191,7 @@ lbl_8031D400:
 /* 8031D408 002E69C8  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031D40C 002E69CC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8031D410
 func_8031D410:
 /* 8031D410 002E69D0  2C 05 00 FF */	cmpwi r5, 0xff
@@ -261,6 +264,7 @@ GXSetNumIndStages:
 /* 8031D4F8 002E6AB8  90 04 05 FC */	stw r0, 0x5fc(r4)
 /* 8031D4FC 002E6ABC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8031D500
 func_8031D500:
 /* 8031D500 002E6AC0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -330,6 +334,7 @@ func_8031D5C0:
 /* 8031D5E8 002E6BA8  B0 07 00 02 */	sth r0, 2(r7)
 /* 8031D5EC 002E6BAC  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8031D5F0
 func_8031D5F0:
 /* 8031D5F0 002E6BB0  3C 80 CC 01 */	lis r4, 0xCC008000@ha

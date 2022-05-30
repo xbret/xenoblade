@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global func_8031DCF0
 func_8031DCF0:
 /* 8031DCF0 002E72B0  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -251,6 +252,7 @@ lbl_8031DFE0:
 /* 8031E078 002E7638  38 21 00 80 */	addi r1, r1, 0x80
 /* 8031E07C 002E763C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8031E080
 func_8031E080:
 /* 8031E080 002E7640  2C 03 00 00 */	cmpwi r3, 0
@@ -323,6 +325,7 @@ lbl_8031E158:
 /* 8031E188 002E7748  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031E18C 002E774C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global GXSetBlendMode
 GXSetBlendMode:
 /* 8031E190 002E7750  81 42 BC 20 */	lwz r10, lbl_8066BFA0@sda21(r2)
@@ -346,6 +349,7 @@ GXSetBlendMode:
 /* 8031E1D8 002E7798  B0 0A 00 02 */	sth r0, 2(r10)
 /* 8031E1DC 002E779C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8031E1E0
 func_8031E1E0:
 /* 8031E1E0 002E77A0  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
@@ -408,6 +412,7 @@ func_8031E280:
 /* 8031E2A8 002E7868  B0 07 00 02 */	sth r0, 2(r7)
 /* 8031E2AC 002E786C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8031E2B0
 func_8031E2B0:
 /* 8031E2B0 002E7870  81 22 BC 20 */	lwz r9, lbl_8066BFA0@sda21(r2)
@@ -486,6 +491,7 @@ func_8031E390:
 /* 8031E3B8 002E7978  B0 08 00 02 */	sth r0, 2(r8)
 /* 8031E3BC 002E797C  4E 80 00 20 */	blr 
 
+.balign 16, 0
 .global func_8031E3C0
 func_8031E3C0:
 /* 8031E3C0 002E7980  3C A0 CC 01 */	lis r5, 0xCC008000@ha
