@@ -14,7 +14,7 @@ lbl_804F5B00:
 
 .global __init_cpp_exceptions_tmp
 __init_cpp_exceptions_tmp: #__init_cpp_exceptions
-#causes "runtime sources 'global_destrusinit_chain.c' and '__init_cpp_exceptions.cpp' both need to be updated to latest
+#causes "runtime sources 'global_destructor_chain.c' and '__init_cpp_exceptions.cpp' both need to be updated to latest
 #version.  Please contact Metrowerks support." error
 #needs to be split correctly before renaming
 /* 802BA774 00283D34  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -37,7 +37,7 @@ lbl_802BA7A0:
 
 .global __fini_cpp_exceptions_tmp
 __fini_cpp_exceptions_tmp: #__fini_cpp_exceptions
-#causes "runtime sources 'global_destrusinit_chain.c' and '__init_cpp_exceptions.cpp' both need to be updated to latest
+#causes "runtime sources 'global_destructor_chain.c' and '__init_cpp_exceptions.cpp' both need to be updated to latest
 #version.  Please contact Metrowerks support." error
 #needs to be split correctly before renaming
 /* 802BA7B0 00283D70  94 21 FF F0 */	stwu r1, -0x10(r1)
