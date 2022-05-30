@@ -4,7 +4,7 @@ WIP Decompilation of Xenoblade (JP)
 ```diff
 - INFORMATION! -
 
-The ROM this repository builds cannot be shifted yet.
+The ROM this repository builds should be shiftable, but there may still be parts that aren't.
 ```
 
 It builds the following DOL:
