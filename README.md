@@ -4,7 +4,7 @@ WIP Decompilation of Xenoblade (JP)
 ```diff
 - INFORMATION! -
 
-The ROM this repository builds is mostly shiftable, however there still are a few minor issues.
+The ROM this repository builds is mostly shiftable. However, there still are a few minor issues.
 You should still for the most part be able to add/remove code as you see fit.
 ```
 
