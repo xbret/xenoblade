@@ -11982,6 +11982,6 @@ func_80474F54:
 /* 80474F78 0043E538  4E 80 00 20 */	blr
 
 
-.global ctor_80474F7C
-ctor_80474F7C:
+.global sinit_80474F7C
+sinit_80474F7C:
 /* 80474F7C 0043E53C  4E 80 00 20 */	blr 

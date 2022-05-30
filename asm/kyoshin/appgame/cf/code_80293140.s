@@ -3275,8 +3275,8 @@ func_80295DA4:
 func_80295DAC:
 /* 80295DAC 0025F36C  48 02 1E BC */	b func_802B7C68
 
-.global ctor_80295DB0
-ctor_80295DB0:
+.global sinit_80295DB0
+sinit_80295DB0:
 /* 80295DB0 0025F370  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80295DB4 0025F374  7C 08 02 A6 */	mflr r0
 /* 80295DB8 0025F378  90 01 00 34 */	stw r0, 0x34(r1)

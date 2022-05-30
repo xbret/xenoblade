@@ -9904,8 +9904,8 @@ func_8011C400:
 /* 8011C410 000E59D0  98 03 00 54 */	stb r0, 0x54(r3)
 /* 8011C414 000E59D4  4E 80 00 20 */	blr
 
-.global ctor_8011C418
-ctor_8011C418:
+.global sinit_8011C418
+sinit_8011C418:
 /* 8011C418 000E59D8  C0 42 95 E8 */	lfs f2, lbl_80669968@sda21(r2)
 /* 8011C41C 000E59DC  C0 2D 85 C0 */	lfs f1, lbl_80664740@sda21(r13)
 /* 8011C420 000E59E0  C0 02 96 14 */	lfs f0, lbl_80669994@sda21(r2)

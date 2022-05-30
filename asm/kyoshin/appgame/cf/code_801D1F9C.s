@@ -27158,8 +27158,8 @@ lbl_801EABB0:
 /* 801EABBC 001B417C  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 801EABC0 001B4180  4E 80 00 20 */	blr
 
-.global ctor_801EABC4
-ctor_801EABC4:
+.global sinit_801EABC4
+sinit_801EABC4:
 /* 801EABC4 001B4184  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801EABC8 001B4188  7C 08 02 A6 */	mflr r0
 /* 801EABCC 001B418C  38 6D AC 88 */	addi r3, r13, lbl_80666E08@sda21

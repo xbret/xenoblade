@@ -2048,8 +2048,8 @@ lbl_804BF514:
 /* 804BF538 00488AF8  38 21 00 30 */	addi r1, r1, 0x30
 /* 804BF53C 00488AFC  4E 80 00 20 */	blr
 
-.global ctor_804BF540
-ctor_804BF540:
+.global sinit_804BF540
+sinit_804BF540:
 /* 804BF540 00488B00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804BF544 00488B04  7C 08 02 A6 */	mflr r0
 /* 804BF548 00488B08  3C 60 80 66 */	lis r3, lbl_80661CE8@ha

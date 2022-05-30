@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ctor_80436138
-ctor_80436138:
+.global sinit_80436138
+sinit_80436138:
 /* 80436138 003FF6F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8043613C 003FF6FC  C0 42 C6 B0 */	lfs f2, lbl_8066CA30@sda21(r2)
 /* 80436140 003FF700  93 E1 00 1C */	stw r31, 0x1c(r1)

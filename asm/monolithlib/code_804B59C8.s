@@ -5776,8 +5776,8 @@ func_804BADA0:
 /* 804BADAC 0048436C  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 804BADB0 00484370  4E 80 00 20 */	blr
 
-.global ctor_804BADB4
-ctor_804BADB4:
+.global sinit_804BADB4
+sinit_804BADB4:
 /* 804BADB4 00484374  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804BADB8 00484378  7C 08 02 A6 */	mflr r0
 /* 804BADBC 0048437C  90 01 00 14 */	stw r0, 0x14(r1)

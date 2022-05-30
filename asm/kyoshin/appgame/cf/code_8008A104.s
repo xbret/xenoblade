@@ -35631,8 +35631,8 @@ lbl_800A9F28:
 /* 800A9F38 000734F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 800A9F3C 000734FC  4E 80 00 20 */	blr
 
-.global ctor_800A9F40
-ctor_800A9F40:
+.global sinit_800A9F40
+sinit_800A9F40:
 /* 800A9F40 00073500  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800A9F44 00073504  7C 08 02 A6 */	mflr r0
 /* 800A9F48 00073508  90 01 00 14 */	stw r0, 0x14(r1)

@@ -14225,8 +14225,8 @@ lbl_8025D2F0:
 /* 8025D2FC 002268BC  38 21 00 70 */	addi r1, r1, 0x70
 /* 8025D300 002268C0  4E 80 00 20 */	blr
 
-.global ctor_8025D304
-ctor_8025D304:
+.global sinit_8025D304
+sinit_8025D304:
 /* 8025D304 002268C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8025D308 002268C8  7C 08 02 A6 */	mflr r0
 /* 8025D30C 002268CC  38 6D AF 58 */	addi r3, r13, lbl_806670D8@sda21

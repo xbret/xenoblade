@@ -1070,8 +1070,8 @@ lbl_804BD868:
 /* 804BD898 00486E58  38 21 02 10 */	addi r1, r1, 0x210
 /* 804BD89C 00486E5C  4E 80 00 20 */	blr
 
-.global ctor_804BD8A0
-ctor_804BD8A0:
+.global sinit_804BD8A0
+sinit_804BD8A0:
 /* 804BD8A0 00486E60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804BD8A4 00486E64  7C 08 02 A6 */	mflr r0
 /* 804BD8A8 00486E68  3C 60 80 66 */	lis r3, lbl_80661BEC@ha

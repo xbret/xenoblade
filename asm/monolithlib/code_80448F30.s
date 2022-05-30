@@ -5401,8 +5401,8 @@ func_8044DAF4:
 /* 8044DAF8 004170B8  4E 80 00 20 */	blr
 
 
-.global ctor_8044DAFC
-ctor_8044DAFC:
+.global sinit_8044DAFC
+sinit_8044DAFC:
 /* 8044DAFC 004170BC  3C C0 80 66 */	lis r6, lbl_8065A6F8@ha
 /* 8044DB00 004170C0  3C 80 80 66 */	lis r4, lbl_8065A73C@ha
 /* 8044DB04 004170C4  38 A6 A6 F8 */	addi r5, r6, lbl_8065A6F8@l

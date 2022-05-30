@@ -10944,8 +10944,8 @@ func_8032C560:
 /* 8032C568 002F5B28  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global HBMBase_ctor
-HBMBase_ctor:
+.global HBMBase_sinit
+HBMBase_sinit:
 /* 8032C570 002F5B30  3C 80 80 5D */	lis r4, lbl_805CD7C0@ha
 /* 8032C574 002F5B34  3C 60 80 5D */	lis r3, lbl_805CD788@ha
 /* 8032C578 002F5B38  38 84 D7 C0 */	addi r4, r4, lbl_805CD7C0@l

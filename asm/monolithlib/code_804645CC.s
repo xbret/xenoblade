@@ -4352,8 +4352,8 @@ func_804683D0:
 /* 804683E4 004319A4  4E 80 00 20 */	blr
 
 
-.global ctor_804683E8
-ctor_804683E8:
+.global sinit_804683E8
+sinit_804683E8:
 /* 804683E8 004319A8  3C 80 80 66 */	lis r4, lbl_8065AC38@ha
 /* 804683EC 004319AC  C0 62 CA 80 */	lfs f3, lbl_8066CE00@sda21(r2)
 /* 804683F0 004319B0  38 64 AC 38 */	addi r3, r4, lbl_8065AC38@l

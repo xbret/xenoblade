@@ -77,8 +77,8 @@ lbl_804DB31C:
 /* 804DB32C 004A48EC  4E 80 00 20 */	blr
 
 
-.global ctor_804DB330
-ctor_804DB330:
+.global sinit_804DB330
+sinit_804DB330:
 /* 804DB330 004A48F0  38 6D C1 50 */	addi r3, r13, lbl_806682D0@sda21
 /* 804DB334 004A48F4  48 00 00 04 */	b lbl_804DB338
 lbl_804DB338:

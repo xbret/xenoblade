@@ -135,8 +135,8 @@ func_8042BFB0:
 /* 8042BFB0 003F5570  4B F2 83 00 */	b LCStoreData
 
 
-.global ctor_8042BFB4
-ctor_8042BFB4:
+.global sinit_8042BFB4
+sinit_8042BFB4:
 /* 8042BFB4 003F5574  3C 80 80 65 */	lis r4, lbl_80657088@ha
 /* 8042BFB8 003F5578  38 00 00 00 */	li r0, 0
 /* 8042BFBC 003F557C  38 64 70 88 */	addi r3, r4, lbl_80657088@l

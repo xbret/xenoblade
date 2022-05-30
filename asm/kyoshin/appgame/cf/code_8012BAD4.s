@@ -2502,8 +2502,8 @@ lbl_8012DE74:
 /* 8012DE90 000F7450  38 21 00 20 */	addi r1, r1, 0x20
 /* 8012DE94 000F7454  4E 80 00 20 */	blr
 
-.global ctor_8012DE98
-ctor_8012DE98:
+.global sinit_8012DE98
+sinit_8012DE98:
 /* 8012DE98 000F7458  3C 80 80 57 */	lis r4, lbl_80577268@ha
 /* 8012DE9C 000F745C  C0 82 97 C8 */	lfs f4, lbl_80669B48@sda21(r2)
 /* 8012DEA0 000F7460  38 64 72 68 */	addi r3, r4, lbl_80577268@l

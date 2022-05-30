@@ -372,8 +372,8 @@ func_8003A4EC:
 /* 8003A4F0 00003AB0  38 63 3D 38 */	addi r3, r3, lbl_80573D38@l
 /* 8003A4F4 00003AB4  4E 80 00 20 */	blr
 
-.global ctor_8003A4F8
-ctor_8003A4F8:
+.global sinit_8003A4F8
+sinit_8003A4F8:
 /* 8003A4F8 00003AB8  3C C0 80 57 */	lis r6, lbl_80573CC8@ha
 /* 8003A4FC 00003ABC  3C 80 80 57 */	lis r4, lbl_80573D38@ha
 /* 8003A500 00003AC0  38 A6 3C C8 */	addi r5, r6, lbl_80573CC8@l

@@ -3135,8 +3135,8 @@ lbl_8008A0AC:
 func_8008A0C4:
 /* 8008A0C4 00053684  4E 80 00 20 */	blr
 
-.global ctor_8008A0C8
-ctor_8008A0C8:
+.global sinit_8008A0C8
+sinit_8008A0C8:
 /* 8008A0C8 00053688  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8008A0CC 0005368C  7C 08 02 A6 */	mflr r0
 /* 8008A0D0 00053690  90 01 00 14 */	stw r0, 0x14(r1)

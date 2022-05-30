@@ -14294,8 +14294,8 @@ lbl_801AFCD0:
 /* 801AFCE0 001792A0  38 21 00 20 */	addi r1, r1, 0x20
 /* 801AFCE4 001792A4  4E 80 00 20 */	blr
 
-.global ctor_801AFCE8
-ctor_801AFCE8:
+.global sinit_801AFCE8
+sinit_801AFCE8:
 /* 801AFCE8 001792A8  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 801AFCEC 001792AC  39 2D AA D0 */	addi r9, r13, lbl_80666C50@sda21
 /* 801AFCF0 001792B0  38 AD AA E0 */	addi r5, r13, lbl_80666C60@sda21

@@ -2994,8 +2994,8 @@ lbl_804B5978:
 /* 804B5984 0047EF44  38 21 00 10 */	addi r1, r1, 0x10
 /* 804B5988 0047EF48  4E 80 00 20 */	blr
 
-.global ctor_804B598C
-ctor_804B598C:
+.global sinit_804B598C
+sinit_804B598C:
 /* 804B598C 0047EF4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804B5990 0047EF50  7C 08 02 A6 */	mflr r0
 /* 804B5994 0047EF54  90 01 00 14 */	stw r0, 0x14(r1)

@@ -35,8 +35,8 @@ lbl_80435D78:
 /* 80435D90 003FF350  4E 80 00 20 */	blr
 
 
-.global ctor_80435D94
-ctor_80435D94:
+.global sinit_80435D94
+sinit_80435D94:
 /* 80435D94 003FF354  3D 00 80 66 */	lis r8, lbl_80659DB0@ha
 /* 80435D98 003FF358  C0 22 C6 68 */	lfs f1, lbl_8066C9E8@sda21(r2)
 /* 80435D9C 003FF35C  39 08 9D B0 */	addi r8, r8, lbl_80659DB0@l

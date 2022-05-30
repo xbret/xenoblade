@@ -29,8 +29,8 @@ func_804C8690:
 /* 804C86B8 00491C78  90 05 00 08 */	stw r0, 8(r5)
 /* 804C86BC 00491C7C  4E 80 00 20 */	blr
 
-.global ctor_804C86C0
-ctor_804C86C0:
+.global sinit_804C86C0
+sinit_804C86C0:
 /* 804C86C0 00491C80  3C C0 80 66 */	lis r6, lbl_806624A8@ha
 /* 804C86C4 00491C84  C0 82 D4 B8 */	lfs f4, lbl_8066D838@sda21(r2)
 /* 804C86C8 00491C88  38 C6 24 A8 */	addi r6, r6, lbl_806624A8@l

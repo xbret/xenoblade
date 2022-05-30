@@ -3951,8 +3951,8 @@ func_80435CE8:
 /* 80435D08 003FF2C8  4E 80 00 20 */	blr
 
 
-.global ctor_80435D0C
-ctor_80435D0C:
+.global sinit_80435D0C
+sinit_80435D0C:
 /* 80435D0C 003FF2CC  38 6D BC E8 */	addi r3, r13, lbl_80667E68@sda21
 /* 80435D10 003FF2D0  38 00 00 00 */	li r0, 0
 /* 80435D14 003FF2D4  B0 0D BC E8 */	sth r0, lbl_80667E68@sda21(r13)

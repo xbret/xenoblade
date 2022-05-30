@@ -5108,8 +5108,8 @@ lbl_801134D0:
 /* 801134E0 000DCAA0  38 21 00 60 */	addi r1, r1, 0x60
 /* 801134E4 000DCAA4  4E 80 00 20 */	blr
 
-.global ctor_801134E8
-ctor_801134E8:
+.global sinit_801134E8
+sinit_801134E8:
 /* 801134E8 000DCAA8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801134EC 000DCAAC  39 6D A6 F0 */	addi r11, r13, lbl_80666870@sda21
 /* 801134F0 000DCAB0  39 0D A6 F8 */	addi r8, r13, lbl_80666878@sda21

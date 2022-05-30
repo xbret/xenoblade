@@ -21042,8 +21042,8 @@ lbl_8023BC74:
 /* 8023BC84 00205244  38 21 00 70 */	addi r1, r1, 0x70
 /* 8023BC88 00205248  4E 80 00 20 */	blr
 
-.global ctor_8023BC8C
-ctor_8023BC8C:
+.global sinit_8023BC8C
+sinit_8023BC8C:
 /* 8023BC8C 0020524C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8023BC90 00205250  7C 08 02 A6 */	mflr r0
 /* 8023BC94 00205254  38 6D AE B8 */	addi r3, r13, lbl_80667038@sda21

@@ -1952,6 +1952,6 @@ func_804BC9DC:
 /* 804BC9E0 00485FA0  90 A3 00 10 */	stw r5, 0x10(r3)
 /* 804BC9E4 00485FA4  4E 80 00 20 */	blr
 
-.global ctor_804BC9E8
-ctor_804BC9E8:
+.global sinit_804BC9E8
+sinit_804BC9E8:
 /* 804BC9E8 00485FA8  4E 80 00 20 */	blr

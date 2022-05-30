@@ -22683,8 +22683,8 @@ func_801413DC:
 /* 801413F0 0010A9B0  7C 65 22 14 */	add r3, r5, r4
 /* 801413F4 0010A9B4  4E 80 00 20 */	blr
 
-.global ctor_801413F8
-ctor_801413F8:
+.global sinit_801413F8
+sinit_801413F8:
 /* 801413F8 0010A9B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801413FC 0010A9BC  7C 08 02 A6 */	mflr r0
 /* 80141400 0010A9C0  90 01 00 24 */	stw r0, 0x24(r1)

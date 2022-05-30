@@ -6478,8 +6478,8 @@ func_804942BC:
 /* 804942F8 0045D8B8  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 804942FC 0045D8BC  4E 80 00 20 */	blr
 
-.global ctor_80494300
-ctor_80494300:
+.global sinit_80494300
+sinit_80494300:
 /* 80494300 0045D8C0  C0 22 CE 54 */	lfs f1, lbl_8066D1D4@sda21(r2)
 /* 80494304 0045D8C4  3C 60 80 66 */	lis r3, lbl_8065AF00@ha
 /* 80494308 0045D8C8  C0 82 CE 58 */	lfs f4, lbl_8066D1D8@sda21(r2)

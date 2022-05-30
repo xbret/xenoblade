@@ -4588,8 +4588,8 @@ lbl_802059D4:
 /* 802059E0 001CEFA0  38 21 00 80 */	addi r1, r1, 0x80
 /* 802059E4 001CEFA4  4E 80 00 20 */	blr
 
-.global ctor_802059E8
-ctor_802059E8:
+.global sinit_802059E8
+sinit_802059E8:
 /* 802059E8 001CEFA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802059EC 001CEFAC  7C 08 02 A6 */	mflr r0
 /* 802059F0 001CEFB0  38 6D AD D8 */	addi r3, r13, lbl_80666F58@sda21

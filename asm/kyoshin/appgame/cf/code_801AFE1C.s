@@ -11337,8 +11337,8 @@ lbl_801B9FB0:
 /* 801B9FC0 00183580  38 21 00 80 */	addi r1, r1, 0x80
 /* 801B9FC4 00183584  4E 80 00 20 */	blr
 
-.global ctor_801B9FC8
-ctor_801B9FC8:
+.global sinit_801B9FC8
+sinit_801B9FC8:
 /* 801B9FC8 00183588  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801B9FCC 0018358C  39 6D AB 18 */	addi r11, r13, lbl_80666C98@sda21
 /* 801B9FD0 00183590  38 ED AB 30 */	addi r7, r13, lbl_80666CB0@sda21

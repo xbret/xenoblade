@@ -2314,6 +2314,6 @@ lbl_8046A508:
 /* 8046A524 00433AE4  38 21 00 60 */	addi r1, r1, 0x60
 /* 8046A528 00433AE8  4E 80 00 20 */	blr
 
-.global ctor_8046A52C
-ctor_8046A52C:
+.global sinit_8046A52C
+sinit_8046A52C:
 /* 8046A52C 00433AEC  4E 80 00 20 */	blr

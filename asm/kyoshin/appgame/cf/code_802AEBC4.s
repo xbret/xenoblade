@@ -6563,8 +6563,8 @@ lbl_802B4558:
 /* 802B46D8 0027DC98  38 21 00 50 */	addi r1, r1, 0x50
 /* 802B46DC 0027DC9C  4E 80 00 20 */	blr
 
-.global ctor_802B46E0
-ctor_802B46E0:
+.global sinit_802B46E0
+sinit_802B46E0:
 /* 802B46E0 0027DCA0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802B46E4 0027DCA4  DB E1 00 50 */	stfd f31, 0x50(r1)
 /* 802B46E8 0027DCA8  F3 E1 00 58 */	psq_st f31, 88(r1), 0, qr0

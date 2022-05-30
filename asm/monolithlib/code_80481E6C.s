@@ -15105,6 +15105,6 @@ func_8048EA9C:
 /* 8048EA9C 0045805C  38 60 00 01 */	li r3, 1
 /* 8048EAA0 00458060  4E 80 00 20 */	blr
 
-.global ctor_8048EAA4
-ctor_8048EAA4:
+.global sinit_8048EAA4
+sinit_8048EAA4:
 /* 8048EAA4 00458064  4E 80 00 20 */	blr 

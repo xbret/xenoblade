@@ -6106,8 +6106,8 @@ lbl_802930D0:
 /* 802930D8 0025C698  38 21 00 10 */	addi r1, r1, 0x10
 /* 802930DC 0025C69C  4E 80 00 20 */	blr
 
-.global ctor_802930E0
-ctor_802930E0:
+.global sinit_802930E0
+sinit_802930E0:
 /* 802930E0 0025C6A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802930E4 0025C6A4  7C 08 02 A6 */	mflr r0
 /* 802930E8 0025C6A8  3C 80 80 54 */	lis r4, lbl_8053C010@ha

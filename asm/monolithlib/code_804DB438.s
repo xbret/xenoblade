@@ -363,8 +363,8 @@ func_804DB8B4:
 /* 804DB8F8 004A4EB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB8FC 004A4EBC  4E 80 00 20 */	blr
 
-.global ctor_804DB900
-ctor_804DB900:
+.global sinit_804DB900
+sinit_804DB900:
 /* 804DB900 004A4EC0  3C A0 80 66 */	lis r5, lbl_80662930@ha
 /* 804DB904 004A4EC4  3C C0 80 57 */	lis r6, lbl_80573678@ha
 /* 804DB908 004A4EC8  3C 80 80 57 */	lis r4, lbl_80573650@ha

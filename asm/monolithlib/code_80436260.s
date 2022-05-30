@@ -838,8 +838,8 @@ lbl_80436DE8:
 /* 80436E04 004003C4  4E 80 00 20 */	blr
 
 
-.global ctor_80436E08
-ctor_80436E08:
+.global sinit_80436E08
+sinit_80436E08:
 /* 80436E08 004003C8  3C C0 80 66 */	lis r6, lbl_80659F88@ha
 /* 80436E0C 004003CC  3C 80 80 66 */	lis r4, lbl_80659FB8@ha
 /* 80436E10 004003D0  C0 22 C6 C0 */	lfs f1, lbl_8066CA40@sda21(r2)

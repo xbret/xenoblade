@@ -6959,8 +6959,8 @@ lbl_80221DC8:
 /* 80221DD4 001EB394  38 21 00 10 */	addi r1, r1, 0x10
 /* 80221DD8 001EB398  4E 80 00 20 */	blr
 
-.global ctor_80221DDC
-ctor_80221DDC:
+.global sinit_80221DDC
+sinit_80221DDC:
 /* 80221DDC 001EB39C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80221DE0 001EB3A0  7C 08 02 A6 */	mflr r0
 /* 80221DE4 001EB3A4  38 6D AE 88 */	addi r3, r13, lbl_80667008@sda21

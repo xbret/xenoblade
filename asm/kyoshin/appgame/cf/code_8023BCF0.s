@@ -5131,6 +5131,6 @@ lbl_802405DC:
 /* 802405E8 00209BA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802405EC 00209BAC  4E 80 00 20 */	blr
 
-.global ctor_802405F0
-ctor_802405F0:
+.global sinit_802405F0
+sinit_802405F0:
 /* 802405F0 00209BB0  4E 80 00 20 */	blr

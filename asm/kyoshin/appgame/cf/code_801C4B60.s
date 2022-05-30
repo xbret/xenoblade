@@ -15075,8 +15075,8 @@ func_801D1E0C:
 /* 801D1E28 0019B3E8  B0 03 00 06 */	sth r0, 6(r3)
 /* 801D1E2C 0019B3EC  4E 80 00 20 */	blr
 
-.global ctor_801D1E30
-ctor_801D1E30:
+.global sinit_801D1E30
+sinit_801D1E30:
 /* 801D1E30 0019B3F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D1E34 0019B3F4  7C 08 02 A6 */	mflr r0
 /* 801D1E38 0019B3F8  38 6D AB F8 */	addi r3, r13, lbl_80666D78@sda21

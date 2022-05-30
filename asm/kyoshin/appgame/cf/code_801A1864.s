@@ -1724,8 +1724,8 @@ lbl_801A3024:
 /* 801A3030 0016C5F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 801A3034 0016C5F4  4E 80 00 20 */	blr
 
-.global ctor_801A3038
-ctor_801A3038:
+.global sinit_801A3038
+sinit_801A3038:
 /* 801A3038 0016C5F8  3C E0 80 58 */	lis r7, lbl_80579018@ha
 /* 801A303C 0016C5FC  C0 A2 A1 F8 */	lfs f5, lbl_8066A578@sda21(r2)
 /* 801A3040 0016C600  38 E7 90 18 */	addi r7, r7, lbl_80579018@l

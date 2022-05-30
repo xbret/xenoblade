@@ -3718,8 +3718,8 @@ lbl_804325C8:
 /* 804325F0 003FBBB0  4E 80 00 20 */	blr
 
 
-.global ctor_804325F4
-ctor_804325F4:
+.global sinit_804325F4
+sinit_804325F4:
 /* 804325F4 003FBBB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804325F8 003FBBB8  7C 08 02 A6 */	mflr r0
 /* 804325FC 003FBBBC  90 01 00 14 */	stw r0, 0x14(r1)

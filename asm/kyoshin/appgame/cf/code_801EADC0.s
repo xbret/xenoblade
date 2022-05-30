@@ -9326,8 +9326,8 @@ lbl_801F32D8:
 /* 801F32E4 001BC8A4  38 21 00 E0 */	addi r1, r1, 0xe0
 /* 801F32E8 001BC8A8  4E 80 00 20 */	blr
 
-.global ctor_801F32EC
-ctor_801F32EC:
+.global sinit_801F32EC
+sinit_801F32EC:
 /* 801F32EC 001BC8AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801F32F0 001BC8B0  7C 08 02 A6 */	mflr r0
 /* 801F32F4 001BC8B4  38 6D AD 48 */	addi r3, r13, lbl_80666EC8@sda21

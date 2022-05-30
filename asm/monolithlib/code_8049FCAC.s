@@ -21124,8 +21124,8 @@ lbl_804B24F4:
 /* 804B251C 0047BADC  38 21 00 20 */	addi r1, r1, 0x20
 /* 804B2520 0047BAE0  4E 80 00 20 */	blr
 
-.global ctor_804B2524
-ctor_804B2524:
+.global sinit_804B2524
+sinit_804B2524:
 /* 804B2524 0047BAE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804B2528 0047BAE8  7C 08 02 A6 */	mflr r0
 /* 804B252C 0047BAEC  90 01 00 14 */	stw r0, 0x14(r1)

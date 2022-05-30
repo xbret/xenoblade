@@ -2331,8 +2331,8 @@ lbl_802A07C4:
 /* 802A07D0 00269D90  38 21 00 50 */	addi r1, r1, 0x50
 /* 802A07D4 00269D94  4E 80 00 20 */	blr
 
-.global ctor_802A07D8
-ctor_802A07D8:
+.global sinit_802A07D8
+sinit_802A07D8:
 /* 802A07D8 00269D98  C0 42 B1 74 */	lfs f2, lbl_8066B4F4@sda21(r2)
 /* 802A07DC 00269D9C  C0 2D 93 F0 */	lfs f1, lbl_80665570@sda21(r13)
 /* 802A07E0 00269DA0  C0 02 B1 70 */	lfs f0, lbl_8066B4F0@sda21(r2)

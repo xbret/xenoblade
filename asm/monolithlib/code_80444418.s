@@ -2545,8 +2545,8 @@ lbl_80446498:
 /* 804464B0 0040FA70  4E 80 00 20 */	blr
 
 
-.global ctor_804464B4
-ctor_804464B4:
+.global sinit_804464B4
+sinit_804464B4:
 /* 804464B4 0040FA74  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804464B8 0040FA78  7C 08 02 A6 */	mflr r0
 /* 804464BC 0040FA7C  90 01 00 24 */	stw r0, 0x24(r1)

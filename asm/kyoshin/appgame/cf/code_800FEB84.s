@@ -17855,8 +17855,8 @@ lbl_8010E9E0:
 /* 8010E9F0 000D7FB0  38 21 00 60 */	addi r1, r1, 0x60
 /* 8010E9F4 000D7FB4  4E 80 00 20 */	blr
 
-.global ctor_8010E9F8
-ctor_8010E9F8:
+.global sinit_8010E9F8
+sinit_8010E9F8:
 /* 8010E9F8 000D7FB8  39 0D A6 A8 */	addi r8, r13, lbl_80666828@sda21
 /* 8010E9FC 000D7FBC  38 ED A6 B0 */	addi r7, r13, lbl_80666830@sda21
 /* 8010EA00 000D7FC0  39 20 00 FF */	li r9, 0xff

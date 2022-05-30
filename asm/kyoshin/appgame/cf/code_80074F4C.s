@@ -7689,8 +7689,8 @@ lbl_8007BE4C:
 /* 8007BE6C 0004542C  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 8007BE70 00045430  4E 80 00 20 */	blr
 
-.global ctor_8007BE74
-ctor_8007BE74:
+.global sinit_8007BE74
+sinit_8007BE74:
 /* 8007BE74 00045434  3C 60 80 53 */	lis r3, lbl_8052AB98@ha
 /* 8007BE78 00045438  94 21 FE D0 */	stwu r1, -0x130(r1)
 /* 8007BE7C 0004543C  C0 C2 89 88 */	lfs f6, lbl_80668D08@sda21(r2)

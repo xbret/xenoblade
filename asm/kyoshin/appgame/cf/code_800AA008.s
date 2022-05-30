@@ -885,8 +885,8 @@ lbl_800AABA8:
 /* 800AABB4 00074174  38 21 01 00 */	addi r1, r1, 0x100
 /* 800AABB8 00074178  4E 80 00 20 */	blr 
 
-.global ctor_800AABBC
-ctor_800AABBC:
+.global sinit_800AABBC
+sinit_800AABBC:
 /* 800AABBC 0007417C  3C 80 80 57 */	lis r4, lbl_80576478@ha
 /* 800AABC0 00074180  38 00 00 00 */	li r0, 0
 /* 800AABC4 00074184  38 64 64 78 */	addi r3, r4, lbl_80576478@l

@@ -281,6 +281,11 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/code_803222B0.o \
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMBase.o \
 	$(BUILD_DIR)/asm/RevoSDK/code_8032C590.o \
+	$(BUILD_DIR)/asm/RevoSDK/code_80332730.o \
+	$(BUILD_DIR)/asm/RevoSDK/code_80332C90.o \
+	$(BUILD_DIR)/asm/RevoSDK/code_80334140.o \
+	$(BUILD_DIR)/asm/RevoSDK/code_80336640.o \
+	$(BUILD_DIR)/asm/RevoSDK/code_8033F040.o \
 	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcMain.o \
 	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcclt.o \
 	$(BUILD_DIR)/asm/RevoSDK/ipc/memory.o \

@@ -9769,8 +9769,8 @@ lbl_800C1F10:
 func_800C1F28:
 /* 800C1F28 0008B4E8  4E 80 00 20 */	blr
 
-.global ctor_800C1F2C
-ctor_800C1F2C:
+.global sinit_800C1F2C
+sinit_800C1F2C:
 /* 800C1F2C 0008B4EC  3C 60 80 57 */	lis r3, lbl_805771F0@ha
 /* 800C1F30 0008B4F0  38 00 00 00 */	li r0, 0
 /* 800C1F34 0008B4F4  38 63 71 F0 */	addi r3, r3, lbl_805771F0@l

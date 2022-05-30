@@ -21,8 +21,8 @@ func_804053B8:
 func_804053C8:
 /* 804053C8 003CE988  38 6D BB F0 */	addi r3, r13, lbl_80667D70@sda21
 /* 804053CC 003CE98C  4E 80 00 20 */	blr 
-.global ctor_804053D0
-ctor_804053D0:
+.global sinit_804053D0
+sinit_804053D0:
 /* 804053D0 003CE990  38 0D BB D0 */	addi r0, r13, lbl_80667D50@sda21
 /* 804053D4 003CE994  90 0D BB F0 */	stw r0, lbl_80667D70@sda21(r13)
 /* 804053D8 003CE998  4E 80 00 20 */	blr 
@@ -81,8 +81,8 @@ func_80405474:
 /* 80405478 003CEA38  4E 80 00 20 */	blr
 
 
-.global ctor_8040547C
-ctor_8040547C:
+.global sinit_8040547C
+sinit_8040547C:
 /* 8040547C 003CEA3C  38 0D BB D0 */	addi r0, r13, lbl_80667D50@sda21
 /* 80405480 003CEA40  90 0D BB F8 */	stw r0, lbl_80667D78@sda21(r13)
 /* 80405484 003CEA44  4E 80 00 20 */	blr 

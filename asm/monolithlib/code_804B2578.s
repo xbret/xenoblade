@@ -746,8 +746,8 @@ func_804B2FA8:
 /* 804B2FAC 0047C56C  54 03 77 FE */	rlwinm r3, r0, 0xe, 0x1f, 0x1f
 /* 804B2FB0 0047C570  4E 80 00 20 */	blr
 
-.global ctor_804B2FB4
-ctor_804B2FB4:
+.global sinit_804B2FB4
+sinit_804B2FB4:
 /* 804B2FB4 0047C574  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804B2FB8 0047C578  7C 08 02 A6 */	mflr r0
 /* 804B2FBC 0047C57C  90 01 00 14 */	stw r0, 0x14(r1)

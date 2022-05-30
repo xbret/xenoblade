@@ -8511,8 +8511,8 @@ lbl_8047CA14:
 /* 8047CA28 00445FE8  4E 80 00 20 */	blr 
 
 
-.global ctor_8047CA2C
-ctor_8047CA2C:
+.global sinit_8047CA2C
+sinit_8047CA2C:
 /* 8047CA2C 00445FEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8047CA30 00445FF0  7C 08 02 A6 */	mflr r0
 /* 8047CA34 00445FF4  90 01 00 14 */	stw r0, 0x14(r1)

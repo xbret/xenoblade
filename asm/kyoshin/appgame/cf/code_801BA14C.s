@@ -2796,8 +2796,8 @@ lbl_801BC858:
 /* 801BC864 00185E24  38 21 00 20 */	addi r1, r1, 0x20
 /* 801BC868 00185E28  4E 80 00 20 */	blr
 
-.global ctor_801BC86C
-ctor_801BC86C:
+.global sinit_801BC86C
+sinit_801BC86C:
 /* 801BC86C 00185E2C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 801BC870 00185E30  3C 80 80 53 */	lis r4, lbl_80537178@ha
 /* 801BC874 00185E34  38 84 71 78 */	addi r4, r4, lbl_80537178@l

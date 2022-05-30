@@ -22327,8 +22327,8 @@ func_801555DC:
 /* 801555DC 0011EB9C  88 63 00 2A */	lbz r3, 0x2a(r3)
 /* 801555E0 0011EBA0  4E 80 00 20 */	blr
 
-.global ctor_801555E4
-ctor_801555E4:
+.global sinit_801555E4
+sinit_801555E4:
 /* 801555E4 0011EBA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801555E8 0011EBA8  7C 08 02 A6 */	mflr r0
 /* 801555EC 0011EBAC  3C 60 80 53 */	lis r3, lbl_80532DE0@ha

@@ -5778,6 +5778,6 @@ lbl_8020AB68:
 /* 8020AB74 001D4134  38 21 00 30 */	addi r1, r1, 0x30
 /* 8020AB78 001D4138  4E 80 00 20 */	blr
 
-.global ctor_8020AB7C
-ctor_8020AB7C:
+.global sinit_8020AB7C
+sinit_8020AB7C:
 /* 8020AB7C 001D413C  4E 80 00 20 */	blr 

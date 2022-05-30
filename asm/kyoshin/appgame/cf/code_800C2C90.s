@@ -23275,8 +23275,8 @@ lbl_800D7954:
 /* 800D79AC 000A0F6C  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 800D79B0 000A0F70  4E 80 00 20 */	blr
 
-.global ctor_800D79B4
-ctor_800D79B4:
+.global sinit_800D79B4
+sinit_800D79B4:
 /* 800D79B4 000A0F74  C0 22 92 D0 */	lfs f1, lbl_80669650@sda21(r2)
 /* 800D79B8 000A0F78  3C A0 80 57 */	lis r5, lbl_80577218@ha
 /* 800D79BC 000A0F7C  C0 62 C6 90 */	lfs f3, lbl_8066CA10@sda21(r2)

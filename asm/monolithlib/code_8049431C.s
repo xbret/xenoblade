@@ -13395,8 +13395,8 @@ lbl_8049FC30:
 /* 8049FC5C 0046921C  4E 80 00 20 */	blr
 
 
-.global ctor_8049FC60
-ctor_8049FC60:
+.global sinit_8049FC60
+sinit_8049FC60:
 /* 8049FC60 00469220  3C C0 80 66 */	lis r6, lbl_8065AF10@ha
 /* 8049FC64 00469224  C0 62 D0 20 */	lfs f3, lbl_8066D3A0@sda21(r2)
 /* 8049FC68 00469228  38 C6 AF 10 */	addi r6, r6, lbl_8065AF10@l

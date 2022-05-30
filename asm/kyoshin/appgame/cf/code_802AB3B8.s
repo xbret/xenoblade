@@ -4019,8 +4019,8 @@ lbl_802AEA74:
 /* 802AEA80 00278040  38 21 00 20 */	addi r1, r1, 0x20
 /* 802AEA84 00278044  4E 80 00 20 */	blr
 
-.global ctor_802AEA88
-ctor_802AEA88:
+.global sinit_802AEA88
+sinit_802AEA88:
 /* 802AEA88 00278048  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802AEA8C 0027804C  7C 08 02 A6 */	mflr r0
 /* 802AEA90 00278050  90 01 00 14 */	stw r0, 0x14(r1)

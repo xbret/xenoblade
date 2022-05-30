@@ -4202,6 +4202,6 @@ lbl_804CC294:
 func_804CC2B0:
 /* 804CC2B0 00495870  48 01 8C EC */	b func_804E4F9C
 
-.global ctor_804CC2B4
-ctor_804CC2B4:
+.global sinit_804CC2B4
+sinit_804CC2B4:
 /* 804CC2B4 00495874  4E 80 00 20 */	blr
