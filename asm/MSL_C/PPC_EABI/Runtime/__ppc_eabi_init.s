@@ -3,7 +3,6 @@
 .section .init, "ax"  # 0x80004000 - 0x800066E0
 
 .balign 32, 0
-
 .global __init_hardware
 __init_hardware:
 /* 800065C0 000026C0  7C 00 00 A6 */	mfmsr r0
@@ -38,6 +37,7 @@ lbl_80006604:
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.balign 16, 0
 .global __init_user
 __init_user:
 /* 8035F350 00328910  94 21 FF F0 */	stwu r1, -0x10(r1)

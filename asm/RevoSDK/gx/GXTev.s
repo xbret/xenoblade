@@ -504,4 +504,3 @@ GXSetNumTevStages:
 /* 8031DCD8 002E7298  60 00 00 04 */	ori r0, r0, 4
 /* 8031DCDC 002E729C  90 04 05 FC */	stw r0, 0x5fc(r4)
 /* 8031DCE0 002E72A0  4E 80 00 20 */	blr 
-.balign 16, 0

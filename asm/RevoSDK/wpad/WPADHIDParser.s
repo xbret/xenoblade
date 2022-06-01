@@ -4590,7 +4590,3 @@ lbl_803749A4:
 .global func_803749C0
 func_803749C0:
 /* 803749C0 0033DF80  4E 80 00 20 */	blr 
-.balign 16, 0
-#.4byte 0
-#.4byte 0
-#.4byte 0

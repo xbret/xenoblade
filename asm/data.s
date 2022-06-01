@@ -58997,7 +58997,7 @@ lbl_80560FA0:
 	.4byte 0xCE9FBFD3
 	.4byte 0xCB767A7E
 	.4byte 0x82018A9A
-	.4byte func_801D0EB0
+	.4byte 0x801D0EB0
 	.4byte 0x5CD43862
 	.4byte 0xF430E08E
 	.4byte 0x53B70257

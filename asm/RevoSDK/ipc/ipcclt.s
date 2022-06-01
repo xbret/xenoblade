@@ -1066,8 +1066,8 @@ lbl_80343924:
 /* 8034393C 0030CEFC  4E 80 00 20 */	blr
 
 .balign 16, 0
-.global ENCiWriteBreakType
-ENCiWriteBreakType:
+.global func_80343940
+func_80343940:
 /* 80343940 0030CF00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80343944 0030CF04  7C 08 02 A6 */	mflr r0
 /* 80343948 0030CF08  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1823,4 +1823,3 @@ lbl_80344390:
 /* 803443A0 0030D960  7C 08 03 A6 */	mtlr r0
 /* 803443A4 0030D964  38 21 00 30 */	addi r1, r1, 0x30
 /* 803443A8 0030D968  4E 80 00 20 */	blr 
-.balign 16, 0

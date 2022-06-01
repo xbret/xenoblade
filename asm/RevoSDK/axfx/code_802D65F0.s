@@ -4909,4 +4909,3 @@ lbl_802DAAAC:
 /* 802DAAB8 002A4078  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802DAABC 002A407C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DAAC0 002A4080  4E 80 00 20 */	blr 
-.balign 16, 0

@@ -31,4 +31,3 @@ AXFXGetHooks:
 /* 802DAB38 002A40F8  80 0D 97 44 */	lwz r0, lbl_806658C4@sda21(r13)
 /* 802DAB3C 002A40FC  90 04 00 00 */	stw r0, 0(r4)
 /* 802DAB40 002A4100  4E 80 00 20 */	blr 
-.balign 16, 0

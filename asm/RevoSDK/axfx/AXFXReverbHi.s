@@ -48,4 +48,3 @@ AXFXReverbHiShutdown:
 .global AXFXReverbHiCallback
 AXFXReverbHiCallback:
 /* 802D57B0 0029ED70  48 00 02 10 */	b AXFXReverbHiExpCallback
-.balign 16, 0

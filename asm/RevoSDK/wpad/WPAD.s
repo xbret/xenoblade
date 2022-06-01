@@ -8471,6 +8471,3 @@ WPADiClearQueue:
 func_803706F0:
 /* 803706F0 00339CB0  90 6D BB 20 */	stw r3, lbl_80667CA0@sda21(r13)
 /* 803706F4 00339CB4  4E 80 00 20 */	blr 
-.balign 16, 0
-#.4byte 0
-#.4byte 0

@@ -1117,4 +1117,3 @@ func_802D5670:
 AXGetMaxVoices:
 /* 802D56C0 0029EC80  80 6D B5 A4 */	lwz r3, lbl_80667724@sda21(r13)
 /* 802D56C4 0029EC84  4E 80 00 20 */	blr 
-.balign 16, 0

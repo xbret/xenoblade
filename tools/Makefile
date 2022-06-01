@@ -1,5 +1,5 @@
 CC := gcc
-CFLAGS := -O3 -Wall -s
+CFLAGS := -O3 -Wall
 
 default: all
 

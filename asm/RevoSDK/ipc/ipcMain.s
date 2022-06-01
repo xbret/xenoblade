@@ -57,4 +57,3 @@ IPCGetBufferLo:
 IPCSetBufferLo:
 /* 80342AA0 0030C060  90 6D B7 EC */	stw r3, lbl_8066796C@sda21(r13)
 /* 80342AA4 0030C064  4E 80 00 20 */	blr 
-.balign 16, 0

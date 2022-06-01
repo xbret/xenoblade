@@ -41,4 +41,3 @@ OSGetSaveRegion:
 /* 80359EF8 003234B8  80 0D B9 34 */	lwz r0, lbl_80667AB4@sda21(r13)
 /* 80359EFC 003234BC  90 04 00 00 */	stw r0, 0(r4)
 /* 80359F00 003234C0  4E 80 00 20 */	blr 
-.balign 16, 0

@@ -252,6 +252,7 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdFatal.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdDeviceError.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd_broadway.o \
+	$(BUILD_DIR)/asm/RevoSDK/enc/encutility.o \
 	$(BUILD_DIR)/asm/RevoSDK/enc/enc.o \
 	$(BUILD_DIR)/asm/RevoSDK/esp.o \
 	$(BUILD_DIR)/asm/RevoSDK/euart/euart.o \
@@ -335,13 +336,6 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayRecord.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSStateFlags.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSNet.o \
-	$(BUILD_DIR)/asm/RevoSDK/NWC24/NWC24System.o \
-	$(BUILD_DIR)/asm/RevoSDK/NWC24/NWC24Time.o \
-	$(BUILD_DIR)/asm/RevoSDK/NWC24/NWC24Schedule.o \
-	$(BUILD_DIR)/asm/RevoSDK/NWC24/NWC24Ipc.o \
-	$(BUILD_DIR)/asm/RevoSDK/NWC24/NWC24System1.o \
-	$(BUILD_DIR)/asm/RevoSDK/NWC24/NWC24Time1.o \
-	$(BUILD_DIR)/asm/RevoSDK/NWC24/NWC24Ipc1.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSNandbootInfo.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayTime.o \
 	$(BUILD_DIR)/asm/RevoSDK/crc.o \

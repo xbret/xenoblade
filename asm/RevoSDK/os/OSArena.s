@@ -90,4 +90,3 @@ OSAllocFromMEM1ArenaLo:
 /* 80353A88 0031D048  7C C0 00 38 */	and r0, r6, r0
 /* 80353A8C 0031D04C  90 0D 99 E0 */	stw r0, lbl_80665B60@sda21(r13)
 /* 80353A90 0031D050  4E 80 00 20 */	blr 
-.balign 16, 0

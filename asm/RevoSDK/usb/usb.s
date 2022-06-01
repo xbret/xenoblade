@@ -1473,4 +1473,3 @@ IUSB_WriteCtrlMsgAsync:
 /* 80363F20 0032D4E0  7C 08 03 A6 */	mtlr r0
 /* 80363F24 0032D4E4  38 21 00 40 */	addi r1, r1, 0x40
 /* 80363F28 0032D4E8  4E 80 00 20 */	blr 
-.balign 16, 0

@@ -750,4 +750,3 @@ AXSetAuxBReturnVolume:
 AXSetAuxCReturnVolume:
 /* 802D3A60 0029D020  B0 6D B4 E0 */	sth r3, lbl_80667660@sda21(r13)
 /* 802D3A64 0029D024  4E 80 00 20 */	blr 
-.balign 16, 0

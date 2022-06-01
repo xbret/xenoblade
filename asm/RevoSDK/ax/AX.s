@@ -56,4 +56,3 @@ lbl_802D20E8:
 AXIsInit:
 /* 802D2100 0029B6C0  80 6D B4 88 */	lwz r3, lbl_80667608@sda21(r13)
 /* 802D2104 0029B6C4  4E 80 00 20 */	blr 
-.balign 16, 0

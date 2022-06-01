@@ -10,4 +10,3 @@ func_802DAAE0:
 /* 802DAAE8 002A40A8  38 84 35 E0 */	addi r4, r4, lbl_805435E0@l
 /* 802DAAEC 002A40AC  7C 64 02 14 */	add r3, r4, r0
 /* 802DAAF0 002A40B0  4E 80 00 20 */	blr 
-.balign 16, 0

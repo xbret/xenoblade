@@ -5418,4 +5418,3 @@ __DVDStopMotorAsync:
 .global __DVDRestartMotor
 __DVDRestartMotor:
 /* 8030F460 002D8A20  4E 80 00 20 */	blr 
-.balign 16, 0

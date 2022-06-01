@@ -813,4 +813,3 @@ lbl_80322DB0:
 .global func_80322DD0
 func_80322DD0:
 /* 80322DD0 002EC390  48 01 C5 30 */	b func_8033F300
-.balign 16, 0
