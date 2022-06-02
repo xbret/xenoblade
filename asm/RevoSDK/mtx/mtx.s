@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8034D1E0
-func_8034D1E0:
+.global PSMTXIdentity
+PSMTXIdentity:
 /* 8034D1E0 003167A0  C0 02 BD AC */	lfs f0, lbl_8066C12C@sda21(r2)
 /* 8034D1E4 003167A4  C0 22 BD A8 */	lfs f1, lbl_8066C128@sda21(r2)
 /* 8034D1E8 003167A8  F0 03 00 08 */	psq_st f0, 8(r3), 0, qr0

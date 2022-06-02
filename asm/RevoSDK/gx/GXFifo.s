@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80318600
-func_80318600:
+.global GXCPInterruptHandler
+GXCPInterruptHandler:
 /* 80318600 002E1BC0  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 80318604 002E1BC4  7C 08 02 A6 */	mflr r0
 /* 80318608 002E1BC8  90 01 02 E4 */	stw r0, 0x2e4(r1)
@@ -98,8 +98,8 @@ lbl_80318748:
 /* 8031875C 002E1D1C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80318760
-func_80318760:
+.global GXInitFifoBase
+GXInitFifoBase:
 /* 80318760 002E1D20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80318764 002E1D24  7C 08 02 A6 */	mflr r0
 /* 80318768 002E1D28  7C E4 2A 14 */	add r7, r4, r5
@@ -138,8 +138,8 @@ lbl_803187CC:
 /* 803187E8 002E1DA8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803187F0
-func_803187F0:
+.global CPGPLinkCheck
+CPGPLinkCheck:
 /* 803187F0 002E1DB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803187F4 002E1DB4  7C 08 02 A6 */	mflr r0
 /* 803187F8 002E1DB8  38 E0 00 00 */	li r7, 0
@@ -214,8 +214,8 @@ lbl_803188D8:
 /* 803188E4 002E1EA4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803188F0
-func_803188F0:
+.global GXSetCPUFifo
+GXSetCPUFifo:
 /* 803188F0 002E1EB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803188F4 002E1EB4  7C 08 02 A6 */	mflr r0
 /* 803188F8 002E1EB8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -259,7 +259,7 @@ lbl_8031893C:
 /* 8031898C 002E1F4C  90 1F 00 1C */	stw r0, 0x1c(r31)
 /* 80318990 002E1F50  9B AD B7 B0 */	stb r29, lbl_80667930@sda21(r13)
 /* 80318994 002E1F54  9B BF 00 21 */	stb r29, 0x21(r31)
-/* 80318998 002E1F58  4B FF FE 59 */	bl func_803187F0
+/* 80318998 002E1F58  4B FF FE 59 */	bl CPGPLinkCheck
 /* 8031899C 002E1F5C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 803189A0 002E1F60  41 82 00 88 */	beq lbl_80318A28
 /* 803189A4 002E1F64  80 9C D5 84 */	lwz r4, lbl_805CD584@l(r28)
@@ -343,8 +343,8 @@ lbl_80318AB8:
 /* 80318ACC 002E208C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80318AD0
-func_80318AD0:
+.global GXSetGPFifo
+GXSetGPFifo:
 /* 80318AD0 002E2090  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80318AD4 002E2094  7C 08 02 A6 */	mflr r0
 /* 80318AD8 002E2098  90 01 00 24 */	stw r0, 0x24(r1)
@@ -453,7 +453,7 @@ lbl_80318B5C:
 /* 80318C70 002E2230  54 00 84 3E */	srwi r0, r0, 0x10
 /* 80318C74 002E2234  B0 03 00 2E */	sth r0, 0x2e(r3)
 /* 80318C78 002E2238  4B FC 1F 49 */	bl PPCSync
-/* 80318C7C 002E223C  4B FF FB 75 */	bl func_803187F0
+/* 80318C7C 002E223C  4B FF FB 75 */	bl CPGPLinkCheck
 /* 80318C80 002E2240  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80318C84 002E2244  41 82 00 3C */	beq lbl_80318CC0
 /* 80318C88 002E2248  9B ED B7 C8 */	stb r31, lbl_80667948@sda21(r13)
@@ -515,8 +515,8 @@ lbl_80318D48:
 /* 80318D5C 002E231C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80318D60
-func_80318D60:
+.global __GXSaveFifo
+__GXSaveFifo:
 /* 80318D60 002E2320  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80318D64 002E2324  7C 08 02 A6 */	mflr r0
 /* 80318D68 002E2328  90 01 00 14 */	stw r0, 0x14(r1)
@@ -587,14 +587,14 @@ lbl_80318E4C:
 /* 80318E5C 002E241C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80318E60
-func_80318E60:
+.global __GXIsGPFifoReady
+__GXIsGPFifoReady:
 /* 80318E60 002E2420  88 6D B7 B1 */	lbz r3, lbl_80667931@sda21(r13)
 /* 80318E64 002E2424  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80318E70
-func_80318E70:
+.global GXGetCPUFifo
+GXGetCPUFifo:
 /* 80318E70 002E2430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80318E74 002E2434  7C 08 02 A6 */	mflr r0
 /* 80318E78 002E2438  90 01 00 14 */	stw r0, 0x14(r1)
@@ -606,7 +606,7 @@ func_80318E70:
 /* 80318E90 002E2450  38 60 00 00 */	li r3, 0
 /* 80318E94 002E2454  48 00 00 58 */	b lbl_80318EEC
 lbl_80318E98:
-/* 80318E98 002E2458  4B FF FE C9 */	bl func_80318D60
+/* 80318E98 002E2458  4B FF FE C9 */	bl __GXSaveFifo
 /* 80318E9C 002E245C  3C A0 80 5D */	lis r5, lbl_805CD584@ha
 /* 80318EA0 002E2460  84 85 D5 84 */	lwzu r4, lbl_805CD584@l(r5)
 /* 80318EA4 002E2464  38 60 00 01 */	li r3, 1
@@ -634,6 +634,7 @@ lbl_80318EEC:
 /* 80318EF8 002E24B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80318EFC 002E24BC  4E 80 00 20 */	blr 
 
+# either GXGetFifoPtrs or GXGetFifoLimits
 .balign 16, 0
 .global func_80318F00
 func_80318F00:
@@ -644,8 +645,8 @@ func_80318F00:
 /* 80318F10 002E24D0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80318F20
-func_80318F20:
+.global GXSetBreakPtCallback
+GXSetBreakPtCallback:
 /* 80318F20 002E24E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80318F24 002E24E4  7C 08 02 A6 */	mflr r0
 /* 80318F28 002E24E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -665,8 +666,8 @@ func_80318F20:
 /* 80318F60 002E2520  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80318F70
-func_80318F70:
+.global GXDisableBreakPt
+GXDisableBreakPt:
 /* 80318F70 002E2530  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80318F74 002E2534  7C 08 02 A6 */	mflr r0
 /* 80318F78 002E2538  90 01 00 14 */	stw r0, 0x14(r1)
@@ -709,14 +710,14 @@ func_80318F70:
 /* 8031900C 002E25CC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80319010
-func_80319010:
+.global __GXFifoInit
+__GXFifoInit:
 /* 80319010 002E25D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80319014 002E25D4  7C 08 02 A6 */	mflr r0
-/* 80319018 002E25D8  3C 80 80 32 */	lis r4, func_80318600@ha
+/* 80319018 002E25D8  3C 80 80 32 */	lis r4, GXCPInterruptHandler@ha
 /* 8031901C 002E25DC  38 60 00 11 */	li r3, 0x11
 /* 80319020 002E25E0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80319024 002E25E4  38 84 86 00 */	addi r4, r4, func_80318600@l
+/* 80319024 002E25E4  38 84 86 00 */	addi r4, r4, GXCPInterruptHandler@l
 /* 80319028 002E25E8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8031902C 002E25EC  48 03 F9 F5 */	bl __OSSetInterruptHandler
 /* 80319030 002E25F0  38 60 40 00 */	li r3, 0x4000
@@ -744,8 +745,8 @@ func_80319010:
 /* 80319088 002E2648  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80319090
-func_80319090:
+.global __GXCleanGPFifo
+__GXCleanGPFifo:
 /* 80319090 002E2650  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80319094 002E2654  7C 08 02 A6 */	mflr r0
 /* 80319098 002E2658  90 01 00 24 */	stw r0, 0x24(r1)

@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8031E470
-func_8031E470:
+.global GXCallDisplayList
+GXCallDisplayList:
 /* 8031E470 002E7A30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031E474 002E7A34  7C 08 02 A6 */	mflr r0
 /* 8031E478 002E7A38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -17,12 +17,12 @@ func_8031E470:
 /* 8031E494 002E7A54  80 1F 05 FC */	lwz r0, 0x5fc(r31)
 /* 8031E498 002E7A58  2C 00 00 00 */	cmpwi r0, 0
 /* 8031E49C 002E7A5C  41 82 00 08 */	beq lbl_8031E4A4
-/* 8031E4A0 002E7A60  4B FF C2 C1 */	bl func_8031A760
+/* 8031E4A0 002E7A60  4B FF C2 C1 */	bl __GXSetDirtyState
 lbl_8031E4A4:
 /* 8031E4A4 002E7A64  80 1F 00 00 */	lwz r0, 0(r31)
 /* 8031E4A8 002E7A68  2C 00 00 00 */	cmpwi r0, 0
 /* 8031E4AC 002E7A6C  40 82 00 08 */	bne lbl_8031E4B4
-/* 8031E4B0 002E7A70  4B FF C6 81 */	bl func_8031AB30
+/* 8031E4B0 002E7A70  4B FF C6 81 */	bl __GXSendFlushPrim
 lbl_8031E4B4:
 /* 8031E4B4 002E7A74  3C 60 CC 01 */	lis r3, 0xCC008000@ha
 /* 8031E4B8 002E7A78  38 00 00 40 */	li r0, 0x40

@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8031C0C0
-func_8031C0C0:
+.global GXGetTexBufferSize
+GXGetTexBufferSize:
 /* 8031C0C0 002E5680  28 05 00 3C */	cmplwi r5, 0x3c
 /* 8031C0C4 002E5684  41 81 00 40 */	bgt func_8031C104
 /* 8031C0C8 002E5688  3D 00 80 55 */	lis r8, lbl_8054BE70@ha
@@ -98,8 +98,8 @@ lbl_8031C1DC:
 /* 8031C1E0 002E57A0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C1F0
-func_8031C1F0:
+.global __GetImageTileCount
+__GetImageTileCount:
 /* 8031C1F0 002E57B0  28 03 00 3C */	cmplwi r3, 0x3c
 /* 8031C1F4 002E57B4  41 81 00 40 */	bgt func_8031C234
 /* 8031C1F8 002E57B8  3D 20 80 55 */	lis r9, lbl_8054BF64@ha
@@ -163,8 +163,8 @@ lbl_8031C298:
 /* 8031C2AC 002E586C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C2B0
-func_8031C2B0:
+.global GXInitTexObj
+GXInitTexObj:
 /* 8031C2B0 002E5870  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8031C2B4 002E5874  7C 08 02 A6 */	mflr r0
 /* 8031C2B8 002E5878  90 01 00 44 */	stw r0, 0x44(r1)
@@ -317,8 +317,8 @@ lbl_8031C468:
 /* 8031C4B8 002E5A78  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C4C0
-func_8031C4C0:
+.global GXInitTexObjCI
+GXInitTexObjCI:
 /* 8031C4C0 002E5A80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031C4C4 002E5A84  7C 08 02 A6 */	mflr r0
 /* 8031C4C8 002E5A88  90 01 00 14 */	stw r0, 0x14(r1)
@@ -326,7 +326,7 @@ func_8031C4C0:
 /* 8031C4D0 002E5A90  83 E1 00 18 */	lwz r31, 0x18(r1)
 /* 8031C4D4 002E5A94  93 C1 00 08 */	stw r30, 8(r1)
 /* 8031C4D8 002E5A98  7C 7E 1B 78 */	mr r30, r3
-/* 8031C4DC 002E5A9C  4B FF FD D5 */	bl func_8031C2B0
+/* 8031C4DC 002E5A9C  4B FF FD D5 */	bl GXInitTexObj
 /* 8031C4E0 002E5AA0  88 1E 00 1F */	lbz r0, 0x1f(r30)
 /* 8031C4E4 002E5AA4  93 FE 00 18 */	stw r31, 0x18(r30)
 /* 8031C4E8 002E5AA8  54 00 07 FA */	rlwinm r0, r0, 0, 0x1f, 0x1d
@@ -339,8 +339,8 @@ func_8031C4C0:
 /* 8031C504 002E5AC4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C510
-func_8031C510:
+.global GXInitTexObjLOD
+GXInitTexObjLOD:
 /* 8031C510 002E5AD0  C0 02 BC A0 */	lfs f0, lbl_8066C020@sda21(r2)
 /* 8031C514 002E5AD4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031C518 002E5AD8  FC 03 00 40 */	fcmpo cr0, f3, f0
@@ -414,8 +414,8 @@ lbl_8031C5E8:
 /* 8031C610 002E5BD0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C620
-func_8031C620:
+.global GXInitTexObjWrapMode
+GXInitTexObjWrapMode:
 /* 8031C620 002E5BE0  80 03 00 00 */	lwz r0, 0(r3)
 /* 8031C624 002E5BE4  50 80 07 BE */	rlwimi r0, r4, 0, 0x1e, 0x1f
 /* 8031C628 002E5BE8  50 A0 17 3A */	rlwimi r0, r5, 2, 0x1c, 0x1d
@@ -423,14 +423,14 @@ func_8031C620:
 /* 8031C630 002E5BF0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C640
-func_8031C640:
+.global GXInitTexObjTlut
+GXInitTexObjTlut:
 /* 8031C640 002E5C00  90 83 00 18 */	stw r4, 0x18(r3)
 /* 8031C644 002E5C04  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C650
-func_8031C650:
+.global GXInitTexObjFilter
+GXInitTexObjFilter:
 /* 8031C650 002E5C10  38 05 FF FF */	addi r0, r5, -1
 /* 8031C654 002E5C14  80 C3 00 00 */	lwz r6, 0(r3)
 /* 8031C658 002E5C18  7C 00 00 34 */	cntlzw r0, r0
@@ -443,8 +443,8 @@ func_8031C650:
 /* 8031C674 002E5C34  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C680
-func_8031C680:
+.global GXInitTexObjUserData
+GXInitTexObjUserData:
 /* 8031C680 002E5C40  90 83 00 10 */	stw r4, 0x10(r3)
 /* 8031C684 002E5C44  4E 80 00 20 */	blr 
 
@@ -455,8 +455,8 @@ func_8031C690:
 /* 8031C694 002E5C54  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C6A0
-func_8031C6A0:
+.global GXGetTexObjWidth
+GXGetTexObjWidth:
 /* 8031C6A0 002E5C60  80 03 00 08 */	lwz r0, 8(r3)
 /* 8031C6A4 002E5C64  54 03 05 BE */	clrlwi r3, r0, 0x16
 /* 8031C6A8 002E5C68  38 03 00 01 */	addi r0, r3, 1
@@ -464,8 +464,8 @@ func_8031C6A0:
 /* 8031C6B0 002E5C70  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C6C0
-func_8031C6C0:
+.global GXGetTexObjHeight
+GXGetTexObjHeight:
 /* 8031C6C0 002E5C80  80 03 00 08 */	lwz r0, 8(r3)
 /* 8031C6C4 002E5C84  54 03 B5 BE */	rlwinm r3, r0, 0x16, 0x16, 0x1f
 /* 8031C6C8 002E5C88  38 03 00 01 */	addi r0, r3, 1
@@ -473,35 +473,35 @@ func_8031C6C0:
 /* 8031C6D0 002E5C90  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C6E0
-func_8031C6E0:
+.global GXGetTexObjFmt
+GXGetTexObjFmt:
 /* 8031C6E0 002E5CA0  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 8031C6E4 002E5CA4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C6F0
-func_8031C6F0:
+.global GXGetTexObjWrapS
+GXGetTexObjWrapS:
 /* 8031C6F0 002E5CB0  80 03 00 00 */	lwz r0, 0(r3)
 /* 8031C6F4 002E5CB4  54 03 07 BE */	clrlwi r3, r0, 0x1e
 /* 8031C6F8 002E5CB8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C700
-func_8031C700:
+.global GXGetTexObjWrapT
+GXGetTexObjWrapT:
 /* 8031C700 002E5CC0  80 03 00 00 */	lwz r0, 0(r3)
 /* 8031C704 002E5CC4  54 03 F7 BE */	rlwinm r3, r0, 0x1e, 0x1e, 0x1f
 /* 8031C708 002E5CC8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C710
-func_8031C710:
+.global GXGetTexObjMipMap
+GXGetTexObjMipMap:
 /* 8031C710 002E5CD0  88 03 00 1F */	lbz r0, 0x1f(r3)
 /* 8031C714 002E5CD4  54 03 07 FE */	clrlwi r3, r0, 0x1f
 /* 8031C718 002E5CD8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C720
-func_8031C720:
+.global GXGetTexObjLODAll
+GXGetTexObjLODAll:
 /* 8031C720 002E5CE0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8031C724 002E5CE4  3D 80 43 30 */	lis r12, 0x4330
 /* 8031C728 002E5CE8  81 63 00 04 */	lwz r11, 4(r3)
@@ -559,14 +559,14 @@ func_8031C720:
 /* 8031C7F8 002E5DB8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C800
-func_8031C800:
+.global GXGetTexObjTlut
+GXGetTexObjTlut:
 /* 8031C800 002E5DC0  80 63 00 18 */	lwz r3, 0x18(r3)
 /* 8031C804 002E5DC4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C810
-func_8031C810:
+.global GXLoadTexObjPreLoaded
+GXLoadTexObjPreLoaded:
 /* 8031C810 002E5DD0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031C814 002E5DD4  7C 08 02 A6 */	mflr r0
 /* 8031C818 002E5DD8  39 6D 98 88 */	addi r11, r13, lbl_80665A08@sda21
@@ -659,8 +659,8 @@ lbl_8031C924:
 /* 8031C970 002E5F30  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C980
-func_8031C980:
+.global GXLoadTexObj
+GXLoadTexObj:
 /* 8031C980 002E5F40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031C984 002E5F44  7C 08 02 A6 */	mflr r0
 /* 8031C988 002E5F48  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
@@ -675,7 +675,7 @@ func_8031C980:
 /* 8031C9AC 002E5F6C  7C 64 1B 78 */	mr r4, r3
 /* 8031C9B0 002E5F70  7F C3 F3 78 */	mr r3, r30
 /* 8031C9B4 002E5F74  7F E5 FB 78 */	mr r5, r31
-/* 8031C9B8 002E5F78  4B FF FE 59 */	bl func_8031C810
+/* 8031C9B8 002E5F78  4B FF FE 59 */	bl GXLoadTexObjPreLoaded
 /* 8031C9BC 002E5F7C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8031C9C0 002E5F80  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8031C9C4 002E5F84  83 C1 00 08 */	lwz r30, 8(r1)
@@ -684,8 +684,8 @@ func_8031C980:
 /* 8031C9D0 002E5F90  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C9E0
-func_8031C9E0:
+.global GXInitTlutObj
+GXInitTlutObj:
 /* 8031C9E0 002E5FA0  80 E3 00 04 */	lwz r7, 4(r3)
 /* 8031C9E4 002E5FA4  38 00 00 64 */	li r0, 0x64
 /* 8031C9E8 002E5FA8  50 87 DA 3E */	rlwimi r7, r4, 0x1b, 8, 0x1f
@@ -698,8 +698,8 @@ func_8031C9E0:
 /* 8031CA04 002E5FC4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031CA10
-func_8031CA10:
+.global GXLoadTlut
+GXLoadTlut:
 /* 8031CA10 002E5FD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031CA14 002E5FD4  7C 08 02 A6 */	mflr r0
 /* 8031CA18 002E5FD8  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
@@ -712,7 +712,7 @@ func_8031CA10:
 /* 8031CA34 002E5FF4  7D 89 03 A6 */	mtctr r12
 /* 8031CA38 002E5FF8  4E 80 04 21 */	bctrl 
 /* 8031CA3C 002E5FFC  7C 7F 1B 78 */	mr r31, r3
-/* 8031CA40 002E6000  48 00 0B B1 */	bl func_8031D5F0
+/* 8031CA40 002E6000  48 00 0B B1 */	bl __GXFlushTextureState
 /* 8031CA44 002E6004  3C 60 CC 01 */	lis r3, 0xCC008000@ha
 /* 8031CA48 002E6008  38 80 00 61 */	li r4, 0x61
 /* 8031CA4C 002E600C  98 83 80 00 */	stb r4, 0xCC008000@l(r3)
@@ -721,7 +721,7 @@ func_8031CA10:
 /* 8031CA58 002E6018  98 83 80 00 */	stb r4, -0x8000(r3)
 /* 8031CA5C 002E601C  80 1F 00 00 */	lwz r0, 0(r31)
 /* 8031CA60 002E6020  90 03 80 00 */	stw r0, -0x8000(r3)
-/* 8031CA64 002E6024  48 00 0B 8D */	bl func_8031D5F0
+/* 8031CA64 002E6024  48 00 0B 8D */	bl __GXFlushTextureState
 /* 8031CA68 002E6028  80 1F 00 00 */	lwz r0, 0(r31)
 /* 8031CA6C 002E602C  80 7E 00 00 */	lwz r3, 0(r30)
 /* 8031CA70 002E6030  50 03 05 BE */	rlwimi r3, r0, 0, 0x16, 0x1f
@@ -739,8 +739,8 @@ func_8031CA10:
 /* 8031CAA0 002E6060  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031CAB0
-func_8031CAB0:
+.global GXInitTexCacheRegion
+GXInitTexCacheRegion:
 /* 8031CAB0 002E6070  2C 06 00 00 */	cmpwi r6, 0
 /* 8031CAB4 002E6074  41 82 00 18 */	beq lbl_8031CACC
 /* 8031CAB8 002E6078  2C 06 00 01 */	cmpwi r6, 1
@@ -794,8 +794,8 @@ lbl_8031CB34:
 /* 8031CB54 002E6114  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031CB60
-func_8031CB60:
+.global GXInitTlutRegion
+GXInitTlutRegion:
 /* 8031CB60 002E6120  3C 04 FF F8 */	addis r0, r4, 0xfff8
 /* 8031CB64 002E6124  38 80 00 00 */	li r4, 0
 /* 8031CB68 002E6128  50 04 BD BE */	rlwimi r4, r0, 0x17, 0x16, 0x1f
@@ -806,12 +806,12 @@ func_8031CB60:
 /* 8031CB7C 002E613C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031CB80
-func_8031CB80:
+.global GXInvalidateTexAll
+GXInvalidateTexAll:
 /* 8031CB80 002E6140  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031CB84 002E6144  7C 08 02 A6 */	mflr r0
 /* 8031CB88 002E6148  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8031CB8C 002E614C  48 00 0A 65 */	bl func_8031D5F0
+/* 8031CB8C 002E614C  48 00 0A 65 */	bl __GXFlushTextureState
 /* 8031CB90 002E6150  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 8031CB94 002E6154  3C 60 66 00 */	lis r3, 0x66001000@ha
 /* 8031CB98 002E6158  38 C0 00 61 */	li r6, 0x61
@@ -821,15 +821,15 @@ func_8031CB80:
 /* 8031CBA8 002E6168  90 85 80 00 */	stw r4, -0x8000(r5)
 /* 8031CBAC 002E616C  98 C5 80 00 */	stb r6, -0x8000(r5)
 /* 8031CBB0 002E6170  90 05 80 00 */	stw r0, -0x8000(r5)
-/* 8031CBB4 002E6174  48 00 0A 3D */	bl func_8031D5F0
+/* 8031CBB4 002E6174  48 00 0A 3D */	bl __GXFlushTextureState
 /* 8031CBB8 002E6178  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8031CBBC 002E617C  7C 08 03 A6 */	mtlr r0
 /* 8031CBC0 002E6180  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031CBC4 002E6184  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031CBD0
-func_8031CBD0:
+.global GXSetTexRegionCallback
+GXSetTexRegionCallback:
 /* 8031CBD0 002E6190  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031CBD4 002E6194  7C 60 1B 78 */	mr r0, r3
 /* 8031CBD8 002E6198  80 64 05 18 */	lwz r3, 0x518(r4)
@@ -837,8 +837,8 @@ func_8031CBD0:
 /* 8031CBE0 002E61A0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031CBF0
-func_8031CBF0:
+.global GXSetTlutRegionCallback
+GXSetTlutRegionCallback:
 /* 8031CBF0 002E61B0  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031CBF4 002E61B4  7C 60 1B 78 */	mr r0, r3
 /* 8031CBF8 002E61B8  80 64 05 1C */	lwz r3, 0x51c(r4)
@@ -846,8 +846,8 @@ func_8031CBF0:
 /* 8031CC00 002E61C0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031CC10
-func_8031CC10:
+.global __SetSURegs
+__SetSURegs:
 /* 8031CC10 002E61D0  81 62 BC 20 */	lwz r11, lbl_8066BFA0@sda21(r2)
 /* 8031CC14 002E61D4  54 86 10 3A */	slwi r6, r4, 2
 /* 8031CC18 002E61D8  54 60 10 3A */	slwi r0, r3, 2
@@ -886,8 +886,8 @@ func_8031CC10:
 /* 8031CC9C 002E625C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031CCA0
-func_8031CCA0:
+.global __GXSetSUTexRegs
+__GXSetSUTexRegs:
 /* 8031CCA0 002E6260  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8031CCA4 002E6264  7C 08 02 A6 */	mflr r0
 /* 8031CCA8 002E6268  90 01 00 34 */	stw r0, 0x34(r1)
@@ -940,7 +940,7 @@ lbl_8031CD40:
 /* 8031CD4C 002E630C  40 82 00 10 */	bne lbl_8031CD5C
 /* 8031CD50 002E6310  7F 23 CB 78 */	mr r3, r25
 /* 8031CD54 002E6314  7F 04 C3 78 */	mr r4, r24
-/* 8031CD58 002E6318  4B FF FE B9 */	bl func_8031CC10
+/* 8031CD58 002E6318  4B FF FE B9 */	bl __SetSURegs
 lbl_8031CD5C:
 /* 8031CD5C 002E631C  3B 9C 00 01 */	addi r28, r28, 1
 lbl_8031CD60:
@@ -977,7 +977,7 @@ lbl_8031CDA8:
 /* 8031CDCC 002E638C  41 82 00 10 */	beq lbl_8031CDDC
 /* 8031CDD0 002E6390  7F 23 CB 78 */	mr r3, r25
 /* 8031CDD4 002E6394  7F 04 C3 78 */	mr r4, r24
-/* 8031CDD8 002E6398  4B FF FE 39 */	bl func_8031CC10
+/* 8031CDD8 002E6398  4B FF FE 39 */	bl __SetSURegs
 lbl_8031CDDC:
 /* 8031CDDC 002E639C  3B FF 00 04 */	addi r31, r31, 4
 /* 8031CDE0 002E63A0  3B 7B 00 01 */	addi r27, r27, 1
@@ -993,8 +993,8 @@ lbl_8031CDEC:
 /* 8031CE00 002E63C0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031CE10
-func_8031CE10:
+.global __GXSetTmemConfig
+__GXSetTmemConfig:
 /* 8031CE10 002E63D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031CE14 002E63D4  28 03 00 02 */	cmplwi r3, 2
 /* 8031CE18 002E63D8  93 E1 00 0C */	stw r31, 0xc(r1)

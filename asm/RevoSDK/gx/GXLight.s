@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8031B950
-func_8031B950:
+.global GXInitLightAttn
+GXInitLightAttn:
 /* 8031B950 002E4F10  D0 23 00 10 */	stfs f1, 0x10(r3)
 /* 8031B954 002E4F14  D0 43 00 14 */	stfs f2, 0x14(r3)
 /* 8031B958 002E4F18  D0 63 00 18 */	stfs f3, 0x18(r3)
@@ -14,24 +14,24 @@ func_8031B950:
 /* 8031B968 002E4F28  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031B970
-func_8031B970:
+.global GXInitLightAttnA
+GXInitLightAttnA:
 /* 8031B970 002E4F30  D0 23 00 10 */	stfs f1, 0x10(r3)
 /* 8031B974 002E4F34  D0 43 00 14 */	stfs f2, 0x14(r3)
 /* 8031B978 002E4F38  D0 63 00 18 */	stfs f3, 0x18(r3)
 /* 8031B97C 002E4F3C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031B980
-func_8031B980:
+.global GXInitLightAttnK
+GXInitLightAttnK:
 /* 8031B980 002E4F40  D0 23 00 1C */	stfs f1, 0x1c(r3)
 /* 8031B984 002E4F44  D0 43 00 20 */	stfs f2, 0x20(r3)
 /* 8031B988 002E4F48  D0 63 00 24 */	stfs f3, 0x24(r3)
 /* 8031B98C 002E4F4C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031B990
-func_8031B990:
+.global GXInitLightSpot
+GXInitLightSpot:
 /* 8031B990 002E4F50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031B994 002E4F54  7C 08 02 A6 */	mflr r0
 /* 8031B998 002E4F58  C0 02 BC 58 */	lfs f0, lbl_8066BFD8@sda21(r2)
@@ -147,8 +147,8 @@ lbl_8031BB08:
 /* 8031BB28 002E50E8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031BB30
-func_8031BB30:
+.global GXInitLightDistAttn
+GXInitLightDistAttn:
 /* 8031BB30 002E50F0  C0 02 BC 58 */	lfs f0, lbl_8066BFD8@sda21(r2)
 /* 8031BB34 002E50F4  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8031BB38 002E50F8  40 80 00 08 */	bge lbl_8031BB40
@@ -208,16 +208,16 @@ lbl_8031BBE4:
 /* 8031BBF0 002E51B0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031BC00
-func_8031BC00:
+.global GXInitLightPos
+GXInitLightPos:
 /* 8031BC00 002E51C0  D0 23 00 28 */	stfs f1, 0x28(r3)
 /* 8031BC04 002E51C4  D0 43 00 2C */	stfs f2, 0x2c(r3)
 /* 8031BC08 002E51C8  D0 63 00 30 */	stfs f3, 0x30(r3)
 /* 8031BC0C 002E51CC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031BC10
-func_8031BC10:
+.global GXGetLightPos
+GXGetLightPos:
 /* 8031BC10 002E51D0  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 8031BC14 002E51D4  D0 04 00 00 */	stfs f0, 0(r4)
 /* 8031BC18 002E51D8  C0 03 00 2C */	lfs f0, 0x2c(r3)
@@ -227,8 +227,8 @@ func_8031BC10:
 /* 8031BC28 002E51E8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031BC30
-func_8031BC30:
+.global GXInitLightDir
+GXInitLightDir:
 /* 8031BC30 002E51F0  FC 80 08 50 */	fneg f4, f1
 /* 8031BC34 002E51F4  FC 20 10 50 */	fneg f1, f2
 /* 8031BC38 002E51F8  FC 00 18 50 */	fneg f0, f3
@@ -238,8 +238,8 @@ func_8031BC30:
 /* 8031BC48 002E5208  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031BC50
-func_8031BC50:
+.global GXGetLightDir
+GXGetLightDir:
 /* 8031BC50 002E5210  C0 03 00 34 */	lfs f0, 0x34(r3)
 /* 8031BC54 002E5214  C0 23 00 38 */	lfs f1, 0x38(r3)
 /* 8031BC58 002E5218  FC 40 00 50 */	fneg f2, f0
@@ -252,8 +252,8 @@ func_8031BC50:
 /* 8031BC74 002E5234  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031BC80
-func_8031BC80:
+.global GXInitSpecularDir
+GXInitSpecularDir:
 /* 8031BC80 002E5240  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8031BC84 002E5244  7C 08 02 A6 */	mflr r0
 /* 8031BC88 002E5248  FC C0 18 50 */	fneg f6, f3
@@ -324,15 +324,15 @@ lbl_8031BD14:
 /* 8031BD88 002E5348  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031BD90
-func_8031BD90:
+.global GXInitLightColor
+GXInitLightColor:
 /* 8031BD90 002E5350  80 04 00 00 */	lwz r0, 0(r4)
 /* 8031BD94 002E5354  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8031BD98 002E5358  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031BDA0
-func_8031BDA0:
+.global GXLoadLightObjImm
+GXLoadLightObjImm:
 /* 8031BDA0 002E5360  7C 80 00 34 */	cntlzw r0, r4
 /* 8031BDA4 002E5364  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031BDA8 002E5368  20 A0 00 1F */	subfic r5, r0, 0x1f
@@ -367,8 +367,8 @@ func_8031BDA0:
 /* 8031BE1C 002E53DC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031BE20
-func_8031BE20:
+.global GXSetChanAmbColor
+GXSetChanAmbColor:
 /* 8031BE20 002E53E0  2C 03 00 00 */	cmpwi r3, 0
 /* 8031BE24 002E53E4  41 82 00 30 */	beq lbl_8031BE54
 /* 8031BE28 002E53E8  2C 03 00 01 */	cmpwi r3, 1
@@ -432,8 +432,8 @@ lbl_8031BED0:
 /* 8031BEF4 002E54B4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031BF00
-func_8031BF00:
+.global GXSetChanMatColor
+GXSetChanMatColor:
 /* 8031BF00 002E54C0  2C 03 00 00 */	cmpwi r3, 0
 /* 8031BF04 002E54C4  41 82 00 30 */	beq lbl_8031BF34
 /* 8031BF08 002E54C8  2C 03 00 01 */	cmpwi r3, 1

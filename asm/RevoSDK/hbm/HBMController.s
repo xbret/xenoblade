@@ -2,7 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-lbl_80320D80:
+.global wpadConnectCallback__Q210homebutton10ControllerFll
+wpadConnectCallback__Q210homebutton10ControllerFll:
 /* 80320D80 002EA340  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80320D84 002EA344  7C 08 02 A6 */	mflr r0
 /* 80320D88 002EA348  2C 04 00 00 */	cmpwi r4, 0
@@ -25,9 +26,9 @@ lbl_80320DB8:
 /* 80320DC8 002EA388  88 04 00 40 */	lbz r0, 0x40(r4)
 /* 80320DCC 002EA38C  2C 00 00 00 */	cmpwi r0, 0
 /* 80320DD0 002EA390  40 82 00 1C */	bne lbl_80320DEC
-/* 80320DD4 002EA394  3C 80 80 32 */	lis r4, func_80320E90@ha
-/* 80320DD8 002EA398  38 84 0E 90 */	addi r4, r4, func_80320E90@l
-/* 80320DDC 002EA39C  48 04 B5 B5 */	bl func_8036C390
+/* 80320DD4 002EA394  3C 80 80 32 */	lis r4, wpadExtensionCallback__Q210homebutton10ControllerFll@ha
+/* 80320DD8 002EA398  38 84 0E 90 */	addi r4, r4, wpadExtensionCallback__Q210homebutton10ControllerFll@l
+/* 80320DDC 002EA39C  48 04 B5 B5 */	bl WPADSetExtensionCallback
 /* 80320DE0 002EA3A0  7C 7C E8 2E */	lwzx r3, r28, r29
 /* 80320DE4 002EA3A4  38 00 00 01 */	li r0, 1
 /* 80320DE8 002EA3A8  98 03 00 40 */	stb r0, 0x40(r3)
@@ -43,7 +44,7 @@ lbl_80320E00:
 /* 80320E08 002EA3C8  3B BD D7 38 */	addi r29, r29, lbl_805CD738@l
 /* 80320E0C 002EA3CC  7C 9D E0 2E */	lwzx r4, r29, r28
 /* 80320E10 002EA3D0  80 84 00 28 */	lwz r4, 0x28(r4)
-/* 80320E14 002EA3D4  48 04 B5 7D */	bl func_8036C390
+/* 80320E14 002EA3D4  48 04 B5 7D */	bl WPADSetExtensionCallback
 /* 80320E18 002EA3D8  7C 7D E0 2E */	lwzx r3, r29, r28
 /* 80320E1C 002EA3DC  38 00 00 00 */	li r0, 0
 /* 80320E20 002EA3E0  98 03 00 40 */	stb r0, 0x40(r3)
@@ -59,8 +60,8 @@ lbl_80320E34:
 /* 80320E44 002EA404  81 83 00 24 */	lwz r12, 0x24(r3)
 /* 80320E48 002EA408  2C 0C 00 00 */	cmpwi r12, 0
 /* 80320E4C 002EA40C  41 82 00 24 */	beq lbl_80320E70
-/* 80320E50 002EA410  3C 60 80 32 */	lis r3, lbl_80320D80@ha
-/* 80320E54 002EA414  38 63 0D 80 */	addi r3, r3, lbl_80320D80@l
+/* 80320E50 002EA410  3C 60 80 32 */	lis r3, wpadConnectCallback__Q210homebutton10ControllerFll@ha
+/* 80320E54 002EA414  38 63 0D 80 */	addi r3, r3, wpadConnectCallback__Q210homebutton10ControllerFll@l
 /* 80320E58 002EA418  7C 0C 18 40 */	cmplw r12, r3
 /* 80320E5C 002EA41C  41 82 00 14 */	beq lbl_80320E70
 /* 80320E60 002EA420  7F C3 F3 78 */	mr r3, r30
@@ -78,8 +79,8 @@ lbl_80320E70:
 /* 80320E8C 002EA44C  4E 80 00 20 */	blr
 
 .balign 16, 0
-.global func_80320E90
-func_80320E90:
+.global wpadExtensionCallback__Q210homebutton10ControllerFll
+wpadExtensionCallback__Q210homebutton10ControllerFll:
 /* 80320E90 002EA450  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80320E94 002EA454  7C 08 02 A6 */	mflr r0
 /* 80320E98 002EA458  2C 04 00 FF */	cmpwi r4, 0xff
@@ -114,11 +115,11 @@ func_80320E90:
 /* 80320F0C 002EA4CC  7F 83 E3 78 */	mr r3, r28
 /* 80320F10 002EA4D0  48 03 22 71 */	bl OSCancelAlarm
 /* 80320F14 002EA4D4  3C 80 80 00 */	lis r4, 0x800000F8@ha
-/* 80320F18 002EA4D8  3C E0 80 32 */	lis r7, lbl_80320FA0@ha
+/* 80320F18 002EA4D8  3C E0 80 32 */	lis r7, soundOnCallback__Q210homebutton10ControllerFP7OSAlarmP9OSContext@ha
 /* 80320F1C 002EA4DC  80 04 00 F8 */	lwz r0, 0x800000F8@l(r4)
 /* 80320F20 002EA4E0  3C 60 10 62 */	lis r3, 0x10624DD3@ha
 /* 80320F24 002EA4E4  38 83 4D D3 */	addi r4, r3, 0x10624DD3@l
-/* 80320F28 002EA4E8  38 E7 0F A0 */	addi r7, r7, lbl_80320FA0@l
+/* 80320F28 002EA4E8  38 E7 0F A0 */	addi r7, r7, soundOnCallback__Q210homebutton10ControllerFP7OSAlarmP9OSContext@l
 /* 80320F2C 002EA4EC  54 00 F0 BE */	srwi r0, r0, 2
 /* 80320F30 002EA4F0  7F 83 E3 78 */	mr r3, r28
 /* 80320F34 002EA4F4  7C 04 00 16 */	mulhwu r0, r4, r0
@@ -148,9 +149,12 @@ lbl_80320F7C:
 /* 80320F8C 002EA54C  83 81 00 10 */	lwz r28, 0x10(r1)
 /* 80320F90 002EA550  7C 08 03 A6 */	mtlr r0
 /* 80320F94 002EA554  38 21 00 20 */	addi r1, r1, 0x20
-/* 80320F98 002EA558  4E 80 00 20 */	blr 
+/* 80320F98 002EA558  4E 80 00 20 */	blr
+
+
 .balign 16, 0
-lbl_80320FA0:
+.global soundOnCallback__Q210homebutton10ControllerFP7OSAlarmP9OSContext
+soundOnCallback__Q210homebutton10ControllerFP7OSAlarmP9OSContext:
 /* 80320FA0 002EA560  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80320FA4 002EA564  7C 08 02 A6 */	mflr r0
 /* 80320FA8 002EA568  90 01 00 14 */	stw r0, 0x14(r1)
@@ -181,8 +185,8 @@ lbl_80320FEC:
 /* 80321008 002EA5C8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321010
-func_80321010:
+.global __ct__Q210homebutton10ControllerFiPQ210homebutton9RemoteSpk
+__ct__Q210homebutton10ControllerFiPQ210homebutton9RemoteSpk:
 /* 80321010 002EA5D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80321014 002EA5D4  7C 08 02 A6 */	mflr r0
 /* 80321018 002EA5D8  3C C0 80 52 */	lis r6, lbl_80518680@ha
@@ -233,8 +237,8 @@ lbl_803210A8:
 /* 803210C8 002EA688  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803210D0
-func_803210D0:
+.global __dt__Q210homebutton10ControllerFv
+__dt__Q210homebutton10ControllerFv:
 /* 803210D0 002EA690  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803210D4 002EA694  7C 08 02 A6 */	mflr r0
 /* 803210D8 002EA698  2C 03 00 00 */	cmpwi r3, 0
@@ -259,7 +263,7 @@ func_803210D0:
 /* 80321124 002EA6E4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80321128 002EA6E8  40 81 00 0C */	ble lbl_80321134
 /* 8032112C 002EA6EC  7F C3 F3 78 */	mr r3, r30
-/* 80321130 002EA6F0  48 11 3A FD */	bl func_80434C2C
+/* 80321130 002EA6F0  48 11 3A FD */	bl __dl__FPv
 lbl_80321134:
 /* 80321134 002EA6F4  7F C3 F3 78 */	mr r3, r30
 /* 80321138 002EA6F8  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -270,8 +274,8 @@ lbl_80321134:
 /* 8032114C 002EA70C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321150
-func_80321150:
+.global initCallback__Q210homebutton10ControllerFv
+initCallback__Q210homebutton10ControllerFv:
 /* 80321150 002EA710  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80321154 002EA714  7C 08 02 A6 */	mflr r0
 /* 80321158 002EA718  90 01 00 24 */	stw r0, 0x24(r1)
@@ -279,18 +283,18 @@ func_80321150:
 /* 80321160 002EA720  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80321164 002EA724  7C 7E 1B 78 */	mr r30, r3
 /* 80321168 002EA728  38 60 00 00 */	li r3, 0
-/* 8032116C 002EA72C  48 04 F5 85 */	bl func_803706F0
-/* 80321170 002EA730  3C 80 80 32 */	lis r4, lbl_80320D80@ha
+/* 8032116C 002EA72C  48 04 F5 85 */	bl WPADSetCallbackByKPAD
+/* 80321170 002EA730  3C 80 80 32 */	lis r4, wpadConnectCallback__Q210homebutton10ControllerFll@ha
 /* 80321174 002EA734  80 7E 00 00 */	lwz r3, 0(r30)
-/* 80321178 002EA738  38 84 0D 80 */	addi r4, r4, lbl_80320D80@l
-/* 8032117C 002EA73C  48 04 B1 85 */	bl func_8036C300
+/* 80321178 002EA738  38 84 0D 80 */	addi r4, r4, wpadConnectCallback__Q210homebutton10ControllerFll@l
+/* 8032117C 002EA73C  48 04 B1 85 */	bl WPADSetConnectCallback
 /* 80321180 002EA740  90 7E 00 24 */	stw r3, 0x24(r30)
 /* 80321184 002EA744  38 60 00 01 */	li r3, 1
-/* 80321188 002EA748  48 04 F5 69 */	bl func_803706F0
-/* 8032118C 002EA74C  3C 80 80 32 */	lis r4, func_80320E90@ha
+/* 80321188 002EA748  48 04 F5 69 */	bl WPADSetCallbackByKPAD
+/* 8032118C 002EA74C  3C 80 80 32 */	lis r4, wpadExtensionCallback__Q210homebutton10ControllerFll@ha
 /* 80321190 002EA750  80 7E 00 00 */	lwz r3, 0(r30)
-/* 80321194 002EA754  38 84 0E 90 */	addi r4, r4, func_80320E90@l
-/* 80321198 002EA758  48 04 B1 F9 */	bl func_8036C390
+/* 80321194 002EA754  38 84 0E 90 */	addi r4, r4, wpadExtensionCallback__Q210homebutton10ControllerFll@l
+/* 80321198 002EA758  48 04 B1 F9 */	bl WPADSetExtensionCallback
 /* 8032119C 002EA75C  90 7E 00 28 */	stw r3, 0x28(r30)
 /* 803211A0 002EA760  3B E0 00 01 */	li r31, 1
 /* 803211A4 002EA764  80 7E 00 00 */	lwz r3, 0(r30)
@@ -317,8 +321,8 @@ lbl_803211D8:
 /* 803211EC 002EA7AC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803211F0
-func_803211F0:
+.global clearCallback__Q210homebutton10ControllerFv
+clearCallback__Q210homebutton10ControllerFv:
 /* 803211F0 002EA7B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803211F4 002EA7B4  7C 08 02 A6 */	mflr r0
 /* 803211F8 002EA7B8  38 80 00 01 */	li r4, 1
@@ -330,17 +334,17 @@ func_803211F0:
 /* 80321210 002EA7D0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80321214 002EA7D4  48 04 BE AD */	bl WPADControlSpeaker
 /* 80321218 002EA7D8  38 60 00 00 */	li r3, 0
-/* 8032121C 002EA7DC  48 04 F4 D5 */	bl func_803706F0
+/* 8032121C 002EA7DC  48 04 F4 D5 */	bl WPADSetCallbackByKPAD
 /* 80321220 002EA7E0  80 7E 00 00 */	lwz r3, 0(r30)
 /* 80321224 002EA7E4  80 9E 00 24 */	lwz r4, 0x24(r30)
-/* 80321228 002EA7E8  48 04 B0 D9 */	bl func_8036C300
+/* 80321228 002EA7E8  48 04 B0 D9 */	bl WPADSetConnectCallback
 /* 8032122C 002EA7EC  38 60 00 01 */	li r3, 1
-/* 80321230 002EA7F0  48 04 F4 C1 */	bl func_803706F0
+/* 80321230 002EA7F0  48 04 F4 C1 */	bl WPADSetCallbackByKPAD
 /* 80321234 002EA7F4  3B E0 00 00 */	li r31, 0
 /* 80321238 002EA7F8  93 FE 00 24 */	stw r31, 0x24(r30)
 /* 8032123C 002EA7FC  80 7E 00 00 */	lwz r3, 0(r30)
 /* 80321240 002EA800  80 9E 00 28 */	lwz r4, 0x28(r30)
-/* 80321244 002EA804  48 04 B1 4D */	bl func_8036C390
+/* 80321244 002EA804  48 04 B1 4D */	bl WPADSetExtensionCallback
 /* 80321248 002EA808  93 FE 00 28 */	stw r31, 0x28(r30)
 /* 8032124C 002EA80C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80321250 002EA810  83 C1 00 08 */	lwz r30, 8(r1)
@@ -350,8 +354,8 @@ func_803211F0:
 /* 80321260 002EA820  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321270
-func_80321270:
+.global setKpad__Q210homebutton10ControllerFPC11HBMKPadDatab
+setKpad__Q210homebutton10ControllerFPC11HBMKPadDatab:
 /* 80321270 002EA830  80 C4 00 00 */	lwz r6, 0(r4)
 /* 80321274 002EA834  2C 06 00 00 */	cmpwi r6, 0
 /* 80321278 002EA838  4D 82 00 20 */	beqlr 
@@ -464,8 +468,8 @@ lbl_803213DC:
 /* 803213F0 002EA9B0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321400
-func_80321400:
+.global clrKpadButton__Q210homebutton10ControllerFv
+clrKpadButton__Q210homebutton10ControllerFv:
 /* 80321400 002EA9C0  38 00 00 00 */	li r0, 0
 /* 80321404 002EA9C4  90 03 00 10 */	stw r0, 0x10(r3)
 /* 80321408 002EA9C8  90 03 00 14 */	stw r0, 0x14(r3)
@@ -473,8 +477,8 @@ func_80321400:
 /* 80321410 002EA9D0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321420
-func_80321420:
+.global setInValidPos__Q210homebutton10ControllerFv
+setInValidPos__Q210homebutton10ControllerFv:
 /* 80321420 002EA9E0  3C A0 80 52 */	lis r5, lbl_80518684@ha
 /* 80321424 002EA9E4  3C 80 80 52 */	lis r4, lbl_80518688@ha
 /* 80321428 002EA9E8  C0 25 86 84 */	lfs f1, lbl_80518684@l(r5)
@@ -484,27 +488,27 @@ func_80321420:
 /* 80321438 002EA9F8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321440
-func_80321440:
+.global connect__Q210homebutton10ControllerFv
+connect__Q210homebutton10ControllerFv:
 /* 80321440 002EAA00  7C 64 1B 78 */	mr r4, r3
 /* 80321444 002EAA04  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 80321448 002EAA08  80 84 00 00 */	lwz r4, 0(r4)
-/* 8032144C 002EAA0C  48 00 0C C4 */	b func_80322110
+/* 8032144C 002EAA0C  48 00 0C C4 */	b Disconnect__Q210homebutton9RemoteSpkFl
 
 .balign 16, 0
-.global func_80321450
-func_80321450:
+.global disconnect__Q210homebutton10ControllerFv
+disconnect__Q210homebutton10ControllerFv:
 /* 80321450 002EAA10  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321460
-func_80321460:
+.global setSpeakerVol__Q210homebutton10ControllerFf
+setSpeakerVol__Q210homebutton10ControllerFf:
 /* 80321460 002EAA20  D0 23 00 04 */	stfs f1, 4(r3)
 /* 80321464 002EAA24  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321470
-func_80321470:
+.global playSound__Q210homebutton10ControllerFi
+playSound__Q210homebutton10ControllerFi:
 /* 80321470 002EAA30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80321474 002EAA34  7C 08 02 A6 */	mflr r0
 /* 80321478 002EAA38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -524,7 +528,7 @@ func_80321470:
 /* 803214B0 002EAA70  D8 01 00 08 */	stfd f0, 8(r1)
 /* 803214B4 002EAA74  80 C1 00 0C */	lwz r6, 0xc(r1)
 /* 803214B8 002EAA78  7C C6 07 74 */	extsb r6, r6
-/* 803214BC 002EAA7C  48 00 0C E5 */	bl func_803221A0
+/* 803214BC 002EAA7C  48 00 0C E5 */	bl Play__Q210homebutton9RemoteSpkFliSc
 /* 803214C0 002EAA80  80 7F 00 00 */	lwz r3, 0(r31)
 /* 803214C4 002EAA84  48 04 BB AD */	bl WPADIsSpeakerEnabled
 /* 803214C8 002EAA88  2C 03 00 00 */	cmpwi r3, 0
@@ -548,8 +552,8 @@ lbl_803214F8:
 /* 80321508 002EAAC8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321510
-func_80321510:
+.global isPlayingSoundId__Q210homebutton10ControllerCFi
+isPlayingSoundId__Q210homebutton10ControllerCFi:
 /* 80321510 002EAAD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80321514 002EAAD4  7C 08 02 A6 */	mflr r0
 /* 80321518 002EAAD8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -559,7 +563,7 @@ func_80321510:
 /* 80321528 002EAAE8  7C 7E 1B 78 */	mr r30, r3
 /* 8032152C 002EAAEC  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 80321530 002EAAF0  80 9E 00 00 */	lwz r4, 0(r30)
-/* 80321534 002EAAF4  48 00 0D 0D */	bl func_80322240
+/* 80321534 002EAAF4  48 00 0D 0D */	bl isPlaying__Q210homebutton9RemoteSpkCFl
 /* 80321538 002EAAF8  2C 03 00 00 */	cmpwi r3, 0
 /* 8032153C 002EAAFC  40 82 00 0C */	bne lbl_80321548
 /* 80321540 002EAB00  38 60 00 00 */	li r3, 0
@@ -568,7 +572,7 @@ lbl_80321548:
 /* 80321548 002EAB08  80 7E 00 20 */	lwz r3, 0x20(r30)
 /* 8032154C 002EAB0C  7F E5 FB 78 */	mr r5, r31
 /* 80321550 002EAB10  80 9E 00 00 */	lwz r4, 0(r30)
-/* 80321554 002EAB14  48 00 0D 0D */	bl func_80322260
+/* 80321554 002EAB14  48 00 0D 0D */	bl isPlayingId__Q210homebutton9RemoteSpkCFli
 lbl_80321558:
 /* 80321558 002EAB18  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8032155C 002EAB1C  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -578,16 +582,16 @@ lbl_80321558:
 /* 8032156C 002EAB2C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321570
-func_80321570:
+.global initSound__Q210homebutton10ControllerFv
+initSound__Q210homebutton10ControllerFv:
 /* 80321570 002EAB30  38 00 00 00 */	li r0, 0
 /* 80321574 002EAB34  98 03 00 42 */	stb r0, 0x42(r3)
 /* 80321578 002EAB38  98 03 00 43 */	stb r0, 0x43(r3)
 /* 8032157C 002EAB3C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321580
-func_80321580:
+.global updateSound__Q210homebutton10ControllerFv
+updateSound__Q210homebutton10ControllerFv:
 /* 80321580 002EAB40  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80321584 002EAB44  7C 08 02 A6 */	mflr r0
 /* 80321588 002EAB48  90 01 00 24 */	stw r0, 0x24(r1)
@@ -597,7 +601,7 @@ func_80321580:
 /* 80321598 002EAB58  7C 7F 1B 78 */	mr r31, r3
 /* 8032159C 002EAB5C  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 803215A0 002EAB60  7F 64 DB 78 */	mr r4, r27
-/* 803215A4 002EAB64  48 00 0C 9D */	bl func_80322240
+/* 803215A4 002EAB64  48 00 0C 9D */	bl isPlaying__Q210homebutton9RemoteSpkCFl
 /* 803215A8 002EAB68  2C 03 00 00 */	cmpwi r3, 0
 /* 803215AC 002EAB6C  40 82 00 78 */	bne lbl_80321624
 /* 803215B0 002EAB70  88 1F 00 42 */	lbz r0, 0x42(r31)
@@ -672,11 +676,11 @@ lbl_80321624:
 /* 803216BC 002EAC7C  7F 63 DB 78 */	mr r3, r27
 /* 803216C0 002EAC80  48 03 1A C1 */	bl OSCancelAlarm
 /* 803216C4 002EAC84  80 1D 00 F8 */	lwz r0, 0xf8(r29)
-/* 803216C8 002EAC88  3C E0 80 32 */	lis r7, lbl_80320FA0@ha
+/* 803216C8 002EAC88  3C E0 80 32 */	lis r7, soundOnCallback__Q210homebutton10ControllerFP7OSAlarmP9OSContext@ha
 /* 803216CC 002EAC8C  38 9E 4D D3 */	addi r4, r30, 0x4dd3
 /* 803216D0 002EAC90  7F 63 DB 78 */	mr r3, r27
 /* 803216D4 002EAC94  54 00 F0 BE */	srwi r0, r0, 2
-/* 803216D8 002EAC98  38 E7 0F A0 */	addi r7, r7, lbl_80320FA0@l
+/* 803216D8 002EAC98  38 E7 0F A0 */	addi r7, r7, soundOnCallback__Q210homebutton10ControllerFP7OSAlarmP9OSContext@l
 /* 803216DC 002EAC9C  7C 04 00 16 */	mulhwu r0, r4, r0
 /* 803216E0 002EACA0  38 A0 00 00 */	li r5, 0
 /* 803216E4 002EACA4  54 00 D1 BE */	srwi r0, r0, 6
@@ -713,11 +717,11 @@ lbl_803216FC:
 /* 8032175C 002EAD1C  7F 63 DB 78 */	mr r3, r27
 /* 80321760 002EAD20  48 03 1A 21 */	bl OSCancelAlarm
 /* 80321764 002EAD24  3C 80 80 00 */	lis r4, 0x800000F8@ha
-/* 80321768 002EAD28  3C E0 80 32 */	lis r7, lbl_80320FA0@ha
+/* 80321768 002EAD28  3C E0 80 32 */	lis r7, soundOnCallback__Q210homebutton10ControllerFP7OSAlarmP9OSContext@ha
 /* 8032176C 002EAD2C  80 04 00 F8 */	lwz r0, 0x800000F8@l(r4)
 /* 80321770 002EAD30  3C 60 10 62 */	lis r3, 0x10624DD3@ha
 /* 80321774 002EAD34  38 83 4D D3 */	addi r4, r3, 0x10624DD3@l
-/* 80321778 002EAD38  38 E7 0F A0 */	addi r7, r7, lbl_80320FA0@l
+/* 80321778 002EAD38  38 E7 0F A0 */	addi r7, r7, soundOnCallback__Q210homebutton10ControllerFP7OSAlarmP9OSContext@l
 /* 8032177C 002EAD3C  54 00 F0 BE */	srwi r0, r0, 2
 /* 80321780 002EAD40  7F 63 DB 78 */	mr r3, r27
 /* 80321784 002EAD44  7C 04 00 16 */	mulhwu r0, r4, r0
@@ -736,21 +740,21 @@ lbl_803217A0:
 /* 803217B4 002EAD74  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803217C0
-func_803217C0:
+.global isPlayReady__Q210homebutton10ControllerCFv
+isPlayReady__Q210homebutton10ControllerCFv:
 /* 803217C0 002EAD80  7C 64 1B 78 */	mr r4, r3
 /* 803217C4 002EAD84  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 803217C8 002EAD88  80 84 00 00 */	lwz r4, 0(r4)
-/* 803217CC 002EAD8C  48 00 0A C4 */	b func_80322290
+/* 803217CC 002EAD8C  48 00 0A C4 */	b isPlayReady__Q210homebutton9RemoteSpkCFl
 
 .balign 16, 0
-.global func_803217D0
-func_803217D0:
+.global getController__Q210homebutton10ControllerFv
+getController__Q210homebutton10ControllerFv:
 /* 803217D0 002EAD90  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803217E0
-func_803217E0:
+.global startMotor__Q210homebutton10ControllerFv
+startMotor__Q210homebutton10ControllerFv:
 /* 803217E0 002EADA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803217E4 002EADA4  7C 08 02 A6 */	mflr r0
 /* 803217E8 002EADA8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -763,7 +767,7 @@ func_803217E0:
 /* 80321804 002EADC4  2C 00 00 00 */	cmpwi r0, 0
 /* 80321808 002EADC8  41 82 00 28 */	beq lbl_80321830
 /* 8032180C 002EADCC  80 63 00 20 */	lwz r3, 0x20(r3)
-/* 80321810 002EADD0  48 00 0A 31 */	bl func_80322240
+/* 80321810 002EADD0  48 00 0A 31 */	bl isPlaying__Q210homebutton9RemoteSpkCFl
 /* 80321814 002EADD4  2C 03 00 00 */	cmpwi r3, 0
 /* 80321818 002EADD8  40 82 00 18 */	bne lbl_80321830
 /* 8032181C 002EADDC  38 00 00 01 */	li r0, 1
@@ -779,8 +783,8 @@ lbl_80321830:
 /* 80321840 002EAE00  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321850
-func_80321850:
+.global stopMotor__Q210homebutton10ControllerFv
+stopMotor__Q210homebutton10ControllerFv:
 /* 80321850 002EAE10  80 83 00 00 */	lwz r4, 0(r3)
 /* 80321854 002EAE14  2C 04 00 04 */	cmpwi r4, 4
 /* 80321858 002EAE18  4C 80 00 20 */	bgelr 
@@ -795,8 +799,8 @@ func_80321850:
 /* 8032187C 002EAE3C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321880
-func_80321880:
+.global getInfoAsync__Q210homebutton10ControllerFP8WPADInfo
+getInfoAsync__Q210homebutton10ControllerFP8WPADInfo:
 /* 80321880 002EAE40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80321884 002EAE44  7C 08 02 A6 */	mflr r0
 /* 80321888 002EAE48  90 01 00 14 */	stw r0, 0x14(r1)
@@ -812,7 +816,7 @@ func_80321880:
 lbl_803218B0:
 /* 803218B0 002EAE70  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 803218B4 002EAE74  7C 04 03 78 */	mr r4, r0
-/* 803218B8 002EAE78  48 00 09 89 */	bl func_80322240
+/* 803218B8 002EAE78  48 00 09 89 */	bl isPlaying__Q210homebutton9RemoteSpkCFl
 /* 803218BC 002EAE7C  2C 03 00 00 */	cmpwi r3, 0
 /* 803218C0 002EAE80  40 82 00 10 */	bne lbl_803218D0
 /* 803218C4 002EAE84  88 1E 00 1C */	lbz r0, 0x1c(r30)
@@ -822,10 +826,10 @@ lbl_803218D0:
 /* 803218D0 002EAE90  38 60 FF FE */	li r3, -2
 /* 803218D4 002EAE94  48 00 00 18 */	b lbl_803218EC
 lbl_803218D8:
-/* 803218D8 002EAE98  3C A0 80 32 */	lis r5, lbl_80321910@ha
+/* 803218D8 002EAE98  3C A0 80 32 */	lis r5, ControllerCallback__Q210homebutton10ControllerFll@ha
 /* 803218DC 002EAE9C  80 7E 00 00 */	lwz r3, 0(r30)
 /* 803218E0 002EAEA0  7F E4 FB 78 */	mr r4, r31
-/* 803218E4 002EAEA4  38 A5 19 10 */	addi r5, r5, lbl_80321910@l
+/* 803218E4 002EAEA4  38 A5 19 10 */	addi r5, r5, ControllerCallback__Q210homebutton10ControllerFll@l
 /* 803218E8 002EAEA8  48 04 AC 79 */	bl WPADGetInfoAsync
 lbl_803218EC:
 /* 803218EC 002EAEAC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -833,9 +837,11 @@ lbl_803218EC:
 /* 803218F4 002EAEB4  83 C1 00 08 */	lwz r30, 8(r1)
 /* 803218F8 002EAEB8  7C 08 03 A6 */	mtlr r0
 /* 803218FC 002EAEBC  38 21 00 10 */	addi r1, r1, 0x10
-/* 80321900 002EAEC0  4E 80 00 20 */	blr 
+/* 80321900 002EAEC0  4E 80 00 20 */	blr
+
 .balign 16, 0
-lbl_80321910:
+.global ControllerCallback__Q210homebutton10ControllerFll
+ControllerCallback__Q210homebutton10ControllerFll:
 /* 80321910 002EAED0  2C 04 00 00 */	cmpwi r4, 0
 /* 80321914 002EAED4  4C 82 00 20 */	bnelr 
 /* 80321918 002EAED8  2C 03 00 04 */	cmpwi r3, 4
@@ -847,8 +853,8 @@ lbl_80321910:
 /* 80321930 002EAEF0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321940
-func_80321940:
+.global getBatteryFlag__Q210homebutton10ControllerCFv
+getBatteryFlag__Q210homebutton10ControllerCFv:
 /* 80321940 002EAF00  80 03 00 00 */	lwz r0, 0(r3)
 /* 80321944 002EAF04  2C 00 00 04 */	cmpwi r0, 4
 /* 80321948 002EAF08  41 80 00 0C */	blt lbl_80321954
@@ -861,8 +867,8 @@ lbl_80321954:
 /* 80321960 002EAF20  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321970
-func_80321970:
+.global clrBatteryFlag__Q210homebutton10ControllerFv
+clrBatteryFlag__Q210homebutton10ControllerFv:
 /* 80321970 002EAF30  80 83 00 00 */	lwz r4, 0(r3)
 /* 80321974 002EAF34  2C 04 00 04 */	cmpwi r4, 4
 /* 80321978 002EAF38  4C 80 00 20 */	bgelr 

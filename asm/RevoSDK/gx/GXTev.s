@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8031D620
-func_8031D620:
+.global GXSetTevOp
+GXSetTevOp:
 /* 8031D620 002E6BE0  2C 03 00 00 */	cmpwi r3, 0
 /* 8031D624 002E6BE4  3C A0 80 55 */	lis r5, lbl_8054C098@ha
 /* 8031D628 002E6BE8  38 A5 C0 98 */	addi r5, r5, lbl_8054C098@l
@@ -142,8 +142,8 @@ lbl_8031D7D0:
 /* 8031D7F4 002E6DB4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031D800
-func_8031D800:
+.global GXSetTevColor
+GXSetTevColor:
 /* 8031D800 002E6DC0  81 04 00 00 */	lwz r8, 0(r4)
 /* 8031D804 002E6DC4  54 63 08 3C */	slwi r3, r3, 1
 /* 8031D808 002E6DC8  3C 80 CC 01 */	lis r4, 0xCC008000@ha
@@ -170,8 +170,8 @@ func_8031D800:
 /* 8031D85C 002E6E1C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031D860
-func_8031D860:
+.global GXSetTevColorS10
+GXSetTevColorS10:
 /* 8031D860 002E6E20  81 04 00 00 */	lwz r8, 0(r4)
 /* 8031D864 002E6E24  54 66 08 3C */	slwi r6, r3, 1
 /* 8031D868 002E6E28  81 24 00 04 */	lwz r9, 4(r4)
@@ -199,8 +199,8 @@ func_8031D860:
 /* 8031D8C0 002E6E80  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031D8D0
-func_8031D8D0:
+.global GXSetTevKColor
+GXSetTevKColor:
 /* 8031D8D0 002E6E90  81 24 00 00 */	lwz r9, 0(r4)
 /* 8031D8D4 002E6E94  54 63 08 3C */	slwi r3, r3, 1
 /* 8031D8D8 002E6E98  3C 80 CC 01 */	lis r4, 0xCC008000@ha
@@ -226,8 +226,8 @@ func_8031D8D0:
 /* 8031D928 002E6EE8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031D930
-func_8031D930:
+.global GXSetTevKColorSel
+GXSetTevKColorSel:
 /* 8031D930 002E6EF0  54 60 07 FF */	clrlwi. r0, r3, 0x1f
 /* 8031D934 002E6EF4  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
 /* 8031D938 002E6EF8  54 60 08 3A */	rlwinm r0, r3, 1, 0, 0x1d
@@ -252,8 +252,8 @@ lbl_8031D960:
 /* 8031D97C 002E6F3C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031D980
-func_8031D980:
+.global GXSetTevKAlphaSel
+GXSetTevKAlphaSel:
 /* 8031D980 002E6F40  54 60 07 FF */	clrlwi. r0, r3, 0x1f
 /* 8031D984 002E6F44  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
 /* 8031D988 002E6F48  54 60 08 3A */	rlwinm r0, r3, 1, 0, 0x1d
@@ -350,8 +350,8 @@ GXSetAlphaCompare:
 /* 8031DAC4 002E7084  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031DAD0
-func_8031DAD0:
+.global GXSetZTexture
+GXSetZTexture:
 /* 8031DAD0 002E7090  2C 04 00 11 */	cmpwi r4, 0x11
 /* 8031DAD4 002E7094  38 E0 00 00 */	li r7, 0
 /* 8031DAD8 002E7098  38 00 00 F4 */	li r0, 0xf4

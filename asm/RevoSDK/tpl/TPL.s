@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_803627C0
-func_803627C0:
+.global TPLBind
+TPLBind:
 /* 803627C0 0032BD80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803627C4 0032BD84  7C 08 02 A6 */	mflr r0
 /* 803627C8 0032BD88  90 01 00 14 */	stw r0, 0x14(r1)
@@ -82,8 +82,8 @@ lbl_803628B4:
 /* 803628D4 0032BE94  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803628E0
-func_803628E0:
+.global TPLGet
+TPLGet:
 /* 803628E0 0032BEA0  80 A3 00 04 */	lwz r5, 4(r3)
 /* 803628E4 0032BEA4  80 63 00 08 */	lwz r3, 8(r3)
 /* 803628E8 0032BEA8  7C 04 2B 96 */	divwu r0, r4, r5
@@ -123,7 +123,7 @@ func_80362900:
 /* 80362960 0032BF20  80 E9 00 04 */	lwz r7, 4(r9)
 /* 80362964 0032BF24  81 09 00 0C */	lwz r8, 0xc(r9)
 /* 80362968 0032BF28  81 29 00 10 */	lwz r9, 0x10(r9)
-/* 8036296C 0032BF2C  4B FB 99 45 */	bl func_8031C2B0
+/* 8036296C 0032BF2C  4B FB 99 45 */	bl GXInitTexObj
 /* 80362970 0032BF30  7C FE F8 2E */	lwzx r7, r30, r31
 /* 80362974 0032BF34  3C A0 43 30 */	lis r5, 0x4330
 /* 80362978 0032BF38  90 A1 00 08 */	stw r5, 8(r1)
@@ -144,7 +144,7 @@ func_80362900:
 /* 803629B4 0032BF74  C0 67 00 1C */	lfs f3, 0x1c(r7)
 /* 803629B8 0032BF78  EC 40 10 28 */	fsubs f2, f0, f2
 /* 803629BC 0032BF7C  88 E7 00 20 */	lbz r7, 0x20(r7)
-/* 803629C0 0032BF80  4B FB 9B 51 */	bl func_8031C510
+/* 803629C0 0032BF80  4B FB 9B 51 */	bl GXInitTexObjLOD
 /* 803629C4 0032BF84  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 803629C8 0032BF88  83 E1 00 2C */	lwz r31, 0x2c(r1)
 /* 803629CC 0032BF8C  83 C1 00 28 */	lwz r30, 0x28(r1)

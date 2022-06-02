@@ -17,16 +17,16 @@ func_80349A80:
 /* 80349A84 00313044  4B FF FC 1C */	b func_803496A0
 
 .balign 16, 0
-.global func_80349A90
-func_80349A90:
+.global MEMAllocFromAllocator
+MEMAllocFromAllocator:
 /* 80349A90 00313050  80 A3 00 00 */	lwz r5, 0(r3)
 /* 80349A94 00313054  81 85 00 00 */	lwz r12, 0(r5)
 /* 80349A98 00313058  7D 89 03 A6 */	mtctr r12
 /* 80349A9C 0031305C  4E 80 04 20 */	bctr 
 
 .balign 16, 0
-.global func_80349AA0
-func_80349AA0:
+.global MEMFreeToAllocator
+MEMFreeToAllocator:
 /* 80349AA0 00313060  80 A3 00 00 */	lwz r5, 0(r3)
 /* 80349AA4 00313064  81 85 00 04 */	lwz r12, 4(r5)
 /* 80349AA8 00313068  7D 89 03 A6 */	mtctr r12

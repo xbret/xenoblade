@@ -169,7 +169,12 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXProf.o \
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXReverbHi.o \
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXReverbHiExp.o \
-	$(BUILD_DIR)/asm/RevoSDK/axfx/code_802D65F0.o \
+	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXDelayExp.o \
+	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXDelayExpDpl2.o \
+	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXReverbStdExp.o \
+	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXReverbStdExpDpl2.o \
+	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXChorusExp.o \
+	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXChorusExpDpl2.o \
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXLfoTable.o \
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXSrcCoef.o \
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXHooks.o \
@@ -239,7 +244,7 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/bte/sdp_main.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/sdp_server.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/sdp_utils.o \
-	$(BUILD_DIR)/asm/code/code_80308530.o \
+	$(BUILD_DIR)/asm/RevoSDK/code_80308530.o \
 	$(BUILD_DIR)/asm/RevoSDK/db/db.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp_debug.o \
@@ -279,14 +284,40 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMGUIManager.o \
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMController.o \
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMRemoteSpk.o \
-	$(BUILD_DIR)/asm/RevoSDK/hbm/code_803222B0.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMAxSound.o \
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMBase.o \
-	$(BUILD_DIR)/asm/RevoSDK/code_8032C590.o \
-	$(BUILD_DIR)/asm/RevoSDK/code_80332730.o \
-	$(BUILD_DIR)/asm/RevoSDK/code_80332C90.o \
-	$(BUILD_DIR)/asm/RevoSDK/code_80334140.o \
-	$(BUILD_DIR)/asm/RevoSDK/code_80336640.o \
-	$(BUILD_DIR)/asm/RevoSDK/code_8033F040.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_animation.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_arcResourceAccessor.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_bounding.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_common.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_drawInfo.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_group.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_layout.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_material.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_pane.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_picture.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_resourceAccessor.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_textBox.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_window.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/math/math_triangular.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/ut/ut_binaryFileFormat.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/ut/ut_CharWriter.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/ut/ut_Font.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/ut/ut_LinkList.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/ut/ut_list.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/ut/ut_ResFont.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/ut/ut_ResFontBase.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/ut/ut_TagProcessorBase.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/ut/ut_TextWriterBase.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/mix.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/syn.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/synctrl.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/synenv.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/synmix.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/synpitch.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/synsample.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/synvoice.o \
+	$(BUILD_DIR)/asm/RevoSDK/hbm/seq.o \
 	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcMain.o \
 	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcclt.o \
 	$(BUILD_DIR)/asm/RevoSDK/ipc/memory.o \
@@ -356,7 +387,7 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/wpad/WPAD.o \
 	$(BUILD_DIR)/asm/RevoSDK/wpad/WPADHIDParser.o \
 	$(BUILD_DIR)/asm/RevoSDK/wpad/WPADEncrypt.o \
-	$(BUILD_DIR)/asm/RevoSDK/wpad/code_80375A90.o \
+	$(BUILD_DIR)/asm/RevoSDK/wpad/WPADMem.o \
 	$(BUILD_DIR)/asm/RevoSDK/wpad/debug_msg.o \
 	$(BUILD_DIR)/asm/RevoSDK/wud/wud.o \
 	$(BUILD_DIR)/asm/RevoSDK/wud/WUDHidHost.o \
@@ -431,7 +462,7 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_fog.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_light.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_calcvtx.o \
-	$(BUILD_DIR)/asm/code/code_803FE8B0.o \
+	$(BUILD_DIR)/asm/nw4r/code_803FE8B0.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_pane.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_group.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_layout.o \

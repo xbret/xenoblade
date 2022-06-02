@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8031F2A0
-func_8031F2A0:
+.global init__Q210homebutton15FrameControllerFifff
+init__Q210homebutton15FrameControllerFifff:
 /* 8031F2A0 002E8860  2C 04 00 01 */	cmpwi r4, 1
 /* 8031F2A4 002E8864  38 00 00 00 */	li r0, 0
 /* 8031F2A8 002E8868  90 83 00 18 */	stw r4, 0x18(r3)
@@ -23,8 +23,8 @@ lbl_8031F2D0:
 /* 8031F2D4 002E8894  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031F2E0
-func_8031F2E0:
+.global initFrame__Q210homebutton15FrameControllerFv
+initFrame__Q210homebutton15FrameControllerFv:
 /* 8031F2E0 002E88A0  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8031F2E4 002E88A4  2C 00 00 01 */	cmpwi r0, 1
 /* 8031F2E8 002E88A8  40 82 00 0C */	bne lbl_8031F2F4
@@ -37,8 +37,8 @@ lbl_8031F2F8:
 /* 8031F2FC 002E88BC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031F300
-func_8031F300:
+.global calc__Q210homebutton15FrameControllerFv
+calc__Q210homebutton15FrameControllerFv:
 /* 8031F300 002E88C0  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 8031F304 002E88C4  2C 00 00 01 */	cmpwi r0, 1
 /* 8031F308 002E88C8  4C 82 00 20 */	bnelr 

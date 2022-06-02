@@ -3,8 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_803222B0
-func_803222B0:
+#GetFreePlayer__24@unnamed@HBMAxSound_cpp@Fi
+.global GetFreePlayer__24_unnamed_HBMAxSound_cpp_Fi
+GetFreePlayer__24_unnamed_HBMAxSound_cpp_Fi:
 /* 803222B0 002EB870  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803222B4 002EB874  7C 08 02 A6 */	mflr r0
 /* 803222B8 002EB878  2C 03 00 04 */	cmpwi r3, 4
@@ -86,9 +87,9 @@ lbl_803223B4:
 lbl_803223BC:
 /* 803223BC 002EB97C  7F E3 FB 78 */	mr r3, r31
 /* 803223C0 002EB980  38 80 00 00 */	li r4, 0
-/* 803223C4 002EB984  48 02 04 8D */	bl func_80342850
+/* 803223C4 002EB984  48 02 04 8D */	bl HBMSEQSetState
 /* 803223C8 002EB988  7F E3 FB 78 */	mr r3, r31
-/* 803223CC 002EB98C  48 02 03 E5 */	bl func_803427B0
+/* 803223CC 002EB98C  48 02 03 E5 */	bl HBMSEQRemoveSequence
 /* 803223D0 002EB990  38 00 00 00 */	li r0, 0
 /* 803223D4 002EB994  98 1F 2E 1C */	stb r0, 0x2e1c(r31)
 /* 803223D8 002EB998  80 7F 2E 24 */	lwz r3, 0x2e24(r31)
@@ -126,8 +127,9 @@ lbl_8032242C:
 /* 80322444 002EBA04  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80322450
-func_80322450:
+#AudioFrameCallback__24@unnamed@HBMAxSound_cpp@Fv@l
+.global AudioFrameCallback__24_unnamed_HBMAxSound_cpp_Fv
+AudioFrameCallback__24_unnamed_HBMAxSound_cpp_Fv:
 /* 80322450 002EBA10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322454 002EBA14  7C 08 02 A6 */	mflr r0
 /* 80322458 002EBA18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -153,9 +155,12 @@ lbl_803224A0:
 /* 803224A4 002EBA64  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 803224A8 002EBA68  7C 08 03 A6 */	mtlr r0
 /* 803224AC 002EBA6C  38 21 00 10 */	addi r1, r1, 0x10
-/* 803224B0 002EBA70  4E 80 00 20 */	blr 
+/* 803224B0 002EBA70  4E 80 00 20 */	blr
+
 .balign 16, 0
-lbl_803224C0:
+#AudioSoundThreadProc__24@unnamed@HBMAxSound_cpp@FPv
+.global AudioSoundThreadProc__24_unnamed_HBMAxSound_cpp_FPv
+AudioSoundThreadProc__24_unnamed_HBMAxSound_cpp_FPv:
 /* 803224C0 002EBA80  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803224C4 002EBA84  7C 08 02 A6 */	mflr r0
 /* 803224C8 002EBA88  90 01 00 34 */	stw r0, 0x34(r1)
@@ -214,9 +219,9 @@ lbl_80322580:
 lbl_8032258C:
 /* 8032258C 002EBB4C  7F 63 DB 78 */	mr r3, r27
 /* 80322590 002EBB50  38 80 00 00 */	li r4, 0
-/* 80322594 002EBB54  48 02 02 BD */	bl func_80342850
+/* 80322594 002EBB54  48 02 02 BD */	bl HBMSEQSetState
 /* 80322598 002EBB58  7F 63 DB 78 */	mr r3, r27
-/* 8032259C 002EBB5C  48 02 02 15 */	bl func_803427B0
+/* 8032259C 002EBB5C  48 02 02 15 */	bl HBMSEQRemoveSequence
 /* 803225A0 002EBB60  9B FB 2E 1C */	stb r31, 0x2e1c(r27)
 /* 803225A4 002EBB64  80 7B 2E 24 */	lwz r3, 0x2e24(r27)
 /* 803225A8 002EBB68  2C 03 00 00 */	cmpwi r3, 0
@@ -280,9 +285,9 @@ lbl_80322660:
 lbl_8032266C:
 /* 8032266C 002EBC2C  7F A3 EB 78 */	mr r3, r29
 /* 80322670 002EBC30  38 80 00 00 */	li r4, 0
-/* 80322674 002EBC34  48 02 01 DD */	bl func_80342850
+/* 80322674 002EBC34  48 02 01 DD */	bl HBMSEQSetState
 /* 80322678 002EBC38  7F A3 EB 78 */	mr r3, r29
-/* 8032267C 002EBC3C  48 02 01 35 */	bl func_803427B0
+/* 8032267C 002EBC3C  48 02 01 35 */	bl HBMSEQRemoveSequence
 /* 80322680 002EBC40  9B FD 2E 1C */	stb r31, 0x2e1c(r29)
 /* 80322684 002EBC44  80 7D 2E 24 */	lwz r3, 0x2e24(r29)
 /* 80322688 002EBC48  2C 03 00 00 */	cmpwi r3, 0
@@ -324,8 +329,8 @@ lbl_803226DC:
 /* 803226FC 002EBCBC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80322700
-func_80322700:
+.global PlaySeq__10homebuttonFi
+PlaySeq__10homebuttonFi:
 /* 80322700 002EBCC0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80322704 002EBCC4  7C 08 02 A6 */	mflr r0
 /* 80322708 002EBCC8  3C 80 80 5D */	lis r4, lbl_805CD750@ha
@@ -356,7 +361,7 @@ lbl_80322764:
 /* 80322764 002EBD24  2C 1E 00 00 */	cmpwi r30, 0
 /* 80322768 002EBD28  41 82 00 B4 */	beq lbl_8032281C
 /* 8032276C 002EBD2C  7F 83 E3 78 */	mr r3, r28
-/* 80322770 002EBD30  4B FF FB 41 */	bl func_803222B0
+/* 80322770 002EBD30  4B FF FB 41 */	bl GetFreePlayer__24_unnamed_HBMAxSound_cpp_Fi
 /* 80322774 002EBD34  3F E0 80 5D */	lis r31, lbl_805CD750@ha
 /* 80322778 002EBD38  7C 7D 1B 78 */	mr r29, r3
 /* 8032277C 002EBD3C  80 BF D7 50 */	lwz r5, lbl_805CD750@l(r31)
@@ -368,7 +373,7 @@ lbl_80322764:
 /* 80322794 002EBD54  48 01 FF 8D */	bl func_80342720
 /* 80322798 002EBD58  7F A3 EB 78 */	mr r3, r29
 /* 8032279C 002EBD5C  38 80 00 01 */	li r4, 1
-/* 803227A0 002EBD60  48 02 00 B1 */	bl func_80342850
+/* 803227A0 002EBD60  48 02 00 B1 */	bl HBMSEQSetState
 /* 803227A4 002EBD64  2C 1C 00 04 */	cmpwi r28, 4
 /* 803227A8 002EBD68  93 9D 2E 28 */	stw r28, 0x2e28(r29)
 /* 803227AC 002EBD6C  41 82 00 14 */	beq lbl_803227C0
@@ -414,8 +419,8 @@ lbl_8032281C:
 /* 80322838 002EBDF8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80322840
-func_80322840:
+.global InitAxSound__10homebuttonFPCvPvUl
+InitAxSound__10homebuttonFPCvPvUl:
 /* 80322840 002EBE00  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80322844 002EBE04  7C 08 02 A6 */	mflr r0
 /* 80322848 002EBE08  3C C0 00 02 */	lis r6, 0x00018700@ha
@@ -510,9 +515,9 @@ lbl_8032288C:
 /* 803229A8 002EBF68  3C FF FF FF */	addis r7, r31, 0xffff
 /* 803229AC 002EBF6C  80 03 46 B0 */	lwz r0, 0x46b0(r3)
 /* 803229B0 002EBF70  38 C7 B9 00 */	addi r6, r7, -18176
-/* 803229B4 002EBF74  3C 80 80 32 */	lis r4, lbl_803224C0@ha
+/* 803229B4 002EBF74  3C 80 80 32 */	lis r4, AudioSoundThreadProc__24_unnamed_HBMAxSound_cpp_FPv@ha
 /* 803229B8 002EBF78  38 A0 00 00 */	li r5, 0
-/* 803229BC 002EBF7C  38 84 24 C0 */	addi r4, r4, lbl_803224C0@l
+/* 803229BC 002EBF7C  38 84 24 C0 */	addi r4, r4, AudioSoundThreadProc__24_unnamed_HBMAxSound_cpp_FPv@l
 /* 803229C0 002EBF80  7C C0 32 14 */	add r6, r0, r6
 /* 803229C4 002EBF84  39 00 00 04 */	li r8, 4
 /* 803229C8 002EBF88  39 20 00 00 */	li r9, 0
@@ -527,9 +532,9 @@ lbl_8032288C:
 /* 803229EC 002EBFAC  38 63 43 68 */	addi r3, r3, 0x4368
 /* 803229F0 002EBFB0  48 03 98 51 */	bl OSResumeThread
 /* 803229F4 002EBFB4  48 03 5F BD */	bl OSDisableInterrupts
-/* 803229F8 002EBFB8  3C 80 80 32 */	lis r4, func_80322450@ha
+/* 803229F8 002EBFB8  3C 80 80 32 */	lis r4, AudioFrameCallback__24_unnamed_HBMAxSound_cpp_Fv@ha
 /* 803229FC 002EBFBC  7C 7F 1B 78 */	mr r31, r3
-/* 80322A00 002EBFC0  38 64 24 50 */	addi r3, r4, func_80322450@l
+/* 80322A00 002EBFC0  38 64 24 50 */	addi r3, r4, AudioFrameCallback__24_unnamed_HBMAxSound_cpp_Fv@l
 /* 80322A04 002EBFC4  4B FB 17 6D */	bl AXRegisterCallback
 /* 80322A08 002EBFC8  3C 9E 00 01 */	addis r4, r30, 1
 /* 80322A0C 002EBFCC  90 64 43 48 */	stw r3, 0x4348(r4)
@@ -545,8 +550,8 @@ lbl_80322A18:
 /* 80322A30 002EBFF0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80322A40
-func_80322A40:
+.global ShutdownAxSound__10homebuttonFv
+ShutdownAxSound__10homebuttonFv:
 /* 80322A40 002EC000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322A44 002EC004  7C 08 02 A6 */	mflr r0
 /* 80322A48 002EC008  90 01 00 14 */	stw r0, 0x14(r1)
@@ -555,7 +560,7 @@ func_80322A40:
 /* 80322A54 002EC014  80 1F D7 50 */	lwz r0, lbl_805CD750@l(r31)
 /* 80322A58 002EC018  2C 00 00 00 */	cmpwi r0, 0
 /* 80322A5C 002EC01C  41 82 00 58 */	beq lbl_80322AB4
-/* 80322A60 002EC020  48 00 00 81 */	bl func_80322AE0
+/* 80322A60 002EC020  48 00 00 81 */	bl StopAllSeq__10homebuttonFv
 /* 80322A64 002EC024  80 7F D7 50 */	lwz r3, lbl_805CD750@l(r31)
 /* 80322A68 002EC028  3C 63 00 01 */	addis r3, r3, 1
 /* 80322A6C 002EC02C  80 63 43 48 */	lwz r3, 0x4348(r3)
@@ -584,13 +589,13 @@ lbl_80322AB4:
 /* 80322AC4 002EC084  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80322AD0
-func_80322AD0:
+.global AxSoundMain__10homebuttonFv
+AxSoundMain__10homebuttonFv:
 /* 80322AD0 002EC090  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80322AE0
-func_80322AE0:
+.global StopAllSeq__10homebuttonFv
+StopAllSeq__10homebuttonFv:
 /* 80322AE0 002EC0A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80322AE4 002EC0A4  7C 08 02 A6 */	mflr r0
 /* 80322AE8 002EC0A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -626,9 +631,9 @@ lbl_80322B4C:
 lbl_80322B54:
 /* 80322B54 002EC114  7F 43 D3 78 */	mr r3, r26
 /* 80322B58 002EC118  38 80 00 00 */	li r4, 0
-/* 80322B5C 002EC11C  48 01 FC F5 */	bl func_80342850
+/* 80322B5C 002EC11C  48 01 FC F5 */	bl HBMSEQSetState
 /* 80322B60 002EC120  7F 43 D3 78 */	mr r3, r26
-/* 80322B64 002EC124  48 01 FC 4D */	bl func_803427B0
+/* 80322B64 002EC124  48 01 FC 4D */	bl HBMSEQRemoveSequence
 /* 80322B68 002EC128  9B DA 2E 1C */	stb r30, 0x2e1c(r26)
 /* 80322B6C 002EC12C  80 7A 2E 24 */	lwz r3, 0x2e24(r26)
 /* 80322B70 002EC130  2C 03 00 00 */	cmpwi r3, 0
@@ -685,9 +690,9 @@ lbl_80322C18:
 lbl_80322C1C:
 /* 80322C1C 002EC1DC  7F 63 DB 78 */	mr r3, r27
 /* 80322C20 002EC1E0  38 80 00 00 */	li r4, 0
-/* 80322C24 002EC1E4  48 01 FC 2D */	bl func_80342850
+/* 80322C24 002EC1E4  48 01 FC 2D */	bl HBMSEQSetState
 /* 80322C28 002EC1E8  7F 63 DB 78 */	mr r3, r27
-/* 80322C2C 002EC1EC  48 01 FB 85 */	bl func_803427B0
+/* 80322C2C 002EC1EC  48 01 FB 85 */	bl HBMSEQRemoveSequence
 /* 80322C30 002EC1F0  9B FB 2E 1C */	stb r31, 0x2e1c(r27)
 /* 80322C34 002EC1F4  80 7B 2E 24 */	lwz r3, 0x2e24(r27)
 /* 80322C38 002EC1F8  2C 03 00 00 */	cmpwi r3, 0
@@ -725,8 +730,8 @@ lbl_80322C8C:
 /* 80322CA0 002EC260  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80322CB0
-func_80322CB0:
+.global SetVolumeAllSeq__10homebuttonFf
+SetVolumeAllSeq__10homebuttonFf:
 /* 80322CB0 002EC270  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80322CB4 002EC274  7C 08 02 A6 */	mflr r0
 /* 80322CB8 002EC278  3C 60 80 5D */	lis r3, lbl_805CD750@ha
@@ -810,6 +815,6 @@ lbl_80322DB0:
 /* 80322DCC 002EC38C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80322DD0
-func_80322DD0:
-/* 80322DD0 002EC390  48 01 C5 30 */	b func_8033F300
+.global SetSoundMode__10homebuttonFUl
+SetSoundMode__10homebuttonFUl:
+/* 80322DD0 002EC390  48 01 C5 30 */	b HBMMIXSetSoundMode

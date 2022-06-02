@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8031A760
-func_8031A760:
+.global __GXSetDirtyState
+__GXSetDirtyState:
 /* 8031A760 002E3D20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031A764 002E3D24  7C 08 02 A6 */	mflr r0
 /* 8031A768 002E3D28  90 01 00 14 */	stw r0, 0x14(r1)
@@ -14,11 +14,11 @@ func_8031A760:
 /* 8031A778 002E3D38  83 DF 05 FC */	lwz r30, 0x5fc(r31)
 /* 8031A77C 002E3D3C  57 C0 07 FF */	clrlwi. r0, r30, 0x1f
 /* 8031A780 002E3D40  41 82 00 08 */	beq lbl_8031A788
-/* 8031A784 002E3D44  48 00 25 1D */	bl func_8031CCA0
+/* 8031A784 002E3D44  48 00 25 1D */	bl __GXSetSUTexRegs
 lbl_8031A788:
 /* 8031A788 002E3D48  57 C0 07 BD */	rlwinm. r0, r30, 0, 0x1e, 0x1e
 /* 8031A78C 002E3D4C  41 82 00 08 */	beq lbl_8031A794
-/* 8031A790 002E3D50  48 00 2E 21 */	bl func_8031D5B0
+/* 8031A790 002E3D50  48 00 2E 21 */	bl __GXUpdateBPMask
 lbl_8031A794:
 /* 8031A794 002E3D54  57 C0 07 7B */	rlwinm. r0, r30, 0, 0x1d, 0x1d
 /* 8031A798 002E3D58  41 82 00 24 */	beq lbl_8031A7BC
@@ -33,15 +33,15 @@ lbl_8031A794:
 lbl_8031A7BC:
 /* 8031A7BC 002E3D7C  57 C0 07 39 */	rlwinm. r0, r30, 0, 0x1c, 0x1c
 /* 8031A7C0 002E3D80  41 82 00 08 */	beq lbl_8031A7C8
-/* 8031A7C4 002E3D84  4B FF EC DD */	bl func_803194A0
+/* 8031A7C4 002E3D84  4B FF EC DD */	bl __GXSetVCD
 lbl_8031A7C8:
 /* 8031A7C8 002E3D88  57 C0 06 F7 */	rlwinm. r0, r30, 0, 0x1b, 0x1b
 /* 8031A7CC 002E3D8C  41 82 00 08 */	beq lbl_8031A7D4
-/* 8031A7D0 002E3D90  4B FF F2 61 */	bl func_80319A30
+/* 8031A7D0 002E3D90  4B FF F2 61 */	bl __GXSetVAT
 lbl_8031A7D4:
 /* 8031A7D4 002E3D94  57 C0 06 F9 */	rlwinm. r0, r30, 0, 0x1b, 0x1c
 /* 8031A7D8 002E3D98  41 82 00 08 */	beq lbl_8031A7E0
-/* 8031A7DC 002E3D9C  4B FF ED 75 */	bl func_80319550
+/* 8031A7DC 002E3D9C  4B FF ED 75 */	bl __GXCalculateVLim
 lbl_8031A7E0:
 /* 8031A7E0 002E3DA0  57 DE 00 2F */	rlwinm. r30, r30, 0, 0, 0x17
 /* 8031A7E4 002E3DA4  41 82 01 DC */	beq lbl_8031A9C0
@@ -191,8 +191,8 @@ lbl_8031A9C0:
 /* 8031A9DC 002E3F9C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A9E0
-func_8031A9E0:
+.global GXBegin
+GXBegin:
 /* 8031A9E0 002E3FA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031A9E4 002E3FA4  7C 08 02 A6 */	mflr r0
 /* 8031A9E8 002E3FA8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -207,7 +207,7 @@ func_8031A9E0:
 /* 8031AA0C 002E3FCC  80 1F 05 FC */	lwz r0, 0x5fc(r31)
 /* 8031AA10 002E3FD0  2C 00 00 00 */	cmpwi r0, 0
 /* 8031AA14 002E3FD4  41 82 00 08 */	beq lbl_8031AA1C
-/* 8031AA18 002E3FD8  4B FF FD 49 */	bl func_8031A760
+/* 8031AA18 002E3FD8  4B FF FD 49 */	bl __GXSetDirtyState
 lbl_8031AA1C:
 /* 8031AA1C 002E3FDC  80 1F 00 00 */	lwz r0, 0(r31)
 /* 8031AA20 002E3FE0  2C 00 00 00 */	cmpwi r0, 0
@@ -285,8 +285,8 @@ lbl_8031AAFC:
 /* 8031AB28 002E40E8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031AB30
-func_8031AB30:
+.global __GXSendFlushPrim
+__GXSendFlushPrim:
 /* 8031AB30 002E40F0  80 C2 BC 20 */	lwz r6, lbl_8066BFA0@sda21(r2)
 /* 8031AB34 002E40F4  3C 60 CC 01 */	lis r3, 0xCC008000@ha
 /* 8031AB38 002E40F8  38 00 00 98 */	li r0, 0x98
@@ -348,8 +348,8 @@ lbl_8031ABFC:
 /* 8031AC04 002E41C4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031AC10
-func_8031AC10:
+.global GXSetLineWidth
+GXSetLineWidth:
 /* 8031AC10 002E41D0  81 02 BC 20 */	lwz r8, lbl_8066BFA0@sda21(r2)
 /* 8031AC14 002E41D4  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 8031AC18 002E41D8  38 C0 00 61 */	li r6, 0x61
@@ -365,8 +365,8 @@ func_8031AC10:
 /* 8031AC40 002E4200  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031AC50
-func_8031AC50:
+.global GXSetPointSize
+GXSetPointSize:
 /* 8031AC50 002E4210  81 02 BC 20 */	lwz r8, lbl_8066BFA0@sda21(r2)
 /* 8031AC54 002E4214  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 8031AC58 002E4218  38 C0 00 61 */	li r6, 0x61
@@ -382,8 +382,8 @@ func_8031AC50:
 /* 8031AC80 002E4240  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031AC90
-func_8031AC90:
+.global GXEnableTexOffsets
+GXEnableTexOffsets:
 /* 8031AC90 002E4250  81 22 BC 20 */	lwz r9, lbl_8066BFA0@sda21(r2)
 /* 8031AC94 002E4254  54 60 10 3A */	slwi r0, r3, 2
 /* 8031AC98 002E4258  3C C0 CC 01 */	lis r6, 0xCC008000@ha
@@ -401,8 +401,8 @@ func_8031AC90:
 /* 8031ACC8 002E4288  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031ACD0
-func_8031ACD0:
+.global GXSetCullMode
+GXSetCullMode:
 /* 8031ACD0 002E4290  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031ACD4 002E4294  54 65 FF FE */	rlwinm r5, r3, 0x1f, 0x1f, 0x1f
 /* 8031ACD8 002E4298  50 65 0F BC */	rlwimi r5, r3, 1, 0x1e, 0x1e
@@ -415,8 +415,8 @@ func_8031ACD0:
 /* 8031ACF4 002E42B4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031AD00
-func_8031AD00:
+.global GXSetCoPlanar
+GXSetCoPlanar:
 /* 8031AD00 002E42C0  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
 /* 8031AD04 002E42C4  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 8031AD08 002E42C8  38 C0 00 61 */	li r6, 0x61
@@ -434,8 +434,8 @@ func_8031AD00:
 /* 8031AD38 002E42F8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031AD40
-func_8031AD40:
+.global __GXSetGenMode
+__GXSetGenMode:
 /* 8031AD40 002E4300  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031AD44 002E4304  38 00 00 61 */	li r0, 0x61
 /* 8031AD48 002E4308  98 04 80 00 */	stb r0, 0xCC008000@l(r4)

@@ -37696,7 +37696,7 @@ lbl_8054B7F0:
 .global lbl_8054B8B0
 lbl_8054B8B0:
 	# ROM: 0x5479B0
-	.4byte func_80317590
+	.4byte __GXShutdown
 	.4byte 0x0000007F
 	.4byte 0
 	.4byte 0
@@ -37717,99 +37717,99 @@ lbl_8054B8D8:
 .global lbl_8054B8F0
 lbl_8054B8F0:
 	# ROM: 0x5479F0
-	.4byte func_80319250
-	.4byte func_80319264
-	.4byte func_80319278
-	.4byte func_8031928C
-	.4byte func_803192A0
-	.4byte func_803192B4
-	.4byte func_803192C8
-	.4byte func_803192DC
-	.4byte func_803192F0
-	.4byte func_80319304
-	.4byte func_80319318
-	.4byte func_80319380
-	.4byte func_80319394
-	.4byte func_803193A8
-	.4byte func_803193BC
-	.4byte func_803193D0
-	.4byte func_803193E4
-	.4byte func_803193F8
-	.4byte func_8031940C
-	.4byte func_80319420
-	.4byte func_80319434
-	.4byte func_80319444
-	.4byte func_80319444
-	.4byte func_80319444
-	.4byte func_80319444
-	.4byte func_8031934C
+	.4byte lbl_80319250
+	.4byte lbl_80319264
+	.4byte lbl_80319278
+	.4byte lbl_8031928C
+	.4byte lbl_803192A0
+	.4byte lbl_803192B4
+	.4byte lbl_803192C8
+	.4byte lbl_803192DC
+	.4byte lbl_803192F0
+	.4byte lbl_80319304
+	.4byte lbl_80319318
+	.4byte lbl_80319380
+	.4byte lbl_80319394
+	.4byte lbl_803193A8
+	.4byte lbl_803193BC
+	.4byte lbl_803193D0
+	.4byte lbl_803193E4
+	.4byte lbl_803193F8
+	.4byte lbl_8031940C
+	.4byte lbl_80319420
+	.4byte lbl_80319434
+	.4byte lbl_80319444
+	.4byte lbl_80319444
+	.4byte lbl_80319444
+	.4byte lbl_80319444
+	.4byte lbl_8031934C
 
 
 .global lbl_8054B958
 lbl_8054B958:
 	# ROM: 0x547A58
-	.4byte func_803196F0
-	.4byte func_80319708
-	.4byte func_80319744
-	.4byte func_80319758
-	.4byte func_8031976C
-	.4byte func_80319784
-	.4byte func_8031979C
-	.4byte func_803197B4
-	.4byte func_803197CC
-	.4byte func_803197EC
-	.4byte func_80319804
-	.4byte func_8031981C
-	.4byte func_80319830
-	.4byte func_80319830
-	.4byte func_80319830
-	.4byte func_80319830
-	.4byte func_80319708
+	.4byte lbl_803196F0
+	.4byte lbl_80319708
+	.4byte lbl_80319744
+	.4byte lbl_80319758
+	.4byte lbl_8031976C
+	.4byte lbl_80319784
+	.4byte lbl_8031979C
+	.4byte lbl_803197B4
+	.4byte lbl_803197CC
+	.4byte lbl_803197EC
+	.4byte lbl_80319804
+	.4byte lbl_8031981C
+	.4byte lbl_80319830
+	.4byte lbl_80319830
+	.4byte lbl_80319830
+	.4byte lbl_80319830
+	.4byte lbl_80319708
 .global lbl_8054B99C
 lbl_8054B99C:
-	.4byte func_803198A8
-	.4byte func_803198C0
-	.4byte func_803198FC
-	.4byte func_80319910
-	.4byte func_80319924
-	.4byte func_8031993C
-	.4byte func_80319954
-	.4byte func_8031996C
-	.4byte func_80319984
-	.4byte func_803199A4
-	.4byte func_803199BC
-	.4byte func_803199D4
-	.4byte func_803199E8
-	.4byte func_803199E8
-	.4byte func_803199E8
-	.4byte func_803199E8
-	.4byte func_803198C0
+	.4byte lbl_803198A8
+	.4byte lbl_803198C0
+	.4byte lbl_803198FC
+	.4byte lbl_80319910
+	.4byte lbl_80319924
+	.4byte lbl_8031993C
+	.4byte lbl_80319954
+	.4byte lbl_8031996C
+	.4byte lbl_80319984
+	.4byte lbl_803199A4
+	.4byte lbl_803199BC
+	.4byte lbl_803199D4
+	.4byte lbl_803199E8
+	.4byte lbl_803199E8
+	.4byte lbl_803199E8
+	.4byte lbl_803199E8
+	.4byte lbl_803198C0
 
 
 .global lbl_8054B9E0
 lbl_8054B9E0:
 	# ROM: 0x547AE0
-	.4byte func_80319B2C
-	.4byte func_80319B38
-	.4byte func_80319B44
-	.4byte func_80319B50
-	.4byte func_80319B6C
-	.4byte func_80319B74
-	.4byte func_80319B7C
-	.4byte func_80319B84
-	.4byte func_80319B8C
-	.4byte func_80319B94
-	.4byte func_80319B9C
-	.4byte func_80319BA4
-	.4byte func_80319BA8
-	.4byte func_80319BA8
-	.4byte func_80319BA8
-	.4byte func_80319BA8
-	.4byte func_80319BA8
-	.4byte func_80319BA8
-	.4byte func_80319BA8
-	.4byte func_80319B5C
-	.4byte func_80319B64
+	.4byte lbl_80319B2C
+	.4byte lbl_80319B38
+	.4byte lbl_80319B44
+	.4byte lbl_80319B50
+	.4byte lbl_80319B6C
+	.4byte lbl_80319B74
+	.4byte lbl_80319B7C
+	.4byte lbl_80319B84
+	.4byte lbl_80319B8C
+	.4byte lbl_80319B94
+	.4byte lbl_80319B9C
+	.4byte lbl_80319BA4
+	.4byte lbl_80319BA8
+	.4byte lbl_80319BA8
+	.4byte lbl_80319BA8
+	.4byte lbl_80319BA8
+	.4byte lbl_80319BA8
+	.4byte lbl_80319BA8
+	.4byte lbl_80319BA8
+	.4byte lbl_80319B5C
+	.4byte lbl_80319B64
 	.4byte 0
 
 .global lbl_8054BA38
@@ -38356,68 +38356,68 @@ lbl_8054C110:
 .global lbl_8054C130
 lbl_8054C130:
 	# ROM: 0x548230
-	.4byte func_8031EFB0
-	.4byte func_8031EFCC
-	.4byte func_8031EFE8
-	.4byte func_8031F004
-	.4byte func_8031F058
-	.4byte func_8031F074
-	.4byte func_8031F090
-	.4byte func_8031F0AC
-	.4byte func_8031F020
-	.4byte func_8031F0C8
-	.4byte func_8031F0F8
-	.4byte func_8031F128
-	.4byte func_8031F158
-	.4byte func_8031F188
-	.4byte func_8031F1B8
-	.4byte func_8031F1E8
-	.4byte func_8031F218
-	.4byte func_8031F244
-	.4byte func_8031F254
-	.4byte func_8031F264
-	.4byte func_8031F274
-	.4byte func_8031F03C
+	.4byte lbl_8031EFB0
+	.4byte lbl_8031EFCC
+	.4byte lbl_8031EFE8
+	.4byte lbl_8031F004
+	.4byte lbl_8031F058
+	.4byte lbl_8031F074
+	.4byte lbl_8031F090
+	.4byte lbl_8031F0AC
+	.4byte lbl_8031F020
+	.4byte lbl_8031F0C8
+	.4byte lbl_8031F0F8
+	.4byte lbl_8031F128
+	.4byte lbl_8031F158
+	.4byte lbl_8031F188
+	.4byte lbl_8031F1B8
+	.4byte lbl_8031F1E8
+	.4byte lbl_8031F218
+	.4byte lbl_8031F244
+	.4byte lbl_8031F254
+	.4byte lbl_8031F264
+	.4byte lbl_8031F274
+	.4byte lbl_8031F03C
 
 
 .global lbl_8054C188
 lbl_8054C188:
 	# ROM: 0x548288
-	.4byte func_8031EB8C
-	.4byte func_8031EBAC
-	.4byte func_8031EBCC
-	.4byte func_8031EBEC
-	.4byte func_8031EC0C
-	.4byte func_8031EC2C
-	.4byte func_8031EC4C
-	.4byte func_8031EC6C
-	.4byte func_8031EC8C
-	.4byte func_8031ECAC
-	.4byte func_8031ECEC
-	.4byte func_8031ED0C
-	.4byte func_8031ED28
-	.4byte func_8031ED44
-	.4byte func_8031ED60
-	.4byte func_8031ED7C
-	.4byte func_8031ED98
-	.4byte func_8031EDB4
-	.4byte func_8031EDD0
-	.4byte func_8031EDEC
-	.4byte func_8031EE08
-	.4byte func_8031EE24
-	.4byte func_8031EE40
-	.4byte func_8031EE5C
-	.4byte func_8031EE78
-	.4byte func_8031EE94
-	.4byte func_8031EEB0
-	.4byte func_8031EECC
-	.4byte func_8031EEE8
-	.4byte func_8031EF04
-	.4byte func_8031EF20
-	.4byte func_8031EF3C
-	.4byte func_8031EF58
-	.4byte func_8031EF74
-	.4byte func_8031ECCC
+	.4byte lbl_8031EB8C
+	.4byte lbl_8031EBAC
+	.4byte lbl_8031EBCC
+	.4byte lbl_8031EBEC
+	.4byte lbl_8031EC0C
+	.4byte lbl_8031EC2C
+	.4byte lbl_8031EC4C
+	.4byte lbl_8031EC6C
+	.4byte lbl_8031EC8C
+	.4byte lbl_8031ECAC
+	.4byte lbl_8031ECEC
+	.4byte lbl_8031ED0C
+	.4byte lbl_8031ED28
+	.4byte lbl_8031ED44
+	.4byte lbl_8031ED60
+	.4byte lbl_8031ED7C
+	.4byte lbl_8031ED98
+	.4byte lbl_8031EDB4
+	.4byte lbl_8031EDD0
+	.4byte lbl_8031EDEC
+	.4byte lbl_8031EE08
+	.4byte lbl_8031EE24
+	.4byte lbl_8031EE40
+	.4byte lbl_8031EE5C
+	.4byte lbl_8031EE78
+	.4byte lbl_8031EE94
+	.4byte lbl_8031EEB0
+	.4byte lbl_8031EECC
+	.4byte lbl_8031EEE8
+	.4byte lbl_8031EF04
+	.4byte lbl_8031EF20
+	.4byte lbl_8031EF3C
+	.4byte lbl_8031EF58
+	.4byte lbl_8031EF74
+	.4byte lbl_8031ECCC
 	.4byte 0
 
 .global lbl_8054C218
@@ -38436,8 +38436,8 @@ lbl_8054C240:
 	# ROM: 0x548340
 	.4byte lbl_8054C280
 	.4byte 0
-	.4byte func_8031F470
-	.4byte func_8031F300
+	.4byte __dt__Q210homebutton15FrameControllerFv
+	.4byte calc__Q210homebutton15FrameControllerFv
 
 .global lbl_8054C250
 lbl_8054C250:
@@ -38461,30 +38461,30 @@ lbl_8054C288:
 	# ROM: 0x548388
 	.4byte lbl_8054C328
 	.4byte 0
-	.4byte func_80320CD0
-	.4byte func_8031FB10
-	.4byte func_8031FF50
-	.4byte func_80320CC0
-	.4byte func_80320930
-	.4byte func_803201D0
-	.4byte func_8031F9A0
-	.4byte func_8031F950
-	.4byte func_8031F9B0
-	.4byte func_8031F9C0
-	.4byte func_8031F9D0
-	.4byte func_80320D00
-	.4byte func_8031F960
-	.4byte func_8031FEB0
-	.4byte func_80320CF0
-	.4byte func_80320CE0
-	.4byte func_8031F730
-	.4byte func_8031FEA0
-	.4byte func_80320060
-	.4byte func_8031FC10
-	.4byte func_80320BE0
-	.4byte func_803207F0
-	.4byte func_80320540
-	.4byte func_80320D10
+	.4byte create__Q310homebutton3gui9InterfaceFv
+	.4byte init__Q310homebutton3gui9ComponentFv
+	.4byte calc__Q310homebutton3gui9InterfaceFv
+	.4byte draw__Q310homebutton3gui9InterfaceFRA3_A4_f
+	.4byte draw__Q310homebutton3gui13PaneComponentFv
+	.4byte __dt__Q310homebutton3gui13PaneComponentFv
+	.4byte getID__Q310homebutton3gui9ComponentFv
+	.4byte isPointed__Q310homebutton3gui9ComponentFi
+	.4byte setPointed__Q310homebutton3gui9ComponentFib
+	.4byte onPoint__Q310homebutton3gui9ComponentFv
+	.4byte offPoint__Q310homebutton3gui9ComponentFv
+	.4byte onDrag__Q310homebutton3gui9ComponentFff
+	.4byte onMove__Q310homebutton3gui9ComponentFff
+	.4byte onTrig__Q310homebutton3gui9ComponentFUlR3Vec
+	.4byte setDraggingButton__Q310homebutton3gui9ComponentFUl
+	.4byte update__Q310homebutton3gui9ComponentFiPC10KPADStatusffPv
+	.4byte update__Q310homebutton3gui9ComponentFiffUlUlUlPv
+	.4byte isTriggerTarger__Q310homebutton3gui9ComponentFv
+	.4byte setTriggerTarget__Q310homebutton3gui9ComponentFb
+	.4byte setManager__Q310homebutton3gui9ComponentFPQ310homebutton3gui7Manager
+	.4byte isVisible__Q310homebutton3gui13PaneComponentFv
+	.4byte contain__Q310homebutton3gui13PaneComponentFff
+	.4byte setPane__Q310homebutton3gui13PaneComponentFPQ36nw4hbm3lyt4Pane
+	.4byte getPane__Q310homebutton3gui13PaneComponentFv
 
 .global lbl_8054C2F0
 lbl_8054C2F0:
@@ -38511,29 +38511,29 @@ lbl_8054C330:
 	# ROM: 0x548430
 	.4byte lbl_8054C3C8
 	.4byte 0
-	.4byte func_80320CD0
-	.4byte func_8031FAA0
-	.4byte func_8031FEE0
-	.4byte func_80320CC0
-	.4byte func_8031FF60
-	.4byte func_80320070
-	.4byte func_8031FB40
-	.4byte func_8031FC20
-	.4byte func_8031FCC0
-	.4byte func_80320D60
-	.4byte func_8031FCF0
-	.4byte func_8031F970
-	.4byte func_8031FFE0
-	.4byte func_80320D20
-	.4byte func_80320250
-	.4byte func_80320280
-	.4byte func_80320560
-	.4byte func_803206A0
-	.4byte func_80320920
-	.4byte func_80320D70
-	.4byte func_80320720
-	.4byte func_803202A0
-	.4byte func_80320580
+	.4byte create__Q310homebutton3gui9InterfaceFv
+	.4byte init__Q310homebutton3gui7ManagerFv
+	.4byte calc__Q310homebutton3gui7ManagerFv
+	.4byte draw__Q310homebutton3gui9InterfaceFRA3_A4_f
+	.4byte draw__Q310homebutton3gui7ManagerFv
+	.4byte __dt__Q310homebutton3gui11PaneManagerFv
+	.4byte addComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component
+	.4byte delComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component
+	.4byte getComponent__Q310homebutton3gui7ManagerFUl
+	.4byte update__Q310homebutton3gui7ManagerFiPC10KPADStatusffPv
+	.4byte update__Q310homebutton3gui7ManagerFiffUlUlUlPv
+	.4byte onEvent__Q310homebutton3gui7ManagerFUlUlPv
+	.4byte setAllComponentTriggerTarget__Q310homebutton3gui7ManagerFb
+	.4byte setEventHandler__Q310homebutton3gui7ManagerFPQ310homebutton3gui12EventHandler
+	.4byte createLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout
+	.4byte addLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout
+	.4byte delLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout
+	.4byte getPaneComponentByPane__Q310homebutton3gui11PaneManagerFPQ36nw4hbm3lyt4Pane
+	.4byte getDrawInfo__Q310homebutton3gui11PaneManagerFv
+	.4byte setDrawInfo__Q310homebutton3gui11PaneManagerFPCQ36nw4hbm3lyt8DrawInfo
+	.4byte setAllBoundingBoxComponentTriggerTarget__Q310homebutton3gui11PaneManagerFb
+	.4byte walkinchildren__q310homebutton3gui11panemanagerfrq36nw4hbm2ut30linklist_Q36nw4hbm3lyt4Pane_4_
+	.4byte walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList_Q36nw4hbm3lyt4Pane_4_
 
 .global lbl_8054C394
 lbl_8054C394:
@@ -38559,20 +38559,20 @@ lbl_8054C3D0:
 	# ROM: 0x5484D0
 	.4byte lbl_8054C438
 	.4byte 0
-	.4byte func_80320CD0
-	.4byte func_8031FAA0
-	.4byte func_8031FEE0
-	.4byte func_80320CC0
-	.4byte func_8031FF60
-	.4byte func_8031F9E0
-	.4byte func_8031FB40
-	.4byte func_8031FC20
-	.4byte func_8031FCC0
-	.4byte func_80320D60
-	.4byte func_8031FCF0
-	.4byte func_8031F970
-	.4byte func_8031FFE0
-	.4byte func_80320D20
+	.4byte create__Q310homebutton3gui9InterfaceFv
+	.4byte init__Q310homebutton3gui7ManagerFv
+	.4byte calc__Q310homebutton3gui7ManagerFv
+	.4byte draw__Q310homebutton3gui9InterfaceFRA3_A4_f
+	.4byte draw__Q310homebutton3gui7ManagerFv
+	.4byte __dt__Q310homebutton3gui7ManagerFv
+	.4byte addComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component
+	.4byte delComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component
+	.4byte getComponent__Q310homebutton3gui7ManagerFUl
+	.4byte update__Q310homebutton3gui7ManagerFiPC10KPADStatusffPv
+	.4byte update__Q310homebutton3gui7ManagerFiffUlUlUlPv
+	.4byte onEvent__Q310homebutton3gui7ManagerFUlUlPv
+	.4byte setAllComponentTriggerTarget__Q310homebutton3gui7ManagerFb
+	.4byte setEventHandler__Q310homebutton3gui7ManagerFPQ310homebutton3gui12EventHandler
 
 .global lbl_8054C410
 lbl_8054C410:
@@ -38596,27 +38596,27 @@ lbl_8054C440:
 	# ROM: 0x548540
 	.4byte lbl_8054C4C8
 	.4byte 0
-	.4byte func_80320CD0
-	.4byte func_8031FB10
-	.4byte func_8031FF50
-	.4byte func_80320CC0
-	.4byte func_8031FFD0
-	.4byte func_80320210
-	.4byte func_8031F9A0
-	.4byte func_8031F950
-	.4byte func_8031F9B0
-	.4byte func_8031F9C0
-	.4byte func_8031F9D0
-	.4byte func_80320D00
-	.4byte func_8031F960
-	.4byte func_8031FEB0
-	.4byte func_80320CF0
-	.4byte func_80320CE0
-	.4byte func_8031F730
-	.4byte func_8031FEA0
-	.4byte func_80320060
-	.4byte func_8031FC10
-	.4byte func_8031F940
+	.4byte create__Q310homebutton3gui9InterfaceFv
+	.4byte init__Q310homebutton3gui9ComponentFv
+	.4byte calc__Q310homebutton3gui9InterfaceFv
+	.4byte draw__Q310homebutton3gui9InterfaceFRA3_A4_f
+	.4byte draw__Q310homebutton3gui9InterfaceFv
+	.4byte __dt__Q310homebutton3gui9ComponentFv
+	.4byte getID__Q310homebutton3gui9ComponentFv
+	.4byte isPointed__Q310homebutton3gui9ComponentFi
+	.4byte setPointed__Q310homebutton3gui9ComponentFib
+	.4byte onPoint__Q310homebutton3gui9ComponentFv
+	.4byte offPoint__Q310homebutton3gui9ComponentFv
+	.4byte onDrag__Q310homebutton3gui9ComponentFff
+	.4byte onMove__Q310homebutton3gui9ComponentFff
+	.4byte onTrig__Q310homebutton3gui9ComponentFUlR3Vec
+	.4byte setDraggingButton__Q310homebutton3gui9ComponentFUl
+	.4byte update__Q310homebutton3gui9ComponentFiPC10KPADStatusffPv
+	.4byte update__Q310homebutton3gui9ComponentFiffUlUlUlPv
+	.4byte isTriggerTarger__Q310homebutton3gui9ComponentFv
+	.4byte setTriggerTarget__Q310homebutton3gui9ComponentFb
+	.4byte setManager__Q310homebutton3gui9ComponentFPQ310homebutton3gui7Manager
+	.4byte isVisible__Q310homebutton3gui9ComponentFv
 	.4byte 0
 
 .global lbl_8054C4A0
@@ -38652,7 +38652,7 @@ lbl_8054C4F8:
 	# ROM: 0x5485F8
 	.4byte lbl_8054C520
 	.4byte 0
-	.4byte func_80321CF0
+	.4byte __dt__Q210homebutton9RemoteSpkFv
 
 .global lbl_8054C504
 lbl_8054C504:
@@ -39806,8 +39806,8 @@ lbl_8054D4F0:
 	# ROM: 0x5495F0
 	.4byte lbl_8054D530
 	.4byte 0
-	.4byte func_8032B3B0
-	.4byte func_80320D50
+	.4byte onEvent__Q210homebutton22HomeButtonEventHandlerFUlUlPv
+	.4byte setManager__Q310homebutton3gui12EventHandlerFPQ310homebutton3gui7Manager
 
 .global lbl_8054D500
 lbl_8054D500:
@@ -39826,8 +39826,8 @@ lbl_8054D530:
 	.4byte lbl_8054D524
 	.4byte lbl_8054D568
 	.4byte 0
-	.4byte func_8031F990
-	.4byte func_80320D50
+	.4byte onEvent__Q310homebutton3gui12EventHandlerFUlUlPv
+	.4byte setManager__Q310homebutton3gui12EventHandlerFPQ310homebutton3gui7Manager
 
 .global lbl_8054D548
 lbl_8054D548:
@@ -39858,12 +39858,12 @@ lbl_8054D5B8:
 	# ROM: 0x5496B8
 	.4byte lbl_8054D608
 	.4byte 0
-	.4byte func_8032B7D0
-	.4byte func_8032B860
-	.4byte func_8032B9B0
-	.4byte func_8032BAB0
-	.4byte func_8032BB70
-	.4byte func_8032BD50
+	.4byte __dt__Q36nw4hbm3lyt18AnimTransformBasicFv
+	.4byte SetResource__Q36nw4hbm3lyt18AnimTransformBasicFPCQ46nw4hbm3lyt3res14AnimationBlockPQ36nw4hbm3lyt16ResourceAccessor
+	.4byte Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt4Paneb
+	.4byte Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt8Material
+	.4byte Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt4Pane
+	.4byte Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt8Material
 
 .global lbl_8054D5D8
 lbl_8054D5D8:
@@ -39910,9 +39910,9 @@ lbl_8054D640:
 	# ROM: 0x549740
 	.4byte lbl_8054D688
 	.4byte 0
-	.4byte func_80323690
-	.4byte func_8032C380
-	.4byte func_8032C3A0
+	.4byte __dt__Q36nw4hbm3lyt19ArcResourceAccessorFv
+	.4byte GetResource__Q36nw4hbm3lyt19ArcResourceAccessorFUlPCcPUl
+	.4byte GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc
 
 .global lbl_8054D654
 lbl_8054D654:
@@ -39947,11 +39947,11 @@ lbl_8054D6B8:
 	# ROM: 0x5497B8
 	.4byte lbl_8054D748
 	.4byte 0
-	.4byte func_8032C450
-	.4byte func_8032C560
+	.4byte __dt__Q36nw4hbm3lyt8BoundingFv
+	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv
 	.4byte func_80331CD0
 	.4byte func_80331FD0
-	.4byte func_8032C4B0
+	.4byte DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte func_803320E0
 	.4byte func_80332170
 	.4byte func_80331AC0
@@ -40021,7 +40021,7 @@ lbl_8054D7A0:
 	# ROM: 0x5498A0
 	.4byte lbl_8054D7C8
 	.4byte 0
-	.4byte func_8032D4A0
+	.4byte __dt__Q36nw4hbm3lyt8DrawInfoFv
 
 .global lbl_8054D7AC
 lbl_8054D7AC:
@@ -40040,7 +40040,7 @@ lbl_8054D7D0:
 	# ROM: 0x5498D0
 	.4byte lbl_8054D7F0
 	.4byte 0
-	.4byte func_8032D5F0
+	.4byte __dt__Q36nw4hbm3lyt5GroupFv
 
 .global lbl_8054D7DC
 lbl_8054D7DC:
@@ -40058,17 +40058,17 @@ lbl_8054D7F8:
 	# ROM: 0x5498F8
 	.4byte lbl_8054D840
 	.4byte 0
-	.4byte func_8032DA10
-	.4byte func_8032DB40
-	.4byte func_8032DE50
-	.4byte func_8032DFA0
-	.4byte func_8032DFD0
-	.4byte func_8032E000
-	.4byte func_8032E020
-	.4byte func_8032E050
-	.4byte func_8032E070
-	.4byte func_8032E090
-	.4byte func_8032E120
+	.4byte __dt__Q36nw4hbm3lyt6LayoutFv
+	.4byte Build__Q36nw4hbm3lyt6LayoutFPCvPQ36nw4hbm3lyt16ResourceAccessor
+	.4byte CreateAnimTransform__Q36nw4hbm3lyt6LayoutFPCvPQ36nw4hbm3lyt16ResourceAccessor
+	.4byte BindAnimation__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm3lyt13AnimTransform
+	.4byte UnbindAnimation__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm3lyt13AnimTransform
+	.4byte UnbindAllAnimation__Q36nw4hbm3lyt6LayoutFv
+	.4byte SetAnimationEnable__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm3lyt13AnimTransformb
+	.4byte CalculateMtx__Q36nw4hbm3lyt6LayoutFRCQ36nw4hbm3lyt8DrawInfo
+	.4byte Draw__Q36nw4hbm3lyt6LayoutFRCQ36nw4hbm3lyt8DrawInfo
+	.4byte Animate__Q36nw4hbm3lyt6LayoutFUl
+	.4byte SetTagProcessor__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm2ut19TagProcessorBase_w_
 
 .global lbl_8054D82C
 lbl_8054D82C:
@@ -40110,14 +40110,14 @@ lbl_8054D888:
 	# ROM: 0x549988
 	.4byte lbl_8054D8C8
 	.4byte 0
-	.4byte func_8032F9A0
-	.4byte func_80330630
-	.4byte func_80331450
-	.4byte func_80331470
-	.4byte func_803314F0
-	.4byte func_80331510
-	.4byte func_803315D0
-	.4byte func_803315E0
+	.4byte __dt__Q36nw4hbm3lyt8MaterialFv
+	.4byte SetupGX__Q36nw4hbm3lyt8MaterialFbUc
+	.4byte BindAnimation__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform
+	.4byte UnbindAnimation__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform
+	.4byte UnbindAllAnimation__Q36nw4hbm3lyt8MaterialFv
+	.4byte Animate__Q36nw4hbm3lyt8MaterialFv
+	.4byte FindAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform
+	.4byte SetAnimationEnable__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransformb
 
 .global lbl_8054D8B0
 lbl_8054D8B0:
@@ -40135,8 +40135,8 @@ lbl_8054D8D0:
 	# ROM: 0x5499D0
 	.4byte lbl_8054D770
 	.4byte 0
-	.4byte func_80331860
-	.4byte func_80320550
+	.4byte __dt__Q36nw4hbm3lyt4PaneFv
+	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt4PaneCFv
 	.4byte func_80331CD0
 	.4byte func_80331FD0
 	.4byte func_80332060
@@ -40167,18 +40167,18 @@ lbl_8054D938:
 	.4byte lbl_8054D9D0
 	.4byte 0
 	.4byte func_80332860
-	.4byte func_80332C60
+	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt7PictureCFv
 	.4byte func_80331CD0
 	.4byte func_80331FD0
-	.4byte func_80332B80
+	.4byte DrawSelf__Q36nw4hbm3lyt7PictureFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte func_803320E0
 	.4byte func_80332170
 	.4byte func_80332AF0
 	.4byte func_80332B10
 	.4byte func_80331AE0
 	.4byte func_80331B10
-	.4byte func_80332B40
-	.4byte func_80332B60
+	.4byte GetVtxColorElement__Q36nw4hbm3lyt7PictureCFUl
+	.4byte SetVtxColorElement__Q36nw4hbm3lyt7PictureFUlUc
 	.4byte func_80331B60
 	.4byte func_80331C10
 	.4byte func_80332230
@@ -40216,9 +40216,9 @@ lbl_8054D9D8:
 	# ROM: 0x549AD8
 	.4byte lbl_8054D6B0
 	.4byte 0
-	.4byte func_80332C90
+	.4byte __dt__Q36nw4hbm3lyt16ResourceAccessorFv
 	.4byte 0
-	.4byte func_80332CE0
+	.4byte GetFont__Q36nw4hbm3lyt16ResourceAccessorFPCc
 	.4byte 0
 .global lbl_8054D9F0
 lbl_8054D9F0:
@@ -40254,8 +40254,8 @@ lbl_8054D9F4:
 	.4byte func_80332710
 	.4byte func_80332520
 	.4byte func_80333D50
-	.4byte func_80333DD0
-	.4byte func_80333E20
+	.4byte FreeStringBuffer__Q36nw4hbm3lyt7TextBoxFv
+	.4byte SetString__Q36nw4hbm3lyt7TextBoxFPCwUs
 	.4byte func_80333E90
 
 .global lbl_8054DA68
@@ -41630,7 +41630,7 @@ lbl_8054EEB8:
 	# ROM: 0x54AFB8
 	.4byte lbl_8054EEF0
 	.4byte 0
-	.4byte func_80339120
+	.4byte __dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv
 	.4byte func_80339160
 	.4byte func_803392C0
 

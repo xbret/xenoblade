@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80321990
-func_80321990:
+.global UpdateSpeaker__Q210homebutton9RemoteSpkFP7OSAlarmP9OSContext
+UpdateSpeaker__Q210homebutton9RemoteSpkFP7OSAlarmP9OSContext:
 /* 80321990 002EAF50  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80321994 002EAF54  7C 08 02 A6 */	mflr r0
 /* 80321998 002EAF58  90 01 00 94 */	stw r0, 0x94(r1)
@@ -176,8 +176,8 @@ lbl_80321BE4:
 /* 80321BF8 002EB1B8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321C00
-func_80321C00:
+.global ClearPcm__Q210homebutton9RemoteSpkFv
+ClearPcm__Q210homebutton9RemoteSpkFv:
 /* 80321C00 002EB1C0  38 80 00 00 */	li r4, 0
 /* 80321C04 002EB1C4  38 00 FF FF */	li r0, -1
 /* 80321C08 002EB1C8  90 83 00 50 */	stw r4, 0x50(r3)
@@ -191,8 +191,8 @@ func_80321C00:
 /* 80321C28 002EB1E8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321C30
-func_80321C30:
+.global __ct__Q210homebutton9RemoteSpkFPv
+__ct__Q210homebutton9RemoteSpkFPv:
 /* 80321C30 002EB1F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80321C34 002EB1F4  7C 08 02 A6 */	mflr r0
 /* 80321C38 002EB1F8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -245,8 +245,8 @@ lbl_80321CA8:
 /* 80321CE8 002EB2A8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321CF0
-func_80321CF0:
+.global __dt__Q210homebutton9RemoteSpkFv
+__dt__Q210homebutton9RemoteSpkFv:
 /* 80321CF0 002EB2B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80321CF4 002EB2B4  7C 08 02 A6 */	mflr r0
 /* 80321CF8 002EB2B8  2C 03 00 00 */	cmpwi r3, 0
@@ -279,7 +279,7 @@ lbl_80321D48:
 /* 80321D60 002EB320  2C 1D 00 00 */	cmpwi r29, 0
 /* 80321D64 002EB324  40 81 00 0C */	ble lbl_80321D70
 /* 80321D68 002EB328  7F 83 E3 78 */	mr r3, r28
-/* 80321D6C 002EB32C  48 11 2E C1 */	bl func_80434C2C
+/* 80321D6C 002EB32C  48 11 2E C1 */	bl __dl__FPv
 lbl_80321D70:
 /* 80321D70 002EB330  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80321D74 002EB334  7F 83 E3 78 */	mr r3, r28
@@ -292,8 +292,8 @@ lbl_80321D70:
 /* 80321D90 002EB350  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321DA0
-func_80321DA0:
+.global Start__Q210homebutton9RemoteSpkFv
+Start__Q210homebutton9RemoteSpkFv:
 /* 80321DA0 002EB360  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80321DA4 002EB364  7C 08 02 A6 */	mflr r0
 /* 80321DA8 002EB368  90 01 00 24 */	stw r0, 0x24(r1)
@@ -311,7 +311,7 @@ func_80321DA0:
 /* 80321DD8 002EB398  80 06 00 F8 */	lwz r0, 0x800000F8@l(r6)
 /* 80321DDC 002EB39C  3C C0 10 62 */	lis r6, 0x10624DD3@ha
 /* 80321DE0 002EB3A0  39 46 4D D3 */	addi r10, r6, 0x10624DD3@l
-/* 80321DE4 002EB3A4  3D 20 80 32 */	lis r9, func_80321990@ha
+/* 80321DE4 002EB3A4  3D 20 80 32 */	lis r9, UpdateSpeaker__Q210homebutton9RemoteSpkFP7OSAlarmP9OSContext@ha
 /* 80321DE8 002EB3A8  54 00 F0 BE */	srwi r0, r0, 2
 /* 80321DEC 002EB3AC  38 A5 DE 83 */	addi r5, r5, 0x431BDE83@l
 /* 80321DF0 002EB3B0  7D 05 00 16 */	mulhwu r8, r5, r0
@@ -321,7 +321,7 @@ func_80321DA0:
 /* 80321E00 002EB3C0  7C 65 1B 78 */	mr r5, r3
 /* 80321E04 002EB3C4  38 7F 01 A0 */	addi r3, r31, 0x1a0
 /* 80321E08 002EB3C8  55 04 8B FE */	srwi r4, r8, 0xf
-/* 80321E0C 002EB3CC  39 29 19 90 */	addi r9, r9, func_80321990@l
+/* 80321E0C 002EB3CC  39 29 19 90 */	addi r9, r9, UpdateSpeaker__Q210homebutton9RemoteSpkFP7OSAlarmP9OSContext@l
 /* 80321E10 002EB3D0  7C 04 01 D6 */	mullw r0, r4, r0
 /* 80321E14 002EB3D4  38 E0 00 00 */	li r7, 0
 /* 80321E18 002EB3D8  7C 0A 00 16 */	mulhwu r0, r10, r0
@@ -351,8 +351,8 @@ lbl_80321E5C:
 /* 80321E70 002EB430  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80321E80
-func_80321E80:
+.global Stop__Q210homebutton9RemoteSpkFv
+Stop__Q210homebutton9RemoteSpkFv:
 /* 80321E80 002EB440  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80321E84 002EB444  7C 08 02 A6 */	mflr r0
 /* 80321E88 002EB448  90 01 00 14 */	stw r0, 0x14(r1)
@@ -374,16 +374,18 @@ lbl_80321EA4:
 /* 80321EC4 002EB484  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80321EC8 002EB488  7C 08 03 A6 */	mtlr r0
 /* 80321ECC 002EB48C  38 21 00 10 */	addi r1, r1, 0x10
-/* 80321ED0 002EB490  4E 80 00 20 */	blr 
+/* 80321ED0 002EB490  4E 80 00 20 */	blr
+
 .balign 16, 0
-lbl_80321EE0:
+.global DelaySpeakerOnCallback
+DelaySpeakerOnCallback:
 /* 80321EE0 002EB4A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80321EE4 002EB4A4  7C 08 02 A6 */	mflr r0
 /* 80321EE8 002EB4A8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80321EEC 002EB4AC  48 03 16 D5 */	bl OSGetAlarmUserData
-/* 80321EF0 002EB4B0  3C A0 80 32 */	lis r5, func_80321F10@ha
+/* 80321EF0 002EB4B0  3C A0 80 32 */	lis r5, SpeakerOnCallback__Q210homebutton9RemoteSpkFll@ha
 /* 80321EF4 002EB4B4  38 80 00 01 */	li r4, 1
-/* 80321EF8 002EB4B8  38 A5 1F 10 */	addi r5, r5, func_80321F10@l
+/* 80321EF8 002EB4B8  38 A5 1F 10 */	addi r5, r5, SpeakerOnCallback__Q210homebutton9RemoteSpkFll@l
 /* 80321EFC 002EB4BC  48 04 B1 C5 */	bl WPADControlSpeaker
 /* 80321F00 002EB4C0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80321F04 002EB4C4  7C 08 03 A6 */	mtlr r0
@@ -391,8 +393,8 @@ lbl_80321EE0:
 /* 80321F0C 002EB4CC  4E 80 00 20 */	blr
 
 .balign 16, 0
-.global func_80321F10
-func_80321F10:
+.global SpeakerOnCallback__Q210homebutton9RemoteSpkFll
+SpeakerOnCallback__Q210homebutton9RemoteSpkFll:
 /* 80321F10 002EB4D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80321F14 002EB4D4  7C 08 02 A6 */	mflr r0
 /* 80321F18 002EB4D8  3C A0 80 5D */	lis r5, lbl_805CD748@ha
@@ -410,9 +412,9 @@ func_80321F10:
 /* 80321F48 002EB508  48 00 00 8C */	b lbl_80321FD4
 lbl_80321F4C:
 /* 80321F4C 002EB50C  1C 03 00 68 */	mulli r0, r3, 0x68
-/* 80321F50 002EB510  3C A0 80 32 */	lis r5, func_80322020@ha
+/* 80321F50 002EB510  3C A0 80 32 */	lis r5, SpeakerOffCallback__Q210homebutton9RemoteSpkFll@ha
 /* 80321F54 002EB514  38 E0 00 01 */	li r7, 1
-/* 80321F58 002EB518  38 A5 20 20 */	addi r5, r5, func_80322020@l
+/* 80321F58 002EB518  38 A5 20 20 */	addi r5, r5, SpeakerOffCallback__Q210homebutton9RemoteSpkFll@l
 /* 80321F5C 002EB51C  7C C6 02 14 */	add r6, r6, r0
 /* 80321F60 002EB520  38 80 00 04 */	li r4, 4
 /* 80321F64 002EB524  98 E6 00 5C */	stb r7, 0x5c(r6)
@@ -433,11 +435,11 @@ lbl_80321F84:
 /* 80321F98 002EB558  7F E3 FB 78 */	mr r3, r31
 /* 80321F9C 002EB55C  48 03 11 E5 */	bl OSCancelAlarm
 /* 80321FA0 002EB560  3C 80 80 00 */	lis r4, 0x800000F8@ha
-/* 80321FA4 002EB564  3C E0 80 32 */	lis r7, lbl_80321EE0@ha
+/* 80321FA4 002EB564  3C E0 80 32 */	lis r7, DelaySpeakerOnCallback@ha
 /* 80321FA8 002EB568  80 04 00 F8 */	lwz r0, 0x800000F8@l(r4)
 /* 80321FAC 002EB56C  3C 60 10 62 */	lis r3, 0x10624DD3@ha
 /* 80321FB0 002EB570  38 83 4D D3 */	addi r4, r3, 0x10624DD3@l
-/* 80321FB4 002EB574  38 E7 1E E0 */	addi r7, r7, lbl_80321EE0@l
+/* 80321FB4 002EB574  38 E7 1E E0 */	addi r7, r7, DelaySpeakerOnCallback@l
 /* 80321FB8 002EB578  54 00 F0 BE */	srwi r0, r0, 2
 /* 80321FBC 002EB57C  7F E3 FB 78 */	mr r3, r31
 /* 80321FC0 002EB580  7C 04 00 16 */	mulhwu r0, r4, r0
@@ -450,16 +452,18 @@ lbl_80321FD4:
 /* 80321FD8 002EB598  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80321FDC 002EB59C  7C 08 03 A6 */	mtlr r0
 /* 80321FE0 002EB5A0  38 21 00 10 */	addi r1, r1, 0x10
-/* 80321FE4 002EB5A4  4E 80 00 20 */	blr 
+/* 80321FE4 002EB5A4  4E 80 00 20 */	blr
+
 .balign 16, 0
-lbl_80321FF0:
+.global DelaySpeakerOffCallback__Q210homebutton9RemoteSpkFP7OSAlarmP9OSContext
+DelaySpeakerOffCallback__Q210homebutton9RemoteSpkFP7OSAlarmP9OSContext:
 /* 80321FF0 002EB5B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80321FF4 002EB5B4  7C 08 02 A6 */	mflr r0
 /* 80321FF8 002EB5B8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80321FFC 002EB5BC  48 03 15 C5 */	bl OSGetAlarmUserData
-/* 80322000 002EB5C0  3C A0 80 32 */	lis r5, func_80322020@ha
+/* 80322000 002EB5C0  3C A0 80 32 */	lis r5, SpeakerOffCallback__Q210homebutton9RemoteSpkFll@ha
 /* 80322004 002EB5C4  38 80 00 04 */	li r4, 4
-/* 80322008 002EB5C8  38 A5 20 20 */	addi r5, r5, func_80322020@l
+/* 80322008 002EB5C8  38 A5 20 20 */	addi r5, r5, SpeakerOffCallback__Q210homebutton9RemoteSpkFll@l
 /* 8032200C 002EB5CC  48 04 B0 B5 */	bl WPADControlSpeaker
 /* 80322010 002EB5D0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80322014 002EB5D4  7C 08 03 A6 */	mtlr r0
@@ -467,8 +471,8 @@ lbl_80321FF0:
 /* 8032201C 002EB5DC  4E 80 00 20 */	blr
 
 .balign 16, 0
-.global func_80322020
-func_80322020:
+.global SpeakerOffCallback__Q210homebutton9RemoteSpkFll
+SpeakerOffCallback__Q210homebutton9RemoteSpkFll:
 /* 80322020 002EB5E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322024 002EB5E4  7C 08 02 A6 */	mflr r0
 /* 80322028 002EB5E8  3C A0 80 5D */	lis r5, lbl_805CD748@ha
@@ -513,11 +517,11 @@ lbl_803220A0:
 /* 803220B4 002EB674  7F E3 FB 78 */	mr r3, r31
 /* 803220B8 002EB678  48 03 10 C9 */	bl OSCancelAlarm
 /* 803220BC 002EB67C  3C 80 80 00 */	lis r4, 0x800000F8@ha
-/* 803220C0 002EB680  3C E0 80 32 */	lis r7, lbl_80321FF0@ha
+/* 803220C0 002EB680  3C E0 80 32 */	lis r7, DelaySpeakerOffCallback__Q210homebutton9RemoteSpkFP7OSAlarmP9OSContext@ha
 /* 803220C4 002EB684  80 04 00 F8 */	lwz r0, 0x800000F8@l(r4)
 /* 803220C8 002EB688  3C 60 10 62 */	lis r3, 0x10624DD3@ha
 /* 803220CC 002EB68C  38 83 4D D3 */	addi r4, r3, 0x10624DD3@l
-/* 803220D0 002EB690  38 E7 1F F0 */	addi r7, r7, lbl_80321FF0@l
+/* 803220D0 002EB690  38 E7 1F F0 */	addi r7, r7, DelaySpeakerOffCallback__Q210homebutton9RemoteSpkFP7OSAlarmP9OSContext@l
 /* 803220D4 002EB694  54 00 F0 BE */	srwi r0, r0, 2
 /* 803220D8 002EB698  7F E3 FB 78 */	mr r3, r31
 /* 803220DC 002EB69C  7C 04 00 16 */	mulhwu r0, r4, r0
@@ -533,8 +537,8 @@ lbl_803220F0:
 /* 80322100 002EB6C0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80322110
-func_80322110:
+.global Disconnect__Q210homebutton9RemoteSpkFl
+Disconnect__Q210homebutton9RemoteSpkFl:
 /* 80322110 002EB6D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322114 002EB6D4  7C 08 02 A6 */	mflr r0
 /* 80322118 002EB6D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -545,9 +549,9 @@ func_80322110:
 /* 8032212C 002EB6EC  88 03 01 EC */	lbz r0, 0x1ec(r3)
 /* 80322130 002EB6F0  2C 00 00 00 */	cmpwi r0, 0
 /* 80322134 002EB6F4  41 82 00 50 */	beq lbl_80322184
-/* 80322138 002EB6F8  3C A0 80 32 */	lis r5, func_80321F10@ha
+/* 80322138 002EB6F8  3C A0 80 32 */	lis r5, SpeakerOnCallback__Q210homebutton9RemoteSpkFll@ha
 /* 8032213C 002EB6FC  7F E3 FB 78 */	mr r3, r31
-/* 80322140 002EB700  38 A5 1F 10 */	addi r5, r5, func_80321F10@l
+/* 80322140 002EB700  38 A5 1F 10 */	addi r5, r5, SpeakerOnCallback__Q210homebutton9RemoteSpkFll@l
 /* 80322144 002EB704  38 80 00 01 */	li r4, 1
 /* 80322148 002EB708  48 04 AF 79 */	bl WPADControlSpeaker
 /* 8032214C 002EB70C  1C 9F 00 68 */	mulli r4, r31, 0x68
@@ -573,8 +577,8 @@ lbl_80322184:
 /* 80322198 002EB758  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803221A0
-func_803221A0:
+.global Play__Q210homebutton9RemoteSpkFliSc
+Play__Q210homebutton9RemoteSpkFliSc:
 /* 803221A0 002EB760  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803221A4 002EB764  7C 08 02 A6 */	mflr r0
 /* 803221A8 002EB768  90 01 00 34 */	stw r0, 0x34(r1)
@@ -616,8 +620,8 @@ lbl_80322220:
 /* 80322234 002EB7F4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80322240
-func_80322240:
+.global isPlaying__Q210homebutton9RemoteSpkCFl
+isPlaying__Q210homebutton9RemoteSpkCFl:
 /* 80322240 002EB800  1C 04 00 68 */	mulli r0, r4, 0x68
 /* 80322244 002EB804  7C 63 02 14 */	add r3, r3, r0
 /* 80322248 002EB808  80 63 00 50 */	lwz r3, 0x50(r3)
@@ -627,8 +631,8 @@ func_80322240:
 /* 80322258 002EB818  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80322260
-func_80322260:
+.global isPlayingId__Q210homebutton9RemoteSpkCFli
+isPlayingId__Q210homebutton9RemoteSpkCFli:
 /* 80322260 002EB820  1C 04 00 68 */	mulli r0, r4, 0x68
 /* 80322264 002EB824  7C 63 02 14 */	add r3, r3, r0
 /* 80322268 002EB828  80 03 00 50 */	lwz r0, 0x50(r3)
@@ -645,8 +649,8 @@ lbl_80322288:
 
 
 .balign 16, 0
-.global func_80322290
-func_80322290:
+.global isPlayReady__Q210homebutton9RemoteSpkCFl
+isPlayReady__Q210homebutton9RemoteSpkCFl:
 /* 80322290 002EB850  1C 04 00 68 */	mulli r0, r4, 0x68
 /* 80322294 002EB854  7C 63 02 14 */	add r3, r3, r0
 /* 80322298 002EB858  88 63 00 62 */	lbz r3, 0x62(r3)

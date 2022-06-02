@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80375A90
-func_80375A90:
+.global WPADiClearMemBlock
+WPADiClearMemBlock:
 /* 80375A90 0033F050  3C 80 80 5E */	lis r4, lbl_805DDAD0@ha
 /* 80375A94 0033F054  54 63 10 3A */	slwi r3, r3, 2
 /* 80375A98 0033F058  38 84 DA D0 */	addi r4, r4, lbl_805DDAD0@l
@@ -18,8 +18,8 @@ func_80375A90:
 /* 80375AB8 0033F078  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80375AC0
-func_80375AC0:
+.global WPADWriteMemoryAsync
+WPADWriteMemoryAsync:
 /* 80375AC0 0033F080  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80375AC4 0033F084  7C 08 02 A6 */	mflr r0
 /* 80375AC8 0033F088  90 01 00 34 */	stw r0, 0x34(r1)

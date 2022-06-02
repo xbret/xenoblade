@@ -63,9 +63,9 @@ ctorsTable:
 	.4byte sinit_802AAF24
 	.4byte sinit_802AEA88
 	.4byte sinit_802B46E0
-	.4byte HBMBase_sinit
+	.4byte __sinit_lyt_bounding_cpp
 	.4byte sinit_80332720
-	.4byte sinit_80332C70
+	.4byte __sinit_lyt_picture_cpp
 	.4byte sinit_80334120
 	.4byte sinit_80336620
 	.4byte sinit_8033EF90

@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8031D160
-func_8031D160:
+.global GXSetTevIndirect
+GXSetTevIndirect:
 /* 8031D160 002E6720  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031D164 002E6724  39 80 00 00 */	li r12, 0
 /* 8031D168 002E6728  50 8C 07 BE */	rlwimi r12, r4, 0, 0x1e, 0x1f
@@ -33,8 +33,8 @@ func_8031D160:
 /* 8031D1C4 002E6784  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031D1D0
-func_8031D1D0:
+.global GXSetIndTexMtx
+GXSetIndTexMtx:
 /* 8031D1D0 002E6790  38 C3 FF FF */	addi r6, r3, -1
 /* 8031D1D4 002E6794  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8031D1D8 002E6798  28 06 00 02 */	cmplwi r6, 2
@@ -119,8 +119,8 @@ lbl_8031D20C:
 /* 8031D30C 002E68CC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031D310
-func_8031D310:
+.global GXSetIndTexCoordScale
+GXSetIndTexCoordScale:
 /* 8031D310 002E68D0  2C 03 00 00 */	cmpwi r3, 0
 /* 8031D314 002E68D4  41 82 00 20 */	beq lbl_8031D334
 /* 8031D318 002E68D8  2C 03 00 01 */	cmpwi r3, 1
@@ -192,8 +192,8 @@ lbl_8031D400:
 /* 8031D40C 002E69CC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031D410
-func_8031D410:
+.global GXSetIndTexOrder
+GXSetIndTexOrder:
 /* 8031D410 002E69D0  2C 05 00 FF */	cmpwi r5, 0xff
 /* 8031D414 002E69D4  40 82 00 08 */	bne lbl_8031D41C
 /* 8031D418 002E69D8  38 A0 00 00 */	li r5, 0
@@ -265,8 +265,8 @@ GXSetNumIndStages:
 /* 8031D4FC 002E6ABC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031D500
-func_8031D500:
+.global GXSetTevDirect
+GXSetTevDirect:
 /* 8031D500 002E6AC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031D504 002E6AC4  7C 08 02 A6 */	mflr r0
 /* 8031D508 002E6AC8  38 80 00 00 */	li r4, 0
@@ -280,15 +280,15 @@ func_8031D500:
 /* 8031D528 002E6AE8  39 20 00 00 */	li r9, 0
 /* 8031D52C 002E6AEC  39 40 00 00 */	li r10, 0
 /* 8031D530 002E6AF0  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8031D534 002E6AF4  4B FF FC 2D */	bl func_8031D160
+/* 8031D534 002E6AF4  4B FF FC 2D */	bl GXSetTevIndirect
 /* 8031D538 002E6AF8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8031D53C 002E6AFC  7C 08 03 A6 */	mtlr r0
 /* 8031D540 002E6B00  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031D544 002E6B04  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031D550
-func_8031D550:
+.global GXSetTevIndWarp
+GXSetTevIndWarp:
 /* 8031D550 002E6B10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031D554 002E6B14  7C 08 02 A6 */	mflr r0
 /* 8031D558 002E6B18  2C 06 00 00 */	cmpwi r6, 0
@@ -307,20 +307,20 @@ lbl_8031D56C:
 lbl_8031D588:
 /* 8031D588 002E6B48  7D 09 43 78 */	mr r9, r8
 /* 8031D58C 002E6B4C  39 40 00 00 */	li r10, 0
-/* 8031D590 002E6B50  4B FF FB D1 */	bl func_8031D160
+/* 8031D590 002E6B50  4B FF FB D1 */	bl GXSetTevIndirect
 /* 8031D594 002E6B54  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8031D598 002E6B58  7C 08 03 A6 */	mtlr r0
 /* 8031D59C 002E6B5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031D5A0 002E6B60  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031D5B0
-func_8031D5B0:
+.global __GXUpdateBPMask
+__GXUpdateBPMask:
 /* 8031D5B0 002E6B70  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031D5C0
-func_8031D5C0:
+.global __GXSetIndirectMask
+__GXSetIndirectMask:
 /* 8031D5C0 002E6B80  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
 /* 8031D5C4 002E6B84  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031D5C8 002E6B88  38 A0 00 61 */	li r5, 0x61
@@ -335,8 +335,8 @@ func_8031D5C0:
 /* 8031D5EC 002E6BAC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031D5F0
-func_8031D5F0:
+.global __GXFlushTextureState
+__GXFlushTextureState:
 /* 8031D5F0 002E6BB0  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031D5F4 002E6BB4  38 00 00 61 */	li r0, 0x61
 /* 8031D5F8 002E6BB8  98 04 80 00 */	stb r0, 0xCC008000@l(r4)

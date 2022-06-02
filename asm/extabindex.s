@@ -19190,7 +19190,7 @@ lbl_80021020:
 	.4byte func_80434B64
 	.4byte 0x000000C0
 	.4byte lbl_8001C008
-	.4byte func_80434C2C
+	.4byte __dl__FPv
 	.4byte 0x000001B4
 	.4byte lbl_8001C010
 	.4byte __dla__FPv

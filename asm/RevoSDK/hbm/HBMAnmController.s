@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8031F450
-func_8031F450:
+.global __ct__Q210homebutton18GroupAnmControllerFv
+__ct__Q210homebutton18GroupAnmControllerFv:
 /* 8031F450 002E8A10  3C 80 80 55 */	lis r4, lbl_8054C240@ha
 /* 8031F454 002E8A14  38 00 00 00 */	li r0, 0
 /* 8031F458 002E8A18  38 84 C2 40 */	addi r4, r4, lbl_8054C240@l
@@ -14,8 +14,8 @@ func_8031F450:
 /* 8031F468 002E8A28  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031F470
-func_8031F470:
+.global __dt__Q210homebutton15FrameControllerFv
+__dt__Q210homebutton15FrameControllerFv:
 /* 8031F470 002E8A30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031F474 002E8A34  7C 08 02 A6 */	mflr r0
 /* 8031F478 002E8A38  2C 03 00 00 */	cmpwi r3, 0
@@ -25,7 +25,7 @@ func_8031F470:
 /* 8031F488 002E8A48  41 82 00 10 */	beq lbl_8031F498
 /* 8031F48C 002E8A4C  2C 04 00 00 */	cmpwi r4, 0
 /* 8031F490 002E8A50  40 81 00 08 */	ble lbl_8031F498
-/* 8031F494 002E8A54  48 11 57 99 */	bl func_80434C2C
+/* 8031F494 002E8A54  48 11 57 99 */	bl __dl__FPv
 lbl_8031F498:
 /* 8031F498 002E8A58  7F E3 FB 78 */	mr r3, r31
 /* 8031F49C 002E8A5C  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -35,8 +35,8 @@ lbl_8031F498:
 /* 8031F4AC 002E8A6C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031F4B0
-func_8031F4B0:
+.global do_calc__Q210homebutton18GroupAnmControllerFv
+do_calc__Q210homebutton18GroupAnmControllerFv:
 /* 8031F4B0 002E8A70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031F4B4 002E8A74  7C 08 02 A6 */	mflr r0
 /* 8031F4B8 002E8A78  90 01 00 24 */	stw r0, 0x24(r1)

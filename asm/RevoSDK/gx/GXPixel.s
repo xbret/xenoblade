@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8031DCF0
-func_8031DCF0:
+.global GXSetFog
+GXSetFog:
 /* 8031DCF0 002E72B0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8031DCF4 002E72B4  7C 08 02 A6 */	mflr r0
 /* 8031DCF8 002E72B8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -158,8 +158,8 @@ lbl_8031DE74:
 /* 8031DF18 002E74D8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031DF20
-func_8031DF20:
+.global GXInitFogAdjTable
+GXInitFogAdjTable:
 /* 8031DF20 002E74E0  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 8031DF24 002E74E4  7C 08 02 A6 */	mflr r0
 /* 8031DF28 002E74E8  C8 22 BD 08 */	lfd f1, lbl_8066C088@sda21(r2)
@@ -253,8 +253,8 @@ lbl_8031DFE0:
 /* 8031E07C 002E763C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031E080
-func_8031E080:
+.global GXSetFogRangeAdj
+GXSetFogRangeAdj:
 /* 8031E080 002E7640  2C 03 00 00 */	cmpwi r3, 0
 /* 8031E084 002E7644  41 82 00 D4 */	beq lbl_8031E158
 /* 8031E088 002E7648  A1 65 00 00 */	lhz r11, 0(r5)
@@ -350,8 +350,8 @@ GXSetBlendMode:
 /* 8031E1DC 002E779C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031E1E0
-func_8031E1E0:
+.global GXSetColorUpdate
+GXSetColorUpdate:
 /* 8031E1E0 002E77A0  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
 /* 8031E1E4 002E77A4  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031E1E8 002E77A8  38 A0 00 61 */	li r5, 0x61
@@ -397,8 +397,8 @@ GXSetZMode:
 /* 8031E270 002E7830  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031E280
-func_8031E280:
+.global GXSetZCompLoc
+GXSetZCompLoc:
 /* 8031E280 002E7840  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
 /* 8031E284 002E7844  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031E288 002E7848  38 A0 00 61 */	li r5, 0x61
@@ -413,8 +413,8 @@ func_8031E280:
 /* 8031E2AC 002E786C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031E2B0
-func_8031E2B0:
+.global GXSetPixelFmt
+GXSetPixelFmt:
 /* 8031E2B0 002E7870  81 22 BC 20 */	lwz r9, lbl_8066BFA0@sda21(r2)
 /* 8031E2B4 002E7874  3C C0 80 55 */	lis r6, lbl_8054C110@ha
 /* 8031E2B8 002E7878  54 67 10 3A */	slwi r7, r3, 2
@@ -461,8 +461,8 @@ lbl_8031E34C:
 /* 8031E354 002E7914  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031E360
-func_8031E360:
+.global GXSetDither
+GXSetDither:
 /* 8031E360 002E7920  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
 /* 8031E364 002E7924  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031E368 002E7928  38 A0 00 61 */	li r5, 0x61
@@ -476,8 +476,8 @@ func_8031E360:
 /* 8031E388 002E7948  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031E390
-func_8031E390:
+.global GXSetDstAlpha
+GXSetDstAlpha:
 /* 8031E390 002E7950  81 02 BC 20 */	lwz r8, lbl_8066BFA0@sda21(r2)
 /* 8031E394 002E7954  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 8031E398 002E7958  38 C0 00 61 */	li r6, 0x61
@@ -492,8 +492,8 @@ func_8031E390:
 /* 8031E3BC 002E797C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031E3C0
-func_8031E3C0:
+.global GXSetFieldMask
+GXSetFieldMask:
 /* 8031E3C0 002E7980  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 8031E3C4 002E7984  38 00 00 61 */	li r0, 0x61
 /* 8031E3C8 002E7988  98 05 80 00 */	stb r0, 0xCC008000@l(r5)
@@ -509,8 +509,8 @@ func_8031E3C0:
 /* 8031E3F0 002E79B0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031E400
-func_8031E400:
+.global GXSetFieldMode
+GXSetFieldMode:
 /* 8031E400 002E79C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031E404 002E79C4  7C 08 02 A6 */	mflr r0
 /* 8031E408 002E79C8  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
@@ -527,11 +527,11 @@ func_8031E400:
 /* 8031E434 002E79F4  9B DF 80 00 */	stb r30, 0xCC008000@l(r31)
 /* 8031E438 002E79F8  80 05 00 7C */	lwz r0, 0x7c(r5)
 /* 8031E43C 002E79FC  90 1F 80 00 */	stw r0, -0x8000(r31)
-/* 8031E440 002E7A00  4B FF F1 B1 */	bl func_8031D5F0
+/* 8031E440 002E7A00  4B FF F1 B1 */	bl __GXFlushTextureState
 /* 8031E444 002E7A04  9B DF 80 00 */	stb r30, -0x8000(r31)
 /* 8031E448 002E7A08  67 A0 68 00 */	oris r0, r29, 0x6800
 /* 8031E44C 002E7A0C  90 1F 80 00 */	stw r0, -0x8000(r31)
-/* 8031E450 002E7A10  4B FF F1 A1 */	bl func_8031D5F0
+/* 8031E450 002E7A10  4B FF F1 A1 */	bl __GXFlushTextureState
 /* 8031E454 002E7A14  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8031E458 002E7A18  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8031E45C 002E7A1C  83 C1 00 18 */	lwz r30, 0x18(r1)

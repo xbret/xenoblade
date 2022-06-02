@@ -493,7 +493,6 @@ lbl_802D5ECC:
 /* 802D5EE0 0029F4A0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global __AllocDelayLine
 __AllocDelayLine:
 /* 802D5EF0 0029F4B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D5EF4 0029F4B4  7C 08 02 A6 */	mflr r0
@@ -685,7 +684,6 @@ lbl_802D6164:
 /* 802D6190 0029F750  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global __FreeDelayLine
 __FreeDelayLine:
 /* 802D61A0 0029F760  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D61A4 0029F764  7C 08 02 A6 */	mflr r0
@@ -766,7 +764,6 @@ lbl_802D6284:
 /* 802D62B0 0029F870  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global __InitParams
 __InitParams:
 /* 802D62C0 0029F880  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802D62C4 0029F884  7C 08 02 A6 */	mflr r0

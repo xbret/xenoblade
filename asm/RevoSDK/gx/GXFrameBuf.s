@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8031AD70
-func_8031AD70:
+.global GXAdjustForOverscan
+GXAdjustForOverscan:
 /* 8031AD70 002E4330  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8031AD74 002E4334  7C 08 02 A6 */	mflr r0
 /* 8031AD78 002E4338  90 01 00 34 */	stw r0, 0x34(r1)
@@ -99,8 +99,8 @@ lbl_8031AE9C:
 /* 8031AEC8 002E4488  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031AED0
-func_8031AED0:
+.global GXSetDispCopySrc
+GXSetDispCopySrc:
 /* 8031AED0 002E4490  81 02 BC 20 */	lwz r8, lbl_8066BFA0@sda21(r2)
 /* 8031AED4 002E4494  38 E0 00 00 */	li r7, 0
 /* 8031AED8 002E4498  50 67 05 BE */	rlwimi r7, r3, 0, 0x16, 0x1f
@@ -119,8 +119,8 @@ func_8031AED0:
 /* 8031AF0C 002E44CC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031AF10
-func_8031AF10:
+.global GXSetTexCopySrc
+GXSetTexCopySrc:
 /* 8031AF10 002E44D0  81 02 BC 20 */	lwz r8, lbl_8066BFA0@sda21(r2)
 /* 8031AF14 002E44D4  38 E0 00 00 */	li r7, 0
 /* 8031AF18 002E44D8  50 67 05 BE */	rlwimi r7, r3, 0, 0x16, 0x1f
@@ -139,8 +139,8 @@ func_8031AF10:
 /* 8031AF4C 002E450C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031AF50
-func_8031AF50:
+.global GXSetDispCopyDst
+GXSetDispCopyDst:
 /* 8031AF50 002E4510  54 60 0C 3C */	rlwinm r0, r3, 1, 0x10, 0x1e
 /* 8031AF54 002E4514  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031AF58 002E4518  7C 00 2E 70 */	srawi r0, r0, 5
@@ -152,8 +152,8 @@ func_8031AF50:
 /* 8031AF70 002E4530  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031AF80
-func_8031AF80:
+.global GXSetTexCopyDst
+GXSetTexCopyDst:
 /* 8031AF80 002E4540  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8031AF84 002E4544  7C 08 02 A6 */	mflr r0
 /* 8031AF88 002E4548  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
@@ -202,7 +202,7 @@ lbl_8031B000:
 /* 8031B024 002E45E4  38 C1 00 10 */	addi r6, r1, 0x10
 /* 8031B028 002E45E8  38 E1 00 0C */	addi r7, r1, 0xc
 /* 8031B02C 002E45EC  39 01 00 08 */	addi r8, r1, 8
-/* 8031B030 002E45F0  48 00 11 C1 */	bl func_8031C1F0
+/* 8031B030 002E45F0  48 00 11 C1 */	bl __GetImageTileCount
 /* 8031B034 002E45F4  38 00 00 00 */	li r0, 0
 /* 8031B038 002E45F8  90 1C 02 48 */	stw r0, 0x248(r28)
 /* 8031B03C 002E45FC  38 00 00 4D */	li r0, 0x4d
@@ -227,8 +227,8 @@ lbl_8031B000:
 /* 8031B088 002E4648  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031B090
-func_8031B090:
+.global GXSetDispCopyFrame2Field
+GXSetDispCopyFrame2Field:
 /* 8031B090 002E4650  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031B094 002E4654  80 04 02 3C */	lwz r0, 0x23c(r4)
 /* 8031B098 002E4658  50 60 64 A6 */	rlwimi r0, r3, 0xc, 0x12, 0x13
@@ -239,8 +239,8 @@ func_8031B090:
 /* 8031B0AC 002E466C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031B0B0
-func_8031B0B0:
+.global GXSetCopyClamp
+GXSetCopyClamp:
 /* 8031B0B0 002E4670  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031B0B4 002E4674  80 04 02 3C */	lwz r0, 0x23c(r4)
 /* 8031B0B8 002E4678  50 60 07 FE */	rlwimi r0, r3, 0, 0x1f, 0x1f
@@ -253,8 +253,8 @@ func_8031B0B0:
 /* 8031B0D4 002E4694  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031B0E0
-func_8031B0E0:
+.global GXGetYScaleFactor
+GXGetYScaleFactor:
 /* 8031B0E0 002E46A0  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8031B0E4 002E46A4  7C 08 02 A6 */	mflr r0
 /* 8031B0E8 002E46A8  C8 62 BC 50 */	lfd f3, lbl_8066BFD0@sda21(r2)
@@ -411,8 +411,8 @@ lbl_8031B2C4:
 /* 8031B30C 002E48CC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031B310
-func_8031B310:
+.global GXSetDispCopyYScale
+GXSetDispCopyYScale:
 /* 8031B310 002E48D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031B314 002E48D4  7C 08 02 A6 */	mflr r0
 /* 8031B318 002E48D8  C0 02 BC 48 */	lfs f0, lbl_8066BFC8@sda21(r2)
@@ -470,8 +470,8 @@ lbl_8031B3CC:
 /* 8031B3D8 002E4998  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031B3E0
-func_8031B3E0:
+.global GXSetCopyClear
+GXSetCopyClear:
 /* 8031B3E0 002E49A0  88 03 00 00 */	lbz r0, 0(r3)
 /* 8031B3E4 002E49A4  39 00 00 00 */	li r8, 0
 /* 8031B3E8 002E49A8  88 C3 00 03 */	lbz r6, 3(r3)
@@ -504,8 +504,8 @@ func_8031B3E0:
 /* 8031B454 002E4A14  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031B460
-func_8031B460:
+.global GXSetCopyFilter
+GXSetCopyFilter:
 /* 8031B460 002E4A20  2C 03 00 00 */	cmpwi r3, 0
 /* 8031B464 002E4A24  41 82 00 F8 */	beq lbl_8031B55C
 /* 8031B468 002E4A28  89 04 00 00 */	lbz r8, 0(r4)
@@ -642,8 +642,8 @@ GXSetDispCopyGamma:
 /* 8031B660 002E4C20  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031B670
-func_8031B670:
+.global GXCopyDisp
+GXCopyDisp:
 /* 8031B670 002E4C30  2C 04 00 00 */	cmpwi r4, 0
 /* 8031B674 002E4C34  41 82 00 30 */	beq lbl_8031B6A4
 /* 8031B678 002E4C38  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
@@ -730,8 +730,8 @@ lbl_8031B7A0:
 /* 8031B7A8 002E4D68  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031B7B0
-func_8031B7B0:
+.global GXCopyTex
+GXCopyTex:
 /* 8031B7B0 002E4D70  2C 04 00 00 */	cmpwi r4, 0
 /* 8031B7B4 002E4D74  41 82 00 30 */	beq lbl_8031B7E4
 /* 8031B7B8 002E4D78  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
@@ -827,8 +827,8 @@ lbl_8031B8FC:
 /* 8031B904 002E4EC4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031B910
-func_8031B910:
+.global GXClearBoundingBox
+GXClearBoundingBox:
 /* 8031B910 002E4ED0  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 8031B914 002E4ED4  38 C0 00 61 */	li r6, 0x61
 /* 8031B918 002E4ED8  98 C5 80 00 */	stb r6, 0xCC008000@l(r5)

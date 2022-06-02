@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80319D80
-func_80319D80:
+.global GXSetMisc
+GXSetMisc:
 /* 80319D80 002E3340  2C 03 00 01 */	cmpwi r3, 1
 /* 80319D84 002E3344  41 82 00 18 */	beq lbl_80319D9C
 /* 80319D88 002E3348  2C 03 00 02 */	cmpwi r3, 2
@@ -42,8 +42,8 @@ lbl_80319DE8:
 /* 80319DFC 002E33BC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80319E00
-func_80319E00:
+.global GXFlush
+GXFlush:
 /* 80319E00 002E33C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80319E04 002E33C4  7C 08 02 A6 */	mflr r0
 /* 80319E08 002E33C8  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
@@ -51,7 +51,7 @@ func_80319E00:
 /* 80319E10 002E33D0  80 03 05 FC */	lwz r0, 0x5fc(r3)
 /* 80319E14 002E33D4  2C 00 00 00 */	cmpwi r0, 0
 /* 80319E18 002E33D8  41 82 00 08 */	beq lbl_80319E20
-/* 80319E1C 002E33DC  48 00 09 45 */	bl func_8031A760
+/* 80319E1C 002E33DC  48 00 09 45 */	bl __GXSetDirtyState
 lbl_80319E20:
 /* 80319E20 002E33E0  3C 60 CC 01 */	lis r3, 0xCC008000@ha
 /* 80319E24 002E33E4  38 00 00 00 */	li r0, 0
@@ -70,8 +70,8 @@ lbl_80319E20:
 /* 80319E58 002E3418  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80319E60
-func_80319E60:
+.global __GXAbort
+__GXAbort:
 /* 80319E60 002E3420  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80319E64 002E3424  7C 08 02 A6 */	mflr r0
 /* 80319E68 002E3428  90 01 00 24 */	stw r0, 0x24(r1)
@@ -81,7 +81,7 @@ func_80319E60:
 /* 80319E78 002E3438  88 03 05 FA */	lbz r0, 0x5fa(r3)
 /* 80319E7C 002E343C  2C 00 00 00 */	cmpwi r0, 0
 /* 80319E80 002E3440  41 82 00 A0 */	beq lbl_80319F20
-/* 80319E84 002E3444  4B FF EF DD */	bl func_80318E60
+/* 80319E84 002E3444  4B FF EF DD */	bl __GXIsGPFifoReady
 /* 80319E88 002E3448  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80319E8C 002E344C  41 82 00 94 */	beq lbl_80319F20
 /* 80319E90 002E3450  80 AD B7 94 */	lwz r5, lbl_80667914@sda21(r13)
@@ -181,7 +181,7 @@ GXAbortFrame:
 /* 80319FE8 002E35A8  88 1F 05 FA */	lbz r0, 0x5fa(r31)
 /* 80319FEC 002E35AC  2C 00 00 00 */	cmpwi r0, 0
 /* 80319FF0 002E35B0  41 82 00 A0 */	beq lbl_8031A090
-/* 80319FF4 002E35B4  4B FF EE 6D */	bl func_80318E60
+/* 80319FF4 002E35B4  4B FF EE 6D */	bl __GXIsGPFifoReady
 /* 80319FF8 002E35B8  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80319FFC 002E35BC  41 82 00 94 */	beq lbl_8031A090
 /* 8031A000 002E35C0  80 AD B7 94 */	lwz r5, lbl_80667914@sda21(r13)
@@ -262,15 +262,15 @@ lbl_8031A0F8:
 /* 8031A110 002E36D0  7C 7E F1 10 */	subfe r3, r30, r30
 /* 8031A114 002E36D4  7C 63 00 D1 */	neg. r3, r3
 /* 8031A118 002E36D8  41 82 FF E0 */	beq lbl_8031A0F8
-/* 8031A11C 002E36DC  4B FF ED 45 */	bl func_80318E60
+/* 8031A11C 002E36DC  4B FF ED 45 */	bl __GXIsGPFifoReady
 /* 8031A120 002E36E0  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8031A124 002E36E4  41 82 00 48 */	beq lbl_8031A16C
-/* 8031A128 002E36E8  4B FF EF 69 */	bl func_80319090
-/* 8031A12C 002E36EC  4B FF D5 D5 */	bl func_80317700
+/* 8031A128 002E36E8  4B FF EF 69 */	bl __GXCleanGPFifo
+/* 8031A12C 002E36EC  4B FF D5 D5 */	bl __GXInitRevisionBits
 /* 8031A130 002E36F0  38 00 00 00 */	li r0, 0
 /* 8031A134 002E36F4  90 1F 05 FC */	stw r0, 0x5fc(r31)
 /* 8031A138 002E36F8  48 00 00 08 */	b lbl_8031A140
-/* 8031A13C 002E36FC  48 00 06 25 */	bl func_8031A760
+/* 8031A13C 002E36FC  48 00 06 25 */	bl __GXSetDirtyState
 lbl_8031A140:
 /* 8031A140 002E3700  3C 60 CC 01 */	lis r3, 0xCC008000@ha
 /* 8031A144 002E3704  38 00 00 00 */	li r0, 0
@@ -292,8 +292,8 @@ lbl_8031A16C:
 /* 8031A180 002E3740  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A190
-func_8031A190:
+.global GXSetDrawSync
+GXSetDrawSync:
 /* 8031A190 002E3750  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031A194 002E3754  7C 08 02 A6 */	mflr r0
 /* 8031A198 002E3758  90 01 00 24 */	stw r0, 0x24(r1)
@@ -317,7 +317,7 @@ func_8031A190:
 /* 8031A1E0 002E37A0  80 1E 05 FC */	lwz r0, 0x5fc(r30)
 /* 8031A1E4 002E37A4  2C 00 00 00 */	cmpwi r0, 0
 /* 8031A1E8 002E37A8  41 82 00 08 */	beq lbl_8031A1F0
-/* 8031A1EC 002E37AC  48 00 05 75 */	bl func_8031A760
+/* 8031A1EC 002E37AC  48 00 05 75 */	bl __GXSetDirtyState
 lbl_8031A1F0:
 /* 8031A1F0 002E37B0  3C 60 CC 01 */	lis r3, 0xCC008000@ha
 /* 8031A1F4 002E37B4  3B E0 00 00 */	li r31, 0
@@ -342,15 +342,15 @@ lbl_8031A1F0:
 /* 8031A240 002E3800  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A250
-func_8031A250:
+.global GXReadDrawSync
+GXReadDrawSync:
 /* 8031A250 002E3810  80 6D B7 90 */	lwz r3, lbl_80667910@sda21(r13)
 /* 8031A254 002E3814  A0 63 00 0E */	lhz r3, 0xe(r3)
 /* 8031A258 002E3818  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A260
-func_8031A260:
+.global GXSetDrawDone
+GXSetDrawDone:
 /* 8031A260 002E3820  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031A264 002E3824  7C 08 02 A6 */	mflr r0
 /* 8031A268 002E3828  90 01 00 24 */	stw r0, 0x24(r1)
@@ -369,7 +369,7 @@ func_8031A260:
 /* 8031A29C 002E385C  80 1E 05 FC */	lwz r0, 0x5fc(r30)
 /* 8031A2A0 002E3860  2C 00 00 00 */	cmpwi r0, 0
 /* 8031A2A4 002E3864  41 82 00 08 */	beq lbl_8031A2AC
-/* 8031A2A8 002E3868  48 00 04 B9 */	bl func_8031A760
+/* 8031A2A8 002E3868  48 00 04 B9 */	bl __GXSetDirtyState
 lbl_8031A2AC:
 /* 8031A2AC 002E386C  3C 60 CC 01 */	lis r3, 0xCC008000@ha
 /* 8031A2B0 002E3870  3B E0 00 00 */	li r31, 0
@@ -395,8 +395,8 @@ lbl_8031A2AC:
 /* 8031A300 002E38C0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A310
-func_8031A310:
+.global GXDrawDone
+GXDrawDone:
 /* 8031A310 002E38D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031A314 002E38D4  7C 08 02 A6 */	mflr r0
 /* 8031A318 002E38D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -415,7 +415,7 @@ func_8031A310:
 /* 8031A34C 002E390C  80 1D 05 FC */	lwz r0, 0x5fc(r29)
 /* 8031A350 002E3910  2C 00 00 00 */	cmpwi r0, 0
 /* 8031A354 002E3914  41 82 00 08 */	beq lbl_8031A35C
-/* 8031A358 002E3918  48 00 04 09 */	bl func_8031A760
+/* 8031A358 002E3918  48 00 04 09 */	bl __GXSetDirtyState
 lbl_8031A35C:
 /* 8031A35C 002E391C  3C 60 CC 01 */	lis r3, 0xCC008000@ha
 /* 8031A360 002E3920  3B E0 00 00 */	li r31, 0
@@ -453,8 +453,8 @@ lbl_8031A3AC:
 /* 8031A3D8 002E3998  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A3E0
-func_8031A3E0:
+.global GXPixModeSync
+GXPixModeSync:
 /* 8031A3E0 002E39A0  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031A3E4 002E39A4  38 00 00 61 */	li r0, 0x61
 /* 8031A3E8 002E39A8  98 04 80 00 */	stb r0, 0xCC008000@l(r4)
@@ -466,16 +466,16 @@ func_8031A3E0:
 /* 8031A400 002E39C0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A410
-func_8031A410:
+.global GXPokeAlphaMode
+GXPokeAlphaMode:
 /* 8031A410 002E39D0  80 AD B7 90 */	lwz r5, lbl_80667910@sda21(r13)
 /* 8031A414 002E39D4  50 64 40 2E */	rlwimi r4, r3, 8, 0, 0x17
 /* 8031A418 002E39D8  B0 85 00 06 */	sth r4, 6(r5)
 /* 8031A41C 002E39DC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A420
-func_8031A420:
+.global GXPokeAlphaRead
+GXPokeAlphaRead:
 /* 8031A420 002E39E0  80 8D B7 90 */	lwz r4, lbl_80667910@sda21(r13)
 /* 8031A424 002E39E4  38 00 00 00 */	li r0, 0
 /* 8031A428 002E39E8  50 60 07 BE */	rlwimi r0, r3, 0, 0x1e, 0x1f
@@ -484,8 +484,8 @@ func_8031A420:
 /* 8031A434 002E39F4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A440
-func_8031A440:
+.global GXPokeAlphaUpdate
+GXPokeAlphaUpdate:
 /* 8031A440 002E3A00  80 8D B7 90 */	lwz r4, lbl_80667910@sda21(r13)
 /* 8031A444 002E3A04  A0 04 00 02 */	lhz r0, 2(r4)
 /* 8031A448 002E3A08  50 60 26 F6 */	rlwimi r0, r3, 4, 0x1b, 0x1b
@@ -493,8 +493,8 @@ func_8031A440:
 /* 8031A450 002E3A10  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A460
-func_8031A460:
+.global GXPokeBlendMode
+GXPokeBlendMode:
 /* 8031A460 002E3A20  80 ED B7 90 */	lwz r7, lbl_80667910@sda21(r13)
 /* 8031A464 002E3A24  2C 03 00 01 */	cmpwi r3, 1
 /* 8031A468 002E3A28  38 00 00 00 */	li r0, 0
@@ -522,8 +522,8 @@ lbl_8031A480:
 /* 8031A4B8 002E3A78  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A4C0
-func_8031A4C0:
+.global GXPokeColorUpdate
+GXPokeColorUpdate:
 /* 8031A4C0 002E3A80  80 8D B7 90 */	lwz r4, lbl_80667910@sda21(r13)
 /* 8031A4C4 002E3A84  A0 04 00 02 */	lhz r0, 2(r4)
 /* 8031A4C8 002E3A88  50 60 1F 38 */	rlwimi r0, r3, 3, 0x1c, 0x1c
@@ -531,8 +531,8 @@ func_8031A4C0:
 /* 8031A4D0 002E3A90  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A4E0
-func_8031A4E0:
+.global GXPokeDstAlpha
+GXPokeDstAlpha:
 /* 8031A4E0 002E3AA0  80 AD B7 90 */	lwz r5, lbl_80667910@sda21(r13)
 /* 8031A4E4 002E3AA4  38 00 00 00 */	li r0, 0
 /* 8031A4E8 002E3AA8  50 80 06 3E */	rlwimi r0, r4, 0, 0x18, 0x1f
@@ -541,8 +541,8 @@ func_8031A4E0:
 /* 8031A4F4 002E3AB4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A500
-func_8031A500:
+.global GXPokeDither
+GXPokeDither:
 /* 8031A500 002E3AC0  80 8D B7 90 */	lwz r4, lbl_80667910@sda21(r13)
 /* 8031A504 002E3AC4  A0 04 00 02 */	lhz r0, 2(r4)
 /* 8031A508 002E3AC8  50 60 17 7A */	rlwimi r0, r3, 2, 0x1d, 0x1d
@@ -550,8 +550,8 @@ func_8031A500:
 /* 8031A510 002E3AD0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A520
-func_8031A520:
+.global GXPokeZMode
+GXPokeZMode:
 /* 8031A520 002E3AE0  80 CD B7 90 */	lwz r6, lbl_80667910@sda21(r13)
 /* 8031A524 002E3AE4  38 00 00 00 */	li r0, 0
 /* 8031A528 002E3AE8  50 60 07 FE */	rlwimi r0, r3, 0, 0x1f, 0x1f
@@ -561,8 +561,8 @@ func_8031A520:
 /* 8031A538 002E3AF8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A540
-func_8031A540:
+.global GXSetDrawSyncCallback
+GXSetDrawSyncCallback:
 /* 8031A540 002E3B00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031A544 002E3B04  7C 08 02 A6 */	mflr r0
 /* 8031A548 002E3B08  90 01 00 14 */	stw r0, 0x14(r1)
@@ -579,9 +579,11 @@ func_8031A540:
 /* 8031A574 002E3B34  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8031A578 002E3B38  7C 08 03 A6 */	mtlr r0
 /* 8031A57C 002E3B3C  38 21 00 10 */	addi r1, r1, 0x10
-/* 8031A580 002E3B40  4E 80 00 20 */	blr 
+/* 8031A580 002E3B40  4E 80 00 20 */	blr
+
 .balign 16, 0
-lbl_8031A590:
+.global GXTokenInterruptHandler
+GXTokenInterruptHandler:
 /* 8031A590 002E3B50  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 8031A594 002E3B54  7C 08 02 A6 */	mflr r0
 /* 8031A598 002E3B58  90 01 02 E4 */	stw r0, 0x2e4(r1)
@@ -618,8 +620,8 @@ lbl_8031A5EC:
 /* 8031A610 002E3BD0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A620
-func_8031A620:
+.global GXSetDrawDoneCallback
+GXSetDrawDoneCallback:
 /* 8031A620 002E3BE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031A624 002E3BE4  7C 08 02 A6 */	mflr r0
 /* 8031A628 002E3BE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -636,9 +638,11 @@ func_8031A620:
 /* 8031A654 002E3C14  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8031A658 002E3C18  7C 08 03 A6 */	mtlr r0
 /* 8031A65C 002E3C1C  38 21 00 10 */	addi r1, r1, 0x10
-/* 8031A660 002E3C20  4E 80 00 20 */	blr 
+/* 8031A660 002E3C20  4E 80 00 20 */	blr
+
 .balign 16, 0
-lbl_8031A670:
+.global GXFinishInterruptHandler
+GXFinishInterruptHandler:
 /* 8031A670 002E3C30  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 8031A674 002E3C34  7C 08 02 A6 */	mflr r0
 /* 8031A678 002E3C38  38 60 00 01 */	li r3, 1
@@ -674,18 +678,18 @@ lbl_8031A6D4:
 /* 8031A6EC 002E3CAC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031A6F0
-func_8031A6F0:
+.global __GXPEInit
+__GXPEInit:
 /* 8031A6F0 002E3CB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031A6F4 002E3CB4  7C 08 02 A6 */	mflr r0
-/* 8031A6F8 002E3CB8  3C 80 80 32 */	lis r4, lbl_8031A590@ha
+/* 8031A6F8 002E3CB8  3C 80 80 32 */	lis r4, GXTokenInterruptHandler@ha
 /* 8031A6FC 002E3CBC  38 60 00 12 */	li r3, 0x12
 /* 8031A700 002E3CC0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8031A704 002E3CC4  38 84 A5 90 */	addi r4, r4, lbl_8031A590@l
+/* 8031A704 002E3CC4  38 84 A5 90 */	addi r4, r4, GXTokenInterruptHandler@l
 /* 8031A708 002E3CC8  48 03 E3 19 */	bl __OSSetInterruptHandler
-/* 8031A70C 002E3CCC  3C 80 80 32 */	lis r4, lbl_8031A670@ha
+/* 8031A70C 002E3CCC  3C 80 80 32 */	lis r4, GXFinishInterruptHandler@ha
 /* 8031A710 002E3CD0  38 60 00 13 */	li r3, 0x13
-/* 8031A714 002E3CD4  38 84 A6 70 */	addi r4, r4, lbl_8031A670@l
+/* 8031A714 002E3CD4  38 84 A6 70 */	addi r4, r4, GXFinishInterruptHandler@l
 /* 8031A718 002E3CD8  48 03 E3 09 */	bl __OSSetInterruptHandler
 /* 8031A71C 002E3CDC  38 6D B7 D0 */	addi r3, r13, lbl_80667950@sda21
 /* 8031A720 002E3CE0  48 04 0E B1 */	bl OSInitThreadQueue
