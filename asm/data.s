@@ -70650,7 +70650,7 @@ lbl_8056CB80:
 	.4byte func_803E36FC
 	.4byte func_803E37B0
 	.4byte func_803E3898
-	.4byte func_803E33B4
+	.4byte Release__Q34nw4r3g3d9AnmObjChrFv
 	.4byte func_803E3990
 	.4byte func_803E33F0
 	.4byte func_803E33F8
@@ -70673,7 +70673,7 @@ lbl_8056CBC8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte func_803E33B4
+	.4byte Release__Q34nw4r3g3d9AnmObjChrFv
 	.4byte 0
 	.4byte func_803E33F0
 	.4byte func_803E33F8

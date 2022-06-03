@@ -3,15 +3,15 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_802D9F50
-func_802D9F50:
+.global AXFXChorusExpGetMemSizeDpl2
+AXFXChorusExpGetMemSizeDpl2:
 /* 802D9F50 002A3510  3C 60 00 01 */	lis r3, 0x0000C800@ha
 /* 802D9F54 002A3514  38 63 C8 00 */	addi r3, r3, 0x0000C800@l
 /* 802D9F58 002A3518  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D9F60
-func_802D9F60:
+.global AXFXChorusExpInitDpl2
+AXFXChorusExpInitDpl2:
 /* 802D9F60 002A3520  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D9F64 002A3524  7C 08 02 A6 */	mflr r0
 /* 802D9F68 002A3528  90 01 00 24 */	stw r0, 0x24(r1)
@@ -143,7 +143,7 @@ lbl_802DA108:
 /* 802DA130 002A36F0  48 00 00 8C */	b lbl_802DA1BC
 lbl_802DA134:
 /* 802DA134 002A36F4  7F C3 F3 78 */	mr r3, r30
-/* 802DA138 002A36F8  48 00 06 79 */	bl func_802DA7B0
+/* 802DA138 002A36F8  48 00 06 79 */	bl __InitParams
 /* 802DA13C 002A36FC  2C 03 00 00 */	cmpwi r3, 0
 /* 802DA140 002A3700  40 82 00 64 */	bne lbl_802DA1A4
 /* 802DA144 002A3704  48 07 E8 6D */	bl OSDisableInterrupts
@@ -188,8 +188,8 @@ lbl_802DA1BC:
 /* 802DA1D0 002A3790  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DA1E0
-func_802DA1E0:
+.global AXFXChorusExpSettingsUpdateDpl2
+AXFXChorusExpSettingsUpdateDpl2:
 /* 802DA1E0 002A37A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DA1E4 002A37A4  7C 08 02 A6 */	mflr r0
 /* 802DA1E8 002A37A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -263,7 +263,7 @@ lbl_802DA2BC:
 /* 802DA2E4 002A38A4  48 00 00 94 */	b lbl_802DA378
 lbl_802DA2E8:
 /* 802DA2E8 002A38A8  7F C3 F3 78 */	mr r3, r30
-/* 802DA2EC 002A38AC  48 00 04 C5 */	bl func_802DA7B0
+/* 802DA2EC 002A38AC  48 00 04 C5 */	bl __InitParams
 /* 802DA2F0 002A38B0  2C 03 00 00 */	cmpwi r3, 0
 /* 802DA2F4 002A38B4  7C 7B 1B 78 */	mr r27, r3
 /* 802DA2F8 002A38B8  40 82 00 64 */	bne lbl_802DA35C
@@ -310,8 +310,8 @@ lbl_802DA378:
 /* 802DA38C 002A394C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DA390
-func_802DA390:
+.global AXFXChorusExpShutdownDpl2
+AXFXChorusExpShutdownDpl2:
 /* 802DA390 002A3950  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DA394 002A3954  7C 08 02 A6 */	mflr r0
 /* 802DA398 002A3958  90 01 00 24 */	stw r0, 0x24(r1)
@@ -352,8 +352,8 @@ lbl_802DA3E4:
 /* 802DA41C 002A39DC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DA420
-func_802DA420:
+.global AXFXChorusExpCallbackDpl2
+AXFXChorusExpCallbackDpl2:
 /* 802DA420 002A39E0  94 21 FE 00 */	stwu r1, -0x200(r1)
 /* 802DA424 002A39E4  7C 08 02 A6 */	mflr r0
 /* 802DA428 002A39E8  90 01 02 04 */	stw r0, 0x204(r1)
@@ -403,7 +403,7 @@ lbl_802DA4A4:
 lbl_802DA4D0:
 /* 802DA4D0 002A3A90  38 61 00 38 */	addi r3, r1, 0x38
 /* 802DA4D4 002A3A94  38 84 00 24 */	addi r4, r4, 0x24
-/* 802DA4D8 002A3A98  48 00 04 E9 */	bl func_802DA9C0
+/* 802DA4D8 002A3A98  48 00 04 E9 */	bl __CalcLFO
 /* 802DA4DC 002A3A9C  CB E2 BB 88 */	lfd f31, lbl_8066BF08@sda21(r2)
 /* 802DA4E0 002A3AA0  3B C1 00 38 */	addi r30, r1, 0x38
 /* 802DA4E4 002A3AA4  3B A0 00 00 */	li r29, 0
@@ -598,8 +598,7 @@ lbl_802DA784:
 /* 802DA7A0 002A3D60  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DA7B0
-func_802DA7B0:
+__InitParams:
 /* 802DA7B0 002A3D70  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802DA7B4 002A3D74  7C 08 02 A6 */	mflr r0
 /* 802DA7B8 002A3D78  C0 82 BB 90 */	lfs f4, lbl_8066BF10@sda21(r2)
@@ -746,8 +745,7 @@ lbl_802DA9A4:
 /* 802DA9B4 002A3F74  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DA9C0
-func_802DA9C0:
+__CalcLFO:
 /* 802DA9C0 002A3F80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DA9C4 002A3F84  38 00 00 60 */	li r0, 0x60
 /* 802DA9C8 002A3F88  93 E1 00 0C */	stw r31, 0xc(r1)

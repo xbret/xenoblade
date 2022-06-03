@@ -19136,7 +19136,7 @@ lbl_80021020:
 	.4byte ThrowContext$7ExPPC_ThrowHandler
 	.4byte 0x00000408
 	.4byte lbl_8001BF6C
-	.4byte func_80432678
+	.4byte AsinRad
 	.4byte 0x0000093C
 	.4byte lbl_8001BF80
 	.4byte func_80432FB4

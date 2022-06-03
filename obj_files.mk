@@ -66,7 +66,6 @@ GAME_O_FILES :=\
 
 
 MW_O_FILES :=\
-	$(BUILD_DIR)/asm/RevoSDK/memcpy.o \
 	$(BUILD_DIR)/asm/MetroTRK/mem_TRK.o \
 	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/__mem.o \
 	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/__exception.o \
@@ -244,7 +243,9 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/bte/sdp_main.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/sdp_server.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/sdp_utils.o \
-	$(BUILD_DIR)/asm/RevoSDK/code_80308530.o \
+	$(BUILD_DIR)/asm/RevoSDK/cx/CXStreamingUncompression.o \
+	$(BUILD_DIR)/asm/RevoSDK/cx/CXUncompression.o \
+	$(BUILD_DIR)/asm/RevoSDK/cx/CXSecureUncompression.o \
 	$(BUILD_DIR)/asm/RevoSDK/db/db.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp_debug.o \
@@ -433,7 +434,7 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmscn.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmshp.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmclr.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/code_803E3398.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmchr.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmscn.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_obj.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmobj.o \
@@ -462,7 +463,7 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_fog.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_light.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_calcvtx.o \
-	$(BUILD_DIR)/asm/nw4r/code_803FE8B0.o \
+	$(BUILD_DIR)/asm/nw4r/lyt/lyt_init.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_pane.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_group.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_layout.o \
@@ -474,7 +475,6 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_texMap.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_drawInfo.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_animation.o \
-	$(BUILD_DIR)/asm/nw4r/lyt/code_804093D8.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_resourceAccessor.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_arcResourceAccessor.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_common.o \
@@ -490,10 +490,14 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/snd/snd_BankFile.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_BasicPlayer.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_BasicSound.o \
-	$(BUILD_DIR)/asm/nw4r/snd/code_80413B14.o \
+	$(BUILD_DIR)/asm/nw4r/snd/snd_BiquadFilterPreset.o \
+	$(BUILD_DIR)/asm/nw4r/snd/snd_Channel.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_DisposeCallbackManager.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_EnvGenerator.o \
-	$(BUILD_DIR)/asm/nw4r/snd/code_80415760.o \
+	$(BUILD_DIR)/asm/nw4r/snd/snd_ExternalSoundPlayer.o \
+	$(BUILD_DIR)/asm/nw4r/snd/snd_FxChorusDpl2.o \
+	$(BUILD_DIR)/asm/nw4r/snd/snd_FxDelayDpl2.o \
+	$(BUILD_DIR)/asm/nw4r/snd/snd_FxReverbStdDpl2.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_InstancePool.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_Lfo.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_MemorySoundArchive.o \
@@ -542,7 +546,8 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/ut/ut_Font.o \
 	$(BUILD_DIR)/asm/nw4r/ut/ut_ResFontBase.o \
 	$(BUILD_DIR)/asm/nw4r/ut/ut_ResFont.o \
-	$(BUILD_DIR)/asm/nw4r/ut/code_8042CC2C.o \
+	$(BUILD_DIR)/asm/nw4r/ut/ut_ArchiveFontBase.o \
+	$(BUILD_DIR)/asm/nw4r/ut/ut_PackedFont.o \
 	$(BUILD_DIR)/asm/nw4r/ut/ut_CharWriter.o
 
 MONOLITHLIB_O_FILES :=\

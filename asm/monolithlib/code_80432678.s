@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80432678
-func_80432678:
+.global AsinRad
+AsinRad:
 /* 80432678 003FBC38  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 8043267C 003FBC3C  7C 08 02 A6 */	mflr r0
 /* 80432680 003FBC40  90 01 00 B4 */	stw r0, 0xb4(r1)

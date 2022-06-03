@@ -551,8 +551,8 @@ __shl2i:
 /* 802BA5E8 00283BA8  7C 84 28 30 */	slw r4, r4, r5
 /* 802BA5EC 00283BAC  4E 80 00 20 */	blr 
 
-.global func_802BA5F0
-func_802BA5F0:
+.global __shr2i
+__shr2i:
 /* 802BA5F0 00283BB0  21 05 00 20 */	subfic r8, r5, 0x20
 /* 802BA5F4 00283BB4  35 25 FF E0 */	addic. r9, r5, -32
 /* 802BA5F8 00283BB8  7C 84 2C 30 */	srw r4, r4, r5

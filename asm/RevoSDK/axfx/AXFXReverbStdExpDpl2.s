@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_802D86C0
-func_802D86C0:
+.global AXFXReverbStdExpGetMemSizeDpl2
+AXFXReverbStdExpGetMemSizeDpl2:
 /* 802D86C0 002A1C80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D86C4 002A1C84  3C 80 80 54 */	lis r4, lbl_80543350@ha
 /* 802D86C8 002A1C88  3C C0 80 54 */	lis r6, lbl_80543370@ha
@@ -31,8 +31,8 @@ func_802D86C0:
 /* 802D871C 002A1CDC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D8720
-func_802D8720:
+.global AXFXReverbStdExpInitDpl2
+AXFXReverbStdExpInitDpl2:
 /* 802D8720 002A1CE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D8724 002A1CE4  7C 08 02 A6 */	mflr r0
 /* 802D8728 002A1CE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -107,9 +107,9 @@ lbl_802D87AC:
 /* 802D8834 002A1DF4  48 00 00 68 */	b lbl_802D889C
 lbl_802D8838:
 /* 802D8838 002A1DF8  7F C3 F3 78 */	mr r3, r30
-/* 802D883C 002A1DFC  48 00 07 55 */	bl func_802D8F90
+/* 802D883C 002A1DFC  48 00 07 55 */	bl __BzeroDelayLines
 /* 802D8840 002A1E00  7F C3 F3 78 */	mr r3, r30
-/* 802D8844 002A1E04  48 00 09 3D */	bl func_802D9180
+/* 802D8844 002A1E04  48 00 09 3D */	bl __InitParams
 /* 802D8848 002A1E08  2C 03 00 00 */	cmpwi r3, 0
 /* 802D884C 002A1E0C  40 82 00 38 */	bne lbl_802D8884
 /* 802D8850 002A1E10  48 08 01 61 */	bl OSDisableInterrupts
@@ -142,8 +142,8 @@ lbl_802D889C:
 /* 802D88B4 002A1E74  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D88C0
-func_802D88C0:
+.global AXFXReverbStdExpSettingsDpl2
+AXFXReverbStdExpSettingsDpl2:
 /* 802D88C0 002A1E80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D88C4 002A1E84  7C 08 02 A6 */	mflr r0
 /* 802D88C8 002A1E88  90 01 00 24 */	stw r0, 0x24(r1)
@@ -166,7 +166,7 @@ func_802D88C0:
 /* 802D890C 002A1ECC  7F E3 FB 78 */	mr r3, r31
 /* 802D8910 002A1ED0  48 08 00 E1 */	bl OSRestoreInterrupts
 /* 802D8914 002A1ED4  7F A3 EB 78 */	mr r3, r29
-/* 802D8918 002A1ED8  4B FF FE 09 */	bl func_802D8720
+/* 802D8918 002A1ED8  4B FF FE 09 */	bl AXFXReverbStdExpInitDpl2
 /* 802D891C 002A1EDC  2C 03 00 00 */	cmpwi r3, 0
 /* 802D8920 002A1EE0  40 82 00 38 */	bne lbl_802D8958
 /* 802D8924 002A1EE4  48 08 00 8D */	bl OSDisableInterrupts
@@ -200,8 +200,8 @@ lbl_802D8974:
 /* 802D898C 002A1F4C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D8990
-func_802D8990:
+.global AXFXReverbStdExpSettingsUpdateDpl2
+AXFXReverbStdExpSettingsUpdateDpl2:
 /* 802D8990 002A1F50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D8994 002A1F54  7C 08 02 A6 */	mflr r0
 /* 802D8998 002A1F58  90 01 00 24 */	stw r0, 0x24(r1)
@@ -215,9 +215,9 @@ func_802D8990:
 /* 802D89B8 002A1F78  7F A3 EB 78 */	mr r3, r29
 /* 802D89BC 002A1F7C  60 00 00 01 */	ori r0, r0, 1
 /* 802D89C0 002A1F80  90 1D 00 CC */	stw r0, 0xcc(r29)
-/* 802D89C4 002A1F84  48 00 05 CD */	bl func_802D8F90
+/* 802D89C4 002A1F84  48 00 05 CD */	bl __BzeroDelayLines
 /* 802D89C8 002A1F88  7F A3 EB 78 */	mr r3, r29
-/* 802D89CC 002A1F8C  48 00 07 B5 */	bl func_802D9180
+/* 802D89CC 002A1F8C  48 00 07 B5 */	bl __InitParams
 /* 802D89D0 002A1F90  2C 03 00 00 */	cmpwi r3, 0
 /* 802D89D4 002A1F94  40 82 00 38 */	bne lbl_802D8A0C
 /* 802D89D8 002A1F98  48 07 FF D9 */	bl OSDisableInterrupts
@@ -251,8 +251,8 @@ lbl_802D8A28:
 /* 802D8A40 002A2000  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D8A50
-func_802D8A50:
+.global AXFXReverbStdExpShutdownDpl2
+AXFXReverbStdExpShutdownDpl2:
 /* 802D8A50 002A2010  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D8A54 002A2014  7C 08 02 A6 */	mflr r0
 /* 802D8A58 002A2018  90 01 00 14 */	stw r0, 0x14(r1)
@@ -276,8 +276,8 @@ func_802D8A50:
 /* 802D8AA0 002A2060  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D8AB0
-func_802D8AB0:
+.global AXFXReverbStdExpCallbackDpl2
+AXFXReverbStdExpCallbackDpl2:
 /* 802D8AB0 002A2070  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802D8AB4 002A2074  7C 08 02 A6 */	mflr r0
 /* 802D8AB8 002A2078  90 01 00 74 */	stw r0, 0x74(r1)
@@ -615,8 +615,7 @@ lbl_802D8F6C:
 /* 802D8F80 002A2540  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D8F90
-func_802D8F90:
+__BzeroDelayLines:
 /* 802D8F90 002A2550  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D8F94 002A2554  7C 08 02 A6 */	mflr r0
 /* 802D8F98 002A2558  90 01 00 34 */	stw r0, 0x34(r1)
@@ -760,8 +759,7 @@ lbl_802D9144:
 /* 802D917C 002A273C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D9180
-func_802D9180:
+__InitParams:
 /* 802D9180 002A2740  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802D9184 002A2744  7C 08 02 A6 */	mflr r0
 /* 802D9188 002A2748  90 01 00 64 */	stw r0, 0x64(r1)

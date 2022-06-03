@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_802D70C0
-func_802D70C0:
+.global AXFXDelayExpGetMemSizeDpl2
+AXFXDelayExpGetMemSizeDpl2:
 /* 802D70C0 002A0680  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D70C4 002A0684  C0 22 BA B8 */	lfs f1, lbl_8066BE38@sda21(r2)
 /* 802D70C8 002A0688  C0 03 00 40 */	lfs f0, 0x40(r3)
@@ -17,8 +17,8 @@ func_802D70C0:
 /* 802D70E4 002A06A4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D70F0
-func_802D70F0:
+.global AXFXDelayExpInitDpl2
+AXFXDelayExpInitDpl2:
 /* 802D70F0 002A06B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D70F4 002A06B4  7C 08 02 A6 */	mflr r0
 /* 802D70F8 002A06B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -173,8 +173,8 @@ lbl_802D72FC:
 /* 802D7310 002A08D0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D7320
-func_802D7320:
+.global AXFXDelayExpSettingsDpl2
+AXFXDelayExpSettingsDpl2:
 /* 802D7320 002A08E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D7324 002A08E4  7C 08 02 A6 */	mflr r0
 /* 802D7328 002A08E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -210,7 +210,7 @@ lbl_802D7388:
 /* 802D7398 002A0958  7F 83 E3 78 */	mr r3, r28
 /* 802D739C 002A095C  48 08 16 55 */	bl OSRestoreInterrupts
 /* 802D73A0 002A0960  7F E3 FB 78 */	mr r3, r31
-/* 802D73A4 002A0964  4B FF FD 4D */	bl func_802D70F0
+/* 802D73A4 002A0964  4B FF FD 4D */	bl AXFXDelayExpInitDpl2
 /* 802D73A8 002A0968  2C 03 00 00 */	cmpwi r3, 0
 /* 802D73AC 002A096C  40 82 00 64 */	bne lbl_802D7410
 /* 802D73B0 002A0970  48 08 16 01 */	bl OSDisableInterrupts
@@ -256,8 +256,8 @@ lbl_802D742C:
 /* 802D7440 002A0A00  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D7450
-func_802D7450:
+.global AXFXDelayExpSettingsUpdateDpl2
+AXFXDelayExpSettingsUpdateDpl2:
 /* 802D7450 002A0A10  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D7454 002A0A14  7C 08 02 A6 */	mflr r0
 /* 802D7458 002A0A18  90 01 00 24 */	stw r0, 0x24(r1)
@@ -316,8 +316,8 @@ lbl_802D7508:
 /* 802D751C 002A0ADC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D7520
-func_802D7520:
+.global AXFXDelayExpShutdownDpl2
+AXFXDelayExpShutdownDpl2:
 /* 802D7520 002A0AE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D7524 002A0AE4  7C 08 02 A6 */	mflr r0
 /* 802D7528 002A0AE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -358,8 +358,8 @@ lbl_802D7578:
 /* 802D75AC 002A0B6C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D75B0
-func_802D75B0:
+.global AXFXDelayExpCallbackDpl2
+AXFXDelayExpCallbackDpl2:
 /* 802D75B0 002A0B70  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 802D75B4 002A0B74  7C 08 02 A6 */	mflr r0
 /* 802D75B8 002A0B78  90 01 00 84 */	stw r0, 0x84(r1)

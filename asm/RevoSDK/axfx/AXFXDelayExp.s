@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_802D65F0
-func_802D65F0:
+.global AXFXDelayExpGetMemSize
+AXFXDelayExpGetMemSize:
 /* 802D65F0 0029FBB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D65F4 0029FBB4  C0 22 BA A0 */	lfs f1, lbl_8066BE20@sda21(r2)
 /* 802D65F8 0029FBB8  C0 03 00 38 */	lfs f0, 0x38(r3)
@@ -17,8 +17,8 @@ func_802D65F0:
 /* 802D6614 0029FBD4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D6620
-func_802D6620:
+.global AXFXDelayExpInit
+AXFXDelayExpInit:
 /* 802D6620 0029FBE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D6624 0029FBE4  7C 08 02 A6 */	mflr r0
 /* 802D6628 0029FBE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -158,7 +158,7 @@ lbl_802D6800:
 /* 802D6814 0029FDD4  48 00 00 C0 */	b lbl_802D68D4
 lbl_802D6818:
 /* 802D6818 0029FDD8  7F C3 F3 78 */	mr r3, r30
-/* 802D681C 0029FDDC  48 00 06 A5 */	bl func_802D6EC0
+/* 802D681C 0029FDDC  48 00 06 A5 */	bl __InitParams
 /* 802D6820 0029FDE0  2C 03 00 00 */	cmpwi r3, 0
 /* 802D6824 0029FDE4  40 82 00 94 */	bne lbl_802D68B8
 /* 802D6828 0029FDE8  48 08 21 89 */	bl OSDisableInterrupts
@@ -218,8 +218,8 @@ lbl_802D68D4:
 /* 802D68EC 0029FEAC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D68F0
-func_802D68F0:
+.global AXFXDelayExpSettings
+AXFXDelayExpSettings:
 /* 802D68F0 0029FEB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D68F4 0029FEB4  7C 08 02 A6 */	mflr r0
 /* 802D68F8 0029FEB8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -268,7 +268,7 @@ lbl_802D6998:
 /* 802D6998 0029FF58  7F A3 EB 78 */	mr r3, r29
 /* 802D699C 0029FF5C  48 08 20 55 */	bl OSRestoreInterrupts
 /* 802D69A0 0029FF60  7F C3 F3 78 */	mr r3, r30
-/* 802D69A4 0029FF64  4B FF FC 7D */	bl func_802D6620
+/* 802D69A4 0029FF64  4B FF FC 7D */	bl AXFXDelayExpInit
 /* 802D69A8 0029FF68  2C 03 00 00 */	cmpwi r3, 0
 /* 802D69AC 0029FF6C  40 82 00 94 */	bne lbl_802D6A40
 /* 802D69B0 0029FF70  48 08 20 01 */	bl OSDisableInterrupts
@@ -328,8 +328,8 @@ lbl_802D6A5C:
 /* 802D6A74 002A0034  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D6A80
-func_802D6A80:
+.global AXFXDelayExpSettingsUpdate
+AXFXDelayExpSettingsUpdate:
 /* 802D6A80 002A0040  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D6A84 002A0044  7C 08 02 A6 */	mflr r0
 /* 802D6A88 002A0048  90 01 00 24 */	stw r0, 0x24(r1)
@@ -343,7 +343,7 @@ func_802D6A80:
 /* 802D6AA8 002A0068  7F A3 EB 78 */	mr r3, r29
 /* 802D6AAC 002A006C  60 00 00 01 */	ori r0, r0, 1
 /* 802D6AB0 002A0070  90 1D 00 34 */	stw r0, 0x34(r29)
-/* 802D6AB4 002A0074  48 00 04 0D */	bl func_802D6EC0
+/* 802D6AB4 002A0074  48 00 04 0D */	bl __InitParams
 /* 802D6AB8 002A0078  2C 03 00 00 */	cmpwi r3, 0
 /* 802D6ABC 002A007C  40 82 00 94 */	bne lbl_802D6B50
 /* 802D6AC0 002A0080  48 08 1E F1 */	bl OSDisableInterrupts
@@ -403,8 +403,8 @@ lbl_802D6B6C:
 /* 802D6B84 002A0144  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D6B90
-func_802D6B90:
+.global AXFXDelayExpShutdown
+AXFXDelayExpShutdown:
 /* 802D6B90 002A0150  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D6B94 002A0154  7C 08 02 A6 */	mflr r0
 /* 802D6B98 002A0158  90 01 00 14 */	stw r0, 0x14(r1)
@@ -454,8 +454,8 @@ lbl_802D6C20:
 /* 802D6C3C 002A01FC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D6C40
-func_802D6C40:
+.global AXFXDelayExpCallback
+AXFXDelayExpCallback:
 /* 802D6C40 002A0200  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802D6C44 002A0204  7C 08 02 A6 */	mflr r0
 /* 802D6C48 002A0208  90 01 00 44 */	stw r0, 0x44(r1)
@@ -625,8 +625,7 @@ lbl_802D6EA0:
 /* 802D6EB4 002A0474  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D6EC0
-func_802D6EC0:
+__InitParams:
 /* 802D6EC0 002A0480  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D6EC4 002A0484  7C 08 02 A6 */	mflr r0
 /* 802D6EC8 002A0488  90 01 00 34 */	stw r0, 0x34(r1)

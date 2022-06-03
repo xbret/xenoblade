@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_802D7990
-func_802D7990:
+.global AXFXReverbStdExpGetMemSize
+AXFXReverbStdExpGetMemSize:
 /* 802D7990 002A0F50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D7994 002A0F54  3C 80 80 54 */	lis r4, lbl_805432C0@ha
 /* 802D7998 002A0F58  3C C0 80 54 */	lis r6, lbl_805432E0@ha
@@ -31,8 +31,8 @@ func_802D7990:
 /* 802D79EC 002A0FAC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D79F0
-func_802D79F0:
+.global AXFXReverbStdExpInit
+AXFXReverbStdExpInit:
 /* 802D79F0 002A0FB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D79F4 002A0FB4  7C 08 02 A6 */	mflr r0
 /* 802D79F8 002A0FB8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -81,7 +81,7 @@ lbl_802D7A60:
 /* 802D7AA0 002A1060  90 1E 00 94 */	stw r0, 0x94(r30)
 /* 802D7AA4 002A1064  80 04 00 6C */	lwz r0, 0x6c(r4)
 /* 802D7AA8 002A1068  90 1E 00 98 */	stw r0, 0x98(r30)
-/* 802D7AAC 002A106C  48 00 06 25 */	bl func_802D80D0
+/* 802D7AAC 002A106C  48 00 06 25 */	bl __AllocDelayLine
 /* 802D7AB0 002A1070  2C 03 00 00 */	cmpwi r3, 0
 /* 802D7AB4 002A1074  40 82 00 38 */	bne lbl_802D7AEC
 /* 802D7AB8 002A1078  48 08 0E F9 */	bl OSDisableInterrupts
@@ -99,9 +99,9 @@ lbl_802D7A60:
 /* 802D7AE8 002A10A8  48 00 00 68 */	b lbl_802D7B50
 lbl_802D7AEC:
 /* 802D7AEC 002A10AC  7F C3 F3 78 */	mr r3, r30
-/* 802D7AF0 002A10B0  48 00 07 31 */	bl func_802D8220
+/* 802D7AF0 002A10B0  48 00 07 31 */	bl __BzeroDelayLines
 /* 802D7AF4 002A10B4  7F C3 F3 78 */	mr r3, r30
-/* 802D7AF8 002A10B8  48 00 09 19 */	bl func_802D8410
+/* 802D7AF8 002A10B8  48 00 09 19 */	bl __InitParams
 /* 802D7AFC 002A10BC  2C 03 00 00 */	cmpwi r3, 0
 /* 802D7B00 002A10C0  40 82 00 38 */	bne lbl_802D7B38
 /* 802D7B04 002A10C4  48 08 0E AD */	bl OSDisableInterrupts
@@ -134,8 +134,8 @@ lbl_802D7B50:
 /* 802D7B68 002A1128  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D7B70
-func_802D7B70:
+.global AXFXReverbStdExpSettings
+AXFXReverbStdExpSettings:
 /* 802D7B70 002A1130  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D7B74 002A1134  7C 08 02 A6 */	mflr r0
 /* 802D7B78 002A1138  90 01 00 24 */	stw r0, 0x24(r1)
@@ -158,7 +158,7 @@ func_802D7B70:
 /* 802D7BBC 002A117C  7F E3 FB 78 */	mr r3, r31
 /* 802D7BC0 002A1180  48 08 0E 31 */	bl OSRestoreInterrupts
 /* 802D7BC4 002A1184  7F A3 EB 78 */	mr r3, r29
-/* 802D7BC8 002A1188  4B FF FE 29 */	bl func_802D79F0
+/* 802D7BC8 002A1188  4B FF FE 29 */	bl AXFXReverbStdExpInit
 /* 802D7BCC 002A118C  2C 03 00 00 */	cmpwi r3, 0
 /* 802D7BD0 002A1190  40 82 00 38 */	bne lbl_802D7C08
 /* 802D7BD4 002A1194  48 08 0D DD */	bl OSDisableInterrupts
@@ -192,8 +192,8 @@ lbl_802D7C24:
 /* 802D7C3C 002A11FC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D7C40
-func_802D7C40:
+.global AXFXReverbStdExpSettingsUpdate
+AXFXReverbStdExpSettingsUpdate:
 /* 802D7C40 002A1200  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D7C44 002A1204  7C 08 02 A6 */	mflr r0
 /* 802D7C48 002A1208  90 01 00 24 */	stw r0, 0x24(r1)
@@ -207,9 +207,9 @@ func_802D7C40:
 /* 802D7C68 002A1228  7F A3 EB 78 */	mr r3, r29
 /* 802D7C6C 002A122C  60 00 00 01 */	ori r0, r0, 1
 /* 802D7C70 002A1230  90 1D 00 B0 */	stw r0, 0xb0(r29)
-/* 802D7C74 002A1234  48 00 05 AD */	bl func_802D8220
+/* 802D7C74 002A1234  48 00 05 AD */	bl __BzeroDelayLines
 /* 802D7C78 002A1238  7F A3 EB 78 */	mr r3, r29
-/* 802D7C7C 002A123C  48 00 07 95 */	bl func_802D8410
+/* 802D7C7C 002A123C  48 00 07 95 */	bl __InitParams
 /* 802D7C80 002A1240  2C 03 00 00 */	cmpwi r3, 0
 /* 802D7C84 002A1244  40 82 00 38 */	bne lbl_802D7CBC
 /* 802D7C88 002A1248  48 08 0D 29 */	bl OSDisableInterrupts
@@ -243,8 +243,8 @@ lbl_802D7CD8:
 /* 802D7CF0 002A12B0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D7D00
-func_802D7D00:
+.global AXFXReverbStdExpShutdown
+AXFXReverbStdExpShutdown:
 /* 802D7D00 002A12C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D7D04 002A12C4  7C 08 02 A6 */	mflr r0
 /* 802D7D08 002A12C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -268,8 +268,8 @@ func_802D7D00:
 /* 802D7D50 002A1310  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D7D60
-func_802D7D60:
+.global AXFXReverbStdExpCallback
+AXFXReverbStdExpCallback:
 /* 802D7D60 002A1320  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802D7D64 002A1324  7C 08 02 A6 */	mflr r0
 /* 802D7D68 002A1328  90 01 00 64 */	stw r0, 0x64(r1)
@@ -508,8 +508,8 @@ lbl_802D80B4:
 /* 802D80C8 002A1688  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D80D0
-func_802D80D0:
+.global __AllocDelayLine
+__AllocDelayLine:
 /* 802D80D0 002A1690  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D80D4 002A1694  7C 08 02 A6 */	mflr r0
 /* 802D80D8 002A1698  90 01 00 34 */	stw r0, 0x34(r1)
@@ -602,8 +602,7 @@ lbl_802D81FC:
 /* 802D8210 002A17D0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D8220
-func_802D8220:
+__BzeroDelayLines:
 /* 802D8220 002A17E0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D8224 002A17E4  7C 08 02 A6 */	mflr r0
 /* 802D8228 002A17E8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -747,8 +746,7 @@ lbl_802D83D4:
 /* 802D840C 002A19CC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D8410
-func_802D8410:
+__InitParams:
 /* 802D8410 002A19D0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802D8414 002A19D4  7C 08 02 A6 */	mflr r0
 /* 802D8418 002A19D8  90 01 00 64 */	stw r0, 0x64(r1)

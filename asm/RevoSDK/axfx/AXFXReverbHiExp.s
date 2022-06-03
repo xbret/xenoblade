@@ -599,7 +599,6 @@ lbl_802D604C:
 /* 802D6060 0029F620  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global __BzeroDelayLines
 __BzeroDelayLines:
 /* 802D6070 0029F630  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D6074 0029F634  7C 08 02 A6 */	mflr r0
