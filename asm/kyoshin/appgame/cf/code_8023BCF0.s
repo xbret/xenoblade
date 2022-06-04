@@ -3239,8 +3239,8 @@ func_8023EB60:
 /* 8023EB68 00208128  4D 81 00 20 */	bgtlr 
 /* 8023EB6C 0020812C  38 00 00 04 */	li r0, 4
 /* 8023EB70 00208130  90 06 00 00 */	stw r0, 0(r6)
-.global func_8023EB74
-func_8023EB74:
+.global lbl_8023EB74
+lbl_8023EB74:
 /* 8023EB74 00208134  4E 80 00 20 */	blr 
 
 .global func_8023EB78

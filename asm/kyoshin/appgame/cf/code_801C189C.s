@@ -1430,24 +1430,20 @@ lbl_801C2BD8:
 func_801C2BEC:
 /* 801C2BEC 0018C1AC  38 63 FF AC */	addi r3, r3, -84
 /* 801C2BF0 0018C1B0  4B FF FD C0 */	b func_801C29B0
-
-.global func_801C2BF4
-func_801C2BF4:
+.global lbl_801C2BF4
+lbl_801C2BF4:
 /* 801C2BF4 0018C1B4  38 63 FF AC */	addi r3, r3, -84
 /* 801C2BF8 0018C1B8  4B FF ED F8 */	b func_801C19F0
-
-.global func_801C2BFC
-func_801C2BFC:
+.global lbl_801C2BFC
+lbl_801C2BFC:
 /* 801C2BFC 0018C1BC  38 63 FF A8 */	addi r3, r3, -88
 /* 801C2C00 0018C1C0  4B FF FE FC */	b func_801C2AFC
-
-.global func_801C2C04
-func_801C2C04:
+.global lbl_801C2C04
+lbl_801C2C04:
 /* 801C2C04 0018C1C4  38 63 FF A8 */	addi r3, r3, -88
 /* 801C2C08 0018C1C8  4B FF FE C4 */	b func_801C2ACC
-
-.global func_801C2C0C
-func_801C2C0C:
+.global lbl_801C2C0C
+lbl_801C2C0C:
 /* 801C2C0C 0018C1CC  38 63 FF A8 */	addi r3, r3, -88
 /* 801C2C10 0018C1D0  4B FF ED E0 */	b func_801C19F0
 

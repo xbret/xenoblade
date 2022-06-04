@@ -44,17 +44,14 @@ func_80039F34:
 .global func_80039F5C
 func_80039F5C:
 /* 80039F5C 0000351C  48 11 09 10 */	b func_8014A86C
-
-.global func_80039F60
-func_80039F60:
+.global lbl_80039F60
+lbl_80039F60:
 /* 80039F60 00003520  48 11 09 98 */	b func_8014A8F8
-
-.global func_80039F64
-func_80039F64:
+.global lbl_80039F64
+lbl_80039F64:
 /* 80039F64 00003524  48 42 35 1C */	b func_8045D480
-
-.global func_80039F68
-func_80039F68:
+.global lbl_80039F68
+lbl_80039F68:
 /* 80039F68 00003528  48 42 35 94 */	b func_8045D4FC
 
 .global func_80039F6C

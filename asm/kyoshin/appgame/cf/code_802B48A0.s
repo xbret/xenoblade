@@ -659,14 +659,12 @@ lbl_802B511C:
 func_802B5130:
 /* 802B5130 0027E6F0  38 63 FF AC */	addi r3, r3, -84
 /* 802B5134 0027E6F4  4B FF FA F8 */	b func_802B4C2C
-
-.global func_802B5138
-func_802B5138:
+.global lbl_802B5138
+lbl_802B5138:
 /* 802B5138 0027E6F8  38 63 FF A8 */	addi r3, r3, -88
 /* 802B513C 0027E6FC  4B FF FC 58 */	b func_802B4D94
-
-.global func_802B5140
-func_802B5140:
+.global lbl_802B5140
+lbl_802B5140:
 /* 802B5140 0027E700  38 63 FF A8 */	addi r3, r3, -88
 /* 802B5144 0027E704  4B FF FA E8 */	b func_802B4C2C
 
@@ -1968,14 +1966,12 @@ lbl_802B6300:
 func_802B6314:
 /* 802B6314 0027F8D4  38 63 FF AC */	addi r3, r3, -84
 /* 802B6318 0027F8D8  4B FF F9 08 */	b func_802B5C20
-
-.global func_802B631C
-func_802B631C:
+.global lbl_802B631C
+lbl_802B631C:
 /* 802B631C 0027F8DC  38 63 FF A8 */	addi r3, r3, -88
 /* 802B6320 0027F8E0  4B FF FA 60 */	b func_802B5D80
-
-.global func_802B6324
-func_802B6324:
+.global lbl_802B6324
+lbl_802B6324:
 /* 802B6324 0027F8E4  38 63 FF A8 */	addi r3, r3, -88
 /* 802B6328 0027F8E8  4B FF F8 F8 */	b func_802B5C20
 
@@ -4206,9 +4202,8 @@ lbl_802B80D4:
 .global func_802B80EC
 func_802B80EC:
 /* 802B80EC 002816AC  4B F5 A3 A4 */	b func_80212490
-
-.global func_802B80F0
-func_802B80F0:
+.global lbl_802B80F0
+lbl_802B80F0:
 /* 802B80F0 002816B0  4B F0 6D 6C */	b func_801BEE5C
 
 .global func_802B80F4
@@ -4415,9 +4410,8 @@ lbl_802B8378:
 func_802B8388:
 /* 802B8388 00281948  38 63 FF F4 */	addi r3, r3, -12
 /* 802B838C 0028194C  4B FF FF 04 */	b func_802B8290
-
-.global func_802B8390
-func_802B8390:
+.global lbl_802B8390
+lbl_802B8390:
 /* 802B8390 00281950  38 63 FF F4 */	addi r3, r3, -12
 /* 802B8394 00281954  4B FF FE 74 */	b func_802B8208
 
@@ -4633,9 +4627,8 @@ func_802B8604:
 .global func_802B864C
 func_802B864C:
 /* 802B864C 00281C0C  4B ED 3B 34 */	b func_8018C180
-
-.global func_802B8650
-func_802B8650:
+.global lbl_802B8650
+lbl_802B8650:
 /* 802B8650 00281C10  4B ED 2D 48 */	b func_8018B398
 
 .global func_802B8654
