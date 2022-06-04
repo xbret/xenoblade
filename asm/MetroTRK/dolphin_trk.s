@@ -6,8 +6,8 @@
 InitMetroTRK:
 /* 802CBF00  38 21 FF FC */		addi r1,r1,-4
 /* 802CBF04  90 61 00 00 */		stw r3,0(r1)
-/* 802CBF08  3C 60 80 57 */		lis r3, lbl_8057D3F8@h
-/* 802CBF0C  60 63 D3 F8 */		ori r3,r3, lbl_8057D3F8@l
+/* 802CBF08  3C 60 80 57 */		lis r3, gTRKCPUState@h
+/* 802CBF0C  60 63 D3 F8 */		ori r3,r3, gTRKCPUState@l
 /* 802CBF10  BC 03 00 00 */		stmw r0,0(r3)
 /* 802CBF14  80 81 00 00 */		lwz r4,0(r1)
 /* 802CBF18  38 21 00 04 */		addi r1,r1,4
@@ -24,8 +24,8 @@ InitMetroTRK:
 /* 802CBF44  7C 60 01 24 */		mtmsr r3
 /* 802CBF48  7C 9B 03 A6 */		mtsrr1 r4
 /* 802CBF4C  48 00 11 AD */		bl TRKSaveExtended1Block
-/* 802CBF50  3C 60 80 57 */		lis r3, lbl_8057D3F8@h
-/* 802CBF54  60 63 D3 F8 */		ori r3,r3, lbl_8057D3F8@l
+/* 802CBF50  3C 60 80 57 */		lis r3, gTRKCPUState@h
+/* 802CBF54  60 63 D3 F8 */		ori r3,r3, gTRKCPUState@l
 /* 802CBF58  B8 03 00 00 */		.4byte 0xB8030000  /* illegal lmw r0, 0(r3) */
 /* 802CBF5C  38 00 00 00 */		li r0,0
 /* 802CBF60  7C 12 FB A6 */		mtspr 0x3f2 ,r0
@@ -48,8 +48,8 @@ lbl_802CBF90:
 InitMetroTRK_BBA:
 /* 802CBF98 00295558  38 21 FF FC */	addi r1, r1, -4
 /* 802CBF9C 0029555C  90 61 00 00 */	stw r3, 0(r1)
-/* 802CBFA0 00295560  3C 60 80 57 */	lis r3, lbl_8057D3F8@h
-/* 802CBFA4 00295564  60 63 D3 F8 */	ori r3, r3, lbl_8057D3F8@l
+/* 802CBFA0 00295560  3C 60 80 57 */	lis r3, gTRKCPUState@h
+/* 802CBFA4 00295564  60 63 D3 F8 */	ori r3, r3, gTRKCPUState@l
 /* 802CBFA8 00295568  BC 03 00 00 */	stmw r0, 0(r3)
 /* 802CBFAC 0029556C  80 81 00 00 */	lwz r4, 0(r1)
 /* 802CBFB0 00295570  38 21 00 04 */	addi r1, r1, 4
@@ -65,8 +65,8 @@ InitMetroTRK_BBA:
 /* 802CBFD8 00295598  7C 60 01 24 */	mtmsr r3
 /* 802CBFDC 0029559C  7C 9B 03 A6 */	mtspr 0x1b, r4
 /* 802CBFE0 002955A0  48 00 11 19 */	bl TRKSaveExtended1Block
-/* 802CBFE4 002955A4  3C 60 80 57 */	lis r3, lbl_8057D3F8@h
-/* 802CBFE8 002955A8  60 63 D3 F8 */	ori r3, r3, lbl_8057D3F8@l
+/* 802CBFE4 002955A4  3C 60 80 57 */	lis r3, gTRKCPUState@h
+/* 802CBFE8 002955A8  60 63 D3 F8 */	ori r3, r3, gTRKCPUState@l
 /* 802CBFEC 002955AC  B8 03 00 00 */	.4byte 0xB8030000  /* illegal lmw r0, 0(r3) */
 /* 802CBFF0 002955B0  38 00 00 00 */	li r0, 0
 /* 802CBFF4 002955B4  7C 12 FB A6 */	mtspr 0x3f2, r0
@@ -97,8 +97,8 @@ func_802CC030:
 /* 802CC03C 002955FC  38 04 40 00 */	addi r0, r4, 0x4000
 /* 802CC040 00295600  7C 03 00 40 */	cmplw r3, r0
 /* 802CC044 00295604  40 80 00 18 */	bge lbl_802CC05C
-/* 802CC048 00295608  3C 80 80 58 */	lis r4, lbl_8057D3F8@ha
-/* 802CC04C 0029560C  38 84 D3 F8 */	addi r4, r4, lbl_8057D3F8@l
+/* 802CC048 00295608  3C 80 80 58 */	lis r4, gTRKCPUState@ha
+/* 802CC04C 0029560C  38 84 D3 F8 */	addi r4, r4, gTRKCPUState@l
 /* 802CC050 00295610  80 04 02 38 */	lwz r0, 0x238(r4)
 /* 802CC054 00295614  54 00 07 BF */	clrlwi. r0, r0, 0x1e
 /* 802CC058 00295618  4C 82 00 20 */	bnelr 
@@ -134,8 +134,8 @@ __TRK_copy_vectors:
 /* 802CC0B4 00295674  38 03 40 00 */	addi r0, r3, 0x4000
 /* 802CC0B8 00295678  28 00 00 44 */	cmplwi r0, 0x44
 /* 802CC0BC 0029567C  40 81 00 20 */	ble lbl_802CC0DC
-/* 802CC0C0 00295680  3C 60 80 58 */	lis r3, lbl_8057D3F8@ha
-/* 802CC0C4 00295684  38 63 D3 F8 */	addi r3, r3, lbl_8057D3F8@l
+/* 802CC0C0 00295680  3C 60 80 58 */	lis r3, gTRKCPUState@ha
+/* 802CC0C4 00295684  38 63 D3 F8 */	addi r3, r3, gTRKCPUState@l
 /* 802CC0C8 00295688  80 03 02 38 */	lwz r0, 0x238(r3)
 /* 802CC0CC 0029568C  54 00 07 BF */	clrlwi. r0, r0, 0x1e
 /* 802CC0D0 00295690  41 82 00 0C */	beq lbl_802CC0DC
@@ -146,11 +146,11 @@ lbl_802CC0DC:
 /* 802CC0E0 002956A0  38 63 00 44 */	addi r3, r3, 0x80000044@l
 lbl_802CC0E4:
 /* 802CC0E4 002956A4  3F E0 80 54 */	lis r31, lbl_8053FD40@ha
-/* 802CC0E8 002956A8  3F 00 80 58 */	lis r24, lbl_8057D3F8@ha
+/* 802CC0E8 002956A8  3F 00 80 58 */	lis r24, gTRKCPUState@ha
 /* 802CC0EC 002956AC  3F 80 80 00 */	lis r28, gTRKInterruptVectorTable@ha
 /* 802CC0F0 002956B0  83 A3 00 00 */	lwz r29, 0(r3)
 /* 802CC0F4 002956B4  3B FF FD 40 */	addi r31, r31, lbl_8053FD40@l
-/* 802CC0F8 002956B8  3B 18 D3 F8 */	addi r24, r24, lbl_8057D3F8@l
+/* 802CC0F8 002956B8  3B 18 D3 F8 */	addi r24, r24, gTRKCPUState@l
 /* 802CC0FC 002956BC  3B 9C 43 80 */	addi r28, r28, gTRKInterruptVectorTable@l
 /* 802CC100 002956C0  3B C0 00 00 */	li r30, 0
 /* 802CC104 002956C4  3F 20 03 00 */	lis r25, 0x300
@@ -195,7 +195,7 @@ lbl_802CC18C:
 /* 802CC18C 0029574C  7E C3 B3 78 */	mr r3, r22
 /* 802CC190 00295750  7C 9C 22 14 */	add r4, r28, r4
 /* 802CC194 00295754  38 A0 01 00 */	li r5, 0x100
-/* 802CC198 00295758  4B FF F9 E5 */	bl func_802CBB7C
+/* 802CC198 00295758  4B FF F9 E5 */	bl TRK_memcpy
 /* 802CC19C 0029575C  7E C3 B3 78 */	mr r3, r22
 /* 802CC1A0 00295760  38 80 01 00 */	li r4, 0x100
 /* 802CC1A4 00295764  4B FF F8 79 */	bl TRK_flush_cache
@@ -231,8 +231,8 @@ TRKInitializeTarget:
 /* 802CC20C 002957CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC210 002957D0  4E 80 00 20 */	blr 
 
-.global func_802CC214
-func_802CC214:
+.global __TRKreset
+__TRKreset:
 /* 802CC214 002957D4  38 60 00 00 */	li r3, 0
 /* 802CC218 002957D8  38 80 00 00 */	li r4, 0
 /* 802CC21C 002957DC  38 A0 00 00 */	li r5, 0

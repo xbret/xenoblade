@@ -29117,9 +29117,9 @@ lbl_8053F0F0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte func_802CEC14
-	.4byte func_802C7110
-	.4byte func_802C71E0
+	.4byte __read_console
+	.4byte __write_console
+	.4byte __close_console
 	.4byte 0
 	.4byte lbl_8053F140
 
@@ -29140,9 +29140,9 @@ lbl_8053F140:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte func_802CEC14
-	.4byte func_802C7110
-	.4byte func_802C71E0
+	.4byte __read_console
+	.4byte __write_console
+	.4byte __close_console
 	.4byte 0
 	.4byte lbl_8053F190
 
@@ -29163,9 +29163,9 @@ lbl_8053F190:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte func_802CEC14
-	.4byte func_802C7110
-	.4byte func_802C71E0
+	.4byte __read_console
+	.4byte __write_console
+	.4byte __close_console
 	.4byte 0
 	.4byte lbl_8053F1E0
 
@@ -29953,29 +29953,29 @@ lbl_8053FC60:
 .global lbl_8053FCD0
 lbl_8053FCD0:
 	# ROM: 0x53BDD0
-	.4byte func_802CBEE4
+	.4byte lbl_802CBEE4
 	.4byte func_802CBE28
 	.4byte func_802CBE38
 	.4byte func_802CBE48
-	.4byte func_802CBEE4
-	.4byte func_802CBEE4
-	.4byte func_802CBEE4
+	.4byte lbl_802CBEE4
+	.4byte lbl_802CBEE4
+	.4byte lbl_802CBEE4
 	.4byte func_802CBE58
-	.4byte func_802CBEE4
-	.4byte func_802CBEE4
-	.4byte func_802CBEE4
-	.4byte func_802CBEE4
-	.4byte func_802CBEE4
-	.4byte func_802CBEE4
-	.4byte func_802CBEE4
-	.4byte func_802CBEE4
+	.4byte lbl_802CBEE4
+	.4byte lbl_802CBEE4
+	.4byte lbl_802CBEE4
+	.4byte lbl_802CBEE4
+	.4byte lbl_802CBEE4
+	.4byte lbl_802CBEE4
+	.4byte lbl_802CBEE4
+	.4byte lbl_802CBEE4
 	.4byte func_802CBE68
 	.4byte func_802CBE78
 	.4byte func_802CBE88
 	.4byte func_802CBE98
-	.4byte func_802CBEE4
-	.4byte func_802CBEE4
-	.4byte func_802CBEE4
+	.4byte lbl_802CBEE4
+	.4byte lbl_802CBEE4
+	.4byte lbl_802CBEE4
 	.4byte func_802CBED8
 	.4byte func_802CBEA8
 	.4byte func_802CBEB8

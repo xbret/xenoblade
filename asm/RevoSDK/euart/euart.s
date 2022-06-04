@@ -75,8 +75,8 @@ lbl_80313E58:
 /* 80313E68 002DD428  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80313E70
-func_80313E70:
+.global InitializeUART
+InitializeUART:
 /* 80313E70 002DD430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80313E74 002DD434  7C 08 02 A6 */	mflr r0
 /* 80313E78 002DD438  90 01 00 14 */	stw r0, 0x14(r1)
@@ -99,8 +99,8 @@ lbl_80313EA8:
 /* 80313EB4 002DD474  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80313EC0
-func_80313EC0:
+.global WriteUARTN
+WriteUARTN:
 /* 80313EC0 002DD480  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80313EC4 002DD484  7C 08 02 A6 */	mflr r0
 /* 80313EC8 002DD488  90 01 00 34 */	stw r0, 0x34(r1)

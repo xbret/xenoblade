@@ -6,10 +6,10 @@
 .global DBInit
 DBInit:
 /* 80309110 002D26D0  3C 80 80 00 */	lis r4, 0x80000040@ha
-/* 80309114 002D26D4  3C 60 80 31 */	lis r3, lbl_80309190@ha
+/* 80309114 002D26D4  3C 60 80 31 */	lis r3, __DBExceptionDestination@ha
 /* 80309118 002D26D8  38 04 00 40 */	addi r0, r4, 0x80000040@l
 /* 8030911C 002D26DC  90 0D B6 00 */	stw r0, lbl_80667780@sda21(r13)
-/* 80309120 002D26E0  38 63 91 90 */	addi r3, r3, lbl_80309190@l
+/* 80309120 002D26E0  38 63 91 90 */	addi r3, r3, __DBExceptionDestination@l
 /* 80309124 002D26E4  3C 63 80 00 */	addis r3, r3, 0x8000
 /* 80309128 002D26E8  90 64 00 48 */	stw r3, 0x48(r4)
 /* 8030912C 002D26EC  38 00 00 01 */	li r0, 1
@@ -34,9 +34,11 @@ __DBExceptionDestinationAux:
 /* 80309178 002D2738  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8030917C 002D273C  7C 08 03 A6 */	mtlr r0
 /* 80309180 002D2740  38 21 00 10 */	addi r1, r1, 0x10
-/* 80309184 002D2744  4E 80 00 20 */	blr 
+/* 80309184 002D2744  4E 80 00 20 */	blr
+
 .balign 16, 0
-lbl_80309190:
+.global __DBExceptionDestination
+__DBExceptionDestination:
 /* 80309190 002D2750  7C 60 00 A6 */	mfmsr r3
 /* 80309194 002D2754  60 63 00 30 */	ori r3, r3, 0x30
 /* 80309198 002D2758  7C 60 01 24 */	mtmsr r3

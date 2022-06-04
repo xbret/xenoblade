@@ -577,8 +577,8 @@ lbl_8057B368:
 .global lbl_8057B868
 lbl_8057B868:
 	.skip 0x20
-.global lbl_8057B888
-lbl_8057B888:
+.global gDBCommTable
+gDBCommTable:
 	.skip 0x28
 .global lbl_8057B8B0
 lbl_8057B8B0:
@@ -601,8 +601,8 @@ lbl_8057D340:
 .global lbl_8057D350
 lbl_8057D350:
 	.skip 0xA8
-.global lbl_8057D3F8
-lbl_8057D3F8:
+.global gTRKCPUState
+gTRKCPUState:
 	.skip 0x430
 .global lbl_8057D828
 lbl_8057D828:

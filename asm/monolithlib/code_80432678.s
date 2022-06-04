@@ -2752,8 +2752,8 @@ lbl_80434C08:
 /* 80434C1C 003FE1DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80434C20 003FE1E0  4E 80 00 20 */	blr 
 
-.global func_80434C24
-func_80434C24:
+.global __nw__FUl
+__nw__FUl:
 /* 80434C24 003FE1E4  38 60 00 00 */	li r3, 0
 /* 80434C28 003FE1E8  4E 80 00 20 */	blr 
 

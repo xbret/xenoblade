@@ -2,17 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802CB780
-func_802CB780:
-/* 802CB780 00294D40  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 802CB784 00294D44  7C 08 02 A6 */	mflr r0
-/* 802CB788 00294D48  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802CB78C 00294D4C  48 00 4E ED */	bl func_802D0678
-/* 802CB790 00294D50  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 802CB794 00294D54  38 60 00 00 */	li r3, 0
-/* 802CB798 00294D58  7C 08 03 A6 */	mtlr r0
-/* 802CB79C 00294D5C  38 21 00 10 */	addi r1, r1, 0x10
-/* 802CB7A0 00294D60  4E 80 00 20 */	blr
 
 .global MWInitializeCriticalSection
 MWInitializeCriticalSection:
@@ -31,4 +20,9 @@ MWEnterCriticalSection:
 /* 802CB7C8 00294D88  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802CB7CC 00294D8C  7C 08 03 A6 */	mtlr r0
 /* 802CB7D0 00294D90  38 21 00 10 */	addi r1, r1, 0x10
-/* 802CB7D4 00294D94  4E 80 00 20 */	blr 
+/* 802CB7D4 00294D94  4E 80 00 20 */	blr
+
+.global MWExitCriticalSection
+MWExitCriticalSection:
+/* 802CB7D8 00294D98  80 63 00 00 */	lwz r3, 0(r3)
+/* 802CB7DC 00294D9C  48 08 D2 14 */	b OSRestoreInterrupts

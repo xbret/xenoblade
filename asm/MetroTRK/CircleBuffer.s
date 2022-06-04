@@ -2,18 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802CB7D8
-func_802CB7D8:
-/* 802CB7D8 00294D98  80 63 00 00 */	lwz r3, 0(r3)
-/* 802CB7DC 00294D9C  48 08 D2 14 */	b OSRestoreInterrupts
-
-.global func_802CB7E0
-func_802CB7E0:
+.global CBGetBytesAvailableForRead
+CBGetBytesAvailableForRead:
 /* 802CB7E0 00294DA0  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 802CB7E4 00294DA4  4E 80 00 20 */	blr 
 
-.global func_802CB7E8
-func_802CB7E8:
+.global CircleBufferInitialize
+CircleBufferInitialize:
 /* 802CB7E8 00294DA8  38 00 00 00 */	li r0, 0
 /* 802CB7EC 00294DAC  90 83 00 08 */	stw r4, 8(r3)
 /* 802CB7F0 00294DB0  90 A3 00 0C */	stw r5, 0xc(r3)
@@ -24,8 +19,8 @@ func_802CB7E8:
 /* 802CB804 00294DC4  38 63 00 18 */	addi r3, r3, 0x18
 /* 802CB808 00294DC8  4B FF FF 9C */	b MWInitializeCriticalSection
 
-.global func_802CB80C
-func_802CB80C:
+.global CircleBufferReadBytes
+CircleBufferReadBytes:
 /* 802CB80C 00294DCC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CB810 00294DD0  7C 08 02 A6 */	mflr r0
 /* 802CB814 00294DD4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -86,7 +81,7 @@ lbl_802CB8D0:
 /* 802CB8E0 00294EA0  90 9E 00 14 */	stw r4, 0x14(r30)
 /* 802CB8E4 00294EA4  7C 00 FA 14 */	add r0, r0, r31
 /* 802CB8E8 00294EA8  90 1E 00 10 */	stw r0, 0x10(r30)
-/* 802CB8EC 00294EAC  4B FF FE ED */	bl func_802CB7D8
+/* 802CB8EC 00294EAC  4B FF FE ED */	bl MWExitCriticalSection
 /* 802CB8F0 00294EB0  38 60 00 00 */	li r3, 0
 lbl_802CB8F4:
 /* 802CB8F4 00294EB4  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -98,8 +93,8 @@ lbl_802CB8F4:
 /* 802CB90C 00294ECC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CB910 00294ED0  4E 80 00 20 */	blr 
 
-.global func_802CB914
-func_802CB914:
+.global CircleBufferWriteBytes
+CircleBufferWriteBytes:
 /* 802CB914 00294ED4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CB918 00294ED8  7C 08 02 A6 */	mflr r0
 /* 802CB91C 00294EDC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -160,7 +155,7 @@ lbl_802CB9D8:
 /* 802CB9E8 00294FA8  90 9E 00 14 */	stw r4, 0x14(r30)
 /* 802CB9EC 00294FAC  7C 1F 00 50 */	subf r0, r31, r0
 /* 802CB9F0 00294FB0  90 1E 00 10 */	stw r0, 0x10(r30)
-/* 802CB9F4 00294FB4  4B FF FD E5 */	bl func_802CB7D8
+/* 802CB9F4 00294FB4  4B FF FD E5 */	bl MWExitCriticalSection
 /* 802CB9F8 00294FB8  38 60 00 00 */	li r3, 0
 lbl_802CB9FC:
 /* 802CB9FC 00294FBC  80 01 00 24 */	lwz r0, 0x24(r1)
