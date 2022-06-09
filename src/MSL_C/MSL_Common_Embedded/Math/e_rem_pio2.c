@@ -120,7 +120,7 @@ int __ieee754_rem_pio2(x, y) double x, y[];
 	if (ix <= 0x413921fb) { /* |x| ~<= 2^19*(pi/2), medium size */
 		t  = __fabs(x);
 		n  = (int)(t * invpio2 + half);
-		fn = n;
+		fn = (double)n;
 		r  = t - fn * pio2_1;
 		w  = fn * pio2_1t; /* 1st round good to 85 bit */
 		if (n < 32 && ix != npio2_hw[n - 1]) {
