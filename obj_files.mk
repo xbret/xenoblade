@@ -115,11 +115,11 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_acos.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_asin.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_atan2.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_fmod.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_fmod.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_log.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_log10.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_pow.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_rem_pio2.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_pow.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_rem_pio2.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/k_cos.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/k_rem_pio2.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/k_sin.o \

@@ -1,6 +1,0 @@
-.global lbl_80667550
-lbl_80667550:
-	.skip 0x8
-.global lbl_80667558
-lbl_80667558:
-	.skip 0x8

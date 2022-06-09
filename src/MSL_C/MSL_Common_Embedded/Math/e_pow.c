@@ -162,7 +162,6 @@ double __ieee754_pow(x, y) double x, y;
 {
 	double z, ax, z_h, z_l, p_h, p_l;
 	double y1, t1, t2, r, s, t, u, v, w;
-	double qqq; // necessary temp
 	int i0, i1, i, j, k, yisint, n;
 	int hx, hy, ix, iy;
 	u32 lx, ly;
@@ -232,11 +231,10 @@ double __ieee754_pow(x, y) double x, y;
 	}
 
 	ax  = __fabs(x);
-	qqq = ax; /*x is +-0,+-inf,+-1*/
 	          /* special value of x */
 	if (lx == 0) {
 		if (ix == 0x7ff00000 || ix == 0 || ix == 0x3ff00000) {
-			z = qqq; /*x is +-0,+-inf,+-1*/
+			z = ax; /*x is +-0,+-inf,+-1*/
 			if (hy < 0)
 				z = one / z; /* z = (1/|x|) */
 			if (hx < 0) {

@@ -118,9 +118,9 @@ int __ieee754_rem_pio2(x, y) double x, y[];
 		}
 	}
 	if (ix <= 0x413921fb) { /* |x| ~<= 2^19*(pi/2), medium size */
-		t  = fabs(x);
+		t  = __fabs(x);
 		n  = (int)(t * invpio2 + half);
-		fn = (double)n;
+		fn = n;
 		r  = t - fn * pio2_1;
 		w  = fn * pio2_1t; /* 1st round good to 85 bit */
 		if (n < 32 && ix != npio2_hw[n - 1]) {
@@ -130,9 +130,10 @@ int __ieee754_rem_pio2(x, y) double x, y[];
 			y[0] = r - w;
 			i    = j - (((__HI(y[0])) >> 20) & 0x7ff);
 			if (i > 16) { /* 2nd iteration needed, good to 118 */
-				t    = r;
-				r    = t - fn * pio2_2;
-				w    = fn * pio2_2t - ((t - r) - fn * pio2_2);
+				t  = r;
+		        w  = fn * pio2_2;
+		        r  = t - w;
+		        w  = fn * pio2_2t - ((t - r) - w);
 				y[0] = r - w;
 				i    = j - (((__HI(y[0])) >> 20) & 0x7ff);
 				if (i > 49) { /* 3rd iteration need, 151 bits acc */
