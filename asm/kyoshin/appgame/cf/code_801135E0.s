@@ -4445,7 +4445,7 @@ lbl_80117518:
 /* 80117520 000E0AE0  CB E1 00 D0 */	lfd f31, 0xd0(r1)
 /* 80117524 000E0AE4  E3 C1 00 C8 */	psq_l f30, 200(r1), 0, qr0
 /* 80117528 000E0AE8  CB C1 00 C0 */	lfd f30, 0xc0(r1)
-/* 8011752C 000E0AEC  48 1A 2C 41 */	bl __restore_gpr
+/* 8011752C 000E0AEC  48 1A 2C 41 */	bl _restgpr_14
 /* 80117530 000E0AF0  80 01 00 E4 */	lwz r0, 0xe4(r1)
 /* 80117534 000E0AF4  7C 08 03 A6 */	mtlr r0
 /* 80117538 000E0AF8  38 21 00 E0 */	addi r1, r1, 0xe0

@@ -29319,8 +29319,8 @@ lbl_8053F3D0:
 	.4byte lbl_8050D320
 	.4byte lbl_8050D220
 	.4byte lbl_8050D588
-	.4byte lbl_8050D988
-	.4byte lbl_8050D788
+	.4byte uppercaseTable
+	.4byte lowercaseTable
 	.4byte __mbtowc_noconv
 	.4byte __wctomb_noconv
 

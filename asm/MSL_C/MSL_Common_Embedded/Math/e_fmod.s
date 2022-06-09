@@ -1,5 +1,15 @@
 .include "macros.inc"
 
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global Zero
+Zero:
+	# ROM: 0x509C90
+	.4byte 0
+	.4byte 0
+	.4byte 0x80000000
+	.4byte 0
+
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .global __ieee754_fmod
@@ -38,9 +48,9 @@ lbl_802C7AB4:
 /* 802C7AC8 00291088  48 00 03 04 */	b lbl_802C7DCC
 lbl_802C7ACC:
 /* 802C7ACC 0029108C  40 82 00 18 */	bne lbl_802C7AE4
-/* 802C7AD0 00291090  3C 60 80 51 */	lis r3, lbl_8050DB90@ha
+/* 802C7AD0 00291090  3C 60 80 51 */	lis r3, Zero@ha
 /* 802C7AD4 00291094  54 80 27 38 */	rlwinm r0, r4, 4, 0x1c, 0x1c
-/* 802C7AD8 00291098  38 63 DB 90 */	addi r3, r3, lbl_8050DB90@l
+/* 802C7AD8 00291098  38 63 DB 90 */	addi r3, r3, Zero@l
 /* 802C7ADC 0029109C  7C 23 04 AE */	lfdx f1, r3, r0
 /* 802C7AE0 002910A0  48 00 02 EC */	b lbl_802C7DCC
 lbl_802C7AE4:
@@ -156,9 +166,9 @@ lbl_802C7C38:
 /* 802C7C44 00291204  7C A0 5C 30 */	srw r0, r5, r11
 /* 802C7C48 00291208  7C 00 40 40 */	cmplw r0, r8
 /* 802C7C4C 0029120C  40 82 00 18 */	bne lbl_802C7C64
-/* 802C7C50 00291210  3C 60 80 51 */	lis r3, lbl_8050DB90@ha
+/* 802C7C50 00291210  3C 60 80 51 */	lis r3, Zero@ha
 /* 802C7C54 00291214  54 80 27 38 */	rlwinm r0, r4, 4, 0x1c, 0x1c
-/* 802C7C58 00291218  38 63 DB 90 */	addi r3, r3, lbl_8050DB90@l
+/* 802C7C58 00291218  38 63 DB 90 */	addi r3, r3, Zero@l
 /* 802C7C5C 0029121C  7C 23 04 AE */	lfdx f1, r3, r0
 /* 802C7C60 00291220  48 00 01 6C */	b lbl_802C7DCC
 lbl_802C7C64:
@@ -176,9 +186,9 @@ lbl_802C7C70:
 lbl_802C7C8C:
 /* 802C7C8C 0029124C  7C E0 63 79 */	or. r0, r7, r12
 /* 802C7C90 00291250  40 82 00 18 */	bne lbl_802C7CA8
-/* 802C7C94 00291254  3C 60 80 51 */	lis r3, lbl_8050DB90@ha
+/* 802C7C94 00291254  3C 60 80 51 */	lis r3, Zero@ha
 /* 802C7C98 00291258  54 80 27 38 */	rlwinm r0, r4, 4, 0x1c, 0x1c
-/* 802C7C9C 0029125C  38 63 DB 90 */	addi r3, r3, lbl_8050DB90@l
+/* 802C7C9C 0029125C  38 63 DB 90 */	addi r3, r3, Zero@l
 /* 802C7CA0 00291260  7C 23 04 AE */	lfdx f1, r3, r0
 /* 802C7CA4 00291264  48 00 01 28 */	b lbl_802C7DCC
 lbl_802C7CA8:
@@ -195,9 +205,9 @@ lbl_802C7CBC:
 /* 802C7CC8 00291288  7C A0 5C 30 */	srw r0, r5, r11
 /* 802C7CCC 0029128C  7C 00 40 40 */	cmplw r0, r8
 /* 802C7CD0 00291290  40 82 00 18 */	bne lbl_802C7CE8
-/* 802C7CD4 00291294  3C 60 80 51 */	lis r3, lbl_8050DB90@ha
+/* 802C7CD4 00291294  3C 60 80 51 */	lis r3, Zero@ha
 /* 802C7CD8 00291298  54 80 27 38 */	rlwinm r0, r4, 4, 0x1c, 0x1c
-/* 802C7CDC 0029129C  38 63 DB 90 */	addi r3, r3, lbl_8050DB90@l
+/* 802C7CDC 0029129C  38 63 DB 90 */	addi r3, r3, Zero@l
 /* 802C7CE0 002912A0  7C 23 04 AE */	lfdx f1, r3, r0
 /* 802C7CE4 002912A4  48 00 00 E8 */	b lbl_802C7DCC
 lbl_802C7CE8:
@@ -212,9 +222,9 @@ lbl_802C7CF4:
 lbl_802C7D04:
 /* 802C7D04 002912C4  7D 20 2B 79 */	or. r0, r9, r5
 /* 802C7D08 002912C8  40 82 00 18 */	bne lbl_802C7D20
-/* 802C7D0C 002912CC  3C 60 80 51 */	lis r3, lbl_8050DB90@ha
+/* 802C7D0C 002912CC  3C 60 80 51 */	lis r3, Zero@ha
 /* 802C7D10 002912D0  54 80 27 38 */	rlwinm r0, r4, 4, 0x1c, 0x1c
-/* 802C7D14 002912D4  38 63 DB 90 */	addi r3, r3, lbl_8050DB90@l
+/* 802C7D14 002912D4  38 63 DB 90 */	addi r3, r3, Zero@l
 /* 802C7D18 002912D8  7C 23 04 AE */	lfdx f1, r3, r0
 /* 802C7D1C 002912DC  48 00 00 B0 */	b lbl_802C7DCC
 lbl_802C7D20:

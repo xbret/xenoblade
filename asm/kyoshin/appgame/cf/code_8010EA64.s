@@ -1214,7 +1214,7 @@ lbl_8010FC24:
 /* 8010FC50 000D9210  CB E1 00 D0 */	lfd f31, 0xd0(r1)
 /* 8010FC54 000D9214  E3 C1 00 C8 */	psq_l f30, 200(r1), 0, qr0
 /* 8010FC58 000D9218  CB C1 00 C0 */	lfd f30, 0xc0(r1)
-/* 8010FC5C 000D921C  48 1A A5 11 */	bl __restore_gpr
+/* 8010FC5C 000D921C  48 1A A5 11 */	bl _restgpr_14
 /* 8010FC60 000D9220  80 01 00 E4 */	lwz r0, 0xe4(r1)
 /* 8010FC64 000D9224  7C 08 03 A6 */	mtlr r0
 /* 8010FC68 000D9228  38 21 00 E0 */	addi r1, r1, 0xe0

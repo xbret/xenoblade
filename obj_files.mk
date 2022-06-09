@@ -1,9 +1,7 @@
 GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CGame.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80039EEC.o \
-	$(BUILD_DIR)/asm/sdata.o \
 	$(BUILD_DIR)/src/kyoshin/appgame/cf/main.o \
-	$(BUILD_DIR)/asm/sdata_1.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8003A05C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8003AA00.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800539EC.o \
@@ -69,9 +67,6 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/MetroTRK/mem_TRK.o \
 	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/__mem.o \
 	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/__exception.o \
-	$(BUILD_DIR)/asm/sbss.o \
-	$(BUILD_DIR)/src/MSL_C/PPC_EABI/Runtime/__start.o \
-	$(BUILD_DIR)/asm/sbss_1.o \
 	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/strlen.o \
 	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/__va_arg.o \
 	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/Runtime/global_destructor_chain.o \
@@ -88,15 +83,21 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/arith.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/buffer_io.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/direct_io.o \
+	$(BUILD_DIR)/asm/sbss.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common/errno.o \
+	$(BUILD_DIR)/asm/sbss_1.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/file_io.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/file_pos.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/mbstring.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/mem.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/mem_funcs.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common/math_api.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common/math_api.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/misc_io.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/printf.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/rand.o \
+	$(BUILD_DIR)/asm/sdata.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common/float.o \
+	$(BUILD_DIR)/asm/sdata_1.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/scanf.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/string.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/strtold.o \
@@ -109,38 +110,45 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/uart_console_io_gcn.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/code_802C71E8.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/math_sun.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_acos.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_asin.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_atan2.o \
+	$(BUILD_DIR)/asm/sdata2.o \
+	$(BUILD_DIR)/asm/rodata.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_acos.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_asin.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_atan2.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_fmod.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_log.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_log10.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_log.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_log10.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_pow.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_rem_pio2.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/k_cos.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/k_rem_pio2.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/k_sin.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/k_tan.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_atan.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_ceil.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_copysign.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_cos.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_floor.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_frexp.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_ldexp.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_modf.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_sin.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/s_tan.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_acos.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_asin.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_atan2.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_fmod.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_log.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_log10.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_pow.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/e_sqrt.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/k_cos.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/k_rem_pio2.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/k_sin.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/k_tan.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/s_atan.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/s_ceil.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/s_copysign.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/s_cos.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/s_floor.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/s_frexp.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/s_ldexp.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/s_modf.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/s_sin.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/s_tan.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/w_acos.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/w_asin.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/w_atan2.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/w_fmod.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/w_log.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/w_log10.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/w_pow.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_sqrt.o \
+	$(BUILD_DIR)/asm/sbss_2.o \
+	$(BUILD_DIR)/asm/sdata2_1.o \
+	$(BUILD_DIR)/asm/rodata_1.o \
 	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/math_ppc.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/Math/w_sqrt.o \
+	$(BUILD_DIR)/src/MSL_C/PPC_EABI/Runtime/__start.o \
+	$(BUILD_DIR)/asm/sbss_3.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/w_sqrt.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/extras.o \
 	$(BUILD_DIR)/asm/MetroTRK/targsupp.o \
 	$(BUILD_DIR)/asm/MetroTRK/main.o \
@@ -600,6 +608,7 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_804BC9EC.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804BD8E8.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804BF59C.o \
+	$(BUILD_DIR)/asm/sdata_2.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804C8684.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804C8718.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804CC2B8.o \
@@ -622,17 +631,11 @@ EXTABINDEX_O_FILES :=\
 CTORS_O_FILES :=\
 	$(BUILD_DIR)/asm/ctors.o
 
-RODATA_O_FILES :=\
-	$(BUILD_DIR)/asm/rodata.o
-
 DATA_O_FILES :=\
 	$(BUILD_DIR)/asm/data.o
 
 BSS_O_FILES :=\
 	$(BUILD_DIR)/asm/bss.o
-
-SDATA2_O_FILES :=\
-	$(BUILD_DIR)/asm/sdata2.o
 
 SBSS2_O_FILES :=\
 	$(BUILD_DIR)/asm/sbss2.o

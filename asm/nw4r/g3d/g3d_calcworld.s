@@ -394,7 +394,7 @@ lbl_803EEC80:
 /* 803EEC80 003B8240  E3 E1 00 C8 */	psq_l f31, 200(r1), 0, qr0
 /* 803EEC84 003B8244  39 61 00 C0 */	addi r11, r1, 0xc0
 /* 803EEC88 003B8248  CB E1 00 C0 */	lfd f31, 0xc0(r1)
-/* 803EEC8C 003B824C  4B EC B4 E1 */	bl __restore_gpr
+/* 803EEC8C 003B824C  4B EC B4 E1 */	bl _restgpr_14
 /* 803EEC90 003B8250  80 01 00 D4 */	lwz r0, 0xd4(r1)
 /* 803EEC94 003B8254  7C 08 03 A6 */	mtlr r0
 /* 803EEC98 003B8258  38 21 00 D0 */	addi r1, r1, 0xd0

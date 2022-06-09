@@ -1,5 +1,193 @@
 .include "macros.inc"
 
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8050DBD0
+lbl_8050DBD0:
+	# ROM: 0x509CD0
+	.4byte 0x00A2F983
+	.4byte 0x006E4E44
+	.4byte 0x001529FC
+	.4byte 0x002757D1
+	.4byte 0x00F534DD
+	.4byte 0x00C0DB62
+	.4byte 0x0095993C
+	.4byte 0x00439041
+	.4byte 0x00FE5163
+	.4byte 0x00ABDEBB
+	.4byte 0x00C561B7
+	.4byte 0x00246E3A
+	.4byte 0x00424DD2
+	.4byte 0x00E00649
+	.4byte 0x002EEA09
+	.4byte 0x00D1921C
+	.4byte 0x00FE1DEB
+	.4byte 0x001CB129
+	.4byte 0x00A73EE8
+	.4byte 0x008235F5
+	.4byte 0x002EBB44
+	.4byte 0x0084E99C
+	.4byte 0x007026B4
+	.4byte 0x005F7E41
+	.4byte 0x003991D6
+	.4byte 0x00398353
+	.4byte 0x0039F49C
+	.4byte 0x00845F8B
+	.4byte 0x00BDF928
+	.4byte 0x003B1FF8
+	.4byte 0x0097FFDE
+	.4byte 0x0005980F
+	.4byte 0x00EF2F11
+	.4byte 0x008B5A0A
+	.4byte 0x006D1F6D
+	.4byte 0x00367ECF
+	.4byte 0x0027CB09
+	.4byte 0x00B74F46
+	.4byte 0x003F669E
+	.4byte 0x005FEA2D
+	.4byte 0x007527BA
+	.4byte 0x00C7EBE5
+	.4byte 0x00F17B3D
+	.4byte 0x000739F7
+	.4byte 0x008A5292
+	.4byte 0x00EA6BFB
+	.4byte 0x005FB11F
+	.4byte 0x008D5D08
+	.4byte 0x00560330
+	.4byte 0x0046FC7B
+	.4byte 0x006BABF0
+	.4byte 0x00CFBC20
+	.4byte 0x009AF436
+	.4byte 0x001DA9E3
+	.4byte 0x0091615E
+	.4byte 0x00E61B08
+	.4byte 0x00659985
+	.4byte 0x005F14A0
+	.4byte 0x0068408D
+	.4byte 0x00FFD880
+	.4byte 0x004D7327
+	.4byte 0x00310606
+	.4byte 0x001556CA
+	.4byte 0x0073A8C9
+	.4byte 0x0060E27B
+	.4byte 0x00C08C6B
+
+
+.global lbl_8050DCD8
+lbl_8050DCD8:
+	# ROM: 0x509DD8
+	.4byte 0x3FF921FB
+	.4byte 0x400921FB
+	.4byte 0x4012D97C
+	.4byte 0x401921FB
+	.4byte 0x401F6A7A
+	.4byte 0x4022D97C
+	.4byte 0x4025FDBB
+	.4byte 0x402921FB
+	.4byte 0x402C463A
+	.4byte 0x402F6A7A
+	.4byte 0x4031475C
+	.4byte 0x4032D97C
+	.4byte 0x40346B9C
+	.4byte 0x4035FDBB
+	.4byte 0x40378FDB
+	.4byte 0x403921FB
+	.4byte 0x403AB41B
+	.4byte 0x403C463A
+	.4byte 0x403DD85A
+	.4byte 0x403F6A7A
+	.4byte 0x40407E4C
+	.4byte 0x4041475C
+	.4byte 0x4042106C
+	.4byte 0x4042D97C
+	.4byte 0x4043A28C
+	.4byte 0x40446B9C
+	.4byte 0x404534AC
+	.4byte 0x4045FDBB
+	.4byte 0x4046C6CB
+	.4byte 0x40478FDB
+	.4byte 0x404858EB
+	.4byte 0x404921FB
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066BBC8
+lbl_8066BBC8:
+	# ROM: 0x575A28
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066BBD0
+lbl_8066BBD0:
+	# ROM: 0x575A30
+	.4byte 0x3FF921FB
+	.4byte 0x54400000
+
+
+.global lbl_8066BBD8
+lbl_8066BBD8:
+	# ROM: 0x575A38
+	.4byte 0x3DD0B461
+	.4byte 0x1A626331
+
+
+.global lbl_8066BBE0
+lbl_8066BBE0:
+	# ROM: 0x575A40
+	.4byte 0x3DD0B461
+	.4byte 0x1A600000
+
+
+.global lbl_8066BBE8
+lbl_8066BBE8:
+	# ROM: 0x575A48
+	.4byte 0x3BA3198A
+	.4byte 0x2E037073
+
+
+.global lbl_8066BBF0
+lbl_8066BBF0:
+	# ROM: 0x575A50
+	.4byte 0x3FE00000
+	.4byte 0
+
+
+.global lbl_8066BBF8
+lbl_8066BBF8:
+	# ROM: 0x575A58
+	.4byte 0x3FE45F30
+	.4byte 0x6DC9C883
+
+
+.global lbl_8066BC00
+lbl_8066BC00:
+	# ROM: 0x575A60
+	.4byte 0x3BA3198A
+	.4byte 0x2E000000
+
+
+.global lbl_8066BC08
+lbl_8066BC08:
+	# ROM: 0x575A68
+	.4byte 0x397B839A
+	.4byte 0x252049C1
+
+
+.global lbl_8066BC10
+lbl_8066BC10:
+	# ROM: 0x575A70
+	.4byte 0x41700000
+	.4byte 0
+
+
+.global lbl_8066BC18
+lbl_8066BC18:
+	# ROM: 0x575A78
+	.4byte 0x43300000
+	.4byte 0x80000000
+
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .global __ieee754_rem_pio2

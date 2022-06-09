@@ -24590,7 +24590,7 @@ lbl_80021020:
 	.4byte func_804EE338
 	.4byte 0x000000D8
 	.4byte lbl_80020ED4
-	.4byte func_804EE410
+	.4byte Shutdown
 	.4byte 0x0000005C
 	.4byte lbl_80020EDC
 	.4byte OSPanic

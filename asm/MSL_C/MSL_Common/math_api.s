@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802BEB48
-func_802BEB48:
+.global __fpclassifyf
+__fpclassifyf:
 /* 802BEB48 00288108  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BEB4C 0028810C  D0 21 00 08 */	stfs f1, 8(r1)
 /* 802BEB50 00288110  80 61 00 08 */	lwz r3, 8(r1)
@@ -33,8 +33,8 @@ lbl_802BEBA0:
 /* 802BEBA0 00288160  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BEBA4 00288164  4E 80 00 20 */	blr 
 
-.global func_802BEBA8
-func_802BEBA8:
+.global __signbitd
+__signbitd:
 /* 802BEBA8 00288168  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BEBAC 0028816C  D8 21 00 08 */	stfd f1, 8(r1)
 /* 802BEBB0 00288170  80 01 00 08 */	lwz r0, 8(r1)
@@ -42,8 +42,8 @@ func_802BEBA8:
 /* 802BEBB8 00288178  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BEBBC 0028817C  4E 80 00 20 */	blr 
 
-.global func_802BEBC0
-func_802BEBC0:
+.global __fpclassifyd
+__fpclassifyd:
 /* 802BEBC0 00288180  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BEBC4 00288184  D8 21 00 08 */	stfd f1, 8(r1)
 /* 802BEBC8 00288188  80 61 00 08 */	lwz r3, 8(r1)

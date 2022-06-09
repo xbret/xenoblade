@@ -5,7 +5,6 @@ extern char* pkhFilenames[];
 extern u32 lbl_80528380[];
 extern u32 lbl_80528390[];
 
-s8 lbl_80666438 = 1;
 const char* const staticArcStr = "static.arc";
 
 

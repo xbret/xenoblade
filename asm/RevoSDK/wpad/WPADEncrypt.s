@@ -445,7 +445,7 @@ lbl_80374A98:
 /* 803750A0 0033E660  80 61 00 34 */	lwz r3, 0x34(r1)
 /* 803750A4 0033E664  4B FE 39 4D */	bl OSRestoreInterrupts
 /* 803750A8 0033E668  39 61 00 A0 */	addi r11, r1, 0xa0
-/* 803750AC 0033E66C  4B F4 50 C1 */	bl __restore_gpr
+/* 803750AC 0033E66C  4B F4 50 C1 */	bl _restgpr_14
 /* 803750B0 0033E670  80 01 00 A4 */	lwz r0, 0xa4(r1)
 /* 803750B4 0033E674  7C 08 03 A6 */	mtlr r0
 /* 803750B8 0033E678  38 21 00 A0 */	addi r1, r1, 0xa0
@@ -896,7 +896,7 @@ lbl_80375188:
 /* 80375798 0033ED58  80 61 00 34 */	lwz r3, 0x34(r1)
 /* 8037579C 0033ED5C  4B FE 32 55 */	bl OSRestoreInterrupts
 /* 803757A0 0033ED60  39 61 00 A0 */	addi r11, r1, 0xa0
-/* 803757A4 0033ED64  4B F4 49 C9 */	bl __restore_gpr
+/* 803757A4 0033ED64  4B F4 49 C9 */	bl _restgpr_14
 /* 803757A8 0033ED68  80 01 00 A4 */	lwz r0, 0xa4(r1)
 /* 803757AC 0033ED6C  7C 08 03 A6 */	mtlr r0
 /* 803757B0 0033ED70  38 21 00 A0 */	addi r1, r1, 0xa0

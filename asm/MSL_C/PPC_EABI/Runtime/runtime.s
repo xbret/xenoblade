@@ -156,8 +156,8 @@ _savegpr_29:
 /* 802BA164 00283724  93 EB FF FC */	stw r31, -4(r11)
 /* 802BA168 00283728  4E 80 00 20 */	blr 
 
-.global __restore_gpr
-__restore_gpr:
+.global _restgpr_14
+_restgpr_14:
 /* 802BA16C 0028372C  81 CB FF B8 */	lwz r14, -0x48(r11)
 
 .global _restgpr_15
