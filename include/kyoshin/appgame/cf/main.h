@@ -4,7 +4,7 @@
 #include "types.h"
 #include "kyoshin/appgame/cf/code_802AEB74.h"
 #include "monolithlib/code_80450B14.h"
-//#include "monolithlib/Unknown1.h"
+#include "monolithlib/Unknown1.h"
 
 //namespace cf {
 extern void func_80057CDC();
@@ -23,7 +23,6 @@ extern void SavePkhFilenamesArrayPtr(char*[]);
 extern void SaveStaticArcFilenameStringPtr(const char* const*);
 extern void func_80039F6C();
 extern void func_80039F90();
-extern s8 lbl_80666438;
 
 void main(int argc, char* argv[]);
 //}

@@ -608,6 +608,7 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_804BC9EC.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804BD8E8.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804BF59C.o \
+	$(BUILD_DIR)/src/monolithlib/Unknown1.o \
 	$(BUILD_DIR)/asm/sdata_2.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804C8684.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804C8718.o \

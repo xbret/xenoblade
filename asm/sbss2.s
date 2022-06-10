@@ -1,5 +1,6 @@
 .include "macros.inc"
 .section .sbss2, "", @nobits #0x8066DCE0 - 0x8066DCFB
+
 .global lbl_8066DCE0
 lbl_8066DCE0:
 	.skip 0x8

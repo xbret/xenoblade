@@ -978,12 +978,12 @@ func_803EC3E4:
 /* 803EC450 003B5A10  11 00 3A 10 */	ps_abs f8, f7
 /* 803EC454 003B5A14  F1 A3 80 08 */	psq_st f13, 8(r3), 1, qr0
 /* 803EC458 003B5A18  10 08 30 40 */	ps_cmpo0 cr0, f8, f6
-/* 803EC45C 003B5A1C  40 80 00 0C */	bge func_803EC468
+/* 803EC45C 003B5A1C  40 80 00 0C */	bge lbl_803EC468
 /* 803EC460 003B5A20  F1 A3 00 00 */	psq_st f13, 0(r3), 0, qr0
 /* 803EC464 003B5A24  4E 80 00 20 */	blr
 
-.global func_803EC468
-func_803EC468:
+.global lbl_803EC468
+lbl_803EC468:
 /* 803EC468 003B5A28  ED 00 38 30 */	fres f8, f7
 /* 803EC46C 003B5A2C  E0 04 00 00 */	psq_l f0, 0(r4), 0, qr0
 /* 803EC470 003B5A30  11 68 40 2A */	ps_add f11, f8, f8
@@ -1032,12 +1032,12 @@ func_803EC4A4:
 /* 803EC510 003B5AD0  11 00 3A 10 */	ps_abs f8, f7
 /* 803EC514 003B5AD4  F1 A3 80 08 */	psq_st f13, 8(r3), 1, qr0
 /* 803EC518 003B5AD8  10 08 30 40 */	ps_cmpo0 cr0, f8, f6
-/* 803EC51C 003B5ADC  40 80 00 0C */	bge func_803EC528
+/* 803EC51C 003B5ADC  40 80 00 0C */	bge lbl_803EC528
 /* 803EC520 003B5AE0  F1 A3 00 00 */	psq_st f13, 0(r3), 0, qr0
 /* 803EC524 003B5AE4  4E 80 00 20 */	blr
 
-.global func_803EC528
-func_803EC528:
+.global lbl_803EC528
+lbl_803EC528:
 /* 803EC528 003B5AE8  ED 00 38 30 */	fres f8, f7
 /* 803EC52C 003B5AEC  E0 04 00 00 */	psq_l f0, 0(r4), 0, qr0
 /* 803EC530 003B5AF0  11 68 40 2A */	ps_add f11, f8, f8

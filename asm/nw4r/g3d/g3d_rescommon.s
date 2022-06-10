@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global nw4r3g3d7ResNameCFQ34nw4r3g3d7ResN$7__eq
-nw4r3g3d7ResNameCFQ34nw4r3g3d7ResN$7__eq:
+.global __eq__Q34nw4r3g3d7ResNameCFQ34nw4r3g3d7ResName
+__eq__Q34nw4r3g3d7ResNameCFQ34nw4r3g3d7ResName:
 /* 803D7810 003A0DD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D7814 003A0DD4  7C 08 02 A6 */	mflr r0
 /* 803D7818 003A0DD8  80 84 00 00 */	lwz r4, 0(r4)

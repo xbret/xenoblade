@@ -2,11 +2,6 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-#This shouldn't be here
-.global lbl_80666438
-lbl_80666438:
-	.byte 1
-
 .balign 8
 .global lbl_80666440
 lbl_80666440:

@@ -762,7 +762,7 @@ VISetPostRetraceCallback:
 .global func_80364980
 func_80364980:
 /* 80364980 0032DF40  28 03 00 22 */	cmplwi r3, 0x22
-/* 80364984 0032DF44  41 81 01 0C */	bgt func_80364A90
+/* 80364984 0032DF44  41 81 01 0C */	bgt lbl_80364A90
 /* 80364988 0032DF48  3C 80 80 56 */	lis r4, lbl_8055FDAC@ha
 /* 8036498C 0032DF4C  54 60 10 3A */	slwi r0, r3, 2
 /* 80364990 0032DF50  38 84 FD AC */	addi r4, r4, lbl_8055FDAC@l
@@ -895,8 +895,8 @@ func_80364A88:
 /* 80364A8C 0032E04C  4E 80 00 20 */	blr
 
 
-.global func_80364A90
-func_80364A90:
+.global lbl_80364A90
+lbl_80364A90:
 /* 80364A90 0032E050  38 60 00 00 */	li r3, 0
 /* 80364A94 0032E054  4E 80 00 20 */	blr 
 

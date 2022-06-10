@@ -3,6 +3,6 @@
 
 #include "types.h"
 
-s8 lbl_80666438 = 1;
+extern s8 lbl_80666438;
 
 #endif
