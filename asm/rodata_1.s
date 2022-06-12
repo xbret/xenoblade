@@ -20325,11 +20325,7 @@ lbl_80525CF8:
 
 .global lbl_80525D28
 lbl_80525D28:
-	# ROM: 0x521E28
-
 	#"プログラム領域残り %x / 最大 %x\n"
-.global lbl_80525D28
-lbl_80525D28:
 	.4byte 0x8376838D
 	.4byte 0x834F8389
 	.4byte 0x838097CC

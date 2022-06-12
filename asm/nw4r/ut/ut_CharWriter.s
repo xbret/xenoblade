@@ -128,7 +128,7 @@ lbl_8042F004:
 /* 8042F0AC 003F866C  7C A5 32 14 */	add r5, r5, r6
 /* 8042F0B0 003F8670  98 BF 00 17 */	stb r5, 0x17(r31)
 /* 8042F0B4 003F8674  90 01 00 10 */	stw r0, 0x10(r1)
-/* 8042F0B8 003F8678  4B FA 82 61 */	bl func_803D7318
+/* 8042F0B8 003F8678  4B FA 82 61 */	bl SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5Color
 /* 8042F0BC 003F867C  C0 02 C5 C0 */	lfs f0, lbl_8066C940@sda21(r2)
 /* 8042F0C0 003F8680  38 00 00 01 */	li r0, 1
 /* 8042F0C4 003F8684  C0 22 C5 C4 */	lfs f1, lbl_8066C944@sda21(r2)
@@ -1252,8 +1252,8 @@ lbl_804300C4:
 /* 80430180 003F9740  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 80430184 003F9744  4E 80 00 20 */	blr 
 
-.global func_80430188
-func_80430188:
+.global UpdateVertexColor__Q34nw4r2ut10CharWriterFv
+UpdateVertexColor__Q34nw4r2ut10CharWriterFv:
 /* 80430188 003F9748  80 03 00 20 */	lwz r0, 0x20(r3)
 /* 8043018C 003F974C  88 C3 00 18 */	lbz r6, 0x18(r3)
 /* 80430190 003F9750  88 A3 00 19 */	lbz r5, 0x19(r3)

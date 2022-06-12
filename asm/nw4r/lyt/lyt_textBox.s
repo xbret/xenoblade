@@ -559,7 +559,7 @@ lbl_80401AB8:
 lbl_80401B58:
 /* 80401B58 003CB118  90 81 00 EC */	stw r4, 0xec(r1)
 /* 80401B5C 003CB11C  38 61 00 CC */	addi r3, r1, 0xcc
-/* 80401B60 003CB120  48 02 E6 29 */	bl func_80430188
+/* 80401B60 003CB120  48 02 E6 29 */	bl UpdateVertexColor__Q34nw4r2ut10CharWriterFv
 /* 80401B64 003CB124  80 A1 00 30 */	lwz r5, 0x30(r1)
 /* 80401B68 003CB128  38 61 00 CC */	addi r3, r1, 0xcc
 /* 80401B6C 003CB12C  80 01 00 2C */	lwz r0, 0x2c(r1)

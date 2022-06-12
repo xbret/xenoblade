@@ -1942,8 +1942,8 @@ lbl_806570C8:
 .global lbl_806570D4
 lbl_806570D4:
 	.skip 0xC
-.global lbl_806570E0
-lbl_806570E0:
+.global memoryAllocHeapArray
+memoryAllocHeapArray:
 	.skip 0x2300
 .global lbl_806593E0
 lbl_806593E0:

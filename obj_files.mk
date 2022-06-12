@@ -435,6 +435,8 @@ CRIWARE_O_FILES :=\
 
 
 NW4R_O_FILES :=\
+	$(BUILD_DIR)/asm/nw4r/db/db_1.o \
+	$(BUILD_DIR)/asm/nw4r/db/db_assert.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_rescommon.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resdict.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resfile.o \
@@ -575,6 +577,7 @@ NW4R_O_FILES :=\
 
 MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_80432678.o \
+	$(BUILD_DIR)/asm/monolithlib/code_80433300.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80435D28.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80435DF8.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80435E70.o \
