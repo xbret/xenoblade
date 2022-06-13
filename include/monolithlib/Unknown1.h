@@ -1,5 +1,5 @@
-#ifndef _MONOLITHLIB_UNKNOWN1_H
-#define _MONOLITHLIB_UNKNOWN1_H
+#ifndef _MLIB_UNKNOWN1_H
+#define _MLIB_UNKNOWN1_H
 
 #include "types.h"
 

@@ -158,7 +158,9 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/MetroTRK/main_TRK.o \
 	$(BUILD_DIR)/asm/MetroTRK/mainloop.o \
 	$(BUILD_DIR)/asm/MetroTRK/mem_TRK_1.o \
-	$(BUILD_DIR)/asm/MetroTRK/dispatch.o \
+	$(BUILD_DIR)/asm/data.o \
+	$(BUILD_DIR)/src/MetroTRK/dispatch.o \
+	$(BUILD_DIR)/asm/data_1.o \
 	$(BUILD_DIR)/asm/MetroTRK/dolphin_trk.o \
 	$(BUILD_DIR)/asm/MetroTRK/dolphin_trk_glue.o \
 	$(BUILD_DIR)/asm/MetroTRK/notify.o \
@@ -578,6 +580,12 @@ NW4R_O_FILES :=\
 MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_80432678.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80433300.o \
+	$(BUILD_DIR)/asm/bss.o \
+	$(BUILD_DIR)/asm/monolithlib/Operators.o \
+	$(BUILD_DIR)/asm/bss_1.o \
+	$(BUILD_DIR)/asm/sdata_2.o \
+	$(BUILD_DIR)/asm/sdata2_2.o \
+	$(BUILD_DIR)/asm/monolithlib/code_80434F94.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80435D28.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80435DF8.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80435E70.o \
@@ -612,7 +620,7 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_804BD8E8.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804BF59C.o \
 	$(BUILD_DIR)/src/monolithlib/Unknown1.o \
-	$(BUILD_DIR)/asm/sdata_2.o \
+	$(BUILD_DIR)/asm/sdata_3.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804C8684.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804C8718.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804CC2B8.o \
@@ -634,12 +642,6 @@ EXTABINDEX_O_FILES :=\
 
 CTORS_O_FILES :=\
 	$(BUILD_DIR)/asm/ctors.o
-
-DATA_O_FILES :=\
-	$(BUILD_DIR)/asm/data.o
-
-BSS_O_FILES :=\
-	$(BUILD_DIR)/asm/bss.o
 
 SBSS2_O_FILES :=\
 	$(BUILD_DIR)/asm/sbss2.o
