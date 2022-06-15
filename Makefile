@@ -111,6 +111,8 @@ ASFLAGS += -W
 endif
 
 $(BUILD_DIR)/src/MSL_C/PPC_EABI/Runtime/__start.o: CFLAGS += -func_align 16
+#All the functions in the Wii SDK are aligned to 16 bytes, so this is necessary.
+$(BUILD_DIR)/src/RevoSDK/%.o: CFLAGS += -func_align 16
 
 #-------------------------------------------------------------------------------
 # Recipes

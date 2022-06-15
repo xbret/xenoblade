@@ -5,8 +5,8 @@
 .balign 16, 0
 .global PSMTXIdentity
 PSMTXIdentity:
-/* 8034D1E0 003167A0  C0 02 BD AC */	lfs f0, lbl_8066C12C@sda21(r2)
-/* 8034D1E4 003167A4  C0 22 BD A8 */	lfs f1, lbl_8066C128@sda21(r2)
+/* 8034D1E0 003167A0  C0 02 BD AC */	lfs f0, zero_c@sda21(r2)
+/* 8034D1E4 003167A4  C0 22 BD A8 */	lfs f1, one_c@sda21(r2)
 /* 8034D1E8 003167A8  F0 03 00 08 */	psq_st f0, 8(r3), 0, qr0
 /* 8034D1EC 003167AC  10 41 04 A0 */	ps_merge10 f2, f1, f0
 /* 8034D1F0 003167B0  10 20 0C 60 */	ps_merge01 f1, f0, f1
@@ -18,8 +18,8 @@ PSMTXIdentity:
 /* 8034D208 003167C8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034D210
-func_8034D210:
+.global PSMTXCopy
+PSMTXCopy:
 /* 8034D210 003167D0  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8034D214 003167D4  F0 04 00 00 */	psq_st f0, 0(r4), 0, qr0
 /* 8034D218 003167D8  E0 23 00 08 */	psq_l f1, 8(r3), 0, qr0
@@ -35,16 +35,16 @@ func_8034D210:
 /* 8034D240 00316800  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034D250
-func_8034D250:
+.global PSMTXConcat
+PSMTXConcat:
 /* 8034D250 00316810  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8034D254 00316814  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8034D258 00316818  D9 C1 00 08 */	stfd f14, 8(r1)
 /* 8034D25C 0031681C  E0 C4 00 00 */	psq_l f6, 0(r4), 0, qr0
-/* 8034D260 00316820  3C C0 80 66 */	lis r6, lbl_80665AD8@ha
+/* 8034D260 00316820  3C C0 80 66 */	lis r6, Unit01@ha
 /* 8034D264 00316824  E0 E4 00 08 */	psq_l f7, 8(r4), 0, qr0
 /* 8034D268 00316828  D9 E1 00 10 */	stfd f15, 0x10(r1)
-/* 8034D26C 0031682C  38 C6 5A D8 */	addi r6, r6, lbl_80665AD8@l
+/* 8034D26C 0031682C  38 C6 5A D8 */	addi r6, r6, Unit01@l
 /* 8034D270 00316830  DB E1 00 28 */	stfd f31, 0x28(r1)
 /* 8034D274 00316834  E1 04 00 10 */	psq_l f8, 16(r4), 0, qr0
 /* 8034D278 00316838  11 86 00 18 */	ps_muls0 f12, f6, f0
@@ -90,8 +90,8 @@ func_8034D250:
 /* 8034D318 003168D8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034D320
-func_8034D320:
+.global PSMTXConcatArray
+PSMTXConcatArray:
 /* 8034D320 003168E0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8034D324 003168E4  DB E1 00 40 */	stfd f31, 0x40(r1)
 /* 8034D328 003168E8  F3 E1 00 48 */	psq_st f31, 72(r1), 0, qr0
@@ -104,7 +104,7 @@ func_8034D320:
 /* 8034D344 00316904  38 06 FF FF */	addi r0, r6, -1
 /* 8034D348 00316908  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8034D34C 0031690C  E0 23 00 08 */	psq_l f1, 8(r3), 0, qr0
-/* 8034D350 00316910  38 CD 99 58 */	addi r6, r13, lbl_80665AD8@sda21
+/* 8034D350 00316910  38 CD 99 58 */	addi r6, r13, Unit01@sda21
 /* 8034D354 00316914  E0 43 00 10 */	psq_l f2, 16(r3), 0, qr0
 /* 8034D358 00316918  E0 63 00 18 */	psq_l f3, 24(r3), 0, qr0
 /* 8034D35C 0031691C  E0 83 00 20 */	psq_l f4, 32(r3), 0, qr0
@@ -193,11 +193,11 @@ lbl_8034D3C8:
 /* 8034D4A4 00316A64  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034D4B0
-func_8034D4B0:
+.global PSMTXTranspose
+PSMTXTranspose:
 /* 8034D4B0 00316A70  E0 23 00 00 */	psq_l f1, 0(r3), 0, qr0
 /* 8034D4B4 00316A74  E0 43 00 10 */	psq_l f2, 16(r3), 0, qr0
-/* 8034D4B8 00316A78  C0 02 BD AC */	lfs f0, lbl_8066C12C@sda21(r2)
+/* 8034D4B8 00316A78  C0 02 BD AC */	lfs f0, zero_c@sda21(r2)
 /* 8034D4BC 00316A7C  10 81 14 20 */	ps_merge00 f4, f1, f2
 /* 8034D4C0 00316A80  E0 63 80 08 */	psq_l f3, 8(r3), 1, qr0
 /* 8034D4C4 00316A84  10 A1 14 E0 */	ps_merge11 f5, f1, f2
@@ -217,8 +217,8 @@ func_8034D4B0:
 /* 8034D4FC 00316ABC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034D500
-func_8034D500:
+.global PSMTXInverse
+PSMTXInverse:
 /* 8034D500 00316AC0  E0 03 80 00 */	psq_l f0, 0(r3), 1, qr0
 /* 8034D504 00316AC4  E0 23 00 04 */	psq_l f1, 4(r3), 0, qr0
 /* 8034D508 00316AC8  E0 43 80 10 */	psq_l f2, 16(r3), 1, qr0
@@ -248,9 +248,6 @@ func_8034D500:
 /* 8034D568 00316B28  40 82 00 0C */	bne lbl_8034D574
 /* 8034D56C 00316B2C  38 60 00 00 */	li r3, 0
 /* 8034D570 00316B30  4E 80 00 20 */	blr
-
-
-.global lbl_8034D574
 lbl_8034D574:
 /* 8034D574 00316B34  EC 00 38 30 */	fres f0, f7
 /* 8034D578 00316B38  10 C0 00 2A */	ps_add f6, f0, f0
@@ -287,8 +284,8 @@ lbl_8034D574:
 /* 8034D5F4 00316BB4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034D600
-func_8034D600:
+.global PSMTXRotRad
+PSMTXRotRad:
 /* 8034D600 00316BC0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8034D604 00316BC4  7C 08 02 A6 */	mflr r0
 /* 8034D608 00316BC8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -309,7 +306,7 @@ func_8034D600:
 /* 8034D644 00316C04  7F C3 F3 78 */	mr r3, r30
 /* 8034D648 00316C08  FC 20 F8 90 */	fmr f1, f31
 /* 8034D64C 00316C0C  7F E4 07 74 */	extsb r4, r31
-/* 8034D650 00316C10  48 00 00 31 */	bl func_8034D680
+/* 8034D650 00316C10  48 00 00 31 */	bl PSMTXRotTrig
 /* 8034D654 00316C14  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 8034D658 00316C18  E3 E1 00 28 */	psq_l f31, 40(r1), 0, qr0
 /* 8034D65C 00316C1C  CB E1 00 20 */	lfd f31, 0x20(r1)
@@ -322,24 +319,21 @@ func_8034D600:
 /* 8034D678 00316C38  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034D680
-func_8034D680:
+.global PSMTXRotTrig
+PSMTXRotTrig:
 /* 8034D680 00316C40  FC A0 08 18 */	frsp f5, f1
 /* 8034D684 00316C44  60 80 00 20 */	ori r0, r4, 0x20
 /* 8034D688 00316C48  FC 80 10 18 */	frsp f4, f2
 /* 8034D68C 00316C4C  28 00 00 78 */	cmplwi r0, 0x78
-/* 8034D690 00316C50  C0 02 BD AC */	lfs f0, lbl_8066C12C@sda21(r2)
+/* 8034D690 00316C50  C0 02 BD AC */	lfs f0, zero_c@sda21(r2)
 /* 8034D694 00316C54  10 40 28 50 */	ps_neg f2, f5
-/* 8034D698 00316C58  C0 22 BD A8 */	lfs f1, lbl_8066C128@sda21(r2)
+/* 8034D698 00316C58  C0 22 BD A8 */	lfs f1, one_c@sda21(r2)
 /* 8034D69C 00316C5C  41 82 00 18 */	beq lbl_8034D6B4
 /* 8034D6A0 00316C60  28 00 00 79 */	cmplwi r0, 0x79
 /* 8034D6A4 00316C64  41 82 00 38 */	beq lbl_8034D6DC
 /* 8034D6A8 00316C68  28 00 00 7A */	cmplwi r0, 0x7a
 /* 8034D6AC 00316C6C  41 82 00 5C */	beq lbl_8034D708
 /* 8034D6B0 00316C70  4E 80 00 20 */	blr
-
-
-.global lbl_8034D6B4
 lbl_8034D6B4:
 /* 8034D6B4 00316C74  10 65 24 20 */	ps_merge00 f3, f5, f4
 /* 8034D6B8 00316C78  F0 23 80 00 */	psq_st f1, 0(r3), 1, qr0
@@ -351,9 +345,6 @@ lbl_8034D6B4:
 /* 8034D6D0 00316C90  F0 63 00 24 */	psq_st f3, 36(r3), 0, qr0
 /* 8034D6D4 00316C94  F0 23 00 14 */	psq_st f1, 20(r3), 0, qr0
 /* 8034D6D8 00316C98  4E 80 00 20 */	blr
-
-
-.global lbl_8034D6DC
 lbl_8034D6DC:
 /* 8034D6DC 00316C9C  10 64 04 20 */	ps_merge00 f3, f4, f0
 /* 8034D6E0 00316CA0  F0 03 00 18 */	psq_st f0, 24(r3), 0, qr0
@@ -366,9 +357,6 @@ lbl_8034D6DC:
 /* 8034D6FC 00316CBC  F0 03 00 08 */	psq_st f0, 8(r3), 0, qr0
 /* 8034D700 00316CC0  F0 43 00 20 */	psq_st f2, 32(r3), 0, qr0
 /* 8034D704 00316CC4  4E 80 00 20 */	blr
-
-
-.global lbl_8034D708
 lbl_8034D708:
 /* 8034D708 00316CC8  10 65 24 20 */	ps_merge00 f3, f5, f4
 /* 8034D70C 00316CCC  F0 03 00 08 */	psq_st f0, 8(r3), 0, qr0
@@ -382,8 +370,8 @@ lbl_8034D708:
 /* 8034D72C 00316CEC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034D730
-func_8034D730:
+.global __PSMTXRotAxisRadInternal
+__PSMTXRotAxisRadInternal:
 /* 8034D730 00316CF0  E0 64 00 00 */	psq_l f3, 0(r4), 0, qr0
 /* 8034D734 00316CF4  FD 60 10 18 */	frsp f11, f2
 /* 8034D738 00316CF8  C1 42 BD B0 */	lfs f10, lbl_8066C130@sda21(r2)
@@ -430,8 +418,8 @@ func_8034D730:
 /* 8034D7DC 00316D9C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034D7E0
-func_8034D7E0:
+.global PSMTXRotAxisRad
+PSMTXRotAxisRad:
 /* 8034D7E0 00316DA0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8034D7E4 00316DA4  7C 08 02 A6 */	mflr r0
 /* 8034D7E8 00316DA8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -452,7 +440,7 @@ func_8034D7E0:
 /* 8034D824 00316DE4  7F C3 F3 78 */	mr r3, r30
 /* 8034D828 00316DE8  FC 20 F8 90 */	fmr f1, f31
 /* 8034D82C 00316DEC  7F E4 FB 78 */	mr r4, r31
-/* 8034D830 00316DF0  4B FF FF 01 */	bl func_8034D730
+/* 8034D830 00316DF0  4B FF FF 01 */	bl __PSMTXRotAxisRadInternal
 /* 8034D834 00316DF4  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 8034D838 00316DF8  E3 E1 00 28 */	psq_l f31, 40(r1), 0, qr0
 /* 8034D83C 00316DFC  CB E1 00 20 */	lfd f31, 0x20(r1)
@@ -465,10 +453,10 @@ func_8034D7E0:
 /* 8034D858 00316E18  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034D860
-func_8034D860:
-/* 8034D860 00316E20  C0 02 BD AC */	lfs f0, lbl_8066C12C@sda21(r2)
-/* 8034D864 00316E24  C0 82 BD A8 */	lfs f4, lbl_8066C128@sda21(r2)
+.global PSMTXTrans
+PSMTXTrans:
+/* 8034D860 00316E20  C0 02 BD AC */	lfs f0, zero_c@sda21(r2)
+/* 8034D864 00316E24  C0 82 BD A8 */	lfs f4, one_c@sda21(r2)
 /* 8034D868 00316E28  D0 23 00 0C */	stfs f1, 0xc(r3)
 /* 8034D86C 00316E2C  D0 43 00 1C */	stfs f2, 0x1c(r3)
 /* 8034D870 00316E30  F0 03 00 04 */	psq_st f0, 4(r3), 0, qr0
@@ -482,8 +470,8 @@ func_8034D860:
 /* 8034D890 00316E50  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034D8A0
-func_8034D8A0:
+.global PSMTXTransApply
+PSMTXTransApply:
 /* 8034D8A0 00316E60  E0 83 00 00 */	psq_l f4, 0(r3), 0, qr0
 /* 8034D8A4 00316E64  FC 20 08 18 */	frsp f1, f1
 /* 8034D8A8 00316E68  E0 A3 00 08 */	psq_l f5, 8(r3), 0, qr0
@@ -505,9 +493,9 @@ func_8034D8A0:
 /* 8034D8E8 00316EA8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034D8F0
-func_8034D8F0:
-/* 8034D8F0 00316EB0  C0 02 BD AC */	lfs f0, lbl_8066C12C@sda21(r2)
+.global PSMTXScale
+PSMTXScale:
+/* 8034D8F0 00316EB0  C0 02 BD AC */	lfs f0, zero_c@sda21(r2)
 /* 8034D8F4 00316EB4  D0 23 00 00 */	stfs f1, 0(r3)
 /* 8034D8F8 00316EB8  F0 03 00 04 */	psq_st f0, 4(r3), 0, qr0
 /* 8034D8FC 00316EBC  F0 03 00 0C */	psq_st f0, 12(r3), 0, qr0
@@ -519,8 +507,8 @@ func_8034D8F0:
 /* 8034D914 00316ED4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034D920
-func_8034D920:
+.global PSMTXScaleApply
+PSMTXScaleApply:
 /* 8034D920 00316EE0  FC 20 08 18 */	frsp f1, f1
 /* 8034D924 00316EE4  E0 83 00 00 */	psq_l f4, 0(r3), 0, qr0
 /* 8034D928 00316EE8  FC 40 10 18 */	frsp f2, f2
@@ -545,12 +533,12 @@ func_8034D920:
 /* 8034D974 00316F34  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034D980
-func_8034D980:
+.global PSMTXQuat
+PSMTXQuat:
 /* 8034D980 00316F40  E0 84 00 00 */	psq_l f4, 0(r4), 0, qr0
 /* 8034D984 00316F44  E0 A4 00 08 */	psq_l f5, 8(r4), 0, qr0
 /* 8034D988 00316F48  10 C4 01 32 */	ps_mul f6, f4, f4
-/* 8034D98C 00316F4C  C0 22 BD A8 */	lfs f1, lbl_8066C128@sda21(r2)
+/* 8034D98C 00316F4C  C0 22 BD A8 */	lfs f1, one_c@sda21(r2)
 /* 8034D990 00316F50  11 24 24 A0 */	ps_merge10 f9, f4, f4
 /* 8034D994 00316F54  EC 01 08 28 */	fsubs f0, f1, f1
 /* 8034D998 00316F58  11 05 31 7A */	ps_madd f8, f5, f5, f6
@@ -590,8 +578,8 @@ func_8034D980:
 /* 8034DA20 00316FE0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034DA30
-func_8034DA30:
+.global C_MTXLookAt
+C_MTXLookAt:
 /* 8034DA30 00316FF0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8034DA34 00316FF4  7C 08 02 A6 */	mflr r0
 /* 8034DA38 00316FF8  C0 24 00 00 */	lfs f1, 0(r4)
@@ -615,18 +603,18 @@ func_8034DA30:
 /* 8034DA80 00317040  D0 41 00 24 */	stfs f2, 0x24(r1)
 /* 8034DA84 00317044  7C 64 1B 78 */	mr r4, r3
 /* 8034DA88 00317048  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 8034DA8C 0031704C  48 00 06 25 */	bl func_8034E0B0
+/* 8034DA8C 0031704C  48 00 06 25 */	bl PSVECNormalize
 /* 8034DA90 00317050  7F E3 FB 78 */	mr r3, r31
 /* 8034DA94 00317054  38 81 00 20 */	addi r4, r1, 0x20
 /* 8034DA98 00317058  38 A1 00 14 */	addi r5, r1, 0x14
-/* 8034DA9C 0031705C  48 00 06 D5 */	bl func_8034E170
+/* 8034DA9C 0031705C  48 00 06 D5 */	bl PSVECCrossProduct
 /* 8034DAA0 00317060  38 61 00 14 */	addi r3, r1, 0x14
 /* 8034DAA4 00317064  7C 64 1B 78 */	mr r4, r3
-/* 8034DAA8 00317068  48 00 06 09 */	bl func_8034E0B0
+/* 8034DAA8 00317068  48 00 06 09 */	bl PSVECNormalize
 /* 8034DAAC 0031706C  38 61 00 20 */	addi r3, r1, 0x20
 /* 8034DAB0 00317070  38 81 00 14 */	addi r4, r1, 0x14
 /* 8034DAB4 00317074  38 A1 00 08 */	addi r5, r1, 8
-/* 8034DAB8 00317078  48 00 06 B9 */	bl func_8034E170
+/* 8034DAB8 00317078  48 00 06 B9 */	bl PSVECCrossProduct
 /* 8034DABC 0031707C  C0 01 00 14 */	lfs f0, 0x14(r1)
 /* 8034DAC0 00317080  D0 1D 00 00 */	stfs f0, 0(r29)
 /* 8034DAC4 00317084  C0 9E 00 00 */	lfs f4, 0(r30)
@@ -687,14 +675,14 @@ func_8034DA30:
 /* 8034DBA0 00317160  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034DBB0
-func_8034DBB0:
+.global C_MTXLightFrustum
+C_MTXLightFrustum:
 /* 8034DBB0 00317170  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034DBB4 00317174  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8034DBB8 00317178  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
 /* 8034DBBC 0031717C  EC 04 18 28 */	fsubs f0, f4, f3
-/* 8034DBC0 00317180  C1 42 BD AC */	lfs f10, lbl_8066C12C@sda21(r2)
-/* 8034DBC4 00317184  C1 82 BD A8 */	lfs f12, lbl_8066C128@sda21(r2)
+/* 8034DBC0 00317180  C1 42 BD AC */	lfs f10, zero_c@sda21(r2)
+/* 8034DBC4 00317184  C1 82 BD A8 */	lfs f12, one_c@sda21(r2)
 /* 8034DBC8 00317188  ED 21 10 28 */	fsubs f9, f1, f2
 /* 8034DBCC 0031718C  C1 62 BD B8 */	lfs f11, lbl_8066C138@sda21(r2)
 /* 8034DBD0 00317190  EC 64 18 2A */	fadds f3, f4, f3
@@ -732,8 +720,8 @@ func_8034DBB0:
 /* 8034DC50 00317210  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034DC60
-func_8034DC60:
+.global C_MTXLightPerspective
+C_MTXLightPerspective:
 /* 8034DC60 00317220  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8034DC64 00317224  7C 08 02 A6 */	mflr r0
 /* 8034DC68 00317228  C0 E2 BD B0 */	lfs f7, lbl_8066C130@sda21(r2)
@@ -760,8 +748,8 @@ func_8034DC60:
 /* 8034DCBC 0031727C  7C 7F 1B 78 */	mr r31, r3
 /* 8034DCC0 00317280  4B F7 D4 C9 */	bl tan
 /* 8034DCC4 00317284  FC A0 08 18 */	frsp f5, f1
-/* 8034DCC8 00317288  C0 62 BD AC */	lfs f3, lbl_8066C12C@sda21(r2)
-/* 8034DCCC 0031728C  C0 82 BD A8 */	lfs f4, lbl_8066C128@sda21(r2)
+/* 8034DCC8 00317288  C0 62 BD AC */	lfs f3, zero_c@sda21(r2)
+/* 8034DCCC 0031728C  C0 82 BD A8 */	lfs f4, one_c@sda21(r2)
 /* 8034DCD0 00317290  FC 20 F8 50 */	fneg f1, f31
 /* 8034DCD4 00317294  C0 02 BD BC */	lfs f0, lbl_8066C13C@sda21(r2)
 /* 8034DCD8 00317298  FC 40 F0 50 */	fneg f2, f30
@@ -798,11 +786,11 @@ func_8034DC60:
 /* 8034DD54 00317314  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034DD60
-func_8034DD60:
+.global C_MTXLightOrtho
+C_MTXLightOrtho:
 /* 8034DD60 00317320  ED 64 18 28 */	fsubs f11, f4, f3
-/* 8034DD64 00317324  C1 22 BD AC */	lfs f9, lbl_8066C12C@sda21(r2)
-/* 8034DD68 00317328  C1 42 BD A8 */	lfs f10, lbl_8066C128@sda21(r2)
+/* 8034DD64 00317324  C1 22 BD AC */	lfs f9, zero_c@sda21(r2)
+/* 8034DD68 00317328  C1 42 BD A8 */	lfs f10, one_c@sda21(r2)
 /* 8034DD6C 0031732C  EC 01 10 28 */	fsubs f0, f1, f2
 /* 8034DD70 00317330  EC 64 18 2A */	fadds f3, f4, f3
 /* 8034DD74 00317334  C0 82 BD B8 */	lfs f4, lbl_8066C138@sda21(r2)

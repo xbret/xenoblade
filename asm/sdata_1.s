@@ -639,8 +639,8 @@ lbl_80665AD4:
 	.4byte 0x41C00000
 
 
-.global lbl_80665AD8
-lbl_80665AD8:
+.global Unit01
+Unit01:
 	# ROM: 0x5716B8
 	.4byte 0
 	.float 1.0

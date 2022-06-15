@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8034DDF0
-func_8034DDF0:
+.global PSMTXMultVec
+PSMTXMultVec:
 /* 8034DDF0 003173B0  E0 04 00 00 */	psq_l f0, 0(r4), 0, qr0
 /* 8034DDF4 003173B4  E0 43 00 00 */	psq_l f2, 0(r3), 0, qr0
 /* 8034DDF8 003173B8  E0 24 80 08 */	psq_l f1, 8(r4), 1, qr0

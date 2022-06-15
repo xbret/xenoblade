@@ -89,13 +89,13 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/file_io.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/file_pos.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/mbstring.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common/mem.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common/mem.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/mem_funcs.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common/math_api.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/misc_io.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/printf.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common/rand.o \
 	$(BUILD_DIR)/asm/sdata.o \
+	$(BUILD_DIR)/src/MSL_C/MSL_Common/rand.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common/float.o \
 	$(BUILD_DIR)/asm/sdata_1.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/scanf.o \
@@ -150,7 +150,7 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/sbss_3.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/w_sqrt.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/extras.o \
-	$(BUILD_DIR)/asm/MetroTRK/targsupp.o \
+	$(BUILD_DIR)/src/MetroTRK/targsupp.o \
 	$(BUILD_DIR)/asm/MetroTRK/main.o \
 	$(BUILD_DIR)/asm/MetroTRK/MWCriticalSection_gc.o \
 	$(BUILD_DIR)/asm/MetroTRK/CircleBuffer.o \
@@ -169,7 +169,7 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/MetroTRK/serpoll.o \
 	$(BUILD_DIR)/asm/MetroTRK/string_TRK.o \
 	$(BUILD_DIR)/asm/MetroTRK/support.o \
-	$(BUILD_DIR)/asm/MetroTRK/targcont.o \
+	$(BUILD_DIR)/src/MetroTRK/targcont.o \
 	$(BUILD_DIR)/asm/MetroTRK/mpc_7xx_603e.o \
 	$(BUILD_DIR)/asm/MetroTRK/msg.o \
 	$(BUILD_DIR)/asm/MetroTRK/msgbuf.o \

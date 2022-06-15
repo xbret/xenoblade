@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8034E080
-func_8034E080:
+.global PSVECAdd
+PSVECAdd:
 /* 8034E080 00317640  E0 43 00 00 */	psq_l f2, 0(r3), 0, qr0
 /* 8034E084 00317644  E0 84 00 00 */	psq_l f4, 0(r4), 0, qr0
 /* 8034E088 00317648  10 C2 20 2A */	ps_add f6, f2, f4
@@ -16,8 +16,8 @@ func_8034E080:
 /* 8034E0A0 00317660  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034E0B0
-func_8034E0B0:
+.global PSVECNormalize
+PSVECNormalize:
 /* 8034E0B0 00317670  E0 43 00 00 */	psq_l f2, 0(r3), 0, qr0
 /* 8034E0B4 00317674  E0 63 80 08 */	psq_l f3, 8(r3), 1, qr0
 /* 8034E0B8 00317678  10 A2 00 B2 */	ps_mul f5, f2, f2
@@ -37,8 +37,8 @@ func_8034E0B0:
 /* 8034E0F0 003176B0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034E100
-func_8034E100:
+.global PSVECMag
+PSVECMag:
 /* 8034E100 003176C0  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8034E104 003176C4  C0 82 BD E0 */	lfs f4, lbl_8066C160@sda21(r2)
 /* 8034E108 003176C8  10 00 00 32 */	ps_mul f0, f0, f0
@@ -58,8 +58,8 @@ func_8034E100:
 /* 8034E140 00317700  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034E150
-func_8034E150:
+.global PSVECDotProduct
+PSVECDotProduct:
 /* 8034E150 00317710  E0 43 00 04 */	psq_l f2, 4(r3), 0, qr0
 /* 8034E154 00317714  E0 64 00 04 */	psq_l f3, 4(r4), 0, qr0
 /* 8034E158 00317718  10 42 00 F2 */	ps_mul f2, f2, f3
@@ -70,8 +70,8 @@ func_8034E150:
 /* 8034E16C 0031772C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034E170
-func_8034E170:
+.global PSVECCrossProduct
+PSVECCrossProduct:
 /* 8034E170 00317730  E0 24 00 00 */	psq_l f1, 0(r4), 0, qr0
 /* 8034E174 00317734  C0 43 00 08 */	lfs f2, 8(r3)
 /* 8034E178 00317738  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
@@ -89,8 +89,8 @@ func_8034E170:
 /* 8034E1A8 00317768  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034E1B0
-func_8034E1B0:
+.global C_VECHalfAngle
+C_VECHalfAngle:
 /* 8034E1B0 00317770  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8034E1B4 00317774  7C 08 02 A6 */	mflr r0
 /* 8034E1B8 00317778  C0 43 00 00 */	lfs f2, 0(r3)
@@ -116,23 +116,23 @@ func_8034E1B0:
 /* 8034E208 003177C8  D0 41 00 14 */	stfs f2, 0x14(r1)
 /* 8034E20C 003177CC  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 8034E210 003177D0  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 8034E214 003177D4  4B FF FE 9D */	bl func_8034E0B0
+/* 8034E214 003177D4  4B FF FE 9D */	bl PSVECNormalize
 /* 8034E218 003177D8  38 61 00 14 */	addi r3, r1, 0x14
 /* 8034E21C 003177DC  7C 64 1B 78 */	mr r4, r3
-/* 8034E220 003177E0  4B FF FE 91 */	bl func_8034E0B0
+/* 8034E220 003177E0  4B FF FE 91 */	bl PSVECNormalize
 /* 8034E224 003177E4  38 61 00 20 */	addi r3, r1, 0x20
 /* 8034E228 003177E8  38 81 00 14 */	addi r4, r1, 0x14
 /* 8034E22C 003177EC  38 A1 00 08 */	addi r5, r1, 8
-/* 8034E230 003177F0  4B FF FE 51 */	bl func_8034E080
+/* 8034E230 003177F0  4B FF FE 51 */	bl PSVECAdd
 /* 8034E234 003177F4  38 61 00 08 */	addi r3, r1, 8
 /* 8034E238 003177F8  7C 64 1B 78 */	mr r4, r3
-/* 8034E23C 003177FC  4B FF FF 15 */	bl func_8034E150
+/* 8034E23C 003177FC  4B FF FF 15 */	bl PSVECDotProduct
 /* 8034E240 00317800  C0 02 BD E8 */	lfs f0, lbl_8066C168@sda21(r2)
 /* 8034E244 00317804  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8034E248 00317808  40 81 00 14 */	ble lbl_8034E25C
 /* 8034E24C 0031780C  7F E4 FB 78 */	mr r4, r31
 /* 8034E250 00317810  38 61 00 08 */	addi r3, r1, 8
-/* 8034E254 00317814  4B FF FE 5D */	bl func_8034E0B0
+/* 8034E254 00317814  4B FF FE 5D */	bl PSVECNormalize
 /* 8034E258 00317818  48 00 00 1C */	b lbl_8034E274
 lbl_8034E25C:
 /* 8034E25C 0031781C  80 61 00 08 */	lwz r3, 8(r1)
@@ -160,3 +160,78 @@ func_8034E290:
 /* 8034E2A8 00317868  F0 05 00 00 */	psq_st f0, 0(r5), 0, qr0
 /* 8034E2AC 0031786C  F0 25 00 08 */	psq_st f1, 8(r5), 0, qr0
 /* 8034E2B0 00317870  4E 80 00 20 */	blr 
+
+.balign 16, 0
+.global func_8034E2C0
+func_8034E2C0:
+/* 8034E2C0 00317880  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
+/* 8034E2C4 00317884  E0 23 00 08 */	psq_l f1, 8(r3), 0, qr0
+/* 8034E2C8 00317888  10 A0 00 50 */	ps_neg f5, f0
+/* 8034E2CC 0031788C  E0 44 00 00 */	psq_l f2, 0(r4), 0, qr0
+/* 8034E2D0 00317890  10 C0 08 50 */	ps_neg f6, f1
+/* 8034E2D4 00317894  E0 64 00 08 */	psq_l f3, 8(r4), 0, qr0
+/* 8034E2D8 00317898  10 E1 00 98 */	ps_muls0 f7, f1, f2
+/* 8034E2DC 0031789C  10 85 04 60 */	ps_merge01 f4, f5, f0
+/* 8034E2E0 003178A0  10 26 0C 60 */	ps_merge01 f1, f6, f1
+/* 8034E2E4 003178A4  10 A5 00 98 */	ps_muls0 f5, f5, f2
+/* 8034E2E8 003178A8  11 04 00 9A */	ps_muls1 f8, f4, f2
+/* 8034E2EC 003178AC  10 E4 38 DC */	ps_madds0 f7, f4, f3, f7
+/* 8034E2F0 003178B0  10 41 00 9A */	ps_muls1 f2, f1, f2
+/* 8034E2F4 003178B4  10 A1 28 DC */	ps_madds0 f5, f1, f3, f5
+/* 8034E2F8 003178B8  10 E7 3C A0 */	ps_merge10 f7, f7, f7
+/* 8034E2FC 003178BC  10 40 10 DE */	ps_madds1 f2, f0, f3, f2
+/* 8034E300 003178C0  10 A5 2C A0 */	ps_merge10 f5, f5, f5
+/* 8034E304 003178C4  11 06 40 DE */	ps_madds1 f8, f6, f3, f8
+/* 8034E308 003178C8  10 E7 10 2A */	ps_add f7, f7, f2
+/* 8034E30C 003178CC  10 A5 40 28 */	ps_sub f5, f5, f8
+/* 8034E310 003178D0  F0 E5 00 00 */	psq_st f7, 0(r5), 0, qr0
+/* 8034E314 003178D4  F0 A5 00 08 */	psq_st f5, 8(r5), 0, qr0
+/* 8034E318 003178D8  4E 80 00 20 */	blr 
+
+.balign 16, 0
+.global func_8034E320
+func_8034E320:
+/* 8034E320 003178E0  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
+/* 8034E324 003178E4  E0 43 00 08 */	psq_l f2, 8(r3), 0, qr0
+/* 8034E328 003178E8  10 00 00 58 */	ps_muls0 f0, f0, f1
+/* 8034E32C 003178EC  10 42 00 58 */	ps_muls0 f2, f2, f1
+/* 8034E330 003178F0  F0 04 00 00 */	psq_st f0, 0(r4), 0, qr0
+/* 8034E334 003178F4  F0 44 00 08 */	psq_st f2, 8(r4), 0, qr0
+/* 8034E338 003178F8  4E 80 00 20 */	blr 
+
+.balign 16, 0
+.global func_8034E340
+func_8034E340:
+/* 8034E340 00317900  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
+/* 8034E344 00317904  E0 24 00 00 */	psq_l f1, 0(r4), 0, qr0
+/* 8034E348 00317908  E0 43 00 08 */	psq_l f2, 8(r3), 0, qr0
+/* 8034E34C 0031790C  10 20 00 72 */	ps_mul f1, f0, f1
+/* 8034E350 00317910  E0 04 00 08 */	psq_l f0, 8(r4), 0, qr0
+/* 8034E354 00317914  10 22 08 3A */	ps_madd f1, f2, f0, f1
+/* 8034E358 00317918  10 21 08 54 */	ps_sum0 f1, f1, f1, f1
+/* 8034E35C 0031791C  4E 80 00 20 */	blr 
+
+.balign 16, 0
+.global func_8034E360
+func_8034E360:
+/* 8034E360 00317920  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
+/* 8034E364 00317924  C0 82 BD F0 */	lfs f4, lbl_8066C170@sda21(r2)
+/* 8034E368 00317928  10 40 00 32 */	ps_mul f2, f0, f0
+/* 8034E36C 0031792C  E0 23 00 08 */	psq_l f1, 8(r3), 0, qr0
+/* 8034E370 00317930  C0 E2 BD FC */	lfs f7, lbl_8066C17C@sda21(r2)
+/* 8034E374 00317934  10 A4 20 28 */	ps_sub f5, f4, f4
+/* 8034E378 00317938  C1 02 BE 00 */	lfs f8, lbl_8066C180@sda21(r2)
+/* 8034E37C 0031793C  10 41 10 7A */	ps_madd f2, f1, f1, f2
+/* 8034E380 00317940  10 42 10 94 */	ps_sum0 f2, f2, f2, f2
+/* 8034E384 00317944  FC 60 10 34 */	frsqrte f3, f2
+/* 8034E388 00317948  10 82 20 28 */	ps_sub f4, f2, f4
+/* 8034E38C 0031794C  FC C3 00 F2 */	fmul f6, f3, f3
+/* 8034E390 00317950  FC 63 01 F2 */	fmul f3, f3, f7
+/* 8034E394 00317954  FC C6 40 BC */	fnmsub f6, f6, f2, f8
+/* 8034E398 00317958  FC 66 00 F2 */	fmul f3, f6, f3
+/* 8034E39C 0031795C  10 64 28 EE */	ps_sel f3, f4, f3, f5
+/* 8034E3A0 00317960  10 00 00 D8 */	ps_muls0 f0, f0, f3
+/* 8034E3A4 00317964  10 21 00 D8 */	ps_muls0 f1, f1, f3
+/* 8034E3A8 00317968  F0 04 00 00 */	psq_st f0, 0(r4), 0, qr0
+/* 8034E3AC 0031796C  F0 24 00 08 */	psq_st f1, 8(r4), 0, qr0
+/* 8034E3B0 00317970  4E 80 00 20 */	blr 

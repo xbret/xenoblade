@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802BE878
-func_802BE878:
+.global __copy_longs_aligned
+__copy_longs_aligned:
 /* 802BE878 00287E38  7C 03 00 D0 */	neg r0, r3
 /* 802BE87C 00287E3C  38 E4 FF FF */	addi r7, r4, -1
 /* 802BE880 00287E40  54 06 07 BF */	clrlwi. r6, r0, 0x1e
@@ -59,8 +59,8 @@ lbl_802BE920:
 /* 802BE92C 00287EEC  40 82 FF F4 */	bne lbl_802BE920
 /* 802BE930 00287EF0  4E 80 00 20 */	blr 
 
-.global func_802BE934
-func_802BE934:
+.global __copy_longs_rev_aligned
+__copy_longs_rev_aligned:
 /* 802BE934 00287EF4  7C C3 2A 14 */	add r6, r3, r5
 /* 802BE938 00287EF8  7C 84 2A 14 */	add r4, r4, r5
 /* 802BE93C 00287EFC  54 C3 07 BF */	clrlwi. r3, r6, 0x1e
@@ -111,8 +111,8 @@ lbl_802BE9C8:
 /* 802BE9D4 00287F94  40 82 FF F4 */	bne lbl_802BE9C8
 /* 802BE9D8 00287F98  4E 80 00 20 */	blr 
 
-.global func_802BE9DC
-func_802BE9DC:
+.global __copy_longs_unaligned
+__copy_longs_unaligned:
 /* 802BE9DC 00287F9C  7C 03 00 D0 */	neg r0, r3
 /* 802BE9E0 00287FA0  38 E4 FF FF */	addi r7, r4, -1
 /* 802BE9E4 00287FA4  54 06 07 BF */	clrlwi. r6, r0, 0x1e
@@ -167,8 +167,8 @@ lbl_802BEA88:
 /* 802BEA94 00288054  40 82 FF F4 */	bne lbl_802BEA88
 /* 802BEA98 00288058  4E 80 00 20 */	blr 
 
-.global func_802BEA9C
-func_802BEA9C:
+.global __copy_longs_rev_unaligned
+__copy_longs_rev_unaligned:
 /* 802BEA9C 0028805C  7D 83 2A 14 */	add r12, r3, r5
 /* 802BEAA0 00288060  7C 84 2A 14 */	add r4, r4, r5
 /* 802BEAA4 00288064  55 83 07 BF */	clrlwi. r3, r12, 0x1e

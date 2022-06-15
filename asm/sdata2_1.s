@@ -1062,14 +1062,14 @@ lbl_8066C120:
 	.4byte func_80349A80
 
 
-.global lbl_8066C128
-lbl_8066C128:
+.global one_c
+one_c:
 	# ROM: 0x575F88
 	.float 1.0
 
 
-.global lbl_8066C12C
-lbl_8066C12C:
+.global zero_c
+zero_c:
 	# ROM: 0x575F8C
 	.4byte 0
 
