@@ -150,7 +150,7 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/sbss_3.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/w_sqrt.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/extras.o \
-	$(BUILD_DIR)/src/MetroTRK/targsupp.o \
+	$(BUILD_DIR)/asm/MetroTRK/targsupp.o \
 	$(BUILD_DIR)/asm/MetroTRK/main.o \
 	$(BUILD_DIR)/asm/MetroTRK/MWCriticalSection_gc.o \
 	$(BUILD_DIR)/asm/MetroTRK/CircleBuffer.o \
