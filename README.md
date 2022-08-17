@@ -1,13 +1,16 @@
 # Xenoblade
 WIP Decompilation of Xenoblade (JP)
 
-```diff
-- INFORMATION! -
+---
 
-The ROM this repository builds is shiftable, meaning you can modify
-the code however you want.
+### Important
 
-```
+**The DOL this repository builds can be shifted!**
+
+*This means you are now able to* ***add*** */* ***remove*** <br>
+*code for* ***modding*** */* ***research*** *as you see fit.*
+
+<br>
 
 It builds the following DOL:
 
