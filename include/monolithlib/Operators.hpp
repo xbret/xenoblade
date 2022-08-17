@@ -7,7 +7,7 @@ typedef struct HeapListEntry {
     HeapListEntry* prev;
     HeapListEntry* next;
     u32 unk8;
-    u32 unkC;
+    u32 size; //0xC
     u16 unk10;
 } HeapListEntry;
 

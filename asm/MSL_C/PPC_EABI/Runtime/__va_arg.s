@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802B95D4
-func_802B95D4:
+.global __va_arg
+__va_arg:
 /* 802B95D4 00282B94  88 E3 00 00 */	lbz r7, 0(r3)
 /* 802B95D8 00282B98  2C 04 00 03 */	cmpwi r4, 3
 /* 802B95DC 00282B9C  7C 66 1B 78 */	mr r6, r3

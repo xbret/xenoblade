@@ -4,7 +4,7 @@
 
 .global std$7dthandler
 std$7dthandler:
-/* 802B96FC 00282CBC  48 00 DA EC */	b func_802C71E8
+/* 802B96FC 00282CBC  48 00 DA EC */	b abort
 
 .global std$7terminate
 std$7terminate:

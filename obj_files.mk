@@ -5,7 +5,13 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8003A05C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8003AA00.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800539EC.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfScript.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80059EB8.o \
+	$(BUILD_DIR)/asm/data_1.o \
+	$(BUILD_DIR)/asm/rodata_1.o \
+	$(BUILD_DIR)/asm/sdata_1.o \
+	$(BUILD_DIR)/asm/sdata2_1.o \
+	$(BUILD_DIR)/asm/bss_1.o \
+	$(BUILD_DIR)/asm/sbss_1.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80069710.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8006A960.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80074F4C.o \
@@ -83,9 +89,8 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/arith.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/buffer_io.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/direct_io.o \
-	$(BUILD_DIR)/asm/sbss.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common/errno.o \
-	$(BUILD_DIR)/asm/sbss_1.o \
+	$(BUILD_DIR)/asm/sbss_2.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/file_io.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/file_pos.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/mbstring.o \
@@ -94,11 +99,11 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/src/MSL_C/MSL_Common/math_api.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/misc_io.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/printf.o \
-	$(BUILD_DIR)/asm/sdata.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common/rand.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common/float.o \
-	$(BUILD_DIR)/asm/sdata_1.o \
+	$(BUILD_DIR)/asm/sdata_2.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/scanf.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common/signal.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/string.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/strtold.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/strtoul.o \
@@ -108,10 +113,9 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/wstring.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/wchar_io.o \
 	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/uart_console_io_gcn.o \
-	$(BUILD_DIR)/asm/MSL_C/MSL_Common/code_802C71E8.o \
+	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/abort_exit_ppc_eabi.o \
+	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/math_double.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common_Embedded/math_sun.o \
-	$(BUILD_DIR)/asm/sdata2.o \
-	$(BUILD_DIR)/asm/rodata.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_acos.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_asin.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_atan2.o \
@@ -142,12 +146,12 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/w_log10.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/w_pow.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/e_sqrt.o \
-	$(BUILD_DIR)/asm/sbss_2.o \
-	$(BUILD_DIR)/asm/sdata2_1.o \
-	$(BUILD_DIR)/asm/rodata_1.o \
+	$(BUILD_DIR)/asm/sbss_3.o \
+	$(BUILD_DIR)/asm/sdata2_2.o \
+	$(BUILD_DIR)/asm/rodata_2.o \
 	$(BUILD_DIR)/asm/MSL_C/PPC_EABI/math_ppc.o \
 	$(BUILD_DIR)/src/MSL_C/PPC_EABI/Runtime/__start.o \
-	$(BUILD_DIR)/asm/sbss_3.o \
+	$(BUILD_DIR)/asm/sbss_4.o \
 	$(BUILD_DIR)/src/MSL_C/MSL_Common_Embedded/Math/w_sqrt.o \
 	$(BUILD_DIR)/asm/MSL_C/MSL_Common/extras.o \
 	$(BUILD_DIR)/asm/MetroTRK/targsupp.o \
@@ -158,9 +162,8 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/MetroTRK/main_TRK.o \
 	$(BUILD_DIR)/asm/MetroTRK/mainloop.o \
 	$(BUILD_DIR)/asm/MetroTRK/mem_TRK_1.o \
-	$(BUILD_DIR)/asm/data.o \
 	$(BUILD_DIR)/src/MetroTRK/dispatch.o \
-	$(BUILD_DIR)/asm/data_1.o \
+	$(BUILD_DIR)/asm/data_2.o \
 	$(BUILD_DIR)/asm/MetroTRK/dolphin_trk.o \
 	$(BUILD_DIR)/asm/MetroTRK/dolphin_trk_glue.o \
 	$(BUILD_DIR)/asm/MetroTRK/notify.o \
@@ -285,6 +288,7 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd_broadway.o \
 	$(BUILD_DIR)/asm/RevoSDK/enc/encutility.o \
 	$(BUILD_DIR)/asm/RevoSDK/enc/enc.o \
+	$(BUILD_DIR)/asm/rodata_3.o \
 	$(BUILD_DIR)/asm/RevoSDK/esp.o \
 	$(BUILD_DIR)/asm/RevoSDK/euart/euart.o \
 	$(BUILD_DIR)/asm/RevoSDK/exi/EXIBios.o \
@@ -580,11 +584,10 @@ NW4R_O_FILES :=\
 MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_80432678.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80433300.o \
-	$(BUILD_DIR)/asm/bss.o \
 	$(BUILD_DIR)/asm/monolithlib/Operators.o \
-	$(BUILD_DIR)/asm/bss_1.o \
-	$(BUILD_DIR)/asm/sdata_2.o \
-	$(BUILD_DIR)/asm/sdata2_2.o \
+	$(BUILD_DIR)/asm/bss_2.o \
+	$(BUILD_DIR)/asm/sdata_3.o \
+	$(BUILD_DIR)/asm/sdata2_3.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80434F94.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80435D28.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80435DF8.o \
@@ -620,7 +623,7 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_804BD8E8.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804BF59C.o \
 	$(BUILD_DIR)/src/monolithlib/Unknown1.o \
-	$(BUILD_DIR)/asm/sdata_3.o \
+	$(BUILD_DIR)/asm/sdata_4.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804C8684.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804C8718.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804CC2B8.o \

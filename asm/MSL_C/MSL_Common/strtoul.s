@@ -312,8 +312,8 @@ lbl_802C4194:
 /* 802C41B8 0028D778  38 21 00 50 */	addi r1, r1, 0x50
 /* 802C41BC 0028D77C  4E 80 00 20 */	blr 
 
-.global func_802C41C0
-func_802C41C0:
+.global __strtoull
+__strtoull:
 /* 802C41C0 0028D780  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802C41C4 0028D784  7C 08 02 A6 */	mflr r0
 /* 802C41C8 0028D788  2C 03 00 00 */	cmpwi r3, 0
@@ -659,8 +659,8 @@ lbl_802C4634:
 /* 802C4660 0028DC20  38 21 00 60 */	addi r1, r1, 0x60
 /* 802C4664 0028DC24  4E 80 00 20 */	blr 
 
-.global func_802C4668
-func_802C4668:
+.global strtoul
+strtoul:
 /* 802C4668 0028DC28  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802C466C 0028DC2C  7C 08 02 A6 */	mflr r0
 /* 802C4670 0028DC30  3C E0 80 00 */	lis r7, 0x7FFFFFFF@ha
@@ -707,8 +707,8 @@ lbl_802C46F8:
 /* 802C4708 0028DCC8  38 21 00 30 */	addi r1, r1, 0x30
 /* 802C470C 0028DCCC  4E 80 00 20 */	blr 
 
-.global func_802C4710
-func_802C4710:
+.global atoi
+atoi:
 /* 802C4710 0028DCD0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802C4714 0028DCD4  7C 08 02 A6 */	mflr r0
 /* 802C4718 0028DCD8  3C A0 80 2C */	lis r5, __StringRead@ha

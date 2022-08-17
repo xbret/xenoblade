@@ -64,12 +64,19 @@ void* memchr(u8* s, int c, size_t n)
 	return 0;
 }
 
-u8* __memrchr(u8* s, int c, size_t n){
-	u8* p;
-	u32 v = (c & 0xff);
+u8* __memrchr(u8* s, int c, size_t n)
+{
+    int n_count;
+	size_t char_check;
+    
+    char_check = (u8)c;
+    s = &s[n];
+    n_count = n + 1;
 	
-	for (p = (u8*)s + n, n++; --n;){
-		if(*--p == v) return p;
+    while(--n_count){
+		if(*--s == char_check){
+            return s;
+        }
     }
 	
 	return 0;

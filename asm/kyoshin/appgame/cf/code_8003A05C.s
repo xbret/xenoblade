@@ -758,3 +758,403 @@ lbl_8003A9D4:
 /* 8003A9F4 00003FB4  80 05 00 1C */	lwz r0, 0x1c(r5)
 /* 8003A9F8 00003FB8  90 04 00 94 */	stw r0, 0x94(r4)
 /* 8003A9FC 00003FBC  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80528380
+lbl_80528380:
+	# ROM: 0x524480
+	.4byte lbl_804F5B88
+	.4byte func_80039A30
+	.4byte 0
+	.4byte 0
+
+.global lbl_80528390
+lbl_80528390:
+	# ROM: 0x524490
+	.4byte lbl_806683E0
+	.4byte lbl_804F5C14
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte lbl_806683E4
+	.4byte lbl_804F5C2C
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte lbl_806683E8
+	.4byte lbl_804F5C40
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte lbl_806683EC
+	.4byte lbl_804F5C54
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte lbl_806683F4
+	.4byte lbl_804F5C70
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte lbl_806683F8
+	.4byte lbl_804F5C88
+	.4byte 0x00000001
+	.4byte func_80039EFC
+	.4byte func_80039F34
+	.4byte lbl_80668400
+	.4byte lbl_804F5CA4
+	.4byte 0x00000001
+	.4byte func_80039F5C
+	.4byte lbl_80039F60
+	.4byte lbl_80668408
+	.4byte lbl_804F5CB8
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte lbl_80668410
+	.4byte lbl_804F5CD8
+	.4byte 0x00000001
+	.4byte lbl_80039F64
+	.4byte lbl_80039F68
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80528458
+lbl_80528458:
+	# ROM: 0x524558
+	.4byte lbl_80668418
+	.4byte func_8003A05C
+	.4byte lbl_804F5CF0
+	.4byte func_8003A064
+	.4byte lbl_804F5D04
+	.4byte func_8003A098
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80528478
+lbl_80528478:
+	# ROM: 0x524578
+	.4byte lbl_80668420
+	.4byte func_8003A0E0
+	.4byte 0
+	.4byte 0
+
+.global lbl_80528488
+lbl_80528488:
+	.4byte lbl_804F5D20
+	.4byte func_8003A1AC
+	.4byte 0
+	.4byte lbl_804F5D30
+	.4byte func_8003A228
+	.4byte 0
+	.4byte lbl_804F5D40
+	.4byte func_8003A2A4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_805284B8
+lbl_805284B8:
+	# ROM: 0x5245B8
+	.4byte lbl_80668428
+	.4byte 0
+	.4byte 0
+	.4byte lbl_80528488
+
+.global lbl_805284C8
+lbl_805284C8:
+	.4byte lbl_80668430
+	.4byte func_8003A3A4
+	.4byte 0
+	.4byte lbl_80668438
+	.4byte func_8003A3C8
+	.4byte 0
+	.4byte lbl_80668440
+	.4byte func_8003A3F0
+	.4byte 0
+	.4byte lbl_80668448
+	.4byte func_8003A440
+	.4byte 0
+	.4byte lbl_80668450
+	.4byte func_8003A484
+	.4byte 0
+	.4byte lbl_80668458
+	.4byte func_8003A4AC
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80528520
+lbl_80528520:
+	# ROM: 0x524620
+	.4byte lbl_80668460
+	.4byte func_8003A310
+	.4byte 0
+	.4byte lbl_805284C8
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F5BA4
+lbl_804F5BA4:
+	.asciz "common.pkh"
+	.balign 4
+
+.global lbl_804F5BB0
+lbl_804F5BB0:
+	.asciz "font.pkh"
+	.balign 4
+
+.global lbl_804F5BBC
+lbl_804F5BBC:
+	.asciz "menu.pkh"
+	.balign 4
+
+.global lbl_804F5BC8
+lbl_804F5BC8:
+	.asciz "script.pkh"
+	.balign 4
+
+.global lbl_804F5BD4
+lbl_804F5BD4:
+	.asciz "work.pkh"
+	.balign 4
+
+
+.global pkhFilenames
+pkhFilenames:
+	# ROM: 0x4F1CE0
+	.4byte lbl_806683A8
+	.4byte lbl_806683B0
+	.4byte lbl_806683B8
+	.4byte lbl_804F5BA4
+	.4byte lbl_806683C0
+	.4byte lbl_804F5BB0
+	.4byte lbl_806683C8
+	.4byte lbl_804F5BBC
+	.4byte lbl_806683D0
+	.4byte lbl_804F5BC8
+	.4byte lbl_806683D8
+	.4byte lbl_804F5BD4
+	.4byte 0
+
+
+.global lbl_804F5C14
+lbl_804F5C14:
+	.asciz "dvddata/etc/shadow.sha"
+	.balign 4
+
+.global lbl_804F5C2C
+lbl_804F5C2C:
+	.asciz "dvddata/etc/cam.chr"
+
+.global lbl_804F5C40
+lbl_804F5C40:
+	.asciz "dvddata/etc/eff.chr"
+
+.global lbl_804F5C54
+lbl_804F5C54:
+	.asciz "dvddata/etc/arrow.mdo"
+	.balign 4
+	.4byte 0
+
+.global lbl_804F5C70
+lbl_804F5C70:
+	.asciz "dvddata/menu/Mode43.arc"
+
+.global lbl_804F5C88
+lbl_804F5C88:
+	.asciz "dvddata/common/jp/bdat.bin"
+	.balign 4
+
+.global lbl_804F5CA4
+lbl_804F5CA4:
+	.asciz "dvddata/etc/ai.bin"
+	.balign 4
+
+.global lbl_804F5CB8
+lbl_804F5CB8:
+	.asciz "dvddata/etc/hikari.brres"
+	.balign 4
+	.4byte 0
+
+.global lbl_804F5CD8
+lbl_804F5CD8:
+	.asciz "dvddata/etc/hbmstop.tpl"
+
+.global lbl_804F5CF0
+lbl_804F5CF0:
+	.asciz "performanceStart"
+	.balign 4
+
+.global lbl_804F5D04
+lbl_804F5D04:
+	.asciz "performanceEnd"
+	.balign 4
+
+
+.global lbl_804F5D14
+lbl_804F5D14:
+	.asciz "deb"
+
+
+.global lbl_804F5D18
+lbl_804F5D18:
+	.asciz "wait"
+	.balign 4
+
+.global lbl_804F5D20
+lbl_804F5D20:
+	.asciz "isExistProperty"
+
+.global lbl_804F5D30
+lbl_804F5D30:
+	.asciz "isExistSelector"
+
+.global lbl_804F5D40
+lbl_804F5D40:
+	.asciz "getOCName"
+	.balign 4
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+
+.global lbl_80573CC8
+lbl_80573CC8:
+	.skip 0x70
+.global lbl_80573D38
+lbl_80573D38:
+	.skip 0x98
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.balign 8
+.global lbl_806683A8
+lbl_806683A8:
+	.asciz "ahx.pkh"
+
+.global lbl_806683B0
+lbl_806683B0:
+	.asciz "adx.pkh"
+
+.global lbl_806683B8
+lbl_806683B8:
+	.asciz "chr.pkh"
+
+.global lbl_806683C0
+lbl_806683C0:
+	.asciz "eff.pkh"
+
+.global lbl_806683C8
+lbl_806683C8:
+	.asciz "map.pkh"
+
+.global lbl_806683D0
+lbl_806683D0:
+	.asciz "obj.pkh"
+
+.global lbl_806683D8
+lbl_806683D8:
+	.asciz "snd.pkh"
+
+.global lbl_806683E0
+lbl_806683E0:
+	.asciz "SHA"
+
+.global lbl_806683E4
+lbl_806683E4:
+	.asciz "CAM"
+
+.global lbl_806683E8
+lbl_806683E8:
+	.asciz "EFF"
+
+.global lbl_806683EC
+lbl_806683EC:
+	.asciz "ARROW"
+	.balign 4
+
+.global lbl_806683F4
+lbl_806683F4:
+	.asciz "43"
+	.byte 0x00
+.global lbl_806683F8
+lbl_806683F8:
+	.asciz "BDAT"
+	.balign 4
+
+.global lbl_80668400
+lbl_80668400:
+	.asciz "AIDAT"
+	.balign 4
+
+.global lbl_80668408
+lbl_80668408:
+	.asciz "HIKARI"
+	.balign 4
+
+.global lbl_80668410
+lbl_80668410:
+	.asciz "HBMSTOP"
+
+.global lbl_80668418
+lbl_80668418:
+	.asciz "put"
+	.4byte 0
+
+.global lbl_80668420
+lbl_80668420:
+	.asciz "frame"
+	.balign 4
+
+.global lbl_80668428
+lbl_80668428:
+	.asciz "builtin"
+
+.global lbl_80668430
+lbl_80668430:
+	.asciz "start"
+	.balign 4
+
+.global lbl_80668438
+lbl_80668438:
+	.asciz "end"
+	.4byte 0
+
+.global lbl_80668440
+lbl_80668440:
+	.asciz "isAlive"
+
+.global lbl_80668448
+lbl_80668448:
+	.asciz "join"
+	.balign 4
+
+.global lbl_80668450
+lbl_80668450:
+	.asciz "sleep"
+	.balign 4
+
+.global lbl_80668458
+lbl_80668458:
+	.asciz "wakeup"
+	.balign 4
+
+.global lbl_80668460
+lbl_80668460:
+	.asciz "thread"
+	.balign 4

@@ -18,14 +18,14 @@ func_802BDC7C:
 /* 802BDCA8 00287268  38 68 00 A0 */	addi r3, r8, 0xa0
 /* 802BDCAC 0028726C  4C C6 31 82 */	crclr 6
 /* 802BDCB0 00287270  48 00 30 45 */	bl printf
-/* 802BDCB4 00287274  48 00 95 35 */	bl func_802C71E8
+/* 802BDCB4 00287274  48 00 95 35 */	bl abort
 /* 802BDCB8 00287278  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802BDCBC 0028727C  7C 08 03 A6 */	mtlr r0
 /* 802BDCC0 00287280  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BDCC4 00287284  4E 80 00 20 */	blr 
 
-.global func_802BDCC8
-func_802BDCC8:
+.global __prep_buffer
+__prep_buffer:
 /* 802BDCC8 00287288  80 83 00 18 */	lwz r4, 0x18(r3)
 /* 802BDCCC 0028728C  80 03 00 2C */	lwz r0, 0x2c(r3)
 /* 802BDCD0 00287290  80 C3 00 1C */	lwz r6, 0x1c(r3)
@@ -37,8 +37,8 @@ func_802BDCC8:
 /* 802BDCE8 002872A8  90 83 00 34 */	stw r4, 0x34(r3)
 /* 802BDCEC 002872AC  4E 80 00 20 */	blr 
 
-.global func_802BDCF0
-func_802BDCF0:
+.global __flush_buffer
+__flush_buffer:
 /* 802BDCF0 002872B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BDCF4 002872B4  7C 08 02 A6 */	mflr r0
 /* 802BDCF8 002872B8  90 01 00 14 */	stw r0, 0x14(r1)

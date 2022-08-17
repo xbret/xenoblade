@@ -1,93 +1,4 @@
-.include "macros.inc"
-
-.section .sdata, "wa"  # 0x80664180 - 0x80666600
-.global lbl_80664180
-lbl_80664180:
-
-	# ROM: 0x56FD60
-	.4byte lbl_80668380
-	.4byte 0
-
-.section .sbss, "wa"  # 0x80666600 - 0x8066836F
-.global lbl_80666600
-lbl_80666600:
-	.skip 0x4
-.global lbl_80666604
-lbl_80666604:
-	.skip 0x4
-.global lbl_80666608
-lbl_80666608:
-	.skip 0x4
-.global lbl_8066660C
-lbl_8066660C:
-	.skip 0x4
-
-.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-.global lbl_80668380
-lbl_80668380:	# ROM: 0x5721E0
-	.4byte 0x8B90905F
-	.4byte 0
-
-
-.global lbl_80668388
-lbl_80668388:
-	# ROM: 0x5721E8
-	.float 1.0
-
-
-.global lbl_8066838C
-lbl_8066838C:
-	# ROM: 0x5721EC
-	.4byte 0
-
-.global lbl_80668390
-lbl_80668390:
-	.asciz "CGame"
-	.balign 4
-
-.global lbl_80668398
-lbl_80668398:
-	.asciz "CProc"
-	.balign 4
-
-
-.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-
-.global lbl_804F5B20
-lbl_804F5B20:
-	# ROM: 0x4F1C20
-	.asciz "@unnamed@CGame_cpp@::CGameRestart"
-	.balign 4
-
-.global lbl_804F5B44
-lbl_804F5B44:
-	.asciz "CWorkThread"
-
-.global lbl_804F5B50
-lbl_804F5B50:
-	.asciz "IWorkEvent"
-	.balign 4
-
-
-.global lbl_804F5B5C
-lbl_804F5B5C:
-	# ROM: 0x4F1C5C
-	.asciz "CGameRestart"
-	.byte 0x00
-	.asciz "43"
-	.asciz "arc"
-	.asciz "4_3mode.brlyt"
-	.asciz "CGame"
-	.balign 4
-
-.global lbl_804F5B88
-lbl_804F5B88:
-	#ゲームメイン
-	.4byte 0x8351815B
-	.4byte 0x83808381
-	.4byte 0x83438393
-	.4byte 0
-	.balign 4
+.include "macros.inc"	
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
@@ -1133,3 +1044,259 @@ sinit_80039EE0:
 /* 80039EE0 000034A0  3C 60 80 57 */	lis r3, lbl_80573C80@ha
 /* 80039EE4 000034A4  38 63 3C 80 */	addi r3, r3, lbl_80573C80@l
 /* 80039EE8 000034A8  48 00 00 04 */	b func_80039EEC
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+.global lbl_80664180
+lbl_80664180:
+	# ROM: 0x56FD60
+	.4byte lbl_80668380
+	.4byte 0
+
+.global lbl_80664188
+lbl_80664188:
+	# ROM: 0x56FD68
+	.4byte lbl_804F5B20
+	.4byte lbl_80528280
+
+.global lbl_80664190
+lbl_80664190:
+	.4byte lbl_80668390
+	.4byte lbl_80528340
+
+.global lbl_80664198
+lbl_80664198:
+	.4byte lbl_80668398
+	.4byte lbl_8052835C
+
+.global lbl_806641A0
+lbl_806641A0:
+	.4byte lbl_804F5B44
+	.4byte lbl_80528370
+
+.global lbl_806641A8
+lbl_806641A8:
+	.4byte lbl_804F5B50
+	.4byte 0
+
+.global lbl_806641B0
+lbl_806641B0:
+	# ROM: 0x56FD90
+	.4byte lbl_804F5F48
+	.4byte lbl_80528CF0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80666600
+lbl_80666600:
+	.skip 0x4
+.global lbl_80666604
+lbl_80666604:
+	.skip 0x4
+.global lbl_80666608
+lbl_80666608:
+	.skip 0x4
+.global lbl_8066660C
+lbl_8066660C:
+	.skip 0x4
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.global lbl_80668380
+lbl_80668380:	# ROM: 0x5721E0
+	.4byte 0x8B90905F
+	.4byte 0
+
+
+.global lbl_80668388
+lbl_80668388:
+	# ROM: 0x5721E8
+	.float 1.0
+
+
+.global lbl_8066838C
+lbl_8066838C:
+	# ROM: 0x5721EC
+	.4byte 0
+
+.global lbl_80668390
+lbl_80668390:
+	.asciz "CGame"
+	.balign 4
+
+.global lbl_80668398
+lbl_80668398:
+	.asciz "CProc"
+	.balign 4
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805281E0
+lbl_805281E0:
+	# ROM: 0x5242E0
+	.4byte lbl_80664188
+	.4byte 0
+
+	.4byte func_80039E90
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80039E40
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_804396A0
+	.4byte func_804396A4
+	.4byte func_80039E30
+
+
+.global lbl_80528280
+lbl_80528280:
+	.4byte lbl_806641A8
+	.4byte 0
+	.4byte lbl_806641A0
+	.4byte 0
+	.4byte lbl_80664198
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_805282A0
+lbl_805282A0:
+	# ROM: 0x5243A0
+	.4byte lbl_80664190
+	.4byte 0
+	.4byte func_800392BC
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039C08
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_8003944C
+	.4byte func_80039550
+	.4byte func_80039E38
+	.4byte func_800396C8
+	.4byte func_80039890
+	.4byte func_80039B38
+
+.global lbl_80528340
+lbl_80528340:
+	.4byte lbl_806641A8
+	.4byte 0
+	.4byte lbl_806641A0
+	.4byte 0
+	.4byte lbl_80664198
+	.4byte 0
+	.4byte 0
+
+.global lbl_8052835C
+lbl_8052835C:
+	.4byte lbl_806641A8
+	.4byte 0
+	.4byte lbl_806641A0
+	.4byte 0
+	.4byte 0
+
+.global lbl_80528370
+lbl_80528370:
+	.4byte lbl_806641A8
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F5B20
+lbl_804F5B20:
+	# ROM: 0x4F1C20
+	.asciz "@unnamed@CGame_cpp@::CGameRestart"
+	.balign 4
+
+.global lbl_804F5B44
+lbl_804F5B44:
+	.asciz "CWorkThread"
+
+.global lbl_804F5B50
+lbl_804F5B50:
+	.asciz "IWorkEvent"
+	.balign 4
+
+
+.global lbl_804F5B5C
+lbl_804F5B5C:
+	# ROM: 0x4F1C5C
+	.asciz "CGameRestart"
+	.byte 0x00
+	.asciz "43"
+	.asciz "arc"
+	.asciz "4_3mode.brlyt"
+	.asciz "CGame"
+	.balign 4
+
+.global lbl_804F5B88
+lbl_804F5B88:
+	#ゲームメイン
+	.4byte 0x8351815B
+	.4byte 0x83808381
+	.4byte 0x83438393
+	.4byte 0
+	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80573C80
+lbl_80573C80:
+	.skip 0x48
