@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802F3640
-func_802F3640:
+.global hidd_conn_initiate
+hidd_conn_initiate:
 /* 802F3640 002BCC00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F3644 002BCC04  7C 08 02 A6 */	mflr r0
 /* 802F3648 002BCC08  90 01 00 24 */	stw r0, 0x24(r1)
@@ -29,7 +29,7 @@ lbl_802F3680:
 /* 802F3694 002BCC54  38 60 00 11 */	li r3, 0x11
 /* 802F3698 002BCC58  B0 1D 00 16 */	sth r0, 0x16(r29)
 /* 802F369C 002BCC5C  9B DD 00 11 */	stb r30, 0x11(r29)
-/* 802F36A0 002BCC60  48 00 34 91 */	bl func_802F6B30
+/* 802F36A0 002BCC60  48 00 34 91 */	bl L2CA_ConnectReq
 /* 802F36A4 002BCC64  54 60 04 3F */	clrlwi. r0, r3, 0x10
 /* 802F36A8 002BCC68  B0 7D 00 14 */	sth r3, 0x14(r29)
 /* 802F36AC 002BCC6C  40 82 00 30 */	bne lbl_802F36DC

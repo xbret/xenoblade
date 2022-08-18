@@ -2,25 +2,25 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802EFD64
-func_802EFD64:
-/* 802EFD64 002B9324  3D 40 80 2F */	lis r10, func_802EFDD4@ha
+.global gap_conn_init
+gap_conn_init:
+/* 802EFD64 002B9324  3D 40 80 2F */	lis r10, gap_connect_ind@ha
 /* 802EFD68 002B9328  3D 20 80 5C */	lis r9, lbl_805C21C0@ha
-/* 802EFD6C 002B932C  3D 00 80 2F */	lis r8, func_802EFF60@ha
-/* 802EFD70 002B9330  3C E0 80 2F */	lis r7, func_802F013C@ha
-/* 802EFD74 002B9334  3C C0 80 2F */	lis r6, func_802F0278@ha
-/* 802EFD78 002B9338  3C A0 80 2F */	lis r5, func_802F0464@ha
-/* 802EFD7C 002B933C  3C 80 80 2F */	lis r4, func_802F065C@ha
-/* 802EFD80 002B9340  3C 60 80 2F */	lis r3, func_802F076C@ha
-/* 802EFD84 002B9344  39 4A FD D4 */	addi r10, r10, func_802EFDD4@l
+/* 802EFD6C 002B932C  3D 00 80 2F */	lis r8, gap_connect_cfm@ha
+/* 802EFD70 002B9330  3C E0 80 2F */	lis r7, gap_config_ind@ha
+/* 802EFD74 002B9334  3C C0 80 2F */	lis r6, gap_config_cfm@ha
+/* 802EFD78 002B9338  3C A0 80 2F */	lis r5, gap_disconnect_ind@ha
+/* 802EFD7C 002B933C  3C 80 80 2F */	lis r4, gap_data_ind@ha
+/* 802EFD80 002B9340  3C 60 80 2F */	lis r3, gap_congestion_ind@ha
+/* 802EFD84 002B9344  39 4A FD D4 */	addi r10, r10, gap_connect_ind@l
 /* 802EFD88 002B9348  39 29 21 C0 */	addi r9, r9, lbl_805C21C0@l
 /* 802EFD8C 002B934C  38 00 00 00 */	li r0, 0
-/* 802EFD90 002B9350  39 08 FF 60 */	addi r8, r8, func_802EFF60@l
-/* 802EFD94 002B9354  38 E7 01 3C */	addi r7, r7, func_802F013C@l
-/* 802EFD98 002B9358  38 C6 02 78 */	addi r6, r6, func_802F0278@l
-/* 802EFD9C 002B935C  38 A5 04 64 */	addi r5, r5, func_802F0464@l
-/* 802EFDA0 002B9360  38 84 06 5C */	addi r4, r4, func_802F065C@l
-/* 802EFDA4 002B9364  38 63 07 6C */	addi r3, r3, func_802F076C@l
+/* 802EFD90 002B9350  39 08 FF 60 */	addi r8, r8, gap_connect_cfm@l
+/* 802EFD94 002B9354  38 E7 01 3C */	addi r7, r7, gap_config_ind@l
+/* 802EFD98 002B9358  38 C6 02 78 */	addi r6, r6, gap_config_cfm@l
+/* 802EFD9C 002B935C  38 A5 04 64 */	addi r5, r5, gap_disconnect_ind@l
+/* 802EFDA0 002B9360  38 84 06 5C */	addi r4, r4, gap_data_ind@l
+/* 802EFDA4 002B9364  38 63 07 6C */	addi r3, r3, gap_congestion_ind@l
 /* 802EFDA8 002B9368  91 49 00 84 */	stw r10, 0x84(r9)
 /* 802EFDAC 002B936C  91 09 00 88 */	stw r8, 0x88(r9)
 /* 802EFDB0 002B9370  90 09 00 8C */	stw r0, 0x8c(r9)
@@ -33,8 +33,8 @@ func_802EFD64:
 /* 802EFDCC 002B938C  90 69 00 A8 */	stw r3, 0xa8(r9)
 /* 802EFDD0 002B9390  4E 80 00 20 */	blr
 
-.global func_802EFDD4
-func_802EFDD4:
+.global gap_connect_ind
+gap_connect_ind:
 /* 802EFDD4 002B9394  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EFDD8 002B9398  7C 08 02 A6 */	mflr r0
 /* 802EFDDC 002B939C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -105,7 +105,7 @@ lbl_802EFEAC:
 /* 802EFECC 002B948C  4B FE E0 D5 */	bl LogMsg_0
 lbl_802EFED0:
 /* 802EFED0 002B9490  7F E3 FB 78 */	mr r3, r31
-/* 802EFED4 002B9494  48 00 71 A9 */	bl func_802F707C
+/* 802EFED4 002B9494  48 00 71 A9 */	bl L2CA_DisconnectReq
 /* 802EFED8 002B9498  48 00 00 70 */	b lbl_802EFF48
 lbl_802EFEDC:
 /* 802EFEDC 002B949C  38 00 00 03 */	li r0, 3
@@ -120,7 +120,7 @@ lbl_802EFEDC:
 /* 802EFF00 002B94C0  7F E5 FB 78 */	mr r5, r31
 /* 802EFF04 002B94C4  38 C0 00 00 */	li r6, 0
 /* 802EFF08 002B94C8  38 E0 00 00 */	li r7, 0
-/* 802EFF0C 002B94CC  48 00 6E 59 */	bl func_802F6D64
+/* 802EFF0C 002B94CC  48 00 6E 59 */	bl L2CA_ConnectRsp
 /* 802EFF10 002B94D0  3C 60 80 5C */	lis r3, lbl_805C21C0@ha
 /* 802EFF14 002B94D4  38 63 21 C0 */	addi r3, r3, lbl_805C21C0@l
 /* 802EFF18 002B94D8  88 03 00 28 */	lbz r0, 0x28(r3)
@@ -135,7 +135,7 @@ lbl_802EFEDC:
 lbl_802EFF3C:
 /* 802EFF3C 002B94FC  7F E3 FB 78 */	mr r3, r31
 /* 802EFF40 002B9500  38 9D 00 24 */	addi r4, r29, 0x24
-/* 802EFF44 002B9504  48 00 6F B1 */	bl func_802F6EF4
+/* 802EFF44 002B9504  48 00 6F B1 */	bl L2CA_ConfigReq
 lbl_802EFF48:
 /* 802EFF48 002B9508  39 61 00 20 */	addi r11, r1, 0x20
 /* 802EFF4C 002B950C  4B FC A2 51 */	bl _restgpr_26
@@ -144,8 +144,8 @@ lbl_802EFF48:
 /* 802EFF58 002B9518  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EFF5C 002B951C  4E 80 00 20 */	blr
 
-.global func_802EFF60
-func_802EFF60:
+.global gap_connect_cfm
+gap_connect_cfm:
 /* 802EFF60 002B9520  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EFF64 002B9524  7C 08 02 A6 */	mflr r0
 /* 802EFF68 002B9528  3C A0 80 5C */	lis r5, lbl_805C21C0@ha
@@ -208,7 +208,7 @@ lbl_802F0018:
 /* 802F0034 002B95F4  38 00 00 03 */	li r0, 3
 /* 802F0038 002B95F8  38 9F 00 24 */	addi r4, r31, 0x24
 /* 802F003C 002B95FC  98 1F 00 00 */	stb r0, 0(r31)
-/* 802F0040 002B9600  48 00 6E B5 */	bl func_802F6EF4
+/* 802F0040 002B9600  48 00 6E B5 */	bl L2CA_ConfigReq
 /* 802F0044 002B9604  48 00 00 E0 */	b lbl_802F0124
 lbl_802F0048:
 /* 802F0048 002B9608  81 9F 00 20 */	lwz r12, 0x20(r31)
@@ -223,7 +223,7 @@ lbl_802F0064:
 /* 802F0068 002B9628  48 00 00 10 */	b lbl_802F0078
 lbl_802F006C:
 /* 802F006C 002B962C  38 7F 00 14 */	addi r3, r31, 0x14
-/* 802F0070 002B9630  4B FE BB 21 */	bl func_802DBB90
+/* 802F0070 002B9630  4B FE BB 21 */	bl GKI_dequeue
 /* 802F0074 002B9634  4B FE B4 6D */	bl GKI_freebuf
 lbl_802F0078:
 /* 802F0078 002B9638  80 1F 00 14 */	lwz r0, 0x14(r31)
@@ -273,7 +273,7 @@ lbl_802F0110:
 /* 802F0114 002B96D4  38 84 01 80 */	addi r4, r4, 0x180
 /* 802F0118 002B96D8  42 00 FF 8C */	bdnz lbl_802F00A4
 /* 802F011C 002B96DC  7F C3 F3 78 */	mr r3, r30
-/* 802F0120 002B96E0  48 00 69 81 */	bl func_802F6AA0
+/* 802F0120 002B96E0  48 00 69 81 */	bl L2CA_Deregister
 lbl_802F0124:
 /* 802F0124 002B96E4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802F0128 002B96E8  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -282,8 +282,8 @@ lbl_802F0124:
 /* 802F0134 002B96F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F0138 002B96F8  4E 80 00 20 */	blr
 
-.global func_802F013C
-func_802F013C:
+.global gap_config_ind
+gap_config_ind:
 /* 802F013C 002B96FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F0140 002B9700  7C 08 02 A6 */	mflr r0
 /* 802F0144 002B9704  3C A0 80 5C */	lis r5, lbl_805C21C0@ha
@@ -354,7 +354,7 @@ lbl_802F0220:
 /* 802F0224 002B97E4  98 04 00 20 */	stb r0, 0x20(r4)
 /* 802F0228 002B97E8  98 04 00 02 */	stb r0, 2(r4)
 /* 802F022C 002B97EC  B0 04 00 00 */	sth r0, 0(r4)
-/* 802F0230 002B97F0  48 00 6D 7D */	bl func_802F6FAC
+/* 802F0230 002B97F0  48 00 6D 7D */	bl L2CA_ConfigRsp
 /* 802F0234 002B97F4  88 1F 00 01 */	lbz r0, 1(r31)
 /* 802F0238 002B97F8  60 03 00 02 */	ori r3, r0, 2
 /* 802F023C 002B97FC  54 60 07 7B */	rlwinm. r0, r3, 0, 0x1d, 0x1d
@@ -374,8 +374,8 @@ lbl_802F0264:
 /* 802F0270 002B9830  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F0274 002B9834  4E 80 00 20 */	blr
 
-.global func_802F0278
-func_802F0278:
+.global gap_config_cfm
+gap_config_cfm:
 /* 802F0278 002B9838  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F027C 002B983C  7C 08 02 A6 */	mflr r0
 /* 802F0280 002B9840  3C A0 80 5C */	lis r5, lbl_805C21C0@ha
@@ -456,7 +456,7 @@ lbl_802F0378:
 /* 802F0390 002B9950  48 00 00 10 */	b lbl_802F03A0
 lbl_802F0394:
 /* 802F0394 002B9954  38 7F 00 14 */	addi r3, r31, 0x14
-/* 802F0398 002B9958  4B FE B7 F9 */	bl func_802DBB90
+/* 802F0398 002B9958  4B FE B7 F9 */	bl GKI_dequeue
 /* 802F039C 002B995C  4B FE B1 45 */	bl GKI_freebuf
 lbl_802F03A0:
 /* 802F03A0 002B9960  80 1F 00 14 */	lwz r0, 0x14(r31)
@@ -506,7 +506,7 @@ lbl_802F0438:
 /* 802F043C 002B99FC  38 84 01 80 */	addi r4, r4, 0x180
 /* 802F0440 002B9A00  42 00 FF 8C */	bdnz lbl_802F03CC
 /* 802F0444 002B9A04  7F C3 F3 78 */	mr r3, r30
-/* 802F0448 002B9A08  48 00 66 59 */	bl func_802F6AA0
+/* 802F0448 002B9A08  48 00 66 59 */	bl L2CA_Deregister
 lbl_802F044C:
 /* 802F044C 002B9A0C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802F0450 002B9A10  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -515,8 +515,8 @@ lbl_802F044C:
 /* 802F045C 002B9A1C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F0460 002B9A20  4E 80 00 20 */	blr
 
-.global func_802F0464
-func_802F0464:
+.global gap_disconnect_ind
+gap_disconnect_ind:
 /* 802F0464 002B9A24  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F0468 002B9A28  7C 08 02 A6 */	mflr r0
 /* 802F046C 002B9A2C  3C A0 80 5C */	lis r5, lbl_805C21C0@ha
@@ -589,7 +589,7 @@ lbl_802F0554:
 /* 802F055C 002B9B1C  2C 1E 00 00 */	cmpwi r30, 0
 /* 802F0560 002B9B20  41 82 00 0C */	beq lbl_802F056C
 /* 802F0564 002B9B24  7F A3 EB 78 */	mr r3, r29
-/* 802F0568 002B9B28  48 00 6B B9 */	bl func_802F7120
+/* 802F0568 002B9B28  48 00 6B B9 */	bl L2CA_DisconnectRsp
 lbl_802F056C:
 /* 802F056C 002B9B2C  81 9F 00 20 */	lwz r12, 0x20(r31)
 /* 802F0570 002B9B30  38 80 01 01 */	li r4, 0x101
@@ -600,7 +600,7 @@ lbl_802F056C:
 /* 802F0584 002B9B44  48 00 00 10 */	b lbl_802F0594
 lbl_802F0588:
 /* 802F0588 002B9B48  38 7F 00 14 */	addi r3, r31, 0x14
-/* 802F058C 002B9B4C  4B FE B6 05 */	bl func_802DBB90
+/* 802F058C 002B9B4C  4B FE B6 05 */	bl GKI_dequeue
 /* 802F0590 002B9B50  4B FE AF 51 */	bl GKI_freebuf
 lbl_802F0594:
 /* 802F0594 002B9B54  80 1F 00 14 */	lwz r0, 0x14(r31)
@@ -650,7 +650,7 @@ lbl_802F062C:
 /* 802F0630 002B9BF0  38 84 01 80 */	addi r4, r4, 0x180
 /* 802F0634 002B9BF4  42 00 FF 8C */	bdnz lbl_802F05C0
 /* 802F0638 002B9BF8  7F C3 F3 78 */	mr r3, r30
-/* 802F063C 002B9BFC  48 00 64 65 */	bl func_802F6AA0
+/* 802F063C 002B9BFC  48 00 64 65 */	bl L2CA_Deregister
 lbl_802F0640:
 /* 802F0640 002B9C00  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 802F0644 002B9C04  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -660,8 +660,8 @@ lbl_802F0640:
 /* 802F0654 002B9C14  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F0658 002B9C18  4E 80 00 20 */	blr
 
-.global func_802F065C
-func_802F065C:
+.global gap_data_ind
+gap_data_ind:
 /* 802F065C 002B9C1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F0660 002B9C20  7C 08 02 A6 */	mflr r0
 /* 802F0664 002B9C24  3C A0 80 5C */	lis r5, lbl_805C21C0@ha
@@ -723,7 +723,7 @@ lbl_802F0724:
 /* 802F0728 002B9CE8  28 00 00 04 */	cmplwi r0, 4
 /* 802F072C 002B9CEC  40 82 00 24 */	bne lbl_802F0750
 /* 802F0730 002B9CF0  38 7F 00 14 */	addi r3, r31, 0x14
-/* 802F0734 002B9CF4  4B FE B1 DD */	bl func_802DB910
+/* 802F0734 002B9CF4  4B FE B1 DD */	bl GKI_enqueue
 /* 802F0738 002B9CF8  81 9F 00 20 */	lwz r12, 0x20(r31)
 /* 802F073C 002B9CFC  38 80 01 02 */	li r4, 0x102
 /* 802F0740 002B9D00  A0 7F 00 04 */	lhz r3, 4(r31)
@@ -740,8 +740,8 @@ lbl_802F0758:
 /* 802F0764 002B9D24  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F0768 002B9D28  4E 80 00 20 */	blr
 
-.global func_802F076C
-func_802F076C:
+.global gap_congestion_ind
+gap_congestion_ind:
 /* 802F076C 002B9D2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F0770 002B9D30  7C 08 02 A6 */	mflr r0
 /* 802F0774 002B9D34  3C A0 80 5C */	lis r5, lbl_805C21C0@ha

@@ -53,11 +53,11 @@ lbl_8050DF08:
 .global lbl_8050DF30
 lbl_8050DF30:
 	# ROM: 0x50A030
-	.4byte func_802DD010
-	.4byte func_802DD040
-	.4byte func_802DD0B0
-	.4byte func_802DD0F0
-	.4byte func_802DD120
+	.4byte hcisu_h2_init
+	.4byte hcisu_h2_open
+	.4byte hcisu_h2_close
+	.4byte hcisu_h2_send
+	.4byte hcisu_h2_handle_event
 	.4byte 0
 
 
@@ -365,16 +365,16 @@ lbl_8050E260:
 .global lbl_8050E270
 lbl_8050E270:
 	# ROM: 0x50A370
-	.4byte func_802F4BF0
-	.4byte func_802F51A8
+	.4byte hidh_l2cif_connect_ind
+	.4byte hidh_l2cif_connect_cfm
 	.4byte 0
-	.4byte func_802F54F0
-	.4byte func_802F5798
-	.4byte func_802F5AA4
-	.4byte func_802F5D68
+	.4byte hidh_l2cif_config_ind
+	.4byte hidh_l2cif_config_cfm
+	.4byte hidh_l2cif_disconnect_ind
+	.4byte hidh_l2cif_disconnect_cfm
 	.4byte 0
-	.4byte func_802F61A8
-	.4byte func_802F5FB0
+	.4byte hidh_l2cif_data_ind
+	.4byte hidh_l2cif_cong_ind
 
 
 .global lbl_8050E298

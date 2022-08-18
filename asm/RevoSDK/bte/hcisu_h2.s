@@ -1,10 +1,10 @@
-lbl_802DCAA0:.include "macros.inc"
+.include "macros.inc"
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_802DCAA0
-func_802DCAA0:
+.global hcisu_h2_usb_cback
+hcisu_h2_usb_cback:
 /* 802DCAA0 002A6060  2C 03 00 04 */	cmpwi r3, 4
 /* 802DCAA4 002A6064  4C 82 00 20 */	bnelr 
 /* 802DCAA8 002A6068  7C 83 07 74 */	extsb r3, r4
@@ -12,8 +12,8 @@ func_802DCAA0:
 /* 802DCAB0 002A6070  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DCAC0
-func_802DCAC0:
+.global hcisu_h2_receive_msg
+hcisu_h2_receive_msg:
 /* 802DCAC0 002A6080  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802DCAC4 002A6084  7C 08 02 A6 */	mflr r0
 /* 802DCAC8 002A6088  90 01 00 64 */	stw r0, 0x64(r1)
@@ -47,7 +47,7 @@ lbl_802DCB30:
 /* 802DCB30 002A60F0  56 03 06 3E */	clrlwi r3, r16, 0x18
 /* 802DCB34 002A60F4  38 81 00 08 */	addi r4, r1, 8
 /* 802DCB38 002A60F8  38 A0 00 01 */	li r5, 1
-/* 802DCB3C 002A60FC  48 00 0F 85 */	bl func_802DDAC0
+/* 802DCB3C 002A60FC  48 00 0F 85 */	bl UUSB_Read
 /* 802DCB40 002A6100  54 60 04 3F */	clrlwi. r0, r3, 0x10
 /* 802DCB44 002A6104  41 82 02 F8 */	beq lbl_802DCE3C
 /* 802DCB48 002A6108  88 16 00 1A */	lbz r0, 0x1a(r22)
@@ -68,7 +68,7 @@ lbl_802DCB80:
 /* 802DCB80 002A6140  28 10 00 01 */	cmplwi r16, 1
 /* 802DCB84 002A6144  40 82 00 18 */	bne lbl_802DCB9C
 /* 802DCB88 002A6148  38 60 00 02 */	li r3, 2
-/* 802DCB8C 002A614C  4B FF E8 65 */	bl func_802DB3F0
+/* 802DCB8C 002A614C  4B FF E8 65 */	bl GKI_getpoolbuf
 /* 802DCB90 002A6150  7C 6F B9 2E */	stwx r3, r15, r23
 /* 802DCB94 002A6154  9B D6 00 14 */	stb r30, 0x14(r22)
 /* 802DCB98 002A6158  48 00 00 38 */	b lbl_802DCBD0
@@ -76,7 +76,7 @@ lbl_802DCB9C:
 /* 802DCB9C 002A615C  28 10 00 02 */	cmplwi r16, 2
 /* 802DCBA0 002A6160  40 82 00 18 */	bne lbl_802DCBB8
 /* 802DCBA4 002A6164  38 60 00 03 */	li r3, 3
-/* 802DCBA8 002A6168  4B FF E8 49 */	bl func_802DB3F0
+/* 802DCBA8 002A6168  4B FF E8 49 */	bl GKI_getpoolbuf
 /* 802DCBAC 002A616C  7C 6F B9 2E */	stwx r3, r15, r23
 /* 802DCBB0 002A6170  9B 16 00 14 */	stb r24, 0x14(r22)
 /* 802DCBB4 002A6174  48 00 00 1C */	b lbl_802DCBD0
@@ -84,7 +84,7 @@ lbl_802DCBB8:
 /* 802DCBB8 002A6178  28 10 00 03 */	cmplwi r16, 3
 /* 802DCBBC 002A617C  40 82 02 60 */	bne lbl_802DCE1C
 /* 802DCBC0 002A6180  38 60 00 01 */	li r3, 1
-/* 802DCBC4 002A6184  4B FF E8 2D */	bl func_802DB3F0
+/* 802DCBC4 002A6184  4B FF E8 2D */	bl GKI_getpoolbuf
 /* 802DCBC8 002A6188  7C 6F B9 2E */	stwx r3, r15, r23
 /* 802DCBCC 002A618C  9B 36 00 14 */	stb r25, 0x14(r22)
 lbl_802DCBD0:
@@ -134,7 +134,7 @@ lbl_802DCC28:
 /* 802DCC70 002A6230  7C 6F B8 2E */	lwzx r3, r15, r23
 /* 802DCC74 002A6234  7C 04 02 14 */	add r0, r4, r0
 /* 802DCC78 002A6238  54 12 04 3E */	clrlwi r18, r0, 0x10
-/* 802DCC7C 002A623C  48 01 CA 75 */	bl func_802F96F0
+/* 802DCC7C 002A623C  48 01 CA 75 */	bl l2cap_link_chk_pkt_start
 /* 802DCC80 002A6240  2C 03 00 00 */	cmpwi r3, 0
 /* 802DCC84 002A6244  7C 6F B9 2E */	stwx r3, r15, r23
 /* 802DCC88 002A6248  40 82 00 20 */	bne lbl_802DCCA8
@@ -149,7 +149,7 @@ lbl_802DCCA0:
 lbl_802DCCA8:
 /* 802DCCA8 002A6268  B2 55 00 0C */	sth r18, 0xc(r21)
 /* 802DCCAC 002A626C  7C 6F B8 2E */	lwzx r3, r15, r23
-/* 802DCCB0 002A6270  4B FF E9 A1 */	bl func_802DB650
+/* 802DCCB0 002A6270  4B FF E9 A1 */	bl GKI_get_buf_size
 /* 802DCCB4 002A6274  88 16 00 14 */	lbz r0, 0x14(r22)
 /* 802DCCB8 002A6278  54 64 04 3E */	clrlwi r4, r3, 0x10
 /* 802DCCBC 002A627C  7C 7C 02 14 */	add r3, r28, r0
@@ -219,7 +219,7 @@ lbl_802DCD6C:
 /* 802DCDA0 002A6360  A0 04 00 02 */	lhz r0, 2(r4)
 /* 802DCDA4 002A6364  7C 84 02 14 */	add r4, r4, r0
 /* 802DCDA8 002A6368  38 84 00 08 */	addi r4, r4, 8
-/* 802DCDAC 002A636C  48 00 0D 15 */	bl func_802DDAC0
+/* 802DCDAC 002A636C  48 00 0D 15 */	bl UUSB_Read
 /* 802DCDB0 002A6370  7C 8F B8 2E */	lwzx r4, r15, r23
 /* 802DCDB4 002A6374  7E 73 1A 14 */	add r19, r19, r3
 /* 802DCDB8 002A6378  A0 04 00 02 */	lhz r0, 2(r4)
@@ -233,7 +233,7 @@ lbl_802DCD6C:
 /* 802DCDD8 002A6398  88 16 00 14 */	lbz r0, 0x14(r22)
 /* 802DCDDC 002A639C  28 00 00 02 */	cmplwi r0, 2
 /* 802DCDE0 002A63A0  40 82 00 18 */	bne lbl_802DCDF8
-/* 802DCDE4 002A63A4  48 01 CA DD */	bl func_802F98C0
+/* 802DCDE4 002A63A4  48 01 CA DD */	bl l2cap_link_chk_pkt_end
 /* 802DCDE8 002A63A8  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 802DCDEC 002A63AC  40 82 00 0C */	bne lbl_802DCDF8
 /* 802DCDF0 002A63B0  9B B6 00 1A */	stb r29, 0x1a(r22)
@@ -255,7 +255,7 @@ lbl_802DCE1C:
 /* 802DCE24 002A63E4  88 7F 00 1F */	lbz r3, 0x1f(r31)
 /* 802DCE28 002A63E8  38 80 00 00 */	li r4, 0
 /* 802DCE2C 002A63EC  7C AF B8 2E */	lwzx r5, r15, r23
-/* 802DCE30 002A63F0  4B FF E8 71 */	bl func_802DB6A0
+/* 802DCE30 002A63F0  4B FF E8 71 */	bl GKI_send_msg
 /* 802DCE34 002A63F4  7F AF B9 2E */	stwx r29, r15, r23
 /* 802DCE38 002A63F8  4B FF FC F8 */	b lbl_802DCB30
 lbl_802DCE3C:
@@ -269,8 +269,8 @@ lbl_802DCE40:
 /* 802DCE54 002A6414  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DCE60
-func_802DCE60:
+.global hcisu_h2_send_msg_now
+hcisu_h2_send_msg_now:
 /* 802DCE60 002A6420  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DCE64 002A6424  7C 08 02 A6 */	mflr r0
 /* 802DCE68 002A6428  90 01 00 24 */	stw r0, 0x24(r1)
@@ -317,7 +317,7 @@ lbl_802DCEFC:
 /* 802DCEFC 002A64BC  7C C4 33 78 */	mr r4, r6
 /* 802DCF00 002A64C0  7F 83 E3 78 */	mr r3, r28
 /* 802DCF04 002A64C4  7F 66 DB 78 */	mr r6, r27
-/* 802DCF08 002A64C8  48 00 0B C9 */	bl func_802DDAD0
+/* 802DCF08 002A64C8  48 00 0B C9 */	bl UUSB_Write
 /* 802DCF0C 002A64CC  A0 7B 00 04 */	lhz r3, 4(r27)
 /* 802DCF10 002A64D0  A0 1E 00 7C */	lhz r0, 0x7c(r30)
 /* 802DCF14 002A64D4  A0 9B 00 02 */	lhz r4, 2(r27)
@@ -365,7 +365,7 @@ lbl_802DCF88:
 /* 802DCFB4 002A6574  7F 65 DB 78 */	mr r5, r27
 /* 802DCFB8 002A6578  38 80 00 00 */	li r4, 0
 /* 802DCFBC 002A657C  88 63 00 1F */	lbz r3, 0x1f(r3)
-/* 802DCFC0 002A6580  4B FF E6 E1 */	bl func_802DB6A0
+/* 802DCFC0 002A6580  4B FF E6 E1 */	bl GKI_send_msg
 /* 802DCFC4 002A6584  48 00 00 30 */	b lbl_802DCFF4
 lbl_802DCFC8:
 /* 802DCFC8 002A6588  A0 BE 00 7E */	lhz r5, 0x7e(r30)
@@ -377,7 +377,7 @@ lbl_802DCFD8:
 /* 802DCFDC 002A659C  7C C4 33 78 */	mr r4, r6
 /* 802DCFE0 002A65A0  7F 83 E3 78 */	mr r3, r28
 /* 802DCFE4 002A65A4  7F 66 DB 78 */	mr r6, r27
-/* 802DCFE8 002A65A8  48 00 0A E9 */	bl func_802DDAD0
+/* 802DCFE8 002A65A8  48 00 0A E9 */	bl UUSB_Write
 /* 802DCFEC 002A65AC  7F 63 DB 78 */	mr r3, r27
 /* 802DCFF0 002A65B0  4B FF E4 F1 */	bl GKI_freebuf
 lbl_802DCFF4:
@@ -389,8 +389,8 @@ lbl_802DCFF4:
 /* 802DD008 002A65C8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DD010
-func_802DD010:
+.global hcisu_h2_init
+hcisu_h2_init:
 /* 802DD010 002A65D0  3C C0 80 5C */	lis r6, lbl_805BBC20@ha
 /* 802DD014 002A65D4  38 00 00 00 */	li r0, 0
 /* 802DD018 002A65D8  38 C6 BC 20 */	addi r6, r6, lbl_805BBC20@l
@@ -404,8 +404,8 @@ func_802DD010:
 /* 802DD038 002A65F8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DD040
-func_802DD040:
+.global hcisu_h2_open
+hcisu_h2_open:
 /* 802DD040 002A6600  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DD044 002A6604  7C 08 02 A6 */	mflr r0
 /* 802DD048 002A6608  3C A0 80 5C */	lis r5, lbl_805BBC20@ha
@@ -422,11 +422,11 @@ func_802DD040:
 /* 802DD074 002A6634  B0 C1 00 0E */	sth r6, 0xe(r1)
 /* 802DD078 002A6638  B0 81 00 10 */	sth r4, 0x10(r1)
 /* 802DD07C 002A663C  98 05 00 1E */	stb r0, 0x1e(r5)
-/* 802DD080 002A6640  48 00 06 A1 */	bl func_802DD720
-/* 802DD084 002A6644  3C 80 80 2E */	lis r4, lbl_802DCAA0@ha
+/* 802DD080 002A6640  48 00 06 A1 */	bl UUSB_Register
+/* 802DD084 002A6644  3C 80 80 2E */	lis r4, hcisu_h2_usb_cback@ha
 /* 802DD088 002A6648  38 61 00 08 */	addi r3, r1, 8
-/* 802DD08C 002A664C  38 84 CA A0 */	addi r4, r4, lbl_802DCAA0@l
-/* 802DD090 002A6650  48 00 08 A1 */	bl func_802DD930
+/* 802DD08C 002A664C  38 84 CA A0 */	addi r4, r4, hcisu_h2_usb_cback@l
+/* 802DD090 002A6650  48 00 08 A1 */	bl UUSB_Open
 /* 802DD094 002A6654  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 802DD098 002A6658  38 60 00 01 */	li r3, 1
 /* 802DD09C 002A665C  7C 08 03 A6 */	mtlr r0
@@ -434,8 +434,8 @@ func_802DD040:
 /* 802DD0A4 002A6664  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DD0B0
-func_802DD0B0:
+.global hcisu_h2_close
+hcisu_h2_close:
 /* 802DD0B0 002A6670  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD0B4 002A6674  7C 08 02 A6 */	mflr r0
 /* 802DD0B8 002A6678  3C 60 80 5C */	lis r3, lbl_805BBC20@ha
@@ -443,23 +443,23 @@ func_802DD0B0:
 /* 802DD0C0 002A6680  38 63 BC 20 */	addi r3, r3, lbl_805BBC20@l
 /* 802DD0C4 002A6684  38 00 00 00 */	li r0, 0
 /* 802DD0C8 002A6688  98 03 00 1E */	stb r0, 0x1e(r3)
-/* 802DD0CC 002A668C  48 00 0C 15 */	bl func_802DDCE0
-/* 802DD0D0 002A6690  48 00 0C C1 */	bl func_802DDD90
+/* 802DD0CC 002A668C  48 00 0C 15 */	bl UUSB_Close
+/* 802DD0D0 002A6690  48 00 0C C1 */	bl UUSB_Unregister
 /* 802DD0D4 002A6694  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802DD0D8 002A6698  7C 08 03 A6 */	mtlr r0
 /* 802DD0DC 002A669C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD0E0 002A66A0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DD0F0
-func_802DD0F0:
+.global hcisu_h2_send
+hcisu_h2_send:
 /* 802DD0F0 002A66B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD0F4 002A66B4  7C 08 02 A6 */	mflr r0
 /* 802DD0F8 002A66B8  3C A0 80 5C */	lis r5, lbl_805BBC20@ha
 /* 802DD0FC 002A66BC  7C 64 1B 78 */	mr r4, r3
 /* 802DD100 002A66C0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802DD104 002A66C4  38 65 BC 20 */	addi r3, r5, lbl_805BBC20@l
-/* 802DD108 002A66C8  4B FF FD 59 */	bl func_802DCE60
+/* 802DD108 002A66C8  4B FF FD 59 */	bl hcisu_h2_send_msg_now
 /* 802DD10C 002A66CC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802DD110 002A66D0  38 60 00 01 */	li r3, 1
 /* 802DD114 002A66D4  7C 08 03 A6 */	mtlr r0
@@ -467,8 +467,8 @@ func_802DD0F0:
 /* 802DD11C 002A66DC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DD120
-func_802DD120:
+.global hcisu_h2_handle_event
+hcisu_h2_handle_event:
 /* 802DD120 002A66E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD124 002A66E4  7C 08 02 A6 */	mflr r0
 /* 802DD128 002A66E8  3C 80 80 5C */	lis r4, lbl_805BBC20@ha
@@ -478,7 +478,7 @@ func_802DD120:
 /* 802DD138 002A66F8  A0 64 00 12 */	lhz r3, 0x12(r4)
 /* 802DD13C 002A66FC  7C 03 00 50 */	subf r0, r3, r0
 /* 802DD140 002A6700  54 03 04 3E */	clrlwi r3, r0, 0x10
-/* 802DD144 002A6704  4B FF F9 7D */	bl func_802DCAC0
+/* 802DD144 002A6704  4B FF F9 7D */	bl hcisu_h2_receive_msg
 /* 802DD148 002A6708  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802DD14C 002A670C  38 60 00 00 */	li r3, 0
 /* 802DD150 002A6710  7C 08 03 A6 */	mtlr r0

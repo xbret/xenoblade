@@ -18,8 +18,8 @@ bta_sys_init:
 /* 802DE988 002A7F48  38 7F 00 68 */	addi r3, r31, 0x68
 /* 802DE98C 002A7F4C  38 80 03 E8 */	li r4, 0x3e8
 /* 802DE990 002A7F50  88 A5 00 03 */	lbz r5, 3(r5)
-/* 802DE994 002A7F54  48 00 02 0D */	bl func_802DEBA0
-/* 802DE998 002A7F58  4B FF E0 29 */	bl func_802DC9C0
+/* 802DE994 002A7F54  48 00 02 0D */	bl ptim_init
+/* 802DE998 002A7F58  4B FF E0 29 */	bl GKI_get_taskid
 /* 802DE99C 002A7F5C  98 7F 00 7D */	stb r3, 0x7d(r31)
 /* 802DE9A0 002A7F60  80 6D 97 80 */	lwz r3, lbl_80665900@sda21(r13)
 /* 802DE9A4 002A7F64  88 03 00 04 */	lbz r0, 4(r3)
@@ -106,7 +106,7 @@ bta_sys_timer_update:
 /* 802DEAB8 002A8078  2C 00 00 00 */	cmpwi r0, 0
 /* 802DEABC 002A807C  4C 82 00 20 */	bnelr 
 /* 802DEAC0 002A8080  38 63 00 68 */	addi r3, r3, 0x68
-/* 802DEAC4 002A8084  48 00 01 28 */	b func_802DEBEC
+/* 802DEAC4 002A8084  48 00 01 28 */	b ptim_timer_update
 /* 802DEAC8 002A8088  4E 80 00 20 */	blr 
 
 .global bta_sys_register
@@ -125,7 +125,7 @@ bta_sys_sendmsg:
 /* 802DEAEC 002A80AC  7C 65 1B 78 */	mr r5, r3
 /* 802DEAF0 002A80B0  88 66 00 7D */	lbz r3, 0x7d(r6)
 /* 802DEAF4 002A80B4  88 84 00 02 */	lbz r4, 2(r4)
-/* 802DEAF8 002A80B8  4B FF CB A8 */	b func_802DB6A0
+/* 802DEAF8 002A80B8  4B FF CB A8 */	b GKI_send_msg
 
 .global bta_sys_start_timer
 bta_sys_start_timer:
@@ -136,7 +136,7 @@ bta_sys_start_timer:
 /* 802DEB0C 002A80CC  7C 64 1B 78 */	mr r4, r3
 /* 802DEB10 002A80D0  7C 05 03 78 */	mr r5, r0
 /* 802DEB14 002A80D4  38 67 00 68 */	addi r3, r7, 0x68
-/* 802DEB18 002A80D8  48 00 01 88 */	b func_802DECA0
+/* 802DEB18 002A80D8  48 00 01 88 */	b ptim_start_timer
 
 .global bta_sys_stop_timer
 bta_sys_stop_timer:
@@ -144,7 +144,7 @@ bta_sys_stop_timer:
 /* 802DEB20 002A80E0  7C 64 1B 78 */	mr r4, r3
 /* 802DEB24 002A80E4  38 A5 F5 58 */	addi r5, r5, lbl_805BF558@l
 /* 802DEB28 002A80E8  38 65 00 68 */	addi r3, r5, 0x68
-/* 802DEB2C 002A80EC  48 00 02 14 */	b func_802DED40
+/* 802DEB2C 002A80EC  48 00 02 14 */	b ptim_stop_timer
 
 .global bta_sys_disable
 bta_sys_disable:

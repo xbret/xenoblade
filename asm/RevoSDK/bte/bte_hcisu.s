@@ -65,4 +65,4 @@ bta_ci_hci_msg_handler:
 /* 802DDEA0 002A7460  7C 65 1B 78 */	mr r5, r3
 /* 802DDEA4 002A7464  38 60 00 02 */	li r3, 2
 /* 802DDEA8 002A7468  38 80 00 00 */	li r4, 0
-/* 802DDEAC 002A746C  4B FF D7 F4 */	b func_802DB6A0
+/* 802DDEAC 002A746C  4B FF D7 F4 */	b GKI_send_msg

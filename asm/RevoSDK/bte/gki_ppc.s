@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_802DC790
-func_802DC790:
+.global GKI_init
+GKI_init:
 /* 802DC790 002A5D50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC794 002A5D54  7C 08 02 A6 */	mflr r0
 /* 802DC798 002A5D58  3C A0 00 03 */	lis r5, 0x00028AE0@ha
@@ -16,8 +16,8 @@ func_802DC790:
 /* 802DC7B0 002A5D70  3F C0 80 59 */	lis r30, lbl_80593140@ha
 /* 802DC7B4 002A5D74  38 7E 31 40 */	addi r3, r30, lbl_80593140@l
 /* 802DC7B8 002A5D78  4B D2 7B 99 */	bl memset
-/* 802DC7BC 002A5D7C  4B FF E7 C5 */	bl func_802DAF80
-/* 802DC7C0 002A5D80  4B FF FA 41 */	bl func_802DC200
+/* 802DC7BC 002A5D7C  4B FF E7 C5 */	bl gki_buffer_init
+/* 802DC7C0 002A5D80  4B FF FA 41 */	bl gki_timers_init
 /* 802DC7C4 002A5D84  3B FE 31 40 */	addi r31, r30, lbl_80593140@l
 /* 802DC7C8 002A5D88  38 80 00 01 */	li r4, 1
 /* 802DC7CC 002A5D8C  3C 7F 00 03 */	addis r3, r31, 3
@@ -43,8 +43,8 @@ func_802DC790:
 /* 802DC81C 002A5DDC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC820
-func_802DC820:
+.global GKI_shutdown
+GKI_shutdown:
 /* 802DC820 002A5DE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC824 002A5DE4  7C 08 02 A6 */	mflr r0
 /* 802DC828 002A5DE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -91,28 +91,28 @@ lbl_802DC8A4:
 /* 802DC8C4 002A5E84  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC8D0
-func_802DC8D0:
+.global GKI_run
+GKI_run:
 /* 802DC8D0 002A5E90  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC8E0
-func_802DC8E0:
+.global GKI_sched_lock
+GKI_sched_lock:
 /* 802DC8E0 002A5EA0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC8F0
-func_802DC8F0:
+.global GKI_sched_unlock
+GKI_sched_unlock:
 /* 802DC8F0 002A5EB0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC900
-func_802DC900:
+.global GKI_delay
+GKI_delay:
 /* 802DC900 002A5EC0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC910
-func_802DC910:
+.global GKI_send_event
+GKI_send_event:
 /* 802DC910 002A5ED0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC914 002A5ED4  7C 08 02 A6 */	mflr r0
 /* 802DC918 002A5ED8  28 03 00 08 */	cmplwi r3, 8
@@ -158,14 +158,14 @@ lbl_802DC99C:
 /* 802DC9B0 002A5F70  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC9C0
-func_802DC9C0:
+.global GKI_get_taskid
+GKI_get_taskid:
 /* 802DC9C0 002A5F80  38 60 00 02 */	li r3, 2
 /* 802DC9C4 002A5F84  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC9D0
-func_802DC9D0:
+.global GKI_enable
+GKI_enable:
 /* 802DC9D0 002A5F90  3C A0 80 59 */	lis r5, lbl_80593140@ha
 /* 802DC9D4 002A5F94  88 85 31 40 */	lbz r4, lbl_80593140@l(r5)
 /* 802DC9D8 002A5F98  38 65 31 40 */	addi r3, r5, lbl_80593140@l
@@ -177,8 +177,8 @@ func_802DC9D0:
 /* 802DC9F0 002A5FB0  48 07 C0 00 */	b OSRestoreInterrupts
 
 .balign 16, 0
-.global func_802DCA00
-func_802DCA00:
+.global GKI_disable
+GKI_disable:
 /* 802DCA00 002A5FC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DCA04 002A5FC4  7C 08 02 A6 */	mflr r0
 /* 802DCA08 002A5FC8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -198,17 +198,17 @@ func_802DCA00:
 /* 802DCA40 002A6000  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DCA50
-func_802DCA50:
+.global GKI_exception
+GKI_exception:
 /* 802DCA50 002A6010  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DCA60
-func_802DCA60:
+.global GKI_os_malloc
+GKI_os_malloc:
 /* 802DCA60 002A6020  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DCA64 002A6024  7C 08 02 A6 */	mflr r0
 /* 802DCA68 002A6028  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802DCA6C 002A602C  48 09 91 85 */	bl func_80375BF0
+/* 802DCA6C 002A602C  48 09 91 85 */	bl App_MEMalloc
 /* 802DCA70 002A6030  2C 03 00 00 */	cmpwi r3, 0
 /* 802DCA74 002A6034  40 82 00 08 */	bne lbl_802DCA7C
 /* 802DCA78 002A6038  38 60 00 00 */	li r3, 0
@@ -219,6 +219,6 @@ lbl_802DCA7C:
 /* 802DCA88 002A6048  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DCA90
-func_802DCA90:
-/* 802DCA90 002A6050  48 09 91 B0 */	b func_80375C40
+.global GKI_os_free
+GKI_os_free:
+/* 802DCA90 002A6050  48 09 91 B0 */	b App_MEMfree

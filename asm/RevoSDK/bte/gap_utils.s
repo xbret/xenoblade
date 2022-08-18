@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802F08A0
-func_802F08A0:
+.global btm_cback
+btm_cback:
 /* 802F08A0 002B9E60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F08A4 002B9E64  7C 08 02 A6 */	mflr r0
 /* 802F08A8 002B9E68  3C E0 80 54 */	lis r7, lbl_805463A0@ha
@@ -84,9 +84,8 @@ lbl_802F09A4:
 /* 802F09C0 002B9F80  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802F09C4 002B9F84  7C 69 03 A6 */	mtctr r3
 /* 802F09C8 002B9F88  4E 80 04 20 */	bctr 
-
-.global func_802F09CC
-func_802F09CC:
+.global lbl_802F09CC
+lbl_802F09CC:
 /* 802F09CC 002B9F8C  38 A0 00 00 */	li r5, 0
 /* 802F09D0 002B9F90  48 00 00 38 */	b lbl_802F0A08
 .global lbl_802F09D4
@@ -149,19 +148,20 @@ lbl_802F0A60:
 /* 802F0A70 002BA030  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F0A74 002BA034  4E 80 00 20 */	blr
 
-.global func_802F0A78
-func_802F0A78:
+.global gap_btm_cback0
+gap_btm_cback0:
 /* 802F0A78 002BA038  7C 64 1B 78 */	mr r4, r3
 /* 802F0A7C 002BA03C  38 60 00 00 */	li r3, 0
-/* 802F0A80 002BA040  4B FF FE 20 */	b func_802F08A0
-.global lbl_802F0A84
-lbl_802F0A84:
+/* 802F0A80 002BA040  4B FF FE 20 */	b btm_cback
+
+.global gap_btm_cback1
+gap_btm_cback1:
 /* 802F0A84 002BA044  7C 64 1B 78 */	mr r4, r3
 /* 802F0A88 002BA048  38 60 00 01 */	li r3, 1
-/* 802F0A8C 002BA04C  4B FF FE 14 */	b func_802F08A0
+/* 802F0A8C 002BA04C  4B FF FE 14 */	b btm_cback
 
-.global func_802F0A90
-func_802F0A90:
+.global gap_find_addr_name_cb
+gap_find_addr_name_cb:
 /* 802F0A90 002BA050  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F0A94 002BA054  7C 08 02 A6 */	mflr r0
 /* 802F0A98 002BA058  90 01 00 24 */	stw r0, 0x24(r1)
@@ -206,14 +206,14 @@ lbl_802F0AF4:
 /* 802F0B30 002BA0F0  48 00 01 34 */	b lbl_802F0C64
 lbl_802F0B34:
 /* 802F0B34 002BA0F4  80 7F 00 30 */	lwz r3, 0x30(r31)
-/* 802F0B38 002BA0F8  4B FF 84 3D */	bl func_802E8F74
+/* 802F0B38 002BA0F8  4B FF 84 3D */	bl BTM_InqDbNext
 /* 802F0B3C 002BA0FC  2C 03 00 00 */	cmpwi r3, 0
 /* 802F0B40 002BA100  90 7F 00 30 */	stw r3, 0x30(r31)
 /* 802F0B44 002BA104  41 82 00 8C */	beq lbl_802F0BD0
-/* 802F0B48 002BA108  3C 80 80 2F */	lis r4, func_802F0A90@ha
+/* 802F0B48 002BA108  3C 80 80 2F */	lis r4, gap_find_addr_name_cb@ha
 /* 802F0B4C 002BA10C  38 63 00 02 */	addi r3, r3, 2
-/* 802F0B50 002BA110  38 84 0A 90 */	addi r4, r4, func_802F0A90@l
-/* 802F0B54 002BA114  4B FF 81 49 */	bl func_802E8C9C
+/* 802F0B50 002BA110  38 84 0A 90 */	addi r4, r4, gap_find_addr_name_cb@l
+/* 802F0B54 002BA114  4B FF 81 49 */	bl BTM_ReadRemoteDeviceName
 /* 802F0B58 002BA118  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 802F0B5C 002BA11C  28 00 00 01 */	cmplwi r0, 1
 /* 802F0B60 002BA120  41 82 01 2C */	beq lbl_802F0C8C
@@ -227,9 +227,8 @@ lbl_802F0B34:
 /* 802F0B80 002BA140  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802F0B84 002BA144  7C 69 03 A6 */	mtctr r3
 /* 802F0B88 002BA148  4E 80 04 20 */	bctr 
-
-.global func_802F0B8C
-func_802F0B8C:
+.global lbl_802F0B8C
+lbl_802F0B8C:
 /* 802F0B8C 002BA14C  38 00 00 00 */	li r0, 0
 /* 802F0B90 002BA150  48 00 00 38 */	b lbl_802F0BC8
 .global lbl_802F0B94
@@ -286,9 +285,8 @@ lbl_802F0BFC:
 /* 802F0C18 002BA1D8  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802F0C1C 002BA1DC  7C 69 03 A6 */	mtctr r3
 /* 802F0C20 002BA1E0  4E 80 04 20 */	bctr 
-
-.global func_802F0C24
-func_802F0C24:
+.global lbl_802F0C24
+lbl_802F0C24:
 /* 802F0C24 002BA1E4  38 00 00 00 */	li r0, 0
 /* 802F0C28 002BA1E8  48 00 00 38 */	b lbl_802F0C60
 .global lbl_802F0C2C
@@ -369,14 +367,14 @@ lbl_802F0D04:
 /* 802F0D0C 002BA2CC  40 82 00 AC */	bne lbl_802F0DB8
 /* 802F0D10 002BA2D0  38 00 01 11 */	li r0, 0x111
 /* 802F0D14 002BA2D4  B0 1E 00 00 */	sth r0, 0(r30)
-/* 802F0D18 002BA2D8  4B FF 81 A5 */	bl func_802E8EBC
+/* 802F0D18 002BA2D8  4B FF 81 A5 */	bl BTM_InqDbFirst
 /* 802F0D1C 002BA2DC  2C 03 00 00 */	cmpwi r3, 0
 /* 802F0D20 002BA2E0  90 7F 00 30 */	stw r3, 0x30(r31)
 /* 802F0D24 002BA2E4  41 82 00 88 */	beq lbl_802F0DAC
-/* 802F0D28 002BA2E8  3C 80 80 2F */	lis r4, func_802F0A90@ha
+/* 802F0D28 002BA2E8  3C 80 80 2F */	lis r4, gap_find_addr_name_cb@ha
 /* 802F0D2C 002BA2EC  38 63 00 02 */	addi r3, r3, 2
-/* 802F0D30 002BA2F0  38 84 0A 90 */	addi r4, r4, func_802F0A90@l
-/* 802F0D34 002BA2F4  4B FF 7F 69 */	bl func_802E8C9C
+/* 802F0D30 002BA2F0  38 84 0A 90 */	addi r4, r4, gap_find_addr_name_cb@l
+/* 802F0D34 002BA2F4  4B FF 7F 69 */	bl BTM_ReadRemoteDeviceName
 /* 802F0D38 002BA2F8  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 802F0D3C 002BA2FC  28 00 00 01 */	cmplwi r0, 1
 /* 802F0D40 002BA300  41 82 01 00 */	beq lbl_802F0E40
@@ -389,9 +387,8 @@ lbl_802F0D04:
 /* 802F0D5C 002BA31C  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802F0D60 002BA320  7C 69 03 A6 */	mtctr r3
 /* 802F0D64 002BA324  4E 80 04 20 */	bctr 
-
-.global func_802F0D68
-func_802F0D68:
+.global lbl_802F0D68
+lbl_802F0D68:
 /* 802F0D68 002BA328  38 00 00 00 */	li r0, 0
 /* 802F0D6C 002BA32C  48 00 00 38 */	b lbl_802F0DA4
 .global lbl_802F0D70
@@ -437,9 +434,8 @@ lbl_802F0DB8:
 /* 802F0DCC 002BA38C  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802F0DD0 002BA390  7C 69 03 A6 */	mtctr r3
 /* 802F0DD4 002BA394  4E 80 04 20 */	bctr 
-
-.global func_802F0DD8
-func_802F0DD8:
+.global lbl_802F0DD8
+lbl_802F0DD8:
 /* 802F0DD8 002BA398  38 00 00 00 */	li r0, 0
 /* 802F0DDC 002BA39C  48 00 00 38 */	b lbl_802F0E14
 .global lbl_802F0DE0
@@ -490,7 +486,10 @@ lbl_802F0E40:
 /* 802F0E4C 002BA40C  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 802F0E50 002BA410  7C 08 03 A6 */	mtlr r0
 /* 802F0E54 002BA414  38 21 00 20 */	addi r1, r1, 0x20
-/* 802F0E58 002BA418  4E 80 00 20 */	blr 
+/* 802F0E58 002BA418  4E 80 00 20 */	blr
+
+#unreferenced?
+gap_convert_btm_status:
 /* 802F0E5C 002BA41C  28 03 00 08 */	cmplwi r3, 8
 /* 802F0E60 002BA420  41 81 00 54 */	bgt lbl_802F0EB4
 /* 802F0E64 002BA424  3C 80 80 54 */	lis r4, lbl_8054666C@ha
@@ -499,42 +498,34 @@ lbl_802F0E40:
 /* 802F0E70 002BA430  7C 84 00 2E */	lwzx r4, r4, r0
 /* 802F0E74 002BA434  7C 89 03 A6 */	mtctr r4
 /* 802F0E78 002BA438  4E 80 04 20 */	bctr 
-
-.global func_802F0E7C
-func_802F0E7C:
+.global lbl_802F0E7C
+lbl_802F0E7C:
 /* 802F0E7C 002BA43C  38 60 00 00 */	li r3, 0
 /* 802F0E80 002BA440  4E 80 00 20 */	blr 
-
-.global func_802F0E84
-func_802F0E84:
+.global lbl_802F0E84
+lbl_802F0E84:
 /* 802F0E84 002BA444  38 60 01 0B */	li r3, 0x10b
 /* 802F0E88 002BA448  4E 80 00 20 */	blr 
-
-.global func_802F0E8C
-func_802F0E8C:
+.global lbl_802F0E8C
+lbl_802F0E8C:
 /* 802F0E8C 002BA44C  38 60 01 03 */	li r3, 0x103
 /* 802F0E90 002BA450  4E 80 00 20 */	blr 
-
-.global func_802F0E94
-func_802F0E94:
+.global lbl_802F0E94
+lbl_802F0E94:
 /* 802F0E94 002BA454  38 60 01 09 */	li r3, 0x109
 /* 802F0E98 002BA458  4E 80 00 20 */	blr 
-
-.global func_802F0E9C
-func_802F0E9C:
+.global lbl_802F0E9C
+lbl_802F0E9C:
 /* 802F0E9C 002BA45C  38 60 01 0C */	li r3, 0x10c
 /* 802F0EA0 002BA460  4E 80 00 20 */	blr 
-
-.global func_802F0EA4
-func_802F0EA4:
+.global lbl_802F0EA4
+lbl_802F0EA4:
 /* 802F0EA4 002BA464  38 60 01 0D */	li r3, 0x10d
 /* 802F0EA8 002BA468  4E 80 00 20 */	blr 
-
-.global func_802F0EAC
-func_802F0EAC:
+.global lbl_802F0EAC
+lbl_802F0EAC:
 /* 802F0EAC 002BA46C  38 60 01 15 */	li r3, 0x115
 /* 802F0EB0 002BA470  4E 80 00 20 */	blr
-
 .global lbl_802F0EB4
 lbl_802F0EB4:
 /* 802F0EB4 002BA474  38 60 01 14 */	li r3, 0x114

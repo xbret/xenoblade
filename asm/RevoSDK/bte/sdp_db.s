@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80303D24
-func_80303D24:
+.global sdp_db_service_search
+sdp_db_service_search:
 /* 80303D24 002CD2E4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80303D28 002CD2E8  7C 08 02 A6 */	mflr r0
 /* 80303D2C 002CD2EC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -42,7 +42,7 @@ lbl_80303D90:
 /* 80303DA0 002CD360  7F 45 D3 78 */	mr r5, r26
 /* 80303DA4 002CD364  80 98 00 00 */	lwz r4, 0(r24)
 /* 80303DA8 002CD368  A0 DB 00 02 */	lhz r6, 2(r27)
-/* 80303DAC 002CD36C  48 00 44 25 */	bl func_803081D0
+/* 80303DAC 002CD36C  48 00 44 25 */	bl sdpu_compare_uuid_arrays
 /* 80303DB0 002CD370  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80303DB4 002CD374  40 82 00 48 */	bne lbl_80303DFC
 /* 80303DB8 002CD378  48 00 00 2C */	b lbl_80303DE4
@@ -54,7 +54,7 @@ lbl_80303DBC:
 /* 80303DCC 002CD38C  80 98 00 00 */	lwz r4, 0(r24)
 /* 80303DD0 002CD390  38 E0 00 00 */	li r7, 0
 /* 80303DD4 002CD394  A0 DB 00 02 */	lhz r6, 2(r27)
-/* 80303DD8 002CD398  48 00 00 89 */	bl func_80303E60
+/* 80303DD8 002CD398  48 00 00 89 */	bl find_uuid_in_seq
 /* 80303DDC 002CD39C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80303DE0 002CD3A0  40 82 00 1C */	bne lbl_80303DFC
 lbl_80303DE4:
@@ -97,8 +97,8 @@ lbl_80303E48:
 /* 80303E58 002CD418  38 21 00 30 */	addi r1, r1, 0x30
 /* 80303E5C 002CD41C  4E 80 00 20 */	blr 
 
-.global func_80303E60
-func_80303E60:
+.global find_uuid_in_seq
+find_uuid_in_seq:
 /* 80303E60 002CD420  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80303E64 002CD424  7C 08 02 A6 */	mflr r0
 /* 80303E68 002CD428  90 01 00 34 */	stw r0, 0x34(r1)
@@ -119,7 +119,7 @@ lbl_80303E9C:
 /* 80303EA0 002CD460  38 7A 00 01 */	addi r3, r26, 1
 /* 80303EA4 002CD464  38 A1 00 08 */	addi r5, r1, 8
 /* 80303EA8 002CD468  7F C4 F3 78 */	mr r4, r30
-/* 80303EAC 002CD46C  48 00 41 75 */	bl func_80308020
+/* 80303EAC 002CD46C  48 00 41 75 */	bl sdpu_get_len_from_type
 /* 80303EB0 002CD470  57 C0 EE FE */	rlwinm r0, r30, 0x1d, 0x1b, 0x1f
 /* 80303EB4 002CD474  7C 7A 1B 78 */	mr r26, r3
 /* 80303EB8 002CD478  28 00 00 03 */	cmplwi r0, 3
@@ -127,7 +127,7 @@ lbl_80303E9C:
 /* 80303EC0 002CD480  80 81 00 08 */	lwz r4, 8(r1)
 /* 80303EC4 002CD484  7F 65 DB 78 */	mr r5, r27
 /* 80303EC8 002CD488  7F 86 E3 78 */	mr r6, r28
-/* 80303ECC 002CD48C  48 00 43 05 */	bl func_803081D0
+/* 80303ECC 002CD48C  48 00 43 05 */	bl sdpu_compare_uuid_arrays
 /* 80303ED0 002CD490  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80303ED4 002CD494  41 82 00 38 */	beq lbl_80303F0C
 /* 80303ED8 002CD498  38 60 00 01 */	li r3, 1
@@ -139,7 +139,7 @@ lbl_80303EE0:
 /* 80303EEC 002CD4AC  7F 65 DB 78 */	mr r5, r27
 /* 80303EF0 002CD4B0  7F 86 E3 78 */	mr r6, r28
 /* 80303EF4 002CD4B4  38 FD 00 01 */	addi r7, r29, 1
-/* 80303EF8 002CD4B8  4B FF FF 69 */	bl func_80303E60
+/* 80303EF8 002CD4B8  4B FF FF 69 */	bl find_uuid_in_seq
 /* 80303EFC 002CD4BC  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80303F00 002CD4C0  41 82 00 0C */	beq lbl_80303F0C
 /* 80303F04 002CD4C4  38 60 00 01 */	li r3, 1
@@ -159,8 +159,8 @@ lbl_80303F20:
 /* 80303F30 002CD4F0  38 21 00 30 */	addi r1, r1, 0x30
 /* 80303F34 002CD4F4  4E 80 00 20 */	blr 
 
-.global func_80303F38
-func_80303F38:
+.global sdp_db_find_record
+sdp_db_find_record:
 /* 80303F38 002CD4F8  3C A0 80 5C */	lis r5, lbl_805C36C0@ha
 /* 80303F3C 002CD4FC  38 00 02 98 */	li r0, 0x298
 /* 80303F40 002CD500  38 A5 36 C0 */	addi r5, r5, lbl_805C36C0@l
@@ -181,8 +181,6 @@ lbl_80303F70:
 /* 80303F78 002CD538  40 82 00 0C */	bne lbl_80303F84
 /* 80303F7C 002CD53C  7C C3 33 78 */	mr r3, r6
 /* 80303F80 002CD540  4E 80 00 20 */	blr
-
-.global lbl_80303F84
 lbl_80303F84:
 /* 80303F84 002CD544  38 C6 02 98 */	addi r6, r6, 0x298
 /* 80303F88 002CD548  42 00 FF E8 */	bdnz lbl_80303F70
@@ -190,8 +188,8 @@ lbl_80303F8C:
 /* 80303F8C 002CD54C  38 60 00 00 */	li r3, 0
 /* 80303F90 002CD550  4E 80 00 20 */	blr 
 
-.global func_80303F94
-func_80303F94:
+.global sdp_db_find_attr_in_rec
+sdp_db_find_attr_in_rec:
 /* 80303F94 002CD554  A0 C3 00 08 */	lhz r6, 8(r3)
 /* 80303F98 002CD558  38 63 00 0C */	addi r3, r3, 0xc
 /* 80303F9C 002CD55C  38 E0 00 00 */	li r7, 0
@@ -212,8 +210,8 @@ lbl_80303FC0:
 /* 80303FCC 002CD58C  38 60 00 00 */	li r3, 0
 /* 80303FD0 002CD590  4E 80 00 20 */	blr 
 
-.global func_80303FD4
-func_80303FD4:
+.global SDP_CreateRecord
+SDP_CreateRecord:
 /* 80303FD4 002CD594  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80303FD8 002CD598  7C 08 02 A6 */	mflr r0
 /* 80303FDC 002CD59C  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
@@ -259,7 +257,7 @@ lbl_8030403C:
 /* 80304074 002CD634  B1 1F 00 06 */	sth r8, 6(r31)
 /* 80304078 002CD638  98 01 00 0A */	stb r0, 0xa(r1)
 /* 8030407C 002CD63C  98 61 00 0B */	stb r3, 0xb(r1)
-/* 80304080 002CD640  48 00 01 49 */	bl func_803041C8
+/* 80304080 002CD640  48 00 01 49 */	bl SDP_AddAttribute
 /* 80304084 002CD644  A0 7F 00 06 */	lhz r3, 6(r31)
 /* 80304088 002CD648  38 03 FF FF */	addi r0, r3, -1
 /* 8030408C 002CD64C  1C 00 02 98 */	mulli r0, r0, 0x298
@@ -275,8 +273,8 @@ lbl_803040A0:
 /* 803040AC 002CD66C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803040B0 002CD670  4E 80 00 20 */	blr 
 
-.global func_803040B4
-func_803040B4:
+.global SDP_DeleteRecord
+SDP_DeleteRecord:
 /* 803040B4 002CD674  3C 80 80 5C */	lis r4, lbl_805C36C0@ha
 /* 803040B8 002CD678  2C 03 00 00 */	cmpwi r3, 0
 /* 803040BC 002CD67C  38 84 36 C0 */	addi r4, r4, lbl_805C36C0@l
@@ -294,8 +292,6 @@ lbl_803040D4:
 /* 803040E8 002CD6A8  90 04 12 1C */	stw r0, 0x121c(r4)
 /* 803040EC 002CD6AC  98 04 12 20 */	stb r0, 0x1220(r4)
 /* 803040F0 002CD6B0  4E 80 00 20 */	blr
-
-.global lbl_803040F4
 lbl_803040F4:
 /* 803040F4 002CD6B4  39 20 00 00 */	li r9, 0
 /* 803040F8 002CD6B8  48 00 00 BC */	b lbl_803041B4
@@ -350,8 +346,6 @@ lbl_80304174:
 lbl_803041A4:
 /* 803041A4 002CD764  38 60 00 01 */	li r3, 1
 /* 803041A8 002CD768  4E 80 00 20 */	blr
-
-.global lbl_803041AC
 lbl_803041AC:
 /* 803041AC 002CD76C  39 29 00 01 */	addi r9, r9, 1
 /* 803041B0 002CD770  39 4A 02 98 */	addi r10, r10, 0x298
@@ -362,8 +356,8 @@ lbl_803041B4:
 /* 803041C0 002CD780  38 60 00 00 */	li r3, 0
 /* 803041C4 002CD784  4E 80 00 20 */	blr 
 
-.global func_803041C8
-func_803041C8:
+.global SDP_AddAttribute
+SDP_AddAttribute:
 /* 803041C8 002CD788  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803041CC 002CD78C  7C 08 02 A6 */	mflr r0
 /* 803041D0 002CD790  90 01 00 34 */	stw r0, 0x34(r1)
@@ -394,7 +388,7 @@ lbl_80304224:
 /* 8030422C 002CD7EC  40 82 00 14 */	bne lbl_80304240
 /* 80304230 002CD7F0  7F 03 C3 78 */	mr r3, r24
 /* 80304234 002CD7F4  7F 24 CB 78 */	mr r4, r25
-/* 80304238 002CD7F8  48 00 05 7D */	bl func_803047B4
+/* 80304238 002CD7F8  48 00 05 7D */	bl SDP_DeleteAttribute
 /* 8030423C 002CD7FC  48 00 00 1C */	b lbl_80304258
 lbl_80304240:
 /* 80304240 002CD800  41 81 00 18 */	bgt lbl_80304258
@@ -613,8 +607,8 @@ lbl_80304548:
 /* 80304558 002CDB18  38 21 00 30 */	addi r1, r1, 0x30
 /* 8030455C 002CDB1C  4E 80 00 20 */	blr 
 
-.global func_80304560
-func_80304560:
+.global SDP_AddUuidSequence
+SDP_AddUuidSequence:
 /* 80304560 002CDB20  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 80304564 002CDB24  7C 08 02 A6 */	mflr r0
 /* 80304568 002CDB28  38 E0 00 00 */	li r7, 0
@@ -664,7 +658,7 @@ lbl_80304604:
 /* 8030460C 002CDBCC  7F C4 F3 78 */	mr r4, r30
 /* 80304610 002CDBD0  38 A0 00 06 */	li r5, 6
 /* 80304614 002CDBD4  7C C7 F8 50 */	subf r6, r7, r31
-/* 80304618 002CDBD8  4B FF FB B1 */	bl func_803041C8
+/* 80304618 002CDBD8  4B FF FB B1 */	bl SDP_AddAttribute
 /* 8030461C 002CDBDC  80 01 00 C4 */	lwz r0, 0xc4(r1)
 /* 80304620 002CDBE0  83 E1 00 BC */	lwz r31, 0xbc(r1)
 /* 80304624 002CDBE4  83 C1 00 B8 */	lwz r30, 0xb8(r1)
@@ -673,8 +667,8 @@ lbl_80304604:
 /* 80304630 002CDBF0  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 80304634 002CDBF4  4E 80 00 20 */	blr 
 
-.global func_80304638
-func_80304638:
+.global SDP_AddServiceClassIdList
+SDP_AddServiceClassIdList:
 /* 80304638 002CDBF8  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 8030463C 002CDBFC  7C 08 02 A6 */	mflr r0
 /* 80304640 002CDC00  2C 04 00 00 */	cmpwi r4, 0
@@ -769,14 +763,14 @@ lbl_80304790:
 /* 80304794 002CDD54  38 80 00 01 */	li r4, 1
 /* 80304798 002CDD58  7C C7 40 50 */	subf r6, r7, r8
 /* 8030479C 002CDD5C  38 A0 00 06 */	li r5, 6
-/* 803047A0 002CDD60  4B FF FA 29 */	bl func_803041C8
+/* 803047A0 002CDD60  4B FF FA 29 */	bl SDP_AddAttribute
 /* 803047A4 002CDD64  80 01 00 B4 */	lwz r0, 0xb4(r1)
 /* 803047A8 002CDD68  7C 08 03 A6 */	mtlr r0
 /* 803047AC 002CDD6C  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 803047B0 002CDD70  4E 80 00 20 */	blr 
 
-.global func_803047B4
-func_803047B4:
+.global SDP_DeleteAttribute
+SDP_DeleteAttribute:
 /* 803047B4 002CDD74  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803047B8 002CDD78  7C 08 02 A6 */	mflr r0
 /* 803047BC 002CDD7C  90 01 00 34 */	stw r0, 0x34(r1)

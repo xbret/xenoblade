@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_802DC200
-func_802DC200:
+.global gki_timers_init
+gki_timers_init:
 /* 802DC200 002A57C0  3C 60 80 59 */	lis r3, lbl_80593140@ha
 /* 802DC204 002A57C4  38 00 00 00 */	li r0, 0
 /* 802DC208 002A57C8  38 63 31 40 */	addi r3, r3, lbl_80593140@l
@@ -54,8 +54,8 @@ func_802DC200:
 /* 802DC2B8 002A5878  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC2C0
-func_802DC2C0:
+.global GKI_get_tick_count
+GKI_get_tick_count:
 /* 802DC2C0 002A5880  3C 60 80 59 */	lis r3, lbl_80593140@ha
 /* 802DC2C4 002A5884  38 63 31 40 */	addi r3, r3, lbl_80593140@l
 /* 802DC2C8 002A5888  3C 63 00 03 */	addis r3, r3, 3
@@ -63,8 +63,8 @@ func_802DC2C0:
 /* 802DC2D0 002A5890  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC2E0
-func_802DC2E0:
+.global GKI_start_timer
+GKI_start_timer:
 /* 802DC2E0 002A58A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DC2E4 002A58A4  7C 08 02 A6 */	mflr r0
 /* 802DC2E8 002A58A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -73,7 +73,7 @@ func_802DC2E0:
 /* 802DC2F4 002A58B4  7C 7B 1B 78 */	mr r27, r3
 /* 802DC2F8 002A58B8  7C 9D 23 78 */	mr r29, r4
 /* 802DC2FC 002A58BC  7C BF 2B 78 */	mr r31, r5
-/* 802DC300 002A58C0  48 00 06 C1 */	bl func_802DC9C0
+/* 802DC300 002A58C0  48 00 06 C1 */	bl GKI_get_taskid
 /* 802DC304 002A58C4  2C 1D 00 00 */	cmpwi r29, 0
 /* 802DC308 002A58C8  7C 7C 1B 78 */	mr r28, r3
 /* 802DC30C 002A58CC  3B C0 00 00 */	li r30, 0
@@ -84,7 +84,7 @@ lbl_802DC318:
 /* 802DC31C 002A58DC  7C 00 FB 78 */	or r0, r0, r31
 /* 802DC320 002A58E0  7C 00 FE 70 */	srawi r0, r0, 0x1f
 /* 802DC324 002A58E4  7F BF 00 38 */	and r31, r29, r0
-/* 802DC328 002A58E8  48 00 06 D9 */	bl func_802DCA00
+/* 802DC328 002A58E8  48 00 06 D9 */	bl GKI_disable
 /* 802DC32C 002A58EC  3C 80 80 59 */	lis r4, lbl_80593140@ha
 /* 802DC330 002A58F0  3C 60 80 00 */	lis r3, 0x7FFFFFFF@ha
 /* 802DC334 002A58F4  38 84 31 40 */	addi r4, r4, lbl_80593140@l
@@ -149,7 +149,7 @@ lbl_802DC3F0:
 /* 802DC408 002A59C8  90 03 88 3C */	stw r0, -0x77c4(r3)
 /* 802DC40C 002A59CC  93 A3 88 38 */	stw r29, -0x77c8(r3)
 lbl_802DC410:
-/* 802DC410 002A59D0  48 00 05 C1 */	bl func_802DC9D0
+/* 802DC410 002A59D0  48 00 05 C1 */	bl GKI_enable
 /* 802DC414 002A59D4  39 61 00 20 */	addi r11, r1, 0x20
 /* 802DC418 002A59D8  4B FD DD 89 */	bl _restgpr_27
 /* 802DC41C 002A59DC  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -158,14 +158,14 @@ lbl_802DC410:
 /* 802DC428 002A59E8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC430
-func_802DC430:
+.global GKI_stop_timer
+GKI_stop_timer:
 /* 802DC430 002A59F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC434 002A59F4  7C 08 02 A6 */	mflr r0
 /* 802DC438 002A59F8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802DC43C 002A59FC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802DC440 002A5A00  7C 7F 1B 78 */	mr r31, r3
-/* 802DC444 002A5A04  48 00 05 7D */	bl func_802DC9C0
+/* 802DC444 002A5A04  48 00 05 7D */	bl GKI_get_taskid
 /* 802DC448 002A5A08  2C 1F 00 00 */	cmpwi r31, 0
 /* 802DC44C 002A5A0C  41 82 00 10 */	beq lbl_802DC45C
 /* 802DC450 002A5A10  2C 1F 00 01 */	cmpwi r31, 1
@@ -198,8 +198,8 @@ lbl_802DC4A0:
 /* 802DC4B0 002A5A70  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC4C0
-func_802DC4C0:
+.global GKI_init_timer_list
+GKI_init_timer_list:
 /* 802DC4C0 002A5A80  38 00 00 00 */	li r0, 0
 /* 802DC4C4 002A5A84  90 03 00 00 */	stw r0, 0(r3)
 /* 802DC4C8 002A5A88  90 03 00 04 */	stw r0, 4(r3)
@@ -207,8 +207,8 @@ func_802DC4C0:
 /* 802DC4D0 002A5A90  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC4E0
-func_802DC4E0:
+.global GKI_update_timer_list
+GKI_update_timer_list:
 /* 802DC4E0 002A5AA0  80 C3 00 00 */	lwz r6, 0(r3)
 /* 802DC4E4 002A5AA4  38 E0 00 00 */	li r7, 0
 /* 802DC4E8 002A5AA8  48 00 00 10 */	b lbl_802DC4F8
@@ -255,8 +255,8 @@ lbl_802DC568:
 /* 802DC56C 002A5B2C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC570
-func_802DC570:
+.global GKI_add_to_timer_list
+GKI_add_to_timer_list:
 /* 802DC570 002A5B30  80 A4 00 0C */	lwz r5, 0xc(r4)
 /* 802DC574 002A5B34  2C 05 00 00 */	cmpwi r5, 0
 /* 802DC578 002A5B38  4D 80 00 20 */	bltlr 
@@ -328,8 +328,8 @@ lbl_802DC650:
 /* 802DC658 002A5C18  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802DC660
-func_802DC660:
+.global GKI_remove_from_timer_list
+GKI_remove_from_timer_list:
 /* 802DC660 002A5C20  2C 04 00 00 */	cmpwi r4, 0
 /* 802DC664 002A5C24  4D 82 00 20 */	beqlr 
 /* 802DC668 002A5C28  88 04 00 16 */	lbz r0, 0x16(r4)

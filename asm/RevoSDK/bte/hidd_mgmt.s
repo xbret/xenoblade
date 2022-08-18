@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802F3700
-func_802F3700:
+.global hidd_proc_repage_timeout
+hidd_proc_repage_timeout:
 /* 802F3700 002BCCC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F3704 002BCCC4  7C 08 02 A6 */	mflr r0
 /* 802F3708 002BCCC8  3C 60 80 5C */	lis r3, lbl_805C2570@ha
@@ -24,7 +24,7 @@ lbl_802F3738:
 /* 802F3740 002BCD00  88 7F 00 09 */	lbz r3, 9(r31)
 /* 802F3744 002BCD04  38 03 00 01 */	addi r0, r3, 1
 /* 802F3748 002BCD08  98 1F 00 09 */	stb r0, 9(r31)
-/* 802F374C 002BCD0C  4B FF FE F5 */	bl func_802F3640
+/* 802F374C 002BCD0C  4B FF FE F5 */	bl hidd_conn_initiate
 /* 802F3750 002BCD10  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 802F3754 002BCD14  41 82 00 48 */	beq lbl_802F379C
 /* 802F3758 002BCD18  88 1F 00 09 */	lbz r0, 9(r31)
@@ -43,7 +43,7 @@ lbl_802F3788:
 /* 802F3788 002BCD48  38 7F 00 1C */	addi r3, r31, 0x1c
 /* 802F378C 002BCD4C  38 80 00 16 */	li r4, 0x16
 /* 802F3790 002BCD50  38 A0 00 01 */	li r5, 1
-/* 802F3794 002BCD54  4B FE AE 1D */	bl func_802DE5B0
+/* 802F3794 002BCD54  4B FE AE 1D */	bl btu_start_timer
 /* 802F3798 002BCD58  48 00 00 1C */	b lbl_802F37B4
 lbl_802F379C:
 /* 802F379C 002BCD5C  81 9F 00 C4 */	lwz r12, 0xc4(r31)
