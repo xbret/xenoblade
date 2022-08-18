@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80349770
-func_80349770:
+.global MEMCreateFrmHeapEx
+MEMCreateFrmHeapEx:
 /* 80349770 00312D30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80349774 00312D34  7C 08 02 A6 */	mflr r0
 /* 80349778 00312D38  7C 84 1A 14 */	add r4, r4, r3
@@ -27,7 +27,7 @@ lbl_803497AC:
 /* 803497B4 00312D74  7F E3 FB 78 */	mr r3, r31
 /* 803497B8 00312D78  38 BF 00 48 */	addi r5, r31, 0x48
 /* 803497BC 00312D7C  38 84 4D 48 */	addi r4, r4, 0x46524D48@l
-/* 803497C0 00312D80  4B FF F4 D1 */	bl func_80348C90
+/* 803497C0 00312D80  4B FF F4 D1 */	bl MEMiInitHeapHead
 /* 803497C4 00312D84  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 803497C8 00312D88  38 00 00 00 */	li r0, 0
 /* 803497CC 00312D8C  90 7F 00 3C */	stw r3, 0x3c(r31)
@@ -43,14 +43,14 @@ lbl_803497E0:
 /* 803497F0 00312DB0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80349800
-func_80349800:
+.global MEMDestroyFrmHeap
+MEMDestroyFrmHeap:
 /* 80349800 00312DC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80349804 00312DC4  7C 08 02 A6 */	mflr r0
 /* 80349808 00312DC8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8034980C 00312DCC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80349810 00312DD0  7C 7F 1B 78 */	mr r31, r3
-/* 80349814 00312DD4  4B FF F6 3D */	bl func_80348E50
+/* 80349814 00312DD4  4B FF F6 3D */	bl MEMiFinalizeHeap
 /* 80349818 00312DD8  7F E3 FB 78 */	mr r3, r31
 /* 8034981C 00312DDC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80349820 00312DE0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -59,8 +59,8 @@ func_80349800:
 /* 8034982C 00312DEC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80349830
-func_80349830:
+.global MEMAllocFromFrmHeapEx
+MEMAllocFromFrmHeapEx:
 /* 80349830 00312DF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80349834 00312DF4  7C 08 02 A6 */	mflr r0
 /* 80349838 00312DF8  2C 04 00 00 */	cmpwi r4, 0
@@ -144,8 +144,8 @@ lbl_80349930:
 /* 8034994C 00312F0C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80349950
-func_80349950:
+.global MEMFreeToFrmHeap
+MEMFreeToFrmHeap:
 /* 80349950 00312F10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80349954 00312F14  7C 08 02 A6 */	mflr r0
 /* 80349958 00312F18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -194,8 +194,8 @@ lbl_803499D8:
 /* 803499EC 00312FAC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803499F0
-func_803499F0:
+.global MEMGetAllocatableSizeForFrmHeapEx
+MEMGetAllocatableSizeForFrmHeapEx:
 /* 803499F0 00312FB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803499F4 00312FB4  7C 08 02 A6 */	mflr r0
 /* 803499F8 00312FB8  90 01 00 14 */	stw r0, 0x14(r1)

@@ -19,8 +19,8 @@ HBMFreeMem__FPv:
 /* 80322DFC 002EC3BC  48 02 6C A4 */	b MEMFreeToAllocator
 
 .balign 16, 0
-.global func_80322E00
-func_80322E00:
+.global HBMCreate
+HBMCreate:
 /* 80322E00 002EC3C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322E04 002EC3C4  7C 08 02 A6 */	mflr r0
 /* 80322E08 002EC3C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -44,12 +44,12 @@ lbl_80322E40:
 /* 80322E48 002EC408  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 80322E4C 002EC40C  38 A0 00 00 */	li r5, 0
 /* 80322E50 002EC410  80 9F 00 2C */	lwz r4, 0x2c(r31)
-/* 80322E54 002EC414  48 02 66 BD */	bl func_80349510
+/* 80322E54 002EC414  48 02 66 BD */	bl MEMCreateExpHeapEx
 /* 80322E58 002EC418  3F C0 80 5D */	lis r30, lbl_805CD758@ha
 /* 80322E5C 002EC41C  7C 64 1B 78 */	mr r4, r3
 /* 80322E60 002EC420  38 7E D7 58 */	addi r3, r30, lbl_805CD758@l
 /* 80322E64 002EC424  38 A0 00 20 */	li r5, 0x20
-/* 80322E68 002EC428  48 02 6C 49 */	bl func_80349AB0
+/* 80322E68 002EC428  48 02 6C 49 */	bl MEMInitAllocatorForExpHeap
 /* 80322E6C 002EC42C  3C 60 80 55 */	lis r3, lbl_8054C8C4@ha
 /* 80322E70 002EC430  38 1E D7 58 */	addi r0, r30, lbl_805CD758@l
 /* 80322E74 002EC434  90 03 C8 C4 */	stw r0, lbl_8054C8C4@l(r3)
@@ -130,7 +130,7 @@ lbl_80322F64:
 /* 80322F6C 002EC52C  3C 60 80 55 */	lis r3, lbl_8054C8C4@ha
 /* 80322F70 002EC530  80 63 C8 C4 */	lwz r3, lbl_8054C8C4@l(r3)
 /* 80322F74 002EC534  80 63 00 04 */	lwz r3, 4(r3)
-/* 80322F78 002EC538  48 02 66 49 */	bl func_803495C0
+/* 80322F78 002EC538  48 02 66 49 */	bl MEMDestroyExpHeap
 lbl_80322F7C:
 /* 80322F7C 002EC53C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80322F80 002EC540  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -139,8 +139,8 @@ lbl_80322F7C:
 /* 80322F8C 002EC54C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80322F90
-func_80322F90:
+.global HBMInit
+HBMInit:
 /* 80322F90 002EC550  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322F94 002EC554  7C 08 02 A6 */	mflr r0
 /* 80322F98 002EC558  3C 60 80 55 */	lis r3, lbl_8054C8C0@ha
@@ -155,8 +155,8 @@ func_80322F90:
 /* 80322FBC 002EC57C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80322FC0
-func_80322FC0:
+.global HBMCalc
+HBMCalc:
 /* 80322FC0 002EC580  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322FC4 002EC584  7C 08 02 A6 */	mflr r0
 /* 80322FC8 002EC588  90 01 00 14 */	stw r0, 0x14(r1)
@@ -247,8 +247,8 @@ func_803230E0:
 /* 80323100 002EC6C0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global homebutton$7initgx
-homebutton$7initgx:
+.global initgx__10homebuttonFv
+initgx__10homebuttonFv:
 /* 80323110 002EC6D0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80323114 002EC6D4  7C 08 02 A6 */	mflr r0
 /* 80323118 002EC6D8  38 60 00 00 */	li r3, 0
@@ -1495,7 +1495,7 @@ init__Q210homebutton10HomeButtonFv:
 /* 803242D4 002ED894  4B FB 14 AD */	bl AXFXReverbHiShutdown
 /* 803242D8 002ED898  80 7D 07 94 */	lwz r3, 0x794(r29)
 /* 803242DC 002ED89C  80 9D 07 98 */	lwz r4, 0x798(r29)
-/* 803242E0 002ED8A0  4B FA EA E1 */	bl func_802D2DC0
+/* 803242E0 002ED8A0  4B FA EA E1 */	bl AXRegisterAuxACallback
 /* 803242E4 002ED8A4  80 7D 06 2C */	lwz r3, 0x62c(r29)
 /* 803242E8 002ED8A8  80 9D 06 30 */	lwz r4, 0x630(r29)
 /* 803242EC 002ED8AC  4B FB 68 35 */	bl AXFXSetHooks
@@ -1924,7 +1924,7 @@ lbl_803248F0:
 /* 80324910 002EDED0  4B FB 62 21 */	bl AXFXGetHooks
 /* 80324914 002EDED4  38 7E 07 94 */	addi r3, r30, 0x794
 /* 80324918 002EDED8  38 9E 07 98 */	addi r4, r30, 0x798
-/* 8032491C 002EDEDC  4B FA E5 F5 */	bl func_802D2F10
+/* 8032491C 002EDEDC  4B FA E5 F5 */	bl AXGetAuxACallback
 /* 80324920 002EDEE0  3C 60 80 32 */	lis r3, HBMAllocMem__FUl@ha
 /* 80324924 002EDEE4  3C 80 80 32 */	lis r4, HBMFreeMem__FPv@ha
 /* 80324928 002EDEE8  38 63 2D E0 */	addi r3, r3, HBMAllocMem__FUl@l
@@ -1945,7 +1945,7 @@ lbl_803248F0:
 /* 80324964 002EDF24  3C 60 80 2D */	lis r3, AXFXReverbHiCallback@ha
 /* 80324968 002EDF28  38 9E 06 34 */	addi r4, r30, 0x634
 /* 8032496C 002EDF2C  38 63 57 B0 */	addi r3, r3, AXFXReverbHiCallback@l
-/* 80324970 002EDF30  4B FA E4 51 */	bl func_802D2DC0
+/* 80324970 002EDF30  4B FA E4 51 */	bl AXRegisterAuxACallback
 /* 80324974 002EDF34  3C 60 00 01 */	lis r3, 1
 /* 80324978 002EDF38  38 03 80 00 */	addi r0, r3, -0x8000
 /* 8032497C 002EDF3C  54 03 04 3E */	clrlwi r3, r0, 0x10
@@ -1963,7 +1963,7 @@ lbl_803248F0:
 /* 803249AC 002EDF6C  7D 89 03 A6 */	mtctr r12
 /* 803249B0 002EDF70  4E 80 04 21 */	bctrl 
 lbl_803249B4:
-/* 803249B4 002EDF74  48 03 C7 8D */	bl func_80361140
+/* 803249B4 002EDF74  48 03 C7 8D */	bl SCGetSoundMode
 /* 803249B8 002EDF78  54 63 06 3E */	clrlwi r3, r3, 0x18
 /* 803249BC 002EDF7C  4B FF E4 15 */	bl SetSoundMode__10homebuttonFUl
 /* 803249C0 002EDF80  38 00 00 01 */	li r0, 1
@@ -3501,7 +3501,7 @@ lbl_80325F28:
 /* 80325F50 002EF510  4B FA F8 31 */	bl AXFXReverbHiShutdown
 /* 80325F54 002EF514  80 7C 07 94 */	lwz r3, 0x794(r28)
 /* 80325F58 002EF518  80 9C 07 98 */	lwz r4, 0x798(r28)
-/* 80325F5C 002EF51C  4B FA CE 65 */	bl func_802D2DC0
+/* 80325F5C 002EF51C  4B FA CE 65 */	bl AXRegisterAuxACallback
 /* 80325F60 002EF520  80 7C 06 2C */	lwz r3, 0x62c(r28)
 /* 80325F64 002EF524  80 9C 06 30 */	lwz r4, 0x630(r28)
 /* 80325F68 002EF528  4B FB 4B B9 */	bl AXFXSetHooks
@@ -4376,7 +4376,7 @@ draw__Q210homebutton10HomeButtonFv:
 /* 80326B70 002F0130  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 80326B74 002F0134  93 A1 00 24 */	stw r29, 0x24(r1)
 /* 80326B78 002F0138  7C 7D 1B 78 */	mr r29, r3
-/* 80326B7C 002F013C  4B FF C5 95 */	bl homebutton$7initgx
+/* 80326B7C 002F013C  4B FF C5 95 */	bl initgx__10homebuttonFv
 /* 80326B80 002F0140  80 7D 02 38 */	lwz r3, 0x238(r29)
 /* 80326B84 002F0144  38 9D 02 58 */	addi r4, r29, 0x258
 /* 80326B88 002F0148  81 83 00 00 */	lwz r12, 0(r3)
@@ -4406,7 +4406,7 @@ lbl_80326BD4:
 /* 80326BE0 002F01A0  7C 64 18 50 */	subf r3, r4, r3
 /* 80326BE4 002F01A4  7C 03 03 D6 */	divw r0, r3, r0
 /* 80326BE8 002F01A8  54 1F 06 3E */	clrlwi r31, r0, 0x18
-/* 80326BEC 002F01AC  4B FF C5 25 */	bl homebutton$7initgx
+/* 80326BEC 002F01AC  4B FF C5 25 */	bl initgx__10homebuttonFv
 /* 80326BF0 002F01B0  88 1D 04 60 */	lbz r0, 0x460(r29)
 /* 80326BF4 002F01B4  2C 00 00 00 */	cmpwi r0, 0
 /* 80326BF8 002F01B8  41 82 00 28 */	beq lbl_80326C20

@@ -3,14 +3,14 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80360EC0
-func_80360EC0:
+.global SCGetAspectRatio
+SCGetAspectRatio:
 /* 80360EC0 0032A480  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80360EC4 0032A484  7C 08 02 A6 */	mflr r0
 /* 80360EC8 0032A488  38 80 00 01 */	li r4, 1
 /* 80360ECC 0032A48C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80360ED0 0032A490  38 61 00 08 */	addi r3, r1, 8
-/* 80360ED4 0032A494  4B FF F6 CD */	bl func_803605A0
+/* 80360ED4 0032A494  4B FF F6 CD */	bl SCFindU8Item
 /* 80360ED8 0032A498  2C 03 00 00 */	cmpwi r3, 0
 /* 80360EDC 0032A49C  40 82 00 10 */	bne lbl_80360EEC
 /* 80360EE0 0032A4A0  38 00 00 00 */	li r0, 0
@@ -30,14 +30,14 @@ lbl_80360F00:
 /* 80360F10 0032A4D0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80360F20
-func_80360F20:
+.global SCGetDisplayOffsetH
+SCGetDisplayOffsetH:
 /* 80360F20 0032A4E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80360F24 0032A4E4  7C 08 02 A6 */	mflr r0
 /* 80360F28 0032A4E8  38 80 00 05 */	li r4, 5
 /* 80360F2C 0032A4EC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80360F30 0032A4F0  38 61 00 08 */	addi r3, r1, 8
-/* 80360F34 0032A4F4  4B FF F7 4D */	bl func_80360680
+/* 80360F34 0032A4F4  4B FF F7 4D */	bl SCFindS8Item
 /* 80360F38 0032A4F8  2C 03 00 00 */	cmpwi r3, 0
 /* 80360F3C 0032A4FC  40 82 00 10 */	bne lbl_80360F4C
 /* 80360F40 0032A500  38 00 00 00 */	li r0, 0
@@ -66,14 +66,14 @@ lbl_80360F78:
 /* 80360F90 0032A550  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80360FA0
-func_80360FA0:
+.global SCGetEuRgb60Mode
+SCGetEuRgb60Mode:
 /* 80360FA0 0032A560  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80360FA4 0032A564  7C 08 02 A6 */	mflr r0
 /* 80360FA8 0032A568  38 80 00 06 */	li r4, 6
 /* 80360FAC 0032A56C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80360FB0 0032A570  38 61 00 08 */	addi r3, r1, 8
-/* 80360FB4 0032A574  4B FF F5 ED */	bl func_803605A0
+/* 80360FB4 0032A574  4B FF F5 ED */	bl SCFindU8Item
 /* 80360FB8 0032A578  2C 03 00 00 */	cmpwi r3, 0
 /* 80360FBC 0032A57C  40 82 00 10 */	bne lbl_80360FCC
 /* 80360FC0 0032A580  38 00 00 00 */	li r0, 0
@@ -93,24 +93,24 @@ lbl_80360FE0:
 /* 80360FF0 0032A5B0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80361000
-func_80361000:
+.global SCGetIdleMode
+SCGetIdleMode:
 /* 80361000 0032A5C0  38 80 00 02 */	li r4, 2
 /* 80361004 0032A5C4  38 A0 00 09 */	li r5, 9
-/* 80361008 0032A5C8  4B FF F3 88 */	b func_80360390
+/* 80361008 0032A5C8  4B FF F3 88 */	b SCFindByteArrayItem
 
 .balign 16, 0
-.global func_80361010
-func_80361010:
+.global SCGetLanguage
+SCGetLanguage:
 /* 80361010 0032A5D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361014 0032A5D4  7C 08 02 A6 */	mflr r0
 /* 80361018 0032A5D8  38 80 00 0B */	li r4, 0xb
 /* 8036101C 0032A5DC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80361020 0032A5E0  38 61 00 08 */	addi r3, r1, 8
-/* 80361024 0032A5E4  4B FF F5 7D */	bl func_803605A0
+/* 80361024 0032A5E4  4B FF F5 7D */	bl SCFindU8Item
 /* 80361028 0032A5E8  2C 03 00 00 */	cmpwi r3, 0
 /* 8036102C 0032A5EC  40 82 00 28 */	bne lbl_80361054
-/* 80361030 0032A5F0  48 00 05 11 */	bl func_80361540
+/* 80361030 0032A5F0  48 00 05 11 */	bl SCGetProductArea
 /* 80361034 0032A5F4  7C 60 07 75 */	extsb. r0, r3
 /* 80361038 0032A5F8  40 82 00 10 */	bne lbl_80361048
 /* 8036103C 0032A5FC  38 00 00 00 */	li r0, 0
@@ -134,14 +134,14 @@ lbl_80361068:
 /* 80361078 0032A638  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80361080
-func_80361080:
+.global SCGetProgressiveMode
+SCGetProgressiveMode:
 /* 80361080 0032A640  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361084 0032A644  7C 08 02 A6 */	mflr r0
 /* 80361088 0032A648  38 80 00 0E */	li r4, 0xe
 /* 8036108C 0032A64C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80361090 0032A650  38 61 00 08 */	addi r3, r1, 8
-/* 80361094 0032A654  4B FF F5 0D */	bl func_803605A0
+/* 80361094 0032A654  4B FF F5 0D */	bl SCFindU8Item
 /* 80361098 0032A658  2C 03 00 00 */	cmpwi r3, 0
 /* 8036109C 0032A65C  40 82 00 10 */	bne lbl_803610AC
 /* 803610A0 0032A660  38 00 00 00 */	li r0, 0
@@ -161,14 +161,14 @@ lbl_803610C0:
 /* 803610D0 0032A690  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803610E0
-func_803610E0:
+.global SCGetScreenSaverMode
+SCGetScreenSaverMode:
 /* 803610E0 0032A6A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803610E4 0032A6A4  7C 08 02 A6 */	mflr r0
 /* 803610E8 0032A6A8  38 80 00 0F */	li r4, 0xf
 /* 803610EC 0032A6AC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803610F0 0032A6B0  38 61 00 08 */	addi r3, r1, 8
-/* 803610F4 0032A6B4  4B FF F4 AD */	bl func_803605A0
+/* 803610F4 0032A6B4  4B FF F4 AD */	bl SCFindU8Item
 /* 803610F8 0032A6B8  2C 03 00 00 */	cmpwi r3, 0
 /* 803610FC 0032A6BC  40 82 00 10 */	bne lbl_8036110C
 /* 80361100 0032A6C0  38 00 00 01 */	li r0, 1
@@ -188,14 +188,14 @@ lbl_80361120:
 /* 80361130 0032A6F0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80361140
-func_80361140:
+.global SCGetSoundMode
+SCGetSoundMode:
 /* 80361140 0032A700  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361144 0032A704  7C 08 02 A6 */	mflr r0
 /* 80361148 0032A708  38 80 00 11 */	li r4, 0x11
 /* 8036114C 0032A70C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80361150 0032A710  38 61 00 08 */	addi r3, r1, 8
-/* 80361154 0032A714  4B FF F4 4D */	bl func_803605A0
+/* 80361154 0032A714  4B FF F4 4D */	bl SCFindU8Item
 /* 80361158 0032A718  2C 03 00 00 */	cmpwi r3, 0
 /* 8036115C 0032A71C  40 82 00 10 */	bne lbl_8036116C
 /* 80361160 0032A720  38 00 00 01 */	li r0, 1
@@ -222,7 +222,7 @@ SCGetCounterBias:
 /* 803611A8 0032A768  38 80 00 00 */	li r4, 0
 /* 803611AC 0032A76C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803611B0 0032A770  38 61 00 08 */	addi r3, r1, 8
-/* 803611B4 0032A774  4B FF F5 AD */	bl func_80360760
+/* 803611B4 0032A774  4B FF F5 AD */	bl SCFindU32Item
 /* 803611B8 0032A778  2C 03 00 00 */	cmpwi r3, 0
 /* 803611BC 0032A77C  40 82 00 10 */	bne lbl_803611CC
 /* 803611C0 0032A780  3C 60 0B 4A */	lis r3, 0x0B49D800@ha
@@ -236,42 +236,42 @@ lbl_803611CC:
 /* 803611DC 0032A79C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803611E0
-func_803611E0:
+.global SCGetBtDeviceInfoArray
+SCGetBtDeviceInfoArray:
 /* 803611E0 0032A7A0  38 80 04 61 */	li r4, 0x461
 /* 803611E4 0032A7A4  38 A0 00 1C */	li r5, 0x1c
-/* 803611E8 0032A7A8  4B FF F1 A8 */	b func_80360390
+/* 803611E8 0032A7A8  4B FF F1 A8 */	b SCFindByteArrayItem
 
 .balign 16, 0
-.global func_803611F0
-func_803611F0:
+.global SCSetBtDeviceInfoArray
+SCSetBtDeviceInfoArray:
 /* 803611F0 0032A7B0  38 80 04 61 */	li r4, 0x461
 /* 803611F4 0032A7B4  38 A0 00 1C */	li r5, 0x1c
-/* 803611F8 0032A7B8  4B FF F2 78 */	b func_80360470
+/* 803611F8 0032A7B8  4B FF F2 78 */	b SCReplaceByteArrayItem
 
 .balign 16, 0
 .global func_80361200
 func_80361200:
 /* 80361200 0032A7C0  38 80 02 05 */	li r4, 0x205
 /* 80361204 0032A7C4  38 A0 00 1D */	li r5, 0x1d
-/* 80361208 0032A7C8  4B FF F1 88 */	b func_80360390
+/* 80361208 0032A7C8  4B FF F1 88 */	b SCFindByteArrayItem
 
 .balign 16, 0
 .global func_80361210
 func_80361210:
 /* 80361210 0032A7D0  38 80 02 05 */	li r4, 0x205
 /* 80361214 0032A7D4  38 A0 00 1D */	li r5, 0x1d
-/* 80361218 0032A7D8  4B FF F2 58 */	b func_80360470
+/* 80361218 0032A7D8  4B FF F2 58 */	b SCReplaceByteArrayItem
 
 .balign 16, 0
-.global func_80361220
-func_80361220:
+.global SCGetBtDpdSensibility
+SCGetBtDpdSensibility:
 /* 80361220 0032A7E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361224 0032A7E4  7C 08 02 A6 */	mflr r0
 /* 80361228 0032A7E8  38 80 00 1E */	li r4, 0x1e
 /* 8036122C 0032A7EC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80361230 0032A7F0  38 61 00 08 */	addi r3, r1, 8
-/* 80361234 0032A7F4  4B FF F5 2D */	bl func_80360760
+/* 80361234 0032A7F4  4B FF F5 2D */	bl SCFindU32Item
 /* 80361238 0032A7F8  2C 03 00 00 */	cmpwi r3, 0
 /* 8036123C 0032A7FC  40 82 00 10 */	bne lbl_8036124C
 /* 80361240 0032A800  38 00 00 02 */	li r0, 2
@@ -297,14 +297,14 @@ lbl_80361274:
 /* 80361284 0032A844  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80361290
-func_80361290:
+.global SCGetWpadMotorMode
+SCGetWpadMotorMode:
 /* 80361290 0032A850  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361294 0032A854  7C 08 02 A6 */	mflr r0
 /* 80361298 0032A858  38 80 00 20 */	li r4, 0x20
 /* 8036129C 0032A85C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803612A0 0032A860  38 61 00 08 */	addi r3, r1, 8
-/* 803612A4 0032A864  4B FF F2 FD */	bl func_803605A0
+/* 803612A4 0032A864  4B FF F2 FD */	bl SCFindU8Item
 /* 803612A8 0032A868  2C 03 00 00 */	cmpwi r3, 0
 /* 803612AC 0032A86C  40 82 00 10 */	bne lbl_803612BC
 /* 803612B0 0032A870  38 00 00 01 */	li r0, 1
@@ -323,6 +323,7 @@ lbl_803612D0:
 /* 803612DC 0032A89C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803612E0 0032A8A0  4E 80 00 20 */	blr 
 
+#might not be this function? (func_803612F0 instead has 0x1f)
 .balign 16, 0
 .global func_803612F0
 func_803612F0:
@@ -330,14 +331,14 @@ func_803612F0:
 /* 803612F4 0032A8B4  4B FF F5 4C */	b func_80360840
 
 .balign 16, 0
-.global func_80361300
-func_80361300:
+.global SCGetWpadSensorBarPosition
+SCGetWpadSensorBarPosition:
 /* 80361300 0032A8C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361304 0032A8C4  7C 08 02 A6 */	mflr r0
 /* 80361308 0032A8C8  38 80 00 21 */	li r4, 0x21
 /* 8036130C 0032A8CC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80361310 0032A8D0  38 61 00 08 */	addi r3, r1, 8
-/* 80361314 0032A8D4  4B FF F2 8D */	bl func_803605A0
+/* 80361314 0032A8D4  4B FF F2 8D */	bl SCFindU8Item
 /* 80361318 0032A8D8  2C 03 00 00 */	cmpwi r3, 0
 /* 8036131C 0032A8DC  40 82 00 10 */	bne lbl_8036132C
 /* 80361320 0032A8E0  38 00 00 00 */	li r0, 0
@@ -357,14 +358,14 @@ lbl_80361340:
 /* 80361350 0032A910  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80361360
-func_80361360:
+.global SCGetWpadSpeakerVolume
+SCGetWpadSpeakerVolume:
 /* 80361360 0032A920  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361364 0032A924  7C 08 02 A6 */	mflr r0
 /* 80361368 0032A928  38 80 00 1F */	li r4, 0x1f
 /* 8036136C 0032A92C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80361370 0032A930  38 61 00 08 */	addi r3, r1, 8
-/* 80361374 0032A934  4B FF F2 2D */	bl func_803605A0
+/* 80361374 0032A934  4B FF F2 2D */	bl SCFindU8Item
 /* 80361378 0032A938  2C 03 00 00 */	cmpwi r3, 0
 /* 8036137C 0032A93C  40 82 00 10 */	bne lbl_8036138C
 /* 80361380 0032A940  38 00 00 59 */	li r0, 0x59
@@ -384,8 +385,8 @@ lbl_803613A0:
 /* 803613B0 0032A970  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803613C0
-func_803613C0:
+.global SCSetWpadSpeakerVolume
+SCSetWpadSpeakerVolume:
 /* 803613C0 0032A980  38 80 00 1F */	li r4, 0x1f
 /* 803613C4 0032A984  4B FF F4 7C */	b func_80360840
 .balign 16, 0

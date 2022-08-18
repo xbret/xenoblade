@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8034E730
-func_8034E730:
+.global NANDPrivateCreate
+NANDPrivateCreate:
 /* 8034E730 00317CF0  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8034E734 00317CF4  7C 08 02 A6 */	mflr r0
 /* 8034E738 00317CF8  90 01 00 74 */	stw r0, 0x74(r1)
@@ -58,7 +58,7 @@ lbl_8034E7D4:
 /* 8034E7F0 00317DB0  80 C1 00 0C */	lwz r6, 0xc(r1)
 /* 8034E7F4 00317DB4  38 61 00 18 */	addi r3, r1, 0x18
 /* 8034E7F8 00317DB8  80 E1 00 10 */	lwz r7, 0x10(r1)
-/* 8034E7FC 00317DBC  4B FC 84 C5 */	bl func_80316CC0
+/* 8034E7FC 00317DBC  4B FC 84 C5 */	bl ISFS_CreateFile
 lbl_8034E800:
 /* 8034E800 00317DC0  48 00 1A 21 */	bl nandConvertErrorCode
 lbl_8034E804:
@@ -138,7 +138,7 @@ lbl_8034E8E4:
 /* 8034E90C 00317ECC  7F E9 FB 78 */	mr r9, r31
 /* 8034E910 00317ED0  38 61 00 18 */	addi r3, r1, 0x18
 /* 8034E914 00317ED4  39 08 0A C0 */	addi r8, r8, nandCallback@l
-/* 8034E918 00317ED8  4B FC 84 A9 */	bl func_80316DC0
+/* 8034E918 00317ED8  4B FC 84 A9 */	bl ISFS_CreateFileAsync
 lbl_8034E91C:
 /* 8034E91C 00317EDC  48 00 19 05 */	bl nandConvertErrorCode
 lbl_8034E920:
@@ -150,8 +150,8 @@ lbl_8034E920:
 /* 8034E934 00317EF4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034E940
-func_8034E940:
+.global NANDPrivateCreateAsync
+NANDPrivateCreateAsync:
 /* 8034E940 00317F00  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8034E944 00317F04  7C 08 02 A6 */	mflr r0
 /* 8034E948 00317F08  90 01 00 74 */	stw r0, 0x74(r1)
@@ -210,7 +210,7 @@ lbl_8034E9EC:
 /* 8034EA14 00317FD4  7F E9 FB 78 */	mr r9, r31
 /* 8034EA18 00317FD8  38 61 00 18 */	addi r3, r1, 0x18
 /* 8034EA1C 00317FDC  39 08 0A C0 */	addi r8, r8, nandCallback@l
-/* 8034EA20 00317FE0  4B FC 83 A1 */	bl func_80316DC0
+/* 8034EA20 00317FE0  4B FC 83 A1 */	bl ISFS_CreateFileAsync
 lbl_8034EA24:
 /* 8034EA24 00317FE4  48 00 17 FD */	bl nandConvertErrorCode
 lbl_8034EA28:
@@ -222,8 +222,8 @@ lbl_8034EA28:
 /* 8034EA3C 00317FFC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034EA40
-func_8034EA40:
+.global NANDDelete
+NANDDelete:
 /* 8034EA40 00318000  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8034EA44 00318004  7C 08 02 A6 */	mflr r0
 /* 8034EA48 00318008  90 01 00 54 */	stw r0, 0x54(r1)
@@ -263,7 +263,7 @@ lbl_8034EA68:
 /* 8034EACC 0031808C  48 00 00 0C */	b lbl_8034EAD8
 lbl_8034EAD0:
 /* 8034EAD0 00318090  38 61 00 08 */	addi r3, r1, 8
-/* 8034EAD4 00318094  4B FC 7C ED */	bl func_803167C0
+/* 8034EAD4 00318094  4B FC 7C ED */	bl ISFS_Delete
 lbl_8034EAD8:
 /* 8034EAD8 00318098  48 00 17 49 */	bl nandConvertErrorCode
 lbl_8034EADC:
@@ -274,8 +274,8 @@ lbl_8034EADC:
 /* 8034EAEC 003180AC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034EAF0
-func_8034EAF0:
+.global NANDPrivateDelete
+NANDPrivateDelete:
 /* 8034EAF0 003180B0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8034EAF4 003180B4  7C 08 02 A6 */	mflr r0
 /* 8034EAF8 003180B8  90 01 00 54 */	stw r0, 0x54(r1)
@@ -308,7 +308,7 @@ lbl_8034EB18:
 /* 8034EB60 00318120  90 01 00 44 */	stw r0, 0x44(r1)
 /* 8034EB64 00318124  48 00 18 2D */	bl nandGenerateAbsPath
 /* 8034EB68 00318128  38 61 00 08 */	addi r3, r1, 8
-/* 8034EB6C 0031812C  4B FC 7C 55 */	bl func_803167C0
+/* 8034EB6C 0031812C  4B FC 7C 55 */	bl ISFS_Delete
 /* 8034EB70 00318130  48 00 16 B1 */	bl nandConvertErrorCode
 lbl_8034EB74:
 /* 8034EB74 00318134  80 01 00 54 */	lwz r0, 0x54(r1)
@@ -367,7 +367,7 @@ lbl_8034EC34:
 /* 8034EC38 003181F8  7F E5 FB 78 */	mr r5, r31
 /* 8034EC3C 003181FC  38 61 00 08 */	addi r3, r1, 8
 /* 8034EC40 00318200  38 84 0A C0 */	addi r4, r4, nandCallback@l
-/* 8034EC44 00318204  4B FC 7C 5D */	bl func_803168A0
+/* 8034EC44 00318204  4B FC 7C 5D */	bl ISFS_DeleteAsync
 lbl_8034EC48:
 /* 8034EC48 00318208  48 00 15 D9 */	bl nandConvertErrorCode
 lbl_8034EC4C:
@@ -380,8 +380,8 @@ lbl_8034EC4C:
 /* 8034EC64 00318224  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034EC70
-func_8034EC70:
+.global NANDPrivateDeleteAsync
+NANDPrivateDeleteAsync:
 /* 8034EC70 00318230  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8034EC74 00318234  7C 08 02 A6 */	mflr r0
 /* 8034EC78 00318238  90 01 00 64 */	stw r0, 0x64(r1)
@@ -422,7 +422,7 @@ lbl_8034ECA8:
 /* 8034ED00 003182C0  7F E5 FB 78 */	mr r5, r31
 /* 8034ED04 003182C4  38 61 00 08 */	addi r3, r1, 8
 /* 8034ED08 003182C8  38 84 0A C0 */	addi r4, r4, nandCallback@l
-/* 8034ED0C 003182CC  4B FC 7B 95 */	bl func_803168A0
+/* 8034ED0C 003182CC  4B FC 7B 95 */	bl ISFS_DeleteAsync
 /* 8034ED10 003182D0  48 00 15 11 */	bl nandConvertErrorCode
 lbl_8034ED14:
 /* 8034ED14 003182D4  80 01 00 64 */	lwz r0, 0x64(r1)
@@ -434,8 +434,8 @@ lbl_8034ED14:
 /* 8034ED2C 003182EC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034ED30
-func_8034ED30:
+.global NANDRead
+NANDRead:
 /* 8034ED30 003182F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034ED34 003182F4  7C 08 02 A6 */	mflr r0
 /* 8034ED38 003182F8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -451,7 +451,7 @@ func_8034ED30:
 /* 8034ED60 00318320  80 7D 00 00 */	lwz r3, 0(r29)
 /* 8034ED64 00318324  7F C4 F3 78 */	mr r4, r30
 /* 8034ED68 00318328  7F E5 FB 78 */	mr r5, r31
-/* 8034ED6C 0031832C  4B FC 84 35 */	bl func_803171A0
+/* 8034ED6C 0031832C  4B FC 84 35 */	bl ISFS_Read
 /* 8034ED70 00318330  48 00 14 B1 */	bl nandConvertErrorCode
 /* 8034ED74 00318334  48 00 00 08 */	b lbl_8034ED7C
 lbl_8034ED78:
@@ -491,7 +491,7 @@ lbl_8034EDDC:
 /* 8034EDEC 003183AC  80 7B 00 00 */	lwz r3, 0(r27)
 /* 8034EDF0 003183B0  7F E7 FB 78 */	mr r7, r31
 /* 8034EDF4 003183B4  38 C6 0A C0 */	addi r6, r6, nandCallback@l
-/* 8034EDF8 003183B8  4B FC 83 C9 */	bl func_803171C0
+/* 8034EDF8 003183B8  4B FC 83 C9 */	bl ISFS_ReadAsync
 /* 8034EDFC 003183BC  48 00 14 25 */	bl nandConvertErrorCode
 lbl_8034EE00:
 /* 8034EE00 003183C0  39 61 00 20 */	addi r11, r1, 0x20
@@ -519,7 +519,7 @@ NANDWrite:
 /* 8034EE50 00318410  80 7D 00 00 */	lwz r3, 0(r29)
 /* 8034EE54 00318414  7F C4 F3 78 */	mr r4, r30
 /* 8034EE58 00318418  7F E5 FB 78 */	mr r5, r31
-/* 8034EE5C 0031841C  4B FC 84 15 */	bl func_80317270
+/* 8034EE5C 0031841C  4B FC 84 15 */	bl ISFS_Write
 /* 8034EE60 00318420  48 00 13 C1 */	bl nandConvertErrorCode
 /* 8034EE64 00318424  48 00 00 08 */	b lbl_8034EE6C
 lbl_8034EE68:
@@ -559,7 +559,7 @@ lbl_8034EECC:
 /* 8034EEDC 0031849C  80 7B 00 00 */	lwz r3, 0(r27)
 /* 8034EEE0 003184A0  7F E7 FB 78 */	mr r7, r31
 /* 8034EEE4 003184A4  38 C6 0A C0 */	addi r6, r6, nandCallback@l
-/* 8034EEE8 003184A8  4B FC 83 A9 */	bl func_80317290
+/* 8034EEE8 003184A8  4B FC 83 A9 */	bl ISFS_WriteAsync
 /* 8034EEEC 003184AC  48 00 13 35 */	bl nandConvertErrorCode
 lbl_8034EEF0:
 /* 8034EEF0 003184B0  39 61 00 20 */	addi r11, r1, 0x20
@@ -611,7 +611,7 @@ lbl_8034EF88:
 /* 8034EF8C 0031854C  7F 84 E3 78 */	mr r4, r28
 /* 8034EF90 00318550  7F E7 FB 78 */	mr r7, r31
 /* 8034EF94 00318554  38 C6 0A C0 */	addi r6, r6, nandCallback@l
-/* 8034EF98 00318558  4B FC 81 79 */	bl func_80317110
+/* 8034EF98 00318558  4B FC 81 79 */	bl ISFS_SeekAsync
 /* 8034EF9C 0031855C  48 00 12 85 */	bl nandConvertErrorCode
 lbl_8034EFA0:
 /* 8034EFA0 00318560  39 61 00 20 */	addi r11, r1, 0x20
@@ -622,8 +622,8 @@ lbl_8034EFA0:
 /* 8034EFB4 00318574  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034EFC0
-func_8034EFC0:
+.global NANDReadDirAsync
+NANDReadDirAsync:
 /* 8034EFC0 00318580  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8034EFC4 00318584  7C 08 02 A6 */	mflr r0
 /* 8034EFC8 00318588  90 01 00 64 */	stw r0, 0x64(r1)
@@ -674,7 +674,7 @@ lbl_8034F068:
 /* 8034F074 00318634  7F E7 FB 78 */	mr r7, r31
 /* 8034F078 00318638  38 61 00 08 */	addi r3, r1, 8
 /* 8034F07C 0031863C  38 C6 0A C0 */	addi r6, r6, nandCallback@l
-/* 8034F080 00318640  4B FC 73 51 */	bl func_803163D0
+/* 8034F080 00318640  4B FC 73 51 */	bl ISFS_ReadDirAsync
 lbl_8034F084:
 /* 8034F084 00318644  48 00 11 9D */	bl nandConvertErrorCode
 lbl_8034F088:
@@ -746,7 +746,7 @@ lbl_8034F140:
 /* 8034F174 00318734  7F C9 F3 78 */	mr r9, r30
 /* 8034F178 00318738  38 61 00 18 */	addi r3, r1, 0x18
 /* 8034F17C 0031873C  39 08 0A C0 */	addi r8, r8, nandCallback@l
-/* 8034F180 00318740  4B FC 6F F1 */	bl func_80316170
+/* 8034F180 00318740  4B FC 6F F1 */	bl ISFS_CreateDir
 lbl_8034F184:
 /* 8034F184 00318744  48 00 10 9D */	bl nandConvertErrorCode
 lbl_8034F188:
@@ -857,7 +857,7 @@ lbl_8034F2F8:
 /* 8034F308 003188C8  38 61 00 58 */	addi r3, r1, 0x58
 /* 8034F30C 003188CC  38 81 00 18 */	addi r4, r1, 0x18
 /* 8034F310 003188D0  38 A5 0A C0 */	addi r5, r5, nandCallback@l
-/* 8034F314 003188D4  4B FC 77 6D */	bl func_80316A80
+/* 8034F314 003188D4  4B FC 77 6D */	bl ISFS_RenameAsync
 /* 8034F318 003188D8  48 00 00 10 */	b lbl_8034F328
 lbl_8034F31C:
 /* 8034F31C 003188DC  38 61 00 58 */	addi r3, r1, 0x58

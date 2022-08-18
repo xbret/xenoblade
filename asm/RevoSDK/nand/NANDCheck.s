@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80350FA0
-func_80350FA0:
+.global NANDCheckAsync
+NANDCheckAsync:
 /* 80350FA0 0031A560  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80350FA4 0031A564  7C 08 02 A6 */	mflr r0
 /* 80350FA8 0031A568  90 01 00 24 */	stw r0, 0x24(r1)
@@ -36,12 +36,12 @@ lbl_80350FDC:
 /* 8035100C 0031A5CC  90 7F 00 B4 */	stw r3, 0xb4(r31)
 /* 80351010 0031A5D0  90 1F 00 7C */	stw r0, 0x7c(r31)
 /* 80351014 0031A5D4  4B FF FE 9D */	bl nandGetHomeDir
-/* 80351018 0031A5D8  3C C0 80 35 */	lis r6, lbl_80351050@ha
+/* 80351018 0031A5D8  3C C0 80 35 */	lis r6, nandUserAreaCallback@ha
 /* 8035101C 0031A5DC  7F E7 FB 78 */	mr r7, r31
 /* 80351020 0031A5E0  38 9F 00 9C */	addi r4, r31, 0x9c
 /* 80351024 0031A5E4  38 BF 00 A0 */	addi r5, r31, 0xa0
-/* 80351028 0031A5E8  38 C6 10 50 */	addi r6, r6, lbl_80351050@l
-/* 8035102C 0031A5EC  4B FC 5B 65 */	bl func_80316B90
+/* 80351028 0031A5E8  38 C6 10 50 */	addi r6, r6, nandUserAreaCallback@l
+/* 8035102C 0031A5EC  4B FC 5B 65 */	bl ISFS_GetUsageAsync
 /* 80351030 0031A5F0  4B FF F1 F1 */	bl nandConvertErrorCode
 lbl_80351034:
 /* 80351034 0031A5F4  39 61 00 20 */	addi r11, r1, 0x20
@@ -50,9 +50,9 @@ lbl_80351034:
 /* 80351040 0031A600  7C 08 03 A6 */	mtlr r0
 /* 80351044 0031A604  38 21 00 20 */	addi r1, r1, 0x20
 /* 80351048 0031A608  4E 80 00 20 */	blr 
-.balign 16, 0
 
-lbl_80351050:
+.balign 16, 0
+nandUserAreaCallback:
 /* 80351050 0031A610  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80351054 0031A614  7C 08 02 A6 */	mflr r0
 /* 80351058 0031A618  2C 03 00 00 */	cmpwi r3, 0
@@ -79,14 +79,14 @@ lbl_803510A4:
 /* 803510A4 0031A664  2C 03 00 00 */	cmpwi r3, 0
 /* 803510A8 0031A668  41 82 00 48 */	beq lbl_803510F0
 /* 803510AC 0031A66C  80 A4 00 B4 */	lwz r5, 0xb4(r4)
-/* 803510B0 0031A670  3C C0 80 35 */	lis r6, lbl_80351050@ha
+/* 803510B0 0031A670  3C C0 80 35 */	lis r6, nandUserAreaCallback@ha
 /* 803510B4 0031A674  7F E7 FB 78 */	mr r7, r31
 /* 803510B8 0031A678  38 05 00 04 */	addi r0, r5, 4
 /* 803510BC 0031A67C  90 04 00 B4 */	stw r0, 0xb4(r4)
 /* 803510C0 0031A680  38 84 00 AC */	addi r4, r4, 0xac
 /* 803510C4 0031A684  38 BF 00 B0 */	addi r5, r31, 0xb0
-/* 803510C8 0031A688  38 C6 10 50 */	addi r6, r6, lbl_80351050@l
-/* 803510CC 0031A68C  4B FC 5A C5 */	bl func_80316B90
+/* 803510C8 0031A688  38 C6 10 50 */	addi r6, r6, nandUserAreaCallback@l
+/* 803510CC 0031A68C  4B FC 5A C5 */	bl ISFS_GetUsageAsync
 /* 803510D0 0031A690  2C 03 00 00 */	cmpwi r3, 0
 /* 803510D4 0031A694  41 82 01 9C */	beq lbl_80351270
 /* 803510D8 0031A698  4B FF F1 49 */	bl nandConvertErrorCode

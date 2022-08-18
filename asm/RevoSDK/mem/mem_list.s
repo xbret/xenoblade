@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80349AD0
-func_80349AD0:
+.global MEMInitList
+MEMInitList:
 /* 80349AD0 00313090  38 00 00 00 */	li r0, 0
 /* 80349AD4 00313094  90 03 00 00 */	stw r0, 0(r3)
 /* 80349AD8 00313098  90 03 00 04 */	stw r0, 4(r3)
@@ -13,8 +13,8 @@ func_80349AD0:
 /* 80349AE4 003130A4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80349AF0
-func_80349AF0:
+.global MEMAppendListObject
+MEMAppendListObject:
 /* 80349AF0 003130B0  80 03 00 00 */	lwz r0, 0(r3)
 /* 80349AF4 003130B4  2C 00 00 00 */	cmpwi r0, 0
 /* 80349AF8 003130B8  40 82 00 30 */	bne lbl_80349B28
@@ -29,9 +29,6 @@ func_80349AF0:
 /* 80349B1C 003130DC  90 83 00 04 */	stw r4, 4(r3)
 /* 80349B20 003130E0  B0 03 00 08 */	sth r0, 8(r3)
 /* 80349B24 003130E4  4E 80 00 20 */	blr
-
-
-.global lbl_80349B28
 lbl_80349B28:
 /* 80349B28 003130E8  A0 C3 00 0A */	lhz r6, 0xa(r3)
 /* 80349B2C 003130EC  38 00 00 00 */	li r0, 0
@@ -48,9 +45,9 @@ lbl_80349B28:
 /* 80349B58 00313118  B0 03 00 08 */	sth r0, 8(r3)
 /* 80349B5C 0031311C  4E 80 00 20 */	blr 
 
-
-.global func_80349B60
-func_80349B60:
+.balign 16, 0
+.global MEMRemoveListObject
+MEMRemoveListObject:
 /* 80349B60 00313120  A0 03 00 0A */	lhz r0, 0xa(r3)
 /* 80349B64 00313124  7C C4 02 14 */	add r6, r4, r0
 /* 80349B68 00313128  7C 84 00 2E */	lwzx r4, r4, r0
@@ -84,8 +81,8 @@ lbl_80349BB0:
 /* 80349BC8 00313188  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80349BD0
-func_80349BD0:
+.global MEMGetNextListObject
+MEMGetNextListObject:
 /* 80349BD0 00313190  2C 04 00 00 */	cmpwi r4, 0
 /* 80349BD4 00313194  40 82 00 0C */	bne lbl_80349BE0
 /* 80349BD8 00313198  80 63 00 00 */	lwz r3, 0(r3)

@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80349BF0
-func_80349BF0:
+.global __MIXSetPan
+__MIXSetPan:
 /* 80349BF0 003131B0  80 0D B8 64 */	lwz r0, lbl_806679E4@sda21(r13)
 /* 80349BF4 003131B4  3C 80 80 55 */	lis r4, lbl_805504F0@ha
 /* 80349BF8 003131B8  80 A3 00 18 */	lwz r5, 0x18(r3)
@@ -33,9 +33,6 @@ func_80349BF0:
 /* 80349C54 00313214  7C 04 4A AE */	lhax r0, r4, r9
 /* 80349C58 00313218  90 03 00 38 */	stw r0, 0x38(r3)
 /* 80349C5C 0031321C  4E 80 00 20 */	blr
-
-.balign 16, 0
-.global lbl_80349C60
 lbl_80349C60:
 /* 80349C60 00313220  54 A0 10 3A */	slwi r0, r5, 2
 /* 80349C64 00313224  38 E4 07 90 */	addi r7, r4, 0x790
@@ -56,24 +53,18 @@ lbl_80349C60:
 /* 80349CA0 00313260  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80349CB0
-func_80349CB0:
+.global __MIXGetVolume
+__MIXGetVolume:
 /* 80349CB0 00313270  2C 03 FC 78 */	cmpwi r3, -904
 /* 80349CB4 00313274  41 81 00 0C */	bgt lbl_80349CC0
 /* 80349CB8 00313278  38 60 00 00 */	li r3, 0
 /* 80349CBC 0031327C  4E 80 00 20 */	blr
-
-.balign 16, 0
-.global lbl_80349CC0
 lbl_80349CC0:
 /* 80349CC0 00313280  2C 03 00 3C */	cmpwi r3, 0x3c
 /* 80349CC4 00313284  41 80 00 10 */	blt lbl_80349CD4
 /* 80349CC8 00313288  3C 60 00 01 */	lis r3, 0x0000FF64@ha
 /* 80349CCC 0031328C  38 63 FF 64 */	addi r3, r3, 0x0000FF64@l
 /* 80349CD0 00313290  4E 80 00 20 */	blr
-
-
-.global lbl_80349CD4
 lbl_80349CD4:
 /* 80349CD4 00313294  38 03 03 88 */	addi r0, r3, 0x388
 /* 80349CD8 00313298  3C 60 80 55 */	lis r3, lbl_805504F0@ha
@@ -83,8 +74,8 @@ lbl_80349CD4:
 /* 80349CE8 003132A8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80349CF0
-func_80349CF0:
+.global MIXInit
+MIXInit:
 /* 80349CF0 003132B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80349CF4 003132B4  7C 08 02 A6 */	mflr r0
 /* 80349CF8 003132B8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -138,9 +129,9 @@ lbl_80349D5C:
 /* 80349DB4 00313374  B3 63 00 44 */	sth r27, 0x44(r3)
 /* 80349DB8 00313378  B3 63 00 40 */	sth r27, 0x40(r3)
 /* 80349DBC 0031337C  B3 63 00 3C */	sth r27, 0x3c(r3)
-/* 80349DC0 00313380  4B FF FE 31 */	bl func_80349BF0
+/* 80349DC0 00313380  4B FF FE 31 */	bl __MIXSetPan
 /* 80349DC4 00313384  7F 23 CB 78 */	mr r3, r25
-/* 80349DC8 00313388  48 00 33 B9 */	bl func_8034D180
+/* 80349DC8 00313388  48 00 33 B9 */	bl __MIXRmtResetChannel
 /* 80349DCC 0031338C  3B 5A 00 70 */	addi r26, r26, 0x70
 /* 80349DD0 00313390  3B 39 00 01 */	addi r25, r25, 1
 lbl_80349DD4:
@@ -159,8 +150,8 @@ lbl_80349DEC:
 /* 80349E00 003133C0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80349E10
-func_80349E10:
+.global MIXQuit
+MIXQuit:
 /* 80349E10 003133D0  38 00 00 00 */	li r0, 0
 /* 80349E14 003133D4  90 0D B8 58 */	stw r0, lbl_806679D8@sda21(r13)
 /* 80349E18 003133D8  90 0D B8 68 */	stw r0, lbl_806679E8@sda21(r13)
@@ -168,8 +159,8 @@ func_80349E10:
 /* 80349E20 003133E0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80349E30
-func_80349E30:
+.global MIXInitChannel
+MIXInitChannel:
 /* 80349E30 003133F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80349E34 003133F4  7C 08 02 A6 */	mflr r0
 /* 80349E38 003133F8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -195,7 +186,7 @@ func_80349E30:
 /* 80349E88 00313448  91 3E 00 18 */	stw r9, 0x18(r30)
 /* 80349E8C 0031344C  91 5E 00 1C */	stw r10, 0x1c(r30)
 /* 80349E90 00313450  91 7E 00 20 */	stw r11, 0x20(r30)
-/* 80349E94 00313454  4B FF FD 5D */	bl func_80349BF0
+/* 80349E94 00313454  4B FF FD 5D */	bl __MIXSetPan
 /* 80349E98 00313458  80 1E 00 04 */	lwz r0, 4(r30)
 /* 80349E9C 0031345C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
 /* 80349EA0 00313460  41 82 00 10 */	beq lbl_80349EB0
@@ -1722,7 +1713,7 @@ lbl_8034B324:
 /* 8034B324 003148E4  67 BD 80 00 */	oris r29, r29, 0x8000
 lbl_8034B328:
 /* 8034B328 003148E8  80 7C 00 18 */	lwz r3, 0x18(r28)
-/* 8034B32C 003148EC  48 00 1E 55 */	bl func_8034D180
+/* 8034B32C 003148EC  48 00 1E 55 */	bl __MIXRmtResetChannel
 /* 8034B330 003148F0  48 00 D6 81 */	bl OSDisableInterrupts
 /* 8034B334 003148F4  A0 9E 00 3C */	lhz r4, 0x3c(r30)
 /* 8034B338 003148F8  38 00 00 00 */	li r0, 0
@@ -1850,8 +1841,8 @@ lbl_8034B494:
 /* 8034B4F0 00314AB0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034B500
-func_8034B500:
+.global MIXReleaseChannel
+MIXReleaseChannel:
 /* 8034B500 00314AC0  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8034B504 00314AC4  38 80 00 00 */	li r4, 0
 /* 8034B508 00314AC8  80 6D B8 58 */	lwz r3, lbl_806679D8@sda21(r13)
@@ -1860,8 +1851,8 @@ func_8034B500:
 /* 8034B514 00314AD4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034B520
-func_8034B520:
+.global MIXSetInput
+MIXSetInput:
 /* 8034B520 00314AE0  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8034B524 00314AE4  80 6D B8 58 */	lwz r3, lbl_806679D8@sda21(r13)
 /* 8034B528 00314AE8  1C 00 00 70 */	mulli r0, r0, 0x70
@@ -1895,7 +1886,7 @@ lbl_8034B580:
 lbl_8034B590:
 /* 8034B590 00314B50  90 1F 00 18 */	stw r0, 0x18(r31)
 /* 8034B594 00314B54  7F E3 FB 78 */	mr r3, r31
-/* 8034B598 00314B58  4B FF E6 59 */	bl func_80349BF0
+/* 8034B598 00314B58  4B FF E6 59 */	bl __MIXSetPan
 /* 8034B59C 00314B5C  80 1F 00 04 */	lwz r0, 4(r31)
 /* 8034B5A0 00314B60  64 00 40 00 */	oris r0, r0, 0x4000
 /* 8034B5A4 00314B64  90 1F 00 04 */	stw r0, 4(r31)
@@ -1906,8 +1897,8 @@ lbl_8034B590:
 /* 8034B5B8 00314B78  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034B5C0
-func_8034B5C0:
+.global MIXSetFader
+MIXSetFader:
 /* 8034B5C0 00314B80  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8034B5C4 00314B84  80 6D B8 58 */	lwz r3, lbl_806679D8@sda21(r13)
 /* 8034B5C8 00314B88  1C 00 00 70 */	mulli r0, r0, 0x70
@@ -1919,8 +1910,8 @@ func_8034B5C0:
 /* 8034B5E0 00314BA0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8034B5F0
-func_8034B5F0:
+.global MIXUpdateSettings
+MIXUpdateSettings:
 /* 8034B5F0 00314BB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034B5F4 00314BB4  7C 08 02 A6 */	mflr r0
 /* 8034B5F8 00314BB8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -3594,7 +3585,7 @@ lbl_8034CC40:
 /* 8034CC4C 0031620C  90 04 00 1C */	stw r0, 0x1c(r4)
 lbl_8034CC50:
 /* 8034CC50 00316210  7F 43 D3 78 */	mr r3, r26
-/* 8034CC54 00316214  48 00 00 ED */	bl func_8034CD40
+/* 8034CC54 00316214  48 00 00 ED */	bl __MIXRmtUpdateSettings
 lbl_8034CC58:
 /* 8034CC58 00316218  3B 7B 00 70 */	addi r27, r27, 0x70
 /* 8034CC5C 0031621C  3B 5A 00 01 */	addi r26, r26, 1

@@ -366,7 +366,7 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/mtx/vec.o \
 	$(BUILD_DIR)/asm/RevoSDK/mtx/quat.o \
 	$(BUILD_DIR)/asm/RevoSDK/nand/nand.o \
-	$(BUILD_DIR)/asm/RevoSDK/nand/NANDOpenClose__103.o \
+	$(BUILD_DIR)/asm/RevoSDK/nand/NANDOpenClose.o \
 	$(BUILD_DIR)/asm/RevoSDK/nand/NANDCore.o \
 	$(BUILD_DIR)/asm/RevoSDK/nand/NANDCheck.o \
 	$(BUILD_DIR)/asm/RevoSDK/nand/NANDLogging.o \

@@ -23,6 +23,7 @@ OSGetConsoleSimulatedMem2Size:
 /* 803594A4 00322A64  80 63 31 1C */	lwz r3, 0x8000311C@l(r3)
 /* 803594A8 00322A68  4E 80 00 20 */	blr 
 
+#unreferenced?
 .balign 16, 0
 .global OnShutdown
 OnShutdown:

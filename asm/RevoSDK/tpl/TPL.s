@@ -94,8 +94,8 @@ TPLGet:
 /* 803628FC 0032BEBC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80362900
-func_80362900:
+.global TPLGetGXTexObjFromPalette
+TPLGetGXTexObjFromPalette:
 /* 80362900 0032BEC0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80362904 0032BEC4  7C 08 02 A6 */	mflr r0
 /* 80362908 0032BEC8  90 01 00 34 */	stw r0, 0x34(r1)

@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_803429C0
-func_803429C0:
+.global IPCInit
+IPCInit:
 /* 803429C0 0030BF80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803429C4 0030BF84  7C 08 02 A6 */	mflr r0
 /* 803429C8 0030BF88  90 01 00 14 */	stw r0, 0x14(r1)
@@ -49,16 +49,16 @@ IPCReInit:
 /* 80342A54 0030C014  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80342A60
-func_80342A60:
+.global IPCReadReg
+IPCReadReg:
 /* 80342A60 0030C020  54 60 10 3A */	slwi r0, r3, 2
 /* 80342A64 0030C024  3C 60 CD 00 */	lis r3, 0xcd00
 /* 80342A68 0030C028  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80342A6C 0030C02C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80342A70
-func_80342A70:
+.global IPCWriteReg
+IPCWriteReg:
 /* 80342A70 0030C030  54 60 10 3A */	slwi r0, r3, 2
 /* 80342A74 0030C034  3C 60 CD 00 */	lis r3, 0xcd00
 /* 80342A78 0030C038  7C 83 01 2E */	stwx r4, r3, r0

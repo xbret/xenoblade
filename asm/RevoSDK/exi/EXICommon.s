@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80315D30
-func_80315D30:
+.global EXIWriteReg
+EXIWriteReg:
 /* 80315D30 002DF2F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80315D34 002DF2F4  7C 08 02 A6 */	mflr r0
 /* 80315D38 002DF2F8  2C 07 00 01 */	cmpwi r7, 1

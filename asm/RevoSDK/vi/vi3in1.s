@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80367320
-func_80367320:
+.global __VISetYUVSEL
+__VISetYUVSEL:
 /* 80367320 003308E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80367324 003308E4  7C 08 02 A6 */	mflr r0
 /* 80367328 003308E8  3C 80 80 00 */	lis r4, 0x800000CC@ha
@@ -52,8 +52,8 @@ lbl_80367384:
 /* 803673BC 0033097C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803673C0
-func_803673C0:
+.global __VISetFilter4EURGB60
+__VISetFilter4EURGB60:
 /* 803673C0 00330980  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803673C4 00330984  7C 08 02 A6 */	mflr r0
 /* 803673C8 00330988  38 A0 00 02 */	li r5, 2
@@ -72,8 +72,8 @@ func_803673C0:
 /* 803673FC 003309BC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80367400
-func_80367400:
+.global __VISetCGMS
+__VISetCGMS:
 /* 80367400 003309C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80367404 003309C4  7C 08 02 A6 */	mflr r0
 /* 80367408 003309C8  38 E0 00 05 */	li r7, 5
@@ -98,8 +98,8 @@ func_80367400:
 /* 80367454 00330A14  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80367460
-func_80367460:
+.global __VISetWSS
+__VISetWSS:
 /* 80367460 00330A20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80367464 00330A24  7C 08 02 A6 */	mflr r0
 /* 80367468 00330A28  38 E0 00 08 */	li r7, 8
@@ -127,8 +127,8 @@ func_80367460:
 /* 803674C0 00330A80  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803674D0
-func_803674D0:
+.global __VISetClosedCaption
+__VISetClosedCaption:
 /* 803674D0 00330A90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803674D4 00330A94  7C 08 02 A6 */	mflr r0
 /* 803674D8 00330A98  39 20 00 7A */	li r9, 0x7a
@@ -158,8 +158,8 @@ func_803674D0:
 /* 80367538 00330AF8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80367540
-func_80367540:
+.global __VISetMacrovision
+__VISetMacrovision:
 /* 80367540 00330B00  94 21 FE 70 */	stwu r1, -0x190(r1)
 /* 80367544 00330B04  7C 08 02 A6 */	mflr r0
 /* 80367548 00330B08  3C 60 80 56 */	lis r3, lbl_8055FFF8@ha
@@ -1141,8 +1141,8 @@ func_80368420:
 /* 8036842C 003319EC  4B FF FE 94 */	b __VISetGammaImm
 
 .balign 16, 0
-.global func_80368430
-func_80368430:
+.global __VISetGamma
+__VISetGamma:
 /* 80368430 003319F0  80 0D BA DC */	lwz r0, lbl_80667C5C@sda21(r13)
 /* 80368434 003319F4  3C 60 80 56 */	lis r3, lbl_8055FFF8@ha
 /* 80368438 003319F8  38 63 FF F8 */	addi r3, r3, lbl_8055FFF8@l
@@ -1163,8 +1163,8 @@ func_80368450:
 /* 8036846C 00331A2C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80368470
-func_80368470:
+.global __VISetTrapFilter
+__VISetTrapFilter:
 /* 80368470 00331A30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80368474 00331A34  7C 08 02 A6 */	mflr r0
 /* 80368478 00331A38  38 60 00 03 */	li r3, 3
@@ -1204,8 +1204,8 @@ func_803684D0:
 /* 803684EC 00331AAC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803684F0
-func_803684F0:
+.global __VISetRGBOverDrive
+__VISetRGBOverDrive:
 /* 803684F0 00331AB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803684F4 00331AB4  7C 08 02 A6 */	mflr r0
 /* 803684F8 00331AB8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1243,16 +1243,16 @@ lbl_80368564:
 /* 80368570 00331B30  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80368580
-func_80368580:
+.global VISetRGBModeImm
+VISetRGBModeImm:
 /* 80368580 00331B40  80 0D BA D0 */	lwz r0, lbl_80667C50@sda21(r13)
 /* 80368584 00331B44  60 00 00 80 */	ori r0, r0, 0x80
 /* 80368588 00331B48  90 0D BA D0 */	stw r0, lbl_80667C50@sda21(r13)
 /* 8036858C 00331B4C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80368590
-func_80368590:
+.global __VISetRGBModeImm
+__VISetRGBModeImm:
 /* 80368590 00331B50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80368594 00331B54  7C 08 02 A6 */	mflr r0
 /* 80368598 00331B58  38 C0 00 03 */	li r6, 3
@@ -1273,8 +1273,8 @@ func_80368590:
 /* 803685D4 00331B94  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803685E0
-func_803685E0:
+.global __VISetRevolutionModeSimple
+__VISetRevolutionModeSimple:
 /* 803685E0 00331BA0  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803685E4 00331BA4  7C 08 02 A6 */	mflr r0
 /* 803685E8 00331BA8  38 60 00 E0 */	li r3, 0xe0
@@ -1301,7 +1301,7 @@ func_803685E0:
 /* 8036863C 00331BFC  4B FF E7 A5 */	bl __VISendI2CData
 /* 80368640 00331C00  38 60 00 02 */	li r3, 2
 /* 80368644 00331C04  4B FF E3 BD */	bl WaitMicroTime
-/* 80368648 00331C08  4B FF DF 79 */	bl func_803665C0
+/* 80368648 00331C08  4B FF DF 79 */	bl VIGetDTVStatus
 /* 8036864C 00331C0C  3C 80 80 00 */	lis r4, 0x800000CC@ha
 /* 80368650 00331C10  80 04 00 CC */	lwz r0, 0x800000CC@l(r4)
 /* 80368654 00331C14  28 00 00 01 */	cmplwi r0, 1

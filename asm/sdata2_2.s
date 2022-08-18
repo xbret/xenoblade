@@ -1058,8 +1058,8 @@ lbl_8066C11C:
 .global lbl_8066C120
 lbl_8066C120:
 	# ROM: 0x575F80
-	.4byte func_80349A70
-	.4byte func_80349A80
+	.4byte AllocatorAllocForExpHeap_
+	.4byte AllocatorFreeForExpHeap_
 
 
 .global one_c

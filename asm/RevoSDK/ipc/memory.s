@@ -86,8 +86,8 @@ lbl_803444BC:
 /* 803444DC 0030DA9C  4E 80 00 20 */	blr
 
 .balign 16, 0
-.global func_803444E0
-func_803444E0:
+.global __iosAlloc
+__iosAlloc:
 /* 803444E0 0030DAA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803444E4 0030DAA4  7C 08 02 A6 */	mflr r0
 /* 803444E8 0030DAA8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -234,11 +234,11 @@ lbl_803446B4:
 .balign 16, 0
 .global iosAllocAligned
 iosAllocAligned:
-/* 803446E0 0030DCA0  4B FF FE 00 */	b func_803444E0
+/* 803446E0 0030DCA0  4B FF FE 00 */	b __iosAlloc
 
 .balign 16, 0
-.global func_803446F0
-func_803446F0:
+.global iosFree
+iosFree:
 /* 803446F0 0030DCB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803446F4 0030DCB4  7C 08 02 A6 */	mflr r0
 /* 803446F8 0030DCB8  90 01 00 24 */	stw r0, 0x24(r1)

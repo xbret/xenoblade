@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80348FC0
-func_80348FC0:
+.global AllocUsedBlockFromFreeBlock_
+AllocUsedBlockFromFreeBlock_:
 /* 80348FC0 00312580  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80348FC4 00312584  7C 08 02 A6 */	mflr r0
 /* 80348FC8 00312588  90 01 00 24 */	stw r0, 0x24(r1)
@@ -168,8 +168,8 @@ lbl_803491D0:
 /* 803491E8 003127A8  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803491F0
-func_803491F0:
+.global AllocFromHead_
+AllocFromHead_:
 /* 803491F0 003127B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803491F4 003127B4  7C 08 02 A6 */	mflr r0
 /* 803491F8 003127B8  38 63 00 3C */	addi r3, r3, 0x3c
@@ -219,7 +219,7 @@ lbl_80349290:
 /* 80349298 00312858  7F E4 FB 78 */	mr r4, r31
 /* 8034929C 0031285C  7F A5 EB 78 */	mr r5, r29
 /* 803492A0 00312860  38 E0 00 00 */	li r7, 0
-/* 803492A4 00312864  4B FF FD 1D */	bl func_80348FC0
+/* 803492A4 00312864  4B FF FD 1D */	bl AllocUsedBlockFromFreeBlock_
 /* 803492A8 00312868  48 00 00 08 */	b lbl_803492B0
 lbl_803492AC:
 /* 803492AC 0031286C  38 60 00 00 */	li r3, 0
@@ -233,8 +233,8 @@ lbl_803492B0:
 /* 803492C8 00312888  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803492D0
-func_803492D0:
+.global AllocFromTail_
+AllocFromTail_:
 /* 803492D0 00312890  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803492D4 00312894  7C 08 02 A6 */	mflr r0
 /* 803492D8 00312898  38 63 00 3C */	addi r3, r3, 0x3c
@@ -280,7 +280,7 @@ lbl_80349364:
 /* 80349368 00312928  41 82 00 14 */	beq lbl_8034937C
 /* 8034936C 0031292C  7D 84 63 78 */	mr r4, r12
 /* 80349370 00312930  38 E0 00 01 */	li r7, 1
-/* 80349374 00312934  4B FF FC 4D */	bl func_80348FC0
+/* 80349374 00312934  4B FF FC 4D */	bl AllocUsedBlockFromFreeBlock_
 /* 80349378 00312938  48 00 00 08 */	b lbl_80349380
 lbl_8034937C:
 /* 8034937C 0031293C  38 60 00 00 */	li r3, 0
@@ -293,8 +293,8 @@ lbl_80349380:
 /* 80349394 00312954  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803493A0
-func_803493A0:
+.global RecycleRegion_
+RecycleRegion_:
 /* 803493A0 00312960  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803493A4 00312964  39 00 00 00 */	li r8, 0
 /* 803493A8 00312968  80 A4 00 00 */	lwz r5, 0(r4)
@@ -406,8 +406,8 @@ lbl_80349500:
 /* 80349504 00312AC4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80349510
-func_80349510:
+.global MEMCreateExpHeapEx
+MEMCreateExpHeapEx:
 /* 80349510 00312AD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80349514 00312AD4  7C 08 02 A6 */	mflr r0
 /* 80349518 00312AD8  7C 84 1A 14 */	add r4, r4, r3
@@ -430,7 +430,7 @@ lbl_8034954C:
 /* 80349554 00312B14  7F E3 FB 78 */	mr r3, r31
 /* 80349558 00312B18  38 BF 00 50 */	addi r5, r31, 0x50
 /* 8034955C 00312B1C  38 84 50 48 */	addi r4, r4, 0x45585048@l
-/* 80349560 00312B20  4B FF F7 31 */	bl func_80348C90
+/* 80349560 00312B20  4B FF F7 31 */	bl MEMiInitHeapHead
 /* 80349564 00312B24  38 A0 00 00 */	li r5, 0
 /* 80349568 00312B28  B0 BF 00 4C */	sth r5, 0x4c(r31)
 /* 8034956C 00312B2C  38 80 46 52 */	li r4, 0x4652
@@ -457,14 +457,14 @@ lbl_803495AC:
 /* 803495BC 00312B7C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803495C0
-func_803495C0:
+.global MEMDestroyExpHeap
+MEMDestroyExpHeap:
 /* 803495C0 00312B80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803495C4 00312B84  7C 08 02 A6 */	mflr r0
 /* 803495C8 00312B88  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803495CC 00312B8C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803495D0 00312B90  7C 7F 1B 78 */	mr r31, r3
-/* 803495D4 00312B94  4B FF F8 7D */	bl func_80348E50
+/* 803495D4 00312B94  4B FF F8 7D */	bl MEMiFinalizeHeap
 /* 803495D8 00312B98  7F E3 FB 78 */	mr r3, r31
 /* 803495DC 00312B9C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 803495E0 00312BA0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -473,8 +473,8 @@ func_803495C0:
 /* 803495EC 00312BAC  4E 80 00 20 */	blr
 
 .balign 16, 0
-.global func_803495F0
-func_803495F0:
+.global MEMAllocFromExpHeapEx
+MEMAllocFromExpHeapEx:
 /* 803495F0 00312BB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803495F4 00312BB4  7C 08 02 A6 */	mflr r0
 /* 803495F8 00312BB8  2C 04 00 00 */	cmpwi r4, 0
@@ -501,13 +501,13 @@ lbl_8034963C:
 /* 80349644 00312C04  7F A3 EB 78 */	mr r3, r29
 /* 80349648 00312C08  7F C4 F3 78 */	mr r4, r30
 /* 8034964C 00312C0C  7F E5 FB 78 */	mr r5, r31
-/* 80349650 00312C10  4B FF FB A1 */	bl func_803491F0
+/* 80349650 00312C10  4B FF FB A1 */	bl AllocFromHead_
 /* 80349654 00312C14  48 00 00 14 */	b lbl_80349668
 lbl_80349658:
 /* 80349658 00312C18  7F A3 EB 78 */	mr r3, r29
 /* 8034965C 00312C1C  7F C4 F3 78 */	mr r4, r30
 /* 80349660 00312C20  7C BF 00 D0 */	neg r5, r31
-/* 80349664 00312C24  4B FF FC 6D */	bl func_803492D0
+/* 80349664 00312C24  4B FF FC 6D */	bl AllocFromTail_
 lbl_80349668:
 /* 80349668 00312C28  80 1D 00 38 */	lwz r0, 0x38(r29)
 /* 8034966C 00312C2C  7C 7F 1B 78 */	mr r31, r3
@@ -526,8 +526,8 @@ lbl_80349680:
 /* 8034969C 00312C5C  4E 80 00 20 */	blr
 
 .balign 16, 0
-.global func_803496A0
-func_803496A0:
+.global MEMFreeToExpHeap
+MEMFreeToExpHeap:
 /* 803496A0 00312C60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803496A4 00312C64  7C 08 02 A6 */	mflr r0
 /* 803496A8 00312C68  2C 04 00 00 */	cmpwi r4, 0
@@ -570,7 +570,7 @@ lbl_8034972C:
 /* 8034972C 00312CEC  90 A3 00 0C */	stw r5, 0xc(r3)
 lbl_80349730:
 /* 80349730 00312CF0  38 81 00 08 */	addi r4, r1, 8
-/* 80349734 00312CF4  4B FF FC 6D */	bl func_803493A0
+/* 80349734 00312CF4  4B FF FC 6D */	bl RecycleRegion_
 /* 80349738 00312CF8  80 1E 00 38 */	lwz r0, 0x38(r30)
 /* 8034973C 00312CFC  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
 /* 80349740 00312D00  41 82 00 0C */	beq lbl_8034974C

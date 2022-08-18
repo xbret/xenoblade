@@ -3,18 +3,18 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80349A70
-func_80349A70:
+.global AllocatorAllocForExpHeap_
+AllocatorAllocForExpHeap_:
 /* 80349A70 00313030  7C 65 1B 78 */	mr r5, r3
 /* 80349A74 00313034  80 63 00 04 */	lwz r3, 4(r3)
 /* 80349A78 00313038  80 A5 00 08 */	lwz r5, 8(r5)
-/* 80349A7C 0031303C  4B FF FB 74 */	b func_803495F0
+/* 80349A7C 0031303C  4B FF FB 74 */	b MEMAllocFromExpHeapEx
 
 
-.global func_80349A80
-func_80349A80:
+.global AllocatorFreeForExpHeap_
+AllocatorFreeForExpHeap_:
 /* 80349A80 00313040  80 63 00 04 */	lwz r3, 4(r3)
-/* 80349A84 00313044  4B FF FC 1C */	b func_803496A0
+/* 80349A84 00313044  4B FF FC 1C */	b MEMFreeToExpHeap
 
 .balign 16, 0
 .global MEMAllocFromAllocator
@@ -33,8 +33,8 @@ MEMFreeToAllocator:
 /* 80349AAC 0031306C  4E 80 04 20 */	bctr 
 
 .balign 16, 0
-.global func_80349AB0
-func_80349AB0:
+.global MEMInitAllocatorForExpHeap
+MEMInitAllocatorForExpHeap:
 /* 80349AB0 00313070  38 C2 BD A0 */	addi r6, r2, lbl_8066C120@sda21
 /* 80349AB4 00313074  38 00 00 00 */	li r0, 0
 /* 80349AB8 00313078  90 C3 00 00 */	stw r6, 0(r3)

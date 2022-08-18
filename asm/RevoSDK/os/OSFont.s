@@ -215,8 +215,8 @@ lbl_803579E0:
 /* 80357A04 00320FC4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80357A10
-func_80357A10:
+.global OSSetFontEncode
+OSSetFontEncode:
 /* 80357A10 00320FD0  A0 0D 9A 08 */	lhz r0, lbl_80665B88@sda21(r13)
 /* 80357A14 00320FD4  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80357A18 00320FD8  41 82 00 08 */	beq lbl_80357A20

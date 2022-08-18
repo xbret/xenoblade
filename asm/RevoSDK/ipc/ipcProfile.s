@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_803448E0
-func_803448E0:
+.global IPCiProfInit
+IPCiProfInit:
 /* 803448E0 0030DEA0  3C A0 80 5D */	lis r5, lbl_805CE580@ha
 /* 803448E4 0030DEA4  3C C0 80 5D */	lis r6, lbl_805CE500@ha
 /* 803448E8 0030DEA8  38 80 00 00 */	li r4, 0
@@ -54,8 +54,8 @@ lbl_80344908:
 /* 80344994 0030DF54  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803449A0
-func_803449A0:
+.global IPCiProfQueueReq
+IPCiProfQueueReq:
 /* 803449A0 0030DF60  80 CD B8 10 */	lwz r6, lbl_80667990@sda21(r13)
 /* 803449A4 0030DF64  3D 00 80 5D */	lis r8, lbl_805CE580@ha
 /* 803449A8 0030DF68  80 AD B8 14 */	lwz r5, lbl_80667994@sda21(r13)
@@ -85,9 +85,6 @@ lbl_803449D8:
 /* 80344A04 0030DFC4  7C 66 01 2E */	stwx r3, r6, r0
 /* 80344A08 0030DFC8  7C 85 01 2E */	stwx r4, r5, r0
 /* 80344A0C 0030DFCC  4E 80 00 20 */	blr
-
-.balign 16, 0
-.global lbl_80344A10
 lbl_80344A10:
 /* 80344A10 0030DFD0  39 08 00 04 */	addi r8, r8, 4
 /* 80344A14 0030DFD4  39 29 00 04 */	addi r9, r9, 4
@@ -96,16 +93,16 @@ lbl_80344A10:
 /* 80344A20 0030DFE0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80344A30
-func_80344A30:
+.global IPCiProfAck
+IPCiProfAck:
 /* 80344A30 0030DFF0  80 6D B8 14 */	lwz r3, lbl_80667994@sda21(r13)
 /* 80344A34 0030DFF4  38 03 FF FF */	addi r0, r3, -1
 /* 80344A38 0030DFF8  90 0D B8 14 */	stw r0, lbl_80667994@sda21(r13)
 /* 80344A3C 0030DFFC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80344A40
-func_80344A40:
+.global IPCiProfReply
+IPCiProfReply:
 /* 80344A40 0030E000  80 AD B8 10 */	lwz r5, lbl_80667990@sda21(r13)
 /* 80344A44 0030E004  3C C0 80 5D */	lis r6, lbl_805CE580@ha
 /* 80344A48 0030E008  3C E0 80 5D */	lis r7, lbl_805CE500@ha
@@ -133,8 +130,6 @@ lbl_80344A68:
 /* 80344A9C 0030E05C  7C A4 31 2E */	stwx r5, r4, r6
 /* 80344AA0 0030E060  7C 03 31 2E */	stwx r0, r3, r6
 /* 80344AA4 0030E064  4E 80 00 20 */	blr
-
-.global lbl_80344AA8
 lbl_80344AA8:
 /* 80344AA8 0030E068  38 C6 00 04 */	addi r6, r6, 4
 /* 80344AAC 0030E06C  38 E7 00 04 */	addi r7, r7, 4

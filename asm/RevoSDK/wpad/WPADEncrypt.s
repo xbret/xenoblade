@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_803749D0
-func_803749D0:
+.global WPADiCreateKey
+WPADiCreateKey:
 /* 803749D0 0033DF90  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 803749D4 0033DF94  7C 08 02 A6 */	mflr r0
 /* 803749D8 0033DF98  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -452,8 +452,8 @@ lbl_80374A98:
 /* 803750BC 0033E67C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803750C0
-func_803750C0:
+.global WPADiCreateKeyFor3rd
+WPADiCreateKeyFor3rd:
 /* 803750C0 0033E680  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 803750C4 0033E684  7C 08 02 A6 */	mflr r0
 /* 803750C8 0033E688  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -903,8 +903,8 @@ lbl_80375188:
 /* 803757B4 0033ED74  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803757C0
-func_803757C0:
+.global WPADiDecode
+WPADiDecode:
 /* 803757C0 0033ED80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803757C4 0033ED84  3D 00 80 5E */	lis r8, lbl_805DDAD0@ha
 /* 803757C8 0033ED88  2C 05 00 00 */	cmpwi r5, 0
