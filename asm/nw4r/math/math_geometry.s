@@ -673,8 +673,8 @@ lbl_8040BAEC:
 /* 8040BE70 003D5430  38 21 02 90 */	addi r1, r1, 0x290
 /* 8040BE74 003D5434  4E 80 00 20 */	blr 
 
-.global func_8040BE78
-func_8040BE78:
+.global DistSqSegment3ToSegment3__Q24nw4r4mathFPCQ34nw4r4math8SEGMENT3PCQ34nw4r4math8SEGMENT3PfPf
+DistSqSegment3ToSegment3__Q24nw4r4mathFPCQ34nw4r4math8SEGMENT3PCQ34nw4r4math8SEGMENT3PfPf:
 /* 8040BE78 003D5438  E0 03 00 0C */	psq_l f0, 12(r3), 0, qr0
 /* 8040BE7C 003D543C  E0 23 00 00 */	psq_l f1, 0(r3), 0, qr0
 /* 8040BE80 003D5440  E0 64 00 0C */	psq_l f3, 12(r4), 0, qr0
@@ -854,8 +854,8 @@ lbl_8040C084:
 /* 8040C0FC 003D56BC  38 21 00 60 */	addi r1, r1, 0x60
 /* 8040C100 003D56C0  4E 80 00 20 */	blr 
 
-.global func_8040C104
-func_8040C104:
+.global IntersectionCapsule__Q24nw4r4mathFPCQ34nw4r4math7CAPSULEPCQ34nw4r4math7CAPSULE
+IntersectionCapsule__Q24nw4r4mathFPCQ34nw4r4math7CAPSULEPCQ34nw4r4math7CAPSULE:
 /* 8040C104 003D56C4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040C108 003D56C8  7C 08 02 A6 */	mflr r0
 /* 8040C10C 003D56CC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -866,7 +866,7 @@ func_8040C104:
 /* 8040C120 003D56E0  C0 04 00 18 */	lfs f0, 0x18(r4)
 /* 8040C124 003D56E4  38 C0 00 00 */	li r6, 0
 /* 8040C128 003D56E8  EF E1 00 2A */	fadds f31, f1, f0
-/* 8040C12C 003D56EC  4B FF FD 4D */	bl func_8040BE78
+/* 8040C12C 003D56EC  4B FF FD 4D */	bl DistSqSegment3ToSegment3__Q24nw4r4mathFPCQ34nw4r4math8SEGMENT3PCQ34nw4r4math8SEGMENT3PfPf
 /* 8040C130 003D56F0  EC 1F 07 F2 */	fmuls f0, f31, f31
 /* 8040C134 003D56F4  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8040C138 003D56F8  4C 40 13 82 */	cror 2, 0, 2
@@ -879,8 +879,8 @@ func_8040C104:
 /* 8040C154 003D5714  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040C158 003D5718  4E 80 00 20 */	blr
 
-.global func_8040C15C
-func_8040C15C:
+.global IntersectSphere__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math6SPHERE
+IntersectSphere__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math6SPHERE:
 /* 8040C15C 003D571C  C0 23 00 20 */	lfs f1, 0x20(r3)
 /* 8040C160 003D5720  C0 64 00 00 */	lfs f3, 0(r4)
 /* 8040C164 003D5724  C0 03 00 24 */	lfs f0, 0x24(r3)

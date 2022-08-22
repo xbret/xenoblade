@@ -42,8 +42,8 @@ MTX34Zero__Q24nw4r4mathFPQ34nw4r4math5MTX34:
 /* 8040B070 003D4630  F0 03 00 28 */	psq_st f0, 40(r3), 0, qr0
 /* 8040B074 003D4634  4E 80 00 20 */	blr 
 
-.global func_8040B078
-func_8040B078:
+.global MTX34Add__Q24nw4r4mathFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34
+MTX34Add__Q24nw4r4mathFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34:
 /* 8040B078 003D4638  E0 04 00 00 */	psq_l f0, 0(r4), 0, qr0
 /* 8040B07C 003D463C  E0 25 00 00 */	psq_l f1, 0(r5), 0, qr0
 /* 8040B080 003D4640  10 40 08 2A */	ps_add f2, f0, f1
@@ -70,8 +70,8 @@ func_8040B078:
 /* 8040B0D4 003D4694  F0 43 00 28 */	psq_st f2, 40(r3), 0, qr0
 /* 8040B0D8 003D4698  4E 80 00 20 */	blr 
 
-.global func_8040B0DC
-func_8040B0DC:
+.global MTX34Mult__Q24nw4r4mathFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34f
+MTX34Mult__Q24nw4r4mathFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34f:
 /* 8040B0DC 003D469C  E0 04 00 00 */	psq_l f0, 0(r4), 0, qr0
 /* 8040B0E0 003D46A0  10 40 00 58 */	ps_muls0 f2, f0, f1
 /* 8040B0E4 003D46A4  E0 04 00 08 */	psq_l f0, 8(r4), 0, qr0
@@ -92,8 +92,8 @@ func_8040B0DC:
 /* 8040B120 003D46E0  F0 43 00 28 */	psq_st f2, 40(r3), 0, qr0
 /* 8040B124 003D46E4  4E 80 00 20 */	blr 
 
-.global func_8040B128
-func_8040B128:
+.global MTX34Scale__Q24nw4r4mathFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3
+MTX34Scale__Q24nw4r4mathFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3:
 /* 8040B128 003D46E8  E0 05 00 00 */	psq_l f0, 0(r5), 0, qr0
 /* 8040B12C 003D46EC  E0 44 00 00 */	psq_l f2, 0(r4), 0, qr0
 /* 8040B130 003D46F0  E0 84 00 10 */	psq_l f4, 16(r4), 0, qr0
@@ -116,8 +116,8 @@ func_8040B128:
 /* 8040B174 003D4734  F0 C3 00 28 */	psq_st f6, 40(r3), 0, qr0
 /* 8040B178 003D4738  4E 80 00 20 */	blr 
 
-.global func_8040B17C
-func_8040B17C:
+.global MTX34Trans__Q24nw4r4mathFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3
+MTX34Trans__Q24nw4r4mathFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3:
 /* 8040B17C 003D473C  E0 44 00 00 */	psq_l f2, 0(r4), 0, qr0
 /* 8040B180 003D4740  E0 05 00 00 */	psq_l f0, 0(r5), 0, qr0
 /* 8040B184 003D4744  E0 64 00 08 */	psq_l f3, 8(r4), 0, qr0
@@ -163,8 +163,8 @@ MTX34RotAxisFIdx__Q24nw4r4mathFPQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3f:
 /* 8040B218 003D47D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040B21C 003D47DC  4E 80 00 20 */	blr 
 
-.global func_8040B220
-func_8040B220:
+.global MTX34RotXYZFIdx__Q24nw4r4mathFPQ34nw4r4math5MTX34fff
+MTX34RotXYZFIdx__Q24nw4r4mathFPQ34nw4r4math5MTX34fff:
 /* 8040B220 003D47E0  3C 80 80 52 */	lis r4, lbl_80521110@ha
 /* 8040B224 003D47E4  38 02 C2 D0 */	addi r0, r2, lbl_8066C650@sda21
 /* 8040B228 003D47E8  94 21 FF F0 */	stwu r1, -0x10(r1)

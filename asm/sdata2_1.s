@@ -13844,7 +13844,8 @@ lbl_8066B850:
 
 .global lbl_8066B858
 lbl_8066B858:
-	.4byte 0x2E000000
+	.asciz "."
+	.balign 4
 
 .global lbl_8066B85C
 lbl_8066B85C:

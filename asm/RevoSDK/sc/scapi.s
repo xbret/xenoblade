@@ -250,15 +250,15 @@ SCSetBtDeviceInfoArray:
 /* 803611F8 0032A7B8  4B FF F2 78 */	b SCReplaceByteArrayItem
 
 .balign 16, 0
-.global func_80361200
-func_80361200:
+.global SCGetBtCmpDevInfoArray
+SCGetBtCmpDevInfoArray:
 /* 80361200 0032A7C0  38 80 02 05 */	li r4, 0x205
 /* 80361204 0032A7C4  38 A0 00 1D */	li r5, 0x1d
 /* 80361208 0032A7C8  4B FF F1 88 */	b SCFindByteArrayItem
 
 .balign 16, 0
-.global func_80361210
-func_80361210:
+.global SCSetBtCmpDevInfoArray
+SCSetBtCmpDevInfoArray:
 /* 80361210 0032A7D0  38 80 02 05 */	li r4, 0x205
 /* 80361214 0032A7D4  38 A0 00 1D */	li r5, 0x1d
 /* 80361218 0032A7D8  4B FF F2 58 */	b SCReplaceByteArrayItem

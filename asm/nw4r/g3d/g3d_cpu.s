@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803E7978
-func_803E7978:
+.global Copy32ByteBlocks__Q34nw4r3g3d6detailFPvPCvUl
+Copy32ByteBlocks__Q34nw4r3g3d6detailFPvPCvUl:
 /* 803E7978 003B0F38  54 A5 D9 7F */	rlwinm. r5, r5, 0x1b, 5, 0x1f
 /* 803E797C 003B0F3C  4D 82 00 20 */	beqlr 
 /* 803E7980 003B0F40  54 A0 F0 BF */	rlwinm. r0, r5, 0x1e, 2, 0x1f

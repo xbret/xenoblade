@@ -1040,14 +1040,14 @@ lbl_805DDA48:
 .global lbl_805DDA70
 lbl_805DDA70:
 	.skip 0x30
-.global lbl_805DDAA0
-lbl_805DDAA0:
+.global _wpadManageAlarm
+_wpadManageAlarm:
 	.skip 0x30
-.global lbl_805DDAD0
-lbl_805DDAD0:
+.global __rvl_p_wpadcb
+__rvl_p_wpadcb:
 	.skip 0x10
-.global lbl_805DDAE0
-lbl_805DDAE0:
+.global _wpadHandle2PortTable
+_wpadHandle2PortTable:
 	.skip 0x1000
 .global lbl_805DEAE0
 lbl_805DEAE0:

@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803E7294
-func_803E7294:
+.global __dt__Q34nw4r3g3d6G3dObjFv
+__dt__Q34nw4r3g3d6G3dObjFv:
 /* 803E7294 003B0854  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803E7298 003B0858  7C 08 02 A6 */	mflr r0
 /* 803E729C 003B085C  2C 03 00 00 */	cmpwi r3, 0
@@ -17,8 +17,6 @@ func_803E7294:
 /* 803E72BC 003B087C  90 A3 00 00 */	stw r5, 0(r3)
 /* 803E72C0 003B0880  80 63 00 08 */	lwz r3, 8(r3)
 /* 803E72C4 003B0884  4B F6 27 DD */	bl MEMFreeToAllocator
-
-
 lbl_803E72C8:
 /* 803E72C8 003B0888  7F E3 FB 78 */	mr r3, r31
 /* 803E72CC 003B088C  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -27,8 +25,8 @@ lbl_803E72C8:
 /* 803E72D8 003B0898  38 21 00 10 */	addi r1, r1, 0x10
 /* 803E72DC 003B089C  4E 80 00 20 */	blr 
 
-.global func_803E72E0
-func_803E72E0:
+.global Destroy__Q34nw4r3g3d6G3dObjFv
+Destroy__Q34nw4r3g3d6G3dObjFv:
 /* 803E72E0 003B08A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803E72E4 003B08A4  7C 08 02 A6 */	mflr r0
 /* 803E72E8 003B08A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -63,8 +61,8 @@ lbl_803E7344:
 /* 803E7354 003B0914  4E 80 00 20 */	blr
 
 
-.global func_803E7358
-func_803E7358:
+.global IsDerivedFrom__Q34nw4r3g3d6G3dObjCFQ44nw4r3g3d6G3dObj7TypeObj
+IsDerivedFrom__Q34nw4r3g3d6G3dObjCFQ44nw4r3g3d6G3dObj7TypeObj:
 /* 803E7358 003B0918  3C 60 80 52 */	lis r3, lbl_80520F58@ha
 /* 803E735C 003B091C  80 04 00 00 */	lwz r0, 0(r4)
 /* 803E7360 003B0920  38 63 0F 58 */	addi r3, r3, lbl_80520F58@l
@@ -74,8 +72,8 @@ func_803E7358:
 /* 803E7370 003B0930  4E 80 00 20 */	blr
 
 
-.global func_803E7374
-func_803E7374:
+.global GetTypeName__Q34nw4r3g3d6G3dObjCFv
+GetTypeName__Q34nw4r3g3d6G3dObjCFv:
 /* 803E7374 003B0934  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803E7378 003B0938  7C 08 02 A6 */	mflr r0
 /* 803E737C 003B093C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -90,8 +88,8 @@ func_803E7374:
 /* 803E73A0 003B0960  4E 80 00 20 */	blr 
 
 
-.global func_803E73A4
-func_803E73A4:
+.global GetTypeObj__Q34nw4r3g3d6G3dObjCFv
+GetTypeObj__Q34nw4r3g3d6G3dObjCFv:
 /* 803E73A4 003B0964  3C 60 80 52 */	lis r3, lbl_80520F58@ha
 /* 803E73A8 003B0968  38 63 0F 58 */	addi r3, r3, lbl_80520F58@l
 /* 803E73AC 003B096C  4E 80 00 20 */	blr 

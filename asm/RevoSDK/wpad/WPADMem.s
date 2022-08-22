@@ -5,9 +5,9 @@
 .balign 16, 0
 .global WPADiClearMemBlock
 WPADiClearMemBlock:
-/* 80375A90 0033F050  3C 80 80 5E */	lis r4, lbl_805DDAD0@ha
+/* 80375A90 0033F050  3C 80 80 5E */	lis r4, __rvl_p_wpadcb@ha
 /* 80375A94 0033F054  54 63 10 3A */	slwi r3, r3, 2
-/* 80375A98 0033F058  38 84 DA D0 */	addi r4, r4, lbl_805DDAD0@l
+/* 80375A98 0033F058  38 84 DA D0 */	addi r4, r4, __rvl_p_wpadcb@l
 /* 80375A9C 0033F05C  38 00 00 00 */	li r0, 0
 /* 80375AA0 0033F060  7C 64 18 2E */	lwzx r3, r4, r3
 /* 80375AA4 0033F064  90 03 09 98 */	stw r0, 0x998(r3)
@@ -18,6 +18,7 @@ WPADiClearMemBlock:
 /* 80375AB8 0033F078  4E 80 00 20 */	blr 
 
 .balign 16, 0
+#name might be wrong
 .global WPADWriteMemoryAsync
 WPADWriteMemoryAsync:
 /* 80375AC0 0033F080  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -25,9 +26,9 @@ WPADWriteMemoryAsync:
 /* 80375AC8 0033F088  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80375ACC 0033F08C  39 61 00 30 */	addi r11, r1, 0x30
 /* 80375AD0 0033F090  4B F4 46 79 */	bl _savegpr_24
-/* 80375AD4 0033F094  3D 00 80 5E */	lis r8, lbl_805DDAD0@ha
+/* 80375AD4 0033F094  3D 00 80 5E */	lis r8, __rvl_p_wpadcb@ha
 /* 80375AD8 0033F098  54 60 10 3A */	slwi r0, r3, 2
-/* 80375ADC 0033F09C  39 08 DA D0 */	addi r8, r8, lbl_805DDAD0@l
+/* 80375ADC 0033F09C  39 08 DA D0 */	addi r8, r8, __rvl_p_wpadcb@l
 /* 80375AE0 0033F0A0  7C 78 1B 78 */	mr r24, r3
 /* 80375AE4 0033F0A4  7F E8 00 2E */	lwzx r31, r8, r0
 /* 80375AE8 0033F0A8  7C 99 23 78 */	mr r25, r4

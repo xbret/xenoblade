@@ -28687,19 +28687,19 @@ lbl_805606C8:
 .global lbl_805606E4
 lbl_805606E4:
 	# ROM: 0x55C7E4
-	.4byte func_803696E0
-	.4byte func_803696E0
-	.4byte func_803696E0
-	.4byte func_80369858
-	.4byte func_80369858
-	.4byte func_80369858
+	.4byte lbl_803696E0
+	.4byte lbl_803696E0
+	.4byte lbl_803696E0
+	.4byte lbl_80369858
+	.4byte lbl_80369858
+	.4byte lbl_80369858
 	.4byte lbl_80369C2C
-	.4byte func_803699F4
-	.4byte func_80369858
-	.4byte func_80369A6C
-	.4byte func_80369BA8
-	.4byte func_80369BA8
-	.4byte func_80369858
+	.4byte lbl_803699F4
+	.4byte lbl_80369858
+	.4byte lbl_80369A6C
+	.4byte lbl_80369BA8
+	.4byte lbl_80369BA8
+	.4byte lbl_80369858
 	.asciz "Reconnect Start!!\n"
 	.balign 4
 	.4byte 0
@@ -28763,85 +28763,85 @@ lbl_80560900:
 .global lbl_80560950
 lbl_80560950:
 	# ROM: 0x55CA50
-	.4byte func_8036CBE4
-	.4byte func_8036CBE4
-	.4byte func_8036CBE4
-	.4byte func_8036CBEC
-	.4byte func_8036CBEC
-	.4byte func_8036CBEC
-	.4byte func_8036CC0C
-	.4byte func_8036CBF4
-	.4byte func_8036CBEC
-	.4byte func_8036CBFC
-	.4byte func_8036CC04
-	.4byte func_8036CC04
-	.4byte func_8036CBEC
+	.4byte lbl_8036CBE4
+	.4byte lbl_8036CBE4
+	.4byte lbl_8036CBE4
+	.4byte lbl_8036CBEC
+	.4byte lbl_8036CBEC
+	.4byte lbl_8036CBEC
+	.4byte lbl_8036CC0C
+	.4byte lbl_8036CBF4
+	.4byte lbl_8036CBEC
+	.4byte lbl_8036CBFC
+	.4byte lbl_8036CC04
+	.4byte lbl_8036CC04
+	.4byte lbl_8036CBEC
 
 
 .global lbl_80560984
 lbl_80560984:
 	# ROM: 0x55CA84
-	.4byte func_8036CCD0
-	.4byte func_8036CCD0
-	.4byte func_8036CCD0
-	.4byte func_8036CCD8
-	.4byte func_8036CCD8
-	.4byte func_8036CCD8
-	.4byte func_8036CCF8
-	.4byte func_8036CCE0
-	.4byte func_8036CCD8
-	.4byte func_8036CCE8
-	.4byte func_8036CCF0
-	.4byte func_8036CCF0
-	.4byte func_8036CCD8
+	.4byte lbl_8036CCD0
+	.4byte lbl_8036CCD0
+	.4byte lbl_8036CCD0
+	.4byte lbl_8036CCD8
+	.4byte lbl_8036CCD8
+	.4byte lbl_8036CCD8
+	.4byte lbl_8036CCF8
+	.4byte lbl_8036CCE0
+	.4byte lbl_8036CCD8
+	.4byte lbl_8036CCE8
+	.4byte lbl_8036CCF0
+	.4byte lbl_8036CCF0
+	.4byte lbl_8036CCD8
 
 
 .global lbl_805609B8
 lbl_805609B8:
 	# ROM: 0x55CAB8
-	.4byte func_8036CFA4
-	.4byte func_8036CFA4
-	.4byte func_8036CFA4
-	.4byte func_8036CFAC
-	.4byte func_8036CFAC
-	.4byte func_8036CFAC
-	.4byte func_8036CFCC
-	.4byte func_8036CFB4
-	.4byte func_8036CFAC
-	.4byte func_8036CFBC
-	.4byte func_8036CFC4
-	.4byte func_8036CFC4
-	.4byte func_8036CFAC
+	.4byte lbl_8036CFA4
+	.4byte lbl_8036CFA4
+	.4byte lbl_8036CFA4
+	.4byte lbl_8036CFAC
+	.4byte lbl_8036CFAC
+	.4byte lbl_8036CFAC
+	.4byte lbl_8036CFCC
+	.4byte lbl_8036CFB4
+	.4byte lbl_8036CFAC
+	.4byte lbl_8036CFBC
+	.4byte lbl_8036CFC4
+	.4byte lbl_8036CFC4
+	.4byte lbl_8036CFAC
 
 
 .global lbl_805609EC
 lbl_805609EC:
 	# ROM: 0x55CAEC
-	.4byte func_8036FF58
-	.4byte func_8036FF64
-	.4byte func_8036FF70
-	.4byte func_8036FF7C
-	.4byte func_8036FF88
-	.4byte func_8036FF94
-	.4byte func_8036FFA0
-	.4byte func_8036FFAC
-	.4byte func_8036FFB8
-	.4byte func_8036FFC4
-	.4byte func_8036FFD0
-	.4byte func_8036FFDC
-	.4byte func_8036FFF4
-	.4byte func_80370000
-	.4byte func_8037000C
-	.4byte func_8036FFE8
+	.4byte lbl_8036FF58
+	.4byte lbl_8036FF64
+	.4byte lbl_8036FF70
+	.4byte lbl_8036FF7C
+	.4byte lbl_8036FF88
+	.4byte lbl_8036FF94
+	.4byte lbl_8036FFA0
+	.4byte lbl_8036FFAC
+	.4byte lbl_8036FFB8
+	.4byte lbl_8036FFC4
+	.4byte lbl_8036FFD0
+	.4byte lbl_8036FFDC
+	.4byte lbl_8036FFF4
+	.4byte lbl_80370000
+	.4byte lbl_8037000C
+	.4byte lbl_8036FFE8
 	.4byte 0
 
 
 .global lbl_80560A30
 lbl_80560A30:
 	# ROM: 0x55CB30
-	.4byte func_80371FB0
-	.4byte func_803722F0
-	.4byte func_80372620
+	.4byte __a1_20_status_report
+	.4byte __a1_21_user_data
+	.4byte __a1_22_ack
 	.4byte func_803749C0
 	.4byte func_803749C0
 	.4byte func_803749C0
@@ -28869,8 +28869,8 @@ lbl_80560A30:
 	.4byte func_803749C0
 	.4byte func_803749C0
 	.4byte func_80374530
-	.4byte func_80374650
-	.4byte func_80374810
+	.4byte __a1_3e_data_type
+	.4byte __a1_3f_data_type
 
 .global lbl_80560AB0
 lbl_80560AB0:
@@ -30589,15 +30589,15 @@ lbl_80562D24:
 .global lbl_80562FA0
 lbl_80562FA0:
 	# ROM: 0x55F0A0
-	.4byte func_8037AE1C
-	.4byte func_8037AEC8
-	.4byte func_8037AEE4
-	.4byte func_8037AF84
-	.4byte func_8037B090
-	.4byte func_8037B0A0
-	.4byte func_8037B18C
-	.4byte func_8037B2E0
-	.4byte func_8037B2F0
+	.4byte lbl_8037AE1C
+	.4byte lbl_8037AEC8
+	.4byte lbl_8037AEE4
+	.4byte lbl_8037AF84
+	.4byte lbl_8037B090
+	.4byte lbl_8037B0A0
+	.4byte lbl_8037B18C
+	.4byte lbl_8037B2E0
+	.4byte lbl_8037B2F0
 	.asciz "INQUIRY RESULT: %02x:%02x:%02x:%02x:%02x:%02x   %02x%02x%02x   %d\n"
 	.balign 4
 	.asciz "INQUIRY_COMPLETED\n"
@@ -40615,21 +40615,21 @@ lbl_8056CAF0:
 	.4byte 0
 	.4byte 0
 	.4byte func_803E3224
-	.4byte func_803E2FDC
+	.4byte G3dProc__Q34nw4r3g3d15AnmObjMatClrResFUlUlPv
 	.4byte func_803E3318
 	.4byte func_803E330C
 	.4byte func_803E32DC
-	.4byte func_803E2C08
-	.4byte func_803E2CC8
-	.4byte func_803E2D8C
-	.4byte func_803E2CD0
-	.4byte func_803E2D84
-	.4byte func_803E2E6C
-	.4byte func_803E2988
-	.4byte func_803E2F64
-	.4byte func_803E29C4
-	.4byte func_803E29CC
-	.4byte func_803E29D4
+	.4byte SetFrame__Q34nw4r3g3d15AnmObjMatClrResFf
+	.4byte GetFrame__Q34nw4r3g3d15AnmObjMatClrResCFv
+	.4byte UpdateFrame__Q34nw4r3g3d15AnmObjMatClrResFv
+	.4byte SetUpdateRate__Q34nw4r3g3d15AnmObjMatClrResFf
+	.4byte GetUpdateRate__Q34nw4r3g3d15AnmObjMatClrResCFv
+	.4byte Bind__Q34nw4r3g3d15AnmObjMatClrResFQ34nw4r3g3d6ResMdl
+	.4byte Release__Q34nw4r3g3d12AnmObjMatClrFv
+	.4byte GetResult__Q34nw4r3g3d15AnmObjMatClrResFPQ34nw4r3g3d12ClrAnmResultUl
+	.4byte Attach__Q34nw4r3g3d12AnmObjMatClrFiPQ34nw4r3g3d15AnmObjMatClrRes
+	.4byte Detach__Q34nw4r3g3d12AnmObjMatClrFi
+	.4byte DetachAll__Q34nw4r3g3d12AnmObjMatClrFv
 
 
 .global lbl_8056CB38
@@ -40639,7 +40639,7 @@ lbl_8056CB38:
 	.4byte 0
 	.4byte func_803E328C
 	.4byte 0
-	.4byte func_803E29D8
+	.4byte __dt__Q34nw4r3g3d12AnmObjMatClrFv
 	.4byte func_803E338C
 	.4byte func_803E335C
 	.4byte 0
@@ -40648,11 +40648,11 @@ lbl_8056CB38:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte func_803E2988
+	.4byte Release__Q34nw4r3g3d12AnmObjMatClrFv
 	.4byte 0
-	.4byte func_803E29C4
-	.4byte func_803E29CC
-	.4byte func_803E29D4
+	.4byte Attach__Q34nw4r3g3d12AnmObjMatClrFiPQ34nw4r3g3d15AnmObjMatClrRes
+	.4byte Detach__Q34nw4r3g3d12AnmObjMatClrFi
+	.4byte DetachAll__Q34nw4r3g3d12AnmObjMatClrFv
 
 
 .global lbl_8056CB80
@@ -40896,11 +40896,11 @@ lbl_8056CE90:
 	# ROM: 0x568F90
 	.4byte 0
 	.4byte 0
-	.4byte func_803E7358
+	.4byte IsDerivedFrom__Q34nw4r3g3d6G3dObjCFQ44nw4r3g3d6G3dObj7TypeObj
 	.4byte 0
-	.4byte func_803E7294
-	.4byte func_803E73A4
-	.4byte func_803E7374
+	.4byte __dt__Q34nw4r3g3d6G3dObjFv
+	.4byte GetTypeObj__Q34nw4r3g3d6G3dObjCFv
+	.4byte GetTypeName__Q34nw4r3g3d6G3dObjCFv
 	.4byte 0
 
 
@@ -40959,7 +40959,7 @@ lbl_8056CF28:
 	.4byte 0
 	.4byte func_803F5B40
 	.4byte func_803F52A8
-	.4byte func_803F5A7C
+	.4byte __dt__Q34nw4r3g3d8ScnGroupFv
 	.4byte func_803F5BF8
 	.4byte func_803F5BC8
 	.4byte func_803F5058
@@ -40980,7 +40980,7 @@ lbl_8056CF68:
 	.4byte 0
 	.4byte func_803F5B90
 	.4byte 0
-	.4byte func_803F45B4
+	.4byte __dt__Q34nw4r3g3d6ScnObjFv
 	.4byte func_803F5C34
 	.4byte func_803F5C04
 	.4byte 0
@@ -40997,15 +40997,15 @@ lbl_8056CFA0:
 	# ROM: 0x5690A0
 	.4byte 0
 	.4byte 0
-	.4byte func_803F7570
-	.4byte func_803F6864
-	.4byte func_803F7560
-	.4byte func_803F6984
-	.4byte func_803F7264
-	.4byte func_803F73E4
-	.4byte func_803F7448
-	.4byte func_803F74D0
-	.4byte func_803F7558
+	.4byte __dt__Q34nw4r3g3d12ScnObjGatherFv
+	.4byte Add__Q34nw4r3g3d12ScnObjGatherFPQ34nw4r3g3d6ScnObjbb
+	.4byte Clear__Q34nw4r3g3d12ScnObjGatherFv
+	.4byte ZSort__Q34nw4r3g3d12ScnObjGatherFv
+	.4byte Sort__Q34nw4r3g3d12ScnObjGatherFv
+	.4byte Sort__Q34nw4r3g3d12ScnObjGatherFPFPCQ34nw4r3g3d6ScnObjPCQ34nw4r3g3d6ScnObj_bPFPCQ34nw4r3g3d6ScnObjPCQ34nw4r3g3d6ScnObj_b
+	.4byte DrawOpa__Q34nw4r3g3d12ScnObjGatherFPQ34nw4r3g3d14ResMdlDrawMode
+	.4byte DrawXlu__Q34nw4r3g3d12ScnObjGatherFPQ34nw4r3g3d14ResMdlDrawMode
+	.4byte CheckScnObj__Q34nw4r3g3d12ScnObjGatherFPQ34nw4r3g3d6ScnObj
 	.4byte 0
 
 
@@ -41014,11 +41014,11 @@ lbl_8056CFD0:
 	# ROM: 0x5690D0
 	.4byte 0
 	.4byte 0
-	.4byte func_803F75B0
-	.4byte func_803F5D78
-	.4byte func_803F67E8
-	.4byte func_803F7648
-	.4byte func_803F7618
+	.4byte IsDerivedFrom__Q34nw4r3g3d7ScnRootCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d7ScnRootFUlUlPv
+	.4byte __dt__Q34nw4r3g3d7ScnRootFv
+	.4byte GetTypeObj__Q34nw4r3g3d7ScnRootCFv
+	.4byte GetTypeName__Q34nw4r3g3d7ScnRootCFv
 	.4byte func_803F5058
 	.4byte func_803F4678
 	.4byte func_803F4810
@@ -41124,11 +41124,11 @@ lbl_8056D150:
 	# ROM: 0x569250
 	.4byte 0
 	.4byte 0
-	.4byte func_803FD044
-	.4byte func_803FCF3C
-	.4byte func_803FD0E8
-	.4byte func_803FD0DC
-	.4byte func_803FD0AC
+	.4byte IsDerivedFrom__Q34nw4r3g3d7ScnProcCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d7ScnProcFUlUlPv
+	.4byte __dt__Q34nw4r3g3d7ScnProcFv
+	.4byte GetTypeObj__Q34nw4r3g3d7ScnProcCFv
+	.4byte GetTypeName__Q34nw4r3g3d7ScnProcCFv
 	.4byte func_803F4A88
 	.4byte func_803F4AC0
 	.4byte func_803F4B08

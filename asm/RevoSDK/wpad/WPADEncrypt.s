@@ -10,10 +10,10 @@ WPADiCreateKey:
 /* 803749D8 0033DF98  90 01 00 A4 */	stw r0, 0xa4(r1)
 /* 803749DC 0033DF9C  39 61 00 A0 */	addi r11, r1, 0xa0
 /* 803749E0 0033DFA0  4B F4 57 41 */	bl _savegpr_14
-/* 803749E4 0033DFA4  3C 80 80 5E */	lis r4, lbl_805DDAD0@ha
+/* 803749E4 0033DFA4  3C 80 80 5E */	lis r4, __rvl_p_wpadcb@ha
 /* 803749E8 0033DFA8  3F C0 80 56 */	lis r30, lbl_80560FA0@ha
 /* 803749EC 0033DFAC  54 60 10 3A */	slwi r0, r3, 2
-/* 803749F0 0033DFB0  38 84 DA D0 */	addi r4, r4, lbl_805DDAD0@l
+/* 803749F0 0033DFB0  38 84 DA D0 */	addi r4, r4, __rvl_p_wpadcb@l
 /* 803749F4 0033DFB4  3B DE 0F A0 */	addi r30, r30, lbl_80560FA0@l
 /* 803749F8 0033DFB8  7E 04 00 2E */	lwzx r16, r4, r0
 /* 803749FC 0033DFBC  4B FE 7F 85 */	bl OSGetTick
@@ -459,10 +459,10 @@ WPADiCreateKeyFor3rd:
 /* 803750C8 0033E688  90 01 00 A4 */	stw r0, 0xa4(r1)
 /* 803750CC 0033E68C  39 61 00 A0 */	addi r11, r1, 0xa0
 /* 803750D0 0033E690  4B F4 50 51 */	bl _savegpr_14
-/* 803750D4 0033E694  3C 80 80 5E */	lis r4, lbl_805DDAD0@ha
+/* 803750D4 0033E694  3C 80 80 5E */	lis r4, __rvl_p_wpadcb@ha
 /* 803750D8 0033E698  3F C0 80 56 */	lis r30, lbl_80560FA0@ha
 /* 803750DC 0033E69C  54 60 10 3A */	slwi r0, r3, 2
-/* 803750E0 0033E6A0  38 84 DA D0 */	addi r4, r4, lbl_805DDAD0@l
+/* 803750E0 0033E6A0  38 84 DA D0 */	addi r4, r4, __rvl_p_wpadcb@l
 /* 803750E4 0033E6A4  3B DE 0F A0 */	addi r30, r30, lbl_80560FA0@l
 /* 803750E8 0033E6A8  7E 04 00 2E */	lwzx r16, r4, r0
 /* 803750EC 0033E6AC  4B FE 78 95 */	bl OSGetTick
@@ -906,11 +906,11 @@ lbl_80375188:
 .global WPADiDecode
 WPADiDecode:
 /* 803757C0 0033ED80  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 803757C4 0033ED84  3D 00 80 5E */	lis r8, lbl_805DDAD0@ha
+/* 803757C4 0033ED84  3D 00 80 5E */	lis r8, __rvl_p_wpadcb@ha
 /* 803757C8 0033ED88  2C 05 00 00 */	cmpwi r5, 0
 /* 803757CC 0033ED8C  54 60 10 3A */	slwi r0, r3, 2
 /* 803757D0 0033ED90  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 803757D4 0033ED94  39 08 DA D0 */	addi r8, r8, lbl_805DDAD0@l
+/* 803757D4 0033ED94  39 08 DA D0 */	addi r8, r8, __rvl_p_wpadcb@l
 /* 803757D8 0033ED98  38 E0 00 00 */	li r7, 0
 /* 803757DC 0033ED9C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 803757E0 0033EDA0  93 A1 00 14 */	stw r29, 0x14(r1)

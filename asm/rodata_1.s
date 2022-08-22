@@ -14806,8 +14806,8 @@ lbl_8050D020:
 	.4byte 0
 
 	#seems like an ascii uppercase/lowercase conversion table
-.global lbl_8050D220
-lbl_8050D220:
+.global __lower_mapC
+__lower_mapC:
 	.4byte 0x00010203
 	.4byte 0x04050607
 	.4byte 0x08090A0B
@@ -14873,8 +14873,8 @@ lbl_8050D220:
 	.4byte 0xF8F9FAFB
 	.4byte 0xFCFDFEFF
 
-.global lbl_8050D320
-lbl_8050D320:
+.global __upper_mapC
+__upper_mapC:
 	.4byte 0x00010203
 	.4byte 0x04050607
 	.4byte 0x08090A0B
@@ -14996,8 +14996,8 @@ lbl_8050D578:
 	.balign 4
 	.4byte 0
 
-.global lbl_8050D588
-lbl_8050D588:
+.global __wctype_mapC
+__wctype_mapC:
 	.2byte 0x0004
 	.2byte 0x0004
 	.2byte 0x0004
@@ -15255,8 +15255,8 @@ lbl_8050D588:
 	.2byte 0
 	.2byte 0
 
-.global lowercaseTable
-lowercaseTable:
+.global __wlower_mapC
+__wlower_mapC:
 	.2byte 0x0000
 	.2byte 0x0001
 	.2byte 0x0002
@@ -15514,8 +15514,8 @@ lowercaseTable:
 	.2byte 0x00FE
 	.2byte 0x00FF
 
-.global uppercaseTable
-uppercaseTable:
+.global __wupper_mapC
+__wupper_mapC:
 	.2byte 0x0000
 	.2byte 0x0001
 	.2byte 0x0002

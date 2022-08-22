@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803FD128
-func_803FD128:
+.global __ct__Q34nw4r3g3d3FogFPQ34nw4r3g3d7FogData
+__ct__Q34nw4r3g3d3FogFPQ34nw4r3g3d7FogData:
 /* 803FD128 003C66E8  90 83 00 00 */	stw r4, 0(r3)
 /* 803FD12C 003C66EC  4E 80 00 20 */	blr 
 
@@ -107,8 +107,8 @@ lbl_803FD250:
 /* 803FD274 003C6834  98 09 00 03 */	stb r0, 3(r9)
 /* 803FD278 003C6838  4E 80 00 20 */	blr 
 
-.global func_803FD27C
-func_803FD27C:
+.global SetFogRangeAdjParam__Q34nw4r3g3d3FogFUsUsRCQ34nw4r4math5MTX44
+SetFogRangeAdjParam__Q34nw4r3g3d3FogFUsUsRCQ34nw4r4math5MTX44:
 /* 803FD27C 003C683C  80 63 00 00 */	lwz r3, 0(r3)
 /* 803FD280 003C6840  2C 03 00 00 */	cmpwi r3, 0
 /* 803FD284 003C6844  4D 82 00 20 */	beqlr 

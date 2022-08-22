@@ -277,8 +277,8 @@ lbl_802D19F0:
 .global ARCConvertPathToEntrynum
 ARCConvertPathToEntrynum:
 /* 802D1A10 0029AFD0  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 802D1A14 0029AFD4  3C C0 80 54 */	lis r6, lbl_8053F548@ha
-/* 802D1A18 0029AFD8  38 C6 F5 48 */	addi r6, r6, lbl_8053F548@l
+/* 802D1A14 0029AFD4  3C C0 80 54 */	lis r6, _current_locale@ha
+/* 802D1A18 0029AFD8  38 C6 F5 48 */	addi r6, r6, _current_locale@l
 /* 802D1A1C 0029AFDC  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802D1A20 0029AFE0  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 802D1A24 0029AFE4  93 A1 00 14 */	stw r29, 0x14(r1)

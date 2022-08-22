@@ -62,8 +62,8 @@ lbl_8040ADA8:
 /* 8040ADE4 003D43A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040ADE8 003D43A8  4E 80 00 20 */	blr 
 
-.global func_8040ADEC
-func_8040ADEC:
+.global SinCosFIdx__Q24nw4r4mathFPfPff
+SinCosFIdx__Q24nw4r4mathFPfPff:
 /* 8040ADEC 003D43AC  FC 00 0A 10 */	fabs f0, f1
 /* 8040ADF0 003D43B0  3C A0 80 52 */	lis r5, lbl_80521110@ha
 /* 8040ADF4 003D43B4  C0 42 C2 A0 */	lfs f2, lbl_8066C620@sda21(r2)
