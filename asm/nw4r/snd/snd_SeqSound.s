@@ -419,7 +419,7 @@ lbl_8041B138:
 /* 8041B13C 003E46FC  7F 85 E3 78 */	mr r5, r28
 /* 8041B140 003E4700  38 7E 00 04 */	addi r3, r30, 4
 /* 8041B144 003E4704  38 81 00 08 */	addi r4, r1, 8
-/* 8041B148 003E4708  48 01 03 D9 */	bl func_8042B520
+/* 8041B148 003E4708  48 01 03 D9 */	bl Insert__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8IteratorPQ34nw4r2ut12LinkListNode
 /* 8041B14C 003E470C  7F E3 FB 78 */	mr r3, r31
 /* 8041B150 003E4710  4B F3 EB F1 */	bl OSUnlockMutex
 /* 8041B154 003E4714  80 01 00 24 */	lwz r0, 0x24(r1)

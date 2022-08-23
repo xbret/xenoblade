@@ -225,7 +225,7 @@ lbl_80429EB4:
 /* 80429EB8 003F3478  7F 85 E3 78 */	mr r5, r28
 /* 80429EBC 003F347C  38 7E 00 04 */	addi r3, r30, 4
 /* 80429EC0 003F3480  38 81 00 08 */	addi r4, r1, 8
-/* 80429EC4 003F3484  48 00 16 5D */	bl func_8042B520
+/* 80429EC4 003F3484  48 00 16 5D */	bl Insert__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8IteratorPQ34nw4r2ut12LinkListNode
 /* 80429EC8 003F3488  7F E3 FB 78 */	mr r3, r31
 /* 80429ECC 003F348C  4B F2 FE 75 */	bl OSUnlockMutex
 /* 80429ED0 003F3490  80 01 00 24 */	lwz r0, 0x24(r1)

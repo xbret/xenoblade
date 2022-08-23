@@ -998,8 +998,8 @@ lbl_803E1A14:
 /* 803E1A98 003AB058  38 60 00 01 */	li r3, 1
 /* 803E1A9C 003AB05C  4E 80 00 20 */	blr 
 
-.global func_803E1AA0
-func_803E1AA0:
+.global ApplyVisAnmResult__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjVis
+ApplyVisAnmResult__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjVis:
 /* 803E1AA0 003AB060  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803E1AA4 003AB064  7C 08 02 A6 */	mflr r0
 /* 803E1AA8 003AB068  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1019,7 +1019,7 @@ lbl_803E1AD0:
 /* 803E1ADC 003AB09C  40 82 00 58 */	bne lbl_803E1B34
 /* 803E1AE0 003AB0A0  7F 43 D3 78 */	mr r3, r26
 /* 803E1AE4 003AB0A4  7F 84 E3 78 */	mr r4, r28
-/* 803E1AE8 003AB0A8  4B FF 7C 19 */	bl func_803D9700
+/* 803E1AE8 003AB0A8  4B FF 7C 19 */	bl GetResNode__Q34nw4r3g3d6ResMdlCFUl
 /* 803E1AEC 003AB0AC  81 9B 00 00 */	lwz r12, 0(r27)
 /* 803E1AF0 003AB0B0  7C 7F 1B 78 */	mr r31, r3
 /* 803E1AF4 003AB0B4  7F 63 DB 78 */	mr r3, r27
@@ -1093,8 +1093,8 @@ lbl_803E1BC8:
 /* 803E1BE0 003AB1A0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803E1BE4 003AB1A4  4E 80 00 20 */	blr 
 
-.global func_803E1BE8
-func_803E1BE8:
+.global TestExistence__Q34nw4r3g3d12AnmObjMatClrCFUl
+TestExistence__Q34nw4r3g3d12AnmObjMatClrCFUl:
 /* 803E1BE8 003AB1A8  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 803E1BEC 003AB1AC  54 80 08 3C */	slwi r0, r4, 1
 /* 803E1BF0 003AB1B0  7C 03 02 2E */	lhzx r0, r3, r0

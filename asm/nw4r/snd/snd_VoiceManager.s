@@ -55,12 +55,12 @@ func_80428CE4:
 /* 80428D08 003F22C8  34 63 00 10 */	addic. r3, r3, 0x10
 /* 80428D0C 003F22CC  41 82 00 0C */	beq lbl_80428D18
 /* 80428D10 003F22D0  38 80 00 00 */	li r4, 0
-/* 80428D14 003F22D4  48 00 26 FD */	bl func_8042B410
+/* 80428D14 003F22D4  48 00 26 FD */	bl __dt__Q44nw4r2ut6detail12LinkListImplFv
 lbl_80428D18:
 /* 80428D18 003F22D8  34 7E 00 04 */	addic. r3, r30, 4
 /* 80428D1C 003F22DC  41 82 00 0C */	beq lbl_80428D28
 /* 80428D20 003F22E0  38 80 00 00 */	li r4, 0
-/* 80428D24 003F22E4  48 00 26 ED */	bl func_8042B410
+/* 80428D24 003F22E4  48 00 26 ED */	bl __dt__Q44nw4r2ut6detail12LinkListImplFv
 lbl_80428D28:
 /* 80428D28 003F22E8  2C 1F 00 00 */	cmpwi r31, 0
 /* 80428D2C 003F22EC  40 81 00 0C */	ble lbl_80428D38
@@ -115,7 +115,7 @@ lbl_80428DC8:
 /* 80428DCC 003F238C  38 7B 00 10 */	addi r3, r27, 0x10
 /* 80428DD0 003F2390  38 81 00 08 */	addi r4, r1, 8
 /* 80428DD4 003F2394  38 A5 01 1C */	addi r5, r5, 0x11c
-/* 80428DD8 003F2398  48 00 27 49 */	bl func_8042B520
+/* 80428DD8 003F2398  48 00 27 49 */	bl Insert__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8IteratorPQ34nw4r2ut12LinkListNode
 /* 80428DDC 003F239C  3B BD 01 24 */	addi r29, r29, 0x124
 /* 80428DE0 003F23A0  3B 9C 00 01 */	addi r28, r28, 1
 lbl_80428DE4:
@@ -175,7 +175,7 @@ lbl_80428E90:
 /* 80428E94 003F2454  38 7D 00 10 */	addi r3, r29, 0x10
 /* 80428E98 003F2458  38 81 00 08 */	addi r4, r1, 8
 /* 80428E9C 003F245C  93 C1 00 08 */	stw r30, 8(r1)
-/* 80428EA0 003F2460  48 00 25 F5 */	bl func_8042B494
+/* 80428EA0 003F2460  48 00 25 F5 */	bl Erase__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8Iterator
 /* 80428EA4 003F2464  81 9E FE EC */	lwz r12, -0x114(r30)
 /* 80428EA8 003F2468  38 7E FE E4 */	addi r3, r30, -284
 /* 80428EAC 003F246C  38 80 FF FF */	li r4, -1
@@ -290,7 +290,7 @@ lbl_8042902C:
 /* 80429030 003F25F0  7F 65 DB 78 */	mr r5, r27
 /* 80429034 003F25F4  38 7F 00 04 */	addi r3, r31, 4
 /* 80429038 003F25F8  38 81 00 08 */	addi r4, r1, 8
-/* 8042903C 003F25FC  48 00 24 E5 */	bl func_8042B520
+/* 8042903C 003F25FC  48 00 24 E5 */	bl Insert__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8IteratorPQ34nw4r2ut12LinkListNode
 /* 80429040 003F2600  7F A3 EB 78 */	mr r3, r29
 /* 80429044 003F2604  4B F2 F9 AD */	bl OSRestoreInterrupts
 /* 80429048 003F2608  3B BF 00 08 */	addi r29, r31, 8
@@ -350,7 +350,7 @@ func_804290A8:
 /* 80429100 003F26C0  90 01 00 08 */	stw r0, 8(r1)
 /* 80429104 003F26C4  38 7C 00 10 */	addi r3, r28, 0x10
 /* 80429108 003F26C8  38 81 00 08 */	addi r4, r1, 8
-/* 8042910C 003F26CC  48 00 24 15 */	bl func_8042B520
+/* 8042910C 003F26CC  48 00 24 15 */	bl Insert__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8IteratorPQ34nw4r2ut12LinkListNode
 /* 80429110 003F26D0  7F C3 F3 78 */	mr r3, r30
 /* 80429114 003F26D4  4B F2 F8 DD */	bl OSRestoreInterrupts
 /* 80429118 003F26D8  7F E3 FB 78 */	mr r3, r31
@@ -470,7 +470,7 @@ func_80429258:
 /* 8042929C 003F285C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 804292A0 003F2860  38 7B 00 10 */	addi r3, r27, 0x10
 /* 804292A4 003F2864  38 81 00 0C */	addi r4, r1, 0xc
-/* 804292A8 003F2868  48 00 22 79 */	bl func_8042B520
+/* 804292A8 003F2868  48 00 22 79 */	bl Insert__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8IteratorPQ34nw4r2ut12LinkListNode
 /* 804292AC 003F286C  7F C3 F3 78 */	mr r3, r30
 /* 804292B0 003F2870  4B F2 F7 41 */	bl OSRestoreInterrupts
 /* 804292B4 003F2874  4B F2 F6 FD */	bl OSDisableInterrupts
@@ -496,7 +496,7 @@ lbl_804292F4:
 /* 804292F8 003F28B8  7F A5 EB 78 */	mr r5, r29
 /* 804292FC 003F28BC  38 7B 00 04 */	addi r3, r27, 4
 /* 80429300 003F28C0  38 81 00 08 */	addi r4, r1, 8
-/* 80429304 003F28C4  48 00 22 1D */	bl func_8042B520
+/* 80429304 003F28C4  48 00 22 1D */	bl Insert__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8IteratorPQ34nw4r2ut12LinkListNode
 /* 80429308 003F28C8  7F C3 F3 78 */	mr r3, r30
 /* 8042930C 003F28CC  4B F2 F6 E5 */	bl OSRestoreInterrupts
 /* 80429310 003F28D0  3B DB 00 08 */	addi r30, r27, 8

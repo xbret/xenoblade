@@ -40926,7 +40926,7 @@ lbl_8056CEC8:
 lbl_8056CED8:
 	# ROM: 0x568FD8
 	.4byte lbl_803F4800
-	.4byte func_803F4698
+	.4byte lbl_803F4698
 	.4byte lbl_803F46C0
 	.4byte lbl_803F46E8
 	.4byte lbl_803F4710
@@ -40941,7 +40941,7 @@ lbl_8056CED8:
 lbl_8056CF00:
 	# ROM: 0x569000
 	.4byte lbl_803F48D0
-	.4byte func_803F4840
+	.4byte lbl_803F4840
 	.4byte lbl_803F4850
 	.4byte lbl_803F4860
 	.4byte lbl_803F4870
@@ -41033,7 +41033,7 @@ lbl_8056CFD0:
 .global lbl_8056D010
 lbl_8056D010:
 	# ROM: 0x569110
-	.4byte func_803F8690
+	.4byte lbl_803F8690
 	.4byte lbl_803F86E8
 	.4byte lbl_803F8740
 	.4byte lbl_803F8798
@@ -41053,22 +41053,22 @@ lbl_8056D038:
 	# ROM: 0x569138
 	.4byte 0
 	.4byte 0
-	.4byte func_803F9464
-	.4byte func_803F7C38
-	.4byte func_803F9300
-	.4byte func_803F94FC
-	.4byte func_803F94CC
+	.4byte IsDerivedFrom__Q34nw4r3g3d12ScnMdlSimpleCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d12ScnMdlSimpleFUlUlPv
+	.4byte __dt__Q34nw4r3g3d12ScnMdlSimpleFv
+	.4byte GetTypeObj__Q34nw4r3g3d12ScnMdlSimpleCFv
+	.4byte GetTypeName__Q34nw4r3g3d12ScnMdlSimpleCFv
 	.4byte func_803F4A88
-	.4byte func_803F84C8
-	.4byte func_803F8510
+	.4byte SetScnObjOption__Q34nw4r3g3d12ScnMdlSimpleFUlUl
+	.4byte GetScnObjOption__Q34nw4r3g3d12ScnMdlSimpleCFUlPUl
 	.4byte func_803F493C
 	.4byte func_803F4948
 	.4byte func_803F4B54
-	.4byte func_803F8634
-	.4byte func_803F8C30
-	.4byte func_803F8DA8
-	.4byte func_803F8E94
-	.4byte func_803F8EFC
+	.4byte SetAnmObj__Q34nw4r3g3d12ScnMdlSimpleFPQ34nw4r3g3d6AnmObjQ44nw4r3g3d12ScnMdlSimple10AnmObjType
+	.4byte RemoveAnmObj__Q34nw4r3g3d12ScnMdlSimpleFPQ34nw4r3g3d6AnmObj
+	.4byte RemoveAnmObj__Q34nw4r3g3d12ScnMdlSimpleFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
+	.4byte GetAnmObj__Q34nw4r3g3d12ScnMdlSimpleFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
+	.4byte GetAnmObj__Q34nw4r3g3d12ScnMdlSimpleCFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 
 
 .global lbl_8056D080
@@ -41130,8 +41130,8 @@ lbl_8056D150:
 	.4byte GetTypeObj__Q34nw4r3g3d7ScnProcCFv
 	.4byte GetTypeName__Q34nw4r3g3d7ScnProcCFv
 	.4byte func_803F4A88
-	.4byte func_803F4AC0
-	.4byte func_803F4B08
+	.4byte SetScnObjOption__Q34nw4r3g3d7ScnLeafFUlUl
+	.4byte GetScnObjOption__Q34nw4r3g3d7ScnLeafCFUlPUl
 	.4byte func_803F493C
 	.4byte func_803F4948
 	.4byte func_803F4B54
@@ -41147,33 +41147,33 @@ lbl_8056D1D0:
 	# ROM: 0x5692D0
 	.4byte 0
 	.4byte 0
-	.4byte func_803FEB68
-	.4byte func_803FF920
-	.4byte func_803FEF80
-	.4byte func_803FF278
-	.4byte func_803FF2FC
-	.4byte func_803FF300
-	.4byte func_803FF38C
-	.4byte func_803FEDB8
-	.4byte func_803FEDC4
-	.4byte func_803FEDC8
-	.4byte func_803FEDF0
-	.4byte func_803FEE18
-	.4byte func_803FEE20
-	.4byte func_803FEE24
-	.4byte func_803FEECC
-	.4byte func_803FF440
-	.4byte func_803FF45C
-	.4byte func_803FF4EC
-	.4byte func_803FF504
-	.4byte func_803FF598
-	.4byte lbl_803FF5A0
-	.4byte func_803FF5A8
-	.4byte func_803FF6A8
-	.4byte func_803FF8E4
-	.4byte func_803FF8F8
-	.4byte func_803FF900
-	.4byte func_803FF7A8
+	.4byte __dt__Q34nw4r3lyt4PaneFv
+	.4byte GetRuntimeTypeInfo__Q34nw4r3lyt4PaneCFv
+	.4byte CalculateMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
+	.4byte Draw__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
+	.4byte DrawSelf__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
+	.4byte Animate__Q34nw4r3lyt4PaneFUl
+	.4byte AnimateSelf__Q34nw4r3lyt4PaneFUl
+	.4byte GetVtxColor__Q34nw4r3lyt4PaneCFUl
+	.4byte SetVtxColor__Q34nw4r3lyt4PaneFUlQ34nw4r2ut5Color
+	.4byte GetColorElement__Q34nw4r3lyt4PaneCFUl
+	.4byte SetColorElement__Q34nw4r3lyt4PaneFUlUc
+	.4byte GetVtxColorElement__Q34nw4r3lyt4PaneCFUl
+	.4byte SetVtxColorElement__Q34nw4r3lyt4PaneFUlUc
+	.4byte FindPaneByName__Q34nw4r3lyt4PaneFPCcb
+	.4byte FindMaterialByName__Q34nw4r3lyt4PaneFPCcb
+	.4byte BindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
+	.4byte UnbindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformb
+	.4byte UnbindAllAnimation__Q34nw4r3lyt4PaneFb
+	.4byte UnbindAnimationSelf__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransform
+	.4byte FindAnimationLinkSelf__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransform
+	.4byte FindAnimationLinkSelf__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResource
+	.4byte SetAnimationEnable__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
+	.4byte SetAnimationEnable__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResourcebb
+	.4byte GetMaterialNum__Q34nw4r3lyt4PaneCFv
+	.4byte GetMaterial__Q34nw4r3lyt4PaneCFv
+	.4byte GetMaterial__Q34nw4r3lyt4PaneCFUl
+	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte 0
 
 
@@ -41214,31 +41214,31 @@ lbl_8056D298:
 	.4byte 0
 	.4byte func_80400EB0
 	.4byte func_804012A8
-	.4byte func_803FEF80
-	.4byte func_803FF278
+	.4byte CalculateMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
+	.4byte Draw__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte func_804011CC
-	.4byte func_803FF300
-	.4byte func_803FF38C
+	.4byte Animate__Q34nw4r3lyt4PaneFUl
+	.4byte AnimateSelf__Q34nw4r3lyt4PaneFUl
 	.4byte lbl_80401144
 	.4byte func_80401170
-	.4byte func_803FEDC8
-	.4byte func_803FEDF0
+	.4byte GetColorElement__Q34nw4r3lyt4PaneCFUl
+	.4byte SetColorElement__Q34nw4r3lyt4PaneFUlUc
 	.4byte func_8040119C
 	.4byte func_804011B4
-	.4byte func_803FEE24
-	.4byte func_803FEECC
-	.4byte func_803FF440
-	.4byte func_803FF45C
-	.4byte func_803FF4EC
-	.4byte func_803FF504
-	.4byte func_803FF598
-	.4byte lbl_803FF5A0
-	.4byte func_803FF5A8
-	.4byte func_803FF6A8
-	.4byte func_803FF8E4
-	.4byte func_803FF8F8
-	.4byte func_803FF900
-	.4byte func_803FF7A8
+	.4byte FindPaneByName__Q34nw4r3lyt4PaneFPCcb
+	.4byte FindMaterialByName__Q34nw4r3lyt4PaneFPCcb
+	.4byte BindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
+	.4byte UnbindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformb
+	.4byte UnbindAllAnimation__Q34nw4r3lyt4PaneFb
+	.4byte UnbindAnimationSelf__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransform
+	.4byte FindAnimationLinkSelf__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransform
+	.4byte FindAnimationLinkSelf__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResource
+	.4byte SetAnimationEnable__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
+	.4byte SetAnimationEnable__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResourcebb
+	.4byte GetMaterialNum__Q34nw4r3lyt4PaneCFv
+	.4byte GetMaterial__Q34nw4r3lyt4PaneCFv
+	.4byte GetMaterial__Q34nw4r3lyt4PaneCFUl
+	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte func_80400F88
 
 
@@ -41249,30 +41249,30 @@ lbl_8056D310:
 	.4byte 0
 	.4byte func_804017E0
 	.4byte func_80402E14
-	.4byte func_803FEF80
-	.4byte func_803FF278
+	.4byte CalculateMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
+	.4byte Draw__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte func_80401A58
-	.4byte func_803FF300
-	.4byte func_803FF38C
+	.4byte Animate__Q34nw4r3lyt4PaneFUl
+	.4byte AnimateSelf__Q34nw4r3lyt4PaneFUl
 	.4byte func_80401980
 	.4byte func_804019B4
-	.4byte func_803FEDC8
-	.4byte func_803FEDF0
+	.4byte GetColorElement__Q34nw4r3lyt4PaneCFUl
+	.4byte SetColorElement__Q34nw4r3lyt4PaneFUlUc
 	.4byte func_80401A28
 	.4byte func_80401A40
-	.4byte func_803FEE24
-	.4byte func_803FEECC
-	.4byte func_803FF440
-	.4byte func_803FF45C
-	.4byte func_803FF4EC
-	.4byte func_803FF504
-	.4byte func_803FF598
-	.4byte lbl_803FF5A0
-	.4byte func_803FF5A8
-	.4byte func_803FF6A8
-	.4byte func_803FF8E4
-	.4byte func_803FF8F8
-	.4byte func_803FF900
+	.4byte FindPaneByName__Q34nw4r3lyt4PaneFPCcb
+	.4byte FindMaterialByName__Q34nw4r3lyt4PaneFPCcb
+	.4byte BindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
+	.4byte UnbindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformb
+	.4byte UnbindAllAnimation__Q34nw4r3lyt4PaneFb
+	.4byte UnbindAnimationSelf__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransform
+	.4byte FindAnimationLinkSelf__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransform
+	.4byte FindAnimationLinkSelf__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResource
+	.4byte SetAnimationEnable__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
+	.4byte SetAnimationEnable__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResourcebb
+	.4byte GetMaterialNum__Q34nw4r3lyt4PaneCFv
+	.4byte GetMaterial__Q34nw4r3lyt4PaneCFv
+	.4byte GetMaterial__Q34nw4r3lyt4PaneCFUl
 	.4byte func_80402838
 	.4byte func_8040241C
 	.4byte func_804024E0
@@ -41308,31 +41308,31 @@ lbl_8056D3D4:
 	.4byte 0
 	.4byte func_804030AC
 	.4byte func_804053C8
-	.4byte func_803FEF80
-	.4byte func_803FF278
+	.4byte CalculateMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
+	.4byte Draw__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte func_80403374
-	.4byte func_803FF300
+	.4byte Animate__Q34nw4r3lyt4PaneFUl
 	.4byte func_804034B4
 	.4byte func_804032EC
 	.4byte func_80403318
-	.4byte func_803FEDC8
-	.4byte func_803FEDF0
+	.4byte GetColorElement__Q34nw4r3lyt4PaneCFUl
+	.4byte SetColorElement__Q34nw4r3lyt4PaneFUlUc
 	.4byte func_80403344
 	.4byte func_8040335C
-	.4byte func_803FEE24
+	.4byte FindPaneByName__Q34nw4r3lyt4PaneFPCcb
 	.4byte func_804031F0
-	.4byte func_803FF440
-	.4byte func_803FF45C
-	.4byte func_803FF4EC
+	.4byte BindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
+	.4byte UnbindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformb
+	.4byte UnbindAllAnimation__Q34nw4r3lyt4PaneFb
 	.4byte func_80403544
-	.4byte func_803FF598
-	.4byte lbl_803FF5A0
-	.4byte func_803FF5A8
-	.4byte func_803FF6A8
+	.4byte FindAnimationLinkSelf__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransform
+	.4byte FindAnimationLinkSelf__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResource
+	.4byte SetAnimationEnable__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
+	.4byte SetAnimationEnable__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResourcebb
 	.4byte func_80405354
-	.4byte func_803FF8F8
+	.4byte GetMaterial__Q34nw4r3lyt4PaneCFv
 	.4byte func_80405364
-	.4byte func_803FF7A8
+	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte func_804053B8
 	.4byte func_80405390
 	.4byte func_804035D4
@@ -41348,31 +41348,31 @@ lbl_8056D460:
 	.4byte 0
 	.4byte func_80405418
 	.4byte func_80405474
-	.4byte func_803FEF80
-	.4byte func_803FF278
+	.4byte CalculateMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
+	.4byte Draw__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte func_80405470
-	.4byte func_803FF300
-	.4byte func_803FF38C
-	.4byte func_803FEDB8
-	.4byte func_803FEDC4
-	.4byte func_803FEDC8
-	.4byte func_803FEDF0
-	.4byte func_803FEE18
-	.4byte func_803FEE20
-	.4byte func_803FEE24
-	.4byte func_803FEECC
-	.4byte func_803FF440
-	.4byte func_803FF45C
-	.4byte func_803FF4EC
-	.4byte func_803FF504
-	.4byte func_803FF598
-	.4byte lbl_803FF5A0
-	.4byte func_803FF5A8
-	.4byte func_803FF6A8
-	.4byte func_803FF8E4
-	.4byte func_803FF8F8
-	.4byte func_803FF900
-	.4byte func_803FF7A8
+	.4byte Animate__Q34nw4r3lyt4PaneFUl
+	.4byte AnimateSelf__Q34nw4r3lyt4PaneFUl
+	.4byte GetVtxColor__Q34nw4r3lyt4PaneCFUl
+	.4byte SetVtxColor__Q34nw4r3lyt4PaneFUlQ34nw4r2ut5Color
+	.4byte GetColorElement__Q34nw4r3lyt4PaneCFUl
+	.4byte SetColorElement__Q34nw4r3lyt4PaneFUlUc
+	.4byte GetVtxColorElement__Q34nw4r3lyt4PaneCFUl
+	.4byte SetVtxColorElement__Q34nw4r3lyt4PaneFUlUc
+	.4byte FindPaneByName__Q34nw4r3lyt4PaneFPCcb
+	.4byte FindMaterialByName__Q34nw4r3lyt4PaneFPCcb
+	.4byte BindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
+	.4byte UnbindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformb
+	.4byte UnbindAllAnimation__Q34nw4r3lyt4PaneFb
+	.4byte UnbindAnimationSelf__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransform
+	.4byte FindAnimationLinkSelf__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransform
+	.4byte FindAnimationLinkSelf__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResource
+	.4byte SetAnimationEnable__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
+	.4byte SetAnimationEnable__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResourcebb
+	.4byte GetMaterialNum__Q34nw4r3lyt4PaneCFv
+	.4byte GetMaterial__Q34nw4r3lyt4PaneCFv
+	.4byte GetMaterial__Q34nw4r3lyt4PaneCFUl
+	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte 0
 
 
@@ -41423,7 +41423,7 @@ lbl_8056D548:
 	# ROM: 0x569648
 	.4byte 0
 	.4byte 0
-	.4byte func_804086DC
+	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 	.4byte 0
 
 
@@ -41432,13 +41432,13 @@ lbl_8056D558:
 	# ROM: 0x569658
 	.4byte 0
 	.4byte 0
-	.4byte func_80408A18
-	.4byte func_80408A9C
-	.4byte func_80408AB0
-	.4byte func_80408C14
-	.4byte func_80408DDC
-	.4byte func_80408EF0
-	.4byte func_804090DC
+	.4byte __dt__Q34nw4r3lyt18AnimTransformBasicFv
+	.4byte SetResource__Q34nw4r3lyt18AnimTransformBasicFPCQ44nw4r3lyt3res14AnimationBlockPQ34nw4r3lyt16ResourceAccessor
+	.4byte SetResource__Q34nw4r3lyt18AnimTransformBasicFPCQ44nw4r3lyt3res14AnimationBlockPQ34nw4r3lyt16ResourceAccessorUs
+	.4byte Bind__Q34nw4r3lyt18AnimTransformBasicFPQ34nw4r3lyt4Panebb
+	.4byte Bind__Q34nw4r3lyt18AnimTransformBasicFPQ34nw4r3lyt8Materialb
+	.4byte Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt4Pane
+	.4byte Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt8Material
 	.4byte 0
 
 
@@ -41459,8 +41459,8 @@ lbl_8056D598:
 	.4byte 0
 	.4byte 0
 	.4byte func_8003997C
-	.4byte func_80409F98
-	.4byte func_80409FB8
+	.4byte GetResource__Q34nw4r3lyt19ArcResourceAccessorFUlPCcPUl
+	.4byte GetFont__Q34nw4r3lyt19ArcResourceAccessorFPCc
 	.4byte 0
 
 
@@ -46628,7 +46628,7 @@ lbl_805716C8:
 	.4byte func_803F7C34
 	.4byte lbl_80666200
 	.4byte 0
-	.4byte func_803F9424
+	.4byte __dt__Q34nw4r3g3d18ICalcWorldCallbackFv
 	.4byte func_803EECA0
 	.4byte func_803EECA4
 	.4byte func_803EECA8

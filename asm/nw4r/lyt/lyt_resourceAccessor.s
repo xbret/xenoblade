@@ -22,8 +22,8 @@ lbl_80409C70:
 /* 80409C80 003D3240  38 21 00 10 */	addi r1, r1, 0x10
 /* 80409C84 003D3244  4E 80 00 20 */	blr 
 
-.global func_80409C88
-func_80409C88:
+.global __ct__Q34nw4r3lyt16ResourceAccessorFv
+__ct__Q34nw4r3lyt16ResourceAccessorFv:
 /* 80409C88 003D3248  3C 80 80 57 */	lis r4, lbl_8056D580@ha
 /* 80409C8C 003D324C  38 84 D5 80 */	addi r4, r4, lbl_8056D580@l
 /* 80409C90 003D3250  90 83 00 00 */	stw r4, 0(r3)

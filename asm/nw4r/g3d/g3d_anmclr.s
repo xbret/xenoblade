@@ -85,7 +85,7 @@ lbl_803E2A5C:
 lbl_803E2A64:
 /* 803E2A64 003AC024  A3 E8 00 32 */	lhz r31, 0x32(r8)
 /* 803E2A68 003AC028  7C C3 33 78 */	mr r3, r6
-/* 803E2A6C 003AC02C  4B FF 71 95 */	bl func_803D9C00
+/* 803E2A6C 003AC02C  4B FF 71 95 */	bl GetResMatNumEntries__Q34nw4r3g3d6ResMdlCFv
 /* 803E2A70 003AC030  7C 1B 00 D0 */	neg r0, r27
 /* 803E2A74 003AC034  7C 7C 1B 78 */	mr r28, r3
 /* 803E2A78 003AC038  7C 04 DB 78 */	or r4, r0, r27
@@ -517,8 +517,8 @@ lbl_803E3028:
 /* 803E3028 003AC5E8  90 C3 00 04 */	stw r6, 4(r3)
 /* 803E302C 003AC5EC  4E 80 00 20 */	blr 
 
-.global func_803E3030
-func_803E3030:
+.global ApplyTexPatAnmResult__Q24nw4r3g3dFQ34nw4r3g3d9ResTexObjQ34nw4r3g3d10ResTlutObjPCQ34nw4r3g3d15TexPatAnmResult
+ApplyTexPatAnmResult__Q24nw4r3g3dFQ34nw4r3g3d9ResTexObjQ34nw4r3g3d10ResTlutObjPCQ34nw4r3g3d15TexPatAnmResult:
 /* 803E3030 003AC5F0  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803E3034 003AC5F4  7C 08 02 A6 */	mflr r0
 /* 803E3038 003AC5F8  90 01 00 74 */	stw r0, 0x74(r1)

@@ -4,7 +4,6 @@
 
 .balign 16, 0
 #FindNameResource__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCc
-.global FindNameResource__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCc
 FindNameResource__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCc:
 /* 8032C070 002F5630  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8032C074 002F5634  7C 08 02 A6 */	mflr r0
@@ -68,7 +67,6 @@ lbl_8032C120:
 
 .balign 16, 0
 #GetResourceSub__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCcUlPCcPUl
-.global GetResourceSub__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCcUlPCcPUl
 GetResourceSub__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCcUlPCcPUl:
 /* 8032C150 002F5710  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8032C154 002F5714  7C 08 02 A6 */	mflr r0

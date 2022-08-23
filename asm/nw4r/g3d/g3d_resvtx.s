@@ -157,8 +157,8 @@ lbl_803DD394:
 /* 803DD398 003A6958  4B F3 C7 18 */	b GXSetArray
 /* 803DD39C 003A695C  4E 80 00 20 */	blr 
 
-.global func_803DD3A0
-func_803DD3A0:
+.global GetArray__Q34nw4r3g3d9ResVtxClrCFPPCvPUc
+GetArray__Q34nw4r3g3d9ResVtxClrCFPPCvPUc:
 /* 803DD3A0 003A6960  2C 04 00 00 */	cmpwi r4, 0
 /* 803DD3A4 003A6964  41 82 00 24 */	beq lbl_803DD3C8
 /* 803DD3A8 003A6968  80 C3 00 00 */	lwz r6, 0(r3)

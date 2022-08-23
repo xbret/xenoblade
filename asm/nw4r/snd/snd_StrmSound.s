@@ -514,7 +514,7 @@ lbl_804256C8:
 /* 804256CC 003EEC8C  7F 85 E3 78 */	mr r5, r28
 /* 804256D0 003EEC90  38 7E 00 04 */	addi r3, r30, 4
 /* 804256D4 003EEC94  38 81 00 08 */	addi r4, r1, 8
-/* 804256D8 003EEC98  48 00 5E 49 */	bl func_8042B520
+/* 804256D8 003EEC98  48 00 5E 49 */	bl Insert__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8IteratorPQ34nw4r2ut12LinkListNode
 /* 804256DC 003EEC9C  7F E3 FB 78 */	mr r3, r31
 /* 804256E0 003EECA0  4B F3 46 61 */	bl OSUnlockMutex
 /* 804256E4 003EECA4  80 01 00 24 */	lwz r0, 0x24(r1)

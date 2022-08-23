@@ -66,8 +66,8 @@ lbl_8042BED8:
 /* 8042BEF0 003F54B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042BEF4 003F54B4  4E 80 00 20 */	blr 
 
-.global func_8042BEF8
-func_8042BEF8:
+.global Lock__Q34nw4r2ut2LCFv
+Lock__Q34nw4r2ut2LCFv:
 /* 8042BEF8 003F54B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042BEFC 003F54BC  7C 08 02 A6 */	mflr r0
 /* 8042BF00 003F54C0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -101,8 +101,8 @@ lbl_8042BF50:
 /* 8042BF60 003F5520  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042BF64 003F5524  4E 80 00 20 */	blr 
 
-.global func_8042BF68
-func_8042BF68:
+.global Unlock__Q34nw4r2ut2LCFv
+Unlock__Q34nw4r2ut2LCFv:
 /* 8042BF68 003F5528  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042BF6C 003F552C  7C 08 02 A6 */	mflr r0
 /* 8042BF70 003F5530  90 01 00 14 */	stw r0, 0x14(r1)
@@ -130,8 +130,8 @@ func_8042BFA8:
 func_8042BFAC:
 /* 8042BFAC 003F556C  4B F2 82 D4 */	b LCStoreBlocks
 
-.global func_8042BFB0
-func_8042BFB0:
+.global StoreData__Q34nw4r2ut2LCFPvPvUl
+StoreData__Q34nw4r2ut2LCFPvPvUl:
 /* 8042BFB0 003F5570  4B F2 83 00 */	b LCStoreData
 
 

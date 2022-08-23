@@ -508,7 +508,7 @@ lbl_8066BF58:
 lbl_8066BF60:
 	# ROM: 0x575DC0
 	.4byte bta_hh_hdl_event
-	.4byte func_802E38B8
+	.4byte BTA_HhDisable
 
 
 .global lbl_8066BF68

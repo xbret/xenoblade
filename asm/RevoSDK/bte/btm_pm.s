@@ -317,7 +317,6 @@ btm_pm_compare_modes:
 /* 802EA2F8 002B38B8  A0 04 00 08 */	lhz r0, 8(r4)
 /* 802EA2FC 002B38BC  B0 05 00 08 */	sth r0, 8(r5)
 /* 802EA300 002B38C0  4E 80 00 20 */	blr
-.global lbl_802EA304
 lbl_802EA304:
 /* 802EA304 002B38C4  89 24 00 08 */	lbz r9, 8(r4)
 /* 802EA308 002B38C8  2C 09 00 00 */	cmpwi r9, 0
@@ -328,7 +327,6 @@ lbl_802EA304:
 lbl_802EA31C:
 /* 802EA31C 002B38DC  38 60 00 00 */	li r3, 0
 /* 802EA320 002B38E0  4E 80 00 20 */	blr
-.global lbl_802EA324
 lbl_802EA324:
 /* 802EA324 002B38E4  55 00 06 F7 */	rlwinm. r0, r8, 0, 0x1b, 0x1b
 /* 802EA328 002B38E8  41 82 00 40 */	beq lbl_802EA368
@@ -347,7 +345,6 @@ lbl_802EA324:
 /* 802EA35C 002B391C  54 00 07 34 */	rlwinm r0, r0, 0, 0x1c, 0x1a
 /* 802EA360 002B3920  98 05 00 08 */	stb r0, 8(r5)
 /* 802EA364 002B3924  4E 80 00 20 */	blr
-.global lbl_802EA368
 lbl_802EA368:
 /* 802EA368 002B3928  55 20 06 F7 */	rlwinm. r0, r9, 0, 0x1b, 0x1b
 /* 802EA36C 002B392C  41 82 00 40 */	beq lbl_802EA3AC
@@ -366,7 +363,6 @@ lbl_802EA368:
 /* 802EA3A0 002B3960  54 00 07 34 */	rlwinm r0, r0, 0, 0x1c, 0x1a
 /* 802EA3A4 002B3964  98 05 00 08 */	stb r0, 8(r5)
 /* 802EA3A8 002B3968  4E 80 00 20 */	blr
-.global lbl_802EA3AC
 lbl_802EA3AC:
 /* 802EA3AC 002B396C  38 E8 FF FF */	addi r7, r8, -1
 /* 802EA3B0 002B3970  3C C0 80 51 */	lis r6, lbl_8050E240@ha

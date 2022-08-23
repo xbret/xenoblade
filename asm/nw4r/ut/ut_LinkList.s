@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8042B410
-func_8042B410:
+.global __dt__Q44nw4r2ut6detail12LinkListImplFv
+__dt__Q44nw4r2ut6detail12LinkListImplFv:
 /* 8042B410 003F49D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042B414 003F49D4  7C 08 02 A6 */	mflr r0
 /* 8042B418 003F49D8  2C 03 00 00 */	cmpwi r3, 0
@@ -41,8 +41,8 @@ lbl_8042B47C:
 /* 8042B48C 003F4A4C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042B490 003F4A50  4E 80 00 20 */	blr 
 
-.global func_8042B494
-func_8042B494:
+.global Erase__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8Iterator
+Erase__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8Iterator:
 /* 8042B494 003F4A54  80 C4 00 00 */	lwz r6, 0(r4)
 /* 8042B498 003F4A58  38 00 00 00 */	li r0, 0
 /* 8042B49C 003F4A5C  80 A6 00 00 */	lwz r5, 0(r6)
@@ -86,8 +86,8 @@ lbl_8042B514:
 /* 8042B518 003F4AD8  40 82 FF D4 */	bne lbl_8042B4EC
 /* 8042B51C 003F4ADC  4E 80 00 20 */	blr 
 
-.global func_8042B520
-func_8042B520:
+.global Insert__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8IteratorPQ34nw4r2ut12LinkListNode
+Insert__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8IteratorPQ34nw4r2ut12LinkListNode:
 /* 8042B520 003F4AE0  80 84 00 00 */	lwz r4, 0(r4)
 /* 8042B524 003F4AE4  80 C4 00 04 */	lwz r6, 4(r4)
 /* 8042B528 003F4AE8  90 85 00 00 */	stw r4, 0(r5)

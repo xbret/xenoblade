@@ -48,16 +48,14 @@ func_803E7428:
 /* 803E7434 003B09F4  7C 00 23 78 */	or r0, r0, r4
 /* 803E7438 003B09F8  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803E743C 003B09FC  4E 80 00 20 */	blr
-
-.global lbl_803E7440
 lbl_803E7440:
 /* 803E7440 003B0A00  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 803E7444 003B0A04  7C 00 20 78 */	andc r0, r0, r4
 /* 803E7448 003B0A08  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803E744C 003B0A0C  4E 80 00 20 */	blr 
 
-.global func_803E7450
-func_803E7450:
+.global TestAnmFlag__Q34nw4r3g3d6AnmObjCFQ44nw4r3g3d6AnmObj7AnmFlag
+TestAnmFlag__Q34nw4r3g3d6AnmObjCFQ44nw4r3g3d6AnmObj7AnmFlag:
 /* 803E7450 003B0A10  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 803E7454 003B0A14  7C 03 20 38 */	and r3, r0, r4
 /* 803E7458 003B0A18  7C 03 00 D0 */	neg r0, r3

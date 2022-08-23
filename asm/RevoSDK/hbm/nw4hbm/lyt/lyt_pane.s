@@ -265,7 +265,6 @@ func_80331AE0:
 /* 80331AEC 002FB0AC  4E 80 00 20 */	blr
 
 .balign 16, 0
-.global lbl_80331AF0
 lbl_80331AF0:
 /* 80331AF0 002FB0B0  81 83 00 00 */	lwz r12, 0(r3)
 /* 80331AF4 002FB0B4  81 8C 00 34 */	lwz r12, 0x34(r12)
@@ -282,7 +281,6 @@ func_80331B10:
 /* 80331B1C 002FB0DC  4E 80 00 20 */	blr
 
 .balign 16, 0
-.global lbl_80331B20
 lbl_80331B20:
 /* 80331B20 002FB0E0  81 83 00 00 */	lwz r12, 0(r3)
 /* 80331B24 002FB0E4  81 8C 00 38 */	lwz r12, 0x38(r12)

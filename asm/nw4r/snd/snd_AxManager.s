@@ -340,7 +340,7 @@ __dt__Q34nw4r2ut30LinkList$$0Q34nw4r3snd6FxBase$$44$$1Fv:
 /* 8040C948 003D5F08  7C 7E 1B 78 */	mr r30, r3
 /* 8040C94C 003D5F0C  41 82 00 1C */	beq lbl_8040C968
 /* 8040C950 003D5F10  38 80 00 00 */	li r4, 0
-/* 8040C954 003D5F14  48 01 EA BD */	bl func_8042B410
+/* 8040C954 003D5F14  48 01 EA BD */	bl __dt__Q44nw4r2ut6detail12LinkListImplFv
 /* 8040C958 003D5F18  2C 1F 00 00 */	cmpwi r31, 0
 /* 8040C95C 003D5F1C  40 81 00 0C */	ble lbl_8040C968
 /* 8040C960 003D5F20  7F C3 F3 78 */	mr r3, r30
@@ -403,7 +403,7 @@ __dt__Q44nw4r3snd6detail9AxManagerFv:
 /* 8040CA24 003D5FE4  34 7E 00 08 */	addic. r3, r30, 8
 /* 8040CA28 003D5FE8  41 82 00 0C */	beq lbl_8040CA34
 /* 8040CA2C 003D5FEC  38 80 00 00 */	li r4, 0
-/* 8040CA30 003D5FF0  48 01 E9 E1 */	bl func_8042B410
+/* 8040CA30 003D5FF0  48 01 E9 E1 */	bl __dt__Q44nw4r2ut6detail12LinkListImplFv
 lbl_8040CA34:
 /* 8040CA34 003D5FF4  2C 1F 00 00 */	cmpwi r31, 0
 /* 8040CA38 003D5FF8  40 81 00 0C */	ble lbl_8040CA44
@@ -873,7 +873,7 @@ RegisterCallback__Q44nw4r3snd6detail9AxManagerFPQ54nw4r3snd6detail9AxManager16Ca
 /* 8040D0A4 003D6664  90 01 00 08 */	stw r0, 8(r1)
 /* 8040D0A8 003D6668  38 7D 00 08 */	addi r3, r29, 8
 /* 8040D0AC 003D666C  38 81 00 08 */	addi r4, r1, 8
-/* 8040D0B0 003D6670  48 01 E4 71 */	bl func_8042B520
+/* 8040D0B0 003D6670  48 01 E4 71 */	bl Insert__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8IteratorPQ34nw4r2ut12LinkListNode
 /* 8040D0B4 003D6674  7F E3 FB 78 */	mr r3, r31
 /* 8040D0B8 003D6678  4B F4 B9 39 */	bl OSRestoreInterrupts
 /* 8040D0BC 003D667C  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -1291,7 +1291,7 @@ lbl_8040D640:
 /* 8040D648 003D6C08  90 01 00 08 */	stw r0, 8(r1)
 /* 8040D64C 003D6C0C  38 81 00 08 */	addi r4, r1, 8
 /* 8040D650 003D6C10  38 BF 00 04 */	addi r5, r31, 4
-/* 8040D654 003D6C14  48 01 DE CD */	bl func_8042B520
+/* 8040D654 003D6C14  48 01 DE CD */	bl Insert__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8IteratorPQ34nw4r2ut12LinkListNode
 /* 8040D658 003D6C18  7F 83 E3 78 */	mr r3, r28
 /* 8040D65C 003D6C1C  4B F4 B3 95 */	bl OSRestoreInterrupts
 /* 8040D660 003D6C20  38 60 00 01 */	li r3, 1

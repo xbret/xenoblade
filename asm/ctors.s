@@ -70,7 +70,7 @@ ctorsTable:
 	.4byte sinit_80336620
 	.4byte sinit_8033EF90
 	.4byte sinit_803EB3B4
-	.4byte sinit_803FF928
+	.4byte sinit_lyt_pane_cpp
 	.4byte sinit_804012B0
 	.4byte sinit_80402E1C
 	.4byte sinit_804053D0

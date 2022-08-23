@@ -16,8 +16,8 @@ func_8040A028:
 /* 8040A04C 003D360C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040A050 003D3610  4E 80 00 20 */	blr 
 
-.global func_8040A054
-func_8040A054:
+.global EqualsMaterialName__Q34nw4r3lyt6detailFPCcPCc
+EqualsMaterialName__Q34nw4r3lyt6detailFPCcPCc:
 /* 8040A054 003D3614  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040A058 003D3618  7C 08 02 A6 */	mflr r0
 /* 8040A05C 003D361C  38 A0 00 14 */	li r5, 0x14
@@ -30,8 +30,8 @@ func_8040A054:
 /* 8040A078 003D3638  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040A07C 003D363C  4E 80 00 20 */	blr 
 
-.global func_8040A080
-func_8040A080:
+.global TestFileHeader__Q34nw4r3lyt6detailFRCQ44nw4r3lyt3res16BinaryFileHeaderUl
+TestFileHeader__Q34nw4r3lyt6detailFRCQ44nw4r3lyt3res16BinaryFileHeaderUl:
 /* 8040A080 003D3640  80 03 00 00 */	lwz r0, 0(r3)
 /* 8040A084 003D3644  38 A0 00 00 */	li r5, 0
 /* 8040A088 003D3648  7C 04 00 40 */	cmplw r4, r0
@@ -264,8 +264,6 @@ func_8040A388:
 /* 8040A38C 003D394C  41 82 00 0C */	beq lbl_8040A398
 /* 8040A390 003D3950  38 60 00 01 */	li r3, 1
 /* 8040A394 003D3954  4E 80 00 20 */	blr
-
-.global lbl_8040A398
 lbl_8040A398:
 /* 8040A398 003D3958  2C 03 00 00 */	cmpwi r3, 0
 /* 8040A39C 003D395C  41 82 00 4C */	beq lbl_8040A3E8
@@ -288,8 +286,6 @@ lbl_8040A398:
 lbl_8040A3E0:
 /* 8040A3E0 003D39A0  38 60 00 01 */	li r3, 1
 /* 8040A3E4 003D39A4  4E 80 00 20 */	blr
-
-.global lbl_8040A3E8
 lbl_8040A3E8:
 /* 8040A3E8 003D39A8  38 60 00 00 */	li r3, 0
 /* 8040A3EC 003D39AC  4E 80 00 20 */	blr 
