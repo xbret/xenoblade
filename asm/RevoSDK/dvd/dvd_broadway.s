@@ -2329,8 +2329,8 @@ DVDLowGetStatusRegister:
 /* 80312698 002DBC58  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803126A0
-func_803126A0:
+.global DVDLowGetControlRegister
+DVDLowGetControlRegister:
 /* 803126A0 002DBC60  3C 60 80 5D */	lis r3, lbl_805CCE00@ha
 /* 803126A4 002DBC64  80 63 CE 00 */	lwz r3, lbl_805CCE00@l(r3)
 /* 803126A8 002DBC68  4E 80 00 20 */	blr 

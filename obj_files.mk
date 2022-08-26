@@ -150,8 +150,6 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/sdata2_2.o \
 	$(BUILD_DIR)/asm/rodata_2.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/PPC_EABI/math_ppc.o \
-	$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/__start.o \
-	$(BUILD_DIR)/asm/sbss_4.o \
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/w_sqrt.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/extras.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/targsupp.o \
@@ -401,7 +399,9 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayTime.o \
 	$(BUILD_DIR)/asm/RevoSDK/crc.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSExec1.o \
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/__ppc_eabi_init.o \
+	$(BUILD_DIR)/src/RevoSDK/os/__start.o \
+	$(BUILD_DIR)/asm/sbss_4.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/__ppc_eabi_init.o \
 	$(BUILD_DIR)/asm/RevoSDK/pad/Pad.o \
 	$(BUILD_DIR)/asm/RevoSDK/sc/scsystem.o \
 	$(BUILD_DIR)/asm/RevoSDK/sc/scapi.o \

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80310370
-func_80310370:
+lowCallback:
 /* 80310370 002D9930  90 6D B7 10 */	stw r3, lbl_80667890@sda21(r13)
 /* 80310374 002D9934  38 00 00 01 */	li r0, 1
 /* 80310378 002D9938  90 0D 98 20 */	stw r0, lbl_806659A0@sda21(r13)
@@ -46,11 +45,11 @@ lbl_803103D8:
 lbl_803103EC:
 /* 803103EC 002D99AC  38 00 00 00 */	li r0, 0
 /* 803103F0 002D99B0  3C 60 80 5D */	lis r3, lbl_805CCC40@ha
-/* 803103F4 002D99B4  3C C0 80 31 */	lis r6, func_80310370@ha
+/* 803103F4 002D99B4  3C C0 80 31 */	lis r6, lowCallback@ha
 /* 803103F8 002D99B8  90 0D 98 20 */	stw r0, lbl_806659A0@sda21(r13)
 /* 803103FC 002D99BC  7F A5 EB 78 */	mr r5, r29
 /* 80310400 002D99C0  38 63 CC 40 */	addi r3, r3, lbl_805CCC40@l
-/* 80310404 002D99C4  38 C6 03 70 */	addi r6, r6, func_80310370@l
+/* 80310404 002D99C4  38 C6 03 70 */	addi r6, r6, lowCallback@l
 /* 80310408 002D99C8  38 80 00 20 */	li r4, 0x20
 /* 8031040C 002D99CC  48 00 12 C5 */	bl DVDLowUnencryptedRead
 lbl_80310410:
@@ -66,9 +65,9 @@ lbl_80310410:
 /* 80310434 002D99F4  48 00 01 A4 */	b lbl_803105D8
 lbl_80310438:
 /* 80310438 002D99F8  38 00 00 00 */	li r0, 0
-/* 8031043C 002D99FC  3C 60 80 31 */	lis r3, func_80310370@ha
+/* 8031043C 002D99FC  3C 60 80 31 */	lis r3, lowCallback@ha
 /* 80310440 002D9A00  90 0D 98 20 */	stw r0, lbl_806659A0@sda21(r13)
-/* 80310444 002D9A04  38 63 03 70 */	addi r3, r3, func_80310370@l
+/* 80310444 002D9A04  38 63 03 70 */	addi r3, r3, lowCallback@l
 /* 80310448 002D9A08  48 00 17 39 */	bl DVDLowRequestError
 /* 8031044C 002D9A0C  60 00 00 00 */	nop 
 lbl_80310450:
@@ -94,11 +93,11 @@ lbl_80310470:
 lbl_80310498:
 /* 80310498 002D9A58  38 00 00 00 */	li r0, 0
 /* 8031049C 002D9A5C  3C 60 80 5D */	lis r3, lbl_805CCC40@ha
-/* 803104A0 002D9A60  3C C0 80 31 */	lis r6, func_80310370@ha
+/* 803104A0 002D9A60  3C C0 80 31 */	lis r6, lowCallback@ha
 /* 803104A4 002D9A64  90 0D 98 20 */	stw r0, lbl_806659A0@sda21(r13)
 /* 803104A8 002D9A68  38 63 CC 40 */	addi r3, r3, lbl_805CCC40@l
 /* 803104AC 002D9A6C  3C 80 00 04 */	lis r4, 4
-/* 803104B0 002D9A70  38 C6 03 70 */	addi r6, r6, func_80310370@l
+/* 803104B0 002D9A70  38 C6 03 70 */	addi r6, r6, lowCallback@l
 /* 803104B4 002D9A74  38 A0 00 00 */	li r5, 0
 /* 803104B8 002D9A78  48 00 1B 69 */	bl DVDLowReportKey
 /* 803104BC 002D9A7C  60 00 00 00 */	nop 
@@ -115,9 +114,9 @@ lbl_803104C0:
 /* 803104E4 002D9AA4  48 00 00 F4 */	b lbl_803105D8
 lbl_803104E8:
 /* 803104E8 002D9AA8  38 00 00 00 */	li r0, 0
-/* 803104EC 002D9AAC  3C 60 80 31 */	lis r3, func_80310370@ha
+/* 803104EC 002D9AAC  3C 60 80 31 */	lis r3, lowCallback@ha
 /* 803104F0 002D9AB0  90 0D 98 20 */	stw r0, lbl_806659A0@sda21(r13)
-/* 803104F4 002D9AB4  38 63 03 70 */	addi r3, r3, func_80310370@l
+/* 803104F4 002D9AB4  38 63 03 70 */	addi r3, r3, lowCallback@l
 /* 803104F8 002D9AB8  48 00 16 89 */	bl DVDLowRequestError
 /* 803104FC 002D9ABC  60 00 00 00 */	nop 
 lbl_80310500:

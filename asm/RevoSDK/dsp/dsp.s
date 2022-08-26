@@ -56,9 +56,9 @@ DSPInit:
 /* 803092A8 002D2868  80 6D 97 E8 */	lwz r3, lbl_80665968@sda21(r13)
 /* 803092AC 002D286C  48 04 9A 55 */	bl OSRegisterVersion
 /* 803092B0 002D2870  48 04 F7 01 */	bl OSDisableInterrupts
-/* 803092B4 002D2874  3C 80 80 31 */	lis r4, func_80309500@ha
+/* 803092B4 002D2874  3C 80 80 31 */	lis r4, __DSPHandler@ha
 /* 803092B8 002D2878  7C 7F 1B 78 */	mr r31, r3
-/* 803092BC 002D287C  38 84 95 00 */	addi r4, r4, func_80309500@l
+/* 803092BC 002D287C  38 84 95 00 */	addi r4, r4, __DSPHandler@l
 /* 803092C0 002D2880  38 60 00 07 */	li r3, 7
 /* 803092C4 002D2884  48 04 F7 5D */	bl __OSSetInterruptHandler
 /* 803092C8 002D2888  3C 60 01 00 */	lis r3, 0x100
@@ -118,7 +118,7 @@ DSPAddTask:
 /* 80309384 002D2944  7C 1E 00 40 */	cmplw r30, r0
 /* 80309388 002D2948  40 82 00 0C */	bne lbl_80309394
 /* 8030938C 002D294C  7F C3 F3 78 */	mr r3, r30
-/* 80309390 002D2950  48 00 07 51 */	bl func_80309AE0
+/* 80309390 002D2950  48 00 07 51 */	bl __DSP_boot_task
 lbl_80309394:
 /* 80309394 002D2954  7F C3 F3 78 */	mr r3, r30
 /* 80309398 002D2958  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -129,8 +129,8 @@ lbl_80309394:
 /* 803093AC 002D296C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803093B0
-func_803093B0:
+.global DSPCancelTask
+DSPCancelTask:
 /* 803093B0 002D2970  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803093B4 002D2974  7C 08 02 A6 */	mflr r0
 /* 803093B8 002D2978  90 01 00 14 */	stw r0, 0x14(r1)

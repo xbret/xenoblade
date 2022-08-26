@@ -1616,8 +1616,8 @@ lbl_80344090:
 /* 803440A8 0030D668  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803440B0
-func_803440B0:
+.global IOS_IoctlvReboot
+IOS_IoctlvReboot:
 /* 803440B0 0030D670  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803440B4 0030D674  7C 08 02 A6 */	mflr r0
 /* 803440B8 0030D678  90 01 00 34 */	stw r0, 0x34(r1)

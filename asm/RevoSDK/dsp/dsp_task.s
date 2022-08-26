@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80309500
-func_80309500:
+.global __DSPHandler
+__DSPHandler:
 /* 80309500 002D2AC0  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 80309504 002D2AC4  7C 08 02 A6 */	mflr r0
 /* 80309508 002D2AC8  3C C0 CC 00 */	lis r6, 0xCC00500A@ha
@@ -433,8 +433,8 @@ lbl_80309ABC:
 /* 80309AD0 002D3090  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80309AE0
-func_80309AE0:
+.global __DSP_boot_task
+__DSP_boot_task:
 /* 80309AE0 002D30A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80309AE4 002D30A4  7C 08 02 A6 */	mflr r0
 /* 80309AE8 002D30A8  90 01 00 24 */	stw r0, 0x24(r1)

@@ -308,22 +308,23 @@ lbl_80354324:
 /* 8035434C 0031D90C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global LCQueueWait
-LCQueueWait:
+.global LCQueueLength
+LCQueueLength:
 /* 80354350 0031D910  7C 98 E2 A6 */	mfspr r4, 0x398
 /* 80354354 0031D914  54 83 47 3E */	rlwinm r3, r4, 8, 0x1c, 0x1f
 /* 80354358 0031D918  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global DMAErrorHandler
-DMAErrorHandler:
+.global LCQueueWait
+LCQueueWait:
 /* 80354360 0031D920  7C 98 E2 A6 */	mfspr r4, 0x398
 /* 80354364 0031D924  54 84 47 3E */	rlwinm r4, r4, 8, 0x1c, 0x1f
 /* 80354368 0031D928  7C 04 18 00 */	cmpw r4, r3
-/* 8035436C 0031D92C  41 81 FF F4 */	bgt DMAErrorHandler
-/* 80354370 0031D930  4E 80 00 20 */	blr 
+/* 8035436C 0031D92C  41 81 FF F4 */	bgt LCQueueWait
+/* 80354370 0031D930  4E 80 00 20 */	blr
+
 .balign 16, 0
-lbl_80354380:
+DMAErrorHandler:
 /* 80354380 0031D940  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80354384 0031D944  7C 08 02 A6 */	mflr r0
 /* 80354388 0031D948  90 01 00 84 */	stw r0, 0x84(r1)
@@ -488,9 +489,9 @@ lbl_803545A4:
 /* 803545CC 0031DB8C  4C C6 31 82 */	crclr 6
 /* 803545D0 0031DB90  4B FB 4B F1 */	bl DBPrintf
 lbl_803545D4:
-/* 803545D4 0031DB94  3C 80 80 35 */	lis r4, lbl_80354380@ha
+/* 803545D4 0031DB94  3C 80 80 35 */	lis r4, DMAErrorHandler@ha
 /* 803545D8 0031DB98  38 60 00 01 */	li r3, 1
-/* 803545DC 0031DB9C  38 84 43 80 */	addi r4, r4, lbl_80354380@l
+/* 803545DC 0031DB9C  38 84 43 80 */	addi r4, r4, DMAErrorHandler@l
 /* 803545E0 0031DBA0  48 00 09 A1 */	bl OSSetErrorHandler
 /* 803545E4 0031DBA4  38 7F 02 04 */	addi r3, r31, 0x204
 /* 803545E8 0031DBA8  4C C6 31 82 */	crclr 6
@@ -501,4 +502,3 @@ lbl_803545D4:
 /* 803545FC 0031DBBC  7C 08 03 A6 */	mtlr r0
 /* 80354600 0031DBC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80354604 0031DBC4  4E 80 00 20 */	blr 
-.balign 16, 0

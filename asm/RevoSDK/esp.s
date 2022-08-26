@@ -84,7 +84,7 @@ lbl_80313844:
 /* 80313868 002DCE28  91 21 00 F0 */	stw r9, 0xf0(r1)
 /* 8031386C 002DCE2C  91 01 00 F4 */	stw r8, 0xf4(r1)
 /* 80313870 002DCE30  90 01 00 FC */	stw r0, 0xfc(r1)
-/* 80313874 002DCE34  48 03 08 3D */	bl func_803440B0
+/* 80313874 002DCE34  48 03 08 3D */	bl IOS_IoctlvReboot
 /* 80313878 002DCE38  38 00 FF FF */	li r0, -1
 /* 8031387C 002DCE3C  90 0D 98 48 */	stw r0, lbl_806659C8@sda21(r13)
 lbl_80313880:
@@ -226,8 +226,8 @@ lbl_80313A50:
 /* 80313A60 002DD020  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80313A70
-func_80313A70:
+.global ESP_DiGetTmd
+ESP_DiGetTmd:
 /* 80313A70 002DD030  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 80313A74 002DD034  7C 2C 0B 78 */	mr r12, r1
 /* 80313A78 002DD038  21 6B FE C0 */	subfic r11, r11, -320
@@ -295,8 +295,8 @@ lbl_80313B44:
 /* 80313B58 002DD118  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80313B60
-func_80313B60:
+.global ESP_GetTmdView
+ESP_GetTmdView:
 /* 80313B60 002DD120  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 80313B64 002DD124  7C 2C 0B 78 */	mr r12, r1
 /* 80313B68 002DD128  21 6B FE E0 */	subfic r11, r11, -288
@@ -341,8 +341,8 @@ lbl_80313BE4:
 /* 80313BF4 002DD1B4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80313C00
-func_80313C00:
+.global ESP_GetTitleId
+ESP_GetTitleId:
 /* 80313C00 002DD1C0  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 80313C04 002DD1C4  7C 2C 0B 78 */	mr r12, r1
 /* 80313C08 002DD1C8  21 6B FE C0 */	subfic r11, r11, -320
@@ -386,8 +386,8 @@ lbl_80313C80:
 /* 80313C94 002DD254  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80313CA0
-func_80313CA0:
+.global ESP_GetConsumption
+ESP_GetConsumption:
 /* 80313CA0 002DD260  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 80313CA4 002DD264  7C 2C 0B 78 */	mr r12, r1
 /* 80313CA8 002DD268  21 6B FE C0 */	subfic r11, r11, -320

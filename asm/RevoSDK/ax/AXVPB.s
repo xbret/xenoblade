@@ -1002,8 +1002,8 @@ lbl_802D54EC:
 /* 802D5514 0029EAD4  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D5520
-func_802D5520:
+.global AXSetVoiceSrc
+AXSetVoiceSrc:
 /* 802D5520 0029EAE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D5524 0029EAE4  7C 08 02 A6 */	mflr r0
 /* 802D5528 0029EAE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1090,8 +1090,8 @@ AXGetLpfCoefs:
 /* 802D5668 0029EC28  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_802D5670
-func_802D5670:
+.global AXSetVoiceRmtOn
+AXSetVoiceRmtOn:
 /* 802D5670 0029EC30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D5674 0029EC34  7C 08 02 A6 */	mflr r0
 /* 802D5678 0029EC38  90 01 00 14 */	stw r0, 0x14(r1)

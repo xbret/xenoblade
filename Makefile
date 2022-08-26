@@ -110,8 +110,7 @@ ifeq ($(VERBOSE),0)
 ASFLAGS += -W
 endif
 
-$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/__start.o: CFLAGS += -func_align 16
-#All the functions in the Wii SDK are aligned to 16 bytes, so this is necessary.
+#All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
 $(BUILD_DIR)/src/RevoSDK/%.o: CFLAGS += -func_align 16
 
 #-------------------------------------------------------------------------------

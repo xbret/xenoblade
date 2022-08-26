@@ -755,8 +755,8 @@ lbl_80316958:
 /* 8031696C 002DFF2C  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80316970
-func_80316970:
+.global ISFS_Rename
+ISFS_Rename:
 /* 80316970 002DFF30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80316974 002DFF34  7C 08 02 A6 */	mflr r0
 /* 80316978 002DFF38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1235,8 +1235,8 @@ lbl_80317030:
 /* 80317044 002E0604  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80317050
-func_80317050:
+.global ISFS_GetFileStatsAsync
+ISFS_GetFileStatsAsync:
 /* 80317050 002E0610  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80317054 002E0614  7C 08 02 A6 */	mflr r0
 /* 80317058 002E0618  2C 04 00 00 */	cmpwi r4, 0

@@ -741,7 +741,6 @@ lbl_802EB554:
 /* 802EB57C 002B4B3C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EB580 002B4B40  4E 80 00 20 */	blr 
 
-#balign 16, 0
 .global btm_route_sco_data
 btm_route_sco_data:
 /* 802EB584 002B4B44  4B FE FF 5C */	b GKI_freebuf

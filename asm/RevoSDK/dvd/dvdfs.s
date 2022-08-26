@@ -803,8 +803,8 @@ cbForReadSync:
 /* 8030A834 002D3DF4  48 05 1F 2C */	b OSWakeupThread
 
 .balign 16, 0
-.global func_8030A840
-func_8030A840:
+.global DVDGetTransferredSize
+DVDGetTransferredSize:
 /* 8030A840 002D3E00  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 8030A844 002D3E04  2C 00 00 02 */	cmpwi r0, 2
 /* 8030A848 002D3E08  41 82 00 40 */	beq lbl_8030A888

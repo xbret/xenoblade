@@ -1,4 +1,4 @@
-#include "PowerPC_EABI_Support/Runtime/__start.h"
+#include "RevoSDK/os/__start.h"
 
 #pragma section code_type ".init"
 

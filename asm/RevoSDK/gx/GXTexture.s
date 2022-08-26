@@ -449,8 +449,8 @@ GXInitTexObjUserData:
 /* 8031C684 002E5C44  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8031C690
-func_8031C690:
+.global GXGetTexObjUserData
+GXGetTexObjUserData:
 /* 8031C690 002E5C50  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8031C694 002E5C54  4E 80 00 20 */	blr 
 

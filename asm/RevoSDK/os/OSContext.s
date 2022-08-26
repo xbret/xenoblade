@@ -626,4 +626,3 @@ __OSContextInit:
 /* 80354EDC 0031E49C  7C 08 03 A6 */	mtlr r0
 /* 80354EE0 0031E4A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80354EE4 0031E4A4  4E 80 00 20 */	blr 
-.balign 16, 0

@@ -23,4 +23,3 @@ __OSInitIPCBuffer:
 /* 8035D00C 003265CC  80 03 31 34 */	lwz r0, 0x3134(r3)
 /* 8035D010 003265D0  90 0D B9 58 */	stw r0, lbl_80667AD8@sda21(r13)
 /* 8035D014 003265D4  4E 80 00 20 */	blr 
-.balign 16, 0
