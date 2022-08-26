@@ -91,10 +91,10 @@ lbl_802CC33C:
 /* 802CC350 00295910  3C 60 80 58 */	lis r3, gDBCommTable@ha
 /* 802CC354 00295914  3F C0 80 2D */	lis r30, gdev_cc_initialize@ha
 /* 802CC358 00295918  3F E0 80 2D */	lis r31, gdev_cc_open@ha
-/* 802CC35C 0029591C  3D 60 80 2D */	lis r11, func_802CB594@ha
+/* 802CC35C 0029591C  3D 60 80 2D */	lis r11, gdev_cc_close@ha
 /* 802CC360 00295920  3D 40 80 2D */	lis r10, gdev_cc_read@ha
 /* 802CC364 00295924  3D 20 80 2D */	lis r9, gdev_cc_write@ha
-/* 802CC368 00295928  3D 00 80 2D */	lis r8, func_802CB568@ha
+/* 802CC368 00295928  3D 00 80 2D */	lis r8, gdev_cc_shutdown@ha
 /* 802CC36C 0029592C  3C E0 80 2D */	lis r7, gdev_cc_peek@ha
 /* 802CC370 00295930  3C C0 80 2D */	lis r6, gdev_cc_pre_continue@ha
 /* 802CC374 00295934  3C A0 80 2D */	lis r5, gdev_cc_post_stop@ha
@@ -102,10 +102,10 @@ lbl_802CC33C:
 /* 802CC37C 0029593C  3B DE B5 2C */	addi r30, r30, gdev_cc_initialize@l
 /* 802CC380 00295940  39 83 B8 88 */	addi r12, r3, gDBCommTable@l
 /* 802CC384 00295944  3B FF B5 70 */	addi r31, r31, gdev_cc_open@l
-/* 802CC388 00295948  39 6B B5 94 */	addi r11, r11, func_802CB594@l
+/* 802CC388 00295948  39 6B B5 94 */	addi r11, r11, gdev_cc_close@l
 /* 802CC38C 0029594C  39 4A B5 9C */	addi r10, r10, gdev_cc_read@l
 /* 802CC390 00295950  39 29 B6 50 */	addi r9, r9, gdev_cc_write@l
-/* 802CC394 00295954  39 08 B5 68 */	addi r8, r8, func_802CB568@l
+/* 802CC394 00295954  39 08 B5 68 */	addi r8, r8, gdev_cc_shutdown@l
 /* 802CC398 00295958  38 E7 B7 0C */	addi r7, r7, gdev_cc_peek@l
 /* 802CC39C 0029595C  38 C6 B6 C4 */	addi r6, r6, gdev_cc_pre_continue@l
 /* 802CC3A0 00295960  38 A5 B6 E8 */	addi r5, r5, gdev_cc_post_stop@l
@@ -142,8 +142,8 @@ lbl_802CC404:
 /* 802CC414 002959D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC418 002959D8  4E 80 00 20 */	blr 
 
-.global func_802CC41C
-func_802CC41C:
+.global TRKUARTInterruptHandler
+TRKUARTInterruptHandler:
 /* 802CC41C 002959DC  4E 80 00 20 */	blr 
 
 .global TRKInitializeIntDrivenUART
@@ -170,8 +170,8 @@ TRKInitializeIntDrivenUART:
 /* 802CC46C 00295A2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC470 00295A30  4E 80 00 20 */	blr
 
-.global func_802CC474
-func_802CC474:
+.global EnableEXI2Interrupts
+EnableEXI2Interrupts:
 /* 802CC474 00295A34  88 0D B3 F8 */	lbz r0, lbl_80667578@sda21(r13)
 /* 802CC478 00295A38  2C 00 00 00 */	cmpwi r0, 0
 /* 802CC47C 00295A3C  4C 82 00 20 */	bnelr 
@@ -244,8 +244,8 @@ UnreserveEXI2Port:
 /* 802CC54C 00295B0C  7D 89 03 A6 */	mtctr r12
 /* 802CC550 00295B10  4E 80 04 20 */	bctr 
 
-.global func_802CC554
-func_802CC554:
+.global TRK_board_display
+TRK_board_display:
 /* 802CC554 00295B14  3C A0 80 54 */	lis r5, lbl_8053FD80@ha
 /* 802CC558 00295B18  7C 64 1B 78 */	mr r4, r3
 /* 802CC55C 00295B1C  38 A5 FD 80 */	addi r5, r5, lbl_8053FD80@l

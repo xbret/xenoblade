@@ -23,7 +23,7 @@ lbl_802CEC4C:
 /* 802CEC50 00298210  7F C5 F3 78 */	mr r5, r30
 /* 802CEC54 00298214  7F E6 FB 78 */	mr r6, r31
 /* 802CEC58 00298218  38 60 00 00 */	li r3, 0
-/* 802CEC5C 0029821C  48 00 00 89 */	bl func_802CECE4
+/* 802CEC5C 0029821C  48 00 00 89 */	bl __read_file
 lbl_802CEC60:
 /* 802CEC60 00298220  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 802CEC64 00298224  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -54,7 +54,7 @@ lbl_802CECB4:
 /* 802CECB8 00298278  7F C5 F3 78 */	mr r5, r30
 /* 802CECBC 0029827C  7F E6 FB 78 */	mr r6, r31
 /* 802CECC0 00298280  38 60 00 01 */	li r3, 1
-/* 802CECC4 00298284  48 00 00 29 */	bl func_802CECEC
+/* 802CECC4 00298284  48 00 00 29 */	bl __write_file
 lbl_802CECC8:
 /* 802CECC8 00298288  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 802CECCC 0029828C  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -64,19 +64,19 @@ lbl_802CECC8:
 /* 802CECDC 0029829C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CECE0 002982A0  4E 80 00 20 */	blr 
 
-.global func_802CECE4
-func_802CECE4:
+.global __read_file
+__read_file:
 /* 802CECE4 002982A4  38 E0 00 D1 */	li r7, 0xd1
-/* 802CECE8 002982A8  48 00 00 0C */	b func_802CECF4
+/* 802CECE8 002982A8  48 00 00 0C */	b __access_file
 
-.global func_802CECEC
-func_802CECEC:
+.global __write_file
+__write_file:
 /* 802CECEC 002982AC  38 E0 00 D0 */	li r7, 0xd0
-/* 802CECF0 002982B0  48 00 00 04 */	b func_802CECF4
+/* 802CECF0 002982B0  48 00 00 04 */	b __access_file
 
 
-.global func_802CECF4
-func_802CECF4:
+.global __access_file
+__access_file:
 /* 802CECF4 002982B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CECF8 002982B8  7C 08 02 A6 */	mflr r0
 /* 802CECFC 002982BC  90 01 00 24 */	stw r0, 0x24(r1)

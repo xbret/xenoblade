@@ -23213,7 +23213,7 @@ lbl_80021020:
 	.4byte func_804B6728
 	.4byte 0x00000124
 	.4byte lbl_8001FDF0
-	.4byte func_804B6974
+	.4byte lbl_804B6974
 	.4byte 0x000000C8
 	.4byte lbl_8001FDF8
 	.4byte func_804B6A3C

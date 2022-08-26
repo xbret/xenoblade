@@ -12594,13 +12594,13 @@ lbl_8000C450:
 	.4byte func_8013223C
 	.4byte 0x0780001D
 	.4byte 0x000000D8
-	.4byte func_8042DB38
+	.4byte __dt__Q34nw4r2ut10PackedFontFv
 	.4byte 0x0780001D
 	.4byte 0x0000009C
-	.4byte func_8042DB38
+	.4byte __dt__Q34nw4r2ut10PackedFontFv
 	.4byte 0x0780001D
 	.4byte 0x00000060
-	.4byte func_8042DB38
+	.4byte __dt__Q34nw4r2ut10PackedFontFv
 	.4byte 0x0680001D
 	.4byte 0x00000058
 	.4byte func_801320F0
@@ -12657,7 +12657,7 @@ lbl_8000C4F8:
 	.4byte func_8013223C
 	.4byte 0x8780001D
 	.4byte 0x000000D8
-	.4byte func_8042DB38
+	.4byte __dt__Q34nw4r2ut10PackedFontFv
 	.4byte 0x0780001D
 	.4byte 0x0000014C
 	.4byte func_8012FF74
@@ -12666,10 +12666,10 @@ lbl_8000C4F8:
 	.4byte func_8013223C
 	.4byte 0x0780001D
 	.4byte 0x000000D8
-	.4byte func_8042DB38
+	.4byte __dt__Q34nw4r2ut10PackedFontFv
 	.4byte 0x8780001D
 	.4byte 0x0000009C
-	.4byte func_8042DB38
+	.4byte __dt__Q34nw4r2ut10PackedFontFv
 	.4byte 0x0780001D
 	.4byte 0x0000014C
 	.4byte func_8012FF74
@@ -12678,13 +12678,13 @@ lbl_8000C4F8:
 	.4byte func_8013223C
 	.4byte 0x0780001D
 	.4byte 0x000000D8
-	.4byte func_8042DB38
+	.4byte __dt__Q34nw4r2ut10PackedFontFv
 	.4byte 0x0780001D
 	.4byte 0x0000009C
-	.4byte func_8042DB38
+	.4byte __dt__Q34nw4r2ut10PackedFontFv
 	.4byte 0x0780001D
 	.4byte 0x00000060
-	.4byte func_8042DB38
+	.4byte __dt__Q34nw4r2ut10PackedFontFv
 	.4byte 0x0680001D
 	.4byte 0x00000058
 	.4byte func_801320F0
@@ -43464,7 +43464,7 @@ lbl_8001D080:
 	.4byte 0
 	.4byte 0x0780001C
 	.4byte 0x0000001C
-	.4byte func_8042DB38
+	.4byte __dt__Q34nw4r2ut10PackedFontFv
 	.4byte 0x8680001C
 	.4byte 0
 	.4byte func_80453080
@@ -43477,7 +43477,7 @@ lbl_8001D0B0:
 	.4byte 0
 	.4byte 0x0780001E
 	.4byte 0x0000001C
-	.4byte func_8042DB38
+	.4byte __dt__Q34nw4r2ut10PackedFontFv
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_80453080

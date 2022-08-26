@@ -46,9 +46,6 @@ __HBMSYNGetRelativePitch:
 /* 803418A8 0030AE68  7C 06 04 2E */	lfsx f0, r6, r0
 /* 803418AC 0030AE6C  EC 20 00 72 */	fmuls f1, f0, f1
 /* 803418B0 0030AE70  4E 80 00 20 */	blr
-
-
-.global lbl_803418B4
 lbl_803418B4:
 /* 803418B4 0030AE74  40 80 00 60 */	bge lbl_80341914
 /* 803418B8 0030AE78  3C 80 51 EC */	lis r4, 0x51EB851F@ha
@@ -75,9 +72,6 @@ lbl_803418F0:
 /* 80341908 0030AEC8  7C 03 04 2E */	lfsx f0, r3, r0
 /* 8034190C 0030AECC  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80341910 0030AED0  4E 80 00 20 */	blr
-
-
-.global lbl_80341914
 lbl_80341914:
 /* 80341914 0030AED4  3C 60 80 52 */	lis r3, lbl_80518B78@ha
 /* 80341918 0030AED8  C0 23 8B 78 */	lfs f1, lbl_80518B78@l(r3)

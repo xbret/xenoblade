@@ -2,6 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#Possible functions:
+#Read__Q34nw4r2ut8IOStreamFPvUl
+#ReadAsync__Q34nw4r2ut8IOStreamFPvUlPFlPQ34nw4r2ut8IOStreamPv_vPv
+#Write__Q34nw4r2ut8IOStreamFPCvUl
+#WriteAsync__Q34nw4r2ut8IOStreamFPCvUlPFlPQ34nw4r2ut8IOStreamPv_vPv
+#IsBusy__Q34nw4r2ut8IOStreamCFv
+
 .global func_8042BDD0
 func_8042BDD0:
 /* 8042BDD0 003F5390  38 60 00 00 */	li r3, 0

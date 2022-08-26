@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8042BE20
-func_8042BE20:
+.global Enable__Q34nw4r2ut2LCFv
+Enable__Q34nw4r2ut2LCFv:
 /* 8042BE20 003F53E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042BE24 003F53E4  7C 08 02 A6 */	mflr r0
 /* 8042BE28 003F53E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -30,8 +30,8 @@ lbl_8042BE60:
 /* 8042BE78 003F5438  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042BE7C 003F543C  4E 80 00 20 */	blr 
 
-.global func_8042BE80
-func_8042BE80:
+.global Disable__Q34nw4r2ut2LCFv
+Disable__Q34nw4r2ut2LCFv:
 /* 8042BE80 003F5440  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042BE84 003F5444  7C 08 02 A6 */	mflr r0
 /* 8042BE88 003F5448  90 01 00 14 */	stw r0, 0x14(r1)
@@ -122,12 +122,12 @@ lbl_8042BF7C:
 /* 8042BFA0 003F5560  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042BFA4 003F5564  4E 80 00 20 */	blr 
 
-.global func_8042BFA8
-func_8042BFA8:
-/* 8042BFA8 003F5568  4B F2 82 A8 */	b func_80354250
+.global LoadBlocks__Q34nw4r2ut2LCFPvPvUl
+LoadBlocks__Q34nw4r2ut2LCFPvPvUl:
+/* 8042BFA8 003F5568  4B F2 82 A8 */	b LCLoadBlocks
 
-.global func_8042BFAC
-func_8042BFAC:
+.global StoreBlocks__Q34nw4r2ut2LCFPvPvUl
+StoreBlocks__Q34nw4r2ut2LCFPvPvUl:
 /* 8042BFAC 003F556C  4B F2 82 D4 */	b LCStoreBlocks
 
 .global StoreData__Q34nw4r2ut2LCFPvPvUl

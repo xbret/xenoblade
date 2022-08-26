@@ -2573,7 +2573,7 @@ lbl_8052C828:
 	# ROM: 0x528928
 	.4byte lbl_800B982C
 	.4byte lbl_800B982C
-	.4byte func_800B97EC
+	.4byte lbl_800B97EC
 	.4byte lbl_800B97F4
 	.4byte lbl_800B97FC
 	.4byte lbl_800B982C
@@ -4101,7 +4101,7 @@ lbl_8052DE30:
 lbl_8052DE60:
 	# ROM: 0x529F60
 	.4byte lbl_800C86D0
-	.4byte func_800C83E0
+	.4byte lbl_800C83E0
 	.4byte lbl_800C8554
 	.4byte lbl_800C86D0
 	.4byte lbl_800C86D0
@@ -4159,7 +4159,7 @@ lbl_8052DF28:
 	.4byte lbl_800CA250
 	.4byte lbl_800CA250
 	.4byte lbl_800CA174
-	.4byte func_800CA158
+	.4byte lbl_800CA158
 	.4byte lbl_800CA1C8
 	.4byte lbl_800CA1C8
 	.4byte lbl_800CA1C8
@@ -4446,13 +4446,13 @@ lbl_8052E310:
 	.4byte lbl_800CAF64
 	.4byte lbl_800CAF64
 	.4byte lbl_800CAC78
-	.4byte func_800CABC8
+	.4byte lbl_800CABC8
 
 
 .global lbl_8052E33C
 lbl_8052E33C:
 	# ROM: 0x52A43C
-	.4byte func_800CC9C0
+	.4byte lbl_800CC9C0
 	.4byte lbl_800CC9CC
 	.4byte lbl_800CCA44
 	.4byte lbl_800CCB1C
@@ -4471,7 +4471,7 @@ lbl_8052E33C:
 	.4byte lbl_800CD244
 	.4byte lbl_800CD244
 	.4byte lbl_800CD244
-	.4byte func_800CC9C0
+	.4byte lbl_800CC9C0
 	.4byte lbl_800CD244
 	.4byte lbl_800CD148
 	.4byte lbl_800CD194
@@ -4531,7 +4531,7 @@ lbl_8052E3A0:
 	.4byte lbl_800CE388
 	.4byte lbl_800CE08C
 	.4byte lbl_800CDE60
-	.4byte func_800CD928
+	.4byte lbl_800CD928
 
 
 .global lbl_8052E468
@@ -4700,8 +4700,8 @@ lbl_8052E6C0:
 	# ROM: 0x52A7C0
 	.4byte lbl_800D29C0
 	.4byte lbl_800D29C0
-	.4byte func_800D242C
-	.4byte func_800D242C
+	.4byte lbl_800D242C
+	.4byte lbl_800D242C
 	.4byte lbl_800D2464
 	.4byte lbl_800D2464
 	.4byte lbl_800D2464
@@ -4782,8 +4782,8 @@ lbl_8052E6C0:
 	.4byte lbl_800D27EC
 	.4byte lbl_800D2834
 	.4byte lbl_800D26E8
-	.4byte func_800D242C
-	.4byte func_800D242C
+	.4byte lbl_800D242C
+	.4byte lbl_800D242C
 	.4byte lbl_800D2448
 	.4byte lbl_800D2448
 	.4byte lbl_800D2448
@@ -4793,7 +4793,7 @@ lbl_8052E6C0:
 lbl_8052E824:
 	# ROM: 0x52A924
 	.4byte lbl_800D3758
-	.4byte func_800D3620
+	.4byte lbl_800D3620
 	.4byte lbl_800D362C
 	.4byte lbl_800D3638
 	.4byte lbl_800D3644
@@ -4853,9 +4853,9 @@ lbl_8052E8E0:
 .global lbl_8052E8EC
 lbl_8052E8EC:
 	.4byte lbl_800E0844
-	.4byte func_800E07F0
-	.4byte func_800E07F0
-	.4byte func_800E07F0
+	.4byte lbl_800E07F0
+	.4byte lbl_800E07F0
+	.4byte lbl_800E07F0
 	.4byte lbl_800E07FC
 	.4byte lbl_800E0808
 	.4byte lbl_800E0814
@@ -4865,9 +4865,9 @@ lbl_8052E8EC:
 .global lbl_8052E914
 lbl_8052E914:
 	.4byte lbl_800E074C
-	.4byte func_800E06F8
-	.4byte func_800E06F8
-	.4byte func_800E06F8
+	.4byte lbl_800E06F8
+	.4byte lbl_800E06F8
+	.4byte lbl_800E06F8
 	.4byte lbl_800E0704
 	.4byte lbl_800E0710
 	.4byte lbl_800E071C
@@ -4877,9 +4877,9 @@ lbl_8052E914:
 .global lbl_8052E93C
 lbl_8052E93C:
 	.4byte lbl_800E06AC
-	.4byte func_800E0658
-	.4byte func_800E0658
-	.4byte func_800E0658
+	.4byte lbl_800E0658
+	.4byte lbl_800E0658
+	.4byte lbl_800E0658
 	.4byte lbl_800E0664
 	.4byte lbl_800E0670
 	.4byte lbl_800E067C
@@ -4889,9 +4889,9 @@ lbl_8052E93C:
 .global lbl_8052E964
 lbl_8052E964:
 	.4byte lbl_800E05B4
-	.4byte func_800E0560
-	.4byte func_800E0560
-	.4byte func_800E0560
+	.4byte lbl_800E0560
+	.4byte lbl_800E0560
+	.4byte lbl_800E0560
 	.4byte lbl_800E056C
 	.4byte lbl_800E0578
 	.4byte lbl_800E0584
@@ -4900,7 +4900,7 @@ lbl_8052E964:
 	.4byte lbl_800E05A8
 .global lbl_8052E98C
 lbl_8052E98C:
-	.4byte func_800E02A8
+	.4byte lbl_800E02A8
 	.4byte lbl_800E02B8
 	.4byte lbl_800E02C8
 	.4byte lbl_800E02D8
@@ -4910,7 +4910,7 @@ lbl_8052E98C:
 	.4byte lbl_800E02E4
 	.4byte lbl_800E02E4
 	.4byte lbl_800E02E4
-	.4byte func_800E02A8
+	.4byte lbl_800E02A8
 	.4byte lbl_800E02B8
 	.4byte lbl_800E02C8
 	.4byte lbl_800E02D8
@@ -4920,9 +4920,9 @@ lbl_8052E98C:
 lbl_8052E9C4:
 	# ROM: 0x52AAC4
 	.4byte lbl_800DEE38
-	.4byte func_800DED90
-	.4byte func_800DED90
-	.4byte func_800DED90
+	.4byte lbl_800DED90
+	.4byte lbl_800DED90
+	.4byte lbl_800DED90
 	.4byte lbl_800DEDA8
 	.4byte lbl_800DEDC0
 	.4byte lbl_800DEDD8
@@ -4935,9 +4935,9 @@ lbl_8052E9C4:
 lbl_8052E9EC:
 	# ROM: 0x52AAEC
 	.4byte lbl_800DECE8
-	.4byte func_800DEC40
-	.4byte func_800DEC40
-	.4byte func_800DEC40
+	.4byte lbl_800DEC40
+	.4byte lbl_800DEC40
+	.4byte lbl_800DEC40
 	.4byte lbl_800DEC58
 	.4byte lbl_800DEC70
 	.4byte lbl_800DEC88
@@ -4950,9 +4950,9 @@ lbl_8052E9EC:
 lbl_8052EA14:
 	# ROM: 0x52AB14
 	.4byte lbl_800DEBE8
-	.4byte func_800DEB40
-	.4byte func_800DEB40
-	.4byte func_800DEB40
+	.4byte lbl_800DEB40
+	.4byte lbl_800DEB40
+	.4byte lbl_800DEB40
 	.4byte lbl_800DEB58
 	.4byte lbl_800DEB70
 	.4byte lbl_800DEB88
@@ -4965,9 +4965,9 @@ lbl_8052EA14:
 lbl_8052EA3C:
 	# ROM: 0x52AB3C
 	.4byte lbl_800DEA98
-	.4byte func_800DE9F0
-	.4byte func_800DE9F0
-	.4byte func_800DE9F0
+	.4byte lbl_800DE9F0
+	.4byte lbl_800DE9F0
+	.4byte lbl_800DE9F0
 	.4byte lbl_800DEA08
 	.4byte lbl_800DEA20
 	.4byte lbl_800DEA38
@@ -4980,9 +4980,9 @@ lbl_8052EA3C:
 lbl_8052EA64:
 	# ROM: 0x52AB64
 	.4byte lbl_800DE988
-	.4byte func_800DE8E0
-	.4byte func_800DE8E0
-	.4byte func_800DE8E0
+	.4byte lbl_800DE8E0
+	.4byte lbl_800DE8E0
+	.4byte lbl_800DE8E0
 	.4byte lbl_800DE8F8
 	.4byte lbl_800DE910
 	.4byte lbl_800DE928
@@ -4995,9 +4995,9 @@ lbl_8052EA64:
 lbl_8052EA8C:
 	# ROM: 0x52AB8C
 	.4byte lbl_800DE838
-	.4byte func_800DE790
-	.4byte func_800DE790
-	.4byte func_800DE790
+	.4byte lbl_800DE790
+	.4byte lbl_800DE790
+	.4byte lbl_800DE790
 	.4byte lbl_800DE7A8
 	.4byte lbl_800DE7C0
 	.4byte lbl_800DE7D8
@@ -5010,9 +5010,9 @@ lbl_8052EA8C:
 lbl_8052EAB4:
 	# ROM: 0x52ABB4
 	.4byte lbl_800DDA8C
-	.4byte func_800DD9E4
-	.4byte func_800DD9E4
-	.4byte func_800DD9E4
+	.4byte lbl_800DD9E4
+	.4byte lbl_800DD9E4
+	.4byte lbl_800DD9E4
 	.4byte lbl_800DD9FC
 	.4byte lbl_800DDA14
 	.4byte lbl_800DDA2C
@@ -5025,9 +5025,9 @@ lbl_8052EAB4:
 lbl_8052EADC:
 	# ROM: 0x52ABDC
 	.4byte lbl_800DD93C
-	.4byte func_800DD894
-	.4byte func_800DD894
-	.4byte func_800DD894
+	.4byte lbl_800DD894
+	.4byte lbl_800DD894
+	.4byte lbl_800DD894
 	.4byte lbl_800DD8AC
 	.4byte lbl_800DD8C4
 	.4byte lbl_800DD8DC
@@ -5040,9 +5040,9 @@ lbl_8052EADC:
 lbl_8052EB04:
 	# ROM: 0x52AC04
 	.4byte lbl_800DD83C
-	.4byte func_800DD794
-	.4byte func_800DD794
-	.4byte func_800DD794
+	.4byte lbl_800DD794
+	.4byte lbl_800DD794
+	.4byte lbl_800DD794
 	.4byte lbl_800DD7AC
 	.4byte lbl_800DD7C4
 	.4byte lbl_800DD7DC
@@ -5055,9 +5055,9 @@ lbl_8052EB04:
 lbl_8052EB2C:
 	# ROM: 0x52AC2C
 	.4byte lbl_800DD6EC
-	.4byte func_800DD644
-	.4byte func_800DD644
-	.4byte func_800DD644
+	.4byte lbl_800DD644
+	.4byte lbl_800DD644
+	.4byte lbl_800DD644
 	.4byte lbl_800DD65C
 	.4byte lbl_800DD674
 	.4byte lbl_800DD68C
@@ -5070,9 +5070,9 @@ lbl_8052EB2C:
 lbl_8052EB54:
 	# ROM: 0x52AC54
 	.4byte lbl_800DD5DC
-	.4byte func_800DD534
-	.4byte func_800DD534
-	.4byte func_800DD534
+	.4byte lbl_800DD534
+	.4byte lbl_800DD534
+	.4byte lbl_800DD534
 	.4byte lbl_800DD54C
 	.4byte lbl_800DD564
 	.4byte lbl_800DD57C
@@ -5085,9 +5085,9 @@ lbl_8052EB54:
 lbl_8052EB7C:
 	# ROM: 0x52AC7C
 	.4byte lbl_800DD48C
-	.4byte func_800DD3E4
-	.4byte func_800DD3E4
-	.4byte func_800DD3E4
+	.4byte lbl_800DD3E4
+	.4byte lbl_800DD3E4
+	.4byte lbl_800DD3E4
 	.4byte lbl_800DD3FC
 	.4byte lbl_800DD414
 	.4byte lbl_800DD42C
@@ -5108,7 +5108,7 @@ lbl_8052EBA4:
 	.4byte lbl_800E0B4C
 	.4byte lbl_800E0B68
 	.4byte lbl_800E0B90
-	.4byte func_800E0A44
+	.4byte lbl_800E0A44
 	.4byte lbl_800E0AB4
 	.4byte lbl_800E0BD0
 	.4byte lbl_800E0BD0
@@ -5131,7 +5131,7 @@ lbl_8052EBA4:
 lbl_8052EC0C:
 	# ROM: 0x52AD0C
 	.4byte lbl_800E4EF4
-	.4byte func_800E4EAC
+	.4byte lbl_800E4EAC
 	.4byte lbl_800E4EB4
 	.4byte lbl_800E4EBC
 	.4byte lbl_800E4EC4
@@ -5146,9 +5146,9 @@ lbl_8052EC0C:
 lbl_8052EC34:
 	# ROM: 0x52AD34
 	.4byte lbl_800E4DA8
-	.4byte func_800E4D54
-	.4byte func_800E4D54
-	.4byte func_800E4D54
+	.4byte lbl_800E4D54
+	.4byte lbl_800E4D54
+	.4byte lbl_800E4D54
 	.4byte lbl_800E4D60
 	.4byte lbl_800E4D6C
 	.4byte lbl_800E4D78
@@ -5158,9 +5158,9 @@ lbl_8052EC34:
 .global lbl_8052EC5C
 lbl_8052EC5C:
 	.4byte lbl_800E4CAC
-	.4byte func_800E4C58
-	.4byte func_800E4C58
-	.4byte func_800E4C58
+	.4byte lbl_800E4C58
+	.4byte lbl_800E4C58
+	.4byte lbl_800E4C58
 	.4byte lbl_800E4C64
 	.4byte lbl_800E4C70
 	.4byte lbl_800E4C7C
@@ -5170,9 +5170,9 @@ lbl_8052EC5C:
 .global lbl_8052EC84
 lbl_8052EC84:
 	.4byte lbl_800E4C0C
-	.4byte func_800E4BB8
-	.4byte func_800E4BB8
-	.4byte func_800E4BB8
+	.4byte lbl_800E4BB8
+	.4byte lbl_800E4BB8
+	.4byte lbl_800E4BB8
 	.4byte lbl_800E4BC4
 	.4byte lbl_800E4BD0
 	.4byte lbl_800E4BDC
@@ -5182,9 +5182,9 @@ lbl_8052EC84:
 .global lbl_8052ECAC
 lbl_8052ECAC:
 	.4byte lbl_800E4B14
-	.4byte func_800E4AC0
-	.4byte func_800E4AC0
-	.4byte func_800E4AC0
+	.4byte lbl_800E4AC0
+	.4byte lbl_800E4AC0
+	.4byte lbl_800E4AC0
 	.4byte lbl_800E4ACC
 	.4byte lbl_800E4AD8
 	.4byte lbl_800E4AE4
@@ -5193,7 +5193,7 @@ lbl_8052ECAC:
 	.4byte lbl_800E4B08
 .global lbl_8052ECD4
 lbl_8052ECD4:
-	.4byte func_800E46C0
+	.4byte lbl_800E46C0
 	.4byte lbl_800E46D0
 	.4byte lbl_800E46E0
 	.4byte lbl_800E46F0
@@ -5203,7 +5203,7 @@ lbl_8052ECD4:
 	.4byte lbl_800E4844
 	.4byte lbl_800E4844
 	.4byte lbl_800E4844
-	.4byte func_800E46C0
+	.4byte lbl_800E46C0
 	.4byte lbl_800E46D0
 	.4byte lbl_800E46E0
 	.4byte lbl_800E46F0
@@ -5215,7 +5215,7 @@ lbl_8052ED10:
 	# ROM: 0x52AE10
 	.4byte lbl_800E7E8C
 	.4byte lbl_800E7D9C
-	.4byte func_800E7A40
+	.4byte lbl_800E7A40
 	.4byte lbl_800E7E8C
 	.4byte lbl_800E7E8C
 	.4byte lbl_800E7C88
@@ -5241,7 +5241,7 @@ lbl_8052ED48:
 	.4byte lbl_800E76C0
 	.4byte lbl_800E76DC
 	.4byte lbl_800E7704
-	.4byte func_800E75B8
+	.4byte lbl_800E75B8
 	.4byte lbl_800E7628
 	.4byte lbl_800E775C
 	.4byte lbl_800E775C
@@ -5264,7 +5264,7 @@ lbl_8052ED48:
 lbl_8052EDB0:
 	# ROM: 0x52AEB0
 	.4byte lbl_800E74D4
-	.4byte func_800E748C
+	.4byte lbl_800E748C
 	.4byte lbl_800E7494
 	.4byte lbl_800E749C
 	.4byte lbl_800E74A4
@@ -5279,9 +5279,9 @@ lbl_8052EDB0:
 lbl_8052EDD8:
 	# ROM: 0x52AED8
 	.4byte lbl_800E7388
-	.4byte func_800E72E0
-	.4byte func_800E72E0
-	.4byte func_800E72E0
+	.4byte lbl_800E72E0
+	.4byte lbl_800E72E0
+	.4byte lbl_800E72E0
 	.4byte lbl_800E72F8
 	.4byte lbl_800E7310
 	.4byte lbl_800E7328
@@ -5291,9 +5291,9 @@ lbl_8052EDD8:
 .global lbl_8052EE00
 lbl_8052EE00:
 	.4byte lbl_800E7238
-	.4byte func_800E7190
-	.4byte func_800E7190
-	.4byte func_800E7190
+	.4byte lbl_800E7190
+	.4byte lbl_800E7190
+	.4byte lbl_800E7190
 	.4byte lbl_800E71A8
 	.4byte lbl_800E71C0
 	.4byte lbl_800E71D8
@@ -5303,9 +5303,9 @@ lbl_8052EE00:
 .global lbl_8052EE28
 lbl_8052EE28:
 	.4byte lbl_800E7144
-	.4byte func_800E709C
-	.4byte func_800E709C
-	.4byte func_800E709C
+	.4byte lbl_800E709C
+	.4byte lbl_800E709C
+	.4byte lbl_800E709C
 	.4byte lbl_800E70B4
 	.4byte lbl_800E70CC
 	.4byte lbl_800E70E4
@@ -5315,9 +5315,9 @@ lbl_8052EE28:
 .global lbl_8052EE50
 lbl_8052EE50:
 	.4byte lbl_800E6FF8
-	.4byte func_800E6F50
-	.4byte func_800E6F50
-	.4byte func_800E6F50
+	.4byte lbl_800E6F50
+	.4byte lbl_800E6F50
+	.4byte lbl_800E6F50
 	.4byte lbl_800E6F68
 	.4byte lbl_800E6F80
 	.4byte lbl_800E6F98
@@ -5326,7 +5326,7 @@ lbl_8052EE50:
 	.4byte lbl_800E6FE0
 .global lbl_8052EE78
 lbl_8052EE78:
-	.4byte func_800E6B50
+	.4byte lbl_800E6B50
 	.4byte lbl_800E6B60
 	.4byte lbl_800E6B70
 	.4byte lbl_800E6B80
@@ -5336,7 +5336,7 @@ lbl_8052EE78:
 	.4byte lbl_800E6CD4
 	.4byte lbl_800E6CD4
 	.4byte lbl_800E6CD4
-	.4byte func_800E6B50
+	.4byte lbl_800E6B50
 	.4byte lbl_800E6B60
 	.4byte lbl_800E6B70
 	.4byte lbl_800E6B80
@@ -5347,9 +5347,9 @@ lbl_8052EE78:
 lbl_8052EEB4:
 	# ROM: 0x52AFB4
 	.4byte lbl_800EB074
-	.4byte func_800EB020
-	.4byte func_800EB020
-	.4byte func_800EB020
+	.4byte lbl_800EB020
+	.4byte lbl_800EB020
+	.4byte lbl_800EB020
 	.4byte lbl_800EB02C
 	.4byte lbl_800EB038
 	.4byte lbl_800EB044
@@ -5362,9 +5362,9 @@ lbl_8052EEB4:
 lbl_8052EEDC:
 	# ROM: 0x52AFDC
 	.4byte lbl_800EAF78
-	.4byte func_800EAF24
-	.4byte func_800EAF24
-	.4byte func_800EAF24
+	.4byte lbl_800EAF24
+	.4byte lbl_800EAF24
+	.4byte lbl_800EAF24
 	.4byte lbl_800EAF30
 	.4byte lbl_800EAF3C
 	.4byte lbl_800EAF48
@@ -5377,9 +5377,9 @@ lbl_8052EEDC:
 lbl_8052EF04:
 	# ROM: 0x52B004
 	.4byte lbl_800EAEE0
-	.4byte func_800EAE8C
-	.4byte func_800EAE8C
-	.4byte func_800EAE8C
+	.4byte lbl_800EAE8C
+	.4byte lbl_800EAE8C
+	.4byte lbl_800EAE8C
 	.4byte lbl_800EAE98
 	.4byte lbl_800EAEA4
 	.4byte lbl_800EAEB0
@@ -5392,9 +5392,9 @@ lbl_8052EF04:
 lbl_8052EF2C:
 	# ROM: 0x52B02C
 	.4byte lbl_800EADE4
-	.4byte func_800EAD90
-	.4byte func_800EAD90
-	.4byte func_800EAD90
+	.4byte lbl_800EAD90
+	.4byte lbl_800EAD90
+	.4byte lbl_800EAD90
 	.4byte lbl_800EAD9C
 	.4byte lbl_800EADA8
 	.4byte lbl_800EADB4
@@ -5431,7 +5431,7 @@ lbl_8052EF6C:
 	.4byte lbl_800F3518
 	.4byte lbl_800EE150
 	.4byte lbl_800EDD08
-	.4byte func_800ED478
+	.4byte lbl_800ED478
 	.4byte lbl_800F3518
 	.4byte lbl_800ED8D4
 	.4byte lbl_800F3518
@@ -5720,9 +5720,9 @@ lbl_8052EF6C:
 lbl_8052F40C:
 	# ROM: 0x52B50C
 	.4byte lbl_800ED248
-	.4byte func_800ED1F4
-	.4byte func_800ED1F4
-	.4byte func_800ED1F4
+	.4byte lbl_800ED1F4
+	.4byte lbl_800ED1F4
+	.4byte lbl_800ED1F4
 	.4byte lbl_800ED200
 	.4byte lbl_800ED20C
 	.4byte lbl_800ED218
@@ -5918,7 +5918,7 @@ lbl_8052F5C4:
 .global lbl_8052F5D0
 lbl_8052F5D0:
 	# ROM: 0x52B6D0
-	.4byte func_800FF088
+	.4byte lbl_800FF088
 	.4byte lbl_800FF09C
 	.4byte lbl_800FF160
 	.4byte lbl_800FF16C
@@ -6058,7 +6058,7 @@ lbl_8052F764:
 .global lbl_8052F780
 lbl_8052F780:
 	# ROM: 0x52B880
-	.4byte func_80103498
+	.4byte lbl_80103498
 	.4byte lbl_801034CC
 	.4byte lbl_80103568
 	.4byte lbl_80103574
@@ -6072,7 +6072,7 @@ lbl_8052F780:
 .global lbl_8052F7A4
 lbl_8052F7A4:
 	# ROM: 0x52B8A4
-	.4byte func_8010743C
+	.4byte lbl_8010743C
 	.4byte lbl_80107444
 	.4byte lbl_8010744C
 	.4byte lbl_80107454
@@ -6087,7 +6087,7 @@ lbl_8052F7A4:
 lbl_8052F7C8:
 	# ROM: 0x52B8C8
 	.4byte lbl_80107488
-	.4byte func_80107344
+	.4byte lbl_80107344
 	.4byte lbl_80107368
 	.4byte lbl_80107370
 	.4byte lbl_80107378
@@ -6104,7 +6104,7 @@ lbl_8052F7C8:
 .global lbl_8052F7FC
 lbl_8052F7FC:
 	# ROM: 0x52B8FC
-	.4byte func_80107738
+	.4byte lbl_80107738
 	.4byte lbl_80107740
 	.4byte lbl_80107748
 	.4byte lbl_80107750
@@ -6119,7 +6119,7 @@ lbl_8052F7FC:
 lbl_8052F820:
 	# ROM: 0x52B920
 	.4byte lbl_80107784
-	.4byte func_80107640
+	.4byte lbl_80107640
 	.4byte lbl_80107664
 	.4byte lbl_8010766C
 	.4byte lbl_80107674
@@ -6250,7 +6250,7 @@ lbl_8052F9B4:
 .global lbl_8052F9D0
 lbl_8052F9D0:
 	# ROM: 0x52BAD0
-	.4byte func_80109D0C
+	.4byte lbl_80109D0C
 	.4byte lbl_80109D30
 	.4byte lbl_80109D54
 	.4byte lbl_80109D78
@@ -6989,7 +6989,7 @@ lbl_805303D0:
 .global lbl_805303E0
 lbl_805303E0:
 	# ROM: 0x52C4E0
-	.4byte func_8011CB88
+	.4byte lbl_8011CB88
 	.4byte lbl_8011CB94
 	.4byte lbl_8011CBA0
 	.4byte lbl_8011CBAC
@@ -7335,7 +7335,7 @@ lbl_80530844:
 lbl_80530850:
 	.4byte lbl_80123BEC
 	.4byte lbl_80123BEC
-	.4byte func_80123B30
+	.4byte lbl_80123B30
 	.4byte lbl_80123B48
 	.4byte lbl_80123B60
 	.4byte lbl_80123B60
@@ -7351,7 +7351,7 @@ lbl_80530850:
 lbl_80530888:
 	.4byte lbl_801238E0
 	.4byte lbl_801238E0
-	.4byte func_80123824
+	.4byte lbl_80123824
 	.4byte lbl_8012383C
 	.4byte lbl_80123854
 	.4byte lbl_80123854
@@ -7712,7 +7712,7 @@ lbl_80530C48:
 .global lbl_80530D74
 lbl_80530D74:
 	.4byte lbl_80125FEC
-	.4byte func_80125E00
+	.4byte lbl_80125E00
 	.4byte lbl_80125E78
 	.4byte lbl_8012601C
 	.4byte lbl_80125E80
@@ -7733,7 +7733,7 @@ lbl_80530DAC:
 	.4byte lbl_80127568
 	.4byte lbl_801263F4
 	.4byte lbl_801264AC
-	.4byte func_80126264
+	.4byte lbl_80126264
 	.4byte lbl_801263C4
 	.4byte lbl_8012626C
 	.4byte lbl_80126828
@@ -8052,7 +8052,7 @@ lbl_80531080:
 	.4byte 0
 .global lbl_8053108C
 lbl_8053108C:
-	.4byte func_8012AC70
+	.4byte lbl_8012AC70
 	.4byte lbl_8012AC78
 	.4byte lbl_8012AC80
 	.4byte lbl_8012AC88
@@ -8471,7 +8471,7 @@ lbl_80531740:
 lbl_80531750:
 	# ROM: 0x52D850
 	.4byte lbl_8012BF50
-	.4byte func_8012BE94
+	.4byte lbl_8012BE94
 	.4byte lbl_8012BEB8
 	.4byte lbl_8012BED4
 	.4byte lbl_8012BF04
@@ -8908,7 +8908,7 @@ lbl_80531C38:
 lbl_80531C58:
 	# ROM: 0x52DD58
 	.4byte lbl_801394B0
-	.4byte func_8013944C
+	.4byte lbl_8013944C
 	.4byte lbl_80139454
 	.4byte lbl_8013945C
 	.4byte lbl_80139464
@@ -9422,7 +9422,7 @@ lbl_80532310:
 	.4byte lbl_8014D1D4
 	.4byte lbl_8014D1D4
 	.4byte lbl_8014D1D4
-	.4byte func_8014D098
+	.4byte lbl_8014D098
 	.4byte lbl_8014D654
 	.4byte lbl_8014D0D8
 	.4byte lbl_8014D654
@@ -9563,16 +9563,16 @@ lbl_80532450:
 	.4byte lbl_8014E950
 	.4byte lbl_8014EB88
 	.4byte lbl_8014EB88
-	.4byte func_8014E258
-	.4byte func_8014E258
-	.4byte func_8014E258
-	.4byte func_8014E258
-	.4byte func_8014E258
-	.4byte func_8014E258
-	.4byte func_8014E258
-	.4byte func_8014E258
-	.4byte func_8014E258
-	.4byte func_8014E258
+	.4byte lbl_8014E258
+	.4byte lbl_8014E258
+	.4byte lbl_8014E258
+	.4byte lbl_8014E258
+	.4byte lbl_8014E258
+	.4byte lbl_8014E258
+	.4byte lbl_8014E258
+	.4byte lbl_8014E258
+	.4byte lbl_8014E258
+	.4byte lbl_8014E258
 	.4byte lbl_8014F104
 	.4byte lbl_8014F104
 	.4byte lbl_8014F104
@@ -9593,9 +9593,9 @@ lbl_80532450:
 	.4byte lbl_8014F56C
 .global lbl_805325BC
 lbl_805325BC:
-	.4byte func_80151D54
-	.4byte func_80151D54
-	.4byte func_80151D54
+	.4byte lbl_80151D54
+	.4byte lbl_80151D54
+	.4byte lbl_80151D54
 	.4byte lbl_80151E4C
 	.4byte lbl_80151E04
 	.4byte lbl_80151F6C
@@ -9660,7 +9660,7 @@ lbl_805325BC:
 lbl_805326B0:
 	# ROM: 0x52E7B0
 	.4byte lbl_80151C9C
-	.4byte func_80150F70
+	.4byte lbl_80150F70
 	.4byte lbl_80151054
 	.4byte lbl_80151C9C
 	.4byte lbl_80151C9C
@@ -9849,7 +9849,7 @@ lbl_8053297C:
 	.4byte lbl_80150F1C
 	.4byte lbl_80150D3C
 	.4byte lbl_80150D54
-	.4byte func_80150A8C
+	.4byte lbl_80150A8C
 	.4byte lbl_80150F1C
 	.4byte lbl_80150F1C
 	.4byte lbl_80150F1C
@@ -10027,14 +10027,14 @@ lbl_80532A08:
 	.4byte lbl_801536E0
 	.4byte lbl_801536FC
 	.4byte lbl_80153760
-	.4byte func_80152954
-	.4byte func_80152954
-	.4byte func_80152954
-	.4byte func_80152954
-	.4byte func_80152954
-	.4byte func_80152954
-	.4byte func_80152954
-	.4byte func_80152954
+	.4byte lbl_80152954
+	.4byte lbl_80152954
+	.4byte lbl_80152954
+	.4byte lbl_80152954
+	.4byte lbl_80152954
+	.4byte lbl_80152954
+	.4byte lbl_80152954
+	.4byte lbl_80152954
 	.4byte lbl_801529F4
 	.4byte lbl_801529F4
 	.4byte lbl_801529F4
@@ -10073,7 +10073,7 @@ lbl_80532CD4:
 	.4byte lbl_80152900
 	.4byte lbl_801525C4
 	.4byte lbl_801525DC
-	.4byte func_80152320
+	.4byte lbl_80152320
 	.4byte lbl_8015265C
 	.4byte lbl_8015268C
 	.4byte lbl_8015265C
@@ -10250,7 +10250,7 @@ lbl_80532E94:
 	# ROM: 0x52EF94
 	.4byte lbl_80157BF0
 	.4byte lbl_80157BF0
-	.4byte func_80157AB4
+	.4byte lbl_80157AB4
 	.4byte lbl_80157B90
 	.4byte lbl_80157AD0
 	.4byte lbl_80157AEC
@@ -10288,7 +10288,7 @@ lbl_80532F04:
 	# ROM: 0x52F004
 	.4byte lbl_80157FC8
 	.4byte lbl_80157FC8
-	.4byte func_80157F8C
+	.4byte lbl_80157F8C
 	.4byte lbl_80157FA4
 	.4byte lbl_80157F94
 	.4byte lbl_80157F94
@@ -10870,7 +10870,7 @@ lbl_80533658:
 .global lbl_80533668
 lbl_80533668:
 	# ROM: 0x52F768
-	.4byte func_8015EF80
+	.4byte lbl_8015EF80
 	.4byte lbl_8015EF94
 	.4byte lbl_8015F024
 	.4byte lbl_8015F160
@@ -12618,7 +12618,7 @@ lbl_80534EC8:
 .global lbl_80534EE0
 lbl_80534EE0:
 	# ROM: 0x530FE0
-	.4byte func_80174D24
+	.4byte lbl_80174D24
 	.4byte lbl_80174D60
 	.4byte lbl_80174D9C
 	.4byte lbl_80174E00
@@ -12629,9 +12629,9 @@ lbl_80534EE0:
 .global lbl_80534F00
 lbl_80534F00:
 	.4byte lbl_80177D10
-	.4byte func_80177CBC
-	.4byte func_80177CBC
-	.4byte func_80177CBC
+	.4byte lbl_80177CBC
+	.4byte lbl_80177CBC
+	.4byte lbl_80177CBC
 	.4byte lbl_80177CC8
 	.4byte lbl_80177CD4
 	.4byte lbl_80177CE0
@@ -12641,9 +12641,9 @@ lbl_80534F00:
 .global lbl_80534F28
 lbl_80534F28:
 	.4byte lbl_80177C18
-	.4byte func_80177BC4
-	.4byte func_80177BC4
-	.4byte func_80177BC4
+	.4byte lbl_80177BC4
+	.4byte lbl_80177BC4
+	.4byte lbl_80177BC4
 	.4byte lbl_80177BD0
 	.4byte lbl_80177BDC
 	.4byte lbl_80177BE8
@@ -12653,9 +12653,9 @@ lbl_80534F28:
 .global lbl_80534F50
 lbl_80534F50:
 	.4byte lbl_80177B08
-	.4byte func_80177AB4
-	.4byte func_80177AB4
-	.4byte func_80177AB4
+	.4byte lbl_80177AB4
+	.4byte lbl_80177AB4
+	.4byte lbl_80177AB4
 	.4byte lbl_80177AC0
 	.4byte lbl_80177ACC
 	.4byte lbl_80177AD8
@@ -12665,9 +12665,9 @@ lbl_80534F50:
 .global lbl_80534F78
 lbl_80534F78:
 	.4byte lbl_80177A10
-	.4byte func_801779BC
-	.4byte func_801779BC
-	.4byte func_801779BC
+	.4byte lbl_801779BC
+	.4byte lbl_801779BC
+	.4byte lbl_801779BC
 	.4byte lbl_801779C8
 	.4byte lbl_801779D4
 	.4byte lbl_801779E0
@@ -12677,9 +12677,9 @@ lbl_80534F78:
 .global lbl_80534FA0
 lbl_80534FA0:
 	.4byte lbl_801777D4
-	.4byte func_80177780
-	.4byte func_80177780
-	.4byte func_80177780
+	.4byte lbl_80177780
+	.4byte lbl_80177780
+	.4byte lbl_80177780
 	.4byte lbl_8017778C
 	.4byte lbl_80177798
 	.4byte lbl_801777A4
@@ -12689,9 +12689,9 @@ lbl_80534FA0:
 .global lbl_80534FC8
 lbl_80534FC8:
 	.4byte lbl_801776DC
-	.4byte func_80177688
-	.4byte func_80177688
-	.4byte func_80177688
+	.4byte lbl_80177688
+	.4byte lbl_80177688
+	.4byte lbl_80177688
 	.4byte lbl_80177694
 	.4byte lbl_801776A0
 	.4byte lbl_801776AC
@@ -12701,9 +12701,9 @@ lbl_80534FC8:
 .global lbl_80534FF0
 lbl_80534FF0:
 	.4byte lbl_80177620
-	.4byte func_801775CC
-	.4byte func_801775CC
-	.4byte func_801775CC
+	.4byte lbl_801775CC
+	.4byte lbl_801775CC
+	.4byte lbl_801775CC
 	.4byte lbl_801775D8
 	.4byte lbl_801775E4
 	.4byte lbl_801775F0
@@ -12713,9 +12713,9 @@ lbl_80534FF0:
 .global lbl_80535018
 lbl_80535018:
 	.4byte lbl_80177528
-	.4byte func_801774D4
-	.4byte func_801774D4
-	.4byte func_801774D4
+	.4byte lbl_801774D4
+	.4byte lbl_801774D4
+	.4byte lbl_801774D4
 	.4byte lbl_801774E0
 	.4byte lbl_801774EC
 	.4byte lbl_801774F8
@@ -14965,7 +14965,7 @@ lbl_80536C48:
 lbl_80536C58:
 	# ROM: 0x532D58
 	.4byte lbl_801AEB44
-	.4byte func_801AE90C
+	.4byte lbl_801AE90C
 	.4byte lbl_801AE940
 	.4byte lbl_801AE974
 	.4byte lbl_801AE9A8
@@ -14984,16 +14984,16 @@ lbl_80536C88:
 	.4byte lbl_801AEB44
 	.4byte lbl_801AE298
 	.4byte lbl_801AE3A8
-	.4byte func_801AE264
-	.4byte func_801AE264
-	.4byte func_801AE264
-	.4byte func_801AE264
+	.4byte lbl_801AE264
+	.4byte lbl_801AE264
+	.4byte lbl_801AE264
+	.4byte lbl_801AE264
 	.4byte lbl_801AE340
-	.4byte func_801AE264
+	.4byte lbl_801AE264
 	.4byte lbl_801AE30C
 	.4byte lbl_801AE374
 	.4byte lbl_801AE61C
-	.4byte func_801AE264
+	.4byte lbl_801AE264
 
 
 .global lbl_80536CBC
@@ -15002,16 +15002,16 @@ lbl_80536CBC:
 	.4byte lbl_801ADC64
 	.4byte lbl_801AD628
 	.4byte lbl_801AD738
-	.4byte func_801AD5F4
-	.4byte func_801AD5F4
-	.4byte func_801AD5F4
-	.4byte func_801AD5F4
+	.4byte lbl_801AD5F4
+	.4byte lbl_801AD5F4
+	.4byte lbl_801AD5F4
+	.4byte lbl_801AD5F4
 	.4byte lbl_801AD6D0
-	.4byte func_801AD5F4
+	.4byte lbl_801AD5F4
 	.4byte lbl_801AD69C
 	.4byte lbl_801AD704
 	.4byte lbl_801AD9AC
-	.4byte func_801AD5F4
+	.4byte lbl_801AD5F4
 
 
 .global lbl_80536CF0
@@ -15193,7 +15193,7 @@ lbl_80536F30:
 lbl_80536F40:
 	.4byte lbl_801B3B54
 	.4byte lbl_801B3B54
-	.4byte func_801B3AD0
+	.4byte lbl_801B3AD0
 	.4byte lbl_801B3AD8
 	.4byte lbl_801B3AE0
 	.4byte lbl_801B3AE8
@@ -15209,7 +15209,7 @@ lbl_80536F40:
 lbl_80536F78:
 	.4byte lbl_801B3558
 	.4byte lbl_801B3558
-	.4byte func_801B34C8
+	.4byte lbl_801B34C8
 	.4byte lbl_801B34D0
 	.4byte lbl_801B34D8
 	.4byte lbl_801B34E0
@@ -15226,7 +15226,7 @@ lbl_80536F78:
 .global lbl_80536FB0
 lbl_80536FB0:
 	# ROM: 0x5330B0
-	.4byte func_801B412C
+	.4byte lbl_801B412C
 	.4byte lbl_801B415C
 	.4byte lbl_801B4274
 	.4byte lbl_801B4280
@@ -15242,7 +15242,7 @@ lbl_80536FB0:
 lbl_80536FE0:
 	.4byte lbl_801B5208
 	.4byte lbl_801B5208
-	.4byte func_801B5184
+	.4byte lbl_801B5184
 	.4byte lbl_801B518C
 	.4byte lbl_801B5194
 	.4byte lbl_801B519C
@@ -15258,7 +15258,7 @@ lbl_80536FE0:
 lbl_80537018:
 	.4byte lbl_801B4CE8
 	.4byte lbl_801B4CE8
-	.4byte func_801B4C58
+	.4byte lbl_801B4C58
 	.4byte lbl_801B4C60
 	.4byte lbl_801B4C68
 	.4byte lbl_801B4C70
@@ -15275,7 +15275,7 @@ lbl_80537018:
 .global lbl_80537050
 lbl_80537050:
 	# ROM: 0x533150
-	.4byte func_801B6F20
+	.4byte lbl_801B6F20
 	.4byte lbl_801B6F38
 	.4byte lbl_801B6F50
 	.4byte lbl_801B6F68
@@ -15496,7 +15496,7 @@ lbl_80537314:
 .global lbl_80537350
 lbl_80537350:
 	# ROM: 0x533450
-	.4byte func_801BEC94
+	.4byte lbl_801BEC94
 	.4byte lbl_801BECA0
 	.4byte lbl_801BECAC
 	.4byte lbl_801BECB8
@@ -16183,7 +16183,7 @@ lbl_80537D40:
 .global lbl_80537D50
 lbl_80537D50:
 	# ROM: 0x533E50
-	.4byte func_801C7274
+	.4byte lbl_801C7274
 	.4byte lbl_801C7280
 	.4byte lbl_801C72A0
 	.4byte lbl_801C72E0
@@ -16201,7 +16201,7 @@ lbl_80537D50:
 lbl_80537D80:
 	# ROM: 0x533E80
 	.4byte lbl_801C771C
-	.4byte func_801C7040
+	.4byte lbl_801C7040
 	.4byte lbl_801C7080
 	.4byte lbl_801C70C0
 	.4byte lbl_801C7100
@@ -16217,7 +16217,7 @@ lbl_80537DA8:
 	# ROM: 0x533EA8
 	.4byte lbl_801C771C
 	.4byte lbl_801C771C
-	.4byte func_801C6F0C
+	.4byte lbl_801C6F0C
 	.4byte lbl_801C7254
 	.4byte lbl_801C7018
 	.4byte lbl_801C7018
@@ -16235,7 +16235,7 @@ lbl_80537DA8:
 lbl_80537DE0:
 	# ROM: 0x533EE0
 	.4byte lbl_801CACF8
-	.4byte func_801CAC14
+	.4byte lbl_801CAC14
 	.4byte lbl_801CAC1C
 	.4byte lbl_801CAC24
 	.4byte lbl_801CAC2C
@@ -16268,7 +16268,7 @@ lbl_80537E4C:
 	# ROM: 0x533F4C
 	.4byte lbl_801CFBE4
 	.4byte lbl_801CFBE4
-	.4byte func_801CFA98
+	.4byte lbl_801CFA98
 	.4byte lbl_801CFAB4
 	.4byte lbl_801CFAD0
 	.4byte lbl_801CFAEC
@@ -16287,7 +16287,7 @@ lbl_80537E84:
 	# ROM: 0x533F84
 	.4byte lbl_801D0DD4
 	.4byte lbl_801D0DD4
-	.4byte func_801D0C40
+	.4byte lbl_801D0C40
 	.4byte lbl_801D0CF4
 	.4byte lbl_801D0C7C
 	.4byte lbl_801D0C7C
@@ -16306,7 +16306,7 @@ lbl_80537EBC:
 	# ROM: 0x533FBC
 	.4byte lbl_801D12B0
 	.4byte lbl_801D12B0
-	.4byte func_801D1254
+	.4byte lbl_801D1254
 	.4byte lbl_801D125C
 	.4byte lbl_801D1264
 	.4byte lbl_801D126C
@@ -16650,7 +16650,7 @@ lbl_80538210:
 .global lbl_80538220
 lbl_80538220:
 	# ROM: 0x534320
-	.4byte func_801D655C
+	.4byte lbl_801D655C
 	.4byte lbl_801D6574
 	.4byte lbl_801D658C
 	.4byte lbl_801D65A4
@@ -16804,7 +16804,7 @@ lbl_80538400:
 lbl_80538410:
 	# ROM: 0x534510
 	.4byte lbl_801ED490
-	.4byte func_801ED42C
+	.4byte lbl_801ED42C
 	.4byte lbl_801ED434
 	.4byte lbl_801ED490
 	.4byte lbl_801ED43C
@@ -16822,7 +16822,7 @@ lbl_80538440:
 	# ROM: 0x534540
 	.4byte lbl_801EFCB0
 	.4byte lbl_801EFCB0
-	.4byte func_801EFB64
+	.4byte lbl_801EFB64
 	.4byte lbl_801EFB80
 	.4byte lbl_801EFB9C
 	.4byte lbl_801EFBB8
@@ -16839,7 +16839,7 @@ lbl_80538440:
 .global lbl_80538478
 lbl_80538478:
 	# ROM: 0x534578
-	.4byte func_801F1CCC
+	.4byte lbl_801F1CCC
 	.4byte lbl_801F1CE4
 	.4byte lbl_801F1CFC
 	.4byte lbl_801F1D14
@@ -17061,7 +17061,7 @@ lbl_805386D8:
 lbl_80538700:
 	# ROM: 0x534800
 	.4byte lbl_801F728C
-	.4byte func_801F6EAC
+	.4byte lbl_801F6EAC
 	.4byte lbl_801F6F34
 	.4byte lbl_801F6FBC
 	.4byte lbl_801F7044
@@ -17069,7 +17069,7 @@ lbl_80538700:
 	.4byte lbl_801F719C
 	.4byte lbl_801F7248
 	.4byte lbl_801F7254
-	.4byte func_801F6EAC
+	.4byte lbl_801F6EAC
 
 
 .global lbl_80538728
@@ -17302,7 +17302,7 @@ lbl_80538A28:
 .global lbl_80538A40
 lbl_80538A40:
 	# ROM: 0x534B40
-	.4byte func_801FA370
+	.4byte lbl_801FA370
 	.4byte lbl_801FA378
 	.4byte lbl_801FA380
 	.4byte lbl_801FA388
@@ -17547,7 +17547,7 @@ lbl_80538D5C:
 lbl_80538D68:
 	# ROM: 0x534E68
 	.4byte lbl_80202190
-	.4byte func_80202154
+	.4byte lbl_80202154
 	.4byte lbl_8020215C
 	.4byte lbl_80202190
 	.4byte lbl_80202164
@@ -17562,7 +17562,7 @@ lbl_80538D68:
 .global lbl_80538D94
 lbl_80538D94:
 	# ROM: 0x534E94
-	.4byte func_80202950
+	.4byte lbl_80202950
 	.4byte lbl_8020295C
 	.4byte lbl_80202968
 	.4byte lbl_80202974
@@ -17581,7 +17581,7 @@ lbl_80538D94:
 .global lbl_80538DCC
 lbl_80538DCC:
 	# ROM: 0x534ECC
-	.4byte func_80202ADC
+	.4byte lbl_80202ADC
 	.4byte lbl_80202AE8
 	.4byte lbl_80202AF4
 	.4byte lbl_80202B00
@@ -17601,19 +17601,19 @@ lbl_80538DCC:
 lbl_80538E04:
 	# ROM: 0x534F04
 	.4byte lbl_80203208
-	.4byte func_802031C8
-	.4byte func_802031D0
-	.4byte func_802031D8
+	.4byte lbl_802031C8
+	.4byte lbl_802031D0
+	.4byte lbl_802031D8
 	.4byte lbl_80203208
-	.4byte func_802031E0
+	.4byte lbl_802031E0
 	.4byte lbl_80203208
-	.4byte func_802031E8
+	.4byte lbl_802031E8
 	.4byte lbl_80203208
-	.4byte func_802031F0
+	.4byte lbl_802031F0
 	.4byte lbl_80203208
-	.4byte func_802031F8
+	.4byte lbl_802031F8
 	.4byte lbl_80203208
-	.4byte func_80203200
+	.4byte lbl_80203200
 	.4byte 0
 
 
@@ -18037,7 +18037,7 @@ lbl_805392C0:
 .global lbl_805392F8
 lbl_805392F8:
 	# ROM: 0x5353F8
-	.4byte func_80212AA0
+	.4byte lbl_80212AA0
 	.4byte lbl_80212AA8
 	.4byte lbl_80212AB0
 	.4byte lbl_80212AB8
@@ -18107,7 +18107,7 @@ lbl_805393C4:
 lbl_805393D8:
 	# ROM: 0x5354D8
 	.4byte lbl_8021438C
-	.4byte func_80214310
+	.4byte lbl_80214310
 	.4byte lbl_80214318
 	.4byte lbl_80214320
 	.4byte lbl_80214330
@@ -18230,7 +18230,7 @@ lbl_80539548:
 .global lbl_80539560
 lbl_80539560:
 	# ROM: 0x535660
-	.4byte func_8021FF14
+	.4byte lbl_8021FF14
 	.4byte lbl_8021FF1C
 	.4byte lbl_8021FF24
 	.4byte lbl_8021FF2C
@@ -18276,7 +18276,7 @@ lbl_80539560:
 .global lbl_80539604
 lbl_80539604:
 	# ROM: 0x535704
-	.4byte func_802209AC
+	.4byte lbl_802209AC
 	.4byte lbl_802209B8
 	.4byte lbl_802209EC
 	.4byte lbl_80220A4C
@@ -18362,7 +18362,7 @@ lbl_80539700:
 lbl_80539710:
 	# ROM: 0x535810
 	.4byte lbl_80222938
-	.4byte func_802228FC
+	.4byte lbl_802228FC
 	.4byte lbl_80222904
 	.4byte lbl_8022290C
 	.4byte lbl_80222914
@@ -18774,7 +18774,7 @@ lbl_80539B50:
 lbl_80539BC0:
 	.4byte lbl_8022AF14
 	.4byte lbl_8022AF14
-	.4byte func_8022AE58
+	.4byte lbl_8022AE58
 	.4byte lbl_8022AE70
 	.4byte lbl_8022AE88
 	.4byte lbl_8022AE88
@@ -18790,7 +18790,7 @@ lbl_80539BC0:
 lbl_80539BF8:
 	.4byte lbl_8022AB40
 	.4byte lbl_8022AB40
-	.4byte func_8022AA84
+	.4byte lbl_8022AA84
 	.4byte lbl_8022AA9C
 	.4byte lbl_8022AAB4
 	.4byte lbl_8022AAB4
@@ -19119,7 +19119,7 @@ lbl_80539FF8:
 .global lbl_8053A030
 lbl_8053A030:
 	# ROM: 0x536130
-	.4byte func_80230BF0
+	.4byte lbl_80230BF0
 	.4byte lbl_80230BF8
 	.4byte lbl_80230C00
 	.4byte lbl_80230C08
@@ -19134,7 +19134,7 @@ lbl_8053A030:
 lbl_8053A054:
 	# ROM: 0x536154
 	.4byte lbl_80230C3C
-	.4byte func_80230B10
+	.4byte lbl_80230B10
 	.4byte lbl_80230B34
 	.4byte lbl_80230B3C
 	.4byte lbl_80230B44
@@ -19147,7 +19147,7 @@ lbl_8053A054:
 .global lbl_8053A078
 lbl_8053A078:
 	# ROM: 0x536178
-	.4byte func_8023116C
+	.4byte lbl_8023116C
 	.4byte lbl_80231174
 	.4byte lbl_8023117C
 	.4byte lbl_80231184
@@ -19162,7 +19162,7 @@ lbl_8053A078:
 lbl_8053A09C:
 	# ROM: 0x53619C
 	.4byte lbl_8023120C
-	.4byte func_8023108C
+	.4byte lbl_8023108C
 	.4byte lbl_802310B0
 	.4byte lbl_802310B8
 	.4byte lbl_802310C0
@@ -19222,7 +19222,7 @@ lbl_8053A148:
 lbl_8053A158:
 	# ROM: 0x536258
 	.4byte lbl_8023590C
-	.4byte func_802358C0
+	.4byte lbl_802358C0
 	.4byte lbl_802358C8
 	.4byte lbl_8023590C
 	.4byte lbl_802358D0
@@ -19240,7 +19240,7 @@ lbl_8053A158:
 lbl_8053A18C:
 	# ROM: 0x53628C
 	.4byte lbl_802379F8
-	.4byte func_80237664
+	.4byte lbl_80237664
 	.4byte lbl_80237678
 	.4byte lbl_8023768C
 	.4byte lbl_802376A0
@@ -19344,16 +19344,16 @@ lbl_8053A2D8:
 lbl_8053A2E4:
 	# ROM: 0x5363E4
 	.4byte lbl_8023EB74
-	.4byte func_8023EB34
-	.4byte func_8023EB34
+	.4byte lbl_8023EB34
+	.4byte lbl_8023EB34
 	.4byte lbl_8023EB60
 	.4byte lbl_8023EB60
 	.4byte lbl_8023EB74
 	.4byte lbl_8023EB74
 	.4byte lbl_8023EB60
-	.4byte func_8023EB34
-	.4byte func_8023EB34
-	.4byte func_8023EB34
+	.4byte lbl_8023EB34
+	.4byte lbl_8023EB34
+	.4byte lbl_8023EB34
 	.4byte lbl_8023EB60
 	.4byte lbl_8023EB60
 	.4byte lbl_8023EB60
@@ -19378,7 +19378,7 @@ lbl_8053A2E4:
 	.4byte lbl_8023EB60
 	.4byte lbl_8023EB60
 	.4byte lbl_8023EB60
-	.4byte func_8023EB34
+	.4byte lbl_8023EB34
 
 
 .global lbl_8053A374
@@ -19479,7 +19479,7 @@ lbl_8053A490:
 .global lbl_8053A4B0
 lbl_8053A4B0:
 	# ROM: 0x5365B0
-	.4byte func_80241E94
+	.4byte lbl_80241E94
 	.4byte lbl_80241F00
 	.4byte lbl_80241F2C
 	.4byte lbl_80241F38
@@ -19691,7 +19691,7 @@ lbl_8053A768:
 	# ROM: 0x536868
 	.4byte lbl_8024F520
 	.4byte lbl_8024F520
-	.4byte func_8024F22C
+	.4byte lbl_8024F22C
 	.4byte lbl_8024F248
 	.4byte lbl_8024F264
 	.4byte lbl_8024F280
@@ -19819,7 +19819,7 @@ lbl_8053A8BC:
 .global lbl_8053A8C8
 lbl_8053A8C8:
 	# ROM: 0x5369C8
-	.4byte func_80251398
+	.4byte lbl_80251398
 	.4byte lbl_802513A4
 	.4byte lbl_802513B0
 	.4byte lbl_802513BC
@@ -20005,7 +20005,7 @@ lbl_8053AAC8:
 lbl_8053AB30:
 	# ROM: 0x536C30
 	.4byte lbl_80254B10
-	.4byte func_80254A6C
+	.4byte lbl_80254A6C
 	.4byte lbl_80254A74
 	.4byte lbl_80254A7C
 	.4byte lbl_80254A8C
@@ -20027,7 +20027,7 @@ lbl_8053AB30:
 lbl_8053AB74:
 	# ROM: 0x536C74
 	.4byte lbl_8025551C
-	.4byte func_802554C0
+	.4byte lbl_802554C0
 	.4byte lbl_802554CC
 	.4byte lbl_802554D8
 	.4byte lbl_802554E4
@@ -20093,7 +20093,7 @@ lbl_8053AC2C:
 .global lbl_8053AC38
 lbl_8053AC38:
 	# ROM: 0x536D38
-	.4byte func_802570FC
+	.4byte lbl_802570FC
 	.4byte lbl_80257108
 	.4byte lbl_80257114
 	.4byte lbl_80257120
@@ -20146,7 +20146,7 @@ lbl_8053ACA0:
 .global lbl_8053ACD8
 lbl_8053ACD8:
 	# ROM: 0x536DD8
-	.4byte func_8025BD94
+	.4byte lbl_8025BD94
 	.4byte lbl_8025BDAC
 	.4byte lbl_8025BDC4
 	.4byte lbl_8025BDDC
@@ -20415,7 +20415,7 @@ lbl_8053B0A0:
 lbl_8053B0D8:
 	# ROM: 0x5371D8
 	.4byte lbl_80267418
-	.4byte func_802673A4
+	.4byte lbl_802673A4
 	.4byte lbl_802673AC
 	.4byte lbl_802673E4
 	.4byte lbl_802673EC
@@ -21121,7 +21121,7 @@ lbl_8053B980:
 lbl_8053B98C:
 	# ROM: 0x537A8C
 	.4byte lbl_80276F3C
-	.4byte func_80276EA4
+	.4byte lbl_80276EA4
 	.4byte lbl_80276EB8
 	.4byte lbl_80276ECC
 	.4byte lbl_80276EE0
@@ -21137,7 +21137,7 @@ lbl_8053B98C:
 lbl_8053B9B8:
 	# ROM: 0x537AB8
 	.4byte lbl_80278DE8
-	.4byte func_80277CDC
+	.4byte lbl_80277CDC
 	.4byte lbl_80277EBC
 	.4byte lbl_80277FB0
 	.4byte lbl_80277FD4
@@ -21431,7 +21431,7 @@ lbl_8053BD10:
 .global lbl_8053BD20
 lbl_8053BD20:
 	# ROM: 0x537E20
-	.4byte func_8028383C
+	.4byte lbl_8028383C
 	.4byte lbl_80283848
 	.4byte lbl_80283868
 	.4byte lbl_802838A8
@@ -21449,7 +21449,7 @@ lbl_8053BD20:
 lbl_8053BD50:
 	# ROM: 0x537E50
 	.4byte lbl_80283B10
-	.4byte func_80283608
+	.4byte lbl_80283608
 	.4byte lbl_80283648
 	.4byte lbl_80283688
 	.4byte lbl_802836C8
@@ -21465,7 +21465,7 @@ lbl_8053BD78:
 	# ROM: 0x537E78
 	.4byte lbl_8028A500
 	.4byte lbl_8028A500
-	.4byte func_8028A3B4
+	.4byte lbl_8028A3B4
 	.4byte lbl_8028A3D0
 	.4byte lbl_8028A3EC
 	.4byte lbl_8028A408
@@ -21482,7 +21482,7 @@ lbl_8053BD78:
 .global lbl_8053BDB0
 lbl_8053BDB0:
 	# ROM: 0x537EB0
-	.4byte func_8028BCD8
+	.4byte lbl_8028BCD8
 	.4byte lbl_8028BCF0
 	.4byte lbl_8028BD08
 	.4byte lbl_8028BD20
@@ -21498,7 +21498,7 @@ lbl_8053BDD4:
 	# ROM: 0x537ED4
 	.4byte lbl_8028D17C
 	.4byte lbl_8028D17C
-	.4byte func_8028D120
+	.4byte lbl_8028D120
 	.4byte lbl_8028D128
 	.4byte lbl_8028D130
 	.4byte lbl_8028D138
@@ -21620,7 +21620,7 @@ lbl_8053BF00:
 lbl_8053BF38:
 	# ROM: 0x538038
 	.4byte lbl_8028F378
-	.4byte func_8028F310
+	.4byte lbl_8028F310
 	.4byte lbl_8028F318
 	.4byte lbl_8028F378
 	.4byte lbl_8028F320
@@ -22711,7 +22711,7 @@ lbl_8053CC30:
 lbl_8053CC58:
 	# ROM: 0x538D58
 	.4byte lbl_8029C574
-	.4byte func_8029C538
+	.4byte lbl_8029C538
 	.4byte lbl_8029C540
 	.4byte lbl_8029C574
 	.4byte lbl_8029C548
@@ -22726,7 +22726,7 @@ lbl_8053CC58:
 .global lbl_8053CC84
 lbl_8053CC84:
 	# ROM: 0x538D84
-	.4byte func_8029D654
+	.4byte lbl_8029D654
 	.4byte func_8029D6B4
 	.4byte func_8029D6C4
 	.4byte func_8029D6D4
@@ -22751,7 +22751,7 @@ lbl_8053CC84:
 .global lbl_8053CCD4
 lbl_8053CCD4:
 	# ROM: 0x538DD4
-	.4byte func_8029D830
+	.4byte lbl_8029D830
 	.4byte func_8029D840
 	.4byte func_8029D850
 	.4byte func_8029D860
@@ -22776,7 +22776,7 @@ lbl_8053CCD4:
 .global lbl_8053CD24
 lbl_8053CD24:
 	# ROM: 0x538E24
-	.4byte func_8029D9E0
+	.4byte lbl_8029D9E0
 	.4byte lbl_8029DA0C
 	.4byte lbl_8029DA38
 	.4byte lbl_8029DA64
@@ -22801,7 +22801,7 @@ lbl_8053CD24:
 .global lbl_8053CD74
 lbl_8053CD74:
 	# ROM: 0x538E74
-	.4byte func_8029DDBC
+	.4byte lbl_8029DDBC
 	.4byte lbl_8029DDE4
 	.4byte lbl_8029DE10
 	.4byte lbl_8029DE3C
@@ -23093,7 +23093,7 @@ lbl_8053D0A0:
 .global lbl_8053D0C0
 lbl_8053D0C0:
 	# ROM: 0x5391C0
-	.4byte func_802A4654
+	.4byte lbl_802A4654
 	.4byte lbl_802A4668
 	.4byte lbl_802A467C
 	.4byte lbl_802A4690
@@ -23306,7 +23306,7 @@ lbl_8053D26C:
 lbl_8053D278:
 	# ROM: 0x539378
 	.4byte lbl_802A652C
-	.4byte func_802A64B8
+	.4byte lbl_802A64B8
 	.4byte lbl_802A64C0
 	.4byte lbl_802A64C8
 	.4byte lbl_802A64D0
@@ -23684,7 +23684,7 @@ lbl_8053D580:
 .global lbl_8053D590
 lbl_8053D590:
 	# ROM: 0x539690
-	.4byte func_802A9FA0
+	.4byte lbl_802A9FA0
 	.4byte lbl_802AA030
 	.4byte lbl_802AA0BC
 	.4byte lbl_802AA1E0
@@ -23699,7 +23699,7 @@ lbl_8053D590:
 lbl_8053D5B4:
 	# ROM: 0x5396B4
 	.4byte lbl_802AAC60
-	.4byte func_802AA5C4
+	.4byte lbl_802AA5C4
 	.4byte lbl_802AA698
 	.4byte lbl_802AAABC
 	.4byte lbl_802AA76C
@@ -24104,7 +24104,7 @@ lbl_8053D994:
 .global lbl_8053D9A8
 lbl_8053D9A8:
 	# ROM: 0x539AA8
-	.4byte func_802AC354
+	.4byte lbl_802AC354
 	.4byte lbl_802AC360
 	.4byte lbl_802AC36C
 	.4byte lbl_802AC378
@@ -24908,7 +24908,7 @@ lbl_8053E458:
 .global lbl_8053E490
 lbl_8053E490:
 	# ROM: 0x53A590
-	.4byte func_802B14A4
+	.4byte lbl_802B14A4
 	.4byte lbl_802B154C
 	.4byte lbl_802B1558
 	.4byte lbl_802B15A8

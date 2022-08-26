@@ -35,7 +35,7 @@ lbl_802CD4D4:
 /* 802CD4E4 00296AA4  2C 00 00 00 */	cmpwi r0, 0
 /* 802CD4E8 00296AA8  40 82 00 20 */	bne lbl_802CD508
 /* 802CD4EC 00296AAC  38 80 00 01 */	li r4, 1
-/* 802CD4F0 00296AB0  48 00 00 9D */	bl func_802CD58C
+/* 802CD4F0 00296AB0  48 00 00 9D */	bl TRKResetBuffer
 /* 802CD4F4 00296AB4  93 FC 00 00 */	stw r31, 0(r28)
 /* 802CD4F8 00296AB8  3B C0 00 00 */	li r30, 0
 /* 802CD4FC 00296ABC  93 9B 00 00 */	stw r28, 0(r27)
@@ -85,8 +85,8 @@ TRKReleaseBuffer:
 /* 802CD584 00296B44  7C 83 01 2E */	stwx r4, r3, r0
 /* 802CD588 00296B48  4E 80 00 20 */	blr 
 
-.global func_802CD58C
-func_802CD58C:
+.global TRKResetBuffer
+TRKResetBuffer:
 /* 802CD58C 00296B4C  2C 04 00 00 */	cmpwi r4, 0
 /* 802CD590 00296B50  38 00 00 00 */	li r0, 0
 /* 802CD594 00296B54  90 03 00 04 */	stw r0, 4(r3)
@@ -115,8 +115,8 @@ lbl_802CD5DC:
 /* 802CD5DC 00296B9C  7C A3 2B 78 */	mr r3, r5
 /* 802CD5E0 00296BA0  4E 80 00 20 */	blr 
 
-.global func_802CD5E4
-func_802CD5E4:
+.global TRK_AppendBuffer
+TRK_AppendBuffer:
 /* 802CD5E4 00296BA4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CD5E8 00296BA8  7C 08 02 A6 */	mflr r0
 /* 802CD5EC 00296BAC  2C 05 00 00 */	cmpwi r5, 0
@@ -164,8 +164,8 @@ lbl_802CD66C:
 /* 802CD680 00296C40  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CD684 00296C44  4E 80 00 20 */	blr 
 
-.global func_802CD688
-func_802CD688:
+.global TRK_ReadBuffer
+TRK_ReadBuffer:
 /* 802CD688 00296C48  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CD68C 00296C4C  7C 08 02 A6 */	mflr r0
 /* 802CD690 00296C50  2C 05 00 00 */	cmpwi r5, 0
@@ -206,8 +206,8 @@ lbl_802CD6FC:
 /* 802CD710 00296CD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CD714 00296CD4  4E 80 00 20 */	blr 
 
-.global func_802CD718
-func_802CD718:
+.global TRKAppendBuffer1_ui32
+TRKAppendBuffer1_ui32:
 /* 802CD718 00296CD8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CD71C 00296CDC  7C 08 02 A6 */	mflr r0
 /* 802CD720 00296CE0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -266,8 +266,8 @@ lbl_802CD7B8:
 /* 802CD7E0 00296DA0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CD7E4 00296DA4  4E 80 00 20 */	blr 
 
-.global func_802CD7E8
-func_802CD7E8:
+.global TRKAppendBuffer1_ui64
+TRKAppendBuffer1_ui64:
 /* 802CD7E8 00296DA8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CD7EC 00296DAC  7C 08 02 A6 */	mflr r0
 /* 802CD7F0 00296DB0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -368,8 +368,8 @@ lbl_802CD938:
 /* 802CD938 00296EF8  7C E3 3B 78 */	mr r3, r7
 /* 802CD93C 00296EFC  4E 80 00 20 */	blr 
 
-.global func_802CD940
-func_802CD940:
+.global TRKAppendBuffer_ui32
+TRKAppendBuffer_ui32:
 /* 802CD940 00296F00  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CD944 00296F04  7C 08 02 A6 */	mflr r0
 /* 802CD948 00296F08  90 01 00 34 */	stw r0, 0x34(r1)
@@ -439,8 +439,8 @@ lbl_802CDA18:
 /* 802CDA28 00296FE8  38 21 00 30 */	addi r1, r1, 0x30
 /* 802CDA2C 00296FEC  4E 80 00 20 */	blr 
 
-.global func_802CDA30
-func_802CDA30:
+.global TRKAppendBuffer_ui64
+TRKAppendBuffer_ui64:
 /* 802CDA30 00296FF0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CDA34 00296FF4  7C 08 02 A6 */	mflr r0
 /* 802CDA38 00296FF8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -502,8 +502,8 @@ lbl_802CDAF8:
 /* 802CDB08 002970C8  38 21 00 30 */	addi r1, r1, 0x30
 /* 802CDB0C 002970CC  4E 80 00 20 */	blr 
 
-.global func_802CDB10
-func_802CDB10:
+.global TRKReadBuffer_ui8
+TRKReadBuffer_ui8:
 /* 802CDB10 002970D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CDB14 002970D4  7C 08 02 A6 */	mflr r0
 /* 802CDB18 002970D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -547,8 +547,8 @@ lbl_802CDB90:
 /* 802CDBA0 00297160  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CDBA4 00297164  4E 80 00 20 */	blr 
 
-.global func_802CDBA8
-func_802CDBA8:
+.global TRKReadBuffer_ui32
+TRKReadBuffer_ui32:
 /* 802CDBA8 00297168  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CDBAC 0029716C  7C 08 02 A6 */	mflr r0
 /* 802CDBB0 00297170  90 01 00 34 */	stw r0, 0x34(r1)

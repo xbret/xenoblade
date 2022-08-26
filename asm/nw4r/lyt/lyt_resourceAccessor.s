@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80409C48
-func_80409C48:
+.global __dt__Q34nw4r3lyt16ResourceAccessorFv
+__dt__Q34nw4r3lyt16ResourceAccessorFv:
 /* 80409C48 003D3208  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80409C4C 003D320C  7C 08 02 A6 */	mflr r0
 /* 80409C50 003D3210  2C 03 00 00 */	cmpwi r3, 0
@@ -29,7 +29,7 @@ __ct__Q34nw4r3lyt16ResourceAccessorFv:
 /* 80409C90 003D3250  90 83 00 00 */	stw r4, 0(r3)
 /* 80409C94 003D3254  4E 80 00 20 */	blr
 
-.global func_80409C98
-func_80409C98:
+.global GetFont__Q34nw4r3lyt16ResourceAccessorFPCc
+GetFont__Q34nw4r3lyt16ResourceAccessorFPCc:
 /* 80409C98 003D3258  38 60 00 00 */	li r3, 0
 /* 80409C9C 003D325C  4E 80 00 20 */	blr 

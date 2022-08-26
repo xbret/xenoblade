@@ -11694,10 +11694,9 @@ lbl_80064204:
 /* 80064234 0002D7F4  38 84 9F 28 */	addi r4, r4, lbl_80529F28@l
 /* 80064238 0002D7F8  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8006423C 0002D7FC  7C 89 03 A6 */	mtctr r4
-/* 80064240 0002D800  4E 80 04 20 */	bctr 
-
-.global func_80064244
-func_80064244:
+/* 80064240 0002D800  4E 80 04 20 */	bctr
+.global lbl_80064244
+lbl_80064244:
 /* 80064244 0002D804  7F 23 CB 78 */	mr r3, r25
 /* 80064248 0002D808  38 80 00 04 */	li r4, 4
 /* 8006424C 0002D80C  48 00 01 15 */	bl func_80064360
@@ -11712,7 +11711,6 @@ lbl_80064258:
 /* 80064268 0002D828  48 00 00 F9 */	bl func_80064360
 /* 8006426C 0002D82C  7C 79 1B 78 */	mr r25, r3
 /* 80064270 0002D830  48 00 00 08 */	b lbl_80064278
-.global lbl_80064274
 lbl_80064274:
 /* 80064274 0002D834  3B 80 00 00 */	li r28, 0
 lbl_80064278:
@@ -11743,10 +11741,9 @@ lbl_80064278:
 /* 800642D8 0002D898  38 84 9E D8 */	addi r4, r4, lbl_80529ED8@l
 /* 800642DC 0002D89C  7C 84 00 2E */	lwzx r4, r4, r0
 /* 800642E0 0002D8A0  7C 89 03 A6 */	mtctr r4
-/* 800642E4 0002D8A4  4E 80 04 20 */	bctr 
-
-.global func_800642E8
-func_800642E8:
+/* 800642E4 0002D8A4  4E 80 04 20 */	bctr
+.global lbl_800642E8
+lbl_800642E8:
 /* 800642E8 0002D8A8  48 00 00 89 */	bl func_80064370
 /* 800642EC 0002D8AC  7C 7D 1B 78 */	mr r29, r3
 /* 800642F0 0002D8B0  48 00 00 58 */	b lbl_80064348
@@ -11779,7 +11776,6 @@ lbl_80064330:
 /* 8006433C 0002D8FC  7F 63 DB 78 */	mr r3, r27
 /* 80064340 0002D900  4B FF FA C9 */	bl func_80063E08
 /* 80064344 0002D904  7C 7D 1B 78 */	mr r29, r3
-.global lbl_80064348
 lbl_80064348:
 /* 80064348 0002D908  7F A3 EB 78 */	mr r3, r29
 lbl_8006434C:
@@ -11898,10 +11894,9 @@ lbl_80064434:
 /* 8006448C 0002DA4C  38 63 9F 78 */	addi r3, r3, lbl_80529F78@l
 /* 80064490 0002DA50  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80064494 0002DA54  7C 69 03 A6 */	mtctr r3
-/* 80064498 0002DA58  4E 80 04 20 */	bctr 
-
-.global func_8006449C
-func_8006449C:
+/* 80064498 0002DA58  4E 80 04 20 */	bctr
+.global lbl_8006449C
+lbl_8006449C:
 /* 8006449C 0002DA5C  28 19 00 09 */	cmplwi r25, 9
 /* 800644A0 0002DA60  38 60 FF FF */	li r3, -1
 /* 800644A4 0002DA64  41 82 00 18 */	beq lbl_800644BC
@@ -14018,10 +14013,9 @@ func_80065FB4:
 /* 80065FE8 0002F5A8  38 84 A0 F8 */	addi r4, r4, lbl_8052A0F8@l
 /* 80065FEC 0002F5AC  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80065FF0 0002F5B0  7C 89 03 A6 */	mtctr r4
-/* 80065FF4 0002F5B4  4E 80 04 20 */	bctr 
-
-.global func_80065FF8
-func_80065FF8:
+/* 80065FF4 0002F5B4  4E 80 04 20 */	bctr
+.global lbl_80065FF8
+lbl_80065FF8:
 /* 80065FF8 0002F5B8  7C A3 2B 78 */	mr r3, r5
 /* 80065FFC 0002F5BC  38 80 00 00 */	li r4, 0
 /* 80066000 0002F5C0  48 04 26 D9 */	bl func_800A86D8
@@ -14179,10 +14173,9 @@ func_800661A8:
 /* 800661D8 0002F798  38 84 A1 24 */	addi r4, r4, lbl_8052A124@l
 /* 800661DC 0002F79C  7C 84 00 2E */	lwzx r4, r4, r0
 /* 800661E0 0002F7A0  7C 89 03 A6 */	mtctr r4
-/* 800661E4 0002F7A4  4E 80 04 20 */	bctr 
-
-.global func_800661E8
-func_800661E8:
+/* 800661E4 0002F7A4  4E 80 04 20 */	bctr
+.global lbl_800661E8
+lbl_800661E8:
 /* 800661E8 0002F7A8  38 87 FF FF */	addi r4, r7, -1
 /* 800661EC 0002F7AC  48 04 24 C1 */	bl func_800A86AC
 /* 800661F0 0002F7B0  7C 65 1B 78 */	mr r5, r3
@@ -18354,8 +18347,8 @@ lbl_80529EC0:
 .global lbl_80529ED8
 lbl_80529ED8:
 	# ROM: 0x525FD8
-	.4byte func_800642E8
-	.4byte func_800642E8
+	.4byte lbl_800642E8
+	.4byte lbl_800642E8
 	.4byte lbl_80064348
 	.4byte lbl_80064348
 	.4byte lbl_80064348
@@ -18380,24 +18373,24 @@ lbl_80529ED8:
 lbl_80529F28:
 	# ROM: 0x526028
 	.4byte lbl_80064258
-	.4byte func_80064244
+	.4byte lbl_80064244
 	.4byte lbl_80064274
 	.4byte lbl_80064274
 	.4byte lbl_80064274
 	.4byte lbl_80064258
-	.4byte func_80064244
+	.4byte lbl_80064244
 	.4byte lbl_80064274
 	.4byte lbl_80064274
 	.4byte lbl_80064274
 	.4byte lbl_80064274
 	.4byte lbl_80064274
 	.4byte lbl_80064274
-	.4byte func_80064244
+	.4byte lbl_80064244
 	.4byte lbl_80064258
 	.4byte lbl_80064274
 	.4byte lbl_80064274
 	.4byte lbl_80064274
-	.4byte func_80064244
+	.4byte lbl_80064244
 	.4byte lbl_80064258
 
 
@@ -18406,7 +18399,7 @@ lbl_80529F78:
 	# ROM: 0x526078
 	.4byte lbl_80064570
 	.4byte lbl_80064570
-	.4byte func_8006449C
+	.4byte lbl_8006449C
 	.4byte lbl_80064544
 	.4byte lbl_8006452C
 	.4byte lbl_800644FC
@@ -18530,7 +18523,7 @@ lbl_8052A0E8:
 lbl_8052A0F8:
 	# ROM: 0x5261F8
 	.4byte lbl_800660A4
-	.4byte func_80065FF8
+	.4byte lbl_80065FF8
 	.4byte lbl_80066018
 	.4byte lbl_80066038
 	.4byte lbl_80066058
@@ -18546,11 +18539,11 @@ lbl_8052A0F8:
 lbl_8052A124:
 	# ROM: 0x526224
 	.4byte lbl_8006620C
-	.4byte func_800661E8
-	.4byte func_800661E8
-	.4byte func_800661E8
-	.4byte func_800661E8
-	.4byte func_800661E8
+	.4byte lbl_800661E8
+	.4byte lbl_800661E8
+	.4byte lbl_800661E8
+	.4byte lbl_800661E8
+	.4byte lbl_800661E8
 	.4byte lbl_800661F8
 	.4byte lbl_80066218
 	.4byte lbl_80066200

@@ -9,7 +9,7 @@ TRKInitializeNub:
 /* 802CC7F4 00295DB4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802CC7F8 00295DB8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802CC7FC 00295DBC  93 C1 00 08 */	stw r30, 8(r1)
-/* 802CC800 00295DC0  48 00 00 C9 */	bl usr_put_initialize
+/* 802CC800 00295DC0  48 00 00 C9 */	bl TRK_InitializeEndian
 /* 802CC804 00295DC4  2C 03 00 00 */	cmpwi r3, 0
 /* 802CC808 00295DC8  7C 7F 1B 78 */	mr r31, r3
 /* 802CC80C 00295DCC  40 82 00 0C */	bne lbl_802CC818
@@ -69,10 +69,10 @@ TRKTerminateNub:
 TRKNubWelcome:
 /* 802CC8BC 00295E7C  3C 60 80 54 */	lis r3, lbl_8053FE88@ha
 /* 802CC8C0 00295E80  38 63 FE 88 */	addi r3, r3, lbl_8053FE88@l
-/* 802CC8C4 00295E84  4B FF FC 90 */	b func_802CC554
+/* 802CC8C4 00295E84  4B FF FC 90 */	b TRK_board_display
 
-.global usr_put_initialize
-usr_put_initialize:
+.global TRK_InitializeEndian
+TRK_InitializeEndian:
 /* 802CC8C8 00295E88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC8CC 00295E8C  38 60 00 12 */	li r3, 0x12
 /* 802CC8D0 00295E90  38 A0 00 34 */	li r5, 0x34

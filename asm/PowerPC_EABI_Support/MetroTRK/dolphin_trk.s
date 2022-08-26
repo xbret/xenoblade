@@ -87,10 +87,10 @@ lbl_802CC024:
 
 .global EnableMetroTRKInterrupts
 EnableMetroTRKInterrupts:
-/* 802CC02C 002955EC  48 00 04 48 */	b func_802CC474
+/* 802CC02C 002955EC  48 00 04 48 */	b EnableEXI2Interrupts
 
-.global func_802CC030
-func_802CC030:
+.global TRKTargetTranslate
+TRKTargetTranslate:
 /* 802CC030 002955F0  80 8D B3 F0 */	lwz r4, lbl_80667570@sda21(r13)
 /* 802CC034 002955F4  7C 03 20 40 */	cmplw r3, r4
 /* 802CC038 002955F8  41 80 00 24 */	blt lbl_802CC05C
@@ -218,7 +218,7 @@ TRKInitializeTarget:
 /* 802CC1E0 002957A0  3F E0 80 58 */	lis r31, lbl_8057D350@ha
 /* 802CC1E4 002957A4  3B FF D3 50 */	addi r31, r31, lbl_8057D350@l
 /* 802CC1E8 002957A8  90 1F 00 98 */	stw r0, 0x98(r31)
-/* 802CC1EC 002957AC  48 00 2B B5 */	bl func_802CEDA0
+/* 802CC1EC 002957AC  48 00 2B B5 */	bl __TRK_get_MSR
 /* 802CC1F0 002957B0  90 7F 00 8C */	stw r3, 0x8c(r31)
 /* 802CC1F4 002957B4  3C 00 E0 00 */	lis r0, 0xe000
 /* 802CC1F8 002957B8  38 60 00 00 */	li r3, 0

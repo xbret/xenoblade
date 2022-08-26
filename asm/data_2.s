@@ -37082,7 +37082,7 @@ lbl_8056972C:
 lbl_805697A8:
 	# ROM: 0x5658A8
 	.4byte lbl_8039C878
-	.4byte func_8039C860
+	.4byte lbl_8039C860
 	.4byte lbl_8039C878
 	.4byte lbl_8039C868
 	.4byte lbl_8039C878
@@ -37176,15 +37176,15 @@ lbl_805698F8:
 	# ROM: 0x5659F8
 	.4byte lbl_8039F84C
 	.4byte lbl_8039F84C
-	.4byte func_8039F844
-	.4byte func_8039F844
+	.4byte lbl_8039F844
+	.4byte lbl_8039F844
 	.4byte lbl_8039F84C
 	.4byte lbl_8039F84C
-	.4byte func_8039F844
-	.4byte func_8039F844
-	.4byte func_8039F844
+	.4byte lbl_8039F844
+	.4byte lbl_8039F844
+	.4byte lbl_8039F844
 	.4byte lbl_8039F84C
-	.4byte func_8039F844
+	.4byte lbl_8039F844
 	.4byte lbl_8039F84C
 
 
@@ -37193,15 +37193,15 @@ lbl_80569928:
 	# ROM: 0x565A28
 	.4byte lbl_8039F70C
 	.4byte lbl_8039F70C
-	.4byte func_8039F704
-	.4byte func_8039F704
+	.4byte lbl_8039F704
+	.4byte lbl_8039F704
 	.4byte lbl_8039F70C
 	.4byte lbl_8039F70C
-	.4byte func_8039F704
-	.4byte func_8039F704
-	.4byte func_8039F704
+	.4byte lbl_8039F704
+	.4byte lbl_8039F704
+	.4byte lbl_8039F704
 	.4byte lbl_8039F70C
-	.4byte func_8039F704
+	.4byte lbl_8039F704
 	.4byte lbl_8039F70C
 
 
@@ -38310,7 +38310,7 @@ lbl_8056A840:
 .global lbl_8056A918
 lbl_8056A918:
 	# ROM: 0x566A18
-	.4byte func_803A8A64
+	.4byte lbl_803A8A64
 	.4byte func_803A8C70
 	.4byte func_803A8B44
 	.4byte func_803A8DB4
@@ -38323,7 +38323,7 @@ lbl_8056A918:
 .global lbl_8056A938
 lbl_8056A938:
 	# ROM: 0x566A38
-	.4byte func_803ADEB4
+	.4byte lbl_803ADEB4
 	.4byte func_803AE3B4
 	.4byte func_803AE2E4
 	.4byte func_803AE42C
@@ -38585,10 +38585,10 @@ lbl_8056A958:
 	.4byte lbl_803AF210
 	.4byte lbl_803B1D38
 	.4byte lbl_803AF210
-	.4byte func_803AF148
-	.4byte func_803AF148
+	.4byte lbl_803AF148
+	.4byte lbl_803AF148
 	.4byte lbl_803B1C70
-	.4byte func_803AF148
+	.4byte lbl_803AF148
 .global lbl_8056AD58
 lbl_8056AD58:
 	.4byte lbl_803B5164
@@ -38843,10 +38843,10 @@ lbl_8056AD58:
 	.4byte lbl_803B2830
 	.4byte lbl_803B5358
 	.4byte lbl_803B2830
-	.4byte func_803B2768
-	.4byte func_803B2768
+	.4byte lbl_803B2768
+	.4byte lbl_803B2768
 	.4byte lbl_803B5290
-	.4byte func_803B2768
+	.4byte lbl_803B2768
 .global lbl_8056B158
 lbl_8056B158:
 	.4byte lbl_803B8B8C
@@ -39101,13 +39101,13 @@ lbl_8056B158:
 	.4byte lbl_803B60D8
 	.4byte lbl_803B8D8C
 	.4byte lbl_803B60D8
-	.4byte func_803B6008
-	.4byte func_803B6008
+	.4byte lbl_803B6008
+	.4byte lbl_803B6008
 	.4byte lbl_803B8CBC
-	.4byte func_803B6008
+	.4byte lbl_803B6008
 .global lbl_8056B558
 lbl_8056B558:
-	.4byte func_803BA770
+	.4byte lbl_803BA770
 	.4byte lbl_803BA7B4
 	.4byte lbl_803BA7EC
 	.4byte lbl_803BA828
@@ -39125,7 +39125,7 @@ lbl_8056B558:
 	.4byte lbl_803BAA40
 .global lbl_8056B598
 lbl_8056B598:
-	.4byte func_803BA51C
+	.4byte lbl_803BA51C
 	.4byte lbl_803BA550
 	.4byte lbl_803BA580
 	.4byte lbl_803BA5BC
@@ -40292,7 +40292,7 @@ lbl_8056C580:
 lbl_8056C5F0:
 	# ROM: 0x5686F0
 	.4byte lbl_803C95C8
-	.4byte func_803C923C
+	.4byte lbl_803C923C
 	.4byte lbl_803C9268
 	.4byte lbl_803C9274
 	.4byte lbl_803C9348
@@ -40311,7 +40311,7 @@ lbl_8056C610:
 .global lbl_8056C728
 lbl_8056C728:
 	# ROM: 0x568828
-	.4byte func_803D1D7C
+	.4byte lbl_803D1D7C
 	.4byte lbl_803D1D84
 	.4byte lbl_803D1D8C
 	.4byte lbl_803D1D94
@@ -40324,7 +40324,7 @@ lbl_8056C728:
 lbl_8056C744:
 	# ROM: 0x568844
 	.4byte lbl_803D2D04
-	.4byte func_803D2CB8
+	.4byte lbl_803D2CB8
 	.4byte func_803D2CC0
 	.4byte func_803D2CC8
 	.4byte func_803D2CD0
@@ -40337,7 +40337,7 @@ lbl_8056C744:
 .global lbl_8056C768
 lbl_8056C768:
 	# ROM: 0x568868
-	.4byte func_803D3A9C
+	.4byte lbl_803D3A9C
 	.4byte lbl_803D3AA4
 	.4byte lbl_803D3AAC
 	.4byte lbl_803D3AB4
@@ -40349,7 +40349,7 @@ lbl_8056C768:
 .global lbl_8056C784
 lbl_8056C784:
 	# ROM: 0x568884
-	.4byte func_803D3D48
+	.4byte lbl_803D3D48
 	.4byte lbl_803D3D50
 	.4byte lbl_803D3D58
 	.4byte lbl_803D3D80
@@ -41306,39 +41306,39 @@ lbl_8056D3D4:
 	# ROM: 0x5694D4
 	.4byte 0
 	.4byte 0
-	.4byte func_804030AC
-	.4byte func_804053C8
+	.4byte __dt__Q34nw4r3lyt6WindowFv
+	.4byte GetRuntimeTypeInfo__Q34nw4r3lyt6WindowCFv
 	.4byte CalculateMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte Draw__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
-	.4byte func_80403374
+	.4byte DrawSelf__Q34nw4r3lyt6WindowFRCQ34nw4r3lyt8DrawInfo
 	.4byte Animate__Q34nw4r3lyt4PaneFUl
-	.4byte func_804034B4
-	.4byte func_804032EC
-	.4byte func_80403318
+	.4byte AnimateSelf__Q34nw4r3lyt6WindowFUl
+	.4byte GetVtxColor__Q34nw4r3lyt6WindowCFUl
+	.4byte SetVtxColor__Q34nw4r3lyt6WindowFUlQ34nw4r2ut5Color
 	.4byte GetColorElement__Q34nw4r3lyt4PaneCFUl
 	.4byte SetColorElement__Q34nw4r3lyt4PaneFUlUc
-	.4byte func_80403344
-	.4byte func_8040335C
+	.4byte GetVtxColorElement__Q34nw4r3lyt6WindowCFUl
+	.4byte SetVtxColorElement__Q34nw4r3lyt6WindowFUlUc
 	.4byte FindPaneByName__Q34nw4r3lyt4PaneFPCcb
-	.4byte func_804031F0
+	.4byte FindMaterialByName__Q34nw4r3lyt6WindowFPCcb
 	.4byte BindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
 	.4byte UnbindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformb
 	.4byte UnbindAllAnimation__Q34nw4r3lyt4PaneFb
-	.4byte func_80403544
+	.4byte UnbindAnimationSelf__Q34nw4r3lyt6WindowFPQ34nw4r3lyt13AnimTransform
 	.4byte FindAnimationLinkSelf__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransform
 	.4byte FindAnimationLinkSelf__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResource
 	.4byte SetAnimationEnable__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
 	.4byte SetAnimationEnable__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResourcebb
-	.4byte func_80405354
+	.4byte GetMaterialNum__Q34nw4r3lyt6WindowCFv
 	.4byte GetMaterial__Q34nw4r3lyt4PaneCFv
-	.4byte func_80405364
+	.4byte GetMaterial__Q34nw4r3lyt6WindowCFUl
 	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
-	.4byte func_804053B8
-	.4byte func_80405390
-	.4byte func_804035D4
-	.4byte func_804036E8
-	.4byte func_80403CC8
-	.4byte func_8040440C
+	.4byte GetContentMaterial__Q34nw4r3lyt6WindowCFv
+	.4byte GetFrameMaterial__Q34nw4r3lyt6WindowCFUl
+	.4byte DrawContent__Q34nw4r3lyt6WindowFRCQ34nw4r4math4VEC2RCQ34nw4r3lyt15WindowFrameSizeUc
+	.4byte DrawFrame__Q34nw4r3lyt6WindowFRCQ34nw4r4math4VEC2RCQ44nw4r3lyt6Window5FrameRCQ34nw4r3lyt15WindowFrameSizeUc
+	.4byte DrawFrame4__Q34nw4r3lyt6WindowFRCQ34nw4r4math4VEC2PCQ44nw4r3lyt6Window5FrameRCQ34nw4r3lyt15WindowFrameSizeUc
+	.4byte DrawFrame8__Q34nw4r3lyt6WindowFRCQ34nw4r4math4VEC2PCQ44nw4r3lyt6Window5FrameRCQ34nw4r3lyt15WindowFrameSizeUc
 
 
 .global lbl_8056D460
@@ -41346,11 +41346,11 @@ lbl_8056D460:
 	# ROM: 0x569560
 	.4byte 0
 	.4byte 0
-	.4byte func_80405418
-	.4byte func_80405474
+	.4byte __dt__Q34nw4r3lyt8BoundingFv
+	.4byte GetRuntimeTypeInfo__Q34nw4r3lyt8BoundingCFv
 	.4byte CalculateMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte Draw__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
-	.4byte func_80405470
+	.4byte DrawSelf__Q34nw4r3lyt8BoundingFRCQ34nw4r3lyt8DrawInfo
 	.4byte Animate__Q34nw4r3lyt4PaneFUl
 	.4byte AnimateSelf__Q34nw4r3lyt4PaneFUl
 	.4byte GetVtxColor__Q34nw4r3lyt4PaneCFUl
@@ -41406,16 +41406,16 @@ lbl_8056D518:
 	# ROM: 0x569618
 	.4byte 0
 	.4byte 0
-	.4byte func_80406288
-	.4byte func_8040725C
-	.4byte func_804080FC
-	.4byte func_8040811C
-	.4byte lbl_80408124
-	.4byte func_80408138
-	.4byte func_804081E4
-	.4byte lbl_804081EC
-	.4byte func_804081F4
-	.4byte func_80408240
+	.4byte __dt__Q34nw4r3lyt8MaterialFv
+	.4byte SetupGX__Q34nw4r3lyt8MaterialFbUc
+	.4byte BindAnimation__Q34nw4r3lyt8MaterialFPQ34nw4r3lyt13AnimTransform
+	.4byte UnbindAnimation__Q34nw4r3lyt8MaterialFPQ34nw4r3lyt13AnimTransform
+	.4byte UnbindAllAnimation__Q34nw4r3lyt8MaterialFv
+	.4byte Animate__Q34nw4r3lyt8MaterialFv
+	.4byte FindAnimationLink__Q34nw4r3lyt8MaterialFPQ34nw4r3lyt13AnimTransform
+	.4byte FindAnimationLink__Q34nw4r3lyt8MaterialFRCQ34nw4r3lyt12AnimResource
+	.4byte SetAnimationEnable__Q34nw4r3lyt8MaterialFPQ34nw4r3lyt13AnimTransformb
+	.4byte SetAnimationEnable__Q34nw4r3lyt8MaterialFRCQ34nw4r3lyt12AnimResourceb
 
 
 .global lbl_8056D548
@@ -41447,9 +41447,9 @@ lbl_8056D580:
 	# ROM: 0x569680
 	.4byte 0
 	.4byte 0
-	.4byte func_80409C48
+	.4byte __dt__Q34nw4r3lyt16ResourceAccessorFv
 	.4byte 0
-	.4byte func_80409C98
+	.4byte GetFont__Q34nw4r3lyt16ResourceAccessorFPCc
 	.4byte 0
 
 
@@ -42396,7 +42396,7 @@ lbl_8056E198:
 	.4byte lbl_804180AC
 	.4byte lbl_80417FA4
 	.4byte lbl_80417F28
-	.4byte func_80417D20
+	.4byte lbl_80417D20
 	.4byte lbl_804185BC
 	.4byte lbl_80417F38
 	.4byte lbl_804185BC
@@ -42656,7 +42656,7 @@ lbl_8056E5D0:
 .global lbl_8056E608
 lbl_8056E608:
 	# ROM: 0x56A708
-	.4byte func_80428170
+	.4byte lbl_80428170
 	.4byte lbl_80428178
 	.4byte lbl_80428188
 	.4byte lbl_8042819C
@@ -42739,9 +42739,9 @@ lbl_8056E6E8:
 	# ROM: 0x56A7E8
 	.4byte 0
 	.4byte 0
-	.4byte func_8042BA78
-	.4byte func_8042BAB8
-	.4byte func_8042BBE8
+	.4byte __dt__Q34nw4r2ut19TagProcessorBase_w_Fv
+	.4byte Process__Q34nw4r2ut19TagProcessorBase_w_FUsPQ34nw4r2ut15PrintContext_w
+	.4byte CalcRect__Q34nw4r2ut19TagProcessorBase_w_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_w
 
 
 .global lbl_8056E6FC
@@ -42749,9 +42749,9 @@ lbl_8056E6FC:
 	# ROM: 0x56A7FC
 	.4byte 0
 	.4byte 0
-	.4byte func_8042B710
-	.4byte func_8042B750
-	.4byte func_8042B880
+	.4byte __dt__Q34nw4r2ut19TagProcessorBase_c_Fv
+	.4byte Process__Q34nw4r2ut19TagProcessorBase_c_FUsPQ34nw4r2ut15PrintContext_c
+	.4byte CalcRect__Q34nw4r2ut19TagProcessorBase_c_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_c
 
 
 .global lbl_8056E710
@@ -42759,16 +42759,16 @@ lbl_8056E710:
 	# ROM: 0x56A810
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte func_8042B5F0
+	.4byte ReadNextCharUTF8__Q34nw4r2ut14CharStrmReaderFv
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte func_8042B668
+	.4byte ReadNextCharUTF16__Q34nw4r2ut14CharStrmReaderFv
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte func_8042B6A0
+	.4byte ReadNextCharSJIS__Q34nw4r2ut14CharStrmReaderFv
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte func_8042B684
+	.4byte ReadNextCharCP1252__Q34nw4r2ut14CharStrmReaderFv
 
 
 .global lbl_8056E740
@@ -42803,7 +42803,7 @@ lbl_8056E740:
 lbl_8056E7A0:
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte func_8042B684
+	.4byte ReadNextCharCP1252__Q34nw4r2ut14CharStrmReaderFv
 
 
 .global lbl_8056E7AC
@@ -42811,27 +42811,27 @@ lbl_8056E7AC:
 	# ROM: 0x56A8AC
 	.4byte 0
 	.4byte 0
-	.4byte func_8042C0C8
-	.4byte func_8042C12C
-	.4byte func_8042C138
-	.4byte func_8042C144
-	.4byte func_8042C150
-	.4byte func_8042C164
-	.4byte func_8042C178
-	.4byte func_8042C188
-	.4byte func_8042C198
-	.4byte func_8042C1A8
-	.4byte func_8042C1B0
-	.4byte func_8042C1C0
-	.4byte func_8042C1D0
-	.4byte func_8042C1E8
-	.4byte func_8042C208
-	.4byte func_8042C2C0
-	.4byte func_8042C2CC
-	.4byte func_8042C318
-	.4byte func_8042C428
-	.4byte func_8042C4EC
-	.4byte func_8042C5A4
+	.4byte __dt__Q44nw4r2ut6detail11ResFontBaseFv
+	.4byte GetWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetHeight__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetAscent__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetDescent__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetBaselinePos__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetCellHeight__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetCellWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetMaxCharWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetType__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetTextureFormat__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetLineFeed__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetDefaultCharWidths__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte SetDefaultCharWidths__Q44nw4r2ut6detail11ResFontBaseFRCQ34nw4r2ut10CharWidths
+	.4byte SetAlternateChar__Q44nw4r2ut6detail11ResFontBaseFUs
+	.4byte SetLineFeed__Q44nw4r2ut6detail11ResFontBaseFi
+	.4byte GetCharWidth__Q44nw4r2ut6detail11ResFontBaseCFUs
+	.4byte GetCharWidths__Q44nw4r2ut6detail11ResFontBaseCFUs
+	.4byte GetGlyph__Q44nw4r2ut6detail11ResFontBaseCFPQ34nw4r2ut5GlyphUs
+	.4byte HasGlyph__Q44nw4r2ut6detail11ResFontBaseCFUs
+	.4byte GetEncoding__Q44nw4r2ut6detail11ResFontBaseCFv
 
 
 .global lbl_8056E808
@@ -42839,27 +42839,27 @@ lbl_8056E808:
 	# ROM: 0x56A908
 	.4byte 0
 	.4byte 0
-	.4byte func_8042C964
-	.4byte func_8042C12C
-	.4byte func_8042C138
-	.4byte func_8042C144
-	.4byte func_8042C150
-	.4byte func_8042C164
-	.4byte func_8042C178
-	.4byte func_8042C188
-	.4byte func_8042C198
-	.4byte func_8042C1A8
-	.4byte func_8042C1B0
-	.4byte func_8042C1C0
-	.4byte func_8042C1D0
-	.4byte func_8042C1E8
-	.4byte func_8042C208
-	.4byte func_8042C2C0
-	.4byte func_8042C2CC
-	.4byte func_8042C318
-	.4byte func_8042C428
-	.4byte func_8042C4EC
-	.4byte func_8042C5A4
+	.4byte __dt__Q34nw4r2ut7ResFontFv
+	.4byte GetWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetHeight__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetAscent__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetDescent__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetBaselinePos__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetCellHeight__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetCellWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetMaxCharWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetType__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetTextureFormat__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetLineFeed__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetDefaultCharWidths__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte SetDefaultCharWidths__Q44nw4r2ut6detail11ResFontBaseFRCQ34nw4r2ut10CharWidths
+	.4byte SetAlternateChar__Q44nw4r2ut6detail11ResFontBaseFUs
+	.4byte SetLineFeed__Q44nw4r2ut6detail11ResFontBaseFi
+	.4byte GetCharWidth__Q44nw4r2ut6detail11ResFontBaseCFUs
+	.4byte GetCharWidths__Q44nw4r2ut6detail11ResFontBaseCFUs
+	.4byte GetGlyph__Q44nw4r2ut6detail11ResFontBaseCFPQ34nw4r2ut5GlyphUs
+	.4byte HasGlyph__Q44nw4r2ut6detail11ResFontBaseCFUs
+	.4byte GetEncoding__Q44nw4r2ut6detail11ResFontBaseCFv
 	.4byte 0
 
 
@@ -42868,27 +42868,27 @@ lbl_8056E868:
 	# ROM: 0x56A968
 	.4byte 0
 	.4byte 0
-	.4byte func_8042CC70
-	.4byte func_8042C12C
-	.4byte func_8042C138
-	.4byte func_8042C144
-	.4byte func_8042C150
-	.4byte func_8042C164
-	.4byte func_8042C178
-	.4byte func_8042C188
-	.4byte func_8042C198
-	.4byte func_8042C1A8
-	.4byte func_8042C1B0
-	.4byte func_8042C1C0
-	.4byte func_8042C1D0
-	.4byte func_8042C1E8
-	.4byte func_8042C208
-	.4byte func_8042C2C0
-	.4byte func_8042C2CC
-	.4byte func_8042CCC8
-	.4byte func_8042C428
-	.4byte func_8042CD68
-	.4byte func_8042C5A4
+	.4byte __dt__Q44nw4r2ut6detail15ArchiveFontBaseFv
+	.4byte GetWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetHeight__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetAscent__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetDescent__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetBaselinePos__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetCellHeight__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetCellWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetMaxCharWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetType__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetTextureFormat__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetLineFeed__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetDefaultCharWidths__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte SetDefaultCharWidths__Q44nw4r2ut6detail11ResFontBaseFRCQ34nw4r2ut10CharWidths
+	.4byte SetAlternateChar__Q44nw4r2ut6detail11ResFontBaseFUs
+	.4byte SetLineFeed__Q44nw4r2ut6detail11ResFontBaseFi
+	.4byte GetCharWidth__Q44nw4r2ut6detail11ResFontBaseCFUs
+	.4byte GetCharWidths__Q44nw4r2ut6detail15ArchiveFontBaseCFUs
+	.4byte GetGlyph__Q44nw4r2ut6detail11ResFontBaseCFPQ34nw4r2ut5GlyphUs
+	.4byte HasGlyph__Q44nw4r2ut6detail15ArchiveFontBaseCFUs
+	.4byte GetEncoding__Q44nw4r2ut6detail11ResFontBaseCFv
 	.4byte 0
 .global lbl_8056E8C8
 lbl_8056E8C8:
@@ -42911,31 +42911,31 @@ lbl_8056E8FC:
 	# ROM: 0x56A9FC
 	.4byte 0
 	.4byte 0
-	.4byte func_8042DB38
-	.4byte func_8042C12C
-	.4byte func_8042C138
-	.4byte func_8042C144
-	.4byte func_8042C150
-	.4byte func_8042C164
-	.4byte func_8042C178
-	.4byte func_8042C188
-	.4byte func_8042C198
-	.4byte func_8042C1A8
-	.4byte func_8042C1B0
-	.4byte func_8042C1C0
-	.4byte func_8042C1D0
-	.4byte func_8042C1E8
-	.4byte func_8042C208
-	.4byte func_8042C2C0
-	.4byte func_8042C2CC
-	.4byte func_8042CCC8
-	.4byte func_8042E134
-	.4byte func_8042CD68
-	.4byte func_8042C5A4
+	.4byte __dt__Q34nw4r2ut10PackedFontFv
+	.4byte GetWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetHeight__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetAscent__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetDescent__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetBaselinePos__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetCellHeight__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetCellWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetMaxCharWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetType__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetTextureFormat__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetLineFeed__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetDefaultCharWidths__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte SetDefaultCharWidths__Q44nw4r2ut6detail11ResFontBaseFRCQ34nw4r2ut10CharWidths
+	.4byte SetAlternateChar__Q44nw4r2ut6detail11ResFontBaseFUs
+	.4byte SetLineFeed__Q44nw4r2ut6detail11ResFontBaseFi
+	.4byte GetCharWidth__Q44nw4r2ut6detail11ResFontBaseCFUs
+	.4byte GetCharWidths__Q44nw4r2ut6detail15ArchiveFontBaseCFUs
+	.4byte GetGlyph__Q34nw4r2ut10PackedFontCFPQ34nw4r2ut5GlyphUs
+	.4byte HasGlyph__Q44nw4r2ut6detail15ArchiveFontBaseCFUs
+	.4byte GetEncoding__Q44nw4r2ut6detail11ResFontBaseCFv
 .global lbl_8056E958
 lbl_8056E958:
 	.4byte lbl_80438764
-	.4byte func_80438634
+	.4byte lbl_80438634
 	.4byte lbl_80438644
 	.4byte lbl_80438660
 	.4byte lbl_80438670
@@ -43269,7 +43269,7 @@ lbl_8056ED48:
 .global lbl_8056ED78
 lbl_8056ED78:
 	.4byte lbl_8043B534
-	.4byte func_8043AD38
+	.4byte lbl_8043AD38
 	.4byte lbl_8043ADB4
 	.4byte lbl_8043AE2C
 	.4byte lbl_8043AEA4
@@ -43341,7 +43341,7 @@ lbl_8056EE1C:
 .global lbl_8056EE38
 lbl_8056EE38:
 	# ROM: 0x56AF38
-	.4byte func_8043D1A8
+	.4byte lbl_8043D1A8
 	.4byte lbl_8043D4D0
 	.4byte lbl_8043D710
 	.4byte lbl_8043D754
@@ -44123,7 +44123,7 @@ lbl_8056F7C0:
 .global lbl_8056F7D0
 lbl_8056F7D0:
 	# ROM: 0x56B8D0
-	.4byte func_80449DB4
+	.4byte lbl_80449DB4
 	.4byte lbl_80449DCC
 	.4byte lbl_80449DE4
 	.4byte lbl_80449E70
@@ -44436,7 +44436,7 @@ lbl_8056FB64:
 .global lbl_8056FB70
 lbl_8056FB70:
 	# ROM: 0x56BC70
-	.4byte func_80450638
+	.4byte lbl_80450638
 	.4byte lbl_80450780
 	.4byte lbl_80450790
 	.4byte lbl_8045081C
@@ -45178,7 +45178,7 @@ lbl_805704B0:
 lbl_805704D0:
 	# ROM: 0x56C5D0
 	.4byte lbl_8045676C
-	.4byte func_8045670C
+	.4byte lbl_8045670C
 	.4byte lbl_80456714
 	.4byte lbl_80456754
 	.4byte lbl_8045673C
@@ -45194,7 +45194,7 @@ lbl_805704D0:
 lbl_805704FC:
 	# ROM: 0x56C5FC
 	.4byte lbl_804566EC
-	.4byte func_80456628
+	.4byte lbl_80456628
 	.4byte lbl_8045663C
 	.4byte lbl_804566B4
 	.4byte lbl_80456678
@@ -45615,7 +45615,7 @@ lbl_80570A90:
 .global lbl_80570AA8
 lbl_80570AA8:
 	.4byte lbl_8045E7C4
-	.4byte func_8045E778
+	.4byte lbl_8045E778
 	.4byte lbl_8045E780
 	.4byte lbl_8045E7C4
 	.4byte lbl_8045E788
@@ -45887,7 +45887,7 @@ lbl_80570E30:
 .global lbl_80570E48
 lbl_80570E48:
 	# ROM: 0x56CF48
-	.4byte func_80461054
+	.4byte lbl_80461054
 	.4byte lbl_80461E8C
 	.4byte lbl_80461E8C
 	.4byte lbl_80461E8C
@@ -47763,7 +47763,7 @@ lbl_80572830:
 .global lbl_8057285C
 lbl_8057285C:
 	# ROM: 0x56E95C
-	.4byte func_804A40D8
+	.4byte lbl_804A40D8
 	.4byte lbl_804A40E0
 	.4byte lbl_804A40E8
 	.4byte lbl_804A40F0
@@ -48208,10 +48208,10 @@ lbl_80572D50:
 	.4byte func_804B6A3C
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte func_804B6974
+	.4byte lbl_804B6974
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte func_804B6974
+	.4byte lbl_804B6974
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_804B5BB0
@@ -48241,10 +48241,10 @@ lbl_80572D50:
 	.4byte func_804B6A3C
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte func_804B6974
+	.4byte lbl_804B6974
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte func_804B6974
+	.4byte lbl_804B6974
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_804B5C58
@@ -48274,10 +48274,10 @@ lbl_80572D50:
 	.4byte func_804B6A3C
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte func_804B6974
+	.4byte lbl_804B6974
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte func_804B6974
+	.4byte lbl_804B6974
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_804B5CEC
@@ -48376,10 +48376,10 @@ lbl_80572D50:
 	.4byte func_804B6A3C
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte func_804B6974
+	.4byte lbl_804B6974
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte func_804B6974
+	.4byte lbl_804B6974
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_804B5E68
@@ -48427,7 +48427,7 @@ lbl_80572D50:
 .global lbl_80573138
 lbl_80573138:
 	.4byte lbl_804BCBE0
-	.4byte func_804BCA9C
+	.4byte lbl_804BCA9C
 	.4byte lbl_804BCB28
 	.4byte lbl_804BCBE0
 	.4byte lbl_804BCBE0
@@ -48667,14 +48667,14 @@ lbl_805732B0:
 .global lbl_80573458
 lbl_80573458:
 	# ROM: 0x56F558
-	.4byte func_804CE564
-	.4byte func_804CE564
+	.4byte lbl_804CE564
+	.4byte lbl_804CE564
 	.4byte lbl_804CE580
 	.4byte lbl_804CE580
 	.4byte lbl_804CE598
 	.4byte lbl_804CE694
-	.4byte func_804CE564
-	.4byte func_804CE564
+	.4byte lbl_804CE564
+	.4byte lbl_804CE564
 	.4byte lbl_804CE580
 	.4byte lbl_804CE580
 	.4byte lbl_804CE598
@@ -49261,7 +49261,7 @@ lbl_80573A78:
 .global lbl_80573A90
 lbl_80573A90:
 	# ROM: 0x56FB90
-	.4byte func_804EE70C
+	.4byte lbl_804EE70C
 	.4byte lbl_804EE8D0
 	.4byte lbl_804EE8D0
 	.4byte lbl_804EE8D0
@@ -49277,8 +49277,8 @@ lbl_80573A90:
 	.4byte lbl_804EE8D0
 	.4byte lbl_804EE8D0
 	.4byte lbl_804EE8D0
-	.4byte func_804EE70C
-	.4byte func_804EE70C
+	.4byte lbl_804EE70C
+	.4byte lbl_804EE70C
 	.4byte lbl_804EE8D0
 	.4byte lbl_804EE8D0
 	.4byte lbl_804EE8D0
@@ -49293,7 +49293,7 @@ lbl_80573A90:
 .global lbl_80573B00
 lbl_80573B00:
 	# ROM: 0x56FC00
-	.4byte func_804EE94C
+	.4byte lbl_804EE94C
 	.4byte lbl_804EEAA0
 	.4byte lbl_804EEAA0
 	.4byte lbl_804EEAA0
@@ -49309,8 +49309,8 @@ lbl_80573B00:
 	.4byte lbl_804EEAA0
 	.4byte lbl_804EEAA0
 	.4byte lbl_804EEAA0
-	.4byte func_804EE94C
-	.4byte func_804EE94C
+	.4byte lbl_804EE94C
+	.4byte lbl_804EE94C
 	.4byte lbl_804EEAA0
 	.4byte lbl_804EEAA0
 	.4byte lbl_804EEAA0
@@ -49326,7 +49326,7 @@ lbl_80573B00:
 .global lbl_80573B70
 lbl_80573B70:
 	# ROM: 0x56FC70
-	.4byte func_804F4E90
+	.4byte lbl_804F4E90
 	.4byte lbl_804F4EC4
 	.4byte lbl_804F4EEC
 	.4byte lbl_804F4F10

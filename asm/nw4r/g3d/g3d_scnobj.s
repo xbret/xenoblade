@@ -491,8 +491,6 @@ SetBoundingVolume__Q34nw4r3g3d6ScnObjFQ44nw4r3g3d6ScnObj24ScnObjBoundingVolumeTy
 lbl_803F4A04:
 /* 803F4A04 003BDFC4  38 60 00 00 */	li r3, 0
 /* 803F4A08 003BDFC8  4E 80 00 20 */	blr
-
-.global lbl_803F4A0C
 lbl_803F4A0C:
 /* 803F4A0C 003BDFCC  81 83 00 00 */	lwz r12, 0(r3)
 /* 803F4A10 003BDFD0  38 80 00 09 */	li r4, 9
@@ -524,13 +522,9 @@ GetBoundingVolume__Q34nw4r3g3d6ScnObjCFQ44nw4r3g3d6ScnObj24ScnObjBoundingVolumeT
 /* 803F4A6C 003BE02C  90 85 00 10 */	stw r4, 0x10(r5)
 /* 803F4A70 003BE030  90 05 00 14 */	stw r0, 0x14(r5)
 /* 803F4A74 003BE034  4E 80 00 20 */	blr
-
-.global lbl_803F4A78
 lbl_803F4A78:
 /* 803F4A78 003BE038  38 60 00 00 */	li r3, 0
 /* 803F4A7C 003BE03C  4E 80 00 20 */	blr
-
-.global lbl_803F4A80
 lbl_803F4A80:
 /* 803F4A80 003BE040  38 60 00 00 */	li r3, 0
 /* 803F4A84 003BE044  4E 80 00 20 */	blr 
@@ -688,8 +682,6 @@ GetScaleProperty__Q34nw4r3g3d7ScnLeafCFv:
 /* 803F4C6C 003BE22C  40 82 00 0C */	bne lbl_803F4C78
 /* 803F4C70 003BE230  38 60 00 00 */	li r3, 0
 /* 803F4C74 003BE234  4E 80 00 20 */	blr
-
-.global lbl_803F4C78
 lbl_803F4C78:
 /* 803F4C78 003BE238  38 60 00 01 */	li r3, 1
 /* 803F4C7C 003BE23C  4E 80 00 20 */	blr

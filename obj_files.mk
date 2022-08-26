@@ -70,7 +70,6 @@ GAME_O_FILES :=\
 
 
 MW_O_FILES :=\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mem_TRK.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/__mem.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/__exception.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/strlen.o \
@@ -157,12 +156,12 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/extras.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/targsupp.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/main.o \
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/MWCriticalSection_gc.o \
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/CircleBuffer.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/custconn/MWCriticalSection_gc.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/custconn/CircleBuffer.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/flush_cache.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/main_TRK.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mainloop.o \
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mem_TRK_1.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mem_TRK.o \
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MetroTRK/dispatch.o \
 	$(BUILD_DIR)/asm/data_2.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/dolphin_trk.o \
@@ -511,6 +510,7 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_resourceAccessor.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_arcResourceAccessor.o \
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_common.o \
+	$(BUILD_DIR)/asm/nw4r/lyt/lyt_util.o \
 	$(BUILD_DIR)/asm/nw4r/math/math_arithmetic.o \
 	$(BUILD_DIR)/asm/nw4r/math/math_triangular.o \
 	$(BUILD_DIR)/asm/nw4r/math/math_types.o \
@@ -572,9 +572,12 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/snd/snd_WsdPlayer.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_adpcm.o \
 	$(BUILD_DIR)/asm/nw4r/ut/ut_LinkList.o \
+	$(BUILD_DIR)/asm/nw4r/ut/ut_binaryFileFormat.o \
 	$(BUILD_DIR)/asm/nw4r/ut/ut_CharStrmReader.o \
+	$(BUILD_DIR)/asm/nw4r/ut/ut_TagProcessorBase.o \
 	$(BUILD_DIR)/asm/nw4r/ut/ut_IOStream.o \
 	$(BUILD_DIR)/asm/nw4r/ut/ut_FileStream.o \
+	$(BUILD_DIR)/asm/nw4r/ut/code_8042BE14.o \
 	$(BUILD_DIR)/asm/nw4r/ut/ut_LockedCache.o \
 	$(BUILD_DIR)/asm/nw4r/ut/ut_Font.o \
 	$(BUILD_DIR)/asm/nw4r/ut/ut_ResFontBase.o \

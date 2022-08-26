@@ -85,7 +85,7 @@ func_80415118:
 
 .global func_80415148
 func_80415148:
-/* 80415148 003DE708  48 01 64 04 */	b func_8042B54C
+/* 80415148 003DE708  48 01 64 04 */	b Erase__Q44nw4r2ut6detail12LinkListImplFPQ34nw4r2ut12LinkListNode
 
 .global func_8041514C
 func_8041514C:

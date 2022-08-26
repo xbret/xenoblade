@@ -20,8 +20,8 @@ gdev_cc_initialize:
 /* 802CB560 00294B20  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CB564 00294B24  4E 80 00 20 */	blr
 
-.global func_802CB568
-func_802CB568:
+.global gdev_cc_shutdown
+gdev_cc_shutdown:
 /* 802CB568 00294B28  38 60 00 00 */	li r3, 0
 /* 802CB56C 00294B2C  4E 80 00 20 */	blr
 
@@ -38,8 +38,8 @@ lbl_802CB584:
 /* 802CB58C 00294B4C  38 60 00 00 */	li r3, 0
 /* 802CB590 00294B50  4E 80 00 20 */	blr
 
-.global func_802CB594
-func_802CB594:
+.global gdev_cc_close
+gdev_cc_close:
 /* 802CB594 00294B54  38 60 00 00 */	li r3, 0
 /* 802CB598 00294B58  4E 80 00 20 */	blr
 

@@ -64,8 +64,8 @@ lbl_8042B4CC:
 /* 8042B4D4 003F4A94  7C A3 2B 78 */	mr r3, r5
 /* 8042B4D8 003F4A98  4E 80 00 20 */	blr 
 
-.global func_8042B4DC
-func_8042B4DC:
+.global Clear__Q44nw4r2ut6detail12LinkListImplFv
+Clear__Q44nw4r2ut6detail12LinkListImplFv:
 /* 8042B4DC 003F4A9C  80 C3 00 04 */	lwz r6, 4(r3)
 /* 8042B4E0 003F4AA0  38 A3 00 04 */	addi r5, r3, 4
 /* 8042B4E4 003F4AA4  38 00 00 00 */	li r0, 0
@@ -100,8 +100,8 @@ Insert__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8Iterator
 /* 8042B544 003F4B04  7C A3 2B 78 */	mr r3, r5
 /* 8042B548 003F4B08  4E 80 00 20 */	blr 
 
-.global func_8042B54C
-func_8042B54C:
+.global Erase__Q44nw4r2ut6detail12LinkListImplFPQ34nw4r2ut12LinkListNode
+Erase__Q44nw4r2ut6detail12LinkListImplFPQ34nw4r2ut12LinkListNode:
 /* 8042B54C 003F4B0C  80 C4 00 00 */	lwz r6, 0(r4)
 /* 8042B550 003F4B10  38 00 00 00 */	li r0, 0
 /* 8042B554 003F4B14  80 A4 00 04 */	lwz r5, 4(r4)
