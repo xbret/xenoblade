@@ -213,8 +213,8 @@ lbl_8035EAF8:
 /* 8035EB10 003280D0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8035EB20
-func_8035EB20:
+.global __OSWriteExpiredFlagIfSet
+__OSWriteExpiredFlagIfSet:
 /* 8035EB20 003280E0  80 0D B9 BC */	lwz r0, lbl_80667B3C@sda21(r13)
 /* 8035EB24 003280E4  2C 00 00 00 */	cmpwi r0, 0
 /* 8035EB28 003280E8  41 82 00 08 */	beq lbl_8035EB30

@@ -173,11 +173,9 @@ lbl_80362C10:
 .global IUSB_CloseLib
 IUSB_CloseLib:
 /* 80362C40 0032C200  38 60 00 00 */	li r3, 0
-/* 80362C44 0032C204  4E 80 00 20 */	blr 
+/* 80362C44 0032C204  4E 80 00 20 */	blr
+
 .balign 16, 0
-
-
-
 _intBlkCtrlCb:
 /* 80362C50 0032C210  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80362C54 0032C214  7C 08 02 A6 */	mflr r0
@@ -462,8 +460,8 @@ lbl_80363048:
 /* 80363060 0032C620  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80363070
-func_80363070:
+.global __LongBlkMsgInt
+__LongBlkMsgInt:
 /* 80363070 0032C630  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80363074 0032C634  7C 08 02 A6 */	mflr r0
 /* 80363078 0032C638  90 01 00 44 */	stw r0, 0x44(r1)
@@ -992,7 +990,7 @@ lbl_80363818:
 /* 80363828 0032CDE8  7F C7 F3 78 */	mr r7, r30
 /* 8036382C 0032CDEC  7F E8 FB 78 */	mr r8, r31
 /* 80363830 0032CDF0  39 20 00 01 */	li r9, 1
-/* 80363834 0032CDF4  4B FF F8 3D */	bl func_80363070
+/* 80363834 0032CDF4  4B FF F8 3D */	bl __LongBlkMsgInt
 lbl_80363838:
 /* 80363838 0032CDF8  39 61 00 20 */	addi r11, r1, 0x20
 /* 8036383C 0032CDFC  4B F5 69 61 */	bl _restgpr_26
@@ -1038,7 +1036,7 @@ lbl_803638B8:
 /* 803638C8 0032CE88  7F C7 F3 78 */	mr r7, r30
 /* 803638CC 0032CE8C  7F E8 FB 78 */	mr r8, r31
 /* 803638D0 0032CE90  39 20 00 01 */	li r9, 1
-/* 803638D4 0032CE94  4B FF F7 9D */	bl func_80363070
+/* 803638D4 0032CE94  4B FF F7 9D */	bl __LongBlkMsgInt
 lbl_803638D8:
 /* 803638D8 0032CE98  39 61 00 20 */	addi r11, r1, 0x20
 /* 803638DC 0032CE9C  4B F5 68 C1 */	bl _restgpr_26

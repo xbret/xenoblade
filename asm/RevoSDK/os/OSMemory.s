@@ -461,8 +461,8 @@ lbl_80359AE0:
 /* 80359AFC 003230BC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80359B00
-func_80359B00:
+.global __OSRestoreCodeExecOnMEM1
+__OSRestoreCodeExecOnMEM1:
 /* 80359B00 003230C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80359B04 003230C4  7C 08 02 A6 */	mflr r0
 /* 80359B08 003230C8  3C 80 80 36 */	lis r4, ConfigMEM1_24MB@ha

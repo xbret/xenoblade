@@ -1133,8 +1133,8 @@ __VISetGammaImm:
 /* 8036841C 003319DC  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80368420
-func_80368420:
+.global __VISetGamma1_0
+__VISetGamma1_0:
 /* 80368420 003319E0  3C 60 80 56 */	lis r3, lbl_8055FFF8@ha
 /* 80368424 003319E4  38 63 FF F8 */	addi r3, r3, lbl_8055FFF8@l
 /* 80368428 003319E8  38 63 01 54 */	addi r3, r3, 0x154
@@ -1151,8 +1151,8 @@ __VISetGamma:
 /* 80368444 00331A04  4B FF FE 7C */	b __VISetGammaImm
 
 .balign 16, 0
-.global func_80368450
-func_80368450:
+.global VISetGamma
+VISetGamma:
 /* 80368450 00331A10  80 0D BA DC */	lwz r0, lbl_80667C5C@sda21(r13)
 /* 80368454 00331A14  7C 00 18 00 */	cmpw r0, r3
 /* 80368458 00331A18  4D 82 00 20 */	beqlr 
@@ -1192,8 +1192,8 @@ lbl_803684A4:
 /* 803684C8 00331A88  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803684D0
-func_803684D0:
+.global VISetTrapFilter
+VISetTrapFilter:
 /* 803684D0 00331A90  88 0D 9B B7 */	lbz r0, lbl_80665D37@sda21(r13)
 /* 803684D4 00331A94  7C 00 18 40 */	cmplw r0, r3
 /* 803684D8 00331A98  4D 82 00 20 */	beqlr 

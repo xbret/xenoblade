@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_803626D0
-func_803626D0:
+.global SISetSamplingRate
+SISetSamplingRate:
 /* 803626D0 0032BC90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803626D4 0032BC94  7C 08 02 A6 */	mflr r0
 /* 803626D8 0032BC98  28 03 00 0B */	cmplwi r3, 0xb
@@ -65,7 +65,7 @@ lbl_80362758:
 /* 803627A0 0032BD60  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_803627B0
-func_803627B0:
+.global SIRefreshSamplingRate
+SIRefreshSamplingRate:
 /* 803627B0 0032BD70  80 6D BA 00 */	lwz r3, lbl_80667B80@sda21(r13)
-/* 803627B4 0032BD74  4B FF FF 1C */	b func_803626D0
+/* 803627B4 0032BD74  4B FF FF 1C */	b SISetSamplingRate

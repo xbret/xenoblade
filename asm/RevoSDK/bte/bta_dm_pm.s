@@ -730,3 +730,10 @@ bta_dm_pm_timer:
 /* 802E20DC 002AB69C  38 80 00 01 */	li r4, 1
 /* 802E20E0 002AB6A0  38 63 00 08 */	addi r3, r3, 8
 /* 802E20E4 002AB6A4  4B FF F9 E8 */	b bta_dm_pm_set_mode
+
+
+.section .sbss2, "", @nobits #0x8066DCE0 - 0x8066DCFB
+
+.global lbl_8066DCE0
+lbl_8066DCE0:
+	.skip 0x8

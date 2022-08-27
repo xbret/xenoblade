@@ -20,33 +20,34 @@ __wpadNoFree:
 .4byte 0
 .4byte 0
 
+#not sure about these 4 functions
 #.balign 16, 0
-.global func_80368D90
-func_80368D90:
+.global WPADIsEnabledVSM
+WPADIsEnabledVSM:
 /* 80368D90 00332350  80 6D BB 10 */	lwz r3, lbl_80667C90@sda21(r13)
 /* 80368D94 00332354  4E 80 00 20 */	blr
 .4byte 0
 .4byte 0
 
 #.balign 16, 0
-.global func_80368DA0
-func_80368DA0:
+.global WPADIsEnabledTRN
+WPADIsEnabledTRN:
 /* 80368DA0 00332360  80 6D BB 14 */	lwz r3, lbl_80667C94@sda21(r13)
 /* 80368DA4 00332364  4E 80 00 20 */	blr
 .4byte 0
 .4byte 0
 
 #.balign 16, 0
-.global func_80368DB0
-func_80368DB0:
+.global WPADIsEnabledGTR
+WPADIsEnabledGTR:
 /* 80368DB0 00332370  80 6D BB 18 */	lwz r3, lbl_80667C98@sda21(r13)
 /* 80368DB4 00332374  4E 80 00 20 */	blr
 .4byte 0
 .4byte 0
 
 #.balign 16, 0
-.global func_80368DC0
-func_80368DC0:
+.global WPADIsEnabledDRM
+WPADIsEnabledDRM:
 /* 80368DC0 00332380  80 6D BB 1C */	lwz r3, lbl_80667C9C@sda21(r13)
 /* 80368DC4 00332384  4E 80 00 20 */	blr
 .4byte 0
@@ -3194,6 +3195,7 @@ lbl_8036BAA0:
 /* 8036BAB4 00335074  7C 08 03 A6 */	mtlr r0
 /* 8036BAB8 00335078  38 21 00 20 */	addi r1, r1, 0x20
 /* 8036BABC 0033507C  4E 80 00 20 */	blr
+
 WPADiConnCallback:
 /* 8036BAC0 00335080  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 8036BAC4 00335084  7C 08 02 A6 */	mflr r0
@@ -3245,7 +3247,7 @@ lbl_8036BB68:
 /* 8036BB74 00335134  4B F5 2C B9 */	bl memcmp
 /* 8036BB78 00335138  2C 03 00 00 */	cmpwi r3, 0
 /* 8036BB7C 0033513C  40 82 00 24 */	bne lbl_8036BBA0
-/* 8036BB80 00335140  48 00 A0 61 */	bl func_80375BE0
+/* 8036BB80 00335140  48 00 A0 61 */	bl WUDIsLinkedWBC
 /* 8036BB84 00335144  2C 03 00 00 */	cmpwi r3, 0
 /* 8036BB88 00335148  41 82 00 18 */	beq lbl_8036BBA0
 /* 8036BB8C 0033514C  38 00 00 03 */	li r0, 3
@@ -4336,7 +4338,7 @@ lbl_8036CAF0:
 /* 8036CB10 003360D0  4B FF 48 B1 */	bl SCSetWpadSpeakerVolume
 /* 8036CB14 003360D4  54 7E 07 FE */	clrlwi r30, r3, 0x1f
 /* 8036CB18 003360D8  7F E3 FB 78 */	mr r3, r31
-/* 8036CB1C 003360DC  4B FF 47 D5 */	bl func_803612F0
+/* 8036CB1C 003360DC  4B FF 47 D5 */	bl SCSetWpadMotorMode
 /* 8036CB20 003360E0  7F DE 18 39 */	and. r30, r30, r3
 /* 8036CB24 003360E4  41 82 00 10 */	beq lbl_8036CB34
 /* 8036CB28 003360E8  7F A3 EB 78 */	mr r3, r29
@@ -7768,7 +7770,7 @@ WPADControlBLC:
 /* 8036FD24 003392E4  41 82 01 90 */	beq lbl_8036FEB4
 /* 8036FD28 003392E8  2C 1D 00 00 */	cmpwi r29, 0
 /* 8036FD2C 003392EC  41 82 00 10 */	beq lbl_8036FD3C
-/* 8036FD30 003392F0  48 00 5E B1 */	bl func_80375BE0
+/* 8036FD30 003392F0  48 00 5E B1 */	bl WUDIsLinkedWBC
 /* 8036FD34 003392F4  2C 03 00 00 */	cmpwi r3, 0
 /* 8036FD38 003392F8  40 82 00 0C */	bne lbl_8036FD44
 lbl_8036FD3C:

@@ -1058,8 +1058,8 @@ lbl_805E1200:
 .global lbl_805E1250
 lbl_805E1250:
 	.skip 0x30
-.global lbl_805E1280
-lbl_805E1280:
+.global __rvl_wudcb
+__rvl_wudcb:
 	.skip 0x750
 .global lbl_805E19D0
 lbl_805E19D0:

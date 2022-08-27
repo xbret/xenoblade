@@ -1643,7 +1643,7 @@ lbl_8035C930:
 /* 8035C948 00325F08  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_8035C950
-func_8035C950:
+.global OSGetThreadPriority
+OSGetThreadPriority:
 /* 8035C950 00325F10  80 63 02 D4 */	lwz r3, 0x2d4(r3)
 /* 8035C954 00325F14  4E 80 00 20 */	blr 

@@ -271,3 +271,10 @@ lbl_802E44E4:
 /* 802E44F4 002ADAB4  7C 08 03 A6 */	mtlr r0
 /* 802E44F8 002ADAB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E44FC 002ADABC  4E 80 00 20 */	blr
+
+
+.section .sbss2, "", @nobits #0x8066DCE0 - 0x8066DCFB
+
+.global lbl_8066DCE8
+lbl_8066DCE8:
+	.skip 0x8

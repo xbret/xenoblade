@@ -3370,3 +3370,10 @@ lbl_804082B0:
 lbl_804082F4:
 /* 804082F4 003D18B4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804082F8 003D18B8  4E 80 00 20 */	blr 
+
+
+.section .sbss2, "", @nobits #0x8066DCE0 - 0x8066DCFB
+
+.global lbl_8066DCF0
+lbl_8066DCF0:
+	.skip 0x8

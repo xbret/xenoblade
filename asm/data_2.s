@@ -28842,33 +28842,33 @@ lbl_80560A30:
 	.4byte __a1_20_status_report
 	.4byte __a1_21_user_data
 	.4byte __a1_22_ack
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_80373510
-	.4byte func_80373570
-	.4byte func_80373680
-	.4byte func_803739A0
-	.4byte func_80373AF0
-	.4byte func_80373CD0
-	.4byte func_80374070
-	.4byte func_80374180
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_803749C0
-	.4byte func_80374530
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_30_data_type
+	.4byte __a1_31_data_type
+	.4byte __a1_32_data_type
+	.4byte __a1_33_data_type
+	.4byte __a1_34_data_type
+	.4byte __a1_35_data_type
+	.4byte __a1_36_data_type
+	.4byte __a1_37_data_type
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_3d_data_type
 	.4byte __a1_3e_data_type
 	.4byte __a1_3f_data_type
 

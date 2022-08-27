@@ -178,6 +178,8 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mslsupp.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/targimpl.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/target_options.o \
+
+NDEV_O_FILES :=\
 	$(BUILD_DIR)/asm/NdevExi2A/DebuggerDriver.o \
 	$(BUILD_DIR)/asm/NdevExi2A/exi2.o \
 
@@ -287,7 +289,7 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/enc/encutility.o \
 	$(BUILD_DIR)/asm/RevoSDK/enc/enc.o \
 	$(BUILD_DIR)/asm/rodata_3.o \
-	$(BUILD_DIR)/asm/RevoSDK/esp.o \
+	$(BUILD_DIR)/asm/RevoSDK/esp/esp.o \
 	$(BUILD_DIR)/asm/RevoSDK/euart/euart.o \
 	$(BUILD_DIR)/asm/RevoSDK/exi/EXIBios.o \
 	$(BUILD_DIR)/asm/RevoSDK/exi/EXIUart.o \
@@ -397,8 +399,8 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSNet.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSNandbootInfo.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayTime.o \
-	$(BUILD_DIR)/asm/RevoSDK/crc.o \
-	$(BUILD_DIR)/asm/RevoSDK/os/OSExec1.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSCrc.o \
+	$(BUILD_DIR)/asm/RevoSDK/os/OSLaunch.o \
 	$(BUILD_DIR)/src/RevoSDK/os/__start.o \
 	$(BUILD_DIR)/asm/sbss_4.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/__ppc_eabi_init.o \
@@ -419,7 +421,7 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/wpad/WPADEncrypt.o \
 	$(BUILD_DIR)/asm/RevoSDK/wpad/WPADMem.o \
 	$(BUILD_DIR)/asm/RevoSDK/wpad/debug_msg.o \
-	$(BUILD_DIR)/asm/RevoSDK/wud/wud.o \
+	$(BUILD_DIR)/asm/RevoSDK/wud/WUD.o \
 	$(BUILD_DIR)/asm/RevoSDK/wud/WUDHidHost.o \
 	$(BUILD_DIR)/asm/RevoSDK/wud/debug_msg.o
 
@@ -650,6 +652,3 @@ EXTABINDEX_O_FILES :=\
 
 CTORS_O_FILES :=\
 	$(BUILD_DIR)/asm/ctors.o
-
-SBSS2_O_FILES :=\
-	$(BUILD_DIR)/asm/sbss2.o

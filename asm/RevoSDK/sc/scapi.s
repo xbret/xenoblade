@@ -323,12 +323,11 @@ lbl_803612D0:
 /* 803612DC 0032A89C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803612E0 0032A8A0  4E 80 00 20 */	blr 
 
-#might not be this function? (func_803612F0 instead has 0x1f)
 .balign 16, 0
-.global func_803612F0
-func_803612F0:
+.global SCSetWpadMotorMode
+SCSetWpadMotorMode:
 /* 803612F0 0032A8B0  38 80 00 20 */	li r4, 0x20
-/* 803612F4 0032A8B4  4B FF F5 4C */	b func_80360840
+/* 803612F4 0032A8B4  4B FF F5 4C */	b SCReplaceU8Item
 
 .balign 16, 0
 .global SCGetWpadSensorBarPosition
@@ -388,5 +387,5 @@ lbl_803613A0:
 .global SCSetWpadSpeakerVolume
 SCSetWpadSpeakerVolume:
 /* 803613C0 0032A980  38 80 00 1F */	li r4, 0x1f
-/* 803613C4 0032A984  4B FF F4 7C */	b func_80360840
+/* 803613C4 0032A984  4B FF F4 7C */	b SCReplaceU8Item
 .balign 16, 0

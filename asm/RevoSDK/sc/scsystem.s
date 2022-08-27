@@ -1356,8 +1356,8 @@ lbl_80360808:
 /* 80360830 00329DF0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global func_80360840
-func_80360840:
+.global SCReplaceU8Item
+SCReplaceU8Item:
 /* 80360840 00329E00  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80360844 00329E04  7C 08 02 A6 */	mflr r0
 /* 80360848 00329E08  90 01 00 44 */	stw r0, 0x44(r1)
