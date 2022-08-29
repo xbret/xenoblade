@@ -12176,7 +12176,7 @@ lbl_8000C12C:
 	.4byte 0x00A10010
 	.4byte 0
 	.4byte 0x82000008
-	.4byte func_804306FC
+	.4byte __dt__Q34nw4r2ut17TextWriterBase_w_Fv
 
 .global lbl_8000C144
 lbl_8000C144:
@@ -12245,7 +12245,7 @@ lbl_8000C1A4:
 	.4byte 0x00050010
 	.4byte 0
 	.4byte 0x82000008
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 
 .global lbl_8000C1BC
 lbl_8000C1BC:
@@ -12259,7 +12259,7 @@ lbl_8000C1C4:
 	.4byte 0x00390010
 	.4byte 0
 	.4byte 0x82000008
-	.4byte func_804306FC
+	.4byte __dt__Q34nw4r2ut17TextWriterBase_w_Fv
 
 .global lbl_8000C1DC
 lbl_8000C1DC:
@@ -12278,7 +12278,7 @@ lbl_8000C1EC:
 	.4byte 0x00970010
 	.4byte 0
 	.4byte 0x82000008
-	.4byte func_804306FC
+	.4byte __dt__Q34nw4r2ut17TextWriterBase_w_Fv
 
 .global lbl_8000C204
 lbl_8000C204:
@@ -13108,13 +13108,13 @@ lbl_8000C878:
 	.4byte 0x00000040
 	.4byte 0
 	.4byte 0x82000008
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x8200000C
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x82000010
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x82000014
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 
 .global lbl_8000C8C0
 lbl_8000C8C0:
@@ -13129,13 +13129,13 @@ lbl_8000C8C0:
 	.4byte 0x00000040
 	.4byte 0
 	.4byte 0x82000014
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x82000010
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x8200000C
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x82000008
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 
 .global lbl_8000C908
 lbl_8000C908:
@@ -13150,13 +13150,13 @@ lbl_8000C908:
 	.4byte 0x00000040
 	.4byte 0
 	.4byte 0x82000008
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x8200000C
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x82000010
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x82000014
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 
 .global lbl_8000C950
 lbl_8000C950:
@@ -13171,13 +13171,13 @@ lbl_8000C950:
 	.4byte 0x00000040
 	.4byte 0
 	.4byte 0x82000014
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x82000010
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x8200000C
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x82000008
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 
 .global lbl_8000C998
 lbl_8000C998:
@@ -32835,13 +32835,13 @@ lbl_80017798:
 	.4byte 0x01430038
 	.4byte 0
 	.4byte 0x0200000C
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x82000050
-	.4byte func_804306FC
+	.4byte __dt__Q34nw4r2ut17TextWriterBase_w_Fv
 	.4byte 0x02000008
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x82000050
-	.4byte func_804306FC
+	.4byte __dt__Q34nw4r2ut17TextWriterBase_w_Fv
 
 .global lbl_800177E8
 lbl_800177E8:
@@ -43886,13 +43886,13 @@ lbl_8001D3F8:
 	.4byte 0x00130038
 	.4byte 0
 	.4byte 0x0200000C
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x82000068
-	.4byte func_804306FC
+	.4byte __dt__Q34nw4r2ut17TextWriterBase_w_Fv
 	.4byte 0x02000008
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x82000068
-	.4byte func_804306FC
+	.4byte __dt__Q34nw4r2ut17TextWriterBase_w_Fv
 
 .global lbl_8001D448
 lbl_8001D448:

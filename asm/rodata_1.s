@@ -584,6 +584,7 @@ lbl_804F7520:
 	.asciz "accum"
 	.asciz "attach"
 	.4byte 0
+
 .global lbl_804F77C8
 lbl_804F77C8:
 	.asciz "KEY:%d"
@@ -1889,6 +1890,7 @@ lbl_804F9440:
 	.asciz "icon"
 	.4byte 0
 	.2byte 0
+	
 .global lbl_804F96E0
 lbl_804F96E0:
 	.asciz "CMenuFade"

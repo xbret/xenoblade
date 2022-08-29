@@ -2,14 +2,14 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80400C60
-func_80400C60:
+.global __ct__Q34nw4r2ut5ColorFv
+__ct__Q34nw4r2ut5ColorFv:
 /* 80400C60 003CA220  38 00 FF FF */	li r0, -1
 /* 80400C64 003CA224  90 03 00 00 */	stw r0, 0(r3)
 /* 80400C68 003CA228  4E 80 00 20 */	blr 
 
-.global func_80400C6C
-func_80400C6C:
+.global __ct__Q34nw4r3lyt7PictureFUc
+__ct__Q34nw4r3lyt7PictureFUc:
 /* 80400C6C 003CA22C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80400C70 003CA230  7C 08 02 A6 */	mflr r0
 /* 80400C74 003CA234  90 01 00 24 */	stw r0, 0x24(r1)
@@ -19,13 +19,13 @@ func_80400C6C:
 /* 80400C84 003CA244  7C 7E 1B 78 */	mr r30, r3
 /* 80400C88 003CA248  4B FF DC 7D */	bl __ct__Q34nw4r3lyt4PaneFv
 /* 80400C8C 003CA24C  3C 60 80 57 */	lis r3, lbl_8056D298@ha
-/* 80400C90 003CA250  3C 80 80 40 */	lis r4, func_80400C60@ha
+/* 80400C90 003CA250  3C 80 80 40 */	lis r4, __ct__Q34nw4r2ut5ColorFv@ha
 /* 80400C94 003CA254  38 63 D2 98 */	addi r3, r3, lbl_8056D298@l
-/* 80400C98 003CA258  3C A0 80 12 */	lis r5, func_801252D0@ha
+/* 80400C98 003CA258  3C A0 80 12 */	lis r5, __dt__Q34nw4r2ut5ColorFv@ha
 /* 80400C9C 003CA25C  90 7E 00 00 */	stw r3, 0(r30)
 /* 80400CA0 003CA260  38 7E 00 D8 */	addi r3, r30, 0xd8
-/* 80400CA4 003CA264  38 84 0C 60 */	addi r4, r4, func_80400C60@l
-/* 80400CA8 003CA268  38 A5 52 D0 */	addi r5, r5, func_801252D0@l
+/* 80400CA4 003CA264  38 84 0C 60 */	addi r4, r4, __ct__Q34nw4r2ut5ColorFv@l
+/* 80400CA8 003CA268  38 A5 52 D0 */	addi r5, r5, __dt__Q34nw4r2ut5ColorFv@l
 /* 80400CAC 003CA26C  38 C0 00 04 */	li r6, 4
 /* 80400CB0 003CA270  38 E0 00 04 */	li r7, 4
 /* 80400CB4 003CA274  4B EB 8E 4D */	bl __construct_array
@@ -76,8 +76,8 @@ lbl_80400D48:
 /* 80400D5C 003CA31C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80400D60 003CA320  4E 80 00 20 */	blr 
 
-.global func_80400D64
-func_80400D64:
+.global __ct__Q34nw4r3lyt7PictureFPCQ44nw4r3lyt3res7PictureRCQ34nw4r3lyt11ResBlockSet
+__ct__Q34nw4r3lyt7PictureFPCQ44nw4r3lyt3res7PictureRCQ34nw4r3lyt11ResBlockSet:
 /* 80400D64 003CA324  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80400D68 003CA328  7C 08 02 A6 */	mflr r0
 /* 80400D6C 003CA32C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -90,13 +90,13 @@ func_80400D64:
 /* 80400D88 003CA348  7C 9C 23 78 */	mr r28, r4
 /* 80400D8C 003CA34C  4B FF DC A5 */	bl __ct__Q34nw4r3lyt4PaneFPCQ44nw4r3lyt3res4Pane
 /* 80400D90 003CA350  3C 60 80 57 */	lis r3, lbl_8056D298@ha
-/* 80400D94 003CA354  3C 80 80 40 */	lis r4, func_80400C60@ha
+/* 80400D94 003CA354  3C 80 80 40 */	lis r4, __ct__Q34nw4r2ut5ColorFv@ha
 /* 80400D98 003CA358  38 63 D2 98 */	addi r3, r3, lbl_8056D298@l
-/* 80400D9C 003CA35C  3C A0 80 12 */	lis r5, func_801252D0@ha
+/* 80400D9C 003CA35C  3C A0 80 12 */	lis r5, __dt__Q34nw4r2ut5ColorFv@ha
 /* 80400DA0 003CA360  90 7F 00 00 */	stw r3, 0(r31)
 /* 80400DA4 003CA364  38 7F 00 D8 */	addi r3, r31, 0xd8
-/* 80400DA8 003CA368  38 84 0C 60 */	addi r4, r4, func_80400C60@l
-/* 80400DAC 003CA36C  38 A5 52 D0 */	addi r5, r5, func_801252D0@l
+/* 80400DA8 003CA368  38 84 0C 60 */	addi r4, r4, __ct__Q34nw4r2ut5ColorFv@l
+/* 80400DAC 003CA36C  38 A5 52 D0 */	addi r5, r5, __dt__Q34nw4r2ut5ColorFv@l
 /* 80400DB0 003CA370  38 C0 00 04 */	li r6, 4
 /* 80400DB4 003CA374  38 E0 00 04 */	li r7, 4
 /* 80400DB8 003CA378  4B EB 8D 49 */	bl __construct_array
@@ -167,8 +167,8 @@ lbl_80400E88:
 /* 80400EA8 003CA468  38 21 00 30 */	addi r1, r1, 0x30
 /* 80400EAC 003CA46C  4E 80 00 20 */	blr 
 
-.global func_80400EB0
-func_80400EB0:
+.global __dt__Q34nw4r3lyt7PictureFv
+__dt__Q34nw4r3lyt7PictureFv:
 /* 80400EB0 003CA470  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80400EB4 003CA474  7C 08 02 A6 */	mflr r0
 /* 80400EB8 003CA478  2C 03 00 00 */	cmpwi r3, 0
@@ -204,9 +204,9 @@ lbl_80400F24:
 lbl_80400F2C:
 /* 80400F2C 003CA4EC  38 7D 00 E8 */	addi r3, r29, 0xe8
 /* 80400F30 003CA4F0  48 00 91 8D */	bl Free__Q44nw4r3lyt6detail11TexCoordAryFv
-/* 80400F34 003CA4F4  3C 80 80 12 */	lis r4, func_801252D0@ha
+/* 80400F34 003CA4F4  3C 80 80 12 */	lis r4, __dt__Q34nw4r2ut5ColorFv@ha
 /* 80400F38 003CA4F8  38 7D 00 D8 */	addi r3, r29, 0xd8
-/* 80400F3C 003CA4FC  38 84 52 D0 */	addi r4, r4, func_801252D0@l
+/* 80400F3C 003CA4FC  38 84 52 D0 */	addi r4, r4, __dt__Q34nw4r2ut5ColorFv@l
 /* 80400F40 003CA500  38 A0 00 04 */	li r5, 4
 /* 80400F44 003CA504  38 C0 00 04 */	li r6, 4
 /* 80400F48 003CA508  4B EB 8C B1 */	bl __destroy_arr
@@ -227,8 +227,8 @@ lbl_80400F68:
 /* 80400F80 003CA540  38 21 00 20 */	addi r1, r1, 0x20
 /* 80400F84 003CA544  4E 80 00 20 */	blr 
 
-.global func_80400F88
-func_80400F88:
+.global Append__Q34nw4r3lyt7PictureFRCQ34nw4r3lyt6TexMap
+Append__Q34nw4r3lyt7PictureFRCQ34nw4r3lyt6TexMap:
 /* 80400F88 003CA548  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80400F8C 003CA54C  7C 08 02 A6 */	mflr r0
 /* 80400F90 003CA550  90 01 00 34 */	stw r0, 0x34(r1)
@@ -342,12 +342,14 @@ lbl_8040111C:
 /* 80401134 003CA6F4  38 21 00 30 */	addi r1, r1, 0x30
 /* 80401138 003CA6F8  4E 80 00 20 */	blr 
 
-.global func_8040113C
-func_8040113C:
+.global SetTexCoord__Q34nw4r3lyt7PictureFUlPCQ34nw4r4math4VEC2
+SetTexCoord__Q34nw4r3lyt7PictureFUlPCQ34nw4r4math4VEC2:
 /* 8040113C 003CA6FC  38 63 00 E8 */	addi r3, r3, 0xe8
 /* 80401140 003CA700  48 00 91 4C */	b SetCoord__Q44nw4r3lyt6detail11TexCoordAryFUlPCQ34nw4r4math4VEC2
-.global lbl_80401144
-lbl_80401144:
+
+#GetVtxColor__Q34nw4r3lyt7PictureCFUl?
+.global func_80401144
+func_80401144:
 /* 80401144 003CA704  54 A0 10 3A */	slwi r0, r5, 2
 /* 80401148 003CA708  7C E4 02 14 */	add r7, r4, r0
 /* 8040114C 003CA70C  88 C7 00 D8 */	lbz r6, 0xd8(r7)
@@ -360,8 +362,8 @@ lbl_80401144:
 /* 80401168 003CA728  98 03 00 03 */	stb r0, 3(r3)
 /* 8040116C 003CA72C  4E 80 00 20 */	blr 
 
-.global func_80401170
-func_80401170:
+.global SetVtxColor__Q34nw4r3lyt7PictureFUlQ34nw4r2ut5Color
+SetVtxColor__Q34nw4r3lyt7PictureFUlQ34nw4r2ut5Color:
 /* 80401170 003CA730  54 80 10 3A */	slwi r0, r4, 2
 /* 80401174 003CA734  88 C5 00 00 */	lbz r6, 0(r5)
 /* 80401178 003CA738  7C 83 02 14 */	add r4, r3, r0
@@ -374,8 +376,8 @@ func_80401170:
 /* 80401194 003CA754  98 04 00 DB */	stb r0, 0xdb(r4)
 /* 80401198 003CA758  4E 80 00 20 */	blr 
 
-.global func_8040119C
-func_8040119C:
+.global GetVtxColorElement__Q34nw4r3lyt7PictureCFUl
+GetVtxColorElement__Q34nw4r3lyt7PictureCFUl:
 /* 8040119C 003CA75C  54 85 00 3A */	rlwinm r5, r4, 0, 0, 0x1d
 /* 804011A0 003CA760  54 80 07 BE */	clrlwi r0, r4, 0x1e
 /* 804011A4 003CA764  7C 63 2A 14 */	add r3, r3, r5
@@ -383,8 +385,8 @@ func_8040119C:
 /* 804011AC 003CA76C  88 63 00 D8 */	lbz r3, 0xd8(r3)
 /* 804011B0 003CA770  4E 80 00 20 */	blr 
 
-.global func_804011B4
-func_804011B4:
+.global SetVtxColorElement__Q34nw4r3lyt7PictureFUlUc
+SetVtxColorElement__Q34nw4r3lyt7PictureFUlUc:
 /* 804011B4 003CA774  54 86 00 3A */	rlwinm r6, r4, 0, 0, 0x1d
 /* 804011B8 003CA778  54 80 07 BE */	clrlwi r0, r4, 0x1e
 /* 804011BC 003CA77C  7C 63 32 14 */	add r3, r3, r6
@@ -392,8 +394,8 @@ func_804011B4:
 /* 804011C4 003CA784  98 A3 00 D8 */	stb r5, 0xd8(r3)
 /* 804011C8 003CA788  4E 80 00 20 */	blr 
 
-.global func_804011CC
-func_804011CC:
+.global DrawSelf__Q34nw4r3lyt7PictureFRCQ34nw4r3lyt8DrawInfo
+DrawSelf__Q34nw4r3lyt7PictureFRCQ34nw4r3lyt8DrawInfo:
 /* 804011CC 003CA78C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804011D0 003CA790  7C 08 02 A6 */	mflr r0
 /* 804011D4 003CA794  90 01 00 24 */	stw r0, 0x24(r1)
@@ -453,8 +455,8 @@ lbl_80401288:
 /* 804012A0 003CA860  38 21 00 20 */	addi r1, r1, 0x20
 /* 804012A4 003CA864  4E 80 00 20 */	blr 
 
-.global func_804012A8
-func_804012A8:
+.global GetRuntimeTypeInfo__Q34nw4r3lyt7PictureCFv
+GetRuntimeTypeInfo__Q34nw4r3lyt7PictureCFv:
 /* 804012A8 003CA868  38 6D BB E0 */	addi r3, r13, lbl_80667D60@sda21
 /* 804012AC 003CA86C  4E 80 00 20 */	blr
 

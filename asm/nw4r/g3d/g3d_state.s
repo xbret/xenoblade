@@ -3532,8 +3532,8 @@ func_803EACC0:
 /* 803EACD4 003B4294  38 63 00 34 */	addi r3, r3, 0x34
 /* 803EACD8 003B4298  4E 80 00 20 */	blr 
 
-.global func_803EACDC
-func_803EACDC:
+.global SetRenderModeObj__Q34nw4r3g3d8G3DStateFRC16_GXRenderModeObj
+SetRenderModeObj__Q34nw4r3g3d8G3DStateFRC16_GXRenderModeObj:
 /* 803EACDC 003B429C  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803EACE0 003B42A0  7C 08 02 A6 */	mflr r0
 /* 803EACE4 003B42A4  90 01 00 94 */	stw r0, 0x94(r1)

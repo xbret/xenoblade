@@ -26260,16 +26260,17 @@ lbl_8053F398:
 
 .global _loc_ctyp_C
 _loc_ctyp_C:
-	.4byte 0x43000000
+	.asciz "C" #0x0
+	.2byte 0
 	.4byte 0
-	.4byte lbl_8050D020
-	.4byte __upper_mapC
-	.4byte __lower_mapC
-	.4byte __wctype_mapC
-	.4byte __wupper_mapC
-	.4byte __wlower_mapC
-	.4byte __mbtowc_noconv
-	.4byte __wctomb_noconv
+	.4byte lbl_8050D020 #0x8
+	.4byte __upper_mapC #0xC
+	.4byte __lower_mapC #0x10
+	.4byte __wctype_mapC #0x14
+	.4byte __wupper_mapC #0x18
+	.4byte __wlower_mapC #0x1C
+	.4byte __mbtowc_noconv #0x20
+	.4byte __wctomb_noconv #0x24
 
 .global lbl_8053F3F8
 lbl_8053F3F8:
@@ -26334,14 +26335,15 @@ _loc_coll_C:
 
 .global _loc_mon_C
 _loc_mon_C:
-	.4byte 0x43000000
+	.asciz "C" #0x0
+	.2byte 0
 	.4byte 0
-	.4byte lbl_8066B85C
-	.4byte lbl_8066B85C
-	.4byte lbl_8066B85C
-	.4byte lbl_8066B85C
-	.4byte lbl_8066B85C
-	.4byte lbl_8066B85C
+	.4byte lbl_8066B85C #0x8, mon_decimal_point
+	.4byte lbl_8066B85C #0xC, mon_thousands_sep
+	.4byte lbl_8066B85C #0x10, mon_grouping
+	.4byte lbl_8066B85C #0x14, positive_sign
+	.4byte lbl_8066B85C #0x18, negative_sign
+	.4byte lbl_8066B85C #0x1C, currency_symbol
 	.byte 0x7F
 	.byte 0x7F
 	.byte 0x7F
@@ -26386,8 +26388,8 @@ _loc_tim_C:
 .global _current_locale
 _current_locale:
 	# ROM: 0x53B648
-	.4byte 0
-	.asciz "C"
+	.4byte 0 #0x0
+	.asciz "C" #0x4
 	.2byte 0
 	.4byte 0
 	.4byte 0
@@ -26400,11 +26402,11 @@ _current_locale:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte _loc_coll_C
-	.4byte _loc_ctyp_C
-	.4byte _loc_mon_C
-	.4byte _loc_num_C
-	.4byte _loc_tim_C
+	.4byte _loc_coll_C #0x34
+	.4byte _loc_ctyp_C #0x38
+	.4byte _loc_mon_C #0x3C
+	.4byte _loc_num_C #0x40
+	.4byte _loc_tim_C #0x44
 
 
 .global lbl_8053F590

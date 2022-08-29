@@ -58,8 +58,7 @@ endif
 O_FILES := $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES) $(GAME_O_FILES) \
 		   $(MW_O_FILES) $(NDEV_O_FILES) $(RVL_SDK_O_FILES) \
 		   $(CRIWARE_O_FILES) $(NW4R_O_FILES) $(MONOLITHLIB_O_FILES) \
-		   $(CTORS_O_FILES) $(RODATA_O_FILES) $(DATA_O_FILES) \
-		   $(BSS_O_FILES) $(SDATA2_O_FILES)
+		   $(CTORS_O_FILES)
 
 #-------------------------------------------------------------------------------
 # Tools

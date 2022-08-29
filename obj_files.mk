@@ -586,7 +586,8 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/ut/ut_ResFont.o \
 	$(BUILD_DIR)/asm/nw4r/ut/ut_ArchiveFontBase.o \
 	$(BUILD_DIR)/asm/nw4r/ut/ut_PackedFont.o \
-	$(BUILD_DIR)/asm/nw4r/ut/ut_CharWriter.o
+	$(BUILD_DIR)/asm/nw4r/ut/ut_CharWriter.o \
+	$(BUILD_DIR)/asm/nw4r/ut/ut_TextWriterBase.o \
 
 MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_80432678.o \

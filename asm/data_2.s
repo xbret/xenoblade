@@ -41182,7 +41182,7 @@ lbl_8056D248:
 	# ROM: 0x569348
 	.4byte 0
 	.4byte 0
-	.4byte func_803FFA50
+	.4byte __dt__Q34nw4r3lyt5GroupFv
 	.4byte 0
 
 
@@ -41191,20 +41191,20 @@ lbl_8056D258:
 	# ROM: 0x569358
 	.4byte 0
 	.4byte 0
-	.4byte nw4r3lyt6LayoutFv$7__dt
-	.4byte func_80400050
-	.4byte func_80400390
-	.4byte func_80400410
-	.4byte func_80400468
-	.4byte func_804004EC
-	.4byte func_80400514
-	.4byte func_80400538
-	.4byte func_8040054C
-	.4byte func_804007E8
-	.4byte func_8040080C
-	.4byte func_8040082C
-	.4byte func_8040084C
-	.4byte func_804008A4
+	.4byte __dt__Q34nw4r3lyt6LayoutFv
+	.4byte Build__Q34nw4r3lyt6LayoutFPCvPQ34nw4r3lyt16ResourceAccessor
+	.4byte CreateAnimTransform__Q34nw4r3lyt6LayoutFv
+	.4byte CreateAnimTransform__Q34nw4r3lyt6LayoutFPCvPQ34nw4r3lyt16ResourceAccessor
+	.4byte CreateAnimTransform__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt12AnimResourcePQ34nw4r3lyt16ResourceAccessor
+	.4byte BindAnimation__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransform
+	.4byte UnbindAnimation__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransform
+	.4byte UnbindAllAnimation__Q34nw4r3lyt6LayoutFv
+	.4byte BindAnimationAuto__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt12AnimResourcePQ34nw4r3lyt16ResourceAccessor
+	.4byte SetAnimationEnable__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransformb
+	.4byte CalculateMtx__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo
+	.4byte Draw__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo
+	.4byte Animate__Q34nw4r3lyt6LayoutFUl
+	.4byte SetTagProcessor__Q34nw4r3lyt6LayoutFPQ34nw4r2ut19TagProcessorBase_w
 
 
 .global lbl_8056D298
@@ -41212,19 +41212,19 @@ lbl_8056D298:
 	# ROM: 0x569398
 	.4byte 0
 	.4byte 0
-	.4byte func_80400EB0
-	.4byte func_804012A8
+	.4byte __dt__Q34nw4r3lyt7PictureFv
+	.4byte GetRuntimeTypeInfo__Q34nw4r3lyt7PictureCFv
 	.4byte CalculateMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte Draw__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
-	.4byte func_804011CC
+	.4byte DrawSelf__Q34nw4r3lyt7PictureFRCQ34nw4r3lyt8DrawInfo
 	.4byte Animate__Q34nw4r3lyt4PaneFUl
 	.4byte AnimateSelf__Q34nw4r3lyt4PaneFUl
-	.4byte lbl_80401144
-	.4byte func_80401170
+	.4byte func_80401144
+	.4byte SetVtxColor__Q34nw4r3lyt7PictureFUlQ34nw4r2ut5Color
 	.4byte GetColorElement__Q34nw4r3lyt4PaneCFUl
 	.4byte SetColorElement__Q34nw4r3lyt4PaneFUlUc
-	.4byte func_8040119C
-	.4byte func_804011B4
+	.4byte GetVtxColorElement__Q34nw4r3lyt7PictureCFUl
+	.4byte SetVtxColorElement__Q34nw4r3lyt7PictureFUlUc
 	.4byte FindPaneByName__Q34nw4r3lyt4PaneFPCcb
 	.4byte FindMaterialByName__Q34nw4r3lyt4PaneFPCcb
 	.4byte BindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
@@ -41239,7 +41239,7 @@ lbl_8056D298:
 	.4byte GetMaterial__Q34nw4r3lyt4PaneCFv
 	.4byte GetMaterial__Q34nw4r3lyt4PaneCFUl
 	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
-	.4byte func_80400F88
+	.4byte Append__Q34nw4r3lyt7PictureFRCQ34nw4r3lyt6TexMap
 
 
 .global lbl_8056D310
@@ -41247,19 +41247,19 @@ lbl_8056D310:
 	# ROM: 0x569410
 	.4byte 0
 	.4byte 0
-	.4byte func_804017E0
-	.4byte func_80402E14
+	.4byte __dt__Q34nw4r3lyt7TextBoxFv
+	.4byte GetRuntimeTypeInfo__Q34nw4r3lyt7TextBoxCFv
 	.4byte CalculateMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte Draw__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
-	.4byte func_80401A58
+	.4byte DrawSelf__Q34nw4r3lyt7TextBoxFRCQ34nw4r3lyt8DrawInfo
 	.4byte Animate__Q34nw4r3lyt4PaneFUl
 	.4byte AnimateSelf__Q34nw4r3lyt4PaneFUl
 	.4byte func_80401980
 	.4byte func_804019B4
 	.4byte GetColorElement__Q34nw4r3lyt4PaneCFUl
 	.4byte SetColorElement__Q34nw4r3lyt4PaneFUlUc
-	.4byte func_80401A28
-	.4byte func_80401A40
+	.4byte GetVtxColorElement__Q34nw4r3lyt7TextBoxCFUl
+	.4byte SetVtxColorElement__Q34nw4r3lyt7TextBoxFUlUc
 	.4byte FindPaneByName__Q34nw4r3lyt4PaneFPCcb
 	.4byte FindMaterialByName__Q34nw4r3lyt4PaneFPCcb
 	.4byte BindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
@@ -41273,11 +41273,11 @@ lbl_8056D310:
 	.4byte GetMaterialNum__Q34nw4r3lyt4PaneCFv
 	.4byte GetMaterial__Q34nw4r3lyt4PaneCFv
 	.4byte GetMaterial__Q34nw4r3lyt4PaneCFUl
-	.4byte func_80402838
-	.4byte func_8040241C
-	.4byte func_804024E0
-	.4byte func_8040252C
-	.4byte func_80402608
+	.4byte LoadMtx__Q34nw4r3lyt7TextBoxFRCQ34nw4r3lyt8DrawInfo
+	.4byte AllocStringBuffer__Q34nw4r3lyt7TextBoxFUs
+	.4byte FreeStringBuffer__Q34nw4r3lyt7TextBoxFv
+	.4byte SetString__Q34nw4r3lyt7TextBoxFPCwUs
+	.4byte SetString__Q34nw4r3lyt7TextBoxFPCwUsUs
 	.4byte 0
 
 
@@ -42776,7 +42776,7 @@ lbl_8056E740:
 	# ROM: 0x56A840
 	.4byte 0
 	.4byte 0
-	.4byte func_804027F8
+	.4byte __dt__Q34nw4r2ut4FontFv
 	.4byte 0
 	.4byte 0
 	.4byte 0

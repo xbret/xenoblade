@@ -2,10 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#SetAnimationEnable__Q24nw4r3lytFPQ34nw4r3lyt5GroupPQ34nw4r3lyt13AnimTransformbb
-#or BindAnimation__Q24nw4r3lytFPQ34nw4r3lyt5GroupPQ34nw4r3lyt13AnimTransformbb
-.global func_8040AB80
-func_8040AB80:
+.global BindAnimation__Q24nw4r3lytFPQ34nw4r3lyt5GroupPQ34nw4r3lyt13AnimTransformbb
+BindAnimation__Q24nw4r3lytFPQ34nw4r3lyt5GroupPQ34nw4r3lyt13AnimTransformbb:
 /* 8040AB80 003D4140  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040AB84 003D4144  7C 08 02 A6 */	mflr r0
 /* 8040AB88 003D4148  90 01 00 24 */	stw r0, 0x24(r1)

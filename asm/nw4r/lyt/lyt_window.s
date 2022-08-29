@@ -14,14 +14,14 @@ __ct__Q34nw4r3lyt6WindowFPCQ44nw4r3lyt3res6WindowRCQ34nw4r3lyt11ResBlockSet:
 /* 80402E44 003CC404  7C BB 2B 78 */	mr r27, r5
 /* 80402E48 003CC408  4B FF BB E9 */	bl __ct__Q34nw4r3lyt4PaneFPCQ44nw4r3lyt3res4Pane
 /* 80402E4C 003CC40C  3C 60 80 57 */	lis r3, lbl_8056D3D4@ha
-/* 80402E50 003CC410  3C 80 80 40 */	lis r4, func_80400C60@ha
+/* 80402E50 003CC410  3C 80 80 40 */	lis r4, __ct__Q34nw4r2ut5ColorFv@ha
 /* 80402E54 003CC414  38 63 D3 D4 */	addi r3, r3, lbl_8056D3D4@l
-/* 80402E58 003CC418  3C A0 80 12 */	lis r5, func_801252D0@ha
+/* 80402E58 003CC418  3C A0 80 12 */	lis r5, __dt__Q34nw4r2ut5ColorFv@ha
 /* 80402E5C 003CC41C  3B 99 00 E8 */	addi r28, r25, 0xe8
 /* 80402E60 003CC420  90 79 00 00 */	stw r3, 0(r25)
 /* 80402E64 003CC424  7F 83 E3 78 */	mr r3, r28
-/* 80402E68 003CC428  38 84 0C 60 */	addi r4, r4, func_80400C60@l
-/* 80402E6C 003CC42C  38 A5 52 D0 */	addi r5, r5, func_801252D0@l
+/* 80402E68 003CC428  38 84 0C 60 */	addi r4, r4, __ct__Q34nw4r2ut5ColorFv@l
+/* 80402E6C 003CC42C  38 A5 52 D0 */	addi r5, r5, __dt__Q34nw4r2ut5ColorFv@l
 /* 80402E70 003CC430  38 C0 00 04 */	li r6, 4
 /* 80402E74 003CC434  38 E0 00 04 */	li r7, 4
 /* 80402E78 003CC438  4B EB 6C 89 */	bl __construct_array
@@ -252,9 +252,9 @@ lbl_80403194:
 /* 80403198 003CC758  48 00 6F 25 */	bl Free__Q44nw4r3lyt6detail11TexCoordAryFv
 /* 8040319C 003CC75C  34 79 00 E8 */	addic. r3, r25, 0xe8
 /* 804031A0 003CC760  41 82 00 18 */	beq lbl_804031B8
-/* 804031A4 003CC764  3C 80 80 12 */	lis r4, func_801252D0@ha
+/* 804031A4 003CC764  3C 80 80 12 */	lis r4, __dt__Q34nw4r2ut5ColorFv@ha
 /* 804031A8 003CC768  38 A0 00 04 */	li r5, 4
-/* 804031AC 003CC76C  38 84 52 D0 */	addi r4, r4, func_801252D0@l
+/* 804031AC 003CC76C  38 84 52 D0 */	addi r4, r4, __dt__Q34nw4r2ut5ColorFv@l
 /* 804031B0 003CC770  38 C0 00 04 */	li r6, 4
 /* 804031B4 003CC774  4B EB 6A 45 */	bl __destroy_arr
 lbl_804031B8:

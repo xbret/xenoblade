@@ -6209,7 +6209,7 @@ lbl_80021020:
 	.4byte func_801250FC
 	.4byte 0x000001A4
 	.4byte lbl_8000BF28
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv
 	.4byte 0x00000040
 	.4byte lbl_8000BF30
 	.4byte func_80125310
@@ -19709,7 +19709,7 @@ lbl_80021020:
 	.4byte func_804441BC
 	.4byte 0x00000078
 	.4byte lbl_8001C810
-	.4byte func_80444234
+	.4byte ExitGame
 	.4byte 0x000000A4
 	.4byte lbl_8001C818
 	.4byte func_804442D8
