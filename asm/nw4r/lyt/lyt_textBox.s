@@ -71,11 +71,11 @@ __ct__Q34nw4r3lyt7TextBoxFUs:
 /* 80401390 003CA950  3C 60 80 57 */	lis r3, lbl_8056D310@ha
 /* 80401394 003CA954  3C 80 80 40 */	lis r4, __ct__Q34nw4r2ut5ColorFv@ha
 /* 80401398 003CA958  38 63 D3 10 */	addi r3, r3, lbl_8056D310@l
-/* 8040139C 003CA95C  3C A0 80 12 */	lis r5, __dt__Q34nw4r2ut5ColorFv@ha
+/* 8040139C 003CA95C  3C A0 80 12 */	lis r5, func_801252D0@ha
 /* 804013A0 003CA960  90 7E 00 00 */	stw r3, 0(r30)
 /* 804013A4 003CA964  38 7E 00 DC */	addi r3, r30, 0xdc
 /* 804013A8 003CA968  38 84 0C 60 */	addi r4, r4, __ct__Q34nw4r2ut5ColorFv@l
-/* 804013AC 003CA96C  38 A5 52 D0 */	addi r5, r5, __dt__Q34nw4r2ut5ColorFv@l
+/* 804013AC 003CA96C  38 A5 52 D0 */	addi r5, r5, func_801252D0@l
 /* 804013B0 003CA970  38 C0 00 04 */	li r6, 4
 /* 804013B4 003CA974  38 E0 00 02 */	li r7, 2
 /* 804013B8 003CA978  4B EB 87 49 */	bl __construct_array
@@ -176,11 +176,11 @@ __ct__Q34nw4r3lyt7TextBoxFPCQ44nw4r3lyt3res7TextBoxRCQ34nw4r3lyt11ResBlockSet:
 /* 80401518 003CAAD8  3C 60 80 57 */	lis r3, lbl_8056D310@ha
 /* 8040151C 003CAADC  3C 80 80 40 */	lis r4, __ct__Q34nw4r2ut5ColorFv@ha
 /* 80401520 003CAAE0  38 63 D3 10 */	addi r3, r3, lbl_8056D310@l
-/* 80401524 003CAAE4  3C A0 80 12 */	lis r5, __dt__Q34nw4r2ut5ColorFv@ha
+/* 80401524 003CAAE4  3C A0 80 12 */	lis r5, func_801252D0@ha
 /* 80401528 003CAAE8  90 7C 00 00 */	stw r3, 0(r28)
 /* 8040152C 003CAAEC  38 7C 00 DC */	addi r3, r28, 0xdc
 /* 80401530 003CAAF0  38 84 0C 60 */	addi r4, r4, __ct__Q34nw4r2ut5ColorFv@l
-/* 80401534 003CAAF4  38 A5 52 D0 */	addi r5, r5, __dt__Q34nw4r2ut5ColorFv@l
+/* 80401534 003CAAF4  38 A5 52 D0 */	addi r5, r5, func_801252D0@l
 /* 80401538 003CAAF8  38 C0 00 04 */	li r6, 4
 /* 8040153C 003CAAFC  38 E0 00 02 */	li r7, 2
 /* 80401540 003CAB00  4B EB 85 C1 */	bl __construct_array
@@ -452,9 +452,9 @@ lbl_80401918:
 /* 80401920 003CAEE0  81 8C 00 78 */	lwz r12, 0x78(r12)
 /* 80401924 003CAEE4  7D 89 03 A6 */	mtctr r12
 /* 80401928 003CAEE8  4E 80 04 21 */	bctrl 
-/* 8040192C 003CAEEC  3C 80 80 12 */	lis r4, __dt__Q34nw4r2ut5ColorFv@ha
+/* 8040192C 003CAEEC  3C 80 80 12 */	lis r4, func_801252D0@ha
 /* 80401930 003CAEF0  38 7D 00 DC */	addi r3, r29, 0xdc
-/* 80401934 003CAEF4  38 84 52 D0 */	addi r4, r4, __dt__Q34nw4r2ut5ColorFv@l
+/* 80401934 003CAEF4  38 84 52 D0 */	addi r4, r4, func_801252D0@l
 /* 80401938 003CAEF8  38 A0 00 04 */	li r5, 4
 /* 8040193C 003CAEFC  38 C0 00 02 */	li r6, 2
 /* 80401940 003CAF00  4B EB 82 B9 */	bl __destroy_arr

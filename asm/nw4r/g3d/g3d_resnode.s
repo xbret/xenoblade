@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803DD784
-func_803DD784:
+.global PatchChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult
+PatchChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult:
 /* 803DD784 003A6D44  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803DD788 003A6D48  7C 08 02 A6 */	mflr r0
 /* 803DD78C 003A6D4C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -118,8 +118,8 @@ lbl_803DD904:
 /* 803DD918 003A6ED8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803DD91C 003A6EDC  4E 80 00 20 */	blr 
 
-.global func_803DD920
-func_803DD920:
+.global CalcChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult
+CalcChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult:
 /* 803DD920 003A6EE0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803DD924 003A6EE4  7C 08 02 A6 */	mflr r0
 /* 803DD928 003A6EE8  90 01 00 34 */	stw r0, 0x34(r1)

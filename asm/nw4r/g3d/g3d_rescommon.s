@@ -2,26 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803D77CC
-func_803D77CC:
-/* 803D77CC 003A0D8C  89 64 00 00 */	lbz r11, 0(r4)
-/* 803D77D0 003A0D90  89 44 00 01 */	lbz r10, 1(r4)
-/* 803D77D4 003A0D94  89 24 00 02 */	lbz r9, 2(r4)
-/* 803D77D8 003A0D98  89 04 00 03 */	lbz r8, 3(r4)
-/* 803D77DC 003A0D9C  88 E5 00 00 */	lbz r7, 0(r5)
-/* 803D77E0 003A0DA0  88 C5 00 01 */	lbz r6, 1(r5)
-/* 803D77E4 003A0DA4  88 85 00 02 */	lbz r4, 2(r5)
-/* 803D77E8 003A0DA8  88 05 00 03 */	lbz r0, 3(r5)
-/* 803D77EC 003A0DAC  99 63 00 18 */	stb r11, 0x18(r3)
-/* 803D77F0 003A0DB0  99 43 00 19 */	stb r10, 0x19(r3)
-/* 803D77F4 003A0DB4  99 23 00 1A */	stb r9, 0x1a(r3)
-/* 803D77F8 003A0DB8  99 03 00 1B */	stb r8, 0x1b(r3)
-/* 803D77FC 003A0DBC  98 E3 00 1C */	stb r7, 0x1c(r3)
-/* 803D7800 003A0DC0  98 C3 00 1D */	stb r6, 0x1d(r3)
-/* 803D7804 003A0DC4  98 83 00 1E */	stb r4, 0x1e(r3)
-/* 803D7808 003A0DC8  98 03 00 1F */	stb r0, 0x1f(r3)
-/* 803D780C 003A0DCC  48 05 89 7C */	b UpdateVertexColor__Q34nw4r2ut10CharWriterFv
-
 .global __eq__Q34nw4r3g3d7ResNameCFQ34nw4r3g3d7ResName
 __eq__Q34nw4r3g3d7ResNameCFQ34nw4r3g3d7ResName:
 /* 803D7810 003A0DD0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -47,8 +27,8 @@ lbl_803D7850:
 /* 803D7858 003A0E18  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D785C 003A0E1C  4E 80 00 20 */	blr 
 
-.global nw4r3g3d6detailFPUcUl$7ResWriteBPCmd
-nw4r3g3d6detailFPUcUl$7ResWriteBPCmd:
+.global ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUl
+ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUl:
 /* 803D7860 003A0E20  54 86 46 3E */	srwi r6, r4, 0x18
 /* 803D7864 003A0E24  54 85 86 3E */	rlwinm r5, r4, 0x10, 0x18, 0x1f
 /* 803D7868 003A0E28  54 80 C6 3E */	rlwinm r0, r4, 0x18, 0x18, 0x1f
@@ -60,8 +40,8 @@ nw4r3g3d6detailFPUcUl$7ResWriteBPCmd:
 /* 803D7880 003A0E40  98 83 00 04 */	stb r4, 4(r3)
 /* 803D7884 003A0E44  4E 80 00 20 */	blr 
 
-.global nw4r3g3d6detailFPUcUlUl$7ResWriteBPCmd
-nw4r3g3d6detailFPUcUlUl$7ResWriteBPCmd:
+.global ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUlUl
+ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUlUl:
 /* 803D7888 003A0E48  88 C3 00 02 */	lbz r6, 2(r3)
 /* 803D788C 003A0E4C  39 00 00 61 */	li r8, 0x61
 /* 803D7890 003A0E50  88 03 00 03 */	lbz r0, 3(r3)
@@ -85,8 +65,8 @@ nw4r3g3d6detailFPUcUlUl$7ResWriteBPCmd:
 /* 803D78D8 003A0E98  98 03 00 03 */	stb r0, 3(r3)
 /* 803D78DC 003A0E9C  4E 80 00 20 */	blr 
 
-.global nw4r3g3d6detailFPUcUcUl$7ResWriteCPCmd
-nw4r3g3d6detailFPUcUcUl$7ResWriteCPCmd:
+.global ResWriteCPCmd__Q34nw4r3g3d6detailFPUcUcUl
+ResWriteCPCmd__Q34nw4r3g3d6detailFPUcUcUl:
 /* 803D78E0 003A0EA0  54 A7 46 3E */	srwi r7, r5, 0x18
 /* 803D78E4 003A0EA4  54 A6 86 3E */	rlwinm r6, r5, 0x10, 0x18, 0x1f
 /* 803D78E8 003A0EA8  54 A0 C6 3E */	rlwinm r0, r5, 0x18, 0x18, 0x1f
@@ -99,8 +79,8 @@ nw4r3g3d6detailFPUcUcUl$7ResWriteCPCmd:
 /* 803D7904 003A0EC4  98 A3 00 05 */	stb r5, 5(r3)
 /* 803D7908 003A0EC8  4E 80 00 20 */	blr 
 
-.global nw4r3g3d6detailFPUcUl$7ResWriteSSMask
-nw4r3g3d6detailFPUcUl$7ResWriteSSMask:
+.global ResWriteSSMask__Q34nw4r3g3d6detailFPUcUl
+ResWriteSSMask__Q34nw4r3g3d6detailFPUcUl:
 /* 803D790C 003A0ECC  88 C3 00 02 */	lbz r6, 2(r3)
 /* 803D7910 003A0ED0  38 00 00 61 */	li r0, 0x61
 /* 803D7914 003A0ED4  88 A3 00 03 */	lbz r5, 3(r3)

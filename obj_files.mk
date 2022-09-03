@@ -107,9 +107,10 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/string.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/strtold.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/strtoul.o \
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/code_802C47D4.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wcstoul.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wmem.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wprintf.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wscanf.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wstring.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wchar_io.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/PPC_EABI/uart_console_io_gcn.o \
@@ -460,14 +461,19 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmtexpat.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmtexsrt.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmchr.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_reslightset.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmamblight.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmlight.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmfog.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmcamera.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmscn.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmshp.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_transform.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmvis.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmclr.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmtexpat.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmtexsrt.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmchr.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmshp.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmscn.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_obj.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmobj.o \
@@ -482,7 +488,6 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_draw.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_camera.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_basic.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/code_803F20DC.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_maya.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_xsi.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_3dsmax.o \

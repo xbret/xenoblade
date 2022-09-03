@@ -1918,8 +1918,8 @@ lbl_803F9044:
 /* 803F9058 003C2618  4E 80 00 20 */	blr 
 
 #GetViewPosMtxArray__Q34nw4r3g3d12ScnMdlSimpleFv or GetViewPosMtxArray__Q34nw4r3g3d12ScnMdlSimpleCFv
-.global func_803F905C
-func_803F905C:
+.global GetViewPosMtxArray__Q34nw4r3g3d12ScnMdlSimpleFv
+GetViewPosMtxArray__Q34nw4r3g3d12ScnMdlSimpleFv:
 /* 803F905C 003C261C  A0 03 01 02 */	lhz r0, 0x102(r3)
 /* 803F9060 003C2620  88 A3 01 01 */	lbz r5, 0x101(r3)
 /* 803F9064 003C2624  1C 80 00 30 */	mulli r4, r0, 0x30
@@ -1931,8 +1931,8 @@ func_803F905C:
 /* 803F907C 003C263C  4E 80 00 20 */	blr 
 
 #GetViewNrmMtxArray__Q34nw4r3g3d12ScnMdlSimpleFv or GetViewNrmMtxArray__Q34nw4r3g3d12ScnMdlSimpleCFv
-.global func_803F9080
-func_803F9080:
+.global GetViewNrmMtxArray__Q34nw4r3g3d12ScnMdlSimpleFv
+GetViewNrmMtxArray__Q34nw4r3g3d12ScnMdlSimpleFv:
 /* 803F9080 003C2640  80 A3 00 F8 */	lwz r5, 0xf8(r3)
 /* 803F9084 003C2644  2C 05 00 00 */	cmpwi r5, 0
 /* 803F9088 003C2648  41 82 00 24 */	beq lbl_803F90AC
@@ -1949,8 +1949,8 @@ lbl_803F90AC:
 /* 803F90B0 003C2670  4E 80 00 20 */	blr 
 
 #GetViewTexMtxArray__Q34nw4r3g3d12ScnMdlSimpleFv or GetViewTexMtxArray__Q34nw4r3g3d12ScnMdlSimpleCFv
-.global func_803F90B4
-func_803F90B4:
+.global GetViewTexMtxArray__Q34nw4r3g3d12ScnMdlSimpleFv
+GetViewTexMtxArray__Q34nw4r3g3d12ScnMdlSimpleFv:
 /* 803F90B4 003C2674  80 A3 00 FC */	lwz r5, 0xfc(r3)
 /* 803F90B8 003C2678  2C 05 00 00 */	cmpwi r5, 0
 /* 803F90BC 003C267C  41 82 00 24 */	beq lbl_803F90E0

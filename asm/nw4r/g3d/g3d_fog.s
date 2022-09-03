@@ -7,8 +7,8 @@ __ct__Q34nw4r3g3d3FogFPQ34nw4r3g3d7FogData:
 /* 803FD128 003C66E8  90 83 00 00 */	stw r4, 0(r3)
 /* 803FD12C 003C66EC  4E 80 00 20 */	blr 
 
-.global func_803FD130
-func_803FD130:
+.global Init__Q34nw4r3g3d3FogFv
+Init__Q34nw4r3g3d3FogFv:
 /* 803FD130 003C66F0  80 63 00 00 */	lwz r3, 0(r3)
 /* 803FD134 003C66F4  2C 03 00 00 */	cmpwi r3, 0
 /* 803FD138 003C66F8  4D 82 00 20 */	beqlr 
@@ -38,8 +38,8 @@ func_803FD130:
 /* 803FD198 003C6758  B0 03 00 2E */	sth r0, 0x2e(r3)
 /* 803FD19C 003C675C  4E 80 00 20 */	blr 
 
-.global func_803FD1A0
-func_803FD1A0:
+.global CopyTo__Q34nw4r3g3d3FogCFPv
+CopyTo__Q34nw4r3g3d3FogCFPv:
 /* 803FD1A0 003C6760  2C 04 00 00 */	cmpwi r4, 0
 /* 803FD1A4 003C6764  41 82 00 48 */	beq lbl_803FD1EC
 /* 803FD1A8 003C6768  80 A3 00 00 */	lwz r5, 0(r3)
@@ -63,8 +63,8 @@ lbl_803FD1EC:
 /* 803FD1EC 003C67AC  38 60 00 00 */	li r3, 0
 /* 803FD1F0 003C67B0  4E 80 00 20 */	blr 
 
-.global func_803FD1F4
-func_803FD1F4:
+.global GetFog__Q34nw4r3g3d3FogFP10_GXFogTypePfPfPfPfP8_GXColor
+GetFog__Q34nw4r3g3d3FogFP10_GXFogTypePfPfPfPfP8_GXColor:
 /* 803FD1F4 003C67B4  80 63 00 00 */	lwz r3, 0(r3)
 /* 803FD1F8 003C67B8  2C 03 00 00 */	cmpwi r3, 0
 /* 803FD1FC 003C67BC  4D 82 00 20 */	beqlr 
@@ -116,8 +116,8 @@ SetFogRangeAdjParam__Q34nw4r3g3d3FogFUsUsRCQ34nw4r4math5MTX44:
 /* 803FD294 003C6854  4B F2 0C 8C */	b GXInitFogAdjTable
 /* 803FD298 003C6858  4E 80 00 20 */	blr 
 
-.global func_803FD29C
-func_803FD29C:
+.global SetGP__Q34nw4r3g3d3FogCFv
+SetGP__Q34nw4r3g3d3FogCFv:
 /* 803FD29C 003C685C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803FD2A0 003C6860  7C 08 02 A6 */	mflr r0
 /* 803FD2A4 003C6864  90 01 00 24 */	stw r0, 0x24(r1)

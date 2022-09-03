@@ -40427,6 +40427,8 @@ lbl_8056C8A0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
+#unused
 	.4byte 0x0000000C
 	.asciz "AnmVis(NW4R)"
 	.balign 4
@@ -40568,57 +40570,11 @@ lbl_8056CA60:
 	# ROM: 0x568B60
 	.4byte 0
 	.4byte 0
-	.4byte func_803E27F8
-	.4byte func_803E2254
-	.4byte func_803E28EC
-	.4byte func_803E28E0
-	.4byte func_803E28B0
-	.4byte func_803E1E84
-	.4byte func_803E1F44
-	.4byte func_803E2008
-	.4byte func_803E1F4C
-	.4byte func_803E2000
-	.4byte func_803E20E8
-	.4byte func_803E1C04
-	.4byte func_803E21E0
-	.4byte lbl_803E1C40
-	.4byte func_803E1C48
-	.4byte func_803E1C50
-
-
-.global lbl_8056CAA8
-lbl_8056CAA8:
-	# ROM: 0x568BA8
-	.4byte 0
-	.4byte 0
-	.4byte func_803E2860
-	.4byte 0
-	.4byte func_803E1C54
-	.4byte func_803E2960
-	.4byte func_803E2930
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte func_803E1C04
-	.4byte 0
-	.4byte lbl_803E1C40
-	.4byte func_803E1C48
-	.4byte func_803E1C50
-
-
-.global lbl_8056CAF0
-lbl_8056CAF0:
-	# ROM: 0x568BF0
-	.4byte 0
-	.4byte 0
-	.4byte func_803E3224
+	.4byte IsDerivedFrom__Q34nw4r3g3d15AnmObjMatClrResCFQ44nw4r3g3d6G3dObj7TypeObj
 	.4byte G3dProc__Q34nw4r3g3d15AnmObjMatClrResFUlUlPv
-	.4byte func_803E3318
-	.4byte func_803E330C
-	.4byte func_803E32DC
+	.4byte __dt__Q34nw4r3g3d15AnmObjMatClrResFv
+	.4byte GetTypeObj__Q34nw4r3g3d15AnmObjMatClrResCFv
+	.4byte GetTypeName__Q34nw4r3g3d15AnmObjMatClrResCFv
 	.4byte SetFrame__Q34nw4r3g3d15AnmObjMatClrResFf
 	.4byte GetFrame__Q34nw4r3g3d15AnmObjMatClrResCFv
 	.4byte UpdateFrame__Q34nw4r3g3d15AnmObjMatClrResFv
@@ -40632,16 +40588,16 @@ lbl_8056CAF0:
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjMatClrFv
 
 
-.global lbl_8056CB38
-lbl_8056CB38:
-	# ROM: 0x568C38
+.global lbl_8056CAA8
+lbl_8056CAA8:
+	# ROM: 0x568BA8
 	.4byte 0
 	.4byte 0
-	.4byte func_803E328C
+	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjMatClrCFQ44nw4r3g3d6G3dObj7TypeObj
 	.4byte 0
 	.4byte __dt__Q34nw4r3g3d12AnmObjMatClrFv
-	.4byte func_803E338C
-	.4byte func_803E335C
+	.4byte GetTypeObj__Q34nw4r3g3d12AnmObjMatClrCFv
+	.4byte GetTypeName__Q34nw4r3g3d12AnmObjMatClrCFv
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -40655,27 +40611,73 @@ lbl_8056CB38:
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjMatClrFv
 
 
+.global lbl_8056CAF0
+lbl_8056CAF0:
+	# ROM: 0x568BF0
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d15AnmObjTexPatResCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d15AnmObjTexPatResFUlUlPv
+	.4byte __dt__Q34nw4r3g3d15AnmObjTexPatResFv
+	.4byte GetTypeObj__Q34nw4r3g3d15AnmObjTexPatResCFv
+	.4byte GetTypeName__Q34nw4r3g3d15AnmObjTexPatResCFv
+	.4byte SetFrame__Q34nw4r3g3d15AnmObjTexPatResFf
+	.4byte GetFrame__Q34nw4r3g3d15AnmObjTexPatResCFv
+	.4byte UpdateFrame__Q34nw4r3g3d15AnmObjTexPatResFv
+	.4byte SetUpdateRate__Q34nw4r3g3d15AnmObjTexPatResFf
+	.4byte GetUpdateRate__Q34nw4r3g3d15AnmObjTexPatResCFv
+	.4byte Bind__Q34nw4r3g3d15AnmObjTexPatResFQ34nw4r3g3d6ResMdl
+	.4byte Release__Q34nw4r3g3d12AnmObjTexPatFv
+	.4byte GetResult__Q34nw4r3g3d15AnmObjTexPatResFPQ34nw4r3g3d15TexPatAnmResultUl
+	.4byte Attach__Q34nw4r3g3d12AnmObjTexPatFiPQ34nw4r3g3d15AnmObjTexPatRes
+	.4byte Detach__Q34nw4r3g3d12AnmObjTexPatFi
+	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexPatFv
+
+
+.global lbl_8056CB38
+lbl_8056CB38:
+	# ROM: 0x568C38
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjTexPatCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte 0
+	.4byte __dt__Q34nw4r3g3d12AnmObjTexPatFv
+	.4byte GetTypeObj__Q34nw4r3g3d12AnmObjTexPatCFv
+	.4byte GetTypeName__Q34nw4r3g3d12AnmObjTexPatCFv
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte Release__Q34nw4r3g3d12AnmObjTexPatFv
+	.4byte 0
+	.4byte Attach__Q34nw4r3g3d12AnmObjTexPatFiPQ34nw4r3g3d15AnmObjTexPatRes
+	.4byte Detach__Q34nw4r3g3d12AnmObjTexPatFi
+	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexPatFv
+
+
 .global lbl_8056CB80
 lbl_8056CB80:
 	# ROM: 0x568C80
 	.4byte 0
 	.4byte 0
-	.4byte func_803E3CA0
-	.4byte func_803E3A04
-	.4byte func_803E3D94
-	.4byte func_803E3D88
-	.4byte func_803E3D58
-	.4byte func_803E3634
-	.4byte func_803E36F4
-	.4byte func_803E37B8
-	.4byte func_803E36FC
-	.4byte func_803E37B0
-	.4byte func_803E3898
-	.4byte Release__Q34nw4r3g3d9AnmObjChrFv
-	.4byte func_803E3990
-	.4byte func_803E33F0
-	.4byte func_803E33F8
-	.4byte func_803E3400
+	.4byte IsDerivedFrom__Q34nw4r3g3d15AnmObjTexSrtResCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d15AnmObjTexSrtResFUlUlPv
+	.4byte __dt__Q34nw4r3g3d15AnmObjTexSrtResFv
+	.4byte GetTypeObj__Q34nw4r3g3d15AnmObjTexSrtResCFv
+	.4byte GetTypeName__Q34nw4r3g3d15AnmObjTexSrtResCFv
+	.4byte SetFrame__Q34nw4r3g3d15AnmObjTexSrtResFf
+	.4byte GetFrame__Q34nw4r3g3d15AnmObjTexSrtResCFv
+	.4byte UpdateFrame__Q34nw4r3g3d15AnmObjTexSrtResFv
+	.4byte SetUpdateRate__Q34nw4r3g3d15AnmObjTexSrtResFf
+	.4byte GetUpdateRate__Q34nw4r3g3d15AnmObjTexSrtResCFv
+	.4byte Bind__Q34nw4r3g3d15AnmObjTexSrtResFQ34nw4r3g3d6ResMdl
+	.4byte Release__Q34nw4r3g3d12AnmObjTexSrtFv
+	.4byte GetResult__Q34nw4r3g3d15AnmObjTexSrtResFPQ34nw4r3g3d15TexSrtAnmResultUl
+	.4byte Attach__Q34nw4r3g3d12AnmObjTexSrtFiPQ34nw4r3g3d15AnmObjTexSrtRes
+	.4byte Detach__Q34nw4r3g3d12AnmObjTexSrtFi
+	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexSrtFv
 
 
 .global lbl_8056CBC8
@@ -40683,11 +40685,115 @@ lbl_8056CBC8:
 	# ROM: 0x568CC8
 	.4byte 0
 	.4byte 0
-	.4byte func_803E3D08
+	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjTexSrtCFQ44nw4r3g3d6G3dObj7TypeObj
 	.4byte 0
-	.4byte func_803E3404
-	.4byte func_803E3E08
-	.4byte func_803E3DD8
+	.4byte __dt__Q34nw4r3g3d12AnmObjTexSrtFv
+	.4byte GetTypeObj__Q34nw4r3g3d20AnmObjTexSrtOverrideCFv
+	.4byte GetTypeName__Q34nw4r3g3d20AnmObjTexSrtOverrideCFv
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte Release__Q34nw4r3g3d12AnmObjTexSrtFv
+	.4byte 0
+	.4byte Attach__Q34nw4r3g3d12AnmObjTexSrtFiPQ34nw4r3g3d15AnmObjTexSrtRes
+	.4byte Detach__Q34nw4r3g3d12AnmObjTexSrtFi
+	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexSrtFv
+
+
+.global lbl_8056CC10
+lbl_8056CC10:
+	# ROM: 0x568D10
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjChrResCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d12AnmObjChrResFUlUlPv
+	.4byte __dt__Q34nw4r3g3d12AnmObjChrResFv
+	.4byte GetTypeObj__Q34nw4r3g3d12AnmObjChrResCFv
+	.4byte GetTypeName__Q34nw4r3g3d12AnmObjChrResCFv
+	.4byte SetFrame__Q34nw4r3g3d12AnmObjChrResFf
+	.4byte GetFrame__Q34nw4r3g3d12AnmObjChrResCFv
+	.4byte UpdateFrame__Q34nw4r3g3d12AnmObjChrResFv
+	.4byte SetUpdateRate__Q34nw4r3g3d12AnmObjChrResFf
+	.4byte GetUpdateRate__Q34nw4r3g3d12AnmObjChrResCFv
+	.4byte Bind__Q34nw4r3g3d12AnmObjChrResFQ34nw4r3g3d6ResMdl
+	.4byte Release__Q34nw4r3g3d9AnmObjChrFv
+	.4byte GetResult__Q34nw4r3g3d12AnmObjChrResFPQ34nw4r3g3d12ChrAnmResultUl
+	.4byte Attach__Q34nw4r3g3d9AnmObjChrFiPQ34nw4r3g3d12AnmObjChrRes
+	.4byte Detach__Q34nw4r3g3d9AnmObjChrFi
+	.4byte DetachAll__Q34nw4r3g3d9AnmObjChrFv
+	.4byte SetWeight__Q34nw4r3g3d9AnmObjChrFif
+	.4byte GetWeight__Q34nw4r3g3d9AnmObjChrCFi
+	.4byte Bind__Q34nw4r3g3d15AnmObjTexSrtResFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+	.4byte Release__Q34nw4r3g3d12AnmObjChrResFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+
+
+.global lbl_8056CC68
+lbl_8056CC68:
+	# ROM: 0x568D68
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d14AnmObjChrBlendCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d13AnmObjChrNodeFUlUlPv
+	.4byte __dt__Q34nw4r3g3d14AnmObjChrBlendFv
+	.4byte GetTypeObj__Q34nw4r3g3d14AnmObjChrBlendCFv
+	.4byte GetTypeName__Q34nw4r3g3d14AnmObjChrBlendCFv
+	.4byte SetFrame__Q34nw4r3g3d13AnmObjChrNodeFf
+	.4byte GetFrame__Q34nw4r3g3d13AnmObjChrNodeCFv
+	.4byte UpdateFrame__Q34nw4r3g3d13AnmObjChrNodeFv
+	.4byte SetUpdateRate__Q34nw4r3g3d13AnmObjChrNodeFf
+	.4byte GetUpdateRate__Q34nw4r3g3d13AnmObjChrNodeCFv
+	.4byte Bind__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdl
+	.4byte Release__Q34nw4r3g3d13AnmObjChrNodeFv
+	.4byte GetResult__Q34nw4r3g3d14AnmObjChrBlendFPQ34nw4r3g3d12ChrAnmResultUl
+	.4byte Attach__Q34nw4r3g3d13AnmObjChrNodeFiPQ34nw4r3g3d12AnmObjChrRes
+	.4byte Detach__Q34nw4r3g3d13AnmObjChrNodeFi
+	.4byte DetachAll__Q34nw4r3g3d13AnmObjChrNodeFv
+	.4byte SetWeight__Q34nw4r3g3d14AnmObjChrBlendFif
+	.4byte GetWeight__Q34nw4r3g3d14AnmObjChrBlendCFi
+	.4byte Bind__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+	.4byte Release__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+
+
+.global lbl_8056CCC0
+lbl_8056CCC0:
+	# ROM: 0x568DC0
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d13AnmObjChrNodeCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d13AnmObjChrNodeFUlUlPv
+	.4byte __dt__Q34nw4r3g3d13AnmObjChrNodeFv
+	.4byte GetTypeObj__Q34nw4r3g3d13AnmObjChrNodeCFv
+	.4byte GetTypeName__Q34nw4r3g3d13AnmObjChrNodeCFv
+	.4byte SetFrame__Q34nw4r3g3d13AnmObjChrNodeFf
+	.4byte GetFrame__Q34nw4r3g3d13AnmObjChrNodeCFv
+	.4byte UpdateFrame__Q34nw4r3g3d13AnmObjChrNodeFv
+	.4byte SetUpdateRate__Q34nw4r3g3d13AnmObjChrNodeFf
+	.4byte GetUpdateRate__Q34nw4r3g3d13AnmObjChrNodeCFv
+	.4byte Bind__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdl
+	.4byte Release__Q34nw4r3g3d13AnmObjChrNodeFv
+	.4byte 0
+	.4byte Attach__Q34nw4r3g3d13AnmObjChrNodeFiPQ34nw4r3g3d12AnmObjChrRes
+	.4byte Detach__Q34nw4r3g3d13AnmObjChrNodeFi
+	.4byte DetachAll__Q34nw4r3g3d13AnmObjChrNodeFv
+	.4byte SetWeight__Q34nw4r3g3d9AnmObjChrFif
+	.4byte GetWeight__Q34nw4r3g3d9AnmObjChrCFi
+	.4byte Bind__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+	.4byte Release__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+
+
+.global lbl_8056CD18
+lbl_8056CD18:
+	# ROM: 0x568E18
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d9AnmObjChrCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte 0
+	.4byte __dt__Q34nw4r3g3d9AnmObjChrFv
+	.4byte GetTypeObj__Q34nw4r3g3d9AnmObjChrCFv
+	.4byte GetTypeName__Q34nw4r3g3d9AnmObjChrCFv
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -40696,115 +40802,11 @@ lbl_8056CBC8:
 	.4byte 0
 	.4byte Release__Q34nw4r3g3d9AnmObjChrFv
 	.4byte 0
-	.4byte func_803E33F0
-	.4byte func_803E33F8
-	.4byte func_803E3400
-
-
-.global lbl_8056CC10
-lbl_8056CC10:
-	# ROM: 0x568D10
-	.4byte 0
-	.4byte 0
-	.4byte func_803E59D4
-	.4byte func_803E5980
-	.4byte func_803E5AC8
-	.4byte func_803E5ABC
-	.4byte func_803E5A8C
-	.4byte func_803E51E0
-	.4byte func_803E52A0
-	.4byte func_803E5364
-	.4byte func_803E52A8
-	.4byte func_803E535C
-	.4byte func_803E5444
-	.4byte func_803E3E14
-	.4byte func_803E590C
-	.4byte lbl_803E3E50
-	.4byte func_803E3E58
-	.4byte func_803E3E6C
-	.4byte func_803E3E60
-	.4byte func_803E3E64
-	.4byte func_803E5548
-	.4byte func_803E5740
-
-
-.global lbl_8056CC68
-lbl_8056CC68:
-	# ROM: 0x568D68
-	.4byte 0
-	.4byte 0
-	.4byte func_803E5B0C
-	.4byte func_803E478C
-	.4byte func_803E5C2C
-	.4byte func_803E5C20
-	.4byte func_803E5BF0
-	.4byte func_803E41F0
-	.4byte func_803E4278
-	.4byte func_803E4178
-	.4byte func_803E42CC
-	.4byte func_803E4354
-	.4byte func_803E43A8
-	.4byte func_803E4598
-	.4byte func_803E4990
-	.4byte func_803E3F14
-	.4byte func_803E4000
-	.4byte func_803E4118
-	.4byte func_803E4FD0
-	.4byte func_803E4FE0
-	.4byte func_803E4498
-	.4byte func_803E4650
-
-
-.global lbl_8056CCC0
-lbl_8056CCC0:
-	# ROM: 0x568DC0
-	.4byte 0
-	.4byte 0
-	.4byte func_803E5B88
-	.4byte func_803E478C
-	.4byte func_803E3EB0
-	.4byte func_803E5CC4
-	.4byte func_803E5C94
-	.4byte func_803E41F0
-	.4byte func_803E4278
-	.4byte func_803E4178
-	.4byte func_803E42CC
-	.4byte func_803E4354
-	.4byte func_803E43A8
-	.4byte func_803E4598
-	.4byte 0
-	.4byte func_803E3F14
-	.4byte func_803E4000
-	.4byte func_803E4118
-	.4byte func_803E3E60
-	.4byte func_803E3E64
-	.4byte func_803E4498
-	.4byte func_803E4650
-
-
-.global lbl_8056CD18
-lbl_8056CD18:
-	# ROM: 0x568E18
-	.4byte 0
-	.4byte 0
-	.4byte func_803E5A3C
-	.4byte 0
-	.4byte func_803E3E70
-	.4byte func_803E5D00
-	.4byte func_803E5CD0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte func_803E3E14
-	.4byte 0
-	.4byte lbl_803E3E50
-	.4byte func_803E3E58
-	.4byte func_803E3E6C
-	.4byte func_803E3E60
-	.4byte func_803E3E64
+	.4byte Attach__Q34nw4r3g3d9AnmObjChrFiPQ34nw4r3g3d12AnmObjChrRes
+	.4byte Detach__Q34nw4r3g3d9AnmObjChrFi
+	.4byte DetachAll__Q34nw4r3g3d9AnmObjChrFv
+	.4byte SetWeight__Q34nw4r3g3d9AnmObjChrFif
+	.4byte GetWeight__Q34nw4r3g3d9AnmObjChrCFi
 	.4byte 0
 	.4byte 0
 
@@ -40814,40 +40816,40 @@ lbl_8056CD70:
 	# ROM: 0x568E70
 	.4byte 0
 	.4byte 0
-	.4byte func_803E7194
-	.4byte func_803E67D8
-	.4byte func_803E6694
-	.4byte func_803E724C
-	.4byte func_803E721C
-	.4byte func_803E66D4
-	.4byte func_803E672C
-	.4byte func_803E6734
-	.4byte func_803E6758
-	.4byte func_803E6760
-	.4byte func_803E6338
-	.4byte func_803E6340
-	.4byte func_803E6384
-	.4byte lbl_803E638C
-	.4byte lbl_803E6394
-	.4byte lbl_803E639C
-	.4byte func_803E63A8
-	.4byte lbl_803E63B0
-	.4byte lbl_803E63B8
-	.4byte func_803E63C4
-	.4byte func_803E63D0
-	.4byte func_803E63DC
-	.4byte func_803E63E8
-	.4byte func_803E682C
-	.4byte func_803E6964
-	.4byte func_803E69CC
-	.4byte func_803E6B5C
-	.4byte func_803E6C0C
-	.4byte func_803E6FA4
-	.4byte func_803E6FDC
-	.4byte func_803E6D6C
-	.4byte func_803E6E00
-	.4byte func_803E6E8C
-	.4byte func_803E6F18
+	.4byte IsDerivedFrom__Q34nw4r3g3d9AnmScnResCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d9AnmScnResFUlUlPv
+	.4byte __dt__Q34nw4r3g3d9AnmScnResFv
+	.4byte GetTypeObj__Q34nw4r3g3d9AnmScnResCFv
+	.4byte GetTypeName__Q34nw4r3g3d9AnmScnResCFv
+	.4byte SetFrame__Q34nw4r3g3d9AnmScnResFf
+	.4byte GetFrame__Q34nw4r3g3d9AnmScnResCFv
+	.4byte SetUpdateRate__Q34nw4r3g3d9AnmScnResFf
+	.4byte GetUpdateRate__Q34nw4r3g3d9AnmScnResCFv
+	.4byte UpdateFrame__Q34nw4r3g3d9AnmScnResFv
+	.4byte Attach__Q34nw4r3g3d6AnmScnFiPQ34nw4r3g3d9AnmScnRes
+	.4byte Detach__Q34nw4r3g3d6AnmScnFi
+	.4byte GetNumLightSet__Q34nw4r3g3d9AnmScnResCFv
+	.4byte GetNumAmbLight__Q34nw4r3g3d9AnmScnResCFv
+	.4byte GetNumDiffuseLight__Q34nw4r3g3d9AnmScnResCFv
+	.4byte GetNumSpecularLight__Q34nw4r3g3d9AnmScnResCFv
+	.4byte GetNumFog__Q34nw4r3g3d9AnmScnResCFv
+	.4byte GetNumCamera__Q34nw4r3g3d9AnmScnResCFv
+	.4byte GetLightSetMaxRefNumber__Q34nw4r3g3d9AnmScnResCFv
+	.4byte GetAmbLightMaxRefNumber__Q34nw4r3g3d9AnmScnResCFv
+	.4byte GetDiffuseLightMaxRefNumber__Q34nw4r3g3d9AnmScnResCFv
+	.4byte GetFogMaxRefNumber__Q34nw4r3g3d9AnmScnResCFv
+	.4byte GetCameraMaxRefNumber__Q34nw4r3g3d9AnmScnResCFv
+	.4byte GetLightSet__Q34nw4r3g3d9AnmScnResFQ34nw4r3g3d8LightSetUl
+	.4byte GetAmbLightColor__Q34nw4r3g3d9AnmScnResFUl
+	.4byte GetLight__Q34nw4r3g3d9AnmScnResFPQ34nw4r3g3d8LightObjPQ34nw4r3g3d8LightObjUl
+	.4byte GetFog__Q34nw4r3g3d9AnmScnResFQ34nw4r3g3d3FogUl
+	.4byte GetCamera__Q34nw4r3g3d9AnmScnResFQ34nw4r3g3d6CameraUl
+	.4byte GetSpecularLightID__Q34nw4r3g3d9AnmScnResCFUl
+	.4byte HasSpecularLight__Q34nw4r3g3d9AnmScnResCFUl
+	.4byte GetAmbLightResult__Q34nw4r3g3d9AnmScnResFPQ34nw4r3g3d17AmbLightAnmResultUl
+	.4byte GetLightResult__Q34nw4r3g3d9AnmScnResFPQ34nw4r3g3d14LightAnmResultUl
+	.4byte GetFogResult__Q34nw4r3g3d9AnmScnResFPQ34nw4r3g3d12FogAnmResultUl
+	.4byte GetCameraResult__Q34nw4r3g3d9AnmScnResFPQ34nw4r3g3d15CameraAnmResultUl
 
 
 .global lbl_8056CE00
@@ -40855,18 +40857,18 @@ lbl_8056CE00:
 	# ROM: 0x568F00
 	.4byte 0
 	.4byte 0
-	.4byte func_803E71E4
+	.4byte IsDerivedFrom__Q34nw4r3g3d6AnmScnCFQ44nw4r3g3d6G3dObj7TypeObj
 	.4byte 0
-	.4byte func_803E6348
-	.4byte func_803E7288
-	.4byte func_803E7258
-	.4byte 0
-	.4byte 0
+	.4byte __dt__Q34nw4r3g3d6AnmScnFv
+	.4byte GetTypeObj__Q34nw4r3g3d6AnmScnCFv
+	.4byte GetTypeName__Q34nw4r3g3d6AnmScnCFv
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte func_803E6338
-	.4byte func_803E6340
+	.4byte 0
+	.4byte 0
+	.4byte Attach__Q34nw4r3g3d6AnmScnFiPQ34nw4r3g3d9AnmScnRes
+	.4byte Detach__Q34nw4r3g3d6AnmScnFi
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -40909,10 +40911,10 @@ lbl_8056CEB0:
 	# ROM: 0x568FB0
 	.4byte 0
 	.4byte 0
-	.4byte func_803EB208
+	.4byte __cl__Q44nw4r3g3d8G3DState11IndMtxOpStdFPQ44nw4r3g3d8G3DState13IndTexMtxInfo
 	.4byte func_803EB374
-	.4byte func_803EB1B8
-	.4byte func_803EB054
+	.4byte Reset__Q44nw4r3g3d8G3DState11IndMtxOpStdFv
+	.4byte SetNrmMapMtx__Q44nw4r3g3d8G3DState11IndMtxOpStdF14_GXIndTexMtxIDPCQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34Q44nw4r3g3d14ResMatMiscData14IndirectMethod
 
 
 .global lbl_8056CEC8
@@ -41076,22 +41078,22 @@ lbl_8056D080:
 	# ROM: 0x569180
 	.4byte 0
 	.4byte 0
-	.4byte func_803FBEC0
-	.4byte func_803FAE38
-	.4byte func_803FBE58
-	.4byte func_803FBF70
-	.4byte func_803FBF40
+	.4byte IsDerivedFrom__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d6ScnMdlFUlUlPv
+	.4byte __dt__Q34nw4r3g3d6ScnMdlFv
+	.4byte GetTypeObj__Q34nw4r3g3d6ScnMdlCFv
+	.4byte GetTypeName__Q34nw4r3g3d6ScnMdlCFv
 	.4byte func_803F4A88
-	.4byte func_803FB2EC
-	.4byte func_803FB334
+	.4byte SetScnObjOption__Q34nw4r3g3d6ScnMdlFUlUl
+	.4byte GetScnObjOption__Q34nw4r3g3d6ScnMdlCFUlPUl
 	.4byte func_803F493C
 	.4byte func_803F4948
 	.4byte func_803F4B54
-	.4byte func_803FBA7C
-	.4byte func_803FBBE0
-	.4byte func_803FBDD8
-	.4byte func_803FBE28
-	.4byte func_803FBE40
+	.4byte SetAnmObj__Q34nw4r3g3d6ScnMdlFPQ34nw4r3g3d6AnmObjQ44nw4r3g3d12ScnMdlSimple10AnmObjType
+	.4byte RemoveAnmObj__Q34nw4r3g3d6ScnMdlFPQ34nw4r3g3d6AnmObj
+	.4byte RemoveAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
+	.4byte GetAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
+	.4byte GetAnmObj__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 
 
 .global lbl_8056D0C8
@@ -46629,9 +46631,9 @@ lbl_805716C8:
 	.4byte lbl_80666200
 	.4byte 0
 	.4byte __dt__Q34nw4r3g3d18ICalcWorldCallbackFv
-	.4byte func_803EECA0
-	.4byte func_803EECA4
-	.4byte func_803EECA8
+	.4byte ExecCallbackA__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r3g3d12ChrAnmResultQ34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
+	.4byte ExecCallbackB__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r3g3d13WorldMtxManipQ34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
+	.4byte ExecCallbackC__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
 
 
 .global lbl_80571850

@@ -127,8 +127,8 @@ lbl_803D7AF8:
 /* 803D7B04 003A10C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D7B08 003A10C8  4E 80 00 20 */	blr 
 
-.global nw4r3g3d6ResDicCFPCc$7__vc
-nw4r3g3d6ResDicCFPCc$7__vc:
+.global __vc__Q34nw4r3g3d6ResDicCFPCc
+__vc__Q34nw4r3g3d6ResDicCFPCc:
 /* 803D7B0C 003A10CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D7B10 003A10D0  7C 08 02 A6 */	mflr r0
 /* 803D7B14 003A10D4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -163,8 +163,8 @@ lbl_803D7B70:
 /* 803D7B80 003A1140  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D7B84 003A1144  4E 80 00 20 */	blr 
 
-.global nw4r3g3d6ResDicCFQ34nw4r3g3d7ResNa$7__vc
-nw4r3g3d6ResDicCFQ34nw4r3g3d7ResNa$7__vc:
+.global __vc__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName
+__vc__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName:
 /* 803D7B88 003A1148  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D7B8C 003A114C  7C 08 02 A6 */	mflr r0
 /* 803D7B90 003A1150  90 01 00 24 */	stw r0, 0x24(r1)
@@ -232,8 +232,8 @@ lbl_803D7C5C:
 /* 803D7C6C 003A122C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D7C70 003A1230  4E 80 00 20 */	blr 
 
-.global nw4r3g3d6ResDicCFQ34nw4r3g3d7ResNa$7GetIndex
-nw4r3g3d6ResDicCFQ34nw4r3g3d7ResNa$7GetIndex:
+.global GetIndex__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName
+GetIndex__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName:
 /* 803D7C74 003A1234  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D7C78 003A1238  7C 08 02 A6 */	mflr r0
 /* 803D7C7C 003A123C  90 01 00 24 */	stw r0, 0x24(r1)

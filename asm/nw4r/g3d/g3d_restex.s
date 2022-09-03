@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803DD580
-func_803DD580:
+.global DCStore__Q34nw4r3g3d7ResPlttFb
+DCStore__Q34nw4r3g3d7ResPlttFb:
 /* 803DD580 003A6B40  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DD584 003A6B44  2C 04 00 00 */	cmpwi r4, 0
 /* 803DD588 003A6B48  80 83 00 04 */	lwz r4, 4(r3)
@@ -12,8 +12,8 @@ func_803DD580:
 lbl_803DD594:
 /* 803DD594 003A6B54  4B F7 6A AC */	b DCStoreRangeNoSync
 
-.global func_803DD598
-func_803DD598:
+.global CheckRevision__Q34nw4r3g3d7ResPlttCFv
+CheckRevision__Q34nw4r3g3d7ResPlttCFv:
 /* 803DD598 003A6B58  80 83 00 00 */	lwz r4, 0(r3)
 /* 803DD59C 003A6B5C  38 60 00 00 */	li r3, 0
 /* 803DD5A0 003A6B60  80 04 00 08 */	lwz r0, 8(r4)
@@ -37,8 +37,8 @@ lbl_803DD5D4:
 /* 803DD5D4 003A6B94  38 60 00 00 */	li r3, 0
 /* 803DD5D8 003A6B98  4E 80 00 20 */	blr 
 
-.global func_803DD5DC
-func_803DD5DC:
+.global GetTexObjParam__Q34nw4r3g3d6ResTexCFPPvPUsPUsP9_GXTexFmtPfPfPUc
+GetTexObjParam__Q34nw4r3g3d6ResTexCFPPvPUsPUsP9_GXTexFmtPfPfPUc:
 /* 803DD5DC 003A6B9C  81 63 00 00 */	lwz r11, 0(r3)
 /* 803DD5E0 003A6BA0  80 0B 00 18 */	lwz r0, 0x18(r11)
 /* 803DD5E4 003A6BA4  54 00 07 FF */	clrlwi. r0, r0, 0x1f
@@ -97,8 +97,8 @@ lbl_803DD690:
 /* 803DD690 003A6C50  38 60 00 01 */	li r3, 1
 /* 803DD694 003A6C54  4E 80 00 20 */	blr 
 
-.global func_803DD698
-func_803DD698:
+.global GetTexObjCIParam__Q34nw4r3g3d6ResTexCFPPvPUsPUsP11_GXCITexFmtPfPfPUc
+GetTexObjCIParam__Q34nw4r3g3d6ResTexCFPPvPUsPUsP11_GXCITexFmtPfPfPUc:
 /* 803DD698 003A6C58  81 63 00 00 */	lwz r11, 0(r3)
 /* 803DD69C 003A6C5C  80 0B 00 18 */	lwz r0, 0x18(r11)
 /* 803DD6A0 003A6C60  54 00 07 FF */	clrlwi. r0, r0, 0x1f
@@ -157,8 +157,8 @@ lbl_803DD74C:
 /* 803DD74C 003A6D0C  38 60 00 01 */	li r3, 1
 /* 803DD750 003A6D10  4E 80 00 20 */	blr 
 
-.global func_803DD754
-func_803DD754:
+.global CheckRevision__Q34nw4r3g3d6ResTexCFv
+CheckRevision__Q34nw4r3g3d6ResTexCFv:
 /* 803DD754 003A6D14  80 83 00 00 */	lwz r4, 0(r3)
 /* 803DD758 003A6D18  38 60 00 00 */	li r3, 0
 /* 803DD75C 003A6D1C  80 04 00 08 */	lwz r0, 8(r4)
@@ -170,8 +170,8 @@ lbl_803DD770:
 /* 803DD770 003A6D30  38 60 00 01 */	li r3, 1
 /* 803DD774 003A6D34  4E 80 00 20 */	blr 
 
-.global func_803DD778
-func_803DD778:
+.global Init__Q34nw4r3g3d6ResTexFv
+Init__Q34nw4r3g3d6ResTexFv:
 /* 803DD778 003A6D38  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DD77C 003A6D3C  80 83 00 04 */	lwz r4, 4(r3)
 /* 803DD780 003A6D40  4B F7 68 90 */	b DCFlushRangeNoSync

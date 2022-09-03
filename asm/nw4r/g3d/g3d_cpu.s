@@ -63,8 +63,8 @@ lbl_803E7A24:
 /* 803E7A4C 003B100C  42 00 FF D8 */	bdnz lbl_803E7A24
 /* 803E7A50 003B1010  4E 80 00 20 */	blr 
 
-.global func_803E7A54
-func_803E7A54:
+.global ZeroMemory32ByteBlocks__Q34nw4r3g3d6detailFPvUl
+ZeroMemory32ByteBlocks__Q34nw4r3g3d6detailFPvUl:
 /* 803E7A54 003B1014  54 84 D9 7F */	rlwinm. r4, r4, 0x1b, 5, 0x1f
 /* 803E7A58 003B1018  C0 02 C0 60 */	lfs f0, lbl_8066C3E0@sda21(r2)
 /* 803E7A5C 003B101C  4D 82 00 20 */	beqlr 
@@ -119,8 +119,8 @@ lbl_803E7B00:
 /* 803E7B14 003B10D4  42 00 FF EC */	bdnz lbl_803E7B00
 /* 803E7B18 003B10D8  4E 80 00 20 */	blr 
 
-.global func_803E7B1C
-func_803E7B1C:
+.global ZeroMemory16ByteBlocks__Q34nw4r3g3d6detailFPvUl
+ZeroMemory16ByteBlocks__Q34nw4r3g3d6detailFPvUl:
 /* 803E7B1C 003B10DC  54 84 E1 3F */	rlwinm. r4, r4, 0x1c, 4, 0x1f
 /* 803E7B20 003B10E0  C0 02 C0 60 */	lfs f0, lbl_8066C3E0@sda21(r2)
 /* 803E7B24 003B10E4  4D 82 00 20 */	beqlr 

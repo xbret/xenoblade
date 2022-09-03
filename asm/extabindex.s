@@ -6209,7 +6209,7 @@ lbl_80021020:
 	.4byte func_801250FC
 	.4byte 0x000001A4
 	.4byte lbl_8000BF28
-	.4byte __dt__Q34nw4r2ut5ColorFv
+	.4byte func_801252D0
 	.4byte 0x00000040
 	.4byte lbl_8000BF30
 	.4byte func_80125310

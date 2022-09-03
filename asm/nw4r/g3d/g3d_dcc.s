@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803EE5C0
-func_803EE5C0:
+.global CalcTexMtx__Q24nw4r3g3dFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4FlagQ44nw4r3g3d13TexSrtTypedef13TexMatrixMode
+CalcTexMtx__Q24nw4r3g3dFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4FlagQ44nw4r3g3d13TexSrtTypedef13TexMatrixMode:
 /* 803EE5C0 003B7B80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803EE5C4 003B7B84  7C 08 02 A6 */	mflr r0
 /* 803EE5C8 003B7B88  2C 07 00 00 */	cmpwi r7, 0
@@ -20,12 +20,12 @@ func_803EE5C0:
 lbl_803EE5F4:
 /* 803EE5F4 003B7BB4  2C 07 00 01 */	cmpwi r7, 1
 /* 803EE5F8 003B7BB8  40 82 00 14 */	bne lbl_803EE60C
-/* 803EE5FC 003B7BBC  48 00 51 11 */	bl func_803F370C
+/* 803EE5FC 003B7BBC  48 00 51 11 */	bl CalcTexMtx_Xsi__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4Flag
 /* 803EE600 003B7BC0  7C 60 00 34 */	cntlzw r0, r3
 /* 803EE604 003B7BC4  54 00 D9 7E */	srwi r0, r0, 5
 /* 803EE608 003B7BC8  48 00 00 10 */	b lbl_803EE618
 lbl_803EE60C:
-/* 803EE60C 003B7BCC  48 00 5D 65 */	bl func_803F4370
+/* 803EE60C 003B7BCC  48 00 5D 65 */	bl CalcTexMtx_3dsmax__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4Flag
 /* 803EE610 003B7BD0  7C 60 00 34 */	cntlzw r0, r3
 /* 803EE614 003B7BD4  54 00 D9 7E */	srwi r0, r0, 5
 lbl_803EE618:
@@ -43,8 +43,8 @@ lbl_803EE630:
 /* 803EE640 003B7C00  38 21 00 10 */	addi r1, r1, 0x10
 /* 803EE644 003B7C04  4E 80 00 20 */	blr 
 
-.global func_803EE648
-func_803EE648:
+.global CalcTexMtx__Q24nw4r3g3dFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4Flag
+CalcTexMtx__Q24nw4r3g3dFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4Flag:
 /* 803EE648 003B7C08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803EE64C 003B7C0C  7C 08 02 A6 */	mflr r0
 /* 803EE650 003B7C10  90 01 00 14 */	stw r0, 0x14(r1)

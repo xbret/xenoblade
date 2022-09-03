@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803E7468
-func_803E7468:
+.global GDSetGenMode2__Q34nw4r3g3d4fifoFUcUcUcUc11_GXCullMode
+GDSetGenMode2__Q34nw4r3g3d4fifoFUcUcUcUc11_GXCullMode:
 /* 803E7468 003B0A28  3D 40 CC 01 */	lis r10, 0xCC008000@ha
 /* 803E746C 003B0A2C  39 60 00 61 */	li r11, 0x61
 /* 803E7470 003B0A30  3D 20 FE 08 */	lis r9, 0xFE07FC3F@ha
@@ -37,8 +37,8 @@ func_803E7468:
 /* 803E74E0 003B0AA0  90 6A 80 00 */	stw r3, -0x8000(r10)
 /* 803E74E4 003B0AA4  4E 80 00 20 */	blr 
 
-.global func_803E74E8
-func_803E74E8:
+.global GDSetCullMode__Q34nw4r3g3d4fifoF11_GXCullMode
+GDSetCullMode__Q34nw4r3g3d4fifoF11_GXCullMode:
 /* 803E74E8 003B0AA8  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 803E74EC 003B0AAC  38 C0 00 61 */	li r6, 0x61
 /* 803E74F0 003B0AB0  3C 80 FE 01 */	lis r4, 0xFE00C000@ha
@@ -52,8 +52,8 @@ func_803E74E8:
 /* 803E7510 003B0AD0  90 05 80 00 */	stw r0, -0x8000(r5)
 /* 803E7514 003B0AD4  4E 80 00 20 */	blr 
 
-.global func_803E7518
-func_803E7518:
+.global GDSetTexCoordScale2__Q34nw4r3g3d4fifoF13_GXTexCoordIDUsUcUcUsUcUc
+GDSetTexCoordScale2__Q34nw4r3g3d4fifoF13_GXTexCoordIDUsUcUcUsUcUc:
 /* 803E7518 003B0AD8  3D 60 CC 01 */	lis r11, 0xCC008000@ha
 /* 803E751C 003B0ADC  39 80 00 61 */	li r12, 0x61
 /* 803E7520 003B0AE0  3D 40 FE 04 */	lis r10, 0xFE03FFFF@ha
@@ -83,8 +83,8 @@ func_803E7518:
 /* 803E7580 003B0B40  90 0B 80 00 */	stw r0, -0x8000(r11)
 /* 803E7584 003B0B44  4E 80 00 20 */	blr 
 
-.global func_803E7588
-func_803E7588:
+.global GDSetIndTexMtx__Q34nw4r3g3d4fifoFUlRCQ34nw4r4math5MTX34
+GDSetIndTexMtx__Q34nw4r3g3d4fifoFUlRCQ34nw4r4math5MTX34:
 /* 803E7588 003B0B48  C0 44 00 00 */	lfs f2, 0(r4)
 /* 803E758C 003B0B4C  38 A0 00 00 */	li r5, 0
 /* 803E7590 003B0B50  C0 64 00 04 */	lfs f3, 4(r4)
@@ -257,8 +257,8 @@ lbl_803E7748:
 /* 803E7818 003B0DD8  38 21 00 40 */	addi r1, r1, 0x40
 /* 803E781C 003B0DDC  4E 80 00 20 */	blr 
 
-.global func_803E7820
-func_803E7820:
+.global GDResetCurrentMtx__Q34nw4r3g3d4fifoFv
+GDResetCurrentMtx__Q34nw4r3g3d4fifoFv:
 /* 803E7820 003B0DE0  3D 00 CC 01 */	lis r8, 0xCC008000@ha
 /* 803E7824 003B0DE4  39 20 00 08 */	li r9, 8
 /* 803E7828 003B0DE8  99 28 80 00 */	stb r9, 0xCC008000@l(r8)
@@ -283,8 +283,8 @@ func_803E7820:
 /* 803E7874 003B0E34  90 A8 80 00 */	stw r5, -0x8000(r8)
 /* 803E7878 003B0E38  4E 80 00 20 */	blr 
 
-.global func_803E787C
-func_803E787C:
+.global GDSetCurrentMtx__Q34nw4r3g3d4fifoFPCUl
+GDSetCurrentMtx__Q34nw4r3g3d4fifoFPCUl:
 /* 803E787C 003B0E3C  80 E3 00 00 */	lwz r7, 0(r3)
 /* 803E7880 003B0E40  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 803E7884 003B0E44  38 00 00 10 */	li r0, 0x10
@@ -317,8 +317,8 @@ func_803E787C:
 /* 803E78F0 003B0EB0  90 05 80 00 */	stw r0, -0x8000(r5)
 /* 803E78F4 003B0EB4  4E 80 00 20 */	blr 
 
-.global func_803E78F8
-func_803E78F8:
+.global GDLoadTexMtxImm3x3__Q34nw4r3g3d4fifoFRCQ34nw4r4math5MTX33Ul
+GDLoadTexMtxImm3x3__Q34nw4r3g3d4fifoFRCQ34nw4r4math5MTX33Ul:
 /* 803E78F8 003B0EB8  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803E78FC 003B0EBC  7C 08 02 A6 */	mflr r0
 /* 803E7900 003B0EC0  C0 C2 C0 5C */	lfs f6, lbl_8066C3DC@sda21(r2)

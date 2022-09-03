@@ -1268,8 +1268,8 @@ lbl_80665D84:
 .global lbl_80665D88
 lbl_80665D88:
 	# ROM: 0x571968
-	.4byte func_803E73B0
-	.4byte func_803E73B8
+	.4byte PlayPolicy_Onetime__Q24nw4r3g3dFfff
+	.4byte PlayPolicy_Loop__Q24nw4r3g3dFfff
 
 
 .global lbl_80665D90

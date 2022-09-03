@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802C47D4
-func_802C47D4:
+.global __wcstoul
+__wcstoul:
 /* 802C47D4 0028DD94  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802C47D8 0028DD98  7C 08 02 A6 */	mflr r0
 /* 802C47DC 0028DD9C  2C 03 00 00 */	cmpwi r3, 0
@@ -309,12 +309,12 @@ lbl_802C4BBC:
 /* 802C4BE4 0028E1A4  38 21 00 50 */	addi r1, r1, 0x50
 /* 802C4BE8 0028E1A8  4E 80 00 20 */	blr 
 
-.global func_802C4BEC
-func_802C4BEC:
+.global wcstol
+wcstol:
 /* 802C4BEC 0028E1AC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802C4BF0 0028E1B0  7C 08 02 A6 */	mflr r0
 /* 802C4BF4 0028E1B4  3C E0 80 00 */	lis r7, 0x7FFFFFFF@ha
-/* 802C4BF8 0028E1B8  3C C0 80 2C */	lis r6, func_802C6F2C@ha
+/* 802C4BF8 0028E1B8  3C C0 80 2C */	lis r6, __wStringRead@ha
 /* 802C4BFC 0028E1BC  90 01 00 34 */	stw r0, 0x34(r1)
 /* 802C4C00 0028E1C0  38 00 00 00 */	li r0, 0
 /* 802C4C04 0028E1C4  39 01 00 0C */	addi r8, r1, 0xc
@@ -326,11 +326,11 @@ func_802C4BEC:
 /* 802C4C1C 0028E1DC  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 802C4C20 0028E1E0  7C 7E 1B 78 */	mr r30, r3
 /* 802C4C24 0028E1E4  7C A3 2B 78 */	mr r3, r5
-/* 802C4C28 0028E1E8  38 A6 6F 2C */	addi r5, r6, func_802C6F2C@l
+/* 802C4C28 0028E1E8  38 A6 6F 2C */	addi r5, r6, __wStringRead@l
 /* 802C4C2C 0028E1EC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 802C4C30 0028E1F0  38 C1 00 18 */	addi r6, r1, 0x18
 /* 802C4C34 0028E1F4  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 802C4C38 0028E1F8  4B FF FB 9D */	bl func_802C47D4
+/* 802C4C38 0028E1F8  4B FF FB 9D */	bl __wcstoul
 /* 802C4C3C 0028E1FC  2C 1F 00 00 */	cmpwi r31, 0
 /* 802C4C40 0028E200  41 82 00 14 */	beq lbl_802C4C54
 /* 802C4C44 0028E204  80 01 00 10 */	lwz r0, 0x10(r1)

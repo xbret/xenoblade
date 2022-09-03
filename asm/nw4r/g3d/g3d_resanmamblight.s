@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803E0488
-func_803E0488:
+.global GetAnmResult__Q34nw4r3g3d14ResAnmAmbLightCFPQ34nw4r3g3d17AmbLightAnmResultf
+GetAnmResult__Q34nw4r3g3d14ResAnmAmbLightCFPQ34nw4r3g3d17AmbLightAnmResultf:
 /* 803E0488 003A9A48  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803E048C 003A9A4C  7C 08 02 A6 */	mflr r0
 /* 803E0490 003A9A50  80 A3 00 00 */	lwz r5, 0(r3)
@@ -55,7 +55,7 @@ lbl_803E052C:
 /* 803E0530 003A9AF0  FC 20 00 90 */	fmr f1, f0
 /* 803E0534 003A9AF4  7C 65 02 14 */	add r3, r5, r0
 /* 803E0538 003A9AF8  38 63 00 18 */	addi r3, r3, 0x18
-/* 803E053C 003A9AFC  4B FF D6 99 */	bl func_803DDBD4
+/* 803E053C 003A9AFC  4B FF D6 99 */	bl GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf
 lbl_803E0540:
 /* 803E0540 003A9B00  90 7F 00 04 */	stw r3, 4(r31)
 /* 803E0544 003A9B04  83 E1 00 1C */	lwz r31, 0x1c(r1)

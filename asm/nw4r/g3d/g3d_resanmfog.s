@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803E0950
-func_803E0950:
+.global GetAnmResult__Q34nw4r3g3d9ResAnmFogCFPQ34nw4r3g3d12FogAnmResultf
+GetAnmResult__Q34nw4r3g3d9ResAnmFogCFPQ34nw4r3g3d12FogAnmResultf:
 /* 803E0950 003A9F10  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803E0954 003A9F14  7C 08 02 A6 */	mflr r0
 /* 803E0958 003A9F18  90 01 00 54 */	stw r0, 0x54(r1)
@@ -64,7 +64,7 @@ lbl_803E0A18:
 /* 803E0A1C 003A9FDC  FC 20 F0 90 */	fmr f1, f30
 /* 803E0A20 003A9FE0  7C 7F 02 14 */	add r3, r31, r0
 /* 803E0A24 003A9FE4  38 63 00 1C */	addi r3, r3, 0x1c
-/* 803E0A28 003A9FE8  4B FF D0 81 */	bl func_803DDAA8
+/* 803E0A28 003A9FE8  4B FF D0 81 */	bl GetResKeyFrameAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d18ResKeyFrameAnmDataf
 lbl_803E0A2C:
 /* 803E0A2C 003A9FEC  2C 1E 00 00 */	cmpwi r30, 0
 /* 803E0A30 003A9FF0  D0 3C 00 04 */	stfs f1, 4(r28)
@@ -76,7 +76,7 @@ lbl_803E0A40:
 /* 803E0A44 003AA004  FC 20 F0 90 */	fmr f1, f30
 /* 803E0A48 003AA008  7C 7F 02 14 */	add r3, r31, r0
 /* 803E0A4C 003AA00C  38 63 00 20 */	addi r3, r3, 0x20
-/* 803E0A50 003AA010  4B FF D0 59 */	bl func_803DDAA8
+/* 803E0A50 003AA010  4B FF D0 59 */	bl GetResKeyFrameAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d18ResKeyFrameAnmDataf
 lbl_803E0A54:
 /* 803E0A54 003AA014  2C 1D 00 00 */	cmpwi r29, 0
 /* 803E0A58 003AA018  D0 3C 00 08 */	stfs f1, 8(r28)
@@ -88,7 +88,7 @@ lbl_803E0A68:
 /* 803E0A6C 003AA02C  FC 20 F8 90 */	fmr f1, f31
 /* 803E0A70 003AA030  7C 7F 02 14 */	add r3, r31, r0
 /* 803E0A74 003AA034  38 63 00 24 */	addi r3, r3, 0x24
-/* 803E0A78 003AA038  4B FF D1 5D */	bl func_803DDBD4
+/* 803E0A78 003AA038  4B FF D1 5D */	bl GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf
 lbl_803E0A7C:
 /* 803E0A7C 003AA03C  90 7C 00 0C */	stw r3, 0xc(r28)
 /* 803E0A80 003AA040  E3 E1 00 48 */	psq_l f31, 72(r1), 0, qr0

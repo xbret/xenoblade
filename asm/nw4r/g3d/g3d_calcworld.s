@@ -115,7 +115,7 @@ lbl_803EE85C:
 lbl_803EE870:
 /* 803EE870 003B7E30  38 61 00 14 */	addi r3, r1, 0x14
 /* 803EE874 003B7E34  38 81 00 24 */	addi r4, r1, 0x24
-/* 803EE878 003B7E38  4B FE F0 A9 */	bl func_803DD920
+/* 803EE878 003B7E38  4B FE F0 A9 */	bl CalcChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult
 /* 803EE87C 003B7E3C  3B E1 00 24 */	addi r31, r1, 0x24
 lbl_803EE880:
 /* 803EE880 003B7E40  2C 1C 00 00 */	cmpwi r28, 0
@@ -171,7 +171,7 @@ lbl_803EE93C:
 /* 803EE944 003B7F04  38 81 00 24 */	addi r4, r1, 0x24
 /* 803EE948 003B7F08  60 00 02 00 */	ori r0, r0, 0x200
 /* 803EE94C 003B7F0C  90 01 00 24 */	stw r0, 0x24(r1)
-/* 803EE950 003B7F10  4B FE EE 35 */	bl func_803DD784
+/* 803EE950 003B7F10  4B FE EE 35 */	bl PatchChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult
 lbl_803EE954:
 /* 803EE954 003B7F14  2C 16 00 00 */	cmpwi r22, 0
 /* 803EE958 003B7F18  41 82 00 EC */	beq lbl_803EEA44
@@ -246,7 +246,7 @@ lbl_803EEA44:
 /* 803EEA64 003B8024  7F 06 C3 78 */	mr r6, r24
 /* 803EEA68 003B8028  7E E7 BB 78 */	mr r7, r23
 /* 803EEA6C 003B802C  7F E8 FB 78 */	mr r8, r31
-/* 803EEA70 003B8030  48 00 4D 39 */	bl func_803F37A8
+/* 803EEA70 003B8030  48 00 4D 39 */	bl CalcWorldMtx_Xsi__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3UlPCQ34nw4r3g3d12ChrAnmResult
 /* 803EEA74 003B8034  90 6F 00 00 */	stw r3, 0(r15)
 /* 803EEA78 003B8038  48 00 00 64 */	b lbl_803EEADC
 lbl_803EEA7C:
@@ -400,19 +400,18 @@ lbl_803EEC80:
 /* 803EEC98 003B8258  38 21 00 D0 */	addi r1, r1, 0xd0
 /* 803EEC9C 003B825C  4E 80 00 20 */	blr 
 
-.global func_803EECA0
-func_803EECA0:
+.global ExecCallbackA__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r3g3d12ChrAnmResultQ34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
+ExecCallbackA__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r3g3d12ChrAnmResultQ34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld:
 /* 803EECA0 003B8260  4E 80 00 20 */	blr 
 
-.global func_803EECA4
-func_803EECA4:
+.global ExecCallbackB__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r3g3d13WorldMtxManipQ34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
+ExecCallbackB__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r3g3d13WorldMtxManipQ34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld:
 /* 803EECA4 003B8264  4E 80 00 20 */	blr 
 
-.global func_803EECA8
-func_803EECA8:
+.global ExecCallbackC__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
+ExecCallbackC__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld:
 /* 803EECA8 003B8268  4E 80 00 20 */	blr 
 
-#this maybe should be in a separate file?
 .global CalcSkinning__Q24nw4r3g3dFPQ34nw4r4math5MTX34PUlQ34nw4r3g3d6ResMdlPCUc
 CalcSkinning__Q24nw4r3g3dFPQ34nw4r4math5MTX34PUlQ34nw4r3g3d6ResMdlPCUc:
 /* 803EECAC 003B826C  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -433,7 +432,7 @@ CalcSkinning__Q24nw4r3g3dFPQ34nw4r4math5MTX34PUlQ34nw4r3g3d6ResMdlPCUc:
 /* 803EECE8 003B82A8  7C 7D 1B 78 */	mr r29, r3
 /* 803EECEC 003B82AC  41 82 04 9C */	beq lbl_803EF188
 lbl_803EECF0:
-/* 803EECF0 003B82B0  4B FF F9 D5 */	bl func_803EE6C4
+/* 803EECF0 003B82B0  4B FF F9 D5 */	bl GetSkinningMtxTemporary__Q44nw4r3g3d6detail7workmemFv
 /* 803EECF4 003B82B4  7C 7E 1B 78 */	mr r30, r3
 /* 803EECF8 003B82B8  3F E0 F0 00 */	lis r31, 0xf000
 /* 803EECFC 003B82BC  48 00 02 68 */	b lbl_803EEF64
@@ -618,7 +617,7 @@ lbl_803EEFA4:
 /* 803EEFA4 003B8564  80 1A 00 24 */	lwz r0, 0x24(r26)
 /* 803EEFA8 003B8568  7F 83 E3 78 */	mr r3, r28
 /* 803EEFAC 003B856C  7F 9A 00 2E */	lwzx r28, r26, r0
-/* 803EEFB0 003B8570  4B FE A7 A5 */	bl func_803D9754
+/* 803EEFB0 003B8570  4B FE A7 A5 */	bl GetResNodeNumEntries__Q34nw4r3g3d6ResMdlCFv
 /* 803EEFB4 003B8574  80 9A 00 1C */	lwz r4, 0x1c(r26)
 /* 803EEFB8 003B8578  7C 03 E0 50 */	subf r0, r3, r28
 /* 803EEFBC 003B857C  7C C0 20 50 */	subf r6, r0, r4
@@ -683,7 +682,7 @@ lbl_803EF098:
 /* 803EF098 003B8658  80 1A 00 24 */	lwz r0, 0x24(r26)
 /* 803EF09C 003B865C  7F 83 E3 78 */	mr r3, r28
 /* 803EF0A0 003B8660  7F 9A 00 2E */	lwzx r28, r26, r0
-/* 803EF0A4 003B8664  4B FE A6 B1 */	bl func_803D9754
+/* 803EF0A4 003B8664  4B FE A6 B1 */	bl GetResNodeNumEntries__Q34nw4r3g3d6ResMdlCFv
 /* 803EF0A8 003B8668  80 9A 00 1C */	lwz r4, 0x1c(r26)
 /* 803EF0AC 003B866C  7C 03 E0 50 */	subf r0, r3, r28
 /* 803EF0B0 003B8670  7C C0 20 50 */	subf r6, r0, r4

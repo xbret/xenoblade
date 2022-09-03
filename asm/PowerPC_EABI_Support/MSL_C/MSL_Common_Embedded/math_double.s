@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#this might be a different file/function?
 
 .global sqrtf
 sqrtf:
