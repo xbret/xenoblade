@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804012BC
-func_804012BC:
+#GetColor__Q34nw4r3lyt25@unnamed@lyt_textBox_cpp@FRC11_GXColorS10
+.global GetColor__Q34nw4r3lyt25_unnamed_lyt_textBox_cpp_FRC11_GXColorS10
+GetColor__Q34nw4r3lyt25_unnamed_lyt_textBox_cpp_FRC11_GXColorS10:
 /* 804012BC 003CA87C  A8 A4 00 00 */	lha r5, 0(r4)
 /* 804012C0 003CA880  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804012C4 003CA884  2C 05 00 00 */	cmpwi r5, 0
@@ -475,9 +476,8 @@ lbl_80401960:
 /* 80401978 003CAF38  38 21 00 40 */	addi r1, r1, 0x40
 /* 8040197C 003CAF3C  4E 80 00 20 */	blr 
 
-#GetVtxColor__Q34nw4r3lyt7TextBoxCFUl?
-.global func_80401980
-func_80401980:
+.global GetTextColor__Q34nw4r3lyt7TextBoxCFUl
+GetTextColor__Q34nw4r3lyt7TextBoxCFUl:
 /* 80401980 003CAF40  54 A5 F8 7E */	srwi r5, r5, 1
 /* 80401984 003CAF44  48 00 00 04 */	b lbl_80401988
 lbl_80401988:
@@ -493,8 +493,8 @@ lbl_80401988:
 /* 804019AC 003CAF6C  98 03 00 03 */	stb r0, 3(r3)
 /* 804019B0 003CAF70  4E 80 00 20 */	blr
 
-.global func_804019B4
-func_804019B4:
+.global SetVtxColor__Q34nw4r3lyt7TextBoxFUlQ34nw4r2ut5Color
+SetVtxColor__Q34nw4r3lyt7TextBoxFUlQ34nw4r2ut5Color:
 /* 804019B4 003CAF74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804019B8 003CAF78  7C 08 02 A6 */	mflr r0
 /* 804019BC 003CAF7C  89 05 00 00 */	lbz r8, 0(r5)
@@ -508,14 +508,14 @@ func_804019B4:
 /* 804019DC 003CAF9C  98 E1 00 09 */	stb r7, 9(r1)
 /* 804019E0 003CAFA0  98 C1 00 0A */	stb r6, 0xa(r1)
 /* 804019E4 003CAFA4  98 01 00 0B */	stb r0, 0xb(r1)
-/* 804019E8 003CAFA8  48 00 00 15 */	bl SetVtxColor__Q34nw4r3lyt7TextBoxFUlQ34nw4r2ut5Color
+/* 804019E8 003CAFA8  48 00 00 15 */	bl SetTextColor__Q34nw4r3lyt7TextBoxFUlQ34nw4r2ut5Color
 /* 804019EC 003CAFAC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804019F0 003CAFB0  7C 08 03 A6 */	mtlr r0
 /* 804019F4 003CAFB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 804019F8 003CAFB8  4E 80 00 20 */	blr 
 
-.global SetVtxColor__Q34nw4r3lyt7TextBoxFUlQ34nw4r2ut5Color
-SetVtxColor__Q34nw4r3lyt7TextBoxFUlQ34nw4r2ut5Color:
+.global SetTextColor__Q34nw4r3lyt7TextBoxFUlQ34nw4r2ut5Color
+SetTextColor__Q34nw4r3lyt7TextBoxFUlQ34nw4r2ut5Color:
 /* 804019FC 003CAFBC  54 80 10 3A */	slwi r0, r4, 2
 /* 80401A00 003CAFC0  88 C5 00 00 */	lbz r6, 0(r5)
 /* 80401A04 003CAFC4  7C 83 02 14 */	add r4, r3, r0
@@ -624,7 +624,7 @@ lbl_80401B58:
 /* 80401B74 003CB134  90 A1 00 18 */	stw r5, 0x18(r1)
 /* 80401B78 003CB138  38 A1 00 14 */	addi r5, r1, 0x14
 /* 80401B7C 003CB13C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80401B80 003CB140  4B FD 5C 4D */	bl func_803D77CC
+/* 80401B80 003CB140  4B FD 5C 4D */	bl SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
 /* 80401B84 003CB144  80 DD 00 28 */	lwz r6, 0x28(r29)
 /* 80401B88 003CB148  38 61 00 28 */	addi r3, r1, 0x28
 /* 80401B8C 003CB14C  38 81 00 40 */	addi r4, r1, 0x40
@@ -636,7 +636,7 @@ lbl_80401B58:
 /* 80401BA4 003CB164  A0 06 00 16 */	lhz r0, 0x16(r6)
 /* 80401BA8 003CB168  B0 A1 00 44 */	sth r5, 0x44(r1)
 /* 80401BAC 003CB16C  B0 01 00 46 */	sth r0, 0x46(r1)
-/* 80401BB0 003CB170  4B FF F7 0D */	bl func_804012BC
+/* 80401BB0 003CB170  4B FF F7 0D */	bl GetColor__Q34nw4r3lyt25_unnamed_lyt_textBox_cpp_FRC11_GXColorS10
 /* 80401BB4 003CB174  80 DD 00 28 */	lwz r6, 0x28(r29)
 /* 80401BB8 003CB178  38 61 00 24 */	addi r3, r1, 0x24
 /* 80401BBC 003CB17C  38 81 00 38 */	addi r4, r1, 0x38
@@ -648,7 +648,7 @@ lbl_80401B58:
 /* 80401BD4 003CB194  A0 06 00 1E */	lhz r0, 0x1e(r6)
 /* 80401BD8 003CB198  B0 A1 00 3C */	sth r5, 0x3c(r1)
 /* 80401BDC 003CB19C  B0 01 00 3E */	sth r0, 0x3e(r1)
-/* 80401BE0 003CB1A0  4B FF F6 DD */	bl func_804012BC
+/* 80401BE0 003CB1A0  4B FF F6 DD */	bl GetColor__Q34nw4r3lyt25_unnamed_lyt_textBox_cpp_FRC11_GXColorS10
 /* 80401BE4 003CB1A4  80 A1 00 28 */	lwz r5, 0x28(r1)
 /* 80401BE8 003CB1A8  38 61 00 CC */	addi r3, r1, 0xcc
 /* 80401BEC 003CB1AC  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -656,7 +656,7 @@ lbl_80401B58:
 /* 80401BF4 003CB1B4  90 A1 00 10 */	stw r5, 0x10(r1)
 /* 80401BF8 003CB1B8  38 A1 00 0C */	addi r5, r1, 0xc
 /* 80401BFC 003CB1BC  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80401C00 003CB1C0  48 00 03 C1 */	bl func_80401FC0
+/* 80401C00 003CB1C0  48 00 03 C1 */	bl SetColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
 /* 80401C04 003CB1C4  38 61 00 CC */	addi r3, r1, 0xcc
 /* 80401C08 003CB1C8  48 02 D5 39 */	bl SetupGX__Q34nw4r2ut10CharWriterFv
 /* 80401C0C 003CB1CC  38 60 00 07 */	li r3, 7
@@ -912,8 +912,8 @@ lbl_80401F88:
 /* 80401FB8 003CB578  38 21 02 00 */	addi r1, r1, 0x200
 /* 80401FBC 003CB57C  4E 80 00 20 */	blr 
 
-.global func_80401FC0
-func_80401FC0:
+.global SetColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
+SetColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color:
 /* 80401FC0 003CB580  89 64 00 00 */	lbz r11, 0(r4)
 /* 80401FC4 003CB584  89 44 00 01 */	lbz r10, 1(r4)
 /* 80401FC8 003CB588  89 24 00 02 */	lbz r9, 2(r4)

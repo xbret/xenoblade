@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80416CA8
-func_80416CA8:
+.global CreateImpl__Q44nw4r3snd6detail8PoolImplFPvUlUl
+CreateImpl__Q44nw4r3snd6detail8PoolImplFPvUlUl:
 /* 80416CA8 003E0268  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80416CAC 003E026C  7C 08 02 A6 */	mflr r0
 /* 80416CB0 003E0270  90 01 00 24 */	stw r0, 0x24(r1)
@@ -90,8 +90,8 @@ lbl_80416DC4:
 /* 80416DE4 003E03A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80416DE8 003E03A8  4E 80 00 20 */	blr 
 
-.global func_80416DEC
-func_80416DEC:
+.global DestroyImpl__Q44nw4r3snd6detail8PoolImplFPvUl
+DestroyImpl__Q44nw4r3snd6detail8PoolImplFPvUl:
 /* 80416DEC 003E03AC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80416DF0 003E03B0  7C 08 02 A6 */	mflr r0
 /* 80416DF4 003E03B4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -129,8 +129,8 @@ lbl_80416E44:
 /* 80416E64 003E0424  38 21 00 20 */	addi r1, r1, 0x20
 /* 80416E68 003E0428  4E 80 00 20 */	blr
 
-.global func_80416E6C
-func_80416E6C:
+.global CountImpl__Q44nw4r3snd6detail8PoolImplCFv
+CountImpl__Q44nw4r3snd6detail8PoolImplCFv:
 /* 80416E6C 003E042C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80416E70 003E0430  7C 08 02 A6 */	mflr r0
 /* 80416E74 003E0434  90 01 00 14 */	stw r0, 0x14(r1)
@@ -154,8 +154,8 @@ lbl_80416E98:
 /* 80416EB4 003E0474  38 21 00 10 */	addi r1, r1, 0x10
 /* 80416EB8 003E0478  4E 80 00 20 */	blr 
 
-.global func_80416EBC
-func_80416EBC:
+.global AllocImpl__Q44nw4r3snd6detail8PoolImplFv
+AllocImpl__Q44nw4r3snd6detail8PoolImplFv:
 /* 80416EBC 003E047C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80416EC0 003E0480  7C 08 02 A6 */	mflr r0
 /* 80416EC4 003E0484  90 01 00 14 */	stw r0, 0x14(r1)
@@ -182,8 +182,8 @@ lbl_80416F00:
 /* 80416F10 003E04D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80416F14 003E04D4  4E 80 00 20 */	blr 
 
-.global func_80416F18
-func_80416F18:
+.global FreeImpl__Q44nw4r3snd6detail8PoolImplFPv
+FreeImpl__Q44nw4r3snd6detail8PoolImplFPv:
 /* 80416F18 003E04D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80416F1C 003E04DC  7C 08 02 A6 */	mflr r0
 /* 80416F20 003E04E0  90 01 00 14 */	stw r0, 0x14(r1)

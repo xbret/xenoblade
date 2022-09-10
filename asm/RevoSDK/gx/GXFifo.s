@@ -634,7 +634,7 @@ lbl_80318EEC:
 /* 80318EF8 002E24B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80318EFC 002E24BC  4E 80 00 20 */	blr 
 
-# either GXGetFifoPtrs or GXGetFifoLimits
+#either GXGetFifoPtrs or GXGetFifoLimits
 .balign 16, 0
 .global func_80318F00
 func_80318F00:

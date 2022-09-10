@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804212E4
-func_804212E4:
+.global GetInstance__Q44nw4r3snd6detail11SoundThreadFv
+GetInstance__Q44nw4r3snd6detail11SoundThreadFv:
 /* 804212E4 003EA8A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804212E8 003EA8A8  7C 08 02 A6 */	mflr r0
 /* 804212EC 003EA8AC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -38,10 +38,10 @@ func_804212E4:
 /* 80421360 003EA920  4B F3 A2 71 */	bl OSInitThreadQueue
 /* 80421364 003EA924  38 7F 03 54 */	addi r3, r31, 0x354
 /* 80421368 003EA928  4B F3 88 B9 */	bl OSInitMutex
-/* 8042136C 003EA92C  3C 80 80 42 */	lis r4, func_804213A8@ha
+/* 8042136C 003EA92C  3C 80 80 42 */	lis r4, __dt__Q44nw4r3snd6detail11SoundThreadFv@ha
 /* 80421370 003EA930  3C A0 80 65 */	lis r5, lbl_80652C40@ha
 /* 80421374 003EA934  7F E3 FB 78 */	mr r3, r31
-/* 80421378 003EA938  38 84 13 A8 */	addi r4, r4, func_804213A8@l
+/* 80421378 003EA938  38 84 13 A8 */	addi r4, r4, __dt__Q44nw4r3snd6detail11SoundThreadFv@l
 /* 8042137C 003EA93C  38 A5 2C 40 */	addi r5, r5, lbl_80652C40@l
 /* 80421380 003EA940  4B E9 83 1D */	bl __register_global_object_tmp
 /* 80421384 003EA944  38 00 00 01 */	li r0, 1
@@ -55,8 +55,8 @@ lbl_8042138C:
 /* 804213A0 003EA960  38 21 00 10 */	addi r1, r1, 0x10
 /* 804213A4 003EA964  4E 80 00 20 */	blr
 
-.global func_804213A8
-func_804213A8:
+.global __dt__Q44nw4r3snd6detail11SoundThreadFv
+__dt__Q44nw4r3snd6detail11SoundThreadFv:
 /* 804213A8 003EA968  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804213AC 003EA96C  7C 08 02 A6 */	mflr r0
 /* 804213B0 003EA970  2C 03 00 00 */	cmpwi r3, 0
@@ -89,8 +89,8 @@ lbl_804213FC:
 /* 80421410 003EA9D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80421414 003EA9D4  4E 80 00 20 */	blr 
 
-.global func_80421418
-func_80421418:
+.global Create__Q44nw4r3snd6detail11SoundThreadFlPvUl
+Create__Q44nw4r3snd6detail11SoundThreadFlPvUl:
 /* 80421418 003EA9D8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042141C 003EA9DC  7C 08 02 A6 */	mflr r0
 /* 80421420 003EA9E0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -139,20 +139,20 @@ lbl_80421450:
 /* 804214C8 003EAA88  4B F3 A1 09 */	bl OSInitThreadQueue
 /* 804214CC 003EAA8C  38 7E 03 54 */	addi r3, r30, 0x354
 /* 804214D0 003EAA90  4B F3 87 51 */	bl OSInitMutex
-/* 804214D4 003EAA94  3C 80 80 42 */	lis r4, func_804213A8@ha
+/* 804214D4 003EAA94  3C 80 80 42 */	lis r4, __dt__Q44nw4r3snd6detail11SoundThreadFv@ha
 /* 804214D8 003EAA98  3C A0 80 65 */	lis r5, lbl_80652C40@ha
 /* 804214DC 003EAA9C  7F C3 F3 78 */	mr r3, r30
-/* 804214E0 003EAAA0  38 84 13 A8 */	addi r4, r4, func_804213A8@l
+/* 804214E0 003EAAA0  38 84 13 A8 */	addi r4, r4, __dt__Q44nw4r3snd6detail11SoundThreadFv@l
 /* 804214E4 003EAAA4  38 A5 2C 40 */	addi r5, r5, lbl_80652C40@l
 /* 804214E8 003EAAA8  4B E9 81 B5 */	bl __register_global_object_tmp
 /* 804214EC 003EAAAC  9B ED BC 70 */	stb r31, lbl_80667DF0@sda21(r13)
 lbl_804214F0:
-/* 804214F0 003EAAB0  3C 80 80 42 */	lis r4, func_8042175C@ha
+/* 804214F0 003EAAB0  3C 80 80 42 */	lis r4, SoundThreadFunc__Q44nw4r3snd6detail11SoundThreadFPv@ha
 /* 804214F4 003EAAB4  3C A0 80 65 */	lis r5, lbl_80652C50@ha
 /* 804214F8 003EAAB8  7F 43 D3 78 */	mr r3, r26
 /* 804214FC 003EAABC  7F A7 EB 78 */	mr r7, r29
 /* 80421500 003EAAC0  7F 68 DB 78 */	mr r8, r27
-/* 80421504 003EAAC4  38 84 17 5C */	addi r4, r4, func_8042175C@l
+/* 80421504 003EAAC4  38 84 17 5C */	addi r4, r4, SoundThreadFunc__Q44nw4r3snd6detail11SoundThreadFPv@l
 /* 80421508 003EAAC8  38 A5 2C 50 */	addi r5, r5, lbl_80652C50@l
 /* 8042150C 003EAACC  7C DC EA 14 */	add r6, r28, r29
 /* 80421510 003EAAD0  39 20 00 00 */	li r9, 0
@@ -174,8 +174,8 @@ lbl_80421538:
 /* 80421548 003EAB08  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042154C 003EAB0C  4E 80 00 20 */	blr 
 
-.global func_80421550
-func_80421550:
+.global Shutdown__Q44nw4r3snd6detail11SoundThreadFv
+Shutdown__Q44nw4r3snd6detail11SoundThreadFv:
 /* 80421550 003EAB10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80421554 003EAB14  7C 08 02 A6 */	mflr r0
 /* 80421558 003EAB18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -215,10 +215,10 @@ func_80421550:
 /* 804215E0 003EABA0  4B F3 9F F1 */	bl OSInitThreadQueue
 /* 804215E4 003EABA4  38 7F 03 54 */	addi r3, r31, 0x354
 /* 804215E8 003EABA8  4B F3 86 39 */	bl OSInitMutex
-/* 804215EC 003EABAC  3C 80 80 42 */	lis r4, func_804213A8@ha
+/* 804215EC 003EABAC  3C 80 80 42 */	lis r4, __dt__Q44nw4r3snd6detail11SoundThreadFv@ha
 /* 804215F0 003EABB0  3C A0 80 65 */	lis r5, lbl_80652C40@ha
 /* 804215F4 003EABB4  7F E3 FB 78 */	mr r3, r31
-/* 804215F8 003EABB8  38 84 13 A8 */	addi r4, r4, func_804213A8@l
+/* 804215F8 003EABB8  38 84 13 A8 */	addi r4, r4, __dt__Q44nw4r3snd6detail11SoundThreadFv@l
 /* 804215FC 003EABBC  38 A5 2C 40 */	addi r5, r5, lbl_80652C40@l
 /* 80421600 003EABC0  4B E9 80 9D */	bl __register_global_object_tmp
 /* 80421604 003EABC4  38 00 00 01 */	li r0, 1
@@ -243,8 +243,8 @@ lbl_80421638:
 /* 80421648 003EAC08  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042164C 003EAC0C  4E 80 00 20 */	blr
 
-.global func_80421650
-func_80421650:
+.global AxCallbackFunc__Q44nw4r3snd6detail11SoundThreadFv
+AxCallbackFunc__Q44nw4r3snd6detail11SoundThreadFv:
 /* 80421650 003EAC10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80421654 003EAC14  7C 08 02 A6 */	mflr r0
 /* 80421658 003EAC18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -280,10 +280,10 @@ func_80421650:
 /* 804216D0 003EAC90  4B F3 9F 01 */	bl OSInitThreadQueue
 /* 804216D4 003EAC94  38 7E 03 54 */	addi r3, r30, 0x354
 /* 804216D8 003EAC98  4B F3 85 49 */	bl OSInitMutex
-/* 804216DC 003EAC9C  3C 80 80 42 */	lis r4, func_804213A8@ha
+/* 804216DC 003EAC9C  3C 80 80 42 */	lis r4, __dt__Q44nw4r3snd6detail11SoundThreadFv@ha
 /* 804216E0 003EACA0  3C A0 80 65 */	lis r5, lbl_80652C40@ha
 /* 804216E4 003EACA4  7F C3 F3 78 */	mr r3, r30
-/* 804216E8 003EACA8  38 84 13 A8 */	addi r4, r4, func_804213A8@l
+/* 804216E8 003EACA8  38 84 13 A8 */	addi r4, r4, __dt__Q44nw4r3snd6detail11SoundThreadFv@l
 /* 804216EC 003EACAC  38 A5 2C 40 */	addi r5, r5, lbl_80652C40@l
 /* 804216F0 003EACB0  4B E9 7F AD */	bl __register_global_object_tmp
 /* 804216F4 003EACB4  38 00 00 01 */	li r0, 1
@@ -307,8 +307,8 @@ lbl_8042171C:
 lbl_80421734:
 /* 80421734 003EACF4  7C 1F F0 40 */	cmplw r31, r30
 /* 80421738 003EACF8  40 82 FF E4 */	bne lbl_8042171C
-/* 8042173C 003EACFC  48 00 75 1D */	bl func_80428C58
-/* 80421740 003EAD00  48 00 7A B1 */	bl func_804291F0
+/* 8042173C 003EACFC  48 00 75 1D */	bl GetInstance__Q44nw4r3snd6detail12VoiceManagerFv
+/* 80421740 003EAD00  48 00 7A B1 */	bl NotifyVoiceUpdate__Q44nw4r3snd6detail12VoiceManagerFv
 /* 80421744 003EAD04  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80421748 003EAD08  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8042174C 003EAD0C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -316,20 +316,20 @@ lbl_80421734:
 /* 80421754 003EAD14  38 21 00 10 */	addi r1, r1, 0x10
 /* 80421758 003EAD18  4E 80 00 20 */	blr
 
-.global func_8042175C
-func_8042175C:
+.global SoundThreadFunc__Q44nw4r3snd6detail11SoundThreadFPv
+SoundThreadFunc__Q44nw4r3snd6detail11SoundThreadFPv:
 /* 8042175C 003EAD1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80421760 003EAD20  7C 08 02 A6 */	mflr r0
 /* 80421764 003EAD24  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80421768 003EAD28  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8042176C 003EAD2C  7C 7F 1B 78 */	mr r31, r3
 /* 80421770 003EAD30  4B FE B2 15 */	bl GetInstance__Q44nw4r3snd6detail9AxManagerFv
-/* 80421774 003EAD34  3C A0 80 42 */	lis r5, func_80421650@ha
+/* 80421774 003EAD34  3C A0 80 42 */	lis r5, AxCallbackFunc__Q44nw4r3snd6detail11SoundThreadFv@ha
 /* 80421778 003EAD38  38 9F 03 6C */	addi r4, r31, 0x36c
-/* 8042177C 003EAD3C  38 A5 16 50 */	addi r5, r5, func_80421650@l
+/* 8042177C 003EAD3C  38 A5 16 50 */	addi r5, r5, AxCallbackFunc__Q44nw4r3snd6detail11SoundThreadFv@l
 /* 80421780 003EAD40  4B FE B8 ED */	bl RegisterCallback__Q44nw4r3snd6detail9AxManagerFPQ54nw4r3snd6detail9AxManager16CallbackListNodePFv_v
 /* 80421784 003EAD44  7F E3 FB 78 */	mr r3, r31
-/* 80421788 003EAD48  48 00 00 ED */	bl func_80421874
+/* 80421788 003EAD48  48 00 00 ED */	bl FrameProcess__Q44nw4r3snd6detail11SoundThreadFv
 /* 8042178C 003EAD4C  4B FE B1 F9 */	bl GetInstance__Q44nw4r3snd6detail9AxManagerFv
 /* 80421790 003EAD50  38 9F 03 6C */	addi r4, r31, 0x36c
 /* 80421794 003EAD54  4B FE B9 45 */	bl UnregisterCallback__Q44nw4r3snd6detail9AxManagerFPQ54nw4r3snd6detail9AxManager16CallbackListNode
@@ -340,8 +340,8 @@ func_8042175C:
 /* 804217A8 003EAD68  38 21 00 10 */	addi r1, r1, 0x10
 /* 804217AC 003EAD6C  4E 80 00 20 */	blr 
 
-.global func_804217B0
-func_804217B0:
+.global RegisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback
+RegisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback:
 /* 804217B0 003EAD70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804217B4 003EAD74  7C 08 02 A6 */	mflr r0
 /* 804217B8 003EAD78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -369,8 +369,8 @@ func_804217B0:
 /* 80421810 003EADD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80421814 003EADD4  4E 80 00 20 */	blr 
 
-.global func_80421818
-func_80421818:
+.global UnregisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback
+UnregisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback:
 /* 80421818 003EADD8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042181C 003EADDC  7C 08 02 A6 */	mflr r0
 /* 80421820 003EADE0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -395,8 +395,8 @@ func_80421818:
 /* 8042186C 003EAE2C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80421870 003EAE30  4E 80 00 20 */	blr 
 
-.global func_80421874
-func_80421874:
+.global FrameProcess__Q44nw4r3snd6detail11SoundThreadFv
+FrameProcess__Q44nw4r3snd6detail11SoundThreadFv:
 /* 80421874 003EAE34  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80421878 003EAE38  7C 08 02 A6 */	mflr r0
 /* 8042187C 003EAE3C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -429,8 +429,8 @@ lbl_804218D8:
 /* 804218DC 003EAE9C  40 82 FF E4 */	bne lbl_804218C0
 /* 804218E0 003EAEA0  4B F3 B0 A1 */	bl OSGetTick
 /* 804218E4 003EAEA4  7C 7D 1B 78 */	mr r29, r3
-/* 804218E8 003EAEA8  4B FE F2 99 */	bl func_80410B80
-/* 804218EC 003EAEAC  4B FE FB 49 */	bl func_80411434
+/* 804218E8 003EAEA8  4B FE F2 99 */	bl GetInstance__Q44nw4r3snd6detail14AxVoiceManagerFv
+/* 804218EC 003EAEAC  4B FE FB 49 */	bl FreeAllReservedAxVoice__Q44nw4r3snd6detail14AxVoiceManagerFv
 /* 804218F0 003EAEB0  4B FE B0 95 */	bl GetInstance__Q44nw4r3snd6detail9AxManagerFv
 /* 804218F4 003EAEB4  4B FE B3 9D */	bl Update__Q44nw4r3snd6detail9AxManagerFv
 /* 804218F8 003EAEB8  83 DB 03 88 */	lwz r30, 0x388(r27)
@@ -446,11 +446,11 @@ lbl_80421904:
 lbl_8042191C:
 /* 8042191C 003EAEDC  7C 1E F8 40 */	cmplw r30, r31
 /* 80421920 003EAEE0  40 82 FF E4 */	bne lbl_80421904
-/* 80421924 003EAEE4  4B FF 24 BD */	bl func_80413DE0
-/* 80421928 003EAEE8  4B FF 27 B1 */	bl func_804140D8
-/* 8042192C 003EAEEC  48 00 7E D9 */	bl func_80429804
-/* 80421930 003EAEF0  48 00 73 29 */	bl func_80428C58
-/* 80421934 003EAEF4  48 00 78 0D */	bl func_80429140
+/* 80421924 003EAEE4  4B FF 24 BD */	bl GetInstance__Q44nw4r3snd6detail14ChannelManagerFv
+/* 80421928 003EAEE8  4B FF 27 B1 */	bl UpdateAllChannel__Q44nw4r3snd6detail14ChannelManagerFv
+/* 8042192C 003EAEEC  48 00 7E D9 */	bl CalcRandom__Q44nw4r3snd6detail4UtilFv
+/* 80421930 003EAEF0  48 00 73 29 */	bl GetInstance__Q44nw4r3snd6detail12VoiceManagerFv
+/* 80421934 003EAEF4  48 00 78 0D */	bl UpdateAllVoices__Q44nw4r3snd6detail12VoiceManagerFv
 /* 80421938 003EAEF8  4B F3 B0 49 */	bl OSGetTick
 /* 8042193C 003EAEFC  7C 1D 18 50 */	subf r0, r29, r3
 /* 80421940 003EAF00  83 DB 03 7C */	lwz r30, 0x37c(r27)

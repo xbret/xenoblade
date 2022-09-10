@@ -2,8 +2,60 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803DAFA4
-func_803DAFA4:
+.global GXGetTevSwapModeTable__Q34nw4r3g3d6ResTevCF13_GXTevSwapSelP15_GXTevColorChanP15_GXTevColorChanP15_GXTevColorChanP15_GXTevColorChan
+GXGetTevSwapModeTable__Q34nw4r3g3d6ResTevCF13_GXTevSwapSelP15_GXTevColorChanP15_GXTevColorChanP15_GXTevColorChanP15_GXTevColorChan:
+/* 803DAEF4 003A44B4  1C 04 00 14 */	mulli r0, r4, 0x14
+/* 803DAEF8 003A44B8  80 63 00 00 */	lwz r3, 0(r3)
+/* 803DAEFC 003A44BC  7D 23 02 14 */	add r9, r3, r0
+/* 803DAF00 003A44C0  88 09 00 20 */	lbz r0, 0x20(r9)
+/* 803DAF04 003A44C4  2C 00 00 00 */	cmpwi r0, 0
+/* 803DAF08 003A44C8  40 82 00 0C */	bne lbl_803DAF14
+/* 803DAF0C 003A44CC  38 60 00 00 */	li r3, 0
+/* 803DAF10 003A44D0  4E 80 00 20 */	blr
+lbl_803DAF14:
+/* 803DAF14 003A44D4  88 69 00 27 */	lbz r3, 0x27(r9)
+/* 803DAF18 003A44D8  2C 05 00 00 */	cmpwi r5, 0
+/* 803DAF1C 003A44DC  88 09 00 28 */	lbz r0, 0x28(r9)
+/* 803DAF20 003A44E0  54 6A 80 1E */	slwi r10, r3, 0x10
+/* 803DAF24 003A44E4  88 89 00 26 */	lbz r4, 0x26(r9)
+/* 803DAF28 003A44E8  54 03 40 2E */	slwi r3, r0, 8
+/* 803DAF2C 003A44EC  88 09 00 29 */	lbz r0, 0x29(r9)
+/* 803DAF30 003A44F0  50 8A C0 0E */	rlwimi r10, r4, 0x18, 0, 7
+/* 803DAF34 003A44F4  7D 4A 1B 78 */	or r10, r10, r3
+/* 803DAF38 003A44F8  7D 4A 03 78 */	or r10, r10, r0
+/* 803DAF3C 003A44FC  41 82 00 0C */	beq lbl_803DAF48
+/* 803DAF40 003A4500  55 40 07 BE */	clrlwi r0, r10, 0x1e
+/* 803DAF44 003A4504  90 05 00 00 */	stw r0, 0(r5)
+lbl_803DAF48:
+/* 803DAF48 003A4508  2C 06 00 00 */	cmpwi r6, 0
+/* 803DAF4C 003A450C  41 82 00 0C */	beq lbl_803DAF58
+/* 803DAF50 003A4510  55 40 F7 BE */	rlwinm r0, r10, 0x1e, 0x1e, 0x1f
+/* 803DAF54 003A4514  90 06 00 00 */	stw r0, 0(r6)
+lbl_803DAF58:
+/* 803DAF58 003A4518  88 69 00 31 */	lbz r3, 0x31(r9)
+/* 803DAF5C 003A451C  2C 07 00 00 */	cmpwi r7, 0
+/* 803DAF60 003A4520  88 09 00 32 */	lbz r0, 0x32(r9)
+/* 803DAF64 003A4524  54 65 80 1E */	slwi r5, r3, 0x10
+/* 803DAF68 003A4528  88 89 00 30 */	lbz r4, 0x30(r9)
+/* 803DAF6C 003A452C  54 03 40 2E */	slwi r3, r0, 8
+/* 803DAF70 003A4530  88 09 00 33 */	lbz r0, 0x33(r9)
+/* 803DAF74 003A4534  50 85 C0 0E */	rlwimi r5, r4, 0x18, 0, 7
+/* 803DAF78 003A4538  7C A5 1B 78 */	or r5, r5, r3
+/* 803DAF7C 003A453C  7C A5 03 78 */	or r5, r5, r0
+/* 803DAF80 003A4540  41 82 00 0C */	beq lbl_803DAF8C
+/* 803DAF84 003A4544  54 A0 07 BE */	clrlwi r0, r5, 0x1e
+/* 803DAF88 003A4548  90 07 00 00 */	stw r0, 0(r7)
+lbl_803DAF8C:
+/* 803DAF8C 003A454C  2C 08 00 00 */	cmpwi r8, 0
+/* 803DAF90 003A4550  41 82 00 0C */	beq lbl_803DAF9C
+/* 803DAF94 003A4554  54 A0 F7 BE */	rlwinm r0, r5, 0x1e, 0x1e, 0x1f
+/* 803DAF98 003A4558  90 08 00 00 */	stw r0, 0(r8)
+lbl_803DAF9C:
+/* 803DAF9C 003A455C  38 60 00 01 */	li r3, 1
+/* 803DAFA0 003A4560  4E 80 00 20 */	blr 
+
+.global GXSetTevSwapModeTable__Q34nw4r3g3d6ResTevF13_GXTevSwapSel15_GXTevColorChan15_GXTevColorChan15_GXTevColorChan15_GXTevColorChan
+GXSetTevSwapModeTable__Q34nw4r3g3d6ResTevF13_GXTevSwapSel15_GXTevColorChan15_GXTevColorChan15_GXTevColorChan15_GXTevColorChan:
 /* 803DAFA4 003A4564  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803DAFA8 003A4568  7C 08 02 A6 */	mflr r0
 /* 803DAFAC 003A456C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -49,8 +101,8 @@ func_803DAFA4:
 /* 803DB04C 003A460C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803DB050 003A4610  4E 80 00 20 */	blr 
 
-.global func_803DB054
-func_803DB054:
+.global GXSetTevAlphaIn__Q34nw4r3g3d6ResTevF13_GXTevStageID14_GXTevAlphaArg14_GXTevAlphaArg14_GXTevAlphaArg14_GXTevAlphaArg
+GXSetTevAlphaIn__Q34nw4r3g3d6ResTevF13_GXTevStageID14_GXTevAlphaArg14_GXTevAlphaArg14_GXTevAlphaArg14_GXTevAlphaArg:
 /* 803DB054 003A4614  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803DB058 003A4618  7C 08 02 A6 */	mflr r0
 /* 803DB05C 003A461C  54 8A 0F FE */	srwi r10, r4, 0x1f
@@ -88,8 +140,8 @@ func_803DB054:
 /* 803DB0DC 003A469C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803DB0E0 003A46A0  4E 80 00 20 */	blr 
 
-.global func_803DB0E4
-func_803DB0E4:
+.global GXSetTevAlphaOp__Q34nw4r3g3d6ResTevF13_GXTevStageID8_GXTevOp10_GXTevBias11_GXTevScaleUc11_GXTevRegID
+GXSetTevAlphaOp__Q34nw4r3g3d6ResTevF13_GXTevStageID8_GXTevOp10_GXTevBias11_GXTevScaleUc11_GXTevRegID:
 /* 803DB0E4 003A46A4  54 8B 0F FE */	srwi r11, r4, 0x1f
 /* 803DB0E8 003A46A8  54 80 07 FE */	clrlwi r0, r4, 0x1f
 /* 803DB0EC 003A46AC  7D 4B 22 14 */	add r10, r11, r4
@@ -134,8 +186,8 @@ lbl_803DB15C:
 /* 803DB184 003A4744  3C A0 FF FF */	lis r5, 0xffff
 /* 803DB188 003A4748  4B FF C7 00 */	b ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUlUl
 
-.global func_803DB18C
-func_803DB18C:
+.global GXSetTevKColorSel__Q34nw4r3g3d6ResTevF13_GXTevStageID15_GXTevKColorSel
+GXSetTevKColorSel__Q34nw4r3g3d6ResTevF13_GXTevStageID15_GXTevKColorSel:
 /* 803DB18C 003A474C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803DB190 003A4750  7C 08 02 A6 */	mflr r0
 /* 803DB194 003A4754  90 01 00 24 */	stw r0, 0x24(r1)
@@ -173,8 +225,8 @@ lbl_803DB1D0:
 /* 803DB210 003A47D0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803DB214 003A47D4  4E 80 00 20 */	blr 
 
-.global func_803DB218
-func_803DB218:
+.global GXSetTevKAlphaSel__Q34nw4r3g3d6ResTevF13_GXTevStageID15_GXTevKAlphaSel
+GXSetTevKAlphaSel__Q34nw4r3g3d6ResTevF13_GXTevStageID15_GXTevKAlphaSel:
 /* 803DB218 003A47D8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803DB21C 003A47DC  7C 08 02 A6 */	mflr r0
 /* 803DB220 003A47E0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -212,8 +264,8 @@ lbl_803DB25C:
 /* 803DB29C 003A485C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803DB2A0 003A4860  4E 80 00 20 */	blr 
 
-.global func_803DB2A4
-func_803DB2A4:
+.global GXGetTevOrder__Q34nw4r3g3d6ResTevCF13_GXTevStageIDP13_GXTexCoordIDP11_GXTexMapIDP12_GXChannelID
+GXGetTevOrder__Q34nw4r3g3d6ResTevCF13_GXTevStageIDP13_GXTexCoordIDP11_GXTexMapIDP12_GXChannelID:
 /* 803DB2A4 003A4864  54 80 0F FE */	srwi r0, r4, 0x1f
 /* 803DB2A8 003A4868  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DB2AC 003A486C  7C 00 22 14 */	add r0, r0, r4
@@ -273,8 +325,8 @@ lbl_803DB368:
 /* 803DB368 003A4928  38 60 00 01 */	li r3, 1
 /* 803DB36C 003A492C  4E 80 00 20 */	blr 
 
-.global func_803DB370
-func_803DB370:
+.global GXSetTevOrder__Q34nw4r3g3d6ResTevF13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID
+GXSetTevOrder__Q34nw4r3g3d6ResTevF13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID:
 /* 803DB370 003A4930  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803DB374 003A4934  7C 08 02 A6 */	mflr r0
 /* 803DB378 003A4938  90 01 00 34 */	stw r0, 0x34(r1)
@@ -288,7 +340,7 @@ func_803DB370:
 /* 803DB398 003A4958  38 A1 00 0C */	addi r5, r1, 0xc
 /* 803DB39C 003A495C  38 C1 00 08 */	addi r6, r1, 8
 /* 803DB3A0 003A4960  38 E0 00 00 */	li r7, 0
-/* 803DB3A4 003A4964  4B FF FF 01 */	bl func_803DB2A4
+/* 803DB3A4 003A4964  4B FF FF 01 */	bl GXGetTevOrder__Q34nw4r3g3d6ResTevCF13_GXTevStageIDP13_GXTexCoordIDP11_GXTexMapIDP12_GXChannelID
 /* 803DB3A8 003A4968  2C 03 00 00 */	cmpwi r3, 0
 /* 803DB3AC 003A496C  41 82 00 2C */	beq lbl_803DB3D8
 /* 803DB3B0 003A4970  80 61 00 0C */	lwz r3, 0xc(r1)
@@ -350,8 +402,8 @@ lbl_803DB454:
 /* 803DB484 003A4A44  38 21 00 30 */	addi r1, r1, 0x30
 /* 803DB488 003A4A48  4E 80 00 20 */	blr 
 
-.global func_803DB48C
-func_803DB48C:
+.global GXSetTevColorIn__Q34nw4r3g3d6ResTevF13_GXTevStageID14_GXTevColorArg14_GXTevColorArg14_GXTevColorArg14_GXTevColorArg
+GXSetTevColorIn__Q34nw4r3g3d6ResTevF13_GXTevStageID14_GXTevColorArg14_GXTevColorArg14_GXTevColorArg14_GXTevColorArg:
 /* 803DB48C 003A4A4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803DB490 003A4A50  7C 08 02 A6 */	mflr r0
 /* 803DB494 003A4A54  54 8C 0F FE */	srwi r12, r4, 0x1f
@@ -388,8 +440,8 @@ func_803DB48C:
 /* 803DB510 003A4AD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803DB514 003A4AD4  4E 80 00 20 */	blr 
 
-.global func_803DB518
-func_803DB518:
+.global GXSetTevColorOp__Q34nw4r3g3d6ResTevF13_GXTevStageID8_GXTevOp10_GXTevBias11_GXTevScaleUc11_GXTevRegID
+GXSetTevColorOp__Q34nw4r3g3d6ResTevF13_GXTevStageID8_GXTevOp10_GXTevBias11_GXTevScaleUc11_GXTevRegID:
 /* 803DB518 003A4AD8  54 8B 0F FE */	srwi r11, r4, 0x1f
 /* 803DB51C 003A4ADC  54 80 07 FE */	clrlwi r0, r4, 0x1f
 /* 803DB520 003A4AE0  7D 4B 22 14 */	add r10, r11, r4
@@ -434,8 +486,8 @@ lbl_803DB590:
 /* 803DB5B8 003A4B78  3C A0 FF FF */	lis r5, 0xffff
 /* 803DB5BC 003A4B7C  4B FF C2 CC */	b ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUlUl
 
-.global func_803DB5C0
-func_803DB5C0:
+.global SetNumTevStages__Q34nw4r3g3d6ResTevFUc
+SetNumTevStages__Q34nw4r3g3d6ResTevFUc:
 /* 803DB5C0 003A4B80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803DB5C4 003A4B84  7C 08 02 A6 */	mflr r0
 /* 803DB5C8 003A4B88  28 04 00 01 */	cmplwi r4, 1
@@ -461,7 +513,7 @@ lbl_803DB60C:
 /* 803DB614 003A4BD4  38 A0 00 FF */	li r5, 0xff
 /* 803DB618 003A4BD8  38 C0 00 FF */	li r6, 0xff
 /* 803DB61C 003A4BDC  38 E0 00 FF */	li r7, 0xff
-/* 803DB620 003A4BE0  4B FF FD 51 */	bl func_803DB370
+/* 803DB620 003A4BE0  4B FF FD 51 */	bl GXSetTevOrder__Q34nw4r3g3d6ResTevF13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID
 /* 803DB624 003A4BE4  3B BD 00 01 */	addi r29, r29, 1
 lbl_803DB628:
 /* 803DB628 003A4BE8  88 1F 00 0C */	lbz r0, 0xc(r31)

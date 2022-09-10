@@ -258,10 +258,10 @@ lbl_8040C800:
 /* 8040C814 003D5DD4  42 00 FF EC */	bdnz lbl_8040C800
 lbl_8040C818:
 /* 8040C818 003D5DD8  3C 80 80 41 */	lis r4, lbl_8040C90C@ha
-/* 8040C81C 003D5DDC  3C A0 80 41 */	lis r5, __dt__Q34nw4r2ut30LinkList$$0Q34nw4r3snd6FxBase$$44$$1Fv@ha
+/* 8040C81C 003D5DDC  3C A0 80 41 */	lis r5, __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv@ha
 /* 8040C820 003D5DE0  38 84 C9 0C */	addi r4, r4, lbl_8040C90C@l
 /* 8040C824 003D5DE4  38 C0 00 0C */	li r6, 0xc
-/* 8040C828 003D5DE8  38 A5 C9 2C */	addi r5, r5, __dt__Q34nw4r2ut30LinkList$$0Q34nw4r3snd6FxBase$$44$$1Fv@l
+/* 8040C828 003D5DE8  38 A5 C9 2C */	addi r5, r5, __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv@l
 /* 8040C82C 003D5DEC  38 E0 00 03 */	li r7, 3
 /* 8040C830 003D5DF0  38 63 00 B4 */	addi r3, r3, 0xb4
 /* 8040C834 003D5DF4  4B EA D2 CD */	bl __construct_array
@@ -328,8 +328,9 @@ lbl_8040C90C:
 /* 8040C924 003D5EE4  90 83 00 08 */	stw r4, 8(r3)
 /* 8040C928 003D5EE8  4E 80 00 20 */	blr
 
-.global __dt__Q34nw4r2ut30LinkList$$0Q34nw4r3snd6FxBase$$44$$1Fv
-__dt__Q34nw4r2ut30LinkList$$0Q34nw4r3snd6FxBase$$44$$1Fv:
+#__dt__Q34nw4r2ut30LinkList<Q34nw4r3snd6FxBase,4>Fv
+.global __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv
+__dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv:
 /* 8040C92C 003D5EEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040C930 003D5EF0  7C 08 02 A6 */	mflr r0
 /* 8040C934 003D5EF4  2C 03 00 00 */	cmpwi r3, 0
@@ -394,9 +395,9 @@ __dt__Q44nw4r3snd6detail9AxManagerFv:
 /* 8040CA00 003D5FC0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8040CA04 003D5FC4  7C 7E 1B 78 */	mr r30, r3
 /* 8040CA08 003D5FC8  41 82 00 3C */	beq lbl_8040CA44
-/* 8040CA0C 003D5FCC  3C 80 80 41 */	lis r4, __dt__Q34nw4r2ut30LinkList$$0Q34nw4r3snd6FxBase$$44$$1Fv@ha
+/* 8040CA0C 003D5FCC  3C 80 80 41 */	lis r4, __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv@ha
 /* 8040CA10 003D5FD0  38 A0 00 0C */	li r5, 0xc
-/* 8040CA14 003D5FD4  38 84 C9 2C */	addi r4, r4, __dt__Q34nw4r2ut30LinkList$$0Q34nw4r3snd6FxBase$$44$$1Fv@l
+/* 8040CA14 003D5FD4  38 84 C9 2C */	addi r4, r4, __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv@l
 /* 8040CA18 003D5FD8  38 C0 00 03 */	li r6, 3
 /* 8040CA1C 003D5FDC  38 63 00 B4 */	addi r3, r3, 0xb4
 /* 8040CA20 003D5FE0  4B EA D1 D9 */	bl __destroy_arr
@@ -741,9 +742,9 @@ lbl_8040CEA8:
 /* 8040CED8 003D6498  38 03 00 01 */	addi r0, r3, 1
 /* 8040CEDC 003D649C  90 1D 00 28 */	stw r0, 0x28(r29)
 lbl_8040CEE0:
-/* 8040CEE0 003D64A0  48 01 BD 79 */	bl func_80428C58
+/* 8040CEE0 003D64A0  48 01 BD 79 */	bl GetInstance__Q44nw4r3snd6detail12VoiceManagerFv
 /* 8040CEE4 003D64A4  38 80 00 08 */	li r4, 8
-/* 8040CEE8 003D64A8  48 01 C4 79 */	bl func_80429360
+/* 8040CEE8 003D64A8  48 01 C4 79 */	bl UpdateAllVoicesSync__Q44nw4r3snd6detail12VoiceManagerFUl
 lbl_8040CEEC:
 /* 8040CEEC 003D64AC  80 7D 00 48 */	lwz r3, 0x48(r29)
 /* 8040CEF0 003D64B0  80 1D 00 44 */	lwz r0, 0x44(r29)
@@ -951,9 +952,9 @@ lbl_8040D1B0:
 /* 8040D1B0 003D6770  38 60 00 00 */	li r3, 0
 /* 8040D1B4 003D6774  4B EC 68 1D */	bl AXSetMode
 lbl_8040D1B8:
-/* 8040D1B8 003D6778  48 01 BA A1 */	bl func_80428C58
+/* 8040D1B8 003D6778  48 01 BA A1 */	bl GetInstance__Q44nw4r3snd6detail12VoiceManagerFv
 /* 8040D1BC 003D677C  38 80 00 10 */	li r4, 0x10
-/* 8040D1C0 003D6780  48 01 C1 A1 */	bl func_80429360
+/* 8040D1C0 003D6780  48 01 C1 A1 */	bl UpdateAllVoicesSync__Q44nw4r3snd6detail12VoiceManagerFUl
 /* 8040D1C4 003D6784  3B 99 00 B4 */	addi r28, r25, 0xb4
 /* 8040D1C8 003D6788  3B 60 00 00 */	li r27, 0
 lbl_8040D1CC:
@@ -1050,9 +1051,9 @@ lbl_8040D2D0:
 /* 8040D2F8 003D68B8  7C 04 02 14 */	add r0, r4, r0
 /* 8040D2FC 003D68BC  90 03 00 24 */	stw r0, 0x24(r3)
 /* 8040D300 003D68C0  40 82 00 10 */	bne lbl_8040D310
-/* 8040D304 003D68C4  48 01 B9 55 */	bl func_80428C58
+/* 8040D304 003D68C4  48 01 B9 55 */	bl GetInstance__Q44nw4r3snd6detail12VoiceManagerFv
 /* 8040D308 003D68C8  38 80 00 08 */	li r4, 8
-/* 8040D30C 003D68CC  48 01 C0 55 */	bl func_80429360
+/* 8040D30C 003D68CC  48 01 C0 55 */	bl UpdateAllVoicesSync__Q44nw4r3snd6detail12VoiceManagerFUl
 lbl_8040D310:
 /* 8040D310 003D68D0  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8040D314 003D68D4  7C 08 03 A6 */	mtlr r0
@@ -1744,7 +1745,8 @@ lbl_8040DC9C:
 /* 8040DCA4 003D7264  80 01 00 44 */	lwz r0, 0x44(r1)
 /* 8040DCA8 003D7268  7C 08 03 A6 */	mtlr r0
 /* 8040DCAC 003D726C  38 21 00 40 */	addi r1, r1, 0x40
-/* 8040DCB0 003D7270  4E 80 00 20 */	blr 
+/* 8040DCB0 003D7270  4E 80 00 20 */	blr
+
 .global sinit_8040DCB4
 sinit_8040DCB4:
 /* 8040DCB4 003D7274  94 21 FF F0 */	stwu r1, -0x10(r1)

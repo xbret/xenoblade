@@ -2,63 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80418ABC
-func_80418ABC:
-/* 80418ABC 003E207C  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80418AC0 003E2080  7C 08 02 A6 */	mflr r0
-/* 80418AC4 003E2084  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80418AC8 003E2088  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80418ACC 003E208C  93 C1 00 08 */	stw r30, 8(r1)
-/* 80418AD0 003E2090  7C 7E 1B 78 */	mr r30, r3
-/* 80418AD4 003E2094  48 00 88 11 */	bl func_804212E4
-/* 80418AD8 003E2098  38 63 03 54 */	addi r3, r3, 0x354
-/* 80418ADC 003E209C  4B F4 11 85 */	bl OSLockMutex
-/* 80418AE0 003E20A0  83 FE 00 0C */	lwz r31, 0xc(r30)
-/* 80418AE4 003E20A4  4B FF C5 51 */	bl func_80415034
-/* 80418AE8 003E20A8  80 1E 00 14 */	lwz r0, 0x14(r30)
-/* 80418AEC 003E20AC  7F E4 FB 78 */	mr r4, r31
-/* 80418AF0 003E20B0  38 C0 00 00 */	li r6, 0
-/* 80418AF4 003E20B4  7C BF 00 50 */	subf r5, r31, r0
-/* 80418AF8 003E20B8  4B FF C6 55 */	bl func_8041514C
-/* 80418AFC 003E20BC  83 FE 00 0C */	lwz r31, 0xc(r30)
-/* 80418B00 003E20C0  4B FF C5 35 */	bl func_80415034
-/* 80418B04 003E20C4  80 1E 00 14 */	lwz r0, 0x14(r30)
-/* 80418B08 003E20C8  7F E4 FB 78 */	mr r4, r31
-/* 80418B0C 003E20CC  38 C0 00 00 */	li r6, 0
-/* 80418B10 003E20D0  7C BF 00 50 */	subf r5, r31, r0
-/* 80418B14 003E20D4  4B FF C7 75 */	bl func_80415288
-/* 80418B18 003E20D8  80 1E 00 0C */	lwz r0, 0xc(r30)
-/* 80418B1C 003E20DC  90 1E 00 14 */	stw r0, 0x14(r30)
-/* 80418B20 003E20E0  48 00 87 C5 */	bl func_804212E4
-/* 80418B24 003E20E4  38 63 03 54 */	addi r3, r3, 0x354
-/* 80418B28 003E20E8  4B F4 12 19 */	bl OSUnlockMutex
-/* 80418B2C 003E20EC  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80418B30 003E20F0  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80418B34 003E20F4  83 C1 00 08 */	lwz r30, 8(r1)
-/* 80418B38 003E20F8  7C 08 03 A6 */	mtlr r0
-/* 80418B3C 003E20FC  38 21 00 10 */	addi r1, r1, 0x10
-/* 80418B40 003E2100  4E 80 00 20 */	blr 
-
-.global func_80418B44
-func_80418B44:
-/* 80418B44 003E2104  80 83 00 14 */	lwz r4, 0x14(r3)
-/* 80418B48 003E2108  80 03 00 10 */	lwz r0, 0x10(r3)
-/* 80418B4C 003E210C  7C 64 00 50 */	subf r3, r4, r0
-/* 80418B50 003E2110  4E 80 00 20 */	blr 
-
-.global func_80418B54
-func_80418B54:
-/* 80418B54 003E2114  90 83 00 04 */	stw r4, 4(r3)
-/* 80418B58 003E2118  4E 80 00 20 */	blr 
-
-.global func_80418B5C
-func_80418B5C:
-/* 80418B5C 003E211C  38 00 00 00 */	li r0, 0
-/* 80418B60 003E2120  90 03 00 04 */	stw r0, 4(r3)
-/* 80418B64 003E2124  4E 80 00 20 */	blr 
-
-.global func_80418B68
-func_80418B68:
+.global __ct__Q34nw4r3snd13RemoteSpeakerFv
+__ct__Q34nw4r3snd13RemoteSpeakerFv:
 /* 80418B68 003E2128  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80418B6C 003E212C  7C 08 02 A6 */	mflr r0
 /* 80418B70 003E2130  90 01 00 14 */	stw r0, 0x14(r1)
@@ -92,8 +37,8 @@ func_80418B68:
 /* 80418BE0 003E21A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80418BE4 003E21A4  4E 80 00 20 */	blr 
 
-.global func_80418BE8
-func_80418BE8:
+.global Update__Q34nw4r3snd13RemoteSpeakerFv
+Update__Q34nw4r3snd13RemoteSpeakerFv:
 /* 80418BE8 003E21A8  88 03 00 05 */	lbz r0, 5(r3)
 /* 80418BEC 003E21AC  2C 00 00 00 */	cmpwi r0, 0
 /* 80418BF0 003E21B0  4C 82 00 20 */	bnelr 
@@ -157,8 +102,8 @@ lbl_80418C90:
 /* 80418CB4 003E2274  4B F5 44 0C */	b WPADControlSpeaker
 /* 80418CB8 003E2278  4E 80 00 20 */	blr 
 
-.global func_80418CBC
-func_80418CBC:
+.global UpdateStreamData__Q34nw4r3snd13RemoteSpeakerFPCs
+UpdateStreamData__Q34nw4r3snd13RemoteSpeakerFPCs:
 /* 80418CBC 003E227C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80418CC0 003E2280  7C 08 02 A6 */	mflr r0
 /* 80418CC4 003E2284  90 01 00 44 */	stw r0, 0x44(r1)
@@ -386,9 +331,9 @@ func_80418FC0:
 /* 80418FD4 003E2594  7C 9E 23 78 */	mr r30, r4
 /* 80418FD8 003E2598  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80418FDC 003E259C  7C 7D 1B 78 */	mr r29, r3
-/* 80418FE0 003E25A0  48 00 03 75 */	bl func_80419354
+/* 80418FE0 003E25A0  48 00 03 75 */	bl GetInstance__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
 /* 80418FE4 003E25A4  7F A4 EB 78 */	mr r4, r29
-/* 80418FE8 003E25A8  48 00 04 05 */	bl func_804193EC
+/* 80418FE8 003E25A8  48 00 04 05 */	bl GetRemoteSpeaker__Q44nw4r3snd6detail20RemoteSpeakerManagerFi
 /* 80418FEC 003E25AC  2C 1E FF FF */	cmpwi r30, -1
 /* 80418FF0 003E25B0  7C 7F 1B 78 */	mr r31, r3
 /* 80418FF4 003E25B4  41 82 00 60 */	beq lbl_80419054
@@ -463,9 +408,9 @@ func_804190CC:
 /* 804190E0 003E26A0  7C 9E 23 78 */	mr r30, r4
 /* 804190E4 003E26A4  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 804190E8 003E26A8  7C 7D 1B 78 */	mr r29, r3
-/* 804190EC 003E26AC  48 00 02 69 */	bl func_80419354
+/* 804190EC 003E26AC  48 00 02 69 */	bl GetInstance__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
 /* 804190F0 003E26B0  7F A4 EB 78 */	mr r4, r29
-/* 804190F4 003E26B4  48 00 02 F9 */	bl func_804193EC
+/* 804190F4 003E26B4  48 00 02 F9 */	bl GetRemoteSpeaker__Q44nw4r3snd6detail20RemoteSpeakerManagerFi
 /* 804190F8 003E26B8  2C 1E FF FF */	cmpwi r30, -1
 /* 804190FC 003E26BC  7C 7F 1B 78 */	mr r31, r3
 /* 80419100 003E26C0  41 82 00 44 */	beq lbl_80419144
@@ -531,9 +476,9 @@ func_804191B4:
 /* 804191C8 003E2788  7C 9E 23 78 */	mr r30, r4
 /* 804191CC 003E278C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 804191D0 003E2790  7C 7D 1B 78 */	mr r29, r3
-/* 804191D4 003E2794  48 00 01 81 */	bl func_80419354
+/* 804191D4 003E2794  48 00 01 81 */	bl GetInstance__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
 /* 804191D8 003E2798  7F A4 EB 78 */	mr r4, r29
-/* 804191DC 003E279C  48 00 02 11 */	bl func_804193EC
+/* 804191DC 003E279C  48 00 02 11 */	bl GetRemoteSpeaker__Q44nw4r3snd6detail20RemoteSpeakerManagerFi
 /* 804191E0 003E27A0  2C 1E FF FF */	cmpwi r30, -1
 /* 804191E4 003E27A4  7C 7F 1B 78 */	mr r31, r3
 /* 804191E8 003E27A8  41 82 00 44 */	beq lbl_8041922C

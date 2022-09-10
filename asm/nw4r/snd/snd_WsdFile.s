@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80429F70
-func_80429F70:
+.global __ct__Q44nw4r3snd6detail13WsdFileReaderFPCv
+__ct__Q44nw4r3snd6detail13WsdFileReaderFPCv:
 /* 80429F70 003F3530  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80429F74 003F3534  38 C0 00 00 */	li r6, 0
 /* 80429F78 003F3538  90 C3 00 00 */	stw r6, 0(r3)
@@ -45,8 +45,8 @@ lbl_80429FE4:
 /* 80429FF8 003F35B8  90 03 00 08 */	stw r0, 8(r3)
 /* 80429FFC 003F35BC  4E 80 00 20 */	blr 
 
-.global func_8042A000
-func_8042A000:
+.global ReadWaveSoundInfo__Q44nw4r3snd6detail13WsdFileReaderCFPQ44nw4r3snd6detail13WaveSoundInfoi
+ReadWaveSoundInfo__Q44nw4r3snd6detail13WsdFileReaderCFPQ44nw4r3snd6detail13WaveSoundInfoi:
 /* 8042A000 003F35C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042A004 003F35C4  7C 08 02 A6 */	mflr r0
 /* 8042A008 003F35C8  80 C3 00 04 */	lwz r6, 4(r3)
@@ -60,13 +60,13 @@ func_8042A000:
 /* 8042A028 003F35E8  7C 7E 1B 78 */	mr r30, r3
 /* 8042A02C 003F35EC  88 64 00 0C */	lbz r3, 0xc(r4)
 /* 8042A030 003F35F0  80 84 00 10 */	lwz r4, 0x10(r4)
-/* 8042A034 003F35F4  4B FF F7 F5 */	bl func_80429828
+/* 8042A034 003F35F4  4B FF F7 F5 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 /* 8042A038 003F35F8  7C 64 1B 78 */	mr r4, r3
 /* 8042A03C 003F35FC  80 BE 00 04 */	lwz r5, 4(r30)
 /* 8042A040 003F3600  88 63 00 00 */	lbz r3, 0(r3)
 /* 8042A044 003F3604  80 84 00 04 */	lwz r4, 4(r4)
 /* 8042A048 003F3608  38 A5 00 08 */	addi r5, r5, 8
-/* 8042A04C 003F360C  4B FF F7 DD */	bl func_80429828
+/* 8042A04C 003F360C  4B FF F7 DD */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 /* 8042A050 003F3610  80 9E 00 00 */	lwz r4, 0(r30)
 /* 8042A054 003F3614  A0 04 00 06 */	lhz r0, 6(r4)
 /* 8042A058 003F3618  28 00 01 02 */	cmplwi r0, 0x102
@@ -123,8 +123,8 @@ lbl_8042A104:
 /* 8042A118 003F36D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042A11C 003F36DC  4E 80 00 20 */	blr 
 
-.global func_8042A120
-func_8042A120:
+.global ReadWaveSoundNoteInfo__Q44nw4r3snd6detail13WsdFileReaderCFPQ44nw4r3snd6detail17WaveSoundNoteInfoii
+ReadWaveSoundNoteInfo__Q44nw4r3snd6detail13WsdFileReaderCFPQ44nw4r3snd6detail17WaveSoundNoteInfoii:
 /* 8042A120 003F36E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042A124 003F36E4  7C 08 02 A6 */	mflr r0
 /* 8042A128 003F36E8  80 E3 00 04 */	lwz r7, 4(r3)
@@ -140,20 +140,20 @@ func_8042A120:
 /* 8042A150 003F3710  7C 7D 1B 78 */	mr r29, r3
 /* 8042A154 003F3714  88 64 00 0C */	lbz r3, 0xc(r4)
 /* 8042A158 003F3718  80 84 00 10 */	lwz r4, 0x10(r4)
-/* 8042A15C 003F371C  4B FF F6 CD */	bl func_80429828
+/* 8042A15C 003F371C  4B FF F6 CD */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 /* 8042A160 003F3720  7C 64 1B 78 */	mr r4, r3
 /* 8042A164 003F3724  80 BD 00 04 */	lwz r5, 4(r29)
 /* 8042A168 003F3728  88 63 00 10 */	lbz r3, 0x10(r3)
 /* 8042A16C 003F372C  80 84 00 14 */	lwz r4, 0x14(r4)
 /* 8042A170 003F3730  38 A5 00 08 */	addi r5, r5, 8
-/* 8042A174 003F3734  4B FF F6 B5 */	bl func_80429828
+/* 8042A174 003F3734  4B FF F6 B5 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 /* 8042A178 003F3738  57 C0 18 38 */	slwi r0, r30, 3
 /* 8042A17C 003F373C  80 9D 00 04 */	lwz r4, 4(r29)
 /* 8042A180 003F3740  7C C3 02 14 */	add r6, r3, r0
 /* 8042A184 003F3744  38 A4 00 08 */	addi r5, r4, 8
 /* 8042A188 003F3748  88 66 00 04 */	lbz r3, 4(r6)
 /* 8042A18C 003F374C  80 86 00 08 */	lwz r4, 8(r6)
-/* 8042A190 003F3750  4B FF F6 99 */	bl func_80429828
+/* 8042A190 003F3750  4B FF F6 99 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 /* 8042A194 003F3754  80 03 00 00 */	lwz r0, 0(r3)
 /* 8042A198 003F3758  80 9D 00 00 */	lwz r4, 0(r29)
 /* 8042A19C 003F375C  90 1F 00 00 */	stw r0, 0(r31)
@@ -198,8 +198,8 @@ lbl_8042A218:
 /* 8042A230 003F37F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042A234 003F37F4  4E 80 00 20 */	blr 
 
-.global func_8042A238
-func_8042A238:
+.global ReadWaveInfo__Q44nw4r3snd6detail13WsdFileReaderCFiPQ44nw4r3snd6detail8WaveInfoPCv
+ReadWaveInfo__Q44nw4r3snd6detail13WsdFileReaderCFiPQ44nw4r3snd6detail8WaveInfoPCv:
 /* 8042A238 003F37F8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8042A23C 003F37FC  7C 08 02 A6 */	mflr r0
 /* 8042A240 003F3800  80 E3 00 08 */	lwz r7, 8(r3)
@@ -214,10 +214,10 @@ func_8042A238:
 /* 8042A264 003F3824  40 82 00 4C */	bne lbl_8042A2B0
 /* 8042A268 003F3828  7F E4 FB 78 */	mr r4, r31
 /* 8042A26C 003F382C  38 61 00 10 */	addi r3, r1, 0x10
-/* 8042A270 003F3830  4B FF F5 DD */	bl func_8042984C
+/* 8042A270 003F3830  4B FF F5 DD */	bl __ct__Q44nw4r3snd6detail17WaveArchiveReaderFPCv
 /* 8042A274 003F3834  7F A4 EB 78 */	mr r4, r29
 /* 8042A278 003F3838  38 61 00 10 */	addi r3, r1, 0x10
-/* 8042A27C 003F383C  4B FF F6 45 */	bl func_804298C0
+/* 8042A27C 003F383C  4B FF F6 45 */	bl GetWaveFile__Q44nw4r3snd6detail17WaveArchiveReaderCFi
 /* 8042A280 003F3840  2C 03 00 00 */	cmpwi r3, 0
 /* 8042A284 003F3844  40 82 00 0C */	bne lbl_8042A290
 /* 8042A288 003F3848  38 60 00 00 */	li r3, 0
@@ -225,11 +225,11 @@ func_8042A238:
 lbl_8042A290:
 /* 8042A290 003F3850  7C 64 1B 78 */	mr r4, r3
 /* 8042A294 003F3854  38 61 00 0C */	addi r3, r1, 0xc
-/* 8042A298 003F3858  4B FF F6 B1 */	bl func_80429948
+/* 8042A298 003F3858  4B FF F6 B1 */	bl __ct__Q44nw4r3snd6detail14WaveFileReaderFPCQ54nw4r3snd6detail8WaveFile10FileHeader
 /* 8042A29C 003F385C  7F C4 F3 78 */	mr r4, r30
 /* 8042A2A0 003F3860  38 61 00 0C */	addi r3, r1, 0xc
 /* 8042A2A4 003F3864  38 A0 00 00 */	li r5, 0
-/* 8042A2A8 003F3868  4B FF F6 C9 */	bl func_80429970
+/* 8042A2A8 003F3868  4B FF F6 C9 */	bl ReadWaveInfo__Q44nw4r3snd6detail14WaveFileReaderCFPQ44nw4r3snd6detail8WaveInfoPCv
 /* 8042A2AC 003F386C  48 00 00 64 */	b lbl_8042A310
 lbl_8042A2B0:
 /* 8042A2B0 003F3870  80 63 00 00 */	lwz r3, 0(r3)
@@ -254,11 +254,11 @@ lbl_8042A2E8:
 /* 8042A2F4 003F38B4  7C 80 3A 14 */	add r4, r0, r7
 lbl_8042A2F8:
 /* 8042A2F8 003F38B8  38 61 00 08 */	addi r3, r1, 8
-/* 8042A2FC 003F38BC  4B FF F6 6D */	bl func_80429968
+/* 8042A2FC 003F38BC  4B FF F6 6D */	bl __ct__Q44nw4r3snd6detail14WaveFileReaderFPCQ54nw4r3snd6detail8WaveFile8WaveInfo
 /* 8042A300 003F38C0  7F C4 F3 78 */	mr r4, r30
 /* 8042A304 003F38C4  7F E5 FB 78 */	mr r5, r31
 /* 8042A308 003F38C8  38 61 00 08 */	addi r3, r1, 8
-/* 8042A30C 003F38CC  4B FF F6 65 */	bl func_80429970
+/* 8042A30C 003F38CC  4B FF F6 65 */	bl ReadWaveInfo__Q44nw4r3snd6detail14WaveFileReaderCFPQ44nw4r3snd6detail8WaveInfoPCv
 lbl_8042A310:
 /* 8042A310 003F38D0  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 8042A314 003F38D4  83 E1 00 2C */	lwz r31, 0x2c(r1)

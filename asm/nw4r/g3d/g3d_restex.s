@@ -25,6 +25,7 @@ lbl_803DD5B4:
 /* 803DD5B4 003A6B74  38 60 00 01 */	li r3, 1
 /* 803DD5B8 003A6B78  4E 80 00 20 */	blr 
 
+#GetParent__Q34nw4r3g3d6ResTexFv or GetParent__Q34nw4r3g3d6ResTexCFv
 .global func_803DD5BC
 func_803DD5BC:
 /* 803DD5BC 003A6B7C  80 63 00 00 */	lwz r3, 0(r3)

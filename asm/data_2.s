@@ -40959,20 +40959,20 @@ lbl_8056CF28:
 	# ROM: 0x569028
 	.4byte 0
 	.4byte 0
-	.4byte func_803F5B40
-	.4byte func_803F52A8
+	.4byte IsDerivedFrom__Q34nw4r3g3d8ScnGroupCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d8ScnGroupFUlUlPv
 	.4byte __dt__Q34nw4r3g3d8ScnGroupFv
-	.4byte func_803F5BF8
-	.4byte func_803F5BC8
-	.4byte func_803F5058
-	.4byte func_803F4678
-	.4byte func_803F4810
-	.4byte func_803F493C
-	.4byte func_803F4948
-	.4byte func_803F440C
-	.4byte func_803F5740
-	.4byte func_803F58CC
-	.4byte func_803F5988
+	.4byte GetTypeObj__Q34nw4r3g3d8ScnGroupCFv
+	.4byte GetTypeName__Q34nw4r3g3d8ScnGroupCFv
+	.4byte ForEach__Q34nw4r3g3d8ScnGroupFPFPQ34nw4r3g3d6ScnObjPv_Q44nw4r3g3d6ScnObj13ForEachResultPvb
+	.4byte SetScnObjOption__Q34nw4r3g3d6ScnObjFUlUl
+	.4byte GetScnObjOption__Q34nw4r3g3d6ScnObjCFUlPUl
+	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
+	.4byte CalcWorldMtx__Q34nw4r3g3d6ScnObjFPCQ34nw4r4math5MTX34PUl
+	.4byte Insert__Q34nw4r3g3d8ScnGroupFUlPQ34nw4r3g3d6ScnObj
+	.4byte Remove__Q34nw4r3g3d8ScnGroupFUl
+	.4byte Remove__Q34nw4r3g3d8ScnGroupFPQ34nw4r3g3d6ScnObj
 
 
 .global lbl_8056CF68
@@ -40980,17 +40980,17 @@ lbl_8056CF68:
 	# ROM: 0x569068
 	.4byte 0
 	.4byte 0
-	.4byte func_803F5B90
+	.4byte IsDerivedFrom__Q34nw4r3g3d6ScnObjCFQ44nw4r3g3d6G3dObj7TypeObj
 	.4byte 0
 	.4byte __dt__Q34nw4r3g3d6ScnObjFv
-	.4byte func_803F5C34
-	.4byte func_803F5C04
+	.4byte GetTypeObj__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetTypeName__Q34nw4r3g3d6ScnObjCFv
 	.4byte 0
-	.4byte func_803F4678
-	.4byte func_803F4810
-	.4byte func_803F493C
-	.4byte func_803F4948
-	.4byte func_803F440C
+	.4byte SetScnObjOption__Q34nw4r3g3d6ScnObjFUlUl
+	.4byte GetScnObjOption__Q34nw4r3g3d6ScnObjCFUlPUl
+	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
+	.4byte CalcWorldMtx__Q34nw4r3g3d6ScnObjFPCQ34nw4r4math5MTX34PUl
 	.4byte 0
 
 
@@ -41021,15 +41021,15 @@ lbl_8056CFD0:
 	.4byte __dt__Q34nw4r3g3d7ScnRootFv
 	.4byte GetTypeObj__Q34nw4r3g3d7ScnRootCFv
 	.4byte GetTypeName__Q34nw4r3g3d7ScnRootCFv
-	.4byte func_803F5058
-	.4byte func_803F4678
-	.4byte func_803F4810
-	.4byte func_803F493C
-	.4byte func_803F4948
-	.4byte func_803F440C
-	.4byte func_803F5740
-	.4byte func_803F58CC
-	.4byte func_803F5988
+	.4byte ForEach__Q34nw4r3g3d8ScnGroupFPFPQ34nw4r3g3d6ScnObjPv_Q44nw4r3g3d6ScnObj13ForEachResultPvb
+	.4byte SetScnObjOption__Q34nw4r3g3d6ScnObjFUlUl
+	.4byte GetScnObjOption__Q34nw4r3g3d6ScnObjCFUlPUl
+	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
+	.4byte CalcWorldMtx__Q34nw4r3g3d6ScnObjFPCQ34nw4r4math5MTX34PUl
+	.4byte Insert__Q34nw4r3g3d8ScnGroupFUlPQ34nw4r3g3d6ScnObj
+	.4byte Remove__Q34nw4r3g3d8ScnGroupFUl
+	.4byte Remove__Q34nw4r3g3d8ScnGroupFPQ34nw4r3g3d6ScnObj
 
 
 .global lbl_8056D010
@@ -41060,12 +41060,12 @@ lbl_8056D038:
 	.4byte __dt__Q34nw4r3g3d12ScnMdlSimpleFv
 	.4byte GetTypeObj__Q34nw4r3g3d12ScnMdlSimpleCFv
 	.4byte GetTypeName__Q34nw4r3g3d12ScnMdlSimpleCFv
-	.4byte func_803F4A88
+	.4byte ForEach__Q34nw4r3g3d7ScnLeafFPFPQ34nw4r3g3d6ScnObjPv_Q44nw4r3g3d6ScnObj13ForEachResultPvb
 	.4byte SetScnObjOption__Q34nw4r3g3d12ScnMdlSimpleFUlUl
 	.4byte GetScnObjOption__Q34nw4r3g3d12ScnMdlSimpleCFUlPUl
-	.4byte func_803F493C
-	.4byte func_803F4948
-	.4byte func_803F4B54
+	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
+	.4byte CalcWorldMtx__Q34nw4r3g3d7ScnLeafFPCQ34nw4r4math5MTX34PUl
 	.4byte SetAnmObj__Q34nw4r3g3d12ScnMdlSimpleFPQ34nw4r3g3d6AnmObjQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 	.4byte RemoveAnmObj__Q34nw4r3g3d12ScnMdlSimpleFPQ34nw4r3g3d6AnmObj
 	.4byte RemoveAnmObj__Q34nw4r3g3d12ScnMdlSimpleFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
@@ -41083,12 +41083,12 @@ lbl_8056D080:
 	.4byte __dt__Q34nw4r3g3d6ScnMdlFv
 	.4byte GetTypeObj__Q34nw4r3g3d6ScnMdlCFv
 	.4byte GetTypeName__Q34nw4r3g3d6ScnMdlCFv
-	.4byte func_803F4A88
+	.4byte ForEach__Q34nw4r3g3d7ScnLeafFPFPQ34nw4r3g3d6ScnObjPv_Q44nw4r3g3d6ScnObj13ForEachResultPvb
 	.4byte SetScnObjOption__Q34nw4r3g3d6ScnMdlFUlUl
 	.4byte GetScnObjOption__Q34nw4r3g3d6ScnMdlCFUlPUl
-	.4byte func_803F493C
-	.4byte func_803F4948
-	.4byte func_803F4B54
+	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
+	.4byte CalcWorldMtx__Q34nw4r3g3d7ScnLeafFPCQ34nw4r4math5MTX34PUl
 	.4byte SetAnmObj__Q34nw4r3g3d6ScnMdlFPQ34nw4r3g3d6AnmObjQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 	.4byte RemoveAnmObj__Q34nw4r3g3d6ScnMdlFPQ34nw4r3g3d6AnmObj
 	.4byte RemoveAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
@@ -41101,20 +41101,20 @@ lbl_8056D0C8:
 	# ROM: 0x5691C8
 	.4byte 0
 	.4byte 0
-	.4byte func_803FC888
-	.4byte func_803FC524
-	.4byte func_803FC80C
-	.4byte func_803FC920
-	.4byte func_803FC8F0
-	.4byte func_803F5058
-	.4byte func_803F4678
-	.4byte func_803F4810
-	.4byte func_803F493C
-	.4byte func_803F4948
-	.4byte func_803F440C
+	.4byte IsDerivedFrom__Q34nw4r3g3d12ScnMdlExpandCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d12ScnMdlExpandFUlUlPv
+	.4byte __dt__Q34nw4r3g3d12ScnMdlExpandFv
+	.4byte GetTypeObj__Q34nw4r3g3d12ScnMdlExpandCFv
+	.4byte GetTypeName__Q34nw4r3g3d12ScnMdlExpandCFv
+	.4byte ForEach__Q34nw4r3g3d8ScnGroupFPFPQ34nw4r3g3d6ScnObjPv_Q44nw4r3g3d6ScnObj13ForEachResultPvb
+	.4byte SetScnObjOption__Q34nw4r3g3d6ScnObjFUlUl
+	.4byte GetScnObjOption__Q34nw4r3g3d6ScnObjCFUlPUl
+	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
+	.4byte CalcWorldMtx__Q34nw4r3g3d6ScnObjFPCQ34nw4r4math5MTX34PUl
 	.4byte func_803FC21C
-	.4byte func_803FC36C
-	.4byte func_803FC4A0
+	.4byte Remove__Q34nw4r3g3d12ScnMdlExpandFUl
+	.4byte Remove__Q34nw4r3g3d12ScnMdlExpandFPQ34nw4r3g3d6ScnObj
 
 .global lbl_8056D108
 lbl_8056D108:
@@ -41131,12 +41131,12 @@ lbl_8056D150:
 	.4byte __dt__Q34nw4r3g3d7ScnProcFv
 	.4byte GetTypeObj__Q34nw4r3g3d7ScnProcCFv
 	.4byte GetTypeName__Q34nw4r3g3d7ScnProcCFv
-	.4byte func_803F4A88
+	.4byte ForEach__Q34nw4r3g3d7ScnLeafFPFPQ34nw4r3g3d6ScnObjPv_Q44nw4r3g3d6ScnObj13ForEachResultPvb
 	.4byte SetScnObjOption__Q34nw4r3g3d7ScnLeafFUlUl
 	.4byte GetScnObjOption__Q34nw4r3g3d7ScnLeafCFUlPUl
-	.4byte func_803F493C
-	.4byte func_803F4948
-	.4byte func_803F4B54
+	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
+	.4byte CalcWorldMtx__Q34nw4r3g3d7ScnLeafFPCQ34nw4r4math5MTX34PUl
 	.4byte 0
 
 .global lbl_8056D188
@@ -41221,7 +41221,7 @@ lbl_8056D298:
 	.4byte DrawSelf__Q34nw4r3lyt7PictureFRCQ34nw4r3lyt8DrawInfo
 	.4byte Animate__Q34nw4r3lyt4PaneFUl
 	.4byte AnimateSelf__Q34nw4r3lyt4PaneFUl
-	.4byte func_80401144
+	.4byte GetVtxColor__Q34nw4r3lyt7PictureCFUl
 	.4byte SetVtxColor__Q34nw4r3lyt7PictureFUlQ34nw4r2ut5Color
 	.4byte GetColorElement__Q34nw4r3lyt4PaneCFUl
 	.4byte SetColorElement__Q34nw4r3lyt4PaneFUlUc
@@ -41256,8 +41256,8 @@ lbl_8056D310:
 	.4byte DrawSelf__Q34nw4r3lyt7TextBoxFRCQ34nw4r3lyt8DrawInfo
 	.4byte Animate__Q34nw4r3lyt4PaneFUl
 	.4byte AnimateSelf__Q34nw4r3lyt4PaneFUl
-	.4byte func_80401980
-	.4byte func_804019B4
+	.4byte GetTextColor__Q34nw4r3lyt7TextBoxCFUl
+	.4byte SetVtxColor__Q34nw4r3lyt7TextBoxFUlQ34nw4r2ut5Color
 	.4byte GetColorElement__Q34nw4r3lyt4PaneCFUl
 	.4byte SetColorElement__Q34nw4r3lyt4PaneFUlUc
 	.4byte GetVtxColorElement__Q34nw4r3lyt7TextBoxCFUl
@@ -42167,7 +42167,7 @@ lbl_8056E028:
 	.4byte 0
 	.4byte 0
 	.4byte func_8040DE80
-	.4byte func_80413D4C
+	.4byte GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
 
 .global lbl_8056E038
@@ -42176,7 +42176,7 @@ lbl_8056E038:
 	.4byte 0
 	.4byte 0
 	.4byte func_8040DE40
-	.4byte func_80413CB8
+	.4byte GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
 
 .global lbl_8056E048
@@ -42185,7 +42185,7 @@ lbl_8056E048:
 	.4byte 0
 	.4byte 0
 	.4byte func_8040DE00
-	.4byte func_80413C24
+	.4byte GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
 
 .global lbl_8056E058
@@ -42194,7 +42194,7 @@ lbl_8056E058:
 	.4byte 0
 	.4byte 0
 	.4byte func_8040DDC0
-	.4byte func_80413B9C
+	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
 
 .global lbl_8056E068
@@ -42203,7 +42203,7 @@ lbl_8056E068:
 	.4byte 0
 	.4byte 0
 	.4byte func_8040DD80
-	.4byte func_80413B14
+	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
 
 .global lbl_8056E078
@@ -42435,8 +42435,8 @@ lbl_8056E390:
 	# ROM: 0x56A490
 	.4byte 0
 	.4byte 0
-	.4byte func_80417CC0
-	.4byte func_804185D4
+	.4byte CommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackUlll
+	.4byte NoteOnCommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackiilb
 
 
 .global lbl_8056E3A0
@@ -42444,8 +42444,8 @@ lbl_8056E3A0:
 	# ROM: 0x56A4A0
 	.4byte 0
 	.4byte 0
-	.4byte func_804187E4
-	.4byte func_804187D0
+	.4byte __dt__Q44nw4r3snd6detail11MmlSeqTrackFv
+	.4byte Parse__Q44nw4r3snd6detail11MmlSeqTrackFb
 
 
 .global lbl_8056E3B0
@@ -42454,9 +42454,9 @@ lbl_8056E3B0:
 	.4byte 0
 	.4byte 0
 	.4byte func_80418928
-	.4byte func_8041883C
-	.4byte func_804188A4
-	.4byte lbl_80418920
+	.4byte AllocTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail9SeqPlayer
+	.4byte FreeTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail8SeqTrack
+	.4byte GetAllocatableTrackCount__Q44nw4r3snd6detail20MmlSeqTrackAllocatorCFv
 
 
 .global lbl_8056E3C8
@@ -42464,8 +42464,8 @@ lbl_8056E3C8:
 	# ROM: 0x56A4C8
 	.4byte 0
 	.4byte 0
-	.4byte func_80418998
-	.4byte func_80418A8C
+	.4byte __dt__Q44nw4r3snd6detail10PlayerHeapFv
+	.4byte Alloc__Q44nw4r3snd6detail10PlayerHeapFUl
 
 
 .global lbl_8056E3D8
@@ -42477,25 +42477,25 @@ lbl_8056E3D8:
 	.4byte func_80419E48
 	.4byte func_80419EB8
 	.4byte func_8041A008
-	.4byte func_804175C8
-	.4byte func_804175C0
-	.4byte func_804175B8
+	.4byte IsActive__Q44nw4r3snd6detail9SeqPlayerCFv
+	.4byte IsStarted__Q44nw4r3snd6detail9SeqPlayerCFv
+	.4byte IsPause__Q44nw4r3snd6detail9SeqPlayerCFv
 	.4byte 0
 	.4byte 0
 	.4byte func_8041ABAC
-	.4byte lbl_804175D8
-	.4byte func_804175D0
+	.4byte _208_InvalidateData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
+	.4byte _208_InvalidateWaveData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
 	.4byte 0
 	.4byte 0
 	.4byte lbl_8041ABB4
-	.4byte lbl_804175E8
-	.4byte func_804175B4
-	.4byte lbl_804175E0
-	.4byte func_8041A210
-	.4byte func_804175B0
+	.4byte _220_OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte OnUpdateVoiceSoundThread__Q54nw4r3snd6detail11SoundThread14PlayerCallbackFv
+	.4byte _220_OnShutdownSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte InvalidateData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
+	.4byte InvalidateWaveData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
 	.4byte func_8041ABA8
-	.4byte func_8041759C
-	.4byte lbl_804175A0
+	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte 0
 
 
@@ -42534,7 +42534,7 @@ lbl_8056E490:
 	# ROM: 0x56A590
 	.4byte 0
 	.4byte 0
-	.4byte func_8041B3D4
+	.4byte __dt__Q44nw4r3snd6detail8SeqTrackFv
 	.4byte 0
 
 
@@ -42674,9 +42674,9 @@ lbl_8056E62C:
 	# ROM: 0x56A72C
 	.4byte 0
 	.4byte 0
-	.4byte func_804263B0
-	.4byte func_80428C54
-	.4byte func_80428B08
+	.4byte __dt__Q44nw4r3snd6detail5VoiceFv
+	.4byte InvalidateData__Q44nw4r3snd6detail5VoiceFPCvPCv
+	.4byte InvalidateWaveData__Q44nw4r3snd6detail5VoiceFPCvPCv
 
 
 .global lbl_8056E640
@@ -42728,7 +42728,7 @@ lbl_8056E688:
 	.4byte 0
 	.4byte lbl_8042B37C
 	.4byte lbl_8042B374
-	.4byte func_804175B4
+	.4byte OnUpdateVoiceSoundThread__Q54nw4r3snd6detail11SoundThread14PlayerCallbackFv
 	.4byte lbl_8042B36C
 	.4byte func_8042A838
 	.4byte func_8042B314
@@ -46601,8 +46601,8 @@ lbl_805716C8:
 	.4byte 0xFFFFEB98
 	.4byte lbl_8048BD8C
 	.4byte lbl_8048BD84
-	.4byte func_803F4F94
-	.4byte func_803F4F98
+	.4byte ExecCallback_CALC_MAT__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
+	.4byte ExecCallback_CALC_VIEW__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
 	.4byte lbl_8048BD7C
 	.4byte lbl_8048BD74
 	.4byte func_80489014
@@ -46622,10 +46622,10 @@ lbl_805716C8:
 	.4byte 0
 	.4byte lbl_806661F8
 	.4byte 0
-	.4byte func_803F4638
-	.4byte func_803F4F90
-	.4byte func_803F4F94
-	.4byte func_803F4F98
+	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
+	.4byte ExecCallback_CALC_WORLD__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
+	.4byte ExecCallback_CALC_MAT__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
+	.4byte ExecCallback_CALC_VIEW__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
 	.4byte func_803F7C30
 	.4byte func_803F7C34
 	.4byte lbl_80666200
@@ -47065,8 +47065,8 @@ lbl_80571FB0:
 	.4byte 0xFFFFFFF4
 	.4byte lbl_80490090
 	.4byte func_80490088
-	.4byte func_803F4F94
-	.4byte func_803F4F98
+	.4byte ExecCallback_CALC_MAT__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
+	.4byte ExecCallback_CALC_VIEW__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
 	.4byte func_803F7C30
 	.4byte func_803F7C34
 	.4byte func_8048FED8

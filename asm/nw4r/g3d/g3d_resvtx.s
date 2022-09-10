@@ -206,8 +206,8 @@ lbl_803DD424:
 /* 803DD434 003A69F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803DD438 003A69F8  4E 80 00 20 */	blr 
 
-.global func_803DD43C
-func_803DD43C:
+.global GetArray__Q34nw4r3g3d14ResVtxTexCoordCFPPCvPUc
+GetArray__Q34nw4r3g3d14ResVtxTexCoordCFPPCvPUc:
 /* 803DD43C 003A69FC  2C 04 00 00 */	cmpwi r4, 0
 /* 803DD440 003A6A00  41 82 00 24 */	beq lbl_803DD464
 /* 803DD444 003A6A04  80 C3 00 00 */	lwz r6, 0(r3)

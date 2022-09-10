@@ -2,14 +2,14 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80411780
-func_80411780:
+.global __ct__Q44nw4r3snd6detail4BankFPCv
+__ct__Q44nw4r3snd6detail4BankFPCv:
 /* 80411780 003DAD40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80411784 003DAD44  7C 08 02 A6 */	mflr r0
 /* 80411788 003DAD48  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041178C 003DAD4C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80411790 003DAD50  7C 7F 1B 78 */	mr r31, r3
-/* 80411794 003DAD54  48 00 02 5D */	bl func_804119F0
+/* 80411794 003DAD54  48 00 02 5D */	bl __ct__Q44nw4r3snd6detail14BankFileReaderFPCv
 /* 80411798 003DAD58  38 00 00 00 */	li r0, 0
 /* 8041179C 003DAD5C  7F E3 FB 78 */	mr r3, r31
 /* 804117A0 003DAD60  90 1F 00 0C */	stw r0, 0xc(r31)
@@ -19,8 +19,8 @@ func_80411780:
 /* 804117B0 003DAD70  38 21 00 10 */	addi r1, r1, 0x10
 /* 804117B4 003DAD74  4E 80 00 20 */	blr 
 
-.global func_804117B8
-func_804117B8:
+.global __dt__Q44nw4r3snd6detail4BankFv
+__dt__Q44nw4r3snd6detail4BankFv:
 /* 804117B8 003DAD78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804117BC 003DAD7C  7C 08 02 A6 */	mflr r0
 /* 804117C0 003DAD80  2C 03 00 00 */	cmpwi r3, 0
@@ -39,8 +39,8 @@ lbl_804117E0:
 /* 804117F0 003DADB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804117F4 003DADB4  4E 80 00 20 */	blr 
 
-.global func_804117F8
-func_804117F8:
+.global NoteOn__Q44nw4r3snd6detail4BankCFRCQ44nw4r3snd6detail10NoteOnInfo
+NoteOn__Q44nw4r3snd6detail4BankCFRCQ44nw4r3snd6detail10NoteOnInfo:
 /* 804117F8 003DADB8  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 804117FC 003DADBC  7C 08 02 A6 */	mflr r0
 /* 80411800 003DADC0  80 A4 00 00 */	lwz r5, 0(r4)
@@ -55,7 +55,7 @@ func_804117F8:
 /* 80411824 003DADE4  90 01 00 A8 */	stw r0, 0xa8(r1)
 /* 80411828 003DADE8  80 FE 00 08 */	lwz r7, 8(r30)
 /* 8041182C 003DADEC  90 01 00 B0 */	stw r0, 0xb0(r1)
-/* 80411830 003DADF0  48 00 03 5D */	bl func_80411B8C
+/* 80411830 003DADF0  48 00 03 5D */	bl ReadInstInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8InstInfoiii
 /* 80411834 003DADF4  2C 03 00 00 */	cmpwi r3, 0
 /* 80411838 003DADF8  40 82 00 0C */	bne lbl_80411844
 /* 8041183C 003DADFC  38 60 00 00 */	li r3, 0
@@ -66,7 +66,7 @@ lbl_80411844:
 /* 8041184C 003DAE0C  38 81 00 28 */	addi r4, r1, 0x28
 /* 80411850 003DAE10  38 A1 00 0C */	addi r5, r1, 0xc
 /* 80411854 003DAE14  38 E1 00 08 */	addi r7, r1, 8
-/* 80411858 003DAE18  48 00 06 01 */	bl func_80411E58
+/* 80411858 003DAE18  48 00 06 01 */	bl ReadWaveInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8WaveInfoRCQ54nw4r3snd6detail8InstInfo16WaveDataLocationPCvPPCQ44nw4r3snd6detail8WaveInfo
 /* 8041185C 003DAE1C  2C 03 00 00 */	cmpwi r3, 0
 /* 80411860 003DAE20  40 82 00 0C */	bne lbl_8041186C
 /* 80411864 003DAE24  38 60 00 00 */	li r3, 0
@@ -82,7 +82,7 @@ lbl_80411880:
 /* 80411884 003DAE44  80 BE 00 14 */	lwz r5, 0x14(r30)
 /* 80411888 003DAE48  80 DE 00 1C */	lwz r6, 0x1c(r30)
 /* 8041188C 003DAE4C  80 FE 00 20 */	lwz r7, 0x20(r30)
-/* 80411890 003DAE50  48 00 35 91 */	bl func_80414E20
+/* 80411890 003DAE50  48 00 35 91 */	bl AllocChannel__Q44nw4r3snd6detail7ChannelFiiiPFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl_vUl
 /* 80411894 003DAE54  2C 03 00 00 */	cmpwi r3, 0
 /* 80411898 003DAE58  7C 7F 1B 78 */	mr r31, r3
 /* 8041189C 003DAE5C  40 82 00 0C */	bne lbl_804118A8
@@ -113,19 +113,19 @@ lbl_804118A8:
 /* 804118FC 003DAEBC  C0 01 00 24 */	lfs f0, 0x24(r1)
 /* 80411900 003DAEC0  D0 03 00 BC */	stfs f0, 0xbc(r3)
 /* 80411904 003DAEC4  88 81 00 14 */	lbz r4, 0x14(r1)
-/* 80411908 003DAEC8  48 00 3C E1 */	bl func_804155E8
+/* 80411908 003DAEC8  48 00 3C E1 */	bl SetAttack__Q44nw4r3snd6detail12EnvGeneratorFi
 /* 8041190C 003DAECC  88 81 00 15 */	lbz r4, 0x15(r1)
 /* 80411910 003DAED0  7F E3 FB 78 */	mr r3, r31
-/* 80411914 003DAED4  48 00 3C ED */	bl func_80415600
+/* 80411914 003DAED4  48 00 3C ED */	bl SetHold__Q44nw4r3snd6detail12EnvGeneratorFi
 /* 80411918 003DAED8  88 81 00 16 */	lbz r4, 0x16(r1)
 /* 8041191C 003DAEDC  7F E3 FB 78 */	mr r3, r31
-/* 80411920 003DAEE0  48 00 3C F9 */	bl func_80415618
+/* 80411920 003DAEE0  48 00 3C F9 */	bl SetDecay__Q44nw4r3snd6detail12EnvGeneratorFi
 /* 80411924 003DAEE4  88 81 00 17 */	lbz r4, 0x17(r1)
 /* 80411928 003DAEE8  7F E3 FB 78 */	mr r3, r31
-/* 8041192C 003DAEEC  48 00 3D 8D */	bl func_804156B8
+/* 8041192C 003DAEEC  48 00 3D 8D */	bl SetSustain__Q44nw4r3snd6detail12EnvGeneratorFi
 /* 80411930 003DAEF0  88 81 00 18 */	lbz r4, 0x18(r1)
 /* 80411934 003DAEF4  7F E3 FB 78 */	mr r3, r31
-/* 80411938 003DAEF8  48 00 3D 89 */	bl func_804156C0
+/* 80411938 003DAEF8  48 00 3D 89 */	bl SetRelease__Q44nw4r3snd6detail12EnvGeneratorFi
 /* 8041193C 003DAEFC  88 61 00 22 */	lbz r3, 0x22(r1)
 /* 80411940 003DAF00  80 1E 00 10 */	lwz r0, 0x10(r30)
 /* 80411944 003DAF04  38 63 FF C0 */	addi r3, r3, -64
@@ -164,7 +164,7 @@ lbl_804119C0:
 /* 804119C4 003DAF84  7F E3 FB 78 */	mr r3, r31
 /* 804119C8 003DAF88  38 81 00 28 */	addi r4, r1, 0x28
 /* 804119CC 003DAF8C  38 C0 00 00 */	li r6, 0
-/* 804119D0 003DAF90  48 00 30 39 */	bl func_80414A08
+/* 804119D0 003DAF90  48 00 30 39 */	bl Start__Q44nw4r3snd6detail7ChannelFRCQ44nw4r3snd6detail8WaveInfoiUl
 /* 804119D4 003DAF94  7F E3 FB 78 */	mr r3, r31
 lbl_804119D8:
 /* 804119D8 003DAF98  80 01 00 C4 */	lwz r0, 0xc4(r1)

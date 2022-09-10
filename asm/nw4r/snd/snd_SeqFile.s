@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804195D4
-func_804195D4:
+.global __ct__Q44nw4r3snd6detail13SeqFileReaderFPCv
+__ct__Q44nw4r3snd6detail13SeqFileReaderFPCv:
 /* 804195D4 003E2B94  80 A4 00 00 */	lwz r5, 0(r4)
 /* 804195D8 003E2B98  38 C0 00 00 */	li r6, 0
 /* 804195DC 003E2B9C  90 C3 00 00 */	stw r6, 0(r3)
@@ -35,15 +35,15 @@ lbl_80419624:
 /* 80419638 003E2BF8  90 03 00 04 */	stw r0, 4(r3)
 /* 8041963C 003E2BFC  4E 80 00 20 */	blr 
 
-.global func_80419640
-func_80419640:
+.global GetBaseAddress__Q44nw4r3snd6detail13SeqFileReaderCFv
+GetBaseAddress__Q44nw4r3snd6detail13SeqFileReaderCFv:
 /* 80419640 003E2C00  80 63 00 04 */	lwz r3, 4(r3)
 /* 80419644 003E2C04  80 03 00 08 */	lwz r0, 8(r3)
 /* 80419648 003E2C08  7C 60 1A 14 */	add r3, r0, r3
 /* 8041964C 003E2C0C  4E 80 00 20 */	blr
 
-.global func_80419650
-func_80419650:
+.global ReadOffsetByLabel__Q44nw4r3snd6detail13SeqFileReaderCFPCcPUl
+ReadOffsetByLabel__Q44nw4r3snd6detail13SeqFileReaderCFPCcPUl:
 /* 80419650 003E2C10  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80419654 003E2C14  7C 08 02 A6 */	mflr r0
 /* 80419658 003E2C18  90 01 00 34 */	stw r0, 0x34(r1)
@@ -95,25 +95,3 @@ lbl_804196F0:
 /* 804196FC 003E2CBC  7C 08 03 A6 */	mtlr r0
 /* 80419700 003E2CC0  38 21 00 30 */	addi r1, r1, 0x30
 /* 80419704 003E2CC4  4E 80 00 20 */	blr
-
-.global func_80419708
-func_80419708:
-/* 80419708 003E2CC8  38 00 FF FF */	li r0, -1
-/* 8041970C 003E2CCC  3C 60 80 64 */	lis r3, lbl_8063B4C0@ha
-/* 80419710 003E2CD0  B4 03 B4 C0 */	sthu r0, lbl_8063B4C0@l(r3)
-/* 80419714 003E2CD4  B0 03 00 02 */	sth r0, 2(r3)
-/* 80419718 003E2CD8  B0 03 00 04 */	sth r0, 4(r3)
-/* 8041971C 003E2CDC  B0 03 00 06 */	sth r0, 6(r3)
-/* 80419720 003E2CE0  B0 03 00 08 */	sth r0, 8(r3)
-/* 80419724 003E2CE4  B0 03 00 0A */	sth r0, 0xa(r3)
-/* 80419728 003E2CE8  B0 03 00 0C */	sth r0, 0xc(r3)
-/* 8041972C 003E2CEC  B0 03 00 0E */	sth r0, 0xe(r3)
-/* 80419730 003E2CF0  B0 03 00 10 */	sth r0, 0x10(r3)
-/* 80419734 003E2CF4  B0 03 00 12 */	sth r0, 0x12(r3)
-/* 80419738 003E2CF8  B0 03 00 14 */	sth r0, 0x14(r3)
-/* 8041973C 003E2CFC  B0 03 00 16 */	sth r0, 0x16(r3)
-/* 80419740 003E2D00  B0 03 00 18 */	sth r0, 0x18(r3)
-/* 80419744 003E2D04  B0 03 00 1A */	sth r0, 0x1a(r3)
-/* 80419748 003E2D08  B0 03 00 1C */	sth r0, 0x1c(r3)
-/* 8041974C 003E2D0C  B0 03 00 1E */	sth r0, 0x1e(r3)
-/* 80419750 003E2D10  4E 80 00 20 */	blr 

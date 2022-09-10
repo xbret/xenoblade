@@ -326,8 +326,9 @@ WarningAlarmFunc___Q24nw4r2dbFP7OSAlarmP9OSContext:
 /* 803D77C4 003A0D84  98 03 00 22 */	stb r0, 0x22(r3)
 /* 803D77C8 003A0D88  4E 80 00 20 */	blr 
 
-.global func_803D77CC
-func_803D77CC:
+#why tf is this here? this should be in lyt_textBox.s
+.global SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
+SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color:
 /* 803D77CC 003A0D8C  89 64 00 00 */	lbz r11, 0(r4)
 /* 803D77D0 003A0D90  89 44 00 01 */	lbz r10, 1(r4)
 /* 803D77D4 003A0D94  89 24 00 02 */	lbz r9, 2(r4)

@@ -34,7 +34,7 @@ __ct__Q34nw4r2ut10CharWriterFv:
 /* 8042EF4C 003F850C  93 C6 00 04 */	stw r30, 4(r6)
 /* 8042EF50 003F8510  93 C1 00 08 */	stw r30, 8(r1)
 /* 8042EF54 003F8514  91 01 00 0C */	stw r8, 0xc(r1)
-/* 8042EF58 003F8518  4B FD 30 69 */	bl func_80401FC0
+/* 8042EF58 003F8518  4B FD 30 69 */	bl SetColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
 /* 8042EF5C 003F851C  88 BF 00 18 */	lbz r5, 0x18(r31)
 /* 8042EF60 003F8520  2C 1E 00 01 */	cmpwi r30, 1
 /* 8042EF64 003F8524  88 9F 00 19 */	lbz r4, 0x19(r31)

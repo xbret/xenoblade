@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804119F0
-func_804119F0:
+.global __ct__Q44nw4r3snd6detail14BankFileReaderFPCv
+__ct__Q44nw4r3snd6detail14BankFileReaderFPCv:
 /* 804119F0 003DAFB0  80 A4 00 00 */	lwz r5, 0(r4)
 /* 804119F4 003DAFB4  38 C0 00 00 */	li r6, 0
 /* 804119F8 003DAFB8  90 C3 00 00 */	stw r6, 0(r3)
@@ -45,8 +45,8 @@ lbl_80411A64:
 /* 80411A78 003DB038  90 03 00 08 */	stw r0, 8(r3)
 /* 80411A7C 003DB03C  4E 80 00 20 */	blr 
 
-.global func_80411A80
-func_80411A80:
+.global GetInstParam__Q44nw4r3snd6detail14BankFileReaderCFiii
+GetInstParam__Q44nw4r3snd6detail14BankFileReaderCFiii:
 /* 80411A80 003DB040  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80411A84 003DB044  7C 08 02 A6 */	mflr r0
 /* 80411A88 003DB048  90 01 00 14 */	stw r0, 0x14(r1)
@@ -81,7 +81,7 @@ lbl_80411AD0:
 lbl_80411AF0:
 /* 80411AF0 003DB0B0  28 00 00 01 */	cmplwi r0, 1
 /* 80411AF4 003DB0B4  41 82 00 1C */	beq lbl_80411B10
-/* 80411AF8 003DB0B8  48 00 02 39 */	bl func_80411D30
+/* 80411AF8 003DB0B8  48 00 02 39 */	bl GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef_v_Q54nw4r3snd6detail8BankFile9InstParam_Q54nw4r3snd6detail8BankFile10RangeTable_Q54nw4r3snd6detail8BankFile10IndexTable_i
 /* 80411AFC 003DB0BC  2C 03 00 00 */	cmpwi r3, 0
 /* 80411B00 003DB0C0  7C 64 1B 78 */	mr r4, r3
 /* 80411B04 003DB0C4  40 82 00 0C */	bne lbl_80411B10
@@ -98,7 +98,7 @@ lbl_80411B24:
 /* 80411B28 003DB0E8  41 82 00 24 */	beq lbl_80411B4C
 /* 80411B2C 003DB0EC  7F C3 F3 78 */	mr r3, r30
 /* 80411B30 003DB0F0  7F E5 FB 78 */	mr r5, r31
-/* 80411B34 003DB0F4  48 00 01 FD */	bl func_80411D30
+/* 80411B34 003DB0F4  48 00 01 FD */	bl GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef_v_Q54nw4r3snd6detail8BankFile9InstParam_Q54nw4r3snd6detail8BankFile10RangeTable_Q54nw4r3snd6detail8BankFile10IndexTable_i
 /* 80411B38 003DB0F8  2C 03 00 00 */	cmpwi r3, 0
 /* 80411B3C 003DB0FC  7C 64 1B 78 */	mr r4, r3
 /* 80411B40 003DB100  40 82 00 0C */	bne lbl_80411B4C
@@ -115,7 +115,7 @@ lbl_80411B60:
 /* 80411B64 003DB124  88 64 00 00 */	lbz r3, 0(r4)
 /* 80411B68 003DB128  80 84 00 04 */	lwz r4, 4(r4)
 /* 80411B6C 003DB12C  38 A5 00 08 */	addi r5, r5, 8
-/* 80411B70 003DB130  48 01 7C B9 */	bl func_80429828
+/* 80411B70 003DB130  48 01 7C B9 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 lbl_80411B74:
 /* 80411B74 003DB134  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80411B78 003DB138  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -124,8 +124,8 @@ lbl_80411B74:
 /* 80411B84 003DB144  38 21 00 10 */	addi r1, r1, 0x10
 /* 80411B88 003DB148  4E 80 00 20 */	blr 
 
-.global func_80411B8C
-func_80411B8C:
+.global ReadInstInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8InstInfoiii
+ReadInstInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8InstInfoiii:
 /* 80411B8C 003DB14C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80411B90 003DB150  7C 08 02 A6 */	mflr r0
 /* 80411B94 003DB154  90 01 00 14 */	stw r0, 0x14(r1)
@@ -136,7 +136,7 @@ func_80411B8C:
 /* 80411BA8 003DB168  93 C1 00 08 */	stw r30, 8(r1)
 /* 80411BAC 003DB16C  7C 7E 1B 78 */	mr r30, r3
 /* 80411BB0 003DB170  7C E6 3B 78 */	mr r6, r7
-/* 80411BB4 003DB174  4B FF FE CD */	bl func_80411A80
+/* 80411BB4 003DB174  4B FF FE CD */	bl GetInstParam__Q44nw4r3snd6detail14BankFileReaderCFiii
 /* 80411BB8 003DB178  2C 03 00 00 */	cmpwi r3, 0
 /* 80411BBC 003DB17C  40 82 00 0C */	bne lbl_80411BC8
 /* 80411BC0 003DB180  38 60 00 00 */	li r3, 0
@@ -247,8 +247,9 @@ lbl_80411D18:
 /* 80411D28 003DB2E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80411D2C 003DB2EC  4E 80 00 20 */	blr 
 
-.global func_80411D30
-func_80411D30:
+#GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef<v,Q54nw4r3snd6detail8BankFile9InstParam,Q54nw4r3snd6detail8BankFile10RangeTable,Q54nw4r3snd6detail8BankFile10IndexTable>i
+.global GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef_v_Q54nw4r3snd6detail8BankFile9InstParam_Q54nw4r3snd6detail8BankFile10RangeTable_Q54nw4r3snd6detail8BankFile10IndexTable_i
+GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef_v_Q54nw4r3snd6detail8BankFile9InstParam_Q54nw4r3snd6detail8BankFile10RangeTable_Q54nw4r3snd6detail8BankFile10IndexTable_i:
 /* 80411D30 003DB2F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80411D34 003DB2F4  7C 08 02 A6 */	mflr r0
 /* 80411D38 003DB2F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -275,7 +276,7 @@ lbl_80411D7C:
 /* 80411D80 003DB340  88 64 00 00 */	lbz r3, 0(r4)
 /* 80411D84 003DB344  80 84 00 04 */	lwz r4, 4(r4)
 /* 80411D88 003DB348  38 A5 00 08 */	addi r5, r5, 8
-/* 80411D8C 003DB34C  48 01 7A 9D */	bl func_80429828
+/* 80411D8C 003DB34C  48 01 7A 9D */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 /* 80411D90 003DB350  2C 03 00 00 */	cmpwi r3, 0
 /* 80411D94 003DB354  40 82 00 0C */	bne lbl_80411DA0
 /* 80411D98 003DB358  38 60 00 00 */	li r3, 0
@@ -307,7 +308,7 @@ lbl_80411DEC:
 /* 80411DF0 003DB3B0  88 64 00 00 */	lbz r3, 0(r4)
 /* 80411DF4 003DB3B4  80 84 00 04 */	lwz r4, 4(r4)
 /* 80411DF8 003DB3B8  38 A5 00 08 */	addi r5, r5, 8
-/* 80411DFC 003DB3BC  48 01 7A 2D */	bl func_80429828
+/* 80411DFC 003DB3BC  48 01 7A 2D */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 /* 80411E00 003DB3C0  2C 03 00 00 */	cmpwi r3, 0
 /* 80411E04 003DB3C4  40 82 00 0C */	bne lbl_80411E10
 /* 80411E08 003DB3C8  38 60 00 00 */	li r3, 0
@@ -336,8 +337,8 @@ lbl_80411E44:
 /* 80411E50 003DB410  38 21 00 10 */	addi r1, r1, 0x10
 /* 80411E54 003DB414  4E 80 00 20 */	blr 
 
-.global func_80411E58
-func_80411E58:
+.global ReadWaveInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8WaveInfoRCQ54nw4r3snd6detail8InstInfo16WaveDataLocationPCvPPCQ44nw4r3snd6detail8WaveInfo
+ReadWaveInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8WaveInfoRCQ54nw4r3snd6detail8InstInfo16WaveDataLocationPCvPPCQ44nw4r3snd6detail8WaveInfo:
 /* 80411E58 003DB418  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80411E5C 003DB41C  7C 08 02 A6 */	mflr r0
 /* 80411E60 003DB420  2C 07 00 00 */	cmpwi r7, 0
@@ -367,10 +368,10 @@ lbl_80411EA0:
 /* 80411EB8 003DB478  40 82 00 4C */	bne lbl_80411F04
 /* 80411EBC 003DB47C  7F A4 EB 78 */	mr r4, r29
 /* 80411EC0 003DB480  38 61 00 10 */	addi r3, r1, 0x10
-/* 80411EC4 003DB484  48 01 79 89 */	bl func_8042984C
+/* 80411EC4 003DB484  48 01 79 89 */	bl __ct__Q44nw4r3snd6detail17WaveArchiveReaderFPCv
 /* 80411EC8 003DB488  7F C4 F3 78 */	mr r4, r30
 /* 80411ECC 003DB48C  38 61 00 10 */	addi r3, r1, 0x10
-/* 80411ED0 003DB490  48 01 79 F1 */	bl func_804298C0
+/* 80411ED0 003DB490  48 01 79 F1 */	bl GetWaveFile__Q44nw4r3snd6detail17WaveArchiveReaderCFi
 /* 80411ED4 003DB494  2C 03 00 00 */	cmpwi r3, 0
 /* 80411ED8 003DB498  40 82 00 0C */	bne lbl_80411EE4
 /* 80411EDC 003DB49C  38 60 00 00 */	li r3, 0
@@ -378,11 +379,11 @@ lbl_80411EA0:
 lbl_80411EE4:
 /* 80411EE4 003DB4A4  7C 64 1B 78 */	mr r4, r3
 /* 80411EE8 003DB4A8  38 61 00 0C */	addi r3, r1, 0xc
-/* 80411EEC 003DB4AC  48 01 7A 5D */	bl func_80429948
+/* 80411EEC 003DB4AC  48 01 7A 5D */	bl __ct__Q44nw4r3snd6detail14WaveFileReaderFPCQ54nw4r3snd6detail8WaveFile10FileHeader
 /* 80411EF0 003DB4B0  7F E4 FB 78 */	mr r4, r31
 /* 80411EF4 003DB4B4  38 61 00 0C */	addi r3, r1, 0xc
 /* 80411EF8 003DB4B8  38 A0 00 00 */	li r5, 0
-/* 80411EFC 003DB4BC  48 01 7A 75 */	bl func_80429970
+/* 80411EFC 003DB4BC  48 01 7A 75 */	bl ReadWaveInfo__Q44nw4r3snd6detail14WaveFileReaderCFPQ44nw4r3snd6detail8WaveInfoPCv
 /* 80411F00 003DB4C0  48 00 01 90 */	b lbl_80412090
 lbl_80411F04:
 /* 80411F04 003DB4C4  80 03 00 08 */	lwz r0, 8(r3)
@@ -396,7 +397,7 @@ lbl_80411F1C:
 /* 80411F20 003DB4E0  7C 83 02 14 */	add r4, r3, r0
 /* 80411F24 003DB4E4  88 64 00 0C */	lbz r3, 0xc(r4)
 /* 80411F28 003DB4E8  80 84 00 10 */	lwz r4, 0x10(r4)
-/* 80411F2C 003DB4EC  48 01 78 FD */	bl func_80429828
+/* 80411F2C 003DB4EC  48 01 78 FD */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 /* 80411F30 003DB4F0  2C 03 00 00 */	cmpwi r3, 0
 /* 80411F34 003DB4F4  40 82 00 0C */	bne lbl_80411F40
 /* 80411F38 003DB4F8  38 60 00 00 */	li r3, 0
@@ -404,11 +405,11 @@ lbl_80411F1C:
 lbl_80411F40:
 /* 80411F40 003DB500  7C 64 1B 78 */	mr r4, r3
 /* 80411F44 003DB504  38 61 00 08 */	addi r3, r1, 8
-/* 80411F48 003DB508  48 01 7A 21 */	bl func_80429968
+/* 80411F48 003DB508  48 01 7A 21 */	bl __ct__Q44nw4r3snd6detail14WaveFileReaderFPCQ54nw4r3snd6detail8WaveFile8WaveInfo
 /* 80411F4C 003DB50C  7F E4 FB 78 */	mr r4, r31
 /* 80411F50 003DB510  7F A5 EB 78 */	mr r5, r29
 /* 80411F54 003DB514  38 61 00 08 */	addi r3, r1, 8
-/* 80411F58 003DB518  48 01 7A 19 */	bl func_80429970
+/* 80411F58 003DB518  48 01 7A 19 */	bl ReadWaveInfo__Q44nw4r3snd6detail14WaveFileReaderCFPQ44nw4r3snd6detail8WaveInfoPCv
 /* 80411F5C 003DB51C  48 00 01 34 */	b lbl_80412090
 lbl_80411F60:
 /* 80411F60 003DB520  2C 00 00 01 */	cmpwi r0, 1

@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#__dt__Q44nw4r3snd6detail4TaskFv or __dt__Q34nw4r2ut12LinkListNodeFv or __dt__Q44nw4r2ut22@unnamed@snd_Task_cpp@11NonCopyableFv
 .global func_80425784
 func_80425784:
 /* 80425784 003EED44  94 21 FF F0 */	stwu r1, -0x10(r1)

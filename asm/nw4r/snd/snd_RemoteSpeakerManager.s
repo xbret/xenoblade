@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80419354
-func_80419354:
+.global GetInstance__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
+GetInstance__Q44nw4r3snd6detail20RemoteSpeakerManagerFv:
 /* 80419354 003E2914  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80419358 003E2918  7C 08 02 A6 */	mflr r0
 /* 8041935C 003E291C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -21,7 +21,7 @@ func_80419354:
 /* 8041938C 003E294C  3B FE 02 D8 */	addi r31, r30, 0x2d8
 lbl_80419390:
 /* 80419390 003E2950  7F A3 EB 78 */	mr r3, r29
-/* 80419394 003E2954  4B FF F7 D5 */	bl func_80418B68
+/* 80419394 003E2954  4B FF F7 D5 */	bl __ct__Q34nw4r3snd13RemoteSpeakerFv
 /* 80419398 003E2958  3B BD 00 A8 */	addi r29, r29, 0xa8
 /* 8041939C 003E295C  7C 1D F8 40 */	cmplw r29, r31
 /* 804193A0 003E2960  41 80 FF F0 */	blt lbl_80419390
@@ -45,15 +45,15 @@ lbl_804193C8:
 /* 804193E4 003E29A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804193E8 003E29A8  4E 80 00 20 */	blr 
 
-.global func_804193EC
-func_804193EC:
+.global GetRemoteSpeaker__Q44nw4r3snd6detail20RemoteSpeakerManagerFi
+GetRemoteSpeaker__Q44nw4r3snd6detail20RemoteSpeakerManagerFi:
 /* 804193EC 003E29AC  1C 04 00 A8 */	mulli r0, r4, 0xa8
 /* 804193F0 003E29B0  7C 63 02 14 */	add r3, r3, r0
 /* 804193F4 003E29B4  38 63 00 38 */	addi r3, r3, 0x38
 /* 804193F8 003E29B8  4E 80 00 20 */	blr 
 
-.global func_804193FC
-func_804193FC:
+.global Setup__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
+Setup__Q44nw4r3snd6detail20RemoteSpeakerManagerFv:
 /* 804193FC 003E29BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80419400 003E29C0  7C 08 02 A6 */	mflr r0
 /* 80419404 003E29C4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -70,7 +70,7 @@ func_804193FC:
 /* 80419430 003E29F0  80 06 00 F8 */	lwz r0, 0x800000F8@l(r6)
 /* 80419434 003E29F4  3C C0 10 62 */	lis r6, 0x10624DD3@ha
 /* 80419438 003E29F8  39 46 4D D3 */	addi r10, r6, 0x10624DD3@l
-/* 8041943C 003E29FC  3D 20 80 42 */	lis r9, func_804194DC@ha
+/* 8041943C 003E29FC  3D 20 80 42 */	lis r9, RemoteSpeakerAlarmProc__Q44nw4r3snd6detail20RemoteSpeakerManagerFP7OSAlarmP9OSContext@ha
 /* 80419440 003E2A00  54 00 F0 BE */	srwi r0, r0, 2
 /* 80419444 003E2A04  38 A5 DE 83 */	addi r5, r5, 0x431BDE83@l
 /* 80419448 003E2A08  7D 05 00 16 */	mulhwu r8, r5, r0
@@ -80,7 +80,7 @@ func_804193FC:
 /* 80419458 003E2A18  7C 65 1B 78 */	mr r5, r3
 /* 8041945C 003E2A1C  38 7F 00 08 */	addi r3, r31, 8
 /* 80419460 003E2A20  55 04 8B FE */	srwi r4, r8, 0xf
-/* 80419464 003E2A24  39 29 94 DC */	addi r9, r9, func_804194DC@l
+/* 80419464 003E2A24  39 29 94 DC */	addi r9, r9, RemoteSpeakerAlarmProc__Q44nw4r3snd6detail20RemoteSpeakerManagerFP7OSAlarmP9OSContext@l
 /* 80419468 003E2A28  7C 04 01 D6 */	mullw r0, r4, r0
 /* 8041946C 003E2A2C  38 E0 00 00 */	li r7, 0
 /* 80419470 003E2A30  7C 0A 00 16 */	mulhwu r0, r10, r0
@@ -95,8 +95,8 @@ lbl_80419484:
 /* 80419490 003E2A50  38 21 00 10 */	addi r1, r1, 0x10
 /* 80419494 003E2A54  4E 80 00 20 */	blr 
 
-.global func_80419498
-func_80419498:
+.global Shutdown__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
+Shutdown__Q44nw4r3snd6detail20RemoteSpeakerManagerFv:
 /* 80419498 003E2A58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041949C 003E2A5C  7C 08 02 A6 */	mflr r0
 /* 804194A0 003E2A60  90 01 00 14 */	stw r0, 0x14(r1)
@@ -116,8 +116,8 @@ lbl_804194C8:
 /* 804194D4 003E2A94  38 21 00 10 */	addi r1, r1, 0x10
 /* 804194D8 003E2A98  4E 80 00 20 */	blr
 
-.global func_804194DC
-func_804194DC:
+.global RemoteSpeakerAlarmProc__Q44nw4r3snd6detail20RemoteSpeakerManagerFP7OSAlarmP9OSContext
+RemoteSpeakerAlarmProc__Q44nw4r3snd6detail20RemoteSpeakerManagerFP7OSAlarmP9OSContext:
 /* 804194DC 003E2A9C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 804194E0 003E2AA0  7C 08 02 A6 */	mflr r0
 /* 804194E4 003E2AA4  90 01 00 74 */	stw r0, 0x74(r1)
@@ -135,7 +135,7 @@ func_804194DC:
 /* 80419514 003E2AD4  3B FE 02 D8 */	addi r31, r30, 0x2d8
 lbl_80419518:
 /* 80419518 003E2AD8  7F A3 EB 78 */	mr r3, r29
-/* 8041951C 003E2ADC  4B FF F6 4D */	bl func_80418B68
+/* 8041951C 003E2ADC  4B FF F6 4D */	bl __ct__Q34nw4r3snd13RemoteSpeakerFv
 /* 80419520 003E2AE0  3B BD 00 A8 */	addi r29, r29, 0xa8
 /* 80419524 003E2AE4  7C 1D F8 40 */	cmplw r29, r31
 /* 80419528 003E2AE8  41 80 FF F0 */	blt lbl_80419518
@@ -166,10 +166,10 @@ lbl_8041956C:
 /* 80419584 003E2B44  4B EB AC 6D */	bl AXRmtGetSamples
 /* 80419588 003E2B48  7F A3 EB 78 */	mr r3, r29
 /* 8041958C 003E2B4C  38 81 00 08 */	addi r4, r1, 8
-/* 80419590 003E2B50  4B FF F7 2D */	bl func_80418CBC
+/* 80419590 003E2B50  4B FF F7 2D */	bl UpdateStreamData__Q34nw4r3snd13RemoteSpeakerFPCs
 lbl_80419594:
 /* 80419594 003E2B54  7F A3 EB 78 */	mr r3, r29
-/* 80419598 003E2B58  4B FF F6 51 */	bl func_80418BE8
+/* 80419598 003E2B58  4B FF F6 51 */	bl Update__Q34nw4r3snd13RemoteSpeakerFv
 /* 8041959C 003E2B5C  3B FF 00 01 */	addi r31, r31, 1
 /* 804195A0 003E2B60  3B BD 00 A8 */	addi r29, r29, 0xa8
 /* 804195A4 003E2B64  2C 1F 00 04 */	cmpwi r31, 4

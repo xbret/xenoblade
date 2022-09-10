@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804153C4
-func_804153C4:
+.global __ct__Q44nw4r3snd6detail12EnvGeneratorFv
+__ct__Q44nw4r3snd6detail12EnvGeneratorFv:
 /* 804153C4 003DE984  C0 22 C3 B0 */	lfs f1, lbl_8066C730@sda21(r2)
 /* 804153C8 003DE988  38 80 00 00 */	li r4, 0
 /* 804153CC 003DE98C  C0 02 C3 B8 */	lfs f0, lbl_8066C738@sda21(r2)
@@ -22,8 +22,8 @@ func_804153C4:
 /* 80415400 003DE9C0  90 83 00 00 */	stw r4, 0(r3)
 /* 80415404 003DE9C4  4E 80 00 20 */	blr 
 
-.global func_80415408
-func_80415408:
+.global Init__Q44nw4r3snd6detail12EnvGeneratorFf
+Init__Q44nw4r3snd6detail12EnvGeneratorFf:
 /* 80415408 003DE9C8  C0 02 C3 B8 */	lfs f0, lbl_8066C738@sda21(r2)
 /* 8041540C 003DE9CC  38 80 00 00 */	li r4, 0
 /* 80415410 003DE9D0  3C A0 80 52 */	lis r5, lbl_80523658@ha
@@ -41,8 +41,8 @@ func_80415408:
 /* 80415440 003DEA00  90 83 00 00 */	stw r4, 0(r3)
 /* 80415444 003DEA04  4E 80 00 20 */	blr 
 
-.global func_80415448
-func_80415448:
+.global Reset__Q44nw4r3snd6detail12EnvGeneratorFf
+Reset__Q44nw4r3snd6detail12EnvGeneratorFf:
 /* 80415448 003DEA08  C0 02 C3 B8 */	lfs f0, lbl_8066C738@sda21(r2)
 /* 8041544C 003DEA0C  38 00 00 00 */	li r0, 0
 /* 80415450 003DEA10  90 03 00 00 */	stw r0, 0(r3)
@@ -50,8 +50,8 @@ func_80415448:
 /* 80415458 003DEA18  D0 03 00 04 */	stfs f0, 4(r3)
 /* 8041545C 003DEA1C  4E 80 00 20 */	blr 
 
-.global func_80415460
-func_80415460:
+.global GetValue__Q44nw4r3snd6detail12EnvGeneratorCFv
+GetValue__Q44nw4r3snd6detail12EnvGeneratorCFv:
 /* 80415460 003DEA20  80 03 00 00 */	lwz r0, 0(r3)
 /* 80415464 003DEA24  2C 00 00 00 */	cmpwi r0, 0
 /* 80415468 003DEA28  40 82 00 14 */	bne lbl_8041547C
@@ -65,8 +65,8 @@ lbl_8041547C:
 /* 80415484 003DEA44  EC 21 00 24 */	fdivs f1, f1, f0
 /* 80415488 003DEA48  4E 80 00 20 */	blr 
 
-.global func_8041548C
-func_8041548C:
+.global Update__Q44nw4r3snd6detail12EnvGeneratorFi
+Update__Q44nw4r3snd6detail12EnvGeneratorFi:
 /* 8041548C 003DEA4C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80415490 003DEA50  80 03 00 00 */	lwz r0, 0(r3)
 /* 80415494 003DEA54  2C 00 00 02 */	cmpwi r0, 2
@@ -165,8 +165,8 @@ lbl_804155E0:
 /* 804155E0 003DEBA0  38 21 00 20 */	addi r1, r1, 0x20
 /* 804155E4 003DEBA4  4E 80 00 20 */	blr 
 
-.global func_804155E8
-func_804155E8:
+.global SetAttack__Q44nw4r3snd6detail12EnvGeneratorFi
+SetAttack__Q44nw4r3snd6detail12EnvGeneratorFi:
 /* 804155E8 003DEBA8  3C A0 80 52 */	lis r5, lbl_80523658@ha
 /* 804155EC 003DEBAC  54 80 10 3A */	slwi r0, r4, 2
 /* 804155F0 003DEBB0  38 A5 36 58 */	addi r5, r5, lbl_80523658@l
@@ -174,8 +174,8 @@ func_804155E8:
 /* 804155F8 003DEBB8  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 804155FC 003DEBBC  4E 80 00 20 */	blr 
 
-.global func_80415600
-func_80415600:
+.global SetHold__Q44nw4r3snd6detail12EnvGeneratorFi
+SetHold__Q44nw4r3snd6detail12EnvGeneratorFi:
 /* 80415600 003DEBC0  38 04 00 01 */	addi r0, r4, 1
 /* 80415604 003DEBC4  7C 00 01 D6 */	mullw r0, r0, r0
 /* 80415608 003DEBC8  7C 00 16 70 */	srawi r0, r0, 2
@@ -183,8 +183,8 @@ func_80415600:
 /* 80415610 003DEBD0  B0 03 00 16 */	sth r0, 0x16(r3)
 /* 80415614 003DEBD4  4E 80 00 20 */	blr 
 
-.global func_80415618
-func_80415618:
+.global SetDecay__Q44nw4r3snd6detail12EnvGeneratorFi
+SetDecay__Q44nw4r3snd6detail12EnvGeneratorFi:
 /* 80415618 003DEBD8  2C 04 00 7F */	cmpwi r4, 0x7f
 /* 8041561C 003DEBDC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80415620 003DEBE0  40 82 00 0C */	bne lbl_8041562C
@@ -230,13 +230,13 @@ lbl_804156AC:
 /* 804156B0 003DEC70  38 21 00 20 */	addi r1, r1, 0x20
 /* 804156B4 003DEC74  4E 80 00 20 */	blr 
 
-.global func_804156B8
-func_804156B8:
+.global SetSustain__Q44nw4r3snd6detail12EnvGeneratorFi
+SetSustain__Q44nw4r3snd6detail12EnvGeneratorFi:
 /* 804156B8 003DEC78  98 83 00 14 */	stb r4, 0x14(r3)
 /* 804156BC 003DEC7C  4E 80 00 20 */	blr 
 
-.global func_804156C0
-func_804156C0:
+.global SetRelease__Q44nw4r3snd6detail12EnvGeneratorFi
+SetRelease__Q44nw4r3snd6detail12EnvGeneratorFi:
 /* 804156C0 003DEC80  2C 04 00 7F */	cmpwi r4, 0x7f
 /* 804156C4 003DEC84  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804156C8 003DEC88  40 82 00 0C */	bne lbl_804156D4

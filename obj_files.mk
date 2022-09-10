@@ -545,7 +545,7 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/snd/snd_MmlParser.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_MmlSeqTrack.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_MmlSeqTrackAllocator.o \
-	$(BUILD_DIR)/asm/nw4r/snd/snd_NandSoundArchive.o \
+	$(BUILD_DIR)/asm/nw4r/snd/snd_PlayerHeap.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_RemoteSpeaker.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_RemoteSpeakerManager.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_SeqFile.o \

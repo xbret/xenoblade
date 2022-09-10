@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804175F0
-func_804175F0:
+.global Parse__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackb
+Parse__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackb:
 /* 804175F0 003E0BB0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804175F4 003E0BB4  7C 08 02 A6 */	mflr r0
 /* 804175F8 003E0BB8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -89,7 +89,7 @@ lbl_804176F4:
 /* 80417720 003E0CE0  41 82 00 08 */	beq lbl_80417728
 /* 80417724 003E0CE4  7C 07 03 78 */	mr r7, r0
 lbl_80417728:
-/* 80417728 003E0CE8  48 00 0E C5 */	bl func_804185EC
+/* 80417728 003E0CE8  48 00 0E C5 */	bl ReadArg__Q44nw4r3snd6detail9MmlParserCFPPCUcPQ44nw4r3snd6detail9SeqPlayerPQ44nw4r3snd6detail8SeqTrackQ54nw4r3snd6detail9MmlParser10SeqArgType
 /* 8041772C 003E0CEC  88 1A 00 87 */	lbz r0, 0x87(r26)
 /* 80417730 003E0CF0  2C 1D 00 00 */	cmpwi r29, 0
 /* 80417734 003E0CF4  7C 77 1B 78 */	mr r23, r3
@@ -191,7 +191,7 @@ lbl_8041786C:
 /* 80417884 003E0E44  41 82 00 08 */	beq lbl_8041788C
 /* 80417888 003E0E48  7C 07 03 78 */	mr r7, r0
 lbl_8041788C:
-/* 8041788C 003E0E4C  48 00 0D 61 */	bl func_804185EC
+/* 8041788C 003E0E4C  48 00 0D 61 */	bl ReadArg__Q44nw4r3snd6detail9MmlParserCFPPCUcPQ44nw4r3snd6detail9SeqPlayerPQ44nw4r3snd6detail8SeqTrackQ54nw4r3snd6detail9MmlParser10SeqArgType
 /* 80417890 003E0E50  2C 1D 00 00 */	cmpwi r29, 0
 /* 80417894 003E0E54  41 82 04 10 */	beq lbl_80417CA4
 /* 80417898 003E0E58  90 7A 00 44 */	stw r3, 0x44(r26)
@@ -206,7 +206,7 @@ lbl_804178A0:
 /* 804178B8 003E0E78  41 82 00 08 */	beq lbl_804178C0
 /* 804178BC 003E0E7C  7C 07 03 78 */	mr r7, r0
 lbl_804178C0:
-/* 804178C0 003E0E80  48 00 0D 2D */	bl func_804185EC
+/* 804178C0 003E0E80  48 00 0D 2D */	bl ReadArg__Q44nw4r3snd6detail9MmlParserCFPPCUcPQ44nw4r3snd6detail9SeqPlayerPQ44nw4r3snd6detail8SeqTrackQ54nw4r3snd6detail9MmlParser10SeqArgType
 /* 804178C4 003E0E84  2C 1D 00 00 */	cmpwi r29, 0
 /* 804178C8 003E0E88  7C 66 1B 78 */	mr r6, r3
 /* 804178CC 003E0E8C  41 82 03 D8 */	beq lbl_80417CA4
@@ -306,7 +306,7 @@ lbl_80417A1C:
 /* 80417A34 003E0FF4  41 82 00 08 */	beq lbl_80417A3C
 /* 80417A38 003E0FF8  7C 07 03 78 */	mr r7, r0
 lbl_80417A3C:
-/* 80417A3C 003E0FFC  48 00 0B B1 */	bl func_804185EC
+/* 80417A3C 003E0FFC  48 00 0B B1 */	bl ReadArg__Q44nw4r3snd6detail9MmlParserCFPPCUcPQ44nw4r3snd6detail9SeqPlayerPQ44nw4r3snd6detail8SeqTrackQ54nw4r3snd6detail9MmlParser10SeqArgType
 /* 80417A40 003E1000  2C 1E 00 00 */	cmpwi r30, 0
 /* 80417A44 003E1004  7C 78 1B 78 */	mr r24, r3
 /* 80417A48 003E1008  41 82 00 20 */	beq lbl_80417A68
@@ -315,7 +315,7 @@ lbl_80417A3C:
 /* 80417A54 003E1014  7F 46 D3 78 */	mr r6, r26
 /* 80417A58 003E1018  7F C7 F3 78 */	mr r7, r30
 /* 80417A5C 003E101C  38 9A 00 20 */	addi r4, r26, 0x20
-/* 80417A60 003E1020  48 00 0B 8D */	bl func_804185EC
+/* 80417A60 003E1020  48 00 0B 8D */	bl ReadArg__Q44nw4r3snd6detail9MmlParserCFPPCUcPQ44nw4r3snd6detail9SeqPlayerPQ44nw4r3snd6detail8SeqTrackQ54nw4r3snd6detail9MmlParser10SeqArgType
 /* 80417A64 003E1024  7C 7B 1B 78 */	mr r27, r3
 lbl_80417A68:
 /* 80417A68 003E1028  2C 1D 00 00 */	cmpwi r29, 0
@@ -364,7 +364,7 @@ lbl_80417AE8:
 /* 80417B00 003E10C0  41 82 00 08 */	beq lbl_80417B08
 /* 80417B04 003E10C4  7C 07 03 78 */	mr r7, r0
 lbl_80417B08:
-/* 80417B08 003E10C8  48 00 0A E5 */	bl func_804185EC
+/* 80417B08 003E10C8  48 00 0A E5 */	bl ReadArg__Q44nw4r3snd6detail9MmlParserCFPPCUcPQ44nw4r3snd6detail9SeqPlayerPQ44nw4r3snd6detail8SeqTrackQ54nw4r3snd6detail9MmlParser10SeqArgType
 /* 80417B0C 003E10CC  2C 1D 00 00 */	cmpwi r29, 0
 /* 80417B10 003E10D0  7C 66 07 34 */	extsh r6, r3
 /* 80417B14 003E10D4  41 82 01 90 */	beq lbl_80417CA4
@@ -424,7 +424,7 @@ lbl_80417BB8:
 /* 80417BD0 003E1190  41 82 00 08 */	beq lbl_80417BD8
 /* 80417BD4 003E1194  7C 07 03 78 */	mr r7, r0
 lbl_80417BD8:
-/* 80417BD8 003E1198  48 00 0A 15 */	bl func_804185EC
+/* 80417BD8 003E1198  48 00 0A 15 */	bl ReadArg__Q44nw4r3snd6detail9MmlParserCFPPCUcPQ44nw4r3snd6detail9SeqPlayerPQ44nw4r3snd6detail8SeqTrackQ54nw4r3snd6detail9MmlParser10SeqArgType
 /* 80417BDC 003E119C  2C 1D 00 00 */	cmpwi r29, 0
 /* 80417BE0 003E11A0  54 77 04 3E */	clrlwi r23, r3, 0x10
 /* 80417BE4 003E11A4  41 82 00 94 */	beq lbl_80417C78
@@ -452,7 +452,7 @@ lbl_80417C14:
 /* 80417C38 003E11F8  41 82 00 08 */	beq lbl_80417C40
 /* 80417C3C 003E11FC  7C 07 03 78 */	mr r7, r0
 lbl_80417C40:
-/* 80417C40 003E1200  48 00 09 AD */	bl func_804185EC
+/* 80417C40 003E1200  48 00 09 AD */	bl ReadArg__Q44nw4r3snd6detail9MmlParserCFPPCUcPQ44nw4r3snd6detail9SeqPlayerPQ44nw4r3snd6detail8SeqTrackQ54nw4r3snd6detail9MmlParser10SeqArgType
 /* 80417C44 003E1204  2C 1D 00 00 */	cmpwi r29, 0
 /* 80417C48 003E1208  7C 7B 07 34 */	extsh r27, r3
 /* 80417C4C 003E120C  41 82 00 2C */	beq lbl_80417C78
@@ -488,8 +488,8 @@ lbl_80417CA8:
 /* 80417CB8 003E1278  38 21 00 30 */	addi r1, r1, 0x30
 /* 80417CBC 003E127C  4E 80 00 20 */	blr 
 
-.global func_80417CC0
-func_80417CC0:
+.global CommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackUlll
+CommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackUlll:
 /* 80417CC0 003E1280  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80417CC4 003E1284  7C 08 02 A6 */	mflr r0
 /* 80417CC8 003E1288  90 01 00 44 */	stw r0, 0x44(r1)
@@ -844,7 +844,7 @@ lbl_804180BC:
 /* 804180CC 003E168C  40 80 00 18 */	bge lbl_804180E4
 /* 804180D0 003E1690  7F 63 DB 78 */	mr r3, r27
 /* 804180D4 003E1694  7F 24 CB 78 */	mr r4, r25
-/* 804180D8 003E1698  48 00 24 5D */	bl func_8041A534
+/* 804180D8 003E1698  48 00 24 5D */	bl GetVariablePtr__Q44nw4r3snd6detail9SeqPlayerFi
 /* 804180DC 003E169C  7C 64 1B 78 */	mr r4, r3
 /* 804180E0 003E16A0  48 00 00 24 */	b lbl_80418104
 lbl_804180E4:
@@ -852,7 +852,7 @@ lbl_804180E4:
 /* 804180E8 003E16A8  40 80 00 14 */	bge lbl_804180FC
 /* 804180EC 003E16AC  7F 83 E3 78 */	mr r3, r28
 /* 804180F0 003E16B0  38 86 FF E0 */	addi r4, r6, -32
-/* 804180F4 003E16B4  48 00 42 55 */	bl func_8041C348
+/* 804180F4 003E16B4  48 00 42 55 */	bl GetVariablePtr__Q44nw4r3snd6detail8SeqTrackFi
 /* 804180F8 003E16B8  48 00 00 08 */	b lbl_80418100
 lbl_804180FC:
 /* 804180FC 003E16BC  38 60 00 00 */	li r3, 0
@@ -1010,14 +1010,14 @@ lbl_804182F8:
 /* 804182FC 003E18BC  40 80 00 14 */	bge lbl_80418310
 /* 80418300 003E18C0  7F 63 DB 78 */	mr r3, r27
 /* 80418304 003E18C4  7F 24 CB 78 */	mr r4, r25
-/* 80418308 003E18C8  48 00 22 2D */	bl func_8041A534
+/* 80418308 003E18C8  48 00 22 2D */	bl GetVariablePtr__Q44nw4r3snd6detail9SeqPlayerFi
 /* 8041830C 003E18CC  48 00 00 20 */	b lbl_8041832C
 lbl_80418310:
 /* 80418310 003E18D0  2C 06 00 30 */	cmpwi r6, 0x30
 /* 80418314 003E18D4  40 80 00 14 */	bge lbl_80418328
 /* 80418318 003E18D8  7F 83 E3 78 */	mr r3, r28
 /* 8041831C 003E18DC  38 86 FF E0 */	addi r4, r6, -32
-/* 80418320 003E18E0  48 00 40 29 */	bl func_8041C348
+/* 80418320 003E18E0  48 00 40 29 */	bl GetVariablePtr__Q44nw4r3snd6detail8SeqTrackFi
 /* 80418324 003E18E4  48 00 00 08 */	b lbl_8041832C
 lbl_80418328:
 /* 80418328 003E18E8  38 60 00 00 */	li r3, 0
@@ -1121,7 +1121,7 @@ lbl_80418460:
 /* 80418470 003E1A30  3B 40 00 01 */	li r26, 1
 /* 80418474 003E1A34  7C 1D 07 34 */	extsh r29, r0
 lbl_80418478:
-/* 80418478 003E1A38  48 01 13 8D */	bl func_80429804
+/* 80418478 003E1A38  48 01 13 8D */	bl CalcRandom__Q44nw4r3snd6detail4UtilFv
 /* 8041847C 003E1A3C  54 63 04 3E */	clrlwi r3, r3, 0x10
 /* 80418480 003E1A40  38 1D 00 01 */	addi r0, r29, 1
 /* 80418484 003E1A44  7C 63 01 D6 */	mullw r3, r3, r0
@@ -1214,7 +1214,7 @@ lbl_804185AC:
 /* 804185AC 003E1B6C  7F 63 DB 78 */	mr r3, r27
 /* 804185B0 003E1B70  7F 85 E3 78 */	mr r5, r28
 /* 804185B4 003E1B74  57 24 04 3E */	clrlwi r4, r25, 0x10
-/* 804185B8 003E1B78  48 00 1B C1 */	bl func_8041A178
+/* 804185B8 003E1B78  48 00 1B C1 */	bl CallSeqUserprocCallback__Q44nw4r3snd6detail9SeqPlayerFUsPQ44nw4r3snd6detail8SeqTrack
 .global lbl_804185BC
 lbl_804185BC:
 /* 804185BC 003E1B7C  39 61 00 40 */	addi r11, r1, 0x40
@@ -1224,17 +1224,17 @@ lbl_804185BC:
 /* 804185CC 003E1B8C  38 21 00 40 */	addi r1, r1, 0x40
 /* 804185D0 003E1B90  4E 80 00 20 */	blr 
 
-.global func_804185D4
-func_804185D4:
+.global NoteOnCommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackiilb
+NoteOnCommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackiilb:
 /* 804185D4 003E1B94  7C 83 23 78 */	mr r3, r4
 /* 804185D8 003E1B98  7C A4 2B 78 */	mr r4, r5
 /* 804185DC 003E1B9C  7C C5 33 78 */	mr r5, r6
 /* 804185E0 003E1BA0  7C E6 3B 78 */	mr r6, r7
 /* 804185E4 003E1BA4  7D 07 43 78 */	mr r7, r8
-/* 804185E8 003E1BA8  48 00 3D 80 */	b func_8041C368
+/* 804185E8 003E1BA8  48 00 3D 80 */	b NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb
 
-.global func_804185EC
-func_804185EC:
+.global ReadArg__Q44nw4r3snd6detail9MmlParserCFPPCUcPQ44nw4r3snd6detail9SeqPlayerPQ44nw4r3snd6detail8SeqTrackQ54nw4r3snd6detail9MmlParser10SeqArgType
+ReadArg__Q44nw4r3snd6detail9MmlParserCFPPCUcPQ44nw4r3snd6detail9SeqPlayerPQ44nw4r3snd6detail8SeqTrackQ54nw4r3snd6detail9MmlParser10SeqArgType:
 /* 804185EC 003E1BAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804185F0 003E1BB0  7C 08 02 A6 */	mflr r0
 /* 804185F4 003E1BB4  2C 07 00 03 */	cmpwi r7, 3
@@ -1289,14 +1289,14 @@ lbl_80418690:
 /* 804186A0 003E1C60  2C 04 00 20 */	cmpwi r4, 0x20
 /* 804186A4 003E1C64  40 80 00 10 */	bge lbl_804186B4
 /* 804186A8 003E1C68  7C A3 2B 78 */	mr r3, r5
-/* 804186AC 003E1C6C  48 00 1E 89 */	bl func_8041A534
+/* 804186AC 003E1C6C  48 00 1E 89 */	bl GetVariablePtr__Q44nw4r3snd6detail9SeqPlayerFi
 /* 804186B0 003E1C70  48 00 00 20 */	b lbl_804186D0
 lbl_804186B4:
 /* 804186B4 003E1C74  2C 04 00 30 */	cmpwi r4, 0x30
 /* 804186B8 003E1C78  40 80 00 14 */	bge lbl_804186CC
 /* 804186BC 003E1C7C  7C C3 33 78 */	mr r3, r6
 /* 804186C0 003E1C80  38 84 FF E0 */	addi r4, r4, -32
-/* 804186C4 003E1C84  48 00 3C 85 */	bl func_8041C348
+/* 804186C4 003E1C84  48 00 3C 85 */	bl GetVariablePtr__Q44nw4r3snd6detail8SeqTrackFi
 /* 804186C8 003E1C88  48 00 00 08 */	b lbl_804186D0
 lbl_804186CC:
 /* 804186CC 003E1C8C  38 60 00 00 */	li r3, 0
@@ -1322,7 +1322,7 @@ lbl_804186E0:
 /* 80418714 003E1CD4  90 04 00 00 */	stw r0, 0(r4)
 /* 80418718 003E1CD8  8B E5 00 00 */	lbz r31, 0(r5)
 /* 8041871C 003E1CDC  50 7F 44 2E */	rlwimi r31, r3, 8, 0x10, 0x17
-/* 80418720 003E1CE0  48 01 10 E5 */	bl func_80429804
+/* 80418720 003E1CE0  48 01 10 E5 */	bl CalcRandom__Q44nw4r3snd6detail4UtilFv
 /* 80418724 003E1CE4  7F E0 07 34 */	extsh r0, r31
 /* 80418728 003E1CE8  54 64 04 3E */	clrlwi r4, r3, 0x10
 /* 8041872C 003E1CEC  7C 7E 00 50 */	subf r3, r30, r0
@@ -1338,8 +1338,8 @@ lbl_80418740:
 /* 80418750 003E1D10  38 21 00 10 */	addi r1, r1, 0x10
 /* 80418754 003E1D14  4E 80 00 20 */	blr 
 
-.global func_80418758
-func_80418758:
+.global ParseAllocTrack__Q44nw4r3snd6detail9MmlParserFPCvUlPUl
+ParseAllocTrack__Q44nw4r3snd6detail9MmlParserFPCvUlPUl:
 /* 80418758 003E1D18  7C 04 18 AE */	lbzx r0, r4, r3
 /* 8041875C 003E1D1C  7C C4 1A 14 */	add r6, r4, r3
 /* 80418760 003E1D20  28 00 00 FE */	cmplwi r0, 0xfe

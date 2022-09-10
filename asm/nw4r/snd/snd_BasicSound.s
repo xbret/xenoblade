@@ -151,8 +151,8 @@ lbl_80412670:
 /* 804126C8 003DBC88  38 21 00 20 */	addi r1, r1, 0x20
 /* 804126CC 003DBC8C  4E 80 00 20 */	blr 
 
-.global func_804126D0
-func_804126D0:
+.global StartPrepared__Q44nw4r3snd6detail10BasicSoundFv
+StartPrepared__Q44nw4r3snd6detail10BasicSoundFv:
 /* 804126D0 003DBC90  88 03 00 81 */	lbz r0, 0x81(r3)
 /* 804126D4 003DBC94  2C 00 00 00 */	cmpwi r0, 0
 /* 804126D8 003DBC98  4C 82 00 20 */	bnelr 
@@ -1224,12 +1224,12 @@ lbl_8041360C:
 /* 8041362C 003DCBEC  80 7E 00 08 */	lwz r3, 8(r30)
 /* 80413630 003DCBF0  2C 03 00 00 */	cmpwi r3, 0
 /* 80413634 003DCBF4  41 82 00 08 */	beq lbl_8041363C
-/* 80413638 003DCBF8  48 00 CD 91 */	bl func_804203C8
+/* 80413638 003DCBF8  48 00 CD 91 */	bl DetachSound__Q34nw4r3snd11SoundHandleFv
 lbl_8041363C:
 /* 8041363C 003DCBFC  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80413640 003DCC00  2C 03 00 00 */	cmpwi r3, 0
 /* 80413644 003DCC04  41 82 00 08 */	beq lbl_8041364C
-/* 80413648 003DCC08  48 00 CD 81 */	bl func_804203C8
+/* 80413648 003DCC08  48 00 CD 81 */	bl DetachSound__Q34nw4r3snd11SoundHandleFv
 lbl_8041364C:
 /* 8041364C 003DCC0C  81 9E 00 00 */	lwz r12, 0(r30)
 /* 80413650 003DCC10  7F C3 F3 78 */	mr r3, r30
@@ -1261,7 +1261,7 @@ lbl_804136A8:
 /* 804136AC 003DCC6C  2C 03 00 00 */	cmpwi r3, 0
 /* 804136B0 003DCC70  41 82 00 0C */	beq lbl_804136BC
 /* 804136B4 003DCC74  7F C4 F3 78 */	mr r4, r30
-/* 804136B8 003DCC78  48 00 22 49 */	bl func_80415900
+/* 804136B8 003DCC78  48 00 22 49 */	bl RemoveSound__Q44nw4r3snd6detail19ExternalSoundPlayerFPQ44nw4r3snd6detail10BasicSound
 lbl_804136BC:
 /* 804136BC 003DCC7C  80 7E 00 24 */	lwz r3, 0x24(r30)
 /* 804136C0 003DCC80  2C 03 00 00 */	cmpwi r3, 0
@@ -1312,13 +1312,13 @@ func_80413734:
 /* 80413734 003DCCF4  90 83 00 14 */	stw r4, 0x14(r3)
 /* 80413738 003DCCF8  4E 80 00 20 */	blr 
 
-.global func_8041373C
-func_8041373C:
+.global AttachExternalSoundPlayer__Q44nw4r3snd6detail10BasicSoundFPQ44nw4r3snd6detail19ExternalSoundPlayer
+AttachExternalSoundPlayer__Q44nw4r3snd6detail10BasicSoundFPQ44nw4r3snd6detail19ExternalSoundPlayer:
 /* 8041373C 003DCCFC  90 83 00 18 */	stw r4, 0x18(r3)
 /* 80413740 003DCD00  4E 80 00 20 */	blr 
 
-.global func_80413744
-func_80413744:
+.global DetachExternalSoundPlayer__Q44nw4r3snd6detail10BasicSoundFPQ44nw4r3snd6detail19ExternalSoundPlayer
+DetachExternalSoundPlayer__Q44nw4r3snd6detail10BasicSoundFPQ44nw4r3snd6detail19ExternalSoundPlayer:
 /* 80413744 003DCD04  38 00 00 00 */	li r0, 0
 /* 80413748 003DCD08  90 03 00 18 */	stw r0, 0x18(r3)
 /* 8041374C 003DCD0C  4E 80 00 20 */	blr 
@@ -1558,31 +1558,31 @@ lbl_80413A28:
 /* 80413A40 003DD000  4E 80 04 20 */	bctr 
 /* 80413A44 003DD004  4E 80 00 20 */	blr 
 
-.global func_80413A48
-func_80413A48:
+.global IsAttachedGeneralHandle__Q44nw4r3snd6detail10BasicSoundFv
+IsAttachedGeneralHandle__Q44nw4r3snd6detail10BasicSoundFv:
 /* 80413A48 003DD008  80 63 00 08 */	lwz r3, 8(r3)
 /* 80413A4C 003DD00C  7C 03 00 D0 */	neg r0, r3
 /* 80413A50 003DD010  7C 00 1B 78 */	or r0, r0, r3
 /* 80413A54 003DD014  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 80413A58 003DD018  4E 80 00 20 */	blr 
 
-.global func_80413A5C
-func_80413A5C:
+.global IsAttachedTempGeneralHandle__Q44nw4r3snd6detail10BasicSoundFv
+IsAttachedTempGeneralHandle__Q44nw4r3snd6detail10BasicSoundFv:
 /* 80413A5C 003DD01C  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 80413A60 003DD020  7C 03 00 D0 */	neg r0, r3
 /* 80413A64 003DD024  7C 00 1B 78 */	or r0, r0, r3
 /* 80413A68 003DD028  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 80413A6C 003DD02C  4E 80 00 20 */	blr 
 
-.global func_80413A70
-func_80413A70:
+.global DetachGeneralHandle__Q44nw4r3snd6detail10BasicSoundFv
+DetachGeneralHandle__Q44nw4r3snd6detail10BasicSoundFv:
 /* 80413A70 003DD030  80 63 00 08 */	lwz r3, 8(r3)
-/* 80413A74 003DD034  48 00 C9 54 */	b func_804203C8
+/* 80413A74 003DD034  48 00 C9 54 */	b DetachSound__Q34nw4r3snd11SoundHandleFv
 
-.global func_80413A78
-func_80413A78:
+.global DetachTempGeneralHandle__Q44nw4r3snd6detail10BasicSoundFv
+DetachTempGeneralHandle__Q44nw4r3snd6detail10BasicSoundFv:
 /* 80413A78 003DD038  80 63 00 0C */	lwz r3, 0xc(r3)
-/* 80413A7C 003DD03C  48 00 C9 4C */	b func_804203C8
+/* 80413A7C 003DD03C  48 00 C9 4C */	b DetachSound__Q34nw4r3snd11SoundHandleFv
 
 .global func_80413A80
 func_80413A80:

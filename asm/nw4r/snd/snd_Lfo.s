@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80416F60
-func_80416F60:
+.global Init__Q44nw4r3snd6detail8LfoParamFv
+Init__Q44nw4r3snd6detail8LfoParamFv:
 /* 80416F60 003E0520  C0 22 C4 30 */	lfs f1, lbl_8066C7B0@sda21(r2)
 /* 80416F64 003E0524  38 80 00 01 */	li r4, 1
 /* 80416F68 003E0528  C0 02 C4 34 */	lfs f0, lbl_8066C7B4@sda21(r2)
@@ -14,16 +14,16 @@ func_80416F60:
 /* 80416F7C 003E053C  90 03 00 08 */	stw r0, 8(r3)
 /* 80416F80 003E0540  4E 80 00 20 */	blr 
 
-.global func_80416F84
-func_80416F84:
+.global Reset__Q44nw4r3snd6detail3LfoFv
+Reset__Q44nw4r3snd6detail3LfoFv:
 /* 80416F84 003E0544  C0 02 C4 30 */	lfs f0, lbl_8066C7B0@sda21(r2)
 /* 80416F88 003E0548  38 00 00 00 */	li r0, 0
 /* 80416F8C 003E054C  90 03 00 10 */	stw r0, 0x10(r3)
 /* 80416F90 003E0550  D0 03 00 14 */	stfs f0, 0x14(r3)
 /* 80416F94 003E0554  4E 80 00 20 */	blr 
 
-.global func_80416F98
-func_80416F98:
+.global Update__Q44nw4r3snd6detail3LfoFi
+Update__Q44nw4r3snd6detail3LfoFi:
 /* 80416F98 003E0558  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80416F9C 003E055C  80 C3 00 08 */	lwz r6, 8(r3)
 /* 80416FA0 003E0560  80 A3 00 10 */	lwz r5, 0x10(r3)
@@ -67,8 +67,8 @@ lbl_8041702C:
 /* 8041702C 003E05EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80417030 003E05F0  4E 80 00 20 */	blr 
 
-.global func_80417034
-func_80417034:
+.global GetValue__Q44nw4r3snd6detail3LfoCFv
+GetValue__Q44nw4r3snd6detail3LfoCFv:
 /* 80417034 003E05F4  C0 22 C4 30 */	lfs f1, lbl_8066C7B0@sda21(r2)
 /* 80417038 003E05F8  C0 03 00 00 */	lfs f0, 0(r3)
 /* 8041703C 003E05FC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -147,19 +147,3 @@ lbl_80417100:
 lbl_80417148:
 /* 80417148 003E0708  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041714C 003E070C  4E 80 00 20 */	blr
-
-
-.global func_80417150
-func_80417150:
-/* 80417150 003E0710  38 60 00 01 */	li r3, 1
-/* 80417154 003E0714  4E 80 00 20 */	blr 
-
-.global func_80417158
-func_80417158:
-/* 80417158 003E0718  38 60 00 01 */	li r3, 1
-/* 8041715C 003E071C  4E 80 00 20 */	blr 
-
-.global func_80417160
-func_80417160:
-/* 80417160 003E0720  38 60 00 01 */	li r3, 1
-/* 80417164 003E0724  4E 80 00 20 */	blr 

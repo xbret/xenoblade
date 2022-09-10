@@ -347,9 +347,8 @@ SetTexCoord__Q34nw4r3lyt7PictureFUlPCQ34nw4r4math4VEC2:
 /* 8040113C 003CA6FC  38 63 00 E8 */	addi r3, r3, 0xe8
 /* 80401140 003CA700  48 00 91 4C */	b SetCoord__Q44nw4r3lyt6detail11TexCoordAryFUlPCQ34nw4r4math4VEC2
 
-#GetVtxColor__Q34nw4r3lyt7PictureCFUl?
-.global func_80401144
-func_80401144:
+.global GetVtxColor__Q34nw4r3lyt7PictureCFUl
+GetVtxColor__Q34nw4r3lyt7PictureCFUl:
 /* 80401144 003CA704  54 A0 10 3A */	slwi r0, r5, 2
 /* 80401148 003CA708  7C E4 02 14 */	add r7, r4, r0
 /* 8040114C 003CA70C  88 C7 00 D8 */	lbz r6, 0xd8(r7)

@@ -222,6 +222,7 @@ lbl_803DDA6C:
 /* 803DDA80 003A7040  38 21 00 30 */	addi r1, r1, 0x30
 /* 803DDA84 003A7044  4E 80 00 20 */	blr 
 
+#GetResUserData__Q34nw4r3g3d7ResNodeCFv or GetResUserData__Q34nw4r3g3d7ResNodeFv
 .global func_803DDA88
 func_803DDA88:
 /* 803DDA88 003A7048  80 63 00 00 */	lwz r3, 0(r3)

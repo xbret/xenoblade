@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80415034
-func_80415034:
+.global GetInstance__Q44nw4r3snd6detail22DisposeCallbackManagerFv
+GetInstance__Q44nw4r3snd6detail22DisposeCallbackManagerFv:
 /* 80415034 003DE5F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80415038 003DE5F8  7C 08 02 A6 */	mflr r0
 /* 8041503C 003DE5FC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -16,11 +16,11 @@ func_80415034:
 /* 80415058 003DE618  3C C0 80 64 */	lis r6, lbl_8063B1DC@ha
 /* 8041505C 003DE61C  38 00 00 00 */	li r0, 0
 /* 80415060 003DE620  38 66 B1 DC */	addi r3, r6, lbl_8063B1DC@l
-/* 80415064 003DE624  3C 80 80 41 */	lis r4, func_804150BC@ha
+/* 80415064 003DE624  3C 80 80 41 */	lis r4, __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv@ha
 /* 80415068 003DE628  90 03 00 04 */	stw r0, 4(r3)
 /* 8041506C 003DE62C  38 E3 00 04 */	addi r7, r3, 4
 /* 80415070 003DE630  3C A0 80 64 */	lis r5, lbl_8063B1D0@ha
-/* 80415074 003DE634  38 84 50 BC */	addi r4, r4, func_804150BC@l
+/* 80415074 003DE634  38 84 50 BC */	addi r4, r4, __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv@l
 /* 80415078 003DE638  90 03 00 08 */	stw r0, 8(r3)
 /* 8041507C 003DE63C  38 A5 B1 D0 */	addi r5, r5, lbl_8063B1D0@l
 /* 80415080 003DE640  90 06 B1 DC */	stw r0, lbl_8063B1DC@l(r6)
@@ -40,8 +40,8 @@ lbl_80415098:
 /* 804150B4 003DE674  38 21 00 10 */	addi r1, r1, 0x10
 /* 804150B8 003DE678  4E 80 00 20 */	blr
 
-.global func_804150BC
-func_804150BC:
+.global __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv
+__dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv:
 /* 804150BC 003DE67C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804150C0 003DE680  7C 08 02 A6 */	mflr r0
 /* 804150C4 003DE684  2C 03 00 00 */	cmpwi r3, 0
@@ -68,8 +68,8 @@ lbl_804150FC:
 /* 80415110 003DE6D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80415114 003DE6D4  4E 80 00 20 */	blr 
 
-.global func_80415118
-func_80415118:
+.global RegisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd6detail15DisposeCallback
+RegisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd6detail15DisposeCallback:
 /* 80415118 003DE6D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041511C 003DE6DC  7C 08 02 A6 */	mflr r0
 /* 80415120 003DE6E0  7C 85 23 78 */	mr r5, r4
@@ -83,12 +83,12 @@ func_80415118:
 /* 80415140 003DE700  38 21 00 10 */	addi r1, r1, 0x10
 /* 80415144 003DE704  4E 80 00 20 */	blr 
 
-.global func_80415148
-func_80415148:
+.global UnregisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd6detail15DisposeCallback
+UnregisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd6detail15DisposeCallback:
 /* 80415148 003DE708  48 01 64 04 */	b Erase__Q44nw4r2ut6detail12LinkListImplFPQ34nw4r2ut12LinkListNode
 
-.global func_8041514C
-func_8041514C:
+.global Dispose__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv
+Dispose__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv:
 /* 8041514C 003DE70C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80415150 003DE710  7C 08 02 A6 */	mflr r0
 /* 80415154 003DE714  90 01 00 44 */	stw r0, 0x44(r1)
@@ -96,7 +96,7 @@ func_8041514C:
 /* 8041515C 003DE71C  4B EA 4F E1 */	bl _savegpr_21
 /* 80415160 003DE720  7C 9F 23 78 */	mr r31, r4
 /* 80415164 003DE724  7F C4 2A 14 */	add r30, r4, r5
-/* 80415168 003DE728  48 00 C1 7D */	bl func_804212E4
+/* 80415168 003DE728  48 00 C1 7D */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041516C 003DE72C  38 63 03 54 */	addi r3, r3, 0x354
 /* 80415170 003DE730  4B F4 4A F1 */	bl OSLockMutex
 /* 80415174 003DE734  4B F4 38 3D */	bl OSDisableInterrupts
@@ -107,11 +107,11 @@ func_8041514C:
 /* 80415188 003DE748  3C C0 80 64 */	lis r6, lbl_8063B1DC@ha
 /* 8041518C 003DE74C  38 00 00 00 */	li r0, 0
 /* 80415190 003DE750  38 66 B1 DC */	addi r3, r6, lbl_8063B1DC@l
-/* 80415194 003DE754  3C 80 80 41 */	lis r4, func_804150BC@ha
+/* 80415194 003DE754  3C 80 80 41 */	lis r4, __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv@ha
 /* 80415198 003DE758  90 03 00 04 */	stw r0, 4(r3)
 /* 8041519C 003DE75C  38 E3 00 04 */	addi r7, r3, 4
 /* 804151A0 003DE760  3C A0 80 64 */	lis r5, lbl_8063B1D0@ha
-/* 804151A4 003DE764  38 84 50 BC */	addi r4, r4, func_804150BC@l
+/* 804151A4 003DE764  38 84 50 BC */	addi r4, r4, __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv@l
 /* 804151A8 003DE768  90 03 00 08 */	stw r0, 8(r3)
 /* 804151AC 003DE76C  38 A5 B1 D0 */	addi r5, r5, lbl_8063B1D0@l
 /* 804151B0 003DE770  90 06 B1 DC */	stw r0, lbl_8063B1DC@l(r6)
@@ -126,7 +126,7 @@ lbl_804151C8:
 /* 804151D0 003DE790  3E A0 80 64 */	lis r21, lbl_8063B1DC@ha
 /* 804151D4 003DE794  3A E0 00 00 */	li r23, 0
 /* 804151D8 003DE798  3A D5 B1 DC */	addi r22, r21, lbl_8063B1DC@l
-/* 804151DC 003DE79C  3F 00 80 41 */	lis r24, func_804150BC@ha
+/* 804151DC 003DE79C  3F 00 80 41 */	lis r24, __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv@ha
 /* 804151E0 003DE7A0  83 B6 00 04 */	lwz r29, 4(r22)
 /* 804151E4 003DE7A4  3B 76 00 04 */	addi r27, r22, 4
 /* 804151E8 003DE7A8  3F 20 80 64 */	lis r25, lbl_8063B1D0@ha
@@ -150,7 +150,7 @@ lbl_80415214:
 /* 80415228 003DE7E8  92 F6 00 04 */	stw r23, 4(r22)
 /* 8041522C 003DE7EC  38 D6 00 04 */	addi r6, r22, 4
 /* 80415230 003DE7F0  7E C3 B3 78 */	mr r3, r22
-/* 80415234 003DE7F4  38 98 50 BC */	addi r4, r24, func_804150BC@l
+/* 80415234 003DE7F4  38 98 50 BC */	addi r4, r24, __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv@l
 /* 80415238 003DE7F8  92 F6 00 08 */	stw r23, 8(r22)
 /* 8041523C 003DE7FC  38 B9 B1 D0 */	addi r5, r25, lbl_8063B1D0@l
 /* 80415240 003DE800  92 F5 B1 DC */	stw r23, lbl_8063B1DC@l(r21)
@@ -163,7 +163,7 @@ lbl_80415254:
 /* 80415258 003DE818  4B F4 37 99 */	bl OSRestoreInterrupts
 /* 8041525C 003DE81C  7C 1D D8 40 */	cmplw r29, r27
 /* 80415260 003DE820  40 82 FF 94 */	bne lbl_804151F4
-/* 80415264 003DE824  48 00 C0 81 */	bl func_804212E4
+/* 80415264 003DE824  48 00 C0 81 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 80415268 003DE828  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041526C 003DE82C  4B F4 4A D5 */	bl OSUnlockMutex
 /* 80415270 003DE830  39 61 00 40 */	addi r11, r1, 0x40
@@ -173,8 +173,8 @@ lbl_80415254:
 /* 80415280 003DE840  38 21 00 40 */	addi r1, r1, 0x40
 /* 80415284 003DE844  4E 80 00 20 */	blr 
 
-.global func_80415288
-func_80415288:
+.global DisposeWave__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv
+DisposeWave__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv:
 /* 80415288 003DE848  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8041528C 003DE84C  7C 08 02 A6 */	mflr r0
 /* 80415290 003DE850  90 01 00 44 */	stw r0, 0x44(r1)
@@ -182,7 +182,7 @@ func_80415288:
 /* 80415298 003DE858  4B EA 4E A5 */	bl _savegpr_21
 /* 8041529C 003DE85C  7C 9F 23 78 */	mr r31, r4
 /* 804152A0 003DE860  7F C4 2A 14 */	add r30, r4, r5
-/* 804152A4 003DE864  48 00 C0 41 */	bl func_804212E4
+/* 804152A4 003DE864  48 00 C0 41 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 804152A8 003DE868  38 63 03 54 */	addi r3, r3, 0x354
 /* 804152AC 003DE86C  4B F4 49 B5 */	bl OSLockMutex
 /* 804152B0 003DE870  4B F4 37 01 */	bl OSDisableInterrupts
@@ -193,11 +193,11 @@ func_80415288:
 /* 804152C4 003DE884  3C C0 80 64 */	lis r6, lbl_8063B1DC@ha
 /* 804152C8 003DE888  38 00 00 00 */	li r0, 0
 /* 804152CC 003DE88C  38 66 B1 DC */	addi r3, r6, lbl_8063B1DC@l
-/* 804152D0 003DE890  3C 80 80 41 */	lis r4, func_804150BC@ha
+/* 804152D0 003DE890  3C 80 80 41 */	lis r4, __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv@ha
 /* 804152D4 003DE894  90 03 00 04 */	stw r0, 4(r3)
 /* 804152D8 003DE898  38 E3 00 04 */	addi r7, r3, 4
 /* 804152DC 003DE89C  3C A0 80 64 */	lis r5, lbl_8063B1D0@ha
-/* 804152E0 003DE8A0  38 84 50 BC */	addi r4, r4, func_804150BC@l
+/* 804152E0 003DE8A0  38 84 50 BC */	addi r4, r4, __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv@l
 /* 804152E4 003DE8A4  90 03 00 08 */	stw r0, 8(r3)
 /* 804152E8 003DE8A8  38 A5 B1 D0 */	addi r5, r5, lbl_8063B1D0@l
 /* 804152EC 003DE8AC  90 06 B1 DC */	stw r0, lbl_8063B1DC@l(r6)
@@ -212,7 +212,7 @@ lbl_80415304:
 /* 8041530C 003DE8CC  3E A0 80 64 */	lis r21, lbl_8063B1DC@ha
 /* 80415310 003DE8D0  3A E0 00 00 */	li r23, 0
 /* 80415314 003DE8D4  3A D5 B1 DC */	addi r22, r21, lbl_8063B1DC@l
-/* 80415318 003DE8D8  3F 00 80 41 */	lis r24, func_804150BC@ha
+/* 80415318 003DE8D8  3F 00 80 41 */	lis r24, __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv@ha
 /* 8041531C 003DE8DC  83 B6 00 04 */	lwz r29, 4(r22)
 /* 80415320 003DE8E0  3B 76 00 04 */	addi r27, r22, 4
 /* 80415324 003DE8E4  3F 20 80 64 */	lis r25, lbl_8063B1D0@ha
@@ -236,7 +236,7 @@ lbl_80415350:
 /* 80415364 003DE924  92 F6 00 04 */	stw r23, 4(r22)
 /* 80415368 003DE928  38 D6 00 04 */	addi r6, r22, 4
 /* 8041536C 003DE92C  7E C3 B3 78 */	mr r3, r22
-/* 80415370 003DE930  38 98 50 BC */	addi r4, r24, func_804150BC@l
+/* 80415370 003DE930  38 98 50 BC */	addi r4, r24, __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv@l
 /* 80415374 003DE934  92 F6 00 08 */	stw r23, 8(r22)
 /* 80415378 003DE938  38 B9 B1 D0 */	addi r5, r25, lbl_8063B1D0@l
 /* 8041537C 003DE93C  92 F5 B1 DC */	stw r23, lbl_8063B1DC@l(r21)
@@ -249,7 +249,7 @@ lbl_80415390:
 /* 80415394 003DE954  4B F4 36 5D */	bl OSRestoreInterrupts
 /* 80415398 003DE958  7C 1D D8 40 */	cmplw r29, r27
 /* 8041539C 003DE95C  40 82 FF 94 */	bne lbl_80415330
-/* 804153A0 003DE960  48 00 BF 45 */	bl func_804212E4
+/* 804153A0 003DE960  48 00 BF 45 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 804153A4 003DE964  38 63 03 54 */	addi r3, r3, 0x354
 /* 804153A8 003DE968  4B F4 49 99 */	bl OSUnlockMutex
 /* 804153AC 003DE96C  39 61 00 40 */	addi r11, r1, 0x40

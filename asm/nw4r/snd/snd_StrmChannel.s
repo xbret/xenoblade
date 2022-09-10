@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804219C8
-func_804219C8:
+.global Setup__Q44nw4r3snd6detail14StrmBufferPoolFPvUli
+Setup__Q44nw4r3snd6detail14StrmBufferPoolFPvUli:
 /* 804219C8 003EAF88  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804219CC 003EAF8C  7C 08 02 A6 */	mflr r0
 /* 804219D0 003EAF90  90 01 00 24 */	stw r0, 0x24(r1)
@@ -38,8 +38,8 @@ lbl_80421A30:
 /* 80421A40 003EB000  38 21 00 20 */	addi r1, r1, 0x20
 /* 80421A44 003EB004  4E 80 00 20 */	blr 
 
-.global func_80421A48
-func_80421A48:
+.global Shutdown__Q44nw4r3snd6detail14StrmBufferPoolFv
+Shutdown__Q44nw4r3snd6detail14StrmBufferPoolFv:
 /* 80421A48 003EB008  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80421A4C 003EB00C  7C 08 02 A6 */	mflr r0
 /* 80421A50 003EB010  90 01 00 14 */	stw r0, 0x14(r1)
@@ -58,8 +58,8 @@ func_80421A48:
 /* 80421A84 003EB044  38 21 00 10 */	addi r1, r1, 0x10
 /* 80421A88 003EB048  4E 80 00 20 */	blr 
 
-.global func_80421A8C
-func_80421A8C:
+.global Alloc__Q44nw4r3snd6detail14StrmBufferPoolFv
+Alloc__Q44nw4r3snd6detail14StrmBufferPoolFv:
 /* 80421A8C 003EB04C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80421A90 003EB050  7C 08 02 A6 */	mflr r0
 /* 80421A94 003EB054  90 01 00 14 */	stw r0, 0x14(r1)
@@ -125,8 +125,8 @@ lbl_80421B5C:
 /* 80421B68 003EB128  38 21 00 10 */	addi r1, r1, 0x10
 /* 80421B6C 003EB12C  4E 80 00 20 */	blr 
 
-.global func_80421B70
-func_80421B70:
+.global Free__Q44nw4r3snd6detail14StrmBufferPoolFPv
+Free__Q44nw4r3snd6detail14StrmBufferPoolFPv:
 /* 80421B70 003EB130  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80421B74 003EB134  7C 08 02 A6 */	mflr r0
 /* 80421B78 003EB138  90 01 00 14 */	stw r0, 0x14(r1)

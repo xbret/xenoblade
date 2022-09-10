@@ -27,8 +27,8 @@ GetSkinningMtxTemporary__Q44nw4r3g3d6detail7workmemFv:
 /* 803EE6C8 003B7C88  38 63 2D 00 */	addi r3, r3, lbl_80622D00@l
 /* 803EE6CC 003B7C8C  4E 80 00 20 */	blr 
 
-.global func_803EE6D0
-func_803EE6D0:
+.global GetBillboardMtxTemporary__Q44nw4r3g3d6detail7workmemFv
+GetBillboardMtxTemporary__Q44nw4r3g3d6detail7workmemFv:
 /* 803EE6D0 003B7C90  3C 60 80 62 */	lis r3, lbl_80622D00@ha
 /* 803EE6D4 003B7C94  38 63 2D 00 */	addi r3, r3, lbl_80622D00@l
 /* 803EE6D8 003B7C98  4E 80 00 20 */	blr 

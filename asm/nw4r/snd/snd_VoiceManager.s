@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80428C58
-func_80428C58:
+.global GetInstance__Q44nw4r3snd6detail12VoiceManagerFv
+GetInstance__Q44nw4r3snd6detail12VoiceManagerFv:
 /* 80428C58 003F2218  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80428C5C 003F221C  7C 08 02 A6 */	mflr r0
 /* 80428C60 003F2220  90 01 00 14 */	stw r0, 0x14(r1)
@@ -13,13 +13,13 @@ func_80428C58:
 /* 80428C70 003F2230  3C C0 80 65 */	lis r6, lbl_8065706C@ha
 /* 80428C74 003F2234  38 00 00 00 */	li r0, 0
 /* 80428C78 003F2238  38 66 70 6C */	addi r3, r6, lbl_8065706C@l
-/* 80428C7C 003F223C  3C 80 80 43 */	lis r4, func_80428CE4@ha
+/* 80428C7C 003F223C  3C 80 80 43 */	lis r4, __dt__Q44nw4r3snd6detail12VoiceManagerFv@ha
 /* 80428C80 003F2240  90 03 00 08 */	stw r0, 8(r3)
 /* 80428C84 003F2244  39 03 00 08 */	addi r8, r3, 8
 /* 80428C88 003F2248  38 E3 00 14 */	addi r7, r3, 0x14
 /* 80428C8C 003F224C  3C A0 80 65 */	lis r5, lbl_80657060@ha
 /* 80428C90 003F2250  90 03 00 0C */	stw r0, 0xc(r3)
-/* 80428C94 003F2254  38 84 8C E4 */	addi r4, r4, func_80428CE4@l
+/* 80428C94 003F2254  38 84 8C E4 */	addi r4, r4, __dt__Q44nw4r3snd6detail12VoiceManagerFv@l
 /* 80428C98 003F2258  38 A5 70 60 */	addi r5, r5, lbl_80657060@l
 /* 80428C9C 003F225C  90 03 00 14 */	stw r0, 0x14(r3)
 /* 80428CA0 003F2260  90 03 00 18 */	stw r0, 0x18(r3)
@@ -41,8 +41,8 @@ lbl_80428CCC:
 /* 80428CDC 003F229C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80428CE0 003F22A0  4E 80 00 20 */	blr
 
-.global func_80428CE4
-func_80428CE4:
+.global __dt__Q44nw4r3snd6detail12VoiceManagerFv
+__dt__Q44nw4r3snd6detail12VoiceManagerFv:
 /* 80428CE4 003F22A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80428CE8 003F22A8  7C 08 02 A6 */	mflr r0
 /* 80428CEC 003F22AC  2C 03 00 00 */	cmpwi r3, 0
@@ -75,13 +75,13 @@ lbl_80428D38:
 /* 80428D4C 003F230C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80428D50 003F2310  4E 80 00 20 */	blr 
 
-.global func_80428D54
-func_80428D54:
+.global GetRequiredMemSize__Q44nw4r3snd6detail12VoiceManagerFi
+GetRequiredMemSize__Q44nw4r3snd6detail12VoiceManagerFi:
 /* 80428D54 003F2314  1C 64 01 24 */	mulli r3, r4, 0x124
 /* 80428D58 003F2318  4E 80 00 20 */	blr 
 
-.global func_80428D5C
-func_80428D5C:
+.global Setup__Q44nw4r3snd6detail12VoiceManagerFPvUl
+Setup__Q44nw4r3snd6detail12VoiceManagerFPvUl:
 /* 80428D5C 003F231C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80428D60 003F2320  7C 08 02 A6 */	mflr r0
 /* 80428D64 003F2324  90 01 00 34 */	stw r0, 0x34(r1)
@@ -108,7 +108,7 @@ lbl_80428DB0:
 /* 80428DB4 003F2374  7F A5 EB 78 */	mr r5, r29
 /* 80428DB8 003F2378  41 82 00 10 */	beq lbl_80428DC8
 /* 80428DBC 003F237C  7F A3 EB 78 */	mr r3, r29
-/* 80428DC0 003F2380  4B FF D3 8D */	bl func_8042614C
+/* 80428DC0 003F2380  4B FF D3 8D */	bl __ct__Q44nw4r3snd6detail5VoiceFv
 /* 80428DC4 003F2384  7C 65 1B 78 */	mr r5, r3
 lbl_80428DC8:
 /* 80428DC8 003F2388  93 E1 00 08 */	stw r31, 8(r1)
@@ -132,8 +132,8 @@ lbl_80428DF4:
 /* 80428E04 003F23C4  38 21 00 30 */	addi r1, r1, 0x30
 /* 80428E08 003F23C8  4E 80 00 20 */	blr 
 
-.global func_80428E0C
-func_80428E0C:
+.global Shutdown__Q44nw4r3snd6detail12VoiceManagerFv
+Shutdown__Q44nw4r3snd6detail12VoiceManagerFv:
 /* 80428E0C 003F23CC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80428E10 003F23D0  7C 08 02 A6 */	mflr r0
 /* 80428E14 003F23D4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -151,7 +151,7 @@ lbl_80428E40:
 /* 80428E40 003F2400  80 7D 00 08 */	lwz r3, 8(r29)
 /* 80428E44 003F2404  3B C3 FE E4 */	addi r30, r3, -284
 /* 80428E48 003F2408  7F C3 F3 78 */	mr r3, r30
-/* 80428E4C 003F240C  4B FF E2 3D */	bl func_80427088
+/* 80428E4C 003F240C  4B FF E2 3D */	bl Stop__Q44nw4r3snd6detail5VoiceFv
 /* 80428E50 003F2410  81 9E 00 94 */	lwz r12, 0x94(r30)
 /* 80428E54 003F2414  2C 0C 00 00 */	cmpwi r12, 0
 /* 80428E58 003F2418  41 82 00 18 */	beq lbl_80428E70
@@ -162,7 +162,7 @@ lbl_80428E40:
 /* 80428E6C 003F242C  4E 80 04 21 */	bctrl 
 lbl_80428E70:
 /* 80428E70 003F2430  7F C3 F3 78 */	mr r3, r30
-/* 80428E74 003F2434  4B FF DE B1 */	bl func_80426D24
+/* 80428E74 003F2434  4B FF DE B1 */	bl Free__Q44nw4r3snd6detail5VoiceFv
 lbl_80428E78:
 /* 80428E78 003F2438  80 1D 00 04 */	lwz r0, 4(r29)
 /* 80428E7C 003F243C  2C 00 00 00 */	cmpwi r0, 0
@@ -197,8 +197,8 @@ lbl_80428ED0:
 /* 80428EE4 003F24A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80428EE8 003F24A8  4E 80 00 20 */	blr 
 
-.global func_80428EEC
-func_80428EEC:
+.global AllocVoice__Q44nw4r3snd6detail12VoiceManagerFiiiPFPQ44nw4r3snd6detail5VoiceQ54nw4r3snd6detail5Voice19VoiceCallbackStatusPv_vPv
+AllocVoice__Q44nw4r3snd6detail12VoiceManagerFiiiPFPQ44nw4r3snd6detail5VoiceQ54nw4r3snd6detail5Voice19VoiceCallbackStatusPv_vPv:
 /* 80428EEC 003F24AC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80428EF0 003F24B0  7C 08 02 A6 */	mflr r0
 /* 80428EF4 003F24B4  90 01 00 44 */	stw r0, 0x44(r1)
@@ -229,9 +229,9 @@ lbl_80428F50:
 /* 80428F54 003F2514  7F 83 E3 78 */	mr r3, r28
 /* 80428F58 003F2518  80 1C 00 90 */	lwz r0, 0x90(r28)
 /* 80428F5C 003F251C  7F A4 01 D6 */	mullw r29, r4, r0
-/* 80428F60 003F2520  4B FF E1 29 */	bl func_80427088
+/* 80428F60 003F2520  4B FF E1 29 */	bl Stop__Q44nw4r3snd6detail5VoiceFv
 /* 80428F64 003F2524  7F 83 E3 78 */	mr r3, r28
-/* 80428F68 003F2528  4B FF DD BD */	bl func_80426D24
+/* 80428F68 003F2528  4B FF DD BD */	bl Free__Q44nw4r3snd6detail5VoiceFv
 /* 80428F6C 003F252C  81 9C 00 94 */	lwz r12, 0x94(r28)
 /* 80428F70 003F2530  2C 0C 00 00 */	cmpwi r12, 0
 /* 80428F74 003F2534  41 82 00 18 */	beq lbl_80428F8C
@@ -256,7 +256,7 @@ lbl_80428FA4:
 /* 80428FB8 003F2578  7F 47 D3 78 */	mr r7, r26
 /* 80428FBC 003F257C  7F 83 E3 78 */	mr r3, r28
 /* 80428FC0 003F2580  7F 68 DB 78 */	mr r8, r27
-/* 80428FC4 003F2584  4B FF DB 25 */	bl func_80426AE8
+/* 80428FC4 003F2584  4B FF DB 25 */	bl Acquire__Q44nw4r3snd6detail5VoiceFiiiPFPQ44nw4r3snd6detail5VoiceQ54nw4r3snd6detail5Voice19VoiceCallbackStatusPv_vPv
 /* 80428FC8 003F2588  2C 03 00 00 */	cmpwi r3, 0
 /* 80428FCC 003F258C  40 82 00 14 */	bne lbl_80428FE0
 /* 80428FD0 003F2590  7F C3 F3 78 */	mr r3, r30
@@ -302,16 +302,16 @@ lbl_80429050:
 /* 8042905C 003F261C  40 81 00 1C */	ble lbl_80429078
 /* 80429060 003F2620  2C 00 00 FF */	cmpwi r0, 0xff
 /* 80429064 003F2624  41 82 00 08 */	beq lbl_8042906C
-/* 80429068 003F2628  4B FF E6 3D */	bl func_804276A4
+/* 80429068 003F2628  4B FF E6 3D */	bl UpdateVoicesPriority__Q44nw4r3snd6detail5VoiceFv
 lbl_8042906C:
 /* 8042906C 003F262C  83 7B 00 00 */	lwz r27, 0(r27)
 lbl_80429070:
 /* 80429070 003F2630  7C 1B E8 40 */	cmplw r27, r29
 /* 80429074 003F2634  40 82 FF DC */	bne lbl_80429050
 lbl_80429078:
-/* 80429078 003F2638  4B FE BF BD */	bl func_80415034
+/* 80429078 003F2638  4B FE BF BD */	bl GetInstance__Q44nw4r3snd6detail22DisposeCallbackManagerFv
 /* 8042907C 003F263C  7F 84 E3 78 */	mr r4, r28
-/* 80429080 003F2640  4B FE C0 99 */	bl func_80415118
+/* 80429080 003F2640  4B FE C0 99 */	bl RegisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd6detail15DisposeCallback
 /* 80429084 003F2644  7F C3 F3 78 */	mr r3, r30
 /* 80429088 003F2648  4B F2 F9 69 */	bl OSRestoreInterrupts
 /* 8042908C 003F264C  7F 83 E3 78 */	mr r3, r28
@@ -323,8 +323,8 @@ lbl_80429090:
 /* 804290A0 003F2660  38 21 00 40 */	addi r1, r1, 0x40
 /* 804290A4 003F2664  4E 80 00 20 */	blr 
 
-.global func_804290A8
-func_804290A8:
+.global FreeVoice__Q44nw4r3snd6detail12VoiceManagerFPQ44nw4r3snd6detail5Voice
+FreeVoice__Q44nw4r3snd6detail12VoiceManagerFPQ44nw4r3snd6detail5Voice:
 /* 804290A8 003F2668  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804290AC 003F266C  7C 08 02 A6 */	mflr r0
 /* 804290B0 003F2670  90 01 00 24 */	stw r0, 0x24(r1)
@@ -336,9 +336,9 @@ func_804290A8:
 /* 804290C8 003F2688  7C 7C 1B 78 */	mr r28, r3
 /* 804290CC 003F268C  4B F2 F8 E5 */	bl OSDisableInterrupts
 /* 804290D0 003F2690  7C 7F 1B 78 */	mr r31, r3
-/* 804290D4 003F2694  4B FE BF 61 */	bl func_80415034
+/* 804290D4 003F2694  4B FE BF 61 */	bl GetInstance__Q44nw4r3snd6detail22DisposeCallbackManagerFv
 /* 804290D8 003F2698  7F A4 EB 78 */	mr r4, r29
-/* 804290DC 003F269C  4B FE C0 6D */	bl func_80415148
+/* 804290DC 003F269C  4B FE C0 6D */	bl UnregisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd6detail15DisposeCallback
 /* 804290E0 003F26A0  4B F2 F8 D1 */	bl OSDisableInterrupts
 /* 804290E4 003F26A4  3B BD 01 1C */	addi r29, r29, 0x11c
 /* 804290E8 003F26A8  7C 7E 1B 78 */	mr r30, r3
@@ -364,8 +364,8 @@ func_804290A8:
 /* 80429138 003F26F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042913C 003F26FC  4E 80 00 20 */	blr 
 
-.global func_80429140
-func_80429140:
+.global UpdateAllVoices__Q44nw4r3snd6detail12VoiceManagerFv
+UpdateAllVoices__Q44nw4r3snd6detail12VoiceManagerFv:
 /* 80429140 003F2700  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80429144 003F2704  7C 08 02 A6 */	mflr r0
 /* 80429148 003F2708  90 01 00 24 */	stw r0, 0x24(r1)
@@ -380,7 +380,7 @@ lbl_80429168:
 /* 80429168 003F2728  7F E3 FB 78 */	mr r3, r31
 /* 8042916C 003F272C  83 FF 00 00 */	lwz r31, 0(r31)
 /* 80429170 003F2730  38 63 FE E4 */	addi r3, r3, -284
-/* 80429174 003F2734  4B FF D3 91 */	bl func_80426504
+/* 80429174 003F2734  4B FF D3 91 */	bl StopFinished__Q44nw4r3snd6detail5VoiceFv
 lbl_80429178:
 /* 80429178 003F2738  7C 1F F0 40 */	cmplw r31, r30
 /* 8042917C 003F273C  40 82 FF EC */	bne lbl_80429168
@@ -391,7 +391,7 @@ lbl_8042918C:
 /* 8042918C 003F274C  7F C3 F3 78 */	mr r3, r30
 /* 80429190 003F2750  83 DE 00 00 */	lwz r30, 0(r30)
 /* 80429194 003F2754  38 63 FE E4 */	addi r3, r3, -284
-/* 80429198 003F2758  4B FF D4 09 */	bl func_804265A0
+/* 80429198 003F2758  4B FF D4 09 */	bl Calc__Q44nw4r3snd6detail5VoiceFv
 lbl_8042919C:
 /* 8042919C 003F275C  7C 1E F8 40 */	cmplw r30, r31
 /* 804291A0 003F2760  40 82 FF EC */	bne lbl_8042918C
@@ -403,7 +403,7 @@ lbl_804291B4:
 /* 804291B4 003F2774  7F E3 FB 78 */	mr r3, r31
 /* 804291B8 003F2778  83 FF 00 00 */	lwz r31, 0(r31)
 /* 804291BC 003F277C  38 63 FE E4 */	addi r3, r3, -284
-/* 804291C0 003F2780  4B FF D6 69 */	bl func_80426828
+/* 804291C0 003F2780  4B FF D6 69 */	bl Update__Q44nw4r3snd6detail5VoiceFv
 lbl_804291C4:
 /* 804291C4 003F2784  7C 1F E8 40 */	cmplw r31, r29
 /* 804291C8 003F2788  40 82 FF EC */	bne lbl_804291B4
@@ -417,8 +417,8 @@ lbl_804291C4:
 /* 804291E8 003F27A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 804291EC 003F27AC  4E 80 00 20 */	blr 
 
-.global func_804291F0
-func_804291F0:
+.global NotifyVoiceUpdate__Q44nw4r3snd6detail12VoiceManagerFv
+NotifyVoiceUpdate__Q44nw4r3snd6detail12VoiceManagerFv:
 /* 804291F0 003F27B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804291F4 003F27B4  7C 08 02 A6 */	mflr r0
 /* 804291F8 003F27B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -434,7 +434,7 @@ lbl_8042921C:
 /* 8042921C 003F27DC  7F C3 F3 78 */	mr r3, r30
 /* 80429220 003F27E0  83 DE 00 00 */	lwz r30, 0(r30)
 /* 80429224 003F27E4  38 63 FE E4 */	addi r3, r3, -284
-/* 80429228 003F27E8  4B FF E9 E9 */	bl func_80427C10
+/* 80429228 003F27E8  4B FF E9 E9 */	bl ResetDelta__Q44nw4r3snd6detail5VoiceFv
 lbl_8042922C:
 /* 8042922C 003F27EC  7C 1E E8 40 */	cmplw r30, r29
 /* 80429230 003F27F0  40 82 FF EC */	bne lbl_8042921C
@@ -448,8 +448,8 @@ lbl_8042922C:
 /* 80429250 003F2810  38 21 00 20 */	addi r1, r1, 0x20
 /* 80429254 003F2814  4E 80 00 20 */	blr 
 
-.global func_80429258
-func_80429258:
+.global ChangeVoicePriority__Q44nw4r3snd6detail12VoiceManagerFPQ44nw4r3snd6detail5Voice
+ChangeVoicePriority__Q44nw4r3snd6detail12VoiceManagerFPQ44nw4r3snd6detail5Voice:
 /* 80429258 003F2818  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8042925C 003F281C  7C 08 02 A6 */	mflr r0
 /* 80429260 003F2820  90 01 00 34 */	stw r0, 0x34(r1)
@@ -508,7 +508,7 @@ lbl_80429318:
 /* 80429324 003F28E4  40 81 00 1C */	ble lbl_80429340
 /* 80429328 003F28E8  2C 00 00 FF */	cmpwi r0, 0xff
 /* 8042932C 003F28EC  41 82 00 08 */	beq lbl_80429334
-/* 80429330 003F28F0  4B FF E3 75 */	bl func_804276A4
+/* 80429330 003F28F0  4B FF E3 75 */	bl UpdateVoicesPriority__Q44nw4r3snd6detail5VoiceFv
 lbl_80429334:
 /* 80429334 003F28F4  83 BD 00 00 */	lwz r29, 0(r29)
 lbl_80429338:
@@ -524,8 +524,8 @@ lbl_80429340:
 /* 80429358 003F2918  38 21 00 30 */	addi r1, r1, 0x30
 /* 8042935C 003F291C  4E 80 00 20 */	blr 
 
-.global func_80429360
-func_80429360:
+.global UpdateAllVoicesSync__Q44nw4r3snd6detail12VoiceManagerFUl
+UpdateAllVoicesSync__Q44nw4r3snd6detail12VoiceManagerFUl:
 /* 80429360 003F2920  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80429364 003F2924  7C 08 02 A6 */	mflr r0
 /* 80429368 003F2928  90 01 00 14 */	stw r0, 0x14(r1)

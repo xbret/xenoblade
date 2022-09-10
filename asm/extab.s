@@ -46202,7 +46202,7 @@ lbl_8001E444:
 	.4byte func_8049B9AC
 	.4byte 0x06800019
 	.4byte 0x00001468
-	.4byte func_803F4638
+	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
 	.4byte 0x06800019
 	.4byte 0x00001464
 	.4byte __dt__Q34nw4r3g3d18ICalcWorldCallbackFv
@@ -46270,7 +46270,7 @@ lbl_8001E564:
 	.4byte func_8049B9AC
 	.4byte 0x0680001D
 	.4byte 0x00001468
-	.4byte func_803F4638
+	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
 	.4byte 0x0680001D
 	.4byte 0x00001464
 	.4byte __dt__Q34nw4r3g3d18ICalcWorldCallbackFv
@@ -46387,7 +46387,7 @@ lbl_8001E564:
 	.4byte func_8049B9AC
 	.4byte 0x0680001D
 	.4byte 0x00001468
-	.4byte func_803F4638
+	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
 	.4byte 0x8680001D
 	.4byte 0x00001464
 	.4byte __dt__Q34nw4r3g3d18ICalcWorldCallbackFv
@@ -46929,7 +46929,7 @@ lbl_8001EC00:
 	.4byte 0
 	.4byte 0x0680001C
 	.4byte 0x0000000C
-	.4byte func_803F4638
+	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
 	.4byte 0x8680001C
 	.4byte 0
 	.4byte func_8048ED40
@@ -46949,13 +46949,13 @@ lbl_8001EC30:
 	.4byte 0
 	.4byte 0x0680001B
 	.4byte 0x0000000C
-	.4byte func_803F4638
+	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
 	.4byte 0x8680001B
 	.4byte 0
 	.4byte func_8048ED40
 	.4byte 0x8680001B
 	.4byte 0x0000000C
-	.4byte func_803F4638
+	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
 
 .global lbl_8001EC6C
 lbl_8001EC6C:

@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80429F38
-func_80429F38:
+.global DetachSound__Q34nw4r3snd15WaveSoundHandleFv
+DetachSound__Q34nw4r3snd15WaveSoundHandleFv:
 /* 80429F38 003F34F8  80 83 00 00 */	lwz r4, 0(r3)
 /* 80429F3C 003F34FC  2C 04 00 00 */	cmpwi r4, 0
 /* 80429F40 003F3500  41 82 00 18 */	beq lbl_80429F58

@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804257C4
-func_804257C4:
+.global GetInstance__Q44nw4r3snd6detail11TaskManagerFv
+GetInstance__Q44nw4r3snd6detail11TaskManagerFv:
 /* 804257C4 003EED84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804257C8 003EED88  7C 08 02 A6 */	mflr r0
 /* 804257CC 003EED8C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -325,8 +325,8 @@ lbl_80425C04:
 /* 80425C18 003EF1D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80425C1C 003EF1DC  4E 80 00 20 */	blr 
 
-.global func_80425C20
-func_80425C20:
+.global ExecuteTask__Q44nw4r3snd6detail11TaskManagerFv
+ExecuteTask__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425C20 003EF1E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80425C24 003EF1E4  7C 08 02 A6 */	mflr r0
 /* 80425C28 003EF1E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -432,8 +432,8 @@ lbl_80425D6C:
 /* 80425D84 003EF344  38 21 00 30 */	addi r1, r1, 0x30
 /* 80425D88 003EF348  4E 80 00 20 */	blr 
 
-.global func_80425D8C
-func_80425D8C:
+.global CancelAllTask__Q44nw4r3snd6detail11TaskManagerFv
+CancelAllTask__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425D8C 003EF34C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80425D90 003EF350  7C 08 02 A6 */	mflr r0
 /* 80425D94 003EF354  90 01 00 34 */	stw r0, 0x34(r1)
@@ -499,8 +499,8 @@ lbl_80425E50:
 /* 80425E68 003EF428  38 21 00 30 */	addi r1, r1, 0x30
 /* 80425E6C 003EF42C  4E 80 00 20 */	blr 
 
-.global func_80425E70
-func_80425E70:
+.global WaitTask__Q44nw4r3snd6detail11TaskManagerFv
+WaitTask__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425E70 003EF430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80425E74 003EF434  7C 08 02 A6 */	mflr r0
 /* 80425E78 003EF438  90 01 00 14 */	stw r0, 0x14(r1)
@@ -533,8 +533,8 @@ lbl_80425EC0:
 /* 80425ED8 003EF498  38 21 00 10 */	addi r1, r1, 0x10
 /* 80425EDC 003EF49C  4E 80 00 20 */	blr 
 
-.global func_80425EE0
-func_80425EE0:
+.global CancelWaitTask__Q44nw4r3snd6detail11TaskManagerFv
+CancelWaitTask__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425EE0 003EF4A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80425EE4 003EF4A4  7C 08 02 A6 */	mflr r0
 /* 80425EE8 003EF4A8  90 01 00 14 */	stw r0, 0x14(r1)

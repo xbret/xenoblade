@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804115B4
-func_804115B4:
+.global CreateHeap__Q44nw4r3snd6detail8AxfxImplFPvUl
+CreateHeap__Q44nw4r3snd6detail8AxfxImplFPvUl:
 /* 804115B4 003DAB74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804115B8 003DAB78  7C 08 02 A6 */	mflr r0
 /* 804115BC 003DAB7C  2C 04 00 00 */	cmpwi r4, 0
@@ -34,8 +34,8 @@ lbl_80411608:
 /* 80411614 003DABD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80411618 003DABD8  4E 80 00 20 */	blr
 
-.global func_8041161C
-func_8041161C:
+.global DestroyHeap__Q44nw4r3snd6detail8AxfxImplFv
+DestroyHeap__Q44nw4r3snd6detail8AxfxImplFv:
 /* 8041161C 003DABDC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80411620 003DABE0  7C 08 02 A6 */	mflr r0
 /* 80411624 003DABE4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -55,8 +55,8 @@ lbl_8041164C:
 /* 80411658 003DAC18  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041165C 003DAC1C  4E 80 00 20 */	blr 
 
-.global func_80411660
-func_80411660:
+.global HookAlloc__Q44nw4r3snd6detail8AxfxImplFPPFUl_PvPPFPv_v
+HookAlloc__Q44nw4r3snd6detail8AxfxImplFPPFUl_PvPPFPv_v:
 /* 80411660 003DAC20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80411664 003DAC24  7C 08 02 A6 */	mflr r0
 /* 80411668 003DAC28  90 01 00 14 */	stw r0, 0x14(r1)
@@ -65,10 +65,10 @@ func_80411660:
 /* 80411674 003DAC34  7C 83 23 78 */	mr r3, r4
 /* 80411678 003DAC38  7C A4 2B 78 */	mr r4, r5
 /* 8041167C 003DAC3C  4B EC 94 B5 */	bl AXFXGetHooks
-/* 80411680 003DAC40  3C 60 80 41 */	lis r3, func_804116E8@ha
-/* 80411684 003DAC44  3C 80 80 41 */	lis r4, func_80411748@ha
-/* 80411688 003DAC48  38 63 16 E8 */	addi r3, r3, func_804116E8@l
-/* 8041168C 003DAC4C  38 84 17 48 */	addi r4, r4, func_80411748@l
+/* 80411680 003DAC40  3C 60 80 41 */	lis r3, Alloc__Q44nw4r3snd6detail8AxfxImplFUl@ha
+/* 80411684 003DAC44  3C 80 80 41 */	lis r4, Free__Q44nw4r3snd6detail8AxfxImplFPv@ha
+/* 80411688 003DAC48  38 63 16 E8 */	addi r3, r3, Alloc__Q44nw4r3snd6detail8AxfxImplFUl@l
+/* 8041168C 003DAC4C  38 84 17 48 */	addi r4, r4, Free__Q44nw4r3snd6detail8AxfxImplFPv@l
 /* 80411690 003DAC50  4B EC 94 91 */	bl AXFXSetHooks
 /* 80411694 003DAC54  38 00 00 00 */	li r0, 0
 /* 80411698 003DAC58  93 ED BC 28 */	stw r31, lbl_80667DA8@sda21(r13)
@@ -79,8 +79,8 @@ func_80411660:
 /* 804116AC 003DAC6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804116B0 003DAC70  4E 80 00 20 */	blr 
 
-.global func_804116B4
-func_804116B4:
+.global RestoreAlloc__Q44nw4r3snd6detail8AxfxImplFPFUl_PvPFPv_v
+RestoreAlloc__Q44nw4r3snd6detail8AxfxImplFPFUl_PvPFPv_v:
 /* 804116B4 003DAC74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804116B8 003DAC78  7C 08 02 A6 */	mflr r0
 /* 804116BC 003DAC7C  7C 83 23 78 */	mr r3, r4
@@ -95,8 +95,8 @@ func_804116B4:
 /* 804116E0 003DACA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804116E4 003DACA4  4E 80 00 20 */	blr
 
-.global func_804116E8
-func_804116E8:
+.global Alloc__Q44nw4r3snd6detail8AxfxImplFUl
+Alloc__Q44nw4r3snd6detail8AxfxImplFUl:
 /* 804116E8 003DACA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804116EC 003DACAC  7C 08 02 A6 */	mflr r0
 /* 804116F0 003DACB0  38 A0 00 04 */	li r5, 4
@@ -122,8 +122,8 @@ func_804116E8:
 /* 80411740 003DAD00  38 21 00 10 */	addi r1, r1, 0x10
 /* 80411744 003DAD04  4E 80 00 20 */	blr
 
-.global func_80411748
-func_80411748:
+.global Free__Q44nw4r3snd6detail8AxfxImplFPv
+Free__Q44nw4r3snd6detail8AxfxImplFPv:
 /* 80411748 003DAD08  80 8D BC 28 */	lwz r4, lbl_80667DA8@sda21(r13)
 /* 8041174C 003DAD0C  80 64 00 04 */	lwz r3, 4(r4)
 /* 80411750 003DAD10  2C 03 00 00 */	cmpwi r3, 0

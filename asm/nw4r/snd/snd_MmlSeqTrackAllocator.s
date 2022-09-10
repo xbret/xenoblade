@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8041883C
-func_8041883C:
+.global AllocTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail9SeqPlayer
+AllocTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail9SeqPlayer:
 /* 8041883C 003E1DFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80418840 003E1E00  7C 08 02 A6 */	mflr r0
 /* 80418844 003E1E04  90 01 00 14 */	stw r0, 0x14(r1)
@@ -12,14 +12,14 @@ func_8041883C:
 /* 80418850 003E1E10  93 C1 00 08 */	stw r30, 8(r1)
 /* 80418854 003E1E14  7C 7E 1B 78 */	mr r30, r3
 /* 80418858 003E1E18  38 63 00 08 */	addi r3, r3, 8
-/* 8041885C 003E1E1C  4B FF E6 61 */	bl func_80416EBC
+/* 8041885C 003E1E1C  4B FF E6 61 */	bl AllocImpl__Q44nw4r3snd6detail8PoolImplFv
 /* 80418860 003E1E20  2C 03 00 00 */	cmpwi r3, 0
 /* 80418864 003E1E24  40 82 00 0C */	bne lbl_80418870
 /* 80418868 003E1E28  38 60 00 00 */	li r3, 0
 /* 8041886C 003E1E2C  48 00 00 0C */	b lbl_80418878
 lbl_80418870:
 /* 80418870 003E1E30  41 82 00 08 */	beq lbl_80418878
-/* 80418874 003E1E34  4B FF FF 21 */	bl func_80418794
+/* 80418874 003E1E34  4B FF FF 21 */	bl __ct__Q44nw4r3snd6detail11MmlSeqTrackFv
 lbl_80418878:
 /* 80418878 003E1E38  2C 03 00 00 */	cmpwi r3, 0
 /* 8041887C 003E1E3C  41 82 00 10 */	beq lbl_8041888C
@@ -35,8 +35,8 @@ lbl_8041888C:
 /* 804188A0 003E1E60  4E 80 00 20 */	blr
 
 
-.global func_804188A4
-func_804188A4:
+.global FreeTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail8SeqTrack
+FreeTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail8SeqTrack:
 /* 804188A4 003E1E64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804188A8 003E1E68  7C 08 02 A6 */	mflr r0
 /* 804188AC 003E1E6C  2C 04 00 00 */	cmpwi r4, 0
@@ -56,7 +56,7 @@ func_804188A4:
 /* 804188E4 003E1EA4  4E 80 04 21 */	bctrl 
 /* 804188E8 003E1EA8  7F E4 FB 78 */	mr r4, r31
 /* 804188EC 003E1EAC  38 7E 00 08 */	addi r3, r30, 8
-/* 804188F0 003E1EB0  4B FF E6 29 */	bl func_80416F18
+/* 804188F0 003E1EB0  4B FF E6 29 */	bl FreeImpl__Q44nw4r3snd6detail8PoolImplFPv
 lbl_804188F4:
 /* 804188F4 003E1EB4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804188F8 003E1EB8  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -65,21 +65,23 @@ lbl_804188F4:
 /* 80418904 003E1EC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80418908 003E1EC8  4E 80 00 20 */	blr 
 
-.global func_8041890C
-func_8041890C:
+.global Create__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPvUl
+Create__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPvUl:
 /* 8041890C 003E1ECC  38 C0 00 CC */	li r6, 0xcc
 /* 80418910 003E1ED0  38 63 00 08 */	addi r3, r3, 8
-/* 80418914 003E1ED4  4B FF E3 94 */	b func_80416CA8
+/* 80418914 003E1ED4  4B FF E3 94 */	b CreateImpl__Q44nw4r3snd6detail8PoolImplFPvUlUl
 
-.global func_80418918
-func_80418918:
+.global Destroy__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPvUl
+Destroy__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPvUl:
 /* 80418918 003E1ED8  38 63 00 08 */	addi r3, r3, 8
-/* 8041891C 003E1EDC  4B FF E4 D0 */	b func_80416DEC
-.global lbl_80418920
-lbl_80418920:
-/* 80418920 003E1EE0  38 63 00 08 */	addi r3, r3, 8
-/* 80418924 003E1EE4  4B FF E5 48 */	b func_80416E6C
+/* 8041891C 003E1EDC  4B FF E4 D0 */	b DestroyImpl__Q44nw4r3snd6detail8PoolImplFPvUl
 
+.global GetAllocatableTrackCount__Q44nw4r3snd6detail20MmlSeqTrackAllocatorCFv
+GetAllocatableTrackCount__Q44nw4r3snd6detail20MmlSeqTrackAllocatorCFv:
+/* 80418920 003E1EE0  38 63 00 08 */	addi r3, r3, 8
+/* 80418924 003E1EE4  4B FF E5 48 */	b CountImpl__Q44nw4r3snd6detail8PoolImplCFv
+
+#__dt__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFv or __dt__Q44nw4r3snd6detail17SeqTrackAllocatorFv
 .global func_80418928
 func_80418928:
 /* 80418928 003E1EE8  94 21 FF F0 */	stwu r1, -0x10(r1)
