@@ -4198,8 +4198,9 @@ lbl_802B80D4:
 .global func_802B80EC
 func_802B80EC:
 /* 802B80EC 002816AC  4B F5 A3 A4 */	b func_80212490
-.global lbl_802B80F0
-lbl_802B80F0:
+
+.global func_802B80F0
+func_802B80F0:
 /* 802B80F0 002816B0  4B F0 6D 6C */	b func_801BEE5C
 
 .global func_802B80F4
@@ -4623,8 +4624,9 @@ func_802B8604:
 .global func_802B864C
 func_802B864C:
 /* 802B864C 00281C0C  4B ED 3B 34 */	b func_8018C180
-.global lbl_802B8650
-lbl_802B8650:
+
+.global func_802B8650
+func_802B8650:
 /* 802B8650 00281C10  4B ED 2D 48 */	b func_8018B398
 
 .global func_802B8654

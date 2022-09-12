@@ -75,8 +75,9 @@ func_800697CC:
 .global func_800697E0
 func_800697E0:
 /* 800697E0 00032DA0  48 01 64 1C */	b func_8007FBFC
-.global lbl_800697E4
-lbl_800697E4:
+
+.global func_800697E4
+func_800697E4:
 /* 800697E4 00032DA4  48 01 64 48 */	b func_8007FC2C
 
 .global func_800697E8

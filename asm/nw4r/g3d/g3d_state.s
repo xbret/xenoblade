@@ -695,7 +695,6 @@ lbl_803E8564:
 /* 803E8570 003B1B30  38 21 00 10 */	addi r1, r1, 0x10
 /* 803E8574 003B1B34  4E 80 00 20 */	blr 
 
-#may not be this
 .global __dt__Q34nw4r3g3d12LightSettingFv
 __dt__Q34nw4r3g3d12LightSettingFv:
 /* 803E8578 003B1B38  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -811,7 +810,6 @@ lbl_803E86E0:
 /* 803E86F0 003B1CB0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803E86F4 003B1CB4  4E 80 00 20 */	blr
 
-#not sure about this function
 #SetLightObj__Q54nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@10LightStateFRCQ34nw4r3g3d8LightObji
 .global SetLightObj__Q54nw4r3g3d8G3DState23_unnamed_g3d_state_cpp_10LightStateFRCQ34nw4r3g3d8LightObji
 SetLightObj__Q54nw4r3g3d8G3DState23_unnamed_g3d_state_cpp_10LightStateFRCQ34nw4r3g3d8LightObji:
@@ -3995,8 +3993,8 @@ lbl_803EB2F8:
 /* 803EB36C 003B492C  90 04 00 00 */	stw r0, 0(r4)
 /* 803EB370 003B4930  4E 80 00 20 */	blr
 
-.global func_803EB374
-func_803EB374:
+.global __dt__Q44nw4r3g3d8G3DState11IndMtxOpStdFv
+__dt__Q44nw4r3g3d8G3DState11IndMtxOpStdFv:
 /* 803EB374 003B4934  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803EB378 003B4938  7C 08 02 A6 */	mflr r0
 /* 803EB37C 003B493C  2C 03 00 00 */	cmpwi r3, 0
@@ -4129,12 +4127,12 @@ lbl_803EB4FC:
 /* 803EB55C 003B4B1C  4B EC E5 A5 */	bl __construct_array
 /* 803EB560 003B4B20  38 00 FF FF */	li r0, -1
 /* 803EB564 003B4B24  3B C0 00 00 */	li r30, 0
-/* 803EB568 003B4B28  3C 80 80 3F */	lis r4, func_803EB648@ha
+/* 803EB568 003B4B28  3C 80 80 3F */	lis r4, __dt__Q54nw4r3g3d8G3DState23_unnamed_g3d_state_cpp_10LightStateFv@ha
 /* 803EB56C 003B4B2C  90 1C 00 10 */	stw r0, 0x10(r28)
 /* 803EB570 003B4B30  7F 83 E3 78 */	mr r3, r28
 /* 803EB574 003B4B34  38 BF 10 48 */	addi r5, r31, 0x1048
 /* 803EB578 003B4B38  93 DC 00 14 */	stw r30, 0x14(r28)
-/* 803EB57C 003B4B3C  38 84 B6 48 */	addi r4, r4, func_803EB648@l
+/* 803EB57C 003B4B3C  38 84 B6 48 */	addi r4, r4, __dt__Q54nw4r3g3d8G3DState23_unnamed_g3d_state_cpp_10LightStateFv@l
 /* 803EB580 003B4B40  93 DC 00 18 */	stw r30, 0x18(r28)
 /* 803EB584 003B4B44  93 DC 00 1C */	stw r30, 0x1c(r28)
 /* 803EB588 003B4B48  93 DC 00 20 */	stw r30, 0x20(r28)
@@ -4169,10 +4167,10 @@ lbl_803EB5DC:
 /* 803EB5F8 003B4BB8  38 7C 00 68 */	addi r3, r28, 0x68
 /* 803EB5FC 003B4BBC  4B F6 1B E5 */	bl PSMTXIdentity
 /* 803EB600 003B4BC0  38 00 00 00 */	li r0, 0
-/* 803EB604 003B4BC4  3C 80 80 3F */	lis r4, func_803EB374@ha
+/* 803EB604 003B4BC4  3C 80 80 3F */	lis r4, __dt__Q44nw4r3g3d8G3DState11IndMtxOpStdFv@ha
 /* 803EB608 003B4BC8  98 1C 00 06 */	stb r0, 6(r28)
 /* 803EB60C 003B4BCC  38 7F 55 00 */	addi r3, r31, 0x5500
-/* 803EB610 003B4BD0  38 84 B3 74 */	addi r4, r4, func_803EB374@l
+/* 803EB610 003B4BD0  38 84 B3 74 */	addi r4, r4, __dt__Q44nw4r3g3d8G3DState11IndMtxOpStdFv@l
 /* 803EB614 003B4BD4  38 BF 54 F0 */	addi r5, r31, 0x54f0
 /* 803EB618 003B4BD8  98 1C 00 05 */	stb r0, 5(r28)
 /* 803EB61C 003B4BDC  98 1C 00 04 */	stb r0, 4(r28)
@@ -4187,8 +4185,9 @@ lbl_803EB5DC:
 /* 803EB640 003B4C00  38 21 00 20 */	addi r1, r1, 0x20
 /* 803EB644 003B4C04  4E 80 00 20 */	blr
 
-.global func_803EB648
-func_803EB648:
+#__dt__Q54nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@10LightStateFv
+.global __dt__Q54nw4r3g3d8G3DState23_unnamed_g3d_state_cpp_10LightStateFv
+__dt__Q54nw4r3g3d8G3DState23_unnamed_g3d_state_cpp_10LightStateFv:
 /* 803EB648 003B4C08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803EB64C 003B4C0C  7C 08 02 A6 */	mflr r0
 /* 803EB650 003B4C10  2C 03 00 00 */	cmpwi r3, 0

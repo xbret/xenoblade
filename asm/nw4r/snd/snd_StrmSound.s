@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80424FBC
-func_80424FBC:
+#__ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager<Q44nw4r3snd6detail9StrmSound>ii
+.global __ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager_Q44nw4r3snd6detail9StrmSound_ii
+__ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager_Q44nw4r3snd6detail9StrmSound_ii:
 /* 80424FBC 003EE57C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80424FC0 003EE580  7C 08 02 A6 */	mflr r0
 /* 80424FC4 003EE584  90 01 00 14 */	stw r0, 0x14(r1)
@@ -13,12 +14,12 @@ func_80424FBC:
 /* 80424FD4 003EE594  7C 9E 23 78 */	mr r30, r4
 /* 80424FD8 003EE598  7C A4 2B 78 */	mr r4, r5
 /* 80424FDC 003EE59C  7C C5 33 78 */	mr r5, r6
-/* 80424FE0 003EE5A0  4B FE D4 C1 */	bl func_804124A0
+/* 80424FE0 003EE5A0  4B FE D4 C1 */	bl __ct__Q44nw4r3snd6detail10BasicSoundFii
 /* 80424FE4 003EE5A4  3C 80 80 57 */	lis r4, lbl_8056E5D0@ha
 /* 80424FE8 003EE5A8  38 7F 01 0C */	addi r3, r31, 0x10c
 /* 80424FEC 003EE5AC  38 84 E5 D0 */	addi r4, r4, lbl_8056E5D0@l
 /* 80424FF0 003EE5B0  90 9F 00 00 */	stw r4, 0(r31)
-/* 80424FF4 003EE5B4  4B FF D5 A5 */	bl func_80422598
+/* 80424FF4 003EE5B4  4B FF D5 A5 */	bl __ct__Q44nw4r3snd6detail10StrmPlayerFv
 /* 80424FF8 003EE5B8  C0 02 C5 08 */	lfs f0, lbl_8066C888@sda21(r2)
 /* 80424FFC 003EE5BC  38 BF 0E 5C */	addi r5, r31, 0xe5c
 /* 80425000 003EE5C0  38 00 00 00 */	li r0, 0
@@ -140,14 +141,14 @@ lbl_8042519C:
 /* 804251B0 003EE770  38 21 00 10 */	addi r1, r1, 0x10
 /* 804251B4 003EE774  4E 80 00 20 */	blr 
 
-.global func_804251B8
-func_804251B8:
+.global InitParam__Q44nw4r3snd6detail9StrmSoundFv
+InitParam__Q44nw4r3snd6detail9StrmSoundFv:
 /* 804251B8 003EE778  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804251BC 003EE77C  7C 08 02 A6 */	mflr r0
 /* 804251C0 003EE780  90 01 00 24 */	stw r0, 0x24(r1)
 /* 804251C4 003EE784  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 804251C8 003EE788  7C 7F 1B 78 */	mr r31, r3
-/* 804251CC 003EE78C  4B FE D3 B1 */	bl func_8041257C
+/* 804251CC 003EE78C  4B FE D3 B1 */	bl InitParam__Q44nw4r3snd6detail10BasicSoundFv
 /* 804251D0 003EE790  38 00 00 04 */	li r0, 4
 /* 804251D4 003EE794  C0 C2 C5 08 */	lfs f6, lbl_8066C888@sda21(r2)
 /* 804251D8 003EE798  38 C0 00 00 */	li r6, 0
@@ -225,8 +226,8 @@ lbl_804252BC:
 /* 804252E4 003EE8A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804252E8 003EE8A8  4E 80 00 20 */	blr 
 
-.global func_804252EC
-func_804252EC:
+.global Setup__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail14StrmBufferPooliUs
+Setup__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail14StrmBufferPooliUs:
 /* 804252EC 003EE8AC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804252F0 003EE8B0  7C 08 02 A6 */	mflr r0
 /* 804252F4 003EE8B4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -243,13 +244,13 @@ func_804252EC:
 /* 80425320 003EE8E0  7D 89 03 A6 */	mtctr r12
 /* 80425324 003EE8E4  4E 80 04 21 */	bctrl 
 /* 80425328 003EE8E8  7F 83 E3 78 */	mr r3, r28
-/* 8042532C 003EE8EC  4B FE E4 25 */	bl func_80413750
+/* 8042532C 003EE8EC  4B FE E4 25 */	bl GetVoiceOutCount__Q44nw4r3snd6detail10BasicSoundCFv
 /* 80425330 003EE8F0  7C 67 1B 78 */	mr r7, r3
 /* 80425334 003EE8F4  7F A4 EB 78 */	mr r4, r29
 /* 80425338 003EE8F8  7F C5 F3 78 */	mr r5, r30
 /* 8042533C 003EE8FC  7F E6 FB 78 */	mr r6, r31
 /* 80425340 003EE900  38 7C 01 0C */	addi r3, r28, 0x10c
-/* 80425344 003EE904  4B FF D4 FD */	bl func_80422840
+/* 80425344 003EE904  4B FF D4 FD */	bl Setup__Q44nw4r3snd6detail10StrmPlayerFPQ44nw4r3snd6detail14StrmBufferPooliUsi
 /* 80425348 003EE908  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8042534C 003EE90C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80425350 003EE910  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -259,8 +260,8 @@ func_804252EC:
 /* 80425360 003EE920  38 21 00 20 */	addi r1, r1, 0x20
 /* 80425364 003EE924  4E 80 00 20 */	blr 
 
-.global func_80425368
-func_80425368:
+.global Prepare__Q44nw4r3snd6detail9StrmSoundFQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypelPQ34nw4r2ut10FileStream
+Prepare__Q44nw4r3snd6detail9StrmSoundFQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypelPQ34nw4r2ut10FileStream:
 /* 80425368 003EE928  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042536C 003EE92C  7C 08 02 A6 */	mflr r0
 /* 80425370 003EE930  7C 87 23 78 */	mr r7, r4
@@ -272,11 +273,11 @@ func_80425368:
 /* 80425388 003EE948  7C 7F 1B 78 */	mr r31, r3
 /* 8042538C 003EE94C  7C 06 03 78 */	mr r6, r0
 /* 80425390 003EE950  38 63 01 0C */	addi r3, r3, 0x10c
-/* 80425394 003EE954  4B FF D7 55 */	bl func_80422AE8
+/* 80425394 003EE954  4B FF D7 55 */	bl Prepare__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypei
 /* 80425398 003EE958  2C 03 00 00 */	cmpwi r3, 0
 /* 8042539C 003EE95C  40 82 00 14 */	bne lbl_804253B0
 /* 804253A0 003EE960  38 7F 01 0C */	addi r3, r31, 0x10c
-/* 804253A4 003EE964  4B FF D6 B5 */	bl func_80422A58
+/* 804253A4 003EE964  4B FF D6 B5 */	bl Shutdown__Q44nw4r3snd6detail10StrmPlayerFv
 /* 804253A8 003EE968  38 60 00 00 */	li r3, 0
 /* 804253AC 003EE96C  48 00 00 08 */	b lbl_804253B4
 lbl_804253B0:
@@ -288,8 +289,8 @@ lbl_804253B4:
 /* 804253C0 003EE980  38 21 00 10 */	addi r1, r1, 0x10
 /* 804253C4 003EE984  4E 80 00 20 */	blr 
 
-.global func_804253C8
-func_804253C8:
+.global UpdateMoveValue__Q44nw4r3snd6detail9StrmSoundFv
+UpdateMoveValue__Q44nw4r3snd6detail9StrmSoundFv:
 /* 804253C8 003EE988  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804253CC 003EE98C  7C 08 02 A6 */	mflr r0
 /* 804253D0 003EE990  90 01 00 24 */	stw r0, 0x24(r1)
@@ -297,13 +298,13 @@ func_804253C8:
 /* 804253D8 003EE998  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 804253DC 003EE99C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 804253E0 003EE9A0  7C 7D 1B 78 */	mr r29, r3
-/* 804253E4 003EE9A4  4B FE DD AD */	bl func_80413190
+/* 804253E4 003EE9A4  4B FE DD AD */	bl UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
 /* 804253E8 003EE9A8  7F BF EB 78 */	mr r31, r29
 /* 804253EC 003EE9AC  3B C0 00 00 */	li r30, 0
 lbl_804253F0:
 /* 804253F0 003EE9B0  7F C4 F3 78 */	mr r4, r30
 /* 804253F4 003EE9B4  38 7D 01 0C */	addi r3, r29, 0x10c
-/* 804253F8 003EE9B8  4B FF F8 0D */	bl func_80424C04
+/* 804253F8 003EE9B8  4B FF F8 0D */	bl GetPlayerTrack__Q44nw4r3snd6detail10StrmPlayerFi
 /* 804253FC 003EE9BC  2C 03 00 00 */	cmpwi r3, 0
 /* 80425400 003EE9C0  41 82 00 1C */	beq lbl_8042541C
 /* 80425404 003EE9C4  80 7F 0E 58 */	lwz r3, 0xe58(r31)
@@ -325,8 +326,8 @@ lbl_8042541C:
 /* 80425440 003EEA00  38 21 00 20 */	addi r1, r1, 0x20
 /* 80425444 003EEA04  4E 80 00 20 */	blr 
 
-.global func_80425448
-func_80425448:
+.global UpdateParam__Q44nw4r3snd6detail9StrmSoundFv
+UpdateParam__Q44nw4r3snd6detail9StrmSoundFv:
 /* 80425448 003EEA08  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8042544C 003EEA0C  7C 08 02 A6 */	mflr r0
 /* 80425450 003EEA10  90 01 00 44 */	stw r0, 0x44(r1)
@@ -335,7 +336,7 @@ func_80425448:
 /* 8042545C 003EEA1C  39 61 00 30 */	addi r11, r1, 0x30
 /* 80425460 003EEA20  4B E9 4C F5 */	bl _savegpr_27
 /* 80425464 003EEA24  7C 7B 1B 78 */	mr r27, r3
-/* 80425468 003EEA28  4B FE DD 5D */	bl func_804131C4
+/* 80425468 003EEA28  4B FE DD 5D */	bl UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
 /* 8042546C 003EEA2C  CB E2 C5 10 */	lfd f31, lbl_8066C890@sda21(r2)
 /* 80425470 003EEA30  7F 7D DB 78 */	mr r29, r27
 /* 80425474 003EEA34  3B 80 00 00 */	li r28, 0
@@ -344,7 +345,7 @@ func_80425448:
 lbl_80425480:
 /* 80425480 003EEA40  7F 84 E3 78 */	mr r4, r28
 /* 80425484 003EEA44  38 7B 01 0C */	addi r3, r27, 0x10c
-/* 80425488 003EEA48  4B FF F7 7D */	bl func_80424C04
+/* 80425488 003EEA48  4B FF F7 7D */	bl GetPlayerTrack__Q44nw4r3snd6detail10StrmPlayerFi
 /* 8042548C 003EEA4C  2C 03 00 00 */	cmpwi r3, 0
 /* 80425490 003EEA50  41 82 00 68 */	beq lbl_804254F8
 /* 80425494 003EEA54  80 DD 0E 54 */	lwz r6, 0xe54(r29)
@@ -373,7 +374,7 @@ lbl_804254B4:
 /* 804254EC 003EEAAC  EC 01 00 24 */	fdivs f0, f1, f0
 /* 804254F0 003EEAB0  EC 22 00 2A */	fadds f1, f2, f0
 lbl_804254F4:
-/* 804254F4 003EEAB4  4B FF F6 91 */	bl func_80424B84
+/* 804254F4 003EEAB4  4B FF F6 91 */	bl SetTrackVolume__Q44nw4r3snd6detail10StrmPlayerFUlf
 lbl_804254F8:
 /* 804254F8 003EEAB8  3B 9C 00 01 */	addi r28, r28, 1
 /* 804254FC 003EEABC  3B BD 00 10 */	addi r29, r29, 0x10
@@ -388,8 +389,8 @@ lbl_804254F8:
 /* 80425520 003EEAE0  38 21 00 40 */	addi r1, r1, 0x40
 /* 80425524 003EEAE4  4E 80 00 20 */	blr 
 
-.global func_80425528
-func_80425528:
+.global Shutdown__Q44nw4r3snd6detail9StrmSoundFv
+Shutdown__Q44nw4r3snd6detail9StrmSoundFv:
 /* 80425528 003EEAE8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042552C 003EEAEC  7C 08 02 A6 */	mflr r0
 /* 80425530 003EEAF0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -397,7 +398,7 @@ func_80425528:
 /* 80425538 003EEAF8  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8042553C 003EEAFC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80425540 003EEB00  7C 7D 1B 78 */	mr r29, r3
-/* 80425544 003EEB04  4B FE E0 5D */	bl func_804135A0
+/* 80425544 003EEB04  4B FE E0 5D */	bl Shutdown__Q44nw4r3snd6detail10BasicSoundFv
 /* 80425548 003EEB08  83 DD 0E 48 */	lwz r30, 0xe48(r29)
 /* 8042554C 003EEB0C  3B FE 00 10 */	addi r31, r30, 0x10
 /* 80425550 003EEB10  7F E3 FB 78 */	mr r3, r31
@@ -432,8 +433,8 @@ lbl_804255A8:
 /* 804255BC 003EEB7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 804255C0 003EEB80  4E 80 00 20 */	blr 
 
-.global func_804255C4
-func_804255C4:
+.global __dt__Q44nw4r3snd6detail9StrmSoundFv
+__dt__Q44nw4r3snd6detail9StrmSoundFv:
 /* 804255C4 003EEB84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804255C8 003EEB88  7C 08 02 A6 */	mflr r0
 /* 804255CC 003EEB8C  2C 03 00 00 */	cmpwi r3, 0
@@ -445,7 +446,7 @@ func_804255C4:
 /* 804255E4 003EEBA4  41 82 00 20 */	beq lbl_80425604
 /* 804255E8 003EEBA8  38 80 FF FF */	li r4, -1
 /* 804255EC 003EEBAC  38 63 01 0C */	addi r3, r3, 0x10c
-/* 804255F0 003EEBB0  4B FF D1 51 */	bl func_80422740
+/* 804255F0 003EEBB0  4B FF D1 51 */	bl __dt__Q44nw4r3snd6detail10StrmPlayerFv
 /* 804255F4 003EEBB4  2C 1F 00 00 */	cmpwi r31, 0
 /* 804255F8 003EEBB8  40 81 00 0C */	ble lbl_80425604
 /* 804255FC 003EEBBC  7F C3 F3 78 */	mr r3, r30
@@ -459,8 +460,8 @@ lbl_80425604:
 /* 80425618 003EEBD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042561C 003EEBDC  4E 80 00 20 */	blr 
 
-.global func_80425620
-func_80425620:
+.global OnUpdatePlayerPriority__Q44nw4r3snd6detail9StrmSoundFv
+OnUpdatePlayerPriority__Q44nw4r3snd6detail9StrmSoundFv:
 /* 80425620 003EEBE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80425624 003EEBE4  7C 08 02 A6 */	mflr r0
 /* 80425628 003EEBE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -526,37 +527,39 @@ lbl_804256C8:
 /* 804256FC 003EECBC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80425700 003EECC0  4E 80 00 20 */	blr 
 
-.global func_80425704
-func_80425704:
+.global IsAttachedTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv
+IsAttachedTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv:
 /* 80425704 003EECC4  80 63 0E 44 */	lwz r3, 0xe44(r3)
 /* 80425708 003EECC8  7C 03 00 D0 */	neg r0, r3
 /* 8042570C 003EECCC  7C 00 1B 78 */	or r0, r0, r3
 /* 80425710 003EECD0  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 80425714 003EECD4  4E 80 00 20 */	blr 
 
-.global func_80425718
-func_80425718:
+.global DetachTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv
+DetachTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv:
 /* 80425718 003EECD8  80 63 0E 44 */	lwz r3, 0xe44(r3)
 /* 8042571C 003EECDC  48 00 00 30 */	b DetachSound__Q34nw4r3snd15StrmSoundHandleFv
-.global lbl_80425720
-lbl_80425720:
+
+.global GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundFv
+GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundFv:
 /* 80425720 003EECE0  38 63 01 0C */	addi r3, r3, 0x10c
 /* 80425724 003EECE4  4E 80 00 20 */	blr 
 
-.global func_80425728
-func_80425728:
+.global GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundCFv
+GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundCFv:
 /* 80425728 003EECE8  38 63 01 0C */	addi r3, r3, 0x10c
 /* 8042572C 003EECEC  4E 80 00 20 */	blr 
 
-.global func_80425730
-func_80425730:
+.global IsPrepared__Q44nw4r3snd6detail9StrmSoundCFv
+IsPrepared__Q44nw4r3snd6detail9StrmSoundCFv:
 /* 80425730 003EECF0  88 63 02 2F */	lbz r3, 0x22f(r3)
 /* 80425734 003EECF4  4E 80 00 20 */	blr 
 
-.global func_80425738
-func_80425738:
+.global GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv
+GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv:
 /* 80425738 003EECF8  38 6D BC 80 */	addi r3, r13, lbl_80667E00@sda21
-/* 8042573C 003EECFC  4E 80 00 20 */	blr 
+/* 8042573C 003EECFC  4E 80 00 20 */	blr
+
 .global sinit_80425740
 sinit_80425740:
 /* 80425740 003EED00  38 0D BC 30 */	addi r0, r13, lbl_80667DB0@sda21

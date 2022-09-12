@@ -2,15 +2,15 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80421BE8
-func_80421BE8:
+.global __ct__Q44nw4r3snd6detail14StrmFileReaderFv
+__ct__Q44nw4r3snd6detail14StrmFileReaderFv:
 /* 80421BE8 003EB1A8  38 00 00 00 */	li r0, 0
 /* 80421BEC 003EB1AC  90 03 00 00 */	stw r0, 0(r3)
 /* 80421BF0 003EB1B0  90 03 00 04 */	stw r0, 4(r3)
 /* 80421BF4 003EB1B4  4E 80 00 20 */	blr 
 
-.global func_80421BF8
-func_80421BF8:
+.global ReadStrmInfo__Q44nw4r3snd6detail14StrmFileReaderCFPQ54nw4r3snd6detail14StrmFileReader8StrmInfo
+ReadStrmInfo__Q44nw4r3snd6detail14StrmFileReaderCFPQ54nw4r3snd6detail14StrmFileReader8StrmInfo:
 /* 80421BF8 003EB1B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80421BFC 003EB1BC  7C 08 02 A6 */	mflr r0
 /* 80421C00 003EB1C0  80 63 00 04 */	lwz r3, 4(r3)
@@ -86,8 +86,8 @@ lbl_80421C60:
 /* 80421D04 003EB2C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80421D08 003EB2C8  4E 80 00 20 */	blr 
 
-.global func_80421D0C
-func_80421D0C:
+.global ReadStrmTrackInfo__Q44nw4r3snd6detail14StrmFileReaderCFPQ54nw4r3snd6detail14StrmFileReader13StrmTrackInfoi
+ReadStrmTrackInfo__Q44nw4r3snd6detail14StrmFileReaderCFPQ54nw4r3snd6detail14StrmFileReader13StrmTrackInfoi:
 /* 80421D0C 003EB2CC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80421D10 003EB2D0  7C 08 02 A6 */	mflr r0
 /* 80421D14 003EB2D4  80 C3 00 04 */	lwz r6, 4(r3)
@@ -283,8 +283,8 @@ lbl_80421FB4:
 /* 80421FC8 003EB588  38 21 00 20 */	addi r1, r1, 0x20
 /* 80421FCC 003EB58C  4E 80 00 20 */	blr 
 
-.global func_80421FD0
-func_80421FD0:
+.global LoadFileHeader__Q44nw4r3snd6detail14StrmFileLoaderFPvUl
+LoadFileHeader__Q44nw4r3snd6detail14StrmFileLoaderFPvUl:
 /* 80421FD0 003EB590  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80421FD4 003EB594  7C 08 02 A6 */	mflr r0
 /* 80421FD8 003EB598  90 01 00 84 */	stw r0, 0x84(r1)
@@ -411,8 +411,8 @@ lbl_80422174:
 /* 8042218C 003EB74C  38 21 00 80 */	addi r1, r1, 0x80
 /* 80422190 003EB750  4E 80 00 20 */	blr 
 
-.global func_80422194
-func_80422194:
+.global GetChannelCount__Q44nw4r3snd6detail14StrmFileLoaderCFv
+GetChannelCount__Q44nw4r3snd6detail14StrmFileLoaderCFv:
 /* 80422194 003EB754  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80422198 003EB758  7C 08 02 A6 */	mflr r0
 /* 8042219C 003EB75C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -434,8 +434,8 @@ lbl_804221CC:
 /* 804221D4 003EB794  38 21 00 10 */	addi r1, r1, 0x10
 /* 804221D8 003EB798  4E 80 00 20 */	blr 
 
-.global func_804221DC
-func_804221DC:
+.global ReadStrmInfo__Q44nw4r3snd6detail14StrmFileLoaderCFPQ54nw4r3snd6detail14StrmFileReader8StrmInfo
+ReadStrmInfo__Q44nw4r3snd6detail14StrmFileLoaderCFPQ54nw4r3snd6detail14StrmFileReader8StrmInfo:
 /* 804221DC 003EB79C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804221E0 003EB7A0  7C 08 02 A6 */	mflr r0
 /* 804221E4 003EB7A4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -446,7 +446,7 @@ func_804221DC:
 /* 804221F8 003EB7B8  48 00 00 10 */	b lbl_80422208
 lbl_804221FC:
 /* 804221FC 003EB7BC  38 63 00 04 */	addi r3, r3, 4
-/* 80422200 003EB7C0  4B FF F9 F9 */	bl func_80421BF8
+/* 80422200 003EB7C0  4B FF F9 F9 */	bl ReadStrmInfo__Q44nw4r3snd6detail14StrmFileReaderCFPQ54nw4r3snd6detail14StrmFileReader8StrmInfo
 /* 80422204 003EB7C4  38 60 00 01 */	li r3, 1
 lbl_80422208:
 /* 80422208 003EB7C8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -454,8 +454,8 @@ lbl_80422208:
 /* 80422210 003EB7D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80422214 003EB7D4  4E 80 00 20 */	blr 
 
-.global func_80422218
-func_80422218:
+.global ReadStrmTrackInfo__Q44nw4r3snd6detail14StrmFileLoaderCFPQ54nw4r3snd6detail14StrmFileReader13StrmTrackInfoi
+ReadStrmTrackInfo__Q44nw4r3snd6detail14StrmFileLoaderCFPQ54nw4r3snd6detail14StrmFileReader13StrmTrackInfoi:
 /* 80422218 003EB7D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042221C 003EB7DC  7C 08 02 A6 */	mflr r0
 /* 80422220 003EB7E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -466,7 +466,7 @@ func_80422218:
 /* 80422234 003EB7F4  48 00 00 10 */	b lbl_80422244
 lbl_80422238:
 /* 80422238 003EB7F8  38 63 00 04 */	addi r3, r3, 4
-/* 8042223C 003EB7FC  4B FF FA D1 */	bl func_80421D0C
+/* 8042223C 003EB7FC  4B FF FA D1 */	bl ReadStrmTrackInfo__Q44nw4r3snd6detail14StrmFileReaderCFPQ54nw4r3snd6detail14StrmFileReader13StrmTrackInfoi
 /* 80422240 003EB800  38 60 00 01 */	li r3, 1
 lbl_80422244:
 /* 80422244 003EB804  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -474,8 +474,8 @@ lbl_80422244:
 /* 8042224C 003EB80C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80422250 003EB810  4E 80 00 20 */	blr 
 
-.global func_80422254
-func_80422254:
+.global ReadAdpcmInfo__Q44nw4r3snd6detail14StrmFileLoaderCFPQ44nw4r3snd6detail10AdpcmParamPQ44nw4r3snd6detail14AdpcmLoopParami
+ReadAdpcmInfo__Q44nw4r3snd6detail14StrmFileLoaderCFPQ44nw4r3snd6detail10AdpcmParamPQ44nw4r3snd6detail14AdpcmLoopParami:
 /* 80422254 003EB814  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80422258 003EB818  7C 08 02 A6 */	mflr r0
 /* 8042225C 003EB81C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -580,8 +580,8 @@ lbl_804223C4:
 /* 804223DC 003EB99C  38 21 00 20 */	addi r1, r1, 0x20
 /* 804223E0 003EB9A0  4E 80 00 20 */	blr 
 
-.global func_804223E4
-func_804223E4:
+.global ReadAdpcBlockData__Q44nw4r3snd6detail14StrmFileLoaderFPUsPUsii
+ReadAdpcBlockData__Q44nw4r3snd6detail14StrmFileLoaderFPUsPUsii:
 /* 804223E4 003EB9A4  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 804223E8 003EB9A8  7C 2C 0B 78 */	mr r12, r1
 /* 804223EC 003EB9AC  21 6B FF A0 */	subfic r11, r11, -96

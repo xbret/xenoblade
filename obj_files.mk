@@ -45,7 +45,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801D1F9C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801EADC0.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801F3410.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80201A84.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80201A44.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80205A7C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8020AB80.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8021BC70.o \
@@ -540,6 +540,7 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/snd/snd_FxReverbStdDpl2.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_InstancePool.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_Lfo.o \
+	$(BUILD_DIR)/asm/nw4r/snd/snd_McsSoundArchive.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_MemorySoundArchive.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_MidiSeqPlayer.o \
 	$(BUILD_DIR)/asm/nw4r/snd/snd_MmlParser.o \

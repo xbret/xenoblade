@@ -24,14 +24,14 @@ InitSeqPlayer__Q44nw4r3snd6detail9SeqPlayerFv:
 /* 8041974C 003E2D0C  B0 03 00 1E */	sth r0, 0x1e(r3)
 /* 80419750 003E2D10  4E 80 00 20 */	blr 
 
-.global func_80419754
-func_80419754:
+.global __ct__Q44nw4r3snd6detail9SeqPlayerFv
+__ct__Q44nw4r3snd6detail9SeqPlayerFv:
 /* 80419754 003E2D14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80419758 003E2D18  7C 08 02 A6 */	mflr r0
 /* 8041975C 003E2D1C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80419760 003E2D20  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80419764 003E2D24  7C 7F 1B 78 */	mr r31, r3
-/* 80419768 003E2D28  4B FF 8A 29 */	bl func_80412190
+/* 80419768 003E2D28  4B FF 8A 29 */	bl __ct__Q44nw4r3snd6detail11BasicPlayerFv
 /* 8041976C 003E2D2C  3D 20 80 57 */	lis r9, lbl_8056E3D8@ha
 /* 80419770 003E2D30  39 40 00 00 */	li r10, 0
 /* 80419774 003E2D34  39 29 E3 D8 */	addi r9, r9, lbl_8056E3D8@l
@@ -109,8 +109,8 @@ func_80419754:
 /* 80419894 003E2E54  38 21 00 10 */	addi r1, r1, 0x10
 /* 80419898 003E2E58  4E 80 00 20 */	blr 
 
-.global func_8041989C
-func_8041989C:
+.global __dt__Q44nw4r3snd6detail9SeqPlayerFv
+__dt__Q44nw4r3snd6detail9SeqPlayerFv:
 /* 8041989C 003E2E5C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804198A0 003E2E60  7C 08 02 A6 */	mflr r0
 /* 804198A4 003E2E64  90 01 00 24 */	stw r0, 0x24(r1)
@@ -143,7 +143,7 @@ func_8041989C:
 lbl_80419910:
 /* 80419910 003E2ED0  48 00 79 D5 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 80419914 003E2ED4  7F C4 F3 78 */	mr r4, r30
-/* 80419918 003E2ED8  48 00 7F 01 */	bl UnregisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback
+/* 80419918 003E2ED8  48 00 7F 01 */	bl UnregisterPlayerCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread14PlayerCallback
 /* 8041991C 003E2EDC  38 00 00 00 */	li r0, 0
 /* 80419920 003E2EE0  98 1B 00 ED */	stb r0, 0xed(r27)
 lbl_80419924:
@@ -182,7 +182,7 @@ lbl_80419980:
 /* 80419990 003E2F50  4B F4 03 B1 */	bl OSUnlockMutex
 /* 80419994 003E2F54  48 00 00 30 */	b lbl_804199C4
 lbl_80419998:
-/* 80419998 003E2F58  48 00 1C ED */	bl func_8041B684
+/* 80419998 003E2F58  48 00 1C ED */	bl Close__Q44nw4r3snd6detail8SeqTrackFv
 /* 8041999C 003E2F5C  80 7B 01 14 */	lwz r3, 0x114(r27)
 /* 804199A0 003E2F60  80 9D 01 20 */	lwz r4, 0x120(r29)
 /* 804199A4 003E2F64  81 83 00 00 */	lwz r12, 0(r3)
@@ -217,8 +217,8 @@ lbl_804199FC:
 /* 80419A10 003E2FD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80419A14 003E2FD4  4E 80 00 20 */	blr 
 
-.global func_80419A18
-func_80419A18:
+.global InitParam__Q44nw4r3snd6detail9SeqPlayerFiPQ44nw4r3snd6detail14NoteOnCallback
+InitParam__Q44nw4r3snd6detail9SeqPlayerFiPQ44nw4r3snd6detail14NoteOnCallback:
 /* 80419A18 003E2FD8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80419A1C 003E2FDC  7C 08 02 A6 */	mflr r0
 /* 80419A20 003E2FE0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -228,7 +228,7 @@ func_80419A18:
 /* 80419A30 003E2FF0  7C 9E 23 78 */	mr r30, r4
 /* 80419A34 003E2FF4  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80419A38 003E2FF8  7C 7D 1B 78 */	mr r29, r3
-/* 80419A3C 003E2FFC  4B FF 89 A9 */	bl func_804123E4
+/* 80419A3C 003E2FFC  4B FF 89 A9 */	bl InitParam__Q44nw4r3snd6detail11BasicPlayerFv
 /* 80419A40 003E3000  C0 22 C4 80 */	lfs f1, lbl_8066C800@sda21(r2)
 /* 80419A44 003E3004  38 E0 00 00 */	li r7, 0
 /* 80419A48 003E3008  C0 02 C4 84 */	lfs f0, lbl_8066C804@sda21(r2)
@@ -292,8 +292,8 @@ func_80419A18:
 /* 80419B30 003E30F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80419B34 003E30F4  4E 80 00 20 */	blr 
 
-.global func_80419B38
-func_80419B38:
+.global Setup__Q44nw4r3snd6detail9SeqPlayerFPQ44nw4r3snd6detail17SeqTrackAllocatorUliPQ44nw4r3snd6detail14NoteOnCallback
+Setup__Q44nw4r3snd6detail9SeqPlayerFPQ44nw4r3snd6detail17SeqTrackAllocatorUliPQ44nw4r3snd6detail14NoteOnCallback:
 /* 80419B38 003E30F8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80419B3C 003E30FC  7C 08 02 A6 */	mflr r0
 /* 80419B40 003E3100  90 01 00 34 */	stw r0, 0x34(r1)
@@ -323,7 +323,7 @@ func_80419B38:
 lbl_80419BA0:
 /* 80419BA0 003E3160  48 00 77 45 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 80419BA4 003E3164  7F 64 DB 78 */	mr r4, r27
-/* 80419BA8 003E3168  48 00 7C 71 */	bl UnregisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback
+/* 80419BA8 003E3168  48 00 7C 71 */	bl UnregisterPlayerCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread14PlayerCallback
 /* 80419BAC 003E316C  38 00 00 00 */	li r0, 0
 /* 80419BB0 003E3170  98 1D 00 ED */	stb r0, 0xed(r29)
 lbl_80419BB4:
@@ -362,7 +362,7 @@ lbl_80419C10:
 /* 80419C20 003E31E0  4B F4 01 21 */	bl OSUnlockMutex
 /* 80419C24 003E31E4  48 00 00 30 */	b lbl_80419C54
 lbl_80419C28:
-/* 80419C28 003E31E8  48 00 1A 5D */	bl func_8041B684
+/* 80419C28 003E31E8  48 00 1A 5D */	bl Close__Q44nw4r3snd6detail8SeqTrackFv
 /* 80419C2C 003E31EC  80 7D 01 14 */	lwz r3, 0x114(r29)
 /* 80419C30 003E31F0  80 9A 01 20 */	lwz r4, 0x120(r26)
 /* 80419C34 003E31F4  81 83 00 00 */	lwz r12, 0(r3)
@@ -387,7 +387,7 @@ lbl_80419C54:
 /* 80419C7C 003E323C  7F A3 EB 78 */	mr r3, r29
 /* 80419C80 003E3240  7F 04 C3 78 */	mr r4, r24
 /* 80419C84 003E3244  7F 25 CB 78 */	mr r5, r25
-/* 80419C88 003E3248  4B FF FD 91 */	bl func_80419A18
+/* 80419C88 003E3248  4B FF FD 91 */	bl InitParam__Q44nw4r3snd6detail9SeqPlayerFiPQ44nw4r3snd6detail14NoteOnCallback
 /* 80419C8C 003E324C  4B F3 ED 25 */	bl OSDisableInterrupts
 /* 80419C90 003E3250  7C 7C 1B 78 */	mr r28, r3
 /* 80419C94 003E3254  7F E3 FB 78 */	mr r3, r31
@@ -479,8 +479,8 @@ lbl_80419DB4:
 /* 80419DC4 003E3384  38 21 00 30 */	addi r1, r1, 0x30
 /* 80419DC8 003E3388  4E 80 00 20 */	blr 
 
-.global func_80419DCC
-func_80419DCC:
+.global SetSeqData__Q44nw4r3snd6detail9SeqPlayerFPCvl
+SetSeqData__Q44nw4r3snd6detail9SeqPlayerFPCvl:
 /* 80419DCC 003E338C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80419DD0 003E3390  7C 08 02 A6 */	mflr r0
 /* 80419DD4 003E3394  90 01 00 24 */	stw r0, 0x24(r1)
@@ -499,9 +499,9 @@ func_80419DCC:
 /* 80419E08 003E33C8  7F E3 FB 78 */	mr r3, r31
 /* 80419E0C 003E33CC  7F A4 EB 78 */	mr r4, r29
 /* 80419E10 003E33D0  7F C5 F3 78 */	mr r5, r30
-/* 80419E14 003E33D4  48 00 18 45 */	bl func_8041B658
+/* 80419E14 003E33D4  48 00 18 45 */	bl SetSeqData__Q44nw4r3snd6detail8SeqTrackFPCvl
 /* 80419E18 003E33D8  7F E3 FB 78 */	mr r3, r31
-/* 80419E1C 003E33DC  48 00 18 4D */	bl func_8041B668
+/* 80419E1C 003E33DC  48 00 18 4D */	bl Open__Q44nw4r3snd6detail8SeqTrackFv
 lbl_80419E20:
 /* 80419E20 003E33E0  48 00 74 C5 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 80419E24 003E33E4  38 63 03 54 */	addi r3, r3, 0x354
@@ -514,8 +514,8 @@ lbl_80419E20:
 /* 80419E40 003E3400  38 21 00 20 */	addi r1, r1, 0x20
 /* 80419E44 003E3404  4E 80 00 20 */	blr 
 
-.global func_80419E48
-func_80419E48:
+.global Start__Q44nw4r3snd6detail9SeqPlayerFv
+Start__Q44nw4r3snd6detail9SeqPlayerFv:
 /* 80419E48 003E3408  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80419E4C 003E340C  7C 08 02 A6 */	mflr r0
 /* 80419E50 003E3410  90 01 00 14 */	stw r0, 0x14(r1)
@@ -532,7 +532,7 @@ func_80419E48:
 lbl_80419E7C:
 /* 80419E7C 003E343C  48 00 74 69 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 80419E80 003E3440  7F E4 FB 78 */	mr r4, r31
-/* 80419E84 003E3444  48 00 79 2D */	bl RegisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback
+/* 80419E84 003E3444  48 00 79 2D */	bl RegisterPlayerCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread14PlayerCallback
 /* 80419E88 003E3448  38 00 00 01 */	li r0, 1
 /* 80419E8C 003E344C  98 1E 00 ED */	stb r0, 0xed(r30)
 /* 80419E90 003E3450  48 00 74 55 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
@@ -546,8 +546,8 @@ lbl_80419E7C:
 /* 80419EB0 003E3470  38 21 00 10 */	addi r1, r1, 0x10
 /* 80419EB4 003E3474  4E 80 00 20 */	blr 
 
-.global func_80419EB8
-func_80419EB8:
+.global Stop__Q44nw4r3snd6detail9SeqPlayerFv
+Stop__Q44nw4r3snd6detail9SeqPlayerFv:
 /* 80419EB8 003E3478  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80419EBC 003E347C  7C 08 02 A6 */	mflr r0
 /* 80419EC0 003E3480  90 01 00 24 */	stw r0, 0x24(r1)
@@ -572,7 +572,7 @@ func_80419EB8:
 lbl_80419F0C:
 /* 80419F0C 003E34CC  48 00 73 D9 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 80419F10 003E34D0  7F C4 F3 78 */	mr r4, r30
-/* 80419F14 003E34D4  48 00 79 05 */	bl UnregisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback
+/* 80419F14 003E34D4  48 00 79 05 */	bl UnregisterPlayerCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread14PlayerCallback
 /* 80419F18 003E34D8  38 00 00 00 */	li r0, 0
 /* 80419F1C 003E34DC  98 1C 00 ED */	stb r0, 0xed(r28)
 lbl_80419F20:
@@ -611,7 +611,7 @@ lbl_80419F7C:
 /* 80419F8C 003E354C  4B F3 FD B5 */	bl OSUnlockMutex
 /* 80419F90 003E3550  48 00 00 30 */	b lbl_80419FC0
 lbl_80419F94:
-/* 80419F94 003E3554  48 00 16 F1 */	bl func_8041B684
+/* 80419F94 003E3554  48 00 16 F1 */	bl Close__Q44nw4r3snd6detail8SeqTrackFv
 /* 80419F98 003E3558  80 7C 01 14 */	lwz r3, 0x114(r28)
 /* 80419F9C 003E355C  80 9D 01 20 */	lwz r4, 0x120(r29)
 /* 80419FA0 003E3560  81 83 00 00 */	lwz r12, 0(r3)
@@ -642,8 +642,8 @@ lbl_80419FC0:
 /* 8041A000 003E35C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041A004 003E35C4  4E 80 00 20 */	blr 
 
-.global func_8041A008
-func_8041A008:
+.global Pause__Q44nw4r3snd6detail9SeqPlayerFb
+Pause__Q44nw4r3snd6detail9SeqPlayerFb:
 /* 8041A008 003E35C8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041A00C 003E35CC  7C 08 02 A6 */	mflr r0
 /* 8041A010 003E35D0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -668,7 +668,7 @@ lbl_8041A050:
 /* 8041A050 003E3610  2C 03 00 00 */	cmpwi r3, 0
 /* 8041A054 003E3614  41 82 00 0C */	beq lbl_8041A060
 /* 8041A058 003E3618  7F C4 F3 78 */	mr r4, r30
-/* 8041A05C 003E361C  48 00 19 CD */	bl func_8041BA28
+/* 8041A05C 003E361C  48 00 19 CD */	bl PauseAllChannel__Q44nw4r3snd6detail8SeqTrackFb
 lbl_8041A060:
 /* 8041A060 003E3620  3B FF 00 01 */	addi r31, r31, 1
 /* 8041A064 003E3624  3B BD 00 04 */	addi r29, r29, 4
@@ -685,8 +685,8 @@ lbl_8041A060:
 /* 8041A090 003E3650  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041A094 003E3654  4E 80 00 20 */	blr 
 
-.global func_8041A098
-func_8041A098:
+.global Skip__Q44nw4r3snd6detail9SeqPlayerFQ54nw4r3snd6detail9SeqPlayer10OffsetTypei
+Skip__Q44nw4r3snd6detail9SeqPlayerFQ54nw4r3snd6detail9SeqPlayer10OffsetTypei:
 /* 8041A098 003E3658  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041A09C 003E365C  7C 08 02 A6 */	mflr r0
 /* 8041A0A0 003E3660  90 01 00 24 */	stw r0, 0x24(r1)
@@ -742,18 +742,18 @@ lbl_8041A140:
 /* 8041A154 003E3714  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041A158 003E3718  4E 80 00 20 */	blr
 
-.global func_8041A15C
-func_8041A15C:
+.global SetChannelPriority__Q44nw4r3snd6detail9SeqPlayerFi
+SetChannelPriority__Q44nw4r3snd6detail9SeqPlayerFi:
 /* 8041A15C 003E371C  98 83 01 09 */	stb r4, 0x109(r3)
 /* 8041A160 003E3720  4E 80 00 20 */	blr
 
-.global func_8041A164
-func_8041A164:
+.global SetReleasePriorityFix__Q44nw4r3snd6detail9SeqPlayerFb
+SetReleasePriorityFix__Q44nw4r3snd6detail9SeqPlayerFb:
 /* 8041A164 003E3724  98 83 00 EF */	stb r4, 0xef(r3)
 /* 8041A168 003E3728  4E 80 00 20 */	blr
 
-.global func_8041A16C
-func_8041A16C:
+.global SetSeqUserprocCallback__Q44nw4r3snd6detail9SeqPlayerFPFUsPQ34nw4r3snd24SeqUserprocCallbackParamPv_vPv
+SetSeqUserprocCallback__Q44nw4r3snd6detail9SeqPlayerFPFUsPQ34nw4r3snd24SeqUserprocCallbackParamPv_vPv:
 /* 8041A16C 003E372C  90 83 01 18 */	stw r4, 0x118(r3)
 /* 8041A170 003E3730  90 A3 01 1C */	stw r5, 0x11c(r3)
 /* 8041A174 003E3734  4E 80 00 20 */	blr 
@@ -853,7 +853,7 @@ lbl_8041A274:
 lbl_8041A2C4:
 /* 8041A2C4 003E3884  48 00 70 21 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041A2C8 003E3888  7F A4 EB 78 */	mr r4, r29
-/* 8041A2CC 003E388C  48 00 75 4D */	bl UnregisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback
+/* 8041A2CC 003E388C  48 00 75 4D */	bl UnregisterPlayerCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread14PlayerCallback
 /* 8041A2D0 003E3890  38 00 00 00 */	li r0, 0
 /* 8041A2D4 003E3894  98 1F 00 ED */	stb r0, 0xed(r31)
 lbl_8041A2D8:
@@ -892,7 +892,7 @@ lbl_8041A334:
 /* 8041A344 003E3904  4B F3 F9 FD */	bl OSUnlockMutex
 /* 8041A348 003E3908  48 00 00 30 */	b lbl_8041A378
 lbl_8041A34C:
-/* 8041A34C 003E390C  48 00 13 39 */	bl func_8041B684
+/* 8041A34C 003E390C  48 00 13 39 */	bl Close__Q44nw4r3snd6detail8SeqTrackFv
 /* 8041A350 003E3910  80 7F 01 14 */	lwz r3, 0x114(r31)
 /* 8041A354 003E3914  80 9C 01 20 */	lwz r4, 0x120(r28)
 /* 8041A358 003E3918  81 83 00 00 */	lwz r12, 0(r3)
@@ -932,6 +932,7 @@ lbl_8041A3B0:
 /* 8041A3D4 003E3994  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041A3D8 003E3998  4E 80 00 20 */	blr 
 
+#GetPlayerTrack__Q44nw4r3snd6detail9SeqPlayerFi or GetPlayerTrack__Q44nw4r3snd6detail9SeqPlayerCFi
 .global func_8041A3DC
 func_8041A3DC:
 /* 8041A3DC 003E399C  2C 04 00 0F */	cmpwi r4, 0xf
@@ -944,8 +945,8 @@ lbl_8041A3EC:
 /* 8041A3F4 003E39B4  80 63 01 20 */	lwz r3, 0x120(r3)
 /* 8041A3F8 003E39B8  4E 80 00 20 */	blr 
 
-.global func_8041A3FC
-func_8041A3FC:
+.global ParseNextTick__Q44nw4r3snd6detail9SeqPlayerFb
+ParseNextTick__Q44nw4r3snd6detail9SeqPlayerFb:
 /* 8041A3FC 003E39BC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8041A400 003E39C0  7C 08 02 A6 */	mflr r0
 /* 8041A404 003E39C4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -971,10 +972,10 @@ lbl_8041A448:
 /* 8041A448 003E3A08  2C 1E 00 00 */	cmpwi r30, 0
 /* 8041A44C 003E3A0C  41 82 00 94 */	beq lbl_8041A4E0
 /* 8041A450 003E3A10  7F C3 F3 78 */	mr r3, r30
-/* 8041A454 003E3A14  48 00 13 01 */	bl func_8041B754
+/* 8041A454 003E3A14  48 00 13 01 */	bl UpdateChannelLength__Q44nw4r3snd6detail8SeqTrackFv
 /* 8041A458 003E3A18  7F C3 F3 78 */	mr r3, r30
 /* 8041A45C 003E3A1C  7F 44 D3 78 */	mr r4, r26
-/* 8041A460 003E3A20  48 00 13 C5 */	bl func_8041B824
+/* 8041A460 003E3A20  48 00 13 C5 */	bl ParseNextTick__Q44nw4r3snd6detail8SeqTrackFb
 /* 8041A464 003E3A24  2C 03 00 00 */	cmpwi r3, 0
 /* 8041A468 003E3A28  40 80 00 68 */	bge lbl_8041A4D0
 /* 8041A46C 003E3A2C  48 00 6E 79 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
@@ -994,7 +995,7 @@ lbl_8041A48C:
 /* 8041A49C 003E3A5C  4B F3 F8 A5 */	bl OSUnlockMutex
 /* 8041A4A0 003E3A60  48 00 00 30 */	b lbl_8041A4D0
 lbl_8041A4A4:
-/* 8041A4A4 003E3A64  48 00 11 E1 */	bl func_8041B684
+/* 8041A4A4 003E3A64  48 00 11 E1 */	bl Close__Q44nw4r3snd6detail8SeqTrackFv
 /* 8041A4A8 003E3A68  80 79 01 14 */	lwz r3, 0x114(r25)
 /* 8041A4AC 003E3A6C  80 9D 01 20 */	lwz r4, 0x120(r29)
 /* 8041A4B0 003E3A70  81 83 00 00 */	lwz r12, 0(r3)
@@ -1090,7 +1091,7 @@ lbl_8041A5CC:
 /* 8041A5E4 003E3BA4  40 81 00 10 */	ble lbl_8041A5F4
 lbl_8041A5E8:
 /* 8041A5E8 003E3BA8  7F C3 F3 78 */	mr r3, r30
-/* 8041A5EC 003E3BAC  48 00 02 F5 */	bl func_8041A8E0
+/* 8041A5EC 003E3BAC  48 00 02 F5 */	bl SkipTick__Q44nw4r3snd6detail9SeqPlayerFv
 /* 8041A5F0 003E3BB0  48 00 00 1C */	b lbl_8041A60C
 lbl_8041A5F4:
 /* 8041A5F4 003E3BB4  88 1E 00 EE */	lbz r0, 0xee(r30)
@@ -1098,7 +1099,7 @@ lbl_8041A5F4:
 /* 8041A5FC 003E3BBC  40 82 00 10 */	bne lbl_8041A60C
 /* 8041A600 003E3BC0  7F C3 F3 78 */	mr r3, r30
 /* 8041A604 003E3BC4  38 80 00 03 */	li r4, 3
-/* 8041A608 003E3BC8  48 00 00 75 */	bl func_8041A67C
+/* 8041A608 003E3BC8  48 00 00 75 */	bl UpdateTick__Q44nw4r3snd6detail9SeqPlayerFi
 lbl_8041A60C:
 /* 8041A60C 003E3BCC  48 00 6C D9 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041A610 003E3BD0  38 63 03 54 */	addi r3, r3, 0x354
@@ -1114,7 +1115,7 @@ lbl_8041A62C:
 lbl_8041A630:
 /* 8041A630 003E3BF0  2C 03 00 00 */	cmpwi r3, 0
 /* 8041A634 003E3BF4  41 82 00 08 */	beq lbl_8041A63C
-/* 8041A638 003E3BF8  48 00 14 85 */	bl func_8041BABC
+/* 8041A638 003E3BF8  48 00 14 85 */	bl UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv
 lbl_8041A63C:
 /* 8041A63C 003E3BFC  3B FF 00 01 */	addi r31, r31, 1
 /* 8041A640 003E3C00  3B DE 00 04 */	addi r30, r30, 4
@@ -1134,8 +1135,8 @@ lbl_8041A664:
 /* 8041A674 003E3C34  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041A678 003E3C38  4E 80 00 20 */	blr 
 
-.global func_8041A67C
-func_8041A67C:
+.global UpdateTick__Q44nw4r3snd6detail9SeqPlayerFi
+UpdateTick__Q44nw4r3snd6detail9SeqPlayerFi:
 /* 8041A67C 003E3C3C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8041A680 003E3C40  7C 08 02 A6 */	mflr r0
 /* 8041A684 003E3C44  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1184,7 +1185,7 @@ lbl_8041A72C:
 /* 8041A72C 003E3CEC  EF 7B 10 28 */	fsubs f27, f27, f2
 /* 8041A730 003E3CF0  7F E3 FB 78 */	mr r3, r31
 /* 8041A734 003E3CF4  38 80 00 01 */	li r4, 1
-/* 8041A738 003E3CF8  4B FF FC C5 */	bl func_8041A3FC
+/* 8041A738 003E3CF8  4B FF FC C5 */	bl ParseNextTick__Q44nw4r3snd6detail9SeqPlayerFb
 /* 8041A73C 003E3CFC  2C 03 00 00 */	cmpwi r3, 0
 /* 8041A740 003E3D00  41 82 01 00 */	beq lbl_8041A840
 /* 8041A744 003E3D04  48 00 6B A1 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
@@ -1200,7 +1201,7 @@ lbl_8041A72C:
 lbl_8041A76C:
 /* 8041A76C 003E3D2C  48 00 6B 79 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041A770 003E3D30  7F A4 EB 78 */	mr r4, r29
-/* 8041A774 003E3D34  48 00 70 A5 */	bl UnregisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback
+/* 8041A774 003E3D34  48 00 70 A5 */	bl UnregisterPlayerCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread14PlayerCallback
 /* 8041A778 003E3D38  38 00 00 00 */	li r0, 0
 /* 8041A77C 003E3D3C  98 1F 00 ED */	stb r0, 0xed(r31)
 lbl_8041A780:
@@ -1239,7 +1240,7 @@ lbl_8041A7DC:
 /* 8041A7EC 003E3DAC  4B F3 F5 55 */	bl OSUnlockMutex
 /* 8041A7F0 003E3DB0  48 00 00 30 */	b lbl_8041A820
 lbl_8041A7F4:
-/* 8041A7F4 003E3DB4  48 00 0E 91 */	bl func_8041B684
+/* 8041A7F4 003E3DB4  48 00 0E 91 */	bl Close__Q44nw4r3snd6detail8SeqTrackFv
 /* 8041A7F8 003E3DB8  80 7F 01 14 */	lwz r3, 0x114(r31)
 /* 8041A7FC 003E3DBC  80 9C 01 20 */	lwz r4, 0x120(r28)
 /* 8041A800 003E3DC0  81 83 00 00 */	lwz r12, 0(r3)
@@ -1303,8 +1304,8 @@ lbl_8041A898:
 /* 8041A8D8 003E3E98  38 21 00 70 */	addi r1, r1, 0x70
 /* 8041A8DC 003E3E9C  4E 80 00 20 */	blr 
 
-.global func_8041A8E0
-func_8041A8E0:
+.global SkipTick__Q44nw4r3snd6detail9SeqPlayerFv
+SkipTick__Q44nw4r3snd6detail9SeqPlayerFv:
 /* 8041A8E0 003E3EA0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8041A8E4 003E3EA4  7C 08 02 A6 */	mflr r0
 /* 8041A8E8 003E3EA8  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1333,9 +1334,9 @@ lbl_8041A934:
 /* 8041A938 003E3EF8  41 82 00 18 */	beq lbl_8041A950
 /* 8041A93C 003E3EFC  7F C3 F3 78 */	mr r3, r30
 /* 8041A940 003E3F00  38 80 00 7F */	li r4, 0x7f
-/* 8041A944 003E3F04  48 00 10 55 */	bl func_8041B998
+/* 8041A944 003E3F04  48 00 10 55 */	bl ReleaseAllChannel__Q44nw4r3snd6detail8SeqTrackFi
 /* 8041A948 003E3F08  7F C3 F3 78 */	mr r3, r30
-/* 8041A94C 003E3F0C  48 00 17 31 */	bl func_8041C07C
+/* 8041A94C 003E3F0C  48 00 17 31 */	bl FreeAllChannel__Q44nw4r3snd6detail8SeqTrackFv
 lbl_8041A950:
 /* 8041A950 003E3F10  3B BD 00 01 */	addi r29, r29, 1
 /* 8041A954 003E3F14  3B 9C 00 04 */	addi r28, r28, 4
@@ -1375,7 +1376,7 @@ lbl_8041A998:
 lbl_8041A9D4:
 /* 8041A9D4 003E3F94  7F E3 FB 78 */	mr r3, r31
 /* 8041A9D8 003E3F98  38 80 00 00 */	li r4, 0
-/* 8041A9DC 003E3F9C  4B FF FA 21 */	bl func_8041A3FC
+/* 8041A9DC 003E3F9C  4B FF FA 21 */	bl ParseNextTick__Q44nw4r3snd6detail9SeqPlayerFb
 /* 8041A9E0 003E3FA0  2C 03 00 00 */	cmpwi r3, 0
 /* 8041A9E4 003E3FA4  41 82 01 00 */	beq lbl_8041AAE4
 /* 8041A9E8 003E3FA8  48 00 68 FD */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
@@ -1391,7 +1392,7 @@ lbl_8041A9D4:
 lbl_8041AA10:
 /* 8041AA10 003E3FD0  48 00 68 D5 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041AA14 003E3FD4  7F A4 EB 78 */	mr r4, r29
-/* 8041AA18 003E3FD8  48 00 6E 01 */	bl UnregisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback
+/* 8041AA18 003E3FD8  48 00 6E 01 */	bl UnregisterPlayerCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread14PlayerCallback
 /* 8041AA1C 003E3FDC  38 00 00 00 */	li r0, 0
 /* 8041AA20 003E3FE0  98 1F 00 ED */	stb r0, 0xed(r31)
 lbl_8041AA24:
@@ -1430,7 +1431,7 @@ lbl_8041AA80:
 /* 8041AA90 003E4050  4B F3 F2 B1 */	bl OSUnlockMutex
 /* 8041AA94 003E4054  48 00 00 30 */	b lbl_8041AAC4
 lbl_8041AA98:
-/* 8041AA98 003E4058  48 00 0B ED */	bl func_8041B684
+/* 8041AA98 003E4058  48 00 0B ED */	bl Close__Q44nw4r3snd6detail8SeqTrackFv
 /* 8041AA9C 003E405C  80 7F 01 14 */	lwz r3, 0x114(r31)
 /* 8041AAA0 003E4060  80 9C 01 20 */	lwz r4, 0x120(r28)
 /* 8041AAA4 003E4064  81 83 00 00 */	lwz r12, 0(r3)
@@ -1493,8 +1494,8 @@ lbl_8041AB48:
 /* 8041AB78 003E4138  38 21 00 50 */	addi r1, r1, 0x50
 /* 8041AB7C 003E413C  4E 80 00 20 */	blr 
 
-.global func_8041AB80
-func_8041AB80:
+.global NoteOn__Q44nw4r3snd6detail9SeqPlayerFiRCQ44nw4r3snd6detail10NoteOnInfo
+NoteOn__Q44nw4r3snd6detail9SeqPlayerFiRCQ44nw4r3snd6detail10NoteOnInfo:
 /* 8041AB80 003E4140  7C 67 1B 78 */	mr r7, r3
 /* 8041AB84 003E4144  80 63 01 10 */	lwz r3, 0x110(r3)
 /* 8041AB88 003E4148  7C 80 23 78 */	mr r0, r4
@@ -1506,15 +1507,23 @@ func_8041AB80:
 /* 8041ABA0 003E4160  7D 89 03 A6 */	mtctr r12
 /* 8041ABA4 003E4164  4E 80 04 20 */	bctr 
 
+#InvalidateWaveData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
+#OnUpdateVoiceSoundThread__Q54nw4r3snd6detail11SoundThread14PlayerCallbackFv
+#ChannelCallback__Q44nw4r3snd6detail9SeqPlayerFPQ44nw4r3snd6detail7Channel
+#OnShutdownSoundThread__Q54nw4r3snd6detail11SoundThread14PlayerCallbackFv
+#OnUpdateFrameSoundThread__Q54nw4r3snd6detail11SoundThread14PlayerCallbackFv
 .global func_8041ABA8
 func_8041ABA8:
 /* 8041ABA8 003E4168  4E 80 00 20 */	blr 
 
-.global func_8041ABAC
-func_8041ABAC:
+#@180@__dt__Q44nw4r3snd6detail9SeqPlayerFv
+.global _180___dt__Q44nw4r3snd6detail9SeqPlayerFv
+_180___dt__Q44nw4r3snd6detail9SeqPlayerFv:
 /* 8041ABAC 003E416C  38 63 FF 2C */	addi r3, r3, -212
-/* 8041ABB0 003E4170  4B FF EC EC */	b func_8041989C
-.global lbl_8041ABB4
-lbl_8041ABB4:
+/* 8041ABB0 003E4170  4B FF EC EC */	b __dt__Q44nw4r3snd6detail9SeqPlayerFv
+
+#@192@__dt__Q44nw4r3snd6detail9SeqPlayerFv
+.global _192___dt__Q44nw4r3snd6detail9SeqPlayerFv
+_192___dt__Q44nw4r3snd6detail9SeqPlayerFv:
 /* 8041ABB4 003E4174  38 63 FF 20 */	addi r3, r3, -224
-/* 8041ABB8 003E4178  4B FF EC E4 */	b func_8041989C
+/* 8041ABB8 003E4178  4B FF EC E4 */	b __dt__Q44nw4r3snd6detail9SeqPlayerFv

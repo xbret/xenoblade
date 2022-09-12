@@ -807,7 +807,7 @@ lbl_80528390:
 	.4byte lbl_804F5CA4
 	.4byte 0x00000001
 	.4byte func_80039F5C
-	.4byte lbl_80039F60
+	.4byte func_80039F60
 	.4byte lbl_80668408
 	.4byte lbl_804F5CB8
 	.4byte 0x00000001
@@ -816,8 +816,8 @@ lbl_80528390:
 	.4byte lbl_80668410
 	.4byte lbl_804F5CD8
 	.4byte 0x00000001
-	.4byte lbl_80039F64
-	.4byte lbl_80039F68
+	.4byte func_80039F64
+	.4byte func_80039F68
 	.4byte 0
 	.4byte 0
 	.4byte 0

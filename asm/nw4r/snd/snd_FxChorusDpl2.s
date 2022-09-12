@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80415A0C
-func_80415A0C:
+.global __ct__Q34nw4r3snd12FxChorusDpl2Fv
+__ct__Q34nw4r3snd12FxChorusDpl2Fv:
 /* 80415A0C 003DEFCC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80415A10 003DEFD0  7C 08 02 A6 */	mflr r0
 /* 80415A14 003DEFD4  3C A0 80 57 */	lis r5, lbl_8056E078@ha
@@ -33,7 +33,7 @@ func_80415A0C:
 /* 80415A74 003DF034  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80415A78 003DF038  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80415A7C 003DF03C  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 80415A80 003DF040  48 00 02 25 */	bl func_80415CA4
+/* 80415A80 003DF040  48 00 02 25 */	bl SetParam__Q34nw4r3snd12FxChorusDpl2FRCQ44nw4r3snd6detail13FxChorusParam
 /* 80415A84 003DF044  7F E3 FB 78 */	mr r3, r31
 /* 80415A88 003DF048  83 E1 00 2C */	lwz r31, 0x2c(r1)
 /* 80415A8C 003DF04C  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -41,8 +41,8 @@ func_80415A0C:
 /* 80415A94 003DF054  38 21 00 30 */	addi r1, r1, 0x30
 /* 80415A98 003DF058  4E 80 00 20 */	blr 
 
-.global func_80415A9C
-func_80415A9C:
+.global GetRequiredMemSize__Q34nw4r3snd12FxChorusDpl2Fv
+GetRequiredMemSize__Q34nw4r3snd12FxChorusDpl2Fv:
 /* 80415A9C 003DF05C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80415AA0 003DF060  7C 08 02 A6 */	mflr r0
 /* 80415AA4 003DF064  90 01 00 14 */	stw r0, 0x14(r1)
@@ -66,17 +66,18 @@ lbl_80415ADC:
 /* 80415AE8 003DF0A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80415AEC 003DF0AC  4E 80 00 20 */	blr 
 
-.global func_80415AF0
-func_80415AF0:
+.global AssignWorkBuffer__Q34nw4r3snd12FxChorusDpl2FPvUl
+AssignWorkBuffer__Q34nw4r3snd12FxChorusDpl2FPvUl:
 /* 80415AF0 003DF0B0  38 63 00 14 */	addi r3, r3, 0x14
 /* 80415AF4 003DF0B4  4B FF BA C0 */	b CreateHeap__Q44nw4r3snd6detail8AxfxImplFPvUl
-.global lbl_80415AF8
-lbl_80415AF8:
+
+.global ReleaseWorkBuffer__Q34nw4r3snd12FxChorusDpl2Fv
+ReleaseWorkBuffer__Q34nw4r3snd12FxChorusDpl2Fv:
 /* 80415AF8 003DF0B8  38 63 00 14 */	addi r3, r3, 0x14
 /* 80415AFC 003DF0BC  4B FF BB 20 */	b DestroyHeap__Q44nw4r3snd6detail8AxfxImplFv
 
-.global func_80415B00
-func_80415B00:
+.global StartUp__Q34nw4r3snd12FxChorusDpl2Fv
+StartUp__Q34nw4r3snd12FxChorusDpl2Fv:
 /* 80415B00 003DF0C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80415B04 003DF0C4  7C 08 02 A6 */	mflr r0
 /* 80415B08 003DF0C8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -159,8 +160,8 @@ lbl_80415C10:
 /* 80415C20 003DF1E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80415C24 003DF1E4  4E 80 00 20 */	blr 
 
-.global func_80415C28
-func_80415C28:
+.global Shutdown__Q34nw4r3snd12FxChorusDpl2Fv
+Shutdown__Q34nw4r3snd12FxChorusDpl2Fv:
 /* 80415C28 003DF1E8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80415C2C 003DF1EC  7C 08 02 A6 */	mflr r0
 /* 80415C30 003DF1F0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -196,8 +197,8 @@ lbl_80415C90:
 /* 80415C9C 003DF25C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80415CA0 003DF260  4E 80 00 20 */	blr 
 
-.global func_80415CA4
-func_80415CA4:
+.global SetParam__Q34nw4r3snd12FxChorusDpl2FRCQ44nw4r3snd6detail13FxChorusParam
+SetParam__Q34nw4r3snd12FxChorusDpl2FRCQ44nw4r3snd6detail13FxChorusParam:
 /* 80415CA4 003DF264  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80415CA8 003DF268  7C 08 02 A6 */	mflr r0
 /* 80415CAC 003DF26C  C0 84 00 00 */	lfs f4, 0(r4)
@@ -349,8 +350,8 @@ lbl_80415E88:
 /* 80415E98 003DF458  38 21 00 10 */	addi r1, r1, 0x10
 /* 80415E9C 003DF45C  4E 80 00 20 */	blr 
 
-.global func_80415EA0
-func_80415EA0:
+.global UpdateBuffer__Q34nw4r3snd12FxChorusDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode
+UpdateBuffer__Q34nw4r3snd12FxChorusDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode:
 /* 80415EA0 003DF460  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80415EA4 003DF464  7C 08 02 A6 */	mflr r0
 /* 80415EA8 003DF468  7C 64 1B 78 */	mr r4, r3
@@ -394,8 +395,8 @@ lbl_80415F30:
 /* 80415F38 003DF4F8  38 21 00 30 */	addi r1, r1, 0x30
 /* 80415F3C 003DF4FC  4E 80 00 20 */	blr 
 
-.global func_80415F40
-func_80415F40:
+.global OnChangeOutputMode__Q34nw4r3snd12FxChorusDpl2Fv
+OnChangeOutputMode__Q34nw4r3snd12FxChorusDpl2Fv:
 /* 80415F40 003DF500  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80415F44 003DF504  7C 08 02 A6 */	mflr r0
 /* 80415F48 003DF508  90 01 00 14 */	stw r0, 0x14(r1)

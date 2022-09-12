@@ -8790,12 +8790,14 @@ func_8043EA88:
 func_8043EAC8:
 /* 8043EAC8 00408088  38 63 01 DC */	addi r3, r3, 0x1dc
 /* 8043EACC 0040808C  48 00 31 3C */	b func_80441C08
-.global lbl_8043EAD0
-lbl_8043EAD0:
+
+.global func_8043EAD0
+func_8043EAD0:
 /* 8043EAD0 00408090  38 63 01 DC */	addi r3, r3, 0x1dc
 /* 8043EAD4 00408094  48 00 34 0C */	b func_80441EE0
-.global lbl_8043EAD8
-lbl_8043EAD8:
+
+.global func_8043EAD8
+func_8043EAD8:
 /* 8043EAD8 00408098  38 63 01 DC */	addi r3, r3, 0x1dc
 /* 8043EADC 0040809C  48 00 30 DC */	b func_80441BB8
 

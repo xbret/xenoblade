@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804120AC
-func_804120AC:
+.global Init__Q44nw4r3snd6detail14PlayerParamSetFv
+Init__Q44nw4r3snd6detail14PlayerParamSetFv:
 /* 804120AC 003DB66C  C0 02 C3 64 */	lfs f0, lbl_8066C6E4@sda21(r2)
 /* 804120B0 003DB670  38 80 00 00 */	li r4, 0
 /* 804120B4 003DB674  C0 22 C3 60 */	lfs f1, lbl_8066C6E0@sda21(r2)
@@ -62,8 +62,8 @@ func_804120AC:
 /* 80412188 003DB748  D0 03 00 C8 */	stfs f0, 0xc8(r3)
 /* 8041218C 003DB74C  4E 80 00 20 */	blr 
 
-.global func_80412190
-func_80412190:
+.global __ct__Q44nw4r3snd6detail11BasicPlayerFv
+__ct__Q44nw4r3snd6detail11BasicPlayerFv:
 /* 80412190 003DB750  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80412194 003DB754  7C 08 02 A6 */	mflr r0
 /* 80412198 003DB758  3C 80 80 57 */	lis r4, lbl_8056DFC8@ha
@@ -210,11 +210,11 @@ lbl_80412394:
 /* 804123B0 003DB970  42 00 FF E4 */	bdnz lbl_80412394
 lbl_804123B4:
 /* 804123B4 003DB974  38 63 00 04 */	addi r3, r3, 4
-/* 804123B8 003DB978  4B FF FC F5 */	bl func_804120AC
+/* 804123B8 003DB978  4B FF FC F5 */	bl Init__Q44nw4r3snd6detail14PlayerParamSetFv
 /* 804123BC 003DB97C  38 00 FF FF */	li r0, -1
 /* 804123C0 003DB980  38 7F 00 04 */	addi r3, r31, 4
 /* 804123C4 003DB984  90 1F 00 D0 */	stw r0, 0xd0(r31)
-/* 804123C8 003DB988  4B FF FC E5 */	bl func_804120AC
+/* 804123C8 003DB988  4B FF FC E5 */	bl Init__Q44nw4r3snd6detail14PlayerParamSetFv
 /* 804123CC 003DB98C  7F E3 FB 78 */	mr r3, r31
 /* 804123D0 003DB990  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804123D4 003DB994  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -222,66 +222,66 @@ lbl_804123B4:
 /* 804123DC 003DB99C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804123E0 003DB9A0  4E 80 00 20 */	blr 
 
-.global func_804123E4
-func_804123E4:
+.global InitParam__Q44nw4r3snd6detail11BasicPlayerFv
+InitParam__Q44nw4r3snd6detail11BasicPlayerFv:
 /* 804123E4 003DB9A4  38 63 00 04 */	addi r3, r3, 4
-/* 804123E8 003DB9A8  4B FF FC C4 */	b func_804120AC
+/* 804123E8 003DB9A8  4B FF FC C4 */	b Init__Q44nw4r3snd6detail14PlayerParamSetFv
 
-.global func_804123EC
-func_804123EC:
+.global SetFxSend__Q44nw4r3snd6detail11BasicPlayerFQ34nw4r3snd6AuxBusf
+SetFxSend__Q44nw4r3snd6detail11BasicPlayerFQ34nw4r3snd6AuxBusf:
 /* 804123EC 003DB9AC  54 80 10 3A */	slwi r0, r4, 2
 /* 804123F0 003DB9B0  7C 63 02 14 */	add r3, r3, r0
 /* 804123F4 003DB9B4  D0 23 00 34 */	stfs f1, 0x34(r3)
 /* 804123F8 003DB9B8  4E 80 00 20 */	blr 
 
-.global func_804123FC
-func_804123FC:
+.global GetFxSend__Q44nw4r3snd6detail11BasicPlayerCFQ34nw4r3snd6AuxBus
+GetFxSend__Q44nw4r3snd6detail11BasicPlayerCFQ34nw4r3snd6AuxBus:
 /* 804123FC 003DB9BC  54 80 10 3A */	slwi r0, r4, 2
 /* 80412400 003DB9C0  7C 63 02 14 */	add r3, r3, r0
 /* 80412404 003DB9C4  C0 23 00 34 */	lfs f1, 0x34(r3)
 /* 80412408 003DB9C8  4E 80 00 20 */	blr 
 
-.global func_8041240C
-func_8041240C:
+.global SetBiquadFilter__Q44nw4r3snd6detail11BasicPlayerFif
+SetBiquadFilter__Q44nw4r3snd6detail11BasicPlayerFif:
 /* 8041240C 003DB9CC  98 83 00 1C */	stb r4, 0x1c(r3)
 /* 80412410 003DB9D0  D0 23 00 18 */	stfs f1, 0x18(r3)
 /* 80412414 003DB9D4  4E 80 00 20 */	blr 
 
-.global func_80412418
-func_80412418:
+.global SetRemoteFilter__Q44nw4r3snd6detail11BasicPlayerFi
+SetRemoteFilter__Q44nw4r3snd6detail11BasicPlayerFi:
 /* 80412418 003DB9D8  98 83 00 1D */	stb r4, 0x1d(r3)
 /* 8041241C 003DB9DC  4E 80 00 20 */	blr 
 
-.global func_80412420
-func_80412420:
+.global SetRemoteOutVolume__Q44nw4r3snd6detail11BasicPlayerFif
+SetRemoteOutVolume__Q44nw4r3snd6detail11BasicPlayerFif:
 /* 80412420 003DB9E0  54 80 10 3A */	slwi r0, r4, 2
 /* 80412424 003DB9E4  7C 63 02 14 */	add r3, r3, r0
 /* 80412428 003DB9E8  D0 23 00 40 */	stfs f1, 0x40(r3)
 /* 8041242C 003DB9EC  4E 80 00 20 */	blr 
 
-.global func_80412430
-func_80412430:
+.global GetRemoteOutVolume__Q44nw4r3snd6detail11BasicPlayerCFi
+GetRemoteOutVolume__Q44nw4r3snd6detail11BasicPlayerCFi:
 /* 80412430 003DB9F0  54 80 10 3A */	slwi r0, r4, 2
 /* 80412434 003DB9F4  7C 63 02 14 */	add r3, r3, r0
 /* 80412438 003DB9F8  C0 23 00 40 */	lfs f1, 0x40(r3)
 /* 8041243C 003DB9FC  4E 80 00 20 */	blr 
 
-.global func_80412440
-func_80412440:
+.global GetRemoteSend__Q44nw4r3snd6detail11BasicPlayerCFi
+GetRemoteSend__Q44nw4r3snd6detail11BasicPlayerCFi:
 /* 80412440 003DBA00  54 80 10 3A */	slwi r0, r4, 2
 /* 80412444 003DBA04  7C 63 02 14 */	add r3, r3, r0
 /* 80412448 003DBA08  C0 23 00 50 */	lfs f1, 0x50(r3)
 /* 8041244C 003DBA0C  4E 80 00 20 */	blr 
 
-.global func_80412450
-func_80412450:
+.global GetRemoteFxSend__Q44nw4r3snd6detail11BasicPlayerCFi
+GetRemoteFxSend__Q44nw4r3snd6detail11BasicPlayerCFi:
 /* 80412450 003DBA10  54 80 10 3A */	slwi r0, r4, 2
 /* 80412454 003DBA14  7C 63 02 14 */	add r3, r3, r0
 /* 80412458 003DBA18  C0 23 00 60 */	lfs f1, 0x60(r3)
 /* 8041245C 003DBA1C  4E 80 00 20 */	blr 
 
-.global func_80412460
-func_80412460:
+.global __dt__Q44nw4r3snd6detail11BasicPlayerFv
+__dt__Q44nw4r3snd6detail11BasicPlayerFv:
 /* 80412460 003DBA20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80412464 003DBA24  7C 08 02 A6 */	mflr r0
 /* 80412468 003DBA28  2C 03 00 00 */	cmpwi r3, 0

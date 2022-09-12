@@ -2,6 +2,47 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+
+.global func_80201A44
+func_80201A44:
+/* 80201A44 001CB004  38 63 FF FC */	addi r3, r3, -4
+/* 80201A48 001CB008  4B FF F8 50 */	b func_80201298
+
+.global func_80201A4C
+func_80201A4C:
+/* 80201A4C 001CB00C  38 63 FF FC */	addi r3, r3, -4
+/* 80201A50 001CB010  4B FF F9 F0 */	b func_80201440
+
+.global func_80201A54
+func_80201A54:
+/* 80201A54 001CB014  38 63 FF FC */	addi r3, r3, -4
+/* 80201A58 001CB018  4B FF F8 C4 */	b func_8020131C
+
+.global func_80201A5C
+func_80201A5C:
+/* 80201A5C 001CB01C  38 63 FF FC */	addi r3, r3, -4
+/* 80201A60 001CB020  4B FF F8 B8 */	b func_80201318
+
+.global func_80201A64
+func_80201A64:
+/* 80201A64 001CB024  38 63 FF FC */	addi r3, r3, -4
+/* 80201A68 001CB028  4B FF F5 34 */	b func_80200F9C
+
+.global func_80201A6C
+func_80201A6C:
+/* 80201A6C 001CB02C  38 63 FF FC */	addi r3, r3, -4
+/* 80201A70 001CB030  4B FF DC EC */	b func_801FF75C
+
+.global func_80201A74
+func_80201A74:
+/* 80201A74 001CB034  38 63 FF F8 */	addi r3, r3, -8
+/* 80201A78 001CB038  4B FF F9 CC */	b func_80201444
+
+.global func_80201A7C
+func_80201A7C:
+/* 80201A7C 001CB03C  38 63 FF F8 */	addi r3, r3, -8
+/* 80201A80 001CB040  4B FF DC DC */	b func_801FF75C
+
 .global func_80201A84
 func_80201A84:
 /* 80201A84 001CB044  94 21 D6 30 */	stwu r1, -0x29d0(r1)

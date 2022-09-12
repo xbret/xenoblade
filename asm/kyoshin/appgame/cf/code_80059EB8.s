@@ -13764,11 +13764,13 @@ func_80065D00:
 .global func_80065D04
 func_80065D04:
 /* 80065D04 0002F2C4  48 04 21 F8 */	b func_800A7EFC
-.global lbl_80065D08
-lbl_80065D08:
+
+.global func_80065D08
+func_80065D08:
 /* 80065D08 0002F2C8  48 04 21 F4 */	b func_800A7EFC
-.global lbl_80065D0C
-lbl_80065D0C:
+
+.global func_80065D0C
+func_80065D0C:
 /* 80065D0C 0002F2CC  80 64 00 00 */	lwz r3, 0(r4)
 /* 80065D10 0002F2D0  54 60 06 F7 */	rlwinm. r0, r3, 0, 0x1b, 0x1b
 /* 80065D14 0002F2D4  41 82 00 0C */	beq lbl_80065D20
@@ -13805,8 +13807,9 @@ func_80065D64:
 .global func_80065D74
 func_80065D74:
 /* 80065D74 0002F334  48 04 2F 60 */	b func_800A8CD4
-.global lbl_80065D78
-lbl_80065D78:
+
+.global func_80065D78
+func_80065D78:
 /* 80065D78 0002F338  4E 80 00 20 */	blr 
 
 .global func_80065D7C
@@ -13816,14 +13819,17 @@ func_80065D7C:
 .global func_80065D80
 func_80065D80:
 /* 80065D80 0002F340  48 04 23 BC */	b func_800A813C
-.global lbl_80065D84
-lbl_80065D84:
+
+.global func_80065D84
+func_80065D84:
 /* 80065D84 0002F344  48 04 22 38 */	b func_800A7FBC
-.global lbl_80065D88
-lbl_80065D88:
+
+.global func_80065D88
+func_80065D88:
 /* 80065D88 0002F348  48 04 3C 48 */	b func_800A99D0
-.global lbl_80065D8C
-lbl_80065D8C:
+
+.global func_80065D8C
+func_80065D8C:
 /* 80065D8C 0002F34C  4E 80 00 20 */	blr 
 
 .global func_80065D90
@@ -13948,11 +13954,13 @@ lbl_80065F04:
 .global func_80065F18
 func_80065F18:
 /* 80065F18 0002F4D8  48 04 3B 78 */	b func_800A9A90
-.global lbl_80065F1C
-lbl_80065F1C:
+
+.global func_80065F1C
+func_80065F1C:
 /* 80065F1C 0002F4DC  48 04 21 60 */	b func_800A807C
-.global lbl_80065F20
-lbl_80065F20:
+
+.global func_80065F20
+func_80065F20:
 /* 80065F20 0002F4E0  4E 80 00 20 */	blr 
 
 .global func_80065F24
@@ -18677,7 +18685,7 @@ lbl_8052A2A0:
 	# ROM: 0x5263A0
 	.4byte lbl_80664370
 	.4byte 0
-	.4byte lbl_80065F1C
+	.4byte func_80065F1C
 	.4byte func_800689E0
 	.4byte func_800689A4
 	.4byte func_800689A0
@@ -18688,7 +18696,7 @@ lbl_8052A2A0:
 	.4byte func_800643C8
 	.4byte func_800689D0
 	.4byte func_800689C0
-	.4byte lbl_80065F20
+	.4byte func_80065F20
 	.4byte func_80065F24
 	.4byte func_80065C48
 	.4byte func_80065C5C
@@ -18773,7 +18781,7 @@ lbl_8052A3C0:
 	# ROM: 0x5264C0
 	.4byte lbl_80664388
 	.4byte 0
-	.4byte lbl_80065D88
+	.4byte func_80065D88
 	.4byte func_800689F8
 	.4byte func_800689A4
 	.4byte func_800689A0
@@ -18784,7 +18792,7 @@ lbl_8052A3C0:
 	.4byte func_800643C8
 	.4byte func_80065E00
 	.4byte func_800689C0
-	.4byte lbl_80065D8C
+	.4byte func_80065D8C
 	.4byte func_80065D90
 	.4byte func_80065C48
 	.4byte func_80065C5C
@@ -18805,7 +18813,7 @@ lbl_8052A420:
 	# ROM: 0x526520
 	.4byte lbl_80664390
 	.4byte 0
-	.4byte lbl_80065D84
+	.4byte func_80065D84
 	.4byte func_80068A00
 	.4byte func_800689A4
 	.4byte func_800689A0
@@ -18880,7 +18888,7 @@ lbl_8052A4E0:
 	.4byte func_800643C8
 	.4byte func_800689D0
 	.4byte func_800689C0
-	.4byte lbl_80065D78
+	.4byte func_80065D78
 	.4byte func_80065D7C
 	.4byte func_80065C48
 	.4byte func_80065C5C
@@ -18901,7 +18909,7 @@ lbl_8052A540:
 	# ROM: 0x526640
 	.4byte lbl_806643A8
 	.4byte 0
-	.4byte lbl_80065D08
+	.4byte func_80065D08
 	.4byte func_80068A18
 	.4byte func_800689A4
 	.4byte func_800689A0
@@ -18915,7 +18923,7 @@ lbl_8052A540:
 	.4byte func_80063C2C
 	.4byte func_80063C78
 	.4byte func_80065C48
-	.4byte lbl_80065D0C
+	.4byte func_80065D0C
 	.4byte func_80065C80
 	.4byte func_80065D64
 	.4byte func_80068990

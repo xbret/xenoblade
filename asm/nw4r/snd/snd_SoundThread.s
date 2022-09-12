@@ -340,8 +340,8 @@ SoundThreadFunc__Q44nw4r3snd6detail11SoundThreadFPv:
 /* 804217A8 003EAD68  38 21 00 10 */	addi r1, r1, 0x10
 /* 804217AC 003EAD6C  4E 80 00 20 */	blr 
 
-.global RegisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback
-RegisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback:
+.global RegisterPlayerCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread14PlayerCallback
+RegisterPlayerCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread14PlayerCallback:
 /* 804217B0 003EAD70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804217B4 003EAD74  7C 08 02 A6 */	mflr r0
 /* 804217B8 003EAD78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -369,8 +369,8 @@ RegisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail1
 /* 80421810 003EADD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80421814 003EADD4  4E 80 00 20 */	blr 
 
-.global UnregisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback
-UnregisterSoundFrameCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread18SoundFrameCallback:
+.global UnregisterPlayerCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread14PlayerCallback
+UnregisterPlayerCallback__Q44nw4r3snd6detail11SoundThreadFPQ54nw4r3snd6detail11SoundThread14PlayerCallback:
 /* 80421818 003EADD8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042181C 003EADDC  7C 08 02 A6 */	mflr r0
 /* 80421820 003EADE0  90 01 00 24 */	stw r0, 0x24(r1)

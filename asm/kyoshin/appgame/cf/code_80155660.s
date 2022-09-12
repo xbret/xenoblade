@@ -1793,8 +1793,9 @@ lbl_80156EF0:
 /* 80156F00 001204C0  54 05 DD 7E */	rlwinm r5, r0, 0x1b, 0x15, 0x1f
 /* 80156F04 001204C4  54 07 F7 7E */	rlwinm r7, r0, 0x1e, 0x1d, 0x1f
 /* 80156F08 001204C8  4B FF E9 AC */	b func_801558B4
-.global lbl_80156F0C
-lbl_80156F0C:
+
+.global func_80156F0C
+func_80156F0C:
 /* 80156F0C 001204CC  80 04 00 00 */	lwz r0, 0(r4)
 /* 80156F10 001204D0  50 A0 16 FA */	rlwimi r0, r5, 2, 0x1b, 0x1d
 /* 80156F14 001204D4  90 04 00 00 */	stw r0, 0(r4)
@@ -1804,8 +1805,9 @@ lbl_80156F0C:
 /* 80156F24 001204E4  54 07 F7 7E */	rlwinm r7, r0, 0x1e, 0x1d, 0x1f
 /* 80156F28 001204E8  38 C0 00 00 */	li r6, 0
 /* 80156F2C 001204EC  4B FF E9 88 */	b func_801558B4
-.global lbl_80156F30
-lbl_80156F30:
+
+.global func_80156F30
+func_80156F30:
 /* 80156F30 001204F0  80 04 00 00 */	lwz r0, 0(r4)
 /* 80156F34 001204F4  50 A0 2C 34 */	rlwimi r0, r5, 5, 0x10, 0x1a
 /* 80156F38 001204F8  90 04 00 00 */	stw r0, 0(r4)

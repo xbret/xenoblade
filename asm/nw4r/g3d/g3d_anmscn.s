@@ -217,7 +217,7 @@ lbl_803E6038:
 /* 803E6038 003AF5F8  7F A4 EB 78 */	mr r4, r29
 /* 803E603C 003AF5FC  7F C5 F3 78 */	mr r5, r30
 /* 803E6040 003AF600  38 61 00 30 */	addi r3, r1, 0x30
-/* 803E6044 003AF604  48 00 02 79 */	bl func_803E62BC
+/* 803E6044 003AF604  48 00 02 79 */	bl GetLightSet__Q34nw4r3g3d12LightSettingFi
 /* 803E6048 003AF608  80 81 00 30 */	lwz r4, 0x30(r1)
 /* 803E604C 003AF60C  7F 83 E3 78 */	mr r3, r28
 /* 803E6050 003AF610  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -393,8 +393,8 @@ lbl_803E62A4:
 /* 803E62B4 003AF874  38 21 00 60 */	addi r1, r1, 0x60
 /* 803E62B8 003AF878  4E 80 00 20 */	blr 
 
-.global func_803E62BC
-func_803E62BC:
+.global GetLightSet__Q34nw4r3g3d12LightSettingFi
+GetLightSet__Q34nw4r3g3d12LightSettingFi:
 /* 803E62BC 003AF87C  A0 04 00 02 */	lhz r0, 2(r4)
 /* 803E62C0 003AF880  7C 05 00 00 */	cmpw r5, r0
 /* 803E62C4 003AF884  40 80 00 24 */	bge lbl_803E62E8

@@ -20202,7 +20202,7 @@ lbl_8001041C:
 	.4byte 0
 	.4byte 0x8780001E
 	.4byte 0x0000017C
-	.4byte func_8041DEA4
+	.4byte __dt__Q34nw4r3snd18SoundArchivePlayerFv
 
 .global lbl_80010438
 lbl_80010438:
@@ -20334,7 +20334,7 @@ lbl_80010530:
 	.4byte 0
 	.4byte 0x8780001F
 	.4byte 0x0000002C
-	.4byte func_804171B4
+	.4byte __dt__Q34nw4r3snd18MemorySoundArchiveFv
 
 .global lbl_8001054C
 lbl_8001054C:

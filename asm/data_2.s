@@ -4318,6 +4318,8 @@ lbl_80544418:
 	.4byte lbl_802E2B44
 	.4byte lbl_802E2B4C
 	.4byte lbl_802E2B54
+
+	
 	.asciz "Ctrl DATA received w4: event[%s]"
 	.balign 4
 	.asciz "invalid  transaction type for DATA payload: 4_evt[%s]"
@@ -38311,26 +38313,27 @@ lbl_8056A840:
 lbl_8056A918:
 	# ROM: 0x566A18
 	.4byte lbl_803A8A64
-	.4byte func_803A8C70
-	.4byte func_803A8B44
-	.4byte func_803A8DB4
-	.4byte func_803A8AB4
-	.4byte func_803A8C70
-	.4byte func_803A8B44
-	.4byte func_803A8DB4
+	.4byte lbl_803A8C70
+	.4byte lbl_803A8B44
+	.4byte lbl_803A8DB4
+	.4byte lbl_803A8AB4
+	.4byte lbl_803A8C70
+	.4byte lbl_803A8B44
+	.4byte lbl_803A8DB4
 
 
 .global lbl_8056A938
 lbl_8056A938:
 	# ROM: 0x566A38
 	.4byte lbl_803ADEB4
-	.4byte func_803AE3B4
-	.4byte func_803AE2E4
-	.4byte func_803AE42C
-	.4byte func_803AE0C8
-	.4byte func_803AE3B4
-	.4byte func_803AE2E4
-	.4byte func_803AE42C
+	.4byte lbl_803AE3B4
+	.4byte lbl_803AE2E4
+	.4byte lbl_803AE42C
+	.4byte lbl_803AE0C8
+	.4byte lbl_803AE3B4
+	.4byte lbl_803AE2E4
+	.4byte lbl_803AE42C
+
 .global lbl_8056A958
 lbl_8056A958:
 	.4byte lbl_803B1B44
@@ -40325,13 +40328,13 @@ lbl_8056C744:
 	# ROM: 0x568844
 	.4byte lbl_803D2D04
 	.4byte lbl_803D2CB8
-	.4byte func_803D2CC0
-	.4byte func_803D2CC8
-	.4byte func_803D2CD0
-	.4byte func_803D2CD8
-	.4byte func_803D2CE0
-	.4byte func_803D2CEC
-	.4byte func_803D2CF8
+	.4byte lbl_803D2CC0
+	.4byte lbl_803D2CC8
+	.4byte lbl_803D2CD0
+	.4byte lbl_803D2CD8
+	.4byte lbl_803D2CE0
+	.4byte lbl_803D2CEC
+	.4byte lbl_803D2CF8
 
 
 .global lbl_8056C768
@@ -40912,7 +40915,7 @@ lbl_8056CEB0:
 	.4byte 0
 	.4byte 0
 	.4byte __cl__Q44nw4r3g3d8G3DState11IndMtxOpStdFPQ44nw4r3g3d8G3DState13IndTexMtxInfo
-	.4byte func_803EB374
+	.4byte __dt__Q44nw4r3g3d8G3DState11IndMtxOpStdFv
 	.4byte Reset__Q44nw4r3g3d8G3DState11IndMtxOpStdFv
 	.4byte SetNrmMapMtx__Q44nw4r3g3d8G3DState11IndMtxOpStdF14_GXIndTexMtxIDPCQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34Q44nw4r3g3d14ResMatMiscData14IndirectMethod
 
@@ -42132,7 +42135,7 @@ lbl_8056DFC8:
 	# ROM: 0x56A0C8
 	.4byte 0
 	.4byte 0
-	.4byte func_80412460
+	.4byte __dt__Q44nw4r3snd6detail11BasicPlayerFv
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -42147,18 +42150,18 @@ lbl_8056DFF0:
 	# ROM: 0x56A0F0
 	.4byte 0
 	.4byte 0
-	.4byte func_80413B00
-	.4byte func_80413AC0
-	.4byte func_804135A0
+	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail10BasicSoundCFv
+	.4byte __dt__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte Shutdown__Q44nw4r3snd6detail10BasicSoundFv
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte func_8041257C
+	.4byte InitParam__Q44nw4r3snd6detail10BasicSoundFv
 	.4byte 0
 	.4byte 0
-	.4byte func_804137B0
-	.4byte func_80413190
-	.4byte func_804131C4
+	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
 
 
 .global lbl_8056E028
@@ -42212,12 +42215,12 @@ lbl_8056E078:
 	.4byte 0
 	.4byte 0
 	.4byte func_801C2E34
-	.4byte func_80415B00
-	.4byte func_80415C28
-	.4byte func_80415EA0
-	.4byte func_80415F40
-	.4byte func_80415AF0
-	.4byte lbl_80415AF8
+	.4byte StartUp__Q34nw4r3snd12FxChorusDpl2Fv
+	.4byte Shutdown__Q34nw4r3snd12FxChorusDpl2Fv
+	.4byte UpdateBuffer__Q34nw4r3snd12FxChorusDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode
+	.4byte OnChangeOutputMode__Q34nw4r3snd12FxChorusDpl2Fv
+	.4byte AssignWorkBuffer__Q34nw4r3snd12FxChorusDpl2FPvUl
+	.4byte ReleaseWorkBuffer__Q34nw4r3snd12FxChorusDpl2Fv
 	.4byte 0
 
 
@@ -42227,12 +42230,12 @@ lbl_8056E0A0:
 	.4byte 0
 	.4byte 0
 	.4byte func_801C2EB0
-	.4byte func_804160A0
-	.4byte func_804161C8
-	.4byte func_804164A0
-	.4byte func_80416540
-	.4byte func_80416090
-	.4byte lbl_80416098
+	.4byte StartUp__Q34nw4r3snd11FxDelayDpl2Fv
+	.4byte Shutdown__Q34nw4r3snd11FxDelayDpl2Fv
+	.4byte UpdateBuffer__Q34nw4r3snd11FxDelayDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode
+	.4byte OnChangeOutputMode__Q34nw4r3snd11FxDelayDpl2Fv
+	.4byte AssignWorkBuffer__Q34nw4r3snd11FxDelayDpl2FPvUl
+	.4byte ReleaseWorkBuffer__Q34nw4r3snd11FxDelayDpl2Fv
 	.4byte 0
 
 
@@ -42242,12 +42245,12 @@ lbl_8056E0C8:
 	.4byte 0
 	.4byte 0
 	.4byte func_801C2D78
-	.4byte func_804166D8
-	.4byte func_80416800
-	.4byte func_80416B98
-	.4byte func_80416C38
-	.4byte func_804166C8
-	.4byte lbl_804166D0
+	.4byte StartUp__Q34nw4r3snd15FxReverbStdDpl2Fv
+	.4byte Shutdown__Q34nw4r3snd15FxReverbStdDpl2Fv
+	.4byte UpdateBuffer__Q34nw4r3snd15FxReverbStdDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode
+	.4byte OnChangeOutputMode__Q34nw4r3snd15FxReverbStdDpl2Fv
+	.4byte AssignWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2FPvUl
+	.4byte ReleaseWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2Fv
 	.4byte 0
 
 
@@ -42256,27 +42259,27 @@ lbl_8056E0F0:
 	# ROM: 0x56A1F0
 	.4byte 0
 	.4byte 0
-	.4byte func_8041751C
-	.4byte func_8041755C
-	.4byte func_80417460
-	.4byte func_80417474
+	.4byte GetRuntimeTypeInfo__Q34nw4r2ut10FileStreamCFv
+	.4byte __dt__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv
+	.4byte Close__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv
+	.4byte Read__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFPvUl
 	.4byte func_8042BDD0
 	.4byte func_8042BDD8
 	.4byte func_8042BDE0
 	.4byte func_8042BDE8
-	.4byte func_80417544
-	.4byte func_8041753C
-	.4byte func_80417534
-	.4byte func_80417160
-	.4byte func_80417158
-	.4byte func_80417150
-	.4byte func_80417524
-	.4byte func_804174CC
+	.4byte CanAsync__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
+	.4byte CanRead__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
+	.4byte CanWrite__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
+	.4byte GetOffsetAlign__Q34nw4r2ut8IOStreamCFv
+	.4byte GetSizeAlign__Q34nw4r2ut8IOStreamCFv
+	.4byte GetBufferAlign__Q34nw4r2ut8IOStreamCFv
+	.4byte GetSize__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
+	.4byte Seek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFlUl
 	.4byte func_8042BDFC
 	.4byte func_8042BE00
-	.4byte func_80417554
-	.4byte func_8041754C
-	.4byte func_8041752C
+	.4byte CanSeek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
+	.4byte CanCancel__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
+	.4byte Tell__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte 0
 
 
@@ -42285,12 +42288,12 @@ lbl_8056E150:
 	# ROM: 0x56A250
 	.4byte 0
 	.4byte 0
-	.4byte func_804171B4
-	.4byte func_80417290
-	.4byte func_80417340
-	.4byte func_80417458
-	.4byte func_804173F0
-	.4byte func_80417450
+	.4byte __dt__Q34nw4r3snd18MemorySoundArchiveFv
+	.4byte detail_GetFileAddress__Q34nw4r3snd18MemorySoundArchiveCFUl
+	.4byte detail_GetWaveDataFileAddress__Q34nw4r3snd18MemorySoundArchiveCFUl
+	.4byte detail_GetRequiredStreamBufferSize__Q34nw4r3snd18MemorySoundArchiveCFv
+	.4byte OpenStream__Q34nw4r3snd18MemorySoundArchiveCFPviUlUl
+	.4byte OpenExtStream__Q34nw4r3snd18MemorySoundArchiveCFPviPCcUlUl
 
 
 .global lbl_8056E170
@@ -42473,21 +42476,21 @@ lbl_8056E3D8:
 	# ROM: 0x56A4D8
 	.4byte 0
 	.4byte 0
-	.4byte func_8041989C
-	.4byte func_80419E48
-	.4byte func_80419EB8
-	.4byte func_8041A008
+	.4byte __dt__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte Start__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte Stop__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte Pause__Q44nw4r3snd6detail9SeqPlayerFb
 	.4byte IsActive__Q44nw4r3snd6detail9SeqPlayerCFv
 	.4byte IsStarted__Q44nw4r3snd6detail9SeqPlayerCFv
 	.4byte IsPause__Q44nw4r3snd6detail9SeqPlayerCFv
 	.4byte 0
 	.4byte 0
-	.4byte func_8041ABAC
+	.4byte _180___dt__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte _208_InvalidateData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
 	.4byte _208_InvalidateWaveData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
 	.4byte 0
 	.4byte 0
-	.4byte lbl_8041ABB4
+	.4byte _192___dt__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte _220_OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte OnUpdateVoiceSoundThread__Q54nw4r3snd6detail11SoundThread14PlayerCallbackFv
 	.4byte _220_OnShutdownSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
@@ -42504,18 +42507,18 @@ lbl_8056E440:
 	# ROM: 0x56A540
 	.4byte 0
 	.4byte 0
-	.4byte func_8041B2F0
-	.4byte func_8041B00C
-	.4byte func_8041AF30
-	.4byte func_8041B2E8
-	.4byte func_8041B174
-	.4byte func_8041B188
-	.4byte func_8041ACB0
-	.4byte func_8041B2D8
-	.4byte func_8041B2E0
-	.4byte func_8041B090
-	.4byte func_80413190
-	.4byte func_804131C4
+	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail8SeqSoundCFv
+	.4byte __dt__Q44nw4r3snd6detail8SeqSoundFv
+	.4byte Shutdown__Q44nw4r3snd6detail8SeqSoundFv
+	.4byte IsPrepared__Q44nw4r3snd6detail8SeqSoundCFv
+	.4byte IsAttachedTempSpecialHandle__Q44nw4r3snd6detail8SeqSoundFv
+	.4byte DetachTempSpecialHandle__Q44nw4r3snd6detail8SeqSoundFv
+	.4byte InitParam__Q44nw4r3snd6detail8SeqSoundFv
+	.4byte GetBasicPlayer__Q44nw4r3snd6detail8SeqSoundFv
+	.4byte GetBasicPlayer__Q44nw4r3snd6detail8SeqSoundCFv
+	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail8SeqSoundFv
+	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
 
 
 .global lbl_8056E478
@@ -42523,10 +42526,10 @@ lbl_8056E478:
 	# ROM: 0x56A578
 	.4byte 0
 	.4byte 0
-	.4byte func_8041AC58
-	.4byte func_8041B190
-	.4byte func_8041B288
-	.4byte func_8041B2AC
+	.4byte __dt__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
+	.4byte Execute__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
+	.4byte Cancel__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
+	.4byte OnCancel__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
 
 
 .global lbl_8056E490
@@ -42543,7 +42546,7 @@ lbl_8056E4A0:
 	# ROM: 0x56A5A0
 	.4byte 0
 	.4byte 0
-	.4byte func_8041C7A0
+	.4byte __dt__Q34nw4r3snd12SoundArchiveFv
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -42556,16 +42559,16 @@ lbl_8056E4C0:
 	# ROM: 0x56A5C0
 	.4byte 0
 	.4byte 0
-	.4byte func_8041DEA4
-	.4byte func_8041FFAC
-	.4byte func_80420050
+	.4byte __dt__Q34nw4r3snd18SoundArchivePlayerFv
+	.4byte InvalidateData__Q34nw4r3snd18SoundArchivePlayerFPCvPCv
+	.4byte InvalidateWaveData__Q34nw4r3snd18SoundArchivePlayerFPCvPCv
 	.4byte 0
 	.4byte 0
-	.4byte lbl_80420328
-	.4byte lbl_80420320
-	.4byte func_80420318
-	.4byte func_8041C774
-	.4byte func_8041EEF0
+	.4byte _12___dt__Q34nw4r3snd18SoundArchivePlayerFv
+	.4byte _12_detail_SetupSound__Q34nw4r3snd18SoundArchivePlayerFPQ34nw4r3snd11SoundHandleUlbPCQ44nw4r3snd14SoundStartable9StartInfo
+	.4byte _12_detail_ConvertLabelStringToSoundId__Q34nw4r3snd18SoundArchivePlayerFPCc
+	.4byte detail_ConvertLabelStringToSoundId__Q34nw4r3snd18SoundArchivePlayerFPCc
+	.4byte detail_SetupSound__Q34nw4r3snd18SoundArchivePlayerFPQ34nw4r3snd11SoundHandleUlbPCQ44nw4r3snd14SoundStartable9StartInfo
 
 
 .global lbl_8056E4F0
@@ -42574,7 +42577,7 @@ lbl_8056E4F0:
 	.4byte 0
 	.4byte 0
 	.4byte func_8041DCFC
-	.4byte func_8042021C
+	.4byte GetWaveSoundData__Q44nw4r3snd18SoundArchivePlayer11WsdCallbackCFPQ44nw4r3snd6detail13WaveSoundInfoPQ44nw4r3snd6detail17WaveSoundNoteInfoPQ44nw4r3snd6detail8WaveInfoPCviiUl
 
 
 .global lbl_8056E500
@@ -42583,7 +42586,7 @@ lbl_8056E500:
 	.4byte 0
 	.4byte 0
 	.4byte func_8041DCBC
-	.4byte func_804200F4
+	.4byte NoteOn__Q44nw4r3snd18SoundArchivePlayer17SeqNoteOnCallbackFPQ44nw4r3snd6detail9SeqPlayeriRCQ44nw4r3snd6detail10NoteOnInfo
 
 
 .global lbl_8056E510
@@ -42596,22 +42599,22 @@ lbl_8056E558:
 	# ROM: 0x56A658
 	.4byte 0
 	.4byte 0
-	.4byte func_80422740
-	.4byte func_80422BC0
-	.4byte func_80422F58
-	.4byte func_80423120
-	.4byte func_80424F94
-	.4byte func_80424F8C
-	.4byte func_80424F84
+	.4byte __dt__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte Start__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte Stop__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte Pause__Q44nw4r3snd6detail10StrmPlayerFb
+	.4byte IsActive__Q44nw4r3snd6detail10StrmPlayerCFv
+	.4byte IsStarted__Q44nw4r3snd6detail10StrmPlayerCFv
+	.4byte IsPause__Q44nw4r3snd6detail10StrmPlayerCFv
 	.4byte 0
 	.4byte 0
-	.4byte lbl_80424FB4
-	.4byte lbl_80424FAC
-	.4byte lbl_80424FA4
-	.4byte func_80424F9C
-	.4byte func_80424F6C
-	.4byte lbl_80424F70
-	.4byte lbl_80424F74
+	.4byte _208___dt__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte _208_OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte _208_OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte _208_OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
 
 
 .global lbl_8056E5A0
@@ -42619,10 +42622,10 @@ lbl_8056E5A0:
 	# ROM: 0x56A6A0
 	.4byte 0
 	.4byte 0
-	.4byte func_804226E8
-	.4byte func_80424D68
-	.4byte func_80424E38
-	.4byte func_80424EC4
+	.4byte __dt__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
+	.4byte Execute__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
+	.4byte Cancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
+	.4byte OnCancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
 
 
 .global lbl_8056E5B8
@@ -42630,10 +42633,10 @@ lbl_8056E5B8:
 	# ROM: 0x56A6B8
 	.4byte 0
 	.4byte 0
-	.4byte func_80422690
-	.4byte func_80424C24
-	.4byte func_80424C74
-	.4byte func_80424C78
+	.4byte __dt__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
+	.4byte Execute__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
+	.4byte Cancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
+	.4byte OnCancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
 
 
 .global lbl_8056E5D0
@@ -42641,18 +42644,18 @@ lbl_8056E5D0:
 	# ROM: 0x56A6D0
 	.4byte 0
 	.4byte 0
-	.4byte func_80425738
-	.4byte func_804255C4
-	.4byte func_80425528
-	.4byte func_80425730
-	.4byte func_80425704
-	.4byte func_80425718
-	.4byte func_804251B8
-	.4byte lbl_80425720
-	.4byte func_80425728
-	.4byte func_80425620
-	.4byte func_804253C8
-	.4byte func_80425448
+	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv
+	.4byte __dt__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte Shutdown__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte IsPrepared__Q44nw4r3snd6detail9StrmSoundCFv
+	.4byte IsAttachedTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte DetachTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte InitParam__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundCFv
+	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte UpdateMoveValue__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte UpdateParam__Q44nw4r3snd6detail9StrmSoundFv
 
 
 .global lbl_8056E608
@@ -42693,18 +42696,18 @@ lbl_8056E650:
 	# ROM: 0x56A750
 	.4byte 0
 	.4byte 0
-	.4byte func_80429F24
-	.4byte func_80429DBC
-	.4byte func_80429D20
-	.4byte func_80429F1C
-	.4byte func_80429EF0
-	.4byte func_80429F04
-	.4byte func_8041257C
-	.4byte lbl_80429F0C
-	.4byte func_80429F14
-	.4byte func_80429E0C
-	.4byte func_80413190
-	.4byte func_804131C4
+	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail9WaveSoundCFv
+	.4byte __dt__Q44nw4r3snd6detail9WaveSoundFv
+	.4byte Shutdown__Q44nw4r3snd6detail9WaveSoundFv
+	.4byte IsPrepared__Q44nw4r3snd6detail9WaveSoundCFv
+	.4byte IsAttachedTempSpecialHandle__Q44nw4r3snd6detail9WaveSoundFv
+	.4byte DetachTempSpecialHandle__Q44nw4r3snd6detail9WaveSoundFv
+	.4byte InitParam__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte GetBasicPlayer__Q44nw4r3snd6detail9WaveSoundFv
+	.4byte GetBasicPlayer__Q44nw4r3snd6detail9WaveSoundCFv
+	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail9WaveSoundFv
+	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
 
 
 .global lbl_8056E688
@@ -42712,28 +42715,28 @@ lbl_8056E688:
 	# ROM: 0x56A788
 	.4byte 0
 	.4byte 0
-	.4byte func_80429C40
-	.4byte func_8042A5DC
-	.4byte func_8042A64C
-	.4byte func_8042A774
-	.4byte func_8042B340
-	.4byte func_8042B32C
-	.4byte func_8042B318
+	.4byte __dt__Q44nw4r3snd6detail9WsdPlayerFv
+	.4byte Start__Q44nw4r3snd6detail9WsdPlayerFv
+	.4byte Stop__Q44nw4r3snd6detail9WsdPlayerFv
+	.4byte Pause__Q44nw4r3snd6detail9WsdPlayerFb
+	.4byte IsActive__Q44nw4r3snd6detail9WsdPlayerCFv
+	.4byte IsStarted__Q44nw4r3snd6detail9WsdPlayerCFv
+	.4byte IsPause__Q44nw4r3snd6detail9WsdPlayerCFv
 	.4byte 0
 	.4byte 0
-	.4byte lbl_8042B364
-	.4byte lbl_8042B35C
-	.4byte func_8042B354
+	.4byte _180___dt__Q44nw4r3snd6detail9WsdPlayerFv
+	.4byte _180_InvalidateData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
+	.4byte _180_InvalidateWaveData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
 	.4byte 0
 	.4byte 0
-	.4byte lbl_8042B37C
-	.4byte lbl_8042B374
+	.4byte _192___dt__Q44nw4r3snd6detail9WsdPlayerFv
+	.4byte _192_OnUpdateFrameSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
 	.4byte OnUpdateVoiceSoundThread__Q54nw4r3snd6detail11SoundThread14PlayerCallbackFv
-	.4byte lbl_8042B36C
-	.4byte func_8042A838
-	.4byte func_8042B314
-	.4byte func_8042B300
-	.4byte lbl_8042B304
+	.4byte _192_OnShutdownSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
+	.4byte InvalidateData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
+	.4byte InvalidateWaveData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
+	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
+	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
 
 
 .global lbl_8056E6E8
@@ -43400,13 +43403,13 @@ lbl_8056EE58:
 	.4byte 0xFFFFFE3C
 	.4byte func_8043FBC4
 	.4byte func_8043FB68
-	.4byte lbl_8043EAD8
+	.4byte func_8043EAD8
 	.4byte func_8043D9E8
 	.4byte func_8043DD20
 	.4byte func_8043FB60
 	.4byte func_8043FB58
 	.4byte func_8043C9B8
-	.4byte lbl_8043EAD0
+	.4byte func_8043EAD0
 	.4byte func_8043EAC8
 
 .global lbl_8056EF28
@@ -43870,7 +43873,7 @@ lbl_8056F438:
 	.4byte func_80039D4C
 	.4byte func_80039D44
 	.4byte func_80039D40
-	.4byte lbl_80447A34
+	.4byte func_80447A34
 	.4byte func_80039E3C
 	.4byte func_80039E38
 	.4byte func_80447A40
@@ -44987,9 +44990,9 @@ lbl_805701A8:
 	.4byte func_80039E30
 	.4byte lbl_80666080
 	.4byte 0xFFFFFE38
-	.4byte lbl_804559C4
+	.4byte func_804559C4
 	.4byte func_80166630
-	.4byte lbl_804559BC
+	.4byte func_804559BC
 	.4byte func_804559B4
 	.4byte func_80455498
 	.4byte func_80455544
@@ -45355,7 +45358,7 @@ lbl_805706A0:
 	.4byte func_80039D4C
 	.4byte func_80039D44
 	.4byte func_80039D40
-	.4byte lbl_80459AD4
+	.4byte func_80459AD4
 	.4byte func_80039E3C
 	.4byte func_80039E38
 	.4byte func_80459AE4
@@ -45363,14 +45366,14 @@ lbl_805706A0:
 	.4byte func_80039E30
 	.4byte lbl_806660B8
 	.4byte 0xFFFFFE3C
-	.4byte lbl_80459C80
-	.4byte lbl_80459C78
+	.4byte func_80459C80
+	.4byte func_80459C78
 	.4byte func_8016662C
 	.4byte func_80448A40
 	.4byte lbl_806660B8
 	.4byte 0xFFFFFE38
-	.4byte lbl_80459C90
-	.4byte lbl_80459C88
+	.4byte func_80459C90
+	.4byte func_80459C88
 	.4byte func_80459AD8
 	.4byte func_80459C74
 
@@ -46377,7 +46380,7 @@ lbl_805714D8:
 	.4byte func_80482048
 	.4byte func_80481F9C
 	.4byte func_8048204C
-	.4byte lbl_80482040
+	.4byte func_80482040
 	.4byte func_80482038
 	.4byte func_80481F00
 
@@ -46425,8 +46428,8 @@ lbl_80571550:
 	.4byte func_80482388
 	.4byte func_80482048
 	.4byte func_80482288
-	.4byte lbl_804823A0
-	.4byte lbl_80482040
+	.4byte func_804823A0
+	.4byte func_80482040
 
 .global lbl_80571570
 lbl_80571570:
@@ -46445,8 +46448,8 @@ lbl_80571580:
 	.4byte func_80482388
 	.4byte func_80482048
 	.4byte func_80482400
-	.4byte lbl_804823A0
-	.4byte lbl_80482040
+	.4byte func_804823A0
+	.4byte func_80482040
 
 .global lbl_805715A0
 lbl_805715A0:
@@ -46509,7 +46512,7 @@ lbl_805715B8:
 	.4byte func_80484914
 	.4byte 0
 	.4byte func_8048607C
-	.4byte lbl_80486074
+	.4byte func_80486074
 	.4byte func_801FCAC0
 	.4byte func_801FCBEC
 	.4byte func_804830AC
@@ -46559,8 +46562,8 @@ lbl_805716C8:
 	.4byte func_8048AB0C
 	.4byte func_800BD638
 	.4byte func_80487E40
-	.4byte lbl_80487E48
-	.4byte lbl_80487E50
+	.4byte func_80487E48
+	.4byte func_80487E50
 	.4byte func_80487E58
 	.4byte func_80487EB8
 	.4byte func_80488FEC
@@ -46593,18 +46596,18 @@ lbl_805716C8:
 	.4byte func_80488AAC
 	.4byte lbl_80664DB8
 	.4byte 0xFFFFEB9C
-	.4byte lbl_8048BD6C
-	.4byte lbl_8048BD64
-	.4byte lbl_8048BD5C
+	.4byte func_8048BD6C
+	.4byte func_8048BD64
+	.4byte func_8048BD5C
 	.4byte func_8048BD54
 	.4byte lbl_80664DB8
 	.4byte 0xFFFFEB98
-	.4byte lbl_8048BD8C
-	.4byte lbl_8048BD84
+	.4byte func_8048BD8C
+	.4byte func_8048BD84
 	.4byte ExecCallback_CALC_MAT__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
 	.4byte ExecCallback_CALC_VIEW__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
-	.4byte lbl_8048BD7C
-	.4byte lbl_8048BD74
+	.4byte func_8048BD7C
+	.4byte func_8048BD74
 	.4byte func_80489014
 	.4byte func_8048917C
 	.4byte func_80489200
@@ -46937,11 +46940,11 @@ lbl_80571E10:
 	.4byte func_80043F20
 	.4byte lbl_806662A0
 	.4byte 0xFFFFFFAC
-	.4byte lbl_8048ED1C
+	.4byte func_8048ED1C
 	.4byte func_80039E28
 	.4byte func_80039E20
-	.4byte lbl_8048ED14
-	.4byte lbl_8048ED0C
+	.4byte func_8048ED14
+	.4byte func_8048ED0C
 	.4byte func_80039E0C
 	.4byte func_80039E04
 	.4byte func_80039DFC
@@ -47190,8 +47193,8 @@ lbl_80572118:
 	.4byte func_80496B04
 	.4byte func_80039E28
 	.4byte func_80039E20
-	.4byte lbl_8048ED14
-	.4byte lbl_8048ED0C
+	.4byte func_8048ED14
+	.4byte func_8048ED0C
 	.4byte func_80039E0C
 	.4byte func_80039E04
 	.4byte func_80039DFC
@@ -47348,12 +47351,12 @@ lbl_80572320:
 	.4byte func_8049B9AC
 	.4byte func_8049BEA4
 	.4byte func_8049BA44
-	.4byte lbl_8049BEAC
-	.4byte lbl_8049BEB4
-	.4byte lbl_8049BEBC
+	.4byte func_8049BEAC
+	.4byte func_8049BEB4
+	.4byte func_8049BEBC
 	.4byte func_8049BED0
 	.4byte func_8049BEE4
-	.4byte lbl_8049BEEC
+	.4byte func_8049BEEC
 	.4byte func_8049BF0C
 	.4byte func_8049BF34
 	.4byte func_8049BF5C
@@ -47365,9 +47368,9 @@ lbl_80572320:
 	.4byte func_8049C430
 	.4byte func_8049C314
 	.4byte func_8049C394
-	.4byte lbl_8049C39C
-	.4byte lbl_8049C3A4
-	.4byte lbl_8049C3AC
+	.4byte func_8049C39C
+	.4byte func_8049C3A4
+	.4byte func_8049C3AC
 	.4byte func_8049C420
 
 .global lbl_80572388
@@ -47544,7 +47547,7 @@ lbl_80572508:
 	.4byte func_80482048
 	.4byte func_8049F8E4
 	.4byte func_8048204C
-	.4byte lbl_80482040
+	.4byte func_80482040
 	.4byte 0
 	.4byte func_8049EBF0
 

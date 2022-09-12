@@ -13,14 +13,14 @@ GetInstance__Q44nw4r3snd6detail14AxVoiceManagerFv:
 /* 80410B98 003DA158  3C C0 80 64 */	lis r6, lbl_8063B174@ha
 /* 80410B9C 003DA15C  38 00 00 00 */	li r0, 0
 /* 80410BA0 003DA160  38 66 B1 74 */	addi r3, r6, lbl_8063B174@l
-/* 80410BA4 003DA164  3C 80 80 41 */	lis r4, func_80410C24@ha
+/* 80410BA4 003DA164  3C 80 80 41 */	lis r4, __dt__Q44nw4r3snd6detail14AxVoiceManagerFv@ha
 /* 80410BA8 003DA168  90 03 00 04 */	stw r0, 4(r3)
 /* 80410BAC 003DA16C  39 23 00 04 */	addi r9, r3, 4
 /* 80410BB0 003DA170  39 03 00 10 */	addi r8, r3, 0x10
 /* 80410BB4 003DA174  38 E3 00 1C */	addi r7, r3, 0x1c
 /* 80410BB8 003DA178  90 03 00 08 */	stw r0, 8(r3)
 /* 80410BBC 003DA17C  3C A0 80 64 */	lis r5, lbl_8063B168@ha
-/* 80410BC0 003DA180  38 84 0C 24 */	addi r4, r4, func_80410C24@l
+/* 80410BC0 003DA180  38 84 0C 24 */	addi r4, r4, __dt__Q44nw4r3snd6detail14AxVoiceManagerFv@l
 /* 80410BC4 003DA184  90 03 00 10 */	stw r0, 0x10(r3)
 /* 80410BC8 003DA188  38 A5 B1 68 */	addi r5, r5, lbl_8063B168@l
 /* 80410BCC 003DA18C  90 03 00 14 */	stw r0, 0x14(r3)
@@ -47,8 +47,8 @@ lbl_80410C0C:
 /* 80410C1C 003DA1DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80410C20 003DA1E0  4E 80 00 20 */	blr
 
-.global func_80410C24
-func_80410C24:
+.global __dt__Q44nw4r3snd6detail14AxVoiceManagerFv
+__dt__Q44nw4r3snd6detail14AxVoiceManagerFv:
 /* 80410C24 003DA1E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80410C28 003DA1E8  7C 08 02 A6 */	mflr r0
 /* 80410C2C 003DA1EC  2C 03 00 00 */	cmpwi r3, 0
@@ -356,7 +356,7 @@ AcquireAxVoice__Q44nw4r3snd6detail14AxVoiceManagerFUlPFPQ44nw4r3snd6detail7AxVoi
 /* 80411044 003DA604  3F 60 80 64 */	lis r27, lbl_8063B174@ha
 /* 80411048 003DA608  3B 80 00 00 */	li r28, 0
 /* 8041104C 003DA60C  3B 5B B1 74 */	addi r26, r27, lbl_8063B174@l
-/* 80411050 003DA610  3F A0 80 41 */	lis r29, func_80410C24@ha
+/* 80411050 003DA610  3F A0 80 41 */	lis r29, __dt__Q44nw4r3snd6detail14AxVoiceManagerFv@ha
 /* 80411054 003DA614  3F C0 80 64 */	lis r30, lbl_8063B168@ha
 /* 80411058 003DA618  3B E0 00 01 */	li r31, 1
 /* 8041105C 003DA61C  3A 1A 00 10 */	addi r16, r26, 0x10
@@ -382,7 +382,7 @@ lbl_8041108C:
 /* 804110A4 003DA664  39 1A 00 1C */	addi r8, r26, 0x1c
 /* 804110A8 003DA668  93 9A 00 08 */	stw r28, 8(r26)
 /* 804110AC 003DA66C  7F 43 D3 78 */	mr r3, r26
-/* 804110B0 003DA670  38 9D 0C 24 */	addi r4, r29, func_80410C24@l
+/* 804110B0 003DA670  38 9D 0C 24 */	addi r4, r29, __dt__Q44nw4r3snd6detail14AxVoiceManagerFv@l
 /* 804110B4 003DA674  38 BE B1 68 */	addi r5, r30, lbl_8063B168@l
 /* 804110B8 003DA678  93 9A 00 10 */	stw r28, 0x10(r26)
 /* 804110BC 003DA67C  93 9A 00 14 */	stw r28, 0x14(r26)
@@ -645,7 +645,7 @@ FreeAllReservedAxVoice__Q44nw4r3snd6detail14AxVoiceManagerFv:
 /* 80411458 003DAA18  3E E0 80 64 */	lis r23, lbl_8063B174@ha
 /* 8041145C 003DAA1C  3B 00 00 00 */	li r24, 0
 /* 80411460 003DAA20  3A D7 B1 74 */	addi r22, r23, lbl_8063B174@l
-/* 80411464 003DAA24  3F 20 80 41 */	lis r25, func_80410C24@ha
+/* 80411464 003DAA24  3F 20 80 41 */	lis r25, __dt__Q44nw4r3snd6detail14AxVoiceManagerFv@ha
 /* 80411468 003DAA28  3F 40 80 64 */	lis r26, lbl_8063B168@ha
 /* 8041146C 003DAA2C  3B 60 00 01 */	li r27, 1
 /* 80411470 003DAA30  3B 96 00 10 */	addi r28, r22, 0x10
@@ -671,7 +671,7 @@ lbl_804114A0:
 /* 804114B8 003DAA78  39 16 00 1C */	addi r8, r22, 0x1c
 /* 804114BC 003DAA7C  93 16 00 08 */	stw r24, 8(r22)
 /* 804114C0 003DAA80  7E C3 B3 78 */	mr r3, r22
-/* 804114C4 003DAA84  38 99 0C 24 */	addi r4, r25, func_80410C24@l
+/* 804114C4 003DAA84  38 99 0C 24 */	addi r4, r25, __dt__Q44nw4r3snd6detail14AxVoiceManagerFv@l
 /* 804114C8 003DAA88  38 BA B1 68 */	addi r5, r26, lbl_8063B168@l
 /* 804114CC 003DAA8C  93 16 00 10 */	stw r24, 0x10(r22)
 /* 804114D0 003DAA90  93 16 00 14 */	stw r24, 0x14(r22)

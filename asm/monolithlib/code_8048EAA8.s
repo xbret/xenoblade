@@ -199,16 +199,19 @@ func_8048ECFC:
 func_8048ED04:
 /* 8048ED04 004582C4  80 63 00 8C */	lwz r3, 0x8c(r3)
 /* 8048ED08 004582C8  48 00 11 24 */	b func_8048FE2C
-.global lbl_8048ED0C
-lbl_8048ED0C:
+
+.global func_8048ED0C
+func_8048ED0C:
 /* 8048ED0C 004582CC  38 63 FF AC */	addi r3, r3, -84
 /* 8048ED10 004582D0  48 00 7C 60 */	b func_80496970
-.global lbl_8048ED14
-lbl_8048ED14:
+
+.global func_8048ED14
+func_8048ED14:
 /* 8048ED14 004582D4  38 63 FF AC */	addi r3, r3, -84
 /* 8048ED18 004582D8  48 00 7C 44 */	b func_8049695C
-.global lbl_8048ED1C
-lbl_8048ED1C:
+
+.global func_8048ED1C
+func_8048ED1C:
 /* 8048ED1C 004582DC  38 63 FF AC */	addi r3, r3, -84
 /* 8048ED20 004582E0  4B FF FE 9C */	b func_8048EBBC
 

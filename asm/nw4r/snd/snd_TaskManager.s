@@ -12,12 +12,12 @@ GetInstance__Q44nw4r3snd6detail11TaskManagerFv:
 /* 804257D8 003EED98  7C 00 07 75 */	extsb. r0, r0
 /* 804257DC 003EED9C  40 82 00 68 */	bne lbl_80425844
 /* 804257E0 003EEDA0  3F E0 80 65 */	lis r31, lbl_80657024@ha
-/* 804257E4 003EEDA4  3C 80 80 42 */	lis r4, func_8042591C@ha
+/* 804257E4 003EEDA4  3C 80 80 42 */	lis r4, __ct__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv@ha
 /* 804257E8 003EEDA8  3B FF 70 24 */	addi r31, r31, lbl_80657024@l
-/* 804257EC 003EEDAC  3C A0 80 42 */	lis r5, func_804258C4@ha
+/* 804257EC 003EEDAC  3C A0 80 42 */	lis r5, __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv@ha
 /* 804257F0 003EEDB0  7F E3 FB 78 */	mr r3, r31
-/* 804257F4 003EEDB4  38 84 59 1C */	addi r4, r4, func_8042591C@l
-/* 804257F8 003EEDB8  38 A5 58 C4 */	addi r5, r5, func_804258C4@l
+/* 804257F4 003EEDB4  38 84 59 1C */	addi r4, r4, __ct__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv@l
+/* 804257F8 003EEDB8  38 A5 58 C4 */	addi r5, r5, __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv@l
 /* 804257FC 003EEDBC  38 C0 00 0C */	li r6, 0xc
 /* 80425800 003EEDC0  38 E0 00 03 */	li r7, 3
 /* 80425804 003EEDC4  4B E9 42 FD */	bl __construct_array
@@ -28,10 +28,10 @@ GetInstance__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425818 003EEDD8  4B F3 5D B9 */	bl OSInitThreadQueue
 /* 8042581C 003EEDDC  38 7F 00 34 */	addi r3, r31, 0x34
 /* 80425820 003EEDE0  4B F3 5D B1 */	bl OSInitThreadQueue
-/* 80425824 003EEDE4  3C 80 80 42 */	lis r4, func_80425860@ha
+/* 80425824 003EEDE4  3C 80 80 42 */	lis r4, __dt__Q44nw4r3snd6detail11TaskManagerFv@ha
 /* 80425828 003EEDE8  3C A0 80 65 */	lis r5, lbl_80657018@ha
 /* 8042582C 003EEDEC  7F E3 FB 78 */	mr r3, r31
-/* 80425830 003EEDF0  38 84 58 60 */	addi r4, r4, func_80425860@l
+/* 80425830 003EEDF0  38 84 58 60 */	addi r4, r4, __dt__Q44nw4r3snd6detail11TaskManagerFv@l
 /* 80425834 003EEDF4  38 A5 70 18 */	addi r5, r5, lbl_80657018@l
 /* 80425838 003EEDF8  4B E9 3E 65 */	bl __register_global_object_tmp
 /* 8042583C 003EEDFC  38 00 00 01 */	li r0, 1
@@ -45,8 +45,8 @@ lbl_80425844:
 /* 80425858 003EEE18  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042585C 003EEE1C  4E 80 00 20 */	blr
 
-.global func_80425860
-func_80425860:
+.global __dt__Q44nw4r3snd6detail11TaskManagerFv
+__dt__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425860 003EEE20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80425864 003EEE24  7C 08 02 A6 */	mflr r0
 /* 80425868 003EEE28  2C 03 00 00 */	cmpwi r3, 0
@@ -56,9 +56,9 @@ func_80425860:
 /* 80425878 003EEE38  93 C1 00 08 */	stw r30, 8(r1)
 /* 8042587C 003EEE3C  7C 7E 1B 78 */	mr r30, r3
 /* 80425880 003EEE40  41 82 00 28 */	beq lbl_804258A8
-/* 80425884 003EEE44  3C 80 80 42 */	lis r4, func_804258C4@ha
+/* 80425884 003EEE44  3C 80 80 42 */	lis r4, __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv@ha
 /* 80425888 003EEE48  38 A0 00 0C */	li r5, 0xc
-/* 8042588C 003EEE4C  38 84 58 C4 */	addi r4, r4, func_804258C4@l
+/* 8042588C 003EEE4C  38 84 58 C4 */	addi r4, r4, __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv@l
 /* 80425890 003EEE50  38 C0 00 03 */	li r6, 3
 /* 80425894 003EEE54  4B E9 43 65 */	bl __destroy_arr
 /* 80425898 003EEE58  2C 1F 00 00 */	cmpwi r31, 0
@@ -74,8 +74,9 @@ lbl_804258A8:
 /* 804258BC 003EEE7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804258C0 003EEE80  4E 80 00 20 */	blr
 
-.global func_804258C4
-func_804258C4:
+#__dt__Q34nw4r2ut35LinkList<Q44nw4r3snd6detail4Task,4>Fv
+.global __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv
+__dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv:
 /* 804258C4 003EEE84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804258C8 003EEE88  7C 08 02 A6 */	mflr r0
 /* 804258CC 003EEE8C  2C 03 00 00 */	cmpwi r3, 0
@@ -100,8 +101,9 @@ lbl_80425900:
 /* 80425914 003EEED4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80425918 003EEED8  4E 80 00 20 */	blr
 
-.global func_8042591C
-func_8042591C:
+#__ct__q34nw4r2ut35linklist<Q44nw4r3snd6detail4Task,4>Fv
+.global __ct__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv
+__ct__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv:
 /* 8042591C 003EEEDC  38 00 00 00 */	li r0, 0
 /* 80425920 003EEEE0  38 83 00 04 */	addi r4, r3, 4
 /* 80425924 003EEEE4  90 03 00 04 */	stw r0, 4(r3)
@@ -111,8 +113,8 @@ func_8042591C:
 /* 80425934 003EEEF4  90 83 00 08 */	stw r4, 8(r3)
 /* 80425938 003EEEF8  4E 80 00 20 */	blr 
 
-.global func_8042593C
-func_8042593C:
+.global AppendTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4TaskQ54nw4r3snd6detail11TaskManager12TaskPriority
+AppendTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4TaskQ54nw4r3snd6detail11TaskManager12TaskPriority:
 /* 8042593C 003EEEFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80425940 003EEF00  7C 08 02 A6 */	mflr r0
 /* 80425944 003EEF04  90 01 00 24 */	stw r0, 0x24(r1)
@@ -145,8 +147,8 @@ func_8042593C:
 /* 804259B0 003EEF70  38 21 00 20 */	addi r1, r1, 0x20
 /* 804259B4 003EEF74  4E 80 00 20 */	blr 
 
-.global func_804259B8
-func_804259B8:
+.global PopTask__Q44nw4r3snd6detail11TaskManagerFv
+PopTask__Q44nw4r3snd6detail11TaskManagerFv:
 /* 804259B8 003EEF78  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804259BC 003EEF7C  7C 08 02 A6 */	mflr r0
 /* 804259C0 003EEF80  90 01 00 34 */	stw r0, 0x34(r1)
@@ -245,8 +247,8 @@ lbl_80425AF4:
 /* 80425B0C 003EF0CC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80425B10 003EF0D0  4E 80 00 20 */	blr 
 
-.global func_80425B14
-func_80425B14:
+.global GetNextTask__Q44nw4r3snd6detail11TaskManagerFv
+GetNextTask__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425B14 003EF0D4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80425B18 003EF0D8  7C 08 02 A6 */	mflr r0
 /* 80425B1C 003EF0DC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -334,7 +336,7 @@ ExecuteTask__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425C30 003EF1F0  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80425C34 003EF1F4  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80425C38 003EF1F8  7C 7D 1B 78 */	mr r29, r3
-/* 80425C3C 003EF1FC  4B FF FD 7D */	bl func_804259B8
+/* 80425C3C 003EF1FC  4B FF FD 7D */	bl PopTask__Q44nw4r3snd6detail11TaskManagerFv
 /* 80425C40 003EF200  2C 03 00 00 */	cmpwi r3, 0
 /* 80425C44 003EF204  7C 7E 1B 78 */	mr r30, r3
 /* 80425C48 003EF208  40 82 00 0C */	bne lbl_80425C54
@@ -361,8 +363,8 @@ lbl_80425C80:
 /* 80425C94 003EF254  38 21 00 20 */	addi r1, r1, 0x20
 /* 80425C98 003EF258  4E 80 00 20 */	blr 
 
-.global func_80425C9C
-func_80425C9C:
+.global CancelTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4Task
+CancelTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4Task:
 /* 80425C9C 003EF25C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80425CA0 003EF260  7C 08 02 A6 */	mflr r0
 /* 80425CA4 003EF264  90 01 00 34 */	stw r0, 0x34(r1)
@@ -517,7 +519,7 @@ lbl_80425E9C:
 /* 80425EA0 003EF460  4B F3 67 D1 */	bl OSSleepThread
 lbl_80425EA4:
 /* 80425EA4 003EF464  7F C3 F3 78 */	mr r3, r30
-/* 80425EA8 003EF468  4B FF FC 6D */	bl func_80425B14
+/* 80425EA8 003EF468  4B FF FC 6D */	bl GetNextTask__Q44nw4r3snd6detail11TaskManagerFv
 /* 80425EAC 003EF46C  2C 03 00 00 */	cmpwi r3, 0
 /* 80425EB0 003EF470  40 82 00 10 */	bne lbl_80425EC0
 /* 80425EB4 003EF474  88 1E 00 28 */	lbz r0, 0x28(r30)

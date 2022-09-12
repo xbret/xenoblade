@@ -1578,8 +1578,9 @@ func_80447A10:
 .global func_80447A30
 func_80447A30:
 /* 80447A30 00410FF0  4B FF ED 3C */	b func_8044676C
-.global lbl_80447A34
-lbl_80447A34:
+
+.global func_80447A34
+func_80447A34:
 /* 80447A34 00410FF4  81 83 01 C8 */	lwz r12, 0x1c8(r3)
 /* 80447A38 00410FF8  7D 89 03 A6 */	mtctr r12
 /* 80447A3C 00410FFC  4E 80 04 20 */	bctr 

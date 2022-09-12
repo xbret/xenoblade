@@ -8158,8 +8158,9 @@ lbl_80071B44:
 func_80071B6C:
 /* 80071B6C 0003B12C  D0 23 01 E0 */	stfs f1, 0x1e0(r3)
 /* 80071B70 0003B130  48 42 CF F0 */	b func_8049EB60
-.global lbl_80071B74
-lbl_80071B74:
+
+.global func_80071B74
+func_80071B74:
 /* 80071B74 0003B134  4E 80 00 20 */	blr 
 
 .global func_80071B78

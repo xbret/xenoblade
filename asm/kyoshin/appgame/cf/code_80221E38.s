@@ -16,12 +16,14 @@ func_80221E38:
 func_80221E54:
 /* 80221E54 001EB414  38 63 FF FC */	addi r3, r3, -4
 /* 80221E58 001EB418  4B FF A7 3C */	b func_8021C594
-.global lbl_80221E5C
-lbl_80221E5C:
+
+.global func_80221E5C
+func_80221E5C:
 /* 80221E5C 001EB41C  38 63 FF F8 */	addi r3, r3, -8
 /* 80221E60 001EB420  4B FF FE F8 */	b func_80221D58
-.global lbl_80221E64
-lbl_80221E64:
+
+.global func_80221E64
+func_80221E64:
 /* 80221E64 001EB424  38 63 FF F8 */	addi r3, r3, -8
 /* 80221E68 001EB428  4B FF A7 2C */	b func_8021C594
 
