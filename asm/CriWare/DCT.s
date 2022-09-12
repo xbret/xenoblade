@@ -2,16 +2,16 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803BB718
-func_803BB718:
+.global DCT_GetVerStr
+DCT_GetVerStr:
 /* 803BB718 00384CD8  3C 60 80 52 */	lis r3, lbl_8051FE30@ha
 /* 803BB71C 00384CDC  3C 80 80 61 */	lis r4, lbl_8060A288@ha
 /* 803BB720 00384CE0  38 63 FE 30 */	addi r3, r3, lbl_8051FE30@l
 /* 803BB724 00384CE4  90 64 A2 88 */	stw r3, lbl_8060A288@l(r4)
 /* 803BB728 00384CE8  4E 80 00 20 */	blr 
 
-.global func_803BB72C
-func_803BB72C:
+.global MEM_Copy
+MEM_Copy:
 /* 803BB72C 00384CEC  4B C4 88 D4 */	b memcpy
 
 .global func_803BB730
