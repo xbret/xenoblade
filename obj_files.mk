@@ -439,8 +439,12 @@ CRIWARE_O_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/DCT.o \
 	$(BUILD_DIR)/asm/CriWare/MPS.o \
 	$(BUILD_DIR)/asm/CriWare/SFD.o \
-	$(BUILD_DIR)/asm/CriWare/SFX.o \
-	$(BUILD_DIR)/asm/CriWare/SUD.o
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_lib.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_alp.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_zmv.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_sud.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_cnv_to_Y84C44.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sud/sud_lib.o
 
 
 NW4R_O_FILES :=\

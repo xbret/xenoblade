@@ -1377,6 +1377,8 @@ func_8006BC1C:
 /* 8006BC24 000351E4  90 03 00 04 */	stw r0, 4(r3)
 /* 8006BC28 000351E8  4E 80 00 20 */	blr 
 
+#start of CfCamFollow?
+
 .global func_8006BC2C
 func_8006BC2C:
 /* 8006BC2C 000351EC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1521,6 +1523,8 @@ func_8006BC2C:
 /* 8006BE58 00035418  7C 08 03 A6 */	mtlr r0
 /* 8006BE5C 0003541C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8006BE60 00035420  4E 80 00 20 */	blr 
+
+#start of CfCam?
 
 .global func_8006BE64
 func_8006BE64:

@@ -36,6 +36,8 @@ func_80087588:
 /* 800875A0 00050B60  D0 03 00 48 */	stfs f0, 0x48(r3)
 /* 800875A4 00050B64  4E 80 00 20 */	blr 
 
+#start of CtrlEnemy?
+
 .global func_800875A8
 func_800875A8:
 /* 800875A8 00050B68  94 21 FF F0 */	stwu r1, -0x10(r1)

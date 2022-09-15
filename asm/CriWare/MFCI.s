@@ -4543,8 +4543,8 @@ lbl_803966A8:
 /* 803966B4 0035FC74  90 06 00 00 */	stw r0, 0(r6)
 /* 803966B8 0035FC78  4E 80 00 20 */	blr 
 
-.global func_803966BC
-func_803966BC:
+.global SJ_SearchTag
+SJ_SearchTag:
 /* 803966BC 0035FC7C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803966C0 0035FC80  7C 08 02 A6 */	mflr r0
 /* 803966C4 0035FC84  90 01 00 24 */	stw r0, 0x24(r1)

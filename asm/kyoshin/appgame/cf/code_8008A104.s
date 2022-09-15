@@ -10270,6 +10270,8 @@ lbl_80093684:
 /* 80093690 0005CC50  38 21 00 10 */	addi r1, r1, 0x10
 /* 80093694 0005CC54  4E 80 00 20 */	blr 
 
+#start of CtrlPc?
+
 .global func_80093698
 func_80093698:
 /* 80093698 0005CC58  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -13754,6 +13756,8 @@ lbl_80096884:
 /* 80096894 0005FE54  38 21 00 10 */	addi r1, r1, 0x10
 /* 80096898 0005FE58  4E 80 00 20 */	blr 
 
+#start of CtrlPad?
+
 .global func_8009689C
 func_8009689C:
 /* 8009689C 0005FE5C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -14307,6 +14311,8 @@ lbl_80096FE8:
 /* 80096FF8 000605B8  7C 08 03 A6 */	mtlr r0
 /* 80096FFC 000605BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80097000 000605C0  4E 80 00 20 */	blr 
+
+#CtrlPc
 
 .global func_80097004
 func_80097004:
@@ -16273,6 +16279,8 @@ func_80098BD0:
 /* 80098BD8 00062198  38 A5 B6 68 */	addi r5, r5, lbl_8052B668@l
 /* 80098BDC 0006219C  7C 85 01 2E */	stwx r4, r5, r0
 /* 80098BE0 000621A0  4E 80 00 20 */	blr 
+
+#start of CtrlRemote?
 
 .global func_80098BE4
 func_80098BE4:

@@ -15911,6 +15911,8 @@ func_800D10D4:
 /* 800D10D4 0009A694  38 63 FF 98 */	addi r3, r3, -104
 /* 800D10D8 0009A698  4B FF FF 9C */	b func_800D1074
 
+#start of CtrlAct?
+
 .global func_800D10DC
 func_800D10DC:
 /* 800D10DC 0009A69C  94 21 FF E0 */	stwu r1, -0x20(r1)

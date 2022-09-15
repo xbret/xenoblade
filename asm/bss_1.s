@@ -1757,11 +1757,11 @@ lbl_8061CE38:
 .global lbl_8061CE3C
 lbl_8061CE3C:
 	.skip 0xC
-.global lbl_8061CE48
-lbl_8061CE48:
+.global sfx_libwork
+sfx_libwork:
 	.skip 0x528
-.global lbl_8061D370
-lbl_8061D370:
+.global sfxa_work
+sfxa_work:
 	.skip 0x128
 .global lbl_8061D498
 lbl_8061D498:

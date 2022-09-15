@@ -12410,10 +12410,12 @@ lbl_8053486C:
 	.4byte func_801715A8
 	.4byte func_801716B8
 	.4byte func_800AFBA0
+
 	.4byte lbl_806641B0
 	.4byte 0xFFFFCC80
 	.4byte func_8014AA18
 	.4byte func_8014AB28
+	
 	.4byte lbl_806641B0
 	.4byte 0xFFFFC164
 	.4byte func_8003DC64

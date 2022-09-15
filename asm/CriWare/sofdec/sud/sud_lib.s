@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803D70B0
-func_803D70B0:
+.global SUD_Init
+SUD_Init:
 /* 803D70B0 003A0670  3C A0 80 62 */	lis r5, lbl_8061D708@ha
 /* 803D70B4 003A0674  80 65 D7 08 */	lwz r3, lbl_8061D708@l(r5)
 /* 803D70B8 003A0678  2C 03 00 01 */	cmpwi r3, 1
@@ -16,8 +16,8 @@ func_803D70B0:
 /* 803D70D4 003A0694  90 05 D7 08 */	stw r0, lbl_8061D708@l(r5)
 /* 803D70D8 003A0698  4E 80 00 20 */	blr 
 
-.global func_803D70DC
-func_803D70DC:
+.global SUD_AnalyTypeDivField
+SUD_AnalyTypeDivField:
 /* 803D70DC 003A069C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D70E0 003A06A0  7C 08 02 A6 */	mflr r0
 /* 803D70E4 003A06A4  2C 03 00 00 */	cmpwi r3, 0
@@ -43,8 +43,8 @@ lbl_803D7120:
 /* 803D7128 003A06E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D712C 003A06EC  4E 80 00 20 */	blr 
 
-.global func_803D7130
-func_803D7130:
+.global SUD_AnalyTypeCcs
+SUD_AnalyTypeCcs:
 /* 803D7130 003A06F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D7134 003A06F4  7C 08 02 A6 */	mflr r0
 /* 803D7138 003A06F8  2C 03 00 00 */	cmpwi r3, 0
@@ -70,8 +70,8 @@ lbl_803D7174:
 /* 803D717C 003A073C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D7180 003A0740  4E 80 00 20 */	blr 
 
-.global func_803D7184
-func_803D7184:
+.global SUD_SearchSudDat
+SUD_SearchSudDat:
 /* 803D7184 003A0744  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803D7188 003A0748  7C 08 02 A6 */	mflr r0
 /* 803D718C 003A074C  2C 03 00 00 */	cmpwi r3, 0
