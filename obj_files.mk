@@ -427,18 +427,21 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/wud/debug_msg.o
 
 CRIWARE_O_FILES :=\
-	$(BUILD_DIR)/asm/CriWare/ADXF.o \
-	$(BUILD_DIR)/asm/CriWare/ADXT.o \
-	$(BUILD_DIR)/asm/CriWare/AHX.o \
-	$(BUILD_DIR)/asm/CriWare/LSC.o \
-	$(BUILD_DIR)/asm/CriWare/MFCI.o \
-	$(BUILD_DIR)/asm/CriWare/CRI_std.o \
-	$(BUILD_DIR)/asm/CriWare/CFT.o \
-	$(BUILD_DIR)/asm/CriWare/MWSFD.o \
-	$(BUILD_DIR)/asm/CriWare/MPV.o \
-	$(BUILD_DIR)/asm/CriWare/DCT.o \
-	$(BUILD_DIR)/asm/CriWare/MPS.o \
-	$(BUILD_DIR)/asm/CriWare/SFD.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxf/ADXF.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/ADXT.o \
+	$(BUILD_DIR)/asm/CriWare/adx/ahx/AHX.o \
+	$(BUILD_DIR)/asm/CriWare/adx/lsc/LSC.o \
+	$(BUILD_DIR)/asm/CriWare/adx/mfci/MFCI.o \
+	$(BUILD_DIR)/asm/CriWare/adx/sj/sj.o \
+	$(BUILD_DIR)/asm/CriWare/adx/svm/svm.o \
+	$(BUILD_DIR)/asm/CriWare/adx/wiirna/wiirna.o \
+	$(BUILD_DIR)/asm/CriWare/cri_crw_std.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/cft/CFT.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/MWSFD.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/MPV.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/dct/DCT.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mps/MPS.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/SFD.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_lib.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_alp.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_zmv.o \

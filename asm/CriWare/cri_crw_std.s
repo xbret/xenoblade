@@ -32,8 +32,8 @@ func_8039B438:
 /* 8039B43C 003649FC  7C C5 33 78 */	mr r5, r6
 /* 8039B440 00364A00  4B F2 73 A8 */	b strncat
 
-.global func_8039B444
-func_8039B444:
+.global criCrw_Sprintf
+criCrw_Sprintf:
 /* 8039B444 00364A04  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 8039B448 00364A08  7C 08 02 A6 */	mflr r0
 /* 8039B44C 00364A0C  90 01 00 84 */	stw r0, 0x84(r1)

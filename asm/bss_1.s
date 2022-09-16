@@ -1340,11 +1340,11 @@ lbl_805EB380:
 .global lbl_805EFA80
 lbl_805EFA80:
 	.skip 0x10
-.global lbl_805EFA90
-lbl_805EFA90:
+.global mfci_err_func
+mfci_err_func:
 	.skip 0x4
-.global lbl_805EFA94
-lbl_805EFA94:
+.global mfci_err_obj
+mfci_err_obj:
 	.skip 0x9F4
 .global lbl_805F0488
 lbl_805F0488:

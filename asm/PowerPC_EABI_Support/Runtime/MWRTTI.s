@@ -168,12 +168,12 @@ lbl_802B9F98:
 /* 802B9FA0 00283560  3C 80 80 54 */	lis r4, lbl_8053F040@ha
 /* 802B9FA4 00283564  3C 60 80 51 */	lis r3, lbl_8050CE30@ha
 /* 802B9FA8 00283568  38 84 F0 40 */	addi r4, r4, lbl_8053F040@l
-/* 802B9FAC 0028356C  3C A0 80 2C */	lis r5, std8bad_castFv$7__dt@ha
+/* 802B9FAC 0028356C  3C A0 80 2C */	lis r5, __dt__Q23std8bad_castFv@ha
 /* 802B9FB0 00283570  38 63 CE 30 */	addi r3, r3, lbl_8050CE30@l
 /* 802B9FB4 00283574  90 81 00 08 */	stw r4, 8(r1)
 /* 802B9FB8 00283578  38 63 00 27 */	addi r3, r3, 0x27
 /* 802B9FBC 0028357C  38 81 00 08 */	addi r4, r1, 8
-/* 802B9FC0 00283580  38 A5 9F E0 */	addi r5, r5, std8bad_castFv$7__dt@l
+/* 802B9FC0 00283580  38 A5 9F E0 */	addi r5, r5, __dt__Q23std8bad_castFv@l
 /* 802B9FC4 00283584  48 00 1B F9 */	bl __throw
 lbl_802B9FC8:
 /* 802B9FC8 00283588  38 60 00 00 */	li r3, 0
@@ -184,8 +184,8 @@ lbl_802B9FCC:
 /* 802B9FD8 00283598  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B9FDC 0028359C  4E 80 00 20 */	blr
 
-.global std8bad_castFv$7__dt
-std8bad_castFv$7__dt:
+.global __dt__Q23std8bad_castFv
+__dt__Q23std8bad_castFv:
 /* 802B9FE0 002835A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B9FE4 002835A4  7C 08 02 A6 */	mflr r0
 /* 802B9FE8 002835A8  2C 03 00 00 */	cmpwi r3, 0
@@ -204,8 +204,8 @@ lbl_802BA008:
 /* 802BA018 002835D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BA01C 002835DC  4E 80 00 20 */	blr 
 
-.global func_802BA020
-func_802BA020:
+.global what__Q23std8bad_castCFv
+what__Q23std8bad_castCFv:
 /* 802BA020 002835E0  3C 60 80 54 */	lis r3, lbl_8053F05C@ha
 /* 802BA024 002835E4  38 63 F0 5C */	addi r3, r3, lbl_8053F05C@l
 /* 802BA028 002835E8  4E 80 00 20 */	blr 

@@ -698,7 +698,7 @@ lbl_802CF694:
 /* 802CF750 00298D10  80 02 00 00 */	lwz r0, 0(r2)
 /* 802CF754 00298D14  80 22 00 04 */	lwz r1, 4(r2)
 /* 802CF758 00298D18  80 42 00 08 */	lwz r2, 8(r2)
-/* 802CF75C 00298D1C  48 00 00 A0 */	b func_802CF7FC
+/* 802CF75C 00298D1C  48 00 00 A0 */	b TRKPostInterruptEvent
 lbl_802CF760:
 /* 802CF760 00298D20  3C 40 80 53 */	lis r2, lbl_8053FFA8@h
 /* 802CF764 00298D24  60 42 FF A8 */	ori r2, r2, lbl_8053FFA8@l
@@ -742,8 +742,8 @@ lbl_802CF7D8:
 /* 802CF7F4 00298DB4  7C 72 42 A6 */	mfspr r3, 0x112
 /* 802CF7F8 00298DB8  4C 00 00 64 */	rfi
 
-.global func_802CF7FC
-func_802CF7FC:
+.global TRKPostInterruptEvent
+TRKPostInterruptEvent:
 /* 802CF7FC 00298DBC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CF800 00298DC0  7C 08 02 A6 */	mflr r0
 /* 802CF804 00298DC4  3C 60 80 58 */	lis r3, lbl_8057D350@ha
@@ -829,7 +829,7 @@ TRKSwapAndGo:
 /* 802CF920 00298EE0  60 42 D3 50 */	ori r2, r2, lbl_8057D350@l
 /* 802CF924 00298EE4  38 60 00 01 */	li r3, 1
 /* 802CF928 00298EE8  98 62 00 9C */	stb r3, 0x9c(r2)
-/* 802CF92C 00298EEC  48 00 00 4C */	b lbl_802CF978
+/* 802CF92C 00298EEC  48 00 00 4C */	b TRKInterruptHandlerEnableInterrupts
 lbl_802CF930:
 /* 802CF930 00298EF0  3C 40 80 53 */	lis r2, lbl_8053FFA8@h
 /* 802CF934 00298EF4  60 42 FF A8 */	ori r2, r2, lbl_8053FFA8@l
@@ -848,8 +848,10 @@ lbl_802CF930:
 /* 802CF968 00298F28  80 02 00 00 */	lwz r0, 0(r2)
 /* 802CF96C 00298F2C  80 22 00 04 */	lwz r1, 4(r2)
 /* 802CF970 00298F30  80 42 00 08 */	lwz r2, 8(r2)
-/* 802CF974 00298F34  4C 00 00 64 */	rfi 
-lbl_802CF978:
+/* 802CF974 00298F34  4C 00 00 64 */	rfi
+
+.global TRKInterruptHandlerEnableInterrupts
+TRKInterruptHandlerEnableInterrupts:
 /* 802CF978 00298F38  3C 40 80 57 */	lis r2, lbl_8057D350@h
 /* 802CF97C 00298F3C  60 42 D3 50 */	ori r2, r2, lbl_8057D350@l
 /* 802CF980 00298F40  80 02 00 8C */	lwz r0, 0x8c(r2)
@@ -870,10 +872,10 @@ lbl_802CF978:
 /* 802CF9BC 00298F7C  80 02 00 00 */	lwz r0, 0(r2)
 /* 802CF9C0 00298F80  80 22 00 04 */	lwz r1, 4(r2)
 /* 802CF9C4 00298F84  80 42 00 08 */	lwz r2, 8(r2)
-/* 802CF9C8 00298F88  4B FF FE 34 */	b func_802CF7FC
+/* 802CF9C8 00298F88  4B FF FE 34 */	b TRKPostInterruptEvent
 
-.global TRKPostInterruptEvent
-TRKPostInterruptEvent:
+.global TRKTargetInterrupt
+TRKTargetInterrupt:
 /* 802CF9CC 00298F8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CF9D0 00298F90  7C 08 02 A6 */	mflr r0
 /* 802CF9D4 00298F94  90 01 00 14 */	stw r0, 0x14(r1)

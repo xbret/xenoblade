@@ -26018,8 +26018,8 @@ lbl_8053F040:
 	# ROM: 0x53B140
 	.4byte lbl_80665868
 	.4byte 0
-	.4byte std8bad_castFv$7__dt
-	.4byte func_802BA020
+	.4byte __dt__Q23std8bad_castFv
+	.4byte what__Q23std8bad_castCFv
 
 .global lbl_8053F050
 lbl_8053F050:

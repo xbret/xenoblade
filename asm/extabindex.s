@@ -19118,7 +19118,7 @@ lbl_80021020:
 	.4byte __dynamic_cast
 	.4byte 0x0000025C
 	.4byte lbl_8001BF30
-	.4byte std8bad_castFv$7__dt
+	.4byte __dt__Q23std8bad_castFv
 	.4byte 0x00000040
 	.4byte lbl_8001BF38
 	.4byte MWExceptionInfo$7ExPPC_FindExceptionRecord

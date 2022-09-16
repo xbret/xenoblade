@@ -36710,14 +36710,14 @@ lbl_80569208:
 lbl_80569270:
 	# ROM: 0x565370
 	.4byte func_803928A4
-	.4byte func_803928A8
+	.4byte mfCiEntryErrFunc
 	.4byte func_803928BC
 	.4byte 0
-	.4byte func_8039298C
-	.4byte func_80392B90
-	.4byte func_80392C2C
-	.4byte func_80392D1C
-	.4byte func_80392D7C
+	.4byte mfCiOpen
+	.4byte mfCiClose
+	.4byte mfCiSeek
+	.4byte mfCiTell
+	.4byte mfCiReqRd
 	.4byte 0
 	.4byte func_80393014
 	.4byte func_80393088
@@ -36733,7 +36733,7 @@ lbl_80569270:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte func_80393224
+	.4byte mfCiOptFn1
 	.4byte 0
 
 
