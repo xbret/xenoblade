@@ -36706,8 +36706,8 @@ lbl_80569208:
 	.4byte 0
 
 
-.global lbl_80569270
-lbl_80569270:
+.global mfci_vtbl
+mfci_vtbl:
 	# ROM: 0x565370
 	.4byte func_803928A4
 	.4byte mfCiEntryErrFunc
@@ -36719,11 +36719,11 @@ lbl_80569270:
 	.4byte mfCiTell
 	.4byte mfCiReqRd
 	.4byte 0
-	.4byte func_80393014
-	.4byte func_80393088
-	.4byte func_803930EC
-	.4byte func_8039314C
-	.4byte func_803931C4
+	.4byte mfCiStopTr
+	.4byte mfCiGetStat
+	.4byte mfCiGetSctLen
+	.4byte mfCiSetSctLen
+	.4byte mfCiGetNumTr
 	.4byte 0
 	.4byte 0
 	.4byte 0

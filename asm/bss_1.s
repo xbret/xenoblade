@@ -1085,8 +1085,9 @@ lbl_805E33E8:
 .global lbl_805E3408
 lbl_805E3408:
 	.skip 0x20
-.global lbl_805E3428
-lbl_805E3428:
+#rename to cri_verstr_ptr after splitting
+.global cri_adxf_verstr_ptr
+cri_adxf_verstr_ptr:
 	.skip 0x8
 .global lbl_805E3430
 lbl_805E3430:
@@ -1097,11 +1098,11 @@ lbl_805E3770:
 .global lbl_805E3B70
 lbl_805E3B70:
 	.skip 0x100
-.global lbl_805E3C70
-lbl_805E3C70:
+.global adxf_cmd_ncall
+adxf_cmd_ncall:
 	.skip 0x20
-.global lbl_805E3C90
-lbl_805E3C90:
+.global adxf_hstry_no
+adxf_hstry_no:
 	.skip 0x4
 .global lbl_805E3C94
 lbl_805E3C94:
@@ -1109,8 +1110,8 @@ lbl_805E3C94:
 .global lbl_805E3C98
 lbl_805E3C98:
 	.skip 0x4
-.global lbl_805E3C9C
-lbl_805E3C9C:
+.global adxf_ldptnw_hn
+adxf_ldptnw_hn:
 	.skip 0x4
 .global lbl_805E3CA0
 lbl_805E3CA0:
@@ -1118,11 +1119,11 @@ lbl_805E3CA0:
 .global lbl_805E3CA4
 lbl_805E3CA4:
 	.skip 0x4
-.global lbl_805E3CA8
-lbl_805E3CA8:
+.global adxf_ldpt_buf
+adxf_ldpt_buf:
 	.skip 0x4
-.global lbl_805E3CAC
-lbl_805E3CAC:
+.global adxf_ldpt_rdsct
+adxf_ldpt_rdsct:
 	.skip 0x4
 .global lbl_805E3CB0
 lbl_805E3CB0:
@@ -1331,11 +1332,11 @@ lbl_805EB270:
 .global lbl_805EB274
 lbl_805EB274:
 	.skip 0x104
-.global lbl_805EB378
-lbl_805EB378:
+.global lsc_init_cnt
+lsc_init_cnt:
 	.skip 0x8
-.global lbl_805EB380
-lbl_805EB380:
+.global lsc_obj
+lsc_obj:
 	.skip 0x4700
 .global lbl_805EFA80
 lbl_805EFA80:
@@ -1652,17 +1653,19 @@ lbl_80608188:
 .global lbl_80608288
 lbl_80608288:
 	.skip 0x2000
-.global lbl_8060A288
-lbl_8060A288:
+.global cri_verstr_ptr
+cri_verstr_ptr:
 	.skip 0x8
-.global lbl_8060A290
-lbl_8060A290:
+#actually cri_verstr_ptr, only named this to avoid conflicts for now
+#change later
+.global cri_mps_verstr_ptr
+cri_mps_verstr_ptr:
 	.skip 0x4
-.global lbl_8060A294
-lbl_8060A294:
+.global MPSLIB_libwork
+MPSLIB_libwork:
 	.skip 0x4
-.global lbl_8060A298
-lbl_8060A298:
+.global mpslib_hn_last
+mpslib_hn_last:
 	.skip 0x8
 .global lbl_8060A2A0
 lbl_8060A2A0:

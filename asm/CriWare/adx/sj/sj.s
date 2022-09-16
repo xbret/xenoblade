@@ -1089,8 +1089,8 @@ lbl_80394390:
 /* 803943A0 0035D960  38 21 00 10 */	addi r1, r1, 0x10
 /* 803943A4 0035D964  4E 80 00 20 */	blr 
 
-.global func_803943A8
-func_803943A8:
+.global SJRBF_Create
+SJRBF_Create:
 /* 803943A8 0035D968  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803943AC 0035D96C  7C 08 02 A6 */	mflr r0
 /* 803943B0 0035D970  90 01 00 24 */	stw r0, 0x24(r1)

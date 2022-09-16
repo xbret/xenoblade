@@ -5849,8 +5849,8 @@ func_8039179C:
 /* 803917A0 0035AD60  90 C3 B1 68 */	stw r6, lbl_805EB168@l(r3)
 /* 803917A4 0035AD64  4E 80 00 20 */	blr 
 
-.global func_803917A8
-func_803917A8:
+.global LSC_EntryErrFunc
+LSC_EntryErrFunc:
 /* 803917A8 0035AD68  2C 03 00 00 */	cmpwi r3, 0
 /* 803917AC 0035AD6C  40 82 00 1C */	bne lbl_803917C8
 /* 803917B0 0035AD70  38 00 00 00 */	li r0, 0
@@ -5866,8 +5866,8 @@ lbl_803917C8:
 /* 803917D4 0035AD94  90 85 B2 74 */	stw r4, lbl_805EB274@l(r5)
 /* 803917D8 0035AD98  4E 80 00 20 */	blr 
 
-.global func_803917DC
-func_803917DC:
+.global LSC_CallErrFunc_
+LSC_CallErrFunc_:
 /* 803917DC 0035AD9C  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803917E0 0035ADA0  7C 08 02 A6 */	mflr r0
 /* 803917E4 0035ADA4  90 01 00 94 */	stw r0, 0x94(r1)

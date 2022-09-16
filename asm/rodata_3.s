@@ -790,8 +790,8 @@ lbl_80518E08:
 	.4byte 0xFF000000
 
 
-.global lbl_80518E20
-lbl_80518E20:
+.global adxf_build
+adxf_build:
 	.asciz "\nADXF/WII Ver.7.71 Build:Nov 13 2008 10:52:48\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
@@ -1799,8 +1799,8 @@ lbl_8051BA28:
 	.balign 4
 
 
-.global lbl_8051BA58
-lbl_8051BA58:
+.global lsc_build
+lsc_build:
 	# ROM: 0x517B58
 	.4byte lbl_8051BA28
 	.4byte 0
@@ -1846,8 +1846,8 @@ lbl_8051BE50:
 	.balign 4
 
 
-.global lbl_8051BE80
-lbl_8051BE80:
+.global mfci_build
+mfci_build:
 	# ROM: 0x517F80
 	.4byte lbl_8051BE50
 
@@ -3297,15 +3297,15 @@ lbl_8051F928:
 	.4byte 0
 
 
-.global lbl_8051FE30
-lbl_8051FE30:
+.global DCT_version_str
+DCT_version_str:
 	.asciz "\nCRI DCT/WII Ver.2.034 Build:Nov 13 2008 18:21:26\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
 
 
-.global lbl_8051FE88
-lbl_8051FE88:
+.global MPSLIB_version_str
+MPSLIB_version_str:
 	.asciz "\nCRI MPS/WII Ver.2.064 Build:Nov 13 2008 18:21:29\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4

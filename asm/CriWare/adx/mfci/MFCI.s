@@ -4,10 +4,10 @@
 
 .global mfCiGetInterface
 mfCiGetInterface:
-/* 8039281C 0035BDDC  3C 80 80 52 */	lis r4, lbl_8051BE80@ha
-/* 80392820 0035BDE0  3C 60 80 57 */	lis r3, lbl_80569270@ha
-/* 80392824 0035BDE4  80 04 BE 80 */	lwz r0, lbl_8051BE80@l(r4)
-/* 80392828 0035BDE8  38 63 92 70 */	addi r3, r3, lbl_80569270@l
+/* 8039281C 0035BDDC  3C 80 80 52 */	lis r4, mfci_build@ha
+/* 80392820 0035BDE0  3C 60 80 57 */	lis r3, mfci_vtbl@ha
+/* 80392824 0035BDE4  80 04 BE 80 */	lwz r0, mfci_build@l(r4)
+/* 80392828 0035BDE8  38 63 92 70 */	addi r3, r3, mfci_vtbl@l
 /* 8039282C 0035BDEC  4E 80 00 20 */	blr 
 
 .global mfci_str_to_uint_ptr
@@ -81,7 +81,7 @@ func_803928BC:
 /* 803928F8 0035BEB8  38 A5 BE 84 */	addi r5, r5, lbl_8051BE84@l
 /* 803928FC 0035BEBC  38 E0 00 12 */	li r7, 0x12
 /* 80392900 0035BEC0  4C C6 31 82 */	crclr 6
-/* 80392904 0035BEC4  48 00 8B 41 */	bl criCrw_Sprintf #not in criware sdk 1.0 code
+/* 80392904 0035BEC4  48 00 8B 41 */	bl criCrw_Sprintf
 /* 80392908 0035BEC8  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8039290C 0035BECC  2C 0C 00 00 */	cmpwi r12, 0
 /* 80392910 0035BED0  41 82 00 18 */	beq lbl_80392928
@@ -594,8 +594,8 @@ lbl_80392FF4:
 /* 8039300C 0035C5CC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80393010 0035C5D0  4E 80 00 20 */	blr 
 
-.global func_80393014
-func_80393014:
+.global mfCiStopTr
+mfCiStopTr:
 /* 80393014 0035C5D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80393018 0035C5D8  7C 08 02 A6 */	mflr r0
 /* 8039301C 0035C5DC  2C 03 00 00 */	cmpwi r3, 0
@@ -628,8 +628,8 @@ lbl_80393074:
 /* 80393080 0035C640  38 21 00 10 */	addi r1, r1, 0x10
 /* 80393084 0035C644  4E 80 00 20 */	blr 
 
-.global func_80393088
-func_80393088:
+.global mfCiGetStat
+mfCiGetStat:
 /* 80393088 0035C648  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039308C 0035C64C  7C 08 02 A6 */	mflr r0
 /* 80393090 0035C650  2C 03 00 00 */	cmpwi r3, 0
@@ -659,8 +659,8 @@ lbl_803930DC:
 /* 803930E4 0035C6A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803930E8 0035C6A8  4E 80 00 20 */	blr 
 
-.global func_803930EC
-func_803930EC:
+.global mfCiGetSctLen
+mfCiGetSctLen:
 /* 803930EC 0035C6AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803930F0 0035C6B0  7C 08 02 A6 */	mflr r0
 /* 803930F4 0035C6B4  2C 03 00 00 */	cmpwi r3, 0
@@ -689,8 +689,8 @@ lbl_8039313C:
 /* 80393144 0035C704  38 21 00 10 */	addi r1, r1, 0x10
 /* 80393148 0035C708  4E 80 00 20 */	blr 
 
-.global func_8039314C
-func_8039314C:
+.global mfCiSetSctLen
+mfCiSetSctLen:
 /* 8039314C 0035C70C  2C 03 00 00 */	cmpwi r3, 0
 /* 80393150 0035C710  40 82 00 38 */	bne lbl_80393188
 /* 80393154 0035C714  3C 60 80 5F */	lis r3, mfci_err_func@ha
@@ -723,8 +723,8 @@ lbl_80393188:
 /* 803931BC 0035C77C  90 03 00 14 */	stw r0, 0x14(r3)
 /* 803931C0 0035C780  4E 80 00 20 */	blr 
 
-.global func_803931C4
-func_803931C4:
+.global mfCiGetNumTr
+mfCiGetNumTr:
 /* 803931C4 0035C784  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803931C8 0035C788  7C 08 02 A6 */	mflr r0
 /* 803931CC 0035C78C  2C 03 00 00 */	cmpwi r3, 0
