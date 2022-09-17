@@ -1525,7 +1525,8 @@ lbl_8030BE5C:
 /* 8030BE68 002D5428  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 8030BE6C 002D542C  7C 08 03 A6 */	mtlr r0
 /* 8030BE70 002D5430  38 21 00 20 */	addi r1, r1, 0x20
-/* 8030BE74 002D5434  4E 80 00 20 */	blr 
+/* 8030BE74 002D5434  4E 80 00 20 */	blr
+
 .balign 16, 0
 cbForStateReadingTOC:
 /* 8030BE80 002D5440  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1951,7 +1952,8 @@ lbl_8030C47C:
 /* 8030C48C 002D5A4C  83 81 00 10 */	lwz r28, 0x10(r1)
 /* 8030C490 002D5A50  7C 08 03 A6 */	mtlr r0
 /* 8030C494 002D5A54  38 21 00 20 */	addi r1, r1, 0x20
-/* 8030C498 002D5A58  4E 80 00 20 */	blr 
+/* 8030C498 002D5A58  4E 80 00 20 */	blr
+
 .balign 16, 0
 cbForStateOpenPartition:
 /* 8030C4A0 002D5A60  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2058,7 +2060,8 @@ lbl_8030C610:
 /* 8030C618 002D5BD8  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8030C61C 002D5BDC  7C 08 03 A6 */	mtlr r0
 /* 8030C620 002D5BE0  38 21 00 10 */	addi r1, r1, 0x10
-/* 8030C624 002D5BE4  4E 80 00 20 */	blr 
+/* 8030C624 002D5BE4  4E 80 00 20 */	blr
+
 .balign 16, 0
 cbForStateOpenPartition2:
 /* 8030C630 002D5BF0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3074,7 +3077,8 @@ lbl_8030D474:
 /* 8030D478 002D6A38  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8030D47C 002D6A3C  7C 08 03 A6 */	mtlr r0
 /* 8030D480 002D6A40  38 21 00 10 */	addi r1, r1, 0x10
-/* 8030D484 002D6A44  4E 80 00 20 */	blr 
+/* 8030D484 002D6A44  4E 80 00 20 */	blr
+
 .balign 16, 0
 cbForPrepareCoverRegister:
 /* 8030D490 002D6A50  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3184,7 +3188,8 @@ lbl_8030D604:
 /* 8030D608 002D6BC8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8030D60C 002D6BCC  7C 08 03 A6 */	mtlr r0
 /* 8030D610 002D6BD0  38 21 00 10 */	addi r1, r1, 0x10
-/* 8030D614 002D6BD4  4E 80 00 20 */	blr 
+/* 8030D614 002D6BD4  4E 80 00 20 */	blr
+
 .balign 16, 0
 CoverAlarmHandler:
 /* 8030D620 002D6BE0  80 0D B6 94 */	lwz r0, lbl_80667814@sda21(r13)

@@ -821,5 +821,4 @@ C_MTXLightOrtho:
 /* 8034DDD8 00317398  D0 43 00 0C */	stfs f2, 0xc(r3)
 /* 8034DDDC 0031739C  D0 23 00 14 */	stfs f1, 0x14(r3)
 /* 8034DDE0 003173A0  D0 03 00 1C */	stfs f0, 0x1c(r3)
-/* 8034DDE4 003173A4  4E 80 00 20 */	blr 
-.balign 16, 0
+/* 8034DDE4 003173A4  4E 80 00 20 */	blr

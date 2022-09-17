@@ -30749,8 +30749,8 @@ lbl_805636F4:
 	.balign 4
 
 
-.global lbl_80563708
-lbl_80563708:
+.global adxm_framework
+adxm_framework:
 	# ROM: 0x55F808
 	.4byte 0xFFFFFFFF
 	.4byte 0

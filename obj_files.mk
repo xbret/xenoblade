@@ -431,7 +431,26 @@ CRIWARE_O_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/adx/adxf/adx_fs.o \
 	$(BUILD_DIR)/asm/CriWare/adx/adxf/adx_fcch.o \
 	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_fsvr.o \
-	$(BUILD_DIR)/asm/CriWare/adx/adxt/ADXT.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_inis.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_lsc.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_mng.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_sfa.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_sjd.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_stmc.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_tlk2.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_tlk.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_tsvr.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_xpnd.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_amp.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_bahx.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_baif.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_bsc.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_bwav.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/code_80389300.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_crs.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_dcd5.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_dcd.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_errs.o \
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/AHX.o \
 	$(BUILD_DIR)/asm/CriWare/adx/lsc/lsc_ini.o \
 	$(BUILD_DIR)/asm/CriWare/adx/lsc/lsc_svr.o \

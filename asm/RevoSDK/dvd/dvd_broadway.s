@@ -2769,5 +2769,4 @@ lbl_80312C80:
 .global __DVDLowTestAlarm
 __DVDLowTestAlarm:
 /* 80312CA0 002DC260  38 60 00 00 */	li r3, 0
-/* 80312CA4 002DC264  4E 80 00 20 */	blr 
-.balign 16, 0
+/* 80312CA4 002DC264  4E 80 00 20 */	blr

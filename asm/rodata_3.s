@@ -850,8 +850,8 @@ lbl_80518E78:
 	.4byte 0
 
 
-.global lbl_80519650
-lbl_80519650:
+.global adxt_build
+adxt_build:
 	.asciz "\nADXT/WII Ver.10.67 Build:Nov 13 2008 10:52:50\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.4byte 0

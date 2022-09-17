@@ -3909,7 +3909,8 @@ lbl_8036C4E0:
 /* 8036C4E8 00335AA8  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8036C4EC 00335AAC  7C 08 03 A6 */	mtlr r0
 /* 8036C4F0 00335AB0  38 21 00 20 */	addi r1, r1, 0x20
-/* 8036C4F4 00335AB4  4E 80 00 20 */	blr 
+/* 8036C4F4 00335AB4  4E 80 00 20 */	blr
+
 .balign 16, 0
 __infoCallback:
 /* 8036C500 00335AC0  94 21 FF F0 */	stwu r1, -0x10(r1)

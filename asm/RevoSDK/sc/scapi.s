@@ -388,4 +388,3 @@ lbl_803613A0:
 SCSetWpadSpeakerVolume:
 /* 803613C0 0032A980  38 80 00 1F */	li r4, 0x1f
 /* 803613C4 0032A984  4B FF F4 7C */	b SCReplaceU8Item
-.balign 16, 0

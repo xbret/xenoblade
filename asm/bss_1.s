@@ -1085,9 +1085,8 @@ lbl_805E33E8:
 .global lbl_805E3408
 lbl_805E3408:
 	.skip 0x20
-#rename to cri_verstr_ptr after splitting
-.global cri_adxf_verstr_ptr
-cri_adxf_verstr_ptr:
+.global lbl_805E3428
+lbl_805E3428:
 	.skip 0x8
 .global lbl_805E3430
 lbl_805E3430:
@@ -1158,11 +1157,11 @@ lbl_805E69D4:
 .global lbl_805E69D8
 lbl_805E69D8:
 	.skip 0xB40
-.global lbl_805E7518
-lbl_805E7518:
+.global adxstm_init_count
+adxstm_init_count:
 	.skip 0x4
-.global lbl_805E751C
-lbl_805E751C:
+.global adxstmf_rtim_ofst
+adxstmf_rtim_ofst:
 	.skip 0x4
 .global lbl_805E7520
 lbl_805E7520:
@@ -1203,44 +1202,44 @@ lbl_805E85F0:
 .global lbl_805E85F4
 lbl_805E85F4:
 	.skip 0x4
-.global lbl_805E85F8
-lbl_805E85F8:
+.global adxt_dbg_ndt
+adxt_dbg_ndt:
 	.skip 0x4
-.global lbl_805E85FC
-lbl_805E85FC:
+.global adxt_dbg_rna_ndata
+adxt_dbg_rna_ndata:
 	.skip 0x4
 .global lbl_805E8600
 lbl_805E8600:
 	.skip 0x3C0
-.global lbl_805E89C0
-lbl_805E89C0:
+.global adxpd_internal_error
+adxpd_internal_error:
 	.skip 0x8
-.global lbl_805E89C8
-lbl_805E89C8:
+.global ahxsetsjifunc
+ahxsetsjifunc:
 	.skip 0x4
-.global lbl_805E89CC
-lbl_805E89CC:
+.global ahxsetdecsmplfunc
+ahxsetdecsmplfunc:
 	.skip 0x4
-.global lbl_805E89D0
-lbl_805E89D0:
+.global ahxtermsupplyfunc
+ahxtermsupplyfunc:
 	.skip 0x4
-.global lbl_805E89D4
-lbl_805E89D4:
+.global ahxexecfunc
+ahxexecfunc:
 	.skip 0x4
-.global lbl_805E89D8
-lbl_805E89D8:
+.global skg_init_count
+skg_init_count:
 	.skip 0x4
-.global lbl_805E89DC
-lbl_805E89DC:
+.global ahxsetextfunc
+ahxsetextfunc:
 	.skip 0x4
-.global lbl_805E89E0
-lbl_805E89E0:
+.global pl2encodefunc
+pl2encodefunc:
 	.skip 0x4
-.global lbl_805E89E4
-lbl_805E89E4:
+.global pl2resetfunc
+pl2resetfunc:
 	.skip 0xC
-.global lbl_805E89F0
-lbl_805E89F0:
+.global adxb_dec_err_mode
+adxb_dec_err_mode:
 	.skip 0x8
 .global lbl_805E89F8
 lbl_805E89F8:

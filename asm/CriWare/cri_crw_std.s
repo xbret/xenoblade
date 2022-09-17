@@ -10,24 +10,26 @@ func_8039B408:
 /* 8039B414 003649D4  90 64 13 60 */	stw r3, lbl_80601360@l(r4)
 /* 8039B418 003649D8  4E 80 00 20 */	blr 
 
-.global func_8039B41C
-func_8039B41C:
+#the names of the 4 functions below are guesses
+
+.global criCrw_Strcpy
+criCrw_Strcpy:
 /* 8039B41C 003649DC  7C A4 2B 78 */	mr r4, r5
 /* 8039B420 003649E0  4B F2 72 98 */	b strcpy
 
-.global func_8039B424
-func_8039B424:
+.global criCrw_Strncpy
+criCrw_Strncpy:
 /* 8039B424 003649E4  7C A4 2B 78 */	mr r4, r5
 /* 8039B428 003649E8  7C C5 33 78 */	mr r5, r6
 /* 8039B42C 003649EC  4B F2 73 4C */	b strncpy
 
-.global func_8039B430
-func_8039B430:
+.global criCrw_Strcat
+criCrw_Strcat:
 /* 8039B430 003649F0  7C A4 2B 78 */	mr r4, r5
 /* 8039B434 003649F4  4B F2 73 88 */	b strcat
 
-.global func_8039B438
-func_8039B438:
+.global criCrw_Strncat
+criCrw_Strncat:
 /* 8039B438 003649F8  7C A4 2B 78 */	mr r4, r5
 /* 8039B43C 003649FC  7C C5 33 78 */	mr r5, r6
 /* 8039B440 00364A00  4B F2 73 A8 */	b strncat
