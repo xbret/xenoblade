@@ -12,8 +12,8 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/sdata2_1.o \
 	$(BUILD_DIR)/asm/bss_1.o \
 	$(BUILD_DIR)/asm/sbss_1.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80069710.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8006A960.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfTaskMain.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8006A82C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80074F4C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8007C0F8.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8008753C.o \

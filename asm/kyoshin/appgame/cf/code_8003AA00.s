@@ -1918,8 +1918,8 @@ func_8003C3D0:
 /* 8003C3F0 000059B0  7F E4 FB 78 */	mr r4, r31
 /* 8003C3F4 000059B4  48 14 A0 E9 */	bl func_801864DC
 /* 8003C3F8 000059B8  38 80 00 00 */	li r4, 0
-/* 8003C3FC 000059BC  38 AD 80 30 */	addi r5, r13, lbl_806641B0@sda21
-/* 8003C400 000059C0  38 CD 80 70 */	addi r6, r13, lbl_806641F0@sda21
+/* 8003C3FC 000059BC  38 AD 80 30 */	addi r5, r13, cf_CfObjectActor_RTTI@sda21
+/* 8003C400 000059C0  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
 /* 8003C404 000059C4  38 E0 00 00 */	li r7, 0
 /* 8003C408 000059C8  48 27 D9 7D */	bl __dynamic_cast
 /* 8003C40C 000059CC  2C 03 00 00 */	cmpwi r3, 0
@@ -2530,8 +2530,8 @@ func_8003CC0C:
 /* 8003CC40 00006200  7F C4 F3 78 */	mr r4, r30
 /* 8003CC44 00006204  48 14 98 99 */	bl func_801864DC
 /* 8003CC48 00006208  38 80 00 00 */	li r4, 0
-/* 8003CC4C 0000620C  38 AD 80 58 */	addi r5, r13, lbl_806641D8@sda21
-/* 8003CC50 00006210  38 CD 80 70 */	addi r6, r13, lbl_806641F0@sda21
+/* 8003CC4C 0000620C  38 AD 80 58 */	addi r5, r13, cf_CfObjectMove_RTTI@sda21
+/* 8003CC50 00006210  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
 /* 8003CC54 00006214  38 E0 00 00 */	li r7, 0
 /* 8003CC58 00006218  48 27 D1 2D */	bl __dynamic_cast
 /* 8003CC5C 0000621C  2C 03 00 00 */	cmpwi r3, 0
@@ -4035,8 +4035,8 @@ lbl_8003E140:
 /* 8003E160 00007720  48 14 83 7D */	bl func_801864DC
 /* 8003E164 00007724  7C 7F 1B 78 */	mr r31, r3
 /* 8003E168 00007728  38 80 00 00 */	li r4, 0
-/* 8003E16C 0000772C  38 AD 80 68 */	addi r5, r13, lbl_806641E8@sda21
-/* 8003E170 00007730  38 CD 80 70 */	addi r6, r13, lbl_806641F0@sda21
+/* 8003E16C 0000772C  38 AD 80 68 */	addi r5, r13, cf_CfObjectModel_RTTI@sda21
+/* 8003E170 00007730  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
 /* 8003E174 00007734  38 E0 00 00 */	li r7, 0
 /* 8003E178 00007738  48 27 BC 0D */	bl __dynamic_cast
 /* 8003E17C 0000773C  2C 03 00 00 */	cmpwi r3, 0
@@ -4588,8 +4588,8 @@ lbl_8003E900:
 /* 8003E904 00007EC4  7F C4 F3 78 */	mr r4, r30
 /* 8003E908 00007EC8  48 14 7B D5 */	bl func_801864DC
 /* 8003E90C 00007ECC  38 80 00 00 */	li r4, 0
-/* 8003E910 00007ED0  38 AD 80 30 */	addi r5, r13, lbl_806641B0@sda21
-/* 8003E914 00007ED4  38 CD 80 70 */	addi r6, r13, lbl_806641F0@sda21
+/* 8003E910 00007ED0  38 AD 80 30 */	addi r5, r13, cf_CfObjectActor_RTTI@sda21
+/* 8003E914 00007ED4  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
 /* 8003E918 00007ED8  38 E0 00 00 */	li r7, 0
 /* 8003E91C 00007EDC  48 27 B4 69 */	bl __dynamic_cast
 /* 8003E920 00007EE0  2C 03 00 00 */	cmpwi r3, 0
@@ -4706,8 +4706,8 @@ lbl_8003EAA4:
 /* 8003EAA8 00008068  7F 44 D3 78 */	mr r4, r26
 /* 8003EAAC 0000806C  48 14 7A 31 */	bl func_801864DC
 /* 8003EAB0 00008070  38 80 00 00 */	li r4, 0
-/* 8003EAB4 00008074  38 AD 80 30 */	addi r5, r13, lbl_806641B0@sda21
-/* 8003EAB8 00008078  38 CD 80 70 */	addi r6, r13, lbl_806641F0@sda21
+/* 8003EAB4 00008074  38 AD 80 30 */	addi r5, r13, cf_CfObjectActor_RTTI@sda21
+/* 8003EAB8 00008078  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
 /* 8003EABC 0000807C  38 E0 00 00 */	li r7, 0
 /* 8003EAC0 00008080  48 27 B2 C5 */	bl __dynamic_cast
 /* 8003EAC4 00008084  2C 03 00 00 */	cmpwi r3, 0
@@ -4770,8 +4770,8 @@ func_8003EB64:
 /* 8003EB98 00008158  7F C4 F3 78 */	mr r4, r30
 /* 8003EB9C 0000815C  48 14 79 41 */	bl func_801864DC
 /* 8003EBA0 00008160  38 80 00 00 */	li r4, 0
-/* 8003EBA4 00008164  38 AD 80 30 */	addi r5, r13, lbl_806641B0@sda21
-/* 8003EBA8 00008168  38 CD 80 70 */	addi r6, r13, lbl_806641F0@sda21
+/* 8003EBA4 00008164  38 AD 80 30 */	addi r5, r13, cf_CfObjectActor_RTTI@sda21
+/* 8003EBA8 00008168  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
 /* 8003EBAC 0000816C  38 E0 00 00 */	li r7, 0
 /* 8003EBB0 00008170  48 27 B1 D5 */	bl __dynamic_cast
 /* 8003EBB4 00008174  2C 03 00 00 */	cmpwi r3, 0
@@ -4808,8 +4808,8 @@ func_8003EBEC:
 /* 8003EC20 000081E0  7F C4 F3 78 */	mr r4, r30
 /* 8003EC24 000081E4  48 14 78 B9 */	bl func_801864DC
 /* 8003EC28 000081E8  38 80 00 00 */	li r4, 0
-/* 8003EC2C 000081EC  38 AD 80 58 */	addi r5, r13, lbl_806641D8@sda21
-/* 8003EC30 000081F0  38 CD 80 70 */	addi r6, r13, lbl_806641F0@sda21
+/* 8003EC2C 000081EC  38 AD 80 58 */	addi r5, r13, cf_CfObjectMove_RTTI@sda21
+/* 8003EC30 000081F0  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
 /* 8003EC34 000081F4  38 E0 00 00 */	li r7, 0
 /* 8003EC38 000081F8  48 27 B1 4D */	bl __dynamic_cast
 /* 8003EC3C 000081FC  2C 03 00 00 */	cmpwi r3, 0
@@ -6328,11 +6328,11 @@ func_80040144:
 /* 80040160 00009720  7C BE 2B 78 */	mr r30, r5
 /* 80040164 00009724  7C DF 33 78 */	mr r31, r6
 /* 80040168 00009728  48 40 48 B1 */	bl func_80444A18
-/* 8004016C 0000972C  3C 60 80 53 */	lis r3, lbl_805291E4@ha
-/* 80040170 00009730  3E C0 80 53 */	lis r22, lbl_805290C0@ha
-/* 80040174 00009734  38 63 91 E4 */	addi r3, r3, lbl_805291E4@l
+/* 8004016C 0000972C  3C 60 80 53 */	lis r3, __vt__805291E4@ha
+/* 80040170 00009730  3E C0 80 53 */	lis r22, __vt__805290C0@ha
+/* 80040174 00009734  38 63 91 E4 */	addi r3, r3, __vt__805291E4@l
 /* 80040178 00009738  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 8004017C 0000973C  3A D6 90 C0 */	addi r22, r22, lbl_805290C0@l
+/* 8004017C 0000973C  3A D6 90 C0 */	addi r22, r22, __vt__805290C0@l
 /* 80040180 00009740  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
 /* 80040184 00009744  84 68 CE 10 */	lwzu r3, lbl_8050CE10@l(r8)
 /* 80040188 00009748  3B 60 00 00 */	li r27, 0
@@ -6929,9 +6929,9 @@ func_8004098C:
 /* 800409A0 00009F60  7C 7E 1B 78 */	mr r30, r3
 /* 800409A4 00009F64  7C 9F 23 78 */	mr r31, r4
 /* 800409A8 00009F68  41 82 00 78 */	beq lbl_80040A20
-/* 800409AC 00009F6C  3C A0 80 53 */	lis r5, lbl_805290B4@ha
+/* 800409AC 00009F6C  3C A0 80 53 */	lis r5, __vt__805290B4@ha
 /* 800409B0 00009F70  80 83 00 04 */	lwz r4, 4(r3)
-/* 800409B4 00009F74  38 A5 90 B4 */	addi r5, r5, lbl_805290B4@l
+/* 800409B4 00009F74  38 A5 90 B4 */	addi r5, r5, __vt__805290B4@l
 /* 800409B8 00009F78  90 A3 00 00 */	stw r5, 0(r3)
 /* 800409BC 00009F7C  38 00 00 00 */	li r0, 0
 /* 800409C0 00009F80  80 A4 00 00 */	lwz r5, 0(r4)
@@ -11033,14 +11033,14 @@ func_80044168:
 /* 8004417C 0000D73C  7C 9E 23 78 */	mr r30, r4
 /* 80044180 0000D740  7C BF 2B 78 */	mr r31, r5
 /* 80044184 0000D744  48 40 08 95 */	bl func_80444A18
-/* 80044188 0000D748  3C 60 80 53 */	lis r3, lbl_805293F4@ha
-/* 8004418C 0000D74C  3C A0 80 53 */	lis r5, lbl_805293AC@ha
-/* 80044190 0000D750  38 63 93 F4 */	addi r3, r3, lbl_805293F4@l
+/* 80044188 0000D748  3C 60 80 53 */	lis r3, __vt__805293F4@ha
+/* 8004418C 0000D74C  3C A0 80 53 */	lis r5, __vt__805293AC@ha
+/* 80044190 0000D750  38 63 93 F4 */	addi r3, r3, __vt__805293F4@l
 /* 80044194 0000D754  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 80044198 0000D758  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
 /* 8004419C 0000D75C  2C 1F 00 00 */	cmpwi r31, 0
 /* 800441A0 0000D760  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
-/* 800441A4 0000D764  38 A5 93 AC */	addi r5, r5, lbl_805293AC@l
+/* 800441A4 0000D764  38 A5 93 AC */	addi r5, r5, __vt__805293AC@l
 /* 800441A8 0000D768  38 80 00 00 */	li r4, 0
 /* 800441AC 0000D76C  38 60 00 01 */	li r3, 1
 /* 800441B0 0000D770  80 08 00 04 */	lwz r0, 4(r8)
@@ -11733,28 +11733,28 @@ func_80044AB8:
 /* 80044ACC 0000E08C  7C 7E 1B 78 */	mr r30, r3
 /* 80044AD0 0000E090  7C 9F 23 78 */	mr r31, r4
 /* 80044AD4 0000E094  48 3F FF 45 */	bl func_80444A18
-/* 80044AD8 0000E098  3C 60 80 53 */	lis r3, lbl_80529504@ha
-/* 80044ADC 0000E09C  3D 60 80 53 */	lis r11, lbl_80529454@ha
-/* 80044AE0 0000E0A0  38 63 95 04 */	addi r3, r3, lbl_80529504@l
+/* 80044AD8 0000E098  3C 60 80 53 */	lis r3, __vt__80529504@ha
+/* 80044ADC 0000E09C  3D 60 80 53 */	lis r11, __vt__80529454@ha
+/* 80044AE0 0000E0A0  38 63 95 04 */	addi r3, r3, __vt__80529504@l
 /* 80044AE4 0000E0A4  90 7E 00 10 */	stw r3, 0x10(r30)
-/* 80044AE8 0000E0A8  39 6B 94 54 */	addi r11, r11, lbl_80529454@l
+/* 80044AE8 0000E0A8  39 6B 94 54 */	addi r11, r11, __vt__80529454@l
 /* 80044AEC 0000E0AC  3F 80 80 51 */	lis r28, lbl_8050CE10@ha
 /* 80044AF0 0000E0B0  84 7C CE 10 */	lwzu r3, lbl_8050CE10@l(r28)
-/* 80044AF4 0000E0B4  3C E0 80 53 */	lis r7, lbl_805294E8@ha
-/* 80044AF8 0000E0B8  3C C0 80 53 */	lis r6, lbl_805294DC@ha
-/* 80044AFC 0000E0BC  3C 80 80 53 */	lis r4, lbl_805294C4@ha
+/* 80044AF4 0000E0B4  3C E0 80 53 */	lis r7, __vt__805294E8@ha
+/* 80044AF8 0000E0B8  3C C0 80 53 */	lis r6, __vt__805294DC@ha
+/* 80044AFC 0000E0BC  3C 80 80 53 */	lis r4, __vt__805294C4@ha
 /* 80044B00 0000E0C0  80 1C 00 04 */	lwz r0, 4(r28)
 /* 80044B04 0000E0C4  39 4B 00 24 */	addi r10, r11, 0x24
 /* 80044B08 0000E0C8  90 1E 00 40 */	stw r0, 0x40(r30)
 /* 80044B0C 0000E0CC  39 2B 00 34 */	addi r9, r11, 0x34
 /* 80044B10 0000E0D0  C0 02 82 A8 */	lfs f0, lbl_80668628@sda21(r2)
-/* 80044B14 0000E0D4  38 E7 94 E8 */	addi r7, r7, lbl_805294E8@l
+/* 80044B14 0000E0D4  38 E7 94 E8 */	addi r7, r7, __vt__805294E8@l
 /* 80044B18 0000E0D8  90 7E 00 3C */	stw r3, 0x3c(r30)
-/* 80044B1C 0000E0DC  38 C6 94 DC */	addi r6, r6, lbl_805294DC@l
+/* 80044B1C 0000E0DC  38 C6 94 DC */	addi r6, r6, __vt__805294DC@l
 /* 80044B20 0000E0E0  39 00 00 00 */	li r8, 0
 /* 80044B24 0000E0E4  38 BE 00 7C */	addi r5, r30, 0x7c
 /* 80044B28 0000E0E8  80 1C 00 08 */	lwz r0, 8(r28)
-/* 80044B2C 0000E0EC  38 84 94 C4 */	addi r4, r4, lbl_805294C4@l
+/* 80044B2C 0000E0EC  38 84 94 C4 */	addi r4, r4, __vt__805294C4@l
 /* 80044B30 0000E0F0  90 1E 00 44 */	stw r0, 0x44(r30)
 /* 80044B34 0000E0F4  38 00 00 01 */	li r0, 1
 /* 80044B38 0000E0F8  7F C3 F3 78 */	mr r3, r30
@@ -11862,9 +11862,9 @@ func_80044C80:
 /* 80044C94 0000E254  7C 7E 1B 78 */	mr r30, r3
 /* 80044C98 0000E258  7C 9F 23 78 */	mr r31, r4
 /* 80044C9C 0000E25C  41 82 00 78 */	beq lbl_80044D14
-/* 80044CA0 0000E260  3C A0 80 53 */	lis r5, lbl_805294DC@ha
+/* 80044CA0 0000E260  3C A0 80 53 */	lis r5, __vt__805294DC@ha
 /* 80044CA4 0000E264  80 83 00 04 */	lwz r4, 4(r3)
-/* 80044CA8 0000E268  38 A5 94 DC */	addi r5, r5, lbl_805294DC@l
+/* 80044CA8 0000E268  38 A5 94 DC */	addi r5, r5, __vt__805294DC@l
 /* 80044CAC 0000E26C  90 A3 00 00 */	stw r5, 0(r3)
 /* 80044CB0 0000E270  38 00 00 00 */	li r0, 0
 /* 80044CB4 0000E274  80 A4 00 00 */	lwz r5, 0(r4)
@@ -12282,8 +12282,8 @@ lbl_80045218:
 /* 80045218 0000E7D8  7F E3 FB 78 */	mr r3, r31
 /* 8004521C 0000E7DC  48 03 C6 61 */	bl func_8008187C
 /* 80045220 0000E7E0  38 80 00 00 */	li r4, 0
-/* 80045224 0000E7E4  38 AD 80 F0 */	addi r5, r13, lbl_80664270@sda21
-/* 80045228 0000E7E8  38 CD 80 70 */	addi r6, r13, lbl_806641F0@sda21
+/* 80045224 0000E7E4  38 AD 80 F0 */	addi r5, r13, cf_CfObjectEff_RTTI@sda21
+/* 80045228 0000E7E8  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
 /* 8004522C 0000E7EC  38 E0 00 00 */	li r7, 0
 /* 80045230 0000E7F0  48 27 4B 55 */	bl __dynamic_cast
 /* 80045234 0000E7F4  2C 03 00 00 */	cmpwi r3, 0
@@ -12816,8 +12816,8 @@ func_800458F8:
 /* 80045920 0000EEE0  38 60 00 00 */	li r3, 0
 /* 80045924 0000EEE4  48 03 D4 31 */	bl func_80082D54
 /* 80045928 0000EEE8  38 80 00 00 */	li r4, 0
-/* 8004592C 0000EEEC  38 AD 81 20 */	addi r5, r13, lbl_806642A0@sda21
-/* 80045930 0000EEF0  38 CD 80 58 */	addi r6, r13, lbl_806641D8@sda21
+/* 8004592C 0000EEEC  38 AD 81 20 */	addi r5, r13, cf_CfObjectPc_RTTI@sda21
+/* 80045930 0000EEF0  38 CD 80 58 */	addi r6, r13, cf_CfObjectMove_RTTI@sda21
 /* 80045934 0000EEF4  38 E0 00 00 */	li r7, 0
 /* 80045938 0000EEF8  48 27 44 4D */	bl __dynamic_cast
 /* 8004593C 0000EEFC  38 1F FF F8 */	addi r0, r31, -8
@@ -12851,8 +12851,8 @@ lbl_8004599C:
 /* 8004599C 0000EF5C  38 60 00 00 */	li r3, 0
 /* 800459A0 0000EF60  48 03 D3 B5 */	bl func_80082D54
 /* 800459A4 0000EF64  38 80 00 00 */	li r4, 0
-/* 800459A8 0000EF68  38 AD 81 20 */	addi r5, r13, lbl_806642A0@sda21
-/* 800459AC 0000EF6C  38 CD 80 58 */	addi r6, r13, lbl_806641D8@sda21
+/* 800459A8 0000EF68  38 AD 81 20 */	addi r5, r13, cf_CfObjectPc_RTTI@sda21
+/* 800459AC 0000EF6C  38 CD 80 58 */	addi r6, r13, cf_CfObjectMove_RTTI@sda21
 /* 800459B0 0000EF70  38 E0 00 00 */	li r7, 0
 /* 800459B4 0000EF74  48 27 43 D1 */	bl __dynamic_cast
 /* 800459B8 0000EF78  80 63 3E D4 */	lwz r3, 0x3ed4(r3)
@@ -13258,8 +13258,8 @@ lbl_80045EAC:
 /* 80045F1C 0000F4DC  48 0B 0F A5 */	bl func_800F6EC0
 /* 80045F20 0000F4E0  80 63 00 04 */	lwz r3, 4(r3)
 /* 80045F24 0000F4E4  38 80 00 00 */	li r4, 0
-/* 80045F28 0000F4E8  38 AD 80 58 */	addi r5, r13, lbl_806641D8@sda21
-/* 80045F2C 0000F4EC  38 CD 80 70 */	addi r6, r13, lbl_806641F0@sda21
+/* 80045F28 0000F4E8  38 AD 80 58 */	addi r5, r13, cf_CfObjectMove_RTTI@sda21
+/* 80045F2C 0000F4EC  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
 /* 80045F30 0000F4F0  38 E0 00 00 */	li r7, 0
 /* 80045F34 0000F4F4  48 27 3E 51 */	bl __dynamic_cast
 /* 80045F38 0000F4F8  7C 64 1B 78 */	mr r4, r3
@@ -13289,8 +13289,8 @@ lbl_80045F48:
 /* 80045F90 0000F550  48 0B 0F 31 */	bl func_800F6EC0
 /* 80045F94 0000F554  80 63 00 04 */	lwz r3, 4(r3)
 /* 80045F98 0000F558  38 80 00 00 */	li r4, 0
-/* 80045F9C 0000F55C  38 AD 80 58 */	addi r5, r13, lbl_806641D8@sda21
-/* 80045FA0 0000F560  38 CD 80 70 */	addi r6, r13, lbl_806641F0@sda21
+/* 80045F9C 0000F55C  38 AD 80 58 */	addi r5, r13, cf_CfObjectMove_RTTI@sda21
+/* 80045FA0 0000F560  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
 /* 80045FA4 0000F564  38 E0 00 00 */	li r7, 0
 /* 80045FA8 0000F568  48 27 3D DD */	bl __dynamic_cast
 /* 80045FAC 0000F56C  7C 64 1B 78 */	mr r4, r3
@@ -14332,8 +14332,8 @@ func_80046D98:
 /* 80046DB0 00010370  38 60 00 00 */	li r3, 0
 /* 80046DB4 00010374  48 03 BF A1 */	bl func_80082D54
 /* 80046DB8 00010378  38 80 00 00 */	li r4, 0
-/* 80046DBC 0001037C  38 AD 80 30 */	addi r5, r13, lbl_806641B0@sda21
-/* 80046DC0 00010380  38 CD 80 58 */	addi r6, r13, lbl_806641D8@sda21
+/* 80046DBC 0001037C  38 AD 80 30 */	addi r5, r13, cf_CfObjectActor_RTTI@sda21
+/* 80046DC0 00010380  38 CD 80 58 */	addi r6, r13, cf_CfObjectMove_RTTI@sda21
 /* 80046DC4 00010384  38 E0 00 00 */	li r7, 0
 /* 80046DC8 00010388  48 27 2F BD */	bl __dynamic_cast
 /* 80046DCC 0001038C  81 83 3E 9C */	lwz r12, 0x3e9c(r3)
@@ -14385,8 +14385,8 @@ func_80046E54:
 /* 80046E6C 0001042C  38 60 00 00 */	li r3, 0
 /* 80046E70 00010430  48 03 BE E5 */	bl func_80082D54
 /* 80046E74 00010434  38 80 00 00 */	li r4, 0
-/* 80046E78 00010438  38 AD 80 30 */	addi r5, r13, lbl_806641B0@sda21
-/* 80046E7C 0001043C  38 CD 80 58 */	addi r6, r13, lbl_806641D8@sda21
+/* 80046E78 00010438  38 AD 80 30 */	addi r5, r13, cf_CfObjectActor_RTTI@sda21
+/* 80046E7C 0001043C  38 CD 80 58 */	addi r6, r13, cf_CfObjectMove_RTTI@sda21
 /* 80046E80 00010440  38 E0 00 00 */	li r7, 0
 /* 80046E84 00010444  48 27 2F 01 */	bl __dynamic_cast
 /* 80046E88 00010448  81 83 3E 9C */	lwz r12, 0x3e9c(r3)
@@ -19032,10 +19032,10 @@ func_8004B014:
 func_8004B028:
 /* 8004B028 000145E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8004B02C 000145EC  7C 08 02 A6 */	mflr r0
-/* 8004B030 000145F0  3C 80 80 53 */	lis r4, lbl_805299F8@ha
+/* 8004B030 000145F0  3C 80 80 53 */	lis r4, __vt__805299F8@ha
 /* 8004B034 000145F4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8004B038 000145F8  38 00 00 00 */	li r0, 0
-/* 8004B03C 000145FC  38 84 99 F8 */	addi r4, r4, lbl_805299F8@l
+/* 8004B03C 000145FC  38 84 99 F8 */	addi r4, r4, __vt__805299F8@l
 /* 8004B040 00014600  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8004B044 00014604  7C 7F 1B 78 */	mr r31, r3
 /* 8004B048 00014608  90 83 00 00 */	stw r4, 0(r3)
@@ -29655,25 +29655,25 @@ lbl_80528C68:
 
 .global lbl_80528CF0
 lbl_80528CF0:
-	.4byte lbl_80664200
+	.4byte cf_CObjectState_RTTI
 	.4byte 0x00003E9C
-	.4byte lbl_806641F8
+	.4byte cf_CObjectParam_RTTI
 	.4byte 0x00003E9C
-	.4byte lbl_806641F0
+	.4byte cf_CfObject_RTTI
 	.4byte 0x00003E9C
-	.4byte lbl_806641E8
+	.4byte cf_CfObjectModel_RTTI
 	.4byte 0x00003E9C
-	.4byte lbl_806641D8
+	.4byte cf_CfObjectMove_RTTI
 	.4byte 0x00003E9C
-	.4byte lbl_806641E0
+	.4byte cf_CAIAction_RTTI
 	.4byte 0x00003380
 	.4byte lbl_806641C0
 	.4byte 0x000015DC
-	.4byte lbl_806641D0
+	.4byte cf_CBattleState_RTTI
 	.4byte 0x00000008
-	.4byte lbl_806641C8
+	.4byte cf_CActorState_RTTI
 	.4byte 0
-	.4byte lbl_806641B8
+	.4byte cf_CActorParam_RTTI
 	.4byte 0
 	.4byte 0
 
@@ -29681,45 +29681,45 @@ lbl_80528CF0:
 lbl_80528D44:
 	.4byte lbl_806641C0
 	.4byte 0x000015DC
-	.4byte lbl_806641D0
+	.4byte cf_CBattleState_RTTI
 	.4byte 0x00000008
-	.4byte lbl_806641C8
+	.4byte cf_CActorState_RTTI
 	.4byte 0
 	.4byte 0
 
 .global lbl_80528D60
 lbl_80528D60:
-	.4byte lbl_80664200
+	.4byte cf_CObjectState_RTTI
 	.4byte 0
-	.4byte lbl_806641F8
+	.4byte cf_CObjectParam_RTTI
 	.4byte 0
-	.4byte lbl_806641F0
+	.4byte cf_CfObject_RTTI
 	.4byte 0
-	.4byte lbl_806641E8
+	.4byte cf_CfObjectModel_RTTI
 	.4byte 0
 	.4byte 0
 
 .global lbl_80528D84
 lbl_80528D84:
-	.4byte lbl_80664200
+	.4byte cf_CObjectState_RTTI
 	.4byte 0
-	.4byte lbl_806641F8
+	.4byte cf_CObjectParam_RTTI
 	.4byte 0
-	.4byte lbl_806641F0
+	.4byte cf_CfObject_RTTI
 	.4byte 0
 	.4byte 0
 
 .global lbl_80528DA0
 lbl_80528DA0:
-	.4byte lbl_80664200
+	.4byte cf_CObjectState_RTTI
 	.4byte 0
-	.4byte lbl_806641F8
+	.4byte cf_CObjectParam_RTTI
 	.4byte 0
 	.4byte 0
 
 .global lbl_80528DB4
 lbl_80528DB4:
-	.4byte lbl_80664200
+	.4byte cf_CObjectState_RTTI
 	.4byte 0
 	.4byte 0
 
@@ -30077,18 +30077,18 @@ lbl_805290A8:
 	.4byte func_80041CC8
 
 
-.global lbl_805290B4
-lbl_805290B4:
+.global __vt__805290B4
+__vt__805290B4:
 	# ROM: 0x5251B4
-	.4byte lbl_80664210
+	.4byte _reslist_base_cf_CfObject_RTTI
 	.4byte 0
 	.4byte func_8004098C
 
 
-.global lbl_805290C0
-lbl_805290C0:
+.global __vt__805290C0
+__vt__805290C0:
 	# ROM: 0x5251C0
-	.4byte lbl_80664218
+	.4byte CTaskGame_RTTI
 	.4byte 0
 	.4byte func_8004048C
 	.4byte func_80446734
@@ -30097,7 +30097,7 @@ lbl_805290C0:
 	.4byte func_80043F28
 	.4byte func_80040A38
 	.4byte func_80043F20
-	.4byte lbl_80664218
+	.4byte CTaskGame_RTTI
 	.4byte 0xFFFFFFAC
 	.4byte lbl_80044120
 	.4byte func_80039E28
@@ -30131,19 +30131,19 @@ lbl_805290C0:
 	.4byte func_80039D4C
 	.4byte func_80039D44
 	.4byte func_80039D40
-	.4byte lbl_80664218
+	.4byte CTaskGame_RTTI
 	.4byte 0xFFFFFFA8
 	.4byte lbl_80044130
 	.4byte lbl_80044128
-	.4byte lbl_80664218
+	.4byte CTaskGame_RTTI
 	.4byte 0xFFFFFFA4
 	.4byte lbl_80044140
 	.4byte lbl_80044138
-	.4byte lbl_80664218
+	.4byte CTaskGame_RTTI
 	.4byte 0xFFFFFFA0
 	.4byte lbl_80044150
 	.4byte lbl_80044148
-	.4byte lbl_80664218
+	.4byte CTaskGame_RTTI
 	.4byte 0xFFFFFF9C
 	.4byte lbl_80044160
 	.4byte lbl_80044158
@@ -30155,21 +30155,21 @@ lbl_805290C0:
 
 .global lbl_805291C0
 lbl_805291C0:
-	.4byte lbl_80664258
+	.4byte CDoubleListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664250
+	.4byte CChildListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664248
+	.4byte CProcess_RTTI
 	.4byte 0
-	.4byte lbl_80664220
+	.4byte CTTask_CTaskGame_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_805291E4
-lbl_805291E4:
+.global __vt__805291E4
+__vt__805291E4:
 	# ROM: 0x5252E4
-	.4byte lbl_80664220
+	.4byte CTTask_CTaskGame_RTTI
 	.4byte 0
 	.4byte func_8004043C
 	.4byte func_80446734
@@ -30181,11 +30181,11 @@ lbl_805291E4:
 
 .global lbl_80529208
 lbl_80529208:
-	.4byte lbl_80664258
+	.4byte CDoubleListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664250
+	.4byte CChildListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664248
+	.4byte CProcess_RTTI
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -30203,19 +30203,19 @@ lbl_80529208:
 	.4byte 0
 
 
-.global lbl_80529258
-lbl_80529258:
+.global __vt__80529258
+__vt__80529258:
 	# ROM: 0x525358
-	.4byte lbl_80664240
+	.4byte IScnRender_RTTI
 	.4byte 0
 	.4byte func_8004031C
 	.4byte func_80043F24
 
 
-.global lbl_80529268
-lbl_80529268:
+.global __vt__80529268
+__vt__80529268:
 	# ROM: 0x525368
-	.4byte lbl_806641A8
+	.4byte IWorkEvent_RTTI
 	.4byte 0
 	.4byte func_800402DC
 	.4byte func_80039E28
@@ -30252,15 +30252,15 @@ lbl_80529268:
 
 .global lbl_805292F0
 lbl_805292F0:
-	.4byte lbl_80664258
+	.4byte CDoubleListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664250
+	.4byte CChildListNode_RTTI
 	.4byte 0
 	.4byte 0
 
 .global lbl_80529304
 lbl_80529304:
-	.4byte lbl_80664258
+	.4byte CDoubleListNode_RTTI
 	.4byte 0
 	.4byte 0
 
@@ -30343,10 +30343,10 @@ lbl_805293A0:
 	.4byte func_8004499C
 
 
-.global lbl_805293AC
-lbl_805293AC:
+.global __vt__805293AC
+__vt__805293AC:
 	# ROM: 0x5254AC
-	.4byte lbl_80664260
+	.4byte cf_CTaskGameCf_RTTI
 	.4byte 0
 	.4byte func_80044280
 	.4byte func_80446734
@@ -30358,21 +30358,21 @@ lbl_805293AC:
 
 .global lbl_805293D0
 lbl_805293D0:
-	.4byte lbl_80664258
+	.4byte CDoubleListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664250
+	.4byte CChildListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664248
+	.4byte CProcess_RTTI
 	.4byte 0
-	.4byte lbl_80664268
+	.4byte CTTask_cf_CTaskGameCf_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_805293F4
-lbl_805293F4:
+.global __vt__805293F4
+__vt__805293F4:
 	# ROM: 0x5254F4
-	.4byte lbl_80664268
+	.4byte CTTask_cf_CTaskGameCf_RTTI
 	.4byte 0
 	.4byte func_80044230
 	.4byte func_80446734
@@ -30384,30 +30384,30 @@ lbl_805293F4:
 
 .global lbl_80529418
 lbl_80529418:
-	.4byte lbl_80664258
+	.4byte CDoubleListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664250
+	.4byte CChildListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664248
+	.4byte CProcess_RTTI
 	.4byte 0
 	.4byte 0
 	.4byte 0
 
 .global lbl_80529438
 lbl_80529438:
-	.4byte lbl_80664200
+	.4byte cf_CObjectState_RTTI
 	.4byte 0
-	.4byte lbl_806641F8
+	.4byte cf_CObjectParam_RTTI
 	.4byte 0
-	.4byte lbl_806641F0
+	.4byte cf_CfObject_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_80529454
-lbl_80529454:
+.global __vt__80529454
+__vt__80529454:
 	# ROM: 0x525554
-	.4byte lbl_80664278
+	.4byte CTaskGameEff_RTTI
 	.4byte 0
 	.4byte func_80044D7C
 	.4byte func_80446734
@@ -30416,11 +30416,11 @@ lbl_80529454:
 	.4byte func_80044F8C
 	.4byte func_800454AC
 	.4byte func_80043F20
-	.4byte lbl_80664278
+	.4byte CTaskGameEff_RTTI
 	.4byte 0xFFFFFFAC
 	.4byte lbl_80045548
 	.4byte func_80045540
-	.4byte lbl_80664278
+	.4byte CTaskGameEff_RTTI
 	.4byte 0xFFFFFFA8
 	.4byte lbl_80045558
 	.4byte lbl_80045550
@@ -30429,58 +30429,58 @@ lbl_80529454:
 
 .global lbl_805294A0
 lbl_805294A0:
-	.4byte lbl_80664258
+	.4byte CDoubleListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664250
+	.4byte CChildListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664248
+	.4byte CProcess_RTTI
 	.4byte 0
-	.4byte lbl_80664298
+	.4byte CTTask_CTaskGameEff_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_805294C4
-lbl_805294C4:
+.global __vt__805294C4
+__vt__805294C4:
 	# ROM: 0x5255C4
-	.4byte lbl_80664280
+	.4byte reslist_CScn_RTTI
 	.4byte 0
 	.4byte func_80044D2C
 
 .global lbl_805294D0
 lbl_805294D0:
-	.4byte lbl_80664288
+	.4byte _reslist_base_CScn_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_805294DC
-lbl_805294DC:
+.global __vt__805294DC
+__vt__805294DC:
 	# ROM: 0x5255DC
-	.4byte lbl_80664288
+	.4byte _reslist_base_CScn_RTTI
 	.4byte 0
 	.4byte func_80044C80
 
 
-.global lbl_805294E8
-lbl_805294E8:
+.global __vt__805294E8
+__vt__805294E8:
 	# ROM: 0x5255E8
-	.4byte lbl_80664290
+	.4byte CTaskGameEff_CEffRenderHighPrio_RTTI
 	.4byte 0
 	.4byte func_80044C40
 	.4byte func_80045284
 
 .global lbl_805294F8
 lbl_805294F8:
-	.4byte lbl_80664240
+	.4byte IScnRender_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_80529504
-lbl_80529504:
+.global __vt__80529504
+__vt__80529504:
 	# ROM: 0x525604
-	.4byte lbl_80664298
+	.4byte CTTask_CTaskGameEff_RTTI
 	.4byte 0
 	.4byte func_80044BF0
 	.4byte func_80446734
@@ -30492,11 +30492,11 @@ lbl_80529504:
 
 .global lbl_80529528
 lbl_80529528:
-	.4byte lbl_80664258
+	.4byte CDoubleListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664250
+	.4byte CChildListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664248
+	.4byte CProcess_RTTI
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -30621,27 +30621,27 @@ lbl_805295C0:
 
 .global lbl_805296E0
 lbl_805296E0:
-	.4byte lbl_80664200
+	.4byte cf_CObjectState_RTTI
 	.4byte 0x00003E9C
-	.4byte lbl_806641F8
+	.4byte cf_CObjectParam_RTTI
 	.4byte 0x00003E9C
-	.4byte lbl_806641F0
+	.4byte cf_CfObject_RTTI
 	.4byte 0x00003E9C
-	.4byte lbl_806641E8
+	.4byte cf_CfObjectModel_RTTI
 	.4byte 0x00003E9C
-	.4byte lbl_806641D8
+	.4byte cf_CfObjectMove_RTTI
 	.4byte 0x00003E9C
-	.4byte lbl_806641E0
+	.4byte cf_CAIAction_RTTI
 	.4byte 0x00003380
 	.4byte lbl_806641C0
 	.4byte 0x000015DC
-	.4byte lbl_806641D0
+	.4byte cf_CBattleState_RTTI
 	.4byte 0x00000008
-	.4byte lbl_806641C8
+	.4byte cf_CActorState_RTTI
 	.4byte 0
-	.4byte lbl_806641B8
+	.4byte cf_CActorParam_RTTI
 	.4byte 0
-	.4byte lbl_806641B0
+	.4byte cf_CfObjectActor_RTTI
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -30836,10 +30836,10 @@ lbl_805299E8:
 	.4byte 0
 
 
-.global lbl_805299F8
-lbl_805299F8:
+.global __vt__805299F8
+__vt__805299F8:
 	# ROM: 0x525AF8
-	.4byte lbl_806642A8
+	.4byte CActParamAnim_RTTI
 	.4byte 0
 	.4byte func_8004B0B8
 	.4byte func_8004B854
@@ -31111,56 +31111,56 @@ lbl_804F5F38:
 	.asciz "insideNormal"
 	.balign 4
 
-.global lbl_804F5F48
-lbl_804F5F48:
+.global cf_CfObjectActor_typestr
+cf_CfObjectActor_typestr:
 	.asciz "cf::CfObjectActor"
 	.balign 4
 	.4byte 0
 
-.global lbl_804F5F60
-lbl_804F5F60:
+.global cf_CActorParam_typestr
+cf_CActorParam_typestr:
 	.asciz "cf::CActorParam"
 
-.global lbl_804F5F70
-lbl_804F5F70:
+.global cf_CDebugState_typestr
+cf_CDebugState_typestr:
 	.asciz "cf::CDebugState"
 
-.global lbl_804F5F80
-lbl_804F5F80:
+.global cf_CActorState_typestr
+cf_CActorState_typestr:
 	.asciz "cf::CActorState"
 
-.global lbl_804F5F90
-lbl_804F5F90:
+.global cf_CBattleState_typestr
+cf_CBattleState_typestr:
 	.asciz "cf::CBattleState"
 	.balign 4
 
-.global lbl_804F5FA4
-lbl_804F5FA4:
+.global cf_CfObjectMove_typestr
+cf_CfObjectMove_typestr:
 	.asciz "cf::CfObjectMove"
 	.balign 4
 
-.global lbl_804F5FB8
-lbl_804F5FB8:
+.global cf_CAIAction_typestr
+cf_CAIAction_typestr:
 	.asciz "cf::CAIAction"
 	.balign 4
 
-.global lbl_804F5FC8
-lbl_804F5FC8:
+.global cf_CfObjectModel_typestr
+cf_CfObjectModel_typestr:
 	.asciz "cf::CfObjectModel"
 	.balign 4
 
-.global lbl_804F5FDC
-lbl_804F5FDC:
+.global cf_CfObject_typestr
+cf_CfObject_typestr:
 	.asciz "cf::CfObject"
 	.balign 4
 
-.global lbl_804F5FEC
-lbl_804F5FEC:
+.global cf_CObjectParam_typestr
+cf_CObjectParam_typestr:
 	.asciz "cf::CObjectParam"
 	.balign 4
 
-.global lbl_804F6000
-lbl_804F6000:
+.global cf_CObjectState_typestr
+cf_CObjectState_typestr:
 	.asciz "cf::CObjectState"
 	.balign 4
 
@@ -31192,54 +31192,54 @@ lbl_804F6014:
 	.2byte 0
 	.4byte 0
 
-.global lbl_804F60B0
-lbl_804F60B0:
+.global _reslist_base_cf_CfObject_typestr
+_reslist_base_cf_CfObject_typestr:
 	.asciz "_reslist_base<cf::CfObject *>"
 	.balign 4
 
-.global lbl_804F60D0
-lbl_804F60D0:
+.global CTaskGame_typestr
+CTaskGame_typestr:
 	.asciz "CTaskGame"
 	.balign 4
 
-.global lbl_804F60DC
-lbl_804F60DC:
+.global CTTask_CTaskGame_typestr
+CTTask_CTaskGame_typestr:
 	.asciz "CTTask<CTaskGame>"
 	.balign 4
 
-.global lbl_804F60F0
-lbl_804F60F0:
+.global IErrMesWinSel_typestr
+IErrMesWinSel_typestr:
 	.asciz "IErrMesWinSel"
 	.balign 4
 
-.global lbl_804F6100
-lbl_804F6100:
+.global ITitleMenu_typestr
+ITitleMenu_typestr:
 	.asciz "ITitleMenu"
 	.balign 4
 
-.global lbl_804F610C
-lbl_804F610C:
+.global IGameException_typestr
+IGameException_typestr:
 	.asciz "IGameException"
 	.balign 4
 
-.global lbl_804F611C
-lbl_804F611C:
+.global IScnRender_typestr
+IScnRender_typestr:
 	.asciz "IScnRender"
 	.balign 4
 
-.global lbl_804F6128
-lbl_804F6128:
+.global CProcess_typestr
+CProcess_typestr:
 	.asciz "CProcess"
 	.balign 4
 
-.global lbl_804F6134
-lbl_804F6134:
+.global CChildListNode_typestr
+CChildListNode_typestr:
 	.asciz "CChildListNode"
 	.balign 4
 	.4byte 0
 
-.global lbl_804F6148
-lbl_804F6148:
+.global CDoubleListNode_typestr
+CDoubleListNode_typestr:
 	.asciz "CDoubleListNode"
 
 
@@ -31256,39 +31256,39 @@ lbl_804F6158:
 	.asciz "acbd"
 	.4byte 0
 	.byte 0x00
-.global lbl_804F61B0
-lbl_804F61B0:
+.global cf_CTaskGameCf_typestr
+cf_CTaskGameCf_typestr:
 	.asciz "cf::CTaskGameCf"
 
-.global lbl_804F61C0
-lbl_804F61C0:
+.global CTTask_cf_CTaskGameCf_typestr
+CTTask_cf_CTaskGameCf_typestr:
 	.asciz "CTTask<cf::CTaskGameCf>"
 
-.global lbl_804F61D8
-lbl_804F61D8:
+.global cf_CfObjectEff_typestr
+cf_CfObjectEff_typestr:
 	.asciz "cf::CfObjectEff"
 
-.global lbl_804F61E8
-lbl_804F61E8:
+.global CTaskGameEff_typestr
+CTaskGameEff_typestr:
 	.asciz "CTaskGameEff"
 	.balign 4
 
-.global lbl_804F61F8
-lbl_804F61F8:
+.global reslist_CScn_typestr
+reslist_CScn_typestr:
 	.asciz "reslist<CScn *>"
 
-.global lbl_804F6208
-lbl_804F6208:
+.global _reslist_base_CScn_typestr
+_reslist_base_CScn_typestr:
 	.asciz "_reslist_base<CScn *>"
 	.balign 4
 
-.global lbl_804F6220
-lbl_804F6220:
+.global CTaskGameEff_CEffRenderHighPrio_typestr
+CTaskGameEff_CEffRenderHighPrio_typestr:
 	.asciz "CTaskGameEff::CEffRenderHighPrio"
 	.balign 4
 
-.global lbl_804F6244
-lbl_804F6244:
+.global CTTask_CTaskGameEff_typestr
+CTTask_CTaskGameEff_typestr:
 	.asciz "CTTask<CTaskGameEff>"
 	.balign 4
 	.4byte 0
@@ -31451,8 +31451,8 @@ lbl_804F6430:
 	.asciz "isSETalkVoiceWait"
 	.balign 4
 
-.global lbl_804F6444
-lbl_804F6444:
+.global cf_CfObjectPc_typestr
+cf_CfObjectPc_typestr:
 	.asciz "cf::CfObjectPc"
 	.balign 4
 
@@ -31821,18 +31821,18 @@ lbl_804F6890:
 	.asciz "math"
 	.balign 4
 
-.global lbl_804F6898
-lbl_804F6898:
+.global CActParamAnim_typestr
+CActParamAnim_typestr:
 	.asciz "CActParamAnim"
 	.balign 4
 
-.global lbl_804F68A8
-lbl_804F68A8:
+.global IActParamShift_typestr
+IActParamShift_typestr:
 	.asciz "IActParamShift"
 	.balign 4
 
-.global lbl_804F68B8
-lbl_804F68B8:
+.global CActParamData_typestr
+CActParamData_typestr:
 	.asciz "CActParamData"
 	.balign 4
 
@@ -31845,60 +31845,60 @@ lbl_80573DD0:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_806641B8
-lbl_806641B8:
-	.4byte lbl_804F5F60
+.global cf_CActorParam_RTTI
+cf_CActorParam_RTTI:
+	.4byte cf_CActorParam_typestr
 	.4byte lbl_80528D44
 
 .global lbl_806641C0
 lbl_806641C0:
-	.4byte lbl_804F5F70
+	.4byte cf_CDebugState_typestr
 	.4byte 0
 
-.global lbl_806641C8
-lbl_806641C8:
-	.4byte lbl_804F5F80
+.global cf_CActorState_RTTI
+cf_CActorState_RTTI:
+	.4byte cf_CActorState_typestr
 	.4byte 0
 
-.global lbl_806641D0
-lbl_806641D0:
-	.4byte lbl_804F5F90
+.global cf_CBattleState_RTTI
+cf_CBattleState_RTTI:
+	.4byte cf_CBattleState_typestr
 	.4byte 0
 
 
-.global lbl_806641D8
-lbl_806641D8:
+.global cf_CfObjectMove_RTTI
+cf_CfObjectMove_RTTI:
 	# ROM: 0x56FDB8
-	.4byte lbl_804F5FA4
+	.4byte cf_CfObjectMove_typestr
 	.4byte lbl_80528D60
 
-.global lbl_806641E0
-lbl_806641E0:
-	.4byte lbl_804F5FB8
+.global cf_CAIAction_RTTI
+cf_CAIAction_RTTI:
+	.4byte cf_CAIAction_typestr
 	.4byte 0
 
 
-.global lbl_806641E8
-lbl_806641E8:
+.global cf_CfObjectModel_RTTI
+cf_CfObjectModel_RTTI:
 	# ROM: 0x56FDC8
-	.4byte lbl_804F5FC8
+	.4byte cf_CfObjectModel_typestr
 	.4byte lbl_80528D84
 
 
-.global lbl_806641F0
-lbl_806641F0:
+.global cf_CfObject_RTTI
+cf_CfObject_RTTI:
 	# ROM: 0x56FDD0
-	.4byte lbl_804F5FDC
+	.4byte cf_CfObject_typestr
 	.4byte lbl_80528DA0
 
-.global lbl_806641F8
-lbl_806641F8:
-	.4byte lbl_804F5FEC
+.global cf_CObjectParam_RTTI
+cf_CObjectParam_RTTI:
+	.4byte cf_CObjectParam_typestr
 	.4byte lbl_80528DB4
 
-.global lbl_80664200
-lbl_80664200:
-	.4byte lbl_804F6000
+.global cf_CObjectState_RTTI
+cf_CObjectState_RTTI:
+	.4byte cf_CObjectState_typestr
 	.4byte 0
 
 
@@ -31908,113 +31908,113 @@ lbl_80664208:
 	.4byte lbl_80668600
 	.4byte 0
 
-.global lbl_80664210
-lbl_80664210:
-	.4byte lbl_804F60B0
+.global _reslist_base_cf_CfObject_RTTI
+_reslist_base_cf_CfObject_RTTI:
+	.4byte _reslist_base_cf_CfObject_typestr
 	.4byte 0
 
-.global lbl_80664218
-lbl_80664218:
-	.4byte lbl_804F60D0
+.global CTaskGame_RTTI
+CTaskGame_RTTI:
+	.4byte CTaskGame_typestr
 	.4byte lbl_805291C0
 
-.global lbl_80664220
-lbl_80664220:
-	.4byte lbl_804F60DC
+.global CTTask_CTaskGame_RTTI
+CTTask_CTaskGame_RTTI:
+	.4byte CTTask_CTaskGame_typestr
 	.4byte lbl_80529208
 
 .global lbl_80664228
 lbl_80664228:
-	.4byte lbl_804F60F0
+	.4byte IErrMesWinSel_typestr
 	.4byte 0
 
 .global lbl_80664230
 lbl_80664230:
-	.4byte lbl_804F6100
+	.4byte ITitleMenu_typestr
 	.4byte 0
 
 .global lbl_80664238
 lbl_80664238:
-	.4byte lbl_804F610C
+	.4byte IGameException_typestr
 	.4byte 0
 
-.global lbl_80664240
-lbl_80664240:
-	.4byte lbl_804F611C
+.global IScnRender_RTTI
+IScnRender_RTTI:
+	.4byte IScnRender_typestr
 	.4byte 0
 
-.global lbl_80664248
-lbl_80664248:
-	.4byte lbl_804F6128
+.global CProcess_RTTI
+CProcess_RTTI:
+	.4byte CProcess_typestr
 	.4byte lbl_805292F0
 
-.global lbl_80664250
-lbl_80664250:
-	.4byte lbl_804F6134
+.global CChildListNode_RTTI
+CChildListNode_RTTI:
+	.4byte CChildListNode_typestr
 	.4byte lbl_80529304
 
-.global lbl_80664258
-lbl_80664258:
-	.4byte lbl_804F6148
+.global CDoubleListNode_RTTI
+CDoubleListNode_RTTI:
+	.4byte CDoubleListNode_typestr
 	.4byte 0
 
-.global lbl_80664260
-lbl_80664260:
-	.4byte lbl_804F61B0
+.global cf_CTaskGameCf_RTTI
+cf_CTaskGameCf_RTTI:
+	.4byte cf_CTaskGameCf_typestr
 	.4byte lbl_805293D0
 
-.global lbl_80664268
-lbl_80664268:
-	.4byte lbl_804F61C0
+.global CTTask_cf_CTaskGameCf_RTTI
+CTTask_cf_CTaskGameCf_RTTI:
+	.4byte CTTask_cf_CTaskGameCf_typestr
 	.4byte lbl_80529418
 
 
-.global lbl_80664270
-lbl_80664270:
+.global cf_CfObjectEff_RTTI
+cf_CfObjectEff_RTTI:
 	# ROM: 0x56FE50
-	.4byte lbl_804F61D8
+	.4byte cf_CfObjectEff_typestr
 	.4byte lbl_80529438
 
-.global lbl_80664278
-lbl_80664278:
-	.4byte lbl_804F61E8
+.global CTaskGameEff_RTTI
+CTaskGameEff_RTTI:
+	.4byte CTaskGameEff_typestr
 	.4byte lbl_805294A0
 
-.global lbl_80664280
-lbl_80664280:
-	.4byte lbl_804F61F8
+.global reslist_CScn_RTTI
+reslist_CScn_RTTI:
+	.4byte reslist_CScn_typestr
 	.4byte lbl_805294D0
 
-.global lbl_80664288
-lbl_80664288:
-	.4byte lbl_804F6208
+.global _reslist_base_CScn_RTTI
+_reslist_base_CScn_RTTI:
+	.4byte _reslist_base_CScn_typestr
 	.4byte 0
 
-.global lbl_80664290
-lbl_80664290:
-	.4byte lbl_804F6220
+.global CTaskGameEff_CEffRenderHighPrio_RTTI
+CTaskGameEff_CEffRenderHighPrio_RTTI:
+	.4byte CTaskGameEff_CEffRenderHighPrio_typestr
 	.4byte lbl_805294F8
 
-.global lbl_80664298
-lbl_80664298:
-	.4byte lbl_804F6244
+.global CTTask_CTaskGameEff_RTTI
+CTTask_CTaskGameEff_RTTI:
+	.4byte CTTask_CTaskGameEff_typestr
 	.4byte lbl_80529528
 
 
-.global lbl_806642A0
-lbl_806642A0:
+.global cf_CfObjectPc_RTTI
+cf_CfObjectPc_RTTI:
 	# ROM: 0x56FE80
-	.4byte lbl_804F6444
+	.4byte cf_CfObjectPc_typestr
 	.4byte lbl_805296E0
 
-.global lbl_806642A8
-lbl_806642A8:
-	.4byte lbl_804F6898
+.global CActParamAnim_RTTI
+CActParamAnim_RTTI:
+	.4byte CActParamAnim_typestr
 	.4byte lbl_80529AEC
 
 .global lbl_806642B0
 lbl_806642B0:
-	.4byte lbl_804F68A8
+	.4byte IActParamShift_typestr
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

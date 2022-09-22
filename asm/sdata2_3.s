@@ -295,8 +295,8 @@ lbl_8066CAC0:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-.global lbl_8066CAC8
-lbl_8066CAC8:
+.global CToken_typestr
+CToken_typestr:
 	.asciz "CToken"
 	.balign 4
 
@@ -312,8 +312,8 @@ lbl_8066CAD4:
 	# ROM: 0x576934
 	.4byte 0x3F19999A
 
-.global lbl_8066CAD8
-lbl_8066CAD8:
+.global CView_typestr
+CView_typestr:
 	.asciz "CView"
 	.balign 4
 
@@ -556,8 +556,8 @@ lbl_8066CBA0:
 lbl_8066CBA4:
 	.4byte 0x447A0000
 
-.global lbl_8066CBA8
-lbl_8066CBA8:
+.global CDevice_typestr
+CDevice_typestr:
 	.asciz "CDevice"
 
 .global lbl_8066CBB0
@@ -792,13 +792,13 @@ lbl_8066CC80:
 	.4byte 0x3D23D70A
 	.4byte 0
 
-.global lbl_8066CC88
-lbl_8066CC88:
+.global CLib_typestr
+CLib_typestr:
 	.asciz "CLib"
 	.balign 4
 
-.global lbl_8066CC90
-lbl_8066CC90:
+.global CLibCri_typestr
+CLibCri_typestr:
 	.asciz "CLibCri"
 
 
@@ -893,8 +893,8 @@ lbl_8066CCE0:
 	.4byte 0x41700000
 	.4byte 0
 
-.global lbl_8066CCE8
-lbl_8066CCE8:
+.global CLibG3d_typestr
+CLibG3d_typestr:
 	.asciz "CLibG3d"
 
 
@@ -966,8 +966,8 @@ lbl_8066CD20:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-.global lbl_8066CD28
-lbl_8066CD28:
+.global CLibHbm_typestr
+CLibHbm_typestr:
 	.asciz "CLibHbm"
 
 
@@ -1061,8 +1061,8 @@ lbl_8066CD68:
 	.4byte 0x43300000
 	.4byte 0
 
-.global lbl_8066CD70
-lbl_8066CD70:
+.global CLibVM_typestr
+CLibVM_typestr:
 	.asciz "CLibVM"
 	.balign 4
 
@@ -2373,12 +2373,12 @@ lbl_8066D190:
 	.float 100.0
 	.4byte 0
 
-.global lbl_8066D198
-lbl_8066D198:
+.global CScnMem_typestr
+CScnMem_typestr:
 	.asciz "CScnMem"
 
-.global lbl_8066D1A0
-lbl_8066D1A0:
+.global CScn_typestr
+CScn_typestr:
 	.asciz "CScn"
 	.balign 4
 
@@ -4006,8 +4006,8 @@ lbl_8066D770:
 	# ROM: 0x5775D0
 	.4byte 0x437F0000
 
-.global lbl_8066D774
-lbl_8066D774:
+.global CLight_typestr
+CLight_typestr:
 	.asciz "CLight"
 	.balign 4
 	.4byte 0
@@ -4557,8 +4557,8 @@ lbl_8066D930:
 	.float -1.0
 	.4byte 0
 
-.global lbl_8066D938
-lbl_8066D938:
+.global CETrail_typestr
+CETrail_typestr:
 	.asciz "CETrail"
 
 
@@ -4718,8 +4718,8 @@ lbl_8066D9B8:
 	.4byte 0x3C8EFA35
 	.4byte 0
 
-.global lbl_8066D9C0
-lbl_8066D9C0:
+.global CNand_typestr
+CNand_typestr:
 	.asciz "CNand"
 	.balign 4
 

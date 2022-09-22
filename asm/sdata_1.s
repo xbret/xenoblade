@@ -2,19 +2,19 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_806643D0
-lbl_806643D0:
-	.4byte lbl_804F6BE8
+.global cf_CfTaskMain_RTTI
+cf_CfTaskMain_RTTI:
+	.4byte cf_CfTaskMain_typestr
 	.4byte lbl_8052A6FC
 
-.global lbl_806643D8
-lbl_806643D8:
-	.4byte lbl_804F6BF8
+.global CTTask_cf_CfTaskMain_RTTI
+CTTask_cf_CfTaskMain_RTTI:
+	.4byte CTTask_cf_CfTaskMain_typestr
 	.4byte lbl_8052A74C
 
-.global lbl_806643E0
-lbl_806643E0:
-	.4byte lbl_804F6C10
+.global cf_CfTFile_RTTI
+cf_CfTFile_RTTI:
+	.4byte cf_CfTFile_typestr
 	.4byte lbl_8052A7F0
 
 
@@ -43,44 +43,44 @@ lbl_806643F0:
 	.4byte 0
 
 
-.global lbl_806643F8
-lbl_806643F8:
+.global cf_CfCamEvent_RTTI
+cf_CfCamEvent_RTTI:
 	# ROM: 0x56FFD8
-	.4byte lbl_804F6C80
+	.4byte cf_CfCamEvent_typestr
 	.4byte lbl_8052A890
 
-.global lbl_80664400
-lbl_80664400:
-	.4byte lbl_804F6C90
+.global cf_CfCamTargetIntf_RTTI
+cf_CfCamTargetIntf_RTTI:
+	.4byte cf_CfCamTargetIntf_typestr
 	.4byte lbl_8052A8C0
 
-.global lbl_80664408
-lbl_80664408:
-	.4byte lbl_804F6CA4
+.global cf_CfCamLookatIntf_RTTI
+cf_CfCamLookatIntf_RTTI:
+	.4byte cf_CfCamLookatIntf_typestr
 	.4byte lbl_8052A8F0
 
-.global lbl_80664410
-lbl_80664410:
-	.4byte lbl_804F6CB8
+.global cf_CfCamDirectionIntf_RTTI
+cf_CfCamDirectionIntf_RTTI:
+	.4byte cf_CfCamDirectionIntf_typestr
 	.4byte lbl_8052A918
 
 .global lbl_80664418
 lbl_80664418:
-	.4byte lbl_804F6CD0
+	.4byte cf_CfCamIntf_typestr
 	.4byte 0
 
 
-.global lbl_80664420
-lbl_80664420:
+.global cf_CfCamFollow_RTTI
+cf_CfCamFollow_RTTI:
 	# ROM: 0x570000
-	.4byte lbl_804F6CE0
+	.4byte cf_CfCamFollow_typestr
 	.4byte lbl_8052A924
 
 
-.global lbl_80664428
-lbl_80664428:
+.global cf_CfCam_RTTI
+cf_CfCam_RTTI:
 	# ROM: 0x570008
-	.4byte lbl_804F6CF0
+	.4byte cf_CfCam_typestr
 	.4byte 0
 
 
@@ -321,58 +321,58 @@ lbl_806644D0:
 
 .global lbl_806644D8
 lbl_806644D8:
-	.4byte lbl_804F7060
+	.4byte cf_IObjectInfo_typestr
 	.4byte 0
 
 
 .global lbl_806644E0
 lbl_806644E0:
 	# ROM: 0x5700C0
-	.4byte lbl_804F7070
+	.4byte cf_CfObjectImpl_typestr
 	.4byte lbl_8052AEF8
 
 .global lbl_806644E8
 lbl_806644E8:
-	.4byte lbl_804F7084
+	.4byte IActParamEvent_typestr
 	.4byte 0
 
-.global lbl_806644F0
-lbl_806644F0:
-	.4byte lbl_804F71C8
+.global cf_CtrlEnemy_RTTI
+cf_CtrlEnemy_RTTI:
+	.4byte cf_CtrlEnemy_typestr
 	.4byte lbl_8052AF98
 
-.global lbl_806644F8
-lbl_806644F8:
-	.4byte lbl_804F71D8
+.global cf_CtrlAct_RTTI
+cf_CtrlAct_RTTI:
+	.4byte cf_CtrlAct_typestr
 	.4byte lbl_8052AFB4
 
 
-.global lbl_80664500
-lbl_80664500:
+.global cf_CtrlBase_RTTI
+cf_CtrlBase_RTTI:
 	# ROM: 0x5700E0
-	.4byte lbl_804F71E4
+	.4byte cf_CtrlBase_typestr
 	.4byte lbl_8052AFC8
 
 
 .global lbl_80664508
 lbl_80664508:
 	# ROM: 0x5700E8
-	.4byte lbl_804F71F4
+	.4byte CActInput_typestr
 	.4byte 0
 
-.global lbl_80664510
-lbl_80664510:
-	.4byte lbl_804F7200
+.global cf_CtrlMoveBase_RTTI
+cf_CtrlMoveBase_RTTI:
+	.4byte cf_CtrlMoveBase_typestr
 	.4byte 0
 
-.global lbl_80664518
-lbl_80664518:
-	.4byte lbl_804F7214
+.global cf_CtrlEneAiCall_RTTI
+cf_CtrlEneAiCall_RTTI:
+	.4byte cf_CtrlEneAiCall_typestr
 	.4byte lbl_8052AFF0
 
-.global lbl_80664520
-lbl_80664520:
-	.4byte lbl_804F7228
+.global CColiProc_RTTI
+CColiProc_RTTI:
+	.4byte CColiProc_typestr
 	.4byte 0
 
 
@@ -382,41 +382,41 @@ lbl_80664528:
 	.4byte 0x3BA3D70A
 	.4byte 0
 
-.global lbl_80664530
-lbl_80664530:
-	.4byte lbl_804F7248
+.global cf_CtrlMoveEne_RTTI
+cf_CtrlMoveEne_RTTI:
+	.4byte cf_CtrlMoveEne_typestr
 	.4byte lbl_8052B1D8
 
-.global lbl_80664538
-lbl_80664538:
-	.4byte lbl_804F7370
+.global cf_CtrlNpc_RTTI
+cf_CtrlNpc_RTTI:
+	.4byte cf_CtrlNpc_typestr
 	.4byte lbl_8052B368
 
-.global lbl_80664540
-lbl_80664540:
-	.4byte lbl_804F7438
+.global cf_CtrlPad_RTTI
+cf_CtrlPad_RTTI:
+	.4byte cf_CtrlPad_typestr
 	.4byte lbl_8052B510
 
-.global lbl_80664548
-lbl_80664548:
-	.4byte lbl_804F7444
+.global cf_CtrlRemote_RTTI
+cf_CtrlRemote_RTTI:
+	.4byte cf_CtrlRemote_typestr
 	.4byte lbl_8052B53C
 
-.global lbl_80664550
-lbl_80664550:
-	.4byte lbl_804F7454
+.global cf_CtrlPc_RTTI
+cf_CtrlPc_RTTI:
+	.4byte cf_CtrlPc_typestr
 	.4byte lbl_8052B560
 
 
-.global lbl_80664558
-lbl_80664558:
+.global cf_CfObjectImplPc_RTTI
+cf_CfObjectImplPc_RTTI:
 	# ROM: 0x570138
-	.4byte lbl_804F7460
+	.4byte cf_CfObjectImplPc_typestr
 	.4byte lbl_8052B624
 
-.global lbl_80664560
-lbl_80664560:
-	.4byte lbl_804F7474
+.global cf_CfObjectImplMove_RTTI
+cf_CfObjectImplMove_RTTI:
+	.4byte cf_CfObjectImplMove_typestr
 	.4byte lbl_8052B648
 
 
@@ -426,46 +426,46 @@ lbl_80664568:
 	.4byte 0x0000FFFF
 	.4byte 0xFFFF0000
 
-.global lbl_80664570
-lbl_80664570:
-	.4byte lbl_804F78B0
+.global cf_CfObjectColl_RTTI
+cf_CfObjectColl_RTTI:
+	.4byte cf_CfObjectColl_typestr
 	.4byte lbl_8052BF48
 
-.global lbl_80664578
-lbl_80664578:
-	.4byte lbl_804F78C4
+.global cf_CfCollCapsuleImpl_RTTI
+cf_CfCollCapsuleImpl_RTTI:
+	.4byte cf_CfCollCapsuleImpl_typestr
 	.4byte lbl_8052BF80
 
-.global lbl_80664580
-lbl_80664580:
-	.4byte lbl_804F78DC
+.global cf_CfCollCylinderImpl_RTTI
+cf_CfCollCylinderImpl_RTTI:
+	.4byte cf_CfCollCylinderImpl_typestr
 	.4byte lbl_8052BFA0
 
-.global lbl_80664588
-lbl_80664588:
-	.4byte lbl_804F78F4
+.global cf_CfCollAABBImpl_RTTI
+cf_CfCollAABBImpl_RTTI:
+	.4byte cf_CfCollAABBImpl_typestr
 	.4byte lbl_8052BFC0
 
-.global lbl_80664590
-lbl_80664590:
-	.4byte lbl_804F7908
+.global cf_CfCollSphereImpl_RTTI
+cf_CfCollSphereImpl_RTTI:
+	.4byte cf_CfCollSphereImpl_typestr
 	.4byte lbl_8052BFE0
 
-.global lbl_80664598
-lbl_80664598:
-	.4byte lbl_804F7920
+.global cf_CfCollCircleImpl_RTTI
+cf_CfCollCircleImpl_RTTI:
+	.4byte cf_CfCollCircleImpl_typestr
 	.4byte lbl_8052C000
 
 .global lbl_806645A0
 lbl_806645A0:
-	.4byte lbl_804F7938
+	.4byte cf_CfCollImpl_typestr
 	.4byte 0
 
 
-.global lbl_806645A8
-lbl_806645A8:
+.global cf_CfObjectPoint_RTTI
+cf_CfObjectPoint_RTTI:
 	# ROM: 0x570188
-	.4byte lbl_804F7948
+	.4byte cf_CfObjectPoint_typestr
 	.4byte lbl_8052C00C
 
 
@@ -480,9 +480,9 @@ lbl_806645B4:
 	# ROM: 0x570194
 	.4byte lbl_804F7970
 
-.global lbl_806645B8
-lbl_806645B8:
-	.4byte lbl_804F7980
+.global cf_CfObjectEne_RTTI
+cf_CfObjectEne_RTTI:
+	.4byte cf_CfObjectEne_typestr
 	.4byte lbl_8052C7CC
 
 
@@ -521,68 +521,68 @@ lbl_806645D4:
 	# ROM: 0x5701B4
 	.4byte 0xFFFFFFFC
 
-.global lbl_806645D8
-lbl_806645D8:
-	.4byte lbl_804F7C70
+.global reslist_cf_IFactoryEvent_RTTI
+reslist_cf_IFactoryEvent_RTTI:
+	.4byte reslist_cf_IFactoryEvent_typestr
 	.4byte lbl_8052C87C
 
-.global lbl_806645E0
-lbl_806645E0:
-	.4byte lbl_804F7C90
+.global _reslist_base_cf_IFactoryEvent_RTTI
+_reslist_base_cf_IFactoryEvent_RTTI:
+	.4byte _reslist_base_cf_IFactoryEvent_typestr
 	.4byte 0
 
-.global lbl_806645E8
-lbl_806645E8:
-	.4byte lbl_804F7CB4
+.global reslist_cf_TboxInfo_RTTI
+reslist_cf_TboxInfo_RTTI:
+	.4byte reslist_cf_TboxInfo_typestr
 	.4byte lbl_8052C8A0
 
-.global lbl_806645F0
-lbl_806645F0:
-	.4byte lbl_804F7CCC
+.global _reslist_base_cf_TboxInfo_RTTI
+_reslist_base_cf_TboxInfo_RTTI:
+	.4byte _reslist_base_cf_TboxInfo_typestr
 	.4byte 0
 
-.global lbl_806645F8
-lbl_806645F8:
-	.4byte lbl_804F7CE8
+.global reslist_cf_CfObject_RTTI
+reslist_cf_CfObject_RTTI:
+	.4byte reslist_cf_CfObject_typestr
 	.4byte lbl_8052C8C4
 
-.global lbl_80664600
-lbl_80664600:
-	.4byte lbl_804F7D50
+.global cf_CfObjectMap_RTTI
+cf_CfObjectMap_RTTI:
+	.4byte cf_CfObjectMap_typestr
 	.4byte lbl_8052CAC0
 
-.global lbl_80664608
-lbl_80664608:
-	.4byte lbl_804F7D98
+.global cf_CfObjectNpc_RTTI
+cf_CfObjectNpc_RTTI:
+	.4byte cf_CfObjectNpc_typestr
 	.4byte lbl_8052D2B8
 
 
-.global lbl_80664610
-lbl_80664610:
+.global cf_CfObjectTbox_RTTI
+cf_CfObjectTbox_RTTI:
 	# ROM: 0x5701F0
-	.4byte lbl_804F7DD8
+	.4byte cf_CfObjectTbox_typestr
 	.4byte lbl_8052D2E8
 
 
-.global lbl_80664618
-lbl_80664618:
+.global cf_CfObjectObj_RTTI
+cf_CfObjectObj_RTTI:
 	# ROM: 0x5701F8
-	.4byte lbl_804F7DF0
+	.4byte cf_CfObjectObj_typestr
 	.4byte lbl_8052D540
 
-.global lbl_80664620
-lbl_80664620:
-	.4byte lbl_804F7E9C
+.global cf_CfObjectImplWalker_RTTI
+cf_CfObjectImplWalker_RTTI:
+	.4byte cf_CfObjectImplWalker_typestr
 	.4byte lbl_8052DE30
 
-.global lbl_80664628
-lbl_80664628:
-	.4byte lbl_804F7FB8
+.global cf_CfObjectImplObj_RTTI
+cf_CfObjectImplObj_RTTI:
+	.4byte cf_CfObjectImplObj_typestr
 	.4byte lbl_8052E1A8
 
-.global lbl_80664630
-lbl_80664630:
-	.4byte lbl_804F7FF8
+.global cf_CfObjectImplNpc_RTTI
+cf_CfObjectImplNpc_RTTI:
+	.4byte cf_CfObjectImplNpc_typestr
 	.4byte lbl_8052E2E8
 
 
@@ -599,64 +599,64 @@ lbl_80664640:
 	.4byte lbl_806695A0
 	.4byte 0
 
-.global lbl_80664648
-lbl_80664648:
-	.4byte lbl_804F8018
+.global cf_CfObjectImplEne_RTTI
+cf_CfObjectImplEne_RTTI:
+	.4byte cf_CfObjectImplEne_typestr
 	.4byte lbl_8052E698
 
-.global lbl_80664650
-lbl_80664650:
-	.4byte lbl_804F8390
+.global cf_CBattleManager_RTTI
+cf_CBattleManager_RTTI:
+	.4byte cf_CBattleManager_typestr
 	.4byte lbl_8052F4F0
 
-.global lbl_80664658
-lbl_80664658:
-	.4byte lbl_804F83A4
+.global reslist_cf_IBattleEvent_RTTI
+reslist_cf_IBattleEvent_RTTI:
+	.4byte reslist_cf_IBattleEvent_typestr
 	.4byte lbl_8052F508
 
-.global lbl_80664660
-lbl_80664660:
-	.4byte lbl_804F83C0
+.global _reslist_base_cf_IBattleEvent_RTTI
+_reslist_base_cf_IBattleEvent_RTTI:
+	.4byte _reslist_base_cf_IBattleEvent_typestr
 	.4byte 0
 
-.global lbl_80664668
-lbl_80664668:
-	.4byte lbl_804F83E4
+.global reslist_cf_CfObjectActor_RTTI
+reslist_cf_CfObjectActor_RTTI:
+	.4byte reslist_cf_CfObjectActor_typestr
 	.4byte lbl_8052F52C
 
-.global lbl_80664670
-lbl_80664670:
-	.4byte lbl_804F8404
+.global _reslist_base_cf_CfObjectActor_RTTI
+_reslist_base_cf_CfObjectActor_RTTI:
+	.4byte _reslist_base_cf_CfObjectActor_typestr
 	.4byte 0
 
-.global lbl_80664678
-lbl_80664678:
-	.4byte lbl_804F8428
+.global cf_CChainTime_RTTI
+cf_CChainTime_RTTI:
+	.4byte cf_CChainTime_typestr
 	.4byte 0
 
 .global lbl_80664680
 lbl_80664680:
-	.4byte lbl_804F8484
+	.4byte cf_IFactoryEvent_typestr
 	.4byte 0
 
-.global lbl_80664688
-lbl_80664688:
-	.4byte lbl_804F84B8
+.global cf_CfObjEnumList_RTTI
+cf_CfObjEnumList_RTTI:
+	.4byte cf_CfObjEnumList_typestr
 	.4byte lbl_8052F55C
 
 .global lbl_80664690
 lbl_80664690:
-	.4byte lbl_804F84CC
+	.4byte cf_CfObjEnumList_OBJ_LIST_typestr
 	.4byte lbl_8052F590
 
 .global lbl_80664698
 lbl_80664698:
-	.4byte lbl_804F84E8
+	.4byte QSort_cf_CfObjEnumList_sObjInfo_float_typestr
 	.4byte 0
 
 .global lbl_806646A0
 lbl_806646A0:
-	.4byte lbl_804F8514
+	.4byte fixvector_cf_CfObjEnumList_sObjInfo_384_typestr
 	.4byte 0
 
 
@@ -666,9 +666,9 @@ lbl_806646A8:
 	.4byte 0x402CCCCD
 	.4byte 0
 
-.global lbl_806646B0
-lbl_806646B0:
-	.4byte lbl_804F8550
+.global cf_CfObjectSelectorObj_RTTI
+cf_CfObjectSelectorObj_RTTI:
+	.4byte cf_CfObjectSelectorObj_typestr
 	.4byte 0
 
 
@@ -678,19 +678,19 @@ lbl_806646B8:
 	.4byte lbl_804F8568
 	.4byte 0
 
-.global lbl_806646C0
-lbl_806646C0:
-	.4byte lbl_804F86A8
+.global CMainMenu_RTTI
+CMainMenu_RTTI:
+	.4byte CMainMenu_typestr
 	.4byte lbl_8052F6B8
 
-.global lbl_806646C8
-lbl_806646C8:
-	.4byte lbl_804F86B4
+.global CMainCur_RTTI
+CMainCur_RTTI:
+	.4byte CMainCur_typestr
 	.4byte lbl_8052F710
 
 .global lbl_806646D0
 lbl_806646D0:
-	.4byte lbl_804F86C0
+	.4byte CBaseCur_typestr
 	.4byte 0
 
 .global lbl_806646D8
@@ -698,24 +698,24 @@ lbl_806646D8:
 	.4byte lbl_806697E8
 	.4byte lbl_8052F71C
 
-.global lbl_806646E0
-lbl_806646E0:
-	.4byte lbl_804F86CC
+.global CTTask_IUICf_RTTI
+CTTask_IUICf_RTTI:
+	.4byte CTTask_IUICf_typestr
 	.4byte lbl_8052F764
 
-.global lbl_806646E8
-lbl_806646E8:
-	.4byte lbl_804F8978
+.global CMenuArtsSelect_RTTI
+CMenuArtsSelect_RTTI:
+	.4byte CMenuArtsSelect_typestr
 	.4byte lbl_8052F928
 
 .global lbl_806646F0
 lbl_806646F0:
-	.4byte lbl_804F89A8
+	.4byte IUIBattle_typestr
 	.4byte lbl_8052F96C
 
-.global lbl_806646F8
-lbl_806646F8:
-	.4byte lbl_804F89B4
+.global CTTask_IUIBattle_RTTI
+CTTask_IUIBattle_RTTI:
+	.4byte CTTask_IUIBattle_typestr
 	.4byte lbl_8052F9B4
 
 
@@ -725,39 +725,39 @@ lbl_80664700:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80664708
-lbl_80664708:
-	.4byte lbl_804F8D30
+.global CMenuBattleDamage_RTTI
+CMenuBattleDamage_RTTI:
+	.4byte CMenuBattleDamage_typestr
 	.4byte lbl_8052FAC0
 
-.global lbl_80664710
-lbl_80664710:
-	.4byte lbl_804F8F3C
+.global CMenuBattlePlayerState_RTTI
+CMenuBattlePlayerState_RTTI:
+	.4byte CMenuBattlePlayerState_typestr
 	.4byte lbl_8052FBC0
 
-.global lbl_80664718
-lbl_80664718:
-	.4byte lbl_804F8F54
+.global CPcSelectCursor01_RTTI
+CPcSelectCursor01_RTTI:
+	.4byte CPcSelectCursor01_typestr
 	.4byte 0
 
-.global lbl_80664720
-lbl_80664720:
-	.4byte lbl_804F9420
+.global CMenuEnemyState_RTTI
+CMenuEnemyState_RTTI:
+	.4byte CMenuEnemyState_typestr
 	.4byte lbl_8052FCC8
 
-.global lbl_80664728
-lbl_80664728:
-	.4byte lbl_804F9430
+.global CPcSelectCursor_RTTI
+CPcSelectCursor_RTTI:
+	.4byte CPcSelectCursor_typestr
 	.4byte 0
 
-.global lbl_80664730
-lbl_80664730:
-	.4byte lbl_804F96E0
+.global CMenuFade_RTTI
+CMenuFade_RTTI:
+	.4byte CMenuFade_typestr
 	.4byte lbl_8052FDD0
 
-.global lbl_80664738
-lbl_80664738:
-	.4byte lbl_804F9720
+.global CMenuKeyAssign_RTTI
+CMenuKeyAssign_RTTI:
+	.4byte CMenuKeyAssign_typestr
 	.4byte lbl_8052FED0
 
 
@@ -767,44 +767,44 @@ lbl_80664740:
 	.float 0.2
 	.4byte 0
 
-.global lbl_80664748
-lbl_80664748:
-	.4byte lbl_804F9A1C
+.global CMenuMiniMap2_RTTI
+CMenuMiniMap2_RTTI:
+	.4byte CMenuMiniMap2_typestr
 	.4byte lbl_805300E8
 
-.global lbl_80664750
-lbl_80664750:
-	.4byte lbl_804F9A2C
+.global CMiniMap_RTTI
+CMiniMap_RTTI:
+	.4byte CMiniMap_typestr
 	.4byte lbl_805301B0
 
-.global lbl_80664758
-lbl_80664758:
-	.4byte lbl_8066998C
+.global CMMTex_RTTI
+CMMTex_RTTI:
+	.4byte CMMTex_typestr
 	.4byte lbl_80530248
 
-.global lbl_80664760
-lbl_80664760:
-	.4byte lbl_804F9A38
+.global CMMClock_RTTI
+CMMClock_RTTI:
+	.4byte CMMClock_typestr
 	.4byte lbl_805302E0
 
-.global lbl_80664768
-lbl_80664768:
-	.4byte lbl_804F9D48
+.global CMenuQuestLog_RTTI
+CMenuQuestLog_RTTI:
+	.4byte CMenuQuestLog_typestr
 	.4byte lbl_80530440
 
-.global lbl_80664770
-lbl_80664770:
-	.4byte lbl_804F9F30
+.global CArrow3D_RTTI
+CArrow3D_RTTI:
+	.4byte CArrow3D_typestr
 	.4byte lbl_80530558
 
-.global lbl_80664778
-lbl_80664778:
-	.4byte lbl_804F9F3C
+.global CTTask_CArrow3D_RTTI
+CTTask_CArrow3D_RTTI:
+	.4byte CTTask_CArrow3D_typestr
 	.4byte lbl_805305A8
 
-.global lbl_80664780
-lbl_80664780:
-	.4byte lbl_804F9F50
+.global CMenuSymbolMark_RTTI
+CMenuSymbolMark_RTTI:
+	.4byte CMenuSymbolMark_typestr
 	.4byte lbl_80530688
 
 
@@ -850,171 +850,171 @@ lbl_806647B0:
 	.4byte lbl_804FA048
 	.4byte 0
 
-.global lbl_806647B8
-lbl_806647B8:
-	.4byte lbl_804FA494
+.global CQuestWindow_RTTI
+CQuestWindow_RTTI:
+	.4byte CQuestWindow_typestr
 	.4byte lbl_80530984
 
 
-.global lbl_806647C0
-lbl_806647C0:
+.global IUIWindow_RTTI
+IUIWindow_RTTI:
 	# ROM: 0x5703A0
-	.4byte lbl_804FA4A4
+	.4byte IUIWindow_typestr
 	.4byte lbl_805309E4
 
-.global lbl_806647C8
-lbl_806647C8:
-	.4byte lbl_804FA4B0
+.global CTTask_IUIWindow_RTTI
+CTTask_IUIWindow_RTTI:
+	.4byte CTTask_IUIWindow_typestr
 	.4byte lbl_80530A2C
 
-.global lbl_806647D0
-lbl_806647D0:
-	.4byte lbl_804FA7D8
+.global CSysWinSelect_RTTI
+CSysWinSelect_RTTI:
+	.4byte CSysWinSelect_typestr
 	.4byte lbl_80530B08
 
-.global lbl_806647D8
-lbl_806647D8:
-	.4byte lbl_804FA7E8
+.global CSystemWindow_RTTI
+CSystemWindow_RTTI:
+	.4byte CSystemWindow_typestr
 	.4byte lbl_80530C08
 
-.global lbl_806647E0
-lbl_806647E0:
-	.4byte lbl_804FAFF8
+.global _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_typestr
 	.4byte lbl_80530E00
 
-.global lbl_806647E8
-lbl_806647E8:
-	.4byte lbl_804FB02C
+.global _unnamed_CTagProcessor_cpp_CTagCodeShop_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeShop_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeShop_typestr
 	.4byte lbl_80530E28
 
-.global lbl_806647F0
-lbl_806647F0:
-	.4byte lbl_804FB058
+.global _unnamed_CTagProcessor_cpp_CTagCodeExchange_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeExchange_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeExchange_typestr
 	.4byte lbl_80530E50
 
-.global lbl_806647F8
-lbl_806647F8:
-	.4byte lbl_804FB088
+.global _unnamed_CTagProcessor_cpp_CTagCodeTailOff_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeTailOff_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTailOff_typestr
 	.4byte lbl_80530E78
 
-.global lbl_80664800
-lbl_80664800:
-	.4byte lbl_804FB0B8
+.global _unnamed_CTagProcessor_cpp_CTagCodePresent_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodePresent_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodePresent_typestr
 	.4byte lbl_80530EA0
 
-.global lbl_80664808
-lbl_80664808:
-	.4byte lbl_804FB0E8
+.global _unnamed_CTagProcessor_cpp_CTagCodeQstStart_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeQstStart_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQstStart_typestr
 	.4byte lbl_80530EC8
 
-.global lbl_80664810
-lbl_80664810:
-	.4byte lbl_804FB118
+.global _unnamed_CTagProcessor_cpp_CTagCodeInvisible_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeInvisible_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeInvisible_typestr
 	.4byte lbl_80530EF0
 
-.global lbl_80664818
-lbl_80664818:
-	.4byte lbl_804FB148
+.global _unnamed_CTagProcessor_cpp_CTagCodeQuest_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeQuest_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQuest_typestr
 	.4byte lbl_80530F18
 
-.global lbl_80664820
-lbl_80664820:
-	.4byte lbl_804FB174
+.global _unnamed_CTagProcessor_cpp_CTagCodeFade_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeFade_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeFade_typestr
 	.4byte lbl_80530F40
 
-.global lbl_80664828
-lbl_80664828:
-	.4byte lbl_804FB1A0
+.global _unnamed_CTagProcessor_cpp_CTagCodeAct_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeAct_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeAct_typestr
 	.4byte lbl_80530F68
 
-.global lbl_80664830
-lbl_80664830:
-	.4byte lbl_804FB1CC
+.global _unnamed_CTagProcessor_cpp_CTagCodeSelect2_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeSelect2_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect2_typestr
 	.4byte lbl_80530F90
 
-.global lbl_80664838
-lbl_80664838:
-	.4byte lbl_804FB1FC
+.global _unnamed_CTagProcessor_cpp_CTagCodeSelect_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeSelect_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect_typestr
 	.4byte lbl_80530FB8
 
-.global lbl_80664840
-lbl_80664840:
-	.4byte lbl_804FB228
+.global _unnamed_CTagProcessor_cpp_CTagCodeLine_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeLine_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeLine_typestr
 	.4byte lbl_80530FE0
 
-.global lbl_80664848
-lbl_80664848:
-	.4byte lbl_804FB254
+.global _unnamed_CTagProcessor_cpp_CTagCodeMouth_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeMouth_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMouth_typestr
 	.4byte lbl_80531008
 
-.global lbl_80664850
-lbl_80664850:
-	.4byte lbl_804FB280
+.global _unnamed_CTagProcessor_cpp_CTagCodePos_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodePos_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodePos_typestr
 	.4byte lbl_80531030
 
-.global lbl_80664858
-lbl_80664858:
-	.4byte lbl_804FB2AC
+.global _unnamed_CTagProcessor_cpp_CTagCodeType_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeType_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeType_typestr
 	.4byte lbl_80531058
 
-.global lbl_80664860
-lbl_80664860:
-	.4byte lbl_804FB2D8
+.global _unnamed_CTagProcessor_cpp_CTagCodeTrust_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeTrust_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTrust_typestr
 	.4byte lbl_80531080
 
-.global lbl_80664868
-lbl_80664868:
-	.4byte lbl_804FB304
+.global _unnamed_CTagProcessor_cpp_CTagCodeCol_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeCol_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCol_typestr
 	.4byte lbl_80531100
 
-.global lbl_80664870
-lbl_80664870:
-	.4byte lbl_804FB330
+.global _unnamed_CTagProcessor_cpp_CTagCodeRuby_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeRuby_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeRuby_typestr
 	.4byte lbl_80531128
 
-.global lbl_80664878
-lbl_80664878:
-	.4byte lbl_804FB35C
+.global _unnamed_CTagProcessor_cpp_CTagCodeDel_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeDel_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeDel_typestr
 	.4byte lbl_80531150
 
-.global lbl_80664880
-lbl_80664880:
-	.4byte lbl_804FB388
+.global _unnamed_CTagProcessor_cpp_CTagCodeWait_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeWait_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeWait_typestr
 	.4byte lbl_80531178
 
-.global lbl_80664888
-lbl_80664888:
-	.4byte lbl_804FB3B8
+.global _unnamed_CTagProcessor_cpp_CTagCodeCP_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeCP_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCP_typestr
 	.4byte lbl_805311A0
 
-.global lbl_80664890
-lbl_80664890:
-	.4byte lbl_804FB3E0
+.global _unnamed_CTagProcessor_cpp_CTagCodeCL_RTTI
+_unnamed_CTagProcessor_cpp_CTagCodeCL_RTTI:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCL_typestr
 	.4byte lbl_805311C8
 
 .global lbl_80664898
 lbl_80664898:
-	.4byte lbl_804FB408
+	.4byte _unnamed_CTagProcessor_cpp_ITagCode_typestr
 	.4byte 0
 
-.global lbl_806648A0
-lbl_806648A0:
-	.4byte lbl_804FB430
+.global CTagProcessorSE_RTTI
+CTagProcessorSE_RTTI:
+	.4byte CTagProcessorSE_typestr
 	.4byte lbl_805311F0
 
-.global lbl_806648A8
-lbl_806648A8:
-	.4byte lbl_804FB440
+.global CTagProcessor_RTTI
+CTagProcessor_RTTI:
+	.4byte CTagProcessor_typestr
 	.4byte lbl_80531220
 
-.global lbl_806648B0
-lbl_806648B0:
-	.4byte lbl_804FB450
+.global CTagProcessorBase_RTTI
+CTagProcessorBase_RTTI:
+	.4byte CTagProcessorBase_typestr
 	.4byte lbl_80531250
 
 .global lbl_806648B8
 lbl_806648B8:
-	.4byte lbl_804FB464
+	.4byte nw4r_ut_TagProcessorBase_wchar_t_typestr
 	.4byte 0
 
 
@@ -1235,40 +1235,40 @@ lbl_806648C0:
 	.2byte 0
 
 
-.global lbl_80664A68
-lbl_80664A68:
+.global CTalkWindow_RTTI
+CTalkWindow_RTTI:
 	# ROM: 0x570648
-	.4byte lbl_804FB4D8
+	.4byte CTalkWindow_typestr
 	.4byte lbl_80531838
 
-.global lbl_80664A70
-lbl_80664A70:
-	.4byte lbl_804FB6D0
+.global CUIBattleManager_RTTI
+CUIBattleManager_RTTI:
+	.4byte CUIBattleManager_typestr
 	.4byte lbl_80531940
 
-.global lbl_80664A78
-lbl_80664A78:
-	.4byte lbl_804FB6E4
+.global reslist_IUIBattle_RTTI
+reslist_IUIBattle_RTTI:
+	.4byte reslist_IUIBattle_typestr
 	.4byte lbl_80531978
 
-.global lbl_80664A80
-lbl_80664A80:
-	.4byte lbl_804FB6FC
+.global _reslist_base_IUIBattle_RTTI
+_reslist_base_IUIBattle_RTTI:
+	.4byte _reslist_base_IUIBattle_typestr
 	.4byte 0
 
-.global lbl_80664A88
-lbl_80664A88:
-	.4byte lbl_804FB718
+.global CUIBattleManager_CTest_RTTI
+CUIBattleManager_CTest_RTTI:
+	.4byte CUIBattleManager_CTest_typestr
 	.4byte lbl_805319B4
 
-.global lbl_80664A90
-lbl_80664A90:
-	.4byte lbl_804FB730
+.global CTTask_CUIBattleManager_CTest_RTTI
+CTTask_CUIBattleManager_CTest_RTTI:
+	.4byte CTTask_CUIBattleManager_CTest_typestr
 	.4byte lbl_805319FC
 
-.global lbl_80664A98
-lbl_80664A98:
-	.4byte lbl_804FB750
+.global CTTask_CUIBattleManager_RTTI
+CTTask_CUIBattleManager_RTTI:
+	.4byte CTTask_CUIBattleManager_typestr
 	.4byte lbl_80531A3C
 
 
@@ -1278,39 +1278,39 @@ lbl_80664AA0:
 	.4byte lbl_804FB800
 	.4byte 0
 
-.global lbl_80664AA8
-lbl_80664AA8:
-	.4byte lbl_804FB84C
+.global CUICfManager_RTTI
+CUICfManager_RTTI:
+	.4byte CUICfManager_typestr
 	.4byte lbl_80531B34
 
-.global lbl_80664AB0
-lbl_80664AB0:
-	.4byte lbl_804FB85C
+.global reslist_IUICf_RTTI
+reslist_IUICf_RTTI:
+	.4byte reslist_IUICf_typestr
 	.4byte lbl_80531B74
 
-.global lbl_80664AB8
-lbl_80664AB8:
-	.4byte lbl_804FB870
+.global _reslist_base_IUICf_RTTI
+_reslist_base_IUICf_RTTI:
+	.4byte _reslist_base_IUICf_typestr
 	.4byte 0
 
-.global lbl_80664AC0
-lbl_80664AC0:
-	.4byte lbl_804FB888
+.global CUICfManager_CTest_RTTI
+CUICfManager_CTest_RTTI:
+	.4byte CUICfManager_CTest_typestr
 	.4byte lbl_80531BB0
 
-.global lbl_80664AC8
-lbl_80664AC8:
-	.4byte lbl_804FB89C
+.global CTTask_CUICfManager_CTest_RTTI
+CTTask_CUICfManager_CTest_RTTI:
+	.4byte CTTask_CUICfManager_CTest_typestr
 	.4byte lbl_80531BF8
 
-.global lbl_80664AD0
-lbl_80664AD0:
-	.4byte lbl_804FB8B8
+.global CTTask_CUICfManager_RTTI
+CTTask_CUICfManager_RTTI:
+	.4byte CTTask_CUICfManager_typestr
 	.4byte lbl_80531C38
 
 .global lbl_80664AD8
 lbl_80664AD8:
-	.4byte lbl_804FB8D0
+	.4byte cf_IFlagEvent_typestr
 	.4byte 0
 
 
@@ -1332,34 +1332,34 @@ lbl_80664AE8:
 	.4byte 0x01000000
 	.4byte 0
 
-.global lbl_80664AF0
-lbl_80664AF0:
-	.4byte lbl_804FC110
+.global CUIWindowManager_RTTI
+CUIWindowManager_RTTI:
+	.4byte CUIWindowManager_typestr
 	.4byte lbl_80531DA8
 
-.global lbl_80664AF8
-lbl_80664AF8:
-	.4byte lbl_804FC124
+.global reslist_IUIWindow_RTTI
+reslist_IUIWindow_RTTI:
+	.4byte reslist_IUIWindow_typestr
 	.4byte lbl_80531DE0
 
-.global lbl_80664B00
-lbl_80664B00:
-	.4byte lbl_804FC13C
+.global _reslist_base_IUIWindow_RTTI
+_reslist_base_IUIWindow_RTTI:
+	.4byte _reslist_base_IUIWindow_typestr
 	.4byte 0
 
-.global lbl_80664B08
-lbl_80664B08:
-	.4byte lbl_804FC158
+.global CUIWindowManager_CTest_RTTI
+CUIWindowManager_CTest_RTTI:
+	.4byte CUIWindowManager_CTest_typestr
 	.4byte lbl_80531E1C
 
-.global lbl_80664B10
-lbl_80664B10:
-	.4byte lbl_804FC170
+.global CTTask_CUIWindowManager_CTest_RTTI
+CTTask_CUIWindowManager_CTest_RTTI:
+	.4byte CTTask_CUIWindowManager_CTest_typestr
 	.4byte lbl_80531E64
 
-.global lbl_80664B18
-lbl_80664B18:
-	.4byte lbl_804FC190
+.global CTTask_CUIWindowManager_RTTI
+CTTask_CUIWindowManager_RTTI:
+	.4byte CTTask_CUIWindowManager_typestr
 	.4byte lbl_80531EA4
 
 
@@ -1369,19 +1369,19 @@ lbl_80664B20:
 	.4byte 0x70633100
 	.4byte 0
 
-.global lbl_80664B28
-lbl_80664B28:
-	.4byte lbl_804FC7C8
+.global cf_CfBdat_RTTI
+cf_CfBdat_RTTI:
+	.4byte cf_CfBdat_typestr
 	.4byte lbl_80531F70
 
-.global lbl_80664B30
-lbl_80664B30:
-	.4byte lbl_804FCBE8
+.global CMenuUpdate_RTTI
+CMenuUpdate_RTTI:
+	.4byte CMenuUpdate_typestr
 	.4byte lbl_80532040
 
-.global lbl_80664B38
-lbl_80664B38:
-	.4byte lbl_804FCF40
+.global CMenuLandTelop_RTTI
+CMenuLandTelop_RTTI:
+	.4byte CMenuLandTelop_typestr
 	.4byte lbl_80532140
 
 
@@ -1391,39 +1391,39 @@ lbl_80664B40:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80664B48
-lbl_80664B48:
-	.4byte lbl_804FD0F0
+.global CMenuGetItem_RTTI
+CMenuGetItem_RTTI:
+	.4byte CMenuGetItem_typestr
 	.4byte lbl_805322D0
 
-.global lbl_80664B50
-lbl_80664B50:
-	.4byte lbl_804FD268
+.global cf_CAttackSet_RTTI
+cf_CAttackSet_RTTI:
+	.4byte cf_CAttackSet_typestr
 	.4byte lbl_80532D84
 
 .global lbl_80664B58
 lbl_80664B58:
-	.4byte lbl_804FD278
+	.4byte cf__sAttackSet_typestr
 	.4byte 0
 
-.global lbl_80664B60
-lbl_80664B60:
-	.4byte lbl_804FD288
+.global cf_CArtsSet_RTTI
+cf_CArtsSet_RTTI:
+	.4byte cf_CArtsSet_typestr
 	.4byte lbl_80532D9C
 
-.global lbl_80664B68
-lbl_80664B68:
-	.4byte lbl_804FD298
+.global cf__sArtsSet_RTTI
+cf__sArtsSet_RTTI:
+	.4byte cf__sArtsSet_typestr
 	.4byte 0
 
-.global lbl_80664B70
-lbl_80664B70:
-	.4byte lbl_804FD2A8
+.global cf_CArtsParam_RTTI
+cf_CArtsParam_RTTI:
+	.4byte cf_CArtsParam_typestr
 	.4byte lbl_80532DD0
 
-.global lbl_80664B78
-lbl_80664B78:
-	.4byte lbl_804FD2B8
+.global cf_CAttackParam_RTTI
+cf_CAttackParam_RTTI:
+	.4byte cf_CAttackParam_typestr
 	.4byte 0
 
 
@@ -1557,77 +1557,77 @@ lbl_80664BD4:
 .global lbl_80664BD8
 lbl_80664BD8:
 	# ROM: 0x5707B8
-	.4byte lbl_804FD3B8
+	.4byte materia1Per_typestr
 	.4byte 0
 
-.global lbl_80664BE0
-lbl_80664BE0:
-	.4byte lbl_804FD3C4
+.global cf_ItemPurifyKessyouImpl_RTTI
+cf_ItemPurifyKessyouImpl_RTTI:
+	.4byte cf_ItemPurifyKessyouImpl_typestr
 	.4byte lbl_80532FE0
 
-.global lbl_80664BE8
-lbl_80664BE8:
-	.4byte lbl_804FD3E0
+.global cf_ItemKessyouImpl_RTTI
+cf_ItemKessyouImpl_RTTI:
+	.4byte cf_ItemKessyouImpl_typestr
 	.4byte lbl_80533098
 
-.global lbl_80664BF0
-lbl_80664BF0:
-	.4byte lbl_804FD3F4
+.global cf_ItemPurifyCrystalImpl_RTTI
+cf_ItemPurifyCrystalImpl_RTTI:
+	.4byte cf_ItemPurifyCrystalImpl_typestr
 	.4byte lbl_80533148
 
-.global lbl_80664BF8
-lbl_80664BF8:
-	.4byte lbl_804FD410
+.global cf_ItemDropCrystalImpl_RTTI
+cf_ItemDropCrystalImpl_RTTI:
+	.4byte cf_ItemDropCrystalImpl_typestr
 	.4byte lbl_80533200
 
-.global lbl_80664C00
-lbl_80664C00:
-	.4byte lbl_804FD428
+.global cf_ItemCrystalImpl_RTTI
+cf_ItemCrystalImpl_RTTI:
+	.4byte cf_ItemCrystalImpl_typestr
 	.4byte lbl_805332B8
 
-.global lbl_80664C08
-lbl_80664C08:
-	.4byte lbl_804FD43C
+.global cf_ItemEquipImpl_RTTI
+cf_ItemEquipImpl_RTTI:
+	.4byte cf_ItemEquipImpl_typestr
 	.4byte lbl_80533368
 
-.global lbl_80664C10
-lbl_80664C10:
-	.4byte lbl_804FD450
+.global cf_ItemConsImpl_RTTI
+cf_ItemConsImpl_RTTI:
+	.4byte cf_ItemConsImpl_typestr
 	.4byte lbl_80533418
 
-.global lbl_80664C18
-lbl_80664C18:
-	.4byte lbl_804FD464
+.global cf_ItemDummyImpl_RTTI
+cf_ItemDummyImpl_RTTI:
+	.4byte cf_ItemDummyImpl_typestr
 	.4byte lbl_805334C8
 
 .global lbl_80664C20
 lbl_80664C20:
-	.4byte lbl_804FD478
+	.4byte cf_ItemImpl_typestr
 	.4byte 0
 
-.global lbl_80664C28
-lbl_80664C28:
-	.4byte lbl_804FD658
+.global cf_CCharEffect_RTTI
+cf_CCharEffect_RTTI:
+	.4byte cf_CCharEffect_typestr
 	.4byte 0
 
-.global lbl_80664C30
-lbl_80664C30:
-	.4byte lbl_804FD6D0
+.global cf_CCharEffectEne_RTTI
+cf_CCharEffectEne_RTTI:
+	.4byte cf_CCharEffectEne_typestr
 	.4byte lbl_805335C8
 
-.global lbl_80664C38
-lbl_80664C38:
-	.4byte lbl_804FD740
+.global cf_CCharEffectNpc_RTTI
+cf_CCharEffectNpc_RTTI:
+	.4byte cf_CCharEffectNpc_typestr
 	.4byte lbl_805335F8
 
-.global lbl_80664C40
-lbl_80664C40:
-	.4byte lbl_804FD7B0
+.global cf_CCharEffectObj_RTTI
+cf_CCharEffectObj_RTTI:
+	.4byte cf_CCharEffectObj_typestr
 	.4byte lbl_80533628
 
-.global lbl_80664C48
-lbl_80664C48:
-	.4byte lbl_804FD820
+.global cf_CCharEffectPc_RTTI
+cf_CCharEffectPc_RTTI:
+	.4byte cf_CCharEffectPc_typestr
 	.4byte lbl_80533658
 
 
@@ -1642,24 +1642,24 @@ lbl_80664C54:
 	# ROM: 0x570834
 	.4byte 0xFFFFFFFF
 
-.global lbl_80664C58
-lbl_80664C58:
-	.4byte lbl_804FD84C
+.global CCol6Invite_RTTI
+CCol6Invite_RTTI:
+	.4byte CCol6Invite_typestr
 	.4byte lbl_805337B8
 
-.global lbl_80664C60
-lbl_80664C60:
-	.4byte lbl_804FD858
+.global CCol6System_RTTI
+CCol6System_RTTI:
+	.4byte CCol6System_typestr
 	.4byte lbl_805338B0
 
-.global lbl_80664C68
-lbl_80664C68:
-	.4byte lbl_804FD864
+.global CCol6Hint_RTTI
+CCol6Hint_RTTI:
+	.4byte CCol6Hint_typestr
 	.4byte lbl_805339B0
 
-.global lbl_80664C70
-lbl_80664C70:
-	.4byte lbl_804FD870
+.global CCol6CheckBat_RTTI
+CCol6CheckBat_RTTI:
+	.4byte CCol6CheckBat_typestr
 	.4byte lbl_80533A98
 
 
@@ -1674,39 +1674,39 @@ lbl_80664C7C:
 	# ROM: 0x57085C
 	.4byte 0x00000064
 
-.global lbl_80664C80
-lbl_80664C80:
-	.4byte lbl_804FE810
+.global cf_CTaskREvent_RTTI
+cf_CTaskREvent_RTTI:
+	.4byte cf_CTaskREvent_typestr
 	.4byte lbl_80534054
 
-.global lbl_80664C88
-lbl_80664C88:
-	.4byte lbl_804FE820
+.global CTTask_cf_CTaskREvent_RTTI
+CTTask_cf_CTaskREvent_RTTI:
+	.4byte CTTask_cf_CTaskREvent_typestr
 	.4byte lbl_8053409C
 
-.global lbl_80664C90
-lbl_80664C90:
-	.4byte lbl_804FE850
+.global cf_CInfoCf_RTTI
+cf_CInfoCf_RTTI:
+	.4byte cf_CInfoCf_typestr
 	.4byte 0
 
-.global lbl_80664C98
-lbl_80664C98:
-	.4byte lbl_804FE860
+.global CMenuItem_RTTI
+CMenuItem_RTTI:
+	.4byte CMenuItem_typestr
 	.4byte lbl_805341C8
 
-.global lbl_80664CA0
-lbl_80664CA0:
-	.4byte lbl_804FE880
+.global cf_CREvtMem_RTTI
+cf_CREvtMem_RTTI:
+	.4byte cf_CREvtMem_typestr
 	.4byte 0
 
-.global lbl_80664CA8
-lbl_80664CA8:
-	.4byte lbl_804FE890
+.global cf_CTaskREvtSequence_RTTI
+cf_CTaskREvtSequence_RTTI:
+	.4byte cf_CTaskREvtSequence_typestr
 	.4byte lbl_805343A0
 
-.global lbl_80664CB0
-lbl_80664CB0:
-	.4byte lbl_804FE8A8
+.global CTTask_cf_CTaskREvtSequence_RTTI
+CTTask_cf_CTaskREvtSequence_RTTI:
+	.4byte CTTask_cf_CTaskREvtSequence_typestr
 	.4byte lbl_805343E8
 
 
@@ -1733,19 +1733,19 @@ lbl_80664CC4:
 	# ROM: 0x5708A4
 	.4byte 0x72656600
 
-.global lbl_80664CC8
-lbl_80664CC8:
-	.4byte lbl_804FE930
+.global cf_CfResObjImpl_RTTI
+cf_CfResObjImpl_RTTI:
+	.4byte cf_CfResObjImpl_typestr
 	.4byte lbl_80534780
 
 .global lbl_80664CD0
 lbl_80664CD0:
-	.4byte lbl_804FE944
+	.4byte cf_CfResImpl_typestr
 	.4byte 0
 
-.global lbl_80664CD8
-lbl_80664CD8:
-	.4byte lbl_804FE958
+.global cf_CfResReloadImpl_RTTI
+cf_CfResReloadImpl_RTTI:
+	.4byte cf_CfResReloadImpl_typestr
 	.4byte lbl_80534828
 
 
@@ -1760,33 +1760,33 @@ lbl_80664CE4:
 	# ROM: 0x5708C4
 	.4byte lbl_80669FC8
 
-.global lbl_80664CE8
-lbl_80664CE8:
-	.4byte lbl_804FEA60
+.global cf_CfMapEffectManager_RTTI
+cf_CfMapEffectManager_RTTI:
+	.4byte cf_CfMapEffectManager_typestr
 	.4byte 0
 
 
-.global lbl_80664CF0
-lbl_80664CF0:
+.global CScnMaruShadowNw4r_RTTI
+CScnMaruShadowNw4r_RTTI:
 	# ROM: 0x5708D0
-	.4byte lbl_804FEB30
+	.4byte CScnMaruShadowNw4r_typestr
 	.4byte lbl_80534E40
 
 
 .global lbl_80664CF8
 lbl_80664CF8:
 	# ROM: 0x5708D8
-	.4byte lbl_804FEB44
+	.4byte IScnPolyShadow_typestr
 	.4byte 0
 
-.global lbl_80664D00
-lbl_80664D00:
-	.4byte lbl_804FEB54
+.global cf_CREvtModel_RTTI
+cf_CREvtModel_RTTI:
+	.4byte cf_CREvtModel_typestr
 	.4byte lbl_80534E90
 
-.global lbl_80664D08
-lbl_80664D08:
-	.4byte lbl_804FEB64
+.global cf_CREvtObj_RTTI
+cf_CREvtObj_RTTI:
+	.4byte cf_CREvtObj_typestr
 	.4byte 0
 
 
@@ -1812,19 +1812,19 @@ lbl_80664D18:
 lbl_80664D20:
 	.asciz "itm?Per"
 
-.global lbl_80664D28
-lbl_80664D28:
-	.4byte lbl_804FEBC0
+.global cf_CfValueItemManager_RTTI
+cf_CfValueItemManager_RTTI:
+	.4byte cf_CfValueItemManager_typestr
 	.4byte lbl_80534EB8
 
-.global lbl_80664D30
-lbl_80664D30:
-	.4byte lbl_804FEBD8
+.global cf_CfMapItemManager_RTTI
+cf_CfMapItemManager_RTTI:
+	.4byte cf_CfMapItemManager_typestr
 	.4byte 0
 
-.global lbl_80664D38
-lbl_80664D38:
-	.4byte lbl_804FEC78
+.global CMenuZeal_RTTI
+CMenuZeal_RTTI:
+	.4byte CMenuZeal_typestr
 	.4byte lbl_80535478
 
 
@@ -1839,24 +1839,24 @@ lbl_80664D44:
 	# ROM: 0x570924
 	.4byte lbl_8066A160
 
-.global lbl_80664D48
-lbl_80664D48:
-	.4byte lbl_804FEEF8
+.global cf_CREvtCamera_RTTI
+cf_CREvtCamera_RTTI:
+	.4byte cf_CREvtCamera_typestr
 	.4byte lbl_805354E0
 
-.global lbl_80664D50
-lbl_80664D50:
-	.4byte lbl_804FEF48
+.global cf_CREvtModelMap_RTTI
+cf_CREvtModelMap_RTTI:
+	.4byte cf_CREvtModelMap_typestr
 	.4byte lbl_80535620
 
-.global lbl_80664D58
-lbl_80664D58:
-	.4byte lbl_804FEF78
+.global cf_CREvtModelObj_RTTI
+cf_CREvtModelObj_RTTI:
+	.4byte cf_CREvtModelObj_typestr
 	.4byte lbl_80535854
 
-.global lbl_80664D60
-lbl_80664D60:
-	.4byte lbl_804FF000
+.global cf_CREvtModelPc_RTTI
+cf_CREvtModelPc_RTTI:
+	.4byte cf_CREvtModelPc_typestr
 	.4byte lbl_80535A90
 
 
@@ -1878,14 +1878,14 @@ lbl_80664D70:
 	.4byte lbl_8066A1F8
 	.4byte 0
 
-.global lbl_80664D78
-lbl_80664D78:
-	.4byte lbl_804FF018
+.global cf_CREvtEffect_RTTI
+cf_CREvtEffect_RTTI:
+	.4byte cf_CREvtEffect_typestr
 	.4byte lbl_80535AE4
 
-.global lbl_80664D80
-lbl_80664D80:
-	.4byte lbl_804FF1E0
+.global CMenuPTGauge_RTTI
+CMenuPTGauge_RTTI:
+	.4byte CMenuPTGauge_typestr
 	.4byte lbl_80535CE0
 
 
@@ -1919,50 +1919,50 @@ lbl_80664D98:
 	.float 0.2
 	.4byte 0
 
-.global lbl_80664DA0
-lbl_80664DA0:
-	.4byte lbl_804FF2F8
+.global CMenuSelectShop_RTTI
+CMenuSelectShop_RTTI:
+	.4byte CMenuSelectShop_typestr
 	.4byte lbl_80535DE0
 
-.global lbl_80664DA8
-lbl_80664DA8:
-	.4byte lbl_804FF318
+.global CMenuShopSell_RTTI
+CMenuShopSell_RTTI:
+	.4byte CMenuShopSell_typestr
 	.4byte lbl_80535E58
 
-.global lbl_80664DB0
-lbl_80664DB0:
-	.4byte lbl_804FF338
+.global CMenuShopBuy_RTTI
+CMenuShopBuy_RTTI:
+	.4byte CMenuShopBuy_typestr
 	.4byte lbl_80535EC8
 
 
-.global lbl_80664DB8
-lbl_80664DB8:
+.global CScnItemModelNw4r_RTTI
+CScnItemModelNw4r_RTTI:
 	# ROM: 0x570998
-	.4byte lbl_804FF3A8
+	.4byte CScnItemModelNw4r_typestr
 	.4byte lbl_80535F30
 
-.global lbl_80664DC0
-lbl_80664DC0:
-	.4byte lbl_804FF3C0
+.global cf_CfResPcImpl_RTTI
+cf_CfResPcImpl_RTTI:
+	.4byte cf_CfResPcImpl_typestr
 	.4byte lbl_80535FB0
 
 
-.global lbl_80664DC8
-lbl_80664DC8:
+.global CScnItemModel_RTTI
+CScnItemModel_RTTI:
 	# ROM: 0x5709A8
-	.4byte lbl_804FF3D0
+	.4byte CScnItemModel_typestr
 	.4byte lbl_80535FBC
 
 
 .global lbl_80664DD0
 lbl_80664DD0:
 	# ROM: 0x5709B0
-	.4byte lbl_804FF3E0
+	.4byte CScnItem_typestr
 	.4byte 0
 
-.global lbl_80664DD8
-lbl_80664DD8:
-	.4byte lbl_804FF400
+.global CMenuPTState_RTTI
+CMenuPTState_RTTI:
+	.4byte CMenuPTState_typestr
 	.4byte lbl_80536228
 
 
@@ -1972,9 +1972,9 @@ lbl_80664DE0:
 	.4byte lbl_8066A370
 	.4byte 0
 
-.global lbl_80664DE8
-lbl_80664DE8:
-	.4byte lbl_804FF410
+.global cf_CPartsChange_RTTI
+cf_CPartsChange_RTTI:
+	.4byte cf_CPartsChange_typestr
 	.4byte 0
 
 
@@ -2030,54 +2030,54 @@ lbl_80664E20:
 	.4byte 0x000001CC
 	.4byte 0x01CD01CE
 
-.global lbl_80664E28
-lbl_80664E28:
-	.4byte lbl_804FF430
+.global reslist_cf_CfPartyInfo_RTTI
+reslist_cf_CfPartyInfo_RTTI:
+	.4byte reslist_cf_CfPartyInfo_typestr
 	.4byte lbl_80536290
 
-.global lbl_80664E30
-lbl_80664E30:
-	.4byte lbl_804FF44C
+.global _reslist_base_cf_CfPartyInfo_RTTI
+_reslist_base_cf_CfPartyInfo_RTTI:
+	.4byte _reslist_base_cf_CfPartyInfo_typestr
 	.4byte 0
 
-.global lbl_80664E38
-lbl_80664E38:
-	.4byte lbl_804FF538
+.global cf_CtrlMovePC_RTTI
+cf_CtrlMovePC_RTTI:
+	.4byte cf_CtrlMovePC_typestr
 	.4byte lbl_8053651C
 
-.global lbl_80664E40
-lbl_80664E40:
-	.4byte lbl_804FF548
+.global cf_CtrlMoveNpc_RTTI
+cf_CtrlMoveNpc_RTTI:
+	.4byte cf_CtrlMoveNpc_typestr
 	.4byte lbl_80536578
 
-.global lbl_80664E48
-lbl_80664E48:
-	.4byte lbl_804FF598
+.global CMenuBattleMode_RTTI
+CMenuBattleMode_RTTI:
+	.4byte CMenuBattleMode_typestr
 	.4byte lbl_80536648
 
-.global lbl_80664E50
-lbl_80664E50:
-	.4byte lbl_804FF610
+.global COccCulling_RTTI
+COccCulling_RTTI:
+	.4byte COccCulling_typestr
 	.4byte 0
 
-.global lbl_80664E58
-lbl_80664E58:
-	.4byte lbl_804FF628
+.global CSimpleEveTalkWin_RTTI
+CSimpleEveTalkWin_RTTI:
+	.4byte CSimpleEveTalkWin_typestr
 	.4byte lbl_80536758
 
-.global lbl_80664E60
-lbl_80664E60:
-	.4byte lbl_804FF750
+.global cf_CTaskCulling_RTTI
+cf_CTaskCulling_RTTI:
+	.4byte cf_CTaskCulling_typestr
 	.4byte lbl_8053687C
 
-.global lbl_80664E68
-lbl_80664E68:
-	.4byte lbl_804FF764
+.global CTTask_cf_CTaskCulling_RTTI
+CTTask_cf_CTaskCulling_RTTI:
+	.4byte CTTask_cf_CTaskCulling_typestr
 	.4byte lbl_805368C4
 
-.global lbl_80664E70
-lbl_80664E70:
-	.4byte lbl_804FF7BC
+.global cf_CVision_RTTI
+cf_CVision_RTTI:
+	.4byte cf_CVision_typestr
 	.4byte lbl_80536AC0
 
 
@@ -2164,29 +2164,29 @@ lbl_80664EAC:
 	# ROM: 0x570A8C
 	.4byte 0x808080FF
 
-.global lbl_80664EB0
-lbl_80664EB0:
-	.4byte lbl_804FFA80
+.global CMenuVision_RTTI
+CMenuVision_RTTI:
+	.4byte CMenuVision_typestr
 	.4byte lbl_80536DB0
 
-.global lbl_80664EB8
-lbl_80664EB8:
-	.4byte lbl_80500010
+.global CMenuBattleCommu_RTTI
+CMenuBattleCommu_RTTI:
+	.4byte CMenuBattleCommu_typestr
 	.4byte lbl_80536EB0
 
-.global lbl_80664EC0
-lbl_80664EC0:
-	.4byte lbl_80500228
+.global cf_CPcEffect07_RTTI
+cf_CPcEffect07_RTTI:
+	.4byte cf_CPcEffect07_typestr
 	.4byte lbl_80536F30
 
 .global lbl_80664EC8
 lbl_80664EC8:
-	.4byte lbl_80500238
+	.4byte cf_IPcEffect_typestr
 	.4byte 0
 
-.global lbl_80664ED0
-lbl_80664ED0:
-	.4byte lbl_80500248
+.global CMenuGetItemMulti_RTTI
+CMenuGetItemMulti_RTTI:
+	.4byte CMenuGetItemMulti_typestr
 	.4byte lbl_80537138
 
 
@@ -2236,19 +2236,19 @@ lbl_80664F00:
 	.4byte 0x03EB03EC
 	.4byte 0x03EE0000
 
-.global lbl_80664F08
-lbl_80664F08:
-	.4byte lbl_80500904
+.global cf_CSuddenCommu_RTTI
+cf_CSuddenCommu_RTTI:
+	.4byte cf_CSuddenCommu_typestr
 	.4byte lbl_80537188
 
-.global lbl_80664F10
-lbl_80664F10:
-	.4byte lbl_80500928
+.global CMenuKizunaTalk_RTTI
+CMenuKizunaTalk_RTTI:
+	.4byte CMenuKizunaTalk_typestr
 	.4byte lbl_80537314
 
-.global lbl_80664F18
-lbl_80664F18:
-	.4byte lbl_80500B28
+.global CMenuItemExchange_RTTI
+CMenuItemExchange_RTTI:
+	.4byte CMenuItemExchange_typestr
 	.4byte lbl_805373B0
 
 
@@ -2265,154 +2265,154 @@ lbl_80664F28:
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
-.global lbl_80664F30
-lbl_80664F30:
-	.4byte lbl_80500B50
+.global cf_CfPadTask_RTTI
+cf_CfPadTask_RTTI:
+	.4byte cf_CfPadTask_typestr
 	.4byte lbl_8053749C
 
-.global lbl_80664F38
-lbl_80664F38:
-	.4byte lbl_80500B60
+.global CTTask_cf_CfPadTask_RTTI
+CTTask_cf_CfPadTask_RTTI:
+	.4byte CTTask_cf_CfPadTask_typestr
 	.4byte lbl_805374E4
 
-.global lbl_80664F40
-lbl_80664F40:
-	.4byte lbl_80500B78
+.global cf_CREvtLight_RTTI
+cf_CREvtLight_RTTI:
+	.4byte cf_CREvtLight_typestr
 	.4byte lbl_80537570
 
-.global lbl_80664F48
-lbl_80664F48:
-	.4byte lbl_8066A7D8
+.global CBgTex_RTTI
+CBgTex_RTTI:
+	.4byte CBgTex_typestr
 	.4byte lbl_80537608
 
-.global lbl_80664F50
-lbl_80664F50:
-	.4byte lbl_80500CB8
+.global CTitleAHelp_RTTI
+CTitleAHelp_RTTI:
+	.4byte CTitleAHelp_typestr
 	.4byte lbl_80537D40
 
-.global lbl_80664F58
-lbl_80664F58:
-	.4byte lbl_80500E3C
+.global CItemBoxGrid_RTTI
+CItemBoxGrid_RTTI:
+	.4byte CItemBoxGrid_typestr
 	.4byte lbl_80537F80
 
-.global lbl_80664F60
-lbl_80664F60:
-	.4byte lbl_80500E4C
+.global CArtsBookItem_RTTI
+CArtsBookItem_RTTI:
+	.4byte CArtsBookItem_typestr
 	.4byte lbl_80537FA0
 
-.global lbl_80664F68
-lbl_80664F68:
-	.4byte lbl_80500E5C
+.global CVisionItem_RTTI
+CVisionItem_RTTI:
+	.4byte CVisionItem_typestr
 	.4byte lbl_80537FC0
 
-.global lbl_80664F70
-lbl_80664F70:
-	.4byte lbl_80500E68
+.global CQuestItem_RTTI
+CQuestItem_RTTI:
+	.4byte CQuestItem_typestr
 	.4byte 0
 
-.global lbl_80664F78
-lbl_80664F78:
-	.4byte lbl_8066A868
+.global CSubCur_RTTI
+CSubCur_RTTI:
+	.4byte CSubCur_typestr
 	.4byte lbl_80538008
 
-.global lbl_80664F80
-lbl_80664F80:
-	.4byte lbl_8066A870
+.global CCur22_RTTI
+CCur22_RTTI:
+	.4byte CCur22_typestr
 	.4byte lbl_80538030
 
-.global lbl_80664F88
-lbl_80664F88:
-	.4byte lbl_8066A878
+.global CCur18_RTTI
+CCur18_RTTI:
+	.4byte CCur18_typestr
 	.4byte lbl_80538058
 
-.global lbl_80664F90
-lbl_80664F90:
-	.4byte lbl_8066A880
+.global CCur16_RTTI
+CCur16_RTTI:
+	.4byte CCur16_typestr
 	.4byte lbl_80538080
 
-.global lbl_80664F98
-lbl_80664F98:
-	.4byte lbl_8066A888
+.global CCur15_RTTI
+CCur15_RTTI:
+	.4byte CCur15_typestr
 	.4byte lbl_805380A8
 
-.global lbl_80664FA0
-lbl_80664FA0:
-	.4byte lbl_8066A890
+.global CCur14_RTTI
+CCur14_RTTI:
+	.4byte CCur14_typestr
 	.4byte lbl_805380D0
 
-.global lbl_80664FA8
-lbl_80664FA8:
-	.4byte lbl_8066A898
+.global CCur11_RTTI
+CCur11_RTTI:
+	.4byte CCur11_typestr
 	.4byte lbl_805380F8
 
-.global lbl_80664FB0
-lbl_80664FB0:
-	.4byte lbl_8066A8A0
+.global CCur09_RTTI
+CCur09_RTTI:
+	.4byte CCur09_typestr
 	.4byte lbl_80538120
 
-.global lbl_80664FB8
-lbl_80664FB8:
-	.4byte lbl_8066A8A8
+.global CCur07_RTTI
+CCur07_RTTI:
+	.4byte CCur07_typestr
 	.4byte lbl_80538148
 
-.global lbl_80664FC0
-lbl_80664FC0:
-	.4byte lbl_80501A10
+.global CSortMenu_RTTI
+CSortMenu_RTTI:
+	.4byte CSortMenu_typestr
 	.4byte lbl_80538210
 
-.global lbl_80664FC8
-lbl_80664FC8:
-	.4byte lbl_80501B6C
+.global CItemBoxInfo2_RTTI
+CItemBoxInfo2_RTTI:
+	.4byte CItemBoxInfo2_typestr
 	.4byte lbl_805382D0
 
-.global lbl_80664FD0
-lbl_80664FD0:
-	.4byte lbl_80501B7C
+.global CItemBoxInfo_RTTI
+CItemBoxInfo_RTTI:
+	.4byte CItemBoxInfo_typestr
 	.4byte lbl_80538368
 
-.global lbl_80664FD8
-lbl_80664FD8:
-	.4byte lbl_805023A0
+.global CNumSelect_RTTI
+CNumSelect_RTTI:
+	.4byte CNumSelect_typestr
 	.4byte lbl_80538400
 
-.global lbl_80664FE0
-lbl_80664FE0:
-	.4byte lbl_80502910
+.global CItemBoxLine_RTTI
+CItemBoxLine_RTTI:
+	.4byte CItemBoxLine_typestr
 	.4byte lbl_80538528
 
-.global lbl_80664FE8
-lbl_80664FE8:
-	.4byte lbl_80502920
+.global CIBLTabCur_RTTI
+CIBLTabCur_RTTI:
+	.4byte CIBLTabCur_typestr
 	.4byte lbl_80538550
 
-.global lbl_80664FF0
-lbl_80664FF0:
-	.4byte lbl_80503198
+.global CScrollBar_RTTI
+CScrollBar_RTTI:
+	.4byte CScrollBar_typestr
 	.4byte lbl_80538618
 
-.global lbl_80664FF8
-lbl_80664FF8:
-	.4byte lbl_80503294
+.global cf_CfGimmickObject_RTTI
+cf_CfGimmickObject_RTTI:
+	.4byte cf_CfGimmickObject_typestr
 	.4byte lbl_8053874C
 
-.global lbl_80665000
-lbl_80665000:
-	.4byte lbl_805032A8
+.global cf_CfGimmick_RTTI
+cf_CfGimmick_RTTI:
+	.4byte cf_CfGimmick_typestr
 	.4byte lbl_80538760
 
-.global lbl_80665008
-lbl_80665008:
-	.4byte lbl_805033B8
+.global cf_CfResTboxImpl_RTTI
+cf_CfResTboxImpl_RTTI:
+	.4byte cf_CfResTboxImpl_typestr
 	.4byte lbl_80538A28
 
-.global lbl_80665010
-lbl_80665010:
-	.4byte lbl_805033DC
+.global CPartyStateWin_RTTI
+CPartyStateWin_RTTI:
+	.4byte CPartyStateWin_typestr
 	.4byte lbl_80538B30
 
-.global lbl_80665018
-lbl_80665018:
-	.4byte lbl_80503440
+.global CModelDisp_RTTI
+CModelDisp_RTTI:
+	.4byte CModelDisp_typestr
 	.4byte lbl_80538B74
 
 
@@ -2422,9 +2422,9 @@ lbl_80665020:
 	.4byte lbl_80503460
 	.4byte 0
 
-.global lbl_80665028
-lbl_80665028:
-	.4byte lbl_8050348C
+.global CPartyState_RTTI
+CPartyState_RTTI:
+	.4byte CPartyState_typestr
 	.4byte lbl_80538C08
 
 
@@ -2434,14 +2434,14 @@ lbl_80665030:
 	.4byte 0x00000007
 	.4byte 0x00000012
 
-.global lbl_80665038
-lbl_80665038:
-	.4byte lbl_80503740
+.global CModelDispEquip_RTTI
+CModelDispEquip_RTTI:
+	.4byte CModelDispEquip_typestr
 	.4byte lbl_80538D5C
 
-.global lbl_80665040
-lbl_80665040:
-	.4byte lbl_805038A8
+.global CEquipChange_RTTI
+CEquipChange_RTTI:
+	.4byte CEquipChange_typestr
 	.4byte lbl_80538EC8
 
 
@@ -2464,19 +2464,19 @@ lbl_80665058:
 	.4byte 0x0000000A
 	.4byte 0x0000000A
 
-.global lbl_80665060
-lbl_80665060:
-	.4byte lbl_80503AE8
+.global reslist_cf_CfMapMineManager_MinePoint_RTTI
+reslist_cf_CfMapMineManager_MinePoint_RTTI:
+	.4byte reslist_cf_CfMapMineManager_MinePoint_typestr
 	.4byte lbl_80538EF0
 
-.global lbl_80665068
-lbl_80665068:
-	.4byte lbl_80503B14
+.global _reslist_base_cf_CfMapMineManager_MinePoint_RTTI
+_reslist_base_cf_CfMapMineManager_MinePoint_RTTI:
+	.4byte _reslist_base_cf_CfMapMineManager_MinePoint_typestr
 	.4byte 0
 
-.global lbl_80665070
-lbl_80665070:
-	.4byte lbl_80503BC8
+.global CItemBoxGridSubMenu_RTTI
+CItemBoxGridSubMenu_RTTI:
+	.4byte CItemBoxGridSubMenu_typestr
 	.4byte lbl_80538F90
 
 
@@ -2498,9 +2498,9 @@ lbl_80665080:
 	.4byte lbl_80503D48
 	.4byte 0
 
-.global lbl_80665088
-lbl_80665088:
-	.4byte lbl_80503D88
+.global cf_CfGimmickElv_RTTI
+cf_CfGimmickElv_RTTI:
+	.4byte cf_CfGimmickElv_typestr
 	.4byte lbl_805390A4
 
 
@@ -2510,19 +2510,19 @@ lbl_80665090:
 	.4byte lbl_8066AC68
 	.4byte 0
 
-.global lbl_80665098
-lbl_80665098:
-	.4byte lbl_80503DF8
+.global cf_CfGimmickLock_RTTI
+cf_CfGimmickLock_RTTI:
+	.4byte cf_CfGimmickLock_typestr
 	.4byte lbl_805390DC
 
-.global lbl_806650A0
-lbl_806650A0:
-	.4byte lbl_80503E18
+.global cf_CfGimmickWarp_RTTI
+cf_CfGimmickWarp_RTTI:
+	.4byte cf_CfGimmickWarp_typestr
 	.4byte lbl_8053918C
 
-.global lbl_806650A8
-lbl_806650A8:
-	.4byte lbl_80503E48
+.global cf_CfGimmickJump_RTTI
+cf_CfGimmickJump_RTTI:
+	.4byte cf_CfGimmickJump_typestr
 	.4byte lbl_805391F4
 
 
@@ -2532,104 +2532,104 @@ lbl_806650B0:
 	.4byte lbl_8066ACF8
 	.4byte lbl_8066AD00
 
-.global lbl_806650B8
-lbl_806650B8:
-	.4byte lbl_80503EB8
+.global cf_CfGimmickItem_RTTI
+cf_CfGimmickItem_RTTI:
+	.4byte cf_CfGimmickItem_typestr
 	.4byte lbl_80539274
 
-.global lbl_806650C0
-lbl_806650C0:
-	.4byte lbl_80503F30
+.global CMenuMakeCrystal_RTTI
+CMenuMakeCrystal_RTTI:
+	.4byte CMenuMakeCrystal_typestr
 	.4byte lbl_805392C0
 
-.global lbl_806650C8
-lbl_806650C8:
-	.4byte lbl_80503F48
+.global CMakeCrystalWin_RTTI
+CMakeCrystalWin_RTTI:
+	.4byte CMakeCrystalWin_typestr
 	.4byte lbl_805393C4
 
-.global lbl_806650D0
-lbl_806650D0:
-	.4byte lbl_80503F9C
+.global CMCCrystalBox_RTTI
+CMCCrystalBox_RTTI:
+	.4byte CMCCrystalBox_typestr
 	.4byte lbl_805394A0
 
-.global lbl_806650D8
-lbl_806650D8:
-	.4byte lbl_80504500
+.global CMCCrystalInfo_RTTI
+CMCCrystalInfo_RTTI:
+	.4byte CMCCrystalInfo_typestr
 	.4byte lbl_80539538
 
-.global lbl_806650E0
-lbl_806650E0:
-	.4byte lbl_805047FC
+.global CModelDispMakeCrystal_RTTI
+CModelDispMakeCrystal_RTTI:
+	.4byte CModelDispMakeCrystal_typestr
 	.4byte lbl_805396F0
 
-.global lbl_806650E8
-lbl_806650E8:
-	.4byte lbl_80504920
+.global CMCCylinderGauge_RTTI
+CMCCylinderGauge_RTTI:
+	.4byte CMCCylinderGauge_typestr
 	.4byte 0
 
-.global lbl_806650F0
-lbl_806650F0:
-	.4byte lbl_805049C0
+.global CMCCrystalList_RTTI
+CMCCrystalList_RTTI:
+	.4byte CMCCrystalList_typestr
 	.4byte lbl_805397C0
 
-.global lbl_806650F8
-lbl_806650F8:
-	.4byte lbl_80504C58
+.global CMCEffCylinder_RTTI
+CMCEffCylinder_RTTI:
+	.4byte CMCEffCylinder_typestr
 	.4byte 0
 
-.global lbl_80665100
-lbl_80665100:
-	.4byte lbl_80504C68
+.global CMCEffDivide_RTTI
+CMCEffDivide_RTTI:
+	.4byte CMCEffDivide_typestr
 	.4byte lbl_805397F4
 
-.global lbl_80665108
-lbl_80665108:
-	.4byte lbl_80504C78
+.global CMCEffUpRank_RTTI
+CMCEffUpRank_RTTI:
+	.4byte CMCEffUpRank_typestr
 	.4byte lbl_80539814
 
-.global lbl_80665110
-lbl_80665110:
-	.4byte lbl_80504C88
+.global CMCEffCrystal_RTTI
+CMCEffCrystal_RTTI:
+	.4byte CMCEffCrystal_typestr
 	.4byte 0
 
-.global lbl_80665118
-lbl_80665118:
-	.4byte lbl_80504C98
+.global CMCEffFailure_RTTI
+CMCEffFailure_RTTI:
+	.4byte CMCEffFailure_typestr
 	.4byte lbl_80539844
 
-.global lbl_80665120
-lbl_80665120:
-	.4byte lbl_80504CA8
+.global CMCEffSuccess_RTTI
+CMCEffSuccess_RTTI:
+	.4byte CMCEffSuccess_typestr
 	.4byte 0
 
-.global lbl_80665128
-lbl_80665128:
-	.4byte lbl_80504CB8
+.global CMCEffUpPrm_RTTI
+CMCEffUpPrm_RTTI:
+	.4byte CMCEffUpPrm_typestr
 	.4byte 0
 
-.global lbl_80665130
-lbl_80665130:
-	.4byte lbl_80504CC4
+.global CMCEffUpGreen_RTTI
+CMCEffUpGreen_RTTI:
+	.4byte CMCEffUpGreen_typestr
 	.4byte lbl_80539880
 
-.global lbl_80665138
-lbl_80665138:
-	.4byte lbl_80504CD4
+.global CMCEffUpBlue_RTTI
+CMCEffUpBlue_RTTI:
+	.4byte CMCEffUpBlue_typestr
 	.4byte lbl_805398A0
 
-.global lbl_80665140
-lbl_80665140:
-	.4byte lbl_80504CE4
+.global CMCEffUpRed_RTTI
+CMCEffUpRed_RTTI:
+	.4byte CMCEffUpRed_typestr
 	.4byte lbl_805398C0
 
-.global lbl_80665148
-lbl_80665148:
-	.4byte lbl_80504CF0
+.global CMCEffStart_RTTI
+CMCEffStart_RTTI:
+	.4byte CMCEffStart_typestr
 	.4byte 0
 
-.global lbl_80665150
-lbl_80665150:
-	.4byte lbl_80505110
+.global CMenuQstCnt_RTTI
+CMenuQstCnt_RTTI:
+	.4byte CMenuQstCnt_typestr
 	.4byte lbl_805399A0
 
 
@@ -2639,44 +2639,44 @@ lbl_80665158:
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
-.global lbl_80665160
-lbl_80665160:
-	.4byte lbl_805051B8
+.global CQstLogList_RTTI
+CQstLogList_RTTI:
+	.4byte CQstLogList_typestr
 	.4byte lbl_80539AC8
 
-.global lbl_80665168
-lbl_80665168:
-	.4byte lbl_805057B8
+.global CQstLogInfo_RTTI
+CQstLogInfo_RTTI:
+	.4byte CQstLogInfo_typestr
 	.4byte lbl_80539CB8
 
-.global lbl_80665170
-lbl_80665170:
-	.4byte lbl_8066AEB8
+.global CSysWin_RTTI
+CSysWin_RTTI:
+	.4byte CSysWin_typestr
 	.4byte lbl_80539D54
 
-.global lbl_80665178
-lbl_80665178:
-	.4byte lbl_80505D20
+.global CSelShopWin_RTTI
+CSelShopWin_RTTI:
+	.4byte CSelShopWin_typestr
 	.4byte lbl_80539DE8
 
-.global lbl_80665180
-lbl_80665180:
-	.4byte lbl_80505E30
+.global CExchangeWin_RTTI
+CExchangeWin_RTTI:
+	.4byte CExchangeWin_typestr
 	.4byte lbl_80539E80
 
-.global lbl_80665188
-lbl_80665188:
-	.4byte lbl_80505F40
+.global CPresentWin_RTTI
+CPresentWin_RTTI:
+	.4byte CPresentWin_typestr
 	.4byte lbl_80539F18
 
-.global lbl_80665190
-lbl_80665190:
-	.4byte lbl_80506128
+.global CMCCrystalSupport_RTTI
+CMCCrystalSupport_RTTI:
+	.4byte CMCCrystalSupport_typestr
 	.4byte lbl_80539FB0
 
-.global lbl_80665198
-lbl_80665198:
-	.4byte lbl_80506188
+.global CMenuArtsSet_RTTI
+CMenuArtsSet_RTTI:
+	.4byte CMenuArtsSet_typestr
 	.4byte lbl_80539FF8
 
 
@@ -2686,14 +2686,14 @@ lbl_806651A0:
 	.4byte 0x01000000
 	.4byte 0
 
-.global lbl_806651A8
-lbl_806651A8:
-	.4byte lbl_80506360
+.global CArtsList_RTTI
+CArtsList_RTTI:
+	.4byte CArtsList_typestr
 	.4byte lbl_8053A148
 	
-.global lbl_806651B0
-lbl_806651B0:
-	.4byte lbl_80506700
+.global CArtsInfo_RTTI
+CArtsInfo_RTTI:
+	.4byte CArtsInfo_typestr
 	.4byte lbl_8053A2C8
 
 
@@ -2703,119 +2703,119 @@ lbl_806651B8:
 	.4byte lbl_8066AF90
 	.4byte 0
 
-.global lbl_806651C0
-lbl_806651C0:
-	.4byte lbl_80506B40
+.global cf_CfNandManager_RTTI
+cf_CfNandManager_RTTI:
+	.4byte cf_CfNandManager_typestr
 	.4byte lbl_8053A438
 
-.global lbl_806651C8
-lbl_806651C8:
-	.4byte lbl_80506B54
+.global CTTask_cf_CfNandManager_RTTI
+CTTask_cf_CfNandManager_RTTI:
+	.4byte CTTask_cf_CfNandManager_typestr
 	.4byte lbl_8053A490
 
-.global lbl_806651D0
-lbl_806651D0:
-	.4byte lbl_80506B88
+.global CMenuMapSelect_RTTI
+CMenuMapSelect_RTTI:
+	.4byte CMenuMapSelect_typestr
 	.4byte lbl_8053A518
 
-.global lbl_806651D8
-lbl_806651D8:
-	.4byte lbl_8066B000
+.global CMapSel_RTTI
+CMapSel_RTTI:
+	.4byte CMapSel_typestr
 	.4byte lbl_8053A650
 
-.global lbl_806651E0
-lbl_806651E0:
-	.4byte lbl_8066B00C
+.global CFade_RTTI
+CFade_RTTI:
+	.4byte CFade_typestr
 	.4byte lbl_8053A6E8
 
-.global lbl_806651E8
-lbl_806651E8:
-	.4byte lbl_80507500
+.global CFloorMap_RTTI
+CFloorMap_RTTI:
+	.4byte CFloorMap_typestr
 	.4byte lbl_8053A868
 
-.global lbl_806651F0
-lbl_806651F0:
-	.4byte lbl_8050750C
+.global CTargetCur_RTTI
+CTargetCur_RTTI:
+	.4byte CTargetCur_typestr
 	.4byte lbl_8053A880
 
-.global lbl_806651F8
-lbl_806651F8:
-	.4byte lbl_80507518
+.global CLandCur_RTTI
+CLandCur_RTTI:
+	.4byte CLandCur_typestr
 	.4byte lbl_8053A898
 
-.global lbl_80665200
-lbl_80665200:
-	.4byte lbl_80507524
+.global CFloorMarker_RTTI
+CFloorMarker_RTTI:
+	.4byte CFloorMarker_typestr
 	.4byte lbl_8053A8B0
 
-.global lbl_80665208
-lbl_80665208:
-	.4byte lbl_80507534
+.global CFloorCur_RTTI
+CFloorCur_RTTI:
+	.4byte CFloorCur_typestr
 	.4byte 0
 
-.global lbl_80665210
-lbl_80665210:
-	.4byte lbl_80507C20
+.global CMenuMapSelectSC_RTTI
+CMenuMapSelectSC_RTTI:
+	.4byte CMenuMapSelectSC_typestr
 	.4byte lbl_8053A920
 
-.global lbl_80665218
-lbl_80665218:
-	.4byte lbl_80507C48
+.global CMenuPause_RTTI
+CMenuPause_RTTI:
+	.4byte CMenuPause_typestr
 	.4byte lbl_8053AA18
 
-.global lbl_80665220
-lbl_80665220:
-	.4byte lbl_80507D08
+.global CMenuCollepedia_RTTI
+CMenuCollepedia_RTTI:
+	.4byte CMenuCollepedia_typestr
 	.4byte lbl_8053AA90
 
-.global lbl_80665228
-lbl_80665228:
-	.4byte lbl_80507D6C
+.global CCollepedia_RTTI
+CCollepedia_RTTI:
+	.4byte CCollepedia_typestr
 	.4byte lbl_8053AC20
 
-.global lbl_80665230
-lbl_80665230:
-	.4byte lbl_8066B0D0
+.global CCLPCur_RTTI
+CCLPCur_RTTI:
+	.4byte CCLPCur_typestr
 	.4byte 0
 
-.global lbl_80665238
-lbl_80665238:
-	.4byte lbl_80508130
+.global CMenuKizunagram_RTTI
+CMenuKizunagram_RTTI:
+	.4byte CMenuKizunagram_typestr
 	.4byte lbl_8053ACA0
 
-.global lbl_80665240
-lbl_80665240:
-	.4byte lbl_80508168
+.global CKizunagram_RTTI
+CKizunagram_RTTI:
+	.4byte CKizunagram_typestr
 	.4byte lbl_8053AD90
 
-.global lbl_80665248
-lbl_80665248:
-	.4byte lbl_80508174
+.global CKizunaInfo_RTTI
+CKizunaInfo_RTTI:
+	.4byte CKizunaInfo_typestr
 	.4byte 0
 
-.global lbl_80665250
-lbl_80665250:
-	.4byte lbl_80508180
+.global CKizunaLine_RTTI
+CKizunaLine_RTTI:
+	.4byte CKizunaLine_typestr
 	.4byte 0
 
-.global lbl_80665258
-lbl_80665258:
-	.4byte lbl_8050818C
+.global CKizunaCur_RTTI
+CKizunaCur_RTTI:
+	.4byte CKizunaCur_typestr
 	.4byte 0
 
-.global lbl_80665260
-lbl_80665260:
-	.4byte lbl_80508198
+.global CKizunaRadar_RTTI
+CKizunaRadar_RTTI:
+	.4byte CKizunaRadar_typestr
 	.4byte 0
 
-.global lbl_80665268
-lbl_80665268:
-	.4byte lbl_80508EE0
+.global CPcKizunagram_RTTI
+CPcKizunagram_RTTI:
+	.4byte CPcKizunagram_typestr
 	.4byte lbl_8053AE58
 
-.global lbl_80665270
-lbl_80665270:
-	.4byte lbl_80508EF0
+.global CPcKizunaCur_RTTI
+CPcKizunaCur_RTTI:
+	.4byte CPcKizunaCur_typestr
 	.4byte 0
 
 
@@ -2825,29 +2825,29 @@ lbl_80665278:
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
-.global lbl_80665280
-lbl_80665280:
-	.4byte lbl_805091D0
+.global CMenuPassiveSkill_RTTI
+CMenuPassiveSkill_RTTI:
+	.4byte CMenuPassiveSkill_typestr
 	.4byte lbl_8053B0A0
 
-.global lbl_80665288
-lbl_80665288:
-	.4byte lbl_8050925C
+.global UI_CPassiveSkill_RTTI
+UI_CPassiveSkill_RTTI:
+	.4byte UI_CPassiveSkill_typestr
 	.4byte lbl_8053B1A8
 
-.global lbl_80665290
-lbl_80665290:
-	.4byte lbl_80509270
+.global UI_CPassiveSkillLine_RTTI
+UI_CPassiveSkillLine_RTTI:
+	.4byte UI_CPassiveSkillLine_typestr
 	.4byte 0
 
-.global lbl_80665298
-lbl_80665298:
-	.4byte lbl_80509288
+.global UI_CPassiveSkillInfo_RTTI
+UI_CPassiveSkillInfo_RTTI:
+	.4byte UI_CPassiveSkillInfo_typestr
 	.4byte 0
 
-.global lbl_806652A0
-lbl_806652A0:
-	.4byte lbl_805092A0
+.global UI_CPassiveSkillCur_RTTI
+UI_CPassiveSkillCur_RTTI:
+	.4byte UI_CPassiveSkillCur_typestr
 	.4byte 0
 
 
@@ -2857,69 +2857,69 @@ lbl_806652A8:
 	.4byte lbl_8066B20C
 	.4byte 0
 
-.global lbl_806652B0
-lbl_806652B0:
-	.4byte lbl_80509D20
+.global cf_CfGimmickEne_RTTI
+cf_CfGimmickEne_RTTI:
+	.4byte cf_CfGimmickEne_typestr
 	.4byte lbl_8053B254
 
-.global lbl_806652B8
-lbl_806652B8:
-	.4byte lbl_80509D78
+.global CMenuBattleEnd_RTTI
+CMenuBattleEnd_RTTI:
+	.4byte CMenuBattleEnd_typestr
 	.4byte lbl_8053B328
 
-.global lbl_806652C0
-lbl_806652C0:
-	.4byte lbl_80509E20
+.global CMenuPlayAward_RTTI
+CMenuPlayAward_RTTI:
+	.4byte CMenuPlayAward_typestr
 	.4byte lbl_8053B3A0
 
-.global lbl_806652C8
-lbl_806652C8:
-	.4byte lbl_80509E40
+.global CPlayAwardList_RTTI
+CPlayAwardList_RTTI:
+	.4byte CPlayAwardList_typestr
 	.4byte lbl_8053B460
 
-.global lbl_806652D0
-lbl_806652D0:
-	.4byte lbl_80509FE0
+.global CMenuKizunaTalkList_RTTI
+CMenuKizunaTalkList_RTTI:
+	.4byte CMenuKizunaTalkList_typestr
 	.4byte lbl_8053B4A8
 
-.global lbl_806652D8
-lbl_806652D8:
-	.4byte lbl_8050A008
+.global CKizunaTalkList_RTTI
+CKizunaTalkList_RTTI:
+	.4byte CKizunaTalkList_typestr
 	.4byte lbl_8053B568
 
-.global lbl_806652E0
-lbl_806652E0:
-	.4byte lbl_8050A238
+.global CSysWinBuff_RTTI
+CSysWinBuff_RTTI:
+	.4byte CSysWinBuff_typestr
 	.4byte lbl_8053B63C
 
-.global lbl_806652E8
-lbl_806652E8:
-	.4byte lbl_8050A270
+.global cf_ICamControlClassic_RTTI
+cf_ICamControlClassic_RTTI:
+	.4byte cf_ICamControlClassic_typestr
 	.4byte lbl_8053B6B8
 
-.global lbl_806652F0
-lbl_806652F0:
-	.4byte lbl_8050A288
+.global cf_ICamControlGc_RTTI
+cf_ICamControlGc_RTTI:
+	.4byte cf_ICamControlGc_typestr
 	.4byte lbl_8053B6F8
 
-.global lbl_806652F8
-lbl_806652F8:
-	.4byte lbl_8050A29C
+.global cf_ICamControlRemote_RTTI
+cf_ICamControlRemote_RTTI:
+	.4byte cf_ICamControlRemote_typestr
 	.4byte lbl_8053B740
 
 .global lbl_80665300
 lbl_80665300:
-	.4byte lbl_8050A2B8
+	.4byte cf_ICamControl_typestr
 	.4byte 0
 
-.global lbl_80665308
-lbl_80665308:
-	.4byte lbl_8050A2C8
+.global cf_CfObjectImplTbox_RTTI
+cf_CfObjectImplTbox_RTTI:
+	.4byte cf_CfObjectImplTbox_typestr
 	.4byte lbl_8053B858
 
-.global lbl_80665310
-lbl_80665310:
-	.4byte lbl_8050A2E0
+.global CMenuLvUp_RTTI
+CMenuLvUp_RTTI:
+	.4byte CMenuLvUp_typestr
 	.4byte lbl_8053B940
 
 
@@ -2955,44 +2955,44 @@ lbl_80665330:
 	.4byte 0x000007DD
 	.4byte 0x000007E0
 
-.global lbl_80665338
-lbl_80665338:
-	.4byte lbl_8050A398
+.global cf_CChainChance_RTTI
+cf_CChainChance_RTTI:
+	.4byte cf_CChainChance_typestr
 	.4byte 0
 
-.global lbl_80665340
-lbl_80665340:
-	.4byte lbl_8050A3B0
+.global cf_CChainTimer_RTTI
+cf_CChainTimer_RTTI:
+	.4byte cf_CChainTimer_typestr
 	.4byte 0
 
-.global lbl_80665348
-lbl_80665348:
-	.4byte lbl_8050A3C0
+.global cf_CChainMember_RTTI
+cf_CChainMember_RTTI:
+	.4byte cf_CChainMember_typestr
 	.4byte 0
 
-.global lbl_80665350
-lbl_80665350:
-	.4byte lbl_8050A3D8
+.global cf_CChainActor_RTTI
+cf_CChainActor_RTTI:
+	.4byte cf_CChainActor_typestr
 	.4byte 0
 
-.global lbl_80665358
-lbl_80665358:
-	.4byte lbl_8050A3E8
+.global cf_CChainActorList_RTTI
+cf_CChainActorList_RTTI:
+	.4byte cf_CChainActorList_typestr
 	.4byte 0
 
-.global lbl_80665360
-lbl_80665360:
-	.4byte lbl_8050A3FC
+.global reslist_cf_CChainActor_RTTI
+reslist_cf_CChainActor_RTTI:
+	.4byte reslist_cf_CChainActor_typestr
 	.4byte lbl_8053BAD8
 
-.global lbl_80665368
-lbl_80665368:
-	.4byte lbl_8050A418
+.global _reslist_base_cf_CChainActor_RTTI
+_reslist_base_cf_CChainActor_RTTI:
+	.4byte _reslist_base_cf_CChainActor_typestr
 	.4byte 0
 
-.global lbl_80665370
-lbl_80665370:
-	.4byte lbl_8050A43C
+.global cf_CChainTemp_RTTI
+cf_CChainTemp_RTTI:
+	.4byte cf_CChainTemp_typestr
 	.4byte 0
 
 
@@ -3002,44 +3002,44 @@ lbl_80665378:
 	.4byte 0x00000001
 	.4byte 0
 
-.global lbl_80665380
-lbl_80665380:
-	.4byte lbl_8050A470
+.global cf_Flusher_cf_CfObjectActor_RTTI
+cf_Flusher_cf_CfObjectActor_RTTI:
+	.4byte cf_Flusher_cf_CfObjectActor_typestr
 	.4byte 0
 
-.global lbl_80665388
-lbl_80665388:
-	.4byte lbl_8050A490
+.global CSysWinScenarioLog_RTTI
+CSysWinScenarioLog_RTTI:
+	.4byte CSysWinScenarioLog_typestr
 	.4byte lbl_8053BBD4
 
-.global lbl_80665390
-lbl_80665390:
-	.4byte lbl_8050A598
+.global cf_CChainActorEne_RTTI
+cf_CChainActorEne_RTTI:
+	.4byte cf_CChainActorEne_typestr
 	.4byte lbl_8053BC88
 
-.global lbl_80665398
-lbl_80665398:
-	.4byte lbl_8050A5B0
+.global cf_CChainActorPc_RTTI
+cf_CChainActorPc_RTTI:
+	.4byte cf_CChainActorPc_typestr
 	.4byte lbl_8053BD10
 
-.global lbl_806653A0
-lbl_806653A0:
-	.4byte lbl_8050A638
+.global CEquipItemBox_RTTI
+CEquipItemBox_RTTI:
+	.4byte CEquipItemBox_typestr
 	.4byte lbl_8053BE98
 
-.global lbl_806653A8
-lbl_806653A8:
-	.4byte lbl_8050A648
+.global CEIBPageCur_RTTI
+CEIBPageCur_RTTI:
+	.4byte CEIBPageCur_typestr
 	.4byte lbl_8053BEB0
 
-.global lbl_806653B0
-lbl_806653B0:
-	.4byte lbl_8066B408
+.global CEIBCur_RTTI
+CEIBCur_RTTI:
+	.4byte CEIBCur_typestr
 	.4byte 0
 
-.global lbl_806653B8
-lbl_806653B8:
-	.4byte lbl_8050AE18
+.global CMenuSave_RTTI
+CMenuSave_RTTI:
+	.4byte CMenuSave_typestr
 	.4byte lbl_8053BF00
 
 
@@ -3061,24 +3061,24 @@ lbl_806653C8:
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
-.global lbl_806653D0
-lbl_806653D0:
-	.4byte lbl_8050AE38
+.global CSaveLoad_RTTI
+CSaveLoad_RTTI:
+	.4byte CSaveLoad_typestr
 	.4byte lbl_8053BFF8
 
-.global lbl_806653D8
-lbl_806653D8:
-	.4byte lbl_8066B420
+.global CSLCur_RTTI
+CSLCur_RTTI:
+	.4byte CSLCur_typestr
 	.4byte 0
 
 .global lbl_806653E0
 lbl_806653E0:
-	.4byte lbl_8050B208
+	.4byte cf_CfAward_typestr
 	.4byte lbl_8053C030
 
 .global lbl_806653E8
 lbl_806653E8:
-	.4byte lbl_8050B214
+	.4byte cf_CAwardBase_typestr
 	.4byte 0
 
 
@@ -3088,44 +3088,44 @@ lbl_806653F0:
 	.4byte lbl_8050B228
 	.4byte 0
 
-.global lbl_806653F8
-lbl_806653F8:
-	.4byte lbl_8050B244
+.global CMenuPTChangeNotice_RTTI
+CMenuPTChangeNotice_RTTI:
+	.4byte CMenuPTChangeNotice_typestr
 	.4byte lbl_8053C104
 
-.global lbl_80665400
-lbl_80665400:
-	.4byte lbl_8050B388
+.global cf_CChainCombo_RTTI
+cf_CChainCombo_RTTI:
+	.4byte cf_CChainCombo_typestr
 	.4byte 0
 
-.global lbl_80665408
-lbl_80665408:
-	.4byte lbl_8050B398
+.global CSysWinSave_RTTI
+CSysWinSave_RTTI:
+	.4byte CSysWinSave_typestr
 	.4byte lbl_8053C218
 
-.global lbl_80665410
-lbl_80665410:
-	.4byte lbl_8050B3C0
+.global cf_CREvtMovie_RTTI
+cf_CREvtMovie_RTTI:
+	.4byte cf_CREvtMovie_typestr
 	.4byte lbl_8053C280
 
-.global lbl_80665418
-lbl_80665418:
-	.4byte lbl_8050B3E8
+.global CTaskGamePic_RTTI
+CTaskGamePic_RTTI:
+	.4byte CTaskGamePic_typestr
 	.4byte lbl_8053C354
 
-.global lbl_80665420
-lbl_80665420:
-	.4byte lbl_8050B3F8
+.global CTTask_CTaskGamePic_RTTI
+CTTask_CTaskGamePic_RTTI:
+	.4byte CTTask_CTaskGamePic_typestr
 	.4byte lbl_8053C39C
 
-.global lbl_80665428
-lbl_80665428:
-	.4byte lbl_8050B410
+.global CTaskGameEvt_RTTI
+CTaskGameEvt_RTTI:
+	.4byte CTaskGameEvt_typestr
 	.4byte lbl_8053C47C
 
-.global lbl_80665430
-lbl_80665430:
-	.4byte lbl_8050B420
+.global CTTask_CTaskGameEvt_RTTI
+CTTask_CTaskGameEvt_RTTI:
+	.4byte CTTask_CTaskGameEvt_typestr
 	.4byte lbl_8053C4C4
 
 .global lbl_80665438
@@ -3223,104 +3223,104 @@ lbl_806654C8:
 	.4byte lbl_8057A818
 	.4byte 0
 
-.global lbl_806654D0
-lbl_806654D0:
-	.4byte lbl_8050B438
+.global cf_CHelp_EtherMakeTIPS_RTTI
+cf_CHelp_EtherMakeTIPS_RTTI:
+	.4byte cf_CHelp_EtherMakeTIPS_typestr
 	.4byte lbl_8053C76C
 
-.global lbl_806654D8
-lbl_806654D8:
-	.4byte lbl_8050B450
+.global cf_CHelp_EtherMake_RTTI
+cf_CHelp_EtherMake_RTTI:
+	.4byte cf_CHelp_EtherMake_typestr
 	.4byte lbl_8053C780
 
-.global lbl_806654E0
-lbl_806654E0:
-	.4byte lbl_8050B464
+.global cf_CHelp_TalkTIPS_RTTI
+cf_CHelp_TalkTIPS_RTTI:
+	.4byte cf_CHelp_TalkTIPS_typestr
 	.4byte lbl_8053C7B0
 
-.global lbl_806654E8
-lbl_806654E8:
-	.4byte lbl_8050B478
+.global cf_CHelp_Talk_RTTI
+cf_CHelp_Talk_RTTI:
+	.4byte cf_CHelp_Talk_typestr
 	.4byte lbl_8053C7CC
 
-.global lbl_806654F0
-lbl_806654F0:
-	.4byte lbl_8050B488
+.global cf_CHelp_KizunaTIPS_RTTI
+cf_CHelp_KizunaTIPS_RTTI:
+	.4byte cf_CHelp_KizunaTIPS_typestr
 	.4byte lbl_8053C7FC
 
-.global lbl_806654F8
-lbl_806654F8:
-	.4byte lbl_8050B4A0
+.global cf_CHelp_Kizuna_RTTI
+cf_CHelp_Kizuna_RTTI:
+	.4byte cf_CHelp_Kizuna_typestr
 	.4byte lbl_8053C810
 
-.global lbl_80665500
-lbl_80665500:
-	.4byte lbl_8050B4B4
+.global cf_CHelp_EndEventTIPS_RTTI
+cf_CHelp_EndEventTIPS_RTTI:
+	.4byte cf_CHelp_EndEventTIPS_typestr
 	.4byte lbl_8053C840
 
-.global lbl_80665508
-lbl_80665508:
-	.4byte lbl_8050B4CC
+.global cf_CHelp_EndEvent_RTTI
+cf_CHelp_EndEvent_RTTI:
+	.4byte cf_CHelp_EndEvent_typestr
 	.4byte lbl_8053C85C
 
-.global lbl_80665510
-lbl_80665510:
-	.4byte lbl_8050B4E0
+.global cf_CHelp_AlwaysTIPS_RTTI
+cf_CHelp_AlwaysTIPS_RTTI:
+	.4byte cf_CHelp_AlwaysTIPS_typestr
 	.4byte lbl_8053C88C
 
-.global lbl_80665518
-lbl_80665518:
-	.4byte lbl_8050B4F8
+.global cf_CHelp_Always_RTTI
+cf_CHelp_Always_RTTI:
+	.4byte cf_CHelp_Always_typestr
 	.4byte lbl_8053C8BC
 
 .global lbl_80665520
 lbl_80665520:
-	.4byte lbl_8050B510
+	.4byte cf_CHelpSwitch_typestr
 	.4byte lbl_8053C8C8
 
-.global lbl_80665528
-lbl_80665528:
-	.4byte lbl_8050B520
+.global cf_CHelp_RTTI
+cf_CHelp_RTTI:
+	.4byte cf_CHelp_typestr
 	.4byte 0
 
-.global lbl_80665530
-lbl_80665530:
-	.4byte lbl_8050B52C
+.global cf_CHelpManager_RTTI
+cf_CHelpManager_RTTI:
+	.4byte cf_CHelpManager_typestr
 	.4byte 0
 
-.global lbl_80665538
-lbl_80665538:
-	.4byte lbl_8050B5B4
+.global CMCGetItemBox_RTTI
+CMCGetItemBox_RTTI:
+	.4byte CMCGetItemBox_typestr
 	.4byte lbl_8053C968
 
-.global lbl_80665540
-lbl_80665540:
-	.4byte lbl_8050B848
+.global CMenuTutorial_RTTI
+CMenuTutorial_RTTI:
+	.4byte CMenuTutorial_typestr
 	.4byte lbl_8053C9B0
 
-.global lbl_80665548
-lbl_80665548:
-	.4byte lbl_8050B878
+.global CTutorial_RTTI
+CTutorial_RTTI:
+	.4byte CTutorial_typestr
 	.4byte lbl_8053CA70
 
-.global lbl_80665550
-lbl_80665550:
-	.4byte lbl_8050B9A8
+.global CMenuOption_RTTI
+CMenuOption_RTTI:
+	.4byte CMenuOption_typestr
 	.4byte lbl_8053CAB8
 
-.global lbl_80665558
-lbl_80665558:
-	.4byte lbl_8066B4C8
+.global COption_RTTI
+COption_RTTI:
+	.4byte COption_typestr
 	.4byte lbl_8053CE50
 
-.global lbl_80665560
-lbl_80665560:
-	.4byte lbl_8066B4D0
+.global CCur19_RTTI
+CCur19_RTTI:
+	.4byte CCur19_typestr
 	.4byte lbl_8053CE78
 
-.global lbl_80665568
-lbl_80665568:
-	.4byte lbl_8050BB20
+.global CMenuSkipTimer_RTTI
+CMenuSkipTimer_RTTI:
+	.4byte CMenuSkipTimer_typestr
 	.4byte lbl_8053CF48
 
 
@@ -3330,19 +3330,19 @@ lbl_80665570:
 	.float 0.2
 	.4byte 0
 
-.global lbl_80665578
-lbl_80665578:
-	.4byte lbl_8050BB40
+.global CSkipTimer_RTTI
+CSkipTimer_RTTI:
+	.4byte CSkipTimer_typestr
 	.4byte lbl_8053D008
 
-.global lbl_80665580
-lbl_80665580:
-	.4byte lbl_8050BB4C
+.global CSkipTimer2_RTTI
+CSkipTimer2_RTTI:
+	.4byte CSkipTimer2_typestr
 	.4byte 0
 
-.global lbl_80665588
-lbl_80665588:
-	.4byte lbl_8050BCA8
+.global cf_CChainEffect_RTTI
+cf_CChainEffect_RTTI:
+	.4byte cf_CChainEffect_typestr
 	.4byte lbl_8053D030
 
 
@@ -3352,14 +3352,14 @@ lbl_80665590:
 	.4byte lbl_8050BCC0
 	.4byte 0
 
-.global lbl_80665598
-lbl_80665598:
-	.4byte lbl_8050BCDC
+.global cf_CCharVoice_RTTI
+cf_CCharVoice_RTTI:
+	.4byte cf_CCharVoice_typestr
 	.4byte 0
 
-.global lbl_806655A0
-lbl_806655A0:
-	.4byte lbl_8050BCF0
+.global cf_CCharVoiceMan_RTTI
+cf_CCharVoiceMan_RTTI:
+	.4byte cf_CCharVoiceMan_typestr
 	.4byte lbl_8053D078
 
 
@@ -3381,9 +3381,9 @@ lbl_806655B0:
 	.4byte 0x447A0000
 	.4byte 0
 
-.global lbl_806655B8
-lbl_806655B8:
-	.4byte lbl_8050BD08
+.global cf_CVS_THREAD_RTTI
+cf_CVS_THREAD_RTTI:
+	.4byte cf_CVS_THREAD_typestr
 	.4byte 0
 
 
@@ -3400,44 +3400,44 @@ lbl_806655C8:
 	.4byte 0x00000B5D
 	.4byte 0x00000B5E
 
-.global lbl_806655D0
-lbl_806655D0:
-	.4byte lbl_8050BD18
+.global cf_CVS_THREAD_BATTLE_END_RTTI
+cf_CVS_THREAD_BATTLE_END_RTTI:
+	.4byte cf_CVS_THREAD_BATTLE_END_typestr
 	.4byte lbl_8053D164
 
-.global lbl_806655D8
-lbl_806655D8:
-	.4byte lbl_8050BD38
+.global cf_CVS_THREAD_BUF_RTTI
+cf_CVS_THREAD_BUF_RTTI:
+	.4byte cf_CVS_THREAD_BUF_typestr
 	.4byte lbl_8053D1B0
 
-.global lbl_806655E0
-lbl_806655E0:
-	.4byte lbl_8050BD50
+.global cf_CVS_THREAD_CHAIN_RTTI
+cf_CVS_THREAD_CHAIN_RTTI:
+	.4byte cf_CVS_THREAD_CHAIN_typestr
 	.4byte lbl_8053D1E8
 
-.global lbl_806655E8
-lbl_806655E8:
-	.4byte lbl_8050BD68
+.global cf_CVS_THREAD_DOWN_RTTI
+cf_CVS_THREAD_DOWN_RTTI:
+	.4byte cf_CVS_THREAD_DOWN_typestr
 	.4byte lbl_8053D238
 
-.global lbl_806655F0
-lbl_806655F0:
-	.4byte lbl_8050BD80
+.global cf_CVS_THREAD_EHP_RTTI
+cf_CVS_THREAD_EHP_RTTI:
+	.4byte cf_CVS_THREAD_EHP_typestr
 	.4byte lbl_8053D2D8
 
-.global lbl_806655F8
-lbl_806655F8:
-	.4byte lbl_8050BD98
+.global cf_CVS_THREAD_FAINT_RTTI
+cf_CVS_THREAD_FAINT_RTTI:
+	.4byte cf_CVS_THREAD_FAINT_typestr
 	.4byte lbl_8053D328
 
-.global lbl_80665600
-lbl_80665600:
-	.4byte lbl_8050BDB0
+.global cf_CVS_THREAD_HAGE_RTTI
+cf_CVS_THREAD_HAGE_RTTI:
+	.4byte cf_CVS_THREAD_HAGE_typestr
 	.4byte lbl_8053D378
 
-.global lbl_80665608
-lbl_80665608:
-	.4byte lbl_8050BDC8
+.global cf_CVS_THREAD_HP_RTTI
+cf_CVS_THREAD_HP_RTTI:
+	.4byte cf_CVS_THREAD_HP_typestr
 	.4byte lbl_8053D3C8
 
 
@@ -3447,24 +3447,24 @@ lbl_80665610:
 	.4byte 0x00000659
 	.4byte 0x0000065A
 
-.global lbl_80665618
-lbl_80665618:
-	.4byte lbl_8050BDE0
+.global cf_CVS_THREAD_PARTY_GAGE_RTTI
+cf_CVS_THREAD_PARTY_GAGE_RTTI:
+	.4byte cf_CVS_THREAD_PARTY_GAGE_typestr
 	.4byte lbl_8053D418
 
-.global lbl_80665620
-lbl_80665620:
-	.4byte lbl_8050BE00
+.global cf_CVS_THREAD_REVIVE_RTTI
+cf_CVS_THREAD_REVIVE_RTTI:
+	.4byte cf_CVS_THREAD_REVIVE_typestr
 	.4byte lbl_8053D468
 
-.global lbl_80665628
-lbl_80665628:
-	.4byte lbl_8050BE18
+.global cf_CVS_THREAD_SUDDEN_RTTI
+cf_CVS_THREAD_SUDDEN_RTTI:
+	.4byte cf_CVS_THREAD_SUDDEN_typestr
 	.4byte lbl_8053D4A0
 
-.global lbl_80665630
-lbl_80665630:
-	.4byte lbl_8050BE30
+.global cf_CVS_THREAD_TENSION_UP_RTTI
+cf_CVS_THREAD_TENSION_UP_RTTI:
+	.4byte cf_CVS_THREAD_TENSION_UP_typestr
 	.4byte lbl_8053D4F0
 
 
@@ -3481,9 +3481,9 @@ lbl_80665640:
 	.4byte 0x01910193
 	.4byte 0x01940000
 
-.global lbl_80665648
-lbl_80665648:
-	.4byte lbl_8050BE50
+.global cf_CVS_THREAD_VISION_BREAK_RTTI
+cf_CVS_THREAD_VISION_BREAK_RTTI:
+	.4byte cf_CVS_THREAD_VISION_BREAK_typestr
 	.4byte lbl_8053D534
 
 
@@ -3500,9 +3500,9 @@ lbl_80665658:
 	.4byte 0x01310132
 	.4byte 0x01330000
 
-.global lbl_80665660
-lbl_80665660:
-	.4byte lbl_8050BE70
+.global cf_CVS_THREAD_VISION_TELL_RTTI
+cf_CVS_THREAD_VISION_TELL_RTTI:
+	.4byte cf_CVS_THREAD_VISION_TELL_typestr
 	.4byte lbl_8053D580
 
 
@@ -3649,34 +3649,34 @@ lbl_806656C4:
 	# ROM: 0x5712A4
 	.4byte 0xA0A0A0FF
 
-.global lbl_806656C8
-lbl_806656C8:
-	.4byte lbl_8050BE90
+.global CMenuBattleChain_RTTI
+CMenuBattleChain_RTTI:
+	.4byte CMenuBattleChain_typestr
 	.4byte lbl_8053D698
 
-.global lbl_806656D0
-lbl_806656D0:
-	.4byte lbl_8050C108
+.global cf_CVS_THREAD_BATTLE_END_SP_RTTI
+cf_CVS_THREAD_BATTLE_END_SP_RTTI:
+	.4byte cf_CVS_THREAD_BATTLE_END_SP_typestr
 	.4byte lbl_8053D964
 
-.global lbl_806656D8
-lbl_806656D8:
-	.4byte lbl_8050C128
+.global cf_CfGimmickSaveOff_RTTI
+cf_CfGimmickSaveOff_RTTI:
+	.4byte cf_CfGimmickSaveOff_typestr
 	.4byte lbl_8053D994
 
-.global lbl_806656E0
-lbl_806656E0:
-	.4byte lbl_8050C148
+.global CMenuTutorialList_RTTI
+CMenuTutorialList_RTTI:
+	.4byte CMenuTutorialList_typestr
 	.4byte lbl_8053DA00
 
-.global lbl_806656E8
-lbl_806656E8:
-	.4byte lbl_8050C180
+.global CTutorialList_RTTI
+CTutorialList_RTTI:
+	.4byte CTutorialList_typestr
 	.4byte lbl_8053DAC0
 
-.global lbl_806656F0
-lbl_806656F0:
-	.4byte lbl_8066B6A0
+.global CLoad_RTTI
+CLoad_RTTI:
+	.4byte CLoad_typestr
 	.4byte lbl_8053DB58
 
 
@@ -3758,194 +3758,194 @@ lbl_8066572C:
 	# ROM: 0x57130C
 	.4byte lbl_8050C808
 
-.global lbl_80665730
-lbl_80665730:
-	.4byte lbl_8050C8B0
+.global cf_CVS_THREAD_BATTLE_MAIN_RTTI
+cf_CVS_THREAD_BATTLE_MAIN_RTTI:
+	.4byte cf_CVS_THREAD_BATTLE_MAIN_typestr
 	.4byte lbl_8053E1B0
 
-.global lbl_80665738
-lbl_80665738:
-	.4byte lbl_8050C8D0
+.global cf_CVS_THREAD_BATTLE_BEGIN_RTTI
+cf_CVS_THREAD_BATTLE_BEGIN_RTTI:
+	.4byte cf_CVS_THREAD_BATTLE_BEGIN_typestr
 	.4byte lbl_8053E3F0
 
 .global lbl_80665740
 lbl_80665740:
-	.4byte lbl_8050C8EC
+	.4byte cf_EVS_THREAD_LIB_typestr
 	.4byte lbl_8053E410
 
 .global lbl_80665748
 lbl_80665748:
-	.4byte lbl_8050C900
+	.4byte cf_CVS_THREAD_LIB_typestr
 	.4byte 0
 
-.global lbl_80665750
-lbl_80665750:
-	.4byte lbl_8050C918
+.global CMenuGCItem_RTTI
+CMenuGCItem_RTTI:
+	.4byte CMenuGCItem_typestr
 	.4byte lbl_8053E458
 
-.global lbl_80665758
-lbl_80665758:
-	.4byte lbl_8050C938
+.global CMenuGameClear_RTTI
+CMenuGameClear_RTTI:
+	.4byte CMenuGameClear_typestr
 	.4byte lbl_8053E570
 
-.global lbl_80665760
-lbl_80665760:
-	.4byte lbl_8050C990
+.global cf_CfHikariItemManager_RTTI
+cf_CfHikariItemManager_RTTI:
+	.4byte cf_CfHikariItemManager_typestr
 	.4byte lbl_8053E5B8
 
-.global lbl_80665768
-lbl_80665768:
-	.4byte lbl_8050C9E0
+.global CUIErrMesWin_RTTI
+CUIErrMesWin_RTTI:
+	.4byte CUIErrMesWin_typestr
 	.4byte lbl_8053E6E0
 
-.global lbl_80665770
-lbl_80665770:
-	.4byte lbl_8050C9F0
+.global CTTask_CUIErrMesWin_RTTI
+CTTask_CUIErrMesWin_RTTI:
+	.4byte CTTask_CUIErrMesWin_typestr
 	.4byte lbl_8053E738
 
-.global lbl_80665778
-lbl_80665778:
-	.4byte lbl_8050CA18
+.global CMenuTitle_RTTI
+CMenuTitle_RTTI:
+	.4byte CMenuTitle_typestr
 	.4byte lbl_8053E890
 
-.global lbl_80665780
-lbl_80665780:
-	.4byte lbl_8050CA24
+.global CTTask_CMenuTitle_RTTI
+CTTask_CMenuTitle_RTTI:
+	.4byte CTTask_CMenuTitle_typestr
 	.4byte lbl_8053E8E8
 
-.global lbl_80665788
-lbl_80665788:
-	.4byte lbl_8066B7F4
+.global CTitle_RTTI
+CTitle_RTTI:
+	.4byte CTitle_typestr
 	.4byte lbl_8053EA68
 
-.global lbl_80665790
-lbl_80665790:
-	.4byte lbl_8050CA38
+.global CTitleMenu_RTTI
+CTitleMenu_RTTI:
+	.4byte CTitleMenu_typestr
 	.4byte 0
 
-.global lbl_80665798
-lbl_80665798:
-	.4byte lbl_8050CA44
+.global CTitleLogo_RTTI
+CTitleLogo_RTTI:
+	.4byte CTitleLogo_typestr
 	.4byte 0
 
-.global lbl_806657A0
-lbl_806657A0:
-	.4byte lbl_8050CBA0
+.global cf_CHelp_ToAttack_RTTI
+cf_CHelp_ToAttack_RTTI:
+	.4byte cf_CHelp_ToAttack_typestr
 	.4byte lbl_8053EAAC
 
-.global lbl_806657A8
-lbl_806657A8:
-	.4byte lbl_8050CBB8
+.global cf_CHelp_ArtsAttack_RTTI
+cf_CHelp_ArtsAttack_RTTI:
+	.4byte cf_CHelp_ArtsAttack_typestr
 	.4byte lbl_8053EAFC
 
-.global lbl_806657B0
-lbl_806657B0:
-	.4byte lbl_8050CBD0
+.global cf_CHelp_ArtsSet_RTTI
+cf_CHelp_ArtsSet_RTTI:
+	.4byte cf_CHelp_ArtsSet_typestr
 	.4byte lbl_8053EB2C
 
-.global lbl_806657B8
-lbl_806657B8:
-	.4byte lbl_8050CBE8
+.global cf_CHelp_CkKizuna_RTTI
+cf_CHelp_CkKizuna_RTTI:
+	.4byte cf_CHelp_CkKizuna_typestr
 	.4byte lbl_8053EB5C
 
-.global lbl_806657C0
-lbl_806657C0:
-	.4byte lbl_8050CC00
+.global cf_CHelp_CloseItemMenu_RTTI
+cf_CHelp_CloseItemMenu_RTTI:
+	.4byte cf_CHelp_CloseItemMenu_typestr
 	.4byte lbl_8053EB94
 
-.global lbl_806657C8
-lbl_806657C8:
-	.4byte lbl_8050CC18
+.global cf_CHelp_CloseSysMenu_RTTI
+cf_CHelp_CloseSysMenu_RTTI:
+	.4byte cf_CHelp_CloseSysMenu_typestr
 	.4byte lbl_8053EBCC
 
-.global lbl_806657D0
-lbl_806657D0:
-	.4byte lbl_8050CC30
+.global cf_CHelp_EnemyCount_RTTI
+cf_CHelp_EnemyCount_RTTI:
+	.4byte cf_CHelp_EnemyCount_typestr
 	.4byte lbl_8053EC24
 
-.global lbl_806657D8
-lbl_806657D8:
-	.4byte lbl_8050CC48
+.global cf_CHelp_EnemyEnable_RTTI
+cf_CHelp_EnemyEnable_RTTI:
+	.4byte cf_CHelp_EnemyEnable_typestr
 	.4byte lbl_8053EC4C
 
-.global lbl_806657E0
-lbl_806657E0:
-	.4byte lbl_8050CC60
+.global cf_CHelp_Exchange_RTTI
+cf_CHelp_Exchange_RTTI:
+	.4byte cf_CHelp_Exchange_typestr
 	.4byte lbl_8053EC94
 
-.global lbl_806657E8
-lbl_806657E8:
-	.4byte lbl_8050CC78
+.global cf_CHelp_GameOver_RTTI
+cf_CHelp_GameOver_RTTI:
+	.4byte cf_CHelp_GameOver_typestr
 	.4byte lbl_8053ECBC
 
-.global lbl_806657F0
-lbl_806657F0:
-	.4byte lbl_8050CC90
+.global cf_CHelp_ItemCole_RTTI
+cf_CHelp_ItemCole_RTTI:
+	.4byte cf_CHelp_ItemCole_typestr
 	.4byte lbl_8053ECE4
 
-.global lbl_806657F8
-lbl_806657F8:
-	.4byte lbl_8050CCA8
+.global cf_CHelp_LandMark_RTTI
+cf_CHelp_LandMark_RTTI:
+	.4byte cf_CHelp_LandMark_typestr
 	.4byte lbl_8053ED44
 
-.global lbl_80665800
-lbl_80665800:
-	.4byte lbl_8050CCC0
+.global cf_CHelp_LearnArts_RTTI
+cf_CHelp_LearnArts_RTTI:
+	.4byte cf_CHelp_LearnArts_typestr
 	.4byte lbl_8053ED6C
 
-.global lbl_80665808
-lbl_80665808:
-	.4byte lbl_8050CCE0
+.global cf_CHelp_ClosePartyMenu_RTTI
+cf_CHelp_ClosePartyMenu_RTTI:
+	.4byte cf_CHelp_ClosePartyMenu_typestr
 	.4byte lbl_8053ED9C
 
-.global lbl_80665810
-lbl_80665810:
-	.4byte lbl_8050CD00
+.global cf_CHelp_OpenPartyMenu_RTTI
+cf_CHelp_OpenPartyMenu_RTTI:
+	.4byte cf_CHelp_OpenPartyMenu_typestr
 	.4byte lbl_8053EDCC
 
-.global lbl_80665818
-lbl_80665818:
-	.4byte lbl_8050CD18
+.global cf_CHelp_Pg_RTTI
+cf_CHelp_Pg_RTTI:
+	.4byte cf_CHelp_Pg_typestr
 	.4byte lbl_8053EDF4
 
-.global lbl_80665820
-lbl_80665820:
-	.4byte lbl_8050CD28
+.global cf_CHelp_CloseQuestMenu_RTTI
+cf_CHelp_CloseQuestMenu_RTTI:
+	.4byte cf_CHelp_CloseQuestMenu_typestr
 	.4byte lbl_8053EE24
 
-.global lbl_80665828
-lbl_80665828:
-	.4byte lbl_8050CD48
+.global cf_CHelp_ShopSel_RTTI
+cf_CHelp_ShopSel_RTTI:
+	.4byte cf_CHelp_ShopSel_typestr
 	.4byte lbl_8053EE54
 
-.global lbl_80665830
-lbl_80665830:
-	.4byte lbl_8050CD5C
+.global cf_CHelp_ShopBuy_RTTI
+cf_CHelp_ShopBuy_RTTI:
+	.4byte cf_CHelp_ShopBuy_typestr
 	.4byte lbl_8053EE7C
 
-.global lbl_80665838
-lbl_80665838:
-	.4byte lbl_8050CD70
+.global cf_CHelp_Sp_RTTI
+cf_CHelp_Sp_RTTI:
+	.4byte cf_CHelp_Sp_typestr
 	.4byte lbl_8053EEA4
 
-.global lbl_80665840
-lbl_80665840:
-	.4byte lbl_8050CD80
+.global cf_CHelp_Target_RTTI
+cf_CHelp_Target_RTTI:
+	.4byte cf_CHelp_Target_typestr
 	.4byte lbl_8053EEF4
 
-.global lbl_80665848
-lbl_80665848:
-	.4byte lbl_8050CD98
+.global cf_CVS_THREAD_ORDER_RTTI
+cf_CVS_THREAD_ORDER_RTTI:
+	.4byte cf_CVS_THREAD_ORDER_typestr
 	.4byte lbl_8053EF4C
 
-.global lbl_80665850
-lbl_80665850:
-	.4byte lbl_8050CDB8
+.global CBattery_RTTI
+CBattery_RTTI:
+	.4byte CBattery_typestr
 	.4byte lbl_8053F030
 
 .global lbl_80665858
 lbl_80665858:
-	.4byte lbl_8050CE00
+	.4byte std_exception_typestr
 	.4byte 0
 
 
@@ -3957,7 +3957,7 @@ lbl_80665860:
 
 .global lbl_80665868
 lbl_80665868:
-	.4byte lbl_8050CE20
+	.4byte std_bad_cast_typestr
 	.4byte lbl_8053F050
 
 

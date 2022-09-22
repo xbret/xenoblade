@@ -2,18 +2,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_804F6BE8
-lbl_804F6BE8:
+.global cf_CfTaskMain_typestr
+cf_CfTaskMain_typestr:
 	.asciz "cf::CfTaskMain"
 	.balign 4
 
-.global lbl_804F6BF8
-lbl_804F6BF8:
+.global CTTask_cf_CfTaskMain_typestr
+CTTask_cf_CfTaskMain_typestr:
 	.asciz "CTTask<cf::CfTaskMain>"
 	.balign 4
 
-.global lbl_804F6C10
-lbl_804F6C10:
+.global cf_CfTFile_typestr
+cf_CfTFile_typestr:
 	.asciz "cf::CfTFile"
 
 
@@ -35,35 +35,35 @@ lbl_804F6C30:
 	.asciz "night_m"
 	.4byte 0
 
-.global lbl_804F6C80
-lbl_804F6C80:
+.global cf_CfCamEvent_typestr
+cf_CfCamEvent_typestr:
 	.asciz "cf::CfCamEvent"
 	.balign 4
 
-.global lbl_804F6C90
-lbl_804F6C90:
+.global cf_CfCamTargetIntf_typestr
+cf_CfCamTargetIntf_typestr:
 	.asciz "cf::CfCamTargetIntf"
 
-.global lbl_804F6CA4
-lbl_804F6CA4:
+.global cf_CfCamLookatIntf_typestr
+cf_CfCamLookatIntf_typestr:
 	.asciz "cf::CfCamLookatIntf"
 
-.global lbl_804F6CB8
-lbl_804F6CB8:
+.global cf_CfCamDirectionIntf_typestr
+cf_CfCamDirectionIntf_typestr:
 	.asciz "cf::CfCamDirectionIntf"
 	.balign 4
 
-.global lbl_804F6CD0
-lbl_804F6CD0:
+.global cf_CfCamIntf_typestr
+cf_CfCamIntf_typestr:
 	.asciz "cf::CfCamIntf"
 	.balign 4
 
-.global lbl_804F6CE0
-lbl_804F6CE0:
+.global cf_CfCamFollow_typestr
+cf_CfCamFollow_typestr:
 	.asciz "cf::CfCamFollow"
 
-.global lbl_804F6CF0
-lbl_804F6CF0:
+.global cf_CfCam_typestr
+cf_CfCam_typestr:
 	.asciz "cf::CfCam"
 	.balign 4
 	.4byte 0
@@ -192,17 +192,17 @@ lbl_804F7020:
 	.4byte 0x0207FF0C
 	.4byte 0x0D0E0FFF
 
-.global lbl_804F7060
-lbl_804F7060:
+.global cf_IObjectInfo_typestr
+cf_IObjectInfo_typestr:
 	.asciz "cf::IObjectInfo"
 
-.global lbl_804F7070
-lbl_804F7070:
+.global cf_CfObjectImpl_typestr
+cf_CfObjectImpl_typestr:
 	.asciz "cf::CfObjectImpl"
 	.balign 4
 
-.global lbl_804F7084
-lbl_804F7084:
+.global IActParamEvent_typestr
+IActParamEvent_typestr:
 	.asciz "IActParamEvent"
 	.balign 4
 
@@ -245,37 +245,37 @@ lbl_804F7094:
 	.asciz "rotY"
 	.2byte 0x0000
 	
-.global lbl_804F71C8
-lbl_804F71C8:
+.global cf_CtrlEnemy_typestr
+cf_CtrlEnemy_typestr:
 	.asciz "cf::CtrlEnemy"
 	.balign 4
 
-.global lbl_804F71D8
-lbl_804F71D8:
+.global cf_CtrlAct_typestr
+cf_CtrlAct_typestr:
 	.asciz "cf::CtrlAct"
 
-.global lbl_804F71E4
-lbl_804F71E4:
+.global cf_CtrlBase_typestr
+cf_CtrlBase_typestr:
 	.asciz "cf::CtrlBase"
 	.balign 4
 
-.global lbl_804F71F4
-lbl_804F71F4:
+.global CActInput_typestr
+CActInput_typestr:
 	.asciz "CActInput"
 	.balign 4
 
-.global lbl_804F7200
-lbl_804F7200:
+.global cf_CtrlMoveBase_typestr
+cf_CtrlMoveBase_typestr:
 	.asciz "cf::CtrlMoveBase"
 	.balign 4
 
-.global lbl_804F7214
-lbl_804F7214:
+.global cf_CtrlEneAiCall_typestr
+cf_CtrlEneAiCall_typestr:
 	.asciz "cf::CtrlEneAiCall"
 	.balign 4
 
-.global lbl_804F7228
-lbl_804F7228:
+.global CColiProc_typestr
+CColiProc_typestr:
 	.asciz "CColiProc"
 	.balign 4
 	.4byte 0
@@ -289,8 +289,8 @@ lbl_804F7238:
 	.4byte 0x45610000
 	.4byte 0
 
-.global lbl_804F7248
-lbl_804F7248:
+.global cf_CtrlMoveEne_typestr
+cf_CtrlMoveEne_typestr:
 	.asciz "cf::CtrlMoveEne"
 
 
@@ -383,8 +383,8 @@ lbl_804F7364:
 	.asciz "OCLOCK_21"
 	.balign 4
 
-.global lbl_804F7370
-lbl_804F7370:
+.global cf_CtrlNpc_typestr
+cf_CtrlNpc_typestr:
 	.asciz "cf::CtrlNpc"
 
 
@@ -411,27 +411,27 @@ lbl_804F737C:
 	.asciz "no name"
 	.balign 4
 
-.global lbl_804F7438
-lbl_804F7438:
+.global cf_CtrlPad_typestr
+cf_CtrlPad_typestr:
 	.asciz "cf::CtrlPad"
 
-.global lbl_804F7444
-lbl_804F7444:
+.global cf_CtrlRemote_typestr
+cf_CtrlRemote_typestr:
 	.asciz "cf::CtrlRemote"
 	.balign 4
 
-.global lbl_804F7454
-lbl_804F7454:
+.global cf_CtrlPc_typestr
+cf_CtrlPc_typestr:
 	.asciz "cf::CtrlPc"
 	.balign 4
 
-.global lbl_804F7460
-lbl_804F7460:
+.global cf_CfObjectImplPc_typestr
+cf_CfObjectImplPc_typestr:
 	.asciz "cf::CfObjectImplPc"
 	.balign 4
 
-.global lbl_804F7474
-lbl_804F7474:
+.global cf_CfObjectImplMove_typestr
+cf_CfObjectImplMove_typestr:
 	.asciz "cf::CfObjectImplMove"
 	.balign 4
 	.4byte 0
@@ -656,43 +656,43 @@ lbl_804F786C:
 	.balign 4
 	.4byte 0
 
-.global lbl_804F78B0
-lbl_804F78B0:
+.global cf_CfObjectColl_typestr
+cf_CfObjectColl_typestr:
 	.asciz "cf::CfObjectColl"
 	.balign 4
 
-.global lbl_804F78C4
-lbl_804F78C4:
+.global cf_CfCollCapsuleImpl_typestr
+cf_CfCollCapsuleImpl_typestr:
 	.asciz "cf::CfCollCapsuleImpl"
 	.balign 4
 
-.global lbl_804F78DC
-lbl_804F78DC:
+.global cf_CfCollCylinderImpl_typestr
+cf_CfCollCylinderImpl_typestr:
 	.asciz "cf::CfCollCylinderImpl"
 	.balign 4
 
-.global lbl_804F78F4
-lbl_804F78F4:
+.global cf_CfCollAABBImpl_typestr
+cf_CfCollAABBImpl_typestr:
 	.asciz "cf::CfCollAABBImpl"
 	.balign 4
 
-.global lbl_804F7908
-lbl_804F7908:
+.global cf_CfCollSphereImpl_typestr
+cf_CfCollSphereImpl_typestr:
 	.asciz "cf::CfCollSphereImpl"
 	.balign 4
 
-.global lbl_804F7920
-lbl_804F7920:
+.global cf_CfCollCircleImpl_typestr
+cf_CfCollCircleImpl_typestr:
 	.asciz "cf::CfCollCircleImpl"
 	.balign 4
 
-.global lbl_804F7938
-lbl_804F7938:
+.global cf_CfCollImpl_typestr
+cf_CfCollImpl_typestr:
 	.asciz "cf::CfCollImpl"
 	.balign 4
 
-.global lbl_804F7948
-lbl_804F7948:
+.global cf_CfObjectPoint_typestr
+cf_CfObjectPoint_typestr:
 	.asciz "cf::CfObjectPoint"
 	.balign 4
 
@@ -709,8 +709,8 @@ lbl_804F7970:
 	.balign 4
 	.4byte 0
 
-.global lbl_804F7980
-lbl_804F7980:
+.global cf_CfObjectEne_typestr
+cf_CfObjectEne_typestr:
 	.asciz "cf::CfObjectEne"
 
 
@@ -812,27 +812,28 @@ lbl_804F7990:
 	.asciz "dmg"
 	.4byte 0
 	.byte 0x00
-.global lbl_804F7C70
-lbl_804F7C70:
+	
+.global reslist_cf_IFactoryEvent_typestr
+reslist_cf_IFactoryEvent_typestr:
 	.asciz "reslist<cf::IFactoryEvent *>"
 	.balign 4
 
-.global lbl_804F7C90
-lbl_804F7C90:
+.global _reslist_base_cf_IFactoryEvent_typestr
+_reslist_base_cf_IFactoryEvent_typestr:
 	.asciz "_reslist_base<cf::IFactoryEvent *>"
 	.balign 4
 
-.global lbl_804F7CB4
-lbl_804F7CB4:
+.global reslist_cf_TboxInfo_typestr
+reslist_cf_TboxInfo_typestr:
 	.asciz "reslist<cf::TboxInfo>"
 	.balign 4
 
-.global lbl_804F7CCC
-lbl_804F7CCC:
+.global _reslist_base_cf_TboxInfo_typestr
+_reslist_base_cf_TboxInfo_typestr:
 	.asciz "_reslist_base<cf::TboxInfo>"
 
-.global lbl_804F7CE8
-lbl_804F7CE8:
+.global reslist_cf_CfObject_typestr
+reslist_cf_CfObject_typestr:
 	.asciz "reslist<cf::CfObject *>"
 
 
@@ -847,8 +848,8 @@ lbl_804F7D00:
 	.asciz "ene_type"
 	.asciz "POP_TIME"
 
-.global lbl_804F7D50
-lbl_804F7D50:
+.global cf_CfObjectMap_typestr
+cf_CfObjectMap_typestr:
 	.asciz "cf::CfObjectMap"
 
 
@@ -874,8 +875,8 @@ lbl_804F7D78:
 	.balign 4
 	.4byte 0
 
-.global lbl_804F7D98
-lbl_804F7D98:
+.global cf_CfObjectNpc_typestr
+cf_CfObjectNpc_typestr:
 	.asciz "cf::CfObjectNpc"
 
 
@@ -888,14 +889,14 @@ lbl_804F7DA8:
 	.asciz "icon_type"
 	.asciz "rlt_meet"
 
-.global lbl_804F7DD8
-lbl_804F7DD8:
+.global cf_CfObjectTbox_typestr
+cf_CfObjectTbox_typestr:
 	.asciz "cf::CfObjectTbox"
 	.balign 4
 	.4byte 0
 
-.global lbl_804F7DF0
-lbl_804F7DF0:
+.global cf_CfObjectObj_typestr
+cf_CfObjectObj_typestr:
 	.asciz "cf::CfObjectObj"
 
 .global lbl_804F7E00
@@ -944,8 +945,8 @@ lbl_804F7E90:
 	.4byte lbl_804F7E84
 	.4byte lbl_804F7E84
 
-.global lbl_804F7E9C
-lbl_804F7E9C:
+.global cf_CfObjectImplWalker_typestr
+cf_CfObjectImplWalker_typestr:
 	.asciz "cf::CfObjectImplWalker"
 	.balign 4
 
@@ -1005,8 +1006,8 @@ lbl_804F7F78:
 	.asciz "FISHING"
 	.asciz "core"
 
-.global lbl_804F7FB8
-lbl_804F7FB8:
+.global cf_CfObjectImplObj_typestr
+cf_CfObjectImplObj_typestr:
 	.asciz "cf::CfObjectImplObj"
 	.4byte 0
 
@@ -1025,8 +1026,8 @@ lbl_804F7FD0:
 	.4byte 0x3ECCCCCD
 	.4byte 0x3DCCCCCD
 
-.global lbl_804F7FF8
-lbl_804F7FF8:
+.global cf_CfObjectImplNpc_typestr
+cf_CfObjectImplNpc_typestr:
 	.asciz "cf::CfObjectImplNpc"
 
 
@@ -1036,8 +1037,8 @@ lbl_804F800C:
 	.balign 4
 	.4byte 0
 
-.global lbl_804F8018
-lbl_804F8018:
+.global cf_CfObjectImplEne_typestr
+cf_CfObjectImplEne_typestr:
 	.asciz "cf::CfObjectImplEne"
 	.4byte 0
 
@@ -1292,32 +1293,32 @@ lbl_804F8310:
 
 	.asciz "cf::CfObjectEff"
 
-.global lbl_804F8390
-lbl_804F8390:
+.global cf_CBattleManager_typestr
+cf_CBattleManager_typestr:
 	.asciz "cf::CBattleManager"
 	.balign 4
 
-.global lbl_804F83A4
-lbl_804F83A4:
+.global reslist_cf_IBattleEvent_typestr
+reslist_cf_IBattleEvent_typestr:
 	.asciz "reslist<cf::IBattleEvent *>"
 
-.global lbl_804F83C0
-lbl_804F83C0:
+.global _reslist_base_cf_IBattleEvent_typestr
+_reslist_base_cf_IBattleEvent_typestr:
 	.asciz "_reslist_base<cf::IBattleEvent *>"
 	.balign 4
 
-.global lbl_804F83E4
-lbl_804F83E4:
+.global reslist_cf_CfObjectActor_typestr
+reslist_cf_CfObjectActor_typestr:
 	.asciz "reslist<cf::CfObjectActor *>"
 	.balign 4
 
-.global lbl_804F8404
-lbl_804F8404:
+.global _reslist_base_cf_CfObjectActor_typestr
+_reslist_base_cf_CfObjectActor_typestr:
 	.asciz "_reslist_base<cf::CfObjectActor *>"
 	.balign 4
 
-.global lbl_804F8428
-lbl_804F8428:
+.global cf_CChainTime_typestr
+cf_CChainTime_typestr:
 	.asciz "cf::CChainTime"
 	.balign 4
 	.asciz "cf::CfObjectModel"
@@ -1329,8 +1330,8 @@ lbl_804F8428:
 	.asciz "cf::CObjectState"
 	.balign 4
 
-.global lbl_804F8484
-lbl_804F8484:
+.global cf_IFactoryEvent_typestr
+cf_IFactoryEvent_typestr:
 	.asciz "cf::IFactoryEvent"
 	.balign 4
 
@@ -1342,21 +1343,21 @@ lbl_804F8498:
 	.asciz "Lv_up_eth"
 	.balign 4
 
-.global lbl_804F84B8
-lbl_804F84B8:
+.global cf_CfObjEnumList_typestr
+cf_CfObjEnumList_typestr:
 	.asciz "cf::CfObjEnumList"
 	.balign 4
 
-.global lbl_804F84CC
-lbl_804F84CC:
+.global cf_CfObjEnumList_OBJ_LIST_typestr
+cf_CfObjEnumList_OBJ_LIST_typestr:
 	.asciz "cf::CfObjEnumList::OBJ_LIST"
 
-.global lbl_804F84E8
-lbl_804F84E8:
+.global QSort_cf_CfObjEnumList_sObjInfo_float_typestr
+QSort_cf_CfObjEnumList_sObjInfo_float_typestr:
 	.asciz "QSort<cf::CfObjEnumList::sObjInfo *, float>"
 
-.global lbl_804F8514
-lbl_804F8514:
+.global fixvector_cf_CfObjEnumList_sObjInfo_384_typestr
+fixvector_cf_CfObjEnumList_sObjInfo_384_typestr:
 	.asciz "fixvector<cf::CfObjEnumList::sObjInfo *, 384>"
 	.balign 4
 
@@ -1366,8 +1367,8 @@ lbl_804F8544:
 	.balign 4
 	.4byte 0
 
-.global lbl_804F8550
-lbl_804F8550:
+.global cf_CfObjectSelectorObj_typestr
+cf_CfObjectSelectorObj_typestr:
 	.asciz "cf::CfObjectSelectorObj"
 
 .global lbl_804F8568
@@ -1472,23 +1473,23 @@ lbl_804F8670:
 	.4byte lbl_804F864C
 	.4byte lbl_804F865C
 
-.global lbl_804F86A8
-lbl_804F86A8:
+.global CMainMenu_typestr
+CMainMenu_typestr:
 	.asciz "CMainMenu"
 	.balign 4
 
-.global lbl_804F86B4
-lbl_804F86B4:
+.global CMainCur_typestr
+CMainCur_typestr:
 	.asciz "CMainCur"
 	.balign 4
 
-.global lbl_804F86C0
-lbl_804F86C0:
+.global CBaseCur_typestr
+CBaseCur_typestr:
 	.asciz "CBaseCur"
 	.balign 4
 
-.global lbl_804F86CC
-lbl_804F86CC:
+.global CTTask_IUICf_typestr
+CTTask_IUICf_typestr:
 	.asciz "CTTask<IUICf>"
 	.balign 4
 
@@ -1584,21 +1585,21 @@ lbl_804F8968:
 	.4byte 0x007D007D
 	.4byte 0x007D007D
 
-.global lbl_804F8978
-lbl_804F8978:
+.global CMenuArtsSelect_typestr
+CMenuArtsSelect_typestr:
 	.asciz "CMenuArtsSelect"
 	.asciz "IScnRender"
 	.balign 4
 	.4byte 0
 	.asciz "cf::IObjectInfo"
 
-.global lbl_804F89A8
-lbl_804F89A8:
+.global IUIBattle_typestr
+IUIBattle_typestr:
 	.asciz "IUIBattle"
 	.balign 4
 
-.global lbl_804F89B4
-lbl_804F89B4:
+.global CTTask_IUIBattle_typestr
+CTTask_IUIBattle_typestr:
 	.asciz "CTTask<IUIBattle>"
 	.balign 4
 	.asciz "IWorkEvent"
@@ -1658,8 +1659,8 @@ lbl_804F8A00:
 	.asciz "pic_messwin03"
 	.asciz "pic_messwin04"
 
-.global lbl_804F8D30
-lbl_804F8D30:
+.global CMenuBattleDamage_typestr
+CMenuBattleDamage_typestr:
 	.asciz "CMenuBattleDamage"
 	.balign 4
 
@@ -1736,13 +1737,13 @@ lbl_804F8F28:
 	.4byte 0x42880000
 
 
-.global lbl_804F8F3C
-lbl_804F8F3C:
+.global CMenuBattlePlayerState_typestr
+CMenuBattlePlayerState_typestr:
 	.asciz "CMenuBattlePlayerState"
 	.balign 4
 
-.global lbl_804F8F54
-lbl_804F8F54:
+.global CPcSelectCursor01_typestr
+CPcSelectCursor01_typestr:
 	.asciz "CPcSelectCursor01"
 	.balign 4
 
@@ -1828,12 +1829,12 @@ lbl_804F9410:
 	.4byte lbl_804F93E0
 	.4byte lbl_804F93F8
 
-.global lbl_804F9420
-lbl_804F9420:
+.global CMenuEnemyState_typestr
+CMenuEnemyState_typestr:
 	.asciz "CMenuEnemyState"
 
-.global lbl_804F9430
-lbl_804F9430:
+.global CPcSelectCursor_typestr
+CPcSelectCursor_typestr:
 	.asciz "CPcSelectCursor"
 
 
@@ -1891,8 +1892,8 @@ lbl_804F9440:
 	.4byte 0
 	.2byte 0
 	
-.global lbl_804F96E0
-lbl_804F96E0:
+.global CMenuFade_typestr
+CMenuFade_typestr:
 	.asciz "CMenuFade"
 	.balign 4
 	.4byte 0
@@ -1905,8 +1906,8 @@ lbl_804F96F0:
 	.asciz "fadeout.brlan"
 	.asciz "win_black"
 
-.global lbl_804F9720
-lbl_804F9720:
+.global CMenuKeyAssign_typestr
+CMenuKeyAssign_typestr:
 	.asciz "CMenuKeyAssign"
 	.balign 4
 
@@ -2115,18 +2116,18 @@ lbl_804F9A0C:
 	.asciz "markerlist2401"
 	.balign 4
 
-.global lbl_804F9A1C
-lbl_804F9A1C:
+.global CMenuMiniMap2_typestr
+CMenuMiniMap2_typestr:
 	.asciz "CMenuMiniMap2"
 	.balign 4
 
-.global lbl_804F9A2C
-lbl_804F9A2C:
+.global CMiniMap_typestr
+CMiniMap_typestr:
 	.asciz "CMiniMap"
 	.balign 4
 
-.global lbl_804F9A38
-lbl_804F9A38:
+.global CMMClock_typestr
+CMMClock_typestr:
 	.asciz "CMMClock"
 	.balign 4
 
@@ -2200,8 +2201,8 @@ lbl_804F9A44:
 	.asciz "txt_map_jump"
 	.balign 4
 
-.global lbl_804F9D48
-lbl_804F9D48:
+.global CMenuQuestLog_typestr
+CMenuQuestLog_typestr:
 	.asciz "CMenuQuestLog"
 	.balign 4
 
@@ -2357,18 +2358,18 @@ lbl_804F9F18:
 	.4byte 0x3FE147AE
 	.4byte 0xC3A92666
 
-.global lbl_804F9F30
-lbl_804F9F30:
+.global CArrow3D_typestr
+CArrow3D_typestr:
 	.asciz "CArrow3D"
 	.balign 4
 
-.global lbl_804F9F3C
-lbl_804F9F3C:
+.global CTTask_CArrow3D_typestr
+CTTask_CArrow3D_typestr:
 	.asciz "CTTask<CArrow3D>"
 	.balign 4
 
-.global lbl_804F9F50
-lbl_804F9F50:
+.global CMenuSymbolMark_typestr
+CMenuSymbolMark_typestr:
 	.asciz "CMenuSymbolMark"
 
 
@@ -2675,18 +2676,18 @@ lbl_804FA488:
 	.asciz "MNU_qt2401"
 	.balign 4
 
-.global lbl_804FA494
-lbl_804FA494:
+.global CQuestWindow_typestr
+CQuestWindow_typestr:
 	.asciz "CQuestWindow"
 	.balign 4
 
-.global lbl_804FA4A4
-lbl_804FA4A4:
+.global IUIWindow_typestr
+IUIWindow_typestr:
 	.asciz "IUIWindow"
 	.balign 4
 
-.global lbl_804FA4B0
-lbl_804FA4B0:
+.global CTTask_IUIWindow_typestr
+CTTask_IUIWindow_typestr:
 	.asciz "CTTask<IUIWindow>"
 	.balign 4
 
@@ -2766,13 +2767,13 @@ lbl_804FA4C4:
 	.balign 4
 	.4byte 0
 
-.global lbl_804FA7D8
-lbl_804FA7D8:
+.global CSysWinSelect_typestr
+CSysWinSelect_typestr:
 	.asciz "CSysWinSelect"
 	.balign 4
 
-.global lbl_804FA7E8
-lbl_804FA7E8:
+.global CSystemWindow_typestr
+CSystemWindow_typestr:
 	.asciz "CSystemWindow"
 	.balign 4
 
@@ -3503,140 +3504,140 @@ lbl_804FAF20:
 	.4byte 0x00000064
 	.4byte 0x00000065
 
-.global lbl_804FAFF8
-lbl_804FAFF8:
+.global _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeMakeCrystal"
 	.balign 4
 
-.global lbl_804FB02C
-lbl_804FB02C:
+.global _unnamed_CTagProcessor_cpp_CTagCodeShop_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeShop_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeShop"
 	.balign 4
 
-.global lbl_804FB058
-lbl_804FB058:
+.global _unnamed_CTagProcessor_cpp_CTagCodeExchange_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeExchange_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeExchange"
 	.balign 4
 
-.global lbl_804FB088
-lbl_804FB088:
+.global _unnamed_CTagProcessor_cpp_CTagCodeTailOff_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeTailOff_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeTailOff"
 	.balign 4
 
-.global lbl_804FB0B8
-lbl_804FB0B8:
+.global _unnamed_CTagProcessor_cpp_CTagCodePresent_typestr
+_unnamed_CTagProcessor_cpp_CTagCodePresent_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodePresent"
 	.balign 4
 
-.global lbl_804FB0E8
-lbl_804FB0E8:
+.global _unnamed_CTagProcessor_cpp_CTagCodeQstStart_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeQstStart_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeQstStart"
 	.balign 4
 
-.global lbl_804FB118
-lbl_804FB118:
+.global _unnamed_CTagProcessor_cpp_CTagCodeInvisible_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeInvisible_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeInvisible"
 	.balign 4
 
-.global lbl_804FB148
-lbl_804FB148:
+.global _unnamed_CTagProcessor_cpp_CTagCodeQuest_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeQuest_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeQuest"
 	.balign 4
 
-.global lbl_804FB174
-lbl_804FB174:
+.global _unnamed_CTagProcessor_cpp_CTagCodeFade_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeFade_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeFade"
 	.balign 4
 
-.global lbl_804FB1A0
-lbl_804FB1A0:
+.global _unnamed_CTagProcessor_cpp_CTagCodeAct_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeAct_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeAct"
 	.balign 4
 
-.global lbl_804FB1CC
-lbl_804FB1CC:
+.global _unnamed_CTagProcessor_cpp_CTagCodeSelect2_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeSelect2_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeSelect2"
 	.balign 4
 
-.global lbl_804FB1FC
-lbl_804FB1FC:
+.global _unnamed_CTagProcessor_cpp_CTagCodeSelect_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeSelect_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeSelect"
 
-.global lbl_804FB228
-lbl_804FB228:
+.global _unnamed_CTagProcessor_cpp_CTagCodeLine_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeLine_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeLine"
 	.balign 4
 
-.global lbl_804FB254
-lbl_804FB254:
+.global _unnamed_CTagProcessor_cpp_CTagCodeMouth_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeMouth_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeMouth"
 	.balign 4
 
-.global lbl_804FB280
-lbl_804FB280:
+.global _unnamed_CTagProcessor_cpp_CTagCodePos_typestr
+_unnamed_CTagProcessor_cpp_CTagCodePos_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodePos"
 	.balign 4
 
-.global lbl_804FB2AC
-lbl_804FB2AC:
+.global _unnamed_CTagProcessor_cpp_CTagCodeType_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeType_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeType"
 	.balign 4
 
-.global lbl_804FB2D8
-lbl_804FB2D8:
+.global _unnamed_CTagProcessor_cpp_CTagCodeTrust_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeTrust_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeTrust"
 	.balign 4
 
-.global lbl_804FB304
-lbl_804FB304:
+.global _unnamed_CTagProcessor_cpp_CTagCodeCol_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeCol_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeCol"
 	.balign 4
 
-.global lbl_804FB330
-lbl_804FB330:
+.global _unnamed_CTagProcessor_cpp_CTagCodeRuby_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeRuby_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeRuby"
 	.balign 4
 
-.global lbl_804FB35C
-lbl_804FB35C:
+.global _unnamed_CTagProcessor_cpp_CTagCodeDel_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeDel_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeDel"
 	.balign 4
 
-.global lbl_804FB388
-lbl_804FB388:
+.global _unnamed_CTagProcessor_cpp_CTagCodeWait_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeWait_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeWait"
 	.balign 4
 	.4byte 0
 
-.global lbl_804FB3B8
-lbl_804FB3B8:
+.global _unnamed_CTagProcessor_cpp_CTagCodeCP_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeCP_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeCP"
 
-.global lbl_804FB3E0
-lbl_804FB3E0:
+.global _unnamed_CTagProcessor_cpp_CTagCodeCL_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeCL_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeCL"
 
-.global lbl_804FB408
-lbl_804FB408:
+.global _unnamed_CTagProcessor_cpp_ITagCode_typestr
+_unnamed_CTagProcessor_cpp_ITagCode_typestr:
 	.asciz "@unnamed@CTagProcessor_cpp@::ITagCode"
 	.balign 4
 
-.global lbl_804FB430
-lbl_804FB430:
+.global CTagProcessorSE_typestr
+CTagProcessorSE_typestr:
 	.asciz "CTagProcessorSE"
 
-.global lbl_804FB440
-lbl_804FB440:
+.global CTagProcessor_typestr
+CTagProcessor_typestr:
 	.asciz "CTagProcessor"
 	.balign 4
 
-.global lbl_804FB450
-lbl_804FB450:
+.global CTagProcessorBase_typestr
+CTagProcessorBase_typestr:
 	.asciz "CTagProcessorBase"
 	.balign 4
 
-.global lbl_804FB464
-lbl_804FB464:
+.global nw4r_ut_TagProcessorBase_wchar_t_typestr
+nw4r_ut_TagProcessorBase_wchar_t_typestr:
 	.asciz "nw4r::ut::TagProcessorBase<wchar_t>"
 
 
@@ -3649,8 +3650,8 @@ lbl_804FB488:
 	.balign 4
 	.4byte 0
 
-.global lbl_804FB4D8
-lbl_804FB4D8:
+.global CTalkWindow_typestr
+CTalkWindow_typestr:
 	.asciz "CTalkWindow"
 
 
@@ -3686,31 +3687,31 @@ lbl_804FB4E4:
 	.asciz "ep100"
 	.balign 4
 
-.global lbl_804FB6D0
-lbl_804FB6D0:
+.global CUIBattleManager_typestr
+CUIBattleManager_typestr:
 	.asciz "CUIBattleManager"
 	.balign 4
 
-.global lbl_804FB6E4
-lbl_804FB6E4:
+.global reslist_IUIBattle_typestr
+reslist_IUIBattle_typestr:
 	.asciz "reslist<IUIBattle *>"
 	.balign 4
 
-.global lbl_804FB6FC
-lbl_804FB6FC:
+.global _reslist_base_IUIBattle_typestr
+_reslist_base_IUIBattle_typestr:
 	.asciz "_reslist_base<IUIBattle *>"
 	.balign 4
 
-.global lbl_804FB718
-lbl_804FB718:
+.global CUIBattleManager_CTest_typestr
+CUIBattleManager_CTest_typestr:
 	.asciz "CUIBattleManager::CTest"
 
-.global lbl_804FB730
-lbl_804FB730:
+.global CTTask_CUIBattleManager_CTest_typestr
+CTTask_CUIBattleManager_CTest_typestr:
 	.asciz "CTTask<CUIBattleManager::CTest>"
 
-.global lbl_804FB750
-lbl_804FB750:
+.global CTTask_CUIBattleManager_typestr
+CTTask_CUIBattleManager_typestr:
 	.asciz "CTTask<CUIBattleManager>"
 	.balign 4
 
@@ -3751,36 +3752,36 @@ lbl_804FB814:
 	.4byte 0x02240225
 	.4byte 0
 
-.global lbl_804FB84C
-lbl_804FB84C:
+.global CUICfManager_typestr
+CUICfManager_typestr:
 	.asciz "CUICfManager"
 	.balign 4
 
-.global lbl_804FB85C
-lbl_804FB85C:
+.global reslist_IUICf_typestr
+reslist_IUICf_typestr:
 	.asciz "reslist<IUICf *>"
 	.balign 4
 
-.global lbl_804FB870
-lbl_804FB870:
+.global _reslist_base_IUICf_typestr
+_reslist_base_IUICf_typestr:
 	.asciz "_reslist_base<IUICf *>"
 	.balign 4
 
-.global lbl_804FB888
-lbl_804FB888:
+.global CUICfManager_CTest_typestr
+CUICfManager_CTest_typestr:
 	.asciz "CUICfManager::CTest"
 
-.global lbl_804FB89C
-lbl_804FB89C:
+.global CTTask_CUICfManager_CTest_typestr
+CTTask_CUICfManager_CTest_typestr:
 	.asciz "CTTask<CUICfManager::CTest>"
 
-.global lbl_804FB8B8
-lbl_804FB8B8:
+.global CTTask_CUICfManager_typestr
+CTTask_CUICfManager_typestr:
 	.asciz "CTTask<CUICfManager>"
 	.balign 4
 
-.global lbl_804FB8D0
-lbl_804FB8D0:
+.global cf_IFlagEvent_typestr
+cf_IFlagEvent_typestr:
 	.asciz "cf::IFlagEvent"
 	.balign 4
 
@@ -4256,31 +4257,31 @@ lbl_804FBE94:
 	.asciz "number%d"
 	.balign 4
 
-.global lbl_804FC110
-lbl_804FC110:
+.global CUIWindowManager_typestr
+CUIWindowManager_typestr:
 	.asciz "CUIWindowManager"
 	.balign 4
 
-.global lbl_804FC124
-lbl_804FC124:
+.global reslist_IUIWindow_typestr
+reslist_IUIWindow_typestr:
 	.asciz "reslist<IUIWindow *>"
 	.balign 4
 
-.global lbl_804FC13C
-lbl_804FC13C:
+.global _reslist_base_IUIWindow_typestr
+_reslist_base_IUIWindow_typestr:
 	.asciz "_reslist_base<IUIWindow *>"
 	.balign 4
 
-.global lbl_804FC158
-lbl_804FC158:
+.global CUIWindowManager_CTest_typestr
+CUIWindowManager_CTest_typestr:
 	.asciz "CUIWindowManager::CTest"
 
-.global lbl_804FC170
-lbl_804FC170:
+.global CTTask_CUIWindowManager_CTest_typestr
+CTTask_CUIWindowManager_CTest_typestr:
 	.asciz "CTTask<CUIWindowManager::CTest>"
 
-.global lbl_804FC190
-lbl_804FC190:
+.global CTTask_CUIWindowManager_typestr
+CTTask_CUIWindowManager_typestr:
 	.asciz "CTTask<CUIWindowManager>"
 	.balign 4
 
@@ -4591,8 +4592,8 @@ lbl_804FC758:
 	.4byte lbl_804FC738
 	.4byte lbl_804FC748
 
-.global lbl_804FC7C8
-lbl_804FC7C8:
+.global cf_CfBdat_typestr
+cf_CfBdat_typestr:
 	.asciz "cf::CfBdat"
 	.balign 4
 
@@ -4697,8 +4698,8 @@ lbl_804FCBDC:
 	.asciz "face_m02"
 	.balign 4
 
-.global lbl_804FCBE8
-lbl_804FCBE8:
+.global CMenuUpdate_typestr
+CMenuUpdate_typestr:
 	.asciz "CMenuUpdate"
 	.4byte 0
 
@@ -4759,8 +4760,8 @@ lbl_804FCBF8:
 	.asciz "name"
 	.asciz "mf00_reg00_tut.tpl"
 
-.global lbl_804FCF40
-lbl_804FCF40:
+.global CMenuLandTelop_typestr
+CMenuLandTelop_typestr:
 	.asciz "CMenuLandTelop"
 	.balign 4
 
@@ -4808,8 +4809,8 @@ lbl_804FD0D8:
 	.asciz "elem"
 	.4byte 0
 
-.global lbl_804FD0F0
-lbl_804FD0F0:
+.global CMenuGetItem_typestr
+CMenuGetItem_typestr:
 	.asciz "CMenuGetItem"
 	.balign 4
 
@@ -4913,32 +4914,32 @@ lbl_804FD208:
 	.4byte 0x00000100
 
 
-.global lbl_804FD268
-lbl_804FD268:
+.global cf_CAttackSet_typestr
+cf_CAttackSet_typestr:
 	.asciz "cf::CAttackSet"
 	.balign 4
 
-.global lbl_804FD278
-lbl_804FD278:
+.global cf__sAttackSet_typestr
+cf__sAttackSet_typestr:
 	.asciz "cf::_sAttackSet"
 
-.global lbl_804FD288
-lbl_804FD288:
+.global cf_CArtsSet_typestr
+cf_CArtsSet_typestr:
 	.asciz "cf::CArtsSet"
 	.balign 4
 
-.global lbl_804FD298
-lbl_804FD298:
+.global cf__sArtsSet_typestr
+cf__sArtsSet_typestr:
 	.asciz "cf::_sArtsSet"
 	.balign 4
 
-.global lbl_804FD2A8
-lbl_804FD2A8:
+.global cf_CArtsParam_typestr
+cf_CArtsParam_typestr:
 	.asciz "cf::CArtsParam"
 	.balign 4
 
-.global lbl_804FD2B8
-lbl_804FD2B8:
+.global cf_CAttackParam_typestr
+cf_CAttackParam_typestr:
 	.asciz "cf::CAttackParam"
 	.balign 4
 	.4byte 0
@@ -5035,49 +5036,49 @@ lbl_804FD3AC:
 	.asciz "materia1"
 	.balign 4
 
-.global lbl_804FD3B8
-lbl_804FD3B8:
+.global materia1Per_typestr
+materia1Per_typestr:
 	.asciz "materia1Per"
 
-.global lbl_804FD3C4
-lbl_804FD3C4:
+.global cf_ItemPurifyKessyouImpl_typestr
+cf_ItemPurifyKessyouImpl_typestr:
 	.asciz "cf::ItemPurifyKessyouImpl"
 	.balign 4
 
-.global lbl_804FD3E0
-lbl_804FD3E0:
+.global cf_ItemKessyouImpl_typestr
+cf_ItemKessyouImpl_typestr:
 	.asciz "cf::ItemKessyouImpl"
 
-.global lbl_804FD3F4
-lbl_804FD3F4:
+.global cf_ItemPurifyCrystalImpl_typestr
+cf_ItemPurifyCrystalImpl_typestr:
 	.asciz "cf::ItemPurifyCrystalImpl"
 	.balign 4
 
-.global lbl_804FD410
-lbl_804FD410:
+.global cf_ItemDropCrystalImpl_typestr
+cf_ItemDropCrystalImpl_typestr:
 	.asciz "cf::ItemDropCrystalImpl"
 
-.global lbl_804FD428
-lbl_804FD428:
+.global cf_ItemCrystalImpl_typestr
+cf_ItemCrystalImpl_typestr:
 	.asciz "cf::ItemCrystalImpl"
 
-.global lbl_804FD43C
-lbl_804FD43C:
+.global cf_ItemEquipImpl_typestr
+cf_ItemEquipImpl_typestr:
 	.asciz "cf::ItemEquipImpl"
 	.balign 4
 
-.global lbl_804FD450
-lbl_804FD450:
+.global cf_ItemConsImpl_typestr
+cf_ItemConsImpl_typestr:
 	.asciz "cf::ItemConsImpl"
 	.balign 4
 
-.global lbl_804FD464
-lbl_804FD464:
+.global cf_ItemDummyImpl_typestr
+cf_ItemDummyImpl_typestr:
 	.asciz "cf::ItemDummyImpl"
 	.balign 4
 
-.global lbl_804FD478
-lbl_804FD478:
+.global cf_ItemImpl_typestr
+cf_ItemImpl_typestr:
 	.asciz "cf::ItemImpl"
 	.balign 4
 
@@ -5174,8 +5175,8 @@ lbl_804FD628:
 	.4byte 0x02020201
 	.4byte 0
 
-.global lbl_804FD658
-lbl_804FD658:
+.global cf_CCharEffect_typestr
+cf_CCharEffect_typestr:
 	.asciz "cf::CCharEffect"
 
 
@@ -5212,8 +5213,8 @@ lbl_804FD678:
 	.4byte 0x005A0054
 	.4byte 0x00530000
 
-.global lbl_804FD6D0
-lbl_804FD6D0:
+.global cf_CCharEffectEne_typestr
+cf_CCharEffectEne_typestr:
 	.asciz "cf::CCharEffectEne"
 	.balign 4
 	.4byte 0
@@ -5245,8 +5246,8 @@ lbl_804FD6E8:
 	.4byte 0x005A0054
 	.4byte 0x00530000
 
-.global lbl_804FD740
-lbl_804FD740:
+.global cf_CCharEffectNpc_typestr
+cf_CCharEffectNpc_typestr:
 	.asciz "cf::CCharEffectNpc"
 	.balign 4
 	.4byte 0
@@ -5278,8 +5279,8 @@ lbl_804FD758:
 	.4byte 0x005A0054
 	.4byte 0x00530000
 
-.global lbl_804FD7B0
-lbl_804FD7B0:
+.global cf_CCharEffectObj_typestr
+cf_CCharEffectObj_typestr:
 	.asciz "cf::CCharEffectObj"
 	.balign 4
 	.4byte 0
@@ -5311,8 +5312,8 @@ lbl_804FD7C8:
 	.4byte 0x005A0054
 	.4byte 0x00530000
 
-.global lbl_804FD820
-lbl_804FD820:
+.global cf_CCharEffectPc_typestr
+cf_CCharEffectPc_typestr:
 	.asciz "cf::CCharEffectPc"
 	.balign 4
 	.4byte 0
@@ -5322,21 +5323,21 @@ lbl_804FD838:
 	.asciz "/menu/Col6Sys.arc"
 	.balign 4
 
-.global lbl_804FD84C
-lbl_804FD84C:
+.global CCol6Invite_typestr
+CCol6Invite_typestr:
 	.asciz "CCol6Invite"
 
-.global lbl_804FD858
-lbl_804FD858:
+.global CCol6System_typestr
+CCol6System_typestr:
 	.asciz "CCol6System"
 
-.global lbl_804FD864
-lbl_804FD864:
+.global CCol6Hint_typestr
+CCol6Hint_typestr:
 	.asciz "CCol6Hint"
 	.balign 4
 
-.global lbl_804FD870
-lbl_804FD870:
+.global CCol6CheckBat_typestr
+CCol6CheckBat_typestr:
 	.asciz "CCol6CheckBat"
 	.balign 4
 
@@ -6556,12 +6557,12 @@ lbl_804FE800:
 	.asciz "/ev/realtime/"
 	.balign 4
 
-.global lbl_804FE810
-lbl_804FE810:
+.global cf_CTaskREvent_typestr
+cf_CTaskREvent_typestr:
 	.asciz "cf::CTaskREvent"
 
-.global lbl_804FE820
-lbl_804FE820:
+.global CTTask_cf_CTaskREvent_typestr
+CTTask_cf_CTaskREvent_typestr:
 	.asciz "CTTask<cf::CTaskREvent>"
 
 
@@ -6574,13 +6575,13 @@ lbl_804FE838:
 	.asciz "abcd"
 	.4byte 0
 	.byte 0x00
-.global lbl_804FE850
-lbl_804FE850:
+.global cf_CInfoCf_typestr
+cf_CInfoCf_typestr:
 	.asciz "cf::CInfoCf"
 	.4byte 0
 
-.global lbl_804FE860
-lbl_804FE860:
+.global CMenuItem_typestr
+CMenuItem_typestr:
 	.asciz "CMenuItem"
 	.balign 4
 
@@ -6591,18 +6592,18 @@ lbl_804FE86C:
 	.asciz "name"
 	.4byte 0
 	.2byte 0
-.global lbl_804FE880
-lbl_804FE880:
+.global cf_CREvtMem_typestr
+cf_CREvtMem_typestr:
 	.asciz "cf::CREvtMem"
 	.balign 4
 
-.global lbl_804FE890
-lbl_804FE890:
+.global cf_CTaskREvtSequence_typestr
+cf_CTaskREvtSequence_typestr:
 	.asciz "cf::CTaskREvtSequence"
 	.balign 4
 
-.global lbl_804FE8A8
-lbl_804FE8A8:
+.global CTTask_cf_CTaskREvtSequence_typestr
+CTTask_cf_CTaskREvtSequence_typestr:
 	.asciz "CTTask<cf::CTaskREvtSequence>"
 	.balign 4
 
@@ -6624,19 +6625,19 @@ lbl_804FE8C8:
 	.balign 4
 	.4byte 0
 
-.global lbl_804FE930
-lbl_804FE930:
+.global cf_CfResObjImpl_typestr
+cf_CfResObjImpl_typestr:
 	.asciz "cf::CfResObjImpl"
 	.balign 4
 
-.global lbl_804FE944
-lbl_804FE944:
+.global cf_CfResImpl_typestr
+cf_CfResImpl_typestr:
 	.asciz "cf::CfResImpl"
 	.balign 4
 	.4byte 0
 
-.global lbl_804FE958
-lbl_804FE958:
+.global cf_CfResReloadImpl_typestr
+cf_CfResReloadImpl_typestr:
 	.asciz "cf::CfResReloadImpl"
 	.4byte 0
 
@@ -6669,8 +6670,8 @@ lbl_804FE970:
 	.asciz "wind_WB"
 	.4byte 0
 
-.global lbl_804FEA60
-lbl_804FEA60:
+.global cf_CfMapEffectManager_typestr
+cf_CfMapEffectManager_typestr:
 	.asciz "cf::CfMapEffectManager"
 	.balign 4
 
@@ -6705,23 +6706,23 @@ lbl_804FEA78:
 	.balign 4
 	.4byte 0
 
-.global lbl_804FEB30
-lbl_804FEB30:
+.global CScnMaruShadowNw4r_typestr
+CScnMaruShadowNw4r_typestr:
 	.asciz "CScnMaruShadowNw4r"
 	.balign 4
 
-.global lbl_804FEB44
-lbl_804FEB44:
+.global IScnPolyShadow_typestr
+IScnPolyShadow_typestr:
 	.asciz "IScnPolyShadow"
 	.balign 4
 
-.global lbl_804FEB54
-lbl_804FEB54:
+.global cf_CREvtModel_typestr
+cf_CREvtModel_typestr:
 	.asciz "cf::CREvtModel"
 	.balign 4
 
-.global lbl_804FEB64
-lbl_804FEB64:
+.global cf_CREvtObj_typestr
+cf_CREvtObj_typestr:
 	.asciz "cf::CREvtObj"
 	.balign 4
 
@@ -6739,13 +6740,13 @@ lbl_804FEB74:
 	.asciz "core"
 	.balign 4
 
-.global lbl_804FEBC0
-lbl_804FEBC0:
+.global cf_CfValueItemManager_typestr
+cf_CfValueItemManager_typestr:
 	.asciz "cf::CfValueItemManager"
 	.balign 4
 
-.global lbl_804FEBD8
-lbl_804FEBD8:
+.global cf_CfMapItemManager_typestr
+cf_CfMapItemManager_typestr:
 	.asciz "cf::CfMapItemManager"
 	.balign 4
 
@@ -6778,8 +6779,8 @@ lbl_804FEC68:
 	.balign 4
 	.4byte 0
 
-.global lbl_804FEC78
-lbl_804FEC78:
+.global CMenuZeal_typestr
+CMenuZeal_typestr:
 	.asciz "CMenuZeal"
 	.balign 4
 
@@ -6810,8 +6811,8 @@ lbl_804FEC84:
 	.balign 4
 	.4byte 0
 
-.global lbl_804FEEF8
-lbl_804FEEF8:
+.global cf_CREvtCamera_typestr
+cf_CREvtCamera_typestr:
 	.asciz "cf::CREvtCamera"
 
 
@@ -6828,8 +6829,8 @@ lbl_804FEF08:
 	.balign 4
 	.4byte 0
 
-.global lbl_804FEF48
-lbl_804FEF48:
+.global cf_CREvtModelMap_typestr
+cf_CREvtModelMap_typestr:
 	.asciz "cf::CREvtModelMap"
 	.balign 4
 
@@ -6843,8 +6844,8 @@ lbl_804FEF5C:
 	.balign 4
 	.4byte 0
 
-.global lbl_804FEF78
-lbl_804FEF78:
+.global cf_CREvtModelObj_typestr
+cf_CREvtModelObj_typestr:
 	.asciz "cf::CREvtModelObj"
 	.balign 4
 
@@ -6877,14 +6878,14 @@ lbl_804FEFD0:
 	.4byte 0
 	.4byte 0
 
-.global lbl_804FF000
-lbl_804FF000:
+.global cf_CREvtModelPc_typestr
+cf_CREvtModelPc_typestr:
 	.asciz "cf::CREvtModelPc"
 	.balign 4
 	.4byte 0
 
-.global lbl_804FF018
-lbl_804FF018:
+.global cf_CREvtEffect_typestr
+cf_CREvtEffect_typestr:
 	.asciz "cf::CREvtEffect"
 
 
@@ -6992,8 +6993,8 @@ lbl_804FF0F0:
 	.asciz "pos_eflg2"
 	.balign 4
 
-.global lbl_804FF1E0
-lbl_804FF1E0:
+.global CMenuPTGauge_typestr
+CMenuPTGauge_typestr:
 	.asciz "CMenuPTGauge"
 	.balign 4
 
@@ -7022,8 +7023,9 @@ lbl_804FF2D8:
 	.asciz "snd/adx/"
 	.asciz "loop"
 	.byte 0x00
-.global lbl_804FF2F8
-lbl_804FF2F8:
+
+.global CMenuSelectShop_typestr
+CMenuSelectShop_typestr:
 	.asciz "CMenuSelectShop"
 
 
@@ -7031,8 +7033,8 @@ lbl_804FF2F8:
 lbl_804FF308:
 	.asciz "CMenuSelectShop"
 
-.global lbl_804FF318
-lbl_804FF318:
+.global CMenuShopSell_typestr
+CMenuShopSell_typestr:
 	.asciz "CMenuShopSell"
 	.balign 4
 
@@ -7042,8 +7044,9 @@ lbl_804FF328:
 	.asciz "MNU_shop"
 	.asciz "name"
 	.2byte 0
-.global lbl_804FF338
-lbl_804FF338:
+	
+.global CMenuShopBuy_typestr
+CMenuShopBuy_typestr:
 	.asciz "CMenuShopBuy"
 	.balign 4
 
@@ -7079,23 +7082,23 @@ lbl_804FF358:
 	.4byte 0x3DCCCCCD
 	.4byte 0x3F666666
 
-.global lbl_804FF3A8
-lbl_804FF3A8:
+.global CScnItemModelNw4r_typestr
+CScnItemModelNw4r_typestr:
 	.asciz "CScnItemModelNw4r"
 	.balign 4
 	.4byte 0
 
-.global lbl_804FF3C0
-lbl_804FF3C0:
+.global cf_CfResPcImpl_typestr
+cf_CfResPcImpl_typestr:
 	.asciz "cf::CfResPcImpl"
 
-.global lbl_804FF3D0
-lbl_804FF3D0:
+.global CScnItemModel_typestr
+CScnItemModel_typestr:
 	.asciz "CScnItemModel"
 	.balign 4
 
-.global lbl_804FF3E0
-lbl_804FF3E0:
+.global CScnItem_typestr
+CScnItem_typestr:
 	.asciz "CScnItem"
 	.balign 4
 
@@ -7107,13 +7110,13 @@ lbl_804FF3EC:
 	.balign 4
 	.4byte 0
 
-.global lbl_804FF400
-lbl_804FF400:
+.global CMenuPTState_typestr
+CMenuPTState_typestr:
 	.asciz "CMenuPTState"
 	.balign 4
 
-.global lbl_804FF410
-lbl_804FF410:
+.global cf_CPartsChange_typestr
+cf_CPartsChange_typestr:
 	.asciz "cf::CPartsChange"
 	.balign 4
 
@@ -7123,13 +7126,13 @@ lbl_804FF424:
 	.balign 4
 	.4byte 0
 
-.global lbl_804FF430
-lbl_804FF430:
+.global reslist_cf_CfPartyInfo_typestr
+reslist_cf_CfPartyInfo_typestr:
 	.asciz "reslist<cf::CfPartyInfo *>"
 	.balign 4
 
-.global lbl_804FF44C
-lbl_804FF44C:
+.global _reslist_base_cf_CfPartyInfo_typestr
+_reslist_base_cf_CfPartyInfo_typestr:
 	.asciz "_reslist_base<cf::CfPartyInfo *>"
 	.balign 4
 
@@ -7162,13 +7165,13 @@ lbl_804FF470:
 	.asciz "child_ID"
 	.balign 4
 
-.global lbl_804FF538
-lbl_804FF538:
+.global cf_CtrlMovePC_typestr
+cf_CtrlMovePC_typestr:
 	.asciz "cf::CtrlMovePC"
 	.balign 4
 
-.global lbl_804FF548
-lbl_804FF548:
+.global cf_CtrlMoveNpc_typestr
+cf_CtrlMoveNpc_typestr:
 	.asciz "cf::CtrlMoveNpc"
 
 
@@ -7185,8 +7188,8 @@ lbl_804FF558:
 	.asciz "model"
 	.balign 4
 
-.global lbl_804FF598
-lbl_804FF598:
+.global CMenuBattleMode_typestr
+CMenuBattleMode_typestr:
 	.asciz "CMenuBattleMode"
 
 
@@ -7199,8 +7202,8 @@ lbl_804FF5A8:
 	.balign 4
 	.4byte 0
 
-.global lbl_804FF610
-lbl_804FF610:
+.global COccCulling_typestr
+COccCulling_typestr:
 	.asciz "COccCulling"
 
 
@@ -7209,8 +7212,8 @@ lbl_804FF61C:
 	.asciz "OCC_CULL"
 	.balign 4
 
-.global lbl_804FF628
-lbl_804FF628:
+.global CSimpleEveTalkWin_typestr
+CSimpleEveTalkWin_typestr:
 	.asciz "CSimpleEveTalkWin"
 	.balign 4
 
@@ -7234,13 +7237,13 @@ lbl_804FF63C:
 	.asciz "txt_mes"
 	.balign 4
 
-.global lbl_804FF750
-lbl_804FF750:
+.global cf_CTaskCulling_typestr
+cf_CTaskCulling_typestr:
 	.asciz "cf::CTaskCulling"
 	.balign 4
 
-.global lbl_804FF764
-lbl_804FF764:
+.global CTTask_cf_CTaskCulling_typestr
+CTTask_cf_CTaskCulling_typestr:
 	.asciz "CTTask<cf::CTaskCulling>"
 	.balign 4
 
@@ -7272,8 +7275,8 @@ lbl_804FF7A8:
 	.4byte 0x3DF5C28F
 	.4byte 0x3E19999A
 
-.global lbl_804FF7BC
-lbl_804FF7BC:
+.global cf_CVision_typestr
+cf_CVision_typestr:
 	.asciz "cf::CVision"
 
 
@@ -7472,8 +7475,8 @@ lbl_804FFA70:
 	.4byte lbl_804FFA30
 	.4byte lbl_804FFA48
 
-.global lbl_804FFA80
-lbl_804FFA80:
+.global CMenuVision_typestr
+CMenuVision_typestr:
 	.asciz "CMenuVision"
 	.4byte 0
 
@@ -7553,8 +7556,8 @@ lbl_804FFA90:
 	.asciz "name"
 	.asciz "icon"
 
-.global lbl_80500010
-lbl_80500010:
+.global CMenuBattleCommu_typestr
+CMenuBattleCommu_typestr:
 	.asciz "CMenuBattleCommu"
 	.balign 4
 
@@ -7600,17 +7603,17 @@ lbl_80500218:
 	.2byte 0x006E
 	.4byte 0
 
-.global lbl_80500228
-lbl_80500228:
+.global cf_CPcEffect07_typestr
+cf_CPcEffect07_typestr:
 	.asciz "cf::CPcEffect07"
 
-.global lbl_80500238
-lbl_80500238:
+.global cf_IPcEffect_typestr
+cf_IPcEffect_typestr:
 	.asciz "cf::IPcEffect"
 	.balign 4
 
-.global lbl_80500248
-lbl_80500248:
+.global CMenuGetItemMulti_typestr
+CMenuGetItemMulti_typestr:
 	.asciz "CMenuGetItemMulti"
 	.balign 4
 
@@ -7774,14 +7777,14 @@ lbl_805008D0:
 	.4byte 0x0E1C0105
 	.4byte 0x0DAF0000
 
-.global lbl_80500904
-lbl_80500904:
+.global cf_CSuddenCommu_typestr
+cf_CSuddenCommu_typestr:
 	.asciz "cf::CSuddenCommu"
 	.balign 4
 	.asciz "cf::IObjectInfo"
 
-.global lbl_80500928
-lbl_80500928:
+.global CMenuKizunaTalk_typestr
+CMenuKizunaTalk_typestr:
 	.asciz "CMenuKizunaTalk"
 
 
@@ -7824,8 +7827,8 @@ lbl_80500938:
 	.asciz "JNL_kizunalist"
 	.balign 4
 
-.global lbl_80500B28
-lbl_80500B28:
+.global CMenuItemExchange_typestr
+CMenuItemExchange_typestr:
 	.asciz "CMenuItemExchange"
 	.balign 4
 
@@ -7836,18 +7839,18 @@ lbl_80500B3C:
 	.asciz "name"
 	.4byte 0
 	.2byte 0
-.global lbl_80500B50
-lbl_80500B50:
+.global cf_CfPadTask_typestr
+cf_CfPadTask_typestr:
 	.asciz "cf::CfPadTask"
 	.balign 4
 
-.global lbl_80500B60
-lbl_80500B60:
+.global CTTask_cf_CfPadTask_typestr
+CTTask_cf_CfPadTask_typestr:
 	.asciz "CTTask<cf::CfPadTask>"
 	.balign 4
 
-.global lbl_80500B78
-lbl_80500B78:
+.global cf_CREvtLight_typestr
+cf_CREvtLight_typestr:
 	.asciz "cf::CREvtLight"
 	.balign 4
 
@@ -7874,8 +7877,8 @@ lbl_80500B88:
 	.asciz "arc"
 	.4byte 0
 
-.global lbl_80500CB8
-lbl_80500CB8:
+.global CTitleAHelp_typestr
+CTitleAHelp_typestr:
 	.asciz "CTitleAHelp"
 
 
@@ -7971,22 +7974,22 @@ lbl_80500E30:
 	.4byte 0x00100000
 	.4byte 0x00200000
 
-.global lbl_80500E3C
-lbl_80500E3C:
+.global CItemBoxGrid_typestr
+CItemBoxGrid_typestr:
 	.asciz "CItemBoxGrid"
 	.balign 4
 
-.global lbl_80500E4C
-lbl_80500E4C:
+.global CArtsBookItem_typestr
+CArtsBookItem_typestr:
 	.asciz "CArtsBookItem"
 	.balign 4
 
-.global lbl_80500E5C
-lbl_80500E5C:
+.global CVisionItem_typestr
+CVisionItem_typestr:
 	.asciz "CVisionItem"
 
-.global lbl_80500E68
-lbl_80500E68:
+.global CQuestItem_typestr
+CQuestItem_typestr:
 	.asciz "CQuestItem"
 	.balign 4
 
@@ -8226,8 +8229,8 @@ lbl_80501A00:
 	.asciz "txt_menu01_05"
 	.balign 4
 
-.global lbl_80501A10
-lbl_80501A10:
+.global CSortMenu_typestr
+CSortMenu_typestr:
 	.asciz "CSortMenu"
 	.balign 4
 	.4byte 0
@@ -8324,13 +8327,13 @@ lbl_80501B50:
 	.4byte lbl_80501AC4
 	.4byte lbl_80501AB8
 
-.global lbl_80501B6C
-lbl_80501B6C:
+.global CItemBoxInfo2_typestr
+CItemBoxInfo2_typestr:
 	.asciz "CItemBoxInfo2"
 	.balign 4
 
-.global lbl_80501B7C
-lbl_80501B7C:
+.global CItemBoxInfo_typestr
+CItemBoxInfo_typestr:
 	.asciz "CItemBoxInfo"
 	.balign 4
 
@@ -8510,8 +8513,8 @@ lbl_80501B8C:
 	.asciz "CItemBoxInfo2Tex"
 	.balign 4
 
-.global lbl_805023A0
-lbl_805023A0:
+.global CNumSelect_typestr
+CNumSelect_typestr:
 	.asciz "CNumSelect"
 	.balign 4
 	.4byte 0
@@ -8839,13 +8842,13 @@ lbl_805028F4:
 	.4byte 0x40000000
 	.4byte 0x40200000
 
-.global lbl_80502910
-lbl_80502910:
+.global CItemBoxLine_typestr
+CItemBoxLine_typestr:
 	.asciz "CItemBoxLine"
 	.balign 4
 
-.global lbl_80502920
-lbl_80502920:
+.global CIBLTabCur_typestr
+CIBLTabCur_typestr:
 	.asciz "CIBLTabCur"
 	.balign 4
 	.asciz "CBaseCur"
@@ -9073,8 +9076,8 @@ lbl_80503188:
 	.asciz "pic_scr05_bar"
 	.balign 4
 
-.global lbl_80503198
-lbl_80503198:
+.global CScrollBar_typestr
+CScrollBar_typestr:
 	.asciz "CScrollBar"
 	.balign 4
 
@@ -9144,12 +9147,12 @@ lbl_80503288:
 	.asciz "s1LODSTOP"
 	.balign 4
 
-.global lbl_80503294
-lbl_80503294:
+.global cf_CfGimmickObject_typestr
+cf_CfGimmickObject_typestr:
 	.asciz "cf::CfGimmickObject"
 
-.global lbl_805032A8
-lbl_805032A8:
+.global cf_CfGimmick_typestr
+cf_CfGimmick_typestr:
 	.asciz "cf::CfGimmick"
 	.balign 4
 
@@ -9186,8 +9189,8 @@ lbl_805032B8:
 	.balign 4
 	.4byte 0
 
-.global lbl_805033B8
-lbl_805033B8:
+.global cf_CfResTboxImpl_typestr
+cf_CfResTboxImpl_typestr:
 	.asciz "cf::CfResTboxImpl"
 	.balign 4
 	.4byte 0
@@ -9198,8 +9201,8 @@ lbl_805033D0:
 	.4byte 0x00100000
 	.4byte 0x00200000
 
-.global lbl_805033DC
-lbl_805033DC:
+.global CPartyStateWin_typestr
+CPartyStateWin_typestr:
 	.asciz "CPartyStateWin"
 	.balign 4
 
@@ -9226,8 +9229,8 @@ lbl_80503434:
 	.4byte 0x00100000
 	.4byte 0x00200000
 
-.global lbl_80503440
-lbl_80503440:
+.global CModelDisp_typestr
+CModelDisp_typestr:
 	.asciz "CModelDisp"
 	.balign 4
 
@@ -9255,8 +9258,8 @@ lbl_80503478:
 	.4byte 0x424C0000
 	.4byte 0x42880000
 
-.global lbl_8050348C
-lbl_8050348C:
+.global CPartyState_typestr
+CPartyState_typestr:
 	.asciz "CPartyState"
 
 
@@ -9364,8 +9367,8 @@ lbl_80503734:
 	.4byte 0x00100000
 	.4byte 0x00200000
 
-.global lbl_80503740
-lbl_80503740:
+.global CModelDispEquip_typestr
+CModelDispEquip_typestr:
 	.asciz "CModelDispEquip"
 
 
@@ -9479,8 +9482,8 @@ lbl_80503870:
 	.4byte lbl_80503854
 	.4byte lbl_80503860
 
-.global lbl_805038A8
-lbl_805038A8:
+.global CEquipChange_typestr
+CEquipChange_typestr:
 	.asciz "CEquipChange"
 	.balign 4
 
@@ -9530,13 +9533,13 @@ lbl_805038B8:
 	.asciz "CEquipChangeTex"
 	.balign 4
 
-.global lbl_80503AE8
-lbl_80503AE8:
+.global reslist_cf_CfMapMineManager_MinePoint_typestr
+reslist_cf_CfMapMineManager_MinePoint_typestr:
 	.asciz "reslist<cf::CfMapMineManager::MinePoint>"
 	.balign 4
 
-.global lbl_80503B14
-lbl_80503B14:
+.global _reslist_base_cf_CfMapMineManager_MinePoint_typestr
+_reslist_base_cf_CfMapMineManager_MinePoint_typestr:
 	.asciz "_reslist_base<cf::CfMapMineManager::MinePoint>"
 	.balign 4
 
@@ -9561,8 +9564,8 @@ lbl_80503B44:
 	.asciz "MNU_sysmes"
 	.balign 4
 
-.global lbl_80503BC8
-lbl_80503BC8:
+.global CItemBoxGridSubMenu_typestr
+CItemBoxGridSubMenu_typestr:
 	.asciz "CItemBoxGridSubMenu"
 
 
@@ -9664,8 +9667,8 @@ lbl_80503D54:
 	.asciz "%s"
 	.4byte 0
 	.byte 0x00, 0x00, 0x00
-.global lbl_80503D88
-lbl_80503D88:
+.global cf_CfGimmickElv_typestr
+cf_CfGimmickElv_typestr:
 	.asciz "cf::CfGimmickElv"
 	.balign 4
 
@@ -9687,8 +9690,8 @@ lbl_80503D9C:
 	.balign 4
 	.4byte 0
 
-.global lbl_80503DF8
-lbl_80503DF8:
+.global cf_CfGimmickLock_typestr
+cf_CfGimmickLock_typestr:
 	.asciz "cf::CfGimmickLock"
 	.balign 4
 
@@ -9698,8 +9701,8 @@ lbl_80503E0C:
 	.asciz "rockTYPE"
 	.balign 4
 
-.global lbl_80503E18
-lbl_80503E18:
+.global cf_CfGimmickWarp_typestr
+cf_CfGimmickWarp_typestr:
 	.asciz "cf::CfGimmickWarp"
 	.balign 4
 
@@ -9711,8 +9714,8 @@ lbl_80503E2C:
 	.asciz "A_roty"
 	.asciz "B_roty"
 
-.global lbl_80503E48
-lbl_80503E48:
+.global cf_CfGimmickJump_typestr
+cf_CfGimmickJump_typestr:
 	.asciz "cf::CfGimmickJump"
 	.balign 4
 
@@ -9736,8 +9739,8 @@ lbl_80503E5C:
 	.balign 4
 	.4byte 0
 
-.global lbl_80503EB8
-lbl_80503EB8:
+.global cf_CfGimmickItem_typestr
+cf_CfGimmickItem_typestr:
 	.asciz "cf::CfGimmickItem"
 	.balign 4
 
@@ -9761,14 +9764,14 @@ lbl_80503ECC:
 	.asciz "quest_Min"
 	.balign 4
 
-.global lbl_80503F30
-lbl_80503F30:
+.global CMenuMakeCrystal_typestr
+CMenuMakeCrystal_typestr:
 	.asciz "CMenuMakeCrystal"
 	.balign 4
 	.4byte 0
 
-.global lbl_80503F48
-lbl_80503F48:
+.global CMakeCrystalWin_typestr
+CMakeCrystalWin_typestr:
 	.asciz "CMakeCrystalWin"
 
 
@@ -9787,8 +9790,8 @@ lbl_80503F90:
 	.4byte 0x00000058
 	.4byte 0
 
-.global lbl_80503F9C
-lbl_80503F9C:
+.global CMCCrystalBox_typestr
+CMCCrystalBox_typestr:
 	.asciz "CMCCrystalBox"
 	.balign 4
 
@@ -9887,8 +9890,8 @@ lbl_80503FAC:
 	.asciz "MNU_skill"
 	.balign 4
 
-.global lbl_80504500
-lbl_80504500:
+.global CMCCrystalInfo_typestr
+CMCCrystalInfo_typestr:
 	.asciz "CMCCrystalInfo"
 	.balign 4
 
@@ -9949,8 +9952,8 @@ lbl_805047F0:
 	.4byte 0x00100000
 	.4byte 0x00200000
 
-.global lbl_805047FC
-lbl_805047FC:
+.global CModelDispMakeCrystal_typestr
+CModelDispMakeCrystal_typestr:
 	.asciz "CModelDispMakeCrystal"
 	.balign 4
 
@@ -9985,8 +9988,8 @@ lbl_80504814:
 	.asciz "arc"
 	.4byte 0
 	.byte 0x00
-.global lbl_80504920
-lbl_80504920:
+.global CMCCylinderGauge_typestr
+CMCCylinderGauge_typestr:
 	.asciz "CMCCylinderGauge"
 	.balign 4
 
@@ -10001,8 +10004,8 @@ lbl_80504934:
 	.asciz "txt_sylinder"
 	.balign 4
 
-.global lbl_805049C0
-lbl_805049C0:
+.global CMCCrystalList_typestr
+CMCCrystalList_typestr:
 	.asciz "CMCCrystalList"
 	.balign 4
 
@@ -10048,56 +10051,56 @@ lbl_805049D0:
 	.balign 4
 	.4byte 0
 
-.global lbl_80504C58
-lbl_80504C58:
+.global CMCEffCylinder_typestr
+CMCEffCylinder_typestr:
 	.asciz "CMCEffCylinder"
 	.balign 4
 
-.global lbl_80504C68
-lbl_80504C68:
+.global CMCEffDivide_typestr
+CMCEffDivide_typestr:
 	.asciz "CMCEffDivide"
 	.balign 4
 
-.global lbl_80504C78
-lbl_80504C78:
+.global CMCEffUpRank_typestr
+CMCEffUpRank_typestr:
 	.asciz "CMCEffUpRank"
 	.balign 4
 
-.global lbl_80504C88
-lbl_80504C88:
+.global CMCEffCrystal_typestr
+CMCEffCrystal_typestr:
 	.asciz "CMCEffCrystal"
 	.balign 4
 
-.global lbl_80504C98
-lbl_80504C98:
+.global CMCEffFailure_typestr
+CMCEffFailure_typestr:
 	.asciz "CMCEffFailure"
 	.balign 4
 
-.global lbl_80504CA8
-lbl_80504CA8:
+.global CMCEffSuccess_typestr
+CMCEffSuccess_typestr:
 	.asciz "CMCEffSuccess"
 	.balign 4
 
-.global lbl_80504CB8
-lbl_80504CB8:
+.global CMCEffUpPrm_typestr
+CMCEffUpPrm_typestr:
 	.asciz "CMCEffUpPrm"
 
-.global lbl_80504CC4
-lbl_80504CC4:
+.global CMCEffUpGreen_typestr
+CMCEffUpGreen_typestr:
 	.asciz "CMCEffUpGreen"
 	.balign 4
 
-.global lbl_80504CD4
-lbl_80504CD4:
+.global CMCEffUpBlue_typestr
+CMCEffUpBlue_typestr:
 	.asciz "CMCEffUpBlue"
 	.balign 4
 
-.global lbl_80504CE4
-lbl_80504CE4:
+.global CMCEffUpRed_typestr
+CMCEffUpRed_typestr:
 	.asciz "CMCEffUpRed"
 
-.global lbl_80504CF0
-lbl_80504CF0:
+.global CMCEffStart_typestr
+CMCEffStart_typestr:
 	.asciz "CMCEffStart"
 
 
@@ -10156,8 +10159,8 @@ lbl_80504CFC:
 	.balign 4
 	.4byte 0
 
-.global lbl_80505110
-lbl_80505110:
+.global CMenuQstCnt_typestr
+CMenuQstCnt_typestr:
 	.asciz "CMenuQstCnt"
 	.4byte 0
 
@@ -10178,8 +10181,8 @@ lbl_80505120:
 	.asciz "txt_num"
 	.asciz "title"
 
-.global lbl_805051B8
-lbl_805051B8:
+.global CQstLogList_typestr
+CQstLogList_typestr:
 	.asciz "CQstLogList"
 
 
@@ -10493,8 +10496,8 @@ lbl_805057AC:
 	.asciz "MNU_qt2401"
 	.balign 4
 
-.global lbl_805057B8
-lbl_805057B8:
+.global CQstLogInfo_typestr
+CQstLogInfo_typestr:
 	.asciz "CQstLogInfo"
 
 
@@ -10620,8 +10623,8 @@ lbl_80505B80:
 	.asciz "mf70_cf60_syswin00_in.brlan"
 	.balign 4
 
-.global lbl_80505D20
-lbl_80505D20:
+.global CSelShopWin_typestr
+CSelShopWin_typestr:
 	.asciz "CSelShopWin"
 
 
@@ -10652,8 +10655,8 @@ lbl_80505D2C:
 	.balign 4
 	.4byte 0
 
-.global lbl_80505E30
-lbl_80505E30:
+.global CExchangeWin_typestr
+CExchangeWin_typestr:
 	.asciz "CExchangeWin"
 	.balign 4
 
@@ -10682,8 +10685,8 @@ lbl_80505E40:
 	.asciz "pic_btn00"
 	.balign 4
 
-.global lbl_80505F40
-lbl_80505F40:
+.global CPresentWin_typestr
+CPresentWin_typestr:
 	.asciz "CPresentWin"
 
 
@@ -10725,8 +10728,8 @@ lbl_80505F4C:
 	.asciz "icon_type2"
 	.balign 4
 
-.global lbl_80506128
-lbl_80506128:
+.global CMCCrystalSupport_typestr
+CMCCrystalSupport_typestr:
 	.asciz "CMCCrystalSupport"
 	.balign 4
 
@@ -10740,8 +10743,8 @@ lbl_8050613C:
 	.balign 4
 	.4byte 0
 
-.global lbl_80506188
-lbl_80506188:
+.global CMenuArtsSet_typestr
+CMenuArtsSet_typestr:
 	.asciz "CMenuArtsSet"
 	.balign 4
 
@@ -10935,8 +10938,8 @@ lbl_8050634C:
 	.4byte lbl_80506334
 	.4byte lbl_80506340
 
-.global lbl_80506360
-lbl_80506360:
+.global CArtsList_typestr
+CArtsList_typestr:
 	.asciz "CArtsList"
 	.balign 4
 
@@ -11013,8 +11016,8 @@ lbl_8050636C:
 	.balign 4
 	.4byte 0
 
-.global lbl_80506700
-lbl_80506700:
+.global CArtsInfo_typestr
+CArtsInfo_typestr:
 	.asciz "CArtsInfo"
 	.balign 4
 
@@ -11121,13 +11124,13 @@ lbl_8050670C:
 	.balign 4
 	.4byte 0
 
-.global lbl_80506B40
-lbl_80506B40:
+.global cf_CfNandManager_typestr
+cf_CfNandManager_typestr:
 	.asciz "cf::CfNandManager"
 	.balign 4
 
-.global lbl_80506B54
-lbl_80506B54:
+.global CTTask_cf_CfNandManager_typestr
+CTTask_cf_CfNandManager_typestr:
 	.asciz "CTTask<cf::CfNandManager>"
 	.balign 4
 
@@ -11138,8 +11141,8 @@ lbl_80506B70:
 	.asciz "banner.bin"
 	.asciz "name"
 	.byte 0x00
-.global lbl_80506B88
-lbl_80506B88:
+.global CMenuMapSelect_typestr
+CMenuMapSelect_typestr:
 	.asciz "CMenuMapSelect"
 	.balign 4
 
@@ -11668,28 +11671,28 @@ lbl_80507490:
 	.4byte lbl_80507460
 	.4byte lbl_80507478
 
-.global lbl_80507500
-lbl_80507500:
+.global CFloorMap_typestr
+CFloorMap_typestr:
 	.asciz "CFloorMap"
 	.balign 4
 
-.global lbl_8050750C
-lbl_8050750C:
+.global CTargetCur_typestr
+CTargetCur_typestr:
 	.asciz "CTargetCur"
 	.balign 4
 
-.global lbl_80507518
-lbl_80507518:
+.global CLandCur_typestr
+CLandCur_typestr:
 	.asciz "CLandCur"
 	.balign 4
 
-.global lbl_80507524
-lbl_80507524:
+.global CFloorMarker_typestr
+CFloorMarker_typestr:
 	.asciz "CFloorMarker"
 	.balign 4
 
-.global lbl_80507534
-lbl_80507534:
+.global CFloorCur_typestr
+CFloorCur_typestr:
 	.asciz "CFloorCur"
 	.balign 4
 
@@ -11850,8 +11853,8 @@ lbl_80507540:
 	.balign 4
 	.4byte 0
 
-.global lbl_80507C20
-lbl_80507C20:
+.global CMenuMapSelectSC_typestr
+CMenuMapSelectSC_typestr:
 	.asciz "CMenuMapSelectSC"
 	.balign 4
 
@@ -11863,8 +11866,8 @@ lbl_80507C34:
 	.balign 4
 	.4byte 0
 
-.global lbl_80507C48
-lbl_80507C48:
+.global CMenuPause_typestr
+CMenuPause_typestr:
 	.asciz "CMenuPause"
 	.balign 4
 	.4byte 0
@@ -11887,8 +11890,8 @@ lbl_80507C58:
 	.asciz "txt_sysmes01"
 	.asciz "pic_btn01"
 
-.global lbl_80507D08
-lbl_80507D08:
+.global CMenuCollepedia_typestr
+CMenuCollepedia_typestr:
 	.asciz "CMenuCollepedia"
 
 
@@ -11919,8 +11922,8 @@ lbl_80507D30:
 	.4byte 0x00780000
 	.4byte 0
 
-.global lbl_80507D6C
-lbl_80507D6C:
+.global CCollepedia_typestr
+CCollepedia_typestr:
 	.asciz "CCollepedia"
 
 
@@ -11998,8 +12001,8 @@ lbl_80507D78:
 	.4byte 0
 
 	
-.global lbl_80508130
-lbl_80508130:
+.global CMenuKizunagram_typestr
+CMenuKizunagram_typestr:
 	.asciz "CMenuKizunagram"
 
 
@@ -12018,25 +12021,25 @@ lbl_8050815C:
 	.asciz "nul_curs03"
 	.balign 4
 
-.global lbl_80508168
-lbl_80508168:
+.global CKizunagram_typestr
+CKizunagram_typestr:
 	.asciz "CKizunagram"
 
-.global lbl_80508174
-lbl_80508174:
+.global CKizunaInfo_typestr
+CKizunaInfo_typestr:
 	.asciz "CKizunaInfo"
 
-.global lbl_80508180
-lbl_80508180:
+.global CKizunaLine_typestr
+CKizunaLine_typestr:
 	.asciz "CKizunaLine"
 
-.global lbl_8050818C
-lbl_8050818C:
+.global CKizunaCur_typestr
+CKizunaCur_typestr:
 	.asciz "CKizunaCur"
 	.balign 4
 
-.global lbl_80508198
-lbl_80508198:
+.global CKizunaRadar_typestr
+CKizunaRadar_typestr:
 	.asciz "CKizunaRadar"
 	.balign 4
 
@@ -12235,13 +12238,13 @@ lbl_805081A8:
 	.asciz "CKizunagram_tex"
 	.balign 4
 
-.global lbl_80508EE0
-lbl_80508EE0:
+.global CPcKizunagram_typestr
+CPcKizunagram_typestr:
 	.asciz "CPcKizunagram"
 	.balign 4
 
-.global lbl_80508EF0
-lbl_80508EF0:
+.global CPcKizunaCur_typestr
+CPcKizunaCur_typestr:
 	.asciz "CPcKizunaCur"
 	.balign 4
 
@@ -12300,8 +12303,8 @@ lbl_805091B0:
 	.asciz "time"
 	.asciz "flag"
 
-.global lbl_805091D0
-lbl_805091D0:
+.global CMenuPassiveSkill_typestr
+CMenuPassiveSkill_typestr:
 	.asciz "CMenuPassiveSkill"
 	.balign 4
 
@@ -12349,23 +12352,23 @@ lbl_80509250:
 	.4byte 0x00100000
 	.4byte 0x00200000
 
-.global lbl_8050925C
-lbl_8050925C:
+.global UI_CPassiveSkill_typestr
+UI_CPassiveSkill_typestr:
 	.asciz "UI::CPassiveSkill"
 	.balign 4
 
-.global lbl_80509270
-lbl_80509270:
+.global UI_CPassiveSkillLine_typestr
+UI_CPassiveSkillLine_typestr:
 	.asciz "UI::CPassiveSkillLine"
 	.balign 4
 
-.global lbl_80509288
-lbl_80509288:
+.global UI_CPassiveSkillInfo_typestr
+UI_CPassiveSkillInfo_typestr:
 	.asciz "UI::CPassiveSkillInfo"
 	.balign 4
 
-.global lbl_805092A0
-lbl_805092A0:
+.global UI_CPassiveSkillCur_typestr
+UI_CPassiveSkillCur_typestr:
 	.asciz "UI::CPassiveSkillCur"
 	.balign 4
 
@@ -12543,8 +12546,8 @@ lbl_805092B8:
 	.balign 4
 	.4byte 0
 
-.global lbl_80509D20
-lbl_80509D20:
+.global cf_CfGimmickEne_typestr
+cf_CfGimmickEne_typestr:
 	.asciz "cf::CfGimmickEne"
 	.balign 4
 
@@ -12565,8 +12568,8 @@ lbl_80509D34:
 	.asciz "endF"
 	.4byte 0
 	.byte 0x00
-.global lbl_80509D78
-lbl_80509D78:
+.global CMenuBattleEnd_typestr
+CMenuBattleEnd_typestr:
 	.asciz "CMenuBattleEnd"
 	.balign 4
 
@@ -12582,8 +12585,8 @@ lbl_80509D88:
 	.asciz "txt_num_r00"
 	.asciz "txt_num_r01"
 
-.global lbl_80509E20
-lbl_80509E20:
+.global CMenuPlayAward_typestr
+CMenuPlayAward_typestr:
 	.asciz "CMenuPlayAward"
 	.balign 4
 
@@ -12593,8 +12596,8 @@ lbl_80509E30:
 	.asciz "MNU_update"
 	.asciz "info"
 
-.global lbl_80509E40
-lbl_80509E40:
+.global CPlayAwardList_typestr
+CPlayAwardList_typestr:
 	.asciz "CPlayAwardList"
 	.balign 4
 
@@ -12637,8 +12640,8 @@ lbl_80509E50:
 	.balign 4
 	.4byte 0
 
-.global lbl_80509FE0
-lbl_80509FE0:
+.global CMenuKizunaTalkList_typestr
+CMenuKizunaTalkList_typestr:
 	.asciz "CMenuKizunaTalkList"
 	.4byte 0
 
@@ -12648,8 +12651,8 @@ lbl_80509FF8:
 	.asciz "MNU_update"
 	.asciz "info"
 
-.global lbl_8050A008
-lbl_8050A008:
+.global CKizunaTalkList_typestr
+CKizunaTalkList_typestr:
 	.asciz "CKizunaTalkList"
 
 
@@ -12693,8 +12696,8 @@ lbl_8050A018:
 	.asciz "JNL_kizunalist"
 	.balign 4
 
-.global lbl_8050A238
-lbl_8050A238:
+.global CSysWinBuff_typestr
+CSysWinBuff_typestr:
 	.asciz "CSysWinBuff"
 
 
@@ -12706,33 +12709,33 @@ lbl_8050A244:
 	.balign 4
 	.4byte 0
 
-.global lbl_8050A270
-lbl_8050A270:
+.global cf_ICamControlClassic_typestr
+cf_ICamControlClassic_typestr:
 	.asciz "cf::ICamControlClassic"
 	.balign 4
 
-.global lbl_8050A288
-lbl_8050A288:
+.global cf_ICamControlGc_typestr
+cf_ICamControlGc_typestr:
 	.asciz "cf::ICamControlGc"
 	.balign 4
 
-.global lbl_8050A29C
-lbl_8050A29C:
+.global cf_ICamControlRemote_typestr
+cf_ICamControlRemote_typestr:
 	.asciz "cf::ICamControlRemote"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050A2B8
-lbl_8050A2B8:
+.global cf_ICamControl_typestr
+cf_ICamControl_typestr:
 	.asciz "cf::ICamControl"
 
-.global lbl_8050A2C8
-lbl_8050A2C8:
+.global cf_CfObjectImplTbox_typestr
+cf_CfObjectImplTbox_typestr:
 	.asciz "cf::CfObjectImplTbox"
 	.balign 4
 
-.global lbl_8050A2E0
-lbl_8050A2E0:
+.global CMenuLvUp_typestr
+CMenuLvUp_typestr:
 	.asciz "CMenuLvUp"
 	.balign 4
 	.4byte 0
@@ -12752,42 +12755,42 @@ lbl_8050A2F0:
 	.asciz "pic_at00"
 	.asciz "pic_at01"
 
-.global lbl_8050A398
-lbl_8050A398:
+.global cf_CChainChance_typestr
+cf_CChainChance_typestr:
 	.asciz "cf::CChainChance"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050A3B0
-lbl_8050A3B0:
+.global cf_CChainTimer_typestr
+cf_CChainTimer_typestr:
 	.asciz "cf::CChainTimer"
 
-.global lbl_8050A3C0
-lbl_8050A3C0:
+.global cf_CChainMember_typestr
+cf_CChainMember_typestr:
 	.asciz "cf::CChainMember"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050A3D8
-lbl_8050A3D8:
+.global cf_CChainActor_typestr
+cf_CChainActor_typestr:
 	.asciz "cf::CChainActor"
 
-.global lbl_8050A3E8
-lbl_8050A3E8:
+.global cf_CChainActorList_typestr
+cf_CChainActorList_typestr:
 	.asciz "cf::CChainActorList"
 
-.global lbl_8050A3FC
-lbl_8050A3FC:
+.global reslist_cf_CChainActor_typestr
+reslist_cf_CChainActor_typestr:
 	.asciz "reslist<cf::CChainActor *>"
 	.balign 4
 
-.global lbl_8050A418
-lbl_8050A418:
+.global _reslist_base_cf_CChainActor_typestr
+_reslist_base_cf_CChainActor_typestr:
 	.asciz "_reslist_base<cf::CChainActor *>"
 	.balign 4
 
-.global lbl_8050A43C
-lbl_8050A43C:
+.global cf_CChainTemp_typestr
+cf_CChainTemp_typestr:
 	.asciz "cf::CChainTemp"
 	.balign 4
 	.4byte 0
@@ -12810,13 +12813,13 @@ lbl_8050A460:
 	.4byte 0x3FB33333
 	.4byte 0x3FCCCCCD
 
-.global lbl_8050A470
-lbl_8050A470:
+.global cf_Flusher_cf_CfObjectActor_typestr
+cf_Flusher_cf_CfObjectActor_typestr:
 	.asciz "cf::Flusher<cf::CfObjectActor>"
 	.balign 4
 
-.global lbl_8050A490
-lbl_8050A490:
+.global CSysWinScenarioLog_typestr
+CSysWinScenarioLog_typestr:
 	.asciz "CSysWinScenarioLog"
 	.balign 4
 	.4byte 0
@@ -12843,14 +12846,14 @@ lbl_8050A4A8:
 	.asciz "mf70_cf60_syswin14_in.brlan"
 	.asciz "MNU_scenario"
 
-.global lbl_8050A598
-lbl_8050A598:
+.global cf_CChainActorEne_typestr
+cf_CChainActorEne_typestr:
 	.asciz "cf::CChainActorEne"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050A5B0
-lbl_8050A5B0:
+.global cf_CChainActorPc_typestr
+cf_CChainActorPc_typestr:
 	.asciz "cf::CChainActorPc"
 	.balign 4
 	.4byte 0
@@ -12904,13 +12907,13 @@ lbl_8050A62C:
 	.4byte 0x00100000
 	.4byte 0x00200000
 
-.global lbl_8050A638
-lbl_8050A638:
+.global CEquipItemBox_typestr
+CEquipItemBox_typestr:
 	.asciz "CEquipItemBox"
 	.balign 4
 
-.global lbl_8050A648
-lbl_8050A648:
+.global CEIBPageCur_typestr
+CEIBPageCur_typestr:
 	.asciz "CEIBPageCur"
 
 
@@ -13072,8 +13075,8 @@ lbl_8050A654:
 	.balign 4
 	.4byte 0
 
-.global lbl_8050AE18
-lbl_8050AE18:
+.global CMenuSave_typestr
+CMenuSave_typestr:
 	.asciz "CMenuSave"
 	.balign 4
 	.4byte 0
@@ -13084,8 +13087,8 @@ lbl_8050AE28:
 	.asciz "MNU_sysmes"
 	.asciz "name"
 
-.global lbl_8050AE38
-lbl_8050AE38:
+.global CSaveLoad_typestr
+CSaveLoad_typestr:
 	.asciz "CSaveLoad"
 	.balign 4
 
@@ -13161,12 +13164,12 @@ lbl_8050AE44:
 	.asciz "pic_sh43_03"
 	.balign 4
 
-.global lbl_8050B208
-lbl_8050B208:
+.global cf_CfAward_typestr
+cf_CfAward_typestr:
 	.asciz "cf::CfAward"
 
-.global lbl_8050B214
-lbl_8050B214:
+.global cf_CAwardBase_typestr
+cf_CAwardBase_typestr:
 	.asciz "cf::CAwardBase"
 	.balign 4
 	.4byte 0
@@ -13176,8 +13179,8 @@ lbl_8050B228:
 	.asciz "/menu/PtChangeNotice.arc"
 	.balign 4
 
-.global lbl_8050B244
-lbl_8050B244:
+.global CMenuPTChangeNotice_typestr
+CMenuPTChangeNotice_typestr:
 	.asciz "CMenuPTChangeNotice"
 
 
@@ -13209,12 +13212,12 @@ lbl_8050B258:
 	.asciz "rlt_texture"
 	.balign 4
 
-.global lbl_8050B388
-lbl_8050B388:
+.global cf_CChainCombo_typestr
+cf_CChainCombo_typestr:
 	.asciz "cf::CChainCombo"
 
-.global lbl_8050B398
-lbl_8050B398:
+.global CSysWinSave_typestr
+CSysWinSave_typestr:
 	.asciz "CSysWinSave"
 
 
@@ -13224,8 +13227,8 @@ lbl_8050B3A4:
 	.asciz "MNU_sysmes"
 	.asciz "name"
 
-.global lbl_8050B3C0
-lbl_8050B3C0:
+.global cf_CREvtMovie_typestr
+cf_CREvtMovie_typestr:
 	.asciz "cf::CREvtMovie"
 	.balign 4
 
@@ -13236,86 +13239,86 @@ lbl_8050B3D0:
 	.asciz ".sfd"
 	.4byte 0
 	.byte 0x00
-.global lbl_8050B3E8
-lbl_8050B3E8:
+.global CTaskGamePic_typestr
+CTaskGamePic_typestr:
 	.asciz "CTaskGamePic"
 	.balign 4
 
-.global lbl_8050B3F8
-lbl_8050B3F8:
+.global CTTask_CTaskGamePic_typestr
+CTTask_CTaskGamePic_typestr:
 	.asciz "CTTask<CTaskGamePic>"
 	.balign 4
 
-.global lbl_8050B410
-lbl_8050B410:
+.global CTaskGameEvt_typestr
+CTaskGameEvt_typestr:
 	.asciz "CTaskGameEvt"
 	.balign 4
 
-.global lbl_8050B420
-lbl_8050B420:
+.global CTTask_CTaskGameEvt_typestr
+CTTask_CTaskGameEvt_typestr:
 	.asciz "CTTask<CTaskGameEvt>"
 	.balign 4
 
-.global lbl_8050B438
-lbl_8050B438:
+.global cf_CHelp_EtherMakeTIPS_typestr
+cf_CHelp_EtherMakeTIPS_typestr:
 	.asciz "cf::CHelp_EtherMakeTIPS"
 
-.global lbl_8050B450
-lbl_8050B450:
+.global cf_CHelp_EtherMake_typestr
+cf_CHelp_EtherMake_typestr:
 	.asciz "cf::CHelp_EtherMake"
 
-.global lbl_8050B464
-lbl_8050B464:
+.global cf_CHelp_TalkTIPS_typestr
+cf_CHelp_TalkTIPS_typestr:
 	.asciz "cf::CHelp_TalkTIPS"
 	.balign 4
 
-.global lbl_8050B478
-lbl_8050B478:
+.global cf_CHelp_Talk_typestr
+cf_CHelp_Talk_typestr:
 	.asciz "cf::CHelp_Talk"
 	.balign 4
 
-.global lbl_8050B488
-lbl_8050B488:
+.global cf_CHelp_KizunaTIPS_typestr
+cf_CHelp_KizunaTIPS_typestr:
 	.asciz "cf::CHelp_KizunaTIPS"
 	.balign 4
 
-.global lbl_8050B4A0
-lbl_8050B4A0:
+.global cf_CHelp_Kizuna_typestr
+cf_CHelp_Kizuna_typestr:
 	.asciz "cf::CHelp_Kizuna"
 	.balign 4
 
-.global lbl_8050B4B4
-lbl_8050B4B4:
+.global cf_CHelp_EndEventTIPS_typestr
+cf_CHelp_EndEventTIPS_typestr:
 	.asciz "cf::CHelp_EndEventTIPS"
 	.balign 4
 
-.global lbl_8050B4CC
-lbl_8050B4CC:
+.global cf_CHelp_EndEvent_typestr
+cf_CHelp_EndEvent_typestr:
 	.asciz "cf::CHelp_EndEvent"
 	.balign 4
 
-.global lbl_8050B4E0
-lbl_8050B4E0:
+.global cf_CHelp_AlwaysTIPS_typestr
+cf_CHelp_AlwaysTIPS_typestr:
 	.asciz "cf::CHelp_AlwaysTIPS"
 	.balign 4
 
-.global lbl_8050B4F8
-lbl_8050B4F8:
+.global cf_CHelp_Always_typestr
+cf_CHelp_Always_typestr:
 	.asciz "cf::CHelp_Always"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050B510
-lbl_8050B510:
+.global cf_CHelpSwitch_typestr
+cf_CHelpSwitch_typestr:
 	.asciz "cf::CHelpSwitch"
 
-.global lbl_8050B520
-lbl_8050B520:
+.global cf_CHelp_typestr
+cf_CHelp_typestr:
 	.asciz "cf::CHelp"
 	.balign 4
 
-.global lbl_8050B52C
-lbl_8050B52C:
+.global cf_CHelpManager_typestr
+cf_CHelpManager_typestr:
 	.asciz "cf::CHelpManager"
 	.balign 4
 
@@ -13368,8 +13371,8 @@ lbl_8050B598:
 	.4byte lbl_8050B580
 	.4byte lbl_8050B58C
 
-.global lbl_8050B5B4
-lbl_8050B5B4:
+.global CMCGetItemBox_typestr
+CMCGetItemBox_typestr:
 	.asciz "CMCGetItemBox"
 	.balign 4
 
@@ -13427,8 +13430,8 @@ lbl_8050B5C4:
 	.balign 4
 	.4byte 0
 
-.global lbl_8050B848
-lbl_8050B848:
+.global CMenuTutorial_typestr
+CMenuTutorial_typestr:
 	.asciz "CMenuTutorial"
 	.balign 4
 
@@ -13441,8 +13444,8 @@ lbl_8050B858:
 	.asciz "title"
 	.balign 4
 
-.global lbl_8050B878
-lbl_8050B878:
+.global CTutorial_typestr
+CTutorial_typestr:
 	.asciz "CTutorial"
 	.balign 4
 
@@ -13469,8 +13472,8 @@ lbl_8050B884:
 	.balign 4
 	.4byte 0
 
-.global lbl_8050B9A8
-lbl_8050B9A8:
+.global CMenuOption_typestr
+CMenuOption_typestr:
 	.asciz "CMenuOption"
 
 
@@ -13509,8 +13512,8 @@ lbl_8050B9C8:
 	.balign 4
 	.4byte 0
 
-.global lbl_8050BB20
-lbl_8050BB20:
+.global CMenuSkipTimer_typestr
+CMenuSkipTimer_typestr:
 	.asciz "CMenuSkipTimer"
 	.balign 4
 
@@ -13520,13 +13523,13 @@ lbl_8050BB30:
 	.asciz "MNU_main"
 	.asciz "name"
 	.2byte 0
-.global lbl_8050BB40
-lbl_8050BB40:
+.global CSkipTimer_typestr
+CSkipTimer_typestr:
 	.asciz "CSkipTimer"
 	.balign 4
 
-.global lbl_8050BB4C
-lbl_8050BB4C:
+.global CSkipTimer2_typestr
+CSkipTimer2_typestr:
 	.asciz "CSkipTimer2"
 
 
@@ -13558,8 +13561,8 @@ lbl_8050BB58:
 	.asciz "mf85_opt00_clock00_time_all.brlan"
 	.balign 4
 
-.global lbl_8050BCA8
-lbl_8050BCA8:
+.global cf_CChainEffect_typestr
+cf_CChainEffect_typestr:
 	.asciz "cf::CChainEffect"
 	.balign 4
 	.4byte 0
@@ -13568,8 +13571,8 @@ lbl_8050BCA8:
 lbl_8050BCC0:
 	.asciz "snd/ahx/pc01/pc01_01_01.ahx"
 
-.global lbl_8050BCDC
-lbl_8050BCDC:
+.global cf_CCharVoice_typestr
+cf_CCharVoice_typestr:
 	.asciz "cf::CCharVoice"
 	.balign 4
 
@@ -13579,96 +13582,96 @@ lbl_8050BCEC:
 	# ROM: 0x507DEC
 	.4byte 0
 
-.global lbl_8050BCF0
-lbl_8050BCF0:
+.global cf_CCharVoiceMan_typestr
+cf_CCharVoiceMan_typestr:
 	.asciz "cf::CCharVoiceMan"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050BD08
-lbl_8050BD08:
+.global cf_CVS_THREAD_typestr
+cf_CVS_THREAD_typestr:
 	.asciz "cf::CVS_THREAD"
 	.balign 4
 
-.global lbl_8050BD18
-lbl_8050BD18:
+.global cf_CVS_THREAD_BATTLE_END_typestr
+cf_CVS_THREAD_BATTLE_END_typestr:
 	.asciz "cf::CVS_THREAD_BATTLE_END"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050BD38
-lbl_8050BD38:
+.global cf_CVS_THREAD_BUF_typestr
+cf_CVS_THREAD_BUF_typestr:
 	.asciz "cf::CVS_THREAD_BUF"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050BD50
-lbl_8050BD50:
+.global cf_CVS_THREAD_CHAIN_typestr
+cf_CVS_THREAD_CHAIN_typestr:
 	.asciz "cf::CVS_THREAD_CHAIN"
 	.balign 4
 
-.global lbl_8050BD68
-lbl_8050BD68:
+.global cf_CVS_THREAD_DOWN_typestr
+cf_CVS_THREAD_DOWN_typestr:
 	.asciz "cf::CVS_THREAD_DOWN"
 	.4byte 0
 
-.global lbl_8050BD80
-lbl_8050BD80:
+.global cf_CVS_THREAD_EHP_typestr
+cf_CVS_THREAD_EHP_typestr:
 	.asciz "cf::CVS_THREAD_EHP"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050BD98
-lbl_8050BD98:
+.global cf_CVS_THREAD_FAINT_typestr
+cf_CVS_THREAD_FAINT_typestr:
 	.asciz "cf::CVS_THREAD_FAINT"
 	.balign 4
 
-.global lbl_8050BDB0
-lbl_8050BDB0:
+.global cf_CVS_THREAD_HAGE_typestr
+cf_CVS_THREAD_HAGE_typestr:
 	.asciz "cf::CVS_THREAD_HAGE"
 	.4byte 0
 
-.global lbl_8050BDC8
-lbl_8050BDC8:
+.global cf_CVS_THREAD_HP_typestr
+cf_CVS_THREAD_HP_typestr:
 	.asciz "cf::CVS_THREAD_HP"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050BDE0
-lbl_8050BDE0:
+.global cf_CVS_THREAD_PARTY_GAGE_typestr
+cf_CVS_THREAD_PARTY_GAGE_typestr:
 	.asciz "cf::CVS_THREAD_PARTY_GAGE"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050BE00
-lbl_8050BE00:
+.global cf_CVS_THREAD_REVIVE_typestr
+cf_CVS_THREAD_REVIVE_typestr:
 	.asciz "cf::CVS_THREAD_REVIVE"
 	.balign 4
 
-.global lbl_8050BE18
-lbl_8050BE18:
+.global cf_CVS_THREAD_SUDDEN_typestr
+cf_CVS_THREAD_SUDDEN_typestr:
 	.asciz "cf::CVS_THREAD_SUDDEN"
 	.balign 4
 
-.global lbl_8050BE30
-lbl_8050BE30:
+.global cf_CVS_THREAD_TENSION_UP_typestr
+cf_CVS_THREAD_TENSION_UP_typestr:
 	.asciz "cf::CVS_THREAD_TENSION_UP"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050BE50
-lbl_8050BE50:
+.global cf_CVS_THREAD_VISION_BREAK_typestr
+cf_CVS_THREAD_VISION_BREAK_typestr:
 	.asciz "cf::CVS_THREAD_VISION_BREAK"
 	.4byte 0
 
-.global lbl_8050BE70
-lbl_8050BE70:
+.global cf_CVS_THREAD_VISION_TELL_typestr
+cf_CVS_THREAD_VISION_TELL_typestr:
 	.asciz "cf::CVS_THREAD_VISION_TELL"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050BE90
-lbl_8050BE90:
+.global CMenuBattleChain_typestr
+CMenuBattleChain_typestr:
 	.asciz "CMenuBattleChain"
 	.balign 4
 
@@ -13833,13 +13836,13 @@ lbl_8050C0FC:
 	.4byte 0x06170510
 	.4byte 0
 
-.global lbl_8050C108
-lbl_8050C108:
+.global cf_CVS_THREAD_BATTLE_END_SP_typestr
+cf_CVS_THREAD_BATTLE_END_SP_typestr:
 	.asciz "cf::CVS_THREAD_BATTLE_END_SP"
 	.balign 4
 
-.global lbl_8050C128
-lbl_8050C128:
+.global cf_CfGimmickSaveOff_typestr
+cf_CfGimmickSaveOff_typestr:
 	.asciz "cf::CfGimmickSaveOff"
 	.balign 4
 
@@ -13848,8 +13851,8 @@ lbl_8050C128:
 lbl_8050C140:
 	.asciz "naviOff"
 
-.global lbl_8050C148
-lbl_8050C148:
+.global CMenuTutorialList_typestr
+CMenuTutorialList_typestr:
 	.asciz "CMenuTutorialList"
 	.balign 4
 
@@ -13863,8 +13866,8 @@ lbl_8050C15C:
 	.balign 4
 	.4byte 0
 
-.global lbl_8050C180
-lbl_8050C180:
+.global CTutorialList_typestr
+CTutorialList_typestr:
 	.asciz "CTutorialList"
 	.balign 4
 
@@ -14302,29 +14305,29 @@ lbl_8050C8A4:
 	.balign 4
 	.4byte 0
 
-.global lbl_8050C8B0
-lbl_8050C8B0:
+.global cf_CVS_THREAD_BATTLE_MAIN_typestr
+cf_CVS_THREAD_BATTLE_MAIN_typestr:
 	.asciz "cf::CVS_THREAD_BATTLE_MAIN"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050C8D0
-lbl_8050C8D0:
+.global cf_CVS_THREAD_BATTLE_BEGIN_typestr
+cf_CVS_THREAD_BATTLE_BEGIN_typestr:
 	.asciz "cf::CVS_THREAD_BATTLE_BEGIN"
 
-.global lbl_8050C8EC
-lbl_8050C8EC:
+.global cf_EVS_THREAD_LIB_typestr
+cf_EVS_THREAD_LIB_typestr:
 	.asciz "cf::EVS_THREAD_LIB"
 	.balign 4
 
-.global lbl_8050C900
-lbl_8050C900:
+.global cf_CVS_THREAD_LIB_typestr
+cf_CVS_THREAD_LIB_typestr:
 	.asciz "cf::CVS_THREAD_LIB"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050C918
-lbl_8050C918:
+.global CMenuGCItem_typestr
+CMenuGCItem_typestr:
 	.asciz "CMenuGCItem"
 
 
@@ -14335,8 +14338,8 @@ lbl_8050C924:
 	.4byte 0
 	.2byte 0
 
-.global lbl_8050C938
-lbl_8050C938:
+.global CMenuGameClear_typestr
+CMenuGameClear_typestr:
 	.asciz "CMenuGameClear"
 	.balign 4
 
@@ -14352,8 +14355,8 @@ lbl_8050C948:
 	.asciz "name"
 	.4byte 0
 	.byte 0x00
-.global lbl_8050C990
-lbl_8050C990:
+.global cf_CfHikariItemManager_typestr
+cf_CfHikariItemManager_typestr:
 	.asciz "cf::CfHikariItemManager"
 
 
@@ -14389,13 +14392,13 @@ lbl_8050C9D0:
 	.4byte 0x3DCCCCCD
 	.4byte 0x3D088889
 
-.global lbl_8050C9E0
-lbl_8050C9E0:
+.global CUIErrMesWin_typestr
+CUIErrMesWin_typestr:
 	.asciz "CUIErrMesWin"
 	.balign 4
 
-.global lbl_8050C9F0
-lbl_8050C9F0:
+.global CTTask_CUIErrMesWin_typestr
+CTTask_CUIErrMesWin_typestr:
 	.asciz "CTTask<CUIErrMesWin>"
 	.balign 4
 
@@ -14405,23 +14408,23 @@ lbl_8050CA08:
 	.asciz "MNU_sysmes"
 	.asciz "name"
 
-.global lbl_8050CA18
-lbl_8050CA18:
+.global CMenuTitle_typestr
+CMenuTitle_typestr:
 	.asciz "CMenuTitle"
 	.balign 4
 
-.global lbl_8050CA24
-lbl_8050CA24:
+.global CTTask_CMenuTitle_typestr
+CTTask_CMenuTitle_typestr:
 	.asciz "CTTask<CMenuTitle>"
 	.balign 4
 
-.global lbl_8050CA38
-lbl_8050CA38:
+.global CTitleMenu_typestr
+CTitleMenu_typestr:
 	.asciz "CTitleMenu"
 	.balign 4
 
-.global lbl_8050CA44
-lbl_8050CA44:
+.global CTitleLogo_typestr
+CTitleLogo_typestr:
 	.asciz "CTitleLogo"
 	.balign 4
 
@@ -14446,74 +14449,74 @@ lbl_8050CA50:
 	.asciz "CTitle"
 	.asciz "arc"
 	.2byte 0
-.global lbl_8050CBA0
-lbl_8050CBA0:
+.global cf_CHelp_ToAttack_typestr
+cf_CHelp_ToAttack_typestr:
 	.asciz "cf::CHelp_ToAttack"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050CBB8
-lbl_8050CBB8:
+.global cf_CHelp_ArtsAttack_typestr
+cf_CHelp_ArtsAttack_typestr:
 	.asciz "cf::CHelp_ArtsAttack"
 	.balign 4
 
-.global lbl_8050CBD0
-lbl_8050CBD0:
+.global cf_CHelp_ArtsSet_typestr
+cf_CHelp_ArtsSet_typestr:
 	.asciz "cf::CHelp_ArtsSet"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050CBE8
-lbl_8050CBE8:
+.global cf_CHelp_CkKizuna_typestr
+cf_CHelp_CkKizuna_typestr:
 	.asciz "cf::CHelp_CkKizuna"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050CC00
-lbl_8050CC00:
+.global cf_CHelp_CloseItemMenu_typestr
+cf_CHelp_CloseItemMenu_typestr:
 	.asciz "cf::CHelp_CloseItemMenu"
 
-.global lbl_8050CC18
-lbl_8050CC18:
+.global cf_CHelp_CloseSysMenu_typestr
+cf_CHelp_CloseSysMenu_typestr:
 	.asciz "cf::CHelp_CloseSysMenu"
 	.balign 4
 
-.global lbl_8050CC30
-lbl_8050CC30:
+.global cf_CHelp_EnemyCount_typestr
+cf_CHelp_EnemyCount_typestr:
 	.asciz "cf::CHelp_EnemyCount"
 	.balign 4
 
-.global lbl_8050CC48
-lbl_8050CC48:
+.global cf_CHelp_EnemyEnable_typestr
+cf_CHelp_EnemyEnable_typestr:
 	.asciz "cf::CHelp_EnemyEnable"
 	.balign 4
 
-.global lbl_8050CC60
-lbl_8050CC60:
+.global cf_CHelp_Exchange_typestr
+cf_CHelp_Exchange_typestr:
 	.asciz "cf::CHelp_Exchange"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050CC78
-lbl_8050CC78:
+.global cf_CHelp_GameOver_typestr
+cf_CHelp_GameOver_typestr:
 	.asciz "cf::CHelp_GameOver"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050CC90
-lbl_8050CC90:
+.global cf_CHelp_ItemCole_typestr
+cf_CHelp_ItemCole_typestr:
 	.asciz "cf::CHelp_ItemCole"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050CCA8
-lbl_8050CCA8:
+.global cf_CHelp_LandMark_typestr
+cf_CHelp_LandMark_typestr:
 	.asciz "cf::CHelp_LandMark"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050CCC0
-lbl_8050CCC0:
+.global cf_CHelp_LearnArts_typestr
+cf_CHelp_LearnArts_typestr:
 	.asciz "cf::CHelp_LearnArts"
 
 .global lbl_8050CCD4
@@ -14521,50 +14524,50 @@ lbl_8050CCD4:
 	.asciz "wpn_type"
 	.balign 4
 
-.global lbl_8050CCE0
-lbl_8050CCE0:
+.global cf_CHelp_ClosePartyMenu_typestr
+cf_CHelp_ClosePartyMenu_typestr:
 	.asciz "cf::CHelp_ClosePartyMenu"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050CD00
-lbl_8050CD00:
+.global cf_CHelp_OpenPartyMenu_typestr
+cf_CHelp_OpenPartyMenu_typestr:
 	.asciz "cf::CHelp_OpenPartyMenu"
 
-.global lbl_8050CD18
-lbl_8050CD18:
+.global cf_CHelp_Pg_typestr
+cf_CHelp_Pg_typestr:
 	.asciz "cf::CHelp_Pg"
 	.balign 4
 
-.global lbl_8050CD28
-lbl_8050CD28:
+.global cf_CHelp_CloseQuestMenu_typestr
+cf_CHelp_CloseQuestMenu_typestr:
 	.asciz "cf::CHelp_CloseQuestMenu"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050CD48
-lbl_8050CD48:
+.global cf_CHelp_ShopSel_typestr
+cf_CHelp_ShopSel_typestr:
 	.asciz "cf::CHelp_ShopSel"
 	.balign 4
 
-.global lbl_8050CD5C
-lbl_8050CD5C:
+.global cf_CHelp_ShopBuy_typestr
+cf_CHelp_ShopBuy_typestr:
 	.asciz "cf::CHelp_ShopBuy"
 	.balign 4
 
-.global lbl_8050CD70
-lbl_8050CD70:
+.global cf_CHelp_Sp_typestr
+cf_CHelp_Sp_typestr:
 	.asciz "cf::CHelp_Sp"
 	.balign 4
 
-.global lbl_8050CD80
-lbl_8050CD80:
+.global cf_CHelp_Target_typestr
+cf_CHelp_Target_typestr:
 	.asciz "cf::CHelp_Target"
 	.balign 4
 	.4byte 0
 
-.global lbl_8050CD98
-lbl_8050CD98:
+.global cf_CVS_THREAD_ORDER_typestr
+cf_CVS_THREAD_ORDER_typestr:
 	.asciz "cf::CVS_THREAD_ORDER"
 	.balign 4
 
@@ -14574,8 +14577,8 @@ lbl_8050CDB0:
 	.asciz "voice"
 	.balign 4
 
-.global lbl_8050CDB8
-lbl_8050CDB8:
+.global CBattery_typestr
+CBattery_typestr:
 	.asciz "CBattery"
 	.balign 4
 	.4byte 0
@@ -14589,8 +14592,8 @@ lbl_8050CDC8:
 	.asciz "arc"
 	.asciz "mf00_btry.brlyt"
 
-.global lbl_8050CE00
-lbl_8050CE00:
+.global std_exception_typestr
+std_exception_typestr:
 	.asciz "std::exception"
 	.balign 4
 
@@ -14603,8 +14606,8 @@ lbl_8050CE10:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8050CE20
-lbl_8050CE20:
+.global std_bad_cast_typestr
+std_bad_cast_typestr:
 	.asciz "std::bad_cast"
 	.balign 4
 

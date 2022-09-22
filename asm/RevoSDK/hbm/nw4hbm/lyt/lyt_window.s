@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80334140
-func_80334140:
+.global __ct__Q36nw4hbm3lyt6WindowFPCQ46nw4hbm3lyt3res6WindowRCQ36nw4hbm3lyt11ResBlockSet
+__ct__Q36nw4hbm3lyt6WindowFPCQ46nw4hbm3lyt3res6WindowRCQ36nw4hbm3lyt11ResBlockSet:
 /* 80334140 002FD700  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80334144 002FD704  7C 08 02 A6 */	mflr r0
 /* 80334148 002FD708  90 01 00 34 */	stw r0, 0x34(r1)
@@ -14,9 +14,9 @@ func_80334140:
 /* 80334158 002FD718  7C 98 23 78 */	mr r24, r4
 /* 8033415C 002FD71C  7C B9 2B 78 */	mr r25, r5
 /* 80334160 002FD720  4B FF D5 E1 */	bl __ct__Q36nw4hbm3lyt4PaneFPCQ46nw4hbm3lyt3res4Pane
-/* 80334164 002FD724  3C 60 80 55 */	lis r3, lbl_8054DADC@ha
+/* 80334164 002FD724  3C 60 80 55 */	lis r3, __vt__Q36nw4hbm3lyt6Window@ha
 /* 80334168 002FD728  3C 80 80 33 */	lis r4, __ct__Q36nw4hbm2ut5ColorFv@ha
-/* 8033416C 002FD72C  38 63 DA DC */	addi r3, r3, lbl_8054DADC@l
+/* 8033416C 002FD72C  38 63 DA DC */	addi r3, r3, __vt__Q36nw4hbm3lyt6Window@l
 /* 80334170 002FD730  3C A0 80 33 */	lis r5, __dt__Q36nw4hbm2ut5ColorFv@ha
 /* 80334174 002FD734  3B 57 00 E4 */	addi r26, r23, 0xe4
 /* 80334178 002FD738  90 77 00 00 */	stw r3, 0(r23)
@@ -160,8 +160,8 @@ func_80334350:
 /* 8033436C 002FD92C  7C 9C 23 78 */	mr r28, r4
 /* 80334370 002FD930  41 82 01 08 */	beq lbl_80334478
 /* 80334374 002FD934  80 03 00 FC */	lwz r0, 0xfc(r3)
-/* 80334378 002FD938  3C 80 80 55 */	lis r4, lbl_8054DADC@ha
-/* 8033437C 002FD93C  38 84 DA DC */	addi r4, r4, lbl_8054DADC@l
+/* 80334378 002FD938  3C 80 80 55 */	lis r4, __vt__Q36nw4hbm3lyt6Window@ha
+/* 8033437C 002FD93C  38 84 DA DC */	addi r4, r4, __vt__Q36nw4hbm3lyt6Window@l
 /* 80334380 002FD940  90 83 00 00 */	stw r4, 0(r3)
 /* 80334384 002FD944  2C 00 00 00 */	cmpwi r0, 0
 /* 80334388 002FD948  41 82 00 6C */	beq lbl_803343F4

@@ -387,8 +387,8 @@ lbl_80339644:
 #__ct__Q36nw4hbm2ut19TagProcessorBase<w>Fv
 .global __ct__Q36nw4hbm2ut19TagProcessorBase_w_Fv
 __ct__Q36nw4hbm2ut19TagProcessorBase_w_Fv:
-/* 80339670 00302C30  3C 80 80 55 */	lis r4, lbl_8054EE70@ha
-/* 80339674 00302C34  38 84 EE 70 */	addi r4, r4, lbl_8054EE70@l
+/* 80339670 00302C30  3C 80 80 55 */	lis r4, __vt__8054EE70@ha
+/* 80339674 00302C34  38 84 EE 70 */	addi r4, r4, __vt__8054EE70@l
 /* 80339678 00302C38  90 83 00 00 */	stw r4, 0(r3)
 /* 8033967C 00302C3C  4E 80 00 20 */	blr
 

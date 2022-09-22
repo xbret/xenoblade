@@ -12,10 +12,10 @@ func_80039220:
 /* 80039234 000027F4  7C 7F 1B 78 */	mr r31, r3
 /* 80039238 000027F8  48 3F F9 F9 */	bl func_80438C30
 /* 8003923C 000027FC  C0 02 80 08 */	lfs f0, lbl_80668388@sda21(r2)
-/* 80039240 00002800  3C 60 80 53 */	lis r3, lbl_805282A0@ha
+/* 80039240 00002800  3C 60 80 53 */	lis r3, __vt__805282A0@ha
 /* 80039244 00002804  38 A0 00 00 */	li r5, 0
 /* 80039248 00002808  38 80 FF FF */	li r4, -1
-/* 8003924C 0000280C  38 63 82 A0 */	addi r3, r3, lbl_805282A0@l
+/* 8003924C 0000280C  38 63 82 A0 */	addi r3, r3, __vt__805282A0@l
 /* 80039250 00002810  38 00 00 01 */	li r0, 1
 /* 80039254 00002814  90 7F 00 00 */	stw r3, 0(r31)
 /* 80039258 00002818  38 60 00 01 */	li r3, 1
@@ -54,8 +54,8 @@ func_800392BC:
 /* 800392D0 00002890  7C 7E 1B 78 */	mr r30, r3
 /* 800392D4 00002894  7C 9F 23 78 */	mr r31, r4
 /* 800392D8 00002898  41 82 00 44 */	beq lbl_8003931C
-/* 800392DC 0000289C  3C 80 80 53 */	lis r4, lbl_805282A0@ha
-/* 800392E0 000028A0  38 84 82 A0 */	addi r4, r4, lbl_805282A0@l
+/* 800392DC 0000289C  3C 80 80 53 */	lis r4, __vt__805282A0@ha
+/* 800392E0 000028A0  38 84 82 A0 */	addi r4, r4, __vt__805282A0@l
 /* 800392E4 000028A4  90 83 00 00 */	stw r4, 0(r3)
 /* 800392E8 000028A8  38 60 00 00 */	li r3, 0
 /* 800392EC 000028AC  48 40 B5 89 */	bl func_80444874
@@ -1059,30 +1059,30 @@ lbl_80664188:
 	.4byte lbl_804F5B20
 	.4byte lbl_80528280
 
-.global lbl_80664190
-lbl_80664190:
-	.4byte lbl_80668390
+.global CGame_RTTI
+CGame_RTTI:
+	.4byte CGame_typestr
 	.4byte lbl_80528340
 
-.global lbl_80664198
-lbl_80664198:
-	.4byte lbl_80668398
+.global CProc_RTTI
+CProc_RTTI:
+	.4byte CProc_typestr
 	.4byte lbl_8052835C
 
-.global lbl_806641A0
-lbl_806641A0:
-	.4byte lbl_804F5B44
+.global CWorkThread_RTTI
+CWorkThread_RTTI:
+	.4byte CWorkThread_typestr
 	.4byte lbl_80528370
 
-.global lbl_806641A8
-lbl_806641A8:
-	.4byte lbl_804F5B50
+.global IWorkEvent_RTTI
+IWorkEvent_RTTI:
+	.4byte IWorkEvent_typestr
 	.4byte 0
 
-.global lbl_806641B0
-lbl_806641B0:
+.global cf_CfObjectActor_RTTI
+cf_CfObjectActor_RTTI:
 	# ROM: 0x56FD90
-	.4byte lbl_804F5F48
+	.4byte cf_CfObjectActor_typestr
 	.4byte lbl_80528CF0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
@@ -1117,13 +1117,13 @@ lbl_8066838C:
 	# ROM: 0x5721EC
 	.4byte 0
 
-.global lbl_80668390
-lbl_80668390:
+.global CGame_typestr
+CGame_typestr:
 	.asciz "CGame"
 	.balign 4
 
-.global lbl_80668398
-lbl_80668398:
+.global CProc_typestr
+CProc_typestr:
 	.asciz "CProc"
 	.balign 4
 
@@ -1178,20 +1178,20 @@ lbl_805281E0:
 
 .global lbl_80528280
 lbl_80528280:
-	.4byte lbl_806641A8
+	.4byte IWorkEvent_RTTI
 	.4byte 0
-	.4byte lbl_806641A0
+	.4byte CWorkThread_RTTI
 	.4byte 0
-	.4byte lbl_80664198
+	.4byte CProc_RTTI
 	.4byte 0
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_805282A0
-lbl_805282A0:
+.global __vt__805282A0
+__vt__805282A0:
 	# ROM: 0x5243A0
-	.4byte lbl_80664190
+	.4byte CGame_RTTI
 	.4byte 0
 	.4byte func_800392BC
 	.4byte func_80039E28
@@ -1234,25 +1234,25 @@ lbl_805282A0:
 
 .global lbl_80528340
 lbl_80528340:
-	.4byte lbl_806641A8
+	.4byte IWorkEvent_RTTI
 	.4byte 0
-	.4byte lbl_806641A0
+	.4byte CWorkThread_RTTI
 	.4byte 0
-	.4byte lbl_80664198
+	.4byte CProc_RTTI
 	.4byte 0
 	.4byte 0
 
 .global lbl_8052835C
 lbl_8052835C:
-	.4byte lbl_806641A8
+	.4byte IWorkEvent_RTTI
 	.4byte 0
-	.4byte lbl_806641A0
+	.4byte CWorkThread_RTTI
 	.4byte 0
 	.4byte 0
 
 .global lbl_80528370
 lbl_80528370:
-	.4byte lbl_806641A8
+	.4byte IWorkEvent_RTTI
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1265,12 +1265,12 @@ lbl_804F5B20:
 	.asciz "@unnamed@CGame_cpp@::CGameRestart"
 	.balign 4
 
-.global lbl_804F5B44
-lbl_804F5B44:
+.global CWorkThread_typestr
+CWorkThread_typestr:
 	.asciz "CWorkThread"
 
-.global lbl_804F5B50
-lbl_804F5B50:
+.global IWorkEvent_typestr
+IWorkEvent_typestr:
 	.asciz "IWorkEvent"
 	.balign 4
 

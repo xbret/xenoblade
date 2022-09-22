@@ -9462,18 +9462,18 @@ lbl_80525D78:
 	.asciz "WorkThreadSystem"
 	.balign 4
 
-.global lbl_80525D8C
-lbl_80525D8C:
+.global CMsgParam_8_typestr
+CMsgParam_8_typestr:
 	.asciz "CMsgParam<8>"
 	.balign 4
 
-.global lbl_80525D9C
-lbl_80525D9C:
+.global reslist_CWorkThread_typestr
+reslist_CWorkThread_typestr:
 	.asciz "reslist<CWorkThread *>"
 	.balign 4
 
-.global lbl_80525DB4
-lbl_80525DB4:
+.global _reslist_base_CWorkThread_typestr
+_reslist_base_CWorkThread_typestr:
 	.asciz "_reslist_base<CWorkThread *>"
 	.balign 4
 	.4byte 0
@@ -9484,13 +9484,13 @@ lbl_80525DD8:
 	.asciz " "
 	.4byte 0
 	.2byte 0
-.global lbl_80525DE0
-lbl_80525DE0:
+.global reslist_unsigned_long_typestr
+reslist_unsigned_long_typestr:
 	.asciz "reslist<unsigned long>"
 	.balign 4
 
-.global lbl_80525DF8
-lbl_80525DF8:
+.global _reslist_base_unsigned_long_typestr
+_reslist_base_unsigned_long_typestr:
 	.asciz "_reslist_base<unsigned long>"
 	.balign 4
 
@@ -9500,8 +9500,8 @@ lbl_80525E18:
 	.asciz "(View)"
 	.balign 4
 
-.global lbl_80525E20
-lbl_80525E20:
+.global CProcRoot_typestr
+CProcRoot_typestr:
 	.asciz "CProcRoot"
 	.balign 4
 
@@ -9512,8 +9512,8 @@ lbl_80525E2C:
 	.asciz "CProcRoot"
 	.balign 4
 
-.global lbl_80525E40
-lbl_80525E40:
+.global CRsrcData_typestr
+CRsrcData_typestr:
 	.asciz "CRsrcData"
 	.balign 4
 
@@ -9523,8 +9523,8 @@ lbl_80525E4C:
 	.asciz "CRsrcData"
 	.balign 4
 
-.global lbl_80525E58
-lbl_80525E58:
+.global CScriptCode_typestr
+CScriptCode_typestr:
 	.asciz "CScriptCode"
 
 
@@ -9549,32 +9549,32 @@ lbl_80525E70:
 	.4byte 0x00000002
 	.4byte 0
 
-.global lbl_80525EA0
-lbl_80525EA0:
+.global _unnamed_CTaskManager_cpp_CRootProc_typestr
+_unnamed_CTaskManager_cpp_CRootProc_typestr:
 	.asciz "@unnamed@CTaskManager_cpp@::CRootProc"
 	.balign 4
 
-.global lbl_80525EC8
-lbl_80525EC8:
+.global CTTask_unnamed_CTaskManager_cpp_CRootProc_typestr
+CTTask_unnamed_CTaskManager_cpp_CRootProc_typestr:
 	.asciz "CTTask<@unnamed@CTaskManager_cpp@::CRootProc>"
 	.balign 4
 
-.global lbl_80525EF8
-lbl_80525EF8:
+.global CMsgParam_10_typestr
+CMsgParam_10_typestr:
 	.asciz "CMsgParam<10>"
 	.balign 4
 
-.global lbl_80525F08
-lbl_80525F08:
+.global reslist_IWorkEvent_typestr
+reslist_IWorkEvent_typestr:
 	.asciz "reslist<IWorkEvent *>"
 	.balign 4
 
-.global lbl_80525F20
-lbl_80525F20:
+.global _reslist_base_IWorkEvent_typestr
+_reslist_base_IWorkEvent_typestr:
 	.asciz "_reslist_base<IWorkEvent *>"
 
-.global lbl_80525F3C
-lbl_80525F3C:
+.global CFontLayer_typestr
+CFontLayer_typestr:
 	.asciz "CFontLayer"
 	.balign 4
 
@@ -9596,14 +9596,14 @@ lbl_80525F48:
 
 	.4byte 0
 	.byte 0x00, 0x00, 0x00
-.global lbl_80525F68
-lbl_80525F68:
+.global CViewFrame_typestr
+CViewFrame_typestr:
 	.asciz "CViewFrame"
 	.balign 4
 	.4byte 0
 
-.global lbl_80525F78
-lbl_80525F78:
+.global CViewRoot_typestr
+CViewRoot_typestr:
 	.asciz "CViewRoot"
 	.balign 4
 
@@ -9613,8 +9613,8 @@ lbl_80525F84:
 	.asciz "CViewRoot"
 	.balign 4
 
-.global lbl_80525F90
-lbl_80525F90:
+.global CWorkControl_typestr
+CWorkControl_typestr:
 	.asciz "CWorkControl"
 	.balign 4
 
@@ -9631,13 +9631,13 @@ lbl_80525FA0:
 	.balign 4
 	.4byte 0
 
-.global lbl_80526020
-lbl_80526020:
+.global CWorkFlowSetup_typestr
+CWorkFlowSetup_typestr:
 	.asciz "CWorkFlowSetup"
 	.balign 4
 
-.global lbl_80526030
-lbl_80526030:
+.global _unnamed_CWorkRoot_cpp_CWorkRootThread_typestr
+_unnamed_CWorkRoot_cpp_CWorkRootThread_typestr:
 	.asciz "@unnamed@CWorkRoot_cpp@::CWorkRootThread"
 	.balign 4
 
@@ -9650,8 +9650,8 @@ lbl_8052605C:
 	.asciz "exit wii power off\n"
 	.asciz "exit prog end\n"
 
-.global lbl_805260A8
-lbl_805260A8:
+.global CWorkSystem_typestr
+CWorkSystem_typestr:
 	.asciz "CWorkSystem"
 
 
@@ -9673,19 +9673,19 @@ lbl_805260B4:
 	.asciz "CWorkSystem"
 	.balign 4
 
-.global lbl_80526130
-lbl_80526130:
+.global CWorkSystemMem_typestr
+CWorkSystemMem_typestr:
 	.asciz "CWorkSystemMem"
 	.balign 4
 
-.global lbl_80526140
-lbl_80526140:
+.global TChildListHeader_CProcess_typestr
+TChildListHeader_CProcess_typestr:
 	.asciz "TChildListHeader<CProcess>"
 	.balign 4
 	.4byte 0
 
-.global lbl_80526160
-lbl_80526160:
+.global TChildListHeader_CChildListNode_typestr
+TChildListHeader_CChildListNode_typestr:
 	.asciz "TChildListHeader<CChildListNode>"
 	.balign 4
 	.4byte 0
@@ -9760,17 +9760,17 @@ lbl_805261F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80526278
-lbl_80526278:
+.global CDeviceRemotePad_typestr
+CDeviceRemotePad_typestr:
 	.asciz "CDeviceRemotePad"
 	.balign 4
 
-.global lbl_8052628C
-lbl_8052628C:
+.global CDeviceBase_typestr
+CDeviceBase_typestr:
 	.asciz "CDeviceBase"
 
-.global lbl_80526298
-lbl_80526298:
+.global CDeviceSC_typestr
+CDeviceSC_typestr:
 	.asciz "CDeviceSC"
 	.balign 4
 	.4byte 0
@@ -9810,39 +9810,39 @@ lbl_805262A8:
 	.4byte 0x0000001D
 	.4byte 0x0000001E
 
-.global lbl_80526320
-lbl_80526320:
+.global CDeviceVI_typestr
+CDeviceVI_typestr:
 	.asciz "CDeviceVI"
 	.balign 4
 
-.global lbl_8052632C
-lbl_8052632C:
+.global reslist_CDeviceVICb_typestr
+reslist_CDeviceVICb_typestr:
 	.asciz "reslist<CDeviceVICb *>"
 	.balign 4
 
-.global lbl_80526344
-lbl_80526344:
+.global _reslist_base_CDeviceVICb_typestr
+_reslist_base_CDeviceVICb_typestr:
 	.asciz "_reslist_base<CDeviceVICb *>"
 	.balign 4
 	.4byte 0
 
-.global lbl_80526368
-lbl_80526368:
+.global CDeviceVICb_typestr
+CDeviceVICb_typestr:
 	.asciz "CDeviceVICb"
 	.4byte 0
 
-.global lbl_80526378
-lbl_80526378:
+.global CGXCache_typestr
+CGXCache_typestr:
 	.asciz "CGXCache"
 	.balign 4
 
-.global lbl_80526384
-lbl_80526384:
+.global CMsgParam_32_typestr
+CMsgParam_32_typestr:
 	.asciz "CMsgParam<32>"
 	.balign 4
 
-.global lbl_80526394
-lbl_80526394:
+.global IStateCache_typestr
+IStateCache_typestr:
 	.asciz "IStateCache"
 
 .global lbl_805263A0
@@ -9855,8 +9855,8 @@ lbl_805263B0:
 	.asciz "DeviceSystem2"
 	.balign 4
 
-.global lbl_805263C0
-lbl_805263C0:
+.global _unnamed_CDevice_cpp_CDeviceException_typestr
+_unnamed_CDevice_cpp_CDeviceException_typestr:
 	.asciz "@unnamed@CDevice_cpp@::CDeviceException"
 
 
@@ -9874,33 +9874,33 @@ lbl_805263E8:
 	.asciz "CDevice"
 	.balign 4
 
-.global lbl_80526460
-lbl_80526460:
+.global CDeviceClock_typestr
+CDeviceClock_typestr:
 	.asciz "CDeviceClock"
 	.balign 4
 
-.global lbl_80526470
-lbl_80526470:
+.global reslist_IDeviceClockFrame_typestr
+reslist_IDeviceClockFrame_typestr:
 	.asciz "reslist<IDeviceClockFrame *>"
 	.balign 4
 
-.global lbl_80526490
-lbl_80526490:
+.global _reslist_base_IDeviceClockFrame_typestr
+_reslist_base_IDeviceClockFrame_typestr:
 	.asciz "_reslist_base<IDeviceClockFrame *>"
 	.balign 4
 	.4byte 0
 
-.global lbl_805264B8
-lbl_805264B8:
+.global CDeviceFile_typestr
+CDeviceFile_typestr:
 	.asciz "CDeviceFile"
 
-.global lbl_805264C4
-lbl_805264C4:
+.global reslist_CFileHandle_typestr
+reslist_CFileHandle_typestr:
 	.asciz "reslist<CFileHandle *>"
 	.balign 4
 
-.global lbl_805264DC
-lbl_805264DC:
+.global _reslist_base_CFileHandle_typestr
+_reslist_base_CFileHandle_typestr:
 	.asciz "_reslist_base<CFileHandle *>"
 	.balign 4
 
@@ -9918,8 +9918,8 @@ lbl_805264FC:
 	.asciz "CDeviceFileCri"
 	.balign 4
 
-.global lbl_805265A8
-lbl_805265A8:
+.global CDeviceFileCri_typestr
+CDeviceFileCri_typestr:
 	.asciz "CDeviceFileCri"
 	.balign 4
 
@@ -9929,8 +9929,8 @@ lbl_805265B8:
 	.asciz "/"
 	.4byte 0
 	.2byte 0
-.global lbl_805265C0
-lbl_805265C0:
+.global CDeviceFileDvd_typestr
+CDeviceFileDvd_typestr:
 	.asciz "CDeviceFileDvd"
 	.balign 4
 
@@ -9992,13 +9992,13 @@ lbl_805265D0:
 	.2byte 0
 	.4byte 0
 
-.global lbl_80526658
-lbl_80526658:
+.global CDeviceFileJob_typestr
+CDeviceFileJob_typestr:
 	.asciz "CDeviceFileJob"
 	.balign 4
 
-.global lbl_80526668
-lbl_80526668:
+.global CDeviceFileJobReadDvd_typestr
+CDeviceFileJobReadDvd_typestr:
 	.asciz "CDeviceFileJobReadDvd"
 	.balign 4
 
@@ -10011,17 +10011,17 @@ lbl_80526694:
 	.asciz "font/CapFont.brfna"
 	.balign 4
 
-.global lbl_805266A8
-lbl_805266A8:
+.global CDeviceFont_typestr
+CDeviceFont_typestr:
 	.asciz "CDeviceFont"
 
-.global lbl_805266B4
-lbl_805266B4:
+.global reslist_IDeviceFontInfo_typestr
+reslist_IDeviceFontInfo_typestr:
 	.asciz "reslist<IDeviceFontInfo *>"
 	.balign 4
 
-.global lbl_805266D0
-lbl_805266D0:
+.global _reslist_base_IDeviceFontInfo_typestr
+_reslist_base_IDeviceFontInfo_typestr:
 	.asciz "_reslist_base<IDeviceFontInfo *>"
 	.balign 4
 
@@ -10032,61 +10032,61 @@ lbl_805266F4:
 	.asciz "CDeviceFontLoader"
 	.balign 4
 
-.global lbl_80526718
-lbl_80526718:
+.global CDeviceFontInfoExt_typestr
+CDeviceFontInfoExt_typestr:
 	.asciz "CDeviceFontInfoExt"
 	.balign 4
 	.4byte 0
 
-.global lbl_80526730
-lbl_80526730:
+.global IDeviceFontInfo_typestr
+IDeviceFontInfo_typestr:
 	.asciz "IDeviceFontInfo"
 
-.global lbl_80526740
-lbl_80526740:
+.global CDeviceFontInfoRom_typestr
+CDeviceFontInfoRom_typestr:
 	.asciz "CDeviceFontInfoRom"
 	.balign 4
 	.4byte 0
 
-.global lbl_80526758
-lbl_80526758:
+.global CDeviceFontLayer_typestr
+CDeviceFontLayer_typestr:
 	.asciz "CDeviceFontLayer"
 	.balign 4
 
-.global lbl_8052676C
-lbl_8052676C:
+.global reslist_const_CDeviceFontLayer_LAYER_QUE_typestr
+reslist_const_CDeviceFontLayer_LAYER_QUE_typestr:
 	.asciz "reslist<const CDeviceFontLayer::LAYER_QUE *>"
 	.balign 4
 
-.global lbl_8052679C
-lbl_8052679C:
+.global _reslist_base_const_CDeviceFontLayer_LAYER_QUE_typestr
+_reslist_base_const_CDeviceFontLayer_LAYER_QUE_typestr:
 	.asciz "_reslist_base<const CDeviceFontLayer::LAYER_QUE *>"
 	.balign 4
 
-.global lbl_805267D0
-lbl_805267D0:
+.global CDeviceFontLoader_typestr
+CDeviceFontLoader_typestr:
 	.asciz "CDeviceFontLoader"
 	.balign 4
 	.4byte 0
 
-.global lbl_805267E8
-lbl_805267E8:
+.global CDeviceGX_typestr
+CDeviceGX_typestr:
 	.asciz "CDeviceGX"
 	.balign 4
 	.4byte 0
 
-.global lbl_805267F8
-lbl_805267F8:
+.global _unnamed_CDesktop_cpp_CDesktopException_typestr
+_unnamed_CDesktop_cpp_CDesktopException_typestr:
 	.asciz "@unnamed@CDesktop_cpp@::CDesktopException"
 	.balign 4
 
-.global lbl_80526824
-lbl_80526824:
+.global _unnamed_CDesktop_cpp_CDesktopBackGround_typestr
+_unnamed_CDesktop_cpp_CDesktopBackGround_typestr:
 	.asciz "@unnamed@CDesktop_cpp@::CDesktopBackGround"
 	.balign 4
 
-.global lbl_80526850
-lbl_80526850:
+.global CDesktop_typestr
+CDesktop_typestr:
 	.asciz "CDesktop"
 	.balign 4
 
@@ -10098,8 +10098,8 @@ lbl_8052685C:
 	.balign 4
 	.4byte 0
 
-.global lbl_80526888
-lbl_80526888:
+.global CException_typestr
+CException_typestr:
 	.asciz "CException"
 	.balign 4
 
@@ -10138,8 +10138,8 @@ lbl_805268F8:
 	.balign 4
 	.4byte 0
 
-.global lbl_80526928
-lbl_80526928:
+.global CLibCriMoviePlay_typestr
+CLibCriMoviePlay_typestr:
 	.asciz "CLibCriMoviePlay"
 	.balign 4
 
@@ -10204,8 +10204,8 @@ lbl_80526970:
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 
-.global lbl_805269C0
-lbl_805269C0:
+.global CLibCriStreamingPlay_typestr
+CLibCriStreamingPlay_typestr:
 	.asciz "CLibCriStreamingPlay"
 	.balign 4
 
@@ -10276,8 +10276,8 @@ lbl_80526A38:
 	.balign 4
 	.4byte 0
 
-.global lbl_80526A98
-lbl_80526A98:
+.global CLibHbmControl_typestr
+CLibHbmControl_typestr:
 	.asciz "CLibHbmControl"
 	.balign 4
 
@@ -10289,8 +10289,8 @@ lbl_80526AA8:
 	.asciz "CLibHbmControl"
 	.balign 4
 
-.global lbl_80526AD8
-lbl_80526AD8:
+.global CLibLayout_typestr
+CLibLayout_typestr:
 	.asciz "CLibLayout"
 	.balign 4
 
@@ -10301,13 +10301,13 @@ lbl_80526AE4:
 	.asciz "LAYOUT"
 	.balign 4
 
-.global lbl_80526AF8
-lbl_80526AF8:
+.global CLibStaticData_typestr
+CLibStaticData_typestr:
 	.asciz "CLibStaticData"
 	.balign 4
 
-.global lbl_80526B08
-lbl_80526B08:
+.global CLibStaticData_CItem_typestr
+CLibStaticData_CItem_typestr:
 	.asciz "CLibStaticData::CItem"
 	.balign 4
 
@@ -10987,18 +10987,18 @@ lbl_80527648:
 	.4byte 0x001D001D
 	.4byte 0x00400040
 
-.global lbl_80527688
-lbl_80527688:
+.global CTaskLOD_typestr
+CTaskLOD_typestr:
 	.asciz "CTaskLOD"
 	.balign 4
 
-.global lbl_80527694
-lbl_80527694:
+.global CTTask_CTaskLOD_typestr
+CTTask_CTaskLOD_typestr:
 	.asciz "CTTask<CTaskLOD>"
 	.balign 4
 
-.global lbl_805276A8
-lbl_805276A8:
+.global LOD_LODMemMan_typestr
+LOD_LODMemMan_typestr:
 	.asciz "LOD::LODMemMan"
 	.balign 4
 
@@ -11009,22 +11009,22 @@ lbl_805276B8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_805276C0
-lbl_805276C0:
+.global mpfsys_MPFDrawDisplayList_typestr
+mpfsys_MPFDrawDisplayList_typestr:
 	.asciz "mpfsys::MPFDrawDisplayList"
 	.balign 4
 	.4byte 0
 
-.global lbl_805276E0
-lbl_805276E0:
+.global mpfsys_MPFDraw_typestr
+mpfsys_MPFDraw_typestr:
 	.asciz "mpfsys::MPFDraw"
 
-.global lbl_805276F0
-lbl_805276F0:
+.global mpfsys_MPFDrawMdlColor_typestr
+mpfsys_MPFDrawMdlColor_typestr:
 	.asciz "mpfsys::MPFDrawMdlColor"
 
-.global lbl_80527708
-lbl_80527708:
+.global mpfsys_MPFDrawMdlNoColor_typestr
+mpfsys_MPFDrawMdlNoColor_typestr:
 	.asciz "mpfsys::MPFDrawMdlNoColor"
 	.balign 4
 	.4byte 0
@@ -11041,45 +11041,45 @@ lbl_80527738:
 	.4byte 0x00000001
 	.4byte 0
 
-.global lbl_80527748
-lbl_80527748:
+.global mpfsys_MPFDrawBillLayTex_typestr
+mpfsys_MPFDrawBillLayTex_typestr:
 	.asciz "mpfsys::MPFDrawBillLayTex"
 	.balign 4
 
-.global lbl_80527764
-lbl_80527764:
+.global mpfsys_MPFDrawCross_typestr
+mpfsys_MPFDrawCross_typestr:
 	.asciz "mpfsys::MPFDrawCross"
 	.balign 4
 
-.global lbl_8052777C
-lbl_8052777C:
+.global mpfsys_MPFDrawBillboard_typestr
+mpfsys_MPFDrawBillboard_typestr:
 	.asciz "mpfsys::MPFDrawBillboard"
 	.balign 4
 
-.global lbl_80527798
-lbl_80527798:
+.global CScnItemCameraNw4r_typestr
+CScnItemCameraNw4r_typestr:
 	.asciz "CScnItemCameraNw4r"
 	.balign 4
 
-.global lbl_805277AC
-lbl_805277AC:
+.global CScnItemCamera_typestr
+CScnItemCamera_typestr:
 	.asciz "CScnItemCamera"
 	.balign 4
 	.4byte 0
 
-.global lbl_805277C0
-lbl_805277C0:
+.global CScnItemId_typestr
+CScnItemId_typestr:
 	.asciz "CScnItemId"
 	.balign 4
 	.4byte 0
 
-.global lbl_805277D0
-lbl_805277D0:
+.global CScnItemLight_typestr
+CScnItemLight_typestr:
 	.asciz "CScnItemLight"
 	.balign 4
 
-.global lbl_805277E0
-lbl_805277E0:
+.global CScnItemLightNw4r_typestr
+CScnItemLightNw4r_typestr:
 	.asciz "CScnItemLightNw4r"
 	.balign 4
 
@@ -11089,33 +11089,33 @@ lbl_805277F4:
 	.asciz "Global(%d)"
 	.balign 4
 
-.global lbl_80527800
-lbl_80527800:
+.global nw4r_g3d_IScnObjCallback_typestr
+nw4r_g3d_IScnObjCallback_typestr:
 	.asciz "nw4r::g3d::IScnObjCallback"
 	.balign 4
 
-.global lbl_8052781C
-lbl_8052781C:
+.global nw4r_g3d_ICalcWorldCallback_typestr
+nw4r_g3d_ICalcWorldCallback_typestr:
 	.asciz "nw4r::g3d::ICalcWorldCallback"
 	.balign 4
 	.4byte 0
 
-.global lbl_80527840
-lbl_80527840:
+.global CScnItemPool_typestr
+CScnItemPool_typestr:
 	.asciz "CScnItemPool"
 	.balign 4
 
-.global lbl_80527850
-lbl_80527850:
+.global reslist_CScnItem_typestr
+reslist_CScnItem_typestr:
 	.asciz "reslist<CScnItem *>"
 
-.global lbl_80527864
-lbl_80527864:
+.global _reslist_base_CScnItem_typestr
+_reslist_base_CScnItem_typestr:
 	.asciz "_reslist_base<CScnItem *>"
 	.balign 4
 
-.global lbl_80527880
-lbl_80527880:
+.global CScnLightMan_typestr
+CScnLightMan_typestr:
 	.asciz "CScnLightMan"
 	.balign 4
 
@@ -11146,25 +11146,25 @@ lbl_805278BC:
 lbl_805278C0:
 	.asciz "CScnMem"
 
-.global lbl_805278C8
-lbl_805278C8:
+.global CScnNw4r_typestr
+CScnNw4r_typestr:
 	.asciz "CScnNw4r"
 	.balign 4
 
-.global lbl_805278D4
-lbl_805278D4:
+.global CTTask_CScn_typestr
+CTTask_CScn_typestr:
 	.asciz "CTTask<CScn>"
 	.balign 4
 	.4byte 0
 
-.global lbl_805278E8
-lbl_805278E8:
+.global CScnRoot_typestr
+CScnRoot_typestr:
 	.asciz "CScnRoot"
 	.balign 4
 	.4byte 0
 
-.global lbl_805278F8
-lbl_805278F8:
+.global CScnRootNw4r_typestr
+CScnRootNw4r_typestr:
 	.asciz "CScnRootNw4r"
 	.balign 4
 
@@ -11177,8 +11177,8 @@ lbl_80527908:
 	.asciz "NW4R Mem(A)"
 	.balign 4
 
-.global lbl_80527938
-lbl_80527938:
+.global CScnTexWorkMan_typestr
+CScnTexWorkMan_typestr:
 	.asciz "CScnTexWorkMan"
 	.balign 4
 
@@ -11188,8 +11188,8 @@ lbl_80527948:
 	.asciz "CScnTexWorkMan"
 	.balign 4
 
-.global lbl_80527958
-lbl_80527958:
+.global CScnVirtualLight_typestr
+CScnVirtualLight_typestr:
 	.asciz "CScnVirtualLight"
 	.balign 4
 
@@ -11199,18 +11199,18 @@ lbl_8052796C:
 	.asciz "VLGT Mem"
 	.balign 4
 
-.global lbl_80527978
-lbl_80527978:
+.global CVirtualLightAmb_typestr
+CVirtualLightAmb_typestr:
 	.asciz "CVirtualLightAmb"
 	.balign 4
 
-.global lbl_8052798C
-lbl_8052798C:
+.global CVirtualLightObj_typestr
+CVirtualLightObj_typestr:
 	.asciz "CVirtualLightObj"
 	.balign 4
 
-.global lbl_805279A0
-lbl_805279A0:
+.global CVirtualLightDir_typestr
+CVirtualLightDir_typestr:
 	.asciz "CVirtualLightDir"
 	.balign 4
 	.4byte 0
@@ -11222,23 +11222,23 @@ lbl_805279B8:
 	.asciz "CScn"
 	.4byte 0
 
-.global lbl_805279C8
-lbl_805279C8:
+.global CScnBlend_typestr
+CScnBlend_typestr:
 	.asciz "CScnBlend"
 	.balign 4
 
-.global lbl_805279D4
-lbl_805279D4:
+.global CScnFilter_typestr
+CScnFilter_typestr:
 	.asciz "CScnFilter"
 	.balign 4
 
-.global lbl_805279E0
-lbl_805279E0:
+.global CScnBloom_typestr
+CScnBloom_typestr:
 	.asciz "CScnBloom"
 	.balign 4
 
-.global lbl_805279EC
-lbl_805279EC:
+.global CScnBloomBase_typestr
+CScnBloomBase_typestr:
 	.asciz "CScnBloomBase"
 	.balign 4
 	.4byte 0
@@ -11248,71 +11248,71 @@ lbl_80527A00:
 	.asciz "camset %d %v3 %v3 %f %f %f %f"
 	.balign 4
 
-.global lbl_80527A20
-lbl_80527A20:
+.global CScnCameraMan_typestr
+CScnCameraMan_typestr:
 	.asciz "CScnCameraMan"
 	.balign 4
 
-.global lbl_80527A30
-lbl_80527A30:
+.global CScnEffectActNw4r_typestr
+CScnEffectActNw4r_typestr:
 	.asciz "CScnEffectActNw4r"
 	.balign 4
 
-.global lbl_80527A44
-lbl_80527A44:
+.global IEffectAct_typestr
+IEffectAct_typestr:
 	.asciz "IEffectAct"
 	.balign 4
 
-.global lbl_80527A50
-lbl_80527A50:
+.global CScnFadeMan_typestr
+CScnFadeMan_typestr:
 	.asciz "CScnFadeMan"
 	.4byte 0
 
-.global lbl_80527A60
-lbl_80527A60:
+.global CScnFilterMan_typestr
+CScnFilterMan_typestr:
 	.asciz "CScnFilterMan"
 	.balign 4
 
-.global lbl_80527A70
-lbl_80527A70:
+.global reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
+reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr:
 	.asciz "reslist<_reslist_iterator<CScnFilter *, CScnFilter *&, CScnFilter **>>"
 	.balign 4
 
-.global lbl_80527AB8
-lbl_80527AB8:
+.global _reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
+_reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr:
 	.asciz "_reslist_base<_reslist_iterator<CScnFilter *, CScnFilter *&, CScnFilter **>>"
 	.balign 4
 
-.global lbl_80527B08
-lbl_80527B08:
+.global reslist_CScnFilter_typestr
+reslist_CScnFilter_typestr:
 	.asciz "reslist<CScnFilter *>"
 	.balign 4
 
-.global lbl_80527B20
-lbl_80527B20:
+.global _reslist_base_CScnFilter_typestr
+_reslist_base_CScnFilter_typestr:
 	.asciz "_reslist_base<CScnFilter *>"
 	.4byte 0
 
-.global lbl_80527B40
-lbl_80527B40:
+.global CScnFogMan_typestr
+CScnFogMan_typestr:
 	.asciz "CScnFogMan"
 	.balign 4
 	.4byte 0
 
-.global lbl_80527B50
-lbl_80527B50:
+.global CScnFrame_typestr
+CScnFrame_typestr:
 	.asciz "CScnFrame"
 	.balign 4
 	.4byte 0
 
-.global lbl_80527B60
-lbl_80527B60:
+.global CScnIdMan_typestr
+CScnIdMan_typestr:
 	.asciz "CScnIdMan"
 	.balign 4
 	.4byte 0
 
-.global lbl_80527B70
-lbl_80527B70:
+.global CScnItemAnim_typestr
+CScnItemAnim_typestr:
 	.asciz "CScnItemAnim"
 	.balign 4
 
@@ -11491,48 +11491,48 @@ lbl_80527D24:
 	.balign 4
 
 
-.global lbl_80527D30
-lbl_80527D30:
+.global CColiObjCall_typestr
+CColiObjCall_typestr:
 	.asciz "CColiObjCall"
 	.balign 4
 
-.global lbl_80527D40
-lbl_80527D40:
+.global CColiResCall_typestr
+CColiResCall_typestr:
 	.asciz "CColiResCall"
 	.balign 4
 
-.global lbl_80527D50
-lbl_80527D50:
+.global CTaskColiManager_typestr
+CTaskColiManager_typestr:
 	.asciz "CTaskColiManager"
 	.balign 4
 
-.global lbl_80527D64
-lbl_80527D64:
+.global CTTask_CTaskColiManager_typestr
+CTTask_CTaskColiManager_typestr:
 	.asciz "CTTask<CTaskColiManager>"
 	.balign 4
 
-.global lbl_80527D80
-lbl_80527D80:
+.global CColiManCall_typestr
+CColiManCall_typestr:
 	.asciz "CColiManCall"
 	.balign 4
 
-.global lbl_80527D90
-lbl_80527D90:
+.global reslist_IScnEnvCtl_typestr
+reslist_IScnEnvCtl_typestr:
 	.asciz "reslist<IScnEnvCtl *>"
 	.balign 4
 
-.global lbl_80527DA8
-lbl_80527DA8:
+.global _reslist_base_IScnEnvCtl_typestr
+_reslist_base_IScnEnvCtl_typestr:
 	.asciz "_reslist_base<IScnEnvCtl *>"
 	.4byte 0
 
-.global lbl_80527DC8
-lbl_80527DC8:
+.global CScnEnvLgtCtrl_typestr
+CScnEnvLgtCtrl_typestr:
 	.asciz "CScnEnvLgtCtrl"
 	.balign 4
 
-.global lbl_80527DD8
-lbl_80527DD8:
+.global IScnEnvCtl_typestr
+IScnEnvCtl_typestr:
 	.asciz "IScnEnvCtl"
 	.balign 4
 	.4byte 0
@@ -11585,31 +11585,31 @@ lbl_80527E40:
 	.4byte 0x00FF0100
 	.4byte 0
 
-.global lbl_80527E50
-lbl_80527E50:
+.global reslist_CETrail_POINT_typestr
+reslist_CETrail_POINT_typestr:
 	.asciz "reslist<CETrail::POINT>"
 
-.global lbl_80527E68
-lbl_80527E68:
+.global _reslist_base_CETrail_POINT_typestr
+_reslist_base_CETrail_POINT_typestr:
 	.asciz "_reslist_base<CETrail::POINT>"
 	.balign 4
 
-.global lbl_80527E88
-lbl_80527E88:
+.global CWorkSystemCache_typestr
+CWorkSystemCache_typestr:
 	.asciz "CWorkSystemCache"
 	.balign 4
 
-.global lbl_80527E9C
-lbl_80527E9C:
+.global reslist_CCacheItem_typestr
+reslist_CCacheItem_typestr:
 	.asciz "reslist<CCacheItem *>"
 	.balign 4
 
-.global lbl_80527EB4
-lbl_80527EB4:
+.global _reslist_base_CCacheItem_typestr
+_reslist_base_CCacheItem_typestr:
 	.asciz "_reslist_base<CCacheItem *>"
 
-.global lbl_80527ED0
-lbl_80527ED0:
+.global CNReqtask_typestr
+CNReqtask_typestr:
 	.asciz "CNReqtask"
 	.balign 4
 
@@ -11620,14 +11620,14 @@ lbl_80527EDC:
 	.balign 4
 	.4byte 0
 
-.global lbl_80527EE8
-lbl_80527EE8:
+.global CNRequest_typestr
+CNRequest_typestr:
 	.asciz "CNRequest"
 	.balign 4
 	.4byte 0
 
-.global lbl_80527EF8
-lbl_80527EF8:
+.global CNReqtaskSave_typestr
+CNReqtaskSave_typestr:
 	.asciz "CNReqtaskSave"
 	.balign 4
 
@@ -11637,70 +11637,70 @@ lbl_80527F08:
 	.asciz "%s%s"
 	.balign 4
 
-.global lbl_80527F10
-lbl_80527F10:
+.global CNReqtaskLoad_typestr
+CNReqtaskLoad_typestr:
 	.asciz "CNReqtaskLoad"
 	.balign 4
 
-.global lbl_80527F20
-lbl_80527F20:
+.global CNReqtaskReaddir_typestr
+CNReqtaskReaddir_typestr:
 	.asciz "CNReqtaskReaddir"
 	.balign 4
 	.4byte 0
 
-.global lbl_80527F38
-lbl_80527F38:
+.global CNReqtaskRemove_typestr
+CNReqtaskRemove_typestr:
 	.asciz "CNReqtaskRemove"
 
-.global lbl_80527F48
-lbl_80527F48:
+.global CNReqtaskCheck_typestr
+CNReqtaskCheck_typestr:
 	.asciz "CNReqtaskCheck"
 	.balign 4
 
-.global lbl_80527F58
-lbl_80527F58:
+.global CERandomizerSimple_typestr
+CERandomizerSimple_typestr:
 	.asciz "CERandomizerSimple"
 	.balign 4
 
-.global lbl_80527F6C
-lbl_80527F6C:
+.global IRandomizer_typestr
+IRandomizer_typestr:
 	.asciz "IRandomizer"
 
-.global lbl_80527F78
-lbl_80527F78:
+.global CERandomizer_typestr
+CERandomizer_typestr:
 	.asciz "CERandomizer"
 	.balign 4
 
-.global lbl_80527F88
-lbl_80527F88:
+.global CWorkSystemPack_typestr
+CWorkSystemPack_typestr:
 	.asciz "CWorkSystemPack"
 
-.global lbl_80527F98
-lbl_80527F98:
+.global reslist_CArcItem_typestr
+reslist_CArcItem_typestr:
 	.asciz "reslist<CArcItem *>"
 
-.global lbl_80527FAC
-lbl_80527FAC:
+.global _reslist_base_CArcItem_typestr
+_reslist_base_CArcItem_typestr:
 	.asciz "_reslist_base<CArcItem *>"
 	.balign 4
 
-.global lbl_80527FC8
-lbl_80527FC8:
+.global reslist_CPackItem_typestr
+reslist_CPackItem_typestr:
 	.asciz "reslist<CPackItem *>"
 	.balign 4
 
-.global lbl_80527FE0
-lbl_80527FE0:
+.global _reslist_base_CPackItem_typestr
+_reslist_base_CPackItem_typestr:
 	.asciz "_reslist_base<CPackItem *>"
 	.balign 4
 
-.global lbl_80527FFC
-lbl_80527FFC:
+.global CPackItem_typestr
+CPackItem_typestr:
 	.asciz "CPackItem"
 	.balign 4
 
-.global lbl_80528008
-lbl_80528008:
+.global CArcItem_typestr
+CArcItem_typestr:
 	.asciz "CArcItem"
 	.balign 4
 
@@ -11713,34 +11713,34 @@ lbl_80528014:
 	.balign 4
 	.4byte 0
 
-.global lbl_80528028
-lbl_80528028:
+.global CSchedule_typestr
+CSchedule_typestr:
 	.asciz "CSchedule"
 	.balign 4
 	.4byte 0
 
-.global lbl_80528038
-lbl_80528038:
+.global ScheduleList_typestr
+ScheduleList_typestr:
 	.asciz "ScheduleList"
 	.balign 4
 
-.global lbl_80528048
-lbl_80528048:
+.global reslist_CSchedule_typestr
+reslist_CSchedule_typestr:
 	.asciz "reslist<CSchedule *>"
 	.balign 4
 
-.global lbl_80528060
-lbl_80528060:
+.global _reslist_base_CSchedule_typestr
+_reslist_base_CSchedule_typestr:
 	.asciz "_reslist_base<CSchedule *>"
 	.balign 4
 
-.global lbl_8052807C
-lbl_8052807C:
+.global IScheduleContainer_typestr
+IScheduleContainer_typestr:
 	.asciz "IScheduleContainer"
 	.balign 4
 
-.global lbl_80528090
-lbl_80528090:
+.global CMdlMaterial_typestr
+CMdlMaterial_typestr:
 	.asciz "CMdlMaterial"
 	.balign 4
 
@@ -11756,14 +11756,14 @@ lbl_805280AC:
 	.4byte 0
 	.float 0.25
 	.float 0.5
-.global lbl_805280B8
-lbl_805280B8:
+.global CMdlMouth_typestr
+CMdlMouth_typestr:
 	.asciz "CMdlMouth"
 	.balign 4
 	.4byte 0
 
-.global lbl_805280C8
-lbl_805280C8:
+.global CMdlAnmUV_typestr
+CMdlAnmUV_typestr:
 	.asciz "CMdlAnmUV"
 	.balign 4
 
@@ -11790,14 +11790,14 @@ lbl_805280EC:
 	.4byte 0xBE000000
 	.4byte 0xBE800000
 
-.global lbl_805280F8
-lbl_805280F8:
+.global CMdlAnmEye_typestr
+CMdlAnmEye_typestr:
 	.asciz "CMdlAnmEye"
 	.balign 4
 	.4byte 0
 
-.global lbl_80528108
-lbl_80528108:
+.global CMdlLook_typestr
+CMdlLook_typestr:
 	.asciz "CMdlLook"
 	.balign 4
 
@@ -11808,8 +11808,8 @@ lbl_80528114:
 	.asciz "JUhead"
 	.asciz "move"
 	.2byte 0
-.global lbl_80528128
-lbl_80528128:
+.global CMdlDynamics_typestr
+CMdlDynamics_typestr:
 	.asciz "CMdlDynamics"
 	.balign 4
 
@@ -11839,8 +11839,8 @@ lbl_80528190:
 	.asciz "banner.bin"
 	.balign 4
 
-.global lbl_8052819C
-lbl_8052819C:
+.global CNReqtaskSaveBanner_typestr
+CNReqtaskSaveBanner_typestr:
 	.asciz "CNReqtaskSaveBanner"
 
 
@@ -11849,8 +11849,8 @@ lbl_805281B0:
 	.asciz "%s%s"
 	.balign 4
 
-.global lbl_805281B8
-lbl_805281B8:
+.global CNBanner_typestr
+CNBanner_typestr:
 	.asciz "CNBanner"
 	.balign 4
 

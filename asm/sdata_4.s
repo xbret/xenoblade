@@ -3,19 +3,19 @@
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
-.global lbl_80666440
-lbl_80666440:
-	.4byte lbl_8066D938
+.global CETrail_RTTI
+CETrail_RTTI:
+	.4byte CETrail_typestr
 	.4byte 0
 
-.global lbl_80666448
-lbl_80666448:
-	.4byte lbl_80527E50
+.global reslist_CETrail_POINT_RTTI
+reslist_CETrail_POINT_RTTI:
+	.4byte reslist_CETrail_POINT_typestr
 	.4byte lbl_805734A0
 
-.global lbl_80666450
-lbl_80666450:
-	.4byte lbl_80527E68
+.global _reslist_base_CETrail_POINT_RTTI
+_reslist_base_CETrail_POINT_RTTI:
+	.4byte _reslist_base_CETrail_POINT_typestr
 	.4byte 0
 
 
@@ -30,24 +30,24 @@ lbl_8066645C:
 	# ROM: 0x57203C
 	.4byte 0x01000000
 
-.global lbl_80666460
-lbl_80666460:
-	.4byte lbl_80527E88
+.global CWorkSystemCache_RTTI
+CWorkSystemCache_RTTI:
+	.4byte CWorkSystemCache_typestr
 	.4byte lbl_80573558
 
-.global lbl_80666468
-lbl_80666468:
-	.4byte lbl_80527E9C
+.global reslist_CCacheItem_RTTI
+reslist_CCacheItem_RTTI:
+	.4byte reslist_CCacheItem_typestr
 	.4byte lbl_80573578
 
-.global lbl_80666470
-lbl_80666470:
-	.4byte lbl_80527EB4
+.global _reslist_base_CCacheItem_RTTI
+_reslist_base_CCacheItem_RTTI:
+	.4byte _reslist_base_CCacheItem_typestr
 	.4byte 0
 
-.global lbl_80666478
-lbl_80666478:
-	.4byte lbl_8066D9C0
+.global CNand_RTTI
+CNand_RTTI:
+	.4byte CNand_typestr
 	.4byte 0
 
 
@@ -71,12 +71,12 @@ lbl_80666488:
 
 .global lbl_80666490
 lbl_80666490:
-	.4byte lbl_80527ED0
+	.4byte CNReqtask_typestr
 	.4byte 0
 
-.global lbl_80666498
-lbl_80666498:
-	.4byte lbl_80527EE8
+.global CNRequest_RTTI
+CNRequest_RTTI:
+	.4byte CNRequest_typestr
 	.4byte 0
 
 
@@ -86,104 +86,104 @@ lbl_806664A0:
 	.4byte lbl_8066D9D0
 	.4byte 0
 
-.global lbl_806664A8
-lbl_806664A8:
-	.4byte lbl_80527EF8
+.global CNReqtaskSave_RTTI
+CNReqtaskSave_RTTI:
+	.4byte CNReqtaskSave_typestr
 	.4byte lbl_805735C0
 
-.global lbl_806664B0
-lbl_806664B0:
-	.4byte lbl_80527F10
+.global CNReqtaskLoad_RTTI
+CNReqtaskLoad_RTTI:
+	.4byte CNReqtaskLoad_typestr
 	.4byte lbl_805735E0
 
-.global lbl_806664B8
-lbl_806664B8:
-	.4byte lbl_80527F20
+.global CNReqtaskReaddir_RTTI
+CNReqtaskReaddir_RTTI:
+	.4byte CNReqtaskReaddir_typestr
 	.4byte lbl_80573600
 
-.global lbl_806664C0
-lbl_806664C0:
-	.4byte lbl_80527F38
+.global CNReqtaskRemove_RTTI
+CNReqtaskRemove_RTTI:
+	.4byte CNReqtaskRemove_typestr
 	.4byte lbl_80573620
 
-.global lbl_806664C8
-lbl_806664C8:
-	.4byte lbl_80527F48
+.global CNReqtaskCheck_RTTI
+CNReqtaskCheck_RTTI:
+	.4byte CNReqtaskCheck_typestr
 	.4byte lbl_80573640
 
-.global lbl_806664D0
-lbl_806664D0:
-	.4byte lbl_80527F58
+.global CERandomizerSimple_RTTI
+CERandomizerSimple_RTTI:
+	.4byte CERandomizerSimple_typestr
 	.4byte lbl_80573668
 
 .global lbl_806664D8
 lbl_806664D8:
-	.4byte lbl_80527F6C
+	.4byte IRandomizer_typestr
 	.4byte 0
 
-.global lbl_806664E0
-lbl_806664E0:
-	.4byte lbl_80527F78
+.global CERandomizer_RTTI
+CERandomizer_RTTI:
+	.4byte CERandomizer_typestr
 	.4byte lbl_80573690
 
-.global lbl_806664E8
-lbl_806664E8:
-	.4byte lbl_80527F88
+.global CWorkSystemPack_RTTI
+CWorkSystemPack_RTTI:
+	.4byte CWorkSystemPack_typestr
 	.4byte lbl_80573740
 
-.global lbl_806664F0
-lbl_806664F0:
-	.4byte lbl_80527F98
+.global reslist_CArcItem_RTTI
+reslist_CArcItem_RTTI:
+	.4byte reslist_CArcItem_typestr
 	.4byte lbl_80573760
 
-.global lbl_806664F8
-lbl_806664F8:
-	.4byte lbl_80527FAC
+.global _reslist_base_CArcItem_RTTI
+_reslist_base_CArcItem_RTTI:
+	.4byte _reslist_base_CArcItem_typestr
 	.4byte 0
 
-.global lbl_80666500
-lbl_80666500:
-	.4byte lbl_80527FC8
+.global reslist_CPackItem_RTTI
+reslist_CPackItem_RTTI:
+	.4byte reslist_CPackItem_typestr
 	.4byte lbl_80573784
 
-.global lbl_80666508
-lbl_80666508:
-	.4byte lbl_80527FE0
+.global _reslist_base_CPackItem_RTTI
+_reslist_base_CPackItem_RTTI:
+	.4byte _reslist_base_CPackItem_typestr
 	.4byte 0
 
-.global lbl_80666510
-lbl_80666510:
-	.4byte lbl_80527FFC
+.global CPackItem_RTTI
+CPackItem_RTTI:
+	.4byte CPackItem_typestr
 	.4byte 0
 
-.global lbl_80666518
-lbl_80666518:
-	.4byte lbl_80528008
+.global CArcItem_RTTI
+CArcItem_RTTI:
+	.4byte CArcItem_typestr
 	.4byte 0
 
-.global lbl_80666520
-lbl_80666520:
-	.4byte lbl_80528028
+.global CSchedule_RTTI
+CSchedule_RTTI:
+	.4byte CSchedule_typestr
 	.4byte 0
 
-.global lbl_80666528
-lbl_80666528:
-	.4byte lbl_80528038
+.global ScheduleList_RTTI
+ScheduleList_RTTI:
+	.4byte ScheduleList_typestr
 	.4byte lbl_805738F0
 
-.global lbl_80666530
-lbl_80666530:
-	.4byte lbl_80528048
+.global reslist_CSchedule_RTTI
+reslist_CSchedule_RTTI:
+	.4byte reslist_CSchedule_typestr
 	.4byte lbl_80573908
 
-.global lbl_80666538
-lbl_80666538:
-	.4byte lbl_80528060
+.global _reslist_base_CSchedule_RTTI
+_reslist_base_CSchedule_RTTI:
+	.4byte _reslist_base_CSchedule_typestr
 	.4byte 0
 
 .global lbl_80666540
 lbl_80666540:
-	.4byte lbl_8052807C
+	.4byte IScheduleContainer_typestr
 	.4byte 0
 
 
@@ -198,9 +198,9 @@ lbl_8066654C:
 	# ROM: 0x57212C
 	.4byte lbl_8066DAA8
 
-.global lbl_80666550
-lbl_80666550:
-	.4byte lbl_80528090
+.global CMdlMaterial_RTTI
+CMdlMaterial_RTTI:
+	.4byte CMdlMaterial_typestr
 	.4byte 0
 
 
@@ -251,9 +251,9 @@ lbl_80666574:
 	# ROM: 0x572154
 	.4byte lbl_805280A0
 
-.global lbl_80666578
-lbl_80666578:
-	.4byte lbl_805280B8
+.global CMdlMouth_RTTI
+CMdlMouth_RTTI:
+	.4byte CMdlMouth_typestr
 	.4byte 0
 
 
@@ -280,9 +280,9 @@ lbl_8066658C:
 	# ROM: 0x57216C
 	.4byte lbl_8066DAF0
 
-.global lbl_80666590
-lbl_80666590:
-	.4byte lbl_805280C8
+.global CMdlAnmUV_RTTI
+CMdlAnmUV_RTTI:
+	.4byte CMdlAnmUV_typestr
 	.4byte 0
 
 
@@ -304,9 +304,9 @@ lbl_806665A0:
 	.4byte lbl_8066DB00
 	.4byte 0
 
-.global lbl_806665A8
-lbl_806665A8:
-	.4byte lbl_805280F8
+.global CMdlAnmEye_RTTI
+CMdlAnmEye_RTTI:
+	.4byte CMdlAnmEye_typestr
 	.4byte 0
 
 
@@ -316,9 +316,9 @@ lbl_806665B0:
 	.4byte 0x72656600
 	.4byte 0
 
-.global lbl_806665B8
-lbl_806665B8:
-	.4byte lbl_80528108
+.global CMdlLook_RTTI
+CMdlLook_RTTI:
+	.4byte CMdlLook_typestr
 	.4byte 0
 
 
@@ -333,9 +333,9 @@ lbl_806665C4:
 	# ROM: 0x5721A4
 	.4byte 0x72656600
 
-.global lbl_806665C8
-lbl_806665C8:
-	.4byte lbl_80528128
+.global CMdlDynamics_RTTI
+CMdlDynamics_RTTI:
+	.4byte CMdlDynamics_typestr
 	.4byte 0
 
 
@@ -381,12 +381,12 @@ lbl_806665EC:
 	# ROM: 0x5721CC
 	.4byte lbl_80528190
 
-.global lbl_806665F0
-lbl_806665F0:
-	.4byte lbl_8052819C
+.global CNReqtaskSaveBanner_RTTI
+CNReqtaskSaveBanner_RTTI:
+	.4byte CNReqtaskSaveBanner_typestr
 	.4byte lbl_80573BB0
 
-.global lbl_806665F8
-lbl_806665F8:
-	.4byte lbl_805281B8
+.global CNBanner_RTTI
+CNBanner_RTTI:
+	.4byte CNBanner_typestr
 	.4byte lbl_80573C48

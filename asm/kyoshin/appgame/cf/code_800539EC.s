@@ -7,11 +7,11 @@
 func_800539EC:
 /* 800539EC 0001CFAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800539F0 0001CFB0  7C 08 02 A6 */	mflr r0
-/* 800539F4 0001CFB4  3C 80 80 53 */	lis r4, lbl_80529B68@ha
+/* 800539F4 0001CFB4  3C 80 80 53 */	lis r4, __vt__80529B68@ha
 /* 800539F8 0001CFB8  38 A0 00 00 */	li r5, 0
 /* 800539FC 0001CFBC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80053A00 0001CFC0  38 00 00 00 */	li r0, 0
-/* 80053A04 0001CFC4  38 84 9B 68 */	addi r4, r4, lbl_80529B68@l
+/* 80053A04 0001CFC4  38 84 9B 68 */	addi r4, r4, __vt__80529B68@l
 /* 80053A08 0001CFC8  38 C0 00 00 */	li r6, 0
 /* 80053A0C 0001CFCC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80053A10 0001CFD0  7C 7F 1B 78 */	mr r31, r3
@@ -5514,9 +5514,9 @@ lbl_80058390:
 
 .global func_80058414
 func_80058414:
-/* 80058414 000219D4  3C A0 80 53 */	lis r5, lbl_80529B78@ha
+/* 80058414 000219D4  3C A0 80 53 */	lis r5, __vt__80529B78@ha
 /* 80058418 000219D8  38 00 00 00 */	li r0, 0
-/* 8005841C 000219DC  38 A5 9B 78 */	addi r5, r5, lbl_80529B78@l
+/* 8005841C 000219DC  38 A5 9B 78 */	addi r5, r5, __vt__80529B78@l
 /* 80058420 000219E0  90 A3 00 00 */	stw r5, 0(r3)
 /* 80058424 000219E4  98 03 00 04 */	stb r0, 4(r3)
 /* 80058428 000219E8  90 83 00 08 */	stw r4, 8(r3)
@@ -5625,14 +5625,14 @@ func_8005857C:
 /* 80058590 00021B50  93 C1 00 08 */	stw r30, 8(r1)
 /* 80058594 00021B54  7C 7E 1B 78 */	mr r30, r3
 /* 80058598 00021B58  48 3E C4 81 */	bl func_80444A18
-/* 8005859C 00021B5C  3C 60 80 53 */	lis r3, lbl_80529C08@ha
-/* 800585A0 00021B60  3C C0 80 53 */	lis r6, lbl_80529BC0@ha
-/* 800585A4 00021B64  38 63 9C 08 */	addi r3, r3, lbl_80529C08@l
+/* 8005859C 00021B5C  3C 60 80 53 */	lis r3, __vt__80529C08@ha
+/* 800585A0 00021B60  3C C0 80 53 */	lis r6, __vt__80529BC0@ha
+/* 800585A4 00021B64  38 63 9C 08 */	addi r3, r3, __vt__80529C08@l
 /* 800585A8 00021B68  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 800585AC 00021B6C  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
 /* 800585B0 00021B70  C0 62 84 B0 */	lfs f3, lbl_80668830@sda21(r2)
 /* 800585B4 00021B74  84 69 CE 10 */	lwzu r3, lbl_8050CE10@l(r9)
-/* 800585B8 00021B78  38 C6 9B C0 */	addi r6, r6, lbl_80529BC0@l
+/* 800585B8 00021B78  38 C6 9B C0 */	addi r6, r6, __vt__80529BC0@l
 /* 800585BC 00021B7C  C0 42 84 B4 */	lfs f2, lbl_80668834@sda21(r2)
 /* 800585C0 00021B80  38 A0 00 00 */	li r5, 0
 /* 800585C4 00021B84  80 09 00 04 */	lwz r0, 4(r9)
@@ -7376,19 +7376,19 @@ sinit_80059D60:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80529B68
-lbl_80529B68:
+.global __vt__80529B68
+__vt__80529B68:
 	# ROM: 0x525C68
-	.4byte lbl_806642B8
+	.4byte CActParamData_RTTI
 	.4byte 0
 	.4byte func_80053A50
 	.4byte 0
 
 
-.global lbl_80529B78
-lbl_80529B78:
+.global __vt__80529B78
+__vt__80529B78:
 	# ROM: 0x525C78
-	.4byte lbl_806642C0
+	.4byte CMcaFile_RTTI
 	.4byte 0
 	.4byte func_80058478
 
@@ -7405,10 +7405,10 @@ lbl_80529BAC:
 	.balign 4
 
 
-.global lbl_80529BC0
-lbl_80529BC0:
+.global __vt__80529BC0
+__vt__80529BC0:
 	# ROM: 0x525CC0
-	.4byte lbl_806642C8
+	.4byte CTaskEnvironment_RTTI
 	.4byte 0
 	.4byte func_80058784
 	.4byte func_80446734
@@ -7420,21 +7420,21 @@ lbl_80529BC0:
 
 .global lbl_80529BE4
 lbl_80529BE4:
-	.4byte lbl_80664258
+	.4byte CDoubleListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664250
+	.4byte CChildListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664248
+	.4byte CProcess_RTTI
 	.4byte 0
-	.4byte lbl_806642D0
+	.4byte CTTask_CTaskEnvironment_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_80529C08
-lbl_80529C08:
+.global __vt__80529C08
+__vt__80529C08:
 	# ROM: 0x525D08
-	.4byte lbl_806642D0
+	.4byte CTTask_CTaskEnvironment_RTTI
 	.4byte 0
 	.4byte func_8005872C
 	.4byte func_80446734
@@ -7446,29 +7446,29 @@ lbl_80529C08:
 
 .global lbl_80529C2C
 lbl_80529C2C:
-	.4byte lbl_80664258
+	.4byte CDoubleListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664250
+	.4byte CChildListNode_RTTI
 	.4byte 0
-	.4byte lbl_80664248
+	.4byte CProcess_RTTI
 	.4byte 0
 	.4byte 0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_804F68C8
-lbl_804F68C8:
+.global CMcaFile_typestr
+CMcaFile_typestr:
 	.asciz "CMcaFile"
 	.balign 4
 	.4byte 0
 
-.global lbl_804F68D8
-lbl_804F68D8:
+.global CTaskEnvironment_typestr
+CTaskEnvironment_typestr:
 	.asciz "CTaskEnvironment"
 	.balign 4
 
-.global lbl_804F68EC
-lbl_804F68EC:
+.global CTTask_CTaskEnvironment_typestr
+CTTask_CTaskEnvironment_typestr:
 	.asciz "CTTask<CTaskEnvironment>"
 	.balign 4
 
@@ -7494,24 +7494,24 @@ lbl_805740B8:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_806642B8
-lbl_806642B8:
-	.4byte lbl_804F68B8
+.global CActParamData_RTTI
+CActParamData_RTTI:
+	.4byte CActParamData_typestr
 	.4byte 0
 
-.global lbl_806642C0
-lbl_806642C0:
-	.4byte lbl_804F68C8
+.global CMcaFile_RTTI
+CMcaFile_RTTI:
+	.4byte CMcaFile_typestr
 	.4byte 0
 
-.global lbl_806642C8
-lbl_806642C8:
-	.4byte lbl_804F68D8
+.global CTaskEnvironment_RTTI
+CTaskEnvironment_RTTI:
+	.4byte CTaskEnvironment_typestr
 	.4byte lbl_80529BE4
 
-.global lbl_806642D0
-lbl_806642D0:
-	.4byte lbl_804F68EC
+.global CTTask_CTaskEnvironment_RTTI
+CTTask_CTaskEnvironment_RTTI:
+	.4byte CTTask_CTaskEnvironment_typestr
 	.4byte lbl_80529C2C
 
 

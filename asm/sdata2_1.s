@@ -4694,8 +4694,9 @@ lbl_80669984:
 lbl_80669988:
 	# ROM: 0x5737E8
 	.float -1.0
-.global lbl_8066998C
-lbl_8066998C:
+
+.global CMMTex_typestr
+CMMTex_typestr:
 	.asciz "CMMTex"
 	.balign 4
 
@@ -8962,8 +8963,8 @@ lbl_8066A7D0:
 	.4byte 0x40000000
 	.4byte 0
 
-.global lbl_8066A7D8
-lbl_8066A7D8:
+.global CBgTex_typestr
+CBgTex_typestr:
 	.asciz "CBgTex"
 	.balign 4
 
@@ -9124,47 +9125,47 @@ lbl_8066A864:
 	# ROM: 0x5746C4
 	.4byte 0
 
-.global lbl_8066A868
-lbl_8066A868:
+.global CSubCur_typestr
+CSubCur_typestr:
 	.asciz "CSubCur"
 
-.global lbl_8066A870
-lbl_8066A870:
+.global CCur22_typestr
+CCur22_typestr:
 	.asciz "CCur22"
 	.balign 4
 
-.global lbl_8066A878
-lbl_8066A878:
+.global CCur18_typestr
+CCur18_typestr:
 	.asciz "CCur18"
 	.balign 4
 
-.global lbl_8066A880
-lbl_8066A880:
+.global CCur16_typestr
+CCur16_typestr:
 	.asciz "CCur16"
 	.balign 4
 
-.global lbl_8066A888
-lbl_8066A888:
+.global CCur15_typestr
+CCur15_typestr:
 	.asciz "CCur15"
 	.balign 4
 
-.global lbl_8066A890
-lbl_8066A890:
+.global CCur14_typestr
+CCur14_typestr:
 	.asciz "CCur14"
 	.balign 4
 
-.global lbl_8066A898
-lbl_8066A898:
+.global CCur11_typestr
+CCur11_typestr:
 	.asciz "CCur11"
 	.balign 4
 
-.global lbl_8066A8A0
-lbl_8066A8A0:
+.global CCur09_typestr
+CCur09_typestr:
 	.asciz "CCur09"
 	.balign 4
 
-.global lbl_8066A8A8
-lbl_8066A8A8:
+.global CCur07_typestr
+CCur07_typestr:
 	.asciz "CCur07"
 	.balign 4
 
@@ -10987,8 +10988,8 @@ lbl_8066AEB0:
 	.float 1.0
 	.4byte 0
 
-.global lbl_8066AEB8
-lbl_8066AEB8:
+.global CSysWin_typestr
+CSysWin_typestr:
 	.asciz "CSysWin"
 
 
@@ -11369,8 +11370,8 @@ lbl_8066AFFC:
 	# ROM: 0x574E5C
 	.4byte 0x42F60000
 
-.global lbl_8066B000
-lbl_8066B000:
+.global CMapSel_typestr
+CMapSel_typestr:
 	.asciz "CMapSel"
 
 
@@ -11378,8 +11379,9 @@ lbl_8066B000:
 lbl_8066B008:
 	# ROM: 0x574E68
 	.float 1.0
-.global lbl_8066B00C
-lbl_8066B00C:
+	
+.global CFade_typestr
+CFade_typestr:
 	.asciz "CFade"
 	.balign 4
 	.4byte 0
@@ -11620,8 +11622,8 @@ lbl_8066B0C8:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-.global lbl_8066B0D0
-lbl_8066B0D0:
+.global CCLPCur_typestr
+CCLPCur_typestr:
 	.asciz "CCLPCur"
 
 
@@ -12618,8 +12620,8 @@ lbl_8066B404:
 	# ROM: 0x575264
 	.4byte 0x07080000
 
-.global lbl_8066B408
-lbl_8066B408:
+.global CEIBCur_typestr
+CEIBCur_typestr:
 	.asciz "CEIBCur"
 
 
@@ -12646,8 +12648,8 @@ lbl_8066B41C:
 	# ROM: 0x57527C
 	.4byte 0x42EC0000
 
-.global lbl_8066B420
-lbl_8066B420:
+.global CSLCur_typestr
+CSLCur_typestr:
 	.asciz "CSLCur"
 	.balign 4
 
@@ -12839,12 +12841,12 @@ lbl_8066B4C4:
 	# ROM: 0x575324
 	.4byte 0
 
-.global lbl_8066B4C8
-lbl_8066B4C8:
+.global COption_typestr
+COption_typestr:
 	.asciz "COption"
 
-.global lbl_8066B4D0
-lbl_8066B4D0:
+.global CCur19_typestr
+CCur19_typestr:
 	.asciz "CCur19"
 	.balign 4
 
@@ -13299,8 +13301,8 @@ lbl_8066B69C:
 	# ROM: 0x5754FC
 	.4byte 0
 
-.global lbl_8066B6A0
-lbl_8066B6A0:
+.global CLoad_typestr
+CLoad_typestr:
 	.asciz "CLoad"
 	.balign 4
 
@@ -13751,8 +13753,8 @@ lbl_8066B7F0:
 	# ROM: 0x575650
 	.4byte 0
 
-.global lbl_8066B7F4
-lbl_8066B7F4:
+.global CTitle_typestr
+CTitle_typestr:
 	.asciz "CTitle"
 	.balign 4
 	.4byte 0
