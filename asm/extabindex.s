@@ -5,10 +5,10 @@
 .global lbl_80021020
 lbl_80021020:
 	# ROM: 0x4D9800
-	.4byte func_80039220
+	.4byte __ct__CGame
 	.4byte 0x0000009C
 	.4byte lbl_800066E0
-	.4byte func_800392BC
+	.4byte __dt__CGame
 	.4byte 0x00000078
 	.4byte lbl_800066FC
 	.4byte func_8003933C
@@ -773,364 +773,364 @@ lbl_80021020:
 	.4byte func_800456C4
 	.4byte 0x00000030
 	.4byte lbl_80006FC0
-	.4byte func_800456F4
+	.4byte getTimeIdxMin
 	.4byte 0x00000088
 	.4byte lbl_80006FC8
-	.4byte func_8004577C
+	.4byte getTimeIdxMax
 	.4byte 0x0000008C
 	.4byte lbl_80006FD0
 	.4byte func_80045814
 	.4byte 0x00000070
 	.4byte lbl_80006FD8
-	.4byte func_80045884
+	.4byte winTalk
 	.4byte 0x00000074
 	.4byte lbl_80006FE0
-	.4byte func_800458F8
+	.4byte pcTalk
 	.4byte 0x00000074
 	.4byte lbl_80006FE8
-	.4byte func_8004596C
+	.4byte winTalkWait
 	.4byte 0x00000090
 	.4byte lbl_80006FF0
-	.4byte func_80045A14
+	.4byte winTalkNoName
 	.4byte 0x00000040
 	.4byte lbl_80006FF8
-	.4byte func_80045A54
+	.4byte fadeIn_1
 	.4byte 0x000000B0
 	.4byte lbl_80007000
-	.4byte func_80045B04
+	.4byte fadeOut_1
 	.4byte 0x000000B0
 	.4byte lbl_80007008
-	.4byte func_80045BB4
+	.4byte fadeWait_1
 	.4byte 0x0000004C
 	.4byte lbl_80007010
-	.4byte func_80045C00
+	.4byte createCol6Sys
 	.4byte 0x00000024
 	.4byte lbl_80007018
-	.4byte func_80045C24
+	.4byte createCol6Hint
 	.4byte 0x00000024
 	.4byte lbl_80007020
-	.4byte func_80045C48
+	.4byte createCol6Invite
 	.4byte 0x0000009C
 	.4byte lbl_80007028
-	.4byte func_80045CE4
+	.4byte createCol6Init
 	.4byte 0x00000024
 	.4byte lbl_80007030
-	.4byte func_80045D08
+	.4byte checkCol6Bat
 	.4byte 0x00000024
 	.4byte lbl_80007038
-	.4byte func_80045D2C
+	.4byte simpleEventStart
 	.4byte 0x00000024
 	.4byte lbl_80007040
-	.4byte func_80045D50
+	.4byte simpleEventEnd
 	.4byte 0x00000024
 	.4byte lbl_80007048
-	.4byte func_80045D74
+	.4byte setTrust
 	.4byte 0x00000288
 	.4byte lbl_80007050
-	.4byte func_80045FFC
+	.4byte setItemMulti
 	.4byte 0x00000198
 	.4byte lbl_80007068
-	.4byte func_80046194
+	.4byte setKizunaTalk
 	.4byte 0x00000038
 	.4byte lbl_80007070
-	.4byte func_800461CC
+	.4byte winSys
 	.4byte 0x00000040
 	.4byte lbl_80007078
-	.4byte func_8004620C
+	.4byte winSysSelect
 	.4byte 0x00000098
 	.4byte lbl_80007080
-	.4byte func_800462A4
+	.4byte getSelectNum
 	.4byte 0x00000048
 	.4byte lbl_80007088
-	.4byte func_800462EC
+	.4byte mesGetArts
 	.4byte 0x000000F4
 	.4byte lbl_80007090
-	.4byte func_800463E0
+	.4byte mesAddPT
 	.4byte 0x00000078
 	.4byte lbl_80007098
-	.4byte func_80046458
+	.4byte mesSubPT
 	.4byte 0x00000078
 	.4byte lbl_800070A0
-	.4byte func_800464D0
+	.4byte mesVisionON
 	.4byte 0x00000040
 	.4byte lbl_800070A8
-	.4byte func_80046510
+	.4byte mesVisionOFF
 	.4byte 0x00000040
 	.4byte lbl_800070B0
-	.4byte func_80046550
+	.4byte mesMonadoON
 	.4byte 0x00000040
 	.4byte lbl_800070B8
-	.4byte func_80046590
+	.4byte mesMonadoOFF
 	.4byte 0x00000040
 	.4byte lbl_800070C0
-	.4byte func_800465D0
+	.4byte ptChangeNotice
 	.4byte 0x00000034
 	.4byte lbl_800070C8
-	.4byte func_80046604
+	.4byte save
 	.4byte 0x00000030
 	.4byte lbl_800070D0
-	.4byte func_80046634
+	.4byte kizunaTalkStart
 	.4byte 0x00000034
 	.4byte lbl_800070D8
-	.4byte func_80046668
+	.4byte kizunaTalkEnd
 	.4byte 0x00000030
 	.4byte lbl_800070E0
-	.4byte func_80046698
+	.4byte isPrioReq
 	.4byte 0x0000004C
 	.4byte lbl_800070E8
-	.4byte func_800466E4
+	.4byte gameClear
 	.4byte 0x00000024
 	.4byte lbl_800070F0
-	.4byte func_80046708
+	.4byte setLastTalkNpc
 	.4byte 0x000000AC
 	.4byte lbl_800070F8
-	.4byte func_800467B4
+	.4byte isSETalkVoiceWait
 	.4byte 0x0000004C
 	.4byte lbl_80007100
 	.4byte Print_80046818
 	.4byte 0x000000C8
 	.4byte lbl_80007108
-	.4byte func_800468E0
+	.4byte getFlag
 	.4byte 0x000000B8
 	.4byte lbl_80007110
-	.4byte func_80046998
+	.4byte setFlag
 	.4byte 0x00000170
 	.4byte lbl_80007118
-	.4byte func_80046B08
+	.4byte getAwardFlagF16
 	.4byte 0x0000005C
 	.4byte lbl_80007120
-	.4byte func_80046B64
+	.4byte addAwardFlagF16
 	.4byte 0x000000A8
 	.4byte lbl_80007128
-	.4byte func_80046C0C
+	.4byte setAwardFlagF1
 	.4byte 0x00000038
 	.4byte lbl_80007130
-	.4byte func_80046C44
+	.4byte realtimeEventStart
 	.4byte 0x00000094
 	.4byte lbl_80007138
-	.4byte func_80046CD8
+	.4byte realtimeEventPlay
 	.4byte 0x0000005C
 	.4byte lbl_80007140
-	.4byte func_80046D34
+	.4byte realtimeEventEnd
 	.4byte 0x00000024
 	.4byte lbl_80007148
-	.4byte func_80046D58
+	.4byte waitRealtimeEvent
 	.4byte 0x00000040
 	.4byte lbl_80007150
-	.4byte func_80046D98
+	.4byte onTalk
 	.4byte 0x000000BC
 	.4byte lbl_80007158
-	.4byte func_80046E54
+	.4byte onTalkEnd
 	.4byte 0x000000BC
 	.4byte lbl_80007160
-	.4byte func_80046F10
+	.4byte fadeIn
 	.4byte 0x00000104
 	.4byte lbl_80007168
-	.4byte func_80047014
+	.4byte fadeOut
 	.4byte 0x00000100
 	.4byte lbl_80007170
-	.4byte func_80047114
+	.4byte fadeWait
 	.4byte 0x00000040
 	.4byte lbl_80007178
-	.4byte func_80047154
+	.4byte checkEvent
 	.4byte 0x00000044
 	.4byte lbl_80007180
-	.4byte func_800471AC
+	.4byte isEvent
 	.4byte 0x0000003C
 	.4byte lbl_80007188
-	.4byte func_800471E8
+	.4byte isTalkEvent
 	.4byte 0x0000003C
 	.4byte lbl_80007190
-	.4byte func_80047224
+	.4byte isVisionEvent
 	.4byte 0x0000003C
 	.4byte lbl_80007198
-	.4byte func_80047274
+	.4byte setMapJumpArea
 	.4byte 0x000005A0
 	.4byte lbl_800071A0
-	.4byte func_80047830
+	.4byte setMapJumpAreaBox
 	.4byte 0x00000420
 	.4byte lbl_800071A8
-	.4byte func_80047C50
+	.4byte setWarpArea
 	.4byte 0x000005A4
 	.4byte lbl_800071B0
-	.4byte func_800481F4
+	.4byte setMapPreloadArea
 	.4byte 0x00000280
 	.4byte lbl_800071B8
-	.4byte func_80048474
+	.4byte mapJump
 	.4byte 0x00000228
 	.4byte lbl_800071C0
-	.4byte func_8004869C
+	.4byte setMapPreloadArea2
 	.4byte 0x00000248
 	.4byte lbl_800071C8
-	.4byte func_800488E4
+	.4byte setEventArea
 	.4byte 0x00000264
 	.4byte lbl_800071D0
-	.4byte func_80048B48
+	.4byte delEventArea
 	.4byte 0x00000060
 	.4byte lbl_800071D8
-	.4byte func_80048BA8
+	.4byte setTownArea
 	.4byte 0x000003AC
 	.4byte lbl_800071E0
-	.4byte func_80048F54
+	.4byte addPopID
 	.4byte 0x00000038
 	.4byte lbl_800071E8
-	.4byte func_80048F8C
+	.4byte setTimeSpeed
 	.4byte 0x00000038
 	.4byte lbl_800071F0
-	.4byte func_80048FC4
+	.4byte setPopSheet
 	.4byte 0x00000038
 	.4byte lbl_800071F8
-	.4byte func_80048FFC
+	.4byte changeWalker
 	.4byte 0x00000040
 	.4byte lbl_80007200
-	.4byte func_8004903C
+	.4byte eventStart
 	.4byte 0x000000C4
 	.4byte lbl_80007208
-	.4byte func_80049114
+	.4byte eventEnd
 	.4byte 0x00000060
 	.4byte lbl_80007210
-	.4byte func_80049174
+	.4byte delAttr
 	.4byte 0x00000038
 	.4byte lbl_80007218
-	.4byte func_800491AC
+	.4byte setMono
 	.4byte 0x00000044
 	.4byte lbl_80007220
-	.4byte func_800491F0
+	.4byte setMapDispID
 	.4byte 0x00000140
 	.4byte lbl_80007228
-	.4byte func_80049330
+	.4byte loadCfEvent
 	.4byte 0x00000038
 	.4byte lbl_80007230
-	.4byte func_80049368
+	.4byte waitCfEvent
 	.4byte 0x00000040
 	.4byte lbl_80007238
-	.4byte func_800493A8
+	.4byte isMainParty
 	.4byte 0x00000098
 	.4byte lbl_80007240
-	.4byte func_80049440
+	.4byte isResvParty
 	.4byte 0x00000098
 	.4byte lbl_80007248
-	.4byte func_800494D8
+	.4byte addParty
 	.4byte 0x00000138
 	.4byte lbl_80007250
-	.4byte func_80049610
+	.4byte makeParty
 	.4byte 0x00000384
 	.4byte lbl_80007258
-	.4byte func_8004999C
+	.4byte makeGuestParty
 	.4byte 0x0000011C
 	.4byte lbl_80007260
-	.4byte func_80049AB8
+	.4byte delParty
 	.4byte 0x0000004C
 	.4byte lbl_80007268
-	.4byte func_80049B04
+	.4byte addItem
 	.4byte 0x00000074
 	.4byte lbl_80007270
-	.4byte func_80049B78
+	.4byte delItem
 	.4byte 0x0000008C
 	.4byte lbl_80007278
-	.4byte func_80049C04
+	.4byte totalItem
 	.4byte 0x00000060
 	.4byte lbl_80007280
-	.4byte func_80049C64
+	.4byte equipItem
 	.4byte 0x000003BC
 	.4byte lbl_80007288
-	.4byte func_8004A020
+	.4byte equipWeapon
 	.4byte 0x000001C0
 	.4byte lbl_80007290
-	.4byte func_8004A1E0
+	.4byte getWeaponSlot
 	.4byte 0x00000108
 	.4byte lbl_80007298
-	.4byte func_8004A2F0
+	.4byte setWeaponSlot
 	.4byte 0x00000110
 	.4byte lbl_800072A0
-	.4byte func_8004A404
+	.4byte waitEventRes
 	.4byte 0x00000058
 	.4byte lbl_800072A8
-	.4byte func_8004A45C
+	.4byte setFade
 	.4byte 0x00000158
 	.4byte lbl_800072B0
-	.4byte func_8004A5B4
+	.4byte applyPcPrm
 	.4byte 0x00000098
 	.4byte lbl_800072B8
-	.4byte func_8004A64C
+	.4byte setDispOffArea
 	.4byte 0x000000AC
 	.4byte lbl_800072C0
-	.4byte func_8004A6F8
+	.4byte setScheduleType
 	.4byte 0x00000098
 	.4byte lbl_800072C8
-	.4byte func_8004A790
+	.4byte setWeather
 	.4byte 0x00000038
 	.4byte lbl_800072D0
-	.4byte func_8004A7C8
+	.4byte setWeatherArea
 	.4byte 0x00000038
 	.4byte lbl_800072D8
-	.4byte func_8004A800
+	.4byte setGimmick
 	.4byte 0x000000AC
 	.4byte lbl_800072E0
-	.4byte func_8004A8AC
+	.4byte setElvGim
 	.4byte 0x00000080
 	.4byte lbl_800072E8
-	.4byte func_8004A92C
+	.4byte setActMapObj
 	.4byte 0x00000098
 	.4byte lbl_800072F0
-	.4byte func_8004A9C4
+	.4byte getMapID
 	.4byte 0x00000048
 	.4byte lbl_800072F8
-	.4byte func_8004AA0C
+	.4byte clearGimmickJump
 	.4byte 0x00000038
 	.4byte lbl_80007300
-	.4byte func_8004AA44
+	.4byte partyMember
 	.4byte 0x0000007C
 	.4byte lbl_80007308
-	.4byte func_8004AAC0
+	.4byte clearPartyGauge
 	.4byte 0x0000003C
 	.4byte lbl_80007310
-	.4byte func_8004AAFC
+	.4byte waitPop
 	.4byte 0x00000070
 	.4byte lbl_80007318
-	.4byte func_8004AB6C
+	.4byte partyWarp
 	.4byte 0x0000006C
 	.4byte lbl_80007320
-	.4byte func_8004ABF4
+	.4byte setMoney
 	.4byte 0x00000038
 	.4byte lbl_80007328
-	.4byte func_8004AC2C
+	.4byte addMoney
 	.4byte 0x00000038
 	.4byte lbl_80007330
-	.4byte func_8004AC64
+	.4byte isTimeSkip
 	.4byte 0x0000003C
 	.4byte lbl_80007338
-	.4byte func_8004ACA0
+	.4byte delHoldBox
 	.4byte 0x000000B0
 	.4byte lbl_80007340
-	.4byte func_8004AD50
+	.4byte getWeaponID
 	.4byte 0x00000064
 	.4byte lbl_80007348
-	.4byte func_8004ADB4
+	.4byte clearTbox
 	.4byte 0x00000030
 	.4byte lbl_80007350
-	.4byte func_8004ADE4
+	.4byte returnTitle
 	.4byte 0x00000024
 	.4byte lbl_80007358
-	.4byte func_8004AE08
+	.4byte dispLoading
 	.4byte 0x0000002C
 	.4byte lbl_80007360
-	.4byte func_8004AE34
+	.4byte addItemLimit
 	.4byte 0x00000038
 	.4byte lbl_80007368
-	.4byte func_8004AE6C
+	.4byte clearItemLimit
 	.4byte 0x00000024
 	.4byte lbl_80007370
-	.4byte func_8004AE90
+	.4byte clearEquipGem
 	.4byte 0x00000024
 	.4byte lbl_80007378
-	.4byte func_8004AEB4
+	.4byte setPcCtrl
 	.4byte 0x0000004C
 	.4byte lbl_80007380
-	.4byte func_8004AF14
+	.4byte saveNamedCount
 	.4byte 0x00000060
 	.4byte lbl_80007388
-	.4byte func_8004AF8C
+	.4byte random
 	.4byte 0x00000088
 	.4byte lbl_80007390
 	.4byte func_8004B028
@@ -19076,7 +19076,7 @@ lbl_80021020:
 	.4byte func_802B8D4C
 	.4byte 0x00000224
 	.4byte lbl_8001BE7C
-	.4byte func_802B8F70
+	.4byte play
 	.4byte 0x000000E0
 	.4byte lbl_8001BE84
 	.4byte func_802B9064
@@ -24708,7 +24708,7 @@ lbl_80039200:
 	# ROM: 0x4F19E0
 	.4byte lbl_80021020
 	.4byte lbl_80039200
-	.4byte func_80039220
+	.4byte __ct__CGame
 	.4byte sz_text
 	.4byte 0
 	.4byte 0

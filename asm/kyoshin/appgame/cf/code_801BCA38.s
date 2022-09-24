@@ -12,12 +12,12 @@ func_801BCA38:
 /* 801BCA4C 0018600C  7C 9C 23 78 */	mr r28, r4
 /* 801BCA50 00186010  7C BD 2B 78 */	mr r29, r5
 /* 801BCA54 00186014  48 28 7F C5 */	bl func_80444A18
-/* 801BCA58 00186018  3C 60 80 53 */	lis r3, __vt__80530A08@ha
-/* 801BCA5C 0018601C  3C A0 80 53 */	lis r5, __vt__80537250@ha
-/* 801BCA60 00186020  38 63 0A 08 */	addi r3, r3, __vt__80530A08@l
+/* 801BCA58 00186018  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
+/* 801BCA5C 0018601C  3C A0 80 53 */	lis r5, __vt__CMenuKizunaTalk@ha
+/* 801BCA60 00186020  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 801BCA64 00186024  90 7B 00 10 */	stw r3, 0x10(r27)
 /* 801BCA68 00186028  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
-/* 801BCA6C 0018602C  38 A5 72 50 */	addi r5, r5, __vt__80537250@l
+/* 801BCA6C 0018602C  38 A5 72 50 */	addi r5, r5, __vt__CMenuKizunaTalk@l
 /* 801BCA70 00186030  84 69 CE 10 */	lwzu r3, lbl_8050CE10@l(r9)
 /* 801BCA74 00186034  38 85 00 24 */	addi r4, r5, 0x24
 /* 801BCA78 00186038  3B C0 00 00 */	li r30, 0
@@ -1370,16 +1370,19 @@ lbl_801BDD6C:
 func_801BDD84:
 /* 801BDD84 00187344  38 63 FF 94 */	addi r3, r3, -108
 /* 801BDD88 00187348  4B FF FA 50 */	b func_801BD7D8
-.global lbl_801BDD8C
-lbl_801BDD8C:
+
+.global func_801BDD8C
+func_801BDD8C:
 /* 801BDD8C 0018734C  38 63 FF 94 */	addi r3, r3, -108
 /* 801BDD90 00187350  4B FF ED B0 */	b func_801BCB40
-.global lbl_801BDD94
-lbl_801BDD94:
+
+.global func_801BDD94
+func_801BDD94:
 /* 801BDD94 00187354  38 63 FF 90 */	addi r3, r3, -112
 /* 801BDD98 00187358  4B FF F0 54 */	b func_801BCDEC
-.global lbl_801BDD9C
-lbl_801BDD9C:
+
+.global func_801BDD9C
+func_801BDD9C:
 /* 801BDD9C 0018735C  38 63 FF 90 */	addi r3, r3, -112
 /* 801BDDA0 00187360  4B FF ED A0 */	b func_801BCB40
 
@@ -1394,12 +1397,12 @@ func_801BDDA4:
 /* 801BDDBC 0018737C  7C 9D 23 78 */	mr r29, r4
 /* 801BDDC0 00187380  7C BE 2B 78 */	mr r30, r5
 /* 801BDDC4 00187384  48 28 6C 55 */	bl func_80444A18
-/* 801BDDC8 00187388  3C 60 80 53 */	lis r3, __vt__80530A08@ha
-/* 801BDDCC 0018738C  3C A0 80 53 */	lis r5, __vt__80537378@ha
-/* 801BDDD0 00187390  38 63 0A 08 */	addi r3, r3, __vt__80530A08@l
+/* 801BDDC8 00187388  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
+/* 801BDDCC 0018738C  3C A0 80 53 */	lis r5, __vt__CMenuItemExchange@ha
+/* 801BDDD0 00187390  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 801BDDD4 00187394  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 801BDDD8 00187398  3D 40 80 51 */	lis r10, lbl_8050CE10@ha
-/* 801BDDDC 0018739C  38 A5 73 78 */	addi r5, r5, __vt__80537378@l
+/* 801BDDDC 0018739C  38 A5 73 78 */	addi r5, r5, __vt__CMenuItemExchange@l
 /* 801BDDE0 001873A0  84 8A CE 10 */	lwzu r4, lbl_8050CE10@l(r10)
 /* 801BDDE4 001873A4  38 05 00 24 */	addi r0, r5, 0x24
 /* 801BDDE8 001873A8  3B E0 00 00 */	li r31, 0
@@ -3179,8 +3182,9 @@ lbl_801BF748:
 func_801BF75C:
 /* 801BF75C 00188D1C  38 63 FF 94 */	addi r3, r3, -108
 /* 801BF760 00188D20  4B FF F5 D0 */	b func_801BED30
-.global lbl_801BF764
-lbl_801BF764:
+
+.global func_801BF764
+func_801BF764:
 /* 801BF764 00188D24  38 63 FF 94 */	addi r3, r3, -108
 /* 801BF768 00188D28  4B FF E7 60 */	b func_801BDEC8
 

@@ -8297,8 +8297,9 @@ lbl_800CA4C8:
 func_800CA4DC:
 /* 800CA4DC 00093A9C  38 63 FF F4 */	addi r3, r3, -12
 /* 800CA4E0 00093AA0  4B FB 61 20 */	b func_80080600
-.global lbl_800CA4E4
-lbl_800CA4E4:
+
+.global func_800CA4E4
+func_800CA4E4:
 /* 800CA4E4 00093AA4  38 63 FF F0 */	addi r3, r3, -16
 /* 800CA4E8 00093AA8  4B FB 61 18 */	b func_80080600
 
@@ -8651,8 +8652,9 @@ func_800CA934:
 func_800CA938:
 /* 800CA938 00093EF8  38 63 FF F4 */	addi r3, r3, -12
 /* 800CA93C 00093EFC  4B FF FF A8 */	b func_800CA8E4
-.global lbl_800CA940
-lbl_800CA940:
+
+.global func_800CA940
+func_800CA940:
 /* 800CA940 00093F00  38 63 FF F0 */	addi r3, r3, -16
 /* 800CA944 00093F04  4B FF FF A0 */	b func_800CA8E4
 
@@ -14706,8 +14708,9 @@ func_800CFFA0:
 func_800CFFBC:
 /* 800CFFBC 0009957C  38 63 FF F4 */	addi r3, r3, -12
 /* 800CFFC0 00099580  4B FB 05 80 */	b func_80080540
-.global lbl_800CFFC4
-lbl_800CFFC4:
+
+.global func_800CFFC4
+func_800CFFC4:
 /* 800CFFC4 00099584  38 63 FF F0 */	addi r3, r3, -16
 /* 800CFFC8 00099588  4B FB 05 78 */	b func_80080540
 
@@ -15917,10 +15920,10 @@ func_800D10D4:
 func_800D10DC:
 /* 800D10DC 0009A69C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800D10E0 0009A6A0  7C 08 02 A6 */	mflr r0
-/* 800D10E4 0009A6A4  3C A0 80 53 */	lis r5, __vt__8052B380@ha #cf::CtrlBase vtable
+/* 800D10E4 0009A6A4  3C A0 80 53 */	lis r5, __vt__cf_CtrlBase@ha #cf::CtrlBase vtable
 /* 800D10E8 0009A6A8  C0 02 92 40 */	lfs f0, lbl_806695C0@sda21(r2)
 /* 800D10EC 0009A6AC  90 01 00 24 */	stw r0, 0x24(r1)
-/* 800D10F0 0009A6B0  38 A5 B3 80 */	addi r5, r5, __vt__8052B380@l
+/* 800D10F0 0009A6B0  38 A5 B3 80 */	addi r5, r5, __vt__cf_CtrlBase@l
 /* 800D10F4 0009A6B4  38 C0 00 02 */	li r6, 2
 /* 800D10F8 0009A6B8  38 00 FF FF */	li r0, -1
 /* 800D10FC 0009A6BC  93 E1 00 1C */	stw r31, 0x1c(r1)
@@ -15940,9 +15943,9 @@ func_800D10DC:
 /* 800D1134 0009A6F4  90 A3 00 00 */	stw r5, 0(r3)
 /* 800D1138 0009A6F8  7F A3 EB 78 */	mr r3, r29
 /* 800D113C 0009A6FC  4B FE AA D1 */	bl func_800BBC0C
-/* 800D1140 0009A700  3C C0 80 53 */	lis r6, __vt__8052E850@ha #cf::CtrlAct vtable
+/* 800D1140 0009A700  3C C0 80 53 */	lis r6, __vt__cf_CtrlAct@ha #cf::CtrlAct vtable
 /* 800D1144 0009A704  90 7E 00 28 */	stw r3, 0x28(r30)
-/* 800D1148 0009A708  38 C6 E8 50 */	addi r6, r6, __vt__8052E850@l
+/* 800D1148 0009A708  38 C6 E8 50 */	addi r6, r6, __vt__cf_CtrlAct@l
 /* 800D114C 0009A70C  38 7E 00 30 */	addi r3, r30, 0x30
 /* 800D1150 0009A710  93 FE 00 2C */	stw r31, 0x2c(r30)
 /* 800D1154 0009A714  38 80 00 00 */	li r4, 0

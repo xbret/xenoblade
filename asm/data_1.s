@@ -2,8 +2,8 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global __vt__8052A650
-__vt__8052A650:
+.global __vt__cf_CfTaskMain
+__vt__cf_CfTaskMain:
 	# ROM: 0x526750
 	.4byte cf_CfTaskMain_RTTI
 	.4byte 0
@@ -64,8 +64,8 @@ lbl_8052A6FC:
 	.4byte 0
 
 
-.global __vt__8052A728
-__vt__8052A728:
+.global __vt__CTTask_cf_CfTaskMain
+__vt__CTTask_cf_CfTaskMain:
 	# ROM: 0x526828
 	.4byte CTTask_cf_CfTaskMain_RTTI
 	.4byte 0
@@ -88,8 +88,8 @@ lbl_8052A74C:
 	.4byte 0
 
 
-.global __vt__8052A768
-__vt__8052A768:
+.global __vt__cf_CfTFile
+__vt__cf_CfTFile:
 	# ROM: 0x526868
 	.4byte cf_CfTFile_RTTI
 	.4byte 0
@@ -150,8 +150,8 @@ lbl_8052A80C:
 	.4byte 0
 
 
-.global __vt__8052A818
-__vt__8052A818:
+.global __vt__cf_CfCamEvent
+__vt__cf_CfCamEvent:
 	# ROM: 0x526918
 	.4byte cf_CfCamEvent_RTTI
 	.4byte 0
@@ -194,8 +194,8 @@ lbl_8052A890:
 	.4byte 0
 
 
-.global __vt__8052A8A8
-__vt__8052A8A8:
+.global __vt__cf_CfCamTargetIntf
+__vt__cf_CfCamTargetIntf:
 	# ROM: 0x5269A8
 	.4byte cf_CfCamTargetIntf_RTTI
 	.4byte 0
@@ -214,8 +214,8 @@ lbl_8052A8C0:
 	.4byte 0
 
 
-.global __vt__8052A8D8
-__vt__8052A8D8:
+.global __vt__cf_CfCamLookatIntf
+__vt__cf_CfCamLookatIntf:
 	# ROM: 0x5269D8
 	.4byte cf_CfCamLookatIntf_RTTI
 	.4byte 0
@@ -232,8 +232,8 @@ lbl_8052A8F0:
 	.4byte 0
 
 
-.global __vt__8052A900
-__vt__8052A900:
+.global __vt__cf_CfCamDirectionIntf
+__vt__cf_CfCamDirectionIntf:
 	# ROM: 0x526A00
 	.4byte cf_CfCamDirectionIntf_RTTI
 	.4byte 0
@@ -349,8 +349,8 @@ lbl_8052AA14:
 	.4byte lbl_80668C8C
 
 
-.global __vt__8052AA30
-__vt__8052AA30:
+.global __vt__cf_CfCamFollow
+__vt__cf_CfCamFollow:
 	# ROM: 0x526B30
 	.4byte cf_CfCamFollow_RTTI
 	.4byte 0
@@ -388,8 +388,8 @@ __vt__8052AA30:
 	.4byte 0
 
 
-.global __vt__8052AAB8
-__vt__8052AAB8:
+.global __vt__cf_CfCam
+__vt__cf_CfCam:
 	# ROM: 0x526BB8
 	.4byte cf_CfCam_RTTI
 	.4byte 0
@@ -672,8 +672,8 @@ lbl_8052AEF8:
 	.4byte 0
 
 
-.global __vt__8052AF08
-__vt__8052AF08:
+.global __vt__cf_CtrlEnemy
+__vt__cf_CtrlEnemy:
 	# ROM: 0x527008
 	.4byte cf_CtrlEnemy_RTTI
 	.4byte 0
@@ -738,16 +738,16 @@ lbl_8052AFC8:
 	.4byte 0
 
 
-.global __vt__8052AFD8
-__vt__8052AFD8:
+.global __vt__cf_CtrlMoveBase
+__vt__cf_CtrlMoveBase:
 	# ROM: 0x5270D8
 	.4byte cf_CtrlMoveBase_RTTI
 	.4byte 0
 	.4byte func_80089628
 
 
-.global __vt__8052AFE4
-__vt__8052AFE4:
+.global __vt__cf_CtrlEneAiCall
+__vt__cf_CtrlEneAiCall:
 	# ROM: 0x5270E4
 	.4byte cf_CtrlEneAiCall_RTTI
 	.4byte 0
@@ -891,8 +891,8 @@ lbl_8052B1C0:
 	.4byte func_8008FE8C
 
 
-.global __vt__8052B1CC
-__vt__8052B1CC:
+.global __vt__cf_CtrlMoveEne
+__vt__cf_CtrlMoveEne:
 	# ROM: 0x5272CC
 	.4byte cf_CtrlMoveEne_RTTI
 	.4byte 0
@@ -1004,8 +1004,8 @@ lbl_8052B2E0:
 	.4byte 0
 
 
-.global __vt__8052B308
-__vt__8052B308:
+.global __vt__cf_CtrlNpc
+__vt__cf_CtrlNpc:
 	# ROM: 0x527408
 	.4byte cf_CtrlNpc_RTTI
 	.4byte 0
@@ -1042,8 +1042,8 @@ lbl_8052B368:
 	.4byte 0
 
 
-.global __vt__8052B380
-__vt__8052B380:
+.global __vt__cf_CtrlBase
+__vt__cf_CtrlBase:
 	# ROM: 0x527480
 	.4byte cf_CtrlBase_RTTI
 	.4byte 0
@@ -1104,8 +1104,8 @@ lbl_8052B3D8:
 	.4byte 0
 
 
-.global __vt__8052B450
-__vt__8052B450:
+.global __vt__cf_CtrlPad
+__vt__cf_CtrlPad:
 	# ROM: 0x527550
 	.4byte cf_CtrlPad_RTTI
 	.4byte 0
@@ -1194,8 +1194,8 @@ lbl_8052B560:
 	.4byte 0
 
 
-.global __vt__8052B580
-__vt__8052B580:
+.global __vt__cf_CtrlPc
+__vt__cf_CtrlPc:
 	# ROM: 0x527680
 	.4byte cf_CtrlPc_RTTI
 	.4byte 0
@@ -1333,8 +1333,8 @@ lbl_8052B6E0:
 	.4byte 0x001E0000
 
 
-.global __vt__8052B758
-__vt__8052B758:
+.global __vt__cf_CtrlRemote
+__vt__cf_CtrlRemote:
 	# ROM: 0x527858
 	.4byte cf_CtrlRemote_RTTI
 	.4byte 0
@@ -1441,8 +1441,8 @@ lbl_8052B8A8:
 	.4byte lbl_804F74B0
 
 
-.global __vt__8052B8B8
-__vt__8052B8B8:
+.global __vt__cf_CObjectParam
+__vt__cf_CObjectParam:
 	# ROM: 0x5279B8
 	.4byte cf_CObjectParam_RTTI
 	.4byte 0
@@ -1467,8 +1467,8 @@ __vt__8052B8B8:
 	.4byte func_8003DC74
 
 
-.global __vt__8052B90C
-__vt__8052B90C:
+.global __vt__cf_CObjectState
+__vt__cf_CObjectState:
 	# ROM: 0x527A0C
 	.4byte cf_CObjectState_RTTI
 	.4byte 0
@@ -1838,8 +1838,8 @@ lbl_8052BDB8:
 	.4byte lbl_806667C4
 
 
-.global __vt__8052BDD0
-__vt__8052BDD0:
+.global __vt__cf_CfObjectColl
+__vt__cf_CfObjectColl:
 	# ROM: 0x527ED0
 	.4byte cf_CfObjectColl_RTTI
 	.4byte 0
@@ -1950,8 +1950,8 @@ lbl_8052BF48:
 	.4byte 0
 
 
-.global __vt__8052BF70
-__vt__8052BF70:
+.global __vt__cf_CfCollCapsuleImpl
+__vt__cf_CfCollCapsuleImpl:
 	# ROM: 0x528070
 	.4byte cf_CfCollCapsuleImpl_RTTI
 	.4byte 0
@@ -1966,8 +1966,8 @@ lbl_8052BF80:
 	.4byte 0
 
 
-.global __vt__8052BF90
-__vt__8052BF90:
+.global __vt__cf_CfCollCylinderImpl
+__vt__cf_CfCollCylinderImpl:
 	# ROM: 0x528090
 	.4byte cf_CfCollCylinderImpl_RTTI
 	.4byte 0
@@ -1982,8 +1982,8 @@ lbl_8052BFA0:
 	.4byte 0
 
 
-.global __vt__8052BFB0
-__vt__8052BFB0:
+.global __vt__cf_CfCollAABBImpl
+__vt__cf_CfCollAABBImpl:
 	# ROM: 0x5280B0
 	.4byte cf_CfCollAABBImpl_RTTI
 	.4byte 0
@@ -1998,8 +1998,8 @@ lbl_8052BFC0:
 	.4byte 0
 
 
-.global __vt__8052BFD0
-__vt__8052BFD0:
+.global __vt__cf_CfCollSphereImpl
+__vt__cf_CfCollSphereImpl:
 	# ROM: 0x5280D0
 	.4byte cf_CfCollSphereImpl_RTTI
 	.4byte 0
@@ -2014,8 +2014,8 @@ lbl_8052BFE0:
 	.4byte 0
 
 
-.global __vt__8052BFF0
-__vt__8052BFF0:
+.global __vt__cf_CfCollCircleImpl
+__vt__cf_CfCollCircleImpl:
 	# ROM: 0x5280F0
 	.4byte cf_CfCollCircleImpl_RTTI
 	.4byte 0
@@ -2050,8 +2050,8 @@ lbl_8052C028:
 	.4byte func_800AD378
 
 
-.global __vt__8052C040
-__vt__8052C040:
+.global __vt__cf_CfObjectEff
+__vt__cf_CfObjectEff:
 	# ROM: 0x528140
 	.4byte cf_CfObjectEff_RTTI
 	.4byte 0
@@ -2149,7 +2149,7 @@ __vt__8052C040:
 	.4byte func_800AC4B0
 	.4byte cf_CfObjectEff_RTTI
 	.4byte 0xFFFFFF70
-	.4byte lbl_800AD858
+	.4byte func_800AD858
 	.4byte func_800AD850
 	.4byte func_800AC7FC
 	.4byte func_800AD68C
@@ -2161,8 +2161,8 @@ __vt__8052C040:
 	.4byte func_800AD818
 
 
-.global __vt__8052C1E8
-__vt__8052C1E8:
+.global __vt__cf_CfObjectEne
+__vt__cf_CfObjectEne:
 	# ROM: 0x5282E8
 	.4byte cf_CfObjectEne_RTTI
 	.4byte 0
@@ -2592,8 +2592,8 @@ lbl_8052C828:
 	.4byte lbl_800B9824
 
 
-.global __vt__8052C870
-__vt__8052C870:
+.global __vt__reslist_cf_IFactoryEvent
+__vt__reslist_cf_IFactoryEvent:
 	# ROM: 0x528970
 	.4byte reslist_cf_IFactoryEvent_RTTI
 	.4byte 0
@@ -2606,16 +2606,16 @@ lbl_8052C87C:
 	.4byte 0
 
 
-.global __vt__8052C888
-__vt__8052C888:
+.global __vt___reslist_base_cf_IFactoryEvent
+__vt___reslist_base_cf_IFactoryEvent:
 	# ROM: 0x528988
 	.4byte _reslist_base_cf_IFactoryEvent_RTTI
 	.4byte 0
 	.4byte func_800B0D48
 
 
-.global __vt__8052C894
-__vt__8052C894:
+.global __vt__reslist_cf_TboxInfo
+__vt__reslist_cf_TboxInfo:
 	# ROM: 0x528994
 	.4byte reslist_cf_TboxInfo_RTTI
 	.4byte 0
@@ -2628,16 +2628,16 @@ lbl_8052C8A0:
 	.4byte 0
 
 
-.global __vt__8052C8AC
-__vt__8052C8AC:
+.global __vt___reslist_base_cf_TboxInfo
+__vt___reslist_base_cf_TboxInfo:
 	# ROM: 0x5289AC
 	.4byte _reslist_base_cf_TboxInfo_RTTI
 	.4byte 0
 	.4byte func_800B0B90
 
 
-.global __vt__8052C8B8
-__vt__8052C8B8:
+.global __vt__reslist_cf_CfObject
+__vt__reslist_cf_CfObject:
 	# ROM: 0x5289B8
 	.4byte reslist_cf_CfObject_RTTI
 	.4byte 0
@@ -2665,8 +2665,8 @@ lbl_8052C8D0:
 	.4byte 0
 
 
-.global __vt__8052C8F8
-__vt__8052C8F8:
+.global __vt__cf_CfObjectMap
+__vt__cf_CfObjectMap:
 	# ROM: 0x5289F8
 	.4byte cf_CfObjectMap_RTTI
 	.4byte 0
@@ -2797,8 +2797,8 @@ lbl_8052CAC0:
 	.4byte 0
 
 
-.global __vt__8052CAE8
-__vt__8052CAE8:
+.global __vt__cf_CfObjectModel
+__vt__cf_CfObjectModel:
 	# ROM: 0x528BE8
 	.4byte cf_CfObjectModel_RTTI
 	.4byte 0
@@ -2916,8 +2916,8 @@ __vt__8052CAE8:
 	.4byte func_800B05EC
 
 
-.global __vt__8052CCB0
-__vt__8052CCB0:
+.global __vt__cf_CfObject
+__vt__cf_CfObject:
 	# ROM: 0x528DB0
 	.4byte cf_CfObject_RTTI
 	.4byte 0
@@ -3027,8 +3027,8 @@ lbl_8052CE48:
 	.4byte 0
 
 
-.global __vt__8052CE60
-__vt__8052CE60:
+.global __vt__cf_CfObjectMove
+__vt__cf_CfObjectMove:
 	# ROM: 0x528F60
 	.4byte cf_CfObjectMove_RTTI
 	.4byte 0
@@ -3170,8 +3170,8 @@ __vt__8052CE60:
 	.4byte 0
 
 
-.global __vt__8052D088
-__vt__8052D088:
+.global __vt__cf_CfObjectNpc
+__vt__cf_CfObjectNpc:
 	# ROM: 0x529188
 	.4byte cf_CfObjectNpc_RTTI
 	.4byte 0
@@ -3346,8 +3346,8 @@ lbl_8052D2E8:
 	.4byte 0
 
 
-.global __vt__8052D31C
-__vt__8052D31C:
+.global __vt__cf_CfObjectObj
+__vt__cf_CfObjectObj:
 	# ROM: 0x52941C
 	.4byte cf_CfObjectObj_RTTI
 	.4byte 0
@@ -3503,8 +3503,8 @@ lbl_8052D540:
 	.4byte 0
 
 
-.global __vt__8052D570
-__vt__8052D570:
+.global __vt__cf_CfObjectPc
+__vt__cf_CfObjectPc:
 	# ROM: 0x529670
 	.4byte cf_CfObjectPc_RTTI
 	.4byte 0
@@ -3896,8 +3896,8 @@ __vt__8052D570:
 	.4byte 0
 
 
-.global __vt__8052DB80
-__vt__8052DB80:
+.global __vt__cf_CfObjectPoint
+__vt__cf_CfObjectPoint:
 	# ROM: 0x529C80
 	.4byte cf_CfObjectPoint_RTTI
 	.4byte 0
@@ -4012,8 +4012,8 @@ lbl_8052DCF8:
 	.4byte 0x00000005
 
 
-.global __vt__8052DD28
-__vt__8052DD28:
+.global __vt__cf_CfObjectImplWalker
+__vt__cf_CfObjectImplWalker:
 	# ROM: 0x529E28
 	.4byte cf_CfObjectImplWalker_RTTI
 	.4byte 0
@@ -4194,8 +4194,8 @@ lbl_8052DF28:
 	.4byte 0
 
 
-.global __vt__8052DFB8
-__vt__8052DFB8:
+.global __vt__cf_CfObjectImplPc
+__vt__cf_CfObjectImplPc:
 	# ROM: 0x52A0B8
 	.4byte cf_CfObjectImplPc_RTTI
 	.4byte 0
@@ -4248,7 +4248,7 @@ __vt__8052DFB8:
 	.4byte func_800C5978
 	.4byte cf_CfObjectImplPc_RTTI
 	.4byte 0xFFFFFFF0
-	.4byte lbl_800CA4E4
+	.4byte func_800CA4E4
 	.4byte func_800C5988
 	.4byte func_800C5B00
 	.4byte func_800C6A58
@@ -4263,8 +4263,8 @@ __vt__8052DFB8:
 	.4byte func_800C5970
 
 
-.global __vt__8052E0B8
-__vt__8052E0B8:
+.global __vt__cf_CfObjectImplObj
+__vt__cf_CfObjectImplObj:
 	# ROM: 0x52A1B8
 	.4byte cf_CfObjectImplObj_RTTI
 	.4byte 0
@@ -4356,8 +4356,8 @@ lbl_8052E1D0:
 	.4byte lbl_80669518
 
 
-.global __vt__8052E1F8
-__vt__8052E1F8:
+.global __vt__cf_CfObjectImplNpc
+__vt__cf_CfObjectImplNpc:
 	# ROM: 0x52A2F8
 	.4byte cf_CfObjectImplNpc_RTTI
 	.4byte 0
@@ -4410,7 +4410,7 @@ __vt__8052E1F8:
 	.4byte func_800CA6CC
 	.4byte cf_CfObjectImplNpc_RTTI
 	.4byte 0xFFFFFFF0
-	.4byte lbl_800CA940
+	.4byte func_800CA940
 	.4byte func_800C5988
 	.4byte func_800CAB2C
 	.4byte func_800CBBD8
@@ -4535,8 +4535,8 @@ lbl_8052E3A0:
 	.4byte lbl_800CD928
 
 
-.global __vt__8052E468
-__vt__8052E468:
+.global __vt__cf_CfObjectImplMove
+__vt__cf_CfObjectImplMove:
 	# ROM: 0x52A568
 	.4byte cf_CfObjectImplMove_RTTI
 	.4byte 0
@@ -4589,7 +4589,7 @@ __vt__8052E468:
 	.4byte func_800CA6CC
 	.4byte cf_CfObjectImplMove_RTTI
 	.4byte 0xFFFFFFF0
-	.4byte lbl_800CFFC4
+	.4byte func_800CFFC4
 	.4byte func_800C5988
 	.4byte func_800CAB2C
 	.4byte func_800CBBD8
@@ -4612,8 +4612,8 @@ lbl_8052E580:
 	.balign 4
 
 
-.global __vt__8052E590
-__vt__8052E590:
+.global __vt__cf_CfObjectImplEne
+__vt__cf_CfObjectImplEne:
 	# ROM: 0x52A690
 	.4byte cf_CfObjectImplEne_RTTI
 	.4byte 0
@@ -4806,8 +4806,8 @@ lbl_8052E824:
 	.4byte lbl_800D3650
 
 
-.global __vt__8052E850
-__vt__8052E850:
+.global __vt__cf_CtrlAct
+__vt__cf_CtrlAct:
 	# ROM: 0x52A950
 	.4byte cf_CtrlAct_RTTI
 	.4byte 0
@@ -5791,8 +5791,8 @@ lbl_8052F484:
 	.4byte 0
 
 
-.global __vt__8052F4B0
-__vt__8052F4B0:
+.global __vt__cf_CBattleManager
+__vt__cf_CBattleManager:
 	# ROM: 0x52B5B0
 	.4byte cf_CBattleManager_RTTI
 	.4byte 0
@@ -5818,8 +5818,8 @@ lbl_8052F4F0:
 	.4byte 0
 
 
-.global __vt__8052F4FC
-__vt__8052F4FC:
+.global __vt__reslist_cf_IBattleEvent
+__vt__reslist_cf_IBattleEvent:
 	# ROM: 0x52B5FC
 	.4byte reslist_cf_IBattleEvent_RTTI
 	.4byte 0
@@ -5832,16 +5832,16 @@ lbl_8052F508:
 	.4byte 0
 
 
-.global __vt__8052F514
-__vt__8052F514:
+.global __vt___reslist_base_cf_IBattleEvent
+__vt___reslist_base_cf_IBattleEvent:
 	# ROM: 0x52B614
 	.4byte _reslist_base_cf_IBattleEvent_RTTI
 	.4byte 0
 	.4byte func_800D8A30
 
 
-.global __vt__8052F520
-__vt__8052F520:
+.global __vt__reslist_cf_CfObjectActor
+__vt__reslist_cf_CfObjectActor:
 	# ROM: 0x52B620
 	.4byte reslist_cf_CfObjectActor_RTTI
 	.4byte 0
@@ -5854,24 +5854,24 @@ lbl_8052F52C:
 	.4byte 0
 
 
-.global __vt__8052F538
-__vt__8052F538:
+.global __vt___reslist_base_cf_CfObjectActor
+__vt___reslist_base_cf_CfObjectActor:
 	# ROM: 0x52B638
 	.4byte _reslist_base_cf_CfObjectActor_RTTI
 	.4byte 0
 	.4byte func_800D88C4
 
 
-.global __vt__8052F544
-__vt__8052F544:
+.global __vt__cf_CChainTime
+__vt__cf_CChainTime:
 	# ROM: 0x52B644
 	.4byte cf_CChainTime_RTTI
 	.4byte 0
 	.4byte func_800D8CDC
 
 
-.global __vt__8052F550
-__vt__8052F550:
+.global __vt__cf_CfObjEnumList
+__vt__cf_CfObjEnumList:
 	# ROM: 0x52B650
 	.4byte cf_CfObjEnumList_RTTI
 	.4byte 0
@@ -5908,8 +5908,8 @@ lbl_8052F590:
 	.4byte 0
 
 
-.global __vt__8052F5A8
-__vt__8052F5A8:
+.global __vt__cf_CfObjectSelectorObj
+__vt__cf_CfObjectSelectorObj:
 	# ROM: 0x52B6A8
 	.4byte cf_CfObjectSelectorObj_RTTI
 	.4byte 0
@@ -5943,8 +5943,8 @@ lbl_8052F5D0:
 	.4byte lbl_800FF2B0
 
 
-.global __vt__8052F5F4
-__vt__8052F5F4:
+.global __vt__CMainMenu
+__vt__CMainMenu:
 	# ROM: 0x52B6F4
 	.4byte CMainMenu_RTTI
 	.4byte 0
@@ -6016,8 +6016,8 @@ lbl_8052F6B8:
 	.4byte 0
 
 
-.global __vt__8052F6F8
-__vt__8052F6F8:
+.global __vt__CMainCur
+__vt__CMainCur:
 	# ROM: 0x52B7F8
 	.4byte CMainCur_RTTI
 	.4byte 0
@@ -6045,8 +6045,8 @@ lbl_8052F71C:
 	.4byte 0
 
 
-.global __vt__8052F740
-__vt__8052F740:
+.global __vt__CTTask_IUICf
+__vt__CTTask_IUICf:
 	# ROM: 0x52B840
 	.4byte CTTask_IUICf_RTTI
 	.4byte 0
@@ -6147,8 +6147,8 @@ lbl_8052F820:
 	.4byte lbl_80107674
 
 
-.global __vt__8052F854
-__vt__8052F854:
+.global __vt__CMenuArtsSelect
+__vt__CMenuArtsSelect:
 	# ROM: 0x52B954
 	.4byte CMenuArtsSelect_RTTI
 	.4byte 0
@@ -6195,12 +6195,12 @@ __vt__8052F854:
 	.4byte func_80039D40
 	.4byte CMenuArtsSelect_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_80108C40
-	.4byte lbl_80108C38
+	.4byte func_80108C40
+	.4byte func_80108C38
 	.4byte CMenuArtsSelect_RTTI
 	.4byte 0xFFFFFFA0
-	.4byte lbl_80108C50
-	.4byte lbl_80108C48
+	.4byte func_80108C50
+	.4byte func_80108C48
 	.4byte func_80103E34
 	.4byte func_801041F4
 
@@ -6237,8 +6237,8 @@ lbl_8052F96C:
 	.4byte 0
 
 
-.global __vt__8052F990
-__vt__8052F990:
+.global __vt__CTTask_IUIBattle
+__vt__CTTask_IUIBattle:
 	# ROM: 0x52BA90
 	.4byte CTTask_IUIBattle_RTTI
 	.4byte 0
@@ -6278,8 +6278,8 @@ lbl_8052F9D0:
 	.4byte 0
 
 
-.global __vt__8052FA00
-__vt__8052FA00:
+.global __vt__CMenuBattleDamage
+__vt__CMenuBattleDamage:
 	# ROM: 0x52BB00
 	.4byte CMenuBattleDamage_RTTI
 	.4byte 0
@@ -6326,8 +6326,8 @@ __vt__8052FA00:
 	.4byte func_80039D40
 	.4byte CMenuBattleDamage_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_8010A68C
-	.4byte lbl_8010A684
+	.4byte func_8010A68C
+	.4byte func_8010A684
 	.4byte func_80109444
 
 .global lbl_8052FAC0
@@ -6350,8 +6350,8 @@ lbl_8052FAC0:
 	.4byte 0
 
 
-.global __vt__8052FB00
-__vt__8052FB00:
+.global __vt__CMenuBattlePlayerState
+__vt__CMenuBattlePlayerState:
 	# ROM: 0x52BC00
 	.4byte CMenuBattlePlayerState_RTTI
 	.4byte 0
@@ -6398,8 +6398,8 @@ __vt__8052FB00:
 	.4byte func_80039D40
 	.4byte CMenuBattlePlayerState_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_8010EA5C
-	.4byte lbl_8010EA54
+	.4byte func_8010EA5C
+	.4byte func_8010EA54
 	.4byte func_8010CC18
 
 .global lbl_8052FBC0
@@ -6421,16 +6421,16 @@ lbl_8052FBC0:
 	.4byte 0
 
 
-.global __vt__8052FBFC
-__vt__8052FBFC:
+.global __vt__CPcSelectCursor01
+__vt__CPcSelectCursor01:
 	# ROM: 0x52BCFC
 	.4byte CPcSelectCursor01_RTTI
 	.4byte 0
 	.4byte func_8010A694
 
 
-.global __vt__8052FC08
-__vt__8052FC08:
+.global __vt__CMenuEnemyState
+__vt__CMenuEnemyState:
 	# ROM: 0x52BD08
 	.4byte CMenuEnemyState_RTTI
 	.4byte 0
@@ -6477,8 +6477,8 @@ __vt__8052FC08:
 	.4byte func_80039D40
 	.4byte CMenuEnemyState_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_801135D8
-	.4byte lbl_801135D0
+	.4byte func_801135D8
+	.4byte func_801135D0
 	.4byte func_80110764
 
 .global lbl_8052FCC8
@@ -6500,16 +6500,16 @@ lbl_8052FCC8:
 	.4byte 0
 
 
-.global __vt__8052FD04
-__vt__8052FD04:
+.global __vt__CPcSelectCursor
+__vt__CPcSelectCursor:
 	# ROM: 0x52BE04
 	.4byte CPcSelectCursor_RTTI
 	.4byte 0
 	.4byte func_8010EAE8
 
 
-.global __vt__8052FD10
-__vt__8052FD10:
+.global __vt__CMenuFade
+__vt__CMenuFade:
 	# ROM: 0x52BE10
 	.4byte CMenuFade_RTTI
 	.4byte 0
@@ -6556,8 +6556,8 @@ __vt__8052FD10:
 	.4byte func_80039D40
 	.4byte CMenuFade_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_80113E48
-	.4byte lbl_80113E40
+	.4byte func_80113E48
+	.4byte func_80113E40
 	.4byte func_80113BFC
 
 .global lbl_8052FDD0
@@ -6580,8 +6580,8 @@ lbl_8052FDD0:
 	.4byte 0
 
 
-.global __vt__8052FE10
-__vt__8052FE10:
+.global __vt__CMenuKeyAssign
+__vt__CMenuKeyAssign:
 	# ROM: 0x52BF10
 	.4byte CMenuKeyAssign_RTTI
 	.4byte 0
@@ -6628,8 +6628,8 @@ __vt__8052FE10:
 	.4byte func_80039D40
 	.4byte CMenuKeyAssign_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_80115FC8
-	.4byte lbl_80115FC0
+	.4byte func_80115FC8
+	.4byte func_80115FC0
 	.4byte func_80114E88
 
 .global lbl_8052FED0
@@ -6742,8 +6742,8 @@ lbl_8052FFB8:
 	.4byte lbl_804F9A0C
 
 
-.global __vt__80530028
-__vt__80530028:
+.global __vt__CMenuMiniMap2
+__vt__CMenuMiniMap2:
 	# ROM: 0x52C128
 	.4byte CMenuMiniMap2_RTTI
 	.4byte 0
@@ -6790,8 +6790,8 @@ __vt__80530028:
 	.4byte func_80039D40
 	.4byte CMenuMiniMap2_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_8011C444
-	.4byte lbl_8011C43C
+	.4byte func_8011C444
+	.4byte func_8011C43C
 	.4byte func_8011C0C0
 
 .global lbl_805300E8
@@ -6814,8 +6814,8 @@ lbl_805300E8:
 	.4byte 0
 
 
-.global __vt__80530128
-__vt__80530128:
+.global __vt__CMiniMap
+__vt__CMiniMap:
 	# ROM: 0x52C228
 	.4byte CMiniMap_RTTI
 	.4byte 0
@@ -6860,8 +6860,8 @@ lbl_805301B0:
 	.4byte 0
 
 
-.global __vt__805301C0
-__vt__805301C0:
+.global __vt__CMMTex
+__vt__CMMTex:
 	# ROM: 0x52C2C0
 	.4byte CMMTex_RTTI
 	.4byte 0
@@ -6906,8 +6906,8 @@ lbl_80530248:
 	.4byte 0
 
 
-.global __vt__80530258
-__vt__80530258:
+.global __vt__CMMClock
+__vt__CMMClock:
 	# ROM: 0x52C358
 	.4byte CMMClock_RTTI
 	.4byte 0
@@ -7015,8 +7015,8 @@ lbl_805303E0:
 	.4byte lbl_8011CBF4
 
 
-.global __vt__80530408
-__vt__80530408:
+.global __vt__CMenuQuestLog
+__vt__CMenuQuestLog:
 	# ROM: 0x52C508
 	.4byte CMenuQuestLog_RTTI
 	.4byte 0
@@ -7029,7 +7029,7 @@ __vt__80530408:
 	.4byte func_80043F20
 	.4byte CMenuQuestLog_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_8011D2F0
+	.4byte func_8011D2F0
 	.4byte func_8011D2E8
 	.4byte func_8011CC30
 
@@ -7103,8 +7103,8 @@ lbl_80530508:
 	.4byte 0x3F666666
 
 
-.global __vt__80530520
-__vt__80530520:
+.global __vt__CArrow3D
+__vt__CArrow3D:
 	# ROM: 0x52C620
 	.4byte CArrow3D_RTTI
 	.4byte 0
@@ -7117,8 +7117,8 @@ __vt__80530520:
 	.4byte func_80043F20
 	.4byte CArrow3D_RTTI
 	.4byte 0xFFFFFFAC
-	.4byte lbl_8012215C
-	.4byte lbl_80122154
+	.4byte func_8012215C
+	.4byte func_80122154
 	.4byte func_80120F50
 
 .global lbl_80530558
@@ -7136,8 +7136,8 @@ lbl_80530558:
 	.4byte 0
 
 
-.global __vt__80530584
-__vt__80530584:
+.global __vt__CTTask_CArrow3D
+__vt__CTTask_CArrow3D:
 	# ROM: 0x52C684
 	.4byte CTTask_CArrow3D_RTTI
 	.4byte 0
@@ -7161,8 +7161,8 @@ lbl_805305A8:
 	.4byte 0
 
 
-.global __vt__805305C8
-__vt__805305C8:
+.global __vt__CMenuSymbolMark
+__vt__CMenuSymbolMark:
 	# ROM: 0x52C6C8
 	.4byte CMenuSymbolMark_RTTI
 	.4byte 0
@@ -7209,8 +7209,8 @@ __vt__805305C8:
 	.4byte func_80039D40
 	.4byte CMenuSymbolMark_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_8012214C
-	.4byte lbl_80122144
+	.4byte func_8012214C
+	.4byte func_80122144
 	.4byte func_8011E3C0
 
 .global lbl_80530688
@@ -7379,8 +7379,8 @@ lbl_80530888:
 	.4byte lbl_801238CC
 
 
-.global __vt__805308C0
-__vt__805308C0:
+.global __vt__CQuestWindow
+__vt__CQuestWindow:
 	# ROM: 0x52C9C0
 	.4byte CQuestWindow_RTTI
 	.4byte 0
@@ -7393,7 +7393,7 @@ __vt__805308C0:
 	.4byte func_80043F20
 	.4byte CQuestWindow_RTTI
 	.4byte 0xFFFFFF94
-	.4byte lbl_801245D4
+	.4byte func_801245D4
 	.4byte func_80039E28
 	.4byte func_801245CC
 	.4byte func_80039E18
@@ -7427,8 +7427,8 @@ __vt__805308C0:
 	.4byte func_80039D40
 	.4byte CQuestWindow_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_801245E4
-	.4byte lbl_801245DC
+	.4byte func_801245E4
+	.4byte func_801245DC
 	.4byte func_80122A80
 	.4byte func_8012278C
 
@@ -7451,8 +7451,8 @@ lbl_80530984:
 	.4byte 0
 
 
-.global __vt__805309C0
-__vt__805309C0:
+.global __vt__IUIWindow
+__vt__IUIWindow:
 	# ROM: 0x52CAC0
 	.4byte IUIWindow_RTTI
 	.4byte 0
@@ -7477,8 +7477,8 @@ lbl_805309E4:
 	.4byte 0
 
 
-.global __vt__80530A08
-__vt__80530A08:
+.global __vt__CTTask_IUIWindow
+__vt__CTTask_IUIWindow:
 	# ROM: 0x52CB08
 	.4byte CTTask_IUIWindow_RTTI
 	.4byte 0
@@ -7501,8 +7501,8 @@ lbl_80530A2C:
 	.4byte 0
 
 
-.global __vt__80530A48
-__vt__80530A48:
+.global __vt__CSysWinSelect
+__vt__CSysWinSelect:
 	# ROM: 0x52CB48
 	.4byte CSysWinSelect_RTTI
 	.4byte 0
@@ -7515,7 +7515,7 @@ __vt__80530A48:
 	.4byte func_80043F20
 	.4byte CSysWinSelect_RTTI
 	.4byte 0xFFFFFF94
-	.4byte lbl_801252B8
+	.4byte func_801252B8
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -7549,8 +7549,8 @@ __vt__80530A48:
 	.4byte func_80039D40
 	.4byte CSysWinSelect_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_801252C8
-	.4byte lbl_801252C0
+	.4byte func_801252C8
+	.4byte func_801252C0
 	.4byte func_80124FD8
 
 .global lbl_80530B08
@@ -7573,8 +7573,8 @@ lbl_80530B08:
 	.4byte 0
 
 
-.global __vt__80530B48
-__vt__80530B48:
+.global __vt__CSystemWindow
+__vt__CSystemWindow:
 	# ROM: 0x52CC48
 	.4byte CSystemWindow_RTTI
 	.4byte 0
@@ -7621,8 +7621,8 @@ __vt__80530B48:
 	.4byte func_80039D40
 	.4byte CSystemWindow_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_801252B0
-	.4byte lbl_801252A8
+	.4byte func_801252B0
+	.4byte func_801252A8
 	.4byte func_80124A60
 
 .global lbl_80530C08
@@ -7761,8 +7761,8 @@ lbl_80530DAC:
 	.4byte 0
 
 
-.global __vt__80530DE8
-__vt__80530DE8:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal
+__vt___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal:
 	# ROM: 0x52CEE8
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_RTTI
 	.4byte 0
@@ -7779,8 +7779,8 @@ lbl_80530E00:
 	.4byte 0
 
 
-.global __vt__80530E10
-__vt__80530E10:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeShop
+__vt___unnamed_CTagProcessor_cpp_CTagCodeShop:
 	# ROM: 0x52CF10
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeShop_RTTI
 	.4byte 0
@@ -7797,8 +7797,8 @@ lbl_80530E28:
 	.4byte 0
 
 
-.global __vt__80530E38
-__vt__80530E38:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeExchange
+__vt___unnamed_CTagProcessor_cpp_CTagCodeExchange:
 	# ROM: 0x52CF38
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeExchange_RTTI
 	.4byte 0
@@ -7815,8 +7815,8 @@ lbl_80530E50:
 	.4byte 0
 
 
-.global __vt__80530E60
-__vt__80530E60:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeTailOff
+__vt___unnamed_CTagProcessor_cpp_CTagCodeTailOff:
 	# ROM: 0x52CF60
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTailOff_RTTI
 	.4byte 0
@@ -7833,8 +7833,8 @@ lbl_80530E78:
 	.4byte 0
 
 
-.global __vt__80530E88
-__vt__80530E88:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodePresent
+__vt___unnamed_CTagProcessor_cpp_CTagCodePresent:
 	# ROM: 0x52CF88
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodePresent_RTTI
 	.4byte 0
@@ -7851,8 +7851,8 @@ lbl_80530EA0:
 	.4byte 0
 
 
-.global __vt__80530EB0
-__vt__80530EB0:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeQstStart
+__vt___unnamed_CTagProcessor_cpp_CTagCodeQstStart:
 	# ROM: 0x52CFB0
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQstStart_RTTI
 	.4byte 0
@@ -7869,8 +7869,8 @@ lbl_80530EC8:
 	.4byte 0
 
 
-.global __vt__80530ED8
-__vt__80530ED8:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeInvisible
+__vt___unnamed_CTagProcessor_cpp_CTagCodeInvisible:
 	# ROM: 0x52CFD8
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeInvisible_RTTI
 	.4byte 0
@@ -7887,8 +7887,8 @@ lbl_80530EF0:
 	.4byte 0
 
 
-.global __vt__80530F00
-__vt__80530F00:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeQuest
+__vt___unnamed_CTagProcessor_cpp_CTagCodeQuest:
 	# ROM: 0x52D000
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQuest_RTTI
 	.4byte 0
@@ -7905,8 +7905,8 @@ lbl_80530F18:
 	.4byte 0
 
 
-.global __vt__80530F28
-__vt__80530F28:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeFade
+__vt___unnamed_CTagProcessor_cpp_CTagCodeFade:
 	# ROM: 0x52D028
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeFade_RTTI
 	.4byte 0
@@ -7923,8 +7923,8 @@ lbl_80530F40:
 	.4byte 0
 
 
-.global __vt__80530F50
-__vt__80530F50:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeAct
+__vt___unnamed_CTagProcessor_cpp_CTagCodeAct:
 	# ROM: 0x52D050
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeAct_RTTI
 	.4byte 0
@@ -7941,8 +7941,8 @@ lbl_80530F68:
 	.4byte 0
 
 
-.global __vt__80530F78
-__vt__80530F78:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeSelect2
+__vt___unnamed_CTagProcessor_cpp_CTagCodeSelect2:
 	# ROM: 0x52D078
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect2_RTTI
 	.4byte 0
@@ -7959,8 +7959,8 @@ lbl_80530F90:
 	.4byte 0
 
 
-.global __vt__80530FA0
-__vt__80530FA0:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeSelect
+__vt___unnamed_CTagProcessor_cpp_CTagCodeSelect:
 	# ROM: 0x52D0A0
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect_RTTI
 	.4byte 0
@@ -7977,8 +7977,8 @@ lbl_80530FB8:
 	.4byte 0
 
 
-.global __vt__80530FC8
-__vt__80530FC8:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeLine
+__vt___unnamed_CTagProcessor_cpp_CTagCodeLine:
 	# ROM: 0x52D0C8
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeLine_RTTI
 	.4byte 0
@@ -7995,8 +7995,8 @@ lbl_80530FE0:
 	.4byte 0
 
 
-.global __vt__80530FF0
-__vt__80530FF0:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeMouth
+__vt___unnamed_CTagProcessor_cpp_CTagCodeMouth:
 	# ROM: 0x52D0F0
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMouth_RTTI
 	.4byte 0
@@ -8013,8 +8013,8 @@ lbl_80531008:
 	.4byte 0
 
 
-.global __vt__80531018
-__vt__80531018:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodePos
+__vt___unnamed_CTagProcessor_cpp_CTagCodePos:
 	# ROM: 0x52D118
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodePos_RTTI
 	.4byte 0
@@ -8031,8 +8031,8 @@ lbl_80531030:
 	.4byte 0
 
 
-.global __vt__80531040
-__vt__80531040:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeType
+__vt___unnamed_CTagProcessor_cpp_CTagCodeType:
 	# ROM: 0x52D140
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeType_RTTI
 	.4byte 0
@@ -8049,8 +8049,8 @@ lbl_80531058:
 	.4byte 0
 
 
-.global __vt__80531068
-__vt__80531068:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeTrust
+__vt___unnamed_CTagProcessor_cpp_CTagCodeTrust:
 	# ROM: 0x52D168
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTrust_RTTI
 	.4byte 0
@@ -8091,8 +8091,8 @@ lbl_8053108C:
 	.4byte 0
 
 
-.global __vt__805310E8
-__vt__805310E8:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeCol
+__vt___unnamed_CTagProcessor_cpp_CTagCodeCol:
 	# ROM: 0x52D1E8
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCol_RTTI
 	.4byte 0
@@ -8109,8 +8109,8 @@ lbl_80531100:
 	.4byte 0
 
 
-.global __vt__80531110
-__vt__80531110:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeRuby
+__vt___unnamed_CTagProcessor_cpp_CTagCodeRuby:
 	# ROM: 0x52D210
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeRuby_RTTI
 	.4byte 0
@@ -8127,8 +8127,8 @@ lbl_80531128:
 	.4byte 0
 
 
-.global __vt__80531138
-__vt__80531138:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeDel
+__vt___unnamed_CTagProcessor_cpp_CTagCodeDel:
 	# ROM: 0x52D238
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeDel_RTTI
 	.4byte 0
@@ -8145,8 +8145,8 @@ lbl_80531150:
 	.4byte 0
 
 
-.global __vt__80531160
-__vt__80531160:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeWait
+__vt___unnamed_CTagProcessor_cpp_CTagCodeWait:
 	# ROM: 0x52D260
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeWait_RTTI
 	.4byte 0
@@ -8163,8 +8163,8 @@ lbl_80531178:
 	.4byte 0
 
 
-.global __vt__80531188
-__vt__80531188:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeCP
+__vt___unnamed_CTagProcessor_cpp_CTagCodeCP:
 	# ROM: 0x52D288
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCP_RTTI
 	.4byte 0
@@ -8181,8 +8181,8 @@ lbl_805311A0:
 	.4byte 0
 
 
-.global __vt__805311B0
-__vt__805311B0:
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeCL
+__vt___unnamed_CTagProcessor_cpp_CTagCodeCL:
 	# ROM: 0x52D2B0
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCL_RTTI
 	.4byte 0
@@ -8199,8 +8199,8 @@ lbl_805311C8:
 	.4byte 0
 
 
-.global __vt__805311D8
-__vt__805311D8:
+.global __vt__CTagProcessorSE
+__vt__CTagProcessorSE:
 	# ROM: 0x52D2D8
 	.4byte CTagProcessorSE_RTTI
 	.4byte 0
@@ -8219,8 +8219,8 @@ lbl_805311F0:
 	.4byte 0
 
 
-.global __vt__80531208
-__vt__80531208:
+.global __vt__CTagProcessor
+__vt__CTagProcessor:
 	# ROM: 0x52D308
 	.4byte CTagProcessor_RTTI
 	.4byte 0
@@ -8239,8 +8239,8 @@ lbl_80531220:
 	.4byte 0
 
 
-.global __vt__80531238
-__vt__80531238:
+.global __vt__CTagProcessorBase
+__vt__CTagProcessorBase:
 	# ROM: 0x52D338
 	.4byte CTagProcessorBase_RTTI
 	.4byte 0
@@ -8496,8 +8496,8 @@ lbl_80531750:
 	.4byte 0
 
 
-.global __vt__80531778
-__vt__80531778:
+.global __vt__CTalkWindow
+__vt__CTalkWindow:
 	# ROM: 0x52D878
 	.4byte CTalkWindow_RTTI
 	.4byte 0
@@ -8544,8 +8544,8 @@ __vt__80531778:
 	.4byte func_80039D40
 	.4byte CTalkWindow_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_8012DF88
-	.4byte lbl_8012DF80
+	.4byte func_8012DF88
+	.4byte func_8012DF80
 	.4byte func_8012CBD4
 
 .global lbl_80531838
@@ -8580,8 +8580,8 @@ lbl_80531884:
 	.4byte func_8012F2BC
 
 
-.global __vt__80531890
-__vt__80531890:
+.global __vt__CUIBattleManager
+__vt__CUIBattleManager:
 	# ROM: 0x52D990
 	.4byte CUIBattleManager_RTTI
 	.4byte 0
@@ -8594,7 +8594,7 @@ __vt__80531890:
 	.4byte func_80043F20
 	.4byte CUIBattleManager_RTTI
 	.4byte 0xFFFFFFAC
-	.4byte lbl_8012FF6C
+	.4byte func_8012FF6C
 	.4byte func_80039E28
 	.4byte func_8012FF64
 	.4byte func_80039E18
@@ -8643,8 +8643,8 @@ lbl_80531940:
 	.4byte 0
 
 
-.global __vt__8053196C
-__vt__8053196C:
+.global __vt__reslist_IUIBattle
+__vt__reslist_IUIBattle:
 	# ROM: 0x52DA6C
 	.4byte reslist_IUIBattle_RTTI
 	.4byte 0
@@ -8657,16 +8657,16 @@ lbl_80531978:
 	.4byte 0
 
 
-.global __vt__80531984
-__vt__80531984:
+.global __vt___reslist_base_IUIBattle
+__vt___reslist_base_IUIBattle:
 	# ROM: 0x52DA84
 	.4byte _reslist_base_IUIBattle_RTTI
 	.4byte 0
 	.4byte func_8012E1E0
 
 
-.global __vt__80531990
-__vt__80531990:
+.global __vt__CUIBattleManager_CTest
+__vt__CUIBattleManager_CTest:
 	# ROM: 0x52DA90
 	.4byte CUIBattleManager_CTest_RTTI
 	.4byte 0
@@ -8691,8 +8691,8 @@ lbl_805319B4:
 	.4byte 0
 
 
-.global __vt__805319D8
-__vt__805319D8:
+.global __vt__CTTask_CUIBattleManager_CTest
+__vt__CTTask_CUIBattleManager_CTest:
 	# ROM: 0x52DAD8
 	.4byte CTTask_CUIBattleManager_CTest_RTTI
 	.4byte 0
@@ -8715,8 +8715,8 @@ lbl_805319FC:
 	.4byte 0
 
 
-.global __vt__80531A18
-__vt__80531A18:
+.global __vt__CTTask_CUIBattleManager
+__vt__CTTask_CUIBattleManager:
 	# ROM: 0x52DB18
 	.4byte CTTask_CUIBattleManager_RTTI
 	.4byte 0
@@ -8751,8 +8751,8 @@ lbl_80531A64:
 	.4byte func_80133178
 
 
-.global __vt__80531A70
-__vt__80531A70:
+.global __vt__CUICfManager
+__vt__CUICfManager:
 	# ROM: 0x52DB70
 	.4byte CUICfManager_RTTI
 	.4byte 0
@@ -8765,7 +8765,7 @@ __vt__80531A70:
 	.4byte func_80043F20
 	.4byte CUICfManager_RTTI
 	.4byte 0xFFFFFFAC
-	.4byte lbl_80135FC4
+	.4byte func_80135FC4
 	.4byte func_80039E28
 	.4byte func_80135FBC
 	.4byte func_80039E18
@@ -8799,8 +8799,8 @@ __vt__80531A70:
 	.4byte func_80039D40
 	.4byte CUICfManager_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_80135FD4
-	.4byte lbl_80135FCC
+	.4byte func_80135FD4
+	.4byte func_80135FCC
 	.4byte func_8013317C
 	.4byte func_80133324
 
@@ -8821,8 +8821,8 @@ lbl_80531B34:
 	.4byte 0
 
 
-.global __vt__80531B68
-__vt__80531B68:
+.global __vt__reslist_IUICf
+__vt__reslist_IUICf:
 	# ROM: 0x52DC68
 	.4byte reslist_IUICf_RTTI
 	.4byte 0
@@ -8835,16 +8835,16 @@ lbl_80531B74:
 	.4byte 0
 
 
-.global __vt__80531B80
-__vt__80531B80:
+.global __vt___reslist_base_IUICf
+__vt___reslist_base_IUICf:
 	# ROM: 0x52DC80
 	.4byte _reslist_base_IUICf_RTTI
 	.4byte 0
 	.4byte func_80132188
 
 
-.global __vt__80531B8C
-__vt__80531B8C:
+.global __vt__CUICfManager_CTest
+__vt__CUICfManager_CTest:
 	# ROM: 0x52DC8C
 	.4byte CUICfManager_CTest_RTTI
 	.4byte 0
@@ -8869,8 +8869,8 @@ lbl_80531BB0:
 	.4byte 0
 
 
-.global __vt__80531BD4
-__vt__80531BD4:
+.global __vt__CTTask_CUICfManager_CTest
+__vt__CTTask_CUICfManager_CTest:
 	# ROM: 0x52DCD4
 	.4byte CTTask_CUICfManager_CTest_RTTI
 	.4byte 0
@@ -8893,8 +8893,8 @@ lbl_80531BF8:
 	.4byte 0
 
 
-.global __vt__80531C14
-__vt__80531C14:
+.global __vt__CTTask_CUICfManager
+__vt__CTTask_CUICfManager:
 	# ROM: 0x52DD14
 	.4byte CTTask_CUICfManager_RTTI
 	.4byte 0
@@ -8983,8 +8983,8 @@ lbl_80531D60:
 	.4byte 0
 
 
-.global __vt__80531D70
-__vt__80531D70:
+.global __vt__CUIWindowManager
+__vt__CUIWindowManager:
 	# ROM: 0x52DE70
 	.4byte CUIWindowManager_RTTI
 	.4byte 0
@@ -8997,7 +8997,7 @@ __vt__80531D70:
 	.4byte func_80043F20
 	.4byte CUIWindowManager_RTTI
 	.4byte 0xFFFFFFAC
-	.4byte lbl_8013F23C
+	.4byte func_8013F23C
 	.4byte func_8013F234
 	.4byte func_8013CBB4
 
@@ -9016,8 +9016,8 @@ lbl_80531DA8:
 	.4byte 0
 
 
-.global __vt__80531DD4
-__vt__80531DD4:
+.global __vt__reslist_IUIWindow
+__vt__reslist_IUIWindow:
 	# ROM: 0x52DED4
 	.4byte reslist_IUIWindow_RTTI
 	.4byte 0
@@ -9030,16 +9030,16 @@ lbl_80531DE0:
 	.4byte 0
 
 
-.global __vt__80531DEC
-__vt__80531DEC:
+.global __vt___reslist_base_IUIWindow
+__vt___reslist_base_IUIWindow:
 	# ROM: 0x52DEEC
 	.4byte _reslist_base_IUIWindow_RTTI
 	.4byte 0
 	.4byte func_8013C294
 
 
-.global __vt__80531DF8
-__vt__80531DF8:
+.global __vt__CUIWindowManager_CTest
+__vt__CUIWindowManager_CTest:
 	# ROM: 0x52DEF8
 	.4byte CUIWindowManager_CTest_RTTI
 	.4byte 0
@@ -9064,8 +9064,8 @@ lbl_80531E1C:
 	.4byte 0
 
 
-.global __vt__80531E40
-__vt__80531E40:
+.global __vt__CTTask_CUIWindowManager_CTest
+__vt__CTTask_CUIWindowManager_CTest:
 	# ROM: 0x52DF40
 	.4byte CTTask_CUIWindowManager_CTest_RTTI
 	.4byte 0
@@ -9088,8 +9088,8 @@ lbl_80531E64:
 	.4byte 0
 
 
-.global __vt__80531E80
-__vt__80531E80:
+.global __vt__CTTask_CUIWindowManager
+__vt__CTTask_CUIWindowManager:
 	# ROM: 0x52DF80
 	.4byte CTTask_CUIWindowManager_RTTI
 	.4byte 0
@@ -9127,8 +9127,8 @@ lbl_80531EC0:
 	.4byte 0
 
 
-.global __vt__80531EE8
-__vt__80531EE8:
+.global __vt__cf_CfBdat
+__vt__cf_CfBdat:
 	# ROM: 0x52DFE8
 	.4byte cf_CfBdat_RTTI
 	.4byte 0
@@ -9173,8 +9173,8 @@ lbl_80531F70:
 	.4byte 0
 
 
-.global __vt__80531F80
-__vt__80531F80:
+.global __vt__CMenuUpdate
+__vt__CMenuUpdate:
 	# ROM: 0x52E080
 	.4byte CMenuUpdate_RTTI
 	.4byte 0
@@ -9221,8 +9221,8 @@ __vt__80531F80:
 	.4byte func_80039D40
 	.4byte CMenuUpdate_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_801445A0
-	.4byte lbl_80144598
+	.4byte func_801445A0
+	.4byte func_80144598
 	.4byte func_80142AA4
 
 .global lbl_80532040
@@ -9245,8 +9245,8 @@ lbl_80532040:
 	.4byte 0
 
 
-.global __vt__80532080
-__vt__80532080:
+.global __vt__CMenuLandTelop
+__vt__CMenuLandTelop:
 	# ROM: 0x52E180
 	.4byte CMenuLandTelop_RTTI
 	.4byte 0
@@ -9293,8 +9293,8 @@ __vt__80532080:
 	.4byte func_80039D40
 	.4byte CMenuLandTelop_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_80145AA0
-	.4byte lbl_80145A98
+	.4byte func_80145AA0
+	.4byte func_80145A98
 	.4byte func_80144E2C
 
 .global lbl_80532140
@@ -9317,8 +9317,8 @@ lbl_80532140:
 	.4byte 0
 
 
-.global __vt__80532180
-__vt__80532180:
+.global __vt__cf_CBattleState
+__vt__cf_CBattleState:
 	# ROM: 0x52E280
 	.4byte cf_CBattleState_RTTI
 	.4byte 0
@@ -9358,8 +9358,8 @@ __vt__80532180:
 	.4byte 0
 
 
-.global __vt__80532210
-__vt__80532210:
+.global __vt__CMenuGetItem
+__vt__CMenuGetItem:
 	# ROM: 0x52E310
 	.4byte CMenuGetItem_RTTI
 	.4byte 0
@@ -9406,8 +9406,8 @@ __vt__80532210:
 	.4byte func_80039D40
 	.4byte CMenuGetItem_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_8014A864
-	.4byte lbl_8014A85C
+	.4byte func_8014A864
+	.4byte func_8014A85C
 	.4byte func_80149FB8
 
 .global lbl_805322D0
@@ -10122,8 +10122,8 @@ lbl_80532CD4:
 	.4byte lbl_80152470
 
 
-.global __vt__80532D68
-__vt__80532D68:
+.global __vt__cf_CAIAction
+__vt__cf_CAIAction:
 	# ROM: 0x52EE68
 	.4byte cf_CAIAction_RTTI
 	.4byte 0
@@ -10131,8 +10131,8 @@ __vt__80532D68:
 	.4byte func_8014AB28
 
 
-.global __vt__80532D78
-__vt__80532D78:
+.global __vt__cf_CAttackSet
+__vt__cf_CAttackSet:
 	# ROM: 0x52EE78
 	.4byte cf_CAttackSet_RTTI
 	.4byte 0
@@ -10145,8 +10145,8 @@ lbl_80532D84:
 	.4byte 0
 
 
-.global __vt__80532D90
-__vt__80532D90:
+.global __vt__cf_CArtsSet
+__vt__cf_CArtsSet:
 	# ROM: 0x52EE90
 	.4byte cf_CArtsSet_RTTI
 	.4byte 0
@@ -10159,8 +10159,8 @@ lbl_80532D9C:
 	.4byte 0
 
 
-.global __vt__80532DA8
-__vt__80532DA8:
+.global __vt__cf__sArtsSet
+__vt__cf__sArtsSet:
 	# ROM: 0x52EEA8
 	.4byte cf__sArtsSet_RTTI
 	.4byte 0
@@ -10168,8 +10168,8 @@ __vt__80532DA8:
 	.4byte 0
 
 
-.global __vt__80532DB8
-__vt__80532DB8:
+.global __vt__cf_CArtsParam
+__vt__cf_CArtsParam:
 	# ROM: 0x52EEB8
 	.4byte cf_CArtsParam_RTTI
 	.4byte 0
@@ -10186,8 +10186,8 @@ lbl_80532DD0:
 	.4byte 0
 
 
-.global __vt__80532DE0
-__vt__80532DE0:
+.global __vt__cf_CAttackParam
+__vt__cf_CAttackParam:
 	# ROM: 0x52EEE0
 	.4byte cf_CAttackParam_RTTI
 	.4byte 0
@@ -10319,8 +10319,8 @@ lbl_80532F04:
 	.4byte 0
 
 
-.global __vt__80532F40
-__vt__80532F40:
+.global __vt__cf_ItemPurifyKessyouImpl
+__vt__cf_ItemPurifyKessyouImpl:
 	# ROM: 0x52F040
 	.4byte cf_ItemPurifyKessyouImpl_RTTI
 	.4byte 0
@@ -10373,8 +10373,8 @@ lbl_80532FE0:
 	.4byte 0
 
 
-.global __vt__80532FF8
-__vt__80532FF8:
+.global __vt__cf_ItemKessyouImpl
+__vt__cf_ItemKessyouImpl:
 	# ROM: 0x52F0F8
 	.4byte cf_ItemKessyouImpl_RTTI
 	.4byte 0
@@ -10425,8 +10425,8 @@ lbl_80533098:
 	.4byte 0
 
 
-.global __vt__805330A8
-__vt__805330A8:
+.global __vt__cf_ItemPurifyCrystalImpl
+__vt__cf_ItemPurifyCrystalImpl:
 	# ROM: 0x52F1A8
 	.4byte cf_ItemPurifyCrystalImpl_RTTI
 	.4byte 0
@@ -10479,8 +10479,8 @@ lbl_80533148:
 	.4byte 0
 
 
-.global __vt__80533160
-__vt__80533160:
+.global __vt__cf_ItemDropCrystalImpl
+__vt__cf_ItemDropCrystalImpl:
 	# ROM: 0x52F260
 	.4byte cf_ItemDropCrystalImpl_RTTI
 	.4byte 0
@@ -10533,8 +10533,8 @@ lbl_80533200:
 	.4byte 0
 
 
-.global __vt__80533218
-__vt__80533218:
+.global __vt__cf_ItemCrystalImpl
+__vt__cf_ItemCrystalImpl:
 	# ROM: 0x52F318
 	.4byte cf_ItemCrystalImpl_RTTI
 	.4byte 0
@@ -10585,8 +10585,8 @@ lbl_805332B8:
 	.4byte 0
 
 
-.global __vt__805332C8
-__vt__805332C8:
+.global __vt__cf_ItemEquipImpl
+__vt__cf_ItemEquipImpl:
 	# ROM: 0x52F3C8
 	.4byte cf_ItemEquipImpl_RTTI
 	.4byte 0
@@ -10637,8 +10637,8 @@ lbl_80533368:
 	.4byte 0
 
 
-.global __vt__80533378
-__vt__80533378:
+.global __vt__cf_ItemConsImpl
+__vt__cf_ItemConsImpl:
 	# ROM: 0x52F478
 	.4byte cf_ItemConsImpl_RTTI
 	.4byte 0
@@ -10689,8 +10689,8 @@ lbl_80533418:
 	.4byte 0
 
 
-.global __vt__80533428
-__vt__80533428:
+.global __vt__cf_ItemDummyImpl
+__vt__cf_ItemDummyImpl:
 	# ROM: 0x52F528
 	.4byte cf_ItemDummyImpl_RTTI
 	.4byte 0
@@ -10790,8 +10790,8 @@ lbl_805334D8:
 	.4byte 0
 
 
-.global __vt__80533588
-__vt__80533588:
+.global __vt__cf_CCharEffect
+__vt__cf_CCharEffect:
 	# ROM: 0x52F688
 	.4byte cf_CCharEffect_RTTI
 	.4byte 0
@@ -10803,8 +10803,8 @@ __vt__80533588:
 	.4byte func_8015C2B0
 
 
-.global __vt__805335A8
-__vt__805335A8:
+.global __vt__cf_CCharEffectEne
+__vt__cf_CCharEffectEne:
 	# ROM: 0x52F6A8
 	.4byte cf_CCharEffectEne_RTTI
 	.4byte 0
@@ -10823,8 +10823,8 @@ lbl_805335C8:
 	.4byte 0
 
 
-.global __vt__805335D8
-__vt__805335D8:
+.global __vt__cf_CCharEffectNpc
+__vt__cf_CCharEffectNpc:
 	# ROM: 0x52F6D8
 	.4byte cf_CCharEffectNpc_RTTI
 	.4byte 0
@@ -10843,8 +10843,8 @@ lbl_805335F8:
 	.4byte 0
 
 
-.global __vt__80533608
-__vt__80533608:
+.global __vt__cf_CCharEffectObj
+__vt__cf_CCharEffectObj:
 	# ROM: 0x52F708
 	.4byte cf_CCharEffectObj_RTTI
 	.4byte 0
@@ -10863,8 +10863,8 @@ lbl_80533628:
 	.4byte 0
 
 
-.global __vt__80533638
-__vt__80533638:
+.global __vt__cf_CCharEffectPc
+__vt__cf_CCharEffectPc:
 	# ROM: 0x52F738
 	.4byte cf_CCharEffectPc_RTTI
 	.4byte 0
@@ -10929,8 +10929,8 @@ lbl_80533668:
 	.4byte lbl_80160048
 
 
-.global __vt__8053370C
-__vt__8053370C:
+.global __vt__CCol6Invite
+__vt__CCol6Invite:
 	# ROM: 0x52F80C
 	.4byte CCol6Invite_RTTI
 	.4byte 0
@@ -10993,8 +10993,8 @@ lbl_805337B8:
 	.4byte 0
 
 
-.global __vt__805337EC
-__vt__805337EC:
+.global __vt__CCol6System
+__vt__CCol6System:
 	# ROM: 0x52F8EC
 	.4byte CCol6System_RTTI
 	.4byte 0
@@ -11065,8 +11065,8 @@ lbl_805338B0:
 	.4byte 0
 
 
-.global __vt__805338EC
-__vt__805338EC:
+.global __vt__CCol6Hint
+__vt__CCol6Hint:
 	# ROM: 0x52F9EC
 	.4byte CCol6Hint_RTTI
 	.4byte 0
@@ -11137,8 +11137,8 @@ lbl_805339B0:
 	.4byte 0
 
 
-.global __vt__805339EC
-__vt__805339EC:
+.global __vt__CCol6CheckBat
+__vt__CCol6CheckBat:
 	# ROM: 0x52FAEC
 	.4byte CCol6CheckBat_RTTI
 	.4byte 0
@@ -11514,8 +11514,8 @@ lbl_80533EE0:
 	.4byte lbl_804FE5C8
 
 
-.global __vt__80533F60
-__vt__80533F60:
+.global __vt__cf_CTaskREvent
+__vt__cf_CTaskREvent:
 	# ROM: 0x530060
 	.4byte cf_CTaskREvent_RTTI
 	.4byte 0
@@ -11592,8 +11592,8 @@ lbl_80534054:
 	.4byte 0
 
 
-.global __vt__80534078
-__vt__80534078:
+.global __vt__CTTask_cf_CTaskREvent
+__vt__CTTask_cf_CTaskREvent:
 	# ROM: 0x530178
 	.4byte CTTask_cf_CTaskREvent_RTTI
 	.4byte 0
@@ -11666,8 +11666,8 @@ lbl_8053409C:
 	.4byte 0
 
 
-.global __vt__80534180
-__vt__80534180:
+.global __vt__cf_CInfoCf
+__vt__cf_CInfoCf:
 	# ROM: 0x530280
 	.4byte cf_CInfoCf_RTTI
 	.4byte 0
@@ -11675,8 +11675,8 @@ __vt__80534180:
 	.4byte 0
 
 
-.global __vt__80534190
-__vt__80534190:
+.global __vt__CMenuItem
+__vt__CMenuItem:
 	# ROM: 0x530290
 	.4byte CMenuItem_RTTI
 	.4byte 0
@@ -11689,7 +11689,7 @@ __vt__80534190:
 	.4byte func_80043F20
 	.4byte CMenuItem_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_80167C38
+	.4byte func_80167C38
 	.4byte func_80167C30
 	.4byte func_8016784C
 
@@ -11711,8 +11711,8 @@ lbl_805341C8:
 	.4byte 0
 
 
-.global __vt__80534200
-__vt__80534200:
+.global __vt__cf_CREvtMem
+__vt__cf_CREvtMem:
 	# ROM: 0x530300
 	.4byte cf_CREvtMem_RTTI
 	.4byte 0
@@ -11812,8 +11812,8 @@ lbl_805342C4:
 	.4byte func_80169CD0
 
 
-.global __vt__805342DC
-__vt__805342DC:
+.global __vt__cf_CTaskREvtSequence
+__vt__cf_CTaskREvtSequence:
 	# ROM: 0x5303DC
 	.4byte cf_CTaskREvtSequence_RTTI
 	.4byte 0
@@ -11826,7 +11826,7 @@ __vt__805342DC:
 	.4byte func_80043F20
 	.4byte cf_CTaskREvtSequence_RTTI
 	.4byte 0xFFFFFFAC
-	.4byte lbl_8016C7D8
+	.4byte func_8016C7D8
 	.4byte func_80039E28
 	.4byte func_8016C7D0
 	.4byte func_80039E18
@@ -11860,8 +11860,8 @@ __vt__805342DC:
 	.4byte func_80039D40
 	.4byte cf_CTaskREvtSequence_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_8016C7E8
-	.4byte lbl_8016C7E0
+	.4byte func_8016C7E8
+	.4byte func_8016C7E0
 	.4byte func_8016ABA8
 	.4byte func_8016C2B4
 
@@ -11878,8 +11878,8 @@ lbl_805343A0:
 	.4byte 0
 
 
-.global __vt__805343C4
-__vt__805343C4:
+.global __vt__CTTask_cf_CTaskREvtSequence
+__vt__CTTask_cf_CTaskREvtSequence:
 	# ROM: 0x5304C4
 	.4byte CTTask_cf_CTaskREvtSequence_RTTI
 	.4byte 0
@@ -12070,8 +12070,8 @@ lbl_805346F0:
 	.4byte 0
 
 
-.global __vt__80534718
-__vt__80534718:
+.global __vt__cf_CfResObjImpl
+__vt__cf_CfResObjImpl:
 	# ROM: 0x530818
 	.4byte cf_CfResObjImpl_RTTI
 	.4byte 0
@@ -12125,8 +12125,8 @@ lbl_80534790:
 	.4byte func_8016DE68
 
 
-.global __vt__805347C0
-__vt__805347C0:
+.global __vt__cf_CfResReloadImpl
+__vt__cf_CfResReloadImpl:
 	# ROM: 0x5308C0
 	.4byte cf_CfResReloadImpl_RTTI
 	.4byte 0
@@ -12174,8 +12174,8 @@ lbl_80534838:
 	.4byte 0
 
 
-.global __vt__80534850
-__vt__80534850:
+.global __vt__cf_CfMapEffectManager
+__vt__cf_CfMapEffectManager:
 	# ROM: 0x530950
 	.4byte cf_CfMapEffectManager_RTTI
 	.4byte 0
@@ -12189,8 +12189,8 @@ lbl_80534860:
 	.4byte func_801A4194
 
 
-.global __vt__8053486C
-__vt__8053486C:
+.global __vt__cf_CfObjectActor
+__vt__cf_CfObjectActor:
 	# ROM: 0x53096C
 	.4byte cf_CfObjectActor_RTTI
 	.4byte 0
@@ -12575,8 +12575,8 @@ lbl_80534E40:
 	.4byte 0
 
 
-.global __vt__80534E4C
-__vt__80534E4C:
+.global __vt__cf_CREvtModel
+__vt__cf_CREvtModel:
 	# ROM: 0x530F4C
 	.4byte cf_CREvtModel_RTTI
 	.4byte 0
@@ -12604,8 +12604,8 @@ lbl_80534E90:
 	.4byte 0
 
 
-.global __vt__80534EA0
-__vt__80534EA0:
+.global __vt__cf_CfValueItemManager
+__vt__cf_CfValueItemManager:
 	# ROM: 0x530FA0
 	.4byte cf_CfValueItemManager_RTTI
 	.4byte 0
@@ -12622,8 +12622,8 @@ lbl_80534EB8:
 	.4byte 0
 
 
-.global __vt__80534EC8
-__vt__80534EC8:
+.global __vt__cf_CfMapItemManager
+__vt__cf_CfMapItemManager:
 	# ROM: 0x530FC8
 	.4byte cf_CfMapItemManager_RTTI
 	.4byte 0
@@ -12750,8 +12750,8 @@ lbl_80535018:
 	.4byte lbl_8017751C
 
 
-.global __vt__80535040
-__vt__80535040:
+.global __vt__cf_CActorParam
+__vt__cf_CActorParam:
 	# ROM: 0x531140
 	.4byte cf_CActorParam_RTTI
 	.4byte 0
@@ -12974,16 +12974,16 @@ __vt__80535040:
 	.4byte func_800AFBA0
 
 
-.global __vt__805353AC
-__vt__805353AC:
+.global __vt__cf_CActorState
+__vt__cf_CActorState:
 	# ROM: 0x5314AC
 	.4byte cf_CActorState_RTTI
 	.4byte 0
 	.4byte func_800AFB04
 
 
-.global __vt__805353B8
-__vt__805353B8:
+.global __vt__CMenuZeal
+__vt__CMenuZeal:
 	# ROM: 0x5314B8
 	.4byte CMenuZeal_RTTI
 	.4byte 0
@@ -13030,8 +13030,8 @@ __vt__805353B8:
 	.4byte func_80039D40
 	.4byte CMenuZeal_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_8017FF70
-	.4byte lbl_8017FF68
+	.4byte func_8017FF70
+	.4byte func_8017FF68
 	.4byte func_8017FBB4
 
 .global lbl_80535478
@@ -13054,8 +13054,8 @@ lbl_80535478:
 	.4byte 0
 
 
-.global __vt__805354B8
-__vt__805354B8:
+.global __vt__cf_CREvtCamera
+__vt__cf_CREvtCamera:
 	# ROM: 0x5315B8
 	.4byte cf_CREvtCamera_RTTI
 	.4byte 0
@@ -13117,8 +13117,8 @@ lbl_80535544:
 	.4byte func_8018152C
 
 
-.global __vt__80535550
-__vt__80535550:
+.global __vt__cf_CREvtModelMap
+__vt__cf_CREvtModelMap:
 	# ROM: 0x531650
 	.4byte cf_CREvtModelMap_RTTI
 	.4byte 0
@@ -13139,7 +13139,7 @@ __vt__80535550:
 	.4byte func_80172768
 	.4byte cf_CREvtModelMap_RTTI
 	.4byte 0xFFFFFFC8
-	.4byte lbl_80181A54
+	.4byte func_80181A54
 	.4byte func_80039E28
 	.4byte func_80181A4C
 	.4byte func_80039E18
@@ -13306,8 +13306,8 @@ lbl_80535764:
 	.4byte func_80182B2C
 
 
-.global __vt__80535770
-__vt__80535770:
+.global __vt__cf_CREvtModelObj
+__vt__cf_CREvtModelObj:
 	# ROM: 0x531870
 	.4byte cf_CREvtModelObj_RTTI
 	.4byte 0
@@ -13328,7 +13328,7 @@ __vt__80535770:
 	.4byte func_80181F28
 	.4byte cf_CREvtModelObj_RTTI
 	.4byte 0xFFFFFFC8
-	.4byte lbl_8018370C
+	.4byte func_8018370C
 	.4byte func_80039E28
 	.4byte func_80183704
 	.4byte func_80039E18
@@ -13362,8 +13362,8 @@ __vt__80535770:
 	.4byte func_80039D40
 	.4byte cf_CREvtModelObj_RTTI
 	.4byte 0xFFFFFFC4
-	.4byte lbl_8018371C
-	.4byte lbl_80183714
+	.4byte func_8018371C
+	.4byte func_80183714
 	.4byte func_801835D4
 	.4byte func_801836CC
 
@@ -13482,8 +13482,8 @@ lbl_805359B0:
 	.4byte 0
 
 
-.global __vt__805359C0
-__vt__805359C0:
+.global __vt__cf_CREvtModelPc
+__vt__cf_CREvtModelPc:
 	# ROM: 0x531AC0
 	.4byte cf_CREvtModelPc_RTTI
 	.4byte 0
@@ -13504,7 +13504,7 @@ __vt__805359C0:
 	.4byte func_80183A3C
 	.4byte cf_CREvtModelPc_RTTI
 	.4byte 0xFFFFFFC8
-	.4byte lbl_80184B0C
+	.4byte func_80184B0C
 	.4byte func_80039E28
 	.4byte func_80184B04
 	.4byte func_80039E18
@@ -13548,8 +13548,8 @@ lbl_80535A90:
 	.4byte 0
 
 
-.global __vt__80535AA8
-__vt__80535AA8:
+.global __vt__cf_CREvtEffect
+__vt__cf_CREvtEffect:
 	# ROM: 0x531BA8
 	.4byte cf_CREvtEffect_RTTI
 	.4byte 0
@@ -13563,7 +13563,7 @@ __vt__80535AA8:
 	.4byte func_80184D5C
 	.4byte cf_CREvtEffect_RTTI
 	.4byte 0xFFFFFFEC
-	.4byte lbl_80185688
+	.4byte func_80185688
 	.4byte func_80185680
 	.4byte func_801855C4
 
@@ -13574,8 +13574,8 @@ lbl_80535AE4:
 	.4byte 0
 
 
-.global __vt__80535AF0
-__vt__80535AF0:
+.global __vt__cf_CREvtObj
+__vt__cf_CREvtObj:
 	# ROM: 0x531BF0
 	.4byte cf_CREvtObj_RTTI
 	.4byte 0
@@ -13675,8 +13675,8 @@ lbl_80535BF0:
 	.4byte func_80187E28
 
 
-.global __vt__80535C20
-__vt__80535C20:
+.global __vt__CMenuPTGauge
+__vt__CMenuPTGauge:
 	# ROM: 0x531D20
 	.4byte CMenuPTGauge_RTTI
 	.4byte 0
@@ -13723,8 +13723,8 @@ __vt__80535C20:
 	.4byte func_80039D40
 	.4byte CMenuPTGauge_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_80187F0C
-	.4byte lbl_80187F04
+	.4byte func_80187F0C
+	.4byte func_80187F04
 	.4byte func_801875E8
 
 .global lbl_80535CE0
@@ -13747,8 +13747,8 @@ lbl_80535CE0:
 	.4byte 0
 
 
-.global __vt__80535D20
-__vt__80535D20:
+.global __vt__CMenuSelectShop
+__vt__CMenuSelectShop:
 	# ROM: 0x531E20
 	.4byte CMenuSelectShop_RTTI
 	.4byte 0
@@ -13795,8 +13795,8 @@ __vt__80535D20:
 	.4byte func_80039D40
 	.4byte CMenuSelectShop_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_8018A620
-	.4byte lbl_8018A618
+	.4byte func_8018A620
+	.4byte func_8018A618
 	.4byte func_8018A4E8
 
 .global lbl_80535DE0
@@ -13819,8 +13819,8 @@ lbl_80535DE0:
 	.4byte 0
 
 
-.global __vt__80535E20
-__vt__80535E20:
+.global __vt__CMenuShopSell
+__vt__CMenuShopSell:
 	# ROM: 0x531F20
 	.4byte CMenuShopSell_RTTI
 	.4byte 0
@@ -13833,7 +13833,7 @@ __vt__80535E20:
 	.4byte func_80043F20
 	.4byte CMenuShopSell_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_8018B6B0
+	.4byte func_8018B6B0
 	.4byte func_8018B6A8
 	.4byte func_8018B280
 
@@ -13855,8 +13855,8 @@ lbl_80535E58:
 	.4byte 0
 
 
-.global __vt__80535E90
-__vt__80535E90:
+.global __vt__CMenuShopBuy
+__vt__CMenuShopBuy:
 	# ROM: 0x531F90
 	.4byte CMenuShopBuy_RTTI
 	.4byte 0
@@ -13869,7 +13869,7 @@ __vt__80535E90:
 	.4byte func_80043F20
 	.4byte CMenuShopBuy_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_8018C5F4
+	.4byte func_8018C5F4
 	.4byte func_8018C5EC
 	.4byte func_8018C060
 
@@ -13917,8 +13917,8 @@ lbl_80535F30:
 	.4byte 0
 
 
-.global __vt__80535F48
-__vt__80535F48:
+.global __vt__cf_CfResPcImpl
+__vt__cf_CfResPcImpl:
 	# ROM: 0x532048
 	.4byte cf_CfResPcImpl_RTTI
 	.4byte 0
@@ -14111,8 +14111,8 @@ lbl_805361E0:
 	.4byte 0
 
 
-.global __vt__805361F0
-__vt__805361F0:
+.global __vt__CMenuPTState
+__vt__CMenuPTState:
 	# ROM: 0x5322F0
 	.4byte CMenuPTState_RTTI
 	.4byte 0
@@ -14125,7 +14125,7 @@ __vt__805361F0:
 	.4byte func_80043F20
 	.4byte CMenuPTState_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_80192BEC
+	.4byte func_80192BEC
 	.4byte func_80192BE4
 	.4byte func_80192A2C
 
@@ -14147,8 +14147,8 @@ lbl_80536228:
 	.4byte 0
 
 
-.global __vt__80536260
-__vt__80536260:
+.global __vt__cf_CPartsChange
+__vt__cf_CPartsChange:
 	# ROM: 0x532360
 	.4byte cf_CPartsChange_RTTI
 	.4byte 0
@@ -14166,8 +14166,8 @@ lbl_80536270:
 	.4byte 0
 
 
-.global __vt__80536284
-__vt__80536284:
+.global __vt__reslist_cf_CfPartyInfo
+__vt__reslist_cf_CfPartyInfo:
 	# ROM: 0x532384
 	.4byte reslist_cf_CfPartyInfo_RTTI
 	.4byte 0
@@ -14180,8 +14180,8 @@ lbl_80536290:
 	.4byte 0
 
 
-.global __vt__8053629C
-__vt__8053629C:
+.global __vt___reslist_base_cf_CfPartyInfo
+__vt___reslist_base_cf_CfPartyInfo:
 	# ROM: 0x53239C
 	.4byte _reslist_base_cf_CfPartyInfo_RTTI
 	.4byte 0
@@ -14394,8 +14394,8 @@ lbl_80536504:
 	.4byte func_8019C0D4
 
 
-.global __vt__80536510
-__vt__80536510:
+.global __vt__cf_CtrlMovePC
+__vt__cf_CtrlMovePC:
 	# ROM: 0x532610
 	.4byte cf_CtrlMovePC_RTTI
 	.4byte 0
@@ -14419,8 +14419,8 @@ lbl_80536560:
 	.4byte func_8019F93C
 
 
-.global __vt__8053656C
-__vt__8053656C:
+.global __vt__cf_CtrlMoveNpc
+__vt__cf_CtrlMoveNpc:
 	# ROM: 0x53266C
 	.4byte cf_CtrlMoveNpc_RTTI
 	.4byte 0
@@ -14434,8 +14434,8 @@ lbl_80536578:
 	.4byte 0
 
 
-.global __vt__80536588
-__vt__80536588:
+.global __vt__CMenuBattleMode
+__vt__CMenuBattleMode:
 	# ROM: 0x532688
 	.4byte CMenuBattleMode_RTTI
 	.4byte 0
@@ -14482,8 +14482,8 @@ __vt__80536588:
 	.4byte func_80039D40
 	.4byte CMenuBattleMode_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_801A049C
-	.4byte lbl_801A0494
+	.4byte func_801A049C
+	.4byte func_801A0494
 	.4byte func_801A02C0
 
 .global lbl_80536648
@@ -14506,8 +14506,8 @@ lbl_80536648:
 	.4byte 0
 
 
-.global __vt__80536688
-__vt__80536688:
+.global __vt__COccCulling
+__vt__COccCulling:
 	# ROM: 0x532788
 	.4byte COccCulling_RTTI
 	.4byte 0
@@ -14515,8 +14515,8 @@ __vt__80536688:
 	.4byte 0
 
 
-.global __vt__80536698
-__vt__80536698:
+.global __vt__CSimpleEveTalkWin
+__vt__CSimpleEveTalkWin:
 	# ROM: 0x532798
 	.4byte CSimpleEveTalkWin_RTTI
 	.4byte 0
@@ -14563,8 +14563,8 @@ __vt__80536698:
 	.4byte func_80039D40
 	.4byte CSimpleEveTalkWin_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_801A29C4
-	.4byte lbl_801A29BC
+	.4byte func_801A29C4
+	.4byte func_801A29BC
 	.4byte func_801A2048
 
 .global lbl_80536758
@@ -14587,8 +14587,8 @@ lbl_80536758:
 	.4byte 0
 
 
-.global __vt__80536798
-__vt__80536798:
+.global __vt__cf_CTaskCulling
+__vt__cf_CTaskCulling:
 	# ROM: 0x532898
 	.4byte cf_CTaskCulling_RTTI
 	.4byte 0
@@ -14635,14 +14635,14 @@ __vt__80536798:
 	.4byte func_80039D40
 	.4byte cf_CTaskCulling_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_801A30B0
-	.4byte lbl_801A30A8
+	.4byte func_801A30B0
+	.4byte func_801A30A8
 	.4byte cf_CTaskCulling_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_801A30D0
-	.4byte lbl_801A30C8
-	.4byte lbl_801A30C0
-	.4byte lbl_801A30B8
+	.4byte func_801A30D0
+	.4byte func_801A30C8
+	.4byte func_801A30C0
+	.4byte func_801A30B8
 	.4byte func_801A2C20
 	.4byte func_801A2C40
 	.4byte func_801A2C74
@@ -14661,8 +14661,8 @@ lbl_8053687C:
 	.4byte 0
 
 
-.global __vt__805368A0
-__vt__805368A0:
+.global __vt__CTTask_cf_CTaskCulling
+__vt__CTTask_cf_CTaskCulling:
 	# ROM: 0x5329A0
 	.4byte CTTask_cf_CTaskCulling_RTTI
 	.4byte 0
@@ -14847,8 +14847,8 @@ lbl_805369E8:
 	.4byte 0
 
 
-.global __vt__80536A88
-__vt__80536A88:
+.global __vt__cf_CVision
+__vt__cf_CVision:
 	# ROM: 0x532B88
 	.4byte cf_CVision_RTTI
 	.4byte 0
@@ -15040,8 +15040,8 @@ lbl_80536CBC:
 	.4byte lbl_801AD5F4
 
 
-.global __vt__80536CF0
-__vt__80536CF0:
+.global __vt__CMenuVision
+__vt__CMenuVision:
 	# ROM: 0x532DF0
 	.4byte CMenuVision_RTTI
 	.4byte 0
@@ -15088,8 +15088,8 @@ __vt__80536CF0:
 	.4byte func_80039D40
 	.4byte CMenuVision_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_801AFE14
-	.4byte lbl_801AFE0C
+	.4byte func_801AFE14
+	.4byte func_801AFE0C
 	.4byte func_801ACB54
 
 .global lbl_80536DB0
@@ -15112,8 +15112,8 @@ lbl_80536DB0:
 	.4byte 0
 
 
-.global __vt__80536DF0
-__vt__80536DF0:
+.global __vt__CMenuBattleCommu
+__vt__CMenuBattleCommu:
 	# ROM: 0x532EF0
 	.4byte CMenuBattleCommu_RTTI
 	.4byte 0
@@ -15160,8 +15160,8 @@ __vt__80536DF0:
 	.4byte func_80039D40
 	.4byte CMenuBattleCommu_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_801B18C8
-	.4byte lbl_801B18C0
+	.4byte func_801B18C8
+	.4byte func_801B18C0
 	.4byte func_801B0CDC
 
 .global lbl_80536EB0
@@ -15192,8 +15192,8 @@ lbl_80536EF0:
 	.4byte 0x000000CA
 
 
-.global __vt__80536EFC
-__vt__80536EFC:
+.global __vt__cf_CPcEffect07
+__vt__cf_CPcEffect07:
 	# ROM: 0x532FFC
 	.4byte cf_CPcEffect07_RTTI
 	.4byte 0
@@ -15316,8 +15316,8 @@ lbl_80537050:
 	.4byte lbl_801B6FE0
 
 
-.global __vt__80537074
-__vt__80537074:
+.global __vt__CMenuGetItemMulti
+__vt__CMenuGetItemMulti:
 	# ROM: 0x533174
 	.4byte CMenuGetItemMulti_RTTI
 	.4byte 0
@@ -15389,8 +15389,8 @@ lbl_80537138:
 	.4byte 0
 
 
-.global __vt__80537178
-__vt__80537178:
+.global __vt__cf_CSuddenCommu
+__vt__cf_CSuddenCommu:
 	# ROM: 0x533278
 	.4byte cf_CSuddenCommu_RTTI
 	.4byte 0
@@ -15451,8 +15451,8 @@ lbl_80537188:
 	.4byte func_801BBC38
 
 
-.global __vt__80537250
-__vt__80537250:
+.global __vt__CMenuKizunaTalk
+__vt__CMenuKizunaTalk:
 	# ROM: 0x533350
 	.4byte CMenuKizunaTalk_RTTI
 	.4byte 0
@@ -15465,7 +15465,7 @@ __vt__80537250:
 	.4byte func_80043F20
 	.4byte CMenuKizunaTalk_RTTI
 	.4byte 0xFFFFFF94
-	.4byte lbl_801BDD8C
+	.4byte func_801BDD8C
 	.4byte func_80039E28
 	.4byte func_801BDD84
 	.4byte func_80039E18
@@ -15499,8 +15499,8 @@ __vt__80537250:
 	.4byte func_80039D40
 	.4byte CMenuKizunaTalk_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_801BDD9C
-	.4byte lbl_801BDD94
+	.4byte func_801BDD9C
+	.4byte func_801BDD94
 	.4byte func_801BCDEC
 	.4byte func_801BD7D8
 
@@ -15538,8 +15538,8 @@ lbl_80537350:
 	.4byte 0
 
 
-.global __vt__80537378
-__vt__80537378:
+.global __vt__CMenuItemExchange
+__vt__CMenuItemExchange:
 	# ROM: 0x533478
 	.4byte CMenuItemExchange_RTTI
 	.4byte 0
@@ -15552,7 +15552,7 @@ __vt__80537378:
 	.4byte func_80043F20
 	.4byte CMenuItemExchange_RTTI
 	.4byte 0xFFFFFF94
-	.4byte lbl_801BF764
+	.4byte func_801BF764
 	.4byte func_801BF75C
 	.4byte func_801BED30
 
@@ -15593,8 +15593,8 @@ lbl_8053743C:
 	.balign 4
 
 
-.global __vt__80537448
-__vt__80537448:
+.global __vt__cf_CfPadTask
+__vt__cf_CfPadTask:
 	# ROM: 0x533548
 	.4byte cf_CfPadTask_RTTI
 	.4byte 0
@@ -15607,13 +15607,13 @@ __vt__80537448:
 	.4byte func_80043F20
 	.4byte cf_CfPadTask_RTTI
 	.4byte 0xFFFFFFAC
-	.4byte lbl_801C2BF4
+	.4byte func_801C2BF4
 	.4byte func_801C2BEC
 	.4byte cf_CfPadTask_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_801C2C0C
-	.4byte lbl_801C2C04
-	.4byte lbl_801C2BFC
+	.4byte func_801C2C0C
+	.4byte func_801C2C04
+	.4byte func_801C2BFC
 	.4byte func_801C29B0
 	.4byte func_801C2ACC
 	.4byte func_801C2AFC
@@ -15631,8 +15631,8 @@ lbl_8053749C:
 	.4byte 0
 
 
-.global __vt__805374C0
-__vt__805374C0:
+.global __vt__CTTask_cf_CfPadTask
+__vt__CTTask_cf_CfPadTask:
 	# ROM: 0x5335C0
 	.4byte CTTask_cf_CfPadTask_RTTI
 	.4byte 0
@@ -15667,8 +15667,8 @@ lbl_80537538:
 	.4byte 0
 
 
-.global __vt__80537548
-__vt__80537548:
+.global __vt__cf_CREvtLight
+__vt__cf_CREvtLight:
 	# ROM: 0x533648
 	.4byte cf_CREvtLight_RTTI
 	.4byte 0
@@ -15689,8 +15689,8 @@ lbl_80537570:
 	.4byte 0
 
 
-.global __vt__80537580
-__vt__80537580:
+.global __vt__CBgTex
+__vt__CBgTex:
 	# ROM: 0x533680
 	.4byte CBgTex_RTTI
 	.4byte 0
@@ -16164,8 +16164,8 @@ lbl_80537618:
 	.4byte 0
 
 
-.global __vt__80537CB8
-__vt__80537CB8:
+.global __vt__CTitleAHelp
+__vt__CTitleAHelp:
 	# ROM: 0x533DB8
 	.4byte CTitleAHelp_RTTI
 	.4byte 0
@@ -16351,8 +16351,8 @@ lbl_80537EBC:
 	.4byte 0
 
 
-.global __vt__80537EF8
-__vt__80537EF8:
+.global __vt__CItemBoxGrid
+__vt__CItemBoxGrid:
 	# ROM: 0x533FF8
 	.4byte CItemBoxGrid_RTTI
 	.4byte 0
@@ -16397,8 +16397,8 @@ lbl_80537F80:
 	.4byte 0
 
 
-.global __vt__80537F90
-__vt__80537F90:
+.global __vt__CArtsBookItem
+__vt__CArtsBookItem:
 	# ROM: 0x534090
 	.4byte CArtsBookItem_RTTI
 	.4byte 0
@@ -16413,8 +16413,8 @@ lbl_80537FA0:
 	.4byte 0
 
 
-.global __vt__80537FB0
-__vt__80537FB0:
+.global __vt__CVisionItem
+__vt__CVisionItem:
 	# ROM: 0x5340B0
 	.4byte CVisionItem_RTTI
 	.4byte 0
@@ -16429,8 +16429,8 @@ lbl_80537FC0:
 	.4byte 0
 
 
-.global __vt__80537FD0
-__vt__80537FD0:
+.global __vt__CQuestItem
+__vt__CQuestItem:
 	# ROM: 0x5340D0
 	.4byte CQuestItem_RTTI
 	.4byte 0
@@ -16447,8 +16447,8 @@ lbl_80537FE0:
 	.4byte lbl_805015AC
 
 
-.global __vt__80537FF0
-__vt__80537FF0:
+.global __vt__CSubCur
+__vt__CSubCur:
 	# ROM: 0x5340F0
 	.4byte CSubCur_RTTI
 	.4byte 0
@@ -16464,8 +16464,8 @@ lbl_80538008:
 	.4byte 0
 
 
-.global __vt__80538014
-__vt__80538014:
+.global __vt__CCur22
+__vt__CCur22:
 	# ROM: 0x534114
 	.4byte CCur22_RTTI
 	.4byte 0
@@ -16482,8 +16482,8 @@ lbl_80538030:
 	.4byte 0
 
 
-.global __vt__8053803C
-__vt__8053803C:
+.global __vt__CCur18
+__vt__CCur18:
 	# ROM: 0x53413C
 	.4byte CCur18_RTTI
 	.4byte 0
@@ -16501,8 +16501,8 @@ lbl_80538058:
 	.4byte 0
 
 
-.global __vt__80538068
-__vt__80538068:
+.global __vt__CCur16
+__vt__CCur16:
 	# ROM: 0x534168
 	.4byte CCur16_RTTI
 	.4byte 0
@@ -16519,8 +16519,8 @@ lbl_80538080:
 	.4byte 0
 
 
-.global __vt__80538090
-__vt__80538090:
+.global __vt__CCur15
+__vt__CCur15:
 	# ROM: 0x534190
 	.4byte CCur15_RTTI
 	.4byte 0
@@ -16537,8 +16537,8 @@ lbl_805380A8:
 	.4byte 0
 
 
-.global __vt__805380B8
-__vt__805380B8:
+.global __vt__CCur14
+__vt__CCur14:
 	# ROM: 0x5341B8
 	.4byte CCur14_RTTI
 	.4byte 0
@@ -16555,8 +16555,8 @@ lbl_805380D0:
 	.4byte 0
 
 
-.global __vt__805380E0
-__vt__805380E0:
+.global __vt__CCur11
+__vt__CCur11:
 	# ROM: 0x5341E0
 	.4byte CCur11_RTTI
 	.4byte 0
@@ -16573,8 +16573,8 @@ lbl_805380F8:
 	.4byte 0
 
 
-.global __vt__80538108
-__vt__80538108:
+.global __vt__CCur09
+__vt__CCur09:
 	# ROM: 0x534208
 	.4byte CCur09_RTTI
 	.4byte 0
@@ -16591,8 +16591,8 @@ lbl_80538120:
 	.4byte 0
 
 
-.global __vt__80538130
-__vt__80538130:
+.global __vt__CCur07
+__vt__CCur07:
 	# ROM: 0x534230
 	.4byte CCur07_RTTI
 	.4byte 0
@@ -16631,8 +16631,8 @@ lbl_80538170:
 	.4byte 0
 
 
-.global __vt__80538188
-__vt__80538188:
+.global __vt__CSortMenu
+__vt__CSortMenu:
 	# ROM: 0x534288
 	.4byte CSortMenu_RTTI
 	.4byte 0
@@ -16692,8 +16692,8 @@ lbl_80538220:
 	.4byte 0
 
 
-.global __vt__80538248
-__vt__80538248:
+.global __vt__CItemBoxInfo2
+__vt__CItemBoxInfo2:
 	# ROM: 0x534348
 	.4byte CItemBoxInfo2_RTTI
 	.4byte 0
@@ -16738,8 +16738,8 @@ lbl_805382D0:
 	.4byte 0
 
 
-.global __vt__805382E0
-__vt__805382E0:
+.global __vt__CItemBoxInfo
+__vt__CItemBoxInfo:
 	# ROM: 0x5343E0
 	.4byte CItemBoxInfo_RTTI
 	.4byte 0
@@ -16784,8 +16784,8 @@ lbl_80538368:
 	.4byte 0
 
 
-.global __vt__80538378
-__vt__80538378:
+.global __vt__CNumSelect
+__vt__CNumSelect:
 	# ROM: 0x534478
 	.4byte CNumSelect_RTTI
 	.4byte 0
@@ -16881,8 +16881,8 @@ lbl_80538478:
 	.4byte 0
 
 
-.global __vt__805384A0
-__vt__805384A0:
+.global __vt__CItemBoxLine
+__vt__CItemBoxLine:
 	# ROM: 0x5345A0
 	.4byte CItemBoxLine_RTTI
 	.4byte 0
@@ -16927,8 +16927,8 @@ lbl_80538528:
 	.4byte 0
 
 
-.global __vt__80538538
-__vt__80538538:
+.global __vt__CIBLTabCur
+__vt__CIBLTabCur:
 	# ROM: 0x534638
 	.4byte CIBLTabCur_RTTI
 	.4byte 0
@@ -16967,8 +16967,8 @@ lbl_80538578:
 	.4byte lbl_80503188
 
 
-.global __vt__80538590
-__vt__80538590:
+.global __vt__CScrollBar
+__vt__CScrollBar:
 	# ROM: 0x534690
 	.4byte CScrollBar_RTTI
 	.4byte 0
@@ -17102,8 +17102,8 @@ lbl_80538700:
 	.4byte lbl_801F6EAC
 
 
-.global __vt__80538728
-__vt__80538728:
+.global __vt__cf_CfGimmickObject
+__vt__cf_CfGimmickObject:
 	# ROM: 0x534828
 	.4byte cf_CfGimmickObject_RTTI
 	.4byte 0
@@ -17131,8 +17131,8 @@ lbl_80538760:
 	.4byte 0
 
 
-.global __vt__80538770
-__vt__80538770:
+.global __vt__cf_CfObjectTbox
+__vt__cf_CfObjectTbox:
 	# ROM: 0x534870
 	.4byte cf_CfObjectTbox_RTTI
 	.4byte 0
@@ -17289,8 +17289,8 @@ lbl_80538998:
 	.4byte 0
 
 
-.global __vt__805389C0
-__vt__805389C0:
+.global __vt__cf_CfResTboxImpl
+__vt__cf_CfResTboxImpl:
 	# ROM: 0x534AC0
 	.4byte cf_CfResTboxImpl_RTTI
 	.4byte 0
@@ -17355,8 +17355,8 @@ lbl_80538A40:
 	.4byte lbl_801FA460
 
 
-.global __vt__80538A94
-__vt__80538A94:
+.global __vt__CPartyStateWin
+__vt__CPartyStateWin:
 	# ROM: 0x534B94
 	.4byte CPartyStateWin_RTTI
 	.4byte 0
@@ -17394,7 +17394,7 @@ __vt__80538A94:
 	.4byte func_80039D40
 	.4byte CPartyStateWin_RTTI
 	.4byte 0xFFFFFFFC
-	.4byte lbl_801FBDC0
+	.4byte func_801FBDC0
 	.4byte func_801FBDB8
 	.4byte func_801FBCFC
 
@@ -17408,8 +17408,8 @@ lbl_80538B30:
 	.4byte 0
 
 
-.global __vt__80538B48
-__vt__80538B48:
+.global __vt__CModelDisp
+__vt__CModelDisp:
 	# ROM: 0x534C48
 	.4byte CModelDisp_RTTI
 	.4byte 0
@@ -17430,8 +17430,8 @@ lbl_80538B74:
 	.4byte 0
 
 
-.global __vt__80538B80
-__vt__80538B80:
+.global __vt__CPartyState
+__vt__CPartyState:
 	# ROM: 0x534C80
 	.4byte CPartyState_RTTI
 	.4byte 0
@@ -17507,8 +17507,8 @@ lbl_80538C18:
 	.4byte 0
 
 
-.global __vt__80538C80
-__vt__80538C80:
+.global __vt__CModelDispEquip
+__vt__CModelDispEquip:
 	# ROM: 0x534D80
 	.4byte CModelDispEquip_RTTI
 	.4byte 0
@@ -17647,8 +17647,8 @@ lbl_80538E04:
 	.4byte 0
 
 
-.global __vt__80538E40
-__vt__80538E40:
+.global __vt__CEquipChange
+__vt__CEquipChange:
 	# ROM: 0x534F40
 	.4byte CEquipChange_RTTI
 	.4byte 0
@@ -17699,8 +17699,8 @@ lbl_80538ED8:
 	.balign 4
 
 
-.global __vt__80538EE4
-__vt__80538EE4:
+.global __vt__reslist_cf_CfMapMineManager_MinePoint
+__vt__reslist_cf_CfMapMineManager_MinePoint:
 	# ROM: 0x534FE4
 	.4byte reslist_cf_CfMapMineManager_MinePoint_RTTI
 	.4byte 0
@@ -17713,16 +17713,16 @@ lbl_80538EF0:
 	.4byte 0
 
 
-.global __vt__80538EFC
-__vt__80538EFC:
+.global __vt___reslist_base_cf_CfMapMineManager_MinePoint
+__vt___reslist_base_cf_CfMapMineManager_MinePoint:
 	# ROM: 0x534FFC
 	.4byte _reslist_base_cf_CfMapMineManager_MinePoint_RTTI
 	.4byte 0
 	.4byte func_80205FA8
 
 
-.global __vt__80538F08
-__vt__80538F08:
+.global __vt__CItemBoxGridSubMenu
+__vt__CItemBoxGridSubMenu:
 	# ROM: 0x535008
 	.4byte CItemBoxGridSubMenu_RTTI
 	.4byte 0
@@ -17800,8 +17800,8 @@ lbl_80538FE8:
 	.4byte func_8020AA8C
 
 
-.global __vt__80538FFC
-__vt__80538FFC:
+.global __vt__cf_CfGimmick
+__vt__cf_CfGimmick:
 	# ROM: 0x5350FC
 	.4byte cf_CfGimmick_RTTI
 	.4byte 0
@@ -17843,8 +17843,8 @@ lbl_80539020:
 	.4byte func_8020C274
 
 
-.global __vt__80539080
-__vt__80539080:
+.global __vt__cf_CfGimmickElv
+__vt__cf_CfGimmickElv:
 	# ROM: 0x535180
 	.4byte cf_CfGimmickElv_RTTI
 	.4byte 0
@@ -17865,8 +17865,8 @@ lbl_805390A4:
 	.4byte 0
 
 
-.global __vt__805390B8
-__vt__805390B8:
+.global __vt__cf_CfGimmickLock
+__vt__cf_CfGimmickLock:
 	# ROM: 0x5351B8
 	.4byte cf_CfGimmickLock_RTTI
 	.4byte 0
@@ -17922,8 +17922,8 @@ lbl_805390F0:
 	.4byte func_8020EE18
 
 
-.global __vt__80539168
-__vt__80539168:
+.global __vt__cf_CfGimmickWarp
+__vt__cf_CfGimmickWarp:
 	# ROM: 0x535268
 	.4byte cf_CfGimmickWarp_RTTI
 	.4byte 0
@@ -17961,8 +17961,8 @@ lbl_805391A0:
 	.4byte func_8020FD2C
 
 
-.global __vt__805391D0
-__vt__805391D0:
+.global __vt__cf_CfGimmickJump
+__vt__cf_CfGimmickJump:
 	# ROM: 0x5352D0
 	.4byte cf_CfGimmickJump_RTTI
 	.4byte 0
@@ -18006,8 +18006,8 @@ lbl_80539208:
 	.4byte func_80210C1C
 
 
-.global __vt__80539250
-__vt__80539250:
+.global __vt__cf_CfGimmickItem
+__vt__cf_CfGimmickItem:
 	# ROM: 0x535350
 	.4byte cf_CfGimmickItem_RTTI
 	.4byte 0
@@ -18028,8 +18028,8 @@ lbl_80539274:
 	.4byte 0
 
 
-.global __vt__80539288
-__vt__80539288:
+.global __vt__CMenuMakeCrystal
+__vt__CMenuMakeCrystal:
 	# ROM: 0x535388
 	.4byte CMenuMakeCrystal_RTTI
 	.4byte 0
@@ -18042,7 +18042,7 @@ __vt__80539288:
 	.4byte func_80043F20
 	.4byte CMenuMakeCrystal_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_802124FC
+	.4byte func_802124FC
 	.4byte func_802124F4
 	.4byte func_80212380
 
@@ -18081,8 +18081,8 @@ lbl_805392F8:
 	.4byte lbl_80212AF8
 
 
-.global __vt__80539328
-__vt__80539328:
+.global __vt__CMakeCrystalWin
+__vt__CMakeCrystalWin:
 	# ROM: 0x535428
 	.4byte CMakeCrystalWin_RTTI
 	.4byte 0
@@ -18154,8 +18154,8 @@ lbl_805393D8:
 	.4byte 0
 
 
-.global __vt__80539418
-__vt__80539418:
+.global __vt__CMCCrystalBox
+__vt__CMCCrystalBox:
 	# ROM: 0x535518
 	.4byte CMCCrystalBox_RTTI
 	.4byte 0
@@ -18200,8 +18200,8 @@ lbl_805394A0:
 	.4byte 0
 
 
-.global __vt__805394B0
-__vt__805394B0:
+.global __vt__CMCCrystalInfo
+__vt__CMCCrystalInfo:
 	# ROM: 0x5355B0
 	.4byte CMCCrystalInfo_RTTI
 	.4byte 0
@@ -18317,8 +18317,8 @@ lbl_80539604:
 	.4byte 0
 
 
-.global __vt__80539628
-__vt__80539628:
+.global __vt__CModelDispMakeCrystal
+__vt__CModelDispMakeCrystal:
 	# ROM: 0x535728
 	.4byte CModelDispMakeCrystal_RTTI
 	.4byte 0
@@ -18379,8 +18379,8 @@ lbl_805396F0:
 	.4byte 0
 
 
-.global __vt__80539700
-__vt__80539700:
+.global __vt__CMCCylinderGauge
+__vt__CMCCylinderGauge:
 	# ROM: 0x535800
 	.4byte CMCCylinderGauge_RTTI
 	.4byte 0
@@ -18403,8 +18403,8 @@ lbl_80539710:
 	.4byte 0
 
 
-.global __vt__80539738
-__vt__80539738:
+.global __vt__CMCCrystalList
+__vt__CMCCrystalList:
 	# ROM: 0x535838
 	.4byte CMCCrystalList_RTTI
 	.4byte 0
@@ -18449,8 +18449,8 @@ lbl_805397C0:
 	.4byte 0
 
 
-.global __vt__805397D0
-__vt__805397D0:
+.global __vt__CMCEffCylinder
+__vt__CMCEffCylinder:
 	# ROM: 0x5358D0
 	.4byte CMCEffCylinder_RTTI
 	.4byte 0
@@ -18458,8 +18458,8 @@ __vt__805397D0:
 	.4byte func_80225D78
 
 
-.global __vt__805397E0
-__vt__805397E0:
+.global __vt__CMCEffDivide
+__vt__CMCEffDivide:
 	# ROM: 0x5358E0
 	.4byte CMCEffDivide_RTTI
 	.4byte 0
@@ -18474,8 +18474,8 @@ lbl_805397F4:
 	.4byte 0
 
 
-.global __vt__80539800
-__vt__80539800:
+.global __vt__CMCEffUpRank
+__vt__CMCEffUpRank:
 	# ROM: 0x535900
 	.4byte CMCEffUpRank_RTTI
 	.4byte 0
@@ -18490,8 +18490,8 @@ lbl_80539814:
 	.4byte 0
 
 
-.global __vt__80539820
-__vt__80539820:
+.global __vt__CMCEffCrystal
+__vt__CMCEffCrystal:
 	# ROM: 0x535920
 	.4byte CMCEffCrystal_RTTI
 	.4byte 0
@@ -18499,8 +18499,8 @@ __vt__80539820:
 	.4byte func_80224CE4
 
 
-.global __vt__80539830
-__vt__80539830:
+.global __vt__CMCEffFailure
+__vt__CMCEffFailure:
 	# ROM: 0x535930
 	.4byte CMCEffFailure_RTTI
 	.4byte 0
@@ -18515,8 +18515,8 @@ lbl_80539844:
 	.4byte 0
 
 
-.global __vt__80539850
-__vt__80539850:
+.global __vt__CMCEffSuccess
+__vt__CMCEffSuccess:
 	# ROM: 0x535950
 	.4byte CMCEffSuccess_RTTI
 	.4byte 0
@@ -18524,16 +18524,16 @@ __vt__80539850:
 	.4byte func_80224760
 
 
-.global __vt__80539860
-__vt__80539860:
+.global __vt__CMCEffUpPrm
+__vt__CMCEffUpPrm:
 	# ROM: 0x535960
 	.4byte CMCEffUpPrm_RTTI
 	.4byte 0
 	.4byte func_80224374
 
 
-.global __vt__8053986C
-__vt__8053986C:
+.global __vt__CMCEffUpGreen
+__vt__CMCEffUpGreen:
 	# ROM: 0x53596C
 	.4byte CMCEffUpGreen_RTTI
 	.4byte 0
@@ -18548,8 +18548,8 @@ lbl_80539880:
 	.4byte 0
 
 
-.global __vt__8053988C
-__vt__8053988C:
+.global __vt__CMCEffUpBlue
+__vt__CMCEffUpBlue:
 	# ROM: 0x53598C
 	.4byte CMCEffUpBlue_RTTI
 	.4byte 0
@@ -18564,8 +18564,8 @@ lbl_805398A0:
 	.4byte 0
 
 
-.global __vt__805398AC
-__vt__805398AC:
+.global __vt__CMCEffUpRed
+__vt__CMCEffUpRed:
 	# ROM: 0x5359AC
 	.4byte CMCEffUpRed_RTTI
 	.4byte 0
@@ -18580,8 +18580,8 @@ lbl_805398C0:
 	.4byte 0
 
 
-.global __vt__805398CC
-__vt__805398CC:
+.global __vt__CMCEffStart
+__vt__CMCEffStart:
 	# ROM: 0x5359CC
 	.4byte CMCEffStart_RTTI
 	.4byte 0
@@ -18590,8 +18590,8 @@ __vt__805398CC:
 	.4byte func_80223F24
 
 
-.global __vt__805398E0
-__vt__805398E0:
+.global __vt__CMenuQstCnt
+__vt__CMenuQstCnt:
 	# ROM: 0x5359E0
 	.4byte CMenuQstCnt_RTTI
 	.4byte 0
@@ -18638,8 +18638,8 @@ __vt__805398E0:
 	.4byte func_80039D40
 	.4byte CMenuQstCnt_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_80226FA4
-	.4byte lbl_80226F9C
+	.4byte func_80226FA4
+	.4byte func_80226F9C
 	.4byte func_802268C8
 
 .global lbl_805399A0
@@ -18688,8 +18688,8 @@ lbl_805399E0:
 	.4byte 0
 
 
-.global __vt__80539A40
-__vt__80539A40:
+.global __vt__CQstLogList
+__vt__CQstLogList:
 	# ROM: 0x535B40
 	.4byte CQstLogList_RTTI
 	.4byte 0
@@ -18834,8 +18834,8 @@ lbl_80539BF8:
 	.4byte lbl_8022AB2C
 
 
-.global __vt__80539C30
-__vt__80539C30:
+.global __vt__CQstLogInfo
+__vt__CQstLogInfo:
 	# ROM: 0x535D30
 	.4byte CQstLogInfo_RTTI
 	.4byte 0
@@ -18880,8 +18880,8 @@ lbl_80539CB8:
 	.4byte 0
 
 
-.global __vt__80539CC8
-__vt__80539CC8:
+.global __vt__CSysWin
+__vt__CSysWin:
 	# ROM: 0x535DC8
 	.4byte CSysWin_RTTI
 	.4byte 0
@@ -18926,8 +18926,8 @@ lbl_80539D54:
 	.4byte 0
 
 
-.global __vt__80539D60
-__vt__80539D60:
+.global __vt__CSelShopWin
+__vt__CSelShopWin:
 	# ROM: 0x535E60
 	.4byte CSelShopWin_RTTI
 	.4byte 0
@@ -18972,8 +18972,8 @@ lbl_80539DE8:
 	.4byte 0
 
 
-.global __vt__80539DF8
-__vt__80539DF8:
+.global __vt__CExchangeWin
+__vt__CExchangeWin:
 	# ROM: 0x535EF8
 	.4byte CExchangeWin_RTTI
 	.4byte 0
@@ -19018,8 +19018,8 @@ lbl_80539E80:
 	.4byte 0
 
 
-.global __vt__80539E90
-__vt__80539E90:
+.global __vt__CPresentWin
+__vt__CPresentWin:
 	# ROM: 0x535F90
 	.4byte CPresentWin_RTTI
 	.4byte 0
@@ -19064,8 +19064,8 @@ lbl_80539F18:
 	.4byte 0
 
 
-.global __vt__80539F28
-__vt__80539F28:
+.global __vt__CMCCrystalSupport
+__vt__CMCCrystalSupport:
 	# ROM: 0x536028
 	.4byte CMCCrystalSupport_RTTI
 	.4byte 0
@@ -19110,8 +19110,8 @@ lbl_80539FB0:
 	.4byte 0
 
 
-.global __vt__80539FC0
-__vt__80539FC0:
+.global __vt__CMenuArtsSet
+__vt__CMenuArtsSet:
 	# ROM: 0x5360C0
 	.4byte CMenuArtsSet_RTTI
 	.4byte 0
@@ -19124,7 +19124,7 @@ __vt__80539FC0:
 	.4byte func_80043F20
 	.4byte CMenuArtsSet_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_8022FA50
+	.4byte func_8022FA50
 	.4byte func_8022FA48
 	.4byte func_8022F364
 
@@ -19202,8 +19202,8 @@ lbl_8053A09C:
 	.4byte lbl_802310E0
 
 
-.global __vt__8053A0C0
-__vt__8053A0C0:
+.global __vt__CArtsList
+__vt__CArtsList:
 	# ROM: 0x5361C0
 	.4byte CArtsList_RTTI
 	.4byte 0
@@ -19316,8 +19316,8 @@ lbl_8053A18C:
 	.4byte lbl_802379E8
 
 
-.global __vt__8053A240
-__vt__8053A240:
+.global __vt__CArtsInfo
+__vt__CArtsInfo:
 	# ROM: 0x536340
 	.4byte CArtsInfo_RTTI
 	.4byte 0
@@ -19411,8 +19411,8 @@ lbl_8053A2E4:
 	.4byte lbl_8023EB34
 
 
-.global __vt__8053A374
-__vt__8053A374:
+.global __vt__cf_CfNandManager
+__vt__cf_CfNandManager:
 	# ROM: 0x536474
 	.4byte cf_CfNandManager_RTTI
 	.4byte 0
@@ -19425,7 +19425,7 @@ __vt__8053A374:
 	.4byte func_80043F20
 	.4byte cf_CfNandManager_RTTI
 	.4byte 0xFFFFFFAC
-	.4byte lbl_802405FC
+	.4byte func_802405FC
 	.4byte func_80039E28
 	.4byte func_802405F4
 	.4byte func_80039E18
@@ -19459,8 +19459,8 @@ __vt__8053A374:
 	.4byte func_80039D40
 	.4byte cf_CfNandManager_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_8024060C
-	.4byte lbl_80240604
+	.4byte func_8024060C
+	.4byte func_80240604
 	.4byte func_8023E4D4
 	.4byte func_8024047C
 
@@ -19481,8 +19481,8 @@ lbl_8053A438:
 	.4byte 0
 
 
-.global __vt__8053A46C
-__vt__8053A46C:
+.global __vt__CTTask_cf_CfNandManager
+__vt__CTTask_cf_CfNandManager:
 	# ROM: 0x53656C
 	.4byte CTTask_cf_CfNandManager_RTTI
 	.4byte 0
@@ -19523,8 +19523,8 @@ lbl_8053A4B0:
 	.4byte lbl_802420F0
 
 
-.global __vt__8053A4E0
-__vt__8053A4E0:
+.global __vt__CMenuMapSelect
+__vt__CMenuMapSelect:
 	# ROM: 0x5365E0
 	.4byte CMenuMapSelect_RTTI
 	.4byte 0
@@ -19537,7 +19537,7 @@ __vt__8053A4E0:
 	.4byte func_80043F20
 	.4byte CMenuMapSelect_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_802430A4
+	.4byte func_802430A4
 	.4byte func_8024309C
 	.4byte func_80242144
 
@@ -19591,8 +19591,8 @@ lbl_8053A550:
 	.4byte 0
 
 
-.global __vt__8053A5C8
-__vt__8053A5C8:
+.global __vt__CMapSel
+__vt__CMapSel:
 	# ROM: 0x5366C8
 	.4byte CMapSel_RTTI
 	.4byte 0
@@ -19637,8 +19637,8 @@ lbl_8053A650:
 	.4byte 0
 
 
-.global __vt__8053A660
-__vt__8053A660:
+.global __vt__CFade
+__vt__CFade:
 	# ROM: 0x536760
 	.4byte CFade_RTTI
 	.4byte 0
@@ -19751,8 +19751,8 @@ lbl_8053A768:
 	.4byte 0
 
 
-.global __vt__8053A7E0
-__vt__8053A7E0:
+.global __vt__CFloorMap
+__vt__CFloorMap:
 	# ROM: 0x5368E0
 	.4byte CFloorMap_RTTI
 	.4byte 0
@@ -19796,8 +19796,8 @@ lbl_8053A868:
 	.4byte 0
 
 
-.global __vt__8053A874
-__vt__8053A874:
+.global __vt__CTargetCur
+__vt__CTargetCur:
 	# ROM: 0x536974
 	.4byte CTargetCur_RTTI
 	.4byte 0
@@ -19810,8 +19810,8 @@ lbl_8053A880:
 	.4byte 0
 
 
-.global __vt__8053A88C
-__vt__8053A88C:
+.global __vt__CLandCur
+__vt__CLandCur:
 	# ROM: 0x53698C
 	.4byte CLandCur_RTTI
 	.4byte 0
@@ -19824,8 +19824,8 @@ lbl_8053A898:
 	.4byte 0
 
 
-.global __vt__8053A8A4
-__vt__8053A8A4:
+.global __vt__CFloorMarker
+__vt__CFloorMarker:
 	# ROM: 0x5369A4
 	.4byte CFloorMarker_RTTI
 	.4byte 0
@@ -19838,8 +19838,8 @@ lbl_8053A8B0:
 	.4byte 0
 
 
-.global __vt__8053A8BC
-__vt__8053A8BC:
+.global __vt__CFloorCur
+__vt__CFloorCur:
 	# ROM: 0x5369BC
 	.4byte CFloorCur_RTTI
 	.4byte 0
@@ -19859,8 +19859,8 @@ lbl_8053A8C8:
 	.4byte lbl_802513FC
 
 
-.global __vt__8053A8E8
-__vt__8053A8E8:
+.global __vt__CMenuMapSelectSC
+__vt__CMenuMapSelectSC:
 	# ROM: 0x5369E8
 	.4byte CMenuMapSelectSC_RTTI
 	.4byte 0
@@ -19873,7 +19873,7 @@ __vt__8053A8E8:
 	.4byte func_80043F20
 	.4byte CMenuMapSelectSC_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_80251DF0
+	.4byte func_80251DF0
 	.4byte func_80251DE8
 	.4byte func_80251430
 
@@ -19895,8 +19895,8 @@ lbl_8053A920:
 	.4byte 0
 
 
-.global __vt__8053A958
-__vt__8053A958:
+.global __vt__CMenuPause
+__vt__CMenuPause:
 	# ROM: 0x536A58
 	.4byte CMenuPause_RTTI
 	.4byte 0
@@ -19943,8 +19943,8 @@ __vt__8053A958:
 	.4byte func_80039D40
 	.4byte CMenuPause_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_80252638
-	.4byte lbl_80252630
+	.4byte func_80252638
+	.4byte func_80252630
 	.4byte func_80252374
 
 .global lbl_8053AA18
@@ -19967,8 +19967,8 @@ lbl_8053AA18:
 	.4byte 0
 
 
-.global __vt__8053AA58
-__vt__8053AA58:
+.global __vt__CMenuCollepedia
+__vt__CMenuCollepedia:
 	# ROM: 0x536B58
 	.4byte CMenuCollepedia_RTTI
 	.4byte 0
@@ -19981,7 +19981,7 @@ __vt__8053AA58:
 	.4byte func_80043F20
 	.4byte CMenuCollepedia_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_80253190
+	.4byte func_80253190
 	.4byte func_80253188
 	.4byte func_80252BBC
 
@@ -20067,8 +20067,8 @@ lbl_8053AB74:
 	.4byte lbl_80255514
 
 
-.global __vt__8053AB98
-__vt__8053AB98:
+.global __vt__CCollepedia
+__vt__CCollepedia:
 	# ROM: 0x536C98
 	.4byte CCollepedia_RTTI
 	.4byte 0
@@ -20112,8 +20112,8 @@ lbl_8053AC20:
 	.4byte 0
 
 
-.global __vt__8053AC2C
-__vt__8053AC2C:
+.global __vt__CCLPCur
+__vt__CCLPCur:
 	# ROM: 0x536D2C
 	.4byte CCLPCur_RTTI
 	.4byte 0
@@ -20137,8 +20137,8 @@ lbl_8053AC38:
 	.4byte 0
 
 
-.global __vt__8053AC68
-__vt__8053AC68:
+.global __vt__CMenuKizunagram
+__vt__CMenuKizunagram:
 	# ROM: 0x536D68
 	.4byte CMenuKizunagram_RTTI
 	.4byte 0
@@ -20151,7 +20151,7 @@ __vt__8053AC68:
 	.4byte func_80043F20
 	.4byte CMenuKizunagram_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_80257A84
+	.4byte func_80257A84
 	.4byte func_80257A7C
 	.4byte func_802571B8
 
@@ -20190,8 +20190,8 @@ lbl_8053ACD8:
 	.4byte 0
 
 
-.global __vt__8053AD08
-__vt__8053AD08:
+.global __vt__CKizunagram
+__vt__CKizunagram:
 	# ROM: 0x536E08
 	.4byte CKizunagram_RTTI
 	.4byte 0
@@ -20235,32 +20235,32 @@ lbl_8053AD90:
 	.4byte 0
 
 
-.global __vt__8053AD9C
-__vt__8053AD9C:
+.global __vt__CKizunaInfo
+__vt__CKizunaInfo:
 	# ROM: 0x536E9C
 	.4byte CKizunaInfo_RTTI
 	.4byte 0
 	.4byte func_8025B630
 
 
-.global __vt__8053ADA8
-__vt__8053ADA8:
+.global __vt__CKizunaLine
+__vt__CKizunaLine:
 	# ROM: 0x536EA8
 	.4byte CKizunaLine_RTTI
 	.4byte 0
 	.4byte func_8025808C
 
 
-.global __vt__8053ADB4
-__vt__8053ADB4:
+.global __vt__CKizunaCur
+__vt__CKizunaCur:
 	# ROM: 0x536EB4
 	.4byte CKizunaCur_RTTI
 	.4byte 0
 	.4byte func_80257E18
 
 
-.global __vt__8053ADC0
-__vt__8053ADC0:
+.global __vt__CKizunaRadar
+__vt__CKizunaRadar:
 	# ROM: 0x536EC0
 	.4byte CKizunaRadar_RTTI
 	.4byte 0
@@ -20268,8 +20268,8 @@ __vt__8053ADC0:
 	.4byte 0
 
 
-.global __vt__8053ADD0
-__vt__8053ADD0:
+.global __vt__CPcKizunagram
+__vt__CPcKizunagram:
 	# ROM: 0x536ED0
 	.4byte CPcKizunagram_RTTI
 	.4byte 0
@@ -20313,8 +20313,8 @@ lbl_8053AE58:
 	.4byte 0
 
 
-.global __vt__8053AE64
-__vt__8053AE64:
+.global __vt__CPcKizunaCur
+__vt__CPcKizunaCur:
 	# ROM: 0x536F64
 	.4byte CPcKizunaCur_RTTI
 	.4byte 0
@@ -20405,8 +20405,8 @@ lbl_8053B058:
 	.balign 4
 
 
-.global __vt__8053B068
-__vt__8053B068:
+.global __vt__CMenuPassiveSkill
+__vt__CMenuPassiveSkill:
 	# ROM: 0x537168
 	.4byte CMenuPassiveSkill_RTTI
 	.4byte 0
@@ -20419,7 +20419,7 @@ __vt__8053B068:
 	.4byte func_80043F20
 	.4byte CMenuPassiveSkill_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_80263EB4
+	.4byte func_80263EB4
 	.4byte func_80263EAC
 	.4byte func_8026382C
 
@@ -20464,8 +20464,8 @@ lbl_8053B0D8:
 	.4byte 0
 
 
-.global __vt__8053B120
-__vt__8053B120:
+.global __vt__UI_CPassiveSkill
+__vt__UI_CPassiveSkill:
 	# ROM: 0x537220
 	.4byte UI_CPassiveSkill_RTTI
 	.4byte 0
@@ -20509,24 +20509,24 @@ lbl_8053B1A8:
 	.4byte 0
 
 
-.global __vt__8053B1B4
-__vt__8053B1B4:
+.global __vt__UI_CPassiveSkillLine
+__vt__UI_CPassiveSkillLine:
 	# ROM: 0x5372B4
 	.4byte UI_CPassiveSkillLine_RTTI
 	.4byte 0
 	.4byte func_80266B18
 
 
-.global __vt__8053B1C0
-__vt__8053B1C0:
+.global __vt__UI_CPassiveSkillInfo
+__vt__UI_CPassiveSkillInfo:
 	# ROM: 0x5372C0
 	.4byte UI_CPassiveSkillInfo_RTTI
 	.4byte 0
 	.4byte func_802646A8
 
 
-.global __vt__8053B1CC
-__vt__8053B1CC:
+.global __vt__UI_CPassiveSkillCur
+__vt__UI_CPassiveSkillCur:
 	# ROM: 0x5372CC
 	.4byte UI_CPassiveSkillCur_RTTI
 	.4byte 0
@@ -20565,8 +20565,8 @@ lbl_8053B220:
 	.4byte lbl_8066B208
 
 
-.global __vt__8053B230
-__vt__8053B230:
+.global __vt__cf_CfGimmickEne
+__vt__cf_CfGimmickEne:
 	# ROM: 0x537330
 	.4byte cf_CfGimmickEne_RTTI
 	.4byte 0
@@ -20587,8 +20587,8 @@ lbl_8053B254:
 	.4byte 0
 
 
-.global __vt__8053B268
-__vt__8053B268:
+.global __vt__CMenuBattleEnd
+__vt__CMenuBattleEnd:
 	# ROM: 0x537368
 	.4byte CMenuBattleEnd_RTTI
 	.4byte 0
@@ -20635,8 +20635,8 @@ __vt__8053B268:
 	.4byte func_80039D40
 	.4byte CMenuBattleEnd_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_8026FCA0
-	.4byte lbl_8026FC98
+	.4byte func_8026FCA0
+	.4byte func_8026FC98
 	.4byte func_8026F81C
 
 .global lbl_8053B328
@@ -20659,8 +20659,8 @@ lbl_8053B328:
 	.4byte 0
 
 
-.global __vt__8053B368
-__vt__8053B368:
+.global __vt__CMenuPlayAward
+__vt__CMenuPlayAward:
 	# ROM: 0x537468
 	.4byte CMenuPlayAward_RTTI
 	.4byte 0
@@ -20673,7 +20673,7 @@ __vt__8053B368:
 	.4byte func_80043F20
 	.4byte CMenuPlayAward_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_8027064C
+	.4byte func_8027064C
 	.4byte func_80270644
 	.4byte func_80270264
 
@@ -20695,8 +20695,8 @@ lbl_8053B3A0:
 	.4byte 0
 
 
-.global __vt__8053B3D8
-__vt__8053B3D8:
+.global __vt__CPlayAwardList
+__vt__CPlayAwardList:
 	# ROM: 0x5374D8
 	.4byte CPlayAwardList_RTTI
 	.4byte 0
@@ -20741,8 +20741,8 @@ lbl_8053B460:
 	.4byte 0
 
 
-.global __vt__8053B470
-__vt__8053B470:
+.global __vt__CMenuKizunaTalkList
+__vt__CMenuKizunaTalkList:
 	# ROM: 0x537570
 	.4byte CMenuKizunaTalkList_RTTI
 	.4byte 0
@@ -20755,7 +20755,7 @@ __vt__8053B470:
 	.4byte func_80043F20
 	.4byte CMenuKizunaTalkList_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_802726EC
+	.4byte func_802726EC
 	.4byte func_802726E4
 	.4byte func_80272370
 
@@ -20777,8 +20777,8 @@ lbl_8053B4A8:
 	.4byte 0
 
 
-.global __vt__8053B4E0
-__vt__8053B4E0:
+.global __vt__CKizunaTalkList
+__vt__CKizunaTalkList:
 	# ROM: 0x5375E0
 	.4byte CKizunaTalkList_RTTI
 	.4byte 0
@@ -20823,8 +20823,8 @@ lbl_8053B568:
 	.4byte 0
 
 
-.global __vt__8053B578
-__vt__8053B578:
+.global __vt__CSysWinBuff
+__vt__CSysWinBuff:
 	# ROM: 0x537678
 	.4byte CSysWinBuff_RTTI
 	.4byte 0
@@ -20837,7 +20837,7 @@ __vt__8053B578:
 	.4byte func_80043F20
 	.4byte CSysWinBuff_RTTI
 	.4byte 0xFFFFFF94
-	.4byte lbl_80274B08
+	.4byte func_80274B08
 	.4byte func_80039E28
 	.4byte func_80274B00
 	.4byte func_80039E18
@@ -20871,8 +20871,8 @@ __vt__8053B578:
 	.4byte func_80039D40
 	.4byte CSysWinBuff_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_80274B18
-	.4byte lbl_80274B10
+	.4byte func_80274B18
+	.4byte func_80274B10
 	.4byte func_802748B0
 	.4byte func_80274A84
 
@@ -20904,8 +20904,8 @@ lbl_8053B678:
 	.4byte 0
 
 
-.global __vt__8053B688
-__vt__8053B688:
+.global __vt__cf_ICamControlClassic
+__vt__cf_ICamControlClassic:
 	# ROM: 0x537788
 	.4byte cf_ICamControlClassic_RTTI
 	.4byte 0
@@ -20928,8 +20928,8 @@ lbl_8053B6B8:
 	.4byte 0
 
 
-.global __vt__8053B6C8
-__vt__8053B6C8:
+.global __vt__cf_ICamControlGc
+__vt__cf_ICamControlGc:
 	# ROM: 0x5377C8
 	.4byte cf_ICamControlGc_RTTI
 	.4byte 0
@@ -20954,8 +20954,8 @@ lbl_8053B6F8:
 	.4byte 0
 
 
-.global __vt__8053B710
-__vt__8053B710:
+.global __vt__cf_ICamControlRemote
+__vt__cf_ICamControlRemote:
 	# ROM: 0x537810
 	.4byte cf_ICamControlRemote_RTTI
 	.4byte 0
@@ -20989,8 +20989,8 @@ lbl_8053B750:
 	.4byte func_802756F0
 
 
-.global __vt__8053B768
-__vt__8053B768:
+.global __vt__cf_CfObjectImplTbox
+__vt__cf_CfObjectImplTbox:
 	# ROM: 0x537868
 	.4byte cf_CfObjectImplTbox_RTTI
 	.4byte 0
@@ -21043,8 +21043,8 @@ __vt__8053B768:
 	.4byte func_800CA6CC
 	.4byte cf_CfObjectImplTbox_RTTI
 	.4byte 0xFFFFFFF0
-	.4byte lbl_802759C0
-	.4byte lbl_802759B8
+	.4byte func_802759C0
+	.4byte func_802759B8
 	.4byte func_800CAB2C
 	.4byte func_800CBBD8
 	.4byte func_800CC01C
@@ -21067,8 +21067,8 @@ lbl_8053B858:
 	.4byte 0
 
 
-.global __vt__8053B880
-__vt__8053B880:
+.global __vt__CMenuLvUp
+__vt__CMenuLvUp:
 	# ROM: 0x537980
 	.4byte CMenuLvUp_RTTI
 	.4byte 0
@@ -21115,8 +21115,8 @@ __vt__8053B880:
 	.4byte func_80039D40
 	.4byte CMenuLvUp_RTTI
 	.4byte 0xFFFFFFA4
-	.4byte lbl_80276C28
-	.4byte lbl_80276C20
+	.4byte func_80276C28
+	.4byte func_80276C20
 	.4byte func_80275E7C
 
 .global lbl_8053B940
@@ -21195,32 +21195,32 @@ lbl_8053B9B8:
 	.4byte lbl_80278DC4
 
 
-.global __vt__8053BA24
-__vt__8053BA24:
+.global __vt__cf_CChainChance
+__vt__cf_CChainChance:
 	# ROM: 0x537B24
 	.4byte cf_CChainChance_RTTI
 	.4byte 0
 	.4byte func_800D8C5C
 
 
-.global __vt__8053BA30
-__vt__8053BA30:
+.global __vt__cf_CChainTimer
+__vt__cf_CChainTimer:
 	# ROM: 0x537B30
 	.4byte cf_CChainTimer_RTTI
 	.4byte 0
 	.4byte func_800D8C9C
 
 
-.global __vt__8053BA3C
-__vt__8053BA3C:
+.global __vt__cf_CChainMember
+__vt__cf_CChainMember:
 	# ROM: 0x537B3C
 	.4byte cf_CChainMember_RTTI
 	.4byte 0
 	.4byte func_800D8D7C
 
 
-.global __vt__8053BA48
-__vt__8053BA48:
+.global __vt__cf_CChainActor
+__vt__cf_CChainActor:
 	# ROM: 0x537B48
 	.4byte cf_CChainActor_RTTI
 	.4byte 0
@@ -21254,16 +21254,16 @@ __vt__8053BA48:
 	.4byte func_8027A9D0
 
 
-.global __vt__8053BAC0
-__vt__8053BAC0:
+.global __vt__cf_CChainActorList
+__vt__cf_CChainActorList:
 	# ROM: 0x537BC0
 	.4byte cf_CChainActorList_RTTI
 	.4byte 0
 	.4byte func_8027AF5C
 
 
-.global __vt__8053BACC
-__vt__8053BACC:
+.global __vt__reslist_cf_CChainActor
+__vt__reslist_cf_CChainActor:
 	# ROM: 0x537BCC
 	.4byte reslist_cf_CChainActor_RTTI
 	.4byte 0
@@ -21276,16 +21276,16 @@ lbl_8053BAD8:
 	.4byte 0
 
 
-.global __vt__8053BAE4
-__vt__8053BAE4:
+.global __vt___reslist_base_cf_CChainActor
+__vt___reslist_base_cf_CChainActor:
 	# ROM: 0x537BE4
 	.4byte _reslist_base_cf_CChainActor_RTTI
 	.4byte 0
 	.4byte func_8027ADF0
 
 
-.global __vt__8053BAF0
-__vt__8053BAF0:
+.global __vt__cf_CChainTemp
+__vt__cf_CChainTemp:
 	# ROM: 0x537BF0
 	.4byte cf_CChainTemp_RTTI
 	.4byte 0
@@ -21293,8 +21293,8 @@ __vt__8053BAF0:
 	.4byte 0
 
 
-.global __vt__8053BB00
-__vt__8053BB00:
+.global __vt__cf_Flusher_cf_CfObjectActor
+__vt__cf_Flusher_cf_CfObjectActor:
 	# ROM: 0x537C00
 	.4byte cf_Flusher_cf_CfObjectActor_RTTI
 	.4byte 0
@@ -21302,8 +21302,8 @@ __vt__8053BB00:
 	.4byte 0
 
 
-.global __vt__8053BB10
-__vt__8053BB10:
+.global __vt__CSysWinScenarioLog
+__vt__CSysWinScenarioLog:
 	# ROM: 0x537C10
 	.4byte CSysWinScenarioLog_RTTI
 	.4byte 0
@@ -21316,7 +21316,7 @@ __vt__8053BB10:
 	.4byte func_80043F20
 	.4byte CSysWinScenarioLog_RTTI
 	.4byte 0xFFFFFF94
-	.4byte lbl_8027EE70
+	.4byte func_8027EE70
 	.4byte func_80039E28
 	.4byte func_8027EE68
 	.4byte func_80039E18
@@ -21350,8 +21350,8 @@ __vt__8053BB10:
 	.4byte func_80039D40
 	.4byte CSysWinScenarioLog_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_8027EE80
-	.4byte lbl_8027EE78
+	.4byte func_8027EE80
+	.4byte func_8027EE78
 	.4byte func_8027E93C
 	.4byte func_8027EC80
 
@@ -21374,8 +21374,8 @@ lbl_8053BBD4:
 	.4byte 0
 
 
-.global __vt__8053BC10
-__vt__8053BC10:
+.global __vt__cf_CChainActorEne
+__vt__cf_CChainActorEne:
 	# ROM: 0x537D10
 	.4byte cf_CChainActorEne_RTTI
 	.4byte 0
@@ -21416,8 +21416,8 @@ lbl_8053BC88:
 	.4byte 0
 
 
-.global __vt__8053BC98
-__vt__8053BC98:
+.global __vt__cf_CChainActorPc
+__vt__cf_CChainActorPc:
 	# ROM: 0x537D98
 	.4byte cf_CChainActorPc_RTTI
 	.4byte 0
@@ -21543,8 +21543,8 @@ lbl_8053BDD4:
 	.4byte 0
 
 
-.global __vt__8053BE10
-__vt__8053BE10:
+.global __vt__CEquipItemBox
+__vt__CEquipItemBox:
 	# ROM: 0x537F10
 	.4byte CEquipItemBox_RTTI
 	.4byte 0
@@ -21588,8 +21588,8 @@ lbl_8053BE98:
 	.4byte 0
 
 
-.global __vt__8053BEA4
-__vt__8053BEA4:
+.global __vt__CEIBPageCur
+__vt__CEIBPageCur:
 	# ROM: 0x537FA4
 	.4byte CEIBPageCur_RTTI
 	.4byte 0
@@ -21602,16 +21602,16 @@ lbl_8053BEB0:
 	.4byte 0
 
 
-.global __vt__8053BEBC
-__vt__8053BEBC:
+.global __vt__CEIBCur
+__vt__CEIBCur:
 	# ROM: 0x537FBC
 	.4byte CEIBCur_RTTI
 	.4byte 0
 	.4byte func_80285994
 
 
-.global __vt__8053BEC8
-__vt__8053BEC8:
+.global __vt__CMenuSave
+__vt__CMenuSave:
 	# ROM: 0x537FC8
 	.4byte CMenuSave_RTTI
 	.4byte 0
@@ -21624,7 +21624,7 @@ __vt__8053BEC8:
 	.4byte func_80043F20
 	.4byte CMenuSave_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_8028E7C0
+	.4byte func_8028E7C0
 	.4byte func_8028E7B8
 	.4byte func_8028E310
 
@@ -21665,8 +21665,8 @@ lbl_8053BF38:
 	.4byte 0
 
 
-.global __vt__8053BF70
-__vt__8053BF70:
+.global __vt__CSaveLoad
+__vt__CSaveLoad:
 	# ROM: 0x538070
 	.4byte CSaveLoad_RTTI
 	.4byte 0
@@ -21710,8 +21710,8 @@ lbl_8053BFF8:
 	.4byte 0
 
 
-.global __vt__8053C004
-__vt__8053C004:
+.global __vt__CSLCur
+__vt__CSLCur:
 	# ROM: 0x538104
 	.4byte CSLCur_RTTI
 	.4byte 0
@@ -21738,8 +21738,8 @@ lbl_8053C030:
 	.4byte 0
 
 
-.global __vt__8053C040
-__vt__8053C040:
+.global __vt__CMenuPTChangeNotice
+__vt__CMenuPTChangeNotice:
 	# ROM: 0x538140
 	.4byte CMenuPTChangeNotice_RTTI
 	.4byte 0
@@ -21752,7 +21752,7 @@ __vt__8053C040:
 	.4byte func_80043F20
 	.4byte CMenuPTChangeNotice_RTTI
 	.4byte 0xFFFFFF94
-	.4byte lbl_80293D78
+	.4byte func_80293D78
 	.4byte func_80039E28
 	.4byte func_80293D70
 	.4byte func_80039E18
@@ -21786,8 +21786,8 @@ __vt__8053C040:
 	.4byte func_80039D40
 	.4byte CMenuPTChangeNotice_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_80293D88
-	.4byte lbl_80293D80
+	.4byte func_80293D88
+	.4byte func_80293D80
 	.4byte func_80293AF0
 	.4byte func_8029348C
 
@@ -21818,16 +21818,16 @@ lbl_8053C140:
 	.4byte 0x00000258
 
 
-.global __vt__8053C14C
-__vt__8053C14C:
+.global __vt__cf_CChainCombo
+__vt__cf_CChainCombo:
 	# ROM: 0x53824C
 	.4byte cf_CChainCombo_RTTI
 	.4byte 0
 	.4byte func_800D8C1C
 
 
-.global __vt__8053C158
-__vt__8053C158:
+.global __vt__CSysWinSave
+__vt__CSysWinSave:
 	# ROM: 0x538258
 	.4byte CSysWinSave_RTTI
 	.4byte 0
@@ -21874,8 +21874,8 @@ __vt__8053C158:
 	.4byte func_80039D40
 	.4byte CSysWinSave_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_8029481C
-	.4byte lbl_80294814
+	.4byte func_8029481C
+	.4byte func_80294814
 	.4byte func_80294440
 
 .global lbl_8053C218
@@ -21898,8 +21898,8 @@ lbl_8053C218:
 	.4byte 0
 
 
-.global __vt__8053C258
-__vt__8053C258:
+.global __vt__cf_CREvtMovie
+__vt__cf_CREvtMovie:
 	# ROM: 0x538358
 	.4byte cf_CREvtMovie_RTTI
 	.4byte 0
@@ -21920,8 +21920,8 @@ lbl_8053C280:
 	.4byte 0
 
 
-.global __vt__8053C290
-__vt__8053C290:
+.global __vt__CTaskGamePic
+__vt__CTaskGamePic:
 	# ROM: 0x538390
 	.4byte CTaskGamePic_RTTI
 	.4byte 0
@@ -21934,7 +21934,7 @@ __vt__8053C290:
 	.4byte func_80043F20
 	.4byte CTaskGamePic_RTTI
 	.4byte 0xFFFFFFAC
-	.4byte lbl_8029554C
+	.4byte func_8029554C
 	.4byte func_80039E28
 	.4byte func_80295544
 	.4byte func_80039E18
@@ -21968,8 +21968,8 @@ __vt__8053C290:
 	.4byte func_80039D40
 	.4byte CTaskGamePic_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_8029555C
-	.4byte lbl_80295554
+	.4byte func_8029555C
+	.4byte func_80295554
 	.4byte func_802950F4
 	.4byte func_8029539C
 
@@ -21986,8 +21986,8 @@ lbl_8053C354:
 	.4byte 0
 
 
-.global __vt__8053C378
-__vt__8053C378:
+.global __vt__CTTask_CTaskGamePic
+__vt__CTTask_CTaskGamePic:
 	# ROM: 0x538478
 	.4byte CTTask_CTaskGamePic_RTTI
 	.4byte 0
@@ -22010,8 +22010,8 @@ lbl_8053C39C:
 	.4byte 0
 
 
-.global __vt__8053C3B8
-__vt__8053C3B8:
+.global __vt__CTaskGameEvt
+__vt__CTaskGameEvt:
 	# ROM: 0x5384B8
 	.4byte CTaskGameEvt_RTTI
 	.4byte 0
@@ -22076,8 +22076,8 @@ lbl_8053C47C:
 	.4byte 0
 
 
-.global __vt__8053C4A0
-__vt__8053C4A0:
+.global __vt__CTTask_CTaskGameEvt
+__vt__CTTask_CTaskGameEvt:
 	# ROM: 0x5385A0
 	.4byte CTTask_CTaskGameEvt_RTTI
 	.4byte 0
@@ -22305,8 +22305,8 @@ lbl_8053C648:
 	.4byte 0
 
 
-.global __vt__8053C750
-__vt__8053C750:
+.global __vt__cf_CHelp_EtherMakeTIPS
+__vt__cf_CHelp_EtherMakeTIPS:
 	# ROM: 0x538850
 	.4byte cf_CHelp_EtherMakeTIPS_RTTI
 	.4byte 0
@@ -22331,8 +22331,8 @@ lbl_8053C780:
 	.4byte 0
 
 
-.global __vt__8053C78C
-__vt__8053C78C:
+.global __vt__cf_CHelp_TalkTIPS
+__vt__cf_CHelp_TalkTIPS:
 	# ROM: 0x53888C
 	.4byte cf_CHelp_TalkTIPS_RTTI
 	.4byte 0
@@ -22348,7 +22348,7 @@ __vt__8053C78C:
 lbl_8053C7B0:
 	.4byte cf_CHelp_RTTI
 	.4byte 0
-	.4byte lbl_80665520
+	.4byte cf_CHelpSwitch_RTTI
 	.4byte 0
 	.4byte cf_CHelp_Talk_RTTI
 	.4byte 0
@@ -22358,13 +22358,13 @@ lbl_8053C7B0:
 lbl_8053C7CC:
 	.4byte cf_CHelp_RTTI
 	.4byte 0
-	.4byte lbl_80665520
+	.4byte cf_CHelpSwitch_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global __vt__8053C7E0
-__vt__8053C7E0:
+.global __vt__cf_CHelp_KizunaTIPS
+__vt__cf_CHelp_KizunaTIPS:
 	# ROM: 0x5388E0
 	.4byte cf_CHelp_KizunaTIPS_RTTI
 	.4byte 0
@@ -22389,8 +22389,8 @@ lbl_8053C810:
 	.4byte 0
 
 
-.global __vt__8053C81C
-__vt__8053C81C:
+.global __vt__cf_CHelp_EndEventTIPS
+__vt__cf_CHelp_EndEventTIPS:
 	# ROM: 0x53891C
 	.4byte cf_CHelp_EndEventTIPS_RTTI
 	.4byte 0
@@ -22406,7 +22406,7 @@ __vt__8053C81C:
 lbl_8053C840:
 	.4byte cf_CHelp_RTTI
 	.4byte 0
-	.4byte lbl_80665520
+	.4byte cf_CHelpSwitch_RTTI
 	.4byte 0
 	.4byte cf_CHelp_EndEvent_RTTI
 	.4byte 0
@@ -22416,13 +22416,13 @@ lbl_8053C840:
 lbl_8053C85C:
 	.4byte cf_CHelp_RTTI
 	.4byte 0
-	.4byte lbl_80665520
+	.4byte cf_CHelpSwitch_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global __vt__8053C870
-__vt__8053C870:
+.global __vt__cf_CHelp_AlwaysTIPS
+__vt__cf_CHelp_AlwaysTIPS:
 	# ROM: 0x538970
 	.4byte cf_CHelp_AlwaysTIPS_RTTI
 	.4byte 0
@@ -22441,8 +22441,8 @@ lbl_8053C88C:
 	.4byte 0
 
 
-.global __vt__8053C8A0
-__vt__8053C8A0:
+.global __vt__cf_CHelp_Always
+__vt__cf_CHelp_Always:
 	# ROM: 0x5389A0
 	.4byte cf_CHelp_Always_RTTI
 	.4byte 0
@@ -22465,16 +22465,16 @@ lbl_8053C8C8:
 	.4byte 0
 
 
-.global __vt__8053C8D4
-__vt__8053C8D4:
+.global __vt__cf_CHelpManager
+__vt__cf_CHelpManager:
 	# ROM: 0x5389D4
 	.4byte cf_CHelpManager_RTTI
 	.4byte 0
 	.4byte func_8029596C
 
 
-.global __vt__8053C8E0
-__vt__8053C8E0:
+.global __vt__CMCGetItemBox
+__vt__CMCGetItemBox:
 	# ROM: 0x5389E0
 	.4byte CMCGetItemBox_RTTI
 	.4byte 0
@@ -22519,8 +22519,8 @@ lbl_8053C968:
 	.4byte 0
 
 
-.global __vt__8053C978
-__vt__8053C978:
+.global __vt__CMenuTutorial
+__vt__CMenuTutorial:
 	# ROM: 0x538A78
 	.4byte CMenuTutorial_RTTI
 	.4byte 0
@@ -22533,7 +22533,7 @@ __vt__8053C978:
 	.4byte func_80043F20
 	.4byte CMenuTutorial_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_8029A92C
+	.4byte func_8029A92C
 	.4byte func_8029A924
 	.4byte func_8029A544
 
@@ -22555,8 +22555,8 @@ lbl_8053C9B0:
 	.4byte 0
 
 
-.global __vt__8053C9E8
-__vt__8053C9E8:
+.global __vt__CTutorial
+__vt__CTutorial:
 	# ROM: 0x538AE8
 	.4byte CTutorial_RTTI
 	.4byte 0
@@ -22601,8 +22601,8 @@ lbl_8053CA70:
 	.4byte 0
 
 
-.global __vt__8053CA80
-__vt__8053CA80:
+.global __vt__CMenuOption
+__vt__CMenuOption:
 	# ROM: 0x538B80
 	.4byte CMenuOption_RTTI
 	.4byte 0
@@ -22615,7 +22615,7 @@ __vt__8053CA80:
 	.4byte func_80043F20
 	.4byte CMenuOption_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_8029BED4
+	.4byte func_8029BED4
 	.4byte func_8029BECC
 	.4byte func_8029BA80
 
@@ -22854,8 +22854,8 @@ lbl_8053CD74:
 	.4byte 0
 
 
-.global __vt__8053CDC8
-__vt__8053CDC8:
+.global __vt__COption
+__vt__COption:
 	# ROM: 0x538EC8
 	.4byte COption_RTTI
 	.4byte 0
@@ -22900,8 +22900,8 @@ lbl_8053CE50:
 	.4byte 0
 
 
-.global __vt__8053CE60
-__vt__8053CE60:
+.global __vt__CCur19
+__vt__CCur19:
 	# ROM: 0x538F60
 	.4byte CCur19_RTTI
 	.4byte 0
@@ -22952,8 +22952,8 @@ lbl_8053CE78:
 	.4byte 0
 
 
-.global __vt__8053CF10
-__vt__8053CF10:
+.global __vt__CMenuSkipTimer
+__vt__CMenuSkipTimer:
 	# ROM: 0x539010
 	.4byte CMenuSkipTimer_RTTI
 	.4byte 0
@@ -22966,7 +22966,7 @@ __vt__8053CF10:
 	.4byte func_80043F20
 	.4byte CMenuSkipTimer_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_8029F0A0
+	.4byte func_8029F0A0
 	.4byte func_8029F098
 	.4byte func_8029ED40
 
@@ -22988,8 +22988,8 @@ lbl_8053CF48:
 	.4byte 0
 
 
-.global __vt__8053CF80
-__vt__8053CF80:
+.global __vt__CSkipTimer
+__vt__CSkipTimer:
 	# ROM: 0x539080
 	.4byte CSkipTimer_RTTI
 	.4byte 0
@@ -23033,16 +23033,16 @@ lbl_8053D008:
 	.4byte 0
 
 
-.global __vt__8053D014
-__vt__8053D014:
+.global __vt__CSkipTimer2
+__vt__CSkipTimer2:
 	# ROM: 0x539114
 	.4byte CSkipTimer2_RTTI
 	.4byte 0
 	.4byte func_8029F114
 
 
-.global __vt__8053D020
-__vt__8053D020:
+.global __vt__cf_CChainEffect
+__vt__cf_CChainEffect:
 	# ROM: 0x539120
 	.4byte cf_CChainEffect_RTTI
 	.4byte 0
@@ -23057,8 +23057,8 @@ lbl_8053D030:
 	.4byte 0
 
 
-.global __vt__8053D040
-__vt__8053D040:
+.global __vt__cf_CCharVoice
+__vt__cf_CCharVoice:
 	# ROM: 0x539140
 	.4byte cf_CCharVoice_RTTI
 	.4byte 0
@@ -23071,8 +23071,8 @@ lbl_8053D050:
 	.4byte func_802A13B8
 
 
-.global __vt__8053D05C
-__vt__8053D05C:
+.global __vt__cf_CCharVoiceMan
+__vt__cf_CCharVoiceMan:
 	# ROM: 0x53915C
 	.4byte cf_CCharVoiceMan_RTTI
 	.4byte 0
@@ -23107,8 +23107,8 @@ lbl_8053D098:
 	.4byte func_802A13B8
 
 
-.global __vt__8053D0A0
-__vt__8053D0A0:
+.global __vt__cf_CVS_THREAD
+__vt__cf_CVS_THREAD:
 	# ROM: 0x5391A0
 	.4byte cf_CVS_THREAD_RTTI
 	.4byte 0
@@ -23183,8 +23183,8 @@ lbl_8053D138:
 	.4byte 0x00000B60
 
 
-.global __vt__8053D148
-__vt__8053D148:
+.global __vt__cf_CVS_THREAD_BATTLE_END
+__vt__cf_CVS_THREAD_BATTLE_END:
 	# ROM: 0x539248
 	.4byte cf_CVS_THREAD_BATTLE_END_RTTI
 	.4byte 0
@@ -23221,8 +23221,8 @@ lbl_8053D188:
 	.4byte func_802A4FA4
 
 
-.global __vt__8053D194
-__vt__8053D194:
+.global __vt__cf_CVS_THREAD_BUF
+__vt__cf_CVS_THREAD_BUF:
 	# ROM: 0x539294
 	.4byte cf_CVS_THREAD_BUF_RTTI
 	.4byte 0
@@ -23248,8 +23248,8 @@ lbl_8053D1C0:
 	.4byte func_802A58F8
 
 
-.global __vt__8053D1CC
-__vt__8053D1CC:
+.global __vt__cf_CVS_THREAD_CHAIN
+__vt__cf_CVS_THREAD_CHAIN:
 	# ROM: 0x5392CC
 	.4byte cf_CVS_THREAD_CHAIN_RTTI
 	.4byte 0
@@ -23287,8 +23287,8 @@ lbl_8053D210:
 	.4byte func_802A5E0C
 
 
-.global __vt__8053D21C
-__vt__8053D21C:
+.global __vt__cf_CVS_THREAD_DOWN
+__vt__cf_CVS_THREAD_DOWN:
 	# ROM: 0x53931C
 	.4byte cf_CVS_THREAD_DOWN_RTTI
 	.4byte 0
@@ -23360,8 +23360,8 @@ lbl_8053D2B0:
 	.4byte func_802A6718
 
 
-.global __vt__8053D2BC
-__vt__8053D2BC:
+.global __vt__cf_CVS_THREAD_EHP
+__vt__cf_CVS_THREAD_EHP:
 	# ROM: 0x5393BC
 	.4byte cf_CVS_THREAD_EHP_RTTI
 	.4byte 0
@@ -23399,8 +23399,8 @@ lbl_8053D300:
 	.4byte func_802A6D2C
 
 
-.global __vt__8053D30C
-__vt__8053D30C:
+.global __vt__cf_CVS_THREAD_FAINT
+__vt__cf_CVS_THREAD_FAINT:
 	# ROM: 0x53940C
 	.4byte cf_CVS_THREAD_FAINT_RTTI
 	.4byte 0
@@ -23438,8 +23438,8 @@ lbl_8053D350:
 	.4byte func_802A718C
 
 
-.global __vt__8053D35C
-__vt__8053D35C:
+.global __vt__cf_CVS_THREAD_HAGE
+__vt__cf_CVS_THREAD_HAGE:
 	# ROM: 0x53945C
 	.4byte cf_CVS_THREAD_HAGE_RTTI
 	.4byte 0
@@ -23477,8 +23477,8 @@ lbl_8053D3A0:
 	.4byte func_802A75CC
 
 
-.global __vt__8053D3AC
-__vt__8053D3AC:
+.global __vt__cf_CVS_THREAD_HP
+__vt__cf_CVS_THREAD_HP:
 	# ROM: 0x5394AC
 	.4byte cf_CVS_THREAD_HP_RTTI
 	.4byte 0
@@ -23516,8 +23516,8 @@ lbl_8053D3F0:
 	.4byte func_802A8560
 
 
-.global __vt__8053D3FC
-__vt__8053D3FC:
+.global __vt__cf_CVS_THREAD_PARTY_GAGE
+__vt__cf_CVS_THREAD_PARTY_GAGE:
 	# ROM: 0x5394FC
 	.4byte cf_CVS_THREAD_PARTY_GAGE_RTTI
 	.4byte 0
@@ -23555,8 +23555,8 @@ lbl_8053D440:
 	.4byte func_802A8A00
 
 
-.global __vt__8053D44C
-__vt__8053D44C:
+.global __vt__cf_CVS_THREAD_REVIVE
+__vt__cf_CVS_THREAD_REVIVE:
 	# ROM: 0x53954C
 	.4byte cf_CVS_THREAD_REVIVE_RTTI
 	.4byte 0
@@ -23582,8 +23582,8 @@ lbl_8053D478:
 	.4byte func_802A8CCC
 
 
-.global __vt__8053D484
-__vt__8053D484:
+.global __vt__cf_CVS_THREAD_SUDDEN
+__vt__cf_CVS_THREAD_SUDDEN:
 	# ROM: 0x539584
 	.4byte cf_CVS_THREAD_SUDDEN_RTTI
 	.4byte 0
@@ -23621,8 +23621,8 @@ lbl_8053D4C8:
 	.4byte func_802A9230
 
 
-.global __vt__8053D4D4
-__vt__8053D4D4:
+.global __vt__cf_CVS_THREAD_TENSION_UP
+__vt__cf_CVS_THREAD_TENSION_UP:
 	# ROM: 0x5395D4
 	.4byte cf_CVS_THREAD_TENSION_UP_RTTI
 	.4byte 0
@@ -23654,8 +23654,8 @@ lbl_8053D50C:
 	.4byte func_802A955C
 
 
-.global __vt__8053D518
-__vt__8053D518:
+.global __vt__cf_CVS_THREAD_VISION_BREAK
+__vt__cf_CVS_THREAD_VISION_BREAK:
 	# ROM: 0x539618
 	.4byte cf_CVS_THREAD_VISION_BREAK_RTTI
 	.4byte 0
@@ -23692,8 +23692,8 @@ lbl_8053D558:
 	.4byte func_802A9AC4
 
 
-.global __vt__8053D564
-__vt__8053D564:
+.global __vt__cf_CVS_THREAD_VISION_TELL
+__vt__cf_CVS_THREAD_VISION_TELL:
 	# ROM: 0x539664
 	.4byte cf_CVS_THREAD_VISION_TELL_RTTI
 	.4byte 0
@@ -23739,8 +23739,8 @@ lbl_8053D5B4:
 	.4byte lbl_802AAB90
 
 
-.global __vt__8053D5D8
-__vt__8053D5D8:
+.global __vt__CMenuBattleChain
+__vt__CMenuBattleChain:
 	# ROM: 0x5396D8
 	.4byte CMenuBattleChain_RTTI
 	.4byte 0
@@ -23787,8 +23787,8 @@ __vt__8053D5D8:
 	.4byte func_80039D40
 	.4byte CMenuBattleChain_RTTI
 	.4byte 0xFFFFFF90
-	.4byte lbl_802AB3C8
-	.4byte lbl_802AB3C0
+	.4byte func_802AB3C8
+	.4byte func_802AB3C0
 	.4byte func_802AA20C
 
 .global lbl_8053D698
@@ -24091,8 +24091,8 @@ lbl_8053D93C:
 	.4byte func_802AB900
 
 
-.global __vt__8053D948
-__vt__8053D948:
+.global __vt__cf_CVS_THREAD_BATTLE_END_SP
+__vt__cf_CVS_THREAD_BATTLE_END_SP:
 	# ROM: 0x539A48
 	.4byte cf_CVS_THREAD_BATTLE_END_SP_RTTI
 	.4byte 0
@@ -24109,8 +24109,8 @@ lbl_8053D964:
 	.4byte 0
 
 
-.global __vt__8053D970
-__vt__8053D970:
+.global __vt__cf_CfGimmickSaveOff
+__vt__cf_CfGimmickSaveOff:
 	# ROM: 0x539A70
 	.4byte cf_CfGimmickSaveOff_RTTI
 	.4byte 0
@@ -24144,8 +24144,8 @@ lbl_8053D9A8:
 	.4byte lbl_802AC3A8
 
 
-.global __vt__8053D9C8
-__vt__8053D9C8:
+.global __vt__CMenuTutorialList
+__vt__CMenuTutorialList:
 	# ROM: 0x539AC8
 	.4byte CMenuTutorialList_RTTI
 	.4byte 0
@@ -24158,7 +24158,7 @@ __vt__8053D9C8:
 	.4byte func_80043F20
 	.4byte CMenuTutorialList_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_802ACBD4
+	.4byte func_802ACBD4
 	.4byte func_802ACBCC
 	.4byte func_802AC3E4
 
@@ -24180,8 +24180,8 @@ lbl_8053DA00:
 	.4byte 0
 
 
-.global __vt__8053DA38
-__vt__8053DA38:
+.global __vt__CTutorialList
+__vt__CTutorialList:
 	# ROM: 0x539B38
 	.4byte CTutorialList_RTTI
 	.4byte 0
@@ -24226,8 +24226,8 @@ lbl_8053DAC0:
 	.4byte 0
 
 
-.global __vt__8053DAD0
-__vt__8053DAD0:
+.global __vt__CLoad
+__vt__CLoad:
 	# ROM: 0x539BD0
 	.4byte CLoad_RTTI
 	.4byte 0
@@ -24698,8 +24698,8 @@ lbl_8053E188:
 	.4byte func_802AF980
 
 
-.global __vt__8053E194
-__vt__8053E194:
+.global __vt__cf_CVS_THREAD_BATTLE_MAIN
+__vt__cf_CVS_THREAD_BATTLE_MAIN:
 	# ROM: 0x53A294
 	.4byte cf_CVS_THREAD_BATTLE_MAIN_RTTI
 	.4byte 0
@@ -24868,8 +24868,8 @@ lbl_8053E3C4:
 	.4byte func_802AFCC8
 
 
-.global __vt__8053E3D0
-__vt__8053E3D0:
+.global __vt__cf_CVS_THREAD_BATTLE_BEGIN
+__vt__cf_CVS_THREAD_BATTLE_BEGIN:
 	# ROM: 0x53A4D0
 	.4byte cf_CVS_THREAD_BATTLE_BEGIN_RTTI
 	.4byte 0
@@ -24899,8 +24899,8 @@ lbl_8053E410:
 	.4byte 0
 
 
-.global __vt__8053E420
-__vt__8053E420:
+.global __vt__CMenuGCItem
+__vt__CMenuGCItem:
 	# ROM: 0x53A520
 	.4byte CMenuGCItem_RTTI
 	.4byte 0
@@ -24913,7 +24913,7 @@ __vt__8053E420:
 	.4byte func_80043F20
 	.4byte CMenuGCItem_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_802B0F10
+	.4byte func_802B0F10
 	.4byte func_802B0F08
 	.4byte func_802B0B4C
 
@@ -24982,8 +24982,8 @@ lbl_8053E490:
 	.4byte 0
 
 
-.global __vt__8053E538
-__vt__8053E538:
+.global __vt__CMenuGameClear
+__vt__CMenuGameClear:
 	# ROM: 0x53A638
 	.4byte CMenuGameClear_RTTI
 	.4byte 0
@@ -24996,7 +24996,7 @@ __vt__8053E538:
 	.4byte func_80043F20
 	.4byte CMenuGameClear_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_802B2624
+	.4byte func_802B2624
 	.4byte func_802B261C
 	.4byte func_802B2104
 
@@ -25018,8 +25018,8 @@ lbl_8053E570:
 	.4byte 0
 
 
-.global __vt__8053E5A8
-__vt__8053E5A8:
+.global __vt__cf_CfHikariItemManager
+__vt__cf_CfHikariItemManager:
 	# ROM: 0x53A6A8
 	.4byte cf_CfHikariItemManager_RTTI
 	.4byte 0
@@ -25061,8 +25061,8 @@ lbl_8053E5C8:
 	.4byte 0
 
 
-.global __vt__8053E620
-__vt__8053E620:
+.global __vt__CUIErrMesWin
+__vt__CUIErrMesWin:
 	# ROM: 0x53A720
 	.4byte CUIErrMesWin_RTTI
 	.4byte 0
@@ -25109,8 +25109,8 @@ __vt__8053E620:
 	.4byte func_80039D40
 	.4byte CUIErrMesWin_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_802B5140
-	.4byte lbl_802B5138
+	.4byte func_802B5140
+	.4byte func_802B5138
 	.4byte func_802B4D94
 
 .global lbl_8053E6E0
@@ -25130,8 +25130,8 @@ lbl_8053E6E0:
 	.4byte 0
 
 
-.global __vt__8053E714
-__vt__8053E714:
+.global __vt__CTTask_CUIErrMesWin
+__vt__CTTask_CUIErrMesWin:
 	# ROM: 0x53A814
 	.4byte CTTask_CUIErrMesWin_RTTI
 	.4byte 0
@@ -25190,8 +25190,8 @@ lbl_8053E758:
 	.4byte func_802B6280
 
 
-.global __vt__8053E7D0
-__vt__8053E7D0:
+.global __vt__CMenuTitle
+__vt__CMenuTitle:
 	# ROM: 0x53A8D0
 	.4byte CMenuTitle_RTTI
 	.4byte 0
@@ -25238,8 +25238,8 @@ __vt__8053E7D0:
 	.4byte func_80039D40
 	.4byte CMenuTitle_RTTI
 	.4byte 0xFFFFFFA8
-	.4byte lbl_802B6324
-	.4byte lbl_802B631C
+	.4byte func_802B6324
+	.4byte func_802B631C
 	.4byte func_802B5D80
 
 .global lbl_8053E890
@@ -25259,8 +25259,8 @@ lbl_8053E890:
 	.4byte 0
 
 
-.global __vt__8053E8C4
-__vt__8053E8C4:
+.global __vt__CTTask_CMenuTitle
+__vt__CTTask_CMenuTitle:
 	# ROM: 0x53A9C4
 	.4byte CTTask_CMenuTitle_RTTI
 	.4byte 0
@@ -25353,8 +25353,8 @@ lbl_8053E98C:
 	.4byte func_802B7924
 
 
-.global __vt__8053E9E0
-__vt__8053E9E0:
+.global __vt__CTitle
+__vt__CTitle:
 	# ROM: 0x53AAE0
 	.4byte CTitle_RTTI
 	.4byte 0
@@ -25398,16 +25398,16 @@ lbl_8053EA68:
 	.4byte 0
 
 
-.global __vt__8053EA74
-__vt__8053EA74:
+.global __vt__CTitleMenu
+__vt__CTitleMenu:
 	# ROM: 0x53AB74
 	.4byte CTitleMenu_RTTI
 	.4byte 0
 	.4byte func_802B6930
 
 
-.global __vt__8053EA80
-__vt__8053EA80:
+.global __vt__CTitleLogo
+__vt__CTitleLogo:
 	# ROM: 0x53AB80
 	.4byte CTitleLogo_RTTI
 	.4byte 0
@@ -25415,8 +25415,8 @@ __vt__8053EA80:
 	.4byte 0
 
 
-.global __vt__8053EA90
-__vt__8053EA90:
+.global __vt__cf_CHelp_ToAttack
+__vt__cf_CHelp_ToAttack:
 	# ROM: 0x53AB90
 	.4byte cf_CHelp_ToAttack_RTTI
 	.4byte 0
@@ -25433,8 +25433,8 @@ lbl_8053EAAC:
 	.4byte 0
 
 
-.global __vt__8053EAB8
-__vt__8053EAB8:
+.global __vt__cf_CHelp
+__vt__cf_CHelp:
 	# ROM: 0x53ABB8
 	.4byte cf_CHelp_RTTI
 	.4byte 0
@@ -25446,8 +25446,8 @@ __vt__8053EAB8:
 	.4byte 0
 
 
-.global __vt__8053EAD8
-__vt__8053EAD8:
+.global __vt__cf_CHelp_ArtsAttack
+__vt__cf_CHelp_ArtsAttack:
 	# ROM: 0x53ABD8
 	.4byte cf_CHelp_ArtsAttack_RTTI
 	.4byte 0
@@ -25463,13 +25463,13 @@ __vt__8053EAD8:
 lbl_8053EAFC:
 	.4byte cf_CHelp_RTTI
 	.4byte 0
-	.4byte lbl_80665520
+	.4byte cf_CHelpSwitch_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global __vt__8053EB10
-__vt__8053EB10:
+.global __vt__cf_CHelp_ArtsSet
+__vt__cf_CHelp_ArtsSet:
 	# ROM: 0x53AC10
 	.4byte cf_CHelp_ArtsSet_RTTI
 	.4byte 0
@@ -25486,8 +25486,8 @@ lbl_8053EB2C:
 	.4byte 0
 
 
-.global __vt__8053EB38
-__vt__8053EB38:
+.global __vt__cf_CHelp_CkKizuna
+__vt__cf_CHelp_CkKizuna:
 	# ROM: 0x53AC38
 	.4byte cf_CHelp_CkKizuna_RTTI
 	.4byte 0
@@ -25503,13 +25503,13 @@ __vt__8053EB38:
 lbl_8053EB5C:
 	.4byte cf_CHelp_RTTI
 	.4byte 0
-	.4byte lbl_80665520
+	.4byte cf_CHelpSwitch_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global __vt__8053EB70
-__vt__8053EB70:
+.global __vt__cf_CHelp_CloseItemMenu
+__vt__cf_CHelp_CloseItemMenu:
 	# ROM: 0x53AC70
 	.4byte cf_CHelp_CloseItemMenu_RTTI
 	.4byte 0
@@ -25525,13 +25525,13 @@ __vt__8053EB70:
 lbl_8053EB94:
 	.4byte cf_CHelp_RTTI
 	.4byte 0
-	.4byte lbl_80665520
+	.4byte cf_CHelpSwitch_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global __vt__8053EBA8
-__vt__8053EBA8:
+.global __vt__cf_CHelp_CloseSysMenu
+__vt__cf_CHelp_CloseSysMenu:
 	# ROM: 0x53ACA8
 	.4byte cf_CHelp_CloseSysMenu_RTTI
 	.4byte 0
@@ -25547,13 +25547,13 @@ __vt__8053EBA8:
 lbl_8053EBCC:
 	.4byte cf_CHelp_RTTI
 	.4byte 0
-	.4byte lbl_80665520
+	.4byte cf_CHelpSwitch_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global __vt__8053EBE0
-__vt__8053EBE0:
+.global __vt__cf_CHelp_EndEvent
+__vt__cf_CHelp_EndEvent:
 	# ROM: 0x53ACE0
 	.4byte cf_CHelp_EndEvent_RTTI
 	.4byte 0
@@ -25567,8 +25567,8 @@ __vt__8053EBE0:
 	.4byte 0
 
 
-.global __vt__8053EC08
-__vt__8053EC08:
+.global __vt__cf_CHelp_EnemyCount
+__vt__cf_CHelp_EnemyCount:
 	# ROM: 0x53AD08
 	.4byte cf_CHelp_EnemyCount_RTTI
 	.4byte 0
@@ -25585,8 +25585,8 @@ lbl_8053EC24:
 	.4byte 0
 
 
-.global __vt__8053EC30
-__vt__8053EC30:
+.global __vt__cf_CHelp_EnemyEnable
+__vt__cf_CHelp_EnemyEnable:
 	# ROM: 0x53AD30
 	.4byte cf_CHelp_EnemyEnable_RTTI
 	.4byte 0
@@ -25603,8 +25603,8 @@ lbl_8053EC4C:
 	.4byte 0
 
 
-.global __vt__8053EC58
-__vt__8053EC58:
+.global __vt__cf_CHelp_EtherMake
+__vt__cf_CHelp_EtherMake:
 	# ROM: 0x53AD58
 	.4byte cf_CHelp_EtherMake_RTTI
 	.4byte 0
@@ -25616,8 +25616,8 @@ __vt__8053EC58:
 	.4byte 0
 
 
-.global __vt__8053EC78
-__vt__8053EC78:
+.global __vt__cf_CHelp_Exchange
+__vt__cf_CHelp_Exchange:
 	# ROM: 0x53AD78
 	.4byte cf_CHelp_Exchange_RTTI
 	.4byte 0
@@ -25634,8 +25634,8 @@ lbl_8053EC94:
 	.4byte 0
 
 
-.global __vt__8053ECA0
-__vt__8053ECA0:
+.global __vt__cf_CHelp_GameOver
+__vt__cf_CHelp_GameOver:
 	# ROM: 0x53ADA0
 	.4byte cf_CHelp_GameOver_RTTI
 	.4byte 0
@@ -25652,8 +25652,8 @@ lbl_8053ECBC:
 	.4byte 0
 
 
-.global __vt__8053ECC8
-__vt__8053ECC8:
+.global __vt__cf_CHelp_ItemCole
+__vt__cf_CHelp_ItemCole:
 	# ROM: 0x53ADC8
 	.4byte cf_CHelp_ItemCole_RTTI
 	.4byte 0
@@ -25670,8 +25670,8 @@ lbl_8053ECE4:
 	.4byte 0
 
 
-.global __vt__8053ECF0
-__vt__8053ECF0:
+.global __vt__cf_CHelp_Kizuna
+__vt__cf_CHelp_Kizuna:
 	# ROM: 0x53ADF0
 	.4byte cf_CHelp_Kizuna_RTTI
 	.4byte 0
@@ -25683,8 +25683,8 @@ __vt__8053ECF0:
 	.4byte 0
 
 
-.global __vt__8053ED10
-__vt__8053ED10:
+.global __vt__cf_CHelp_LandMark
+__vt__cf_CHelp_LandMark:
 	# ROM: 0x53AE10
 	.4byte cf_CHelp_LandMark_RTTI
 	.4byte 0
@@ -25695,7 +25695,7 @@ __vt__8053ED10:
 	.4byte func_80295D80
 	.4byte cf_CHelp_LandMark_RTTI
 	.4byte 0xFFFFFFF4
-	.4byte lbl_802B8390
+	.4byte func_802B8390
 	.4byte func_802B8388
 	.4byte func_802B8208
 	.4byte func_802B8290
@@ -25707,8 +25707,8 @@ lbl_8053ED44:
 	.4byte 0
 
 
-.global __vt__8053ED50
-__vt__8053ED50:
+.global __vt__cf_CHelp_LearnArts
+__vt__cf_CHelp_LearnArts:
 	# ROM: 0x53AE50
 	.4byte cf_CHelp_LearnArts_RTTI
 	.4byte 0
@@ -25725,8 +25725,8 @@ lbl_8053ED6C:
 	.4byte 0
 
 
-.global __vt__8053ED78
-__vt__8053ED78:
+.global __vt__cf_CHelp_ClosePartyMenu
+__vt__cf_CHelp_ClosePartyMenu:
 	# ROM: 0x53AE78
 	.4byte cf_CHelp_ClosePartyMenu_RTTI
 	.4byte 0
@@ -25742,13 +25742,13 @@ __vt__8053ED78:
 lbl_8053ED9C:
 	.4byte cf_CHelp_RTTI
 	.4byte 0
-	.4byte lbl_80665520
+	.4byte cf_CHelpSwitch_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global __vt__8053EDB0
-__vt__8053EDB0:
+.global __vt__cf_CHelp_OpenPartyMenu
+__vt__cf_CHelp_OpenPartyMenu:
 	# ROM: 0x53AEB0
 	.4byte cf_CHelp_OpenPartyMenu_RTTI
 	.4byte 0
@@ -25765,8 +25765,8 @@ lbl_8053EDCC:
 	.4byte 0
 
 
-.global __vt__8053EDD8
-__vt__8053EDD8:
+.global __vt__cf_CHelp_Pg
+__vt__cf_CHelp_Pg:
 	# ROM: 0x53AED8
 	.4byte cf_CHelp_Pg_RTTI
 	.4byte 0
@@ -25783,8 +25783,8 @@ lbl_8053EDF4:
 	.4byte 0
 
 
-.global __vt__8053EE00
-__vt__8053EE00:
+.global __vt__cf_CHelp_CloseQuestMenu
+__vt__cf_CHelp_CloseQuestMenu:
 	# ROM: 0x53AF00
 	.4byte cf_CHelp_CloseQuestMenu_RTTI
 	.4byte 0
@@ -25800,13 +25800,13 @@ __vt__8053EE00:
 lbl_8053EE24:
 	.4byte cf_CHelp_RTTI
 	.4byte 0
-	.4byte lbl_80665520
+	.4byte cf_CHelpSwitch_RTTI
 	.4byte 0
 	.4byte 0
 
 
-.global __vt__8053EE38
-__vt__8053EE38:
+.global __vt__cf_CHelp_ShopSel
+__vt__cf_CHelp_ShopSel:
 	# ROM: 0x53AF38
 	.4byte cf_CHelp_ShopSel_RTTI
 	.4byte 0
@@ -25823,8 +25823,8 @@ lbl_8053EE54:
 	.4byte 0
 
 
-.global __vt__8053EE60
-__vt__8053EE60:
+.global __vt__cf_CHelp_ShopBuy
+__vt__cf_CHelp_ShopBuy:
 	# ROM: 0x53AF60
 	.4byte cf_CHelp_ShopBuy_RTTI
 	.4byte 0
@@ -25841,8 +25841,8 @@ lbl_8053EE7C:
 	.4byte 0
 
 
-.global __vt__8053EE88
-__vt__8053EE88:
+.global __vt__cf_CHelp_Sp
+__vt__cf_CHelp_Sp:
 	# ROM: 0x53AF88
 	.4byte cf_CHelp_Sp_RTTI
 	.4byte 0
@@ -25859,8 +25859,8 @@ lbl_8053EEA4:
 	.4byte 0
 
 
-.global __vt__8053EEB0
-__vt__8053EEB0:
+.global __vt__cf_CHelp_Talk
+__vt__cf_CHelp_Talk:
 	# ROM: 0x53AFB0
 	.4byte cf_CHelp_Talk_RTTI
 	.4byte 0
@@ -25874,8 +25874,8 @@ __vt__8053EEB0:
 	.4byte 0
 
 
-.global __vt__8053EED8
-__vt__8053EED8:
+.global __vt__cf_CHelp_Target
+__vt__cf_CHelp_Target:
 	# ROM: 0x53AFD8
 	.4byte cf_CHelp_Target_RTTI
 	.4byte 0
@@ -25920,8 +25920,8 @@ lbl_8053EF24:
 	.4byte func_802B8CFC
 
 
-.global __vt__8053EF30
-__vt__8053EF30:
+.global __vt__cf_CVS_THREAD_ORDER
+__vt__cf_CVS_THREAD_ORDER:
 	# ROM: 0x53B030
 	.4byte cf_CVS_THREAD_ORDER_RTTI
 	.4byte 0
@@ -25963,13 +25963,13 @@ lbl_8053EF58:
 lbl_8053EF98:
 	# ROM: 0x53B098
 	.4byte lbl_8066B810
-	.4byte func_802B8F70
+	.4byte play
 	.4byte 0
 	.4byte 0
 
 
-.global __vt__8053EFA8
-__vt__8053EFA8:
+.global __vt__CBattery
+__vt__CBattery:
 	# ROM: 0x53B0A8
 	.4byte CBattery_RTTI
 	.4byte 0

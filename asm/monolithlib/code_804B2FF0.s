@@ -2900,16 +2900,16 @@ func_804B57F4:
 /* 804B5830 0047EDF0  7C 7F 1B 78 */	mr r31, r3
 /* 804B5834 0047EDF4  41 82 00 94 */	beq lbl_804B58C8
 /* 804B5838 0047EDF8  4B F8 F1 E1 */	bl func_80444A18
-/* 804B583C 0047EDFC  3C 60 80 57 */	lis r3, __vt__80572CF8@ha
+/* 804B583C 0047EDFC  3C 60 80 57 */	lis r3, __vt__CTTask_CTaskColiManager@ha
 /* 804B5840 0047EE00  3C C0 80 51 */	lis r6, lbl_8050CE10@ha
-/* 804B5844 0047EE04  38 63 2C F8 */	addi r3, r3, __vt__80572CF8@l
+/* 804B5844 0047EE04  38 63 2C F8 */	addi r3, r3, __vt__CTTask_CTaskColiManager@l
 /* 804B5848 0047EE08  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 804B584C 0047EE0C  38 C6 CE 10 */	addi r6, r6, lbl_8050CE10@l
 /* 804B5850 0047EE10  38 00 00 00 */	li r0, 0
 /* 804B5854 0047EE14  80 86 00 04 */	lwz r4, 4(r6)
-/* 804B5858 0047EE18  3C 60 80 57 */	lis r3, __vt__80572CB0@ha
+/* 804B5858 0047EE18  3C 60 80 57 */	lis r3, __vt__CTaskColiManager@ha
 /* 804B585C 0047EE1C  80 A6 00 00 */	lwz r5, 0(r6)
-/* 804B5860 0047EE20  38 63 2C B0 */	addi r3, r3, __vt__80572CB0@l
+/* 804B5860 0047EE20  38 63 2C B0 */	addi r3, r3, __vt__CTaskColiManager@l
 /* 804B5864 0047EE24  90 BF 00 3C */	stw r5, 0x3c(r31)
 /* 804B5868 0047EE28  90 9F 00 40 */	stw r4, 0x40(r31)
 /* 804B586C 0047EE2C  80 86 00 08 */	lwz r4, 8(r6)
@@ -3003,8 +3003,8 @@ sinit_804B598C:
 /* 804B599C 0047EF5C  3F E0 80 66 */	lis r31, lbl_8065F9F8@ha
 /* 804B59A0 0047EF60  38 7F F9 F8 */	addi r3, r31, lbl_8065F9F8@l
 /* 804B59A4 0047EF64  4B FF CB D5 */	bl func_804B2578
-/* 804B59A8 0047EF68  3C 60 80 57 */	lis r3, __vt__80572D38@ha
-/* 804B59AC 0047EF6C  38 63 2D 38 */	addi r3, r3, __vt__80572D38@l
+/* 804B59A8 0047EF68  3C 60 80 57 */	lis r3, __vt__CColiManCall@ha
+/* 804B59AC 0047EF6C  38 63 2D 38 */	addi r3, r3, __vt__CColiManCall@l
 /* 804B59B0 0047EF70  90 7F F9 F8 */	stw r3, lbl_8065F9F8@l(r31)
 /* 804B59B4 0047EF74  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804B59B8 0047EF78  80 01 00 14 */	lwz r0, 0x14(r1)

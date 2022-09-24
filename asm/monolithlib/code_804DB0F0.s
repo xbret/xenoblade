@@ -102,7 +102,7 @@ sinit_804DB228:
 /* 804DB228 004A47E8  38 6D C1 48 */	addi r3, r13, lbl_806682C8@sda21
 /* 804DB22C 004A47EC  48 00 00 04 */	b lbl_804DB230
 lbl_804DB230:
-/* 804DB230 004A47F0  3C 80 80 57 */	lis r4, __vt__805735F0@ha
-/* 804DB234 004A47F4  38 84 35 F0 */	addi r4, r4, __vt__805735F0@l
+/* 804DB230 004A47F0  3C 80 80 57 */	lis r4, __vt__CNReqtaskReaddir@ha
+/* 804DB234 004A47F4  38 84 35 F0 */	addi r4, r4, __vt__CNReqtaskReaddir@l
 /* 804DB238 004A47F8  90 83 00 00 */	stw r4, 0(r3)
 /* 804DB23C 004A47FC  4E 80 00 20 */	blr

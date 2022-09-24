@@ -12,18 +12,18 @@ func_8044DB24:
 /* 8044DB38 004170F8  93 C1 00 08 */	stw r30, 8(r1)
 /* 8044DB3C 004170FC  7C 7E 1B 78 */	mr r30, r3
 /* 8044DB40 00417100  4B FE 9A 7D */	bl func_804375BC
-/* 8044DB44 00417104  3C 60 80 57 */	lis r3, __vt__8056F9B0@ha
-/* 8044DB48 00417108  3D 00 80 57 */	lis r8, __vt__8056FA84@ha
+/* 8044DB44 00417104  3C 60 80 57 */	lis r3, __vt__CDeviceClock@ha
+/* 8044DB48 00417108  3D 00 80 57 */	lis r8, __vt___reslist_base_IDeviceClockFrame@ha
 /* 8044DB4C 0041710C  3B E0 00 00 */	li r31, 0
 /* 8044DB50 00417110  93 FE 01 C4 */	stw r31, 0x1c4(r30)
 /* 8044DB54 00417114  38 FE 01 D4 */	addi r7, r30, 0x1d4
-/* 8044DB58 00417118  38 63 F9 B0 */	addi r3, r3, __vt__8056F9B0@l
-/* 8044DB5C 0041711C  39 08 FA 84 */	addi r8, r8, __vt__8056FA84@l
+/* 8044DB58 00417118  38 63 F9 B0 */	addi r3, r3, __vt__CDeviceClock@l
+/* 8044DB5C 0041711C  39 08 FA 84 */	addi r8, r8, __vt___reslist_base_IDeviceClockFrame@l
 /* 8044DB60 00417120  90 7E 00 00 */	stw r3, 0(r30)
-/* 8044DB64 00417124  3C C0 80 57 */	lis r6, __vt__8056FA6C@ha
+/* 8044DB64 00417124  3C C0 80 57 */	lis r6, __vt__reslist_IDeviceClockFrame@ha
 /* 8044DB68 00417128  38 7E 02 10 */	addi r3, r30, 0x210
 /* 8044DB6C 0041712C  93 FE 01 C8 */	stw r31, 0x1c8(r30)
-/* 8044DB70 00417130  38 C6 FA 6C */	addi r6, r6, __vt__8056FA6C@l
+/* 8044DB70 00417130  38 C6 FA 6C */	addi r6, r6, __vt__reslist_IDeviceClockFrame@l
 /* 8044DB74 00417134  38 80 00 00 */	li r4, 0
 /* 8044DB78 00417138  38 A0 00 28 */	li r5, 0x28
 /* 8044DB7C 0041713C  91 1E 01 CC */	stw r8, 0x1cc(r30)
@@ -106,9 +106,9 @@ func_8044DC8C:
 /* 8044DCA4 00417264  93 C1 00 08 */	stw r30, 8(r1)
 /* 8044DCA8 00417268  7C 7E 1B 78 */	mr r30, r3
 /* 8044DCAC 0041726C  41 82 00 78 */	beq lbl_8044DD24
-/* 8044DCB0 00417270  3C A0 80 57 */	lis r5, __vt__8056FA84@ha
+/* 8044DCB0 00417270  3C A0 80 57 */	lis r5, __vt___reslist_base_IDeviceClockFrame@ha
 /* 8044DCB4 00417274  80 83 00 04 */	lwz r4, 4(r3)
-/* 8044DCB8 00417278  38 A5 FA 84 */	addi r5, r5, __vt__8056FA84@l
+/* 8044DCB8 00417278  38 A5 FA 84 */	addi r5, r5, __vt___reslist_base_IDeviceClockFrame@l
 /* 8044DCBC 0041727C  90 A3 00 00 */	stw r5, 0(r3)
 /* 8044DCC0 00417280  38 00 00 00 */	li r0, 0
 /* 8044DCC4 00417284  80 A4 00 00 */	lwz r5, 0(r4)
@@ -159,9 +159,9 @@ func_8044DD40:
 /* 8044DD5C 0041731C  7C 7E 1B 78 */	mr r30, r3
 /* 8044DD60 00417320  41 82 00 7C */	beq lbl_8044DDDC
 /* 8044DD64 00417324  41 82 00 68 */	beq lbl_8044DDCC
-/* 8044DD68 00417328  3C A0 80 57 */	lis r5, __vt__8056FA84@ha
+/* 8044DD68 00417328  3C A0 80 57 */	lis r5, __vt___reslist_base_IDeviceClockFrame@ha
 /* 8044DD6C 0041732C  80 83 00 04 */	lwz r4, 4(r3)
-/* 8044DD70 00417330  38 A5 FA 84 */	addi r5, r5, __vt__8056FA84@l
+/* 8044DD70 00417330  38 A5 FA 84 */	addi r5, r5, __vt___reslist_base_IDeviceClockFrame@l
 /* 8044DD74 00417334  90 A3 00 00 */	stw r5, 0(r3)
 /* 8044DD78 00417338  38 00 00 00 */	li r0, 0
 /* 8044DD7C 0041733C  80 84 00 00 */	lwz r4, 0(r4)
@@ -217,9 +217,9 @@ func_8044DDF8:
 /* 8044DE28 004173E8  90 0D BD B8 */	stw r0, lbl_80667F38@sda21(r13)
 /* 8044DE2C 004173EC  41 82 00 68 */	beq lbl_8044DE94
 /* 8044DE30 004173F0  41 82 00 64 */	beq lbl_8044DE94
-/* 8044DE34 004173F4  3C 80 80 57 */	lis r4, __vt__8056FA84@ha
+/* 8044DE34 004173F4  3C 80 80 57 */	lis r4, __vt___reslist_base_IDeviceClockFrame@ha
 /* 8044DE38 004173F8  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8044DE3C 004173FC  38 84 FA 84 */	addi r4, r4, __vt__8056FA84@l
+/* 8044DE3C 004173FC  38 84 FA 84 */	addi r4, r4, __vt___reslist_base_IDeviceClockFrame@l
 /* 8044DE40 00417400  90 9F 00 00 */	stw r4, 0(r31)
 /* 8044DE44 00417404  80 83 00 00 */	lwz r4, 0(r3)
 /* 8044DE48 00417408  48 00 00 10 */	b lbl_8044DE58
@@ -467,17 +467,17 @@ func_8044E148:
 /* 8044E15C 0041771C  93 C1 00 08 */	stw r30, 8(r1)
 /* 8044E160 00417720  7C 7E 1B 78 */	mr r30, r3
 /* 8044E164 00417724  4B FE 94 59 */	bl func_804375BC
-/* 8044E168 00417728  3C 60 80 57 */	lis r3, __vt__8056FA90@ha
-/* 8044E16C 0041772C  3C A0 80 57 */	lis r5, __vt__8056FB64@ha
+/* 8044E168 00417728  3C 60 80 57 */	lis r3, __vt__CDeviceFile@ha
+/* 8044E16C 0041772C  3C A0 80 57 */	lis r5, __vt___reslist_base_CFileHandle@ha
 /* 8044E170 00417730  3B E0 00 00 */	li r31, 0
 /* 8044E174 00417734  93 FE 01 C4 */	stw r31, 0x1c4(r30)
 /* 8044E178 00417738  38 9E 01 D4 */	addi r4, r30, 0x1d4
-/* 8044E17C 0041773C  38 63 FA 90 */	addi r3, r3, __vt__8056FA90@l
-/* 8044E180 00417740  38 A5 FB 64 */	addi r5, r5, __vt__8056FB64@l
+/* 8044E17C 0041773C  38 63 FA 90 */	addi r3, r3, __vt__CDeviceFile@l
+/* 8044E180 00417740  38 A5 FB 64 */	addi r5, r5, __vt___reslist_base_CFileHandle@l
 /* 8044E184 00417744  90 7E 00 00 */	stw r3, 0(r30)
-/* 8044E188 00417748  3C 60 80 57 */	lis r3, __vt__8056FB4C@ha
+/* 8044E188 00417748  3C 60 80 57 */	lis r3, __vt__reslist_CFileHandle@ha
 /* 8044E18C 0041774C  93 FE 01 C8 */	stw r31, 0x1c8(r30)
-/* 8044E190 00417750  38 63 FB 4C */	addi r3, r3, __vt__8056FB4C@l
+/* 8044E190 00417750  38 63 FB 4C */	addi r3, r3, __vt__reslist_CFileHandle@l
 /* 8044E194 00417754  90 BE 01 CC */	stw r5, 0x1cc(r30)
 /* 8044E198 00417758  93 FE 01 E0 */	stw r31, 0x1e0(r30)
 /* 8044E19C 0041775C  93 FE 01 E4 */	stw r31, 0x1e4(r30)
@@ -566,9 +566,9 @@ func_8044E2C0:
 /* 8044E2D8 00417898  93 C1 00 08 */	stw r30, 8(r1)
 /* 8044E2DC 0041789C  7C 7E 1B 78 */	mr r30, r3
 /* 8044E2E0 004178A0  41 82 00 78 */	beq lbl_8044E358
-/* 8044E2E4 004178A4  3C A0 80 57 */	lis r5, __vt__8056FB64@ha
+/* 8044E2E4 004178A4  3C A0 80 57 */	lis r5, __vt___reslist_base_CFileHandle@ha
 /* 8044E2E8 004178A8  80 83 00 04 */	lwz r4, 4(r3)
-/* 8044E2EC 004178AC  38 A5 FB 64 */	addi r5, r5, __vt__8056FB64@l
+/* 8044E2EC 004178AC  38 A5 FB 64 */	addi r5, r5, __vt___reslist_base_CFileHandle@l
 /* 8044E2F0 004178B0  90 A3 00 00 */	stw r5, 0(r3)
 /* 8044E2F4 004178B4  38 00 00 00 */	li r0, 0
 /* 8044E2F8 004178B8  80 A4 00 00 */	lwz r5, 0(r4)
@@ -619,9 +619,9 @@ func_8044E374:
 /* 8044E390 00417950  7C 7E 1B 78 */	mr r30, r3
 /* 8044E394 00417954  41 82 00 7C */	beq lbl_8044E410
 /* 8044E398 00417958  41 82 00 68 */	beq lbl_8044E400
-/* 8044E39C 0041795C  3C A0 80 57 */	lis r5, __vt__8056FB64@ha
+/* 8044E39C 0041795C  3C A0 80 57 */	lis r5, __vt___reslist_base_CFileHandle@ha
 /* 8044E3A0 00417960  80 83 00 04 */	lwz r4, 4(r3)
-/* 8044E3A4 00417964  38 A5 FB 64 */	addi r5, r5, __vt__8056FB64@l
+/* 8044E3A4 00417964  38 A5 FB 64 */	addi r5, r5, __vt___reslist_base_CFileHandle@l
 /* 8044E3A8 00417968  90 A3 00 00 */	stw r5, 0(r3)
 /* 8044E3AC 0041796C  38 00 00 00 */	li r0, 0
 /* 8044E3B0 00417970  80 84 00 00 */	lwz r4, 0(r4)
@@ -677,9 +677,9 @@ func_8044E42C:
 /* 8044E45C 00417A1C  90 0D BD C0 */	stw r0, lbl_80667F40@sda21(r13)
 /* 8044E460 00417A20  41 82 00 68 */	beq lbl_8044E4C8
 /* 8044E464 00417A24  41 82 00 64 */	beq lbl_8044E4C8
-/* 8044E468 00417A28  3C 80 80 57 */	lis r4, __vt__8056FB64@ha
+/* 8044E468 00417A28  3C 80 80 57 */	lis r4, __vt___reslist_base_CFileHandle@ha
 /* 8044E46C 00417A2C  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8044E470 00417A30  38 84 FB 64 */	addi r4, r4, __vt__8056FB64@l
+/* 8044E470 00417A30  38 84 FB 64 */	addi r4, r4, __vt___reslist_base_CFileHandle@l
 /* 8044E474 00417A34  90 9F 00 00 */	stw r4, 0(r31)
 /* 8044E478 00417A38  80 83 00 00 */	lwz r4, 0(r3)
 /* 8044E47C 00417A3C  48 00 00 10 */	b lbl_8044E48C
@@ -2002,9 +2002,9 @@ func_8044F5C4:
 /* 8044F5D4 00418B94  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8044F5D8 00418B98  7C 7F 1B 78 */	mr r31, r3
 /* 8044F5DC 00418B9C  4B FE 7F E1 */	bl func_804375BC
-/* 8044F5E0 00418BA0  3C A0 80 57 */	lis r5, __vt__8056FB94@ha
+/* 8044F5E0 00418BA0  3C A0 80 57 */	lis r5, __vt__CDeviceFileCri@ha
 /* 8044F5E4 00418BA4  38 60 00 00 */	li r3, 0
-/* 8044F5E8 00418BA8  38 A5 FB 94 */	addi r5, r5, __vt__8056FB94@l
+/* 8044F5E8 00418BA8  38 A5 FB 94 */	addi r5, r5, __vt__CDeviceFileCri@l
 /* 8044F5EC 00418BAC  38 00 FF FF */	li r0, -1
 /* 8044F5F0 00418BB0  38 85 00 A0 */	addi r4, r5, 0xa0
 /* 8044F5F4 00418BB4  90 BF 00 00 */	stw r5, 0(r31)
@@ -2067,9 +2067,9 @@ func_8044F69C:
 /* 8044F6B8 00418C78  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8044F6BC 00418C7C  7C 7D 1B 78 */	mr r29, r3
 /* 8044F6C0 00418C80  41 82 00 64 */	beq lbl_8044F724
-/* 8044F6C4 00418C84  3C 80 80 57 */	lis r4, __vt__8056FB94@ha
+/* 8044F6C4 00418C84  3C 80 80 57 */	lis r4, __vt__CDeviceFileCri@ha
 /* 8044F6C8 00418C88  7F A5 EB 78 */	mr r5, r29
-/* 8044F6CC 00418C8C  38 84 FB 94 */	addi r4, r4, __vt__8056FB94@l
+/* 8044F6CC 00418C8C  38 84 FB 94 */	addi r4, r4, __vt__CDeviceFileCri@l
 /* 8044F6D0 00418C90  90 83 00 00 */	stw r4, 0(r3)
 /* 8044F6D4 00418C94  38 04 00 A0 */	addi r0, r4, 0xa0
 /* 8044F6D8 00418C98  90 03 01 C4 */	stw r0, 0x1c4(r3)

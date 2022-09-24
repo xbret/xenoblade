@@ -1,9 +1,11 @@
 GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CGame.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80039D3C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80039EEC.o \
 	$(BUILD_DIR)/src/kyoshin/appgame/cf/main.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8003A05C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8003AA00.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80044168.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800539EC.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80059EB8.o \
 	$(BUILD_DIR)/asm/data_1.o \
@@ -42,7 +44,11 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801BCA38.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801C189C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801C4B60.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801D1F9C.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVisionItem.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CArtsBookItem.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CQuestItem.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CItemBoxGrid.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801D1FC0.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801EADC0.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801F3410.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80201A44.o \
@@ -66,7 +72,38 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802AEB1C.o \
 	$(BUILD_DIR)/src/kyoshin/appgame/cf/code_802AEB74.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802AEBC4.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802B48A0.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CUIErrMesWin.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CMenuTitle.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTitleLogo.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTitleMenu.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTitle.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_ArtsAttack.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_ArtsSet.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_CkKizuna.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_CloseItemMenu.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_CloseSysMenu.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_EndEvent.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_EnemyCount.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_EnemyEnable.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_EtherMake.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_Exchange.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_GameOver.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_ItemCole.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_Kizuna.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_LandMark.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_LearnArts.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_ClosePartyMenu.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_OpenPartyMenu.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_Pg.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_CloseQuestMenu.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_ShopBuy.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_ShopSel.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_Sp.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_Talk.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_Target.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_ORDER.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CBattery.o \
 
 
 MW_O_FILES :=\

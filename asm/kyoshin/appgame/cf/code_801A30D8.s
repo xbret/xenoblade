@@ -11,9 +11,9 @@ func_801A30D8:
 /* 801A30E8 0016C6A8  DB E1 00 40 */	stfd f31, 0x40(r1)
 /* 801A30EC 0016C6AC  F3 E1 00 48 */	psq_st f31, 72(r1), 0, qr0
 /* 801A30F0 0016C6B0  48 11 70 5D */	bl _savegpr_25
-/* 801A30F4 0016C6B4  3C 80 80 53 */	lis r4, __vt__80536A88@ha
+/* 801A30F4 0016C6B4  3C 80 80 53 */	lis r4, __vt__cf_CVision@ha
 /* 801A30F8 0016C6B8  C3 E2 A2 14 */	lfs f31, lbl_8066A594@sda21(r2)
-/* 801A30FC 0016C6BC  38 84 6A 88 */	addi r4, r4, __vt__80536A88@l
+/* 801A30FC 0016C6BC  38 84 6A 88 */	addi r4, r4, __vt__cf_CVision@l
 /* 801A3100 0016C6C0  90 83 00 00 */	stw r4, 0(r3)
 /* 801A3104 0016C6C4  7C 7F 1B 78 */	mr r31, r3
 /* 801A3108 0016C6C8  3B 43 00 04 */	addi r26, r3, 4
@@ -203,9 +203,9 @@ func_801A33AC:
 /* 801A33BC 0016C97C  DB E1 00 20 */	stfd f31, 0x20(r1)
 /* 801A33C0 0016C980  F3 E1 00 28 */	psq_st f31, 40(r1), 0, qr0
 /* 801A33C4 0016C984  48 11 6D 91 */	bl _savegpr_27
-/* 801A33C8 0016C988  3C 80 80 53 */	lis r4, __vt__8052B90C@ha
+/* 801A33C8 0016C988  3C 80 80 53 */	lis r4, __vt__cf_CObjectState@ha
 /* 801A33CC 0016C98C  38 00 00 00 */	li r0, 0
-/* 801A33D0 0016C990  38 84 B9 0C */	addi r4, r4, __vt__8052B90C@l
+/* 801A33D0 0016C990  38 84 B9 0C */	addi r4, r4, __vt__cf_CObjectState@l
 /* 801A33D4 0016C994  90 83 00 00 */	stw r4, 0(r3)
 /* 801A33D8 0016C998  7C 7F 1B 78 */	mr r31, r3
 /* 801A33DC 0016C99C  90 03 00 04 */	stw r0, 4(r3)
@@ -233,9 +233,9 @@ lbl_801A3418:
 /* 801A3430 0016C9F0  41 80 FF E8 */	blt lbl_801A3418
 /* 801A3434 0016C9F4  38 7F 2C C8 */	addi r3, r31, 0x2cc8
 /* 801A3438 0016C9F8  4B FB 07 B5 */	bl func_80153BEC
-/* 801A343C 0016C9FC  3C 60 80 53 */	lis r3, __vt__80532D90@ha
+/* 801A343C 0016C9FC  3C 60 80 53 */	lis r3, __vt__cf_CArtsSet@ha
 /* 801A3440 0016CA00  3B 7F 2D 00 */	addi r27, r31, 0x2d00
-/* 801A3444 0016CA04  38 63 2D 90 */	addi r3, r3, __vt__80532D90@l
+/* 801A3444 0016CA04  38 63 2D 90 */	addi r3, r3, __vt__cf_CArtsSet@l
 /* 801A3448 0016CA08  90 7F 2C FC */	stw r3, 0x2cfc(r31)
 /* 801A344C 0016CA0C  3B 9F 3A 20 */	addi r28, r31, 0x3a20
 lbl_801A3450:
@@ -244,9 +244,9 @@ lbl_801A3450:
 /* 801A3458 0016CA18  3B 7B 00 8C */	addi r27, r27, 0x8c
 /* 801A345C 0016CA1C  7C 1B E0 40 */	cmplw r27, r28
 /* 801A3460 0016CA20  41 80 FF F0 */	blt lbl_801A3450
-/* 801A3464 0016CA24  3C 60 80 53 */	lis r3, __vt__80532D78@ha
+/* 801A3464 0016CA24  3C 60 80 53 */	lis r3, __vt__cf_CAttackSet@ha
 /* 801A3468 0016CA28  3B 7F 3A 30 */	addi r27, r31, 0x3a30
-/* 801A346C 0016CA2C  38 63 2D 78 */	addi r3, r3, __vt__80532D78@l
+/* 801A346C 0016CA2C  38 63 2D 78 */	addi r3, r3, __vt__cf_CAttackSet@l
 /* 801A3470 0016CA30  90 7F 3A 2C */	stw r3, 0x3a2c(r31)
 /* 801A3474 0016CA34  3B 9F 3D 60 */	addi r28, r31, 0x3d60
 lbl_801A3478:
@@ -468,8 +468,8 @@ func_801A3774:
 /* 801A378C 0016CD4C  93 C1 00 08 */	stw r30, 8(r1)
 /* 801A3790 0016CD50  7C 7E 1B 78 */	mr r30, r3
 /* 801A3794 0016CD54  41 82 00 5C */	beq lbl_801A37F0
-/* 801A3798 0016CD58  3D 80 80 53 */	lis r12, __vt__80536A88@ha
-/* 801A379C 0016CD5C  39 8C 6A 88 */	addi r12, r12, __vt__80536A88@l
+/* 801A3798 0016CD58  3D 80 80 53 */	lis r12, __vt__cf_CVision@ha
+/* 801A379C 0016CD5C  39 8C 6A 88 */	addi r12, r12, __vt__cf_CVision@l
 /* 801A37A0 0016CD60  91 83 00 00 */	stw r12, 0(r3)
 /* 801A37A4 0016CD64  81 8C 00 34 */	lwz r12, 0x34(r12)
 /* 801A37A8 0016CD68  7D 89 03 A6 */	mtctr r12
@@ -9910,12 +9910,12 @@ func_801ABE00:
 /* 801ABE18 001753D8  93 A1 00 44 */	stw r29, 0x44(r1)
 /* 801ABE1C 001753DC  7C 9D 23 78 */	mr r29, r4
 /* 801ABE20 001753E0  48 29 8B F9 */	bl func_80444A18
-/* 801ABE24 001753E4  3C 60 80 53 */	lis r3, __vt__8052F990@ha
-/* 801ABE28 001753E8  3C A0 80 53 */	lis r5, __vt__80536CF0@ha
-/* 801ABE2C 001753EC  38 63 F9 90 */	addi r3, r3, __vt__8052F990@l
+/* 801ABE24 001753E4  3C 60 80 53 */	lis r3, __vt__CTTask_IUIBattle@ha
+/* 801ABE28 001753E8  3C A0 80 53 */	lis r5, __vt__CMenuVision@ha
+/* 801ABE2C 001753EC  38 63 F9 90 */	addi r3, r3, __vt__CTTask_IUIBattle@l
 /* 801ABE30 001753F0  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 801ABE34 001753F4  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
-/* 801ABE38 001753F8  38 A5 6C F0 */	addi r5, r5, __vt__80536CF0@l
+/* 801ABE38 001753F8  38 A5 6C F0 */	addi r5, r5, __vt__CMenuVision@l
 /* 801ABE3C 001753FC  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
 /* 801ABE40 00175400  38 85 00 24 */	addi r4, r5, 0x24
 /* 801ABE44 00175404  3B C0 00 00 */	li r30, 0
@@ -14302,11 +14302,13 @@ sinit_801AFCE8:
 func_801AFE04:
 /* 801AFE04 001793C4  38 63 FF A8 */	addi r3, r3, -88
 /* 801AFE08 001793C8  4B FF C2 0C */	b func_801AC014
-.global lbl_801AFE0C
-lbl_801AFE0C:
+
+.global func_801AFE0C
+func_801AFE0C:
 /* 801AFE0C 001793CC  38 63 FF A4 */	addi r3, r3, -92
 /* 801AFE10 001793D0  4B FF CD 44 */	b func_801ACB54
-.global lbl_801AFE14
-lbl_801AFE14:
+
+.global func_801AFE14
+func_801AFE14:
 /* 801AFE14 001793D4  38 63 FF A4 */	addi r3, r3, -92
 /* 801AFE18 001793D8  4B FF C1 FC */	b func_801AC014

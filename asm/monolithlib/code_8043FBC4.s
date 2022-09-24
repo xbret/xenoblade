@@ -10,11 +10,11 @@ func_8043FBC4:
 .global func_8043FBCC
 func_8043FBCC:
 /* 8043FBCC 0040918C  C0 A2 C7 68 */	lfs f5, lbl_8066CAE8@sda21(r2)
-/* 8043FBD0 00409190  3C C0 80 57 */	lis r6, __vt__8056EF78@ha
+/* 8043FBD0 00409190  3C C0 80 57 */	lis r6, __vt__CViewFrame@ha
 /* 8043FBD4 00409194  38 A0 00 00 */	li r5, 0
 /* 8043FBD8 00409198  C0 82 C7 6C */	lfs f4, lbl_8066CAEC@sda21(r2)
 /* 8043FBDC 0040919C  C0 62 C7 70 */	lfs f3, lbl_8066CAF0@sda21(r2)
-/* 8043FBE0 004091A0  38 C6 EF 78 */	addi r6, r6, __vt__8056EF78@l
+/* 8043FBE0 004091A0  38 C6 EF 78 */	addi r6, r6, __vt__CViewFrame@l
 /* 8043FBE4 004091A4  C0 42 C7 74 */	lfs f2, lbl_8066CAF4@sda21(r2)
 /* 8043FBE8 004091A8  38 80 00 08 */	li r4, 8
 /* 8043FBEC 004091AC  C0 22 C7 78 */	lfs f1, lbl_8066CAF8@sda21(r2)
@@ -2581,9 +2581,9 @@ func_804420D0:
 /* 80442100 0040B6C0  90 0D BD 30 */	stw r0, lbl_80667EB0@sda21(r13)
 /* 80442104 0040B6C4  41 82 00 68 */	beq lbl_8044216C
 /* 80442108 0040B6C8  41 82 00 64 */	beq lbl_8044216C
-/* 8044210C 0040B6CC  3C 80 80 57 */	lis r4, __vt__8056EB10@ha
+/* 8044210C 0040B6CC  3C 80 80 57 */	lis r4, __vt___reslist_base_unsigned_long@ha
 /* 80442110 0040B6D0  80 7D 00 04 */	lwz r3, 4(r29)
-/* 80442114 0040B6D4  38 84 EB 10 */	addi r4, r4, __vt__8056EB10@l
+/* 80442114 0040B6D4  38 84 EB 10 */	addi r4, r4, __vt___reslist_base_unsigned_long@l
 /* 80442118 0040B6D8  90 9D 00 00 */	stw r4, 0(r29)
 /* 8044211C 0040B6DC  80 83 00 00 */	lwz r4, 0(r3)
 /* 80442120 0040B6E0  48 00 00 10 */	b lbl_80442130
@@ -4112,22 +4112,22 @@ func_804434FC:
 /* 80443540 0040CB00  7F A5 EB 78 */	mr r5, r29
 /* 80443544 0040CB04  38 C0 00 80 */	li r6, 0x80
 /* 80443548 0040CB08  4B FF 40 75 */	bl func_804375BC
-/* 8044354C 0040CB0C  3C 60 80 57 */	lis r3, __vt__8056EF88@ha
-/* 80443550 0040CB10  3C C0 80 57 */	lis r6, __vt__8056EB10@ha
-/* 80443554 0040CB14  38 63 EF 88 */	addi r3, r3, __vt__8056EF88@l
+/* 8044354C 0040CB0C  3C 60 80 57 */	lis r3, __vt__CViewRoot@ha
+/* 80443550 0040CB10  3C C0 80 57 */	lis r6, __vt___reslist_base_unsigned_long@ha
+/* 80443554 0040CB14  38 63 EF 88 */	addi r3, r3, __vt__CViewRoot@l
 /* 80443558 0040CB18  90 7E 00 00 */	stw r3, 0(r30)
 /* 8044355C 0040CB1C  39 20 00 20 */	li r9, 0x20
-/* 80443560 0040CB20  3C 80 80 57 */	lis r4, __vt__8056EAF8@ha
+/* 80443560 0040CB20  3C 80 80 57 */	lis r4, __vt__reslist_unsigned_long@ha
 /* 80443564 0040CB24  91 3E 02 D0 */	stw r9, 0x2d0(r30)
 /* 80443568 0040CB28  38 1E 01 C4 */	addi r0, r30, 0x1c4
 /* 8044356C 0040CB2C  3B E0 00 00 */	li r31, 0
 /* 80443570 0040CB30  39 1E 02 D4 */	addi r8, r30, 0x2d4
 /* 80443574 0040CB34  90 1E 02 C4 */	stw r0, 0x2c4(r30)
 /* 80443578 0040CB38  38 FE 03 E4 */	addi r7, r30, 0x3e4
-/* 8044357C 0040CB3C  38 C6 EB 10 */	addi r6, r6, __vt__8056EB10@l
+/* 8044357C 0040CB3C  38 C6 EB 10 */	addi r6, r6, __vt___reslist_base_unsigned_long@l
 /* 80443580 0040CB40  38 BE 04 FC */	addi r5, r30, 0x4fc
 /* 80443584 0040CB44  93 FE 02 CC */	stw r31, 0x2cc(r30)
-/* 80443588 0040CB48  38 84 EA F8 */	addi r4, r4, __vt__8056EAF8@l
+/* 80443588 0040CB48  38 84 EA F8 */	addi r4, r4, __vt__reslist_unsigned_long@l
 /* 8044358C 0040CB4C  38 00 00 16 */	li r0, 0x16
 /* 80443590 0040CB50  38 60 06 00 */	li r3, 0x600
 /* 80443594 0040CB54  93 FE 02 C8 */	stw r31, 0x2c8(r30)
@@ -4239,9 +4239,9 @@ func_80443718:
 /* 80443728 0040CCE8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8044372C 0040CCEC  7C 7F 1B 78 */	mr r31, r3
 /* 80443730 0040CCF0  4B FF 3E 8D */	bl func_804375BC
-/* 80443734 0040CCF4  3C 60 80 57 */	lis r3, __vt__8056F040@ha
+/* 80443734 0040CCF4  3C 60 80 57 */	lis r3, __vt__CWorkControl@ha
 /* 80443738 0040CCF8  38 00 00 01 */	li r0, 1
-/* 8044373C 0040CCFC  38 63 F0 40 */	addi r3, r3, __vt__8056F040@l
+/* 8044373C 0040CCFC  38 63 F0 40 */	addi r3, r3, __vt__CWorkControl@l
 /* 80443740 0040CD00  90 7F 00 00 */	stw r3, 0(r31)
 /* 80443744 0040CD04  7F E3 FB 78 */	mr r3, r31
 /* 80443748 0040CD08  93 ED BD 38 */	stw r31, lbl_80667EB8@sda21(r13)
@@ -4452,9 +4452,9 @@ func_804439CC:
 /* 804439DC 0040CF9C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804439E0 0040CFA0  7C 7F 1B 78 */	mr r31, r3
 /* 804439E4 0040CFA4  4B FF 3B D9 */	bl func_804375BC
-/* 804439E8 0040CFA8  3C 60 80 57 */	lis r3, __vt__8056F0F8@ha
+/* 804439E8 0040CFA8  3C 60 80 57 */	lis r3, __vt__CWorkFlowSetup@ha
 /* 804439EC 0040CFAC  38 00 00 00 */	li r0, 0
-/* 804439F0 0040CFB0  38 63 F0 F8 */	addi r3, r3, __vt__8056F0F8@l
+/* 804439F0 0040CFB0  38 63 F0 F8 */	addi r3, r3, __vt__CWorkFlowSetup@l
 /* 804439F4 0040CFB4  90 7F 00 00 */	stw r3, 0(r31)
 /* 804439F8 0040CFB8  7F E3 FB 78 */	mr r3, r31
 /* 804439FC 0040CFBC  90 1F 01 C4 */	stw r0, 0x1c4(r31)
@@ -4576,9 +4576,9 @@ func_80443B08:
 /* 80443B50 0040D110  38 A0 00 00 */	li r5, 0
 /* 80443B54 0040D114  38 C0 00 20 */	li r6, 0x20
 /* 80443B58 0040D118  4B FF 3A 65 */	bl func_804375BC
-/* 80443B5C 0040D11C  3C 80 80 57 */	lis r4, __vt__8056F1B0@ha
+/* 80443B5C 0040D11C  3C 80 80 57 */	lis r4, __vt___unnamed_CWorkRoot_cpp_CWorkRootThread@ha
 /* 80443B60 0040D120  38 7E 01 C4 */	addi r3, r30, 0x1c4
-/* 80443B64 0040D124  38 84 F1 B0 */	addi r4, r4, __vt__8056F1B0@l
+/* 80443B64 0040D124  38 84 F1 B0 */	addi r4, r4, __vt___unnamed_CWorkRoot_cpp_CWorkRootThread@l
 /* 80443B68 0040D128  90 9E 00 00 */	stw r4, 0(r30)
 /* 80443B6C 0040D12C  48 00 00 55 */	bl func_80443BC0
 /* 80443B70 0040D130  38 7E 01 E4 */	addi r3, r30, 0x1e4
@@ -4605,14 +4605,14 @@ lbl_80443B98:
 
 .global func_80443BC0
 func_80443BC0:
-/* 80443BC0 0040D180  3C 80 80 57 */	lis r4, __vt__8056EA4C@ha
+/* 80443BC0 0040D180  3C 80 80 57 */	lis r4, __vt___reslist_base_CWorkThread@ha
 /* 80443BC4 0040D184  38 00 00 00 */	li r0, 0
-/* 80443BC8 0040D188  38 84 EA 4C */	addi r4, r4, __vt__8056EA4C@l
+/* 80443BC8 0040D188  38 84 EA 4C */	addi r4, r4, __vt___reslist_base_CWorkThread@l
 /* 80443BCC 0040D18C  90 83 00 00 */	stw r4, 0(r3)
 /* 80443BD0 0040D190  38 A3 00 08 */	addi r5, r3, 8
 /* 80443BD4 0040D194  90 03 00 14 */	stw r0, 0x14(r3)
-/* 80443BD8 0040D198  3C 80 80 57 */	lis r4, __vt__8056EA34@ha
-/* 80443BDC 0040D19C  38 84 EA 34 */	addi r4, r4, __vt__8056EA34@l
+/* 80443BD8 0040D198  3C 80 80 57 */	lis r4, __vt__reslist_CWorkThread@ha
+/* 80443BDC 0040D19C  38 84 EA 34 */	addi r4, r4, __vt__reslist_CWorkThread@l
 /* 80443BE0 0040D1A0  90 03 00 18 */	stw r0, 0x18(r3)
 /* 80443BE4 0040D1A4  98 03 00 1C */	stb r0, 0x1c(r3)
 /* 80443BE8 0040D1A8  90 A3 00 04 */	stw r5, 4(r3)

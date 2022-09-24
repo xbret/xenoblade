@@ -6,11 +6,11 @@
 func_80059EB8:
 /* 80059EB8 00023478  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80059EBC 0002347C  7C 08 02 A6 */	mflr r0
-/* 80059EC0 00023480  3C A0 80 53 */	lis r5, __vt__80529C48@ha
-/* 80059EC4 00023484  3C E0 80 53 */	lis r7, __vt__80529C78@ha
+/* 80059EC0 00023480  3C A0 80 53 */	lis r5, __vt__CTimeLightGrp@ha
+/* 80059EC4 00023484  3C E0 80 53 */	lis r7, __vt___reslist_base_CVirtualLightObj@ha
 /* 80059EC8 00023488  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80059ECC 0002348C  38 A5 9C 48 */	addi r5, r5, __vt__80529C48@l
-/* 80059ED0 00023490  38 E7 9C 78 */	addi r7, r7, __vt__80529C78@l
+/* 80059ECC 0002348C  38 A5 9C 48 */	addi r5, r5, __vt__CTimeLightGrp@l
+/* 80059ED0 00023490  38 E7 9C 78 */	addi r7, r7, __vt___reslist_base_CVirtualLightObj@l
 /* 80059ED4 00023494  38 C3 00 10 */	addi r6, r3, 0x10
 /* 80059ED8 00023498  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80059EDC 0002349C  3B E0 00 00 */	li r31, 0
@@ -18,8 +18,8 @@ func_80059EB8:
 /* 80059EE4 000234A4  93 C1 00 08 */	stw r30, 8(r1)
 /* 80059EE8 000234A8  7C 7E 1B 78 */	mr r30, r3
 /* 80059EEC 000234AC  90 A3 00 00 */	stw r5, 0(r3)
-/* 80059EF0 000234B0  3C A0 80 53 */	lis r5, __vt__80529C60@ha
-/* 80059EF4 000234B4  38 A5 9C 60 */	addi r5, r5, __vt__80529C60@l
+/* 80059EF0 000234B0  3C A0 80 53 */	lis r5, __vt__reslist_CVirtualLightObj@ha
+/* 80059EF4 000234B4  38 A5 9C 60 */	addi r5, r5, __vt__reslist_CVirtualLightObj@l
 /* 80059EF8 000234B8  90 83 00 04 */	stw r4, 4(r3)
 /* 80059EFC 000234BC  90 E3 00 08 */	stw r7, 8(r3)
 /* 80059F00 000234C0  93 E3 00 1C */	stw r31, 0x1c(r3)
@@ -134,9 +134,9 @@ func_8005A07C:
 /* 8005A094 00023654  93 C1 00 08 */	stw r30, 8(r1)
 /* 8005A098 00023658  7C 7E 1B 78 */	mr r30, r3
 /* 8005A09C 0002365C  41 82 00 78 */	beq lbl_8005A114
-/* 8005A0A0 00023660  3C A0 80 53 */	lis r5, __vt__80529C78@ha
+/* 8005A0A0 00023660  3C A0 80 53 */	lis r5, __vt___reslist_base_CVirtualLightObj@ha
 /* 8005A0A4 00023664  80 83 00 04 */	lwz r4, 4(r3)
-/* 8005A0A8 00023668  38 A5 9C 78 */	addi r5, r5, __vt__80529C78@l
+/* 8005A0A8 00023668  38 A5 9C 78 */	addi r5, r5, __vt___reslist_base_CVirtualLightObj@l
 /* 8005A0AC 0002366C  90 A3 00 00 */	stw r5, 0(r3)
 /* 8005A0B0 00023670  38 00 00 00 */	li r0, 0
 /* 8005A0B4 00023674  80 A4 00 00 */	lwz r5, 0(r4)
@@ -187,9 +187,9 @@ func_8005A130:
 /* 8005A14C 0002370C  7C 7E 1B 78 */	mr r30, r3
 /* 8005A150 00023710  41 82 00 7C */	beq lbl_8005A1CC
 /* 8005A154 00023714  41 82 00 68 */	beq lbl_8005A1BC
-/* 8005A158 00023718  3C A0 80 53 */	lis r5, __vt__80529C78@ha
+/* 8005A158 00023718  3C A0 80 53 */	lis r5, __vt___reslist_base_CVirtualLightObj@ha
 /* 8005A15C 0002371C  80 83 00 04 */	lwz r4, 4(r3)
-/* 8005A160 00023720  38 A5 9C 78 */	addi r5, r5, __vt__80529C78@l
+/* 8005A160 00023720  38 A5 9C 78 */	addi r5, r5, __vt___reslist_base_CVirtualLightObj@l
 /* 8005A164 00023724  90 A3 00 00 */	stw r5, 0(r3)
 /* 8005A168 00023728  38 00 00 00 */	li r0, 0
 /* 8005A16C 0002372C  80 84 00 00 */	lwz r4, 0(r4)
@@ -240,9 +240,9 @@ func_8005A1E8:
 /* 8005A204 000237C4  7C 7E 1B 78 */	mr r30, r3
 /* 8005A208 000237C8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8005A20C 000237CC  41 82 00 C4 */	beq lbl_8005A2D0
-/* 8005A210 000237D0  3C A0 80 53 */	lis r5, __vt__80529C48@ha
+/* 8005A210 000237D0  3C A0 80 53 */	lis r5, __vt__CTimeLightGrp@ha
 /* 8005A214 000237D4  80 83 00 0C */	lwz r4, 0xc(r3)
-/* 8005A218 000237D8  38 A5 9C 48 */	addi r5, r5, __vt__80529C48@l
+/* 8005A218 000237D8  38 A5 9C 48 */	addi r5, r5, __vt__CTimeLightGrp@l
 /* 8005A21C 000237DC  90 A3 00 00 */	stw r5, 0(r3)
 /* 8005A220 000237E0  38 00 00 00 */	li r0, 0
 /* 8005A224 000237E4  80 A4 00 00 */	lwz r5, 0(r4)
@@ -261,9 +261,9 @@ lbl_8005A238:
 /* 8005A250 00023810  90 63 00 04 */	stw r3, 4(r3)
 /* 8005A254 00023814  41 82 00 6C */	beq lbl_8005A2C0
 /* 8005A258 00023818  41 82 00 68 */	beq lbl_8005A2C0
-/* 8005A25C 0002381C  3C 80 80 53 */	lis r4, __vt__80529C78@ha
+/* 8005A25C 0002381C  3C 80 80 53 */	lis r4, __vt___reslist_base_CVirtualLightObj@ha
 /* 8005A260 00023820  80 7D 00 04 */	lwz r3, 4(r29)
-/* 8005A264 00023824  38 84 9C 78 */	addi r4, r4, __vt__80529C78@l
+/* 8005A264 00023824  38 84 9C 78 */	addi r4, r4, __vt___reslist_base_CVirtualLightObj@l
 /* 8005A268 00023828  90 9D 00 00 */	stw r4, 0(r29)
 /* 8005A26C 0002382C  38 00 00 00 */	li r0, 0
 /* 8005A270 00023830  80 83 00 00 */	lwz r4, 0(r3)
@@ -393,9 +393,9 @@ func_8005A3FC:
 /* 8005A410 000239D0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8005A414 000239D4  7C 7E 1B 78 */	mr r30, r3
 /* 8005A418 000239D8  4B FF 0C 11 */	bl func_8004B028
-/* 8005A41C 000239DC  3C 60 80 53 */	lis r3, __vt__80529C88@ha
+/* 8005A41C 000239DC  3C 60 80 53 */	lis r3, __vt__cf_CActParamAnimGame@ha
 /* 8005A420 000239E0  38 00 00 00 */	li r0, 0
-/* 8005A424 000239E4  38 63 9C 88 */	addi r3, r3, __vt__80529C88@l
+/* 8005A424 000239E4  38 63 9C 88 */	addi r3, r3, __vt__cf_CActParamAnimGame@l
 /* 8005A428 000239E8  90 7E 00 00 */	stw r3, 0(r30)
 /* 8005A42C 000239EC  7F C3 F3 78 */	mr r3, r30
 /* 8005A430 000239F0  90 1E 04 EC */	stw r0, 0x4ec(r30)
@@ -422,9 +422,9 @@ func_8005A46C:
 /* 8005A478 00023A38  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8005A47C 00023A3C  7C 7F 1B 78 */	mr r31, r3
 /* 8005A480 00023A40  4B FF 0B A9 */	bl func_8004B028
-/* 8005A484 00023A44  3C 60 80 53 */	lis r3, __vt__80529C88@ha
+/* 8005A484 00023A44  3C 60 80 53 */	lis r3, __vt__cf_CActParamAnimGame@ha
 /* 8005A488 00023A48  38 00 00 00 */	li r0, 0
-/* 8005A48C 00023A4C  38 63 9C 88 */	addi r3, r3, __vt__80529C88@l
+/* 8005A48C 00023A4C  38 63 9C 88 */	addi r3, r3, __vt__cf_CActParamAnimGame@l
 /* 8005A490 00023A50  90 7F 00 00 */	stw r3, 0(r31)
 /* 8005A494 00023A54  7F E3 FB 78 */	mr r3, r31
 /* 8005A498 00023A58  90 1F 04 EC */	stw r0, 0x4ec(r31)
@@ -8153,15 +8153,15 @@ func_800614F4:
 /* 8006151C 0002AADC  7C 7F 1B 78 */	mr r31, r3
 /* 80061520 0002AAE0  41 82 00 58 */	beq lbl_80061578
 /* 80061524 0002AAE4  48 3E 34 F5 */	bl func_80444A18
-/* 80061528 0002AAE8  3C 60 80 53 */	lis r3, __vt__80529E80@ha
+/* 80061528 0002AAE8  3C 60 80 53 */	lis r3, __vt__CTTask_CTaskGameEffAfter@ha
 /* 8006152C 0002AAEC  3C A0 80 51 */	lis r5, lbl_8050CE10@ha
-/* 80061530 0002AAF0  38 63 9E 80 */	addi r3, r3, __vt__80529E80@l
+/* 80061530 0002AAF0  38 63 9E 80 */	addi r3, r3, __vt__CTTask_CTaskGameEffAfter@l
 /* 80061534 0002AAF4  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 80061538 0002AAF8  38 A5 CE 10 */	addi r5, r5, lbl_8050CE10@l
 /* 8006153C 0002AAFC  80 05 00 04 */	lwz r0, 4(r5)
-/* 80061540 0002AB00  3C 60 80 53 */	lis r3, __vt__80529E38@ha
+/* 80061540 0002AB00  3C 60 80 53 */	lis r3, __vt__CTaskGameEffAfter@ha
 /* 80061544 0002AB04  80 85 00 00 */	lwz r4, 0(r5)
-/* 80061548 0002AB08  38 63 9E 38 */	addi r3, r3, __vt__80529E38@l
+/* 80061548 0002AB08  38 63 9E 38 */	addi r3, r3, __vt__CTaskGameEffAfter@l
 /* 8006154C 0002AB0C  90 9F 00 3C */	stw r4, 0x3c(r31)
 /* 80061550 0002AB10  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 80061554 0002AB14  80 05 00 08 */	lwz r0, 8(r5)
@@ -13533,19 +13533,19 @@ func_800659C4:
 /* 800659FC 0002EFBC  7C 7F 1B 78 */	mr r31, r3
 /* 80065A00 0002EFC0  41 82 01 18 */	beq lbl_80065B18
 /* 80065A04 0002EFC4  48 3D F0 15 */	bl func_80444A18
-/* 80065A08 0002EFC8  3C 60 80 53 */	lis r3, __vt__8052A01C@ha
+/* 80065A08 0002EFC8  3C 60 80 53 */	lis r3, __vt__CTTask_cf_CfResTask@ha
 /* 80065A0C 0002EFCC  3C E0 80 51 */	lis r7, lbl_8050CE10@ha
-/* 80065A10 0002EFD0  38 63 A0 1C */	addi r3, r3, __vt__8052A01C@l
+/* 80065A10 0002EFD0  38 63 A0 1C */	addi r3, r3, __vt__CTTask_cf_CfResTask@l
 /* 80065A14 0002EFD4  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 80065A18 0002EFD8  38 E7 CE 10 */	addi r7, r7, lbl_8050CE10@l
-/* 80065A1C 0002EFDC  3C A0 80 53 */	lis r5, __vt__80529FD4@ha
+/* 80065A1C 0002EFDC  3C A0 80 53 */	lis r5, __vt__cf_CfResTask@ha
 /* 80065A20 0002EFE0  80 07 00 04 */	lwz r0, 4(r7)
-/* 80065A24 0002EFE4  3C 80 80 53 */	lis r4, __vt__8052A060@ha
+/* 80065A24 0002EFE4  3C 80 80 53 */	lis r4, __vt__cf_CfRes@ha
 /* 80065A28 0002EFE8  80 67 00 00 */	lwz r3, 0(r7)
-/* 80065A2C 0002EFEC  38 A5 9F D4 */	addi r5, r5, __vt__80529FD4@l
+/* 80065A2C 0002EFEC  38 A5 9F D4 */	addi r5, r5, __vt__cf_CfResTask@l
 /* 80065A30 0002EFF0  90 7F 00 3C */	stw r3, 0x3c(r31)
 /* 80065A34 0002EFF4  3B DF 00 54 */	addi r30, r31, 0x54
-/* 80065A38 0002EFF8  38 84 A0 60 */	addi r4, r4, __vt__8052A060@l
+/* 80065A38 0002EFF8  38 84 A0 60 */	addi r4, r4, __vt__cf_CfRes@l
 /* 80065A3C 0002EFFC  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 80065A40 0002F000  38 7E 00 04 */	addi r3, r30, 4
 /* 80065A44 0002F004  80 07 00 08 */	lwz r0, 8(r7)
@@ -15369,35 +15369,35 @@ lbl_800671D0:
 /* 800671FC 000307BC  38 E7 00 3C */	addi r7, r7, 0x3c
 /* 80067200 000307C0  42 00 FF D0 */	bdnz lbl_800671D0
 lbl_80067204:
-/* 80067204 000307C4  3F 20 80 53 */	lis r25, __vt__8052A540@ha
-/* 80067208 000307C8  3F 40 80 53 */	lis r26, __vt__8052A4E0@ha
+/* 80067204 000307C4  3F 20 80 53 */	lis r25, __vt__cf_IResInfoMap@ha
+/* 80067208 000307C8  3F 40 80 53 */	lis r26, __vt__cf_IResInfoPreloadMap@ha
 /* 8006720C 000307CC  3B E0 00 00 */	li r31, 0
-/* 80067210 000307D0  3F 60 80 53 */	lis r27, __vt__8052A480@ha
+/* 80067210 000307D0  3F 60 80 53 */	lis r27, __vt__cf_IResInfoID@ha
 /* 80067214 000307D4  38 A3 1E 78 */	addi r5, r3, 0x1e78
-/* 80067218 000307D8  3F 80 80 53 */	lis r28, __vt__8052A420@ha
-/* 8006721C 000307DC  3F A0 80 53 */	lis r29, __vt__8052A2A0@ha
-/* 80067220 000307E0  3D 80 80 53 */	lis r12, __vt__8052A240@ha
-/* 80067224 000307E4  39 8C A2 40 */	addi r12, r12, __vt__8052A240@l
-/* 80067228 000307E8  3D 60 80 53 */	lis r11, __vt__8052A1DC@ha
-/* 8006722C 000307EC  3D 40 80 53 */	lis r10, __vt__8052A174@ha
-/* 80067230 000307F0  3D 20 80 53 */	lis r9, __vt__8052A3C0@ha
-/* 80067234 000307F4  3D 00 80 53 */	lis r8, __vt__8052A360@ha
-/* 80067238 000307F8  3C E0 80 53 */	lis r7, __vt__8052A300@ha
-/* 8006723C 000307FC  3C C0 80 53 */	lis r6, __vt__8052A168@ha
-/* 80067240 00030800  3B 39 A5 40 */	addi r25, r25, __vt__8052A540@l
-/* 80067244 00030804  3B 5A A4 E0 */	addi r26, r26, __vt__8052A4E0@l
-/* 80067248 00030808  3B 7B A4 80 */	addi r27, r27, __vt__8052A480@l
-/* 8006724C 0003080C  3B 9C A4 20 */	addi r28, r28, __vt__8052A420@l
-/* 80067250 00030810  3B BD A2 A0 */	addi r29, r29, __vt__8052A2A0@l
-/* 80067254 00030814  39 6B A1 DC */	addi r11, r11, __vt__8052A1DC@l
-/* 80067258 00030818  39 4A A1 74 */	addi r10, r10, __vt__8052A174@l
-/* 8006725C 0003081C  39 29 A3 C0 */	addi r9, r9, __vt__8052A3C0@l
-/* 80067260 00030820  39 08 A3 60 */	addi r8, r8, __vt__8052A360@l
-/* 80067264 00030824  38 E7 A3 00 */	addi r7, r7, __vt__8052A300@l
-/* 80067268 00030828  38 C6 A1 68 */	addi r6, r6, __vt__8052A168@l
-/* 8006726C 0003082C  3C 80 80 53 */	lis r4, __vt__8052A150@ha
+/* 80067218 000307D8  3F 80 80 53 */	lis r28, __vt__cf_IResInfoLOD@ha
+/* 8006721C 000307DC  3F A0 80 53 */	lis r29, __vt__cf_IResInfoObj@ha
+/* 80067220 000307E0  3D 80 80 53 */	lis r12, __vt__cf_IResInfoPc@ha
+/* 80067224 000307E4  39 8C A2 40 */	addi r12, r12, __vt__cf_IResInfoPc@l
+/* 80067228 000307E8  3D 60 80 53 */	lis r11, __vt__cf_IResInfoEneNpc@ha
+/* 8006722C 000307EC  3D 40 80 53 */	lis r10, __vt__cf_IResInfoEneNpcEvent@ha
+/* 80067230 000307F0  3D 20 80 53 */	lis r9, __vt__cf_IResInfoEffect@ha
+/* 80067234 000307F4  3D 00 80 53 */	lis r8, __vt__cf_IResInfoSe@ha
+/* 80067238 000307F8  3C E0 80 53 */	lis r7, __vt__cf_IResInfoTBox@ha
+/* 8006723C 000307FC  3C C0 80 53 */	lis r6, __vt___reslist_base_unsigned_short@ha
+/* 80067240 00030800  3B 39 A5 40 */	addi r25, r25, __vt__cf_IResInfoMap@l
+/* 80067244 00030804  3B 5A A4 E0 */	addi r26, r26, __vt__cf_IResInfoPreloadMap@l
+/* 80067248 00030808  3B 7B A4 80 */	addi r27, r27, __vt__cf_IResInfoID@l
+/* 8006724C 0003080C  3B 9C A4 20 */	addi r28, r28, __vt__cf_IResInfoLOD@l
+/* 80067250 00030810  3B BD A2 A0 */	addi r29, r29, __vt__cf_IResInfoObj@l
+/* 80067254 00030814  39 6B A1 DC */	addi r11, r11, __vt__cf_IResInfoEneNpc@l
+/* 80067258 00030818  39 4A A1 74 */	addi r10, r10, __vt__cf_IResInfoEneNpcEvent@l
+/* 8006725C 0003081C  39 29 A3 C0 */	addi r9, r9, __vt__cf_IResInfoEffect@l
+/* 80067260 00030820  39 08 A3 60 */	addi r8, r8, __vt__cf_IResInfoSe@l
+/* 80067264 00030824  38 E7 A3 00 */	addi r7, r7, __vt__cf_IResInfoTBox@l
+/* 80067268 00030828  38 C6 A1 68 */	addi r6, r6, __vt___reslist_base_unsigned_short@l
+/* 8006726C 0003082C  3C 80 80 53 */	lis r4, __vt__reslist_unsigned_short@ha
 /* 80067270 00030830  93 23 1E 40 */	stw r25, 0x1e40(r3)
-/* 80067274 00030834  38 84 A1 50 */	addi r4, r4, __vt__8052A150@l
+/* 80067274 00030834  38 84 A1 50 */	addi r4, r4, __vt__reslist_unsigned_short@l
 /* 80067278 00030838  93 43 1E 44 */	stw r26, 0x1e44(r3)
 /* 8006727C 0003083C  93 63 1E 48 */	stw r27, 0x1e48(r3)
 /* 80067280 00030840  93 83 1E 4C */	stw r28, 0x1e4c(r3)
@@ -15501,9 +15501,9 @@ func_800673E0:
 /* 800673F8 000309B8  93 C1 00 08 */	stw r30, 8(r1)
 /* 800673FC 000309BC  7C 7E 1B 78 */	mr r30, r3
 /* 80067400 000309C0  41 82 00 78 */	beq lbl_80067478
-/* 80067404 000309C4  3C A0 80 53 */	lis r5, __vt__8052A168@ha
+/* 80067404 000309C4  3C A0 80 53 */	lis r5, __vt___reslist_base_unsigned_short@ha
 /* 80067408 000309C8  80 83 00 04 */	lwz r4, 4(r3)
-/* 8006740C 000309CC  38 A5 A1 68 */	addi r5, r5, __vt__8052A168@l
+/* 8006740C 000309CC  38 A5 A1 68 */	addi r5, r5, __vt___reslist_base_unsigned_short@l
 /* 80067410 000309D0  90 A3 00 00 */	stw r5, 0(r3)
 /* 80067414 000309D4  38 00 00 00 */	li r0, 0
 /* 80067418 000309D8  80 A4 00 00 */	lwz r5, 0(r4)
@@ -15554,9 +15554,9 @@ func_80067494:
 /* 800674B0 00030A70  7C 7E 1B 78 */	mr r30, r3
 /* 800674B4 00030A74  41 82 00 7C */	beq lbl_80067530
 /* 800674B8 00030A78  41 82 00 68 */	beq lbl_80067520
-/* 800674BC 00030A7C  3C A0 80 53 */	lis r5, __vt__8052A168@ha
+/* 800674BC 00030A7C  3C A0 80 53 */	lis r5, __vt___reslist_base_unsigned_short@ha
 /* 800674C0 00030A80  80 83 00 04 */	lwz r4, 4(r3)
-/* 800674C4 00030A84  38 A5 A1 68 */	addi r5, r5, __vt__8052A168@l
+/* 800674C4 00030A84  38 A5 A1 68 */	addi r5, r5, __vt___reslist_base_unsigned_short@l
 /* 800674C8 00030A88  90 A3 00 00 */	stw r5, 0(r3)
 /* 800674CC 00030A8C  38 00 00 00 */	li r0, 0
 /* 800674D0 00030A90  80 84 00 00 */	lwz r4, 0(r4)
@@ -15637,9 +15637,9 @@ lbl_800675CC:
 /* 800675D4 00030B94  90 1E 1E 88 */	stw r0, 0x1e88(r30)
 /* 800675D8 00030B98  41 82 00 68 */	beq lbl_80067640
 /* 800675DC 00030B9C  41 82 00 64 */	beq lbl_80067640
-/* 800675E0 00030BA0  3C 80 80 53 */	lis r4, __vt__8052A168@ha
+/* 800675E0 00030BA0  3C 80 80 53 */	lis r4, __vt___reslist_base_unsigned_short@ha
 /* 800675E4 00030BA4  80 7D 00 04 */	lwz r3, 4(r29)
-/* 800675E8 00030BA8  38 84 A1 68 */	addi r4, r4, __vt__8052A168@l
+/* 800675E8 00030BA8  38 84 A1 68 */	addi r4, r4, __vt___reslist_base_unsigned_short@l
 /* 800675EC 00030BAC  90 9D 00 00 */	stw r4, 0(r29)
 /* 800675F0 00030BB0  80 83 00 00 */	lwz r4, 0(r3)
 /* 800675F4 00030BB4  48 00 00 10 */	b lbl_80067604
@@ -17878,9 +17878,9 @@ lbl_80069384:
 
 .global func_800693A0
 func_800693A0:
-/* 800693A0 00032960  3C 80 80 53 */	lis r4, __vt__8052A5B8@ha
+/* 800693A0 00032960  3C 80 80 53 */	lis r4, __vt__cf_CfScript@ha
 /* 800693A4 00032964  38 00 00 00 */	li r0, 0
-/* 800693A8 00032968  38 84 A5 B8 */	addi r4, r4, __vt__8052A5B8@l
+/* 800693A8 00032968  38 84 A5 B8 */	addi r4, r4, __vt__cf_CfScript@l
 /* 800693AC 0003296C  90 83 00 00 */	stw r4, 0(r3)
 /* 800693B0 00032970  98 03 00 04 */	stb r0, 4(r3)
 /* 800693B4 00032974  90 03 00 44 */	stw r0, 0x44(r3)
@@ -18133,8 +18133,8 @@ sinit_800696C8:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global __vt__80529C48
-__vt__80529C48:
+.global __vt__CTimeLightGrp
+__vt__CTimeLightGrp:
 	# ROM: 0x525D48
 	.4byte CTimeLightGrp_RTTI
 	.4byte 0
@@ -18147,8 +18147,8 @@ lbl_80529C54:
 	.4byte 0
 
 
-.global __vt__80529C60
-__vt__80529C60:
+.global __vt__reslist_CVirtualLightObj
+__vt__reslist_CVirtualLightObj:
 	# ROM: 0x525D60
 	.4byte reslist_CVirtualLightObj_RTTI
 	.4byte 0
@@ -18161,8 +18161,8 @@ lbl_80529C6C:
 	.4byte 0
 
 
-.global __vt__80529C78
-__vt__80529C78:
+.global __vt___reslist_base_CVirtualLightObj
+__vt___reslist_base_CVirtualLightObj:
 	# ROM: 0x525D78
 	.4byte _reslist_base_CVirtualLightObj_RTTI
 	.4byte 0
@@ -18170,8 +18170,8 @@ __vt__80529C78:
 	.4byte 0
 
 
-.global __vt__80529C88
-__vt__80529C88:
+.global __vt__cf_CActParamAnimGame
+__vt__cf_CActParamAnimGame:
 	# ROM: 0x525D88
 	.4byte cf_CActParamAnimGame_RTTI
 	.4byte 0
@@ -18291,8 +18291,8 @@ lbl_80529D90:
 	.4byte 0
 
 
-.global __vt__80529E38
-__vt__80529E38:
+.global __vt__CTaskGameEffAfter
+__vt__CTaskGameEffAfter:
 	# ROM: 0x525F38
 	.4byte CTaskGameEffAfter_RTTI
 	.4byte 0
@@ -18317,8 +18317,8 @@ lbl_80529E5C:
 	.4byte 0
 
 
-.global __vt__80529E80
-__vt__80529E80:
+.global __vt__CTTask_CTaskGameEffAfter
+__vt__CTTask_CTaskGameEffAfter:
 	# ROM: 0x525F80
 	.4byte CTTask_CTaskGameEffAfter_RTTI
 	.4byte 0
@@ -18430,8 +18430,8 @@ lbl_80529F78:
 	.4byte lbl_80064544
 
 
-.global __vt__80529FD4
-__vt__80529FD4:
+.global __vt__cf_CfResTask
+__vt__cf_CfResTask:
 	# ROM: 0x5260D4
 	.4byte cf_CfResTask_RTTI
 	.4byte 0
@@ -18456,8 +18456,8 @@ lbl_80529FF8:
 	.4byte 0
 
 
-.global __vt__8052A01C
-__vt__8052A01C:
+.global __vt__CTTask_cf_CfResTask
+__vt__CTTask_cf_CfResTask:
 	# ROM: 0x52611C
 	.4byte CTTask_cf_CfResTask_RTTI
 	.4byte 0
@@ -18481,8 +18481,8 @@ lbl_8052A040:
 	.4byte 0
 
 
-.global __vt__8052A060
-__vt__8052A060:
+.global __vt__cf_CfRes
+__vt__cf_CfRes:
 	# ROM: 0x526160
 	.4byte cf_CfRes_RTTI
 	.4byte 0
@@ -18559,8 +18559,8 @@ lbl_8052A124:
 	.4byte lbl_80066230
 
 
-.global __vt__8052A150
-__vt__8052A150:
+.global __vt__reslist_unsigned_short
+__vt__reslist_unsigned_short:
 	# ROM: 0x526250
 	.4byte reslist_unsigned_short_RTTI
 	.4byte 0
@@ -18573,16 +18573,16 @@ lbl_8052A15C:
 	.4byte 0
 
 
-.global __vt__8052A168
-__vt__8052A168:
+.global __vt___reslist_base_unsigned_short
+__vt___reslist_base_unsigned_short:
 	# ROM: 0x526268
 	.4byte _reslist_base_unsigned_short_RTTI
 	.4byte 0
 	.4byte func_800673E0
 
 
-.global __vt__8052A174
-__vt__8052A174:
+.global __vt__cf_IResInfoEneNpcEvent
+__vt__cf_IResInfoEneNpcEvent:
 	# ROM: 0x526274
 	.4byte cf_IResInfoEneNpcEvent_RTTI
 	.4byte 0
@@ -18615,8 +18615,8 @@ lbl_8052A1C8:
 	.4byte 0
 
 
-.global __vt__8052A1DC
-__vt__8052A1DC:
+.global __vt__cf_IResInfoEneNpc
+__vt__cf_IResInfoEneNpc:
 	# ROM: 0x5262DC
 	.4byte cf_IResInfoEneNpc_RTTI
 	.4byte 0
@@ -18648,8 +18648,8 @@ lbl_8052A230:
 	.4byte 0
 
 
-.global __vt__8052A240
-__vt__8052A240:
+.global __vt__cf_IResInfoPc
+__vt__cf_IResInfoPc:
 	# ROM: 0x526340
 	.4byte cf_IResInfoPc_RTTI
 	.4byte 0
@@ -18680,8 +18680,8 @@ lbl_8052A290:
 	.4byte 0
 
 
-.global __vt__8052A2A0
-__vt__8052A2A0:
+.global __vt__cf_IResInfoObj
+__vt__cf_IResInfoObj:
 	# ROM: 0x5263A0
 	.4byte cf_IResInfoObj_RTTI
 	.4byte 0
@@ -18712,8 +18712,8 @@ lbl_8052A2F0:
 	.4byte 0
 
 
-.global __vt__8052A300
-__vt__8052A300:
+.global __vt__cf_IResInfoTBox
+__vt__cf_IResInfoTBox:
 	# ROM: 0x526400
 	.4byte cf_IResInfoTBox_RTTI
 	.4byte 0
@@ -18744,8 +18744,8 @@ lbl_8052A350:
 	.4byte 0
 
 
-.global __vt__8052A360
-__vt__8052A360:
+.global __vt__cf_IResInfoSe
+__vt__cf_IResInfoSe:
 	# ROM: 0x526460
 	.4byte cf_IResInfoSe_RTTI
 	.4byte 0
@@ -18776,8 +18776,8 @@ lbl_8052A3B0:
 	.4byte 0
 
 
-.global __vt__8052A3C0
-__vt__8052A3C0:
+.global __vt__cf_IResInfoEffect
+__vt__cf_IResInfoEffect:
 	# ROM: 0x5264C0
 	.4byte cf_IResInfoEffect_RTTI
 	.4byte 0
@@ -18808,8 +18808,8 @@ lbl_8052A410:
 	.4byte 0
 
 
-.global __vt__8052A420
-__vt__8052A420:
+.global __vt__cf_IResInfoLOD
+__vt__cf_IResInfoLOD:
 	# ROM: 0x526520
 	.4byte cf_IResInfoLOD_RTTI
 	.4byte 0
@@ -18840,8 +18840,8 @@ lbl_8052A470:
 	.4byte 0
 
 
-.global __vt__8052A480
-__vt__8052A480:
+.global __vt__cf_IResInfoID
+__vt__cf_IResInfoID:
 	# ROM: 0x526580
 	.4byte cf_IResInfoID_RTTI
 	.4byte 0
@@ -18872,8 +18872,8 @@ lbl_8052A4D0:
 	.4byte 0
 
 
-.global __vt__8052A4E0
-__vt__8052A4E0:
+.global __vt__cf_IResInfoPreloadMap
+__vt__cf_IResInfoPreloadMap:
 	# ROM: 0x5265E0
 	.4byte cf_IResInfoPreloadMap_RTTI
 	.4byte 0
@@ -18904,8 +18904,8 @@ lbl_8052A530:
 	.4byte 0
 
 
-.global __vt__8052A540
-__vt__8052A540:
+.global __vt__cf_IResInfoMap
+__vt__cf_IResInfoMap:
 	# ROM: 0x526640
 	.4byte cf_IResInfoMap_RTTI
 	.4byte 0
@@ -18947,8 +18947,8 @@ lbl_8052A5A0:
 	.4byte func_8006922C
 
 
-.global __vt__8052A5B8
-__vt__8052A5B8:
+.global __vt__cf_CfScript
+__vt__cf_CfScript:
 	# ROM: 0x5266B8
 	.4byte cf_CfScript_RTTI
 	.4byte 0

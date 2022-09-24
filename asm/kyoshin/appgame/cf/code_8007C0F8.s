@@ -4830,9 +4830,9 @@ func_80080244:
 func_80080254:
 /* 80080254 00049814  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80080258 00049818  7C 08 02 A6 */	mflr r0
-/* 8008025C 0004981C  3C A0 80 53 */	lis r5, __vt__8052E468@ha
+/* 8008025C 0004981C  3C A0 80 53 */	lis r5, __vt__cf_CfObjectImplMove@ha
 /* 80080260 00049820  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80080264 00049824  38 A5 E4 68 */	addi r5, r5, __vt__8052E468@l
+/* 80080264 00049824  38 A5 E4 68 */	addi r5, r5, __vt__cf_CfObjectImplMove@l
 /* 80080268 00049828  38 85 00 B4 */	addi r4, r5, 0xb4
 /* 8008026C 0004982C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80080270 00049830  3B E0 00 00 */	li r31, 0
@@ -4851,9 +4851,9 @@ func_80080254:
 /* 800802A4 00049864  93 E3 00 1C */	stw r31, 0x1c(r3)
 /* 800802A8 00049868  38 63 00 28 */	addi r3, r3, 0x28
 /* 800802AC 0004986C  48 22 08 51 */	bl func_802A0AFC
-/* 800802B0 00049870  3C A0 80 53 */	lis r5, __vt__8052DFB8@ha
+/* 800802B0 00049870  3C A0 80 53 */	lis r5, __vt__cf_CfObjectImplPc@ha
 /* 800802B4 00049874  3B BE 00 68 */	addi r29, r30, 0x68
-/* 800802B8 00049878  38 A5 DF B8 */	addi r5, r5, __vt__8052DFB8@l
+/* 800802B8 00049878  38 A5 DF B8 */	addi r5, r5, __vt__cf_CfObjectImplPc@l
 /* 800802BC 0004987C  90 BE 00 00 */	stw r5, 0(r30)
 /* 800802C0 00049880  38 85 00 B4 */	addi r4, r5, 0xb4
 /* 800802C4 00049884  7F A3 EB 78 */	mr r3, r29
@@ -4861,11 +4861,11 @@ func_80080254:
 /* 800802CC 0004988C  90 9E 00 0C */	stw r4, 0xc(r30)
 /* 800802D0 00049890  90 1E 00 10 */	stw r0, 0x10(r30)
 /* 800802D4 00049894  48 0D B7 D5 */	bl func_8015BAA8
-/* 800802D8 00049898  3C A0 80 53 */	lis r5, __vt__8052DD28@ha
-/* 800802DC 0004989C  3C 60 80 53 */	lis r3, __vt__80533638@ha
-/* 800802E0 000498A0  38 A5 DD 28 */	addi r5, r5, __vt__8052DD28@l
+/* 800802D8 00049898  3C A0 80 53 */	lis r5, __vt__cf_CfObjectImplWalker@ha
+/* 800802DC 0004989C  3C 60 80 53 */	lis r3, __vt__cf_CCharEffectPc@ha
+/* 800802E0 000498A0  38 A5 DD 28 */	addi r5, r5, __vt__cf_CfObjectImplWalker@l
 /* 800802E4 000498A4  93 FE 03 6C */	stw r31, 0x36c(r30)
-/* 800802E8 000498A8  38 63 36 38 */	addi r3, r3, __vt__80533638@l
+/* 800802E8 000498A8  38 63 36 38 */	addi r3, r3, __vt__cf_CCharEffectPc@l
 /* 800802EC 000498AC  38 85 00 B4 */	addi r4, r5, 0xb4
 /* 800802F0 000498B0  38 05 00 C4 */	addi r0, r5, 0xc4
 /* 800802F4 000498B4  90 7D 00 00 */	stw r3, 0(r29)
@@ -4890,9 +4890,9 @@ func_80080254:
 func_80080338:
 /* 80080338 000498F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8008033C 000498FC  7C 08 02 A6 */	mflr r0
-/* 80080340 00049900  3C A0 80 53 */	lis r5, __vt__8052E468@ha
+/* 80080340 00049900  3C A0 80 53 */	lis r5, __vt__cf_CfObjectImplMove@ha
 /* 80080344 00049904  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80080348 00049908  38 A5 E4 68 */	addi r5, r5, __vt__8052E468@l
+/* 80080348 00049908  38 A5 E4 68 */	addi r5, r5, __vt__cf_CfObjectImplMove@l
 /* 8008034C 0004990C  38 85 00 B4 */	addi r4, r5, 0xb4
 /* 80080350 00049910  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80080354 00049914  3B E0 00 00 */	li r31, 0
@@ -4911,9 +4911,9 @@ func_80080338:
 /* 80080388 00049948  93 E3 00 1C */	stw r31, 0x1c(r3)
 /* 8008038C 0004994C  38 63 00 28 */	addi r3, r3, 0x28
 /* 80080390 00049950  48 22 07 6D */	bl func_802A0AFC
-/* 80080394 00049954  3C A0 80 53 */	lis r5, __vt__8052DFB8@ha
+/* 80080394 00049954  3C A0 80 53 */	lis r5, __vt__cf_CfObjectImplPc@ha
 /* 80080398 00049958  3B DD 00 68 */	addi r30, r29, 0x68
-/* 8008039C 0004995C  38 A5 DF B8 */	addi r5, r5, __vt__8052DFB8@l
+/* 8008039C 0004995C  38 A5 DF B8 */	addi r5, r5, __vt__cf_CfObjectImplPc@l
 /* 800803A0 00049960  90 BD 00 00 */	stw r5, 0(r29)
 /* 800803A4 00049964  38 85 00 B4 */	addi r4, r5, 0xb4
 /* 800803A8 00049968  7F C3 F3 78 */	mr r3, r30
@@ -4921,9 +4921,9 @@ func_80080338:
 /* 800803B0 00049970  90 9D 00 0C */	stw r4, 0xc(r29)
 /* 800803B4 00049974  90 1D 00 10 */	stw r0, 0x10(r29)
 /* 800803B8 00049978  48 0D B6 F1 */	bl func_8015BAA8
-/* 800803BC 0004997C  3C 60 80 53 */	lis r3, __vt__80533638@ha
+/* 800803BC 0004997C  3C 60 80 53 */	lis r3, __vt__cf_CCharEffectPc@ha
 /* 800803C0 00049980  93 FD 03 6C */	stw r31, 0x36c(r29)
-/* 800803C4 00049984  38 63 36 38 */	addi r3, r3, __vt__80533638@l
+/* 800803C4 00049984  38 63 36 38 */	addi r3, r3, __vt__cf_CCharEffectPc@l
 /* 800803C8 00049988  90 7E 00 00 */	stw r3, 0(r30)
 /* 800803CC 0004998C  7F A3 EB 78 */	mr r3, r29
 /* 800803D0 00049990  93 FD 03 70 */	stw r31, 0x370(r29)
@@ -6224,10 +6224,10 @@ lbl_8008149C:
 func_800814BC:
 /* 800814BC 0004AA7C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800814C0 0004AA80  7C 08 02 A6 */	mflr r0
-/* 800814C4 0004AA84  3C A0 80 53 */	lis r5, __vt__8052E468@ha
+/* 800814C4 0004AA84  3C A0 80 53 */	lis r5, __vt__cf_CfObjectImplMove@ha
 /* 800814C8 0004AA88  38 C0 00 00 */	li r6, 0
 /* 800814CC 0004AA8C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 800814D0 0004AA90  38 A5 E4 68 */	addi r5, r5, __vt__8052E468@l
+/* 800814D0 0004AA90  38 A5 E4 68 */	addi r5, r5, __vt__cf_CfObjectImplMove@l
 /* 800814D4 0004AA94  38 85 00 B4 */	addi r4, r5, 0xb4
 /* 800814D8 0004AA98  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800814DC 0004AA9C  38 05 00 C4 */	addi r0, r5, 0xc4
@@ -6244,9 +6244,9 @@ func_800814BC:
 /* 80081508 0004AAC8  90 C3 00 1C */	stw r6, 0x1c(r3)
 /* 8008150C 0004AACC  38 63 00 28 */	addi r3, r3, 0x28
 /* 80081510 0004AAD0  48 21 F5 ED */	bl func_802A0AFC
-/* 80081514 0004AAD4  3C A0 80 53 */	lis r5, __vt__8052E1F8@ha
+/* 80081514 0004AAD4  3C A0 80 53 */	lis r5, __vt__cf_CfObjectImplNpc@ha
 /* 80081518 0004AAD8  3B FE 00 68 */	addi r31, r30, 0x68
-/* 8008151C 0004AADC  38 A5 E1 F8 */	addi r5, r5, __vt__8052E1F8@l
+/* 8008151C 0004AADC  38 A5 E1 F8 */	addi r5, r5, __vt__cf_CfObjectImplNpc@l
 /* 80081520 0004AAE0  90 BE 00 00 */	stw r5, 0(r30)
 /* 80081524 0004AAE4  38 85 00 B4 */	addi r4, r5, 0xb4
 /* 80081528 0004AAE8  7F E3 FB 78 */	mr r3, r31
@@ -6254,9 +6254,9 @@ func_800814BC:
 /* 80081530 0004AAF0  90 9E 00 0C */	stw r4, 0xc(r30)
 /* 80081534 0004AAF4  90 1E 00 10 */	stw r0, 0x10(r30)
 /* 80081538 0004AAF8  48 0D A5 71 */	bl func_8015BAA8
-/* 8008153C 0004AAFC  3C 80 80 53 */	lis r4, __vt__805335D8@ha
+/* 8008153C 0004AAFC  3C 80 80 53 */	lis r4, __vt__cf_CCharEffectNpc@ha
 /* 80081540 0004AB00  7F C3 F3 78 */	mr r3, r30
-/* 80081544 0004AB04  38 84 35 D8 */	addi r4, r4, __vt__805335D8@l
+/* 80081544 0004AB04  38 84 35 D8 */	addi r4, r4, __vt__cf_CCharEffectNpc@l
 /* 80081548 0004AB08  90 9F 00 00 */	stw r4, 0(r31)
 /* 8008154C 0004AB0C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80081550 0004AB10  83 C1 00 08 */	lwz r30, 8(r1)
@@ -6289,10 +6289,10 @@ lbl_8008158C:
 func_800815A4:
 /* 800815A4 0004AB64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800815A8 0004AB68  7C 08 02 A6 */	mflr r0
-/* 800815AC 0004AB6C  3C A0 80 53 */	lis r5, __vt__8052E468@ha
+/* 800815AC 0004AB6C  3C A0 80 53 */	lis r5, __vt__cf_CfObjectImplMove@ha
 /* 800815B0 0004AB70  38 C0 00 00 */	li r6, 0
 /* 800815B4 0004AB74  90 01 00 14 */	stw r0, 0x14(r1)
-/* 800815B8 0004AB78  38 A5 E4 68 */	addi r5, r5, __vt__8052E468@l
+/* 800815B8 0004AB78  38 A5 E4 68 */	addi r5, r5, __vt__cf_CfObjectImplMove@l
 /* 800815BC 0004AB7C  38 85 00 B4 */	addi r4, r5, 0xb4
 /* 800815C0 0004AB80  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800815C4 0004AB84  38 05 00 C4 */	addi r0, r5, 0xc4
@@ -6309,9 +6309,9 @@ func_800815A4:
 /* 800815F0 0004ABB0  90 C3 00 1C */	stw r6, 0x1c(r3)
 /* 800815F4 0004ABB4  38 63 00 28 */	addi r3, r3, 0x28
 /* 800815F8 0004ABB8  48 21 F5 05 */	bl func_802A0AFC
-/* 800815FC 0004ABBC  3C A0 80 53 */	lis r5, __vt__8052E0B8@ha
+/* 800815FC 0004ABBC  3C A0 80 53 */	lis r5, __vt__cf_CfObjectImplObj@ha
 /* 80081600 0004ABC0  3B FE 00 68 */	addi r31, r30, 0x68
-/* 80081604 0004ABC4  38 A5 E0 B8 */	addi r5, r5, __vt__8052E0B8@l
+/* 80081604 0004ABC4  38 A5 E0 B8 */	addi r5, r5, __vt__cf_CfObjectImplObj@l
 /* 80081608 0004ABC8  90 BE 00 00 */	stw r5, 0(r30)
 /* 8008160C 0004ABCC  38 85 00 B4 */	addi r4, r5, 0xb4
 /* 80081610 0004ABD0  7F E3 FB 78 */	mr r3, r31
@@ -6319,9 +6319,9 @@ func_800815A4:
 /* 80081618 0004ABD8  90 9E 00 0C */	stw r4, 0xc(r30)
 /* 8008161C 0004ABDC  90 1E 00 10 */	stw r0, 0x10(r30)
 /* 80081620 0004ABE0  48 0D A4 89 */	bl func_8015BAA8
-/* 80081624 0004ABE4  3C 80 80 53 */	lis r4, __vt__80533608@ha
+/* 80081624 0004ABE4  3C 80 80 53 */	lis r4, __vt__cf_CCharEffectObj@ha
 /* 80081628 0004ABE8  38 7E 03 68 */	addi r3, r30, 0x368
-/* 8008162C 0004ABEC  38 84 36 08 */	addi r4, r4, __vt__80533608@l
+/* 8008162C 0004ABEC  38 84 36 08 */	addi r4, r4, __vt__cf_CCharEffectObj@l
 /* 80081630 0004ABF0  90 9F 00 00 */	stw r4, 0(r31)
 /* 80081634 0004ABF4  48 11 17 B5 */	bl func_80192DE8
 /* 80081638 0004ABF8  7F C3 F3 78 */	mr r3, r30
@@ -6717,9 +6717,9 @@ lbl_80081B68:
 func_80081B80:
 /* 80081B80 0004B140  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80081B84 0004B144  7C 08 02 A6 */	mflr r0
-/* 80081B88 0004B148  3C A0 80 53 */	lis r5, __vt__8052E468@ha
+/* 80081B88 0004B148  3C A0 80 53 */	lis r5, __vt__cf_CfObjectImplMove@ha
 /* 80081B8C 0004B14C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80081B90 0004B150  38 A5 E4 68 */	addi r5, r5, __vt__8052E468@l
+/* 80081B90 0004B150  38 A5 E4 68 */	addi r5, r5, __vt__cf_CfObjectImplMove@l
 /* 80081B94 0004B154  38 85 00 B4 */	addi r4, r5, 0xb4
 /* 80081B98 0004B158  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80081B9C 0004B15C  3B E0 00 00 */	li r31, 0
@@ -6736,9 +6736,9 @@ func_80081B80:
 /* 80081BC8 0004B188  93 E3 00 1C */	stw r31, 0x1c(r3)
 /* 80081BCC 0004B18C  38 63 00 28 */	addi r3, r3, 0x28
 /* 80081BD0 0004B190  48 21 EF 2D */	bl func_802A0AFC
-/* 80081BD4 0004B194  3C C0 80 53 */	lis r6, __vt__8052E590@ha
+/* 80081BD4 0004B194  3C C0 80 53 */	lis r6, __vt__cf_CfObjectImplEne@ha
 /* 80081BD8 0004B198  38 7E 00 6C */	addi r3, r30, 0x6c
-/* 80081BDC 0004B19C  38 C6 E5 90 */	addi r6, r6, __vt__8052E590@l
+/* 80081BDC 0004B19C  38 C6 E5 90 */	addi r6, r6, __vt__cf_CfObjectImplEne@l
 /* 80081BE0 0004B1A0  90 DE 00 00 */	stw r6, 0(r30)
 /* 80081BE4 0004B1A4  38 A6 00 B4 */	addi r5, r6, 0xb4
 /* 80081BE8 0004B1A8  38 86 00 C4 */	addi r4, r6, 0xc4

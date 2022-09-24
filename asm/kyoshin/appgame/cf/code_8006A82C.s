@@ -94,27 +94,27 @@ func_8006A960:
 /* 8006A960 00033F20  88 0D A5 30 */	lbz r0, lbl_806666B0@sda21(r13)
 /* 8006A964 00033F24  7C 00 07 75 */	extsb. r0, r0
 /* 8006A968 00033F28  40 82 00 18 */	bne lbl_8006A980
-/* 8006A96C 00033F2C  3C 80 80 53 */	lis r4, __vt__8052A900@ha
+/* 8006A96C 00033F2C  3C 80 80 53 */	lis r4, __vt__cf_CfCamDirectionIntf@ha
 /* 8006A970 00033F30  38 00 00 01 */	li r0, 1
-/* 8006A974 00033F34  38 84 A9 00 */	addi r4, r4, __vt__8052A900@l
+/* 8006A974 00033F34  38 84 A9 00 */	addi r4, r4, __vt__cf_CfCamDirectionIntf@l
 /* 8006A978 00033F38  90 8D A5 34 */	stw r4, lbl_806666B4@sda21(r13)
 /* 8006A97C 00033F3C  98 0D A5 30 */	stb r0, lbl_806666B0@sda21(r13)
 lbl_8006A980:
 /* 8006A980 00033F40  88 0D A5 38 */	lbz r0, lbl_806666B8@sda21(r13)
 /* 8006A984 00033F44  7C 00 07 75 */	extsb. r0, r0
 /* 8006A988 00033F48  40 82 00 18 */	bne lbl_8006A9A0
-/* 8006A98C 00033F4C  3C 80 80 53 */	lis r4, __vt__8052A8D8@ha
+/* 8006A98C 00033F4C  3C 80 80 53 */	lis r4, __vt__cf_CfCamLookatIntf@ha
 /* 8006A990 00033F50  38 00 00 01 */	li r0, 1
-/* 8006A994 00033F54  38 84 A8 D8 */	addi r4, r4, __vt__8052A8D8@l
+/* 8006A994 00033F54  38 84 A8 D8 */	addi r4, r4, __vt__cf_CfCamLookatIntf@l
 /* 8006A998 00033F58  90 8D A5 3C */	stw r4, lbl_806666BC@sda21(r13)
 /* 8006A99C 00033F5C  98 0D A5 38 */	stb r0, lbl_806666B8@sda21(r13)
 lbl_8006A9A0:
 /* 8006A9A0 00033F60  88 0D A5 40 */	lbz r0, lbl_806666C0@sda21(r13)
 /* 8006A9A4 00033F64  7C 00 07 75 */	extsb. r0, r0
 /* 8006A9A8 00033F68  40 82 00 18 */	bne lbl_8006A9C0
-/* 8006A9AC 00033F6C  3C 80 80 53 */	lis r4, __vt__8052A8A8@ha
+/* 8006A9AC 00033F6C  3C 80 80 53 */	lis r4, __vt__cf_CfCamTargetIntf@ha
 /* 8006A9B0 00033F70  38 00 00 01 */	li r0, 1
-/* 8006A9B4 00033F74  38 84 A8 A8 */	addi r4, r4, __vt__8052A8A8@l
+/* 8006A9B4 00033F74  38 84 A8 A8 */	addi r4, r4, __vt__cf_CfCamTargetIntf@l
 /* 8006A9B8 00033F78  90 8D A5 44 */	stw r4, lbl_806666C4@sda21(r13)
 /* 8006A9BC 00033F7C  98 0D A5 40 */	stb r0, lbl_806666C0@sda21(r13)
 lbl_8006A9C0:
@@ -797,9 +797,9 @@ func_8006B310:
 /* 8006B34C 0003490C  7F A4 EB 78 */	mr r4, r29
 /* 8006B350 00034910  7F C5 F3 78 */	mr r5, r30
 /* 8006B354 00034914  48 00 08 D9 */	bl func_8006BC2C
-/* 8006B358 00034918  3C 60 80 53 */	lis r3, __vt__8052A818@ha
+/* 8006B358 00034918  3C 60 80 53 */	lis r3, __vt__cf_CfCamEvent@ha
 /* 8006B35C 0003491C  3C 80 80 66 */	lis r4, lbl_80659DB0@ha
-/* 8006B360 00034920  38 63 A8 18 */	addi r3, r3, __vt__8052A818@l
+/* 8006B360 00034920  38 63 A8 18 */	addi r3, r3, __vt__cf_CfCamEvent@l
 /* 8006B364 00034924  90 7F 00 00 */	stw r3, 0(r31)
 /* 8006B368 00034928  38 60 00 00 */	li r3, 0
 /* 8006B36C 0003492C  38 00 00 08 */	li r0, 8
@@ -1478,9 +1478,9 @@ func_8006BC2C:
 /* 8006BC4C 0003520C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8006BC50 00035210  7C 7D 1B 78 */	mr r29, r3
 /* 8006BC54 00035214  48 00 02 11 */	bl func_8006BE64
-/* 8006BC58 00035218  3C 80 80 53 */	lis r4, __vt__8052AA30@ha
+/* 8006BC58 00035218  3C 80 80 53 */	lis r4, __vt__cf_CfCamFollow@ha
 /* 8006BC5C 0003521C  38 7D 00 1C */	addi r3, r29, 0x1c
-/* 8006BC60 00035220  38 84 AA 30 */	addi r4, r4, __vt__8052AA30@l
+/* 8006BC60 00035220  38 84 AA 30 */	addi r4, r4, __vt__cf_CfCamFollow@l
 /* 8006BC64 00035224  90 9D 00 00 */	stw r4, 0(r29)
 /* 8006BC68 00035228  4B FD F4 49 */	bl func_8004B0B0
 /* 8006BC6C 0003522C  C0 22 87 E4 */	lfs f1, lbl_80668B64@sda21(r2)
@@ -1614,9 +1614,9 @@ func_8006BC2C:
 
 .global func_8006BE64
 func_8006BE64:
-/* 8006BE64 00035424  3C A0 80 53 */	lis r5, __vt__8052AAB8@ha
+/* 8006BE64 00035424  3C A0 80 53 */	lis r5, __vt__cf_CfCam@ha
 /* 8006BE68 00035428  38 00 00 00 */	li r0, 0
-/* 8006BE6C 0003542C  38 A5 AA B8 */	addi r5, r5, __vt__8052AAB8@l
+/* 8006BE6C 0003542C  38 A5 AA B8 */	addi r5, r5, __vt__cf_CfCam@l
 /* 8006BE70 00035430  90 A3 00 00 */	stw r5, 0(r3)
 /* 8006BE74 00035434  90 03 00 04 */	stw r0, 4(r3)
 /* 8006BE78 00035438  90 83 00 0C */	stw r4, 0xc(r3)
@@ -1701,8 +1701,8 @@ func_8006BF20:
 /* 8006BF38 000354F8  93 C1 00 08 */	stw r30, 8(r1)
 /* 8006BF3C 000354FC  7C 7E 1B 78 */	mr r30, r3
 /* 8006BF40 00035500  41 82 00 60 */	beq lbl_8006BFA0
-/* 8006BF44 00035504  3C 80 80 53 */	lis r4, __vt__8052AA30@ha
-/* 8006BF48 00035508  38 84 AA 30 */	addi r4, r4, __vt__8052AA30@l
+/* 8006BF44 00035504  3C 80 80 53 */	lis r4, __vt__cf_CfCamFollow@ha
+/* 8006BF48 00035508  38 84 AA 30 */	addi r4, r4, __vt__cf_CfCamFollow@l
 /* 8006BF4C 0003550C  90 83 00 00 */	stw r4, 0(r3)
 /* 8006BF50 00035510  48 00 00 6D */	bl func_8006BFBC
 /* 8006BF54 00035514  28 03 00 01 */	cmplwi r3, 1

@@ -3273,8 +3273,8 @@ cf_CHelp_Always_RTTI:
 	.4byte cf_CHelp_Always_typestr
 	.4byte lbl_8053C8BC
 
-.global lbl_80665520
-lbl_80665520:
+.global cf_CHelpSwitch_RTTI
+cf_CHelpSwitch_RTTI:
 	.4byte cf_CHelpSwitch_typestr
 	.4byte lbl_8053C8C8
 

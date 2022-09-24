@@ -7,9 +7,9 @@ func_80474F80:
 /* 80474F80 0043E540  88 0D BF E0 */	lbz r0, lbl_80668160@sda21(r13)
 /* 80474F84 0043E544  7C 00 07 75 */	extsb. r0, r0
 /* 80474F88 0043E548  40 82 00 1C */	bne lbl_80474FA4
-/* 80474F8C 0043E54C  3C 60 80 57 */	lis r3, __vt__805713E8@ha
+/* 80474F8C 0043E54C  3C 60 80 57 */	lis r3, __vt__mpfsys_MPFDrawDisplayList@ha
 /* 80474F90 0043E550  3C 80 80 66 */	lis r4, lbl_8065AD40@ha
-/* 80474F94 0043E554  38 63 13 E8 */	addi r3, r3, __vt__805713E8@l
+/* 80474F94 0043E554  38 63 13 E8 */	addi r3, r3, __vt__mpfsys_MPFDrawDisplayList@l
 /* 80474F98 0043E558  38 00 00 01 */	li r0, 1
 /* 80474F9C 0043E55C  90 64 AD 40 */	stw r3, lbl_8065AD40@l(r4)
 /* 80474FA0 0043E560  98 0D BF E0 */	stb r0, lbl_80668160@sda21(r13)
@@ -5047,9 +5047,9 @@ func_80479844:
 /* 80479844 00442E04  88 0D BF E8 */	lbz r0, lbl_80668168@sda21(r13)
 /* 80479848 00442E08  7C 00 07 75 */	extsb. r0, r0
 /* 8047984C 00442E0C  40 82 00 18 */	bne lbl_80479864
-/* 80479850 00442E10  3C 60 80 57 */	lis r3, __vt__80571428@ha
+/* 80479850 00442E10  3C 60 80 57 */	lis r3, __vt__mpfsys_MPFDrawMdlNoColor@ha
 /* 80479854 00442E14  38 00 00 01 */	li r0, 1
-/* 80479858 00442E18  38 63 14 28 */	addi r3, r3, __vt__80571428@l
+/* 80479858 00442E18  38 63 14 28 */	addi r3, r3, __vt__mpfsys_MPFDrawMdlNoColor@l
 /* 8047985C 00442E1C  90 6D BF EC */	stw r3, lbl_8066816C@sda21(r13)
 /* 80479860 00442E20  98 0D BF E8 */	stb r0, lbl_80668168@sda21(r13)
 lbl_80479864:
@@ -5061,9 +5061,9 @@ func_8047986C:
 /* 8047986C 00442E2C  88 0D BF F0 */	lbz r0, lbl_80668170@sda21(r13)
 /* 80479870 00442E30  7C 00 07 75 */	extsb. r0, r0
 /* 80479874 00442E34  40 82 00 18 */	bne lbl_8047988C
-/* 80479878 00442E38  3C 60 80 57 */	lis r3, __vt__80571408@ha
+/* 80479878 00442E38  3C 60 80 57 */	lis r3, __vt__mpfsys_MPFDrawMdlColor@ha
 /* 8047987C 00442E3C  38 00 00 01 */	li r0, 1
-/* 80479880 00442E40  38 63 14 08 */	addi r3, r3, __vt__80571408@l
+/* 80479880 00442E40  38 63 14 08 */	addi r3, r3, __vt__mpfsys_MPFDrawMdlColor@l
 /* 80479884 00442E44  90 6D BF F4 */	stw r3, lbl_80668174@sda21(r13)
 /* 80479888 00442E48  98 0D BF F0 */	stb r0, lbl_80668170@sda21(r13)
 lbl_8047988C:
@@ -5525,9 +5525,9 @@ func_80479EDC:
 /* 80479EDC 0044349C  88 0D BF F8 */	lbz r0, lbl_80668178@sda21(r13)
 /* 80479EE0 004434A0  7C 00 07 75 */	extsb. r0, r0
 /* 80479EE4 004434A4  40 82 00 18 */	bne lbl_80479EFC
-/* 80479EE8 004434A8  3C 60 80 57 */	lis r3, __vt__80571490@ha
+/* 80479EE8 004434A8  3C 60 80 57 */	lis r3, __vt__mpfsys_MPFDrawBillboard@ha
 /* 80479EEC 004434AC  38 00 00 01 */	li r0, 1
-/* 80479EF0 004434B0  38 63 14 90 */	addi r3, r3, __vt__80571490@l
+/* 80479EF0 004434B0  38 63 14 90 */	addi r3, r3, __vt__mpfsys_MPFDrawBillboard@l
 /* 80479EF4 004434B4  90 6D BF FC */	stw r3, lbl_8066817C@sda21(r13)
 /* 80479EF8 004434B8  98 0D BF F8 */	stb r0, lbl_80668178@sda21(r13)
 lbl_80479EFC:
@@ -5539,9 +5539,9 @@ func_80479F04:
 /* 80479F04 004434C4  88 0D C0 00 */	lbz r0, lbl_80668180@sda21(r13)
 /* 80479F08 004434C8  7C 00 07 75 */	extsb. r0, r0
 /* 80479F0C 004434CC  40 82 00 18 */	bne lbl_80479F24
-/* 80479F10 004434D0  3C 60 80 57 */	lis r3, __vt__80571470@ha
+/* 80479F10 004434D0  3C 60 80 57 */	lis r3, __vt__mpfsys_MPFDrawCross@ha
 /* 80479F14 004434D4  38 00 00 01 */	li r0, 1
-/* 80479F18 004434D8  38 63 14 70 */	addi r3, r3, __vt__80571470@l
+/* 80479F18 004434D8  38 63 14 70 */	addi r3, r3, __vt__mpfsys_MPFDrawCross@l
 /* 80479F1C 004434DC  90 6D C0 04 */	stw r3, lbl_80668184@sda21(r13)
 /* 80479F20 004434E0  98 0D C0 00 */	stb r0, lbl_80668180@sda21(r13)
 lbl_80479F24:
@@ -5553,9 +5553,9 @@ func_80479F2C:
 /* 80479F2C 004434EC  88 0D C0 08 */	lbz r0, lbl_80668188@sda21(r13)
 /* 80479F30 004434F0  7C 00 07 75 */	extsb. r0, r0
 /* 80479F34 004434F4  40 82 00 18 */	bne lbl_80479F4C
-/* 80479F38 004434F8  3C 60 80 57 */	lis r3, __vt__80571448@ha
+/* 80479F38 004434F8  3C 60 80 57 */	lis r3, __vt__mpfsys_MPFDrawBillLayTex@ha
 /* 80479F3C 004434FC  38 00 00 01 */	li r0, 1
-/* 80479F40 00443500  38 63 14 48 */	addi r3, r3, __vt__80571448@l
+/* 80479F40 00443500  38 63 14 48 */	addi r3, r3, __vt__mpfsys_MPFDrawBillLayTex@l
 /* 80479F44 00443504  90 6D C0 0C */	stw r3, lbl_8066818C@sda21(r13)
 /* 80479F48 00443508  98 0D C0 08 */	stb r0, lbl_80668188@sda21(r13)
 lbl_80479F4C:

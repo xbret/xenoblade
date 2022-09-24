@@ -5342,7 +5342,7 @@ sinit_804F5140:
 /* 804F5140 004BE700  38 6D C1 E8 */	addi r3, r13, lbl_80668368@sda21
 /* 804F5144 004BE704  48 00 00 04 */	b lbl_804F5148
 lbl_804F5148:
-/* 804F5148 004BE708  3C 80 80 57 */	lis r4, __vt__80573BA0@ha
-/* 804F514C 004BE70C  38 84 3B A0 */	addi r4, r4, __vt__80573BA0@l
+/* 804F5148 004BE708  3C 80 80 57 */	lis r4, __vt__CNReqtaskSaveBanner@ha
+/* 804F514C 004BE70C  38 84 3B A0 */	addi r4, r4, __vt__CNReqtaskSaveBanner@l
 /* 804F5150 004BE710  90 83 00 00 */	stw r4, 0(r3)
 /* 804F5154 004BE714  4E 80 00 20 */	blr
