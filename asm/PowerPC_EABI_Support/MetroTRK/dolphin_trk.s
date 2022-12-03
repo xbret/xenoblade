@@ -235,3 +235,32 @@ __TRKreset:
 /* 802CC218 002957D8  38 80 00 00 */	li r4, 0
 /* 802CC21C 002957DC  38 A0 00 00 */	li r5, 0
 /* 802CC220 002957E0  48 08 E5 C0 */	b OSResetSystem
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.balign 16 #needed to align switch jump table for dispatch.c
+
+.global lbl_8053FD40
+lbl_8053FD40:
+	# ROM: 0x53BE40
+	.4byte 0x00000100
+	.4byte 0x00000200
+	.4byte 0x00000300
+	.4byte 0x00000400
+	.4byte 0x00000500
+	.4byte 0x00000600
+	.4byte 0x00000700
+	.4byte 0x00000800
+	.4byte 0x00000900
+	.4byte 0x00000C00
+	.4byte 0x00000D00
+	.4byte 0x00000F00
+	.4byte 0x00001300
+	.4byte 0x00001400
+	.4byte 0x00001700
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667570
+lbl_80667570:
+	.skip 0x8

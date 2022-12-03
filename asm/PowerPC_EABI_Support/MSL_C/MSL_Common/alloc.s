@@ -372,3 +372,24 @@ lbl_802BC2B4:
 /* 802BC2C0 00285880  7C 08 03 A6 */	mtlr r0
 /* 802BC2C4 00285884  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BC2C8 00285888  4E 80 00 20 */	blr
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667528
+lbl_80667528:
+	.skip 0x8
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global lbl_8050CF00
+lbl_8050CF00:
+	# ROM: 0x509000
+	.4byte 0x00000004
+	.4byte 0x0000000C
+	.4byte 0x00000014
+	.4byte 0x00000024
+	.4byte 0x00000034
+	.4byte 0x00000044
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_8057B010
+lbl_8057B010:
+	.skip 0x38

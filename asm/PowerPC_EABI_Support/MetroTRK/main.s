@@ -203,3 +203,16 @@ gdev_cc_initinterrupts:
 /* 802CB798 00294D58  7C 08 03 A6 */	mtlr r0
 /* 802CB79C 00294D5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CB7A0 00294D60  4E 80 00 20 */	blr
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_8057B368
+lbl_8057B368:
+	.skip 0x500
+.global lbl_8057B868
+lbl_8057B868:
+	.skip 0x20
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667560
+lbl_80667560:
+	.skip 0x8

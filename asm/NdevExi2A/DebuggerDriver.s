@@ -240,3 +240,30 @@ DBOpen:
 .global DBClose
 DBClose:
 /* 802D0904 00299EC4  4E 80 00 20 */	blr
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665898
+lbl_80665898:
+	# ROM: 0x571478
+	.4byte 0x80000000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_806675B0
+lbl_806675B0:
+	.skip 0x4
+.global lbl_806675B4
+lbl_806675B4:
+	.skip 0x4
+.global lbl_806675B8
+lbl_806675B8:
+	.skip 0x4
+.global lbl_806675BC
+lbl_806675BC:
+	.skip 0x4
+.global lbl_806675C0
+lbl_806675C0:
+	.skip 0x8
+

@@ -2000,9 +2000,3 @@ lbl_80667510:
 .global lbl_80667518
 lbl_80667518:
 	.skip 0x8
-.global lbl_80667520
-lbl_80667520:
-	.skip 0x8
-.global lbl_80667528
-lbl_80667528:
-	.skip 0x8

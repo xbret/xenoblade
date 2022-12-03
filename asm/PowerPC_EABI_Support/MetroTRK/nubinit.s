@@ -105,3 +105,18 @@ lbl_802CC924:
 lbl_802CC934:
 /* 802CC934 00295EF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC938 00295EF8  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053FE88
+lbl_8053FE88:
+	.asciz "MetroTRK for Revolution v0.4"
+	.balign 4
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667580
+lbl_80667580:
+	.skip 0x8
+.global lbl_80667588
+lbl_80667588:
+	.skip 0x8

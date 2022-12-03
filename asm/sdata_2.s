@@ -2,38 +2,6 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_8066588C
-lbl_8066588C:
-	# ROM: 0x57146C
-	.4byte 0x7F800000
-
-
-.global lbl_80665890
-lbl_80665890:
-	# ROM: 0x571470
-	.4byte 0x7FF00000
-	.4byte 0
-
-
-.global lbl_80665898
-lbl_80665898:
-	# ROM: 0x571478
-	.4byte 0x80000000
-	.4byte 0
-
-
-.global lbl_806658A0
-lbl_806658A0:
-	# ROM: 0x571480
-	.4byte lbl_8053FFB8
-	.4byte 0
-
-
-.global lbl_806658A8
-lbl_806658A8:
-	.asciz "arc.c"
-	.balign 4
-
 
 .global lbl_806658B0
 lbl_806658B0:

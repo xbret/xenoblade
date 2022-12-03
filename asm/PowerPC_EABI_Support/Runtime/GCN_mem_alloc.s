@@ -51,3 +51,10 @@ lbl_802BBD90:
 /* 802BBDAC 0028536C  7C 08 03 A6 */	mtlr r0
 /* 802BBDB0 00285370  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BBDB4 00285374  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global lbl_8050CE90
+lbl_8050CE90:
+	.asciz "GCN_Mem_Alloc.c : InitDefaultHeap. No Heap Available\n"
+	.asciz "Metrowerks CW runtime library initializing default heap\n"
+	.balign 4

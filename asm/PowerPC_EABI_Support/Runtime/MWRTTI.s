@@ -209,3 +209,68 @@ what__Q23std8bad_castCFv:
 /* 802BA020 002835E0  3C 60 80 54 */	lis r3, lbl_8053F05C@ha
 /* 802BA024 002835E4  38 63 F0 5C */	addi r3, r3, lbl_8053F05C@l
 /* 802BA028 002835E8  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_8053F040
+lbl_8053F040:
+	# ROM: 0x53B140
+	.4byte lbl_80665868
+	.4byte 0
+	.4byte __dt__Q23std8bad_castFv
+	.4byte what__Q23std8bad_castCFv
+
+.global lbl_8053F050
+lbl_8053F050:
+	.4byte lbl_80665858
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8053F05C
+lbl_8053F05C:
+	.asciz "bad_cast"
+	.balign 4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+.global lbl_80665858
+lbl_80665858:
+	.4byte std_exception_typestr
+	.4byte 0
+
+.global lbl_80665860
+lbl_80665860:
+	# ROM: 0x571440
+	.4byte std$7dthandler
+	.4byte 0
+
+.global lbl_80665868
+lbl_80665868:
+	.4byte std_bad_cast_typestr
+	.4byte lbl_8053F050
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global std_exception_typestr
+std_exception_typestr:
+	.asciz "std::exception"
+	.balign 4
+
+
+.global lbl_8050CE10
+lbl_8050CE10:
+	# ROM: 0x508F10
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global std_bad_cast_typestr
+std_bad_cast_typestr:
+	.asciz "std::bad_cast"
+	.balign 4
+
+
+.global lbl_8050CE30
+lbl_8050CE30:
+	.asciz "???"
+	.asciz "!std::exception!!std::bad_typeid!!"
+	.asciz "!std::exception!!std::bad_cast!!"

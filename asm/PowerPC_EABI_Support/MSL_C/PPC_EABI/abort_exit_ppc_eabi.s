@@ -26,3 +26,15 @@ __msl_runtime_constraint_violation_s:
 /* 802C7228 002907E8  7D 89 03 A6 */	mtctr r12
 /* 802C722C 002907EC  4E 80 04 20 */	bctr 
 /* 802C7230 002907F0  4E 80 00 20 */	blr 
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667540
+lbl_80667540:
+	.skip 0x4
+#used in misc_io.s
+.global lbl_80667544
+lbl_80667544:
+	.skip 0x4
+.global lbl_80667548
+lbl_80667548:
+	.skip 0x8

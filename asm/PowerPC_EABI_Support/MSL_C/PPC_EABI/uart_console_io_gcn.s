@@ -65,3 +65,9 @@ lbl_802C71C0:
 __close_console:
 /* 802C71E0 002907A0  38 60 00 00 */	li r3, 0
 /* 802C71E4 002907A4  4E 80 00 20 */	blr 
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.skip 0x4
+.global lbl_80667538
+lbl_80667538:
+	.skip 0x8

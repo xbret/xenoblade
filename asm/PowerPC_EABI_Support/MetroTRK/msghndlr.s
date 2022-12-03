@@ -1128,3 +1128,43 @@ lbl_802CEBB0:
 /* 802CEC08 002981C8  7C 08 03 A6 */	mtlr r0
 /* 802CEC0C 002981CC  38 21 00 50 */	addi r1, r1, 0x50
 /* 802CEC10 002981D0  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053FF40
+lbl_8053FF40:
+	# ROM: 0x53C040
+	.4byte lbl_802CE000
+	.4byte lbl_802CE020
+	.4byte lbl_802CDFF8
+	.4byte lbl_802CE020
+	.4byte lbl_802CE008
+	.4byte lbl_802CE010
+	.4byte lbl_802CE018
+
+
+.global lbl_8053FF5C
+lbl_8053FF5C:
+	# ROM: 0x53C05C
+	.4byte lbl_802CE210
+	.4byte lbl_802CE230
+	.4byte lbl_802CE208
+	.4byte lbl_802CE230
+	.4byte lbl_802CE218
+	.4byte lbl_802CE220
+	.4byte lbl_802CE228
+
+
+.global lbl_8053FF78
+lbl_8053FF78:
+	.asciz "\nMetroTRK Option : SerialIO - "
+	.asciz "Enable\n"
+	.asciz "Disable\n"
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667598
+lbl_80667598:
+	.skip 0x4
+.global lbl_8066759C
+lbl_8066759C:
+	.skip 0x4

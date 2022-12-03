@@ -2,52 +2,6 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8050DEA8
-lbl_8050DEA8:
-	# ROM: 0x509FA8
-	.4byte 0
-	.4byte 0xFFFFFFFF
-	.4byte 0x00000001
-	.4byte 0x00000001
-
-.global lbl_8050DEB8
-lbl_8050DEB8:
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-
-.global lbl_8050DEE0
-lbl_8050DEE0:
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-
-.global lbl_8050DF08
-lbl_8050DF08:
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
-	.4byte 0x60000000
 
 
 .global lbl_8050DF30

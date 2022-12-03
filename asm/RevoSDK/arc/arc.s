@@ -757,3 +757,25 @@ lbl_802D2030:
 ARCCloseDir:
 /* 802D2040 0029B600  38 60 00 01 */	li r3, 1
 /* 802D2044 0029B604  4E 80 00 20 */	blr 
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806658A8
+lbl_806658A8:
+	.asciz "arc.c"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80540000
+lbl_80540000:
+	.asciz "ARCInitHandle: bad archive format"
+	.balign 4
+
+
+.global lbl_80540024
+lbl_80540024:
+	.asciz "Warning: ARCOpen(): file '%s' was not found under %s in the archive.\n"
+	.balign 4
+	.4byte 0

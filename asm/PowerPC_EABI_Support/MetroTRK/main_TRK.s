@@ -20,3 +20,8 @@ lbl_802CBA78:
 /* 802CBA84 00295044  7C 08 03 A6 */	mtlr r0
 /* 802CBA88 00295048  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CBA8C 0029504C  4E 80 00 20 */	blr 
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667568
+lbl_80667568:
+	.skip 0x8

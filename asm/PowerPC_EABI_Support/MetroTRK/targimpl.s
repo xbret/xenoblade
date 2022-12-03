@@ -1745,3 +1745,86 @@ lbl_802D05B4:
 lbl_802D05BC:
 /* 802D05BC 00299B7C  90 C3 00 00 */	stw r6, 0(r3)
 /* 802D05C0 00299B80  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053FFA8
+lbl_8053FFA8:
+	# ROM: 0x53C0A8
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x01000000
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global lbl_8050DEA8
+lbl_8050DEA8:
+	# ROM: 0x509FA8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte 0x00000001
+	.4byte 0x00000001
+
+.global lbl_8050DEB8
+lbl_8050DEB8:
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+
+.global lbl_8050DEE0
+lbl_8050DEE0:
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+
+.global lbl_8050DF08
+lbl_8050DF08:
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+	.4byte 0x60000000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_8057D280
+lbl_8057D280:
+	.skip 0x10
+.global lbl_8057D290
+lbl_8057D290:
+	.skip 0x18
+.global lbl_8057D2A8
+lbl_8057D2A8:
+	.skip 0x98
+.global lbl_8057D340
+lbl_8057D340:
+	.skip 0x10
+.global lbl_8057D350
+lbl_8057D350:
+	.skip 0xA8
+.global gTRKCPUState
+gTRKCPUState:
+	.skip 0x430
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_806675A0
+lbl_806675A0:
+	.skip 0x8

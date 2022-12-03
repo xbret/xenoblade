@@ -614,3 +614,14 @@ lbl_802CDC78:
 /* 802CDC84 00297244  7C 08 03 A6 */	mtlr r0
 /* 802CDC88 00297248  38 21 00 30 */	addi r1, r1, 0x30
 /* 802CDC8C 0029724C  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053FF18
+lbl_8053FF18:
+	.asciz "MetroTRK - ERROR : No buffer available\n"
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_8057B8D8
+lbl_8057B8D8:
+	.skip 0x19A8

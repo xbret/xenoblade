@@ -82,3 +82,109 @@ lbl_802BC3B8:
 /* 802BC3D0 00285990  7C 08 03 A6 */	mtlr r0
 /* 802BC3D4 00285994  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BC3D8 00285998  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_8053F0F0
+lbl_8053F0F0:
+	# ROM: 0x53B1F0
+	.4byte 0
+	.4byte 0x0A800000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte lbl_8057B248
+	.4byte 0x00000100
+	.4byte lbl_8057B248
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte __read_console
+	.4byte __write_console
+	.4byte __close_console
+	.4byte 0
+	.4byte lbl_8053F140
+
+.global lbl_8053F140
+lbl_8053F140:
+	.4byte 0x00000001
+	.4byte 0x12800000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte lbl_8057B148
+	.4byte 0x00000100
+	.4byte lbl_8057B148
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte __read_console
+	.4byte __write_console
+	.4byte __close_console
+	.4byte 0
+	.4byte lbl_8053F190
+
+.global lbl_8053F190
+lbl_8053F190:
+	.4byte 0x00000002
+	.4byte 0x10800000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte lbl_8057B048
+	.4byte 0x00000100
+	.4byte lbl_8057B048
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte __read_console
+	.4byte __write_console
+	.4byte __close_console
+	.4byte 0
+	.4byte lbl_8053F1E0
+
+.global lbl_8053F1E0
+lbl_8053F1E0:
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_8057B048
+lbl_8057B048:
+	.skip 0x100
+.global lbl_8057B148
+lbl_8057B148:
+	.skip 0x100
+.global lbl_8057B248
+lbl_8057B248:
+	.skip 0x100

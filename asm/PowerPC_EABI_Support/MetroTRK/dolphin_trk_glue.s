@@ -276,3 +276,34 @@ InitializeProgramEndTrap:
 /* 802CC5B4 00295B74  7C 08 03 A6 */	mtlr r0
 /* 802CC5B8 00295B78  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC5BC 00295B7C  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053FD80
+lbl_8053FD80:
+	.asciz "Devkit set to : %ld\n"
+	.asciz "MetroTRK : Sizeof Reply - %ld bytes\n"
+	.asciz "MetroTRK : Set to NDEV hardware\n"
+	.asciz "MetroTRK : Set to UNKNOWN hardware. (%ld)\n"
+	.asciz "MetroTRK : Invalid hardware ID passed from OS\n"
+	.asciz "MetroTRK : Defaulting to GDEV Hardware\n"
+	.asciz "%s\n"
+	.byte 0x00, 0x00, 0x00
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.global lbl_8066BDB0
+lbl_8066BDB0:
+	# ROM: 0x575C10
+	.4byte 0x00454E44
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global gDBCommTable
+gDBCommTable:
+	.skip 0x28
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667578
+lbl_80667578:
+	.skip 0x8

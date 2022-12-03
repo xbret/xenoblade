@@ -54,3 +54,11 @@ lbl_802BA7D4:
 /* 802BA7D8 00283D98  7C 08 03 A6 */	mtlr r0
 /* 802BA7DC 00283D9C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BA7E0 00283DA0  4E 80 00 20 */	blr 
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+.global lbl_80665870
+lbl_80665870:
+	# ROM: 0x571450
+	.4byte 0xFFFFFFFE
+	.4byte 0

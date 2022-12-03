@@ -413,3 +413,18 @@ lbl_802D1634:
 /* 802D1660 0029AC20  7C 08 03 A6 */	mtlr r0
 /* 802D1664 0029AC24  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D1668 0029AC28  4E 80 00 20 */	blr
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806658A0
+lbl_806658A0:
+	# ROM: 0x571480
+	.4byte lbl_8053FFB8
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053FFB8
+lbl_8053FFB8:
+	.asciz "<< RVL_SDK - AI \trelease build: Feb 27 2009 10:01:30 (0x4302_145) >>"
+	.balign 4

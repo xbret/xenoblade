@@ -23,3 +23,8 @@ __msl_assertion_failed:
 /* 802BDCBC 0028727C  7C 08 03 A6 */	mtlr r0
 /* 802BDCC0 00287280  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BDCC4 00287284  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global lbl_8050CFF8
+lbl_8050CFF8:
+	.asciz "Assertion (%s) failed in \"%s\", line %d\n"

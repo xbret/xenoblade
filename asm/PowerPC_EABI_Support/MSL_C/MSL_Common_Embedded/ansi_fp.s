@@ -1800,3 +1800,179 @@ lbl_802BDC3C:
 /* 802BDC50 00287210  7C 08 03 A6 */	mtlr r0
 /* 802BDC54 00287214  38 21 01 80 */	addi r1, r1, 0x180
 /* 802BDC58 00287218  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_8053F230
+lbl_8053F230:
+	# ROM: 0x53B330
+	.4byte lbl_802BC86C
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BC880
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BC898
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BC8B0
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BCA60
+	.4byte lbl_802BC8C8
+	.4byte lbl_802BC8E0
+	.4byte lbl_802BC8F8
+	.4byte lbl_802BC910
+	.4byte lbl_802BC928
+	.4byte lbl_802BC940
+	.4byte lbl_802BC958
+	.4byte lbl_802BC970
+	.4byte lbl_802BC988
+	.4byte lbl_802BC9A0
+	.4byte lbl_802BC9B8
+	.4byte lbl_802BC9D0
+	.4byte lbl_802BC9E8
+	.4byte lbl_802BCA00
+	.4byte lbl_802BCA18
+	.4byte lbl_802BCA30
+	.4byte lbl_802BCA48
+	.4byte 0
+
+
+.global lbl_8053F358
+lbl_8053F358:
+	# ROM: 0x53B458
+	.4byte 0x40240000
+	.4byte 0
+	.4byte 0x40590000
+	.4byte 0
+	.4byte 0x408F4000
+	.4byte 0
+	.4byte 0x40C38800
+	.4byte 0
+	.4byte 0x40F86A00
+	.4byte 0
+	.4byte 0x412E8480
+	.4byte 0
+	.4byte 0x416312D0
+	.4byte 0
+	.4byte 0x4197D784
+	.4byte 0
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global lbl_8050CF18
+lbl_8050CF18:
+	.asciz "542101086242752217003726400434970855712890625"
+	.asciz "11102230246251565404236316680908203125"
+	.asciz "23283064365386962890625"
+	.asciz "152587890625"
+	.asciz "390625"
+	.asciz "78125"
+	.asciz "15625"
+	.asciz "3125"
+	.asciz "625"
+	.asciz "125"
+	.asciz "25"
+	.asciz "5"
+	.asciz "1"
+	.asciz "2"
+	.asciz "4"
+	.asciz "8"
+	.asciz "16"
+	.asciz "32"
+	.asciz "64"
+	.asciz "128"
+	.asciz "256"
+	.asciz "179769313486231580793728714053034151"
+	.balign 4
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.global lbl_8066B820
+lbl_8066B820:
+	# ROM: 0x575680
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066B828
+lbl_8066B828:
+	# ROM: 0x575688
+	.4byte 0x3FF00000
+	.4byte 0
+
+
+.global lbl_8066B830
+lbl_8066B830:
+	# ROM: 0x575690
+	.4byte 0xBFF00000
+	.4byte 0
+
+
+.global lbl_8066B838
+lbl_8066B838:
+	# ROM: 0x575698
+	.4byte 0x40140000
+	.4byte 0
+
+
+.global lbl_8066B840
+lbl_8066B840:
+	# ROM: 0x5756A0
+	.4byte 0x7FEFFFFF
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_8066B848
+lbl_8066B848:
+	# ROM: 0x5756A8
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066B850
+lbl_8066B850:
+	# ROM: 0x5756B0
+	.4byte 0x43300000
+	.4byte 0x80000000

@@ -127,7 +127,6 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/buffer_io.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/direct_io.o \
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/errno.o \
-	$(BUILD_DIR)/asm/sbss_2.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/file_io.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/file_pos.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/mbstring.o \
@@ -138,7 +137,6 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/printf.o \
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/rand.o \
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/float.o \
-	$(BUILD_DIR)/asm/sdata_2.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/scanf.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/signal.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/string.o \
@@ -184,9 +182,6 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/w_log10.o \
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/w_pow.o \
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/e_sqrt.o \
-	$(BUILD_DIR)/asm/sbss_3.o \
-	$(BUILD_DIR)/asm/sdata2_2.o \
-	$(BUILD_DIR)/asm/rodata_2.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/PPC_EABI/math_ppc.o \
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/w_sqrt.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/extras.o \
@@ -199,7 +194,6 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mainloop.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mem_TRK.o \
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MetroTRK/dispatch.o \
-	$(BUILD_DIR)/asm/data_2.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/dolphin_trk.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/dolphin_trk_glue.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/notify.o \
@@ -222,14 +216,19 @@ NDEV_O_FILES :=\
 	$(BUILD_DIR)/asm/NdevExi2A/exi2.o \
 
 RVL_SDK_O_FILES :=\
+	$(BUILD_DIR)/asm/sbss_3.o \
 	$(BUILD_DIR)/asm/RevoSDK/ai/ai.o \
 	$(BUILD_DIR)/asm/RevoSDK/arc/arc.o \
+	$(BUILD_DIR)/asm/sdata_2.o \
+	$(BUILD_DIR)/asm/data_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AX.o \
+	$(BUILD_DIR)/asm/bss_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXAlloc.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXAux.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXCL.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXOut.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXSPB.o \
+	$(BUILD_DIR)/asm/sdata2_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXVPB.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXProf.o \
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXReverbHi.o \
@@ -252,6 +251,7 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/bte/bte_hcisu.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/bte_init.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/bte_logmsg.o \
+	$(BUILD_DIR)/asm/rodata_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/bte_main.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/btu_task1.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/bd.o \
@@ -672,7 +672,7 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_80432678.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80433300.o \
 	$(BUILD_DIR)/asm/monolithlib/Operators.o \
-	$(BUILD_DIR)/asm/bss_2.o \
+	$(BUILD_DIR)/asm/bss_3.o \
 	$(BUILD_DIR)/asm/sdata_3.o \
 	$(BUILD_DIR)/asm/sdata2_3.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80434F94.o \

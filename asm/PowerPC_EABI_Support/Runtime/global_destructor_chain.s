@@ -34,3 +34,8 @@ lbl_802B96E0:
 /* 802B96F0 00282CB0  7C 08 03 A6 */	mtlr r0
 /* 802B96F4 00282CB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B96F8 00282CB8  4E 80 00 20 */	blr
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667520
+lbl_80667520:
+	.skip 0x8

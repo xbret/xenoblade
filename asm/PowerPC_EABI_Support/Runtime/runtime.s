@@ -666,3 +666,14 @@ lbl_802BA74C:
 lbl_802BA76C:
 /* 802BA76C 00283D2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BA770 00283D30  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global lbl_8050CE78
+lbl_8050CE78:
+	# ROM: 0x508F78
+	.4byte 0
+	.4byte 0
+	.4byte 0x41F00000
+	.4byte 0
+	.4byte 0x41E00000
+	.4byte 0

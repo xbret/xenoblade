@@ -124,3 +124,15 @@ TRKConstructEvent:
 TRKDestructEvent:
 /* 802CC7E4 00295DA4  80 63 00 08 */	lwz r3, 8(r3)
 /* 802CC7E8 00295DA8  48 00 0D 7C */	b TRKReleaseBuffer
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053FE68
+lbl_8053FE68:
+	.asciz "MetroTRK - Event Queue full\n"
+	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_8057B8B0
+lbl_8057B8B0:
+	.skip 0x28

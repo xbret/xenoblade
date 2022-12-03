@@ -3942,34 +3942,3 @@ cf_CVS_THREAD_ORDER_RTTI:
 CBattery_RTTI:
 	.4byte CBattery_typestr
 	.4byte lbl_8053F030
-
-.global lbl_80665858
-lbl_80665858:
-	.4byte std_exception_typestr
-	.4byte 0
-
-
-.global lbl_80665860
-lbl_80665860:
-	# ROM: 0x571440
-	.4byte std$7dthandler
-	.4byte 0
-
-.global lbl_80665868
-lbl_80665868:
-	.4byte std_bad_cast_typestr
-	.4byte lbl_8053F050
-
-
-.global lbl_80665870
-lbl_80665870:
-	# ROM: 0x571450
-	.4byte 0xFFFFFFFE
-	.4byte 0
-
-
-.global lbl_80665878
-lbl_80665878:
-	# ROM: 0x571458
-	.4byte 0
-	.4byte 0

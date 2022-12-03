@@ -443,3 +443,12 @@ lbl_802CD098:
 /* 802CD0B8 00296678  7C 08 03 A6 */	mtlr r0
 /* 802CD0BC 0029667C  38 21 00 70 */	addi r1, r1, 0x70
 /* 802CD0C0 00296680  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053FEA8
+lbl_8053FEA8:
+	.asciz "MetroTRK - bad reply size %ld\n"
+	.asciz "MetroTRK - failed in RequestSend\n"
+	.balign 4
+	.4byte 0

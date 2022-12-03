@@ -31,3 +31,14 @@ lbl_802CD470:
 /* 802CD478 00296A38  7C 08 03 A6 */	mtlr r0
 /* 802CD47C 00296A3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CD480 00296A40  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053FEF0
+lbl_8053FEF0:
+	.asciz "MetroTRK - TRK_WriteUARTN returned %ld\n"
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667590
+lbl_80667590:
+	.skip 0x8

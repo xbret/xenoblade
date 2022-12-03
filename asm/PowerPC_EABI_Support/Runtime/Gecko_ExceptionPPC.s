@@ -1558,3 +1558,50 @@ __throw:
 /* 802BBCF4 002852B4  7C 08 03 A6 */	mtlr r0
 /* 802BBCF8 002852B8  38 21 02 C0 */	addi r1, r1, 0x2c0
 /* 802BBCFC 002852BC  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_8053F068
+lbl_8053F068:
+	# ROM: 0x53B168
+	.4byte lbl_802BAC08
+	.4byte lbl_802BAC08
+	.4byte lbl_802BAB60
+	.4byte lbl_802BAB6C
+	.4byte lbl_802BAB78
+	.4byte lbl_802BAB84
+	.4byte lbl_802BAB90
+	.4byte lbl_802BAB90
+	.4byte lbl_802BAB9C
+	.4byte lbl_802BABA8
+	.4byte lbl_802BABB4
+	.4byte lbl_802BABC0
+	.4byte lbl_802BABCC
+	.4byte lbl_802BABE4
+	.4byte lbl_802BAC08
+	.4byte lbl_802BABF0
+	.4byte lbl_802BABD8
+
+.global lbl_8053F0AC
+lbl_8053F0AC:
+	.4byte lbl_802BB688
+	.4byte lbl_802BB240
+	.4byte lbl_802BB254
+	.4byte lbl_802BB280
+	.4byte lbl_802BB2E4
+	.4byte lbl_802BB330
+	.4byte lbl_802BB384
+	.4byte lbl_802BB3D8
+	.4byte lbl_802BB42C
+	.4byte lbl_802BB4B4
+	.4byte lbl_802BB530
+	.4byte lbl_802BB578
+	.4byte lbl_802BB5F4
+	.4byte lbl_802BB61C
+	.4byte lbl_802BB688
+	.4byte lbl_802BB668
+	.4byte lbl_802BB608
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_8057AE90
+lbl_8057AE90:
+	.skip 0x180
