@@ -631,3 +631,70 @@ AXGetAuxCCallback:
 /* 802D2F58 0029C518  80 0D B4 BC */	lwz r0, lbl_8066763C@sda21(r13)
 /* 802D2F5C 0029C51C  90 04 00 00 */	stw r0, 0(r4)
 /* 802D2F60 0029C520  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_8057D940
+lbl_8057D940:
+	.skip 0x1200
+.global lbl_8057EB40
+lbl_8057EB40:
+	.skip 0x1200
+.global lbl_8057FD40
+lbl_8057FD40:
+	.skip 0xD80
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667618
+lbl_80667618:
+	.skip 0x4
+.global lbl_8066761C
+lbl_8066761C:
+	.skip 0x4
+.global lbl_80667620
+lbl_80667620:
+	.skip 0x4
+.global lbl_80667624
+lbl_80667624:
+	.skip 0x4
+.global lbl_80667628
+lbl_80667628:
+	.skip 0x4
+.global lbl_8066762C
+lbl_8066762C:
+	.skip 0x4
+.global lbl_80667630
+lbl_80667630:
+	.skip 0x4
+.global lbl_80667634
+lbl_80667634:
+	.skip 0x4
+.global lbl_80667638
+lbl_80667638:
+	.skip 0x4
+.global lbl_8066763C
+lbl_8066763C:
+	.skip 0x4
+.global lbl_80667640
+lbl_80667640:
+	.skip 0x4
+.global lbl_80667644
+lbl_80667644:
+	.skip 0x4
+.global lbl_80667648
+lbl_80667648:
+	.skip 0x4
+.global lbl_8066764C
+lbl_8066764C:
+	.skip 0x4
+.global lbl_80667650
+lbl_80667650:
+	.skip 0x4
+.global lbl_80667654
+lbl_80667654:
+	.skip 0x4
+.global lbl_80667658
+lbl_80667658:
+	.skip 0x4
+.global lbl_8066765C
+lbl_8066765C:
+	.skip 0x4

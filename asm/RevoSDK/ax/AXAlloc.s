@@ -411,3 +411,16 @@ lbl_802D2684:
 /* 802D26A0 0029BC60  7C 08 03 A6 */	mtlr r0
 /* 802D26A4 0029BC64  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D26A8 0029BC68  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_8057D828
+lbl_8057D828:
+	.skip 0x80
+.global lbl_8057D8A8
+lbl_8057D8A8:
+	.skip 0x98
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667610
+lbl_80667610:
+	.skip 0x8

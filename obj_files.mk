@@ -216,19 +216,14 @@ NDEV_O_FILES :=\
 	$(BUILD_DIR)/asm/NdevExi2A/exi2.o \
 
 RVL_SDK_O_FILES :=\
-	$(BUILD_DIR)/asm/sbss_3.o \
 	$(BUILD_DIR)/asm/RevoSDK/ai/ai.o \
 	$(BUILD_DIR)/src/RevoSDK/arc/arc.o \
-	$(BUILD_DIR)/asm/sdata_2.o \
-	$(BUILD_DIR)/asm/data_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AX.o \
-	$(BUILD_DIR)/asm/bss_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXAlloc.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXAux.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXCL.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXOut.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXSPB.o \
-	$(BUILD_DIR)/asm/sdata2_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXVPB.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXProf.o \
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXReverbHi.o \
@@ -242,11 +237,16 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXLfoTable.o \
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXSrcCoef.o \
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXHooks.o \
-	$(BUILD_DIR)/asm/RevoSDK/base/PPCArch.o \
+	$(BUILD_DIR)/src/RevoSDK/base/PPCArch.o \
+	$(BUILD_DIR)/asm/data_2.o \
+	$(BUILD_DIR)/asm/bss_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/gki_buffer.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/gki_time.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/gki_ppc.o \
+	$(BUILD_DIR)/asm/sdata2_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/hcisu_h2.o \
+	$(BUILD_DIR)/asm/sdata_2.o \
+	$(BUILD_DIR)/asm/sbss_3.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/uusb_ppc.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/bte_hcisu.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/bte_init.o \

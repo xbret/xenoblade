@@ -795,3 +795,70 @@ lbl_802D9F2C:
 /* 802D9F38 002A34F8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D9F3C 002A34FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D9F40 002A3500  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.global lbl_8066BED0
+lbl_8066BED0:
+	# ROM: 0x575D30
+	.4byte 0x42000000
+
+
+.global lbl_8066BED4
+lbl_8066BED4:
+	# ROM: 0x575D34
+	.4byte 0
+
+
+.global lbl_8066BED8
+lbl_8066BED8:
+	# ROM: 0x575D38
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066BEE0
+lbl_8066BEE0:
+	# ROM: 0x575D40
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066BEE4
+lbl_8066BEE4:
+	# ROM: 0x575D44
+	.4byte 0x42480000
+
+
+.global lbl_8066BEE8
+lbl_8066BEE8:
+	# ROM: 0x575D48
+	.float 1.0
+
+
+.global lbl_8066BEEC
+lbl_8066BEEC:
+	# ROM: 0x575D4C
+	.4byte 0x40000000
+
+
+.global lbl_8066BEF0
+lbl_8066BEF0:
+	# ROM: 0x575D50
+	.4byte 0x47800000
+
+
+.global lbl_8066BEF4
+lbl_8066BEF4:
+	# ROM: 0x575D54
+	.4byte 0x43800000
+
+
+.global lbl_8066BEF8
+lbl_8066BEF8:
+	# ROM: 0x575D58
+	.4byte 0x46FA0000
+
+
+.global lbl_8066BEFC
+lbl_8066BEFC:
+	# ROM: 0x575D5C
+	.4byte 0x3B800000

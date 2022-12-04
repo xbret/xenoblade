@@ -48,3 +48,16 @@ AXFXReverbHiShutdown:
 .global AXFXReverbHiCallback
 AXFXReverbHiCallback:
 /* 802D57B0 0029ED70  48 00 02 10 */	b AXFXReverbHiExpCallback
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.global lbl_8066BDD8
+lbl_8066BDD8:
+	# ROM: 0x575C38
+	.4byte 0
+
+
+.global lbl_8066BDDC
+lbl_8066BDDC:
+	# ROM: 0x575C3C
+	.float 1.0

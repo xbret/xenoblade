@@ -22,3 +22,17 @@ __AXGetCurrentProfile:
 lbl_802D5708:
 /* 802D5708 0029ECC8  38 60 00 00 */	li r3, 0
 /* 802D570C 0029ECCC  4E 80 00 20 */	blr 
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667738
+lbl_80667738:
+	.skip 0x4
+.global lbl_8066773C
+lbl_8066773C:
+	.skip 0x4
+.global lbl_80667740
+lbl_80667740:
+	.skip 0x4
+.global lbl_80667744
+lbl_80667744:
+	.skip 0x4

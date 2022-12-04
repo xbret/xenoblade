@@ -296,3 +296,70 @@ __AXDepopVoice:
 /* 802D4750 0029DD10  83 C1 00 08 */	lwz r30, 8(r1)
 /* 802D4754 0029DD14  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D4758 0029DD18  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_805819C0
+lbl_805819C0:
+	.skip 0x80
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_806676C8
+lbl_806676C8:
+	.skip 0x4
+.global lbl_806676CC
+lbl_806676CC:
+	.skip 0x4
+.global lbl_806676D0
+lbl_806676D0:
+	.skip 0x4
+.global lbl_806676D4
+lbl_806676D4:
+	.skip 0x4
+.global lbl_806676D8
+lbl_806676D8:
+	.skip 0x4
+.global lbl_806676DC
+lbl_806676DC:
+	.skip 0x4
+.global lbl_806676E0
+lbl_806676E0:
+	.skip 0x4
+.global lbl_806676E4
+lbl_806676E4:
+	.skip 0x4
+.global lbl_806676E8
+lbl_806676E8:
+	.skip 0x4
+.global lbl_806676EC
+lbl_806676EC:
+	.skip 0x4
+.global lbl_806676F0
+lbl_806676F0:
+	.skip 0x4
+.global lbl_806676F4
+lbl_806676F4:
+	.skip 0x4
+.global lbl_806676F8
+lbl_806676F8:
+	.skip 0x4
+.global lbl_806676FC
+lbl_806676FC:
+	.skip 0x4
+.global lbl_80667700
+lbl_80667700:
+	.skip 0x4
+.global lbl_80667704
+lbl_80667704:
+	.skip 0x4
+.global lbl_80667708
+lbl_80667708:
+	.skip 0x4
+.global lbl_8066770C
+lbl_8066770C:
+	.skip 0x4
+.global lbl_80667710
+lbl_80667710:
+	.skip 0x4
+.global lbl_80667714
+lbl_80667714:
+	.skip 0x4

@@ -3,42 +3,6 @@
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 
-.global lbl_806658B0
-lbl_806658B0:
-	# ROM: 0x571490
-	.4byte lbl_80540070
-	.4byte 0
-
-
-.global lbl_806658B8
-lbl_806658B8:
-	# ROM: 0x571498
-	.2byte 0x0010
-
-
-.global lbl_806658BA
-lbl_806658BA:
-	# ROM: 0x57149A
-	.2byte 0x0037
-
-
-.global lbl_806658BC
-lbl_806658BC:
-	# ROM: 0x57149C
-	.4byte 0x20000000
-
-
-.global lbl_806658C0
-lbl_806658C0:
-	# ROM: 0x5714A0
-	.4byte __AXFXAllocFunction
-
-
-.global lbl_806658C4
-lbl_806658C4:
-	# ROM: 0x5714A4
-	.4byte __AXFXFreeFunction
-
 
 .global lbl_806658C8
 lbl_806658C8:

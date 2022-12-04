@@ -624,3 +624,81 @@ lbl_802D42F4:
 /* 802D430C 0029D8CC  7C 04 00 50 */	subf r0, r4, r0
 /* 802D4310 0029D8D0  90 0D B5 0C */	stw r0, lbl_8066768C@sda21(r13)
 /* 802D4314 0029D8D4  4E 80 00 20 */	blr
+
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+.global lbl_806658B8
+lbl_806658B8:
+	# ROM: 0x571498
+	.2byte 0x0010
+
+
+.global lbl_806658BA
+lbl_806658BA:
+	# ROM: 0x57149A
+	.2byte 0x0037
+
+
+.global lbl_806658BC
+lbl_806658BC:
+	# ROM: 0x57149C
+	.4byte 0x20000000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_80580BC0
+lbl_80580BC0:
+	.skip 0x40
+.global lbl_80580C00
+lbl_80580C00:
+	.skip 0x8A0
+.global lbl_805814A0
+lbl_805814A0:
+	.skip 0x480
+.global lbl_80581920
+lbl_80581920:
+	.skip 0x60
+.global lbl_80581980
+lbl_80581980:
+	.skip 0x40
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667688
+lbl_80667688:
+	.skip 0x4
+.global lbl_8066768C
+lbl_8066768C:
+	.skip 0x4
+.global lbl_80667690
+lbl_80667690:
+	.skip 0x4
+.global lbl_80667694
+lbl_80667694:
+	.skip 0x4
+.global lbl_80667698
+lbl_80667698:
+	.skip 0x8
+.global lbl_806676A0
+lbl_806676A0:
+	.skip 0x8
+.global lbl_806676A8
+lbl_806676A8:
+	.skip 0x4
+.global lbl_806676AC
+lbl_806676AC:
+	.skip 0x4
+.global lbl_806676B0
+lbl_806676B0:
+	.skip 0x4
+.global lbl_806676B4
+lbl_806676B4:
+	.skip 0x4
+.global lbl_806676B8
+lbl_806676B8:
+	.skip 0x4
+.global lbl_806676BC
+lbl_806676BC:
+	.skip 0x4
+.global lbl_806676C0
+lbl_806676C0:
+	.skip 0x8

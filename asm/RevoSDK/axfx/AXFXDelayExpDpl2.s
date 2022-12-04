@@ -630,3 +630,33 @@ lbl_802D7968:
 /* 802D797C 002A0F3C  7C 08 03 A6 */	mtlr r0
 /* 802D7980 002A0F40  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D7984 002A0F44  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.global lbl_8066BE38
+lbl_8066BE38:
+	# ROM: 0x575C98
+	.4byte 0x42000000
+
+
+.global lbl_8066BE3C
+lbl_8066BE3C:
+	# ROM: 0x575C9C
+	.4byte 0
+
+
+.global lbl_8066BE40
+lbl_8066BE40:
+	# ROM: 0x575CA0
+	.float 1.0
+
+
+.global lbl_8066BE44
+lbl_8066BE44:
+	# ROM: 0x575CA4
+	.4byte 0x43000000
+
+
+.global lbl_8066BE48
+lbl_8066BE48:
+	.4byte 0x3F733333
+	.4byte 0

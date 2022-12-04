@@ -429,3 +429,49 @@ lbl_8053FFB8:
 	.asciz "<< RVL_SDK - AI \trelease build: Feb 27 2009 10:01:30 (0x4302_145) >>"
 	.balign 4
 	
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_806675C8
+lbl_806675C8:
+	.skip 0x4
+.global lbl_806675CC
+lbl_806675CC:
+	.skip 0x4
+.global lbl_806675D0
+lbl_806675D0:
+	.skip 0x4
+.global lbl_806675D4
+lbl_806675D4:
+	.skip 0x4
+.global lbl_806675D8
+lbl_806675D8:
+	.skip 0x4
+.global lbl_806675DC
+lbl_806675DC:
+	.skip 0x4
+.global lbl_806675E0
+lbl_806675E0:
+	.skip 0x4
+.global lbl_806675E4
+lbl_806675E4:
+	.skip 0x4
+.global lbl_806675E8
+lbl_806675E8:
+	.skip 0x4
+.global lbl_806675EC
+lbl_806675EC:
+	.skip 0x4
+.global lbl_806675F0
+lbl_806675F0:
+	.skip 0x4
+.global lbl_806675F4
+lbl_806675F4:
+	.skip 0x4
+.global lbl_806675F8
+lbl_806675F8:
+	.skip 0x4
+.global lbl_806675FC
+lbl_806675FC:
+	.skip 0x4
+.global lbl_80667600
+lbl_80667600:
+	.skip 0x8

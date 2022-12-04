@@ -56,3 +56,27 @@ lbl_802D20E8:
 AXIsInit:
 /* 802D2100 0029B6C0  80 6D B4 88 */	lwz r3, lbl_80667608@sda21(r13)
 /* 802D2104 0029B6C4  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.4byte 0 #needed to fix alignment for arc.c ("arc.c" string)
+
+.global lbl_80540070
+lbl_80540070:
+	.asciz "<< RVL_SDK - AX \trelease build: Feb 27 2009 10:01:36 (0x4302_145) >>"
+	.balign 4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+.2byte 0 #needed to fix alignment for arc.c
+
+.global lbl_806658B0
+lbl_806658B0:
+	# ROM: 0x571490
+	.4byte lbl_80540070
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667608
+lbl_80667608:
+	.skip 0x8

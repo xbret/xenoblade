@@ -750,3 +750,44 @@ AXSetAuxBReturnVolume:
 AXSetAuxCReturnVolume:
 /* 802D3A60 0029D020  B0 6D B4 E0 */	sth r3, lbl_80667660@sda21(r13)
 /* 802D3A64 0029D024  4E 80 00 20 */	blr 
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_80580AC0
+lbl_80580AC0:
+	.skip 0x100
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667660
+lbl_80667660:
+	.skip 0x2
+.global lbl_80667662
+lbl_80667662:
+	.skip 0x2
+.global lbl_80667664
+lbl_80667664:
+	.skip 0x2
+.global lbl_80667666
+lbl_80667666:
+	.skip 0x2
+.global lbl_80667668
+lbl_80667668:
+	.skip 0x4
+.global lbl_8066766C
+lbl_8066766C:
+	.skip 0x4
+.global lbl_80667670
+lbl_80667670:
+	.skip 0x4
+.global lbl_80667674
+lbl_80667674:
+	.skip 0x4
+.global lbl_80667678
+lbl_80667678:
+	.skip 0x4
+.global lbl_8066767C
+lbl_8066767C:
+	.skip 0x4
+.global lbl_80667680
+lbl_80667680:
+	.skip 0x8
