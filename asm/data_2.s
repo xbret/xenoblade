@@ -2,6 +2,8 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.4byte 0 #needed to fix alignment for arc.c ("arc.c" string)
+
 .global lbl_80540070
 lbl_80540070:
 	.asciz "<< RVL_SDK - AX \trelease build: Feb 27 2009 10:01:36 (0x4302_145) >>"

@@ -218,7 +218,7 @@ NDEV_O_FILES :=\
 RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/sbss_3.o \
 	$(BUILD_DIR)/asm/RevoSDK/ai/ai.o \
-	$(BUILD_DIR)/asm/RevoSDK/arc/arc.o \
+	$(BUILD_DIR)/src/RevoSDK/arc/arc.o \
 	$(BUILD_DIR)/asm/sdata_2.o \
 	$(BUILD_DIR)/asm/data_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/ax/AX.o \

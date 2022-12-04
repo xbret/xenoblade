@@ -1,30 +1,22 @@
 #include "RevoSDK/arc/arc.h"
-
-//#include <OS/OSError.h>
-
+#include "RevoSDK/os/OSError.h"
 #include "stl/ctype.h"
 
 /**
  * Modified from decompilation by riidefi in WiiCore
  * https://github.com/riidefi/WiiCore/tree/master/source/rx
- */
+*/
 
 #define ARC_FILE_MAGIC 0x55AA382D
 
 #define ARCNodeIsFolder(node) ((node).packed_type_name & 0xff000000)
 #define ARCNodeGetName(node) ((node).packed_type_name & 0x00ffffff)
 
-//Temporary
-#define OSError(...) OSPanic(__FILE__, __LINE__, __VA_ARGS__)
-
-extern void OSPanic(const char*, int, const char*, ...);
-__declspec(weak) void OSReport(const char*, ...);
-
-
 static u32 entryToPath(ARCHandle* handle, u32 entrynum, char* string,
                        u32 maxlen);
 
-static BOOL isSame(const char* lhs, const char* rhs) {
+
+static inline BOOL isSame(const char* lhs, const char* rhs) {
     while (rhs[0] != '\0') {
         if (tolower(*lhs++) != tolower(*rhs++))
             return FALSE;
@@ -36,7 +28,7 @@ static BOOL isSame(const char* lhs, const char* rhs) {
     return FALSE;
 }
 
-static u32 myStrncpy(char* dst, char* src, u32 maxlen) {
+static inline u32 myStrncpy(char* dst, char* src, u32 maxlen) {
     u32 i;
     for (i = maxlen; i != 0 && src[0] != '\0'; --i)
         *dst++ = *src++;
@@ -94,6 +86,7 @@ BOOL ARCInitHandle(void* bin, ARCHandle* handle) {
 
     return TRUE;
 }
+
 
 BOOL ARCOpen(ARCHandle* handle, const char* path, ARCFileInfo* info) {
     ARCNode* nodes = handle->nodes;
@@ -192,7 +185,7 @@ s32 ARCConvertPathToEntrynum(ARCHandle* handle, const char* path) {
 
         // If the name was delimited by a '/' rather than truncated.
         // This must be expressed as a ternary, and an enum cannot be used..
-        name_delimited_by_slash = (name_end[0] != '\0') ? 1 : 0;
+        name_delimited_by_slash = (name_end[0] == '\0') ? 0 : 1;
         name_length = name_end - path;
 
         // Traverse all children of the parent.
@@ -239,6 +232,7 @@ s32 ARCConvertPathToEntrynum(ARCHandle* handle, const char* path) {
         path += name_length + 1;
     }
 }
+
 static u32 entryToPath(ARCHandle* handle, u32 entrynum, char* string,
                        u32 maxlen) {
     char* name;

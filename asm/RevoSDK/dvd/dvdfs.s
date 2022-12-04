@@ -502,7 +502,6 @@ DVDClose:
 /* 8030A430 002D39F0  4E 80 00 20 */	blr 
 
 .balign 16, 0
-.global entryToPath
 entryToPath:
 /* 8030A440 002D3A00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030A444 002D3A04  7C 08 02 A6 */	mflr r0

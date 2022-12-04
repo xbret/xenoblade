@@ -99,7 +99,7 @@ ifeq ($(VERBOSE),0)
 # this set of LDFLAGS generates no warnings.
 LDFLAGS := $(MAPGEN) -fp hard -nodefaults -w off
 endif
-CFLAGS   = -Cpp_exceptions off -enum int -inline on -use_lmw_stmw on -proc gekko -RTTI off -fp hard -rostr -str pool -O4,p -nodefaults -enc SJIS -func_align 4 $(INCLUDES)
+CFLAGS   = -Cpp_exceptions off -enum int -inline on -use_lmw_stmw on -proc gekko -fp hard -rostr -str pool -O4,p -nodefaults -enc SJIS -func_align 4 $(INCLUDES)
 ifeq ($(NON_MATCHING),1)
 CFLAGS += -DNON_MATCHING
 endif
@@ -108,6 +108,9 @@ ifeq ($(VERBOSE),0)
 # this set of ASFLAGS generates no warnings.
 ASFLAGS += -W
 endif
+
+#arc.c doesn't use -use_lmw_stmw on, and uses -ipa file (maybe rest of wii sdk too?)
+$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -volatileasm -proc gekko -fp hard -O4,p -nodefaults -func_align 16 $(INCLUDES)
 
 #All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
 $(BUILD_DIR)/src/RevoSDK/%.o: CFLAGS += -func_align 16
@@ -177,7 +180,7 @@ $(BUILD_DIR)/%.o: %.c
 	
 $(BUILD_DIR)/%.o: %.cpp
 	@echo "Compiling " $<
-	$(QUIET) $(CC) $(CFLAGS) -c -o $@ $<
+	$(QUIET) $(CC) $(CFLAGS) -lang=c++ -c -o $@ $<
 
 ### Debug Print ###
 
