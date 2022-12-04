@@ -873,3 +873,140 @@ lbl_802F74C0:
 .global L2CA_RegisterCompression
 L2CA_RegisterCompression:
 /* 802F74CC 002C0A8C  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80546BE0
+lbl_80546BE0:
+	.asciz "L2CAP - L2CA_Register() called for PSM: 0x%04x"
+	.balign 4
+	.asciz "L2CAP - no cb registering PSM: 0x%04x"
+	.balign 4
+	.asciz "L2CAP - invalid PSM value, PSM: 0x%04x"
+	.balign 4
+	.asciz "L2CAP - no RCB available, PSM: 0x%04x"
+	.balign 4
+
+
+.global lbl_80546C88
+lbl_80546C88:
+	.asciz "L2CAP - L2CA_Deregister() called for PSM: 0x%04x"
+	.balign 4
+
+
+.global lbl_80546CBC
+lbl_80546CBC:
+	.asciz "L2CAP - PSM: 0x%04x not found for deregistration"
+	.balign 4
+	.asciz "L2CA_ConnectReq()  PSM: 0x%04x"
+	.balign 4
+	.asciz "L2CA_ConnectReq()  BDA: %02x-%02x-%02x-%02x-%02x-%02x"
+	.balign 4
+	.asciz "L2CAP connect req - BTU not ready"
+	.balign 4
+	.asciz "L2CAP - no RCB for L2CA_conn_req, PSM: 0x%04x"
+	.balign 4
+	.asciz "L2CAP - no LCB for L2CA_conn_req"
+	.balign 4
+	.asciz "L2CAP API - L2CA_conn_req rejected - link disconnecting"
+	.asciz "L2CAP - no CCB for L2CA_conn_req"
+	.balign 4
+	.asciz "L2CAP - L2CA_conn_req() returned CID: 0x%04x"
+	.balign 4
+	.asciz "L2CA_ConnectRsp()  CID: 0x%04x  Result: %d  Status: %d"
+	.balign 4
+	.asciz "L2CA_ConnectRsp()  BDA: %02x-%02x-%02x-%02x-%02x-%02x"
+	.balign 4
+	.asciz "L2CAP - no LCB for L2CA_conn_rsp"
+	.balign 4
+	.asciz "L2CAP - no CCB for L2CA_conn_rsp"
+	.balign 4
+	.asciz "L2CAP - bad id in L2CA_conn_rsp. Exp: %d  Got: %d"
+	.balign 4
+
+
+.global lbl_80546F38
+lbl_80546F38:
+	.asciz "L2CA_ConfigReq()  CID: 0x%04x"
+	.balign 4
+
+
+.global lbl_80546F58
+lbl_80546F58:
+	.asciz "L2CAP - no CCB for L2CA_cfg_req, CID: %d"
+	.balign 4
+
+
+.global lbl_80546F84
+lbl_80546F84:
+	.asciz "L2CA_ConfigRsp()  CID: 0x%04x  Result: %d"
+	.balign 4
+
+
+.global lbl_80546FB0
+lbl_80546FB0:
+	.asciz "L2CAP - no CCB for L2CA_cfg_rsp, CID: %d"
+	.balign 4
+
+
+.global lbl_80546FDC
+lbl_80546FDC:
+	.asciz "L2CA_DisconnectReq()  CID: 0x%04x"
+	.balign 4
+
+
+.global lbl_80547000
+lbl_80547000:
+	.asciz "L2CAP - no CCB for L2CA_disc_req, CID: %d"
+	.balign 4
+
+
+.global lbl_8054702C
+lbl_8054702C:
+	.asciz "L2CA_DisconnectRsp()  CID: 0x%04x"
+	.balign 4
+
+
+.global lbl_80547050
+lbl_80547050:
+	.asciz "L2CAP - no CCB for L2CA_disc_rsp, CID: %d"
+	.balign 4
+	.asciz "L2CA_DataWrite()  CID: 0x%04x  Len: %d"
+	.balign 4
+	.asciz "L2CAP - no CCB for L2CA_DataWrite, CID: %d"
+	.balign 4
+	.asciz "L2CAP - cannot send message bigger than peer's mtu size"
+	.asciz "L2CA_Ping()  BDA: %02x-%02x-%02x-%02x-%02x-%02x"
+	.asciz "L2CAP - no LCB for L2CA_ping"
+	.balign 4
+	.asciz "L2CAP - rejected second L2CA_ping"
+	.balign 4
+	.4byte 0
+	.asciz "L2CAP - L2CA_ping rejected - link disconnecting"
+
+
+.global lbl_805471B0
+lbl_805471B0:
+	.asciz "L2CAP - no CCB for L2CA_SetIdleTimeout, CID: %d"
+	.asciz "L2CA_SetAclPriority()  bdaddr: %02x%02x%02x%02x%02x%02x"
+	.asciz "L2CAP - no LCB for L2CA_SetAclPriority"
+	.balign 4
+	.asciz "L2CA_SetCompression() local cid %d, direction %d, pe_type %d, mem_level %d, wbits %d, enable %d"
+	.asciz "L2CAP - no CCB for L2CA_Flush, CID: %d"
+	.balign 4
+	.asciz "L2CA_Flush()  CID: 0x%04x flushed %d buffers"
+	.balign 4
+	.asciz "L2CA_GetNumQueuedBufs()  CID: 0x%04x  abmormally returning 0"
+	.balign 4
+	.asciz "L2CA_GetNumQueuedBufs()  CID: 0x%04x  returning %d"
+	.balign 4
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+#might not be here
+.global lbl_8066BF80
+lbl_8066BF80:
+	# ROM: 0x575DE0
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFF0000

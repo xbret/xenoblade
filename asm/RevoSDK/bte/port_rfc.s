@@ -1448,3 +1448,142 @@ lbl_802FDE58:
 /* 802FDE6C 002C742C  7C 08 03 A6 */	mtlr r0
 /* 802FDE70 002C7430  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FDE74 002C7434  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80548200
+lbl_80548200:
+	.asciz "port_open_continue"
+	.balign 4
+	.asciz "port_open_continue no mx channel"
+	.balign 4
+
+
+.global lbl_80548238
+lbl_80548238:
+	.asciz "PORT_StartCnf result:%d"
+
+
+.global lbl_80548250
+lbl_80548250:
+	.asciz "PORT_StartCnf failed result:%d"
+	.balign 4
+
+
+.global lbl_80548270
+lbl_80548270:
+	.asciz "PORT_StartInd"
+	.balign 4
+
+
+.global lbl_80548280
+lbl_80548280:
+	.asciz "PORT_ParNegInd dlci:%d mtu:%d"
+	.balign 4
+
+
+.global lbl_805482A0
+lbl_805482A0:
+	.asciz "PORT_ParNegInd: port not found"
+	.balign 4
+
+
+.global lbl_805482C0
+lbl_805482C0:
+	.asciz "PORT_ParNegCnf dlci:%d mtu:%d cl: %d k: %d"
+	.balign 4
+
+
+.global lbl_805482EC
+lbl_805482EC:
+	.asciz "PORT_DlcEstablishInd dlci:%d mtu:%d"
+
+
+.global lbl_80548310
+lbl_80548310:
+	.asciz "PORT_DlcEstablishCnf dlci:%d mtu:%d result:%d"
+	.balign 4
+
+
+.global lbl_80548340
+lbl_80548340:
+	.asciz "PORT_PortNegInd"
+	.asciz "PORT_PortNegCnf"
+	.asciz "PORT_PortNegCnf no port"
+	.asciz "PORT_PortNegCnf Control Already sent"
+	.balign 4
+
+
+.global lbl_805483A0
+lbl_805483A0:
+	.asciz "PORT_ControlInd"
+
+
+.global lbl_805483B0
+lbl_805483B0:
+	.asciz "PORT_ControlInd DTR_DSR : %d, RTS_CTS : %d, RI : %d, DCD : %d"
+	.balign 4
+
+
+.global lbl_805483F0
+lbl_805483F0:
+	.asciz "PORT_ControlCnf"
+
+
+.global lbl_80548400
+lbl_80548400:
+	.asciz "PORT_LineStatusInd"
+	.balign 4
+
+
+.global lbl_80548414
+lbl_80548414:
+	.asciz "PORT_DlcReleaseInd"
+	.balign 4
+
+
+.global lbl_80548428
+lbl_80548428:
+	.asciz "PORT_CloseInd"
+	.balign 4
+
+
+.global lbl_80548438
+lbl_80548438:
+	.asciz "Port_TimeOutCloseMux"
+	.balign 4
+
+
+.global lbl_80548450
+lbl_80548450:
+	.asciz "PORT_DataInd with data length %d"
+	.balign 4
+
+
+.global lbl_80548474
+lbl_80548474:
+	.asciz "PORT_DataInd. Buffer over run. Dropping the buffer"
+	.balign 4
+
+
+.global lbl_805484A8
+lbl_805484A8:
+	.asciz "PORT_FlowInd fc:%d"
+	.balign 4
+
+.global lbl_805484BC
+lbl_805484BC:
+	.asciz "Sending RFCOMM_DataReq"
+	.balign 4
+
+
+.global lbl_805484D4
+lbl_805484D4:
+	.asciz "port_rfc_closed in OPENING state ignored"
+	.balign 4
+
+
+.global lbl_80548500
+lbl_80548500:
+	.asciz "port_rfc_closed state:%d sending events:%x"
+	.balign 4
+	.4byte 0

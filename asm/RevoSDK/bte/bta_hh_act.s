@@ -1740,3 +1740,214 @@ lbl_802E3810:
 /* 802E3824 002ACDE4  7C 08 03 A6 */	mtlr r0
 /* 802E3828 002ACDE8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E382C 002ACDEC  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80544198
+lbl_80544198:
+	.asciz "bta_hh_sdp_cback: p_cb: %d result 0x%02x,                             attr_mask 0x%02x"
+	.balign 4
+
+
+.global lbl_805441F0
+lbl_805441F0:
+	.asciz "bta_hh_start_sdp:: skip SDP for known devices"
+	.balign 4
+
+
+.global lbl_80544220
+lbl_80544220:
+	.asciz "bta_hh_start_sdp:  HID_HostGetSDPRecord failed:                 Status 0x%2X"
+	.balign 4
+
+
+.global lbl_80544270
+lbl_80544270:
+	.asciz "bta_hh_sdp_cmpl:  status 0x%2X"
+	.balign 4
+
+
+.global lbl_80544290
+lbl_80544290:
+	.asciz "bta_hh_sdp_cmpl:  HID_HostOpenDev failed:                     Status 0x%2X"
+	.balign 4
+
+
+.global lbl_805442DC
+lbl_805442DC:
+	.asciz "bta_hh_open_act:  Device[%d] connected"
+	.balign 4
+	.asciz "BTA_HH_GET_RPT_EVT"
+	.balign 4
+	.asciz "BTA_HH_SET_RPT_EVT"
+	.balign 4
+	.asciz "BTA_HH_GET_PROTO_EVT"
+	.balign 4
+	.asciz "BTA_HH_SET_PROTO_EVT"
+	.balign 4
+	.asciz "BTA_HH_GET_IDLE_EVT"
+	.asciz "BTA_HH_SET_IDLE_EVT"
+	.4byte 0
+	.asciz "BTA_HH_OPEN_EVT"
+	.asciz "Unknown event"
+	.balign 4
+	.asciz "HANDSHAKE received for: event = %s data= %d"
+	.asciz "unknown transaction type"
+	.balign 4
+
+
+.global lbl_805443F0
+lbl_805443F0:
+	# ROM: 0x5404F0
+	.4byte lbl_802E2CF8
+	.4byte lbl_802E2CF8
+	.4byte lbl_802E2C8C
+	.4byte lbl_802E2CF8
+	.4byte lbl_802E2B9C
+	.4byte lbl_802E2C1C
+	.4byte lbl_802E2B9C
+	.4byte lbl_802E2C1C
+	.4byte lbl_802E2B9C
+	.4byte lbl_802E2C1C
+
+
+.global lbl_80544418
+lbl_80544418:
+	# ROM: 0x540518
+	.4byte lbl_802E2B64
+	.4byte lbl_802E2B64
+	.4byte lbl_802E2B5C
+	.4byte lbl_802E2B64
+	.4byte lbl_802E2B2C
+	.4byte lbl_802E2B34
+	.4byte lbl_802E2B3C
+	.4byte lbl_802E2B44
+	.4byte lbl_802E2B4C
+	.4byte lbl_802E2B54
+
+	
+	.asciz "Ctrl DATA received w4: event[%s]"
+	.balign 4
+	.asciz "invalid  transaction type for DATA payload: 4_evt[%s]"
+	.balign 4
+
+
+.global lbl_8054449C
+lbl_8054449C:
+	# ROM: 0x54059C
+	.4byte lbl_802E2EBC
+	.4byte lbl_802E2EBC
+	.4byte lbl_802E2EB4
+	.4byte lbl_802E2EBC
+	.4byte lbl_802E2E84
+	.4byte lbl_802E2E8C
+	.4byte lbl_802E2E94
+	.4byte lbl_802E2E9C
+	.4byte lbl_802E2EA4
+	.4byte lbl_802E2EAC
+
+
+.global lbl_805444C4
+lbl_805444C4:
+	# ROM: 0x5405C4
+	.4byte lbl_802E2DD8
+	.4byte lbl_802E2DD8
+	.4byte lbl_802E2DD0
+	.4byte lbl_802E2DD8
+	.4byte lbl_802E2DA0
+	.4byte lbl_802E2DA8
+	.4byte lbl_802E2DB0
+	.4byte lbl_802E2DB8
+	.4byte lbl_802E2DC0
+	.4byte lbl_802E2DC8
+	.4byte 0
+
+
+.global lbl_805444F0
+lbl_805444F0:
+	.asciz "invalid command"
+
+
+.global lbl_80544500
+lbl_80544500:
+	.asciz "HID_HostWriteDev Error %d"
+	.balign 4
+
+
+.global lbl_8054451C
+lbl_8054451C:
+	.asciz "bta_hh_write_dev_act:: cmd type = %d"
+	.balign 4
+	.asciz "HID_HDEV_EVT_OPEN"
+	.balign 4
+	.asciz "HID_HDEV_EVT_CLOSE"
+	.balign 4
+	.asciz "HID_HDEV_EVT_RETRYING"
+	.balign 4
+	.asciz "HID_HDEV_EVT_INTR_DATA"
+	.balign 4
+	.asciz "HID_HDEV_EVT_INTR_DATC"
+	.balign 4
+	.asciz "HID_HDEV_EVT_CTRL_DATA"
+	.balign 4
+	.asciz "HID_HDEV_EVT_CTRL_DATC"
+	.balign 4
+	.asciz "HID_HDEV_EVT_HANDSHAKE"
+	.balign 4
+	.asciz "HID_HDEV_EVT_VC_UNPLUG"
+	.balign 4
+	.asciz "Unknown HID event"
+	.balign 4
+	.asciz "bta_hh_cback::HID_event [%s]"
+	.balign 4
+
+
+.global lbl_80544648
+lbl_80544648:
+	# ROM: 0x540748
+	.4byte lbl_802E3674
+	.4byte lbl_802E367C
+	.4byte lbl_802E37E0
+	.4byte lbl_802E3684
+	.4byte lbl_802E369C
+	.4byte lbl_802E3694
+	.4byte lbl_802E369C
+	.4byte lbl_802E368C
+	.4byte lbl_802E36A8
+
+
+.global lbl_8054466C
+lbl_8054466C:
+	# ROM: 0x54076C
+	.4byte lbl_802E35FC
+	.4byte lbl_802E3604
+	.4byte lbl_802E360C
+	.4byte lbl_802E3614
+	.4byte lbl_802E361C
+	.4byte lbl_802E3624
+	.4byte lbl_802E362C
+	.4byte lbl_802E3634
+	.4byte lbl_802E363C
+	
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665920
+lbl_80665920:
+	# ROM: 0x571500
+	.4byte 0
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+#might not go here
+.global lbl_805BF7C8
+lbl_805BF7C8:
+	.skip 0x230
+	
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+#might not go here
+.global lbl_80667778
+lbl_80667778:
+	.skip 0x8

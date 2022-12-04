@@ -2210,3 +2210,49 @@ lbl_802FCA1C:
 /* 802FCA20 002C5FE0  38 A5 00 B8 */	addi r5, r5, 0xb8
 /* 802FCA24 002C5FE4  42 00 FF 3C */	bdnz lbl_802FC960
 /* 802FCA28 002C5FE8  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80548118
+lbl_80548118:
+	.asciz "L2CAP - no buffer cmd_rej"
+	.balign 4
+
+
+.global lbl_80548134
+lbl_80548134:
+	.asciz "L2CAP - no buffer for conn_req"
+	.balign 4
+
+
+.global lbl_80548154
+lbl_80548154:
+	.asciz "L2CAP - no buffer for cfg_rej"
+	.balign 4
+
+
+.global lbl_80548174
+lbl_80548174:
+	.asciz "L2CAP - no buffer for echo_req"
+	.balign 4
+
+.global lbl_80548194
+lbl_80548194:
+	.asciz "l2cu_create_conn - btm_is_sco_active_by_bdaddr() is_sco_active = %s"
+
+
+.global lbl_805481D8
+lbl_805481D8:
+	.asciz "L2CAP - no buffer for l2cu_create_conn"
+	.balign 4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+.global lbl_80665948
+lbl_80665948:
+	.asciz "TRUE"
+	.balign 4
+
+
+.global lbl_80665950
+lbl_80665950:
+	.asciz "FALSE"
+	.balign 4

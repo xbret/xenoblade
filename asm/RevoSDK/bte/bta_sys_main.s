@@ -181,3 +181,22 @@ lbl_802DEB70:
 bta_sys_set_trace_level:
 /* 802DEB98 002A8158  98 6D B5 F8 */	stb r3, lbl_80667778@sda21(r13)
 /* 802DEB9C 002A815C  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80543FD0
+lbl_80543FD0:
+	.asciz "BTA got event 0x%x"
+	.balign 4
+
+
+.global lbl_80543FE4
+lbl_80543FE4:
+	.asciz "BTA got unregistered event id %d"
+	.balign 4
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.global lbl_8066BF40
+lbl_8066BF40:
+	.4byte 0x00040201
+	.4byte 0

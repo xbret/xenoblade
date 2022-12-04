@@ -1963,3 +1963,72 @@ btm_inq_rmt_name_failed:
 /* 802E9E58 002B3418  7C 08 03 A6 */	mtlr r0
 /* 802E9E5C 002B341C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E9E60 002B3420  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_805452E0
+lbl_805452E0:
+	.asciz "BTM_SetDiscoverability: mode %d [NonDisc-0, Lim-1, Gen-2], window 0x%04x, interval 0x%04x"
+	.balign 4
+
+
+.global lbl_8054533C
+lbl_8054533C:
+	.asciz "BTM_SetConnectability: mode %d [NonConn-0, Conn-1], window 0x%04x, interval 0x%04x"
+	.balign 4
+
+
+.global lbl_80545390
+lbl_80545390:
+	.asciz "BTM_CancelInquiry called"
+	.balign 4
+
+
+.global lbl_805453AC
+lbl_805453AC:
+	.asciz "BTM_StartInquiry: mode: %d, dur: %d, rsps: %d, flt: %d"
+	.balign 4
+
+
+.global lbl_805453E4
+lbl_805453E4:
+	.asciz "BTM_ReadRemoteDeviceName: bd addr [%02x%02x%02x%02x%02x%02x]"
+	.balign 4
+
+
+.global lbl_80545424
+lbl_80545424:
+	.asciz "BTM_CancelRemoteDeviceName()"
+	.balign 4
+
+
+.global lbl_80545444
+lbl_80545444:
+	.asciz "BTM_InqDbRead: bd addr [%02x%02x%02x%02x%02x%02x]"
+	.balign 4
+
+
+.global lbl_80545478
+lbl_80545478:
+	.asciz "BTM Warning: Set Event Filter Failed (HCI returned 0x%x)"
+	.balign 4
+
+
+.global lbl_805454B4
+lbl_805454B4:
+	.asciz "BTM Inq Compl Callback: status 0x%02x, num results %d"
+	.balign 4
+	.4byte 0
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.global lbl_8066BF68
+lbl_8066BF68:
+	# ROM: 0x575DC8
+	.4byte 0x9E8B3300
+
+
+.global lbl_8066BF6C
+lbl_8066BF6C:
+	# ROM: 0x575DCC
+	.4byte 0x9E8B0000

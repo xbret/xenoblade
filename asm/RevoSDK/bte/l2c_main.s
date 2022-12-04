@@ -1141,3 +1141,63 @@ lbl_802FAB50:
 /* 802FAB5C 002C411C  7C 08 03 A6 */	mtlr r0
 /* 802FAB60 002C4120  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FAB64 002C4124  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80547E18
+lbl_80547E18:
+	.asciz "L2CAP - expected pkt start, got: %d"
+	.asciz "L2CAP - holding ACL for unknown handle:%d ls:%d cid:%d opcode:%d cur count:%d"
+	.balign 4
+	.4byte 0
+	.asciz "L2CAP - unknown CID: %d"
+	.asciz "L2CAP - got incorrect hci header"
+	.balign 4
+	.asciz "L2CAP - bad length in pkt. Exp: %d  Act: %d"
+	.asciz "GOT CONNECTIONLESS DATA PSM:%d"
+	.balign 4
+	.asciz "Command len bad  pkt_len: %d  cmd_len: %d  code: %d"
+	.asciz "L2CAP - MTU rej Handle: %d MTU: %d"
+	.balign 4
+	.asciz "L2CAP - rej with CID invalid, LCID: %d RCID: %d"
+	.asciz "L2CAP - rcvd conn req for unknown PSM: %d"
+	.balign 4
+	.asciz "L2CAP - unable to allocate CCB"
+	.balign 4
+	.asciz "L2CAP - no CCB for conn rsp, LCID: %d RCID: %d"
+	.balign 4
+	.asciz "L2CAP - con rsp - bad ID. Exp: %d Got: %d"
+	.balign 4
+	.asciz "L2CAP - cfg rsp - bad ID. Exp: %d Got: %d"
+	.balign 4
+	.asciz "L2CAP - rcvd cfg rsp for unknown CID: %d"
+	.balign 4
+	.asciz "L2CAP - bad cmd code: %d"
+	.balign 4
+
+.global lbl_805480BC
+lbl_805480BC:
+	.4byte lbl_802FA998
+	.4byte lbl_802FA048
+	.4byte lbl_802FA11C
+	.4byte lbl_802FA1E8
+	.4byte lbl_802FA2E0
+	.4byte lbl_802FA590
+	.4byte lbl_802FA840
+	.4byte lbl_802FA8B4
+	.4byte lbl_802FA914
+	.4byte lbl_802FA954
+	.4byte lbl_802FA974
+	.4byte lbl_802F9FC8
+
+
+.global lbl_805480EC
+lbl_805480EC:
+	.asciz "L2CAP HOLD CONTINUE"
+
+
+.global lbl_80548100
+lbl_80548100:
+	.asciz "L2CAP HOLD TIMEOUT"
+	.balign 4
+	.4byte 0

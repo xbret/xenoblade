@@ -817,3 +817,93 @@ lbl_803067B8:
 /* 803067C8 002CFD88  7C 08 03 A6 */	mtlr r0
 /* 803067CC 002CFD8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803067D0 002CFD90  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80549148
+lbl_80549148:
+	.asciz "Service Discovery"
+	.balign 4
+	.asciz "Security Registration Server failed"
+	.asciz "Security Registration for Client failed"
+	.asciz "SDP Registration failed"
+
+
+.global lbl_805491C0
+lbl_805491C0:
+	.asciz "SDP - Rcvd L2CAP conn ind, sent config req, CID 0x%x"
+	.balign 4
+	.asciz "SDP - Rcvd conn cnf for unknown CID 0x%x"
+	.balign 4
+	.asciz "SDP - got conn cnf, sent cfg req, CID: 0x%x"
+	.asciz "SDP - Rcvd conn cnf with error: 0x%x  CID 0x%x"
+	.balign 4
+
+
+.global lbl_80549280
+lbl_80549280:
+	.asciz "SDP - Rcvd L2CAP cfg ind, unknown CID: 0x%x"
+
+
+.global lbl_805492AC
+lbl_805492AC:
+	.asciz "SDP - Rcvd cfg ind, sent cfg cfm, CID: 0x%x"
+	.asciz "SDP - Rcvd cfg cfm, CID: 0x%x  Result: %d"
+	.balign 4
+
+
+.global lbl_80549304
+lbl_80549304:
+	.asciz "SDP - disconnect  CID: 0x%x"
+
+
+.global lbl_80549320
+lbl_80549320:
+	.asciz "SDP - Rcvd L2CAP disc, unknown CID: 0x%x"
+	.balign 4
+
+
+.global lbl_8054934C
+lbl_8054934C:
+	.asciz "SDP - Rcvd L2CAP disc, CID: 0x%x"
+	.balign 4
+
+
+.global lbl_80549370
+lbl_80549370:
+	.asciz "SDP - Ignored L2CAP data while in state: %d, CID: 0x%x"
+	.balign 4
+
+
+.global lbl_805493A8
+lbl_805493A8:
+	.asciz "SDP - Rcvd L2CAP data, unknown CID: 0x%x"
+	.balign 4
+	.asciz "SDP - no spare CCB for orig"
+	.asciz "SDP - Originate started"
+	.asciz "SDP - Originate failed"
+	.balign 4
+
+
+.global lbl_80549420
+lbl_80549420:
+	.asciz "SDP - Rcvd L2CAP disc cfm, unknown CID: 0x%x"
+	.balign 4
+
+
+.global lbl_80549450
+lbl_80549450:
+	.asciz "SDP - Rcvd L2CAP disc cfm, CID: 0x%x"
+	.balign 4
+
+
+.global lbl_80549478
+lbl_80549478:
+	.asciz "SDP - CCB timeout in state: %d  CID: 0x%x"
+	.balign 4
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_805C36C0
+lbl_805C36C0:
+	.skip 0x4640

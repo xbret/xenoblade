@@ -110,3 +110,27 @@ __DVDPrintFatalMessage:
 /* 8031035C 002D991C  7D 89 03 A6 */	mtctr r12
 /* 80310360 002D9920  4E 80 04 20 */	bctr 
 /* 80310364 002D9924  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global lbl_8050E3A8
+lbl_8050E3A8:
+	# ROM: 0x50A4A8
+	.4byte lbl_80549D60
+	.4byte lbl_80549DF0
+	.4byte lbl_80549EA0
+	.4byte lbl_80549F58
+	.4byte lbl_8054A008
+	.4byte lbl_8054A0A8
+	.4byte lbl_8054A154
+
+
+.global lbl_8050E3C4
+lbl_8050E3C4:
+	# ROM: 0x50A4C4
+	.4byte lbl_80549D60
+	.4byte lbl_8054A1E8
+	.4byte lbl_80549EA0
+	.4byte lbl_8054A28C
+	.4byte lbl_8054A330
+	.4byte lbl_8054A0A8
+	.4byte lbl_8054A154

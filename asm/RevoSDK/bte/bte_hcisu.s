@@ -66,3 +66,12 @@ bta_ci_hci_msg_handler:
 /* 802DDEA4 002A7464  38 60 00 02 */	li r3, 2
 /* 802DDEA8 002A7468  38 80 00 00 */	li r4, 0
 /* 802DDEAC 002A746C  4B FF D7 F4 */	b GKI_send_msg
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667760
+lbl_80667760:
+	.skip 0x4
+.global lbl_80667764
+lbl_80667764:
+	.skip 0x4

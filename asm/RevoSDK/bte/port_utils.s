@@ -432,3 +432,28 @@ lbl_802FE43C:
 /* 802FE444 002C7A04  7C 08 03 A6 */	mtlr r0
 /* 802FE448 002C7A08  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FE44C 002C7A0C  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80548530
+lbl_80548530:
+	.asciz "port_select_mtu bad packet size"
+	.asciz "port_select_mtu selected %d based on connection speed"
+	.balign 4
+	.asciz "port_select_mtu selected %d based on l2cap PDU size"
+	.4byte 0
+	.asciz "port_select_mtu application selected %d"
+	.asciz "port_select_mtu credit_rx_max %d, credit_rx_low %d, rx_buf_critical %d"
+	.balign 4
+
+
+.global lbl_80548630
+lbl_80548630:
+	.asciz "rfc_port_closed DONE"
+	.balign 4
+
+
+.global lbl_80548648
+lbl_80548648:
+	.asciz "PORT_DataInd Data reached HW. Sending FC set."
+	.balign 4

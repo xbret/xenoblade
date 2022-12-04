@@ -918,3 +918,30 @@ lbl_802EAB3C:
 /* 802EAB48 002B4108  7C 08 03 A6 */	mtlr r0
 /* 802EAB4C 002B410C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802EAB50 002B4110  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_805454F0
+lbl_805454F0:
+	.asciz "btm mode change AFTER unsniffing; hci hdl 0x%x, types 0x%02x"
+	.balign 4
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global lbl_8050E240
+lbl_8050E240:
+	# ROM: 0x50A340
+	.4byte 0x03020201
+	.4byte 0x03010102
+	.4byte 0x03000000
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.global lbl_8066BF70
+lbl_8066BF70:
+	# ROM: 0x575DD0
+	.4byte 0x00000100
+
+
+.global lbl_8066BF74
+lbl_8066BF74:
+	# ROM: 0x575DD4
+	.4byte 0x40800100

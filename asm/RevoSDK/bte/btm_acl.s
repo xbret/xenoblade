@@ -2156,3 +2156,80 @@ lbl_802E622C:
 /* 802E6238 002AF7F8  7C 08 03 A6 */	mtlr r0
 /* 802E623C 002AF7FC  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E6240 002AF800  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80544C60
+lbl_80544C60:
+	.asciz "Duplicate btm_acl_created: RemBdAddr: %02x%02x%02x%02x%02x%02x"
+	.balign 4
+
+
+.global lbl_80544CA0
+lbl_80544CA0:
+	.asciz "SetPacketType Mask -> 0x%04x"
+	.balign 4
+
+
+.global lbl_80544CC0
+lbl_80544CC0:
+	.asciz "Role change request declined since the previous request for this device is not completed "
+	.balign 4
+	.asciz "BTM_SetLinkPolicy switch not supported (settings: 0x%04x)"
+	.balign 4
+	.asciz "BTM_SetLinkPolicy hold not supported (settings: 0x%04x)"
+	.asciz "BTM_SetLinkPolicy sniff not supported (settings: 0x%04x)"
+	.balign 4
+	.4byte 0
+	.asciz "BTM_SetLinkPolicy park not supported (settings: 0x%04x)"
+	.asciz "BTM_ReadLinkPolicy: RemBdAddr: %02x%02x%02x%02x%02x%02x"
+
+
+.global lbl_80544E40
+lbl_80544E40:
+	.asciz "BTM_ReadClockOffset: RemBdAddr: %02x%02x%02x%02x%02x%02x"
+	.balign 4
+
+
+.global lbl_80544E7C
+lbl_80544E7C:
+	.asciz "Role Switch Event: new_role 0x%02x, HCI Status 0x%02x"
+	.balign 4
+	.asciz "BTM_SetQoS: BdAddr: %02x%02x%02x%02x%02x%02x"
+	.balign 4
+
+
+.global lbl_80544EE4
+lbl_80544EE4:
+	.asciz "BTM: p_flow->delay_variation: 0x%02x"
+	.balign 4
+
+
+.global lbl_80544F0C
+lbl_80544F0C:
+	.asciz "BTM_ReadRSSI: RemBdAddr: %02x%02x%02x%02x%02x%02x"
+	.balign 4
+
+
+.global lbl_80544F40
+lbl_80544F40:
+	.asciz "BTM_ReadLinkQuality: RemBdAddr: %02x%02x%02x%02x%02x%02x"
+	.balign 4
+
+
+.global lbl_80544F7C
+lbl_80544F7C:
+	.asciz "BTM RSSI Complete: rssi %d, hci status 0x%02x"
+	.balign 4
+
+
+.global lbl_80544FAC
+lbl_80544FAC:
+	.asciz "BTM Link Quality Complete: Link Quality %d, hci status 0x%02x"
+	.balign 4
+	.asciz "btm BEFORE SCO setting to 1 slot; hci hdl 0x%x"
+	.balign 4
+	.asciz "btm last SCO removed; unsniffing hci hdl 0x%x"
+	.balign 4
+	.asciz "btm last SCO removed; hci hdl 0x%x, types 0x%02x"
+	.balign 4

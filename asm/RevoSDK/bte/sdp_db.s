@@ -933,3 +933,20 @@ lbl_803049D8:
 /* 803049E4 002CDFA4  7C 08 03 A6 */	mtlr r0
 /* 803049E8 002CDFA8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803049EC 002CDFAC  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80548F50
+lbl_80548F50:
+	.asciz "SDP_AddAttribute: attr_len:%d too long. truncate to (%d)"
+	.balign 4
+
+
+.global lbl_80548F8C
+lbl_80548F8C:
+	.asciz "SDP_AddUuidSequence - too long, add %d uuids of %d"
+	.balign 4
+
+.global lbl_80548FC0
+lbl_80548FC0:
+	.asciz "Deleting attr_id 0x%04x for handle 0x%x"

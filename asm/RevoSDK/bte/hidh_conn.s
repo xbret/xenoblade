@@ -2308,3 +2308,117 @@ hidh_conn_dereg:
 /* 802F68F8 002BFEB8  7C 08 03 A6 */	mtlr r0
 /* 802F68FC 002BFEBC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F6900 002BFEC0  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_805467F8
+lbl_805467F8:
+	.asciz "HID Control Registration failed"
+
+
+.global lbl_80546818
+lbl_80546818:
+	.asciz "HID Interrupt Registration failed"
+	.balign 4
+
+
+.global lbl_8054683C
+lbl_8054683C:
+	.asciz "HID - disconnect"
+	.balign 4
+	.asciz "HID - Rcvd L2CAP conn ind, PSM: 0x%04x  CID 0x%x"
+	.balign 4
+	.asciz "HID - Rcvd INTR L2CAP conn ind, but no CTL channel"
+	.balign 4
+	.asciz "HID - Rcvd INTR L2CAP conn ind, wrong state: %d"
+	.asciz "HID - Rcvd CTL L2CAP conn ind, wrong state: %d"
+	.balign 4
+	.asciz "HID - Rcvd L2CAP conn ind, sent config req, PSM: 0x%04x  CID 0x%x"
+	.balign 4
+
+
+.global lbl_8054695C
+lbl_8054695C:
+	.asciz "HID - Originate failed"
+	.balign 4
+	.4byte 0
+	.asciz "HID - Originator security pass."
+	.asciz "HID - INTR Originate failed"
+	.asciz "HID - Rcvd unexpected conn cnf, CID 0x%x "
+	.balign 4
+	.asciz "HID - got CTRL conn cnf, sent cfg req, CID: 0x%x"
+	.balign 4
+
+
+.global lbl_80546A14
+lbl_80546A14:
+	.asciz "HID - Rcvd L2CAP cfg ind, unknown CID: 0x%x"
+
+
+.global lbl_80546A40
+lbl_80546A40:
+	.asciz "HID - Rcvd cfg ind, sent cfg cfm, CID: 0x%x"
+	.asciz "HID - Rcvd cfg cfm, CID: 0x%x  Result: %d"
+	.balign 4
+
+
+.global lbl_80546A98
+lbl_80546A98:
+	.asciz "HID - Rcvd L2CAP disc, unknown CID: 0x%x"
+	.balign 4
+
+
+.global lbl_80546AC4
+lbl_80546AC4:
+	.asciz "HID - Rcvd L2CAP disc, CID: 0x%x"
+	.balign 4
+
+
+.global lbl_80546AE8
+lbl_80546AE8:
+	.asciz "HID - Rcvd L2CAP disc cfm, unknown CID: 0x%x"
+	.balign 4
+
+
+.global lbl_80546B18
+lbl_80546B18:
+	.asciz "HID - Rcvd L2CAP disc cfm, CID: 0x%x"
+	.balign 4
+
+
+.global lbl_80546B40
+lbl_80546B40:
+	.asciz "HID - Rcvd L2CAP congestion status, unknown CID: 0x%x"
+	.balign 4
+
+
+.global lbl_80546B78
+lbl_80546B78:
+	.asciz "HID - Rcvd L2CAP congestion status, CID: 0x%x  Cong: %d"
+
+
+.global lbl_80546BB0
+lbl_80546BB0:
+	.asciz "HID - Rcvd L2CAP data, unknown CID: 0x%x"
+	.balign 4
+	.4byte 0
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global lbl_8050E270
+lbl_8050E270:
+	# ROM: 0x50A370
+	.4byte hidh_l2cif_connect_ind
+	.4byte hidh_l2cif_connect_cfm
+	.4byte 0
+	.4byte hidh_l2cif_config_ind
+	.4byte hidh_l2cif_config_cfm
+	.4byte hidh_l2cif_disconnect_ind
+	.4byte hidh_l2cif_disconnect_cfm
+	.4byte 0
+	.4byte hidh_l2cif_data_ind
+	.4byte hidh_l2cif_cong_ind
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_805C26B8
+lbl_805C26B8:
+	.skip 0x408

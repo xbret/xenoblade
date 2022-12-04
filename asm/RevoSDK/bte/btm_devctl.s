@@ -1857,3 +1857,82 @@ btm_report_device_status:
 /* 802E828C 002B184C  7D 89 03 A6 */	mtctr r12
 /* 802E8290 002B1850  4E 80 04 20 */	bctr 
 /* 802E8294 002B1854  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80545080
+lbl_80545080:
+	.asciz "BTM_SetAfhChannels first: %d (%d) last: %d (%d)"
+
+
+.global lbl_805450B0
+lbl_805450B0:
+	.asciz "btm_reset_complete"
+	.balign 4
+	.asciz "Local supported ACL packet types: 0x%04x"
+	.balign 4
+	.asciz "Local supported SCO packet types: 0x%04x"
+	.balign 4
+
+
+.global lbl_8054511C
+lbl_8054511C:
+	.asciz "BTM: BTM_VendorSpecificCommand: Opcode: 0x%04X, ParamLen: %i."
+	.balign 4
+
+
+.global lbl_8054515C
+lbl_8054515C:
+	.asciz "BTM: Unable to send vendor specific command (controller is busy)."
+	.balign 4
+
+
+.global lbl_805451A0
+lbl_805451A0:
+	.asciz "BTM Event: Received a vendor specific event from controller"
+	.4byte 0
+
+
+.global lbl_805451E0
+lbl_805451E0:
+	.asciz "BTM: BTM_WritePageTimeout: Timeout: %d."
+	.asciz "BTM: BTM_WriteVoiceSettings: Settings: 0x%04x."
+	.balign 4
+	.asciz "BTM: BTM_EnableTestMode"
+
+
+.global lbl_80545250
+lbl_80545250:
+	.asciz "BTM: BTM_ReadStoredLinkKey: Read_All: %s"
+	.balign 4
+
+
+.global lbl_8054527C
+lbl_8054527C:
+	.asciz "BTM: BTM_WriteStoredLinkKey: num_keys: %d"
+	.balign 4
+
+
+.global lbl_805452A8
+lbl_805452A8:
+	.asciz "BTM: BTM_DeleteStoredLinkKey: delete_all_flag: %s"
+	.balign 4
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+.global lbl_80665928
+lbl_80665928:
+	# ROM: 0x571508
+	.4byte 0x001F0000
+
+
+.global lbl_8066592C
+lbl_8066592C:
+	.asciz "TRUE"
+	.balign 4
+
+
+.global lbl_80665934
+lbl_80665934:
+	.asciz "FALSE"
+	.balign 4
+	.4byte 0

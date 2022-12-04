@@ -1320,3 +1320,27 @@ btu_hcif_link_key_notification_evt:
 /* 802EFBA0 002B9160  7C 08 03 A6 */	mtlr r0
 /* 802EFBA4 002B9164  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EFBA8 002B9168  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80546240
+lbl_80546240:
+	.asciz "Ctlr H/w error event"
+	.balign 4
+
+
+.global lbl_80546258
+lbl_80546258:
+	.asciz "Event mismatch opcode=%X cmd opcode=%X"
+	.balign 4
+
+
+.global lbl_80546280
+lbl_80546280:
+	.asciz "Cmd timeout; no cmd in queue"
+	.balign 4
+
+
+.global lbl_805462A0
+lbl_805462A0:
+	.asciz "BTU HCI command timeout - cmd opcode = 0x%02x"
+	.balign 4

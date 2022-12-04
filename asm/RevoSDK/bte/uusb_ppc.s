@@ -877,3 +877,61 @@ UUSB_Unregister:
 /* 802DDDC8 002A7388  7C 08 03 A6 */	mtlr r0
 /* 802DDDCC 002A738C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DDDD0 002A7390  4E 80 00 20 */	blr 
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+.global lbl_806658C8
+lbl_806658C8:
+	# ROM: 0x5714A8
+	.4byte 0x00000001
+
+
+.global lbl_806658CC
+lbl_806658CC:
+	# ROM: 0x5714AC
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_806658D0
+lbl_806658D0:
+	# ROM: 0x5714B0
+	.4byte 0x6F683000
+
+
+.global lbl_806658D4
+lbl_806658D4:
+	# ROM: 0x5714B4
+	.4byte 0x6F683100
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667748
+lbl_80667748:
+	.skip 0x1
+.global lbl_80667749
+lbl_80667749:
+	.skip 0x3
+.global lbl_8066774C
+lbl_8066774C:
+	.skip 0x4
+.global lbl_80667750
+lbl_80667750:
+	.skip 0x4
+.global lbl_80667754
+lbl_80667754:
+	.skip 0x4
+.global lbl_80667758
+lbl_80667758:
+	.skip 0x4
+.global lbl_8066775C
+lbl_8066775C:
+	.skip 0x4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_805BBC60
+lbl_805BBC60:
+	.skip 0x60
+.global lbl_805BBCC0
+lbl_805BBCC0:
+	.skip 0x1000
+.global lbl_805BCCC0
+lbl_805BCCC0:
+	.skip 0x1000

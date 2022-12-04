@@ -108,3 +108,161 @@ lbl_802DE1E0:
 /* 802DE1E4 002A77A4  7D 89 03 A6 */	mtctr r12
 /* 802DE1E8 002A77A8  4E 80 04 20 */	bctr 
 /* 802DE1EC 002A77AC  4E 80 00 20 */	blr
+
+#not sure where the stuff in rodata/sdata should be
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global lbl_8050DF30
+lbl_8050DF30:
+	# ROM: 0x50A030
+	.4byte hcisu_h2_init
+	.4byte hcisu_h2_open
+	.4byte hcisu_h2_close
+	.4byte hcisu_h2_send
+	.4byte hcisu_h2_handle_event
+	.4byte 0
+
+.global lbl_8050DF48
+lbl_8050DF48:
+	# ROM: 0x50A048
+	.4byte 0x40020400
+	.4byte 0x000F2000
+	.4byte 0x13880000
+
+.global lbl_8050DF54
+lbl_8050DF54:
+	.4byte 0x0002010E
+	.4byte 0x01020E02
+	.4byte 0x0212FF01
+
+.global lbl_8050DF60
+lbl_8050DF60:
+	.4byte 0x0005000A
+	.4byte 0xFF0108FF
+	.4byte 0x0106FF01
+	.4byte 0x07FF0112
+	.4byte 0xFF020000
+
+.global lbl_8050DF74
+lbl_8050DF74:
+	.4byte 0x03000200
+	.4byte 0x13880000
+	.4byte 0x00001000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000200
+	.4byte 0x13880000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000800
+	.4byte 0x13880000
+	.4byte 0
+
+.global lbl_8050DFC0
+lbl_8050DFC0:
+	.4byte 0x019000C8
+	.4byte 0x00040004
+	.4byte 0x02000320
+	.4byte 0x01900000
+	.4byte 0x00000300
+	.4byte 0
+
+.global lbl_8050DFD8
+lbl_8050DFD8:
+	.4byte 0x04000000
+	.4byte lbl_806658F0
+	.4byte 0x04000000
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806658D8
+lbl_806658D8:
+	# ROM: 0x5714B8
+	.4byte lbl_8050DF54
+
+
+.global lbl_806658DC
+lbl_806658DC:
+	# ROM: 0x5714BC
+	.4byte lbl_8050DF60
+
+.global lbl_806658E0
+lbl_806658E0:
+	# ROM: 0x5714C0
+	.4byte lbl_8066DCE0
+
+
+.global lbl_806658E4
+lbl_806658E4:
+	# ROM: 0x5714C4
+	.4byte lbl_8050DF74
+
+
+.global lbl_806658E8
+lbl_806658E8:
+	# ROM: 0x5714C8
+	.4byte lbl_8050DFC0
+	.4byte 0
+
+.global lbl_806658F0
+lbl_806658F0:
+	.4byte 0x20011002
+	.4byte 0x01033102
+
+
+.global lbl_806658F8
+lbl_806658F8:
+	# ROM: 0x5714D8
+	.4byte lbl_8050DFD8
+	.4byte 0
+
+.global lbl_80665900
+lbl_80665900:
+	# ROM: 0x5714E0
+	.4byte lbl_8066BF40
+	.4byte 0
+
+.global lbl_80665908
+lbl_80665908:
+	.asciz "%s\n"
+	.4byte 0
+
+.global lbl_80665910
+lbl_80665910:
+	# ROM: 0x5714F0
+	.4byte 0x0A5C2101
+	.4byte 0
+
+.global lbl_80665918
+lbl_80665918:
+	# ROM: 0x5714F8
+	.4byte 0x01000000
+
+
+.global lbl_8066591C
+lbl_8066591C:
+	# ROM: 0x5714FC
+	.4byte 0x00000001
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_805BE4A0
+lbl_805BE4A0:
+	.skip 0x1000
+.global lbl_805BF4A0
+lbl_805BF4A0:
+	.skip 0x30
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_8066776C
+lbl_8066776C:
+	.skip 0x4

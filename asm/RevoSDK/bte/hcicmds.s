@@ -2802,3 +2802,13 @@ lbl_802F35C0:
 /* 802F35D0 002BCB90  42 00 FF F0 */	bdnz lbl_802F35C0
 lbl_802F35D4:
 /* 802F35D4 002BCB94  4B FF B9 34 */	b btu_hcif_send_cmd
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8050E260
+lbl_8050E260:
+	# ROM: 0x50A360
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFF7F0000
+	.4byte 0

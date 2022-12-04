@@ -1584,3 +1584,387 @@ lbl_802F898C:
 /* 802F89A0 002C1F60  7C 08 03 A6 */	mtlr r0
 /* 802F89A4 002C1F64  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F89A8 002C1F68  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80547370
+lbl_80547370:
+	# ROM: 0x543470
+	.4byte lbl_802F74F4
+	.4byte lbl_802F74F8
+	.4byte lbl_802F74FC
+	.4byte lbl_802F7500
+	.4byte lbl_802F7504
+	.4byte lbl_802F7508
+	.4byte lbl_802F750C
+	.4byte lbl_802F7510
+	.4byte lbl_802F7514
+	.asciz "L2CAP - st: CLOSED evt: %d"
+	.balign 4
+
+
+.global lbl_805473B0
+lbl_805473B0:
+	.asciz "L2CAP - Calling Disconnect_Ind_Cb(), CID: 0x%04x  No Conf Needed"
+	.balign 4
+	.asciz "L2CAP - Calling ConnectCfm_Cb(), CID: 0x%04x  Status: %d"
+	.balign 4
+
+.global lbl_80547430
+lbl_80547430:
+	# ROM: 0x543530
+	.4byte lbl_802F75DC
+	.4byte lbl_802F760C
+	.4byte lbl_802F7798
+	.4byte lbl_802F7598
+	.4byte lbl_802F7798
+	.4byte lbl_802F7798
+	.4byte lbl_802F7798
+	.4byte lbl_802F7690
+	.4byte lbl_802F76B4
+	.4byte lbl_802F7798
+	.4byte lbl_802F7700
+	.4byte lbl_802F7798
+	.4byte lbl_802F7798
+	.4byte lbl_802F7798
+	.4byte lbl_802F7798
+	.4byte lbl_802F7798
+	.4byte lbl_802F7798
+	.4byte lbl_802F7798
+	.4byte lbl_802F7798
+	.4byte lbl_802F7784
+	.4byte lbl_802F7654
+	.4byte lbl_802F7798
+	.4byte lbl_802F7798
+	.4byte lbl_802F7798
+	.4byte lbl_802F7798
+	.4byte lbl_802F7798
+	.4byte lbl_802F7790
+	.4byte lbl_802F7798
+	.4byte lbl_802F7798
+	.4byte lbl_802F7784
+	.4byte lbl_802F7730
+	.asciz "L2CAP - st: ORIG_W4_SEC_COMP evt: %d"
+	.balign 4
+
+
+.global lbl_805474D4
+lbl_805474D4:
+	# ROM: 0x5435D4
+	.4byte lbl_802F7830
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F7874
+	.4byte lbl_802F78A0
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F78E8
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F78F4
+	.4byte lbl_802F7908
+	.4byte lbl_802F7908
+	.4byte lbl_802F78E8
+
+
+.global lbl_80547540
+lbl_80547540:
+	.asciz "L2CAP - st: TERM_W4_SEC_COMP evt: %d"
+	.balign 4
+
+
+.global lbl_80547568
+lbl_80547568:
+	.asciz "L2CAP - Calling Connect_Ind_Cb(), CID: 0x%04x"
+	.balign 4
+
+
+.global lbl_80547598
+lbl_80547598:
+	# ROM: 0x543698
+	.4byte lbl_802F7990
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F79A8
+	.4byte lbl_802F7A10
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A44
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A2C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A38
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A6C
+	.4byte lbl_802F7A2C
+
+	#0x80547604
+	.asciz "L2CAP - st: W4_L2CAP_CON_RSP evt: %d"
+	.balign 4
+	.asciz "L2CAP - Calling Connect_Cfm_Cb(), CID: 0x%04x, Success"
+	.balign 4
+	.asciz "L2CAP - Calling Connect_Pnd_Cb()"
+	.balign 4
+	.asciz "L2CAP - Calling Connect_Cfm_Cb(), CID: 0x%04x, Failure Code: %d"
+	.asciz "L2CAP - Calling Connect_Cfm_Cb(), CID: 0x%04x, Timeout"
+	.balign 4
+
+
+.global lbl_80547700
+lbl_80547700:
+	# ROM: 0x543800
+	.4byte lbl_802F7B08
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7B54
+	.4byte lbl_802F7BB4
+	.4byte lbl_802F7C0C
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CAC
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CA0
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CB4
+	.4byte lbl_802F7CAC
+	.4byte lbl_802F7C54
+
+
+.global lbl_80547770
+lbl_80547770:
+	.asciz "L2CAP - st: W4_L2CA_CON_RSP evt: %d"
+
+
+.global lbl_80547794
+lbl_80547794:
+	# ROM: 0x543894
+	.4byte lbl_802F7D44
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E60
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7D8C
+	.4byte lbl_802F7DEC
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E6C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E8C
+	.4byte lbl_802F7E60
+	.4byte lbl_802F7E08
+	.asciz "L2CAP - st: CONFIG evt: %d"
+	.balign 4
+	.asciz "L2CAP - Calling Config_Req_Cb(), CID: 0x%04x"
+	.balign 4
+	.asciz "L2CAP - Calling Config_Rsp_Cb(), CID: 0x%04x"
+	.balign 4
+	.asciz "L2CAP - Calling Config_Rsp_Cb(), CID: 0x%04x, Failure: %d"
+	.balign 4
+	.asciz "L2CAP - Calling Disconnect_Ind_Cb(), CID: 0x%04x  Conf Needed"
+	.balign 4
+	.asciz "L2CAP - Calling DataInd_Cb(), CID: 0x%04x"
+	.balign 4
+
+
+.global lbl_80547928
+lbl_80547928:
+	# ROM: 0x543A28
+	.4byte lbl_802F7F20
+	.4byte lbl_802F8254
+	.4byte lbl_802F8254
+	.4byte lbl_802F8254
+	.4byte lbl_802F8254
+	.4byte lbl_802F8254
+	.4byte lbl_802F8254
+	.4byte lbl_802F8254
+	.4byte lbl_802F8254
+	.4byte lbl_802F8254
+	.4byte lbl_802F8254
+	.4byte lbl_802F7F64
+	.4byte lbl_802F7FC8
+	.4byte lbl_802F8044
+	.4byte lbl_802F8090
+	.4byte lbl_802F8254
+	.4byte lbl_802F81A4
+	.4byte lbl_802F8254
+	.4byte lbl_802F8254
+	.4byte lbl_802F8254
+	.4byte lbl_802F80E8
+	.4byte lbl_802F8114
+	.4byte lbl_802F8160
+	.4byte lbl_802F8180
+	.4byte lbl_802F8254
+	.4byte lbl_802F8254
+	.4byte lbl_802F81E4
+	.4byte lbl_802F820C
+	.asciz "L2CAP - st: OPEN evt: %d"
+	.balign 4
+
+
+.global lbl_805479B4
+lbl_805479B4:
+	# ROM: 0x543AB4
+	.4byte lbl_802F82E8
+	.4byte lbl_802F84B0
+	.4byte lbl_802F84B0
+	.4byte lbl_802F832C
+	.4byte lbl_802F84B0
+	.4byte lbl_802F84B0
+	.4byte lbl_802F84B0
+	.4byte lbl_802F84B0
+	.4byte lbl_802F84B0
+	.4byte lbl_802F84B0
+	.4byte lbl_802F84B0
+	.4byte lbl_802F8350
+	.4byte lbl_802F84B0
+	.4byte lbl_802F84B0
+	.4byte lbl_802F83C8
+	.4byte lbl_802F84B0
+	.4byte lbl_802F8420
+	.4byte lbl_802F84B0
+	.4byte lbl_802F84B0
+	.4byte lbl_802F84B0
+	.4byte lbl_802F8478
+	.4byte lbl_802F84B0
+	.4byte lbl_802F84B0
+	.4byte lbl_802F843C
+	.4byte lbl_802F84B0
+	.4byte lbl_802F84B0
+	.4byte lbl_802F8460
+	.asciz "L2CAP - st: W4_L2CAP_DISC_RSP evt: %d"
+	.balign 4
+	.asciz "L2CAP - Calling DisconnectCfm_Cb(), CID: 0x%04x"
+
+
+.global lbl_80547A78
+lbl_80547A78:
+	# ROM: 0x543B78
+	.4byte lbl_802F8548
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F85D8
+	.4byte lbl_802F858C
+	.4byte lbl_802F868C
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F8694
+	.4byte lbl_802F868C
+	.4byte lbl_802F8638
+
+
+.global lbl_80547AE8
+lbl_80547AE8:
+	.asciz "L2CAP - st: W4_L2CA_DISC_RSP evt: %d"
+	.balign 4
+
+
+.global lbl_80547B10
+lbl_80547B10:
+	# ROM: 0x543C10
+	.4byte lbl_802F8724
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87E8
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87C8
+	.4byte lbl_802F87F0
+	.4byte lbl_802F87E8
+	.4byte lbl_802F876C
+	
+.global lbl_80547B80
+lbl_80547B80:
+	.asciz "L2CAP - cannot send buffer, offset: %d"
+	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_805C2AC0
+lbl_805C2AC0:
+	.skip 0x7E8

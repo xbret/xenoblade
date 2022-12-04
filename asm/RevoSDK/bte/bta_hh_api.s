@@ -278,3 +278,18 @@ lbl_802E3BEC:
 /* 802E3BF4 002AD1B4  7C 08 03 A6 */	mtlr r0
 /* 802E3BF8 002AD1B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E3BFC 002AD1BC  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80544690
+lbl_80544690:
+	.asciz "No resource to send HID host Connect request."
+	.balign 4
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066BF60
+lbl_8066BF60:
+	# ROM: 0x575DC0
+	.4byte bta_hh_hdl_event
+	.4byte BTA_HhDisable

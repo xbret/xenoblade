@@ -1335,3 +1335,48 @@ lbl_80305C50:
 /* 80305C5C 002CF21C  7C 08 03 A6 */	mtlr r0
 /* 80305C60 002CF220  38 21 00 40 */	addi r1, r1, 0x40
 /* 80305C64 002CF224  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80548FE8
+lbl_80548FE8:
+	.asciz "SDP - Unexp. PDU: %d in state: %d"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80549010
+lbl_80549010:
+	.asciz "SDP - Rcvd ServiceSearchRsp, no matches"
+
+
+.global lbl_80549038
+lbl_80549038:
+	.asciz "SDP - Wrong type: 0x%02x in attr_rsp"
+	.balign 4
+	.asciz "SDP - Bad len in attr_rsp %d"
+	.balign 4
+	.asciz "SDP - DB full"
+	.balign 4
+	.asciz "SDP - Bad type: 0x%02x or len: %d in attr_rsp"
+	.balign 4
+	.asciz "SDP - attr nesting too deep"
+	.asciz "SDP - bad len in UUID attr: %d"
+	.balign 4
+	.asciz "SDP - bad len in boolean attr: %d"
+	.balign 4
+
+
+.global lbl_80549120
+lbl_80549120:
+	# ROM: 0x545220
+	.4byte lbl_80305BD0
+	.4byte lbl_8030579C
+	.4byte lbl_8030584C
+	.4byte lbl_80305908
+	.4byte lbl_80305B50
+	.4byte lbl_80305B80
+	.4byte lbl_80305A9C
+	.4byte lbl_80305A9C
+	.4byte lbl_80305B50
+	.4byte 0

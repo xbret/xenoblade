@@ -2576,3 +2576,139 @@ lbl_802E10E4:
 /* 802E10F4 002AA6B4  7C 08 03 A6 */	mtlr r0
 /* 802E10F8 002AA6B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E10FC 002AA6BC  4E 80 00 20 */	blr
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global lbl_8050DFE8
+lbl_8050DFE8:
+	# ROM: 0x50A0E8
+	.4byte 0x12001101
+	.4byte 0x11031111
+	.4byte 0x11021108
+	.4byte 0x111E1105
+	.4byte 0x11061109
+	.4byte 0x11101104
+	.4byte 0x1118111B
+	.4byte 0x11151116
+	.4byte 0x1117112D
+	.4byte 0x110B110E
+	.4byte 0x11241304
+	.4byte 0x112F0000
+
+
+.global lbl_8050E018
+lbl_8050E018:
+	# ROM: 0x50A118
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000003
+	.4byte 0x0000000B
+	.4byte 0x00000002
+	.4byte 0x0000000C
+	.4byte 0x0000001D
+	.4byte 0x00000006
+	.4byte 0x00000007
+	.4byte 0x00000009
+	.4byte 0x0000000A
+	.4byte 0x00000004
+	.4byte 0x00000016
+	.4byte 0x00000023
+	.4byte 0x00000019
+	.4byte 0x0000001B
+	.4byte 0x0000001A
+	.4byte 0x00000028
+	.4byte 0x00000025
+	.4byte 0x00000027
+	.4byte 0x00000020
+	.4byte 0x00000025
+	.4byte 0x0000002C
+	.4byte 0
+
+
+.global lbl_8050E078
+lbl_8050E078:
+	# ROM: 0x50A178
+	.4byte bta_dm_authorize_cback
+	.4byte bta_dm_pin_cback
+	.4byte bta_dm_new_link_key_cback
+	.4byte bta_dm_link_key_request_cback
+	.4byte bta_dm_authentication_complete_cback
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80544008
+lbl_80544008:
+	.asciz " bta_dm_disable_timer_cback  "
+	.balign 4
+
+
+.global lbl_80544028
+lbl_80544028:
+	.asciz " bta_dm_search_timer_cback  "
+	.balign 4
+
+
+.global lbl_80544048
+lbl_80544048:
+	.asciz " bta_dm_pin_cback() -> Failed to start Remote Name Request  "
+	.balign 4
+
+
+.global lbl_80544088
+lbl_80544088:
+	.asciz " timer stopped  "
+	.balign 4
+
+
+.global lbl_8054409C
+lbl_8054409C:
+	.asciz "bta_dm_l2cap_server_compress_cback, BTA ID %d"
+	.balign 4
+
+
+.global lbl_805440CC
+lbl_805440CC:
+	.asciz "bta_dm_compress_cback open app_id %d, BTA id %d, state %d"
+	.balign 4
+
+
+.global lbl_80544108
+lbl_80544108:
+	.asciz "bta_dm_compress_cback close app_id %d, BTA id %d, state %d"
+	.balign 4
+	.4byte 0
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066BF48
+lbl_8066BF48:
+	# ROM: 0x575DA8
+	.2byte 0x0001
+
+
+.global lbl_8066BF4A
+lbl_8066BF4A:
+	# ROM: 0x575DAA
+	.byte 0x80, 0x01
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_805BF4D0
+lbl_805BF4D0:
+	.skip 0x88
+.global lbl_805BF558
+lbl_805BF558:
+	.skip 0x90
+.global lbl_805BF5E8
+lbl_805BF5E8:
+	.skip 0x30
+.global lbl_805BF618
+lbl_805BF618:
+	.skip 0x7C
+.global lbl_805BF694
+lbl_805BF694:
+	.skip 0x104
+.global lbl_805BF798
+lbl_805BF798:
+	.skip 0x30

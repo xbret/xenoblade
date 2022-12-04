@@ -193,3 +193,17 @@ lbl_803105E0:
 /* 803105F0 002D9BB0  7C 08 03 A6 */	mtlr r0
 /* 803105F4 002D9BB4  38 21 00 30 */	addi r1, r1, 0x30
 /* 803105F8 002D9BB8  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8050E3E0
+lbl_8050E3E0:
+	# ROM: 0x50A4E0
+	.4byte lbl_8054A528
+	.4byte lbl_8054A564
+	.4byte lbl_8054A59C
+	.4byte lbl_8054A5DC
+	.4byte lbl_8054A618
+	.4byte lbl_8054A654
+	.4byte lbl_8054A690
+	.4byte 0

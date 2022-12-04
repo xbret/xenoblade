@@ -432,3 +432,131 @@ lbl_802E4144:
 lbl_802E414C:
 /* 802E414C 002AD70C  38 64 02 84 */	addi r3, r4, 0x284
 /* 802E4150 002AD710  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_805446C0
+lbl_805446C0:
+	.asciz "wrong device handle: [%d]"
+	.balign 4
+	.asciz "BTA_HH_NULL_ST"
+	.balign 4
+	.asciz "BTA_HH_IDLE_ST"
+	.balign 4
+	.asciz "BTA_HH_W4_CONN_ST"
+	.balign 4
+	.asciz "BTA_HH_CONN_ST"
+	.balign 4
+	.asciz "unknown HID Host state"
+	.balign 4
+	.asciz "bta_hh_sm_execute: State 0x%02x [%s], Event [%s]"
+	.balign 4
+	.asciz "HH State Change: [%s] -> [%s] after Event [%s]"
+	.balign 4
+
+
+.global lbl_8054479C
+lbl_8054479C:
+	.asciz "bta_hh_hdl_event:: handle = %d dev_cb[%d] "
+	.balign 4
+	.asciz "BTA_HH_API_DISABLE_EVT"
+	.balign 4
+	.asciz "BTA_HH_API_ENABLE_EVT"
+	.balign 4
+	.asciz "BTA_HH_API_OPEN_EVT"
+	.asciz "BTA_HH_API_CLOSE_EVT"
+	.balign 4
+	.asciz "BTA_HH_INT_OPEN_EVT"
+	.asciz "BTA_HH_INT_CLOSE_EVT"
+	.balign 4
+	.asciz "BTA_HH_INT_HANDSK_EVT"
+	.balign 4
+	.asciz "BTA_HH_INT_DATA_EVT"
+	.asciz "BTA_HH_INT_CTRL_DATA"
+	.balign 4
+	.asciz "BTA_HH_API_WRITE_DEV_EVT"
+	.balign 4
+	.asciz "BTA_HH_SDP_CMPL_EVT"
+	.asciz "BTA_HH_DISC_CMPL_EVT"
+	.balign 4
+	.asciz "BTA_HH_API_MAINT_DEV_EVT"
+	.balign 4
+	.asciz "BTA_HH_API_GET_DSCP_EVT"
+	.asciz "BTA_HH_OPEN_CMPL_EVT"
+	.balign 4
+	.asciz "BTA_HH_API_GET_ACL_Q_EVT"
+	.balign 4
+	.asciz "unknown HID Host event code"
+
+
+.global lbl_80544960
+lbl_80544960:
+	# ROM: 0x540A60
+	.4byte lbl_802E40DC
+	.4byte lbl_802E40E4
+	.4byte lbl_802E40EC
+	.4byte lbl_802E40F4
+	.4byte lbl_802E4104
+	.4byte lbl_802E410C
+	.4byte lbl_802E40FC
+	.4byte lbl_802E411C
+	.4byte lbl_802E4114
+	.4byte lbl_802E4134
+	.4byte lbl_802E412C
+	.4byte lbl_802E413C
+	.4byte lbl_802E40D4
+	.4byte lbl_802E40CC
+	.4byte lbl_802E4144
+	.4byte lbl_802E4124
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global lbl_8050E1B8
+lbl_8050E1B8:
+	# ROM: 0x50A2B8
+	.4byte bta_hh_api_disc_act
+	.4byte bta_hh_open_act
+	.4byte bta_hh_close_act
+	.4byte bta_hh_data_act
+	.4byte bta_hh_ctrl_dat_act
+	.4byte bta_hh_handsk_act
+	.4byte bta_hh_start_sdp
+	.4byte bta_hh_sdp_cmpl
+	.4byte bta_hh_write_dev_act
+	.4byte bta_hh_get_dscp_act
+	.4byte bta_hh_maint_dev_act
+	.4byte bta_hh_open_cmpl_act
+
+.global lbl_8050E1E8
+lbl_8050E1E8:
+	.4byte 0x06020C01
+	.4byte 0x01020201
+	.4byte 0x0C010C01
+	.4byte 0x0C010C01
+	.4byte 0x0C010C01
+	.4byte 0x0A010C01
+
+.global lbl_8050E200
+lbl_8050E200:
+	.4byte 0x0C020C01
+	.4byte 0x01020201
+	.4byte 0x0C020C02
+	.4byte 0x0C020702
+	.4byte 0x0C020C02
+	.4byte 0x0A010B03
+
+.global lbl_8050E218
+lbl_8050E218:
+	.4byte 0x0C030003
+	.4byte 0x01030201
+	.4byte 0x03030403
+	.4byte 0x05030C03
+	.4byte 0x08030903
+	.4byte 0x0A030C03
+
+
+.global lbl_8050E230
+lbl_8050E230:
+	# ROM: 0x50A330
+	.4byte lbl_8050E1E8
+	.4byte lbl_8050E200
+	.4byte lbl_8050E218
+	.4byte 0

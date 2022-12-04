@@ -1037,3 +1037,10 @@ lbl_80303D14:
 /* 80303D18 002CD2D8  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
 /* 80303D1C 002CD2DC  88 63 46 30 */	lbz r3, 0x4630(r3)
 /* 80303D20 002CD2E0  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80548F00
+lbl_80548F00:
+	.asciz "SDP_InitDiscoveryDb Illegal param: p_db 0x%x, len %d, num_uuid %d, num_attr %d"
+	.balign 4

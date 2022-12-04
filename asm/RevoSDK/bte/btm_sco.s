@@ -1041,3 +1041,54 @@ lbl_802EB970:
 /* 802EB980 002B4F40  7C 08 03 A6 */	mtlr r0
 /* 802EB984 002B4F44  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EB988 002B4F48  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80545530
+lbl_80545530:
+	.asciz "btm_esco_conn_rsp -> No Resources"
+	.balign 4
+	.asciz "TCS accept SCO: Packet Types 0x%04x"
+	.asciz "BTM_CreateSco -> (e)SCO Link for ACL handle 0x%04x, Desired Type %d"
+
+.global lbl_805455BC
+lbl_805455BC:
+	.asciz "      txbw 0x%x, rxbw 0x%x, lat 0x%x, voice 0x%x, retrans 0x%02x, pkt 0x%04x"
+	.balign 4
+
+.global lbl_8054560C
+lbl_8054560C:
+	.asciz "btm_sco_chk_pend_unpark -> (e)SCO Link for ACL handle 0x%04x, Desired Type %d"
+	.balign 4
+
+
+.global lbl_8054565C
+lbl_8054565C:
+	.asciz "btm_sco_conn_req: No one wants this SCO connection; rejecting it"
+	.balign 4
+	.asciz "BTM_SetEScoMode -> mode %d"
+	.balign 4
+	.asciz "BTM_SetEScoMode -> mode SCO (eSCO not supported)"
+	.balign 4
+	.asciz "    txbw 0x%08x, rxbw 0x%08x, max_lat 0x%04x, voice 0x%04x, pkt 0x%04x, rtx effort 0x%02x"
+	.balign 4
+	.4byte 0
+	.asciz "BTM_ReadEScoLinkParms -> sco_inx 0x%04x"
+	.asciz "BTM_ChangeEScoLinkParms -> SCO Link for handle 0x%04x, pkt 0x%04x"
+	.balign 4
+	.asciz "BTM_ChangeEScoLinkParms -> eSCO Link for handle 0x%04x"
+	.balign 4
+
+
+.global lbl_805457F4
+lbl_805457F4:
+	.asciz "btm_esco_proc_conn_chg -> handle 0x%04x, status 0x%02x"
+	.balign 4
+	.4byte 0
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global lbl_8050E250
+lbl_8050E250:
+	.4byte 0x00001F40
+	.4byte 0x00001F40
+	.4byte 0x000A0060
+	.4byte 0x003F0100

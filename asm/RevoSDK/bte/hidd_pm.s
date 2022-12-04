@@ -252,3 +252,9 @@ hidd_pm_inact_timeout:
 /* 802F3B38 002BD0F8  7C 08 03 A6 */	mtlr r0
 /* 802F3B3C 002BD0FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F3B40 002BD100  4E 80 00 20 */	blr 
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_805C2570
+lbl_805C2570:
+	.skip 0x148

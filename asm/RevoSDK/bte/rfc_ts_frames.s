@@ -1588,3 +1588,42 @@ lbl_803026BC:
 /* 803026D0 002CBC90  7C 08 03 A6 */	mtlr r0
 /* 803026D4 002CBC94  38 21 00 20 */	addi r1, r1, 0x20
 /* 803026D8 002CBC98  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80548D98
+lbl_80548D98:
+	.asciz "Bad Length1: %d"
+	.asciz "Bad Length2 %d %d"
+	.balign 4
+	.asciz "Bad SABME"
+	.balign 4
+	.asciz "Bad DISC"
+	.balign 4
+	.asciz "Bad UIH - invalid DLCI"
+	.balign 4
+	.asciz "Bad UIH - FCS"
+	.balign 4
+	.asciz "Bad UIH - response"
+	.balign 4
+	.asciz "Illegal MX Frame ea:%d len:%d"
+	.balign 4
+	.asciz "Bad MX frame"
+	.balign 4
+	.asciz "Bad PN frame"
+	.balign 4
+	.asciz "Bad MSC frame"
+	.balign 4
+	.asciz "Bad RPN frame"
+	.balign 4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+.global lbl_80665958
+lbl_80665958:
+	.asciz "Bad UA"
+	.balign 4
+
+
+.global lbl_80665960
+lbl_80665960:
+	.asciz "Bad DM"
+	.balign 4

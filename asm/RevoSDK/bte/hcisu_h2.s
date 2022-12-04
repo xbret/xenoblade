@@ -484,3 +484,36 @@ hcisu_h2_handle_event:
 /* 802DD150 002A6710  7C 08 03 A6 */	mtlr r0
 /* 802DD154 002A6714  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD158 002A6718  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80543F60
+lbl_80543F60:
+	.asciz "HCIS: Unable to allocate buffer for incoming HCI message."
+	.balign 4
+
+
+.global lbl_80543F9C
+lbl_80543F9C:
+	.asciz "HCIS: Invalid length for incoming HCI message."
+	.balign 4
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.global lbl_8066BF30
+lbl_8066BF30:
+	# ROM: 0x575D90
+	.4byte 0x03040302
+	.4byte 0
+
+
+.global lbl_8066BF38
+lbl_8066BF38:
+	# ROM: 0x575D98
+	.4byte 0x13001100
+	.4byte 0x12001000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_805BBC20
+lbl_805BBC20:
+	.skip 0x40

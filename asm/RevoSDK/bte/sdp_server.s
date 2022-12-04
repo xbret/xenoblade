@@ -922,3 +922,14 @@ lbl_803074CC:
 /* 803074D8 002D0A98  7C 08 03 A6 */	mtlr r0
 /* 803074DC 002D0A9C  38 21 01 F0 */	addi r1, r1, 0x1f0
 /* 803074E0 002D0AA0  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_805494A8
+lbl_805494A8:
+	.asciz "SDP - server got unknown PDU: 0x%x"
+	.balign 4
+
+
+.global lbl_805494CC
+lbl_805494CC:
+	.asciz "SDP - no buf for search rsp"

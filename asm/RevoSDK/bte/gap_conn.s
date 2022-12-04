@@ -827,3 +827,39 @@ lbl_802F0888:
 /* 802F0894 002B9E54  7C 08 03 A6 */	mtlr r0
 /* 802F0898 002B9E58  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F089C 002B9E5C  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_805462D0
+lbl_805462D0:
+	.asciz "WARNING: GAP Conn Indication for Unexpected Bd Addr...Disconnecting"
+
+
+.global lbl_80546314
+lbl_80546314:
+	.asciz "GAP_CONN - Rcvd L2CAP conn ind, CID: 0x%x"
+	.balign 4
+
+
+.global lbl_80546340
+lbl_80546340:
+	.asciz "GAP_CONN - Rcvd L2CAP disc, CID: 0x%x"
+	.balign 4
+
+
+.global lbl_80546368
+lbl_80546368:
+	.asciz "GAP_CONN - Rcvd L2CAP Is Congested (%d), CID: 0x%x"
+	.balign 4
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+.global lbl_80665940
+lbl_80665940:
+	.asciz "*******"
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_805C21C0
+lbl_805C21C0:
+	.skip 0x3B0

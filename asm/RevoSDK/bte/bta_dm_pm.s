@@ -732,6 +732,19 @@ bta_dm_pm_timer:
 /* 802E20E4 002AB6A4  4B FF F9 E8 */	b bta_dm_pm_set_mode
 
 
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80544148
+lbl_80544148:
+	.asciz "bta_dm_act no more connected service cbs"
+	.balign 4
+
+
+.global lbl_80544174
+lbl_80544174:
+	.asciz "bta_dm_act no more pm timers"
+	.balign 4
+	.4byte 0
+
 .section .sbss2, "", @nobits #0x8066DCE0 - 0x8066DCFB
 
 .global lbl_8066DCE0

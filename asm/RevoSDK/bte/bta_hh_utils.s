@@ -272,6 +272,42 @@ lbl_802E44E4:
 /* 802E44F8 002ADAB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E44FC 002ADABC  4E 80 00 20 */	blr
 
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_805449A0
+lbl_805449A0:
+	.asciz "found kdev_cb[%d] hid_handle = %d "
+	.balign 4
+	.asciz "in_use ? [%d] kdev[%d].hid_handle = %d state = [%d]"
+	.asciz "bta_hh_find_cb:: index = %d while max = %d"
+	.balign 4
+
+
+.global lbl_80544A24
+lbl_80544A24:
+	.asciz "subclass = 0x%2x"
+	.balign 4
+	.asciz "bta_hh_parse_keybd_rpt:  (report=%p, report_len=%d) called"
+	.balign 4
+	.4byte 0
+	.asciz "Alt key pressed"
+	.asciz "Alt key not pressed"
+	.asciz "this_char = %02x"
+	.balign 4
+	.asciz "BTA_HhParseKeybdRpt:  Cannot interpret scan code                 0x%02x"
+	.asciz "bta_hh_parse_mice_rpt:  bta_keybd_rpt_rcvd(report=%p,                 report_len=%d) called"
+	.asciz "mice button: 0x%2x"
+	.balign 4
+	.asciz "mice move: x = %d y = %d"
+	.balign 4
+	.asciz "bta_hh_trace_dev_db:: Device DB list********************"
+	.balign 4
+	.asciz "kdev[%d] in_use[%d]  handle[%d] "
+	.balign 4
+	.asciz "\t\t\t attr_mask[%04x] state [%d] sub_class[%02x] index = %d"
+	.balign 4
+	.asciz "*********************************************************"
+	.balign 4
+	.4byte 0
 
 .section .sbss2, "", @nobits #0x8066DCE0 - 0x8066DCFB
 

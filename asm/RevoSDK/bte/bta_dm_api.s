@@ -331,3 +331,17 @@ lbl_802E155C:
 /* 802E1560 002AAB20  7C 08 03 A6 */	mtlr r0
 /* 802E1564 002AAB24  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E1568 002AAB28  4E 80 00 20 */	blr
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.global lbl_8066BF50
+lbl_8066BF50:
+	# ROM: 0x575DB0
+	.4byte bta_dm_sm_execute
+	.4byte 0
+
+
+.global lbl_8066BF58
+lbl_8066BF58:
+	# ROM: 0x575DB8
+	.4byte bta_dm_search_sm_execute
+	.4byte 0

@@ -56,3 +56,14 @@ lbl_802F36E4:
 /* 802F36F4 002BCCB4  7C 08 03 A6 */	mtlr r0
 /* 802F36F8 002BCCB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F36FC 002BCCBC  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80546690
+lbl_80546690:
+	.asciz "HID - Originate started"
+
+
+.global lbl_805466A8
+lbl_805466A8:
+	.asciz "HID - Originate failed"
+	.balign 4

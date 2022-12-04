@@ -1356,3 +1356,175 @@ lbl_80300B50:
 /* 80300B5C 002CA11C  88 04 00 11 */	lbz r0, 0x11(r4)
 /* 80300B60 002CA120  98 03 00 08 */	stb r0, 8(r3)
 /* 80300B64 002CA124  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80548A70
+lbl_80548A70:
+	.asciz "NULL port event %d"
+	.balign 4
+
+
+.global lbl_80548A84
+lbl_80548A84:
+	.asciz "Port error state %d event %d"
+	.balign 4
+
+
+.global lbl_80548AA4
+lbl_80548AA4:
+	.asciz "Port state closed Event ignored %d"
+	.balign 4
+
+
+.global lbl_80548AC8
+lbl_80548AC8:
+	# ROM: 0x544BC8
+	.4byte lbl_802FFADC
+	.4byte lbl_802FFB14
+	.4byte lbl_802FFB18
+	.4byte lbl_802FFB3C
+	.4byte lbl_802FFB20
+	.4byte lbl_802FFB50
+	.4byte lbl_802FFB88
+	.4byte lbl_802FFB88
+	.4byte lbl_802FFB88
+	.4byte lbl_802FFA94
+	.4byte lbl_802FFB88
+	.4byte lbl_802FFB88
+	.4byte lbl_802FFB88
+	.4byte lbl_802FFACC
+	.4byte lbl_802FFAD0
+
+
+.global lbl_80548B04
+lbl_80548B04:
+	.asciz "Port state sabme_wait_ua Event ignored %d"
+	.balign 4
+
+
+.global lbl_80548B30
+lbl_80548B30:
+	# ROM: 0x544C30
+	.4byte lbl_802FFCE4
+	.4byte lbl_802FFC74
+	.4byte lbl_802FFC98
+	.4byte lbl_802FFCB8
+	.4byte lbl_802FFCF4
+	.4byte lbl_802FFD00
+	.4byte lbl_802FFD24
+	.4byte lbl_802FFD24
+	.4byte lbl_802FFD24
+	.4byte lbl_802FFC08
+	.4byte lbl_802FFD24
+	.4byte lbl_802FFC08
+	.4byte lbl_802FFC38
+	.4byte lbl_802FFC60
+	.4byte lbl_802FFC68
+	.asciz "Port error state Term Wait Sec event Data"
+	.balign 4
+	.asciz "Port state term_wait_sec_check Event ignored %d"
+
+
+.global lbl_80548BC8
+lbl_80548BC8:
+	# ROM: 0x544CC8
+	.4byte lbl_802FFE64
+	.4byte lbl_802FFEE4
+	.4byte lbl_802FFEE4
+	.4byte lbl_802FFE68
+	.4byte lbl_802FFE98
+	.4byte lbl_802FFEE4
+	.4byte lbl_802FFEE4
+	.4byte lbl_802FFEE4
+	.4byte lbl_802FFEE4
+	.4byte lbl_802FFDF4
+	.4byte lbl_802FFEE4
+	.4byte lbl_802FFEA4
+	.4byte lbl_802FFDF4
+	.4byte lbl_802FFE20
+	.4byte lbl_802FFE38
+	.4byte lbl_802FFDAC
+	.asciz "Port error state Orig Wait Sec event Data"
+	.balign 4
+	.4byte 0
+	.asciz "Port state orig_wait_sec_check Event ignored %d"
+
+
+.global lbl_80548C68
+lbl_80548C68:
+	# ROM: 0x544D68
+	.4byte lbl_802FFFB8
+	.4byte lbl_80300034
+	.4byte lbl_80300034
+	.4byte lbl_80300034
+	.4byte lbl_80300028
+	.4byte lbl_80300034
+	.4byte lbl_80300034
+	.4byte lbl_80300034
+	.4byte lbl_80300034
+	.4byte lbl_802FFFB8
+	.4byte lbl_80300034
+	.4byte lbl_80300034
+	.4byte lbl_802FFFE4
+	.4byte lbl_80300034
+	.4byte lbl_802FFFFC
+	.4byte lbl_802FFF68
+
+
+.global lbl_80548CA8
+lbl_80548CA8:
+	.asciz "Port state opened Event ignored %d"
+	.balign 4
+
+
+.global lbl_80548CCC
+lbl_80548CCC:
+	# ROM: 0x544DCC
+	.4byte lbl_80300188
+	.4byte lbl_80300184
+	.4byte lbl_80300198
+	.4byte lbl_803001B0
+	.4byte lbl_803001D4
+	.4byte lbl_803001E4
+	.4byte lbl_8030021C
+	.4byte lbl_8030021C
+	.4byte lbl_8030021C
+	.4byte lbl_803000B0
+	.4byte lbl_8030021C
+	.4byte lbl_8030021C
+	.4byte lbl_803000E0
+	.4byte lbl_80300108
+	.4byte lbl_80300110
+
+
+.global lbl_80548D08
+lbl_80548D08:
+	.asciz "Port state disc_wait_ua Event ignored %d"
+	.balign 4
+
+
+.global lbl_80548D34
+lbl_80548D34:
+	# ROM: 0x544E34
+	.4byte lbl_803002F0
+	.4byte lbl_803002D8
+	.4byte lbl_803002E4
+	.4byte lbl_80300304
+	.4byte lbl_80300318
+	.4byte lbl_80300334
+	.4byte lbl_8030033C
+	.4byte lbl_8030033C
+	.4byte lbl_8030033C
+	.4byte lbl_80300298
+	.4byte lbl_8030033C
+	.4byte lbl_80300298
+	.4byte lbl_8030033C
+	.4byte lbl_803002C4
+	.4byte lbl_803002CC
+
+
+.global lbl_80548D70
+lbl_80548D70:
+	.asciz "***** MX PN while disconnecting *****"
+	.balign 4

@@ -1486,3 +1486,55 @@ lbl_802DC1E0:
 /* 802DC1EC 002A57AC  7C 08 03 A6 */	mtlr r0
 /* 802DC1F0 002A57B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DC1F4 002A57B4  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80543E18
+lbl_80543E18:
+	.asciz "getbuf: Size is zero"
+	.balign 4
+
+
+.global lbl_80543E30
+lbl_80543E30:
+	.asciz "getbuf: Size is too big"
+	.asciz "Free - Buf Corrupted"
+	.balign 4
+	.asciz "Freeing Linked Buf"
+	.balign 4
+	.asciz "Bad Buf QId"
+	.asciz "Sending to unknown dest"
+	.asciz "Send - Buffer corrupted"
+	.asciz "Send - buffer linked"
+	.balign 4
+
+
+.global lbl_80543EC8
+lbl_80543EC8:
+	.asciz "Enqueue - Buffer corrupted"
+	.balign 4
+
+
+.global lbl_80543EE4
+lbl_80543EE4:
+	.asciz "Eneueue - buf already linked"
+	.balign 4
+
+
+.global lbl_80543F04
+lbl_80543F04:
+	.asciz "Eneueue head - buf already linked"
+	.balign 4
+	.asciz "GKI_get_buf_start:: bad addr"
+	.balign 4
+
+
+.global lbl_80543F48
+lbl_80543F48:
+	.asciz "Deleting bad pool"
+	.balign 4
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_80593140
+lbl_80593140:
+	.skip 0x28AE0

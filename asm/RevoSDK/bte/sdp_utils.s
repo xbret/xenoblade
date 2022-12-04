@@ -1234,3 +1234,84 @@ lbl_80308514:
 /* 80308518 002D1AD8  7C 00 28 00 */	cmpw r0, r5
 /* 8030851C 002D1ADC  41 80 FF D0 */	blt lbl_803084EC
 /* 80308520 002D1AE0  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_805494E8
+lbl_805494E8:
+	# ROM: 0x5455E8
+	.4byte lbl_803078FC
+	.4byte lbl_8030789C
+	.4byte lbl_803078AC
+	.4byte lbl_803078FC
+	.4byte lbl_803078C0
+	.4byte lbl_803078FC
+	.4byte lbl_803078FC
+	.4byte lbl_803078FC
+	.4byte lbl_803078D4
+	.4byte lbl_803078FC
+	.4byte lbl_803078FC
+	.4byte lbl_803078FC
+	.4byte lbl_803078FC
+	.4byte lbl_803078FC
+	.4byte lbl_803078FC
+	.4byte lbl_803078FC
+	.4byte lbl_803078E8
+
+
+.global lbl_8054952C
+lbl_8054952C:
+	.asciz "SDP - sdpu_build_n_send_error  code: 0x%x  CID: 0x%x"
+	.balign 4
+
+
+.global lbl_80549564
+lbl_80549564:
+	.asciz "SDP - no buf for err msg"
+	.balign 4
+
+.global lbl_80549580
+lbl_80549580:
+	.4byte lbl_80307C0C
+	.4byte lbl_80307B9C
+	.4byte lbl_80307BA4
+	.4byte lbl_80307C0C
+	.4byte lbl_80307BAC
+	.4byte lbl_80307BB4
+	.4byte lbl_80307BC0
+	.4byte lbl_80307BDC
+
+
+.global lbl_805495A0
+lbl_805495A0:
+	# ROM: 0x5456A0
+	.4byte lbl_80307B38
+	.4byte lbl_80307AC8
+	.4byte lbl_80307AD0
+	.4byte lbl_80307B38
+	.4byte lbl_80307AD8
+	.4byte lbl_80307AE0
+	.4byte lbl_80307AEC
+	.4byte lbl_80307B08
+
+
+.global lbl_805495C0
+lbl_805495C0:
+	# ROM: 0x5456C0
+	.4byte lbl_80308048
+	.4byte lbl_80308054
+	.4byte lbl_80308060
+	.4byte lbl_8030806C
+	.4byte lbl_80308078
+	.4byte lbl_80308084
+	.4byte lbl_80308094
+	.4byte lbl_803080B4
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+.global lbl_8050E398
+lbl_8050E398:
+	# ROM: 0x50A498
+	.4byte 0
+	.4byte 0x00001000
+	.4byte 0x80000080
+	.4byte 0x5F9B34FB

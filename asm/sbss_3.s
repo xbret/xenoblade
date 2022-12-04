@@ -3,48 +3,6 @@
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 
-.global lbl_80667748
-lbl_80667748:
-	.skip 0x1
-.global lbl_80667749
-lbl_80667749:
-	.skip 0x3
-.global lbl_8066774C
-lbl_8066774C:
-	.skip 0x4
-.global lbl_80667750
-lbl_80667750:
-	.skip 0x4
-.global lbl_80667754
-lbl_80667754:
-	.skip 0x4
-.global lbl_80667758
-lbl_80667758:
-	.skip 0x4
-.global lbl_8066775C
-lbl_8066775C:
-	.skip 0x4
-.global lbl_80667760
-lbl_80667760:
-	.skip 0x4
-.global lbl_80667764
-lbl_80667764:
-	.skip 0x4
-.global lbl_80667768
-lbl_80667768:
-	.skip 0x4
-.global lbl_8066776C
-lbl_8066776C:
-	.skip 0x4
-.global lbl_80667770
-lbl_80667770:
-	.skip 0x4
-.global lbl_80667774
-lbl_80667774:
-	.skip 0x4
-.global lbl_80667778
-lbl_80667778:
-	.skip 0x8
 .global lbl_80667780
 lbl_80667780:
 	.skip 0x4

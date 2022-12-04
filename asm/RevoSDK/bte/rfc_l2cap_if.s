@@ -673,3 +673,29 @@ rfc_save_lcid_mcb:
 /* 802FED78 002C8338  7C 84 02 14 */	add r4, r4, r0
 /* 802FED7C 002C833C  90 64 00 3C */	stw r3, 0x3c(r4)
 /* 802FED80 002C8340  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80548678
+lbl_80548678:
+	.asciz "rfc_find_lcid_mcb LCID:0x%x"
+	.asciz "rfc_find_lcid_mcb LCID reused LCID:0x%x current:0x%x"
+	.balign 4
+	.asciz "RFCOMM_ConnectCnf LCID:0x%x"
+	.asciz "RFCOMM_ConfigInd LCID:0x%x"
+	.balign 4
+	.asciz "RFCOMM_ConfigCnf LCID:0x%x"
+	.balign 4
+	.asciz "RFCOMM_DisconnectInd LCID:0x%x"
+	.balign 4
+	.asciz "RFCOMM_BufDataInd LCID:0x%x"
+	.asciz "RFCOMM_CongestionStatusInd dropped LCID:0x%x"
+	.balign 4
+	.asciz "RFCOMM_CongestionStatusInd LCID:0x%x"
+	.balign 4
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_805C32A8
+lbl_805C32A8:
+	.skip 0x418

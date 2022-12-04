@@ -938,3 +938,152 @@ lbl_802FF9B0:
 /* 802FF9BC 002C8F7C  7C 08 03 A6 */	mtlr r0
 /* 802FF9C0 002C8F80  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FF9C4 002C8F84  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_805487B8
+lbl_805487B8:
+	# ROM: 0x5448B8
+	.4byte lbl_802FEDA8
+	.4byte lbl_802FEDAC
+	.4byte lbl_802FEDB0
+	.4byte lbl_802FEDB4
+	.4byte lbl_802FEDB8
+	.4byte lbl_802FEDBC
+	.4byte lbl_802FEDC0
+	.asciz "rfc_mx_sm_state_idle - evt:%d"
+	.balign 4
+	.asciz "Mx error state %d event %d"
+	.balign 4
+	.asciz "rfc_mx_send_config_req"
+	.balign 4
+
+
+.global lbl_80548828
+lbl_80548828:
+	.asciz "RFCOMM MX ignored - evt:%d in state:%d"
+	.balign 4
+
+
+.global lbl_80548850
+lbl_80548850:
+	# ROM: 0x544950
+	.4byte lbl_802FEF90
+	.4byte lbl_802FEF64
+	.4byte lbl_802FEF64
+	.4byte lbl_802FEF68
+	.4byte lbl_802FEF7C
+	.4byte lbl_802FEF90
+	.4byte lbl_802FEE40
+	.4byte lbl_802FEE84
+	.4byte lbl_802FEF90
+	.4byte lbl_802FEE84
+	.4byte lbl_802FEEB0
+	.4byte lbl_802FEE84
+	.4byte lbl_802FEE84
+	.asciz "rfc_mx_sm_state_wait_conn_cnf - evt:%d"
+	.balign 4
+	.asciz "rfc_mx_sm_state_configure - evt:%d"
+	.balign 4
+
+
+.global lbl_805488D0
+lbl_805488D0:
+	# ROM: 0x5449D0
+	.4byte lbl_802FF214
+	.4byte lbl_802FF274
+	.4byte lbl_802FF274
+	.4byte lbl_802FF214
+	.4byte lbl_802FF274
+	.4byte lbl_802FF250
+	.4byte lbl_802FF240
+	.4byte lbl_802FF274
+	.4byte lbl_802FF260
+	.asciz "rfc_mx_sm_sabme_wait_ua - evt:%d"
+	.balign 4
+
+
+.global lbl_80548918
+lbl_80548918:
+	# ROM: 0x544A18
+	.4byte lbl_802FF3E8
+	.4byte lbl_802FF398
+	.4byte lbl_802FF3C0
+	.4byte lbl_802FF3E8
+	.4byte lbl_802FF3E8
+	.4byte lbl_802FF3C8
+	.4byte lbl_802FF338
+	.4byte lbl_802FF3E8
+	.4byte lbl_802FF3E8
+	.4byte lbl_802FF338
+	.4byte lbl_802FF3E8
+	.4byte lbl_802FF374
+	.4byte lbl_802FF364
+	.4byte lbl_802FF3E8
+	.4byte lbl_802FF384
+
+
+.global lbl_80548954
+lbl_80548954:
+	.asciz "rfc_mx_sm_state_wait_sabme - evt:%d"
+
+
+.global lbl_80548978
+lbl_80548978:
+	.asciz "rfc_mx_sm_state_connected - evt:%d"
+	.balign 4
+
+
+.global lbl_8054899C
+lbl_8054899C:
+	# ROM: 0x544A9C
+	.4byte lbl_802FF5F8
+	.4byte lbl_802FF624
+	.4byte lbl_802FF5C0
+	.4byte lbl_802FF624
+	.4byte lbl_802FF624
+	.4byte lbl_802FF5C0
+	.4byte lbl_802FF624
+	.4byte lbl_802FF624
+	.4byte lbl_802FF624
+	.4byte lbl_802FF624
+	.4byte lbl_802FF624
+	.4byte lbl_802FF5E4
+
+
+.global lbl_805489CC
+lbl_805489CC:
+	.asciz "rfc_mx_sm_state_disc_wait_ua - evt:%d"
+	.balign 4
+
+
+.global lbl_805489F4
+lbl_805489F4:
+	# ROM: 0x544AF4
+	.4byte lbl_802FF798
+	.4byte lbl_802FF6DC
+	.4byte lbl_802FF6DC
+	.4byte lbl_802FF748
+	.4byte lbl_802FF758
+	.4byte lbl_802FF6DC
+	.4byte lbl_802FF774
+	.4byte lbl_802FF798
+	.4byte lbl_802FF794
+	.4byte lbl_802FF798
+	.4byte lbl_802FF798
+	.4byte lbl_802FF798
+	.4byte lbl_802FF798
+	.4byte lbl_802FF798
+	.4byte lbl_802FF780
+
+
+.global lbl_80548A30
+lbl_80548A30:
+	.asciz "rfc_mx_conf_cnf p_cfg:%08x res:%d "
+	.balign 4
+
+
+.global lbl_80548A54
+lbl_80548A54:
+	.asciz "rfc_mx_conf_ind p_cfg:%0x"
+	.balign 4

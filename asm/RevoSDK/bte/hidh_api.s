@@ -980,3 +980,27 @@ lbl_802F48A8:
 /* 802F48B8 002BDE78  7C 08 03 A6 */	mtlr r0
 /* 802F48BC 002BDE7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F48C0 002BDE80  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805466E0
+lbl_805466E0:
+	.asciz "HID_ERR_NOT_REGISTERED"
+	.balign 4
+	.asciz "HID_ERR_INVALID_PARAM"
+	.balign 4
+	.asciz "HID_ERR_NO_CONNECTION dev_handle %d"
+	.asciz "Security Registration 1 failed"
+	.balign 4
+	.asciz "Security Registration 2 failed"
+	.balign 4
+	.asciz "Security Registration 3 failed"
+	.balign 4
+	.asciz "Security Registration 4 failed"
+	.balign 4
+	.asciz "Security Registration 5 failed"
+	.balign 4
+	.asciz "Security Registration 6 failed"
+	.balign 4
+	.4byte 0

@@ -330,3 +330,11 @@ btu_stop_timer:
 /* 802DE628 002A7BE8  38 A5 F4 D0 */	addi r5, r5, lbl_805BF4D0@l
 /* 802DE62C 002A7BEC  38 65 00 40 */	addi r3, r5, 0x40
 /* 802DE630 002A7BF0  4B FF E0 30 */	b GKI_remove_from_timer_list
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667770
+lbl_80667770:
+	.skip 0x4
+.global lbl_80667774
+lbl_80667774:
+	.skip 0x4

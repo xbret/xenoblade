@@ -58,3 +58,11 @@ lbl_802F37B4:
 /* 802F37BC 002BCD7C  7C 08 03 A6 */	mtlr r0
 /* 802F37C0 002BCD80  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F37C4 002BCD84  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_805466C0
+lbl_805466C0:
+	.asciz "hidd_proc_repage_timeout"
+	.balign 4
+	.4byte 0

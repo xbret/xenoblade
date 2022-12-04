@@ -121,3 +121,14 @@ LogMsg_6:
 /* 802DE06C 002A762C  4C C6 31 82 */	crclr 6
 /* 802DE070 002A7630  4B FF FE 70 */	b LogMsg
 /* 802DE074 002A7634  4E 80 00 20 */	blr 
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_805BDCC0
+lbl_805BDCC0:
+	.skip 0x7E0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.global lbl_80667768
+lbl_80667768:
+	.skip 0x4

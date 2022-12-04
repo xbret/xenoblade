@@ -3422,3 +3422,205 @@ lbl_802EE940:
 /* 802EE944 002B7F04  7C 08 03 A6 */	mtlr r0
 /* 802EE948 002B7F08  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EE94C 002B7F0C  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_80545830
+lbl_80545830:
+	.asciz "BTM_Sec: application registered"
+	.asciz "BTM_SetSecurityMode: mode:%d"
+	.balign 4
+	.asciz "BTM_SetSecurityMode: Authen Enable -> FALSE"
+	.asciz "BTM_SetSecurityMode: Authen Enable -> TRUE"
+	.balign 4
+
+
+.global lbl_805458C8
+lbl_805458C8:
+	.asciz "BTM_SetPinType: pin type %d [variable-0, fixed-1], code %s, length %d"
+	.balign 4
+	.asciz "BTM_SEC_REG[%d]: id %d, is_orig %d, psm 0x%04x, proto_id %d, chan_id %d"
+	.asciz "               : sec: 0x%x, service name [%s] (up to %d chars saved)"
+	.balign 4
+	.asciz "BTM_SEC_REG: Out of Service Records (%d)"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_805459D0
+lbl_805459D0:
+	.asciz "Security Manager: Attempting Authorization of Unknown Device Address [%02x%02x%02x%02x%02x%02x]"
+
+
+.global lbl_80545A30
+lbl_80545A30:
+	.asciz "Security Manager: authorized status:%d State:%d"
+	.asciz "BTM_SecBond BDA: %02x:%02x:%02x:%02x:%02x:%02x"
+	.balign 4
+	.asciz "BTM_SecBond: Illegal Pin len:%d"
+	.asciz "BTM_SecBond: no device block"
+	.balign 4
+	.asciz "BTM_SecBond -> Already Paired"
+	.balign 4
+	.asciz "BTM_SecBond: Authen Enable -> TRUE"
+	.balign 4
+	.asciz "BTM_SecBond: no buffer"
+	.balign 4
+
+
+.global lbl_80545B2C
+lbl_80545B2C:
+	.asciz "btm_restore_mode: Authen Enable -> %d"
+	.balign 4
+	.asciz "Security Manager: BTM_SetEncryption not connected"
+	.balign 4
+	.asciz "Security Manager: BTM_SetEncryption already encrypted"
+	.balign 4
+	.asciz "Security Manager: BTM_SetEncryption busy"
+	.balign 4
+	.4byte 0
+	.asciz "Security Manager: BTM_SetEncryption Handle:%d State:%d Flags:0x%x Required:0x%x"
+	.asciz "Security Manager: l2cap_access_req PSM:%d no resources"
+	.balign 4
+	.asciz "Security Manager: l2cap_access_req PSM:%d no application registerd"
+	.balign 4
+	.asciz "Security Manager: l2cap_access_req PSM:%d postponed for multiplexer"
+	.asciz "Security Manager: l2cap_access_req PSM:%d Handle:%d State:%d Flags:0x%x Required:0x%x"
+	.balign 4
+	.asciz "Security Manager: trusted:0x%04x%04x Flags:0x%x"
+
+
+.global lbl_80545D88
+lbl_80545D88:
+	.asciz "Security Manager: MX service not found PSM:%d Proto:%d SCN:%d"
+	.balign 4
+
+
+.global lbl_80545DC8
+lbl_80545DC8:
+	.asciz "Security Manager: connect request from not paired device"
+	.balign 4
+
+
+.global lbl_80545E04
+lbl_80545E04:
+	.asciz "Security Manager: rmt_name_complete status:%d State:%d"
+	.balign 4
+
+
+.global lbl_80545E3C
+lbl_80545E3C:
+	.asciz "Security Manager: auth_complete status:%d State:%d"
+	.balign 4
+
+
+.global lbl_80545E70
+lbl_80545E70:
+	.asciz "Security Manager: mkey comp status:%d State:%d"
+	.balign 4
+
+
+.global lbl_80545EA0
+lbl_80545EA0:
+	.asciz "Security Manager: encrypt_change status:%d State:%d"
+
+
+.global lbl_80545ED4
+lbl_80545ED4:
+	.asciz "Security Manager: btm_sec_connected handle:%d status:%d enc_mode:%d"
+
+
+.global lbl_80545F18
+lbl_80545F18:
+	.asciz "btm_sec_link_key_notification()  BDA: %02x:%02x:%02x:%02x:%02x:%02x"
+
+
+.global lbl_80545F5C
+lbl_80545F5C:
+	.asciz "                                TYPE: %d"
+	.balign 4
+
+
+.global lbl_80545F88
+lbl_80545F88:
+	.asciz "btm_sec_link_key_request()  BDA: %02x:%02x:%02x:%02x:%02x:%02x"
+	.balign 4
+
+
+.global lbl_80545FC8
+lbl_80545FC8:
+	.asciz "btm_sec_pin_code_request_timeout()"
+	.balign 4
+	.asciz "btm_sec_pin_code_request()  BDA: %02x:%02x:%02x:%02x:%02x:%02x"
+	.balign 4
+	.asciz "btm_sec_pin_code_request bonding sending reply"
+	.balign 4
+	.asciz "btm_sec_pin_code_request: Authen Enable -> %d"
+	.balign 4
+	.asciz "btm_sec_pin_code_request(): Pairing disabled:%d; PIN callback:%x, Dev Rec:%x!"
+	.balign 4
+	.asciz "btm_sec_execute_procedure: Required:0x%x Flags:0x%x State:%d"
+	.balign 4
+	.asciz "L2CAP - no LCB for L2CA_conn_req"
+	.balign 4
+	.asciz "Security Manager: Start get name"
+	.balign 4
+	.asciz "Security Manager: Start authentication"
+	.balign 4
+	.asciz "Security Manager: Start encryption"
+	.balign 4
+	.asciz "Security Manager: Start authorization"
+	.balign 4
+	.asciz "Security Manager: trusted:0x%04x%04x"
+	.balign 4
+	.asciz "Security Manager: access granted"
+	.balign 4
+
+
+.global lbl_80546224
+lbl_80546224:
+	.asciz "btm_sec_collision_timeout()"
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+.global lbl_8066BF78
+lbl_8066BF78:
+	# ROM: 0x575DD8
+	.byte 0xFF
+
+
+.global lbl_8066BF79
+lbl_8066BF79:
+	# ROM: 0x575DD9
+	.byte 0xFF
+
+
+.global lbl_8066BF7A
+lbl_8066BF7A:
+	# ROM: 0x575DDA
+	.byte 0xFF
+
+
+.global lbl_8066BF7B
+lbl_8066BF7B:
+	# ROM: 0x575DDB
+	.byte 0xFF
+
+
+.global lbl_8066BF7C
+lbl_8066BF7C:
+	# ROM: 0x575DDC
+	.byte 0xFF
+
+
+.global lbl_8066BF7D
+lbl_8066BF7D:
+	.byte 0xFF
+	.byte 0x00
+	.byte 0x00
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.global lbl_805BF9F8
+lbl_805BF9F8:
+	.skip 0x27C8

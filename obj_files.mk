@@ -238,20 +238,14 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXSrcCoef.o \
 	$(BUILD_DIR)/asm/RevoSDK/axfx/AXFXHooks.o \
 	$(BUILD_DIR)/src/RevoSDK/base/PPCArch.o \
-	$(BUILD_DIR)/asm/data_2.o \
-	$(BUILD_DIR)/asm/bss_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/gki_buffer.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/gki_time.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/gki_ppc.o \
-	$(BUILD_DIR)/asm/sdata2_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/hcisu_h2.o \
-	$(BUILD_DIR)/asm/sdata_2.o \
-	$(BUILD_DIR)/asm/sbss_3.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/uusb_ppc.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/bte_hcisu.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/bte_init.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/bte_logmsg.o \
-	$(BUILD_DIR)/asm/rodata_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/bte_main.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/btu_task1.o \
 	$(BUILD_DIR)/asm/RevoSDK/bte/bd.o \
@@ -312,15 +306,20 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/cx/CXStreamingUncompression.o \
 	$(BUILD_DIR)/asm/RevoSDK/cx/CXUncompression.o \
 	$(BUILD_DIR)/asm/RevoSDK/cx/CXSecureUncompression.o \
+	$(BUILD_DIR)/asm/data_2.o \
+	$(BUILD_DIR)/asm/sbss_3.o \
 	$(BUILD_DIR)/asm/RevoSDK/db/db.o \
+	$(BUILD_DIR)/asm/sdata_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp_debug.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp_task.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdfs.o \
+	$(BUILD_DIR)/asm/bss_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdqueue.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvderror.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdidutils.o \
+	$(BUILD_DIR)/asm/sdata2_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdFatal.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdDeviceError.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd_broadway.o \

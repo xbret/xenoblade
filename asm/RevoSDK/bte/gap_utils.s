@@ -532,3 +532,118 @@ lbl_802F0EAC:
 lbl_802F0EB4:
 /* 802F0EB4 002BA474  38 60 01 14 */	li r3, 0x114
 /* 802F0EB8 002BA478  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.global lbl_805463A0
+lbl_805463A0:
+	.asciz "   GAP Inquiry Complete Event (Status 0x%04x, Result(s) %d)"
+	.asciz "   GAP Discovery Complete Event(SDP Result: 0x%04x)"
+	.asciz "   GAP Discovery Successfully Completed"
+	.asciz "   GAP Remote Name Complete Event (status 0x%04x)"
+	.balign 4
+
+
+.global lbl_8054646C
+lbl_8054646C:
+	# ROM: 0x54256C
+	.4byte lbl_802F09CC
+	.4byte lbl_802F09D4
+	.4byte lbl_802F09DC
+	.4byte lbl_802F0A04
+	.4byte lbl_802F09E4
+	.4byte lbl_802F09E4
+	.4byte lbl_802F09EC
+	.4byte lbl_802F09F4
+	.4byte lbl_802F09FC
+	.asciz "GAP Inquiry Results Callback (bdaddr [%02x%02x%02x%02x%02x%02x])"
+	.balign 4
+	.asciz "                             (COD [%02x%02x%02x], clkoff 0x%04x)"
+	.balign 4
+
+
+.global lbl_80546518
+lbl_80546518:
+	.asciz "   GAP: FindAddrByName Rem Name Cmpl Evt (Status 0x%04x, Name [%s])"
+
+
+.global lbl_8054655C
+lbl_8054655C:
+	.asciz "   GAP: FindAddrByName Rem Name Cmpl Evt (Status 0x%04x)"
+	.balign 4
+
+
+.global lbl_80546598
+lbl_80546598:
+	# ROM: 0x542698
+	.4byte lbl_802F0C24
+	.4byte lbl_802F0C2C
+	.4byte lbl_802F0C34
+	.4byte lbl_802F0C5C
+	.4byte lbl_802F0C3C
+	.4byte lbl_802F0C3C
+	.4byte lbl_802F0C44
+	.4byte lbl_802F0C4C
+	.4byte lbl_802F0C54
+
+
+.global lbl_805465BC
+lbl_805465BC:
+	# ROM: 0x5426BC
+	.4byte lbl_802F0B8C
+	.4byte lbl_802F0B94
+	.4byte lbl_802F0B9C
+	.4byte lbl_802F0BC4
+	.4byte lbl_802F0BA4
+	.4byte lbl_802F0BA4
+	.4byte lbl_802F0BAC
+	.4byte lbl_802F0BB4
+	.4byte lbl_802F0BBC
+
+
+.global lbl_805465E0
+lbl_805465E0:
+	.asciz "   GAP: FindAddrByName Inq Cmpl Evt (Status 0x%04x, Result(s) %d)"
+	.balign 4
+
+
+.global lbl_80546624
+lbl_80546624:
+	# ROM: 0x542724
+	.4byte lbl_802F0DD8
+	.4byte lbl_802F0DE0
+	.4byte lbl_802F0DE8
+	.4byte lbl_802F0E10
+	.4byte lbl_802F0DF0
+	.4byte lbl_802F0DF0
+	.4byte lbl_802F0DF8
+	.4byte lbl_802F0E00
+	.4byte lbl_802F0E08
+
+
+.global lbl_80546648
+lbl_80546648:
+	# ROM: 0x542748
+	.4byte lbl_802F0D68
+	.4byte lbl_802F0D70
+	.4byte lbl_802F0D78
+	.4byte lbl_802F0DA0
+	.4byte lbl_802F0D80
+	.4byte lbl_802F0D80
+	.4byte lbl_802F0D88
+	.4byte lbl_802F0D90
+	.4byte lbl_802F0D98
+
+
+.global lbl_8054666C
+lbl_8054666C:
+	# ROM: 0x54276C
+	.4byte lbl_802F0E7C
+	.4byte lbl_802F0E84
+	.4byte lbl_802F0E8C
+	.4byte lbl_802F0EB4
+	.4byte lbl_802F0E94
+	.4byte lbl_802F0E94
+	.4byte lbl_802F0E9C
+	.4byte lbl_802F0EA4
+	.4byte lbl_802F0EAC
