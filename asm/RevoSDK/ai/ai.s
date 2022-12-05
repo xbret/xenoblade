@@ -416,6 +416,11 @@ lbl_802D1634:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+#needed to align DebuggerDriver.c
+.4byte 0
+.2byte 0
+.byte 0
+
 .global lbl_806658A0
 lbl_806658A0:
 	# ROM: 0x571480
@@ -430,6 +435,8 @@ lbl_8053FFB8:
 	.balign 4
 	
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.skip 0x4 #needed to align DebuggerDriver.c
+
 .global lbl_806675C8
 lbl_806675C8:
 	.skip 0x4

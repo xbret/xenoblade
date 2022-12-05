@@ -77,3 +77,5 @@ typedef u32 unknown;
 	}
 
 #endif
+
+#define ROUND_UP(x, align) (((x) + (align)-1) & (-(align)))

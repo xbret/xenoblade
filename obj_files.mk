@@ -212,8 +212,8 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/target_options.o \
 
 NDEV_O_FILES :=\
-	$(BUILD_DIR)/asm/NdevExi2A/DebuggerDriver.o \
-	$(BUILD_DIR)/asm/NdevExi2A/exi2.o \
+	$(BUILD_DIR)/src/NdevExi2A/DebuggerDriver.o \
+	$(BUILD_DIR)/src/NdevExi2A/exi2.o \
 
 RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/ai/ai.o \

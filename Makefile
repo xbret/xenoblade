@@ -67,6 +67,11 @@ O_FILES := $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES) $(GAME_O_FILES) \
 # Could also be 1.0?
 MWCC_VERSION := 1.1
 MWLD_VERSION := 1.1
+CONSOLE := Wii
+
+#Ndev uses GC 3.0
+$(NDEV_O_FILES): MWCC_VERSION := 3.0
+$(NDEV_O_FILES): CONSOLE := GC
 
 # Programs
 ifeq ($(WINDOWS),1)
@@ -80,8 +85,8 @@ else
   CPP     := /opt/devkitpro/devkitPPC/bin/powerpc-eabi-cpp -P
   SHA1SUM := shasum
 endif
-CC      = $(WINE) tools/mwcc_compiler/Wii/$(MWCC_VERSION)/mwcceppc.exe
-LD      := $(WINE) tools/mwcc_compiler/Wii/$(MWLD_VERSION)/mwldeppc.exe
+CC      = $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
+LD      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 ELF2REL := tools/elf2rel
 PYTHON  := python3
@@ -108,6 +113,8 @@ ifeq ($(VERBOSE),0)
 # this set of ASFLAGS generates no warnings.
 ASFLAGS += -W
 endif
+
+$(NDEV_O_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -volatileasm -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
 
 #arc.c doesn't use -use_lmw_stmw on, and uses -ipa file and -volatileasm (maybe rest of wii sdk too?)
 $(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -volatileasm -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
