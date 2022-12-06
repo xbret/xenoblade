@@ -124,10 +124,10 @@ ifeq ($(VERBOSE),0)
 ASFLAGS += -W
 endif
 
-$(NDEV_O_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -volatileasm -proc gekko -fp hard -O4,p -func_align 4 -nodefaults $(INCLUDES)
+$(NDEV_O_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -volatileasm -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
 
 #arc.c doesn't use -use_lmw_stmw on, and uses -ipa file and -volatileasm (maybe rest of wii sdk too?)
-$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -volatileasm -proc gekko -fp hard -O4,p -func_align 4 -nodefaults $(INCLUDES)
+$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -volatileasm -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
 
 #All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
 $(BUILD_DIR)/src/RevoSDK/%.o: CFLAGS += -func_align 16

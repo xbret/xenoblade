@@ -67,7 +67,7 @@ void DBInitInterrupts(void) {
     __OSSetInterruptHandler(OS_INTR_PI_DEBUG, __DBIntrHandler);
     __OSUnmaskInterrupts(0x40);
 }
-#else 
+#else
 asm void DBInitInterrupts(void){
     stwu r1, -0x10(r1)
     mflr r0
@@ -80,7 +80,7 @@ asm void DBInitInterrupts(void){
     lis r3, __DBMtrHandler@ha
     lis r4, __DBIntrHandler@ha
     addi r3, r3, __DBMtrHandler@l
-    stw r3, __DBDbgCallback
+    stw r3, -19404(r13) //__DBDbgCallback@sda21(r13)
     addi r4, r4, __DBIntrHandler@l
     li r3, 0x19
     bl __OSSetInterruptHandler
