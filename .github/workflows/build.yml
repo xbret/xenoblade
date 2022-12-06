@@ -17,6 +17,9 @@ jobs:
         sudo apt-get update
         sudo apt-get -y install build-essential wine32
         sudo chown $(whoami) "$GITHUB_WORKSPACE"
+    - uses: actions/checkout@v3
+    - name: Download compilers
+      run: |
         curl -L https://cdn.discordapp.com/attachments/727918646525165659/917185027656286218/GC_WII_COMPILERS.zip \
           | bsdtar -xvf- -C tools
     - name: Build
