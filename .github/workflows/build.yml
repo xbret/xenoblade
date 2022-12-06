@@ -20,8 +20,9 @@ jobs:
     - uses: actions/checkout@v3
     - name: Download compilers
       run: |
+        mkdir tools/mwcc_compiler
         curl -L https://cdn.discordapp.com/attachments/727918646525165659/917185027656286218/GC_WII_COMPILERS.zip \
-          | bsdtar -xvf- -C tools
+          | bsdtar -xvf- -C tools/mwcc_compiler
     - name: Build
       run: make -j$(nproc) MAPGENFLAG=1
     - name: Upload map

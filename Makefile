@@ -97,8 +97,8 @@ else
   SHA1SUM := shasum
   PYTHON  := python3
 endif
-CC      = $(WINE) tools/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
-LD      := $(WINE) tools/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
+CC      = $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
+LD      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 ELF2REL := tools/elf2rel
 
