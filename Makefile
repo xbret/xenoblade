@@ -78,18 +78,28 @@ ifeq ($(WINDOWS),1)
   WINE :=
   AS      := $(DEVKITPPC)/bin/powerpc-eabi-as.exe
   CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp.exe -P
-  SHA1SUM := sha1sum
+  PYTHON  := python
 else
-  WINE ?= wine
-  AS      := /opt/devkitpro/devkitPPC/bin/powerpc-eabi-as
-  CPP     := /opt/devkitpro/devkitPPC/bin/powerpc-eabi-cpp -P
-  SHA1SUM := shasum
+  WIBO   := $(shell command -v wibo 2> /dev/null)
+  ifdef WIBO
+    WINE ?= wibo
+  else
+    WINE ?= wine
+  endif
+  # Disable wine debug output for cleanliness
+  export WINEDEBUG ?= -all
+  # Default devkitPPC path
+  DEVKITPPC ?= /opt/devkitpro/devkitPPC
+  DEPENDS   := $(DEPENDS:.d=.d.unix)
+  AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
+  CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
+  PYTHON  := python3
 endif
-CC      = $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
-LD      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
+CC      = $(WINE) tools/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
+LD      := $(WINE) tools/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 ELF2REL := tools/elf2rel
-PYTHON  := python3
+SHA1SUM := sha1sum
 
 # Options
 INCLUDES := -i include/
@@ -114,10 +124,10 @@ ifeq ($(VERBOSE),0)
 ASFLAGS += -W
 endif
 
-$(NDEV_O_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -volatileasm -proc gekko -fp hard -O4,p -func_align 4 -nodefaults $(INCLUDES)
+$(NDEV_O_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -volatileasm -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
 
 #arc.c doesn't use -use_lmw_stmw on, and uses -ipa file and -volatileasm (maybe rest of wii sdk too?)
-$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -volatileasm -proc gekko -fp hard -O4,p -func_align 4 -nodefaults $(INCLUDES)
+$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -volatileasm -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
 
 #All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
 $(BUILD_DIR)/src/RevoSDK/%.o: CFLAGS += -func_align 16

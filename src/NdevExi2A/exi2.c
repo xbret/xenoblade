@@ -3,7 +3,7 @@
 
 #include "RevoSDK/exi/EXIBios.h"
 #include "RevoSDK/exi/EXICommon.h"
-#include "RevoSDK/os/OSInterrupt.h" 
+#include "RevoSDK/os/OSInterrupt.h"
 
 static BOOL __EXI2Select(void) {
     u32 temp = EXI_CD006800[EXI_CHAN_2].WORD_0x0;
