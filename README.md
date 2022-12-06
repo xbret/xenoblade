@@ -27,7 +27,7 @@ xenoblade.jp.dol: `sha1: a564033aee46988743d8f5e6fdc50a8c65791160`
 * WINDOWS ONLY STEP:
 	- Launch msys2(Provided by devkitPro) and run the command `pacman -S gcc`.
 	
-1. Download GC_WII_COMPILERS.zip from (https://cdn.discordapp.com/attachments/727918646525165659/917185027656286218/GC_WII_COMPILERS.zip) and extract the Wii folder to tools/mwcc_compiler/.
+1. Download GC_WII_COMPILERS.zip from (https://cdn.discordapp.com/attachments/727918646525165659/917185027656286218/GC_WII_COMPILERS.zip) and extract the contents to tools/.
 2. Run `make -j` in a command prompt or terminal.
 	- -j Allows make to use multiple threads, speeding up the process.
 
