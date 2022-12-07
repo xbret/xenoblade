@@ -417,6 +417,7 @@ lbl_802D1634:
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 #needed to align DebuggerDriver.c
+#try testing balign here later
 .4byte 0
 .2byte 0
 .byte 0

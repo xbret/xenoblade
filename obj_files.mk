@@ -305,7 +305,7 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/bte/sdp_utils.o \
 	$(BUILD_DIR)/asm/RevoSDK/cx/CXStreamingUncompression.o \
 	$(BUILD_DIR)/asm/RevoSDK/cx/CXUncompression.o \
-	$(BUILD_DIR)/asm/RevoSDK/cx/CXSecureUncompression.o \
+	$(BUILD_DIR)/src/RevoSDK/cx/CXSecureUncompression.o \
 	$(BUILD_DIR)/asm/data_2.o \
 	$(BUILD_DIR)/asm/sbss_3.o \
 	$(BUILD_DIR)/asm/RevoSDK/db/db.o \
