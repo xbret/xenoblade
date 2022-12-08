@@ -41,7 +41,7 @@ lbl_8066C9E0:
 	.float 0.5
 	.4byte 0
 
-
+# file boundary
 .global lbl_8066C9E8
 lbl_8066C9E8:
 	# ROM: 0x576848
