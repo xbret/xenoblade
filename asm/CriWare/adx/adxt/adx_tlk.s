@@ -1607,8 +1607,8 @@ ADXT_SetDefSvrFreq:
 /* 80383BC4 0034D184  38 21 00 10 */	addi r1, r1, 0x10
 /* 80383BC8 0034D188  4E 80 00 20 */	blr 
 
-.global func_80383BCC
-func_80383BCC:
+.global ADXT_SetSvrFreq
+ADXT_SetSvrFreq:
 /* 80383BCC 0034D18C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80383BD0 0034D190  7C 08 02 A6 */	mflr r0
 /* 80383BD4 0034D194  90 01 00 24 */	stw r0, 0x24(r1)

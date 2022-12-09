@@ -1872,8 +1872,8 @@ lbl_8051BE84:
 	.balign 4
 
 
-.global lbl_8051C098
-lbl_8051C098:
+.global sjmem_uuid
+sjmem_uuid:
 	# ROM: 0x518198
 	.4byte 0xDD9EEE41
 	.4byte 0x167911D2
@@ -1911,8 +1911,8 @@ lbl_8051C0A8:
 	.balign 4
 
 
-.global lbl_8051C1F8
-lbl_8051C1F8:
+.global sjrbf_uuid
+sjrbf_uuid:
 	# ROM: 0x5182F8
 	.4byte 0x3B9A9E81
 	.4byte 0x0DBB11D2
@@ -3314,20 +3314,20 @@ MPSLIB_version_str:
 .global lbl_8051FEE0
 lbl_8051FEE0:
 	# ROM: 0x51BFE0
-	.4byte func_803BD4B4
-	.4byte func_803BD4F0
-	.4byte func_803BD524
-	.4byte func_803BE044
-	.4byte func_803BE514
-	.4byte func_803BE5F8
-	.4byte func_803BE600
-	.4byte func_803BE660
-	.4byte func_803BE68C
-	.4byte func_803BE7BC
-	.4byte func_803BE7C8
-	.4byte func_803BE7D4
-	.4byte func_803BE7E0
-	.4byte func_803BE7EC
+	.4byte SFADXT_Init
+	.4byte SFADXT_Finish
+	.4byte SFADXT_ExecServer
+	.4byte SFADXT_Create
+	.4byte SFADXT_Destroy
+	.4byte SFADXT_RequestStop
+	.4byte SFADXT_Start
+	.4byte SFADXT_Stop
+	.4byte SFADXT_Pause
+	.4byte SFADXT_GetWrite
+	.4byte SFADXT_AddWrite
+	.4byte SFADXT_GetRead
+	.4byte SFADXT_AddRead
+	.4byte SFADXT_Seek
 	
 .global lbl_8051FF18
 lbl_8051FF18:
@@ -3346,24 +3346,24 @@ lbl_8051FF18:
 
 .global lbl_8051FF48
 lbl_8051FF48:
-	.4byte func_803BEA38
-	.4byte func_803BEA40
-	.4byte func_803BEA48
+	.4byte SFAOAP_Init
+	.4byte SFAOAP_Finish
+	.4byte SFAOAP_ExecServer
 	.4byte func_803BEAFC
 	.4byte func_803BEB48
 	.4byte func_803BEB50
 	.4byte func_803BEB78
 	.4byte func_803BEBE4
 	.4byte func_803BEC50
-	.4byte func_803BECC8
-	.4byte func_803BECD4
-	.4byte func_803BECE0
-	.4byte func_803BECEC
-	.4byte func_803BECF8
+	.4byte SFAOAP_GetWrite
+	.4byte SFAOAP_AddWrite
+	.4byte SFAOAP_GetRead
+	.4byte SFAOAP_AddRead
+	.4byte SFAOAP_Seek
 
 
-.global lbl_8051FF80
-lbl_8051FF80:
+.global SFLIB_version_str
+SFLIB_version_str:
 	.asciz "\nCRI SFD/WII Ver.2.080 Build:Nov 13 2008 18:21:32\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
@@ -3655,8 +3655,8 @@ lbl_805202A0:
 
 .global lbl_805202D8
 lbl_805202D8:
-	.4byte func_803C0F7C
-	.4byte func_803C0FD4
+	.4byte SFMPS_Init
+	.4byte SFMPS_Finish
 	.4byte func_803C0FF8
 	.4byte func_803C2AE4
 	.4byte func_803C2CBC
@@ -3668,7 +3668,7 @@ lbl_805202D8:
 	.4byte func_803C2D3C
 	.4byte func_803C2D48
 	.4byte func_803C2D54
-	.4byte func_803C2D60
+	.4byte SFMPS_Seek
 
 
 .global lbl_80520310
@@ -3686,7 +3686,7 @@ lbl_80520320:
 	.4byte func_803C3078
 	.4byte func_803C312C
 	.4byte func_803C3150
-	.4byte func_803C73D0
+	.4byte SFMPV_Create
 	.4byte func_803C7788
 	.4byte func_803C780C
 	.4byte func_803C7848
@@ -9939,7 +9939,7 @@ CDeviceFileDvd_typestr:
 lbl_805265D0:
 	# ROM: 0x5226D0
 
-	#An error has occured?
+	#An error has occured.
 	#"エラーが発生しました。"
 .global lbl_805265D0
 lbl_805265D0:
@@ -9975,6 +9975,7 @@ lbl_805265D0:
 	.2byte 0x8142
 	.byte 0x00
 
+	#Could not read disc. Details...
 	#"ディスクを読めませんでした。詳しくは・・・"
 	.byte 0x83
 	.4byte 0x66834283

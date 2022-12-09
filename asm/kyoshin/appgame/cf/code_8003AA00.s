@@ -10884,6 +10884,7 @@ lbl_80043FA4:
 /* 80043FB0 0000D570  38 21 00 10 */	addi r1, r1, 0x10
 /* 80043FB4 0000D574  4E 80 00 20 */	blr 
 
+#string format?
 .global func_80043FB8
 func_80043FB8:
 /* 80043FB8 0000D578  94 21 FE 70 */	stwu r1, -0x190(r1)

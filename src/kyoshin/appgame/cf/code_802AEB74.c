@@ -1,4 +1,4 @@
-#include "kyoshin/appgame/cf/code_802AEB74.h"
+#include "kyoshin/appgame/cf/code_802AEB74.hpp"
 
 //namespace cf {
 u32** func_802AEB74(){

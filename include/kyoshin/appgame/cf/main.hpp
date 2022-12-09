@@ -1,5 +1,5 @@
-#ifndef _CF_MAIN_H
-#define _CF_MAIN_H
+#ifndef _CF_MAIN_HPP
+#define _CF_MAIN_HPP
 
 #include "types.h"
 #include "kyoshin/appgame/cf/code_802AEB74.h"

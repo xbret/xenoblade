@@ -493,7 +493,12 @@ CRIWARE_O_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/adx/lsc/lsc.o \
 	$(BUILD_DIR)/asm/CriWare/adx/lsc/lsc_crs.o \
 	$(BUILD_DIR)/asm/CriWare/adx/mfci/mfci.o \
-	$(BUILD_DIR)/asm/CriWare/adx/sj/sj.o \
+	$(BUILD_DIR)/asm/CriWare/adx/sj/sj_mem.o \
+	$(BUILD_DIR)/asm/CriWare/adx/sj/sj_rbf.o \
+	$(BUILD_DIR)/asm/CriWare/adx/sj/sj_uni.o \
+	$(BUILD_DIR)/asm/CriWare/adx/sj/sj_utl.o \
+	$(BUILD_DIR)/asm/CriWare/adx/sj/sj_crs.o \
+	$(BUILD_DIR)/asm/CriWare/adx/sj/sj_err.o \
 	$(BUILD_DIR)/asm/CriWare/adx/svm/svm.o \
 	$(BUILD_DIR)/asm/CriWare/adx/wiirna/wiirna.o \
 	$(BUILD_DIR)/asm/CriWare/cri_crw_std.o \
@@ -506,7 +511,40 @@ CRIWARE_O_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mps/mps_del.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mps/mps_get.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mps/mps_lib.o \
-	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/SFD.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_adxt.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_aoap.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_buf.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_con.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_hds.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_lib.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_mem.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_mps.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_mpv.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_mpvf.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_pl2.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_ply.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_pts.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_see.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_set.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_tim.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_trn.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_uo.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_vom.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_tmr.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_tst.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfh/code_803D0030.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfh/sfh_main.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfh/sfh_ver1.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfh/sfh_ver2.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/uty/cmptime.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/uty/memcpyd.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/uty/memsetd.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/uty/muldiv.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/uty/muldivr.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/uty/uty_tmr.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_set.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_cnv.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_inf.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_lib.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_alp.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_zmv.o \

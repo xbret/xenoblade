@@ -1,0 +1,40 @@
+.include "macros.inc"
+
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
+.global UTY_MemsetDword
+UTY_MemsetDword:
+/* 803D44D0 0039DA90  54 A0 10 3A */	slwi r0, r5, 2
+/* 803D44D4 0039DA94  54 A6 07 3E */	clrlwi r6, r5, 0x1c
+/* 803D44D8 0039DA98  7C E3 02 14 */	add r7, r3, r0
+/* 803D44DC 0039DA9C  38 06 00 01 */	addi r0, r6, 1
+/* 803D44E0 0039DAA0  48 00 00 08 */	b lbl_803D44E8
+lbl_803D44E4:
+/* 803D44E4 0039DAA4  94 87 FF FC */	stwu r4, -4(r7)
+lbl_803D44E8:
+/* 803D44E8 0039DAA8  34 00 FF FF */	addic. r0, r0, -1
+/* 803D44EC 0039DAAC  40 82 FF F8 */	bne lbl_803D44E4
+/* 803D44F0 0039DAB0  54 A3 E1 3E */	srwi r3, r5, 4
+/* 803D44F4 0039DAB4  38 03 00 01 */	addi r0, r3, 1
+/* 803D44F8 0039DAB8  48 00 00 44 */	b lbl_803D453C
+lbl_803D44FC:
+/* 803D44FC 0039DABC  90 87 FF FC */	stw r4, -4(r7)
+/* 803D4500 0039DAC0  90 87 FF F8 */	stw r4, -8(r7)
+/* 803D4504 0039DAC4  90 87 FF F4 */	stw r4, -0xc(r7)
+/* 803D4508 0039DAC8  90 87 FF F0 */	stw r4, -0x10(r7)
+/* 803D450C 0039DACC  90 87 FF EC */	stw r4, -0x14(r7)
+/* 803D4510 0039DAD0  90 87 FF E8 */	stw r4, -0x18(r7)
+/* 803D4514 0039DAD4  90 87 FF E4 */	stw r4, -0x1c(r7)
+/* 803D4518 0039DAD8  90 87 FF E0 */	stw r4, -0x20(r7)
+/* 803D451C 0039DADC  90 87 FF DC */	stw r4, -0x24(r7)
+/* 803D4520 0039DAE0  90 87 FF D8 */	stw r4, -0x28(r7)
+/* 803D4524 0039DAE4  90 87 FF D4 */	stw r4, -0x2c(r7)
+/* 803D4528 0039DAE8  90 87 FF D0 */	stw r4, -0x30(r7)
+/* 803D452C 0039DAEC  90 87 FF CC */	stw r4, -0x34(r7)
+/* 803D4530 0039DAF0  90 87 FF C8 */	stw r4, -0x38(r7)
+/* 803D4534 0039DAF4  90 87 FF C4 */	stw r4, -0x3c(r7)
+/* 803D4538 0039DAF8  94 87 FF C0 */	stwu r4, -0x40(r7)
+lbl_803D453C:
+/* 803D453C 0039DAFC  34 00 FF FF */	addic. r0, r0, -1
+/* 803D4540 0039DB00  40 82 FF BC */	bne lbl_803D44FC
+/* 803D4544 0039DB04  4E 80 00 20 */	blr 

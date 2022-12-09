@@ -666,32 +666,32 @@ mfci_err_func:
 .global mfci_err_obj
 mfci_err_obj:
 	.skip 0x9F4
-.global lbl_805F0488
-lbl_805F0488:
+.global sjmem_init_cnt
+sjmem_init_cnt:
 	.skip 0x8
-.global lbl_805F0490
-lbl_805F0490:
+.global sjmem_obj
+sjmem_obj:
 	.skip 0x480
-.global lbl_805F0910
-lbl_805F0910:
+.global sjrbf_init_cnt
+sjrbf_init_cnt:
 	.skip 0x8
 .global lbl_805F0918
 lbl_805F0918:
 	.skip 0x4800
-.global lbl_805F5118
-lbl_805F5118:
+.global sjuni_init_cnt
+sjuni_init_cnt:
 	.skip 0x8
-.global lbl_805F5120
-lbl_805F5120:
+.global sjuni_obj
+sjuni_obj:
 	.skip 0xC00
-.global lbl_805F5D20
-lbl_805F5D20:
+.global sjcrs_lvl
+sjcrs_lvl:
 	.skip 0x4
-.global lbl_805F5D24
-lbl_805F5D24:
+.global sjcrs_msk
+sjcrs_msk:
 	.skip 0x4
-.global lbl_805F5D28
-lbl_805F5D28:
+.global sj_init_count
+sj_init_count:
 	.skip 0x8
 .global lbl_805F5D30
 lbl_805F5D30:
@@ -986,8 +986,8 @@ MPSLIB_libwork:
 .global mpslib_hn_last
 mpslib_hn_last:
 	.skip 0x8
-.global lbl_8060A2A0
-lbl_8060A2A0:
+.global sfadxt_para
+sfadxt_para:
 	.skip 0x1C
 .global lbl_8060A2BC
 lbl_8060A2BC:
@@ -998,11 +998,11 @@ lbl_8060A2C0:
 .global lbl_8060A2C4
 lbl_8060A2C4:
 	.skip 0x4
-.global lbl_8060A2C8
-lbl_8060A2C8:
+.global sfbuf_sjrbf_uuid
+sfbuf_sjrbf_uuid:
 	.skip 0x4
-.global lbl_8060A2CC
-lbl_8060A2CC:
+.global sfbuf_sjmem_uuid
+sfbuf_sjmem_uuid:
 	.skip 0x4
 .global lbl_8060A2D0
 lbl_8060A2D0:
@@ -1016,11 +1016,11 @@ lbl_8060A2E4:
 .global lbl_8060A510
 lbl_8060A510:
 	.skip 0x8
-.global lbl_8060A518
-lbl_8060A518:
+.global sfmps_libwork
+sfmps_libwork:
 	.skip 0x810
-.global lbl_8060AD28
-lbl_8060AD28:
+.global copy_sj_error
+copy_sj_error:
 	.skip 0x8
 .global lbl_8060AD30
 lbl_8060AD30:
@@ -1034,8 +1034,8 @@ lbl_8061CD58:
 .global lbl_8061CDD8
 lbl_8061CDD8:
 	.skip 0x4
-.global lbl_8061CDDC
-lbl_8061CDDC:
+.global sfply_last_hnctrl_wksiz
+sfply_last_hnctrl_wksiz:
 	.skip 0x4
 .global lbl_8061CDE0
 lbl_8061CDE0:
@@ -1070,8 +1070,8 @@ lbl_8061CE28:
 .global lbl_8061CE2C
 lbl_8061CE2C:
 	.skip 0x4
-.global lbl_8061CE30
-lbl_8061CE30:
+.global utytmr_unit
+utytmr_unit:
 	.skip 0x8
 .global lbl_8061CE38
 lbl_8061CE38:

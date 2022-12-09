@@ -30051,109 +30051,109 @@ mfci_vtbl:
 	.4byte 0
 
 
-.global lbl_805692D8
-lbl_805692D8:
+.global sjmem_vtbl
+sjmem_vtbl:
 	# ROM: 0x5653D8
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte func_80393758
-	.4byte func_80393824
-	.4byte func_803939BC
-	.4byte func_80393BC0
-	.4byte func_80393EB0
-	.4byte func_80393D5C
-	.4byte func_80393A80
-	.4byte func_80394094
-	.4byte func_803938E8
+	.4byte SJMEM_Destroy
+	.4byte SJMEM_GetUuid
+	.4byte SJMEM_Reset
+	.4byte SJMEM_GetChunk
+	.4byte SJMEM_UngetChunk
+	.4byte SJMEM_PutChunk
+	.4byte SJMEM_GetNumData
+	.4byte SJMEM_IsGetChunk
+	.4byte SJMEM_EntryErrFunc
 
 
-.global lbl_80569308
-lbl_80569308:
+.global sjrbf_vtbl
+sjrbf_vtbl:
 	# ROM: 0x565408
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte func_8039453C
-	.4byte func_80394608
-	.4byte func_803947A0
-	.4byte func_803949E8
-	.4byte func_80394EB8
-	.4byte func_80394C7C
-	.4byte func_803948A8
-	.4byte func_80395158
-	.4byte func_803946CC
+	.4byte SJRBF_Destroy
+	.4byte SJRBF_GetUuid
+	.4byte SJRBF_Reset
+	.4byte SJRBF_GetChunk
+	.4byte SJRBF_UngetChunk
+	.4byte SJRBF_PutChunk
+	.4byte SJRBF_GetNumData
+	.4byte SJRBF_IsGetChunk
+	.4byte SJRBF_EntryErrFunc
 
 
-.global lbl_80569338
-lbl_80569338:
+.global sjuni_vtbl
+sjuni_vtbl:
 	# ROM: 0x565438
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte func_803958C0
-	.4byte func_8039598C
-	.4byte func_80395B24
-	.4byte func_80395DD4
-	.4byte func_803961D0
-	.4byte func_80395FD8
-	.4byte func_80395C74
-	.4byte func_803963BC
-	.4byte func_80395A50
+	.4byte SJUNI_Destroy
+	.4byte SJUNI_GetUuid
+	.4byte SJUNI_Reset
+	.4byte SJUNI_GetChunk
+	.4byte SJUNI_UngetChunk
+	.4byte SJUNI_PutChunk
+	.4byte SJUNI_GetNumData
+	.4byte SJUNI_IsGetChunk
+	.4byte SJUNI_EntryErrFunc
 
 
-.global lbl_80569368
-lbl_80569368:
+.global sj_val_to_hexstr_tbl
+sj_val_to_hexstr_tbl:
 	# ROM: 0x565468
+	.4byte 0 #0
 	.4byte 0
 	.4byte 0
 	.4byte 0
+	.4byte 0 #10
 	.4byte 0
 	.4byte 0
 	.4byte 0
+	.4byte 0 #20
 	.4byte 0
 	.4byte 0
 	.4byte 0
+	.4byte 0 #30
 	.4byte 0
 	.4byte 0
 	.4byte 0
+	.4byte 0 #40
 	.4byte 0
 	.4byte 0
 	.4byte 0
+	.4byte 0 #50
 	.4byte 0
 	.4byte 0
 	.4byte 0
+	.4byte 0 #60
 	.4byte 0
 	.4byte 0
 	.4byte 0
+	.4byte 0 #70
 	.4byte 0
 	.4byte 0
 	.4byte 0
+	.4byte 0 #80
 	.4byte 0
 	.4byte 0
 	.4byte 0
+	.4byte 0 #90
 	.4byte 0
 	.4byte 0
 	.4byte 0
+	.4byte 0 #a0
 	.4byte 0
 	.4byte 0
 	.4byte 0
+	.4byte 0 #b0
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
+	.4byte 0 #c0
 	.4byte 0x00000001
 	.4byte 0x00000002
 	.4byte 0x00000003

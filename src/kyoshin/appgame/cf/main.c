@@ -1,4 +1,4 @@
-#include "kyoshin/appgame/cf/main.h"
+#include "kyoshin/appgame/cf/main.hpp"
 
 //namespace cf {
 extern char* pkhFilenames[];
@@ -42,18 +42,12 @@ void main(int argc, char* argv[]) {
     which are then passed into the function func_80457CA4 in the register r4
     through the function func_8044F744.
     */
-    u32** ptr = func_802AEB74();
-    func_80450B14(ptr);
-    u32** ptr1 = func_802AEB7C();
-    func_80450B1C(ptr1);
-    u32** ptr2 = func_802AEB84();
-    func_80450B24(ptr2);
-    u32** ptr3 = func_802AEBAC();
-    func_804DAA90(ptr3);
-    u32** ptr4 = func_802AEBB4();
-    func_804DAA98(ptr4);
-    u32** ptr5 = func_802AEBBC();
-    func_804DAAA0(ptr5);
+    func_80450B14(func_802AEB74());
+    func_80450B1C(func_802AEB7C());
+    func_80450B24(func_802AEB84());
+    func_804DAA90(func_802AEBAC());
+    func_804DAA98(func_802AEBB4());
+    func_804DAAA0(func_802AEBBC());
     
     lbl_80666438 = 0;
     SetArenaMemorySize(0x680000, 0);
