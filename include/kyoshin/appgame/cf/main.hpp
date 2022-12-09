@@ -2,7 +2,7 @@
 #define _CF_MAIN_HPP
 
 #include "types.h"
-#include "kyoshin/appgame/cf/code_802AEB74.h"
+#include "kyoshin/appgame/cf/code_802AEB74.hpp"
 #include "monolithlib/code_80450B14.h"
 #include "monolithlib/Unknown1.h"
 
