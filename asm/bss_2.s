@@ -720,8 +720,8 @@ lbl_805F60B8:
 .global lbl_805F60BC
 lbl_805F60BC:
 	.skip 0x104
-.global lbl_805F61C0
-lbl_805F61C0:
+.global axrna_init_cnt
+axrna_init_cnt:
 	.skip 0x4
 .global lbl_805F61C4
 lbl_805F61C4:
@@ -744,8 +744,8 @@ lbl_805FF038:
 .global lbl_805FF03C
 lbl_805FF03C:
 	.skip 0x2320
-.global lbl_8060135C
-lbl_8060135C:
+.global adxm_wii_framework
+adxm_wii_framework:
 	.skip 0x4
 .global lbl_80601360
 lbl_80601360:
@@ -807,8 +807,8 @@ lbl_80605F10:
 .global lbl_80605F1C
 lbl_80605F1C:
 	.skip 0xC
-.global lbl_80605F28
-lbl_80605F28:
+.global mpvcdec_ixa
+mpvcdec_ixa:
 	.skip 0x4
 .global lbl_80605F2C
 lbl_80605F2C:
@@ -927,8 +927,8 @@ lbl_80607B04:
 .global lbl_80607B08
 lbl_80607B08:
 	.skip 0x4
-.global lbl_80607B0C
-lbl_80607B0C:
+.global mpvvlc_run_level_0c
+mpvvlc_run_level_0c:
 	.skip 0x4
 .global lbl_80607B10
 lbl_80607B10:
@@ -966,8 +966,8 @@ lbl_80607B80:
 .global lbl_80607F80
 lbl_80607F80:
 	.skip 0x208
-.global lbl_80608188
-lbl_80608188:
+.global sfsd_scale_tbl
+sfsd_scale_tbl:
 	.skip 0x100
 .global lbl_80608288
 lbl_80608288:

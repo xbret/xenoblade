@@ -30352,8 +30352,8 @@ lbl_80569528:
 	.4byte 0x00080000
 
 
-.global lbl_80569728
-lbl_80569728:
+.global axrna_def_src_type
+axrna_def_src_type:
 	# ROM: 0x565828
 	.4byte 0x00000001
 

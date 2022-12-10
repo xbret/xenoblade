@@ -500,11 +500,38 @@ CRIWARE_O_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/adx/sj/sj_crs.o \
 	$(BUILD_DIR)/asm/CriWare/adx/sj/sj_err.o \
 	$(BUILD_DIR)/asm/CriWare/adx/svm/svm.o \
-	$(BUILD_DIR)/asm/CriWare/adx/wiirna/wiirna.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_bsps.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_bau.o \
+	$(BUILD_DIR)/asm/CriWare/adx/wiirna/rna_crs.o \
+	$(BUILD_DIR)/asm/CriWare/adx/wiirna/rna_err.o \
+	$(BUILD_DIR)/asm/CriWare/adx/wiirna/ax_rna.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/srcwii/adx_mwii.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/srcwii/adx_suwii.o \
+	$(BUILD_DIR)/asm/CriWare/adx/adxt/srcwii/adx_rnawii.o \
 	$(BUILD_DIR)/asm/CriWare/cri_crw_std.o \
-	$(BUILD_DIR)/asm/CriWare/sofdec/cft/CFT.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/cft/srcgc/cftyp422_ppc.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/cft/cft_common.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/MWSFD.o \
-	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/MPV.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_bdec.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_cdec.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_cmc.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_dec.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_deli.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_emp.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_err.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_frm.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_get.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_hdec.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_lib.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_mc.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_vlc.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_umc.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_mcy.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_m2v.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpvabdec.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_slice.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/dct/dct_ac.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/dct/dct_isr.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/dct/dct_ver.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/memcpy/mcp_not.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mps/mps_dec.o \

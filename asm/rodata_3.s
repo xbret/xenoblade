@@ -2719,8 +2719,8 @@ lbl_8051F538:
 .global lbl_8051F5F8
 lbl_8051F5F8:
 	# ROM: 0x51B6F8
-	.4byte func_803A401C
-	.4byte func_803A44C4
+	.4byte mpvcdec_IntraBlocksInt1
+	.4byte mpvcdec_NintraBlocksInt1
 
 
 .global lbl_8051F600
@@ -2825,9 +2825,9 @@ lbl_8051F708:
 lbl_8051F750:
 	# ROM: 0x51B850
 	.4byte 0
-	.4byte func_803A477C
-	.4byte func_803A4B64
-	.4byte func_803A52DC
+	.4byte MPVDEC_DecIpicMb
+	.4byte MPVDEC_DecPpicMb
+	.4byte MPVDEC_DecBpicMb
 	.4byte 0
 	.4byte 0
 
@@ -2944,9 +2944,9 @@ lbl_8051F8E0:
 .global lbl_8051F8F0
 lbl_8051F8F0:
 	# ROM: 0x51B9F0
-	.4byte func_803AF010
-	.4byte func_803B2650
-	.4byte func_803B5C70
+	.4byte mpvabdec_IntraBlock_Isr
+	.4byte mpvabdec_IntraBlockDc11_Isr
+	.4byte mpvabdec_NintraBlock_Isr
 	.4byte 0
 
 
@@ -3229,38 +3229,38 @@ lbl_8051F928:
 	.4byte 0x07070707
 	.4byte 0x0707FFFF
 	.4byte 0xFFFFFFFF
-	.4byte func_803BAC0C
-	.4byte func_803BAC08
-	.4byte func_803BAD98
-	.4byte func_803BAD20
-	.4byte func_803BAF1C
-	.4byte func_803BAEC8
-	.4byte func_803BB5B4
-	.4byte func_803BB508
-	.4byte func_803BB0BC
-	.4byte func_803BB040
-	.4byte func_803BB5B4
-	.4byte func_803BB508
-	.4byte func_803BB5B4
-	.4byte func_803BB508
-	.4byte func_803BB5B4
-	.4byte func_803BB508
-	.4byte func_803BB238
-	.4byte func_803BB1F0
-	.4byte func_803BB5B4
-	.4byte func_803BB508
-	.4byte func_803BB3D4
-	.4byte func_803BB370
-	.4byte func_803BB5B4
-	.4byte func_803BB508
-	.4byte func_803BB5B4
-	.4byte func_803BB508
-	.4byte func_803BB5B4
-	.4byte func_803BB508
-	.4byte func_803BB5B4
-	.4byte func_803BB508
-	.4byte func_803BB5B4
-	.4byte func_803BB508
+	.4byte IdctColumn_0000_1
+	.4byte IdctColumn_0000_0
+	.4byte IdctColumn_0001_1
+	.4byte IdctColumn_0001_0
+	.4byte IdctColumn_0010_1
+	.4byte IdctColumn_0010_0
+	.4byte IdctColumn_1111_1
+	.4byte IdctColumn_1111_0
+	.4byte IdctColumn_0100_1
+	.4byte IdctColumn_0100_0
+	.4byte IdctColumn_1111_1
+	.4byte IdctColumn_1111_0
+	.4byte IdctColumn_1111_1
+	.4byte IdctColumn_1111_0
+	.4byte IdctColumn_1111_1
+	.4byte IdctColumn_1111_0
+	.4byte IdctColumn_1000_1
+	.4byte IdctColumn_1000_0
+	.4byte IdctColumn_1111_1
+	.4byte IdctColumn_1111_0
+	.4byte IdctColumn_1010_1
+	.4byte IdctColumn_1010_0
+	.4byte IdctColumn_1111_1
+	.4byte IdctColumn_1111_0
+	.4byte IdctColumn_1111_1
+	.4byte IdctColumn_1111_0
+	.4byte IdctColumn_1111_1
+	.4byte IdctColumn_1111_0
+	.4byte IdctColumn_1111_1
+	.4byte IdctColumn_1111_0
+	.4byte IdctColumn_1111_1
+	.4byte IdctColumn_1111_0
 	.4byte 0x7FF7BFFB
 	.4byte 0xDFFDEFFE
 	.4byte 0x3FD6A09E
