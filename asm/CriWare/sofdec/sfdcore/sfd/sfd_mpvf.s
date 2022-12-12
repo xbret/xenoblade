@@ -280,8 +280,8 @@ func_803C7EC0:
 /* 803C7F74 00391534  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C7F78 00391538  4E 80 00 20 */	blr 
 
-.global func_803C7F7C
-func_803C7F7C:
+.global SFD_CalcYccPlane
+SFD_CalcYccPlane:
 /* 803C7F7C 0039153C  38 84 00 0F */	addi r4, r4, 0xf
 /* 803C7F80 00391540  38 05 00 0F */	addi r0, r5, 0xf
 /* 803C7F84 00391544  7C 84 26 70 */	srawi r4, r4, 4
@@ -988,8 +988,8 @@ lbl_803C88AC:
 /* 803C88C4 00391E84  38 21 00 30 */	addi r1, r1, 0x30
 /* 803C88C8 00391E88  4E 80 00 20 */	blr 
 
-.global func_803C88CC
-func_803C88CC:
+.global SFD_IsNextFrmReady
+SFD_IsNextFrmReady:
 /* 803C88CC 00391E8C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C88D0 00391E90  7C 08 02 A6 */	mflr r0
 /* 803C88D4 00391E94  90 01 00 24 */	stw r0, 0x24(r1)

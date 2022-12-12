@@ -1943,8 +1943,8 @@ lbl_803CAA78:
 /* 803CAA8C 0039404C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CAA90 00394050  4E 80 00 20 */	blr 
 
-.global func_803CAA94
-func_803CAA94:
+.global SFD_Standby
+SFD_Standby:
 /* 803CAA94 00394054  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CAA98 00394058  7C 08 02 A6 */	mflr r0
 /* 803CAA9C 0039405C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2676,8 +2676,8 @@ lbl_803CB4BC:
 /* 803CB4D0 00394A90  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CB4D4 00394A94  4E 80 00 20 */	blr 
 
-.global func_803CB4D8
-func_803CB4D8:
+.global SFD_GetFrm
+SFD_GetFrm:
 /* 803CB4D8 00394A98  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CB4DC 00394A9C  7C 08 02 A6 */	mflr r0
 /* 803CB4E0 00394AA0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2814,8 +2814,8 @@ lbl_803CB6A8:
 /* 803CB6BC 00394C7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CB6C0 00394C80  4E 80 00 20 */	blr 
 
-.global func_803CB6C4
-func_803CB6C4:
+.global SFD_RelFrm
+SFD_RelFrm:
 /* 803CB6C4 00394C84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CB6C8 00394C88  7C 08 02 A6 */	mflr r0
 /* 803CB6CC 00394C8C  90 01 00 14 */	stw r0, 0x14(r1)

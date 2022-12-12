@@ -1554,8 +1554,8 @@ lbl_803CDC64:
 /* 803CDC7C 0039723C  90 05 00 00 */	stw r0, 0(r5)
 /* 803CDC80 00397240  4E 80 00 20 */	blr 
 
-.global func_803CDC84
-func_803CDC84:
+.global SFD_GetFps
+SFD_GetFps:
 /* 803CDC84 00397244  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CDC88 00397248  7C 08 02 A6 */	mflr r0
 /* 803CDC8C 0039724C  90 01 00 14 */	stw r0, 0x14(r1)

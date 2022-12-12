@@ -783,8 +783,8 @@ lbl_8060295C:
 .global lbl_80602960
 lbl_80602960:
 	.skip 0x8
-.global lbl_80602968
-lbl_80602968:
+.global mwsfd_libwork
+mwsfd_libwork:
 	.skip 0x3548
 .global lbl_80605EB0
 lbl_80605EB0:

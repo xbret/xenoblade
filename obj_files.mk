@@ -487,7 +487,21 @@ CRIWARE_O_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_dcd5.o \
 	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_dcd.o \
 	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_errs.o \
-	$(BUILD_DIR)/asm/CriWare/adx/ahx/AHX.o \
+	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_link.o \
+	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_mflt_c.o \
+	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_mwin2_c.o \
+	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_sbf2.o \
+	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_sbf.o \
+	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_sjd.o \
+	$(BUILD_DIR)/asm/CriWare/adx/ahx/adx_hdr.o \
+	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_bsr.o \
+	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_cmn.o \
+	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_dcd.o \
+	$(BUILD_DIR)/asm/CriWare/adx/cricfg/cfg_lib.o \
+	$(BUILD_DIR)/asm/CriWare/adx/cvfs/cri_cvfs.o \
+	$(BUILD_DIR)/asm/CriWare/adx/gcci/gcci.o \
+	$(BUILD_DIR)/asm/CriWare/adx/gcci/gcci_sub.o \
+	$(BUILD_DIR)/asm/CriWare/adx/lsc/lsc_err.o \
 	$(BUILD_DIR)/asm/CriWare/adx/lsc/lsc_ini.o \
 	$(BUILD_DIR)/asm/CriWare/adx/lsc/lsc_svr.o \
 	$(BUILD_DIR)/asm/CriWare/adx/lsc/lsc.o \
@@ -511,7 +525,17 @@ CRIWARE_O_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/cri_crw_std.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/cft/srcgc/cftyp422_ppc.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/cft/cft_common.o \
-	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/MWSFD.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdfrm.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdrna.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdsl.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdsvm.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwstm.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdsfx.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdlib.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdply.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdset.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdsvr.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdsst.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_bdec.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_cdec.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_cmc.o \

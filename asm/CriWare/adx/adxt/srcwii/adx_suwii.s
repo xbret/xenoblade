@@ -32,10 +32,10 @@ ADXWII_SetupDvdFs:
 /* 8039B2E8 003648A8  38 80 00 00 */	li r4, 0
 /* 8039B2EC 003648AC  4B FF 55 CD */	bl cvFsEntryErrFunc
 /* 8039B2F0 003648B0  3B FF CD 88 */	addi r31, r31, lbl_8051CD88@l
-/* 8039B2F4 003648B4  3C 80 80 39 */	lis r4, func_80390978@ha
+/* 8039B2F4 003648B4  3C 80 80 39 */	lis r4, gcCiGetInterface@ha
 /* 8039B2F8 003648B8  38 7F 00 04 */	addi r3, r31, 4
 /* 8039B2FC 003648BC  38 A0 00 00 */	li r5, 0
-/* 8039B300 003648C0  38 84 09 78 */	addi r4, r4, func_80390978@l
+/* 8039B300 003648C0  38 84 09 78 */	addi r4, r4, gcCiGetInterface@l
 /* 8039B304 003648C4  4B FF 42 B5 */	bl cvFsAddDev
 /* 8039B308 003648C8  38 7F 00 04 */	addi r3, r31, 4
 /* 8039B30C 003648CC  4B FF 45 61 */	bl cvFsSetDefDev

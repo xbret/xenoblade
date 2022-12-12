@@ -2,15 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8039B408
-func_8039B408:
+.global criCrw_GetVersion
+criCrw_GetVersion:
 /* 8039B408 003649C8  3C 60 80 52 */	lis r3, lbl_8051CD90@ha
 /* 8039B40C 003649CC  3C 80 80 60 */	lis r4, lbl_80601360@ha
 /* 8039B410 003649D0  38 63 CD 90 */	addi r3, r3, lbl_8051CD90@l
 /* 8039B414 003649D4  90 64 13 60 */	stw r3, lbl_80601360@l(r4)
 /* 8039B418 003649D8  4E 80 00 20 */	blr 
-
-#the names of the 4 functions below are guesses
 
 .global criCrw_Strcpy
 criCrw_Strcpy:
@@ -74,12 +72,13 @@ lbl_8039B478:
 /* 8039B4CC 00364A8C  38 21 00 80 */	addi r1, r1, 0x80
 /* 8039B4D0 00364A90  4E 80 00 20 */	blr 
 
-#guess
 .global criCrw_Vsprintf
 criCrw_Vsprintf:
 /* 8039B4D4 00364A94  7C A4 2B 78 */	mr r4, r5
 /* 8039B4D8 00364A98  7C C5 33 78 */	mr r5, r6
 /* 8039B4DC 00364A9C  4B F2 59 E4 */	b vsprintf
+
+#may not belong here?
 
 .global func_8039B4E0
 func_8039B4E0:

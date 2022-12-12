@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SKG_GenerateKey
+
 SKG_GenerateKey:
 /* 80386970 0034FF30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80386974 0034FF34  3D 20 80 5F */	lis r9, skg_init_count@ha

@@ -24102,8 +24102,9 @@ lbl_8056372C:
 	# ROM: 0x55F82C
 	.4byte lbl_8051AA80
 
-.global lbl_80563730
-lbl_80563730:
+#goes in ahx_ftbl.s
+.global ahxsbf_synthesis_filter_table
+ahxsbf_synthesis_filter_table:
 	.4byte 0x3F3504F4
 	.4byte 0xBF3504F4
 	.4byte 0xBF3504F4
@@ -26189,7 +26190,7 @@ lbl_80563730:
 .global lbl_805657B0
 lbl_805657B0:
 	# ROM: 0x5618B0
-	.4byte lbl_80563730
+	.4byte ahxsbf_synthesis_filter_table
 
 
 .global lbl_805657B4
@@ -26201,7 +26202,7 @@ lbl_805657B4:
 .global lbl_805657B8
 lbl_805657B8:
 	# ROM: 0x5618B8
-	.4byte func_8038AEA8
+	.4byte ahxsbf_mult_float_win0
 	.4byte func_8038AFF4
 	.4byte func_8038B140
 	.4byte func_8038B28C
@@ -26218,8 +26219,9 @@ lbl_805657B8:
 	.4byte func_8038C0D0
 	.4byte func_8038C21C
 
-.global lbl_805657F8
-lbl_805657F8:
+#goes in ahx_wtbl.s
+.global ahxsbf_synthesis_window_table
+ahxsbf_synthesis_window_table:
 	.4byte 0
 	.4byte 0xB9E80004
 	.4byte 0x3B550000
@@ -26769,7 +26771,7 @@ lbl_805657F8:
 .global lbl_80566078
 lbl_80566078:
 	# ROM: 0x562178
-	.4byte lbl_805657F8
+	.4byte ahxsbf_synthesis_window_table
 
 
 .global lbl_8056607C
@@ -29852,8 +29854,10 @@ lbl_80566080:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80569080
-lbl_80569080:
+
+#belongs in ahx_cmn.s
+.global ahxcmn_multiple_tbl
+ahxcmn_multiple_tbl:
 	.4byte 0x40000000
 	.4byte 0x3FCB2FF5
 	.4byte 0x3FA14518
@@ -29935,7 +29939,7 @@ lbl_80569184:
 .global lbl_80569188
 lbl_80569188:
 	# ROM: 0x565288
-	.4byte lbl_80569080
+	.4byte ahxcmn_multiple_tbl
 
 
 .global lbl_8056918C
@@ -29992,23 +29996,23 @@ lbl_805691E0:
 .global lbl_80569208
 lbl_80569208:
 	# ROM: 0x565308
-	.4byte func_80390B40
-	.4byte func_80390B9C
-	.4byte func_80390BB0
+	.4byte gcCiExecServer
+	.4byte gcCiEntryErrFunc
+	.4byte gcCiGetFileSize
 	.4byte 0
-	.4byte func_80390D10
-	.4byte func_80390F30
-	.4byte func_80390F84
-	.4byte func_80391048
-	.4byte func_803910A8
+	.4byte gcCiOpen
+	.4byte gcCiClose
+	.4byte gcCiSeek
+	.4byte gcCiTell
+	.4byte gcCiReqRd
 	.4byte 0
-	.4byte func_803913D8
-	.4byte func_80391588
-	.4byte func_803915EC
-	.4byte func_8039164C
-	.4byte func_80391710
+	.4byte gcCiStopTr
+	.4byte gcCiGetStat
+	.4byte gcCiGetSctLen
+	.4byte gcCiSetSctLen
+	.4byte gcCiGetNumTr
 	.4byte 0
-	.4byte func_80391770
+	.4byte gcCiIsExistFile
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -31906,6 +31910,7 @@ lbl_8056A958:
 	.4byte lbl_803AF148
 	.4byte lbl_803B1C70
 	.4byte lbl_803AF148
+
 .global lbl_8056AD58
 lbl_8056AD58:
 	.4byte lbl_803B5164
@@ -32164,6 +32169,7 @@ lbl_8056AD58:
 	.4byte lbl_803B2768
 	.4byte lbl_803B5290
 	.4byte lbl_803B2768
+	
 .global lbl_8056B158
 lbl_8056B158:
 	.4byte lbl_803B8B8C
