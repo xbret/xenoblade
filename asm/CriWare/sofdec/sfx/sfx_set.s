@@ -2,24 +2,24 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_803D4864
-func_803D4864:
+.global SFX_SetCompoMode
+SFX_SetCompoMode:
 /* 803D4864 0039DE24  90 83 00 04 */	stw r4, 4(r3)
 /* 803D4868 0039DE28  4E 80 00 20 */	blr 
 
-.global func_803D486C
-func_803D486C:
+.global SFX_SetOutBufSize
+SFX_SetOutBufSize:
 /* 803D486C 0039DE2C  90 83 00 08 */	stw r4, 8(r3)
 /* 803D4870 0039DE30  90 A3 00 0C */	stw r5, 0xc(r3)
 /* 803D4874 0039DE34  4E 80 00 20 */	blr 
 
-.global func_803D4878
-func_803D4878:
+.global SFX_SetUnitWidth
+SFX_SetUnitWidth:
 /* 803D4878 0039DE38  90 83 00 10 */	stw r4, 0x10(r3)
 /* 803D487C 0039DE3C  4E 80 00 20 */	blr 
 
-.global func_803D4880
-func_803D4880:
+.global SFX_SetTagInf
+SFX_SetTagInf:
 /* 803D4880 0039DE40  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D4884 0039DE44  7C 08 02 A6 */	mflr r0
 /* 803D4888 0039DE48  3C E0 80 52 */	lis r7, lbl_80520840@ha
@@ -42,13 +42,13 @@ func_803D4880:
 /* 803D48CC 0039DE8C  7F E3 FB 78 */	mr r3, r31
 /* 803D48D0 0039DE90  38 80 00 00 */	li r4, 0
 /* 803D48D4 0039DE94  38 A0 00 00 */	li r5, 0
-/* 803D48D8 0039DE98  48 00 15 D9 */	bl sfxzmv_SetTagGrp
+/* 803D48D8 0039DE98  48 00 15 D9 */	bl SFXZ_SetTagInf
 /* 803D48DC 0039DE9C  48 00 00 14 */	b lbl_803D48F0
 lbl_803D48E0:
 /* 803D48E0 0039DEA0  80 81 00 08 */	lwz r4, 8(r1)
 /* 803D48E4 0039DEA4  7F E3 FB 78 */	mr r3, r31
 /* 803D48E8 0039DEA8  80 A1 00 0C */	lwz r5, 0xc(r1)
-/* 803D48EC 0039DEAC  48 00 15 C5 */	bl sfxzmv_SetTagGrp
+/* 803D48EC 0039DEAC  48 00 15 C5 */	bl SFXZ_SetTagInf
 lbl_803D48F0:
 /* 803D48F0 0039DEB0  38 00 00 01 */	li r0, 1
 /* 803D48F4 0039DEB4  90 1E 00 14 */	stw r0, 0x14(r30)
@@ -59,8 +59,8 @@ lbl_803D48F0:
 /* 803D4908 0039DEC8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D490C 0039DECC  4E 80 00 20 */	blr 
 
-.global func_803D4910
-func_803D4910:
+.global SFX_GetTagInf
+SFX_GetTagInf:
 /* 803D4910 0039DED0  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 803D4914 0039DED4  2C 00 00 01 */	cmpwi r0, 1
 /* 803D4918 0039DED8  41 82 00 14 */	beq lbl_803D492C
@@ -81,23 +81,23 @@ SFX_GetZfrmRange:
 /* 803D4944 0039DF04  80 84 00 4C */	lwz r4, 0x4c(r4)
 /* 803D4948 0039DF08  48 00 16 4C */	b SFXZ_GetZfrmRange
 
-.global func_803D494C
-func_803D494C:
+.global SFX_GetSplitField
+SFX_GetSplitField:
 /* 803D494C 0039DF0C  80 63 00 58 */	lwz r3, 0x58(r3)
 /* 803D4950 0039DF10  4E 80 00 20 */	blr 
 
-.global func_803D4954
-func_803D4954:
+.global SFX_GetProgOut
+SFX_GetProgOut:
 /* 803D4954 0039DF14  80 63 00 5C */	lwz r3, 0x5c(r3)
 /* 803D4958 0039DF18  4E 80 00 20 */	blr 
 
-.global func_803D495C
-func_803D495C:
+.global SFX_GetCnvBottomUp
+SFX_GetCnvBottomUp:
 /* 803D495C 0039DF1C  80 63 00 64 */	lwz r3, 0x64(r3)
 /* 803D4960 0039DF20  4E 80 00 20 */	blr 
 
-.global func_803D4964
-func_803D4964:
+.global SFX_ShiftYccPtrByPix
+SFX_ShiftYccPtrByPix:
 /* 803D4964 0039DF24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D4968 0039DF28  54 A6 0F FE */	srwi r6, r5, 0x1f
 /* 803D496C 0039DF2C  54 80 0F FE */	srwi r0, r4, 0x1f

@@ -26203,21 +26203,21 @@ lbl_805657B4:
 lbl_805657B8:
 	# ROM: 0x5618B8
 	.4byte ahxsbf_mult_float_win0
-	.4byte func_8038AFF4
-	.4byte func_8038B140
-	.4byte func_8038B28C
-	.4byte func_8038B3D8
-	.4byte func_8038B524
-	.4byte func_8038B670
-	.4byte func_8038B7BC
-	.4byte func_8038B908
-	.4byte func_8038BA54
-	.4byte func_8038BBA0
-	.4byte func_8038BCEC
-	.4byte func_8038BE38
-	.4byte func_8038BF84
-	.4byte func_8038C0D0
-	.4byte func_8038C21C
+	.4byte ahxsbf_mult_float_win1
+	.4byte ahxsbf_mult_float_win2
+	.4byte ahxsbf_mult_float_win3
+	.4byte ahxsbf_mult_float_win4
+	.4byte ahxsbf_mult_float_win5
+	.4byte ahxsbf_mult_float_win6
+	.4byte ahxsbf_mult_float_win7
+	.4byte ahxsbf_mult_float_win8
+	.4byte ahxsbf_mult_float_win9
+	.4byte ahxsbf_mult_float_win10
+	.4byte ahxsbf_mult_float_win11
+	.4byte ahxsbf_mult_float_win12
+	.4byte ahxsbf_mult_float_win13
+	.4byte ahxsbf_mult_float_win14
+	.4byte ahxsbf_mult_float_win15
 
 #goes in ahx_wtbl.s
 .global ahxsbf_synthesis_window_table

@@ -531,6 +531,7 @@ CRIWARE_O_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdsvm.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwstm.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdsfx.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdcre.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdlib.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdply.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdset.o \
@@ -583,7 +584,7 @@ CRIWARE_O_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_vom.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_tmr.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_tst.o \
-	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfh/code_803D0030.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_seeki.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfh/sfh_main.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfh/sfh_ver1.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfh/sfh_ver2.o \

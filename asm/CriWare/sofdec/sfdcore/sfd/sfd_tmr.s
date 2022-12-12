@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global func_803CEE60
-func_803CEE60:
+.global SFTMR_GetTmr
+SFTMR_GetTmr:
 /* 803CEE60 00398420  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CEE64 00398424  7C 08 02 A6 */	mflr r0
 /* 803CEE68 00398428  90 01 00 24 */	stw r0, 0x24(r1)
@@ -44,9 +44,9 @@ lbl_803CEE9C:
 /* 803CEEEC 003984AC  90 05 CE 00 */	stw r0, lbl_8061CE00@l(r5)
 /* 803CEEF0 003984B0  48 00 00 34 */	b lbl_803CEF24
 lbl_803CEEF4:
-/* 803CEEF4 003984B4  3C 80 80 61 */	lis r4, lbl_8060A2E4@ha
+/* 803CEEF4 003984B4  3C 80 80 61 */	lis r4, SFLIB_libwork@ha
 /* 803CEEF8 003984B8  3C C0 80 62 */	lis r6, lbl_8061CE00@ha
-/* 803CEEFC 003984BC  38 84 A2 E4 */	addi r4, r4, lbl_8060A2E4@l
+/* 803CEEFC 003984BC  38 84 A2 E4 */	addi r4, r4, SFLIB_libwork@l
 /* 803CEF00 003984C0  80 64 01 B0 */	lwz r3, 0x1b0(r4)
 /* 803CEF04 003984C4  38 A6 CE 00 */	addi r5, r6, lbl_8061CE00@l
 /* 803CEF08 003984C8  80 04 01 C0 */	lwz r0, 0x1c0(r4)
@@ -63,8 +63,8 @@ lbl_803CEF24:
 /* 803CEF30 003984F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CEF34 003984F4  4E 80 00 20 */	blr 
 
-.global func_803CEF38
-func_803CEF38:
+.global SFTMR_GetTmrUnit
+SFTMR_GetTmrUnit:
 /* 803CEF38 003984F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CEF3C 003984FC  7C 08 02 A6 */	mflr r0
 /* 803CEF40 00398500  90 01 00 24 */	stw r0, 0x24(r1)
@@ -106,9 +106,9 @@ lbl_803CEF8C:
 /* 803CEFCC 0039858C  90 1E CE 00 */	stw r0, lbl_8061CE00@l(r30)
 /* 803CEFD0 00398590  48 00 00 28 */	b lbl_803CEFF8
 lbl_803CEFD4:
-/* 803CEFD4 00398594  3C C0 80 61 */	lis r6, lbl_8060A2E4@ha
+/* 803CEFD4 00398594  3C C0 80 61 */	lis r6, SFLIB_libwork@ha
 /* 803CEFD8 00398598  3C 80 80 62 */	lis r4, lbl_8061CE00@ha
-/* 803CEFDC 0039859C  38 C6 A2 E4 */	addi r6, r6, lbl_8060A2E4@l
+/* 803CEFDC 0039859C  38 C6 A2 E4 */	addi r6, r6, SFLIB_libwork@l
 /* 803CEFE0 003985A0  80 A6 01 BC */	lwz r5, 0x1bc(r6)
 /* 803CEFE4 003985A4  38 64 CE 00 */	addi r3, r4, lbl_8061CE00@l
 /* 803CEFE8 003985A8  80 06 01 B0 */	lwz r0, 0x1b0(r6)
@@ -143,8 +143,8 @@ SFTMR_InitTsum:
 /* 803CF04C 0039860C  90 A3 00 18 */	stw r5, 0x18(r3)
 /* 803CF050 00398610  4E 80 00 20 */	blr 
 
-.global func_803CF054
-func_803CF054:
+.global SFTMR_AddTsum
+SFTMR_AddTsum:
 /* 803CF054 00398614  80 83 00 04 */	lwz r4, 4(r3)
 /* 803CF058 00398618  6C A0 80 00 */	xoris r0, r5, 0x8000
 /* 803CF05C 0039861C  80 E3 00 00 */	lwz r7, 0(r3)

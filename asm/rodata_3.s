@@ -3349,12 +3349,12 @@ lbl_8051FF48:
 	.4byte SFAOAP_Init
 	.4byte SFAOAP_Finish
 	.4byte SFAOAP_ExecServer
-	.4byte func_803BEAFC
-	.4byte func_803BEB48
-	.4byte func_803BEB50
-	.4byte func_803BEB78
-	.4byte func_803BEBE4
-	.4byte func_803BEC50
+	.4byte SFAOAP_Create
+	.4byte SFAOAP_Destroy
+	.4byte SFAOAP_RequestStop
+	.4byte SFAOAP_Start
+	.4byte SFAOAP_Stop
+	.4byte SFAOAP_Pause
 	.4byte SFAOAP_GetWrite
 	.4byte SFAOAP_AddWrite
 	.4byte SFAOAP_GetRead
@@ -3638,65 +3638,65 @@ lbl_80520294:
 
 .global lbl_805202A0
 lbl_805202A0:
-	.4byte lbl_803C0E40
-	.4byte func_803C0E48
-	.4byte func_803C0E50
-	.4byte func_803C0E7C
-	.4byte func_803C0E84
-	.4byte func_803C0E8C
-	.4byte func_803C0E94
-	.4byte func_803C0E9C
-	.4byte func_803C0EA4
-	.4byte func_803C0EAC
-	.4byte func_803C0EB8
-	.4byte func_803C0ED0
-	.4byte func_803C0EDC
-	.4byte func_803C0EE8
+	.4byte SFMEM_Init
+	.4byte SFMEM_Finish
+	.4byte SFMEM_ExecServer
+	.4byte SFMEM_Create
+	.4byte SFMEM_Destroy
+	.4byte SFMEM_RequestStop
+	.4byte SFMEM_Start
+	.4byte SFMEM_Stop
+	.4byte SFMEM_Pause
+	.4byte SFMEM_GetWrite
+	.4byte SFMEM_AddWrite
+	.4byte SFMEM_GetRead
+	.4byte SFMEM_AddRead
+	.4byte SFMEM_Seek
 
 .global lbl_805202D8
 lbl_805202D8:
 	.4byte SFMPS_Init
 	.4byte SFMPS_Finish
 	.4byte func_803C0FF8
-	.4byte func_803C2AE4
-	.4byte func_803C2CBC
-	.4byte func_803C2D10
-	.4byte func_803C2D18
-	.4byte func_803C2D20
-	.4byte func_803C2D28
-	.4byte func_803C2D30
-	.4byte func_803C2D3C
-	.4byte func_803C2D48
-	.4byte func_803C2D54
+	.4byte SFMPS_Create
+	.4byte SFMPS_Destroy
+	.4byte SFMPS_RequestStop
+	.4byte SFMPS_Start
+	.4byte SFMPS_Stop
+	.4byte SFMPS_Pause
+	.4byte SFMPS_GetWrite
+	.4byte SFMPS_AddWrite
+	.4byte SFMPS_GetRead
+	.4byte SFMPS_AddRead
 	.4byte SFMPS_Seek
 
 
 .global lbl_80520310
 lbl_80520310:
 	# ROM: 0x51C410
-	.4byte func_803C1D9C
-	.4byte func_803C1F30
-	.4byte func_803C214C
-	.4byte func_803C23A0
+	.4byte sfmps_CopyAudio
+	.4byte sfmps_CopyVideo
+	.4byte sfmps_CopyPrvate
+	.4byte sfmps_CopyPadding
 
 
 .global lbl_80520320
 lbl_80520320:
 	# ROM: 0x51C420
-	.4byte func_803C3078
-	.4byte func_803C312C
-	.4byte func_803C3150
+	.4byte SFMPV_Init
+	.4byte SFMPV_Finish
+	.4byte SFMPV_ExecServer
 	.4byte SFMPV_Create
-	.4byte func_803C7788
-	.4byte func_803C780C
-	.4byte func_803C7848
-	.4byte func_803C7850
-	.4byte func_803C7858
-	.4byte func_803C7860
-	.4byte func_803C786C
-	.4byte func_803C7878
-	.4byte func_803C79F0
-	.4byte func_803C79F4
+	.4byte SFMPV_Destroy
+	.4byte SFMPV_RequestStop
+	.4byte SFMPV_Start
+	.4byte SFMPV_Stop
+	.4byte SFMPV_Pause
+	.4byte SFMPV_GetWrite
+	.4byte SFMPV_AddWrite
+	.4byte SFMPV_GetRead
+	.4byte SFMPV_AddRead
+	.4byte SFMPV_Seek
 
 
 .global lbl_80520358
@@ -3880,7 +3880,7 @@ lbl_80520600:
 	.4byte 0
 	.4byte 0
 	.4byte func_803CD7A8
-	.4byte func_803CD938
+	.4byte sftim_Tc2Time23D
 	.4byte func_803CD72C
 	.4byte func_803CD72C
 	.4byte func_803CD72C
@@ -3892,7 +3892,7 @@ lbl_80520600:
 	.4byte func_803CD72C
 	.4byte func_803CD72C
 	.4byte func_803CD8B0
-	.4byte func_803CDAA0
+	.4byte sftim_Tc2Time59D
 	.4byte func_803CD72C
 	.4byte func_803CD72C
 
@@ -3913,37 +3913,37 @@ lbl_80520648:
 
 .global lbl_80520678
 lbl_80520678:
-	.4byte func_803CEB14
-	.4byte func_803CEB1C
-	.4byte func_803CEB24
-	.4byte func_803CEBBC
-	.4byte func_803CEC3C
-	.4byte func_803CEC44
-	.4byte func_803CEC4C
-	.4byte func_803CEC54
-	.4byte func_803CEC5C
-	.4byte func_803CEC64
-	.4byte func_803CEC70
-	.4byte func_803CEC7C
-	.4byte func_803CEC88
-	.4byte func_803CEC94
+	.4byte SFUO_Init
+	.4byte SFUO_Finish
+	.4byte SFUO_ExecServer
+	.4byte SFUO_Create
+	.4byte SFUO_Destroy
+	.4byte SFUO_RequestStop
+	.4byte SFUO_Start
+	.4byte SFUO_Stop
+	.4byte SFUO_Pause
+	.4byte SFUO_GetWrite
+	.4byte SFUO_AddWrite
+	.4byte SFUO_GetRead
+	.4byte SFUO_AddRead
+	.4byte SFUO_Seek
 
 .global lbl_805206B0
 lbl_805206B0:
-	.4byte func_803CEC9C
-	.4byte func_803CECA4
-	.4byte func_803CECAC
-	.4byte func_803CED98
-	.4byte func_803CEDA0
-	.4byte func_803CEDA8
-	.4byte func_803CEDB0
-	.4byte func_803CEDB8
-	.4byte func_803CEDC0
-	.4byte func_803CEDC8
-	.4byte func_803CEDD4
-	.4byte func_803CEDE0
-	.4byte func_803CEE44
-	.4byte func_803CEE58
+	.4byte SFVOM_Init
+	.4byte SFVOM_Finish
+	.4byte SFVOM_ExecServer
+	.4byte SFVOM_Create
+	.4byte SFVOM_Destroy
+	.4byte SFVOM_RequestStop
+	.4byte SFVOM_Start
+	.4byte SFVOM_Stop
+	.4byte SFVOM_Pause
+	.4byte SFVOM_GetWrite
+	.4byte SFVOM_AddWrite
+	.4byte SFVOM_GetRead
+	.4byte SFVOM_AddRead
+	.4byte SFVOM_Seek
 
 
 .global lbl_805206E8

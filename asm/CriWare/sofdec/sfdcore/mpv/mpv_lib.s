@@ -606,8 +606,8 @@ func_803A87BC:
 /* 803A87C8 00371D88  90 05 00 00 */	stw r0, 0(r5)
 /* 803A87CC 00371D8C  4E 80 00 20 */	blr 
 
-.global func_803A87D0
-func_803A87D0:
+.global MPV_Destroy
+MPV_Destroy:
 /* 803A87D0 00371D90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A87D4 00371D94  7C 08 02 A6 */	mflr r0
 /* 803A87D8 00371D98  2C 03 00 00 */	cmpwi r3, 0
@@ -663,8 +663,8 @@ lbl_803A8878:
 /* 803A8884 00371E44  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A8888 00371E48  4E 80 00 20 */	blr 
 
-.global func_803A888C
-func_803A888C:
+.global MPV_SetCond
+MPV_SetCond:
 /* 803A888C 00371E4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A8890 00371E50  7C 08 02 A6 */	mflr r0
 /* 803A8894 00371E54  2C 03 00 00 */	cmpwi r3, 0
@@ -764,8 +764,8 @@ lbl_803A89B4:
 /* 803A89C0 00371F80  90 05 00 00 */	stw r0, 0(r5)
 /* 803A89C4 00371F84  4E 80 00 20 */	blr
 
-.global func_803A89C8
-func_803A89C8:
+.global MPV_SetMbCb
+MPV_SetMbCb:
 /* 803A89C8 00371F88  90 83 0B 50 */	stw r4, 0xb50(r3)
 /* 803A89CC 00371F8C  90 C3 0B 58 */	stw r6, 0xb58(r3)
 /* 803A89D0 00371F90  90 A3 0B 54 */	stw r5, 0xb54(r3)

@@ -77,8 +77,8 @@ lbl_803CB92C:
 /* 803CB944 00394F04  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CB948 00394F08  4E 80 00 20 */	blr 
 
-.global func_803CB94C
-func_803CB94C:
+.global SFPTS_WritePtsQue
+SFPTS_WritePtsQue:
 /* 803CB94C 00394F0C  38 E0 00 00 */	li r7, 0
 /* 803CB950 00394F10  90 E6 00 00 */	stw r7, 0(r6)
 /* 803CB954 00394F14  6C E8 80 00 */	xoris r8, r7, 0x8000
@@ -150,8 +150,8 @@ lbl_803CBA3C:
 /* 803CBA3C 00394FFC  38 60 00 00 */	li r3, 0
 /* 803CBA40 00395000  4E 80 00 20 */	blr 
 
-.global func_803CBA44
-func_803CBA44:
+.global SFPTS_ReadPtsQue
+SFPTS_ReadPtsQue:
 /* 803CBA44 00395004  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CBA48 00395008  7C 08 02 A6 */	mflr r0
 /* 803CBA4C 0039500C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -213,7 +213,7 @@ lbl_803CBB0C:
 /* 803CBB1C 003950DC  7F E3 FB 78 */	mr r3, r31
 /* 803CBB20 003950E0  7C E5 3B 78 */	mr r5, r7
 /* 803CBB24 003950E4  7D 06 43 78 */	mr r6, r8
-/* 803CBB28 003950E8  48 00 00 81 */	bl func_803CBBA8
+/* 803CBB28 003950E8  48 00 00 81 */	bl sfpts_SearchPtsQue
 /* 803CBB2C 003950EC  2C 03 FF FF */	cmpwi r3, -1
 /* 803CBB30 003950F0  41 82 00 5C */	beq lbl_803CBB8C
 /* 803CBB34 003950F4  80 1F 00 10 */	lwz r0, 0x10(r31)
@@ -249,8 +249,8 @@ lbl_803CBB90:
 /* 803CBBA0 00395160  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CBBA4 00395164  4E 80 00 20 */	blr 
 
-.global func_803CBBA8
-func_803CBBA8:
+.global sfpts_SearchPtsQue
+sfpts_SearchPtsQue:
 /* 803CBBA8 00395168  80 03 00 08 */	lwz r0, 8(r3)
 /* 803CBBAC 0039516C  7D 65 32 14 */	add r11, r5, r6
 /* 803CBBB0 00395170  81 43 00 04 */	lwz r10, 4(r3)
@@ -301,8 +301,8 @@ lbl_803CBC48:
 /* 803CBC48 00395208  38 60 FF FF */	li r3, -1
 /* 803CBC4C 0039520C  4E 80 00 20 */	blr 
 
-.global func_803CBC50
-func_803CBC50:
+.global SFPTS_IsPtsQueFull
+SFPTS_IsPtsQueFull:
 /* 803CBC50 00395210  1C 04 00 74 */	mulli r0, r4, 0x74
 /* 803CBC54 00395214  7C 63 02 14 */	add r3, r3, r0
 /* 803CBC58 00395218  80 03 13 E8 */	lwz r0, 0x13e8(r3)

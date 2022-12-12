@@ -53,8 +53,8 @@ lbl_803D0E14:
 /* 803D0E24 0039A3E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D0E28 0039A3E8  4E 80 00 20 */	blr
 
-.global func_803D0E2C
-func_803D0E2C:
+.global VER1_IsExistStmId
+VER1_IsExistStmId:
 /* 803D0E2C 0039A3EC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D0E30 0039A3F0  7C 08 02 A6 */	mflr r0
 /* 803D0E34 0039A3F4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -100,8 +100,8 @@ lbl_803D0EB0:
 /* 803D0EC0 0039A480  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D0EC4 0039A484  4E 80 00 20 */	blr
 
-.global func_803D0EC8
-func_803D0EC8:
+.global VER1_IsEffFtrInf
+VER1_IsEffFtrInf:
 /* 803D0EC8 0039A488  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D0ECC 0039A48C  7C 08 02 A6 */	mflr r0
 /* 803D0ED0 0039A490  90 01 00 24 */	stw r0, 0x24(r1)
@@ -379,8 +379,8 @@ VER1_AnlyHdrModuleVer:
 /* 803D1260 0039A820  90 05 00 00 */	stw r0, 0(r5)
 /* 803D1264 0039A824  4E 80 00 20 */	blr
 
-.global func_803D1268
-func_803D1268:
+.global VER1_AnlyHdrSiz
+VER1_AnlyHdrSiz:
 /* 803D1268 0039A828  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D126C 0039A82C  7C 08 02 A6 */	mflr r0
 /* 803D1270 0039A830  90 01 00 14 */	stw r0, 0x14(r1)
@@ -406,8 +406,8 @@ func_803D1268:
 /* 803D12C0 0039A880  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D12C4 0039A884  4E 80 00 20 */	blr
 
-.global func_803D12C8
-func_803D12C8:
+.global VER1_AnlyPackType
+VER1_AnlyPackType:
 /* 803D12C8 0039A888  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D12CC 0039A88C  7C 08 02 A6 */	mflr r0
 /* 803D12D0 0039A890  90 01 00 14 */	stw r0, 0x14(r1)
@@ -433,8 +433,8 @@ func_803D12C8:
 /* 803D1320 0039A8E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D1324 0039A8E4  4E 80 00 20 */	blr
 
-.global func_803D1328
-func_803D1328:
+.global VER1_AnlyPketSizLen
+VER1_AnlyPketSizLen:
 /* 803D1328 0039A8E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D132C 0039A8EC  7C 08 02 A6 */	mflr r0
 /* 803D1330 0039A8F0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -460,8 +460,8 @@ func_803D1328:
 /* 803D1380 0039A940  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D1384 0039A944  4E 80 00 20 */	blr
 
-.global func_803D1388
-func_803D1388:
+.global VER1_AnlyPackSiz
+VER1_AnlyPackSiz:
 /* 803D1388 0039A948  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D138C 0039A94C  7C 08 02 A6 */	mflr r0
 /* 803D1390 0039A950  90 01 00 14 */	stw r0, 0x14(r1)
@@ -487,8 +487,8 @@ func_803D1388:
 /* 803D13E0 0039A9A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D13E4 0039A9A4  4E 80 00 20 */	blr
 
-.global func_803D13E8
-func_803D13E8:
+.global VER1_AnlyNumElemTot
+VER1_AnlyNumElemTot:
 /* 803D13E8 0039A9A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D13EC 0039A9AC  7C 08 02 A6 */	mflr r0
 /* 803D13F0 0039A9B0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -514,8 +514,8 @@ func_803D13E8:
 /* 803D1440 0039AA00  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D1444 0039AA04  4E 80 00 20 */	blr
 
-.global func_803D1448
-func_803D1448:
+.global VER1_AnlyNumElemAud
+VER1_AnlyNumElemAud:
 /* 803D1448 0039AA08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D144C 0039AA0C  7C 08 02 A6 */	mflr r0
 /* 803D1450 0039AA10  90 01 00 14 */	stw r0, 0x14(r1)
@@ -541,8 +541,8 @@ func_803D1448:
 /* 803D14A0 0039AA60  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D14A4 0039AA64  4E 80 00 20 */	blr
 
-.global func_803D14A8
-func_803D14A8:
+.global VER1_AnlyNumElemVid
+VER1_AnlyNumElemVid:
 /* 803D14A8 0039AA68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D14AC 0039AA6C  7C 08 02 A6 */	mflr r0
 /* 803D14B0 0039AA70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -568,8 +568,8 @@ func_803D14A8:
 /* 803D1500 0039AAC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D1504 0039AAC4  4E 80 00 20 */	blr
 
-.global func_803D1508
-func_803D1508:
+.global VER1_AnlyNumElemPrv
+VER1_AnlyNumElemPrv:
 /* 803D1508 0039AAC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D150C 0039AACC  7C 08 02 A6 */	mflr r0
 /* 803D1510 0039AAD0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -595,8 +595,8 @@ func_803D1508:
 /* 803D1560 0039AB20  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D1564 0039AB24  4E 80 00 20 */	blr
 
-.global func_803D1568
-func_803D1568:
+.global VER1_AnlyByteRate
+VER1_AnlyByteRate:
 /* 803D1568 0039AB28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D156C 0039AB2C  7C 08 02 A6 */	mflr r0
 /* 803D1570 0039AB30  90 01 00 14 */	stw r0, 0x14(r1)
@@ -629,8 +629,8 @@ lbl_803D15C4:
 /* 803D15D4 0039AB94  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D15D8 0039AB98  4E 80 00 20 */	blr
 
-.global func_803D15DC
-func_803D15DC:
+.global VER1_AnlyMaxPlyLenAud
+VER1_AnlyMaxPlyLenAud:
 /* 803D15DC 0039AB9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D15E0 0039ABA0  7C 08 02 A6 */	mflr r0
 /* 803D15E4 0039ABA4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -656,8 +656,8 @@ func_803D15DC:
 /* 803D1634 0039ABF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D1638 0039ABF8  4E 80 00 20 */	blr
 
-.global func_803D163C
-func_803D163C:
+.global VER1_AnlyMaxPlyLenVid
+VER1_AnlyMaxPlyLenVid:
 /* 803D163C 0039ABFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D1640 0039AC00  7C 08 02 A6 */	mflr r0
 /* 803D1644 0039AC04  90 01 00 14 */	stw r0, 0x14(r1)
@@ -683,8 +683,8 @@ func_803D163C:
 /* 803D1694 0039AC54  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D1698 0039AC58  4E 80 00 20 */	blr
 
-.global func_803D169C
-func_803D169C:
+.global VER1_AnlyMaxFrmNum
+VER1_AnlyMaxFrmNum:
 /* 803D169C 0039AC5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D16A0 0039AC60  7C 08 02 A6 */	mflr r0
 /* 803D16A4 0039AC64  90 01 00 14 */	stw r0, 0x14(r1)
@@ -744,8 +744,8 @@ lbl_803D1758:
 /* 803D1768 0039AD28  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D176C 0039AD2C  4E 80 00 20 */	blr 
 
-.global func_803D1770
-func_803D1770:
+.global VER1_AnlyElemCodecAud
+VER1_AnlyElemCodecAud:
 /* 803D1770 0039AD30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D1774 0039AD34  7C 08 02 A6 */	mflr r0
 /* 803D1778 0039AD38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -860,8 +860,8 @@ lbl_803D18CC:
 /* 803D18D8 0039AE98  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D18DC 0039AE9C  4E 80 00 20 */	blr
 
-.global func_803D18E0
-func_803D18E0:
+.global VER1_AnlyElemLayer
+VER1_AnlyElemLayer:
 /* 803D18E0 0039AEA0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803D18E4 0039AEA4  7C 08 02 A6 */	mflr r0
 /* 803D18E8 0039AEA8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -935,7 +935,7 @@ lbl_803D19C8:
 /* 803D19C8 0039AF88  7F 43 D3 78 */	mr r3, r26
 /* 803D19CC 0039AF8C  7F 64 DB 78 */	mr r4, r27
 /* 803D19D0 0039AF90  38 A1 00 08 */	addi r5, r1, 8
-/* 803D19D4 0039AF94  4B FF FD 9D */	bl func_803D1770
+/* 803D19D4 0039AF94  4B FF FD 9D */	bl VER1_AnlyElemCodecAud
 /* 803D19D8 0039AF98  2C 03 00 00 */	cmpwi r3, 0
 /* 803D19DC 0039AF9C  40 82 00 0C */	bne lbl_803D19E8
 /* 803D19E0 0039AFA0  38 60 00 00 */	li r3, 0
@@ -962,8 +962,8 @@ lbl_803D1A1C:
 /* 803D1A28 0039AFE8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803D1A2C 0039AFEC  4E 80 00 20 */	blr
 
-.global func_803D1A30
-func_803D1A30:
+.global VER1_AnlyElemChNum
+VER1_AnlyElemChNum:
 /* 803D1A30 0039AFF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D1A34 0039AFF4  7C 08 02 A6 */	mflr r0
 /* 803D1A38 0039AFF8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1048,8 +1048,8 @@ lbl_803D1B34:
 /* 803D1B40 0039B100  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D1B44 0039B104  4E 80 00 20 */	blr
 
-.global func_803D1B48
-func_803D1B48:
+.global VER1_AnlyElemSmpHz
+VER1_AnlyElemSmpHz:
 /* 803D1B48 0039B108  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D1B4C 0039B10C  7C 08 02 A6 */	mflr r0
 /* 803D1B50 0039B110  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1134,8 +1134,8 @@ lbl_803D1C4C:
 /* 803D1C58 0039B218  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D1C5C 0039B21C  4E 80 00 20 */	blr
 
-.global func_803D1C60
-func_803D1C60:
+.global VER1_AnlyElemCodecVid
+VER1_AnlyElemCodecVid:
 /* 803D1C60 0039B220  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D1C64 0039B224  7C 08 02 A6 */	mflr r0
 /* 803D1C68 0039B228  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1259,8 +1259,8 @@ lbl_803D1DC0:
 /* 803D1DCC 0039B38C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D1DD0 0039B390  4E 80 00 20 */	blr
 
-.global func_803D1DD4
-func_803D1DD4:
+.global VER1_AnlyElemBitRate
+VER1_AnlyElemBitRate:
 /* 803D1DD4 0039B394  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D1DD8 0039B398  7C 08 02 A6 */	mflr r0
 /* 803D1DDC 0039B39C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1349,8 +1349,8 @@ lbl_803D1EE4:
 /* 803D1EF0 0039B4B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D1EF4 0039B4B4  4E 80 00 20 */	blr
 
-.global func_803D1EF8
-func_803D1EF8:
+.global VER1_AnlyElemPicSz
+VER1_AnlyElemPicSz:
 /* 803D1EF8 0039B4B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D1EFC 0039B4BC  7C 08 02 A6 */	mflr r0
 /* 803D1F00 0039B4C0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1440,8 +1440,8 @@ lbl_803D2010:
 /* 803D201C 0039B5DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D2020 0039B5E0  4E 80 00 20 */	blr
 
-.global func_803D2024
-func_803D2024:
+.global VER1_AnlyElemPicRate
+VER1_AnlyElemPicRate:
 /* 803D2024 0039B5E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D2028 0039B5E8  7C 08 02 A6 */	mflr r0
 /* 803D202C 0039B5EC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1527,8 +1527,8 @@ lbl_803D212C:
 /* 803D2138 0039B6F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D213C 0039B6FC  4E 80 00 20 */	blr
 
-.global func_803D2140
-func_803D2140:
+.global VER1_AnlyFtrColType
+VER1_AnlyFtrColType:
 /* 803D2140 0039B700  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D2144 0039B704  7C 08 02 A6 */	mflr r0
 /* 803D2148 0039B708  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1613,8 +1613,8 @@ lbl_803D2244:
 /* 803D2250 0039B810  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D2254 0039B814  4E 80 00 20 */	blr
 
-.global func_803D2258
-func_803D2258:
+.global VER1_AnlyFtrPicType
+VER1_AnlyFtrPicType:
 /* 803D2258 0039B818  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D225C 0039B81C  7C 08 02 A6 */	mflr r0
 /* 803D2260 0039B820  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1699,8 +1699,8 @@ lbl_803D235C:
 /* 803D2368 0039B928  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D236C 0039B92C  4E 80 00 20 */	blr
 
-.global func_803D2370
-func_803D2370:
+.global VER1_AnlyFtrFixFlg
+VER1_AnlyFtrFixFlg:
 /* 803D2370 0039B930  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D2374 0039B934  7C 08 02 A6 */	mflr r0
 /* 803D2378 0039B938  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1786,8 +1786,8 @@ lbl_803D2478:
 /* 803D2484 0039BA44  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D2488 0039BA48  4E 80 00 20 */	blr
 
-.global func_803D248C
-func_803D248C:
+.global VER1_AnlyFtrShcFixFlg
+VER1_AnlyFtrShcFixFlg:
 /* 803D248C 0039BA4C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D2490 0039BA50  7C 08 02 A6 */	mflr r0
 /* 803D2494 0039BA54  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1873,8 +1873,8 @@ lbl_803D2594:
 /* 803D25A0 0039BB60  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D25A4 0039BB64  4E 80 00 20 */	blr
 
-.global func_803D25A8
-func_803D25A8:
+.global VER1_AnlyFtrExpand
+VER1_AnlyFtrExpand:
 /* 803D25A8 0039BB68  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D25AC 0039BB6C  7C 08 02 A6 */	mflr r0
 /* 803D25B0 0039BB70  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1959,8 +1959,8 @@ lbl_803D26AC:
 /* 803D26B8 0039BC78  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D26BC 0039BC7C  4E 80 00 20 */	blr
 
-.global func_803D26C0
-func_803D26C0:
+.global VER1_AnlyFtrGopN
+VER1_AnlyFtrGopN:
 /* 803D26C0 0039BC80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D26C4 0039BC84  7C 08 02 A6 */	mflr r0
 /* 803D26C8 0039BC88  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2050,8 +2050,8 @@ lbl_803D27D4:
 /* 803D27E0 0039BDA0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D27E4 0039BDA4  4E 80 00 20 */	blr
 
-.global func_803D27E8
-func_803D27E8:
+.global VER1_AnlyFtrGopM
+VER1_AnlyFtrGopM:
 /* 803D27E8 0039BDA8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D27EC 0039BDAC  7C 08 02 A6 */	mflr r0
 /* 803D27F0 0039BDB0  90 01 00 24 */	stw r0, 0x24(r1)

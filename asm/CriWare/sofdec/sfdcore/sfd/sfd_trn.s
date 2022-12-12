@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global func_803CE3F0
-func_803CE3F0:
+.global SFTRN_Init
+SFTRN_Init:
 /* 803CE3F0 003979B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CE3F4 003979B4  7C 08 02 A6 */	mflr r0
 /* 803CE3F8 003979B8  38 C0 00 00 */	li r6, 0
@@ -120,7 +120,7 @@ lbl_803CE518:
 /* 803CE598 00397B58  42 00 FF 80 */	bdnz lbl_803CE518
 /* 803CE59C 00397B5C  7F E3 FB 78 */	mr r3, r31
 /* 803CE5A0 00397B60  7D 04 43 78 */	mr r4, r8
-/* 803CE5A4 00397B64  48 00 00 39 */	bl func_803CE5DC
+/* 803CE5A4 00397B64  48 00 00 39 */	bl sftrn_BuildAll
 /* 803CE5A8 00397B68  2C 03 00 00 */	cmpwi r3, 0
 /* 803CE5AC 00397B6C  41 82 00 18 */	beq lbl_803CE5C4
 /* 803CE5B0 00397B70  3C 80 FF 00 */	lis r4, 0xFF000302@ha
@@ -137,8 +137,8 @@ lbl_803CE5C8:
 /* 803CE5D4 00397B94  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CE5D8 00397B98  4E 80 00 20 */	blr 
 
-.global func_803CE5DC
-func_803CE5DC:
+.global sftrn_BuildAll
+sftrn_BuildAll:
 /* 803CE5DC 00397B9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CE5E0 00397BA0  7C 08 02 A6 */	mflr r0
 /* 803CE5E4 00397BA4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -151,7 +151,7 @@ func_803CE5DC:
 /* 803CE600 00397BC0  38 00 00 00 */	li r0, 0
 /* 803CE604 00397BC4  90 03 1F E4 */	stw r0, 0x1fe4(r3)
 /* 803CE608 00397BC8  90 03 13 FC */	stw r0, 0x13fc(r3)
-/* 803CE60C 00397BCC  48 00 01 9D */	bl func_803CE7A8
+/* 803CE60C 00397BCC  48 00 01 9D */	bl sftrn_BuildSystem
 /* 803CE610 00397BD0  48 00 01 7C */	b lbl_803CE78C
 lbl_803CE614:
 /* 803CE614 00397BD4  80 04 00 08 */	lwz r0, 8(r4)
@@ -265,8 +265,8 @@ lbl_803CE790:
 /* 803CE7A0 00397D60  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CE7A4 00397D64  4E 80 00 20 */	blr 
 
-.global func_803CE7A8
-func_803CE7A8:
+.global sftrn_BuildSystem
+sftrn_BuildSystem:
 /* 803CE7A8 00397D68  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CE7AC 00397D6C  7C 08 02 A6 */	mflr r0
 /* 803CE7B0 00397D70  38 A0 00 01 */	li r5, 1
@@ -433,8 +433,8 @@ lbl_803CE9D8:
 /* 803CE9F0 00397FB0  4E 80 04 20 */	bctr 
 /* 803CE9F4 00397FB4  4E 80 00 20 */	blr 
 
-.global func_803CE9F8
-func_803CE9F8:
+.global SFTRN_SetPrepFlg
+SFTRN_SetPrepFlg:
 /* 803CE9F8 00397FB8  1C 04 00 44 */	mulli r0, r4, 0x44
 /* 803CE9FC 00397FBC  7C 63 02 14 */	add r3, r3, r0
 /* 803CEA00 00397FC0  90 A3 1F D0 */	stw r5, 0x1fd0(r3)

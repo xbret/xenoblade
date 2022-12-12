@@ -33,16 +33,16 @@ lbl_803CC76C:
 
 .global SFTIM_InitHn
 SFTIM_InitHn:
-/* 803CC77C 00395D3C  3C E0 80 3D */	lis r7, func_803CD1D4@ha
-/* 803CC780 00395D40  3D 80 80 3D */	lis r12, func_803CD23C@ha
-/* 803CC784 00395D44  3D 40 80 3D */	lis r10, func_803CD2AC@ha
-/* 803CC788 00395D48  3D 20 80 3D */	lis r9, func_803CD2E8@ha
-/* 803CC78C 00395D4C  3C C0 80 3D */	lis r6, func_803CD36C@ha
-/* 803CC790 00395D50  38 E7 D1 D4 */	addi r7, r7, func_803CD1D4@l
-/* 803CC794 00395D54  39 8C D2 3C */	addi r12, r12, func_803CD23C@l
-/* 803CC798 00395D58  39 4A D2 AC */	addi r10, r10, func_803CD2AC@l
-/* 803CC79C 00395D5C  39 29 D2 E8 */	addi r9, r9, func_803CD2E8@l
-/* 803CC7A0 00395D60  38 C6 D3 6C */	addi r6, r6, func_803CD36C@l
+/* 803CC77C 00395D3C  3C E0 80 3D */	lis r7, sftim_GetTimeNone@ha
+/* 803CC780 00395D40  3D 80 80 3D */	lis r12, sftim_GetTimeVsync@ha
+/* 803CC784 00395D44  3D 40 80 3D */	lis r10, sftim_GetTimeUfrm@ha
+/* 803CC788 00395D48  3D 20 80 3D */	lis r9, sftim_GetTimeUtim@ha
+/* 803CC78C 00395D4C  3C C0 80 3D */	lis r6, sftim_GetTimeExtClock@ha
+/* 803CC790 00395D50  38 E7 D1 D4 */	addi r7, r7, sftim_GetTimeNone@l
+/* 803CC794 00395D54  39 8C D2 3C */	addi r12, r12, sftim_GetTimeVsync@l
+/* 803CC798 00395D58  39 4A D2 AC */	addi r10, r10, sftim_GetTimeUfrm@l
+/* 803CC79C 00395D5C  39 29 D2 E8 */	addi r9, r9, sftim_GetTimeUtim@l
+/* 803CC7A0 00395D60  38 C6 D3 6C */	addi r6, r6, sftim_GetTimeExtClock@l
 /* 803CC7A4 00395D64  39 60 00 00 */	li r11, 0
 /* 803CC7A8 00395D68  3C A0 80 00 */	lis r5, 0x7FFFFFFF@ha
 /* 803CC7AC 00395D6C  90 E3 0D 90 */	stw r7, 0xd90(r3)
@@ -260,8 +260,8 @@ SFTIM_InitHn:
 /* 803CCAFC 003960BC  90 C4 05 FC */	stw r6, 0x5fc(r4)
 /* 803CCB00 003960C0  4E 80 00 20 */	blr 
 
-.global func_803CCB04
-func_803CCB04:
+.global SFTIM_InitTtu
+SFTIM_InitTtu:
 /* 803CCB04 003960C4  38 A0 00 00 */	li r5, 0
 /* 803CCB08 003960C8  38 00 00 01 */	li r0, 1
 /* 803CCB0C 003960CC  90 A3 00 00 */	stw r5, 0(r3)
@@ -278,8 +278,8 @@ func_803CCB04:
 /* 803CCB38 003960F8  90 03 00 28 */	stw r0, 0x28(r3)
 /* 803CCB3C 003960FC  4E 80 00 20 */	blr 
 
-.global func_803CCB40
-func_803CCB40:
+.global SFTIM_UpdateItime
+SFTIM_UpdateItime:
 /* 803CCB40 00396100  80 03 02 98 */	lwz r0, 0x298(r3)
 /* 803CCB44 00396104  2C 00 FF FB */	cmpwi r0, -5
 /* 803CCB48 00396108  40 82 00 0C */	bne lbl_803CCB54
@@ -326,8 +326,8 @@ lbl_803CCBD4:
 /* 803CCBD4 00396194  90 C3 02 9C */	stw r6, 0x29c(r3)
 /* 803CCBD8 00396198  4E 80 00 20 */	blr 
 
-.global func_803CCBDC
-func_803CCBDC:
+.global SFTIM_GetNextItime
+SFTIM_GetNextItime:
 /* 803CCBDC 0039619C  80 C3 02 98 */	lwz r6, 0x298(r3)
 /* 803CCBE0 003961A0  80 A3 02 9C */	lwz r5, 0x29c(r3)
 /* 803CCBE4 003961A4  80 03 02 A0 */	lwz r0, 0x2a0(r3)
@@ -342,14 +342,14 @@ func_803CCBDC:
 /* 803CCC08 003961C8  7C 03 03 78 */	mr r3, r0
 /* 803CCC0C 003961CC  4E 80 00 20 */	blr 
 
-.global func_803CCC10
-func_803CCC10:
+.global SFTIM_VbIn
+SFTIM_VbIn:
 /* 803CCC10 003961D0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803CCC14 003961D4  7C 08 02 A6 */	mflr r0
 /* 803CCC18 003961D8  90 01 00 54 */	stw r0, 0x54(r1)
 /* 803CCC1C 003961DC  BE 81 00 20 */	stmw r20, 0x20(r1)
-/* 803CCC20 003961E0  3F A0 80 61 */	lis r29, lbl_8060A2E4@ha
-/* 803CCC24 003961E4  3B BD A2 E4 */	addi r29, r29, lbl_8060A2E4@l
+/* 803CCC20 003961E0  3F A0 80 61 */	lis r29, SFLIB_libwork@ha
+/* 803CCC24 003961E4  3B BD A2 E4 */	addi r29, r29, SFLIB_libwork@l
 /* 803CCC28 003961E8  3E A0 80 57 */	lis r21, lbl_8056C580@ha
 /* 803CCC2C 003961EC  3A C1 00 14 */	addi r22, r1, 0x14
 /* 803CCC30 003961F0  3A E1 00 10 */	addi r23, r1, 0x10
@@ -357,7 +357,7 @@ func_803CCC10:
 /* 803CCC38 003961F8  3A B5 C5 80 */	addi r21, r21, lbl_8056C580@l
 /* 803CCC3C 003961FC  3B 40 00 00 */	li r26, 0
 /* 803CCC40 00396200  3B C0 00 00 */	li r30, 0
-/* 803CCC44 00396204  3F E0 80 3D */	lis r31, func_803CD1D4@ha
+/* 803CCC44 00396204  3F E0 80 3D */	lis r31, sftim_GetTimeNone@ha
 /* 803CCC48 00396208  3E 80 80 61 */	lis r20, lbl_8060A2D8@ha
 /* 803CCC4C 0039620C  3B 00 00 01 */	li r24, 1
 /* 803CCC50 00396210  80 7D 01 B0 */	lwz r3, 0x1b0(r29)
@@ -446,7 +446,7 @@ lbl_803CCD48:
 /* 803CCD78 00396338  81 83 0D 90 */	lwz r12, 0xd90(r3)
 /* 803CCD7C 0039633C  2C 0C 00 00 */	cmpwi r12, 0
 /* 803CCD80 00396340  40 82 00 08 */	bne lbl_803CCD88
-/* 803CCD84 00396344  39 9F D1 D4 */	addi r12, r31, func_803CD1D4@l
+/* 803CCD84 00396344  39 9F D1 D4 */	addi r12, r31, sftim_GetTimeNone@l
 lbl_803CCD88:
 /* 803CCD88 00396348  7F 23 CB 78 */	mr r3, r25
 /* 803CCD8C 0039634C  38 81 00 14 */	addi r4, r1, 0x14
@@ -504,8 +504,8 @@ lbl_803CCE2C:
 /* 803CCE48 00396408  38 21 00 50 */	addi r1, r1, 0x50
 /* 803CCE4C 0039640C  4E 80 00 20 */	blr 
 
-.global func_803CCE50
-func_803CCE50:
+.global SFTIM_IsStagnant
+SFTIM_IsStagnant:
 /* 803CCE50 00396410  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CCE54 00396414  7C 08 02 A6 */	mflr r0
 /* 803CCE58 00396418  38 80 00 06 */	li r4, 6
@@ -533,9 +533,9 @@ lbl_803CCEA0:
 /* 803CCEA8 00396468  4B FF F7 CD */	bl SFSET_GetCond
 /* 803CCEAC 0039646C  2C 03 00 01 */	cmpwi r3, 1
 /* 803CCEB0 00396470  40 82 00 20 */	bne lbl_803CCED0
-/* 803CCEB4 00396474  3C 60 80 61 */	lis r3, lbl_8060A2E4@ha
+/* 803CCEB4 00396474  3C 60 80 61 */	lis r3, SFLIB_libwork@ha
 /* 803CCEB8 00396478  80 9E 10 68 */	lwz r4, 0x1068(r30)
-/* 803CCEBC 0039647C  38 63 A2 E4 */	addi r3, r3, lbl_8060A2E4@l
+/* 803CCEBC 0039647C  38 63 A2 E4 */	addi r3, r3, SFLIB_libwork@l
 /* 803CCEC0 00396480  80 1E 10 3C */	lwz r0, 0x103c(r30)
 /* 803CCEC4 00396484  80 A3 01 BC */	lwz r5, 0x1bc(r3)
 /* 803CCEC8 00396488  7C 04 00 50 */	subf r0, r4, r0
@@ -659,8 +659,8 @@ SFTIM_SetStartTime:
 /* 803CD050 00396610  90 A3 01 48 */	stw r5, 0x148(r3)
 /* 803CD054 00396614  4E 80 00 20 */	blr 
 
-.global func_803CD058
-func_803CD058:
+.global SFD_GetTime
+SFD_GetTime:
 /* 803CD058 00396618  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CD05C 0039661C  7C 08 02 A6 */	mflr r0
 /* 803CD060 00396620  90 01 00 24 */	stw r0, 0x24(r1)
@@ -718,8 +718,8 @@ lbl_803CD108:
 /* 803CD11C 003966DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CD120 003966E0  4E 80 00 20 */	blr 
 
-.global func_803CD124
-func_803CD124:
+.global SFTIM_GetTimeSub
+SFTIM_GetTimeSub:
 /* 803CD124 003966E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD128 003966E8  7C 08 02 A6 */	mflr r0
 /* 803CD12C 003966EC  38 E3 0E A8 */	addi r7, r3, 0xea8
@@ -763,8 +763,8 @@ lbl_803CD1A8:
 /* 803CD1B4 00396774  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD1B8 00396778  4E 80 00 20 */	blr 
 
-.global func_803CD1BC
-func_803CD1BC:
+.global SFTIM_GetTime
+SFTIM_GetTime:
 /* 803CD1BC 0039677C  80 03 10 20 */	lwz r0, 0x1020(r3)
 /* 803CD1C0 00396780  90 04 00 00 */	stw r0, 0(r4)
 /* 803CD1C4 00396784  80 03 10 24 */	lwz r0, 0x1024(r3)
@@ -772,8 +772,8 @@ func_803CD1BC:
 /* 803CD1CC 0039678C  90 05 00 00 */	stw r0, 0(r5)
 /* 803CD1D0 00396790  4E 80 00 20 */	blr
 
-.global func_803CD1D4
-func_803CD1D4:
+.global sftim_GetTimeNone
+sftim_GetTimeNone:
 /* 803CD1D4 00396794  80 03 00 50 */	lwz r0, 0x50(r3)
 /* 803CD1D8 00396798  2C 00 00 04 */	cmpwi r0, 4
 /* 803CD1DC 0039679C  41 82 00 34 */	beq lbl_803CD210
@@ -804,8 +804,8 @@ lbl_803CD224:
 /* 803CD234 003967F4  90 05 00 00 */	stw r0, 0(r5)
 /* 803CD238 003967F8  4E 80 00 20 */	blr
 
-.global func_803CD23C
-func_803CD23C:
+.global sftim_GetTimeVsync
+sftim_GetTimeVsync:
 /* 803CD23C 003967FC  80 03 00 50 */	lwz r0, 0x50(r3)
 /* 803CD240 00396800  2C 00 00 04 */	cmpwi r0, 4
 /* 803CD244 00396804  41 82 00 34 */	beq lbl_803CD278
@@ -830,16 +830,16 @@ lbl_803CD27C:
 /* 803CD288 00396848  4E 80 00 20 */	blr
 lbl_803CD28C:
 /* 803CD28C 0039684C  80 03 10 3C */	lwz r0, 0x103c(r3)
-/* 803CD290 00396850  3C C0 80 61 */	lis r6, lbl_8060A2E4@ha
-/* 803CD294 00396854  38 C6 A2 E4 */	addi r6, r6, lbl_8060A2E4@l
+/* 803CD290 00396850  3C C0 80 61 */	lis r6, SFLIB_libwork@ha
+/* 803CD294 00396854  38 C6 A2 E4 */	addi r6, r6, SFLIB_libwork@l
 /* 803CD298 00396858  38 60 00 00 */	li r3, 0
 /* 803CD29C 0039685C  90 04 00 00 */	stw r0, 0(r4)
 /* 803CD2A0 00396860  80 06 01 BC */	lwz r0, 0x1bc(r6)
 /* 803CD2A4 00396864  90 05 00 00 */	stw r0, 0(r5)
 /* 803CD2A8 00396868  4E 80 00 20 */	blr
 
-.global func_803CD2AC
-func_803CD2AC:
+.global sftim_GetTimeUfrm
+sftim_GetTimeUfrm:
 /* 803CD2AC 0039686C  80 03 00 50 */	lwz r0, 0x50(r3)
 /* 803CD2B0 00396870  2C 00 00 04 */	cmpwi r0, 4
 /* 803CD2B4 00396874  41 82 00 2C */	beq lbl_803CD2E0
@@ -857,8 +857,8 @@ lbl_803CD2E0:
 /* 803CD2E0 003968A0  38 60 00 00 */	li r3, 0
 /* 803CD2E4 003968A4  4E 80 00 20 */	blr
 
-.global func_803CD2E8
-func_803CD2E8:
+.global sftim_GetTimeUtim
+sftim_GetTimeUtim:
 /* 803CD2E8 003968A8  80 03 00 50 */	lwz r0, 0x50(r3)
 /* 803CD2EC 003968AC  2C 00 00 04 */	cmpwi r0, 4
 /* 803CD2F0 003968B0  41 82 00 34 */	beq lbl_803CD324
@@ -897,8 +897,8 @@ lbl_803CD35C:
 /* 803CD364 00396924  4E 80 04 20 */	bctr 
 /* 803CD368 00396928  4E 80 00 20 */	blr
 
-.global func_803CD36C
-func_803CD36C:
+.global sftim_GetTimeExtClock
+sftim_GetTimeExtClock:
 /* 803CD36C 0039692C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CD370 00396930  7C 08 02 A6 */	mflr r0
 /* 803CD374 00396934  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1017,8 +1017,8 @@ lbl_803CD500:
 /* 803CD500 00396AC0  38 60 00 01 */	li r3, 1
 /* 803CD504 00396AC4  4E 80 00 20 */	blr 
 
-.global func_803CD508
-func_803CD508:
+.global SFD_SetUsrIsSkipFn
+SFD_SetUsrIsSkipFn:
 /* 803CD508 00396AC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD50C 00396ACC  7C 08 02 A6 */	mflr r0
 /* 803CD510 00396AD0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1045,8 +1045,8 @@ lbl_803CD54C:
 /* 803CD55C 00396B1C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD560 00396B20  4E 80 00 20 */	blr 
 
-.global func_803CD564
-func_803CD564:
+.global SFD_SetUsrTimeFn
+SFD_SetUsrTimeFn:
 /* 803CD564 00396B24  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CD568 00396B28  7C 08 02 A6 */	mflr r0
 /* 803CD56C 00396B2C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1077,8 +1077,8 @@ lbl_803CD5B4:
 /* 803CD5C8 00396B88  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CD5CC 00396B8C  4E 80 00 20 */	blr 
 
-.global func_803CD5D0
-func_803CD5D0:
+.global SFD_SetExtClockFn
+SFD_SetExtClockFn:
 /* 803CD5D0 00396B90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CD5D4 00396B94  7C 08 02 A6 */	mflr r0
 /* 803CD5D8 00396B98  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1129,8 +1129,8 @@ SFTIM_SetTimeFn:
 /* 803CD670 00396C30  90 83 0D 90 */	stw r4, 0xd90(r3)
 /* 803CD674 00396C34  4E 80 00 20 */	blr 
 
-.global func_803CD678
-func_803CD678:
+.global SFTIM_Tc2Time
+SFTIM_Tc2Time:
 /* 803CD678 00396C38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD67C 00396C3C  7C 08 02 A6 */	mflr r0
 /* 803CD680 00396C40  3C E0 80 52 */	lis r7, lbl_80520600@ha
@@ -1179,6 +1179,8 @@ lbl_803CD714:
 /* 803CD720 00396CE0  7C 08 03 A6 */	mtlr r0
 /* 803CD724 00396CE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD728 00396CE8  4E 80 00 20 */	blr 
+
+#sftim_Tc2TimeN, sftim_Tc2Time23N, sftim_Tc2Time29N, sftim_Tc2Time59N
 
 .global func_803CD72C
 func_803CD72C:
@@ -1323,8 +1325,8 @@ func_803CD8B0:
 /* 803CD930 00396EF0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD934 00396EF4  4E 80 00 20 */	blr 
 
-.global func_803CD938
-func_803CD938:
+.global sftim_Tc2Time23D
+sftim_Tc2Time23D:
 /* 803CD938 00396EF8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CD93C 00396EFC  38 00 03 E8 */	li r0, 0x3e8
 /* 803CD940 00396F00  3D 20 66 66 */	lis r9, 0x66666667@ha
@@ -1419,8 +1421,8 @@ func_803CD9EC:
 /* 803CDA98 00397058  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CDA9C 0039705C  4E 80 00 20 */	blr 
 
-.global func_803CDAA0
-func_803CDAA0:
+.global sftim_Tc2Time59D
+sftim_Tc2Time59D:
 /* 803CDAA0 00397060  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CDAA4 00397064  38 00 03 E8 */	li r0, 0x3e8
 /* 803CDAA8 00397068  3D 20 66 66 */	lis r9, 0x66666667@ha
@@ -1467,8 +1469,8 @@ func_803CDAA0:
 /* 803CDB4C 0039710C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CDB50 00397110  4E 80 00 20 */	blr 
 
-.global func_803CDB54
-func_803CDB54:
+.global SFTIM_Pause
+SFTIM_Pause:
 /* 803CDB54 00397114  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CDB58 00397118  7C 08 02 A6 */	mflr r0
 /* 803CDB5C 0039711C  2C 04 00 02 */	cmpwi r4, 2
@@ -1495,9 +1497,9 @@ lbl_803CDB9C:
 /* 803CDBA8 00397168  3B C0 03 E8 */	li r30, 0x3e8
 /* 803CDBAC 0039716C  7F A3 00 2E */	lwzx r29, r3, r0
 lbl_803CDBB0:
-/* 803CDBB0 00397170  3C 60 80 61 */	lis r3, lbl_8060A2E4@ha
+/* 803CDBB0 00397170  3C 60 80 61 */	lis r3, SFLIB_libwork@ha
 /* 803CDBB4 00397174  7F C4 F3 78 */	mr r4, r30
-/* 803CDBB8 00397178  38 63 A2 E4 */	addi r3, r3, lbl_8060A2E4@l
+/* 803CDBB8 00397178  38 63 A2 E4 */	addi r3, r3, SFLIB_libwork@l
 /* 803CDBBC 0039717C  7F A5 EB 78 */	mr r5, r29
 /* 803CDBC0 00397180  80 63 01 BC */	lwz r3, 0x1bc(r3)
 /* 803CDBC4 00397184  48 00 69 85 */	bl UTY_MulDiv
@@ -1594,8 +1596,8 @@ lbl_803CDCF4:
 /* 803CDD04 003972C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CDD08 003972C8  4E 80 00 20 */	blr 
 
-.global func_803CDD0C
-func_803CDD0C:
+.global SFTIM_IsGetFrmTime
+SFTIM_IsGetFrmTime:
 /* 803CDD0C 003972CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CDD10 003972D0  7C 08 02 A6 */	mflr r0
 /* 803CDD14 003972D4  2C 04 00 00 */	cmpwi r4, 0
@@ -1614,7 +1616,7 @@ lbl_803CDD28:
 lbl_803CDD44:
 /* 803CDD44 00397304  80 E3 0A C4 */	lwz r7, 0xac4(r3)
 /* 803CDD48 00397308  38 C1 00 08 */	addi r6, r1, 8
-/* 803CDD4C 0039730C  48 00 00 59 */	bl func_803CDDA4
+/* 803CDD4C 0039730C  48 00 00 59 */	bl SFTIM_IsExecTime
 /* 803CDD50 00397310  80 61 00 08 */	lwz r3, 8(r1)
 lbl_803CDD54:
 /* 803CDD54 00397314  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1622,8 +1624,8 @@ lbl_803CDD54:
 /* 803CDD5C 0039731C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CDD60 00397320  4E 80 00 20 */	blr 
 
-.global func_803CDD64
-func_803CDD64:
+.global SFTIM_IsGetFrmTimeTunit
+SFTIM_IsGetFrmTimeTunit:
 /* 803CDD64 00397324  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CDD68 00397328  7C 08 02 A6 */	mflr r0
 /* 803CDD6C 0039732C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1635,7 +1637,7 @@ func_803CDD64:
 lbl_803CDD84:
 /* 803CDD84 00397344  80 E3 0A C4 */	lwz r7, 0xac4(r3)
 /* 803CDD88 00397348  38 C1 00 08 */	addi r6, r1, 8
-/* 803CDD8C 0039734C  48 00 00 19 */	bl func_803CDDA4
+/* 803CDD8C 0039734C  48 00 00 19 */	bl SFTIM_IsExecTime
 /* 803CDD90 00397350  80 61 00 08 */	lwz r3, 8(r1)
 lbl_803CDD94:
 /* 803CDD94 00397354  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1643,13 +1645,13 @@ lbl_803CDD94:
 /* 803CDD9C 0039735C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CDDA0 00397360  4E 80 00 20 */	blr 
 
-.global func_803CDDA4
-func_803CDDA4:
+.global SFTIM_IsExecTime
+SFTIM_IsExecTime:
 /* 803CDDA4 00397364  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CDDA8 00397368  7C 08 02 A6 */	mflr r0
-/* 803CDDAC 0039736C  3D 00 80 61 */	lis r8, lbl_8060A2E4@ha
+/* 803CDDAC 0039736C  3D 00 80 61 */	lis r8, SFLIB_libwork@ha
 /* 803CDDB0 00397370  90 01 00 14 */	stw r0, 0x14(r1)
-/* 803CDDB4 00397374  39 08 A2 E4 */	addi r8, r8, lbl_8060A2E4@l
+/* 803CDDB4 00397374  39 08 A2 E4 */	addi r8, r8, SFLIB_libwork@l
 /* 803CDDB8 00397378  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803CDDBC 0039737C  7C DF 33 78 */	mr r31, r6
 /* 803CDDC0 00397380  81 23 0A 50 */	lwz r9, 0xa50(r3)
@@ -1697,7 +1699,7 @@ lbl_803CDE40:
 /* 803CDE58 00397418  7D 46 53 78 */	mr r6, r10
 /* 803CDE5C 0039741C  7D 67 5B 78 */	mr r7, r11
 /* 803CDE60 00397420  7F E8 FB 78 */	mr r8, r31
-/* 803CDE64 00397424  48 00 00 4D */	bl func_803CDEB0
+/* 803CDE64 00397424  48 00 00 4D */	bl sftim_IsGrExecTime
 /* 803CDE68 00397428  48 00 00 34 */	b lbl_803CDE9C
 lbl_803CDE6C:
 /* 803CDE6C 0039742C  7C 83 23 78 */	mr r3, r4
@@ -1720,8 +1722,8 @@ lbl_803CDE9C:
 /* 803CDEA8 00397468  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CDEAC 0039746C  4E 80 00 20 */	blr 
 
-.global func_803CDEB0
-func_803CDEB0:
+.global sftim_IsGrExecTime
+sftim_IsGrExecTime:
 /* 803CDEB0 00397470  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803CDEB4 00397474  7C 08 02 A6 */	mflr r0
 /* 803CDEB8 00397478  3D 20 68 DC */	lis r9, 0x68DB8BAD@ha
@@ -1772,9 +1774,9 @@ lbl_803CDF20:
 /* 803CDF68 00397528  90 1A 10 54 */	stw r0, 0x1054(r26)
 /* 803CDF6C 0039752C  48 00 00 9C */	b lbl_803CE008
 lbl_803CDF70:
-/* 803CDF70 00397530  3C 60 80 61 */	lis r3, lbl_8060A2E4@ha
+/* 803CDF70 00397530  3C 60 80 61 */	lis r3, SFLIB_libwork@ha
 /* 803CDF74 00397534  80 BA 10 54 */	lwz r5, 0x1054(r26)
-/* 803CDF78 00397538  38 63 A2 E4 */	addi r3, r3, lbl_8060A2E4@l
+/* 803CDF78 00397538  38 63 A2 E4 */	addi r3, r3, SFLIB_libwork@l
 /* 803CDF7C 0039753C  38 80 00 00 */	li r4, 0
 /* 803CDF80 00397540  80 63 01 B8 */	lwz r3, 0x1b8(r3)
 /* 803CDF84 00397544  3C 03 00 00 */	addis r0, r3, 0
@@ -1821,8 +1823,8 @@ lbl_803CE008:
 /* 803CE014 003975D4  38 21 00 30 */	addi r1, r1, 0x30
 /* 803CE018 003975D8  4E 80 00 20 */	blr 
 
-.global func_803CE01C
-func_803CE01C:
+.global SFTIM_IsVideoTerm
+SFTIM_IsVideoTerm:
 /* 803CE01C 003975DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CE020 003975E0  7C 08 02 A6 */	mflr r0
 /* 803CE024 003975E4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1860,22 +1862,22 @@ lbl_803CE090:
 /* 803CE098 00397658  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CE09C 0039765C  4E 80 00 20 */	blr 
 
-.global func_803CE0A0
-func_803CE0A0:
+.global SFTIM_SetSpeed
+SFTIM_SetSpeed:
 /* 803CE0A0 00397660  90 83 10 40 */	stw r4, 0x1040(r3)
 /* 803CE0A4 00397664  90 A3 10 44 */	stw r5, 0x1044(r3)
 /* 803CE0A8 00397668  4E 80 00 20 */	blr 
 
-.global func_803CE0AC
-func_803CE0AC:
+.global SFTIM_GetSpeed
+SFTIM_GetSpeed:
 /* 803CE0AC 0039766C  80 03 10 40 */	lwz r0, 0x1040(r3)
 /* 803CE0B0 00397670  90 04 00 00 */	stw r0, 0(r4)
 /* 803CE0B4 00397674  80 03 10 44 */	lwz r0, 0x1044(r3)
 /* 803CE0B8 00397678  90 05 00 00 */	stw r0, 0(r5)
 /* 803CE0BC 0039767C  4E 80 00 20 */	blr 
 
-.global func_803CE0C0
-func_803CE0C0:
+.global SFD_SetCyclicFrameOutput
+SFD_SetCyclicFrameOutput:
 /* 803CE0C0 00397680  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CE0C4 00397684  7C 08 02 A6 */	mflr r0
 /* 803CE0C8 00397688  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1915,8 +1917,8 @@ lbl_803CE130:
 /* 803CE144 00397704  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CE148 00397708  4E 80 00 20 */	blr 
 
-.global func_803CE14C
-func_803CE14C:
+.global SFTIM_ExecCyclicFrameOutput
+SFTIM_ExecCyclicFrameOutput:
 /* 803CE14C 0039770C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CE150 00397710  7C 08 02 A6 */	mflr r0
 /* 803CE154 00397714  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1964,11 +1966,11 @@ lbl_803CE1D4:
 /* 803CE1E8 003977A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CE1EC 003977AC  4E 80 00 20 */	blr 
 
-.global func_803CE1F0
-func_803CE1F0:
-/* 803CE1F0 003977B0  3C E0 80 61 */	lis r7, lbl_8060A2E4@ha
+.global SFD_CalcCycleFromFps
+SFD_CalcCycleFromFps:
+/* 803CE1F0 003977B0  3C E0 80 61 */	lis r7, SFLIB_libwork@ha
 /* 803CE1F4 003977B4  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 803CE1F8 003977B8  38 E7 A2 E4 */	addi r7, r7, lbl_8060A2E4@l
+/* 803CE1F8 003977B8  38 E7 A2 E4 */	addi r7, r7, SFLIB_libwork@l
 /* 803CE1FC 003977BC  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 803CE200 003977C0  80 67 01 B8 */	lwz r3, 0x1b8(r7)
 /* 803CE204 003977C4  3C C0 43 30 */	lis r6, 0x4330

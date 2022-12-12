@@ -164,8 +164,8 @@ lbl_8039DD3C:
 /* 8039DD4C 0036730C  38 21 00 80 */	addi r1, r1, 0x80
 /* 8039DD50 00367310  4E 80 00 20 */	blr 
 
-.global func_8039DD54
-func_8039DD54:
+.global MWSFSVM_GotoIdleBorder
+MWSFSVM_GotoIdleBorder:
 /* 8039DD54 00367314  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039DD58 00367318  7C 08 02 A6 */	mflr r0
 /* 8039DD5C 0036731C  3C 60 80 60 */	lis r3, lbl_80602960@ha

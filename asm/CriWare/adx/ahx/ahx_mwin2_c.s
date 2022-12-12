@@ -94,8 +94,8 @@ lbl_8038AFDC:
 /* 8038AFEC 003545AC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038AFF0 003545B0  4E 80 00 20 */	blr 
 
-.global func_8038AFF4
-func_8038AFF4:
+.global ahxsbf_mult_float_win1
+ahxsbf_mult_float_win1:
 /* 8038AFF4 003545B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038AFF8 003545B8  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038AFFC 003545BC  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -184,8 +184,8 @@ lbl_8038B128:
 /* 8038B138 003546F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038B13C 003546FC  4E 80 00 20 */	blr 
 
-.global func_8038B140
-func_8038B140:
+.global ahxsbf_mult_float_win2
+ahxsbf_mult_float_win2:
 /* 8038B140 00354700  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038B144 00354704  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038B148 00354708  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -274,8 +274,8 @@ lbl_8038B274:
 /* 8038B284 00354844  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038B288 00354848  4E 80 00 20 */	blr 
 
-.global func_8038B28C
-func_8038B28C:
+.global ahxsbf_mult_float_win3
+ahxsbf_mult_float_win3:
 /* 8038B28C 0035484C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038B290 00354850  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038B294 00354854  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -364,8 +364,8 @@ lbl_8038B3C0:
 /* 8038B3D0 00354990  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038B3D4 00354994  4E 80 00 20 */	blr 
 
-.global func_8038B3D8
-func_8038B3D8:
+.global ahxsbf_mult_float_win4
+ahxsbf_mult_float_win4:
 /* 8038B3D8 00354998  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038B3DC 0035499C  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038B3E0 003549A0  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -454,8 +454,8 @@ lbl_8038B50C:
 /* 8038B51C 00354ADC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038B520 00354AE0  4E 80 00 20 */	blr 
 
-.global func_8038B524
-func_8038B524:
+.global ahxsbf_mult_float_win5
+ahxsbf_mult_float_win5:
 /* 8038B524 00354AE4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038B528 00354AE8  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038B52C 00354AEC  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -544,8 +544,8 @@ lbl_8038B658:
 /* 8038B668 00354C28  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038B66C 00354C2C  4E 80 00 20 */	blr 
 
-.global func_8038B670
-func_8038B670:
+.global ahxsbf_mult_float_win6
+ahxsbf_mult_float_win6:
 /* 8038B670 00354C30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038B674 00354C34  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038B678 00354C38  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -634,8 +634,8 @@ lbl_8038B7A4:
 /* 8038B7B4 00354D74  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038B7B8 00354D78  4E 80 00 20 */	blr 
 
-.global func_8038B7BC
-func_8038B7BC:
+.global ahxsbf_mult_float_win7
+ahxsbf_mult_float_win7:
 /* 8038B7BC 00354D7C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038B7C0 00354D80  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038B7C4 00354D84  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -724,8 +724,8 @@ lbl_8038B8F0:
 /* 8038B900 00354EC0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038B904 00354EC4  4E 80 00 20 */	blr 
 
-.global func_8038B908
-func_8038B908:
+.global ahxsbf_mult_float_win8
+ahxsbf_mult_float_win8:
 /* 8038B908 00354EC8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038B90C 00354ECC  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038B910 00354ED0  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -814,8 +814,8 @@ lbl_8038BA3C:
 /* 8038BA4C 0035500C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038BA50 00355010  4E 80 00 20 */	blr 
 
-.global func_8038BA54
-func_8038BA54:
+.global ahxsbf_mult_float_win9
+ahxsbf_mult_float_win9:
 /* 8038BA54 00355014  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038BA58 00355018  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038BA5C 0035501C  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -904,8 +904,8 @@ lbl_8038BB88:
 /* 8038BB98 00355158  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038BB9C 0035515C  4E 80 00 20 */	blr 
 
-.global func_8038BBA0
-func_8038BBA0:
+.global ahxsbf_mult_float_win10
+ahxsbf_mult_float_win10:
 /* 8038BBA0 00355160  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038BBA4 00355164  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038BBA8 00355168  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -994,8 +994,8 @@ lbl_8038BCD4:
 /* 8038BCE4 003552A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038BCE8 003552A8  4E 80 00 20 */	blr 
 
-.global func_8038BCEC
-func_8038BCEC:
+.global ahxsbf_mult_float_win11
+ahxsbf_mult_float_win11:
 /* 8038BCEC 003552AC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038BCF0 003552B0  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038BCF4 003552B4  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -1084,8 +1084,8 @@ lbl_8038BE20:
 /* 8038BE30 003553F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038BE34 003553F4  4E 80 00 20 */	blr 
 
-.global func_8038BE38
-func_8038BE38:
+.global ahxsbf_mult_float_win12
+ahxsbf_mult_float_win12:
 /* 8038BE38 003553F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038BE3C 003553FC  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038BE40 00355400  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -1174,8 +1174,8 @@ lbl_8038BF6C:
 /* 8038BF7C 0035553C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038BF80 00355540  4E 80 00 20 */	blr 
 
-.global func_8038BF84
-func_8038BF84:
+.global ahxsbf_mult_float_win13
+ahxsbf_mult_float_win13:
 /* 8038BF84 00355544  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038BF88 00355548  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038BF8C 0035554C  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -1264,8 +1264,8 @@ lbl_8038C0B8:
 /* 8038C0C8 00355688  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038C0CC 0035568C  4E 80 00 20 */	blr 
 
-.global func_8038C0D0
-func_8038C0D0:
+.global ahxsbf_mult_float_win14
+ahxsbf_mult_float_win14:
 /* 8038C0D0 00355690  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038C0D4 00355694  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038C0D8 00355698  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -1354,8 +1354,8 @@ lbl_8038C204:
 /* 8038C214 003557D4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038C218 003557D8  4E 80 00 20 */	blr 
 
-.global func_8038C21C
-func_8038C21C:
+.global ahxsbf_mult_float_win15
+ahxsbf_mult_float_win15:
 /* 8038C21C 003557DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038C220 003557E0  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8038C224 003557E4  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0

@@ -1010,8 +1010,8 @@ lbl_8060A2D0:
 .global lbl_8060A2D8
 lbl_8060A2D8:
 	.skip 0xC
-.global lbl_8060A2E4
-lbl_8060A2E4:
+.global SFLIB_libwork
+SFLIB_libwork:
 	.skip 0x22C
 .global lbl_8060A510
 lbl_8060A510:
@@ -1022,8 +1022,8 @@ sfmps_libwork:
 .global copy_sj_error
 copy_sj_error:
 	.skip 0x8
-.global lbl_8060AD30
-lbl_8060AD30:
+.global sfmpv_work
+sfmpv_work:
 	.skip 0x12020
 .global lbl_8061CD50
 lbl_8061CD50:

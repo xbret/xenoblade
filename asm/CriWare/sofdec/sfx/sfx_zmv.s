@@ -74,14 +74,17 @@ SFXZ_Destroy:
 /* 803D5EA8 0039F468  90 04 D4 98 */	stw r0, lbl_8061D498@l(r4)
 /* 803D5EAC 0039F46C  4E 80 00 20 */	blr 
 
-.global sfxzmv_SetTagGrp
-sfxzmv_SetTagGrp:
+
+.global SFXZ_SetTagInf
+SFXZ_SetTagInf:
 /* 803D5EB0 0039F470  38 00 00 01 */	li r0, 1
 /* 803D5EB4 0039F474  90 83 00 0C */	stw r4, 0xc(r3)
 /* 803D5EB8 0039F478  90 03 00 08 */	stw r0, 8(r3)
 /* 803D5EBC 0039F47C  90 A3 00 10 */	stw r5, 0x10(r3)
-/* 803D5EC0 0039F480  48 00 00 04 */	b lbl_803D5EC4
-lbl_803D5EC4:
+/* 803D5EC0 0039F480  48 00 00 04 */	b sfxzmv_SetTagGrp
+
+
+sfxzmv_SetTagGrp:
 /* 803D5EC4 0039F484  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803D5EC8 0039F488  7C 08 02 A6 */	mflr r0
 /* 803D5ECC 0039F48C  90 01 00 34 */	stw r0, 0x34(r1)

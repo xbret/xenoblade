@@ -14,8 +14,8 @@ SFSEE_InitHn:
 /* 803CBCA0 00395260  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803CBCA4 00395264  4E 80 00 20 */	blr 
 
-.global func_803CBCA8
-func_803CBCA8:
+.global SFD_EntrySeek
+SFD_EntrySeek:
 /* 803CBCA8 00395268  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CBCAC 0039526C  7C 08 02 A6 */	mflr r0
 /* 803CBCB0 00395270  90 01 00 14 */	stw r0, 0x14(r1)
@@ -42,8 +42,8 @@ lbl_803CBCEC:
 /* 803CBCFC 003952BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CBD00 003952C0  4E 80 00 20 */	blr 
 
-.global func_803CBD04
-func_803CBD04:
+.global SFSEE_FixAvPlay
+SFSEE_FixAvPlay:
 /* 803CBD04 003952C4  80 63 26 C8 */	lwz r3, 0x26c8(r3)
 /* 803CBD08 003952C8  2C 03 00 00 */	cmpwi r3, 0
 /* 803CBD0C 003952CC  4D 82 00 20 */	beqlr 
@@ -58,8 +58,8 @@ lbl_803CBD20:
 /* 803CBD2C 003952EC  90 A3 0D BC */	stw r5, 0xdbc(r3)
 /* 803CBD30 003952F0  4E 80 00 20 */	blr 
 
-.global func_803CBD34
-func_803CBD34:
+.global SFSEE_ExecServer
+SFSEE_ExecServer:
 /* 803CBD34 003952F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CBD38 003952F8  7C 08 02 A6 */	mflr r0
 /* 803CBD3C 003952FC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -68,9 +68,9 @@ func_803CBD34:
 /* 803CBD48 00395308  80 03 26 C8 */	lwz r0, 0x26c8(r3)
 /* 803CBD4C 0039530C  2C 00 00 00 */	cmpwi r0, 0
 /* 803CBD50 00395310  41 82 00 10 */	beq lbl_803CBD60
-/* 803CBD54 00395314  48 00 00 21 */	bl func_803CBD74
+/* 803CBD54 00395314  48 00 00 21 */	bl sfsee_ExecHeadAnaly
 /* 803CBD58 00395318  7F E3 FB 78 */	mr r3, r31
-/* 803CBD5C 0039531C  48 00 03 F5 */	bl func_803CC150
+/* 803CBD5C 0039531C  48 00 03 F5 */	bl sfsee_ExecFinAnaly
 lbl_803CBD60:
 /* 803CBD60 00395320  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 803CBD64 00395324  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -78,8 +78,8 @@ lbl_803CBD60:
 /* 803CBD6C 0039532C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CBD70 00395330  4E 80 00 20 */	blr 
 
-.global func_803CBD74
-func_803CBD74:
+.global sfsee_ExecHeadAnaly
+sfsee_ExecHeadAnaly:
 /* 803CBD74 00395334  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CBD78 00395338  7C 08 02 A6 */	mflr r0
 /* 803CBD7C 0039533C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -209,7 +209,7 @@ lbl_803CBF30:
 /* 803CBF38 003954F8  7F C3 F3 78 */	mr r3, r30
 /* 803CBF3C 003954FC  90 9F 00 08 */	stw r4, 8(r31)
 /* 803CBF40 00395500  90 1F 00 00 */	stw r0, 0(r31)
-/* 803CBF44 00395504  48 00 03 05 */	bl func_803CC248
+/* 803CBF44 00395504  48 00 03 05 */	bl sfsee_UpdateEByteRate
 lbl_803CBF48:
 /* 803CBF48 00395508  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 803CBF4C 0039550C  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -220,8 +220,8 @@ lbl_803CBF48:
 /* 803CBF60 00395520  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CBF64 00395524  4E 80 00 20 */	blr 
 
-.global func_803CBF68
-func_803CBF68:
+.global SFD_SetFileSize
+SFD_SetFileSize:
 /* 803CBF68 00395528  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CBF6C 0039552C  7C 08 02 A6 */	mflr r0
 /* 803CBF70 00395530  90 01 00 14 */	stw r0, 0x14(r1)
@@ -246,7 +246,7 @@ lbl_803CBFA4:
 lbl_803CBFB8:
 /* 803CBFB8 00395578  93 E3 0D C4 */	stw r31, 0xdc4(r3)
 /* 803CBFBC 0039557C  7F C3 F3 78 */	mr r3, r30
-/* 803CBFC0 00395580  48 00 02 89 */	bl func_803CC248
+/* 803CBFC0 00395580  48 00 02 89 */	bl sfsee_UpdateEByteRate
 /* 803CBFC4 00395584  38 60 00 00 */	li r3, 0
 lbl_803CBFC8:
 /* 803CBFC8 00395588  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -256,8 +256,8 @@ lbl_803CBFC8:
 /* 803CBFD8 00395598  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CBFDC 0039559C  4E 80 00 20 */	blr 
 
-.global func_803CBFE0
-func_803CBFE0:
+.global SFD_SetTotTime
+SFD_SetTotTime:
 /* 803CBFE0 003955A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CBFE4 003955A4  7C 08 02 A6 */	mflr r0
 /* 803CBFE8 003955A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -285,7 +285,7 @@ lbl_803CC038:
 /* 803CC038 003955F8  93 C4 0D C8 */	stw r30, 0xdc8(r4)
 /* 803CC03C 003955FC  7F A3 EB 78 */	mr r3, r29
 /* 803CC040 00395600  93 E4 0D CC */	stw r31, 0xdcc(r4)
-/* 803CC044 00395604  48 00 02 05 */	bl func_803CC248
+/* 803CC044 00395604  48 00 02 05 */	bl sfsee_UpdateEByteRate
 /* 803CC048 00395608  38 60 00 00 */	li r3, 0
 lbl_803CC04C:
 /* 803CC04C 0039560C  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -296,8 +296,8 @@ lbl_803CC04C:
 /* 803CC060 00395620  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CC064 00395624  4E 80 00 20 */	blr 
 
-.global func_803CC068
-func_803CC068:
+.global SFD_SetByteRate
+SFD_SetByteRate:
 /* 803CC068 00395628  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CC06C 0039562C  7C 08 02 A6 */	mflr r0
 /* 803CC070 00395630  90 01 00 14 */	stw r0, 0x14(r1)
@@ -322,7 +322,7 @@ lbl_803CC0A4:
 lbl_803CC0B8:
 /* 803CC0B8 00395678  93 E3 0D D0 */	stw r31, 0xdd0(r3)
 /* 803CC0BC 0039567C  7F C3 F3 78 */	mr r3, r30
-/* 803CC0C0 00395680  48 00 01 89 */	bl func_803CC248
+/* 803CC0C0 00395680  48 00 01 89 */	bl sfsee_UpdateEByteRate
 /* 803CC0C4 00395684  38 60 00 00 */	li r3, 0
 lbl_803CC0C8:
 /* 803CC0C8 00395688  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -332,8 +332,8 @@ lbl_803CC0C8:
 /* 803CC0D8 00395698  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CC0DC 0039569C  4E 80 00 20 */	blr 
 
-.global func_803CC0E0
-func_803CC0E0:
+.global SFD_SetSeekPos
+SFD_SetSeekPos:
 /* 803CC0E0 003956A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CC0E4 003956A4  7C 08 02 A6 */	mflr r0
 /* 803CC0E8 003956A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -366,8 +366,8 @@ lbl_803CC138:
 /* 803CC148 00395708  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CC14C 0039570C  4E 80 00 20 */	blr 
 
-.global func_803CC150
-func_803CC150:
+.global sfsee_ExecFinAnaly
+sfsee_ExecFinAnaly:
 /* 803CC150 00395710  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CC154 00395714  7C 08 02 A6 */	mflr r0
 /* 803CC158 00395718  90 01 00 24 */	stw r0, 0x24(r1)
@@ -427,7 +427,7 @@ lbl_803CC21C:
 /* 803CC21C 003957DC  2C 05 00 00 */	cmpwi r5, 0
 /* 803CC220 003957E0  41 82 00 0C */	beq lbl_803CC22C
 /* 803CC224 003957E4  7F E3 FB 78 */	mr r3, r31
-/* 803CC228 003957E8  48 00 00 21 */	bl func_803CC248
+/* 803CC228 003957E8  48 00 00 21 */	bl sfsee_UpdateEByteRate
 lbl_803CC22C:
 /* 803CC22C 003957EC  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 803CC230 003957F0  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -437,8 +437,8 @@ lbl_803CC22C:
 /* 803CC240 00395800  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CC244 00395804  4E 80 00 20 */	blr 
 
-.global func_803CC248
-func_803CC248:
+.global sfsee_UpdateEByteRate
+sfsee_UpdateEByteRate:
 /* 803CC248 00395808  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CC24C 0039580C  7C 08 02 A6 */	mflr r0
 /* 803CC250 00395810  90 01 00 14 */	stw r0, 0x14(r1)
