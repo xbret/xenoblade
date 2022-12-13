@@ -537,6 +537,8 @@ CRIWARE_O_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdset.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdsvr.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfdsst.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/mwsfx_Y84C44.o \
+	$(BUILD_DIR)/asm/CriWare/sofdec/mwply/code_803A3AE4.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_bdec.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_cdec.o \
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/mpv/mpv_cmc.o \

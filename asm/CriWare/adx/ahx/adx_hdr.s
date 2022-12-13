@@ -17,8 +17,8 @@ lbl_8038CF18:
 /* 8038CF1C 003564DC  90 03 00 38 */	stw r0, 0x38(r3)
 /* 8038CF20 003564E0  4E 80 00 20 */	blr 
 
-.global func_8038CF24
-func_8038CF24:
+.global AHXTBL_GetWtblInfo
+AHXTBL_GetWtblInfo:
 /* 8038CF24 003564E4  2C 03 00 00 */	cmpwi r3, 0
 /* 8038CF28 003564E8  41 82 00 10 */	beq lbl_8038CF38
 /* 8038CF2C 003564EC  3C A0 80 56 */	lis r5, lbl_80566078@ha
@@ -275,8 +275,8 @@ lbl_8038D294:
 /* 8038D2A0 00356860  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038D2A4 00356864  4E 80 00 20 */	blr 
 
-.global func_8038D2A8
-func_8038D2A8:
+.global AHXTBL_GetAtblInfo
+AHXTBL_GetAtblInfo:
 /* 8038D2A8 00356868  2C 03 00 00 */	cmpwi r3, 0
 /* 8038D2AC 0035686C  41 82 00 10 */	beq lbl_8038D2BC
 /* 8038D2B0 00356870  3C A0 80 57 */	lis r5, lbl_80569180@ha
@@ -290,8 +290,8 @@ lbl_8038D2BC:
 /* 8038D2CC 0035688C  90 04 00 00 */	stw r0, 0(r4)
 /* 8038D2D0 00356890  4E 80 00 20 */	blr 
 
-.global func_8038D2D4
-func_8038D2D4:
+.global AHXTBL_GetMtblInfo
+AHXTBL_GetMtblInfo:
 /* 8038D2D4 00356894  2C 03 00 00 */	cmpwi r3, 0
 /* 8038D2D8 00356898  41 82 00 10 */	beq lbl_8038D2E8
 /* 8038D2DC 0035689C  3C A0 80 57 */	lis r5, lbl_80569188@ha

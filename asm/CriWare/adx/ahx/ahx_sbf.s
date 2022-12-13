@@ -2,14 +2,14 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8038C42C
-func_8038C42C:
+.global AHXDCD_SetupFtbl
+AHXDCD_SetupFtbl:
 /* 8038C42C 003559EC  3C 80 80 5F */	lis r4, lbl_805E9AF8@ha
 /* 8038C430 003559F0  90 64 9A F8 */	stw r3, lbl_805E9AF8@l(r4)
 /* 8038C434 003559F4  4E 80 00 20 */	blr
 
-.global func_8038C438
-func_8038C438:
+.global AHXDCD_SetupWtbl
+AHXDCD_SetupWtbl:
 /* 8038C438 003559F8  3C 80 80 5F */	lis r4, lbl_805E9AFC@ha
 /* 8038C43C 003559FC  90 64 9A FC */	stw r3, lbl_805E9AFC@l(r4)
 /* 8038C440 00355A00  4E 80 00 20 */	blr 

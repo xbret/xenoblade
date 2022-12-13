@@ -4,13 +4,13 @@
 
 SKG_GenerateKey:
 /* 8038D9E8 00356FA8  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 8038D9EC 00356FAC  3D 20 80 5F */	lis r9, lbl_805E9B10@ha
+/* 8038D9EC 00356FAC  3D 20 80 5F */	lis r9, skg_init_count_1@ha
 /* 8038D9F0 00356FB0  BF 41 00 08 */	stmw r26, 8(r1)
-/* 8038D9F4 00356FB4  81 09 9B 10 */	lwz r8, lbl_805E9B10@l(r9)
+/* 8038D9F4 00356FB4  81 09 9B 10 */	lwz r8, skg_init_count_1@l(r9)
 /* 8038D9F8 00356FB8  2C 08 00 00 */	cmpwi r8, 0
 /* 8038D9FC 00356FBC  40 82 00 0C */	bne lbl_8038DA08
 /* 8038DA00 00356FC0  38 08 00 01 */	addi r0, r8, 1
-/* 8038DA04 00356FC4  90 09 9B 10 */	stw r0, lbl_805E9B10@l(r9)
+/* 8038DA04 00356FC4  90 09 9B 10 */	stw r0, skg_init_count_1@l(r9)
 lbl_8038DA08:
 /* 8038DA08 00356FC8  38 00 00 00 */	li r0, 0
 /* 8038DA0C 00356FCC  2C 03 00 00 */	cmpwi r3, 0
@@ -512,39 +512,40 @@ lbl_8038E184:
 /* 8038E188 00357748  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038E18C 0035774C  4E 80 00 20 */	blr 
 
-.global func_8038E190
-func_8038E190:
-/* 8038E190 00357750  4B FF F8 38 */	b func_8038D9C8
+#why are these here?
+.global AHXSJD_SetupAtbl
+AHXSJD_SetupAtbl:
+/* 8038E190 00357750  4B FF F8 38 */	b AHXDCD_SetupAtbl
 
-.global func_8038E194
-func_8038E194:
+.global AHXSJD_SetupMtbl
+AHXSJD_SetupMtbl:
 /* 8038E194 00357754  3C 80 80 5F */	lis r4, lbl_805E9B14@ha
 /* 8038E198 00357758  90 64 9B 14 */	stw r3, lbl_805E9B14@l(r4)
 /* 8038E19C 0035775C  4E 80 00 20 */	blr 
 
-.global func_8038E1A0
-func_8038E1A0:
-/* 8038E1A0 00357760  4B FF E2 8C */	b func_8038C42C
+.global AHXSJD_SetupFtbl
+AHXSJD_SetupFtbl:
+/* 8038E1A0 00357760  4B FF E2 8C */	b AHXDCD_SetupFtbl
 
-.global func_8038E1A4
-func_8038E1A4:
-/* 8038E1A4 00357764  4B FF E2 94 */	b func_8038C438
+.global AHXSJD_SetupWtbl
+AHXSJD_SetupWtbl:
+/* 8038E1A4 00357764  4B FF E2 94 */	b AHXDCD_SetupWtbl
 
 .global AHXDCD_Init
 AHXDCD_Init:
 /* 8038E1A8 00357768  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038E1AC 0035776C  7C 08 02 A6 */	mflr r0
-/* 8038E1B0 00357770  3C 60 80 5F */	lis r3, lbl_805E9B18@ha
+/* 8038E1B0 00357770  3C 60 80 5F */	lis r3, ahxdcd_init_cnt@ha
 /* 8038E1B4 00357774  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8038E1B8 00357778  80 03 9B 18 */	lwz r0, lbl_805E9B18@l(r3)
+/* 8038E1B8 00357778  80 03 9B 18 */	lwz r0, ahxdcd_init_cnt@l(r3)
 /* 8038E1BC 0035777C  2C 00 00 00 */	cmpwi r0, 0
 /* 8038E1C0 00357780  40 82 00 08 */	bne lbl_8038E1C8
 /* 8038E1C4 00357784  4B FF E2 81 */	bl AHXSBF_Init
 lbl_8038E1C8:
-/* 8038E1C8 00357788  3C 80 80 5F */	lis r4, lbl_805E9B18@ha
-/* 8038E1CC 0035778C  80 64 9B 18 */	lwz r3, lbl_805E9B18@l(r4)
+/* 8038E1C8 00357788  3C 80 80 5F */	lis r4, ahxdcd_init_cnt@ha
+/* 8038E1CC 0035778C  80 64 9B 18 */	lwz r3, ahxdcd_init_cnt@l(r4)
 /* 8038E1D0 00357790  38 03 00 01 */	addi r0, r3, 1
-/* 8038E1D4 00357794  90 04 9B 18 */	stw r0, lbl_805E9B18@l(r4)
+/* 8038E1D4 00357794  90 04 9B 18 */	stw r0, ahxdcd_init_cnt@l(r4)
 /* 8038E1D8 00357798  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8038E1DC 0035779C  7C 08 03 A6 */	mtlr r0
 /* 8038E1E0 003577A0  38 21 00 10 */	addi r1, r1, 0x10
@@ -552,10 +553,10 @@ lbl_8038E1C8:
 
 .global AHXDCD_Finish
 AHXDCD_Finish:
-/* 8038E1E8 003577A8  3C 60 80 5F */	lis r3, lbl_805E9B18@ha
-/* 8038E1EC 003577AC  80 03 9B 18 */	lwz r0, lbl_805E9B18@l(r3)
+/* 8038E1E8 003577A8  3C 60 80 5F */	lis r3, ahxdcd_init_cnt@ha
+/* 8038E1EC 003577AC  80 03 9B 18 */	lwz r0, ahxdcd_init_cnt@l(r3)
 /* 8038E1F0 003577B0  34 00 FF FF */	addic. r0, r0, -1
-/* 8038E1F4 003577B4  90 03 9B 18 */	stw r0, lbl_805E9B18@l(r3)
+/* 8038E1F4 003577B4  90 03 9B 18 */	stw r0, ahxdcd_init_cnt@l(r3)
 /* 8038E1F8 003577B8  4C 82 00 20 */	bnelr 
 /* 8038E1FC 003577BC  4B FF E4 E0 */	b AHXSBF_Finish
 /* 8038E200 003577C0  4E 80 00 20 */	blr 
@@ -698,8 +699,8 @@ lbl_8038E3DC:
 /* 8038E3EC 003579AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038E3F0 003579B0  4E 80 00 20 */	blr 
 
-.global func_8038E3F4
-func_8038E3F4:
+.global AHXDCD_SetBsr
+AHXDCD_SetBsr:
 /* 8038E3F4 003579B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038E3F8 003579B8  7C 08 02 A6 */	mflr r0
 /* 8038E3FC 003579BC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -716,8 +717,8 @@ func_8038E3F4:
 /* 8038E428 003579E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038E42C 003579EC  4E 80 00 20 */	blr 
 
-.global func_8038E430
-func_8038E430:
+.global AHXDCD_DecodeHeader
+AHXDCD_DecodeHeader:
 /* 8038E430 003579F0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8038E434 003579F4  7C 08 02 A6 */	mflr r0
 /* 8038E438 003579F8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -812,13 +813,13 @@ lbl_8038E4D8:
 /* 8038E58C 00357B4C  2C 00 00 10 */	cmpwi r0, 0x10
 /* 8038E590 00357B50  41 80 00 44 */	blt lbl_8038E5D4
 /* 8038E594 00357B54  38 00 00 00 */	li r0, 0
-/* 8038E598 00357B58  3C 80 80 5F */	lis r4, lbl_805E9B10@ha
+/* 8038E598 00357B58  3C 80 80 5F */	lis r4, skg_init_count_1@ha
 /* 8038E59C 00357B5C  B0 1F 03 BC */	sth r0, 0x3bc(r31)
-/* 8038E5A0 00357B60  80 64 9B 10 */	lwz r3, lbl_805E9B10@l(r4)
+/* 8038E5A0 00357B60  80 64 9B 10 */	lwz r3, skg_init_count_1@l(r4)
 /* 8038E5A4 00357B64  2C 03 00 00 */	cmpwi r3, 0
 /* 8038E5A8 00357B68  40 82 00 0C */	bne lbl_8038E5B4
 /* 8038E5AC 00357B6C  38 03 00 01 */	addi r0, r3, 1
-/* 8038E5B0 00357B70  90 04 9B 10 */	stw r0, lbl_805E9B10@l(r4)
+/* 8038E5B0 00357B70  90 04 9B 10 */	stw r0, skg_init_count_1@l(r4)
 lbl_8038E5B4:
 /* 8038E5B4 00357B74  3C 60 80 52 */	lis r3, lbl_8051ACA8@ha
 /* 8038E5B8 00357B78  38 BF 03 BE */	addi r5, r31, 0x3be
@@ -978,19 +979,21 @@ lbl_8038E7B4:
 /* 8038E7CC 00357D8C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038E7D0 00357D90  4E 80 00 20 */	blr 
 
-.global func_8038E7D4
-func_8038E7D4:
+#AHXSJD_GetOutBps? renamed for now
+.global AHXDCD_GetOutBps
+AHXDCD_GetOutBps:
 /* 8038E7D4 00357D94  88 63 03 4B */	lbz r3, 0x34b(r3)
 /* 8038E7D8 00357D98  7C 63 07 74 */	extsb r3, r3
 /* 8038E7DC 00357D9C  4E 80 00 20 */	blr 
 
-.global func_8038E7E0
-func_8038E7E0:
+.global AHXDCD_GetOutSmpl
+AHXDCD_GetOutSmpl:
 /* 8038E7E0 00357DA0  38 60 00 60 */	li r3, 0x60
 /* 8038E7E4 00357DA4  4E 80 00 20 */	blr 
 
-.global func_8038E7E8
-func_8038E7E8:
+#not sure
+.global AHXDCD_GetTotalNumSmpl
+AHXDCD_GetTotalNumSmpl:
 /* 8038E7E8 00357DA8  88 03 03 49 */	lbz r0, 0x349(r3)
 /* 8038E7EC 00357DAC  7C 00 07 75 */	extsb. r0, r0
 /* 8038E7F0 00357DB0  40 82 00 0C */	bne lbl_8038E7FC
@@ -1000,8 +1003,8 @@ lbl_8038E7FC:
 /* 8038E7FC 00357DBC  80 63 03 94 */	lwz r3, 0x394(r3)
 /* 8038E800 00357DC0  4E 80 00 20 */	blr
 
-.global func_8038E804
-func_8038E804:
+.global AHXDCD_SetExtPrm
+AHXDCD_SetExtPrm:
 /* 8038E804 00357DC4  38 A0 00 08 */	li r5, 8
 /* 8038E808 00357DC8  38 63 0B C4 */	addi r3, r3, 0xbc4
 /* 8038E80C 00357DCC  4B C7 57 F4 */	b memcpy

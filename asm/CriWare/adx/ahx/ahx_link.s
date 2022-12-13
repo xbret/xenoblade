@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8038A668
-func_8038A668:
+.global AHXTBL_GetFtblInfo
+AHXTBL_GetFtblInfo:
 /* 8038A668 00353C28  2C 03 00 00 */	cmpwi r3, 0
 /* 8038A66C 00353C2C  41 82 00 10 */	beq lbl_8038A67C
 /* 8038A670 00353C30  3C A0 80 56 */	lis r5, lbl_805657B0@ha

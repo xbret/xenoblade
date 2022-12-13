@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8038238C
-func_8038238C:
+.global ADXT_StartAfs
+ADXT_StartAfs:
 /* 8038238C 0034B94C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80382390 0034B950  7C 08 02 A6 */	mflr r0
 /* 80382394 0034B954  90 01 00 24 */	stw r0, 0x24(r1)
@@ -17,7 +17,7 @@ func_8038238C:
 /* 803823B4 0034B974  7F A3 EB 78 */	mr r3, r29
 /* 803823B8 0034B978  7F C4 F3 78 */	mr r4, r30
 /* 803823BC 0034B97C  7F E5 FB 78 */	mr r5, r31
-/* 803823C0 0034B980  48 00 00 25 */	bl func_803823E4
+/* 803823C0 0034B980  48 00 00 25 */	bl adxt_StartAfs
 /* 803823C4 0034B984  48 00 70 45 */	bl ADXCRS_Leave
 /* 803823C8 0034B988  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 803823CC 0034B98C  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -27,8 +27,8 @@ func_8038238C:
 /* 803823DC 0034B99C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803823E0 0034B9A0  4E 80 00 20 */	blr 
 
-.global func_803823E4
-func_803823E4:
+.global adxt_StartAfs
+adxt_StartAfs:
 /* 803823E4 0034B9A4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803823E8 0034B9A8  7C 08 02 A6 */	mflr r0
 /* 803823EC 0034B9AC  2C 03 00 00 */	cmpwi r3, 0

@@ -399,7 +399,7 @@ lbl_8039957C:
 /* 8039957C 00362B3C  7F E3 FB 78 */	mr r3, r31
 /* 80399580 00362B40  7F 44 D3 78 */	mr r4, r26
 /* 80399584 00362B44  38 A0 00 00 */	li r5, 0
-/* 80399588 00362B48  48 00 12 8D */	bl func_8039A814
+/* 80399588 00362B48  48 00 12 8D */	bl AXRNA_SetMain
 /* 8039958C 00362B4C  3B 5A 00 01 */	addi r26, r26, 1
 /* 80399590 00362B50  2C 1A 00 04 */	cmpwi r26, 4
 /* 80399594 00362B54  41 80 FF E8 */	blt lbl_8039957C
@@ -1734,10 +1734,8 @@ func_8039A80C:
 /* 8039A80C 00363DCC  38 60 00 00 */	li r3, 0
 /* 8039A810 00363DD0  4E 80 00 20 */	blr 
 
-#these functions belong to another file?
-
-.global func_8039A814
-func_8039A814:
+.global AXRNA_SetMain
+AXRNA_SetMain:
 /* 8039A814 00363DD4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039A818 00363DD8  7C 08 02 A6 */	mflr r0
 /* 8039A81C 00363DDC  2C 03 00 00 */	cmpwi r3, 0
@@ -1796,6 +1794,8 @@ lbl_8039A8CC:
 /* 8039A8D4 00363E94  7C 08 03 A6 */	mtlr r0
 /* 8039A8D8 00363E98  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039A8DC 00363E9C  4E 80 00 20 */	blr 
+
+#this function belongs to another file?
 
 .global func_8039A8E0
 func_8039A8E0:

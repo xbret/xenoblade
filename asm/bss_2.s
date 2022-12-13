@@ -597,14 +597,15 @@ lbl_805E9B00:
 .global lbl_805E9B08
 lbl_805E9B08:
 	.skip 0x8
-.global lbl_805E9B10
-lbl_805E9B10:
+#skg_init_count
+.global skg_init_count_1
+skg_init_count_1:
 	.skip 0x4
 .global lbl_805E9B14
 lbl_805E9B14:
 	.skip 0x4
-.global lbl_805E9B18
-lbl_805E9B18:
+.global ahxdcd_init_cnt
+ahxdcd_init_cnt:
 	.skip 0x8
 .global lbl_805E9B20
 lbl_805E9B20:

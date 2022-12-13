@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8038F594
-func_8038F594:
+.global cvFsCallUsrErrFn
+cvFsCallUsrErrFn:
 /* 8038F594 00358B54  3C 60 80 5F */	lis r3, lbl_805E9D28@ha
 /* 8038F598 00358B58  81 83 9D 28 */	lwz r12, lbl_805E9D28@l(r3)
 /* 8038F59C 00358B5C  2C 0C 00 00 */	cmpwi r12, 0
@@ -50,7 +50,7 @@ lbl_8038F5FC:
 /* 8038F630 00358BF0  4E 80 04 21 */	bctrl 
 /* 8038F634 00358BF4  48 00 00 64 */	b lbl_8038F698
 lbl_8038F638:
-/* 8038F638 00358BF8  48 00 00 71 */	bl func_8038F6A8
+/* 8038F638 00358BF8  48 00 00 71 */	bl addDevice
 /* 8038F63C 00358BFC  2C 03 00 00 */	cmpwi r3, 0
 /* 8038F640 00358C00  40 82 00 38 */	bne lbl_8038F678
 /* 8038F644 00358C04  3C 60 80 5F */	lis r3, lbl_805E9D28@ha
@@ -70,9 +70,9 @@ lbl_8038F678:
 /* 8038F678 00358C38  81 83 00 04 */	lwz r12, 4(r3)
 /* 8038F67C 00358C3C  2C 0C 00 00 */	cmpwi r12, 0
 /* 8038F680 00358C40  41 82 00 18 */	beq lbl_8038F698
-/* 8038F684 00358C44  3C 60 80 39 */	lis r3, func_8038F594@ha
+/* 8038F684 00358C44  3C 60 80 39 */	lis r3, cvFsCallUsrErrFn@ha
 /* 8038F688 00358C48  38 80 00 00 */	li r4, 0
-/* 8038F68C 00358C4C  38 63 F5 94 */	addi r3, r3, func_8038F594@l
+/* 8038F68C 00358C4C  38 63 F5 94 */	addi r3, r3, cvFsCallUsrErrFn@l
 /* 8038F690 00358C50  7D 89 03 A6 */	mtctr r12
 /* 8038F694 00358C54  4E 80 04 21 */	bctrl 
 lbl_8038F698:
@@ -81,8 +81,8 @@ lbl_8038F698:
 /* 8038F6A0 00358C60  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038F6A4 00358C64  4E 80 00 20 */	blr 
 
-.global func_8038F6A8
-func_8038F6A8:
+.global addDevice
+addDevice:
 /* 8038F6A8 00358C68  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038F6AC 00358C6C  7C 08 02 A6 */	mflr r0
 /* 8038F6B0 00358C70  90 01 00 24 */	stw r0, 0x24(r1)
@@ -958,8 +958,9 @@ lbl_803902A8:
 /* 803902B4 00359874  38 21 00 10 */	addi r1, r1, 0x10
 /* 803902B8 00359878  4E 80 00 20 */	blr 
 
-.global func_803902BC
-func_803902BC:
+#maybe cvFsReqWr
+.global cvFsReqRd
+cvFsReqRd:
 /* 803902BC 0035987C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803902C0 00359880  7C 08 02 A6 */	mflr r0
 /* 803902C4 00359884  2C 03 00 00 */	cmpwi r3, 0
@@ -1417,8 +1418,8 @@ lbl_803908D8:
 /* 803908E4 00359EA4  90 85 9D 2C */	stw r4, lbl_805E9D2C@l(r5)
 /* 803908E8 00359EA8  4E 80 00 20 */	blr 
 
-.global func_803908EC
-func_803908EC:
+.global cvFsIsAvailableRetry
+cvFsIsAvailableRetry:
 /* 803908EC 00359EAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803908F0 00359EB0  7C 08 02 A6 */	mflr r0
 /* 803908F4 00359EB4  2C 03 00 00 */	cmpwi r3, 0
