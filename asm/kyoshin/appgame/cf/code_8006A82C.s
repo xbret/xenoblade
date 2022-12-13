@@ -10658,8 +10658,8 @@ lbl_80073DC8:
 func_80073DDC:
 /* 80073DDC 0003D39C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80073DE0 0003D3A0  7C 08 02 A6 */	mflr r0
-/* 80073DE4 0003D3A4  38 AD 82 A0 */	addi r5, r13, cf_CfCamFollow_RTTI@sda21
-/* 80073DE8 0003D3A8  38 CD 82 A8 */	addi r6, r13, cf_CfCam_RTTI@sda21
+/* 80073DE4 0003D3A4  38 AD 82 A0 */	addi r5, r13, __RTTI__cf_CfCamFollow@sda21
+/* 80073DE8 0003D3A8  38 CD 82 A8 */	addi r6, r13, __RTTI__cf_CfCam@sda21
 /* 80073DEC 0003D3AC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80073DF0 0003D3B0  38 E0 00 00 */	li r7, 0
 /* 80073DF4 0003D3B4  93 E1 00 0C */	stw r31, 0xc(r1)

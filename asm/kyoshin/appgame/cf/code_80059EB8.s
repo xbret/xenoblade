@@ -18135,36 +18135,33 @@ sinit_800696C8:
 
 .global __vt__CTimeLightGrp
 __vt__CTimeLightGrp:
-	# ROM: 0x525D48
-	.4byte CTimeLightGrp_RTTI
+	.4byte __RTTI__CTimeLightGrp
 	.4byte 0
 	.4byte func_8005A1E8
 
-.global lbl_80529C54
-lbl_80529C54:
-	.4byte lbl_806642E0
+.global CTimeLightGrp_hierarchy
+CTimeLightGrp_hierarchy:
+	.4byte __RTTI__CTimeLightObj
 	.4byte 0
 	.4byte 0
 
 
 .global __vt__reslist_CVirtualLightObj
 __vt__reslist_CVirtualLightObj:
-	# ROM: 0x525D60
-	.4byte reslist_CVirtualLightObj_RTTI
+	.4byte __RTTI__reslist_CVirtualLightObj
 	.4byte 0
 	.4byte func_8005A130
 
-.global lbl_80529C6C
-lbl_80529C6C:
-	.4byte _reslist_base_CVirtualLightObj_RTTI
+.global reslist_CVirtualLightObj_hierarchy
+reslist_CVirtualLightObj_hierarchy:
+	.4byte __RTTI___reslist_base_CVirtualLightObj
 	.4byte 0
 	.4byte 0
 
 
 .global __vt___reslist_base_CVirtualLightObj
 __vt___reslist_base_CVirtualLightObj:
-	# ROM: 0x525D78
-	.4byte _reslist_base_CVirtualLightObj_RTTI
+	.4byte __RTTI___reslist_base_CVirtualLightObj
 	.4byte 0
 	.4byte func_8005A07C
 	.4byte 0
@@ -18172,8 +18169,7 @@ __vt___reslist_base_CVirtualLightObj:
 
 .global __vt__cf_CActParamAnimGame
 __vt__cf_CActParamAnimGame:
-	# ROM: 0x525D88
-	.4byte cf_CActParamAnimGame_RTTI
+	.4byte __RTTI__cf_CActParamAnimGame
 	.4byte 0
 	.4byte func_8005A4CC
 	.4byte func_8004B854
@@ -18235,11 +18231,11 @@ __vt__cf_CActParamAnimGame:
 	.4byte func_8005DCA8
 	.4byte func_80060268
 
-.global lbl_80529D7C
-lbl_80529D7C:
-	.4byte lbl_806642B0
+.global cf_CActParamAnimGame_hierarchy
+cf_CActParamAnimGame_hierarchy:
+	.4byte __RTTI__IActParamShift
 	.4byte 0
-	.4byte CActParamAnim_RTTI
+	.4byte __RTTI__CActParamAnim
 	.4byte 0
 	.4byte 0
 
@@ -18293,8 +18289,7 @@ lbl_80529D90:
 
 .global __vt__CTaskGameEffAfter
 __vt__CTaskGameEffAfter:
-	# ROM: 0x525F38
-	.4byte CTaskGameEffAfter_RTTI
+	.4byte __RTTI__CTaskGameEffAfter
 	.4byte 0
 	.4byte func_800615FC
 	.4byte func_80446734
@@ -18304,23 +18299,22 @@ __vt__CTaskGameEffAfter:
 	.4byte func_800615F0
 	.4byte func_80043F20
 
-.global lbl_80529E5C
-lbl_80529E5C:
-	.4byte CDoubleListNode_RTTI
+.global CTaskGameEffAfter_hierarchy
+CTaskGameEffAfter_hierarchy:
+	.4byte __RTTI__CDoubleListNode
 	.4byte 0
-	.4byte CChildListNode_RTTI
+	.4byte __RTTI__CChildListNode
 	.4byte 0
-	.4byte CProcess_RTTI
+	.4byte __RTTI__CProcess
 	.4byte 0
-	.4byte CTTask_CTaskGameEffAfter_RTTI
+	.4byte __RTTI__CTTask_CTaskGameEffAfter
 	.4byte 0
 	.4byte 0
 
 
 .global __vt__CTTask_CTaskGameEffAfter
 __vt__CTTask_CTaskGameEffAfter:
-	# ROM: 0x525F80
-	.4byte CTTask_CTaskGameEffAfter_RTTI
+	.4byte __RTTI__CTTask_CTaskGameEffAfter
 	.4byte 0
 	.4byte func_800615A0
 	.4byte func_80446734
@@ -18330,13 +18324,13 @@ __vt__CTTask_CTaskGameEffAfter:
 	.4byte func_80061698
 	.4byte func_80043F20
 
-.global lbl_80529EA4
-lbl_80529EA4:
-	.4byte CDoubleListNode_RTTI
+.global CTTask_CTaskGameEffAfter_hierarchy
+CTTask_CTaskGameEffAfter_hierarchy:
+	.4byte __RTTI__CDoubleListNode
 	.4byte 0
-	.4byte CChildListNode_RTTI
+	.4byte __RTTI__CChildListNode
 	.4byte 0
-	.4byte CProcess_RTTI
+	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
 
@@ -18432,8 +18426,7 @@ lbl_80529F78:
 
 .global __vt__cf_CfResTask
 __vt__cf_CfResTask:
-	# ROM: 0x5260D4
-	.4byte cf_CfResTask_RTTI
+	.4byte __RTTI__cf_CfResTask
 	.4byte 0
 	.4byte func_800658FC
 	.4byte func_80446734
@@ -18443,23 +18436,22 @@ __vt__cf_CfResTask:
 	.4byte func_80065B50
 	.4byte func_80043F20
 
-.global lbl_80529FF8
-lbl_80529FF8:
-	.4byte CDoubleListNode_RTTI
+.global cf_CfResTask_hierarchy
+cf_CfResTask_hierarchy:
+	.4byte __RTTI__CDoubleListNode
 	.4byte 0
-	.4byte CChildListNode_RTTI
+	.4byte __RTTI__CChildListNode
 	.4byte 0
-	.4byte CProcess_RTTI
+	.4byte __RTTI__CProcess
 	.4byte 0
-	.4byte CTTask_cf_CfResTask_RTTI
+	.4byte __RTTI__CTTask_cf_CfResTask
 	.4byte 0
 	.4byte 0
 
 
 .global __vt__CTTask_cf_CfResTask
 __vt__CTTask_cf_CfResTask:
-	# ROM: 0x52611C
-	.4byte CTTask_cf_CfResTask_RTTI
+	.4byte __RTTI__CTTask_cf_CfResTask
 	.4byte 0
 	.4byte func_80065848
 	.4byte func_80446734
@@ -18469,13 +18461,13 @@ __vt__CTTask_cf_CfResTask:
 	.4byte func_80065B9C
 	.4byte func_80043F20
 
-.global lbl_8052A040
-lbl_8052A040:
-	.4byte CDoubleListNode_RTTI
+.global CTTask_cf_CfResTask_hierarchy
+CTTask_cf_CfResTask_hierarchy:
+	.4byte __RTTI__CDoubleListNode
 	.4byte 0
-	.4byte CChildListNode_RTTI
+	.4byte __RTTI__CChildListNode
 	.4byte 0
-	.4byte CProcess_RTTI
+	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -18483,8 +18475,7 @@ lbl_8052A040:
 
 .global __vt__cf_CfRes
 __vt__cf_CfRes:
-	# ROM: 0x526160
-	.4byte cf_CfRes_RTTI
+	.4byte __RTTI__cf_CfRes
 	.4byte 0
 	.4byte func_800658A0
 	.4byte func_80039E28
@@ -18519,9 +18510,9 @@ __vt__cf_CfRes:
 	.4byte func_80039D44
 	.4byte func_80039D40
 
-.global lbl_8052A0E8
-lbl_8052A0E8:
-	.4byte IWorkEvent_RTTI
+.global cf_CfRes_hierarchy
+cf_CfRes_hierarchy:
+	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -18561,30 +18552,27 @@ lbl_8052A124:
 
 .global __vt__reslist_unsigned_short
 __vt__reslist_unsigned_short:
-	# ROM: 0x526250
-	.4byte reslist_unsigned_short_RTTI
+	.4byte __RTTI__reslist_unsigned_short
 	.4byte 0
 	.4byte func_80067494
 
-.global lbl_8052A15C
-lbl_8052A15C:
-	.4byte _reslist_base_unsigned_short_RTTI
+.global reslist_unsigned_short_hierarchy
+reslist_unsigned_short_hierarchy:
+	.4byte __RTTI___reslist_base_unsigned_short
 	.4byte 0
 	.4byte 0
 
 
 .global __vt___reslist_base_unsigned_short
 __vt___reslist_base_unsigned_short:
-	# ROM: 0x526268
-	.4byte _reslist_base_unsigned_short_RTTI
+	.4byte __RTTI___reslist_base_unsigned_short
 	.4byte 0
 	.4byte func_800673E0
 
 
 .global __vt__cf_IResInfoEneNpcEvent
 __vt__cf_IResInfoEneNpcEvent:
-	# ROM: 0x526274
-	.4byte cf_IResInfoEneNpcEvent_RTTI
+	.4byte __RTTI__cf_IResInfoEneNpcEvent
 	.4byte 0
 	.4byte func_80066374
 	.4byte func_800689AC
@@ -18606,19 +18594,18 @@ __vt__cf_IResInfoEneNpcEvent:
 	.4byte func_80068990
 	.4byte func_800665A0
 
-.global lbl_8052A1C8
-lbl_8052A1C8:
-	.4byte lbl_806643B0
+.global cf_IResInfoEneNpcEvent_hierarchy
+cf_IResInfoEneNpcEvent_hierarchy:
+	.4byte __RTTI__cf_IResInfo
 	.4byte 0
-	.4byte cf_IResInfoEneNpc_RTTI
+	.4byte __RTTI__cf_IResInfoEneNpc
 	.4byte 0
 	.4byte 0
 
 
 .global __vt__cf_IResInfoEneNpc
 __vt__cf_IResInfoEneNpc:
-	# ROM: 0x5262DC
-	.4byte cf_IResInfoEneNpc_RTTI
+	.4byte __RTTI__cf_IResInfoEneNpc
 	.4byte 0
 	.4byte func_80066374
 	.4byte func_800689B8
@@ -18640,9 +18627,9 @@ __vt__cf_IResInfoEneNpc:
 	.4byte func_80068990
 	.4byte func_800665A0
 
-.global lbl_8052A230
-lbl_8052A230:
-	.4byte lbl_806643B0
+.global cf_IResInfoEneNpc_hierarchy
+cf_IResInfoEneNpc_hierarchy:
+	.4byte __RTTI__cf_IResInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -18650,8 +18637,7 @@ lbl_8052A230:
 
 .global __vt__cf_IResInfoPc
 __vt__cf_IResInfoPc:
-	# ROM: 0x526340
-	.4byte cf_IResInfoPc_RTTI
+	.4byte __RTTI__cf_IResInfoPc
 	.4byte 0
 	.4byte func_80065FB4
 	.4byte func_800689C8
@@ -18672,9 +18658,9 @@ __vt__cf_IResInfoPc:
 	.4byte func_80068998
 	.4byte func_800661A8
 
-.global lbl_8052A290
-lbl_8052A290:
-	.4byte lbl_806643B0
+.global cf_IResInfoPc_hierarchy
+cf_IResInfoPc_hierarchy:
+	.4byte __RTTI__cf_IResInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -18682,8 +18668,7 @@ lbl_8052A290:
 
 .global __vt__cf_IResInfoObj
 __vt__cf_IResInfoObj:
-	# ROM: 0x5263A0
-	.4byte cf_IResInfoObj_RTTI
+	.4byte __RTTI__cf_IResInfoObj
 	.4byte 0
 	.4byte func_80065F1C
 	.4byte func_800689E0
@@ -18704,9 +18689,9 @@ __vt__cf_IResInfoObj:
 	.4byte func_80068998
 	.4byte func_80068990
 
-.global lbl_8052A2F0
-lbl_8052A2F0:
-	.4byte lbl_806643B0
+.global cf_IResInfoObj_hierarchy
+cf_IResInfoObj_hierarchy:
+	.4byte __RTTI__cf_IResInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -18714,8 +18699,7 @@ lbl_8052A2F0:
 
 .global __vt__cf_IResInfoTBox
 __vt__cf_IResInfoTBox:
-	# ROM: 0x526400
-	.4byte cf_IResInfoTBox_RTTI
+	.4byte __RTTI__cf_IResInfoTBox
 	.4byte 0
 	.4byte func_80065F18
 	.4byte func_800689E8
@@ -18736,9 +18720,9 @@ __vt__cf_IResInfoTBox:
 	.4byte func_80068998
 	.4byte func_80068990
 
-.global lbl_8052A350
-lbl_8052A350:
-	.4byte lbl_806643B0
+.global cf_IResInfoTBox_hierarchy
+cf_IResInfoTBox_hierarchy:
+	.4byte __RTTI__cf_IResInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -18746,8 +18730,7 @@ lbl_8052A350:
 
 .global __vt__cf_IResInfoSe
 __vt__cf_IResInfoSe:
-	# ROM: 0x526460
-	.4byte cf_IResInfoSe_RTTI
+	.4byte __RTTI__cf_IResInfoSe
 	.4byte 0
 	.4byte func_80065E08
 	.4byte func_800689F0
@@ -18768,9 +18751,9 @@ __vt__cf_IResInfoSe:
 	.4byte func_80068998
 	.4byte func_80068990
 
-.global lbl_8052A3B0
-lbl_8052A3B0:
-	.4byte lbl_806643B0
+.global cf_IResInfoSe_hierarchy
+cf_IResInfoSe_hierarchy:
+	.4byte __RTTI__cf_IResInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -18778,8 +18761,7 @@ lbl_8052A3B0:
 
 .global __vt__cf_IResInfoEffect
 __vt__cf_IResInfoEffect:
-	# ROM: 0x5264C0
-	.4byte cf_IResInfoEffect_RTTI
+	.4byte __RTTI__cf_IResInfoEffect
 	.4byte 0
 	.4byte func_80065D88
 	.4byte func_800689F8
@@ -18800,9 +18782,9 @@ __vt__cf_IResInfoEffect:
 	.4byte func_80068998
 	.4byte func_80068990
 
-.global lbl_8052A410
-lbl_8052A410:
-	.4byte lbl_806643B0
+.global cf_IResInfoEffect_hierarchy
+cf_IResInfoEffect_hierarchy:
+	.4byte __RTTI__cf_IResInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -18810,8 +18792,7 @@ lbl_8052A410:
 
 .global __vt__cf_IResInfoLOD
 __vt__cf_IResInfoLOD:
-	# ROM: 0x526520
-	.4byte cf_IResInfoLOD_RTTI
+	.4byte __RTTI__cf_IResInfoLOD
 	.4byte 0
 	.4byte func_80065D84
 	.4byte func_80068A00
@@ -18832,9 +18813,9 @@ __vt__cf_IResInfoLOD:
 	.4byte func_80068998
 	.4byte func_80068990
 
-.global lbl_8052A470
-lbl_8052A470:
-	.4byte lbl_806643B0
+.global cf_IResInfoLOD_hierarchy
+cf_IResInfoLOD_hierarchy:
+	.4byte __RTTI__cf_IResInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -18842,8 +18823,7 @@ lbl_8052A470:
 
 .global __vt__cf_IResInfoID
 __vt__cf_IResInfoID:
-	# ROM: 0x526580
-	.4byte cf_IResInfoID_RTTI
+	.4byte __RTTI__cf_IResInfoID
 	.4byte 0
 	.4byte func_80065D80
 	.4byte func_80068A08
@@ -18864,9 +18844,9 @@ __vt__cf_IResInfoID:
 	.4byte func_80068998
 	.4byte func_80068990
 
-.global lbl_8052A4D0
-lbl_8052A4D0:
-	.4byte lbl_806643B0
+.global cf_IResInfoID_hierarchy
+cf_IResInfoID_hierarchy:
+	.4byte __RTTI__cf_IResInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -18874,8 +18854,7 @@ lbl_8052A4D0:
 
 .global __vt__cf_IResInfoPreloadMap
 __vt__cf_IResInfoPreloadMap:
-	# ROM: 0x5265E0
-	.4byte cf_IResInfoPreloadMap_RTTI
+	.4byte __RTTI__cf_IResInfoPreloadMap
 	.4byte 0
 	.4byte func_80065D74
 	.4byte func_80068A10
@@ -18896,9 +18875,9 @@ __vt__cf_IResInfoPreloadMap:
 	.4byte func_80068998
 	.4byte func_80068990
 
-.global lbl_8052A530
-lbl_8052A530:
-	.4byte lbl_806643B0
+.global cf_IResInfoPreloadMap_hierarchy
+cf_IResInfoPreloadMap_hierarchy:
+	.4byte __RTTI__cf_IResInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -18906,8 +18885,7 @@ lbl_8052A530:
 
 .global __vt__cf_IResInfoMap
 __vt__cf_IResInfoMap:
-	# ROM: 0x526640
-	.4byte cf_IResInfoMap_RTTI
+	.4byte __RTTI__cf_IResInfoMap
 	.4byte 0
 	.4byte func_80065D08
 	.4byte func_80068A18
@@ -18928,9 +18906,9 @@ __vt__cf_IResInfoMap:
 	.4byte func_80065D64
 	.4byte func_80068990
 
-.global lbl_8052A590
-lbl_8052A590:
-	.4byte lbl_806643B0
+.global cf_IResInfoMap_hierarchy
+cf_IResInfoMap_hierarchy:
+	.4byte __RTTI__cf_IResInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -18949,8 +18927,7 @@ lbl_8052A5A0:
 
 .global __vt__cf_CfScript
 __vt__cf_CfScript:
-	# ROM: 0x5266B8
-	.4byte cf_CfScript_RTTI
+	.4byte __RTTI__cf_CfScript
 	.4byte 0
 	.4byte func_800693CC
 	.4byte func_80039E28
@@ -18985,9 +18962,9 @@ __vt__cf_CfScript:
 	.4byte func_80039D44
 	.4byte func_80039D40
 
-.global lbl_8052A640
-lbl_8052A640:
-	.4byte IWorkEvent_RTTI
+.global cf_CfScript_hierarchy
+cf_CfScript_hierarchy:
+	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -19203,23 +19180,23 @@ lbl_804F6BB4:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global CTimeLightGrp_RTTI
-CTimeLightGrp_RTTI:
+.global __RTTI__CTimeLightGrp
+__RTTI__CTimeLightGrp:
 	.4byte CTimeLightGrp_typestr
-	.4byte lbl_80529C54
+	.4byte CTimeLightGrp_hierarchy
 
-.global lbl_806642E0
-lbl_806642E0:
+.global __RTTI__CTimeLightObj
+__RTTI__CTimeLightObj:
 	.4byte CTimeLightObj_typestr
 	.4byte 0
 
-.global reslist_CVirtualLightObj_RTTI
-reslist_CVirtualLightObj_RTTI:
+.global __RTTI__reslist_CVirtualLightObj
+__RTTI__reslist_CVirtualLightObj:
 	.4byte reslist_CVirtualLightObj_typestr
-	.4byte lbl_80529C6C
+	.4byte reslist_CVirtualLightObj_hierarchy
 
-.global _reslist_base_CVirtualLightObj_RTTI
-_reslist_base_CVirtualLightObj_RTTI:
+.global __RTTI___reslist_base_CVirtualLightObj
+__RTTI___reslist_base_CVirtualLightObj:
 	.4byte _reslist_base_CVirtualLightObj_typestr
 	.4byte 0
 
@@ -19242,20 +19219,20 @@ lbl_80664300:
 	.4byte 0x3F8A3D71
 	.4byte 0
 
-.global cf_CActParamAnimGame_RTTI
-cf_CActParamAnimGame_RTTI:
+.global __RTTI__cf_CActParamAnimGame
+__RTTI__cf_CActParamAnimGame:
 	.4byte cf_CActParamAnimGame_typestr
-	.4byte lbl_80529D7C
+	.4byte cf_CActParamAnimGame_hierarchy
 
-.global CTaskGameEffAfter_RTTI
-CTaskGameEffAfter_RTTI:
+.global __RTTI__CTaskGameEffAfter
+__RTTI__CTaskGameEffAfter:
 	.4byte CTaskGameEffAfter_typestr
-	.4byte lbl_80529E5C
+	.4byte CTaskGameEffAfter_hierarchy
 
-.global CTTask_CTaskGameEffAfter_RTTI
-CTTask_CTaskGameEffAfter_RTTI:
+.global __RTTI__CTTask_CTaskGameEffAfter
+__RTTI__CTTask_CTaskGameEffAfter:
 	.4byte CTTask_CTaskGameEffAfter_typestr
-	.4byte lbl_80529EA4
+	.4byte CTTask_CTaskGameEffAfter_hierarchy
 
 
 .global lbl_80664320
@@ -19269,20 +19246,20 @@ lbl_80664324:
 	# ROM: 0x56FF04
 	.4byte lbl_80668A7C
 
-.global cf_CfResTask_RTTI
-cf_CfResTask_RTTI:
+.global __RTTI__cf_CfResTask
+__RTTI__cf_CfResTask:
 	.4byte cf_CfResTask_typestr
-	.4byte lbl_80529FF8
+	.4byte cf_CfResTask_hierarchy
 
-.global CTTask_cf_CfResTask_RTTI
-CTTask_cf_CfResTask_RTTI:
+.global __RTTI__CTTask_cf_CfResTask
+__RTTI__CTTask_cf_CfResTask:
 	.4byte CTTask_cf_CfResTask_typestr
-	.4byte lbl_8052A040
+	.4byte CTTask_cf_CfResTask_hierarchy
 
-.global cf_CfRes_RTTI
-cf_CfRes_RTTI:
+.global __RTTI__cf_CfRes
+__RTTI__cf_CfRes:
 	.4byte cf_CfRes_typestr
-	.4byte lbl_8052A0E8
+	.4byte cf_CfRes_hierarchy
 
 
 .global lbl_80664340
@@ -19291,73 +19268,73 @@ lbl_80664340:
 	.4byte 0x2E000000
 	.4byte 0
 
-.global reslist_unsigned_short_RTTI
-reslist_unsigned_short_RTTI:
+.global __RTTI__reslist_unsigned_short
+__RTTI__reslist_unsigned_short:
 	.4byte reslist_unsigned_short_typestr
-	.4byte lbl_8052A15C
+	.4byte reslist_unsigned_short_hierarchy
 
-.global _reslist_base_unsigned_short_RTTI
-_reslist_base_unsigned_short_RTTI:
+.global __RTTI___reslist_base_unsigned_short
+__RTTI___reslist_base_unsigned_short:
 	.4byte _reslist_base_unsigned_short_typestr
 	.4byte 0
 
-.global cf_IResInfoEneNpcEvent_RTTI
-cf_IResInfoEneNpcEvent_RTTI:
+.global __RTTI__cf_IResInfoEneNpcEvent
+__RTTI__cf_IResInfoEneNpcEvent:
 	.4byte cf_IResInfoEneNpcEvent_typestr
-	.4byte lbl_8052A1C8
+	.4byte cf_IResInfoEneNpcEvent_hierarchy
 
-.global cf_IResInfoEneNpc_RTTI
-cf_IResInfoEneNpc_RTTI:
+.global __RTTI__cf_IResInfoEneNpc
+__RTTI__cf_IResInfoEneNpc:
 	.4byte cf_IResInfoEneNpc_typestr
-	.4byte lbl_8052A230
+	.4byte cf_IResInfoEneNpc_hierarchy
 
-.global cf_IResInfoPc_RTTI
-cf_IResInfoPc_RTTI:
+.global __RTTI__cf_IResInfoPc
+__RTTI__cf_IResInfoPc:
 	.4byte cf_IResInfoPc_typestr
-	.4byte lbl_8052A290
+	.4byte cf_IResInfoPc_hierarchy
 
-.global cf_IResInfoObj_RTTI
-cf_IResInfoObj_RTTI:
+.global __RTTI__cf_IResInfoObj
+__RTTI__cf_IResInfoObj:
 	.4byte cf_IResInfoObj_typestr
-	.4byte lbl_8052A2F0
+	.4byte cf_IResInfoObj_hierarchy
 
-.global cf_IResInfoTBox_RTTI
-cf_IResInfoTBox_RTTI:
+.global __RTTI__cf_IResInfoTBox
+__RTTI__cf_IResInfoTBox:
 	.4byte cf_IResInfoTBox_typestr
-	.4byte lbl_8052A350
+	.4byte cf_IResInfoTBox_hierarchy
 
-.global cf_IResInfoSe_RTTI
-cf_IResInfoSe_RTTI:
+.global __RTTI__cf_IResInfoSe
+__RTTI__cf_IResInfoSe:
 	.4byte cf_IResInfoSe_typestr
-	.4byte lbl_8052A3B0
+	.4byte cf_IResInfoSe_hierarchy
 
-.global cf_IResInfoEffect_RTTI
-cf_IResInfoEffect_RTTI:
+.global __RTTI__cf_IResInfoEffect
+__RTTI__cf_IResInfoEffect:
 	.4byte cf_IResInfoEffect_typestr
-	.4byte lbl_8052A410
+	.4byte cf_IResInfoEffect_hierarchy
 
-.global cf_IResInfoLOD_RTTI
-cf_IResInfoLOD_RTTI:
+.global __RTTI__cf_IResInfoLOD
+__RTTI__cf_IResInfoLOD:
 	.4byte cf_IResInfoLOD_typestr
-	.4byte lbl_8052A470
+	.4byte cf_IResInfoLOD_hierarchy
 
-.global cf_IResInfoID_RTTI
-cf_IResInfoID_RTTI:
+.global __RTTI__cf_IResInfoID
+__RTTI__cf_IResInfoID:
 	.4byte cf_IResInfoID_typestr
-	.4byte lbl_8052A4D0
+	.4byte cf_IResInfoID_hierarchy
 
-.global cf_IResInfoPreloadMap_RTTI
-cf_IResInfoPreloadMap_RTTI:
+.global __RTTI__cf_IResInfoPreloadMap
+__RTTI__cf_IResInfoPreloadMap:
 	.4byte cf_IResInfoPreloadMap_typestr
-	.4byte lbl_8052A530
+	.4byte cf_IResInfoPreloadMap_hierarchy
 
-.global cf_IResInfoMap_RTTI
-cf_IResInfoMap_RTTI:
+.global __RTTI__cf_IResInfoMap
+__RTTI__cf_IResInfoMap:
 	.4byte cf_IResInfoMap_typestr
-	.4byte lbl_8052A590
+	.4byte cf_IResInfoMap_hierarchy
 
-.global lbl_806643B0
-lbl_806643B0:
+.global __RTTI__cf_IResInfo
+__RTTI__cf_IResInfo:
 	.4byte cf_IResInfo_typestr
 	.4byte 0
 
@@ -19368,10 +19345,10 @@ lbl_806643B8:
 	.4byte lbl_804F6B98
 	.4byte 0
 
-.global cf_CfScript_RTTI
-cf_CfScript_RTTI:
+.global __RTTI__cf_CfScript
+__RTTI__cf_CfScript:
 	.4byte cf_CfScript_typestr
-	.4byte lbl_8052A640
+	.4byte cf_CfScript_hierarchy
 
 
 .global lbl_806643C8

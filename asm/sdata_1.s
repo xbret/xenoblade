@@ -2,20 +2,20 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global cf_CfTaskMain_RTTI
-cf_CfTaskMain_RTTI:
+.global __RTTI__cf_CfTaskMain
+__RTTI__cf_CfTaskMain:
 	.4byte cf_CfTaskMain_typestr
-	.4byte lbl_8052A6FC
+	.4byte cf_CfTaskMain_hierarchy
 
-.global CTTask_cf_CfTaskMain_RTTI
-CTTask_cf_CfTaskMain_RTTI:
+.global __RTTI__CTTask_cf_CfTaskMain
+__RTTI__CTTask_cf_CfTaskMain:
 	.4byte CTTask_cf_CfTaskMain_typestr
-	.4byte lbl_8052A74C
+	.4byte CTTask_cf_CfTaskMain_hierarchy
 
-.global cf_CfTFile_RTTI
-cf_CfTFile_RTTI:
+.global __RTTI__cf_CfTFile
+__RTTI__cf_CfTFile:
 	.4byte cf_CfTFile_typestr
-	.4byte lbl_8052A7F0
+	.4byte cf_CfTFile_hierarchy
 
 
 .global lbl_806643E8
@@ -43,43 +43,40 @@ lbl_806643F0:
 	.4byte 0
 
 
-.global cf_CfCamEvent_RTTI
-cf_CfCamEvent_RTTI:
-	# ROM: 0x56FFD8
+.global __RTTI__cf_CfCamEvent
+__RTTI__cf_CfCamEvent:
 	.4byte cf_CfCamEvent_typestr
-	.4byte lbl_8052A890
+	.4byte cf_CfCamEvent_hierarchy
 
-.global cf_CfCamTargetIntf_RTTI
-cf_CfCamTargetIntf_RTTI:
+.global __RTTI__cf_CfCamTargetIntf
+__RTTI__cf_CfCamTargetIntf:
 	.4byte cf_CfCamTargetIntf_typestr
-	.4byte lbl_8052A8C0
+	.4byte cf_CfCamTargetIntf_hierarchy
 
-.global cf_CfCamLookatIntf_RTTI
-cf_CfCamLookatIntf_RTTI:
+.global __RTTI__cf_CfCamLookatIntf
+__RTTI__cf_CfCamLookatIntf:
 	.4byte cf_CfCamLookatIntf_typestr
-	.4byte lbl_8052A8F0
+	.4byte cf_CfCamLookatIntf_hierarchy
 
-.global cf_CfCamDirectionIntf_RTTI
-cf_CfCamDirectionIntf_RTTI:
+.global __RTTI__cf_CfCamDirectionIntf
+__RTTI__cf_CfCamDirectionIntf:
 	.4byte cf_CfCamDirectionIntf_typestr
-	.4byte lbl_8052A918
+	.4byte cf_CfCamDirectionIntf_hierarchy
 
-.global lbl_80664418
-lbl_80664418:
+.global __RTTI__cf_CfCamIntf
+__RTTI__cf_CfCamIntf:
 	.4byte cf_CfCamIntf_typestr
 	.4byte 0
 
 
-.global cf_CfCamFollow_RTTI
-cf_CfCamFollow_RTTI:
-	# ROM: 0x570000
+.global __RTTI__cf_CfCamFollow
+__RTTI__cf_CfCamFollow:
 	.4byte cf_CfCamFollow_typestr
-	.4byte lbl_8052A924
+	.4byte cf_CfCamFollow_hierarchy
 
 
-.global cf_CfCam_RTTI
-cf_CfCam_RTTI:
-	# ROM: 0x570008
+.global __RTTI__cf_CfCam
+__RTTI__cf_CfCam:
 	.4byte cf_CfCam_typestr
 	.4byte 0
 
@@ -319,59 +316,56 @@ lbl_806644D0:
 	.4byte 0x000A000B
 	.4byte 0x000C0000
 
-.global lbl_806644D8
-lbl_806644D8:
+.global __RTTI__cf_IObjectInfo
+__RTTI__cf_IObjectInfo:
 	.4byte cf_IObjectInfo_typestr
 	.4byte 0
 
 
-.global lbl_806644E0
-lbl_806644E0:
-	# ROM: 0x5700C0
+.global __RTTI__cf_CfObjectImpl
+__RTTI__cf_CfObjectImpl:
 	.4byte cf_CfObjectImpl_typestr
-	.4byte lbl_8052AEF8
+	.4byte cf_CfObjectImpl_hierarchy
 
-.global lbl_806644E8
-lbl_806644E8:
+.global __RTTI__IActParamEvent
+__RTTI__IActParamEvent:
 	.4byte IActParamEvent_typestr
 	.4byte 0
 
-.global cf_CtrlEnemy_RTTI
-cf_CtrlEnemy_RTTI:
+.global __RTTI__cf_CtrlEnemy
+__RTTI__cf_CtrlEnemy:
 	.4byte cf_CtrlEnemy_typestr
-	.4byte lbl_8052AF98
+	.4byte cf_CtrlEnemy_hierarchy
 
-.global cf_CtrlAct_RTTI
-cf_CtrlAct_RTTI:
+.global __RTTI__cf_CtrlAct
+__RTTI__cf_CtrlAct:
 	.4byte cf_CtrlAct_typestr
-	.4byte lbl_8052AFB4
+	.4byte cf_CtrlAct_hierarchy
 
 
-.global cf_CtrlBase_RTTI
-cf_CtrlBase_RTTI:
-	# ROM: 0x5700E0
+.global __RTTI__cf_CtrlBase
+__RTTI__cf_CtrlBase:
 	.4byte cf_CtrlBase_typestr
-	.4byte lbl_8052AFC8
+	.4byte cf_CtrlBase_hierarchy
 
 
-.global lbl_80664508
-lbl_80664508:
-	# ROM: 0x5700E8
+.global __RTTI__CActInput
+__RTTI__CActInput:
 	.4byte CActInput_typestr
 	.4byte 0
 
-.global cf_CtrlMoveBase_RTTI
-cf_CtrlMoveBase_RTTI:
+.global __RTTI__cf_CtrlMoveBase
+__RTTI__cf_CtrlMoveBase:
 	.4byte cf_CtrlMoveBase_typestr
 	.4byte 0
 
-.global cf_CtrlEneAiCall_RTTI
-cf_CtrlEneAiCall_RTTI:
+.global __RTTI__cf_CtrlEneAiCall
+__RTTI__cf_CtrlEneAiCall:
 	.4byte cf_CtrlEneAiCall_typestr
-	.4byte lbl_8052AFF0
+	.4byte cf_CtrlEneAiCall_hierarchy
 
-.global CColiProc_RTTI
-CColiProc_RTTI:
+.global __RTTI__CColiProc
+__RTTI__CColiProc:
 	.4byte CColiProc_typestr
 	.4byte 0
 
@@ -382,42 +376,41 @@ lbl_80664528:
 	.4byte 0x3BA3D70A
 	.4byte 0
 
-.global cf_CtrlMoveEne_RTTI
-cf_CtrlMoveEne_RTTI:
+.global __RTTI__cf_CtrlMoveEne
+__RTTI__cf_CtrlMoveEne:
 	.4byte cf_CtrlMoveEne_typestr
-	.4byte lbl_8052B1D8
+	.4byte cf_CtrlMoveEne_hierarchy
 
-.global cf_CtrlNpc_RTTI
-cf_CtrlNpc_RTTI:
+.global __RTTI__cf_CtrlNpc
+__RTTI__cf_CtrlNpc:
 	.4byte cf_CtrlNpc_typestr
-	.4byte lbl_8052B368
+	.4byte cf_CtrlNpc_hierarchy
 
-.global cf_CtrlPad_RTTI
-cf_CtrlPad_RTTI:
+.global __RTTI__cf_CtrlPad
+__RTTI__cf_CtrlPad:
 	.4byte cf_CtrlPad_typestr
-	.4byte lbl_8052B510
+	.4byte cf_CtrlPad_hierarchy
 
-.global cf_CtrlRemote_RTTI
-cf_CtrlRemote_RTTI:
+.global __RTTI__cf_CtrlRemote
+__RTTI__cf_CtrlRemote:
 	.4byte cf_CtrlRemote_typestr
-	.4byte lbl_8052B53C
+	.4byte cf_CtrlRemote_hierarchy
 
-.global cf_CtrlPc_RTTI
-cf_CtrlPc_RTTI:
+.global __RTTI__cf_CtrlPc
+__RTTI__cf_CtrlPc:
 	.4byte cf_CtrlPc_typestr
-	.4byte lbl_8052B560
+	.4byte cf_CtrlPc_hierarchy
 
 
-.global cf_CfObjectImplPc_RTTI
-cf_CfObjectImplPc_RTTI:
-	# ROM: 0x570138
+.global __RTTI__cf_CfObjectImplPc
+__RTTI__cf_CfObjectImplPc:
 	.4byte cf_CfObjectImplPc_typestr
-	.4byte lbl_8052B624
+	.4byte cf_CfObjectImplPc_hierarchy
 
-.global cf_CfObjectImplMove_RTTI
-cf_CfObjectImplMove_RTTI:
+.global __RTTI__cf_CfObjectImplMove
+__RTTI__cf_CfObjectImplMove:
 	.4byte cf_CfObjectImplMove_typestr
-	.4byte lbl_8052B648
+	.4byte cf_CfObjectImplMove_hierarchy
 
 
 .global lbl_80664568
@@ -426,47 +419,46 @@ lbl_80664568:
 	.4byte 0x0000FFFF
 	.4byte 0xFFFF0000
 
-.global cf_CfObjectColl_RTTI
-cf_CfObjectColl_RTTI:
+.global __RTTI__cf_CfObjectColl
+__RTTI__cf_CfObjectColl:
 	.4byte cf_CfObjectColl_typestr
-	.4byte lbl_8052BF48
+	.4byte cf_CfObjectColl_hierarchy
 
-.global cf_CfCollCapsuleImpl_RTTI
-cf_CfCollCapsuleImpl_RTTI:
+.global __RTTI__cf_CfCollCapsuleImpl
+__RTTI__cf_CfCollCapsuleImpl:
 	.4byte cf_CfCollCapsuleImpl_typestr
-	.4byte lbl_8052BF80
+	.4byte cf_CfCollCapsuleImpl_hierarchy
 
-.global cf_CfCollCylinderImpl_RTTI
-cf_CfCollCylinderImpl_RTTI:
+.global __RTTI__cf_CfCollCylinderImpl
+__RTTI__cf_CfCollCylinderImpl:
 	.4byte cf_CfCollCylinderImpl_typestr
-	.4byte lbl_8052BFA0
+	.4byte cf_CfCollCylinderImpl_hierarchy
 
-.global cf_CfCollAABBImpl_RTTI
-cf_CfCollAABBImpl_RTTI:
+.global __RTTI__cf_CfCollAABBImpl
+__RTTI__cf_CfCollAABBImpl:
 	.4byte cf_CfCollAABBImpl_typestr
-	.4byte lbl_8052BFC0
+	.4byte cf_CfCollAABBImpl_hierarchy
 
-.global cf_CfCollSphereImpl_RTTI
-cf_CfCollSphereImpl_RTTI:
+.global __RTTI__cf_CfCollSphereImpl
+__RTTI__cf_CfCollSphereImpl:
 	.4byte cf_CfCollSphereImpl_typestr
-	.4byte lbl_8052BFE0
+	.4byte cf_CfCollSphereImpl_hierarchy
 
-.global cf_CfCollCircleImpl_RTTI
-cf_CfCollCircleImpl_RTTI:
+.global __RTTI__cf_CfCollCircleImpl
+__RTTI__cf_CfCollCircleImpl:
 	.4byte cf_CfCollCircleImpl_typestr
-	.4byte lbl_8052C000
+	.4byte cf_CfCollCircleImpl_hierarchy
 
-.global lbl_806645A0
-lbl_806645A0:
+.global __RTTI__cf_CfCollImpl
+__RTTI__cf_CfCollImpl:
 	.4byte cf_CfCollImpl_typestr
 	.4byte 0
 
 
-.global cf_CfObjectPoint_RTTI
-cf_CfObjectPoint_RTTI:
-	# ROM: 0x570188
+.global __RTTI__cf_CfObjectPoint
+__RTTI__cf_CfObjectPoint:
 	.4byte cf_CfObjectPoint_typestr
-	.4byte lbl_8052C00C
+	.4byte cf_CfObjectPoint_hierarchy
 
 
 .global lbl_806645B0
@@ -480,10 +472,10 @@ lbl_806645B4:
 	# ROM: 0x570194
 	.4byte lbl_804F7970
 
-.global cf_CfObjectEne_RTTI
-cf_CfObjectEne_RTTI:
+.global __RTTI__cf_CfObjectEne
+__RTTI__cf_CfObjectEne:
 	.4byte cf_CfObjectEne_typestr
-	.4byte lbl_8052C7CC
+	.4byte cf_CfObjectEne_hierarchy
 
 
 .global lbl_806645C0
@@ -521,69 +513,67 @@ lbl_806645D4:
 	# ROM: 0x5701B4
 	.4byte 0xFFFFFFFC
 
-.global reslist_cf_IFactoryEvent_RTTI
-reslist_cf_IFactoryEvent_RTTI:
+.global __RTTI__reslist_cf_IFactoryEvent
+__RTTI__reslist_cf_IFactoryEvent:
 	.4byte reslist_cf_IFactoryEvent_typestr
-	.4byte lbl_8052C87C
+	.4byte reslist_cf_IFactoryEvent_hierarchy
 
-.global _reslist_base_cf_IFactoryEvent_RTTI
-_reslist_base_cf_IFactoryEvent_RTTI:
+.global __RTTI___reslist_base_cf_IFactoryEvent
+__RTTI___reslist_base_cf_IFactoryEvent:
 	.4byte _reslist_base_cf_IFactoryEvent_typestr
 	.4byte 0
 
-.global reslist_cf_TboxInfo_RTTI
-reslist_cf_TboxInfo_RTTI:
+.global __RTTI__reslist_cf_TboxInfo
+__RTTI__reslist_cf_TboxInfo:
 	.4byte reslist_cf_TboxInfo_typestr
-	.4byte lbl_8052C8A0
+	.4byte reslist_cf_TboxInfo_hierarchy
 
-.global _reslist_base_cf_TboxInfo_RTTI
-_reslist_base_cf_TboxInfo_RTTI:
+.global __RTTI___reslist_base_cf_TboxInfo
+__RTTI___reslist_base_cf_TboxInfo:
 	.4byte _reslist_base_cf_TboxInfo_typestr
 	.4byte 0
 
-.global reslist_cf_CfObject_RTTI
-reslist_cf_CfObject_RTTI:
+.global __RTTI__reslist_cf_CfObject
+__RTTI__reslist_cf_CfObject:
 	.4byte reslist_cf_CfObject_typestr
-	.4byte lbl_8052C8C4
+	.4byte reslist_cf_CfObject_hierarchy
 
-.global cf_CfObjectMap_RTTI
-cf_CfObjectMap_RTTI:
+.global __RTTI__cf_CfObjectMap
+__RTTI__cf_CfObjectMap:
 	.4byte cf_CfObjectMap_typestr
-	.4byte lbl_8052CAC0
+	.4byte cf_CfObjectMap_hierarchy
 
-.global cf_CfObjectNpc_RTTI
-cf_CfObjectNpc_RTTI:
+.global __RTTI__cf_CfObjectNpc
+__RTTI__cf_CfObjectNpc:
 	.4byte cf_CfObjectNpc_typestr
-	.4byte lbl_8052D2B8
+	.4byte cf_CfObjectNpc_hierarchy
 
 
-.global cf_CfObjectTbox_RTTI
-cf_CfObjectTbox_RTTI:
-	# ROM: 0x5701F0
+.global __RTTI__cf_CfObjectTbox
+__RTTI__cf_CfObjectTbox:
 	.4byte cf_CfObjectTbox_typestr
-	.4byte lbl_8052D2E8
+	.4byte cf_CfObjectTbox_hierarchy
 
 
-.global cf_CfObjectObj_RTTI
-cf_CfObjectObj_RTTI:
-	# ROM: 0x5701F8
+.global __RTTI__cf_CfObjectObj
+__RTTI__cf_CfObjectObj:
 	.4byte cf_CfObjectObj_typestr
-	.4byte lbl_8052D540
+	.4byte cf_CfObjectObj_hierarchy
 
-.global cf_CfObjectImplWalker_RTTI
-cf_CfObjectImplWalker_RTTI:
+.global __RTTI__cf_CfObjectImplWalker
+__RTTI__cf_CfObjectImplWalker:
 	.4byte cf_CfObjectImplWalker_typestr
-	.4byte lbl_8052DE30
+	.4byte cf_CfObjectImplWalker_hierarchy
 
-.global cf_CfObjectImplObj_RTTI
-cf_CfObjectImplObj_RTTI:
+.global __RTTI__cf_CfObjectImplObj
+__RTTI__cf_CfObjectImplObj:
 	.4byte cf_CfObjectImplObj_typestr
-	.4byte lbl_8052E1A8
+	.4byte cf_CfObjectImplObj_hierarchy
 
-.global cf_CfObjectImplNpc_RTTI
-cf_CfObjectImplNpc_RTTI:
+.global __RTTI__cf_CfObjectImplNpc
+__RTTI__cf_CfObjectImplNpc:
 	.4byte cf_CfObjectImplNpc_typestr
-	.4byte lbl_8052E2E8
+	.4byte cf_CfObjectImplNpc_hierarchy
 
 
 .global lbl_80664638
@@ -599,63 +589,63 @@ lbl_80664640:
 	.4byte lbl_806695A0
 	.4byte 0
 
-.global cf_CfObjectImplEne_RTTI
-cf_CfObjectImplEne_RTTI:
+.global __RTTI__cf_CfObjectImplEne
+__RTTI__cf_CfObjectImplEne:
 	.4byte cf_CfObjectImplEne_typestr
-	.4byte lbl_8052E698
+	.4byte cf_CfObjectImplEne_hierarchy
 
-.global cf_CBattleManager_RTTI
-cf_CBattleManager_RTTI:
+.global __RTTI__cf_CBattleManager
+__RTTI__cf_CBattleManager:
 	.4byte cf_CBattleManager_typestr
-	.4byte lbl_8052F4F0
+	.4byte cf_CBattleManager_hierarchy
 
-.global reslist_cf_IBattleEvent_RTTI
-reslist_cf_IBattleEvent_RTTI:
+.global __RTTI__reslist_cf_IBattleEvent
+__RTTI__reslist_cf_IBattleEvent:
 	.4byte reslist_cf_IBattleEvent_typestr
-	.4byte lbl_8052F508
+	.4byte reslist_cf_IBattleEvent_hierarchy
 
-.global _reslist_base_cf_IBattleEvent_RTTI
-_reslist_base_cf_IBattleEvent_RTTI:
+.global __RTTI___reslist_base_cf_IBattleEvent
+__RTTI___reslist_base_cf_IBattleEvent:
 	.4byte _reslist_base_cf_IBattleEvent_typestr
 	.4byte 0
 
-.global reslist_cf_CfObjectActor_RTTI
-reslist_cf_CfObjectActor_RTTI:
+.global __RTTI__reslist_cf_CfObjectActor
+__RTTI__reslist_cf_CfObjectActor:
 	.4byte reslist_cf_CfObjectActor_typestr
-	.4byte lbl_8052F52C
+	.4byte reslist_cf_CfObjectActor_hierarchy
 
-.global _reslist_base_cf_CfObjectActor_RTTI
-_reslist_base_cf_CfObjectActor_RTTI:
+.global __RTTI___reslist_base_cf_CfObjectActor
+__RTTI___reslist_base_cf_CfObjectActor:
 	.4byte _reslist_base_cf_CfObjectActor_typestr
 	.4byte 0
 
-.global cf_CChainTime_RTTI
-cf_CChainTime_RTTI:
+.global __RTTI__cf_CChainTime
+__RTTI__cf_CChainTime:
 	.4byte cf_CChainTime_typestr
 	.4byte 0
 
-.global lbl_80664680
-lbl_80664680:
+.global __RTTI__cf_IFactoryEvent
+__RTTI__cf_IFactoryEvent:
 	.4byte cf_IFactoryEvent_typestr
 	.4byte 0
 
-.global cf_CfObjEnumList_RTTI
-cf_CfObjEnumList_RTTI:
+.global __RTTI__cf_CfObjEnumList
+__RTTI__cf_CfObjEnumList:
 	.4byte cf_CfObjEnumList_typestr
-	.4byte lbl_8052F55C
+	.4byte cf_CfObjEnumList_hierarchy
 
-.global lbl_80664690
-lbl_80664690:
+.global __RTTI__cf_CfObjEnumList_OBJ_LIST
+__RTTI__cf_CfObjEnumList_OBJ_LIST:
 	.4byte cf_CfObjEnumList_OBJ_LIST_typestr
-	.4byte lbl_8052F590
+	.4byte cf_CfObjEnumList_OBJ_LIST_hierarchy
 
-.global lbl_80664698
-lbl_80664698:
+.global __RTTI__QSort_cf_CfObjEnumList_sObjInfo_float
+__RTTI__QSort_cf_CfObjEnumList_sObjInfo_float:
 	.4byte QSort_cf_CfObjEnumList_sObjInfo_float_typestr
 	.4byte 0
 
-.global lbl_806646A0
-lbl_806646A0:
+.global __RTTI__fixvector_cf_CfObjEnumList_sObjInfo_384
+__RTTI__fixvector_cf_CfObjEnumList_sObjInfo_384:
 	.4byte fixvector_cf_CfObjEnumList_sObjInfo_384_typestr
 	.4byte 0
 
@@ -666,8 +656,8 @@ lbl_806646A8:
 	.4byte 0x402CCCCD
 	.4byte 0
 
-.global cf_CfObjectSelectorObj_RTTI
-cf_CfObjectSelectorObj_RTTI:
+.global __RTTI__cf_CfObjectSelectorObj
+__RTTI__cf_CfObjectSelectorObj:
 	.4byte cf_CfObjectSelectorObj_typestr
 	.4byte 0
 
@@ -678,45 +668,45 @@ lbl_806646B8:
 	.4byte lbl_804F8568
 	.4byte 0
 
-.global CMainMenu_RTTI
-CMainMenu_RTTI:
+.global __RTTI__CMainMenu
+__RTTI__CMainMenu:
 	.4byte CMainMenu_typestr
-	.4byte lbl_8052F6B8
+	.4byte CMainMenu_hierarchy
 
-.global CMainCur_RTTI
-CMainCur_RTTI:
+.global __RTTI__CMainCur
+__RTTI__CMainCur:
 	.4byte CMainCur_typestr
-	.4byte lbl_8052F710
+	.4byte CMainCur_hierarchy
 
-.global lbl_806646D0
-lbl_806646D0:
+.global __RTTI__CBaseCur
+__RTTI__CBaseCur:
 	.4byte CBaseCur_typestr
 	.4byte 0
 
-.global lbl_806646D8
-lbl_806646D8:
-	.4byte lbl_806697E8
-	.4byte lbl_8052F71C
+.global __RTTI__IUICf
+__RTTI__IUICf:
+	.4byte IUICf_typestr
+	.4byte IUICf_hierarchy
 
-.global CTTask_IUICf_RTTI
-CTTask_IUICf_RTTI:
+.global __RTTI__CTTask_IUICf
+__RTTI__CTTask_IUICf:
 	.4byte CTTask_IUICf_typestr
-	.4byte lbl_8052F764
+	.4byte CTTask_IUICf_hierarchy
 
-.global CMenuArtsSelect_RTTI
-CMenuArtsSelect_RTTI:
+.global __RTTI__CMenuArtsSelect
+__RTTI__CMenuArtsSelect:
 	.4byte CMenuArtsSelect_typestr
-	.4byte lbl_8052F928
+	.4byte CMenuArtsSelect_hierarchy
 
-.global lbl_806646F0
-lbl_806646F0:
+.global __RTTI__IUIBattle
+__RTTI__IUIBattle:
 	.4byte IUIBattle_typestr
-	.4byte lbl_8052F96C
+	.4byte IUIBattle_hierarchy
 
-.global CTTask_IUIBattle_RTTI
-CTTask_IUIBattle_RTTI:
+.global __RTTI__CTTask_IUIBattle
+__RTTI__CTTask_IUIBattle:
 	.4byte CTTask_IUIBattle_typestr
-	.4byte lbl_8052F9B4
+	.4byte CTTask_IUIBattle_hierarchy
 
 
 .global lbl_80664700
@@ -725,40 +715,40 @@ lbl_80664700:
 	.4byte 0
 	.4byte 0
 
-.global CMenuBattleDamage_RTTI
-CMenuBattleDamage_RTTI:
+.global __RTTI__CMenuBattleDamage
+__RTTI__CMenuBattleDamage:
 	.4byte CMenuBattleDamage_typestr
-	.4byte lbl_8052FAC0
+	.4byte CMenuBattleDamage_hierarchy
 
-.global CMenuBattlePlayerState_RTTI
-CMenuBattlePlayerState_RTTI:
+.global __RTTI__CMenuBattlePlayerState
+__RTTI__CMenuBattlePlayerState:
 	.4byte CMenuBattlePlayerState_typestr
-	.4byte lbl_8052FBC0
+	.4byte CMenuBattlePlayerState_hierarchy
 
-.global CPcSelectCursor01_RTTI
-CPcSelectCursor01_RTTI:
+.global __RTTI__CPcSelectCursor01
+__RTTI__CPcSelectCursor01:
 	.4byte CPcSelectCursor01_typestr
 	.4byte 0
 
-.global CMenuEnemyState_RTTI
-CMenuEnemyState_RTTI:
+.global __RTTI__CMenuEnemyState
+__RTTI__CMenuEnemyState:
 	.4byte CMenuEnemyState_typestr
-	.4byte lbl_8052FCC8
+	.4byte CMenuEnemyState_hierarchy
 
-.global CPcSelectCursor_RTTI
-CPcSelectCursor_RTTI:
+.global __RTTI__CPcSelectCursor
+__RTTI__CPcSelectCursor:
 	.4byte CPcSelectCursor_typestr
 	.4byte 0
 
-.global CMenuFade_RTTI
-CMenuFade_RTTI:
+.global __RTTI__CMenuFade
+__RTTI__CMenuFade:
 	.4byte CMenuFade_typestr
-	.4byte lbl_8052FDD0
+	.4byte CMenuFade_hierarchy
 
-.global CMenuKeyAssign_RTTI
-CMenuKeyAssign_RTTI:
+.global __RTTI__CMenuKeyAssign
+__RTTI__CMenuKeyAssign:
 	.4byte CMenuKeyAssign_typestr
-	.4byte lbl_8052FED0
+	.4byte CMenuKeyAssign_hierarchy
 
 
 .global lbl_80664740
@@ -767,45 +757,45 @@ lbl_80664740:
 	.float 0.2
 	.4byte 0
 
-.global CMenuMiniMap2_RTTI
-CMenuMiniMap2_RTTI:
+.global __RTTI__CMenuMiniMap2
+__RTTI__CMenuMiniMap2:
 	.4byte CMenuMiniMap2_typestr
-	.4byte lbl_805300E8
+	.4byte CMenuMiniMap2_hierarchy
 
-.global CMiniMap_RTTI
-CMiniMap_RTTI:
+.global __RTTI__CMiniMap
+__RTTI__CMiniMap:
 	.4byte CMiniMap_typestr
-	.4byte lbl_805301B0
+	.4byte CMiniMap_hierarchy
 
-.global CMMTex_RTTI
-CMMTex_RTTI:
+.global __RTTI__CMMTex
+__RTTI__CMMTex:
 	.4byte CMMTex_typestr
-	.4byte lbl_80530248
+	.4byte CMMTex_hierarchy
 
-.global CMMClock_RTTI
-CMMClock_RTTI:
+.global __RTTI__CMMClock
+__RTTI__CMMClock:
 	.4byte CMMClock_typestr
-	.4byte lbl_805302E0
+	.4byte CMMClock_hierarchy
 
-.global CMenuQuestLog_RTTI
-CMenuQuestLog_RTTI:
+.global __RTTI__CMenuQuestLog
+__RTTI__CMenuQuestLog:
 	.4byte CMenuQuestLog_typestr
-	.4byte lbl_80530440
+	.4byte CMenuQuestLog_hierarchy
 
-.global CArrow3D_RTTI
-CArrow3D_RTTI:
+.global __RTTI__CArrow3D
+__RTTI__CArrow3D:
 	.4byte CArrow3D_typestr
-	.4byte lbl_80530558
+	.4byte CArrow3D_hierarchy
 
-.global CTTask_CArrow3D_RTTI
-CTTask_CArrow3D_RTTI:
+.global __RTTI__CTTask_CArrow3D
+__RTTI__CTTask_CArrow3D:
 	.4byte CTTask_CArrow3D_typestr
-	.4byte lbl_805305A8
+	.4byte CTTask_CArrow3D_hierarchy
 
-.global CMenuSymbolMark_RTTI
-CMenuSymbolMark_RTTI:
+.global __RTTI__CMenuSymbolMark
+__RTTI__CMenuSymbolMark:
 	.4byte CMenuSymbolMark_typestr
-	.4byte lbl_80530688
+	.4byte CMenuSymbolMark_hierarchy
 
 
 .global lbl_80664788
@@ -850,170 +840,169 @@ lbl_806647B0:
 	.4byte lbl_804FA048
 	.4byte 0
 
-.global CQuestWindow_RTTI
-CQuestWindow_RTTI:
+.global __RTTI__CQuestWindow
+__RTTI__CQuestWindow:
 	.4byte CQuestWindow_typestr
-	.4byte lbl_80530984
+	.4byte CQuestWindow_hierarchy
 
 
-.global IUIWindow_RTTI
-IUIWindow_RTTI:
-	# ROM: 0x5703A0
+.global __RTTI__IUIWindow
+__RTTI__IUIWindow:
 	.4byte IUIWindow_typestr
-	.4byte lbl_805309E4
+	.4byte IUIWindow_hierarchy
 
-.global CTTask_IUIWindow_RTTI
-CTTask_IUIWindow_RTTI:
+.global __RTTI__CTTask_IUIWindow
+__RTTI__CTTask_IUIWindow:
 	.4byte CTTask_IUIWindow_typestr
-	.4byte lbl_80530A2C
+	.4byte CTTask_IUIWindow_hierarchy
 
-.global CSysWinSelect_RTTI
-CSysWinSelect_RTTI:
+.global __RTTI__CSysWinSelect
+__RTTI__CSysWinSelect:
 	.4byte CSysWinSelect_typestr
-	.4byte lbl_80530B08
+	.4byte CSysWinSelect_hierarchy
 
-.global CSystemWindow_RTTI
-CSystemWindow_RTTI:
+.global __RTTI__CSystemWindow
+__RTTI__CSystemWindow:
 	.4byte CSystemWindow_typestr
-	.4byte lbl_80530C08
+	.4byte CSystemWindow_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_typestr
-	.4byte lbl_80530E00
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeShop_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeShop_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeShop
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeShop:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeShop_typestr
-	.4byte lbl_80530E28
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeShop_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeExchange_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeExchange_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeExchange
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeExchange:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeExchange_typestr
-	.4byte lbl_80530E50
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeExchange_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeTailOff_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeTailOff_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeTailOff
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeTailOff:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTailOff_typestr
-	.4byte lbl_80530E78
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTailOff_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodePresent_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodePresent_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodePresent
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodePresent:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodePresent_typestr
-	.4byte lbl_80530EA0
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodePresent_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeQstStart_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeQstStart_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeQstStart
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeQstStart:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQstStart_typestr
-	.4byte lbl_80530EC8
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQstStart_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeInvisible_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeInvisible_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeInvisible
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeInvisible:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeInvisible_typestr
-	.4byte lbl_80530EF0
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeInvisible_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeQuest_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeQuest_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeQuest
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeQuest:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQuest_typestr
-	.4byte lbl_80530F18
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQuest_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeFade_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeFade_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeFade
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeFade:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeFade_typestr
-	.4byte lbl_80530F40
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeFade_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeAct_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeAct_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeAct
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeAct:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeAct_typestr
-	.4byte lbl_80530F68
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeAct_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeSelect2_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeSelect2_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect2
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect2:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect2_typestr
-	.4byte lbl_80530F90
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect2_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeSelect_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeSelect_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect_typestr
-	.4byte lbl_80530FB8
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeLine_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeLine_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeLine
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeLine:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeLine_typestr
-	.4byte lbl_80530FE0
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeLine_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeMouth_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeMouth_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeMouth
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeMouth:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMouth_typestr
-	.4byte lbl_80531008
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMouth_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodePos_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodePos_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodePos
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodePos:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodePos_typestr
-	.4byte lbl_80531030
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodePos_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeType_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeType_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeType
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeType:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeType_typestr
-	.4byte lbl_80531058
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeType_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeTrust_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeTrust_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeTrust
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeTrust:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTrust_typestr
-	.4byte lbl_80531080
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTrust_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeCol_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeCol_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCol
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeCol:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCol_typestr
-	.4byte lbl_80531100
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCol_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeRuby_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeRuby_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeRuby
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeRuby:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeRuby_typestr
-	.4byte lbl_80531128
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeRuby_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeDel_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeDel_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeDel
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeDel:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeDel_typestr
-	.4byte lbl_80531150
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeDel_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeWait_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeWait_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeWait
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeWait:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeWait_typestr
-	.4byte lbl_80531178
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeWait_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeCP_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeCP_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCP
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeCP:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCP_typestr
-	.4byte lbl_805311A0
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCP_hierarchy
 
-.global _unnamed_CTagProcessor_cpp_CTagCodeCL_RTTI
-_unnamed_CTagProcessor_cpp_CTagCodeCL_RTTI:
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCL
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeCL:
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCL_typestr
-	.4byte lbl_805311C8
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCL_hierarchy
 
-.global lbl_80664898
-lbl_80664898:
+.global __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+__RTTI___unnamed_CTagProcessor_cpp_ITagCode:
 	.4byte _unnamed_CTagProcessor_cpp_ITagCode_typestr
 	.4byte 0
 
-.global CTagProcessorSE_RTTI
-CTagProcessorSE_RTTI:
+.global __RTTI__CTagProcessorSE
+__RTTI__CTagProcessorSE:
 	.4byte CTagProcessorSE_typestr
-	.4byte lbl_805311F0
+	.4byte CTagProcessorSE_hierarchy
 
-.global CTagProcessor_RTTI
-CTagProcessor_RTTI:
+.global __RTTI__CTagProcessor
+__RTTI__CTagProcessor:
 	.4byte CTagProcessor_typestr
-	.4byte lbl_80531220
+	.4byte CTagProcessor_hierarchy
 
-.global CTagProcessorBase_RTTI
-CTagProcessorBase_RTTI:
+.global __RTTI__CTagProcessorBase
+__RTTI__CTagProcessorBase:
 	.4byte CTagProcessorBase_typestr
-	.4byte lbl_80531250
+	.4byte CTagProcessorBase_hierarchy
 
-.global lbl_806648B8
-lbl_806648B8:
+.global __RTTI__nw4r_ut_TagProcessorBase_wchar_t
+__RTTI__nw4r_ut_TagProcessorBase_wchar_t:
 	.4byte nw4r_ut_TagProcessorBase_wchar_t_typestr
 	.4byte 0
 
@@ -1235,41 +1224,40 @@ lbl_806648C0:
 	.2byte 0
 
 
-.global CTalkWindow_RTTI
-CTalkWindow_RTTI:
-	# ROM: 0x570648
+.global __RTTI__CTalkWindow
+__RTTI__CTalkWindow:
 	.4byte CTalkWindow_typestr
-	.4byte lbl_80531838
+	.4byte CTalkWindow_hierarchy
 
-.global CUIBattleManager_RTTI
-CUIBattleManager_RTTI:
+.global __RTTI__CUIBattleManager
+__RTTI__CUIBattleManager:
 	.4byte CUIBattleManager_typestr
-	.4byte lbl_80531940
+	.4byte CUIBattleManager_hierarchy
 
-.global reslist_IUIBattle_RTTI
-reslist_IUIBattle_RTTI:
+.global __RTTI__reslist_IUIBattle
+__RTTI__reslist_IUIBattle:
 	.4byte reslist_IUIBattle_typestr
-	.4byte lbl_80531978
+	.4byte reslist_IUIBattle_hierarchy
 
-.global _reslist_base_IUIBattle_RTTI
-_reslist_base_IUIBattle_RTTI:
+.global __RTTI___reslist_base_IUIBattle
+__RTTI___reslist_base_IUIBattle:
 	.4byte _reslist_base_IUIBattle_typestr
 	.4byte 0
 
-.global CUIBattleManager_CTest_RTTI
-CUIBattleManager_CTest_RTTI:
+.global __RTTI__CUIBattleManager_CTest
+__RTTI__CUIBattleManager_CTest:
 	.4byte CUIBattleManager_CTest_typestr
-	.4byte lbl_805319B4
+	.4byte CUIBattleManager_CTest_hierarchy
 
-.global CTTask_CUIBattleManager_CTest_RTTI
-CTTask_CUIBattleManager_CTest_RTTI:
+.global __RTTI__CTTask_CUIBattleManager_CTest
+__RTTI__CTTask_CUIBattleManager_CTest:
 	.4byte CTTask_CUIBattleManager_CTest_typestr
-	.4byte lbl_805319FC
+	.4byte CTTask_CUIBattleManager_CTest_hierarchy
 
-.global CTTask_CUIBattleManager_RTTI
-CTTask_CUIBattleManager_RTTI:
+.global __RTTI__CTTask_CUIBattleManager
+__RTTI__CTTask_CUIBattleManager:
 	.4byte CTTask_CUIBattleManager_typestr
-	.4byte lbl_80531A3C
+	.4byte CTTask_CUIBattleManager_hierarchy
 
 
 .global lbl_80664AA0
@@ -1278,38 +1266,38 @@ lbl_80664AA0:
 	.4byte lbl_804FB800
 	.4byte 0
 
-.global CUICfManager_RTTI
-CUICfManager_RTTI:
+.global __RTTI__CUICfManager
+__RTTI__CUICfManager:
 	.4byte CUICfManager_typestr
-	.4byte lbl_80531B34
+	.4byte CUICfManager_hierarchy
 
-.global reslist_IUICf_RTTI
-reslist_IUICf_RTTI:
+.global __RTTI__reslist_IUICf
+__RTTI__reslist_IUICf:
 	.4byte reslist_IUICf_typestr
-	.4byte lbl_80531B74
+	.4byte reslist_IUICf_hierarchy
 
-.global _reslist_base_IUICf_RTTI
-_reslist_base_IUICf_RTTI:
+.global __RTTI___reslist_base_IUICf
+__RTTI___reslist_base_IUICf:
 	.4byte _reslist_base_IUICf_typestr
 	.4byte 0
 
-.global CUICfManager_CTest_RTTI
-CUICfManager_CTest_RTTI:
+.global __RTTI__CUICfManager_CTest
+__RTTI__CUICfManager_CTest:
 	.4byte CUICfManager_CTest_typestr
-	.4byte lbl_80531BB0
+	.4byte CUICfManager_CTest_hierarchy
 
-.global CTTask_CUICfManager_CTest_RTTI
-CTTask_CUICfManager_CTest_RTTI:
+.global __RTTI__CTTask_CUICfManager_CTest
+__RTTI__CTTask_CUICfManager_CTest:
 	.4byte CTTask_CUICfManager_CTest_typestr
-	.4byte lbl_80531BF8
+	.4byte CTTask_CUICfManager_CTest_hierarchy
 
-.global CTTask_CUICfManager_RTTI
-CTTask_CUICfManager_RTTI:
+.global __RTTI__CTTask_CUICfManager
+__RTTI__CTTask_CUICfManager:
 	.4byte CTTask_CUICfManager_typestr
-	.4byte lbl_80531C38
+	.4byte CTTask_CUICfManager_hierarchy
 
-.global lbl_80664AD8
-lbl_80664AD8:
+.global __RTTI__cf_IFlagEvent
+__RTTI__cf_IFlagEvent:
 	.4byte cf_IFlagEvent_typestr
 	.4byte 0
 
@@ -1332,35 +1320,35 @@ lbl_80664AE8:
 	.4byte 0x01000000
 	.4byte 0
 
-.global CUIWindowManager_RTTI
-CUIWindowManager_RTTI:
+.global __RTTI__CUIWindowManager
+__RTTI__CUIWindowManager:
 	.4byte CUIWindowManager_typestr
-	.4byte lbl_80531DA8
+	.4byte CUIWindowManager_hierarchy
 
-.global reslist_IUIWindow_RTTI
-reslist_IUIWindow_RTTI:
+.global __RTTI__reslist_IUIWindow
+__RTTI__reslist_IUIWindow:
 	.4byte reslist_IUIWindow_typestr
-	.4byte lbl_80531DE0
+	.4byte reslist_IUIWindow_hierarchy
 
-.global _reslist_base_IUIWindow_RTTI
-_reslist_base_IUIWindow_RTTI:
+.global __RTTI___reslist_base_IUIWindow
+__RTTI___reslist_base_IUIWindow:
 	.4byte _reslist_base_IUIWindow_typestr
 	.4byte 0
 
-.global CUIWindowManager_CTest_RTTI
-CUIWindowManager_CTest_RTTI:
+.global __RTTI__CUIWindowManager_CTest
+__RTTI__CUIWindowManager_CTest:
 	.4byte CUIWindowManager_CTest_typestr
-	.4byte lbl_80531E1C
+	.4byte CUIWindowManager_CTest_hierarchy
 
-.global CTTask_CUIWindowManager_CTest_RTTI
-CTTask_CUIWindowManager_CTest_RTTI:
+.global __RTTI__CTTask_CUIWindowManager_CTest
+__RTTI__CTTask_CUIWindowManager_CTest:
 	.4byte CTTask_CUIWindowManager_CTest_typestr
-	.4byte lbl_80531E64
+	.4byte CTTask_CUIWindowManager_CTest_hierarchy
 
-.global CTTask_CUIWindowManager_RTTI
-CTTask_CUIWindowManager_RTTI:
+.global __RTTI__CTTask_CUIWindowManager
+__RTTI__CTTask_CUIWindowManager:
 	.4byte CTTask_CUIWindowManager_typestr
-	.4byte lbl_80531EA4
+	.4byte CTTask_CUIWindowManager_hierarchy
 
 
 .global lbl_80664B20
@@ -1369,20 +1357,20 @@ lbl_80664B20:
 	.4byte 0x70633100
 	.4byte 0
 
-.global cf_CfBdat_RTTI
-cf_CfBdat_RTTI:
+.global __RTTI__cf_CfBdat
+__RTTI__cf_CfBdat:
 	.4byte cf_CfBdat_typestr
-	.4byte lbl_80531F70
+	.4byte cf_CfBdat_hierarchy
 
-.global CMenuUpdate_RTTI
-CMenuUpdate_RTTI:
+.global __RTTI__CMenuUpdate
+__RTTI__CMenuUpdate:
 	.4byte CMenuUpdate_typestr
-	.4byte lbl_80532040
+	.4byte CMenuUpdate_hierarchy
 
-.global CMenuLandTelop_RTTI
-CMenuLandTelop_RTTI:
+.global __RTTI__CMenuLandTelop
+__RTTI__CMenuLandTelop:
 	.4byte CMenuLandTelop_typestr
-	.4byte lbl_80532140
+	.4byte CMenuLandTelop_hierarchy
 
 
 .global lbl_80664B40
@@ -1391,38 +1379,38 @@ lbl_80664B40:
 	.4byte 0
 	.4byte 0
 
-.global CMenuGetItem_RTTI
-CMenuGetItem_RTTI:
+.global __RTTI__CMenuGetItem
+__RTTI__CMenuGetItem:
 	.4byte CMenuGetItem_typestr
-	.4byte lbl_805322D0
+	.4byte CMenuGetItem_hierarchy
 
-.global cf_CAttackSet_RTTI
-cf_CAttackSet_RTTI:
+.global __RTTI__cf_CAttackSet
+__RTTI__cf_CAttackSet:
 	.4byte cf_CAttackSet_typestr
-	.4byte lbl_80532D84
+	.4byte cf_CAttackSet_hierarchy
 
-.global lbl_80664B58
-lbl_80664B58:
+.global __RTTI__cf__sAttackSet
+__RTTI__cf__sAttackSet:
 	.4byte cf__sAttackSet_typestr
 	.4byte 0
 
-.global cf_CArtsSet_RTTI
-cf_CArtsSet_RTTI:
+.global __RTTI__cf_CArtsSet
+__RTTI__cf_CArtsSet:
 	.4byte cf_CArtsSet_typestr
-	.4byte lbl_80532D9C
+	.4byte cf_CArtsSet_hierarchy
 
-.global cf__sArtsSet_RTTI
-cf__sArtsSet_RTTI:
+.global __RTTI__cf__sArtsSet
+__RTTI__cf__sArtsSet:
 	.4byte cf__sArtsSet_typestr
 	.4byte 0
 
-.global cf_CArtsParam_RTTI
-cf_CArtsParam_RTTI:
+.global __RTTI__cf_CArtsParam
+__RTTI__cf_CArtsParam:
 	.4byte cf_CArtsParam_typestr
-	.4byte lbl_80532DD0
+	.4byte cf_CArtsParam_hierarchy
 
-.global cf_CAttackParam_RTTI
-cf_CAttackParam_RTTI:
+.global __RTTI__cf_CAttackParam
+__RTTI__cf_CAttackParam:
 	.4byte cf_CAttackParam_typestr
 	.4byte 0
 
@@ -1557,78 +1545,78 @@ lbl_80664BD4:
 .global lbl_80664BD8
 lbl_80664BD8:
 	# ROM: 0x5707B8
-	.4byte materia1Per_typestr
+	.4byte materia1PerString
 	.4byte 0
 
-.global cf_ItemPurifyKessyouImpl_RTTI
-cf_ItemPurifyKessyouImpl_RTTI:
+.global __RTTI__cf_ItemPurifyKessyouImpl
+__RTTI__cf_ItemPurifyKessyouImpl:
 	.4byte cf_ItemPurifyKessyouImpl_typestr
-	.4byte lbl_80532FE0
+	.4byte cf_ItemPurifyKessyouImpl_hierarchy
 
-.global cf_ItemKessyouImpl_RTTI
-cf_ItemKessyouImpl_RTTI:
+.global __RTTI__cf_ItemKessyouImpl
+__RTTI__cf_ItemKessyouImpl:
 	.4byte cf_ItemKessyouImpl_typestr
-	.4byte lbl_80533098
+	.4byte cf_ItemKessyouImpl_hierarchy
 
-.global cf_ItemPurifyCrystalImpl_RTTI
-cf_ItemPurifyCrystalImpl_RTTI:
+.global __RTTI__cf_ItemPurifyCrystalImpl
+__RTTI__cf_ItemPurifyCrystalImpl:
 	.4byte cf_ItemPurifyCrystalImpl_typestr
-	.4byte lbl_80533148
+	.4byte cf_ItemPurifyCrystalImpl_hierarchy
 
-.global cf_ItemDropCrystalImpl_RTTI
-cf_ItemDropCrystalImpl_RTTI:
+.global __RTTI__cf_ItemDropCrystalImpl
+__RTTI__cf_ItemDropCrystalImpl:
 	.4byte cf_ItemDropCrystalImpl_typestr
-	.4byte lbl_80533200
+	.4byte cf_ItemDropCrystalImpl_hierarchy
 
-.global cf_ItemCrystalImpl_RTTI
-cf_ItemCrystalImpl_RTTI:
+.global __RTTI__cf_ItemCrystalImpl
+__RTTI__cf_ItemCrystalImpl:
 	.4byte cf_ItemCrystalImpl_typestr
-	.4byte lbl_805332B8
+	.4byte cf_ItemCrystalImpl_hierarchy
 
-.global cf_ItemEquipImpl_RTTI
-cf_ItemEquipImpl_RTTI:
+.global __RTTI__cf_ItemEquipImpl
+__RTTI__cf_ItemEquipImpl:
 	.4byte cf_ItemEquipImpl_typestr
-	.4byte lbl_80533368
+	.4byte cf_ItemEquipImpl_hierarchy
 
-.global cf_ItemConsImpl_RTTI
-cf_ItemConsImpl_RTTI:
+.global __RTTI__cf_ItemConsImpl
+__RTTI__cf_ItemConsImpl:
 	.4byte cf_ItemConsImpl_typestr
-	.4byte lbl_80533418
+	.4byte cf_ItemConsImpl_hierarchy
 
-.global cf_ItemDummyImpl_RTTI
-cf_ItemDummyImpl_RTTI:
+.global __RTTI__cf_ItemDummyImpl
+__RTTI__cf_ItemDummyImpl:
 	.4byte cf_ItemDummyImpl_typestr
-	.4byte lbl_805334C8
+	.4byte cf_ItemDummyImpl_hierarchy
 
-.global lbl_80664C20
-lbl_80664C20:
+.global __RTTI__cf_ItemImpl
+__RTTI__cf_ItemImpl:
 	.4byte cf_ItemImpl_typestr
 	.4byte 0
 
-.global cf_CCharEffect_RTTI
-cf_CCharEffect_RTTI:
+.global __RTTI__cf_CCharEffect
+__RTTI__cf_CCharEffect:
 	.4byte cf_CCharEffect_typestr
 	.4byte 0
 
-.global cf_CCharEffectEne_RTTI
-cf_CCharEffectEne_RTTI:
+.global __RTTI__cf_CCharEffectEne
+__RTTI__cf_CCharEffectEne:
 	.4byte cf_CCharEffectEne_typestr
-	.4byte lbl_805335C8
+	.4byte cf_CCharEffectEne_hierarchy
 
-.global cf_CCharEffectNpc_RTTI
-cf_CCharEffectNpc_RTTI:
+.global __RTTI__cf_CCharEffectNpc
+__RTTI__cf_CCharEffectNpc:
 	.4byte cf_CCharEffectNpc_typestr
-	.4byte lbl_805335F8
+	.4byte cf_CCharEffectNpc_hierarchy
 
-.global cf_CCharEffectObj_RTTI
-cf_CCharEffectObj_RTTI:
+.global __RTTI__cf_CCharEffectObj
+__RTTI__cf_CCharEffectObj:
 	.4byte cf_CCharEffectObj_typestr
-	.4byte lbl_80533628
+	.4byte cf_CCharEffectObj_hierarchy
 
-.global cf_CCharEffectPc_RTTI
-cf_CCharEffectPc_RTTI:
+.global __RTTI__cf_CCharEffectPc
+__RTTI__cf_CCharEffectPc:
 	.4byte cf_CCharEffectPc_typestr
-	.4byte lbl_80533658
+	.4byte cf_CCharEffectPc_hierarchy
 
 
 .global lbl_80664C50
@@ -1642,25 +1630,25 @@ lbl_80664C54:
 	# ROM: 0x570834
 	.4byte 0xFFFFFFFF
 
-.global CCol6Invite_RTTI
-CCol6Invite_RTTI:
+.global __RTTI__CCol6Invite
+__RTTI__CCol6Invite:
 	.4byte CCol6Invite_typestr
-	.4byte lbl_805337B8
+	.4byte CCol6Invite_hierarchy
 
-.global CCol6System_RTTI
-CCol6System_RTTI:
+.global __RTTI__CCol6System
+__RTTI__CCol6System:
 	.4byte CCol6System_typestr
-	.4byte lbl_805338B0
+	.4byte CCol6System_hierarchy
 
-.global CCol6Hint_RTTI
-CCol6Hint_RTTI:
+.global __RTTI__CCol6Hint
+__RTTI__CCol6Hint:
 	.4byte CCol6Hint_typestr
-	.4byte lbl_805339B0
+	.4byte CCol6Hint_hierarchy
 
-.global CCol6CheckBat_RTTI
-CCol6CheckBat_RTTI:
+.global __RTTI__CCol6CheckBat
+__RTTI__CCol6CheckBat:
 	.4byte CCol6CheckBat_typestr
-	.4byte lbl_80533A98
+	.4byte CCol6CheckBat_hierarchy
 
 
 .global lbl_80664C78
@@ -1674,40 +1662,40 @@ lbl_80664C7C:
 	# ROM: 0x57085C
 	.4byte 0x00000064
 
-.global cf_CTaskREvent_RTTI
-cf_CTaskREvent_RTTI:
+.global __RTTI__cf_CTaskREvent
+__RTTI__cf_CTaskREvent:
 	.4byte cf_CTaskREvent_typestr
-	.4byte lbl_80534054
+	.4byte cf_CTaskREvent_hierarchy
 
-.global CTTask_cf_CTaskREvent_RTTI
-CTTask_cf_CTaskREvent_RTTI:
+.global __RTTI__CTTask_cf_CTaskREvent
+__RTTI__CTTask_cf_CTaskREvent:
 	.4byte CTTask_cf_CTaskREvent_typestr
-	.4byte lbl_8053409C
+	.4byte CTTask_cf_CTaskREvent_hierarchy
 
-.global cf_CInfoCf_RTTI
-cf_CInfoCf_RTTI:
+.global __RTTI__cf_CInfoCf
+__RTTI__cf_CInfoCf:
 	.4byte cf_CInfoCf_typestr
 	.4byte 0
 
-.global CMenuItem_RTTI
-CMenuItem_RTTI:
+.global __RTTI__CMenuItem
+__RTTI__CMenuItem:
 	.4byte CMenuItem_typestr
-	.4byte lbl_805341C8
+	.4byte CMenuItem_hierarchy
 
-.global cf_CREvtMem_RTTI
-cf_CREvtMem_RTTI:
+.global __RTTI__cf_CREvtMem
+__RTTI__cf_CREvtMem:
 	.4byte cf_CREvtMem_typestr
 	.4byte 0
 
-.global cf_CTaskREvtSequence_RTTI
-cf_CTaskREvtSequence_RTTI:
+.global __RTTI__cf_CTaskREvtSequence
+__RTTI__cf_CTaskREvtSequence:
 	.4byte cf_CTaskREvtSequence_typestr
-	.4byte lbl_805343A0
+	.4byte cf_CTaskREvtSequence_hierarchy
 
-.global CTTask_cf_CTaskREvtSequence_RTTI
-CTTask_cf_CTaskREvtSequence_RTTI:
+.global __RTTI__CTTask_cf_CTaskREvtSequence
+__RTTI__CTTask_cf_CTaskREvtSequence:
 	.4byte CTTask_cf_CTaskREvtSequence_typestr
-	.4byte lbl_805343E8
+	.4byte CTTask_cf_CTaskREvtSequence_hierarchy
 
 
 .global lbl_80664CB8
@@ -1733,20 +1721,20 @@ lbl_80664CC4:
 	# ROM: 0x5708A4
 	.4byte 0x72656600
 
-.global cf_CfResObjImpl_RTTI
-cf_CfResObjImpl_RTTI:
+.global __RTTI__cf_CfResObjImpl
+__RTTI__cf_CfResObjImpl:
 	.4byte cf_CfResObjImpl_typestr
-	.4byte lbl_80534780
+	.4byte cf_CfResObjImpl_hierarchy
 
-.global lbl_80664CD0
-lbl_80664CD0:
+.global __RTTI__cf_CfResImpl
+__RTTI__cf_CfResImpl:
 	.4byte cf_CfResImpl_typestr
 	.4byte 0
 
-.global cf_CfResReloadImpl_RTTI
-cf_CfResReloadImpl_RTTI:
+.global __RTTI__cf_CfResReloadImpl
+__RTTI__cf_CfResReloadImpl:
 	.4byte cf_CfResReloadImpl_typestr
-	.4byte lbl_80534828
+	.4byte cf_CfResReloadImpl_hierarchy
 
 
 .global lbl_80664CE0
@@ -1760,17 +1748,16 @@ lbl_80664CE4:
 	# ROM: 0x5708C4
 	.4byte lbl_80669FC8
 
-.global cf_CfMapEffectManager_RTTI
-cf_CfMapEffectManager_RTTI:
+.global __RTTI__cf_CfMapEffectManager
+__RTTI__cf_CfMapEffectManager:
 	.4byte cf_CfMapEffectManager_typestr
 	.4byte 0
 
 
-.global CScnMaruShadowNw4r_RTTI
-CScnMaruShadowNw4r_RTTI:
-	# ROM: 0x5708D0
+.global __RTTI__CScnMaruShadowNw4r
+__RTTI__CScnMaruShadowNw4r:
 	.4byte CScnMaruShadowNw4r_typestr
-	.4byte lbl_80534E40
+	.4byte CScnMaruShadowNw4r_hierarchy
 
 
 .global lbl_80664CF8
@@ -1779,13 +1766,13 @@ lbl_80664CF8:
 	.4byte IScnPolyShadow_typestr
 	.4byte 0
 
-.global cf_CREvtModel_RTTI
-cf_CREvtModel_RTTI:
+.global __RTTI__cf_CREvtModel
+__RTTI__cf_CREvtModel:
 	.4byte cf_CREvtModel_typestr
-	.4byte lbl_80534E90
+	.4byte cf_CREvtModel_hierarchy
 
-.global cf_CREvtObj_RTTI
-cf_CREvtObj_RTTI:
+.global __RTTI__cf_CREvtObj
+__RTTI__cf_CREvtObj:
 	.4byte cf_CREvtObj_typestr
 	.4byte 0
 
@@ -1812,20 +1799,20 @@ lbl_80664D18:
 lbl_80664D20:
 	.asciz "itm?Per"
 
-.global cf_CfValueItemManager_RTTI
-cf_CfValueItemManager_RTTI:
+.global __RTTI__cf_CfValueItemManager
+__RTTI__cf_CfValueItemManager:
 	.4byte cf_CfValueItemManager_typestr
-	.4byte lbl_80534EB8
+	.4byte cf_CfValueItemManager_hierarchy
 
-.global cf_CfMapItemManager_RTTI
-cf_CfMapItemManager_RTTI:
+.global __RTTI__cf_CfMapItemManager
+__RTTI__cf_CfMapItemManager:
 	.4byte cf_CfMapItemManager_typestr
 	.4byte 0
 
-.global CMenuZeal_RTTI
-CMenuZeal_RTTI:
+.global __RTTI__CMenuZeal
+__RTTI__CMenuZeal:
 	.4byte CMenuZeal_typestr
-	.4byte lbl_80535478
+	.4byte CMenuZeal_hierarchy
 
 
 .global lbl_80664D40
@@ -1839,25 +1826,25 @@ lbl_80664D44:
 	# ROM: 0x570924
 	.4byte lbl_8066A160
 
-.global cf_CREvtCamera_RTTI
-cf_CREvtCamera_RTTI:
+.global __RTTI__cf_CREvtCamera
+__RTTI__cf_CREvtCamera:
 	.4byte cf_CREvtCamera_typestr
-	.4byte lbl_805354E0
+	.4byte cf_CREvtCamera_hierarchy
 
-.global cf_CREvtModelMap_RTTI
-cf_CREvtModelMap_RTTI:
+.global __RTTI__cf_CREvtModelMap
+__RTTI__cf_CREvtModelMap:
 	.4byte cf_CREvtModelMap_typestr
-	.4byte lbl_80535620
+	.4byte cf_CREvtModelMap_hierarchy
 
-.global cf_CREvtModelObj_RTTI
-cf_CREvtModelObj_RTTI:
+.global __RTTI__cf_CREvtModelObj
+__RTTI__cf_CREvtModelObj:
 	.4byte cf_CREvtModelObj_typestr
-	.4byte lbl_80535854
+	.4byte cf_CREvtModelObj_hierarchy
 
-.global cf_CREvtModelPc_RTTI
-cf_CREvtModelPc_RTTI:
+.global __RTTI__cf_CREvtModelPc
+__RTTI__cf_CREvtModelPc:
 	.4byte cf_CREvtModelPc_typestr
-	.4byte lbl_80535A90
+	.4byte cf_CREvtModelPc_hierarchy
 
 
 .global lbl_80664D68
@@ -1878,15 +1865,15 @@ lbl_80664D70:
 	.4byte lbl_8066A1F8
 	.4byte 0
 
-.global cf_CREvtEffect_RTTI
-cf_CREvtEffect_RTTI:
+.global __RTTI__cf_CREvtEffect
+__RTTI__cf_CREvtEffect:
 	.4byte cf_CREvtEffect_typestr
-	.4byte lbl_80535AE4
+	.4byte cf_CREvtEffect_hierarchy
 
-.global CMenuPTGauge_RTTI
-CMenuPTGauge_RTTI:
+.global __RTTI__CMenuPTGauge
+__RTTI__CMenuPTGauge:
 	.4byte CMenuPTGauge_typestr
-	.4byte lbl_80535CE0
+	.4byte CMenuPTGauge_hierarchy
 
 
 .global lbl_80664D88
@@ -1919,39 +1906,37 @@ lbl_80664D98:
 	.float 0.2
 	.4byte 0
 
-.global CMenuSelectShop_RTTI
-CMenuSelectShop_RTTI:
+.global __RTTI__CMenuSelectShop
+__RTTI__CMenuSelectShop:
 	.4byte CMenuSelectShop_typestr
-	.4byte lbl_80535DE0
+	.4byte CMenuSelectShop_hierarchy
 
-.global CMenuShopSell_RTTI
-CMenuShopSell_RTTI:
+.global __RTTI__CMenuShopSell
+__RTTI__CMenuShopSell:
 	.4byte CMenuShopSell_typestr
-	.4byte lbl_80535E58
+	.4byte CMenuShopSell_hierarchy
 
-.global CMenuShopBuy_RTTI
-CMenuShopBuy_RTTI:
+.global __RTTI__CMenuShopBuy
+__RTTI__CMenuShopBuy:
 	.4byte CMenuShopBuy_typestr
-	.4byte lbl_80535EC8
+	.4byte CMenuShopBuy_hierarchy
 
 
-.global CScnItemModelNw4r_RTTI
-CScnItemModelNw4r_RTTI:
-	# ROM: 0x570998
+.global __RTTI__CScnItemModelNw4r
+__RTTI__CScnItemModelNw4r:
 	.4byte CScnItemModelNw4r_typestr
-	.4byte lbl_80535F30
+	.4byte CScnItemModelNw4r_hierarchy
 
-.global cf_CfResPcImpl_RTTI
-cf_CfResPcImpl_RTTI:
+.global __RTTI__cf_CfResPcImpl
+__RTTI__cf_CfResPcImpl:
 	.4byte cf_CfResPcImpl_typestr
-	.4byte lbl_80535FB0
+	.4byte cf_CfResPcImpl_hierarchy
 
 
-.global CScnItemModel_RTTI
-CScnItemModel_RTTI:
-	# ROM: 0x5709A8
+.global __RTTI__CScnItemModel
+__RTTI__CScnItemModel:
 	.4byte CScnItemModel_typestr
-	.4byte lbl_80535FBC
+	.4byte CScnItemModel_hierarchy
 
 
 .global lbl_80664DD0
@@ -1960,10 +1945,10 @@ lbl_80664DD0:
 	.4byte CScnItem_typestr
 	.4byte 0
 
-.global CMenuPTState_RTTI
-CMenuPTState_RTTI:
+.global __RTTI__CMenuPTState
+__RTTI__CMenuPTState:
 	.4byte CMenuPTState_typestr
-	.4byte lbl_80536228
+	.4byte CMenuPTState_hierarchy
 
 
 .global lbl_80664DE0
@@ -1972,8 +1957,8 @@ lbl_80664DE0:
 	.4byte lbl_8066A370
 	.4byte 0
 
-.global cf_CPartsChange_RTTI
-cf_CPartsChange_RTTI:
+.global __RTTI__cf_CPartsChange
+__RTTI__cf_CPartsChange:
 	.4byte cf_CPartsChange_typestr
 	.4byte 0
 
@@ -2030,55 +2015,55 @@ lbl_80664E20:
 	.4byte 0x000001CC
 	.4byte 0x01CD01CE
 
-.global reslist_cf_CfPartyInfo_RTTI
-reslist_cf_CfPartyInfo_RTTI:
+.global __RTTI__reslist_cf_CfPartyInfo
+__RTTI__reslist_cf_CfPartyInfo:
 	.4byte reslist_cf_CfPartyInfo_typestr
-	.4byte lbl_80536290
+	.4byte reslist_cf_CfPartyInfo_hierarchy
 
-.global _reslist_base_cf_CfPartyInfo_RTTI
-_reslist_base_cf_CfPartyInfo_RTTI:
+.global __RTTI___reslist_base_cf_CfPartyInfo
+__RTTI___reslist_base_cf_CfPartyInfo:
 	.4byte _reslist_base_cf_CfPartyInfo_typestr
 	.4byte 0
 
-.global cf_CtrlMovePC_RTTI
-cf_CtrlMovePC_RTTI:
+.global __RTTI__cf_CtrlMovePC
+__RTTI__cf_CtrlMovePC:
 	.4byte cf_CtrlMovePC_typestr
-	.4byte lbl_8053651C
+	.4byte cf_CtrlMovePC_hierarchy
 
-.global cf_CtrlMoveNpc_RTTI
-cf_CtrlMoveNpc_RTTI:
+.global __RTTI__cf_CtrlMoveNpc
+__RTTI__cf_CtrlMoveNpc:
 	.4byte cf_CtrlMoveNpc_typestr
-	.4byte lbl_80536578
+	.4byte cf_CtrlMoveNpc_hierarchy
 
-.global CMenuBattleMode_RTTI
-CMenuBattleMode_RTTI:
+.global __RTTI__CMenuBattleMode
+__RTTI__CMenuBattleMode:
 	.4byte CMenuBattleMode_typestr
-	.4byte lbl_80536648
+	.4byte CMenuBattleMode_hierarchy
 
-.global COccCulling_RTTI
-COccCulling_RTTI:
+.global __RTTI__COccCulling
+__RTTI__COccCulling:
 	.4byte COccCulling_typestr
 	.4byte 0
 
-.global CSimpleEveTalkWin_RTTI
-CSimpleEveTalkWin_RTTI:
+.global __RTTI__CSimpleEveTalkWin
+__RTTI__CSimpleEveTalkWin:
 	.4byte CSimpleEveTalkWin_typestr
-	.4byte lbl_80536758
+	.4byte CSimpleEveTalkWin_hierarchy
 
-.global cf_CTaskCulling_RTTI
-cf_CTaskCulling_RTTI:
+.global __RTTI__cf_CTaskCulling
+__RTTI__cf_CTaskCulling:
 	.4byte cf_CTaskCulling_typestr
-	.4byte lbl_8053687C
+	.4byte cf_CTaskCulling_hierarchy
 
-.global CTTask_cf_CTaskCulling_RTTI
-CTTask_cf_CTaskCulling_RTTI:
+.global __RTTI__CTTask_cf_CTaskCulling
+__RTTI__CTTask_cf_CTaskCulling:
 	.4byte CTTask_cf_CTaskCulling_typestr
-	.4byte lbl_805368C4
+	.4byte CTTask_cf_CTaskCulling_hierarchy
 
-.global cf_CVision_RTTI
-cf_CVision_RTTI:
+.global __RTTI__cf_CVision
+__RTTI__cf_CVision:
 	.4byte cf_CVision_typestr
-	.4byte lbl_80536AC0
+	.4byte cf_CVision_hierarchy
 
 
 .global lbl_80664E78
@@ -2164,30 +2149,30 @@ lbl_80664EAC:
 	# ROM: 0x570A8C
 	.4byte 0x808080FF
 
-.global CMenuVision_RTTI
-CMenuVision_RTTI:
+.global __RTTI__CMenuVision
+__RTTI__CMenuVision:
 	.4byte CMenuVision_typestr
-	.4byte lbl_80536DB0
+	.4byte CMenuVision_hierarchy
 
-.global CMenuBattleCommu_RTTI
-CMenuBattleCommu_RTTI:
+.global __RTTI__CMenuBattleCommu
+__RTTI__CMenuBattleCommu:
 	.4byte CMenuBattleCommu_typestr
-	.4byte lbl_80536EB0
+	.4byte CMenuBattleCommu_hierarchy
 
-.global cf_CPcEffect07_RTTI
-cf_CPcEffect07_RTTI:
+.global __RTTI__cf_CPcEffect07
+__RTTI__cf_CPcEffect07:
 	.4byte cf_CPcEffect07_typestr
-	.4byte lbl_80536F30
+	.4byte cf_CPcEffect07_hierarchy
 
-.global lbl_80664EC8
-lbl_80664EC8:
+.global __RTTI__cf_IPcEffect
+__RTTI__cf_IPcEffect:
 	.4byte cf_IPcEffect_typestr
 	.4byte 0
 
-.global CMenuGetItemMulti_RTTI
-CMenuGetItemMulti_RTTI:
+.global __RTTI__CMenuGetItemMulti
+__RTTI__CMenuGetItemMulti:
 	.4byte CMenuGetItemMulti_typestr
-	.4byte lbl_80537138
+	.4byte CMenuGetItemMulti_hierarchy
 
 
 .global lbl_80664ED8
@@ -2236,20 +2221,20 @@ lbl_80664F00:
 	.4byte 0x03EB03EC
 	.4byte 0x03EE0000
 
-.global cf_CSuddenCommu_RTTI
-cf_CSuddenCommu_RTTI:
+.global __RTTI__cf_CSuddenCommu
+__RTTI__cf_CSuddenCommu:
 	.4byte cf_CSuddenCommu_typestr
-	.4byte lbl_80537188
+	.4byte cf_CSuddenCommu_hierarchy
 
-.global CMenuKizunaTalk_RTTI
-CMenuKizunaTalk_RTTI:
+.global __RTTI__CMenuKizunaTalk
+__RTTI__CMenuKizunaTalk:
 	.4byte CMenuKizunaTalk_typestr
-	.4byte lbl_80537314
+	.4byte CMenuKizunaTalk_hierarchy
 
-.global CMenuItemExchange_RTTI
-CMenuItemExchange_RTTI:
+.global __RTTI__CMenuItemExchange
+__RTTI__CMenuItemExchange:
 	.4byte CMenuItemExchange_typestr
-	.4byte lbl_805373B0
+	.4byte CMenuItemExchange_hierarchy
 
 
 .global lbl_80664F20
@@ -2265,155 +2250,155 @@ lbl_80664F28:
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
-.global cf_CfPadTask_RTTI
-cf_CfPadTask_RTTI:
+.global __RTTI__cf_CfPadTask
+__RTTI__cf_CfPadTask:
 	.4byte cf_CfPadTask_typestr
-	.4byte lbl_8053749C
+	.4byte cf_CfPadTask_hierarchy
 
-.global CTTask_cf_CfPadTask_RTTI
-CTTask_cf_CfPadTask_RTTI:
+.global __RTTI__CTTask_cf_CfPadTask
+__RTTI__CTTask_cf_CfPadTask:
 	.4byte CTTask_cf_CfPadTask_typestr
-	.4byte lbl_805374E4
+	.4byte CTTask_cf_CfPadTask_hierarchy
 
-.global cf_CREvtLight_RTTI
-cf_CREvtLight_RTTI:
+.global __RTTI__cf_CREvtLight
+__RTTI__cf_CREvtLight:
 	.4byte cf_CREvtLight_typestr
-	.4byte lbl_80537570
+	.4byte cf_CREvtLight_hierarchy
 
-.global CBgTex_RTTI
-CBgTex_RTTI:
+.global __RTTI__CBgTex
+__RTTI__CBgTex:
 	.4byte CBgTex_typestr
-	.4byte lbl_80537608
+	.4byte CBgTex_hierarchy
 
-.global CTitleAHelp_RTTI
-CTitleAHelp_RTTI:
+.global __RTTI__CTitleAHelp
+__RTTI__CTitleAHelp:
 	.4byte CTitleAHelp_typestr
-	.4byte lbl_80537D40
+	.4byte CTitleAHelp_hierarchy
 
-.global CItemBoxGrid_RTTI
-CItemBoxGrid_RTTI:
+.global __RTTI__CItemBoxGrid
+__RTTI__CItemBoxGrid:
 	.4byte CItemBoxGrid_typestr
-	.4byte lbl_80537F80
+	.4byte CItemBoxGrid_hierarchy
 
-.global CArtsBookItem_RTTI
-CArtsBookItem_RTTI:
+.global __RTTI__CArtsBookItem
+__RTTI__CArtsBookItem:
 	.4byte CArtsBookItem_typestr
-	.4byte lbl_80537FA0
+	.4byte CArtsBookItem_hierarchy
 
-.global CVisionItem_RTTI
-CVisionItem_RTTI:
+.global __RTTI__CVisionItem
+__RTTI__CVisionItem:
 	.4byte CVisionItem_typestr
-	.4byte lbl_80537FC0
+	.4byte CVisionItem_hierarchy
 
-.global CQuestItem_RTTI
-CQuestItem_RTTI:
+.global __RTTI__CQuestItem
+__RTTI__CQuestItem:
 	.4byte CQuestItem_typestr
 	.4byte 0
 
-.global CSubCur_RTTI
-CSubCur_RTTI:
+.global __RTTI__CSubCur
+__RTTI__CSubCur:
 	.4byte CSubCur_typestr
-	.4byte lbl_80538008
+	.4byte CSubCur_hierarchy
 
-.global CCur22_RTTI
-CCur22_RTTI:
+.global __RTTI__CCur22
+__RTTI__CCur22:
 	.4byte CCur22_typestr
-	.4byte lbl_80538030
+	.4byte CCur22_hierarchy
 
-.global CCur18_RTTI
-CCur18_RTTI:
+.global __RTTI__CCur18
+__RTTI__CCur18:
 	.4byte CCur18_typestr
-	.4byte lbl_80538058
+	.4byte CCur18_hierarchy
 
-.global CCur16_RTTI
-CCur16_RTTI:
+.global __RTTI__CCur16
+__RTTI__CCur16:
 	.4byte CCur16_typestr
-	.4byte lbl_80538080
+	.4byte CCur16_hierarchy
 
-.global CCur15_RTTI
-CCur15_RTTI:
+.global __RTTI__CCur15
+__RTTI__CCur15:
 	.4byte CCur15_typestr
-	.4byte lbl_805380A8
+	.4byte CCur15_hierarchy
 
-.global CCur14_RTTI
-CCur14_RTTI:
+.global __RTTI__CCur14
+__RTTI__CCur14:
 	.4byte CCur14_typestr
-	.4byte lbl_805380D0
+	.4byte CCur14_hierarchy
 
-.global CCur11_RTTI
-CCur11_RTTI:
+.global __RTTI__CCur11
+__RTTI__CCur11:
 	.4byte CCur11_typestr
-	.4byte lbl_805380F8
+	.4byte CCur11_hierarchy
 
-.global CCur09_RTTI
-CCur09_RTTI:
+.global __RTTI__CCur09
+__RTTI__CCur09:
 	.4byte CCur09_typestr
-	.4byte lbl_80538120
+	.4byte CCur09_hierarchy
 
-.global CCur07_RTTI
-CCur07_RTTI:
+.global __RTTI__CCur07
+__RTTI__CCur07:
 	.4byte CCur07_typestr
-	.4byte lbl_80538148
+	.4byte CCur07_hierarchy
 
-.global CSortMenu_RTTI
-CSortMenu_RTTI:
+.global __RTTI__CSortMenu
+__RTTI__CSortMenu:
 	.4byte CSortMenu_typestr
-	.4byte lbl_80538210
+	.4byte CSortMenu_hierarchy
 
-.global CItemBoxInfo2_RTTI
-CItemBoxInfo2_RTTI:
+.global __RTTI__CItemBoxInfo2
+__RTTI__CItemBoxInfo2:
 	.4byte CItemBoxInfo2_typestr
-	.4byte lbl_805382D0
+	.4byte CItemBoxInfo2_hierarchy
 
-.global CItemBoxInfo_RTTI
-CItemBoxInfo_RTTI:
+.global __RTTI__CItemBoxInfo
+__RTTI__CItemBoxInfo:
 	.4byte CItemBoxInfo_typestr
-	.4byte lbl_80538368
+	.4byte CItemBoxInfo_hierarchy
 
-.global CNumSelect_RTTI
-CNumSelect_RTTI:
+.global __RTTI__CNumSelect
+__RTTI__CNumSelect:
 	.4byte CNumSelect_typestr
-	.4byte lbl_80538400
+	.4byte CNumSelect_hierarchy
 
-.global CItemBoxLine_RTTI
-CItemBoxLine_RTTI:
+.global __RTTI__CItemBoxLine
+__RTTI__CItemBoxLine:
 	.4byte CItemBoxLine_typestr
-	.4byte lbl_80538528
+	.4byte CItemBoxLine_hierarchy
 
-.global CIBLTabCur_RTTI
-CIBLTabCur_RTTI:
+.global __RTTI__CIBLTabCur
+__RTTI__CIBLTabCur:
 	.4byte CIBLTabCur_typestr
-	.4byte lbl_80538550
+	.4byte CIBLTabCur_hierarchy
 
-.global CScrollBar_RTTI
-CScrollBar_RTTI:
+.global __RTTI__CScrollBar
+__RTTI__CScrollBar:
 	.4byte CScrollBar_typestr
-	.4byte lbl_80538618
+	.4byte CScrollBar_hierarchy
 
-.global cf_CfGimmickObject_RTTI
-cf_CfGimmickObject_RTTI:
+.global __RTTI__cf_CfGimmickObject
+__RTTI__cf_CfGimmickObject:
 	.4byte cf_CfGimmickObject_typestr
-	.4byte lbl_8053874C
+	.4byte cf_CfGimmickObject_hierarchy
 
-.global cf_CfGimmick_RTTI
-cf_CfGimmick_RTTI:
+.global __RTTI__cf_CfGimmick
+__RTTI__cf_CfGimmick:
 	.4byte cf_CfGimmick_typestr
-	.4byte lbl_80538760
+	.4byte cf_CfGimmick_hierarchy
 
-.global cf_CfResTboxImpl_RTTI
-cf_CfResTboxImpl_RTTI:
+.global __RTTI__cf_CfResTboxImpl
+__RTTI__cf_CfResTboxImpl:
 	.4byte cf_CfResTboxImpl_typestr
-	.4byte lbl_80538A28
+	.4byte cf_CfResTboxImpl_hierarchy
 
-.global CPartyStateWin_RTTI
-CPartyStateWin_RTTI:
+.global __RTTI__CPartyStateWin
+__RTTI__CPartyStateWin:
 	.4byte CPartyStateWin_typestr
-	.4byte lbl_80538B30
+	.4byte CPartyStateWin_hierarchy
 
-.global CModelDisp_RTTI
-CModelDisp_RTTI:
+.global __RTTI__CModelDisp
+__RTTI__CModelDisp:
 	.4byte CModelDisp_typestr
-	.4byte lbl_80538B74
+	.4byte CModelDisp_hierarchy
 
 
 .global lbl_80665020
@@ -2422,10 +2407,10 @@ lbl_80665020:
 	.4byte lbl_80503460
 	.4byte 0
 
-.global CPartyState_RTTI
-CPartyState_RTTI:
+.global __RTTI__CPartyState
+__RTTI__CPartyState:
 	.4byte CPartyState_typestr
-	.4byte lbl_80538C08
+	.4byte CPartyState_hierarchy
 
 
 .global lbl_80665030
@@ -2434,15 +2419,15 @@ lbl_80665030:
 	.4byte 0x00000007
 	.4byte 0x00000012
 
-.global CModelDispEquip_RTTI
-CModelDispEquip_RTTI:
+.global __RTTI__CModelDispEquip
+__RTTI__CModelDispEquip:
 	.4byte CModelDispEquip_typestr
-	.4byte lbl_80538D5C
+	.4byte CModelDispEquip_hierarchy
 
-.global CEquipChange_RTTI
-CEquipChange_RTTI:
+.global __RTTI__CEquipChange
+__RTTI__CEquipChange:
 	.4byte CEquipChange_typestr
-	.4byte lbl_80538EC8
+	.4byte CEquipChange_hierarchy
 
 
 .global lbl_80665048
@@ -2464,20 +2449,20 @@ lbl_80665058:
 	.4byte 0x0000000A
 	.4byte 0x0000000A
 
-.global reslist_cf_CfMapMineManager_MinePoint_RTTI
-reslist_cf_CfMapMineManager_MinePoint_RTTI:
+.global __RTTI__reslist_cf_CfMapMineManager_MinePoint
+__RTTI__reslist_cf_CfMapMineManager_MinePoint:
 	.4byte reslist_cf_CfMapMineManager_MinePoint_typestr
-	.4byte lbl_80538EF0
+	.4byte reslist_cf_CfMapMineManager_MinePoint_hierarchy
 
-.global _reslist_base_cf_CfMapMineManager_MinePoint_RTTI
-_reslist_base_cf_CfMapMineManager_MinePoint_RTTI:
+.global __RTTI___reslist_base_cf_CfMapMineManager_MinePoint
+__RTTI___reslist_base_cf_CfMapMineManager_MinePoint:
 	.4byte _reslist_base_cf_CfMapMineManager_MinePoint_typestr
 	.4byte 0
 
-.global CItemBoxGridSubMenu_RTTI
-CItemBoxGridSubMenu_RTTI:
+.global __RTTI__CItemBoxGridSubMenu
+__RTTI__CItemBoxGridSubMenu:
 	.4byte CItemBoxGridSubMenu_typestr
-	.4byte lbl_80538F90
+	.4byte CItemBoxGridSubMenu_hierarchy
 
 
 .global lbl_80665078
@@ -2498,10 +2483,10 @@ lbl_80665080:
 	.4byte lbl_80503D48
 	.4byte 0
 
-.global cf_CfGimmickElv_RTTI
-cf_CfGimmickElv_RTTI:
+.global __RTTI__cf_CfGimmickElv
+__RTTI__cf_CfGimmickElv:
 	.4byte cf_CfGimmickElv_typestr
-	.4byte lbl_805390A4
+	.4byte cf_CfGimmickElv_hierarchy
 
 
 .global lbl_80665090
@@ -2510,20 +2495,20 @@ lbl_80665090:
 	.4byte lbl_8066AC68
 	.4byte 0
 
-.global cf_CfGimmickLock_RTTI
-cf_CfGimmickLock_RTTI:
+.global __RTTI__cf_CfGimmickLock
+__RTTI__cf_CfGimmickLock:
 	.4byte cf_CfGimmickLock_typestr
-	.4byte lbl_805390DC
+	.4byte cf_CfGimmickLock_hierarchy
 
-.global cf_CfGimmickWarp_RTTI
-cf_CfGimmickWarp_RTTI:
+.global __RTTI__cf_CfGimmickWarp
+__RTTI__cf_CfGimmickWarp:
 	.4byte cf_CfGimmickWarp_typestr
-	.4byte lbl_8053918C
+	.4byte cf_CfGimmickWarp_hierarchy
 
-.global cf_CfGimmickJump_RTTI
-cf_CfGimmickJump_RTTI:
+.global __RTTI__cf_CfGimmickJump
+__RTTI__cf_CfGimmickJump:
 	.4byte cf_CfGimmickJump_typestr
-	.4byte lbl_805391F4
+	.4byte cf_CfGimmickJump_hierarchy
 
 
 .global lbl_806650B0
@@ -2532,105 +2517,105 @@ lbl_806650B0:
 	.4byte lbl_8066ACF8
 	.4byte lbl_8066AD00
 
-.global cf_CfGimmickItem_RTTI
-cf_CfGimmickItem_RTTI:
+.global __RTTI__cf_CfGimmickItem
+__RTTI__cf_CfGimmickItem:
 	.4byte cf_CfGimmickItem_typestr
-	.4byte lbl_80539274
+	.4byte cf_CfGimmickItem_hierarchy
 
-.global CMenuMakeCrystal_RTTI
-CMenuMakeCrystal_RTTI:
+.global __RTTI__CMenuMakeCrystal
+__RTTI__CMenuMakeCrystal:
 	.4byte CMenuMakeCrystal_typestr
-	.4byte lbl_805392C0
+	.4byte CMenuMakeCrystal_hierarchy
 
-.global CMakeCrystalWin_RTTI
-CMakeCrystalWin_RTTI:
+.global __RTTI__CMakeCrystalWin
+__RTTI__CMakeCrystalWin:
 	.4byte CMakeCrystalWin_typestr
-	.4byte lbl_805393C4
+	.4byte CMakeCrystalWin_hierarchy
 
-.global CMCCrystalBox_RTTI
-CMCCrystalBox_RTTI:
+.global __RTTI__CMCCrystalBox
+__RTTI__CMCCrystalBox:
 	.4byte CMCCrystalBox_typestr
-	.4byte lbl_805394A0
+	.4byte CMCCrystalBox_hierarchy
 
-.global CMCCrystalInfo_RTTI
-CMCCrystalInfo_RTTI:
+.global __RTTI__CMCCrystalInfo
+__RTTI__CMCCrystalInfo:
 	.4byte CMCCrystalInfo_typestr
-	.4byte lbl_80539538
+	.4byte CMCCrystalInfo_hierarchy
 
-.global CModelDispMakeCrystal_RTTI
-CModelDispMakeCrystal_RTTI:
+.global __RTTI__CModelDispMakeCrystal
+__RTTI__CModelDispMakeCrystal:
 	.4byte CModelDispMakeCrystal_typestr
-	.4byte lbl_805396F0
+	.4byte CModelDispMakeCrystal_hierarchy
 
-.global CMCCylinderGauge_RTTI
-CMCCylinderGauge_RTTI:
+.global __RTTI__CMCCylinderGauge
+__RTTI__CMCCylinderGauge:
 	.4byte CMCCylinderGauge_typestr
 	.4byte 0
 
-.global CMCCrystalList_RTTI
-CMCCrystalList_RTTI:
+.global __RTTI__CMCCrystalList
+__RTTI__CMCCrystalList:
 	.4byte CMCCrystalList_typestr
-	.4byte lbl_805397C0
+	.4byte CMCCrystalList_hierarchy
 
-.global CMCEffCylinder_RTTI
-CMCEffCylinder_RTTI:
+.global __RTTI__CMCEffCylinder
+__RTTI__CMCEffCylinder:
 	.4byte CMCEffCylinder_typestr
 	.4byte 0
 
-.global CMCEffDivide_RTTI
-CMCEffDivide_RTTI:
+.global __RTTI__CMCEffDivide
+__RTTI__CMCEffDivide:
 	.4byte CMCEffDivide_typestr
-	.4byte lbl_805397F4
+	.4byte CMCEffDivide_hierarchy
 
-.global CMCEffUpRank_RTTI
-CMCEffUpRank_RTTI:
+.global __RTTI__CMCEffUpRank
+__RTTI__CMCEffUpRank:
 	.4byte CMCEffUpRank_typestr
-	.4byte lbl_80539814
+	.4byte CMCEffUpRank_hierarchy
 
-.global CMCEffCrystal_RTTI
-CMCEffCrystal_RTTI:
+.global __RTTI__CMCEffCrystal
+__RTTI__CMCEffCrystal:
 	.4byte CMCEffCrystal_typestr
 	.4byte 0
 
-.global CMCEffFailure_RTTI
-CMCEffFailure_RTTI:
+.global __RTTI__CMCEffFailure
+__RTTI__CMCEffFailure:
 	.4byte CMCEffFailure_typestr
-	.4byte lbl_80539844
+	.4byte CMCEffFailure_hierarchy
 
-.global CMCEffSuccess_RTTI
-CMCEffSuccess_RTTI:
+.global __RTTI__CMCEffSuccess
+__RTTI__CMCEffSuccess:
 	.4byte CMCEffSuccess_typestr
 	.4byte 0
 
-.global CMCEffUpPrm_RTTI
-CMCEffUpPrm_RTTI:
+.global __RTTI__CMCEffUpPrm
+__RTTI__CMCEffUpPrm:
 	.4byte CMCEffUpPrm_typestr
 	.4byte 0
 
-.global CMCEffUpGreen_RTTI
-CMCEffUpGreen_RTTI:
+.global __RTTI__CMCEffUpGreen
+__RTTI__CMCEffUpGreen:
 	.4byte CMCEffUpGreen_typestr
-	.4byte lbl_80539880
+	.4byte CMCEffUpGreen_hierarchy
 
-.global CMCEffUpBlue_RTTI
-CMCEffUpBlue_RTTI:
+.global __RTTI__CMCEffUpBlue
+__RTTI__CMCEffUpBlue:
 	.4byte CMCEffUpBlue_typestr
-	.4byte lbl_805398A0
+	.4byte CMCEffUpBlue_hierarchy
 
-.global CMCEffUpRed_RTTI
-CMCEffUpRed_RTTI:
+.global __RTTI__CMCEffUpRed
+__RTTI__CMCEffUpRed:
 	.4byte CMCEffUpRed_typestr
-	.4byte lbl_805398C0
+	.4byte CMCEffUpRed_hierarchy
 
-.global CMCEffStart_RTTI
-CMCEffStart_RTTI:
+.global __RTTI__CMCEffStart
+__RTTI__CMCEffStart:
 	.4byte CMCEffStart_typestr
 	.4byte 0
 
-.global CMenuQstCnt_RTTI
-CMenuQstCnt_RTTI:
+.global __RTTI__CMenuQstCnt
+__RTTI__CMenuQstCnt:
 	.4byte CMenuQstCnt_typestr
-	.4byte lbl_805399A0
+	.4byte CMenuQstCnt_hierarchy
 
 
 .global lbl_80665158
@@ -2639,45 +2624,45 @@ lbl_80665158:
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
-.global CQstLogList_RTTI
-CQstLogList_RTTI:
+.global __RTTI__CQstLogList
+__RTTI__CQstLogList:
 	.4byte CQstLogList_typestr
-	.4byte lbl_80539AC8
+	.4byte CQstLogList_hierarchy
 
-.global CQstLogInfo_RTTI
-CQstLogInfo_RTTI:
+.global __RTTI__CQstLogInfo
+__RTTI__CQstLogInfo:
 	.4byte CQstLogInfo_typestr
-	.4byte lbl_80539CB8
+	.4byte CQstLogInfo_hierarchy
 
-.global CSysWin_RTTI
-CSysWin_RTTI:
+.global __RTTI__CSysWin
+__RTTI__CSysWin:
 	.4byte CSysWin_typestr
-	.4byte lbl_80539D54
+	.4byte CSysWin_hierarchy
 
-.global CSelShopWin_RTTI
-CSelShopWin_RTTI:
+.global __RTTI__CSelShopWin
+__RTTI__CSelShopWin:
 	.4byte CSelShopWin_typestr
-	.4byte lbl_80539DE8
+	.4byte CSelShopWin_hierarchy
 
-.global CExchangeWin_RTTI
-CExchangeWin_RTTI:
+.global __RTTI__CExchangeWin
+__RTTI__CExchangeWin:
 	.4byte CExchangeWin_typestr
-	.4byte lbl_80539E80
+	.4byte CExchangeWin_hierarchy
 
-.global CPresentWin_RTTI
-CPresentWin_RTTI:
+.global __RTTI__CPresentWin
+__RTTI__CPresentWin:
 	.4byte CPresentWin_typestr
-	.4byte lbl_80539F18
+	.4byte CPresentWin_hierarchy
 
-.global CMCCrystalSupport_RTTI
-CMCCrystalSupport_RTTI:
+.global __RTTI__CMCCrystalSupport
+__RTTI__CMCCrystalSupport:
 	.4byte CMCCrystalSupport_typestr
-	.4byte lbl_80539FB0
+	.4byte CMCCrystalSupport_hierarchy
 
-.global CMenuArtsSet_RTTI
-CMenuArtsSet_RTTI:
+.global __RTTI__CMenuArtsSet
+__RTTI__CMenuArtsSet:
 	.4byte CMenuArtsSet_typestr
-	.4byte lbl_80539FF8
+	.4byte CMenuArtsSet_hierarchy
 
 
 .global lbl_806651A0
@@ -2686,15 +2671,15 @@ lbl_806651A0:
 	.4byte 0x01000000
 	.4byte 0
 
-.global CArtsList_RTTI
-CArtsList_RTTI:
+.global __RTTI__CArtsList
+__RTTI__CArtsList:
 	.4byte CArtsList_typestr
-	.4byte lbl_8053A148
+	.4byte CArtsList_hierarchy
 	
-.global CArtsInfo_RTTI
-CArtsInfo_RTTI:
+.global __RTTI__CArtsInfo
+__RTTI__CArtsInfo:
 	.4byte CArtsInfo_typestr
-	.4byte lbl_8053A2C8
+	.4byte CArtsInfo_hierarchy
 
 
 .global lbl_806651B8
@@ -2703,118 +2688,118 @@ lbl_806651B8:
 	.4byte lbl_8066AF90
 	.4byte 0
 
-.global cf_CfNandManager_RTTI
-cf_CfNandManager_RTTI:
+.global __RTTI__cf_CfNandManager
+__RTTI__cf_CfNandManager:
 	.4byte cf_CfNandManager_typestr
-	.4byte lbl_8053A438
+	.4byte cf_CfNandManager_hierarchy
 
-.global CTTask_cf_CfNandManager_RTTI
-CTTask_cf_CfNandManager_RTTI:
+.global __RTTI__CTTask_cf_CfNandManager
+__RTTI__CTTask_cf_CfNandManager:
 	.4byte CTTask_cf_CfNandManager_typestr
-	.4byte lbl_8053A490
+	.4byte CTTask_cf_CfNandManager_hierarchy
 
-.global CMenuMapSelect_RTTI
-CMenuMapSelect_RTTI:
+.global __RTTI__CMenuMapSelect
+__RTTI__CMenuMapSelect:
 	.4byte CMenuMapSelect_typestr
-	.4byte lbl_8053A518
+	.4byte CMenuMapSelect_hierarchy
 
-.global CMapSel_RTTI
-CMapSel_RTTI:
+.global __RTTI__CMapSel
+__RTTI__CMapSel:
 	.4byte CMapSel_typestr
-	.4byte lbl_8053A650
+	.4byte CMapSel_hierarchy
 
-.global CFade_RTTI
-CFade_RTTI:
+.global __RTTI__CFade
+__RTTI__CFade:
 	.4byte CFade_typestr
-	.4byte lbl_8053A6E8
+	.4byte CFade_hierarchy
 
-.global CFloorMap_RTTI
-CFloorMap_RTTI:
+.global __RTTI__CFloorMap
+__RTTI__CFloorMap:
 	.4byte CFloorMap_typestr
-	.4byte lbl_8053A868
+	.4byte CFloorMap_hierarchy
 
-.global CTargetCur_RTTI
-CTargetCur_RTTI:
+.global __RTTI__CTargetCur
+__RTTI__CTargetCur:
 	.4byte CTargetCur_typestr
-	.4byte lbl_8053A880
+	.4byte CTargetCur_hierarchy
 
-.global CLandCur_RTTI
-CLandCur_RTTI:
+.global __RTTI__CLandCur
+__RTTI__CLandCur:
 	.4byte CLandCur_typestr
-	.4byte lbl_8053A898
+	.4byte CLandCur_hierarchy
 
-.global CFloorMarker_RTTI
-CFloorMarker_RTTI:
+.global __RTTI__CFloorMarker
+__RTTI__CFloorMarker:
 	.4byte CFloorMarker_typestr
-	.4byte lbl_8053A8B0
+	.4byte CFloorMarker_hierarchy
 
-.global CFloorCur_RTTI
-CFloorCur_RTTI:
+.global __RTTI__CFloorCur
+__RTTI__CFloorCur:
 	.4byte CFloorCur_typestr
 	.4byte 0
 
-.global CMenuMapSelectSC_RTTI
-CMenuMapSelectSC_RTTI:
+.global __RTTI__CMenuMapSelectSC
+__RTTI__CMenuMapSelectSC:
 	.4byte CMenuMapSelectSC_typestr
-	.4byte lbl_8053A920
+	.4byte CMenuMapSelectSC_hierarchy
 
-.global CMenuPause_RTTI
-CMenuPause_RTTI:
+.global __RTTI__CMenuPause
+__RTTI__CMenuPause:
 	.4byte CMenuPause_typestr
-	.4byte lbl_8053AA18
+	.4byte CMenuPause_hierarchy
 
-.global CMenuCollepedia_RTTI
-CMenuCollepedia_RTTI:
+.global __RTTI__CMenuCollepedia
+__RTTI__CMenuCollepedia:
 	.4byte CMenuCollepedia_typestr
-	.4byte lbl_8053AA90
+	.4byte CMenuCollepedia_hierarchy
 
-.global CCollepedia_RTTI
-CCollepedia_RTTI:
+.global __RTTI__CCollepedia
+__RTTI__CCollepedia:
 	.4byte CCollepedia_typestr
-	.4byte lbl_8053AC20
+	.4byte CCollepedia_hierarchy
 
-.global CCLPCur_RTTI
-CCLPCur_RTTI:
+.global __RTTI__CCLPCur
+__RTTI__CCLPCur:
 	.4byte CCLPCur_typestr
 	.4byte 0
 
-.global CMenuKizunagram_RTTI
-CMenuKizunagram_RTTI:
+.global __RTTI__CMenuKizunagram
+__RTTI__CMenuKizunagram:
 	.4byte CMenuKizunagram_typestr
-	.4byte lbl_8053ACA0
+	.4byte CMenuKizunagram_hierarchy
 
-.global CKizunagram_RTTI
-CKizunagram_RTTI:
+.global __RTTI__CKizunagram
+__RTTI__CKizunagram:
 	.4byte CKizunagram_typestr
-	.4byte lbl_8053AD90
+	.4byte CKizunagram_hierarchy
 
-.global CKizunaInfo_RTTI
-CKizunaInfo_RTTI:
+.global __RTTI__CKizunaInfo
+__RTTI__CKizunaInfo:
 	.4byte CKizunaInfo_typestr
 	.4byte 0
 
-.global CKizunaLine_RTTI
-CKizunaLine_RTTI:
+.global __RTTI__CKizunaLine
+__RTTI__CKizunaLine:
 	.4byte CKizunaLine_typestr
 	.4byte 0
 
-.global CKizunaCur_RTTI
-CKizunaCur_RTTI:
+.global __RTTI__CKizunaCur
+__RTTI__CKizunaCur:
 	.4byte CKizunaCur_typestr
 	.4byte 0
 
-.global CKizunaRadar_RTTI
-CKizunaRadar_RTTI:
+.global __RTTI__CKizunaRadar
+__RTTI__CKizunaRadar:
 	.4byte CKizunaRadar_typestr
 	.4byte 0
 
-.global CPcKizunagram_RTTI
-CPcKizunagram_RTTI:
+.global __RTTI__CPcKizunagram
+__RTTI__CPcKizunagram:
 	.4byte CPcKizunagram_typestr
-	.4byte lbl_8053AE58
+	.4byte CPcKizunagram_hierarchy
 
-.global CPcKizunaCur_RTTI
-CPcKizunaCur_RTTI:
+.global __RTTI__CPcKizunaCur
+__RTTI__CPcKizunaCur:
 	.4byte CPcKizunaCur_typestr
 	.4byte 0
 
@@ -2825,28 +2810,28 @@ lbl_80665278:
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
-.global CMenuPassiveSkill_RTTI
-CMenuPassiveSkill_RTTI:
+.global __RTTI__CMenuPassiveSkill
+__RTTI__CMenuPassiveSkill:
 	.4byte CMenuPassiveSkill_typestr
-	.4byte lbl_8053B0A0
+	.4byte CMenuPassiveSkill_hierarchy
 
-.global UI_CPassiveSkill_RTTI
-UI_CPassiveSkill_RTTI:
+.global __RTTI__UI_CPassiveSkill
+__RTTI__UI_CPassiveSkill:
 	.4byte UI_CPassiveSkill_typestr
-	.4byte lbl_8053B1A8
+	.4byte UI_CPassiveSkill_hierarchy
 
-.global UI_CPassiveSkillLine_RTTI
-UI_CPassiveSkillLine_RTTI:
+.global __RTTI__UI_CPassiveSkillLine
+__RTTI__UI_CPassiveSkillLine:
 	.4byte UI_CPassiveSkillLine_typestr
 	.4byte 0
 
-.global UI_CPassiveSkillInfo_RTTI
-UI_CPassiveSkillInfo_RTTI:
+.global __RTTI__UI_CPassiveSkillInfo
+__RTTI__UI_CPassiveSkillInfo:
 	.4byte UI_CPassiveSkillInfo_typestr
 	.4byte 0
 
-.global UI_CPassiveSkillCur_RTTI
-UI_CPassiveSkillCur_RTTI:
+.global __RTTI__UI_CPassiveSkillCur
+__RTTI__UI_CPassiveSkillCur:
 	.4byte UI_CPassiveSkillCur_typestr
 	.4byte 0
 
@@ -2857,70 +2842,70 @@ lbl_806652A8:
 	.4byte lbl_8066B20C
 	.4byte 0
 
-.global cf_CfGimmickEne_RTTI
-cf_CfGimmickEne_RTTI:
+.global __RTTI__cf_CfGimmickEne
+__RTTI__cf_CfGimmickEne:
 	.4byte cf_CfGimmickEne_typestr
-	.4byte lbl_8053B254
+	.4byte cf_CfGimmickEne_hierarchy
 
-.global CMenuBattleEnd_RTTI
-CMenuBattleEnd_RTTI:
+.global __RTTI__CMenuBattleEnd
+__RTTI__CMenuBattleEnd:
 	.4byte CMenuBattleEnd_typestr
-	.4byte lbl_8053B328
+	.4byte CMenuBattleEnd_hierarchy
 
-.global CMenuPlayAward_RTTI
-CMenuPlayAward_RTTI:
+.global __RTTI__CMenuPlayAward
+__RTTI__CMenuPlayAward:
 	.4byte CMenuPlayAward_typestr
-	.4byte lbl_8053B3A0
+	.4byte CMenuPlayAward_hierarchy
 
-.global CPlayAwardList_RTTI
-CPlayAwardList_RTTI:
+.global __RTTI__CPlayAwardList
+__RTTI__CPlayAwardList:
 	.4byte CPlayAwardList_typestr
-	.4byte lbl_8053B460
+	.4byte CPlayAwardList_hierarchy
 
-.global CMenuKizunaTalkList_RTTI
-CMenuKizunaTalkList_RTTI:
+.global __RTTI__CMenuKizunaTalkList
+__RTTI__CMenuKizunaTalkList:
 	.4byte CMenuKizunaTalkList_typestr
-	.4byte lbl_8053B4A8
+	.4byte CMenuKizunaTalkList_hierarchy
 
-.global CKizunaTalkList_RTTI
-CKizunaTalkList_RTTI:
+.global __RTTI__CKizunaTalkList
+__RTTI__CKizunaTalkList:
 	.4byte CKizunaTalkList_typestr
-	.4byte lbl_8053B568
+	.4byte CKizunaTalkList_hierarchy
 
-.global CSysWinBuff_RTTI
-CSysWinBuff_RTTI:
+.global __RTTI__CSysWinBuff
+__RTTI__CSysWinBuff:
 	.4byte CSysWinBuff_typestr
-	.4byte lbl_8053B63C
+	.4byte CSysWinBuff_hierarchy
 
-.global cf_ICamControlClassic_RTTI
-cf_ICamControlClassic_RTTI:
+.global __RTTI__cf_ICamControlClassic
+__RTTI__cf_ICamControlClassic:
 	.4byte cf_ICamControlClassic_typestr
-	.4byte lbl_8053B6B8
+	.4byte cf_ICamControlClassic_hierarchy
 
-.global cf_ICamControlGc_RTTI
-cf_ICamControlGc_RTTI:
+.global __RTTI__cf_ICamControlGc
+__RTTI__cf_ICamControlGc:
 	.4byte cf_ICamControlGc_typestr
-	.4byte lbl_8053B6F8
+	.4byte cf_ICamControlGc_hierarchy
 
-.global cf_ICamControlRemote_RTTI
-cf_ICamControlRemote_RTTI:
+.global __RTTI__cf_ICamControlRemote
+__RTTI__cf_ICamControlRemote:
 	.4byte cf_ICamControlRemote_typestr
-	.4byte lbl_8053B740
+	.4byte cf_ICamControlRemote_hierarchy
 
-.global lbl_80665300
-lbl_80665300:
+.global __RTTI__cf_ICamControl
+__RTTI__cf_ICamControl:
 	.4byte cf_ICamControl_typestr
 	.4byte 0
 
-.global cf_CfObjectImplTbox_RTTI
-cf_CfObjectImplTbox_RTTI:
+.global __RTTI__cf_CfObjectImplTbox
+__RTTI__cf_CfObjectImplTbox:
 	.4byte cf_CfObjectImplTbox_typestr
-	.4byte lbl_8053B858
+	.4byte cf_CfObjectImplTbox_hierarchy
 
-.global CMenuLvUp_RTTI
-CMenuLvUp_RTTI:
+.global __RTTI__CMenuLvUp
+__RTTI__CMenuLvUp:
 	.4byte CMenuLvUp_typestr
-	.4byte lbl_8053B940
+	.4byte CMenuLvUp_hierarchy
 
 
 .global lbl_80665318
@@ -2955,43 +2940,43 @@ lbl_80665330:
 	.4byte 0x000007DD
 	.4byte 0x000007E0
 
-.global cf_CChainChance_RTTI
-cf_CChainChance_RTTI:
+.global __RTTI__cf_CChainChance
+__RTTI__cf_CChainChance:
 	.4byte cf_CChainChance_typestr
 	.4byte 0
 
-.global cf_CChainTimer_RTTI
-cf_CChainTimer_RTTI:
+.global __RTTI__cf_CChainTimer
+__RTTI__cf_CChainTimer:
 	.4byte cf_CChainTimer_typestr
 	.4byte 0
 
-.global cf_CChainMember_RTTI
-cf_CChainMember_RTTI:
+.global __RTTI__cf_CChainMember
+__RTTI__cf_CChainMember:
 	.4byte cf_CChainMember_typestr
 	.4byte 0
 
-.global cf_CChainActor_RTTI
-cf_CChainActor_RTTI:
+.global __RTTI__cf_CChainActor
+__RTTI__cf_CChainActor:
 	.4byte cf_CChainActor_typestr
 	.4byte 0
 
-.global cf_CChainActorList_RTTI
-cf_CChainActorList_RTTI:
+.global __RTTI__cf_CChainActorList
+__RTTI__cf_CChainActorList:
 	.4byte cf_CChainActorList_typestr
 	.4byte 0
 
-.global reslist_cf_CChainActor_RTTI
-reslist_cf_CChainActor_RTTI:
+.global __RTTI__reslist_cf_CChainActor
+__RTTI__reslist_cf_CChainActor:
 	.4byte reslist_cf_CChainActor_typestr
-	.4byte lbl_8053BAD8
+	.4byte reslist_cf_CChainActor_hierarchy
 
-.global _reslist_base_cf_CChainActor_RTTI
-_reslist_base_cf_CChainActor_RTTI:
+.global __RTTI___reslist_base_cf_CChainActor
+__RTTI___reslist_base_cf_CChainActor:
 	.4byte _reslist_base_cf_CChainActor_typestr
 	.4byte 0
 
-.global cf_CChainTemp_RTTI
-cf_CChainTemp_RTTI:
+.global __RTTI__cf_CChainTemp
+__RTTI__cf_CChainTemp:
 	.4byte cf_CChainTemp_typestr
 	.4byte 0
 
@@ -3002,45 +2987,45 @@ lbl_80665378:
 	.4byte 0x00000001
 	.4byte 0
 
-.global cf_Flusher_cf_CfObjectActor_RTTI
-cf_Flusher_cf_CfObjectActor_RTTI:
+.global __RTTI__cf_Flusher_cf_CfObjectActor
+__RTTI__cf_Flusher_cf_CfObjectActor:
 	.4byte cf_Flusher_cf_CfObjectActor_typestr
 	.4byte 0
 
-.global CSysWinScenarioLog_RTTI
-CSysWinScenarioLog_RTTI:
+.global __RTTI__CSysWinScenarioLog
+__RTTI__CSysWinScenarioLog:
 	.4byte CSysWinScenarioLog_typestr
-	.4byte lbl_8053BBD4
+	.4byte CSysWinScenarioLog_hierarchy
 
-.global cf_CChainActorEne_RTTI
-cf_CChainActorEne_RTTI:
+.global __RTTI__cf_CChainActorEne
+__RTTI__cf_CChainActorEne:
 	.4byte cf_CChainActorEne_typestr
-	.4byte lbl_8053BC88
+	.4byte cf_CChainActorEne_hierarchy
 
-.global cf_CChainActorPc_RTTI
-cf_CChainActorPc_RTTI:
+.global __RTTI__cf_CChainActorPc
+__RTTI__cf_CChainActorPc:
 	.4byte cf_CChainActorPc_typestr
-	.4byte lbl_8053BD10
+	.4byte cf_CChainActorPc_hierarchy
 
-.global CEquipItemBox_RTTI
-CEquipItemBox_RTTI:
+.global __RTTI__CEquipItemBox
+__RTTI__CEquipItemBox:
 	.4byte CEquipItemBox_typestr
-	.4byte lbl_8053BE98
+	.4byte CEquipItemBox_hierarchy
 
-.global CEIBPageCur_RTTI
-CEIBPageCur_RTTI:
+.global __RTTI__CEIBPageCur
+__RTTI__CEIBPageCur:
 	.4byte CEIBPageCur_typestr
-	.4byte lbl_8053BEB0
+	.4byte CEIBPageCur_hierarchy
 
-.global CEIBCur_RTTI
-CEIBCur_RTTI:
+.global __RTTI__CEIBCur
+__RTTI__CEIBCur:
 	.4byte CEIBCur_typestr
 	.4byte 0
 
-.global CMenuSave_RTTI
-CMenuSave_RTTI:
+.global __RTTI__CMenuSave
+__RTTI__CMenuSave:
 	.4byte CMenuSave_typestr
-	.4byte lbl_8053BF00
+	.4byte CMenuSave_hierarchy
 
 
 .global lbl_806653C0
@@ -3061,23 +3046,23 @@ lbl_806653C8:
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
-.global CSaveLoad_RTTI
-CSaveLoad_RTTI:
+.global __RTTI__CSaveLoad
+__RTTI__CSaveLoad:
 	.4byte CSaveLoad_typestr
-	.4byte lbl_8053BFF8
+	.4byte CSaveLoad_hierarchy
 
-.global CSLCur_RTTI
-CSLCur_RTTI:
+.global __RTTI__CSLCur
+__RTTI__CSLCur:
 	.4byte CSLCur_typestr
 	.4byte 0
 
-.global lbl_806653E0
-lbl_806653E0:
+.global __RTTI__cf_CfAward
+__RTTI__cf_CfAward:
 	.4byte cf_CfAward_typestr
-	.4byte lbl_8053C030
+	.4byte cf_CfAward_hierarchy
 
-.global lbl_806653E8
-lbl_806653E8:
+.global __RTTI__cf_CAwardBase
+__RTTI__cf_CAwardBase:
 	.4byte cf_CAwardBase_typestr
 	.4byte 0
 
@@ -3088,45 +3073,45 @@ lbl_806653F0:
 	.4byte lbl_8050B228
 	.4byte 0
 
-.global CMenuPTChangeNotice_RTTI
-CMenuPTChangeNotice_RTTI:
+.global __RTTI__CMenuPTChangeNotice
+__RTTI__CMenuPTChangeNotice:
 	.4byte CMenuPTChangeNotice_typestr
-	.4byte lbl_8053C104
+	.4byte CMenuPTChangeNotice_hierarchy
 
-.global cf_CChainCombo_RTTI
-cf_CChainCombo_RTTI:
+.global __RTTI__cf_CChainCombo
+__RTTI__cf_CChainCombo:
 	.4byte cf_CChainCombo_typestr
 	.4byte 0
 
-.global CSysWinSave_RTTI
-CSysWinSave_RTTI:
+.global __RTTI__CSysWinSave
+__RTTI__CSysWinSave:
 	.4byte CSysWinSave_typestr
-	.4byte lbl_8053C218
+	.4byte CSysWinSave_hierarchy
 
-.global cf_CREvtMovie_RTTI
-cf_CREvtMovie_RTTI:
+.global __RTTI__cf_CREvtMovie
+__RTTI__cf_CREvtMovie:
 	.4byte cf_CREvtMovie_typestr
-	.4byte lbl_8053C280
+	.4byte cf_CREvtMovie_hierarchy
 
-.global CTaskGamePic_RTTI
-CTaskGamePic_RTTI:
+.global __RTTI__CTaskGamePic
+__RTTI__CTaskGamePic:
 	.4byte CTaskGamePic_typestr
-	.4byte lbl_8053C354
+	.4byte CTaskGamePic_hierarchy
 
-.global CTTask_CTaskGamePic_RTTI
-CTTask_CTaskGamePic_RTTI:
+.global __RTTI__CTTask_CTaskGamePic
+__RTTI__CTTask_CTaskGamePic:
 	.4byte CTTask_CTaskGamePic_typestr
-	.4byte lbl_8053C39C
+	.4byte CTTask_CTaskGamePic_hierarchy
 
-.global CTaskGameEvt_RTTI
-CTaskGameEvt_RTTI:
+.global __RTTI__CTaskGameEvt
+__RTTI__CTaskGameEvt:
 	.4byte CTaskGameEvt_typestr
-	.4byte lbl_8053C47C
+	.4byte CTaskGameEvt_hierarchy
 
-.global CTTask_CTaskGameEvt_RTTI
-CTTask_CTaskGameEvt_RTTI:
+.global __RTTI__CTTask_CTaskGameEvt
+__RTTI__CTTask_CTaskGameEvt:
 	.4byte CTTask_CTaskGameEvt_typestr
-	.4byte lbl_8053C4C4
+	.4byte CTTask_CTaskGameEvt_hierarchy
 
 .global lbl_80665438
 lbl_80665438:
@@ -3223,105 +3208,105 @@ lbl_806654C8:
 	.4byte lbl_8057A818
 	.4byte 0
 
-.global cf_CHelp_EtherMakeTIPS_RTTI
-cf_CHelp_EtherMakeTIPS_RTTI:
+.global __RTTI__cf_CHelp_EtherMakeTIPS
+__RTTI__cf_CHelp_EtherMakeTIPS:
 	.4byte cf_CHelp_EtherMakeTIPS_typestr
-	.4byte lbl_8053C76C
+	.4byte cf_CHelp_EtherMakeTIPS_hierarchy
 
-.global cf_CHelp_EtherMake_RTTI
-cf_CHelp_EtherMake_RTTI:
+.global __RTTI__cf_CHelp_EtherMake
+__RTTI__cf_CHelp_EtherMake:
 	.4byte cf_CHelp_EtherMake_typestr
-	.4byte lbl_8053C780
+	.4byte cf_CHelp_EtherMake_hierarchy
 
-.global cf_CHelp_TalkTIPS_RTTI
-cf_CHelp_TalkTIPS_RTTI:
+.global __RTTI__cf_CHelp_TalkTIPS
+__RTTI__cf_CHelp_TalkTIPS:
 	.4byte cf_CHelp_TalkTIPS_typestr
-	.4byte lbl_8053C7B0
+	.4byte cf_CHelp_TalkTIPS_hierarchy
 
-.global cf_CHelp_Talk_RTTI
-cf_CHelp_Talk_RTTI:
+.global __RTTI__cf_CHelp_Talk
+__RTTI__cf_CHelp_Talk:
 	.4byte cf_CHelp_Talk_typestr
-	.4byte lbl_8053C7CC
+	.4byte cf_CHelp_Talk_hierarchy
 
-.global cf_CHelp_KizunaTIPS_RTTI
-cf_CHelp_KizunaTIPS_RTTI:
+.global __RTTI__cf_CHelp_KizunaTIPS
+__RTTI__cf_CHelp_KizunaTIPS:
 	.4byte cf_CHelp_KizunaTIPS_typestr
-	.4byte lbl_8053C7FC
+	.4byte cf_CHelp_KizunaTIPS_hierarchy
 
-.global cf_CHelp_Kizuna_RTTI
-cf_CHelp_Kizuna_RTTI:
+.global __RTTI__cf_CHelp_Kizuna
+__RTTI__cf_CHelp_Kizuna:
 	.4byte cf_CHelp_Kizuna_typestr
-	.4byte lbl_8053C810
+	.4byte cf_CHelp_Kizuna_hierarchy
 
-.global cf_CHelp_EndEventTIPS_RTTI
-cf_CHelp_EndEventTIPS_RTTI:
+.global __RTTI__cf_CHelp_EndEventTIPS
+__RTTI__cf_CHelp_EndEventTIPS:
 	.4byte cf_CHelp_EndEventTIPS_typestr
-	.4byte lbl_8053C840
+	.4byte cf_CHelp_EndEventTIPS_hierarchy
 
-.global cf_CHelp_EndEvent_RTTI
-cf_CHelp_EndEvent_RTTI:
+.global __RTTI__cf_CHelp_EndEvent
+__RTTI__cf_CHelp_EndEvent:
 	.4byte cf_CHelp_EndEvent_typestr
-	.4byte lbl_8053C85C
+	.4byte cf_CHelp_EndEvent_hierarchy
 
-.global cf_CHelp_AlwaysTIPS_RTTI
-cf_CHelp_AlwaysTIPS_RTTI:
+.global __RTTI__cf_CHelp_AlwaysTIPS
+__RTTI__cf_CHelp_AlwaysTIPS:
 	.4byte cf_CHelp_AlwaysTIPS_typestr
-	.4byte lbl_8053C88C
+	.4byte cf_CHelp_AlwaysTIPS_hierarchy
 
-.global cf_CHelp_Always_RTTI
-cf_CHelp_Always_RTTI:
+.global __RTTI__cf_CHelp_Always
+__RTTI__cf_CHelp_Always:
 	.4byte cf_CHelp_Always_typestr
-	.4byte lbl_8053C8BC
+	.4byte cf_CHelp_Always_hierarchy
 
-.global cf_CHelpSwitch_RTTI
-cf_CHelpSwitch_RTTI:
+.global __RTTI__cf_CHelpSwitch
+__RTTI__cf_CHelpSwitch:
 	.4byte cf_CHelpSwitch_typestr
-	.4byte lbl_8053C8C8
+	.4byte cf_CHelpSwitch_hierarchy
 
-.global cf_CHelp_RTTI
-cf_CHelp_RTTI:
+.global __RTTI__cf_CHelp
+__RTTI__cf_CHelp:
 	.4byte cf_CHelp_typestr
 	.4byte 0
 
-.global cf_CHelpManager_RTTI
-cf_CHelpManager_RTTI:
+.global __RTTI__cf_CHelpManager
+__RTTI__cf_CHelpManager:
 	.4byte cf_CHelpManager_typestr
 	.4byte 0
 
-.global CMCGetItemBox_RTTI
-CMCGetItemBox_RTTI:
+.global __RTTI__CMCGetItemBox
+__RTTI__CMCGetItemBox:
 	.4byte CMCGetItemBox_typestr
-	.4byte lbl_8053C968
+	.4byte CMCGetItemBox_hierarchy
 
-.global CMenuTutorial_RTTI
-CMenuTutorial_RTTI:
+.global __RTTI__CMenuTutorial
+__RTTI__CMenuTutorial:
 	.4byte CMenuTutorial_typestr
-	.4byte lbl_8053C9B0
+	.4byte CMenuTutorial_hierarchy
 
-.global CTutorial_RTTI
-CTutorial_RTTI:
+.global __RTTI__CTutorial
+__RTTI__CTutorial:
 	.4byte CTutorial_typestr
-	.4byte lbl_8053CA70
+	.4byte CTutorial_hierarchy
 
-.global CMenuOption_RTTI
-CMenuOption_RTTI:
+.global __RTTI__CMenuOption
+__RTTI__CMenuOption:
 	.4byte CMenuOption_typestr
-	.4byte lbl_8053CAB8
+	.4byte CMenuOption_hierarchy
 
-.global COption_RTTI
-COption_RTTI:
+.global __RTTI__COption
+__RTTI__COption:
 	.4byte COption_typestr
-	.4byte lbl_8053CE50
+	.4byte COption_hierarchy
 
-.global CCur19_RTTI
-CCur19_RTTI:
+.global __RTTI__CCur19
+__RTTI__CCur19:
 	.4byte CCur19_typestr
-	.4byte lbl_8053CE78
+	.4byte CCur19_hierarchy
 
-.global CMenuSkipTimer_RTTI
-CMenuSkipTimer_RTTI:
+.global __RTTI__CMenuSkipTimer
+__RTTI__CMenuSkipTimer:
 	.4byte CMenuSkipTimer_typestr
-	.4byte lbl_8053CF48
+	.4byte CMenuSkipTimer_hierarchy
 
 
 .global lbl_80665570
@@ -3330,20 +3315,20 @@ lbl_80665570:
 	.float 0.2
 	.4byte 0
 
-.global CSkipTimer_RTTI
-CSkipTimer_RTTI:
+.global __RTTI__CSkipTimer
+__RTTI__CSkipTimer:
 	.4byte CSkipTimer_typestr
-	.4byte lbl_8053D008
+	.4byte CSkipTimer_hierarchy
 
-.global CSkipTimer2_RTTI
-CSkipTimer2_RTTI:
+.global __RTTI__CSkipTimer2
+__RTTI__CSkipTimer2:
 	.4byte CSkipTimer2_typestr
 	.4byte 0
 
-.global cf_CChainEffect_RTTI
-cf_CChainEffect_RTTI:
+.global __RTTI__cf_CChainEffect
+__RTTI__cf_CChainEffect:
 	.4byte cf_CChainEffect_typestr
-	.4byte lbl_8053D030
+	.4byte cf_CChainEffect_hierarchy
 
 
 .global lbl_80665590
@@ -3352,15 +3337,15 @@ lbl_80665590:
 	.4byte lbl_8050BCC0
 	.4byte 0
 
-.global cf_CCharVoice_RTTI
-cf_CCharVoice_RTTI:
+.global __RTTI__cf_CCharVoice
+__RTTI__cf_CCharVoice:
 	.4byte cf_CCharVoice_typestr
 	.4byte 0
 
-.global cf_CCharVoiceMan_RTTI
-cf_CCharVoiceMan_RTTI:
+.global __RTTI__cf_CCharVoiceMan
+__RTTI__cf_CCharVoiceMan:
 	.4byte cf_CCharVoiceMan_typestr
-	.4byte lbl_8053D078
+	.4byte cf_CCharVoiceMan_hierarchy
 
 
 .global lbl_806655A8
@@ -3381,8 +3366,8 @@ lbl_806655B0:
 	.4byte 0x447A0000
 	.4byte 0
 
-.global cf_CVS_THREAD_RTTI
-cf_CVS_THREAD_RTTI:
+.global __RTTI__cf_CVS_THREAD
+__RTTI__cf_CVS_THREAD:
 	.4byte cf_CVS_THREAD_typestr
 	.4byte 0
 
@@ -3400,45 +3385,45 @@ lbl_806655C8:
 	.4byte 0x00000B5D
 	.4byte 0x00000B5E
 
-.global cf_CVS_THREAD_BATTLE_END_RTTI
-cf_CVS_THREAD_BATTLE_END_RTTI:
+.global __RTTI__cf_CVS_THREAD_BATTLE_END
+__RTTI__cf_CVS_THREAD_BATTLE_END:
 	.4byte cf_CVS_THREAD_BATTLE_END_typestr
-	.4byte lbl_8053D164
+	.4byte cf_CVS_THREAD_BATTLE_END_hierarchy
 
-.global cf_CVS_THREAD_BUF_RTTI
-cf_CVS_THREAD_BUF_RTTI:
+.global __RTTI__cf_CVS_THREAD_BUF
+__RTTI__cf_CVS_THREAD_BUF:
 	.4byte cf_CVS_THREAD_BUF_typestr
-	.4byte lbl_8053D1B0
+	.4byte cf_CVS_THREAD_BUF_hierarchy
 
-.global cf_CVS_THREAD_CHAIN_RTTI
-cf_CVS_THREAD_CHAIN_RTTI:
+.global __RTTI__cf_CVS_THREAD_CHAIN
+__RTTI__cf_CVS_THREAD_CHAIN:
 	.4byte cf_CVS_THREAD_CHAIN_typestr
-	.4byte lbl_8053D1E8
+	.4byte cf_CVS_THREAD_CHAIN_hierarchy
 
-.global cf_CVS_THREAD_DOWN_RTTI
-cf_CVS_THREAD_DOWN_RTTI:
+.global __RTTI__cf_CVS_THREAD_DOWN
+__RTTI__cf_CVS_THREAD_DOWN:
 	.4byte cf_CVS_THREAD_DOWN_typestr
-	.4byte lbl_8053D238
+	.4byte cf_CVS_THREAD_DOWN_hierarchy
 
-.global cf_CVS_THREAD_EHP_RTTI
-cf_CVS_THREAD_EHP_RTTI:
+.global __RTTI__cf_CVS_THREAD_EHP
+__RTTI__cf_CVS_THREAD_EHP:
 	.4byte cf_CVS_THREAD_EHP_typestr
-	.4byte lbl_8053D2D8
+	.4byte cf_CVS_THREAD_EHP_hierarchy
 
-.global cf_CVS_THREAD_FAINT_RTTI
-cf_CVS_THREAD_FAINT_RTTI:
+.global __RTTI__cf_CVS_THREAD_FAINT
+__RTTI__cf_CVS_THREAD_FAINT:
 	.4byte cf_CVS_THREAD_FAINT_typestr
-	.4byte lbl_8053D328
+	.4byte cf_CVS_THREAD_FAINT_hierarchy
 
-.global cf_CVS_THREAD_HAGE_RTTI
-cf_CVS_THREAD_HAGE_RTTI:
+.global __RTTI__cf_CVS_THREAD_HAGE
+__RTTI__cf_CVS_THREAD_HAGE:
 	.4byte cf_CVS_THREAD_HAGE_typestr
-	.4byte lbl_8053D378
+	.4byte cf_CVS_THREAD_HAGE_hierarchy
 
-.global cf_CVS_THREAD_HP_RTTI
-cf_CVS_THREAD_HP_RTTI:
+.global __RTTI__cf_CVS_THREAD_HP
+__RTTI__cf_CVS_THREAD_HP:
 	.4byte cf_CVS_THREAD_HP_typestr
-	.4byte lbl_8053D3C8
+	.4byte cf_CVS_THREAD_HP_hierarchy
 
 
 .global lbl_80665610
@@ -3447,25 +3432,25 @@ lbl_80665610:
 	.4byte 0x00000659
 	.4byte 0x0000065A
 
-.global cf_CVS_THREAD_PARTY_GAGE_RTTI
-cf_CVS_THREAD_PARTY_GAGE_RTTI:
+.global __RTTI__cf_CVS_THREAD_PARTY_GAGE
+__RTTI__cf_CVS_THREAD_PARTY_GAGE:
 	.4byte cf_CVS_THREAD_PARTY_GAGE_typestr
-	.4byte lbl_8053D418
+	.4byte cf_CVS_THREAD_PARTY_GAGE_hierarchy
 
-.global cf_CVS_THREAD_REVIVE_RTTI
-cf_CVS_THREAD_REVIVE_RTTI:
+.global __RTTI__cf_CVS_THREAD_REVIVE
+__RTTI__cf_CVS_THREAD_REVIVE:
 	.4byte cf_CVS_THREAD_REVIVE_typestr
-	.4byte lbl_8053D468
+	.4byte cf_CVS_THREAD_REVIVE_hierarchy
 
-.global cf_CVS_THREAD_SUDDEN_RTTI
-cf_CVS_THREAD_SUDDEN_RTTI:
+.global __RTTI__cf_CVS_THREAD_SUDDEN
+__RTTI__cf_CVS_THREAD_SUDDEN:
 	.4byte cf_CVS_THREAD_SUDDEN_typestr
-	.4byte lbl_8053D4A0
+	.4byte cf_CVS_THREAD_SUDDEN_hierarchy
 
-.global cf_CVS_THREAD_TENSION_UP_RTTI
-cf_CVS_THREAD_TENSION_UP_RTTI:
+.global __RTTI__cf_CVS_THREAD_TENSION_UP
+__RTTI__cf_CVS_THREAD_TENSION_UP:
 	.4byte cf_CVS_THREAD_TENSION_UP_typestr
-	.4byte lbl_8053D4F0
+	.4byte cf_CVS_THREAD_TENSION_UP_hierarchy
 
 
 .global lbl_80665638
@@ -3481,10 +3466,10 @@ lbl_80665640:
 	.4byte 0x01910193
 	.4byte 0x01940000
 
-.global cf_CVS_THREAD_VISION_BREAK_RTTI
-cf_CVS_THREAD_VISION_BREAK_RTTI:
+.global __RTTI__cf_CVS_THREAD_VISION_BREAK
+__RTTI__cf_CVS_THREAD_VISION_BREAK:
 	.4byte cf_CVS_THREAD_VISION_BREAK_typestr
-	.4byte lbl_8053D534
+	.4byte cf_CVS_THREAD_VISION_BREAK_hierarchy
 
 
 .global lbl_80665650
@@ -3500,10 +3485,10 @@ lbl_80665658:
 	.4byte 0x01310132
 	.4byte 0x01330000
 
-.global cf_CVS_THREAD_VISION_TELL_RTTI
-cf_CVS_THREAD_VISION_TELL_RTTI:
+.global __RTTI__cf_CVS_THREAD_VISION_TELL
+__RTTI__cf_CVS_THREAD_VISION_TELL:
 	.4byte cf_CVS_THREAD_VISION_TELL_typestr
-	.4byte lbl_8053D580
+	.4byte cf_CVS_THREAD_VISION_TELL_hierarchy
 
 
 .global lbl_80665668
@@ -3649,35 +3634,35 @@ lbl_806656C4:
 	# ROM: 0x5712A4
 	.4byte 0xA0A0A0FF
 
-.global CMenuBattleChain_RTTI
-CMenuBattleChain_RTTI:
+.global __RTTI__CMenuBattleChain
+__RTTI__CMenuBattleChain:
 	.4byte CMenuBattleChain_typestr
-	.4byte lbl_8053D698
+	.4byte CMenuBattleChain_hierarchy
 
-.global cf_CVS_THREAD_BATTLE_END_SP_RTTI
-cf_CVS_THREAD_BATTLE_END_SP_RTTI:
+.global __RTTI__cf_CVS_THREAD_BATTLE_END_SP
+__RTTI__cf_CVS_THREAD_BATTLE_END_SP:
 	.4byte cf_CVS_THREAD_BATTLE_END_SP_typestr
-	.4byte lbl_8053D964
+	.4byte cf_CVS_THREAD_BATTLE_END_SP_hierarchy
 
-.global cf_CfGimmickSaveOff_RTTI
-cf_CfGimmickSaveOff_RTTI:
+.global __RTTI__cf_CfGimmickSaveOff
+__RTTI__cf_CfGimmickSaveOff:
 	.4byte cf_CfGimmickSaveOff_typestr
-	.4byte lbl_8053D994
+	.4byte cf_CfGimmickSaveOff_hierarchy
 
-.global CMenuTutorialList_RTTI
-CMenuTutorialList_RTTI:
+.global __RTTI__CMenuTutorialList
+__RTTI__CMenuTutorialList:
 	.4byte CMenuTutorialList_typestr
-	.4byte lbl_8053DA00
+	.4byte CMenuTutorialList_hierarchy
 
-.global CTutorialList_RTTI
-CTutorialList_RTTI:
+.global __RTTI__CTutorialList
+__RTTI__CTutorialList:
 	.4byte CTutorialList_typestr
-	.4byte lbl_8053DAC0
+	.4byte CTutorialList_hierarchy
 
-.global CLoad_RTTI
-CLoad_RTTI:
+.global __RTTI__CLoad
+__RTTI__CLoad:
 	.4byte CLoad_typestr
-	.4byte lbl_8053DB58
+	.4byte CLoad_hierarchy
 
 
 .global lbl_806656F8
@@ -3758,187 +3743,187 @@ lbl_8066572C:
 	# ROM: 0x57130C
 	.4byte lbl_8050C808
 
-.global cf_CVS_THREAD_BATTLE_MAIN_RTTI
-cf_CVS_THREAD_BATTLE_MAIN_RTTI:
+.global __RTTI__cf_CVS_THREAD_BATTLE_MAIN
+__RTTI__cf_CVS_THREAD_BATTLE_MAIN:
 	.4byte cf_CVS_THREAD_BATTLE_MAIN_typestr
-	.4byte lbl_8053E1B0
+	.4byte cf_CVS_THREAD_BATTLE_MAIN_hierarchy
 
-.global cf_CVS_THREAD_BATTLE_BEGIN_RTTI
-cf_CVS_THREAD_BATTLE_BEGIN_RTTI:
+.global __RTTI__cf_CVS_THREAD_BATTLE_BEGIN
+__RTTI__cf_CVS_THREAD_BATTLE_BEGIN:
 	.4byte cf_CVS_THREAD_BATTLE_BEGIN_typestr
-	.4byte lbl_8053E3F0
+	.4byte cf_CVS_THREAD_BATTLE_BEGIN_hierarchy
 
-.global lbl_80665740
-lbl_80665740:
+.global __RTTI__cf_EVS_THREAD_LIB
+__RTTI__cf_EVS_THREAD_LIB:
 	.4byte cf_EVS_THREAD_LIB_typestr
-	.4byte lbl_8053E410
+	.4byte cf_EVS_THREAD_LIB_hierarchy
 
-.global lbl_80665748
-lbl_80665748:
+.global __RTTI__cf_CVS_THREAD_LIB
+__RTTI__cf_CVS_THREAD_LIB:
 	.4byte cf_CVS_THREAD_LIB_typestr
 	.4byte 0
 
-.global CMenuGCItem_RTTI
-CMenuGCItem_RTTI:
+.global __RTTI__CMenuGCItem
+__RTTI__CMenuGCItem:
 	.4byte CMenuGCItem_typestr
-	.4byte lbl_8053E458
+	.4byte CMenuGCItem_hierarchy
 
-.global CMenuGameClear_RTTI
-CMenuGameClear_RTTI:
+.global __RTTI__CMenuGameClear
+__RTTI__CMenuGameClear:
 	.4byte CMenuGameClear_typestr
-	.4byte lbl_8053E570
+	.4byte CMenuGameClear_hierarchy
 
-.global cf_CfHikariItemManager_RTTI
-cf_CfHikariItemManager_RTTI:
+.global __RTTI__cf_CfHikariItemManager
+__RTTI__cf_CfHikariItemManager:
 	.4byte cf_CfHikariItemManager_typestr
-	.4byte lbl_8053E5B8
+	.4byte cf_CfHikariItemManager_hierarchy
 
-.global CUIErrMesWin_RTTI
-CUIErrMesWin_RTTI:
+.global __RTTI__CUIErrMesWin
+__RTTI__CUIErrMesWin:
 	.4byte CUIErrMesWin_typestr
-	.4byte lbl_8053E6E0
+	.4byte CUIErrMesWin_hierarchy
 
-.global CTTask_CUIErrMesWin_RTTI
-CTTask_CUIErrMesWin_RTTI:
+.global __RTTI__CTTask_CUIErrMesWin
+__RTTI__CTTask_CUIErrMesWin:
 	.4byte CTTask_CUIErrMesWin_typestr
-	.4byte lbl_8053E738
+	.4byte CTTask_CUIErrMesWin_hierarchy
 
-.global CMenuTitle_RTTI
-CMenuTitle_RTTI:
+.global __RTTI__CMenuTitle
+__RTTI__CMenuTitle:
 	.4byte CMenuTitle_typestr
-	.4byte lbl_8053E890
+	.4byte CMenuTitle_hierarchy
 
-.global CTTask_CMenuTitle_RTTI
-CTTask_CMenuTitle_RTTI:
+.global __RTTI__CTTask_CMenuTitle
+__RTTI__CTTask_CMenuTitle:
 	.4byte CTTask_CMenuTitle_typestr
-	.4byte lbl_8053E8E8
+	.4byte CTTask_CMenuTitle_hierarchy
 
-.global CTitle_RTTI
-CTitle_RTTI:
+.global __RTTI__CTitle
+__RTTI__CTitle:
 	.4byte CTitle_typestr
-	.4byte lbl_8053EA68
+	.4byte CTitle_hierarchy
 
-.global CTitleMenu_RTTI
-CTitleMenu_RTTI:
+.global __RTTI__CTitleMenu
+__RTTI__CTitleMenu:
 	.4byte CTitleMenu_typestr
 	.4byte 0
 
-.global CTitleLogo_RTTI
-CTitleLogo_RTTI:
+.global __RTTI__CTitleLogo
+__RTTI__CTitleLogo:
 	.4byte CTitleLogo_typestr
 	.4byte 0
 
-.global cf_CHelp_ToAttack_RTTI
-cf_CHelp_ToAttack_RTTI:
+.global __RTTI__cf_CHelp_ToAttack
+__RTTI__cf_CHelp_ToAttack:
 	.4byte cf_CHelp_ToAttack_typestr
-	.4byte lbl_8053EAAC
+	.4byte cf_CHelp_ToAttack_hierarchy
 
-.global cf_CHelp_ArtsAttack_RTTI
-cf_CHelp_ArtsAttack_RTTI:
+.global __RTTI__cf_CHelp_ArtsAttack
+__RTTI__cf_CHelp_ArtsAttack:
 	.4byte cf_CHelp_ArtsAttack_typestr
-	.4byte lbl_8053EAFC
+	.4byte cf_CHelp_ArtsAttack_hierarchy
 
-.global cf_CHelp_ArtsSet_RTTI
-cf_CHelp_ArtsSet_RTTI:
+.global __RTTI__cf_CHelp_ArtsSet
+__RTTI__cf_CHelp_ArtsSet:
 	.4byte cf_CHelp_ArtsSet_typestr
-	.4byte lbl_8053EB2C
+	.4byte cf_CHelp_ArtsSet_hierarchy
 
-.global cf_CHelp_CkKizuna_RTTI
-cf_CHelp_CkKizuna_RTTI:
+.global __RTTI__cf_CHelp_CkKizuna
+__RTTI__cf_CHelp_CkKizuna:
 	.4byte cf_CHelp_CkKizuna_typestr
-	.4byte lbl_8053EB5C
+	.4byte cf_CHelp_CkKizuna_hierarchy
 
-.global cf_CHelp_CloseItemMenu_RTTI
-cf_CHelp_CloseItemMenu_RTTI:
+.global __RTTI__cf_CHelp_CloseItemMenu
+__RTTI__cf_CHelp_CloseItemMenu:
 	.4byte cf_CHelp_CloseItemMenu_typestr
-	.4byte lbl_8053EB94
+	.4byte cf_CHelp_CloseItemMenu_hierarchy
 
-.global cf_CHelp_CloseSysMenu_RTTI
-cf_CHelp_CloseSysMenu_RTTI:
+.global __RTTI__cf_CHelp_CloseSysMenu
+__RTTI__cf_CHelp_CloseSysMenu:
 	.4byte cf_CHelp_CloseSysMenu_typestr
-	.4byte lbl_8053EBCC
+	.4byte cf_CHelp_CloseSysMenu_hierarchy
 
-.global cf_CHelp_EnemyCount_RTTI
-cf_CHelp_EnemyCount_RTTI:
+.global __RTTI__cf_CHelp_EnemyCount
+__RTTI__cf_CHelp_EnemyCount:
 	.4byte cf_CHelp_EnemyCount_typestr
-	.4byte lbl_8053EC24
+	.4byte cf_CHelp_EnemyCount_hierarchy
 
-.global cf_CHelp_EnemyEnable_RTTI
-cf_CHelp_EnemyEnable_RTTI:
+.global __RTTI__cf_CHelp_EnemyEnable
+__RTTI__cf_CHelp_EnemyEnable:
 	.4byte cf_CHelp_EnemyEnable_typestr
-	.4byte lbl_8053EC4C
+	.4byte cf_CHelp_EnemyEnable_hierarchy
 
-.global cf_CHelp_Exchange_RTTI
-cf_CHelp_Exchange_RTTI:
+.global __RTTI__cf_CHelp_Exchange
+__RTTI__cf_CHelp_Exchange:
 	.4byte cf_CHelp_Exchange_typestr
-	.4byte lbl_8053EC94
+	.4byte cf_CHelp_Exchange_hierarchy
 
-.global cf_CHelp_GameOver_RTTI
-cf_CHelp_GameOver_RTTI:
+.global __RTTI__cf_CHelp_GameOver
+__RTTI__cf_CHelp_GameOver:
 	.4byte cf_CHelp_GameOver_typestr
-	.4byte lbl_8053ECBC
+	.4byte cf_CHelp_GameOver_hierarchy
 
-.global cf_CHelp_ItemCole_RTTI
-cf_CHelp_ItemCole_RTTI:
+.global __RTTI__cf_CHelp_ItemCole
+__RTTI__cf_CHelp_ItemCole:
 	.4byte cf_CHelp_ItemCole_typestr
-	.4byte lbl_8053ECE4
+	.4byte cf_CHelp_ItemCole_hierarchy
 
-.global cf_CHelp_LandMark_RTTI
-cf_CHelp_LandMark_RTTI:
+.global __RTTI__cf_CHelp_LandMark
+__RTTI__cf_CHelp_LandMark:
 	.4byte cf_CHelp_LandMark_typestr
-	.4byte lbl_8053ED44
+	.4byte cf_CHelp_LandMark_hierarchy
 
-.global cf_CHelp_LearnArts_RTTI
-cf_CHelp_LearnArts_RTTI:
+.global __RTTI__cf_CHelp_LearnArts
+__RTTI__cf_CHelp_LearnArts:
 	.4byte cf_CHelp_LearnArts_typestr
-	.4byte lbl_8053ED6C
+	.4byte cf_CHelp_LearnArts_hierarchy
 
-.global cf_CHelp_ClosePartyMenu_RTTI
-cf_CHelp_ClosePartyMenu_RTTI:
+.global __RTTI__cf_CHelp_ClosePartyMenu
+__RTTI__cf_CHelp_ClosePartyMenu:
 	.4byte cf_CHelp_ClosePartyMenu_typestr
-	.4byte lbl_8053ED9C
+	.4byte cf_CHelp_ClosePartyMenu_hierarchy
 
-.global cf_CHelp_OpenPartyMenu_RTTI
-cf_CHelp_OpenPartyMenu_RTTI:
+.global __RTTI__cf_CHelp_OpenPartyMenu
+__RTTI__cf_CHelp_OpenPartyMenu:
 	.4byte cf_CHelp_OpenPartyMenu_typestr
-	.4byte lbl_8053EDCC
+	.4byte cf_CHelp_OpenPartyMenu_hierarchy
 
-.global cf_CHelp_Pg_RTTI
-cf_CHelp_Pg_RTTI:
+.global __RTTI__cf_CHelp_Pg
+__RTTI__cf_CHelp_Pg:
 	.4byte cf_CHelp_Pg_typestr
-	.4byte lbl_8053EDF4
+	.4byte cf_CHelp_Pg_hierarchy
 
-.global cf_CHelp_CloseQuestMenu_RTTI
-cf_CHelp_CloseQuestMenu_RTTI:
+.global __RTTI__cf_CHelp_CloseQuestMenu
+__RTTI__cf_CHelp_CloseQuestMenu:
 	.4byte cf_CHelp_CloseQuestMenu_typestr
-	.4byte lbl_8053EE24
+	.4byte cf_CHelp_CloseQuestMenu_hierarchy
 
-.global cf_CHelp_ShopSel_RTTI
-cf_CHelp_ShopSel_RTTI:
+.global __RTTI__cf_CHelp_ShopSel
+__RTTI__cf_CHelp_ShopSel:
 	.4byte cf_CHelp_ShopSel_typestr
-	.4byte lbl_8053EE54
+	.4byte cf_CHelp_ShopSel_hierarchy
 
-.global cf_CHelp_ShopBuy_RTTI
-cf_CHelp_ShopBuy_RTTI:
+.global __RTTI__cf_CHelp_ShopBuy
+__RTTI__cf_CHelp_ShopBuy:
 	.4byte cf_CHelp_ShopBuy_typestr
-	.4byte lbl_8053EE7C
+	.4byte cf_CHelp_ShopBuy_hierarchy
 
-.global cf_CHelp_Sp_RTTI
-cf_CHelp_Sp_RTTI:
+.global __RTTI__cf_CHelp_Sp
+__RTTI__cf_CHelp_Sp:
 	.4byte cf_CHelp_Sp_typestr
-	.4byte lbl_8053EEA4
+	.4byte cf_CHelp_Sp_hierarchy
 
-.global cf_CHelp_Target_RTTI
-cf_CHelp_Target_RTTI:
+.global __RTTI__cf_CHelp_Target
+__RTTI__cf_CHelp_Target:
 	.4byte cf_CHelp_Target_typestr
-	.4byte lbl_8053EEF4
+	.4byte cf_CHelp_Target_hierarchy
 
-.global cf_CVS_THREAD_ORDER_RTTI
-cf_CVS_THREAD_ORDER_RTTI:
+.global __RTTI__cf_CVS_THREAD_ORDER
+__RTTI__cf_CVS_THREAD_ORDER:
 	.4byte cf_CVS_THREAD_ORDER_typestr
-	.4byte lbl_8053EF4C
+	.4byte cf_CVS_THREAD_ORDER_hierarchy
 
-.global CBattery_RTTI
-CBattery_RTTI:
+.global __RTTI__CBattery
+__RTTI__CBattery:
 	.4byte CBattery_typestr
-	.4byte lbl_8053F030
+	.4byte CBattery_hierarchy

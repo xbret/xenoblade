@@ -4909,8 +4909,8 @@ lbl_8018E31C:
 /* 8018E334 001578F4  80 84 00 90 */	lwz r4, 0x90(r4)
 /* 8018E338 001578F8  48 30 7B 55 */	bl func_80495E8C
 /* 8018E33C 001578FC  38 80 00 00 */	li r4, 0
-/* 8018E340 00157900  38 AD 8C 38 */	addi r5, r13, CScnItemModelNw4r_RTTI@sda21
-/* 8018E344 00157904  38 CD 8C 48 */	addi r6, r13, CScnItemModel_RTTI@sda21
+/* 8018E340 00157900  38 AD 8C 38 */	addi r5, r13, __RTTI__CScnItemModelNw4r@sda21
+/* 8018E344 00157904  38 CD 8C 48 */	addi r6, r13, __RTTI__CScnItemModel@sda21
 /* 8018E348 00157908  38 E0 00 00 */	li r7, 0
 /* 8018E34C 0015790C  48 12 BA 39 */	bl __dynamic_cast
 /* 8018E350 00157910  7C 64 1B 78 */	mr r4, r3

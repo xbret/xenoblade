@@ -783,6 +783,8 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/src/monolithlib/code_80450B14.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80450B2C.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80450B44.o \
+	$(BUILD_DIR)/asm/monolithlib/CDesktop.o \
+	$(BUILD_DIR)/asm/monolithlib/code_80455FD4.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804645CC.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80468434.o \
 	$(BUILD_DIR)/asm/monolithlib/code_8046A530.o \

@@ -17,8 +17,8 @@ func_800C2C90:
 /* 800C2CB8 0008C278  7D 89 03 A6 */	mtctr r12
 /* 800C2CBC 0008C27C  4E 80 04 21 */	bctrl 
 /* 800C2CC0 0008C280  38 80 00 00 */	li r4, 0
-/* 800C2CC4 0008C284  38 AD 83 80 */	addi r5, r13, cf_CtrlBase_RTTI@sda21
-/* 800C2CC8 0008C288  38 CD 83 88 */	addi r6, r13, lbl_80664508@sda21
+/* 800C2CC4 0008C284  38 AD 83 80 */	addi r5, r13, __RTTI__cf_CtrlBase@sda21
+/* 800C2CC8 0008C288  38 CD 83 88 */	addi r6, r13, __RTTI__CActInput@sda21
 /* 800C2CCC 0008C28C  38 E0 00 00 */	li r7, 0
 /* 800C2CD0 0008C290  48 1F 70 B5 */	bl __dynamic_cast #cast from CActInput to CtrlBase
 /* 800C2CD4 0008C294  7C 7F 1B 78 */	mr r31, r3
@@ -1397,8 +1397,8 @@ lbl_800C40A8:
 lbl_800C40B8:
 /* 800C40B8 0008D678  7F E3 FB 78 */	mr r3, r31
 /* 800C40BC 0008D67C  38 80 00 00 */	li r4, 0
-/* 800C40C0 0008D680  38 AD 84 28 */	addi r5, r13, cf_CfObjectPoint_RTTI@sda21
-/* 800C40C4 0008D684  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
+/* 800C40C0 0008D680  38 AD 84 28 */	addi r5, r13, __RTTI__cf_CfObjectPoint@sda21
+/* 800C40C4 0008D684  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
 /* 800C40C8 0008D688  38 E0 00 00 */	li r7, 0
 /* 800C40CC 0008D68C  48 1F 5C B9 */	bl __dynamic_cast
 /* 800C40D0 0008D690  88 03 00 91 */	lbz r0, 0x91(r3)
@@ -5724,8 +5724,8 @@ lbl_800C7F28:
 /* 800C7F38 000914F8  40 82 01 68 */	bne lbl_800C80A0
 /* 800C7F3C 000914FC  80 7D 00 18 */	lwz r3, 0x18(r29)
 /* 800C7F40 00091500  38 80 00 00 */	li r4, 0
-/* 800C7F44 00091504  38 AD 83 D8 */	addi r5, r13, cf_CfObjectImplPc_RTTI@sda21
-/* 800C7F48 00091508  38 CD 83 60 */	addi r6, r13, lbl_806644E0@sda21
+/* 800C7F44 00091504  38 AD 83 D8 */	addi r5, r13, __RTTI__cf_CfObjectImplPc@sda21
+/* 800C7F48 00091508  38 CD 83 60 */	addi r6, r13, __RTTI__cf_CfObjectImpl@sda21
 /* 800C7F4C 0009150C  80 63 3E D4 */	lwz r3, 0x3ed4(r3)
 /* 800C7F50 00091510  38 E0 00 00 */	li r7, 0
 /* 800C7F54 00091514  48 1F 1E 31 */	bl __dynamic_cast

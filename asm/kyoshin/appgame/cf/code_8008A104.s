@@ -15828,8 +15828,8 @@ lbl_800985F8:
 /* 800985FC 00061BBC  40 82 00 74 */	bne lbl_80098670
 /* 80098600 00061BC0  80 63 00 5C */	lwz r3, 0x5c(r3)
 /* 80098604 00061BC4  38 80 00 00 */	li r4, 0
-/* 80098608 00061BC8  38 AD 83 D8 */	addi r5, r13, cf_CfObjectImplPc_RTTI@sda21
-/* 8009860C 00061BCC  38 CD 83 60 */	addi r6, r13, lbl_806644E0@sda21
+/* 80098608 00061BC8  38 AD 83 D8 */	addi r5, r13, __RTTI__cf_CfObjectImplPc@sda21
+/* 8009860C 00061BCC  38 CD 83 60 */	addi r6, r13, __RTTI__cf_CfObjectImpl@sda21
 /* 80098610 00061BD0  80 63 3E D4 */	lwz r3, 0x3ed4(r3)
 /* 80098614 00061BD4  38 E0 00 00 */	li r7, 0
 /* 80098618 00061BD8  48 22 17 6D */	bl __dynamic_cast

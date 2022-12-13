@@ -37,163 +37,163 @@ lbl_80665E44:
 	# ROM: 0x571A24
 	.4byte 0xFFFFFFFF
 
-.global CMsgParam_8_RTTI
-CMsgParam_8_RTTI:
+.global __RTTI__CMsgParam_8
+__RTTI__CMsgParam_8:
 	.4byte CMsgParam_8_typestr
 	.4byte 0
 
-.global reslist_CWorkThread_RTTI
-reslist_CWorkThread_RTTI:
+.global __RTTI__reslist_CWorkThread
+__RTTI__reslist_CWorkThread:
 	.4byte reslist_CWorkThread_typestr
-	.4byte lbl_8056EA40
+	.4byte reslist_CWorkThread_hierarchy
 
-.global _reslist_base_CWorkThread_RTTI
-_reslist_base_CWorkThread_RTTI:
+.global __RTTI___reslist_base_CWorkThread
+__RTTI___reslist_base_CWorkThread:
 	.4byte _reslist_base_CWorkThread_typestr
 	.4byte 0
 
-.global reslist_unsigned_long_RTTI
-reslist_unsigned_long_RTTI:
+.global __RTTI__reslist_unsigned_long
+__RTTI__reslist_unsigned_long:
 	.4byte reslist_unsigned_long_typestr
-	.4byte lbl_8056EB04
+	.4byte reslist_unsigned_long_hierarchy
 
-.global _reslist_base_unsigned_long_RTTI
-_reslist_base_unsigned_long_RTTI:
+.global __RTTI___reslist_base_unsigned_long
+__RTTI___reslist_base_unsigned_long:
 	.4byte _reslist_base_unsigned_long_typestr
 	.4byte 0
 
-.global CProcRoot_RTTI
-CProcRoot_RTTI:
+.global __RTTI__CProcRoot
+__RTTI__CProcRoot:
 	.4byte CProcRoot_typestr
-	.4byte lbl_8056EBC0
+	.4byte CProcRoot_hierarchy
 
-.global CRsrcData_RTTI
-CRsrcData_RTTI:
+.global __RTTI__CRsrcData
+__RTTI__CRsrcData:
 	.4byte CRsrcData_typestr
-	.4byte lbl_8056EC78
+	.4byte CRsrcData_hierarchy
 
-.global CScriptCode_RTTI
-CScriptCode_RTTI:
+.global __RTTI__CScriptCode
+__RTTI__CScriptCode:
 	.4byte CScriptCode_typestr
-	.4byte lbl_8056ED30
+	.4byte CScriptCode_hierarchy
 
-.global CToken_RTTI
-CToken_RTTI:
+.global __RTTI__CToken
+__RTTI__CToken:
 	.4byte CToken_typestr
 	.4byte 0
 
-.global _unnamed_CTaskManager_cpp_CRootProc_RTTI
-_unnamed_CTaskManager_cpp_CRootProc_RTTI:
+.global __RTTI___unnamed_CTaskManager_cpp_CRootProc
+__RTTI___unnamed_CTaskManager_cpp_CRootProc:
 	.4byte _unnamed_CTaskManager_cpp_CRootProc_typestr
-	.4byte lbl_8056EDD4
+	.4byte _unnamed_CTaskManager_cpp_CRootProc_hierarchy
 
-.global CTTask_unnamed_CTaskManager_cpp_CRootProc_RTTI
-CTTask_unnamed_CTaskManager_cpp_CRootProc_RTTI:
+.global __RTTI__CTTask_unnamed_CTaskManager_cpp_CRootProc
+__RTTI__CTTask_unnamed_CTaskManager_cpp_CRootProc:
 	.4byte CTTask_unnamed_CTaskManager_cpp_CRootProc_typestr
-	.4byte lbl_8056EE1C
+	.4byte CTTask_unnamed_CTaskManager_cpp_CRootProc_hierarchy
 
-.global CView_RTTI
-CView_RTTI:
+.global __RTTI__CView
+__RTTI__CView:
 	.4byte CView_typestr
-	.4byte lbl_8056EF28
+	.4byte CView_hierarchy
 
-.global CMsgParam_10_RTTI
-CMsgParam_10_RTTI:
+.global __RTTI__CMsgParam_10
+__RTTI__CMsgParam_10:
 	.4byte CMsgParam_10_typestr
 	.4byte 0
 
-.global reslist_IWorkEvent_RTTI
-reslist_IWorkEvent_RTTI:
+.global __RTTI__reslist_IWorkEvent
+__RTTI__reslist_IWorkEvent:
 	.4byte reslist_IWorkEvent_typestr
-	.4byte lbl_8056EF5C
+	.4byte reslist_IWorkEvent_hierarchy
 
-.global _reslist_base_IWorkEvent_RTTI
-_reslist_base_IWorkEvent_RTTI:
+.global __RTTI___reslist_base_IWorkEvent
+__RTTI___reslist_base_IWorkEvent:
 	.4byte _reslist_base_IWorkEvent_typestr
 	.4byte 0
 
-.global CFontLayer_RTTI
-CFontLayer_RTTI:
+.global __RTTI__CFontLayer
+__RTTI__CFontLayer:
 	.4byte CFontLayer_typestr
 	.4byte 0
 
-.global CViewFrame_RTTI
-CViewFrame_RTTI:
+.global __RTTI__CViewFrame
+__RTTI__CViewFrame:
 	.4byte CViewFrame_typestr
 	.4byte 0
 
-.global CViewRoot_RTTI
-CViewRoot_RTTI:
+.global __RTTI__CViewRoot
+__RTTI__CViewRoot:
 	.4byte CViewRoot_typestr
-	.4byte lbl_8056F028
+	.4byte CViewRoot_hierarchy
 
-.global CWorkControl_RTTI
-CWorkControl_RTTI:
+.global __RTTI__CWorkControl
+__RTTI__CWorkControl:
 	.4byte CWorkControl_typestr
-	.4byte lbl_8056F0E0
+	.4byte CWorkControl_hierarchy
 
-.global CWorkFlowSetup_RTTI
-CWorkFlowSetup_RTTI:
+.global __RTTI__CWorkFlowSetup
+__RTTI__CWorkFlowSetup:
 	.4byte CWorkFlowSetup_typestr
-	.4byte lbl_8056F198
+	.4byte CWorkFlowSetup_hierarchy
 
-.global _unnamed_CWorkRoot_cpp_CWorkRootThread_RTTI
-_unnamed_CWorkRoot_cpp_CWorkRootThread_RTTI:
+.global __RTTI___unnamed_CWorkRoot_cpp_CWorkRootThread
+__RTTI___unnamed_CWorkRoot_cpp_CWorkRootThread:
 	.4byte _unnamed_CWorkRoot_cpp_CWorkRootThread_typestr
-	.4byte lbl_8056F250
+	.4byte _unnamed_CWorkRoot_cpp_CWorkRootThread_hierarchy
 
-.global CWorkSystem_RTTI
-CWorkSystem_RTTI:
+.global __RTTI__CWorkSystem
+__RTTI__CWorkSystem:
 	.4byte CWorkSystem_typestr
-	.4byte lbl_8056F308
+	.4byte CWorkSystem_hierarchy
 
-.global CWorkSystemMem_RTTI
-CWorkSystemMem_RTTI:
+.global __RTTI__CWorkSystemMem
+__RTTI__CWorkSystemMem:
 	.4byte CWorkSystemMem_typestr
-	.4byte lbl_8056F3C0
+	.4byte CWorkSystemMem_hierarchy
 
-.global TChildListHeader_CProcess_RTTI
-TChildListHeader_CProcess_RTTI:
+.global __RTTI__TChildListHeader_CProcess
+__RTTI__TChildListHeader_CProcess:
 	.4byte TChildListHeader_CProcess_typestr
 	.4byte 0
 
-.global TChildListHeader_CChildListNode_RTTI
-TChildListHeader_CChildListNode_RTTI:
+.global __RTTI__TChildListHeader_CChildListNode
+__RTTI__TChildListHeader_CChildListNode:
 	.4byte TChildListHeader_CChildListNode_typestr
 	.4byte 0
 
-.global CDeviceRemotePad_RTTI
-CDeviceRemotePad_RTTI:
+.global __RTTI__CDeviceRemotePad
+__RTTI__CDeviceRemotePad:
 	.4byte CDeviceRemotePad_typestr
-	.4byte lbl_8056F4D8
+	.4byte CDeviceRemotePad_hierarchy
 
-.global CDeviceBase_RTTI
-CDeviceBase_RTTI:
+.global __RTTI__CDeviceBase
+__RTTI__CDeviceBase:
 	.4byte CDeviceBase_typestr
-	.4byte lbl_8056F598
+	.4byte CDeviceBase_hierarchy
 
-.global CDeviceSC_RTTI
-CDeviceSC_RTTI:
+.global __RTTI__CDeviceSC
+__RTTI__CDeviceSC:
 	.4byte CDeviceSC_typestr
-	.4byte lbl_8056F650
+	.4byte CDeviceSC_hierarchy
 
-.global CDeviceVI_RTTI
-CDeviceVI_RTTI:
+.global __RTTI__CDeviceVI
+__RTTI__CDeviceVI:
 	.4byte CDeviceVI_typestr
-	.4byte lbl_8056F764
+	.4byte CDeviceVI_hierarchy
 
-.global reslist_CDeviceVICb_RTTI
-reslist_CDeviceVICb_RTTI:
+.global __RTTI__reslist_CDeviceVICb
+__RTTI__reslist_CDeviceVICb:
 	.4byte reslist_CDeviceVICb_typestr
-	.4byte lbl_8056F78C
+	.4byte reslist_CDeviceVICb_hierarchy
 
-.global _reslist_base_CDeviceVICb_RTTI
-_reslist_base_CDeviceVICb_RTTI:
+.global __RTTI___reslist_base_CDeviceVICb
+__RTTI___reslist_base_CDeviceVICb:
 	.4byte _reslist_base_CDeviceVICb_typestr
 	.4byte 0
 
-.global CDeviceVICb_RTTI
-CDeviceVICb_RTTI:
+.global __RTTI__CDeviceVICb
+__RTTI__CDeviceVICb:
 	.4byte CDeviceVICb_typestr
 	.4byte 0
 
@@ -276,18 +276,18 @@ lbl_80665F78:
 	.4byte 0x00000003
 	.4byte 0
 
-.global CGXCache_RTTI
-CGXCache_RTTI:
+.global __RTTI__CGXCache
+__RTTI__CGXCache:
 	.4byte CGXCache_typestr
-	.4byte lbl_8056F818
+	.4byte CGXCache_hierarchy
 
-.global CMsgParam_32_RTTI
-CMsgParam_32_RTTI:
+.global __RTTI__CMsgParam_32
+__RTTI__CMsgParam_32:
 	.4byte CMsgParam_32_typestr
 	.4byte 0
 
-.global IStateCache_RTTI
-IStateCache_RTTI:
+.global __RTTI__IStateCache
+__RTTI__IStateCache:
 	.4byte IStateCache_typestr
 	.4byte 0
 
@@ -315,28 +315,28 @@ lbl_80665FA4:
 	# ROM: 0x571B84
 	.4byte 0xFFFFFFFF
 
-.global _unnamed_CDevice_cpp_CDeviceException_RTTI
-_unnamed_CDevice_cpp_CDeviceException_RTTI:
+.global __RTTI___unnamed_CDevice_cpp_CDeviceException
+__RTTI___unnamed_CDevice_cpp_CDeviceException:
 	.4byte _unnamed_CDevice_cpp_CDeviceException_typestr
-	.4byte lbl_8056F8E0
+	.4byte _unnamed_CDevice_cpp_CDeviceException_hierarchy
 
-.global CDevice_RTTI
-CDevice_RTTI:
+.global __RTTI__CDevice
+__RTTI__CDevice:
 	.4byte CDevice_typestr
-	.4byte lbl_8056F998
+	.4byte CDevice_hierarchy
 
-.global CDeviceClock_RTTI
-CDeviceClock_RTTI:
+.global __RTTI__CDeviceClock
+__RTTI__CDeviceClock:
 	.4byte CDeviceClock_typestr
-	.4byte lbl_8056FA50
+	.4byte CDeviceClock_hierarchy
 
-.global reslist_IDeviceClockFrame_RTTI
-reslist_IDeviceClockFrame_RTTI:
+.global __RTTI__reslist_IDeviceClockFrame
+__RTTI__reslist_IDeviceClockFrame:
 	.4byte reslist_IDeviceClockFrame_typestr
-	.4byte lbl_8056FA78
+	.4byte reslist_IDeviceClockFrame_hierarchy
 
-.global _reslist_base_IDeviceClockFrame_RTTI
-_reslist_base_IDeviceClockFrame_RTTI:
+.global __RTTI___reslist_base_IDeviceClockFrame
+__RTTI___reslist_base_IDeviceClockFrame:
 	.4byte _reslist_base_IDeviceClockFrame_typestr
 	.4byte 0
 
@@ -347,18 +347,18 @@ lbl_80665FD0:
 	.4byte 0x01000000
 	.4byte 0
 
-.global CDeviceFile_RTTI
-CDeviceFile_RTTI:
+.global __RTTI__CDeviceFile
+__RTTI__CDeviceFile:
 	.4byte CDeviceFile_typestr
-	.4byte lbl_8056FB30
+	.4byte CDeviceFile_hierarchy
 
-.global reslist_CFileHandle_RTTI
-reslist_CFileHandle_RTTI:
+.global __RTTI__reslist_CFileHandle
+__RTTI__reslist_CFileHandle:
 	.4byte reslist_CFileHandle_typestr
-	.4byte lbl_8056FB58
+	.4byte reslist_CFileHandle_hierarchy
 
-.global _reslist_base_CFileHandle_RTTI
-_reslist_base_CFileHandle_RTTI:
+.global __RTTI___reslist_base_CFileHandle
+__RTTI___reslist_base_CFileHandle:
 	.4byte _reslist_base_CFileHandle_typestr
 	.4byte 0
 
@@ -381,25 +381,25 @@ lbl_80665FF8:
 	.4byte lbl_8066CBB0
 	.4byte 0
 
-.global CDeviceFileCri_RTTI
-CDeviceFileCri_RTTI:
+.global __RTTI__CDeviceFileCri
+__RTTI__CDeviceFileCri:
 	.4byte CDeviceFileCri_typestr
-	.4byte lbl_8056FC48
+	.4byte CDeviceFileCri_hierarchy
 
-.global CDeviceFileDvd_RTTI
-CDeviceFileDvd_RTTI:
+.global __RTTI__CDeviceFileDvd
+__RTTI__CDeviceFileDvd:
 	.4byte CDeviceFileDvd_typestr
-	.4byte lbl_8056FD08
+	.4byte CDeviceFileDvd_hierarchy
 
-.global CDeviceFileJob_RTTI
-CDeviceFileJob_RTTI:
+.global __RTTI__CDeviceFileJob
+__RTTI__CDeviceFileJob:
 	.4byte CDeviceFileJob_typestr
-	.4byte lbl_8056FDCC
+	.4byte CDeviceFileJob_hierarchy
 
-.global CDeviceFileJobReadDvd_RTTI
-CDeviceFileJobReadDvd_RTTI:
+.global __RTTI__CDeviceFileJobReadDvd
+__RTTI__CDeviceFileJobReadDvd:
 	.4byte CDeviceFileJobReadDvd_typestr
-	.4byte lbl_8056FE8C
+	.4byte CDeviceFileJobReadDvd_hierarchy
 
 
 .global lbl_80666020
@@ -413,55 +413,55 @@ lbl_80666024:
 	# ROM: 0x571C04
 	.4byte lbl_80526694
 
-.global CDeviceFont_RTTI
-CDeviceFont_RTTI:
+.global __RTTI__CDeviceFont
+__RTTI__CDeviceFont:
 	.4byte CDeviceFont_typestr
-	.4byte lbl_8056FF48
+	.4byte CDeviceFont_hierarchy
 
-.global reslist_IDeviceFontInfo_RTTI
-reslist_IDeviceFontInfo_RTTI:
+.global __RTTI__reslist_IDeviceFontInfo
+__RTTI__reslist_IDeviceFontInfo:
 	.4byte reslist_IDeviceFontInfo_typestr
-	.4byte lbl_8056FF70
+	.4byte reslist_IDeviceFontInfo_hierarchy
 
-.global _reslist_base_IDeviceFontInfo_RTTI
-_reslist_base_IDeviceFontInfo_RTTI:
+.global __RTTI___reslist_base_IDeviceFontInfo
+__RTTI___reslist_base_IDeviceFontInfo:
 	.4byte _reslist_base_IDeviceFontInfo_typestr
 	.4byte 0
 
-.global CDeviceFontInfoExt_RTTI
-CDeviceFontInfoExt_RTTI:
+.global __RTTI__CDeviceFontInfoExt
+__RTTI__CDeviceFontInfoExt:
 	.4byte CDeviceFontInfoExt_typestr
-	.4byte lbl_8056FFC4
+	.4byte CDeviceFontInfoExt_hierarchy
 
-.global lbl_80666048
-lbl_80666048:
+.global __RTTI__IDeviceFontInfo
+__RTTI__IDeviceFontInfo:
 	.4byte IDeviceFontInfo_typestr
 	.4byte 0
 
-.global CDeviceFontInfoRom_RTTI
-CDeviceFontInfoRom_RTTI:
+.global __RTTI__CDeviceFontInfoRom
+__RTTI__CDeviceFontInfoRom:
 	.4byte CDeviceFontInfoRom_typestr
-	.4byte lbl_8057000C
+	.4byte CDeviceFontInfoRom_hierarchy
 
-.global CDeviceFontLayer_RTTI
-CDeviceFontLayer_RTTI:
+.global __RTTI__CDeviceFontLayer
+__RTTI__CDeviceFontLayer:
 	.4byte CDeviceFontLayer_typestr
-	.4byte lbl_805700B8
+	.4byte CDeviceFontLayer_hierarchy
 
-.global reslist_const_CDeviceFontLayer_LAYER_QUE_RTTI
-reslist_const_CDeviceFontLayer_LAYER_QUE_RTTI:
+.global __RTTI__reslist_const_CDeviceFontLayer_LAYER_QUE
+__RTTI__reslist_const_CDeviceFontLayer_LAYER_QUE:
 	.4byte reslist_const_CDeviceFontLayer_LAYER_QUE_typestr
-	.4byte lbl_805700D8
+	.4byte reslist_const_CDeviceFontLayer_LAYER_QUE_hierarchy
 
-.global _reslist_base_const_CDeviceFontLayer_LAYER_QUE_RTTI
-_reslist_base_const_CDeviceFontLayer_LAYER_QUE_RTTI:
+.global __RTTI___reslist_base_const_CDeviceFontLayer_LAYER_QUE
+__RTTI___reslist_base_const_CDeviceFontLayer_LAYER_QUE:
 	.4byte _reslist_base_const_CDeviceFontLayer_LAYER_QUE_typestr
 	.4byte 0
 
-.global CDeviceFontLoader_RTTI
-CDeviceFontLoader_RTTI:
+.global __RTTI__CDeviceFontLoader
+__RTTI__CDeviceFontLoader:
 	.4byte CDeviceFontLoader_typestr
-	.4byte lbl_80570190
+	.4byte CDeviceFontLoader_hierarchy
 
 
 .global lbl_80666078
@@ -475,10 +475,10 @@ lbl_8066607C:
 	# ROM: 0x571C5C
 	.4byte lbl_8066CBE8
 
-.global CDeviceGX_RTTI
-CDeviceGX_RTTI:
+.global __RTTI__CDeviceGX
+__RTTI__CDeviceGX:
 	.4byte CDeviceGX_typestr
-	.4byte lbl_80570268
+	.4byte CDeviceGX_hierarchy
 
 
 .global lbl_80666088
@@ -487,40 +487,40 @@ lbl_80666088:
 	.4byte lbl_8066CC10
 	.4byte 0
 
-.global _unnamed_CDesktop_cpp_CDesktopException_RTTI
-_unnamed_CDesktop_cpp_CDesktopException_RTTI:
+.global __RTTI___unnamed_CDesktop_cpp_CDesktopException
+__RTTI___unnamed_CDesktop_cpp_CDesktopException:
 	.4byte _unnamed_CDesktop_cpp_CDesktopException_typestr
-	.4byte lbl_80570330
+	.4byte _unnamed_CDesktop_cpp_CDesktopException_hierarchy
 
-.global _unnamed_CDesktop_cpp_CDesktopBackGround_RTTI
-_unnamed_CDesktop_cpp_CDesktopBackGround_RTTI:
+.global __RTTI___unnamed_CDesktop_cpp_CDesktopBackGround
+__RTTI___unnamed_CDesktop_cpp_CDesktopBackGround:
 	.4byte _unnamed_CDesktop_cpp_CDesktopBackGround_typestr
-	.4byte lbl_805703F0
+	.4byte _unnamed_CDesktop_cpp_CDesktopBackGround_hierarchy
 
-.global CDesktop_RTTI
-CDesktop_RTTI:
+.global __RTTI__CDesktop
+__RTTI__CDesktop:
 	.4byte CDesktop_typestr
-	.4byte lbl_805704B0
+	.4byte CDesktop_hierarchy
 
-.global CException_RTTI
-CException_RTTI:
+.global __RTTI__CException
+__RTTI__CException:
 	.4byte CException_typestr
-	.4byte lbl_805705C8
+	.4byte CException_hierarchy
 
-.global CLib_RTTI
-CLib_RTTI:
+.global __RTTI__CLib
+__RTTI__CLib:
 	.4byte CLib_typestr
-	.4byte lbl_80570688
+	.4byte CLib_hierarchy
 
-.global CLibCri_RTTI
-CLibCri_RTTI:
+.global __RTTI__CLibCri
+__RTTI__CLibCri:
 	.4byte CLibCri_typestr
-	.4byte lbl_80570770
+	.4byte CLibCri_hierarchy
 
-.global CLibCriMoviePlay_RTTI
-CLibCriMoviePlay_RTTI:
+.global __RTTI__CLibCriMoviePlay
+__RTTI__CLibCriMoviePlay:
 	.4byte CLibCriMoviePlay_typestr
-	.4byte lbl_80570850
+	.4byte CLibCriMoviePlay_hierarchy
 
 
 .global lbl_806660C8
@@ -534,15 +534,15 @@ lbl_806660CC:
 	# ROM: 0x571CAC
 	.4byte lbl_8066CCC0
 
-.global CLibCriStreamingPlay_RTTI
-CLibCriStreamingPlay_RTTI:
+.global __RTTI__CLibCriStreamingPlay
+__RTTI__CLibCriStreamingPlay:
 	.4byte CLibCriStreamingPlay_typestr
-	.4byte lbl_80570924
+	.4byte CLibCriStreamingPlay_hierarchy
 
-.global CLibG3d_RTTI
-CLibG3d_RTTI:
+.global __RTTI__CLibG3d
+__RTTI__CLibG3d:
 	.4byte CLibG3d_typestr
-	.4byte lbl_805709D8
+	.4byte CLibG3d_hierarchy
 
 
 .global lbl_806660E0
@@ -551,45 +551,45 @@ lbl_806660E0:
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
-.global CLibHbm_RTTI
-CLibHbm_RTTI:
+.global __RTTI__CLibHbm
+__RTTI__CLibHbm:
 	.4byte CLibHbm_typestr
-	.4byte lbl_80570A90
+	.4byte CLibHbm_hierarchy
 
-.global CLibHbmControl_RTTI
-CLibHbmControl_RTTI:
+.global __RTTI__CLibHbmControl
+__RTTI__CLibHbmControl:
 	.4byte CLibHbmControl_typestr
-	.4byte lbl_80570B78
+	.4byte CLibHbmControl_hierarchy
 
-.global CLibLayout_RTTI
-CLibLayout_RTTI:
+.global __RTTI__CLibLayout
+__RTTI__CLibLayout:
 	.4byte CLibLayout_typestr
-	.4byte lbl_80570C38
+	.4byte CLibLayout_hierarchy
 
-.global CLibStaticData_RTTI
-CLibStaticData_RTTI:
+.global __RTTI__CLibStaticData
+__RTTI__CLibStaticData:
 	.4byte CLibStaticData_typestr
-	.4byte lbl_80570CF0
+	.4byte CLibStaticData_hierarchy
 
-.global CLibStaticData_CItem_RTTI
-CLibStaticData_CItem_RTTI:
+.global __RTTI__CLibStaticData_CItem
+__RTTI__CLibStaticData_CItem:
 	.4byte CLibStaticData_CItem_typestr
 	.4byte 0
 
-.global CLibVM_RTTI
-CLibVM_RTTI:
+.global __RTTI__CLibVM
+__RTTI__CLibVM:
 	.4byte CLibVM_typestr
-	.4byte lbl_80570E30
+	.4byte CLibVM_hierarchy
 
-.global CTaskLOD_RTTI
-CTaskLOD_RTTI:
+.global __RTTI__CTaskLOD
+__RTTI__CTaskLOD:
 	.4byte CTaskLOD_typestr
-	.4byte lbl_80570EE4
+	.4byte CTaskLOD_hierarchy
 
-.global CTTask_CTaskLOD_RTTI
-CTTask_CTaskLOD_RTTI:
+.global __RTTI__CTTask_CTaskLOD
+__RTTI__CTTask_CTaskLOD:
 	.4byte CTTask_CTaskLOD_typestr
-	.4byte lbl_80570F2C
+	.4byte CTTask_CTaskLOD_hierarchy
 
 
 .global lbl_80666128
@@ -667,10 +667,10 @@ lbl_80666160:
 	.4byte 0x72656600
 	.4byte 0
 
-.global LOD_LODMemMan_RTTI
-LOD_LODMemMan_RTTI:
+.global __RTTI__LOD_LODMemMan
+__RTTI__LOD_LODMemMan:
 	.4byte LOD_LODMemMan_typestr
-	.4byte lbl_805713D8
+	.4byte LOD_LODMemMan_hierarchy
 
 
 .global lbl_80666170
@@ -708,40 +708,40 @@ lbl_80666184:
 	# ROM: 0x571D64
 	.4byte 0x72656600
 
-.global mpfsys_MPFDrawDisplayList_RTTI
-mpfsys_MPFDrawDisplayList_RTTI:
+.global __RTTI__mpfsys_MPFDrawDisplayList
+__RTTI__mpfsys_MPFDrawDisplayList:
 	.4byte mpfsys_MPFDrawDisplayList_typestr
-	.4byte lbl_805713F8
+	.4byte mpfsys_MPFDrawDisplayList_hierarchy
 
-.global lbl_80666190
-lbl_80666190:
+.global __RTTI__mpfsys_MPFDraw
+__RTTI__mpfsys_MPFDraw:
 	.4byte mpfsys_MPFDraw_typestr
 	.4byte 0
 
-.global mpfsys_MPFDrawMdlColor_RTTI
-mpfsys_MPFDrawMdlColor_RTTI:
+.global __RTTI__mpfsys_MPFDrawMdlColor
+__RTTI__mpfsys_MPFDrawMdlColor:
 	.4byte mpfsys_MPFDrawMdlColor_typestr
-	.4byte lbl_80571418
+	.4byte mpfsys_MPFDrawMdlColor_hierarchy
 
-.global mpfsys_MPFDrawMdlNoColor_RTTI
-mpfsys_MPFDrawMdlNoColor_RTTI:
+.global __RTTI__mpfsys_MPFDrawMdlNoColor
+__RTTI__mpfsys_MPFDrawMdlNoColor:
 	.4byte mpfsys_MPFDrawMdlNoColor_typestr
-	.4byte lbl_80571438
+	.4byte mpfsys_MPFDrawMdlNoColor_hierarchy
 
-.global mpfsys_MPFDrawBillLayTex_RTTI
-mpfsys_MPFDrawBillLayTex_RTTI:
+.global __RTTI__mpfsys_MPFDrawBillLayTex
+__RTTI__mpfsys_MPFDrawBillLayTex:
 	.4byte mpfsys_MPFDrawBillLayTex_typestr
-	.4byte lbl_80571458
+	.4byte mpfsys_MPFDrawBillLayTex_hierarchy
 
-.global mpfsys_MPFDrawCross_RTTI
-mpfsys_MPFDrawCross_RTTI:
+.global __RTTI__mpfsys_MPFDrawCross
+__RTTI__mpfsys_MPFDrawCross:
 	.4byte mpfsys_MPFDrawCross_typestr
-	.4byte lbl_80571480
+	.4byte mpfsys_MPFDrawCross_hierarchy
 
-.global mpfsys_MPFDrawBillboard_RTTI
-mpfsys_MPFDrawBillboard_RTTI:
+.global __RTTI__mpfsys_MPFDrawBillboard
+__RTTI__mpfsys_MPFDrawBillboard:
 	.4byte mpfsys_MPFDrawBillboard_typestr
-	.4byte lbl_805714A0
+	.4byte mpfsys_MPFDrawBillboard_hierarchy
 
 
 .global lbl_806661C0
@@ -750,30 +750,30 @@ lbl_806661C0:
 	.4byte 0x3EAAAAAB
 	.4byte 0
 
-.global CScnItemCameraNw4r_RTTI
-CScnItemCameraNw4r_RTTI:
+.global __RTTI__CScnItemCameraNw4r
+__RTTI__CScnItemCameraNw4r:
 	.4byte CScnItemCameraNw4r_typestr
-	.4byte lbl_80571500
+	.4byte CScnItemCameraNw4r_hierarchy
 
-.global CScnItemCamera_RTTI
-CScnItemCamera_RTTI:
+.global __RTTI__CScnItemCamera
+__RTTI__CScnItemCamera:
 	.4byte CScnItemCamera_typestr
-	.4byte lbl_80571514
+	.4byte CScnItemCamera_hierarchy
 
-.global CScnItemId_RTTI
-CScnItemId_RTTI:
+.global __RTTI__CScnItemId
+__RTTI__CScnItemId:
 	.4byte CScnItemId_typestr
-	.4byte lbl_80571540
+	.4byte CScnItemId_hierarchy
 
-.global CScnItemLight_RTTI
-CScnItemLight_RTTI:
+.global __RTTI__CScnItemLight
+__RTTI__CScnItemLight:
 	.4byte CScnItemLight_typestr
-	.4byte lbl_80571570
+	.4byte CScnItemLight_hierarchy
 
-.global CScnItemLightNw4r_RTTI
-CScnItemLightNw4r_RTTI:
+.global __RTTI__CScnItemLightNw4r
+__RTTI__CScnItemLightNw4r:
 	.4byte CScnItemLightNw4r_typestr
-	.4byte lbl_805715A0
+	.4byte CScnItemLightNw4r_hierarchy
 
 
 .global lbl_806661F0
@@ -787,13 +787,13 @@ lbl_806661F4:
 	# ROM: 0x571DD4
 	.4byte lbl_8066D098
 
-.global lbl_806661F8
-lbl_806661F8:
+.global __RTTI__nw4r_g3d_IScnObjCallback
+__RTTI__nw4r_g3d_IScnObjCallback:
 	.4byte nw4r_g3d_IScnObjCallback_typestr
 	.4byte 0
 
-.global lbl_80666200
-lbl_80666200:
+.global __RTTI__nw4r_g3d_ICalcWorldCallback
+__RTTI__nw4r_g3d_ICalcWorldCallback:
 	.4byte nw4r_g3d_ICalcWorldCallback_typestr
 	.4byte 0
 
@@ -881,23 +881,23 @@ lbl_80666250:
 	.4byte 0x72656600
 	.4byte 0
 
-.global CScnItemPool_RTTI
-CScnItemPool_RTTI:
+.global __RTTI__CScnItemPool
+__RTTI__CScnItemPool:
 	.4byte CScnItemPool_typestr
-	.4byte lbl_80571D74
+	.4byte CScnItemPool_hierarchy
 
-.global reslist_CScnItem_RTTI
-reslist_CScnItem_RTTI:
+.global __RTTI__reslist_CScnItem
+__RTTI__reslist_CScnItem:
 	.4byte reslist_CScnItem_typestr
-	.4byte lbl_80571D94
+	.4byte reslist_CScnItem_hierarchy
 
-.global _reslist_base_CScnItem_RTTI
-_reslist_base_CScnItem_RTTI:
+.global __RTTI___reslist_base_CScnItem
+__RTTI___reslist_base_CScnItem:
 	.4byte _reslist_base_CScnItem_typestr
 	.4byte 0
 
-.global CScnLightMan_RTTI
-CScnLightMan_RTTI:
+.global __RTTI__CScnLightMan
+__RTTI__CScnLightMan:
 	.4byte CScnLightMan_typestr
 	.4byte 0
 
@@ -944,35 +944,35 @@ lbl_80666290:
 	.4byte 0x72656600
 	.4byte 0
 
-.global CScnMem_RTTI
-CScnMem_RTTI:
+.global __RTTI__CScnMem
+__RTTI__CScnMem:
 	.4byte CScnMem_typestr
 	.4byte 0
 
-.global CScnNw4r_RTTI
-CScnNw4r_RTTI:
+.global __RTTI__CScnNw4r
+__RTTI__CScnNw4r:
 	.4byte CScnNw4r_typestr
-	.4byte lbl_80571EC4
+	.4byte CScnNw4r_hierarchy
 
-.global CScn_RTTI
-CScn_RTTI:
+.global __RTTI__CScn
+__RTTI__CScn:
 	.4byte CScn_typestr
-	.4byte lbl_80571EF8
+	.4byte CScn_hierarchy
 
-.global CTTask_CScn_RTTI
-CTTask_CScn_RTTI:
+.global __RTTI__CTTask_CScn
+__RTTI__CTTask_CScn:
 	.4byte CTTask_CScn_typestr
-	.4byte lbl_80571F24
+	.4byte CTTask_CScn_hierarchy
 
-.global CScnRoot_RTTI
-CScnRoot_RTTI:
+.global __RTTI__CScnRoot
+__RTTI__CScnRoot:
 	.4byte CScnRoot_typestr
 	.4byte 0
 
-.global CScnRootNw4r_RTTI
-CScnRootNw4r_RTTI:
+.global __RTTI__CScnRootNw4r
+__RTTI__CScnRootNw4r:
 	.4byte CScnRootNw4r_typestr
-	.4byte lbl_8057200C
+	.4byte CScnRootNw4r_hierarchy
 
 
 .global lbl_806662C8
@@ -986,10 +986,10 @@ lbl_806662CC:
 	# ROM: 0x571EAC
 	.4byte 0xFFFFFFFF
 
-.global CScnTexWorkMan_RTTI
-CScnTexWorkMan_RTTI:
+.global __RTTI__CScnTexWorkMan
+__RTTI__CScnTexWorkMan:
 	.4byte CScnTexWorkMan_typestr
-	.4byte lbl_80572030
+	.4byte CScnTexWorkMan_hierarchy
 
 
 .global lbl_806662D8
@@ -1003,25 +1003,25 @@ lbl_806662DC:
 	# ROM: 0x571EBC
 	.4byte 0x72656600
 
-.global CScnVirtualLight_RTTI
-CScnVirtualLight_RTTI:
+.global __RTTI__CScnVirtualLight
+__RTTI__CScnVirtualLight:
 	.4byte CScnVirtualLight_typestr
 	.4byte 0
 
-.global CVirtualLightAmb_RTTI
-CVirtualLightAmb_RTTI:
+.global __RTTI__CVirtualLightAmb
+__RTTI__CVirtualLightAmb:
 	.4byte CVirtualLightAmb_typestr
-	.4byte lbl_805720D4
+	.4byte CVirtualLightAmb_hierarchy
 
-.global CVirtualLightObj_RTTI
-CVirtualLightObj_RTTI:
+.global __RTTI__CVirtualLightObj
+__RTTI__CVirtualLightObj:
 	.4byte CVirtualLightObj_typestr
 	.4byte 0
 
-.global CVirtualLightDir_RTTI
-CVirtualLightDir_RTTI:
+.global __RTTI__CVirtualLightDir
+__RTTI__CVirtualLightDir:
 	.4byte CVirtualLightDir_typestr
-	.4byte lbl_805720F4
+	.4byte CVirtualLightDir_hierarchy
 
 
 .global lbl_80666300
@@ -1035,23 +1035,23 @@ lbl_80666304:
 	# ROM: 0x571EE4
 	.4byte 0x72656600
 
-.global CScnBlend_RTTI
-CScnBlend_RTTI:
+.global __RTTI__CScnBlend
+__RTTI__CScnBlend:
 	.4byte CScnBlend_typestr
-	.4byte lbl_80572244
+	.4byte CScnBlend_hierarchy
 
-.global CScnFilter_RTTI
-CScnFilter_RTTI:
+.global __RTTI__CScnFilter
+__RTTI__CScnFilter:
 	.4byte CScnFilter_typestr
 	.4byte 0
 
-.global lbl_80666318
-lbl_80666318:
+.global __RTTI__CScnBloom
+__RTTI__CScnBloom:
 	.4byte CScnBloom_typestr
-	.4byte lbl_80572274
+	.4byte CScnBloom_hierarchy
 
-.global lbl_80666320
-lbl_80666320:
+.global __RTTI__CScnBloomBase
+__RTTI__CScnBloomBase:
 	.4byte CScnBloomBase_typestr
 	.4byte 0
 
@@ -1067,10 +1067,10 @@ lbl_8066632C:
 	# ROM: 0x571F0C
 	.4byte 0xFFFFFFFF
 
-.global CScnCameraMan_RTTI
-CScnCameraMan_RTTI:
+.global __RTTI__CScnCameraMan
+__RTTI__CScnCameraMan:
 	.4byte CScnCameraMan_typestr
-	.4byte lbl_80572310
+	.4byte CScnCameraMan_hierarchy
 
 
 .global lbl_80666338
@@ -1079,13 +1079,13 @@ lbl_80666338:
 	.4byte lbl_8066D330
 	.4byte 0
 
-.global CScnEffectActNw4r_RTTI
-CScnEffectActNw4r_RTTI:
+.global __RTTI__CScnEffectActNw4r
+__RTTI__CScnEffectActNw4r:
 	.4byte CScnEffectActNw4r_typestr
-	.4byte lbl_80572388
+	.4byte CScnEffectActNw4r_hierarchy
 
-.global lbl_80666348
-lbl_80666348:
+.global __RTTI__IEffectAct
+__RTTI__IEffectAct:
 	.4byte IEffectAct_typestr
 	.4byte 0
 
@@ -1101,55 +1101,55 @@ lbl_80666354:
 	# ROM: 0x571F34
 	.4byte 0x72656600
 
-.global CScnFadeMan_RTTI
-CScnFadeMan_RTTI:
+.global __RTTI__CScnFadeMan
+__RTTI__CScnFadeMan:
 	.4byte CScnFadeMan_typestr
 	.4byte 0
 
-.global CScnFilterMan_RTTI
-CScnFilterMan_RTTI:
+.global __RTTI__CScnFilterMan
+__RTTI__CScnFilterMan:
 	.4byte CScnFilterMan_typestr
 	.4byte 0
 
-.global reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_RTTI
-reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_RTTI:
+.global __RTTI__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+__RTTI__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter:
 	.4byte reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
-	.4byte lbl_805723DC
+	.4byte reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_hierarchy
 
-.global _reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_RTTI
-_reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_RTTI:
+.global __RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+__RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter:
 	.4byte _reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
 	.4byte 0
 
-.global reslist_CScnFilter_RTTI
-reslist_CScnFilter_RTTI:
+.global __RTTI__reslist_CScnFilter
+__RTTI__reslist_CScnFilter:
 	.4byte reslist_CScnFilter_typestr
-	.4byte lbl_80572400
+	.4byte reslist_CScnFilter_hierarchy
 
-.global _reslist_base_CScnFilter_RTTI
-_reslist_base_CScnFilter_RTTI:
+.global __RTTI___reslist_base_CScnFilter
+__RTTI___reslist_base_CScnFilter:
 	.4byte _reslist_base_CScnFilter_typestr
 	.4byte 0
 
-.global CScnFogMan_RTTI
-CScnFogMan_RTTI:
+.global __RTTI__CScnFogMan
+__RTTI__CScnFogMan:
 	.4byte CScnFogMan_typestr
 	.4byte 0
 
-.global CScnFrame_RTTI
-CScnFrame_RTTI:
+.global __RTTI__CScnFrame
+__RTTI__CScnFrame:
 	.4byte CScnFrame_typestr
 	.4byte 0
 
-.global CScnIdMan_RTTI
-CScnIdMan_RTTI:
+.global __RTTI__CScnIdMan
+__RTTI__CScnIdMan:
 	.4byte CScnIdMan_typestr
 	.4byte 0
 
-.global CScnItemAnim_RTTI
-CScnItemAnim_RTTI:
+.global __RTTI__CScnItemAnim
+__RTTI__CScnItemAnim:
 	.4byte CScnItemAnim_typestr
-	.4byte lbl_805724F8
+	.4byte CScnItemAnim_hierarchy
 
 
 .global lbl_806663A8
@@ -1165,15 +1165,15 @@ lbl_806663B0:
 	.4byte lbl_8066D5E0
 	.4byte 0
 
-.global CColiObjCall_RTTI
-CColiObjCall_RTTI:
+.global __RTTI__CColiObjCall
+__RTTI__CColiObjCall:
 	.4byte CColiObjCall_typestr
-	.4byte lbl_80572BD4
+	.4byte CColiObjCall_hierarchy
 
-.global CColiResCall_RTTI
-CColiResCall_RTTI:
+.global __RTTI__CColiResCall
+__RTTI__CColiResCall:
 	.4byte CColiResCall_typestr
-	.4byte lbl_80572BFC
+	.4byte CColiResCall_hierarchy
 
 
 .global lbl_806663C8
@@ -1182,20 +1182,20 @@ lbl_806663C8:
 	.4byte 0x72656600
 	.4byte 0
 
-.global CTaskColiManager_RTTI
-CTaskColiManager_RTTI:
+.global __RTTI__CTaskColiManager
+__RTTI__CTaskColiManager:
 	.4byte CTaskColiManager_typestr
-	.4byte lbl_80572CD4
+	.4byte CTaskColiManager_hierarchy
 
-.global CTTask_CTaskColiManager_RTTI
-CTTask_CTaskColiManager_RTTI:
+.global __RTTI__CTTask_CTaskColiManager
+__RTTI__CTTask_CTaskColiManager:
 	.4byte CTTask_CTaskColiManager_typestr
-	.4byte lbl_80572D1C
+	.4byte CTTask_CTaskColiManager_hierarchy
 
-.global CColiManCall_RTTI
-CColiManCall_RTTI:
+.global __RTTI__CColiManCall
+__RTTI__CColiManCall:
 	.4byte CColiManCall_typestr
-	.4byte lbl_80572D44
+	.4byte CColiManCall_hierarchy
 
 
 .global lbl_806663E8
@@ -1228,8 +1228,8 @@ lbl_806663F8:
 	.4byte func_804BF274
 	.4byte 0
 
-.global CLight_RTTI
-CLight_RTTI:
+.global __RTTI__CLight
+__RTTI__CLight:
 	.4byte CLight_typestr
 	.4byte 0
 
@@ -1257,22 +1257,22 @@ lbl_80666414:
 	# ROM: 0x571FF4
 	.4byte 0x00010B30
 
-.global reslist_IScnEnvCtl_RTTI
-reslist_IScnEnvCtl_RTTI:
+.global __RTTI__reslist_IScnEnvCtl
+__RTTI__reslist_IScnEnvCtl:
 	.4byte reslist_IScnEnvCtl_typestr
-	.4byte lbl_805731B4
+	.4byte reslist_IScnEnvCtl_hierarchy
 
-.global _reslist_base_IScnEnvCtl_RTTI
-_reslist_base_IScnEnvCtl_RTTI:
+.global __RTTI___reslist_base_IScnEnvCtl
+__RTTI___reslist_base_IScnEnvCtl:
 	.4byte _reslist_base_IScnEnvCtl_typestr
 	.4byte 0
 
-.global CScnEnvLgtCtrl_RTTI
-CScnEnvLgtCtrl_RTTI:
+.global __RTTI__CScnEnvLgtCtrl
+__RTTI__CScnEnvLgtCtrl:
 	.4byte CScnEnvLgtCtrl_typestr
-	.4byte lbl_805732A0
+	.4byte CScnEnvLgtCtrl_hierarchy
 
-.global lbl_80666430
-lbl_80666430:
+.global __RTTI__IScnEnvCtl
+__RTTI__IScnEnvCtl:
 	.4byte IScnEnvCtl_typestr
 	.4byte 0

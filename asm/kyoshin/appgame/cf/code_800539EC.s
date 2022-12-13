@@ -7378,8 +7378,7 @@ sinit_80059D60:
 
 .global __vt__CActParamData
 __vt__CActParamData:
-	# ROM: 0x525C68
-	.4byte CActParamData_RTTI
+	.4byte __RTTI__CActParamData
 	.4byte 0
 	.4byte func_80053A50
 	.4byte 0
@@ -7387,8 +7386,7 @@ __vt__CActParamData:
 
 .global __vt__CMcaFile
 __vt__CMcaFile:
-	# ROM: 0x525C78
-	.4byte CMcaFile_RTTI
+	.4byte __RTTI__CMcaFile
 	.4byte 0
 	.4byte func_80058478
 
@@ -7407,8 +7405,7 @@ lbl_80529BAC:
 
 .global __vt__CTaskEnvironment
 __vt__CTaskEnvironment:
-	# ROM: 0x525CC0
-	.4byte CTaskEnvironment_RTTI
+	.4byte __RTTI__CTaskEnvironment
 	.4byte 0
 	.4byte func_80058784
 	.4byte func_80446734
@@ -7418,23 +7415,22 @@ __vt__CTaskEnvironment:
 	.4byte func_800599DC
 	.4byte func_80043F20
 
-.global lbl_80529BE4
-lbl_80529BE4:
-	.4byte CDoubleListNode_RTTI
+.global CTaskEnvironment_hierarchy
+CTaskEnvironment_hierarchy:
+	.4byte __RTTI__CDoubleListNode
 	.4byte 0
-	.4byte CChildListNode_RTTI
+	.4byte __RTTI__CChildListNode
 	.4byte 0
-	.4byte CProcess_RTTI
+	.4byte __RTTI__CProcess
 	.4byte 0
-	.4byte CTTask_CTaskEnvironment_RTTI
+	.4byte __RTTI__CTTask_CTaskEnvironment
 	.4byte 0
 	.4byte 0
 
 
 .global __vt__CTTask_CTaskEnvironment
 __vt__CTTask_CTaskEnvironment:
-	# ROM: 0x525D08
-	.4byte CTTask_CTaskEnvironment_RTTI
+	.4byte __RTTI__CTTask_CTaskEnvironment
 	.4byte 0
 	.4byte func_8005872C
 	.4byte func_80446734
@@ -7444,13 +7440,13 @@ __vt__CTTask_CTaskEnvironment:
 	.4byte func_80059D18
 	.4byte func_80043F20
 
-.global lbl_80529C2C
-lbl_80529C2C:
-	.4byte CDoubleListNode_RTTI
+.global CTTask_CTaskEnvironment_hierarchy
+CTTask_CTaskEnvironment_hierarchy:
+	.4byte __RTTI__CDoubleListNode
 	.4byte 0
-	.4byte CChildListNode_RTTI
+	.4byte __RTTI__CChildListNode
 	.4byte 0
-	.4byte CProcess_RTTI
+	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
 
@@ -7494,25 +7490,25 @@ lbl_805740B8:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global CActParamData_RTTI
-CActParamData_RTTI:
+.global __RTTI__CActParamData
+__RTTI__CActParamData:
 	.4byte CActParamData_typestr
 	.4byte 0
 
-.global CMcaFile_RTTI
-CMcaFile_RTTI:
+.global __RTTI__CMcaFile
+__RTTI__CMcaFile:
 	.4byte CMcaFile_typestr
 	.4byte 0
 
-.global CTaskEnvironment_RTTI
-CTaskEnvironment_RTTI:
+.global __RTTI__CTaskEnvironment
+__RTTI__CTaskEnvironment:
 	.4byte CTaskEnvironment_typestr
-	.4byte lbl_80529BE4
+	.4byte CTaskEnvironment_hierarchy
 
-.global CTTask_CTaskEnvironment_RTTI
-CTTask_CTaskEnvironment_RTTI:
+.global __RTTI__CTTask_CTaskEnvironment
+__RTTI__CTTask_CTaskEnvironment:
 	.4byte CTTask_CTaskEnvironment_typestr
-	.4byte lbl_80529C2C
+	.4byte CTTask_CTaskEnvironment_hierarchy
 
 
 

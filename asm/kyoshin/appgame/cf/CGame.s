@@ -832,37 +832,35 @@ lbl_80664180:
 	.4byte lbl_80668380
 	.4byte 0
 
-.global _unnamed_CGame_cpp_CGameRestart_RTTI
-_unnamed_CGame_cpp_CGameRestart_RTTI:
-	# ROM: 0x56FD68
+.global __RTTI___unnamed_CGame_cpp_CGameRestart
+__RTTI___unnamed_CGame_cpp_CGameRestart:
 	.4byte _unnamed_CGame_cpp_CGameRestart_typestr
-	.4byte lbl_80528280
+	.4byte _unnamed_CGame_cpp_CGameRestart_hierarchy
 
-.global CGame_RTTI
-CGame_RTTI:
+.global __RTTI__CGame
+__RTTI__CGame:
 	.4byte CGame_typestr
-	.4byte lbl_80528340
+	.4byte CGame_hierarchy
 
-.global CProc_RTTI
-CProc_RTTI:
+.global __RTTI__CProc
+__RTTI__CProc:
 	.4byte CProc_typestr
-	.4byte lbl_8052835C
+	.4byte CProc_hierarchy
 
-.global CWorkThread_RTTI
-CWorkThread_RTTI:
+.global __RTTI__CWorkThread
+__RTTI__CWorkThread:
 	.4byte CWorkThread_typestr
-	.4byte lbl_80528370
+	.4byte CWorkThread_hierarchy
 
-.global IWorkEvent_RTTI
-IWorkEvent_RTTI:
+.global __RTTI__IWorkEvent
+__RTTI__IWorkEvent:
 	.4byte IWorkEvent_typestr
 	.4byte 0
 
-.global cf_CfObjectActor_RTTI
-cf_CfObjectActor_RTTI:
-	# ROM: 0x56FD90
+.global __RTTI__cf_CfObjectActor
+__RTTI__cf_CfObjectActor:
 	.4byte cf_CfObjectActor_typestr
-	.4byte lbl_80528CF0
+	.4byte cf_CfObjectActor_hierarchy
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 .global lbl_80666600
@@ -909,7 +907,7 @@ CProc_typestr:
 .global lbl_805281E0
 lbl_805281E0:
 	# ROM: 0x5242E0
-	.4byte _unnamed_CGame_cpp_CGameRestart_RTTI
+	.4byte __RTTI___unnamed_CGame_cpp_CGameRestart
 	.4byte 0
 	.4byte func_80039E90
 	.4byte func_80039E28
@@ -951,13 +949,13 @@ lbl_805281E0:
 	.4byte func_80039E30
 
 
-.global lbl_80528280
-lbl_80528280:
-	.4byte IWorkEvent_RTTI
+.global _unnamed_CGame_cpp_CGameRestart_hierarchy
+_unnamed_CGame_cpp_CGameRestart_hierarchy:
+	.4byte __RTTI__IWorkEvent
 	.4byte 0
-	.4byte CWorkThread_RTTI
+	.4byte __RTTI__CWorkThread
 	.4byte 0
-	.4byte CProc_RTTI
+	.4byte __RTTI__CProc
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -965,8 +963,7 @@ lbl_80528280:
 
 .global __vt__CGame
 __vt__CGame:
-	# ROM: 0x5243A0
-	.4byte CGame_RTTI
+	.4byte __RTTI__CGame
 	.4byte 0
 	.4byte __dt__CGame
 	.4byte func_80039E28
@@ -1007,27 +1004,27 @@ __vt__CGame:
 	.4byte func_80039890
 	.4byte func_80039B38
 
-.global lbl_80528340
-lbl_80528340:
-	.4byte IWorkEvent_RTTI
+.global CGame_hierarchy
+CGame_hierarchy:
+	.4byte __RTTI__IWorkEvent
 	.4byte 0
-	.4byte CWorkThread_RTTI
+	.4byte __RTTI__CWorkThread
 	.4byte 0
-	.4byte CProc_RTTI
-	.4byte 0
-	.4byte 0
-
-.global lbl_8052835C
-lbl_8052835C:
-	.4byte IWorkEvent_RTTI
-	.4byte 0
-	.4byte CWorkThread_RTTI
+	.4byte __RTTI__CProc
 	.4byte 0
 	.4byte 0
 
-.global lbl_80528370
-lbl_80528370:
-	.4byte IWorkEvent_RTTI
+.global CProc_hierarchy
+CProc_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte 0
+
+.global CWorkThread_hierarchy
+CWorkThread_hierarchy:
+	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1036,7 +1033,6 @@ lbl_80528370:
 
 .global _unnamed_CGame_cpp_CGameRestart_typestr
 _unnamed_CGame_cpp_CGameRestart_typestr:
-	# ROM: 0x4F1C20
 	.asciz "@unnamed@CGame_cpp@::CGameRestart"
 	.balign 4
 

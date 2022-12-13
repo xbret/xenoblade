@@ -6993,8 +6993,8 @@ func_800BF98C:
 /* 800BF9B4 00088F74  7F E3 FB 78 */	mr r3, r31
 /* 800BF9B8 00088F78  38 80 00 00 */	li r4, 0
 /* 800BF9BC 00088F7C  B0 1F 07 16 */	sth r0, 0x716(r31)
-/* 800BF9C0 00088F80  38 AD 84 90 */	addi r5, r13, cf_CfObjectTbox_RTTI@sda21
-/* 800BF9C4 00088F84  38 CD 84 98 */	addi r6, r13, cf_CfObjectObj_RTTI@sda21
+/* 800BF9C0 00088F80  38 AD 84 90 */	addi r5, r13, __RTTI__cf_CfObjectTbox@sda21
+/* 800BF9C4 00088F84  38 CD 84 98 */	addi r6, r13, __RTTI__cf_CfObjectObj@sda21
 /* 800BF9C8 00088F88  38 E0 00 00 */	li r7, 0
 /* 800BF9CC 00088F8C  48 1F A3 B9 */	bl __dynamic_cast
 /* 800BF9D0 00088F90  2C 03 00 00 */	cmpwi r3, 0
@@ -9882,8 +9882,8 @@ lbl_800C2164:
 /* 800C21A0 0008B760  7D 89 03 A6 */	mtctr r12
 /* 800C21A4 0008B764  4E 80 04 21 */	bctrl 
 /* 800C21A8 0008B768  38 80 00 00 */	li r4, 0
-/* 800C21AC 0008B76C  38 AD 83 80 */	addi r5, r13, cf_CtrlBase_RTTI@sda21
-/* 800C21B0 0008B770  38 CD 83 88 */	addi r6, r13, lbl_80664508@sda21
+/* 800C21AC 0008B76C  38 AD 83 80 */	addi r5, r13, __RTTI__cf_CtrlBase@sda21
+/* 800C21B0 0008B770  38 CD 83 88 */	addi r6, r13, __RTTI__CActInput@sda21
 /* 800C21B4 0008B774  38 E0 00 00 */	li r7, 0
 /* 800C21B8 0008B778  48 1F 7B CD */	bl __dynamic_cast
 /* 800C21BC 0008B77C  2C 03 00 00 */	cmpwi r3, 0

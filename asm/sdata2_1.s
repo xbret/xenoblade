@@ -4160,8 +4160,8 @@ lbl_806697E4:
 	# ROM: 0x573644
 	.4byte 0
 
-.global lbl_806697E8
-lbl_806697E8:
+.global IUICf_typestr
+IUICf_typestr:
 	.asciz "IUICf"
 	.balign 4
 

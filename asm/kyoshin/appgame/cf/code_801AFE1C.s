@@ -1043,8 +1043,8 @@ lbl_801B0D18:
 /* 801B0D88 0017A348  41 82 00 28 */	beq lbl_801B0DB0
 /* 801B0D8C 0017A34C  80 7F 00 38 */	lwz r3, 0x38(r31)
 /* 801B0D90 0017A350  38 80 00 00 */	li r4, 0
-/* 801B0D94 0017A354  38 AD 83 D8 */	addi r5, r13, cf_CfObjectImplPc_RTTI@sda21
-/* 801B0D98 0017A358  38 CD 83 60 */	addi r6, r13, lbl_806644E0@sda21
+/* 801B0D94 0017A354  38 AD 83 D8 */	addi r5, r13, __RTTI__cf_CfObjectImplPc@sda21
+/* 801B0D98 0017A358  38 CD 83 60 */	addi r6, r13, __RTTI__cf_CfObjectImpl@sda21
 /* 801B0D9C 0017A35C  38 E0 00 00 */	li r7, 0
 /* 801B0DA0 0017A360  48 10 8F E5 */	bl __dynamic_cast
 /* 801B0DA4 0017A364  80 03 03 6C */	lwz r0, 0x36c(r3)
@@ -1659,8 +1659,8 @@ func_801B1618:
 /* 801B1698 0017AC58  80 7F 00 38 */	lwz r3, 0x38(r31)
 /* 801B169C 0017AC5C  3B C0 00 00 */	li r30, 0
 /* 801B16A0 0017AC60  38 80 00 00 */	li r4, 0
-/* 801B16A4 0017AC64  38 AD 83 D8 */	addi r5, r13, cf_CfObjectImplPc_RTTI@sda21
-/* 801B16A8 0017AC68  38 CD 83 60 */	addi r6, r13, lbl_806644E0@sda21
+/* 801B16A4 0017AC64  38 AD 83 D8 */	addi r5, r13, __RTTI__cf_CfObjectImplPc@sda21
+/* 801B16A8 0017AC68  38 CD 83 60 */	addi r6, r13, __RTTI__cf_CfObjectImpl@sda21
 /* 801B16AC 0017AC6C  38 E0 00 00 */	li r7, 0
 /* 801B16B0 0017AC70  48 10 86 D5 */	bl __dynamic_cast
 /* 801B16B4 0017AC74  80 03 03 6C */	lwz r0, 0x36c(r3)

@@ -4491,7 +4491,7 @@ lbl_80172D9C:
 lbl_80172DB4:
 /* 80172DB4 0013C374  80 7E 07 EC */	lwz r3, 0x7ec(r30)
 /* 80172DB8 0013C378  38 80 00 00 */	li r4, 0
-/* 80172DBC 0013C37C  38 AD 8B 70 */	addi r5, r13, CScnMaruShadowNw4r_RTTI@sda21
+/* 80172DBC 0013C37C  38 AD 8B 70 */	addi r5, r13, __RTTI__CScnMaruShadowNw4r@sda21
 /* 80172DC0 0013C380  38 CD 8B 78 */	addi r6, r13, lbl_80664CF8@sda21
 /* 80172DC4 0013C384  38 E0 00 00 */	li r7, 0
 /* 80172DC8 0013C388  48 14 6F BD */	bl __dynamic_cast
@@ -25665,8 +25665,8 @@ lbl_80185A18:
 /* 80185A18 0014EFD8  7F A3 EB 78 */	mr r3, r29
 /* 80185A1C 0014EFDC  4B EF D3 39 */	bl func_80082D54
 /* 80185A20 0014EFE0  38 80 00 00 */	li r4, 0
-/* 80185A24 0014EFE4  38 AD 81 20 */	addi r5, r13, cf_CfObjectPc_RTTI@sda21
-/* 80185A28 0014EFE8  38 CD 80 58 */	addi r6, r13, cf_CfObjectMove_RTTI@sda21
+/* 80185A24 0014EFE4  38 AD 81 20 */	addi r5, r13, __RTTI__cf_CfObjectPc@sda21
+/* 80185A28 0014EFE8  38 CD 80 58 */	addi r6, r13, __RTTI__cf_CfObjectMove@sda21
 /* 80185A2C 0014EFEC  38 E0 00 00 */	li r7, 0
 /* 80185A30 0014EFF0  48 13 43 55 */	bl __dynamic_cast
 /* 80185A34 0014EFF4  2C 03 00 00 */	cmpwi r3, 0

@@ -3,18 +3,18 @@
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
-.global CETrail_RTTI
-CETrail_RTTI:
+.global __RTTI__CETrail
+__RTTI__CETrail:
 	.4byte CETrail_typestr
 	.4byte 0
 
-.global reslist_CETrail_POINT_RTTI
-reslist_CETrail_POINT_RTTI:
+.global __RTTI__reslist_CETrail_POINT
+__RTTI__reslist_CETrail_POINT:
 	.4byte reslist_CETrail_POINT_typestr
-	.4byte lbl_805734A0
+	.4byte reslist_CETrail_POINT_hierarchy
 
-.global _reslist_base_CETrail_POINT_RTTI
-_reslist_base_CETrail_POINT_RTTI:
+.global __RTTI___reslist_base_CETrail_POINT
+__RTTI___reslist_base_CETrail_POINT:
 	.4byte _reslist_base_CETrail_POINT_typestr
 	.4byte 0
 
@@ -30,23 +30,23 @@ lbl_8066645C:
 	# ROM: 0x57203C
 	.4byte 0x01000000
 
-.global CWorkSystemCache_RTTI
-CWorkSystemCache_RTTI:
+.global __RTTI__CWorkSystemCache
+__RTTI__CWorkSystemCache:
 	.4byte CWorkSystemCache_typestr
-	.4byte lbl_80573558
+	.4byte CWorkSystemCache_hierarchy
 
-.global reslist_CCacheItem_RTTI
-reslist_CCacheItem_RTTI:
+.global __RTTI__reslist_CCacheItem
+__RTTI__reslist_CCacheItem:
 	.4byte reslist_CCacheItem_typestr
-	.4byte lbl_80573578
+	.4byte reslist_CCacheItem_hierarchy
 
-.global _reslist_base_CCacheItem_RTTI
-_reslist_base_CCacheItem_RTTI:
+.global __RTTI___reslist_base_CCacheItem
+__RTTI___reslist_base_CCacheItem:
 	.4byte _reslist_base_CCacheItem_typestr
 	.4byte 0
 
-.global CNand_RTTI
-CNand_RTTI:
+.global __RTTI__CNand
+__RTTI__CNand:
 	.4byte CNand_typestr
 	.4byte 0
 
@@ -69,13 +69,13 @@ lbl_80666488:
 	.4byte lbl_8066D9C8
 	.4byte 0
 
-.global lbl_80666490
-lbl_80666490:
+.global __RTTI__CNReqtask
+__RTTI__CNReqtask:
 	.4byte CNReqtask_typestr
 	.4byte 0
 
-.global CNRequest_RTTI
-CNRequest_RTTI:
+.global __RTTI__CNRequest
+__RTTI__CNRequest:
 	.4byte CNRequest_typestr
 	.4byte 0
 
@@ -86,103 +86,103 @@ lbl_806664A0:
 	.4byte lbl_8066D9D0
 	.4byte 0
 
-.global CNReqtaskSave_RTTI
-CNReqtaskSave_RTTI:
+.global __RTTI__CNReqtaskSave
+__RTTI__CNReqtaskSave:
 	.4byte CNReqtaskSave_typestr
-	.4byte lbl_805735C0
+	.4byte CNReqtaskSave_hierarchy
 
-.global CNReqtaskLoad_RTTI
-CNReqtaskLoad_RTTI:
+.global __RTTI__CNReqtaskLoad
+__RTTI__CNReqtaskLoad:
 	.4byte CNReqtaskLoad_typestr
-	.4byte lbl_805735E0
+	.4byte CNReqtaskLoad_hierarchy
 
-.global CNReqtaskReaddir_RTTI
-CNReqtaskReaddir_RTTI:
+.global __RTTI__CNReqtaskReaddir
+__RTTI__CNReqtaskReaddir:
 	.4byte CNReqtaskReaddir_typestr
-	.4byte lbl_80573600
+	.4byte CNReqtaskReaddir_hierarchy
 
-.global CNReqtaskRemove_RTTI
-CNReqtaskRemove_RTTI:
+.global __RTTI__CNReqtaskRemove
+__RTTI__CNReqtaskRemove:
 	.4byte CNReqtaskRemove_typestr
-	.4byte lbl_80573620
+	.4byte CNReqtaskRemove_hierarchy
 
-.global CNReqtaskCheck_RTTI
-CNReqtaskCheck_RTTI:
+.global __RTTI__CNReqtaskCheck
+__RTTI__CNReqtaskCheck:
 	.4byte CNReqtaskCheck_typestr
-	.4byte lbl_80573640
+	.4byte CNReqtaskCheck_hierarchy
 
-.global CERandomizerSimple_RTTI
-CERandomizerSimple_RTTI:
+.global __RTTI__CERandomizerSimple
+__RTTI__CERandomizerSimple:
 	.4byte CERandomizerSimple_typestr
-	.4byte lbl_80573668
+	.4byte CERandomizerSimple_hierarchy
 
-.global lbl_806664D8
-lbl_806664D8:
+.global __RTTI__IRandomizer
+__RTTI__IRandomizer:
 	.4byte IRandomizer_typestr
 	.4byte 0
 
-.global CERandomizer_RTTI
-CERandomizer_RTTI:
+.global __RTTI__CERandomizer
+__RTTI__CERandomizer:
 	.4byte CERandomizer_typestr
-	.4byte lbl_80573690
+	.4byte CERandomizer_hierarchy
 
-.global CWorkSystemPack_RTTI
-CWorkSystemPack_RTTI:
+.global __RTTI__CWorkSystemPack
+__RTTI__CWorkSystemPack:
 	.4byte CWorkSystemPack_typestr
-	.4byte lbl_80573740
+	.4byte CWorkSystemPack_hierarchy
 
-.global reslist_CArcItem_RTTI
-reslist_CArcItem_RTTI:
+.global __RTTI__reslist_CArcItem
+__RTTI__reslist_CArcItem:
 	.4byte reslist_CArcItem_typestr
-	.4byte lbl_80573760
+	.4byte reslist_CArcItem_hierarchy
 
-.global _reslist_base_CArcItem_RTTI
-_reslist_base_CArcItem_RTTI:
+.global __RTTI___reslist_base_CArcItem
+__RTTI___reslist_base_CArcItem:
 	.4byte _reslist_base_CArcItem_typestr
 	.4byte 0
 
-.global reslist_CPackItem_RTTI
-reslist_CPackItem_RTTI:
+.global __RTTI__reslist_CPackItem
+__RTTI__reslist_CPackItem:
 	.4byte reslist_CPackItem_typestr
-	.4byte lbl_80573784
+	.4byte reslist_CPackItem_hierarchy
 
-.global _reslist_base_CPackItem_RTTI
-_reslist_base_CPackItem_RTTI:
+.global __RTTI___reslist_base_CPackItem
+__RTTI___reslist_base_CPackItem:
 	.4byte _reslist_base_CPackItem_typestr
 	.4byte 0
 
-.global CPackItem_RTTI
-CPackItem_RTTI:
+.global __RTTI__CPackItem
+__RTTI__CPackItem:
 	.4byte CPackItem_typestr
 	.4byte 0
 
-.global CArcItem_RTTI
-CArcItem_RTTI:
+.global __RTTI__CArcItem
+__RTTI__CArcItem:
 	.4byte CArcItem_typestr
 	.4byte 0
 
-.global CSchedule_RTTI
-CSchedule_RTTI:
+.global __RTTI__CSchedule
+__RTTI__CSchedule:
 	.4byte CSchedule_typestr
 	.4byte 0
 
-.global ScheduleList_RTTI
-ScheduleList_RTTI:
+.global __RTTI__ScheduleList
+__RTTI__ScheduleList:
 	.4byte ScheduleList_typestr
-	.4byte lbl_805738F0
+	.4byte ScheduleList_hierarchy
 
-.global reslist_CSchedule_RTTI
-reslist_CSchedule_RTTI:
+.global __RTTI__reslist_CSchedule
+__RTTI__reslist_CSchedule:
 	.4byte reslist_CSchedule_typestr
-	.4byte lbl_80573908
+	.4byte reslist_CSchedule_hierarchy
 
-.global _reslist_base_CSchedule_RTTI
-_reslist_base_CSchedule_RTTI:
+.global __RTTI___reslist_base_CSchedule
+__RTTI___reslist_base_CSchedule:
 	.4byte _reslist_base_CSchedule_typestr
 	.4byte 0
 
-.global lbl_80666540
-lbl_80666540:
+.global __RTTI__IScheduleContainer
+__RTTI__IScheduleContainer:
 	.4byte IScheduleContainer_typestr
 	.4byte 0
 
@@ -198,8 +198,8 @@ lbl_8066654C:
 	# ROM: 0x57212C
 	.4byte lbl_8066DAA8
 
-.global CMdlMaterial_RTTI
-CMdlMaterial_RTTI:
+.global __RTTI__CMdlMaterial
+__RTTI__CMdlMaterial:
 	.4byte CMdlMaterial_typestr
 	.4byte 0
 
@@ -251,8 +251,8 @@ lbl_80666574:
 	# ROM: 0x572154
 	.4byte lbl_805280A0
 
-.global CMdlMouth_RTTI
-CMdlMouth_RTTI:
+.global __RTTI__CMdlMouth
+__RTTI__CMdlMouth:
 	.4byte CMdlMouth_typestr
 	.4byte 0
 
@@ -280,8 +280,8 @@ lbl_8066658C:
 	# ROM: 0x57216C
 	.4byte lbl_8066DAF0
 
-.global CMdlAnmUV_RTTI
-CMdlAnmUV_RTTI:
+.global __RTTI__CMdlAnmUV
+__RTTI__CMdlAnmUV:
 	.4byte CMdlAnmUV_typestr
 	.4byte 0
 
@@ -304,8 +304,8 @@ lbl_806665A0:
 	.4byte lbl_8066DB00
 	.4byte 0
 
-.global CMdlAnmEye_RTTI
-CMdlAnmEye_RTTI:
+.global __RTTI__CMdlAnmEye
+__RTTI__CMdlAnmEye:
 	.4byte CMdlAnmEye_typestr
 	.4byte 0
 
@@ -316,8 +316,8 @@ lbl_806665B0:
 	.4byte 0x72656600
 	.4byte 0
 
-.global CMdlLook_RTTI
-CMdlLook_RTTI:
+.global __RTTI__CMdlLook
+__RTTI__CMdlLook:
 	.4byte CMdlLook_typestr
 	.4byte 0
 
@@ -333,8 +333,8 @@ lbl_806665C4:
 	# ROM: 0x5721A4
 	.4byte 0x72656600
 
-.global CMdlDynamics_RTTI
-CMdlDynamics_RTTI:
+.global __RTTI__CMdlDynamics
+__RTTI__CMdlDynamics:
 	.4byte CMdlDynamics_typestr
 	.4byte 0
 
@@ -381,12 +381,12 @@ lbl_806665EC:
 	# ROM: 0x5721CC
 	.4byte lbl_80528190
 
-.global CNReqtaskSaveBanner_RTTI
-CNReqtaskSaveBanner_RTTI:
+.global __RTTI__CNReqtaskSaveBanner
+__RTTI__CNReqtaskSaveBanner:
 	.4byte CNReqtaskSaveBanner_typestr
-	.4byte lbl_80573BB0
+	.4byte CNReqtaskSaveBanner_hierarchy
 
-.global CNBanner_RTTI
-CNBanner_RTTI:
+.global __RTTI__CNBanner
+__RTTI__CNBanner:
 	.4byte CNBanner_typestr
-	.4byte lbl_80573C48
+	.4byte CNBanner_hierarchy

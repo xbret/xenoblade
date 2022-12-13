@@ -5036,8 +5036,8 @@ lbl_804FD3AC:
 	.asciz "materia1"
 	.balign 4
 
-.global materia1Per_typestr
-materia1Per_typestr:
+.global materia1PerString
+materia1PerString:
 	.asciz "materia1Per"
 
 .global cf_ItemPurifyKessyouImpl_typestr

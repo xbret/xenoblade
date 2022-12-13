@@ -6102,7 +6102,7 @@ lbl_8046FC50:
 /* 8046FC7C 0043923C  81 1B 00 5C */	lwz r8, 0x5c(r27)
 /* 8046FC80 00439240  38 80 00 00 */	li r4, 0
 /* 8046FC84 00439244  80 65 00 08 */	lwz r3, 8(r5)
-/* 8046FC88 00439248  38 AD 8C 38 */	addi r5, r13, CScnItemModelNw4r_RTTI@sda21 #CScnItemModelNw4r
+/* 8046FC88 00439248  38 AD 8C 38 */	addi r5, r13, __RTTI__CScnItemModelNw4r@sda21 #CScnItemModelNw4r
 /* 8046FC8C 0043924C  80 08 00 70 */	lwz r0, 0x70(r8)
 /* 8046FC90 00439250  38 CD 8C 50 */	addi r6, r13, lbl_80664DD0@sda21 #CScnItem
 /* 8046FC94 00439254  38 E0 00 00 */	li r7, 0

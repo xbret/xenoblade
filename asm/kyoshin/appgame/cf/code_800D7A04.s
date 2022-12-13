@@ -2042,8 +2042,8 @@ func_800D963C:
 /* 800D9660 000A2C20  41 82 00 38 */	beq lbl_800D9698
 /* 800D9664 000A2C24  7C 83 23 78 */	mr r3, r4
 /* 800D9668 000A2C28  38 80 00 00 */	li r4, 0
-/* 800D966C 000A2C2C  38 AD 80 F0 */	addi r5, r13, cf_CfObjectEff_RTTI@sda21
-/* 800D9670 000A2C30  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
+/* 800D966C 000A2C2C  38 AD 80 F0 */	addi r5, r13, __RTTI__cf_CfObjectEff@sda21
+/* 800D9670 000A2C30  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
 /* 800D9674 000A2C34  38 E0 00 00 */	li r7, 0
 /* 800D9678 000A2C38  48 1E 07 0D */	bl __dynamic_cast
 /* 800D967C 000A2C3C  81 9E 00 00 */	lwz r12, 0(r30)
@@ -21114,8 +21114,8 @@ lbl_800EA4E8:
 /* 800EA4F0 000B3AB0  7F A4 EB 78 */	mr r4, r29
 /* 800EA4F4 000B3AB4  48 00 C9 B9 */	bl func_800F6EAC
 /* 800EA4F8 000B3AB8  38 80 00 00 */	li r4, 0
-/* 800EA4FC 000B3ABC  38 AD 80 68 */	addi r5, r13, cf_CfObjectModel_RTTI@sda21
-/* 800EA500 000B3AC0  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
+/* 800EA4FC 000B3ABC  38 AD 80 68 */	addi r5, r13, __RTTI__cf_CfObjectModel@sda21
+/* 800EA500 000B3AC0  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
 /* 800EA504 000B3AC4  38 E0 00 00 */	li r7, 0
 /* 800EA508 000B3AC8  48 1C F8 7D */	bl __dynamic_cast
 /* 800EA50C 000B3ACC  81 83 00 00 */	lwz r12, 0(r3)
@@ -21152,8 +21152,8 @@ lbl_800EA574:
 /* 800EA57C 000B3B3C  7F A4 EB 78 */	mr r4, r29
 /* 800EA580 000B3B40  48 00 C9 2D */	bl func_800F6EAC
 /* 800EA584 000B3B44  38 80 00 00 */	li r4, 0
-/* 800EA588 000B3B48  38 AD 80 68 */	addi r5, r13, cf_CfObjectModel_RTTI@sda21
-/* 800EA58C 000B3B4C  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
+/* 800EA588 000B3B48  38 AD 80 68 */	addi r5, r13, __RTTI__cf_CfObjectModel@sda21
+/* 800EA58C 000B3B4C  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
 /* 800EA590 000B3B50  38 E0 00 00 */	li r7, 0
 /* 800EA594 000B3B54  48 1C F7 F1 */	bl __dynamic_cast
 /* 800EA598 000B3B58  81 83 00 00 */	lwz r12, 0(r3)
@@ -21170,8 +21170,8 @@ lbl_800EA5B8:
 /* 800EA5C0 000B3B80  7F 64 DB 78 */	mr r4, r27
 /* 800EA5C4 000B3B84  48 00 C8 E9 */	bl func_800F6EAC
 /* 800EA5C8 000B3B88  38 80 00 00 */	li r4, 0
-/* 800EA5CC 000B3B8C  38 AD 80 F0 */	addi r5, r13, cf_CfObjectEff_RTTI@sda21
-/* 800EA5D0 000B3B90  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
+/* 800EA5CC 000B3B8C  38 AD 80 F0 */	addi r5, r13, __RTTI__cf_CfObjectEff@sda21
+/* 800EA5D0 000B3B90  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
 /* 800EA5D4 000B3B94  38 E0 00 00 */	li r7, 0
 /* 800EA5D8 000B3B98  48 1C F7 AD */	bl __dynamic_cast
 /* 800EA5DC 000B3B9C  80 03 00 9C */	lwz r0, 0x9c(r3)
@@ -21243,8 +21243,8 @@ lbl_800EA6BC:
 /* 800EA6C4 000B3C84  7F 44 D3 78 */	mr r4, r26
 /* 800EA6C8 000B3C88  48 00 C7 E5 */	bl func_800F6EAC
 /* 800EA6CC 000B3C8C  38 80 00 00 */	li r4, 0
-/* 800EA6D0 000B3C90  38 AD 80 F0 */	addi r5, r13, cf_CfObjectEff_RTTI@sda21
-/* 800EA6D4 000B3C94  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
+/* 800EA6D0 000B3C90  38 AD 80 F0 */	addi r5, r13, __RTTI__cf_CfObjectEff@sda21
+/* 800EA6D4 000B3C94  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
 /* 800EA6D8 000B3C98  38 E0 00 00 */	li r7, 0
 /* 800EA6DC 000B3C9C  48 1C F6 A9 */	bl __dynamic_cast
 /* 800EA6E0 000B3CA0  A0 03 00 8C */	lhz r0, 0x8c(r3)
@@ -21300,8 +21300,8 @@ lbl_800EA780:
 /* 800EA788 000B3D48  7F 44 D3 78 */	mr r4, r26
 /* 800EA78C 000B3D4C  48 00 C7 21 */	bl func_800F6EAC
 /* 800EA790 000B3D50  38 80 00 00 */	li r4, 0
-/* 800EA794 000B3D54  38 AD 80 F0 */	addi r5, r13, cf_CfObjectEff_RTTI@sda21
-/* 800EA798 000B3D58  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
+/* 800EA794 000B3D54  38 AD 80 F0 */	addi r5, r13, __RTTI__cf_CfObjectEff@sda21
+/* 800EA798 000B3D58  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
 /* 800EA79C 000B3D5C  38 E0 00 00 */	li r7, 0
 /* 800EA7A0 000B3D60  48 1C F5 E5 */	bl __dynamic_cast
 /* 800EA7A4 000B3D64  A0 83 00 8C */	lhz r4, 0x8c(r3)
@@ -21375,8 +21375,8 @@ lbl_800EA890:
 /* 800EA898 000B3E58  7F 84 E3 78 */	mr r4, r28
 /* 800EA89C 000B3E5C  48 00 C6 11 */	bl func_800F6EAC
 /* 800EA8A0 000B3E60  38 80 00 00 */	li r4, 0
-/* 800EA8A4 000B3E64  38 AD 80 F0 */	addi r5, r13, cf_CfObjectEff_RTTI@sda21
-/* 800EA8A8 000B3E68  38 CD 80 70 */	addi r6, r13, cf_CfObject_RTTI@sda21
+/* 800EA8A4 000B3E64  38 AD 80 F0 */	addi r5, r13, __RTTI__cf_CfObjectEff@sda21
+/* 800EA8A8 000B3E68  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
 /* 800EA8AC 000B3E6C  38 E0 00 00 */	li r7, 0
 /* 800EA8B0 000B3E70  48 1C F4 D5 */	bl __dynamic_cast
 /* 800EA8B4 000B3E74  2C 1A 00 00 */	cmpwi r26, 0

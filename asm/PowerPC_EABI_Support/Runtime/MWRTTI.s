@@ -214,14 +214,14 @@ what__Q23std8bad_castCFv:
 .global lbl_8053F040
 lbl_8053F040:
 	# ROM: 0x53B140
-	.4byte lbl_80665868
+	.4byte __RTTI__std_bad_cast
 	.4byte 0
 	.4byte __dt__Q23std8bad_castFv
 	.4byte what__Q23std8bad_castCFv
 
-.global lbl_8053F050
-lbl_8053F050:
-	.4byte lbl_80665858
+.global std_bad_cast_hierarchy
+std_bad_cast_hierarchy:
+	.4byte __RTTI__std_exception
 	.4byte 0
 	.4byte 0
 
@@ -232,8 +232,8 @@ lbl_8053F05C:
 	.balign 4
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
-.global lbl_80665858
-lbl_80665858:
+.global __RTTI__std_exception
+__RTTI__std_exception:
 	.4byte std_exception_typestr
 	.4byte 0
 
@@ -243,10 +243,10 @@ lbl_80665860:
 	.4byte std$7dthandler
 	.4byte 0
 
-.global lbl_80665868
-lbl_80665868:
+.global __RTTI__std_bad_cast
+__RTTI__std_bad_cast:
 	.4byte std_bad_cast_typestr
-	.4byte lbl_8053F050
+	.4byte std_bad_cast_hierarchy
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global std_exception_typestr
