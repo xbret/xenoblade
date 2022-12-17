@@ -7968,6 +7968,7 @@ _unnamed_CTagProcessor_cpp_CTagCodeTrust_hierarchy:
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
 	.4byte 0
 	.4byte 0
+
 .global lbl_8053108C
 lbl_8053108C:
 	.4byte lbl_8012AC70
@@ -12248,12 +12249,10 @@ __vt__cf_CfObjectActor:
 	.4byte func_801715A8
 	.4byte func_801716B8
 	.4byte func_800AFBA0
-
 	.4byte __RTTI__cf_CfObjectActor
 	.4byte 0xFFFFCC80
 	.4byte func_8014AA18
 	.4byte func_8014AB28
-	
 	.4byte __RTTI__cf_CfObjectActor
 	.4byte 0xFFFFC164
 	.4byte func_8003DC64
@@ -12407,7 +12406,7 @@ __vt__cf_CfObjectActor:
 
 .global CScnMaruShadowNw4r_hierarchy
 CScnMaruShadowNw4r_hierarchy:
-	.4byte lbl_80664CF8
+	.4byte __RTTI__IScnPolyShadow
 	.4byte 0
 	.4byte 0
 
@@ -13244,6 +13243,8 @@ cf_CREvtModelObj_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
+
 	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
 	.balign 4
 	.asciz "g3d_resfile_ac.h"
@@ -13730,7 +13731,7 @@ lbl_80535F00:
 
 .global CScnItemModelNw4r_hierarchy
 CScnItemModelNw4r_hierarchy:
-	.4byte lbl_80664DD0
+	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte __RTTI__CScnItemModel
 	.4byte 0
@@ -13775,7 +13776,7 @@ cf_CfResPcImpl_hierarchy:
 
 .global CScnItemModel_hierarchy
 CScnItemModel_hierarchy:
-	.4byte lbl_80664DD0
+	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte 0
 
@@ -14221,6 +14222,8 @@ cf_CtrlMovePC_hierarchy:
 	.4byte __RTTI__cf_CtrlMoveBase
 	.4byte 0
 	.4byte 0
+
+
 	.asciz "FSqrt: Input is out of the domain."
 	.balign 4
 	.asciz "arithmetic.h"
@@ -15206,6 +15209,8 @@ cf_CSuddenCommu_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
+
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -15373,6 +15378,7 @@ CMenuItemExchange_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+	
 .global lbl_805373E8
 lbl_805373E8:
 	.asciz "NW4R:Pointer must not be NULL (p)"
@@ -19284,6 +19290,7 @@ CMenuMapSelect_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
 .global lbl_8053A550
 lbl_8053A550:
 	.4byte lbl_80243210
@@ -19718,6 +19725,7 @@ CMenuCollepedia_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+	
 .global lbl_8053AAC8
 lbl_8053AAC8:
 	.4byte lbl_80253BD0
@@ -25557,7 +25565,7 @@ lbl_8053EF98:
 __vt__CBattery:
 	.4byte __RTTI__CBattery
 	.4byte 0
-	.4byte func_802B9250
+	.4byte __dt__CBattery
 	.4byte func_80039E28
 	.4byte func_802B94D0
 	.4byte func_80039E18

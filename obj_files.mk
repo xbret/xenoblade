@@ -1,13 +1,15 @@
 GAME_O_FILES :=\
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CGame.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80039D3C.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80039EEC.o \
-	$(BUILD_DIR)/src/kyoshin/appgame/cf/main.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8003A05C.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8003AA00.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80044168.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800539EC.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80059EB8.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CGame.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/IWorkEvent.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CGameRestart.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/main_1.o \
+	$(BUILD_DIR)/src/kyoshin/appgame/main.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/main_2.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8003A53C.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8003AA00.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_80044168.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_800539EC.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_80059EB8.o \
 	$(BUILD_DIR)/asm/data_1.o \
 	$(BUILD_DIR)/asm/rodata_1.o \
 	$(BUILD_DIR)/asm/sdata_1.o \
@@ -15,95 +17,100 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/bss_1.o \
 	$(BUILD_DIR)/asm/sbss_1.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfTaskMain.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8006A82C.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80074F4C.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8007C0F8.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8008753C.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8008A104.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800AA008.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800AB3D0.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800B9C14.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800C2C90.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800D7A04.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800FEB84.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8010EA64.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801135E0.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8011C44C.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8012BAD4.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8012DF90.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801414CC.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8014255C.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80155660.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8015BAA8.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8016ED50.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80189DE8.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801A1864.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801A30D8.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801AFE1C.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801BA14C.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801BCA38.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801C189C.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801C4B60.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVisionItem.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CArtsBookItem.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CQuestItem.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CItemBoxGrid.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801D1FC0.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801EADC0.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801F3410.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80201A44.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80205A7C.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8020AB80.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8021BC70.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80221E38.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802293F0.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8023BCF0.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802405F4.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80250D24.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8025D470.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802744D4.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8028DCAC.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80293140.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80296898.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80296B44.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8029E7E4.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802A07F4.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802AB3B8.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802AEB1C.o \
-	$(BUILD_DIR)/src/kyoshin/appgame/cf/code_802AEB74.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802AEBC4.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CUIErrMesWin.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CMenuTitle.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTitleLogo.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTitleMenu.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTitle.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_ArtsAttack.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_ArtsSet.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_CkKizuna.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_CloseItemMenu.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_CloseSysMenu.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_EndEvent.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_EnemyCount.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_EnemyEnable.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_EtherMake.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_Exchange.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_GameOver.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_ItemCole.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_Kizuna.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_LandMark.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_LearnArts.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_ClosePartyMenu.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_OpenPartyMenu.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_Pg.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_CloseQuestMenu.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_ShopBuy.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_ShopSel.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_Sp.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_Talk.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelp_Target.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_ORDER.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CBattery.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8006A82C.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_80074F4C.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8007C0F8.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8008753C.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8008A104.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_800AA008.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCollCircleImpl.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCollSphereImpl.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCollAABBImpl.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCollCylinderImpl.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCollCapsuleImpl.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_800AB3D0.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_800B9C14.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_800C2C90.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_800D7A04.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_800FEB84.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8010EA64.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801135E0.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8011C44C.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8012BAD4.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8012DF90.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801414CC.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8014255C.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_80155660.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8015BAA8.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8016ED50.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_80189DE8.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801A1864.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801A30D8.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801AFE1C.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801BA14C.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801BCA38.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801C189C.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801C4B60.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CVisionItem.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CArtsBookItem.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CQuestItem.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CItemBoxGrid.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801D1FC0.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801EADC0.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801F3410.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_80201A44.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_80205A7C.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8020AB80.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8021BC70.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_80221E38.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_802293F0.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8023BCF0.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_802405F4.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_80250D24.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8025D470.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_802744D4.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8028DCAC.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_80293140.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_80296898.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_80296B44.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8029E7E4.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_802A07F4.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_802AB3B8.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_802AEB1C.o \
+	$(BUILD_DIR)/src/kyoshin/appgame/code_802AEB74.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_802AEBC4.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CUIErrMesWin.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CMenuTitle.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CTitleLogo.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CTitleMenu.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CTitle.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_ArtsAttack.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_ArtsSet.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_CkKizuna.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_CloseItemMenu.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_CloseSysMenu.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_EndEvent.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_EnemyCount.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_EnemyEnable.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_EtherMake.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_Exchange.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_GameOver.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_ItemCole.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_Kizuna.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_LandMark.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_LearnArts.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_ClosePartyMenu.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_OpenPartyMenu.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_Pg.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_CloseQuestMenu.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_ShopBuy.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_ShopSel.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_Sp.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_Talk.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CHelp_Target.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CVS_THREAD_ORDER.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CBattery.o \
 
 
 MW_O_FILES :=\
@@ -775,38 +782,120 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_80436E84.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80436F20.o \
 	$(BUILD_DIR)/asm/monolithlib/code_8043738C.o \
-	$(BUILD_DIR)/asm/monolithlib/code_8043FBC4.o \
-	$(BUILD_DIR)/asm/monolithlib/code_80444418.o \
-	$(BUILD_DIR)/asm/monolithlib/code_80446538.o \
-	$(BUILD_DIR)/asm/monolithlib/code_80448F30.o \
-	$(BUILD_DIR)/asm/monolithlib/code_8044DB24.o \
+	$(BUILD_DIR)/asm/monolithlib/CWorkThread.o \
+	$(BUILD_DIR)/asm/monolithlib/CProc.o \
+	$(BUILD_DIR)/asm/monolithlib/CProcRoot.o \
+	$(BUILD_DIR)/asm/monolithlib/CRsrcData.o \
+	$(BUILD_DIR)/asm/monolithlib/CScriptCode.o \
+	$(BUILD_DIR)/asm/monolithlib/CToken.o \
+	$(BUILD_DIR)/asm/monolithlib/CRootProc.o \
+	$(BUILD_DIR)/asm/monolithlib/CView.o \
+	$(BUILD_DIR)/asm/monolithlib/CViewFrame.o \
+	$(BUILD_DIR)/asm/monolithlib/CViewRoot.o \
+	$(BUILD_DIR)/asm/monolithlib/CWorkControl.o \
+	$(BUILD_DIR)/asm/monolithlib/CWorkFlowSetup.o \
+	$(BUILD_DIR)/asm/monolithlib/CWorkRootThread.o \
+	$(BUILD_DIR)/asm/monolithlib/CWorkSystem.o \
+	$(BUILD_DIR)/asm/monolithlib/CWorkSystemMem.o \
+	$(BUILD_DIR)/asm/monolithlib/CProcess.o \
+	$(BUILD_DIR)/asm/monolithlib/CDoubleListNode.o \
+	$(BUILD_DIR)/asm/monolithlib/CChildListNode.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceRemotePad.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceBase.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceSC.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceVI.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceVICb.o \
+	$(BUILD_DIR)/asm/monolithlib/CFontLayer.o \
+	$(BUILD_DIR)/asm/monolithlib/CGXCache.o \
+	$(BUILD_DIR)/asm/monolithlib/IStateCache.o \
+	$(BUILD_DIR)/asm/monolithlib/CDevice.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceClock.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceFile.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceFileCri.o \
 	$(BUILD_DIR)/src/monolithlib/code_80450B14.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80450B2C.o \
-	$(BUILD_DIR)/asm/monolithlib/code_80450B44.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceFileDvd.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceFileJob.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceFileJobReadDvd.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceFont.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceFontInfoExt.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceFontInfoRom.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceFontLayer.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceFontLoader.o \
+	$(BUILD_DIR)/asm/monolithlib/CDeviceGX.o \
 	$(BUILD_DIR)/asm/monolithlib/CDesktop.o \
-	$(BUILD_DIR)/asm/monolithlib/code_80455FD4.o \
+	$(BUILD_DIR)/asm/monolithlib/CException.o \
+	$(BUILD_DIR)/asm/monolithlib/CLib.o \
+	$(BUILD_DIR)/asm/monolithlib/CLibCri.o \
+	$(BUILD_DIR)/asm/monolithlib/CLibCriMoviePlay.o \
+	$(BUILD_DIR)/asm/monolithlib/CLibCriStreamingPlay.o \
+	$(BUILD_DIR)/asm/monolithlib/CLibG3d.o \
+	$(BUILD_DIR)/asm/monolithlib/CLibHbm.o \
+	$(BUILD_DIR)/asm/monolithlib/CLibHbmControl.o \
+	$(BUILD_DIR)/asm/monolithlib/CLibLayout.o \
+	$(BUILD_DIR)/asm/monolithlib/CLibStaticData.o \
+	$(BUILD_DIR)/asm/monolithlib/CLibVM.o \
+	$(BUILD_DIR)/asm/monolithlib/CTaskLOD.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804645CC.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80468434.o \
 	$(BUILD_DIR)/asm/monolithlib/code_8046A530.o \
-	$(BUILD_DIR)/asm/monolithlib/code_80474F80.o \
+	$(BUILD_DIR)/asm/monolithlib/LOD/LODMemMan.o \
+	$(BUILD_DIR)/asm/monolithlib/mpfsys/MPFDrawDisplayList.o \
+	$(BUILD_DIR)/asm/monolithlib/mpfsys/MPFDrawMdlNoColor.o \
+	$(BUILD_DIR)/asm/monolithlib/mpfsys/MPFDrawMdlColor.o \
+	$(BUILD_DIR)/asm/monolithlib/mpfsys/MPFDrawBillboard.o \
+	$(BUILD_DIR)/asm/monolithlib/mpfsys/MPFDrawCross.o \
+	$(BUILD_DIR)/asm/monolithlib/mpfsys/MPFDrawBillLayTex.o \
 	$(BUILD_DIR)/asm/monolithlib/code_8047CA88.o \
 	$(BUILD_DIR)/asm/monolithlib/code_8047D2AC.o \
-	$(BUILD_DIR)/asm/monolithlib/code_80481E6C.o \
-	$(BUILD_DIR)/asm/monolithlib/code_8048EAA8.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnItemCameraNw4r.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnItemId.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnItemLight.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnItemLightNw4r.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnItemModel.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnItemModelNw4r.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnItemPool.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnLightMan.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnMaruShadowNw4r.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnMem.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnRoot.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnRootNw4r.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnTexWorkMan.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnVirtualLight.o \
 	$(BUILD_DIR)/asm/monolithlib/code_8049431C.o \
+	$(BUILD_DIR)/asm/monolithlib/CVirtualLightAmb.o \
+	$(BUILD_DIR)/asm/monolithlib/CVirtualLightDir.o \
+	$(BUILD_DIR)/asm/monolithlib/CVirtualLightObj.o \
+	$(BUILD_DIR)/asm/monolithlib/CScn.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnBlend.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnCameraMan.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnEffectActNw4r.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnFadeMan.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnFilter.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnFilterMan.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnFogMan.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnFrame.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnIdMan.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnItemAnim.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnItemCamera.o \
 	$(BUILD_DIR)/asm/monolithlib/code_8049FCAC.o \
-	$(BUILD_DIR)/asm/monolithlib/code_804B2578.o \
+	$(BUILD_DIR)/asm/monolithlib/CColiProc.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804B2FF0.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804B59C8.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804BAE10.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804BC9EC.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804BD8E8.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804BF59C.o \
+	$(BUILD_DIR)/asm/monolithlib/CLight.o \
+	$(BUILD_DIR)/asm/monolithlib/CScnEnvLgtCtrl.o \
 	$(BUILD_DIR)/src/monolithlib/Unknown1.o \
 	$(BUILD_DIR)/asm/sdata_4.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804C8684.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804C8718.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804CC2B8.o \
+	$(BUILD_DIR)/asm/monolithlib/CETrail.o \
+	$(BUILD_DIR)/asm/monolithlib/CWorkSystemCache.o \
+	$(BUILD_DIR)/asm/monolithlib/CNand.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804DA4CC.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804DAF70.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804DB0F0.o \

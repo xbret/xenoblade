@@ -2899,7 +2899,7 @@ func_804B57F4:
 /* 804B582C 0047EDEC  2C 03 00 00 */	cmpwi r3, 0
 /* 804B5830 0047EDF0  7C 7F 1B 78 */	mr r31, r3
 /* 804B5834 0047EDF4  41 82 00 94 */	beq lbl_804B58C8
-/* 804B5838 0047EDF8  4B F8 F1 E1 */	bl func_80444A18
+/* 804B5838 0047EDF8  4B F8 F1 E1 */	bl __ct__8CProcessFv
 /* 804B583C 0047EDFC  3C 60 80 57 */	lis r3, __vt__CTTask_CTaskColiManager@ha
 /* 804B5840 0047EE00  3C C0 80 51 */	lis r6, lbl_8050CE10@ha
 /* 804B5844 0047EE04  38 63 2C F8 */	addi r3, r3, __vt__CTTask_CTaskColiManager@l

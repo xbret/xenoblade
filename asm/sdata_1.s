@@ -1760,9 +1760,8 @@ __RTTI__CScnMaruShadowNw4r:
 	.4byte CScnMaruShadowNw4r_hierarchy
 
 
-.global lbl_80664CF8
-lbl_80664CF8:
-	# ROM: 0x5708D8
+.global __RTTI__IScnPolyShadow
+__RTTI__IScnPolyShadow:
 	.4byte IScnPolyShadow_typestr
 	.4byte 0
 
@@ -1939,9 +1938,8 @@ __RTTI__CScnItemModel:
 	.4byte CScnItemModel_hierarchy
 
 
-.global lbl_80664DD0
-lbl_80664DD0:
-	# ROM: 0x5709B0
+.global __RTTI__CScnItem
+__RTTI__CScnItem:
 	.4byte CScnItem_typestr
 	.4byte 0
 

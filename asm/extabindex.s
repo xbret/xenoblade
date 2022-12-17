@@ -41,7 +41,7 @@ lbl_80021020:
 	.4byte func_800399E0
 	.4byte 0x00000050
 	.4byte lbl_80006784
-	.4byte func_80039A30
+	.4byte GameMain
 	.4byte 0x00000094
 	.4byte lbl_8000678C
 	.4byte func_80039AC4
@@ -19082,10 +19082,10 @@ lbl_80021020:
 	.4byte func_802B9064
 	.4byte 0x00000184
 	.4byte lbl_8001BE8C
-	.4byte func_802B91E8
+	.4byte __ct__CBattery
 	.4byte 0x00000068
 	.4byte lbl_8001BE94
-	.4byte func_802B9250
+	.4byte __dt__CBattery
 	.4byte 0x00000054
 	.4byte lbl_8001BEB0
 	.4byte func_802B92A4
@@ -19751,7 +19751,7 @@ lbl_80021020:
 	.4byte func_80444980
 	.4byte 0x00000098
 	.4byte lbl_8001C894
-	.4byte func_80444A18
+	.4byte __ct__8CProcessFv
 	.4byte 0x00000060
 	.4byte lbl_8001C89C
 	.4byte func_80444A78
@@ -19760,7 +19760,7 @@ lbl_80021020:
 	.4byte func_80444AB8
 	.4byte 0x00000040
 	.4byte lbl_8001C8C0
-	.4byte func_80444AF8
+	.4byte __dt__15CDoubleListNodeFv
 	.4byte 0x00000040
 	.4byte lbl_8001C8C8
 	.4byte func_80444B38
@@ -20423,7 +20423,7 @@ lbl_80021020:
 	.4byte func_804559CC
 	.4byte 0x00000074
 	.4byte lbl_8001D2E4
-	.4byte func_80455A40
+	.4byte __dt__CDesktop
 	.4byte 0x00000058
 	.4byte lbl_8001D300
 	.4byte func_80455AD8

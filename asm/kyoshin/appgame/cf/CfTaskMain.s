@@ -97,7 +97,7 @@ func_800697E8:
 /* 80069818 00032DD8  2C 03 00 00 */	cmpwi r3, 0
 /* 8006981C 00032DDC  7C 7F 1B 78 */	mr r31, r3
 /* 80069820 00032DE0  41 82 00 64 */	beq lbl_80069884
-/* 80069824 00032DE4  48 3D B1 F5 */	bl func_80444A18
+/* 80069824 00032DE4  48 3D B1 F5 */	bl __ct__8CProcessFv
 /* 80069828 00032DE8  3C 60 80 53 */	lis r3, __vt__CTTask_cf_CfTaskMain@ha
 /* 8006982C 00032DEC  3C C0 80 51 */	lis r6, lbl_8050CE10@ha
 /* 80069830 00032DF0  38 63 A7 28 */	addi r3, r3, __vt__CTTask_cf_CfTaskMain@l

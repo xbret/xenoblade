@@ -37103,8 +37103,8 @@ __vt__TChildListHeader_CProcess:
 __vt__CDoubleListNode:
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
-	.4byte func_80444AF8
-	.4byte func_804465A0
+	.4byte __dt__15CDoubleListNodeFv
+	.4byte Clear__15CDoubleListNodeFv
 
 
 .global __vt__CChildListNode
@@ -38379,7 +38379,7 @@ _unnamed_CDesktop_cpp_CDesktopBackGround_hierarchy:
 __vt__CDesktop:
 	.4byte __RTTI__CDesktop
 	.4byte 0
-	.4byte func_80455A40
+	.4byte __dt__CDesktop
 	.4byte func_80039E28
 	.4byte func_80455F10
 	.4byte func_80455F6C
@@ -38861,6 +38861,7 @@ CLibHbm_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
 .global lbl_80570AA8
 lbl_80570AA8:
 	.4byte lbl_8045E7C4
@@ -39615,7 +39616,7 @@ __vt__CScnItemCameraNw4r:
 
 .global CScnItemCameraNw4r_hierarchy
 CScnItemCameraNw4r_hierarchy:
-	.4byte lbl_80664DD0
+	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte __RTTI__CScnItemCamera
 	.4byte 0
@@ -39623,7 +39624,7 @@ CScnItemCameraNw4r_hierarchy:
 
 .global CScnItemCamera_hierarchy
 CScnItemCamera_hierarchy:
-	.4byte lbl_80664DD0
+	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte 0
 
@@ -39641,7 +39642,7 @@ __vt__CScnItemId:
 
 .global CScnItemId_hierarchy
 CScnItemId_hierarchy:
-	.4byte lbl_80664DD0
+	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -39660,7 +39661,7 @@ __vt__CScnItemLight:
 
 .global CScnItemLight_hierarchy
 CScnItemLight_hierarchy:
-	.4byte lbl_80664DD0
+	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -39679,7 +39680,7 @@ __vt__CScnItemLightNw4r:
 
 .global CScnItemLightNw4r_hierarchy
 CScnItemLightNw4r_hierarchy:
-	.4byte lbl_80664DD0
+	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte __RTTI__CScnItemLight
 	.4byte 0
@@ -39838,12 +39839,12 @@ __vt__CScnItemModelNw4r:
 	.4byte func_80489584
 	.4byte func_80489924
 	.4byte func_804899F4
-	.4byte lbl_80664DD0
+	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte __RTTI__CScnItemModel
 	.4byte 0
 	.4byte 0
-	.4byte lbl_80664DD0
+	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -40725,7 +40726,7 @@ __vt__CScnItemAnim:
 
 .global CScnItemAnim_hierarchy
 CScnItemAnim_hierarchy:
-	.4byte lbl_80664DD0
+	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte 0
 	.4byte 0
