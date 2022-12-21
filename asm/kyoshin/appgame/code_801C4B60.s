@@ -2,6 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#TODO: redo/check splits for CItemBoxGrid, CArtsBookItem, CVisionItem, and CQuestItem
+
 .global func_801C4B60
 func_801C4B60:
 /* 801C4B60 0018E120  B0 E3 00 06 */	sth r7, 6(r3)
@@ -30,6 +32,7 @@ lbl_801C4B9C:
 /* 801C4BAC 0018E16C  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C4BB0 0018E170  4E 80 00 20 */	blr 
 
+#should be in CQuestItem.s
 .global func_801C4BB4
 func_801C4BB4:
 /* 801C4BB4 0018E174  94 21 FF D0 */	stwu r1, -0x30(r1)
