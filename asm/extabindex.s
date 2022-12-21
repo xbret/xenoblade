@@ -458,7 +458,7 @@ lbl_80021020:
 	.4byte func_80040144
 	.4byte 0x00000198
 	.4byte lbl_80006BDC
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x00000040
 	.4byte lbl_80006BE4
 	.4byte func_8004031C
@@ -10571,10 +10571,10 @@ lbl_80021020:
 	.4byte func_801CA110
 	.4byte 0x00000088
 	.4byte lbl_80010B68
-	.4byte func_801CA198
+	.4byte __ct__CItemBoxGrid
 	.4byte 0x000007CC
 	.4byte lbl_80010B70
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte 0x00000108
 	.4byte lbl_80010CC4
 	.4byte func_801CAA6C

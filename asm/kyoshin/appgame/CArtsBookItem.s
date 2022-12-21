@@ -2,6 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+
+
 .global func_801C5380
 func_801C5380:
 /* 801C5380 0018E940  3C 80 80 53 */	lis r4, __vt__CArtsBookItem@ha

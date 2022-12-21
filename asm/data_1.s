@@ -16157,7 +16157,7 @@ lbl_80537EBC:
 __vt__CItemBoxGrid:
 	.4byte __RTTI__CItemBoxGrid
 	.4byte 0
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte func_80039E28
 	.4byte func_801D13F0
 	.4byte func_80039E18

@@ -701,3 +701,178 @@ lbl_80044AA4:
 /* 80044AAC 0000E06C  7C 08 03 A6 */	mtlr r0
 /* 80044AB0 0000E070  38 21 00 10 */	addi r1, r1, 0x10
 /* 80044AB4 0000E074  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_80529310
+lbl_80529310:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80044424
+
+.global lbl_8052931C
+lbl_8052931C:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80044480
+
+.global lbl_80529328
+lbl_80529328:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800444DC
+
+.global lbl_80529334
+lbl_80529334:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80044444
+
+.global lbl_80529340
+lbl_80529340:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8004451C
+
+.global lbl_8052934C
+lbl_8052934C:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800444A0
+
+.global lbl_80529358
+lbl_80529358:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8004451C
+
+.global lbl_80529364
+lbl_80529364:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800444FC
+
+.global lbl_80529370
+lbl_80529370:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8004451C
+
+.global lbl_8052937C
+lbl_8052937C:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800447B4
+
+.global lbl_80529388
+lbl_80529388:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800448DC
+
+.global lbl_80529394
+lbl_80529394:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80044934
+
+.global lbl_805293A0
+lbl_805293A0:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8004499C
+
+
+.global __vt__cf_CTaskGameCf
+__vt__cf_CTaskGameCf:
+	.4byte __RTTI__cf_CTaskGameCf
+	.4byte 0
+	.4byte func_80044280
+	.4byte func_80446734
+	.4byte func_800443DC
+	.4byte func_800443E4
+	.4byte func_80044A28
+	.4byte func_80044420
+	.4byte func_80043F20
+
+.global cf_CTaskGameCf_hierarchy
+cf_CTaskGameCf_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_cf_CTaskGameCf
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_cf_CTaskGameCf
+__vt__CTTask_cf_CTaskGameCf:
+	.4byte __RTTI__CTTask_cf_CTaskGameCf
+	.4byte 0
+	.4byte func_80044230
+	.4byte func_80446734
+	.4byte 0
+	.4byte 0
+	.4byte func_80044A28
+	.4byte func_80044A70
+	.4byte func_80043F20
+
+.global CTTask_cf_CTaskGameCf_hierarchy
+CTTask_cf_CTaskGameCf_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CTaskGameCf_typestr
+cf_CTaskGameCf_typestr:
+	.asciz "cf::CTaskGameCf"
+
+.global CTTask_cf_CTaskGameCf_typestr
+CTTask_cf_CTaskGameCf_typestr:
+	.asciz "CTTask<cf::CTaskGameCf>"
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CTaskGameCf
+__RTTI__cf_CTaskGameCf:
+	.4byte cf_CTaskGameCf_typestr
+	.4byte cf_CTaskGameCf_hierarchy
+
+.global __RTTI__CTTask_cf_CTaskGameCf
+__RTTI__CTTask_cf_CTaskGameCf:
+	.4byte CTTask_cf_CTaskGameCf_typestr
+	.4byte CTTask_cf_CTaskGameCf_hierarchy
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666638
+lbl_80666638:
+	.skip 0x8
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80668620
+lbl_80668620:
+	# ROM: 0x572480
+	.4byte 0
+
+
+.global lbl_80668624
+lbl_80668624:
+	# ROM: 0x572484
+	.float 1.0

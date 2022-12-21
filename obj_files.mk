@@ -8,13 +8,15 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGame.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskGameCf.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGameEff.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CActParamAnim.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CActParamData.o \
+	$(BUILD_DIR)/asm/kyoshin/action/CActParamAnim.o \
+	$(BUILD_DIR)/asm/kyoshin/action/CActParamData.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CMcaFile.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskEnvironment.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTimeLightGrp.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CActParamAnimGame.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_800602B4.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskGameEffAfter.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfResTask.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfRes.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/IResInfo.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfScript.o \
@@ -25,6 +27,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/bss_1.o \
 	$(BUILD_DIR)/asm/sbss_1.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfTaskMain.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfTFile.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCamEvent.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCamFollow.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_80074F4C.o \
@@ -105,22 +108,22 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskREvent.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CInfoCf.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuItem.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CREvtMem.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtMem.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskREvtSequence.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfResObjImpl.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfResReloadImpl.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfMapEffectManager.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectActor.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CREvtModel.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtModel.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfMapItemManager.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CActorParam.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuZeal.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CREvtCamera.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CREvtModelMap.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CREvtModelObj.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CREvtModelPc.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CREvtEffect.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CREvtObj.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtCamera.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtModelMap.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtModelObj.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtModelPc.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtEffect.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtObj.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuPTGauge.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuSelectShop.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuShopSell.o \
@@ -143,13 +146,12 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuKizunaTalk.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuItemExchange.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfPadTask.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CREvtLight.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtLight.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CBgTex.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTitleAHelp.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_801C4B60.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CQuestItem.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CVisionItem.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CArtsBookItem.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CQuestItem.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CItemBoxGrid.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_801D1FC0.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSortMenu.o \
@@ -165,7 +167,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CPartyStateWin.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CModelDisp.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CPartyState.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CModelDispEquip.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/menu/parts/CModelDispEquip.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CEquipChange.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfMapMineManager.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CItemBoxGridSubMenu.o \
@@ -241,10 +243,10 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/ICamControlClassic.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_8027513C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuLvUp.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CChainActor.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CChainActorList.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CChainTime.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CChainTimer.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainActor.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainActorList.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainTime.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainTimer.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSysWinScenarioLog.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CEIBCur.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CEIBPageCur.o \
@@ -253,9 +255,9 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSLCur.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSaveLoad.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuPTChangeNotice.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CChainCombo.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainCombo.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSysWinSave.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CREvtMovie.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtMovie.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGamePic.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGameEvt.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelpManager.o \
@@ -270,34 +272,34 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuSkipTimer.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSkipTimer2.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSkipTimer.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CChainEffect.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CCharVoice.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CCharVoiceMan.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_BATTLE_END.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_BUF.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_CHAIN.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_DOWN.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_EHP.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_FAINT.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_HAGE.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_HP.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_PARTY_GAGE.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_REVIVE.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_SUDDEN.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_TENSION_UP.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_VISION_BREAK.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_VISION_TELL.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainEffect.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CCharVoice.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CCharVoiceMan.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_BATTLE_END.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_BUF.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_CHAIN.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_DOWN.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_EHP.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_FAINT.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_HAGE.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_HP.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_PARTY_GAGE.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_REVIVE.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_SUDDEN.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_TENSION_UP.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_VISION_BREAK.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_VISION_TELL.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuBattleChain.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_BATTLE_END_SP.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_BATTLE_END_SP.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfGimmickSaveOff.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuTutorialList.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTutorialList.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CLoad.o \
 	$(BUILD_DIR)/src/kyoshin/appgame/code_802AEB74.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_802AEBC4.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_BATTLE_MAIN.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_BATTLE_BEGIN.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_BATTLE_MAIN.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_BATTLE_BEGIN.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuGCItem.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuGameClear.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfHikariItemManager.o \
@@ -331,7 +333,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_Sp.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_Talk.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_Target.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVS_THREAD_ORDER.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_ORDER.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CBattery.o \
 
 
@@ -1022,29 +1024,29 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/CProcess.o \
 	$(BUILD_DIR)/asm/monolithlib/CDoubleListNode.o \
 	$(BUILD_DIR)/asm/monolithlib/CChildListNode.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceRemotePad.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceBase.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceSC.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceVI.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceVICb.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceRemotePad.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceBase.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceSC.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceVI.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceVICb.o \
 	$(BUILD_DIR)/asm/monolithlib/CFontLayer.o \
 	$(BUILD_DIR)/asm/monolithlib/CGXCache.o \
 	$(BUILD_DIR)/asm/monolithlib/IStateCache.o \
-	$(BUILD_DIR)/asm/monolithlib/CDevice.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceClock.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceFile.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceFileCri.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDevice.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceClock.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFile.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFileCri.o \
 	$(BUILD_DIR)/src/monolithlib/code_80450B14.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80450B2C.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceFileDvd.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceFileJob.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceFileJobReadDvd.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceFont.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceFontInfoExt.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceFontInfoRom.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceFontLayer.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceFontLoader.o \
-	$(BUILD_DIR)/asm/monolithlib/CDeviceGX.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFileDvd.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFileJob.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFileJobReadDvd.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFont.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFontInfoExt.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFontInfoRom.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFontLayer.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFontLoader.o \
+	$(BUILD_DIR)/asm/monolithlib/device/CDeviceGX.o \
 	$(BUILD_DIR)/asm/monolithlib/CDesktop.o \
 	$(BUILD_DIR)/asm/monolithlib/CException.o \
 	$(BUILD_DIR)/asm/monolithlib/CLib.o \
@@ -1070,36 +1072,36 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/mpfsys/MPFDrawBillLayTex.o \
 	$(BUILD_DIR)/asm/monolithlib/code_8047CA88.o \
 	$(BUILD_DIR)/asm/monolithlib/code_8047D2AC.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnItemCameraNw4r.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnItemId.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnItemLight.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnItemLightNw4r.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnItemModel.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnItemModelNw4r.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnItemPool.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnLightMan.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnMaruShadowNw4r.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnMem.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnRoot.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnRootNw4r.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnTexWorkMan.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnVirtualLight.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnItemCameraNw4r.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnItemId.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnItemLight.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnItemLightNw4r.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnItemModel.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnItemModelNw4r.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnItemPool.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnLightMan.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnMaruShadowNw4r.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnMem.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnRoot.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnRootNw4r.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnTexWorkMan.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnVirtualLight.o \
 	$(BUILD_DIR)/asm/monolithlib/code_8049431C.o \
 	$(BUILD_DIR)/asm/monolithlib/CVirtualLightAmb.o \
 	$(BUILD_DIR)/asm/monolithlib/CVirtualLightDir.o \
 	$(BUILD_DIR)/asm/monolithlib/CVirtualLightObj.o \
-	$(BUILD_DIR)/asm/monolithlib/CScn.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnBlend.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnCameraMan.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnEffectActNw4r.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnFadeMan.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnFilter.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnFilterMan.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnFogMan.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnFrame.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnIdMan.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnItemAnim.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnItemCamera.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScn.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnBlend.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnCameraMan.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnEffectActNw4r.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnFadeMan.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnFilter.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnFilterMan.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnFogMan.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnFrame.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnIdMan.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnItemAnim.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnItemCamera.o \
 	$(BUILD_DIR)/asm/monolithlib/code_8049FCAC.o \
 	$(BUILD_DIR)/asm/monolithlib/CColiProc.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804B2FF0.o \
@@ -1109,15 +1111,15 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_804BD8E8.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804BF59C.o \
 	$(BUILD_DIR)/asm/monolithlib/CLight.o \
-	$(BUILD_DIR)/asm/monolithlib/CScnEnvLgtCtrl.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnEnvLgtCtrl.o \
 	$(BUILD_DIR)/src/monolithlib/Unknown1.o \
 	$(BUILD_DIR)/asm/sdata_4.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804C8684.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804C8718.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804CC2B8.o \
-	$(BUILD_DIR)/asm/monolithlib/CETrail.o \
+	$(BUILD_DIR)/asm/monolithlib/effect/CETrail.o \
 	$(BUILD_DIR)/asm/monolithlib/CWorkSystemCache.o \
-	$(BUILD_DIR)/asm/monolithlib/CNand.o \
+	$(BUILD_DIR)/asm/monolithlib/nand/CNand.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804DA4CC.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804DAF70.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804DB0F0.o \

@@ -10058,3 +10058,467 @@ sinit_800539E0:
 /* 800539E0 0001CFA0  C0 02 D3 50 */	lfs f0, lbl_8066D6D0@sda21(r2)
 /* 800539E4 0001CFA4  D0 0D A4 C8 */	stfs f0, lbl_80666648@sda21(r13)
 /* 800539E8 0001CFA8  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CActParamAnim
+__vt__CActParamAnim:
+	.4byte __RTTI__CActParamAnim
+	.4byte 0
+	.4byte func_8004B0B8
+	.4byte func_8004B854
+	.4byte func_8004B898
+	.4byte func_8004B86C
+	.4byte func_8004C5E8
+	.4byte func_8004D194
+	.4byte func_8004DDD0
+	.4byte func_8004DF9C
+	.4byte func_8004E168
+	.4byte func_8004E334
+	.4byte func_8004E500
+	.4byte func_8004E828
+	.4byte func_8004D2F8
+	.4byte func_8004D4AC
+	.4byte func_8004E694
+	.4byte func_8004D650
+	.4byte 0
+	.4byte func_8004D7EC
+	.4byte func_8004D950
+	.4byte func_8004E9EC
+	.4byte func_8004ECF4
+	.4byte func_8004F1E4
+	.4byte func_8004F334
+	.4byte func_8004F884
+	.4byte func_8004FAB4
+	.4byte func_8004FCE0
+	.4byte func_8004FE58
+	.4byte func_80050744
+	.4byte 0
+	.4byte func_80050890
+	.4byte func_8004D074
+	.4byte func_80050C50
+	.4byte func_80050DB0
+	.4byte func_80050F5C
+	.4byte func_800510FC
+	.4byte func_800512A8
+	.4byte func_80051448
+	.4byte func_8004F484
+	.4byte func_8004F5FC
+	.4byte func_800539D8
+	.4byte func_800539D0
+	.4byte func_800539C8
+	.4byte func_800539C0
+	.4byte func_800539B8
+	.4byte func_800539B0
+	.4byte func_800516C0
+	.4byte func_80051584
+	.4byte func_8004DAE0
+	.4byte func_800517FC
+	.4byte func_8005194C
+	.4byte func_800539A8
+	.4byte func_800539A0
+	.4byte func_80053998
+	.4byte func_80053990
+	.4byte func_8004B114
+	.4byte func_80052934
+	.4byte func_80053164
+	.4byte func_8004FFBC
+	.4byte 0
+
+.global CActParamAnim_hierarchy
+CActParamAnim_hierarchy:
+	.4byte __RTTI__IActParamShift
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80529AF8
+lbl_80529AF8:
+	.asciz "AcosRad: Input is out of the domain."
+	.balign 4
+
+
+.global lbl_80529B20
+lbl_80529B20:
+	.asciz "triangular.h"
+	.balign 4
+
+
+.global lbl_80529B30
+lbl_80529B30:
+	.asciz "FSqrt: Input is out of the domain."
+	.balign 4
+
+
+.global lbl_80529B54
+lbl_80529B54:
+	.asciz "arithmetic.h"
+	.balign 4
+	.4byte 0
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CActParamAnim_typestr
+CActParamAnim_typestr:
+	.asciz "CActParamAnim"
+	.balign 4
+
+.global IActParamShift_typestr
+IActParamShift_typestr:
+	.asciz "IActParamShift"
+	.balign 4
+
+.global CActParamData_typestr
+CActParamData_typestr:
+	.asciz "CActParamData"
+	.balign 4
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CActParamAnim
+__RTTI__CActParamAnim:
+	.4byte CActParamAnim_typestr
+	.4byte CActParamAnim_hierarchy
+
+.global __RTTI__IActParamShift
+__RTTI__IActParamShift:
+	.4byte IActParamShift_typestr
+	.4byte 0
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666648
+lbl_80666648:
+	.skip 0x8
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80668728
+lbl_80668728:
+	# ROM: 0x572588
+	.4byte 0x411CCCCD
+
+
+.global lbl_8066872C
+lbl_8066872C:
+	# ROM: 0x57258C
+	.float 1.0
+
+
+.global lbl_80668730
+lbl_80668730:
+	# ROM: 0x572590
+	.4byte 0
+
+
+.global lbl_80668734
+lbl_80668734:
+	# ROM: 0x572594
+	.4byte 0x420C0000
+
+
+.global lbl_80668738
+lbl_80668738:
+	# ROM: 0x572598
+	.4byte 0x41600000
+
+
+.global lbl_8066873C
+lbl_8066873C:
+	# ROM: 0x57259C
+	.float 6.5
+
+
+.global lbl_80668740
+lbl_80668740:
+	# ROM: 0x5725A0
+	.4byte 0x40800000
+
+
+.global lbl_80668744
+lbl_80668744:
+	# ROM: 0x5725A4
+	.4byte 0x40000000
+
+
+.global lbl_80668748
+lbl_80668748:
+	# ROM: 0x5725A8
+	.4byte 0x3F333333
+
+
+.global lbl_8066874C
+lbl_8066874C:
+	# ROM: 0x5725AC
+	.4byte 0x41880000
+
+
+.global lbl_80668750
+lbl_80668750:
+	# ROM: 0x5725B0
+	.4byte 0x41F00000
+
+
+.global lbl_80668754
+lbl_80668754:
+	# ROM: 0x5725B4
+	.4byte 0x41A00000
+
+
+.global lbl_80668758
+lbl_80668758:
+	# ROM: 0x5725B8
+	.4byte 0x447A0000
+
+
+.global lbl_8066875C
+lbl_8066875C:
+	# ROM: 0x5725BC
+	.4byte 0x45610000
+
+
+.global lbl_80668760
+lbl_80668760:
+	# ROM: 0x5725C0
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_80668764
+lbl_80668764:
+	# ROM: 0x5725C4
+	.4byte 0x3CC90FDB
+
+
+.global lbl_80668768
+lbl_80668768:
+	# ROM: 0x5725C8
+	.4byte 0x43340000
+
+
+.global lbl_8066876C
+lbl_8066876C:
+	# ROM: 0x5725CC
+	.4byte 0x4222F983
+
+
+.global lbl_80668770
+lbl_80668770:
+	# ROM: 0x5725D0
+	.4byte 0x3EE66667
+
+
+.global lbl_80668774
+lbl_80668774:
+	# ROM: 0x5725D4
+	.4byte 0x40A00000
+
+
+.global lbl_80668778
+lbl_80668778:
+	# ROM: 0x5725D8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80668780
+lbl_80668780:
+	# ROM: 0x5725E0
+	.float 10.0
+
+
+.global lbl_80668784
+lbl_80668784:
+	# ROM: 0x5725E4
+	.4byte 0x3ECCCCCD
+
+
+.global lbl_80668788
+lbl_80668788:
+	# ROM: 0x5725E8
+	.4byte 0x3F99999A
+
+
+.global lbl_8066878C
+lbl_8066878C:
+	# ROM: 0x5725EC
+	.4byte 0xC0400000
+
+
+.global lbl_80668790
+lbl_80668790:
+	# ROM: 0x5725F0
+	.float 0.5
+
+
+.global lbl_80668794
+lbl_80668794:
+	# ROM: 0x5725F4
+	.4byte 0x3B03126F
+
+
+.global lbl_80668798
+lbl_80668798:
+	# ROM: 0x5725F8
+	.4byte 0xBC23D70A
+
+
+.global lbl_8066879C
+lbl_8066879C:
+	# ROM: 0x5725FC
+	.4byte 0x3F8CCCCD
+
+
+.global lbl_806687A0
+lbl_806687A0:
+	# ROM: 0x572600
+	.4byte 0x42340000
+
+
+.global lbl_806687A4
+lbl_806687A4:
+	# ROM: 0x572604
+	.4byte 0x3E99999A
+
+
+.global lbl_806687A8
+lbl_806687A8:
+	# ROM: 0x572608
+	.4byte 0xBE800000
+
+
+.global lbl_806687AC
+lbl_806687AC:
+	# ROM: 0x57260C
+	.float 0.25
+
+
+.global lbl_806687B0
+lbl_806687B0:
+	# ROM: 0x572610
+	.4byte 0x40400000
+
+
+.global lbl_806687B4
+lbl_806687B4:
+	# ROM: 0x572614
+	.4byte 0xC0800000
+
+
+.global lbl_806687B8
+lbl_806687B8:
+	# ROM: 0x572618
+	.4byte 0x3F666666
+
+
+.global lbl_806687BC
+lbl_806687BC:
+	# ROM: 0x57261C
+	.4byte 0xBF99999A
+
+
+.global lbl_806687C0
+lbl_806687C0:
+	# ROM: 0x572620
+	.float -1.0
+
+
+.global lbl_806687C4
+lbl_806687C4:
+	# ROM: 0x572624
+	.4byte 0x41800000
+
+
+.global lbl_806687C8
+lbl_806687C8:
+	# ROM: 0x572628
+	.4byte 0xBDCCCCCD
+
+
+.global lbl_806687CC
+lbl_806687CC:
+	# ROM: 0x57262C
+	.4byte 0xC0000000
+
+
+.global lbl_806687D0
+lbl_806687D0:
+	# ROM: 0x572630
+	.4byte 0x3F733333
+
+
+.global lbl_806687D4
+lbl_806687D4:
+	# ROM: 0x572634
+	.4byte 0xC1800000
+
+
+.global lbl_806687D8
+lbl_806687D8:
+	# ROM: 0x572638
+	.4byte 0xC1A00000
+
+
+.global lbl_806687DC
+lbl_806687DC:
+	# ROM: 0x57263C
+	.4byte 0xC2B40000
+
+
+.global lbl_806687E0
+lbl_806687E0:
+	# ROM: 0x572640
+	.4byte 0x42B40000
+
+
+.global lbl_806687E4
+lbl_806687E4:
+	# ROM: 0x572644
+	.float 0.2
+
+
+.global lbl_806687E8
+lbl_806687E8:
+	# ROM: 0x572648
+	.4byte 0xBF7FF972
+
+
+.global lbl_806687EC
+lbl_806687EC:
+	# ROM: 0x57264C
+	.4byte 0x42F00000
+
+
+.global lbl_806687F0
+lbl_806687F0:
+	# ROM: 0x572650
+	.4byte 0xC2F00000
+
+
+.global lbl_806687F4
+lbl_806687F4:
+	# ROM: 0x572654
+	.4byte 0x415E38E4
+
+
+.global lbl_806687F8
+lbl_806687F8:
+	# ROM: 0x572658
+	.4byte 0x3FB33333
+
+
+.global lbl_806687FC
+lbl_806687FC:
+	# ROM: 0x57265C
+	.4byte 0x3F350481
+
+
+.global lbl_80668800
+lbl_80668800:
+	# ROM: 0x572660
+	.4byte 0x3F8E38E4
+	.4byte 0

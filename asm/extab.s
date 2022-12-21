@@ -827,7 +827,7 @@ lbl_80006C14:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80006C60
 lbl_80006C60:
@@ -3333,7 +3333,7 @@ lbl_80007C78:
 	.4byte 0
 	.4byte 0x0680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0
 	.4byte func_80065848
@@ -3724,7 +3724,7 @@ lbl_80007F30:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80007F4C
 lbl_80007F4C:
@@ -10064,7 +10064,7 @@ lbl_8000AD80:
 	.4byte func_8004031C
 	.4byte 0x0680001F
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0
 	.4byte func_800FED0C
@@ -10112,7 +10112,7 @@ lbl_8000ADEC:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000AE6C
 lbl_8000AE6C:
@@ -10221,7 +10221,7 @@ lbl_8000AF14:
 	.4byte func_8004031C
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_80102300
@@ -10253,7 +10253,7 @@ lbl_8000AF64:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000AFA4
 lbl_8000AFA4:
@@ -10413,7 +10413,7 @@ lbl_8000B0AC:
 	.4byte func_8004031C
 	.4byte 0x0680001F
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0
 	.4byte func_80102300
@@ -10432,7 +10432,7 @@ lbl_8000B0E0:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000B114
 lbl_8000B114:
@@ -10535,7 +10535,7 @@ lbl_8000B1A4:
 	.4byte func_8004031C
 	.4byte 0x0680001B
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001B
 	.4byte 0
 	.4byte func_80102300
@@ -10582,7 +10582,7 @@ lbl_8000B210:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000B2A0
 lbl_8000B2A0:
@@ -10708,7 +10708,7 @@ lbl_8000B370:
 	.4byte func_8004031C
 	.4byte 0x0680001F
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0
 	.4byte func_800FED0C
@@ -10735,7 +10735,7 @@ lbl_8000B3CC:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000B420
 lbl_8000B420:
@@ -10836,7 +10836,7 @@ lbl_8000B4C0:
 	.4byte func_8004031C
 	.4byte 0x0680001B
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001B
 	.4byte 0
 	.4byte func_800FED0C
@@ -10855,7 +10855,7 @@ lbl_8000B4F4:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000B528
 lbl_8000B528:
@@ -10904,7 +10904,7 @@ lbl_8000B570:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000B5A4
 lbl_8000B5A4:
@@ -10945,7 +10945,7 @@ lbl_8000B5E4:
 	.4byte func_8004031C
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_800FED0C
@@ -11048,10 +11048,10 @@ lbl_8000B6A8:
 	.4byte 0
 	.4byte 0x0680001D
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x0780001F
 	.4byte 0x00000834
 	.4byte func_8045F580
@@ -11063,7 +11063,7 @@ lbl_8000B6A8:
 	.4byte func_801176F4
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000B718
 lbl_8000B718:
@@ -11143,7 +11143,7 @@ lbl_8000B79C:
 	.4byte func_8004031C
 	.4byte 0x8680001D
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000B804
 lbl_8000B804:
@@ -11157,13 +11157,13 @@ lbl_8000B804:
 	.4byte 0
 	.4byte 0x8680001D
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8780001D
 	.4byte 0x00000834
 	.4byte func_8045F580
 	.4byte 0x8680001C
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000B848
 lbl_8000B848:
@@ -11194,13 +11194,13 @@ lbl_8000B870:
 	.4byte 0
 	.4byte 0x0680001B
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x0680001C
 	.4byte 0x0000005C
 	.4byte func_8004031C
 	.4byte 0x0680001C
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0
 	.4byte func_800FED0C
@@ -11403,7 +11403,7 @@ lbl_8000BA94:
 	.4byte func_8004031C
 	.4byte 0x0680001F
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0
 	.4byte func_800FED0C
@@ -11422,7 +11422,7 @@ lbl_8000BADC:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000BB10
 lbl_8000BB10:
@@ -11575,7 +11575,7 @@ lbl_8000BC10:
 	.4byte func_8004031C
 	.4byte 0x0680001C
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0
 	.4byte func_8012235C
@@ -11611,7 +11611,7 @@ lbl_8000BC7C:
 	.4byte func_8004031C
 	.4byte 0x0680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_8012235C
@@ -11629,7 +11629,7 @@ lbl_8000BC7C:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000BD14
 lbl_8000BD14:
@@ -11730,7 +11730,7 @@ lbl_8000BDB4:
 	.4byte func_8004031C
 	.4byte 0x0680001B
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001B
 	.4byte 0
 	.4byte func_8012235C
@@ -11749,7 +11749,7 @@ lbl_8000BDE8:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000BE1C
 lbl_8000BE1C:
@@ -11796,7 +11796,7 @@ lbl_8000BE54:
 	.4byte func_8004031C
 	.4byte 0x0680001B
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001B
 	.4byte 0
 	.4byte func_8012235C
@@ -11823,7 +11823,7 @@ lbl_8000BE9C:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000BEF0
 lbl_8000BEF0:
@@ -12306,7 +12306,7 @@ lbl_8000C21C:
 	.4byte func_8004031C
 	.4byte 0x06800019
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x86800019
 	.4byte 0
 	.4byte func_8012235C
@@ -12325,7 +12325,7 @@ lbl_8000C250:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000C284
 lbl_8000C284:
@@ -12391,7 +12391,7 @@ lbl_8000C2EC:
 	.4byte func_8012E294
 	.4byte 0x0680001D
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001D
 	.4byte 0
 	.4byte func_8012E188
@@ -12422,7 +12422,7 @@ lbl_8000C338:
 	.4byte func_8012E294
 	.4byte 0x8680001D
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000C360
 lbl_8000C360:
@@ -12606,7 +12606,7 @@ lbl_8000C450:
 	.4byte func_801320F0
 	.4byte 0x0680001D
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001D
 	.4byte 0
 	.4byte func_80132130
@@ -12690,7 +12690,7 @@ lbl_8000C4F8:
 	.4byte func_801320F0
 	.4byte 0x8680001D
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000C5E0
 lbl_8000C5E0:
@@ -13870,7 +13870,7 @@ lbl_8000CE14:
 	.4byte func_8004031C
 	.4byte 0x06800019
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x86800019
 	.4byte 0
 	.4byte func_8012235C
@@ -13899,7 +13899,7 @@ lbl_8000CE58:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000CE8C
 lbl_8000CE8C:
@@ -13985,7 +13985,7 @@ lbl_8000CF14:
 	.4byte func_8004031C
 	.4byte 0x0680001C
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0
 	.4byte func_8012235C
@@ -14004,7 +14004,7 @@ lbl_8000CF48:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000CF7C
 lbl_8000CF7C:
@@ -14135,7 +14135,7 @@ lbl_8000D04C:
 	.4byte func_8004031C
 	.4byte 0x0680001C
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0
 	.4byte func_800FED0C
@@ -14151,7 +14151,7 @@ lbl_8000D080:
 	.4byte func_8004031C
 	.4byte 0x0680001C
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0
 	.4byte func_800FED0C
@@ -14167,7 +14167,7 @@ lbl_8000D0B4:
 	.4byte func_8004031C
 	.4byte 0x0680001B
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001B
 	.4byte 0
 	.4byte func_800FED0C
@@ -14186,7 +14186,7 @@ lbl_8000D0E8:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000D11C
 lbl_8000D11C:
@@ -14954,7 +14954,7 @@ lbl_8000D6AC:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000D6C8
 lbl_8000D6C8:
@@ -14997,7 +14997,7 @@ lbl_8000D6E8:
 	.4byte func_8004031C
 	.4byte 0x0680001D
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001D
 	.4byte 0
 	.4byte func_8012235C
@@ -15035,7 +15035,7 @@ lbl_8000D744:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000D7C4
 lbl_8000D7C4:
@@ -15116,7 +15116,7 @@ lbl_8000D824:
 	.4byte func_8004031C
 	.4byte 0x0680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_8012235C
@@ -15185,7 +15185,7 @@ lbl_8000D8A8:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000D9A4
 lbl_8000D9A4:
@@ -15308,7 +15308,7 @@ lbl_8000DA6C:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000DA88
 lbl_8000DA88:
@@ -15345,7 +15345,7 @@ lbl_8000DAA0:
 	.4byte func_80166724
 	.4byte 0x0680001F
 	.4byte 0x00000060
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x0680001F
 	.4byte 0x0000005C
 	.4byte func_8004031C
@@ -15384,7 +15384,7 @@ lbl_8000DB24:
 	.4byte func_80166724
 	.4byte 0x0680001E
 	.4byte 0x00000060
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte func_8004031C
@@ -15408,7 +15408,7 @@ lbl_8000DB24:
 	.4byte func_80166724
 	.4byte 0x0680001E
 	.4byte 0x00000060
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte func_8004031C
@@ -15423,7 +15423,7 @@ lbl_8000DB24:
 	.4byte func_80166724
 	.4byte 0x0680001E
 	.4byte 0x00000060
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte func_8004031C
@@ -15586,16 +15586,16 @@ lbl_8000DD10:
 	.4byte 0
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte 0x8780001E
 	.4byte 0x00000080
 	.4byte func_801C3F50
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte 0x0780001E
 	.4byte 0x00000080
 	.4byte func_801C3F50
@@ -15717,7 +15717,7 @@ lbl_8000DE54:
 	.4byte func_8004031C
 	.4byte 0x0680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_80168254
@@ -15746,7 +15746,7 @@ lbl_8000DEA4:
 	.4byte func_8004031C
 	.4byte 0x8680001D
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000DED8
 lbl_8000DED8:
@@ -16655,7 +16655,7 @@ lbl_8000E540:
 	.4byte func_8004031C
 	.4byte 0x0680001C
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0
 	.4byte func_800FED0C
@@ -16674,7 +16674,7 @@ lbl_8000E574:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000E5A8
 lbl_8000E5A8:
@@ -16777,7 +16777,7 @@ lbl_8000E668:
 	.4byte 0
 	.4byte 0x0680001F
 	.4byte 0x00000038
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0
 	.4byte func_80172668
@@ -16796,25 +16796,25 @@ lbl_8000E690:
 	.4byte 0
 	.4byte 0x0680001C
 	.4byte 0x00000038
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x0680001C
 	.4byte 0
 	.4byte func_80172668
 	.4byte 0x0680001C
 	.4byte 0x00000038
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x0680001C
 	.4byte 0
 	.4byte func_80172668
 	.4byte 0x0680001C
 	.4byte 0x00000038
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0
 	.4byte func_80172668
 	.4byte 0x8680001C
 	.4byte 0x00000038
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000E70C
 lbl_8000E70C:
@@ -16872,7 +16872,7 @@ lbl_8000E754:
 	.4byte func_80081C20
 	.4byte 0x0680001F
 	.4byte 0x00000038
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0
 	.4byte func_80172668
@@ -16890,7 +16890,7 @@ lbl_8000E788:
 	.4byte func_80081C20
 	.4byte 0x0680001E
 	.4byte 0x00000038
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_80172668
@@ -16899,7 +16899,7 @@ lbl_8000E788:
 	.4byte func_80081C20
 	.4byte 0x8680001E
 	.4byte 0x00000038
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000E7DC
 lbl_8000E7DC:
@@ -16964,7 +16964,7 @@ lbl_8000E834:
 	.4byte 0
 	.4byte 0x0680001F
 	.4byte 0x00000038
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0
 	.4byte func_80172668
@@ -16979,13 +16979,13 @@ lbl_8000E85C:
 	.4byte 0
 	.4byte 0x0680001E
 	.4byte 0x00000038
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_80172668
 	.4byte 0x8680001E
 	.4byte 0x00000038
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000E898
 lbl_8000E898:
@@ -17281,7 +17281,7 @@ lbl_8000EAAC:
 	.4byte func_8004031C
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001D
 	.4byte 0
 	.4byte func_80102300
@@ -17300,7 +17300,7 @@ lbl_8000EAE0:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000EB14
 lbl_8000EB14:
@@ -17506,7 +17506,7 @@ lbl_8000EC4C:
 	.4byte func_8004031C
 	.4byte 0x0680001C
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0
 	.4byte func_8012235C
@@ -17544,7 +17544,7 @@ lbl_8000ECA8:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000ED28
 lbl_8000ED28:
@@ -17634,16 +17634,16 @@ lbl_8000EDE0:
 	.4byte 0
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte 0x8780001E
 	.4byte 0x00000080
 	.4byte func_801C3F50
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte 0x0780001E
 	.4byte 0x00000080
 	.4byte func_801C3F50
@@ -18640,7 +18640,7 @@ lbl_8000F58C:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000F5C0
 lbl_8000F5C0:
@@ -18681,7 +18681,7 @@ lbl_8000F600:
 	.4byte func_8004031C
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_800FED0C
@@ -18755,7 +18755,7 @@ lbl_8000F6B0:
 	.4byte func_8004031C
 	.4byte 0x0680001B
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001B
 	.4byte 0
 	.4byte func_8012235C
@@ -18774,7 +18774,7 @@ lbl_8000F6E4:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000F718
 lbl_8000F718:
@@ -18846,7 +18846,7 @@ lbl_8000F790:
 	.4byte func_8004031C
 	.4byte 0x0680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_801A2B00
@@ -18878,7 +18878,7 @@ lbl_8000F7F4:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000F834
 lbl_8000F834:
@@ -19301,7 +19301,7 @@ lbl_8000FB84:
 	.4byte func_8004031C
 	.4byte 0x0680001F
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0
 	.4byte func_80102300
@@ -19320,7 +19320,7 @@ lbl_8000FBB8:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000FBEC
 lbl_8000FBEC:
@@ -19391,7 +19391,7 @@ lbl_8000FC5C:
 	.4byte func_8004031C
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001D
 	.4byte 0
 	.4byte func_80102300
@@ -19410,7 +19410,7 @@ lbl_8000FC90:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000FCC4
 lbl_8000FCC4:
@@ -19516,7 +19516,7 @@ lbl_8000FD5C:
 	.4byte func_8004031C
 	.4byte 0x06800017
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x86800017
 	.4byte 0
 	.4byte func_8012235C
@@ -19547,7 +19547,7 @@ lbl_8000FDC0:
 	.4byte func_8004031C
 	.4byte 0x0680001F
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0
 	.4byte func_8012235C
@@ -19599,7 +19599,7 @@ lbl_8000FE1C:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8000FED4
 lbl_8000FED4:
@@ -19901,7 +19901,7 @@ lbl_800100D8:
 	.4byte func_8004031C
 	.4byte 0x0680001B
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001B
 	.4byte 0
 	.4byte func_8012235C
@@ -19939,7 +19939,7 @@ lbl_80010134:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_800101B4
 lbl_800101B4:
@@ -20051,16 +20051,16 @@ lbl_80010298:
 	.4byte 0
 	.4byte 0x8780001E
 	.4byte 0x0000070C
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte 0x0780001E
 	.4byte 0x0000070C
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte 0x8780001E
 	.4byte 0x000000D0
 	.4byte func_801ED258
 	.4byte 0x0780001E
 	.4byte 0x0000070C
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte 0x0780001E
 	.4byte 0x000000D0
 	.4byte func_801ED258
@@ -20069,7 +20069,7 @@ lbl_80010298:
 	.4byte func_801C3F50
 	.4byte 0x0780001E
 	.4byte 0x0000070C
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte 0x0780001E
 	.4byte 0x000000D0
 	.4byte func_801ED258
@@ -20699,7 +20699,7 @@ lbl_800108B0:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_800108CC
 lbl_800108CC:
@@ -20740,7 +20740,7 @@ lbl_8001090C:
 	.4byte 0
 	.4byte 0x8680001D
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80010928
 lbl_80010928:
@@ -21187,7 +21187,7 @@ lbl_80010B70:
 	.4byte func_8045F580
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80010CC4
 lbl_80010CC4:
@@ -22104,7 +22104,7 @@ lbl_8001162C:
 	.4byte func_8045F580
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001165C
 lbl_8001165C:
@@ -22213,7 +22213,7 @@ lbl_80011708:
 	.4byte func_8045F580
 	.4byte 0x8680001D
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80011738
 lbl_80011738:
@@ -22484,7 +22484,7 @@ lbl_80011904:
 	.4byte func_8045F580
 	.4byte 0x8680001D
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80011934
 lbl_80011934:
@@ -22725,7 +22725,7 @@ lbl_80011AD8:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80011AF4
 lbl_80011AF4:
@@ -22930,7 +22930,7 @@ lbl_80011BDC:
 	.4byte func_8045F580
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80011CD8
 lbl_80011CD8:
@@ -23423,7 +23423,7 @@ lbl_800121F4:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80012210
 lbl_80012210:
@@ -23795,7 +23795,7 @@ lbl_80012460:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_800124EC
 lbl_800124EC:
@@ -24147,7 +24147,7 @@ lbl_800127E4:
 	.4byte func_8045F580
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80012814
 lbl_80012814:
@@ -24362,7 +24362,7 @@ lbl_80012960:
 	.4byte func_80080400
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_800129A8
 lbl_800129A8:
@@ -24572,7 +24572,7 @@ lbl_80012AD4:
 	.4byte func_8045F580
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80012B7C
 lbl_80012B7C:
@@ -25631,7 +25631,7 @@ lbl_800133E8:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001344C
 lbl_8001344C:
@@ -25862,7 +25862,7 @@ lbl_800135AC:
 	.4byte func_8045F580
 	.4byte 0x8680001C
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_800136A4
 lbl_800136A4:
@@ -26555,7 +26555,7 @@ lbl_80013E0C:
 	.4byte func_8045F580
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80013E3C
 lbl_80013E3C:
@@ -26811,7 +26811,7 @@ lbl_80013F30:
 	.4byte func_80080400
 	.4byte 0x8680001B
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80014110
 lbl_80014110:
@@ -27930,7 +27930,7 @@ lbl_80014E60:
 	.4byte func_8045F580
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80014E90
 lbl_80014E90:
@@ -28481,7 +28481,7 @@ lbl_8001520C:
 	.4byte func_8004031C
 	.4byte 0x06800019
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x86800019
 	.4byte 0
 	.4byte func_8012235C
@@ -28500,7 +28500,7 @@ lbl_80015240:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80015274
 lbl_80015274:
@@ -28613,7 +28613,7 @@ lbl_80015304:
 	.4byte func_8045F580
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80015384
 lbl_80015384:
@@ -28805,7 +28805,7 @@ lbl_8001550C:
 	.4byte 0
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80015528
 lbl_80015528:
@@ -28924,7 +28924,7 @@ lbl_800155E0:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_800155FC
 lbl_800155FC:
@@ -29008,7 +29008,7 @@ lbl_8001567C:
 	.4byte 0
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80015698
 lbl_80015698:
@@ -29062,7 +29062,7 @@ lbl_800156E8:
 	.4byte 0
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80015704
 lbl_80015704:
@@ -29584,7 +29584,7 @@ lbl_80015A88:
 	.4byte func_8045F580
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80015B18
 lbl_80015B18:
@@ -29825,7 +29825,7 @@ lbl_80015D20:
 	.4byte func_8045F580
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80015D50
 lbl_80015D50:
@@ -30257,7 +30257,7 @@ lbl_80015FFC:
 	.4byte func_8004031C
 	.4byte 0x0680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_8023BF74
@@ -30269,7 +30269,7 @@ lbl_80015FFC:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80016068
 lbl_80016068:
@@ -30594,7 +30594,7 @@ lbl_80016320:
 	.4byte func_8045F580
 	.4byte 0x86800019
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80016378
 lbl_80016378:
@@ -30736,7 +30736,7 @@ lbl_80016474:
 	.4byte 0
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80016490
 lbl_80016490:
@@ -31018,7 +31018,7 @@ lbl_80016600:
 	.4byte func_8045F580
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_800166DC
 lbl_800166DC:
@@ -31461,7 +31461,7 @@ lbl_80016B9C:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80016BD0
 lbl_80016BD0:
@@ -31502,7 +31502,7 @@ lbl_80016C10:
 	.4byte func_8004031C
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_800FED0C
@@ -31773,7 +31773,7 @@ lbl_80016E20:
 	.4byte func_8045F580
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80016EC4
 lbl_80016EC4:
@@ -32430,7 +32430,7 @@ lbl_8001747C:
 	.4byte func_8045F580
 	.4byte 0x8680001C
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_800174AC
 lbl_800174AC:
@@ -32599,7 +32599,7 @@ lbl_80017608:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80017624
 lbl_80017624:
@@ -33437,7 +33437,7 @@ lbl_80017C14:
 	.4byte func_8045F580
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80017C58
 lbl_80017C58:
@@ -33612,7 +33612,7 @@ lbl_80017D9C:
 	.4byte func_8004031C
 	.4byte 0x0680001C
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0
 	.4byte func_8012235C
@@ -33631,7 +33631,7 @@ lbl_80017DD0:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80017E04
 lbl_80017E04:
@@ -33828,7 +33828,7 @@ lbl_80017F98:
 	.4byte func_8045F580
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80018004
 lbl_80018004:
@@ -34135,7 +34135,7 @@ lbl_80018278:
 	.4byte func_8045F580
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_800182E4
 lbl_800182E4:
@@ -34294,7 +34294,7 @@ lbl_8001840C:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80018440
 lbl_80018440:
@@ -34336,7 +34336,7 @@ lbl_80018470:
 	.4byte func_8004031C
 	.4byte 0x0680001F
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0
 	.4byte func_8012235C
@@ -34540,7 +34540,7 @@ lbl_800185E0:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80018614
 lbl_80018614:
@@ -34581,7 +34581,7 @@ lbl_80018654:
 	.4byte func_8004031C
 	.4byte 0x0680001F
 	.4byte 0x00000058
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0
 	.4byte func_800FED0C
@@ -35139,7 +35139,7 @@ lbl_80018ACC:
 	.4byte func_8004031C
 	.4byte 0x0680001D
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001D
 	.4byte 0
 	.4byte func_8012235C
@@ -35158,7 +35158,7 @@ lbl_80018B14:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80018B48
 lbl_80018B48:
@@ -35704,7 +35704,7 @@ lbl_80018E80:
 	.4byte func_8045F580
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80018F44
 lbl_80018F44:
@@ -36353,7 +36353,7 @@ lbl_800194B0:
 	.4byte func_8045F580
 	.4byte 0x8680001C
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80019554
 lbl_80019554:
@@ -36688,7 +36688,7 @@ lbl_80019828:
 	.4byte func_8004031C
 	.4byte 0x0680001D
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001D
 	.4byte 0
 	.4byte func_8012235C
@@ -36709,7 +36709,7 @@ lbl_8001985C:
 	.4byte func_8004031C
 	.4byte 0x0680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_8012235C
@@ -36721,7 +36721,7 @@ lbl_8001985C:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_800198C8
 lbl_800198C8:
@@ -36829,7 +36829,7 @@ lbl_80019950:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_800199D0
 lbl_800199D0:
@@ -36880,7 +36880,7 @@ lbl_80019A10:
 	.4byte func_8004031C
 	.4byte 0x0680001C
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0
 	.4byte func_8012235C
@@ -36946,7 +36946,7 @@ lbl_80019AC8:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80019AF0
 lbl_80019AF0:
@@ -37017,7 +37017,7 @@ lbl_80019B60:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80019B88
 lbl_80019B88:
@@ -37190,7 +37190,7 @@ lbl_80019C48:
 	.4byte func_8045F580
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80019D10
 lbl_80019D10:
@@ -37590,7 +37590,7 @@ lbl_8001A110:
 	.4byte func_8045F580
 	.4byte 0x8680001D
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001A140
 lbl_8001A140:
@@ -37847,7 +37847,7 @@ lbl_8001A338:
 	.4byte func_8045F580
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001A3B8
 lbl_8001A3B8:
@@ -38264,7 +38264,7 @@ lbl_8001A740:
 	.4byte func_8045F580
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001A784
 lbl_8001A784:
@@ -39365,7 +39365,7 @@ lbl_8001AFC0:
 	.4byte func_8004031C
 	.4byte 0x0680001C
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0
 	.4byte func_8012235C
@@ -39384,7 +39384,7 @@ lbl_8001AFF4:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001B028
 lbl_8001B028:
@@ -39707,7 +39707,7 @@ lbl_8001B2D0:
 	.4byte func_8045F580
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001B348
 lbl_8001B348:
@@ -39904,7 +39904,7 @@ lbl_8001B4D8:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001B4F4
 lbl_8001B4F4:
@@ -40135,16 +40135,16 @@ lbl_8001B690:
 	.4byte 0
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte 0x8780001E
 	.4byte 0x00000080
 	.4byte func_801C3F50
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte func_801CA964
+	.4byte __dt__CItemBoxGrid
 	.4byte 0x0780001E
 	.4byte 0x00000080
 	.4byte func_801C3F50
@@ -40424,7 +40424,7 @@ lbl_8001B974:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001B9A8
 lbl_8001B9A8:
@@ -40461,7 +40461,7 @@ lbl_8001B9D8:
 	.4byte func_8004031C
 	.4byte 0x0680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_802B4BD4
@@ -40545,7 +40545,7 @@ lbl_8001BA74:
 	.4byte func_8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001BAA8
 lbl_8001BAA8:
@@ -40582,7 +40582,7 @@ lbl_8001BAD8:
 	.4byte func_8004031C
 	.4byte 0x0680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_802B5BC8
@@ -40811,7 +40811,7 @@ lbl_8001BC54:
 	.4byte func_8045F580
 	.4byte 0x8680001F
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001BC9C
 lbl_8001BC9C:
@@ -41085,7 +41085,7 @@ lbl_8001BE94:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001BEB0
 lbl_8001BEB0:
@@ -41444,7 +41444,7 @@ lbl_8001C100:
 	.4byte func_804379B8
 	.4byte 0x8680001D
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001C134
 lbl_8001C134:
@@ -44483,7 +44483,7 @@ lbl_8001D900:
 	.4byte 0
 	.4byte 0x8680001D
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001D91C
 lbl_8001D91C:
@@ -44493,7 +44493,7 @@ lbl_8001D91C:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001D938
 lbl_8001D938:
@@ -46673,7 +46673,7 @@ lbl_8001E990:
 	.4byte func_80448F7C
 	.4byte 0x86800019
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001EA08
 lbl_8001EA08:
@@ -46721,7 +46721,7 @@ lbl_8001EA20:
 	.4byte func_80448F7C
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x0780001E
 	.4byte 0x000000AC
 	.4byte func_8048C034
@@ -47518,13 +47518,13 @@ lbl_8001F178:
 	.4byte 0
 	.4byte 0x0680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0
 	.4byte func_80495D60
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001F1B4
 lbl_8001F1B4:
@@ -47784,7 +47784,7 @@ lbl_8001F374:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001F390
 lbl_8001F390:
@@ -47794,13 +47794,13 @@ lbl_8001F390:
 	.4byte 0
 	.4byte 0x0680001C
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x0680001C
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_8001F3C4
 lbl_8001F3C4:
@@ -50911,7 +50911,7 @@ lbl_800208FC:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80020918
 lbl_80020918:
@@ -50941,7 +50941,7 @@ lbl_80020938:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80020954
 lbl_80020954:
@@ -50951,7 +50951,7 @@ lbl_80020954:
 	.4byte 0
 	.4byte 0x8680001E
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80020970
 lbl_80020970:
@@ -51891,7 +51891,7 @@ lbl_80020FDC:
 	.4byte 0
 	.4byte 0x8680001C
 	.4byte 0
-	.4byte func_800402DC
+	.4byte __dt__IWorkEvent
 
 .global lbl_80020FF8
 lbl_80020FF8:

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#not sure if this is CActParamData (type string comes earlier)
-
 .global func_800539EC
 func_800539EC:
 /* 800539EC 0001CFAC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -5512,6 +5510,7 @@ lbl_80058390:
 /* 80058408 000219C8  7C 08 03 A6 */	mtlr r0
 /* 8005840C 000219CC  38 21 01 90 */	addi r1, r1, 0x190
 /* 80058410 000219D0  4E 80 00 20 */	blr 
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

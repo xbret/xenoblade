@@ -7309,3 +7309,1235 @@ func_8004B014:
 /* 8004B01C 000145DC  38 63 68 90 */	addi r3, r3, lbl_804F6890@l
 /* 8004B020 000145E0  38 84 99 E8 */	addi r4, r4, lbl_805299E8@l
 /* 8004B024 000145E4  48 45 5B 6C */	b func_804A0B90
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global cf_CfObjectEff_hierarchy
+cf_CfObjectEff_hierarchy:
+	.4byte __RTTI__cf_CObjectState
+	.4byte 0
+	.4byte __RTTI__cf_CObjectParam
+	.4byte 0
+	.4byte __RTTI__cf_CfObject
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTaskGameEff
+__vt__CTaskGameEff:
+	.4byte __RTTI__CTaskGameEff
+	.4byte 0
+	.4byte func_80044D7C
+	.4byte func_80446734
+	.4byte func_80044DFC
+	.4byte func_80044EF8
+	.4byte func_80044F8C
+	.4byte func_800454AC
+	.4byte func_80043F20
+	.4byte __RTTI__CTaskGameEff
+	.4byte 0xFFFFFFAC
+	.4byte func_80045548
+	.4byte func_80045540
+	.4byte __RTTI__CTaskGameEff
+	.4byte 0xFFFFFFA8
+	.4byte func_80045558
+	.4byte func_80045550
+	.4byte func_80045038
+	.4byte func_80045044
+
+.global CTaskGameEff_hierarchy
+CTaskGameEff_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_CTaskGameEff
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__reslist_CScn
+__vt__reslist_CScn:
+	.4byte __RTTI__reslist_CScn
+	.4byte 0
+	.4byte func_80044D2C
+
+.global reslist_CScn_hierarchy
+reslist_CScn_hierarchy:
+	.4byte __RTTI___reslist_base_CScn
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___reslist_base_CScn
+__vt___reslist_base_CScn:
+	.4byte __RTTI___reslist_base_CScn
+	.4byte 0
+	.4byte func_80044C80
+
+
+.global __vt__CTaskGameEff_CEffRenderHighPrio
+__vt__CTaskGameEff_CEffRenderHighPrio:
+	.4byte __RTTI__CTaskGameEff_CEffRenderHighPrio
+	.4byte 0
+	.4byte func_80044C40
+	.4byte func_80045284
+
+.global CTaskGameEff_CEffRenderHighPrio_hierarchy
+CTaskGameEff_CEffRenderHighPrio_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_CTaskGameEff
+__vt__CTTask_CTaskGameEff:
+	.4byte __RTTI__CTTask_CTaskGameEff
+	.4byte 0
+	.4byte func_80044BF0
+	.4byte func_80446734
+	.4byte 0
+	.4byte 0
+	.4byte func_800454B0
+	.4byte func_800454F8
+	.4byte func_80043F20
+
+.global CTTask_CTaskGameEff_hierarchy
+CTTask_CTaskGameEff_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global lbl_80529548
+lbl_80529548:
+	.4byte lbl_80668630
+	.4byte func_8004559C
+	.4byte func_80045694
+	.4byte 0
+	.4byte lbl_80668638
+	.4byte func_800455E8
+	.4byte func_800456C4
+	.4byte 0
+	.4byte lbl_80668640
+	.4byte func_80045634
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global lbl_80529588
+lbl_80529588:
+	.4byte lbl_804F6260
+	.4byte getTimeIdxMin
+	.4byte 0
+	.4byte lbl_804F6270
+	.4byte getTimeIdxMax
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_805295B0
+lbl_805295B0:
+	# ROM: 0x5256B0
+	.4byte lbl_80668648
+	.4byte func_80045560
+	.4byte lbl_80529548
+	.4byte lbl_80529588
+
+
+.global lbl_805295C0
+lbl_805295C0:
+	# ROM: 0x5256C0
+	.4byte lbl_80668660
+	.4byte winTalk
+	.4byte lbl_80668668
+	.4byte pcTalk
+	.4byte lbl_804F628C
+	.4byte winTalkWait
+	.4byte lbl_804F6298
+	.4byte winTalkNoName
+	.4byte lbl_80668670
+	.4byte fadeIn_1
+	.4byte lbl_80668678
+	.4byte fadeOut_1
+	.4byte lbl_804F62A8
+	.4byte fadeWait_1
+	.4byte lbl_804F62B4
+	.4byte createCol6Sys
+	.4byte lbl_804F62C4
+	.4byte createCol6Hint
+	.4byte lbl_804F62D4
+	.4byte createCol6Invite
+	.4byte lbl_804F62E8
+	.4byte createCol6Init
+	.4byte lbl_804F62F8
+	.4byte checkCol6Bat
+	.4byte lbl_804F6308
+	.4byte simpleEventStart
+	.4byte lbl_804F631C
+	.4byte simpleEventEnd
+	.4byte lbl_804F632C
+	.4byte setTrust
+	.4byte lbl_804F6338
+	.4byte setItemMulti
+	.4byte lbl_804F6348
+	.4byte setKizunaTalk
+	.4byte lbl_80668680
+	.4byte winSys
+	.4byte lbl_804F6358
+	.4byte winSysSelect
+	.4byte lbl_804F6368
+	.4byte getSelectNum
+	.4byte lbl_804F6378
+	.4byte mesGetArts
+	.4byte lbl_804F6384
+	.4byte mesAddPT
+	.4byte lbl_804F6390
+	.4byte mesSubPT
+	.4byte lbl_804F639C
+	.4byte mesVisionON
+	.4byte lbl_804F63A8
+	.4byte mesVisionOFF
+	.4byte lbl_804F63B8
+	.4byte mesMonadoON
+	.4byte lbl_804F63C4
+	.4byte mesMonadoOFF
+	.4byte lbl_804F63D4
+	.4byte ptChangeNotice
+	.4byte lbl_80668688
+	.4byte save
+	.4byte lbl_804F63E8
+	.4byte kizunaTalkStart
+	.4byte lbl_804F63F8
+	.4byte kizunaTalkEnd
+	.4byte lbl_804F6408
+	.4byte isPrioReq
+	.4byte lbl_804F6414
+	.4byte gameClear
+	.4byte lbl_804F6420
+	.4byte setLastTalkNpc
+	.4byte lbl_804F6430
+	.4byte isSETalkVoiceWait
+	.4byte 0
+	.4byte 0
+
+.global cf_CfObjectPc_hierarchy
+cf_CfObjectPc_hierarchy:
+	.4byte __RTTI__cf_CObjectState
+	.4byte 0x00003E9C
+	.4byte __RTTI__cf_CObjectParam
+	.4byte 0x00003E9C
+	.4byte __RTTI__cf_CfObject
+	.4byte 0x00003E9C
+	.4byte __RTTI__cf_CfObjectModel
+	.4byte 0x00003E9C
+	.4byte __RTTI__cf_CfObjectMove
+	.4byte 0x00003E9C
+	.4byte __RTTI__cf_CAIAction
+	.4byte 0x00003380
+	.4byte __RTTI__cf_CDebugState
+	.4byte 0x000015DC
+	.4byte __RTTI__cf_CBattleState
+	.4byte 0x00000008
+	.4byte __RTTI__cf_CActorState
+	.4byte 0
+	.4byte __RTTI__cf_CActorParam
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectActor
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80529740
+lbl_80529740:
+	# ROM: 0x525840
+	.4byte lbl_80668698
+	.4byte getFlag
+	.4byte lbl_806686A0
+	.4byte setFlag
+	.4byte lbl_804F6480
+	.4byte getAwardFlagF16
+	.4byte lbl_804F6490
+	.4byte addAwardFlagF16
+	.4byte lbl_804F64A0
+	.4byte setAwardFlagF1
+	.4byte lbl_804F64B0
+	.4byte realtimeEventStart
+	.4byte lbl_804F64C4
+	.4byte realtimeEventPlay
+	.4byte lbl_804F64D8
+	.4byte realtimeEventEnd
+	.4byte lbl_804F64EC
+	.4byte waitRealtimeEvent
+	.4byte lbl_804F6500
+	.4byte checkEvent
+	.4byte lbl_804F650C
+	.4byte clearEventSkip
+	.4byte lbl_806686A8
+	.4byte isEvent
+	.4byte lbl_804F651C
+	.4byte isTalkEvent
+	.4byte lbl_804F6528
+	.4byte isVisionEvent
+	.4byte lbl_806686B0
+	.4byte onTalk
+	.4byte lbl_804F6538
+	.4byte onTalkEnd
+	.4byte lbl_806686B8
+	.4byte fadeIn
+	.4byte lbl_806686C0
+	.4byte fadeOut
+	.4byte lbl_804F6544
+	.4byte fadeWait
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_805297E0
+lbl_805297E0:
+	# ROM: 0x5258E0
+	.4byte lbl_806686E8
+	.4byte mapJump
+	.4byte lbl_804F6558
+	.4byte setMapJumpArea
+	.4byte lbl_804F6568
+	.4byte setMapJumpAreaBox
+	.4byte lbl_804F657C
+	.4byte setWarpArea
+	.4byte lbl_804F6588
+	.4byte setMapPreloadArea
+	.4byte lbl_804F659C
+	.4byte setMapPreloadArea2
+	.4byte lbl_804F65B0
+	.4byte setEventArea
+	.4byte lbl_804F65C0
+	.4byte delEventArea
+	.4byte lbl_804F65D0
+	.4byte setTownArea
+	.4byte lbl_804F65DC
+	.4byte setPopSheet
+	.4byte lbl_804F65E8
+	.4byte addPopID
+	.4byte lbl_804F65F4
+	.4byte setTimeSpeed
+	.4byte lbl_804F6604
+	.4byte changeWalker
+	.4byte lbl_804F6614
+	.4byte eventStart
+	.4byte lbl_804F6620
+	.4byte eventEnd
+	.4byte lbl_804F662C
+	.4byte battleEventStart
+	.4byte lbl_806686F0
+	.4byte delAttr
+	.4byte lbl_806686F8
+	.4byte setMono
+	.4byte lbl_804F6640
+	.4byte setMapDispID
+	.4byte lbl_804F6650
+	.4byte loadCfEvent
+	.4byte lbl_80668700
+	.4byte addItem
+	.4byte lbl_80668708
+	.4byte delItem
+	.4byte lbl_804F665C
+	.4byte totalItem
+	.4byte lbl_804F6668
+	.4byte equipItem
+	.4byte lbl_804F6674
+	.4byte equipWeapon
+	.4byte lbl_804F6680
+	.4byte getWeaponSlot
+	.4byte lbl_804F6690
+	.4byte setWeaponSlot
+	.4byte lbl_804F66A0
+	.4byte waitEventRes
+	.4byte lbl_804F66B0
+	.4byte waitCfEvent
+	.4byte lbl_804F66BC
+	.4byte isMainParty
+	.4byte lbl_804F66C8
+	.4byte isResvParty
+	.4byte lbl_804F66D4
+	.4byte addParty
+	.4byte lbl_804F66E0
+	.4byte delParty
+	.4byte lbl_804F66EC
+	.4byte makeParty
+	.4byte lbl_804F66F8
+	.4byte makeGuestParty
+	.4byte lbl_80668710
+	.4byte setFade
+	.4byte lbl_804F6708
+	.4byte applyPcPrm
+	.4byte lbl_804F6714
+	.4byte setDispOffArea
+	.4byte lbl_804F6724
+	.4byte setWeather
+	.4byte lbl_804F6730
+	.4byte setWeatherArea
+	.4byte lbl_804F6740
+	.4byte setGimmick
+	.4byte lbl_804F674C
+	.4byte setElvGim
+	.4byte lbl_804F6758
+	.4byte setActMapObj
+	.4byte lbl_804F6768
+	.4byte getMapID
+	.4byte lbl_804F6774
+	.4byte clearGimmickJump
+	.4byte lbl_804F6788
+	.4byte partyMember
+	.4byte lbl_804F6798
+	.4byte clearPartyGauge
+	.4byte lbl_80668718
+	.4byte waitPop
+	.4byte lbl_804F67A8
+	.4byte partyWarp
+	.4byte lbl_804F67B4
+	.4byte setMoney
+	.4byte lbl_804F67C0
+	.4byte addMoney
+	.4byte lbl_804F67CC
+	.4byte isTimeSkip
+	.4byte lbl_804F67D8
+	.4byte delHoldBox
+	.4byte lbl_804F67E4
+	.4byte getWeaponID
+	.4byte lbl_804F67F0
+	.4byte clearTbox
+	.4byte lbl_804F6800
+	.4byte setScheduleType
+	.4byte lbl_804F6810
+	.4byte returnTitle
+	.4byte lbl_804F681C
+	.4byte dispLoading
+	.4byte lbl_804F6828
+	.4byte addItemLimit
+	.4byte lbl_804F6838
+	.4byte clearItemLimit
+	.4byte lbl_804F6848
+	.4byte clearEquipGem
+	.4byte lbl_804F6858
+	.4byte setPcCtrl
+	.4byte lbl_804F6864
+	.4byte setFieldVision
+	.4byte lbl_804F6874
+	.4byte saveNamedCount
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_805299E8
+lbl_805299E8:
+	# ROM: 0x525AE8
+	.4byte lbl_80668720
+	.4byte random
+	.4byte 0
+	.4byte 0
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfObjectEff_typestr
+cf_CfObjectEff_typestr:
+	.asciz "cf::CfObjectEff"
+
+.global CTaskGameEff_typestr
+CTaskGameEff_typestr:
+	.asciz "CTaskGameEff"
+	.balign 4
+
+.global reslist_CScn_typestr
+reslist_CScn_typestr:
+	.asciz "reslist<CScn *>"
+
+.global _reslist_base_CScn_typestr
+_reslist_base_CScn_typestr:
+	.asciz "_reslist_base<CScn *>"
+	.balign 4
+
+.global CTaskGameEff_CEffRenderHighPrio_typestr
+CTaskGameEff_CEffRenderHighPrio_typestr:
+	.asciz "CTaskGameEff::CEffRenderHighPrio"
+	.balign 4
+
+.global CTTask_CTaskGameEff_typestr
+CTTask_CTaskGameEff_typestr:
+	.asciz "CTTask<CTaskGameEff>"
+	.balign 4
+	.4byte 0
+
+.global lbl_804F6260
+lbl_804F6260:
+	.asciz "getTimeIdxMin"
+	.balign 4
+
+.global lbl_804F6270
+lbl_804F6270:
+	.asciz "getTimeIdxMax"
+	.balign 4
+
+.global lbl_804F6280
+lbl_804F6280:
+	.4byte 0x00000010
+	.4byte 0x00100000
+	.4byte 0x00200000
+
+.global lbl_804F628C
+lbl_804F628C:
+	.asciz "winTalkWait"
+
+.global lbl_804F6298
+lbl_804F6298:
+	.asciz "winTalkNoName"
+	.balign 4
+
+.global lbl_804F62A8
+lbl_804F62A8:
+	.asciz "fadeWait"
+	.balign 4
+
+.global lbl_804F62B4
+lbl_804F62B4:
+	.asciz "createCol6Sys"
+	.balign 4
+
+.global lbl_804F62C4
+lbl_804F62C4:
+	.asciz "createCol6Hint"
+	.balign 4
+
+.global lbl_804F62D4
+lbl_804F62D4:
+	.asciz "createCol6Invite"
+	.balign 4
+
+.global lbl_804F62E8
+lbl_804F62E8:
+	.asciz "createCol6Init"
+	.balign 4
+
+.global lbl_804F62F8
+lbl_804F62F8:
+	.asciz "checkCol6Bat"
+	.balign 4
+
+.global lbl_804F6308
+lbl_804F6308:
+	.asciz "simpleEventStart"
+	.balign 4
+
+.global lbl_804F631C
+lbl_804F631C:
+	.asciz "simpleEventEnd"
+	.balign 4
+
+.global lbl_804F632C
+lbl_804F632C:
+	.asciz "setTrust"
+	.balign 4
+
+.global lbl_804F6338
+lbl_804F6338:
+	.asciz "setItemMulti"
+	.balign 4
+
+.global lbl_804F6348
+lbl_804F6348:
+	.asciz "setKizunaTalk"
+	.balign 4
+
+.global lbl_804F6358
+lbl_804F6358:
+	.asciz "winSysSelect"
+	.balign 4
+
+.global lbl_804F6368
+lbl_804F6368:
+	.asciz "getSelectNum"
+	.balign 4
+
+.global lbl_804F6378
+lbl_804F6378:
+	.asciz "mesGetArts"
+	.balign 4
+
+.global lbl_804F6384
+lbl_804F6384:
+	.asciz "mesAddPT"
+	.balign 4
+
+.global lbl_804F6390
+lbl_804F6390:
+	.asciz "mesSubPT"
+	.balign 4
+
+.global lbl_804F639C
+lbl_804F639C:
+	.asciz "mesVisionON"
+
+.global lbl_804F63A8
+lbl_804F63A8:
+	.asciz "mesVisionOFF"
+	.balign 4
+
+.global lbl_804F63B8
+lbl_804F63B8:
+	.asciz "mesMonadoON"
+
+.global lbl_804F63C4
+lbl_804F63C4:
+	.asciz "mesMonadoOFF"
+	.balign 4
+
+.global lbl_804F63D4
+lbl_804F63D4:
+	.asciz "ptChangeNotice"
+	.balign 4
+	.4byte 0
+
+.global lbl_804F63E8
+lbl_804F63E8:
+	.asciz "kizunaTalkStart"
+
+.global lbl_804F63F8
+lbl_804F63F8:
+	.asciz "kizunaTalkEnd"
+	.balign 4
+
+.global lbl_804F6408
+lbl_804F6408:
+	.asciz "isPrioReq"
+	.balign 4
+
+.global lbl_804F6414
+lbl_804F6414:
+	.asciz "gameClear"
+	.balign 4
+
+.global lbl_804F6420
+lbl_804F6420:
+	.asciz "setLastTalkNpc"
+	.balign 4
+
+.global lbl_804F6430
+lbl_804F6430:
+	.asciz "isSETalkVoiceWait"
+	.balign 4
+
+.global cf_CfObjectPc_typestr
+cf_CfObjectPc_typestr:
+	.asciz "cf::CfObjectPc"
+	.balign 4
+
+
+.global lbl_804F6454
+lbl_804F6454:
+	.asciz "name"
+	.asciz "pc_arts"
+	.asciz "MNU_sysmes"
+	.asciz "%s%s%s"
+	.asciz "rlt_meet"
+	.asciz "ui"
+	.byte 0x00
+
+.global lbl_804F6480
+lbl_804F6480:
+	.asciz "getAwardFlagF16"
+
+.global lbl_804F6490
+lbl_804F6490:
+	.asciz "addAwardFlagF16"
+
+.global lbl_804F64A0
+lbl_804F64A0:
+	.asciz "setAwardFlagF1"
+	.balign 4
+
+.global lbl_804F64B0
+lbl_804F64B0:
+	.asciz "realtimeEventStart"
+	.balign 4
+
+.global lbl_804F64C4
+lbl_804F64C4:
+	.asciz "realtimeEventPlay"
+	.balign 4
+
+.global lbl_804F64D8
+lbl_804F64D8:
+	.asciz "realtimeEventEnd"
+	.balign 4
+
+.global lbl_804F64EC
+lbl_804F64EC:
+	.asciz "waitRealtimeEvent"
+	.balign 4
+
+.global lbl_804F6500
+lbl_804F6500:
+	.asciz "checkEvent"
+	.balign 4
+
+.global lbl_804F650C
+lbl_804F650C:
+	.asciz "clearEventSkip"
+	.balign 4
+
+.global lbl_804F651C
+lbl_804F651C:
+	.asciz "isTalkEvent"
+
+.global lbl_804F6528
+lbl_804F6528:
+	.asciz "isVisionEvent"
+	.balign 4
+
+.global lbl_804F6538
+lbl_804F6538:
+	.asciz "onTalkEnd"
+	.balign 4
+
+.global lbl_804F6544
+lbl_804F6544:
+	.asciz "fadeWait"
+	.balign 4
+
+
+.global lbl_804F6550
+lbl_804F6550:
+	.asciz "eve"
+	.4byte 0
+
+.global lbl_804F6558
+lbl_804F6558:
+	.asciz "setMapJumpArea"
+	.balign 4
+
+.global lbl_804F6568
+lbl_804F6568:
+	.asciz "setMapJumpAreaBox"
+	.balign 4
+
+.global lbl_804F657C
+lbl_804F657C:
+	.asciz "setWarpArea"
+
+.global lbl_804F6588
+lbl_804F6588:
+	.asciz "setMapPreloadArea"
+	.balign 4
+
+.global lbl_804F659C
+lbl_804F659C:
+	.asciz "setMapPreloadArea2"
+	.balign 4
+
+.global lbl_804F65B0
+lbl_804F65B0:
+	.asciz "setEventArea"
+	.balign 4
+
+.global lbl_804F65C0
+lbl_804F65C0:
+	.asciz "delEventArea"
+	.balign 4
+
+.global lbl_804F65D0
+lbl_804F65D0:
+	.asciz "setTownArea"
+
+.global lbl_804F65DC
+lbl_804F65DC:
+	.asciz "setPopSheet"
+
+.global lbl_804F65E8
+lbl_804F65E8:
+	.asciz "addPopID"
+	.balign 4
+
+.global lbl_804F65F4
+lbl_804F65F4:
+	.asciz "setTimeSpeed"
+	.balign 4
+
+.global lbl_804F6604
+lbl_804F6604:
+	.asciz "changeWalker"
+	.balign 4
+
+.global lbl_804F6614
+lbl_804F6614:
+	.asciz "eventStart"
+	.balign 4
+
+.global lbl_804F6620
+lbl_804F6620:
+	.asciz "eventEnd"
+	.balign 4
+
+.global lbl_804F662C
+lbl_804F662C:
+	.asciz "battleEventStart"
+	.balign 4
+
+.global lbl_804F6640
+lbl_804F6640:
+	.asciz "setMapDispID"
+	.balign 4
+
+.global lbl_804F6650
+lbl_804F6650:
+	.asciz "loadCfEvent"
+
+.global lbl_804F665C
+lbl_804F665C:
+	.asciz "totalItem"
+	.balign 4
+
+.global lbl_804F6668
+lbl_804F6668:
+	.asciz "equipItem"
+	.balign 4
+
+.global lbl_804F6674
+lbl_804F6674:
+	.asciz "equipWeapon"
+
+.global lbl_804F6680
+lbl_804F6680:
+	.asciz "getWeaponSlot"
+	.balign 4
+
+.global lbl_804F6690
+lbl_804F6690:
+	.asciz "setWeaponSlot"
+	.balign 4
+
+.global lbl_804F66A0
+lbl_804F66A0:
+	.asciz "waitEventRes"
+	.balign 4
+
+.global lbl_804F66B0
+lbl_804F66B0:
+	.asciz "waitCfEvent"
+
+.global lbl_804F66BC
+lbl_804F66BC:
+	.asciz "isMainParty"
+
+.global lbl_804F66C8
+lbl_804F66C8:
+	.asciz "isResvParty"
+
+.global lbl_804F66D4
+lbl_804F66D4:
+	.asciz "addParty"
+	.balign 4
+
+.global lbl_804F66E0
+lbl_804F66E0:
+	.asciz "delParty"
+	.balign 4
+
+.global lbl_804F66EC
+lbl_804F66EC:
+	.asciz "makeParty"
+	.balign 4
+
+.global lbl_804F66F8
+lbl_804F66F8:
+	.asciz "makeGuestParty"
+	.balign 4
+
+.global lbl_804F6708
+lbl_804F6708:
+	.asciz "applyPcPrm"
+	.balign 4
+
+.global lbl_804F6714
+lbl_804F6714:
+	.asciz "setDispOffArea"
+	.balign 4
+
+.global lbl_804F6724
+lbl_804F6724:
+	.asciz "setWeather"
+	.balign 4
+
+.global lbl_804F6730
+lbl_804F6730:
+	.asciz "setWeatherArea"
+	.balign 4
+
+.global lbl_804F6740
+lbl_804F6740:
+	.asciz "setGimmick"
+	.balign 4
+
+.global lbl_804F674C
+lbl_804F674C:
+	.asciz "setElvGim"
+	.balign 4
+
+.global lbl_804F6758
+lbl_804F6758:
+	.asciz "setActMapObj"
+	.balign 4
+
+.global lbl_804F6768
+lbl_804F6768:
+	.asciz "getMapID"
+	.balign 4
+
+.global lbl_804F6774
+lbl_804F6774:
+	.asciz "clearGimmickJump"
+	.balign 4
+
+.global lbl_804F6788
+lbl_804F6788:
+	.asciz "partyMember"
+	.4byte 0
+
+.global lbl_804F6798
+lbl_804F6798:
+	.asciz "clearPartyGauge"
+
+.global lbl_804F67A8
+lbl_804F67A8:
+	.asciz "partyWarp"
+	.balign 4
+
+.global lbl_804F67B4
+lbl_804F67B4:
+	.asciz "setMoney"
+	.balign 4
+
+.global lbl_804F67C0
+lbl_804F67C0:
+	.asciz "addMoney"
+	.balign 4
+
+.global lbl_804F67CC
+lbl_804F67CC:
+	.asciz "isTimeSkip"
+	.balign 4
+
+.global lbl_804F67D8
+lbl_804F67D8:
+	.asciz "delHoldBox"
+	.balign 4
+
+.global lbl_804F67E4
+lbl_804F67E4:
+	.asciz "getWeaponID"
+
+.global lbl_804F67F0
+lbl_804F67F0:
+	.asciz "clearTbox"
+	.balign 4
+	.4byte 0
+
+.global lbl_804F6800
+lbl_804F6800:
+	.asciz "setScheduleType"
+
+.global lbl_804F6810
+lbl_804F6810:
+	.asciz "returnTitle"
+
+.global lbl_804F681C
+lbl_804F681C:
+	.asciz "dispLoading"
+
+.global lbl_804F6828
+lbl_804F6828:
+	.asciz "addItemLimit"
+	.balign 4
+
+.global lbl_804F6838
+lbl_804F6838:
+	.asciz "clearItemLimit"
+	.balign 4
+
+.global lbl_804F6848
+lbl_804F6848:
+	.asciz "clearEquipGem"
+	.balign 4
+
+.global lbl_804F6858
+lbl_804F6858:
+	.asciz "setPcCtrl"
+	.balign 4
+
+.global lbl_804F6864
+lbl_804F6864:
+	.asciz "setFieldVision"
+	.balign 4
+
+.global lbl_804F6874
+lbl_804F6874:
+	.asciz "saveNamedCount"
+	.balign 4
+
+
+.global lbl_804F6884
+lbl_804F6884:
+	# ROM: 0x4F2984
+	.4byte 0x616D0070
+	.4byte 0x6D006366
+	.4byte 0x73000000
+
+
+.global lbl_804F6890
+lbl_804F6890:
+	.asciz "math"
+	.balign 4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CfObjectEff
+__RTTI__cf_CfObjectEff:
+	.4byte cf_CfObjectEff_typestr
+	.4byte cf_CfObjectEff_hierarchy
+
+.global __RTTI__CTaskGameEff
+__RTTI__CTaskGameEff:
+	.4byte CTaskGameEff_typestr
+	.4byte CTaskGameEff_hierarchy
+
+.global __RTTI__reslist_CScn
+__RTTI__reslist_CScn:
+	.4byte reslist_CScn_typestr
+	.4byte reslist_CScn_hierarchy
+
+.global __RTTI___reslist_base_CScn
+__RTTI___reslist_base_CScn:
+	.4byte _reslist_base_CScn_typestr
+	.4byte 0
+
+.global __RTTI__CTaskGameEff_CEffRenderHighPrio
+__RTTI__CTaskGameEff_CEffRenderHighPrio:
+	.4byte CTaskGameEff_CEffRenderHighPrio_typestr
+	.4byte CTaskGameEff_CEffRenderHighPrio_hierarchy
+
+.global __RTTI__CTTask_CTaskGameEff
+__RTTI__CTTask_CTaskGameEff:
+	.4byte CTTask_CTaskGameEff_typestr
+	.4byte CTTask_CTaskGameEff_hierarchy
+
+
+.global __RTTI__cf_CfObjectPc
+__RTTI__cf_CfObjectPc:
+	.4byte cf_CfObjectPc_typestr
+	.4byte cf_CfObjectPc_hierarchy
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666640
+lbl_80666640:
+	.skip 0x8
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80668628
+lbl_80668628:
+	# ROM: 0x572488
+	.float 1.0
+
+.global lbl_8066862C
+lbl_8066862C:
+	# ROM: 0x57248C
+	.4byte 0
+
+.global lbl_80668630
+lbl_80668630:
+	.asciz "hour"
+	.balign 4
+
+.global lbl_80668638
+lbl_80668638:
+	.asciz "min"
+	.4byte 0
+
+.global lbl_80668640
+lbl_80668640:
+	.asciz "timeIdx"
+
+.global lbl_80668648
+lbl_80668648:
+	.4byte 0x63667000
+	.4byte 0
+
+
+.global lbl_80668650
+lbl_80668650:
+	# ROM: 0x5724B0
+	.float -1.0
+	.4byte 0
+
+
+.global lbl_80668658
+lbl_80668658:
+	# ROM: 0x5724B8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.global lbl_80668660
+lbl_80668660:
+	.asciz "winTalk"
+
+.global lbl_80668668
+lbl_80668668:
+	.asciz "pcTalk"
+	.balign 4
+
+.global lbl_80668670
+lbl_80668670:
+	.asciz "fadeIn"
+	.balign 4
+
+.global lbl_80668678
+lbl_80668678:
+	.asciz "fadeOut"
+
+.global lbl_80668680
+lbl_80668680:
+	.asciz "winSys"
+	.balign 4
+
+.global lbl_80668688
+lbl_80668688:
+	.asciz "save"
+	.balign 4
+
+
+.global lbl_80668690
+lbl_80668690:
+	# ROM: 0x5724F0
+	.4byte 0
+
+
+.global lbl_80668694
+lbl_80668694:
+	# ROM: 0x5724F4
+	.float 1.0
+
+.global lbl_80668698
+lbl_80668698:
+	.asciz "getFlag"
+
+.global lbl_806686A0
+lbl_806686A0:
+	.asciz "setFlag"
+
+.global lbl_806686A8
+lbl_806686A8:
+	.asciz "isEvent"
+
+.global lbl_806686B0
+lbl_806686B0:
+	.asciz "onTalk"
+	.balign 4
+
+.global lbl_806686B8
+lbl_806686B8:
+	.asciz "fadeIn"
+	.balign 4
+
+.global lbl_806686C0
+lbl_806686C0:
+	.asciz "fadeOut"
+
+
+.global lbl_806686C8
+lbl_806686C8:
+	# ROM: 0x572528
+	.4byte 0x45800000
+
+
+.global lbl_806686CC
+lbl_806686CC:
+	# ROM: 0x57252C
+	.4byte 0x43B40000
+
+
+.global lbl_806686D0
+lbl_806686D0:
+	# ROM: 0x572530
+	.float 0.5
+
+
+.global lbl_806686D4
+lbl_806686D4:
+	# ROM: 0x572534
+	.4byte 0x40800000
+
+
+.global lbl_806686D8
+lbl_806686D8:
+	# ROM: 0x572538
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_806686E0
+lbl_806686E0:
+	# ROM: 0x572540
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_806686E4
+lbl_806686E4:
+	# ROM: 0x572544
+	.4byte 0
+
+.global lbl_806686E8
+lbl_806686E8:
+	.asciz "mapJump"
+
+.global lbl_806686F0
+lbl_806686F0:
+	.asciz "delAttr"
+
+.global lbl_806686F8
+lbl_806686F8:
+	.asciz "setMono"
+
+.global lbl_80668700
+lbl_80668700:
+	.asciz "addItem"
+
+.global lbl_80668708
+lbl_80668708:
+	.asciz "delItem"
+
+.global lbl_80668710
+lbl_80668710:
+	.asciz "setFade"
+
+.global lbl_80668718
+lbl_80668718:
+	.asciz "waitPop"
+
+.global lbl_80668720
+lbl_80668720:
+	.asciz "random"
+	.balign 4

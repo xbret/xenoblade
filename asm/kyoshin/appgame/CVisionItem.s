@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+
 .global func_801C51FC
 func_801C51FC:
 /* 801C51FC 0018E7BC  3C 80 80 53 */	lis r4, __vt__CVisionItem@ha
