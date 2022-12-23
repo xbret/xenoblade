@@ -4749,7 +4749,7 @@ lbl_8066D9DC:
 .global lbl_8066D9E0
 lbl_8066D9E0:
 	# ROM: 0x577840
-	.float 0.5
+	.4byte 0x3f000000
 	.4byte 0
 
 

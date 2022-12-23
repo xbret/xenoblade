@@ -42060,8 +42060,8 @@ CNReqtaskCheck_hierarchy:
 	.4byte 0
 
 
-.global __vt__CERandomizerSimple
-__vt__CERandomizerSimple:
+.global __vt__18CERandomizerSimple
+__vt__18CERandomizerSimple:
 	.4byte __RTTI__CERandomizerSimple
 	.4byte 0
 	.4byte func_804DB50C

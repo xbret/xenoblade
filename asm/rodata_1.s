@@ -1147,7 +1147,7 @@ lbl_804F8048:
 	.4byte 0
 	.4byte 0
 	.4byte 0x3DCCCCCD
-	.float 0.2
+	.4byte 0x3E4CCCCD
 	.4byte 0
 	.4byte 0x0000003D
 	.4byte 0x0000003D

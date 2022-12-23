@@ -2,13 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804DB438
-func_804DB438:
+.global __ct__CERandomizerSimple
+__ct__CERandomizerSimple:
 /* 804DB438 004A49F8  C0 02 D6 58 */	lfs f0, lbl_8066D9D8@sda21(r2)
-/* 804DB43C 004A49FC  3C 80 80 57 */	lis r4, __vt__CERandomizerSimple@ha
+/* 804DB43C 004A49FC  3C 80 80 57 */	lis r4, __vt__18CERandomizerSimple@ha
 /* 804DB440 004A4A00  38 00 3A 90 */	li r0, 0x3a90
 /* 804DB444 004A4A04  B0 03 00 04 */	sth r0, 4(r3)
-/* 804DB448 004A4A08  38 84 36 50 */	addi r4, r4, __vt__CERandomizerSimple@l
+/* 804DB448 004A4A08  38 84 36 50 */	addi r4, r4, __vt__18CERandomizerSimple@l
 /* 804DB44C 004A4A0C  90 83 00 00 */	stw r4, 0(r3)
 /* 804DB450 004A4A10  B0 03 00 06 */	sth r0, 6(r3)
 /* 804DB454 004A4A14  D0 03 00 08 */	stfs f0, 8(r3)
@@ -68,6 +68,7 @@ lbl_804DB4FC:
 /* 804DB504 004A4AC4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804DB508 004A4AC8  4E 80 00 20 */	blr 
 
+#rng function
 .global func_804DB50C
 func_804DB50C:
 /* 804DB50C 004A4ACC  A0 03 00 04 */	lhz r0, 4(r3)
@@ -367,12 +368,12 @@ func_804DB8B4:
 sinit_804DB900:
 /* 804DB900 004A4EC0  3C A0 80 66 */	lis r5, lbl_80662930@ha
 /* 804DB904 004A4EC4  3C C0 80 57 */	lis r6, __vt__CERandomizer@ha
-/* 804DB908 004A4EC8  3C 80 80 57 */	lis r4, __vt__CERandomizerSimple@ha
+/* 804DB908 004A4EC8  3C 80 80 57 */	lis r4, __vt__18CERandomizerSimple@ha
 /* 804DB90C 004A4ECC  C0 02 D6 58 */	lfs f0, lbl_8066D9D8@sda21(r2)
 /* 804DB910 004A4ED0  38 65 29 30 */	addi r3, r5, lbl_80662930@l
 /* 804DB914 004A4ED4  38 00 3A 90 */	li r0, 0x3a90
 /* 804DB918 004A4ED8  38 C6 36 78 */	addi r6, r6, __vt__CERandomizer@l
-/* 804DB91C 004A4EDC  38 84 36 50 */	addi r4, r4, __vt__CERandomizerSimple@l
+/* 804DB91C 004A4EDC  38 84 36 50 */	addi r4, r4, __vt__18CERandomizerSimple@l
 /* 804DB920 004A4EE0  90 CD C1 60 */	stw r6, lbl_806682E0@sda21(r13)
 /* 804DB924 004A4EE4  90 85 29 30 */	stw r4, lbl_80662930@l(r5)
 /* 804DB928 004A4EE8  B0 03 00 04 */	sth r0, 4(r3)

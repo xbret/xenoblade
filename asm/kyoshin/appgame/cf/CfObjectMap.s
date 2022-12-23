@@ -4,6 +4,7 @@
 
 
 #likely multiple files
+#contains IFactoryEvent?
 
 .global func_800B132C
 func_800B132C:
@@ -30,6 +31,7 @@ func_800B1368:
 /* 800B1370 0007A930  90 0D A6 60 */	stw r0, lbl_806667E0@sda21(r13)
 /* 800B1374 0007A934  4E 80 00 20 */	blr 
 
+#part of IFactoryEvent?
 .global func_800B1378
 func_800B1378:
 /* 800B1378 0007A938  4E 80 00 20 */	blr 
@@ -379,6 +381,7 @@ func_800B1808:
 /* 800B180C 0007ADCC  90 0D A6 60 */	stw r0, lbl_806667E0@sda21(r13)
 /* 800B1810 0007ADD0  4E 80 00 20 */	blr 
 
+#part of IFactoryEvent?
 .global func_800B1814
 func_800B1814:
 /* 800B1814 0007ADD4  4E 80 00 20 */	blr 
@@ -1979,6 +1982,7 @@ lbl_800B2D68:
 /* 800B2D7C 0007C33C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800B2D80 0007C340  4E 80 00 20 */	blr 
 
+#part of IFactoryEvent?
 .global func_800B2D84
 func_800B2D84:
 /* 800B2D84 0007C344  4E 80 00 20 */	blr 

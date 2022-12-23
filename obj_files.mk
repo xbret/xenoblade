@@ -1125,7 +1125,7 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_804DB0F0.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804DB240.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804DB348.o \
-	$(BUILD_DIR)/asm/monolithlib/code_804DB438.o \
+	$(BUILD_DIR)/asm/monolithlib/effect/CERandomizer.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804DB938.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804F0258.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804F5158.o
