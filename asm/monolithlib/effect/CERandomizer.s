@@ -18,8 +18,8 @@ __ct__CERandomizerSimple:
 func_804DB45C:
 /* 804DB45C 004A4A1C  2C 04 00 00 */	cmpwi r4, 0
 /* 804DB460 004A4A20  40 80 00 18 */	bge lbl_804DB478
-/* 804DB464 004A4A24  3C 80 80 66 */	lis r4, lbl_80662930@ha
-/* 804DB468 004A4A28  38 84 29 30 */	addi r4, r4, lbl_80662930@l
+/* 804DB464 004A4A24  3C 80 80 66 */	lis r4, ceRandomizerSimple@ha
+/* 804DB468 004A4A28  38 84 29 30 */	addi r4, r4, ceRandomizerSimple@l
 /* 804DB46C 004A4A2C  A0 04 00 04 */	lhz r0, 4(r4)
 /* 804DB470 004A4A30  B0 03 00 04 */	sth r0, 4(r3)
 /* 804DB474 004A4A34  48 00 00 08 */	b lbl_804DB47C
@@ -100,9 +100,9 @@ func_804DB50C:
 
 .global func_804DB574
 func_804DB574:
-/* 804DB574 004A4B34  3C 60 80 66 */	lis r3, lbl_80662930@ha
+/* 804DB574 004A4B34  3C 60 80 66 */	lis r3, ceRandomizerSimple@ha
 /* 804DB578 004A4B38  C0 02 D6 58 */	lfs f0, lbl_8066D9D8@sda21(r2)
-/* 804DB57C 004A4B3C  38 63 29 30 */	addi r3, r3, lbl_80662930@l
+/* 804DB57C 004A4B3C  38 63 29 30 */	addi r3, r3, ceRandomizerSimple@l
 /* 804DB580 004A4B40  38 00 3A 90 */	li r0, 0x3a90
 /* 804DB584 004A4B44  B0 03 00 04 */	sth r0, 4(r3)
 /* 804DB588 004A4B48  B0 03 00 06 */	sth r0, 6(r3)
@@ -113,9 +113,9 @@ func_804DB574:
 func_804DB594:
 /* 804DB594 004A4B54  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804DB598 004A4B58  7C 08 02 A6 */	mflr r0
-/* 804DB59C 004A4B5C  3C 60 80 66 */	lis r3, lbl_80662930@ha
+/* 804DB59C 004A4B5C  3C 60 80 66 */	lis r3, ceRandomizerSimple@ha
 /* 804DB5A0 004A4B60  90 01 00 24 */	stw r0, 0x24(r1)
-/* 804DB5A4 004A4B64  38 63 29 30 */	addi r3, r3, lbl_80662930@l
+/* 804DB5A4 004A4B64  38 63 29 30 */	addi r3, r3, ceRandomizerSimple@l
 /* 804DB5A8 004A4B68  C0 43 00 08 */	lfs f2, 8(r3)
 /* 804DB5AC 004A4B6C  EC 02 08 2A */	fadds f0, f2, f1
 /* 804DB5B0 004A4B70  FC 20 10 1E */	fctiwz f1, f2
@@ -366,16 +366,16 @@ func_804DB8B4:
 
 .global sinit_804DB900
 sinit_804DB900:
-/* 804DB900 004A4EC0  3C A0 80 66 */	lis r5, lbl_80662930@ha
+/* 804DB900 004A4EC0  3C A0 80 66 */	lis r5, ceRandomizerSimple@ha
 /* 804DB904 004A4EC4  3C C0 80 57 */	lis r6, __vt__CERandomizer@ha
 /* 804DB908 004A4EC8  3C 80 80 57 */	lis r4, __vt__18CERandomizerSimple@ha
 /* 804DB90C 004A4ECC  C0 02 D6 58 */	lfs f0, lbl_8066D9D8@sda21(r2)
-/* 804DB910 004A4ED0  38 65 29 30 */	addi r3, r5, lbl_80662930@l
+/* 804DB910 004A4ED0  38 65 29 30 */	addi r3, r5, ceRandomizerSimple@l
 /* 804DB914 004A4ED4  38 00 3A 90 */	li r0, 0x3a90
 /* 804DB918 004A4ED8  38 C6 36 78 */	addi r6, r6, __vt__CERandomizer@l
 /* 804DB91C 004A4EDC  38 84 36 50 */	addi r4, r4, __vt__18CERandomizerSimple@l
-/* 804DB920 004A4EE0  90 CD C1 60 */	stw r6, lbl_806682E0@sda21(r13)
-/* 804DB924 004A4EE4  90 85 29 30 */	stw r4, lbl_80662930@l(r5)
+/* 804DB920 004A4EE0  90 CD C1 60 */	stw r6, ceRandomizer@sda21(r13)
+/* 804DB924 004A4EE4  90 85 29 30 */	stw r4, ceRandomizerSimple@l(r5)
 /* 804DB928 004A4EE8  B0 03 00 04 */	sth r0, 4(r3)
 /* 804DB92C 004A4EEC  B0 03 00 06 */	sth r0, 6(r3)
 /* 804DB930 004A4EF0  D0 03 00 08 */	stfs f0, 8(r3)
@@ -484,19 +484,21 @@ lbl_8066D9D8:
 	.4byte 0
 
 
+#2147483648
 .global lbl_8066D9DC
 lbl_8066D9DC:
 	# ROM: 0x57783C
 	.4byte 0x4F000000
 
 
+#0.5
 .global lbl_8066D9E0
 lbl_8066D9E0:
-	# ROM: 0x577840
 	.4byte 0x3f000000
 	.4byte 0
 
 
+#int to float constant
 .global lbl_8066D9E8
 lbl_8066D9E8:
 	# ROM: 0x577848
@@ -531,12 +533,12 @@ lbl_8066DA00:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80662930
-lbl_80662930:
+.global ceRandomizerSimple
+ceRandomizerSimple:
 	.skip 0x10
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_806682E0
-lbl_806682E0:
+.global ceRandomizer
+ceRandomizer:
 	.skip 0x8

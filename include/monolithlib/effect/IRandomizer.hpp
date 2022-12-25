@@ -5,7 +5,7 @@
 
 //TODO: find out what is in this interface from the two inheriting classes
 class IRandomizer{
-
+public:
 };
 
 #endif
