@@ -1047,16 +1047,16 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/device/CDeviceGX.o \
 	$(BUILD_DIR)/asm/monolithlib/CDesktop.o \
 	$(BUILD_DIR)/asm/monolithlib/CException.o \
-	$(BUILD_DIR)/asm/monolithlib/CLib.o \
-	$(BUILD_DIR)/asm/monolithlib/CLibCri.o \
-	$(BUILD_DIR)/asm/monolithlib/CLibCriMoviePlay.o \
-	$(BUILD_DIR)/asm/monolithlib/CLibCriStreamingPlay.o \
-	$(BUILD_DIR)/asm/monolithlib/CLibG3d.o \
-	$(BUILD_DIR)/asm/monolithlib/CLibHbm.o \
-	$(BUILD_DIR)/asm/monolithlib/CLibHbmControl.o \
-	$(BUILD_DIR)/asm/monolithlib/CLibLayout.o \
-	$(BUILD_DIR)/asm/monolithlib/CLibStaticData.o \
-	$(BUILD_DIR)/asm/monolithlib/CLibVM.o \
+	$(BUILD_DIR)/asm/monolithlib/lib/CLib.o \
+	$(BUILD_DIR)/asm/monolithlib/lib/CLibCri.o \
+	$(BUILD_DIR)/asm/monolithlib/lib/CLibCriMoviePlay.o \
+	$(BUILD_DIR)/asm/monolithlib/lib/CLibCriStreamingPlay.o \
+	$(BUILD_DIR)/asm/monolithlib/lib/CLibG3d.o \
+	$(BUILD_DIR)/asm/monolithlib/lib/CLibHbm.o \
+	$(BUILD_DIR)/asm/monolithlib/lib/CLibHbmControl.o \
+	$(BUILD_DIR)/asm/monolithlib/lib/CLibLayout.o \
+	$(BUILD_DIR)/asm/monolithlib/lib/CLibStaticData.o \
+	$(BUILD_DIR)/asm/monolithlib/lib/CLibVM.o \
 	$(BUILD_DIR)/asm/monolithlib/CTaskLOD.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804645CC.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80468434.o \
