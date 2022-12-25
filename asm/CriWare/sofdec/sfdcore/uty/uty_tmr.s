@@ -113,3 +113,10 @@ UTY_GetTmrUnit:
 /* 803D4858 0039DE18  80 63 CE 30 */	lwz r3, utytmr_unit@l(r3)
 /* 803D485C 0039DE1C  80 84 00 04 */	lwz r4, 4(r4)
 /* 803D4860 0039DE20  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520838
+lbl_80520838:
+	.asciz "TMR_CH"
+	.balign 4

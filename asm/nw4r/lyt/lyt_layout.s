@@ -1219,3 +1219,26 @@ lbl_80400C4C:
 /* 80400C54 003CA214  7C 08 03 A6 */	mtlr r0
 /* 80400C58 003CA218  38 21 00 50 */	addi r1, r1, 0x50
 /* 80400C5C 003CA21C  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8056D258
+lbl_8056D258:
+	# ROM: 0x569358
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r3lyt6LayoutFv
+	.4byte Build__Q34nw4r3lyt6LayoutFPCvPQ34nw4r3lyt16ResourceAccessor
+	.4byte CreateAnimTransform__Q34nw4r3lyt6LayoutFv
+	.4byte CreateAnimTransform__Q34nw4r3lyt6LayoutFPCvPQ34nw4r3lyt16ResourceAccessor
+	.4byte CreateAnimTransform__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt12AnimResourcePQ34nw4r3lyt16ResourceAccessor
+	.4byte BindAnimation__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransform
+	.4byte UnbindAnimation__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransform
+	.4byte UnbindAllAnimation__Q34nw4r3lyt6LayoutFv
+	.4byte BindAnimationAuto__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt12AnimResourcePQ34nw4r3lyt16ResourceAccessor
+	.4byte SetAnimationEnable__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransformb
+	.4byte CalculateMtx__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo
+	.4byte Draw__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo
+	.4byte Animate__Q34nw4r3lyt6LayoutFUl
+	.4byte SetTagProcessor__Q34nw4r3lyt6LayoutFPQ34nw4r2ut19TagProcessorBase_w

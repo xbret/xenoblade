@@ -95,3 +95,12 @@ lbl_8037C764:
 /* 8037C76C 00345D2C  7C 08 03 A6 */	mtlr r0
 /* 8037C770 00345D30  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037C774 00345D34  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global adxf_build
+adxf_build:
+	.asciz "\nADXF/WII Ver.7.71 Build:Nov 13 2008 10:52:48\n"
+	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
+	.balign 4
+	.4byte 0

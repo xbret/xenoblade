@@ -131,3 +131,14 @@ func_8044915C:
 .global func_80449160
 func_80449160:
 /* 80449160 00412720  48 00 9A 18 */	b func_80452B78
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global __vt__CFontLayer
+__vt__CFontLayer:
+	.4byte __RTTI__CFontLayer
+	.4byte 0
+	.4byte func_80449018
+	.4byte 0

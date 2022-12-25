@@ -204,3 +204,24 @@ lbl_80368D30:
 .4byte 0
 .4byte 0
 .4byte 0
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80518D88
+lbl_80518D88:
+	.4byte 0x3FECC000
+	.4byte 0
+	.4byte 0x3FECC000
+	.4byte 0
+	.4byte 0x3FECC000
+	.4byte 0
+	.4byte 0x3FECC000
+	.4byte 0
+	.4byte 0x3FF33000
+	.4byte 0
+	.4byte 0x3FF99000
+	.4byte 0
+	.4byte 0x40000000
+	.4byte 0
+	.4byte 0x40033000
+	.4byte 0

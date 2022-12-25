@@ -5,6 +5,7 @@
 #include "monolithlib/IRandomizer.hpp"
 
 class CERandomizerSimple : IRandomizer {
+public:
     virtual u32 func_804DB50C(); //0x8
     virtual float func_804DB8B4(); //0xC
     virtual float func_804DB860(); //0x10

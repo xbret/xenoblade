@@ -1076,3 +1076,74 @@ sinit_804BD8A0:
 /* 804BD8DC 00486E9C  7C 08 03 A6 */	mtlr r0
 /* 804BD8E0 00486EA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804BD8E4 00486EA4  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_80573138
+lbl_80573138:
+	.4byte lbl_804BCBE0
+	.4byte lbl_804BCA9C
+	.4byte lbl_804BCB28
+	.4byte lbl_804BCBE0
+	.4byte lbl_804BCBE0
+	.4byte lbl_804BCAC4
+	.4byte lbl_804BCAD8
+	.4byte lbl_804BCAEC
+	.4byte lbl_804BCB00
+	.4byte lbl_804BCBE0
+	.4byte lbl_804BCB80
+	.4byte lbl_804BCB3C
+	.4byte lbl_804BCB58
+	.4byte lbl_804BCB6C
+	.4byte lbl_804BCBE0
+	.4byte lbl_804BCBE0
+	.4byte lbl_804BCB14
+	.4byte lbl_804BCB9C
+	.4byte lbl_804BCBB4
+	.4byte lbl_804BCBC8
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806663F0
+lbl_806663F0:
+	# ROM: 0x571FD0
+	.4byte 0x42480000
+
+
+.global lbl_806663F4
+lbl_806663F4:
+	# ROM: 0x571FD4
+	.4byte 0x41A00000
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D6C0
+lbl_8066D6C0:
+	# ROM: 0x577520
+	.4byte 0x3EAAAAAB
+
+
+.global lbl_8066D6C4
+lbl_8066D6C4:
+	# ROM: 0x577524
+	.4byte 0
+
+
+.global lbl_8066D6C8
+lbl_8066D6C8:
+	# ROM: 0x577528
+	.4byte 0x437F0000
+	.4byte 0
+
+#used in both game code and monolithlib
+.global lbl_8066D6D0
+lbl_8066D6D0:
+	# ROM: 0x577530
+	.4byte 0x3F350481
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80668240
+lbl_80668240:
+	.skip 0x8

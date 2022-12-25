@@ -256,3 +256,11 @@ lbl_80391D40:
 /* 80391D4C 0035B30C  7C 08 03 A6 */	mtlr r0
 /* 80391D50 0035B310  38 21 00 10 */	addi r1, r1, 0x10
 /* 80391D54 0035B314  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051BA60
+lbl_8051BA60:
+	.asciz "E0013: '%s' is different from entry file name.(LSC_ExecServer)\n"
+	.asciz "E0007: lsc->fp=NULL\n"
+	.balign 4

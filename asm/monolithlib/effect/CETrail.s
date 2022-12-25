@@ -2318,3 +2318,215 @@ lbl_804D8D40:
 /* 804D8D84 004A2344  7C 08 03 A6 */	mtlr r0
 /* 804D8D88 004A2348  38 21 00 50 */	addi r1, r1, 0x50
 /* 804D8D8C 004A234C  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global reslist_CETrail_POINT_typestr
+reslist_CETrail_POINT_typestr:
+	.asciz "reslist<CETrail::POINT>"
+
+.global _reslist_base_CETrail_POINT_typestr
+_reslist_base_CETrail_POINT_typestr:
+	.asciz "_reslist_base<CETrail::POINT>"
+	.balign 4
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CETrail
+__vt__CETrail:
+	.4byte __RTTI__CETrail
+	.4byte 0
+	.4byte func_804D728C
+
+
+.global __vt__reslist_CETrail_POINT
+__vt__reslist_CETrail_POINT:
+	.4byte __RTTI__reslist_CETrail_POINT
+	.4byte 0
+	.4byte func_804D71CC
+
+.global reslist_CETrail_POINT_hierarchy
+reslist_CETrail_POINT_hierarchy:
+	.4byte __RTTI___reslist_base_CETrail_POINT
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___reslist_base_CETrail_POINT
+__vt___reslist_base_CETrail_POINT:
+	.4byte __RTTI___reslist_base_CETrail_POINT
+	.4byte 0
+	.4byte func_804D7110
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.balign 8
+.global __RTTI__CETrail
+__RTTI__CETrail:
+	.4byte CETrail_typestr
+	.4byte 0
+
+.global __RTTI__reslist_CETrail_POINT
+__RTTI__reslist_CETrail_POINT:
+	.4byte reslist_CETrail_POINT_typestr
+	.4byte reslist_CETrail_POINT_hierarchy
+
+.global __RTTI___reslist_base_CETrail_POINT
+__RTTI___reslist_base_CETrail_POINT:
+	.4byte _reslist_base_CETrail_POINT_typestr
+	.4byte 0
+
+
+.global lbl_80666458
+lbl_80666458:
+	# ROM: 0x572038
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_8066645C
+lbl_8066645C:
+	# ROM: 0x57203C
+	.4byte 0x01000000
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D920
+lbl_8066D920:
+	# ROM: 0x577780
+	.float 0.5
+	.4byte 0
+
+
+.global lbl_8066D928
+lbl_8066D928:
+	# ROM: 0x577788
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066D930
+lbl_8066D930:
+	# ROM: 0x577790
+	.float -1.0
+	.4byte 0
+
+.global CETrail_typestr
+CETrail_typestr:
+	.asciz "CETrail"
+
+
+.global lbl_8066D940
+lbl_8066D940:
+	# ROM: 0x5777A0
+	.4byte 0
+
+
+.global lbl_8066D944
+lbl_8066D944:
+	# ROM: 0x5777A4
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066D948
+lbl_8066D948:
+	# ROM: 0x5777A8
+	.4byte 0x3F7D70A4
+
+
+.global lbl_8066D94C
+lbl_8066D94C:
+	# ROM: 0x5777AC
+	.float 1.0
+
+
+.global lbl_8066D950
+lbl_8066D950:
+	# ROM: 0x5777B0
+	.4byte 0x40400000
+
+
+.global lbl_8066D954
+lbl_8066D954:
+	# ROM: 0x5777B4
+	.4byte 0x47C34F80
+
+
+.global lbl_8066D958
+lbl_8066D958:
+	# ROM: 0x5777B8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066D960
+lbl_8066D960:
+	# ROM: 0x5777C0
+	.float 1.0
+
+
+.global lbl_8066D964
+lbl_8066D964:
+	# ROM: 0x5777C4
+	.4byte 0x41F00000
+
+
+.global lbl_8066D968
+lbl_8066D968:
+	# ROM: 0x5777C8
+	.4byte 0x437F0000
+
+
+.global lbl_8066D96C
+lbl_8066D96C:
+	# ROM: 0x5777CC
+	.float 0.5
+
+
+.global lbl_8066D970
+lbl_8066D970:
+	# ROM: 0x5777D0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066D978
+lbl_8066D978:
+	# ROM: 0x5777D8
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066D980
+lbl_8066D980:
+	# ROM: 0x5777E0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066D988
+lbl_8066D988:
+	# ROM: 0x5777E8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80662560
+lbl_80662560:
+	.skip 0x30
+.global lbl_80662590
+lbl_80662590:
+	.skip 0x30
+	
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80668290
+lbl_80668290:
+	.skip 0x4
+.global lbl_80668294
+lbl_80668294:
+	.skip 0x4
+.global lbl_80668298
+lbl_80668298:
+	.skip 0x8

@@ -125,3 +125,27 @@ func_8048D1B0:
 /* 8048D1B8 00456778  81 8C 00 14 */	lwz r12, 0x14(r12)
 /* 8048D1BC 0045677C  7D 89 03 A6 */	mtctr r12
 /* 8048D1C0 00456780  4E 80 04 20 */	bctr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnLightMan_typestr
+CScnLightMan_typestr:
+	.asciz "CScnLightMan"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnLightMan
+__vt__CScnLightMan:
+	.4byte __RTTI__CScnLightMan
+	.4byte 0
+	.4byte func_8048D0E4
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnLightMan
+__RTTI__CScnLightMan:
+	.4byte CScnLightMan_typestr
+	.4byte 0

@@ -143,3 +143,11 @@ SFX_ShiftYccPtrByPix:
 /* 803D4A0C 0039DFCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D4A10 0039DFD0  4E 80 00 20 */	blr 
 
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_80520840
+lbl_80520840:
+	.asciz "SFXZ"
+	.asciz "SFXINFE"
+	.balign 4

@@ -512,3 +512,21 @@ lbl_8038A174:
 /* 8038A17C 0035373C  38 04 00 04 */	addi r0, r4, 4
 /* 8038A180 00353740  B0 05 00 00 */	sth r0, 0(r5)
 /* 8038A184 00353744  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051AAD8
+lbl_8051AAD8:
+	# ROM: 0x516BD8
+	.float 6.2831853
+	.4byte 0
+	.4byte 0x40000000
+	.4byte 0
+	.float 1.0
+	.4byte 0x45800000
+	.4byte 0x40000000
+	.4byte 0
+	.4byte 0x43300000
+	.4byte 0x80000000
+	.asciz "(c)CRI"
+	.balign 4

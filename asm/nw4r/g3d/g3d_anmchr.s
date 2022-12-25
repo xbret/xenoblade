@@ -2339,3 +2339,150 @@ GetTypeObj__Q34nw4r3g3d9AnmObjChrCFv:
 /* 803E5D00 003AF2C0  3C 60 80 52 */	lis r3, lbl_80520ED8@ha
 /* 803E5D04 003AF2C4  38 63 0E D8 */	addi r3, r3, lbl_80520ED8@l
 /* 803E5D08 003AF2C8  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_80520ED8
+lbl_80520ED8:
+	# ROM: 0x51CFD8
+	.4byte 0x0000000A
+	.asciz "AnmObjChr"
+	.balign 4
+
+
+.global lbl_80520EE8
+lbl_80520EE8:
+	# ROM: 0x51CFE8
+	.4byte 0x0000000E
+	.asciz "AnmObjChrNode"
+	.balign 4
+
+
+.global lbl_80520EFC
+lbl_80520EFC:
+	# ROM: 0x51CFFC
+	.4byte 0x0000000F
+	.asciz "AnmObjChrBlend"
+	.balign 4
+
+
+.global lbl_80520F10
+lbl_80520F10:
+	# ROM: 0x51D010
+	.4byte 0x0000000D
+	.asciz "AnmObjChrRes"
+	.balign 4
+	.4byte 0
+
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8056CC10
+lbl_8056CC10:
+	# ROM: 0x568D10
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjChrResCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d12AnmObjChrResFUlUlPv
+	.4byte __dt__Q34nw4r3g3d12AnmObjChrResFv
+	.4byte GetTypeObj__Q34nw4r3g3d12AnmObjChrResCFv
+	.4byte GetTypeName__Q34nw4r3g3d12AnmObjChrResCFv
+	.4byte SetFrame__Q34nw4r3g3d12AnmObjChrResFf
+	.4byte GetFrame__Q34nw4r3g3d12AnmObjChrResCFv
+	.4byte UpdateFrame__Q34nw4r3g3d12AnmObjChrResFv
+	.4byte SetUpdateRate__Q34nw4r3g3d12AnmObjChrResFf
+	.4byte GetUpdateRate__Q34nw4r3g3d12AnmObjChrResCFv
+	.4byte Bind__Q34nw4r3g3d12AnmObjChrResFQ34nw4r3g3d6ResMdl
+	.4byte Release__Q34nw4r3g3d9AnmObjChrFv
+	.4byte GetResult__Q34nw4r3g3d12AnmObjChrResFPQ34nw4r3g3d12ChrAnmResultUl
+	.4byte Attach__Q34nw4r3g3d9AnmObjChrFiPQ34nw4r3g3d12AnmObjChrRes
+	.4byte Detach__Q34nw4r3g3d9AnmObjChrFi
+	.4byte DetachAll__Q34nw4r3g3d9AnmObjChrFv
+	.4byte SetWeight__Q34nw4r3g3d9AnmObjChrFif
+	.4byte GetWeight__Q34nw4r3g3d9AnmObjChrCFi
+	.4byte Bind__Q34nw4r3g3d15AnmObjTexSrtResFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+	.4byte Release__Q34nw4r3g3d12AnmObjChrResFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+
+
+.global lbl_8056CC68
+lbl_8056CC68:
+	# ROM: 0x568D68
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d14AnmObjChrBlendCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d13AnmObjChrNodeFUlUlPv
+	.4byte __dt__Q34nw4r3g3d14AnmObjChrBlendFv
+	.4byte GetTypeObj__Q34nw4r3g3d14AnmObjChrBlendCFv
+	.4byte GetTypeName__Q34nw4r3g3d14AnmObjChrBlendCFv
+	.4byte SetFrame__Q34nw4r3g3d13AnmObjChrNodeFf
+	.4byte GetFrame__Q34nw4r3g3d13AnmObjChrNodeCFv
+	.4byte UpdateFrame__Q34nw4r3g3d13AnmObjChrNodeFv
+	.4byte SetUpdateRate__Q34nw4r3g3d13AnmObjChrNodeFf
+	.4byte GetUpdateRate__Q34nw4r3g3d13AnmObjChrNodeCFv
+	.4byte Bind__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdl
+	.4byte Release__Q34nw4r3g3d13AnmObjChrNodeFv
+	.4byte GetResult__Q34nw4r3g3d14AnmObjChrBlendFPQ34nw4r3g3d12ChrAnmResultUl
+	.4byte Attach__Q34nw4r3g3d13AnmObjChrNodeFiPQ34nw4r3g3d12AnmObjChrRes
+	.4byte Detach__Q34nw4r3g3d13AnmObjChrNodeFi
+	.4byte DetachAll__Q34nw4r3g3d13AnmObjChrNodeFv
+	.4byte SetWeight__Q34nw4r3g3d14AnmObjChrBlendFif
+	.4byte GetWeight__Q34nw4r3g3d14AnmObjChrBlendCFi
+	.4byte Bind__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+	.4byte Release__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+
+
+.global lbl_8056CCC0
+lbl_8056CCC0:
+	# ROM: 0x568DC0
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d13AnmObjChrNodeCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d13AnmObjChrNodeFUlUlPv
+	.4byte __dt__Q34nw4r3g3d13AnmObjChrNodeFv
+	.4byte GetTypeObj__Q34nw4r3g3d13AnmObjChrNodeCFv
+	.4byte GetTypeName__Q34nw4r3g3d13AnmObjChrNodeCFv
+	.4byte SetFrame__Q34nw4r3g3d13AnmObjChrNodeFf
+	.4byte GetFrame__Q34nw4r3g3d13AnmObjChrNodeCFv
+	.4byte UpdateFrame__Q34nw4r3g3d13AnmObjChrNodeFv
+	.4byte SetUpdateRate__Q34nw4r3g3d13AnmObjChrNodeFf
+	.4byte GetUpdateRate__Q34nw4r3g3d13AnmObjChrNodeCFv
+	.4byte Bind__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdl
+	.4byte Release__Q34nw4r3g3d13AnmObjChrNodeFv
+	.4byte 0
+	.4byte Attach__Q34nw4r3g3d13AnmObjChrNodeFiPQ34nw4r3g3d12AnmObjChrRes
+	.4byte Detach__Q34nw4r3g3d13AnmObjChrNodeFi
+	.4byte DetachAll__Q34nw4r3g3d13AnmObjChrNodeFv
+	.4byte SetWeight__Q34nw4r3g3d9AnmObjChrFif
+	.4byte GetWeight__Q34nw4r3g3d9AnmObjChrCFi
+	.4byte Bind__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+	.4byte Release__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+
+
+.global lbl_8056CD18
+lbl_8056CD18:
+	# ROM: 0x568E18
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d9AnmObjChrCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte 0
+	.4byte __dt__Q34nw4r3g3d9AnmObjChrFv
+	.4byte GetTypeObj__Q34nw4r3g3d9AnmObjChrCFv
+	.4byte GetTypeName__Q34nw4r3g3d9AnmObjChrCFv
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte Release__Q34nw4r3g3d9AnmObjChrFv
+	.4byte 0
+	.4byte Attach__Q34nw4r3g3d9AnmObjChrFiPQ34nw4r3g3d12AnmObjChrRes
+	.4byte Detach__Q34nw4r3g3d9AnmObjChrFi
+	.4byte DetachAll__Q34nw4r3g3d9AnmObjChrFv
+	.4byte SetWeight__Q34nw4r3g3d9AnmObjChrFif
+	.4byte GetWeight__Q34nw4r3g3d9AnmObjChrCFi
+	.4byte 0
+	.4byte 0

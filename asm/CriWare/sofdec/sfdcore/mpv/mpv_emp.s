@@ -494,3 +494,29 @@ lbl_803A6138:
 /* 803A6148 0036F708  7C 08 03 A6 */	mtlr r0
 /* 803A614C 0036F70C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A6150 0036F710  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+
+.global lbl_8051F708
+lbl_8051F708:
+	# ROM: 0x51B808
+	.4byte 0x00000101
+	.4byte 0x03030203
+	.4byte 0x03040204
+	.4byte 0x03050205
+	.4byte 0x07070607
+	.4byte 0x0B080A08
+	.4byte 0x09080808
+	.4byte 0x07080608
+	.4byte 0x170A160A
+	.4byte 0x150A140A
+	.4byte 0x130A120A
+	.4byte 0x230B220B
+	.4byte 0x210B200B
+	.4byte 0x1F0B1E0B
+	.4byte 0x1D0B1C0B
+	.4byte 0x1B0B1A0B
+	.4byte 0x190B180B
+	.4byte 0x0F0B080B

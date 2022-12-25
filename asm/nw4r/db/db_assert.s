@@ -346,3 +346,29 @@ SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color:
 /* 803D7804 003A0DC4  98 83 00 1E */	stb r4, 0x1e(r3)
 /* 803D7808 003A0DC8  98 03 00 1F */	stb r0, 0x1f(r3)
 /* 803D780C 003A0DCC  48 05 89 7C */	b UpdateVertexColor__Q34nw4r2ut10CharWriterFv
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8056C7B0
+lbl_8056C7B0:
+	.asciz "-------------------------------- TRACE\n"
+	.asciz "Address:   BackChain   LR save\n"
+	.asciz "%08X:  %08X    %08X "
+	.balign 4
+
+
+.global lbl_8056C810
+lbl_8056C810:
+	.asciz "%s:%d Panic:"
+	.balign 4
+
+
+.global lbl_8056C820
+lbl_8056C820:
+	.asciz "%s:%d Warning:"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0

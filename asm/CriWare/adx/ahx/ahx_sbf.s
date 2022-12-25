@@ -231,3 +231,11 @@ AHXSBF_Destroy:
 /* 8038C754 00355D14  38 80 00 00 */	li r4, 0
 /* 8038C758 00355D18  38 A0 10 14 */	li r5, 0x1014
 /* 8038C75C 00355D1C  4B C7 7B F4 */	b memset
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051ABD0
+lbl_8051ABD0:
+	.asciz "O"
+	.4byte 0
+	.2byte 0

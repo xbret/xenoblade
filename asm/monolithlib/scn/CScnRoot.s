@@ -436,3 +436,70 @@ lbl_8048F324:
 /* 8048F32C 004588EC  7C 08 03 A6 */	mtlr r0
 /* 8048F330 004588F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8048F334 004588F4  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnRoot_typestr
+CScnRoot_typestr:
+	.asciz "CScnRoot"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnRoot
+__vt__CScnRoot:
+	.4byte __RTTI__CScnRoot
+	.4byte 0
+	.4byte func_8048ED40
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte func_8048EDE0
+	.4byte func_8048EDD8
+	.4byte func_8048EDD0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnRoot
+__RTTI__CScnRoot:
+	.4byte CScnRoot_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D1A8
+lbl_8066D1A8:
+	# ROM: 0x577008
+	.4byte 0x41A00000
+
+
+.global lbl_8066D1AC
+lbl_8066D1AC:
+	# ROM: 0x57700C
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066D1B0
+lbl_8066D1B0:
+	# ROM: 0x577010
+	.4byte 0x3DA3D70A
+
+
+.global lbl_8066D1B4
+lbl_8066D1B4:
+	# ROM: 0x577014
+	.4byte 0
+
+
+.global lbl_8066D1B8
+lbl_8066D1B8:
+	# ROM: 0x577018
+	.4byte 0x43300000
+	.4byte 0x80000000

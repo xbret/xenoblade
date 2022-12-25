@@ -556,7 +556,6 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd_broadway.o \
 	$(BUILD_DIR)/asm/RevoSDK/enc/encutility.o \
 	$(BUILD_DIR)/asm/RevoSDK/enc/enc.o \
-	$(BUILD_DIR)/asm/rodata_3.o \
 	$(BUILD_DIR)/asm/RevoSDK/esp/esp.o \
 	$(BUILD_DIR)/asm/RevoSDK/euart/euart.o \
 	$(BUILD_DIR)/asm/RevoSDK/exi/EXIBios.o \
@@ -718,12 +717,14 @@ CRIWARE_O_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_dcd5.o \
 	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_dcd.o \
 	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_errs.o \
+	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_ftbl.o \
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_link.o \
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_mflt_c.o \
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_mwin2_c.o \
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_sbf2.o \
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_sbf.o \
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_sjd.o \
+	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_wtbl.o \
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/adx_hdr.o \
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_bsr.o \
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_cmn.o \
@@ -994,9 +995,6 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_80432678.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80433300.o \
 	$(BUILD_DIR)/asm/monolithlib/Operators.o \
-	$(BUILD_DIR)/asm/bss_3.o \
-	$(BUILD_DIR)/asm/sdata_3.o \
-	$(BUILD_DIR)/asm/sdata2_3.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80434F94.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80435D28.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80435DF8.o \
@@ -1006,7 +1004,7 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_80436E84.o \
 	$(BUILD_DIR)/asm/monolithlib/code_80436F20.o \
 	$(BUILD_DIR)/asm/monolithlib/code_8043738C.o \
-	$(BUILD_DIR)/asm/monolithlib/CWorkThread.o \
+	$(BUILD_DIR)/asm/monolithlib/work/CWorkThread.o \
 	$(BUILD_DIR)/asm/monolithlib/CProc.o \
 	$(BUILD_DIR)/asm/monolithlib/CProcRoot.o \
 	$(BUILD_DIR)/asm/monolithlib/CRsrcData.o \
@@ -1016,11 +1014,11 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/CView.o \
 	$(BUILD_DIR)/asm/monolithlib/CViewFrame.o \
 	$(BUILD_DIR)/asm/monolithlib/CViewRoot.o \
-	$(BUILD_DIR)/asm/monolithlib/CWorkControl.o \
-	$(BUILD_DIR)/asm/monolithlib/CWorkFlowSetup.o \
-	$(BUILD_DIR)/asm/monolithlib/CWorkRootThread.o \
-	$(BUILD_DIR)/asm/monolithlib/CWorkSystem.o \
-	$(BUILD_DIR)/asm/monolithlib/CWorkSystemMem.o \
+	$(BUILD_DIR)/asm/monolithlib/work/CWorkControl.o \
+	$(BUILD_DIR)/asm/monolithlib/work/CWorkFlowSetup.o \
+	$(BUILD_DIR)/asm/monolithlib/work/CWorkRootThread.o \
+	$(BUILD_DIR)/asm/monolithlib/work/CWorkSystem.o \
+	$(BUILD_DIR)/asm/monolithlib/work/CWorkSystemMem.o \
 	$(BUILD_DIR)/asm/monolithlib/CProcess.o \
 	$(BUILD_DIR)/asm/monolithlib/CDoubleListNode.o \
 	$(BUILD_DIR)/asm/monolithlib/CChildListNode.o \
@@ -1037,7 +1035,7 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFile.o \
 	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFileCri.o \
 	$(BUILD_DIR)/src/monolithlib/code_80450B14.o \
-	$(BUILD_DIR)/asm/monolithlib/code_80450B2C.o \
+	$(BUILD_DIR)/asm/monolithlib/device/code_80450B2C.o \
 	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFileDvd.o \
 	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFileJob.o \
 	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFileJobReadDvd.o \
@@ -1092,6 +1090,7 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/CVirtualLightObj.o \
 	$(BUILD_DIR)/asm/monolithlib/scn/CScn.o \
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnBlend.o \
+	$(BUILD_DIR)/asm/monolithlib/scn/CScnBloom.o \
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnCameraMan.o \
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnEffectActNw4r.o \
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnFadeMan.o \
@@ -1113,22 +1112,35 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/CLight.o \
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnEnvLgtCtrl.o \
 	$(BUILD_DIR)/src/monolithlib/Unknown1.o \
-	$(BUILD_DIR)/asm/sdata_4.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804C8684.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804C8718.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804CC2B8.o \
 	$(BUILD_DIR)/asm/monolithlib/effect/CETrail.o \
-	$(BUILD_DIR)/asm/monolithlib/CWorkSystemCache.o \
+	$(BUILD_DIR)/asm/monolithlib/work/CWorkSystemCache.o \
 	$(BUILD_DIR)/asm/monolithlib/nand/CNand.o \
-	$(BUILD_DIR)/asm/monolithlib/code_804DA4CC.o \
-	$(BUILD_DIR)/asm/monolithlib/code_804DAF70.o \
-	$(BUILD_DIR)/asm/monolithlib/code_804DB0F0.o \
-	$(BUILD_DIR)/asm/monolithlib/code_804DB240.o \
-	$(BUILD_DIR)/asm/monolithlib/code_804DB348.o \
+	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskSave.o \
+	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskLoad.o \
+	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskReaddir.o \
+	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskRemove.o \
+	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskCheck.o \
 	$(BUILD_DIR)/asm/monolithlib/effect/CERandomizer.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804DB938.o \
+	$(BUILD_DIR)/asm/monolithlib/work/CWorkSystemPack.o \
+	$(BUILD_DIR)/asm/monolithlib/CPackItem.o \
+	$(BUILD_DIR)/asm/monolithlib/CArcItem.o \
+	$(BUILD_DIR)/asm/monolithlib/code_804DEDA8.o \
+	$(BUILD_DIR)/asm/monolithlib/CSchedule.o \
+	$(BUILD_DIR)/asm/monolithlib/code_804E36DC.o \
+	$(BUILD_DIR)/asm/monolithlib/CScheduleList.o \
+	$(BUILD_DIR)/asm/monolithlib/CMdlMaterial.o \
+	$(BUILD_DIR)/asm/monolithlib/CMdlMouth.o \
+	$(BUILD_DIR)/asm/monolithlib/CMdlAnmUV.o \
+	$(BUILD_DIR)/asm/monolithlib/CMdlAnmEye.o \
+	$(BUILD_DIR)/asm/monolithlib/CMdlLook.o \
+	$(BUILD_DIR)/asm/monolithlib/CMdlDynamics.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804F0258.o \
-	$(BUILD_DIR)/asm/monolithlib/code_804F5158.o
+	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskSaveBanner.o \
+	$(BUILD_DIR)/asm/monolithlib/nand/CNBanner.o
 
 EXTAB_O_FILES :=\
 	$(BUILD_DIR)/asm/extab.o

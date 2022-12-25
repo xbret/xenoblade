@@ -199,3 +199,22 @@ SFUO_AddRead:
 SFUO_Seek:
 /* 803CEC94 00398254  38 60 00 00 */	li r3, 0
 /* 803CEC98 00398258  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520678
+lbl_80520678:
+	.4byte SFUO_Init
+	.4byte SFUO_Finish
+	.4byte SFUO_ExecServer
+	.4byte SFUO_Create
+	.4byte SFUO_Destroy
+	.4byte SFUO_RequestStop
+	.4byte SFUO_Start
+	.4byte SFUO_Stop
+	.4byte SFUO_Pause
+	.4byte SFUO_GetWrite
+	.4byte SFUO_AddWrite
+	.4byte SFUO_GetRead
+	.4byte SFUO_AddRead
+	.4byte SFUO_Seek

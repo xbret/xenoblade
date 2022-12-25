@@ -2988,3 +2988,70 @@ sinit_8047CA2C:
 /* 8047CA7C 0044603C  7C 08 03 A6 */	mtlr r0
 /* 8047CA80 00446040  38 21 00 10 */	addi r1, r1, 0x10
 /* 8047CA84 00446044  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D008
+lbl_8066D008:
+	# ROM: 0x576E68
+	.4byte 0
+
+
+.global lbl_8066D00C
+lbl_8066D00C:
+	# ROM: 0x576E6C
+	.float 1.0
+
+
+.global lbl_8066D010
+lbl_8066D010:
+	# ROM: 0x576E70
+	.float 0.5
+	.4byte 0
+
+
+.global lbl_8066D018
+lbl_8066D018:
+	# ROM: 0x576E78
+	.4byte 0x40800000
+	.4byte 0
+
+
+.global lbl_8066D020
+lbl_8066D020:
+	# ROM: 0x576E80
+	.float 1.0
+
+
+.global lbl_8066D024
+lbl_8066D024:
+	# ROM: 0x576E84
+	.4byte 0
+
+
+.global lbl_8066D028
+lbl_8066D028:
+	# ROM: 0x576E88
+	.4byte 0x40400000
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8065ADA0
+lbl_8065ADA0:
+	.skip 0x18
+.global lbl_8065ADB8
+lbl_8065ADB8:
+	.skip 0x18
+	
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80668188
+lbl_80668188:
+	.skip 0x4
+.global lbl_8066818C
+lbl_8066818C:
+	.skip 0x4
+.global lbl_80668190
+lbl_80668190:
+	.skip 0x8

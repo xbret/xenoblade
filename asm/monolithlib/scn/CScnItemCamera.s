@@ -1342,3 +1342,136 @@ sinit_8049FC60:
 /* 8049FCA0 00469260  D0 63 00 04 */	stfs f3, 4(r3)
 /* 8049FCA4 00469264  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8049FCA8 00469268  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80527B80
+lbl_80527B80:
+	.asciz "Camera%d"
+	.balign 4
+	.4byte 0
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnItemCamera
+__vt__CScnItemCamera:
+	.4byte __RTTI__CScnItemCamera
+	.4byte 0
+	.4byte func_8049EADC
+	.4byte func_8049F9A4
+	.4byte func_80482048
+	.4byte func_8049F8E4
+	.4byte func_8048204C
+	.4byte func_80482040
+	.4byte 0
+	.4byte func_8049EBF0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D3A0
+lbl_8066D3A0:
+	# ROM: 0x577200
+	.4byte 0
+
+
+.global lbl_8066D3A4
+lbl_8066D3A4:
+	# ROM: 0x577204
+	.4byte 0x41F00000
+
+
+.global lbl_8066D3A8
+lbl_8066D3A8:
+	# ROM: 0x577208
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066D3AC
+lbl_8066D3AC:
+	# ROM: 0x57720C
+	.4byte 0x47A60400
+
+
+.global lbl_8066D3B0
+lbl_8066D3B0:
+	# ROM: 0x577210
+	.4byte 0x40800000
+
+
+.global lbl_8066D3B4
+lbl_8066D3B4:
+	# ROM: 0x577214
+	.4byte 0x3F726E98
+
+
+.global lbl_8066D3B8
+lbl_8066D3B8:
+	# ROM: 0x577218
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066D3C0
+lbl_8066D3C0:
+	# ROM: 0x577220
+	.float 0.5
+
+
+.global lbl_8066D3C4
+lbl_8066D3C4:
+	# ROM: 0x577224
+	.4byte 0x3CC90FDB
+
+
+.global lbl_8066D3C8
+lbl_8066D3C8:
+	# ROM: 0x577228
+	.4byte 0x4222F983
+
+
+.global lbl_8066D3CC
+lbl_8066D3CC:
+	# ROM: 0x57722C
+	.float 1.0
+
+
+.global lbl_8066D3D0
+lbl_8066D3D0:
+	# ROM: 0x577230
+	.4byte 0x40000000
+
+
+.global lbl_8066D3D4
+lbl_8066D3D4:
+	# ROM: 0x577234
+	.4byte 0xC0000000
+
+
+.global lbl_8066D3D8
+lbl_8066D3D8:
+	# ROM: 0x577238
+	.float -1.0
+	.4byte 0
+
+
+.global lbl_8066D3E0
+lbl_8066D3E0:
+	# ROM: 0x577240
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066D3E8
+lbl_8066D3E8:
+	# ROM: 0x577248
+	.float 20.0
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8065AF10
+lbl_8065AF10:
+	.skip 0xC
+.global lbl_8065AF1C
+lbl_8065AF1C:
+	.skip 0x1C

@@ -634,3 +634,22 @@ lbl_8039B270:
 /* 8039B284 00364844  7C 08 03 A6 */	mtlr r0
 /* 8039B288 00364848  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039B28C 0036484C  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051CCE0
+lbl_8051CCE0:
+	.asciz "\nADXWII Ver.1.04 Build:Nov 13 2008 10:53:01\n"
+	.balign 4
+
+
+.global lbl_8051CD10
+lbl_8051CD10:
+	# ROM: 0x518E10
+	.4byte lbl_8051CCE0
+
+
+.global lbl_8051CD14
+lbl_8051CD14:
+	.asciz "1060102: Internal Error: adxm_goto_mwidle_border"
+	.balign 4

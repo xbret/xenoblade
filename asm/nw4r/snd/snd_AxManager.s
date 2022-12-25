@@ -1900,3 +1900,82 @@ lbl_8040DEA8:
 /* 8040DEB4 003D7474  7C 08 03 A6 */	mtlr r0
 /* 8040DEB8 003D7478  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DEBC 003D747C  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056DFC8
+lbl_8056DFC8:
+	# ROM: 0x56A0C8
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q44nw4r3snd6detail11BasicPlayerFv
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global lbl_8056DFF0
+lbl_8056DFF0:
+	# ROM: 0x56A0F0
+	.4byte 0
+	.4byte 0
+	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail10BasicSoundCFv
+	.4byte __dt__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte Shutdown__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte InitParam__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte 0
+	.4byte 0
+	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
+
+.global lbl_8056E028
+lbl_8056E028:
+	# ROM: 0x56A128
+	.4byte 0
+	.4byte 0
+	.4byte func_8040DE80
+	.4byte GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+
+
+.global lbl_8056E038
+lbl_8056E038:
+	# ROM: 0x56A138
+	.4byte 0
+	.4byte 0
+	.4byte func_8040DE40
+	.4byte GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+
+
+.global lbl_8056E048
+lbl_8056E048:
+	# ROM: 0x56A148
+	.4byte 0
+	.4byte 0
+	.4byte func_8040DE00
+	.4byte GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+
+
+.global lbl_8056E058
+lbl_8056E058:
+	# ROM: 0x56A158
+	.4byte 0
+	.4byte 0
+	.4byte func_8040DDC0
+	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+
+
+.global lbl_8056E068
+lbl_8056E068:
+	# ROM: 0x56A168
+	.4byte 0
+	.4byte 0
+	.4byte func_8040DD80
+	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef

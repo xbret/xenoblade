@@ -565,3 +565,24 @@ sinit_80425740:
 /* 80425740 003EED00  38 0D BC 30 */	addi r0, r13, lbl_80667DB0@sda21
 /* 80425744 003EED04  90 0D BC 80 */	stw r0, lbl_80667E00@sda21(r13)
 /* 80425748 003EED08  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056E5D0
+lbl_8056E5D0:
+	# ROM: 0x56A6D0
+	.4byte 0
+	.4byte 0
+	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv
+	.4byte __dt__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte Shutdown__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte IsPrepared__Q44nw4r3snd6detail9StrmSoundCFv
+	.4byte IsAttachedTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte DetachTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte InitParam__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundCFv
+	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte UpdateMoveValue__Q44nw4r3snd6detail9StrmSoundFv
+	.4byte UpdateParam__Q44nw4r3snd6detail9StrmSoundFv

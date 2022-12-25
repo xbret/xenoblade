@@ -761,3 +761,150 @@ sinit_804B2FB4:
 /* 804B2FE4 0047C5A4  7C 08 03 A6 */	mtlr r0
 /* 804B2FE8 0047C5A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804B2FEC 0047C5AC  4E 80 00 20 */	blr
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CColiResCall_typestr
+CColiResCall_typestr:
+	.asciz "CColiResCall"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global __vt__CColiProc
+__vt__CColiProc:
+	.4byte __RTTI__CColiProc
+	.4byte 0
+	.4byte func_804A822C
+	.4byte 0
+
+
+.global __vt__CColiResCall
+__vt__CColiResCall:
+	.4byte __RTTI__CColiResCall
+	.4byte 0
+	.4byte func_804B2FF0
+
+.global CColiResCall_hierarchy
+CColiResCall_hierarchy:
+	.4byte __RTTI__CColiProc
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80572C08
+lbl_80572C08:
+	# ROM: 0x56ED08
+	.4byte 0x00040010
+	.4byte 0x000C0018
+	.4byte 0x00300008
+	.4byte 0x003C0014
+	.4byte 0x00180000
+
+
+.global lbl_80572C1C
+lbl_80572C1C:
+	# ROM: 0x56ED1C
+	.4byte 0x00140014
+	.4byte 0x001C001C
+	.4byte 0x00340034
+	.4byte 0x00740068
+	.4byte 0
+
+
+.global lbl_80572C30
+lbl_80572C30:
+	# ROM: 0x56ED30
+	.4byte 0
+	.4byte 0x00010001
+	.4byte 0x00020002
+	.4byte 0x00030004
+	.4byte 0
+
+.global lbl_80572C44
+lbl_80572C44:
+	# ROM: 0x56ED44
+	.4byte func_804B30CC
+	.4byte func_804B30CC
+	.4byte func_804B30CC
+	.4byte func_804B30CC
+	.4byte func_804B30CC
+	.4byte func_804B31EC
+	.4byte func_804B30CC
+	.4byte func_804B30CC
+	.4byte func_804B33C8
+
+
+.global lbl_80572C68
+lbl_80572C68:
+	# ROM: 0x56ED68
+	.4byte func_804B34F4
+	.4byte func_804B3658
+	.4byte func_804B37E4
+	.4byte func_804B3970
+	.4byte func_804B3B18
+	.4byte func_804B3D1C
+	.4byte func_804B3EA8
+	.4byte func_804B4020
+	.4byte func_804B41FC
+
+
+.global lbl_80572C8C
+lbl_80572C8C:
+	# ROM: 0x56ED8C
+	.4byte func_804B43B4
+	.4byte func_804B43B4
+	.4byte func_804B4478
+	.4byte func_804B4478
+	.4byte func_804B453C
+	.4byte func_804B453C
+	.4byte func_804B45E4
+	.4byte func_804B46A8
+	.4byte func_804B476C
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__CColiResCall
+__RTTI__CColiResCall:
+	.4byte CColiResCall_typestr
+	.4byte CColiResCall_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D658
+lbl_8066D658:
+	# ROM: 0x5774B8
+	.4byte 0
+	.4byte 0
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8065F9A8
+lbl_8065F9A8:
+	.skip 0x50
+	
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80668218
+lbl_80668218:
+	.skip 0x4
+.global lbl_8066821C
+lbl_8066821C:
+	.skip 0x4
+.global lbl_80668220
+lbl_80668220:
+	.skip 0x4
+.global lbl_80668224
+lbl_80668224:
+	.skip 0x4
+.global lbl_80668228
+lbl_80668228:
+	.skip 0x8
+.global lbl_80668230
+lbl_80668230:
+	.skip 0x8

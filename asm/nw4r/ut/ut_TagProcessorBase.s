@@ -499,3 +499,26 @@ lbl_8042BDA8:
 /* 8042BDC4 003F5384  7C 08 03 A6 */	mtlr r0
 /* 8042BDC8 003F5388  38 21 00 60 */	addi r1, r1, 0x60
 /* 8042BDCC 003F538C  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8056E6E8
+lbl_8056E6E8:
+	# ROM: 0x56A7E8
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r2ut19TagProcessorBase_w_Fv
+	.4byte Process__Q34nw4r2ut19TagProcessorBase_w_FUsPQ34nw4r2ut15PrintContext_w
+	.4byte CalcRect__Q34nw4r2ut19TagProcessorBase_w_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_w
+
+
+.global lbl_8056E6FC
+lbl_8056E6FC:
+	# ROM: 0x56A7FC
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r2ut19TagProcessorBase_c_Fv
+	.4byte Process__Q34nw4r2ut19TagProcessorBase_c_FUsPQ34nw4r2ut15PrintContext_c
+	.4byte CalcRect__Q34nw4r2ut19TagProcessorBase_c_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_c

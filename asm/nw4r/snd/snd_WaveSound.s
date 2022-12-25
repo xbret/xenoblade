@@ -276,3 +276,24 @@ sinit_80429F2C:
 /* 80429F2C 003F34EC  38 0D BC 30 */	addi r0, r13, lbl_80667DB0@sda21
 /* 80429F30 003F34F0  90 0D BC 98 */	stw r0, lbl_80667E18@sda21(r13)
 /* 80429F34 003F34F4  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056E650
+lbl_8056E650:
+	# ROM: 0x56A750
+	.4byte 0
+	.4byte 0
+	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail9WaveSoundCFv
+	.4byte __dt__Q44nw4r3snd6detail9WaveSoundFv
+	.4byte Shutdown__Q44nw4r3snd6detail9WaveSoundFv
+	.4byte IsPrepared__Q44nw4r3snd6detail9WaveSoundCFv
+	.4byte IsAttachedTempSpecialHandle__Q44nw4r3snd6detail9WaveSoundFv
+	.4byte DetachTempSpecialHandle__Q44nw4r3snd6detail9WaveSoundFv
+	.4byte InitParam__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte GetBasicPlayer__Q44nw4r3snd6detail9WaveSoundFv
+	.4byte GetBasicPlayer__Q44nw4r3snd6detail9WaveSoundCFv
+	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail9WaveSoundFv
+	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv

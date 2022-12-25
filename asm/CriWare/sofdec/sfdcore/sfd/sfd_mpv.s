@@ -5506,3 +5506,65 @@ lbl_803C7B98:
 /* 803C7BA4 00391164  7C 08 03 A6 */	mtlr r0
 /* 803C7BA8 00391168  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C7BAC 0039116C  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520320
+lbl_80520320:
+	# ROM: 0x51C420
+	.4byte SFMPV_Init
+	.4byte SFMPV_Finish
+	.4byte SFMPV_ExecServer
+	.4byte SFMPV_Create
+	.4byte SFMPV_Destroy
+	.4byte SFMPV_RequestStop
+	.4byte SFMPV_Start
+	.4byte SFMPV_Stop
+	.4byte SFMPV_Pause
+	.4byte SFMPV_GetWrite
+	.4byte SFMPV_AddWrite
+	.4byte SFMPV_GetRead
+	.4byte SFMPV_AddRead
+	.4byte SFMPV_Seek
+
+
+.global lbl_80520358
+lbl_80520358:
+	# ROM: 0x51C458
+	.4byte 0
+	.4byte 0x00000018
+	.4byte 0x00000018
+	.4byte 0x00000019
+	.4byte 0x0000001E
+	.4byte 0x0000001E
+	.4byte 0x00000032
+	.4byte 0x0000003C
+	.4byte 0x0000003C
+	.4byte 0
+	.4byte 0x0001A574
+	.4byte 0x0000463E
+	.4byte 0x00000708
+	.4byte 0x00000706
+	.4byte 0x0000001C
+	.4byte 0x0000001E
+	.4byte 0x0000000A
+	.4byte 0x00000002
+	.4byte 0x00034AE8
+	.4byte 0x00008C7C
+	.4byte 0x00000E10
+	.4byte 0x00000E0C
+	.4byte 0x00000038
+	.4byte 0x0000003C
+	.4byte 0x0000000A
+	.4byte 0x00000004
+
+
+.global lbl_805203C0
+lbl_805203C0:
+	.asciz "before seek time"
+	.asciz "ptype"
+	.asciz "empty B"
+	.asciz "defect"
+	.asciz "late"
+	.byte 0x00
+	.4byte 0

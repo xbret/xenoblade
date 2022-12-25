@@ -55,3 +55,26 @@ lbl_8038C3D0:
 /* 8038C420 003559E0  7C 08 03 A6 */	mtlr r0
 /* 8038C424 003559E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038C428 003559E8  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805657B8
+lbl_805657B8:
+	# ROM: 0x5618B8
+	.4byte ahxsbf_mult_float_win0
+	.4byte ahxsbf_mult_float_win1
+	.4byte ahxsbf_mult_float_win2
+	.4byte ahxsbf_mult_float_win3
+	.4byte ahxsbf_mult_float_win4
+	.4byte ahxsbf_mult_float_win5
+	.4byte ahxsbf_mult_float_win6
+	.4byte ahxsbf_mult_float_win7
+	.4byte ahxsbf_mult_float_win8
+	.4byte ahxsbf_mult_float_win9
+	.4byte ahxsbf_mult_float_win10
+	.4byte ahxsbf_mult_float_win11
+	.4byte ahxsbf_mult_float_win12
+	.4byte ahxsbf_mult_float_win13
+	.4byte ahxsbf_mult_float_win14
+	.4byte ahxsbf_mult_float_win15

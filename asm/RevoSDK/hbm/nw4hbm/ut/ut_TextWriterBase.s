@@ -5764,3 +5764,27 @@ lbl_8033F01C:
 /* 8033F028 003085E8  7C 08 03 A6 */	mtlr r0
 /* 8033F02C 003085EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8033F030 003085F0  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+
+.global lbl_80518B40
+lbl_80518B40:
+	# ROM: 0x514C40
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80518B48
+lbl_80518B48:
+	# ROM: 0x514C48
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80518B50
+lbl_80518B50:
+	# ROM: 0x514C50
+	.float 0.5
+	.4byte 0

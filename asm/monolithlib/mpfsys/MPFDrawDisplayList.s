@@ -5041,3 +5041,216 @@ func_8047983C:
 .global func_80479840
 func_80479840:
 /* 80479840 00442E00  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global mpfsys_MPFDrawDisplayList_typestr
+mpfsys_MPFDrawDisplayList_typestr:
+	.asciz "mpfsys::MPFDrawDisplayList"
+	.balign 4
+	.4byte 0
+
+.global mpfsys_MPFDraw_typestr
+mpfsys_MPFDraw_typestr:
+	.asciz "mpfsys::MPFDraw"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__mpfsys_MPFDrawDisplayList
+__vt__mpfsys_MPFDrawDisplayList:
+	.4byte __RTTI__mpfsys_MPFDrawDisplayList
+	.4byte 0
+	.4byte func_80479840
+	.4byte func_8047983C
+
+.global mpfsys_MPFDrawDisplayList_hierarchy
+mpfsys_MPFDrawDisplayList_hierarchy:
+	.4byte __RTTI__mpfsys_MPFDraw
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__mpfsys_MPFDrawDisplayList
+__RTTI__mpfsys_MPFDrawDisplayList:
+	.4byte mpfsys_MPFDrawDisplayList_typestr
+	.4byte mpfsys_MPFDrawDisplayList_hierarchy
+
+.global __RTTI__mpfsys_MPFDraw
+__RTTI__mpfsys_MPFDraw:
+	.4byte mpfsys_MPFDraw_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066CFA0
+lbl_8066CFA0:
+	# ROM: 0x576E00
+	.4byte 0x47C35000
+
+
+.global lbl_8066CFA4
+lbl_8066CFA4:
+	# ROM: 0x576E04
+	.4byte 0xC7C35000
+
+
+.global lbl_8066CFA8
+lbl_8066CFA8:
+	# ROM: 0x576E08
+	.4byte 0
+
+
+.global lbl_8066CFAC
+lbl_8066CFAC:
+	# ROM: 0x576E0C
+	.4byte 0xBA83126F
+
+
+.global lbl_8066CFB0
+lbl_8066CFB0:
+	# ROM: 0x576E10
+	.float 1.0
+
+
+.global lbl_8066CFB4
+lbl_8066CFB4:
+	# ROM: 0x576E14
+	.4byte 0x3A83126F
+
+
+.global lbl_8066CFB8
+lbl_8066CFB8:
+	# ROM: 0x576E18
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066CFC0
+lbl_8066CFC0:
+	# ROM: 0x576E20
+	.float 0.2
+
+
+.global lbl_8066CFC4
+lbl_8066CFC4:
+	# ROM: 0x576E24
+	.4byte 0x3F4CCCCD
+
+
+.global lbl_8066CFC8
+lbl_8066CFC8:
+	# ROM: 0x576E28
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066CFD0
+lbl_8066CFD0:
+	# ROM: 0x576E30
+	.4byte 0x40000000
+
+
+.global lbl_8066CFD4
+lbl_8066CFD4:
+	# ROM: 0x576E34
+	.float 0.5
+
+
+.global lbl_8066CFD8
+lbl_8066CFD8:
+	# ROM: 0x576E38
+	.4byte 0xC61C4000
+
+
+.global lbl_8066CFDC
+lbl_8066CFDC:
+	# ROM: 0x576E3C
+	.float 0.25
+
+
+.global lbl_8066CFE0
+lbl_8066CFE0:
+	# ROM: 0x576E40
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066CFE4
+lbl_8066CFE4:
+	# ROM: 0x576E44
+	.float 10.0
+
+
+.global lbl_8066CFE8
+lbl_8066CFE8:
+	# ROM: 0x576E48
+	.4byte 0x43480000
+
+
+.global lbl_8066CFEC
+lbl_8066CFEC:
+	# ROM: 0x576E4C
+	.4byte 0x41F00000
+
+
+.global lbl_8066CFF0
+lbl_8066CFF0:
+	# ROM: 0x576E50
+	.4byte 0x428C0000
+
+
+.global lbl_8066CFF4
+lbl_8066CFF4:
+	# ROM: 0x576E54
+	.float 100.0
+
+
+.global lbl_8066CFF8
+lbl_8066CFF8:
+	# ROM: 0x576E58
+	.4byte 0x42200000
+
+
+.global lbl_8066CFFC
+lbl_8066CFFC:
+	# ROM: 0x576E5C
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066D000
+lbl_8066D000:
+	# ROM: 0x576E60
+	.4byte 0x41A00000
+
+
+.global lbl_8066D004
+lbl_8066D004:
+	# ROM: 0x576E64
+	.4byte 0x437F0000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8065ACC8
+lbl_8065ACC8:
+	.skip 0xC
+.global lbl_8065ACD4
+lbl_8065ACD4:
+	.skip 0xC
+.global lbl_8065ACE0
+lbl_8065ACE0:
+	.skip 0x30
+.global lbl_8065AD10
+lbl_8065AD10:
+	.skip 0x30
+.global lbl_8065AD40
+lbl_8065AD40:
+	.skip 0x60
+	
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80668160
+lbl_80668160:
+	.skip 0x8

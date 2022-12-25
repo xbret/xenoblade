@@ -1836,3 +1836,84 @@ GetTypeObj__Q34nw4r3g3d6ScnObjCFv:
 /* 803F5C34 003BF1F4  3C 60 80 52 */	lis r3, lbl_80521080@ha
 /* 803F5C38 003BF1F8  38 63 10 80 */	addi r3, r3, lbl_80521080@l
 /* 803F5C3C 003BF1FC  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80521080
+lbl_80521080:
+	# ROM: 0x51D180
+	.4byte 0x00000007
+	.asciz "ScnObj"
+	.balign 4
+	.4byte 0
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056CED8
+lbl_8056CED8:
+	# ROM: 0x568FD8
+	.4byte lbl_803F4800
+	.4byte lbl_803F4698
+	.4byte lbl_803F46C0
+	.4byte lbl_803F46E8
+	.4byte lbl_803F4710
+	.4byte lbl_803F4738
+	.4byte lbl_803F4760
+	.4byte lbl_803F4788
+	.4byte lbl_803F47B0
+	.4byte lbl_803F47D8
+
+
+.global lbl_8056CF00
+lbl_8056CF00:
+	# ROM: 0x569000
+	.4byte lbl_803F48D0
+	.4byte lbl_803F4840
+	.4byte lbl_803F4850
+	.4byte lbl_803F4860
+	.4byte lbl_803F4870
+	.4byte lbl_803F4880
+	.4byte lbl_803F4890
+	.4byte lbl_803F48A0
+	.4byte lbl_803F48B0
+	.4byte lbl_803F48C0
+
+
+.global lbl_8056CF28
+lbl_8056CF28:
+	# ROM: 0x569028
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d8ScnGroupCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d8ScnGroupFUlUlPv
+	.4byte __dt__Q34nw4r3g3d8ScnGroupFv
+	.4byte GetTypeObj__Q34nw4r3g3d8ScnGroupCFv
+	.4byte GetTypeName__Q34nw4r3g3d8ScnGroupCFv
+	.4byte ForEach__Q34nw4r3g3d8ScnGroupFPFPQ34nw4r3g3d6ScnObjPv_Q44nw4r3g3d6ScnObj13ForEachResultPvb
+	.4byte SetScnObjOption__Q34nw4r3g3d6ScnObjFUlUl
+	.4byte GetScnObjOption__Q34nw4r3g3d6ScnObjCFUlPUl
+	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
+	.4byte CalcWorldMtx__Q34nw4r3g3d6ScnObjFPCQ34nw4r4math5MTX34PUl
+	.4byte Insert__Q34nw4r3g3d8ScnGroupFUlPQ34nw4r3g3d6ScnObj
+	.4byte Remove__Q34nw4r3g3d8ScnGroupFUl
+	.4byte Remove__Q34nw4r3g3d8ScnGroupFPQ34nw4r3g3d6ScnObj
+
+
+.global lbl_8056CF68
+lbl_8056CF68:
+	# ROM: 0x569068
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d6ScnObjCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte 0
+	.4byte __dt__Q34nw4r3g3d6ScnObjFv
+	.4byte GetTypeObj__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetTypeName__Q34nw4r3g3d6ScnObjCFv
+	.4byte 0
+	.4byte SetScnObjOption__Q34nw4r3g3d6ScnObjFUlUl
+	.4byte GetScnObjOption__Q34nw4r3g3d6ScnObjCFUlPUl
+	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
+	.4byte CalcWorldMtx__Q34nw4r3g3d6ScnObjFPCQ34nw4r4math5MTX34PUl
+	.4byte 0

@@ -93,3 +93,30 @@ GetTypeObj__Q34nw4r3g3d6G3dObjCFv:
 /* 803E73A4 003B0964  3C 60 80 52 */	lis r3, lbl_80520F58@ha
 /* 803E73A8 003B0968  38 63 0F 58 */	addi r3, r3, lbl_80520F58@l
 /* 803E73AC 003B096C  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520F58
+lbl_80520F58:
+	# ROM: 0x51D058
+	.4byte 0x00000007
+	.asciz "G3dObj"
+	.balign 4
+	.4byte 0
+
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056CE90
+lbl_8056CE90:
+	# ROM: 0x568F90
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d6G3dObjCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte 0
+	.4byte __dt__Q34nw4r3g3d6G3dObjFv
+	.4byte GetTypeObj__Q34nw4r3g3d6G3dObjCFv
+	.4byte GetTypeName__Q34nw4r3g3d6G3dObjCFv
+	.4byte 0

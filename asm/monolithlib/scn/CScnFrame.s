@@ -67,3 +67,50 @@ lbl_8049E444:
 /* 8049E44C 00467A0C  7C 08 03 A6 */	mtlr r0
 /* 8049E450 00467A10  38 21 00 20 */	addi r1, r1, 0x20
 /* 8049E454 00467A14  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnFrame_typestr
+CScnFrame_typestr:
+	.asciz "CScnFrame"
+	.balign 4
+	.4byte 0
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnFrame
+__vt__CScnFrame:
+	.4byte __RTTI__CScnFrame
+	.4byte 0
+	.4byte func_8049E3A8
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnFrame
+__RTTI__CScnFrame:
+	.4byte CScnFrame_typestr
+	.4byte 0
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D390
+lbl_8066D390:
+	# ROM: 0x5771F0
+	.float 1.0
+
+
+.global lbl_8066D394
+lbl_8066D394:
+	# ROM: 0x5771F4
+	.float 0.5
+
+
+.global lbl_8066D398
+lbl_8066D398:
+	# ROM: 0x5771F8
+	.4byte 0x43300000
+	.4byte 0

@@ -148,3 +148,18 @@ lbl_80382580:
 /* 80382590 0034BB50  7C 08 03 A6 */	mtlr r0
 /* 80382594 0034BB54  38 21 00 10 */	addi r1, r1, 0x10
 /* 80382598 0034BB58  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_80519838
+lbl_80519838:
+	.asciz "E02080811 adxt_StartAfs: parameter error"
+	.asciz "E8101202 adxt_StartAfs: can't open "
+	.asciz "E02080807 adxt_StartFnameRange: parameter error"
+	.asciz "E02080809 adxt_StartMem2: parameter error"
+	.asciz "E8101207: can't create sj (adxt_StartMem)"
+	.asciz "E02080810 adxt_StartMemIdx: parameter error"
+	.asciz "E8101207: can't create sj (adxt_StartMemIdx)"
+	.balign 4
+	.4byte 0

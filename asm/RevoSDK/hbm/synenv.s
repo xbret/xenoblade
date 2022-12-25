@@ -273,3 +273,18 @@ lbl_803416BC:
 /* 803416C0 0030AC80  7C 04 02 14 */	add r0, r4, r0
 /* 803416C4 0030AC84  90 03 00 34 */	stw r0, 0x34(r3)
 /* 803416C8 0030AC88  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_80518B58
+lbl_80518B58:
+	# ROM: 0x514C58
+	.4byte 0x40000000
+	.4byte 0
+	.4byte 0x4C960000
+	.4byte 0x447A0000
+	.4byte 0x4C95FF6A
+	.4byte 0
+	.4byte 0x43300000
+	.4byte 0x80000000

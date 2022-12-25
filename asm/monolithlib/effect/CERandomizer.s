@@ -380,3 +380,163 @@ sinit_804DB900:
 /* 804DB92C 004A4EEC  B0 03 00 06 */	sth r0, 6(r3)
 /* 804DB930 004A4EF0  D0 03 00 08 */	stfs f0, 8(r3)
 /* 804DB934 004A4EF4  4E 80 00 20 */	blr
+
+.global func_804DB938
+func_804DB938:
+/* 804DB938 004A4EF8  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 804DB93C 004A4EFC  7C 08 02 A6 */	mflr r0
+/* 804DB940 004A4F00  90 01 00 14 */	stw r0, 0x14(r1)
+/* 804DB944 004A4F04  4B F5 A5 95 */	bl func_80435ED8
+/* 804DB948 004A4F08  6C 63 80 00 */	xoris r3, r3, 0x8000
+/* 804DB94C 004A4F0C  3C 00 43 30 */	lis r0, 0x4330
+/* 804DB950 004A4F10  90 01 00 08 */	stw r0, 8(r1)
+/* 804DB954 004A4F14  C8 42 D6 68 */	lfd f2, lbl_8066D9E8@sda21(r2)
+/* 804DB958 004A4F18  90 61 00 0C */	stw r3, 0xc(r1)
+/* 804DB95C 004A4F1C  C0 02 D6 5C */	lfs f0, lbl_8066D9DC@sda21(r2)
+/* 804DB960 004A4F20  C8 21 00 08 */	lfd f1, 8(r1)
+/* 804DB964 004A4F24  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 804DB968 004A4F28  EC 21 10 28 */	fsubs f1, f1, f2
+/* 804DB96C 004A4F2C  EC 21 00 24 */	fdivs f1, f1, f0
+/* 804DB970 004A4F30  7C 08 03 A6 */	mtlr r0
+/* 804DB974 004A4F34  38 21 00 10 */	addi r1, r1, 0x10
+/* 804DB978 004A4F38  4E 80 00 20 */	blr 
+
+.global func_804DB97C
+func_804DB97C:
+/* 804DB97C 004A4F3C  4B F5 A5 5C */	b func_80435ED8
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CERandomizerSimple_typestr
+CERandomizerSimple_typestr:
+	.asciz "CERandomizerSimple"
+	.balign 4
+
+.global IRandomizer_typestr
+IRandomizer_typestr:
+	.asciz "IRandomizer"
+
+.global CERandomizer_typestr
+CERandomizer_typestr:
+	.asciz "CERandomizer"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__18CERandomizerSimple
+__vt__18CERandomizerSimple:
+	.4byte __RTTI__CERandomizerSimple
+	.4byte 0
+	.4byte func_804DB50C
+	.4byte func_804DB8B4
+	.4byte func_804DB860
+	.4byte func_804DB820
+
+.global CERandomizerSimple_hierarchy
+CERandomizerSimple_hierarchy:
+	.4byte __RTTI__IRandomizer
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CERandomizer
+__vt__CERandomizer:
+	.4byte __RTTI__CERandomizer
+	.4byte 0
+	.4byte func_804DB97C
+	.4byte func_804DB938
+	.4byte func_804DB6DC
+	.4byte func_804DB7E0
+
+.global CERandomizer_hierarchy
+CERandomizer_hierarchy:
+	.4byte __RTTI__IRandomizer
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CERandomizerSimple
+__RTTI__CERandomizerSimple:
+	.4byte CERandomizerSimple_typestr
+	.4byte CERandomizerSimple_hierarchy
+
+.global __RTTI__IRandomizer
+__RTTI__IRandomizer:
+	.4byte IRandomizer_typestr
+	.4byte 0
+
+.global __RTTI__CERandomizer
+__RTTI__CERandomizer:
+	.4byte CERandomizer_typestr
+	.4byte CERandomizer_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D9D8
+lbl_8066D9D8:
+	# ROM: 0x577838
+	.4byte 0
+
+
+.global lbl_8066D9DC
+lbl_8066D9DC:
+	# ROM: 0x57783C
+	.4byte 0x4F000000
+
+
+.global lbl_8066D9E0
+lbl_8066D9E0:
+	# ROM: 0x577840
+	.4byte 0x3f000000
+	.4byte 0
+
+
+.global lbl_8066D9E8
+lbl_8066D9E8:
+	# ROM: 0x577848
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066D9F0
+lbl_8066D9F0:
+	# ROM: 0x577850
+	.float 1.0
+
+
+.global lbl_8066D9F4
+lbl_8066D9F4:
+	# ROM: 0x577854
+	.float -1.0
+
+
+.global lbl_8066D9F8
+lbl_8066D9F8:
+	# ROM: 0x577858
+	.4byte 0x461C5800
+	.4byte 0
+
+
+.global lbl_8066DA00
+lbl_8066DA00:
+	# ROM: 0x577860
+	.4byte 0x43300000
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80662930
+lbl_80662930:
+	.skip 0x10
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806682E0
+lbl_806682E0:
+	.skip 0x8

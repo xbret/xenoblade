@@ -871,3 +871,35 @@ sinit_80436E08:
 /* 80436E78 00400438  D0 03 00 28 */	stfs f0, 0x28(r3)
 /* 80436E7C 0040043C  D0 23 00 2C */	stfs f1, 0x2c(r3)
 /* 80436E80 00400440  4E 80 00 20 */	blr
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066CA40
+lbl_8066CA40:
+	# ROM: 0x5768A0
+	.4byte 0
+
+
+.global lbl_8066CA44
+lbl_8066CA44:
+	# ROM: 0x5768A4
+	.float 0.5
+
+
+.global lbl_8066CA48
+lbl_8066CA48:
+	# ROM: 0x5768A8
+	.float 1.0
+
+
+.global lbl_8066CA4C
+lbl_8066CA4C:
+	# ROM: 0x5768AC
+	.float -1.0
+
+
+.global lbl_8066CA50
+lbl_8066CA50:
+	# ROM: 0x5768B0
+	.4byte 0x3CC90FDB
+	.4byte 0

@@ -54,3 +54,13 @@ lbl_80408704:
 /* 80408710 003D1CD0  7C 08 03 A6 */	mtlr r0
 /* 80408714 003D1CD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80408718 003D1CD8  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056D548
+lbl_8056D548:
+	# ROM: 0x569648
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
+	.4byte 0

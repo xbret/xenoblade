@@ -2448,3 +2448,80 @@ lbl_80384728:
 /* 8038473C 0034DCFC  7C 08 03 A6 */	mtlr r0
 /* 80384740 0034DD00  38 21 00 30 */	addi r1, r1, 0x30
 /* 80384744 0034DD04  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+
+.global lbl_80519968
+lbl_80519968:
+	# ROM: 0x515A68
+	.4byte 0x3F59999A
+	.4byte 0
+
+
+.global lbl_80519970
+lbl_80519970:
+	# ROM: 0x515A70
+	.4byte 0x43300000
+	.4byte 0x80000000
+	.4byte 0
+	.4byte 0x447A0000
+	.4byte 0x42700000
+	.4byte 0xC2700000
+
+
+.global lbl_80519988
+lbl_80519988:
+	# ROM: 0x515A88
+	.float 100.0
+	.float -1.0
+
+
+.global lbl_80519990
+lbl_80519990:
+	.asciz "E02080804 adxt_Create: parameter error"
+	.asciz "E03100801 adxt_Create: Too many handles."
+	.asciz "E06022201 adxt_Create: Work size is too short."
+	.asciz "E02080805 adxt_Destroy: parameter error"
+	.asciz "E02080813 adxt_Stop: parameter error"
+	.asciz "E02080812 adxt_StartSj: parameter error"
+	.asciz "E02080814 adxt_GetStat: parameter error"
+	.asciz "E02080837 adxt_GetNumSmplObuf: parameter error"
+	.asciz "E02080815 adxt_GetTime: parameter error"
+	.asciz "E02080817 adxt_GetNumSmpl: parameter error"
+	.asciz "E02080819 adxt_GetSfreq: parameter error"
+	.asciz "E02080820 adxt_GetNumChan: parameter error"
+	.asciz "E02080822 adxt_GetHdrLen: parameter error"
+	.asciz "E02080821 adxt_GetFmtBps: parameter error"
+	.asciz "E02080825 adxt_SetOutPan: Null pointer is passed"
+	.asciz "E07041801 adxt_SetOutPan: parameter error"
+	.asciz "E8101208 adxt_SetOutPan: parameter error"
+	.asciz "E02080826 adxt_GetOutPan: parameter error"
+	.asciz "E02080870 adxt_SetOutBalance: parameter error"
+	.asciz "E02080871 adxt_GetOutBalance: parameter error"
+	.asciz "E02080823 adxt_SetOutVol: parameter error"
+	.asciz "E02080824 adxt_GetOutVol: parameter error"
+	.asciz "E02080840 adxt_SetSvrFreq: parameter error"
+	.asciz "E02080838 adxt_SetReloadTime: parameter error"
+	.asciz "E03111501 adxt_ResetReloadTime: parameter error"
+	.asciz "E02080839 adxt_SetReloadSct: parameter error"
+	.asciz "E02080834 adxt_GetNumSctIbuf: parameter error"
+	.asciz "E02080835 adxt_GetIbufRemainTime: parameter error"
+	.asciz "E02080836 ADXT_IsIbufSafety: parameter error"
+	.asciz "E02080802 adxt_IsCompleted: parameter error"
+	.asciz "E02080843 adxt_GetErrCode: parameter error"
+	.asciz "E02080844 adxt_ClearErrCode: parameter error"
+	.asciz "E02080829 adxt_GetLpCnt: parameter error"
+	.asciz "E02080828 adxt_SetLpFlg: parameter error"
+	.asciz "E02080833 adxt_GetInputSj: parameter error"
+	.asciz "E02080830 adxt_SetWaitPlayStart: parameter error"
+	.asciz "E02080831 adxt_IsReadyPlayStart: parameter error"
+	.asciz "E02080846 adxt_Pause: parameter error"
+	.asciz "E02080847 adxt_GetStatPause: parameter error"
+	.asciz "E2005111601 : NULL pointer is passed."
+	.asciz "E2006110200: Invalid values."
+	.asciz "E02080818 adxt_GetDecNumSmpl: parameter error"
+	.asciz "E04041901 adxt_GetDecDtLen: parameter error"
+	.asciz "E04041902 ADXT_SetCbDec: parameter error"
+	.asciz "E02080860 adxt_SetKeyString: parameter error"

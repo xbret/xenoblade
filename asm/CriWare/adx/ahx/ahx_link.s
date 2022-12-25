@@ -244,3 +244,21 @@ lbl_8038A990:
 /* 8038A9A4 00353F64  7C 08 03 A6 */	mtlr r0
 /* 8038A9A8 00353F68  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038A9AC 00353F6C  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051AB10
+lbl_8051AB10:
+	.asciz "E2005092203 : NULL pointer is passed."
+	.asciz "E2005092204 : Work area size is too short."
+	.asciz "E2005092202 : AHXSJD_Create function failed."
+	.asciz "E2005092205 : NULL pointer is passed."
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805657B4
+lbl_805657B4:
+	# ROM: 0x5618B4
+	.4byte 0x00002080

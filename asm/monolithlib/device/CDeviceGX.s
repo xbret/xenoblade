@@ -663,3 +663,150 @@ func_804559BC:
 func_804559C4:
 /* 804559C4 0041EF84  38 63 FE 38 */	addi r3, r3, -456
 /* 804559C8 0041EF88  4B FF F8 30 */	b func_804551F8
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CDeviceGX_typestr
+CDeviceGX_typestr:
+	.asciz "CDeviceGX"
+	.balign 4
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CDeviceGX
+__vt__CDeviceGX:
+	.4byte __RTTI__CDeviceGX
+	.4byte 0
+	.4byte func_804551F8
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80438A50
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_804557A8
+	.4byte func_804558A8
+	.4byte func_80039E30
+	.4byte __RTTI__CDeviceGX
+	.4byte 0xFFFFFE38
+	.4byte func_804559C4
+	.4byte func_80166630
+	.4byte func_804559BC
+	.4byte func_804559B4
+	.4byte func_80455498
+	.4byte func_80455544
+
+.global CDeviceGX_hierarchy
+CDeviceGX_hierarchy:
+	.4byte __RTTI__CDeviceVICb
+	.4byte 0x000001C8
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte __RTTI__CDeviceBase
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80666078
+lbl_80666078:
+	# ROM: 0x571C58
+	.4byte 0x00200000
+
+
+.global lbl_8066607C
+lbl_8066607C:
+	# ROM: 0x571C5C
+	.4byte lbl_8066CBE8
+
+.global __RTTI__CDeviceGX
+__RTTI__CDeviceGX:
+	.4byte CDeviceGX_typestr
+	.4byte CDeviceGX_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066CBE8
+lbl_8066CBE8:
+	.asciz "GPCost"
+	.balign 4
+
+
+.global lbl_8066CBF0
+lbl_8066CBF0:
+	# ROM: 0x576A50
+	.4byte 0
+
+
+.global lbl_8066CBF4
+lbl_8066CBF4:
+	# ROM: 0x576A54
+	.float 1.0
+
+
+.global lbl_8066CBF8
+lbl_8066CBF8:
+	# ROM: 0x576A58
+	.4byte 0x40000000
+	.4byte 0
+
+
+.global lbl_8066CC00
+lbl_8066CC00:
+	# ROM: 0x576A60
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066CC08
+lbl_8066CC08:
+	# ROM: 0x576A68
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667F70
+lbl_80667F70:
+	.skip 0x4
+.global lbl_80667F74
+lbl_80667F74:
+	.skip 0x4
+.global lbl_80667F78
+lbl_80667F78:
+	.skip 0x4

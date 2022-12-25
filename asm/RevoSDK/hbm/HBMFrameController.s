@@ -127,3 +127,11 @@ lbl_8031F41C:
 /* 8031F440 002E8A00  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 8031F444 002E8A04  98 03 00 1C */	stb r0, 0x1c(r3)
 /* 8031F448 002E8A08  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80518668
+lbl_80518668:
+	# ROM: 0x514768
+	.float 1.0
+	.4byte 0

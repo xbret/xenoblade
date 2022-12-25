@@ -166,3 +166,22 @@ SFVOM_AddRead:
 SFVOM_Seek:
 /* 803CEE58 00398418  38 60 00 00 */	li r3, 0
 /* 803CEE5C 0039841C  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_805206B0
+lbl_805206B0:
+	.4byte SFVOM_Init
+	.4byte SFVOM_Finish
+	.4byte SFVOM_ExecServer
+	.4byte SFVOM_Create
+	.4byte SFVOM_Destroy
+	.4byte SFVOM_RequestStop
+	.4byte SFVOM_Start
+	.4byte SFVOM_Stop
+	.4byte SFVOM_Pause
+	.4byte SFVOM_GetWrite
+	.4byte SFVOM_AddWrite
+	.4byte SFVOM_GetRead
+	.4byte SFVOM_AddRead
+	.4byte SFVOM_Seek

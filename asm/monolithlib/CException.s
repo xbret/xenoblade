@@ -2008,3 +2008,217 @@ lbl_80459778:
 /* 80459784 00422D44  7C 08 03 A6 */	mtlr r0
 /* 80459788 00422D48  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045978C 00422D4C  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CException_typestr
+CException_typestr:
+	.asciz "CException"
+	.balign 4
+
+
+.global lbl_80526894
+lbl_80526894:
+	.asciz "CException"
+	.asciz "&"
+	.byte 0x00, 0x00, 0x00
+	.4byte 0
+
+
+.global lbl_805268A8
+lbl_805268A8:
+	.asciz "CLibHbm"
+	.asciz "CLibG3d"
+	.asciz "CLibLayout"
+	.asciz "CLibVM"
+	.asciz "CLibStaticData"
+	#"ログアウトに失敗しました"
+	.byte 0x83, 0x8D, 0x83
+	.4byte 0x4F834183
+	.4byte 0x45836782
+	.4byte 0xC98EB894
+	.4byte 0x7382B582
+	.4byte 0xDC82B582
+	.4byte 0xBD00434C
+	.4byte 0x69620000
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CException
+__vt__CException:
+	.4byte __RTTI__CException
+	.4byte 0
+	.4byte func_80457C24
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80438A50
+	.4byte func_80457EFC
+	.4byte func_80039E38
+	.4byte func_80458ED8
+	.4byte func_80459068
+	.4byte func_80039E30
+
+.global CException_hierarchy
+CException_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte __RTTI__CProc
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CException
+__RTTI__CException:
+	.4byte CException_typestr
+	.4byte CException_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066CC40
+lbl_8066CC40:
+	# ROM: 0x576AA0
+	.4byte 0
+
+
+.global lbl_8066CC44
+lbl_8066CC44:
+	# ROM: 0x576AA4
+	.4byte 0x3F4CCCCD
+
+
+.global lbl_8066CC48
+lbl_8066CC48:
+	# ROM: 0x576AA8
+	.float 1.0
+
+
+.global lbl_8066CC4C
+lbl_8066CC4C:
+	# ROM: 0x576AAC
+	.float 0.5
+
+
+.global lbl_8066CC50
+lbl_8066CC50:
+	# ROM: 0x576AB0
+	.4byte 0x3FA2067B
+
+
+.global lbl_8066CC54
+lbl_8066CC54:
+	# ROM: 0x576AB4
+	.4byte 0x40000000
+
+
+.global lbl_8066CC58
+lbl_8066CC58:
+	# ROM: 0x576AB8
+	.4byte 0xCB800000
+
+
+.global lbl_8066CC5C
+lbl_8066CC5C:
+	# ROM: 0x576ABC
+	.4byte 0x3F819EC9
+
+
+.global lbl_8066CC60
+lbl_8066CC60:
+	# ROM: 0x576AC0
+	.float -1.0
+
+
+.global lbl_8066CC64
+lbl_8066CC64:
+	# ROM: 0x576AC4
+	.4byte 0x437F0000
+
+
+.global lbl_8066CC68
+lbl_8066CC68:
+	# ROM: 0x576AC8
+	.4byte 0x41E00000
+	.4byte 0
+
+
+.global lbl_8066CC70
+lbl_8066CC70:
+	# ROM: 0x576AD0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066CC78
+lbl_8066CC78:
+	# ROM: 0x576AD8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066CC80
+lbl_8066CC80:
+	# ROM: 0x576AE0
+	.4byte 0x3D23D70A
+	.4byte 0
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8065A808
+lbl_8065A808:
+	.skip 0x40
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667F98
+lbl_80667F98:
+	.skip 0x4
+.global lbl_80667F9C
+lbl_80667F9C:
+	.skip 0x4
+.global lbl_80667FA0
+lbl_80667FA0:
+	.skip 0x4
+.global lbl_80667FA4
+lbl_80667FA4:
+	.skip 0x4
+.global lbl_80667FA8
+lbl_80667FA8:
+	.skip 0x8

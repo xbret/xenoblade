@@ -96,3 +96,12 @@ lbl_803E1BC8:
 /* 803E1BDC 003AB19C  7C 08 03 A6 */	mtlr r0
 /* 803E1BE0 003AB1A0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803E1BE4 003AB1A4  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520E38
+lbl_80520E38:
+	# ROM: 0x51CF38
+	.4byte 0x0000000A
+	.asciz "AnmObjVis"
+	.balign 4

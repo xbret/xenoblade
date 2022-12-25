@@ -2059,3 +2059,190 @@ sinit_804BF540:
 /* 804BF590 00488B50  7C 08 03 A6 */	mtlr r0
 /* 804BF594 00488B54  38 21 00 10 */	addi r1, r1, 0x10
 /* 804BF598 00488B58  4E 80 00 20 */	blr
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806663F8
+lbl_806663F8:
+	# ROM: 0x571FD8
+	.4byte func_804BF274
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D6D4
+lbl_8066D6D4:
+	# ROM: 0x577534
+	.4byte 0
+
+
+.global lbl_8066D6D8
+lbl_8066D6D8:
+	# ROM: 0x577538
+	.float 1.0
+
+
+.global lbl_8066D6DC
+lbl_8066D6DC:
+	# ROM: 0x57753C
+	.float 0.5
+
+
+.global lbl_8066D6E0
+lbl_8066D6E0:
+	# ROM: 0x577540
+	.4byte 0x3D4CCCCD
+
+
+.global lbl_8066D6E4
+lbl_8066D6E4:
+	# ROM: 0x577544
+	.4byte 0x40000000
+
+
+.global lbl_8066D6E8
+lbl_8066D6E8:
+	# ROM: 0x577548
+	.4byte 0x38800000
+
+
+.global lbl_8066D6EC
+lbl_8066D6EC:
+	# ROM: 0x57754C
+	.4byte 0x3E99999A
+
+
+.global lbl_8066D6F0
+lbl_8066D6F0:
+	# ROM: 0x577550
+	.4byte 0xBE99999A
+
+
+.global lbl_8066D6F4
+lbl_8066D6F4:
+	# ROM: 0x577554
+	.4byte 0
+
+
+.global lbl_8066D6F8
+lbl_8066D6F8:
+	# ROM: 0x577558
+	.4byte 0xBA83126F
+
+
+.global lbl_8066D6FC
+lbl_8066D6FC:
+	# ROM: 0x57755C
+	.float 1.0
+
+
+.global lbl_8066D700
+lbl_8066D700:
+	# ROM: 0x577560
+	.4byte 0x3A83126F
+	.4byte 0
+
+
+.global lbl_8066D708
+lbl_8066D708:
+	# ROM: 0x577568
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066D710
+lbl_8066D710:
+	# ROM: 0x577570
+	.4byte 0xBD4CCCCD
+
+
+.global lbl_8066D714
+lbl_8066D714:
+	# ROM: 0x577574
+	.4byte 0x3D23D70B
+
+
+.global lbl_8066D718
+lbl_8066D718:
+	# ROM: 0x577578
+	.4byte 0x3F7AE148
+
+
+.global lbl_8066D71C
+lbl_8066D71C:
+	# ROM: 0x57757C
+	.float 0.5
+
+
+.global lbl_8066D720
+lbl_8066D720:
+	# ROM: 0x577580
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066D724
+lbl_8066D724:
+	# ROM: 0x577584
+	.4byte 0xBECCCCCD
+
+
+.global lbl_8066D728
+lbl_8066D728:
+	# ROM: 0x577588
+	.4byte 0x3F666666
+
+
+.global lbl_8066D72C
+lbl_8066D72C:
+	# ROM: 0x57758C
+	.4byte 0xBF4A3D71
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80662168
+lbl_80662168:
+	.skip 0x18
+.global lbl_80662180
+lbl_80662180:
+	.skip 0x180
+	
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80668248
+lbl_80668248:
+	.skip 0x4
+.global lbl_8066824C
+lbl_8066824C:
+	.skip 0x4
+.global lbl_80668250
+lbl_80668250:
+	.skip 0x4
+.global lbl_80668254
+lbl_80668254:
+	.skip 0x1
+.global lbl_80668255
+lbl_80668255:
+	.skip 0x1
+.global lbl_80668256
+lbl_80668256:
+	.skip 0x1
+.global lbl_80668257
+lbl_80668257:
+	.skip 0x1
+.global lbl_80668258
+lbl_80668258:
+	.skip 0x4
+.global lbl_8066825C
+lbl_8066825C:
+	.skip 0x4
+.global lbl_80668260
+lbl_80668260:
+	.skip 0x4
+.global lbl_80668264
+lbl_80668264:
+	.skip 0x4
+.global lbl_80668268
+lbl_80668268:
+	.skip 0x8

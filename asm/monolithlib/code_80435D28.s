@@ -62,3 +62,16 @@ sinit_80435D94:
 /* 80435DEC 003FF3AC  D0 03 00 04 */	stfs f0, 4(r3)
 /* 80435DF0 003FF3B0  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80435DF4 003FF3B4  4E 80 00 20 */	blr
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C9E8
+lbl_8066C9E8:
+	# ROM: 0x576848
+	.4byte 0
+
+
+.global lbl_8066C9EC
+lbl_8066C9EC:
+	# ROM: 0x57684C
+	.float 1.0

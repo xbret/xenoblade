@@ -310,3 +310,12 @@ lbl_8034E690:
 /* 8034E720 00317CE0  7C 08 03 A6 */	mtlr r0
 /* 8034E724 00317CE4  38 21 00 60 */	addi r1, r1, 0x60
 /* 8034E728 00317CE8  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80518BB8
+lbl_80518BB8:
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0

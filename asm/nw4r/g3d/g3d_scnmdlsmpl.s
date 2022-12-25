@@ -2267,3 +2267,55 @@ GetTypeObj__Q34nw4r3g3d12ScnMdlSimpleCFv:
 /* 803F94FC 003C2ABC  3C 60 80 52 */	lis r3, lbl_805210C0@ha
 /* 803F9500 003C2AC0  38 63 10 C0 */	addi r3, r3, lbl_805210C0@l
 /* 803F9504 003C2AC4  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_805210C0
+lbl_805210C0:
+	# ROM: 0x51D1C0
+	.4byte 0x0000000D
+	.asciz "ScnMdlSimple"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056D010
+lbl_8056D010:
+	# ROM: 0x569110
+	.4byte lbl_803F8690
+	.4byte lbl_803F86E8
+	.4byte lbl_803F8740
+	.4byte lbl_803F8798
+	.4byte lbl_803F87F0
+	.4byte lbl_803F89F4
+	.4byte lbl_803F8844
+
+
+.global lbl_8056D02C
+lbl_8056D02C:
+	.asciz "NodeTree"
+	.balign 4
+
+
+.global lbl_8056D038
+lbl_8056D038:
+	# ROM: 0x569138
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d12ScnMdlSimpleCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d12ScnMdlSimpleFUlUlPv
+	.4byte __dt__Q34nw4r3g3d12ScnMdlSimpleFv
+	.4byte GetTypeObj__Q34nw4r3g3d12ScnMdlSimpleCFv
+	.4byte GetTypeName__Q34nw4r3g3d12ScnMdlSimpleCFv
+	.4byte ForEach__Q34nw4r3g3d7ScnLeafFPFPQ34nw4r3g3d6ScnObjPv_Q44nw4r3g3d6ScnObj13ForEachResultPvb
+	.4byte SetScnObjOption__Q34nw4r3g3d12ScnMdlSimpleFUlUl
+	.4byte GetScnObjOption__Q34nw4r3g3d12ScnMdlSimpleCFUlPUl
+	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
+	.4byte CalcWorldMtx__Q34nw4r3g3d7ScnLeafFPCQ34nw4r4math5MTX34PUl
+	.4byte SetAnmObj__Q34nw4r3g3d12ScnMdlSimpleFPQ34nw4r3g3d6AnmObjQ44nw4r3g3d12ScnMdlSimple10AnmObjType
+	.4byte RemoveAnmObj__Q34nw4r3g3d12ScnMdlSimpleFPQ34nw4r3g3d6AnmObj
+	.4byte RemoveAnmObj__Q34nw4r3g3d12ScnMdlSimpleFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
+	.4byte GetAnmObj__Q34nw4r3g3d12ScnMdlSimpleFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
+	.4byte GetAnmObj__Q34nw4r3g3d12ScnMdlSimpleCFQ44nw4r3g3d12ScnMdlSimple10AnmObjType

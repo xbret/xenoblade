@@ -877,3 +877,29 @@ clrBatteryFlag__Q210homebutton10ControllerFv:
 /* 80321984 002EAF44  38 63 D5 B0 */	addi r3, r3, lbl_805CD5B0@l
 /* 80321988 002EAF48  7C 03 21 AE */	stbx r0, r3, r4
 /* 8032198C 002EAF4C  4E 80 00 20 */	blr
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80518680
+lbl_80518680:
+	# ROM: 0x514780
+	.float 1.0
+
+
+.global lbl_80518684
+lbl_80518684:
+	# ROM: 0x514784
+	.4byte 0xC61C4000
+
+
+.global lbl_80518688
+lbl_80518688:
+	# ROM: 0x514788
+	.4byte 0xC66A6000
+
+
+.global lbl_8051868C
+lbl_8051868C:
+	# ROM: 0x51478C
+	.float 10.0

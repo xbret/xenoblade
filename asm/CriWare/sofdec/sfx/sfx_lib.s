@@ -293,3 +293,19 @@ SFX_GetForceSplitField:
 /* 803D5C0C 0039F1CC  3C 60 80 62 */	lis r3, lbl_8061CE3C@ha
 /* 803D5C10 0039F1D0  80 63 CE 3C */	lwz r3, lbl_8061CE3C@l(r3)
 /* 803D5C14 0039F1D4  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520A90
+lbl_80520A90:
+	.asciz "\nCRI SFX/WII Ver.2.48 Build:Nov 13 2008 18:22:09\n"
+	.balign 4
+
+
+.global lbl_80520AC4
+lbl_80520AC4:
+	.asciz "E201194: sfx_InitHn: work size is short."
+	.asciz "E201281: SfxZHn: can't create."
+	.asciz "E202011: SfxAHn: can't create."
+	.balign 4
+	.4byte 0

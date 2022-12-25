@@ -733,3 +733,644 @@ lbl_803A1D40:
 /* 803A1D48 0036B308  7C 08 03 A6 */	mtlr r0
 /* 803A1D4C 0036B30C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A1D50 0036B310  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+
+.global lbl_8051E7B0
+lbl_8051E7B0:
+	# ROM: 0x51A8B0
+	.4byte 0x3FE99999
+	.4byte 0x9999999A
+
+
+.global lbl_8051E7B8
+lbl_8051E7B8:
+	# ROM: 0x51A8B8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8051E7C0
+lbl_8051E7C0:
+	.asciz "E20010703F mwPlySfdStandby"
+	.asciz "E20010703G mwPlySfdStart"
+	.asciz "E10821A : Invalid value of SFD_GetPaStat : %d"
+	.asciz "E06083101 mwPlyTermSupply: can't term"
+	.asciz "E0203263 mw_sfd_start_ex: RESET failed."
+	.asciz "E201213 mw_sfd_start_ex: can't set AddInfSJ"
+	.asciz "E08031101 mwPlyStartXX: can't link stream"
+	.asciz "E2007 mwPlyPause; can't pause (%s)"
+	.asciz "ON"
+	.asciz "OFF"
+	.asciz "E1122601 mwPlyStartFname: handle is invalid."
+	.asciz "E10915C mwPlyStartFname: fname is NULL."
+	.asciz "E211121 filename is longer."
+	.asciz "E08111003 memory entry is over 16."
+	.asciz "E08111002 failed to get file size form sofdec header."
+	.asciz "E08111004 mwPlyStartMemSeamless: handle is invalid."
+	.asciz "E08111005 mwPlyStartMemSeamless: can't play file type MPV. Use memory file system(MFS)."
+	.asciz "E1122610 mwPlyStartMem: handle is invalid."
+	.asciz "E4111701 mwPlyStartMem: can't play file type MPV. Use memory file system(MFS)."
+	.asciz "E08111001 failed to get file size form sofdec header."
+	.asciz "E1122609 mwply_StartSj: handle is invalid."
+	.asciz "E2003 mwSfdStop:can't stop SFD"
+	.asciz "E1122602 mwSfdStop: handle is invalid."
+	.asciz "E11226041 mwPlyStepFrame; handle is invalid."
+	.asciz "E1122604 mwPlyPause; handle is invalid."
+	.asciz "E1110801 mwPlyControlVideoDecoding_ext; handle is invalid."
+	.asciz "E1122638 mwPlyStartAfs: handle is invalid."
+	.asciz "E211151 ADXF_GetFnameRangeEx() faild."
+	.asciz "%08x.%08x"
+	.asciz "E407021 mwPlyStartFnameRange: handle is invalid."
+	.asciz "E407022 mwPlyStartFnameRange: fname is NULL."
+	.asciz "E5090602 mwPlyRequestStop: handle is invalid."
+	.asciz "E7021901 mwPlyStartIpicture: handle is invalid."
+	.asciz "E7021901 mwPlyStartIpicture: parametar error."
+	.asciz "E7021901 mwPlyStartIpicture: seekipic_tbl indicates that data is not only I picture."
+	.balign 4
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_80569BD4
+lbl_80569BD4:
+	# ROM: 0x565CD4
+	.4byte lbl_8051E1E0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0x0000000B
+	.4byte lbl_8051E1C4
+	.4byte 0
+	.4byte 0x0000000A
+	.4byte lbl_8051E1F0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80569CA8
+lbl_80569CA8:
+	# ROM: 0x565DA8
+	.4byte lbl_8051E274
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0x0000000B
+	.4byte lbl_8051E1C4
+	.4byte 0
+	.4byte 0x0000000A
+	.4byte lbl_8051E1F0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80569D7C
+lbl_80569D7C:
+	# ROM: 0x565E7C
+	.4byte lbl_8051E288
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x0000000B
+	.4byte lbl_8051E1C4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80569E50
+lbl_80569E50:
+	# ROM: 0x565F50
+	.4byte lbl_8051E2C0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0x0000000B
+	.4byte lbl_8051E1C4
+	.4byte 0
+	.4byte 0x0000000A
+	.4byte lbl_8051E1F0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80569F24
+lbl_80569F24:
+	# ROM: 0x566024
+	.4byte lbl_8051E2D0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x0000000B
+	.4byte lbl_8051E1C4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80569FF8
+lbl_80569FF8:
+	# ROM: 0x5660F8
+	.4byte lbl_8051E2E4
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x0000000B
+	.4byte lbl_8051E1C4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056A0CC
+lbl_8056A0CC:
+	# ROM: 0x5661CC
+	.4byte lbl_8051E2FC
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0x0000000B
+	.4byte lbl_8051E1C4
+	.4byte 0
+	.4byte 0x00000004
+	.4byte lbl_8051E310
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056A1A0
+lbl_8056A1A0:
+	# ROM: 0x5662A0
+	.4byte lbl_8051E318
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x0000000B
+	.4byte lbl_8051E1C4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056A274
+lbl_8056A274:
+	# ROM: 0x566374
+	.4byte lbl_8051E338
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x0000000A
+	.4byte lbl_8051E348
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056A348
+lbl_8056A348:
+	# ROM: 0x566448
+	.4byte lbl_8051E350
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0

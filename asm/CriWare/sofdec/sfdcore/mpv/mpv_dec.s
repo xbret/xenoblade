@@ -1293,3 +1293,11 @@ lbl_803A588C:
 /* 803A58FC 0036EEBC  7C 08 03 A6 */	mtlr r0
 /* 803A5900 0036EEC0  38 21 00 50 */	addi r1, r1, 0x50
 /* 803A5904 0036EEC4  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_8051F600
+lbl_8051F600:
+	.asciz "2.059"
+	.balign 4

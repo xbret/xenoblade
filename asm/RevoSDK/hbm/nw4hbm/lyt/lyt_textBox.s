@@ -1427,3 +1427,20 @@ sinit_80334120:
 /* 80334128 002FD6E8  38 84 D7 C0 */	addi r4, r4, lbl_805CD7C0@l
 /* 8033412C 002FD6EC  90 83 D7 D0 */	stw r4, lbl_805CD7D0@l(r3)
 /* 80334130 002FD6F0  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80518AC0
+lbl_80518AC0:
+	# ROM: 0x514BC0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80518AC8
+lbl_80518AC8:
+	# ROM: 0x514BC8
+	.4byte 0x43300000
+	.4byte 0x80000000
+	.float 0.5
+	.float 1.0

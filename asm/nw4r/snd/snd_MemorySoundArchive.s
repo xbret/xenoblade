@@ -361,3 +361,47 @@ lbl_80417584:
 /* 80417590 003E0B50  7C 08 03 A6 */	mtlr r0
 /* 80417594 003E0B54  38 21 00 10 */	addi r1, r1, 0x10
 /* 80417598 003E0B58  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056E0F0
+lbl_8056E0F0:
+	# ROM: 0x56A1F0
+	.4byte 0
+	.4byte 0
+	.4byte GetRuntimeTypeInfo__Q34nw4r2ut10FileStreamCFv
+	.4byte __dt__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv
+	.4byte Close__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv
+	.4byte Read__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFPvUl
+	.4byte func_8042BDD0
+	.4byte func_8042BDD8
+	.4byte func_8042BDE0
+	.4byte func_8042BDE8
+	.4byte CanAsync__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
+	.4byte CanRead__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
+	.4byte CanWrite__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
+	.4byte GetOffsetAlign__Q34nw4r2ut8IOStreamCFv
+	.4byte GetSizeAlign__Q34nw4r2ut8IOStreamCFv
+	.4byte GetBufferAlign__Q34nw4r2ut8IOStreamCFv
+	.4byte GetSize__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
+	.4byte Seek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFlUl
+	.4byte func_8042BDFC
+	.4byte func_8042BE00
+	.4byte CanSeek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
+	.4byte CanCancel__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
+	.4byte Tell__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
+	.4byte 0
+
+
+.global lbl_8056E150
+lbl_8056E150:
+	# ROM: 0x56A250
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r3snd18MemorySoundArchiveFv
+	.4byte detail_GetFileAddress__Q34nw4r3snd18MemorySoundArchiveCFUl
+	.4byte detail_GetWaveDataFileAddress__Q34nw4r3snd18MemorySoundArchiveCFUl
+	.4byte detail_GetRequiredStreamBufferSize__Q34nw4r3snd18MemorySoundArchiveCFv
+	.4byte OpenStream__Q34nw4r3snd18MemorySoundArchiveCFPviUlUl
+	.4byte OpenExtStream__Q34nw4r3snd18MemorySoundArchiveCFPviPCcUlUl

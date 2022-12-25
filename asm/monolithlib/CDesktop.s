@@ -2448,3 +2448,330 @@ lbl_80457B54:
 /* 80457B90 00421150  7C 08 03 A6 */	mtlr r0
 /* 80457B94 00421154  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 80457B98 00421158  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global _unnamed_CDesktop_cpp_CDesktopException_typestr
+_unnamed_CDesktop_cpp_CDesktopException_typestr:
+	.asciz "@unnamed@CDesktop_cpp@::CDesktopException"
+	.balign 4
+
+.global _unnamed_CDesktop_cpp_CDesktopBackGround_typestr
+_unnamed_CDesktop_cpp_CDesktopBackGround_typestr:
+	.asciz "@unnamed@CDesktop_cpp@::CDesktopBackGround"
+	.balign 4
+
+.global CDesktop_typestr
+CDesktop_typestr:
+	.asciz "CDesktop"
+	.balign 4
+
+
+.global lbl_8052685C
+lbl_8052685C:
+	.asciz "CDesktopBackGround"
+	.asciz "CDesktopException"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt___unnamed_CDesktop_cpp_CDesktopException
+__vt___unnamed_CDesktop_cpp_CDesktopException:
+	.4byte __RTTI___unnamed_CDesktop_cpp_CDesktopException
+	.4byte 0
+	.4byte func_80456054
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80438A50
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_804396A0
+	.4byte func_804560AC
+	.4byte func_80039E30
+
+.global _unnamed_CDesktop_cpp_CDesktopException_hierarchy
+_unnamed_CDesktop_cpp_CDesktopException_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte __RTTI__CProc
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CDesktop_cpp_CDesktopBackGround
+__vt___unnamed_CDesktop_cpp_CDesktopBackGround:
+	.4byte __RTTI___unnamed_CDesktop_cpp_CDesktopBackGround
+	.4byte 0
+	.4byte func_80455FFC
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80438A50
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_804396A0
+	.4byte func_804560F0
+	.4byte func_80039E30
+
+.global _unnamed_CDesktop_cpp_CDesktopBackGround_hierarchy
+_unnamed_CDesktop_cpp_CDesktopBackGround_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte __RTTI__CProc
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CDesktop
+__vt__CDesktop:
+	.4byte __RTTI__CDesktop
+	.4byte 0
+	.4byte __dt__CDesktop
+	.4byte func_80039E28
+	.4byte func_80455F10
+	.4byte func_80455F6C
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80455AD8
+	.4byte func_80455AF8
+	.4byte func_80455B34
+	.4byte func_80455B38
+	.4byte func_80455DF4
+	.4byte func_80039E30
+
+.global CDesktop_hierarchy
+CDesktop_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte __RTTI__CProc
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_805704D0
+lbl_805704D0:
+	# ROM: 0x56C5D0
+	.4byte lbl_8045676C
+	.4byte lbl_8045670C
+	.4byte lbl_80456714
+	.4byte lbl_80456754
+	.4byte lbl_8045673C
+	.4byte lbl_80456760
+	.4byte lbl_80456744
+	.4byte lbl_8045674C
+	.4byte lbl_80456768
+	.4byte lbl_80456720
+	.4byte lbl_8045672C
+
+
+.global lbl_805704FC
+lbl_805704FC:
+	# ROM: 0x56C5FC
+	.4byte lbl_804566EC
+	.4byte lbl_80456628
+	.4byte lbl_8045663C
+	.4byte lbl_804566B4
+	.4byte lbl_80456678
+	.4byte lbl_804566C8
+	.4byte lbl_8045668C
+	.4byte lbl_804566A0
+	.4byte lbl_804566DC
+	.4byte lbl_80456650
+	.4byte lbl_80456664
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80666088
+lbl_80666088:
+	# ROM: 0x571C68
+	.4byte lbl_8066CC10
+	.4byte 0
+
+.global __RTTI___unnamed_CDesktop_cpp_CDesktopException
+__RTTI___unnamed_CDesktop_cpp_CDesktopException:
+	.4byte _unnamed_CDesktop_cpp_CDesktopException_typestr
+	.4byte _unnamed_CDesktop_cpp_CDesktopException_hierarchy
+
+.global __RTTI___unnamed_CDesktop_cpp_CDesktopBackGround
+__RTTI___unnamed_CDesktop_cpp_CDesktopBackGround:
+	.4byte _unnamed_CDesktop_cpp_CDesktopBackGround_typestr
+	.4byte _unnamed_CDesktop_cpp_CDesktopBackGround_hierarchy
+
+.global __RTTI__CDesktop
+__RTTI__CDesktop:
+	.4byte CDesktop_typestr
+	.4byte CDesktop_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066CC10
+lbl_8066CC10:
+	.asciz "Desktop"
+
+
+.global lbl_8066CC18
+lbl_8066CC18:
+	# ROM: 0x576A78
+	.float 0.5
+
+
+.global lbl_8066CC1C
+lbl_8066CC1C:
+	# ROM: 0x576A7C
+	.float 1.0
+
+
+.global lbl_8066CC20
+lbl_8066CC20:
+	# ROM: 0x576A80
+	.4byte 0
+	.4byte 0
+
+
+#file boundary?
+.global lbl_8066CC28
+lbl_8066CC28:
+	# ROM: 0x576A88
+	.float 1.0
+
+
+.global lbl_8066CC2C
+lbl_8066CC2C:
+	# ROM: 0x576A8C
+	.4byte 0
+
+
+.global lbl_8066CC30
+lbl_8066CC30:
+	# ROM: 0x576A90
+	.4byte 0x437F0000
+
+
+.global lbl_8066CC34
+lbl_8066CC34:
+	# ROM: 0x576A94
+	.4byte 0x4222F983
+
+
+.global lbl_8066CC38
+lbl_8066CC38:
+	# ROM: 0x576A98
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667F7C
+lbl_80667F7C:
+	.skip 0x4
+.global lbl_80667F80
+lbl_80667F80:
+	.skip 0x4
+.global lbl_80667F84
+lbl_80667F84:
+	.skip 0x4
+.global lbl_80667F88
+lbl_80667F88:
+	.skip 0x4
+.global lbl_80667F8C
+lbl_80667F8C:
+	.skip 0x4
+.global lbl_80667F90
+lbl_80667F90:
+	.skip 0x8

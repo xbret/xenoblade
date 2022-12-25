@@ -4215,3 +4215,34 @@ lbl_803EB694:
 /* 803EB6A4 003B4C64  7C 08 03 A6 */	mtlr r0
 /* 803EB6A8 003B4C68  38 21 00 10 */	addi r1, r1, 0x10
 /* 803EB6AC 003B4C6C  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520F78
+lbl_80520F78:
+	# ROM: 0x51D078
+	.float 0.5
+	.4byte 0
+	.4byte 0
+	.float 0.5
+	.4byte 0
+	.4byte 0xBF000000
+	.4byte 0
+	.float 0.5
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.float 1.0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056CEB0
+lbl_8056CEB0:
+	# ROM: 0x568FB0
+	.4byte 0
+	.4byte 0
+	.4byte __cl__Q44nw4r3g3d8G3DState11IndMtxOpStdFPQ44nw4r3g3d8G3DState13IndTexMtxInfo
+	.4byte __dt__Q44nw4r3g3d8G3DState11IndMtxOpStdFv
+	.4byte Reset__Q44nw4r3g3d8G3DState11IndMtxOpStdFv
+	.4byte SetNrmMapMtx__Q44nw4r3g3d8G3DState11IndMtxOpStdF14_GXIndTexMtxIDPCQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34Q44nw4r3g3d14ResMatMiscData14IndirectMethod

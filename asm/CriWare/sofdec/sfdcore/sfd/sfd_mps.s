@@ -84,8 +84,8 @@ SFMPS_Finish:
 /* 803C0FF0 0038A5B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C0FF4 0038A5B4  4E 80 00 20 */	blr 
 
-.global func_803C0FF8
-func_803C0FF8:
+.global SFMPS_ExecServer
+SFMPS_ExecServer:
 /* 803C0FF8 0038A5B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C0FFC 0038A5BC  7C 08 02 A6 */	mflr r0
 /* 803C1000 0038A5C0  3C 80 80 61 */	lis r4, lbl_8060A2D8@ha
@@ -2340,3 +2340,31 @@ SFMPS_GetConcatCnt:
 /* 803C2E8C 0038C44C  80 63 20 1C */	lwz r3, 0x201c(r3)
 /* 803C2E90 0038C450  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 803C2E94 0038C454  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_805202D8
+lbl_805202D8:
+	.4byte SFMPS_Init
+	.4byte SFMPS_Finish
+	.4byte SFMPS_ExecServer
+	.4byte SFMPS_Create
+	.4byte SFMPS_Destroy
+	.4byte SFMPS_RequestStop
+	.4byte SFMPS_Start
+	.4byte SFMPS_Stop
+	.4byte SFMPS_Pause
+	.4byte SFMPS_GetWrite
+	.4byte SFMPS_AddWrite
+	.4byte SFMPS_GetRead
+	.4byte SFMPS_AddRead
+	.4byte SFMPS_Seek
+
+
+.global lbl_80520310
+lbl_80520310:
+	# ROM: 0x51C410
+	.4byte sfmps_CopyAudio
+	.4byte sfmps_CopyVideo
+	.4byte sfmps_CopyPrvate
+	.4byte sfmps_CopyPadding

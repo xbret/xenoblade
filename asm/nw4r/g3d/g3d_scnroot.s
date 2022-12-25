@@ -1920,3 +1920,67 @@ GetTypeObj__Q34nw4r3g3d7ScnRootCFv:
 /* 803F7648 003C0C08  3C 60 80 52 */	lis r3, lbl_805210B0@ha
 /* 803F764C 003C0C0C  38 63 10 B0 */	addi r3, r3, lbl_805210B0@l
 /* 803F7650 003C0C10  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_80521090
+lbl_80521090:
+	# ROM: 0x51D190
+	.4byte 0x00000008
+	.asciz "ScnLeaf"
+	.4byte 0
+
+
+.global lbl_805210A0
+lbl_805210A0:
+	# ROM: 0x51D1A0
+	.4byte 0x00000009
+	.asciz "ScnGroup"
+	.balign 4
+
+.global lbl_805210B0
+lbl_805210B0:
+	# ROM: 0x51D1B0
+	.4byte 0x00000008
+	.asciz "ScnRoot"
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056CFA0
+lbl_8056CFA0:
+	# ROM: 0x5690A0
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r3g3d12ScnObjGatherFv
+	.4byte Add__Q34nw4r3g3d12ScnObjGatherFPQ34nw4r3g3d6ScnObjbb
+	.4byte Clear__Q34nw4r3g3d12ScnObjGatherFv
+	.4byte ZSort__Q34nw4r3g3d12ScnObjGatherFv
+	.4byte Sort__Q34nw4r3g3d12ScnObjGatherFv
+	.4byte Sort__Q34nw4r3g3d12ScnObjGatherFPFPCQ34nw4r3g3d6ScnObjPCQ34nw4r3g3d6ScnObj_bPFPCQ34nw4r3g3d6ScnObjPCQ34nw4r3g3d6ScnObj_b
+	.4byte DrawOpa__Q34nw4r3g3d12ScnObjGatherFPQ34nw4r3g3d14ResMdlDrawMode
+	.4byte DrawXlu__Q34nw4r3g3d12ScnObjGatherFPQ34nw4r3g3d14ResMdlDrawMode
+	.4byte CheckScnObj__Q34nw4r3g3d12ScnObjGatherFPQ34nw4r3g3d6ScnObj
+	.4byte 0
+
+
+.global lbl_8056CFD0
+lbl_8056CFD0:
+	# ROM: 0x5690D0
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d7ScnRootCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d7ScnRootFUlUlPv
+	.4byte __dt__Q34nw4r3g3d7ScnRootFv
+	.4byte GetTypeObj__Q34nw4r3g3d7ScnRootCFv
+	.4byte GetTypeName__Q34nw4r3g3d7ScnRootCFv
+	.4byte ForEach__Q34nw4r3g3d8ScnGroupFPFPQ34nw4r3g3d6ScnObjPv_Q44nw4r3g3d6ScnObj13ForEachResultPvb
+	.4byte SetScnObjOption__Q34nw4r3g3d6ScnObjFUlUl
+	.4byte GetScnObjOption__Q34nw4r3g3d6ScnObjCFUlPUl
+	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
+	.4byte CalcWorldMtx__Q34nw4r3g3d6ScnObjFPCQ34nw4r4math5MTX34PUl
+	.4byte Insert__Q34nw4r3g3d8ScnGroupFUlPQ34nw4r3g3d6ScnObj
+	.4byte Remove__Q34nw4r3g3d8ScnGroupFUl
+	.4byte Remove__Q34nw4r3g3d8ScnGroupFPQ34nw4r3g3d6ScnObj

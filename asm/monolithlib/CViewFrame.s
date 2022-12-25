@@ -4089,3 +4089,112 @@ lbl_804434E0:
 /* 804434F0 0040CAB0  7C 08 03 A6 */	mtlr r0
 /* 804434F4 0040CAB4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804434F8 0040CAB8  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CViewFrame_typestr
+CViewFrame_typestr:
+	.asciz "CViewFrame"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CViewFrame
+__vt__CViewFrame:
+	.4byte __RTTI__CViewFrame
+	.4byte 0
+	.4byte func_8043C5DC
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CViewFrame
+__RTTI__CViewFrame:
+	.4byte CViewFrame_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066CAE8
+lbl_8066CAE8:
+	# ROM: 0x576948
+	.4byte 0
+
+
+.global lbl_8066CAEC
+lbl_8066CAEC:
+	# ROM: 0x57694C
+	.float 0.5
+
+
+.global lbl_8066CAF0
+lbl_8066CAF0:
+	# ROM: 0x576950
+	.float 1.0
+
+
+.global lbl_8066CAF4
+lbl_8066CAF4:
+	# ROM: 0x576954
+	.4byte 0x3F4CCCCD
+
+
+.global lbl_8066CAF8
+lbl_8066CAF8:
+	# ROM: 0x576958
+	.4byte 0x3ECCCCCD
+
+
+.global lbl_8066CAFC
+lbl_8066CAFC:
+	# ROM: 0x57695C
+	.4byte 0x3F19999A
+
+
+.global lbl_8066CB00
+lbl_8066CB00:
+	# ROM: 0x576960
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066CB08
+lbl_8066CB08:
+	# ROM: 0x576968
+	.4byte 0x3DEA72EB
+
+
+.global lbl_8066CB0C
+lbl_8066CB0C:
+	# ROM: 0x57696C
+	.4byte 0x3E990AFE
+
+
+.global lbl_8066CB10
+lbl_8066CB10:
+	# ROM: 0x576970
+	.4byte 0x3F162C23
+
+
+.global lbl_8066CB14
+lbl_8066CB14:
+	# ROM: 0x576974
+	.4byte 0x3F333333
+
+
+.global lbl_8066CB18
+lbl_8066CB18:
+	# ROM: 0x576978
+	.4byte 0x3F99999A
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667EB0
+lbl_80667EB0:
+	.skip 0x4
+.global lbl_80667EB4
+lbl_80667EB4:
+	.skip 0x4

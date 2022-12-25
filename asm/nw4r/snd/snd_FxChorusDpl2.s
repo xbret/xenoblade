@@ -426,3 +426,19 @@ lbl_80415F9C:
 /* 80415FA4 003DF564  7C 08 03 A6 */	mtlr r0
 /* 80415FA8 003DF568  38 21 00 10 */	addi r1, r1, 0x10
 /* 80415FAC 003DF56C  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056E078
+lbl_8056E078:
+	# ROM: 0x56A178
+	.4byte 0
+	.4byte 0
+	.4byte func_801C2E34
+	.4byte StartUp__Q34nw4r3snd12FxChorusDpl2Fv
+	.4byte Shutdown__Q34nw4r3snd12FxChorusDpl2Fv
+	.4byte UpdateBuffer__Q34nw4r3snd12FxChorusDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode
+	.4byte OnChangeOutputMode__Q34nw4r3snd12FxChorusDpl2Fv
+	.4byte AssignWorkBuffer__Q34nw4r3snd12FxChorusDpl2FPvUl
+	.4byte ReleaseWorkBuffer__Q34nw4r3snd12FxChorusDpl2Fv
+	.4byte 0

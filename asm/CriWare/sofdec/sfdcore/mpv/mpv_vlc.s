@@ -2972,3 +2972,54 @@ mpvvlc_SetVlcRunLevel:
 /* 803AC45C 00375A1C  7C 08 03 A6 */	mtlr r0
 /* 803AC460 00375A20  38 21 00 20 */	addi r1, r1, 0x20
 /* 803AC464 00375A24  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_8051F830
+lbl_8051F830:
+	# ROM: 0x51B930
+	.4byte 0x12011101
+	.4byte 0x10010F01
+	.4byte 0x03060210
+	.4byte 0x020F020E
+	.4byte 0x020D020C
+	.4byte 0x020B011F
+	.4byte 0x011E011D
+	.4byte 0x011C011B
+	.4byte 0x28002700
+	.4byte 0x26002500
+	.4byte 0x24002300
+	.4byte 0x22002100
+	.4byte 0x20000E01
+	.4byte 0x0D010C01
+	.4byte 0x0B010A01
+	.4byte 0x09010801
+	.4byte 0x1F001E00
+	.4byte 0x1D001C00
+	.4byte 0x1B001A00
+	.4byte 0x19001800
+	.4byte 0x17001600
+	.4byte 0x15001400
+	.4byte 0x13001200
+	.4byte 0x11001000
+	.4byte 0x020A0209
+	.4byte 0x03050403
+	.4byte 0x05020701
+	.4byte 0x06010F00
+	.4byte 0x0E000D00
+	.4byte 0x0C00011A
+	.4byte 0x01190118
+	.4byte 0x01170116
+	.4byte 0x0B000208
+	.4byte 0x03040A00
+	.4byte 0x04020207
+	.4byte 0x01150114
+	.4byte 0x09000113
+	.4byte 0x01120501
+	.4byte 0x03030800
+	.4byte 0x02060111
+	.4byte 0x01100205
+	.4byte 0x07000302
+	.4byte 0x0401010F
+	.4byte 0x010E0204

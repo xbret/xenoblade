@@ -168,3 +168,59 @@ lbl_8048207C:
 /* 80482088 0044B648  7C 08 03 A6 */	mtlr r0
 /* 8048208C 0044B64C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80482090 0044B650  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnItemCameraNw4r_typestr
+CScnItemCameraNw4r_typestr:
+	.asciz "CScnItemCameraNw4r"
+	.balign 4
+
+.global CScnItemCamera_typestr
+CScnItemCamera_typestr:
+	.asciz "CScnItemCamera"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnItemCameraNw4r
+__vt__CScnItemCameraNw4r:
+	.4byte __RTTI__CScnItemCameraNw4r
+	.4byte 0
+	.4byte func_80481EA8
+	.4byte func_8049F9A4
+	.4byte func_80482048
+	.4byte func_80481F9C
+	.4byte func_8048204C
+	.4byte func_80482040
+	.4byte func_80482038
+	.4byte func_80481F00
+
+.global CScnItemCameraNw4r_hierarchy
+CScnItemCameraNw4r_hierarchy:
+	.4byte __RTTI__CScnItem
+	.4byte 0
+	.4byte __RTTI__CScnItemCamera
+	.4byte 0
+	.4byte 0
+
+.global CScnItemCamera_hierarchy
+CScnItemCamera_hierarchy:
+	.4byte __RTTI__CScnItem
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnItemCameraNw4r
+__RTTI__CScnItemCameraNw4r:
+	.4byte CScnItemCameraNw4r_typestr
+	.4byte CScnItemCameraNw4r_hierarchy
+
+.global __RTTI__CScnItemCamera
+__RTTI__CScnItemCamera:
+	.4byte CScnItemCamera_typestr
+	.4byte CScnItemCamera_hierarchy

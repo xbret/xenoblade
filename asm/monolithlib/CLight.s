@@ -664,3 +664,69 @@ lbl_804C0BC8:
 /* 804C0BD8 0048A198  7C 08 03 A6 */	mtlr r0
 /* 804C0BDC 0048A19C  38 21 00 30 */	addi r1, r1, 0x30
 /* 804C0BE0 0048A1A0  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CLight
+__vt__CLight:
+	.4byte __RTTI__CLight
+	.4byte 0
+	.4byte func_80492034
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CLight
+__RTTI__CLight:
+	.4byte CLight_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D758
+lbl_8066D758:
+	# ROM: 0x5775B8
+	.4byte 0
+
+
+.global lbl_8066D75C
+lbl_8066D75C:
+	# ROM: 0x5775BC
+	.float 0.5
+
+
+.global lbl_8066D760
+lbl_8066D760:
+	# ROM: 0x5775C0
+	.float 1.0
+
+
+.global lbl_8066D764
+lbl_8066D764:
+	# ROM: 0x5775C4
+	.4byte 0x461C4000
+
+
+.global lbl_8066D768
+lbl_8066D768:
+	# ROM: 0x5775C8
+	.4byte 0x49742400
+
+
+.global lbl_8066D76C
+lbl_8066D76C:
+	# ROM: 0x5775CC
+	.4byte 0x4222F983
+
+
+.global lbl_8066D770
+lbl_8066D770:
+	# ROM: 0x5775D0
+	.4byte 0x437F0000
+
+.global CLight_typestr
+CLight_typestr:
+	.asciz "CLight"
+	.balign 4
+	.4byte 0

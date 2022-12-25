@@ -57,3 +57,28 @@ lbl_80448FC0:
 /* 80448FD0 00412590  7C 08 03 A6 */	mtlr r0
 /* 80448FD4 00412594  38 21 00 10 */	addi r1, r1, 0x10
 /* 80448FD8 00412598  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CDeviceVICb_typestr
+CDeviceVICb_typestr:
+	.asciz "CDeviceVICb"
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CDeviceVICb
+__vt__CDeviceVICb:
+	.4byte __RTTI__CDeviceVICb
+	.4byte 0
+	.4byte func_80448F7C
+	.4byte func_80166630
+	.4byte func_8016662C
+	.4byte func_80448A40
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CDeviceVICb
+__RTTI__CDeviceVICb:
+	.4byte CDeviceVICb_typestr
+	.4byte 0

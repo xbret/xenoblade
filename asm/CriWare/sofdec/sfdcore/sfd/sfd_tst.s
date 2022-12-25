@@ -1071,3 +1071,20 @@ lbl_803D001C:
 /* 803D0024 003995E4  7C 08 03 A6 */	mtlr r0
 /* 803D0028 003995E8  38 21 01 A0 */	addi r1, r1, 0x1a0
 /* 803D002C 003995EC  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_805206E8
+lbl_805206E8:
+	.asciz "%p, %ld, %ld, 0x%08lX%08lX, %ld, %ld, %ld, %ld,   %ld, %ld,   %ld, %ld, %ld, %ld,   %ld, %ld,   %ld, %ld, %ld, %ld, %ld,   %ld, %ld,   %ld \n"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8056C610
+lbl_8056C610:
+	.asciz "tst, help_time_sec, help_time_msec, help_time_64, help_time, mt_max, master_time, out_time,  mt_ot, mtmax_ot,  diff_l_max, diff_l_min, diff_a_max, tst->diff_a_min, pastat, adjmode, resethist, excesserr, adj_limit, adj_front, adj_rear,  movave_1st, movave_2nd,  adxt_stat \n\n"
+	.balign 4
+	.4byte 0

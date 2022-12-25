@@ -1023,3 +1023,38 @@ SFX_Make2PlaneCftDstBuf:
 /* 803D5814 0039EDD4  7C 08 03 A6 */	mtlr r0
 /* 803D5818 0039EDD8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D581C 0039EDDC  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520850
+lbl_80520850:
+	# ROM: 0x51C950
+	.float 0.5
+
+
+.global lbl_80520854
+lbl_80520854:
+	# ROM: 0x51C954
+	.4byte 0x3F94FDF4
+
+
+.global lbl_80520858
+lbl_80520858:
+	# ROM: 0x51C958
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80520860
+lbl_80520860:
+	.asciz "E201312: sfxcnv_IsCnvUpHalf : compo is invalid."
+	.asciz "E201311: sfxcnv_MakeTable : compo is not support."
+	.asciz "E202282: SFX_MakeTblZ16 : zclip is not set."
+	.asciz "E202281: SFX_MakeTblZ32 : zclip is not set."
+	.asciz "COMPO"
+	.asciz "E4111902: sfxcnv_ChkCompoByCbFunc : compo is not support."
+	.asciz "E05070806: please set pitch by mwPlyFxSetOutBufPitchHeight()."
+	.asciz "E4111901: sfxcnv_MakeCftSrcBuf : frame format is invalid."
+	.asciz "E05070807: please set pitch by mwPlyFxSetOutBufPitchHeight()."
+	.asciz "E4011801: sfxcnv_ExecCopyAlphaByCbFunc : frame format is invalid."
+	.asciz "E05070809: please set pitch by mwPlyFxSetOutBufPitchHeight()."

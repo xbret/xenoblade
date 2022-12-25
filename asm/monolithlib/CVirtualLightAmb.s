@@ -41,3 +41,35 @@ lbl_804946E4:
 /* 804946F0 0045DCB0  7C 08 03 A6 */	mtlr r0
 /* 804946F4 0045DCB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 804946F8 0045DCB8  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CVirtualLightAmb_typestr
+CVirtualLightAmb_typestr:
+	.asciz "CVirtualLightAmb"
+	.balign 4
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CVirtualLightAmb
+__vt__CVirtualLightAmb:
+	.4byte __RTTI__CVirtualLightAmb
+	.4byte 0
+	.4byte func_804946BC
+	.4byte func_804947EC
+	.4byte func_8049488C
+
+.global CVirtualLightAmb_hierarchy
+CVirtualLightAmb_hierarchy:
+	.4byte __RTTI__CVirtualLightObj
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CVirtualLightAmb
+__RTTI__CVirtualLightAmb:
+	.4byte CVirtualLightAmb_typestr
+	.4byte CVirtualLightAmb_hierarchy

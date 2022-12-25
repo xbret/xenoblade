@@ -161,3 +161,37 @@ lbl_8043758C:
 func_804375B4:
 /* 804375B4 00400B74  80 6D 9C C4 */	lwz r3, lbl_80665E44@sda21(r13)
 /* 804375B8 00400B78  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80525D78
+lbl_80525D78:
+	.asciz "WorkThreadSystem"
+	.balign 4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665E40
+lbl_80665E40:
+	# ROM: 0x571A20
+	.4byte lbl_80525D78
+
+
+.global lbl_80665E44
+lbl_80665E44:
+	# ROM: 0x571A24
+	.4byte 0xFFFFFFFF
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667E70
+lbl_80667E70:
+	.skip 0x4
+.global lbl_80667E74
+lbl_80667E74:
+	.skip 0x4
+.global lbl_80667E78
+lbl_80667E78:
+	.skip 0x8

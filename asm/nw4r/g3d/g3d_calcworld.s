@@ -749,3 +749,11 @@ lbl_803EF188:
 /* 803EF194 003B8754  7C 08 03 A6 */	mtlr r0
 /* 803EF198 003B8758  38 21 00 30 */	addi r1, r1, 0x30
 /* 803EF19C 003B875C  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056CEC8
+lbl_8056CEC8:
+	.asciz "NodeTree"
+	.balign 4
+	.4byte 0

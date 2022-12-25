@@ -465,3 +465,167 @@ lbl_80479EB0:
 /* 80479ED0 00443490  7C 08 03 A6 */	mtlr r0
 /* 80479ED4 00443494  38 21 00 30 */	addi r1, r1, 0x30
 /* 80479ED8 00443498  4E 80 00 20 */	blr 
+
+#needs to be split up
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global mpfsys_MPFDrawMdlColor_typestr
+mpfsys_MPFDrawMdlColor_typestr:
+	.asciz "mpfsys::MPFDrawMdlColor"
+
+.global mpfsys_MPFDrawMdlNoColor_typestr
+mpfsys_MPFDrawMdlNoColor_typestr:
+	.asciz "mpfsys::MPFDrawMdlNoColor"
+	.balign 4
+	.4byte 0
+
+.global lbl_80527728
+lbl_80527728:
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0x00000003
+	
+.global lbl_80527738
+lbl_80527738:
+	.4byte 0x00000003
+	.4byte 0x00000002
+	.4byte 0x00000001
+	.4byte 0
+
+.global mpfsys_MPFDrawBillLayTex_typestr
+mpfsys_MPFDrawBillLayTex_typestr:
+	.asciz "mpfsys::MPFDrawBillLayTex"
+	.balign 4
+
+.global mpfsys_MPFDrawCross_typestr
+mpfsys_MPFDrawCross_typestr:
+	.asciz "mpfsys::MPFDrawCross"
+	.balign 4
+
+.global mpfsys_MPFDrawBillboard_typestr
+mpfsys_MPFDrawBillboard_typestr:
+	.asciz "mpfsys::MPFDrawBillboard"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__mpfsys_MPFDrawMdlColor
+__vt__mpfsys_MPFDrawMdlColor:
+	.4byte __RTTI__mpfsys_MPFDrawMdlColor
+	.4byte 0
+	.4byte func_80479BA0
+	.4byte func_80479D40
+
+.global mpfsys_MPFDrawMdlColor_hierarchy
+mpfsys_MPFDrawMdlColor_hierarchy:
+	.4byte __RTTI__mpfsys_MPFDraw
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__mpfsys_MPFDrawMdlNoColor
+__vt__mpfsys_MPFDrawMdlNoColor:
+	.4byte __RTTI__mpfsys_MPFDrawMdlNoColor
+	.4byte 0
+	.4byte func_80479894
+	.4byte func_80479A1C
+
+.global mpfsys_MPFDrawMdlNoColor_hierarchy
+mpfsys_MPFDrawMdlNoColor_hierarchy:
+	.4byte __RTTI__mpfsys_MPFDraw
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global __vt__mpfsys_MPFDrawBillLayTex
+__vt__mpfsys_MPFDrawBillLayTex:
+	.4byte __RTTI__mpfsys_MPFDrawBillLayTex
+	.4byte 0
+	.4byte func_8047B85C
+	.4byte func_8047B9DC
+
+.global mpfsys_MPFDrawBillLayTex_hierarchy
+mpfsys_MPFDrawBillLayTex_hierarchy:
+	.4byte __RTTI__mpfsys_MPFDraw
+	.4byte 0
+	.4byte __RTTI__mpfsys_MPFDrawBillboard
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__mpfsys_MPFDrawCross
+__vt__mpfsys_MPFDrawCross:
+	.4byte __RTTI__mpfsys_MPFDrawCross
+	.4byte 0
+	.4byte func_8047B1E8
+	.4byte func_8047B528
+
+.global mpfsys_MPFDrawCross_hierarchy
+mpfsys_MPFDrawCross_hierarchy:
+	.4byte __RTTI__mpfsys_MPFDraw
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__mpfsys_MPFDrawBillboard
+__vt__mpfsys_MPFDrawBillboard:
+	.4byte __RTTI__mpfsys_MPFDrawBillboard
+	.4byte 0
+	.4byte func_8047A7B0
+	.4byte func_8047A86C
+
+.global mpfsys_MPFDrawBillboard_hierarchy
+mpfsys_MPFDrawBillboard_hierarchy:
+	.4byte __RTTI__mpfsys_MPFDraw
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__mpfsys_MPFDrawMdlColor
+__RTTI__mpfsys_MPFDrawMdlColor:
+	.4byte mpfsys_MPFDrawMdlColor_typestr
+	.4byte mpfsys_MPFDrawMdlColor_hierarchy
+
+.global __RTTI__mpfsys_MPFDrawMdlNoColor
+__RTTI__mpfsys_MPFDrawMdlNoColor:
+	.4byte mpfsys_MPFDrawMdlNoColor_typestr
+	.4byte mpfsys_MPFDrawMdlNoColor_hierarchy
+
+.global __RTTI__mpfsys_MPFDrawBillLayTex
+__RTTI__mpfsys_MPFDrawBillLayTex:
+	.4byte mpfsys_MPFDrawBillLayTex_typestr
+	.4byte mpfsys_MPFDrawBillLayTex_hierarchy
+
+.global __RTTI__mpfsys_MPFDrawCross
+__RTTI__mpfsys_MPFDrawCross:
+	.4byte mpfsys_MPFDrawCross_typestr
+	.4byte mpfsys_MPFDrawCross_hierarchy
+
+.global __RTTI__mpfsys_MPFDrawBillboard
+__RTTI__mpfsys_MPFDrawBillboard:
+	.4byte mpfsys_MPFDrawBillboard_typestr
+	.4byte mpfsys_MPFDrawBillboard_hierarchy
+
+
+.global lbl_806661C0
+lbl_806661C0:
+	# ROM: 0x571DA0
+	.4byte 0x3EAAAAAB
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80668170
+lbl_80668170:
+	.skip 0x4
+.global lbl_80668174
+lbl_80668174:
+	.skip 0x4

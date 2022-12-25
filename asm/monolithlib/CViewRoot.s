@@ -141,3 +141,80 @@ lbl_804436DC:
 /* 8044370C 0040CCCC  7C 08 03 A6 */	mtlr r0
 /* 80443710 0040CCD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80443714 0040CCD4  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CViewRoot_typestr
+CViewRoot_typestr:
+	.asciz "CViewRoot"
+	.balign 4
+
+
+.global lbl_80525F84
+lbl_80525F84:
+	.asciz "CViewRoot"
+	.balign 4
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global __vt__CViewRoot
+__vt__CViewRoot:
+	.4byte __RTTI__CViewRoot
+	.4byte 0
+	.4byte func_804420D0
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80438A50
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_80443214
+	.4byte func_80443388
+	.4byte func_80039E30
+
+.global CViewRoot_hierarchy
+CViewRoot_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CViewRoot
+__RTTI__CViewRoot:
+	.4byte CViewRoot_typestr
+	.4byte CViewRoot_hierarchy

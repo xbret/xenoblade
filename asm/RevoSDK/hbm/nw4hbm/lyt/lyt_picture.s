@@ -387,3 +387,11 @@ __sinit_lyt_picture_cpp:
 /* 80332C78 002FC238  38 84 D7 C0 */	addi r4, r4, lbl_805CD7C0@l
 /* 80332C7C 002FC23C  90 83 D7 C8 */	stw r4, lbl_805CD7C8@l(r3)
 /* 80332C80 002FC240  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80518AB8
+lbl_80518AB8:
+	# ROM: 0x514BB8
+	.4byte 0
+	.4byte 0

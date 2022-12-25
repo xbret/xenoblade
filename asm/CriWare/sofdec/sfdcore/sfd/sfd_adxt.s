@@ -1616,3 +1616,38 @@ lbl_803BE8B0:
 /* 803BE8BC 00387E7C  7C 08 03 A6 */	mtlr r0
 /* 803BE8C0 00387E80  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BE8C4 00387E84  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051FEE0
+lbl_8051FEE0:
+	# ROM: 0x51BFE0
+	.4byte SFADXT_Init
+	.4byte SFADXT_Finish
+	.4byte SFADXT_ExecServer
+	.4byte SFADXT_Create
+	.4byte SFADXT_Destroy
+	.4byte SFADXT_RequestStop
+	.4byte SFADXT_Start
+	.4byte SFADXT_Stop
+	.4byte SFADXT_Pause
+	.4byte SFADXT_GetWrite
+	.4byte SFADXT_AddWrite
+	.4byte SFADXT_GetRead
+	.4byte SFADXT_AddRead
+	.4byte SFADXT_Seek
+	
+.global lbl_8051FF18
+lbl_8051FF18:
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x44D8677D
+	.4byte 0x3C23D70A
+	.float 0.5
+	.4byte 0x43300000
+	.4byte 0x80000000
+	.asciz "(c)CRI"
+	.balign 4

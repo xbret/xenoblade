@@ -241,3 +241,14 @@ lbl_803FFC54:
 /* 803FFC68 003C9228  7C 08 03 A6 */	mtlr r0
 /* 803FFC6C 003C922C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803FFC70 003C9230  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8056D248
+lbl_8056D248:
+	# ROM: 0x569348
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r3lyt5GroupFv
+	.4byte 0

@@ -50,3 +50,53 @@ lbl_80494780:
 /* 8049478C 0045DD4C  7C 08 03 A6 */	mtlr r0
 /* 80494790 0045DD50  38 21 00 10 */	addi r1, r1, 0x10
 /* 80494794 0045DD54  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CVirtualLightObj_typestr
+CVirtualLightObj_typestr:
+	.asciz "CVirtualLightObj"
+	.balign 4
+
+.global CVirtualLightDir_typestr
+CVirtualLightDir_typestr:
+	.asciz "CVirtualLightDir"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CVirtualLightDir
+__vt__CVirtualLightDir:
+	.4byte __RTTI__CVirtualLightDir
+	.4byte 0
+	.4byte func_80494758
+	.4byte func_804947EC
+	.4byte func_8049488C
+
+.global CVirtualLightDir_hierarchy
+CVirtualLightDir_hierarchy:
+	.4byte __RTTI__CVirtualLightObj
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CVirtualLightObj
+__RTTI__CVirtualLightObj:
+	.4byte CVirtualLightObj_typestr
+	.4byte 0
+
+.global __RTTI__CVirtualLightDir
+__RTTI__CVirtualLightDir:
+	.4byte CVirtualLightDir_typestr
+	.4byte CVirtualLightDir_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D240
+lbl_8066D240:
+	# ROM: 0x5770A0
+	.4byte 0
+	.4byte 0

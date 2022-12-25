@@ -856,3 +856,32 @@ lbl_8032C058:
 /* 8032C064 002F5624  4E 80 00 20 */	blr 
 
 
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_80518A28
+lbl_80518A28:
+	# ROM: 0x514B28
+	.4byte 0xBA83126F
+
+
+.global lbl_80518A2C
+lbl_80518A2C:
+	# ROM: 0x514B2C
+	.4byte 0x3A83126F
+	.float 1.0
+	.4byte 0x40000000
+	.4byte 0x40400000
+	.4byte 0xC0000000
+
+
+.global lbl_80518A40
+lbl_80518A40:
+	# ROM: 0x514B40
+	.4byte 0
+
+
+.global lbl_80518A44
+lbl_80518A44:
+	# ROM: 0x514B44
+	.float 0.5

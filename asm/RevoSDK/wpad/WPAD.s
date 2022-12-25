@@ -8469,3 +8469,31 @@ WPADiClearQueue:
 WPADSetCallbackByKPAD:
 /* 803706F0 00339CB0  90 6D BB 20 */	stw r3, lbl_80667CA0@sda21(r13)
 /* 803706F4 00339CB4  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80518DC8
+lbl_80518DC8:
+	# ROM: 0x514EC8
+	.4byte 0x02000071
+	.4byte 0x01006400
+	.4byte 0xFE020000
+	.4byte 0x71010096
+	.4byte 0x00B40200
+	.4byte 0x00710100
+	.4byte 0xAA006402
+	.4byte 0x00007101
+	.4byte 0x00C80036
+	.4byte 0x07000071
+	.4byte 0x01007200
+	.4byte 0x20000000
+
+
+.global lbl_80518DF8
+lbl_80518DF8:
+	# ROM: 0x514EF8
+	.4byte 0xFD05B304
+	.4byte 0x63033503
+	.4byte 0x1F030000
+	.4byte 0

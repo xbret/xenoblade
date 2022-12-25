@@ -57,3 +57,18 @@ lbl_8032D4C8:
 /* 8032D4D4 002F6A94  7C 08 03 A6 */	mtlr r0
 /* 8032D4D8 002F6A98  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032D4DC 002F6A9C  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+
+.global lbl_80518A58
+lbl_80518A58:
+	# ROM: 0x514B58
+	.4byte 0
+
+
+.global lbl_80518A5C
+lbl_80518A5C:
+	# ROM: 0x514B5C
+	.float 1.0

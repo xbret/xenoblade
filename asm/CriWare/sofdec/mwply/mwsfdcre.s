@@ -2243,3 +2243,448 @@ func_803A0C20:
 /* 803A0C54 0036A214  7C 08 03 A6 */	mtlr r0
 /* 803A0C58 0036A218  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A0C5C 0036A21C  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+
+.global lbl_8051DA00
+lbl_8051DA00:
+	.4byte lbl_805202A0
+	.4byte lbl_805202D8
+	.4byte lbl_80520320
+	.4byte lbl_8051FEE0
+	.4byte 0
+	.4byte 0
+	.4byte lbl_805206B0
+	.4byte lbl_8051FF48
+	.4byte lbl_80520678
+
+.global lbl_8051DA24
+lbl_8051DA24:
+	.4byte lbl_805202A0
+	.4byte 0
+	.4byte lbl_80520320
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte lbl_805206B0
+	.4byte 0
+	.4byte 0
+
+.global lbl_8051DA48
+lbl_8051DA48:
+	.4byte lbl_805202A0
+	.4byte lbl_805202D8
+	.4byte lbl_80520320
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte lbl_805206B0
+	.4byte 0
+	.4byte lbl_80520678
+
+
+.global lbl_8051DA6C
+lbl_8051DA6C:
+	# ROM: 0x519B6C
+	.float 0.5
+
+
+.global lbl_8051DA70
+lbl_8051DA70:
+	# ROM: 0x519B70
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8051DA78
+lbl_8051DA78:
+	.asciz "E206011 MwsfdCrePrm: illigal buffmt."
+	.asciz "E1122613 mwPlyCalcWorkCprmSfd: cprm is NULL."
+	.asciz "E7092501 mwPlyCalcWorkCprmSfd: M4V is not support."
+	.asciz "E7092502 mwPlyCalcWorkCprmSfd: H264 is not support."
+	.asciz "E6081101 outer_frmpool_num error"
+	.asciz "E6081102 outer_frmpool_size error"
+	.asciz "E6081103 outer_frmpool_ptr error"
+	.asciz "E20010703B MWSFCRE_SetSupplySj"
+	.asciz "E2053002 not enough work"
+	.asciz "E4041301 not enough work"
+	.asciz "E20010703C mwPlyCreateSofdec: create error"
+	.asciz "E20010703D mwPlyCreateSofdec: set errcb"
+	.asciz "E410142 mwPlyCreateSofdec: can't skghn."
+	.asciz "E02120501 Internal Error: mwsfcre_AttachPicUsrBuf()."
+	.asciz "E02120502 mwsfcre_AttachPicUsrBuf(): usrdatbuf is short."
+	.asciz "E02120503 mwPlyAttachPicUsrBuf(): bufsize is short."
+	.asciz "E20010703E MWSFCRE_DestroySfd"
+	.asciz "E0203261 MWSFCRE_ResetSfdHn: SFD_Stop() failed."
+	.asciz "E0203262 MWSFCRE_ResetSfdHn: SFD_SetErrFn() failed."
+	.asciz "%ld, %ld, %ld, %ld, %ld, %ld, %p, %ld, %ld, %d, %ld, %ld, %p"
+	.asciz "E1122612 mwPlyCreateSofdec : cprm is NULL."
+	.asciz "E3012102 Buffer format is invalid."
+	.asciz "E4110901 Number of frame pool exceeds 14."
+	.asciz "E4061801 mwPlyCreateSofdec: Number of MWPLY handles exceeds its maximum number."
+	.asciz "E2053006 mwPlyCreateSofdec: Didn't set malloc/free func."
+	.asciz "E2012 mwPlyCreate:can't create SFD"
+	.asciz "E2013 mwPlyCreate:can't create SJ"
+	.asciz "E08102901 mwPlyCreate:can't create uniSJ"
+	.asciz "E201185 can't create SfxHn"
+	.asciz "E201212 mwPlyCreate: can't set AddInfSJ"
+	.asciz "E2053003 not enough work: sfx_wk"
+	.asciz "E2053004 not enough work: ainfsj_buf"
+	.asciz "E2053005 forgot free."
+	.asciz "E410251 mwPlyGetHdrInfWithKey: parameter is illigal."
+	.asciz "E204161 mwPlyGetHdrInf(): NULL pointer"
+	.asciz "E204162 mwPlyGetHdrInf(): bufsize error"
+	.asciz "E7060501 mwPlyGetHdrAudioDetail(): NULL pointer"
+	.asciz "E7060502 mwPlyGetHdrAudioDetail(): bsize is too small."
+	.asciz "E7060503 SFH_Create return NULL."
+	.4byte 0
+
+
+.global lbl_8051E0E0
+lbl_8051E0E0:
+	.asciz "\nMWSFD/WII Ver.4.75 Build:Nov 13 2008 18:21:20\n"
+	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
+
+.global lbl_8051E134
+lbl_8051E134:
+	.4byte lbl_805202A0
+	.4byte lbl_805202D8
+	.4byte lbl_80520320
+	.4byte lbl_805206B0
+	.4byte lbl_8051FEE0
+	.4byte lbl_8051FF48
+	.4byte lbl_80520678
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8051E170
+lbl_8051E170:
+	# ROM: 0x51A270
+	.4byte lbl_8051E134
+	.4byte 0x0000EA24
+	.4byte 0x00000670
+
+.global lbl_8051E17C
+lbl_8051E17C:
+	.asciz "mwPlyInitSfdFx"
+	.balign 4
+	.asciz "mwPlyFinishSfdFx"
+	.balign 4
+
+.global lbl_8051E1A0
+lbl_8051E1A0:
+	.asciz "mwPlyCreateSofdec"
+	.balign 4
+
+.global lbl_8051E1B4
+lbl_8051E1B4:
+	.asciz "cpara_members"
+	.balign 4
+
+.global lbl_8051E1C4
+lbl_8051E1C4:
+	.asciz "mwply"
+	.balign 4
+
+.global lbl_8051E1CC
+lbl_8051E1CC:
+	.asciz "mwPlyDestroy"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805697D0
+lbl_805697D0:
+	# ROM: 0x5658D0
+	.4byte lbl_8051DA00
+	.4byte 0
+	.4byte 0x00010000
+	.4byte 0x00050800
+	.4byte 0x00012000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000800
+	.4byte 0x00000003
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000003
+	.4byte 0
+	.4byte 0
+	.4byte lbl_8051DA24
+	.4byte 0
+	.4byte 0x00010000
+	.4byte 0x00050800
+	.4byte 0x00012000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000800
+	.4byte 0x00000003
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000003
+	.4byte 0
+	.4byte 0
+	.4byte lbl_8051DA48
+	.4byte 0
+	.4byte 0x00010000
+	.4byte 0x00050800
+	.4byte 0x00012000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000800
+	.4byte 0x00000003
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000003
+	.4byte 0
+	.4byte 0
+	.4byte 0x000000C0
+	.4byte 0x000000F0
+	.4byte 0x00000160
+	.4byte 0x000001E0
+	.4byte 0
+	.4byte 0x00000160
+	.4byte 0x000001E0
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0x00005DCC
+	.4byte 0x00000120
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x0000BB80
+	.4byte 0x0000C1C0
+	.4byte 0
+	.4byte 0x00000800
+
+.global lbl_805698F8
+lbl_805698F8:
+	# ROM: 0x5659F8
+	.4byte lbl_8039F84C
+	.4byte lbl_8039F84C
+	.4byte lbl_8039F844
+	.4byte lbl_8039F844
+	.4byte lbl_8039F84C
+	.4byte lbl_8039F84C
+	.4byte lbl_8039F844
+	.4byte lbl_8039F844
+	.4byte lbl_8039F844
+	.4byte lbl_8039F84C
+	.4byte lbl_8039F844
+	.4byte lbl_8039F84C
+
+
+.global lbl_80569928
+lbl_80569928:
+	# ROM: 0x565A28
+	.4byte lbl_8039F70C
+	.4byte lbl_8039F70C
+	.4byte lbl_8039F704
+	.4byte lbl_8039F704
+	.4byte lbl_8039F70C
+	.4byte lbl_8039F70C
+	.4byte lbl_8039F704
+	.4byte lbl_8039F704
+	.4byte lbl_8039F704
+	.4byte lbl_8039F70C
+	.4byte lbl_8039F704
+	.4byte lbl_8039F70C
+
+
+
+.global lbl_80569958
+lbl_80569958:
+	# ROM: 0x565A58
+	.4byte lbl_8051E17C
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80569A2C
+lbl_80569A2C:
+	# ROM: 0x565B2C
+	.4byte lbl_8051E1A0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x0000000A
+	.4byte lbl_8051E1B4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x0000000B
+	.4byte lbl_8051E1C4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80569B00
+lbl_80569B00:
+	# ROM: 0x565C00
+	.4byte lbl_8051E1CC
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x0000000B
+	.4byte lbl_8051E1C4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0

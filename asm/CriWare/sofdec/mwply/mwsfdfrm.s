@@ -1333,3 +1333,42 @@ lbl_8039CE44:
 /* 8039CE4C 0036640C  7C 08 03 A6 */	mtlr r0
 /* 8039CE50 00366410  38 21 00 30 */	addi r1, r1, 0x30
 /* 8039CE54 00366414  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051CEB0
+lbl_8051CEB0:
+	.asciz "E1122629 mwPlySetFrmSync: handle is invalid."
+	.asciz "E2010801 mwPlyGetFrmSync: handle is invalid."
+	.asciz "E410131 mwPlyGetFrm: handle is invalid."
+	.asciz "E4110902 Don't use another type get/rel frame API together."
+	.asciz "E1122614 mwPlyGetCurFrm: handle is invalid."
+	.asciz "E1122618 mwPlyIsNextFrmReady: handle is invalid."
+	.asciz "E05111910 mwl_convPtypeFromSFD : Invalid Ptype"
+	.asciz "E201301 MWSFD: GetFps failed."
+	.asciz "E301271 mwsffrm_DecideFrmType() : Invalid Pstruct"
+	.asciz "E05111911 mwl_convPtypeToSFD : Invalid Ptype"
+	.asciz "E410132 mwPlyRelFrm: handle is invalid."
+	.asciz "E1122615 mwPlyRelCurFrm: handle is invalid."
+	.asciz "E3122201 mwPlyGetNextPicUsr: handle is invalid."
+	.asciz "E202231 mwPlyGetNumSkipDisp: handle is invalid."
+	.asciz "E7060504 SFH_Create return NULL."
+	.asciz "E7060505 SFH_Create return NULL."
+	.asciz "E409171 mwPlyGetNumRemainFrm: handle is invalid."
+	.asciz "E602201 mwPlyGetPlayingHdrInf: handle is invalid."
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805697A8
+lbl_805697A8:
+	# ROM: 0x5658A8
+	.4byte lbl_8039C878
+	.4byte lbl_8039C860
+	.4byte lbl_8039C878
+	.4byte lbl_8039C868
+	.4byte lbl_8039C878
+	.4byte lbl_8039C878
+	.4byte lbl_8039C870
+	.4byte lbl_8039C878
+	.4byte lbl_8039C878
+	.4byte 0

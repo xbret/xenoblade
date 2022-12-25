@@ -125,3 +125,22 @@ lbl_803D7230:
 /* 803D7238 003A07F8  7C 08 03 A6 */	mtlr r0
 /* 803D723C 003A07FC  38 21 00 30 */	addi r1, r1, 0x30
 /* 803D7240 003A0800  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520D60
+lbl_80520D60:
+	.asciz "\nCRI SUD/WII Ver.0.05 Build:Nov 13 2008 18:22:10\n"
+	.balign 4
+
+
+.global lbl_80520D94
+lbl_80520D94:
+	.asciz "<SUDPS_>"
+	.asciz "<%06X>"
+	.asciz "02"
+	.byte 0x0A
+	.4byte 0x00440043
+	.4byte 0x00490050
+	.4byte 0x0041003C
+	.4byte 0

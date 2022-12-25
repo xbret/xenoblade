@@ -1826,3 +1826,23 @@ lbl_80360EA0:
 /* 80360EAC 0032A46C  7C 08 03 A6 */	mtlr r0
 /* 80360EB0 0032A470  38 21 00 10 */	addi r1, r1, 0x10
 /* 80360EB4 0032A474  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80518D30
+lbl_80518D30:
+	.asciz "/shared2/sys"
+	.balign 4
+
+
+.global lbl_80518D40
+lbl_80518D40:
+	.asciz "/shared2/sys/SYSCONF"
+	.balign 4
+
+
+.global lbl_80518D58
+lbl_80518D58:
+	.asciz "/title/00000001/00000002/data/setting.txt"
+	.balign 4
+	.4byte 0

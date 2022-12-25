@@ -25,3 +25,9 @@ LytInit__Q24nw4r3lytFv:
 /* 803FE8F8 003C7EB8  7C 08 03 A6 */	mtlr r0
 /* 803FE8FC 003C7EBC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FE900 003C7EC0  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056D188
+lbl_8056D188:
+	.asciz "<< NW4R    - LYT \tfinal   build: Aug 21 2008 05:21:58 (0x4199_60831) >>"

@@ -4167,3 +4167,24 @@ lbl_8044D7F4:
 func_8044D818:
 /* 8044D818 00416DD8  80 6D BD B4 */	lwz r3, lbl_80667F34@sda21(r13)
 /* 8044D81C 00416DDC  4E 80 00 20 */	blr 
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+#also used by CDevice
+
+.global lbl_8065A6F8
+lbl_8065A6F8:
+	.skip 0x44
+.global lbl_8065A73C
+lbl_8065A73C:
+	.skip 0x44
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667F30
+lbl_80667F30:
+	.skip 0x4
+.global lbl_80667F34
+lbl_80667F34:
+	.skip 0x4

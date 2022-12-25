@@ -936,3 +936,128 @@ lbl_8049B95C:
 /* 8049B988 00464F48  7C 08 03 A6 */	mtlr r0
 /* 8049B98C 00464F4C  38 21 00 60 */	addi r1, r1, 0x60
 /* 8049B990 00464F50  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80527A00
+lbl_80527A00:
+	.asciz "camset %d %v3 %v3 %f %f %f %f"
+	.balign 4
+
+.global CScnCameraMan_typestr
+CScnCameraMan_typestr:
+	.asciz "CScnCameraMan"
+	.balign 4
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnCameraMan
+__vt__CScnCameraMan:
+	.4byte __RTTI__CScnCameraMan
+	.4byte 0
+	.4byte func_8049AE10
+	.4byte func_8049B410
+	.4byte func_80039E20
+	.4byte func_8049B348
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CScnCameraMan_hierarchy
+CScnCameraMan_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80666328
+lbl_80666328:
+	# ROM: 0x571F08
+	.4byte lbl_80527A00
+
+
+.global lbl_8066632C
+lbl_8066632C:
+	# ROM: 0x571F0C
+	.4byte 0xFFFFFFFF
+
+.global __RTTI__CScnCameraMan
+__RTTI__CScnCameraMan:
+	.4byte CScnCameraMan_typestr
+	.4byte CScnCameraMan_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D308
+lbl_8066D308:
+	# ROM: 0x577168
+	.4byte 0x3C8EFA33
+	.4byte 0
+
+
+.global lbl_8066D310
+lbl_8066D310:
+	# ROM: 0x577170
+	.4byte 0xC3FA0000
+
+
+.global lbl_8066D314
+lbl_8066D314:
+	# ROM: 0x577174
+	.float 1.0
+
+
+.global lbl_8066D318
+lbl_8066D318:
+	# ROM: 0x577178
+	.float 0.5
+	.4byte 0
+
+
+.global lbl_8066D320
+lbl_8066D320:
+	# ROM: 0x577180
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066D328
+lbl_8066D328:
+	# ROM: 0x577188
+	.4byte 0
+
+
+.global lbl_8066D32C
+lbl_8066D32C:
+	# ROM: 0x57718C
+	.4byte 0x3F726E98

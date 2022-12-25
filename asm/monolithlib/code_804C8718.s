@@ -4205,3 +4205,72 @@ func_804CC2B0:
 .global sinit_804CC2B4
 sinit_804CC2B4:
 /* 804CC2B4 00495874  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80527E08
+lbl_80527E08:
+	.asciz "CEffectHeap"
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D850
+lbl_8066D850:
+	# ROM: 0x5776B0
+	.4byte 0
+
+
+.global lbl_8066D854
+lbl_8066D854:
+	# ROM: 0x5776B4
+	.float 1.0
+
+
+.global lbl_8066D858
+lbl_8066D858:
+	# ROM: 0x5776B8
+	.float 100.0
+	.4byte 0
+
+
+.global lbl_8066D860
+lbl_8066D860:
+	# ROM: 0x5776C0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066D868
+lbl_8066D868:
+	# ROM: 0x5776C8
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066D870
+lbl_8066D870:
+	# ROM: 0x5776D0
+	.4byte 0x40000000
+
+
+.global lbl_8066D874
+lbl_8066D874:
+	# ROM: 0x5776D4
+	.float 0.5
+
+
+.global lbl_8066D878
+lbl_8066D878:
+	# ROM: 0x5776D8
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066D880
+lbl_8066D880:
+	# ROM: 0x5776E0
+	.4byte 0x606060FF
+	.4byte 0

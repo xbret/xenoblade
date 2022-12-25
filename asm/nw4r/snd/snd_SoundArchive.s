@@ -302,3 +302,17 @@ lbl_8041CABC:
 /* 8041CAC8 003E6088  7C 08 03 A6 */	mtlr r0
 /* 8041CACC 003E608C  38 21 02 70 */	addi r1, r1, 0x270
 /* 8041CAD0 003E6090  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056E4A0
+lbl_8056E4A0:
+	# ROM: 0x56A5A0
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r3snd12SoundArchiveFv
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0

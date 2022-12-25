@@ -221,3 +221,45 @@ func_8049E8B4:
 func_8049E8BC:
 /* 8049E8BC 00467E7C  80 63 00 54 */	lwz r3, 0x54(r3)
 /* 8049E8C0 00467E80  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnItemAnim_typestr
+CScnItemAnim_typestr:
+	.asciz "CScnItemAnim"
+	.balign 4
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnItemAnim
+__vt__CScnItemAnim:
+	.4byte __RTTI__CScnItemAnim
+	.4byte 0
+	.4byte func_8049E5DC
+	.4byte func_8048228C
+	.4byte func_80482048
+	.4byte func_80482288
+	.4byte func_8049E8B4
+	.4byte func_8049E8BC
+
+.global CScnItemAnim_hierarchy
+CScnItemAnim_hierarchy:
+	.4byte __RTTI__CScnItem
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnItemAnim
+__RTTI__CScnItemAnim:
+	.4byte CScnItemAnim_typestr
+	.4byte CScnItemAnim_hierarchy
+
+
+.global lbl_806663A8
+lbl_806663A8:
+	# ROM: 0x571F88
+	.4byte 0x72656600
+	.4byte 0

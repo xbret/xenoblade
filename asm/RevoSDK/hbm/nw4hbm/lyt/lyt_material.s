@@ -3446,3 +3446,43 @@ lbl_8033171C:
 /* 80331734 002FACF4  7C 08 03 A6 */	mtlr r0
 /* 80331738 002FACF8  38 21 00 60 */	addi r1, r1, 0x60
 /* 8033173C 002FACFC  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+
+.global lbl_80518A68
+lbl_80518A68:
+	# ROM: 0x514B68
+	.4byte 0
+	.4byte 0
+	.4byte 0x00FF00FF
+	.4byte 0x00FF00FF
+	.float 0.5
+
+
+.global lbl_80518A7C
+lbl_80518A7C:
+	# ROM: 0x514B7C
+	.4byte 0x3F360B61
+
+
+.global lbl_80518A80
+lbl_80518A80:
+	# ROM: 0x514B80
+	.4byte 0
+
+
+.global lbl_80518A84
+lbl_80518A84:
+	# ROM: 0x514B84
+	.float 1.0
+	.4byte 0x40000000
+	.4byte 0
+
+
+.global lbl_80518A90
+lbl_80518A90:
+	# ROM: 0x514B90
+	.4byte 0x43300000
+	.4byte 0

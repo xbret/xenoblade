@@ -522,3 +522,19 @@ lbl_80416C94:
 /* 80416C9C 003E025C  7C 08 03 A6 */	mtlr r0
 /* 80416CA0 003E0260  38 21 00 10 */	addi r1, r1, 0x10
 /* 80416CA4 003E0264  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056E0C8
+lbl_8056E0C8:
+	# ROM: 0x56A1C8
+	.4byte 0
+	.4byte 0
+	.4byte func_801C2D78
+	.4byte StartUp__Q34nw4r3snd15FxReverbStdDpl2Fv
+	.4byte Shutdown__Q34nw4r3snd15FxReverbStdDpl2Fv
+	.4byte UpdateBuffer__Q34nw4r3snd15FxReverbStdDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode
+	.4byte OnChangeOutputMode__Q34nw4r3snd15FxReverbStdDpl2Fv
+	.4byte AssignWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2FPvUl
+	.4byte ReleaseWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2Fv
+	.4byte 0

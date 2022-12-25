@@ -1947,3 +1947,54 @@ func_804BC9DC:
 .global sinit_804BC9E8
 sinit_804BC9E8:
 /* 804BC9E8 00485FA8  4E 80 00 20 */	blr
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D6A0
+lbl_8066D6A0:
+	# ROM: 0x577500
+	.float 0.5
+
+
+.global lbl_8066D6A4
+lbl_8066D6A4:
+	# ROM: 0x577504
+	.4byte 0x49742400
+
+
+.global lbl_8066D6A8
+lbl_8066D6A8:
+	# ROM: 0x577508
+	.4byte 0xC9742400
+
+
+.global lbl_8066D6AC
+lbl_8066D6AC:
+	# ROM: 0x57750C
+	.4byte 0
+
+
+.global lbl_8066D6B0
+lbl_8066D6B0:
+	# ROM: 0x577510
+	.4byte 0x358637BD
+
+
+.global lbl_8066D6B4
+lbl_8066D6B4:
+	# ROM: 0x577514
+	.4byte 0xC7C35000
+
+
+.global lbl_8066D6B8
+lbl_8066D6B8:
+	# ROM: 0x577518
+	.4byte 0x47C35000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80668238
+lbl_80668238:
+	.skip 0x8

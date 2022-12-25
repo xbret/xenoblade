@@ -452,3 +452,20 @@ lbl_8041659C:
 /* 804165A4 003DFB64  7C 08 03 A6 */	mtlr r0
 /* 804165A8 003DFB68  38 21 00 10 */	addi r1, r1, 0x10
 /* 804165AC 003DFB6C  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056E0A0
+lbl_8056E0A0:
+	# ROM: 0x56A1A0
+	.4byte 0
+	.4byte 0
+	.4byte func_801C2EB0
+	.4byte StartUp__Q34nw4r3snd11FxDelayDpl2Fv
+	.4byte Shutdown__Q34nw4r3snd11FxDelayDpl2Fv
+	.4byte UpdateBuffer__Q34nw4r3snd11FxDelayDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode
+	.4byte OnChangeOutputMode__Q34nw4r3snd11FxDelayDpl2Fv
+	.4byte AssignWorkBuffer__Q34nw4r3snd11FxDelayDpl2FPvUl
+	.4byte ReleaseWorkBuffer__Q34nw4r3snd11FxDelayDpl2Fv
+	.4byte 0

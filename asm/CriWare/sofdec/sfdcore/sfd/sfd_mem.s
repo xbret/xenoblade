@@ -88,3 +88,22 @@ SFMEM_AddRead:
 SFMEM_Seek:
 /* 803C0EE8 0038A4A8  38 60 00 00 */	li r3, 0
 /* 803C0EEC 0038A4AC  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_805202A0
+lbl_805202A0:
+	.4byte SFMEM_Init
+	.4byte SFMEM_Finish
+	.4byte SFMEM_ExecServer
+	.4byte SFMEM_Create
+	.4byte SFMEM_Destroy
+	.4byte SFMEM_RequestStop
+	.4byte SFMEM_Start
+	.4byte SFMEM_Stop
+	.4byte SFMEM_Pause
+	.4byte SFMEM_GetWrite
+	.4byte SFMEM_AddWrite
+	.4byte SFMEM_GetRead
+	.4byte SFMEM_AddRead
+	.4byte SFMEM_Seek

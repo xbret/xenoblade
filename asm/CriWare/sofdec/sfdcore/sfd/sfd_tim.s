@@ -2115,3 +2115,60 @@ lbl_803CE3D8:
 /* 803CE3E4 003979A4  7C 08 03 A6 */	mtlr r0
 /* 803CE3E8 003979A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CE3EC 003979AC  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+
+.global lbl_805205D8
+lbl_805205D8:
+	# ROM: 0x51C6D8
+	.4byte 0x00000001
+	.4byte 0x00005DA8
+	.4byte 0x00005DC0
+	.4byte 0x000061A8
+	.4byte 0x00007512
+	.4byte 0x00007530
+	.4byte 0x0000C350
+	.4byte 0x0000EA24
+	.4byte 0x0000EA60
+	.4byte 0
+
+
+.global lbl_80520600
+lbl_80520600:
+	# ROM: 0x51C700
+	.4byte 0
+	.4byte 0
+	.4byte func_803CD7A8
+	.4byte sftim_Tc2Time23D
+	.4byte func_803CD72C
+	.4byte func_803CD72C
+	.4byte func_803CD72C
+	.4byte func_803CD72C
+	.4byte func_803CD82C
+	.4byte func_803CD9EC
+	.4byte func_803CD72C
+	.4byte func_803CD72C
+	.4byte func_803CD72C
+	.4byte func_803CD72C
+	.4byte func_803CD8B0
+	.4byte sftim_Tc2Time59D
+	.4byte func_803CD72C
+	.4byte func_803CD72C
+
+#unreferenced?
+.global lbl_80520648
+lbl_80520648:
+	.4byte 0x3ECCCCCD
+	.float 0.5
+	.float 1.0
+	.float 0.75
+	.4byte 0x3F8CCCCD
+	.float 1.5
+	.4byte 0x400CCCCD
+	.4byte 0x401CCCCD
+	.4byte 0x40300000
+	.4byte 0x40600000
+	.4byte 0x43300000
+	.4byte 0x80000000

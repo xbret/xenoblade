@@ -785,3 +785,69 @@ GetTypeObj__Q34nw4r3g3d12AnmObjTexPatCFv:
 /* 803E338C 003AC94C  3C 60 80 52 */	lis r3, lbl_80520E78@ha
 /* 803E3390 003AC950  38 63 0E 78 */	addi r3, r3, lbl_80520E78@l
 /* 803E3394 003AC954  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520E78
+lbl_80520E78:
+	# ROM: 0x51CF78
+	.4byte 0x0000000D
+	.asciz "AnmObjTexPat"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80520E90
+lbl_80520E90:
+	# ROM: 0x51CF90
+	.4byte 0x00000010
+	.asciz "AnmObjTexPatRes"
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056CAF0
+lbl_8056CAF0:
+	# ROM: 0x568BF0
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d15AnmObjTexPatResCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d15AnmObjTexPatResFUlUlPv
+	.4byte __dt__Q34nw4r3g3d15AnmObjTexPatResFv
+	.4byte GetTypeObj__Q34nw4r3g3d15AnmObjTexPatResCFv
+	.4byte GetTypeName__Q34nw4r3g3d15AnmObjTexPatResCFv
+	.4byte SetFrame__Q34nw4r3g3d15AnmObjTexPatResFf
+	.4byte GetFrame__Q34nw4r3g3d15AnmObjTexPatResCFv
+	.4byte UpdateFrame__Q34nw4r3g3d15AnmObjTexPatResFv
+	.4byte SetUpdateRate__Q34nw4r3g3d15AnmObjTexPatResFf
+	.4byte GetUpdateRate__Q34nw4r3g3d15AnmObjTexPatResCFv
+	.4byte Bind__Q34nw4r3g3d15AnmObjTexPatResFQ34nw4r3g3d6ResMdl
+	.4byte Release__Q34nw4r3g3d12AnmObjTexPatFv
+	.4byte GetResult__Q34nw4r3g3d15AnmObjTexPatResFPQ34nw4r3g3d15TexPatAnmResultUl
+	.4byte Attach__Q34nw4r3g3d12AnmObjTexPatFiPQ34nw4r3g3d15AnmObjTexPatRes
+	.4byte Detach__Q34nw4r3g3d12AnmObjTexPatFi
+	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexPatFv
+
+
+.global lbl_8056CB38
+lbl_8056CB38:
+	# ROM: 0x568C38
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjTexPatCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte 0
+	.4byte __dt__Q34nw4r3g3d12AnmObjTexPatFv
+	.4byte GetTypeObj__Q34nw4r3g3d12AnmObjTexPatCFv
+	.4byte GetTypeName__Q34nw4r3g3d12AnmObjTexPatCFv
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte Release__Q34nw4r3g3d12AnmObjTexPatFv
+	.4byte 0
+	.4byte Attach__Q34nw4r3g3d12AnmObjTexPatFiPQ34nw4r3g3d15AnmObjTexPatRes
+	.4byte Detach__Q34nw4r3g3d12AnmObjTexPatFi
+	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexPatFv

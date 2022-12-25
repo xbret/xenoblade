@@ -426,3 +426,22 @@ lbl_803D05F8:
 /* 803D0604 00399BC4  7C 08 03 A6 */	mtlr r0
 /* 803D0608 00399BC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D060C 00399BCC  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520778
+lbl_80520778:
+	.asciz "before seeki"
+	.asciz "after seeki"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80520798
+lbl_80520798:
+	.asciz "(nbyte > 0) && (nbyte < 5)"
+	.asciz "sfh_local.c"
+	.asciz "(nbyte > 0) && (nbyte < 9)"
+	.asciz "(size > 0) && (size < 9)"
+	.balign 4
+	.4byte 0

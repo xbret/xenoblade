@@ -272,3 +272,55 @@ lbl_8049C7EC:
 lbl_8049C7F0:
 /* 8049C7F0 00465DB0  7C 83 23 78 */	mr r3, r4
 /* 8049C7F4 00465DB4  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnFadeMan_typestr
+CScnFadeMan_typestr:
+	.asciz "CScnFadeMan"
+	.4byte 0
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnFadeMan
+__vt__CScnFadeMan:
+	.4byte __RTTI__CScnFadeMan
+	.4byte 0
+	.4byte func_8049C4CC
+	.4byte func_8049C678
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnFadeMan
+__RTTI__CScnFadeMan:
+	.4byte CScnFadeMan_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D338
+lbl_8066D338:
+	# ROM: 0x577198
+	.4byte 0
+
+
+.global lbl_8066D33C
+lbl_8066D33C:
+	# ROM: 0x57719C
+	.4byte 0x3B800000
+
+
+.global lbl_8066D340
+lbl_8066D340:
+	# ROM: 0x5771A0
+	.float 1.0
+	.4byte 0
+
+
+.global lbl_8066D348
+lbl_8066D348:
+	# ROM: 0x5771A8
+	.4byte 0x43300000
+	.4byte 0x80000000

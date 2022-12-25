@@ -15,3 +15,12 @@ func_80479EDC:
 lbl_80479EFC:
 /* 80479EFC 004434BC  38 6D BF FC */	addi r3, r13, lbl_8066817C@sda21
 /* 80479F00 004434C0  4E 80 00 20 */	blr 
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80668178
+lbl_80668178:
+	.skip 0x4
+.global lbl_8066817C
+lbl_8066817C:
+	.skip 0x4

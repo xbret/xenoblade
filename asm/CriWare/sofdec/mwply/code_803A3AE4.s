@@ -112,3 +112,11 @@ func_803A3B98:
 func_803A3BA4:
 /* 803A3BA4 0036D164  80 63 05 44 */	lwz r3, 0x544(r3)
 /* 803A3BA8 0036D168  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051F510
+lbl_8051F510:
+	.asciz "E2053001 MWSFD_Malloc: cnt over."
+	.balign 4
+	.4byte 0

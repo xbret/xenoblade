@@ -79,3 +79,10 @@ lbl_803FCE18:
 G3dReset__Q24nw4r3g3dFv:
 /* 803FCE30 003C63F0  38 60 07 FF */	li r3, 0x7ff
 /* 803FCE34 003C63F4  4B FE E0 B4 */	b Invalidate__Q34nw4r3g3d8G3DStateFUl
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056D108
+lbl_8056D108:
+	.asciz "<< NW4R    - G3D \tfinal   build: Nov 20 2008 03:23:14 (0x4199_60831) >>"

@@ -1886,3 +1886,125 @@ lbl_80434C08:
 /* 80434C18 003FE1D8  7C 08 03 A6 */	mtlr r0
 /* 80434C1C 003FE1DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80434C20 003FE1E0  4E 80 00 20 */	blr
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80525D28
+lbl_80525D28:
+	#"プログラム領域残り %x / 最大 %x\n"
+	.4byte 0x8376838D
+	.4byte 0x834F8389
+	.4byte 0x838097CC
+	.4byte 0x88E68E63
+	.4byte 0x82E82025
+	.4byte 0x78202F20
+	.4byte 0x8DC591E5
+	.asciz " %x\n"
+
+	#"プログラム領域が限界を超えました"
+	.byte 0x83, 0x76, 0x83
+	.4byte 0x8D834F83
+	.4byte 0x89838097
+	.4byte 0xCC88E682
+	.4byte 0xAA8CC08A
+	.4byte 0x4582F092
+	.4byte 0xB482A682
+	.4byte 0xDC82B582
+	.2byte 0xBD00
+	.2byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665E28
+lbl_80665E28:
+	# ROM: 0x571A08
+	.4byte lbl_8066C9A8
+
+
+.global lbl_80665E2C
+lbl_80665E2C:
+	# ROM: 0x571A0C
+	.4byte lbl_8066C9B0
+
+.global lbl_80665E30
+lbl_80665E30:
+	# ROM: 0x571A10
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_80665E34
+lbl_80665E34:
+	# ROM: 0x571A14
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_80665E38
+lbl_80665E38:
+	# ROM: 0x571A18
+	.byte 0x01
+
+
+.global lbl_80665E39
+lbl_80665E39:
+	.byte 0x01
+	.byte 0x00
+	.byte 0x00
+
+.global arenaMemorySize
+arenaMemorySize:
+	# ROM: 0x571A1C
+	.4byte 0x00600000
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C9A8
+lbl_8066C9A8:
+	.asciz "Mem1"
+	.balign 4
+
+.global lbl_8066C9B0
+lbl_8066C9B0:
+	.asciz "Mem2"
+	.balign 4
+
+.global lbl_8066C9B8
+lbl_8066C9B8:
+	# ROM: 0x576818
+	.4byte 0x3FF00000
+	.4byte 0
+
+.global lbl_8066C9C0
+lbl_8066C9C0:
+	# ROM: 0x576820
+	.4byte 0
+
+
+.global lbl_8066C9C4
+lbl_8066C9C4:
+	# ROM: 0x576824
+	.float 100.0
+
+
+.global lbl_8066C9C8
+lbl_8066C9C8:
+	# ROM: 0x576828
+	.4byte 0x43300000
+	.4byte 0
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667E50
+lbl_80667E50:
+	.skip 0x4
+.global lbl_80667E54
+lbl_80667E54:
+	.skip 0x4
+.global lbl_80667E58
+lbl_80667E58:
+	.skip 0x4
+.global lbl_80667E5C
+lbl_80667E5C:
+	.skip 0x4

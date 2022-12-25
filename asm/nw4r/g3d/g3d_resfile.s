@@ -1878,3 +1878,119 @@ func_803D95B4:
 lbl_803D95CC:
 /* 803D95CC 003A2B8C  38 60 00 00 */	li r3, 0
 /* 803D95D0 003A2B90  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+
+.global lbl_8056C840
+lbl_8056C840:
+	# ROM: 0x568940
+	.4byte 0x0000000E
+	.asciz "3DModels(NW4R)"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056C860
+lbl_8056C860:
+	# ROM: 0x568960
+	.4byte 0x0000000E
+	.asciz "Palettes(NW4R)"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056C880
+lbl_8056C880:
+	# ROM: 0x568980
+	.4byte 0x0000000E
+	.asciz "Textures(NW4R)"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056C8A0
+lbl_8056C8A0:
+	# ROM: 0x5689A0
+	.4byte 0x0000000C
+	.asciz "AnmChr(NW4R)"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+#unused
+	.4byte 0x0000000C
+	.asciz "AnmVis(NW4R)"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056C8E0
+lbl_8056C8E0:
+	# ROM: 0x5689E0
+	.4byte 0x0000000C
+	.asciz "AnmClr(NW4R)"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056C900
+lbl_8056C900:
+	# ROM: 0x568A00
+	.4byte 0x0000000F
+	.asciz "AnmTexPat(NW4R)"
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056C920
+lbl_8056C920:
+	# ROM: 0x568A20
+	.4byte 0x0000000F
+	.asciz "AnmTexSrt(NW4R)"
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056C940
+lbl_8056C940:
+	# ROM: 0x568A40
+	.4byte 0x0000000C
+	.asciz "AnmShp(NW4R)"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056C960
+lbl_8056C960:
+	# ROM: 0x568A60
+	.4byte 0x0000000C
+	.asciz "AnmScn(NW4R)"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000008
+	.asciz "External"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0

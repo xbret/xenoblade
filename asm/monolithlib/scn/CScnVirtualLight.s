@@ -2710,3 +2710,202 @@ sinit_80494300:
 /* 80494310 0045D8D0  FC 40 08 90 */	fmr f2, f1
 /* 80494314 0045D8D4  FC 60 08 90 */	fmr f3, f1
 /* 80494318 0045D8D8  4B BA C4 B0 */	b func_800407C8
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnVirtualLight_typestr
+CScnVirtualLight_typestr:
+	.asciz "CScnVirtualLight"
+	.balign 4
+
+
+.global lbl_8052796C
+lbl_8052796C:
+	.asciz "VLGT Mem"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnVirtualLight
+__vt__CScnVirtualLight:
+	.4byte __RTTI__CScnVirtualLight
+	.4byte 0
+	.4byte func_80492298
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnVirtualLight
+__RTTI__CScnVirtualLight:
+	.4byte CScnVirtualLight_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D1D0
+lbl_8066D1D0:
+	# ROM: 0x577030
+	.4byte 0x40A00000
+
+
+.global lbl_8066D1D4
+lbl_8066D1D4:
+	# ROM: 0x577034
+	.float 0.5
+
+
+.global lbl_8066D1D8
+lbl_8066D1D8:
+	# ROM: 0x577038
+	.float 1.0
+
+
+.global lbl_8066D1DC
+lbl_8066D1DC:
+	# ROM: 0x57703C
+	.4byte 0xC0800000
+
+
+.global lbl_8066D1E0
+lbl_8066D1E0:
+	# ROM: 0x577040
+	.4byte 0x40800000
+
+
+.global lbl_8066D1E4
+lbl_8066D1E4:
+	# ROM: 0x577044
+	.4byte 0
+
+
+.global lbl_8066D1E8
+lbl_8066D1E8:
+	# ROM: 0x577048
+	.4byte 0x3ECCCCCD
+
+
+.global lbl_8066D1EC
+lbl_8066D1EC:
+	# ROM: 0x57704C
+	.4byte 0x3EAEAEAF
+
+
+.global lbl_8066D1F0
+lbl_8066D1F0:
+	# ROM: 0x577050
+	.4byte 0x3E969697
+
+
+.global lbl_8066D1F4
+lbl_8066D1F4:
+	# ROM: 0x577054
+	.4byte 0xC0400000
+
+
+.global lbl_8066D1F8
+lbl_8066D1F8:
+	# ROM: 0x577058
+	.float 0.25
+
+
+.global lbl_8066D1FC
+lbl_8066D1FC:
+	# ROM: 0x57705C
+	.4byte 0xBF1409A2
+
+
+.global lbl_8066D200
+lbl_8066D200:
+	# ROM: 0x577060
+	.4byte 0x3F135419
+
+
+.global lbl_8066D204
+lbl_8066D204:
+	# ROM: 0x577064
+	.4byte 0x3F13D652
+
+
+.global lbl_8066D208
+lbl_8066D208:
+	# ROM: 0x577068
+	.4byte 0x3F13BB1F
+
+
+.global lbl_8066D20C
+lbl_8066D20C:
+	# ROM: 0x57706C
+	.4byte 0xBF1005E6
+
+
+.global lbl_8066D210
+lbl_8066D210:
+	# ROM: 0x577070
+	.4byte 0x3F0E7760
+
+
+.global lbl_8066D214
+lbl_8066D214:
+	# ROM: 0x577074
+	.4byte 0x3F1C8399
+
+
+.global lbl_8066D218
+lbl_8066D218:
+	# ROM: 0x577078
+	.4byte 0x3F0DE3B9
+
+
+.global lbl_8066D21C
+lbl_8066D21C:
+	# ROM: 0x57707C
+	.4byte 0x3F1403AC
+
+
+.global lbl_8066D220
+lbl_8066D220:
+	# ROM: 0x577080
+	.4byte 0xBF194802
+
+
+.global lbl_8066D224
+lbl_8066D224:
+	# ROM: 0x577084
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066D228
+lbl_8066D228:
+	# ROM: 0x577088
+	.4byte 0x3AD82342
+
+
+.global lbl_8066D22C
+lbl_8066D22C:
+	# ROM: 0x57708C
+	.4byte 0xBF6538EF
+
+
+.global lbl_8066D230
+lbl_8066D230:
+	# ROM: 0x577090
+	.4byte 0x3EE3F8FD
+
+
+.global lbl_8066D234
+lbl_8066D234:
+	# ROM: 0x577094
+	.4byte 0x3F666666
+
+
+.global lbl_8066D238
+lbl_8066D238:
+	# ROM: 0x577098
+	.4byte 0x3D23D70A
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8065AF00
+lbl_8065AF00:
+	.skip 0x10

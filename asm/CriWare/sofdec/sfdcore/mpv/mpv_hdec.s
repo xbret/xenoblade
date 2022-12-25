@@ -1744,3 +1744,22 @@ MPV_MoveChunk:
 /* 803A7F24 003714E4  7C 08 03 A6 */	mtlr r0
 /* 803A7F28 003714E8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A7F2C 003714EC  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_8051F750
+lbl_8051F750:
+	# ROM: 0x51B850
+	.4byte 0
+	.4byte MPVDEC_DecIpicMb
+	.4byte MPVDEC_DecPpicMb
+	.4byte MPVDEC_DecBpicMb
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8051F768
+lbl_8051F768:
+	.asciz "IDCPREC"
+	.asciz "STCCODE"

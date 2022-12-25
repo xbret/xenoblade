@@ -78,3 +78,23 @@ sinit_80436138:
 /* 80436254 003FF814  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 80436258 003FF818  38 21 00 20 */	addi r1, r1, 0x20
 /* 8043625C 003FF81C  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066CA30
+lbl_8066CA30:
+	# ROM: 0x576890
+	.float 1.0
+
+
+.global lbl_8066CA34
+lbl_8066CA34:
+	# ROM: 0x576894
+	.float 0.5
+
+
+.global lbl_8066CA38
+lbl_8066CA38:
+	# ROM: 0x576898
+	.4byte 0
+	.4byte 0

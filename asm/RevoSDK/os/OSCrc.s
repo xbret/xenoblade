@@ -86,3 +86,17 @@ lbl_8035F0F4:
 lbl_8035F12C:
 /* 8035F12C 003286EC  55 03 04 3E */	clrlwi r3, r8, 0x10
 /* 8035F130 003286F0  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80518D10
+lbl_80518D10:
+	# ROM: 0x514E10
+	.4byte 0x0000CC01
+	.4byte 0xD8011400
+	.4byte 0xF0013C00
+	.4byte 0x2800E401
+	.4byte 0xA0016C00
+	.4byte 0x7800B401
+	.4byte 0x50009C01
+	.4byte 0x88014400

@@ -1,27 +1,5 @@
 .include "macros.inc"
 
-.section .sdata, "wa"  # 0x80664180 - 0x80666600
-
-.global lbl_80665E30
-lbl_80665E30:
-	# ROM: 0x571A10
-	.4byte 0xFFFFFFFF
-
-
-.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-
-.global lbl_8066C9B8
-lbl_8066C9B8:
-	# ROM: 0x576818
-	.4byte 0x3FF00000
-	.4byte 0
-
-.section .bss, "wa"  # 0x80573C80 - 0x8066417B
-
-.global memoryAllocHeapArray
-memoryAllocHeapArray:
-	.skip 0x2300
-
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .global __nw__FUl
@@ -274,3 +252,10 @@ lbl_80434F80:
 /* 80434F88 003FE548  7C 08 03 A6 */	mtlr r0
 /* 80434F8C 003FE54C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80434F90 003FE550  4E 80 00 20 */	blr 
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global memoryAllocHeapArray
+memoryAllocHeapArray:
+	.skip 0x2300

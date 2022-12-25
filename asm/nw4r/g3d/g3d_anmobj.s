@@ -62,3 +62,13 @@ TestAnmFlag__Q34nw4r3g3d6AnmObjCFQ44nw4r3g3d6AnmObj7AnmFlag:
 /* 803E745C 003B0A1C  7C 00 1B 78 */	or r0, r0, r3
 /* 803E7460 003B0A20  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 803E7464 003B0A24  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520F68
+lbl_80520F68:
+	# ROM: 0x51D068
+	.4byte 0x00000007
+	.asciz "AnmObj"
+	.balign 4
+	.4byte 0

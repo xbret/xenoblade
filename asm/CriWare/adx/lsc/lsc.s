@@ -786,3 +786,32 @@ lbl_803927F0:
 /* 80392800 0035BDC0  7C 08 03 A6 */	mtlr r0
 /* 80392804 0035BDC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80392808 0035BDC8  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051BAB8
+lbl_8051BAB8:
+	.asciz "E2005012801: Invalid parameter=sj (LSC_Create)\n"
+	.asciz "E2005012802: Not enough instance (LSC_Create)\n"
+	.asciz "E2005012807: Invalid parameter lsc=NULL\n"
+	.asciz "E2005012805: Invalid parameter lsc=NULL\n"
+	.asciz "E2005012803: Invalid parameter lsc=NULL\n"
+	.asciz "E2005012804: Invalid parameter fname=%s\n"
+	.asciz "E2005012806: Invalid parameter lsc=NULL\n"
+	.asciz "E2005012808: Invalid parameter lsc=NULL\n"
+	.asciz "E2005012809: Invalid parameter lsc=NULL\n"
+	.asciz "E2005012810: Invalid parameter lsc=NULL\n"
+	.asciz "E2005012811: Invalid parameter lsc=NULL\n"
+	.asciz "E2005012812: Invalid parameter no=%d\n"
+	.asciz "E2005012813: Invalid parameter lsc=NULL\n"
+	.asciz "E2005012814: Can not find stream ID =%d\n"
+	.asciz "E2005012815: Invalid parameter lsc=NULL\n"
+	.asciz "E2005012816: Can not find stream ID =%d\n"
+	.asciz "E2005012817: Invalid parameter lsc=NULL\n"
+	.asciz "E2005012818: Can not find stream ID =%d\n"
+	.asciz "E2005012819: Invalid parameter lsc=NULL\n"
+	.asciz "E2005012820: Invalid parameter min_val=%d\n"
+	.asciz "E2005012821: Invalid parameter lsc=NULL\n"
+	.asciz "E2005012822: Invalid parameter lsc=NULL\n"
+	.balign 4
+	.4byte 0

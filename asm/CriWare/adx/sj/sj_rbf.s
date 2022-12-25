@@ -1399,3 +1399,77 @@ lbl_80395654:
 /* 8039566C 0035EC2C  7C 08 03 A6 */	mtlr r0
 /* 80395670 0035EC30  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 80395674 0035EC34  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global sjrbf_uuid
+sjrbf_uuid:
+	# ROM: 0x5182F8
+	.4byte 0x3B9A9E81
+	.4byte 0x0DBB11D2
+	.4byte 0xA6BF4445
+	.4byte 0x53540000
+
+
+.global lbl_8051C208
+lbl_8051C208:
+	.asciz "SJRBF Error"
+	.asciz " : NULL pointer is passed."
+	.asciz "E2005120201"
+	.asciz " : Work area size is too short."
+	.asciz "E2005120202"
+	.asciz "E2005120203"
+	.asciz "E2004090201"
+	.asciz " : Specified handle is invalid."
+	.asciz "E2004090202"
+	.asciz "E2004090203"
+	.asciz "E2004090204"
+	.asciz "E2004090205"
+	.asciz "E2004090206"
+	.asciz "E2006120701"
+	.asciz "E2006120702"
+	.asciz "E2004090207"
+	.asciz "E2004090208"
+	.asciz "E2004090209"
+	.asciz "E2004090210"
+	.asciz "E2004090211"
+	.asciz "E2004090212"
+	.asciz " : Illegal buffer size."
+	.asciz "E2004090219"
+	.asciz "E2004090213"
+	.asciz "E2004090214"
+	.asciz "E2004090215"
+	.asciz "E2004090216"
+	.asciz "E2004090220"
+	.asciz "E2004090217"
+	.asciz "E2004090218"
+	.asciz "E2004090221"
+	.asciz "E2004090222"
+	.asciz "E2004090223"
+	.asciz "E2004090224"
+	.asciz "E2004090225"
+	.asciz "E2004090226"
+	.asciz "E2004090227"
+	.asciz "E2004090228"
+	.asciz "E2004090229"
+	.asciz "E2004090230"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global sjrbf_vtbl
+sjrbf_vtbl:
+	# ROM: 0x565408
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte SJRBF_Destroy
+	.4byte SJRBF_GetUuid
+	.4byte SJRBF_Reset
+	.4byte SJRBF_GetChunk
+	.4byte SJRBF_UngetChunk
+	.4byte SJRBF_PutChunk
+	.4byte SJRBF_GetNumData
+	.4byte SJRBF_IsGetChunk
+	.4byte SJRBF_EntryErrFunc

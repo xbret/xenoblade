@@ -1116,3 +1116,13 @@ lbl_8038570C:
 /* 80385714 0034ECD4  7C 08 03 A6 */	mtlr r0
 /* 80385718 0034ECD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038571C 0034ECDC  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051A120
+lbl_8051A120:
+	.asciz "E8101201 adxt_trap_entry: not enough data"
+	.asciz "E9081001 adxt_stat_decinfo: can't play this number of channels"
+	.asciz "E02080842 adxt_ExecHndl: parameter error"
+	.balign 4
+	.4byte 0

@@ -157,3 +157,13 @@ DetachSound__Q44nw4r3snd6detail10PlayerHeapFPQ44nw4r3snd6detail10BasicSound:
 /* 80418B5C 003E211C  38 00 00 00 */	li r0, 0
 /* 80418B60 003E2120  90 03 00 04 */	stw r0, 4(r3)
 /* 80418B64 003E2124  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056E3C8
+lbl_8056E3C8:
+	# ROM: 0x56A4C8
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q44nw4r3snd6detail10PlayerHeapFv
+	.4byte Alloc__Q44nw4r3snd6detail10PlayerHeapFUl

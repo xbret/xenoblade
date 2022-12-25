@@ -569,3 +569,35 @@ sinit_8041B2F8:
 /* 8041B2F8 003E48B8  38 0D BC 30 */	addi r0, r13, lbl_80667DB0@sda21
 /* 8041B2FC 003E48BC  90 0D BC 58 */	stw r0, lbl_80667DD8@sda21(r13)
 /* 8041B300 003E48C0  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056E440
+lbl_8056E440:
+	# ROM: 0x56A540
+	.4byte 0
+	.4byte 0
+	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail8SeqSoundCFv
+	.4byte __dt__Q44nw4r3snd6detail8SeqSoundFv
+	.4byte Shutdown__Q44nw4r3snd6detail8SeqSoundFv
+	.4byte IsPrepared__Q44nw4r3snd6detail8SeqSoundCFv
+	.4byte IsAttachedTempSpecialHandle__Q44nw4r3snd6detail8SeqSoundFv
+	.4byte DetachTempSpecialHandle__Q44nw4r3snd6detail8SeqSoundFv
+	.4byte InitParam__Q44nw4r3snd6detail8SeqSoundFv
+	.4byte GetBasicPlayer__Q44nw4r3snd6detail8SeqSoundFv
+	.4byte GetBasicPlayer__Q44nw4r3snd6detail8SeqSoundCFv
+	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail8SeqSoundFv
+	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
+
+
+.global lbl_8056E478
+lbl_8056E478:
+	# ROM: 0x56A578
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
+	.4byte Execute__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
+	.4byte Cancel__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
+	.4byte OnCancel__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv

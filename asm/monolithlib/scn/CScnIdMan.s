@@ -114,3 +114,28 @@ lbl_8049E5C8:
 /* 8049E5D0 00467B90  7C 08 03 A6 */	mtlr r0
 /* 8049E5D4 00467B94  38 21 00 50 */	addi r1, r1, 0x50
 /* 8049E5D8 00467B98  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnIdMan_typestr
+CScnIdMan_typestr:
+	.asciz "CScnIdMan"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnIdMan
+__vt__CScnIdMan:
+	.4byte __RTTI__CScnIdMan
+	.4byte 0
+	.4byte func_8049E4B4
+	.4byte func_8049E570
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnIdMan
+__RTTI__CScnIdMan:
+	.4byte CScnIdMan_typestr
+	.4byte 0

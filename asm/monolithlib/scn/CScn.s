@@ -3556,3 +3556,172 @@ lbl_80498C54:
 /* 80498C60 00462220  7C 08 03 A6 */	mtlr r0
 /* 80498C64 00462224  38 21 00 90 */	addi r1, r1, 0x90
 /* 80498C68 00462228  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_805279B8
+lbl_805279B8:
+	.asciz "%s(%s)"
+	.asciz "CScn"
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScn
+__vt__CScn:
+	.4byte __RTTI__CScn
+	.4byte 0
+	.4byte func_80495DB8
+	.4byte func_80446734
+	.4byte func_80496580
+	.4byte func_80496584
+	.4byte func_804967B0
+	.4byte func_8049683C
+	.4byte func_80043F20
+	.4byte __RTTI__CScn
+	.4byte 0xFFFFFFAC
+	.4byte func_80496B04
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_8048ED14
+	.4byte func_8048ED0C
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80496970
+	.4byte func_8049695C
+
+
+.global __vt__CTTask_CScn
+__vt__CTTask_CScn:
+	.4byte __RTTI__CTTask_CScn
+	.4byte 0
+	.4byte func_80495D60
+	.4byte func_80446734
+	.4byte 0
+	.4byte 0
+	.4byte func_80496A74
+	.4byte func_80496ABC
+	.4byte func_80043F20
+
+
+.global lbl_805721F0
+lbl_805721F0:
+	.asciz "ResAnmChr"
+	.balign 4
+
+
+.global lbl_805721FC
+lbl_805721FC:
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+
+
+.global lbl_80572218
+lbl_80572218:
+	.asciz "g3d_resanmchr_ac.h"
+	.balign 4
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80666300
+lbl_80666300:
+	# ROM: 0x571EE0
+	.4byte 0x72656600
+
+
+.global lbl_80666304
+lbl_80666304:
+	# ROM: 0x571EE4
+	.4byte 0x72656600
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D270
+lbl_8066D270:
+	# ROM: 0x5770D0
+	.float 10.0
+
+
+.global lbl_8066D274
+lbl_8066D274:
+	# ROM: 0x5770D4
+	.4byte 0
+
+
+.global lbl_8066D278
+lbl_8066D278:
+	# ROM: 0x5770D8
+	.float 1.0
+	.4byte 0
+
+
+.global lbl_8066D280
+lbl_8066D280:
+	# ROM: 0x5770E0
+	.4byte 0
+
+
+.global lbl_8066D284
+lbl_8066D284:
+	# ROM: 0x5770E4
+	.float 1.0
+
+
+.global lbl_8066D288
+lbl_8066D288:
+	# ROM: 0x5770E8
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066D290
+lbl_8066D290:
+	# ROM: 0x5770F0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066D298
+lbl_8066D298:
+	# ROM: 0x5770F8
+	.float 0.5
+
+
+.global lbl_8066D29C
+lbl_8066D29C:
+	# ROM: 0x5770FC
+	.4byte 0x38D1B717
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806681E0
+lbl_806681E0:
+	.skip 0x8

@@ -1443,3 +1443,13 @@ lbl_8038C350:
 /* 8038C35C 0035591C  CB E1 00 10 */	lfd f31, 0x10(r1)
 /* 8038C360 00355920  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038C364 00355924  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051ABC0
+lbl_8051ABC0:
+	# ROM: 0x516CC0
+	.4byte 0
+	.4byte 0x4F000000
+	.4byte 0xCF000000
+	.4byte 0

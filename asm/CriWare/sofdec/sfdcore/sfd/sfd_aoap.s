@@ -343,3 +343,23 @@ SFAOAP_AddRead:
 SFAOAP_Seek:
 /* 803BECF8 003882B8  38 60 00 00 */	li r3, 0
 /* 803BECFC 003882BC  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_8051FF48
+lbl_8051FF48:
+	.4byte SFAOAP_Init
+	.4byte SFAOAP_Finish
+	.4byte SFAOAP_ExecServer
+	.4byte SFAOAP_Create
+	.4byte SFAOAP_Destroy
+	.4byte SFAOAP_RequestStop
+	.4byte SFAOAP_Start
+	.4byte SFAOAP_Stop
+	.4byte SFAOAP_Pause
+	.4byte SFAOAP_GetWrite
+	.4byte SFAOAP_AddWrite
+	.4byte SFAOAP_GetRead
+	.4byte SFAOAP_AddRead
+	.4byte SFAOAP_Seek

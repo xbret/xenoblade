@@ -2106,3 +2106,136 @@ lbl_80491E58:
 /* 80491E68 0045B428  7C 08 03 A6 */	mtlr r0
 /* 80491E6C 0045B42C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80491E70 0045B430  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnTexWorkMan_typestr
+CScnTexWorkMan_typestr:
+	.asciz "CScnTexWorkMan"
+	.balign 4
+
+
+.global lbl_80527948
+lbl_80527948:
+	.asciz "CScnTexWorkMan"
+	.balign 4
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnTexWorkMan
+__vt__CScnTexWorkMan:
+	.4byte __RTTI__CScnTexWorkMan
+	.4byte 0
+	.4byte func_80490178
+	.4byte func_80166630
+	.4byte func_80490310
+	.4byte func_80448A40
+
+.global CScnTexWorkMan_hierarchy
+CScnTexWorkMan_hierarchy:
+	.4byte __RTTI__CDeviceVICb
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80572040
+lbl_80572040:
+	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
+	.balign 4
+
+
+.global lbl_80572068
+lbl_80572068:
+	.asciz "g3d_resnode_ac.h"
+	.balign 4
+
+
+.global lbl_8057207C
+lbl_8057207C:
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+
+
+.global lbl_80572098
+lbl_80572098:
+	.asciz "g3d_resnode_ac.h"
+	.balign 4
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806662C8
+lbl_806662C8:
+	# ROM: 0x571EA8
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_806662CC
+lbl_806662CC:
+	# ROM: 0x571EAC
+	.4byte 0xFFFFFFFF
+
+.global __RTTI__CScnTexWorkMan
+__RTTI__CScnTexWorkMan:
+	.4byte CScnTexWorkMan_typestr
+	.4byte CScnTexWorkMan_hierarchy
+
+
+.global lbl_806662D8
+lbl_806662D8:
+	# ROM: 0x571EB8
+	.4byte 0x72656600
+
+
+.global lbl_806662DC
+lbl_806662DC:
+	# ROM: 0x571EBC
+	.4byte 0x72656600
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D1C0
+lbl_8066D1C0:
+	# ROM: 0x577020
+	.4byte 0
+
+
+.global lbl_8066D1C4
+lbl_8066D1C4:
+	# ROM: 0x577024
+	.4byte 0x49742400
+
+
+.global lbl_8066D1C8
+lbl_8066D1C8:
+	# ROM: 0x577028
+	.4byte 0xC9742400
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806681C0
+lbl_806681C0:
+	.skip 0x4
+.global lbl_806681C4
+lbl_806681C4:
+	.skip 0x4
+.global lbl_806681C8
+lbl_806681C8:
+	.skip 0x4
+.global lbl_806681CC
+lbl_806681CC:
+	.skip 0x4
+.global lbl_806681D0
+lbl_806681D0:
+	.skip 0x4
+.global lbl_806681D4
+lbl_806681D4:
+	.skip 0x4
+.global lbl_806681D8
+lbl_806681D8:
+	.skip 0x8

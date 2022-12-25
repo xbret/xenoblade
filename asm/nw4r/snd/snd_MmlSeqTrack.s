@@ -54,3 +54,24 @@ lbl_80418820:
 /* 80418830 003E1DF0  7C 08 03 A6 */	mtlr r0
 /* 80418834 003E1DF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80418838 003E1DF8  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+
+.global lbl_8056E390
+lbl_8056E390:
+	# ROM: 0x56A490
+	.4byte 0
+	.4byte 0
+	.4byte CommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackUlll
+	.4byte NoteOnCommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackiilb
+
+
+.global lbl_8056E3A0
+lbl_8056E3A0:
+	# ROM: 0x56A4A0
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q44nw4r3snd6detail11MmlSeqTrackFv
+	.4byte Parse__Q44nw4r3snd6detail11MmlSeqTrackFb

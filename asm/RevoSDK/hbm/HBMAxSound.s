@@ -818,3 +818,19 @@ lbl_80322DB0:
 .global SetSoundMode__10homebuttonFUl
 SetSoundMode__10homebuttonFUl:
 /* 80322DD0 002EC390  48 01 C5 30 */	b HBMMIXSetSoundMode
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80518690
+lbl_80518690:
+	.asciz "wt\\HomeButtonSe.wt"
+	.balign 4
+
+
+.global lbl_805186A4
+lbl_805186A4:
+	.asciz "wt\\HomeButtonSe.pcm"
+	.4byte 0
+	.float 10.0
+	.4byte 0x41A00000
+	.4byte 0

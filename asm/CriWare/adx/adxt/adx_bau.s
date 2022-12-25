@@ -1127,3 +1127,147 @@ lbl_80398F90:
 /* 80398F98 00362558  4B FF F8 5C */	b ADXB_ExecOneAu8
 lbl_80398F9C:
 /* 80398F9C 0036255C  4B FF F4 60 */	b ADXB_ExecOneAu16
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051C750
+lbl_8051C750:
+	.asciz ".snd"
+	.asciz ".sd"
+	.4byte 0
+	.byte 0x00, 0x00, 0x00
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80569528
+lbl_80569528:
+	# ROM: 0x565628
+	.4byte 0x82848684
+	.4byte 0x8A848E84
+	.4byte 0x92849684
+	.4byte 0x9A849E84
+	.4byte 0xA284A684
+	.4byte 0xAA84AE84
+	.4byte 0xB284B684
+	.4byte 0xBA84BE84
+	.4byte 0xC184C384
+	.4byte 0xC584C784
+	.4byte 0xC984CB84
+	.4byte 0xCD84CF84
+	.4byte 0xD184D384
+	.4byte 0xD584D784
+	.4byte 0xD984DB84
+	.4byte 0xDD84DF84
+	.4byte 0xE104E204
+	.4byte 0xE304E404
+	.4byte 0xE504E604
+	.4byte 0xE704E804
+	.4byte 0xE904EA04
+	.4byte 0xEB04EC04
+	.4byte 0xED04EE04
+	.4byte 0xEF04F004
+	.4byte 0xF0C4F144
+	.4byte 0xF1C4F244
+	.4byte 0xF2C4F344
+	.4byte 0xF3C4F444
+	.4byte 0xF4C4F544
+	.4byte 0xF5C4F644
+	.4byte 0xF6C4F744
+	.4byte 0xF7C4F844
+	.4byte 0xF8A4F8E4
+	.4byte 0xF924F964
+	.4byte 0xF9A4F9E4
+	.4byte 0xFA24FA64
+	.4byte 0xFAA4FAE4
+	.4byte 0xFB24FB64
+	.4byte 0xFBA4FBE4
+	.4byte 0xFC24FC64
+	.4byte 0xFC94FCB4
+	.4byte 0xFCD4FCF4
+	.4byte 0xFD14FD34
+	.4byte 0xFD54FD74
+	.4byte 0xFD94FDB4
+	.4byte 0xFDD4FDF4
+	.4byte 0xFE14FE34
+	.4byte 0xFE54FE74
+	.4byte 0xFE8CFE9C
+	.4byte 0xFEACFEBC
+	.4byte 0xFECCFEDC
+	.4byte 0xFEECFEFC
+	.4byte 0xFF0CFF1C
+	.4byte 0xFF2CFF3C
+	.4byte 0xFF4CFF5C
+	.4byte 0xFF6CFF7C
+	.4byte 0xFF88FF90
+	.4byte 0xFF98FFA0
+	.4byte 0xFFA8FFB0
+	.4byte 0xFFB8FFC0
+	.4byte 0xFFC8FFD0
+	.4byte 0xFFD8FFE0
+	.4byte 0xFFE8FFF0
+	.4byte 0xFFF80000
+	.4byte 0x7D7C797C
+	.4byte 0x757C717C
+	.4byte 0x6D7C697C
+	.4byte 0x657C617C
+	.4byte 0x5D7C597C
+	.4byte 0x557C517C
+	.4byte 0x4D7C497C
+	.4byte 0x457C417C
+	.4byte 0x3E7C3C7C
+	.4byte 0x3A7C387C
+	.4byte 0x367C347C
+	.4byte 0x327C307C
+	.4byte 0x2E7C2C7C
+	.4byte 0x2A7C287C
+	.4byte 0x267C247C
+	.4byte 0x227C207C
+	.4byte 0x1EFC1DFC
+	.4byte 0x1CFC1BFC
+	.4byte 0x1AFC19FC
+	.4byte 0x18FC17FC
+	.4byte 0x16FC15FC
+	.4byte 0x14FC13FC
+	.4byte 0x12FC11FC
+	.4byte 0x10FC0FFC
+	.4byte 0x0F3C0EBC
+	.4byte 0x0E3C0DBC
+	.4byte 0x0D3C0CBC
+	.4byte 0x0C3C0BBC
+	.4byte 0x0B3C0ABC
+	.4byte 0x0A3C09BC
+	.4byte 0x093C08BC
+	.4byte 0x083C07BC
+	.4byte 0x075C071C
+	.4byte 0x06DC069C
+	.4byte 0x065C061C
+	.4byte 0x05DC059C
+	.4byte 0x055C051C
+	.4byte 0x04DC049C
+	.4byte 0x045C041C
+	.4byte 0x03DC039C
+	.4byte 0x036C034C
+	.4byte 0x032C030C
+	.4byte 0x02EC02CC
+	.4byte 0x02AC028C
+	.4byte 0x026C024C
+	.4byte 0x022C020C
+	.4byte 0x01EC01CC
+	.4byte 0x01AC018C
+	.4byte 0x01740164
+	.4byte 0x01540144
+	.4byte 0x01340124
+	.4byte 0x01140104
+	.4byte 0x00F400E4
+	.4byte 0x00D400C4
+	.4byte 0x00B400A4
+	.4byte 0x00940084
+	.4byte 0x00780070
+	.4byte 0x00680060
+	.4byte 0x00580050
+	.4byte 0x00480040
+	.4byte 0x00380030
+	.4byte 0x00280020
+	.4byte 0x00180010
+	.4byte 0x00080000

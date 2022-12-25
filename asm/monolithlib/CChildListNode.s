@@ -42,3 +42,36 @@ func_80446734:
 /* 80446760 0040FD20  7C 08 03 A6 */	mtlr r0
 /* 80446764 0040FD24  38 21 00 10 */	addi r1, r1, 0x10
 /* 80446768 0040FD28  4E 80 00 20 */	blr
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global TChildListHeader_CChildListNode_typestr
+TChildListHeader_CChildListNode_typestr:
+	.asciz "TChildListHeader<CChildListNode>"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CChildListNode
+__vt__CChildListNode:
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte func_80444A78
+	.4byte func_80446734
+
+
+.global __vt__TChildListHeader_CChildListNode
+__vt__TChildListHeader_CChildListNode:
+	.4byte __RTTI__TChildListHeader_CChildListNode
+	.4byte 0
+	.4byte func_80444AB8
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__TChildListHeader_CChildListNode
+__RTTI__TChildListHeader_CChildListNode:
+	.4byte TChildListHeader_CChildListNode_typestr
+	.4byte 0

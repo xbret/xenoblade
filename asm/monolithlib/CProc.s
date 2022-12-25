@@ -823,3 +823,117 @@ lbl_8043970C:
 /* 80439740 00402D00  7C 08 03 A6 */	mtlr r0
 /* 80439744 00402D04  38 21 00 10 */	addi r1, r1, 0x10
 /* 80439748 00402D08  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global reslist_unsigned_long_typestr
+reslist_unsigned_long_typestr:
+	.asciz "reslist<unsigned long>"
+	.balign 4
+
+.global _reslist_base_unsigned_long_typestr
+_reslist_base_unsigned_long_typestr:
+	.asciz "_reslist_base<unsigned long>"
+	.balign 4
+
+
+.global lbl_80525E18
+lbl_80525E18:
+	.asciz "(View)"
+	.balign 4
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global __vt__CProc
+__vt__CProc:
+	.4byte __RTTI__CProc
+	.4byte 0
+	.4byte func_80438EC8
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80438A50
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_804396A0
+	.4byte func_804396A4
+	.4byte func_80039E30
+
+
+.global __vt__reslist_unsigned_long
+__vt__reslist_unsigned_long:
+	.4byte __RTTI__reslist_unsigned_long
+	.4byte 0
+	.4byte func_80438E10
+
+.global reslist_unsigned_long_hierarchy
+reslist_unsigned_long_hierarchy:
+	.4byte __RTTI___reslist_base_unsigned_long
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___reslist_base_unsigned_long
+__vt___reslist_base_unsigned_long:
+	.4byte __RTTI___reslist_base_unsigned_long
+	.4byte 0
+	.4byte func_80438D5C
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__reslist_unsigned_long
+__RTTI__reslist_unsigned_long:
+	.4byte reslist_unsigned_long_typestr
+	.4byte reslist_unsigned_long_hierarchy
+
+.global __RTTI___reslist_base_unsigned_long
+__RTTI___reslist_base_unsigned_long:
+	.4byte _reslist_base_unsigned_long_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066CA78
+lbl_8066CA78:
+	# ROM: 0x5768D8
+	.4byte 0x3F19999A
+	.4byte 0
+
+
+.global lbl_8066CA80
+lbl_8066CA80:
+	# ROM: 0x5768E0
+	.4byte 0x43300000
+	.4byte 0x80000000

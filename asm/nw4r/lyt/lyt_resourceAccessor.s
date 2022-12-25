@@ -33,3 +33,15 @@ __ct__Q34nw4r3lyt16ResourceAccessorFv:
 GetFont__Q34nw4r3lyt16ResourceAccessorFPCc:
 /* 80409C98 003D3258  38 60 00 00 */	li r3, 0
 /* 80409C9C 003D325C  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056D580
+lbl_8056D580:
+	# ROM: 0x569680
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r3lyt16ResourceAccessorFv
+	.4byte 0
+	.4byte GetFont__Q34nw4r3lyt16ResourceAccessorFPCc
+	.4byte 0

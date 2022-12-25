@@ -782,3 +782,61 @@ lbl_803E178C:
 /* 803E17A4 003AAD64  7C 08 03 A6 */	mtlr r0
 /* 803E17A8 003AAD68  38 21 00 40 */	addi r1, r1, 0x40
 /* 803E17AC 003AAD6C  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+
+.global lbl_8056C9C0
+lbl_8056C9C0:
+	# ROM: 0x568AC0
+	.4byte 0x0000000E
+	.asciz "LightSet(NW4R)"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056C9E0
+lbl_8056C9E0:
+	# ROM: 0x568AE0
+	.4byte 0x0000000F
+	.asciz "AmbLights(NW4R)"
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056CA00
+lbl_8056CA00:
+	# ROM: 0x568B00
+	.4byte 0x0000000C
+	.asciz "Lights(NW4R)"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056CA20
+lbl_8056CA20:
+	# ROM: 0x568B20
+	.4byte 0x0000000A
+	.asciz "Fogs(NW4R)"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056CA40
+lbl_8056CA40:
+	# ROM: 0x568B40
+	.4byte 0x0000000D
+	.asciz "Cameras(NW4R)"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0

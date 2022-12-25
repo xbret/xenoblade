@@ -430,3 +430,126 @@ func_8049E374:
 /* 8049E374 00467934  D0 23 00 20 */	stfs f1, 0x20(r3)
 /* 8049E378 00467938  D0 43 00 1C */	stfs f2, 0x1c(r3)
 /* 8049E37C 0046793C  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnFogMan_typestr
+CScnFogMan_typestr:
+	.asciz "CScnFogMan"
+	.balign 4
+	.4byte 0
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnFogMan
+__vt__CScnFogMan:
+	.4byte __RTTI__CScnFogMan
+	.4byte 0
+	.4byte func_8049DE28
+	.4byte 0
+
+
+.global lbl_80572428
+lbl_80572428:
+	.asciz "NW4R:Failed assertion IsValid()"
+
+
+.global lbl_80572448
+lbl_80572448:
+	.asciz "g3d_fog.h"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80572458
+lbl_80572458:
+	.asciz "NW4R:Failed assertion IsValid()"
+
+
+.global lbl_80572478
+lbl_80572478:
+	.asciz "g3d_fog.h"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80572488
+lbl_80572488:
+	.asciz "NW4R:Failed assertion IsValid()"
+
+
+.global lbl_805724A8
+lbl_805724A8:
+	.asciz "g3d_fog.h"
+	.balign 4
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnFogMan
+__RTTI__CScnFogMan:
+	.4byte CScnFogMan_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D360
+lbl_8066D360:
+	# ROM: 0x5771C0
+	.4byte 0
+
+
+.global lbl_8066D364
+lbl_8066D364:
+	# ROM: 0x5771C4
+	.float 1.0
+
+
+.global lbl_8066D368
+lbl_8066D368:
+	# ROM: 0x5771C8
+	.4byte 0x447A0000
+
+
+.global lbl_8066D36C
+lbl_8066D36C:
+	# ROM: 0x5771CC
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066D370
+lbl_8066D370:
+	# ROM: 0x5771D0
+	.float 100.0
+
+
+.global lbl_8066D374
+lbl_8066D374:
+	# ROM: 0x5771D4
+	.4byte 0x437F0000
+
+
+.global lbl_8066D378
+lbl_8066D378:
+	# ROM: 0x5771D8
+	.4byte 0x3DEA72EB
+
+
+.global lbl_8066D37C
+lbl_8066D37C:
+	# ROM: 0x5771DC
+	.4byte 0x3E990AFE
+
+
+.global lbl_8066D380
+lbl_8066D380:
+	# ROM: 0x5771E0
+	.4byte 0x3F162C23
+	.4byte 0
+
+
+.global lbl_8066D388
+lbl_8066D388:
+	# ROM: 0x5771E8
+	.4byte 0x43300000
+	.4byte 0

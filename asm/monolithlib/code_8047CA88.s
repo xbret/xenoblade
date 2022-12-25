@@ -612,3 +612,36 @@ sinit_8047D290:
 /* 8047D2A0 00446860  90 03 00 04 */	stw r0, 4(r3)
 /* 8047D2A4 00446864  90 03 00 18 */	stw r0, 0x18(r3)
 /* 8047D2A8 00446868  4E 80 00 20 */	blr 
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D030
+lbl_8066D030:
+	# ROM: 0x576E90
+	.4byte 0
+
+
+.global lbl_8066D034
+lbl_8066D034:
+	# ROM: 0x576E94
+	.float 1.0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8065ADD0
+lbl_8065ADD0:
+	.skip 0x28
+.global lbl_8065ADF8
+lbl_8065ADF8:
+	.skip 0x20
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80668198
+lbl_80668198:
+	.skip 0x8
+.global lbl_806681A0
+lbl_806681A0:
+	.skip 0x8

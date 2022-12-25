@@ -2,16 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80450B44
-func_80450B44:
-/* 80450B44 0041A104  38 63 FE 3C */	addi r3, r3, -452
-/* 80450B48 0041A108  4B FF FF 70 */	b func_80450AB8
-
-
-.global func_80450B4C
-func_80450B4C:
-/* 80450B4C 0041A10C  38 63 FE 3C */	addi r3, r3, -452
-/* 80450B50 0041A110  4B FF EB 4C */	b func_8044F69C
 
 .global func_80450B54
 func_80450B54:
@@ -1428,3 +1418,132 @@ lbl_80451E30:
 func_80451E48:
 /* 80451E48 0041B408  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80451E4C 0041B40C  4B FE 7C A4 */	b func_80439AF0
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CDeviceFileDvd_typestr
+CDeviceFileDvd_typestr:
+	.asciz "CDeviceFileDvd"
+	.balign 4
+
+
+.global lbl_805265D0
+lbl_805265D0:
+	#An error has occured.
+	#"エラーが発生しました。"
+	.4byte 0x83478389
+	.4byte 0x815B82AA
+	.4byte 0x94AD90B6
+	.4byte 0x82B582DC
+	.4byte 0x82B582BD
+	.2byte 0x8142
+	.byte 0x00
+
+	#Please insert the Bionis disc.
+	#"巨神のディスクをセットしてください。"
+	.byte 0x8B
+	.4byte 0x90905F82
+	.4byte 0xCC836683
+	.4byte 0x42835883
+	.4byte 0x4E82F083
+	.4byte 0x5A836283
+	.4byte 0x6782B582
+	.4byte 0xC482AD82
+	.4byte 0xBE82B382
+	.4byte 0xA2814200
+
+	#The motor is stopping.
+	#"モーターが止まっています。"
+	.4byte 0x8382815B
+	.4byte 0x835E815B
+	.4byte 0x82AA8E7E
+	.4byte 0x82DC82C1
+	.4byte 0x82C482A2
+	.4byte 0x82DC82B7
+	.2byte 0x8142
+	.byte 0x00
+
+	#Could not read disc. Details...
+	#"ディスクを読めませんでした。詳しくは・・・"
+	.byte 0x83
+	.4byte 0x66834283
+	.4byte 0x58834E82
+	.4byte 0xF093C782
+	.4byte 0xDF82DC82
+	.4byte 0xB982F182
+	.4byte 0xC582B582
+	.4byte 0xBD81428F
+	.4byte 0xDA82B582
+	.4byte 0xAD82CD81
+	.4byte 0x45814581
+	.2byte 0x4500
+	.2byte 0
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CDeviceFileDvd
+__vt__CDeviceFileDvd:
+	.4byte __RTTI__CDeviceFileDvd
+	.4byte 0
+	.4byte func_80450BB4
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80451420
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_80451638
+	.4byte func_8045166C
+	.4byte func_804516CC
+
+.global CDeviceFileDvd_hierarchy
+CDeviceFileDvd_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CDeviceFileDvd
+__RTTI__CDeviceFileDvd:
+	.4byte CDeviceFileDvd_typestr
+	.4byte CDeviceFileDvd_hierarchy
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667F50
+lbl_80667F50:
+	.skip 0x8

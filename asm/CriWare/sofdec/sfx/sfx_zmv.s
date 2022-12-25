@@ -1250,3 +1250,56 @@ lbl_803D6FCC:
 /* 803D7000 003A05C0  7C 08 03 A6 */	mtlr r0
 /* 803D7004 003A05C4  38 21 00 80 */	addi r1, r1, 0x80
 /* 803D7008 003A05C8  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520B30
+lbl_80520B30:
+	# ROM: 0x51CC30
+	.4byte 0
+
+
+.global lbl_80520B34
+lbl_80520B34:
+	# ROM: 0x51CC34
+	.4byte 0x3F94FDF4
+
+
+.global lbl_80520B38
+lbl_80520B38:
+	# ROM: 0x51CC38
+	.4byte 0x43300000
+	.4byte 0x80000000
+	.4byte 0x3FF00000
+	.4byte 0
+	.4byte 0x40EFFFE0
+	.4byte 0
+	.4byte 0x41DFFFFF
+	.4byte 0xFFC00000
+	.4byte 0x43300000
+	.4byte 0
+	.4byte 0x416FFFFF
+	.4byte 0xE0000000
+	.4byte 0xC1600000
+
+
+.global lbl_80520B6C
+lbl_80520B6C:
+	.asciz "ZMHDR"
+	.asciz "SFXINFE"
+	.asciz "ZMVFRM"
+	.asciz "ZMFSIZE"
+	.asciz "%lx"
+	.asciz "ZMFDATA"
+	.asciz "%lx %lx %lx"
+	.asciz "E201314: SFXZ_SetZclip : zclip is invalid."
+	.asciz "COMPO"
+	.asciz "E201315: sfxcnv_CnvFrmZcmn : zclip is not set."
+	.asciz "E201191: SFX_CnvFrmZcmn : frmfmt is not support."
+	.asciz "E05070810: please set pitch by mwPlyFxSetOutBufPitchHeight()."
+	.asciz "E05070811: please set pitch by mwPlyFxSetOutBufPitchHeight()."
+	.asciz "E201313: sfxcnv_CnvZbitToCft : zbit is invalid."
+	.asciz "E05070812: please set pitch by mwPlyFxSetOutBufPitchHeight()."
+	.asciz "E05070813: please set pitch by mwPlyFxSetOutBufPitchHeight()."
+	.balign 4
+	.4byte 0

@@ -953,3 +953,103 @@ sinit_80435D0C:
 /* 80435D1C 003FF2DC  B0 03 00 04 */	sth r0, 4(r3)
 /* 80435D20 003FF2E0  B0 03 00 06 */	sth r0, 6(r3)
 /* 80435D24 003FF2E4  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80525D70
+lbl_80525D70:
+	.asciz "."
+	.4byte 0
+	.2byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C9D0
+lbl_8066C9D0:
+	# ROM: 0x576830
+	.4byte 0x2F800000
+	.4byte 0
+
+
+.global lbl_8066C9D8
+lbl_8066C9D8:
+	# ROM: 0x576838
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066C9E0
+lbl_8066C9E0:
+	# ROM: 0x576840
+	.float 0.5
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+#most of these seem to be global variables that are used both in the game code and
+#monolithlib (global variable file?)
+
+.global lbl_806593E0
+lbl_806593E0:
+	.skip 0x9D0
+.global lbl_80659DB0
+lbl_80659DB0:
+	.skip 0xC
+.global lbl_80659DBC
+lbl_80659DBC:
+	.skip 0xC
+.global lbl_80659DC8
+lbl_80659DC8:
+	.skip 0xC
+.global lbl_80659DD4
+lbl_80659DD4:
+	.skip 0xC
+.global lbl_80659DE0
+lbl_80659DE0:
+	.skip 0x10
+.global lbl_80659DF0
+lbl_80659DF0:
+	.skip 0x50
+.global lbl_80659E40
+lbl_80659E40:
+	.skip 0x18
+.global lbl_80659E58
+lbl_80659E58:
+	.skip 0xC
+.global lbl_80659E64
+lbl_80659E64:
+	.skip 0x64
+.global lbl_80659EC8
+lbl_80659EC8:
+	.skip 0x20
+.global lbl_80659EE8
+lbl_80659EE8:
+	.skip 0x10
+.global lbl_80659EF8
+lbl_80659EF8:
+	.skip 0x90
+.global lbl_80659F88
+lbl_80659F88:
+	.skip 0x30
+.global lbl_80659FB8
+lbl_80659FB8:
+	.skip 0x30
+.global lbl_80659FE8
+lbl_80659FE8:
+	.skip 0x40
+.global lbl_8065A028
+lbl_8065A028:
+	.skip 0x40
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667E60
+lbl_80667E60:
+	.skip 0x8
+.global lbl_80667E68
+lbl_80667E68:
+	.skip 0x8

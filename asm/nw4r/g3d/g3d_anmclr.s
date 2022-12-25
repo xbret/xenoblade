@@ -1010,3 +1010,70 @@ GetTypeObj__Q34nw4r3g3d12AnmObjMatClrCFv:
 /* 803E2960 003ABF20  3C 60 80 52 */	lis r3, lbl_80520E48@ha
 /* 803E2964 003ABF24  38 63 0E 48 */	addi r3, r3, lbl_80520E48@l
 /* 803E2968 003ABF28  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520E48
+lbl_80520E48:
+	# ROM: 0x51CF48
+	.4byte 0x0000000D
+	.asciz "AnmObjMatClr"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80520E60
+lbl_80520E60:
+	# ROM: 0x51CF60
+	.4byte 0x00000010
+	.asciz "AnmObjMatClrRes"
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8056CA60
+lbl_8056CA60:
+	# ROM: 0x568B60
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d15AnmObjMatClrResCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d15AnmObjMatClrResFUlUlPv
+	.4byte __dt__Q34nw4r3g3d15AnmObjMatClrResFv
+	.4byte GetTypeObj__Q34nw4r3g3d15AnmObjMatClrResCFv
+	.4byte GetTypeName__Q34nw4r3g3d15AnmObjMatClrResCFv
+	.4byte SetFrame__Q34nw4r3g3d15AnmObjMatClrResFf
+	.4byte GetFrame__Q34nw4r3g3d15AnmObjMatClrResCFv
+	.4byte UpdateFrame__Q34nw4r3g3d15AnmObjMatClrResFv
+	.4byte SetUpdateRate__Q34nw4r3g3d15AnmObjMatClrResFf
+	.4byte GetUpdateRate__Q34nw4r3g3d15AnmObjMatClrResCFv
+	.4byte Bind__Q34nw4r3g3d15AnmObjMatClrResFQ34nw4r3g3d6ResMdl
+	.4byte Release__Q34nw4r3g3d12AnmObjMatClrFv
+	.4byte GetResult__Q34nw4r3g3d15AnmObjMatClrResFPQ34nw4r3g3d12ClrAnmResultUl
+	.4byte Attach__Q34nw4r3g3d12AnmObjMatClrFiPQ34nw4r3g3d15AnmObjMatClrRes
+	.4byte Detach__Q34nw4r3g3d12AnmObjMatClrFi
+	.4byte DetachAll__Q34nw4r3g3d12AnmObjMatClrFv
+
+
+.global lbl_8056CAA8
+lbl_8056CAA8:
+	# ROM: 0x568BA8
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjMatClrCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte 0
+	.4byte __dt__Q34nw4r3g3d12AnmObjMatClrFv
+	.4byte GetTypeObj__Q34nw4r3g3d12AnmObjMatClrCFv
+	.4byte GetTypeName__Q34nw4r3g3d12AnmObjMatClrCFv
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte Release__Q34nw4r3g3d12AnmObjMatClrFv
+	.4byte 0
+	.4byte Attach__Q34nw4r3g3d12AnmObjMatClrFiPQ34nw4r3g3d15AnmObjMatClrRes
+	.4byte Detach__Q34nw4r3g3d12AnmObjMatClrFi
+	.4byte DetachAll__Q34nw4r3g3d12AnmObjMatClrFv

@@ -166,3 +166,53 @@ func_80453824:
 func_80453830:
 /* 80453830 0041CDF0  80 63 00 04 */	lwz r3, 4(r3)
 /* 80453834 0041CDF4  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CDeviceFontInfoRom_typestr
+CDeviceFontInfoRom_typestr:
+	.asciz "CDeviceFontInfoRom"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CDeviceFontInfoRom
+__vt__CDeviceFontInfoRom:
+	.4byte __RTTI__CDeviceFontInfoRom
+	.4byte 0
+	.4byte func_8045365C
+	.4byte func_80453830
+	.4byte func_80453824
+	.4byte func_80453818
+	.4byte func_8045380C
+	.4byte func_80453800
+	.4byte func_804536DC
+	.4byte func_804537F0
+	.4byte func_804537F8
+	.4byte func_8045378C
+	.4byte func_804537A8
+	.4byte func_804537C0
+	.4byte func_804537D4
+
+
+.global CDeviceFontInfoRom_hierarchy
+CDeviceFontInfoRom_hierarchy:
+	.4byte __RTTI__IDeviceFontInfo
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CDeviceFontInfoRom
+__RTTI__CDeviceFontInfoRom:
+	.4byte CDeviceFontInfoRom_typestr
+	.4byte CDeviceFontInfoRom_hierarchy
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667F60
+lbl_80667F60:
+	.skip 0x8

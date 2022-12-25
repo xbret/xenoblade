@@ -1061,3 +1061,40 @@ lbl_8039EC74:
 /* 8039EC98 00368258  7C 08 03 A6 */	mtlr r0
 /* 8039EC9C 0036825C  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 8039ECA0 00368260  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051D508
+lbl_8051D508:
+	.asciz "E201184 MwsfdBufFmt value is invalid."
+	.asciz "E301272 picture_structure is invalid."
+	.asciz "E301273 chroma_format is invalid."
+	.asciz "E301274 chromapos is invalid."
+	.asciz "E2011911 mwPlyFxCnvFrmZ16: handle is invalid."
+	.asciz "E2011912 mwPlyFxCnvFrmZ16: getfrm is failed."
+	.asciz "E2011913 mwPlyFxCnvFrmZ32: handle is invalid."
+	.asciz "E2011914 mwPlyFxCnvFrmZ32: getfrm is failed."
+	.asciz "E201214 mwPlyFxSetCompoMode: handle is invalid."
+	.asciz "E204011 mwPlyFxSetCompoMode: COMPO_Z needs setting in MWPLY Creation."
+	.asciz "E204012 mwPlyFxSetCompoMode: COMPO_AUTO needs setting in MWPLY Creation."
+	.asciz "E2011915 mwPlyFxGetCompoMode: handle is invalid."
+	.asciz "E306091 MWSFSFX_SetOutBufSize: handle is invalid."
+	.asciz "E307092 mwPlyFxGetOutBufPitchHeight: handle is invalid."
+	.asciz "E2011918 mwPlyFxSetOutZscale: handle is invalid."
+	.asciz "E2011919 mwPlyFxGetOutZscale: handle is invalid."
+	.asciz "E2011920 mwPlyFxSetOutZoffset: handle is invalid."
+	.asciz "E2011921 mwPlyFxGetOutZoffset: handle is invalid."
+	.asciz "E201211 mwPlyCreate: can't create AddInfSJ"
+	.asciz "SFXINFS"
+	.asciz "SFXINFE"
+	.asciz "CRITAGS"
+	.asciz "CRITAGE"
+	.asciz "W2121001 mwPlyAttachAddInfBuf(): bufsize is short."
+	.asciz "E202283 MWSFD_MakeTblZ16: handle is invalid."
+	.asciz "E202284 MWSFD_MakeTblZ16: getfrm is failed."
+	.asciz "E202285 MWSFD_MakeTblZ32: handle is invalid."
+	.asciz "E202286 MWSFD_MakeTblZ32: getfrm is failed."
+	.asciz "E404010 mwPlySetCnvBottomUp: handle is invalid."
+	.asciz "E404011 mwPlyGetCnvBottomUp: handle is invalid."
+	.balign 4
+	.4byte 0

@@ -80,3 +80,18 @@ lbl_803919A0:
 /* 803919B4 0035AF74  7C 08 03 A6 */	mtlr r0
 /* 803919B8 0035AF78  38 21 00 20 */	addi r1, r1, 0x20
 /* 803919BC 0035AF7C  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051BA28
+lbl_8051BA28:
+	.asciz "\nLSC/WII Ver.2.30 Build:Nov 13 2008 10:52:58\n"
+	.balign 4
+
+
+.global lsc_build
+lsc_build:
+	# ROM: 0x517B58
+	.4byte lbl_8051BA28
+	.4byte 0

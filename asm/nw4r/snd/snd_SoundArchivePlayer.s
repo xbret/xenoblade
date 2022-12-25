@@ -2956,3 +2956,41 @@ _12_detail_SetupSound__Q34nw4r3snd18SoundArchivePlayerFPQ34nw4r3snd11SoundHandle
 _12___dt__Q34nw4r3snd18SoundArchivePlayerFv:
 /* 80420328 003E98E8  38 63 FF F4 */	addi r3, r3, -12
 /* 8042032C 003E98EC  4B FF DB 78 */	b __dt__Q34nw4r3snd18SoundArchivePlayerFv
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8056E4C0
+lbl_8056E4C0:
+	# ROM: 0x56A5C0
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r3snd18SoundArchivePlayerFv
+	.4byte InvalidateData__Q34nw4r3snd18SoundArchivePlayerFPCvPCv
+	.4byte InvalidateWaveData__Q34nw4r3snd18SoundArchivePlayerFPCvPCv
+	.4byte 0
+	.4byte 0
+	.4byte _12___dt__Q34nw4r3snd18SoundArchivePlayerFv
+	.4byte _12_detail_SetupSound__Q34nw4r3snd18SoundArchivePlayerFPQ34nw4r3snd11SoundHandleUlbPCQ44nw4r3snd14SoundStartable9StartInfo
+	.4byte _12_detail_ConvertLabelStringToSoundId__Q34nw4r3snd18SoundArchivePlayerFPCc
+	.4byte detail_ConvertLabelStringToSoundId__Q34nw4r3snd18SoundArchivePlayerFPCc
+	.4byte detail_SetupSound__Q34nw4r3snd18SoundArchivePlayerFPQ34nw4r3snd11SoundHandleUlbPCQ44nw4r3snd14SoundStartable9StartInfo
+
+
+.global lbl_8056E4F0
+lbl_8056E4F0:
+	# ROM: 0x56A5F0
+	.4byte 0
+	.4byte 0
+	.4byte func_8041DCFC
+	.4byte GetWaveSoundData__Q44nw4r3snd18SoundArchivePlayer11WsdCallbackCFPQ44nw4r3snd6detail13WaveSoundInfoPQ44nw4r3snd6detail17WaveSoundNoteInfoPQ44nw4r3snd6detail8WaveInfoPCviiUl
+
+
+.global lbl_8056E500
+lbl_8056E500:
+	# ROM: 0x56A600
+	.4byte 0
+	.4byte 0
+	.4byte func_8041DCBC
+	.4byte NoteOn__Q44nw4r3snd18SoundArchivePlayer17SeqNoteOnCallbackFPQ44nw4r3snd6detail9SeqPlayeriRCQ44nw4r3snd6detail10NoteOnInfo

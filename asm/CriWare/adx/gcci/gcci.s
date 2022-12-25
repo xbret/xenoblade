@@ -25,9 +25,9 @@ gcCiGetInterface:
 /* 803909C0 00359F80  90 1F 00 08 */	stw r0, 8(r31)
 /* 803909C4 00359F84  4B C7 39 8D */	bl memset
 /* 803909C8 00359F88  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 803909CC 00359F8C  3C 60 80 57 */	lis r3, lbl_80569208@ha
+/* 803909CC 00359F8C  3C 60 80 57 */	lis r3, gcci_vtbl@ha
 /* 803909D0 00359F90  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 803909D4 00359F94  38 63 92 08 */	addi r3, r3, lbl_80569208@l
+/* 803909D4 00359F94  38 63 92 08 */	addi r3, r3, gcci_vtbl@l
 /* 803909D8 00359F98  7C 08 03 A6 */	mtlr r0
 /* 803909DC 00359F9C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803909E0 00359FA0  4E 80 00 20 */	blr 
@@ -1048,3 +1048,58 @@ gcCiIsExistFile:
 .global gcci_rd_cbfn
 gcci_rd_cbfn:
 /* 80391798 0035AD58  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051B830
+lbl_8051B830:
+	.asciz "E0092901:fname is null.(gcCiGetFileSize)"
+	.asciz "E0040201:can't open a file.(gcCiGetFileSize)"
+	.asciz "E0040202:can't close a file.(gcCiGetFileSize)"
+	.asciz "E0092908:fname is null.(gcCiOpen)"
+	.asciz "E0092909:rw is illigal.(gcCiOpen)"
+	.asciz "E0092910:not enough handle resource.(gcCiOpen)"
+	.asciz "E0092911:DVDOpen fail.(gcCiOpen)"
+	.asciz "E0092912:handl is null."
+	.asciz "E0092913:nsct < 0.(gcCiReqRd)"
+	.asciz "E0092914:buf is null.(gcCiReqRd)"
+	.asciz "E0092917:DVDCancel failed."
+	.asciz "E0092918:DVDCancel time out."
+	.asciz "E0040301:handl is null."
+	.asciz "E0040302:handl is null."
+	.asciz "E0040303:invalidate size."
+	.balign 4
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global gcci_vtbl
+gcci_vtbl:
+	# ROM: 0x565308
+	.4byte gcCiExecServer
+	.4byte gcCiEntryErrFunc
+	.4byte gcCiGetFileSize
+	.4byte 0
+	.4byte gcCiOpen
+	.4byte gcCiClose
+	.4byte gcCiSeek
+	.4byte gcCiTell
+	.4byte gcCiReqRd
+	.4byte 0
+	.4byte gcCiStopTr
+	.4byte gcCiGetStat
+	.4byte gcCiGetSctLen
+	.4byte gcCiSetSctLen
+	.4byte gcCiGetNumTr
+	.4byte 0
+	.4byte gcCiIsExistFile
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0

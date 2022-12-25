@@ -6696,3 +6696,532 @@ func_8048BD84:
 func_8048BD8C:
 /* 8048BD8C 0045534C  38 63 EB 98 */	addi r3, r3, -5224
 /* 8048BD90 00455350  4B FF B4 B8 */	b func_80487248
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global nw4r_g3d_IScnObjCallback_typestr
+nw4r_g3d_IScnObjCallback_typestr:
+	.asciz "nw4r::g3d::IScnObjCallback"
+	.balign 4
+
+.global nw4r_g3d_ICalcWorldCallback_typestr
+nw4r_g3d_ICalcWorldCallback_typestr:
+	.asciz "nw4r::g3d::ICalcWorldCallback"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80571698
+lbl_80571698:
+	.float 0.7
+	.float 0.5
+	.float 0.5
+	.float 0.75
+	.float 1.0
+	.float 1.0
+	.float 0.7
+	.float 0.3
+	.float 0.3
+	.float 0.3
+	.float 0.7
+	.float 0.7
+
+.global __vt__CScnItemModelNw4r
+__vt__CScnItemModelNw4r:
+	.4byte __RTTI__CScnItemModelNw4r
+	.4byte 0
+	.4byte func_80487248
+	.4byte func_80487EE0
+	.4byte func_80482048
+	.4byte func_804885FC
+	.4byte func_80487B18
+	.4byte func_80486090
+	.4byte func_8048B4BC
+	.4byte func_8048B4C4
+	.4byte func_8048B1F4
+	.4byte func_8048B30C
+	.4byte func_8048B54C
+	.4byte func_8048B608
+	.4byte func_8048B3F0
+	.4byte func_8048B68C
+	.4byte func_8048B728
+	.4byte func_8048BA58
+	.4byte func_8048A588
+	.4byte func_8048490C
+	.4byte func_8048AB0C
+	.4byte func_800BD638
+	.4byte func_80487E40
+	.4byte func_80487E48
+	.4byte func_80487E50
+	.4byte func_80487E58
+	.4byte func_80487EB8
+	.4byte func_80488FEC
+	.4byte func_80489000
+	.4byte func_804885C8
+	.4byte func_80487374
+	.4byte func_804876EC
+	.4byte func_8048BBF0
+	.4byte func_8048BADC
+	.4byte func_8048BD04
+	.4byte func_80488C28
+	.4byte func_80488C78
+	.4byte func_80488CF8
+	.4byte func_80488D14
+	.4byte func_80488D54
+	.4byte func_80488EF4
+	.4byte func_80487B84
+	.4byte func_8048736C
+	.4byte func_804888B4
+	.4byte func_80488A28
+	.4byte func_80487C78
+	.4byte func_8048776C
+	.4byte func_8048607C
+	.4byte func_80489E80
+	.4byte func_80489FDC
+	.4byte func_8048A0B4
+	.4byte func_80487818
+	.4byte func_804884F8
+	.4byte func_80488984
+	.4byte func_80488AAC
+	.4byte __RTTI__CScnItemModelNw4r
+	.4byte 0xFFFFEB9C
+	.4byte func_8048BD6C
+	.4byte func_8048BD64
+	.4byte func_8048BD5C
+	.4byte func_8048BD54
+	.4byte __RTTI__CScnItemModelNw4r
+	.4byte 0xFFFFEB98
+	.4byte func_8048BD8C
+	.4byte func_8048BD84
+	.4byte ExecCallback_CALC_MAT__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
+	.4byte ExecCallback_CALC_VIEW__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
+	.4byte func_8048BD7C
+	.4byte func_8048BD74
+	.4byte func_80489014
+	.4byte func_8048917C
+	.4byte func_80489200
+	.4byte func_80489584
+	.4byte func_80489924
+	.4byte func_804899F4
+	.4byte __RTTI__CScnItem
+	.4byte 0
+	.4byte __RTTI__CScnItemModel
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__CScnItem
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__nw4r_g3d_IScnObjCallback
+	.4byte 0
+	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
+	.4byte ExecCallback_CALC_WORLD__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
+	.4byte ExecCallback_CALC_MAT__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
+	.4byte ExecCallback_CALC_VIEW__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
+	.4byte func_803F7C30
+	.4byte func_803F7C34
+	.4byte __RTTI__nw4r_g3d_ICalcWorldCallback
+	.4byte 0
+	.4byte __dt__Q34nw4r3g3d18ICalcWorldCallbackFv
+	.4byte ExecCallbackA__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r3g3d12ChrAnmResultQ34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
+	.4byte ExecCallbackB__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r3g3d13WorldMtxManipQ34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
+	.4byte ExecCallbackC__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
+
+#These strings are also used later in the Mdl files. Maybe they used some flag that does pooling across files?
+
+.global lbl_80571850
+lbl_80571850:
+	.asciz "NW4R:Pointer Error\nfunc(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_80571884
+lbl_80571884:
+	.asciz "g3d_anmobj.h"
+	.balign 4
+
+
+.global lbl_80571894
+lbl_80571894:
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+
+
+.global lbl_805718B0
+lbl_805718B0:
+	.asciz "g3d_resmat_ac.h"
+
+
+.global lbl_805718C0
+lbl_805718C0:
+	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
+	.balign 4
+
+
+.global lbl_805718E8
+lbl_805718E8:
+	.asciz "g3d_resmat_ac.h"
+
+
+.global lbl_805718F8
+lbl_805718F8:
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80571918
+lbl_80571918:
+	.asciz "g3d_restev_ac.h"
+
+
+.global lbl_80571928
+lbl_80571928:
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80571948
+lbl_80571948:
+	.asciz "g3d_resmdl_ac.h"
+
+
+.global lbl_80571958
+lbl_80571958:
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80571978
+lbl_80571978:
+	.asciz "g3d_resmdl_ac.h"
+
+
+.global lbl_80571988
+lbl_80571988:
+	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
+	.balign 4
+
+
+.global lbl_805719B0
+lbl_805719B0:
+	.asciz "g3d_resmdl_ac.h"
+
+
+.global lbl_805719C0
+lbl_805719C0:
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+
+
+.global lbl_805719DC
+lbl_805719DC:
+	.asciz "g3d_resnode_ac.h"
+	.balign 4
+
+
+.global lbl_805719F0
+lbl_805719F0:
+	.asciz "NW4R:Failed assertion IsValid()"
+
+
+.global lbl_80571A10
+lbl_80571A10:
+	.asciz "g3d_resnode_ac.h"
+	.balign 4
+	.4byte 0
+	.asciz "NW4R:Failed assertion IsValid()"
+	.asciz "g3d_resnode_ac.h"
+	.balign 4
+	.asciz "ResUserData"
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+	.asciz "g3d_resuser_ac.h"
+	.balign 4
+	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
+	.balign 4
+	.asciz "g3d_resuser_ac.h"
+	.balign 4
+	.4byte 0
+	.asciz "ResUserDataItem"
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+	.asciz "g3d_resuser_ac.h"
+	.balign 4
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+	.asciz "g3d_resuser_ac.h"
+	.balign 4
+	.asciz "NW4R:Failed assertion GetValueType() == ResUserDataItemData::S32"
+	.balign 4
+	.asciz "g3d_resuser_ac.h"
+	.balign 4
+	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
+	.balign 4
+	.asciz "g3d_resfile_ac.h"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80571BE0
+lbl_80571BE0:
+	.asciz "idx is out of bounds(%d)\n%d <= idx <= %d not satisfied."
+
+
+.global lbl_80571C18
+lbl_80571C18:
+	.asciz "g3d_resdict_ac.h"
+	.balign 4
+	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
+	.balign 4
+	.asciz "g3d_resdict_ac.h"
+	.balign 4
+
+.global lbl_80571C68
+lbl_80571C68:
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+
+.global lbl_80571C84
+lbl_80571C84:
+	.asciz "g3d_resdict_ac.h"
+	.balign 4
+	.asciz "FSqrt: Input is out of the domain."
+	.balign 4
+	.asciz "arithmetic.h"
+	.balign 4
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806661F0
+lbl_806661F0:
+	# ROM: 0x571DD0
+	.4byte lbl_8066D090
+
+
+.global lbl_806661F4
+lbl_806661F4:
+	# ROM: 0x571DD4
+	.4byte lbl_8066D098
+
+.global __RTTI__nw4r_g3d_IScnObjCallback
+__RTTI__nw4r_g3d_IScnObjCallback:
+	.4byte nw4r_g3d_IScnObjCallback_typestr
+	.4byte 0
+
+.global __RTTI__nw4r_g3d_ICalcWorldCallback
+__RTTI__nw4r_g3d_ICalcWorldCallback:
+	.4byte nw4r_g3d_ICalcWorldCallback_typestr
+	.4byte 0
+
+
+.global lbl_80666208
+lbl_80666208:
+	.asciz "ResMat"
+	.balign 4
+
+
+.global lbl_80666210
+lbl_80666210:
+	# ROM: 0x571DF0
+	.4byte 0x72656600
+
+
+.global lbl_80666214
+lbl_80666214:
+	.asciz "ResTev"
+	.balign 4
+
+
+.global lbl_8066621C
+lbl_8066621C:
+	# ROM: 0x571DFC
+	.4byte 0x72656600
+
+
+.global lbl_80666220
+lbl_80666220:
+	.asciz "ResMdl"
+	.balign 4
+
+
+.global lbl_80666228
+lbl_80666228:
+	# ROM: 0x571E08
+	.4byte 0x72656600
+
+
+.global lbl_8066622C
+lbl_8066622C:
+	# ROM: 0x571E0C
+	.4byte 0x72656600
+
+
+.global lbl_80666230
+lbl_80666230:
+	.asciz "ResNode"
+
+
+.global lbl_80666238
+lbl_80666238:
+	# ROM: 0x571E18
+	.4byte 0x72656600
+
+
+.global lbl_8066623C
+lbl_8066623C:
+	# ROM: 0x571E1C
+	.4byte 0x72656600
+
+
+.global lbl_80666240
+lbl_80666240:
+	# ROM: 0x571E20
+	.4byte 0x72656600
+
+
+.global lbl_80666244
+lbl_80666244:
+	# ROM: 0x571E24
+	.4byte 0x72656600
+
+
+.global lbl_80666248
+lbl_80666248:
+	.asciz "ResDic"
+	.balign 4
+
+
+.global lbl_80666250
+lbl_80666250:
+	# ROM: 0x571E30
+	.4byte 0x72656600
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D090
+lbl_8066D090:
+	.asciz "bloom"
+	.balign 4
+
+.global lbl_8066D098
+lbl_8066D098:
+	.asciz "move"
+	.balign 4
+
+
+.global lbl_8066D0A0
+lbl_8066D0A0:
+	# ROM: 0x576F00
+	.4byte 0
+
+
+.global lbl_8066D0A4
+lbl_8066D0A4:
+	# ROM: 0x576F04
+	.4byte 0x437F0000
+
+
+.global lbl_8066D0A8
+lbl_8066D0A8:
+	# ROM: 0x576F08
+	.4byte 0x41F00000
+	.4byte 0
+
+
+.global lbl_8066D0B0
+lbl_8066D0B0:
+	# ROM: 0x576F10
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066D0B8
+lbl_8066D0B8:
+	# ROM: 0x576F18
+	.float 100.0
+
+
+.global lbl_8066D0BC
+lbl_8066D0BC:
+	# ROM: 0x576F1C
+	.float 1.0
+
+
+.global lbl_8066D0C0
+lbl_8066D0C0:
+	# ROM: 0x576F20
+	.4byte 0x3A83126F
+
+
+.global lbl_8066D0C4
+lbl_8066D0C4:
+	# ROM: 0x576F24
+	.float 0.5
+
+
+.global lbl_8066D0C8
+lbl_8066D0C8:
+	# ROM: 0x576F28
+	.4byte 0x3DB851EC
+
+
+.global lbl_8066D0CC
+lbl_8066D0CC:
+	# ROM: 0x576F2C
+	.4byte 0x3E99999A
+
+
+.global lbl_8066D0D0
+lbl_8066D0D0:
+	# ROM: 0x576F30
+	.float -1.0
+
+
+.global lbl_8066D0D4
+lbl_8066D0D4:
+	# ROM: 0x576F34
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066D0D8
+lbl_8066D0D8:
+	# ROM: 0x576F38
+	.4byte 0xBCA3D70A
+
+
+.global lbl_8066D0DC
+lbl_8066D0DC:
+	# ROM: 0x576F3C
+	.4byte 0x3C23D70B
+
+
+.global lbl_8066D0E0
+lbl_8066D0E0:
+	# ROM: 0x576F40
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066D0E4
+lbl_8066D0E4:
+	# ROM: 0x576F44
+	.4byte 0xBF7FF972
+
+
+.global lbl_8066D0E8
+lbl_8066D0E8:
+	# ROM: 0x576F48
+	.4byte 0x40000000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806681B0
+lbl_806681B0:
+	.skip 0x8

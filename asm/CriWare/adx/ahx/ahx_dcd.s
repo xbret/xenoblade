@@ -1913,3 +1913,72 @@ lbl_8038F4A0:
 /* 8038F4D4 00358A94  7C 08 03 A6 */	mtlr r0
 /* 8038F4D8 00358A98  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 8038F4DC 00358A9C  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051AC98
+lbl_8051AC98:
+	# ROM: 0x516D98
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8051ACA0
+lbl_8051ACA0:
+	# ROM: 0x516DA0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8051ACA8
+lbl_8051ACA8:
+	.asciz "CRI-MW"
+	.balign 4
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_80569190
+lbl_80569190:
+	# ROM: 0x565290
+	.4byte 0x00005622
+	.4byte 0x00005DC0
+	.4byte 0x00003E80
+	.4byte 0
+	.4byte 0x0000AC44
+	.4byte 0x0000BB80
+	.4byte 0x00007D00
+	.4byte 0
+
+
+.global lbl_805691B0
+lbl_805691B0:
+	# ROM: 0x5652B0
+	.4byte 0x00000004
+	.4byte 0x00000008
+	.4byte 0x0000000C
+	.4byte 0x00000010
+	.4byte 0x00000004
+	.4byte 0x00000008
+	.4byte 0x0000000C
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x00000004
+	.4byte 0x00000008
+	.4byte 0x00000010
+
+
+.global lbl_805691E0
+lbl_805691E0:
+	# ROM: 0x5652E0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000003
+	.4byte 0x00000007
+	.4byte 0x0000000F
+	.4byte 0x0000001F
+	.4byte 0x0000003F
+	.4byte 0x0000007F
+	.4byte 0x000000FF
+	.4byte 0

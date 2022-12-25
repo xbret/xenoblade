@@ -565,3 +565,17 @@ func_8038CEF8:
 /* 8038CEF8 003564B8  38 00 00 01 */	li r0, 1
 /* 8038CEFC 003564BC  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8038CF00 003564C0  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051ABD8
+lbl_8051ABD8:
+	.asciz "\nAHX/WII Ver.1.89 Build:Nov 13 2008 10:52:54\n"
+	.balign 4
+
+
+.global lbl_8051AC08
+lbl_8051AC08:
+	# ROM: 0x516D08
+	.4byte lbl_8051ABD8
+	.4byte 0

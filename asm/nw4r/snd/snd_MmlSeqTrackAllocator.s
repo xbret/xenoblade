@@ -101,3 +101,15 @@ lbl_80418950:
 /* 8041895C 003E1F1C  7C 08 03 A6 */	mtlr r0
 /* 80418960 003E1F20  38 21 00 10 */	addi r1, r1, 0x10
 /* 80418964 003E1F24  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056E3B0
+lbl_8056E3B0:
+	# ROM: 0x56A4B0
+	.4byte 0
+	.4byte 0
+	.4byte func_80418928
+	.4byte AllocTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail9SeqPlayer
+	.4byte FreeTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail8SeqTrack
+	.4byte GetAllocatableTrackCount__Q44nw4r3snd6detail20MmlSeqTrackAllocatorCFv

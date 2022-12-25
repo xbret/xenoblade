@@ -1610,3 +1610,137 @@ lbl_80450B04:
 /* 80450B08 0041A0C8  7C 08 03 A6 */	mtlr r0
 /* 80450B0C 0041A0CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80450B10 0041A0D0  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CDeviceFileCri_typestr
+CDeviceFileCri_typestr:
+	.asciz "CDeviceFileCri"
+	.balign 4
+
+
+.global lbl_805265B8
+lbl_805265B8:
+	.asciz "/"
+	.4byte 0
+	.2byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056FB70
+lbl_8056FB70:
+	# ROM: 0x56BC70
+	.4byte lbl_80450638
+	.4byte lbl_80450780
+	.4byte lbl_80450790
+	.4byte lbl_8045081C
+	.4byte lbl_8045082C
+	.4byte lbl_804508A0
+	.4byte lbl_80450908
+	.4byte lbl_804508AC
+	.4byte lbl_80450914
+
+
+.global __vt__CDeviceFileCri
+__vt__CDeviceFileCri:
+	.4byte __RTTI__CDeviceFileCri
+	.4byte 0
+	.4byte func_8044F69C
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_804505F0
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_804509B4
+	.4byte func_804509B8
+	.4byte func_80450A18
+	.4byte __RTTI__CDeviceFileCri
+	.4byte 0xFFFFFE3C
+	.4byte func_80450B4C
+	.4byte func_80450B44
+	.4byte func_80450AB8
+
+.global CDeviceFileCri_hierarchy
+CDeviceFileCri_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8056FC5C
+lbl_8056FC5C:
+	# ROM: 0x56BD5C
+	.4byte 0x00460041
+	.4byte 0x00540041
+	.4byte 0x004C0000
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665FF0
+lbl_80665FF0:
+	# ROM: 0x571BD0
+	.4byte lbl_8066CBB0
+
+
+.global lbl_80665FF4
+lbl_80665FF4:
+	# ROM: 0x571BD4
+	.4byte lbl_8066CBB0
+
+
+.global lbl_80665FF8
+lbl_80665FF8:
+	# ROM: 0x571BD8
+	.4byte lbl_8066CBB0
+	.4byte 0
+
+.global __RTTI__CDeviceFileCri
+__RTTI__CDeviceFileCri:
+	.4byte CDeviceFileCri_typestr
+	.4byte CDeviceFileCri_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066CBB0
+lbl_8066CBB0:
+	.4byte 0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667F48
+lbl_80667F48:
+	.skip 0x8

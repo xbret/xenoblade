@@ -905,3 +905,28 @@ lbl_8039DB00:
 /* 8039DB14 003670D4  7C 08 03 A6 */	mtlr r0
 /* 8039DB18 003670D8  38 21 00 50 */	addi r1, r1, 0x50
 /* 8039DB1C 003670DC  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051D1D0
+lbl_8051D1D0:
+	.asciz "E1122633 mwPlyEntryFname: handle is invalid."
+	.asciz "E10915B mwPlyEntryFname: fname is NULL."
+	.asciz "E204021: mwPlyEntryFname: Can't entry file'%s'"
+	.asciz "E1122634 mwPlyStartSeamless: handle is invalid."
+	.asciz "E1122642 mwPlyLinkStm: handle is invalid."
+	.asciz "E1122641 mwPlySetLpFlg: handle is invalid."
+	.asciz "E1122630 mwPlyStartFnameLp: handle is invalid."
+	.asciz "E10915A mwPlyStartFnameLp: fname is NULL."
+	.asciz "E1122631 mwPlyReleaseLp: handle is invalid."
+	.asciz "E1122635 mwPlyReleaseSeamless: handle is invalid."
+	.asciz "E1122636 mwPlyEntryAfs: handle is invalid."
+	.asciz "E008311 mwPlyEntryAfs: can't entry pid=%d fid=%d"
+	.asciz "E1122632 mwPlyStartAfsLp: handle is invalid."
+	.asciz "E407023 mwPlyEntryFnameRange: handle is invalid."
+	.asciz "E407024 mwPlyStartFnameRangeLp: handle is invalid."
+	.asciz "E1122637 mwPlyGetSlFname: handle is invalid."
+	.asciz "E10821B : Invalid value of stm_no : %d"
+	.asciz "%08x.%08x"
+	.asciz "E05080801 framerate of movie is invalid."
+	.4byte 0

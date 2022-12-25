@@ -13523,6 +13523,7 @@ lbl_8050BB30:
 	.asciz "MNU_main"
 	.asciz "name"
 	.2byte 0
+
 .global CSkipTimer_typestr
 CSkipTimer_typestr:
 	.asciz "CSkipTimer"

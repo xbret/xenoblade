@@ -265,3 +265,16 @@ lbl_8040A00C:
 /* 8040A01C 003D35DC  7C 08 03 A6 */	mtlr r0
 /* 8040A020 003D35E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040A024 003D35E4  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056D598
+lbl_8056D598:
+	# ROM: 0x569698
+	.4byte 0
+	.4byte 0
+	.4byte func_8003997C
+	.4byte GetResource__Q34nw4r3lyt19ArcResourceAccessorFUlPCcPUl
+	.4byte GetFont__Q34nw4r3lyt19ArcResourceAccessorFPCc
+	.4byte 0

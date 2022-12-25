@@ -1152,3 +1152,61 @@ lbl_80396644:
 /* 80396658 0035FC18  7C 08 03 A6 */	mtlr r0
 /* 8039665C 0035FC1C  38 21 00 90 */	addi r1, r1, 0x90
 /* 80396660 0035FC20  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051C430
+lbl_8051C430:
+	# ROM: 0x518530
+	.4byte 0x2E534FA3
+	.4byte 0xAF9711D2
+	.4byte 0xA5270060
+	.4byte 0x089448BC
+
+
+.global lbl_8051C440
+lbl_8051C440:
+	.asciz "SJUNI Error"
+	.asciz " : NULL pointer is passed."
+	.asciz "E2004090261"
+	.asciz " : Specified handle is invalid."
+	.asciz "E2004090262"
+	.asciz "E2004090263"
+	.asciz "E2004090264"
+	.asciz "E2004090265"
+	.asciz "E2004090266"
+	.asciz "E2004090267"
+	.asciz "E2004090268"
+	.asciz "E2004090269"
+	.asciz "E2004090270"
+	.asciz "E2004090271"
+	.asciz "E2004090272"
+	.asciz "E2004090273"
+	.asciz "E2004090274"
+	.asciz "E2004090275"
+	.asciz "E2004090276"
+	.asciz "E2004090277"
+	.asciz "E2004090278"
+	.asciz "E2004090279"
+	.asciz "E2004090280"
+	.asciz "E2004090281"
+	.asciz "E2004090282"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global sjuni_vtbl
+sjuni_vtbl:
+	# ROM: 0x565438
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte SJUNI_Destroy
+	.4byte SJUNI_GetUuid
+	.4byte SJUNI_Reset
+	.4byte SJUNI_GetChunk
+	.4byte SJUNI_UngetChunk
+	.4byte SJUNI_PutChunk
+	.4byte SJUNI_GetNumData
+	.4byte SJUNI_IsGetChunk
+	.4byte SJUNI_EntryErrFunc

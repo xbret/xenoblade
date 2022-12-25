@@ -818,3 +818,225 @@ lbl_80449C88:
 /* 80449CE8 004132A8  BB 61 00 3C */	lmw r27, 0x3c(r1)
 /* 80449CEC 004132AC  38 21 00 50 */	addi r1, r1, 0x50
 /* 80449CF0 004132B0  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CGXCache_typestr
+CGXCache_typestr:
+	.asciz "CGXCache"
+	.balign 4
+
+.global CMsgParam_32_typestr
+CMsgParam_32_typestr:
+	.asciz "CMsgParam<32>"
+	.balign 4
+
+.global IStateCache_typestr
+IStateCache_typestr:
+	.asciz "IStateCache"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056F7D0
+lbl_8056F7D0:
+	# ROM: 0x56B8D0
+	.4byte lbl_80449DB4
+	.4byte lbl_80449DCC
+	.4byte lbl_80449DE4
+	.4byte lbl_80449E70
+	.4byte lbl_80449EFC
+	.4byte lbl_80449F28
+	.4byte lbl_80449F5C
+	.4byte lbl_80449F90
+	.4byte lbl_80449F9C
+	.4byte lbl_80449FA8
+	.4byte lbl_8044A2AC
+	.4byte lbl_8044A2C4
+	.4byte lbl_8044A3A0
+	.4byte lbl_80449F0C
+
+
+.global __vt__CGXCache
+__vt__CGXCache:
+	.4byte __RTTI__CGXCache
+	.4byte 0
+	.4byte func_80449D04
+	.4byte func_80449D68
+
+.global CGXCache_hierarchy
+CGXCache_hierarchy:
+	.4byte __RTTI__IStateCache
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CMsgParam_32
+__vt__CMsgParam_32:
+	.4byte __RTTI__CMsgParam_32
+	.4byte 0
+	.4byte func_80449480
+
+
+.global __vt__IStateCache
+__vt__IStateCache:
+	.4byte __RTTI__IStateCache
+	.4byte 0
+	.4byte func_8044940C
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665F48
+lbl_80665F48:
+	# ROM: 0x571B28
+	.4byte 0x00000001
+
+
+.global lbl_80665F4C
+lbl_80665F4C:
+	# ROM: 0x571B2C
+	.4byte 0x00FFFFFF
+
+
+.global lbl_80665F50
+lbl_80665F50:
+	# ROM: 0x571B30
+	.4byte 0x00000001
+
+
+.global lbl_80665F54
+lbl_80665F54:
+	# ROM: 0x571B34
+	.4byte 0x00000001
+
+
+.global lbl_80665F58
+lbl_80665F58:
+	# ROM: 0x571B38
+	.4byte 0x00000001
+
+
+.global lbl_80665F5C
+lbl_80665F5C:
+	# ROM: 0x571B3C
+	.4byte 0x00000001
+
+
+.global lbl_80665F60
+lbl_80665F60:
+	# ROM: 0x571B40
+	.4byte 0x00000001
+
+
+.global lbl_80665F64
+lbl_80665F64:
+	# ROM: 0x571B44
+	.4byte 0
+
+
+.global lbl_80665F68
+lbl_80665F68:
+	# ROM: 0x571B48
+	.4byte 0
+
+.global lbl_80665F6C
+lbl_80665F6C:
+	# ROM: 0x571B4C
+	.4byte 0
+
+
+.global lbl_80665F70
+lbl_80665F70:
+	# ROM: 0x571B50
+	.4byte 0x00000001
+
+
+.global lbl_80665F74
+lbl_80665F74:
+	# ROM: 0x571B54
+	.4byte 0x00000002
+
+
+.global lbl_80665F78
+lbl_80665F78:
+	# ROM: 0x571B58
+	.4byte 0x00000003
+	.4byte 0
+
+.global __RTTI__CGXCache
+__RTTI__CGXCache:
+	.4byte CGXCache_typestr
+	.4byte CGXCache_hierarchy
+
+
+.global __RTTI__CMsgParam_32
+__RTTI__CMsgParam_32:
+	.4byte CMsgParam_32_typestr
+	.4byte 0
+
+.global __RTTI__IStateCache
+__RTTI__IStateCache:
+	.4byte IStateCache_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066CB78
+lbl_8066CB78:
+	# ROM: 0x5769D8
+	.4byte 0
+
+
+.global lbl_8066CB7C
+lbl_8066CB7C:
+	# ROM: 0x5769DC
+	.4byte 0x437F0000
+
+
+.global lbl_8066CB80
+lbl_8066CB80:
+	# ROM: 0x5769E0
+	.float 1.0
+	.4byte 0
+
+
+.global lbl_8066CB88
+lbl_8066CB88:
+	# ROM: 0x5769E8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066CB90
+lbl_8066CB90:
+	# ROM: 0x5769F0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066CB98
+lbl_8066CB98:
+	# ROM: 0x5769F8
+	.4byte 0x3F726E98
+
+
+.global lbl_8066CB9C
+lbl_8066CB9C:
+	# ROM: 0x5769FC
+	.4byte 0x40000000
+
+
+.global lbl_8066CBA0
+lbl_8066CBA0:
+	# ROM: 0x576A00
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066CBA4
+lbl_8066CBA4:
+	.4byte 0x447A0000
+
+.global CDevice_typestr
+CDevice_typestr:
+	.asciz "CDevice"

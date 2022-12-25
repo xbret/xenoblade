@@ -11,3 +11,12 @@ TestExistence__Q34nw4r3g3d9AnmObjShpCFUl:
 /* 803E5D1C 003AF2DC  7C 00 00 34 */	cntlzw r0, r0
 /* 803E5D20 003AF2E0  54 03 D9 7E */	srwi r3, r0, 5
 /* 803E5D24 003AF2E4  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520F28
+lbl_80520F28:
+	# ROM: 0x51D028
+	.4byte 0x0000000A
+	.asciz "AnmObjShp"
+	.balign 4

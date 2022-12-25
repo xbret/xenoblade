@@ -494,3 +494,44 @@ lbl_8038D9AC:
 /* 8038D9BC 00356F7C  7C 08 03 A6 */	mtlr r0
 /* 8038D9C0 00356F80  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038D9C4 00356F84  4E 80 00 20 */	blr
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051AC10
+lbl_8051AC10:
+	# ROM: 0x516D10
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000003
+	.4byte 0x00000007
+	.4byte 0x0000000F
+	.4byte 0x0000001F
+	.4byte 0x0000003F
+	.4byte 0x0000007F
+	.4byte 0x000000FF
+	.4byte 0x000001FF
+	.4byte 0x000003FF
+	.4byte 0x000007FF
+	.4byte 0x00000FFF
+	.4byte 0x00001FFF
+	.4byte 0x00003FFF
+	.4byte 0x00007FFF
+	.4byte 0x0000FFFF
+	.4byte 0x0001FFFF
+	.4byte 0x0003FFFF
+	.4byte 0x0007FFFF
+	.4byte 0x000FFFFF
+	.4byte 0x001FFFFF
+	.4byte 0x003FFFFF
+	.4byte 0x007FFFFF
+	.4byte 0x00FFFFFF
+	.4byte 0x01FFFFFF
+	.4byte 0x03FFFFFF
+	.4byte 0x07FFFFFF
+	.4byte 0x0FFFFFFF
+	.4byte 0x1FFFFFFF
+	.4byte 0x3FFFFFFF
+	.4byte 0x7FFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0

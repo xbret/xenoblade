@@ -5,10 +5,10 @@
 #include "monolithlib/IRandomizer.hpp"
 
 class CERandomizer : IRandomizer {
-    void func_804DB97C();
-    void func_804DB938();
-    void func_804DB6DC();
-    void func_804DB7E0();
+    virtual void func_804DB97C();
+    virtual void func_804DB938();
+    virtual void func_804DB6DC();
+    virtual void func_804DB7E0();
 };
 
 

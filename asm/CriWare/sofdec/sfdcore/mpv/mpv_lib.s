@@ -788,3 +788,40 @@ lbl_803A89FC:
 /* 803A8A00 00371FC0  90 64 64 AC */	stw r3, lbl_806064AC@l(r4)
 /* 803A8A04 00371FC4  38 60 00 00 */	li r3, 0
 /* 803A8A08 00371FC8  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051F778
+lbl_8051F778:
+	.asciz "\nCRI MPV/WII Ver.2.059 Build:Nov 13 2008 18:21:44\n"
+	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
+	.balign 4
+
+
+.global lbl_8051F7D0
+lbl_8051F7D0:
+	# ROM: 0x51B8D0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000003
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x5A5A5A5A
+
+
+.global lbl_8051F814
+lbl_8051F814:
+	.asciz "2.059"
+	.balign 4
+	.4byte 0

@@ -4541,3 +4541,87 @@ func_80486088:
 func_80486090:
 /* 80486090 0044F650  80 63 07 E4 */	lwz r3, 0x7e4(r3)
 /* 80486094 0044F654  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+
+.global __vt__CScnItemModel
+__vt__CScnItemModel:
+	.4byte __RTTI__CScnItemModel
+	.4byte 0
+	.4byte func_80482724
+	.4byte func_80485CE8
+	.4byte func_80482048
+	.4byte func_80482288
+	.4byte 0
+	.4byte func_80486090
+	.4byte 0
+	.4byte 0
+	.4byte func_80485A48
+	.4byte func_80485AD8
+	.4byte func_80485B98
+	.4byte func_80485C28
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte func_80484838
+	.4byte func_8048490C
+	.4byte func_80484E0C
+	.4byte func_80486088
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte func_80183264
+	.4byte func_80486084
+	.4byte func_804830E4
+	.4byte func_804830BC
+	.4byte func_8048310C
+	.4byte func_804849E4
+	.4byte func_80484AB4
+	.4byte func_80484BB4
+	.4byte func_80484C84
+	.4byte func_80484D3C
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte func_804858C8
+	.4byte func_80485994
+	.4byte func_80484914
+	.4byte 0
+	.4byte func_8048607C
+	.4byte func_80486074
+	.4byte func_801FCAC0
+	.4byte func_801FCBEC
+	.4byte func_804830AC
+	.4byte func_80485D64
+	.4byte func_804857DC
+	.4byte func_804857F0
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D080
+lbl_8066D080:
+	# ROM: 0x576EE0
+	.4byte 0
+
+
+.global lbl_8066D084
+lbl_8066D084:
+	# ROM: 0x576EE4
+	.float 1.0
+
+
+.global lbl_8066D088
+lbl_8066D088:
+	# ROM: 0x576EE8
+	.float -1.0
+	.4byte 0

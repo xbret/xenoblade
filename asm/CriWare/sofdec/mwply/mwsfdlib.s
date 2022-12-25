@@ -496,3 +496,160 @@ lbl_803A1310:
 /* 803A132C 0036A8EC  7C 08 03 A6 */	mtlr r0
 /* 803A1330 0036A8F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A1334 0036A8F4  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+
+.global lbl_8051E1E0
+lbl_8051E1E0:
+	.asciz "mwPlyStartFname"
+
+.global lbl_8051E1F0
+lbl_8051E1F0:
+	.asciz "fname"
+	.balign 4
+	.asciz "mwPlyStartFnameRange"
+	.balign 4
+	.asciz "offset_sct"
+	.balign 4
+	.asciz "range_sct"
+	.balign 4
+	.asciz "mwPlyStartMem"
+	.balign 4
+	.asciz "addr"
+	.balign 4
+	.asciz "len"
+	.asciz "mwPlyStartSj"
+	.balign 4
+	.asciz "sji"
+	.asciz "mwPlyStartAfs"
+	.balign 4
+	.asciz "patid"
+	.balign 4
+	.asciz "fid"
+
+.global lbl_8051E274
+lbl_8051E274:
+	.asciz "mwPlyStartFnameLp"
+	.balign 4
+
+.global lbl_8051E288
+lbl_8051E288:
+	.asciz "mwPlyReleaseLp"
+	.balign 4
+	.asciz "mwPlyStartAfsLp"
+	.asciz "mwPlyStartFnameRangeLp"
+	.balign 4
+
+.global lbl_8051E2C0
+lbl_8051E2C0:
+	.asciz "mwPlyEntryFname"
+
+.global lbl_8051E2D0
+lbl_8051E2D0:
+	.asciz "mwPlyStartSeamless"
+	.balign 4
+
+.global lbl_8051E2E4
+lbl_8051E2E4:
+	.asciz "mwPlyReleaseSeamless"
+	.balign 4
+
+.global lbl_8051E2FC
+lbl_8051E2FC:
+	.asciz "mwPlySetSeamlessLp"
+	.balign 4
+
+.global lbl_8051E310
+lbl_8051E310:
+	.asciz "flag"
+	.balign 4
+
+.global lbl_8051E318
+lbl_8051E318:
+	.asciz "mwPlyStop"
+	.balign 4
+	.asciz "mwPlyRequestStop"
+	.balign 4
+
+.global lbl_8051E338
+lbl_8051E338:
+	.asciz "MWSFSVM_Error"
+	.balign 4
+
+.global lbl_8051E348
+lbl_8051E348:
+	.asciz "errstr"
+	.balign 4
+
+.global lbl_8051E350
+lbl_8051E350:
+	.asciz "MWSFSVM_GotoIdleBorder"
+	.balign 4
+
+.global lbl_8051E368
+lbl_8051E368:
+	.asciz "MWSFSVR_VsyncThrdProc"
+	.balign 4
+
+.global lbl_8051E380
+lbl_8051E380:
+	.asciz "remain_work_flag"
+	.balign 4
+
+.global lbl_8051E394
+lbl_8051E394:
+	.asciz "MWSFSVR_MainThrdProc"
+	.balign 4
+
+.global lbl_8051E3AC
+lbl_8051E3AC:
+	.asciz "MWSFSVR_IdleThrdProc"
+	.balign 4
+
+.global lbl_8051E3C4
+lbl_8051E3C4:
+	.asciz "MWSFSVR_DecodeServer"
+	.balign 4
+
+.global lbl_8051E3DC
+lbl_8051E3DC:
+	.asciz "mwsfd_ExecSvrHndl"
+	.balign 4
+
+.global lbl_8051E3F0
+lbl_8051E3F0:
+	.asciz "mwSfdVsync"
+	.balign 4
+	.float 0.5
+	.4byte 0x447A0000
+
+
+.global lbl_8051E404
+lbl_8051E404:
+	# ROM: 0x51A504
+	.4byte 0x426FC28F
+
+
+.global lbl_8051E408
+lbl_8051E408:
+	.asciz "E1122611 mwPlyInitSfdFx: iprm is NULL."
+	.asciz "E2005 mwPlyInitSfdFx: can't init GSC"
+	.asciz "ERR20010421A mwPlyInitSfdFx"
+	.asciz "MWSFSVR_VsyncThrdProc"
+	.asciz "MWSFSVR_MainThrdProc"
+	.asciz "MWSFSVR_IdleThrdProc"
+	.asciz "2.080"
+	.asciz "E011081 mwPlySfdInit: Not compatible SFD Version."
+	.asciz "DATA ERROR(%08X)"
+	.asciz "SFD ERROR(%08X): 'max_width, max_height' of creation parameter is short. Increase this value."
+	.asciz "SFD ERROR(%08X): 'max_width, max_height' of creation parameter is short. This movie size is %d x %d."
+	.asciz "SFD ERROR(%08X): Read buffer is small. Increase 'max_bps' of creation parameter."
+	.asciz "SFD ERROR(%08X): Frame pool size is incorrect. Set positive integer to 'nfrm_pool_wk' of creation parameter."
+	.asciz "SFD ERROR(%08X): Number of ADXT handles exceeds its maximum number. MWPLY handle uses one ADXT handle(stereo) for MWSFD_FTYPE_SFD."
+	.asciz "SFD ERROR(%08X): mwPlyRelFrm() was called twice to the same frame ID."
+	.asciz "SFD ERROR(%08X): Decode picture error. For example, this library can't decode MPEG-2 video."
+	.asciz "SFD ERROR(%08X)"
+	.balign 4

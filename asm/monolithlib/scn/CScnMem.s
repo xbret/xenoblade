@@ -214,3 +214,163 @@ func_8048ED14:
 func_8048ED1C:
 /* 8048ED1C 004582DC  38 63 FF AC */	addi r3, r3, -84
 /* 8048ED20 004582E0  4B FF FE 9C */	b func_8048EBBC
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_805278C0
+lbl_805278C0:
+	.asciz "CScnMem"
+
+.global CScnNw4r_typestr
+CScnNw4r_typestr:
+	.asciz "CScnNw4r"
+	.balign 4
+
+.global CTTask_CScn_typestr
+CTTask_CScn_typestr:
+	.asciz "CTTask<CScn>"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnMem
+__vt__CScnMem:
+	.4byte __RTTI__CScnMem
+	.4byte 0
+	.4byte func_8048EACC
+	.4byte 0
+
+.global __vt__CScnNw4r
+__vt__CScnNw4r:
+	.4byte __RTTI__CScnNw4r
+	.4byte 0
+	.4byte func_8048EBBC
+	.4byte func_80446734
+	.4byte func_80496580
+	.4byte func_80496584
+	.4byte func_804967B0
+	.4byte func_8049683C
+	.4byte func_80043F20
+	.4byte __RTTI__CScnNw4r
+	.4byte 0xFFFFFFAC
+	.4byte func_8048ED1C
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_8048ED14
+	.4byte func_8048ED0C
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80496970
+	.4byte func_8049695C
+
+.global CScnNw4r_hierarchy
+CScnNw4r_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000054
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_CScn
+	.4byte 0
+	.4byte __RTTI__CScn
+	.4byte 0
+	.4byte 0
+
+.global CScn_hierarchy
+CScn_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000054
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_CScn
+	.4byte 0
+	.4byte 0
+
+.global CTTask_CScn_hierarchy
+CTTask_CScn_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80571F40
+lbl_80571F40:
+	.asciz "NW4R:Failed assertion idx < mNumScnObj"
+	.balign 4
+
+
+.global lbl_80571F68
+lbl_80571F68:
+	.asciz "g3d_scnobj.h"
+	.balign 4
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnMem
+__RTTI__CScnMem:
+	.4byte CScnMem_typestr
+	.4byte 0
+
+.global __RTTI__CScnNw4r
+__RTTI__CScnNw4r:
+	.4byte CScnNw4r_typestr
+	.4byte CScnNw4r_hierarchy
+
+.global __RTTI__CScn
+__RTTI__CScn:
+	.4byte CScn_typestr
+	.4byte CScn_hierarchy
+
+.global __RTTI__CTTask_CScn
+__RTTI__CTTask_CScn:
+	.4byte CTTask_CScn_typestr
+	.4byte CTTask_CScn_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global CScnMem_typestr
+CScnMem_typestr:
+	.asciz "CScnMem"
+
+.global CScn_typestr
+CScn_typestr:
+	.asciz "CScn"
+	.balign 4

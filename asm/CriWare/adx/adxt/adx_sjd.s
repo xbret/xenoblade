@@ -1548,3 +1548,13 @@ ADXSJD_TakeSnapshot:
 ADXSJD_RestoreSnapshot:
 /* 80380E68 0034A428  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380E6C 0034A42C  48 00 6B EC */	b ADXB_RestoreSnapshot
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80519750
+lbl_80519750:
+	.asciz "E03010901 ADXB_DecodeHeader: "
+	.asciz "Can not decode this file format."
+	.asciz "E07021901 adxsjd_decexec_start: "
+	.asciz "8 or 4bit WAV file can't playback continuously."

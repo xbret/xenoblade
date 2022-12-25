@@ -1457,3 +1457,31 @@ lbl_8041C75C:
 detail_ConvertLabelStringToSoundId__Q34nw4r3snd18SoundArchivePlayerFPCc:
 /* 8041C774 003E5D34  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8041C778 003E5D38  48 00 00 B4 */	b ConvertLabelStringToSoundId__Q34nw4r3snd12SoundArchiveCFPCc
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_80523880
+lbl_80523880:
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte ChannelCallbackFunc__Q44nw4r3snd6detail8SeqTrackFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl
+	.4byte 0
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056E490
+lbl_8056E490:
+	# ROM: 0x56A590
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q44nw4r3snd6detail8SeqTrackFv
+	.4byte 0

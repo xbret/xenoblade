@@ -1781,3 +1781,14 @@ update__Q310homebutton3gui7ManagerFiPC10KPADStatusffPv:
 setDrawInfo__Q310homebutton3gui11PaneManagerFPCQ36nw4hbm3lyt8DrawInfo:
 /* 80320D70 002EA330  90 83 00 24 */	stw r4, 0x24(r3)
 /* 80320D74 002EA334  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80518670
+lbl_80518670:
+	# ROM: 0x514770
+	.4byte 0
+	.4byte 0xFF0000FF
+	.float 0.5
+	.float 1.0

@@ -324,3 +324,11 @@ lbl_8038ABC0:
 /* 8038AE9C 0035445C  CB 01 00 10 */	lfd f24, 0x10(r1)
 /* 8038AEA0 00354460  38 21 00 90 */	addi r1, r1, 0x90
 /* 8038AEA4 00354464  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051ABB8
+lbl_8051ABB8:
+	# ROM: 0x516CB8
+	.4byte 0
+	.4byte 0

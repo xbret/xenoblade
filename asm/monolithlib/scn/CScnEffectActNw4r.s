@@ -823,3 +823,95 @@ func_8049C420:
 func_8049C430:
 /* 8049C430 004659F0  80 63 01 88 */	lwz r3, 0x188(r3)
 /* 8049C434 004659F4  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnEffectActNw4r_typestr
+CScnEffectActNw4r_typestr:
+	.asciz "CScnEffectActNw4r"
+	.balign 4
+
+.global IEffectAct_typestr
+IEffectAct_typestr:
+	.asciz "IEffectAct"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnEffectActNw4r
+__vt__CScnEffectActNw4r:
+	.4byte __RTTI__CScnEffectActNw4r
+	.4byte 0
+	.4byte func_8049B9AC
+	.4byte func_8049BEA4
+	.4byte func_8049BA44
+	.4byte func_8049BEAC
+	.4byte func_8049BEB4
+	.4byte func_8049BEBC
+	.4byte func_8049BED0
+	.4byte func_8049BEE4
+	.4byte func_8049BEEC
+	.4byte func_8049BF0C
+	.4byte func_8049BF34
+	.4byte func_8049BF5C
+	.4byte func_8049BF84
+	.4byte func_8049BFAC
+	.4byte func_8049C060
+	.4byte func_8049C18C
+	.4byte func_8049C244
+	.4byte func_8049C430
+	.4byte func_8049C314
+	.4byte func_8049C394
+	.4byte func_8049C39C
+	.4byte func_8049C3A4
+	.4byte func_8049C3AC
+	.4byte func_8049C420
+
+.global CScnEffectActNw4r_hierarchy
+CScnEffectActNw4r_hierarchy:
+	.4byte __RTTI__IEffectAct
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80666338
+lbl_80666338:
+	# ROM: 0x571F18
+	.4byte lbl_8066D330
+	.4byte 0
+
+.global __RTTI__CScnEffectActNw4r
+__RTTI__CScnEffectActNw4r:
+	.4byte CScnEffectActNw4r_typestr
+	.4byte CScnEffectActNw4r_hierarchy
+
+.global __RTTI__IEffectAct
+__RTTI__IEffectAct:
+	.4byte IEffectAct_typestr
+	.4byte 0
+
+
+.global lbl_80666350
+lbl_80666350:
+	# ROM: 0x571F30
+	.4byte 0x72656600
+
+
+.global lbl_80666354
+lbl_80666354:
+	# ROM: 0x571F34
+	.4byte 0x72656600
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D330
+lbl_8066D330:
+	.4byte 0x65700000
+
+
+.global lbl_8066D334
+lbl_8066D334:
+	# ROM: 0x577194
+	.float 1.0

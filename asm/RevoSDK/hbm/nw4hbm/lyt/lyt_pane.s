@@ -1159,3 +1159,23 @@ sinit_80332720:
 /* 80332724 002FBCE4  38 00 00 00 */	li r0, 0
 /* 80332728 002FBCE8  90 03 D7 C0 */	stw r0, lbl_805CD7C0@l(r3)
 /* 8033272C 002FBCEC  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_80518A98
+lbl_80518A98:
+	# ROM: 0x514B98
+	.4byte 0
+	.float 1.0
+	.4byte 0x3C8EFA35
+	.4byte 0x3B808081
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80518AB0
+lbl_80518AB0:
+	# ROM: 0x514BB0
+	.float 0.5
+	.4byte 0x3B808081

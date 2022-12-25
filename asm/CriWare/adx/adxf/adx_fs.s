@@ -3245,3 +3245,58 @@ func_8037F530:
 /* 8037F56C 00348B2C  7C 08 03 A6 */	mtlr r0
 /* 8037F570 00348B30  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037F574 00348B34  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+
+.global lbl_80518E78
+lbl_80518E78:
+	.asciz "E9040801:partition ID is range outside.(adxf_ChkPrmPt)"
+	.asciz "E9040802:'ptinfo' is NULL.(adxf_ChkPrmPt)"
+	.asciz "E20040917 : It is impossible to load AFS files in parallel."
+	.asciz "E2005121504 : NULL pointer is passed."
+	.asciz "E1110701:'tmpbuf' is null.(load partition)"
+	.asciz "E1110702:'tbsize' <= 0.(load partition)"
+	.asciz "E0042401:multi-load partition.(load partition)"
+	.asciz "E9040804:can't open file.(load partition)"
+	.asciz "E9040832:'adxf' is NULL.(adxf_GetStat)"
+	.asciz "E0041303:illigal parameter 'ptid'.(adxf_GetPtStat)"
+	.asciz "E0120401:'buf' isn't 32byte alignment.(adxf_ReadNw)"
+	.asciz "AFS"
+	.asciz "E0040701:Unacceptable format(not AFS).(adxf_GetPtStat)"
+	.asciz "E0040702:Unacceptable number of file.(adxf_GetPtStat)"
+	.asciz "E2122501:AFS file has 128MB or more of inside file.(adxf_GetPtStat)"
+	.asciz "E04041201:not enough ADXF handle (adxf_CreateAdxFs)"
+	.asciz "E02111001:can't create stm handle (adxf_CreateAdxFs)"
+	.asciz "E9081901:illigal parameter fname=null.(adxf_SetFileInfoEx)"
+	.asciz "E9040828:'adxf' is NULL.(adxf_GetFsizeSct)"
+	.asciz "E2005121501 : NULL pointer is passed."
+	.asciz "E2005121502 : NULL pointer is passed."
+	.asciz "E2005121503 : NULL pointer is passed."
+	.asciz "E9040811:'adxf' is NULL.(adxf_ReadSj32)"
+	.asciz "E9040812:'nsct'is negative.(adxf_ReadSj32)"
+	.asciz "E9040813:'sj'is NULL.(adxf_ReadSj32)"
+	.asciz "E9040816:'adxf' is NULL.(adxf_ReadNw32)"
+	.asciz "E9040817:'nsct' is negative.(adxf_ReadNw32)"
+	.asciz "E2006080701:Buffer size must be less than 2GB."
+	.asciz "E9040818:'buf' is NULL.(adxf_ReadNw32)"
+	.asciz "E9040821:'sj' must be NULL.(adxf_ReadNw32)"
+	.asciz "E9040822:'adxf' is NULL.(adxf_Stop)"
+	.asciz "E9040823:'adxf->stm' is NULL.(adxf_Stop)"
+	.asciz "E2092301:'adxf' is NULL.(adxf_StopNw)"
+	.asciz "E2092302:'adxf->stm' is NULL.(adxf_StopNw)"
+	.asciz "E9040825:'adxf' is NULL.(adxf_Seek)"
+	.asciz "E9040826:'type' is illigal.(adxf_Seek)"
+	.asciz "E9040827:'adxf' is NULL.(ADXF_Tell)"
+	.asciz "E2005101910:'adxf' is NULL.(adxf_GetFsizeByte)"
+	.asciz "E2005101911:'adxf' is NULL.(adxf_GetFsizeByte64)"
+	.asciz "E9040830:'adxf' is NULL.(adxf_GetNumReqSct)"
+	.asciz "E9040831:'adxf' is NULL.(adxf_GetNumReadSct)"
+	.asciz "E9040828:Partition ID is out of range."
+	.asciz "E2008110501:Loading of partition is not completed."
+	.asciz "E9040828:File ID is out of range."
+	.asciz "E0041201:state is reading(ADXF_SetReqRdSct)"
+	.asciz "E2005072901: NULL pointer is passed."
+	.balign 4
+	.4byte 0

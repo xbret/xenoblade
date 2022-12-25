@@ -65,3 +65,49 @@ lbl_80482508:
 /* 8048251C 0044BADC  7C 08 03 A6 */	mtlr r0
 /* 80482520 0044BAE0  38 21 00 40 */	addi r1, r1, 0x40
 /* 80482524 0044BAE4  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnItemLightNw4r_typestr
+CScnItemLightNw4r_typestr:
+	.asciz "CScnItemLightNw4r"
+	.balign 4
+
+
+.global lbl_805277F4
+lbl_805277F4:
+	.asciz "Global(%d)"
+	.balign 4
+	
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnItemLightNw4r
+__vt__CScnItemLightNw4r:
+	.4byte __RTTI__CScnItemLightNw4r
+	.4byte 0
+	.4byte func_804823A8
+	.4byte func_80482388
+	.4byte func_80482048
+	.4byte func_80482400
+	.4byte func_804823A0
+	.4byte func_80482040
+
+.global CScnItemLightNw4r_hierarchy
+CScnItemLightNw4r_hierarchy:
+	.4byte __RTTI__CScnItem
+	.4byte 0
+	.4byte __RTTI__CScnItemLight
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnItemLightNw4r
+__RTTI__CScnItemLightNw4r:
+	.4byte CScnItemLightNw4r_typestr
+	.4byte CScnItemLightNw4r_hierarchy

@@ -1202,15 +1202,3 @@ lbl_80665E20:
 	# ROM: 0x571A00
 	.4byte 0x12345678
 	.4byte 0
-
-
-.global lbl_80665E28
-lbl_80665E28:
-	# ROM: 0x571A08
-	.4byte lbl_8066C9A8
-
-
-.global lbl_80665E2C
-lbl_80665E2C:
-	# ROM: 0x571A0C
-	.4byte lbl_8066C9B0

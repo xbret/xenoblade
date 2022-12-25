@@ -203,3 +203,10 @@ sinit_8042129C:
 /* 804212D8 003EA898  7C 08 03 A6 */	mtlr r0
 /* 804212DC 003EA89C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804212E0 003EA8A0  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056E510
+lbl_8056E510:
+	.asciz "<< NW4R    - SND \tfinal   build: Nov 20 2008 03:40:00 (0x4199_60831) >>"

@@ -147,3 +147,20 @@ lbl_80417100:
 lbl_80417148:
 /* 80417148 003E0708  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041714C 003E070C  4E 80 00 20 */	blr
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80523858
+lbl_80523858:
+	# ROM: 0x51F958
+	.4byte 0x00060C13
+	.4byte 0x191F252B
+	.4byte 0x31363C41
+	.4byte 0x474C5155
+	.4byte 0x5A5E6266
+	.4byte 0x6A6D7073
+	.4byte 0x75787A7B
+	.4byte 0x7D7E7E7F
+	.4byte 0x7F000000
+	.4byte 0

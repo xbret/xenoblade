@@ -2544,3 +2544,66 @@ sinit_804053D0:
 /* 804053D0 003CE990  38 0D BB D0 */	addi r0, r13, lbl_80667D50@sda21
 /* 804053D4 003CE994  90 0D BB F0 */	stw r0, lbl_80667D70@sda21(r13)
 /* 804053D8 003CE998  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+
+.global lbl_8056D398
+lbl_8056D398:
+	# ROM: 0x569498
+	.4byte 0x00000100
+	.4byte 0x00010101
+	.4byte 0x00010100
+	.4byte 0x00000101
+	.4byte 0x00010001
+	.4byte 0x00010101
+	.4byte 0x00000100
+	.4byte 0x00010001
+	.4byte 0x00000101
+	.4byte 0x01000100
+	.4byte 0x01010001
+	.4byte 0x01000000
+	.4byte 0x00010100
+	.4byte 0x01010000
+	.4byte 0x00010100
+
+
+.global lbl_8056D3D4
+lbl_8056D3D4:
+	# ROM: 0x5694D4
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r3lyt6WindowFv
+	.4byte GetRuntimeTypeInfo__Q34nw4r3lyt6WindowCFv
+	.4byte CalculateMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
+	.4byte Draw__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
+	.4byte DrawSelf__Q34nw4r3lyt6WindowFRCQ34nw4r3lyt8DrawInfo
+	.4byte Animate__Q34nw4r3lyt4PaneFUl
+	.4byte AnimateSelf__Q34nw4r3lyt6WindowFUl
+	.4byte GetVtxColor__Q34nw4r3lyt6WindowCFUl
+	.4byte SetVtxColor__Q34nw4r3lyt6WindowFUlQ34nw4r2ut5Color
+	.4byte GetColorElement__Q34nw4r3lyt4PaneCFUl
+	.4byte SetColorElement__Q34nw4r3lyt4PaneFUlUc
+	.4byte GetVtxColorElement__Q34nw4r3lyt6WindowCFUl
+	.4byte SetVtxColorElement__Q34nw4r3lyt6WindowFUlUc
+	.4byte FindPaneByName__Q34nw4r3lyt4PaneFPCcb
+	.4byte FindMaterialByName__Q34nw4r3lyt6WindowFPCcb
+	.4byte BindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
+	.4byte UnbindAnimation__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformb
+	.4byte UnbindAllAnimation__Q34nw4r3lyt4PaneFb
+	.4byte UnbindAnimationSelf__Q34nw4r3lyt6WindowFPQ34nw4r3lyt13AnimTransform
+	.4byte FindAnimationLinkSelf__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransform
+	.4byte FindAnimationLinkSelf__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResource
+	.4byte SetAnimationEnable__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb
+	.4byte SetAnimationEnable__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResourcebb
+	.4byte GetMaterialNum__Q34nw4r3lyt6WindowCFv
+	.4byte GetMaterial__Q34nw4r3lyt4PaneCFv
+	.4byte GetMaterial__Q34nw4r3lyt6WindowCFUl
+	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
+	.4byte GetContentMaterial__Q34nw4r3lyt6WindowCFv
+	.4byte GetFrameMaterial__Q34nw4r3lyt6WindowCFUl
+	.4byte DrawContent__Q34nw4r3lyt6WindowFRCQ34nw4r4math4VEC2RCQ34nw4r3lyt15WindowFrameSizeUc
+	.4byte DrawFrame__Q34nw4r3lyt6WindowFRCQ34nw4r4math4VEC2RCQ44nw4r3lyt6Window5FrameRCQ34nw4r3lyt15WindowFrameSizeUc
+	.4byte DrawFrame4__Q34nw4r3lyt6WindowFRCQ34nw4r4math4VEC2PCQ44nw4r3lyt6Window5FrameRCQ34nw4r3lyt15WindowFrameSizeUc
+	.4byte DrawFrame8__Q34nw4r3lyt6WindowFRCQ34nw4r4math4VEC2PCQ44nw4r3lyt6Window5FrameRCQ34nw4r3lyt15WindowFrameSizeUc

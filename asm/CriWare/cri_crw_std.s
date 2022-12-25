@@ -299,3 +299,12 @@ lbl_8039B7E4:
 /* 8039B7EC 00364DAC  7C 08 03 A6 */	mtlr r0
 /* 8039B7F0 00364DB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039B7F4 00364DB4  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051CD90
+lbl_8051CD90:
+	.asciz "\nCRI CRW:STD/WII Ver.0.83 Build:Nov 13 2008 10:53:02\n"
+	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
+	.balign 4
+	.4byte 0

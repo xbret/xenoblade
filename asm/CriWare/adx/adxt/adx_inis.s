@@ -198,3 +198,21 @@ lbl_8037F904:
 /* 8037F914 00348ED4  7C 08 03 A6 */	mtlr r0
 /* 8037F918 00348ED8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037F91C 00348EDC  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global adxt_build
+adxt_build:
+	.asciz "\nADXT/WII Ver.10.67 Build:Nov 13 2008 10:52:50\n"
+	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
+	.4byte 0
+
+
+.global lbl_805196A8
+lbl_805196A8:
+	.asciz "adxt_exec_tsvr"
+	.asciz "adxt_exec_fssvr"
+	.asciz "adxt_exec_main_thrd"
+	.asciz "E2006100201: ADXT_Finish function has been executed before initialization."
+	.asciz "E2005041230: ADXT handle is still active."

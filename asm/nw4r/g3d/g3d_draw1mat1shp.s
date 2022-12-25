@@ -945,3 +945,12 @@ lbl_803EC384:
 /* 803EC3D8 003B5998  7C 08 03 A6 */	mtlr r0
 /* 803EC3DC 003B599C  38 21 02 60 */	addi r1, r1, 0x260
 /* 803EC3E0 003B59A0  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520FA8
+lbl_80520FA8:
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000001
+	.4byte 0x00000003

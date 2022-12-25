@@ -1537,3 +1537,138 @@ func_8044F5B0:
 /* 8044F5B8 00418B78  80 64 00 04 */	lwz r3, 4(r4)
 /* 8044F5BC 00418B7C  90 04 00 04 */	stw r0, 4(r4)
 /* 8044F5C0 00418B80  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CDeviceFile_typestr
+CDeviceFile_typestr:
+	.asciz "CDeviceFile"
+
+.global reslist_CFileHandle_typestr
+reslist_CFileHandle_typestr:
+	.asciz "reslist<CFileHandle *>"
+	.balign 4
+
+.global _reslist_base_CFileHandle_typestr
+_reslist_base_CFileHandle_typestr:
+	.asciz "_reslist_base<CFileHandle *>"
+	.balign 4
+
+
+.global lbl_805264FC
+lbl_805264FC:
+	.asciz "USBKEY"
+	.asciz "CDeviceFileJobReadDvd"
+	.asciz "/"
+	.asciz "CDeviceFileJobValidPathDvd"
+	.asciz "CDeviceFileJobValidPathCri"
+	.asciz "CDeviceFileJobValidFileDvd"
+	.asciz "CDeviceFileJobValidFileCri"
+	.asciz "CDeviceFileDvd"
+	.asciz "CDeviceFileCri"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CDeviceFile
+__vt__CDeviceFile:
+	.4byte __RTTI__CDeviceFile
+	.4byte 0
+	.4byte func_8044E42C
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80438A50
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_8044F424
+	.4byte func_8044F4E8
+	.4byte func_80039E30
+
+.global CDeviceFile_hierarchy
+CDeviceFile_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte __RTTI__CDeviceBase
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__reslist_CFileHandle
+__vt__reslist_CFileHandle:
+	.4byte __RTTI__reslist_CFileHandle
+	.4byte 0
+	.4byte func_8044E374
+
+.global reslist_CFileHandle_hierarchy
+reslist_CFileHandle_hierarchy:
+	.4byte __RTTI___reslist_base_CFileHandle
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___reslist_base_CFileHandle
+__vt___reslist_base_CFileHandle:
+	.4byte __RTTI___reslist_base_CFileHandle
+	.4byte 0
+	.4byte func_8044E2C0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665FD0
+lbl_80665FD0:
+	# ROM: 0x571BB0
+	.4byte 0x01000000
+	.4byte 0
+
+.global __RTTI__CDeviceFile
+__RTTI__CDeviceFile:
+	.4byte CDeviceFile_typestr
+	.4byte CDeviceFile_hierarchy
+
+.global __RTTI__reslist_CFileHandle
+__RTTI__reslist_CFileHandle:
+	.4byte reslist_CFileHandle_typestr
+	.4byte reslist_CFileHandle_hierarchy
+
+.global __RTTI___reslist_base_CFileHandle
+__RTTI___reslist_base_CFileHandle:
+	.4byte _reslist_base_CFileHandle_typestr
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667F40
+lbl_80667F40:
+	.skip 0x8

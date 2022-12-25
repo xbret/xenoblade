@@ -218,3 +218,24 @@ lbl_803B9D1C:
 /* 803B9DE0 003833A0  CB A1 02 08 */	lfd f29, 0x208(r1)
 /* 803B9DE4 003833A4  38 21 02 20 */	addi r1, r1, 0x220
 /* 803B9DE8 003833A8  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051F900
+lbl_8051F900:
+	# ROM: 0x51BA00
+	.4byte 0x3FD6A09E
+	.4byte 0x667F3BCD
+	.4byte 0x3FE00000
+	.4byte 0
+	.4byte 0x3FD921FB
+	.4byte 0x54442D18
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8051F920
+lbl_8051F920:
+	# ROM: 0x51BA20
+	.4byte 0
+	.4byte 0

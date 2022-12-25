@@ -2932,3 +2932,122 @@ lbl_803CB840:
 /* 803CB84C 00394E0C  7C 08 03 A6 */	mtlr r0
 /* 803CB850 00394E10  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CB854 00394E14  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_805203F0
+lbl_805203F0:
+	# ROM: 0x51C4F0
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0xFFFFFFFD
+	.4byte 0x00000001
+	.4byte 0xFFFFFFFC
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x00000004
+	.4byte 0x00001000
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x0000003C
+	.4byte 0x00000001
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0xFFFF8AD0
+	.4byte 0xFFFFC950
+	.4byte 0x00001F40
+	.4byte 0x0000EA24
+	.4byte 0x00000FA0
+	.4byte 0x00000FA0
+	.4byte 0x00000029
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000005
+	.4byte 0
+	.4byte 0x00000005
+	.4byte 0xFFFFFFFF
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x7FFFFFFF
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x0000000A
+	.4byte 0x0000412B
+	.4byte 0x00030D40
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x000104AC
+	.4byte 0x00020958
+	.4byte 0x0007D000
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x5A5A5A5A
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80520584
+lbl_80520584:
+	# ROM: 0x51C684
+	.4byte 0
+
+
+.global lbl_80520588
+lbl_80520588:
+	.asciz "%p, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %d, %p, %ld"
+	.4byte 0

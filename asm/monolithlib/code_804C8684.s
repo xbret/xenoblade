@@ -53,3 +53,52 @@ sinit_804C86C0:
 /* 804C870C 00491CCC  D0 03 00 04 */	stfs f0, 4(r3)
 /* 804C8710 00491CD0  D0 63 00 08 */	stfs f3, 8(r3)
 /* 804C8714 00491CD4  4E 80 00 20 */	blr 
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D838
+lbl_8066D838:
+	# ROM: 0x577698
+	.float 1.0
+
+
+.global lbl_8066D83C
+lbl_8066D83C:
+	# ROM: 0x57769C
+	.4byte 0
+
+
+.global lbl_8066D840
+lbl_8066D840:
+	# ROM: 0x5776A0
+	.4byte 0x3F4CCCCD
+
+
+.global lbl_8066D844
+lbl_8066D844:
+	# ROM: 0x5776A4
+	.4byte 0x40A00000
+
+
+.global lbl_8066D848
+lbl_8066D848:
+	# ROM: 0x5776A8
+	.4byte 0x43C58000
+	.4byte 0
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_806624A8
+lbl_806624A8:
+	.skip 0x20
+.global lbl_806624C8
+lbl_806624C8:
+	.skip 0x10
+	
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80668278
+lbl_80668278:
+	.skip 0x8

@@ -1543,3 +1543,14 @@ ADXSTM_IsOpenedFile:
 /* 80382380 0034B940  88 63 00 4D */	lbz r3, 0x4d(r3)
 /* 80382384 0034B944  7C 63 07 74 */	extsb r3, r3
 /* 80382388 0034B948  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_805197E0
+lbl_805197E0:
+	.asciz "E02110501 adxstmf_stat_exec: can't open "
+	.asciz "E05072801 adxstmf_stat_exec: can't open "
+	.balign 4
+	.4byte 0

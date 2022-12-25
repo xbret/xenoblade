@@ -170,3 +170,121 @@ lbl_803968B8:
 /* 803968C0 0035FE80  7C 08 03 A6 */	mtlr r0
 /* 803968C4 0035FE84  38 21 00 20 */	addi r1, r1, 0x20
 /* 803968C8 0035FE88  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global sj_val_to_hexstr_tbl
+sj_val_to_hexstr_tbl:
+	# ROM: 0x565468
+	.4byte 0 #0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0 #10
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0 #20
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0 #30
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0 #40
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0 #50
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0 #60
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0 #70
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0 #80
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0 #90
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0 #a0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0 #b0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0 #c0
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0x00000003
+	.4byte 0x00000004
+	.4byte 0x00000005
+	.4byte 0x00000006
+	.4byte 0x00000007
+	.4byte 0x00000008
+	.4byte 0x00000009
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000000A
+	.4byte 0x0000000B
+	.4byte 0x0000000C
+	.4byte 0x0000000D
+	.4byte 0x0000000E
+	.4byte 0x0000000F
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000000A
+	.4byte 0x0000000B
+	.4byte 0x0000000C
+	.4byte 0x0000000D
+	.4byte 0x0000000E
+	.4byte 0x0000000F
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0

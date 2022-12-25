@@ -1608,3 +1608,20 @@ lbl_80409C28:
 /* 80409C3C 003D31FC  7C 08 03 A6 */	mtlr r0
 /* 80409C40 003D3200  38 21 00 30 */	addi r1, r1, 0x30
 /* 80409C44 003D3204  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056D558
+lbl_8056D558:
+	# ROM: 0x569658
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r3lyt18AnimTransformBasicFv
+	.4byte SetResource__Q34nw4r3lyt18AnimTransformBasicFPCQ44nw4r3lyt3res14AnimationBlockPQ34nw4r3lyt16ResourceAccessor
+	.4byte SetResource__Q34nw4r3lyt18AnimTransformBasicFPCQ44nw4r3lyt3res14AnimationBlockPQ34nw4r3lyt16ResourceAccessorUs
+	.4byte Bind__Q34nw4r3lyt18AnimTransformBasicFPQ34nw4r3lyt4Panebb
+	.4byte Bind__Q34nw4r3lyt18AnimTransformBasicFPQ34nw4r3lyt8Materialb
+	.4byte Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt4Pane
+	.4byte Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt8Material
+	.4byte 0

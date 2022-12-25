@@ -3249,3 +3249,30 @@ lbl_80428C3C:
 .global InvalidateData__Q44nw4r3snd6detail5VoiceFPCvPCv
 InvalidateData__Q44nw4r3snd6detail5VoiceFPCvPCv:
 /* 80428C54 003F2214  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8056E608
+lbl_8056E608:
+	# ROM: 0x56A708
+	.4byte lbl_80428170
+	.4byte lbl_80428178
+	.4byte lbl_80428188
+	.4byte lbl_8042819C
+	.4byte lbl_804281A8
+	.4byte lbl_804281B8
+	.4byte lbl_804281CC
+	.4byte lbl_804281D8
+	.4byte lbl_804281EC
+
+
+.global lbl_8056E62C
+lbl_8056E62C:
+	# ROM: 0x56A72C
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q44nw4r3snd6detail5VoiceFv
+	.4byte InvalidateData__Q44nw4r3snd6detail5VoiceFPCvPCv
+	.4byte InvalidateWaveData__Q44nw4r3snd6detail5VoiceFPCvPCv

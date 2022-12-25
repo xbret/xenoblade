@@ -809,3 +809,12 @@ ADXB_ExecOneAiff:
 /* 80386968 0034FF28  4B FF FC 74 */	b ADXB_ExecOneAiff8
 lbl_8038696C:
 /* 8038696C 0034FF2C  4B FF F9 50 */	b ADXB_ExecOneAiff16
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051A1B8
+lbl_8051A1B8:
+	.asciz "FORM"
+	.asciz "AIFF"
+	.2byte 0
+	.4byte 0

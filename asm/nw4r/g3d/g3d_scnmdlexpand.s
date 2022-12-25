@@ -704,3 +704,36 @@ GetTypeObj__Q34nw4r3g3d12ScnMdlExpandCFv:
 /* 803FC920 003C5EE0  3C 60 80 52 */	lis r3, lbl_805210E8@ha
 /* 803FC924 003C5EE4  38 63 10 E8 */	addi r3, r3, lbl_805210E8@l
 /* 803FC928 003C5EE8  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_805210E8
+lbl_805210E8:
+	# ROM: 0x51D1E8
+	.4byte 0x0000000D
+	.asciz "ScnMdlExpand"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056D0C8
+lbl_8056D0C8:
+	# ROM: 0x5691C8
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d12ScnMdlExpandCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d12ScnMdlExpandFUlUlPv
+	.4byte __dt__Q34nw4r3g3d12ScnMdlExpandFv
+	.4byte GetTypeObj__Q34nw4r3g3d12ScnMdlExpandCFv
+	.4byte GetTypeName__Q34nw4r3g3d12ScnMdlExpandCFv
+	.4byte ForEach__Q34nw4r3g3d8ScnGroupFPFPQ34nw4r3g3d6ScnObjPv_Q44nw4r3g3d6ScnObj13ForEachResultPvb
+	.4byte SetScnObjOption__Q34nw4r3g3d6ScnObjFUlUl
+	.4byte GetScnObjOption__Q34nw4r3g3d6ScnObjCFUlPUl
+	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
+	.4byte CalcWorldMtx__Q34nw4r3g3d6ScnObjFPCQ34nw4r4math5MTX34PUl
+	.4byte func_803FC21C
+	.4byte Remove__Q34nw4r3g3d12ScnMdlExpandFUl
+	.4byte Remove__Q34nw4r3g3d12ScnMdlExpandFPQ34nw4r3g3d6ScnObj

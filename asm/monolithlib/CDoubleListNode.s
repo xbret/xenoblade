@@ -118,3 +118,12 @@ lbl_804466CC:
 lbl_804466D8:
 /* 804466D8 0040FC98  7C 83 23 78 */	mr r3, r4
 /* 804466DC 0040FC9C  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CDoubleListNode
+__vt__CDoubleListNode:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __dt__15CDoubleListNodeFv
+	.4byte Clear__15CDoubleListNodeFv

@@ -3011,3 +3011,152 @@ sinit_804B598C:
 /* 804B59BC 0047EF7C  7C 08 03 A6 */	mtlr r0
 /* 804B59C0 0047EF80  38 21 00 10 */	addi r1, r1, 0x10
 /* 804B59C4 0047EF84  4E 80 00 20 */	blr
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CTaskColiManager_typestr
+CTaskColiManager_typestr:
+	.asciz "CTaskColiManager"
+	.balign 4
+
+.global CTTask_CTaskColiManager_typestr
+CTTask_CTaskColiManager_typestr:
+	.asciz "CTTask<CTaskColiManager>"
+	.balign 4
+
+.global CColiManCall_typestr
+CColiManCall_typestr:
+	.asciz "CColiManCall"
+	.balign 4
+
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CTaskColiManager
+__vt__CTaskColiManager:
+	.4byte __RTTI__CTaskColiManager
+	.4byte 0
+	.4byte func_804B4B78
+	.4byte func_80446734
+	.4byte func_804B4D50
+	.4byte func_804B4D54
+	.4byte func_804B4D58
+	.4byte func_804B4E0C
+	.4byte func_80043F20
+
+.global CTaskColiManager_hierarchy
+CTaskColiManager_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_CTaskColiManager
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_CTaskColiManager
+__vt__CTTask_CTaskColiManager:
+	.4byte __RTTI__CTTask_CTaskColiManager
+	.4byte 0
+	.4byte func_804B4B20
+	.4byte func_80446734
+	.4byte 0
+	.4byte 0
+	.4byte func_804B58FC
+	.4byte func_804B5944
+	.4byte func_80043F20
+
+.global CTTask_CTaskColiManager_hierarchy
+CTTask_CTaskColiManager_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CColiManCall
+__vt__CColiManCall:
+	.4byte __RTTI__CColiManCall
+	.4byte 0
+	.4byte func_804B59C8
+	
+.global CColiManCall_hierarchy
+CColiManCall_hierarchy:
+	.4byte __RTTI__CColiProc
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806663C8
+lbl_806663C8:
+	# ROM: 0x571FA8
+	.4byte 0x72656600
+	.4byte 0
+
+.global __RTTI__CTaskColiManager
+__RTTI__CTaskColiManager:
+	.4byte CTaskColiManager_typestr
+	.4byte CTaskColiManager_hierarchy
+
+.global __RTTI__CTTask_CTaskColiManager
+__RTTI__CTTask_CTaskColiManager:
+	.4byte CTTask_CTaskColiManager_typestr
+	.4byte CTTask_CTaskColiManager_hierarchy
+
+.global __RTTI__CColiManCall
+__RTTI__CColiManCall:
+	.4byte CColiManCall_typestr
+	.4byte CColiManCall_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D660
+lbl_8066D660:
+	# ROM: 0x5774C0
+	.4byte 0
+
+
+.global lbl_8066D664
+lbl_8066D664:
+	# ROM: 0x5774C4
+	.float 1.0
+
+
+.global lbl_8066D668
+lbl_8066D668:
+	# ROM: 0x5774C8
+	.float 0.5
+	.4byte 0
+
+
+.global lbl_8066D670
+lbl_8066D670:
+	# ROM: 0x5774D0
+	.4byte 0
+
+
+.global lbl_8066D674
+lbl_8066D674:
+	# ROM: 0x5774D4
+	.float 1.0
+
+
+.global lbl_8066D678
+lbl_8066D678:
+	# ROM: 0x5774D8
+	.4byte 0x49742400
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8065F9F8
+lbl_8065F9F8:
+	.skip 0x68

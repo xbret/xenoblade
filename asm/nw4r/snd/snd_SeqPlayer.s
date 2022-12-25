@@ -1527,3 +1527,36 @@ _180___dt__Q44nw4r3snd6detail9SeqPlayerFv:
 _192___dt__Q44nw4r3snd6detail9SeqPlayerFv:
 /* 8041ABB4 003E4174  38 63 FF 20 */	addi r3, r3, -224
 /* 8041ABB8 003E4178  4B FF EC E4 */	b __dt__Q44nw4r3snd6detail9SeqPlayerFv
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056E3D8
+lbl_8056E3D8:
+	# ROM: 0x56A4D8
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte Start__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte Stop__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte Pause__Q44nw4r3snd6detail9SeqPlayerFb
+	.4byte IsActive__Q44nw4r3snd6detail9SeqPlayerCFv
+	.4byte IsStarted__Q44nw4r3snd6detail9SeqPlayerCFv
+	.4byte IsPause__Q44nw4r3snd6detail9SeqPlayerCFv
+	.4byte 0
+	.4byte 0
+	.4byte _180___dt__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte _208_InvalidateData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
+	.4byte _208_InvalidateWaveData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
+	.4byte 0
+	.4byte 0
+	.4byte _192___dt__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte _220_OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte OnUpdateVoiceSoundThread__Q54nw4r3snd6detail11SoundThread14PlayerCallbackFv
+	.4byte _220_OnShutdownSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte InvalidateData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
+	.4byte InvalidateWaveData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
+	.4byte func_8041ABA8
+	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
+	.4byte 0

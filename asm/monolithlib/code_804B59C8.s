@@ -5798,3 +5798,357 @@ sinit_804BADB4:
 /* 804BAE04 004843C4  7C 08 03 A6 */	mtlr r0
 /* 804BAE08 004843C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804BAE0C 004843CC  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_80572D50
+lbl_80572D50:
+	# ROM: 0x56EE50
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B5B34
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B61F8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6634
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B5B38
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6638
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B61FC
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7A00
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7944
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7AC8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6638
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6A3C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte lbl_804B6974
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte lbl_804B6974
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B5BB0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6364
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6638
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6728
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7A00
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7944
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6638
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6728
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6A3C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte lbl_804B6974
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte lbl_804B6974
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B5C58
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6418
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6638
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6728
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7A00
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7944
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6638
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6728
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6A3C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte lbl_804B6974
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte lbl_804B6974
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B5CEC
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B64CC
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7044
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6638
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B684C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7A00
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7944
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B5BB0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6638
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B684C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6D30
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6C48
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6C48
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B5CEC
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B64CC
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7074
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B684C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7A00
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7944
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B5BB0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B684C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6D30
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6C48
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6C48
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B5DE8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B66B0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B62B0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7A00
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7944
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B5DE8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B66B0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6A3C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte lbl_804B6974
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte lbl_804B6974
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B5E68
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6580
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7A00
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7944
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6954
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6634
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6F58
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6954
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7A00
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7944
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B5BB0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B6C48
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B684C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_804B7044
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806663E8
+lbl_806663E8:
+	# ROM: 0x571FC8
+	.4byte lbl_8065FA60
+
+
+.global lbl_806663EC
+lbl_806663EC:
+	# ROM: 0x571FCC
+	.4byte lbl_8065FA60
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D680
+lbl_8066D680:
+	# ROM: 0x5774E0
+	.4byte 0
+
+
+.global lbl_8066D684
+lbl_8066D684:
+	# ROM: 0x5774E4
+	.float 1.0
+
+
+.global lbl_8066D688
+lbl_8066D688:
+	# ROM: 0x5774E8
+	.float -1.0
+
+
+.global lbl_8066D68C
+lbl_8066D68C:
+	# ROM: 0x5774EC
+	.4byte 0xB8D1B717
+
+
+.global lbl_8066D690
+lbl_8066D690:
+	# ROM: 0x5774F0
+	.4byte 0xB727C5AC
+
+
+.global lbl_8066D694
+lbl_8066D694:
+	# ROM: 0x5774F4
+	.4byte 0x4CBEBC20
+
+
+.global lbl_8066D698
+lbl_8066D698:
+	# ROM: 0x5774F8
+	.4byte 0xC61C4000
+
+
+.global lbl_8066D69C
+lbl_8066D69C:
+	# ROM: 0x5774FC
+	.4byte 0x3CC90FDB
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+
+.global lbl_8065FA60
+lbl_8065FA60:
+	.skip 0x2000
+.global lbl_80661A60
+lbl_80661A60:
+	.skip 0x28
+.global lbl_80661A88
+lbl_80661A88:
+	.skip 0x138
+.global lbl_80661BC0
+lbl_80661BC0:
+	.skip 0x20
+.global lbl_80661BE0
+lbl_80661BE0:
+	.skip 0xC
+.global lbl_80661BEC
+lbl_80661BEC:
+	.skip 0xC4
+.global lbl_80661CB0
+lbl_80661CB0:
+	.skip 0xC
+.global lbl_80661CBC
+lbl_80661CBC:
+	.skip 0x1C
+.global lbl_80661CD8
+lbl_80661CD8:
+	.skip 0x10
+.global lbl_80661CE8
+lbl_80661CE8:
+	.skip 0x480

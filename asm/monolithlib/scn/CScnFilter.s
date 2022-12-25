@@ -100,3 +100,29 @@ lbl_8049C938:
 /* 8049C93C 00465EFC  7C 08 03 A6 */	mtlr r0
 /* 8049C940 00465F00  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049C944 00465F04  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnFilter
+__vt__CScnFilter:
+	.4byte __RTTI__CScnFilter
+	.4byte 0
+	.4byte func_8049C828
+	.4byte func_8049C868
+	.4byte 0
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D350
+lbl_8066D350:
+	# ROM: 0x5771B0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066D358
+lbl_8066D358:
+	# ROM: 0x5771B8
+	.4byte 0x43300000
+	.4byte 0

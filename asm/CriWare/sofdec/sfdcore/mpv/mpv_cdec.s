@@ -437,3 +437,11 @@ lbl_803A45F4:
 /* 803A4600 0036DBC0  7C 08 03 A6 */	mtlr r0
 /* 803A4604 0036DBC4  38 21 00 40 */	addi r1, r1, 0x40
 /* 803A4608 0036DBC8  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051F5F8
+lbl_8051F5F8:
+	# ROM: 0x51B6F8
+	.4byte mpvcdec_IntraBlocksInt1
+	.4byte mpvcdec_NintraBlocksInt1

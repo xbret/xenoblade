@@ -2468,3 +2468,26 @@ sinit_80336620:
 /* 80336628 002FFBE8  38 84 D7 C0 */	addi r4, r4, lbl_805CD7C0@l
 /* 8033662C 002FFBEC  90 83 D7 D8 */	stw r4, lbl_805CD7D8@l(r3)
 /* 80336630 002FFBF0  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_80518AD8
+lbl_80518AD8:
+	# ROM: 0x514BD8
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80518AE0
+lbl_80518AE0:
+	# ROM: 0x514BE0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80518AE8
+lbl_80518AE8:
+	# ROM: 0x514BE8
+	.4byte 0x43300000
+	.4byte 0x80000000

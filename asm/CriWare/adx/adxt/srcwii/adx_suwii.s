@@ -61,3 +61,22 @@ lbl_8039B344:
 /* 8039B354 00364914  7C 08 03 A6 */	mtlr r0
 /* 8039B358 00364918  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039B35C 0036491C  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051CD48
+lbl_8051CD48:
+	.asciz "\nADXWIISDK Ver.30Jul2008Patch02 Build:Nov 13 2008 10:53:01\n"
+
+
+.global lbl_8051CD84
+lbl_8051CD84:
+	# ROM: 0x518E84
+	.4byte lbl_8051CD48
+
+
+.global lbl_8051CD88
+lbl_8051CD88:
+	# ROM: 0x518E88
+	.4byte 0x4D465300
+	.4byte 0x47434400

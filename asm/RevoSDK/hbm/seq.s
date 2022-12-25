@@ -655,3 +655,20 @@ func_803429A0:
 func_803429B0:
 /* 803429B0 0030BF70  38 63 00 14 */	addi r3, r3, 0x14
 /* 803429B4 0030BF74  4B FF E4 8C */	b func_80340E40
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80518B90
+lbl_80518B90:
+	# ROM: 0x514C90
+	.4byte 0x49742400
+	.4byte 0x47800000
+	.4byte 0x42C00000
+	.4byte 0x46FA0000
+	.4byte 0x43300000
+	.4byte 0
+	.4byte 0x43300000
+	.4byte 0x80000000
+	.4byte 0x467A0000
+	.4byte 0

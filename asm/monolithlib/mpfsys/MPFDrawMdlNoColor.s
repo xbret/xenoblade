@@ -15,3 +15,12 @@ func_80479844:
 lbl_80479864:
 /* 80479864 00442E24  38 6D BF EC */	addi r3, r13, lbl_8066816C@sda21
 /* 80479868 00442E28  4E 80 00 20 */	blr 
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80668168
+lbl_80668168:
+	.skip 0x4
+.global lbl_8066816C
+lbl_8066816C:
+	.skip 0x4

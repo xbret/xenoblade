@@ -176,3 +176,31 @@ __HBMSYNUpdateSrc:
 /* 80341A80 0030B040  7C 08 03 A6 */	mtlr r0
 /* 80341A84 0030B044  38 21 00 10 */	addi r1, r1, 0x10
 /* 80341A88 0030B048  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_80518B78
+lbl_80518B78:
+	# ROM: 0x514C78
+	.float 1.0
+
+
+.global lbl_80518B7C
+lbl_80518B7C:
+	# ROM: 0x514C7C
+	.4byte 0x46FA0000
+
+
+.global lbl_80518B80
+lbl_80518B80:
+	# ROM: 0x514C80
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80518B88
+lbl_80518B88:
+	# ROM: 0x514C88
+	.4byte 0x47800000
+	.4byte 0

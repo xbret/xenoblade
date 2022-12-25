@@ -268,3 +268,35 @@ lbl_8039BBD4:
 /* 8039BBDC 0036519C  BA 81 00 10 */	lmw r20, 0x10(r1)
 /* 8039BBE0 003651A0  38 21 00 40 */	addi r1, r1, 0x40
 /* 8039BBE4 003651A4  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051CDF0
+lbl_8051CDF0:
+	# ROM: 0x518EF0
+	.4byte 0x3F950A85
+	.float 0.5
+	.4byte 0xBEC880BB
+	.4byte 0x40011A55
+	.4byte 0x3FCC4A9A
+	.4byte 0xBF50147A
+	.4byte 0x43300000
+	.4byte 0x80000000
+	.4byte 0x437F0000
+	.4byte 0x3F94FDF4
+	.4byte 0x40011687
+	.4byte 0xBEC8B439
+	.4byte 0
+	.4byte 0xBF5020C5
+	.4byte 0x3FCC49BA
+	.4byte 0x41800000
+	.4byte 0x40145D17
+	.4byte 0x437B0000
+	.4byte 0x43300000
+	.4byte 0
+	.4byte 0xC1910A85
+	.4byte 0x42880000
+	.4byte 0x40945D17
+	.4byte 0x43770000
+	.4byte 0x401306EB
+	.4byte 0

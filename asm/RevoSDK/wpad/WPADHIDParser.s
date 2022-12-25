@@ -4587,3 +4587,16 @@ lbl_803749A4:
 .global __a1_unused_report
 __a1_unused_report:
 /* 803749C0 0033DF80  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80518E08
+lbl_80518E08:
+	# ROM: 0x514F08
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFF000000

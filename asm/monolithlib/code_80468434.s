@@ -2317,3 +2317,62 @@ lbl_8046A508:
 .global sinit_8046A52C
 sinit_8046A52C:
 /* 8046A52C 00433AEC  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805711C8
+lbl_805711C8:
+	# ROM: 0x56D2C8
+	.4byte func_804689D4
+	.4byte func_80468BDC
+	.4byte func_80469138
+	.4byte func_80468AD0
+	.4byte func_80469620
+	.4byte func_80469B5C
+
+
+.global lbl_805711E0
+lbl_805711E0:
+	# ROM: 0x56D2E0
+	.4byte func_8046A02C
+	.4byte func_8046A11C
+	.4byte func_8046A11C
+	.4byte func_8046A0A4
+	.4byte func_8046A1A0
+	.4byte func_8046A1A0
+
+
+.global lbl_805711F8
+lbl_805711F8:
+	# ROM: 0x56D2F8
+	.4byte func_8046A224
+	.4byte func_8046A280
+	.4byte func_8046A318
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066CE08
+lbl_8066CE08:
+	# ROM: 0x576C68
+	.float 1.0
+
+
+.global lbl_8066CE0C
+lbl_8066CE0C:
+	# ROM: 0x576C6C
+	.4byte 0
+
+
+.global lbl_8066CE10
+lbl_8066CE10:
+	# ROM: 0x576C70
+	.4byte 0x3EAAAAAB
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8065AC98
+lbl_8065AC98:
+	.skip 0x30

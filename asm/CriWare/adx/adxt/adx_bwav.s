@@ -1064,3 +1064,24 @@ lbl_803892F0:
 /* 803892F4 003528B4  4C 82 00 20 */	bnelr 
 /* 803892F8 003528B8  4B FF F4 1C */	b ADXB_ExecOneWav16
 /* 803892FC 003528BC  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_8051AA78
+lbl_8051AA78:
+	.asciz "fmt "
+	.balign 4
+
+.global lbl_8051AA80
+lbl_8051AA80:
+	.asciz "data"
+	.balign 4
+
+
+.global lbl_8051AA88
+lbl_8051AA88:
+	.asciz "RIFF"
+	.asciz "WAVE"
+	.2byte 0
+	.4byte 0

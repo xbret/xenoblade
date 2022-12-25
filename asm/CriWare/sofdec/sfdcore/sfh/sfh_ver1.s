@@ -2467,3 +2467,38 @@ lbl_803D2CF8:
 lbl_803D2D04:
 /* 803D2D04 0039C2C4  38 60 00 00 */	li r3, 0
 /* 803D2D08 0039C2C8  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_805207F8
+lbl_805207F8:
+	.asciz "SofdecStream            "
+	.asciz "Ver."
+	.2byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056C728
+lbl_8056C728:
+	# ROM: 0x568828
+	.4byte lbl_803D1D7C
+	.4byte lbl_803D1D84
+	.4byte lbl_803D1D8C
+	.4byte lbl_803D1D94
+	.4byte lbl_803D1D9C
+	.4byte lbl_803D1DA4
+	.4byte lbl_803D1DAC
+
+
+.global lbl_8056C744
+lbl_8056C744:
+	# ROM: 0x568844
+	.4byte lbl_803D2D04
+	.4byte lbl_803D2CB8
+	.4byte lbl_803D2CC0
+	.4byte lbl_803D2CC8
+	.4byte lbl_803D2CD0
+	.4byte lbl_803D2CD8
+	.4byte lbl_803D2CE0
+	.4byte lbl_803D2CEC
+	.4byte lbl_803D2CF8

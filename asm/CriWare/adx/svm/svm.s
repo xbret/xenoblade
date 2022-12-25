@@ -1194,3 +1194,20 @@ lbl_803979F0:
 /* 80397A00 00360FC0  7C 08 03 A6 */	mtlr r0
 /* 80397A04 00360FC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80397A08 00360FC8  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051C590
+lbl_8051C590:
+	.asciz "2103102:SVM:svm_unlock:lock type miss match.(type org=%d, type now=%d)"
+	.asciz "1071205:SVM_SetCbSvrId:illegal svtype"
+	.asciz "Unknown"
+	.asciz "1051001:SVM_SetCbSvr:too many server function"
+	.asciz "1051002:SVM_DelCbSvr:illegal id"
+	.asciz "1071206:SVM_SetCbSvrId:illegal svtype"
+	.asciz "1071201:SVM_SetCbSvrId:illegal id"
+	.asciz "1071202:SVM_SetCbSvrId:illegal svtype"
+	.asciz "2100801:SVM_SetCbSvrId:over write callback function."
+	.asciz "1071301:SVM_ExecSvrFuncId:illegal id"
+	.asciz "1071302:SVM_ExecSvrFuncId:illegal svtype"
+	.4byte 0

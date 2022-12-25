@@ -225,3 +225,32 @@ lbl_803FD110:
 /* 803FD11C 003C66DC  7C 08 03 A6 */	mtlr r0
 /* 803FD120 003C66E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FD124 003C66E4  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80521100
+lbl_80521100:
+	# ROM: 0x51D200
+	.4byte 0x00000008
+	.asciz "ScnProc"
+	.4byte 0
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056D150
+lbl_8056D150:
+	# ROM: 0x569250
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d7ScnProcCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d7ScnProcFUlUlPv
+	.4byte __dt__Q34nw4r3g3d7ScnProcFv
+	.4byte GetTypeObj__Q34nw4r3g3d7ScnProcCFv
+	.4byte GetTypeName__Q34nw4r3g3d7ScnProcCFv
+	.4byte ForEach__Q34nw4r3g3d7ScnLeafFPFPQ34nw4r3g3d6ScnObjPv_Q44nw4r3g3d6ScnObj13ForEachResultPvb
+	.4byte SetScnObjOption__Q34nw4r3g3d7ScnLeafFUlUl
+	.4byte GetScnObjOption__Q34nw4r3g3d7ScnLeafCFUlPUl
+	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
+	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
+	.4byte CalcWorldMtx__Q34nw4r3g3d7ScnLeafFPCQ34nw4r4math5MTX34PUl
+	.4byte 0

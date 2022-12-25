@@ -1405,3 +1405,113 @@ func_8048D014:
 func_8048D01C:
 /* 8048D01C 004565DC  38 63 FF FC */	addi r3, r3, -4
 /* 8048D020 004565E0  4B FF F1 F8 */	b func_8048C218
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnItemPool_typestr
+CScnItemPool_typestr:
+	.asciz "CScnItemPool"
+	.balign 4
+
+.global reslist_CScnItem_typestr
+reslist_CScnItem_typestr:
+	.asciz "reslist<CScnItem *>"
+
+.global _reslist_base_CScnItem_typestr
+_reslist_base_CScnItem_typestr:
+	.asciz "_reslist_base<CScnItem *>"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnItemPool
+__vt__CScnItemPool:
+	.4byte __RTTI__CScnItemPool
+	.4byte 0
+	.4byte func_8048C218
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CScnItemPool
+	.4byte 0xFFFFFFFC
+	.4byte func_8048D01C
+	.4byte func_80166630
+	.4byte func_8048D014
+	.4byte func_80448A40
+	.4byte func_8048CF58
+
+.global CScnItemPool_hierarchy
+CScnItemPool_hierarchy:
+	.4byte __RTTI__CDeviceVICb
+	.4byte 0x00000004
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__reslist_CScnItem
+__vt__reslist_CScnItem:
+	.4byte __RTTI__reslist_CScnItem
+	.4byte 0
+	.4byte func_8048C034
+
+.global reslist_CScnItem_hierarchy
+reslist_CScnItem_hierarchy:
+	.4byte __RTTI___reslist_base_CScnItem
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___reslist_base_CScnItem
+__vt___reslist_base_CScnItem:
+	.4byte __RTTI___reslist_base_CScnItem
+	.4byte 0
+	.4byte func_8048BF80
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__CScnItemPool
+__RTTI__CScnItemPool:
+	.4byte CScnItemPool_typestr
+	.4byte CScnItemPool_hierarchy
+
+.global __RTTI__reslist_CScnItem
+__RTTI__reslist_CScnItem:
+	.4byte reslist_CScnItem_typestr
+	.4byte reslist_CScnItem_hierarchy
+
+.global __RTTI___reslist_base_CScnItem
+__RTTI___reslist_base_CScnItem:
+	.4byte _reslist_base_CScnItem_typestr
+	.4byte 0

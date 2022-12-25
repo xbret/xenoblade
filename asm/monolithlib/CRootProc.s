@@ -464,3 +464,94 @@ lbl_8043C2A8:
 /* 8043C2B8 00405878  7C 08 03 A6 */	mtlr r0
 /* 8043C2BC 0040587C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043C2C0 00405880  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global _unnamed_CTaskManager_cpp_CRootProc_typestr
+_unnamed_CTaskManager_cpp_CRootProc_typestr:
+	.asciz "@unnamed@CTaskManager_cpp@::CRootProc"
+	.balign 4
+
+.global CTTask_unnamed_CTaskManager_cpp_CRootProc_typestr
+CTTask_unnamed_CTaskManager_cpp_CRootProc_typestr:
+	.asciz "CTTask<@unnamed@CTaskManager_cpp@::CRootProc>"
+	.balign 4
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt___unnamed_CTaskManager_cpp_CRootProc
+__vt___unnamed_CTaskManager_cpp_CRootProc:
+	.4byte __RTTI___unnamed_CTaskManager_cpp_CRootProc
+	.4byte 0
+	.4byte func_8043C268
+	.4byte func_80446734
+	.4byte func_8043C1D4
+	.4byte func_8043C1D0
+	.4byte func_8043C1CC
+	.4byte func_8043C1C8
+	.4byte func_80043F20
+
+.global _unnamed_CTaskManager_cpp_CRootProc_hierarchy
+_unnamed_CTaskManager_cpp_CRootProc_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_unnamed_CTaskManager_cpp_CRootProc
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc
+__vt__CTTask_unnamed_CTaskManager_cpp_CRootProc:
+	.4byte __RTTI__CTTask_unnamed_CTaskManager_cpp_CRootProc
+	.4byte 0
+	.4byte func_8043BEC0
+	.4byte func_80446734
+	.4byte 0
+	.4byte 0
+	.4byte func_8043C1D8
+	.4byte func_8043C220
+	.4byte func_80043F20
+
+.global CTTask_unnamed_CTaskManager_cpp_CRootProc_hierarchy
+CTTask_unnamed_CTaskManager_cpp_CRootProc_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI___unnamed_CTaskManager_cpp_CRootProc
+__RTTI___unnamed_CTaskManager_cpp_CRootProc:
+	.4byte _unnamed_CTaskManager_cpp_CRootProc_typestr
+	.4byte _unnamed_CTaskManager_cpp_CRootProc_hierarchy
+
+.global __RTTI__CTTask_unnamed_CTaskManager_cpp_CRootProc
+__RTTI__CTTask_unnamed_CTaskManager_cpp_CRootProc:
+	.4byte CTTask_unnamed_CTaskManager_cpp_CRootProc_typestr
+	.4byte CTTask_unnamed_CTaskManager_cpp_CRootProc_hierarchy
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667E98
+lbl_80667E98:
+	.skip 0x4
+.global lbl_80667E9C
+lbl_80667E9C:
+	.skip 0x4
+.global lbl_80667EA0
+lbl_80667EA0:
+	.skip 0x4
+.global lbl_80667EA4
+lbl_80667EA4:
+	.skip 0x4

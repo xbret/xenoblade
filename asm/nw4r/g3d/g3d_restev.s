@@ -617,3 +617,53 @@ DCStore__Q34nw4r3g3d6ResTevFb:
 /* 803DB778 003A4D38  4B F7 88 68 */	b DCStoreRange
 lbl_803DB77C:
 /* 803DB77C 003A4D3C  4B F7 88 C4 */	b DCStoreRangeNoSync
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520DB8
+lbl_80520DB8:
+	# ROM: 0x51CEB8
+	.4byte 0x00000004
+	.4byte 0x00000005
+	.4byte 0x000000FF
+	.4byte 0x000000FF
+	.4byte 0x000000FF
+	.4byte 0x00000007
+	.4byte 0x00000008
+	.4byte 0x00000006
+
+
+.global lbl_80520DD8
+lbl_80520DD8:
+	# ROM: 0x51CED8
+	.4byte 0x000000A0
+	.4byte 0x000000A0
+	.4byte 0x000000C0
+	.4byte 0x000000C0
+	.4byte 0x00000100
+	.4byte 0x00000100
+	.4byte 0x00000120
+	.4byte 0x00000120
+	.4byte 0x00000160
+	.4byte 0x00000160
+	.4byte 0x00000180
+	.4byte 0x00000180
+	.4byte 0x000001C0
+	.4byte 0x000001C0
+	.4byte 0x000001E0
+	.4byte 0x000001E0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056C9A0
+lbl_8056C9A0:
+	# ROM: 0x568AA0
+	.4byte 0x00010001
+	.4byte 0x00010705
+	.4byte 0x06000000
+	.4byte 0x00000007
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0

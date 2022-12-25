@@ -4187,3 +4187,221 @@ sinit_8043FB70:
 /* 8043FBB8 00409178  90 67 00 08 */	stw r3, 8(r7)
 /* 8043FBBC 0040917C  90 07 00 0C */	stw r0, 0xc(r7)
 /* 8043FBC0 00409180  4E 80 00 20 */	blr
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMsgParam_10_typestr
+CMsgParam_10_typestr:
+	.asciz "CMsgParam<10>"
+	.balign 4
+
+.global reslist_IWorkEvent_typestr
+reslist_IWorkEvent_typestr:
+	.asciz "reslist<IWorkEvent *>"
+	.balign 4
+
+.global _reslist_base_IWorkEvent_typestr
+_reslist_base_IWorkEvent_typestr:
+	.asciz "_reslist_base<IWorkEvent *>"
+
+.global CFontLayer_typestr
+CFontLayer_typestr:
+	.asciz "CFontLayer"
+	.balign 4
+
+
+	#"ログアウトに失敗しました"
+.global lbl_80525F48
+lbl_80525F48:
+	.4byte 0x838D834F
+	.4byte 0x83418345
+	.4byte 0x836782C9
+	.4byte 0x8EB89473
+	.4byte 0x82B582DC
+	.4byte 0x82B582BD
+	.byte 0x00
+	.4byte 0
+	.byte 0x00, 0x00, 0x00
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056EE38
+lbl_8056EE38:
+	# ROM: 0x56AF38
+	.4byte lbl_8043D1A8
+	.4byte lbl_8043D4D0
+	.4byte lbl_8043D710
+	.4byte lbl_8043D754
+	.4byte lbl_8043D764
+	.4byte lbl_8043D774
+	.4byte lbl_8043D784
+	.4byte lbl_8043D790
+
+
+.global __vt__CView
+__vt__CView:
+	.4byte __RTTI__CView
+	.4byte 0
+	.4byte func_8043C7E0
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_8043EAE0
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_8043F8E0
+	.4byte func_8043F9E4
+	.4byte func_80039E30
+	.4byte __RTTI__CView
+	.4byte 0xFFFFFE3C
+	.4byte func_8043FBC4
+	.4byte func_8043FB68
+	.4byte func_8043EAD8
+	.4byte func_8043D9E8
+	.4byte func_8043DD20
+	.4byte func_8043FB60
+	.4byte func_8043FB58
+	.4byte func_8043C9B8
+	.4byte func_8043EAD0
+	.4byte func_8043EAC8
+
+.global CView_hierarchy
+CView_hierarchy:
+	.4byte __RTTI__CFontLayer
+	.4byte 0x000001C4
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CMsgParam_10
+__vt__CMsgParam_10:
+	.4byte __RTTI__CMsgParam_10
+	.4byte 0
+	.4byte func_8043C788
+
+
+.global __vt__reslist_IWorkEvent
+__vt__reslist_IWorkEvent:
+	.4byte __RTTI__reslist_IWorkEvent
+	.4byte 0
+	.4byte func_8043C6D0
+
+.global reslist_IWorkEvent_hierarchy
+reslist_IWorkEvent_hierarchy:
+	.4byte __RTTI___reslist_base_IWorkEvent
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___reslist_base_IWorkEvent
+__vt___reslist_base_IWorkEvent:
+	.4byte __RTTI___reslist_base_IWorkEvent
+	.4byte 0
+	.4byte func_8043C61C
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CView
+__RTTI__CView:
+	.4byte CView_typestr
+	.4byte CView_hierarchy
+
+.global __RTTI__CMsgParam_10
+__RTTI__CMsgParam_10:
+	.4byte CMsgParam_10_typestr
+	.4byte 0
+
+.global __RTTI__reslist_IWorkEvent
+__RTTI__reslist_IWorkEvent:
+	.4byte reslist_IWorkEvent_typestr
+	.4byte reslist_IWorkEvent_hierarchy
+
+.global __RTTI___reslist_base_IWorkEvent
+__RTTI___reslist_base_IWorkEvent:
+	.4byte _reslist_base_IWorkEvent_typestr
+	.4byte 0
+
+.global __RTTI__CFontLayer
+__RTTI__CFontLayer:
+	.4byte CFontLayer_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066CAD0
+lbl_8066CAD0:
+	# ROM: 0x576930
+	.float 1.0
+
+
+.global lbl_8066CAD4
+lbl_8066CAD4:
+	# ROM: 0x576934
+	.4byte 0x3F19999A
+
+.global CView_typestr
+CView_typestr:
+	.asciz "CView"
+	.balign 4
+
+
+.global lbl_8066CAE0
+lbl_8066CAE0:
+	# ROM: 0x576940
+	.4byte 0x3ECCCCCD
+
+
+.global lbl_8066CAE4
+lbl_8066CAE4:
+	# ROM: 0x576944
+	.float 0.5
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8065A0C8
+lbl_8065A0C8:
+	.skip 0x10
+.global lbl_8065A0D8
+lbl_8065A0D8:
+	.skip 0x10
+	
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667EA8
+lbl_80667EA8:
+	.skip 0x8

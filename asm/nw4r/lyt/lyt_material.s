@@ -3370,6 +3370,51 @@ lbl_804082F4:
 /* 804082F8 003D18B8  4E 80 00 20 */	blr 
 
 
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8056D4D8
+lbl_8056D4D8:
+	# ROM: 0x5695D8
+	.4byte 0x0000001F
+	.4byte 0x0000001B
+	.4byte 0x00000017
+	.4byte 0x00000013
+	.4byte 0x0000001E
+	.4byte 0x0000001A
+	.4byte 0x00000016
+	.4byte 0x00000012
+
+
+.global lbl_8056D4F8
+lbl_8056D4F8:
+	# ROM: 0x5695F8
+	.4byte 0x0000001F
+	.4byte 0x0000001B
+	.4byte 0x00000017
+	.4byte 0x00000013
+	.4byte 0x0000001E
+	.4byte 0x0000001A
+	.4byte 0x00000016
+	.4byte 0x00000012
+
+.global lbl_8056D518
+lbl_8056D518:
+	# ROM: 0x569618
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r3lyt8MaterialFv
+	.4byte SetupGX__Q34nw4r3lyt8MaterialFbUc
+	.4byte BindAnimation__Q34nw4r3lyt8MaterialFPQ34nw4r3lyt13AnimTransform
+	.4byte UnbindAnimation__Q34nw4r3lyt8MaterialFPQ34nw4r3lyt13AnimTransform
+	.4byte UnbindAllAnimation__Q34nw4r3lyt8MaterialFv
+	.4byte Animate__Q34nw4r3lyt8MaterialFv
+	.4byte FindAnimationLink__Q34nw4r3lyt8MaterialFPQ34nw4r3lyt13AnimTransform
+	.4byte FindAnimationLink__Q34nw4r3lyt8MaterialFRCQ34nw4r3lyt12AnimResource
+	.4byte SetAnimationEnable__Q34nw4r3lyt8MaterialFPQ34nw4r3lyt13AnimTransformb
+	.4byte SetAnimationEnable__Q34nw4r3lyt8MaterialFRCQ34nw4r3lyt12AnimResourceb
+
+
 .section .sbss2, "", @nobits #0x8066DCE0 - 0x8066DCFB
 
 .global lbl_8066DCF0

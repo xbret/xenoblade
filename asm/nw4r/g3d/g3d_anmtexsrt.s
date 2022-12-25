@@ -816,3 +816,69 @@ GetTypeObj__Q34nw4r3g3d20AnmObjTexSrtOverrideCFv:
 /* 803E3E08 003AD3C8  3C 60 80 52 */	lis r3, lbl_80520EA8@ha
 /* 803E3E0C 003AD3CC  38 63 0E A8 */	addi r3, r3, lbl_80520EA8@l
 /* 803E3E10 003AD3D0  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520EA8
+lbl_80520EA8:
+	# ROM: 0x51CFA8
+	.4byte 0x0000000D
+	.asciz "AnmObjTexSrt"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80520EC0
+lbl_80520EC0:
+	# ROM: 0x51CFC0
+	.4byte 0x00000010
+	.asciz "AnmObjTexSrtRes"
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056CB80
+lbl_8056CB80:
+	# ROM: 0x568C80
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d15AnmObjTexSrtResCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte G3dProc__Q34nw4r3g3d15AnmObjTexSrtResFUlUlPv
+	.4byte __dt__Q34nw4r3g3d15AnmObjTexSrtResFv
+	.4byte GetTypeObj__Q34nw4r3g3d15AnmObjTexSrtResCFv
+	.4byte GetTypeName__Q34nw4r3g3d15AnmObjTexSrtResCFv
+	.4byte SetFrame__Q34nw4r3g3d15AnmObjTexSrtResFf
+	.4byte GetFrame__Q34nw4r3g3d15AnmObjTexSrtResCFv
+	.4byte UpdateFrame__Q34nw4r3g3d15AnmObjTexSrtResFv
+	.4byte SetUpdateRate__Q34nw4r3g3d15AnmObjTexSrtResFf
+	.4byte GetUpdateRate__Q34nw4r3g3d15AnmObjTexSrtResCFv
+	.4byte Bind__Q34nw4r3g3d15AnmObjTexSrtResFQ34nw4r3g3d6ResMdl
+	.4byte Release__Q34nw4r3g3d12AnmObjTexSrtFv
+	.4byte GetResult__Q34nw4r3g3d15AnmObjTexSrtResFPQ34nw4r3g3d15TexSrtAnmResultUl
+	.4byte Attach__Q34nw4r3g3d12AnmObjTexSrtFiPQ34nw4r3g3d15AnmObjTexSrtRes
+	.4byte Detach__Q34nw4r3g3d12AnmObjTexSrtFi
+	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexSrtFv
+
+
+.global lbl_8056CBC8
+lbl_8056CBC8:
+	# ROM: 0x568CC8
+	.4byte 0
+	.4byte 0
+	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjTexSrtCFQ44nw4r3g3d6G3dObj7TypeObj
+	.4byte 0
+	.4byte __dt__Q34nw4r3g3d12AnmObjTexSrtFv
+	.4byte GetTypeObj__Q34nw4r3g3d20AnmObjTexSrtOverrideCFv
+	.4byte GetTypeName__Q34nw4r3g3d20AnmObjTexSrtOverrideCFv
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte Release__Q34nw4r3g3d12AnmObjTexSrtFv
+	.4byte 0
+	.4byte Attach__Q34nw4r3g3d12AnmObjTexSrtFiPQ34nw4r3g3d15AnmObjTexSrtRes
+	.4byte Detach__Q34nw4r3g3d12AnmObjTexSrtFi
+	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexSrtFv

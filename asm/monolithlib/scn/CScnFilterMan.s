@@ -1575,3 +1575,107 @@ func_8049DD60:
 /* 8049DD80 00467340  7C 08 03 A6 */	mtlr r0
 /* 8049DD84 00467344  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049DD88 00467348  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnFilterMan_typestr
+CScnFilterMan_typestr:
+	.asciz "CScnFilterMan"
+	.balign 4
+
+.global reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
+reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr:
+	.asciz "reslist<_reslist_iterator<CScnFilter *, CScnFilter *&, CScnFilter **>>"
+	.balign 4
+
+.global _reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
+_reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr:
+	.asciz "_reslist_base<_reslist_iterator<CScnFilter *, CScnFilter *&, CScnFilter **>>"
+	.balign 4
+
+.global reslist_CScnFilter_typestr
+reslist_CScnFilter_typestr:
+	.asciz "reslist<CScnFilter *>"
+	.balign 4
+
+.global _reslist_base_CScnFilter_typestr
+_reslist_base_CScnFilter_typestr:
+	.asciz "_reslist_base<CScnFilter *>"
+	.4byte 0
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnFilterMan
+__vt__CScnFilterMan:
+	.4byte __RTTI__CScnFilterMan
+	.4byte 0
+	.4byte func_8049D090
+	.4byte func_8049DD60
+
+
+.global __vt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+__vt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter:
+	.4byte __RTTI__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+	.4byte 0
+	.4byte func_8049CDBC
+
+.global reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_hierarchy
+reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_hierarchy:
+	.4byte __RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+__vt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter:
+	.4byte __RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+	.4byte 0
+	.4byte func_8049CCA8
+
+
+.global __vt__reslist_CScnFilter
+__vt__reslist_CScnFilter:
+	.4byte __RTTI__reslist_CScnFilter
+	.4byte 0
+	.4byte func_8049CB7C
+
+.global reslist_CScnFilter_hierarchy
+reslist_CScnFilter_hierarchy:
+	.4byte __RTTI___reslist_base_CScnFilter
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___reslist_base_CScnFilter
+__vt___reslist_base_CScnFilter:
+	.4byte __RTTI___reslist_base_CScnFilter
+	.4byte 0
+	.4byte func_8049CA70
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnFilterMan
+__RTTI__CScnFilterMan:
+	.4byte CScnFilterMan_typestr
+	.4byte 0
+
+.global __RTTI__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+__RTTI__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter:
+	.4byte reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
+	.4byte reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_hierarchy
+
+.global __RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+__RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter:
+	.4byte _reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
+	.4byte 0
+
+.global __RTTI__reslist_CScnFilter
+__RTTI__reslist_CScnFilter:
+	.4byte reslist_CScnFilter_typestr
+	.4byte reslist_CScnFilter_hierarchy
+
+.global __RTTI___reslist_base_CScnFilter
+__RTTI___reslist_base_CScnFilter:
+	.4byte _reslist_base_CScnFilter_typestr
+	.4byte 0

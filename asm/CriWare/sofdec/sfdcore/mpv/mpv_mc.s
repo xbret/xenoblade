@@ -879,3 +879,28 @@ lbl_803A9614:
 /* 803A9704 00372CC4  BB 61 00 0C */	lmw r27, 0xc(r1)
 /* 803A9708 00372CC8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A970C 00372CCC  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_8051F820
+lbl_8051F820:
+	# ROM: 0x51B920
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056A918
+lbl_8056A918:
+	# ROM: 0x566A18
+	.4byte lbl_803A8A64
+	.4byte lbl_803A8C70
+	.4byte lbl_803A8B44
+	.4byte lbl_803A8DB4
+	.4byte lbl_803A8AB4
+	.4byte lbl_803A8C70
+	.4byte lbl_803A8B44
+	.4byte lbl_803A8DB4

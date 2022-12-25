@@ -2139,3 +2139,61 @@ lbl_80446560:
 /* 8044656C 0040FB2C  7C 08 03 A6 */	mtlr r0
 /* 80446570 0040FB30  38 21 00 10 */	addi r1, r1, 0x10
 /* 80446574 0040FB34  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global TChildListHeader_CProcess_typestr
+TChildListHeader_CProcess_typestr:
+	.asciz "TChildListHeader<CProcess>"
+	.balign 4
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CProcess
+__vt__CProcess:
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte func_80444B38
+	.4byte func_80446734
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte func_80043F20
+
+
+.global __vt__TChildListHeader_CProcess
+__vt__TChildListHeader_CProcess:
+	.4byte __RTTI__TChildListHeader_CProcess
+	.4byte 0
+	.4byte func_80446538
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__TChildListHeader_CProcess
+__RTTI__TChildListHeader_CProcess:
+	.4byte TChildListHeader_CProcess_typestr
+	.4byte 0
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8065A3F8
+lbl_8065A3F8:
+	.skip 0xC
+.global lbl_8065A404
+lbl_8065A404:
+	.skip 0x20
+.global lbl_8065A424
+lbl_8065A424:
+	.skip 0x14
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667F08
+lbl_80667F08:
+	.skip 0x8

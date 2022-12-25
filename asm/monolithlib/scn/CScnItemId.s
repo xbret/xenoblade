@@ -158,3 +158,40 @@ func_80482290:
 func_80482298:
 /* 80482298 0044B858  80 63 00 50 */	lwz r3, 0x50(r3)
 /* 8048229C 0044B85C  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnItemId_typestr
+CScnItemId_typestr:
+	.asciz "CScnItemId"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnItemId
+__vt__CScnItemId:
+	.4byte __RTTI__CScnItemId
+	.4byte 0
+	.4byte func_80482094
+	.4byte func_8048228C
+	.4byte func_80482048
+	.4byte func_80482288
+	.4byte func_80482290
+	.4byte func_80482298
+
+.global CScnItemId_hierarchy
+CScnItemId_hierarchy:
+	.4byte __RTTI__CScnItem
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnItemId
+__RTTI__CScnItemId:
+	.4byte CScnItemId_typestr
+	.4byte CScnItemId_hierarchy

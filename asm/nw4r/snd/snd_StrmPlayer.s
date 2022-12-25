@@ -3096,3 +3096,51 @@ _208_OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv:
 _208___dt__Q44nw4r3snd6detail10StrmPlayerFv:
 /* 80424FB4 003EE574  38 63 FF 2C */	addi r3, r3, -212
 /* 80424FB8 003EE578  4B FF D7 88 */	b __dt__Q44nw4r3snd6detail10StrmPlayerFv
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+
+.global lbl_8056E558
+lbl_8056E558:
+	# ROM: 0x56A658
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte Start__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte Stop__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte Pause__Q44nw4r3snd6detail10StrmPlayerFb
+	.4byte IsActive__Q44nw4r3snd6detail10StrmPlayerCFv
+	.4byte IsStarted__Q44nw4r3snd6detail10StrmPlayerCFv
+	.4byte IsPause__Q44nw4r3snd6detail10StrmPlayerCFv
+	.4byte 0
+	.4byte 0
+	.4byte _208___dt__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte _208_OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte _208_OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte _208_OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+
+
+.global lbl_8056E5A0
+lbl_8056E5A0:
+	# ROM: 0x56A6A0
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
+	.4byte Execute__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
+	.4byte Cancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
+	.4byte OnCancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
+
+
+.global lbl_8056E5B8
+lbl_8056E5B8:
+	# ROM: 0x56A6B8
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
+	.4byte Execute__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
+	.4byte Cancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
+	.4byte OnCancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv

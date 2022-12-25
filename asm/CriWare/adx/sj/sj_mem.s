@@ -1032,3 +1032,61 @@ lbl_803942D4:
 /* 803942E4 0035D8A4  7C 08 03 A6 */	mtlr r0
 /* 803942E8 0035D8A8  38 21 00 90 */	addi r1, r1, 0x90
 /* 803942EC 0035D8AC  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global sjmem_uuid
+sjmem_uuid:
+	# ROM: 0x518198
+	.4byte 0xDD9EEE41
+	.4byte 0x167911D2
+	.4byte 0x936C0060
+	.4byte 0x089448BC
+
+
+.global lbl_8051C0A8
+lbl_8051C0A8:
+	.asciz "SJMEM Error"
+	.asciz " : NULL pointer is passed."
+	.asciz "E2004090237"
+	.asciz " : Specified handle is invalid."
+	.asciz "E2004090238"
+	.asciz "E2004090231"
+	.asciz "E2004090232"
+	.asciz "E2004090233"
+	.asciz "E2004090234"
+	.asciz "E2004090235"
+	.asciz "E2004090236"
+	.asciz "E2004090239"
+	.asciz "E2004090240"
+	.asciz "E2004090241"
+	.asciz "E2004090242"
+	.asciz "E2004090243"
+	.asciz "E2004090244"
+	.asciz "E2004090245"
+	.asciz "E2004090246"
+	.asciz "E2004090247"
+	.asciz "E2004090248"
+	.asciz "E2004090249"
+	.asciz "E2004090250"
+	.asciz "E2004090251"
+	.asciz "E2004090252"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global sjmem_vtbl
+sjmem_vtbl:
+	# ROM: 0x5653D8
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte SJMEM_Destroy
+	.4byte SJMEM_GetUuid
+	.4byte SJMEM_Reset
+	.4byte SJMEM_GetChunk
+	.4byte SJMEM_UngetChunk
+	.4byte SJMEM_PutChunk
+	.4byte SJMEM_GetNumData
+	.4byte SJMEM_IsGetChunk
+	.4byte SJMEM_EntryErrFunc

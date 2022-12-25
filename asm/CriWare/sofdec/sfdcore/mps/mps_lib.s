@@ -430,3 +430,11 @@ lbl_803BD298:
 /* 803BD29C 0038685C  7C 08 03 A6 */	mtlr r0
 /* 803BD2A0 00386860  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BD2A4 00386864  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global MPSLIB_version_str
+MPSLIB_version_str:
+	.asciz "\nCRI MPS/WII Ver.2.064 Build:Nov 13 2008 18:21:29\n"
+	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
+	.balign 4

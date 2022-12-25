@@ -226,3 +226,35 @@ lbl_8042CC0C:
 /* 8042CC20 003F61E0  90 03 00 00 */	stw r0, 0(r3)
 /* 8042CC24 003F61E4  7C A3 2B 78 */	mr r3, r5
 /* 8042CC28 003F61E8  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8056E808
+lbl_8056E808:
+	# ROM: 0x56A908
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r2ut7ResFontFv
+	.4byte GetWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetHeight__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetAscent__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetDescent__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetBaselinePos__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetCellHeight__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetCellWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetMaxCharWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetType__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetTextureFormat__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetLineFeed__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetDefaultCharWidths__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte SetDefaultCharWidths__Q44nw4r2ut6detail11ResFontBaseFRCQ34nw4r2ut10CharWidths
+	.4byte SetAlternateChar__Q44nw4r2ut6detail11ResFontBaseFUs
+	.4byte SetLineFeed__Q44nw4r2ut6detail11ResFontBaseFi
+	.4byte GetCharWidth__Q44nw4r2ut6detail11ResFontBaseCFUs
+	.4byte GetCharWidths__Q44nw4r2ut6detail11ResFontBaseCFUs
+	.4byte GetGlyph__Q44nw4r2ut6detail11ResFontBaseCFPQ34nw4r2ut5GlyphUs
+	.4byte HasGlyph__Q44nw4r2ut6detail11ResFontBaseCFUs
+	.4byte GetEncoding__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte 0

@@ -704,3 +704,68 @@ lbl_8042C8D0:
 /* 8042C91C 003F5EDC  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8042C920 003F5EE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042C924 003F5EE4  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8056E740
+lbl_8056E740:
+	# ROM: 0x56A840
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q34nw4r2ut4FontFv
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global lbl_8056E7A0
+lbl_8056E7A0:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte ReadNextCharCP1252__Q34nw4r2ut14CharStrmReaderFv
+
+
+.global lbl_8056E7AC
+lbl_8056E7AC:
+	# ROM: 0x56A8AC
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q44nw4r2ut6detail11ResFontBaseFv
+	.4byte GetWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetHeight__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetAscent__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetDescent__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetBaselinePos__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetCellHeight__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetCellWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetMaxCharWidth__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetType__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetTextureFormat__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetLineFeed__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte GetDefaultCharWidths__Q44nw4r2ut6detail11ResFontBaseCFv
+	.4byte SetDefaultCharWidths__Q44nw4r2ut6detail11ResFontBaseFRCQ34nw4r2ut10CharWidths
+	.4byte SetAlternateChar__Q44nw4r2ut6detail11ResFontBaseFUs
+	.4byte SetLineFeed__Q44nw4r2ut6detail11ResFontBaseFi
+	.4byte GetCharWidth__Q44nw4r2ut6detail11ResFontBaseCFUs
+	.4byte GetCharWidths__Q44nw4r2ut6detail11ResFontBaseCFUs
+	.4byte GetGlyph__Q44nw4r2ut6detail11ResFontBaseCFPQ34nw4r2ut5GlyphUs
+	.4byte HasGlyph__Q44nw4r2ut6detail11ResFontBaseCFUs
+	.4byte GetEncoding__Q44nw4r2ut6detail11ResFontBaseCFv

@@ -1293,3 +1293,229 @@ func_80447890:
 /* 804478F4 00410EB4  7C 08 03 A6 */	mtlr r0
 /* 804478F8 00410EB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804478FC 00410EBC  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_80526188
+lbl_80526188:
+	# ROM: 0x522288
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0x00000008
+	.4byte 0x00000004
+	.4byte 0x00000004
+	.4byte 0x00000008
+	.4byte 0x00000800
+	.4byte 0x00000010
+	.4byte 0x00000400
+	.4byte 0x00000020
+	.4byte 0x00000200
+	.4byte 0x00000040
+	.4byte 0x00000100
+	.4byte 0x00000080
+	.4byte 0x00008000
+	.4byte 0x00000100
+	.4byte 0x00000010
+	.4byte 0x00000200
+	.4byte 0x00001000
+	.4byte 0x00000400
+	.4byte 0x00002000
+	.4byte 0x00001000
+	.4byte 0x00004000
+	.4byte 0x00000800
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_805261F8
+lbl_805261F8:
+	# ROM: 0x5222F8
+	.4byte 0x00000002
+	.4byte 0x00000001
+	.4byte 0x00008000
+	.4byte 0x00000002
+	.4byte 0x00000001
+	.4byte 0x00000004
+	.4byte 0x00004000
+	.4byte 0x00000008
+	.4byte 0x00000800
+	.4byte 0x00000100
+	.4byte 0x00000400
+	.4byte 0x00000200
+	.4byte 0x00001000
+	.4byte 0x00000400
+	.4byte 0x00000010
+	.4byte 0x00200000
+	.4byte 0x00000040
+	.4byte 0x00400000
+	.4byte 0x00000008
+	.4byte 0x00800000
+	.4byte 0x00000020
+	.4byte 0x01000000
+	.4byte 0x00002000
+	.4byte 0x02000000
+	.4byte 0x00000200
+	.4byte 0x04000000
+	.4byte 0x00000080
+	.4byte 0x08000000
+	.4byte 0x00000004
+	.4byte 0x10000000
+	.4byte 0
+	.4byte 0
+
+.global CDeviceRemotePad_typestr
+CDeviceRemotePad_typestr:
+	.asciz "CDeviceRemotePad"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CDeviceRemotePad
+__vt__CDeviceRemotePad:
+	.4byte __RTTI__CDeviceRemotePad
+	.4byte 0
+	.4byte func_80447958
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80447A34
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_80447A40
+	.4byte func_80447AE4
+	.4byte func_80039E30
+
+.global CDeviceRemotePad_hierarchy
+CDeviceRemotePad_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte __RTTI__CDeviceBase
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CDeviceRemotePad
+__RTTI__CDeviceRemotePad:
+	.4byte CDeviceRemotePad_typestr
+	.4byte CDeviceRemotePad_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066CB20
+lbl_8066CB20:
+	# ROM: 0x576980
+	.4byte 0x3E19999A
+
+
+.global lbl_8066CB24
+lbl_8066CB24:
+	# ROM: 0x576984
+	.4byte 0
+
+
+.global lbl_8066CB28
+lbl_8066CB28:
+	# ROM: 0x576988
+	.4byte 0x42600000
+
+
+.global lbl_8066CB2C
+lbl_8066CB2C:
+	# ROM: 0x57698C
+	.4byte 0x43160000
+
+
+.global lbl_8066CB30
+lbl_8066CB30:
+	# ROM: 0x576990
+	.4byte 0x43A00000
+
+
+.global lbl_8066CB34
+lbl_8066CB34:
+	# ROM: 0x576994
+	.4byte 0x43520000
+
+
+.global lbl_8066CB38
+lbl_8066CB38:
+	# ROM: 0x576998
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066CB40
+lbl_8066CB40:
+	# ROM: 0x5769A0
+	.4byte 0x3FA11111
+	.4byte 0x11111111
+
+
+.global lbl_8066CB48
+lbl_8066CB48:
+	# ROM: 0x5769A8
+	.4byte 0x46823555
+	.4byte 0
+
+
+.global lbl_8066CB50
+lbl_8066CB50:
+	# ROM: 0x5769B0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066CB58
+lbl_8066CB58:
+	# ROM: 0x5769B8
+	.4byte 0
+	.4byte 0
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8065A438
+lbl_8065A438:
+	.skip 0x280
+	
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667F10
+lbl_80667F10:
+	.skip 0x8

@@ -1019,3 +1019,25 @@ lbl_8032D3AC:
 /* 8032D414 002F69D4  7C 08 03 A6 */	mtlr r0
 /* 8032D418 002F69D8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8032D41C 002F69DC  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+
+.global lbl_80518A48
+lbl_80518A48:
+	# ROM: 0x514B48
+	.4byte 0
+
+
+.global lbl_80518A4C
+lbl_80518A4C:
+	# ROM: 0x514B4C
+	.float 1.0
+
+
+.global lbl_80518A50
+lbl_80518A50:
+	# ROM: 0x514B50
+	.4byte 0x43300000
+	.4byte 0

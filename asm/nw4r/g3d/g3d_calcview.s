@@ -2378,3 +2378,17 @@ lbl_803EE5A0:
 /* 803EE5B4 003B7B74  7C 08 03 A6 */	mtlr r0
 /* 803EE5B8 003B7B78  38 21 00 E0 */	addi r1, r1, 0xe0
 /* 803EE5BC 003B7B7C  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80520FB8
+lbl_80520FB8:
+	# ROM: 0x51D0B8
+	.4byte 0
+	.4byte Calc_BILLBOARD_STD__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
+	.4byte Calc_BILLBOARD_PERSP_STD__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
+	.4byte Calc_BILLBOARD_ROT__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
+	.4byte func_803ECE28
+	.4byte Calc_BILLBOARD_Y__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
+	.4byte Calc_BILLBOARD_PERSP_Y__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
+	.4byte 0

@@ -4373,3 +4373,337 @@ sinit_804683E8:
 /* 80468428 004319E8  D0 43 00 28 */	stfs f2, 0x28(r3)
 /* 8046842C 004319EC  D0 03 00 2C */	stfs f0, 0x2c(r3)
 /* 80468430 004319F0  4E 80 00 20 */	blr
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_80570F70
+lbl_80570F70:
+	# ROM: 0x56D070
+	.4byte func_80466F8C
+	.4byte func_80466FF8
+	.4byte func_80467070
+	.4byte func_804670E8
+	.4byte func_8046716C
+	.4byte func_804671E4
+	.4byte func_80467268
+	.4byte func_804672D4
+	.4byte func_8046734C
+	.4byte func_804673D0
+	.4byte func_80467454
+	.4byte func_804674E4
+	.4byte func_80467568
+
+
+.global lbl_80570FA4
+lbl_80570FA4:
+	# ROM: 0x56D0A4
+	.4byte func_80466590
+	.4byte func_80466638
+	.4byte func_804666E0
+	.4byte func_80466794
+	.4byte func_80466848
+	.4byte func_804668F0
+	.4byte func_80466998
+	.4byte func_80466A4C
+	.4byte func_80466AE8
+	.4byte func_80466B84
+	.4byte func_80466C38
+	.4byte func_80466CEC
+	.4byte func_80466D94
+	.4byte func_80466E3C
+	.4byte func_80466EE4
+	.4byte func_804675F8
+	.4byte func_80467610
+	.4byte func_80467628
+	.4byte 0
+
+
+.global lbl_80570FF0
+lbl_80570FF0:
+	# ROM: 0x56D0F0
+	.4byte func_804676A4
+	.4byte func_804676BC
+	.4byte func_804676BC
+	.4byte func_804676BC
+	.4byte func_804676D4
+	.4byte func_804676EC
+	.4byte func_80467640
+	.4byte func_80467654
+	.4byte func_80467668
+	.4byte func_8046767C
+	.4byte func_80467690
+	.4byte 0
+	.4byte func_80467798
+	.4byte func_80467898
+	.4byte func_804678E8
+	.4byte func_804679E8
+	.4byte func_80467B04
+	.4byte func_80467BD4
+	.4byte func_80467CF0
+	.4byte func_80467E14
+	.4byte func_80467E94
+	.4byte func_80467FB8
+	.4byte func_804680DC
+	.4byte func_804681B4
+	.4byte func_80466348
+	.4byte func_80466390
+	.4byte func_80466348
+	.4byte func_804663D0
+	.4byte func_80466418
+	.4byte func_804663D0
+	.4byte func_80466458
+	.4byte func_804664A0
+	.4byte func_804664E8
+	.4byte func_80466558
+	.4byte func_80466558
+	.4byte func_80466558
+	.4byte func_80466520
+	.4byte func_80466520
+	.4byte func_80466520
+	.4byte func_80466558
+	.4byte func_80466520
+	.4byte func_80466520
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0xFFFFFFFF
+
+#unreferenced?
+.global lbl_805710BC
+lbl_805710BC:
+	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
+	.balign 4
+	.4byte 0
+	.asciz "g3d_restex_ac.h"
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+	.4byte 0
+	.asciz "g3d_restex_ac.h"
+	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
+	.balign 4
+	.asciz "g3d_respltt_ac.h"
+	.balign 4
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+	.asciz "g3d_respltt_ac.h"
+	.balign 4
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+	.asciz "g3d_respltt_ac.h"
+	.balign 4
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80666128
+lbl_80666128:
+	# ROM: 0x571D08
+	.4byte 0x72656600
+
+
+.global lbl_8066612C
+lbl_8066612C:
+	# ROM: 0x571D0C
+	.4byte 0x72656600
+
+
+.global lbl_80666130
+lbl_80666130:
+	# ROM: 0x571D10
+	.4byte 0x72656600
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066CDC8
+lbl_8066CDC8:
+	# ROM: 0x576C28
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066CDD0
+lbl_8066CDD0:
+	# ROM: 0x576C30
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066CDD8
+lbl_8066CDD8:
+	# ROM: 0x576C38
+	.float -1.0
+
+
+.global lbl_8066CDDC
+lbl_8066CDDC:
+	# ROM: 0x576C3C
+	.4byte 0x461C4000
+
+
+.global lbl_8066CDE0
+lbl_8066CDE0:
+	# ROM: 0x576C40
+	.4byte 0
+
+
+.global lbl_8066CDE4
+lbl_8066CDE4:
+	# ROM: 0x576C44
+	.float 1.0
+
+
+.global lbl_8066CDE8
+lbl_8066CDE8:
+	# ROM: 0x576C48
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066CDF0
+lbl_8066CDF0:
+	# ROM: 0x576C50
+	.4byte 0x3B808081
+	.4byte 0
+
+
+.global lbl_8066CDF8
+lbl_8066CDF8:
+	# ROM: 0x576C58
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066CE00
+lbl_8066CE00:
+	# ROM: 0x576C60
+	.float 0.5
+
+
+.global lbl_8066CE04
+lbl_8066CE04:
+	# ROM: 0x576C64
+	.4byte 0xBF000000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+#some variables are referenced up to CTaskLOD
+
+.global lbl_8065A868
+lbl_8065A868:
+	.skip 0xC
+.global lbl_8065A874
+lbl_8065A874:
+	.skip 0xC
+.global lbl_8065A880
+lbl_8065A880:
+	.skip 0x10
+.global lbl_8065A890
+lbl_8065A890:
+	.skip 0x30
+.global lbl_8065A8C0
+lbl_8065A8C0:
+	.skip 0x30
+.global lbl_8065A8F0
+lbl_8065A8F0:
+	.skip 0x10
+.global lbl_8065A900
+lbl_8065A900:
+	.skip 0x180
+.global lbl_8065AA80
+lbl_8065AA80:
+	.skip 0x180
+.global lbl_8065AC00
+lbl_8065AC00:
+	.skip 0x10
+.global lbl_8065AC10
+lbl_8065AC10:
+	.skip 0x10
+.global lbl_8065AC20
+lbl_8065AC20:
+	.skip 0xC
+.global lbl_8065AC2C
+lbl_8065AC2C:
+	.skip 0xC
+.global lbl_8065AC38
+lbl_8065AC38:
+	.skip 0x30
+.global lbl_8065AC68
+lbl_8065AC68:
+	.skip 0x30
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806680A8
+lbl_806680A8:
+	.skip 0x4
+.global lbl_806680AC
+lbl_806680AC:
+	.skip 0x4
+.global lbl_806680B0
+lbl_806680B0:
+	.skip 0x4
+.global lbl_806680B4
+lbl_806680B4:
+	.skip 0x4
+.global lbl_806680B8
+lbl_806680B8:
+	.skip 0x4
+.global lbl_806680BC
+lbl_806680BC:
+	.skip 0x4
+.global lbl_806680C0
+lbl_806680C0:
+	.skip 0x4
+.global lbl_806680C4
+lbl_806680C4:
+	.skip 0x4
+.global lbl_806680C8
+lbl_806680C8:
+	.skip 0x4
+.global lbl_806680CC
+lbl_806680CC:
+	.skip 0x4
+.global lbl_806680D0
+lbl_806680D0:
+	.skip 0x4
+.global lbl_806680D4
+lbl_806680D4:
+	.skip 0x4
+.global lbl_806680D8
+lbl_806680D8:
+	.skip 0x4
+.global lbl_806680DC
+lbl_806680DC:
+	.skip 0x4
+.global lbl_806680E0
+lbl_806680E0:
+	.skip 0x4
+.global lbl_806680E4
+lbl_806680E4:
+	.skip 0x4
+.global lbl_806680E8
+lbl_806680E8:
+	.skip 0x4
+.global lbl_806680EC
+lbl_806680EC:
+	.skip 0x4
+.global lbl_806680F0
+lbl_806680F0:
+	.skip 0x4
+.global lbl_806680F4
+lbl_806680F4:
+	.skip 0x4
+.global lbl_806680F8
+lbl_806680F8:
+	.skip 0x4
+.global lbl_806680FC
+lbl_806680FC:
+	.skip 0x4

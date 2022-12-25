@@ -1421,3 +1421,68 @@ lbl_80495BF8:
 /* 80495C20 0045F1E0  7C 08 03 A6 */	mtlr r0
 /* 80495C24 0045F1E4  38 21 00 30 */	addi r1, r1, 0x30
 /* 80495C28 0045F1E8  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global __vt__CVirtualLightObj
+__vt__CVirtualLightObj:
+	.4byte __RTTI__CVirtualLightObj
+	.4byte 0
+	.4byte func_80492980
+	.4byte func_804947EC
+	.4byte func_8049488C
+	.4byte 0
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066D248
+lbl_8066D248:
+	# ROM: 0x5770A8
+	.float 1.0
+
+
+.global lbl_8066D24C
+lbl_8066D24C:
+	# ROM: 0x5770AC
+	.4byte 0
+
+
+.global lbl_8066D250
+lbl_8066D250:
+	# ROM: 0x5770B0
+	.4byte 0x437F0000
+	.4byte 0
+
+
+.global lbl_8066D258
+lbl_8066D258:
+	# ROM: 0x5770B8
+	.float 1.0
+
+
+.global lbl_8066D25C
+lbl_8066D25C:
+	# ROM: 0x5770BC
+	.4byte 0x437F0000
+
+
+.global lbl_8066D260
+lbl_8066D260:
+	# ROM: 0x5770C0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066D268
+lbl_8066D268:
+	# ROM: 0x5770C8
+	.4byte 0
+
+
+.global lbl_8066D26C
+lbl_8066D26C:
+	# ROM: 0x5770CC
+	.float 0.5

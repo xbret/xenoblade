@@ -157,3 +157,73 @@ lbl_803A5AD4:
 lbl_803A5AE4:
 /* 803A5AE4 0036F0A4  38 60 00 00 */	li r3, 0
 /* 803A5AE8 0036F0A8  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051F608
+lbl_8051F608:
+	# ROM: 0x51B708
+	.4byte 0x04030101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x00002040
+	.4byte 0x00100080
+	.4byte 0x08000000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0

@@ -1015,3 +1015,61 @@ func_804900A0:
 lbl_804900B4:
 /* 804900B4 00459674  90 0D C0 54 */	stw r0, lbl_806681D4@sda21(r13)
 /* 804900B8 00459678  4E 80 00 20 */	blr 
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnRootNw4r_typestr
+CScnRootNw4r_typestr:
+	.asciz "CScnRootNw4r"
+	.balign 4
+
+
+.global lbl_80527908
+lbl_80527908:
+	.asciz "NW4R Mem"
+	.asciz "NW4R Mem(P)"
+	.asciz "NW4R Mem(S)"
+	.asciz "NW4R Mem(A)"
+	.balign 4
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnRootNw4r
+__vt__CScnRootNw4r:
+	.4byte __RTTI__CScnRootNw4r
+	.4byte 0
+	.4byte func_8048F338
+	.4byte func_8048F5C8
+	.4byte func_8048F4D0
+	.4byte func_8048F8E8
+	.4byte func_8048F994
+	.4byte func_8048FC68
+	.4byte func_8048FF90
+	.4byte func_8048FFBC
+	.4byte func_8048F2F0
+	.4byte func_804871A8
+	.4byte func_80490040
+	.4byte func_80490038
+	.4byte __RTTI__CScnRootNw4r
+	.4byte 0xFFFFFFF4
+	.4byte func_80490090
+	.4byte func_80490088
+	.4byte ExecCallback_CALC_MAT__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
+	.4byte ExecCallback_CALC_VIEW__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
+	.4byte func_803F7C30
+	.4byte func_803F7C34
+	.4byte func_8048FED8
+
+.global CScnRootNw4r_hierarchy
+CScnRootNw4r_hierarchy:
+	.4byte __RTTI__CScnRoot
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnRootNw4r
+__RTTI__CScnRootNw4r:
+	.4byte CScnRootNw4r_typestr
+	.4byte CScnRootNw4r_hierarchy

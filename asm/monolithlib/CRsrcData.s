@@ -315,3 +315,78 @@ lbl_8043A0CC:
 /* 8043A0D4 00403694  7C 08 03 A6 */	mtlr r0
 /* 8043A0D8 00403698  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043A0DC 0040369C  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CRsrcData_typestr
+CRsrcData_typestr:
+	.asciz "CRsrcData"
+	.balign 4
+
+
+.global lbl_80525E4C
+lbl_80525E4C:
+	.asciz "CRsrcData"
+	.balign 4
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CRsrcData
+__vt__CRsrcData:
+	.4byte __RTTI__CRsrcData
+	.4byte 0
+	.4byte func_80439D34
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_8043A000
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_8043A02C
+	.4byte func_8043A07C
+	.4byte func_80039E30
+
+.global CRsrcData_hierarchy
+CRsrcData_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CRsrcData
+__RTTI__CRsrcData:
+	.4byte CRsrcData_typestr
+	.4byte CRsrcData_hierarchy

@@ -50,3 +50,22 @@ lbl_8042C054:
 /* 8042C068 003F5628  80 04 00 08 */	lwz r0, 8(r4)
 /* 8042C06C 003F562C  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8042C070 003F5630  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056E710
+lbl_8056E710:
+	# ROM: 0x56A810
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte ReadNextCharUTF8__Q34nw4r2ut14CharStrmReaderFv
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte ReadNextCharUTF16__Q34nw4r2ut14CharStrmReaderFv
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte ReadNextCharSJIS__Q34nw4r2ut14CharStrmReaderFv
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte ReadNextCharCP1252__Q34nw4r2ut14CharStrmReaderFv

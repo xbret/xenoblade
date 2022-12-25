@@ -23990,7 +23990,7 @@ lbl_80021020:
 	.4byte func_804DAA20
 	.4byte 0x00000038
 	.4byte lbl_80020708
-	.4byte func_804DAAA8
+	.4byte __ct__CNRequest
 	.4byte 0x00000050
 	.4byte lbl_80020710
 	.4byte func_804DAAF8

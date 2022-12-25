@@ -939,3 +939,69 @@ lbl_80393484:
 /* 80393490 0035CA50  7C 08 03 A6 */	mtlr r0
 /* 80393494 0035CA54  38 21 00 20 */	addi r1, r1, 0x20
 /* 80393498 0035CA58  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051BE50
+lbl_8051BE50:
+	.asciz "\nMFCI/WII Ver.1.23 Build:Nov 13 2008 10:52:58\n"
+	.balign 4
+
+
+.global mfci_build
+mfci_build:
+	# ROM: 0x517F80
+	.4byte lbl_8051BE50
+
+
+.global lbl_8051BE84
+lbl_8051BE84:
+	.asciz "E01100308:length of '%s' is over %d bytes.(mfci_get_adr_size)"
+	.asciz "E01100301:fname is null.(mfCiOpen)"
+	.asciz "E01100302:rw is illigal.(mfCiOpen)"
+	.asciz "E01100303:not enough handle resource.(mfCiOpen)"
+	.asciz "E0092912:handl is null."
+	.asciz "E01100305:handl is null."
+	.asciz "E01100306:handl is null."
+	.asciz "E01100307:handl is null."
+	.asciz "E01100308:nsct < 0.(mfCiReqRd)"
+	.asciz "E01100309:buf is null.(mfCiReqRd)"
+	.asciz "E0040301:handl is null."
+	.asciz "E0040302:handl is null."
+	.asciz "E1041001:invalid entry number.(mfCiOpenEntry)"
+	.asciz "E1041002:rw is illigal.(mfCiOpenEntry)"
+	.asciz "E1041002:not enough handle resource.(mfCiOpenEntry)"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global mfci_vtbl
+mfci_vtbl:
+	# ROM: 0x565370
+	.4byte func_803928A4
+	.4byte mfCiEntryErrFunc
+	.4byte func_803928BC
+	.4byte 0
+	.4byte mfCiOpen
+	.4byte mfCiClose
+	.4byte mfCiSeek
+	.4byte mfCiTell
+	.4byte mfCiReqRd
+	.4byte 0
+	.4byte mfCiStopTr
+	.4byte mfCiGetStat
+	.4byte mfCiGetSctLen
+	.4byte mfCiSetSctLen
+	.4byte mfCiGetNumTr
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte mfCiOptFn1
+	.4byte 0

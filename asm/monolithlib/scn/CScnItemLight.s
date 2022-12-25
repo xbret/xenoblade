@@ -128,3 +128,37 @@ func_80482400:
 /* 80482434 0044B9F4  7C 08 03 A6 */	mtlr r0
 /* 80482438 0044B9F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8048243C 0044B9FC  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnItemLight_typestr
+CScnItemLight_typestr:
+	.asciz "CScnItemLight"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CScnItemLight
+__vt__CScnItemLight:
+	.4byte __RTTI__CScnItemLight
+	.4byte 0
+	.4byte func_8048232C
+	.4byte func_80482388
+	.4byte func_80482048
+	.4byte func_80482288
+	.4byte func_804823A0
+	.4byte func_80482040
+
+.global CScnItemLight_hierarchy
+CScnItemLight_hierarchy:
+	.4byte __RTTI__CScnItem
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnItemLight
+__RTTI__CScnItemLight:
+	.4byte CScnItemLight_typestr
+	.4byte CScnItemLight_hierarchy

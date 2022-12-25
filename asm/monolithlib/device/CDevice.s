@@ -227,3 +227,179 @@ sinit_8044DAFC:
 /* 8044DB18 004170D8  98 04 A7 3C */	stb r0, lbl_8065A73C@l(r4)
 /* 8044DB1C 004170DC  90 03 00 40 */	stw r0, 0x40(r3)
 /* 8044DB20 004170E0  4E 80 00 20 */	blr
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_805263A0
+lbl_805263A0:
+	.asciz "DeviceSystem1"
+	.balign 4
+
+.global lbl_805263B0
+lbl_805263B0:
+	.asciz "DeviceSystem2"
+	.balign 4
+
+.global _unnamed_CDevice_cpp_CDeviceException_typestr
+_unnamed_CDevice_cpp_CDeviceException_typestr:
+	.asciz "@unnamed@CDevice_cpp@::CDeviceException"
+
+
+.global lbl_805263E8
+lbl_805263E8:
+	.asciz "CDeviceVI"
+	.asciz "CDeviceGX"
+	.asciz "CDeviceRemotePAD"
+	.asciz "CDeviceClock"
+	.asciz "CDeviceSC"
+	.asciz "CDeviceFont"
+	.asciz "CDeviceFile"
+	.asciz "CLibCri"
+	.asciz "CDeviceException"
+	.asciz "CDevice"
+	.balign 4
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt___unnamed_CDevice_cpp_CDeviceException
+__vt___unnamed_CDevice_cpp_CDeviceException:
+	.4byte __RTTI___unnamed_CDevice_cpp_CDeviceException
+	.4byte 0
+	.4byte func_8044DA7C
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80438A50
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_804389F8
+	.4byte func_8044DADC
+	.4byte func_80039E30
+
+.global _unnamed_CDevice_cpp_CDeviceException_hierarchy
+_unnamed_CDevice_cpp_CDeviceException_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CDevice
+__vt__CDevice:
+	.4byte __RTTI__CDevice
+	.4byte 0
+	.4byte func_8044CFF0
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80438A50
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_8044D820
+	.4byte func_8044D8C8
+	.4byte func_80039E30
+
+.global CDevice_hierarchy
+CDevice_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __RTTI__CWorkThread
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665F98
+lbl_80665F98:
+	# ROM: 0x571B78
+	.4byte lbl_805263A0
+
+
+.global lbl_80665F9C
+lbl_80665F9C:
+	# ROM: 0x571B7C
+	.4byte lbl_805263B0
+
+
+.global lbl_80665FA0
+lbl_80665FA0:
+	# ROM: 0x571B80
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_80665FA4
+lbl_80665FA4:
+	# ROM: 0x571B84
+	.4byte 0xFFFFFFFF
+
+.global __RTTI___unnamed_CDevice_cpp_CDeviceException
+__RTTI___unnamed_CDevice_cpp_CDeviceException:
+	.4byte _unnamed_CDevice_cpp_CDeviceException_typestr
+	.4byte _unnamed_CDevice_cpp_CDeviceException_hierarchy
+
+.global __RTTI__CDevice
+__RTTI__CDevice:
+	.4byte CDevice_typestr
+	.4byte CDevice_hierarchy

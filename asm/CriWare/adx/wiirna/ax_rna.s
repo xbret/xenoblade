@@ -1888,3 +1888,97 @@ lbl_8039AA04:
 /* 8039AA0C 00363FCC  7C 08 03 A6 */	mtlr r0
 /* 8039AA10 00363FD0  38 21 00 50 */	addi r1, r1, 0x50
 /* 8039AA14 00363FD4  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8051C760
+lbl_8051C760:
+	.asciz "\nAXRNA Ver.1.15 Build:Nov 13 2008 10:53:00\n"
+
+
+.global lbl_8051C78C
+lbl_8051C78C:
+	# ROM: 0x51888C
+	.4byte lbl_8051C760
+
+
+.global lbl_8051C790
+lbl_8051C790:
+	.asciz "E1070301:Invalid parameter(maxnch<=0).\n"
+	.asciz "E1070302:Invalid parameter(sj=null).\n"
+	.asciz "E1070303:Invalid parameter(sj[]=null).\n"
+	.asciz "E1070304:Not enough RNA handle.\n"
+	.asciz "E1070306:Can't create SJ.\n"
+	.asciz "E1070307:Can't acquire voice(AX).\n"
+	.asciz "E2071701:DMA transfer(data) to A-RAM did not finish.\n"
+	.asciz "E2071701:DMA transfer(flash) to A-RAM did not finish.\n"
+	.asciz "E1070308:Invalid parameter(sw).\n"
+	.asciz "E1070309:Invalid parameter(sw).\n"
+	.asciz "E8020801:Invalid parameter(work=NULL).\n"
+	.asciz "E8020802:Invalid parameter(size or max_unit_len).\n"
+	.asciz "E8020803:ADXWII_InitTS() was not called.\n"
+	.asciz "E8022501:Invalid parameter(60<=unit_len<=100).\n"
+	.asciz "E8020804:Invalid parameter(work=NULL).\n"
+	.asciz "E8020805:Invalid parameter(size or max_unit_len).\n"
+	.asciz "E8020806:Invalid parameter(adxt=NULL).\n"
+	.asciz "E8020807:Invalid parameter(adxt=NULL).\n"
+	.asciz "E8020808:ADXWII_InitTS() was not called.\n"
+	.asciz "E8020809:Invalid parameter(adxt=NULL).\n"
+	.asciz "E8020811:Invalid parameter(unit_len<60 or unit_len>100).\n"
+	.asciz "E8022001:ADXWII_AttachTS() was not called.\n"
+	.asciz "E8022502:Invalid parameter(unit_len > max_unit_len).\n"
+	.asciz "E8021902:ADXWII_InitTS() was not called.\n"
+	.asciz "E8021903:Invalid parameter(adxt=NULL).\n"
+	.asciz "E8022002:ADXWII_AttachTS() was not called.\n"
+	.asciz "E8021901:Too many channels(Time Stretch is only mono).\n"
+	.asciz "E8021902:TS output buffer is discontinuous.\n"
+	.asciz "E6112701:Invalid sampling frequency(32028Hz).\n"
+	.asciz "E8043001:Invalid parameter(wpadno<0 or wpadno>3).\n"
+	.asciz "E8043002:Invalid parameter(wpadno<0 or wpadno>3).\n"
+	.balign 4
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global axrna_def_src_type
+axrna_def_src_type:
+	# ROM: 0x565828
+	.4byte 0x00000001
+
+
+.global lbl_8056972C
+lbl_8056972C:
+	# ROM: 0x56582C
+	.4byte 0
+	.4byte 0x00000004
+	.4byte 0x00000008
+	.4byte 0x0000000C
+	.4byte 0x00000010
+	.4byte 0x00000014
+	.4byte 0x00000018
+	.4byte 0x0000001C
+	.4byte 0x00000021
+	.4byte 0x00000025
+	.4byte 0x00000029
+	.4byte 0x0000002D
+	.4byte 0x00000031
+	.4byte 0x00000035
+	.4byte 0x00000039
+	.4byte 0x00000040
+	.4byte 0x00000044
+	.4byte 0x00000048
+	.4byte 0x0000004C
+	.4byte 0x00000051
+	.4byte 0x00000055
+	.4byte 0x00000059
+	.4byte 0x0000005D
+	.4byte 0x00000062
+	.4byte 0x00000066
+	.4byte 0x0000006A
+	.4byte 0x0000006E
+	.4byte 0x00000073
+	.4byte 0x00000077
+	.4byte 0x0000007B
+	.4byte 0x0000007F

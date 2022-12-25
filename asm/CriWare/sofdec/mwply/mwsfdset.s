@@ -511,3 +511,49 @@ lbl_803A23BC:
 /* 803A23C8 0036B988  7C 08 03 A6 */	mtlr r0
 /* 803A23CC 0036B98C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A23D0 0036B990  4E 80 00 20 */	blr 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+
+.global lbl_8051ED98
+lbl_8051ED98:
+	.asciz "E1122617 mwPlySetAudioSw: handle is invalid."
+	.asciz "E6042001 mwPlySetVideoSw: handle is invalid."
+	.asciz "E1122640 mwPlyGetSfdHn: handle is invalid."
+	.asciz "E1122639 mwPlyGetAdxtHn: handle is invalid."
+	.asciz "E202232 mwPlyGetNumDropFrm: handle is invalid."
+	.asciz "E1122619 mwPlyGetNumSkipDec: handle is invalid."
+	.asciz "E1122628 mwPlySetBpicSkip mwPlySetPpicSkip: handle is invalid."
+	.asciz "E1122616 mwPlySetAudioCh: handle is invalid."
+	.asciz "E10911A mwPlySetAudioCh: Invalid ch no."
+	.asciz "E2080801 mwPlyGetNumAudioCh: handle is invalid."
+	.asciz "E2080601 mwPlySetVideoCh: handle is invalid."
+	.asciz "E2080602 mwPlySetVideoCh: Invalid ch no."
+	.asciz "E2080802 mwPlyGetNumVideoCh: handle is invalid."
+	.asciz "E1122625 mwPlySetLimitTime: handle is invalid."
+	.asciz "E5090601 mwPlyGetLimitTime: handle is invalid."
+	.asciz "W200401 mwPlyGetStat: handle is invalid"
+	.asciz "E1122644 mwPlySetFrameOutputCycle: handle is invalid."
+	.asciz "E1122626 mwPlySetSyncMode: handle is invalid."
+	.asciz "E6020801 syncmode is invalid."
+	.asciz "E2010802 mwPlyGetSyncMode: handle is invalid."
+	.asciz "E1122621 mwPlyGetNumDecPool: handle is invalid."
+	.asciz "E1121601 mwPlyGetNumDecPool"
+	.asciz "E1122620 mwPlyGetNumTotalDec: handle is invalid."
+	.asciz "E1122603 mwPlyGetTime; handle is invalid."
+	.asciz "E200601 mwPlyGetTime; can't get time"
+	.asciz "E1122605 mwPlySetOutVol: handle is invalid."
+	.asciz "E1122606 mwPlyGetOutVol: handle is invalid."
+	.asciz "E1122607 mwPlySetOutPan: handle is invalid."
+	.asciz "E1122608 mwPlyGetOutPan: handle is invalid."
+	.asciz "E1122623 mwPlyGetNumSkipEmptyB: handle is invalid."
+	.asciz "E1122627 mwPlySetEmptyBpicSkip: handle is invalid."
+	.asciz "E1122624 mwPlyGetInputSj: handle is invalid."
+	.asciz "E202191 mwPlyGetPlyInf: handle is invalid."
+	.asciz "E1122643 mwPlyGetFlowInf: handle is invalid."
+	.asciz "E302251 mwPlySetSpeedRational: handle is invalid."
+	.asciz "E302251 mwPlySetSpeed: handle is invalid."
+	.asciz "E211051 mwPlySetFloatSpeed: handle is invalid."
+	.asciz "E5060801 mwPlySetUpdateTimeAuto: handle is invalid."
+	.balign 4
