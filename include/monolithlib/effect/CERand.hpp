@@ -25,7 +25,7 @@ public:
     virtual float randSign() { return (mtRand() % 2 != 0) ? 1.0f : -1.0f; }
 };
 
-class CERandomizerSimple : IRandomizer {
+class CERandomizerSimple : public IRandomizer {
 public:
     CERandomizerSimple();
     ~CERandomizerSimple() {}
