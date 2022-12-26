@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__CERandomizerSimple
-__ct__CERandomizerSimple:
+.global __ct__18CERandomizerSimpleFv
+__ct__18CERandomizerSimpleFv:
 /* 804DB438 004A49F8  C0 02 D6 58 */	lfs f0, lbl_8066D9D8@sda21(r2)
 /* 804DB43C 004A49FC  3C 80 80 57 */	lis r4, __vt__18CERandomizerSimple@ha
 /* 804DB440 004A4A00  38 00 3A 90 */	li r0, 0x3a90
@@ -14,8 +14,9 @@ __ct__CERandomizerSimple:
 /* 804DB454 004A4A14  D0 03 00 08 */	stfs f0, 8(r3)
 /* 804DB458 004A4A18  4E 80 00 20 */	blr 
 
-.global func_804DB45C
-func_804DB45C:
+# CERandomizerSimple::create(int)
+.global create__18CERandomizerSimpleFi
+create__18CERandomizerSimpleFi:
 /* 804DB45C 004A4A1C  2C 04 00 00 */	cmpwi r4, 0
 /* 804DB460 004A4A20  40 80 00 18 */	bge lbl_804DB478
 /* 804DB464 004A4A24  3C 80 80 66 */	lis r4, ceRandomizerSimple@ha
@@ -32,8 +33,9 @@ lbl_804DB47C:
 /* 804DB488 004A4A48  D0 03 00 08 */	stfs f0, 8(r3)
 /* 804DB48C 004A4A4C  4E 80 00 20 */	blr 
 
-.global func_804DB490
-func_804DB490:
+# CERandomizerSimple::execute(float)
+.global execute__18CERandomizerSimpleFf
+execute__18CERandomizerSimpleFf:
 /* 804DB490 004A4A50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804DB494 004A4A54  7C 08 02 A6 */	mflr r0
 /* 804DB498 004A4A58  90 01 00 24 */	stw r0, 0x24(r1)
@@ -68,9 +70,9 @@ lbl_804DB4FC:
 /* 804DB504 004A4AC4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804DB508 004A4AC8  4E 80 00 20 */	blr 
 
-#rng function
-.global func_804DB50C
-func_804DB50C:
+# CERandomizerSimple::rand()
+.global rand__18CERandomizerSimpleFv
+rand__18CERandomizerSimpleFv:
 /* 804DB50C 004A4ACC  A0 03 00 04 */	lhz r0, 4(r3)
 /* 804DB510 004A4AD0  3C E0 CC CD */	lis r7, 0xCCCCCCCD@ha
 /* 804DB514 004A4AD4  3C C0 4F 89 */	lis r6, 0x4F88C4DF@ha
@@ -98,8 +100,9 @@ func_804DB50C:
 /* 804DB56C 004A4B2C  7C 60 40 50 */	subf r3, r0, r8
 /* 804DB570 004A4B30  4E 80 00 20 */	blr 
 
-.global func_804DB574
-func_804DB574:
+# CERand::init
+.global init__6CERandFv
+init__6CERandFv:
 /* 804DB574 004A4B34  3C 60 80 66 */	lis r3, ceRandomizerSimple@ha
 /* 804DB578 004A4B38  C0 02 D6 58 */	lfs f0, lbl_8066D9D8@sda21(r2)
 /* 804DB57C 004A4B3C  38 63 29 30 */	addi r3, r3, ceRandomizerSimple@l
@@ -109,8 +112,9 @@ func_804DB574:
 /* 804DB58C 004A4B4C  D0 03 00 08 */	stfs f0, 8(r3)
 /* 804DB590 004A4B50  4E 80 00 20 */	blr 
 
-.global func_804DB594
-func_804DB594:
+# CERand::execute(float)
+.global execute__6CERandFf
+execute__6CERandFf:
 /* 804DB594 004A4B54  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804DB598 004A4B58  7C 08 02 A6 */	mflr r0
 /* 804DB59C 004A4B5C  3C 60 80 66 */	lis r3, ceRandomizerSimple@ha
@@ -147,15 +151,16 @@ lbl_804DB608:
 /* 804DB610 004A4BD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 804DB614 004A4BD4  4E 80 00 20 */	blr 
 
-.global func_804DB618
-func_804DB618:
+# CERand::randVec(mm::Vec3*)
+.global randVec__6CERandFP4Vec3
+randVec__6CERandFP4Vec3:
 /* 804DB618 004A4BD8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804DB61C 004A4BDC  7C 08 02 A6 */	mflr r0
 /* 804DB620 004A4BE0  90 01 00 34 */	stw r0, 0x34(r1)
 /* 804DB624 004A4BE4  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 804DB628 004A4BE8  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 804DB62C 004A4BEC  7C 7E 1B 78 */	mr r30, r3
-/* 804DB630 004A4BF0  4B F5 A8 A9 */	bl func_80435ED8
+/* 804DB630 004A4BF0  4B F5 A8 A9 */	bl mtRand__Fv
 /* 804DB634 004A4BF4  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 804DB638 004A4BF8  3F E0 43 30 */	lis r31, 0x4330
 /* 804DB63C 004A4BFC  90 01 00 0C */	stw r0, 0xc(r1)
@@ -168,7 +173,7 @@ func_804DB618:
 /* 804DB658 004A4C18  EC 22 08 24 */	fdivs f1, f2, f1
 /* 804DB65C 004A4C1C  EC 01 00 28 */	fsubs f0, f1, f0
 /* 804DB660 004A4C20  D0 1E 00 00 */	stfs f0, 0(r30)
-/* 804DB664 004A4C24  4B F5 A8 75 */	bl func_80435ED8
+/* 804DB664 004A4C24  4B F5 A8 75 */	bl mtRand__Fv
 /* 804DB668 004A4C28  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 804DB66C 004A4C2C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804DB670 004A4C30  C8 62 D6 68 */	lfd f3, lbl_8066D9E8@sda21(r2)
@@ -180,7 +185,7 @@ func_804DB618:
 /* 804DB688 004A4C48  EC 22 08 24 */	fdivs f1, f2, f1
 /* 804DB68C 004A4C4C  EC 01 00 28 */	fsubs f0, f1, f0
 /* 804DB690 004A4C50  D0 1E 00 04 */	stfs f0, 4(r30)
-/* 804DB694 004A4C54  4B F5 A8 45 */	bl func_80435ED8
+/* 804DB694 004A4C54  4B F5 A8 45 */	bl mtRand__Fv
 /* 804DB698 004A4C58  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 804DB69C 004A4C5C  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 804DB6A0 004A4C60  C8 62 D6 68 */	lfd f3, lbl_8066D9E8@sda21(r2)
@@ -199,12 +204,13 @@ func_804DB618:
 /* 804DB6D4 004A4C94  38 21 00 30 */	addi r1, r1, 0x30
 /* 804DB6D8 004A4C98  4E 80 00 20 */	blr 
 
-.global func_804DB6DC
-func_804DB6DC:
+# CERandomizer::randFHalf()
+.global randFHalf__12CERandomizerFv
+randFHalf__12CERandomizerFv:
 /* 804DB6DC 004A4C9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB6E0 004A4CA0  7C 08 02 A6 */	mflr r0
 /* 804DB6E4 004A4CA4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 804DB6E8 004A4CA8  4B F5 A7 F1 */	bl func_80435ED8
+/* 804DB6E8 004A4CA8  4B F5 A7 F1 */	bl mtRand__Fv
 /* 804DB6EC 004A4CAC  6C 63 80 00 */	xoris r3, r3, 0x8000
 /* 804DB6F0 004A4CB0  3C 00 43 30 */	lis r0, 0x4330
 /* 804DB6F4 004A4CB4  90 01 00 08 */	stw r0, 8(r1)
@@ -221,14 +227,15 @@ func_804DB6DC:
 /* 804DB720 004A4CE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB724 004A4CE4  4E 80 00 20 */	blr 
 
-.global func_804DB728
-func_804DB728:
+# CERand::randSignVec(mm::Vec3*)
+.global randSignVec__6CERandFP4Vec3
+randSignVec__6CERandFP4Vec3:
 /* 804DB728 004A4CE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB72C 004A4CEC  7C 08 02 A6 */	mflr r0
 /* 804DB730 004A4CF0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804DB734 004A4CF4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804DB738 004A4CF8  7C 7F 1B 78 */	mr r31, r3
-/* 804DB73C 004A4CFC  4B F5 A7 9D */	bl func_80435ED8
+/* 804DB73C 004A4CFC  4B F5 A7 9D */	bl mtRand__Fv
 /* 804DB740 004A4D00  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 804DB744 004A4D04  54 60 07 FE */	clrlwi r0, r3, 0x1f
 /* 804DB748 004A4D08  7C 00 22 78 */	xor r0, r0, r4
@@ -242,7 +249,7 @@ lbl_804DB760:
 /* 804DB760 004A4D20  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 804DB764 004A4D24  EC 00 00 72 */	fmuls f0, f0, f1
 /* 804DB768 004A4D28  D0 1F 00 00 */	stfs f0, 0(r31)
-/* 804DB76C 004A4D2C  4B F5 A7 6D */	bl func_80435ED8
+/* 804DB76C 004A4D2C  4B F5 A7 6D */	bl mtRand__Fv
 /* 804DB770 004A4D30  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 804DB774 004A4D34  54 60 07 FE */	clrlwi r0, r3, 0x1f
 /* 804DB778 004A4D38  7C 00 22 78 */	xor r0, r0, r4
@@ -256,7 +263,7 @@ lbl_804DB790:
 /* 804DB790 004A4D50  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 804DB794 004A4D54  EC 00 00 72 */	fmuls f0, f0, f1
 /* 804DB798 004A4D58  D0 1F 00 04 */	stfs f0, 4(r31)
-/* 804DB79C 004A4D5C  4B F5 A7 3D */	bl func_80435ED8
+/* 804DB79C 004A4D5C  4B F5 A7 3D */	bl mtRand__Fv
 /* 804DB7A0 004A4D60  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 804DB7A4 004A4D64  54 60 07 FE */	clrlwi r0, r3, 0x1f
 /* 804DB7A8 004A4D68  7C 00 22 78 */	xor r0, r0, r4
@@ -276,12 +283,13 @@ lbl_804DB7C0:
 /* 804DB7D8 004A4D98  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB7DC 004A4D9C  4E 80 00 20 */	blr 
 
-.global func_804DB7E0
-func_804DB7E0:
+# CERandomizer::randSign()
+.global randSign__12CERandomizerFv
+randSign__12CERandomizerFv:
 /* 804DB7E0 004A4DA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB7E4 004A4DA4  7C 08 02 A6 */	mflr r0
 /* 804DB7E8 004A4DA8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 804DB7EC 004A4DAC  4B F5 A6 ED */	bl func_80435ED8
+/* 804DB7EC 004A4DAC  4B F5 A6 ED */	bl mtRand__Fv
 /* 804DB7F0 004A4DB0  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 804DB7F4 004A4DB4  54 60 07 FE */	clrlwi r0, r3, 0x1f
 /* 804DB7F8 004A4DB8  7C 00 22 78 */	xor r0, r0, r4
@@ -297,8 +305,9 @@ lbl_804DB810:
 /* 804DB818 004A4DD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB81C 004A4DDC  4E 80 00 20 */	blr 
 
-.global func_804DB820
-func_804DB820:
+# CERandomizerSimple::randSign()
+.global randSign__18CERandomizerSimpleFv
+randSign__18CERandomizerSimpleFv:
 /* 804DB820 004A4DE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB824 004A4DE4  7C 08 02 A6 */	mflr r0
 /* 804DB828 004A4DE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -318,8 +327,9 @@ lbl_804DB850:
 /* 804DB858 004A4E18  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB85C 004A4E1C  4E 80 00 20 */	blr 
 
-.global func_804DB860
-func_804DB860:
+# CERandomizerSimple::randFHalf()
+.global randFHalf__18CERandomizerSimpleFv
+randFHalf__18CERandomizerSimpleFv:
 /* 804DB860 004A4E20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB864 004A4E24  7C 08 02 A6 */	mflr r0
 /* 804DB868 004A4E28  90 01 00 14 */	stw r0, 0x14(r1)
@@ -342,8 +352,9 @@ func_804DB860:
 /* 804DB8AC 004A4E6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB8B0 004A4E70  4E 80 00 20 */	blr 
 
-.global func_804DB8B4
-func_804DB8B4:
+# CERandomizerSimple::randF()
+.global randF__18CERandomizerSimpleFv
+randF__18CERandomizerSimpleFv:
 /* 804DB8B4 004A4E74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB8B8 004A4E78  7C 08 02 A6 */	mflr r0
 /* 804DB8BC 004A4E7C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -364,8 +375,8 @@ func_804DB8B4:
 /* 804DB8F8 004A4EB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB8FC 004A4EBC  4E 80 00 20 */	blr
 
-.global sinit_804DB900
-sinit_804DB900:
+.global sinit_CERand_cpp
+sinit_CERand_cpp:
 /* 804DB900 004A4EC0  3C A0 80 66 */	lis r5, ceRandomizerSimple@ha
 /* 804DB904 004A4EC4  3C C0 80 57 */	lis r6, __vt__CERandomizer@ha
 /* 804DB908 004A4EC8  3C 80 80 57 */	lis r4, __vt__18CERandomizerSimple@ha
@@ -381,12 +392,13 @@ sinit_804DB900:
 /* 804DB930 004A4EF0  D0 03 00 08 */	stfs f0, 8(r3)
 /* 804DB934 004A4EF4  4E 80 00 20 */	blr
 
-.global func_804DB938
-func_804DB938:
+# CERandomizer::randF (virtual, weak)
+.global randF__12CERandomizerFv
+randF__12CERandomizerFv:
 /* 804DB938 004A4EF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB93C 004A4EFC  7C 08 02 A6 */	mflr r0
 /* 804DB940 004A4F00  90 01 00 14 */	stw r0, 0x14(r1)
-/* 804DB944 004A4F04  4B F5 A5 95 */	bl func_80435ED8
+/* 804DB944 004A4F04  4B F5 A5 95 */	bl mtRand__Fv
 /* 804DB948 004A4F08  6C 63 80 00 */	xoris r3, r3, 0x8000
 /* 804DB94C 004A4F0C  3C 00 43 30 */	lis r0, 0x4330
 /* 804DB950 004A4F10  90 01 00 08 */	stw r0, 8(r1)
@@ -401,9 +413,10 @@ func_804DB938:
 /* 804DB974 004A4F34  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB978 004A4F38  4E 80 00 20 */	blr 
 
-.global func_804DB97C
-func_804DB97C:
-/* 804DB97C 004A4F3C  4B F5 A5 5C */	b func_80435ED8
+# CERandomizer::rand (virtual, weak)
+.global rand__12CERandomizerFv
+rand__12CERandomizerFv:
+/* 804DB97C 004A4F3C  4B F5 A5 5C */	b mtRand__Fv
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -428,10 +441,10 @@ CERandomizer_typestr:
 __vt__18CERandomizerSimple:
 	.4byte __RTTI__CERandomizerSimple
 	.4byte 0
-	.4byte func_804DB50C
-	.4byte func_804DB8B4
-	.4byte func_804DB860
-	.4byte func_804DB820
+	.4byte rand__18CERandomizerSimpleFv
+	.4byte randF__18CERandomizerSimpleFv
+	.4byte randFHalf__18CERandomizerSimpleFv
+	.4byte randSign__18CERandomizerSimpleFv
 
 .global CERandomizerSimple_hierarchy
 CERandomizerSimple_hierarchy:
@@ -445,10 +458,10 @@ CERandomizerSimple_hierarchy:
 __vt__CERandomizer:
 	.4byte __RTTI__CERandomizer
 	.4byte 0
-	.4byte func_804DB97C
-	.4byte func_804DB938
-	.4byte func_804DB6DC
-	.4byte func_804DB7E0
+	.4byte rand__12CERandomizerFv
+	.4byte randF__12CERandomizerFv
+	.4byte randFHalf__12CERandomizerFv
+	.4byte randSign__12CERandomizerFv
 
 .global CERandomizer_hierarchy
 CERandomizer_hierarchy:

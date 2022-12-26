@@ -34,8 +34,8 @@ func_80435EA4:
 /* 80435ED0 003FF490  38 21 00 10 */	addi r1, r1, 0x10
 /* 80435ED4 003FF494  4E 80 00 20 */	blr 
 
-.global func_80435ED8
-func_80435ED8:
+.global mtRand__Fv
+mtRand__Fv:
 /* 80435ED8 003FF498  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80435EDC 003FF49C  7C 08 02 A6 */	mflr r0
 /* 80435EE0 003FF4A0  90 01 00 14 */	stw r0, 0x14(r1)

@@ -19232,7 +19232,7 @@ lbl_80021020:
 	.4byte func_80435EA4
 	.4byte 0x00000034
 	.4byte lbl_8001C078
-	.4byte func_80435ED8
+	.4byte mtRand__Fv
 	.4byte 0x00000024
 	.4byte lbl_8001C080
 	.4byte func_80435EFC
@@ -24041,34 +24041,34 @@ lbl_80021020:
 	.4byte func_804DB364
 	.4byte 0x000000BC
 	.4byte lbl_80020790
-	.4byte func_804DB490
+	.4byte execute__18CERandomizerSimpleFf
 	.4byte 0x0000007C
 	.4byte lbl_80020798
-	.4byte func_804DB594
+	.4byte execute__6CERandFf
 	.4byte 0x00000084
 	.4byte lbl_800207A0
-	.4byte func_804DB618
+	.4byte randVec__6CERandFP4Vec3
 	.4byte 0x000000C4
 	.4byte lbl_800207A8
-	.4byte func_804DB6DC
+	.4byte randFHalf__12CERandomizerFv
 	.4byte 0x0000004C
 	.4byte lbl_800207B0
-	.4byte func_804DB728
+	.4byte randSignVec__6CERandFP4Vec3
 	.4byte 0x000000B8
 	.4byte lbl_800207B8
-	.4byte func_804DB7E0
+	.4byte randSign__12CERandomizerFv
 	.4byte 0x00000040
 	.4byte lbl_800207C0
-	.4byte func_804DB820
+	.4byte randSign__18CERandomizerSimpleFv
 	.4byte 0x00000040
 	.4byte lbl_800207C8
-	.4byte func_804DB860
+	.4byte randFHalf__18CERandomizerSimpleFv
 	.4byte 0x00000054
 	.4byte lbl_800207D0
-	.4byte func_804DB8B4
+	.4byte randF__18CERandomizerSimpleFv
 	.4byte 0x0000004C
 	.4byte lbl_800207D8
-	.4byte func_804DB938
+	.4byte randF__12CERandomizerFv
 	.4byte 0x00000044
 	.4byte lbl_800207E0
 	.4byte func_804DB980

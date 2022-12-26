@@ -126,7 +126,7 @@ ctorsTable:
 	.4byte sinit_804DB228
 	.4byte sinit_804DB330
 	.4byte sinit_804DB420
-	.4byte sinit_804DB900
+	.4byte sinit_CERand_cpp
 	.4byte sinit_804F01C8
 	.4byte sinit_804F5140
 	.4byte 0
