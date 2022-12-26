@@ -1,120 +1,68 @@
 #include "monolithlib/effect/CERand.hpp"
 
+CERandomizer CERand::sRandomizer;
+CERandomizerSimple CERand::sRandomizerSimple;
 
-CERandomizerSimple::CERandomizerSimple(){
-    /* This function gets inlined, and the if statement is optimized out b/c the value
-    is known at compile time. */
-    create(14992);
+CERandomizerSimple::CERandomizerSimple() {
+    create(CERand::sDefaultSeed);
 }
 
-inline CERandomizerSimple* RandomizerSimple() {
-    return &ceRandomizerSimple;
+void CERandomizerSimple::create(int seed) {
+    // Invalid seed = take from the global randomizer
+    if (seed < 0) {
+        mSeedA = CERand::sRandomizerSimple.mSeedA;
+    }
+    else {
+        mSeedA = seed;
+    }
+
+    mSeedB = mSeedA;
+    mAge = 0.0f;
 }
 
-//func_804DB45C
-void CERandomizerSimple::create(s32 r4){
-    if(r4 < 0) seed = ceRandomizerSimple.seed;
-    else seed = r4;
+void CERandomizerSimple::execute(float pass) {
+    const float oldAge = mAge;
 
-    unk6 = seed;
-    unk8 = 0;
-}
-
-//func_804DB490
-void CERandomizerSimple::execute(float f1){
-    float f2 = unk8;
-    unk8 += f1;
+    // Some unit of time to determine the age of the randomizer (usually 1.0)
+    mAge += pass;
     
-    if((s32)f2 == (s32)unk8){
-        seed = unk6;
-    }else{
-        unk6 = seed;
-        if(((s32)unk8 & 0x1F) == 0){
-            rand();
+    // Check if the randomizer age is not a new whole number
+    if (static_cast<int>(oldAge) == static_cast<int>(mAge)) {
+        // Copy seed B to seed A
+        mSeedA = mSeedB;
+    } else {
+        // Copy seed A to seed B at every new whole number of age
+        mSeedB = mSeedA;
+
+        // Generate new seed A every 32 units of age
+        if ((static_cast<int>(mAge) & 31) == 0) {
+            (void)rand();
         }
     }
 }
 
-//func_804DB50C
-u32 CERandomizerSimple::rand(){
-    u32 temp = seed*673 + 945;
-    seed = (temp/10) % 100003;
+u32 CERandomizerSimple::rand() {
+    const u32 temp = mSeedA * 673 + 945;
+    mSeedA = (temp / 10) % 100003;
     return temp % 10007;
 }
 
-//func_804DB574
-void init(){
-    //inline
-    ceRandomizerSimple.create(14992);
+void CERand::init() {
+    sRandomizerSimple.create(CERand::sDefaultSeed);
 }
 
-//func_804DB594
-void execute(float f1) {
-    //inline
-    ceRandomizerSimple.execute(f1);
+void CERand::execute(float pass) {
+    sRandomizerSimple.execute(pass);
 }
 
-
-inline float randSignInline(){
-    u32 r3 = func_80435ED8();
-    u32 r4 = (r3 >> 31);
-    if(((r3 & 1) ^ r4) - r4 != 0) return 1.0f;
-    else return -1.0f;
+void CERand::randVec(Vec3* v) {
+    v->x = sRandomizer.randFHalf();
+    v->y = sRandomizer.randFHalf();
+    v->z = sRandomizer.randFHalf();
 }
 
-inline float randFHalfInline(){
-    return func_80435ED8()/2147483648.0f - 0.5f;
-}
-
-//func_804DB618
-void randVec(Vec3* r3){
-    r3->x = randFHalfInline();
-    r3->y = randFHalfInline();
-    r3->z = randFHalfInline();
-}
-
-
-//func_804DB6DC
-float CERandomizer::randFHalf(){
-    return randFHalfInline();
-}
-
-//func_804DB728
-void randSignVec(Vec3* r31){
-    r31->x *= randSignInline();
-    r31->y *= randSignInline();
-    r31->z *= randSignInline();
-}
-
-//func_804DB7E0
-float CERandomizer::randSign(){
-    return randSignInline();
-}
-
-//func_804DB820
-float CERandomizerSimple::randSign(){
-    if(rand() & 0x1)return 1.0f;
-    else return -1.0f;
-}
-
-//func_804DB860
-float CERandomizerSimple::randFHalf() {
-    return (float)rand()/10006.0f - 0.5f;
-}
-
-//func_804DB8B4
-float CERandomizerSimple::randF() {
-    return (float)rand()/10006.0f;
-}
-
-//These two functions appear after the sinit. Why?
-
-//func_804DB938
-float CERandomizer::randF() {
-    return func_80435ED8()/2147483648.0f;
-}
-
-//func_804DB97C
-u32 CERandomizer::rand() {
-    return func_80435ED8();
+void CERand::randSignVec(Vec3* v) {
+    v->x *= sRandomizer.randSign();
+    v->y *= sRandomizer.randSign();
+    v->z *= sRandomizer.randSign();
 }
