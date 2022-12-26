@@ -4,9 +4,9 @@ static CERandomizerSimple ceRandomizerSimple;
 static CERandomizer ceRandomizer;
 
 CERandomizerSimple::CERandomizerSimple(){
-        seed = 14992;
-        unk6 = 14992;
-        unk8 = 0;
+    /* This function gets inlined, and the if statement is optimized out b/c the value
+    is known at compile time. */
+    func_804DB45C(14992);
 }
 
 inline CERandomizerSimple* RandomizerSimple() {
@@ -14,52 +14,42 @@ inline CERandomizerSimple* RandomizerSimple() {
 }
 
 void CERandomizerSimple::func_804DB45C(s32 r4){
-         if(r4 < 0) seed = ceRandomizerSimple.seed;
-        else seed = r4;
+    if(r4 < 0) seed = ceRandomizerSimple.seed;
+    else seed = r4;
 
-        unk6 = seed;
-        unk8 = 0;
-    }
+    unk6 = seed;
+    unk8 = 0;
+}
 
 void CERandomizerSimple::func_804DB490(float f1){
-        float f2 = unk8;
-        float f0 = f2 + f1;
-        unk8 += f1;
-        if((s32)f2 == (s32)f0){
-            seed = unk6;
-        }else{
-            unk6 = seed;
-            if(((s32)f0 & 0x1F) == 0){
-                func_804DB50C();
-            }
+    float f2 = unk8;
+    unk8 += f1;
+    
+    if((s32)f2 == (s32)unk8){
+        seed = unk6;
+    }else{
+        unk6 = seed;
+        if(((s32)unk8 & 0x1F) == 0){
+            func_804DB50C();
         }
     }
+}
 
 //Generates a random 32 bit unsigned number.
-u32 CERandomizerSimple::func_804DB50C() {
+u32 CERandomizerSimple::func_804DB50C(){
     u32 temp = seed*673 + 945;
     seed = (temp/10) % 100003;
     return temp % 10007;
 }
 
-void func_804DB574() {
-    ceRandomizerSimple.seed = 0x3A90;
-    ceRandomizerSimple.unk6 = 0x3A90;
-    ceRandomizerSimple.unk8 = 0;
+void func_804DB574(){
+    //inline
+    ceRandomizerSimple.func_804DB45C(14992);
 }
 
 void func_804DB594(float f1) {
-    float f2 = ceRandomizerSimple.unk8;
-    float f0 = f2 + f1;
-    ceRandomizerSimple.unk8 += f1;
-    if((s32)f2 == (s32)f0){
-        ceRandomizerSimple.seed = ceRandomizerSimple.unk6;
-    }else{
-        ceRandomizerSimple.unk6 = ceRandomizerSimple.seed;
-        if(((s32)f0 & 0x1F) == 0){
-            RandomizerSimple()->func_804DB50C();
-        }
-    }
+    //inline
+    ceRandomizerSimple.func_804DB490(f1);
 }
 
 void CERandomizer::func_804DB618(Vector3f* r3){
@@ -69,7 +59,7 @@ void CERandomizer::func_804DB618(Vector3f* r3){
 }
 
 
-float CERandomizer::func_804DB6DC() {
+float CERandomizer::func_804DB6DC(){
     return Inline2();
 }
 
@@ -79,7 +69,7 @@ void CERandomizer::func_804DB728(Vector3f* r31){
     r31->z *= Inline1();
 }
 
-float CERandomizer::func_804DB7E0() {
+float CERandomizer::func_804DB7E0(){
     return Inline1();
 }
 
@@ -95,6 +85,8 @@ float CERandomizerSimple::func_804DB860() {
 float CERandomizerSimple::func_804DB8B4() {
     return (float)func_804DB50C()/10006.0f;
 }
+
+//These two functions appear after the sinit. Why?
 
 float CERandomizer::func_804DB938() {
     return func_80435ED8()/2147483648.0f;
