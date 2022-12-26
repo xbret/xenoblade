@@ -38,6 +38,7 @@ public:
     void create(int);
     void execute(float);
 
+private:
     u16 mSeedA; // 0x4
     u16 mSeedB; // 0x6
     float mAge; // 0x8
