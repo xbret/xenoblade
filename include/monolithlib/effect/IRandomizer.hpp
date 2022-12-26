@@ -3,9 +3,12 @@
 
 #include "types.h"
 
-//TODO: find out what is in this interface from the two inheriting classes
 class IRandomizer{
 public:
+    virtual u32 rand();
+    virtual float randF();
+    virtual float randFHalf();
+    virtual float randSign();
 };
 
 #endif
