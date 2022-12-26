@@ -58,7 +58,7 @@ endif
 O_FILES := $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES) $(GAME_O_FILES) \
 		   $(MW_O_FILES) $(NDEV_O_FILES) $(RVL_SDK_O_FILES) \
 		   $(CRIWARE_O_FILES) $(NW4R_O_FILES) $(UTILS_O_FILES) \
-		   $(MONOLITHLIB_O_FILES) $(CTORS_O_FILES)
+		   $(MM_O_FILES) $(MONOLITHLIB_O_FILES) $(CTORS_O_FILES)
 
 #-------------------------------------------------------------------------------
 # Tools
@@ -126,6 +126,7 @@ ASFLAGS += -W
 endif
 
 $(NDEV_O_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
+$(MONOLITHLIB_O_FILES): CFLAGS += -ipa file
 
 #arc.c doesn't use -use_lmw_stmw on, and uses -ipa file and (maybe rest of wii sdk too?)
 $(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)

@@ -966,6 +966,7 @@ lbl_804F1080:
 /* 804F1098 004BA658  38 21 00 50 */	addi r1, r1, 0x50
 /* 804F109C 004BA65C  4E 80 00 20 */	blr 
 
+#r8: pointer to ceRandomizer
 .global func_804F10A0
 func_804F10A0:
 /* 804F10A0 004BA660  94 21 FF 00 */	stwu r1, -0x100(r1)

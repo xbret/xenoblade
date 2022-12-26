@@ -1,5 +1,5 @@
-#ifndef _MLIB_OPERATORS_HPP
-#define _MLIB_OPERATORS_HPP
+#ifndef _MM_OPERATORS_HPP
+#define _MM_OPERATORS_HPP
 
 #include "types.h"
 
