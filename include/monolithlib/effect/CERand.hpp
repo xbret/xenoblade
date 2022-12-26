@@ -39,9 +39,9 @@ public:
     void execute(float);
 
 private:
-    u16 mSeedA; // 0x4
-    u16 mSeedB; // 0x6
-    float mAge; // 0x8
+    u16 seedA; // 0x4
+    u16 seedB; // 0x6
+    float age; // 0x8
 };
 
 class CERand {
@@ -51,13 +51,10 @@ public:
     static void randVec(Vec3*);
     static void randSignVec(Vec3*);
 
-private:
+public:
     static const int sDefaultSeed = 14992;
     static CERandomizer sRandomizer;
     static CERandomizerSimple sRandomizerSimple;
-
-    friend class CERandomizer;
-    friend class CERandomizerSimple;
 };
 
 #endif

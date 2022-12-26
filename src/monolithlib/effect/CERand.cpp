@@ -10,40 +10,40 @@ CERandomizerSimple::CERandomizerSimple() {
 void CERandomizerSimple::create(int seed) {
     // Invalid seed = take from the global randomizer
     if (seed < 0) {
-        mSeedA = CERand::sRandomizerSimple.mSeedA;
+        seedA = CERand::sRandomizerSimple.seedA;
     }
     else {
-        mSeedA = seed;
+        seedA = seed;
     }
 
-    mSeedB = mSeedA;
-    mAge = 0.0f;
+    seedB = seedA;
+    age = 0.0f;
 }
 
 void CERandomizerSimple::execute(float pass) {
-    const float oldAge = mAge;
+    const float oldAge = age;
 
     // Some unit of time to determine the age of the randomizer (usually 1.0)
-    mAge += pass;
+    age += pass;
     
     // Check if the randomizer age is not a new whole number
-    if (static_cast<int>(oldAge) == static_cast<int>(mAge)) {
+    if (static_cast<int>(oldAge) == static_cast<int>(age)) {
         // Copy seed B to seed A
-        mSeedA = mSeedB;
+        seedA = seedB;
     } else {
         // Copy seed A to seed B at every new whole number of age
-        mSeedB = mSeedA;
+        seedB = seedA;
 
         // Generate new seed A every 32 units of age
-        if ((static_cast<int>(mAge) & 31) == 0) {
+        if ((static_cast<int>(age) & 31) == 0) {
             (void)rand();
         }
     }
 }
 
 u32 CERandomizerSimple::rand() {
-    const u32 temp = mSeedA * 673 + 945;
-    mSeedA = (temp / 10) % 100003;
+    const u32 temp = seedA * 673 + 945;
+    seedA = (temp / 10) % 100003;
     return temp % 10007;
 }
 
