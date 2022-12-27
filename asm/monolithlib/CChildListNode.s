@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804466E0
-func_804466E0:
+.global __ct__CChildListNode
+__ct__CChildListNode:
 /* 804466E0 0040FCA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804466E4 0040FCA4  7C 08 02 A6 */	mflr r0
 /* 804466E8 0040FCA8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -26,14 +26,14 @@ func_804466E0:
 /* 8044672C 0040FCEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80446730 0040FCF0  4E 80 00 20 */	blr 
 
-.global func_80446734
-func_80446734:
+.global CChildListNode_Reset
+CChildListNode_Reset:
 /* 80446734 0040FCF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80446738 0040FCF8  7C 08 02 A6 */	mflr r0
 /* 8044673C 0040FCFC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80446740 0040FD00  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80446744 0040FD04  7C 7F 1B 78 */	mr r31, r3
-/* 80446748 0040FD08  4B FF FE 59 */	bl Clear__15CDoubleListNodeFv
+/* 80446748 0040FD08  4B FF FE 59 */	bl CDoubleListNode_Reset
 /* 8044674C 0040FD0C  38 00 00 00 */	li r0, 0
 /* 80446750 0040FD10  90 1F 00 14 */	stw r0, 0x14(r31)
 /* 80446754 0040FD14  90 1F 00 24 */	stw r0, 0x24(r31)
@@ -59,7 +59,7 @@ __vt__CChildListNode:
 	.4byte __RTTI__CChildListNode
 	.4byte 0
 	.4byte func_80444A78
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 
 
 .global __vt__TChildListHeader_CChildListNode

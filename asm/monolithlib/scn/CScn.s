@@ -3573,7 +3573,7 @@ __vt__CScn:
 	.4byte __RTTI__CScn
 	.4byte 0
 	.4byte func_80495DB8
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80496580
 	.4byte func_80496584
 	.4byte func_804967B0
@@ -3622,7 +3622,7 @@ __vt__CTTask_CScn:
 	.4byte __RTTI__CTTask_CScn
 	.4byte 0
 	.4byte func_80495D60
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_80496A74

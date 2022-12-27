@@ -246,7 +246,7 @@ __vt__CScnNw4r:
 	.4byte __RTTI__CScnNw4r
 	.4byte 0
 	.4byte func_8048EBBC
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80496580
 	.4byte func_80496584
 	.4byte func_804967B0

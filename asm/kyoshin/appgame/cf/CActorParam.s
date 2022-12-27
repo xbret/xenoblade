@@ -19,7 +19,7 @@ func_80175264:
 /* 80175294 0013E854  7C 9C 23 78 */	mr r28, r4
 /* 80175298 0013E858  7C BB 2B 78 */	mr r27, r5
 /* 8017529C 0013E85C  38 63 00 08 */	addi r3, r3, 8
-/* 801752A0 0013E860  4B FD 08 7D */	bl func_80145B1C
+/* 801752A0 0013E860  4B FD 08 7D */	bl __ct__cf_CBattleState
 /* 801752A4 0013E864  3C 80 80 53 */	lis r4, __vt__cf_CActorParam@ha
 /* 801752A8 0013E868  38 BF 16 C1 */	addi r5, r31, 0x16c1
 /* 801752AC 0013E86C  38 1F 16 C4 */	addi r0, r31, 0x16c4
@@ -191,7 +191,7 @@ lbl_801754F4:
 /* 80175508 0013EAC8  7C 1B E0 40 */	cmplw r27, r28
 /* 8017550C 0013EACC  41 80 FF E8 */	blt lbl_801754F4
 /* 80175510 0013EAD0  38 7F 19 E8 */	addi r3, r31, 0x19e8
-/* 80175514 0013EAD4  4B FD E6 D9 */	bl func_80153BEC
+/* 80175514 0013EAD4  4B FD E6 D9 */	bl __ct__cf__sArtsSet
 /* 80175518 0013EAD8  3C 60 80 53 */	lis r3, __vt__cf_CArtsSet@ha
 /* 8017551C 0013EADC  3B 7F 1A 20 */	addi r27, r31, 0x1a20
 /* 80175520 0013EAE0  38 63 2D 90 */	addi r3, r3, __vt__cf_CArtsSet@l

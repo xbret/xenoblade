@@ -68,7 +68,6 @@ lbl_804DB4FC:
 /* 804DB504 004A4AC4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804DB508 004A4AC8  4E 80 00 20 */	blr 
 
-#rng function
 .global rand__18CERandomizerSimpleFv
 rand__18CERandomizerSimpleFv:
 /* 804DB50C 004A4ACC  A0 03 00 04 */	lhz r0, 4(r3)
@@ -155,7 +154,7 @@ randVec__6CERandFP4Vec3:
 /* 804DB624 004A4BE4  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 804DB628 004A4BE8  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 804DB62C 004A4BEC  7C 7E 1B 78 */	mr r30, r3
-/* 804DB630 004A4BF0  4B F5 A8 A9 */	bl mtRand__Fv
+/* 804DB630 004A4BF0  4B F5 A8 A9 */	bl mtRand
 /* 804DB634 004A4BF4  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 804DB638 004A4BF8  3F E0 43 30 */	lis r31, 0x4330
 /* 804DB63C 004A4BFC  90 01 00 0C */	stw r0, 0xc(r1)
@@ -168,7 +167,7 @@ randVec__6CERandFP4Vec3:
 /* 804DB658 004A4C18  EC 22 08 24 */	fdivs f1, f2, f1
 /* 804DB65C 004A4C1C  EC 01 00 28 */	fsubs f0, f1, f0
 /* 804DB660 004A4C20  D0 1E 00 00 */	stfs f0, 0(r30)
-/* 804DB664 004A4C24  4B F5 A8 75 */	bl mtRand__Fv
+/* 804DB664 004A4C24  4B F5 A8 75 */	bl mtRand
 /* 804DB668 004A4C28  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 804DB66C 004A4C2C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804DB670 004A4C30  C8 62 D6 68 */	lfd f3, lbl_8066D9E8@sda21(r2)
@@ -180,7 +179,7 @@ randVec__6CERandFP4Vec3:
 /* 804DB688 004A4C48  EC 22 08 24 */	fdivs f1, f2, f1
 /* 804DB68C 004A4C4C  EC 01 00 28 */	fsubs f0, f1, f0
 /* 804DB690 004A4C50  D0 1E 00 04 */	stfs f0, 4(r30)
-/* 804DB694 004A4C54  4B F5 A8 45 */	bl mtRand__Fv
+/* 804DB694 004A4C54  4B F5 A8 45 */	bl mtRand
 /* 804DB698 004A4C58  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 804DB69C 004A4C5C  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 804DB6A0 004A4C60  C8 62 D6 68 */	lfd f3, lbl_8066D9E8@sda21(r2)
@@ -204,7 +203,7 @@ randFHalf__12CERandomizerFv:
 /* 804DB6DC 004A4C9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB6E0 004A4CA0  7C 08 02 A6 */	mflr r0
 /* 804DB6E4 004A4CA4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 804DB6E8 004A4CA8  4B F5 A7 F1 */	bl mtRand__Fv
+/* 804DB6E8 004A4CA8  4B F5 A7 F1 */	bl mtRand
 /* 804DB6EC 004A4CAC  6C 63 80 00 */	xoris r3, r3, 0x8000
 /* 804DB6F0 004A4CB0  3C 00 43 30 */	lis r0, 0x4330
 /* 804DB6F4 004A4CB4  90 01 00 08 */	stw r0, 8(r1)
@@ -228,7 +227,7 @@ randSignVec__6CERandFP4Vec3:
 /* 804DB730 004A4CF0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804DB734 004A4CF4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804DB738 004A4CF8  7C 7F 1B 78 */	mr r31, r3
-/* 804DB73C 004A4CFC  4B F5 A7 9D */	bl mtRand__Fv
+/* 804DB73C 004A4CFC  4B F5 A7 9D */	bl mtRand
 /* 804DB740 004A4D00  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 804DB744 004A4D04  54 60 07 FE */	clrlwi r0, r3, 0x1f
 /* 804DB748 004A4D08  7C 00 22 78 */	xor r0, r0, r4
@@ -242,7 +241,7 @@ lbl_804DB760:
 /* 804DB760 004A4D20  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 804DB764 004A4D24  EC 00 00 72 */	fmuls f0, f0, f1
 /* 804DB768 004A4D28  D0 1F 00 00 */	stfs f0, 0(r31)
-/* 804DB76C 004A4D2C  4B F5 A7 6D */	bl mtRand__Fv
+/* 804DB76C 004A4D2C  4B F5 A7 6D */	bl mtRand
 /* 804DB770 004A4D30  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 804DB774 004A4D34  54 60 07 FE */	clrlwi r0, r3, 0x1f
 /* 804DB778 004A4D38  7C 00 22 78 */	xor r0, r0, r4
@@ -256,7 +255,7 @@ lbl_804DB790:
 /* 804DB790 004A4D50  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 804DB794 004A4D54  EC 00 00 72 */	fmuls f0, f0, f1
 /* 804DB798 004A4D58  D0 1F 00 04 */	stfs f0, 4(r31)
-/* 804DB79C 004A4D5C  4B F5 A7 3D */	bl mtRand__Fv
+/* 804DB79C 004A4D5C  4B F5 A7 3D */	bl mtRand
 /* 804DB7A0 004A4D60  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 804DB7A4 004A4D64  54 60 07 FE */	clrlwi r0, r3, 0x1f
 /* 804DB7A8 004A4D68  7C 00 22 78 */	xor r0, r0, r4
@@ -281,7 +280,7 @@ randSign__12CERandomizerFv:
 /* 804DB7E0 004A4DA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB7E4 004A4DA4  7C 08 02 A6 */	mflr r0
 /* 804DB7E8 004A4DA8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 804DB7EC 004A4DAC  4B F5 A6 ED */	bl mtRand__Fv
+/* 804DB7EC 004A4DAC  4B F5 A6 ED */	bl mtRand
 /* 804DB7F0 004A4DB0  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 804DB7F4 004A4DB4  54 60 07 FE */	clrlwi r0, r3, 0x1f
 /* 804DB7F8 004A4DB8  7C 00 22 78 */	xor r0, r0, r4
@@ -387,7 +386,7 @@ randF__12CERandomizerFv:
 /* 804DB938 004A4EF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB93C 004A4EFC  7C 08 02 A6 */	mflr r0
 /* 804DB940 004A4F00  90 01 00 14 */	stw r0, 0x14(r1)
-/* 804DB944 004A4F04  4B F5 A5 95 */	bl mtRand__Fv
+/* 804DB944 004A4F04  4B F5 A5 95 */	bl mtRand
 /* 804DB948 004A4F08  6C 63 80 00 */	xoris r3, r3, 0x8000
 /* 804DB94C 004A4F0C  3C 00 43 30 */	lis r0, 0x4330
 /* 804DB950 004A4F10  90 01 00 08 */	stw r0, 8(r1)
@@ -404,7 +403,7 @@ randF__12CERandomizerFv:
 
 .global rand__12CERandomizerFv
 rand__12CERandomizerFv:
-/* 804DB97C 004A4F3C  4B F5 A5 5C */	b mtRand__Fv
+/* 804DB97C 004A4F3C  4B F5 A5 5C */	b mtRand
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

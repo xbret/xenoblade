@@ -29,6 +29,10 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfTaskMain.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfTFile.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCamEvent.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCamDirectionIntf.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCamLookatIntf.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCamTargetIntf.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCam.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCamFollow.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_80074F4C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_8007C0F8.o \
@@ -996,7 +1000,8 @@ MM_O_FILES :=\
 	$(BUILD_DIR)/asm/mm/code_80432678.o \
 	$(BUILD_DIR)/asm/mm/code_80433300.o \
 	$(BUILD_DIR)/asm/mm/Operators.o \
-	$(BUILD_DIR)/asm/mm/code_80434F94.o \
+	$(BUILD_DIR)/asm/mm/MTRand.o \
+	$(BUILD_DIR)/asm/mm/Globals1.o \
 	$(BUILD_DIR)/asm/mm/code_80435D28.o \
 	$(BUILD_DIR)/asm/mm/code_80435DF8.o \
 	$(BUILD_DIR)/asm/mm/code_80435E70.o \

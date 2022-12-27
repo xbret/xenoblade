@@ -3038,7 +3038,7 @@ __vt__CTaskColiManager:
 	.4byte __RTTI__CTaskColiManager
 	.4byte 0
 	.4byte func_804B4B78
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_804B4D50
 	.4byte func_804B4D54
 	.4byte func_804B4D58
@@ -3063,7 +3063,7 @@ __vt__CTTask_CTaskColiManager:
 	.4byte __RTTI__CTTask_CTaskColiManager
 	.4byte 0
 	.4byte func_804B4B20
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_804B58FC

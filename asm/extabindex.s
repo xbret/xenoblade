@@ -2276,16 +2276,16 @@ lbl_80021020:
 	.4byte func_8006B310
 	.4byte 0x000000DC
 	.4byte lbl_8000806C
-	.4byte func_8006B418
+	.4byte CfCamDirectionIntf_setDir
 	.4byte 0x00000074
 	.4byte lbl_80008088
-	.4byte func_8006B48C
+	.4byte CfCamDirectionIntf_setLookat
 	.4byte 0x0000007C
 	.4byte lbl_80008090
-	.4byte func_8006B53C
+	.4byte CamLookatIntf_setDir
 	.4byte 0x00000074
 	.4byte lbl_80008098
-	.4byte func_8006B608
+	.4byte CfCamTargetIntf_setDir
 	.4byte 0x00000074
 	.4byte lbl_800080A0
 	.4byte func_8006B6C8
@@ -7340,7 +7340,7 @@ lbl_80021020:
 	.4byte func_80145AA8
 	.4byte 0x00000074
 	.4byte lbl_8000CFDC
-	.4byte func_80145B1C
+	.4byte __ct__cf_CBattleState
 	.4byte 0x000000A8
 	.4byte lbl_8000CFE4
 	.4byte func_80145BC4
@@ -7427,7 +7427,7 @@ lbl_80021020:
 	.4byte func_8014A86C
 	.4byte 0x0000008C
 	.4byte lbl_8000D194
-	.4byte func_8014A904
+	.4byte __ct__cf_CAIAction
 	.4byte 0x0000010C
 	.4byte lbl_8000D19C
 	.4byte func_8014AE00
@@ -7469,7 +7469,7 @@ lbl_80021020:
 	.4byte func_8015396C
 	.4byte 0x00000280
 	.4byte lbl_8000D324
-	.4byte func_80153BEC
+	.4byte __ct__cf__sArtsSet
 	.4byte 0x00000044
 	.4byte lbl_8000D32C
 	.4byte func_80153CFC
@@ -9611,7 +9611,7 @@ lbl_80021020:
 	.4byte func_801A3728
 	.4byte 0x0000004C
 	.4byte lbl_8000F8CC
-	.4byte func_801A3774
+	.4byte __dt__cf_CVision
 	.4byte 0x00000098
 	.4byte lbl_8000F8D4
 	.4byte func_801A380C
@@ -19136,7 +19136,7 @@ lbl_80021020:
 	.4byte ThrowContext$7ExPPC_ThrowHandler
 	.4byte 0x00000408
 	.4byte lbl_8001BF6C
-	.4byte AsinRad
+	.4byte func_80432678
 	.4byte 0x0000093C
 	.4byte lbl_8001BF80
 	.4byte func_80432FB4
@@ -19208,16 +19208,16 @@ lbl_80021020:
 	.4byte func_80435220
 	.4byte 0x0000017C
 	.4byte lbl_8001C038
-	.4byte func_8043539C
+	.4byte MTRand_getInstance
 	.4byte 0x00000238
 	.4byte lbl_8001C040
 	.4byte func_804355D4
 	.4byte 0x00000214
 	.4byte lbl_8001C048
-	.4byte func_804357E8
+	.4byte MTRand_nextMt
 	.4byte 0x000002F4
 	.4byte lbl_8001C050
-	.4byte func_80435ADC
+	.4byte MTRand_rand
 	.4byte 0x00000080
 	.4byte lbl_8001C058
 	.4byte func_80435B5C
@@ -19232,7 +19232,7 @@ lbl_80021020:
 	.4byte func_80435EA4
 	.4byte 0x00000034
 	.4byte lbl_8001C078
-	.4byte mtRand__Fv
+	.4byte mtRand
 	.4byte 0x00000024
 	.4byte lbl_8001C080
 	.4byte func_80435EFC
@@ -19808,10 +19808,10 @@ lbl_80021020:
 	.4byte func_80446538
 	.4byte 0x00000040
 	.4byte lbl_8001C99C
-	.4byte func_804466E0
+	.4byte __ct__CChildListNode
 	.4byte 0x00000054
 	.4byte lbl_8001C9A4
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0x00000038
 	.4byte lbl_8001C9AC
 	.4byte func_80446780

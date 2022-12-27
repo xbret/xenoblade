@@ -7,7 +7,7 @@ __vt__cf_CfTaskMain:
 	.4byte __RTTI__cf_CfTaskMain
 	.4byte 0
 	.4byte func_80069768
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_800697C4
 	.4byte func_800697C8
 	.4byte func_800697CC
@@ -68,7 +68,7 @@ __vt__CTTask_cf_CfTaskMain:
 	.4byte __RTTI__CTTask_cf_CfTaskMain
 	.4byte 0
 	.4byte func_80069710
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_800698B4
@@ -194,10 +194,10 @@ cf_CfCamEvent_hierarchy:
 __vt__cf_CfCamTargetIntf:
 	.4byte __RTTI__cf_CfCamTargetIntf
 	.4byte 0
-	.4byte func_8006B5D4
-	.4byte func_8006B5D8
-	.4byte func_8006B608
-	.4byte func_8006B67C
+	.4byte CfCamTargetIntf_update
+	.4byte CfCamTargetIntf_setPos
+	.4byte CfCamTargetIntf_setDir
+	.4byte CfCamTargetIntf_setLookat
 
 .global cf_CfCamTargetIntf_hierarchy
 cf_CfCamTargetIntf_hierarchy:
@@ -213,10 +213,10 @@ cf_CfCamTargetIntf_hierarchy:
 __vt__cf_CfCamLookatIntf:
 	.4byte __RTTI__cf_CfCamLookatIntf
 	.4byte 0
-	.4byte func_8006B508
-	.4byte func_8006B50C
-	.4byte func_8006B53C
-	.4byte func_8006B5B0
+	.4byte CamLookatIntf_update
+	.4byte CamLookatIntf_setPos
+	.4byte CamLookatIntf_setDir
+	.4byte CamLookatIntf_setLookat
 
 .global cf_CfCamLookatIntf_hierarchy
 cf_CfCamLookatIntf_hierarchy:
@@ -230,10 +230,10 @@ cf_CfCamLookatIntf_hierarchy:
 __vt__cf_CfCamDirectionIntf:
 	.4byte __RTTI__cf_CfCamDirectionIntf
 	.4byte 0
-	.4byte func_8006B3EC
-	.4byte func_8006B3F0
-	.4byte func_8006B418
-	.4byte func_8006B48C
+	.4byte CfCamDirectionIntf_update
+	.4byte CfCamDirectionIntf_setPos
+	.4byte CfCamDirectionIntf_setDir
+	.4byte CfCamDirectionIntf_setLookat
 
 .global cf_CfCamDirectionIntf_hierarchy
 cf_CfCamDirectionIntf_hierarchy:
@@ -5894,7 +5894,7 @@ __vt__CMainMenu:
 	.4byte __RTTI__CMainMenu
 	.4byte 0
 	.4byte func_800FED68
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_800FEE00
 	.4byte func_800FEE5C
 	.4byte func_80101F70
@@ -5994,7 +5994,7 @@ __vt__CTTask_IUICf:
 	.4byte __RTTI__CTTask_IUICf
 	.4byte 0
 	.4byte func_800FECB4
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_80101F70
@@ -6095,7 +6095,7 @@ __vt__CMenuArtsSelect:
 	.4byte __RTTI__CMenuArtsSelect
 	.4byte 0
 	.4byte func_8010235C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_801023DC
 	.4byte func_80103038
 	.4byte func_80103280
@@ -6184,7 +6184,7 @@ __vt__CTTask_IUIBattle:
 	.4byte __RTTI__CTTask_IUIBattle
 	.4byte 0
 	.4byte func_801022A8
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_80108BA0
@@ -6224,7 +6224,7 @@ __vt__CMenuBattleDamage:
 	.4byte __RTTI__CMenuBattleDamage
 	.4byte 0
 	.4byte func_80108E28
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80108E9C
 	.4byte func_80109084
 	.4byte func_80109160
@@ -6295,7 +6295,7 @@ __vt__CMenuBattlePlayerState:
 	.4byte __RTTI__CMenuBattlePlayerState
 	.4byte 0
 	.4byte func_8010B484
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8010B524
 	.4byte func_8010C180
 	.4byte func_8010C330
@@ -6372,7 +6372,7 @@ __vt__CMenuEnemyState:
 	.4byte __RTTI__CMenuEnemyState
 	.4byte 0
 	.4byte func_8010F3C0
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8010F448
 	.4byte func_8010FC70
 	.4byte func_8010FDAC
@@ -6449,7 +6449,7 @@ __vt__CMenuFade:
 	.4byte __RTTI__CMenuFade
 	.4byte 0
 	.4byte func_80113700
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80113774
 	.4byte func_801139A4
 	.4byte func_80113A24
@@ -6520,7 +6520,7 @@ __vt__CMenuKeyAssign:
 	.4byte __RTTI__CMenuKeyAssign
 	.4byte 0
 	.4byte func_80113E50
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80113EC4
 	.4byte func_80113FA8
 	.4byte func_80114028
@@ -6681,7 +6681,7 @@ __vt__CMenuMiniMap2:
 	.4byte __RTTI__CMenuMiniMap2
 	.4byte 0
 	.4byte func_8011B6D4
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8011B778
 	.4byte func_8011BB18
 	.4byte func_8011BBCC
@@ -6950,7 +6950,7 @@ __vt__CMenuQuestLog:
 	.4byte __RTTI__CMenuQuestLog
 	.4byte 0
 	.4byte func_8011C52C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8011C5B0
 	.4byte func_8011CA4C
 	.4byte func_8011CAD4
@@ -7037,7 +7037,7 @@ __vt__CArrow3D:
 	.4byte __RTTI__CArrow3D
 	.4byte 0
 	.4byte func_80120EF4
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80121F14
 	.4byte func_80121EA4
 	.4byte func_80121EA0
@@ -7069,7 +7069,7 @@ __vt__CTTask_CArrow3D:
 	.4byte __RTTI__CTTask_CArrow3D
 	.4byte 0
 	.4byte func_8011DBE0
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_801220AC
@@ -7093,7 +7093,7 @@ __vt__CMenuSymbolMark:
 	.4byte __RTTI__CMenuSymbolMark
 	.4byte 0
 	.4byte func_8011D9C0
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8011DA34
 	.4byte func_8011DC38
 	.4byte func_8011DD04
@@ -7310,7 +7310,7 @@ __vt__CQuestWindow:
 	.4byte __RTTI__CQuestWindow
 	.4byte 0
 	.4byte func_801223B0
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80122490
 	.4byte func_80122524
 	.4byte func_8012453C
@@ -7381,7 +7381,7 @@ __vt__IUIWindow:
 	.4byte __RTTI__IUIWindow
 	.4byte 0
 	.4byte func_8012235C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_8012453C
@@ -7406,7 +7406,7 @@ __vt__CTTask_IUIWindow:
 	.4byte __RTTI__CTTask_IUIWindow
 	.4byte 0
 	.4byte func_8012230C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_8012453C
@@ -7429,7 +7429,7 @@ __vt__CSysWinSelect:
 	.4byte __RTTI__CSysWinSelect
 	.4byte 0
 	.4byte func_80124CD0
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80124D50
 	.4byte func_80124E0C
 	.4byte func_80124E74
@@ -7500,7 +7500,7 @@ __vt__CSystemWindow:
 	.4byte __RTTI__CSystemWindow
 	.4byte 0
 	.4byte func_80124710
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80124784
 	.4byte func_801248A0
 	.4byte func_80124908
@@ -8397,7 +8397,7 @@ __vt__CTalkWindow:
 	.4byte __RTTI__CTalkWindow
 	.4byte 0
 	.4byte func_8012BD5C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8012BDDC
 	.4byte func_8012C7F8
 	.4byte func_8012C8A8
@@ -8480,7 +8480,7 @@ __vt__CUIBattleManager:
 	.4byte __RTTI__CUIBattleManager
 	.4byte 0
 	.4byte func_8012E34C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8012E428
 	.4byte func_8012E534
 	.4byte func_8012E79C
@@ -8562,7 +8562,7 @@ __vt__CUIBattleManager_CTest:
 	.4byte __RTTI__CUIBattleManager_CTest
 	.4byte 0
 	.4byte func_8012FF08
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8012FDE4
 	.4byte func_8012FDE0
 	.4byte func_8012FDDC
@@ -8587,7 +8587,7 @@ __vt__CTTask_CUIBattleManager_CTest:
 	.4byte __RTTI__CTTask_CUIBattleManager_CTest
 	.4byte 0
 	.4byte func_8012E4DC
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_8012FDE8
@@ -8610,7 +8610,7 @@ __vt__CTTask_CUIBattleManager:
 	.4byte __RTTI__CTTask_CUIBattleManager
 	.4byte 0
 	.4byte func_8012E188
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_8012FE78
@@ -8645,7 +8645,7 @@ __vt__CUICfManager:
 	.4byte __RTTI__CUICfManager
 	.4byte 0
 	.4byte func_801322F4
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_801323F4
 	.4byte func_8013272C
 	.4byte func_801327D0
@@ -8734,7 +8734,7 @@ __vt__CUICfManager_CTest:
 	.4byte __RTTI__CUICfManager_CTest
 	.4byte 0
 	.4byte func_80135F60
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80135E3C
 	.4byte func_80135E38
 	.4byte func_80135E34
@@ -8759,7 +8759,7 @@ __vt__CTTask_CUICfManager_CTest:
 	.4byte __RTTI__CTTask_CUICfManager_CTest
 	.4byte 0
 	.4byte func_801326D4
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_80135E40
@@ -8782,7 +8782,7 @@ __vt__CTTask_CUICfManager:
 	.4byte __RTTI__CTTask_CUICfManager
 	.4byte 0
 	.4byte func_80132130
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_80135ED0
@@ -8871,7 +8871,7 @@ __vt__CUIWindowManager:
 	.4byte __RTTI__CUIWindowManager
 	.4byte 0
 	.4byte func_8013C400
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8013C554
 	.4byte func_8013C678
 	.4byte func_8013C6D8
@@ -8923,7 +8923,7 @@ __vt__CUIWindowManager_CTest:
 	.4byte __RTTI__CUIWindowManager_CTest
 	.4byte 0
 	.4byte func_8013F1D8
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8013F0B4
 	.4byte func_8013F0B0
 	.4byte func_8013F0AC
@@ -8948,7 +8948,7 @@ __vt__CTTask_CUIWindowManager_CTest:
 	.4byte __RTTI__CTTask_CUIWindowManager_CTest
 	.4byte 0
 	.4byte func_8013C620
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_8013F0B8
@@ -8971,7 +8971,7 @@ __vt__CTTask_CUIWindowManager:
 	.4byte __RTTI__CTTask_CUIWindowManager
 	.4byte 0
 	.4byte func_8013C23C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_8013F148
@@ -9054,7 +9054,7 @@ __vt__CMenuUpdate:
 	.4byte __RTTI__CMenuUpdate
 	.4byte 0
 	.4byte func_80142774
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_801427F4
 	.4byte func_80142964
 	.4byte func_801429E4
@@ -9125,7 +9125,7 @@ __vt__CMenuLandTelop:
 	.4byte __RTTI__CMenuLandTelop
 	.4byte 0
 	.4byte func_80144790
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80144804
 	.4byte func_80144860
 	.4byte func_801448E0
@@ -9236,7 +9236,7 @@ __vt__CMenuGetItem:
 	.4byte __RTTI__CMenuGetItem
 	.4byte 0
 	.4byte func_80149A5C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80149AD0
 	.4byte func_80149DC4
 	.4byte func_80149E50
@@ -10787,7 +10787,7 @@ __vt__CCol6Invite:
 	.4byte __RTTI__CCol6Invite
 	.4byte 0
 	.4byte func_80163D08
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80163D68
 	.4byte func_80163E68
 	.4byte func_80163E78
@@ -10850,7 +10850,7 @@ __vt__CCol6System:
 	.4byte __RTTI__CCol6System
 	.4byte 0
 	.4byte func_8015EBB4
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8015EC58
 	.4byte func_8015EE2C
 	.4byte func_8015EF08
@@ -10921,7 +10921,7 @@ __vt__CCol6Hint:
 	.4byte __RTTI__CCol6Hint
 	.4byte 0
 	.4byte func_8015D594
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8015D620
 	.4byte func_8015D72C
 	.4byte func_8015D7DC
@@ -10992,7 +10992,7 @@ __vt__CCol6CheckBat:
 	.4byte __RTTI__CCol6CheckBat
 	.4byte 0
 	.4byte func_8015D0D4
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8015D134
 	.4byte func_8015D138
 	.4byte func_8015D144
@@ -11368,7 +11368,7 @@ __vt__cf_CTaskREvent:
 	.4byte __RTTI__cf_CTaskREvent
 	.4byte 0
 	.4byte func_80164314
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80164E20
 	.4byte func_8016503C
 	.4byte func_80165188
@@ -11445,7 +11445,7 @@ __vt__CTTask_cf_CTaskREvent:
 	.4byte __RTTI__CTTask_cf_CTaskREvent
 	.4byte 0
 	.4byte func_801642BC
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_80166634
@@ -11526,7 +11526,7 @@ __vt__CMenuItem:
 	.4byte __RTTI__CMenuItem
 	.4byte 0
 	.4byte func_80166838
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_801668C4
 	.4byte func_80167624
 	.4byte func_8016769C
@@ -11661,7 +11661,7 @@ __vt__cf_CTaskREvtSequence:
 	.4byte __RTTI__cf_CTaskREvtSequence
 	.4byte 0
 	.4byte func_80168344
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8016A3E0
 	.4byte func_8016A42C
 	.4byte func_8016C740
@@ -11726,7 +11726,7 @@ __vt__CTTask_cf_CTaskREvtSequence:
 	.4byte __RTTI__CTTask_cf_CTaskREvtSequence
 	.4byte 0
 	.4byte func_80168254
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_8016C740
@@ -12818,7 +12818,7 @@ __vt__CMenuZeal:
 	.4byte __RTTI__CMenuZeal
 	.4byte 0
 	.4byte func_8017EEE8
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8017EF5C
 	.4byte func_8017F358
 	.4byte func_8017F43C
@@ -13506,7 +13506,7 @@ __vt__CMenuPTGauge:
 	.4byte __RTTI__CMenuPTGauge
 	.4byte 0
 	.4byte func_80186FEC
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80187060
 	.4byte func_8018720C
 	.4byte func_8018728C
@@ -13577,7 +13577,7 @@ __vt__CMenuSelectShop:
 	.4byte __RTTI__CMenuSelectShop
 	.4byte 0
 	.4byte func_80189ED8
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80189F50
 	.4byte func_8018A0BC
 	.4byte func_8018A12C
@@ -13648,7 +13648,7 @@ __vt__CMenuShopSell:
 	.4byte __RTTI__CMenuShopSell
 	.4byte 0
 	.4byte func_8018A6F8
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8018A770
 	.4byte func_8018B160
 	.4byte func_8018B1CC
@@ -13683,7 +13683,7 @@ __vt__CMenuShopBuy:
 	.4byte __RTTI__CMenuShopBuy
 	.4byte 0
 	.4byte func_8018B798
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8018B810
 	.4byte func_8018BF40
 	.4byte func_8018BFAC
@@ -13937,7 +13937,7 @@ __vt__CMenuPTState:
 	.4byte __RTTI__CMenuPTState
 	.4byte 0
 	.4byte func_80191420
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_801914A0
 	.4byte func_80192840
 	.4byte func_801928B8
@@ -14256,7 +14256,7 @@ __vt__CMenuBattleMode:
 	.4byte __RTTI__CMenuBattleMode
 	.4byte 0
 	.4byte func_8019FE50
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8019FEC4
 	.4byte func_8019FFF8
 	.4byte func_801A0078
@@ -14335,7 +14335,7 @@ __vt__CSimpleEveTalkWin:
 	.4byte __RTTI__CSimpleEveTalkWin
 	.4byte 0
 	.4byte func_801A1964
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_801A19D8
 	.4byte func_801A1DF8
 	.4byte func_801A1EBC
@@ -14406,7 +14406,7 @@ __vt__cf_CTaskCulling:
 	.4byte __RTTI__cf_CTaskCulling
 	.4byte 0
 	.4byte func_801A2B58
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_801A2E40
 	.4byte func_801A2EA0
 	.4byte func_801A2F24
@@ -14479,7 +14479,7 @@ __vt__CTTask_cf_CTaskCulling:
 	.4byte __RTTI__CTTask_cf_CTaskCulling
 	.4byte 0
 	.4byte func_801A2B00
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_801A2FA8
@@ -14663,7 +14663,7 @@ lbl_805369E8:
 __vt__cf_CVision:
 	.4byte __RTTI__cf_CVision
 	.4byte 0
-	.4byte func_801A3774
+	.4byte __dt__cf_CVision
 	.4byte func_801A924C
 	.4byte func_801A6BCC
 	.4byte func_801A70DC
@@ -14856,7 +14856,7 @@ __vt__CMenuVision:
 	.4byte __RTTI__CMenuVision
 	.4byte 0
 	.4byte func_801AC014
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_801AC210
 	.4byte func_801AC6C8
 	.4byte func_801AC77C
@@ -14927,7 +14927,7 @@ __vt__CMenuBattleCommu:
 	.4byte __RTTI__CMenuBattleCommu
 	.4byte 0
 	.4byte func_801AFEF4
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_801AFF68
 	.4byte func_801B037C
 	.4byte func_801B03FC
@@ -15129,7 +15129,7 @@ __vt__CMenuGetItemMulti:
 	.4byte __RTTI__CMenuGetItemMulti
 	.4byte 0
 	.4byte func_801B2954
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_801B29EC
 	.4byte func_801B3F68
 	.4byte func_801B40C4
@@ -15264,7 +15264,7 @@ __vt__CMenuKizunaTalk:
 	.4byte __RTTI__CMenuKizunaTalk
 	.4byte 0
 	.4byte func_801BCB40
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_801BCBB8
 	.4byte func_801BCC20
 	.4byte func_801BCCE4
@@ -15350,7 +15350,7 @@ __vt__CMenuItemExchange:
 	.4byte __RTTI__CMenuItemExchange
 	.4byte 0
 	.4byte func_801BDEC8
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_801BDF4C
 	.4byte func_801BEBC8
 	.4byte func_801BEC3C
@@ -15405,7 +15405,7 @@ __vt__cf_CfPadTask:
 	.4byte __RTTI__cf_CfPadTask
 	.4byte 0
 	.4byte func_801C19F0
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_801C1A90
 	.4byte func_801C1AA4
 	.4byte func_801C1F68
@@ -15442,7 +15442,7 @@ __vt__CTTask_cf_CfPadTask:
 	.4byte __RTTI__CTTask_cf_CfPadTask
 	.4byte 0
 	.4byte func_801C1998
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_801C2B5C
@@ -17798,7 +17798,7 @@ __vt__CMenuMakeCrystal:
 	.4byte __RTTI__CMenuMakeCrystal
 	.4byte 0
 	.4byte func_80210CE0
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80210D4C
 	.4byte func_802121EC
 	.4byte func_80212260
@@ -18342,7 +18342,7 @@ __vt__CMenuQstCnt:
 	.4byte __RTTI__CMenuQstCnt
 	.4byte 0
 	.4byte func_802264B0
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80226510
 	.4byte func_80226700
 	.4byte func_80226780
@@ -18854,7 +18854,7 @@ __vt__CMenuArtsSet:
 	.4byte __RTTI__CMenuArtsSet
 	.4byte 0
 	.4byte func_8022EB58
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8022EBE4
 	.4byte func_8022F1BC
 	.4byte func_8022F228
@@ -19152,7 +19152,7 @@ __vt__cf_CfNandManager:
 	.4byte __RTTI__cf_CfNandManager
 	.4byte 0
 	.4byte func_8023C018
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8023C0FC
 	.4byte func_8023C108
 	.4byte func_8023C154
@@ -19221,7 +19221,7 @@ __vt__CTTask_cf_CfNandManager:
 	.4byte __RTTI__CTTask_cf_CfNandManager
 	.4byte 0
 	.4byte func_8023BF74
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_80240560
@@ -19262,7 +19262,7 @@ __vt__CMenuMapSelect:
 	.4byte __RTTI__CMenuMapSelect
 	.4byte 0
 	.4byte func_8024146C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80241510
 	.4byte func_80241DB4
 	.4byte func_80241E3C
@@ -19591,7 +19591,7 @@ __vt__CMenuMapSelectSC:
 	.4byte __RTTI__CMenuMapSelectSC
 	.4byte 0
 	.4byte func_80250DF0
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80250E68
 	.4byte func_802512C8
 	.4byte func_80251340
@@ -19626,7 +19626,7 @@ __vt__CMenuPause:
 	.4byte __RTTI__CMenuPause
 	.4byte 0
 	.4byte func_80251DF8
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80251E6C
 	.4byte func_802521FC
 	.4byte func_8025228C
@@ -19697,7 +19697,7 @@ __vt__CMenuCollepedia:
 	.4byte __RTTI__CMenuCollepedia
 	.4byte 0
 	.4byte func_80252710
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80252788
 	.4byte func_80252ACC
 	.4byte func_80252B38
@@ -19865,7 +19865,7 @@ __vt__CMenuKizunagram:
 	.4byte __RTTI__CMenuKizunagram
 	.4byte 0
 	.4byte func_80256A54
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80256AE4
 	.4byte func_80256FA0
 	.4byte func_8025703C
@@ -20125,7 +20125,7 @@ __vt__CMenuPassiveSkill:
 	.4byte __RTTI__CMenuPassiveSkill
 	.4byte 0
 	.4byte func_80263228
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_802632A0
 	.4byte func_8026370C
 	.4byte func_80263778
@@ -20301,7 +20301,7 @@ __vt__CMenuBattleEnd:
 	.4byte __RTTI__CMenuBattleEnd
 	.4byte 0
 	.4byte func_8026F4CC
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8026F540
 	.4byte func_8026F71C
 	.4byte func_8026F79C
@@ -20372,7 +20372,7 @@ __vt__CMenuPlayAward:
 	.4byte __RTTI__CMenuPlayAward
 	.4byte 0
 	.4byte func_8026FD7C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8026FDF4
 	.4byte func_802700E8
 	.4byte func_80270154
@@ -20452,7 +20452,7 @@ __vt__CMenuKizunaTalkList:
 	.4byte __RTTI__CMenuKizunaTalkList
 	.4byte 0
 	.4byte func_80271E98
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80271F10
 	.4byte func_802721F4
 	.4byte func_80272260
@@ -20532,7 +20532,7 @@ __vt__CSysWinBuff:
 	.4byte __RTTI__CSysWinBuff
 	.4byte 0
 	.4byte func_802744D4
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80274548
 	.4byte func_80274684
 	.4byte func_80274704
@@ -20771,7 +20771,7 @@ __vt__CMenuLvUp:
 	.4byte __RTTI__CMenuLvUp
 	.4byte 0
 	.4byte func_802759C8
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80275A3C
 	.4byte func_80275BE4
 	.4byte func_80275CC0
@@ -20996,7 +20996,7 @@ __vt__CSysWinScenarioLog:
 	.4byte __RTTI__CSysWinScenarioLog
 	.4byte 0
 	.4byte func_8027E5B4
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8027E628
 	.4byte func_8027E6DC
 	.4byte func_8027E7D0
@@ -21298,7 +21298,7 @@ __vt__CMenuSave:
 	.4byte __RTTI__CMenuSave
 	.4byte 0
 	.4byte func_8028DD9C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8028DE14
 	.4byte func_8028E1D4
 	.4byte func_8028E25C
@@ -21423,7 +21423,7 @@ __vt__CMenuPTChangeNotice:
 	.4byte __RTTI__CMenuPTChangeNotice
 	.4byte 0
 	.4byte func_80293224
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_802932B0
 	.4byte func_8029330C
 	.4byte func_802933CC
@@ -21509,7 +21509,7 @@ __vt__CSysWinSave:
 	.4byte __RTTI__CSysWinSave
 	.4byte 0
 	.4byte func_80293FB8
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80294044
 	.4byte func_802941F0
 	.4byte func_80294274
@@ -21601,7 +21601,7 @@ __vt__CTaskGamePic:
 	.4byte __RTTI__CTaskGamePic
 	.4byte 0
 	.4byte func_80294E04
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80294F24
 	.4byte func_80294F44
 	.4byte func_80294FB8
@@ -21666,7 +21666,7 @@ __vt__CTTask_CTaskGamePic:
 	.4byte __RTTI__CTTask_CTaskGamePic
 	.4byte 0
 	.4byte func_80294DB4
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_802954B4
@@ -21689,7 +21689,7 @@ __vt__CTaskGameEvt:
 	.4byte __RTTI__CTaskGameEvt
 	.4byte 0
 	.4byte func_80295650
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_802956AC
 	.4byte func_802956CC
 	.4byte func_802956E4
@@ -21754,7 +21754,7 @@ __vt__CTTask_CTaskGameEvt:
 	.4byte __RTTI__CTTask_CTaskGameEvt
 	.4byte 0
 	.4byte func_80295600
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_802957D8
@@ -22188,7 +22188,7 @@ __vt__CMenuTutorial:
 	.4byte __RTTI__CMenuTutorial
 	.4byte 0
 	.4byte func_8029A1D8
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8029A244
 	.4byte func_8029A3FC
 	.4byte func_8029A498
@@ -22268,7 +22268,7 @@ __vt__CMenuOption:
 	.4byte __RTTI__CMenuOption
 	.4byte 0
 	.4byte func_8029B5C8
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8029B640
 	.4byte func_8029B960
 	.4byte func_8029B9CC
@@ -22616,7 +22616,7 @@ __vt__CMenuSkipTimer:
 	.4byte __RTTI__CMenuSkipTimer
 	.4byte 0
 	.4byte func_8029E8A4
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8029E91C
 	.4byte func_8029EBB4
 	.4byte func_8029EC20
@@ -23382,7 +23382,7 @@ __vt__CMenuBattleChain:
 	.4byte __RTTI__CMenuBattleChain
 	.4byte 0
 	.4byte func_802A9C94
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_802A9D08
 	.4byte func_802A9EBC
 	.4byte func_802A9F3C
@@ -23784,7 +23784,7 @@ __vt__CMenuTutorialList:
 	.4byte __RTTI__CMenuTutorialList
 	.4byte 0
 	.4byte func_802ABE9C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_802ABF20
 	.4byte func_802AC21C
 	.4byte func_802AC2A0
@@ -24534,7 +24534,7 @@ __vt__CMenuGCItem:
 	.4byte __RTTI__CMenuGCItem
 	.4byte 0
 	.4byte func_802B03D0
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_802B045C
 	.4byte func_802B09AC
 	.4byte func_802B0A10
@@ -24616,7 +24616,7 @@ __vt__CMenuGameClear:
 	.4byte __RTTI__CMenuGameClear
 	.4byte 0
 	.4byte func_802B0F18
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_802B0FA4
 	.4byte func_802B13BC
 	.4byte func_802B1440
@@ -24693,7 +24693,7 @@ __vt__CUIErrMesWin:
 	.4byte __RTTI__CUIErrMesWin
 	.4byte 0
 	.4byte func_802B4C2C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_802B4C9C
 	.4byte func_802B4CF8
 	.4byte func_802B4D48
@@ -24761,7 +24761,7 @@ __vt__CTTask_CUIErrMesWin:
 	.4byte __RTTI__CTTask_CUIErrMesWin
 	.4byte 0
 	.4byte func_802B4BD4
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_802B50A0
@@ -24820,7 +24820,7 @@ __vt__CMenuTitle:
 	.4byte __RTTI__CMenuTitle
 	.4byte 0
 	.4byte func_802B5C20
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_802B5C90
 	.4byte func_802B5CE0
 	.4byte func_802B5D34
@@ -24888,7 +24888,7 @@ __vt__CTTask_CMenuTitle:
 	.4byte __RTTI__CTTask_CMenuTitle
 	.4byte 0
 	.4byte func_802B5BC8
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_802B6284

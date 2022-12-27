@@ -9,7 +9,7 @@ __ct__8CProcessFv:
 /* 80444A20 0040DFE0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80444A24 0040DFE4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80444A28 0040DFE8  7C 7F 1B 78 */	mr r31, r3
-/* 80444A2C 0040DFEC  48 00 1C B5 */	bl func_804466E0
+/* 80444A2C 0040DFEC  48 00 1C B5 */	bl __ct__CChildListNode
 /* 80444A30 0040DFF0  3C 80 80 57 */	lis r4, __vt__CProcess@ha
 /* 80444A34 0040DFF4  38 00 00 00 */	li r0, 0
 /* 80444A38 0040DFF8  38 84 F3 D8 */	addi r4, r4, __vt__CProcess@l
@@ -21,7 +21,7 @@ __ct__8CProcessFv:
 /* 80444A50 0040E010  98 1F 00 39 */	stb r0, 0x39(r31)
 /* 80444A54 0040E014  98 1F 00 3A */	stb r0, 0x3a(r31)
 /* 80444A58 0040E018  98 1F 00 3B */	stb r0, 0x3b(r31)
-/* 80444A5C 0040E01C  48 00 1B A5 */	bl AppendAsChild__15CDoubleListNodeFP15CDoubleListNode
+/* 80444A5C 0040E01C  48 00 1B A5 */	bl CDoubleListNode_InsertEnd
 /* 80444A60 0040E020  7F E3 FB 78 */	mr r3, r31
 /* 80444A64 0040E024  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80444A68 0040E028  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -150,12 +150,12 @@ lbl_80444BD0:
 /* 80444BFC 0040E1BC  38 63 A4 04 */	addi r3, r3, lbl_8065A404@l
 lbl_80444C00:
 /* 80444C00 0040E1C0  7F A4 EB 78 */	mr r4, r29
-/* 80444C04 0040E1C4  48 00 1A 49 */	bl RemoveChild__15CDoubleListNodeFP15CDoubleListNode
+/* 80444C04 0040E1C4  48 00 1A 49 */	bl CDoubleListNode_Remove
 /* 80444C08 0040E1C8  48 00 00 10 */	b lbl_80444C18
 lbl_80444C0C:
 /* 80444C0C 0040E1CC  7F A4 EB 78 */	mr r4, r29
 /* 80444C10 0040E1D0  38 63 00 24 */	addi r3, r3, 0x24
-/* 80444C14 0040E1D4  48 00 1A 39 */	bl RemoveChild__15CDoubleListNodeFP15CDoubleListNode
+/* 80444C14 0040E1D4  48 00 1A 39 */	bl CDoubleListNode_Remove
 lbl_80444C18:
 /* 80444C18 0040E1D8  2C 1E 00 00 */	cmpwi r30, 0
 /* 80444C1C 0040E1DC  40 81 00 0C */	ble lbl_80444C28
@@ -204,7 +204,7 @@ func_80444C74:
 /* 80444CA4 0040E264  3C 60 80 66 */	lis r3, lbl_8065A404@ha
 /* 80444CA8 0040E268  7F A4 EB 78 */	mr r4, r29
 /* 80444CAC 0040E26C  38 63 A4 04 */	addi r3, r3, lbl_8065A404@l
-/* 80444CB0 0040E270  48 00 19 9D */	bl RemoveChild__15CDoubleListNodeFP15CDoubleListNode
+/* 80444CB0 0040E270  48 00 19 9D */	bl CDoubleListNode_Remove
 /* 80444CB4 0040E274  2C 1E 00 00 */	cmpwi r30, 0
 /* 80444CB8 0040E278  40 82 00 34 */	bne lbl_80444CEC
 /* 80444CBC 0040E27C  2C 1F 00 00 */	cmpwi r31, 0
@@ -212,25 +212,25 @@ func_80444C74:
 /* 80444CC4 0040E284  3C 60 80 66 */	lis r3, lbl_8065A424@ha
 /* 80444CC8 0040E288  7F A4 EB 78 */	mr r4, r29
 /* 80444CCC 0040E28C  38 63 A4 24 */	addi r3, r3, lbl_8065A424@l
-/* 80444CD0 0040E290  48 00 18 ED */	bl AppendAsHeader__15CDoubleListNodeFP15CDoubleListNode
+/* 80444CD0 0040E290  48 00 18 ED */	bl CDoubleListNode_InsertTop
 /* 80444CD4 0040E294  48 00 00 3C */	b lbl_80444D10
 lbl_80444CD8:
 /* 80444CD8 0040E298  3C 60 80 66 */	lis r3, lbl_8065A424@ha
 /* 80444CDC 0040E29C  7F A4 EB 78 */	mr r4, r29
 /* 80444CE0 0040E2A0  38 63 A4 24 */	addi r3, r3, lbl_8065A424@l
-/* 80444CE4 0040E2A4  48 00 19 1D */	bl AppendAsChild__15CDoubleListNodeFP15CDoubleListNode
+/* 80444CE4 0040E2A4  48 00 19 1D */	bl CDoubleListNode_InsertEnd
 /* 80444CE8 0040E2A8  48 00 00 28 */	b lbl_80444D10
 lbl_80444CEC:
 /* 80444CEC 0040E2AC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80444CF0 0040E2B0  41 82 00 14 */	beq lbl_80444D04
 /* 80444CF4 0040E2B4  7F A4 EB 78 */	mr r4, r29
 /* 80444CF8 0040E2B8  38 7E 00 24 */	addi r3, r30, 0x24
-/* 80444CFC 0040E2BC  48 00 18 C1 */	bl AppendAsHeader__15CDoubleListNodeFP15CDoubleListNode
+/* 80444CFC 0040E2BC  48 00 18 C1 */	bl CDoubleListNode_InsertTop
 /* 80444D00 0040E2C0  48 00 00 10 */	b lbl_80444D10
 lbl_80444D04:
 /* 80444D04 0040E2C4  7F A4 EB 78 */	mr r4, r29
 /* 80444D08 0040E2C8  38 7E 00 24 */	addi r3, r30, 0x24
-/* 80444D0C 0040E2CC  48 00 18 F5 */	bl AppendAsChild__15CDoubleListNodeFP15CDoubleListNode
+/* 80444D0C 0040E2CC  48 00 18 F5 */	bl CDoubleListNode_InsertEnd
 lbl_80444D10:
 /* 80444D10 0040E2D0  93 DD 00 14 */	stw r30, 0x14(r29)
 /* 80444D14 0040E2D4  7F A3 EB 78 */	mr r3, r29
@@ -278,17 +278,17 @@ lbl_80444D7C:
 /* 80444DA4 0040E364  3C 60 80 66 */	lis r3, lbl_8065A424@ha
 /* 80444DA8 0040E368  7F E4 FB 78 */	mr r4, r31
 /* 80444DAC 0040E36C  38 63 A4 24 */	addi r3, r3, lbl_8065A424@l
-/* 80444DB0 0040E370  48 00 18 9D */	bl RemoveChild__15CDoubleListNodeFP15CDoubleListNode
+/* 80444DB0 0040E370  48 00 18 9D */	bl CDoubleListNode_Remove
 /* 80444DB4 0040E374  48 00 00 10 */	b lbl_80444DC4
 lbl_80444DB8:
 /* 80444DB8 0040E378  7F E4 FB 78 */	mr r4, r31
 /* 80444DBC 0040E37C  38 63 00 24 */	addi r3, r3, 0x24
-/* 80444DC0 0040E380  48 00 18 8D */	bl RemoveChild__15CDoubleListNodeFP15CDoubleListNode
+/* 80444DC0 0040E380  48 00 18 8D */	bl CDoubleListNode_Remove
 lbl_80444DC4:
 /* 80444DC4 0040E384  3C 60 80 66 */	lis r3, lbl_8065A404@ha
 /* 80444DC8 0040E388  7F E4 FB 78 */	mr r4, r31
 /* 80444DCC 0040E38C  38 63 A4 04 */	addi r3, r3, lbl_8065A404@l
-/* 80444DD0 0040E390  48 00 18 31 */	bl AppendAsChild__15CDoubleListNodeFP15CDoubleListNode
+/* 80444DD0 0040E390  48 00 18 31 */	bl CDoubleListNode_InsertEnd
 /* 80444DD4 0040E394  38 00 00 00 */	li r0, 0
 /* 80444DD8 0040E398  90 1F 00 14 */	stw r0, 0x14(r31)
 /* 80444DDC 0040E39C  98 1F 00 38 */	stb r0, 0x38(r31)
@@ -2157,7 +2157,7 @@ __vt__CProcess:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte func_80444B38
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte 0

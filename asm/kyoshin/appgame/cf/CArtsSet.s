@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80153BEC
-func_80153BEC:
+.global __ct__cf__sArtsSet
+__ct__cf__sArtsSet:
 /* 80153BEC 0011D1AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80153BF0 0011D1B0  7C 08 02 A6 */	mflr r0
 /* 80153BF4 0011D1B4  3D 80 80 53 */	lis r12, __vt__cf__sArtsSet@ha

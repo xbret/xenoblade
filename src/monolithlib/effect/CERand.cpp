@@ -1,8 +1,5 @@
 #include "monolithlib/effect/CERand.hpp"
 
-CERandomizer CERand::randomizer;
-CERandomizerSimple CERand::randomizerSimple;
-
 CERandomizerSimple::CERandomizerSimple() {
     create(CERand::defaultSeed);
 }
@@ -10,31 +7,26 @@ CERandomizerSimple::CERandomizerSimple() {
 void CERandomizerSimple::create(int seed) {
     // Invalid seed = take from the global randomizer
     if (seed < 0) {
-        seedA = CERand::randomizerSimple.seedA;
+        seed1 = ceRandomizerSimple.seed1;
     }
     else {
-        seedA = seed;
+        seed1 = seed;
     }
 
-    seedB = seedA;
+    seed2 = seed1;
     age = 0.0f;
 }
 
-void CERandomizerSimple::execute(float pass) {
-    const float oldAge = age;
-
-    //Some unit of time to determine the age of the randomizer (usually 1.0)
-    age += pass;
+void CERandomizerSimple::execute(float time) {
+    float prevAge = age;
+    age += time;
     
     //Check if the randomizer age is not a new whole number
-    if ((int)oldAge == (int)age) {
-        //Copy seed B to seed A
-        seedA = seedB;
+    if ((int)prevAge == (int)age) {
+        seed1 = seed2;
     } else {
-        //Copy seed A to seed B at every new whole number of age
-        seedB = seedA;
+        seed2 = seed1;
 
-        //Generate new seed A every 32 units of age
         if (((int)age & 31) == 0) {
             rand();
         }
@@ -45,8 +37,8 @@ void CERand::init() {
     randomizerSimple.create(CERand::defaultSeed);
 }
 
-void CERand::execute(float pass) {
-    randomizerSimple.execute(pass);
+void CERand::execute(float time) {
+    randomizerSimple.execute(time);
 }
 
 void CERand::randVec(Vec3* v) {

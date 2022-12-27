@@ -3,8 +3,11 @@
 
 #include "types.h"
 #include "Vector3.h"
-#include "mm/mtRand.hpp"
 #include "stl/limits.h"
+
+extern "C"{
+    u32 mtRand();
+}
 
 class IRandomizer {
 public:
@@ -14,24 +17,26 @@ public:
     virtual float randSign() = 0;  //0x14
 };
 
+//Check if public is necessary for IRandomizer later
+//Also consider maybe omitting the unused constructors/destructors?
 class CERandomizer : public IRandomizer {
 public:
-    CERandomizer() {}
-    ~CERandomizer() {}
+    CERandomizer(){}
+    ~CERandomizer(){}
 
-    virtual u32 rand() {
+    virtual u32 rand(){
         return mtRand();
     }
 
-    virtual float randF() {
+    virtual float randF(){
         return (float)mtRand()/INT_MAX;
     }
 
-    virtual float randFHalf() {
+    virtual float randFHalf(){
         return ((float)mtRand()/INT_MAX) - 0.5f;
     }
 
-    virtual float randSign() {
+    virtual float randSign(){
         return (mtRand() % 2 != 0) ? 1.0f : -1.0f;
     }
 };
@@ -42,20 +47,20 @@ public:
     ~CERandomizerSimple() {}
 
     virtual u32 rand(){
-        u32 temp = seedA * 673 + 945;
-        seedA = (temp / 10) % 100003;
+        u32 temp = seed1 * 673 + 945;
+        seed1 = (temp / 10) % 100003;
         return temp % 10007;
     }
 
-    virtual float randF() {
-        return rand() / 10006.0f;
+    virtual float randF(){
+        return rand()/10006.0f;
     }
 
-    virtual float randFHalf() {
-        return (rand() / 10006.0f) - 0.5f;
+    virtual float randFHalf(){
+        return (rand()/10006.0f) - 0.5f;
     }
 
-    virtual float randSign() {
+    virtual float randSign(){
         return (rand() % 2 != 0) ? 1.0f : -1.0f;
     }
 
@@ -63,8 +68,8 @@ public:
     void execute(float);
 
 private:
-    u16 seedA; //0x4
-    u16 seedB; //0x6
+    u16 seed1; //0x4
+    u16 seed2; //0x6
     float age; //0x8
 };
 
@@ -75,10 +80,10 @@ public:
     static void randVec(Vec3*);
     static void randSignVec(Vec3*);
 
-public:
     static const int defaultSeed = 14992;
-    static CERandomizer randomizer;
-    static CERandomizerSimple randomizerSimple;
 };
+
+static CERandomizer ceRandomizer;
+static CERandomizerSimple ceRandomizerSimple;
 
 #endif

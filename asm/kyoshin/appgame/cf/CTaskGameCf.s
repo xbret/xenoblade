@@ -790,7 +790,7 @@ __vt__cf_CTaskGameCf:
 	.4byte __RTTI__cf_CTaskGameCf
 	.4byte 0
 	.4byte func_80044280
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_800443DC
 	.4byte func_800443E4
 	.4byte func_80044A28
@@ -815,7 +815,7 @@ __vt__CTTask_cf_CTaskGameCf:
 	.4byte __RTTI__CTTask_cf_CTaskGameCf
 	.4byte 0
 	.4byte func_80044230
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_80044A28

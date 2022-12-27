@@ -12405,7 +12405,7 @@ __vt__CTaskGame:
 	.4byte __RTTI__CTaskGame
 	.4byte 0
 	.4byte func_8004048C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80040510
 	.4byte func_800407DC
 	.4byte func_80043F28
@@ -12485,7 +12485,7 @@ __vt__CTTask_CTaskGame:
 	.4byte __RTTI__CTTask_CTaskGame
 	.4byte 0
 	.4byte func_8004043C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_80043F28

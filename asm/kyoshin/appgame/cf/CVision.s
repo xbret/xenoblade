@@ -212,7 +212,7 @@ func_801A33AC:
 /* 801A33E0 0016C9A0  90 03 00 08 */	stw r0, 8(r3)
 /* 801A33E4 0016C9A4  90 03 00 0C */	stw r0, 0xc(r3)
 /* 801A33E8 0016C9A8  38 63 00 10 */	addi r3, r3, 0x10
-/* 801A33EC 0016C9AC  4B FA 27 31 */	bl func_80145B1C
+/* 801A33EC 0016C9AC  4B FA 27 31 */	bl __ct__cf_CBattleState
 /* 801A33F0 0016C9B0  38 7F 15 F0 */	addi r3, r31, 0x15f0
 /* 801A33F4 0016C9B4  4B FD 1D E9 */	bl func_801751DC
 /* 801A33F8 0016C9B8  38 7F 16 68 */	addi r3, r31, 0x1668
@@ -232,7 +232,7 @@ lbl_801A3418:
 /* 801A342C 0016C9EC  7C 1B E0 40 */	cmplw r27, r28
 /* 801A3430 0016C9F0  41 80 FF E8 */	blt lbl_801A3418
 /* 801A3434 0016C9F4  38 7F 2C C8 */	addi r3, r31, 0x2cc8
-/* 801A3438 0016C9F8  4B FB 07 B5 */	bl func_80153BEC
+/* 801A3438 0016C9F8  4B FB 07 B5 */	bl __ct__cf__sArtsSet
 /* 801A343C 0016C9FC  3C 60 80 53 */	lis r3, __vt__cf_CArtsSet@ha
 /* 801A3440 0016CA00  3B 7F 2D 00 */	addi r27, r31, 0x2d00
 /* 801A3444 0016CA04  38 63 2D 90 */	addi r3, r3, __vt__cf_CArtsSet@l
@@ -457,8 +457,8 @@ lbl_801A375C:
 /* 801A376C 0016CD2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 801A3770 0016CD30  4E 80 00 20 */	blr 
 
-.global func_801A3774
-func_801A3774:
+.global __dt__cf_CVision
+__dt__cf_CVision:
 /* 801A3774 0016CD34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801A3778 0016CD38  7C 08 02 A6 */	mflr r0
 /* 801A377C 0016CD3C  2C 03 00 00 */	cmpwi r3, 0

@@ -5268,7 +5268,7 @@ __vt__CTaskGameEffAfter:
 	.4byte __RTTI__CTaskGameEffAfter
 	.4byte 0
 	.4byte func_800615FC
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_800615F8
 	.4byte func_800615F4
 	.4byte func_80061650
@@ -5293,7 +5293,7 @@ __vt__CTTask_CTaskGameEffAfter:
 	.4byte __RTTI__CTTask_CTaskGameEffAfter
 	.4byte 0
 	.4byte func_800615A0
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_80061650

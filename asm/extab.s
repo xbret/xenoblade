@@ -9271,7 +9271,7 @@ lbl_8000A61C:
 	.4byte 0
 	.4byte 0x0780001D
 	.4byte 0x0000219C
-	.4byte func_801A3774
+	.4byte __dt__cf_CVision
 	.4byte 0x0780001D
 	.4byte 0x0000216C
 	.4byte func_800D8EB0
@@ -9435,7 +9435,7 @@ lbl_8000A7E8:
 	.4byte 0
 	.4byte 0x0780001E
 	.4byte 0x0000219C
-	.4byte func_801A3774
+	.4byte __dt__cf_CVision
 	.4byte 0x0780001E
 	.4byte 0x0000216C
 	.4byte func_800D8EB0
@@ -9468,7 +9468,7 @@ lbl_8000A7E8:
 	.4byte func_800D8C9C
 	.4byte 0x0780001E
 	.4byte 0x0000219C
-	.4byte func_801A3774
+	.4byte __dt__cf_CVision
 	.4byte 0x8780001E
 	.4byte 0x0000216C
 	.4byte func_800D8EB0
@@ -9483,7 +9483,7 @@ lbl_8000A7E8:
 	.4byte func_800D8C5C
 	.4byte 0x0780001E
 	.4byte 0x0000219C
-	.4byte func_801A3774
+	.4byte __dt__cf_CVision
 	.4byte 0x0780001E
 	.4byte 0x0000216C
 	.4byte func_800D8EB0

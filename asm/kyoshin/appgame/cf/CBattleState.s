@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80145B1C
-func_80145B1C:
+.global __ct__cf_CBattleState
+__ct__cf_CBattleState:
 /* 80145B1C 0010F0DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80145B20 0010F0E0  7C 08 02 A6 */	mflr r0
 /* 80145B24 0010F0E4  3C 80 80 53 */	lis r4, __vt__cf_CBattleState@ha

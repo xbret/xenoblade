@@ -15,8 +15,8 @@ __ct__15CDoubleListNodeFv:
 /* 80446598 0040FB58  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8044659C 0040FB5C  4E 80 00 20 */	blr 
 
-.global Clear__15CDoubleListNodeFv
-Clear__15CDoubleListNodeFv:
+.global CDoubleListNode_Reset
+CDoubleListNode_Reset:
 /* 804465A0 0040FB60  38 80 00 00 */	li r4, 0
 /* 804465A4 0040FB64  38 00 FF FF */	li r0, -1
 /* 804465A8 0040FB68  90 83 00 00 */	stw r4, 0(r3)
@@ -25,8 +25,8 @@ Clear__15CDoubleListNodeFv:
 /* 804465B4 0040FB74  90 03 00 0C */	stw r0, 0xc(r3)
 /* 804465B8 0040FB78  4E 80 00 20 */	blr 
 
-.global AppendAsHeader__15CDoubleListNodeFP15CDoubleListNode
-AppendAsHeader__15CDoubleListNodeFP15CDoubleListNode:
+.global CDoubleListNode_InsertTop
+CDoubleListNode_InsertTop:
 /* 804465BC 0040FB7C  2C 04 00 00 */	cmpwi r4, 0
 /* 804465C0 0040FB80  41 82 00 38 */	beq lbl_804465F8
 /* 804465C4 0040FB84  80 C3 00 00 */	lwz r6, 0(r3)
@@ -47,8 +47,8 @@ lbl_804465F8:
 /* 804465F8 0040FBB8  7C 83 23 78 */	mr r3, r4
 /* 804465FC 0040FBBC  4E 80 00 20 */	blr 
 
-.global AppendAsChild__15CDoubleListNodeFP15CDoubleListNode
-AppendAsChild__15CDoubleListNodeFP15CDoubleListNode:
+.global CDoubleListNode_InsertEnd
+CDoubleListNode_InsertEnd:
 /* 80446600 0040FBC0  2C 04 00 00 */	cmpwi r4, 0
 /* 80446604 0040FBC4  41 82 00 40 */	beq lbl_80446644
 /* 80446608 0040FBC8  41 82 00 38 */	beq lbl_80446640
@@ -72,8 +72,8 @@ lbl_80446644:
 /* 80446644 0040FC04  7C 83 23 78 */	mr r3, r4
 /* 80446648 0040FC08  4E 80 00 20 */	blr 
 
-.global RemoveChild__15CDoubleListNodeFP15CDoubleListNode
-RemoveChild__15CDoubleListNodeFP15CDoubleListNode:
+.global CDoubleListNode_Remove
+CDoubleListNode_Remove:
 /* 8044664C 0040FC0C  2C 04 00 00 */	cmpwi r4, 0
 /* 80446650 0040FC10  40 82 00 0C */	bne lbl_8044665C
 /* 80446654 0040FC14  38 60 00 00 */	li r3, 0
@@ -126,4 +126,4 @@ __vt__CDoubleListNode:
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __dt__15CDoubleListNodeFv
-	.4byte Clear__15CDoubleListNodeFv
+	.4byte CDoubleListNode_Reset

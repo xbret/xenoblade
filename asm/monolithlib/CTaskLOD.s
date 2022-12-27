@@ -2154,7 +2154,7 @@ __vt__CTaskLOD:
 	.4byte __RTTI__CTaskLOD
 	.4byte 0
 	.4byte func_80462830
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_804628A0
 	.4byte func_804628A4
 	.4byte func_804628FC
@@ -2179,7 +2179,7 @@ __vt__CTTask_CTaskLOD:
 	.4byte __RTTI__CTTask_CTaskLOD
 	.4byte 0
 	.4byte func_804627D8
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_80463030

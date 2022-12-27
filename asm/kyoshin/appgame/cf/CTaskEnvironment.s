@@ -1771,7 +1771,7 @@ __vt__CTaskEnvironment:
 	.4byte __RTTI__CTaskEnvironment
 	.4byte 0
 	.4byte func_80058784
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80058C08
 	.4byte func_80058C58
 	.4byte func_80058CE8
@@ -1796,7 +1796,7 @@ __vt__CTTask_CTaskEnvironment:
 	.4byte __RTTI__CTTask_CTaskEnvironment
 	.4byte 0
 	.4byte func_8005872C
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_80059CD0

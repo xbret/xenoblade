@@ -3544,7 +3544,7 @@ __vt__cf_CfResTask:
 	.4byte __RTTI__cf_CfResTask
 	.4byte 0
 	.4byte func_800658FC
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_80065974
 	.4byte func_80065978
 	.4byte func_800659C0
@@ -3569,7 +3569,7 @@ __vt__CTTask_cf_CfResTask:
 	.4byte __RTTI__CTTask_cf_CfResTask
 	.4byte 0
 	.4byte func_80065848
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_80065B54

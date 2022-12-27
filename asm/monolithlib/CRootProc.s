@@ -485,7 +485,7 @@ __vt___unnamed_CTaskManager_cpp_CRootProc:
 	.4byte __RTTI___unnamed_CTaskManager_cpp_CRootProc
 	.4byte 0
 	.4byte func_8043C268
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte func_8043C1D4
 	.4byte func_8043C1D0
 	.4byte func_8043C1CC
@@ -510,7 +510,7 @@ __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc:
 	.4byte __RTTI__CTTask_unnamed_CTaskManager_cpp_CRootProc
 	.4byte 0
 	.4byte func_8043BEC0
-	.4byte func_80446734
+	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
 	.4byte func_8043C1D8
