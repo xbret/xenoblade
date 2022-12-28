@@ -5407,7 +5407,7 @@ lbl_800CF644:
 /* 800CF654 00098C14  C0 21 00 60 */	lfs f1, 0x60(r1)
 /* 800CF658 00098C18  C0 41 00 64 */	lfs f2, 0x64(r1)
 /* 800CF65C 00098C1C  EC 83 06 F2 */	fmuls f4, f3, f27
-/* 800CF660 00098C20  C0 02 C6 80 */	lfs f0, lbl_8066CA00@sda21(r2)
+/* 800CF660 00098C20  C0 02 C6 80 */	lfs f0, halfpi__2mm@sda21(r2)
 /* 800CF664 00098C24  EF C3 07 32 */	fmuls f30, f3, f28
 /* 800CF668 00098C28  D0 A1 00 4C */	stfs f5, 0x4c(r1)
 /* 800CF66C 00098C2C  FC 05 00 40 */	fcmpo cr0, f5, f0
@@ -5895,7 +5895,7 @@ lbl_800CFD6C:
 /* 800CFD7C 0009933C  C0 21 00 78 */	lfs f1, 0x78(r1)
 /* 800CFD80 00099340  C0 41 00 7C */	lfs f2, 0x7c(r1)
 /* 800CFD84 00099344  EC 83 06 F2 */	fmuls f4, f3, f27
-/* 800CFD88 00099348  C0 02 C6 80 */	lfs f0, lbl_8066CA00@sda21(r2)
+/* 800CFD88 00099348  C0 02 C6 80 */	lfs f0, halfpi__2mm@sda21(r2)
 /* 800CFD8C 0009934C  EF C3 07 32 */	fmuls f30, f3, f28
 /* 800CFD90 00099350  D0 A1 00 64 */	stfs f5, 0x64(r1)
 /* 800CFD94 00099354  FC 05 00 40 */	fcmpo cr0, f5, f0

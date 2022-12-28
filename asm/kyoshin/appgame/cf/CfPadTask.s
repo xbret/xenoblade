@@ -237,7 +237,7 @@ lbl_801C1B88:
 
 .global func_801C1B94
 func_801C1B94:
-/* 801C1B94 0018B154  C0 02 C6 88 */	lfs f0, lbl_8066CA08@sda21(r2)
+/* 801C1B94 0018B154  C0 02 C6 88 */	lfs f0, epsilon__2mm@sda21(r2)
 /* 801C1B98 0018B158  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801C1B9C 0018B15C  40 80 00 10 */	bge lbl_801C1BAC
 /* 801C1BA0 0018B160  C0 02 A3 E8 */	lfs f0, lbl_8066A768@sda21(r2)
@@ -253,7 +253,7 @@ lbl_801C1BAC:
 .global func_801C1BC0
 func_801C1BC0:
 /* 801C1BC0 0018B180  C0 2D AB C4 */	lfs f1, lbl_80666D44@sda21(r13)
-/* 801C1BC4 0018B184  C0 02 C6 88 */	lfs f0, lbl_8066CA08@sda21(r2)
+/* 801C1BC4 0018B184  C0 02 C6 88 */	lfs f0, epsilon__2mm@sda21(r2)
 /* 801C1BC8 0018B188  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801C1BCC 0018B18C  7C 60 00 26 */	mfcr r3
 /* 801C1BD0 0018B190  54 63 17 FE */	rlwinm r3, r3, 2, 0x1f, 0x1f
@@ -261,7 +261,7 @@ func_801C1BC0:
 
 .global func_801C1BD8
 func_801C1BD8:
-/* 801C1BD8 0018B198  C0 02 C6 88 */	lfs f0, lbl_8066CA08@sda21(r2)
+/* 801C1BD8 0018B198  C0 02 C6 88 */	lfs f0, epsilon__2mm@sda21(r2)
 /* 801C1BDC 0018B19C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801C1BE0 0018B1A0  40 80 00 10 */	bge lbl_801C1BF0
 /* 801C1BE4 0018B1A4  C0 02 A3 E8 */	lfs f0, lbl_8066A768@sda21(r2)

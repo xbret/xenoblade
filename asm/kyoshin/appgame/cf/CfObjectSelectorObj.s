@@ -1065,7 +1065,7 @@ lbl_800FE9C0:
 
 .global sinit_800FEA14
 sinit_800FEA14:
-/* 800FEA14 000C7FD4  C0 42 C6 78 */	lfs f2, lbl_8066C9F8@sda21(r2)
+/* 800FEA14 000C7FD4  C0 42 C6 78 */	lfs f2, pi__2mm@sda21(r2)
 /* 800FEA18 000C7FD8  C0 22 94 54 */	lfs f1, lbl_806697D4@sda21(r2)
 /* 800FEA1C 000C7FDC  C0 02 94 50 */	lfs f0, lbl_806697D0@sda21(r2)
 /* 800FEA20 000C7FE0  EC 22 08 24 */	fdivs f1, f2, f1

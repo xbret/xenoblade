@@ -588,7 +588,7 @@ lbl_804D952C:
 /* 804D9550 004A2B10  EC 60 20 28 */	fsubs f3, f0, f4
 /* 804D9554 004A2B14  C0 02 D6 18 */	lfs f0, lbl_8066D998@sda21(r2)
 /* 804D9558 004A2B18  C8 41 00 38 */	lfd f2, 0x38(r1)
-/* 804D955C 004A2B1C  C0 22 C6 90 */	lfs f1, lbl_8066CA10@sda21(r2)
+/* 804D955C 004A2B1C  C0 22 C6 90 */	lfs f1, deg2rad__2mm@sda21(r2)
 /* 804D9560 004A2B20  EC 63 00 24 */	fdivs f3, f3, f0
 /* 804D9564 004A2B24  C0 02 D6 24 */	lfs f0, lbl_8066D9A4@sda21(r2)
 /* 804D9568 004A2B28  EC 42 20 28 */	fsubs f2, f2, f4
@@ -695,7 +695,7 @@ lbl_804D96C4:
 /* 804D96E8 004A2CA8  EC 60 20 28 */	fsubs f3, f0, f4
 /* 804D96EC 004A2CAC  C0 02 D6 18 */	lfs f0, lbl_8066D998@sda21(r2)
 /* 804D96F0 004A2CB0  C8 41 00 38 */	lfd f2, 0x38(r1)
-/* 804D96F4 004A2CB4  C0 22 C6 90 */	lfs f1, lbl_8066CA10@sda21(r2)
+/* 804D96F4 004A2CB4  C0 22 C6 90 */	lfs f1, deg2rad__2mm@sda21(r2)
 /* 804D96F8 004A2CB8  EC 63 00 24 */	fdivs f3, f3, f0
 /* 804D96FC 004A2CBC  C0 02 D6 24 */	lfs f0, lbl_8066D9A4@sda21(r2)
 /* 804D9700 004A2CC0  EC 42 20 28 */	fsubs f2, f2, f4
@@ -773,7 +773,7 @@ lbl_804D97D4:
 /* 804D9818 004A2DD8  EC 60 20 28 */	fsubs f3, f0, f4
 /* 804D981C 004A2DDC  C0 02 D6 18 */	lfs f0, lbl_8066D998@sda21(r2)
 /* 804D9820 004A2DE0  C8 41 00 38 */	lfd f2, 0x38(r1)
-/* 804D9824 004A2DE4  C0 22 C6 90 */	lfs f1, lbl_8066CA10@sda21(r2)
+/* 804D9824 004A2DE4  C0 22 C6 90 */	lfs f1, deg2rad__2mm@sda21(r2)
 /* 804D9828 004A2DE8  EC 63 00 24 */	fdivs f3, f3, f0
 /* 804D982C 004A2DEC  C0 02 D6 24 */	lfs f0, lbl_8066D9A4@sda21(r2)
 /* 804D9830 004A2DF0  EC 42 20 28 */	fsubs f2, f2, f4
@@ -1054,7 +1054,7 @@ lbl_804D9C18:
 /* 804D9C38 004A31F8  C0 42 D6 18 */	lfs f2, lbl_8066D998@sda21(r2)
 /* 804D9C3C 004A31FC  EC 61 20 28 */	fsubs f3, f1, f4
 /* 804D9C40 004A3200  90 01 00 24 */	stw r0, 0x24(r1)
-/* 804D9C44 004A3204  C0 02 C6 90 */	lfs f0, lbl_8066CA10@sda21(r2)
+/* 804D9C44 004A3204  C0 02 C6 90 */	lfs f0, deg2rad__2mm@sda21(r2)
 /* 804D9C48 004A3208  C8 21 00 20 */	lfd f1, 0x20(r1)
 /* 804D9C4C 004A320C  EC 43 10 24 */	fdivs f2, f3, f2
 /* 804D9C50 004A3210  EC 21 20 28 */	fsubs f1, f1, f4

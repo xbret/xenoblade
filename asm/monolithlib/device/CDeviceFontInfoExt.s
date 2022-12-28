@@ -343,6 +343,7 @@ lbl_8066CBC0:
 
 .section .sbss2, "", @nobits #0x8066DCE0 - 0x8066DCFB
 
+#used in CUICfManager
 .global lbl_8066DCF8
 lbl_8066DCF8:
 	.skip 0x4

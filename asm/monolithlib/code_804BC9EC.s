@@ -1136,11 +1136,10 @@ lbl_8066D6C8:
 	.4byte 0x437F0000
 	.4byte 0
 
-#used in both game code and monolithlib
-.global lbl_8066D6D0
-lbl_8066D6D0:
-	# ROM: 0x577530
-	.4byte 0x3F350481
+#used in game code/monolithlib
+.global mlib_invsqrt2
+mlib_invsqrt2:
+	.float 0.707099974155
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

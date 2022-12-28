@@ -788,7 +788,7 @@ func_8049C3AC:
 /* 8049C3BC 0046597C  54 00 00 85 */	rlwinm. r0, r0, 0, 2, 2
 /* 8049C3C0 00465980  40 82 00 2C */	bne lbl_8049C3EC
 /* 8049C3C4 00465984  C0 22 CF B4 */	lfs f1, lbl_8066D334@sda21(r2)
-/* 8049C3C8 00465988  C0 02 C6 88 */	lfs f0, lbl_8066CA08@sda21(r2)
+/* 8049C3C8 00465988  C0 02 C6 88 */	lfs f0, epsilon__2mm@sda21(r2)
 /* 8049C3CC 0046598C  C0 45 03 04 */	lfs f2, 0x304(r5)
 /* 8049C3D0 00465990  EC 01 00 2A */	fadds f0, f1, f0
 /* 8049C3D4 00465994  FC 02 00 40 */	fcmpo cr0, f2, f0
@@ -801,7 +801,7 @@ lbl_8049C3EC:
 /* 8049C3EC 004659AC  2C 04 00 00 */	cmpwi r4, 0
 /* 8049C3F0 004659B0  4C 82 00 20 */	bnelr 
 /* 8049C3F4 004659B4  C0 22 CF B4 */	lfs f1, lbl_8066D334@sda21(r2)
-/* 8049C3F8 004659B8  C0 02 C6 88 */	lfs f0, lbl_8066CA08@sda21(r2)
+/* 8049C3F8 004659B8  C0 02 C6 88 */	lfs f0, epsilon__2mm@sda21(r2)
 /* 8049C3FC 004659BC  C0 45 03 04 */	lfs f2, 0x304(r5)
 /* 8049C400 004659C0  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8049C404 004659C4  FC 02 00 40 */	fcmpo cr0, f2, f0

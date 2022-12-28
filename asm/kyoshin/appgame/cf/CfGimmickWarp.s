@@ -1418,7 +1418,7 @@ func_8020E704:
 /* 8020E794 001D7D54  90 61 00 5C */	stw r3, 0x5c(r1)
 /* 8020E798 001D7D58  C8 42 A9 30 */	lfd f2, lbl_8066ACB0@sda21(r2)
 /* 8020E79C 001D7D5C  90 81 00 58 */	stw r4, 0x58(r1)
-/* 8020E7A0 001D7D60  C0 02 C6 90 */	lfs f0, lbl_8066CA10@sda21(r2)
+/* 8020E7A0 001D7D60  C0 02 C6 90 */	lfs f0, deg2rad__2mm@sda21(r2)
 /* 8020E7A4 001D7D64  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 8020E7A8 001D7D68  90 61 00 60 */	stw r3, 0x60(r1)
 /* 8020E7AC 001D7D6C  A8 7E 00 EA */	lha r3, 0xea(r30)
@@ -1436,7 +1436,7 @@ lbl_8020E7CC:
 /* 8020E7D8 001D7D98  90 61 00 5C */	stw r3, 0x5c(r1)
 /* 8020E7DC 001D7D9C  C8 42 A9 30 */	lfd f2, lbl_8066ACB0@sda21(r2)
 /* 8020E7E0 001D7DA0  90 81 00 58 */	stw r4, 0x58(r1)
-/* 8020E7E4 001D7DA4  C0 02 C6 90 */	lfs f0, lbl_8066CA10@sda21(r2)
+/* 8020E7E4 001D7DA4  C0 02 C6 90 */	lfs f0, deg2rad__2mm@sda21(r2)
 /* 8020E7E8 001D7DA8  80 7E 00 8C */	lwz r3, 0x8c(r30)
 /* 8020E7EC 001D7DAC  90 61 00 60 */	stw r3, 0x60(r1)
 /* 8020E7F0 001D7DB0  A8 7E 00 EC */	lha r3, 0xec(r30)
@@ -1467,7 +1467,7 @@ lbl_8020E80C:
 /* 8020E850 001D7E10  E0 68 80 08 */	psq_l f3, 8(r8), 1, qr0
 /* 8020E854 001D7E14  F0 07 00 00 */	psq_st f0, 0(r7), 0, qr0
 /* 8020E858 001D7E18  10 04 18 2A */	ps_add f0, f4, f3
-/* 8020E85C 001D7E1C  C0 42 D3 50 */	lfs f2, lbl_8066D6D0@sda21(r2)
+/* 8020E85C 001D7E1C  C0 42 D3 50 */	lfs f2, mlib_invsqrt2@sda21(r2)
 /* 8020E860 001D7E20  C0 81 00 08 */	lfs f4, 8(r1)
 /* 8020E864 001D7E24  F0 07 80 08 */	psq_st f0, 8(r7), 1, qr0
 /* 8020E868 001D7E28  C0 61 00 0C */	lfs f3, 0xc(r1)

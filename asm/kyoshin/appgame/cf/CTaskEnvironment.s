@@ -601,7 +601,7 @@ lbl_80058D78:
 /* 80058DD8 00022398  90 81 02 7C */	stw r4, 0x27c(r1)
 /* 80058DDC 0002239C  C0 62 84 E0 */	lfs f3, lbl_80668860@sda21(r2)
 /* 80058DE0 000223A0  C8 41 02 78 */	lfd f2, 0x278(r1)
-/* 80058DE4 000223A4  C0 02 C6 7C */	lfs f0, lbl_8066C9FC@sda21(r2)
+/* 80058DE4 000223A4  C0 02 C6 7C */	lfs f0, tau__2mm@sda21(r2)
 /* 80058DE8 000223A8  EC 21 30 28 */	fsubs f1, f1, f6
 /* 80058DEC 000223AC  EC 84 28 24 */	fdivs f4, f4, f5
 /* 80058DF0 000223B0  EC 21 28 24 */	fdivs f1, f1, f5
@@ -1184,7 +1184,7 @@ func_80059610:
 
 .global func_800596AC
 func_800596AC:
-/* 800596AC 00022C6C  C0 02 C6 90 */	lfs f0, lbl_8066CA10@sda21(r2)
+/* 800596AC 00022C6C  C0 02 C6 90 */	lfs f0, deg2rad__2mm@sda21(r2)
 /* 800596B0 00022C70  EC 21 00 32 */	fmuls f1, f1, f0
 /* 800596B4 00022C74  4E 80 00 20 */	blr 
 

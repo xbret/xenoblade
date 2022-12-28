@@ -6003,7 +6003,7 @@ func_800B6484:
 .global func_800B6494
 func_800B6494:
 /* 800B6494 0007FA54  C0 2D A6 58 */	lfs f1, lbl_806667D8@sda21(r13)
-/* 800B6498 0007FA58  C0 02 C6 88 */	lfs f0, lbl_8066CA08@sda21(r2)
+/* 800B6498 0007FA58  C0 02 C6 88 */	lfs f0, epsilon__2mm@sda21(r2)
 /* 800B649C 0007FA5C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800B64A0 0007FA60  7C 60 00 26 */	mfcr r3
 /* 800B64A4 0007FA64  54 63 17 FE */	rlwinm r3, r3, 2, 0x1f, 0x1f

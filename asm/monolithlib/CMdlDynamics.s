@@ -3637,7 +3637,7 @@ lbl_804EC628:
 /* 804EC638 004B5BF8  C0 3E 00 08 */	lfs f1, 8(r30)
 /* 804EC63C 004B5BFC  C0 5E 00 0C */	lfs f2, 0xc(r30)
 /* 804EC640 004B5C00  EC A3 07 F2 */	fmuls f5, f3, f31
-/* 804EC644 004B5C04  C0 02 C6 80 */	lfs f0, lbl_8066CA00@sda21(r2)
+/* 804EC644 004B5C04  C0 02 C6 80 */	lfs f0, halfpi__2mm@sda21(r2)
 /* 804EC648 004B5C08  EF 83 07 B2 */	fmuls f28, f3, f30
 /* 804EC64C 004B5C0C  D0 9F 00 04 */	stfs f4, 4(r31)
 /* 804EC650 004B5C10  FC 04 00 40 */	fcmpo cr0, f4, f0

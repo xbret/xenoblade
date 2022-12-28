@@ -816,7 +816,7 @@ lbl_800BB2BC:
 .global func_800BB2CC
 func_800BB2CC:
 /* 800BB2CC 0008488C  81 83 00 00 */	lwz r12, 0(r3)
-/* 800BB2D0 00084890  C0 02 C6 90 */	lfs f0, lbl_8066CA10@sda21(r2)
+/* 800BB2D0 00084890  C0 02 C6 90 */	lfs f0, deg2rad__2mm@sda21(r2)
 /* 800BB2D4 00084894  81 8C 00 C4 */	lwz r12, 0xc4(r12)
 /* 800BB2D8 00084898  EC 21 00 32 */	fmuls f1, f1, f0
 /* 800BB2DC 0008489C  7D 89 03 A6 */	mtctr r12
@@ -831,7 +831,7 @@ func_800BB2E4:
 /* 800BB2F4 000848B4  81 8C 00 CC */	lwz r12, 0xcc(r12)
 /* 800BB2F8 000848B8  7D 89 03 A6 */	mtctr r12
 /* 800BB2FC 000848BC  4E 80 04 21 */	bctrl 
-/* 800BB300 000848C0  C0 02 C6 8C */	lfs f0, lbl_8066CA0C@sda21(r2)
+/* 800BB300 000848C0  C0 02 C6 8C */	lfs f0, rad2deg__2mm@sda21(r2)
 /* 800BB304 000848C4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800BB308 000848C8  EC 21 00 32 */	fmuls f1, f1, f0
 /* 800BB30C 000848CC  7C 08 03 A6 */	mtlr r0

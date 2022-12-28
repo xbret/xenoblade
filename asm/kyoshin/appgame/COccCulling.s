@@ -1174,7 +1174,7 @@ func_801A1550:
 /* 801A1570 0016AB30  7C 7A 1B 78 */	mr r26, r3
 /* 801A1574 0016AB34  E0 44 00 00 */	psq_l f2, 0(r4), 0, qr0
 /* 801A1578 0016AB38  38 E1 00 08 */	addi r7, r1, 8
-/* 801A157C 0016AB3C  C0 02 C6 88 */	lfs f0, lbl_8066CA08@sda21(r2)
+/* 801A157C 0016AB3C  C0 02 C6 88 */	lfs f0, epsilon__2mm@sda21(r2)
 /* 801A1580 0016AB40  7C 9B 23 78 */	mr r27, r4
 /* 801A1584 0016AB44  10 24 10 28 */	ps_sub f1, f4, f2
 /* 801A1588 0016AB48  E0 85 80 08 */	psq_l f4, 8(r5), 1, qr0
@@ -1207,7 +1207,7 @@ lbl_801A15F0:
 /* 801A15F0 0016ABB0  2C 03 00 00 */	cmpwi r3, 0
 /* 801A15F4 0016ABB4  41 82 00 24 */	beq lbl_801A1618
 /* 801A15F8 0016ABB8  C0 21 00 34 */	lfs f1, 0x34(r1)
-/* 801A15FC 0016ABBC  C0 02 C6 88 */	lfs f0, lbl_8066CA08@sda21(r2)
+/* 801A15FC 0016ABBC  C0 02 C6 88 */	lfs f0, epsilon__2mm@sda21(r2)
 /* 801A1600 0016ABC0  FC 20 0A 10 */	fabs f1, f1
 /* 801A1604 0016ABC4  FC 20 08 18 */	frsp f1, f1
 /* 801A1608 0016ABC8  FC 01 00 40 */	fcmpo cr0, f1, f0
