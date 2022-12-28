@@ -103,7 +103,7 @@ ELF2DOL := tools/elf2dol
 ELF2REL := tools/elf2rel
 
 # Options
-INCLUDES := -i include/
+INCLUDES := -i include/ -i src/
 ASM_INCLUDES := -I include/
 
 ASFLAGS := -mgekko $(ASM_INCLUDES)
@@ -126,15 +126,16 @@ ASFLAGS += -W
 endif
 
 $(NDEV_O_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
-$(MONOLITHLIB_O_FILES): CFLAGS += -ipa file
+$(MONOLITHLIB_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse
+$(GAME_O_FILES): CFLAGS += -str pool,readonly,reuse
+$(MM_O_FILES): CFLAGS += -str pool,readonly,reuse
+#All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
+$(RVL_SDK_O_FILES): CFLAGS += -func_align 16
 
 #arc.c doesn't use -use_lmw_stmw on, and uses -ipa file and (maybe rest of wii sdk too?)
-$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
+$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p  -nodefaults $(INCLUDES)
 
-#All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
-$(BUILD_DIR)/src/RevoSDK/%.o: CFLAGS += -func_align 16 -str pool
 
-$(BUILD_DIR)/src/kyoshin/%.o: CFLAGS += -str pool,readonly,reuse
 
 #-------------------------------------------------------------------------------
 # Recipes

@@ -32,9 +32,7 @@ namespace mtl{
         /*
         Same as:
         for(int i = 0; i < N; i++){
-            u32 r8 = (state[i] & 0x80000000) | (state[(i + 1) % N] & 0x7FFFFFFF);
-	        u32 r6 = (state[(i + 1) % N] % 2) == 1 ? 0x9908B0DF : 0;
-	        state[i] = state[(i + M) % N] ^ (r6 ^ (r8 >> 1));
+	        state[i] = twist(state[(i + M) % N],state[i],state[(i + 1) % N]);
         }
         */
 

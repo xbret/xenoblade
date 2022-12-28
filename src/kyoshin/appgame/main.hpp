@@ -4,9 +4,10 @@
 #include "types.h"
 #include "kyoshin/appgame/code_802AEB74.hpp"
 #include "monolithlib/code_80450B14.h"
-#include "monolithlib/Unknown1.h"
+#include "monolithlib/Unknown1.hpp"
 
 //namespace cf {
+//extern "C"{
 extern void func_80057CDC();
 extern void SetArenaMemorySize(u32, u32);
 extern void func_804442D8();
@@ -23,6 +24,7 @@ extern void SavePkhFilenamesArrayPtr(char*[]);
 extern void SaveStaticArcFilenameStringPtr(const char* const*);
 extern void func_80039F6C();
 extern void func_80039F90();
+//}
 
 void main(int argc, char* argv[]);
 //}
