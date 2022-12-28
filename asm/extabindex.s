@@ -19217,7 +19217,7 @@ lbl_80021020:
 	.4byte MTRand_nextMt
 	.4byte 0x000002F4
 	.4byte lbl_8001C050
-	.4byte MTRand_rand
+	.4byte MTRand_randInt
 	.4byte 0x00000080
 	.4byte lbl_8001C058
 	.4byte func_80435B5C

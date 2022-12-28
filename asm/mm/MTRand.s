@@ -486,8 +486,8 @@ lbl_80435A90:
 /* 80435AD4 003FF094  38 21 00 10 */	addi r1, r1, 0x10
 /* 80435AD8 003FF098  4E 80 00 20 */	blr 
 
-.global MTRand_rand
-MTRand_rand:
+.global MTRand_randInt
+MTRand_randInt:
 /* 80435ADC 003FF09C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80435AE0 003FF0A0  7C 08 02 A6 */	mflr r0
 /* 80435AE4 003FF0A4  90 01 00 14 */	stw r0, 0x14(r1)
