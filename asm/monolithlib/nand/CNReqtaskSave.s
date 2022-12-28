@@ -173,6 +173,10 @@ lbl_804DAF60:
 /* 804DAF68 004A4528  90 83 00 00 */	stw r4, 0(r3)
 /* 804DAF6C 004A452C  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804DAF58
+
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

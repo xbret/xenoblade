@@ -465,6 +465,10 @@ sinit_804012B0:
 /* 804012B4 003CA874  90 0D BB E0 */	stw r0, lbl_80667D60@sda21(r13)
 /* 804012B8 003CA878  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804012B0
+
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 

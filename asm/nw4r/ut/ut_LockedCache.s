@@ -143,3 +143,7 @@ sinit_8042BFB4:
 /* 8042BFC0 003F5580  98 04 70 88 */	stb r0, lbl_80657088@l(r4)
 /* 8042BFC4 003F5584  38 63 00 04 */	addi r3, r3, 4
 /* 8042BFC8 003F5588  4B F2 DC 58 */	b OSInitMutex
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8042BFB4

@@ -2187,7 +2187,7 @@ sinit_804325F4:
 /* 8043261C 003FBBDC  38 84 B7 10 */	addi r4, r4, __dt__Q34nw4r2ut19TagProcessorBase_c_Fv@l
 /* 80432620 003FBBE0  38 6D BC C0 */	addi r3, r13, lbl_80667E40@sda21
 /* 80432624 003FBBE4  38 A5 70 C8 */	addi r5, r5, lbl_806570C8@l
-/* 80432628 003FBBE8  4B E8 70 75 */	bl __register_global_object_tmp
+/* 80432628 003FBBE8  4B E8 70 75 */	bl __register_global_object
 /* 8043262C 003FBBEC  38 00 00 01 */	li r0, 1
 /* 80432630 003FBBF0  98 0D BC C8 */	stb r0, lbl_80667E48@sda21(r13)
 lbl_80432634:
@@ -2201,7 +2201,7 @@ lbl_80432634:
 /* 80432650 003FBC10  38 84 BA 78 */	addi r4, r4, __dt__Q34nw4r2ut19TagProcessorBase_w_Fv@l
 /* 80432654 003FBC14  38 6D BC C4 */	addi r3, r13, lbl_80667E44@sda21
 /* 80432658 003FBC18  38 A5 70 D4 */	addi r5, r5, lbl_806570D4@l
-/* 8043265C 003FBC1C  4B E8 70 41 */	bl __register_global_object_tmp
+/* 8043265C 003FBC1C  4B E8 70 41 */	bl __register_global_object
 /* 80432660 003FBC20  38 00 00 01 */	li r0, 1
 /* 80432664 003FBC24  98 0D BC C9 */	stb r0, lbl_80667E49@sda21(r13)
 lbl_80432668:
@@ -2209,3 +2209,7 @@ lbl_80432668:
 /* 8043266C 003FBC2C  7C 08 03 A6 */	mtlr r0
 /* 80432670 003FBC30  38 21 00 10 */	addi r1, r1, 0x10
 /* 80432674 003FBC34  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804325F4

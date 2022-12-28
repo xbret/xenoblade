@@ -1333,6 +1333,10 @@ sinit_80448E98:
 /* 80448F28 004124E8  B0 03 00 3E */	sth r0, 0x3e(r3)
 /* 80448F2C 004124EC  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80448E98
+
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 .global lbl_805262A8

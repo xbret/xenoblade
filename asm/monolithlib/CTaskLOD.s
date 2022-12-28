@@ -2135,6 +2135,10 @@ sinit_8046456C:
 /* 804645C4 0042DB84  38 21 00 10 */	addi r1, r1, 0x10
 /* 804645C8 0042DB88  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8046456C
+
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 .global CTaskLOD_typestr

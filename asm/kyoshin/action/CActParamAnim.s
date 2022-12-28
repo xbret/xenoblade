@@ -10057,7 +10057,11 @@ func_800539D8:
 sinit_800539E0:
 /* 800539E0 0001CFA0  C0 02 D3 50 */	lfs f0, mlib_invsqrt2@sda21(r2)
 /* 800539E4 0001CFA4  D0 0D A4 C8 */	stfs f0, lbl_80666648@sda21(r13)
-/* 800539E8 0001CFA8  4E 80 00 20 */	blr 
+/* 800539E8 0001CFA8  4E 80 00 20 */	blr
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_800539E0
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

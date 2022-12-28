@@ -4141,3 +4141,7 @@ func_8010EA54:
 func_8010EA5C:
 /* 8010EA5C 000D801C  38 63 FF A4 */	addi r3, r3, -92
 /* 8010EA60 000D8020  4B FF CA 24 */	b func_8010B484
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8010E9F8

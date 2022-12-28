@@ -2475,3 +2475,7 @@ lbl_8020AB68:
 .global sinit_8020AB7C
 sinit_8020AB7C:
 /* 8020AB7C 001D413C  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8020AB7C

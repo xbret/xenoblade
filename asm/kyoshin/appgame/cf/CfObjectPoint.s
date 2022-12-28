@@ -1969,3 +1969,7 @@ lbl_800C2E24:
 /* 800C2E30 0008C3F0  7C 08 03 A6 */	mtlr r0
 /* 800C2E34 0008C3F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 800C2E38 0008C3F8  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_800C1F2C

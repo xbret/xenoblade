@@ -7481,3 +7481,7 @@ lbl_8015BA94:
 /* 8015BA9C 0012505C  38 63 76 E4 */	addi r3, r3, lbl_805776E4@l
 /* 8015BAA0 00125060  90 03 00 D0 */	stw r0, 0xd0(r3)
 /* 8015BAA4 00125064  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8015B9D8

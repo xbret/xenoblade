@@ -197,12 +197,16 @@ sinit_8042129C:
 /* 804212C0 003EA880  38 7F BB 10 */	addi r3, r31, lbl_8063BB10@l
 /* 804212C4 003EA884  38 84 5F 44 */	addi r4, r4, __dt__Q44nw4r3snd6detail10TaskThreadFv@l
 /* 804212C8 003EA888  38 A5 BB 00 */	addi r5, r5, lbl_8063BB00@l
-/* 804212CC 003EA88C  4B E9 83 D1 */	bl __register_global_object_tmp
+/* 804212CC 003EA88C  4B E9 83 D1 */	bl __register_global_object
 /* 804212D0 003EA890  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804212D4 003EA894  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804212D8 003EA898  7C 08 03 A6 */	mtlr r0
 /* 804212DC 003EA89C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804212E0 003EA8A0  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8042129C
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

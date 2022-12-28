@@ -379,7 +379,7 @@ lbl_804208DC:
 /* 80420914 003E9ED4  38 84 0A 20 */	addi r4, r4, __arraydtor$4226@l
 /* 80420918 003E9ED8  38 60 00 00 */	li r3, 0
 /* 8042091C 003E9EDC  38 A5 B4 E0 */	addi r5, r5, lbl_8063B4E0@l
-/* 80420920 003E9EE0  4B E9 8D 7D */	bl __register_global_object_tmp
+/* 80420920 003E9EE0  4B E9 8D 7D */	bl __register_global_object
 /* 80420924 003E9EE4  38 00 00 01 */	li r0, 1
 /* 80420928 003E9EE8  98 0D BC 60 */	stb r0, lbl_80667DE0@sda21(r13)
 lbl_8042092C:

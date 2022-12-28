@@ -613,6 +613,10 @@ sinit_8047D290:
 /* 8047D2A4 00446864  90 03 00 18 */	stw r0, 0x18(r3)
 /* 8047D2A8 00446868  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8047D290
+
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -1428,6 +1428,10 @@ sinit_80334120:
 /* 8033412C 002FD6EC  90 83 D7 D0 */	stw r4, lbl_805CD7D0@l(r3)
 /* 80334130 002FD6F0  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80334120
+
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 .global lbl_80518AC0

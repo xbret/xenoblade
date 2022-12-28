@@ -900,3 +900,7 @@ func_8011C43C:
 func_8011C444:
 /* 8011C444 000E5A04  38 63 FF A4 */	addi r3, r3, -92
 /* 8011C448 000E5A08  4B FF F2 8C */	b func_8011B6D4
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8011C418

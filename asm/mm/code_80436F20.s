@@ -306,6 +306,10 @@ sinit_80437350:
 /* 80437384 00400944  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 80437388 00400948  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80437350
+
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .global lbl_8066CA60

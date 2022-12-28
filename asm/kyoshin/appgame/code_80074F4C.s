@@ -7796,3 +7796,7 @@ sinit_8007BE74:
 /* 8007C0EC 000456AC  D0 E3 02 54 */	stfs f7, 0x254(r3)
 /* 8007C0F0 000456B0  38 21 01 30 */	addi r1, r1, 0x130
 /* 8007C0F4 000456B4  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8007BE74

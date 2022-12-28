@@ -1730,6 +1730,10 @@ func_8048EA9C:
 sinit_8048EAA4:
 /* 8048EAA4 00458064  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8048EAA4
+
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

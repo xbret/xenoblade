@@ -4374,6 +4374,10 @@ sinit_804683E8:
 /* 8046842C 004319EC  D0 03 00 2C */	stfs f0, 0x2c(r3)
 /* 80468430 004319F0  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804683E8
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

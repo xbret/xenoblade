@@ -44,6 +44,10 @@ sinit_80436E84:
 /* 80436F18 004004D8  D0 03 00 3C */	stfs f0, 0x3c(r3)
 /* 80436F1C 004004DC  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80436E84
+
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .global lbl_8066CA58

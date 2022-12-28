@@ -65,15 +65,16 @@ This might be the version this is based on: https://gist.github.com/yuikns/10017
 #define _MM_MTRAND_HPP
 
 #include "types.h"
+#include "mm/Rect.hpp"
 
 namespace mm{
 namespace mtl{
 
-class MTRand{
-public:
-    static const int N = 624; //length
+//Probably uses a singleton template
 
+class MTRand{
 protected:
+    static const int N = 624; //length
     static const int M = 397; //period
     u32 state[N]; //twister
     int left; //0x9C0
@@ -87,13 +88,13 @@ public:
     }
 
     void mtInit(u32);
-    void func_804355D4();
+    void func_804355D4(u32);
     void func_804357E8();
     void nextMt();
     u32 randInt();
-    float func_80435B5C();
-    float func_80435BF8();
-    void func_80435C9C(); //may not be part of the class
+    u32 rand();
+    float randFloat();
+    float randFloat1();
 
 protected:
     inline u32 hiBit(u32 u) { return u & 0x80000000; }
@@ -109,6 +110,13 @@ protected:
         return m ^ (mask ^ (y >> 1));
     }
 };
+
+MTRand* getInstance(){
+    static MTRand instance;
+    return &instance;
+}
+
+bool func_80435C9C(s16*, s16*);
 
 }
 }

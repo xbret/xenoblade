@@ -277,6 +277,10 @@ sinit_80429F2C:
 /* 80429F30 003F34F0  90 0D BC 98 */	stw r0, lbl_80667E18@sda21(r13)
 /* 80429F34 003F34F4  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80429F2C
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

@@ -9052,6 +9052,10 @@ func_80474F54:
 sinit_80474F7C:
 /* 80474F7C 0043E53C  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80474F7C
+
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

@@ -4144,7 +4144,7 @@ lbl_803EB4FC:
 /* 803EB5A0 003B4B60  98 1C 00 26 */	stb r0, 0x26(r28)
 /* 803EB5A4 003B4B64  98 1C 00 25 */	stb r0, 0x25(r28)
 /* 803EB5A8 003B4B68  98 1C 00 24 */	stb r0, 0x24(r28)
-/* 803EB5AC 003B4B6C  4B EC E0 F1 */	bl __register_global_object_tmp
+/* 803EB5AC 003B4B6C  4B EC E0 F1 */	bl __register_global_object
 /* 803EB5B0 003B4B70  38 7F 3A 80 */	addi r3, r31, 0x3a80
 /* 803EB5B4 003B4B74  4B FF D7 79 */	bl __ct__Q54nw4r3g3d8G3DState23_unnamed_g3d_state_cpp_14CameraMtxStateFv
 /* 803EB5B8 003B4B78  3C 60 80 57 */	lis r3, lbl_8056CEB0@ha
@@ -4175,7 +4175,7 @@ lbl_803EB5DC:
 /* 803EB618 003B4BD8  98 1C 00 05 */	stb r0, 5(r28)
 /* 803EB61C 003B4BDC  98 1C 00 04 */	stb r0, 4(r28)
 /* 803EB620 003B4BE0  98 1C 00 07 */	stb r0, 7(r28)
-/* 803EB624 003B4BE4  4B EC E0 79 */	bl __register_global_object_tmp
+/* 803EB624 003B4BE4  4B EC E0 79 */	bl __register_global_object
 /* 803EB628 003B4BE8  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 803EB62C 003B4BEC  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 803EB630 003B4BF0  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -4184,6 +4184,7 @@ lbl_803EB5DC:
 /* 803EB63C 003B4BFC  7C 08 03 A6 */	mtlr r0
 /* 803EB640 003B4C00  38 21 00 20 */	addi r1, r1, 0x20
 /* 803EB644 003B4C04  4E 80 00 20 */	blr
+
 
 #__dt__Q54nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@10LightStateFv
 .global __dt__Q54nw4r3g3d8G3DState23_unnamed_g3d_state_cpp_10LightStateFv
@@ -4215,6 +4216,10 @@ lbl_803EB694:
 /* 803EB6A4 003B4C64  7C 08 03 A6 */	mtlr r0
 /* 803EB6A8 003B4C68  38 21 00 10 */	addi r1, r1, 0x10
 /* 803EB6AC 003B4C6C  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_803EB3B4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

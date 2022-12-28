@@ -570,6 +570,10 @@ sinit_8041B2F8:
 /* 8041B2FC 003E48BC  90 0D BC 58 */	stw r0, lbl_80667DD8@sda21(r13)
 /* 8041B300 003E48C0  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8041B2F8
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

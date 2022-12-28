@@ -10621,3 +10621,7 @@ sinit_801EABC4:
 /* 801EADB4 001B4374  7C 08 03 A6 */	mtlr r0
 /* 801EADB8 001B4378  38 21 00 10 */	addi r1, r1, 0x10
 /* 801EADBC 001B437C  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_801EABC4

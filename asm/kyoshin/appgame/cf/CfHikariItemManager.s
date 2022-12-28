@@ -2363,3 +2363,7 @@ sinit_802B46E0:
 /* 802B4894 0027DE54  CB 61 00 10 */	lfd f27, 0x10(r1)
 /* 802B4898 0027DE58  38 21 00 60 */	addi r1, r1, 0x60
 /* 802B489C 0027DE5C  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_802B46E0

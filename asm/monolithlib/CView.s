@@ -4188,6 +4188,10 @@ sinit_8043FB70:
 /* 8043FBBC 0040917C  90 07 00 0C */	stw r0, 0xc(r7)
 /* 8043FBC0 00409180  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8043FB70
+
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

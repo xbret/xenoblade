@@ -107,6 +107,10 @@ lbl_804DB230:
 /* 804DB238 004A47F8  90 83 00 00 */	stw r4, 0(r3)
 /* 804DB23C 004A47FC  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804DB228
+
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 .global CNReqtaskReaddir_typestr

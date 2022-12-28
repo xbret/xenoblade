@@ -1760,6 +1760,10 @@ sinit_80059D60:
 /* 80059EB0 00023470  38 21 00 40 */	addi r1, r1, 0x40
 /* 80059EB4 00023474  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80059D60
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

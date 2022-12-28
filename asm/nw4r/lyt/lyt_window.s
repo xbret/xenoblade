@@ -2545,6 +2545,10 @@ sinit_804053D0:
 /* 804053D4 003CE994  90 0D BB F0 */	stw r0, lbl_80667D70@sda21(r13)
 /* 804053D8 003CE998  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804053D0
+
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 

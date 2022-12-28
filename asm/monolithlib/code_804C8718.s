@@ -4206,6 +4206,10 @@ func_804CC2B0:
 sinit_804CC2B4:
 /* 804CC2B4 00495874  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804CC2B4
+
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 .global lbl_80527E08

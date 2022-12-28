@@ -120,6 +120,10 @@ lbl_804DB0E0:
 /* 804DB0E8 004A46A8  90 83 00 00 */	stw r4, 0(r3)
 /* 804DB0EC 004A46AC  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804DB0D8
+
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

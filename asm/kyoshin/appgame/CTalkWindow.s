@@ -2406,3 +2406,7 @@ func_8012DF80:
 func_8012DF88:
 /* 8012DF88 000F7548  38 63 FF 90 */	addi r3, r3, -112
 /* 8012DF8C 000F754C  4B FF DD D0 */	b func_8012BD5C
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8012DE98

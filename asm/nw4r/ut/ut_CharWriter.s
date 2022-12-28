@@ -236,7 +236,7 @@ lbl_8042F218:
 /* 8042F230 003F87F0  38 84 52 D0 */	addi r4, r4, func_801252D0@l
 /* 8042F234 003F87F4  38 A5 70 A8 */	addi r5, r5, lbl_806570A8@l
 /* 8042F238 003F87F8  38 6D BC BC */	addi r3, r13, lbl_80667E3C@sda21
-/* 8042F23C 003F87FC  4B E8 A4 61 */	bl __register_global_object_tmp
+/* 8042F23C 003F87FC  4B E8 A4 61 */	bl __register_global_object
 /* 8042F240 003F8800  38 00 00 01 */	li r0, 1
 /* 8042F244 003F8804  98 0D BC B8 */	stb r0, lbl_80667E38@sda21(r13)
 lbl_8042F248:
@@ -377,7 +377,7 @@ lbl_8042F444:
 /* 8042F45C 003F8A1C  38 84 52 D0 */	addi r4, r4, func_801252D0@l
 /* 8042F460 003F8A20  38 A5 70 A8 */	addi r5, r5, lbl_806570A8@l
 /* 8042F464 003F8A24  38 6D BC BC */	addi r3, r13, lbl_80667E3C@sda21
-/* 8042F468 003F8A28  4B E8 A2 35 */	bl __register_global_object_tmp
+/* 8042F468 003F8A28  4B E8 A2 35 */	bl __register_global_object
 /* 8042F46C 003F8A2C  38 00 00 01 */	li r0, 1
 /* 8042F470 003F8A30  98 0D BC B8 */	stb r0, lbl_80667E38@sda21(r13)
 lbl_8042F474:
@@ -495,7 +495,7 @@ lbl_8042F614:
 /* 8042F62C 003F8BEC  38 84 52 D0 */	addi r4, r4, func_801252D0@l
 /* 8042F630 003F8BF0  38 A5 70 A8 */	addi r5, r5, lbl_806570A8@l
 /* 8042F634 003F8BF4  38 6D BC BC */	addi r3, r13, lbl_80667E3C@sda21
-/* 8042F638 003F8BF8  4B E8 A0 65 */	bl __register_global_object_tmp
+/* 8042F638 003F8BF8  4B E8 A0 65 */	bl __register_global_object
 /* 8042F63C 003F8BFC  38 00 00 01 */	li r0, 1
 /* 8042F640 003F8C00  98 0D BC B8 */	stb r0, lbl_80667E38@sda21(r13)
 lbl_8042F644:
@@ -614,7 +614,7 @@ lbl_8042F7E4:
 /* 8042F800 003F8DC0  38 84 52 D0 */	addi r4, r4, func_801252D0@l
 /* 8042F804 003F8DC4  38 6D BC BC */	addi r3, r13, lbl_80667E3C@sda21
 /* 8042F808 003F8DC8  38 A5 70 A8 */	addi r5, r5, lbl_806570A8@l
-/* 8042F80C 003F8DCC  4B E8 9E 91 */	bl __register_global_object_tmp
+/* 8042F80C 003F8DCC  4B E8 9E 91 */	bl __register_global_object
 /* 8042F810 003F8DD0  38 00 00 01 */	li r0, 1
 /* 8042F814 003F8DD4  98 0D BC B8 */	stb r0, lbl_80667E38@sda21(r13)
 lbl_8042F818:
@@ -732,7 +732,7 @@ lbl_8042F9B8:
 /* 8042F9D0 003F8F90  38 84 52 D0 */	addi r4, r4, func_801252D0@l
 /* 8042F9D4 003F8F94  38 A5 70 A8 */	addi r5, r5, lbl_806570A8@l
 /* 8042F9D8 003F8F98  38 6D BC BC */	addi r3, r13, lbl_80667E3C@sda21
-/* 8042F9DC 003F8F9C  4B E8 9C C1 */	bl __register_global_object_tmp
+/* 8042F9DC 003F8F9C  4B E8 9C C1 */	bl __register_global_object
 /* 8042F9E0 003F8FA0  38 00 00 01 */	li r0, 1
 /* 8042F9E4 003F8FA4  98 0D BC B8 */	stb r0, lbl_80667E38@sda21(r13)
 lbl_8042F9E8:
@@ -1365,7 +1365,7 @@ SetupGXWithColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
 /* 80430310 003F98D0  38 84 52 D0 */	addi r4, r4, func_801252D0@l
 /* 80430314 003F98D4  38 6D BC BC */	addi r3, r13, lbl_80667E3C@sda21
 /* 80430318 003F98D8  38 A5 70 A8 */	addi r5, r5, lbl_806570A8@l
-/* 8043031C 003F98DC  4B E8 93 81 */	bl __register_global_object_tmp
+/* 8043031C 003F98DC  4B E8 93 81 */	bl __register_global_object
 /* 80430320 003F98E0  38 00 00 01 */	li r0, 1
 /* 80430324 003F98E4  98 0D BC B8 */	stb r0, lbl_80667E38@sda21(r13)
 lbl_80430328:

@@ -56,8 +56,8 @@ __init_cpp:
 /* 8035F374 00328934  7C 08 02 A6 */	mflr r0
 /* 8035F378 00328938  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8035F37C 0032893C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8035F380 00328940  3F E0 80 4F */	lis r31, ctorsTable@ha
-/* 8035F384 00328944  3B FF 59 00 */	addi r31, r31, ctorsTable@l
+/* 8035F380 00328940  3F E0 80 4F */	lis r31, __init_cpp_exceptions_reference@ha
+/* 8035F384 00328944  3B FF 59 00 */	addi r31, r31, __init_cpp_exceptions_reference@l
 /* 8035F388 00328948  48 00 00 10 */	b lbl_8035F398
 lbl_8035F38C:
 /* 8035F38C 0032894C  7D 89 03 A6 */	mtctr r12
@@ -80,8 +80,8 @@ exit:
 /* 8035F3C4 00328984  7C 08 02 A6 */	mflr r0
 /* 8035F3C8 00328988  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8035F3CC 0032898C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8035F3D0 00328990  3F E0 80 4F */	lis r31, lbl_804F5B00@ha
-/* 8035F3D4 00328994  3B FF 5B 00 */	addi r31, r31, lbl_804F5B00@l
+/* 8035F3D0 00328990  3F E0 80 4F */	lis r31, __destroy_global_chain_reference@ha
+/* 8035F3D4 00328994  3B FF 5B 00 */	addi r31, r31, __destroy_global_chain_reference@l
 /* 8035F3D8 00328998  48 00 00 10 */	b lbl_8035F3E8
 lbl_8035F3DC:
 /* 8035F3DC 0032899C  7D 89 03 A6 */	mtctr r12

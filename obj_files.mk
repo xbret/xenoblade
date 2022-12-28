@@ -1,3 +1,7 @@
+GROUP_0_FILES:=\
+	$(BUILD_DIR)/asm/ctors.o \
+	$(BUILD_DIR)/asm/dtors.o
+
 GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CGame.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/IWorkEvent.o \
@@ -346,12 +350,12 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/__exception.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/strlen.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/__va_arg.o \
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/global_destructor_chain.o \
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/global_destructor_chain.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/NMWException.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/ptmf.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/MWRTTI.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/runtime.o \
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/__init_cpp_exceptions.o \
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/__init_cpp_exceptions.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/Gecko_ExceptionPPC.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/GCN_mem_alloc.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/alloc.o \
@@ -1127,6 +1131,7 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/effect/CETrail.o \
 	$(BUILD_DIR)/asm/monolithlib/work/CWorkSystemCache.o \
 	$(BUILD_DIR)/asm/monolithlib/nand/CNand.o \
+	$(BUILD_DIR)/asm/monolithlib/nand/code_804DA4CC.o \
 	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskSave.o \
 	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskLoad.o \
 	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskReaddir.o \
@@ -1156,6 +1161,3 @@ EXTAB_O_FILES :=\
 
 EXTABINDEX_O_FILES :=\
 	$(BUILD_DIR)/asm/extabindex.o
-
-CTORS_O_FILES :=\
-	$(BUILD_DIR)/asm/ctors.o

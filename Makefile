@@ -55,10 +55,10 @@ ifeq ($(EPILOGUE_PROCESS),1)
 include e_files.mk
 endif
 
-O_FILES := $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES) $(GAME_O_FILES) \
-		   $(MW_O_FILES) $(NDEV_O_FILES) $(RVL_SDK_O_FILES) \
+O_FILES :=  $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES) \
+			$(GAME_O_FILES) $(MW_O_FILES) $(NDEV_O_FILES) $(RVL_SDK_O_FILES) \
 		   $(CRIWARE_O_FILES) $(NW4R_O_FILES) $(UTILS_O_FILES) \
-		   $(MM_O_FILES) $(MONOLITHLIB_O_FILES) $(CTORS_O_FILES)
+		   $(MM_O_FILES) $(MONOLITHLIB_O_FILES) #$(GROUP_0_FILES)
 
 #-------------------------------------------------------------------------------
 # Tools
@@ -98,7 +98,7 @@ else
   PYTHON  := python3
 endif
 CC      = $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
-LD      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
+LD     := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 ELF2REL := tools/elf2rel
 

@@ -392,6 +392,10 @@ sinit_8003A4F8:
 /* 8003A534 00003AF4  90 03 00 04 */	stw r0, 4(r3)
 /* 8003A538 00003AF8  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8003A4F8
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

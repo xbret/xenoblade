@@ -4573,3 +4573,7 @@ sinit_802059E8:
 /* 80205A70 001CF030  7C 08 03 A6 */	mtlr r0
 /* 80205A74 001CF034  38 21 00 10 */	addi r1, r1, 0x10
 /* 80205A78 001CF038  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_802059E8

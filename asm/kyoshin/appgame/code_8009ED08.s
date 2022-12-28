@@ -5536,9 +5536,9 @@ func_800A3B24:
 /* 800A3B84 0006D144  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 800A3B88 0006D148  98 0D A6 11 */	stb r0, lbl_80666791@sda21(r13)
 lbl_800A3B8C:
-/* 800A3B8C 0006D14C  48 39 18 11 */	bl MTRand_getInstance
+/* 800A3B8C 0006D14C  48 39 18 11 */	bl getInstance__Q22mm3mtlFv
 /* 800A3B90 0006D150  7C 7F 1B 78 */	mr r31, r3
-/* 800A3B94 0006D154  48 39 1F C9 */	bl func_80435B5C
+/* 800A3B94 0006D154  48 39 1F C9 */	bl randFloat__Q32mm3mtl6MTRandFv
 /* 800A3B98 0006D158  88 0D A6 10 */	lbz r0, lbl_80666790@sda21(r13)
 /* 800A3B9C 0006D15C  3C 80 80 57 */	lis r4, lbl_80576298@ha
 /* 800A3BA0 0006D160  38 84 62 98 */	addi r4, r4, lbl_80576298@l
@@ -5547,7 +5547,7 @@ lbl_800A3B8C:
 /* 800A3BAC 0006D16C  7F E3 FB 78 */	mr r3, r31
 /* 800A3BB0 0006D170  7C 04 04 2E */	lfsx f0, r4, r0
 /* 800A3BB4 0006D174  EF E2 00 7A */	fmadds f31, f2, f1, f0
-/* 800A3BB8 0006D178  48 39 20 41 */	bl func_80435BF8
+/* 800A3BB8 0006D178  48 39 20 41 */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 800A3BBC 0006D17C  6F C3 80 00 */	xoris r3, r30, 0x8000
 /* 800A3BC0 0006D180  3C 00 43 30 */	lis r0, 0x4330
 /* 800A3BC4 0006D184  90 61 00 0C */	stw r3, 0xc(r1)
@@ -7346,14 +7346,14 @@ lbl_800A55C4:
 lbl_800A55EC:
 /* 800A55EC 0006EBAC  2C 00 00 00 */	cmpwi r0, 0
 /* 800A55F0 0006EBB0  41 82 00 30 */	beq lbl_800A5620
-/* 800A55F4 0006EBB4  48 38 FD A9 */	bl MTRand_getInstance
+/* 800A55F4 0006EBB4  48 38 FD A9 */	bl getInstance__Q22mm3mtlFv
 /* 800A55F8 0006EBB8  7C 7B 1B 78 */	mr r27, r3
-/* 800A55FC 0006EBBC  48 39 05 FD */	bl func_80435BF8
+/* 800A55FC 0006EBBC  48 39 05 FD */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 800A5600 0006EBC0  C0 02 8C FC */	lfs f0, lbl_8066907C@sda21(r2)
 /* 800A5604 0006EBC4  7F 63 DB 78 */	mr r3, r27
 /* 800A5608 0006EBC8  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800A560C 0006EBCC  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 800A5610 0006EBD0  48 39 05 E9 */	bl func_80435BF8
+/* 800A5610 0006EBD0  48 39 05 E9 */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 800A5614 0006EBD4  C0 02 8C FC */	lfs f0, lbl_8066907C@sda21(r2)
 /* 800A5618 0006EBD8  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800A561C 0006EBDC  D0 01 00 34 */	stfs f0, 0x34(r1)
@@ -9829,7 +9829,7 @@ lbl_800A78A0:
 /* 800A7AEC 000710AC  7F 83 E3 78 */	mr r3, r28
 /* 800A7AF0 000710B0  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A7AF4 000710B4  38 BE 00 C0 */	addi r5, r30, 0xc0
-/* 800A7AF8 000710B8  48 21 1B A5 */	bl __register_global_object_tmp
+/* 800A7AF8 000710B8  48 21 1B A5 */	bl __register_global_object
 /* 800A7AFC 000710BC  38 00 00 01 */	li r0, 1
 /* 800A7B00 000710C0  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A7B04:
@@ -9871,7 +9871,7 @@ lbl_800A7B04:
 /* 800A7B90 00071150  7F 83 E3 78 */	mr r3, r28
 /* 800A7B94 00071154  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A7B98 00071158  38 BE 00 C0 */	addi r5, r30, 0xc0
-/* 800A7B9C 0007115C  48 21 1B 01 */	bl __register_global_object_tmp
+/* 800A7B9C 0007115C  48 21 1B 01 */	bl __register_global_object
 /* 800A7BA0 00071160  38 00 00 01 */	li r0, 1
 /* 800A7BA4 00071164  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A7BA8:
@@ -9915,7 +9915,7 @@ lbl_800A7BA8:
 /* 800A7C3C 000711FC  7F 83 E3 78 */	mr r3, r28
 /* 800A7C40 00071200  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A7C44 00071204  38 BE 00 C0 */	addi r5, r30, 0xc0
-/* 800A7C48 00071208  48 21 1A 55 */	bl __register_global_object_tmp
+/* 800A7C48 00071208  48 21 1A 55 */	bl __register_global_object
 /* 800A7C4C 0007120C  38 00 00 01 */	li r0, 1
 /* 800A7C50 00071210  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A7C54:
@@ -9993,7 +9993,7 @@ func_800A7CDC:
 /* 800A7D64 00071324  7F E3 FB 78 */	mr r3, r31
 /* 800A7D68 00071328  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A7D6C 0007132C  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A7D70 00071330  48 21 19 2D */	bl __register_global_object_tmp
+/* 800A7D70 00071330  48 21 19 2D */	bl __register_global_object
 /* 800A7D74 00071334  38 00 00 01 */	li r0, 1
 /* 800A7D78 00071338  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A7D7C:
@@ -10045,7 +10045,7 @@ func_800A7D9C:
 /* 800A7E24 000713E4  7F E3 FB 78 */	mr r3, r31
 /* 800A7E28 000713E8  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A7E2C 000713EC  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A7E30 000713F0  48 21 18 6D */	bl __register_global_object_tmp
+/* 800A7E30 000713F0  48 21 18 6D */	bl __register_global_object
 /* 800A7E34 000713F4  38 00 00 01 */	li r0, 1
 /* 800A7E38 000713F8  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A7E3C:
@@ -10140,7 +10140,7 @@ func_800A7EFC:
 /* 800A7F84 00071544  7F E3 FB 78 */	mr r3, r31
 /* 800A7F88 00071548  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A7F8C 0007154C  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A7F90 00071550  48 21 17 0D */	bl __register_global_object_tmp
+/* 800A7F90 00071550  48 21 17 0D */	bl __register_global_object
 /* 800A7F94 00071554  38 00 00 01 */	li r0, 1
 /* 800A7F98 00071558  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A7F9C:
@@ -10192,7 +10192,7 @@ func_800A7FBC:
 /* 800A8044 00071604  7F E3 FB 78 */	mr r3, r31
 /* 800A8048 00071608  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A804C 0007160C  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A8050 00071610  48 21 16 4D */	bl __register_global_object_tmp
+/* 800A8050 00071610  48 21 16 4D */	bl __register_global_object
 /* 800A8054 00071614  38 00 00 01 */	li r0, 1
 /* 800A8058 00071618  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A805C:
@@ -10244,7 +10244,7 @@ func_800A807C:
 /* 800A8104 000716C4  7F E3 FB 78 */	mr r3, r31
 /* 800A8108 000716C8  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A810C 000716CC  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A8110 000716D0  48 21 15 8D */	bl __register_global_object_tmp
+/* 800A8110 000716D0  48 21 15 8D */	bl __register_global_object
 /* 800A8114 000716D4  38 00 00 01 */	li r0, 1
 /* 800A8118 000716D8  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A811C:
@@ -10296,7 +10296,7 @@ func_800A813C:
 /* 800A81C4 00071784  7F E3 FB 78 */	mr r3, r31
 /* 800A81C8 00071788  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A81CC 0007178C  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A81D0 00071790  48 21 14 CD */	bl __register_global_object_tmp
+/* 800A81D0 00071790  48 21 14 CD */	bl __register_global_object
 /* 800A81D4 00071794  38 00 00 01 */	li r0, 1
 /* 800A81D8 00071798  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A81DC:
@@ -10348,7 +10348,7 @@ func_800A81FC:
 /* 800A8284 00071844  7F E3 FB 78 */	mr r3, r31
 /* 800A8288 00071848  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A828C 0007184C  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A8290 00071850  48 21 14 0D */	bl __register_global_object_tmp
+/* 800A8290 00071850  48 21 14 0D */	bl __register_global_object
 /* 800A8294 00071854  38 00 00 01 */	li r0, 1
 /* 800A8298 00071858  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A829C:
@@ -10400,7 +10400,7 @@ func_800A82BC:
 /* 800A8344 00071904  7F E3 FB 78 */	mr r3, r31
 /* 800A8348 00071908  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A834C 0007190C  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A8350 00071910  48 21 13 4D */	bl __register_global_object_tmp
+/* 800A8350 00071910  48 21 13 4D */	bl __register_global_object
 /* 800A8354 00071914  38 00 00 01 */	li r0, 1
 /* 800A8358 00071918  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A835C:
@@ -10452,7 +10452,7 @@ func_800A837C:
 /* 800A8404 000719C4  7F E3 FB 78 */	mr r3, r31
 /* 800A8408 000719C8  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A840C 000719CC  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A8410 000719D0  48 21 12 8D */	bl __register_global_object_tmp
+/* 800A8410 000719D0  48 21 12 8D */	bl __register_global_object
 /* 800A8414 000719D4  38 00 00 01 */	li r0, 1
 /* 800A8418 000719D8  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A841C:
@@ -10504,7 +10504,7 @@ func_800A843C:
 /* 800A84C4 00071A84  7F E3 FB 78 */	mr r3, r31
 /* 800A84C8 00071A88  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A84CC 00071A8C  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A84D0 00071A90  48 21 11 CD */	bl __register_global_object_tmp
+/* 800A84D0 00071A90  48 21 11 CD */	bl __register_global_object
 /* 800A84D4 00071A94  38 00 00 01 */	li r0, 1
 /* 800A84D8 00071A98  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A84DC:
@@ -10558,7 +10558,7 @@ func_800A84FC:
 /* 800A858C 00071B4C  7F E3 FB 78 */	mr r3, r31
 /* 800A8590 00071B50  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A8594 00071B54  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A8598 00071B58  48 21 11 05 */	bl __register_global_object_tmp
+/* 800A8598 00071B58  48 21 11 05 */	bl __register_global_object
 /* 800A859C 00071B5C  38 00 00 01 */	li r0, 1
 /* 800A85A0 00071B60  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A85A4:
@@ -10617,7 +10617,7 @@ func_800A85D8:
 /* 800A8668 00071C28  7F E3 FB 78 */	mr r3, r31
 /* 800A866C 00071C2C  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A8670 00071C30  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A8674 00071C34  48 21 10 29 */	bl __register_global_object_tmp
+/* 800A8674 00071C34  48 21 10 29 */	bl __register_global_object
 /* 800A8678 00071C38  38 00 00 01 */	li r0, 1
 /* 800A867C 00071C3C  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A8680:
@@ -10704,7 +10704,7 @@ func_800A8704:
 /* 800A8794 00071D54  7F E3 FB 78 */	mr r3, r31
 /* 800A8798 00071D58  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A879C 00071D5C  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A87A0 00071D60  48 21 0E FD */	bl __register_global_object_tmp
+/* 800A87A0 00071D60  48 21 0E FD */	bl __register_global_object
 /* 800A87A4 00071D64  38 00 00 01 */	li r0, 1
 /* 800A87A8 00071D68  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A87AC:
@@ -10763,7 +10763,7 @@ func_800A87E0:
 /* 800A8870 00071E30  7F E3 FB 78 */	mr r3, r31
 /* 800A8874 00071E34  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A8878 00071E38  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A887C 00071E3C  48 21 0E 21 */	bl __register_global_object_tmp
+/* 800A887C 00071E3C  48 21 0E 21 */	bl __register_global_object
 /* 800A8880 00071E40  38 00 00 01 */	li r0, 1
 /* 800A8884 00071E44  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A8888:
@@ -10826,7 +10826,7 @@ func_800A88C8:
 /* 800A8958 00071F18  7F E3 FB 78 */	mr r3, r31
 /* 800A895C 00071F1C  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A8960 00071F20  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A8964 00071F24  48 21 0D 39 */	bl __register_global_object_tmp
+/* 800A8964 00071F24  48 21 0D 39 */	bl __register_global_object
 /* 800A8968 00071F28  38 00 00 01 */	li r0, 1
 /* 800A896C 00071F2C  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A8970:
@@ -10899,7 +10899,7 @@ lbl_800A89E8:
 /* 800A8A60 00072020  7F E3 FB 78 */	mr r3, r31
 /* 800A8A64 00072024  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A8A68 00072028  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A8A6C 0007202C  48 21 0C 31 */	bl __register_global_object_tmp
+/* 800A8A6C 0007202C  48 21 0C 31 */	bl __register_global_object
 /* 800A8A70 00072030  38 00 00 01 */	li r0, 1
 /* 800A8A74 00072034  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A8A78:
@@ -10964,7 +10964,7 @@ lbl_800A8AD4:
 /* 800A8B4C 0007210C  7F E3 FB 78 */	mr r3, r31
 /* 800A8B50 00072110  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A8B54 00072114  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A8B58 00072118  48 21 0B 45 */	bl __register_global_object_tmp
+/* 800A8B58 00072118  48 21 0B 45 */	bl __register_global_object
 /* 800A8B5C 0007211C  38 00 00 01 */	li r0, 1
 /* 800A8B60 00072120  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A8B64:
@@ -11124,7 +11124,7 @@ func_800A8CD4:
 /* 800A8D5C 0007231C  7F E3 FB 78 */	mr r3, r31
 /* 800A8D60 00072320  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A8D64 00072324  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A8D68 00072328  48 21 09 35 */	bl __register_global_object_tmp
+/* 800A8D68 00072328  48 21 09 35 */	bl __register_global_object
 /* 800A8D6C 0007232C  38 00 00 01 */	li r0, 1
 /* 800A8D70 00072330  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A8D74:
@@ -11187,7 +11187,7 @@ func_800A8DAC:
 /* 800A8E34 000723F4  7F E3 FB 78 */	mr r3, r31
 /* 800A8E38 000723F8  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A8E3C 000723FC  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A8E40 00072400  48 21 08 5D */	bl __register_global_object_tmp
+/* 800A8E40 00072400  48 21 08 5D */	bl __register_global_object
 /* 800A8E44 00072404  38 00 00 01 */	li r0, 1
 /* 800A8E48 00072408  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A8E4C:
@@ -11249,7 +11249,7 @@ lbl_800A8EA0:
 /* 800A8F18 000724D8  7F E3 FB 78 */	mr r3, r31
 /* 800A8F1C 000724DC  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A8F20 000724E0  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A8F24 000724E4  48 21 07 79 */	bl __register_global_object_tmp
+/* 800A8F24 000724E4  48 21 07 79 */	bl __register_global_object
 /* 800A8F28 000724E8  38 00 00 01 */	li r0, 1
 /* 800A8F2C 000724EC  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A8F30:
@@ -11383,7 +11383,7 @@ func_800A9068:
 /* 800A90F0 000726B0  7F E3 FB 78 */	mr r3, r31
 /* 800A90F4 000726B4  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A90F8 000726B8  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A90FC 000726BC  48 21 05 A1 */	bl __register_global_object_tmp
+/* 800A90FC 000726BC  48 21 05 A1 */	bl __register_global_object
 /* 800A9100 000726C0  38 00 00 01 */	li r0, 1
 /* 800A9104 000726C4  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A9108:
@@ -11440,7 +11440,7 @@ func_800A9134:
 /* 800A91C4 00072784  7F C3 F3 78 */	mr r3, r30
 /* 800A91C8 00072788  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A91CC 0007278C  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A91D0 00072790  48 21 04 CD */	bl __register_global_object_tmp
+/* 800A91D0 00072790  48 21 04 CD */	bl __register_global_object
 /* 800A91D4 00072794  38 00 00 01 */	li r0, 1
 /* 800A91D8 00072798  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A91DC:
@@ -11482,7 +11482,7 @@ lbl_800A91F4:
 /* 800A9264 00072824  7F A3 EB 78 */	mr r3, r29
 /* 800A9268 00072828  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A926C 0007282C  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A9270 00072830  48 21 04 2D */	bl __register_global_object_tmp
+/* 800A9270 00072830  48 21 04 2D */	bl __register_global_object
 /* 800A9274 00072834  38 00 00 01 */	li r0, 1
 /* 800A9278 00072838  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A927C:
@@ -11591,7 +11591,7 @@ func_800A9360:
 /* 800A93E8 000729A8  7F E3 FB 78 */	mr r3, r31
 /* 800A93EC 000729AC  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A93F0 000729B0  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A93F4 000729B4  48 21 02 A9 */	bl __register_global_object_tmp
+/* 800A93F4 000729B4  48 21 02 A9 */	bl __register_global_object
 /* 800A93F8 000729B8  38 00 00 01 */	li r0, 1
 /* 800A93FC 000729BC  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A9400:
@@ -11652,7 +11652,7 @@ func_800A9444:
 /* 800A94CC 00072A8C  7F E3 FB 78 */	mr r3, r31
 /* 800A94D0 00072A90  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A94D4 00072A94  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A94D8 00072A98  48 21 01 C5 */	bl __register_global_object_tmp
+/* 800A94D8 00072A98  48 21 01 C5 */	bl __register_global_object
 /* 800A94DC 00072A9C  38 00 00 01 */	li r0, 1
 /* 800A94E0 00072AA0  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A94E4:
@@ -11718,7 +11718,7 @@ func_800A9534:
 /* 800A95C4 00072B84  7F E3 FB 78 */	mr r3, r31
 /* 800A95C8 00072B88  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A95CC 00072B8C  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A95D0 00072B90  48 21 00 CD */	bl __register_global_object_tmp
+/* 800A95D0 00072B90  48 21 00 CD */	bl __register_global_object
 /* 800A95D4 00072B94  38 00 00 01 */	li r0, 1
 /* 800A95D8 00072B98  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A95DC:
@@ -11800,7 +11800,7 @@ func_800A965C:
 /* 800A96EC 00072CAC  7F E3 FB 78 */	mr r3, r31
 /* 800A96F0 00072CB0  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A96F4 00072CB4  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A96F8 00072CB8  48 20 FF A5 */	bl __register_global_object_tmp
+/* 800A96F8 00072CB8  48 20 FF A5 */	bl __register_global_object
 /* 800A96FC 00072CBC  38 00 00 01 */	li r0, 1
 /* 800A9700 00072CC0  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A9704:
@@ -11882,7 +11882,7 @@ func_800A9784:
 /* 800A9814 00072DD4  7F E3 FB 78 */	mr r3, r31
 /* 800A9818 00072DD8  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A981C 00072DDC  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A9820 00072DE0  48 20 FE 7D */	bl __register_global_object_tmp
+/* 800A9820 00072DE0  48 20 FE 7D */	bl __register_global_object
 /* 800A9824 00072DE4  38 00 00 01 */	li r0, 1
 /* 800A9828 00072DE8  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A982C:
@@ -11963,7 +11963,7 @@ func_800A98A8:
 /* 800A9938 00072EF8  7F E3 FB 78 */	mr r3, r31
 /* 800A993C 00072EFC  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A9940 00072F00  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A9944 00072F04  48 20 FD 59 */	bl __register_global_object_tmp
+/* 800A9944 00072F04  48 20 FD 59 */	bl __register_global_object
 /* 800A9948 00072F08  38 00 00 01 */	li r0, 1
 /* 800A994C 00072F0C  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A9950:
@@ -12043,7 +12043,7 @@ func_800A99D0:
 /* 800A9A58 00073018  7F E3 FB 78 */	mr r3, r31
 /* 800A9A5C 0007301C  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A9A60 00073020  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A9A64 00073024  48 20 FC 39 */	bl __register_global_object_tmp
+/* 800A9A64 00073024  48 20 FC 39 */	bl __register_global_object
 /* 800A9A68 00073028  38 00 00 01 */	li r0, 1
 /* 800A9A6C 0007302C  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A9A70:
@@ -12095,7 +12095,7 @@ func_800A9A90:
 /* 800A9B18 000730D8  7F E3 FB 78 */	mr r3, r31
 /* 800A9B1C 000730DC  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A9B20 000730E0  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A9B24 000730E4  48 20 FB 79 */	bl __register_global_object_tmp
+/* 800A9B24 000730E4  48 20 FB 79 */	bl __register_global_object
 /* 800A9B28 000730E8  38 00 00 01 */	li r0, 1
 /* 800A9B2C 000730EC  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A9B30:
@@ -12147,7 +12147,7 @@ func_800A9B50:
 /* 800A9BD8 00073198  7F E3 FB 78 */	mr r3, r31
 /* 800A9BDC 0007319C  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A9BE0 000731A0  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A9BE4 000731A4  48 20 FA B9 */	bl __register_global_object_tmp
+/* 800A9BE4 000731A4  48 20 FA B9 */	bl __register_global_object
 /* 800A9BE8 000731A8  38 00 00 01 */	li r0, 1
 /* 800A9BEC 000731AC  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A9BF0:
@@ -12199,7 +12199,7 @@ func_800A9C10:
 /* 800A9C98 00073258  7F E3 FB 78 */	mr r3, r31
 /* 800A9C9C 0007325C  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A9CA0 00073260  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A9CA4 00073264  48 20 F9 F9 */	bl __register_global_object_tmp
+/* 800A9CA4 00073264  48 20 F9 F9 */	bl __register_global_object
 /* 800A9CA8 00073268  38 00 00 01 */	li r0, 1
 /* 800A9CAC 0007326C  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A9CB0:
@@ -12251,7 +12251,7 @@ func_800A9CD0:
 /* 800A9D58 00073318  7F E3 FB 78 */	mr r3, r31
 /* 800A9D5C 0007331C  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A9D60 00073320  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A9D64 00073324  48 20 F9 39 */	bl __register_global_object_tmp
+/* 800A9D64 00073324  48 20 F9 39 */	bl __register_global_object
 /* 800A9D68 00073328  38 00 00 01 */	li r0, 1
 /* 800A9D6C 0007332C  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A9D70:
@@ -12303,7 +12303,7 @@ func_800A9D90:
 /* 800A9E18 000733D8  7F E3 FB 78 */	mr r3, r31
 /* 800A9E1C 000733DC  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A9E20 000733E0  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A9E24 000733E4  48 20 F8 79 */	bl __register_global_object_tmp
+/* 800A9E24 000733E4  48 20 F8 79 */	bl __register_global_object
 /* 800A9E28 000733E8  38 00 00 01 */	li r0, 1
 /* 800A9E2C 000733EC  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A9E30:
@@ -12357,7 +12357,7 @@ func_800A9E50:
 /* 800A9EE0 000734A0  7F E3 FB 78 */	mr r3, r31
 /* 800A9EE4 000734A4  38 84 75 FC */	addi r4, r4, func_800A75FC@l
 /* 800A9EE8 000734A8  38 A5 63 80 */	addi r5, r5, lbl_80576380@l
-/* 800A9EEC 000734AC  48 20 F7 B1 */	bl __register_global_object_tmp
+/* 800A9EEC 000734AC  48 20 F7 B1 */	bl __register_global_object
 /* 800A9EF0 000734B0  38 00 00 01 */	li r0, 1
 /* 800A9EF4 000734B4  98 0D A6 18 */	stb r0, lbl_80666798@sda21(r13)
 lbl_800A9EF8:
@@ -12398,40 +12398,44 @@ sinit_800A9F40:
 /* 800A9F68 00073528  38 7E 00 10 */	addi r3, r30, 0x10
 /* 800A9F6C 0007352C  38 9F 34 E0 */	addi r4, r31, func_800A34E0@l
 /* 800A9F70 00073530  38 BE 00 00 */	addi r5, r30, 0
-/* 800A9F74 00073534  48 20 F7 29 */	bl __register_global_object_tmp
+/* 800A9F74 00073534  48 20 F7 29 */	bl __register_global_object
 /* 800A9F78 00073538  38 7E 00 30 */	addi r3, r30, 0x30
 /* 800A9F7C 0007353C  4B FF 95 4D */	bl func_800A34C8
 /* 800A9F80 00073540  38 7E 00 30 */	addi r3, r30, 0x30
 /* 800A9F84 00073544  38 9F 34 E0 */	addi r4, r31, func_800A34E0@l
 /* 800A9F88 00073548  38 BE 00 20 */	addi r5, r30, 0x20
-/* 800A9F8C 0007354C  48 20 F7 11 */	bl __register_global_object_tmp
+/* 800A9F8C 0007354C  48 20 F7 11 */	bl __register_global_object
 /* 800A9F90 00073550  38 7E 00 50 */	addi r3, r30, 0x50
 /* 800A9F94 00073554  4B FF 95 35 */	bl func_800A34C8
 /* 800A9F98 00073558  38 7E 00 50 */	addi r3, r30, 0x50
 /* 800A9F9C 0007355C  38 9F 34 E0 */	addi r4, r31, func_800A34E0@l
 /* 800A9FA0 00073560  38 BE 00 40 */	addi r5, r30, 0x40
-/* 800A9FA4 00073564  48 20 F6 F9 */	bl __register_global_object_tmp
+/* 800A9FA4 00073564  48 20 F6 F9 */	bl __register_global_object
 /* 800A9FA8 00073568  38 7E 00 70 */	addi r3, r30, 0x70
 /* 800A9FAC 0007356C  4B FF 95 1D */	bl func_800A34C8
 /* 800A9FB0 00073570  38 7E 00 70 */	addi r3, r30, 0x70
 /* 800A9FB4 00073574  38 9F 34 E0 */	addi r4, r31, func_800A34E0@l
 /* 800A9FB8 00073578  38 BE 00 60 */	addi r5, r30, 0x60
-/* 800A9FBC 0007357C  48 20 F6 E1 */	bl __register_global_object_tmp
+/* 800A9FBC 0007357C  48 20 F6 E1 */	bl __register_global_object
 /* 800A9FC0 00073580  38 7E 00 90 */	addi r3, r30, 0x90
 /* 800A9FC4 00073584  4B FF 95 05 */	bl func_800A34C8
 /* 800A9FC8 00073588  38 7E 00 90 */	addi r3, r30, 0x90
 /* 800A9FCC 0007358C  38 9F 34 E0 */	addi r4, r31, func_800A34E0@l
 /* 800A9FD0 00073590  38 BE 00 80 */	addi r5, r30, 0x80
-/* 800A9FD4 00073594  48 20 F6 C9 */	bl __register_global_object_tmp
+/* 800A9FD4 00073594  48 20 F6 C9 */	bl __register_global_object
 /* 800A9FD8 00073598  38 7E 00 B0 */	addi r3, r30, 0xb0
 /* 800A9FDC 0007359C  4B FF 94 ED */	bl func_800A34C8
 /* 800A9FE0 000735A0  38 7E 00 B0 */	addi r3, r30, 0xb0
 /* 800A9FE4 000735A4  38 9F 34 E0 */	addi r4, r31, func_800A34E0@l
 /* 800A9FE8 000735A8  38 BE 00 A0 */	addi r5, r30, 0xa0
-/* 800A9FEC 000735AC  48 20 F6 B1 */	bl __register_global_object_tmp
+/* 800A9FEC 000735AC  48 20 F6 B1 */	bl __register_global_object
 /* 800A9FF0 000735B0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800A9FF4 000735B4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 800A9FF8 000735B8  83 C1 00 08 */	lwz r30, 8(r1)
 /* 800A9FFC 000735BC  7C 08 03 A6 */	mtlr r0
 /* 800AA000 000735C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800AA004 000735C4  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_800A9F40

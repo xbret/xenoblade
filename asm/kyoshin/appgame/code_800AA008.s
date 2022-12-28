@@ -869,3 +869,7 @@ sinit_800AABBC:
 /* 800AABC8 00074188  98 04 64 78 */	stb r0, lbl_80576478@l(r4)
 /* 800AABCC 0007418C  90 03 00 40 */	stw r0, 0x40(r3)
 /* 800AABD0 00074190  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_800AABBC

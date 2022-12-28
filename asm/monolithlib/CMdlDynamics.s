@@ -7786,6 +7786,10 @@ sinit_804F01C8:
 /* 804F0250 004B9810  D0 23 00 74 */	stfs f1, 0x74(r3)
 /* 804F0254 004B9814  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804F01C8
+
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

@@ -2711,6 +2711,10 @@ sinit_80494300:
 /* 80494314 0045D8D4  FC 60 08 90 */	fmr f3, f1
 /* 80494318 0045D8D8  4B BA C4 B0 */	b func_800407C8
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80494300
+
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 .global CScnVirtualLight_typestr

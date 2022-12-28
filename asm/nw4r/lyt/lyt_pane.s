@@ -1225,6 +1225,10 @@ sinit_lyt_pane_cpp:
 /* 803FF92C 003C8EEC  90 0D BB D0 */	stw r0, lbl_80667D50@sda21(r13)
 /* 803FF930 003C8EF0  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_lyt_pane_cpp
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

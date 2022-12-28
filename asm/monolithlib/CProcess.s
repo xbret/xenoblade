@@ -2104,13 +2104,13 @@ sinit_804464B4:
 /* 804464F0 0040FAB0  93 BC 00 0C */	stw r29, 0xc(r28)
 /* 804464F4 0040FAB4  38 BC 00 00 */	addi r5, r28, 0
 /* 804464F8 0040FAB8  93 C3 00 10 */	stw r30, 0x10(r3)
-/* 804464FC 0040FABC  4B E7 31 A1 */	bl __register_global_object_tmp
+/* 804464FC 0040FABC  4B E7 31 A1 */	bl __register_global_object
 /* 80446500 0040FAC0  38 7C 00 2C */	addi r3, r28, 0x2c
 /* 80446504 0040FAC4  93 BC 00 2C */	stw r29, 0x2c(r28)
 /* 80446508 0040FAC8  38 9F 65 38 */	addi r4, r31, func_80446538@l
 /* 8044650C 0040FACC  38 BC 00 20 */	addi r5, r28, 0x20
 /* 80446510 0040FAD0  93 C3 00 10 */	stw r30, 0x10(r3)
-/* 80446514 0040FAD4  4B E7 31 89 */	bl __register_global_object_tmp
+/* 80446514 0040FAD4  4B E7 31 89 */	bl __register_global_object
 /* 80446518 0040FAD8  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8044651C 0040FADC  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80446520 0040FAE0  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -2140,6 +2140,9 @@ lbl_80446560:
 /* 80446570 0040FB30  38 21 00 10 */	addi r1, r1, 0x10
 /* 80446574 0040FB34  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804464B4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

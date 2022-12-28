@@ -34,3 +34,7 @@ sinit_8042BDF0:
 /* 8042BDF0 003F53B0  38 00 00 00 */	li r0, 0
 /* 8042BDF4 003F53B4  90 0D BC A0 */	stw r0, lbl_80667E20@sda21(r13)
 /* 8042BDF8 003F53B8  4E 80 00 20 */	blr
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8042BDF0

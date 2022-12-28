@@ -386,7 +386,11 @@ __sinit_lyt_picture_cpp:
 /* 80332C74 002FC234  3C 60 80 5D */	lis r3, lbl_805CD7C8@ha
 /* 80332C78 002FC238  38 84 D7 C0 */	addi r4, r4, lbl_805CD7C0@l
 /* 80332C7C 002FC23C  90 83 D7 C8 */	stw r4, lbl_805CD7C8@l(r3)
-/* 80332C80 002FC240  4E 80 00 20 */	blr 
+/* 80332C80 002FC240  4E 80 00 20 */	blr
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte __sinit_lyt_picture_cpp
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

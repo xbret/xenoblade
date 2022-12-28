@@ -79,6 +79,10 @@ sinit_80436138:
 /* 80436258 003FF818  38 21 00 20 */	addi r1, r1, 0x20
 /* 8043625C 003FF81C  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80436138
+
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .global lbl_8066CA30

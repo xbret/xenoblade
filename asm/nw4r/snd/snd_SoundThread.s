@@ -43,7 +43,7 @@ GetInstance__Q44nw4r3snd6detail11SoundThreadFv:
 /* 80421374 003EA934  7F E3 FB 78 */	mr r3, r31
 /* 80421378 003EA938  38 84 13 A8 */	addi r4, r4, __dt__Q44nw4r3snd6detail11SoundThreadFv@l
 /* 8042137C 003EA93C  38 A5 2C 40 */	addi r5, r5, lbl_80652C40@l
-/* 80421380 003EA940  4B E9 83 1D */	bl __register_global_object_tmp
+/* 80421380 003EA940  4B E9 83 1D */	bl __register_global_object
 /* 80421384 003EA944  38 00 00 01 */	li r0, 1
 /* 80421388 003EA948  98 0D BC 70 */	stb r0, lbl_80667DF0@sda21(r13)
 lbl_8042138C:
@@ -144,7 +144,7 @@ lbl_80421450:
 /* 804214DC 003EAA9C  7F C3 F3 78 */	mr r3, r30
 /* 804214E0 003EAAA0  38 84 13 A8 */	addi r4, r4, __dt__Q44nw4r3snd6detail11SoundThreadFv@l
 /* 804214E4 003EAAA4  38 A5 2C 40 */	addi r5, r5, lbl_80652C40@l
-/* 804214E8 003EAAA8  4B E9 81 B5 */	bl __register_global_object_tmp
+/* 804214E8 003EAAA8  4B E9 81 B5 */	bl __register_global_object
 /* 804214EC 003EAAAC  9B ED BC 70 */	stb r31, lbl_80667DF0@sda21(r13)
 lbl_804214F0:
 /* 804214F0 003EAAB0  3C 80 80 42 */	lis r4, SoundThreadFunc__Q44nw4r3snd6detail11SoundThreadFPv@ha
@@ -220,7 +220,7 @@ Shutdown__Q44nw4r3snd6detail11SoundThreadFv:
 /* 804215F4 003EABB4  7F E3 FB 78 */	mr r3, r31
 /* 804215F8 003EABB8  38 84 13 A8 */	addi r4, r4, __dt__Q44nw4r3snd6detail11SoundThreadFv@l
 /* 804215FC 003EABBC  38 A5 2C 40 */	addi r5, r5, lbl_80652C40@l
-/* 80421600 003EABC0  4B E9 80 9D */	bl __register_global_object_tmp
+/* 80421600 003EABC0  4B E9 80 9D */	bl __register_global_object
 /* 80421604 003EABC4  38 00 00 01 */	li r0, 1
 /* 80421608 003EABC8  98 0D BC 70 */	stb r0, lbl_80667DF0@sda21(r13)
 lbl_8042160C:
@@ -285,7 +285,7 @@ AxCallbackFunc__Q44nw4r3snd6detail11SoundThreadFv:
 /* 804216E4 003EACA4  7F C3 F3 78 */	mr r3, r30
 /* 804216E8 003EACA8  38 84 13 A8 */	addi r4, r4, __dt__Q44nw4r3snd6detail11SoundThreadFv@l
 /* 804216EC 003EACAC  38 A5 2C 40 */	addi r5, r5, lbl_80652C40@l
-/* 804216F0 003EACB0  4B E9 7F AD */	bl __register_global_object_tmp
+/* 804216F0 003EACB0  4B E9 7F AD */	bl __register_global_object
 /* 804216F4 003EACB4  38 00 00 01 */	li r0, 1
 /* 804216F8 003EACB8  98 0D BC 70 */	stb r0, lbl_80667DF0@sda21(r13)
 lbl_804216FC:

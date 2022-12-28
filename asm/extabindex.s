@@ -19208,22 +19208,22 @@ lbl_80021020:
 	.4byte func_80435220
 	.4byte 0x0000017C
 	.4byte lbl_8001C038
-	.4byte MTRand_getInstance
+	.4byte getInstance__Q22mm3mtlFv
 	.4byte 0x00000238
 	.4byte lbl_8001C040
-	.4byte func_804355D4
+	.4byte func_804355D4__Q32mm3mtl6MTRandFUl
 	.4byte 0x00000214
 	.4byte lbl_8001C048
-	.4byte MTRand_nextMt
+	.4byte nextMt__Q32mm3mtl6MTRandFv
 	.4byte 0x000002F4
 	.4byte lbl_8001C050
-	.4byte MTRand_randInt
+	.4byte rand__Q32mm3mtl6MTRandFv
 	.4byte 0x00000080
 	.4byte lbl_8001C058
-	.4byte func_80435B5C
+	.4byte randFloat__Q32mm3mtl6MTRandFv
 	.4byte 0x0000009C
 	.4byte lbl_8001C060
-	.4byte func_80435BF8
+	.4byte randFloat1__Q32mm3mtl6MTRandFv
 	.4byte 0x000000A4
 	.4byte lbl_8001C068
 	.4byte func_80435D28
@@ -24703,11 +24703,11 @@ lbl_80021020:
 	.4byte lbl_80021010
 
 
-.global lbl_80039200
-lbl_80039200:
+.global _eti_init_info
+_eti_init_info:
 	# ROM: 0x4F19E0
 	.4byte lbl_80021020
-	.4byte lbl_80039200
+	.4byte _eti_init_info
 	.4byte __ct__CGame
 	.4byte sz_text
 	.4byte 0

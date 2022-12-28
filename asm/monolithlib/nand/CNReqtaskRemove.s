@@ -87,6 +87,10 @@ lbl_804DB338:
 /* 804DB340 004A4900  90 83 00 00 */	stw r4, 0(r3)
 /* 804DB344 004A4904  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804DB330
+
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

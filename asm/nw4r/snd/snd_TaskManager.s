@@ -33,7 +33,7 @@ GetInstance__Q44nw4r3snd6detail11TaskManagerFv:
 /* 8042582C 003EEDEC  7F E3 FB 78 */	mr r3, r31
 /* 80425830 003EEDF0  38 84 58 60 */	addi r4, r4, __dt__Q44nw4r3snd6detail11TaskManagerFv@l
 /* 80425834 003EEDF4  38 A5 70 18 */	addi r5, r5, lbl_80657018@l
-/* 80425838 003EEDF8  4B E9 3E 65 */	bl __register_global_object_tmp
+/* 80425838 003EEDF8  4B E9 3E 65 */	bl __register_global_object
 /* 8042583C 003EEDFC  38 00 00 01 */	li r0, 1
 /* 80425840 003EEE00  98 0D BC 88 */	stb r0, lbl_80667E08@sda21(r13)
 lbl_80425844:

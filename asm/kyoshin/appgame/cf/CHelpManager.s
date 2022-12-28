@@ -984,7 +984,7 @@ sinit_80295DB0:
 /* 80296684 0025FC44  38 76 04 B4 */	addi r3, r22, 0x4b4
 /* 80296688 0025FC48  38 84 82 08 */	addi r4, r4, func_802B8208@l
 /* 8029668C 0025FC4C  38 B6 04 A8 */	addi r5, r22, 0x4a8
-/* 80296690 0025FC50  48 02 30 0D */	bl __register_global_object_tmp
+/* 80296690 0025FC50  48 02 30 0D */	bl __register_global_object
 /* 80296694 0025FC54  38 76 04 D0 */	addi r3, r22, 0x4d0
 /* 80296698 0025FC58  38 80 33 84 */	li r4, 0x3384
 /* 8029669C 0025FC5C  38 A0 00 45 */	li r5, 0x45
@@ -1114,3 +1114,7 @@ sinit_80295DB0:
 /* 8029688C 0025FE4C  7C 08 03 A6 */	mtlr r0
 /* 80296890 0025FE50  38 21 00 30 */	addi r1, r1, 0x30
 /* 80296894 0025FE54  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80295DB0

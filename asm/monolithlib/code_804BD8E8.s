@@ -2060,6 +2060,10 @@ sinit_804BF540:
 /* 804BF594 00488B54  38 21 00 10 */	addi r1, r1, 0x10
 /* 804BF598 00488B58  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804BF540
+
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

@@ -54,6 +54,10 @@ sinit_804C86C0:
 /* 804C8710 00491CD0  D0 63 00 08 */	stfs f3, 8(r3)
 /* 804C8714 00491CD4  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804C86C0
+
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -14391,3 +14391,7 @@ func_801D1F9C:
 /* 801D1FB4 0019B574  B0 A3 00 02 */	sth r5, 2(r3)
 /* 801D1FB8 0019B578  B0 03 00 00 */	sth r0, 0(r3)
 /* 801D1FBC 0019B57C  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_801D1E30

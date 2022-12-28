@@ -5113,6 +5113,7 @@ lbl_802405DC:
 sinit_802405F0:
 /* 802405F0 00209BB0  4E 80 00 20 */	blr
 
+
 .global func_802405F4
 func_802405F4:
 /* 802405F4 00209BB4  38 63 FF AC */	addi r3, r3, -84
@@ -5132,3 +5133,7 @@ func_80240604:
 func_8024060C:
 /* 8024060C 00209BCC  38 63 FF A8 */	addi r3, r3, -88
 /* 80240610 00209BD0  4B FF BA 08 */	b func_8023C018
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_802405F0

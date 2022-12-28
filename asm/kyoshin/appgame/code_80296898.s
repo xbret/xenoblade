@@ -208,3 +208,7 @@ sinit_80296B38:
 /* 80296B38 002600F8  3C 60 80 58 */	lis r3, lbl_8057A9C8@ha
 /* 80296B3C 002600FC  38 63 A9 C8 */	addi r3, r3, lbl_8057A9C8@l
 /* 80296B40 00260100  4B FF FE F4 */	b func_80296A34
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80296B38

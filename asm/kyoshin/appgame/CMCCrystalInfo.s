@@ -1584,3 +1584,7 @@ sinit_8021BBC4:
 /* 8021BC64 001E5224  7C 08 03 A6 */	mtlr r0
 /* 8021BC68 001E5228  38 21 00 10 */	addi r1, r1, 0x10
 /* 8021BC6C 001E522C  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8021BBC4

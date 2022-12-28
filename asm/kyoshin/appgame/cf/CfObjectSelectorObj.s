@@ -1168,3 +1168,7 @@ lbl_800FEB70:
 /* 800FEB78 000C8138  7C 08 03 A6 */	mtlr r0
 /* 800FEB7C 000C813C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800FEB80 000C8140  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_800FEA14

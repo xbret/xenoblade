@@ -7282,3 +7282,7 @@ sinit_800D79B4:
 /* 800D79F8 000A0FB8  D0 2D A6 70 */	stfs f1, lbl_806667F0@sda21(r13)
 /* 800D79FC 000A0FBC  D0 03 00 04 */	stfs f0, 4(r3)
 /* 800D7A00 000A0FC0  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_800D79B4

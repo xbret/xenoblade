@@ -62,6 +62,10 @@ sinit_8040547C:
 /* 80405480 003CEA40  90 0D BB F8 */	stw r0, lbl_80667D78@sda21(r13)
 /* 80405484 003CEA44  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8040547C
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

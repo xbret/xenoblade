@@ -228,6 +228,10 @@ sinit_8044DAFC:
 /* 8044DB1C 004170DC  90 03 00 40 */	stw r0, 0x40(r3)
 /* 8044DB20 004170E0  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8044DAFC
+
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 

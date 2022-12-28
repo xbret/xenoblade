@@ -1962,6 +1962,10 @@ sinit_80402E1C:
 /* 80402E20 003CC3E0  90 0D BB E8 */	stw r0, lbl_80667D68@sda21(r13)
 /* 80402E24 003CC3E4  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80402E1C
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

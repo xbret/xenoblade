@@ -4316,9 +4316,13 @@ sinit_801C183C:
 /* 801C1878 0018AE38  38 7F 91 20 */	addi r3, r31, lbl_80579120@l
 /* 801C187C 0018AE3C  38 84 18 F4 */	addi r4, r4, func_801C18F4@l
 /* 801C1880 0018AE40  38 A5 91 10 */	addi r5, r5, lbl_80579110@l
-/* 801C1884 0018AE44  48 0F 7E 19 */	bl __register_global_object_tmp
+/* 801C1884 0018AE44  48 0F 7E 19 */	bl __register_global_object
 /* 801C1888 0018AE48  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 801C188C 0018AE4C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801C1890 0018AE50  7C 08 03 A6 */	mtlr r0
 /* 801C1894 0018AE54  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C1898 0018AE58  4E 80 00 20 */	blr
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_801C183C

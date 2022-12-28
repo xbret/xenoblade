@@ -7149,3 +7149,7 @@ func_8012BC34:
 /* 8012BC38 000F51F8  38 84 0D E8 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal@l
 /* 8012BC3C 000F51FC  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BC40 000F5200  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8012BA00

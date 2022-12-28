@@ -405,6 +405,10 @@ randF__12CERandomizerFv:
 rand__12CERandomizerFv:
 /* 804DB97C 004A4F3C  4B F5 A5 5C */	b mtRand
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte __sinit_CERand_cpp
+
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

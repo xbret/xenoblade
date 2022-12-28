@@ -1948,6 +1948,10 @@ func_804BC9DC:
 sinit_804BC9E8:
 /* 804BC9E8 00485FA8  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804BC9E8
+
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

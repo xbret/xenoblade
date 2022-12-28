@@ -1372,3 +1372,7 @@ sinit_801A1818:
 /* 801A1858 0016AE18  D0 03 00 28 */	stfs f0, 0x28(r3)
 /* 801A185C 0016AE1C  D0 43 00 2C */	stfs f2, 0x2c(r3)
 /* 801A1860 0016AE20  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_801A1818

@@ -2469,6 +2469,10 @@ sinit_80336620:
 /* 8033662C 002FFBEC  90 83 D7 D8 */	stw r4, lbl_805CD7D8@l(r3)
 /* 80336630 002FFBF0  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80336620
+
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 

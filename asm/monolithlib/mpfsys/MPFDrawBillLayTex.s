@@ -2989,6 +2989,10 @@ sinit_8047CA2C:
 /* 8047CA80 00446040  38 21 00 10 */	addi r1, r1, 0x10
 /* 8047CA84 00446044  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8047CA2C
+
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .global lbl_8066D008

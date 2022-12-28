@@ -3012,6 +3012,10 @@ sinit_804B598C:
 /* 804B59C0 0047EF80  38 21 00 10 */	addi r1, r1, 0x10
 /* 804B59C4 0047EF84  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804B598C
+
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

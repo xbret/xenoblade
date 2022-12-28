@@ -2913,3 +2913,7 @@ sinit_801BC86C:
 /* 801BCA2C 00185FEC  B9 C1 00 18 */	lmw r14, 0x18(r1)
 /* 801BCA30 00185FF0  38 21 00 60 */	addi r1, r1, 0x60
 /* 801BCA34 00185FF4  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_801BC86C

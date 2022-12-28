@@ -5334,6 +5334,10 @@ lbl_80481E30:
 sinit_80481E68:
 /* 80481E68 0044B428  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80481E68
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

@@ -23,6 +23,10 @@ func_80450B4C:
 /* 80450B4C 0041A10C  38 63 FE 3C */	addi r3, r3, -452
 /* 80450B50 0041A110  4B FF EB 4C */	b func_8044F69C
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80450B2C
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_8065A780

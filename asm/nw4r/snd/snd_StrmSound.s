@@ -566,6 +566,10 @@ sinit_80425740:
 /* 80425744 003EED04  90 0D BC 80 */	stw r0, lbl_80667E00@sda21(r13)
 /* 80425748 003EED08  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80425740
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

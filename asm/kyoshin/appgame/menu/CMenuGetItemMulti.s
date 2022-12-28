@@ -8570,3 +8570,8 @@ func_801BA13C:
 func_801BA144:
 /* 801BA144 00183704  38 63 FF 90 */	addi r3, r3, -112
 /* 801BA148 00183708  4B FF 88 0C */	b func_801B2954
+
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_801B9FC8

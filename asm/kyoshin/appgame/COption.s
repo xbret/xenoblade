@@ -2848,3 +2848,7 @@ sinit_8029E7D8:
 /* 8029E7D8 00267D98  3C 60 80 58 */	lis r3, lbl_8057AA08@ha
 /* 8029E7DC 00267D9C  38 63 AA 08 */	addi r3, r3, lbl_8057AA08@l
 /* 8029E7E0 00267DA0  4B FF 82 24 */	b func_80296A04
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8029E7D8

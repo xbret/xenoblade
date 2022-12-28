@@ -566,3 +566,7 @@ func_801A30C8:
 func_801A30D0:
 /* 801A30D0 0016C690  38 63 FF A4 */	addi r3, r3, -92
 /* 801A30D4 0016C694  4B FF FA 84 */	b func_801A2B58
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_801A3038

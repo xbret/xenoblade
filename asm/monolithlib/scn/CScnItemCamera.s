@@ -1343,6 +1343,10 @@ sinit_8049FC60:
 /* 8049FCA4 00469264  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8049FCA8 00469268  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8049FC60
+
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 .global lbl_80527B80

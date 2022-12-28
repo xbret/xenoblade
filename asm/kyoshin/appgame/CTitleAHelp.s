@@ -920,6 +920,7 @@ sinit_801C4AE4:
 /* 801C4B58 0018E118  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C4B5C 0018E11C  4E 80 00 20 */	blr 
 
+
 .global func_801C4B60
 func_801C4B60:
 /* 801C4B60 0018E120  B0 E3 00 06 */	sth r7, 6(r3)
@@ -927,3 +928,7 @@ func_801C4B60:
 /* 801C4B68 0018E128  B0 A3 00 02 */	sth r5, 2(r3)
 /* 801C4B6C 0018E12C  B0 83 00 00 */	sth r4, 0(r3)
 /* 801C4B70 0018E130  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_801C4AE4

@@ -7049,3 +7049,7 @@ sinit_8023BC8C:
 /* 8023BCE4 002052A4  7C 08 03 A6 */	mtlr r0
 /* 8023BCE8 002052A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8023BCEC 002052AC  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8023BC8C

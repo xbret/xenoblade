@@ -2318,6 +2318,10 @@ lbl_8046A508:
 sinit_8046A52C:
 /* 8046A52C 00433AEC  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_8046A52C
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

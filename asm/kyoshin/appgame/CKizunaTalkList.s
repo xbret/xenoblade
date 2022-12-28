@@ -1390,3 +1390,7 @@ sinit_80274458:
 /* 802744C8 0023DA88  7C 08 03 A6 */	mtlr r0
 /* 802744CC 0023DA8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802744D0 0023DA90  4E 80 00 20 */	blr
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80274458

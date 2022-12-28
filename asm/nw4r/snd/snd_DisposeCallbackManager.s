@@ -26,7 +26,7 @@ GetInstance__Q44nw4r3snd6detail22DisposeCallbackManagerFv:
 /* 80415080 003DE640  90 06 B1 DC */	stw r0, lbl_8063B1DC@l(r6)
 /* 80415084 003DE644  90 E3 00 04 */	stw r7, 4(r3)
 /* 80415088 003DE648  90 E3 00 08 */	stw r7, 8(r3)
-/* 8041508C 003DE64C  4B EA 46 11 */	bl __register_global_object_tmp
+/* 8041508C 003DE64C  4B EA 46 11 */	bl __register_global_object
 /* 80415090 003DE650  38 00 00 01 */	li r0, 1
 /* 80415094 003DE654  98 0D BC 40 */	stb r0, lbl_80667DC0@sda21(r13)
 lbl_80415098:
@@ -117,7 +117,7 @@ Dispose__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv:
 /* 804151B0 003DE770  90 06 B1 DC */	stw r0, lbl_8063B1DC@l(r6)
 /* 804151B4 003DE774  90 E3 00 04 */	stw r7, 4(r3)
 /* 804151B8 003DE778  90 E3 00 08 */	stw r7, 8(r3)
-/* 804151BC 003DE77C  4B EA 44 E1 */	bl __register_global_object_tmp
+/* 804151BC 003DE77C  4B EA 44 E1 */	bl __register_global_object
 /* 804151C0 003DE780  38 00 00 01 */	li r0, 1
 /* 804151C4 003DE784  98 0D BC 40 */	stb r0, lbl_80667DC0@sda21(r13)
 lbl_804151C8:
@@ -156,7 +156,7 @@ lbl_80415214:
 /* 80415240 003DE800  92 F5 B1 DC */	stw r23, lbl_8063B1DC@l(r21)
 /* 80415244 003DE804  90 D6 00 04 */	stw r6, 4(r22)
 /* 80415248 003DE808  90 D6 00 08 */	stw r6, 8(r22)
-/* 8041524C 003DE80C  4B EA 44 51 */	bl __register_global_object_tmp
+/* 8041524C 003DE80C  4B EA 44 51 */	bl __register_global_object
 /* 80415250 003DE810  9B 4D BC 40 */	stb r26, lbl_80667DC0@sda21(r13)
 lbl_80415254:
 /* 80415254 003DE814  7F 83 E3 78 */	mr r3, r28
@@ -203,7 +203,7 @@ DisposeWave__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv:
 /* 804152EC 003DE8AC  90 06 B1 DC */	stw r0, lbl_8063B1DC@l(r6)
 /* 804152F0 003DE8B0  90 E3 00 04 */	stw r7, 4(r3)
 /* 804152F4 003DE8B4  90 E3 00 08 */	stw r7, 8(r3)
-/* 804152F8 003DE8B8  4B EA 43 A5 */	bl __register_global_object_tmp
+/* 804152F8 003DE8B8  4B EA 43 A5 */	bl __register_global_object
 /* 804152FC 003DE8BC  38 00 00 01 */	li r0, 1
 /* 80415300 003DE8C0  98 0D BC 40 */	stb r0, lbl_80667DC0@sda21(r13)
 lbl_80415304:
@@ -242,7 +242,7 @@ lbl_80415350:
 /* 8041537C 003DE93C  92 F5 B1 DC */	stw r23, lbl_8063B1DC@l(r21)
 /* 80415380 003DE940  90 D6 00 04 */	stw r6, 4(r22)
 /* 80415384 003DE944  90 D6 00 08 */	stw r6, 8(r22)
-/* 80415388 003DE948  4B EA 43 15 */	bl __register_global_object_tmp
+/* 80415388 003DE948  4B EA 43 15 */	bl __register_global_object
 /* 8041538C 003DE94C  9B 4D BC 40 */	stb r26, lbl_80667DC0@sda21(r13)
 lbl_80415390:
 /* 80415390 003DE950  7F 83 E3 78 */	mr r3, r28

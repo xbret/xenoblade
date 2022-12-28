@@ -8821,6 +8821,10 @@ sinit_804C8174:
 /* 804C867C 00491C3C  38 21 00 D0 */	addi r1, r1, 0xd0
 /* 804C8680 00491C40  4E 80 00 20 */	blr 
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804C8174
+
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 .global reslist_IScnEnvCtl_typestr

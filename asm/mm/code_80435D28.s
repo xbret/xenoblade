@@ -63,6 +63,10 @@ sinit_80435D94:
 /* 80435DF0 003FF3B0  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80435DF4 003FF3B4  4E 80 00 20 */	blr
 
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80435D94
+
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .global lbl_8066C9E8

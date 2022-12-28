@@ -118,3 +118,7 @@ __sinit_lyt_bounding_cpp:
 /* 8032C578 002F5B38  38 84 D7 C0 */	addi r4, r4, lbl_805CD7C0@l
 /* 8032C57C 002F5B3C  90 83 D7 88 */	stw r4, lbl_805CD788@l(r3)
 /* 8032C580 002F5B40  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte __sinit_lyt_bounding_cpp

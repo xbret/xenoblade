@@ -5792,12 +5792,16 @@ sinit_804BADB4:
 /* 804BADEC 004843AC  7F E3 FB 78 */	mr r3, r31
 /* 804BADF0 004843B0  38 84 5A D0 */	addi r4, r4, func_804B5AD0@l
 /* 804BADF4 004843B4  38 A5 1B E0 */	addi r5, r5, lbl_80661BE0@l
-/* 804BADF8 004843B8  4B DF E8 A5 */	bl __register_global_object_tmp
+/* 804BADF8 004843B8  4B DF E8 A5 */	bl __register_global_object
 /* 804BADFC 004843BC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804BAE00 004843C0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804BAE04 004843C4  7C 08 03 A6 */	mtlr r0
 /* 804BAE08 004843C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804BAE0C 004843CC  4E 80 00 20 */	blr
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804BADB4
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

@@ -704,12 +704,16 @@ sinit_804443D0:
 /* 804443F4 0040D9B4  38 7F A0 F8 */	addi r3, r31, lbl_8065A0F8@l
 /* 804443F8 0040D9B8  38 84 E1 4C */	addi r4, r4, func_804EE14C@l
 /* 804443FC 0040D9BC  38 A5 A0 E8 */	addi r5, r5, lbl_8065A0E8@l
-/* 80444400 0040D9C0  4B E7 52 9D */	bl __register_global_object_tmp
+/* 80444400 0040D9C0  4B E7 52 9D */	bl __register_global_object
 /* 80444404 0040D9C4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80444408 0040D9C8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8044440C 0040D9CC  7C 08 03 A6 */	mtlr r0
 /* 80444410 0040D9D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80444414 0040D9D4  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804443D0
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

@@ -1071,11 +1071,15 @@ sinit_804BD8A0:
 /* 804BD8C8 00486E88  38 84 D8 E8 */	addi r4, r4, func_804BD8E8@l
 /* 804BD8CC 00486E8C  38 6D C0 C0 */	addi r3, r13, lbl_80668240@sda21
 /* 804BD8D0 00486E90  38 A5 1C D8 */	addi r5, r5, lbl_80661CD8@l
-/* 804BD8D4 00486E94  4B DF BD C9 */	bl __register_global_object_tmp
+/* 804BD8D4 00486E94  4B DF BD C9 */	bl __register_global_object
 /* 804BD8D8 00486E98  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804BD8DC 00486E9C  7C 08 03 A6 */	mtlr r0
 /* 804BD8E0 00486EA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804BD8E4 00486EA4  4E 80 00 20 */	blr
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_804BD8A0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

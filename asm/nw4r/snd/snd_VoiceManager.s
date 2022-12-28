@@ -30,7 +30,7 @@ GetInstance__Q44nw4r3snd6detail12VoiceManagerFv:
 /* 80428CB4 003F2274  90 03 00 10 */	stw r0, 0x10(r3)
 /* 80428CB8 003F2278  90 E3 00 14 */	stw r7, 0x14(r3)
 /* 80428CBC 003F227C  90 E3 00 18 */	stw r7, 0x18(r3)
-/* 80428CC0 003F2280  4B E9 09 DD */	bl __register_global_object_tmp
+/* 80428CC0 003F2280  4B E9 09 DD */	bl __register_global_object
 /* 80428CC4 003F2284  38 00 00 01 */	li r0, 1
 /* 80428CC8 003F2288  98 0D BC 90 */	stb r0, lbl_80667E10@sda21(r13)
 lbl_80428CCC:

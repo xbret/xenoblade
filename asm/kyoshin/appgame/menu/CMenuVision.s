@@ -4415,3 +4415,7 @@ func_801AFE0C:
 func_801AFE14:
 /* 801AFE14 001793D4  38 63 FF A4 */	addi r3, r3, -92
 /* 801AFE18 001793D8  4B FF C1 FC */	b func_801AC014
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_801AFCE8

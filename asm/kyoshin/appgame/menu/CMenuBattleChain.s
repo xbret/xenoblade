@@ -1826,3 +1826,7 @@ func_802AB5E4:
 /* 802AB5E4 00274BA4  38 00 00 01 */	li r0, 1
 /* 802AB5E8 00274BA8  98 03 00 05 */	stb r0, 5(r3)
 /* 802AB5EC 00274BAC  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_802AAF24

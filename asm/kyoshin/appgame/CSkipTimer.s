@@ -969,3 +969,7 @@ sinit_802A07D8:
 /* 802A07E8 00269DA8  EC 00 00 72 */	fmuls f0, f0, f1
 /* 802A07EC 00269DAC  D0 0D B1 B8 */	stfs f0, lbl_80667338@sda21(r13)
 /* 802A07F0 00269DB0  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_802A07D8

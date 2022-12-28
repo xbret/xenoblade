@@ -7140,3 +7140,7 @@ sinit_801F32EC:
 /* 801F3404 001BC9C4  7C 08 03 A6 */	mtlr r0
 /* 801F3408 001BC9C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 801F340C 001BC9CC  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_801F32EC

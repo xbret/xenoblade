@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global MTRand_getInstance
-MTRand_getInstance:
+.global getInstance__Q22mm3mtlFv
+getInstance__Q22mm3mtlFv:
 /* 8043539C 003FE95C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804353A0 003FE960  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804353A4 003FE964  88 0D BC E0 */	lbz r0, lbl_80667E60@sda21(r13)
@@ -150,8 +150,8 @@ lbl_804355C0:
 /* 804355CC 003FEB8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804355D0 003FEB90  4E 80 00 20 */	blr 
 
-.global func_804355D4
-func_804355D4:
+.global func_804355D4__Q32mm3mtl6MTRandFUl
+func_804355D4__Q32mm3mtl6MTRandFUl:
 /* 804355D4 003FEB94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804355D8 003FEB98  2C 04 00 00 */	cmpwi r4, 0
 /* 804355DC 003FEB9C  93 E1 00 0C */	stw r31, 0xc(r1)
@@ -288,8 +288,8 @@ lbl_80435608:
 /* 804357E0 003FEDA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804357E4 003FEDA4  4E 80 00 20 */	blr 
 
-.global MTRand_nextMt
-MTRand_nextMt:
+.global nextMt__Q32mm3mtl6MTRandFv
+nextMt__Q32mm3mtl6MTRandFv:
 /* 804357E8 003FEDA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804357EC 003FEDAC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804357F0 003FEDB0  80 03 09 C4 */	lwz r0, 0x9c4(r3)
@@ -486,8 +486,8 @@ lbl_80435A90:
 /* 80435AD4 003FF094  38 21 00 10 */	addi r1, r1, 0x10
 /* 80435AD8 003FF098  4E 80 00 20 */	blr 
 
-.global MTRand_randInt
-MTRand_randInt:
+.global rand__Q32mm3mtl6MTRandFv
+rand__Q32mm3mtl6MTRandFv:
 /* 80435ADC 003FF09C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80435AE0 003FF0A0  7C 08 02 A6 */	mflr r0
 /* 80435AE4 003FF0A4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -497,7 +497,7 @@ MTRand_randInt:
 /* 80435AF4 003FF0B4  34 04 FF FF */	addic. r0, r4, -1
 /* 80435AF8 003FF0B8  90 03 09 C0 */	stw r0, 0x9c0(r3)
 /* 80435AFC 003FF0BC  41 81 00 08 */	bgt lbl_80435B04
-/* 80435B00 003FF0C0  4B FF FC E9 */	bl MTRand_nextMt
+/* 80435B00 003FF0C0  4B FF FC E9 */	bl nextMt__Q32mm3mtl6MTRandFv
 lbl_80435B04:
 /* 80435B04 003FF0C4  80 9F 09 C8 */	lwz r4, 0x9c8(r31)
 /* 80435B08 003FF0C8  3C 60 9D 2C */	lis r3, 0x9D2C5680@ha
@@ -522,8 +522,8 @@ lbl_80435B04:
 /* 80435B54 003FF114  38 21 00 10 */	addi r1, r1, 0x10
 /* 80435B58 003FF118  4E 80 00 20 */	blr 
 
-.global func_80435B5C
-func_80435B5C:
+.global randFloat__Q32mm3mtl6MTRandFv
+randFloat__Q32mm3mtl6MTRandFv:
 /* 80435B5C 003FF11C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80435B60 003FF120  7C 08 02 A6 */	mflr r0
 /* 80435B64 003FF124  90 01 00 24 */	stw r0, 0x24(r1)
@@ -533,7 +533,7 @@ func_80435B5C:
 /* 80435B74 003FF134  34 04 FF FF */	addic. r0, r4, -1
 /* 80435B78 003FF138  90 03 09 C0 */	stw r0, 0x9c0(r3)
 /* 80435B7C 003FF13C  41 81 00 08 */	bgt lbl_80435B84
-/* 80435B80 003FF140  4B FF FC 69 */	bl MTRand_nextMt
+/* 80435B80 003FF140  4B FF FC 69 */	bl nextMt__Q32mm3mtl6MTRandFv
 lbl_80435B84:
 /* 80435B84 003FF144  80 BF 09 C8 */	lwz r5, 0x9c8(r31)
 /* 80435B88 003FF148  3C 00 43 30 */	lis r0, 0x4330
@@ -565,8 +565,8 @@ lbl_80435B84:
 /* 80435BF0 003FF1B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80435BF4 003FF1B4  4E 80 00 20 */	blr 
 
-.global func_80435BF8
-func_80435BF8:
+.global randFloat1__Q32mm3mtl6MTRandFv
+randFloat1__Q32mm3mtl6MTRandFv:
 /* 80435BF8 003FF1B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80435BFC 003FF1BC  7C 08 02 A6 */	mflr r0
 /* 80435C00 003FF1C0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -576,7 +576,7 @@ func_80435BF8:
 /* 80435C10 003FF1D0  34 04 FF FF */	addic. r0, r4, -1
 /* 80435C14 003FF1D4  90 03 09 C0 */	stw r0, 0x9c0(r3)
 /* 80435C18 003FF1D8  41 81 00 08 */	bgt lbl_80435C20
-/* 80435C1C 003FF1DC  4B FF FB CD */	bl MTRand_nextMt
+/* 80435C1C 003FF1DC  4B FF FB CD */	bl nextMt__Q32mm3mtl6MTRandFv
 lbl_80435C20:
 /* 80435C20 003FF1E0  80 BF 09 C8 */	lwz r5, 0x9c8(r31)
 /* 80435C24 003FF1E4  3C 00 43 30 */	lis r0, 0x4330
@@ -610,8 +610,8 @@ lbl_80435C20:
 /* 80435C94 003FF254  38 21 00 20 */	addi r1, r1, 0x20
 /* 80435C98 003FF258  4E 80 00 20 */	blr 
 
-.global func_80435C9C
-func_80435C9C:
+.global PointInRect__Q22mm3mtlFP4RectP4Rect
+PointInRect__Q22mm3mtlFP4RectP4Rect:
 /* 80435C9C 003FF25C  A8 A3 00 00 */	lha r5, 0(r3)
 /* 80435CA0 003FF260  A8 C4 00 00 */	lha r6, 0(r4)
 /* 80435CA4 003FF264  7C 06 28 00 */	cmpw r6, r5
@@ -644,9 +644,8 @@ lbl_80435CE8:
 /* 80435D04 003FF2C4  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 80435D08 003FF2C8  4E 80 00 20 */	blr
 
-
-.global sinit_80435D0C
-sinit_80435D0C:
+.global __sinit_MTRand_cpp
+__sinit_MTRand_cpp:
 /* 80435D0C 003FF2CC  38 6D BC E8 */	addi r3, r13, lbl_80667E68@sda21
 /* 80435D10 003FF2D0  38 00 00 00 */	li r0, 0
 /* 80435D14 003FF2D4  B0 0D BC E8 */	sth r0, lbl_80667E68@sda21(r13)
@@ -655,6 +654,11 @@ sinit_80435D0C:
 /* 80435D20 003FF2E0  B0 03 00 06 */	sth r0, 6(r3)
 /* 80435D24 003FF2E4  4E 80 00 20 */	blr 
 
+
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte __sinit_MTRand_cpp
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -666,6 +670,7 @@ lbl_8066C9D0:
 	.4byte 0
 
 
+#unsigned int to float constant
 .global lbl_8066C9D8
 lbl_8066C9D8:
 	# ROM: 0x576838
@@ -689,7 +694,6 @@ twister:
 .global lbl_80667E60
 lbl_80667E60:
 	.skip 0x8
-#class init guard
 .global lbl_80667E68
 lbl_80667E68:
 	.skip 0x8

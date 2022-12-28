@@ -1672,8 +1672,8 @@ func_80200CE8:
 /* 80200D08 001CA2C8  80 1F 05 48 */	lwz r0, 0x548(r31)
 /* 80200D0C 001CA2CC  2C 00 00 00 */	cmpwi r0, 0
 /* 80200D10 001CA2D0  41 81 00 6C */	bgt lbl_80200D7C
-/* 80200D14 001CA2D4  48 23 46 89 */	bl MTRand_getInstance
-/* 80200D18 001CA2D8  48 23 4D C5 */	bl MTRand_randInt
+/* 80200D14 001CA2D4  48 23 46 89 */	bl getInstance__Q22mm3mtlFv
+/* 80200D18 001CA2D8  48 23 4D C5 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80200D1C 001CA2DC  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80200D20 001CA2E0  54 60 07 FE */	clrlwi r0, r3, 0x1f
 /* 80200D24 001CA2E4  7C 00 22 78 */	xor r0, r0, r4
@@ -2645,8 +2645,6 @@ sinit_802019F8:
 /* 80201A3C 001CAFFC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80201A40 001CB000  4E 80 00 20 */	blr
 
-
-
 .global func_80201A44
 func_80201A44:
 /* 80201A44 001CB004  38 63 FF FC */	addi r3, r3, -4
@@ -2686,3 +2684,7 @@ func_80201A74:
 func_80201A7C:
 /* 80201A7C 001CB03C  38 63 FF F8 */	addi r3, r3, -8
 /* 80201A80 001CB040  4B FF DC DC */	b func_801FF75C
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_802019F8

@@ -3533,7 +3533,7 @@ func_800B07E8:
 /* 800B0818 00079DD8  38 7F 64 CC */	addi r3, r31, lbl_805764CC@l
 /* 800B081C 00079DDC  38 84 0E B4 */	addi r4, r4, func_800B0EB4@l
 /* 800B0820 00079DE0  38 A5 64 C0 */	addi r5, r5, lbl_805764C0@l
-/* 800B0824 00079DE4  48 20 8E 79 */	bl __register_global_object_tmp
+/* 800B0824 00079DE4  48 20 8E 79 */	bl __register_global_object
 /* 800B0828 00079DE8  38 00 00 01 */	li r0, 1
 /* 800B082C 00079DEC  98 0D A6 68 */	stb r0, lbl_806667E8@sda21(r13)
 lbl_800B0830:

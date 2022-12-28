@@ -5895,3 +5895,7 @@ sinit_80250CB4:
 /* 80250D18 0021A2D8  B0 65 00 02 */	sth r3, 2(r5)
 /* 80250D1C 0021A2DC  B0 0D AF 28 */	sth r0, lbl_806670A8@sda21(r13)
 /* 80250D20 0021A2E0  4E 80 00 20 */	blr 
+
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.4byte sinit_80250CB4
