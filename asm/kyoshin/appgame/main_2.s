@@ -796,21 +796,78 @@ lbl_80668460:
 	.asciz "thread"
 	.balign 4
 
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+
+.global lbl_800067E4
+lbl_800067E4:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_800067EC
+lbl_800067EC:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_800067F4
+lbl_800067F4:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_800067FC
+lbl_800067FC:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80006804
+lbl_80006804:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000680C
+lbl_8000680C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80006814
+lbl_80006814:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000681C
+lbl_8000681C:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_80006824
+lbl_80006824:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000682C
+lbl_8000682C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80006834
+lbl_80006834:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000683C
+lbl_8000683C:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_80006844
+lbl_80006844:
+	.4byte 0x00080000
+	.4byte 0
+
+
 .section extabindex, "wa"  # 0x80021020 - 0x80039220
 
 
-	.4byte func_80039EFC
-	.4byte 0x00000038
-	.4byte lbl_800067C4
-	.4byte func_80039F34
-	.4byte 0x00000028
-	.4byte lbl_800067CC
-	.4byte func_80039F6C
-	.4byte 0x00000024
-	.4byte lbl_800067D4
-	.4byte main
-	.4byte 0x000000C8
-	.4byte lbl_800067DC
 	.4byte func_8003A064
 	.4byte 0x00000034
 	.4byte lbl_800067E4

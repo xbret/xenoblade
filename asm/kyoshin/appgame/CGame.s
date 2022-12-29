@@ -1068,6 +1068,113 @@ lbl_80666608:
 	.skip 0x4
 
 
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_800066E0
+lbl_800066E0:
+	# ROM: 0x4BEEC0
+	.4byte 0x080A0000
+	.4byte 0x0000006C
+	.4byte 0x00060010
+	.4byte 0
+	.4byte 0x8680001F
+	.4byte 0
+	.4byte func_80438EC8
+
+.global lbl_800066FC
+lbl_800066FC:
+	.4byte 0x10080000
+	.4byte 0x00000034
+	.4byte 0x00020010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte func_80438EC8
+
+.global lbl_80006718
+lbl_80006718:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_80006720
+lbl_80006720:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_80006728
+lbl_80006728:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80006730
+lbl_80006730:
+	.4byte 0x00080000
+	.4byte 0x0000006C
+	.4byte 0x00060010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
+
+.global lbl_80006748
+lbl_80006748:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80006750
+lbl_80006750:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_80006758
+lbl_80006758:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_80006760
+lbl_80006760:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80006768
+lbl_80006768:
+	.4byte 0x10080000
+	.4byte 0x0000003C
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8780001E
+	.4byte 0x00000024
+	.4byte func_800399E0
+
+.global lbl_80006784
+lbl_80006784:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000678C
+lbl_8000678C:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_80006794
+lbl_80006794:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8000679C
+lbl_8000679C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_800067A4
+lbl_800067A4:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_800067AC
+lbl_800067AC:
+	.4byte 0x00080000
+	.4byte 0
+
 .section extabindex, "wa"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CGame

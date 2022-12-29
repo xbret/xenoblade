@@ -241,7 +241,7 @@ ActionIterator$7ExPPC_NextAction:
 /* 802BAB04 002840C4  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BAB08 002840C8  2C 00 00 00 */	cmpwi r0, 0
 /* 802BAB0C 002840CC  40 82 00 08 */	bne .L_802BAB14
-/* 802BAB10 002840D0  4B FF EB F1 */	bl std$7terminate
+/* 802BAB10 002840D0  4B FF EB F1 */	bl terminate__3stdFv
 .L_802BAB14:
 /* 802BAB14 002840D4  93 DF 00 18 */	stw r30, 0x18(r31)
 /* 802BAB18 002840D8  80 7F 00 00 */	lwz r3, 0(r31)
@@ -334,7 +334,7 @@ switch_802BABF0:
 /* 802BAC04 002841C4  48 00 00 08 */	b .L_802BAC0C
 .global switch_802BAC08
 switch_802BAC08:
-/* 802BAC08 002841C8  4B FF EA F9 */	bl std$7terminate
+/* 802BAC08 002841C8  4B FF EA F9 */	bl terminate__3stdFv
 .L_802BAC0C:
 /* 802BAC0C 002841CC  80 9F 00 08 */	lwz r4, 8(r31)
 /* 802BAC10 002841D0  88 04 00 00 */	lbz r0, 0(r4)
@@ -748,7 +748,7 @@ ThrowContext$7ExPPC_UnwindStack:
 /* 802BB1E8 002847A8  80 1B 00 00 */	lwz r0, 0(r27)
 /* 802BB1EC 002847AC  2C 00 00 00 */	cmpwi r0, 0
 /* 802BB1F0 002847B0  40 82 00 08 */	bne .L_802BB1F8
-/* 802BB1F4 002847B4  4B FF E5 0D */	bl std$7terminate
+/* 802BB1F4 002847B4  4B FF E5 0D */	bl terminate__3stdFv
 .L_802BB1F8:
 /* 802BB1F8 002847B8  80 7B 00 00 */	lwz r3, 0(r27)
 /* 802BB1FC 002847BC  A0 03 00 00 */	lhz r0, 0(r3)
@@ -1106,7 +1106,7 @@ switch_802BB668:
 /* 802BB684 00284C44  48 00 00 08 */	b .L_802BB68C
 .global switch_802BB688
 switch_802BB688:
-/* 802BB688 00284C48  4B FF E0 79 */	bl std$7terminate
+/* 802BB688 00284C48  4B FF E0 79 */	bl terminate__3stdFv
 .L_802BB68C:
 /* 802BB68C 00284C4C  57 A0 06 31 */	rlwinm. r0, r29, 0, 0x18, 0x18
 /* 802BB690 00284C50  41 82 FB 38 */	beq .L_802BB1C8
@@ -1200,7 +1200,7 @@ ThrowContext$7ExPPC_ThrowHandler:
 /* 802BB7D4 00284D94  80 01 00 10 */	lwz r0, 0x10(r1)
 /* 802BB7D8 00284D98  2C 00 00 00 */	cmpwi r0, 0
 /* 802BB7DC 00284D9C  40 82 00 08 */	bne .L_802BB7E4
-/* 802BB7E0 00284DA0  4B FF DF 21 */	bl std$7terminate
+/* 802BB7E0 00284DA0  4B FF DF 21 */	bl terminate__3stdFv
 .L_802BB7E4:
 /* 802BB7E4 00284DA4  80 61 00 10 */	lwz r3, 0x10(r1)
 /* 802BB7E8 00284DA8  A0 03 00 00 */	lhz r0, 0(r3)
@@ -1251,7 +1251,7 @@ ThrowContext$7ExPPC_ThrowHandler:
 /* 802BB88C 00284E4C  41 82 00 20 */	beq .L_802BB8AC
 /* 802BB890 00284E50  2C 03 00 00 */	cmpwi r3, 0
 /* 802BB894 00284E54  41 82 00 0C */	beq .L_802BB8A0
-/* 802BB898 00284E58  4B FF DE 69 */	bl std$7terminate
+/* 802BB898 00284E58  4B FF DE 69 */	bl terminate__3stdFv
 /* 802BB89C 00284E5C  48 00 00 10 */	b .L_802BB8AC
 .L_802BB8A0:
 /* 802BB8A0 00284E60  38 61 00 28 */	addi r3, r1, 0x28
@@ -1381,7 +1381,7 @@ ThrowContext$7ExPPC_ThrowHandler:
 /* 802BBA60 00285020  4B FF FC 51 */	bl ThrowContext$7ExPPC_LongJump
 /* 802BBA64 00285024  48 00 00 0C */	b .L_802BBA70
 .L_802BBA68:
-/* 802BBA68 00285028  4B FF DC 99 */	bl std$7terminate
+/* 802BBA68 00285028  4B FF DC 99 */	bl terminate__3stdFv
 /* 802BBA6C 0028502C  48 00 00 14 */	b .L_802BBA80
 .L_802BBA70:
 /* 802BBA70 00285030  38 61 00 28 */	addi r3, r1, 0x28

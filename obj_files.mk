@@ -1,11 +1,11 @@
 GAME_O_FILES :=\
-	$(BUILD_DIR)/asm/extab.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CGame.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/IWorkEvent.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CGameRestart.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/main_1.o \
 	$(BUILD_DIR)/src/kyoshin/appgame/main.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/main_2.o \
+	$(BUILD_DIR)/asm/extab.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGame.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskGameCf.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGameEff.o \
@@ -22,7 +22,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/IResInfo.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfScript.o \
 	$(BUILD_DIR)/asm/data_1.o \
-	$(BUILD_DIR)/asm/rodata_1.o \
+	$(BUILD_DIR)/asm/rodata.o \
 	$(BUILD_DIR)/asm/sdata_1.o \
 	$(BUILD_DIR)/asm/sdata2_1.o \
 	$(BUILD_DIR)/asm/bss_1.o \
@@ -348,7 +348,7 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/strlen.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/__va_arg.o \
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/global_destructor_chain.o \
-	$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/NMWException.o \
+	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/NMWException.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/ptmf.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/MWRTTI.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/runtime.o \

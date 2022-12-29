@@ -240,7 +240,7 @@ __RTTI__std_exception:
 .global lbl_80665860
 lbl_80665860:
 	# ROM: 0x571440
-	.4byte std$7dthandler
+	.4byte dthandler__3stdFv
 	.4byte 0
 
 .global __RTTI__std_bad_cast

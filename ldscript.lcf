@@ -47,8 +47,4 @@ SECTIONS
 FORCEFILES 
 {
     __init_cpp_exceptions.o
-    ctors.o
-    dtors.o
-    extab.o
-    extabindex.o
 }

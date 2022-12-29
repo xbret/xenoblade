@@ -2,12 +2,12 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global std$7dthandler
-std$7dthandler:
+.global dthandler__3stdFv
+dthandler__3stdFv:
 /* 802B96FC 00282CBC  48 00 DA EC */	b abort
 
-.global std$7terminate
-std$7terminate:
+.global terminate__3stdFv
+terminate__3stdFv:
 /* 802B9700 00282CC0  81 8D 96 E0 */	lwz r12, lbl_80665860@sda21(r13)
 /* 802B9704 00282CC4  7D 89 03 A6 */	mtctr r12
 /* 802B9708 00282CC8  4E 80 04 20 */	bctr 
@@ -254,8 +254,8 @@ __construct_new_array:
 /* 802B9A40 00283000  4E 80 00 20 */	blr
 
 
-.global __partial_array_destructor$7__dt
-__partial_array_destructor$7__dt:
+.global __dt__26__partial_array_destructorFv
+__dt__26__partial_array_destructorFv:
 /* 802B9A44 00283004  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B9A48 00283008  7C 08 02 A6 */	mflr r0
 /* 802B9A4C 0028300C  2C 03 00 00 */	cmpwi r3, 0
@@ -457,7 +457,7 @@ __destroy_new_array:
 .4byte __construct_new_array
 	.4byte 0x00000104
 	.4byte lbl_8001BEE8
-	.4byte __partial_array_destructor$7__dt
+	.4byte __dt__26__partial_array_destructorFv
 	.4byte 0x000000BC
 	.4byte lbl_8001BF00
 	.4byte __construct_array
