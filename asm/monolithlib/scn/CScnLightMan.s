@@ -150,7 +150,30 @@ __RTTI__CScnLightMan:
 	.4byte CScnLightMan_typestr
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001EB70
+lbl_8001EB70:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001EB78
+lbl_8001EB78:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001EB80
+lbl_8001EB80:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001EB88
+lbl_8001EB88:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8048D024
 	.4byte 0x000000C0

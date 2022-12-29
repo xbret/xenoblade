@@ -874,7 +874,31 @@ sinit_800AABBC:
 
 .4byte sinit_800AABBC
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80009344
+lbl_80009344:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000934C
+lbl_8000934C:
+	.4byte 0x58080000
+	.4byte 0
+
+.global lbl_80009354
+lbl_80009354:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000935C
+lbl_8000935C:
+	.4byte 0x28080000
+	.4byte 0
+
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_800AA008
 	.4byte 0x000001AC

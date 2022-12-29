@@ -299,7 +299,30 @@ func_80168028:
 /* 80168034 001315F4  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 80168038 001315F8  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000DE34
+lbl_8000DE34:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000DE3C
+lbl_8000DE3C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000DE44
+lbl_8000DE44:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000DE4C
+lbl_8000DE4C:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte func_80167C84
 	.4byte 0x000000BC

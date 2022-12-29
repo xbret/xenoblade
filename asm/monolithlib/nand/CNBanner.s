@@ -619,7 +619,45 @@ __RTTI__CNBanner:
 	.4byte CNBanner_typestr
 	.4byte CNBanner_hierarchy
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80020FD4
+lbl_80020FD4:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80020FDC
+lbl_80020FDC:
+	.4byte 0x20080000
+	.4byte 0x0000004C
+	.4byte 0x00080010
+	.4byte 0
+	.4byte 0x8680001C
+	.4byte 0
+	.4byte __dt__IWorkEvent
+
+.global lbl_80020FF8
+lbl_80020FF8:
+	.4byte 0x30080000
+	.4byte 0
+
+.global lbl_80021000
+lbl_80021000:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_80021008
+lbl_80021008:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_80021010
+lbl_80021010:
+	.4byte 0x30080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte func_804F5158
 	.4byte 0x000000CC

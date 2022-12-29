@@ -1062,7 +1062,101 @@ lbl_8066D32C:
 	# ROM: 0x57718C
 	.4byte 0x3F726E98
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001F374
+lbl_8001F374:
+	.4byte 0x30080000
+	.4byte 0x00000130
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte __dt__IWorkEvent
+
+.global lbl_8001F390
+lbl_8001F390:
+	.4byte 0x20080000
+	.4byte 0x00000050
+	.4byte 0x000A0010
+	.4byte 0
+	.4byte 0x0680001C
+	.4byte 0
+	.4byte __dt__IWorkEvent
+	.4byte 0x0680001C
+	.4byte 0
+	.4byte __dt__IWorkEvent
+	.4byte 0x8680001C
+	.4byte 0
+	.4byte __dt__IWorkEvent
+
+.global lbl_8001F3C4
+lbl_8001F3C4:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001F3CC
+lbl_8001F3CC:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001F3D4
+lbl_8001F3D4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001F3DC
+lbl_8001F3DC:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001F3E4
+lbl_8001F3E4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001F3EC
+lbl_8001F3EC:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001F3F4
+lbl_8001F3F4:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001F3FC
+lbl_8001F3FC:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001F404
+lbl_8001F404:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001F40C
+lbl_8001F40C:
+	.4byte 0x184A0000
+	.4byte 0
+
+.global lbl_8001F414
+lbl_8001F414:
+	.4byte 0x104A0000
+	.4byte 0
+
+.global lbl_8001F41C
+lbl_8001F41C:
+	.4byte 0x10CA0000
+	.4byte 0
+
+.global lbl_8001F424
+lbl_8001F424:
+	.4byte 0x208A0000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8049ACBC
 	.4byte 0x00000154

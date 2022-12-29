@@ -397,7 +397,55 @@ func_8015D144:
 /* 8015D200 001267C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8015D204 001267C4  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000D67C
+lbl_8000D67C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000D684
+lbl_8000D684:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000D68C
+lbl_8000D68C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000D694
+lbl_8000D694:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000D69C
+lbl_8000D69C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000D6A4
+lbl_8000D6A4:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8000D6AC
+lbl_8000D6AC:
+	.4byte 0x10080000
+	.4byte 0x00000034
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0x0000006C
+	.4byte __dt__IWorkEvent
+
+.global lbl_8000D6C8
+lbl_8000D6C8:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8015CCBC
 	.4byte 0x00000048

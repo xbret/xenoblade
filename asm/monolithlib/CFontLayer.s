@@ -143,7 +143,25 @@ __vt__CFontLayer:
 	.4byte func_80449018
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001CB78
+lbl_8001CB78:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CB80
+lbl_8001CB80:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001CB88
+lbl_8001CB88:
+	.4byte 0x20080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_80448FDC
 	.4byte 0x0000003C

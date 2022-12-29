@@ -1119,7 +1119,60 @@ sinit_80295DB0:
 
 .4byte sinit_80295DB0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80019BA8
+lbl_80019BA8:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_80019BB0
+lbl_80019BB0:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_80019BB8
+lbl_80019BB8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80019BC0
+lbl_80019BC0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80019BC8
+lbl_80019BC8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80019BD0
+lbl_80019BD0:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_80019BD8
+lbl_80019BD8:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80019BE0
+lbl_80019BE0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80019BE8
+lbl_80019BE8:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_80019BF0
+lbl_80019BF0:
+	.4byte 0x500A0000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_80295888
 	.4byte 0x0000009C

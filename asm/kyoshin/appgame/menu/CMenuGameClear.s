@@ -335,7 +335,48 @@ func_802B262C:
 /* 802B262C 0027BBEC  80 6D B3 70 */	lwz r3, lbl_806674F0@sda21(r13)
 /* 802B2630 0027BBF0  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001B840
+lbl_8001B840:
+	.4byte 0x20080000
+	.4byte 0x000000CC
+	.4byte 0x0000004C
+	.4byte 0x000000E0
+	.4byte 0x00000040
+	.4byte 0x000000EC
+	.4byte 0x00000034
+	.4byte 0x00000100
+	.4byte 0x00000028
+	.4byte 0
+	.4byte 0x0780001D
+	.4byte 0x000000B0
+	.4byte func_801D2A38
+	.4byte 0x0780001D
+	.4byte 0x00000074
+	.4byte func_8022B6A0
+	.4byte 0x0780001D
+	.4byte 0x00000060
+	.4byte func_8045F580
+	.4byte 0x0680001D
+	.4byte 0x00000058
+	.4byte func_8004031C
+	.4byte 0x8680001D
+	.4byte 0
+	.4byte func_800FED0C
+
+.global lbl_8001B8A4
+lbl_8001B8A4:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001B8AC
+lbl_8001B8AC:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_802B219C
 	.4byte 0x00000144

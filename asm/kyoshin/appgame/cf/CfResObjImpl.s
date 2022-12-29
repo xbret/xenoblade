@@ -429,7 +429,40 @@ func_8016CD80:
 /* 8016CDB8 00136378  38 21 00 10 */	addi r1, r1, 0x10
 /* 8016CDBC 0013637C  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000E048
+lbl_8000E048:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_8000E050
+lbl_8000E050:
+	.4byte 0x18880000
+	.4byte 0
+
+.global lbl_8000E058
+lbl_8000E058:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000E060
+lbl_8000E060:
+	.4byte 0x18480000
+	.4byte 0
+
+.global lbl_8000E068
+lbl_8000E068:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000E070
+lbl_8000E070:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte func_8016C7F0
 	.4byte 0x00000070

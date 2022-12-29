@@ -623,7 +623,103 @@ func_8029A92C:
 /* 8029A92C 00263EEC  38 63 FF A8 */	addi r3, r3, -88
 /* 8029A930 00263EF0  4B FF F8 A8 */	b func_8029A1D8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001A020
+lbl_8001A020:
+	.4byte 0x20080000
+	.4byte 0x00000094
+	.4byte 0x00000038
+	.4byte 0x000000A4
+	.4byte 0x0000002C
+	.4byte 0x000000CC
+	.4byte 0x000F0020
+	.4byte 0
+	.4byte 0x0780001C
+	.4byte 0x000000B4
+	.4byte func_801C3F50
+	.4byte 0x0780001C
+	.4byte 0x00000060
+	.4byte func_8029A9D4
+	.4byte 0x0680001C
+	.4byte 0x00000058
+	.4byte func_8004031C
+	.4byte 0x8680001C
+	.4byte 0
+	.4byte func_800FED0C
+
+.global lbl_8001A070
+lbl_8001A070:
+	.4byte 0x10080000
+	.4byte 0x00000038
+	.4byte 0x00000018
+	.4byte 0x00000044
+	.4byte 0x00000024
+	.4byte 0
+	.4byte 0x8780001E
+	.4byte 0x000000B4
+	.4byte func_801C3F50
+	.4byte 0x0780001E
+	.4byte 0x000000B4
+	.4byte func_801C3F50
+	.4byte 0x0780001E
+	.4byte 0x00000060
+	.4byte func_8029A9D4
+	.4byte 0x8680001E
+	.4byte 0x00000058
+	.4byte func_8004031C
+
+.global lbl_8001A0B8
+lbl_8001A0B8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001A0C0
+lbl_8001A0C0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001A0C8
+lbl_8001A0C8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001A0D0
+lbl_8001A0D0:
+	.4byte 0x08080000
+	.4byte 0x00000060
+	.4byte 0x00060010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
+
+.global lbl_8001A0E8
+lbl_8001A0E8:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001A0F0
+lbl_8001A0F0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001A0F8
+lbl_8001A0F8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001A100
+lbl_8001A100:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001A108
+lbl_8001A108:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8029A0B8
 	.4byte 0x00000120

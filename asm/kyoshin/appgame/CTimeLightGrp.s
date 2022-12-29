@@ -470,3 +470,73 @@ __RTTI___reslist_base_CVirtualLightObj:
 lbl_806688C8:
 	.float 1.0
 	.4byte 0
+
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80007794
+lbl_80007794:
+	.4byte 0x100A0000
+	.4byte 0x00000080
+	.4byte 0x00030010
+	.4byte 0
+	.4byte 0x0780001E
+	.4byte 0x00000008
+	.4byte func_8005A130
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte func_8005A03C
+
+.global lbl_800077BC
+lbl_800077BC:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_800077C4
+lbl_800077C4:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_800077CC
+lbl_800077CC:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_800077D4
+lbl_800077D4:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_800077DC
+lbl_800077DC:
+	.4byte 0x08180000
+	.4byte 0
+
+.global lbl_800077E4
+lbl_800077E4:
+	.4byte 0x000A0000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
+
+	.4byte func_80059EB8
+	.4byte 0x00000184
+	.4byte lbl_80007794
+	.4byte func_8005A03C
+	.4byte 0x00000040
+	.4byte lbl_800077BC
+	.4byte func_8005A07C
+	.4byte 0x000000B4
+	.4byte lbl_800077C4
+	.4byte func_8005A130
+	.4byte 0x000000B8
+	.4byte lbl_800077CC
+	.4byte func_8005A1E8
+	.4byte 0x00000108
+	.4byte lbl_800077D4
+	.4byte func_8005A2F0
+	.4byte 0x00000084
+	.4byte lbl_800077DC
+	.4byte func_8005A374
+	.4byte 0x00000088
+	.4byte lbl_800077E4

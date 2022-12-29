@@ -1783,7 +1783,177 @@ func_80186D20:
 /* 80186EF8 001504B8  38 21 00 40 */	addi r1, r1, 0x40
 /* 80186EFC 001504BC  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000E984
+lbl_8000E984:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000E98C
+lbl_8000E98C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000E994
+lbl_8000E994:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000E99C
+lbl_8000E99C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000E9A4
+lbl_8000E9A4:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000E9AC
+lbl_8000E9AC:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000E9B4
+lbl_8000E9B4:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000E9BC
+lbl_8000E9BC:
+	.4byte 0x10080000
+	.4byte 0x00000060
+	.4byte 0x00060010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte func_80043E88
+
+.global lbl_8000E9D4
+lbl_8000E9D4:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000E9DC
+lbl_8000E9DC:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8000E9E4
+lbl_8000E9E4:
+	.4byte 0x18080000
+	.4byte 0x00000060
+	.4byte 0x00140010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte func_80043E88
+
+.global lbl_8000E9FC
+lbl_8000E9FC:
+	.4byte 0x08080000
+	.4byte 0x00000088
+	.4byte 0x001B0010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte func_80043E88
+
+.global lbl_8000EA14
+lbl_8000EA14:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000EA1C
+lbl_8000EA1C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000EA24
+lbl_8000EA24:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000EA2C
+lbl_8000EA2C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000EA34
+lbl_8000EA34:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000EA3C
+lbl_8000EA3C:
+	.4byte 0x204A0000
+	.4byte 0
+
+.global lbl_8000EA44
+lbl_8000EA44:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000EA4C
+lbl_8000EA4C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000EA54
+lbl_8000EA54:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000EA5C
+lbl_8000EA5C:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8000EA64
+lbl_8000EA64:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000EA6C
+lbl_8000EA6C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000EA74
+lbl_8000EA74:
+	.4byte 0x30080000
+	.4byte 0
+
+.global lbl_8000EA7C
+lbl_8000EA7C:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8000EA84
+lbl_8000EA84:
+	.4byte 0x284A0000
+	.4byte 0
+
+.global lbl_8000EA8C
+lbl_8000EA8C:
+	.4byte 0x48080000
+	.4byte 0
+
+.global lbl_8000EA94
+lbl_8000EA94:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8000EA9C
+lbl_8000EA9C:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8000EAA4
+lbl_8000EAA4:
+	.4byte 0x50080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_801856C0
 	.4byte 0x00000040

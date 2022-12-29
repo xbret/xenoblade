@@ -1041,7 +1041,68 @@ lbl_8066CBA4:
 CDevice_typestr:
 	.asciz "CDevice"
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001CB90
+lbl_8001CB90:
+	.4byte 0x180A0000
+	.4byte 0x0000003C
+	.4byte 0x00850010
+	.4byte 0
+	.4byte 0x0780001D
+	.4byte 0x00000004
+	.4byte func_804494D8
+	.4byte 0x8680001D
+	.4byte 0
+	.4byte func_8044940C
+
+.global lbl_8001CBB8
+lbl_8001CBB8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CBC0
+lbl_8001CBC0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CBC8
+lbl_8001CBC8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CBD0
+lbl_8001CBD0:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_8001CBD8
+lbl_8001CBD8:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_8001CBE0
+lbl_8001CBE0:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_8001CBE8
+lbl_8001CBE8:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_8001CBF0
+lbl_8001CBF0:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_8001CBF8
+lbl_8001CBF8:
+	.4byte 0x28080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_80449164
 	.4byte 0x000002A8

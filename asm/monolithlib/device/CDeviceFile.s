@@ -1673,7 +1673,103 @@ __RTTI___reslist_base_CFileHandle:
 lbl_80667F40:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001CD84
+lbl_8001CD84:
+	.4byte 0x10080000
+	.4byte 0x00000074
+	.4byte 0x00030010
+	.4byte 0
+	.4byte 0x0780001E
+	.4byte 0x000001CC
+	.4byte func_8044E374
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte func_80447900
+
+.global lbl_8001CDAC
+lbl_8001CDAC:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001CDB4
+lbl_8001CDB4:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001CDBC
+lbl_8001CDBC:
+	.4byte 0x18080000
+	.4byte 0x000000B0
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8780001D
+	.4byte 0x000001CC
+	.4byte func_8044E374
+
+.global lbl_8001CDD8
+lbl_8001CDD8:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8001CDE0
+lbl_8001CDE0:
+	.4byte 0x58180000
+	.4byte 0
+
+.global lbl_8001CDE8
+lbl_8001CDE8:
+	.4byte 0x58180000
+	.4byte 0
+
+.global lbl_8001CDF0
+lbl_8001CDF0:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001CDF8
+lbl_8001CDF8:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001CE00
+lbl_8001CE00:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CE08
+lbl_8001CE08:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CE10
+lbl_8001CE10:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001CE18
+lbl_8001CE18:
+	.4byte 0x08180000
+	.4byte 0
+
+.global lbl_8001CE20
+lbl_8001CE20:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001CE28
+lbl_8001CE28:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CE30
+lbl_8001CE30:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8044E148
 	.4byte 0x00000178

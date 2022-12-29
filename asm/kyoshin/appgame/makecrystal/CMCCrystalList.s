@@ -1578,7 +1578,163 @@ func_80223A50:
 /* 80223D38 001ED2F8  38 21 00 40 */	addi r1, r1, 0x40
 /* 80223D3C 001ED2FC  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80014E60
+lbl_80014E60:
+	.4byte 0x08080000
+	.4byte 0x00000028
+	.4byte 0x00000024
+	.4byte 0x00000030
+	.4byte 0x00000018
+	.4byte 0
+	.4byte 0x0780001F
+	.4byte 0x00000004
+	.4byte func_8045F580
+	.4byte 0x8680001F
+	.4byte 0
+	.4byte __dt__IWorkEvent
+
+.global lbl_80014E90
+lbl_80014E90:
+	.4byte 0x10080000
+	.4byte 0x00000038
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8780001E
+	.4byte 0x00000014
+	.4byte func_8045F580
+
+.global lbl_80014EAC
+lbl_80014EAC:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80014EB4
+lbl_80014EB4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80014EBC
+lbl_80014EBC:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80014EC4
+lbl_80014EC4:
+	.4byte 0x30080000
+	.4byte 0
+
+.global lbl_80014ECC
+lbl_80014ECC:
+	.4byte 0x38080000
+	.4byte 0
+
+.global lbl_80014ED4
+lbl_80014ED4:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_80014EDC
+lbl_80014EDC:
+	.4byte 0x48080000
+	.4byte 0
+
+.global lbl_80014EE4
+lbl_80014EE4:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80014EEC
+lbl_80014EEC:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80014EF4
+lbl_80014EF4:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80014EFC
+lbl_80014EFC:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80014F04
+lbl_80014F04:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80014F0C
+lbl_80014F0C:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80014F14
+lbl_80014F14:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80014F1C
+lbl_80014F1C:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80014F24
+lbl_80014F24:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80014F2C
+lbl_80014F2C:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80014F34
+lbl_80014F34:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80014F3C
+lbl_80014F3C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80014F44
+lbl_80014F44:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80014F4C
+lbl_80014F4C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80014F54
+lbl_80014F54:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80014F5C
+lbl_80014F5C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80014F64
+lbl_80014F64:
+	.4byte 0x20080000
+	.4byte 0x0000006C
+	.4byte 0x006D0018
+	.4byte 0x00000288
+	.4byte 0x000F0020
+	.4byte 0
+	.4byte 0x8200000C
+	.4byte func_8045F8C8
+	.4byte 0x82000008
+	.4byte func_8045F8C8
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_80222740
 	.4byte 0x000000A8

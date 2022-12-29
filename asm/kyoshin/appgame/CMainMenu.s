@@ -546,7 +546,96 @@ switch_800FF2B0:
 /* 800FF2F8 000C88B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 800FF2FC 000C88BC  4E 80 00 20 */	blr
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000AD80
+lbl_8000AD80:
+	.4byte 0x20080000
+	.4byte 0x00000098
+	.4byte 0x00000038
+	.4byte 0x000000C8
+	.4byte 0x0000002C
+	.4byte 0x000000E0
+	.4byte 0x00000020
+	.4byte 0
+	.4byte 0x0780001F
+	.4byte 0x00000090
+	.4byte func_800FEA30
+	.4byte 0x0780001F
+	.4byte 0x00000060
+	.4byte func_8045F580
+	.4byte 0x0680001F
+	.4byte 0x0000005C
+	.4byte func_8004031C
+	.4byte 0x0680001F
+	.4byte 0x00000058
+	.4byte __dt__IWorkEvent
+	.4byte 0x8680001F
+	.4byte 0
+	.4byte func_800FED0C
+
+.global lbl_8000ADDC
+lbl_8000ADDC:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000ADE4
+lbl_8000ADE4:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000ADEC
+lbl_8000ADEC:
+	.4byte 0x10080000
+	.4byte 0x00000040
+	.4byte 0x00000020
+	.4byte 0x0000004C
+	.4byte 0x0000002C
+	.4byte 0x00000064
+	.4byte 0x00000044
+	.4byte 0
+	.4byte 0x8780001E
+	.4byte 0x000000A8
+	.4byte func_801D2D88
+	.4byte 0x0780001E
+	.4byte 0x000000A8
+	.4byte func_801D2D88
+	.4byte 0x8780001E
+	.4byte 0x00000090
+	.4byte func_800FEA30
+	.4byte 0x0780001E
+	.4byte 0x000000A8
+	.4byte func_801D2D88
+	.4byte 0x0780001E
+	.4byte 0x00000090
+	.4byte func_800FEA30
+	.4byte 0x0780001E
+	.4byte 0x00000060
+	.4byte func_8045F580
+	.4byte 0x0680001E
+	.4byte 0x0000005C
+	.4byte func_8004031C
+	.4byte 0x8680001E
+	.4byte 0x00000058
+	.4byte __dt__IWorkEvent
+
+.global lbl_8000AE6C
+lbl_8000AE6C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000AE74
+lbl_8000AE74:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000AE7C
+lbl_8000AE7C:
+	.4byte 0x200A0000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_800FEB84
 	.4byte 0x00000130

@@ -76,7 +76,85 @@ __RTTI__TChildListHeader_CChildListNode:
 	.4byte TChildListHeader_CChildListNode_typestr
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001C9A4
+lbl_8001C9A4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C9AC
+lbl_8001C9AC:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C9B4
+lbl_8001C9B4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C9BC
+lbl_8001C9BC:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8001C9C4
+lbl_8001C9C4:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_8001C9CC
+lbl_8001C9CC:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C9D4
+lbl_8001C9D4:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001C9DC
+lbl_8001C9DC:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001C9E4
+lbl_8001C9E4:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_8001C9EC
+lbl_8001C9EC:
+	.4byte 0x498A0000
+	.4byte 0
+
+.global lbl_8001C9F4
+lbl_8001C9F4:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_8001C9FC
+lbl_8001C9FC:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001CA04
+lbl_8001CA04:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_8001CA0C
+lbl_8001CA0C:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_8001CA14
+lbl_8001CA14:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CChildListNode
 	.4byte 0x00000054

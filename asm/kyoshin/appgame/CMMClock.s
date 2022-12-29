@@ -905,7 +905,79 @@ func_8011C444:
 
 .4byte sinit_8011C418
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000B804
+lbl_8000B804:
+	.4byte 0x200A0000
+	.4byte 0x00000080
+	.4byte 0x00000020
+	.4byte 0x00000260
+	.4byte 0x0000002C
+	.4byte 0x0000034C
+	.4byte 0x00000038
+	.4byte 0
+	.4byte 0x8680001D
+	.4byte 0
+	.4byte __dt__IWorkEvent
+	.4byte 0x8780001D
+	.4byte 0x00000834
+	.4byte func_8045F580
+	.4byte 0x8680001C
+	.4byte 0
+	.4byte __dt__IWorkEvent
+
+.global lbl_8000B848
+lbl_8000B848:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000B850
+lbl_8000B850:
+	.4byte 0x104A0000
+	.4byte 0
+
+.global lbl_8000B858
+lbl_8000B858:
+	.4byte 0x08080000
+	.4byte 0x00000094
+	.4byte 0x00110010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
+
+.global lbl_8000B870
+lbl_8000B870:
+	.4byte 0x28080000
+	.4byte 0x000000F8
+	.4byte 0x00000018
+	.4byte 0x00000100
+	.4byte 0x00000048
+	.4byte 0
+	.4byte 0x0680001B
+	.4byte 0
+	.4byte __dt__IWorkEvent
+	.4byte 0x0680001C
+	.4byte 0x0000005C
+	.4byte func_8004031C
+	.4byte 0x0680001C
+	.4byte 0x00000058
+	.4byte __dt__IWorkEvent
+	.4byte 0x8680001C
+	.4byte 0
+	.4byte func_800FED0C
+	.4byte 0x0780001C
+	.4byte 0x00000064
+	.4byte func_80117540
+	.4byte 0x01000024
+
+.global lbl_8000B8C8
+lbl_8000B8C8:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte func_8011B778
 	.4byte 0x000003A0

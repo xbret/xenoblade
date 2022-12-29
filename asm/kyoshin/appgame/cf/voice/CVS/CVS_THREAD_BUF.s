@@ -704,7 +704,44 @@ func_802A5828:
 /* 802A5828 0026EDE8  38 60 01 04 */	li r3, 0x104
 /* 802A582C 0026EDEC  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001AB44
+lbl_8001AB44:
+	.4byte 0x30180000
+	.4byte 0x000000D4
+	.4byte 0x00000018
+	.4byte 0x0000011C
+	.4byte 0x00000028
+	.4byte 0
+	.4byte 0x90000000
+	.4byte 0
+	.4byte 0x0000010C
+	.4byte 0x00000038
+	.4byte 0x8D000038
+
+.global lbl_8001AB70
+lbl_8001AB70:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001AB78
+lbl_8001AB78:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001AB80
+lbl_8001AB80:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001AB88
+lbl_8001AB88:
+	.4byte 0x30080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_802A4E48
 	.4byte 0x0000015C

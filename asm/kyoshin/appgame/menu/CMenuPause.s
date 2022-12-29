@@ -171,7 +171,31 @@ func_80252638:
 /* 80252638 0021BBF8  38 63 FF A4 */	addi r3, r3, -92
 /* 8025263C 0021BBFC  4B FF F7 BC */	b func_80251DF8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80016C10
+lbl_80016C10:
+	.4byte 0x20080000
+	.4byte 0x000000D0
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x0680001E
+	.4byte 0x0000005C
+	.4byte func_8004031C
+	.4byte 0x0680001E
+	.4byte 0x00000058
+	.4byte __dt__IWorkEvent
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte func_800FED0C
+
+.global lbl_80016C44
+lbl_80016C44:
+	.4byte 0x100A0000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_80252410
 	.4byte 0x00000114

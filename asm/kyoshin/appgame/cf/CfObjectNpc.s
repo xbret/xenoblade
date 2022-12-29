@@ -443,7 +443,55 @@ func_800BF984:
 /* 800BF984 00088F44  88 63 07 15 */	lbz r3, 0x715(r3)
 /* 800BF988 00088F48  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80009EB8
+lbl_80009EB8:
+	.4byte 0x100A0000
+	.4byte 0x00000038
+	.4byte 0x00110010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte func_800BBD6C
+
+.global lbl_80009ED4
+lbl_80009ED4:
+	.4byte 0x10080000
+	.4byte 0x0000003C
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte func_800BBD6C
+
+.global lbl_80009EF0
+lbl_80009EF0:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80009EF8
+lbl_80009EF8:
+	.4byte 0x104A0000
+	.4byte 0
+
+.global lbl_80009F00
+lbl_80009F00:
+	.4byte 0x200A0000
+	.4byte 0
+
+.global lbl_80009F08
+lbl_80009F08:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80009F10
+lbl_80009F10:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_800BF340
 	.4byte 0x000000B8

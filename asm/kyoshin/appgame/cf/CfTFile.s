@@ -1116,7 +1116,115 @@ sinit_8006A820:
 
 .4byte sinit_8006A820
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80007F64
+lbl_80007F64:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80007F6C
+lbl_80007F6C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80007F74
+lbl_80007F74:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80007F7C
+lbl_80007F7C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80007F84
+lbl_80007F84:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80007F8C
+lbl_80007F8C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80007F94
+lbl_80007F94:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80007F9C
+lbl_80007F9C:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_80007FA4
+lbl_80007FA4:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_80007FAC
+lbl_80007FAC:
+	.4byte 0x200A0000
+	.4byte 0
+
+.global lbl_80007FB4
+lbl_80007FB4:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80007FBC
+lbl_80007FBC:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80007FC4
+lbl_80007FC4:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_80007FCC
+lbl_80007FCC:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_80007FD4
+lbl_80007FD4:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_80007FDC
+lbl_80007FDC:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_80007FE4
+lbl_80007FE4:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_80007FEC
+lbl_80007FEC:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_80007FF4
+lbl_80007FF4:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_80007FFC
+lbl_80007FFC:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_80008004
+lbl_80008004:
+	.4byte 0x00080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte func_8006994C
 	.4byte 0x00000064

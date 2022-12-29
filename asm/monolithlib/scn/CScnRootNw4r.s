@@ -1074,7 +1074,78 @@ __RTTI__CScnRootNw4r:
 	.4byte CScnRootNw4r_typestr
 	.4byte CScnRootNw4r_hierarchy
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001EC30
+lbl_8001EC30:
+	.4byte 0x28080000
+	.4byte 0x00000064
+	.4byte 0x003E0018
+	.4byte 0x00000170
+	.4byte 0x00000030
+	.4byte 0
+	.4byte 0x0680001B
+	.4byte 0x0000000C
+	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
+	.4byte 0x8680001B
+	.4byte 0
+	.4byte func_8048ED40
+	.4byte 0x8680001B
+	.4byte 0x0000000C
+	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
+
+.global lbl_8001EC6C
+lbl_8001EC6C:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_8001EC74
+lbl_8001EC74:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001EC7C
+lbl_8001EC7C:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001EC84
+lbl_8001EC84:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001EC8C
+lbl_8001EC8C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001EC94
+lbl_8001EC94:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001EC9C
+lbl_8001EC9C:
+	.4byte 0x48080000
+	.4byte 0
+
+.global lbl_8001ECA4
+lbl_8001ECA4:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001ECAC
+lbl_8001ECAC:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001ECB4
+lbl_8001ECB4:
+	.4byte 0x00080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8048F338
 	.4byte 0x00000198

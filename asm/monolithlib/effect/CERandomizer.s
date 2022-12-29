@@ -547,7 +547,60 @@ ceRandomizerSimple:
 ceRandomizer:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80020798
+lbl_80020798:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_800207A0
+lbl_800207A0:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_800207A8
+lbl_800207A8:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_800207B0
+lbl_800207B0:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_800207B8
+lbl_800207B8:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_800207C0
+lbl_800207C0:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_800207C8
+lbl_800207C8:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_800207D0
+lbl_800207D0:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_800207D8
+lbl_800207D8:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_800207E0
+lbl_800207E0:
+	.4byte 0x000A0000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte execute__18CERandomizerSimpleFf
 	.4byte 0x0000007C

@@ -611,7 +611,35 @@ lbl_8066DAE0:
 	.4byte 0x40800000
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80020CD0
+lbl_80020CD0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80020CD8
+lbl_80020CD8:
+	.4byte 0x380A0000
+	.4byte 0
+
+.global lbl_80020CE0
+lbl_80020CE0:
+	.4byte 0x200A0000
+	.4byte 0
+
+.global lbl_80020CE8
+lbl_80020CE8:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_80020CF0
+lbl_80020CF0:
+	.4byte 0x100A0000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_804E658C
 	.4byte 0x00000040

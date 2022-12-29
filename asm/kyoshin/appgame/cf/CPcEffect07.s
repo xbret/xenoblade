@@ -956,7 +956,45 @@ func_801B255C:
 /* 801B255C 0017BB1C  38 63 FF FC */	addi r3, r3, -4
 /* 801B2560 0017BB20  4B FF F4 14 */	b func_801B1974
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000FD24
+lbl_8000FD24:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000FD2C
+lbl_8000FD2C:
+	.4byte 0x200A0000
+	.4byte 0
+
+.global lbl_8000FD34
+lbl_8000FD34:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000FD3C
+lbl_8000FD3C:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_8000FD44
+lbl_8000FD44:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_8000FD4C
+lbl_8000FD4C:
+	.4byte 0x200A0000
+	.4byte 0
+
+.global lbl_8000FD54
+lbl_8000FD54:
+	.4byte 0x180A0000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_801B1974
 	.4byte 0x0000007C

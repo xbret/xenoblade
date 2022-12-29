@@ -92,7 +92,30 @@ func_80224304:
 /* 80224324 001ED8E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80224328 001ED8E8  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80014FF4
+lbl_80014FF4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80014FFC
+lbl_80014FFC:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80015004
+lbl_80015004:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001500C
+lbl_8001500C:
+	.4byte 0x00080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_802241F8
 	.4byte 0x0000003C

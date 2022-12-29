@@ -40,7 +40,15 @@ func_802B8028:
 /* 802B809C 0028165C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B80A0 00281660  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001BD90
+lbl_8001BD90:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_802B8028
 	.4byte 0x0000007C

@@ -1151,7 +1151,114 @@ func_8018B6B0:
 /* 8018B6B0 00154C70  38 63 FF A8 */	addi r3, r3, -88
 /* 8018B6B4 00154C74  4B FF F0 44 */	b func_8018A6F8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000ED90
+lbl_8000ED90:
+	.4byte 0x18080000
+	.4byte 0x0000008C
+	.4byte 0x00000038
+	.4byte 0x0000009C
+	.4byte 0x0000002C
+	.4byte 0x000000B4
+	.4byte 0x00000020
+	.4byte 0
+	.4byte 0x0780001D
+	.4byte 0x00000080
+	.4byte func_801C3F50
+	.4byte 0x0780001D
+	.4byte 0x00000060
+	.4byte func_801C39D0
+	.4byte 0x0680001D
+	.4byte 0x00000058
+	.4byte func_8004031C
+	.4byte 0x8680001D
+	.4byte 0
+	.4byte func_800FED0C
+
+.global lbl_8000EDE0
+lbl_8000EDE0:
+	.4byte 0x10080000
+	.4byte 0x00000038
+	.4byte 0x00000020
+	.4byte 0x00000044
+	.4byte 0x0000002C
+	.4byte 0x00000050
+	.4byte 0x00000044
+	.4byte 0
+	.4byte 0x8780001E
+	.4byte 0x000000B8
+	.4byte __dt__CItemBoxGrid
+	.4byte 0x0780001E
+	.4byte 0x000000B8
+	.4byte __dt__CItemBoxGrid
+	.4byte 0x8780001E
+	.4byte 0x00000080
+	.4byte func_801C3F50
+	.4byte 0x0780001E
+	.4byte 0x000000B8
+	.4byte __dt__CItemBoxGrid
+	.4byte 0x0780001E
+	.4byte 0x00000080
+	.4byte func_801C3F50
+	.4byte 0x0780001E
+	.4byte 0x00000060
+	.4byte func_801C39D0
+	.4byte 0x8680001E
+	.4byte 0x00000058
+	.4byte func_8004031C
+
+.global lbl_8000EE54
+lbl_8000EE54:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_8000EE5C
+lbl_8000EE5C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000EE64
+lbl_8000EE64:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000EE6C
+lbl_8000EE6C:
+	.4byte 0x08080000
+	.4byte 0x00000060
+	.4byte 0x00090010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
+
+.global lbl_8000EE84
+lbl_8000EE84:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000EE8C
+lbl_8000EE8C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000EE94
+lbl_8000EE94:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000EE9C
+lbl_8000EE9C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000EEA4
+lbl_8000EEA4:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte func_8018A628
 	.4byte 0x000000D0

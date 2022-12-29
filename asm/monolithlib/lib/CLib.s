@@ -134,7 +134,20 @@ CLib_typestr:
 	.asciz "CLib"
 	.balign 4
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001D498
+lbl_8001D498:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001D4A0
+lbl_8001D4A0:
+	.4byte 0x00080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_80459790
 	.4byte 0x000000A0

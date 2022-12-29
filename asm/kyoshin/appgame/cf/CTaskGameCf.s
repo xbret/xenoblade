@@ -877,7 +877,70 @@ lbl_80668624:
 	# ROM: 0x572484
 	.float 1.0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80006E68
+lbl_80006E68:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_80006E70
+lbl_80006E70:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80006E78
+lbl_80006E78:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80006E80
+lbl_80006E80:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_80006E88
+lbl_80006E88:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_80006E90
+lbl_80006E90:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_80006E98
+lbl_80006E98:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_80006EA0
+lbl_80006EA0:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_80006EA8
+lbl_80006EA8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80006EB0
+lbl_80006EB0:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_80006EB8
+lbl_80006EB8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80006EC0
+lbl_80006EC0:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte func_80044168
 	.4byte 0x000000C8

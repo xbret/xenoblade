@@ -304,7 +304,45 @@ __RTTI__CWorkControl:
 lbl_80667EB8:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001C724
+lbl_8001C724:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C72C
+lbl_8001C72C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001C734
+lbl_8001C734:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001C73C
+lbl_8001C73C:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8001C744
+lbl_8001C744:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C74C
+lbl_8001C74C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C754
+lbl_8001C754:
+	.4byte 0x18080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_80443718
 	.4byte 0x0000004C

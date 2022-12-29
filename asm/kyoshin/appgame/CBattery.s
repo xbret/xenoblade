@@ -288,7 +288,49 @@ func_802B94D0:
 /* 802B95B0 00282B70  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B95B4 00282B74  4E 80 00 20 */	blr
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001BE94
+lbl_8001BE94:
+	.4byte 0x10080000
+	.4byte 0x0000002C
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte __dt__IWorkEvent
+
+.global lbl_8001BEB0
+lbl_8001BEB0:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001BEB8
+lbl_8001BEB8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001BEC0
+lbl_8001BEC0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001BEC8
+lbl_8001BEC8:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001BED0
+lbl_8001BED0:
+	.4byte 0x20080000
+	.4byte 0x00000084
+	.4byte 0x000E0010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte func_8045F8C8
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CBattery
 	.4byte 0x00000068

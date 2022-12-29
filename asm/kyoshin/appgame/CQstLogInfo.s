@@ -2399,7 +2399,129 @@ func_8022B35C:
 /* 8022B610 001F4BD0  38 21 00 40 */	addi r1, r1, 0x40
 /* 8022B614 001F4BD4  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001550C
+lbl_8001550C:
+	.4byte 0x08080000
+	.4byte 0x00000028
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8680001F
+	.4byte 0
+	.4byte __dt__IWorkEvent
+
+.global lbl_80015528
+lbl_80015528:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80015530
+lbl_80015530:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80015538
+lbl_80015538:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_80015540
+lbl_80015540:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80015548
+lbl_80015548:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80015550
+lbl_80015550:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_80015558
+lbl_80015558:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_80015560
+lbl_80015560:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80015568
+lbl_80015568:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80015570
+lbl_80015570:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80015578
+lbl_80015578:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80015580
+lbl_80015580:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80015588
+lbl_80015588:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80015590
+lbl_80015590:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_80015598
+lbl_80015598:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_800155A0
+lbl_800155A0:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_800155A8
+lbl_800155A8:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_800155B0
+lbl_800155B0:
+	.4byte 0x60080000
+	.4byte 0
+
+.global lbl_800155B8
+lbl_800155B8:
+	.4byte 0x60080000
+	.4byte 0
+
+.global lbl_800155C0
+lbl_800155C0:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_800155C8
+lbl_800155C8:
+	.4byte 0x18080000
+	.4byte 0x0000006C
+	.4byte 0x00710010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte func_8045F8C8
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_802293F0
 	.4byte 0x0000007C

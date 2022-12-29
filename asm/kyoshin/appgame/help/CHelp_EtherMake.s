@@ -28,7 +28,15 @@ func_802B80A4:
 func_802B80EC:
 /* 802B80EC 002816AC  4B F5 A3 A4 */	b func_80212490
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001BD98
+lbl_8001BD98:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_802B80A4
 	.4byte 0x00000048

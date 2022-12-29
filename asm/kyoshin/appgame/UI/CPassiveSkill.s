@@ -960,7 +960,117 @@ func_8026DE8C:
 /* 8026E168 00237728  38 21 01 B0 */	addi r1, r1, 0x1b0
 /* 8026E16C 0023772C  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80017C14
+lbl_80017C14:
+	.4byte 0x08080000
+	.4byte 0x00000028
+	.4byte 0x00000038
+	.4byte 0x00000058
+	.4byte 0x0000002C
+	.4byte 0x00000064
+	.4byte 0x00000020
+	.4byte 0
+	.4byte 0x0780001F
+	.4byte 0x00000028
+	.4byte func_80266B18
+	.4byte 0x0780001F
+	.4byte 0x00000008
+	.4byte func_8045F580
+	.4byte 0x8680001F
+	.4byte 0
+	.4byte __dt__IWorkEvent
+
+.global lbl_80017C58
+lbl_80017C58:
+	.4byte 0x10080000
+	.4byte 0x00000038
+	.4byte 0x00000018
+	.4byte 0x00000044
+	.4byte 0x00000024
+	.4byte 0
+	.4byte 0x8780001E
+	.4byte 0x000001B8
+	.4byte func_8022B6A0
+	.4byte 0x0780001E
+	.4byte 0x000001B8
+	.4byte func_8022B6A0
+	.4byte 0x8780001E
+	.4byte 0x00000028
+	.4byte func_80266B18
+
+.global lbl_80017C94
+lbl_80017C94:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_80017C9C
+lbl_80017C9C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80017CA4
+lbl_80017CA4:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80017CAC
+lbl_80017CAC:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80017CB4
+lbl_80017CB4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80017CBC
+lbl_80017CBC:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_80017CC4
+lbl_80017CC4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80017CCC
+lbl_80017CCC:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80017CD4
+lbl_80017CD4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80017CDC
+lbl_80017CDC:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80017CE4
+lbl_80017CE4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80017CEC
+lbl_80017CEC:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_80017CF4
+lbl_80017CF4:
+	.4byte 0x180A0000
+	.4byte 0x00000070
+	.4byte 0x006A0010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte func_8045F8C8
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8026D4C0
 	.4byte 0x0000007C

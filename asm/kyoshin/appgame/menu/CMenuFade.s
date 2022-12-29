@@ -1831,7 +1831,119 @@ func_80114E88:
 /* 80114F48 000DE508  38 21 00 70 */	addi r1, r1, 0x70
 /* 80114F4C 000DE50C  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000B4C0
+lbl_8000B4C0:
+	.4byte 0x28CA0000
+	.4byte 0x000000C0
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x0680001B
+	.4byte 0x0000005C
+	.4byte func_8004031C
+	.4byte 0x0680001B
+	.4byte 0x00000058
+	.4byte __dt__IWorkEvent
+	.4byte 0x8680001B
+	.4byte 0
+	.4byte func_800FED0C
+
+.global lbl_8000B4F4
+lbl_8000B4F4:
+	.4byte 0x10080000
+	.4byte 0x00000048
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x0780001E
+	.4byte 0x00000064
+	.4byte func_8045F580
+	.4byte 0x0680001E
+	.4byte 0x0000005C
+	.4byte func_8004031C
+	.4byte 0x8680001E
+	.4byte 0x00000058
+	.4byte __dt__IWorkEvent
+
+.global lbl_8000B528
+lbl_8000B528:
+	.4byte 0x100A0000
+	.4byte 0x00000048
+	.4byte 0x00710010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte func_8045F8C8
+
+.global lbl_8000B540
+lbl_8000B540:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000B548
+lbl_8000B548:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_8000B550
+lbl_8000B550:
+	.4byte 0x08080000
+	.4byte 0x00000054
+	.4byte 0x00050010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
+
+.global lbl_8000B568
+lbl_8000B568:
+	.4byte 0x20CA0000
+	.4byte 0
+
+.global lbl_8000B570
+lbl_8000B570:
+	.4byte 0x10080000
+	.4byte 0x00000048
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x0780001E
+	.4byte 0x00000064
+	.4byte func_8045F580
+	.4byte 0x0680001E
+	.4byte 0x0000005C
+	.4byte func_8004031C
+	.4byte 0x8680001E
+	.4byte 0x00000058
+	.4byte __dt__IWorkEvent
+
+.global lbl_8000B5A4
+lbl_8000B5A4:
+	.4byte 0x10080000
+	.4byte 0x0000004C
+	.4byte 0x001D0010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte func_8045F8C8
+
+.global lbl_8000B5BC
+lbl_8000B5BC:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000B5C4
+lbl_8000B5C4:
+	.4byte 0x300A0000
+	.4byte 0
+
+.global lbl_8000B5CC
+lbl_8000B5CC:
+	.4byte 0x08080000
+	.4byte 0x00000094
+	.4byte 0x00050010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte func_801135E0
 	.4byte 0x00000120

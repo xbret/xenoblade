@@ -1366,7 +1366,85 @@ func_8022E868:
 /* 8022E880 001F7E40  88 63 00 39 */	lbz r3, 0x39(r3)
 /* 8022E884 001F7E44  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001575C
+lbl_8001575C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80015764
+lbl_80015764:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_8001576C
+lbl_8001576C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80015774
+lbl_80015774:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001577C
+lbl_8001577C:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_80015784
+lbl_80015784:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_8001578C
+lbl_8001578C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80015794
+lbl_80015794:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001579C
+lbl_8001579C:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_800157A4
+lbl_800157A4:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_800157AC
+lbl_800157AC:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_800157B4
+lbl_800157B4:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_800157BC
+lbl_800157BC:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_800157C4
+lbl_800157C4:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_800157CC
+lbl_800157CC:
+	.4byte 0x18080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8022D5D4
 	.4byte 0x00000040

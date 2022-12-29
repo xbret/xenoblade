@@ -24,7 +24,15 @@ sinit_8008A0C8:
 
 .4byte sinit_8008A0C8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80008BB4
+lbl_80008BB4:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 
 	.4byte sinit_8008A0C8

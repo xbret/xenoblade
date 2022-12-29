@@ -1151,7 +1151,25 @@ mlib_invsqrt2:
 lbl_80668240:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001FF2C
+lbl_8001FF2C:
+	.4byte 0x40080000
+	.4byte 0
+
+.global lbl_8001FF34
+lbl_8001FF34:
+	.4byte 0x910A0000
+	.4byte 0
+
+.global lbl_8001FF3C
+lbl_8001FF3C:
+	.4byte 0x00080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_804BC9F4
 	.4byte 0x0000021C

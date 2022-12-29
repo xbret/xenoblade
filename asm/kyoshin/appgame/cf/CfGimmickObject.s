@@ -4414,7 +4414,145 @@ func_801F8BB8:
 /* 801F8CAC 001C226C  38 21 00 20 */	addi r1, r1, 0x20
 /* 801F8CB0 001C2270  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80012308
+lbl_80012308:
+	.4byte 0x500A0000
+	.4byte 0x0000004C
+	.4byte 0x028D0010
+	.4byte 0
+	.4byte 0x86800016
+	.4byte 0
+	.4byte func_8020892C
+
+.global lbl_80012324
+lbl_80012324:
+	.4byte 0x10080000
+	.4byte 0x00000034
+	.4byte 0x00020010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte func_8020892C
+
+.global lbl_80012340
+lbl_80012340:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_80012348
+lbl_80012348:
+	.4byte 0x404A0000
+	.4byte 0
+
+.global lbl_80012350
+lbl_80012350:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_80012358
+lbl_80012358:
+	.4byte 0x104A0000
+	.4byte 0
+
+.global lbl_80012360
+lbl_80012360:
+	.4byte 0x18CA0000
+	.4byte 0
+
+.global lbl_80012368
+lbl_80012368:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_80012370
+lbl_80012370:
+	.4byte 0x308A0000
+	.4byte 0
+
+.global lbl_80012378
+lbl_80012378:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_80012380
+lbl_80012380:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_80012388
+lbl_80012388:
+	.4byte 0x404A0000
+	.4byte 0
+
+.global lbl_80012390
+lbl_80012390:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80012398
+lbl_80012398:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_800123A0
+lbl_800123A0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_800123A8
+lbl_800123A8:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_800123B0
+lbl_800123B0:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_800123B8
+lbl_800123B8:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_800123C0
+lbl_800123C0:
+	.4byte 0x38080000
+	.4byte 0
+
+.global lbl_800123C8
+lbl_800123C8:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_800123D0
+lbl_800123D0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_800123D8
+lbl_800123D8:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_800123E0
+lbl_800123E0:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_800123E8
+lbl_800123E8:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_800123F0
+lbl_800123F0:
+	.4byte 0x18080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_801F4F68
 	.4byte 0x00000B24

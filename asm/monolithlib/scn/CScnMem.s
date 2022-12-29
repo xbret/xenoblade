@@ -375,7 +375,63 @@ CScn_typestr:
 	.asciz "CScn"
 	.balign 4
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001EBC8
+lbl_8001EBC8:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001EBD0
+lbl_8001EBD0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001EBD8
+lbl_8001EBD8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001EBE0
+lbl_8001EBE0:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001EBE8
+lbl_8001EBE8:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001EBF0
+lbl_8001EBF0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001EBF8
+lbl_8001EBF8:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001EC00
+lbl_8001EC00:
+	.4byte 0x304A0000
+	.4byte 0x00000230
+	.4byte 0x00A90010
+	.4byte 0
+	.4byte 0x0680001C
+	.4byte 0x0000000C
+	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
+	.4byte 0x8680001C
+	.4byte 0
+	.4byte func_8048ED40
+
+.global lbl_8001EC28
+lbl_8001EC28:
+	.4byte 0x00080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8048EACC
 	.4byte 0x00000064

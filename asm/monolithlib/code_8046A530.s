@@ -3068,7 +3068,50 @@ lbl_8066CE7C:
 	# ROM: 0x576CDC
 	.float -1.0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001DCEC
+lbl_8001DCEC:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001DCF4
+lbl_8001DCF4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001DCFC
+lbl_8001DCFC:
+	.4byte 0x298A0000
+	.4byte 0
+
+.global lbl_8001DD04
+lbl_8001DD04:
+	.4byte 0x200A0000
+	.4byte 0
+
+.global lbl_8001DD0C
+lbl_8001DD0C:
+	.4byte 0x20CA0000
+	.4byte 0
+
+.global lbl_8001DD14
+lbl_8001DD14:
+	.4byte 0x318A0000
+	.4byte 0
+
+.global lbl_8001DD1C
+lbl_8001DD1C:
+	.4byte 0x318A0000
+	.4byte 0
+
+.global lbl_8001DD24
+lbl_8001DD24:
+	.4byte 0x318A0000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8046A530
 	.4byte 0x00000054

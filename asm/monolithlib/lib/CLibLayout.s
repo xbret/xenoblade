@@ -815,7 +815,113 @@ __RTTI__CLibLayout:
 lbl_80667FE8:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001D7C0
+lbl_8001D7C0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D7C8
+lbl_8001D7C8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D7D0
+lbl_8001D7D0:
+	.4byte 0x10080000
+	.4byte 0x00000048
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8780001E
+	.4byte 0x000001E0
+	.4byte func_8045F000
+
+.global lbl_8001D7EC
+lbl_8001D7EC:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8001D7F4
+lbl_8001D7F4:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8001D7FC
+lbl_8001D7FC:
+	.4byte 0x18180000
+	.4byte 0x00000050
+	.4byte 0x00070018
+	.4byte 0x00000080
+	.4byte 0x00000028
+	.4byte 0
+	.4byte 0x90000000
+	.4byte 0
+	.4byte 0x00000070
+	.4byte 0x00000008
+	.4byte 0x8D000008
+
+.global lbl_8001D828
+lbl_8001D828:
+	.4byte 0x10180000
+	.4byte 0x00000040
+	.4byte 0x00000018
+	.4byte 0x00000054
+	.4byte 0x00000028
+	.4byte 0
+	.4byte 0x90000000
+	.4byte 0
+	.4byte 0x00000044
+	.4byte 0x00000008
+	.4byte 0x8D000008
+
+.global lbl_8001D854
+lbl_8001D854:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D85C
+lbl_8001D85C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D864
+lbl_8001D864:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001D86C
+lbl_8001D86C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001D874
+lbl_8001D874:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_8001D87C
+lbl_8001D87C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D884
+lbl_8001D884:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D88C
+lbl_8001D88C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D894
+lbl_8001D894:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8045EF84
 	.4byte 0x0000007C

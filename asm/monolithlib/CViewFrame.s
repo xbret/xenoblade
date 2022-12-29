@@ -4199,7 +4199,138 @@ lbl_80667EB0:
 lbl_80667EB4:
 	.skip 0x4
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001C5E0
+lbl_8001C5E0:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_8001C5E8
+lbl_8001C5E8:
+	.4byte 0x180A0000
+	.4byte 0x0000024C
+	.4byte 0x00470010
+	.4byte 0
+	.4byte 0x82000040
+	.4byte func_804561AC
+
+.global lbl_8001C600
+lbl_8001C600:
+	.4byte 0x300A0000
+	.4byte 0
+
+.global lbl_8001C608
+lbl_8001C608:
+	.4byte 0x200A0000
+	.4byte 0
+
+.global lbl_8001C610
+lbl_8001C610:
+	.4byte 0x300A0000
+	.4byte 0
+
+.global lbl_8001C618
+lbl_8001C618:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001C620
+lbl_8001C620:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C628
+lbl_8001C628:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_8001C630
+lbl_8001C630:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C638
+lbl_8001C638:
+	.4byte 0x18080000
+	.4byte 0x000000E4
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x0780001E
+	.4byte 0x000004F4
+	.4byte func_80438E10
+	.4byte 0x0780001E
+	.4byte 0x000003E4
+	.4byte func_80442084
+	.4byte 0x0780001E
+	.4byte 0x000002D4
+	.4byte func_80442084
+	.4byte 0x8780001E
+	.4byte 0x000001C4
+	.4byte func_80442084
+
+.global lbl_8001C678
+lbl_8001C678:
+	.4byte 0x18180000
+	.4byte 0
+
+.global lbl_8001C680
+lbl_8001C680:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_8001C688
+lbl_8001C688:
+	.4byte 0x38080000
+	.4byte 0
+
+.global lbl_8001C690
+lbl_8001C690:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_8001C698
+lbl_8001C698:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C6A0
+lbl_8001C6A0:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001C6A8
+lbl_8001C6A8:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001C6B0
+lbl_8001C6B0:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001C6B8
+lbl_8001C6B8:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001C6C0
+lbl_8001C6C0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C6C8
+lbl_8001C6C8:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001C6D0
+lbl_8001C6D0:
+	.4byte 0x18080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8043FDF0
 	.4byte 0x00000554

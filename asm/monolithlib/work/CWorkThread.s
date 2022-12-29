@@ -1816,7 +1816,106 @@ __RTTI___reslist_base_CWorkThread:
 	.4byte _reslist_base_CWorkThread_typestr
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001C100
+lbl_8001C100:
+	.4byte 0x28080000
+	.4byte 0x000000F8
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x0780001D
+	.4byte 0x00000080
+	.4byte func_80437A70
+	.4byte 0x0780001D
+	.4byte 0x0000005C
+	.4byte func_804379B8
+	.4byte 0x8680001D
+	.4byte 0
+	.4byte __dt__IWorkEvent
+
+.global lbl_8001C134
+lbl_8001C134:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001C13C
+lbl_8001C13C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001C144
+lbl_8001C144:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C14C
+lbl_8001C14C:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001C154
+lbl_8001C154:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001C15C
+lbl_8001C15C:
+	.4byte 0x08180000
+	.4byte 0
+
+.global lbl_8001C164
+lbl_8001C164:
+	.4byte 0x48080000
+	.4byte 0
+
+.global lbl_8001C16C
+lbl_8001C16C:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001C174
+lbl_8001C174:
+	.4byte 0x60080000
+	.4byte 0
+
+.global lbl_8001C17C
+lbl_8001C17C:
+	.4byte 0x40080000
+	.4byte 0
+
+.global lbl_8001C184
+lbl_8001C184:
+	.4byte 0x48080000
+	.4byte 0
+
+.global lbl_8001C18C
+lbl_8001C18C:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8001C194
+lbl_8001C194:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8001C19C
+lbl_8001C19C:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001C1A4
+lbl_8001C1A4:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_8001C1AC
+lbl_8001C1AC:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CWorkThread
 	.4byte 0x00000348

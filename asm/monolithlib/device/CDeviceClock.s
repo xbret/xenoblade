@@ -575,7 +575,68 @@ __RTTI___reslist_base_IDeviceClockFrame:
 lbl_80667F38:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001CD08
+lbl_8001CD08:
+	.4byte 0x10080000
+	.4byte 0x000000A4
+	.4byte 0x00080010
+	.4byte 0
+	.4byte 0x0780001E
+	.4byte 0x000001CC
+	.4byte func_8044DD40
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte func_80447900
+
+.global lbl_8001CD30
+lbl_8001CD30:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001CD38
+lbl_8001CD38:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001CD40
+lbl_8001CD40:
+	.4byte 0x18080000
+	.4byte 0x000000B0
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8780001D
+	.4byte 0x000001CC
+	.4byte func_8044DD40
+
+.global lbl_8001CD5C
+lbl_8001CD5C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CD64
+lbl_8001CD64:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CD6C
+lbl_8001CD6C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CD74
+lbl_8001CD74:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CD7C
+lbl_8001CD7C:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8044DB24
 	.4byte 0x00000168

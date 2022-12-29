@@ -6058,7 +6058,148 @@ func_800CFFC4:
 /* 800CFFC4 00099584  38 63 FF F0 */	addi r3, r3, -16
 /* 800CFFC8 00099588  4B FB 05 78 */	b func_80080540
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000A3B4
+lbl_8000A3B4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000A3BC
+lbl_8000A3BC:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000A3C4
+lbl_8000A3C4:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_8000A3CC
+lbl_8000A3CC:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_8000A3D4
+lbl_8000A3D4:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000A3DC
+lbl_8000A3DC:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000A3E4
+lbl_8000A3E4:
+	.4byte 0x100A0000
+	.4byte 0x000001F0
+	.4byte 0x006C0010
+	.4byte 0
+	.4byte 0x82000028
+	.4byte func_80043E88
+
+.global lbl_8000A3FC
+lbl_8000A3FC:
+	.4byte 0x204A0000
+	.4byte 0
+
+.global lbl_8000A404
+lbl_8000A404:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000A40C
+lbl_8000A40C:
+	.4byte 0x280A0000
+	.4byte 0
+
+.global lbl_8000A414
+lbl_8000A414:
+	.4byte 0x184A0000
+	.4byte 0
+
+.global lbl_8000A41C
+lbl_8000A41C:
+	.4byte 0x184A0000
+	.4byte 0
+
+.global lbl_8000A424
+lbl_8000A424:
+	.4byte 0x184A0000
+	.4byte 0
+
+.global lbl_8000A42C
+lbl_8000A42C:
+	.4byte 0x200A0000
+	.4byte 0
+
+.global lbl_8000A434
+lbl_8000A434:
+	.4byte 0x100A0000
+	.4byte 0x00000060
+	.4byte 0x00360010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte func_80043E88
+
+.global lbl_8000A44C
+lbl_8000A44C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000A454
+lbl_8000A454:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000A45C
+lbl_8000A45C:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8000A464
+lbl_8000A464:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_8000A46C
+lbl_8000A46C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000A474
+lbl_8000A474:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000A47C
+lbl_8000A47C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000A484
+lbl_8000A484:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000A48C
+lbl_8000A48C:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_8000A494
+lbl_8000A494:
+	.4byte 0x218A0000
+	.4byte 0
+
+.global lbl_8000A49C
+lbl_8000A49C:
+	.4byte 0x19CA0000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte func_800CA964
 	.4byte 0x000000E0

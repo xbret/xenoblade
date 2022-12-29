@@ -2201,7 +2201,132 @@ lbl_8065A424:
 lbl_80667F08:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001C89C
+lbl_8001C89C:
+	.4byte 0x08080000
+	.4byte 0x00000048
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8680001F
+	.4byte 0
+	.4byte func_80444A78
+
+.global lbl_8001C8B8
+lbl_8001C8B8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C8C0
+lbl_8001C8C0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C8C8
+lbl_8001C8C8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C8D0
+lbl_8001C8D0:
+	.4byte 0x18080000
+	.4byte 0x00000094
+	.4byte 0x00130010
+	.4byte 0
+	.4byte 0x0680001D
+	.4byte 0
+	.4byte func_80444A78
+	.4byte 0x0680001D
+	.4byte 0
+	.4byte func_80444A78
+	.4byte 0x0680001D
+	.4byte 0
+	.4byte func_80444A78
+	.4byte 0x0680001D
+	.4byte 0
+	.4byte func_80444A78
+	.4byte 0x0680001D
+	.4byte 0
+	.4byte func_80444A78
+	.4byte 0x0680001D
+	.4byte 0
+	.4byte func_80444A78
+	.4byte 0x8680001D
+	.4byte 0
+	.4byte func_80444A78
+
+.global lbl_8001C934
+lbl_8001C934:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001C93C
+lbl_8001C93C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C944
+lbl_8001C944:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C94C
+lbl_8001C94C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C954
+lbl_8001C954:
+	.4byte 0x30080000
+	.4byte 0
+
+.global lbl_8001C95C
+lbl_8001C95C:
+	.4byte 0x30080000
+	.4byte 0
+
+.global lbl_8001C964
+lbl_8001C964:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001C96C
+lbl_8001C96C:
+	.4byte 0x30080000
+	.4byte 0
+
+.global lbl_8001C974
+lbl_8001C974:
+	.4byte 0x30080000
+	.4byte 0
+
+.global lbl_8001C97C
+lbl_8001C97C:
+	.4byte 0x30080000
+	.4byte 0
+
+.global lbl_8001C984
+lbl_8001C984:
+	.4byte 0x50080000
+	.4byte 0
+
+.global lbl_8001C98C
+lbl_8001C98C:
+	.4byte 0x48080000
+	.4byte 0
+
+.global lbl_8001C994
+lbl_8001C994:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001C99C
+lbl_8001C99C:
+	.4byte 0x08080000
+	.4byte 0
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte __ct__8CProcessFv
 	.4byte 0x00000060

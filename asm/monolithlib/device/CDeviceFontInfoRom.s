@@ -217,7 +217,30 @@ __RTTI__CDeviceFontInfoRom:
 lbl_80667F60:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001D0E8
+lbl_8001D0E8:
+	.4byte 0x10080000
+	.4byte 0x00000044
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte func_80453080
+
+.global lbl_8001D104
+lbl_8001D104:
+	.4byte 0x08080000
+	.4byte 0x00000054
+	.4byte 0x00060010
+	.4byte 0
+	.4byte 0x8680001F
+	.4byte 0
+	.4byte func_80453080
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8045365C
 	.4byte 0x00000080

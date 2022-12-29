@@ -1344,7 +1344,55 @@ lbl_8066DAAC:
 	# ROM: 0x57790C
 	.4byte 0x437F0000
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80020C88
+lbl_80020C88:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80020C90
+lbl_80020C90:
+	.4byte 0x90080000
+	.4byte 0
+
+.global lbl_80020C98
+lbl_80020C98:
+	.4byte 0x90080000
+	.4byte 0
+
+.global lbl_80020CA0
+lbl_80020CA0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80020CA8
+lbl_80020CA8:
+	.4byte switch_80080000
+	.4byte 0
+
+.global lbl_80020CB0
+lbl_80020CB0:
+	.4byte 0x300A0000
+	.4byte 0
+
+.global lbl_80020CB8
+lbl_80020CB8:
+	.4byte 0x680A0000
+	.4byte 0
+
+.global lbl_80020CC0
+lbl_80020CC0:
+	.4byte 0x30080000
+	.4byte 0
+
+.global lbl_80020CC8
+lbl_80020CC8:
+	.4byte 0x28080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_804E5478
 	.4byte 0x00000040

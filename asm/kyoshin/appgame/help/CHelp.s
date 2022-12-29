@@ -99,7 +99,20 @@ func_802B7CE4:
 /* 802B7CF8 002812B8  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 802B7CFC 002812BC  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001BD48
+lbl_8001BD48:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001BD50
+lbl_8001BD50:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_802B7BEC
 	.4byte 0x00000078

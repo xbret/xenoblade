@@ -569,8 +569,40 @@ lbl_80525D70:
 memoryAllocHeapArray:
 	.skip 0x2300
 
+.section extab, "wa"  # 0x800066E0 - 0x80021020
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.global lbl_8001C010
+lbl_8001C010:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C018
+lbl_8001C018:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C020
+lbl_8001C020:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C028
+lbl_8001C028:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C030
+lbl_8001C030:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_8001C038
+lbl_8001C038:
+	.4byte 0x40080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte __dl__FPv
 	.4byte 0x000001B4

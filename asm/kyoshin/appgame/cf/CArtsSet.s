@@ -250,7 +250,25 @@ func_80153EF0:
 /* 80153EF8 0011D4B8  38 63 00 10 */	addi r3, r3, 0x10
 /* 80153EFC 0011D4BC  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000D32C
+lbl_8000D32C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000D334
+lbl_8000D334:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8000D33C
+lbl_8000D33C:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte __ct__cf__sArtsSet
 	.4byte 0x00000044

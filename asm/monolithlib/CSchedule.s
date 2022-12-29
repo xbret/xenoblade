@@ -333,7 +333,25 @@ __RTTI__CSchedule:
 	.4byte CSchedule_typestr
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80020B08
+lbl_80020B08:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_80020B10
+lbl_80020B10:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_80020B18
+lbl_80020B18:
+	.4byte 0x18080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_804E3340
 	.4byte 0x000000F4

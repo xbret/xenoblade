@@ -452,7 +452,42 @@ __destroy_new_array:
 /* 802B9CE8 002832A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B9CEC 002832AC  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001BEE8
+lbl_8001BEE8:
+	.4byte 0x28080000
+	.4byte 0x00000070
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte __dt__26__partial_array_destructorFv
+
+.global lbl_8001BF00
+lbl_8001BF00:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001BF08
+lbl_8001BF08:
+	.4byte 0x20080000
+	.4byte 0x0000005C
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte __dt__26__partial_array_destructorFv
+
+.global lbl_8001BF20
+lbl_8001BF20:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001BF28
+lbl_8001BF28:
+	.4byte 0x30080000
+	.4byte 0
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte __construct_new_array
 	.4byte 0x00000104

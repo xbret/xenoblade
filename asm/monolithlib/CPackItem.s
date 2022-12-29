@@ -613,7 +613,45 @@ __RTTI__CPackItem:
 	.4byte CPackItem_typestr
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_800208F4
+lbl_800208F4:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_800208FC
+lbl_800208FC:
+	.4byte 0x10080000
+	.4byte 0x00000040
+	.4byte 0x000F0010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte __dt__IWorkEvent
+
+.global lbl_80020918
+lbl_80020918:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_80020920
+lbl_80020920:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_80020928
+lbl_80020928:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80020930
+lbl_80020930:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_804DE38C
 	.4byte 0x000000C4

@@ -1246,7 +1246,101 @@ func_8016784C:
 /* 801678E8 00130EA8  38 21 00 70 */	addi r1, r1, 0x70
 /* 801678EC 00130EAC  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000DD00
+lbl_8000DD00:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000DD08
+lbl_8000DD08:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000DD10
+lbl_8000DD10:
+	.4byte 0x10080000
+	.4byte 0x0000003C
+	.4byte 0x00000020
+	.4byte 0x00000048
+	.4byte 0x0000002C
+	.4byte 0x00000060
+	.4byte 0x00000044
+	.4byte 0
+	.4byte 0x8780001E
+	.4byte 0x000000B8
+	.4byte __dt__CItemBoxGrid
+	.4byte 0x0780001E
+	.4byte 0x000000B8
+	.4byte __dt__CItemBoxGrid
+	.4byte 0x8780001E
+	.4byte 0x00000080
+	.4byte func_801C3F50
+	.4byte 0x0780001E
+	.4byte 0x000000B8
+	.4byte __dt__CItemBoxGrid
+	.4byte 0x0780001E
+	.4byte 0x00000080
+	.4byte func_801C3F50
+	.4byte 0x0780001E
+	.4byte 0x00000060
+	.4byte func_801C39D0
+	.4byte 0x8680001E
+	.4byte 0x00000058
+	.4byte func_8004031C
+
+.global lbl_8000DD84
+lbl_8000DD84:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000DD8C
+lbl_8000DD8C:
+	.4byte 0x30080000
+	.4byte 0
+
+.global lbl_8000DD94
+lbl_8000DD94:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8000DD9C
+lbl_8000DD9C:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8000DDA4
+lbl_8000DDA4:
+	.4byte 0x68080000
+	.4byte 0
+
+.global lbl_8000DDAC
+lbl_8000DDAC:
+	.4byte 0x48080000
+	.4byte 0
+
+.global lbl_8000DDB4
+lbl_8000DDB4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000DDBC
+lbl_8000DDBC:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000DDC4
+lbl_8000DDC4:
+	.4byte 0x08080000
+	.4byte 0x00000060
+	.4byte 0x00090010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_80166724
 	.4byte 0x00000048

@@ -271,7 +271,41 @@ func_80294844:
 /* 8029486C 0025DE2C  D0 03 00 00 */	stfs f0, 0(r3)
 /* 80294870 0025DE30  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80019A10
+lbl_80019A10:
+	.4byte 0x20080000
+	.4byte 0x000000F4
+	.4byte 0x00000038
+	.4byte 0x00000100
+	.4byte 0x0000002C
+	.4byte 0x0000010C
+	.4byte 0x00000020
+	.4byte 0
+	.4byte 0x0780001C
+	.4byte 0x00000088
+	.4byte func_8022B6A0
+	.4byte 0x0780001C
+	.4byte 0x00000078
+	.4byte func_8045F580
+	.4byte 0x0680001C
+	.4byte 0x00000070
+	.4byte func_8004031C
+	.4byte 0x0680001C
+	.4byte 0x0000006C
+	.4byte __dt__IWorkEvent
+	.4byte 0x8680001C
+	.4byte 0
+	.4byte func_8012235C
+
+.global lbl_80019A6C
+lbl_80019A6C:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_802944D8
 	.4byte 0x0000014C

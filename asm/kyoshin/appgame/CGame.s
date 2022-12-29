@@ -1175,7 +1175,7 @@ lbl_800067AC:
 	.4byte 0x00080000
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CGame
 .4byte 0x0000009C

@@ -466,7 +466,25 @@ lbl_8066DB14:
 	# ROM: 0x577974
 	.float 0.2
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80020D10
+lbl_80020D10:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80020D18
+lbl_80020D18:
+	.4byte 0x48080000
+	.4byte 0
+
+.global lbl_80020D20
+lbl_80020D20:
+	.4byte 0x288A0000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_804E7578
 	.4byte 0x00000040

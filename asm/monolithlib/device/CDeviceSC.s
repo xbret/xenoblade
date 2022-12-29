@@ -282,7 +282,35 @@ __RTTI__CDeviceSC:
 lbl_80667F20:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001CA3C
+lbl_8001CA3C:
+	.4byte 0x08080000
+	.4byte 0x00000054
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8680001F
+	.4byte 0
+	.4byte func_80447900
+
+.global lbl_8001CA58
+lbl_8001CA58:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001CA60
+lbl_8001CA60:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CA68
+lbl_8001CA68:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_80447B50
 	.4byte 0x0000006C

@@ -698,7 +698,40 @@ lbl_80667E60:
 lbl_80667E68:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001C040
+lbl_8001C040:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C048
+lbl_8001C048:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C050
+lbl_8001C050:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C058
+lbl_8001C058:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C060
+lbl_8001C060:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_8001C068
+lbl_8001C068:
+	.4byte 0x080A0000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte getInstance__Q22mm3mtlFv
 	.4byte 0x00000238

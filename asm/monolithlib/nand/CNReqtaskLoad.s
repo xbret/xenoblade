@@ -161,7 +161,20 @@ __RTTI__CNReqtaskLoad:
 lbl_806682C0:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80020768
+lbl_80020768:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_80020770
+lbl_80020770:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_804DAF70
 	.4byte 0x00000048

@@ -2365,7 +2365,120 @@ func_8010ACC4:
 /* 8010AD9C 000D435C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8010ADA0 000D4360  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000B0AC
+lbl_8000B0AC:
+	.4byte 0x180A0000
+	.4byte 0x00000098
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x0680001F
+	.4byte 0x0000005C
+	.4byte func_8004031C
+	.4byte 0x0680001F
+	.4byte 0x00000058
+	.4byte __dt__IWorkEvent
+	.4byte 0x8680001F
+	.4byte 0
+	.4byte func_80102300
+
+.global lbl_8000B0E0
+lbl_8000B0E0:
+	.4byte 0x10080000
+	.4byte 0x00000048
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x0780001E
+	.4byte 0x00000064
+	.4byte func_8045F580
+	.4byte 0x0680001E
+	.4byte 0x0000005C
+	.4byte func_8004031C
+	.4byte 0x8680001E
+	.4byte 0x00000058
+	.4byte __dt__IWorkEvent
+
+.global lbl_8000B114
+lbl_8000B114:
+	.4byte 0x284A0000
+	.4byte 0x00000070
+	.4byte 0x00530010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte func_8045F8C8
+
+.global lbl_8000B12C
+lbl_8000B12C:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8000B134
+lbl_8000B134:
+	.4byte 0x318A0000
+	.4byte 0
+
+.global lbl_8000B13C
+lbl_8000B13C:
+	.4byte 0x18080000
+	.4byte 0x00000074
+	.4byte 0x00730010
+	.4byte 0
+	.4byte 0x82000028
+	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
+
+.global lbl_8000B154
+lbl_8000B154:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000B15C
+lbl_8000B15C:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8000B164
+lbl_8000B164:
+	.4byte 0x484A0000
+	.4byte 0
+
+.global lbl_8000B16C
+lbl_8000B16C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000B174
+lbl_8000B174:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000B17C
+lbl_8000B17C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000B184
+lbl_8000B184:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_8000B18C
+lbl_8000B18C:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_8000B194
+lbl_8000B194:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000B19C
+lbl_8000B19C:
+	.4byte 0x18080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte func_80108C58
 	.4byte 0x000001D0

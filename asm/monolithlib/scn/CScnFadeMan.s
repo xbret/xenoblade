@@ -325,7 +325,44 @@ lbl_8066D348:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001F48C
+lbl_8001F48C:
+	.4byte 0x080A0000
+	.4byte 0x0000007C
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8680001F
+	.4byte 0
+	.4byte func_8004031C
+
+.global lbl_8001F4A8
+lbl_8001F4A8:
+	.4byte 0x10080000
+	.4byte 0x0000003C
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte func_8004031C
+
+.global lbl_8001F4C4
+lbl_8001F4C4:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_8001F4CC
+lbl_8001F4CC:
+	.4byte 0x080A0000
+	.4byte 0x00000048
+	.4byte 0x00130010
+	.4byte 0
+	.4byte 0x82000010
+	.4byte func_804561AC
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8049C438
 	.4byte 0x00000094

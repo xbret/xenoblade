@@ -721,7 +721,60 @@ __RTTI__CScriptCode:
 lbl_80667E90:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001C2CC
+lbl_8001C2CC:
+	.4byte 0x28080000
+	.4byte 0x000000CC
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8780001B
+	.4byte 0x000005CC
+	.4byte func_8043A9DC
+
+.global lbl_8001C2E8
+lbl_8001C2E8:
+	.4byte 0x38080000
+	.4byte 0
+
+.global lbl_8001C2F0
+lbl_8001C2F0:
+	.4byte 0x48080000
+	.4byte 0
+
+.global lbl_8001C2F8
+lbl_8001C2F8:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001C300
+lbl_8001C300:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001C308
+lbl_8001C308:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C310
+lbl_8001C310:
+	.4byte 0x18080000
+	.4byte 0x00000070
+	.4byte 0x00000024
+	.4byte 0x00000080
+	.4byte 0x00000018
+	.4byte 0
+	.4byte 0x0780001E
+	.4byte 0x000005CC
+	.4byte func_8043A9DC
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte func_80437AC8
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8043A0E0
 	.4byte 0x000000F4

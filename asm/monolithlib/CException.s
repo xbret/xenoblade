@@ -2223,7 +2223,109 @@ lbl_80667FA4:
 lbl_80667FA8:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001D3C0
+lbl_8001D3C0:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_8001D3C8
+lbl_8001D3C8:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001D3D0
+lbl_8001D3D0:
+	.4byte 0x38080000
+	.4byte 0
+
+.global lbl_8001D3D8
+lbl_8001D3D8:
+	.4byte 0x180A0000
+	.4byte 0x00000114
+	.4byte 0x00080018
+	.4byte 0x00000164
+	.4byte 0x00000018
+	.4byte 0
+	.4byte 0x82000020
+	.4byte func_804561AC
+
+.global lbl_8001D3F8
+lbl_8001D3F8:
+	.4byte 0x418A0000
+	.4byte 0x00000210
+	.4byte 0x014F0038
+	.4byte 0x0000078C
+	.4byte 0x00000030
+	.4byte 0x000007A0
+	.4byte 0x001B0038
+	.4byte 0x00000844
+	.4byte 0x00000040
+	.4byte 0x00000858
+	.4byte 0x00130038
+	.4byte 0
+	.4byte 0x0200000C
+	.4byte func_801252D0
+	.4byte 0x82000068
+	.4byte __dt__Q34nw4r2ut17TextWriterBase_w_Fv
+	.4byte 0x02000008
+	.4byte func_801252D0
+	.4byte 0x82000068
+	.4byte __dt__Q34nw4r2ut17TextWriterBase_w_Fv
+
+.global lbl_8001D448
+lbl_8001D448:
+	.4byte 0x08C80000
+	.4byte 0
+
+.global lbl_8001D450
+lbl_8001D450:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001D458
+lbl_8001D458:
+	.4byte 0x200A0000
+	.4byte 0
+
+.global lbl_8001D460
+lbl_8001D460:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_8001D468
+lbl_8001D468:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001D470
+lbl_8001D470:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001D478
+lbl_8001D478:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001D480
+lbl_8001D480:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8001D488
+lbl_8001D488:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001D490
+lbl_8001D490:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_80457B9C
 	.4byte 0x00000088

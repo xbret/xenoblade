@@ -225,7 +225,35 @@ __RTTI__CScnItemCamera:
 	.4byte CScnItemCamera_typestr
 	.4byte CScnItemCamera_hierarchy
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001E210
+lbl_8001E210:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001E218
+lbl_8001E218:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001E220
+lbl_8001E220:
+	.4byte 0x090A0000
+	.4byte 0
+
+.global lbl_8001E228
+lbl_8001E228:
+	.4byte 0x090A0000
+	.4byte 0
+
+.global lbl_8001E230
+lbl_8001E230:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_80481E6C
 	.4byte 0x0000003C

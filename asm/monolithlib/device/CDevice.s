@@ -408,7 +408,40 @@ __RTTI__CDevice:
 	.4byte CDevice_typestr
 	.4byte CDevice_hierarchy
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001CCD8
+lbl_8001CCD8:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001CCE0
+lbl_8001CCE0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CCE8
+lbl_8001CCE8:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001CCF0
+lbl_8001CCF0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CCF8
+lbl_8001CCF8:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8001CD00
+lbl_8001CD00:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8044D820
 	.4byte 0x000000A8

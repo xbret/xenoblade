@@ -731,7 +731,45 @@ CLight_typestr:
 	.balign 4
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80020020
+lbl_80020020:
+	.4byte 0x280A0000
+	.4byte 0
+
+.global lbl_80020028
+lbl_80020028:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_80020030
+lbl_80020030:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_80020038
+lbl_80020038:
+	.4byte 0x094A0000
+	.4byte 0
+
+.global lbl_80020040
+lbl_80020040:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_80020048
+lbl_80020048:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_80020050
+lbl_80020050:
+	.4byte 0x180A0000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_804C02E4
 	.4byte 0x000000B4

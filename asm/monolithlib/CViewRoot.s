@@ -219,7 +219,32 @@ __RTTI__CViewRoot:
 	.4byte CViewRoot_typestr
 	.4byte CViewRoot_hierarchy
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001C6D8
+lbl_8001C6D8:
+	.4byte 0x18080000
+	.4byte 0x000000FC
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x0780001E
+	.4byte 0x000004F4
+	.4byte func_80438E10
+	.4byte 0x0780001E
+	.4byte 0x000003E4
+	.4byte func_80442084
+	.4byte 0x0780001E
+	.4byte 0x000002D4
+	.4byte func_80442084
+	.4byte 0x0780001E
+	.4byte 0x000001C4
+	.4byte func_80442084
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte func_80437AC8
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_804434FC
 	.4byte 0x0000021C

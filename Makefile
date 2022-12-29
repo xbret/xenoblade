@@ -8,7 +8,7 @@ endif
 NON_MATCHING ?= 0
 
 # If 0, tells the console to chill out. (Quiets the make process.)
-VERBOSE ?= 1
+VERBOSE ?= 0
 
 # If MAPGENFLAG set to 1, tells LDFLAGS to generate a mapfile, which makes linking take several minutes.
 MAPGENFLAG ?= 1

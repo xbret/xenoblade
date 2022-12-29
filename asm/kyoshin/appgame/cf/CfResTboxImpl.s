@@ -338,7 +338,35 @@ func_801F92B0:
 /* 801F92D0 001C2890  98 03 00 01 */	stb r0, 1(r3)
 /* 801F92D4 001C2894  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80012438
+lbl_80012438:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80012440
+lbl_80012440:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_80012448
+lbl_80012448:
+	.4byte 0x184A0000
+	.4byte 0
+
+.global lbl_80012450
+lbl_80012450:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_80012458
+lbl_80012458:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_801F8E34
 	.4byte 0x0000003C

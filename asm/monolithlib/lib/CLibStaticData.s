@@ -708,7 +708,78 @@ lbl_80667FF0:
 lbl_80667FF4:
 	.skip 0x4
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001D89C
+lbl_8001D89C:
+	.4byte 0x10080000
+	.4byte 0x0000005C
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x0780001E
+	.4byte 0x000001C8
+	.4byte func_8045F9B8
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte func_80437AC8
+
+.global lbl_8001D8C4
+lbl_8001D8C4:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001D8CC
+lbl_8001D8CC:
+	.4byte 0x18080000
+	.4byte 0x00000080
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8780001D
+	.4byte 0x000001C8
+	.4byte func_8045F9B8
+
+.global lbl_8001D8E8
+lbl_8001D8E8:
+	.4byte 0x30080000
+	.4byte 0
+
+.global lbl_8001D8F0
+lbl_8001D8F0:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001D8F8
+lbl_8001D8F8:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001D900
+lbl_8001D900:
+	.4byte 0x18080000
+	.4byte 0x00000048
+	.4byte 0x00220010
+	.4byte 0
+	.4byte 0x8680001D
+	.4byte 0
+	.4byte __dt__IWorkEvent
+
+.global lbl_8001D91C
+lbl_8001D91C:
+	.4byte 0x10080000
+	.4byte 0x00000044
+	.4byte 0x00130010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte __dt__IWorkEvent
+
+.global lbl_8001D938
+lbl_8001D938:
+	.4byte 0x00080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8045F930
 	.4byte 0x00000088

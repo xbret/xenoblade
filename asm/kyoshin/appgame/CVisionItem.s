@@ -116,7 +116,20 @@ func_801C5254:
 /* 801C5378 0018E938  38 21 00 20 */	addi r1, r1, 0x20
 /* 801C537C 0018E93C  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_800109B8
+lbl_800109B8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_800109C0
+lbl_800109C0:
+	.4byte 0x30080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_801C5214
 	.4byte 0x00000040

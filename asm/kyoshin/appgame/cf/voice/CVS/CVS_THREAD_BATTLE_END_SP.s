@@ -403,7 +403,39 @@ func_802ABB38:
 /* 802ABB38 002750F8  38 60 00 46 */	li r3, 0x46
 /* 802ABB3C 002750FC  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001B0C8
+lbl_8001B0C8:
+	.4byte 0x50180000
+	.4byte 0x000001DC
+	.4byte 0x00000018
+	.4byte 0x000002D0
+	.4byte 0x00000028
+	.4byte 0
+	.4byte 0x90000000
+	.4byte 0
+	.4byte 0x000002C0
+	.4byte 0x00000018
+	.4byte 0x8D000018
+
+.global lbl_8001B0F4
+lbl_8001B0F4:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001B0FC
+lbl_8001B0FC:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001B104
+lbl_8001B104:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_802AB5F0
 	.4byte 0x00000310

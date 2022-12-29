@@ -257,7 +257,40 @@ __RTTI__CArcItem:
 	.4byte CArcItem_typestr
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80020938
+lbl_80020938:
+	.4byte 0x10080000
+	.4byte 0x00000048
+	.4byte 0x00090010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte __dt__IWorkEvent
+
+.global lbl_80020954
+lbl_80020954:
+	.4byte 0x10080000
+	.4byte 0x00000040
+	.4byte 0x00040010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte __dt__IWorkEvent
+
+.global lbl_80020970
+lbl_80020970:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_80020978
+lbl_80020978:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_804DEB14
 	.4byte 0x0000009C

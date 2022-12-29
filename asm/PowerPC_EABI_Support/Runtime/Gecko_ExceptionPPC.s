@@ -1606,7 +1606,40 @@ lbl_8053F0AC:
 lbl_8057AE90:
 	.skip 0x180
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001BF40
+lbl_8001BF40:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001BF48
+lbl_8001BF48:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001BF50
+lbl_8001BF50:
+	.4byte 0x280A0000
+	.4byte 0
+
+.global lbl_8001BF58
+lbl_8001BF58:
+	.4byte 0x50080000
+	.4byte 0x00000054
+	.4byte 0x01250010
+	.4byte 0
+	.4byte 0x8E000000
+
+.global lbl_8001BF6C
+lbl_8001BF6C:
+	.4byte 0x28080000
+	.4byte 0x00000274
+	.4byte 0x000F0010
+	.4byte 0
+	.4byte 0x8E000000
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte MWExceptionInfo$7ExPPC_FindExceptionRecord
 	.4byte 0x000001B0

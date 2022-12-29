@@ -141,7 +141,20 @@ __RTTI__CDeviceFileJob:
 	.4byte CDeviceFileJob_typestr
 	.4byte CDeviceFileJob_hierarchy
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001CF9C
+lbl_8001CF9C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CFA4
+lbl_8001CFA4:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_80451E50
 	.4byte 0x00000060

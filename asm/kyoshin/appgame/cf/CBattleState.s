@@ -4552,8 +4552,75 @@ func_80149778:
 /* 80149778 00112D38  38 60 00 00 */	li r3, 0
 /* 8014977C 00112D3C  4E 80 00 20 */	blr 
 
+.section extab, "wa"  # 0x800066E0 - 0x80021020
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.global lbl_8000CFE4
+lbl_8000CFE4:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8000CFEC
+lbl_8000CFEC:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000CFF4
+lbl_8000CFF4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000CFFC
+lbl_8000CFFC:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_8000D004
+lbl_8000D004:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000D00C
+lbl_8000D00C:
+	.4byte 0x38080000
+	.4byte 0
+
+.global lbl_8000D014
+lbl_8000D014:
+	.4byte 0x30080000
+	.4byte 0
+
+.global lbl_8000D01C
+lbl_8000D01C:
+	.4byte 0x30080000
+	.4byte 0
+
+.global lbl_8000D024
+lbl_8000D024:
+	.4byte 0x50080000
+	.4byte 0
+
+.global lbl_8000D02C
+lbl_8000D02C:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8000D034
+lbl_8000D034:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000D03C
+lbl_8000D03C:
+	.4byte 0x38080000
+	.4byte 0
+
+.global lbl_8000D044
+lbl_8000D044:
+	.4byte 0x28080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte __ct__cf_CBattleState
 	.4byte 0x000000A8

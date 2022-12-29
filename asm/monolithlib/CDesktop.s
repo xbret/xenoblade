@@ -2776,7 +2776,140 @@ lbl_80667F8C:
 lbl_80667F90:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001D2E4
+lbl_8001D2E4:
+	.4byte 0x080A0000
+	.4byte 0x0000005C
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8680001F
+	.4byte 0
+	.4byte func_80438EC8
+
+.global lbl_8001D300
+lbl_8001D300:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001D308
+lbl_8001D308:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8001D310
+lbl_8001D310:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D318
+lbl_8001D318:
+	.4byte 0x200A0000
+	.4byte 0
+
+.global lbl_8001D320
+lbl_8001D320:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D328
+lbl_8001D328:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001D330
+lbl_8001D330:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D338
+lbl_8001D338:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D340
+lbl_8001D340:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001D348
+lbl_8001D348:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001D350
+lbl_8001D350:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D358
+lbl_8001D358:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D360
+lbl_8001D360:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_8001D368
+lbl_8001D368:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001D370
+lbl_8001D370:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001D378
+lbl_8001D378:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001D380
+lbl_8001D380:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D388
+lbl_8001D388:
+	.4byte 0x200A0000
+	.4byte 0
+
+.global lbl_8001D390
+lbl_8001D390:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001D398
+lbl_8001D398:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_8001D3A0
+lbl_8001D3A0:
+	.4byte 0x000A0000
+	.4byte 0
+
+.global lbl_8001D3A8
+lbl_8001D3A8:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001D3B0
+lbl_8001D3B0:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_8001D3B8
+lbl_8001D3B8:
+	.4byte 0x298A0000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_804559CC
 	.4byte 0x00000074

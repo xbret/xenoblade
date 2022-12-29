@@ -5,7 +5,6 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/main_1.o \
 	$(BUILD_DIR)/src/kyoshin/appgame/main.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/main_2.o \
-	$(BUILD_DIR)/asm/extab.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGame.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskGameCf.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGameEff.o \

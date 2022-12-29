@@ -1548,7 +1548,95 @@ __RTTI__CDeviceFileDvd:
 lbl_80667F50:
 	.skip 0x8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001CF14
+lbl_8001CF14:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CF1C
+lbl_8001CF1C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001CF24
+lbl_8001CF24:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CF2C
+lbl_8001CF2C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001CF34
+lbl_8001CF34:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001CF3C
+lbl_8001CF3C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CF44
+lbl_8001CF44:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001CF4C
+lbl_8001CF4C:
+	.4byte 0x28080000
+	.4byte 0
+
+.global lbl_8001CF54
+lbl_8001CF54:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001CF5C
+lbl_8001CF5C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CF64
+lbl_8001CF64:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CF6C
+lbl_8001CF6C:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001CF74
+lbl_8001CF74:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8001CF7C
+lbl_8001CF7C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001CF84
+lbl_8001CF84:
+	.4byte 0x40080000
+	.4byte 0
+
+.global lbl_8001CF8C
+lbl_8001CF8C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001CF94
+lbl_8001CF94:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_80450B54
 	.4byte 0x00000060

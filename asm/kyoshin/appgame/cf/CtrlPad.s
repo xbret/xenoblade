@@ -556,7 +556,35 @@ func_80096FA8:
 /* 80096FFC 000605BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80097000 000605C0  4E 80 00 20 */	blr 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80008DA4
+lbl_80008DA4:
+	.4byte 0x18080000
+	.4byte 0x00000034
+	.4byte 0x00070010
+	.4byte 0
+	.4byte 0x8680001D
+	.4byte 0
+	.4byte func_8009691C
+
+.global lbl_80008DC0
+lbl_80008DC0:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80008DC8
+lbl_80008DC8:
+	.4byte 0x400A0000
+	.4byte 0
+
+.global lbl_80008DD0
+lbl_80008DD0:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8009689C
 	.4byte 0x00000080

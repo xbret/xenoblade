@@ -140,7 +140,40 @@ __RTTI__CScnIdMan:
 	.4byte CScnIdMan_typestr
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001F6B8
+lbl_8001F6B8:
+	.4byte 0x08080000
+	.4byte 0x00000044
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8680001F
+	.4byte 0
+	.4byte func_8004031C
+
+.global lbl_8001F6D4
+lbl_8001F6D4:
+	.4byte 0x10080000
+	.4byte 0x0000003C
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0
+	.4byte func_8004031C
+
+.global lbl_8001F6F0
+lbl_8001F6F0:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_8001F6F8
+lbl_8001F6F8:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8049E458
 	.4byte 0x0000005C

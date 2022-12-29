@@ -1487,7 +1487,50 @@ CToken_typestr:
 	.asciz "CToken"
 	.balign 4
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8001C340
+lbl_8001C340:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C348
+lbl_8001C348:
+	.4byte 0x38080000
+	.4byte 0
+
+.global lbl_8001C350
+lbl_8001C350:
+	.4byte 0x584A0000
+	.4byte 0
+
+.global lbl_8001C358
+lbl_8001C358:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001C360
+lbl_8001C360:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001C368
+lbl_8001C368:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8001C370
+lbl_8001C370:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8001C378
+lbl_8001C378:
+	.4byte 0x18080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8043A9DC
 	.4byte 0x00000040

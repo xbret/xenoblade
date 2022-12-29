@@ -8576,7 +8576,239 @@ func_801BA144:
 
 .4byte sinit_801B9FC8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000FD5C
+lbl_8000FD5C:
+	.4byte 0x50080000
+	.4byte 0x000000D0
+	.4byte 0x00000038
+	.4byte 0x0000013C
+	.4byte 0x0000002C
+	.4byte 0x00000148
+	.4byte 0x00000020
+	.4byte 0
+	.4byte 0x07800017
+	.4byte 0x00000174
+	.4byte func_801D2A38
+	.4byte 0x07800017
+	.4byte 0x00000078
+	.4byte func_8045F580
+	.4byte 0x06800017
+	.4byte 0x00000070
+	.4byte func_8004031C
+	.4byte 0x06800017
+	.4byte 0x0000006C
+	.4byte __dt__IWorkEvent
+	.4byte 0x86800017
+	.4byte 0
+	.4byte func_8012235C
+
+.global lbl_8000FDB8
+lbl_8000FDB8:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000FDC0
+lbl_8000FDC0:
+	.4byte 0x28080000
+	.4byte 0x000000B8
+	.4byte 0x00000038
+	.4byte 0x000000DC
+	.4byte 0x000E002C
+	.4byte 0x00000120
+	.4byte 0x00000020
+	.4byte 0
+	.4byte 0x0780001F
+	.4byte 0x00000174
+	.4byte func_801D2A38
+	.4byte 0x0780001F
+	.4byte 0x00000078
+	.4byte func_8045F580
+	.4byte 0x0680001F
+	.4byte 0x00000070
+	.4byte func_8004031C
+	.4byte 0x0680001F
+	.4byte 0x0000006C
+	.4byte __dt__IWorkEvent
+	.4byte 0x8680001F
+	.4byte 0
+	.4byte func_8012235C
+
+.global lbl_8000FE1C
+lbl_8000FE1C:
+	.4byte 0x10080000
+	.4byte 0x00000030
+	.4byte 0x00000028
+	.4byte 0x0000003C
+	.4byte 0x00000034
+	.4byte 0x00000048
+	.4byte 0x0000004C
+	.4byte 0x00000060
+	.4byte 0x00000070
+	.4byte 0
+	.4byte 0x8780001E
+	.4byte 0x00000210
+	.4byte func_801B2754
+	.4byte 0x0780001E
+	.4byte 0x00000210
+	.4byte func_801B2754
+	.4byte 0x8780001E
+	.4byte 0x0000018C
+	.4byte func_8022B6A0
+	.4byte 0x0780001E
+	.4byte 0x00000210
+	.4byte func_801B2754
+	.4byte 0x0780001E
+	.4byte 0x0000018C
+	.4byte func_8022B6A0
+	.4byte 0x8780001E
+	.4byte 0x00000174
+	.4byte func_801D2A38
+	.4byte 0x0780001E
+	.4byte 0x00000210
+	.4byte func_801B2754
+	.4byte 0x0780001E
+	.4byte 0x0000018C
+	.4byte func_8022B6A0
+	.4byte 0x0780001E
+	.4byte 0x00000174
+	.4byte func_801D2A38
+	.4byte 0x0780001E
+	.4byte 0x00000078
+	.4byte func_8045F580
+	.4byte 0x0680001E
+	.4byte 0x00000070
+	.4byte func_8004031C
+	.4byte 0x8680001E
+	.4byte 0x0000006C
+	.4byte __dt__IWorkEvent
+
+.global lbl_8000FED4
+lbl_8000FED4:
+	.4byte 0x680A0000
+	.4byte 0x00000068
+	.4byte 0x053C0010
+	.4byte 0
+	.4byte 0x8200000C
+	.4byte func_8045F8C8
+
+.global lbl_8000FEEC
+lbl_8000FEEC:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000FEF4
+lbl_8000FEF4:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_8000FEFC
+lbl_8000FEFC:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000FF04
+lbl_8000FF04:
+	.4byte 0x08080000
+	.4byte 0x00000060
+	.4byte 0x000B0010
+	.4byte 0
+	.4byte 0x82000008
+	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
+
+.global lbl_8000FF1C
+lbl_8000FF1C:
+	.4byte 0x48080000
+	.4byte 0
+
+.global lbl_8000FF24
+lbl_8000FF24:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8000FF2C
+lbl_8000FF2C:
+	.4byte 0x60080000
+	.4byte 0
+
+.global lbl_8000FF34
+lbl_8000FF34:
+	.4byte 0x100A0000
+	.4byte 0
+
+.global lbl_8000FF3C
+lbl_8000FF3C:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_8000FF44
+lbl_8000FF44:
+	.4byte 0x180A0000
+	.4byte 0
+
+.global lbl_8000FF4C
+lbl_8000FF4C:
+	.4byte 0x684A0000
+	.4byte 0
+
+.global lbl_8000FF54
+lbl_8000FF54:
+	.4byte 0x40080000
+	.4byte 0
+
+.global lbl_8000FF5C
+lbl_8000FF5C:
+	.4byte 0x280A0000
+	.4byte 0
+
+.global lbl_8000FF64
+lbl_8000FF64:
+	.4byte 0x480A0000
+	.4byte 0
+
+.global lbl_8000FF6C
+lbl_8000FF6C:
+	.4byte 0x20080000
+	.4byte 0
+
+.global lbl_8000FF74
+lbl_8000FF74:
+	.4byte 0x30080000
+	.4byte 0
+
+.global lbl_8000FF7C
+lbl_8000FF7C:
+	.4byte 0x780A0000
+	.4byte 0
+
+.global lbl_8000FF84
+lbl_8000FF84:
+	.4byte 0x200A0000
+	.4byte 0
+
+.global lbl_8000FF8C
+lbl_8000FF8C:
+	.4byte 0x38080000
+	.4byte 0
+
+.global lbl_8000FF94
+lbl_8000FF94:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000FF9C
+lbl_8000FF9C:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_8000FFA4
+lbl_8000FFA4:
+	.4byte 0x18080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_801B2564
 	.4byte 0x000001F0

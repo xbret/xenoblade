@@ -184,7 +184,40 @@ func_80069944:
 /* 80069944 00032F04  38 63 FF AC */	addi r3, r3, -84
 /* 80069948 00032F08  4B FF FE 20 */	b func_80069768
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_80007F28
+lbl_80007F28:
+	.4byte 0x10080000
+	.4byte 0
+
+.global lbl_80007F30
+lbl_80007F30:
+	.4byte 0x10080000
+	.4byte 0x00000030
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x8680001E
+	.4byte 0x00000054
+	.4byte __dt__IWorkEvent
+
+.global lbl_80007F4C
+lbl_80007F4C:
+	.4byte 0x18080000
+	.4byte 0
+
+.global lbl_80007F54
+lbl_80007F54:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_80007F5C
+lbl_80007F5C:
+	.4byte 0x08080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte func_80069710
 	.4byte 0x00000058

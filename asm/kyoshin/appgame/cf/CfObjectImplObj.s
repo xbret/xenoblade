@@ -163,7 +163,30 @@ func_800CA6DC:
 /* 800CA6DC 00093C9C  38 63 FF F0 */	addi r3, r3, -16
 /* 800CA6E0 00093CA0  4B FF FF 90 */	b func_800CA670
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_8000A374
+lbl_8000A374:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000A37C
+lbl_8000A37C:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000A384
+lbl_8000A384:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8000A38C
+lbl_8000A38C:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte func_800CA4EC
 	.4byte 0x0000004C

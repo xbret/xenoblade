@@ -459,7 +459,25 @@ func_801C51BC:
 /* 801C51F4 0018E7B4  38 60 00 00 */	li r3, 0
 /* 801C51F8 0018E7B8  4E 80 00 20 */	blr
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.global lbl_800109A0
+lbl_800109A0:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_800109A8
+lbl_800109A8:
+	.4byte 0x48080000
+	.4byte 0
+
+.global lbl_800109B0
+lbl_800109B0:
+	.4byte 0x10080000
+	.4byte 0
+
+
+.section extabindex_, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_801C4B74
 	.4byte 0x00000040
