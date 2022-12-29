@@ -6,7 +6,7 @@
 .global __DSP_debug_printf
 __DSP_debug_printf:
 /* 803094B0 002D2A70  94 21 FF 90 */	stwu r1, -0x70(r1)
-/* 803094B4 002D2A74  40 86 00 24 */	bne cr1, lbl_803094D8
+/* 803094B4 002D2A74  40 86 00 24 */	bne cr1, .L_803094D8
 /* 803094B8 002D2A78  D8 21 00 28 */	stfd f1, 0x28(r1)
 /* 803094BC 002D2A7C  D8 41 00 30 */	stfd f2, 0x30(r1)
 /* 803094C0 002D2A80  D8 61 00 38 */	stfd f3, 0x38(r1)
@@ -15,7 +15,7 @@ __DSP_debug_printf:
 /* 803094CC 002D2A8C  D8 C1 00 50 */	stfd f6, 0x50(r1)
 /* 803094D0 002D2A90  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 803094D4 002D2A94  D9 01 00 60 */	stfd f8, 0x60(r1)
-lbl_803094D8:
+.L_803094D8:
 /* 803094D8 002D2A98  90 61 00 08 */	stw r3, 8(r1)
 /* 803094DC 002D2A9C  90 81 00 0C */	stw r4, 0xc(r1)
 /* 803094E0 002D2AA0  90 A1 00 10 */	stw r5, 0x10(r1)

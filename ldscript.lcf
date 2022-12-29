@@ -8,8 +8,8 @@ SECTIONS
     GROUP:
     {
         .init ALIGN(0x20):{}
-        extab_ ALIGN(0x20):{}
-        extabindex_ ALIGN(0x20):{}
+        extab ALIGN(0x20):{}
+        extabindex ALIGN(0x20):{}
         .text ALIGN(0x20):{}
         .ctors ALIGN(0x20):{}
         .dtors ALIGN(0x20):{}
@@ -24,8 +24,8 @@ SECTIONS
 
     } > text
     sz_init = SIZEOF(.init);
-    szextab_ = SIZEOF(extab_);
-    szextabindex_ = SIZEOF(extabindex_);
+    szextab = SIZEOF(extab);
+    szextabindex = SIZEOF(extabindex);
     sz_text = SIZEOF(.text);
     sz_ctors = SIZEOF(.ctors);
     sz_dtors = SIZEOF(.dtors);
@@ -46,6 +46,7 @@ SECTIONS
 
 FORCEFILES 
 {
+    __init_cpp_exceptions.o
     ctors.o
     dtors.o
     extab.o

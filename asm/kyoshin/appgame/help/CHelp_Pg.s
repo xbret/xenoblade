@@ -28,3 +28,9 @@ func_802B85A4:
 /* 802B85F8 00281BB8  7C 08 03 A6 */	mtlr r0
 /* 802B85FC 00281BBC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B8600 00281BC0  4E 80 00 20 */	blr 
+
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
+
+.4byte func_802B85A4
+	.4byte 0x00000060
+	.4byte lbl_8001BE08

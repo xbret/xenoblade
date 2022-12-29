@@ -70,3 +70,13 @@ func_800AAD94:
 /* 800AAE18 000743D8  7C 08 03 A6 */	mtlr r0
 /* 800AAE1C 000743DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 800AAE20 000743E0  4E 80 00 20 */	blr 
+
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
+
+
+	.4byte func_800AAD28
+	.4byte 0x0000006C
+	.4byte lbl_80009384
+	.4byte func_800AAD94
+	.4byte 0x00000090
+	.4byte lbl_8000938C

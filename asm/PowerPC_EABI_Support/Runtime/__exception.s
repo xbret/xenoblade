@@ -241,7 +241,7 @@ performance_monitor_exception_handler:
 # Slot 0x1300: Instruction Address Breakpoint Exception
 .global break_point_exception_handler
 break_point_exception_handler:
-/* 80005280 00001380  48 00 00 54 */	b lbl_800052D4
+/* 80005280 00001380  48 00 00 54 */	b .L_800052D4
 .fill 0x1C
 /* 800052A0 000013A0  7C 51 43 A6 */	mtspr 0x111, r2
 /* 800052A4 000013A4  7C 72 43 A6 */	mtspr 0x112, r3
@@ -256,7 +256,7 @@ break_point_exception_handler:
 /* 800052C8 000013C8  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 800052CC 000013CC  38 60 0F 20 */	li r3, 0xf20
 /* 800052D0 000013D0  4C 00 00 64 */	rfi 
-lbl_800052D4:
+.L_800052D4:
 /* 800052D4 000013D4  7C 51 43 A6 */	mtspr 0x111, r2
 /* 800052D8 000013D8  7C 72 43 A6 */	mtspr 0x112, r3
 /* 800052DC 000013DC  7C 93 43 A6 */	mtspr 0x113, r4
@@ -280,14 +280,14 @@ system_interrupt_exception_handler:
 /* 80005388 00001488  7C 52 43 A6 */	mtspr 0x112, r2
 /* 8000538C 0000148C  7C 40 00 A6 */	mfmsr r2
 /* 80005390 00001490  74 42 00 02 */	andis. r2, r2, 2
-/* 80005394 00001494  41 82 00 1C */	beq lbl_800053B0
+/* 80005394 00001494  41 82 00 1C */	beq .L_800053B0
 /* 80005398 00001498  7C 40 00 A6 */	mfmsr r2
 /* 8000539C 0000149C  6C 42 00 02 */	xoris r2, r2, 2
 /* 800053A0 000014A0  7C 00 04 AC */	sync 0
 /* 800053A4 000014A4  7C 40 01 24 */	mtmsr r2
 /* 800053A8 000014A8  7C 00 04 AC */	sync 0
 /* 800053AC 000014AC  7C 51 43 A6 */	mtspr 0x111, r2
-lbl_800053B0:
+.L_800053B0:
 /* 800053B0 000014B0  7C 52 42 A6 */	mfspr r2, 0x112
 /* 800053B4 000014B4  7C 4F F1 20 */	mtcrf 0xff, r2
 /* 800053B8 000014B8  7C 51 42 A6 */	mfspr r2, 0x111
@@ -319,14 +319,14 @@ thermal_interrupt_exception_handler:
 /* 80005488 00001588  7C 52 43 A6 */	mtspr 0x112, r2
 /* 8000548C 0000158C  7C 40 00 A6 */	mfmsr r2
 /* 80005490 00001590  74 42 00 02 */	andis. r2, r2, 2
-/* 80005494 00001594  41 82 00 1C */	beq lbl_800054B0
+/* 80005494 00001594  41 82 00 1C */	beq .L_800054B0
 /* 80005498 00001598  7C 40 00 A6 */	mfmsr r2
 /* 8000549C 0000159C  6C 42 00 02 */	xoris r2, r2, 2
 /* 800054A0 000015A0  7C 00 04 AC */	sync 0
 /* 800054A4 000015A4  7C 40 01 24 */	mtmsr r2
 /* 800054A8 000015A8  7C 00 04 AC */	sync 0
 /* 800054AC 000015AC  7C 51 43 A6 */	mtspr 0x111, r2
-lbl_800054B0:
+.L_800054B0:
 /* 800054B0 000015B0  7C 52 42 A6 */	mfspr r2, 0x112
 /* 800054B4 000015B4  7C 4F F1 20 */	mtcrf 0xff, r2
 /* 800054B8 000015B8  7C 51 42 A6 */	mfspr r2, 0x111
@@ -351,14 +351,14 @@ lbl_800054B0:
 /* 80005588 00001688  7C 52 43 A6 */	mtspr 0x112, r2
 /* 8000558C 0000168C  7C 40 00 A6 */	mfmsr r2
 /* 80005590 00001690  74 42 00 02 */	andis. r2, r2, 2
-/* 80005594 00001694  41 82 00 1C */	beq lbl_800055B0
+/* 80005594 00001694  41 82 00 1C */	beq .L_800055B0
 /* 80005598 00001698  7C 40 00 A6 */	mfmsr r2
 /* 8000559C 0000169C  6C 42 00 02 */	xoris r2, r2, 2
 /* 800055A0 000016A0  7C 00 04 AC */	sync 0
 /* 800055A4 000016A4  7C 40 01 24 */	mtmsr r2
 /* 800055A8 000016A8  7C 00 04 AC */	sync 0
 /* 800055AC 000016AC  7C 51 43 A6 */	mtspr 0x111, r2
-lbl_800055B0:
+.L_800055B0:
 /* 800055B0 000016B0  7C 52 42 A6 */	mfspr r2, 0x112
 /* 800055B4 000016B4  7C 4F F1 20 */	mtcrf 0xff, r2
 /* 800055B8 000016B8  7C 51 42 A6 */	mfspr r2, 0x111

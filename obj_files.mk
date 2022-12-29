@@ -1,8 +1,5 @@
-GROUP_0_FILES:=\
-	$(BUILD_DIR)/asm/ctors.o \
-	$(BUILD_DIR)/asm/dtors.o
-
 GAME_O_FILES :=\
+	$(BUILD_DIR)/asm/extab.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CGame.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/IWorkEvent.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CGameRestart.o \
@@ -185,24 +182,24 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfGimmickWarp.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfGimmickJump.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfGimmickItem.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuMakeCrystal.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMakeCrystalWin.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCCrystalBox.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCCrystalInfo.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CModelDispMakeCrystal.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCCylinderGauge.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCCrystalList.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCEffStart.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCEffUpRed.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCEffUpBlue.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCEffUpGreen.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCEffUpPrm.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCEffSuccess.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCEffFailure.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCEffCrystal.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCEffUpRank.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCEffDivide.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCEffCylinder.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMenuMakeCrystal.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMakeCrystalWin.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCCrystalBox.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCCrystalInfo.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CModelDispMakeCrystal.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCCylinderGauge.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCCrystalList.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffStart.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffUpRed.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffUpBlue.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffUpGreen.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffUpPrm.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffSuccess.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffFailure.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffCrystal.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffUpRank.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffDivide.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffCylinder.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuQstCnt.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CQstLogList.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CQstLogInfo.o \
@@ -210,7 +207,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSelShopWin.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CExchangeWin.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CPresentWin.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCCrystalSupport.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCCrystalSupport.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuArtsSet.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CArtsList.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CArtsInfo.o \
@@ -271,7 +268,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelpManager.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_80296898.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_80296B44.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMCGetItemBox.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCGetItemBox.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuTutorial.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTutorial.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuOption.o \
@@ -351,7 +348,7 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/strlen.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/__va_arg.o \
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/global_destructor_chain.o \
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/NMWException.o \
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/NMWException.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/ptmf.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/MWRTTI.o \
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/runtime.o \

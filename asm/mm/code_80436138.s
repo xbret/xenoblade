@@ -102,3 +102,9 @@ lbl_8066CA38:
 	# ROM: 0x576898
 	.4byte 0
 	.4byte 0
+
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
+
+	.4byte sinit_80436138
+	.4byte 0x00000128
+	.4byte lbl_8001C0A8

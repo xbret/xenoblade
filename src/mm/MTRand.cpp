@@ -27,10 +27,10 @@ namespace mtl{
         stwu r1, -0x10(r1)
         cmpwi r4, 0
         stw r31, 0xc(r1)
-        bne lbl_804355EC
+        bne L_804355EC
         lis r4, 0x012BD6AA@ha
         addi r4, r4, 0x012BD6AA@l
-    lbl_804355EC:
+    L_804355EC:
         lis r5, 0x6C078965@ha
         li r6, 0x4d
         stw r4, 0(r3)
@@ -38,7 +38,7 @@ namespace mtl{
         addi r4, r3, 4
         li r5, 1
         mtctr r6
-    lbl_80435608:
+    L_80435608:
         lwz r7, -4(r4)
         srwi r6, r7, 0x1e
         xor r6, r7, r6
@@ -89,7 +89,7 @@ namespace mtl{
         addi r6, r6, 7
         stw r6, 0x1c(r4)
         addi r4, r4, 0x20
-        bdnz lbl_80435608
+        bdnz L_80435608
         addi r0, r5, -1
         lis r4, 0x6C078965@ha
         slwi r0, r0, 2

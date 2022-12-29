@@ -40,16 +40,16 @@ func_80448F7C:
 /* 80448F90 00412550  7C 9F 23 78 */	mr r31, r4
 /* 80448F94 00412554  93 C1 00 08 */	stw r30, 8(r1)
 /* 80448F98 00412558  7C 7E 1B 78 */	mr r30, r3
-/* 80448F9C 0041255C  41 82 00 24 */	beq lbl_80448FC0
+/* 80448F9C 0041255C  41 82 00 24 */	beq .L_80448FC0
 /* 80448FA0 00412560  3C 80 80 57 */	lis r4, __vt__CDeviceVICb@ha
 /* 80448FA4 00412564  38 84 F7 A8 */	addi r4, r4, __vt__CDeviceVICb@l
 /* 80448FA8 00412568  90 83 00 00 */	stw r4, 0(r3)
 /* 80448FAC 0041256C  4B FF F5 19 */	bl func_804484C4
 /* 80448FB0 00412570  2C 1F 00 00 */	cmpwi r31, 0
-/* 80448FB4 00412574  40 81 00 0C */	ble lbl_80448FC0
+/* 80448FB4 00412574  40 81 00 0C */	ble .L_80448FC0
 /* 80448FB8 00412578  7F C3 F3 78 */	mr r3, r30
 /* 80448FBC 0041257C  4B FE BC 71 */	bl __dl__FPv
-lbl_80448FC0:
+.L_80448FC0:
 /* 80448FC0 00412580  7F C3 F3 78 */	mr r3, r30
 /* 80448FC4 00412584  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80448FC8 00412588  83 C1 00 08 */	lwz r30, 8(r1)
@@ -82,3 +82,12 @@ __vt__CDeviceVICb:
 __RTTI__CDeviceVICb:
 	.4byte CDeviceVICb_typestr
 	.4byte 0
+
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
+
+.4byte func_80448F40
+	.4byte 0x0000003C
+	.4byte lbl_8001CB68
+	.4byte func_80448F7C
+	.4byte 0x00000060
+	.4byte lbl_8001CB70

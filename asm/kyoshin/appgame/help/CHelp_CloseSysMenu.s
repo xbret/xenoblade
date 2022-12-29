@@ -22,3 +22,9 @@ func_802B7E7C:
 /* 802B7EB8 00281478  7C 08 03 A6 */	mtlr r0
 /* 802B7EBC 0028147C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B7EC0 00281480  4E 80 00 20 */	blr 
+
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
+
+.4byte func_802B7E7C
+	.4byte 0x00000048
+	.4byte lbl_8001BD78

@@ -75,3 +75,51 @@ __vt__TChildListHeader_CChildListNode:
 __RTTI__TChildListHeader_CChildListNode:
 	.4byte TChildListHeader_CChildListNode_typestr
 	.4byte 0
+
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
+
+.4byte __ct__CChildListNode
+	.4byte 0x00000054
+	.4byte lbl_8001C9A4
+	.4byte CChildListNode_Reset
+	.4byte 0x00000038
+	.4byte lbl_8001C9AC
+	.4byte func_80446780
+	.4byte 0x00000048
+	.4byte lbl_8001C9B4
+	.4byte func_804467C8
+	.4byte 0x0000002C
+	.4byte lbl_8001C9BC
+	.4byte func_804467F4
+	.4byte 0x000001DC
+	.4byte lbl_8001C9C4
+	.4byte func_804469D0
+	.4byte 0x00000064
+	.4byte lbl_8001C9CC
+	.4byte func_80446A5C
+	.4byte 0x000000D4
+	.4byte lbl_8001C9D4
+	.4byte func_80446BB8
+	.4byte 0x00000110
+	.4byte lbl_8001C9DC
+	.4byte func_80446CC8
+	.4byte 0x0000024C
+	.4byte lbl_8001C9E4
+	.4byte func_80446F14
+	.4byte 0x000004D0
+	.4byte lbl_8001C9EC
+	.4byte func_80447480
+	.4byte 0x00000098
+	.4byte lbl_8001C9F4
+	.4byte func_804475E4
+	.4byte 0x00000104
+	.4byte lbl_8001C9FC
+	.4byte func_804476E8
+	.4byte 0x00000100
+	.4byte lbl_8001CA04
+	.4byte func_804477E8
+	.4byte 0x000000A8
+	.4byte lbl_8001CA0C
+	.4byte func_80447890
+	.4byte 0x00000070
+	.4byte lbl_8001CA14

@@ -55,10 +55,9 @@ ifeq ($(EPILOGUE_PROCESS),1)
 include e_files.mk
 endif
 
-O_FILES :=  $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES) \
-			$(GAME_O_FILES) $(MW_O_FILES) $(NDEV_O_FILES) $(RVL_SDK_O_FILES) \
+O_FILES :=  $(GAME_O_FILES) $(MW_O_FILES) $(NDEV_O_FILES) $(RVL_SDK_O_FILES) \
 		   $(CRIWARE_O_FILES) $(NW4R_O_FILES) $(UTILS_O_FILES) \
-		   $(MM_O_FILES) $(MONOLITHLIB_O_FILES) #$(GROUP_0_FILES)
+		   $(MM_O_FILES) $(MONOLITHLIB_O_FILES)
 
 #-------------------------------------------------------------------------------
 # Tools
@@ -115,27 +114,34 @@ ifeq ($(VERBOSE),0)
 # this set of LDFLAGS generates no warnings.
 LDFLAGS := $(MAPGEN) -fp hard -nodefaults -w off
 endif
-CFLAGS   = -Cpp_exceptions off -enum int -inline on -use_lmw_stmw on -proc gekko -fp hard -O4,p -nodefaults -enc SJIS -func_align 4 $(INCLUDES)
-ifeq ($(NON_MATCHING),1)
-CFLAGS += -DNON_MATCHING
-endif
 
 ifeq ($(VERBOSE),0)
 # this set of ASFLAGS generates no warnings.
 ASFLAGS += -W
 endif
 
+#Compiler flags
+#TODO: clean this up
+
+CFLAGS   = -enum int -inline on -use_lmw_stmw on -proc gekko -fp hard -O4,p -nodefaults -func_align 4 $(INCLUDES)
+
+$(GAME_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
+$(MM_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
+$(MONOLITHLIB_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
+
 $(NDEV_O_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
-$(MONOLITHLIB_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse
-$(GAME_O_FILES): CFLAGS += -str pool,readonly,reuse
-$(MM_O_FILES): CFLAGS += -str pool,readonly,reuse
 #All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
-$(RVL_SDK_O_FILES): CFLAGS += -func_align 16
+$(RVL_SDK_O_FILES): CFLAGS += -Cpp_exceptions off -func_align 16
+$(MW_O_FILES): CFLAGS += -Cpp_exceptions off
 
 #arc.c doesn't use -use_lmw_stmw on, and uses -ipa file and (maybe rest of wii sdk too?)
-$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p  -nodefaults $(INCLUDES)
+$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
+#Runtime has defaults and exceptions turned on
+$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/%.o: CFLAGS = -inline on -proc gekko -fp hard -O4,p -func_align 4 $(INCLUDES)
 
-
+ifeq ($(NON_MATCHING),1)
+CFLAGS += -DNON_MATCHING
+endif
 
 #-------------------------------------------------------------------------------
 # Recipes

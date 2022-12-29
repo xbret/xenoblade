@@ -38,11 +38,11 @@ SJCRS_Lock:
 /* 80396930 0035FEF0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80396934 0035FEF4  80 03 5D 20 */	lwz r0, sjcrs_lvl@l(r3)
 /* 80396938 0035FEF8  2C 00 00 00 */	cmpwi r0, 0
-/* 8039693C 0035FEFC  40 82 00 10 */	bne lbl_8039694C
+/* 8039693C 0035FEFC  40 82 00 10 */	bne .L_8039694C
 /* 80396940 0035FF00  4B FC 20 71 */	bl OSDisableInterrupts
 /* 80396944 0035FF04  3C 80 80 5F */	lis r4, sjcrs_msk@ha
 /* 80396948 0035FF08  90 64 5D 24 */	stw r3, sjcrs_msk@l(r4)
-lbl_8039694C:
+.L_8039694C:
 /* 8039694C 0035FF0C  3C 80 80 5F */	lis r4, sjcrs_lvl@ha
 /* 80396950 0035FF10  80 64 5D 20 */	lwz r3, sjcrs_lvl@l(r4)
 /* 80396954 0035FF14  38 03 00 01 */	addi r0, r3, 1

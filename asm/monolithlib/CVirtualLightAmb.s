@@ -30,11 +30,11 @@ func_804946BC:
 /* 804946C8 0045DC88  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804946CC 0045DC8C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804946D0 0045DC90  7C 7F 1B 78 */	mr r31, r3
-/* 804946D4 0045DC94  41 82 00 10 */	beq lbl_804946E4
+/* 804946D4 0045DC94  41 82 00 10 */	beq .L_804946E4
 /* 804946D8 0045DC98  2C 04 00 00 */	cmpwi r4, 0
-/* 804946DC 0045DC9C  40 81 00 08 */	ble lbl_804946E4
+/* 804946DC 0045DC9C  40 81 00 08 */	ble .L_804946E4
 /* 804946E0 0045DCA0  4B FA 05 4D */	bl __dl__FPv
-lbl_804946E4:
+.L_804946E4:
 /* 804946E4 0045DCA4  7F E3 FB 78 */	mr r3, r31
 /* 804946E8 0045DCA8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804946EC 0045DCAC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -73,3 +73,12 @@ CVirtualLightAmb_hierarchy:
 __RTTI__CVirtualLightAmb:
 	.4byte CVirtualLightAmb_typestr
 	.4byte CVirtualLightAmb_hierarchy
+
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
+
+.4byte func_80494678
+	.4byte 0x00000044
+	.4byte lbl_8001EF14
+	.4byte func_804946BC
+	.4byte 0x00000040
+	.4byte lbl_8001EF1C

@@ -5,7 +5,7 @@
 .global Console_Printf__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHeadPCce
 Console_Printf__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHeadPCce:
 /* 803D7244 003A0804  94 21 FF 80 */	stwu r1, -0x80(r1)
-/* 803D7248 003A0808  40 86 00 24 */	bne cr1, lbl_803D726C
+/* 803D7248 003A0808  40 86 00 24 */	bne cr1, .L_803D726C
 /* 803D724C 003A080C  D8 21 00 28 */	stfd f1, 0x28(r1)
 /* 803D7250 003A0810  D8 41 00 30 */	stfd f2, 0x30(r1)
 /* 803D7254 003A0814  D8 61 00 38 */	stfd f3, 0x38(r1)
@@ -14,7 +14,7 @@ Console_Printf__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHeadPCce:
 /* 803D7260 003A0820  D8 C1 00 50 */	stfd f6, 0x50(r1)
 /* 803D7264 003A0824  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 803D7268 003A0828  D9 01 00 60 */	stfd f8, 0x60(r1)
-lbl_803D726C:
+.L_803D726C:
 /* 803D726C 003A082C  39 61 00 88 */	addi r11, r1, 0x88
 /* 803D7270 003A0830  38 01 00 08 */	addi r0, r1, 8
 /* 803D7274 003A0834  3D 80 02 00 */	lis r12, 0x200
@@ -43,17 +43,17 @@ Console_GetTotalLines__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHead:
 /* 803D72C4 003A0884  A0 9F 00 10 */	lhz r4, 0x10(r31)
 /* 803D72C8 003A0888  A0 1F 00 0C */	lhz r0, 0xc(r31)
 /* 803D72CC 003A088C  7C 84 00 51 */	subf. r4, r4, r0
-/* 803D72D0 003A0890  40 80 00 0C */	bge lbl_803D72DC
+/* 803D72D0 003A0890  40 80 00 0C */	bge .L_803D72DC
 /* 803D72D4 003A0894  A0 1F 00 06 */	lhz r0, 6(r31)
 /* 803D72D8 003A0898  7C 84 02 14 */	add r4, r4, r0
-lbl_803D72DC:
+.L_803D72DC:
 /* 803D72DC 003A089C  A0 1F 00 0E */	lhz r0, 0xe(r31)
 /* 803D72E0 003A08A0  54 84 04 3E */	clrlwi r4, r4, 0x10
 /* 803D72E4 003A08A4  2C 00 00 00 */	cmpwi r0, 0
-/* 803D72E8 003A08A8  41 82 00 0C */	beq lbl_803D72F4
+/* 803D72E8 003A08A8  41 82 00 0C */	beq .L_803D72F4
 /* 803D72EC 003A08AC  38 04 00 01 */	addi r0, r4, 1
 /* 803D72F0 003A08B0  54 04 04 3E */	clrlwi r4, r0, 0x10
-lbl_803D72F4:
+.L_803D72F4:
 /* 803D72F4 003A08B4  80 1F 00 14 */	lwz r0, 0x14(r31)
 /* 803D72F8 003A08B8  7F E0 22 14 */	add r31, r0, r4
 /* 803D72FC 003A08BC  4B F8 16 F5 */	bl OSRestoreInterrupts

@@ -10,7 +10,7 @@ func_80451E50:
 /* 80451E5C 0041B41C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80451E60 0041B420  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80451E64 0041B424  7C 7F 1B 78 */	mr r31, r3
-/* 80451E68 0041B428  4B FE 57 55 */	bl func_804375BC
+/* 80451E68 0041B428  4B FE 57 55 */	bl __ct__CWorkThread
 /* 80451E6C 0041B42C  3C 60 80 57 */	lis r3, __vt__CDeviceFileJob@ha
 /* 80451E70 0041B430  38 80 00 00 */	li r4, 0
 /* 80451E74 0041B434  38 63 FD 20 */	addi r3, r3, __vt__CDeviceFileJob@l
@@ -54,14 +54,14 @@ func_80451EC8:
 /* 80451EDC 0041B49C  7C 9F 23 78 */	mr r31, r4
 /* 80451EE0 0041B4A0  93 C1 00 08 */	stw r30, 8(r1)
 /* 80451EE4 0041B4A4  7C 7E 1B 78 */	mr r30, r3
-/* 80451EE8 0041B4A8  41 82 00 1C */	beq lbl_80451F04
+/* 80451EE8 0041B4A8  41 82 00 1C */	beq .L_80451F04
 /* 80451EEC 0041B4AC  38 80 00 00 */	li r4, 0
 /* 80451EF0 0041B4B0  4B FE 5B D9 */	bl func_80437AC8
 /* 80451EF4 0041B4B4  2C 1F 00 00 */	cmpwi r31, 0
-/* 80451EF8 0041B4B8  40 81 00 0C */	ble lbl_80451F04
+/* 80451EF8 0041B4B8  40 81 00 0C */	ble .L_80451F04
 /* 80451EFC 0041B4BC  7F C3 F3 78 */	mr r3, r30
 /* 80451F00 0041B4C0  4B FE 2D 2D */	bl __dl__FPv
-lbl_80451F04:
+.L_80451F04:
 /* 80451F04 0041B4C4  7F C3 F3 78 */	mr r3, r30
 /* 80451F08 0041B4C8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80451F0C 0041B4CC  83 C1 00 08 */	lwz r30, 8(r1)
@@ -140,3 +140,12 @@ CDeviceFileJob_hierarchy:
 __RTTI__CDeviceFileJob:
 	.4byte CDeviceFileJob_typestr
 	.4byte CDeviceFileJob_hierarchy
+
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
+
+.4byte func_80451E50
+	.4byte 0x00000060
+	.4byte lbl_8001CF9C
+	.4byte func_80451EC8
+	.4byte 0x00000058
+	.4byte lbl_8001CFA4

@@ -92,3 +92,12 @@ func_800AAC98:
 /* 800AAD1C 000742DC  7C 08 03 A6 */	mtlr r0
 /* 800AAD20 000742E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 800AAD24 000742E4  4E 80 00 20 */	blr 
+
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
+
+.4byte func_800AABD4
+	.4byte 0x000000C4
+	.4byte lbl_80009364
+	.4byte func_800AAC98
+	.4byte 0x00000090
+	.4byte lbl_8000937C

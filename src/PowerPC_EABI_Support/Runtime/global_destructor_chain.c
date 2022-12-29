@@ -1,9 +1,9 @@
-#include "PowerPC_EABI_Support/Runtime/NMWException.h"
+#include "PowerPC_EABI_Support/Runtime/global_destructor_chain.h"
 
 
 DestructorChain* __global_destructor_chain;
 
-extern void* __register_global_object(void* object, void* destructor, void* regmem) {
+void* __register_global_object(void* object, void* destructor, void* regmem) {
   ((DestructorChain*)regmem)->next = __global_destructor_chain;
   ((DestructorChain*)regmem)->destructor = destructor;
   ((DestructorChain*)regmem)->object = object;
@@ -20,7 +20,8 @@ void __destroy_global_chain(void) {
     DTORCALL_COMPLETE(iter->destructor, iter->object);
   } 
 }
-
+/*
 #pragma section ".dtors$10"
 __declspec(section ".dtors$10") __declspec(weak) 
 	extern void * const __destroy_global_chain_reference = __destroy_global_chain;
+*/

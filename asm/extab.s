@@ -1,6 +1,6 @@
 .include "macros.inc"
 
-.section extab_, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "wa"  # 0x800066E0 - 0x80021020
 
 .global lbl_800066E0
 lbl_800066E0:
@@ -15087,7 +15087,7 @@ lbl_8000D81C:
 
 .global lbl_8000D824
 lbl_8000D824:
-	.4byte lbl_800A0000
+	.4byte switch_800A0000
 	.4byte 0x000000B4
 	.4byte 0x00000060
 	.4byte 0x000000F0
@@ -18388,7 +18388,7 @@ lbl_8000F404:
 
 .global lbl_8000F40C
 lbl_8000F40C:
-	.4byte lbl_804A0000
+	.4byte switch_804A0000
 	.4byte 0
 
 .global lbl_8000F414
@@ -22350,7 +22350,7 @@ lbl_80011824:
 
 .global lbl_8001182C
 lbl_8001182C:
-	.4byte lbl_80080000
+	.4byte switch_80080000
 	.4byte 0
 
 .global lbl_80011834
@@ -23389,7 +23389,7 @@ lbl_800121AC:
 
 .global lbl_800121B4
 lbl_800121B4:
-	.4byte lbl_80080000
+	.4byte switch_80080000
 	.4byte 0
 
 .global lbl_800121BC
@@ -24830,7 +24830,7 @@ lbl_80012DC8:
 
 .global lbl_80012DD0
 lbl_80012DD0:
-	.4byte lbl_80080000
+	.4byte switch_80080000
 	.4byte 0
 
 .global lbl_80012DD8
@@ -24911,7 +24911,7 @@ lbl_80012E70:
 
 .global lbl_80012E78
 lbl_80012E78:
-	.4byte lbl_80080000
+	.4byte switch_80080000
 	.4byte 0
 
 .global lbl_80012E80
@@ -45027,7 +45027,7 @@ lbl_8001DCA4:
 
 .global lbl_8001DCAC
 lbl_8001DCAC:
-	.4byte lbl_804A0000
+	.4byte switch_804A0000
 	.4byte 0
 
 .global lbl_8001DCB4
@@ -49117,7 +49117,7 @@ lbl_8001FCE8:
 
 .global lbl_8001FCF0
 lbl_8001FCF0:
-	.4byte lbl_80080000
+	.4byte switch_80080000
 	.4byte 0
 
 .global lbl_8001FCF8
@@ -49357,7 +49357,7 @@ lbl_8001FE80:
 
 .global lbl_8001FE88
 lbl_8001FE88:
-	.4byte lbl_800A0000
+	.4byte switch_800A0000
 	.4byte 0
 
 .global lbl_8001FE90
@@ -50018,7 +50018,7 @@ lbl_80020310:
 
 .global lbl_80020318
 lbl_80020318:
-	.4byte lbl_804A0000
+	.4byte switch_804A0000
 	.4byte 0
 
 .global lbl_80020320
@@ -51422,7 +51422,7 @@ lbl_80020CA0:
 
 .global lbl_80020CA8
 lbl_80020CA8:
-	.4byte lbl_80080000
+	.4byte switch_80080000
 	.4byte 0
 
 .global lbl_80020CB0

@@ -23,3 +23,10 @@ sinit_8008A0C8:
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
 .4byte sinit_8008A0C8
+
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
+
+
+	.4byte sinit_8008A0C8
+	.4byte 0x0000003C
+	.4byte lbl_80008BB4

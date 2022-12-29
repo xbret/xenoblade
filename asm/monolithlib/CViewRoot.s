@@ -19,11 +19,11 @@ func_804434FC:
 /* 8044352C 0040CAEC  4B FF 15 31 */	bl func_80434A5C
 /* 80443530 0040CAF0  2C 03 00 00 */	cmpwi r3, 0
 /* 80443534 0040CAF4  7C 7E 1B 78 */	mr r30, r3
-/* 80443538 0040CAF8  41 82 01 A4 */	beq lbl_804436DC
+/* 80443538 0040CAF8  41 82 01 A4 */	beq .L_804436DC
 /* 8044353C 0040CAFC  7F E4 FB 78 */	mr r4, r31
 /* 80443540 0040CB00  7F A5 EB 78 */	mr r5, r29
 /* 80443544 0040CB04  38 C0 00 80 */	li r6, 0x80
-/* 80443548 0040CB08  4B FF 40 75 */	bl func_804375BC
+/* 80443548 0040CB08  4B FF 40 75 */	bl __ct__CWorkThread
 /* 8044354C 0040CB0C  3C 60 80 57 */	lis r3, __vt__CViewRoot@ha
 /* 80443550 0040CB10  3C C0 80 57 */	lis r6, __vt___reslist_base_unsigned_long@ha
 /* 80443554 0040CB14  38 63 EF 88 */	addi r3, r3, __vt__CViewRoot@l
@@ -71,7 +71,7 @@ func_804434FC:
 /* 804435FC 0040CBBC  90 7E 05 08 */	stw r3, 0x508(r30)
 /* 80443600 0040CBC0  38 80 00 00 */	li r4, 0
 /* 80443604 0040CBC4  7C 09 03 A6 */	mtctr r0
-lbl_80443608:
+.L_80443608:
 /* 80443608 0040CBC8  80 7E 05 08 */	lwz r3, 0x508(r30)
 /* 8044360C 0040CBCC  7F E3 21 2E */	stwx r31, r3, r4
 /* 80443610 0040CBD0  80 1E 05 08 */	lwz r0, 0x508(r30)
@@ -120,12 +120,12 @@ lbl_80443608:
 /* 804436BC 0040CC7C  7C 60 22 14 */	add r3, r0, r4
 /* 804436C0 0040CC80  38 84 00 60 */	addi r4, r4, 0x60
 /* 804436C4 0040CC84  93 E3 00 54 */	stw r31, 0x54(r3)
-/* 804436C8 0040CC88  42 00 FF 40 */	bdnz lbl_80443608
+/* 804436C8 0040CC88  42 00 FF 40 */	bdnz .L_80443608
 /* 804436CC 0040CC8C  38 00 00 80 */	li r0, 0x80
 /* 804436D0 0040CC90  90 1E 05 0C */	stw r0, 0x50c(r30)
 /* 804436D4 0040CC94  38 00 00 00 */	li r0, 0
 /* 804436D8 0040CC98  98 0D BD 34 */	stb r0, lbl_80667EB4@sda21(r13)
-lbl_804436DC:
+.L_804436DC:
 /* 804436DC 0040CC9C  7F C3 F3 78 */	mr r3, r30
 /* 804436E0 0040CCA0  7F A4 EB 78 */	mr r4, r29
 /* 804436E4 0040CCA4  38 A0 00 00 */	li r5, 0
@@ -218,3 +218,9 @@ CViewRoot_hierarchy:
 __RTTI__CViewRoot:
 	.4byte CViewRoot_typestr
 	.4byte CViewRoot_hierarchy
+
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
+
+.4byte func_804434FC
+	.4byte 0x0000021C
+	.4byte lbl_8001C6D8
