@@ -8477,7 +8477,7 @@ lbl_80020FB4:
 	.4byte 0
 
 
-.section extabindex_, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_804E9460
 	.4byte 0x00000098

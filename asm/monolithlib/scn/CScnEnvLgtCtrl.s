@@ -9733,7 +9733,7 @@ lbl_800202E0:
 	.4byte 0x90080000
 	.4byte 0
 
-.section extabindex_, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_804C0BE4
 	.4byte 0x000000F8

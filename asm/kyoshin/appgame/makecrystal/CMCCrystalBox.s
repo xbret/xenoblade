@@ -8259,7 +8259,7 @@ lbl_80013DE4:
 
 
 
-.section extabindex_, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_80213BF0
 	.4byte 0x00000184

@@ -5045,7 +5045,7 @@ lbl_8001980C:
 	.4byte func_801320F0
 
 
-.section extabindex_, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_8028EFDC
 	.4byte 0x000001DC

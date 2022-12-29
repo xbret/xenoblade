@@ -11719,7 +11719,7 @@ lbl_80009B2C:
 	.4byte func_800B2D30
 
 
-.section extabindex_, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_800B132C
 	.4byte 0x0000003C

@@ -1639,7 +1639,7 @@ lbl_8001BF6C:
 	.4byte 0
 	.4byte 0x8E000000
 
-.section extabindex_, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte MWExceptionInfo$7ExPPC_FindExceptionRecord
 	.4byte 0x000001B0

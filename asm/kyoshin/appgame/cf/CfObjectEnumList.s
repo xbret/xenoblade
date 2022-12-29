@@ -10554,7 +10554,7 @@ lbl_8000ACEC:
 	.4byte 0
 
 
-.section extabindex_, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_800F47C8
 	.4byte 0x00000230

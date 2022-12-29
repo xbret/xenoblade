@@ -798,7 +798,7 @@ lbl_8000E660:
 	.4byte 0
 
 
-.section extabindex_, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte func_8017FF78
 	.4byte 0x00000110

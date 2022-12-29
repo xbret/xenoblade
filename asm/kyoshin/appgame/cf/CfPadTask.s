@@ -2342,7 +2342,7 @@ lbl_8001086C:
 	.4byte 0
 
 
-.section extabindex_, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_801C189C
 	.4byte 0x00000058

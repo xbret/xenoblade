@@ -9,7 +9,7 @@ SECTIONS
     {
         .init ALIGN(0x20):{}
         extab ALIGN(0x20):{}
-        extabindex_ ALIGN(0x20):{}
+        extabindex ALIGN(0x20):{}
         .text ALIGN(0x20):{}
         .ctors ALIGN(0x20):{}
         .dtors ALIGN(0x20):{}
@@ -25,7 +25,7 @@ SECTIONS
     } > text
     sz_init = SIZEOF(.init);
     szextab = SIZEOF(extab);
-    szextabindex = SIZEOF(extabindex_);
+    szextabindex = SIZEOF(extabindex);
     sz_text = SIZEOF(.text);
     sz_ctors = SIZEOF(.ctors);
     sz_dtors = SIZEOF(.dtors);

@@ -1943,7 +1943,7 @@ lbl_8000B5CC:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 
 
-.section extabindex_, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
 
 	.4byte func_801135E0
 	.4byte 0x00000120

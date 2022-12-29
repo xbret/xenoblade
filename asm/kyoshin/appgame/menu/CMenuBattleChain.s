@@ -1955,7 +1955,7 @@ lbl_8001B0C0:
 
 
 
-.section extabindex_, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "wa"  # 0x80021020 - 0x80039220
 
 .4byte func_802A9B8C
 	.4byte 0x00000108
