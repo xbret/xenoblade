@@ -2,10 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.include "macros.inc"
-
-.section .text, "ax"  # 0x80039220 - 0x804F5900
-
 .balign 16, 0
 .global __GXDefaultTexRegionCallback
 __GXDefaultTexRegionCallback:

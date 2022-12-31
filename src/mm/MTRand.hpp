@@ -88,8 +88,6 @@ public:
     }
 
     void mtInit(u32);
-    void func_804355D4(u32);
-    void func_804357E8();
     void nextMt();
     u32 randInt();
     u32 rand();
@@ -111,7 +109,9 @@ protected:
     }
 };
 
-MTRand* getInstance(){
+MTRand* getInstanceMTRand();
+
+MTRand* getInstanceMTRand(){
     static MTRand instance;
     return &instance;
 }

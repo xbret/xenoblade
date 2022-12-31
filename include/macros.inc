@@ -17,6 +17,7 @@ BSS section:
 	.sbss2:			0x00000000  0x8066DCE0  0x8066DCFB
 Entry Point: 0x80006310
 */
+
 # PowerPC Register Constants
 .set r0, 0
 .set r1, 1
@@ -91,7 +92,54 @@ Entry Point: 0x80006310
 .set qr6, 6
 .set qr7, 7
 
-# Small Data Area (read/write) Base
-#.set _SDA_BASE_, 0x8066C180
-# Small Data Area (read only) Base
-#.set _SDA2_BASE_, 0x80670380
+
+# Defines a sized symbol with function type.
+# Usage:
+# .fn my_function, local
+# /* asm here */
+# .endfn my_function
+.macro .fn name, visibility=global
+.\visibility "\name"
+.type "\name", @function
+"\name":
+.endm
+
+.macro .endfn name
+.size "\name", . - "\name"
+.endm
+
+# Defines a sized symbol with object type.
+# Usage:
+# .obj my_object, local
+# /* data here */
+# .endobj my_object
+.macro .obj name, visibility=global
+.\visibility "\name"
+.type "\name", @object
+"\name":
+.endm
+
+.macro .endobj name
+.size "\name", . - "\name"
+.endm
+
+# Defines a sized symbol without a type.
+# Usage:
+# .sym my_sym, local
+# /* anything here */
+# .endsym my_sym
+.macro .sym name, visibility=global
+.\visibility "\name"
+"\name":
+.endm
+
+.macro .endsym name
+.size "\name", . - "\name"
+.endm
+
+# Generates a relative relocation against a symbol.
+# Usage:
+# .rel my_function, .L_label
+.macro .rel name, label
+.4byte "\name" + ("\label" - "\name")
+.endm

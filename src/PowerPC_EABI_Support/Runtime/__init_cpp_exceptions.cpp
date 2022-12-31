@@ -11,7 +11,7 @@ static inline void __exception_info_constants(void** info, char** R2) {
   *info = (void*)_eti_init_info;
 }
 
-void __init_cpp_exceptions(void) {
+extern void __init_cpp_exceptions(void) {
   char* R2;
   void* info;
   if (fragmentID == -2) {
@@ -20,7 +20,7 @@ void __init_cpp_exceptions(void) {
   }
 }
 
-void __fini_cpp_exceptions(void) {
+extern void __fini_cpp_exceptions(void) {
   if (fragmentID != -2) {
     __unregister_fragment(fragmentID);
     fragmentID = -2;

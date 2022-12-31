@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global getInstance__Q22mm3mtlFv
-getInstance__Q22mm3mtlFv:
+.global getInstanceMTRand__Q22mm3mtlFv
+getInstanceMTRand__Q22mm3mtlFv:
 /* 8043539C 003FE95C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804353A0 003FE960  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804353A4 003FE964  88 0D BC E0 */	lbz r0, lbl_80667E60@sda21(r13)
@@ -733,7 +733,7 @@ lbl_8001C068:
 
 .section extabindex, "wa"  # 0x80021020 - 0x80039220
 
-	.4byte getInstance__Q22mm3mtlFv
+	.4byte getInstanceMTRand__Q22mm3mtlFv
 	.4byte 0x00000238
 	.4byte lbl_8001C040
 	.4byte func_804355D4__Q32mm3mtl6MTRandFUl

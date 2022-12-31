@@ -1,9 +1,12 @@
 #include "mm/MTRand.hpp"
 
+//Namespace according to XCDE
 namespace mm{
 namespace mtl{
 
-    inline void MTRand::mtInit(u32 seed){
+    void MTRand::mtInit(u32 seed) {
+        if(seed == 0) seed = 0x012BD6AA;
+
         state[0] = seed;
 
         for(int i = 1; i < 624; i++){
@@ -12,154 +15,7 @@ namespace mtl{
 
         left = 1;
         initialized = true;
-    } 
-
-#ifdef NONMATCHING  
-    //nonmatching
-    //https://decomp.me/scratch/LSSIh
-    void MTRand::func_804355D4(u32 seed) {
-        if(seed == 0) seed = 0x012BD6AA;
-        mtInit(seed);
     }
-#else
-    asm void MTRand::func_804355D4(u32 seed){
-        nofralloc
-        stwu r1, -0x10(r1)
-        cmpwi r4, 0
-        stw r31, 0xc(r1)
-        bne L_804355EC
-        lis r4, 0x012BD6AA@ha
-        addi r4, r4, 0x012BD6AA@l
-    L_804355EC:
-        lis r5, 0x6C078965@ha
-        li r6, 0x4d
-        stw r4, 0(r3)
-        addi r0, r5, 0x6C078965@l
-        addi r4, r3, 4
-        li r5, 1
-        mtctr r6
-    L_80435608:
-        lwz r7, -4(r4)
-        srwi r6, r7, 0x1e
-        xor r6, r7, r6
-        mullw r6, r6, r0
-        add r7, r5, r6
-        stw r7, 0(r4)
-        srwi r6, r7, 0x1e
-        xor r6, r7, r6
-        mullw r6, r6, r0
-        add r6, r5, r6
-        addi r7, r6, 1
-        stw r7, 4(r4)
-        srwi r6, r7, 0x1e
-        xor r6, r7, r6
-        mullw r6, r6, r0
-        add r6, r5, r6
-        addi r7, r6, 2
-        stw r7, 8(r4)
-        srwi r6, r7, 0x1e
-        xor r6, r7, r6
-        mullw r6, r6, r0
-        add r6, r5, r6
-        addi r7, r6, 3
-        stw r7, 0xc(r4)
-        srwi r6, r7, 0x1e
-        xor r6, r7, r6
-        mullw r6, r6, r0
-        add r6, r5, r6
-        addi r7, r6, 4
-        stw r7, 0x10(r4)
-        srwi r6, r7, 0x1e
-        xor r6, r7, r6
-        mullw r6, r6, r0
-        add r6, r5, r6
-        addi r7, r6, 5
-        stw r7, 0x14(r4)
-        srwi r6, r7, 0x1e
-        xor r6, r7, r6
-        mullw r6, r6, r0
-        add r6, r5, r6
-        addi r7, r6, 6
-        stw r7, 0x18(r4)
-        srwi r6, r7, 0x1e
-        xor r6, r7, r6
-        mullw r6, r6, r0
-        add r6, r5, r6
-        addi r5, r5, 8
-        addi r6, r6, 7
-        stw r6, 0x1c(r4)
-        addi r4, r4, 0x20
-        bdnz L_80435608
-        addi r0, r5, -1
-        lis r4, 0x6C078965@ha
-        slwi r0, r0, 2
-        slwi r11, r5, 2
-        lwzx r6, r3, r0
-        addi r10, r5, 1
-        addi r9, r5, 2
-        addi r8, r5, 3
-        srwi r0, r6, 0x1e
-        addi r7, r5, 4
-        xor r6, r6, r0
-        addi r0, r4, 0x6C078965@l
-        add r4, r3, r11
-        mullw r12, r6, r0
-        slwi r11, r10, 2
-        slwi r10, r9, 2
-        slwi r9, r8, 2
-        slwi r8, r7, 2
-        addi r6, r5, 5
-        add r31, r5, r12
-        slwi r7, r6, 2
-        srwi r12, r31, 0x1e
-        stw r31, 0(r4)
-        xor r12, r31, r12
-        li r6, 1
-        mullw r12, r12, r0
-        add r12, r5, r12
-        addi r12, r12, 1
-        stw r12, 4(r4)
-        lwzx r12, r3, r11
-        srwi r11, r12, 0x1e
-        xor r11, r12, r11
-        mullw r11, r11, r0
-        add r11, r5, r11
-        addi r11, r11, 2
-        stw r11, 8(r4)
-        lwzx r11, r3, r10
-        srwi r10, r11, 0x1e
-        xor r10, r11, r10
-        mullw r10, r10, r0
-        add r10, r5, r10
-        addi r10, r10, 3
-        stw r10, 0xc(r4)
-        lwzx r10, r3, r9
-        srwi r9, r10, 0x1e
-        xor r9, r10, r9
-        mullw r9, r9, r0
-        add r9, r5, r9
-        addi r9, r9, 4
-        stw r9, 0x10(r4)
-        lwzx r9, r3, r8
-        srwi r8, r9, 0x1e
-        xor r8, r9, r8
-        mullw r8, r8, r0
-        add r8, r5, r8
-        addi r8, r8, 5
-        stw r8, 0x14(r4)
-        lwzx r8, r3, r7
-        srwi r7, r8, 0x1e
-        xor r7, r8, r7
-        mullw r0, r7, r0
-        add r5, r5, r0
-        addi r0, r5, 6
-        stw r0, 0x18(r4)
-        stw r6, 0x9c0(r3)
-        stw r6, 0x9c4(r3)
-        lwz r31, 0xc(r1)
-        addi r1, r1, 0x10
-    }
-#endif
 
 
     void MTRand::nextMt(){
@@ -192,7 +48,7 @@ namespace mtl{
 
     inline u32 MTRand::randInt() {
         left--;
-         //If left reached 0, then regenerate the twister
+        //If left reached 0, then regenerate the twister
         if(left <= 0) nextMt();
 
         u32 r4 = *pNext++;

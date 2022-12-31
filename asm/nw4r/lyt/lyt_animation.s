@@ -955,10 +955,6 @@ Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt8Material:
 /* 804093D0 003D2990  38 21 00 80 */	addi r1, r1, 0x80
 /* 804093D4 003D2994  4E 80 00 20 */	blr
 
-.include "macros.inc"
-
-.section .text, "ax"  # 0x80039220 - 0x804F5900
-
 .global __ct__Q34nw4r3lyt12AnimResourceFv
 __ct__Q34nw4r3lyt12AnimResourceFv:
 /* 804093D8 003D2998  38 00 00 00 */	li r0, 0

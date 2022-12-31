@@ -2,22 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80435E70
-func_80435E70:
-/* 80435E70 003FF430  38 60 00 04 */	li r3, 4
-/* 80435E74 003FF434  64 63 00 04 */	oris r3, r3, 4
-/* 80435E78 003FF438  7C 72 E3 A6 */	mtspr 0x392, r3
-/* 80435E7C 003FF43C  38 60 00 05 */	li r3, 5
-/* 80435E80 003FF440  64 63 00 05 */	oris r3, r3, 5
-/* 80435E84 003FF444  7C 73 E3 A6 */	mtspr 0x393, r3
-/* 80435E88 003FF448  38 60 00 06 */	li r3, 6
-/* 80435E8C 003FF44C  64 63 00 06 */	oris r3, r3, 6
-/* 80435E90 003FF450  7C 74 E3 A6 */	mtspr 0x394, r3
-/* 80435E94 003FF454  38 60 00 07 */	li r3, 7
-/* 80435E98 003FF458  64 63 00 07 */	oris r3, r3, 7
-/* 80435E9C 003FF45C  7C 75 E3 A6 */	mtspr 0x395, r3
-/* 80435EA0 003FF460  4E 80 00 20 */	blr 
-
 .global func_80435EA4
 func_80435EA4:
 /* 80435EA4 003FF464  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -25,7 +9,7 @@ func_80435EA4:
 /* 80435EAC 003FF46C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80435EB0 003FF470  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80435EB4 003FF474  7C 7F 1B 78 */	mr r31, r3
-/* 80435EB8 003FF478  4B FF F4 E5 */	bl getInstance__Q22mm3mtlFv
+/* 80435EB8 003FF478  4B FF F4 E5 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80435EBC 003FF47C  7F E4 FB 78 */	mr r4, r31
 /* 80435EC0 003FF480  4B FF F7 15 */	bl func_804355D4__Q32mm3mtl6MTRandFUl
 /* 80435EC4 003FF484  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -34,26 +18,26 @@ func_80435EA4:
 /* 80435ED0 003FF490  38 21 00 10 */	addi r1, r1, 0x10
 /* 80435ED4 003FF494  4E 80 00 20 */	blr 
 
-.global mtRand
-mtRand:
+.global mtRand__2mlFv
+mtRand__2mlFv:
 /* 80435ED8 003FF498  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80435EDC 003FF49C  7C 08 02 A6 */	mflr r0
 /* 80435EE0 003FF4A0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80435EE4 003FF4A4  4B FF F4 B9 */	bl getInstance__Q22mm3mtlFv
+/* 80435EE4 003FF4A4  4B FF F4 B9 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80435EE8 003FF4A8  4B FF FB F5 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80435EEC 003FF4AC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80435EF0 003FF4B0  7C 08 03 A6 */	mtlr r0
 /* 80435EF4 003FF4B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80435EF8 003FF4B8  4E 80 00 20 */	blr 
 
-.global func_80435EFC
-func_80435EFC:
+.global mtRand__2mlFi
+mtRand__2mlFi:
 /* 80435EFC 003FF4BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80435F00 003FF4C0  7C 08 02 A6 */	mflr r0
 /* 80435F04 003FF4C4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80435F08 003FF4C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80435F0C 003FF4CC  7C 7F 1B 78 */	mr r31, r3
-/* 80435F10 003FF4D0  4B FF F4 8D */	bl getInstance__Q22mm3mtlFv
+/* 80435F10 003FF4D0  4B FF F4 8D */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80435F14 003FF4D4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80435F18 003FF4D8  41 82 00 18 */	beq .L_80435F30
 /* 80435F1C 003FF4DC  4B FF FB C1 */	bl rand__Q32mm3mtl6MTRandFv
@@ -70,8 +54,8 @@ func_80435EFC:
 /* 80435F40 003FF500  38 21 00 10 */	addi r1, r1, 0x10
 /* 80435F44 003FF504  4E 80 00 20 */	blr 
 
-.global func_80435F48
-func_80435F48:
+.global mtRand__2mlFii
+mtRand__2mlFii:
 /* 80435F48 003FF508  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80435F4C 003FF50C  7C 08 02 A6 */	mflr r0
 /* 80435F50 003FF510  90 01 00 14 */	stw r0, 0x14(r1)
@@ -79,7 +63,7 @@ func_80435F48:
 /* 80435F58 003FF518  7C 9F 23 78 */	mr r31, r4
 /* 80435F5C 003FF51C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80435F60 003FF520  7C 7E 1B 78 */	mr r30, r3
-/* 80435F64 003FF524  4B FF F4 39 */	bl getInstance__Q22mm3mtlFv
+/* 80435F64 003FF524  4B FF F4 39 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80435F68 003FF528  7F FE F8 51 */	subf. r31, r30, r31
 /* 80435F6C 003FF52C  41 82 00 18 */	beq .L_80435F84
 /* 80435F70 003FF530  4B FF FB 6D */	bl rand__Q32mm3mtl6MTRandFv
@@ -283,13 +267,13 @@ lbl_8001C0A0:
 	.4byte func_80435EA4
 	.4byte 0x00000034
 	.4byte lbl_8001C078
-	.4byte mtRand
+	.4byte mtRand__2mlFv
 	.4byte 0x00000024
 	.4byte lbl_8001C080
-	.4byte func_80435EFC
+	.4byte mtRand__2mlFi
 	.4byte 0x0000004C
 	.4byte lbl_8001C088
-	.4byte func_80435F48
+	.4byte mtRand__2mlFii
 	.4byte 0x0000005C
 	.4byte lbl_8001C090
 	.4byte func_80435FA4

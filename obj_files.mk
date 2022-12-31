@@ -1005,7 +1005,7 @@ MM_O_FILES :=\
 	$(BUILD_DIR)/asm/mm/code_80435D28.o \
 	$(BUILD_DIR)/asm/mm/code_80435DF8.o \
 	$(BUILD_DIR)/src/mm/MathConstants.o \
-	$(BUILD_DIR)/asm/mm/code_80435E70.o \
+	$(BUILD_DIR)/asm/mm/Random.o \
 	$(BUILD_DIR)/asm/mm/code_80436138.o \
 	$(BUILD_DIR)/asm/mm/code_80436260.o \
 	$(BUILD_DIR)/asm/mm/code_80436E84.o \

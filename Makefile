@@ -101,6 +101,8 @@ LD     := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 ELF2REL := tools/elf2rel
 
+DTK := tools/dtk
+
 # Options
 INCLUDES := -i include/ -i src/
 ASM_INCLUDES := -I include/
@@ -137,7 +139,7 @@ $(MW_O_FILES): CFLAGS += -Cpp_exceptions off
 #arc.c doesn't use -use_lmw_stmw on, and uses -ipa file and (maybe rest of wii sdk too?)
 $(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
 #Runtime has defaults and exceptions turned on
-$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/%.o: CFLAGS = -inline on -proc gekko -fp hard -O4,p -func_align 4 $(INCLUDES)
+$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/%.o: CFLAGS =  -use_lmw_stmw on -inline on -proc gekko -fp hard -O4,p -func_align 4 $(INCLUDES)
 
 ifeq ($(NON_MATCHING),1)
 CFLAGS += -DNON_MATCHING
@@ -185,6 +187,10 @@ clean:
 tools:
 	$(MAKE) -C tools
 
+$(DTK): tools/dtk_version
+	@echo "DOWNLOAD "$@
+	$(QUIET) $(PYTHON) tools/download_dtk.py $< $@
+
 # ELF creation makefile instructions
 ifeq ($(EPILOGUE_PROCESS),1)
 	@echo Linking ELF $@
@@ -198,9 +204,10 @@ $(ELF): $(O_FILES) $(LDSCRIPT_DOL)
 	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT_DOL) @build/o_files
 endif
 
-$(BUILD_DIR)/%.o: %.s
+$(BUILD_DIR)/%.o: %.s | $(DTK)
 	@echo Assembling $<
 	$(QUIET) $(AS) $(ASFLAGS) -o $@ $<
+	$(QUIET) $(DTK) elf fixup $@ $@
 
 $(BUILD_DIR)/%.o: %.c
 	@echo "Compiling " $<

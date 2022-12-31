@@ -1374,7 +1374,7 @@ func_8021CFC0:
 /* 8021D034 001E65F4  8B E3 00 03 */	lbz r31, 3(r3)
 /* 8021D038 001E65F8  8B A3 00 01 */	lbz r29, 1(r3)
 /* 8021D03C 001E65FC  8B 8D AE 88 */	lbz r28, lbl_80667008@sda21(r13)
-/* 8021D040 001E6600  48 21 83 5D */	bl getInstance__Q22mm3mtlFv
+/* 8021D040 001E6600  48 21 83 5D */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 8021D044 001E6604  48 21 8A 99 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D048 001E6608  38 A0 00 64 */	li r5, 0x64
 /* 8021D04C 001E660C  7F 80 07 74 */	extsb r0, r28
@@ -1549,7 +1549,7 @@ func_8021D200:
 /* 8021D2A8 001E6868  40 82 00 08 */	bne .L_8021D2B0
 /* 8021D2AC 001E686C  3B C0 00 01 */	li r30, 1
 .L_8021D2B0:
-/* 8021D2B0 001E6870  48 21 80 ED */	bl getInstance__Q22mm3mtlFv
+/* 8021D2B0 001E6870  48 21 80 ED */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 8021D2B4 001E6874  48 21 88 29 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D2B8 001E6878  7C 64 3E 70 */	srawi r4, r3, 7
 /* 8021D2BC 001E687C  88 1F 2D B3 */	lbz r0, 0x2db3(r31)
@@ -1694,7 +1694,7 @@ func_8021D3E4:
 .L_8021D4B8:
 /* 8021D4B8 001E6A78  28 00 00 03 */	cmplwi r0, 3
 /* 8021D4BC 001E6A7C  41 80 00 90 */	blt .L_8021D54C
-/* 8021D4C0 001E6A80  48 21 7E DD */	bl getInstance__Q22mm3mtlFv
+/* 8021D4C0 001E6A80  48 21 7E DD */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 8021D4C4 001E6A84  48 21 86 19 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D4C8 001E6A88  38 80 00 0A */	li r4, 0xa
 /* 8021D4CC 001E6A8C  7C 03 23 D6 */	divw r0, r3, r4
@@ -1771,7 +1771,7 @@ func_8021D564:
 /* 8021D5C8 001E6B88  88 03 2D A6 */	lbz r0, 0x2da6(r3)
 /* 8021D5CC 001E6B8C  7C 05 00 40 */	cmplw r5, r0
 /* 8021D5D0 001E6B90  41 80 00 28 */	blt .L_8021D5F8
-/* 8021D5D4 001E6B94  48 21 7D C9 */	bl getInstance__Q22mm3mtlFv
+/* 8021D5D4 001E6B94  48 21 7D C9 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 8021D5D8 001E6B98  48 21 85 05 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D5DC 001E6B9C  38 80 00 05 */	li r4, 5
 /* 8021D5E0 001E6BA0  7C 03 23 D6 */	divw r0, r3, r4
@@ -1783,7 +1783,7 @@ func_8021D564:
 .L_8021D5F8:
 /* 8021D5F8 001E6BB8  2C 1E 00 00 */	cmpwi r30, 0
 /* 8021D5FC 001E6BBC  40 82 00 68 */	bne .L_8021D664
-/* 8021D600 001E6BC0  48 21 7D 9D */	bl getInstance__Q22mm3mtlFv
+/* 8021D600 001E6BC0  48 21 7D 9D */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 8021D604 001E6BC4  48 21 84 D9 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D608 001E6BC8  38 80 00 0B */	li r4, 0xb
 /* 8021D60C 001E6BCC  7C 03 23 D6 */	divw r0, r3, r4
@@ -1876,7 +1876,7 @@ func_8021D6B4:
 /* 8021D748 001E6D08  FC 00 00 1E */	fctiwz f0, f0
 /* 8021D74C 001E6D0C  D8 01 00 20 */	stfd f0, 0x20(r1)
 /* 8021D750 001E6D10  83 21 00 24 */	lwz r25, 0x24(r1)
-/* 8021D754 001E6D14  48 21 7C 49 */	bl getInstance__Q22mm3mtlFv
+/* 8021D754 001E6D14  48 21 7C 49 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 8021D758 001E6D18  48 21 83 85 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D75C 001E6D1C  7C 83 AB D6 */	divw r4, r3, r21
 /* 8021D760 001E6D20  57 20 04 3E */	clrlwi r0, r25, 0x10
@@ -1887,7 +1887,7 @@ func_8021D6B4:
 /* 8021D774 001E6D34  40 80 01 EC */	bge .L_8021D960
 /* 8021D778 001E6D38  C0 02 A9 E4 */	lfs f0, lbl_8066AD64@sda21(r2)
 /* 8021D77C 001E6D3C  D0 16 2D AC */	stfs f0, 0x2dac(r22)
-/* 8021D780 001E6D40  48 21 7C 1D */	bl getInstance__Q22mm3mtlFv
+/* 8021D780 001E6D40  48 21 7C 1D */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 8021D784 001E6D44  48 21 83 59 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D788 001E6D48  38 E0 00 03 */	li r7, 3
 /* 8021D78C 001E6D4C  83 36 0E 1C */	lwz r25, 0xe1c(r22)
@@ -1912,7 +1912,7 @@ func_8021D6B4:
 /* 8021D7D8 001E6D98  B0 01 00 10 */	sth r0, 0x10(r1)
 /* 8021D7DC 001E6D9C  48 00 00 B0 */	b .L_8021D88C
 .L_8021D7E0:
-/* 8021D7E0 001E6DA0  48 21 7B BD */	bl getInstance__Q22mm3mtlFv
+/* 8021D7E0 001E6DA0  48 21 7B BD */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 8021D7E4 001E6DA4  2C 18 00 00 */	cmpwi r24, 0
 /* 8021D7E8 001E6DA8  41 82 00 18 */	beq .L_8021D800
 /* 8021D7EC 001E6DAC  48 21 82 F1 */	bl rand__Q32mm3mtl6MTRandFv
@@ -1924,7 +1924,7 @@ func_8021D6B4:
 /* 8021D800 001E6DC0  38 00 00 00 */	li r0, 0
 .L_8021D804:
 /* 8021D804 001E6DC4  7C 1B 07 74 */	extsb r27, r0
-/* 8021D808 001E6DC8  48 21 7B 95 */	bl getInstance__Q22mm3mtlFv
+/* 8021D808 001E6DC8  48 21 7B 95 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 8021D80C 001E6DCC  48 21 82 D1 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D810 001E6DD0  7C 03 EB D6 */	divw r0, r3, r29
 /* 8021D814 001E6DD4  38 C0 00 00 */	li r6, 0
@@ -4946,7 +4946,7 @@ func_80220128:
 .L_80220164:
 /* 80220164 001E9724  83 C3 0E 1C */	lwz r30, 0xe1c(r3)
 /* 80220168 001E9728  8B 7E 00 00 */	lbz r27, 0(r30)
-/* 8022016C 001E972C  48 21 52 31 */	bl getInstance__Q22mm3mtlFv
+/* 8022016C 001E972C  48 21 52 31 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80220170 001E9730  2C 1B 00 00 */	cmpwi r27, 0
 /* 80220174 001E9734  41 82 00 18 */	beq .L_8022018C
 /* 80220178 001E9738  48 21 59 65 */	bl rand__Q32mm3mtl6MTRandFv
@@ -4958,7 +4958,7 @@ func_80220128:
 /* 8022018C 001E974C  38 00 00 00 */	li r0, 0
 .L_80220190:
 /* 80220190 001E9750  7C 1F 07 74 */	extsb r31, r0
-/* 80220194 001E9754  48 21 52 09 */	bl getInstance__Q22mm3mtlFv
+/* 80220194 001E9754  48 21 52 09 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80220198 001E9758  48 21 59 45 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8022019C 001E975C  7C 60 1E 70 */	srawi r0, r3, 3
 /* 802201A0 001E9760  7C 00 01 94 */	addze r0, r0
@@ -4971,7 +4971,7 @@ func_80220128:
 /* 802201BC 001E977C  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 802201C0 001E9780  2C 00 00 02 */	cmpwi r0, 2
 /* 802201C4 001E9784  40 82 00 30 */	bne .L_802201F4
-/* 802201C8 001E9788  48 21 51 D5 */	bl getInstance__Q22mm3mtlFv
+/* 802201C8 001E9788  48 21 51 D5 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 802201CC 001E978C  48 21 59 11 */	bl rand__Q32mm3mtl6MTRandFv
 /* 802201D0 001E9790  38 80 00 05 */	li r4, 5
 /* 802201D4 001E9794  7C 03 23 D6 */	divw r0, r3, r4
@@ -5020,12 +5020,12 @@ func_80220128:
 /* 80220274 001E9834  8B 9D 00 00 */	lbz r28, 0(r29)
 /* 80220278 001E9838  48 00 00 AC */	b .L_80220324
 .L_8022027C:
-/* 8022027C 001E983C  48 21 51 21 */	bl getInstance__Q22mm3mtlFv
+/* 8022027C 001E983C  48 21 51 21 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80220280 001E9840  2C 1C 00 00 */	cmpwi r28, 0
 /* 80220284 001E9844  41 82 00 08 */	beq .L_8022028C
 /* 80220288 001E9848  48 21 58 55 */	bl rand__Q32mm3mtl6MTRandFv
 .L_8022028C:
-/* 8022028C 001E984C  48 21 51 11 */	bl getInstance__Q22mm3mtlFv
+/* 8022028C 001E984C  48 21 51 11 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80220290 001E9850  48 21 58 4D */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220294 001E9854  7C 03 FB D6 */	divw r0, r3, r31
 /* 80220298 001E9858  7C 00 F9 D6 */	mullw r0, r0, r31
@@ -5037,7 +5037,7 @@ func_80220128:
 /* 802202B0 001E9870  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 802202B4 001E9874  2C 00 00 07 */	cmpwi r0, 7
 /* 802202B8 001E9878  40 82 00 2C */	bne .L_802202E4
-/* 802202BC 001E987C  48 21 50 E1 */	bl getInstance__Q22mm3mtlFv
+/* 802202BC 001E987C  48 21 50 E1 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 802202C0 001E9880  48 21 58 1D */	bl rand__Q32mm3mtl6MTRandFv
 /* 802202C4 001E9884  7C 03 FB D6 */	divw r0, r3, r31
 /* 802202C8 001E9888  7C 00 F9 D6 */	mullw r0, r0, r31
@@ -5534,7 +5534,7 @@ switch_802209AC:
 .global switch_802209B8
 switch_802209B8:
 /* 802209B8 001E9F78  7C BF 2B 78 */	mr r31, r5
-/* 802209BC 001E9F7C  48 21 49 E1 */	bl getInstance__Q22mm3mtlFv
+/* 802209BC 001E9F7C  48 21 49 E1 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 802209C0 001E9F80  48 21 51 1D */	bl rand__Q32mm3mtl6MTRandFv
 /* 802209C4 001E9F84  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 802209C8 001E9F88  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5548,7 +5548,7 @@ switch_802209B8:
 /* 802209E8 001E9FA8  48 00 02 14 */	b .L_80220BFC
 .global switch_802209EC
 switch_802209EC:
-/* 802209EC 001E9FAC  48 21 49 B1 */	bl getInstance__Q22mm3mtlFv
+/* 802209EC 001E9FAC  48 21 49 B1 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 802209F0 001E9FB0  48 21 50 ED */	bl rand__Q32mm3mtl6MTRandFv
 /* 802209F4 001E9FB4  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 802209F8 001E9FB8  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5560,7 +5560,7 @@ switch_802209EC:
 /* 80220A10 001E9FD0  88 63 05 F0 */	lbz r3, 0x5f0(r3)
 /* 80220A14 001E9FD4  4B F1 88 A1 */	bl func_801392B4
 /* 80220A18 001E9FD8  7C 7F 1B 78 */	mr r31, r3
-/* 80220A1C 001E9FDC  48 21 49 81 */	bl getInstance__Q22mm3mtlFv
+/* 80220A1C 001E9FDC  48 21 49 81 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80220A20 001E9FE0  48 21 50 BD */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220A24 001E9FE4  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220A28 001E9FE8  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5574,7 +5574,7 @@ switch_802209EC:
 /* 80220A48 001EA008  48 00 01 B4 */	b .L_80220BFC
 .global switch_80220A4C
 switch_80220A4C:
-/* 80220A4C 001EA00C  48 21 49 51 */	bl getInstance__Q22mm3mtlFv
+/* 80220A4C 001EA00C  48 21 49 51 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80220A50 001EA010  48 21 50 8D */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220A54 001EA014  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220A58 001EA018  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5586,7 +5586,7 @@ switch_80220A4C:
 /* 80220A70 001EA030  88 63 05 F0 */	lbz r3, 0x5f0(r3)
 /* 80220A74 001EA034  4B F1 88 41 */	bl func_801392B4
 /* 80220A78 001EA038  7C 7F 1B 78 */	mr r31, r3
-/* 80220A7C 001EA03C  48 21 49 21 */	bl getInstance__Q22mm3mtlFv
+/* 80220A7C 001EA03C  48 21 49 21 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80220A80 001EA040  48 21 50 5D */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220A84 001EA044  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220A88 001EA048  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5601,7 +5601,7 @@ switch_80220A4C:
 .global switch_80220AAC
 switch_80220AAC:
 /* 80220AAC 001EA06C  7C BF 2B 78 */	mr r31, r5
-/* 80220AB0 001EA070  48 21 48 ED */	bl getInstance__Q22mm3mtlFv
+/* 80220AB0 001EA070  48 21 48 ED */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80220AB4 001EA074  48 21 50 29 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220AB8 001EA078  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220ABC 001EA07C  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5615,7 +5615,7 @@ switch_80220AAC:
 /* 80220ADC 001EA09C  48 00 01 20 */	b .L_80220BFC
 .global switch_80220AE0
 switch_80220AE0:
-/* 80220AE0 001EA0A0  48 21 48 BD */	bl getInstance__Q22mm3mtlFv
+/* 80220AE0 001EA0A0  48 21 48 BD */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80220AE4 001EA0A4  48 21 4F F9 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220AE8 001EA0A8  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220AEC 001EA0AC  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5627,7 +5627,7 @@ switch_80220AE0:
 /* 80220B04 001EA0C4  88 63 05 F0 */	lbz r3, 0x5f0(r3)
 /* 80220B08 001EA0C8  4B F1 87 AD */	bl func_801392B4
 /* 80220B0C 001EA0CC  7C 7F 1B 78 */	mr r31, r3
-/* 80220B10 001EA0D0  48 21 48 8D */	bl getInstance__Q22mm3mtlFv
+/* 80220B10 001EA0D0  48 21 48 8D */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80220B14 001EA0D4  48 21 4F C9 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220B18 001EA0D8  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220B1C 001EA0DC  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5641,7 +5641,7 @@ switch_80220AE0:
 /* 80220B3C 001EA0FC  48 00 00 C0 */	b .L_80220BFC
 .global switch_80220B40
 switch_80220B40:
-/* 80220B40 001EA100  48 21 48 5D */	bl getInstance__Q22mm3mtlFv
+/* 80220B40 001EA100  48 21 48 5D */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80220B44 001EA104  48 21 4F 99 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220B48 001EA108  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220B4C 001EA10C  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5653,7 +5653,7 @@ switch_80220B40:
 /* 80220B64 001EA124  88 63 05 F0 */	lbz r3, 0x5f0(r3)
 /* 80220B68 001EA128  4B F1 87 4D */	bl func_801392B4
 /* 80220B6C 001EA12C  7C 7F 1B 78 */	mr r31, r3
-/* 80220B70 001EA130  48 21 48 2D */	bl getInstance__Q22mm3mtlFv
+/* 80220B70 001EA130  48 21 48 2D */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80220B74 001EA134  48 21 4F 69 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220B78 001EA138  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220B7C 001EA13C  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5667,7 +5667,7 @@ switch_80220B40:
 /* 80220B9C 001EA15C  48 00 00 60 */	b .L_80220BFC
 .global switch_80220BA0
 switch_80220BA0:
-/* 80220BA0 001EA160  48 21 47 FD */	bl getInstance__Q22mm3mtlFv
+/* 80220BA0 001EA160  48 21 47 FD */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80220BA4 001EA164  48 21 4F 39 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220BA8 001EA168  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220BAC 001EA16C  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5679,7 +5679,7 @@ switch_80220BA0:
 /* 80220BC4 001EA184  88 63 05 F0 */	lbz r3, 0x5f0(r3)
 /* 80220BC8 001EA188  4B F1 86 ED */	bl func_801392B4
 /* 80220BCC 001EA18C  7C 7F 1B 78 */	mr r31, r3
-/* 80220BD0 001EA190  48 21 47 CD */	bl getInstance__Q22mm3mtlFv
+/* 80220BD0 001EA190  48 21 47 CD */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80220BD4 001EA194  48 21 4F 09 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220BD8 001EA198  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220BDC 001EA19C  54 60 07 FE */	clrlwi r0, r3, 0x1f

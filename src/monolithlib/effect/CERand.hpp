@@ -4,10 +4,8 @@
 #include "types.h"
 #include "Vector3.h"
 #include "stl/limits.h"
+#include "mm/Random.hpp"
 
-extern "C"{
-    u32 mtRand();
-}
 
 class IRandomizer {
 public:
@@ -25,19 +23,19 @@ public:
     ~CERandomizer(){}
 
     virtual u32 rand(){
-        return mtRand();
+        return ml::mtRand();
     }
 
     virtual float randF(){
-        return (float)mtRand()/INT_MAX;
+        return (float)ml::mtRand()/INT_MAX;
     }
 
     virtual float randFHalf(){
-        return ((float)mtRand()/INT_MAX) - 0.5f;
+        return ((float)ml::mtRand()/INT_MAX) - 0.5f;
     }
 
     virtual float randSign(){
-        return (mtRand() % 2 != 0) ? 1.0f : -1.0f;
+        return (ml::mtRand() % 2 != 0) ? 1.0f : -1.0f;
     }
 };
 
