@@ -2439,3 +2439,24 @@ lbl_8051A9C8:
 	.asciz "E2005042701 : NULL pointer is passed."
 	.asciz "%08X"
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global skg_init_count
+skg_init_count:
+	.skip 0x4
+.global ahxsetextfunc
+ahxsetextfunc:
+	.skip 0x4
+.global pl2encodefunc
+pl2encodefunc:
+	.skip 0x4
+.global pl2resetfunc
+pl2resetfunc:
+	.skip 0xC
+.global adxb_dec_err_mode
+adxb_dec_err_mode:
+	.skip 0x8
+.global lbl_805E89F8
+lbl_805E89F8:
+	.skip 0xFC0

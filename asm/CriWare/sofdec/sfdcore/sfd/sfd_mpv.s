@@ -5568,3 +5568,12 @@ lbl_805203C0:
 	.asciz "late"
 	.byte 0x00
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global sfmpv_work
+sfmpv_work:
+	.skip 0x12020
+.global lbl_8061CD50
+lbl_8061CD50:
+	.skip 0x8

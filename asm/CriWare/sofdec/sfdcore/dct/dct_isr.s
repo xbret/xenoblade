@@ -2151,3 +2151,14 @@ lbl_8056B598:
 	.4byte switch_803BA69C
 	.4byte switch_803BA6F8
 
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80607F80
+lbl_80607F80:
+	.skip 0x208
+.global sfsd_scale_tbl
+sfsd_scale_tbl:
+	.skip 0x100
+.global lbl_80608288
+lbl_80608288:
+	.skip 0x2000

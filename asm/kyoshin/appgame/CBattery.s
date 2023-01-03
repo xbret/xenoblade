@@ -288,7 +288,77 @@ func_802B94D0:
 /* 802B95B0 00282B70  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B95B4 00282B74  4E 80 00 20 */	blr
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CBattery_typestr
+CBattery_typestr:
+	.asciz "CBattery"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_8050CDC8
+lbl_8050CDC8:
+	.asciz "/menu/Battery.arc"
+	.asciz "pic_%02d"
+	.asciz "CBattery"
+	.asciz "arc"
+	.asciz "mf00_btry.brlyt"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CBattery
+__vt__CBattery:
+	.4byte __RTTI__CBattery
+	.4byte 0
+	.4byte __dt__CBattery
+	.4byte func_80039E28
+	.4byte func_802B94D0
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CBattery_hierarchy
+CBattery_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CBattery
+__RTTI__CBattery:
+	.4byte CBattery_typestr
+	.4byte CBattery_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001BE94
 lbl_8001BE94:
@@ -330,7 +400,7 @@ lbl_8001BED0:
 	.4byte func_8045F8C8
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CBattery
 	.4byte 0x00000068

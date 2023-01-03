@@ -12373,3 +12373,9 @@ lbl_8056B158:
 	.4byte switch_803B6008
 	.4byte switch_803B8CBC
 	.4byte switch_803B6008
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80607B68
+lbl_80607B68:
+	.skip 0x10

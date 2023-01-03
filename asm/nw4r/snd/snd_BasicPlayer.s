@@ -299,3 +299,16 @@ __dt__Q44nw4r3snd6detail11BasicPlayerFv:
 /* 80412494 003DBA54  7C 08 03 A6 */	mtlr r0
 /* 80412498 003DBA58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041249C 003DBA5C  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C6E0
+lbl_8066C6E0:
+	# ROM: 0x576540
+	.float 1.0
+
+
+.global lbl_8066C6E4
+lbl_8066C6E4:
+	# ROM: 0x576544
+	.4byte 0

@@ -2941,7 +2941,101 @@ func_802A38C8:
 /* 802A3A78 0026D038  38 21 00 40 */	addi r1, r1, 0x40
 /* 802A3A7C 0026D03C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CCharVoiceMan_typestr
+cf_CCharVoiceMan_typestr:
+	.asciz "cf::CCharVoiceMan"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053D050
+lbl_8053D050:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A13B8
+
+
+.global __vt__cf_CCharVoiceMan
+__vt__cf_CCharVoiceMan:
+	.4byte __RTTI__cf_CCharVoiceMan
+	.4byte 0
+	.4byte func_802A1450
+	.4byte func_800B2D84
+	.4byte func_802A3804
+	.4byte func_800B1378
+	.4byte func_800B1814
+
+.global cf_CCharVoiceMan_hierarchy
+cf_CCharVoiceMan_hierarchy:
+	.4byte __RTTI__cf_IFactoryEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CCharVoiceMan
+__RTTI__cf_CCharVoiceMan:
+	.4byte cf_CCharVoiceMan_typestr
+	.4byte cf_CCharVoiceMan_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B510
+lbl_8066B510:
+	# ROM: 0x575370
+	.4byte 0
+
+
+.global lbl_8066B514
+lbl_8066B514:
+	# ROM: 0x575374
+	.4byte 0x43160000
+
+
+.global lbl_8066B518
+lbl_8066B518:
+	# ROM: 0x575378
+	.float 0.5
+
+
+.global lbl_8066B51C
+lbl_8066B51C:
+	# ROM: 0x57537C
+	.4byte 0x44E10000
+
+
+.global lbl_8066B520
+lbl_8066B520:
+	# ROM: 0x575380
+	.4byte 0x40400000
+
+
+.global lbl_8066B524
+lbl_8066B524:
+	# ROM: 0x575384
+	.float 1.0
+
+
+.global lbl_8066B528
+lbl_8066B528:
+	# ROM: 0x575388
+	.4byte 0x41F00000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667340
+lbl_80667340:
+	.skip 0x4
+.global lbl_80667344
+lbl_80667344:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001A8B8
 lbl_8001A8B8:
@@ -3224,7 +3318,7 @@ lbl_8001AA88:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A13BC
 	.4byte 0x00000094

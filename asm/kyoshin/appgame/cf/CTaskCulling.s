@@ -571,7 +571,185 @@ func_801A30D0:
 
 .4byte sinit_801A3038
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CTaskCulling_typestr
+cf_CTaskCulling_typestr:
+	.asciz "cf::CTaskCulling"
+	.balign 4
+
+.global CTTask_cf_CTaskCulling_typestr
+CTTask_cf_CTaskCulling_typestr:
+	.asciz "CTTask<cf::CTaskCulling>"
+	.balign 4
+
+
+.global lbl_804FF780
+lbl_804FF780:
+	# ROM: 0x4FB880
+	.4byte 0x2F006F63
+	.4byte 0x63000000
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CTaskCulling
+__vt__cf_CTaskCulling:
+	.4byte __RTTI__cf_CTaskCulling
+	.4byte 0
+	.4byte func_801A2B58
+	.4byte CChildListNode_Reset
+	.4byte func_801A2E40
+	.4byte func_801A2EA0
+	.4byte func_801A2F24
+	.4byte func_801A2F28
+	.4byte func_80043F20
+	.4byte __RTTI__cf_CTaskCulling
+	.4byte 0xFFFFFFAC
+	.4byte func_801A30A0
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__cf_CTaskCulling
+	.4byte 0xFFFFFFA8
+	.4byte func_801A30B0
+	.4byte func_801A30A8
+	.4byte __RTTI__cf_CTaskCulling
+	.4byte 0xFFFFFFA4
+	.4byte func_801A30D0
+	.4byte func_801A30C8
+	.4byte func_801A30C0
+	.4byte func_801A30B8
+	.4byte func_801A2C20
+	.4byte func_801A2C40
+	.4byte func_801A2C74
+	.4byte func_801A2F2C
+
+.global cf_CTaskCulling_hierarchy
+cf_CTaskCulling_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_cf_CTaskCulling
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_cf_CTaskCulling
+__vt__CTTask_cf_CTaskCulling:
+	.4byte __RTTI__CTTask_cf_CTaskCulling
+	.4byte 0
+	.4byte func_801A2B00
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_801A2FA8
+	.4byte func_801A2FF0
+	.4byte func_80043F20
+
+.global CTTask_cf_CTaskCulling_hierarchy
+CTTask_cf_CTaskCulling_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CTaskCulling
+__RTTI__cf_CTaskCulling:
+	.4byte cf_CTaskCulling_typestr
+	.4byte cf_CTaskCulling_hierarchy
+
+.global __RTTI__CTTask_cf_CTaskCulling
+__RTTI__CTTask_cf_CTaskCulling:
+	.4byte CTTask_cf_CTaskCulling_typestr
+	.4byte CTTask_cf_CTaskCulling_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A578
+lbl_8066A578:
+	# ROM: 0x5743D8
+	.4byte 0x40A00000
+
+
+.global lbl_8066A57C
+lbl_8066A57C:
+	# ROM: 0x5743DC
+	.4byte 0x41F00000
+
+
+.global lbl_8066A580
+lbl_8066A580:
+	# ROM: 0x5743E0
+	.4byte 0x42480000
+
+
+.global lbl_8066A584
+lbl_8066A584:
+	# ROM: 0x5743E4
+	.4byte 0
+
+
+.global lbl_8066A588
+lbl_8066A588:
+	# ROM: 0x5743E8
+	.float 1.0
+
+
+.global lbl_8066A58C
+lbl_8066A58C:
+	# ROM: 0x5743EC
+	.float 0.2
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80579018
+lbl_80579018:
+	.skip 0x38
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666C18
+lbl_80666C18:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000F790
 lbl_8000F790:
@@ -657,7 +835,7 @@ lbl_8000F85C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801A29CC
 	.4byte 0x000000F4

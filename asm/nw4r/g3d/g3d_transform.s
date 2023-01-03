@@ -202,3 +202,11 @@ CalcInvWorldMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34:
 /* 803E1A94 003AB054  F0 E3 80 2C */	psq_st f7, 44(r3), 1, qr0
 /* 803E1A98 003AB058  38 60 00 01 */	li r3, 1
 /* 803E1A9C 003AB05C  4E 80 00 20 */	blr
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C340
+lbl_8066C340:
+	# ROM: 0x5761A0
+	.4byte 0x03AA2425
+	.4byte 0

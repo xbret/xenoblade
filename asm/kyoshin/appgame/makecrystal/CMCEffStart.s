@@ -183,7 +183,334 @@ func_80223F44:
 /* 80223F88 001ED548  38 21 00 10 */	addi r1, r1, 0x10
 /* 80223F8C 001ED54C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMCEffCylinder_typestr
+CMCEffCylinder_typestr:
+	.asciz "CMCEffCylinder"
+	.balign 4
+
+.global CMCEffDivide_typestr
+CMCEffDivide_typestr:
+	.asciz "CMCEffDivide"
+	.balign 4
+
+.global CMCEffUpRank_typestr
+CMCEffUpRank_typestr:
+	.asciz "CMCEffUpRank"
+	.balign 4
+
+.global CMCEffCrystal_typestr
+CMCEffCrystal_typestr:
+	.asciz "CMCEffCrystal"
+	.balign 4
+
+.global CMCEffFailure_typestr
+CMCEffFailure_typestr:
+	.asciz "CMCEffFailure"
+	.balign 4
+
+.global CMCEffSuccess_typestr
+CMCEffSuccess_typestr:
+	.asciz "CMCEffSuccess"
+	.balign 4
+
+.global CMCEffUpPrm_typestr
+CMCEffUpPrm_typestr:
+	.asciz "CMCEffUpPrm"
+
+.global CMCEffUpGreen_typestr
+CMCEffUpGreen_typestr:
+	.asciz "CMCEffUpGreen"
+	.balign 4
+
+.global CMCEffUpBlue_typestr
+CMCEffUpBlue_typestr:
+	.asciz "CMCEffUpBlue"
+	.balign 4
+
+.global CMCEffUpRed_typestr
+CMCEffUpRed_typestr:
+	.asciz "CMCEffUpRed"
+
+.global CMCEffStart_typestr
+CMCEffStart_typestr:
+	.asciz "CMCEffStart"
+
+
+.global lbl_80504CFC
+lbl_80504CFC:
+	.asciz "mf10_cry06_start.brlyt"
+	.asciz "mf10_cry06_start_in.brlan"
+	.asciz "mf10_cry02_prt00.brlyt"
+	.asciz "mf10_cry02_prt00_in.brlan"
+	.asciz "mf10_cry02_prt01.brlyt"
+	.asciz "mf10_cry02_prt01_in.brlan"
+	.asciz "mf10_cry02_prt02.brlyt"
+	.asciz "mf10_cry02_prt02_in.brlan"
+	.asciz "mf10_cry02_prt03.brlyt"
+	.asciz "mf10_cry02_prt03_in.brlan"
+	.asciz "txt_bns"
+	.asciz "mf10_cry06_comp.brlyt"
+	.asciz "mf10_cry06_comp_in.brlan"
+	.asciz "mf10_cry06_comp_out.brlan"
+	.asciz "mf10_cry06_fail.brlyt"
+	.asciz "mf10_cry06_fail_in.brlan"
+	.asciz "mf10_cry02_trc.brlyt"
+	.asciz "mf10_cry02_trc_in.brlan"
+	.asciz "mf10_cry02_trc_out.brlan"
+	.asciz "mf10_cry03_crys.brlyt"
+	.asciz "mf10_cry03_crys_in.brlan"
+	.asciz "mf10_cry03_crys_change.brlan"
+	.asciz "mf10_cry03_crys_spl.brlan"
+	.asciz "mf10_cry03_crys_out.brlan"
+	.asciz "mf10_cry04_lst.brlyt"
+	.asciz "mf10_cry04_lst_roop.brlan"
+	.asciz "nul_trc01"
+	.asciz "name"
+	.asciz "MNU_item"
+	.asciz "%s%s"
+	.asciz "txt_listname01"
+	.asciz "atr_type"
+	.asciz "mf00_com00_dmy.tpl"
+	.asciz "mf10_cry00_crys01.tpl"
+	.asciz "mf10_cry00_crys02.tpl"
+	.asciz "mf10_cry00_crys03.tpl"
+	.asciz "mf10_cry00_crys04.tpl"
+	.asciz "mf10_cry00_crys05.tpl"
+	.asciz "mf10_cry00_crys06.tpl"
+	.asciz "pic_crs"
+	.asciz "pic_crs01"
+	.asciz "mf10_cry05_rank.brlyt"
+	.asciz "mf10_cry05_rank_in.brlan"
+	.asciz "mf10_cry05_spl.brlyt"
+	.asciz "mf10_cry05_spl_in.brlan"
+	.asciz "mf10_cry06_chn.brlyt"
+	.asciz "mf10_cry06_chn_in.brlan"
+	.asciz "mf10_cry06_chn_change.brlan"
+	.asciz "mf10_cry06_chn_out.brlan"
+	.asciz "txt_num"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMCEffCylinder
+__vt__CMCEffCylinder:
+	.4byte __RTTI__CMCEffCylinder
+	.4byte 0
+	.4byte func_80225D38
+	.4byte func_80225D78
+
+
+.global __vt__CMCEffDivide
+__vt__CMCEffDivide:
+	.4byte __RTTI__CMCEffDivide
+	.4byte 0
+	.4byte func_80225C08
+	.4byte func_80225C48
+	.4byte func_80225CD8
+
+.global CMCEffDivide_hierarchy
+CMCEffDivide_hierarchy:
+	.4byte __RTTI__CMCEffStart
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CMCEffUpRank
+__vt__CMCEffUpRank:
+	.4byte __RTTI__CMCEffUpRank
+	.4byte 0
+	.4byte func_80225AD4
+	.4byte func_80225B14
+	.4byte func_80225BA4
+
+.global CMCEffUpRank_hierarchy
+CMCEffUpRank_hierarchy:
+	.4byte __RTTI__CMCEffStart
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CMCEffCrystal
+__vt__CMCEffCrystal:
+	.4byte __RTTI__CMCEffCrystal
+	.4byte 0
+	.4byte func_80224CA4
+	.4byte func_80224CE4
+
+
+.global __vt__CMCEffFailure
+__vt__CMCEffFailure:
+	.4byte __RTTI__CMCEffFailure
+	.4byte 0
+	.4byte func_80224B7C
+	.4byte func_80224BBC
+	.4byte func_80223F24
+
+.global CMCEffFailure_hierarchy
+CMCEffFailure_hierarchy:
+	.4byte __RTTI__CMCEffStart
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CMCEffSuccess
+__vt__CMCEffSuccess:
+	.4byte __RTTI__CMCEffSuccess
+	.4byte 0
+	.4byte func_80224720
+	.4byte func_80224760
+
+
+.global __vt__CMCEffUpPrm
+__vt__CMCEffUpPrm:
+	.4byte __RTTI__CMCEffUpPrm
+	.4byte 0
+	.4byte func_80224374
+
+
+.global __vt__CMCEffUpGreen
+__vt__CMCEffUpGreen:
+	.4byte __RTTI__CMCEffUpGreen
+	.4byte 0
+	.4byte func_80224234
+	.4byte func_80224274
+	.4byte func_80224304
+
+.global CMCEffUpGreen_hierarchy
+CMCEffUpGreen_hierarchy:
+	.4byte __RTTI__CMCEffStart
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CMCEffUpBlue
+__vt__CMCEffUpBlue:
+	.4byte __RTTI__CMCEffUpBlue
+	.4byte 0
+	.4byte func_80224100
+	.4byte func_80224140
+	.4byte func_802241D0
+
+.global CMCEffUpBlue_hierarchy
+CMCEffUpBlue_hierarchy:
+	.4byte __RTTI__CMCEffStart
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CMCEffUpRed
+__vt__CMCEffUpRed:
+	.4byte __RTTI__CMCEffUpRed
+	.4byte 0
+	.4byte func_80223FCC
+	.4byte func_8022400C
+	.4byte func_8022409C
+
+.global CMCEffUpRed_hierarchy
+CMCEffUpRed_hierarchy:
+	.4byte __RTTI__CMCEffStart
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CMCEffStart
+__vt__CMCEffStart:
+	.4byte __RTTI__CMCEffStart
+	.4byte 0
+	.4byte func_80223D70
+	.4byte func_80223DB0
+	.4byte func_80223F24
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMCEffCylinder
+__RTTI__CMCEffCylinder:
+	.4byte CMCEffCylinder_typestr
+	.4byte 0
+
+.global __RTTI__CMCEffDivide
+__RTTI__CMCEffDivide:
+	.4byte CMCEffDivide_typestr
+	.4byte CMCEffDivide_hierarchy
+
+.global __RTTI__CMCEffUpRank
+__RTTI__CMCEffUpRank:
+	.4byte CMCEffUpRank_typestr
+	.4byte CMCEffUpRank_hierarchy
+
+.global __RTTI__CMCEffCrystal
+__RTTI__CMCEffCrystal:
+	.4byte CMCEffCrystal_typestr
+	.4byte 0
+
+.global __RTTI__CMCEffFailure
+__RTTI__CMCEffFailure:
+	.4byte CMCEffFailure_typestr
+	.4byte CMCEffFailure_hierarchy
+
+.global __RTTI__CMCEffSuccess
+__RTTI__CMCEffSuccess:
+	.4byte CMCEffSuccess_typestr
+	.4byte 0
+
+.global __RTTI__CMCEffUpPrm
+__RTTI__CMCEffUpPrm:
+	.4byte CMCEffUpPrm_typestr
+	.4byte 0
+
+.global __RTTI__CMCEffUpGreen
+__RTTI__CMCEffUpGreen:
+	.4byte CMCEffUpGreen_typestr
+	.4byte CMCEffUpGreen_hierarchy
+
+.global __RTTI__CMCEffUpBlue
+__RTTI__CMCEffUpBlue:
+	.4byte CMCEffUpBlue_typestr
+	.4byte CMCEffUpBlue_hierarchy
+
+.global __RTTI__CMCEffUpRed
+__RTTI__CMCEffUpRed:
+	.4byte CMCEffUpRed_typestr
+	.4byte CMCEffUpRed_hierarchy
+
+.global __RTTI__CMCEffStart
+__RTTI__CMCEffStart:
+	.4byte CMCEffStart_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AE10
+lbl_8066AE10:
+	# ROM: 0x574C70
+	.4byte 0
+
+
+.global lbl_8066AE14
+lbl_8066AE14:
+	# ROM: 0x574C74
+	.float 1.0
+
+
+.global lbl_8066AE18
+lbl_8066AE18:
+	# ROM: 0x574C78
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066AE20
+lbl_8066AE20:
+	# ROM: 0x574C80
+	.4byte 0x40A00000
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80014F8C
 lbl_80014F8C:
@@ -211,7 +538,7 @@ lbl_80014FAC:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80223D70
 	.4byte 0x00000040

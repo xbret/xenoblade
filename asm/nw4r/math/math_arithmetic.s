@@ -683,3 +683,47 @@ lbl_8056D6B8:
 	.4byte 0x3B00200B
 	.4byte 0x3F317218
 	.4byte 0x3AFFC014
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C600
+lbl_8066C600:
+	# ROM: 0x576460
+	.4byte 0x3FB8AA3B
+
+
+.global lbl_8066C604
+lbl_8066C604:
+	# ROM: 0x576464
+	.4byte 0x3F317218
+
+
+.global lbl_8066C608
+lbl_8066C608:
+	# ROM: 0x576468
+	.4byte 0x41B8AA3B
+
+
+.global lbl_8066C60C
+lbl_8066C60C:
+	# ROM: 0x57646C
+	.4byte 0x43800000
+
+
+.global lbl_8066C610
+lbl_8066C610:
+	# ROM: 0x576470
+	.float 1.0
+
+
+.global lbl_8066C614
+lbl_8066C614:
+	# ROM: 0x576474
+	.float 0.5
+
+
+.global lbl_8066C618
+lbl_8066C618:
+	# ROM: 0x576478
+	.4byte 0x40400000
+	.4byte 0

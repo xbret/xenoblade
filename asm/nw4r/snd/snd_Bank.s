@@ -173,3 +173,37 @@ NoteOn__Q44nw4r3snd6detail4BankCFRCQ44nw4r3snd6detail10NoteOnInfo:
 /* 804119E4 003DAFA4  7C 08 03 A6 */	mtlr r0
 /* 804119E8 003DAFA8  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 804119EC 003DAFAC  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C6B8
+lbl_8066C6B8:
+	# ROM: 0x576518
+	.4byte 0x42FE0000
+
+
+.global lbl_8066C6BC
+lbl_8066C6BC:
+	# ROM: 0x57651C
+	.4byte 0x427C0000
+
+
+.global lbl_8066C6C0
+lbl_8066C6C0:
+	# ROM: 0x576520
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066C6C8
+lbl_8066C6C8:
+	# ROM: 0x576528
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066C6D0
+lbl_8066C6D0:
+	# ROM: 0x576530
+	.4byte 0x43300000
+	.4byte 0

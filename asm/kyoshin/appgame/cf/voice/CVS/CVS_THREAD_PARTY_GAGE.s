@@ -403,7 +403,67 @@ func_802A8628:
 /* 802A86C4 00271C84  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A86C8 00271C88  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CVS_THREAD_PARTY_GAGE_typestr
+cf_CVS_THREAD_PARTY_GAGE_typestr:
+	.asciz "cf::CVS_THREAD_PARTY_GAGE"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053D3D8
+lbl_8053D3D8:
+	# ROM: 0x5394D8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A82D4
+
+.global lbl_8053D3E4
+lbl_8053D3E4:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A83CC
+
+.global lbl_8053D3F0
+lbl_8053D3F0:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A8560
+
+
+.global __vt__cf_CVS_THREAD_PARTY_GAGE
+__vt__cf_CVS_THREAD_PARTY_GAGE:
+	.4byte __RTTI__cf_CVS_THREAD_PARTY_GAGE
+	.4byte 0
+	.4byte func_802A3B50
+	.4byte func_802A85A8
+	.4byte func_802A8620
+	.4byte func_802A1EA0
+	.4byte func_802A3740
+
+.global cf_CVS_THREAD_PARTY_GAGE_hierarchy
+cf_CVS_THREAD_PARTY_GAGE_hierarchy:
+	.4byte __RTTI__cf_CVS_THREAD
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665610
+lbl_80665610:
+	# ROM: 0x5711F0
+	.4byte 0x00000659
+	.4byte 0x0000065A
+
+.global __RTTI__cf_CVS_THREAD_PARTY_GAGE
+__RTTI__cf_CVS_THREAD_PARTY_GAGE:
+	.4byte cf_CVS_THREAD_PARTY_GAGE_typestr
+	.4byte cf_CVS_THREAD_PARTY_GAGE_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001ADE8
 lbl_8001ADE8:
@@ -445,7 +505,7 @@ lbl_8001AE34:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A8174
 	.4byte 0x00000160

@@ -31,3 +31,11 @@ LytInit__Q24nw4r3lytFv:
 .global lbl_8056D188
 lbl_8056D188:
 	.asciz "<< NW4R    - LYT \tfinal   build: Aug 21 2008 05:21:58 (0x4199_60831) >>"
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665DE8
+lbl_80665DE8:
+	# ROM: 0x5719C8
+	.4byte lbl_8056D188
+	.4byte 0

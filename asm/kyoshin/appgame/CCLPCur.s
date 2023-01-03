@@ -1608,7 +1608,38 @@ func_802545C0:
 /* 80254718 0021DCD8  41 80 FF 60 */	blt .L_80254678
 /* 8025471C 0021DCDC  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053AAC8
+lbl_8053AAC8:
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253C48
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253C48
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253C48
+	.4byte switch_80253BD0
+	.4byte switch_80253C48
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+	.4byte switch_80253BD0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80016D78
 lbl_80016D78:
@@ -1716,7 +1747,7 @@ lbl_80016E18:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802531C4
 	.4byte 0x00000040

@@ -1211,3 +1211,27 @@ lbl_8051C590:
 	.asciz "1071301:SVM_ExecSvrFuncId:illegal id"
 	.asciz "1071302:SVM_ExecSvrFuncId:illegal svtype"
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805F5D30
+lbl_805F5D30:
+	.skip 0x10
+.global lbl_805F5D40
+lbl_805F5D40:
+	.skip 0x8
+.global lbl_805F5D48
+lbl_805F5D48:
+	.skip 0x8
+.global lbl_805F5D50
+lbl_805F5D50:
+	.skip 0x80
+.global lbl_805F5DD0
+lbl_805F5DD0:
+	.skip 0x248
+.global lbl_805F6018
+lbl_805F6018:
+	.skip 0x98
+.global lbl_805F60B0
+lbl_805F60B0:
+	.skip 0x8

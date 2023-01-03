@@ -868,7 +868,117 @@ func_802A6958:
 /* 802A6AA0 00270060  38 21 00 30 */	addi r1, r1, 0x30
 /* 802A6AA4 00270064  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CVS_THREAD_EHP_typestr
+cf_CVS_THREAD_EHP_typestr:
+	.asciz "cf::CVS_THREAD_EHP"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053D248
+lbl_8053D248:
+	# ROM: 0x539348
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A617C
+
+.global lbl_8053D254
+lbl_8053D254:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A6408
+
+.global lbl_8053D260
+lbl_8053D260:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A6650
+
+.global lbl_8053D26C
+lbl_8053D26C:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A658C
+
+
+.global lbl_8053D278
+lbl_8053D278:
+	# ROM: 0x539378
+	.4byte switch_802A652C
+	.4byte switch_802A64B8
+	.4byte switch_802A64C0
+	.4byte switch_802A64C8
+	.4byte switch_802A64D0
+	.4byte switch_802A64D8
+	.4byte switch_802A64E0
+	.4byte switch_802A650C
+	.4byte switch_802A6514
+	.4byte switch_802A651C
+	.4byte switch_802A6524
+
+.global lbl_8053D2A4
+lbl_8053D2A4:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A6408
+
+.global lbl_8053D2B0
+lbl_8053D2B0:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A6718
+
+
+.global __vt__cf_CVS_THREAD_EHP
+__vt__cf_CVS_THREAD_EHP:
+	.4byte __RTTI__cf_CVS_THREAD_EHP
+	.4byte 0
+	.4byte func_802A3B50
+	.4byte func_802A6760
+	.4byte func_802A6818
+	.4byte func_802A1EA0
+	.4byte func_802A3740
+
+.global cf_CVS_THREAD_EHP_hierarchy
+cf_CVS_THREAD_EHP_hierarchy:
+	.4byte __RTTI__cf_CVS_THREAD
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CVS_THREAD_EHP
+__RTTI__cf_CVS_THREAD_EHP:
+	.4byte cf_CVS_THREAD_EHP_typestr
+	.4byte cf_CVS_THREAD_EHP_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066B538
+lbl_8066B538:
+	# ROM: 0x575398
+	.4byte 0
+
+
+.global lbl_8066B53C
+lbl_8066B53C:
+	# ROM: 0x57539C
+	.4byte 0x3E99999A
+
+
+.global lbl_8066B540
+lbl_8066B540:
+	# ROM: 0x5753A0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001AC30
 lbl_8001AC30:
@@ -925,7 +1035,7 @@ lbl_8001AC94:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A5ED4
 	.4byte 0x000002A8

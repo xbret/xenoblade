@@ -94,7 +94,109 @@ func_801A049C:
 /* 801A049C 00169A5C  38 63 FF A4 */	addi r3, r3, -92
 /* 801A04A0 00169A60  4B FF F9 B0 */	b func_8019FE50
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuBattleMode_typestr
+CMenuBattleMode_typestr:
+	.asciz "CMenuBattleMode"
+
+
+.global lbl_804FF5A8
+lbl_804FF5A8:
+	.asciz "CMenuBattleMode"
+	.asciz "mf71_battle40_mark.brlyt"
+	.asciz "mf71_battle40_mark_in.brlan"
+	.asciz "mf71_battle40_mark_roop.brlan"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuBattleMode
+__vt__CMenuBattleMode:
+	.4byte __RTTI__CMenuBattleMode
+	.4byte 0
+	.4byte func_8019FE50
+	.4byte CChildListNode_Reset
+	.4byte func_8019FEC4
+	.4byte func_8019FFF8
+	.4byte func_801A0078
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuBattleMode
+	.4byte 0xFFFFFFA8
+	.4byte func_801A048C
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuBattleMode
+	.4byte 0xFFFFFFA4
+	.4byte func_801A049C
+	.4byte func_801A0494
+	.4byte func_801A02C0
+
+.global CMenuBattleMode_hierarchy
+CMenuBattleMode_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000005C
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuBattleMode
+__RTTI__CMenuBattleMode:
+	.4byte CMenuBattleMode_typestr
+	.4byte CMenuBattleMode_hierarchy
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666C08
+lbl_80666C08:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000F600
 lbl_8000F600:
@@ -114,7 +216,7 @@ lbl_8000F600:
 
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_801A0374
 	.4byte 0x00000118

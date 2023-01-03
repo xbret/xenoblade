@@ -267,7 +267,120 @@ func_80295880:
 /* 80295880 0025EE40  38 63 FF A8 */	addi r3, r3, -88
 /* 80295884 0025EE44  4B FF FD CC */	b func_80295650
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CTaskGameEvt_typestr
+CTaskGameEvt_typestr:
+	.asciz "CTaskGameEvt"
+	.balign 4
+
+.global CTTask_CTaskGameEvt_typestr
+CTTask_CTaskGameEvt_typestr:
+	.asciz "CTTask<CTaskGameEvt>"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CTaskGameEvt
+__vt__CTaskGameEvt:
+	.4byte __RTTI__CTaskGameEvt
+	.4byte 0
+	.4byte func_80295650
+	.4byte CChildListNode_Reset
+	.4byte func_802956AC
+	.4byte func_802956CC
+	.4byte func_802956E4
+	.4byte func_802957D4
+	.4byte func_80043F20
+	.4byte __RTTI__CTaskGameEvt
+	.4byte 0xFFFFFFAC
+	.4byte func_80295870
+	.4byte func_80039E28
+	.4byte func_80295868
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CTaskGameEvt
+	.4byte 0xFFFFFFA8
+	.4byte func_80295880
+	.4byte func_80295878
+	.4byte func_80295760
+	.4byte func_80295764
+
+.global CTaskGameEvt_hierarchy
+CTaskGameEvt_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_CTaskGameEvt
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_CTaskGameEvt
+__vt__CTTask_CTaskGameEvt:
+	.4byte __RTTI__CTTask_CTaskGameEvt
+	.4byte 0
+	.4byte func_80295600
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_802957D8
+	.4byte func_80295820
+	.4byte func_80043F20
+
+.global CTTask_CTaskGameEvt_hierarchy
+CTTask_CTaskGameEvt_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CTaskGameEvt
+__RTTI__CTaskGameEvt:
+	.4byte CTaskGameEvt_typestr
+	.4byte CTaskGameEvt_hierarchy
+
+.global __RTTI__CTTask_CTaskGameEvt
+__RTTI__CTTask_CTaskGameEvt:
+	.4byte CTTask_CTaskGameEvt_typestr
+	.4byte CTTask_CTaskGameEvt_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80019B50
 lbl_80019B50:
@@ -313,7 +426,7 @@ lbl_80019BA0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80295564
 	.4byte 0x0000009C

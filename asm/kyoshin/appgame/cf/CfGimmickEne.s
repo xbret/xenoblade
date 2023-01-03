@@ -1276,7 +1276,179 @@ func_8026F320:
 /* 8026F374 00238934  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026F378 00238938  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfGimmickEne_typestr
+cf_CfGimmickEne_typestr:
+	.asciz "cf::CfGimmickEne"
+	.balign 4
+
+
+.global lbl_80509D34
+lbl_80509D34:
+	.asciz "eneID"
+	.asciz "artID"
+	.asciz "state"
+	.asciz "EFF"
+	.asciz "SE"
+	.asciz "envSE"
+	.asciz "wet"
+	.asciz "hour"
+	.asciz "spWF"
+	.asciz "startF"
+	.asciz "watiF"
+	.asciz "endF"
+	.4byte 0
+	.byte 0x00
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053B1D8
+lbl_8053B1D8:
+	# ROM: 0x5372D8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8026EA20
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8026EBA8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8026EC80
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8026ECEC
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8026F254
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8026F31C
+
+
+.global lbl_8053B220
+lbl_8053B220:
+	# ROM: 0x537320
+	.4byte lbl_8066B1F0
+	.4byte lbl_8066B1F8
+	.4byte lbl_8066B200
+	.4byte lbl_8066B208
+
+
+.global __vt__cf_CfGimmickEne
+__vt__cf_CfGimmickEne:
+	.4byte __RTTI__cf_CfGimmickEne
+	.4byte 0
+	.4byte func_8026E4C4
+	.4byte func_8020896C
+	.4byte func_8026E584
+	.4byte func_801F4B64
+	.4byte func_801F4BF8
+	.4byte func_801F4C8C
+	.4byte func_8026E5BC
+
+.global cf_CfGimmickEne_hierarchy
+cf_CfGimmickEne_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0
+	.4byte __RTTI__cf_CfGimmick
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806652A8
+lbl_806652A8:
+	# ROM: 0x570E88
+	.4byte lbl_8066B20C
+	.4byte 0
+
+.global __RTTI__cf_CfGimmickEne
+__RTTI__cf_CfGimmickEne:
+	.4byte cf_CfGimmickEne_typestr
+	.4byte cf_CfGimmickEne_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B1F0
+lbl_8066B1F0:
+	.asciz "aLOD1"
+	.balign 4
+
+.global lbl_8066B1F8
+lbl_8066B1F8:
+	.asciz "aType"
+	.balign 4
+
+.global lbl_8066B200
+lbl_8066B200:
+	.asciz "aSpd"
+	.balign 4
+
+.global lbl_8066B208
+lbl_8066B208:
+	.4byte 0x61434C00
+
+.global lbl_8066B20C
+lbl_8066B20C:
+	.4byte 0x636C3100
+
+
+.global lbl_8066B210
+lbl_8066B210:
+	# ROM: 0x575070
+	.float 1.0
+
+
+.global lbl_8066B214
+lbl_8066B214:
+	# ROM: 0x575074
+	.4byte 0
+
+
+.global lbl_8066B218
+lbl_8066B218:
+	# ROM: 0x575078
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_8066B21C
+lbl_8066B21C:
+	# ROM: 0x57507C
+	.4byte 0xC2C80000
+
+
+.global lbl_8066B220
+lbl_8066B220:
+	# ROM: 0x575080
+	.float 100.0
+
+
+.global lbl_8066B224
+lbl_8066B224:
+	# ROM: 0x575084
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066B228
+lbl_8066B228:
+	# ROM: 0x575088
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066B230
+lbl_8066B230:
+	# ROM: 0x575090
+	.4byte 0x437F0000
+
+
+.global lbl_8066B234
+lbl_8066B234:
+	# ROM: 0x575094
+	.4byte 0x3DCCCCCD
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80017D0C
 lbl_80017D0C:
@@ -1354,7 +1526,7 @@ lbl_80017D94:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8026E170
 	.4byte 0x00000354

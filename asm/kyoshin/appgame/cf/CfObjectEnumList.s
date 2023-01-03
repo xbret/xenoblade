@@ -10386,7 +10386,198 @@ func_800FD774:
 /* 800FDB44 000C7104  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 800FDB48 000C7108  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfObjEnumList_typestr
+cf_CfObjEnumList_typestr:
+	.asciz "cf::CfObjEnumList"
+	.balign 4
+
+.global cf_CfObjEnumList_OBJ_LIST_typestr
+cf_CfObjEnumList_OBJ_LIST_typestr:
+	.asciz "cf::CfObjEnumList::OBJ_LIST"
+
+.global QSort_cf_CfObjEnumList_sObjInfo_float_typestr
+QSort_cf_CfObjEnumList_sObjInfo_float_typestr:
+	.asciz "QSort<cf::CfObjEnumList::sObjInfo *, float>"
+
+.global fixvector_cf_CfObjEnumList_sObjInfo_384_typestr
+fixvector_cf_CfObjEnumList_sObjInfo_384_typestr:
+	.asciz "fixvector<cf::CfObjEnumList::sObjInfo *, 384>"
+	.balign 4
+
+.global lbl_804F8544
+lbl_804F8544:
+	.asciz "move"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CfObjEnumList
+__vt__cf_CfObjEnumList:
+	.4byte __RTTI__cf_CfObjEnumList
+	.4byte 0
+	.4byte func_800408E8
+
+.global cf_CfObjEnumList_hierarchy
+cf_CfObjEnumList_hierarchy:
+	.4byte __RTTI___reslist_base_cf_CfObject
+	.4byte 0
+	.4byte __RTTI__reslist_cf_CfObject
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8052F570
+lbl_8052F570:
+	# ROM: 0x52B670
+	.4byte __RTTI__cf_CfObjEnumList_OBJ_LIST
+	.4byte 0
+	.4byte __RTTI__cf_CfObjEnumList_OBJ_LIST
+	.4byte 0xFFFFF9FC
+	.4byte func_800FD698
+	.4byte func_800FD6A0
+	.4byte func_800FD68C
+	.4byte func_800F4798
+
+.global cf_CfObjEnumList_OBJ_LIST_hierarchy
+cf_CfObjEnumList_OBJ_LIST_hierarchy:
+	.4byte __RTTI__QSort_cf_CfObjEnumList_sObjInfo_float
+	.4byte 0x00000604
+	.4byte __RTTI__fixvector_cf_CfObjEnumList_sObjInfo_384
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CfObjEnumList
+__RTTI__cf_CfObjEnumList:
+	.4byte cf_CfObjEnumList_typestr
+	.4byte cf_CfObjEnumList_hierarchy
+
+.global __RTTI__cf_CfObjEnumList_OBJ_LIST
+__RTTI__cf_CfObjEnumList_OBJ_LIST:
+	.4byte cf_CfObjEnumList_OBJ_LIST_typestr
+	.4byte cf_CfObjEnumList_OBJ_LIST_hierarchy
+
+.global __RTTI__QSort_cf_CfObjEnumList_sObjInfo_float
+__RTTI__QSort_cf_CfObjEnumList_sObjInfo_float:
+	.4byte QSort_cf_CfObjEnumList_sObjInfo_float_typestr
+	.4byte 0
+
+.global __RTTI__fixvector_cf_CfObjEnumList_sObjInfo_384
+__RTTI__fixvector_cf_CfObjEnumList_sObjInfo_384:
+	.4byte fixvector_cf_CfObjEnumList_sObjInfo_384_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669780
+lbl_80669780:
+	# ROM: 0x5735E0
+	.4byte 0
+
+
+.global lbl_80669784
+lbl_80669784:
+	# ROM: 0x5735E4
+	.float 1.0
+
+
+.global lbl_80669788
+lbl_80669788:
+	# ROM: 0x5735E8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80669790
+lbl_80669790:
+	# ROM: 0x5735F0
+	.float 0.2
+
+
+.global lbl_80669794
+lbl_80669794:
+	# ROM: 0x5735F4
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_80669798
+lbl_80669798:
+	# ROM: 0x5735F8
+	.4byte 0x3CC90FDB
+
+
+.global lbl_8066979C
+lbl_8066979C:
+	# ROM: 0x5735FC
+	.float 0.5
+
+
+.global lbl_806697A0
+lbl_806697A0:
+	# ROM: 0x573600
+	.4byte 0x4222F983
+	.4byte 0
+
+
+.global lbl_806697A8
+lbl_806697A8:
+	# ROM: 0x573608
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_806697B0
+lbl_806697B0:
+	# ROM: 0x573610
+	.4byte 0x3FF00000
+	.4byte 0
+
+
+.global lbl_806697B8
+lbl_806697B8:
+	# ROM: 0x573618
+	.float -1.0
+	.4byte 0
+
+
+.global lbl_806697C0
+lbl_806697C0:
+	# ROM: 0x573620
+	.4byte 0
+
+
+.global lbl_806697C4
+lbl_806697C4:
+	# ROM: 0x573624
+	.4byte 0x3CC90FDB
+
+
+.global lbl_806697C8
+lbl_806697C8:
+	# ROM: 0x573628
+	.float 0.5
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+
+.global lbl_80577228
+lbl_80577228:
+	.skip 0x30
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666800
+lbl_80666800:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000ABE0
 lbl_8000ABE0:
@@ -10554,7 +10745,7 @@ lbl_8000ACEC:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_800F47C8
 	.4byte 0x00000230

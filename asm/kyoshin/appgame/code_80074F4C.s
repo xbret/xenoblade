@@ -7802,7 +7802,432 @@ sinit_8007BE74:
 .4byte sinit_8007BE74
 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_804F6E40
+lbl_804F6E40:
+	.asciz "camType"
+	.asciz "enemy_size"
+	.asciz "range"
+	.asciz "cammove"
+	.asciz "camATR"
+	.asciz "coltype"
+	.asciz "time"
+	.asciz "path"
+	.asciz "s_ofspostype"
+	.asciz "s_ofslooktype"
+	.asciz "e_ofspostype"
+	.asciz "e_ofslooktype"
+	.asciz "s_fov"
+	.asciz "e_fov"
+	.asciz "s_posz"
+	.asciz "s_posy"
+	.asciz "s_posx"
+	.asciz "s_lookz"
+	.asciz "s_looky"
+	.asciz "s_lookx"
+	.asciz "e_posz"
+	.asciz "e_posy"
+	.asciz "e_posx"
+	.asciz "e_lookz"
+	.asciz "e_looky"
+	.asciz "e_lookx"
+	.asciz "shakePOW"
+	.asciz "shakeStart"
+	.asciz "shakeTIME"
+	.asciz "pos1X"
+	.asciz "pos1Y"
+	.asciz "pos1Z"
+	.asciz "look1X"
+	.asciz "look1Y"
+	.asciz "look1Z"
+	.asciz "shake1Type"
+	.asciz "shake1Stime"
+	.asciz "shake1Etime"
+	.asciz "collision"
+	.asciz "startCutChange"
+	.asciz "startFrame"
+	.asciz "pos%dX"
+	.asciz "pos%dY"
+	.asciz "pos%dZ"
+	.asciz "look%dX"
+	.asciz "look%dY"
+	.asciz "look%dZ"
+	.asciz "fov%d"
+	.asciz "cam%dTime"
+	.asciz "shake%dType"
+	.asciz "shake%dStime"
+	.asciz "shake%dEtime"
+	.asciz "endCutChange"
+	.asciz "resetFrame"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8052AB98
+lbl_8052AB98:
+	# ROM: 0x526C98
+	.float 1.0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x40400000
+	.float 0.5
+	.float 0.5
+	.float 1.0
+	.float 1.0
+	.float 1.0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x40400000
+	.float 0.5
+	.float 0.5
+	.float 1.0
+	.float 1.0
+	.float 1.0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x40400000
+	.float 0.5
+	.float 0.5
+	.float 1.0
+	.float 1.0
+	.float 1.0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x40400000
+	.float 0.5
+	.float 0.5
+	.float 1.0
+	.float 1.0
+	.float 1.0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x40800000
+	.float 0.5
+	.float 0.5
+	.float 1.0
+	.float 1.0
+	.float 1.0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x40800000
+	.float 0.5
+	.float 0.5
+	.float 1.0
+	.float 1.0
+	.float 1.0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x40400000
+	.float 0.5
+	.float 1.0
+	.float 0.25
+	.float 0.5
+	.float 1.0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x40400000
+	.float 0.2
+	.4byte 0x3F4CCCCD
+	.float 0.5
+	.float 0.5
+	.float 1.0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x40400000
+	.float 1.0
+	.4byte 0x40800000
+	.float 0.2
+	.asciz "?333@"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x40000000
+	.4byte 0
+	.4byte 0x40400000
+	.4byte 0x3E99999A
+	.4byte 0x3E99999A
+	.4byte 0x40000000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x40000000
+	.4byte 0
+	.4byte 0x40400000
+	.4byte 0x3E99999A
+	.4byte 0x3E99999A
+	.4byte 0x40000000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.float 1.0
+	.4byte 0
+	.4byte 0x40800000
+	.float 1.0
+	.4byte 0x3D8F5C29
+
+
+.global lbl_8052AE08
+lbl_8052AE08:
+	.asciz "cam_name1"
+	.balign 4
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806644B0
+lbl_806644B0:
+	.asciz "rate1"
+	.balign 4
+
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_80668CA0
+lbl_80668CA0:
+	# ROM: 0x572B00
+	.float 0.5
+
+
+.global lbl_80668CA4
+lbl_80668CA4:
+	# ROM: 0x572B04
+	.4byte 0
+
+
+.global lbl_80668CA8
+lbl_80668CA8:
+	# ROM: 0x572B08
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80668CB0
+lbl_80668CB0:
+	# ROM: 0x572B10
+	.float 1.0
+
+
+.global lbl_80668CB4
+lbl_80668CB4:
+	# ROM: 0x572B14
+	.4byte 0x3A83126F
+
+
+.global lbl_80668CB8
+lbl_80668CB8:
+	# ROM: 0x572B18
+	.4byte 0x4222F983
+	.4byte 0
+
+
+.global lbl_80668CC0
+lbl_80668CC0:
+	# ROM: 0x572B20
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80668CC8
+lbl_80668CC8:
+	# ROM: 0x572B28
+	.4byte 0x42200000
+
+
+.global lbl_80668CCC
+lbl_80668CCC:
+	# ROM: 0x572B2C
+	.float 0.25
+
+
+.global lbl_80668CD0
+lbl_80668CD0:
+	# ROM: 0x572B30
+	.float 1.5
+
+
+.global lbl_80668CD4
+lbl_80668CD4:
+	# ROM: 0x572B34
+	.4byte 0x3F4CCCCD
+
+
+.global lbl_80668CD8
+lbl_80668CD8:
+	# ROM: 0x572B38
+	.4byte 0x3E99999A
+
+
+.global lbl_80668CDC
+lbl_80668CDC:
+	# ROM: 0x572B3C
+	.4byte 0x3CC90FDB
+
+
+.global lbl_80668CE0
+lbl_80668CE0:
+	# ROM: 0x572B40
+	.4byte 0x3C23D70A
+
+
+.global lbl_80668CE4
+lbl_80668CE4:
+	# ROM: 0x572B44
+	.4byte 0x40800000
+
+
+.global lbl_80668CE8
+lbl_80668CE8:
+	# ROM: 0x572B48
+	.4byte 0x41F00000
+
+
+.global lbl_80668CEC
+lbl_80668CEC:
+	# ROM: 0x572B4C
+	.float 0.2
+
+
+.global lbl_80668CF0
+lbl_80668CF0:
+	# ROM: 0x572B50
+	.float -1.0
+
+
+.global lbl_80668CF4
+lbl_80668CF4:
+	# ROM: 0x572B54
+	.4byte 0x40A00000
+
+
+.global lbl_80668CF8
+lbl_80668CF8:
+	# ROM: 0x572B58
+	.float 10.0
+
+
+.global lbl_80668CFC
+lbl_80668CFC:
+	# ROM: 0x572B5C
+	.4byte 0x3CA3D70A
+
+
+.global lbl_80668D00
+lbl_80668D00:
+	# ROM: 0x572B60
+	.4byte 0x3CF5C28F
+
+
+.global lbl_80668D04
+lbl_80668D04:
+	# ROM: 0x572B64
+	.4byte 0x3D4CCCCD
+
+
+.global lbl_80668D08
+lbl_80668D08:
+	# ROM: 0x572B68
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_80668D0C
+lbl_80668D0C:
+	# ROM: 0x572B6C
+	.4byte 0x3DA3D70A
+
+
+.global lbl_80668D10
+lbl_80668D10:
+	# ROM: 0x572B70
+	.4byte 0x3E051EB8
+
+
+.global lbl_80668D14
+lbl_80668D14:
+	# ROM: 0x572B74
+	.4byte 0x3EE66666
+
+
+.global lbl_80668D18
+lbl_80668D18:
+	# ROM: 0x572B78
+	.4byte 0x3F19999A
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80574488
+lbl_80574488:
+	.skip 0x50
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806666F0
+lbl_806666F0:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000836C
 lbl_8000836C:
@@ -7914,7 +8339,7 @@ lbl_80008414:
 	.4byte 0x000A0000
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80074F4C
 	.4byte 0x0000034C

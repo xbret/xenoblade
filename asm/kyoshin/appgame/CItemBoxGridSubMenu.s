@@ -705,7 +705,148 @@ func_80208890:
 /* 802088D8 001D1E98  38 21 00 10 */	addi r1, r1, 0x10
 /* 802088DC 001D1E9C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CItemBoxGridSubMenu_typestr
+CItemBoxGridSubMenu_typestr:
+	.asciz "CItemBoxGridSubMenu"
+
+
+.global lbl_80503BDC
+lbl_80503BDC:
+	.asciz "mf70_cf60_syswin07.brlyt"
+	.asciz "mf70_cf60_syswin07_in.brlan"
+	.asciz "txt_point"
+	.asciz "nul_proportion"
+	.asciz "txt_slct01"
+	.asciz "txt_slct02"
+	.asciz "txt_slct03"
+	.asciz "nul_coll"
+	.asciz "MNU_kyeassign"
+	.asciz "help"
+	.asciz "txt_close01"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "pic_btn01"
+	.balign 4
+	.asciz "MNU_item"
+	.asciz "name"
+	.asciz "win_slct"
+	.asciz "nul_close01"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CItemBoxGridSubMenu
+__vt__CItemBoxGridSubMenu:
+	.4byte __RTTI__CItemBoxGridSubMenu
+	.4byte 0
+	.4byte func_80207F88
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CItemBoxGridSubMenu_hierarchy
+CItemBoxGridSubMenu_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CItemBoxGridSubMenu
+__RTTI__CItemBoxGridSubMenu:
+	.4byte CItemBoxGridSubMenu_typestr
+	.4byte CItemBoxGridSubMenu_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066ABB8
+lbl_8066ABB8:
+	# ROM: 0x574A18
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066ABC0
+lbl_8066ABC0:
+	# ROM: 0x574A20
+	.4byte 0x42A00000
+
+
+.global lbl_8066ABC4
+lbl_8066ABC4:
+	# ROM: 0x574A24
+	.4byte 0
+
+
+.global lbl_8066ABC8
+lbl_8066ABC8:
+	# ROM: 0x574A28
+	.4byte 0x40400000
+
+
+.global lbl_8066ABCC
+lbl_8066ABCC:
+	# ROM: 0x574A2C
+	.float 100.0
+
+
+.global lbl_8066ABD0
+lbl_8066ABD0:
+	# ROM: 0x574A30
+	.4byte 0xC1880000
+
+
+.global lbl_8066ABD4
+lbl_8066ABD4:
+	# ROM: 0x574A34
+	.4byte 0x42F00000
+
+
+.global lbl_8066ABD8
+lbl_8066ABD8:
+	# ROM: 0x574A38
+	.4byte 0xC2140000
+
+
+.global lbl_8066ABDC
+lbl_8066ABDC:
+	# ROM: 0x574A3C
+	.float 1.0
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80012EC0
 lbl_80012EC0:
@@ -748,7 +889,7 @@ lbl_80012EF8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80207F88
 	.4byte 0x00000040

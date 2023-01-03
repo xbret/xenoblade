@@ -1355,7 +1355,110 @@ func_8018C8F4:
 /* 8018C9BC 00155F7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8018C9C0 00155F80  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuShopBuy_typestr
+CMenuShopBuy_typestr:
+	.asciz "CMenuShopBuy"
+	.balign 4
+
+
+.global lbl_804FF348
+lbl_804FF348:
+	.asciz "MNU_shop"
+	.asciz "name"
+	.2byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuShopBuy
+__vt__CMenuShopBuy:
+	.4byte __RTTI__CMenuShopBuy
+	.4byte 0
+	.4byte func_8018B798
+	.4byte CChildListNode_Reset
+	.4byte func_8018B810
+	.4byte func_8018BF40
+	.4byte func_8018BFAC
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuShopBuy
+	.4byte 0xFFFFFFA8
+	.4byte func_8018C5F4
+	.4byte func_8018C5EC
+	.4byte func_8018C060
+
+.global CMenuShopBuy_hierarchy
+CMenuShopBuy_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuShopBuy
+__RTTI__CMenuShopBuy:
+	.4byte CMenuShopBuy_typestr
+	.4byte CMenuShopBuy_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A2E0
+lbl_8066A2E0:
+	# ROM: 0x574140
+	.4byte 0
+
+
+.global lbl_8066A2E4
+lbl_8066A2E4:
+	# ROM: 0x574144
+	.float 1.0
+
+
+.global lbl_8066A2E8
+lbl_8066A2E8:
+	# ROM: 0x574148
+	.float 10.0
+	.4byte 0
+
+
+.global lbl_8066A2F0
+lbl_8066A2F0:
+	# ROM: 0x574150
+	.4byte 0
+
+
+.global lbl_8066A2F4
+lbl_8066A2F4:
+	# ROM: 0x574154
+	.float 1.0
+
+
+.global lbl_8066A2F8
+lbl_8066A2F8:
+	# ROM: 0x574158
+	.4byte 0x3F19999A
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666BE8
+lbl_80666BE8:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000EEAC
 lbl_8000EEAC:
@@ -1477,7 +1580,7 @@ lbl_8000EFD8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8018B6B8
 	.4byte 0x000000E0

@@ -3149,7 +3149,171 @@ func_80299B38:
 /* 8029A0B0 00263670  38 21 00 D0 */	addi r1, r1, 0xd0
 /* 8029A0B4 00263674  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMCGetItemBox_typestr
+CMCGetItemBox_typestr:
+	.asciz "CMCGetItemBox"
+	.balign 4
+
+
+.global lbl_8050B5C4
+lbl_8050B5C4:
+	.asciz "%s"
+	.asciz "MNU_item"
+	.asciz "name"
+	.asciz "%s%s"
+	.asciz "comment"
+	.asciz "%d"
+	.asciz "rvs_type"
+	.asciz "rvs_caption"
+	.asciz "<col=red>%s<col=def2>"
+	.asciz "<col=red>%s%%<col=def2>"
+	.asciz "<col=red>%d%%<col=def2>"
+	.asciz "/menu/McGetItemBox.arc"
+	.asciz "/menu/tpl/ItemIcon.arc"
+	.asciz "common/jp/bdat_item.bin"
+	.asciz "common/jp/bdat_mes.bin"
+	.asciz "MNU_skill"
+	.asciz "help"
+	.asciz "atr_type"
+	.asciz "mf00_com00_dmy.tpl"
+	.asciz "icon_base"
+	.asciz "pic_btnbs%02d"
+	.asciz "icon"
+	.asciz "pic_icon%02d"
+	.asciz "txt_num%02d"
+	.byte 0x00
+	.asciz "txt_pg01"
+	.asciz "nul_bxbc_c"
+	.asciz "nul_bxbc_s"
+	.asciz "nul_pg"
+	.asciz "pic_pghole%02d"
+	.asciz "txt_pg00"
+	.asciz "pic_pghole_on"
+	.asciz "txt_name"
+	.asciz "txt_comment"
+	.asciz "nul_button00"
+	.asciz "nul_proportion"
+	.asciz "CMCGetItemBox"
+	.asciz "arc"
+	.asciz "mf10_cry01_box01.brlyt"
+	.asciz "mf10_cry01_box01_in.brlan"
+	.asciz "mf10_cry01_box01_info_in.brlan"
+	.asciz "txt_buyvalue02"
+	.asciz "MNU_sysmes"
+	.asciz "txt_button00"
+	.asciz "pic_pghole03"
+	.asciz "CMCGetItemBoxTex"
+	.asciz "MNU_item_mes_a"
+	.asciz "MNU_item_mes_b"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMCGetItemBox
+__vt__CMCGetItemBox:
+	.4byte __RTTI__CMCGetItemBox
+	.4byte 0
+	.4byte func_80297880
+	.4byte func_80039E28
+	.4byte func_80299B38
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CMCGetItemBox_hierarchy
+CMCGetItemBox_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMCGetItemBox
+__RTTI__CMCGetItemBox:
+	.4byte CMCGetItemBox_typestr
+	.4byte CMCGetItemBox_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B494
+lbl_8066B494:
+	# ROM: 0x5752F4
+	.float 0.25
+
+
+.global lbl_8066B498
+lbl_8066B498:
+	# ROM: 0x5752F8
+	.float 1.0
+
+
+.global lbl_8066B49C
+lbl_8066B49C:
+	# ROM: 0x5752FC
+	.4byte 0x41800000
+
+
+.global lbl_8066B4A0
+lbl_8066B4A0:
+	# ROM: 0x575300
+	.4byte 0xC2680000
+
+
+.global lbl_8066B4A4
+lbl_8066B4A4:
+	# ROM: 0x575304
+	.4byte 0xC24C0000
+
+
+.global lbl_8066B4A8
+lbl_8066B4A8:
+	# ROM: 0x575308
+	.4byte 0x43B98000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667308
+lbl_80667308:
+	.skip 0x4
+.global lbl_8066730C
+lbl_8066730C:
+	.skip 0x4
+.global lbl_80667310
+lbl_80667310:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80019C48
 lbl_80019C48:
@@ -3497,7 +3661,7 @@ lbl_80019FF8:
 	.4byte func_8045F8C8
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80297430
 	.4byte 0x00000450

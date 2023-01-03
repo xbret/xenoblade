@@ -1151,7 +1151,71 @@ func_8018B6B0:
 /* 8018B6B0 00154C70  38 63 FF A8 */	addi r3, r3, -88
 /* 8018B6B4 00154C74  4B FF F0 44 */	b func_8018A6F8
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuShopSell_typestr
+CMenuShopSell_typestr:
+	.asciz "CMenuShopSell"
+	.balign 4
+
+
+.global lbl_804FF328
+lbl_804FF328:
+	.asciz "MNU_shop"
+	.asciz "name"
+	.2byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuShopSell
+__vt__CMenuShopSell:
+	.4byte __RTTI__CMenuShopSell
+	.4byte 0
+	.4byte func_8018A6F8
+	.4byte CChildListNode_Reset
+	.4byte func_8018A770
+	.4byte func_8018B160
+	.4byte func_8018B1CC
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuShopSell
+	.4byte 0xFFFFFFA8
+	.4byte func_8018B6B0
+	.4byte func_8018B6A8
+	.4byte func_8018B280
+
+.global CMenuShopSell_hierarchy
+CMenuShopSell_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuShopSell
+__RTTI__CMenuShopSell:
+	.4byte CMenuShopSell_typestr
+	.4byte CMenuShopSell_hierarchy
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666BE0
+lbl_80666BE0:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000ED90
 lbl_8000ED90:
@@ -1258,7 +1322,7 @@ lbl_8000EEA4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8018A628
 	.4byte 0x000000D0

@@ -1485,3 +1485,61 @@ lbl_8056E490:
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail8SeqTrackFv
 	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C818
+lbl_8066C818:
+	# ROM: 0x576678
+	.float 1.0
+
+
+.global lbl_8066C81C
+lbl_8066C81C:
+	# ROM: 0x57667C
+	.4byte 0
+
+
+.global lbl_8066C820
+lbl_8066C820:
+	# ROM: 0x576680
+	.4byte 0x42FE0000
+
+
+.global lbl_8066C824
+lbl_8066C824:
+	# ROM: 0x576684
+	.4byte 0x3C000000
+
+
+.global lbl_8066C828
+lbl_8066C828:
+	# ROM: 0x576688
+	.4byte 0x427C0000
+
+
+.global lbl_8066C82C
+lbl_8066C82C:
+	# ROM: 0x57668C
+	.float -1.0
+
+
+.global lbl_8066C830
+lbl_8066C830:
+	# ROM: 0x576690
+	.4byte 0x40000000
+	.4byte 0
+
+
+.global lbl_8066C838
+lbl_8066C838:
+	# ROM: 0x576698
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066C840
+lbl_8066C840:
+	# ROM: 0x5766A0
+	.4byte 0x43300000
+	.4byte 0x80000000

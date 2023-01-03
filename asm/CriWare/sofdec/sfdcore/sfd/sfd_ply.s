@@ -3051,3 +3051,15 @@ lbl_80520584:
 lbl_80520588:
 	.asciz "%p, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %d, %p, %ld"
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8061CDD8
+lbl_8061CDD8:
+	.skip 0x4
+.global sfply_last_hnctrl_wksiz
+sfply_last_hnctrl_wksiz:
+	.skip 0x4
+.global lbl_8061CDE0
+lbl_8061CDE0:
+	.skip 0x4

@@ -675,3 +675,9 @@ func_803D0D54:
 .L_803D0D70:
 /* 803D0D70 0039A330  38 60 00 00 */	li r3, 0
 /* 803D0D74 0039A334  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8061CE20
+lbl_8061CE20:
+	.skip 0x8

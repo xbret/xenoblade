@@ -316,3 +316,9 @@ lbl_8051F538:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80605ED0
+lbl_80605ED0:
+	.skip 0x40

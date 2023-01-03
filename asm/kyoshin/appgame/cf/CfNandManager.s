@@ -5138,7 +5138,271 @@ func_8024060C:
 
 .4byte sinit_802405F0
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfNandManager_typestr
+cf_CfNandManager_typestr:
+	.asciz "cf::CfNandManager"
+	.balign 4
+
+.global CTTask_cf_CfNandManager_typestr
+CTTask_cf_CfNandManager_typestr:
+	.asciz "CTTask<cf::CfNandManager>"
+	.balign 4
+
+
+.global lbl_80506B70
+lbl_80506B70:
+	.asciz "%s%02d"
+	.asciz "banner.bin"
+	.asciz "name"
+	.byte 0x00
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053A2D8
+lbl_8053A2D8:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8023F288
+
+
+.global lbl_8053A2E4
+lbl_8053A2E4:
+	# ROM: 0x5363E4
+	.4byte switch_8023EB74
+	.4byte switch_8023EB34
+	.4byte switch_8023EB34
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB74
+	.4byte switch_8023EB74
+	.4byte switch_8023EB60
+	.4byte switch_8023EB34
+	.4byte switch_8023EB34
+	.4byte switch_8023EB34
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB74
+	.4byte switch_8023EB74
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB60
+	.4byte switch_8023EB34
+
+
+.global __vt__cf_CfNandManager
+__vt__cf_CfNandManager:
+	.4byte __RTTI__cf_CfNandManager
+	.4byte 0
+	.4byte func_8023C018
+	.4byte CChildListNode_Reset
+	.4byte func_8023C0FC
+	.4byte func_8023C108
+	.4byte func_8023C154
+	.4byte func_802405A8
+	.4byte func_80043F20
+	.4byte __RTTI__cf_CfNandManager
+	.4byte 0xFFFFFFAC
+	.4byte func_802405FC
+	.4byte func_80039E28
+	.4byte func_802405F4
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__cf_CfNandManager
+	.4byte 0xFFFFFFA8
+	.4byte func_8024060C
+	.4byte func_80240604
+	.4byte func_8023E4D4
+	.4byte func_8024047C
+
+.global cf_CfNandManager_hierarchy
+cf_CfNandManager_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000054
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_cf_CfNandManager
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_cf_CfNandManager
+__vt__CTTask_cf_CfNandManager:
+	.4byte __RTTI__CTTask_cf_CfNandManager
+	.4byte 0
+	.4byte func_8023BF74
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_80240560
+	.4byte func_802405A8
+	.4byte func_80043F20
+
+.global CTTask_cf_CfNandManager_hierarchy
+CTTask_cf_CfNandManager_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806651B8
+lbl_806651B8:
+	# ROM: 0x570D98
+	.4byte lbl_8066AF90
+	.4byte 0
+
+.global __RTTI__cf_CfNandManager
+__RTTI__cf_CfNandManager:
+	.4byte cf_CfNandManager_typestr
+	.4byte cf_CfNandManager_hierarchy
+
+.global __RTTI__CTTask_cf_CfNandManager
+__RTTI__CTTask_cf_CfNandManager:
+	.4byte CTTask_cf_CfNandManager_typestr
+	.4byte CTTask_cf_CfNandManager_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AF90
+lbl_8066AF90:
+	.asciz "monado"
+	.balign 4
+
+
+.global lbl_8066AF98
+lbl_8066AF98:
+	# ROM: 0x574DF8
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066AFA0
+lbl_8066AFA0:
+	# ROM: 0x574E00
+	.4byte 0x3FE00000
+	.4byte 0
+
+
+.global lbl_8066AFA8
+lbl_8066AFA8:
+	# ROM: 0x574E08
+	.4byte 0xBFE00000
+	.4byte 0
+
+
+.global lbl_8066AFB0
+lbl_8066AFB0:
+	# ROM: 0x574E10
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066AFB8
+lbl_8066AFB8:
+	# ROM: 0x574E18
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8057A2C0
+lbl_8057A2C0:
+	.skip 0x100
+.global lbl_8057A3C0
+lbl_8057A3C0:
+	.skip 0x38
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667058
+lbl_80667058:
+	.skip 0x4
+.global lbl_8066705C
+lbl_8066705C:
+	.skip 0x1
+.global lbl_8066705D
+lbl_8066705D:
+	.skip 0x1
+.global lbl_8066705E
+lbl_8066705E:
+	.skip 0x2
+.global lbl_80667060
+lbl_80667060:
+	.skip 0x2
+.global lbl_80667062
+lbl_80667062:
+	.skip 0x2
+.global lbl_80667064
+lbl_80667064:
+	.skip 0x4
+.global lbl_80667068
+lbl_80667068:
+	.skip 0x4
+.global lbl_8066706C
+lbl_8066706C:
+	.skip 0x4
+.global lbl_80667070
+lbl_80667070:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80015FE4
 lbl_80015FE4:
@@ -5316,7 +5580,7 @@ lbl_80016130:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8023BCF0
 	.4byte 0x00000284

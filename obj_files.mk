@@ -20,12 +20,6 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfRes.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/IResInfo.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfScript.o \
-	$(BUILD_DIR)/asm/data_1.o \
-	$(BUILD_DIR)/asm/rodata.o \
-	$(BUILD_DIR)/asm/sdata_1.o \
-	$(BUILD_DIR)/asm/sdata2_1.o \
-	$(BUILD_DIR)/asm/bss_1.o \
-	$(BUILD_DIR)/asm/sbss_1.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfTaskMain.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfTFile.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCamEvent.o \
@@ -95,7 +89,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CUIBattleManager.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CUICfManager.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CUIWindowManager.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_801414CC.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfBdat.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuUpdate.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuLandTelop.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CBattleState.o \
@@ -157,7 +151,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CVisionItem.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CArtsBookItem.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CItemBoxGrid.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_801D1FC0.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CCur.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSortMenu.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CItemBoxInfo.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CItemBoxInfo2.o \
@@ -541,21 +535,21 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/cx/CXStreamingUncompression.o \
 	$(BUILD_DIR)/asm/RevoSDK/cx/CXUncompression.o \
 	$(BUILD_DIR)/src/RevoSDK/cx/CXSecureUncompression.o \
-	$(BUILD_DIR)/asm/data_2.o \
-	$(BUILD_DIR)/asm/sbss_3.o \
+	$(BUILD_DIR)/asm/data_sdk.o \
+	$(BUILD_DIR)/asm/sbss_sdk.o \
 	$(BUILD_DIR)/asm/RevoSDK/db/db.o \
-	$(BUILD_DIR)/asm/sdata_2.o \
+	$(BUILD_DIR)/asm/sdata_sdk.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp_debug.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp_task.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdfs.o \
-	$(BUILD_DIR)/asm/bss_2.o \
+	$(BUILD_DIR)/asm/bss_sdk.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdqueue.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvderror.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdidutils.o \
-	$(BUILD_DIR)/asm/sdata2_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdFatal.o \
+	$(BUILD_DIR)/asm/sdata2_sdk.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdDeviceError.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd_broadway.o \
 	$(BUILD_DIR)/asm/RevoSDK/enc/encutility.o \
@@ -673,7 +667,7 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSCrc.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSLaunch.o \
 	$(BUILD_DIR)/src/RevoSDK/os/__start.o \
-	$(BUILD_DIR)/asm/sbss_4.o \
+	$(BUILD_DIR)/asm/sbss_sdk_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/__ppc_eabi_init.o \
 	$(BUILD_DIR)/asm/RevoSDK/pad/Pad.o \
 	$(BUILD_DIR)/asm/RevoSDK/sc/scsystem.o \

@@ -870,7 +870,85 @@ func_80244DD8:
 /* 80244F48 0020E508  38 21 00 20 */	addi r1, r1, 0x20
 /* 80244F4C 0020E50C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80506CA0
+lbl_80506CA0:
+	.asciz "/menu/Fade.arc"
+	.asciz "CFade"
+	.asciz "arc"
+	.asciz "mf00_fade.brlyt"
+	.asciz "mf00_fade_fade_in.brlan"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CFade
+__vt__CFade:
+	.4byte __RTTI__CFade
+	.4byte 0
+	.4byte func_80244348
+	.4byte func_80039E28
+	.4byte func_8024460C
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CFade_hierarchy
+CFade_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CFade
+__RTTI__CFade:
+	.4byte CFade_typestr
+	.4byte CFade_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B008
+lbl_8066B008:
+	# ROM: 0x574E68
+	.float 1.0
+	
+.global CFade_typestr
+CFade_typestr:
+	.asciz "CFade"
+	.balign 4
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80016474
 lbl_80016474:
@@ -952,7 +1030,7 @@ lbl_80016500:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802442E0
 	.4byte 0x00000068

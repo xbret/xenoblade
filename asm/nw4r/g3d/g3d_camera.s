@@ -1014,3 +1014,71 @@ UpdateCameraMtx__Q34nw4r3g3d6CameraCFv:
 /* 803F1E0C 003BB3CC  7C 08 03 A6 */	mtlr r0
 /* 803F1E10 003BB3D0  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 803F1E14 003BB3D4  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C458
+lbl_8066C458:
+	# ROM: 0x5762B8
+	.4byte 0
+
+
+.global lbl_8066C45C
+lbl_8066C45C:
+	# ROM: 0x5762BC
+	.4byte 0x41700000
+
+
+.global lbl_8066C460
+lbl_8066C460:
+	# ROM: 0x5762C0
+	.float 1.0
+
+
+.global lbl_8066C464
+lbl_8066C464:
+	# ROM: 0x5762C4
+	.4byte 0x42700000
+
+
+.global lbl_8066C468
+lbl_8066C468:
+	# ROM: 0x5762C8
+	.4byte 0x3FAAAAAB
+
+
+.global lbl_8066C46C
+lbl_8066C46C:
+	# ROM: 0x5762CC
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066C470
+lbl_8066C470:
+	# ROM: 0x5762D0
+	.4byte 0x447A0000
+
+
+.global lbl_8066C474
+lbl_8066C474:
+	# ROM: 0x5762D4
+	.float 0.5
+
+
+.global lbl_8066C478
+lbl_8066C478:
+	# ROM: 0x5762D8
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066C480
+lbl_8066C480:
+	# ROM: 0x5762E0
+	.float -1.0
+
+
+.global lbl_8066C484
+lbl_8066C484:
+	# ROM: 0x5762E4
+	.4byte 0x3F360B61

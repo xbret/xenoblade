@@ -1376,7 +1376,70 @@ func_8027305C:
 /* 80273118 0023C6D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027311C 0023C6DC  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuKizunaTalkList_typestr
+CMenuKizunaTalkList_typestr:
+	.asciz "CMenuKizunaTalkList"
+	.4byte 0
+
+
+.global lbl_80509FF8
+lbl_80509FF8:
+	.asciz "MNU_update"
+	.asciz "info"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuKizunaTalkList
+__vt__CMenuKizunaTalkList:
+	.4byte __RTTI__CMenuKizunaTalkList
+	.4byte 0
+	.4byte func_80271E98
+	.4byte CChildListNode_Reset
+	.4byte func_80271F10
+	.4byte func_802721F4
+	.4byte func_80272260
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuKizunaTalkList
+	.4byte 0xFFFFFFA8
+	.4byte func_802726EC
+	.4byte func_802726E4
+	.4byte func_80272370
+
+.global CMenuKizunaTalkList_hierarchy
+CMenuKizunaTalkList_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuKizunaTalkList
+__RTTI__CMenuKizunaTalkList:
+	.4byte CMenuKizunaTalkList_typestr
+	.4byte CMenuKizunaTalkList_hierarchy
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806671A0
+lbl_806671A0:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80018134
 lbl_80018134:
@@ -1508,7 +1571,7 @@ lbl_80018270:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80271DD4
 	.4byte 0x000000C4

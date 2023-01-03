@@ -864,7 +864,133 @@ func_801731AC:
 /* 801731AC 0013C76C  38 60 00 00 */	li r3, 0
 /* 801731B0 0013C770  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CScnMaruShadowNw4r_typestr
+CScnMaruShadowNw4r_typestr:
+	.asciz "CScnMaruShadowNw4r"
+	.balign 4
+
+.global IScnPolyShadow_typestr
+IScnPolyShadow_typestr:
+	.asciz "IScnPolyShadow"
+	.balign 4
+
+.global cf_CREvtModel_typestr
+cf_CREvtModel_typestr:
+	.asciz "cf::CREvtModel"
+	.balign 4
+
+.global cf_CREvtObj_typestr
+cf_CREvtObj_typestr:
+	.asciz "cf::CREvtObj"
+	.balign 4
+
+
+.global lbl_804FEB74
+lbl_804FEB74:
+	.asciz "Monochrome"
+	.asciz "MonoRGB"
+	.asciz "noDynamics"
+	.asciz "LgtID"
+	.asciz "SdwType"
+	.asciz "SdwRadius"
+	.asciz "SdwPow"
+	.asciz "HidePT"
+	.asciz "core"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CREvtModel
+__vt__cf_CREvtModel:
+	.4byte __RTTI__cf_CREvtModel
+	.4byte 0
+	.4byte func_80172668
+	.4byte func_801728F8
+	.4byte func_8017298C
+	.4byte func_8016A354
+	.4byte func_801731A0
+	.4byte func_80173194
+	.4byte func_801696C4
+	.4byte func_801727DC
+	.4byte func_801731AC
+	.4byte func_80169F24
+	.4byte func_80172CC4
+	.4byte func_801729F0
+	.4byte func_80172CC0
+	.4byte func_801726DC
+	.4byte func_80172768
+
+.global cf_CREvtModel_hierarchy
+cf_CREvtModel_hierarchy:
+	.4byte __RTTI__cf_CREvtObj
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnMaruShadowNw4r
+__RTTI__CScnMaruShadowNw4r:
+	.4byte CScnMaruShadowNw4r_typestr
+	.4byte CScnMaruShadowNw4r_hierarchy
+
+
+.global __RTTI__IScnPolyShadow
+__RTTI__IScnPolyShadow:
+	.4byte IScnPolyShadow_typestr
+	.4byte 0
+
+.global __RTTI__cf_CREvtModel
+__RTTI__cf_CREvtModel:
+	.4byte cf_CREvtModel_typestr
+	.4byte cf_CREvtModel_hierarchy
+
+.global __RTTI__cf_CREvtObj
+__RTTI__cf_CREvtObj:
+	.4byte cf_CREvtObj_typestr
+	.4byte 0
+
+
+.global lbl_80664D10
+lbl_80664D10:
+	# ROM: 0x5708F0
+	.4byte 0x72656600
+
+
+.global lbl_80664D14
+lbl_80664D14:
+	# ROM: 0x5708F4
+	.4byte 0x72656600
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A030
+lbl_8066A030:
+	# ROM: 0x573E90
+	.4byte 0
+
+
+.global lbl_8066A034
+lbl_8066A034:
+	# ROM: 0x573E94
+	.4byte 0x3F666666
+
+
+.global lbl_8066A038
+lbl_8066A038:
+	# ROM: 0x573E98
+	.4byte 0x3EB33333
+
+
+.global lbl_8066A03C
+lbl_8066A03C:
+	# ROM: 0x573E9C
+	.4byte 0x437F0000
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000E254
 lbl_8000E254:
@@ -939,7 +1065,7 @@ lbl_8000E2B8:
 	.4byte func_80185754
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_801725E4
 	.4byte 0x00000084

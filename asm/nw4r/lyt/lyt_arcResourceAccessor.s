@@ -278,3 +278,16 @@ lbl_8056D598:
 	.4byte GetResource__Q34nw4r3lyt19ArcResourceAccessorFUlPCcPUl
 	.4byte GetFont__Q34nw4r3lyt19ArcResourceAccessorFPCc
 	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665DF8
+lbl_80665DF8:
+	# ROM: 0x5719D8
+	.4byte 0x2E000000
+
+
+.global lbl_80665DFC
+lbl_80665DFC:
+	# ROM: 0x5719DC
+	.4byte 0x2E2E0000

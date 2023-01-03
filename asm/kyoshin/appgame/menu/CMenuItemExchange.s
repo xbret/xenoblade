@@ -4327,7 +4327,203 @@ sinit_801C183C:
 
 .4byte sinit_801C183C
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuItemExchange_typestr
+CMenuItemExchange_typestr:
+	.asciz "CMenuItemExchange"
+	.balign 4
+
+
+.global lbl_80500B3C
+lbl_80500B3C:
+	.asciz "MNU_shop"
+	.asciz "name"
+	.4byte 0
+	.2byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_80537350
+lbl_80537350:
+	# ROM: 0x533450
+	.4byte switch_801BEC94
+	.4byte switch_801BECA0
+	.4byte switch_801BECAC
+	.4byte switch_801BECB8
+	.4byte switch_801BECC4
+	.4byte switch_801BECD0
+	.4byte switch_801BECDC
+	.4byte switch_801BECE8
+	.4byte switch_801BECF4
+	.4byte 0
+
+
+.global __vt__CMenuItemExchange
+__vt__CMenuItemExchange:
+	.4byte __RTTI__CMenuItemExchange
+	.4byte 0
+	.4byte func_801BDEC8
+	.4byte CChildListNode_Reset
+	.4byte func_801BDF4C
+	.4byte func_801BEBC8
+	.4byte func_801BEC3C
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuItemExchange
+	.4byte 0xFFFFFF94
+	.4byte func_801BF764
+	.4byte func_801BF75C
+	.4byte func_801BED30
+
+.global CMenuItemExchange_hierarchy
+CMenuItemExchange_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	
+.global lbl_805373E8
+lbl_805373E8:
+	.asciz "NW4R:Pointer must not be NULL (p)"
+	.balign 4
+
+.global lbl_8053740C
+lbl_8053740C:
+	.asciz "LinkList.h"
+	.balign 4
+
+.global lbl_80537418
+lbl_80537418:
+	.asciz "NW4R:Pointer must not be NULL (p)"
+	.balign 4
+
+.global lbl_8053743C
+lbl_8053743C:
+	.asciz "LinkList.h"
+	.balign 4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuItemExchange
+__RTTI__CMenuItemExchange:
+	.4byte CMenuItemExchange_typestr
+	.4byte CMenuItemExchange_hierarchy
+
+
+.global lbl_80664F20
+lbl_80664F20:
+	# ROM: 0x570B00
+	.float 1.0
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A738
+lbl_8066A738:
+	# ROM: 0x574598
+	.4byte 0
+
+
+.global lbl_8066A73C
+lbl_8066A73C:
+	# ROM: 0x57459C
+	.float 1.0
+
+
+.global lbl_8066A740
+lbl_8066A740:
+	# ROM: 0x5745A0
+	.float 10.0
+	.4byte 0
+
+
+.global lbl_8066A748
+lbl_8066A748:
+	# ROM: 0x5745A8
+	.float 1.0
+
+
+.global lbl_8066A74C
+lbl_8066A74C:
+	# ROM: 0x5745AC
+	.4byte 0x447A0000
+
+
+.global lbl_8066A750
+lbl_8066A750:
+	# ROM: 0x5745B0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066A758
+lbl_8066A758:
+	# ROM: 0x5745B8
+	.4byte 0x41F00000
+
+
+.global lbl_8066A75C
+lbl_8066A75C:
+	# ROM: 0x5745BC
+	.float 1.0
+
+
+.global lbl_8066A760
+lbl_8066A760:
+	# ROM: 0x5745C0
+	.4byte 0
+
+
+.global lbl_8066A764
+lbl_8066A764:
+	# ROM: 0x5745C4
+	.4byte 0x40A00000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80579110
+lbl_80579110:
+	.skip 0x10
+.global lbl_80579120
+lbl_80579120:
+	.skip 0xC00
+.global lbl_80579D20
+lbl_80579D20:
+	.skip 0x10
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+
+.global lbl_80666D18
+lbl_80666D18:
+	.skip 0x4
+.global lbl_80666D1C
+lbl_80666D1C:
+	.skip 0x4
+.global lbl_80666D20
+lbl_80666D20:
+	.skip 0x8
+.global lbl_80666D28
+lbl_80666D28:
+	.skip 0x2
+.global lbl_80666D2A
+lbl_80666D2A:
+	.skip 0x6
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80010234
 lbl_80010234:
@@ -4760,7 +4956,7 @@ lbl_80010614:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801BDDA4
 	.4byte 0x00000124

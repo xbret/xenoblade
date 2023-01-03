@@ -1173,7 +1173,64 @@ func_800FEB14:
 
 .4byte sinit_800FEA14
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfObjectSelectorObj_typestr
+cf_CfObjectSelectorObj_typestr:
+	.asciz "cf::CfObjectSelectorObj"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CfObjectSelectorObj
+__vt__cf_CfObjectSelectorObj:
+	.4byte __RTTI__cf_CfObjectSelectorObj
+	.4byte 0
+	.4byte func_800FD6A8
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806646A8
+lbl_806646A8:
+	# ROM: 0x570288
+	.4byte 0x402CCCCD
+	.4byte 0
+
+.global __RTTI__cf_CfObjectSelectorObj
+__RTTI__cf_CfObjectSelectorObj:
+	.4byte cf_CfObjectSelectorObj_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_806697CC
+lbl_806697CC:
+	# ROM: 0x57362C
+	.4byte 0x3C23D70A
+
+
+.global lbl_806697D0
+lbl_806697D0:
+	# ROM: 0x573630
+	.4byte 0x41600000
+
+
+.global lbl_806697D4
+lbl_806697D4:
+	# ROM: 0x573634
+	.4byte 0x41900000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666808
+lbl_80666808:
+	.skip 0x4
+.global lbl_8066680C
+lbl_8066680C:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000ACF4
 lbl_8000ACF4:
@@ -1241,7 +1298,7 @@ lbl_8000AD78:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_800FDB4C
 	.4byte 0x000000D0

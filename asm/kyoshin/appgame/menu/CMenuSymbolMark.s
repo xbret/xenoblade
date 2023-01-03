@@ -407,7 +407,186 @@ func_8011D9C0:
 /* 8011DA2C 000E6FEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8011DA30 000E6FF0  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F9D68
+lbl_804F9D68:
+	.asciz "markerlist0000"
+	.balign 4
+
+.global lbl_804F9D78
+lbl_804F9D78:
+	.asciz "markerlist0101"
+	.balign 4
+
+.global lbl_804F9D88
+lbl_804F9D88:
+	.asciz "markerlist0201"
+	.balign 4
+
+.global lbl_804F9D98
+lbl_804F9D98:
+	.asciz "markerlist0301"
+	.balign 4
+
+.global lbl_804F9DA8
+lbl_804F9DA8:
+	.asciz "markerlist0401"
+	.balign 4
+
+.global lbl_804F9DB8
+lbl_804F9DB8:
+	.asciz "markerlist0402"
+	.balign 4
+
+.global lbl_804F9DC8
+lbl_804F9DC8:
+	.asciz "markerlist0501"
+	.balign 4
+
+.global lbl_804F9DD8
+lbl_804F9DD8:
+	.asciz "markerlist0601"
+	.balign 4
+
+.global lbl_804F9DE8
+lbl_804F9DE8:
+	.asciz "markerlist0701"
+	.balign 4
+
+.global lbl_804F9DF8
+lbl_804F9DF8:
+	.asciz "markerlist0801"
+	.balign 4
+
+.global lbl_804F9E08
+lbl_804F9E08:
+	.asciz "markerlist0901"
+	.balign 4
+
+.global lbl_804F9E18
+lbl_804F9E18:
+	.asciz "markerlist1001"
+	.balign 4
+
+.global lbl_804F9E28
+lbl_804F9E28:
+	.asciz "markerlist1101"
+	.balign 4
+
+.global lbl_804F9E38
+lbl_804F9E38:
+	.asciz "markerlist1201"
+	.balign 4
+
+.global lbl_804F9E48
+lbl_804F9E48:
+	.asciz "markerlist1202"
+	.balign 4
+
+.global lbl_804F9E58
+lbl_804F9E58:
+	.asciz "markerlist1301"
+	.balign 4
+
+.global lbl_804F9E68
+lbl_804F9E68:
+	.asciz "markerlist1401"
+	.balign 4
+
+.global lbl_804F9E78
+lbl_804F9E78:
+	.asciz "markerlist1501"
+	.balign 4
+
+.global lbl_804F9E88
+lbl_804F9E88:
+	.asciz "markerlist1601"
+	.balign 4
+
+.global lbl_804F9E98
+lbl_804F9E98:
+	.asciz "markerlist1701"
+	.balign 4
+
+.global lbl_804F9EA8
+lbl_804F9EA8:
+	.asciz "markerlist1801"
+	.balign 4
+
+.global lbl_804F9EB8
+lbl_804F9EB8:
+	.asciz "markerlist1901"
+	.balign 4
+
+.global lbl_804F9EC8
+lbl_804F9EC8:
+	.asciz "markerlist2001"
+	.balign 4
+
+.global lbl_804F9ED8
+lbl_804F9ED8:
+	.asciz "markerlist2101"
+	.balign 4
+
+.global lbl_804F9EE8
+lbl_804F9EE8:
+	.asciz "markerlist2201"
+	.balign 4
+
+.global lbl_804F9EF8
+lbl_804F9EF8:
+	.asciz "markerlist2301"
+	.balign 4
+
+.global lbl_804F9F08
+lbl_804F9F08:
+	.asciz "markerlist2401"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80530478
+lbl_80530478:
+	# ROM: 0x52C578
+	.4byte lbl_804F9D68
+	.4byte lbl_804F9D78
+	.4byte lbl_804F9D88
+	.4byte lbl_804F9D98
+	.4byte lbl_804F9DA8
+	.4byte lbl_804F9DB8
+	.4byte lbl_804F9DC8
+	.4byte lbl_804F9DD8
+	.4byte lbl_804F9DE8
+	.4byte lbl_804F9DF8
+	.4byte lbl_804F9E08
+	.4byte lbl_804F9E18
+	.4byte lbl_804F9E28
+	.4byte lbl_804F9E38
+	.4byte lbl_804F9E48
+	.4byte lbl_804F9E58
+	.4byte lbl_804F9E68
+	.4byte lbl_804F9E78
+	.4byte lbl_804F9E88
+	.4byte lbl_804F9E88
+	.4byte lbl_804F9E98
+	.4byte lbl_804F9EA8
+	.4byte lbl_804F9EB8
+	.4byte lbl_804F9EC8
+	.4byte lbl_804F9ED8
+	.4byte lbl_804F9EE8
+	.4byte lbl_804F9EF8
+	.4byte lbl_804F9F08
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000BA94
 lbl_8000BA94:
@@ -447,7 +626,7 @@ lbl_8000BADC:
 	.4byte __dt__IWorkEvent
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8011D424
 	.4byte 0x0000059C

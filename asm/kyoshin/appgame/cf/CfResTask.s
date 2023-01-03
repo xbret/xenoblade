@@ -120,7 +120,7 @@ func_80065978:
 func_800659C0:
 /* 800659C0 0002EF80  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80007C44
 lbl_80007C44:
@@ -148,7 +148,7 @@ lbl_80007C70:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80065848
 	.4byte 0x00000058

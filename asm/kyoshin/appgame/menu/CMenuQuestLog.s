@@ -1157,7 +1157,85 @@ func_8011D338:
 /* 8011D41C 000E69DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8011D420 000E69E0  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuQuestLog_typestr
+CMenuQuestLog_typestr:
+	.asciz "CMenuQuestLog"
+	.balign 4
+
+
+.global lbl_804F9D58
+lbl_804F9D58:
+	.asciz "MNU_quest"
+	.asciz "name"
+	.byte 0x00
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805303E0
+lbl_805303E0:
+	# ROM: 0x52C4E0
+	.4byte switch_8011CB88
+	.4byte switch_8011CB94
+	.4byte switch_8011CBA0
+	.4byte switch_8011CBAC
+	.4byte switch_8011CBB8
+	.4byte switch_8011CBC4
+	.4byte switch_8011CBD0
+	.4byte switch_8011CBDC
+	.4byte switch_8011CBE8
+	.4byte switch_8011CBF4
+
+
+.global __vt__CMenuQuestLog
+__vt__CMenuQuestLog:
+	.4byte __RTTI__CMenuQuestLog
+	.4byte 0
+	.4byte func_8011C52C
+	.4byte CChildListNode_Reset
+	.4byte func_8011C5B0
+	.4byte func_8011CA4C
+	.4byte func_8011CAD4
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuQuestLog
+	.4byte 0xFFFFFFA8
+	.4byte func_8011D2F0
+	.4byte func_8011D2E8
+	.4byte func_8011CC30
+
+.global CMenuQuestLog_hierarchy
+CMenuQuestLog_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuQuestLog
+__RTTI__CMenuQuestLog:
+	.4byte CMenuQuestLog_typestr
+	.4byte CMenuQuestLog_hierarchy
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806668B8
+lbl_806668B8:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000B8D0
 lbl_8000B8D0:
@@ -1333,7 +1411,7 @@ lbl_8000BA8C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8011C44C
 	.4byte 0x000000E0

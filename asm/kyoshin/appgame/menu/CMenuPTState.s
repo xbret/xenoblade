@@ -241,7 +241,84 @@ func_80192CB0:
 /* 80192DE0 0015C3A0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80192DE4 0015C3A4  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuPTState_typestr
+CMenuPTState_typestr:
+	.asciz "CMenuPTState"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuPTState
+__vt__CMenuPTState:
+	.4byte __RTTI__CMenuPTState
+	.4byte 0
+	.4byte func_80191420
+	.4byte CChildListNode_Reset
+	.4byte func_801914A0
+	.4byte func_80192840
+	.4byte func_801928B8
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuPTState
+	.4byte 0xFFFFFFA8
+	.4byte func_80192BEC
+	.4byte func_80192BE4
+	.4byte func_80192A2C
+
+.global CMenuPTState_hierarchy
+CMenuPTState_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuPTState
+__RTTI__CMenuPTState:
+	.4byte CMenuPTState_typestr
+	.4byte CMenuPTState_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A358
+lbl_8066A358:
+	# ROM: 0x5741B8
+	.4byte 0
+
+
+.global lbl_8066A35C
+lbl_8066A35C:
+	# ROM: 0x5741BC
+	.float 1.0
+
+
+.global lbl_8066A360
+lbl_8066A360:
+	# ROM: 0x5741C0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066A368
+lbl_8066A368:
+	# ROM: 0x5741C8
+	.4byte 0x3D088889
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000F2A4
 lbl_8000F2A4:
@@ -278,7 +355,7 @@ lbl_8000F2E8:
 	.4byte func_80043E88
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80192AB8
 	.4byte 0x00000118

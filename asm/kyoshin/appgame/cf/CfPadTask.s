@@ -2117,7 +2117,290 @@ func_801C358C:
 /* 801C35A0 0018CB60  7C 63 02 14 */	add r3, r3, r0
 /* 801C35A4 0018CB64  4B FF FB 18 */	b func_801C30BC
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfPadTask_typestr
+cf_CfPadTask_typestr:
+	.asciz "cf::CfPadTask"
+	.balign 4
+
+.global CTTask_cf_CfPadTask_typestr
+CTTask_cf_CfPadTask_typestr:
+	.asciz "CTTask<cf::CfPadTask>"
+	.balign 4
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CfPadTask
+__vt__cf_CfPadTask:
+	.4byte __RTTI__cf_CfPadTask
+	.4byte 0
+	.4byte func_801C19F0
+	.4byte CChildListNode_Reset
+	.4byte func_801C1A90
+	.4byte func_801C1AA4
+	.4byte func_801C1F68
+	.4byte func_801C2BA4
+	.4byte func_80043F20
+	.4byte __RTTI__cf_CfPadTask
+	.4byte 0xFFFFFFAC
+	.4byte func_801C2BF4
+	.4byte func_801C2BEC
+	.4byte __RTTI__cf_CfPadTask
+	.4byte 0xFFFFFFA8
+	.4byte func_801C2C0C
+	.4byte func_801C2C04
+	.4byte func_801C2BFC
+	.4byte func_801C29B0
+	.4byte func_801C2ACC
+	.4byte func_801C2AFC
+
+.global cf_CfPadTask_hierarchy
+cf_CfPadTask_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_cf_CfPadTask
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_cf_CfPadTask
+__vt__CTTask_cf_CfPadTask:
+	.4byte __RTTI__CTTask_cf_CfPadTask
+	.4byte 0
+	.4byte func_801C1998
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_801C2B5C
+	.4byte func_801C2BA4
+	.4byte func_80043F20
+
+.global CTTask_cf_CfPadTask_hierarchy
+CTTask_cf_CfPadTask_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80537500
+lbl_80537500:
+	.asciz "bus is out of bounds(%d)\n%d <= bus < %d not satisfied."
+	.balign 4
+
+
+.global lbl_80537538
+lbl_80537538:
+	.asciz "AxManager.h"
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80664F28
+lbl_80664F28:
+	# ROM: 0x570B08
+	.4byte 0xFFFFFFFF
+	.4byte 0
+
+.global __RTTI__cf_CfPadTask
+__RTTI__cf_CfPadTask:
+	.4byte cf_CfPadTask_typestr
+	.4byte cf_CfPadTask_hierarchy
+
+.global __RTTI__CTTask_cf_CfPadTask
+__RTTI__CTTask_cf_CfPadTask:
+	.4byte CTTask_cf_CfPadTask_typestr
+	.4byte CTTask_cf_CfPadTask_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A768
+lbl_8066A768:
+	# ROM: 0x5745C8
+	.4byte 0
+
+
+.global lbl_8066A76C
+lbl_8066A76C:
+	# ROM: 0x5745CC
+	.4byte 0x3E99999A
+
+
+.global lbl_8066A770
+lbl_8066A770:
+	# ROM: 0x5745D0
+	.float 0.5
+
+
+.global lbl_8066A774
+lbl_8066A774:
+	# ROM: 0x5745D4
+	.float 1.0
+
+
+.global lbl_8066A778
+lbl_8066A778:
+	.4byte 0x3F333333
+	.4byte 0
+
+
+.global lbl_8066A780
+lbl_8066A780:
+	# ROM: 0x5745E0
+	.4byte 0x3CA3D70A
+
+
+.global lbl_8066A784
+lbl_8066A784:
+	# ROM: 0x5745E4
+	.4byte 0x40400000
+
+
+.global lbl_8066A788
+lbl_8066A788:
+	# ROM: 0x5745E8
+	.4byte 0x3F19999A
+
+
+.global lbl_8066A78C
+lbl_8066A78C:
+	# ROM: 0x5745EC
+	.4byte 0x3ECCCCCD
+
+
+.global lbl_8066A790
+lbl_8066A790:
+	# ROM: 0x5745F0
+	.float 1.0
+
+
+.global lbl_8066A794
+lbl_8066A794:
+	# ROM: 0x5745F4
+	.4byte 0
+
+
+.global lbl_8066A798
+lbl_8066A798:
+	# ROM: 0x5745F8
+	.float 10.0
+
+
+.global lbl_8066A79C
+lbl_8066A79C:
+	# ROM: 0x5745FC
+	.float 0.5
+
+
+.global lbl_8066A7A0
+lbl_8066A7A0:
+	# ROM: 0x574600
+	.4byte 0x43200000
+
+
+.global lbl_8066A7A4
+lbl_8066A7A4:
+	# ROM: 0x574604
+	.4byte 0x3D75C28F
+
+
+.global lbl_8066A7A8
+lbl_8066A7A8:
+	# ROM: 0x574608
+	.4byte 0x40800000
+
+
+.global lbl_8066A7AC
+lbl_8066A7AC:
+	# ROM: 0x57460C
+	.float 0.2
+
+
+.global lbl_8066A7B0
+lbl_8066A7B0:
+	# ROM: 0x574610
+	.4byte 0x3F4CCCCD
+
+
+.global lbl_8066A7B4
+lbl_8066A7B4:
+	# ROM: 0x574614
+	.4byte 0x3F666666
+
+
+.global lbl_8066A7B8
+lbl_8066A7B8:
+	# ROM: 0x574618
+	.4byte 0x41C80000
+
+
+.global lbl_8066A7BC
+lbl_8066A7BC:
+	# ROM: 0x57461C
+	.4byte 0x437A0000
+
+
+.global lbl_8066A7C0
+lbl_8066A7C0:
+	# ROM: 0x574620
+	.4byte 0x43480000
+
+
+.global lbl_8066A7C4
+lbl_8066A7C4:
+	# ROM: 0x574624
+	.4byte 0x3F333333
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80579D30
+lbl_80579D30:
+	.skip 0x18
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666D30
+lbl_80666D30:
+	.skip 0x1
+.global lbl_80666D31
+lbl_80666D31:
+	.skip 0x1
+.global lbl_80666D32
+lbl_80666D32:
+	.skip 0x1
+.global lbl_80666D33
+lbl_80666D33:
+	.skip 0x1
+.global lbl_80666D34
+lbl_80666D34:
+	.skip 0x4
+.global lbl_80666D38
+lbl_80666D38:
+	.skip 0x4
+.global lbl_80666D3C
+lbl_80666D3C:
+	.skip 0x4
+.global lbl_80666D40
+lbl_80666D40:
+	.skip 0x4
+.global lbl_80666D44
+lbl_80666D44:
+	.skip 0x4
+.global lbl_80666D48
+lbl_80666D48:
+	.skip 0x8
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001061C
 lbl_8001061C:
@@ -2342,7 +2625,7 @@ lbl_8001086C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801C189C
 	.4byte 0x00000058

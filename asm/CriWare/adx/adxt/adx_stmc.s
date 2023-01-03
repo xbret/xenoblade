@@ -1554,3 +1554,24 @@ lbl_805197E0:
 	.asciz "E05072801 adxstmf_stat_exec: can't open "
 	.balign 4
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global adxstm_init_count
+adxstm_init_count:
+	.skip 0x4
+.global adxstmf_rtim_ofst
+adxstmf_rtim_ofst:
+	.skip 0x4
+.global lbl_805E7520
+lbl_805E7520:
+	.skip 0x4
+.global lbl_805E7524
+lbl_805E7524:
+	.skip 0x4
+.global lbl_805E7528
+lbl_805E7528:
+	.skip 0x1040
+.global lbl_805E8568
+lbl_805E8568:
+	.skip 0x8

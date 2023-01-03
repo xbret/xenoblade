@@ -2445,7 +2445,266 @@ func_8025650C:
 /* 80256960 0021FF20  38 21 00 80 */	addi r1, r1, 0x80
 /* 80256964 0021FF24  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80507D30
+lbl_80507D30:
+	# ROM: 0x503E30
+	.4byte 0
+	.4byte 0x00010008
+	.4byte 0x000F0016
+	.4byte 0x001A0020
+	.4byte 0x0027002E
+	.4byte 0x00000032
+	.4byte 0x0036003C
+	.4byte 0x00000040
+	.4byte 0x0047004E
+	.4byte 0x00540058
+	.4byte 0x0000005F
+	.4byte 0x00000066
+	.4byte 0x006D0074
+	.4byte 0x00780000
+	.4byte 0
+
+.global CCollepedia_typestr
+CCollepedia_typestr:
+	.asciz "CCollepedia"
+
+
+.global lbl_80507D78
+lbl_80507D78:
+	.asciz "mf00_reg00_curs09.brlyt"
+	.asciz "mf00_reg00_curs09_roop.brlan"
+	.asciz "pic_pgarw_r"
+	.asciz "pic_pgarw_l"
+	.asciz "mf70_cf60_syswin12.brlyt"
+	.asciz "mf70_cf60_syswin12_in.brlan"
+	.asciz "txt_sysmes03_00"
+	.asciz "txt_sysmes04_00"
+	.asciz "MNU_collect"
+	.asciz "name"
+	.asciz "txt_sysmes02"
+	.asciz "txt_sysmes03"
+	.asciz "txt_sysmes04"
+	.asciz "txt_slct01"
+	.asciz "txt_slct02"
+	.asciz "MNU_kyeassign"
+	.asciz "help"
+	.asciz "txt_close00"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "pic_btn00"
+	.asciz "txt_sysmes01"
+	.asciz "pic_btnbs01"
+	.asciz "pic_icon01"
+	.asciz "txt_slct%02d"
+	.asciz "nul_proportion"
+	.asciz "mapID"
+	.asciz "category"
+	.asciz "index"
+	.asciz "type"
+	.asciz "icon_base"
+	.asciz "comment"
+	.asciz "icon"
+	.asciz "/menu/Collepedia.arc"
+	.asciz "/menu/tpl/ItemIcon.arc"
+	.asciz "common/jp/bdat_item.bin"
+	.asciz "snd/adx/j01.adx"
+	.asciz "itemID"
+	.asciz "snd/adx/j02.adx"
+	.asciz "mf55_sys01_icbsno00.tpl"
+	.asciz "mf55_sys01_icbsof00.tpl"
+	.asciz "mf55_sys01_icbs00.tpl"
+	.asciz "pic_btnbs%02d"
+	.asciz "mf00_com00_dmy.tpl"
+	.asciz "pic_icon%02d"
+	.asciz "txt_pg00"
+	.asciz "pic_pghole_on"
+	.asciz "txt_map"
+	.asciz "%d%s"
+	.asciz "txt_cmp"
+	.asciz "txt_ct%02d"
+	.asciz "nul_icon%02d"
+	.asciz "pic_cmpbs%02d"
+	.asciz "nul_compall"
+	.asciz "txt_name"
+	.asciz "txt_comment"
+	.asciz "pic_pghole%02d"
+	.asciz "txt_pg01"
+	.asciz "CCollepedia"
+	.asciz "arc"
+	.asciz "mf55_sys01_cl00.brlyt"
+	.asciz "mf55_sys01_cl00_in.brlan"
+	.asciz "mf55_sys01_cl00_in_info.brlan"
+	.asciz "mf55_sys01_cl00_compall.brlan"
+	.asciz "txt_cmptit"
+	.asciz "CCollepediaTex"
+	.asciz "MNU_item_mes_b"
+	.asciz "MNU_col"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053AB30
+lbl_8053AB30:
+	# ROM: 0x536C30
+	.4byte switch_80254B10
+	.4byte switch_80254A6C
+	.4byte switch_80254A74
+	.4byte switch_80254A7C
+	.4byte switch_80254A8C
+	.4byte switch_80254A94
+	.4byte switch_80254A9C
+	.4byte switch_80254B10
+	.4byte switch_80254AA4
+	.4byte switch_80254AAC
+	.4byte switch_80254B10
+	.4byte switch_80254AC8
+	.4byte switch_80254AD0
+	.4byte switch_80254AD8
+	.4byte switch_80254B10
+	.4byte switch_80254AF4
+	.4byte switch_80254AFC
+
+
+.global lbl_8053AB74
+lbl_8053AB74:
+	# ROM: 0x536C74
+	.4byte switch_8025551C
+	.4byte switch_802554C0
+	.4byte switch_802554CC
+	.4byte switch_802554D8
+	.4byte switch_802554E4
+	.4byte switch_802554F0
+	.4byte switch_802554FC
+	.4byte switch_80255508
+	.4byte switch_80255514
+
+
+.global __vt__CCollepedia
+__vt__CCollepedia:
+	.4byte __RTTI__CCollepedia
+	.4byte 0
+	.4byte func_802548A8
+	.4byte func_80039E28
+	.4byte func_8025650C
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CCollepedia_hierarchy
+CCollepedia_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CCLPCur
+__vt__CCLPCur:
+	.4byte __RTTI__CCLPCur
+	.4byte 0
+	.4byte func_80253204
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B0A0
+lbl_8066B0A0:
+	# ROM: 0x574F00
+	.4byte 0x43A70000
+
+
+.global lbl_8066B0A4
+lbl_8066B0A4:
+	# ROM: 0x574F04
+	.4byte 0x40800000
+
+
+.global lbl_8066B0A8
+lbl_8066B0A8:
+	# ROM: 0x574F08
+	.4byte 0
+
+
+.global lbl_8066B0AC
+lbl_8066B0AC:
+	# ROM: 0x574F0C
+	.4byte 0xC3A20000
+
+
+.global lbl_8066B0B0
+lbl_8066B0B0:
+	# ROM: 0x574F10
+	.float 1.0
+	.4byte 0
+
+
+.global lbl_8066B0B8
+lbl_8066B0B8:
+	# ROM: 0x574F18
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066B0C0
+lbl_8066B0C0:
+	# ROM: 0x574F20
+	.4byte 0x41800000
+
+
+.global lbl_8066B0C4
+lbl_8066B0C4:
+	# ROM: 0x574F24
+	.float 100.0
+
+
+.global lbl_8066B0C8
+lbl_8066B0C8:
+	# ROM: 0x574F28
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.global CCLPCur_typestr
+CCLPCur_typestr:
+	.asciz "CCLPCur"
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806670C8
+lbl_806670C8:
+	.skip 0x4
+.global lbl_806670CC
+lbl_806670CC:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80016E20
 lbl_80016E20:
@@ -2749,7 +3008,7 @@ lbl_80017108:
 	.4byte func_8045F8C8
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80254720
 	.4byte 0x00000188

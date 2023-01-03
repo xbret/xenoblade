@@ -185,3 +185,9 @@ SFTMR_AddTsum:
 /* 803CF0DC 0039869C  90 A3 00 10 */	stw r5, 0x10(r3)
 /* 803CF0E0 003986A0  90 03 00 18 */	stw r0, 0x18(r3)
 /* 803CF0E4 003986A4  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8061CE00
+lbl_8061CE00:
+	.skip 0x8

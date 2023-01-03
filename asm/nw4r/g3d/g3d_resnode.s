@@ -234,3 +234,23 @@ func_803DDA88:
 .L_803DDAA0:
 /* 803DDAA0 003A7060  38 60 00 00 */	li r3, 0
 /* 803DDAA4 003A7064  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C2A0
+lbl_8066C2A0:
+	# ROM: 0x576100
+	.float 1.0
+
+
+.global lbl_8066C2A4
+lbl_8066C2A4:
+	# ROM: 0x576104
+	.4byte 0x3F360B61
+
+
+.global lbl_8066C2A8
+lbl_8066C2A8:
+	# ROM: 0x576108
+	.4byte 0
+	.4byte 0

@@ -835,7 +835,234 @@ func_8006B310:
 /* 8006B3E4 000349A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8006B3E8 000349A8  4E 80 00 20 */	blr
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfCamEvent_typestr
+cf_CfCamEvent_typestr:
+	.asciz "cf::CfCamEvent"
+	.balign 4
+
+.global cf_CfCamTargetIntf_typestr
+cf_CfCamTargetIntf_typestr:
+	.asciz "cf::CfCamTargetIntf"
+
+.global cf_CfCamLookatIntf_typestr
+cf_CfCamLookatIntf_typestr:
+	.asciz "cf::CfCamLookatIntf"
+
+.global cf_CfCamDirectionIntf_typestr
+cf_CfCamDirectionIntf_typestr:
+	.asciz "cf::CfCamDirectionIntf"
+	.balign 4
+
+.global cf_CfCamIntf_typestr
+cf_CfCamIntf_typestr:
+	.asciz "cf::CfCamIntf"
+	.balign 4
+
+.global cf_CfCamFollow_typestr
+cf_CfCamFollow_typestr:
+	.asciz "cf::CfCamFollow"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CfCamEvent
+__vt__cf_CfCamEvent:
+	.4byte __RTTI__cf_CfCamEvent
+	.4byte 0
+	.4byte func_8006B6C8
+	.4byte func_8006A8C4
+	.4byte func_8006B6B8
+	.4byte func_8006AA34
+	.4byte func_8006CA2C
+	.4byte func_8006A9F8
+	.4byte func_8006ACC0
+	.4byte func_80071B74
+	.4byte func_8006A82C
+	.4byte func_80073C74
+	.4byte func_8006B6A0
+	.4byte func_8006B6B0
+	.4byte func_8006D7A8
+	.4byte func_8006ACB0
+	.4byte func_8006A90C
+	.4byte func_8006B6C0
+	.4byte func_80073DDC
+	.4byte func_8006AB94
+	.4byte func_8006AAEC
+	.4byte func_8006AB40
+	.4byte func_8006ACB8
+	.4byte func_8006C16C
+	.4byte func_8006B6A8
+	.4byte func_8006AA84
+	.4byte func_8006AC10
+	.4byte func_8006AC60
+	.4byte func_80074A3C
+	.4byte func_80074AA4
+
+.global cf_CfCamEvent_hierarchy
+cf_CfCamEvent_hierarchy:
+	.4byte __RTTI__cf_CfCam
+	.4byte 0
+	.4byte __RTTI__cf_CfCamFollow
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global __vt__cf_CfCamTargetIntf
+__vt__cf_CfCamTargetIntf:
+	.4byte __RTTI__cf_CfCamTargetIntf
+	.4byte 0
+	.4byte CfCamTargetIntf_update
+	.4byte CfCamTargetIntf_setPos
+	.4byte CfCamTargetIntf_setDir
+	.4byte CfCamTargetIntf_setLookat
+
+.global cf_CfCamTargetIntf_hierarchy
+cf_CfCamTargetIntf_hierarchy:
+	.4byte __RTTI__cf_CfCamIntf
+	.4byte 0
+	.4byte __RTTI__cf_CfCamLookatIntf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CfCamLookatIntf
+__vt__cf_CfCamLookatIntf:
+	.4byte __RTTI__cf_CfCamLookatIntf
+	.4byte 0
+	.4byte CamLookatIntf_update
+	.4byte CamLookatIntf_setPos
+	.4byte CamLookatIntf_setDir
+	.4byte CamLookatIntf_setLookat
+
+.global cf_CfCamLookatIntf_hierarchy
+cf_CfCamLookatIntf_hierarchy:
+	.4byte __RTTI__cf_CfCamIntf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CfCamDirectionIntf
+__vt__cf_CfCamDirectionIntf:
+	.4byte __RTTI__cf_CfCamDirectionIntf
+	.4byte 0
+	.4byte CfCamDirectionIntf_update
+	.4byte CfCamDirectionIntf_setPos
+	.4byte CfCamDirectionIntf_setDir
+	.4byte CfCamDirectionIntf_setLookat
+
+.global cf_CfCamDirectionIntf_hierarchy
+cf_CfCamDirectionIntf_hierarchy:
+	.4byte __RTTI__cf_CfCamIntf
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CfCamEvent
+__RTTI__cf_CfCamEvent:
+	.4byte cf_CfCamEvent_typestr
+	.4byte cf_CfCamEvent_hierarchy
+
+.global __RTTI__cf_CfCamTargetIntf
+__RTTI__cf_CfCamTargetIntf:
+	.4byte cf_CfCamTargetIntf_typestr
+	.4byte cf_CfCamTargetIntf_hierarchy
+
+.global __RTTI__cf_CfCamLookatIntf
+__RTTI__cf_CfCamLookatIntf:
+	.4byte cf_CfCamLookatIntf_typestr
+	.4byte cf_CfCamLookatIntf_hierarchy
+
+.global __RTTI__cf_CfCamDirectionIntf
+__RTTI__cf_CfCamDirectionIntf:
+	.4byte cf_CfCamDirectionIntf_typestr
+	.4byte cf_CfCamDirectionIntf_hierarchy
+
+.global __RTTI__cf_CfCamIntf
+__RTTI__cf_CfCamIntf:
+	.4byte cf_CfCamIntf_typestr
+	.4byte 0
+
+
+.global __RTTI__cf_CfCamFollow
+__RTTI__cf_CfCamFollow:
+	.4byte cf_CfCamFollow_typestr
+	.4byte cf_CfCamFollow_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80668AF0
+lbl_80668AF0:
+	# ROM: 0x572950
+	.4byte 0
+
+
+.global lbl_80668AF4
+lbl_80668AF4:
+	# ROM: 0x572954
+	.4byte 0x40000000
+
+
+.global lbl_80668AF8
+lbl_80668AF8:
+	# ROM: 0x572958
+	.4byte 0x40400000
+
+
+.global lbl_80668AFC
+lbl_80668AFC:
+	# ROM: 0x57295C
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_80668B00
+lbl_80668B00:
+	# ROM: 0x572960
+	.float 0.5
+
+
+.global lbl_80668B04
+lbl_80668B04:
+	# ROM: 0x572964
+	.float -1.0
+
+
+.global lbl_80668B08
+lbl_80668B08:
+	# ROM: 0x572968
+	.float 1.0
+
+
+.global lbl_80668B0C
+lbl_80668B0C:
+	# ROM: 0x57296C
+	.4byte 0x40A00000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806666B0
+lbl_806666B0:
+	.skip 0x4
+.global lbl_806666B4
+lbl_806666B4:
+	.skip 0x4
+.global lbl_806666B8
+lbl_806666B8:
+	.skip 0x4
+.global lbl_806666BC
+lbl_806666BC:
+	.skip 0x4
+.global lbl_806666C0
+lbl_806666C0:
+	.skip 0x4
+.global lbl_806666C4
+lbl_806666C4:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000800C
 lbl_8000800C:
@@ -908,7 +1135,7 @@ lbl_8000806C:
 	.4byte func_8006BF20
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8006A82C
 	.4byte 0x00000098

@@ -1202,7 +1202,507 @@ sinit_8025D304:
 
 .4byte sinit_8025D304
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CKizunagram_typestr
+CKizunagram_typestr:
+	.asciz "CKizunagram"
+
+.global CKizunaInfo_typestr
+CKizunaInfo_typestr:
+	.asciz "CKizunaInfo"
+
+.global CKizunaLine_typestr
+CKizunaLine_typestr:
+	.asciz "CKizunaLine"
+
+.global CKizunaCur_typestr
+CKizunaCur_typestr:
+	.asciz "CKizunaCur"
+	.balign 4
+
+.global CKizunaRadar_typestr
+CKizunaRadar_typestr:
+	.asciz "CKizunaRadar"
+	.balign 4
+
+
+.global lbl_805081A8
+lbl_805081A8:
+	.asciz "mf40_kiz_rdr.brlyt"
+	.asciz "win_rdr01"
+	.asciz "win_rdr00"
+	.asciz "mf00_reg00_curs04.brlyt"
+	.asciz "mf00_reg00_curs04_roop.brlan"
+	.asciz "mf40_kiz_line.brlyt"
+	.asciz "mf40_kiz_line_scale1.brlan"
+	.asciz "nul_all"
+	.asciz "pic_bg"
+	.asciz "face_icon"
+	.asciz "nul_scroll"
+	.asciz "rlt_posX"
+	.asciz "rlt_posY"
+	.asciz "rlt_meet"
+	.asciz "rlt_face"
+	.balign 4
+	.asciz "rlt_texture"
+	.asciz "%s"
+	.asciz "pic_pcbs"
+	.asciz "mf40_kiz_pc06.tpl"
+	.asciz "mf40_kiz_pc05.tpl"
+	.asciz "mf40_kiz_pc04.tpl"
+	.asciz "mf40_kiz_pc03.tpl"
+	.asciz "mf40_kiz_pc02.tpl"
+	.asciz "mf40_kiz_pc00.tpl"
+	.asciz "mf40_kiz_pc01.tpl"
+	.asciz "pic_pc"
+	.asciz "pc_map%02d"
+	.asciz "mapicon_%02d"
+	.asciz "txt_area01_00"
+	.asciz "txt_area02_00"
+	.asciz "txt_area03_00"
+	.asciz "txt_area04_00"
+	.asciz "txt_area05_00"
+	.asciz "txt_area01_00u"
+	.asciz "txt_area02_00u"
+	.asciz "txt_area03_00u"
+	.asciz "txt_area04_00u"
+	.asciz "txt_area05_00u"
+	.asciz "txt_area01_00o"
+	.asciz "txt_area02_00o"
+	.asciz "txt_area03_00o"
+	.asciz "txt_area04_00o"
+	.asciz "txt_area05_00o"
+	.asciz "txt_area01_00r"
+	.asciz "txt_area02_00r"
+	.asciz "txt_area03_00r"
+	.asciz "txt_area04_00r"
+	.asciz "txt_area05_00r"
+	.asciz "txt_area01_00l"
+	.asciz "txt_area02_00l"
+	.asciz "txt_area03_00l"
+	.asciz "txt_area04_00l"
+	.asciz "txt_area05_00l"
+	.asciz "rlt_lnd"
+	.asciz "landmarklist"
+	.asciz "mapID"
+	.asciz "MNU_relate"
+	.asciz "name"
+	.asciz "txt_area%02d_00"
+	.asciz "txt_area%02d_00u"
+	.asciz "txt_area%02d_00o"
+	.asciz "txt_area%02d_00r"
+	.asciz "txt_area%02d_00l"
+	.asciz "mf40_kiz_pclin_e.tpl"
+	.asciz "mf40_kiz_pclin_d.tpl"
+	.asciz "mf40_kiz_pclin_c.tpl"
+	.asciz "mf40_kiz_pclin_b.tpl"
+	.asciz "mf40_kiz_pclin_a.tpl"
+	.asciz "pic_est%02d_m%02d"
+	.asciz "txt_relate01"
+	.asciz "JNL_relatelist"
+	.asciz "pain1"
+	.asciz "pain_txt1"
+	.asciz "pain_txt2"
+	.asciz "caption%d"
+	.asciz "%su"
+	.asciz "%so"
+	.asciz "%sr"
+	.asciz "%sl"
+	.asciz "txt_relate%02d"
+	.asciz "txt_relate%02du"
+	.asciz "txt_relate%02do"
+	.asciz "txt_relate%02dr"
+	.asciz "txt_relate%02dl"
+	.asciz "txt_relate07"
+	.asciz "mf40_kiz_000line_e00.tpl"
+	.asciz "txt_relate13"
+	.asciz "txt_relate05"
+	.asciz "mf40_kiz_018line_e00.tpl"
+	.asciz "txt_relate03"
+	.asciz "mf40_kiz_045line_e00.tpl"
+	.asciz "txt_relate16"
+	.asciz "mf40_kiz_090line_e00.tpl"
+	.asciz "txt_relate02"
+	.asciz "mf40_kiz_135line_e00.tpl"
+	.asciz "txt_relate15"
+	.asciz "txt_relate04"
+	.asciz "mf40_kiz_162line_e00.tpl"
+	.asciz "none"
+	.asciz "mf40_kiz_000line_d00.tpl"
+	.asciz "mf40_kiz_018line_d00.tpl"
+	.asciz "mf40_kiz_045line_d00.tpl"
+	.asciz "mf40_kiz_090line_d00.tpl"
+	.asciz "mf40_kiz_135line_d00.tpl"
+	.asciz "mf40_kiz_162line_d00.tpl"
+	.asciz "mf40_kiz_000line_c00.tpl"
+	.asciz "mf40_kiz_018line_c00.tpl"
+	.asciz "mf40_kiz_045line_c00.tpl"
+	.asciz "mf40_kiz_090line_c00.tpl"
+	.asciz "mf40_kiz_135line_c00.tpl"
+	.asciz "mf40_kiz_162line_c00.tpl"
+	.asciz "mf40_kiz_000line_b00.tpl"
+	.asciz "mf40_kiz_018line_b00.tpl"
+	.asciz "mf40_kiz_045line_b00.tpl"
+	.asciz "mf40_kiz_090line_b00.tpl"
+	.asciz "mf40_kiz_135line_b00.tpl"
+	.asciz "mf40_kiz_162line_b00.tpl"
+	.asciz "mf40_kiz_000line_a00.tpl"
+	.asciz "mf40_kiz_018line_a00.tpl"
+	.asciz "mf40_kiz_045line_a00.tpl"
+	.asciz "mf40_kiz_090line_a00.tpl"
+	.asciz "mf40_kiz_135line_a00.tpl"
+	.asciz "mf40_kiz_162line_a00.tpl"
+	.asciz "mf40_kiz_000line_e%02d.tpl"
+	.asciz "mf40_kiz_018line_e%02d.tpl"
+	.asciz "mf40_kiz_045line_e%02d.tpl"
+	.asciz "mf40_kiz_090line_e%02d.tpl"
+	.asciz "mf40_kiz_135line_e%02d.tpl"
+	.asciz "mf40_kiz_162line_e%02d.tpl"
+	.asciz "mf40_kiz_000line_d%02d.tpl"
+	.asciz "mf40_kiz_018line_d%02d.tpl"
+	.asciz "mf40_kiz_045line_d%02d.tpl"
+	.asciz "mf40_kiz_090line_d%02d.tpl"
+	.asciz "mf40_kiz_135line_d%02d.tpl"
+	.asciz "mf40_kiz_162line_d%02d.tpl"
+	.asciz "mf40_kiz_000line_c%02d.tpl"
+	.asciz "mf40_kiz_018line_c%02d.tpl"
+	.asciz "mf40_kiz_045line_c%02d.tpl"
+	.asciz "mf40_kiz_090line_c%02d.tpl"
+	.asciz "mf40_kiz_135line_c%02d.tpl"
+	.asciz "mf40_kiz_162line_c%02d.tpl"
+	.asciz "mf40_kiz_000line_b%02d.tpl"
+	.asciz "mf40_kiz_018line_b%02d.tpl"
+	.asciz "mf40_kiz_045line_b%02d.tpl"
+	.asciz "mf40_kiz_090line_b%02d.tpl"
+	.asciz "mf40_kiz_135line_b%02d.tpl"
+	.asciz "mf40_kiz_162line_b%02d.tpl"
+	.asciz "mf40_kiz_000line_a%02d.tpl"
+	.asciz "mf40_kiz_018line_a%02d.tpl"
+	.asciz "mf40_kiz_045line_a%02d.tpl"
+	.asciz "mf40_kiz_090line_a%02d.tpl"
+	.asciz "mf40_kiz_135line_a%02d.tpl"
+	.asciz "mf40_kiz_162line_a%02d.tpl"
+	.asciz "mf40_kiz_win.brlyt"
+	.asciz "mf40_kiz_win_in.brlan"
+	.asciz "mf40_kiz_win_info_in.brlan"
+	.asciz "txt_info03_00"
+	.asciz "txt_info03_01"
+	.asciz "txt_info03_02"
+	.asciz "txt_info03_03"
+	.asciz "txt_info03_04"
+	.asciz "txt_info06_00"
+	.asciz "txt_tit01"
+	.asciz "txt_tit02"
+	.asciz "txt_tit03"
+	.asciz "txt_tit04"
+	.asciz "txt_tit05"
+	.asciz "txt_tit06"
+	.asciz "txt_info07"
+	.asciz "txt_info01"
+	.asciz "txt_info04"
+	.asciz "txt_info05"
+	.asciz "txt_info06_01"
+	.asciz "txt_info02"
+	.asciz "pic_npcicon"
+	.asciz "mf00_com12_face_area01.tpl"
+	.asciz "mf00_com12_face_area02.tpl"
+	.asciz "mf00_com12_face_area03.tpl"
+	.asciz "mf00_com12_face_area04.tpl"
+	.asciz "mf00_com12_face_area05.tpl"
+	.asciz "rlt_age"
+	.asciz "rlt_job"
+	.asciz "range_s"
+	.asciz "range_e"
+	.asciz "/menu/tpl/KizunaFaceData.arc"
+	.asciz "/menu/Kizunagram.arc"
+	.asciz "CKizunagram"
+	.asciz "arc"
+	.asciz "CKizunagram_tex"
+	.balign 4
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053ACD8
+lbl_8053ACD8:
+	# ROM: 0x536DD8
+	.4byte switch_8025BD94
+	.4byte switch_8025BDAC
+	.4byte switch_8025BDC4
+	.4byte switch_8025BDDC
+	.4byte switch_8025BDF4
+	.4byte switch_8025BE0C
+	.4byte switch_8025BE24
+	.4byte switch_8025BE3C
+	.4byte switch_8025BE54
+	.4byte switch_8025BE6C
+	.4byte switch_8025BE84
+	.4byte 0
+
+
+.global __vt__CKizunagram
+__vt__CKizunagram:
+	.4byte __RTTI__CKizunagram
+	.4byte 0
+	.4byte func_8025C4B0
+	.4byte func_80039E28
+	.4byte func_8025D0A8
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CKizunagram_hierarchy
+CKizunagram_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CKizunaInfo
+__vt__CKizunaInfo:
+	.4byte __RTTI__CKizunaInfo
+	.4byte 0
+	.4byte func_8025B630
+
+
+.global __vt__CKizunaLine
+__vt__CKizunaLine:
+	.4byte __RTTI__CKizunaLine
+	.4byte 0
+	.4byte func_8025808C
+
+
+.global __vt__CKizunaCur
+__vt__CKizunaCur:
+	.4byte __RTTI__CKizunaCur
+	.4byte 0
+	.4byte func_80257E18
+
+
+.global __vt__CKizunaRadar
+__vt__CKizunaRadar:
+	.4byte __RTTI__CKizunaRadar
+	.4byte 0
+	.4byte func_80257ABC
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CKizunagram
+__RTTI__CKizunagram:
+	.4byte CKizunagram_typestr
+	.4byte CKizunagram_hierarchy
+
+.global __RTTI__CKizunaInfo
+__RTTI__CKizunaInfo:
+	.4byte CKizunaInfo_typestr
+	.4byte 0
+
+.global __RTTI__CKizunaLine
+__RTTI__CKizunaLine:
+	.4byte CKizunaLine_typestr
+	.4byte 0
+
+.global __RTTI__CKizunaCur
+__RTTI__CKizunaCur:
+	.4byte CKizunaCur_typestr
+	.4byte 0
+
+.global __RTTI__CKizunaRadar
+__RTTI__CKizunaRadar:
+	.4byte CKizunaRadar_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B0D8
+lbl_8066B0D8:
+	# ROM: 0x574F38
+	.4byte 0
+
+
+.global lbl_8066B0DC
+lbl_8066B0DC:
+	# ROM: 0x574F3C
+	.4byte 0x40000000
+
+
+.global lbl_8066B0E0
+lbl_8066B0E0:
+	# ROM: 0x574F40
+	.float -1.0
+
+
+.global lbl_8066B0E4
+lbl_8066B0E4:
+	# ROM: 0x574F44
+	.float 1.0
+
+
+.global lbl_8066B0E8
+lbl_8066B0E8:
+	# ROM: 0x574F48
+	.4byte lbl_80508150
+
+
+.global lbl_8066B0EC
+lbl_8066B0EC:
+	# ROM: 0x574F4C
+	.4byte lbl_8050815C
+
+
+.global lbl_8066B0F0
+lbl_8066B0F0:
+	# ROM: 0x574F50
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066B0F8
+lbl_8066B0F8:
+	# ROM: 0x574F58
+	.4byte 0x40A00000
+
+
+.global lbl_8066B0FC
+lbl_8066B0FC:
+	# ROM: 0x574F5C
+	.float 0.5
+
+
+.global lbl_8066B100
+lbl_8066B100:
+	# ROM: 0x574F60
+	.4byte 0x41E00000
+
+
+.global lbl_8066B104
+lbl_8066B104:
+	# ROM: 0x574F64
+	.4byte 0x40800000
+
+
+.global lbl_8066B108
+lbl_8066B108:
+	# ROM: 0x574F68
+	.4byte 0x42C00000
+
+
+.global lbl_8066B10C
+lbl_8066B10C:
+	# ROM: 0x574F6C
+	.4byte 0x437F0000
+
+
+.global lbl_8066B110
+lbl_8066B110:
+	# ROM: 0x574F70
+	.4byte 0x41880000
+
+
+.global lbl_8066B114
+lbl_8066B114:
+	# ROM: 0x574F74
+	.4byte 0x41100000
+
+
+.global lbl_8066B118
+lbl_8066B118:
+	# ROM: 0x574F78
+	.4byte 0xC1A00000
+
+
+.global lbl_8066B11C
+lbl_8066B11C:
+	# ROM: 0x574F7C
+	.4byte 0x41A00000
+
+
+.global lbl_8066B120
+lbl_8066B120:
+	# ROM: 0x574F80
+	.4byte 0x40400000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806670D8
+lbl_806670D8:
+	.skip 0x8
+.global lbl_806670E0
+lbl_806670E0:
+	.skip 0x8
+.global lbl_806670E8
+lbl_806670E8:
+	.skip 0x8
+.global lbl_806670F0
+lbl_806670F0:
+	.skip 0x8
+.global lbl_806670F8
+lbl_806670F8:
+	.skip 0x8
+.global lbl_80667100
+lbl_80667100:
+	.skip 0x8
+.global lbl_80667108
+lbl_80667108:
+	.skip 0x8
+.global lbl_80667110
+lbl_80667110:
+	.skip 0x8
+.global lbl_80667118
+lbl_80667118:
+	.skip 0x8
+.global lbl_80667120
+lbl_80667120:
+	.skip 0x8
+.global lbl_80667128
+lbl_80667128:
+	.skip 0x8
+.global lbl_80667130
+lbl_80667130:
+	.skip 0x8
+.global lbl_80667138
+lbl_80667138:
+	.skip 0x8
+.global lbl_80667140
+lbl_80667140:
+	.skip 0x8
+.global lbl_80667148
+lbl_80667148:
+	.skip 0x2
+.global lbl_8066714A
+lbl_8066714A:
+	.skip 0x6
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001747C
 lbl_8001747C:
@@ -1353,7 +1853,7 @@ lbl_800175D8:
 	.4byte 0x00080000
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8025C3DC
 	.4byte 0x000000D4

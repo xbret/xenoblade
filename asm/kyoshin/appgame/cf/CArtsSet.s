@@ -250,7 +250,170 @@ func_80153EF0:
 /* 80153EF8 0011D4B8  38 63 00 10 */	addi r3, r3, 0x10
 /* 80153EFC 0011D4BC  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804FD1A8
+lbl_804FD1A8:
+	# ROM: 0x4F92A8
+	.float 6.5
+	.float 8.0
+	.float 10.0
+	.4byte 0x41480000
+	.4byte 0x41700000
+	.4byte 0
+
+
+.global lbl_804FD1C0
+lbl_804FD1C0:
+	# ROM: 0x4F92C0
+	.4byte 0x40400000
+	.4byte 0x40800000
+	.4byte 0x40B00000
+	.4byte 0x40E00000
+	.4byte 0x41080000
+	.float 10.0
+
+
+.global lbl_804FD1D8
+lbl_804FD1D8:
+	# ROM: 0x4F92D8
+	.float 1.0
+	.4byte 0x3F99999A
+	.float 1.5
+	.4byte 0x3FE66666
+	.4byte 0x40066666
+	.4byte 0x4019999A
+
+
+.global lbl_804FD1F0
+lbl_804FD1F0:
+	# ROM: 0x4F92F0
+	.4byte 0
+	.4byte 0
+	.4byte 0x40400000
+	.4byte 0x40A00000
+	.float 10.0
+	.4byte 0x41700000
+
+
+.global lbl_804FD208
+lbl_804FD208:
+	# ROM: 0x4F9308
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000100
+	.4byte 0x00000020
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000020
+	.4byte 0x00000100
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000020
+	.4byte 0x00000100
+
+
+.global cf_CAttackSet_typestr
+cf_CAttackSet_typestr:
+	.asciz "cf::CAttackSet"
+	.balign 4
+
+.global cf__sAttackSet_typestr
+cf__sAttackSet_typestr:
+	.asciz "cf::_sAttackSet"
+
+.global cf_CArtsSet_typestr
+cf_CArtsSet_typestr:
+	.asciz "cf::CArtsSet"
+	.balign 4
+
+.global cf__sArtsSet_typestr
+cf__sArtsSet_typestr:
+	.asciz "cf::_sArtsSet"
+	.balign 4
+
+.global cf_CArtsParam_typestr
+cf_CArtsParam_typestr:
+	.asciz "cf::CArtsParam"
+	.balign 4
+
+.global cf_CAttackParam_typestr
+cf_CAttackParam_typestr:
+	.asciz "cf::CAttackParam"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CAttackSet
+__vt__cf_CAttackSet:
+	.4byte __RTTI__cf_CAttackSet
+	.4byte 0
+	.4byte func_80153E88
+
+.global cf_CAttackSet_hierarchy
+cf_CAttackSet_hierarchy:
+	.4byte __RTTI__cf__sAttackSet
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CArtsSet
+__vt__cf_CArtsSet:
+	.4byte __RTTI__cf_CArtsSet
+	.4byte 0
+	.4byte func_80153CFC
+
+.global cf_CArtsSet_hierarchy
+cf_CArtsSet_hierarchy:
+	.4byte __RTTI__cf__sArtsSet
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf__sArtsSet
+__vt__cf__sArtsSet:
+	.4byte __RTTI__cf__sArtsSet
+	.4byte 0
+	.4byte func_80153C30
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CAttackSet
+__RTTI__cf_CAttackSet:
+	.4byte cf_CAttackSet_typestr
+	.4byte cf_CAttackSet_hierarchy
+
+.global __RTTI__cf__sAttackSet
+__RTTI__cf__sAttackSet:
+	.4byte cf__sAttackSet_typestr
+	.4byte 0
+
+.global __RTTI__cf_CArtsSet
+__RTTI__cf_CArtsSet:
+	.4byte cf_CArtsSet_typestr
+	.4byte cf_CArtsSet_hierarchy
+
+.global __RTTI__cf__sArtsSet
+__RTTI__cf__sArtsSet:
+	.4byte cf__sArtsSet_typestr
+	.4byte 0
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000D32C
 lbl_8000D32C:
@@ -268,7 +431,7 @@ lbl_8000D33C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte __ct__cf__sArtsSet
 	.4byte 0x00000044

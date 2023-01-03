@@ -1457,7 +1457,7 @@ lbl_80668A60:
 	.asciz "shake"
 	.balign 4
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800078EC
 lbl_800078EC:
@@ -1560,7 +1560,7 @@ lbl_80007984:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_800602B8
 	.4byte 0x00000038

@@ -1077,3 +1077,23 @@ lbl_8056CAA8:
 	.4byte Attach__Q34nw4r3g3d12AnmObjMatClrFiPQ34nw4r3g3d15AnmObjMatClrRes
 	.4byte Detach__Q34nw4r3g3d12AnmObjMatClrFi
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjMatClrFv
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C348
+lbl_8066C348:
+	# ROM: 0x5761A8
+	.4byte 0
+
+
+.global lbl_8066C34C
+lbl_8066C34C:
+	# ROM: 0x5761AC
+	.float 1.0
+
+
+.global lbl_8066C350
+lbl_8066C350:
+	# ROM: 0x5761B0
+	.4byte 0x43300000
+	.4byte 0x80000000

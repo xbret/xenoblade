@@ -5178,7 +5178,223 @@ func_8009D5FC:
 /* 8009D5FC 00066BBC  80 6D A6 08 */	lwz r3, lbl_80666788@sda21(r13)
 /* 8009D600 00066BC0  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F7490
+lbl_804F7490:
+	.asciz "1.2.3"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CtrlRemote
+__vt__cf_CtrlRemote:
+	.4byte __RTTI__cf_CtrlRemote
+	.4byte 0
+	.4byte func_8009691C
+	.4byte func_80098CB8
+	.4byte func_8009C860
+	.4byte func_8009C87C
+	.4byte func_80096F9C
+	.4byte func_80096F90
+	.4byte func_80096F84
+	.4byte func_80096F78
+	.4byte func_80096F6C
+	.4byte func_80096F60
+	.4byte func_80096F54
+	.4byte func_80096F48
+	.4byte func_80096F3C
+	.4byte func_800888A0
+	.4byte func_80096F24
+	.4byte func_80096F18
+	.4byte func_80096F0C
+	.4byte func_80096F00
+	.4byte func_80096EF4
+	.4byte func_80096EE8
+	.4byte func_800D1F0C
+	.4byte func_8009C6BC
+	.4byte func_800D11B0
+	.4byte func_800987A0
+	.4byte func_800987EC
+	.4byte func_800987F8
+	.4byte func_80098800
+	.4byte func_80098808
+	.4byte func_800D2A5C
+	.4byte func_800D2D64
+	.4byte func_80098810
+	.4byte func_80098A04
+	.4byte func_800D34D4
+	.4byte func_80098EF8
+	.4byte func_80097A5C
+	.4byte func_80097C74
+	.4byte func_80097DFC
+	.4byte func_80098AF0
+	.4byte func_80098B64
+	.4byte func_8009A1DC
+	.4byte func_8009A4AC
+	.4byte func_8009AE80
+	.4byte func_8009B788
+	.4byte func_8009BD14
+	.4byte func_8009C1BC
+	.4byte func_80096F30
+
+
+.global lbl_8052B818
+lbl_8052B818:
+	# ROM: 0x527918
+	.4byte 0x000000FF
+	.4byte 0x0000FF00
+	.4byte 0x00FF0000
+	.4byte 0xFF000000
+
+
+.global lbl_8052B828
+lbl_8052B828:
+	# ROM: 0x527928
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0x00000004
+	.4byte 0x00000008
+	.4byte 0x00000010
+	.4byte 0x00000020
+	.4byte 0x00000040
+	.4byte 0x00000080
+	.4byte 0x00000100
+	.4byte 0x00000200
+	.4byte 0x00000400
+	.4byte 0x00000800
+	.4byte 0x00001000
+	.4byte 0x00002000
+	.4byte 0x00004000
+	.4byte 0x00008000
+	.4byte 0x00010000
+	.4byte 0x00020000
+	.4byte 0x00040000
+	.4byte 0x00080000
+	.4byte 0x00100000
+	.4byte 0x00200000
+	.4byte 0x00400000
+	.4byte 0x00800000
+	.4byte 0x01000000
+	.4byte 0x02000000
+	.4byte 0x04000000
+	.4byte 0x08000000
+	.4byte 0x10000000
+	.4byte 0x20000000
+	.4byte 0x40000000
+	.4byte 0x80000000
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global lbl_80664568
+lbl_80664568:
+	# ROM: 0x570148
+	.4byte 0x0000FFFF
+	.4byte 0xFFFF0000
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80668FB8
+lbl_80668FB8:
+	# ROM: 0x572E18
+	.4byte 0
+
+
+.global lbl_80668FBC
+lbl_80668FBC:
+	# ROM: 0x572E1C
+	.4byte 0xC25C0000
+
+
+.global lbl_80668FC0
+lbl_80668FC0:
+	# ROM: 0x572E20
+	.4byte 0x425C0000
+	.4byte 0
+
+
+.global lbl_80668FC8
+lbl_80668FC8:
+	# ROM: 0x572E28
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80668FD0
+lbl_80668FD0:
+	# ROM: 0x572E30
+	.float 100.0
+
+
+.global lbl_80668FD4
+lbl_80668FD4:
+	# ROM: 0x572E34
+	.4byte 0x3CC90FDB
+
+
+.global lbl_80668FD8
+lbl_80668FD8:
+	# ROM: 0x572E38
+	.4byte 0x3ECCCCCD
+
+
+.global lbl_80668FDC
+lbl_80668FDC:
+	# ROM: 0x572E3C
+	.4byte 0x43610000
+
+
+.global lbl_80668FE0
+lbl_80668FE0:
+	# ROM: 0x572E40
+	.4byte 0x420C0000
+
+
+.global lbl_80668FE4
+lbl_80668FE4:
+	# ROM: 0x572E44
+	.4byte 0x430C0000
+
+
+.global lbl_80668FE8
+lbl_80668FE8:
+	# ROM: 0x572E48
+	.4byte 0xC20C0000
+
+
+.global lbl_80668FEC
+lbl_80668FEC:
+	# ROM: 0x572E4C
+	.4byte 0xC30C0000
+
+
+.global lbl_80668FF0
+lbl_80668FF0:
+	# ROM: 0x572E50
+	.float 1.0
+
+
+.global lbl_80668FF4
+lbl_80668FF4:
+	# ROM: 0x572E54
+	.4byte 0x3F4F5C29
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80575040
+lbl_80575040:
+	.skip 0x1258
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666780
+lbl_80666780:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80008EA0
 lbl_80008EA0:
@@ -5327,7 +5543,7 @@ lbl_80008FB4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80098BE4
 	.4byte 0x000000D4

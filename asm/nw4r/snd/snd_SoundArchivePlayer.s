@@ -2994,3 +2994,18 @@ lbl_8056E500:
 	.4byte 0
 	.4byte func_8041DCBC
 	.4byte NoteOn__Q44nw4r3snd18SoundArchivePlayer17SeqNoteOnCallbackFPQ44nw4r3snd6detail9SeqPlayeriRCQ44nw4r3snd6detail10NoteOnInfo
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C848
+lbl_8066C848:
+	# ROM: 0x5766A8
+	.4byte 0x42FE0000
+	.4byte 0
+
+
+.global lbl_8066C850
+lbl_8066C850:
+	# ROM: 0x5766B0
+	.4byte 0x43300000
+	.4byte 0x80000000

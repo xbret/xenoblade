@@ -199,3 +199,21 @@ MWSFSVM_GotoIdleBorder:
 /* 8039DDC4 00367384  7C 08 03 A6 */	mtlr r0
 /* 8039DDC8 00367388  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039DDCC 0036738C  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80602790
+lbl_80602790:
+	.skip 0x4
+.global lbl_80602794
+lbl_80602794:
+	.skip 0x4
+.global lbl_80602798
+lbl_80602798:
+	.skip 0x4
+.global lbl_8060279C
+lbl_8060279C:
+	.skip 0x4
+.global lbl_806027A0
+lbl_806027A0:
+	.skip 0x100

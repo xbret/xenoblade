@@ -4929,7 +4929,441 @@ func_8012215C:
 /* 8012215C 000EB71C  38 63 FF AC */	addi r3, r3, -84
 /* 80122160 000EB720  4B FF ED 94 */	b func_80120EF4
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F9F18
+lbl_804F9F18:
+	# ROM: 0x4F6018
+	.4byte 0xBE4CCCCD
+	.4byte 0x3FE7AE14
+	.4byte 0xC3822148
+	.4byte 0xBE3851EC
+	.4byte 0x3FE147AE
+	.4byte 0xC3A92666
+
+.global CArrow3D_typestr
+CArrow3D_typestr:
+	.asciz "CArrow3D"
+	.balign 4
+
+.global CTTask_CArrow3D_typestr
+CTTask_CArrow3D_typestr:
+	.asciz "CTTask<CArrow3D>"
+	.balign 4
+
+.global CMenuSymbolMark_typestr
+CMenuSymbolMark_typestr:
+	.asciz "CMenuSymbolMark"
+
+
+.global lbl_804F9F60
+lbl_804F9F60:
+	.asciz "mf70_cf10_dst.brlyt"
+	.asciz "txt_km"
+	.balign 4
+	.asciz "pic_other"
+	.asciz "pic_qest"
+	.asciz "qst_genre"
+	.asciz "scmarkerlist"
+	.asciz "SYS_iconlist"
+	.asciz "CMenuSymbolMark"
+	.asciz "mf70_cf10_tagicon.brlyt"
+	.asciz "filename_1"
+	.asciz "%s.tpl"
+	.asciz "pic_icon"
+	.asciz "type"
+	.asciz "map"
+	.asciz "marker"
+	.asciz "npc_id"
+	.asciz "quest_no"
+	.asciz "relate_no"
+	.asciz "FLD_valpoplist"
+	.asciz "itm1ID"
+	.asciz "posX"
+	.asciz "posY"
+	.asciz "posZ"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80530508
+lbl_80530508:
+	# ROM: 0x52C608
+	.float 1.0
+	.float 1.0
+	.float 1.0
+	.4byte 0x3F666666
+	.4byte 0x3F333333
+	.4byte 0x3F666666
+
+
+.global __vt__CArrow3D
+__vt__CArrow3D:
+	.4byte __RTTI__CArrow3D
+	.4byte 0
+	.4byte func_80120EF4
+	.4byte CChildListNode_Reset
+	.4byte func_80121F14
+	.4byte func_80121EA4
+	.4byte func_80121EA0
+	.4byte func_801220F4
+	.4byte func_80043F20
+	.4byte __RTTI__CArrow3D
+	.4byte 0xFFFFFFAC
+	.4byte func_8012215C
+	.4byte func_80122154
+	.4byte func_80120F50
+
+.global CArrow3D_hierarchy
+CArrow3D_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000054
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_CArrow3D
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_CArrow3D
+__vt__CTTask_CArrow3D:
+	.4byte __RTTI__CTTask_CArrow3D
+	.4byte 0
+	.4byte func_8011DBE0
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_801220AC
+	.4byte func_801220F4
+	.4byte func_80043F20
+
+.global CTTask_CArrow3D_hierarchy
+CTTask_CArrow3D_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CMenuSymbolMark
+__vt__CMenuSymbolMark:
+	.4byte __RTTI__CMenuSymbolMark
+	.4byte 0
+	.4byte func_8011D9C0
+	.4byte CChildListNode_Reset
+	.4byte func_8011DA34
+	.4byte func_8011DC38
+	.4byte func_8011DD04
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuSymbolMark
+	.4byte 0xFFFFFFA8
+	.4byte func_8012213C
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuSymbolMark
+	.4byte 0xFFFFFFA4
+	.4byte func_8012214C
+	.4byte func_80122144
+	.4byte func_8011E3C0
+
+.global CMenuSymbolMark_hierarchy
+CMenuSymbolMark_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000005C
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_805306C4
+lbl_805306C4:
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+
+
+.global lbl_805306E0
+lbl_805306E0:
+	.asciz "g3d_restex_ac.h"
+
+
+.global lbl_805306F0
+lbl_805306F0:
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+
+
+.global lbl_8053070C
+lbl_8053070C:
+	.asciz "g3d_respltt_ac.h"
+	.balign 4
+
+
+.global lbl_80530720
+lbl_80530720:
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+
+
+.global lbl_8053073C
+lbl_8053073C:
+	.asciz "g3d_respltt_ac.h"
+	.balign 4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CArrow3D
+__RTTI__CArrow3D:
+	.4byte CArrow3D_typestr
+	.4byte CArrow3D_hierarchy
+
+.global __RTTI__CTTask_CArrow3D
+__RTTI__CTTask_CArrow3D:
+	.4byte CTTask_CArrow3D_typestr
+	.4byte CTTask_CArrow3D_hierarchy
+
+.global __RTTI__CMenuSymbolMark
+__RTTI__CMenuSymbolMark:
+	.4byte CMenuSymbolMark_typestr
+	.4byte CMenuSymbolMark_hierarchy
+
+
+.global lbl_80664788
+lbl_80664788:
+	.asciz "ARROW"
+	.balign 4
+
+
+.global lbl_80664790
+lbl_80664790:
+	.asciz "ResTex"
+	.balign 4
+
+
+.global lbl_80664798
+lbl_80664798:
+	# ROM: 0x570378
+	.4byte 0x72656600
+	.4byte 0
+
+
+.global lbl_806647A0
+lbl_806647A0:
+	.asciz "ResPltt"
+
+
+.global lbl_806647A8
+lbl_806647A8:
+	# ROM: 0x570388
+	.4byte 0x72656600
+
+
+.global lbl_806647AC
+lbl_806647AC:
+	# ROM: 0x57038C
+	.4byte 0x72656600
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669998
+lbl_80669998:
+	# ROM: 0x5737F8
+	.4byte 0x000000FF
+
+
+.global lbl_8066999C
+lbl_8066999C:
+	# ROM: 0x5737FC
+	.4byte 0
+
+
+.global lbl_806699A0
+lbl_806699A0:
+	# ROM: 0x573800
+	.float 10.0
+
+
+.global lbl_806699A4
+lbl_806699A4:
+	# ROM: 0x573804
+	.4byte 0x41A00000
+
+
+.global lbl_806699A8
+lbl_806699A8:
+	# ROM: 0x573808
+	.4byte 0x41F00000
+
+
+.global lbl_806699AC
+lbl_806699AC:
+	# ROM: 0x57380C
+	.4byte 0x42700000
+
+
+.global lbl_806699B0
+lbl_806699B0:
+	# ROM: 0x573810
+	.float 1.0
+
+
+.global lbl_806699B4
+lbl_806699B4:
+	# ROM: 0x573814
+	.4byte 0x44610000
+
+
+.global lbl_806699B8
+lbl_806699B8:
+	# ROM: 0x573818
+	.4byte 0x3FA66666
+
+
+.global lbl_806699BC
+lbl_806699BC:
+	# ROM: 0x57381C
+	.4byte 0x3FAAAAAB
+
+
+.global lbl_806699C0
+lbl_806699C0:
+	# ROM: 0x573820
+	.4byte 0x43340000
+
+
+.global lbl_806699C4
+lbl_806699C4:
+	# ROM: 0x573824
+	.4byte 0x43A00000
+
+
+.global lbl_806699C8
+lbl_806699C8:
+	# ROM: 0x573828
+	.4byte 0x43600000
+
+
+.global lbl_806699CC
+lbl_806699CC:
+	# ROM: 0x57382C
+	.float -1.0
+
+
+.global lbl_806699D0
+lbl_806699D0:
+	# ROM: 0x573830
+	.4byte 0x42000000
+
+
+.global lbl_806699D4
+lbl_806699D4:
+	# ROM: 0x573834
+	.4byte 0xC3600000
+
+
+.global lbl_806699D8
+lbl_806699D8:
+	# ROM: 0x573838
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_806699E0
+lbl_806699E0:
+	# ROM: 0x573840
+	.4byte 0x3CC90FDB
+
+
+.global lbl_806699E4
+lbl_806699E4:
+	# ROM: 0x573844
+	.4byte 0x4222F983
+
+
+.global lbl_806699E8
+lbl_806699E8:
+	# ROM: 0x573848
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_806699EC
+lbl_806699EC:
+	# ROM: 0x57384C
+	.4byte 0x447A0000
+
+
+.global lbl_806699F0
+lbl_806699F0:
+	# ROM: 0x573850
+	.4byte 0x437F0000
+
+
+.global lbl_806699F4
+lbl_806699F4:
+	# ROM: 0x573854
+	.4byte 0xC3C80000
+
+
+.global lbl_806699F8
+lbl_806699F8:
+	# ROM: 0x573858
+	.4byte 0xBF000000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806668C0
+lbl_806668C0:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000BB10
 lbl_8000BB10:
@@ -5061,7 +5495,7 @@ lbl_8000BC08:
 	.4byte 0x08080000
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8011DA34
 	.4byte 0x000001AC

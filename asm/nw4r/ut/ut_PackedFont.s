@@ -1478,3 +1478,11 @@ lbl_8056E8FC:
 	.4byte GetGlyph__Q34nw4r2ut10PackedFontCFPQ34nw4r2ut5GlyphUs
 	.4byte HasGlyph__Q44nw4r2ut6detail15ArchiveFontBaseCFUs
 	.4byte GetEncoding__Q44nw4r2ut6detail11ResFontBaseCFv
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C938
+lbl_8066C938:
+	# ROM: 0x576798
+	.4byte 0x43300000
+	.4byte 0x80000000

@@ -653,3 +653,18 @@ lbl_8051CD10:
 lbl_8051CD14:
 	.asciz "1060102: Internal Error: adxm_goto_mwidle_border"
 	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805F7010
+lbl_805F7010:
+	.skip 0x8028
+.global lbl_805FF038
+lbl_805FF038:
+	.skip 0x4
+.global lbl_805FF03C
+lbl_805FF03C:
+	.skip 0x2320
+.global adxm_wii_framework
+adxm_wii_framework:
+	.skip 0x4

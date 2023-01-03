@@ -1303,3 +1303,9 @@ lbl_80520B6C:
 	.asciz "E05070813: please set pitch by mwPlyFxSetOutBufPitchHeight()."
 	.balign 4
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8061D498
+lbl_8061D498:
+	.skip 0x270

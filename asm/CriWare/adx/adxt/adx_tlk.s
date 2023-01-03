@@ -2525,3 +2525,27 @@ lbl_80519990:
 	.asciz "E04041901 adxt_GetDecDtLen: parameter error"
 	.asciz "E04041902 ADXT_SetCbDec: parameter error"
 	.asciz "E02080860 adxt_SetKeyString: parameter error"
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E8570
+lbl_805E8570:
+	.skip 0x20
+.global lbl_805E8590
+lbl_805E8590:
+	.skip 0x8
+.global lbl_805E8598
+lbl_805E8598:
+	.skip 0x4
+.global lbl_805E859C
+lbl_805E859C:
+	.skip 0x4
+.global lbl_805E85A0
+lbl_805E85A0:
+	.skip 0x4
+.global lbl_805E85A4
+lbl_805E85A4:
+	.skip 0x4
+.global lbl_805E85A8
+lbl_805E85A8:
+	.skip 0x48

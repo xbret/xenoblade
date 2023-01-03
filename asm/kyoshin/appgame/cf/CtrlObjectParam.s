@@ -1719,7 +1719,92 @@ func_8009ECFC:
 /* 8009ED00 000682C0  B0 64 00 50 */	sth r3, 0x50(r4)
 /* 8009ED04 000682C4  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CObjectParam
+__vt__cf_CObjectParam:
+	.4byte __RTTI__cf_CObjectParam
+	.4byte 0
+	.4byte func_8003DC64
+	.4byte func_8003CB58
+	.4byte func_8003DD34
+	.4byte func_800A34A8
+	.4byte func_8009489C
+	.4byte func_800A349C
+	.4byte func_80086B4C
+	.4byte func_8003CB20
+	.4byte func_8003D98C
+	.4byte func_8003D8C0
+	.4byte func_8003D7B0
+	.4byte func_800A3494
+	.4byte func_800A3488
+	.4byte func_8003C7F8
+	.4byte func_8003C2EC
+	.4byte func_800A34B4
+	.4byte func_80080640
+	.4byte func_8003E664
+	.4byte func_8003DC74
+
+
+.global __vt__cf_CObjectState
+__vt__cf_CObjectState:
+	.4byte __RTTI__cf_CObjectState
+	.4byte 0
+	.4byte func_8003DC64
+	.4byte func_8003CB58
+	.4byte func_8003DD34
+	.4byte func_800A34A8
+	.4byte func_8009489C
+	.4byte func_800A349C
+	.4byte func_80086B4C
+	.4byte func_8003CB20
+	.4byte func_8003D98C
+	.4byte func_8003D8C0
+	.4byte func_8003D7B0
+	.4byte func_800A3494
+	.4byte func_800A3488
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80668FF8
+lbl_80668FF8:
+	# ROM: 0x572E58
+	.4byte 0x3C23D70A
+
+
+.global lbl_80668FFC
+lbl_80668FFC:
+	# ROM: 0x572E5C
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_80669000
+lbl_80669000:
+	# ROM: 0x572E60
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80669008
+lbl_80669008:
+	# ROM: 0x572E68
+	.4byte 0x3FB33333
+
+
+.global lbl_8066900C
+lbl_8066900C:
+	# ROM: 0x572E6C
+	.float 1.5
+
+
+.global lbl_80669010
+lbl_80669010:
+	# ROM: 0x572E70
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80008FBC
 lbl_80008FBC:
@@ -1787,7 +1872,7 @@ lbl_8000901C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8009D604
 	.4byte 0x00000128

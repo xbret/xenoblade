@@ -590,3 +590,30 @@ lbl_8056E5D0:
 	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail9StrmSoundFv
 	.4byte UpdateMoveValue__Q44nw4r3snd6detail9StrmSoundFv
 	.4byte UpdateParam__Q44nw4r3snd6detail9StrmSoundFv
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C888
+lbl_8066C888:
+	# ROM: 0x5766E8
+	.4byte 0
+
+
+.global lbl_8066C88C
+lbl_8066C88C:
+	# ROM: 0x5766EC
+	.float 1.0
+
+
+.global lbl_8066C890
+lbl_8066C890:
+	# ROM: 0x5766F0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667E00
+lbl_80667E00:
+	.skip 0x8

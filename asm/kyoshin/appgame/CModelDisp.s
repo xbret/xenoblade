@@ -1201,7 +1201,135 @@ func_801FCDB4:
 /* 801FCE68 001C6428  38 21 00 10 */	addi r1, r1, 0x10
 /* 801FCE6C 001C642C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_80503428
+lbl_80503428:
+	.4byte 0x00000010
+	.4byte 0x00100000
+	.4byte 0x00200000
+
+.global lbl_80503434
+lbl_80503434:
+	.4byte 0x00000010
+	.4byte 0x00100000
+	.4byte 0x00200000
+
+.global CModelDisp_typestr
+CModelDisp_typestr:
+	.asciz "CModelDisp"
+	.balign 4
+
+
+.global lbl_8050344C
+lbl_8050344C:
+	.asciz "BBB"
+	.asciz "FFF"
+	.asciz "AAA"
+	.asciz "core"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CModelDisp
+__vt__CModelDisp:
+	.4byte __RTTI__CModelDisp
+	.4byte 0
+	.4byte func_801FBF78
+	.4byte func_801FCBF4
+	.4byte func_800550D8
+	.4byte func_800550DC
+	.4byte func_800550E0
+	.4byte func_800550E4
+	.4byte func_800554D8
+	.4byte func_800554D0
+	.4byte func_801FCDB4
+
+.global CModelDisp_hierarchy
+CModelDisp_hierarchy:
+	.4byte __RTTI__IActParamEvent
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__CModelDisp
+__RTTI__CModelDisp:
+	.4byte CModelDisp_typestr
+	.4byte CModelDisp_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066AAA8
+lbl_8066AAA8:
+	# ROM: 0x574908
+	.float 1.0
+
+
+.global lbl_8066AAAC
+lbl_8066AAAC:
+	# ROM: 0x57490C
+	.4byte 0
+
+
+.global lbl_8066AAB0
+lbl_8066AAB0:
+	# ROM: 0x574910
+	.float 1.5
+
+
+.global lbl_8066AAB4
+lbl_8066AAB4:
+	# ROM: 0x574914
+	.4byte 0x40A00000
+
+
+.global lbl_8066AAB8
+lbl_8066AAB8:
+	# ROM: 0x574918
+	.float 0.2
+
+
+.global lbl_8066AABC
+lbl_8066AABC:
+	# ROM: 0x57491C
+	.4byte 0xBF333333
+
+
+.global lbl_8066AAC0
+lbl_8066AAC0:
+	# ROM: 0x574920
+	.4byte 0xC0000000
+
+
+.global lbl_8066AAC4
+lbl_8066AAC4:
+	# ROM: 0x574924
+	.float -1.0
+
+
+.global lbl_8066AAC8
+lbl_8066AAC8:
+	# ROM: 0x574928
+	.4byte 0x3E99999A
+
+
+.global lbl_8066AACC
+lbl_8066AACC:
+	# ROM: 0x57492C
+	.float 0.25
+
+
+.global lbl_8066AAD0
+lbl_8066AAD0:
+	# ROM: 0x574930
+	.4byte 0x3DCCCCCD
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800126F8
 lbl_800126F8:
@@ -1308,7 +1436,7 @@ lbl_800127DC:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801FBDC8
 	.4byte 0x000000F0

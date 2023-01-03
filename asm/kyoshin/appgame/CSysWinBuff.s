@@ -472,7 +472,112 @@ func_80274B20:
 func_80274B24:
 /* 80274B24 0023E0E4  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CSysWinBuff_typestr
+CSysWinBuff_typestr:
+	.asciz "CSysWinBuff"
+
+
+.global lbl_8050A244
+lbl_8050A244:
+	.asciz "/common/jp/bdat_mes.bin"
+	.asciz "help"
+	.asciz "MNU_buff"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CSysWinBuff
+__vt__CSysWinBuff:
+	.4byte __RTTI__CSysWinBuff
+	.4byte 0
+	.4byte func_802744D4
+	.4byte CChildListNode_Reset
+	.4byte func_80274548
+	.4byte func_80274684
+	.4byte func_80274704
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CSysWinBuff
+	.4byte 0xFFFFFF94
+	.4byte func_80274B08
+	.4byte func_80039E28
+	.4byte func_80274B00
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CSysWinBuff
+	.4byte 0xFFFFFF90
+	.4byte func_80274B18
+	.4byte func_80274B10
+	.4byte func_802748B0
+	.4byte func_80274A84
+
+.global CSysWinBuff_hierarchy
+CSysWinBuff_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000070
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CSysWinBuff
+__RTTI__CSysWinBuff:
+	.4byte CSysWinBuff_typestr
+	.4byte CSysWinBuff_hierarchy
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806671D0
+lbl_806671D0:
+	.skip 0x4
+.global lbl_806671D4
+lbl_806671D4:
+	.skip 0x4
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001840C
 lbl_8001840C:
@@ -541,7 +646,7 @@ lbl_800184B8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802744D4
 	.4byte 0x00000074

@@ -35,3 +35,12 @@ RNAERR_CallErrFunc:
 /* 80399008 003625C8  7C 08 03 A6 */	mtlr r0
 /* 8039900C 003625CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80399010 003625D0  4E 80 00 20 */	blr
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805F60B8
+lbl_805F60B8:
+	.skip 0x4
+.global lbl_805F60BC
+lbl_805F60BC:
+	.skip 0x104

@@ -390,7 +390,60 @@ func_802A8B6C:
 /* 802A8BFC 002721BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A8C00 002721C0  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CVS_THREAD_REVIVE_typestr
+cf_CVS_THREAD_REVIVE_typestr:
+	.asciz "cf::CVS_THREAD_REVIVE"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053D428
+lbl_8053D428:
+	# ROM: 0x539528
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A87D4
+
+.global lbl_8053D434
+lbl_8053D434:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A8904
+
+.global lbl_8053D440
+lbl_8053D440:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A8A00
+
+
+.global __vt__cf_CVS_THREAD_REVIVE
+__vt__cf_CVS_THREAD_REVIVE:
+	.4byte __RTTI__cf_CVS_THREAD_REVIVE
+	.4byte 0
+	.4byte func_802A3B50
+	.4byte func_802A8A48
+	.4byte func_802A8AC0
+	.4byte func_802A1EA0
+	.4byte func_802A3740
+
+.global cf_CVS_THREAD_REVIVE_hierarchy
+cf_CVS_THREAD_REVIVE_hierarchy:
+	.4byte __RTTI__cf_CVS_THREAD
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CVS_THREAD_REVIVE
+__RTTI__cf_CVS_THREAD_REVIVE:
+	.4byte cf_CVS_THREAD_REVIVE_typestr
+	.4byte cf_CVS_THREAD_REVIVE_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001AE3C
 lbl_8001AE3C:
@@ -437,7 +490,7 @@ lbl_8001AE90:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A86CC
 	.4byte 0x00000108

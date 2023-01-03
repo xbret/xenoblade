@@ -2486,3 +2486,30 @@ lbl_8056CD18:
 	.4byte GetWeight__Q34nw4r3g3d9AnmObjChrCFi
 	.4byte 0
 	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C388
+lbl_8066C388:
+	# ROM: 0x5761E8
+	.4byte 0
+
+
+.global lbl_8066C38C
+lbl_8066C38C:
+	# ROM: 0x5761EC
+	.float 1.0
+
+
+.global lbl_8066C390
+lbl_8066C390:
+	# ROM: 0x5761F0
+	.4byte 0x7FC00000
+	.4byte 0
+
+
+.global lbl_8066C398
+lbl_8066C398:
+	# ROM: 0x5761F8
+	.4byte 0x43300000
+	.4byte 0x80000000

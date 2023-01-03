@@ -2649,7 +2649,141 @@ func_802352A8:
 /* 80235704 001FECC4  4E 80 00 20 */	blr 
 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CArtsList_typestr
+CArtsList_typestr:
+	.asciz "CArtsList"
+	.balign 4
+
+
+.global lbl_8050636C
+lbl_8050636C:
+	.asciz "mf00_reg00_curs01.brlyt"
+	.asciz "mf00_reg00_curs01_roop.brlan"
+	.asciz "mf00_reg00_curs01_on.brlan"
+	.asciz "MNU_battle"
+	.asciz "name"
+	.asciz "txt_rd_ap"
+	.asciz "%d%s"
+	.asciz "txt_ap00"
+	.asciz "nul_01"
+	.asciz "pic_arrow00_l01"
+	.asciz "pic_arrow00_r01"
+	.asciz "nul_pc"
+	.asciz "nul_proportion"
+	.asciz "pic_pcbs01"
+	.asciz "pic_pcbs02"
+	.asciz "icon_type2"
+	.asciz "pic_face00"
+	.asciz "tag_icon"
+	.asciz "pic_face01"
+	.asciz "pic_face02"
+	.asciz "txt_pt00"
+	.asciz "mf15_arts22_cursor.brlyt"
+	.asciz "mf15_arts22_cursor_roop.brlan"
+	.asciz "mf15_arts22_cursor_on.brlan"
+	.asciz "pic_arrow_o00"
+	.asciz "pic_arrow_u00"
+	.asciz "mf00_reg00_curs02.brlyt"
+	.asciz "mf00_reg00_curs02_roop.brlan"
+	.asciz "mf00_reg00_curs02_on.brlan"
+	.asciz "pc_arts"
+	.asciz "icon"
+	.asciz "icon_base"
+	.asciz "arm_type"
+	.asciz "pic_arts00"
+	.asciz "pic_icon00"
+	.asciz "idx"
+	.asciz "pic_arrow_l00"
+	.asciz "pic_arrow_r00"
+	.asciz "grow_arts_base"
+	.asciz "value"
+	.asciz "idx_%02d"
+	.asciz "grow_arts_rate"
+	.asciz "nul_inf%02d"
+	.asciz "pic_icon%02d"
+	.asciz "pic_arts%02d"
+	.asciz "txt_name%02d"
+	.asciz "pic_set%02d"
+	.asciz "txt_ap%02d"
+	.asciz "txt_pt%02d"
+	.asciz "pic_on%02d"
+	.asciz "pic_unlock%02d"
+	.asciz "/menu/ArtsList.arc"
+	.asciz "CArtsList"
+	.asciz "arc"
+	.asciz "mf15_arts30_set_box.brlyt"
+	.asciz "mf15_arts30_set_box_in.brlan"
+	.asciz "mf15_arts30_set_box_info_in.brlan"
+	.asciz "txt_ap09"
+	.asciz "txt_ap10"
+	.asciz "txt_ap11"
+	.asciz "txt_ap12"
+	.asciz "txt_ap13"
+	.asciz "txt_pt09"
+	.asciz "txt_pt10"
+	.asciz "txt_pt11"
+	.asciz "txt_pt12"
+	.asciz "txt_pt13"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CArtsList
+__vt__CArtsList:
+	.4byte __RTTI__CArtsList
+	.4byte 0
+	.4byte func_802334B4
+	.4byte func_80039E28
+	.4byte func_802352A8
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CArtsList_hierarchy
+CArtsList_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CArtsList
+__RTTI__CArtsList:
+	.4byte CArtsList_typestr
+	.4byte CArtsList_hierarchy
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80015A88
 lbl_80015A88:
@@ -2917,7 +3051,7 @@ lbl_80015D08:
 	.4byte func_8045F8C8
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802331B4
 	.4byte 0x00000300

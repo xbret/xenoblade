@@ -1984,3 +1984,44 @@ lbl_8056CFD0:
 	.4byte Insert__Q34nw4r3g3d8ScnGroupFUlPQ34nw4r3g3d6ScnObj
 	.4byte Remove__Q34nw4r3g3d8ScnGroupFUl
 	.4byte Remove__Q34nw4r3g3d8ScnGroupFPQ34nw4r3g3d6ScnObj
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665DB0
+lbl_80665DB0:
+	# ROM: 0x571990
+	.4byte 0x00000020
+
+
+.global lbl_80665DB4
+lbl_80665DB4:
+	# ROM: 0x571994
+	.4byte 0x00000020
+
+
+.global lbl_80665DB8
+lbl_80665DB8:
+	# ROM: 0x571998
+	.4byte 0xFFFFFFFC
+
+
+.global lbl_80665DBC
+lbl_80665DBC:
+	# ROM: 0x57199C
+	.4byte 0xFFFFFFFC
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C4E0
+lbl_8066C4E0:
+	# ROM: 0x576340
+	.float 0.5
+	.4byte 0
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667D48
+lbl_80667D48:
+	.skip 0x8

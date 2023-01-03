@@ -368,7 +368,61 @@ func_802A92D0:
 /* 802A92D0 00272890  38 60 00 82 */	li r3, 0x82
 /* 802A92D4 00272894  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CVS_THREAD_TENSION_UP_typestr
+cf_CVS_THREAD_TENSION_UP_typestr:
+	.asciz "cf::CVS_THREAD_TENSION_UP"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053D4B0
+lbl_8053D4B0:
+	# ROM: 0x5395B0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A8EEC
+
+.global lbl_8053D4BC
+lbl_8053D4BC:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A9030
+
+.global lbl_8053D4C8
+lbl_8053D4C8:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A9230
+
+
+.global __vt__cf_CVS_THREAD_TENSION_UP
+__vt__cf_CVS_THREAD_TENSION_UP:
+	.4byte __RTTI__cf_CVS_THREAD_TENSION_UP
+	.4byte 0
+	.4byte func_802A3B50
+	.4byte func_802A9278
+	.4byte func_802A92D0
+	.4byte func_802A1EA0
+	.4byte func_802A3740
+
+.global cf_CVS_THREAD_TENSION_UP_hierarchy
+cf_CVS_THREAD_TENSION_UP_hierarchy:
+	.4byte __RTTI__cf_CVS_THREAD
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CVS_THREAD_TENSION_UP
+__RTTI__cf_CVS_THREAD_TENSION_UP:
+	.4byte cf_CVS_THREAD_TENSION_UP_typestr
+	.4byte cf_CVS_THREAD_TENSION_UP_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001AEDC
 lbl_8001AEDC:
@@ -405,7 +459,7 @@ lbl_8001AF20:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A8DE8
 	.4byte 0x00000104

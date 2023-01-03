@@ -649,7 +649,84 @@ func_802226B8:
 /* 80222738 001EBCF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022273C 001EBCFC  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMCCylinderGauge_typestr
+CMCCylinderGauge_typestr:
+	.asciz "CMCCylinderGauge"
+	.balign 4
+
+
+.global lbl_80504934
+lbl_80504934:
+	.asciz "mf10_cry01_gage.brlyt"
+	.asciz "mf10_cry01_gage_in.brlan"
+	.asciz "mf10_cry01_gage_up.brlan"
+	.asciz "mf10_cry01_gage_full.brlan"
+	.asciz "mf10_cry01_gage_out.brlan"
+	.asciz "txt_sylinder"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global __vt__CMCCylinderGauge
+__vt__CMCCylinderGauge:
+	.4byte __RTTI__CMCCylinderGauge
+	.4byte 0
+	.4byte func_80221EB4
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMCCylinderGauge
+__RTTI__CMCCylinderGauge:
+	.4byte CMCCylinderGauge_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066ADD8
+lbl_8066ADD8:
+	# ROM: 0x574C38
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066ADE0
+lbl_8066ADE0:
+	# ROM: 0x574C40
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066ADE8
+lbl_8066ADE8:
+	# ROM: 0x574C48
+	.4byte 0x41F00000
+
+
+.global lbl_8066ADEC
+lbl_8066ADEC:
+	# ROM: 0x574C4C
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066ADF0
+lbl_8066ADF0:
+	# ROM: 0x574C50
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066ADF8
+lbl_8066ADF8:
+	# ROM: 0x574C58
+	.float 1.0
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80014DE8
 lbl_80014DE8:
@@ -727,7 +804,7 @@ lbl_80014E58:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80221EB4
 	.4byte 0x00000040

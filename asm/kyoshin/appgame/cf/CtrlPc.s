@@ -1968,7 +1968,204 @@ func_80098BD0:
 /* 80098BDC 0006219C  7C 85 01 2E */	stwx r4, r5, r0
 /* 80098BE0 000621A0  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CtrlPc_typestr
+cf_CtrlPc_typestr:
+	.asciz "cf::CtrlPc"
+	.balign 4
+
+.global cf_CfObjectImplPc_typestr
+cf_CfObjectImplPc_typestr:
+	.asciz "cf::CfObjectImplPc"
+	.balign 4
+
+.global cf_CfObjectImplMove_typestr
+cf_CfObjectImplMove_typestr:
+	.asciz "cf::CfObjectImplMove"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CtrlPc
+__vt__cf_CtrlPc:
+	.4byte __RTTI__cf_CtrlPc
+	.4byte 0
+	.4byte func_800970D0
+	.4byte func_80097134
+	.4byte func_80098B6C
+	.4byte func_800D5860
+	.4byte func_800888E8
+	.4byte func_800888E0
+	.4byte func_800888D8
+	.4byte func_800888D0
+	.4byte func_800888C8
+	.4byte func_800888C0
+	.4byte func_800888B8
+	.4byte func_800888B0
+	.4byte func_800888A8
+	.4byte func_800888A0
+	.4byte func_80088898
+	.4byte func_80088890
+	.4byte func_80088888
+	.4byte func_80088880
+	.4byte func_80088878
+	.4byte func_80088870
+	.4byte func_800D1F0C
+	.4byte func_800D1CFC
+	.4byte func_800D11B0
+	.4byte func_800987A0
+	.4byte func_800987EC
+	.4byte func_800987F8
+	.4byte func_80098800
+	.4byte func_80098808
+	.4byte func_800D2A5C
+	.4byte func_800D2D64
+	.4byte func_80098810
+	.4byte func_80098A04
+	.4byte func_800D34D4
+	.4byte func_80097598
+	.4byte func_80097A5C
+	.4byte func_80097C74
+	.4byte func_80097DFC
+	.4byte func_80098AF0
+	.4byte func_80098B64
+
+.global cf_CfObjectImplPc_hierarchy
+cf_CfObjectImplPc_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0x00000010
+	.4byte __RTTI__IActParamEvent
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectImpl
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte 0
+	.4byte 0
+
+.global cf_CfObjectImplMove_hierarchy
+cf_CfObjectImplMove_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0x00000010
+	.4byte __RTTI__IActParamEvent
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8052B668
+lbl_8052B668:
+	# ROM: 0x527768
+	.4byte 0
+	.4byte 0x00000020
+	.4byte 0x00000020
+	.4byte 0x00000020
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x00000008
+	.4byte 0x00001000
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0x00000004
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0x00000020
+	.4byte 0x00000008
+	.4byte 0x00000800
+	.4byte 0
+	.4byte 0x00000800
+	.4byte 0x00000800
+	.4byte 0x00000080
+	.4byte 0x00000400
+	.4byte 0x00000020
+	.4byte 0x00000080
+	.4byte 0x00001000
+	.4byte 0x00000010
+	.4byte 0x00000020
+	.4byte 0x00000008
+	.4byte 0x0000000F
+	.4byte 0
+
+
+.global lbl_8052B6E0
+lbl_8052B6E0:
+	# ROM: 0x5277E0
+	.4byte 0
+	.4byte 0x00000020
+	.4byte 0x00000020
+	.4byte 0x00000020
+	.4byte 0x00000010
+	.4byte 0
+	.4byte 0x00000008
+	.4byte 0x06000000
+	.4byte 0x02000000
+	.4byte 0x04000000
+	.4byte 0
+	.4byte 0x00000004
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0x00000020
+	.4byte 0x00000008
+	.4byte 0x081E0000
+	.4byte 0
+	.4byte 0x08000000
+	.4byte 0x08000000
+	.4byte 0x00800000
+	.4byte 0x00800000
+	.4byte 0x00400000
+	.4byte 0x01000000
+	.4byte 0x10000000
+	.4byte 0x00000004
+	.4byte 0x00000002
+	.4byte 0x00000008
+	.4byte 0
+	.4byte 0x001E0000
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CtrlPc
+__RTTI__cf_CtrlPc:
+	.4byte cf_CtrlPc_typestr
+	.4byte cf_CtrlPc_hierarchy
+
+
+.global __RTTI__cf_CfObjectImplPc
+__RTTI__cf_CfObjectImplPc:
+	.4byte cf_CfObjectImplPc_typestr
+	.4byte cf_CfObjectImplPc_hierarchy
+
+.global __RTTI__cf_CfObjectImplMove
+__RTTI__cf_CfObjectImplMove:
+	.4byte cf_CfObjectImplMove_typestr
+	.4byte cf_CfObjectImplMove_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80668FA8
+lbl_80668FA8:
+	# ROM: 0x572E08
+	.4byte 0
+
+
+.global lbl_80668FAC
+lbl_80668FAC:
+	# ROM: 0x572E0C
+	.float 10.0
+
+
+.global lbl_80668FB0
+lbl_80668FB0:
+	# ROM: 0x572E10
+	.4byte 0x41F00000
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80008DD8
 lbl_80008DD8:
@@ -2066,7 +2263,7 @@ lbl_80008E98:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80097004
 	.4byte 0x000000CC

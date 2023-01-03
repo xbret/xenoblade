@@ -63,3 +63,19 @@ ADXB_AhxTermSupply:
 /* 80385DD8 0034F398  7D 89 03 A6 */	mtctr r12
 /* 80385DDC 0034F39C  4E 80 04 20 */	bctr 
 /* 80385DE0 0034F3A0  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+
+.global ahxsetsjifunc
+ahxsetsjifunc:
+	.skip 0x4
+.global ahxsetdecsmplfunc
+ahxsetdecsmplfunc:
+	.skip 0x4
+.global ahxtermsupplyfunc
+ahxtermsupplyfunc:
+	.skip 0x4
+.global ahxexecfunc
+ahxexecfunc:
+	.skip 0x4

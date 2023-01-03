@@ -239,3 +239,22 @@ lbl_8051ABD0:
 	.asciz "O"
 	.4byte 0
 	.2byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+
+.global lbl_805E9AE8
+lbl_805E9AE8:
+	.skip 0x4
+.global lbl_805E9AEC
+lbl_805E9AEC:
+	.skip 0x4
+.global lbl_805E9AF0
+lbl_805E9AF0:
+	.skip 0x8
+.global lbl_805E9AF8
+lbl_805E9AF8:
+	.skip 0x4
+.global lbl_805E9AFC
+lbl_805E9AFC:
+	.skip 0x4

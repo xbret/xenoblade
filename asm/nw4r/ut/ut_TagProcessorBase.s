@@ -522,3 +522,11 @@ lbl_8056E6FC:
 	.4byte __dt__Q34nw4r2ut19TagProcessorBase_c_Fv
 	.4byte Process__Q34nw4r2ut19TagProcessorBase_c_FUsPQ34nw4r2ut15PrintContext_c
 	.4byte CalcRect__Q34nw4r2ut19TagProcessorBase_c_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_c
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C930
+lbl_8066C930:
+	# ROM: 0x576790
+	.4byte 0x43300000
+	.4byte 0x80000000

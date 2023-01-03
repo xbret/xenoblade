@@ -299,7 +299,46 @@ func_80168028:
 /* 80168034 001315F4  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 80168038 001315F8  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CREvtMem_typestr
+cf_CREvtMem_typestr:
+	.asciz "cf::CREvtMem"
+	.balign 4
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CREvtMem
+__vt__cf_CREvtMem:
+	.4byte __RTTI__cf_CREvtMem
+	.4byte 0
+	.4byte func_80167C84
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CREvtMem
+__RTTI__cf_CREvtMem:
+	.4byte cf_CREvtMem_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669F10
+lbl_80669F10:
+	# ROM: 0x573D70
+	.4byte 0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666B50
+lbl_80666B50:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000DE34
 lbl_8000DE34:
@@ -322,7 +361,7 @@ lbl_8000DE4C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80167C84
 	.4byte 0x000000BC

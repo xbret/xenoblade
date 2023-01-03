@@ -2306,7 +2306,229 @@ func_801751DC:
 /* 8017525C 0013E81C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80175260 0013E820  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfValueItemManager_typestr
+cf_CfValueItemManager_typestr:
+	.asciz "cf::CfValueItemManager"
+	.balign 4
+
+.global cf_CfMapItemManager_typestr
+cf_CfMapItemManager_typestr:
+	.asciz "cf::CfMapItemManager"
+	.balign 4
+
+
+.global lbl_804FEBF0
+lbl_804FEBF0:
+	.asciz "posX"
+	.asciz "posY"
+	.asciz "posZ"
+	.asciz "Radius"
+	.asciz "snap"
+	.asciz "popNum"
+	.asciz "mapID"
+	.asciz "popTime"
+	.asciz "wtrType"
+	.asciz "questID"
+	.asciz "quest_STFLG"
+	.asciz "gimmickID"
+	.asciz "S_FLG_MIN"
+	.asciz "S_FLG_MAX"
+	.asciz "e_repoptime"
+	.balign 4
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CfValueItemManager
+__vt__cf_CfValueItemManager:
+	.4byte __RTTI__cf_CfValueItemManager
+	.4byte 0
+	.4byte func_80173AEC
+	.4byte func_80174650
+	.4byte func_80173894
+	.4byte func_801738A4
+
+.global cf_CfValueItemManager_hierarchy
+cf_CfValueItemManager_hierarchy:
+	.4byte __RTTI__cf_CfMapItemManager
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CfMapItemManager
+__vt__cf_CfMapItemManager:
+	.4byte __RTTI__cf_CfMapItemManager
+	.4byte 0
+	.4byte func_801738AC
+	.4byte func_801737CC
+	.4byte func_801737D4
+	.4byte func_8017389C
+
+
+.global lbl_80534EE0
+lbl_80534EE0:
+	# ROM: 0x530FE0
+	.4byte switch_80174D24
+	.4byte switch_80174D60
+	.4byte switch_80174D9C
+	.4byte switch_80174E00
+	.4byte switch_8017506C
+	.4byte switch_80175094
+	.4byte switch_80175044
+	.4byte switch_801750D0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80664D18
+lbl_80664D18:
+	.asciz "itm?ID"
+	.balign 4
+
+
+.global lbl_80664D20
+lbl_80664D20:
+	.asciz "itm?Per"
+
+.global __RTTI__cf_CfValueItemManager
+__RTTI__cf_CfValueItemManager:
+	.4byte cf_CfValueItemManager_typestr
+	.4byte cf_CfValueItemManager_hierarchy
+
+.global __RTTI__cf_CfMapItemManager
+__RTTI__cf_CfMapItemManager:
+	.4byte cf_CfMapItemManager_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A040
+lbl_8066A040:
+	# ROM: 0x573EA0
+	.4byte 0
+
+
+.global lbl_8066A044
+lbl_8066A044:
+	# ROM: 0x573EA4
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066A048
+lbl_8066A048:
+	# ROM: 0x573EA8
+	.4byte 0x42340000
+
+
+.global lbl_8066A04C
+lbl_8066A04C:
+	# ROM: 0x573EAC
+	.4byte 0x4222F983
+
+
+.global lbl_8066A050
+lbl_8066A050:
+	# ROM: 0x573EB0
+	.float 1.0
+
+
+.global lbl_8066A054
+lbl_8066A054:
+	# ROM: 0x573EB4
+	.4byte 0x41F00000
+
+
+.global lbl_8066A058
+lbl_8066A058:
+	# ROM: 0x573EB8
+	.float 0.5
+	.4byte 0
+
+
+.global lbl_8066A060
+lbl_8066A060:
+	# ROM: 0x573EC0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066A068
+lbl_8066A068:
+	# ROM: 0x573EC8
+	.4byte 0x42700000
+	.4byte 0
+
+
+.global lbl_8066A070
+lbl_8066A070:
+	# ROM: 0x573ED0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066A078
+lbl_8066A078:
+	# ROM: 0x573ED8
+	.4byte 0x45610000
+
+
+.global lbl_8066A07C
+lbl_8066A07C:
+	# ROM: 0x573EDC
+	.float 100.0
+
+
+.global lbl_8066A080
+lbl_8066A080:
+	# ROM: 0x573EE0
+	.4byte 0x471C4000
+
+
+.global lbl_8066A084
+lbl_8066A084:
+	# ROM: 0x573EE4
+	.4byte 0x42480000
+
+
+.global lbl_8066A088
+lbl_8066A088:
+	# ROM: 0x573EE8
+	.4byte 0x46AFC800
+
+
+.global lbl_8066A08C
+lbl_8066A08C:
+	# ROM: 0x573EEC
+	.float 1.5
+
+
+.global lbl_8066A090
+lbl_8066A090:
+	# ROM: 0x573EF0
+	.4byte 0x40100000
+
+
+.global lbl_8066A094
+lbl_8066A094:
+	# ROM: 0x573EF4
+	.4byte 0x3F19999A
+
+
+.global lbl_8066A098
+lbl_8066A098:
+	# ROM: 0x573EF8
+	.4byte 0x40C00000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666B88
+lbl_80666B88:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000E2F0
 lbl_8000E2F0:
@@ -2399,7 +2621,7 @@ lbl_8000E378:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_801731B4
 	.4byte 0x00000144

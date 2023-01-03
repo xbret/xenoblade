@@ -6058,7 +6058,366 @@ func_800CFFC4:
 /* 800CFFC4 00099584  38 63 FF F0 */	addi r3, r3, -16
 /* 800CFFC8 00099588  4B FB 05 78 */	b func_80080540
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8052E310
+lbl_8052E310:
+	# ROM: 0x52A410
+	.4byte switch_800CAEE8
+	.4byte switch_800CB1DC
+	.4byte switch_800CB1DC
+	.4byte switch_800CAF3C
+	.4byte switch_800CAF64
+	.4byte switch_800CAF3C
+	.4byte switch_800CAF64
+	.4byte switch_800CAF64
+	.4byte switch_800CAF64
+	.4byte switch_800CAC78
+	.4byte switch_800CABC8
+
+
+.global lbl_8052E33C
+lbl_8052E33C:
+	# ROM: 0x52A43C
+	.4byte switch_800CC9C0
+	.4byte switch_800CC9CC
+	.4byte switch_800CCA44
+	.4byte switch_800CCB1C
+	.4byte switch_800CCC14
+	.4byte switch_800CCCAC
+	.4byte switch_800CCD1C
+	.4byte switch_800CCE18
+	.4byte switch_800CCED8
+	.4byte switch_800CCF44
+	.4byte switch_800CCF90
+	.4byte switch_800CCFDC
+	.4byte switch_800CD048
+	.4byte switch_800CD0B0
+	.4byte switch_800CD0FC
+	.4byte switch_800CD094
+	.4byte switch_800CD244
+	.4byte switch_800CD244
+	.4byte switch_800CD244
+	.4byte switch_800CC9C0
+	.4byte switch_800CD244
+	.4byte switch_800CD148
+	.4byte switch_800CD194
+	.4byte switch_800CC9D8
+	.4byte switch_800CD1FC
+
+
+.global lbl_8052E3A0
+lbl_8052E3A0:
+	# ROM: 0x52A4A0
+	.4byte switch_800CE444
+	.4byte switch_800CD9E8
+	.4byte switch_800CE0D4
+	.4byte switch_800CE444
+	.4byte switch_800CE270
+	.4byte switch_800CDFE8
+	.4byte switch_800CE444
+	.4byte switch_800CDD04
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CDDE8
+	.4byte switch_800CDE3C
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CDDB0
+	.4byte switch_800CDC90
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CDCF4
+	.4byte switch_800CE444
+	.4byte switch_800CDE70
+	.4byte switch_800CDF20
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE444
+	.4byte switch_800CE328
+	.4byte switch_800CE3E8
+	.4byte switch_800CE388
+	.4byte switch_800CE08C
+	.4byte switch_800CDE60
+	.4byte switch_800CD928
+
+
+.global __vt__cf_CfObjectImplMove
+__vt__cf_CfObjectImplMove:
+	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte 0
+	.4byte func_80080540
+	.4byte func_80054A20
+	.4byte func_800CC5DC
+	.4byte func_800CC638
+	.4byte func_800CC964
+	.4byte func_800CD268
+	.4byte func_800CD460
+	.4byte func_800CD5C0
+	.4byte func_800CD5DC
+	.4byte func_800CEB68
+	.4byte func_80087448
+	.4byte func_8008742C
+	.4byte func_8008743C
+	.4byte func_80087424
+	.4byte func_800459FC
+	.4byte func_80087410
+	.4byte func_800873FC
+	.4byte func_800873E8
+	.4byte func_800873D4
+	.4byte func_800873C8
+	.4byte func_800873AC
+	.4byte func_80087390
+	.4byte func_80087378
+	.4byte func_80087364
+	.4byte func_80087334
+	.4byte func_80087348
+	.4byte func_800CE8E4
+	.4byte func_800CEBE0
+	.4byte func_800CE544
+	.4byte func_800CE6A0
+	.4byte func_800CE8AC
+	.4byte func_800CEA34
+	.4byte func_800CAB30
+	.4byte func_800CB454
+	.4byte func_800CB21C
+	.4byte func_800CB9AC
+	.4byte func_800CB94C
+	.4byte func_80087330
+	.4byte func_800CA948
+	.4byte func_800CA964
+	.4byte func_800C596C
+	.4byte func_800CAA44
+	.4byte func_800CAB00
+	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte 0xFFFFFFF4
+	.4byte func_800CFFBC
+	.4byte func_800CA6CC
+	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte 0xFFFFFFF0
+	.4byte func_800CFFC4
+	.4byte func_800C5988
+	.4byte func_800CAB2C
+	.4byte func_800CBBD8
+	.4byte func_800CC01C
+	.4byte func_800CC020
+	.4byte 0
+	.4byte func_800CEE28
+	.4byte func_800CFFA0
+
+
+.global lbl_8052E558
+lbl_8052E558:
+	.asciz "AsinRad: Input is out of the domain."
+	.balign 4
+
+
+.global lbl_8052E580
+lbl_8052E580:
+	.asciz "triangular.h"
+	.balign 4
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80664638
+lbl_80664638:
+	# ROM: 0x570218
+	.4byte lbl_80669520
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669520
+lbl_80669520:
+	.asciz "JUneck"
+	.balign 4
+
+
+.global lbl_80669528
+lbl_80669528:
+	# ROM: 0x573388
+	.4byte 0
+
+
+.global lbl_8066952C
+lbl_8066952C:
+	# ROM: 0x57338C
+	.float 1.0
+
+
+.global lbl_80669530
+lbl_80669530:
+	# ROM: 0x573390
+	.4byte 0x40800000
+
+
+.global lbl_80669534
+lbl_80669534:
+	# ROM: 0x573394
+	.4byte 0x3F19999A
+
+
+.global lbl_80669538
+lbl_80669538:
+	# ROM: 0x573398
+	.4byte 0x40000000
+
+
+.global lbl_8066953C
+lbl_8066953C:
+	# ROM: 0x57339C
+	.4byte 0x3C23D70A
+
+
+.global lbl_80669540
+lbl_80669540:
+	# ROM: 0x5733A0
+	.float 100.0
+
+
+.global lbl_80669544
+lbl_80669544:
+	# ROM: 0x5733A4
+	.4byte 0xBC23D70A
+
+
+.global lbl_80669548
+lbl_80669548:
+	# ROM: 0x5733A8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80669550
+lbl_80669550:
+	.4byte 0x3F666666
+	.4byte 0
+
+
+.global lbl_80669558
+lbl_80669558:
+	# ROM: 0x5733B8
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80669560
+lbl_80669560:
+	# ROM: 0x5733C0
+	.4byte 0x41F00000
+
+
+.global lbl_80669564
+lbl_80669564:
+	# ROM: 0x5733C4
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_80669568
+lbl_80669568:
+	# ROM: 0x5733C8
+	.4byte 0xC0800000
+
+
+.global lbl_8066956C
+lbl_8066956C:
+	# ROM: 0x5733CC
+	.4byte 0x41600000
+
+
+.global lbl_80669570
+lbl_80669570:
+	# ROM: 0x5733D0
+	.4byte 0x3E99999A
+
+
+.global lbl_80669574
+lbl_80669574:
+	# ROM: 0x5733D4
+	.float -1.0
+
+
+.global lbl_80669578
+lbl_80669578:
+	# ROM: 0x5733D8
+	.4byte 0xC0C00000
+
+
+.global lbl_8066957C
+lbl_8066957C:
+	# ROM: 0x5733DC
+	.4byte 0x3D4CCCCD
+
+
+.global lbl_80669580
+lbl_80669580:
+	# ROM: 0x5733E0
+	.4byte 0x3D23D70A
+
+
+.global lbl_80669584
+lbl_80669584:
+	# ROM: 0x5733E4
+	.float 0.5
+
+
+.global lbl_80669588
+lbl_80669588:
+	# ROM: 0x5733E8
+	.4byte 0x4222F983
+
+
+.global lbl_8066958C
+lbl_8066958C:
+	# ROM: 0x5733EC
+	.4byte 0xBF7FF972
+
+
+.global lbl_80669590
+lbl_80669590:
+	# ROM: 0x5733F0
+	.4byte 0x3CC90FDB
+
+
+.global lbl_80669594
+lbl_80669594:
+	# ROM: 0x5733F4
+	.4byte 0xC0400000
+
+
+.global lbl_80669598
+lbl_80669598:
+	# ROM: 0x5733F8
+	.4byte 0x41400000
+
+
+.global lbl_8066959C
+lbl_8066959C:
+	# ROM: 0x5733FC
+	.float 8.0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000A3B4
 lbl_8000A3B4:
@@ -6199,7 +6558,7 @@ lbl_8000A49C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_800CA964
 	.4byte 0x000000E0

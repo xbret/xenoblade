@@ -95,3 +95,9 @@ lsc_build:
 	# ROM: 0x517B58
 	.4byte lbl_8051BA28
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lsc_init_cnt
+lsc_init_cnt:
+	.skip 0x8

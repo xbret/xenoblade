@@ -69,7 +69,7 @@ func_800AB3B8:
 /* 800AB3C8 00074988  EC 20 08 2A */	fadds f1, f0, f1
 /* 800AB3CC 0007498C  4B FF 98 7C */	b func_800A4C48
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800093BC
 lbl_800093BC:
@@ -77,7 +77,7 @@ lbl_800093BC:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_800AB2E4
 	.4byte 0x000000D4

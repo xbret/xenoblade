@@ -1817,7 +1817,144 @@ func_801B18C8:
 /* 801B18C8 0017AE88  38 63 FF A4 */	addi r3, r3, -92
 /* 801B18CC 0017AE8C  4B FF E6 28 */	b func_801AFEF4
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuBattleCommu_typestr
+CMenuBattleCommu_typestr:
+	.asciz "CMenuBattleCommu"
+	.balign 4
+
+
+.global lbl_80500024
+lbl_80500024:
+	.asciz "MenuBattleCommu"
+	.asciz "mf71_battle95_communi.brlyt"
+	.asciz "mf71_battle95_communi_in.brlan"
+	.asciz "mf71_battle95_communi_ripple_in.brlan"
+	.asciz "mf71_battle95_communi_ripple_roop.brlan"
+	.asciz "mf71_battle95_communi_ripple_out.brlan"
+	.asciz "mf71_battle95_communi_out.brlan"
+	.asciz "mf71_battle95_communi_bright_out.brlan"
+	.asciz "txt_mess_l"
+	.asciz "txt_mess_r"
+	.asciz "txt_mess_o"
+	.asciz "txt_mess_u"
+	.asciz "txt_mess"
+	.byte 0x00
+	.asciz "mf71_btl90_chn_btn_c00.tpl"
+	.asciz "pic_button_r"
+	.asciz "mf71_btl90_chn_btngl_c00.tpl"
+	.asciz "pic_line_r00"
+	.asciz "pic_line_r01"
+	.asciz "mf71_btl90_chn_btn_r00.tpl"
+	.asciz "mf71_btl90_chn_btngl_r00.tpl"
+	.asciz "MNU_kyeassign"
+	.asciz "help"
+	.asciz "%s"
+	.asciz "%s%s"
+	.asciz "name"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuBattleCommu
+__vt__CMenuBattleCommu:
+	.4byte __RTTI__CMenuBattleCommu
+	.4byte 0
+	.4byte func_801AFEF4
+	.4byte CChildListNode_Reset
+	.4byte func_801AFF68
+	.4byte func_801B037C
+	.4byte func_801B03FC
+	.4byte func_80108BE8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuBattleCommu
+	.4byte 0xFFFFFFA8
+	.4byte func_801B18B8
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuBattleCommu
+	.4byte 0xFFFFFFA4
+	.4byte func_801B18C8
+	.4byte func_801B18C0
+	.4byte func_801B0CDC
+
+.global CMenuBattleCommu_hierarchy
+CMenuBattleCommu_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000005C
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIBattle
+	.4byte 0
+	.4byte __RTTI__IUIBattle
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuBattleCommu
+__RTTI__CMenuBattleCommu:
+	.4byte CMenuBattleCommu_typestr
+	.4byte CMenuBattleCommu_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A6A0
+lbl_8066A6A0:
+	# ROM: 0x574500
+	.4byte 0
+
+
+.global lbl_8066A6A4
+lbl_8066A6A4:
+	# ROM: 0x574504
+	.float 1.0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666C80
+lbl_80666C80:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000FC5C
 lbl_8000FC5C:
@@ -1899,8 +2036,7 @@ lbl_8000FD1C:
 	.4byte 0x180A0000
 	.4byte 0
 
-
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801AFE1C
 	.4byte 0x000000D8

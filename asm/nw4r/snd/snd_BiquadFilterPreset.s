@@ -1530,3 +1530,18 @@ lbl_805231B4:
 	.4byte 0x06B60000
 	.4byte 0xF94A6A89
 	.4byte 0xCD6C0000
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C6F8
+lbl_8066C6F8:
+	# ROM: 0x576558
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066C700
+lbl_8066C700:
+	# ROM: 0x576560
+	.4byte 0x40000000
+	.4byte 0

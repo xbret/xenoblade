@@ -1992,3 +1992,63 @@ GetResTex__Q34nw4r3g3d14ResTexPlttInfoCFv:
 /* 803DD1B4 003A6774  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DD1B8 003A6778  80 63 00 08 */	lwz r3, 8(r3)
 /* 803DD1BC 003A677C  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C268
+lbl_8066C268:
+	# ROM: 0x5760C8
+	.4byte 0
+
+
+.global lbl_8066C26C
+lbl_8066C26C:
+	# ROM: 0x5760CC
+	.float 1.0
+
+
+.global lbl_8066C270
+lbl_8066C270:
+	# ROM: 0x5760D0
+	.4byte 0x3FE33333
+	.4byte 0x40000000
+
+
+.global lbl_8066C278
+lbl_8066C278:
+	# ROM: 0x5760D8
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066C280
+lbl_8066C280:
+	# ROM: 0x5760E0
+	.4byte 0x40000000
+
+
+.global lbl_8066C284
+lbl_8066C284:
+	# ROM: 0x5760E4
+	.float 0.5
+
+
+.global lbl_8066C288
+lbl_8066C288:
+	# ROM: 0x5760E8
+	.4byte 0x3A800000
+	.4byte 0
+
+
+.global lbl_8066C290
+lbl_8066C290:
+	# ROM: 0x5760F0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066C298
+lbl_8066C298:
+	# ROM: 0x5760F8
+	.4byte 0x44800000
+	.4byte 0

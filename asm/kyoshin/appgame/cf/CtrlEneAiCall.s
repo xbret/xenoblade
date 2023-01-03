@@ -24,7 +24,48 @@ sinit_8008A0C8:
 
 .4byte sinit_8008A0C8
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CtrlEneAiCall_typestr
+cf_CtrlEneAiCall_typestr:
+	.asciz "cf::CtrlEneAiCall"
+	.balign 4
+
+.global CColiProc_typestr
+CColiProc_typestr:
+	.asciz "CColiProc"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CtrlEneAiCall
+__vt__cf_CtrlEneAiCall:
+	.4byte __RTTI__cf_CtrlEneAiCall
+	.4byte 0
+	.4byte func_8008A0C4
+
+.global cf_CtrlEneAiCall_hierarchy
+cf_CtrlEneAiCall_hierarchy:
+	.4byte __RTTI__CColiProc
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CtrlEneAiCall
+__RTTI__cf_CtrlEneAiCall:
+	.4byte cf_CtrlEneAiCall_typestr
+	.4byte cf_CtrlEneAiCall_hierarchy
+
+.global __RTTI__CColiProc
+__RTTI__CColiProc:
+	.4byte CColiProc_typestr
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80008BB4
 lbl_80008BB4:
@@ -32,7 +73,7 @@ lbl_80008BB4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 
 	.4byte sinit_8008A0C8

@@ -6794,7 +6794,429 @@ func_80192A2C:
 /* 80192AB0 0015C070  38 21 00 70 */	addi r1, r1, 0x70
 /* 80192AB4 0015C074  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804FF358
+lbl_804FF358:
+	# ROM: 0x4FB458
+	.4byte 0x3DCCCCCD
+	.4byte 0x3F666666
+	.4byte 0x3D23D70A
+	.4byte 0x3F666666
+	.4byte 0x3E428F5C
+	.4byte 0x3F666666
+	.4byte 0x3D8F5C29
+	.4byte 0x3F666666
+	.4byte 0x3DCCCCCD
+	.4byte 0x3F666666
+	.4byte 0x3E428F5C
+	.4byte 0x3F666666
+	.4byte 0x3DCCCCCD
+	.4byte 0x3F666666
+	.4byte 0x3E428F5C
+	.4byte 0x3F666666
+	.4byte 0x3DCCCCCD
+	.4byte 0x3F666666
+	.4byte 0x3DCCCCCD
+	.4byte 0x3F666666
+
+.global CScnItemModelNw4r_typestr
+CScnItemModelNw4r_typestr:
+	.asciz "CScnItemModelNw4r"
+	.balign 4
+	.4byte 0
+
+.global cf_CfResPcImpl_typestr
+cf_CfResPcImpl_typestr:
+	.asciz "cf::CfResPcImpl"
+
+.global CScnItemModel_typestr
+CScnItemModel_typestr:
+	.asciz "CScnItemModel"
+	.balign 4
+
+.global CScnItem_typestr
+CScnItem_typestr:
+	.asciz "CScnItem"
+	.balign 4
+
+
+.global lbl_804FF3EC
+lbl_804FF3EC:
+	.asciz "%s(%x)"
+	.asciz "JUspA"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80535F00
+lbl_80535F00:
+	# ROM: 0x532000
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018D79C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018DE8C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018E7E4
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018EE18
+
+.global CScnItemModelNw4r_hierarchy
+CScnItemModelNw4r_hierarchy:
+	.4byte __RTTI__CScnItem
+	.4byte 0
+	.4byte __RTTI__CScnItemModel
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CfResPcImpl
+__vt__cf_CfResPcImpl:
+	.4byte __RTTI__cf_CfResPcImpl
+	.4byte 0
+	.4byte func_8018CA5C
+	.4byte func_8018EEF0
+	.4byte func_8018D570
+	.4byte func_8018CB14
+	.4byte func_800BE9AC
+	.4byte func_8016CD64
+	.4byte func_8018CB34
+	.4byte func_8018E69C
+	.4byte func_8018CB3C
+	.4byte func_8018D510
+	.4byte func_8018D134
+	.4byte func_8018D00C
+	.4byte func_8018D3F0
+	.4byte func_8018D65C
+	.4byte func_8018D0C4
+	.4byte func_8018D288
+	.4byte func_8018D290
+	.4byte func_8018D354
+	.4byte func_8018CD9C
+	.4byte func_8018CE70
+	.4byte func_8018CF08
+	.4byte func_8018CF90
+	.4byte func_8016CD54
+	.4byte func_800BF30C
+
+.global cf_CfResPcImpl_hierarchy
+cf_CfResPcImpl_hierarchy:
+	.4byte __RTTI__cf_CfResImpl
+	.4byte 0
+	.4byte 0
+
+.global CScnItemModel_hierarchy
+CScnItemModel_hierarchy:
+	.4byte __RTTI__CScnItem
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80535FC8
+lbl_80535FC8:
+	# ROM: 0x5320C8
+	.4byte 0x00000072
+	.4byte 0x000E0001
+	.4byte 0x000000C5
+	.4byte 0x000A0001
+	.4byte 0x000000C9
+	.4byte 0x000C0001
+	.4byte 0x000000E2
+	.4byte 0x000A0001
+	.4byte 0x000000E5
+	.4byte 0x000E0001
+	.4byte 0x00000143
+	.4byte 0x000E0001
+	.4byte 0x00000163
+	.4byte 0x00170001
+	.4byte 0x00000183
+	.4byte 0x000C0002
+
+
+.global lbl_80536008
+lbl_80536008:
+	# ROM: 0x532108
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018EFCC
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018F520
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018F5A4
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018FC78
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018FCA8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190034
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190070
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190068
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018EFD4
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018F018
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018F510
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018F1FC
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018FA2C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190060
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801900C0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8019017C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801901A4
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8019027C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190298
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190334
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190284
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018F2EC
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190394
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190414
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190464
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801904D0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190710
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8019076C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190568
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801906FC
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190690
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190108
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8019073C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80190254
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801907E4
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018F8D8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018F924
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018F9A0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8018F164
+	.4byte 0
+
+.global lbl_805361E0
+lbl_805361E0:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A64F8
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScnItemModelNw4r
+__RTTI__CScnItemModelNw4r:
+	.4byte CScnItemModelNw4r_typestr
+	.4byte CScnItemModelNw4r_hierarchy
+
+.global __RTTI__cf_CfResPcImpl
+__RTTI__cf_CfResPcImpl:
+	.4byte cf_CfResPcImpl_typestr
+	.4byte cf_CfResPcImpl_hierarchy
+
+
+.global __RTTI__CScnItemModel
+__RTTI__CScnItemModel:
+	.4byte CScnItemModel_typestr
+	.4byte CScnItemModel_hierarchy
+
+
+.global __RTTI__CScnItem
+__RTTI__CScnItem:
+	.4byte CScnItem_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A300
+lbl_8066A300:
+	# ROM: 0x574160
+	.4byte 0
+
+
+.global lbl_8066A304
+lbl_8066A304:
+	# ROM: 0x574164
+	.4byte 0x40000000
+
+
+.global lbl_8066A308
+lbl_8066A308:
+	# ROM: 0x574168
+	.4byte 0xC1000000
+
+
+.global lbl_8066A30C
+lbl_8066A30C:
+	# ROM: 0x57416C
+	.4byte 0x3F333333
+
+
+.global lbl_8066A310
+lbl_8066A310:
+	# ROM: 0x574170
+	.4byte 0x3FB33333
+
+
+.global lbl_8066A314
+lbl_8066A314:
+	# ROM: 0x574174
+	.4byte 0xBDCCCCCD
+
+
+.global lbl_8066A318
+lbl_8066A318:
+	# ROM: 0x574178
+	.4byte 0x3E99999A
+
+
+.global lbl_8066A31C
+lbl_8066A31C:
+	# ROM: 0x57417C
+	.4byte 0x40400000
+
+
+.global lbl_8066A320
+lbl_8066A320:
+	# ROM: 0x574180
+	.float 1.0
+
+
+.global lbl_8066A324
+lbl_8066A324:
+	# ROM: 0x574184
+	.4byte 0x41A00000
+
+
+.global lbl_8066A328
+lbl_8066A328:
+	# ROM: 0x574188
+	.float 0.5
+	.4byte 0
+
+
+.global lbl_8066A330
+lbl_8066A330:
+	# ROM: 0x574190
+	.4byte 0
+
+
+.global lbl_8066A334
+lbl_8066A334:
+	# ROM: 0x574194
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066A338
+lbl_8066A338:
+	# ROM: 0x574198
+	.4byte 0x3B808081
+	.4byte 0
+
+
+.global lbl_8066A340
+lbl_8066A340:
+	# ROM: 0x5741A0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066A348
+lbl_8066A348:
+	# ROM: 0x5741A8
+	.float 10.0
+
+
+.global lbl_8066A34C
+lbl_8066A34C:
+	# ROM: 0x5741AC
+	.float 1.0
+
+
+.global lbl_8066A350
+lbl_8066A350:
+	# ROM: 0x5741B0
+	.4byte 0x40200000
+
+
+.global lbl_8066A354
+lbl_8066A354:
+	# ROM: 0x5741B4
+	.float 100.0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666BF0
+lbl_80666BF0:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000EFE0
 lbl_8000EFE0:
@@ -7172,7 +7594,7 @@ lbl_8000F28C:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8018C9C4
 	.4byte 0x00000098

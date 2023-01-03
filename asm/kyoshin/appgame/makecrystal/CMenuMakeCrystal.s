@@ -1689,7 +1689,65 @@ func_802124FC:
 /* 802124FC 001DBABC  38 63 FF A8 */	addi r3, r3, -88
 /* 80212500 001DBAC0  4B FF E7 E0 */	b func_80210CE0
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuMakeCrystal_typestr
+CMenuMakeCrystal_typestr:
+	.asciz "CMenuMakeCrystal"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuMakeCrystal
+__vt__CMenuMakeCrystal:
+	.4byte __RTTI__CMenuMakeCrystal
+	.4byte 0
+	.4byte func_80210CE0
+	.4byte CChildListNode_Reset
+	.4byte func_80210D4C
+	.4byte func_802121EC
+	.4byte func_80212260
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuMakeCrystal
+	.4byte 0xFFFFFFA8
+	.4byte func_802124FC
+	.4byte func_802124F4
+	.4byte func_80212380
+
+.global CMenuMakeCrystal_hierarchy
+CMenuMakeCrystal_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__CMenuMakeCrystal
+__RTTI__CMenuMakeCrystal:
+	.4byte CMenuMakeCrystal_typestr
+	.4byte CMenuMakeCrystal_hierarchy
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666FB8
+lbl_80666FB8:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800132FC
 lbl_800132FC:
@@ -1784,7 +1842,7 @@ lbl_800133E0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80210C20
 	.4byte 0x000000C0

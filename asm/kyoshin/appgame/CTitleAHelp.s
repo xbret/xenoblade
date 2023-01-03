@@ -933,7 +933,548 @@ func_801C4B60:
 
 .4byte sinit_801C4AE4
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CTitleAHelp_typestr
+CTitleAHelp_typestr:
+	.asciz "CTitleAHelp"
+
+
+.global lbl_80500CC4
+lbl_80500CC4:
+	.asciz "/menu/TitleAHelp.arc"
+	.asciz "txt_tit"
+	.asciz "pic_btn%02d"
+	.asciz "txt_hlp%02d"
+	.asciz "fileID_1"
+	.asciz "fileID_2"
+	.asciz "MNU_kyeassign"
+	.asciz "help"
+	.asciz "nul_ttl"
+	.asciz "txt_caution"
+	.asciz "nul_caution"
+	.asciz "CTitleAHelp"
+	.asciz "arc"
+	.asciz "mf00_hlp_tit.brlyt"
+	.asciz "mf00_hlp_tit_in.brlan"
+	.asciz "mf00_hlp_tit_change.brlan"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80537618
+lbl_80537618:
+	# ROM: 0x533718
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000045
+	.4byte 0x00460054
+	.4byte 0x003D0000
+	.4byte 0
+	.4byte 0x00640000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000046
+	.4byte 0x009B0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00460000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000056
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x002B0046
+	.4byte 0x003D0000
+	.4byte 0
+	.4byte 0x0000002B
+	.4byte 0x00460054
+	.4byte 0x003D0000
+	.4byte 0
+	.4byte 0x002B0039
+	.4byte 0x0054003D
+	.4byte 0
+	.4byte 0x0000002B
+	.4byte 0x0054003D
+	.4byte 0
+	.4byte 0
+	.4byte 0x009B0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000056
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x009B0039
+	.4byte 0x00540000
+	.4byte 0
+	.4byte 0x00000039
+	.4byte 0x00540000
+	.4byte 0
+	.4byte 0
+	.4byte 0x009B0054
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000054
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00320033
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00350000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000033
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00370038
+	.4byte 0x0039003A
+	.4byte 0
+	.4byte 0x00000037
+	.4byte 0x0039003A
+	.4byte 0
+	.4byte 0
+	.4byte 0x00370038
+	.4byte 0x003A0000
+	.4byte 0
+	.4byte 0x00000037
+	.4byte 0x003A0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00370038
+	.4byte 0x00390046
+	.4byte 0x003B003D
+	.4byte 0x00000037
+	.4byte 0x00380046
+	.4byte 0x003B003D
+	.4byte 0
+	.4byte 0x00370038
+	.4byte 0x00390046
+	.4byte 0x0054003D
+	.4byte 0x00000037
+	.4byte 0x00380046
+	.4byte 0x0054003D
+	.4byte 0
+	.4byte 0x00370038
+	.4byte 0x003B0046
+	.4byte 0x003D0000
+	.4byte 0x00000037
+	.4byte 0x00380054
+	.4byte 0x0046003D
+	.4byte 0
+	.4byte 0x00370039
+	.4byte 0x0046003B
+	.4byte 0x003D0000
+	.4byte 0x00000037
+	.4byte 0x0046003B
+	.4byte 0x003D0000
+	.4byte 0
+	.4byte 0x00370039
+	.4byte 0x00460054
+	.4byte 0x003D0000
+	.4byte 0x00000037
+	.4byte 0x00460054
+	.4byte 0x003D0000
+	.4byte 0
+	.4byte 0x00560000
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000009B
+	.4byte 0x00390046
+	.4byte 0x003B0000
+	.4byte 0
+	.4byte 0x009B0039
+	.4byte 0x00460054
+	.4byte 0
+	.4byte 0x0000009B
+	.4byte 0x0046003B
+	.4byte 0
+	.4byte 0
+	.4byte 0x009B0046
+	.4byte 0x00540000
+	.4byte 0
+	.4byte 0x00000046
+	.4byte 0x003B0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00460054
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000046
+	.4byte 0x003B0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00460054
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000064
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00910092
+	.4byte 0x00930094
+	.4byte 0
+	.4byte 0x00000095
+	.4byte 0x00960097
+	.4byte 0x00980000
+	.4byte 0
+	.4byte 0x009B0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000095
+	.4byte 0x0092009A
+	.4byte 0x00980093
+	.4byte 0x00940000
+	.4byte 0x00510053
+	.4byte 0x0054003D
+	.4byte 0
+	.4byte 0x00000051
+	.4byte 0x00530054
+	.4byte 0
+	.4byte 0
+	.4byte 0x005D0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000052
+	.4byte 0x00530054
+	.4byte 0
+	.4byte 0
+	.4byte 0x005D0054
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000055
+	.4byte 0x00530000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00560000
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000005D
+	.4byte 0x00550000
+	.4byte 0
+	.4byte 0
+	.4byte 0x005D0056
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000054
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x005D0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000005A
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x005E005F
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000062
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00640000
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000003E
+	.4byte 0x003F0040
+	.4byte 0x00410000
+	.4byte 0
+	.4byte 0x00440000
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000003E
+	.4byte 0x003F0041
+	.4byte 0
+	.4byte 0
+	.4byte 0x009B0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000042
+	.4byte 0x00400000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00420000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000040
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x003E003F
+	.4byte 0x00400000
+	.4byte 0
+	.4byte 0x0000003E
+	.4byte 0x003F0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x003F0040
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000003F
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00650000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000066
+	.4byte 0x00670068
+	.4byte 0x0069006A
+	.4byte 0
+	.4byte 0x00660067
+	.4byte 0x0069006A
+	.4byte 0
+	.4byte 0x00000067
+	.4byte 0x00680069
+	.4byte 0x006A0000
+	.4byte 0
+	.4byte 0x00670069
+	.4byte 0x006A0000
+	.4byte 0
+	.4byte 0x00000067
+	.4byte 0x009C0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x006D006E
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000006E
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x009B0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000007B
+	.4byte 0x00730074
+	.4byte 0x00720000
+	.4byte 0
+	.4byte 0x007B0073
+	.4byte 0x00720000
+	.4byte 0
+	.4byte 0x0000007B
+	.4byte 0x00740072
+	.4byte 0
+	.4byte 0
+	.4byte 0x00730074
+	.4byte 0x00720000
+	.4byte 0
+	.4byte 0x00000073
+	.4byte 0x00720000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00740072
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000007C
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x007D007E
+	.4byte 0x007F0000
+	.4byte 0
+	.4byte 0x00000081
+	.4byte 0x00860082
+	.4byte 0x007F0000
+	.4byte 0
+	.4byte 0x00850000
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000007D
+	.4byte 0x007E0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00810086
+	.4byte 0x00820000
+	.4byte 0
+	.4byte 0x0000009B
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x007D007F
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000081
+	.4byte 0x00860082
+	.4byte 0x007F0000
+	.4byte 0
+	.4byte 0x00850000
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000007D
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00810082
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000009B
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00890000
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000008A
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x008B0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000008C
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x008C008F
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000008D
+	.4byte 0x008F0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00A100A2
+	.4byte 0
+	.4byte 0
+	.4byte 0x000000A4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00A100A2
+	.4byte 0x00A30000
+	.4byte 0
+	.4byte 0x0000009F
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x009F00A0
+	.4byte 0
+	.4byte 0
+	.4byte 0x0000009E
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x009E00A0
+	.4byte 0
+	.4byte 0
+	.4byte 0x000000A5
+	.4byte 0x005F0000
+	.4byte 0
+	.4byte 0
+	.4byte 0x00640000
+	.4byte 0
+	.4byte 0
+	.4byte 0x000000A6
+	.4byte 0x00A700A8
+	.4byte 0
+	.4byte 0
+	.4byte 0x002B0046
+	.4byte 0x00540000
+	.4byte 0
+	.4byte 0x00000064
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00560000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTitleAHelp
+__vt__CTitleAHelp:
+	.4byte __RTTI__CTitleAHelp
+	.4byte 0
+	.4byte func_801C3F50
+	.4byte func_80039E28
+	.4byte func_801C492C
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CTitleAHelp_hierarchy
+CTitleAHelp_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CTitleAHelp
+__RTTI__CTitleAHelp:
+	.4byte CTitleAHelp_typestr
+	.4byte CTitleAHelp_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066A7E0
+lbl_8066A7E0:
+	# ROM: 0x574640
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066A7E8
+lbl_8066A7E8:
+	# ROM: 0x574648
+	.float 1.0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666D58
+lbl_80666D58:
+	.skip 0x8
+.global lbl_80666D60
+lbl_80666D60:
+	.skip 0x8
+.global lbl_80666D68
+lbl_80666D68:
+	.skip 0x8
+.global lbl_80666D70
+lbl_80666D70:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001090C
 lbl_8001090C:
@@ -1015,7 +1556,7 @@ lbl_80010998:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801C3ED0
 	.4byte 0x00000080

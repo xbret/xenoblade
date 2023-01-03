@@ -4146,7 +4146,291 @@ func_8010EA5C:
 
 .4byte sinit_8010E9F8
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F8F28
+lbl_804F8F28:
+	.4byte 0
+	.4byte 0x41880000
+	.4byte 0x42080000
+	.4byte 0x424C0000
+	.4byte 0x42880000
+
+
+.global CMenuBattlePlayerState_typestr
+CMenuBattlePlayerState_typestr:
+	.asciz "CMenuBattlePlayerState"
+	.balign 4
+
+.global CPcSelectCursor01_typestr
+CPcSelectCursor01_typestr:
+	.asciz "CPcSelectCursor01"
+	.balign 4
+
+
+.global lbl_804F8F68
+lbl_804F8F68:
+	.asciz "CPcSelectCursor01"
+	.asciz "mf80_info00_target01_pc.brlyt"
+	.asciz "mf80_info00_target01_pc_in.brlan"
+	.asciz "mf80_info00_target01_pc_on.brlan"
+	.asciz "mf80_info00_target01_pc_roop.brlan"
+	.asciz "nul_crs_side"
+	.asciz "mf71_battle17_exp01.brlyt"
+	.asciz "mf71_battle17_exp01_in.brlan"
+	.asciz "nul_all"
+	.asciz "txt_exp"
+	.asciz "txt_ap"
+	.asciz "txt_pp"
+	.asciz "CMenuBattlePlayerState"
+	.asciz "mf71_battle60_pcinfo_base.brlyt"
+	.asciz "mf71_battle60_pcinfo_base_in.brlan"
+	.asciz "mf71_battle61_pcinfo_caution.brlyt"
+	.asciz "mf71_battle61_pcinfo_caution_in.brlan"
+	.asciz "mf71_battle61_pcinfo_caution_under50.brlan"
+	.asciz "mf71_battle61_pcinfo_caution_under20.brlan"
+	.asciz "mf71_battle62_pcinfo_info.brlyt"
+	.asciz "mf71_battle62_pcinfo_info_in.brlan"
+	.asciz "txt_lv00"
+	.asciz "txt_lv01"
+	.asciz "txt_hp"
+	.asciz "txt_hp01"
+	.asciz "pic_gage_skl"
+	.asciz "pic_gage_exp"
+	.asciz "pic_face_d00"
+	.asciz "pic_face_d01"
+	.asciz "pic_face_00"
+	.asciz "pic_face_01"
+	.asciz "pic_status_b"
+	.asciz "pic_status_g"
+	.asciz "mf71_battle63_pcinfo_tension.brlyt"
+	.asciz "mf71_battle63_pcinfo_tension_in.brlan"
+	.asciz "mf71_battle64_pcinfo_max.brlyt"
+	.asciz "mf71_battle64_pcinfo_max_h_in.brlan"
+	.asciz "mf71_battle64_pcinfo_max_h_roop.brlan"
+	.asciz "mf71_battle64_pcinfo_max_h_out.brlan"
+	.asciz "mf71_battle64_pcinfo_max_l_in.brlan"
+	.asciz "mf71_battle64_pcinfo_max_l_roop.brlan"
+	.asciz "mf71_battle64_pcinfo_max_l_out.brlan"
+	.asciz "%02d"
+	.asciz "MNU_party"
+	.asciz "name"
+	.asciz "BTL_PSVskill"
+	.asciz "point_PP"
+	.asciz "icon"
+	.asciz "nul_icon_l"
+	.asciz "nul_icon_h"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuBattlePlayerState
+__vt__CMenuBattlePlayerState:
+	.4byte __RTTI__CMenuBattlePlayerState
+	.4byte 0
+	.4byte func_8010B484
+	.4byte CChildListNode_Reset
+	.4byte func_8010B524
+	.4byte func_8010C180
+	.4byte func_8010C330
+	.4byte func_80108BE8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuBattlePlayerState
+	.4byte 0xFFFFFFA8
+	.4byte func_8010EA4C
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuBattlePlayerState
+	.4byte 0xFFFFFFA4
+	.4byte func_8010EA5C
+	.4byte func_8010EA54
+	.4byte func_8010CC18
+
+.global CMenuBattlePlayerState_hierarchy
+CMenuBattlePlayerState_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000005C
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIBattle
+	.4byte 0
+	.4byte __RTTI__IUIBattle
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuBattlePlayerState
+__RTTI__CMenuBattlePlayerState:
+	.4byte CMenuBattlePlayerState_typestr
+	.4byte CMenuBattlePlayerState_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669858
+lbl_80669858:
+	# ROM: 0x5736B8
+	.float 1.0
+
+
+.global lbl_8066985C
+lbl_8066985C:
+	# ROM: 0x5736BC
+	.4byte 0
+
+
+.global lbl_80669860
+lbl_80669860:
+	# ROM: 0x5736C0
+	.4byte 0x42DC0000
+
+
+.global lbl_80669864
+lbl_80669864:
+	# ROM: 0x5736C4
+	.4byte 0x42AC0000
+
+
+.global lbl_80669868
+lbl_80669868:
+	# ROM: 0x5736C8
+	.4byte 0xC3320000
+	.4byte 0
+
+
+.global lbl_80669870
+lbl_80669870:
+	# ROM: 0x5736D0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80669878
+lbl_80669878:
+	# ROM: 0x5736D8
+	.float -1.0
+	.4byte 0
+
+
+.global lbl_80669880
+lbl_80669880:
+	# ROM: 0x5736E0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80669888
+lbl_80669888:
+	# ROM: 0x5736E8
+	.float 100.0
+
+
+.global lbl_8066988C
+lbl_8066988C:
+	# ROM: 0x5736EC
+	.4byte 0x43B40000
+
+
+.global lbl_80669890
+lbl_80669890:
+	# ROM: 0x5736F0
+	.4byte 0x42A40000
+
+
+.global lbl_80669894
+lbl_80669894:
+	# ROM: 0x5736F4
+	.float 0.5
+
+
+.global lbl_80669898
+lbl_80669898:
+	# ROM: 0x5736F8
+	.float 10.0
+
+
+.global lbl_8066989C
+lbl_8066989C:
+	# ROM: 0x5736FC
+	.4byte 0x41600000
+
+
+.global lbl_806698A0
+lbl_806698A0:
+	# ROM: 0x573700
+	.float 0.2
+
+
+.global lbl_806698A4
+lbl_806698A4:
+	# ROM: 0x573704
+	.4byte 0x42700000
+
+
+.global lbl_806698A8
+lbl_806698A8:
+	# ROM: 0x573708
+	.4byte 0x42480000
+
+
+.global lbl_806698AC
+lbl_806698AC:
+	# ROM: 0x57370C
+	.4byte 0x41700000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666828
+lbl_80666828:
+	.skip 0x8
+.global lbl_80666830
+lbl_80666830:
+	.skip 0x8
+.global lbl_80666838
+lbl_80666838:
+	.skip 0x8
+.global lbl_80666840
+lbl_80666840:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000B1A4
 lbl_8000B1A4:
@@ -4290,7 +4574,7 @@ lbl_8000B328:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8010ADA4
 	.4byte 0x00000580

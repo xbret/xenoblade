@@ -825,3 +825,21 @@ lbl_8051F814:
 	.asciz "2.059"
 	.balign 4
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80606040
+lbl_80606040:
+	.skip 0x8
+.global lbl_80606048
+lbl_80606048:
+	.skip 0x60
+.global lbl_806060A8
+lbl_806060A8:
+	.skip 0x400
+.global lbl_806064A8
+lbl_806064A8:
+	.skip 0x4
+.global lbl_806064AC
+lbl_806064AC:
+	.skip 0xC

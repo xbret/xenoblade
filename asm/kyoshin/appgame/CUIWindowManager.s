@@ -6150,7 +6150,352 @@ func_8014148C:
 
 .4byte sinit_801413F8
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CUIWindowManager_typestr
+CUIWindowManager_typestr:
+	.asciz "CUIWindowManager"
+	.balign 4
+
+.global reslist_IUIWindow_typestr
+reslist_IUIWindow_typestr:
+	.asciz "reslist<IUIWindow *>"
+	.balign 4
+
+.global _reslist_base_IUIWindow_typestr
+_reslist_base_IUIWindow_typestr:
+	.asciz "_reslist_base<IUIWindow *>"
+	.balign 4
+
+.global CUIWindowManager_CTest_typestr
+CUIWindowManager_CTest_typestr:
+	.asciz "CUIWindowManager::CTest"
+
+.global CTTask_CUIWindowManager_CTest_typestr
+CTTask_CUIWindowManager_CTest_typestr:
+	.asciz "CTTask<CUIWindowManager::CTest>"
+
+.global CTTask_CUIWindowManager_typestr
+CTTask_CUIWindowManager_typestr:
+	.asciz "CTTask<CUIWindowManager>"
+	.balign 4
+
+
+.global lbl_804FC1AC
+lbl_804FC1AC:
+	.asciz "qst_genre"
+	.asciz "landmarklist"
+	.asciz "mapID"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_804FC1D0
+lbl_804FC1D0:
+	# ROM: 0x4F82D0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000056
+	.4byte 0x00000074
+	.4byte 0x000000AE
+	.4byte 0x00000105
+	.4byte 0x00000114
+	.4byte 0x00000137
+	.4byte 0x0000015F
+	.4byte 0x000001D1
+	.4byte 0x000001D2
+	.4byte 0x000001F0
+	.4byte 0x00000218
+	.4byte 0x00000263
+	.4byte 0x00000272
+	.4byte 0x00000281
+	.4byte 0x000002A9
+	.4byte 0x000002D1
+	.4byte 0x000002EF
+	.4byte 0
+	.4byte 0x0000032B
+	.4byte 0x00000352
+	.4byte 0x00000353
+	.4byte 0x0000037B
+	.4byte 0x00000399
+	.4byte 0x000003C1
+	.4byte 0
+	.4byte 0
+
+.global lbl_804FC240
+lbl_804FC240:
+	.4byte 0x0000006F
+	.4byte 0x00000070
+	.4byte 0x00000079
+	.4byte 0x0000007A
+	.4byte 0x00000083
+	.4byte 0x00000084
+	.4byte 0x0000008D
+	.4byte 0x0000008E
+
+
+.global lbl_804FC260
+lbl_804FC260:
+	# ROM: 0x4F8360
+	.4byte 0x0000006F
+	.4byte 0x00000070
+	.4byte 0x00000079
+	.4byte 0x0000007A
+	.4byte 0x00000083
+	.4byte 0x00000084
+	.4byte 0x0000008D
+	.4byte 0x0000008E
+
+
+.global lbl_804FC280
+lbl_804FC280:
+	.asciz "rlt_meet"
+	.asciz "itemType"
+	.asciz "qst_genre"
+	.asciz "non_auto"
+	.asciz "title"
+	.asciz "no_map"
+	.asciz "npc_id"
+	.asciz "mes_refuse"
+	.asciz "flg_s"
+	.asciz "cnd_questID"
+	.asciz "flg_famous"
+	.asciz "cnd_famous"
+	.asciz "npcmeetID1"
+	.asciz "npcmeetID2"
+	.asciz "flg_relate"
+	.asciz "cnd_relate"
+	.asciz "up_questID"
+	.asciz "up_questID2"
+	.asciz "no_report"
+	.asciz "type_succ_A1"
+	.asciz "cnd_succ_A1"
+	.asciz "num_succ_A1"
+	.asciz "flg_relate_A1"
+	.asciz "up_relate_A1"
+	.asciz "order_succ_A"
+	.asciz "up_famous_A"
+	.asciz "reward_A1"
+	.asciz "reward_A2"
+	.asciz "reward_A3"
+	.asciz "type_succ_A2"
+	.asciz "cnd_succ_A2"
+	.asciz "num_succ_A2"
+	.asciz "flg_relate_A2"
+	.asciz "up_relate_A2"
+	.asciz "type_succ_A3"
+	.asciz "cnd_succ_A3"
+	.asciz "num_succ_A3"
+	.asciz "flg_relate_A3"
+	.asciz "up_relate_A3"
+	.asciz "type_succ_A4"
+	.asciz "cnd_succ_A4"
+	.asciz "num_succ_A4"
+	.asciz "flg_relate_A4"
+	.asciz "up_relate_A4"
+	.asciz "type_succ_B1"
+	.asciz "cnd_succ_B1"
+	.asciz "num_succ_B1"
+	.asciz "flg_relate_B1"
+	.asciz "up_relate_B1"
+	.asciz "order_succ_B"
+	.asciz "up_famous_B"
+	.asciz "reward_B1"
+	.asciz "reward_B2"
+	.asciz "reward_B3"
+	.asciz "type_succ_B2"
+	.asciz "cnd_succ_B2"
+	.asciz "num_succ_B2"
+	.asciz "flg_relate_B2"
+	.asciz "up_relate_B2"
+	.asciz "type_succ_B3"
+	.asciz "cnd_succ_B3"
+	.asciz "num_succ_B3"
+	.asciz "flg_relate_B3"
+	.asciz "up_relate_B3"
+	.asciz "type_succ_B4"
+	.asciz "cnd_succ_B4"
+	.asciz "num_succ_B4"
+	.asciz "flg_relate_B4"
+	.asciz "up_relate_B4"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CUIWindowManager
+__vt__CUIWindowManager:
+	.4byte __RTTI__CUIWindowManager
+	.4byte 0
+	.4byte func_8013C400
+	.4byte CChildListNode_Reset
+	.4byte func_8013C554
+	.4byte func_8013C678
+	.4byte func_8013C6D8
+	.4byte func_8013F190
+	.4byte func_80043F20
+	.4byte __RTTI__CUIWindowManager
+	.4byte 0xFFFFFFAC
+	.4byte func_8013F23C
+	.4byte func_8013F234
+	.4byte func_8013CBB4
+
+.global CUIWindowManager_hierarchy
+CUIWindowManager_hierarchy:
+	.4byte __RTTI__cf_IFlagEvent
+	.4byte 0x00000054
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_CUIWindowManager
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__reslist_IUIWindow
+__vt__reslist_IUIWindow:
+	.4byte __RTTI__reslist_IUIWindow
+	.4byte 0
+	.4byte func_8013C348
+
+.global reslist_IUIWindow_hierarchy
+reslist_IUIWindow_hierarchy:
+	.4byte __RTTI___reslist_base_IUIWindow
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___reslist_base_IUIWindow
+__vt___reslist_base_IUIWindow:
+	.4byte __RTTI___reslist_base_IUIWindow
+	.4byte 0
+	.4byte func_8013C294
+
+
+.global __vt__CUIWindowManager_CTest
+__vt__CUIWindowManager_CTest:
+	.4byte __RTTI__CUIWindowManager_CTest
+	.4byte 0
+	.4byte func_8013F1D8
+	.4byte CChildListNode_Reset
+	.4byte func_8013F0B4
+	.4byte func_8013F0B0
+	.4byte func_8013F0AC
+	.4byte func_8013F0A8
+	.4byte func_80043F20
+
+.global CUIWindowManager_CTest_hierarchy
+CUIWindowManager_CTest_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_CUIWindowManager_CTest
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_CUIWindowManager_CTest
+__vt__CTTask_CUIWindowManager_CTest:
+	.4byte __RTTI__CTTask_CUIWindowManager_CTest
+	.4byte 0
+	.4byte func_8013C620
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_8013F0B8
+	.4byte func_8013F100
+	.4byte func_80043F20
+
+.global CTTask_CUIWindowManager_CTest_hierarchy
+CTTask_CUIWindowManager_CTest_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_CUIWindowManager
+__vt__CTTask_CUIWindowManager:
+	.4byte __RTTI__CTTask_CUIWindowManager
+	.4byte 0
+	.4byte func_8013C23C
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_8013F148
+	.4byte func_8013F190
+	.4byte func_80043F20
+
+.global CTTask_CUIWindowManager_hierarchy
+CTTask_CUIWindowManager_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CUIWindowManager
+__RTTI__CUIWindowManager:
+	.4byte CUIWindowManager_typestr
+	.4byte CUIWindowManager_hierarchy
+
+.global __RTTI__reslist_IUIWindow
+__RTTI__reslist_IUIWindow:
+	.4byte reslist_IUIWindow_typestr
+	.4byte reslist_IUIWindow_hierarchy
+
+.global __RTTI___reslist_base_IUIWindow
+__RTTI___reslist_base_IUIWindow:
+	.4byte _reslist_base_IUIWindow_typestr
+	.4byte 0
+
+.global __RTTI__CUIWindowManager_CTest
+__RTTI__CUIWindowManager_CTest:
+	.4byte CUIWindowManager_CTest_typestr
+	.4byte CUIWindowManager_CTest_hierarchy
+
+.global __RTTI__CTTask_CUIWindowManager_CTest
+__RTTI__CTTask_CUIWindowManager_CTest:
+	.4byte CTTask_CUIWindowManager_CTest_typestr
+	.4byte CTTask_CUIWindowManager_CTest_hierarchy
+
+.global __RTTI__CTTask_CUIWindowManager
+__RTTI__CTTask_CUIWindowManager:
+	.4byte CTTask_CUIWindowManager_typestr
+	.4byte CTTask_CUIWindowManager_hierarchy
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80577448
+lbl_80577448:
+	.skip 0xC8
+.global lbl_80577510
+lbl_80577510:
+	.skip 0x70
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666978
+lbl_80666978:
+	.skip 0x4
+.global lbl_8066697C
+lbl_8066697C:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000CB50
 lbl_8000CB50:
@@ -6473,7 +6818,7 @@ lbl_8000CD84:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8013C068
 	.4byte 0x000001D4

@@ -357,3 +357,12 @@ ADXERR_ItoA2:
 lbl_8051AB08:
 	.asciz "Error"
 	.byte 0x20, 0x00
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E99C0
+lbl_805E99C0:
+	.skip 0x108
+.global lbl_805E9AC8
+lbl_805E9AC8:
+	.skip 0x20

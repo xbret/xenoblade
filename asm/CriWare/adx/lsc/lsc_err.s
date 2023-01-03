@@ -75,3 +75,12 @@ LSC_CallErrFunc_:
 /* 803918A0 0035AE60  7C 08 03 A6 */	mtlr r0
 /* 803918A4 0035AE64  38 21 00 90 */	addi r1, r1, 0x90
 /* 803918A8 0035AE68  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805EB270
+lbl_805EB270:
+	.skip 0x4
+.global lbl_805EB274
+lbl_805EB274:
+	.skip 0x104

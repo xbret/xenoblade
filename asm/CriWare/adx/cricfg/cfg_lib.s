@@ -57,3 +57,12 @@ CRICFG_Read:
 /* 8038F588 00358B48  7C 08 03 A6 */	mtlr r0
 /* 8038F58C 00358B4C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038F590 00358B50  4E 80 00 20 */	blr
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E9D20
+lbl_805E9D20:
+	.skip 0x4
+.global lbl_805E9D24
+lbl_805E9D24:
+	.skip 0x4

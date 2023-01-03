@@ -605,3 +605,9 @@ lbl_8056E478:
 	.4byte Execute__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
 	.4byte Cancel__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
 	.4byte OnCancel__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667DD8
+lbl_80667DD8:
+	.skip 0x8

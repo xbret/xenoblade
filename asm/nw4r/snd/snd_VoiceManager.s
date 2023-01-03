@@ -556,3 +556,18 @@ UpdateAllVoicesSync__Q44nw4r3snd6detail12VoiceManagerFUl:
 /* 804293C4 003F2984  7C 08 03 A6 */	mtlr r0
 /* 804293C8 003F2988  38 21 00 10 */	addi r1, r1, 0x10
 /* 804293CC 003F298C  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80657060
+lbl_80657060:
+	.skip 0xC
+.global lbl_8065706C
+lbl_8065706C:
+	.skip 0x1C
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667E10
+lbl_80667E10:
+	.skip 0x8

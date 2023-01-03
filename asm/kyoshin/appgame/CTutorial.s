@@ -860,7 +860,105 @@ func_8029B498:
 /* 8029B4F4 00264AB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029B4F8 00264AB8  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CTutorial_typestr
+CTutorial_typestr:
+	.asciz "CTutorial"
+	.balign 4
+
+
+.global lbl_8050B884
+lbl_8050B884:
+	.asciz "/menu/Tutorial.arc"
+	.asciz "/common/jp/bdat_ttrl.bin"
+	.asciz "/menu/tpl/c_ttrl_%03d.arc"
+	.asciz "/menu/tpl/r_ttrl_%03d.arc"
+	.asciz "MNU_ttrl"
+	.asciz "page"
+	.asciz "txt_pg00"
+	.asciz "txt_pg01"
+	.asciz "cttrl_i%03d_%02d.tpl"
+	.asciz "rttrl_i%03d_%02d.tpl"
+	.asciz "pic_cap"
+	.asciz "CTutorial"
+	.asciz "arc"
+	.asciz "mf85_opt01_tut01.brlyt"
+	.asciz "mf85_opt01_tut01_in.brlan"
+	.asciz "mf85_opt01_tut01_info_in.brlan"
+	.asciz "CTutorialTex"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CTutorial
+__vt__CTutorial:
+	.4byte __RTTI__CTutorial
+	.4byte 0
+	.4byte func_8029A9D4
+	.4byte func_80039E28
+	.4byte func_8029B218
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CTutorial_hierarchy
+CTutorial_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CTutorial
+__RTTI__CTutorial:
+	.4byte CTutorial_typestr
+	.4byte CTutorial_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066B4B0
+lbl_8066B4B0:
+	# ROM: 0x575310
+	.float 1.0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667320
+lbl_80667320:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001A110
 lbl_8001A110:
@@ -966,7 +1064,7 @@ lbl_8001A1E4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8029A934
 	.4byte 0x000000A0

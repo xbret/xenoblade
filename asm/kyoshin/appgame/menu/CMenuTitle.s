@@ -408,7 +408,151 @@ func_802B6324:
 /* 802B6324 0027F8E4  38 63 FF A8 */	addi r3, r3, -88
 /* 802B6328 0027F8E8  4B FF F8 F8 */	b func_802B5C20
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuTitle_typestr
+CMenuTitle_typestr:
+	.asciz "CMenuTitle"
+	.balign 4
+
+.global CTTask_CMenuTitle_typestr
+CTTask_CMenuTitle_typestr:
+	.asciz "CTTask<CMenuTitle>"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuTitle
+__vt__CMenuTitle:
+	.4byte __RTTI__CMenuTitle
+	.4byte 0
+	.4byte func_802B5C20
+	.4byte CChildListNode_Reset
+	.4byte func_802B5C90
+	.4byte func_802B5CE0
+	.4byte func_802B5D34
+	.4byte func_802B62CC
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuTitle
+	.4byte 0xFFFFFFAC
+	.4byte func_802B6314
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuTitle
+	.4byte 0xFFFFFFA8
+	.4byte func_802B6324
+	.4byte func_802B631C
+	.4byte func_802B5D80
+
+.global CMenuTitle_hierarchy
+CMenuTitle_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000054
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_CMenuTitle
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_CMenuTitle
+__vt__CTTask_CMenuTitle:
+	.4byte __RTTI__CTTask_CMenuTitle
+	.4byte 0
+	.4byte func_802B5BC8
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_802B6284
+	.4byte func_802B62CC
+	.4byte func_80043F20
+
+.global CTTask_CMenuTitle_hierarchy
+CTTask_CMenuTitle_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuTitle
+__RTTI__CMenuTitle:
+	.4byte CMenuTitle_typestr
+	.4byte CMenuTitle_hierarchy
+
+.global __RTTI__CTTask_CMenuTitle
+__RTTI__CTTask_CMenuTitle:
+	.4byte CTTask_CMenuTitle_typestr
+	.4byte CTTask_CMenuTitle_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B7D0
+lbl_8066B7D0:
+	# ROM: 0x575630
+	.float 10.0
+
+
+.global lbl_8066B7D4
+lbl_8066B7D4:
+	# ROM: 0x575634
+	.4byte 0
+
+
+.global lbl_8066B7D8
+lbl_8066B7D8:
+	# ROM: 0x575638
+	.float 1.0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667510
+lbl_80667510:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001BAD8
 lbl_8001BAD8:
@@ -472,7 +616,7 @@ lbl_8001BB4C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802B5DEC
 	.4byte 0x00000120

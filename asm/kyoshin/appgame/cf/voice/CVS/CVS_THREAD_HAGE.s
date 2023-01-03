@@ -284,7 +284,60 @@ func_802A724C:
 /* 802A724C 0027080C  38 60 00 F0 */	li r3, 0xf0
 /* 802A7250 00270810  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CVS_THREAD_HAGE_typestr
+cf_CVS_THREAD_HAGE_typestr:
+	.asciz "cf::CVS_THREAD_HAGE"
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053D338
+lbl_8053D338:
+	# ROM: 0x539438
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A6F8C
+
+.global lbl_8053D344
+lbl_8053D344:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A70C8
+
+.global lbl_8053D350
+lbl_8053D350:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A718C
+
+
+.global __vt__cf_CVS_THREAD_HAGE
+__vt__cf_CVS_THREAD_HAGE:
+	.4byte __RTTI__cf_CVS_THREAD_HAGE
+	.4byte 0
+	.4byte func_802A3B50
+	.4byte func_802A71D4
+	.4byte func_802A724C
+	.4byte func_802A1EA0
+	.4byte func_802A3740
+
+.global cf_CVS_THREAD_HAGE_hierarchy
+cf_CVS_THREAD_HAGE_hierarchy:
+	.4byte __RTTI__cf_CVS_THREAD
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CVS_THREAD_HAGE
+__RTTI__cf_CVS_THREAD_HAGE:
+	.4byte cf_CVS_THREAD_HAGE_typestr
+	.4byte cf_CVS_THREAD_HAGE_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001ACF0
 lbl_8001ACF0:
@@ -321,7 +374,7 @@ lbl_8001AD34:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A6E84
 	.4byte 0x00000108

@@ -851,3 +851,23 @@ lbl_8056CB38:
 	.4byte Attach__Q34nw4r3g3d12AnmObjTexPatFiPQ34nw4r3g3d15AnmObjTexPatRes
 	.4byte Detach__Q34nw4r3g3d12AnmObjTexPatFi
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexPatFv
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C358
+lbl_8066C358:
+	# ROM: 0x5761B8
+	.4byte 0
+
+
+.global lbl_8066C35C
+lbl_8066C35C:
+	# ROM: 0x5761BC
+	.float 1.0
+
+
+.global lbl_8066C360
+lbl_8066C360:
+	# ROM: 0x5761C0
+	.4byte 0x43300000
+	.4byte 0x80000000

@@ -2310,7 +2310,227 @@ func_801445A0:
 /* 801445A0 0010DB60  38 63 FF 90 */	addi r3, r3, -112
 /* 801445A4 0010DB64  4B FF E1 D0 */	b func_80142774
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804FCBB8
+lbl_804FCBB8:
+	.asciz "face_n01"
+	.balign 4
+
+.global lbl_804FCBC4
+lbl_804FCBC4:
+	.asciz "face_m01"
+	.balign 4
+
+.global lbl_804FCBD0
+lbl_804FCBD0:
+	.asciz "face_n02"
+	.balign 4
+
+.global lbl_804FCBDC
+lbl_804FCBDC:
+	.asciz "face_m02"
+	.balign 4
+
+.global CMenuUpdate_typestr
+CMenuUpdate_typestr:
+	.asciz "CMenuUpdate"
+	.4byte 0
+
+
+.global lbl_804FCBF8
+lbl_804FCBF8:
+	.asciz "CMenuUpdate"
+	.asciz "mf70_cf52_sideinfo.brlyt"
+	.asciz "mf70_cf52_sideinfo_in.brlan"
+	.asciz "mf70_cf52_sideinfo_kizuna_in.brlan"
+	.asciz "help"
+	.asciz "%s.tpl"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "MNU_kyeassign"
+	.asciz "pic_button_q"
+	.asciz "pic_button_g"
+	.asciz "pic_button_b"
+	.asciz "txt_kakunin_q"
+	.asciz "txt_kakunin_g"
+	.asciz "txt_kakunin_b"
+	.asciz "nul_kizuna"
+	.asciz "nul_quest"
+	.asciz "nul_gram"
+	.asciz "nul_buf"
+	.asciz "mf70_cf52_sideinfo03.tpl"
+	.asciz "pic_icon_g"
+	.asciz "mf00_com12_face_area"
+	.asciz "SYS_filelist"
+	.asciz "filename"
+	.asciz "pic_face00"
+	.asciz "pic_face01"
+	.asciz "mf00_com12_face_area01.tpl"
+	.asciz "mf00_com12_face_area02.tpl"
+	.asciz "mf00_com12_face_area03.tpl"
+	.asciz "mf00_com12_face_area04.tpl"
+	.asciz "mf00_com12_face_area05.tpl"
+	.asciz "nul_anim_b"
+	.asciz "nul_anim_g"
+	.asciz "pic_kiz_b"
+	.asciz "pic_rp_b"
+	.asciz "mf00_com00_rp03.tpl"
+	.asciz "mf00_com00_rp02.tpl"
+	.asciz "mf00_com00_rp01.tpl"
+	.asciz "pic_kiz_g"
+	.asciz "pic_rp_g"
+	.asciz "mf00_com00_rp00.tpl"
+	.asciz "mf00_com00_rp04.tpl"
+	.asciz "JNL_PCrelatelist"
+	.asciz "flg_s1"
+	.asciz "JNL_PClinelist"
+	.asciz "mf00_com00_kizp04.tpl"
+	.asciz "mf00_com00_kizp02.tpl"
+	.asciz "mf00_com00_kizp01.tpl"
+	.asciz "mf00_com00_kizp00.tpl"
+	.asciz "mf00_com00_kizp03.tpl"
+	.asciz "txt_buf"
+	.asciz "name"
+	.asciz "mf00_reg00_tut.tpl"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuUpdate
+__vt__CMenuUpdate:
+	.4byte __RTTI__CMenuUpdate
+	.4byte 0
+	.4byte func_80142774
+	.4byte CChildListNode_Reset
+	.4byte func_801427F4
+	.4byte func_80142964
+	.4byte func_801429E4
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuUpdate
+	.4byte 0xFFFFFF94
+	.4byte func_80144590
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuUpdate
+	.4byte 0xFFFFFF90
+	.4byte func_801445A0
+	.4byte func_80144598
+	.4byte func_80142AA4
+
+.global CMenuUpdate_hierarchy
+CMenuUpdate_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000070
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuUpdate
+__RTTI__CMenuUpdate:
+	.4byte CMenuUpdate_typestr
+	.4byte CMenuUpdate_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669C60
+lbl_80669C60:
+	# ROM: 0x573AC0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80669C68
+lbl_80669C68:
+	# ROM: 0x573AC8
+	.4byte lbl_804FCBB8
+
+
+.global lbl_80669C6C
+lbl_80669C6C:
+	# ROM: 0x573ACC
+	.4byte lbl_804FCBC4
+
+
+.global lbl_80669C70
+lbl_80669C70:
+	# ROM: 0x573AD0
+	.4byte lbl_804FCBD0
+
+
+.global lbl_80669C74
+lbl_80669C74:
+	# ROM: 0x573AD4
+	.4byte lbl_804FCBDC
+
+
+.global lbl_80669C78
+lbl_80669C78:
+	# ROM: 0x573AD8
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80669C80
+lbl_80669C80:
+	# ROM: 0x573AE0
+	.4byte 0x40800000
+
+
+.global lbl_80669C84
+lbl_80669C84:
+	# ROM: 0x573AE4
+	.float 1.0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666A88
+lbl_80666A88:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000CE14
 lbl_8000CE14:
@@ -2428,7 +2648,7 @@ lbl_8000CF0C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8014255C
 	.4byte 0x00000104

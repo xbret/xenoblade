@@ -3115,7 +3115,33 @@ func_80102018:
 /* 80102018 000CB5D8  38 63 FF A4 */	addi r3, r3, -92
 /* 8010201C 000CB5DC  4B FF CD 4C */	b func_800FED68
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_806697D8
+lbl_806697D8:
+	# ROM: 0x573638
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_806697E0
+lbl_806697E0:
+	# ROM: 0x573640
+	.float 1.0
+
+
+.global lbl_806697E4
+lbl_806697E4:
+	# ROM: 0x573644
+	.4byte 0
+
+.global IUICf_typestr
+IUICf_typestr:
+	.asciz "IUICf"
+	.balign 4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000AE84
 lbl_8000AE84:
@@ -3196,7 +3222,7 @@ lbl_8000AF0C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_800FF300
 	.4byte 0x00000304

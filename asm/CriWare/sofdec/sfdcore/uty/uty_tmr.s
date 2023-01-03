@@ -120,3 +120,15 @@ UTY_GetTmrUnit:
 lbl_80520838:
 	.asciz "TMR_CH"
 	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8061CE28
+lbl_8061CE28:
+	.skip 0x4
+.global lbl_8061CE2C
+lbl_8061CE2C:
+	.skip 0x4
+.global utytmr_unit
+utytmr_unit:
+	.skip 0x8

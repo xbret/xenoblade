@@ -11,7 +11,7 @@ func_80435EA4:
 /* 80435EB4 003FF474  7C 7F 1B 78 */	mr r31, r3
 /* 80435EB8 003FF478  4B FF F4 E5 */	bl getInstanceMTRand__Q22mm3mtlFv
 /* 80435EBC 003FF47C  7F E4 FB 78 */	mr r4, r31
-/* 80435EC0 003FF480  4B FF F7 15 */	bl func_804355D4__Q32mm3mtl6MTRandFUl
+/* 80435EC0 003FF480  4B FF F7 15 */	bl mtInit__Q32mm3mtl6MTRandFUl
 /* 80435EC4 003FF484  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80435EC8 003FF488  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80435ECC 003FF48C  7C 08 03 A6 */	mtlr r0
@@ -229,7 +229,7 @@ lbl_8066CA28:
 	.4byte 0
 	.4byte 0
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001C078
 lbl_8001C078:
@@ -262,7 +262,7 @@ lbl_8001C0A0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80435EA4
 	.4byte 0x00000034

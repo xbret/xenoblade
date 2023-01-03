@@ -2747,3 +2747,84 @@ lbl_8056E640:
 	.4byte lbl_80524FF0
 	.4byte lbl_805253F4
 	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665E20
+lbl_80665E20:
+	# ROM: 0x571A00
+	.4byte 0x12345678
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C8D0
+lbl_8066C8D0:
+	# ROM: 0x576730
+	.float 1.0
+
+
+.global lbl_8066C8D4
+lbl_8066C8D4:
+	# ROM: 0x576734
+	.4byte 0x40000000
+
+
+.global lbl_8066C8D8
+lbl_8066C8D8:
+	# ROM: 0x576738
+	.float 0.5
+
+
+.global lbl_8066C8DC
+lbl_8066C8DC:
+	# ROM: 0x57673C
+	.4byte 0x40C00000
+
+
+.global lbl_8066C8E0
+lbl_8066C8E0:
+	# ROM: 0x576740
+	.4byte 0xC2B4CCCD
+
+
+.global lbl_8066C8E4
+lbl_8066C8E4:
+	# ROM: 0x576744
+	.float 10.0
+
+
+.global lbl_8066C8E8
+lbl_8066C8E8:
+	# ROM: 0x576748
+	.float -1.0
+
+
+.global lbl_8066C8EC
+lbl_8066C8EC:
+	# ROM: 0x57674C
+	.4byte 0x43800000
+
+
+.global lbl_8066C8F0
+lbl_8066C8F0:
+	# ROM: 0x576750
+	.4byte 0
+
+
+.global lbl_8066C8F4
+lbl_8066C8F4:
+	# ROM: 0x576754
+	.4byte 0x3E0ADE7F
+
+
+.global lbl_8066C8F8
+lbl_8066C8F8:
+	# ROM: 0x576758
+	.4byte 0x3F666666
+
+
+.global lbl_8066C8FC
+lbl_8066C8FC:
+	# ROM: 0x57675C
+	.4byte 0x3D088889

@@ -557,3 +557,18 @@ CancelWaitTask__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425F24 003EF4E4  7C 08 03 A6 */	mtlr r0
 /* 80425F28 003EF4E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80425F2C 003EF4EC  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80657018
+lbl_80657018:
+	.skip 0xC
+.global lbl_80657024
+lbl_80657024:
+	.skip 0x3C
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667E08
+lbl_80667E08:
+	.skip 0x8

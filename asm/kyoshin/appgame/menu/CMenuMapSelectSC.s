@@ -1635,7 +1635,119 @@ func_80252374:
 /* 80252408 0021B9C8  38 21 00 70 */	addi r1, r1, 0x70
 /* 8025240C 0021B9CC  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuMapSelectSC_typestr
+CMenuMapSelectSC_typestr:
+	.asciz "CMenuMapSelectSC"
+	.balign 4
+
+
+.global lbl_80507C34
+lbl_80507C34:
+	.asciz "MNU_map"
+	.asciz "name"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053A8C8
+lbl_8053A8C8:
+	# ROM: 0x5369C8
+	.4byte switch_80251398
+	.4byte switch_802513A4
+	.4byte switch_802513B0
+	.4byte switch_802513BC
+	.4byte switch_802513D8
+	.4byte switch_802513E4
+	.4byte switch_802513F0
+	.4byte switch_802513FC
+
+
+.global __vt__CMenuMapSelectSC
+__vt__CMenuMapSelectSC:
+	.4byte __RTTI__CMenuMapSelectSC
+	.4byte 0
+	.4byte func_80250DF0
+	.4byte CChildListNode_Reset
+	.4byte func_80250E68
+	.4byte func_802512C8
+	.4byte func_80251340
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuMapSelectSC
+	.4byte 0xFFFFFFA8
+	.4byte func_80251DF0
+	.4byte func_80251DE8
+	.4byte func_80251430
+
+.global CMenuMapSelectSC_hierarchy
+CMenuMapSelectSC_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuMapSelectSC
+__RTTI__CMenuMapSelectSC:
+	.4byte CMenuMapSelectSC_typestr
+	.4byte CMenuMapSelectSC_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066B070
+lbl_8066B070:
+	# ROM: 0x574ED0
+	.4byte 0
+
+
+.global lbl_8066B074
+lbl_8066B074:
+	# ROM: 0x574ED4
+	.float 1.0
+
+
+.global lbl_8066B078
+lbl_8066B078:
+	# ROM: 0x574ED8
+	.float 10.0
+	.4byte 0
+
+
+.global lbl_8066B080
+lbl_8066B080:
+	# ROM: 0x574EE0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066B088
+lbl_8066B088:
+	# ROM: 0x574EE8
+	.float 1.0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806670B0
+lbl_806670B0:
+	.skip 0x8
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80016A70
 lbl_80016A70:
@@ -1796,7 +1908,7 @@ lbl_80016BF8:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80250D24
 	.4byte 0x000000CC

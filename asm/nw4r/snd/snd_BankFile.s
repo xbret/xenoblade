@@ -505,3 +505,11 @@ ReadWaveInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8WaveInfoRC
 /* 804120A0 003DB660  7C 08 03 A6 */	mtlr r0
 /* 804120A4 003DB664  38 21 00 30 */	addi r1, r1, 0x30
 /* 804120A8 003DB668  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C6D8
+lbl_8066C6D8:
+	# ROM: 0x576538
+	.float 1.0
+	.4byte 0

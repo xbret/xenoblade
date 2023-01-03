@@ -14,3 +14,12 @@ sinit_8042BE14:
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
 .4byte sinit_8042BE14
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667E28
+lbl_80667E28:
+	.skip 0x8
+.global lbl_80667E30
+lbl_80667E30:
+	.skip 0x8

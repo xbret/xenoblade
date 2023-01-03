@@ -918,3 +918,36 @@ lbl_80520FF4:
 	.4byte ProductTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_S__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C498
+lbl_8066C498:
+	# ROM: 0x5762F8
+	.4byte 0
+
+
+.global lbl_8066C49C
+lbl_8066C49C:
+	# ROM: 0x5762FC
+	.float 1.0
+
+
+.global lbl_8066C4A0
+lbl_8066C4A0:
+	# ROM: 0x576300
+	.4byte 0x3F360B61
+
+
+.global lbl_8066C4A4
+lbl_8066C4A4:
+	# ROM: 0x576304
+	.float 0.5
+
+
+.global lbl_8066C4A8
+lbl_8066C4A8:
+	# ROM: 0x576308
+	.4byte 0xBF000000
+	.4byte 0

@@ -2399,7 +2399,534 @@ func_8022B35C:
 /* 8022B610 001F4BD0  38 21 00 40 */	addi r1, r1, 0x40
 /* 8022B614 001F4BD4  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80505380
+lbl_80505380:
+	.asciz "/common/jp/bdat_qs0000.bin"
+	.balign 4
+
+.global lbl_8050539C
+lbl_8050539C:
+	.asciz "/common/jp/bdat_qs0101.bin"
+	.balign 4
+
+.global lbl_805053B8
+lbl_805053B8:
+	.asciz "/common/jp/bdat_qs0201.bin"
+	.balign 4
+
+.global lbl_805053D4
+lbl_805053D4:
+	.asciz "/common/jp/bdat_qs0301.bin"
+	.balign 4
+
+.global lbl_805053F0
+lbl_805053F0:
+	.asciz "/common/jp/bdat_qs0401.bin"
+	.balign 4
+
+.global lbl_8050540C
+lbl_8050540C:
+	.asciz "/common/jp/bdat_qs0402.bin"
+	.balign 4
+
+.global lbl_80505428
+lbl_80505428:
+	.asciz "/common/jp/bdat_qs0501.bin"
+	.balign 4
+
+.global lbl_80505444
+lbl_80505444:
+	.asciz "/common/jp/bdat_qs0601.bin"
+	.balign 4
+
+.global lbl_80505460
+lbl_80505460:
+	.asciz "/common/jp/bdat_qs0701.bin"
+	.balign 4
+
+.global lbl_8050547C
+lbl_8050547C:
+	.asciz "/common/jp/bdat_qs0801.bin"
+	.balign 4
+
+.global lbl_80505498
+lbl_80505498:
+	.asciz "/common/jp/bdat_qs0901.bin"
+	.balign 4
+
+.global lbl_805054B4
+lbl_805054B4:
+	.asciz "/common/jp/bdat_qs1001.bin"
+	.balign 4
+
+.global lbl_805054D0
+lbl_805054D0:
+	.asciz "/common/jp/bdat_qs1101.bin"
+	.balign 4
+
+.global lbl_805054EC
+lbl_805054EC:
+	.asciz "/common/jp/bdat_qs1201.bin"
+	.balign 4
+
+.global lbl_80505508
+lbl_80505508:
+	.asciz "/common/jp/bdat_qs1202.bin"
+	.balign 4
+
+.global lbl_80505524
+lbl_80505524:
+	.asciz "/common/jp/bdat_qs1301.bin"
+	.balign 4
+
+.global lbl_80505540
+lbl_80505540:
+	.asciz "/common/jp/bdat_qs1401.bin"
+	.balign 4
+
+.global lbl_8050555C
+lbl_8050555C:
+	.asciz "/common/jp/bdat_qs1501.bin"
+	.balign 4
+
+.global lbl_80505578
+lbl_80505578:
+	.asciz "/common/jp/bdat_qs1601.bin"
+	.balign 4
+
+.global lbl_80505594
+lbl_80505594:
+	.asciz "/common/jp/bdat_qs1701.bin"
+	.balign 4
+
+.global lbl_805055B0
+lbl_805055B0:
+	.asciz "/common/jp/bdat_qs1801.bin"
+	.balign 4
+
+.global lbl_805055CC
+lbl_805055CC:
+	.asciz "/common/jp/bdat_qs1901.bin"
+	.balign 4
+
+.global lbl_805055E8
+lbl_805055E8:
+	.asciz "/common/jp/bdat_qs2001.bin"
+	.balign 4
+
+.global lbl_80505604
+lbl_80505604:
+	.asciz "/common/jp/bdat_qs2101.bin"
+	.balign 4
+
+.global lbl_80505620
+lbl_80505620:
+	.asciz "/common/jp/bdat_qs2201.bin"
+	.balign 4
+
+.global lbl_8050563C
+lbl_8050563C:
+	.asciz "/common/jp/bdat_qs2301.bin"
+	.balign 4
+
+.global lbl_80505658
+lbl_80505658:
+	.asciz "/common/jp/bdat_qs2401.bin"
+	.balign 4
+
+.global lbl_80505674
+lbl_80505674:
+	.asciz "MNU_qt0000"
+	.balign 4
+
+.global lbl_80505680
+lbl_80505680:
+	.asciz "MNU_qt0101"
+	.balign 4
+
+.global lbl_8050568C
+lbl_8050568C:
+	.asciz "MNU_qt0201"
+	.balign 4
+
+.global lbl_80505698
+lbl_80505698:
+	.asciz "MNU_qt0301"
+	.balign 4
+
+.global lbl_805056A4
+lbl_805056A4:
+	.asciz "MNU_qt0401"
+	.balign 4
+
+.global lbl_805056B0
+lbl_805056B0:
+	.asciz "MNU_qt0402"
+	.balign 4
+
+.global lbl_805056BC
+lbl_805056BC:
+	.asciz "MNU_qt0501"
+	.balign 4
+
+.global lbl_805056C8
+lbl_805056C8:
+	.asciz "MNU_qt0601"
+	.balign 4
+
+.global lbl_805056D4
+lbl_805056D4:
+	.asciz "MNU_qt0701"
+	.balign 4
+
+.global lbl_805056E0
+lbl_805056E0:
+	.asciz "MNU_qt0801"
+	.balign 4
+
+.global lbl_805056EC
+lbl_805056EC:
+	.asciz "MNU_qt0901"
+	.balign 4
+
+.global lbl_805056F8
+lbl_805056F8:
+	.asciz "MNU_qt1001"
+	.balign 4
+
+.global lbl_80505704
+lbl_80505704:
+	.asciz "MNU_qt1101"
+	.balign 4
+
+.global lbl_80505710
+lbl_80505710:
+	.asciz "MNU_qt1201"
+	.balign 4
+
+.global lbl_8050571C
+lbl_8050571C:
+	.asciz "MNU_qt1202"
+	.balign 4
+
+.global lbl_80505728
+lbl_80505728:
+	.asciz "MNU_qt1301"
+	.balign 4
+
+.global lbl_80505734
+lbl_80505734:
+	.asciz "MNU_qt1401"
+	.balign 4
+
+.global lbl_80505740
+lbl_80505740:
+	.asciz "MNU_qt1501"
+	.balign 4
+
+.global lbl_8050574C
+lbl_8050574C:
+	.asciz "MNU_qt1601"
+	.balign 4
+
+.global lbl_80505758
+lbl_80505758:
+	.asciz "MNU_qt1701"
+	.balign 4
+
+.global lbl_80505764
+lbl_80505764:
+	.asciz "MNU_qt1801"
+	.balign 4
+
+.global lbl_80505770
+lbl_80505770:
+	.asciz "MNU_qt1901"
+	.balign 4
+
+.global lbl_8050577C
+lbl_8050577C:
+	.asciz "MNU_qt2001"
+	.balign 4
+
+.global lbl_80505788
+lbl_80505788:
+	.asciz "MNU_qt2101"
+	.balign 4
+
+.global lbl_80505794
+lbl_80505794:
+	.asciz "MNU_qt2201"
+	.balign 4
+
+.global lbl_805057A0
+lbl_805057A0:
+	.asciz "MNU_qt2301"
+	.balign 4
+
+.global lbl_805057AC
+lbl_805057AC:
+	.asciz "MNU_qt2401"
+	.balign 4
+
+.global CQstLogInfo_typestr
+CQstLogInfo_typestr:
+	.asciz "CQstLogInfo"
+
+
+.global lbl_805057C4
+lbl_805057C4:
+	.asciz "/menu/QstLogInfo.arc"
+	.asciz "title"
+	.asciz "txt_tit"
+	.asciz "pic_icon_tit"
+	.asciz "qst_genre"
+	.asciz "mf00_reg00_qt01.tpl"
+	.asciz "mf00_reg00_qt02.tpl"
+	.asciz "mf00_reg00_qt03.tpl"
+	.asciz "npc_id"
+	.asciz "name"
+	.asciz "txt_man"
+	.asciz "MNU_quest"
+	.asciz "rlt_lnd"
+	.asciz "landmarklist"
+	.asciz "txt_map"
+	.asciz "purpose"
+	.asciz "txt_exp"
+	.asciz "order_succ_A"
+	.asciz "info_prog"
+	.asciz "txt_subtit01"
+	.asciz "pic_chbx01"
+	.asciz "pic_ch01"
+	.asciz "type_succ_A2"
+	.asciz "type_succ_B2"
+	.asciz "info_succ_A1"
+	.asciz "info_succ_B1"
+	.asciz "txt_subtit%02d"
+	.asciz "pic_chbx%02d"
+	.asciz "pic_ch%02d"
+	.asciz "type_succ_A3"
+	.asciz "type_succ_B3"
+	.asciz "info_succ_A2"
+	.asciz "info_succ_B2"
+	.asciz "type_succ_A4"
+	.asciz "type_succ_B4"
+	.asciz "info_succ_A3"
+	.asciz "info_succ_B3"
+	.asciz "no_report"
+	.asciz "info_report"
+	.asciz "info_end_B"
+	.asciz "info_end_A"
+	.asciz "type_succ_A%d"
+	.asciz "type_succ_B%d"
+	.asciz "info_succ_A%d"
+	.asciz "info_succ_B%d"
+	.asciz "reward_mes"
+	.asciz "txt_item01"
+	.asciz "txt_gold00"
+	.asciz "txt_exp01"
+	.asciz "reward_exp"
+	.asciz "reward_money"
+	.asciz "reward_B%d"
+	.asciz "reward_A%d"
+	.asciz "txt_item%02d"
+	.asciz "rankType"
+	.asciz "MNU_item"
+	.asciz "%s%s"
+	.asciz "%s"
+	.byte 0x00
+	.asciz "txt_subtit02"
+	.asciz "txt_subtit03"
+	.asciz "txt_subtit04"
+	.asciz "txt_subtit05"
+	.asciz "txt_subtit06"
+	.asciz "pic_chbx02"
+	.asciz "pic_chbx03"
+	.asciz "pic_chbx04"
+	.asciz "pic_chbx05"
+	.asciz "pic_chbx06"
+	.asciz "pic_ch02"
+	.asciz "pic_ch03"
+	.asciz "pic_ch04"
+	.asciz "pic_ch05"
+	.asciz "pic_ch06"
+	.asciz "txt_item02"
+	.asciz "txt_item03"
+	.asciz "CQstLogInfo"
+	.asciz "arc"
+	.asciz "mf30_qst_dtl.brlyt"
+	.asciz "mf30_qst_dtl_in.brlan"
+	.asciz "mf30_qst_dtl_info_in.brlan"
+	.asciz "txt_gold01"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80539AD8
+lbl_80539AD8:
+	# ROM: 0x535BD8
+	.4byte lbl_80505380
+	.4byte lbl_8050539C
+	.4byte lbl_805053B8
+	.4byte lbl_805053D4
+	.4byte lbl_805053F0
+	.4byte lbl_8050540C
+	.4byte lbl_80505428
+	.4byte lbl_80505444
+	.4byte lbl_80505460
+	.4byte lbl_8050547C
+	.4byte lbl_80505498
+	.4byte lbl_805054B4
+	.4byte lbl_805054D0
+	.4byte lbl_805054EC
+	.4byte lbl_80505508
+	.4byte lbl_80505524
+	.4byte lbl_80505540
+	.4byte lbl_8050555C
+	.4byte lbl_80505578
+	.4byte lbl_80505578
+	.4byte lbl_80505594
+	.4byte lbl_805055B0
+	.4byte lbl_805055CC
+	.4byte lbl_805055E8
+	.4byte lbl_80505604
+	.4byte lbl_80505620
+	.4byte lbl_8050563C
+	.4byte lbl_80505658
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80539B50
+lbl_80539B50:
+	# ROM: 0x535C50
+	.4byte lbl_80505674
+	.4byte lbl_80505680
+	.4byte lbl_8050568C
+	.4byte lbl_80505698
+	.4byte lbl_805056A4
+	.4byte lbl_805056B0
+	.4byte lbl_805056BC
+	.4byte lbl_805056C8
+	.4byte lbl_805056D4
+	.4byte lbl_805056E0
+	.4byte lbl_805056EC
+	.4byte lbl_805056F8
+	.4byte lbl_80505704
+	.4byte lbl_80505710
+	.4byte lbl_8050571C
+	.4byte lbl_80505728
+	.4byte lbl_80505734
+	.4byte lbl_80505740
+	.4byte lbl_8050574C
+	.4byte lbl_8050574C
+	.4byte lbl_80505758
+	.4byte lbl_80505764
+	.4byte lbl_80505770
+	.4byte lbl_8050577C
+	.4byte lbl_80505788
+	.4byte lbl_80505794
+	.4byte lbl_805057A0
+	.4byte lbl_805057AC
+
+.global lbl_80539BC0
+lbl_80539BC0:
+	.4byte switch_8022AF14
+	.4byte switch_8022AF14
+	.4byte switch_8022AE58
+	.4byte switch_8022AE70
+	.4byte switch_8022AE88
+	.4byte switch_8022AE88
+	.4byte switch_8022AE88
+	.4byte switch_8022AE88
+	.4byte switch_8022AE88
+	.4byte switch_8022AEA0
+	.4byte switch_8022AEB8
+	.4byte switch_8022AED0
+	.4byte switch_8022AEE8
+	.4byte switch_8022AF00
+	
+.global lbl_80539BF8
+lbl_80539BF8:
+	.4byte switch_8022AB40
+	.4byte switch_8022AB40
+	.4byte switch_8022AA84
+	.4byte switch_8022AA9C
+	.4byte switch_8022AAB4
+	.4byte switch_8022AAB4
+	.4byte switch_8022AAB4
+	.4byte switch_8022AAB4
+	.4byte switch_8022AAB4
+	.4byte switch_8022AACC
+	.4byte switch_8022AAE4
+	.4byte switch_8022AAFC
+	.4byte switch_8022AB14
+	.4byte switch_8022AB2C
+
+
+.global __vt__CQstLogInfo
+__vt__CQstLogInfo:
+	.4byte __RTTI__CQstLogInfo
+	.4byte 0
+	.4byte func_8022946C
+	.4byte func_80039E28
+	.4byte func_8022B35C
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CQstLogInfo_hierarchy
+CQstLogInfo_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CQstLogInfo
+__RTTI__CQstLogInfo:
+	.4byte CQstLogInfo_typestr
+	.4byte CQstLogInfo_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AE50
+lbl_8066AE50:
+	# ROM: 0x574CB0
+	.float 1.0
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001550C
 lbl_8001550C:
@@ -2521,7 +3048,7 @@ lbl_800155C8:
 	.4byte func_8045F8C8
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802293F0
 	.4byte 0x0000007C

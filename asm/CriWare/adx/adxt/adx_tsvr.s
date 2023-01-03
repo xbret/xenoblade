@@ -1126,3 +1126,18 @@ lbl_8051A120:
 	.asciz "E02080842 adxt_ExecHndl: parameter error"
 	.balign 4
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E85F0
+lbl_805E85F0:
+	.skip 0x4
+.global lbl_805E85F4
+lbl_805E85F4:
+	.skip 0x4
+.global adxt_dbg_ndt
+adxt_dbg_ndt:
+	.skip 0x4
+.global adxt_dbg_rna_ndata
+adxt_dbg_rna_ndata:
+	.skip 0x4

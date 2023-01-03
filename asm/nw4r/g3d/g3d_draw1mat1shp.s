@@ -954,3 +954,32 @@ lbl_80520FA8:
 	.4byte 0x00000002
 	.4byte 0x00000001
 	.4byte 0x00000003
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C410
+lbl_8066C410:
+	# ROM: 0x576270
+	.float 1.0
+	.4byte 0
+
+
+.global lbl_8066C418
+lbl_8066C418:
+	# ROM: 0x576278
+	.4byte 0x40100000
+	.4byte 0
+
+
+.global lbl_8066C420
+lbl_8066C420:
+	# ROM: 0x576280
+	.4byte 0x437F0000
+	.4byte 0
+
+
+.global lbl_8066C428
+lbl_8066C428:
+	# ROM: 0x576288
+	.4byte 0x43300000
+	.4byte 0

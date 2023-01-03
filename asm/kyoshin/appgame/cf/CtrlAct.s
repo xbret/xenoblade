@@ -7287,7 +7287,491 @@ sinit_800D79B4:
 
 .4byte sinit_800D79B4
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F8030
+lbl_804F8030:
+	.4byte 0x00000010
+	.4byte 0x00100000
+	.4byte 0x00200000
+
+
+.global lbl_804F803C
+lbl_804F803C:
+	.asciz "JUhead"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8052E6C0
+lbl_8052E6C0:
+	# ROM: 0x52A7C0
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D242C
+	.4byte switch_800D242C
+	.4byte switch_800D2464
+	.4byte switch_800D2464
+	.4byte switch_800D2464
+	.4byte switch_800D2464
+	.4byte switch_800D2464
+	.4byte switch_800D2464
+	.4byte switch_800D2464
+	.4byte switch_800D2464
+	.4byte switch_800D2464
+	.4byte switch_800D2464
+	.4byte switch_800D2464
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D2480
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D257C
+	.4byte switch_800D259C
+	.4byte switch_800D259C
+	.4byte switch_800D259C
+	.4byte switch_800D259C
+	.4byte switch_800D259C
+	.4byte switch_800D25BC
+	.4byte switch_800D25DC
+	.4byte switch_800D25FC
+	.4byte switch_800D261C
+	.4byte switch_800D2668
+	.4byte switch_800D2688
+	.4byte switch_800D26A8
+	.4byte switch_800D26C8
+	.4byte switch_800D249C
+	.4byte switch_800D24C8
+	.4byte switch_800D2504
+	.4byte switch_800D2708
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D2540
+	.4byte switch_800D29C0
+	.4byte switch_800D272C
+	.4byte switch_800D2770
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D29C0
+	.4byte switch_800D27B4
+	.4byte switch_800D27B4
+	.4byte switch_800D27B4
+	.4byte switch_800D27B4
+	.4byte switch_800D27B4
+	.4byte switch_800D27B4
+	.4byte switch_800D27B4
+	.4byte switch_800D27B4
+	.4byte switch_800D27EC
+	.4byte switch_800D2834
+	.4byte switch_800D26E8
+	.4byte switch_800D242C
+	.4byte switch_800D242C
+	.4byte switch_800D2448
+	.4byte switch_800D2448
+	.4byte switch_800D2448
+
+
+.global lbl_8052E824
+lbl_8052E824:
+	# ROM: 0x52A924
+	.4byte switch_800D3758
+	.4byte switch_800D3620
+	.4byte switch_800D362C
+	.4byte switch_800D3638
+	.4byte switch_800D3644
+	.4byte switch_800D365C
+	.4byte switch_800D3668
+	.4byte switch_800D3674
+	.4byte switch_800D3680
+	.4byte switch_800D36A0
+	.4byte switch_800D3650
+
+
+.global __vt__cf_CtrlAct
+__vt__cf_CtrlAct:
+	.4byte __RTTI__cf_CtrlAct
+	.4byte 0
+	.4byte func_80087608
+	.4byte 0
+	.4byte func_80096854
+	.4byte func_800D5860
+	.4byte func_800888E8
+	.4byte func_800888E0
+	.4byte func_800888D8
+	.4byte func_800888D0
+	.4byte func_800888C8
+	.4byte func_800888C0
+	.4byte func_800888B8
+	.4byte func_800888B0
+	.4byte func_800888A8
+	.4byte func_800888A0
+	.4byte func_80088898
+	.4byte func_80088890
+	.4byte func_80088888
+	.4byte func_80088880
+	.4byte func_80088878
+	.4byte func_80088870
+	.4byte func_800D1F0C
+	.4byte func_800D1CFC
+	.4byte func_800D11B0
+	.4byte func_800D49EC
+	.4byte func_800D49E4
+	.4byte func_800D5814
+	.4byte func_800D64E0
+	.4byte func_800D64D8
+	.4byte func_800D2A5C
+	.4byte func_800D2D64
+	.4byte func_800888F4
+	.4byte func_800888F0
+	.4byte func_800D34D4
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_806695C0
+lbl_806695C0:
+	# ROM: 0x573420
+	.4byte 0
+
+
+.global lbl_806695C4
+lbl_806695C4:
+	# ROM: 0x573424
+	.float 1.0
+
+
+.global lbl_806695C8
+lbl_806695C8:
+	# ROM: 0x573428
+	.4byte 0x4479C000
+
+
+.global lbl_806695CC
+lbl_806695CC:
+	# ROM: 0x57342C
+	.4byte 0x40000000
+
+
+.global lbl_806695D0
+lbl_806695D0:
+	# ROM: 0x573430
+	.4byte 0x40600000
+
+
+.global lbl_806695D4
+lbl_806695D4:
+	# ROM: 0x573434
+	.float 0.5
+
+
+.global lbl_806695D8
+lbl_806695D8:
+	# ROM: 0x573438
+	.4byte 0x3F333333
+
+
+.global lbl_806695DC
+lbl_806695DC:
+	# ROM: 0x57343C
+	.4byte 0x3F666666
+
+
+.global lbl_806695E0
+lbl_806695E0:
+	# ROM: 0x573440
+	.4byte 0x40400000
+
+
+.global lbl_806695E4
+lbl_806695E4:
+	# ROM: 0x573444
+	.4byte 0x461C3C00
+
+
+.global lbl_806695E8
+lbl_806695E8:
+	# ROM: 0x573448
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_806695EC
+lbl_806695EC:
+	# ROM: 0x57344C
+	.4byte 0x3F4F5C29
+
+
+.global lbl_806695F0
+lbl_806695F0:
+	# ROM: 0x573450
+	.4byte 0x41400000
+
+
+.global lbl_806695F4
+lbl_806695F4:
+	# ROM: 0x573454
+	.4byte 0x41900000
+
+
+.global lbl_806695F8
+lbl_806695F8:
+	# ROM: 0x573458
+	.4byte 0x3FB99999
+	.4byte 0x9999999A
+
+
+.global lbl_80669600
+lbl_80669600:
+	# ROM: 0x573460
+	.4byte 0x42080000
+
+
+.global lbl_80669604
+lbl_80669604:
+	# ROM: 0x573464
+	.float 10.0
+
+
+.global lbl_80669608
+lbl_80669608:
+	# ROM: 0x573468
+	.4byte 0x3CC90FDB
+
+
+.global lbl_8066960C
+lbl_8066960C:
+	# ROM: 0x57346C
+	.4byte 0x41F00000
+
+
+.global lbl_80669610
+lbl_80669610:
+	# ROM: 0x573470
+	.4byte 0x42700000
+
+
+.global lbl_80669614
+lbl_80669614:
+	# ROM: 0x573474
+	.float 100.0
+
+
+.global lbl_80669618
+lbl_80669618:
+	# ROM: 0x573478
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80669620
+lbl_80669620:
+	# ROM: 0x573480
+	.4byte 0x3D088889
+
+
+.global lbl_80669624
+lbl_80669624:
+	# ROM: 0x573484
+	.4byte 0x3C17B426
+
+
+.global lbl_80669628
+lbl_80669628:
+	# ROM: 0x573488
+	.4byte 0x41A00000
+
+
+.global lbl_8066962C
+lbl_8066962C:
+	# ROM: 0x57348C
+	.4byte 0x42480000
+
+
+.global lbl_80669630
+lbl_80669630:
+	# ROM: 0x573490
+	.float -1.0
+
+
+.global lbl_80669634
+lbl_80669634:
+	# ROM: 0x573494
+	.float 0.25
+
+
+.global lbl_80669638
+lbl_80669638:
+	# ROM: 0x573498
+	.4byte 0x3E8E38E4
+	.4byte 0
+
+
+.global lbl_80669640
+lbl_80669640:
+	# ROM: 0x5734A0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80669648
+lbl_80669648:
+	# ROM: 0x5734A8
+	.4byte 0x4222F983
+
+
+.global lbl_8066964C
+lbl_8066964C:
+	# ROM: 0x5734AC
+	.4byte 0xC0400000
+
+
+.global lbl_80669650
+lbl_80669650:
+	# ROM: 0x5734B0
+	.4byte 0x42B40000
+
+
+.global lbl_80669654
+lbl_80669654:
+	# ROM: 0x5734B4
+	.4byte 0xC2B40000
+
+
+.global lbl_80669658
+lbl_80669658:
+	# ROM: 0x5734B8
+	.4byte 0x43340000
+
+
+.global lbl_8066965C
+lbl_8066965C:
+	# ROM: 0x5734BC
+	.4byte 0x420C0000
+
+
+.global lbl_80669660
+lbl_80669660:
+	# ROM: 0x5734C0
+	.4byte 0x430C0000
+
+
+.global lbl_80669664
+lbl_80669664:
+	# ROM: 0x5734C4
+	.4byte 0xC20C0000
+
+
+.global lbl_80669668
+lbl_80669668:
+	# ROM: 0x5734C8
+	.4byte 0xC30C0000
+
+
+.global lbl_8066966C
+lbl_8066966C:
+	# ROM: 0x5734CC
+	.4byte 0x40800000
+
+
+.global lbl_80669670
+lbl_80669670:
+	# ROM: 0x5734D0
+	.4byte 0xC9742400
+
+
+.global lbl_80669674
+lbl_80669674:
+	# ROM: 0x5734D4
+	.4byte 0x3F4CCCCD
+
+
+.global lbl_80669678
+lbl_80669678:
+	# ROM: 0x5734D8
+	.4byte 0xC1500000
+
+
+.global lbl_8066967C
+lbl_8066967C:
+	# ROM: 0x5734DC
+	.4byte 0x40100000
+
+
+.global lbl_80669680
+lbl_80669680:
+	# ROM: 0x5734E0
+	.4byte 0x40A00000
+
+
+.global lbl_80669684
+lbl_80669684:
+	# ROM: 0x5734E4
+	.4byte 0x3F99999A
+
+
+.global lbl_80669688
+lbl_80669688:
+	# ROM: 0x5734E8
+	.4byte 0x3FCCCCCD
+
+
+.global lbl_8066968C
+lbl_8066968C:
+	# ROM: 0x5734EC
+	.float 1.5
+
+
+.global lbl_80669690
+lbl_80669690:
+	# ROM: 0x5734F0
+	.4byte 0x432A0000
+
+
+.global lbl_80669694
+lbl_80669694:
+	# ROM: 0x5734F4
+	.4byte 0xC32A0000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80577218
+lbl_80577218:
+	.skip 0x10
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806667F0
+lbl_806667F0:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000A4FC
 lbl_8000A4FC:
@@ -7429,7 +7913,7 @@ lbl_8000A5F4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_800D10DC
 	.4byte 0x000000D4

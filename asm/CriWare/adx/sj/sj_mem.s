@@ -1090,3 +1090,12 @@ sjmem_vtbl:
 	.4byte SJMEM_GetNumData
 	.4byte SJMEM_IsGetChunk
 	.4byte SJMEM_EntryErrFunc
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global sjmem_init_cnt
+sjmem_init_cnt:
+	.skip 0x8
+.global sjmem_obj
+sjmem_obj:
+	.skip 0x480

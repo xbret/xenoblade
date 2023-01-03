@@ -1982,3 +1982,19 @@ lbl_805691E0:
 	.4byte 0x0000007F
 	.4byte 0x000000FF
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+#skg_init_count
+.global skg_init_count_1
+skg_init_count_1:
+	.skip 0x4
+.global lbl_805E9B14
+lbl_805E9B14:
+	.skip 0x4
+.global ahxdcd_init_cnt
+ahxdcd_init_cnt:
+	.skip 0x8
+.global lbl_805E9B20
+lbl_805E9B20:
+	.skip 0x200

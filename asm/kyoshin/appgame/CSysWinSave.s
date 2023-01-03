@@ -271,7 +271,132 @@ func_80294844:
 /* 8029486C 0025DE2C  D0 03 00 00 */	stfs f0, 0(r3)
 /* 80294870 0025DE30  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CSysWinSave_typestr
+CSysWinSave_typestr:
+	.asciz "CSysWinSave"
+
+
+.global lbl_8050B3A4
+lbl_8050B3A4:
+	.asciz "CSysWinSave"
+	.asciz "MNU_sysmes"
+	.asciz "name"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CSysWinSave
+__vt__CSysWinSave:
+	.4byte __RTTI__CSysWinSave
+	.4byte 0
+	.4byte func_80293FB8
+	.4byte CChildListNode_Reset
+	.4byte func_80294044
+	.4byte func_802941F0
+	.4byte func_80294274
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CSysWinSave
+	.4byte 0xFFFFFF94
+	.4byte func_8029480C
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CSysWinSave
+	.4byte 0xFFFFFF90
+	.4byte func_8029481C
+	.4byte func_80294814
+	.4byte func_80294440
+
+.global CSysWinSave_hierarchy
+CSysWinSave_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000070
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__CSysWinSave
+__RTTI__CSysWinSave:
+	.4byte CSysWinSave_typestr
+	.4byte CSysWinSave_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B448
+lbl_8066B448:
+	# ROM: 0x5752A8
+	.4byte 0
+
+
+.global lbl_8066B44C
+lbl_8066B44C:
+	# ROM: 0x5752AC
+	.float 1.0
+
+
+.global lbl_8066B450
+lbl_8066B450:
+	# ROM: 0x5752B0
+	.4byte 0x40000000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806672F8
+lbl_806672F8:
+	.skip 0x8
+
+#global variable
+.global lbl_80667300
+lbl_80667300:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80019A10
 lbl_80019A10:
@@ -305,7 +430,7 @@ lbl_80019A6C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802944D8
 	.4byte 0x0000014C

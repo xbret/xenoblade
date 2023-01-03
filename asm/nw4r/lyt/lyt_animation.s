@@ -1621,3 +1621,52 @@ lbl_8056D558:
 	.4byte Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt4Pane
 	.4byte Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt8Material
 	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C5D8
+lbl_8066C5D8:
+	# ROM: 0x576438
+	.4byte 0xBA83126F
+
+
+.global lbl_8066C5DC
+lbl_8066C5DC:
+	# ROM: 0x57643C
+	.4byte 0x3A83126F
+
+
+.global lbl_8066C5E0
+lbl_8066C5E0:
+	# ROM: 0x576440
+	.float 1.0
+
+
+.global lbl_8066C5E4
+lbl_8066C5E4:
+	# ROM: 0x576444
+	.4byte 0x40000000
+
+
+.global lbl_8066C5E8
+lbl_8066C5E8:
+	# ROM: 0x576448
+	.4byte 0x40400000
+
+
+.global lbl_8066C5EC
+lbl_8066C5EC:
+	# ROM: 0x57644C
+	.4byte 0xC0000000
+
+
+.global lbl_8066C5F0
+lbl_8066C5F0:
+	# ROM: 0x576450
+	.4byte 0
+
+
+.global lbl_8066C5F4
+lbl_8066C5F4:
+	# ROM: 0x576454
+	.float 0.5

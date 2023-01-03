@@ -427,7 +427,102 @@ func_802A4E40:
 /* 802A4E40 0026E400  38 60 00 46 */	li r3, 0x46
 /* 802A4E44 0026E404  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CVS_THREAD_BATTLE_END_typestr
+cf_CVS_THREAD_BATTLE_END_typestr:
+	.asciz "cf::CVS_THREAD_BATTLE_END"
+	.balign 4
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053D0E8
+lbl_8053D0E8:
+	# ROM: 0x5391E8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A497C
+
+.global lbl_8053D0F4
+lbl_8053D0F4:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A4A78
+
+.global lbl_8053D100
+lbl_8053D100:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A4D04
+
+.global lbl_8053D10C
+lbl_8053D10C:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A4A78
+
+
+.global lbl_8053D118
+lbl_8053D118:
+	# ROM: 0x539218
+	.4byte 0x00000B55
+	.4byte 0x00000B56
+	.4byte 0x00000B61
+	.4byte 0x00000B62
+	.4byte 0x00000B63
+	.4byte 0x00000B59
+	.4byte 0x00000B5A
+	.4byte 0
+
+
+.global lbl_8053D138
+lbl_8053D138:
+	# ROM: 0x539238
+	.4byte 0x00000B5B
+	.4byte 0x00000B5C
+	.4byte 0x00000B5F
+	.4byte 0x00000B60
+
+
+.global __vt__cf_CVS_THREAD_BATTLE_END
+__vt__cf_CVS_THREAD_BATTLE_END:
+	.4byte __RTTI__cf_CVS_THREAD_BATTLE_END
+	.4byte 0
+	.4byte func_802A3B50
+	.4byte func_802A4DC8
+	.4byte func_802A4E40
+	.4byte func_802A1EA0
+	.4byte func_802A3740
+
+.global cf_CVS_THREAD_BATTLE_END_hierarchy
+cf_CVS_THREAD_BATTLE_END_hierarchy:
+	.4byte __RTTI__cf_CVS_THREAD
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806655C0
+lbl_806655C0:
+	# ROM: 0x5711A0
+	.4byte 0x00000B57
+	.4byte 0x00000B58
+
+
+.global lbl_806655C8
+lbl_806655C8:
+	# ROM: 0x5711A8
+	.4byte 0x00000B5D
+	.4byte 0x00000B5E
+
+.global __RTTI__cf_CVS_THREAD_BATTLE_END
+__RTTI__cf_CVS_THREAD_BATTLE_END:
+	.4byte cf_CVS_THREAD_BATTLE_END_typestr
+	.4byte cf_CVS_THREAD_BATTLE_END_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001AAF8
 lbl_8001AAF8:
@@ -464,7 +559,7 @@ lbl_8001AB3C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A4870
 	.4byte 0x0000010C

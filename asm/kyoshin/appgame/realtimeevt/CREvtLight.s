@@ -279,7 +279,66 @@ func_801C3850:
 /* 801C396C 0018CF2C  38 21 00 30 */	addi r1, r1, 0x30
 /* 801C3970 0018CF30  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CREvtLight_typestr
+cf_CREvtLight_typestr:
+	.asciz "cf::CREvtLight"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CREvtLight
+__vt__cf_CREvtLight:
+	.4byte __RTTI__cf_CREvtLight
+	.4byte 0
+	.4byte func_801C3604
+	.4byte func_801C37C8
+	.4byte func_80169A34
+	.4byte func_80185758
+	.4byte func_80169048
+	.4byte func_801809A8
+	.4byte func_801696C4
+	.4byte func_801C37C4
+
+.global cf_CREvtLight_hierarchy
+cf_CREvtLight_hierarchy:
+	.4byte __RTTI__cf_CREvtObj
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CREvtLight
+__RTTI__cf_CREvtLight:
+	.4byte cf_CREvtLight_typestr
+	.4byte cf_CREvtLight_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+
+.global lbl_8066A7C8
+lbl_8066A7C8:
+	# ROM: 0x574628
+	.4byte 0x3CC90FDB
+
+
+.global lbl_8066A7CC
+lbl_8066A7CC:
+	# ROM: 0x57462C
+	.4byte 0x42700000
+
+
+.global lbl_8066A7D0
+lbl_8066A7D0:
+	# ROM: 0x574630
+	.4byte 0x40000000
+	.4byte 0
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80010874
 lbl_80010874:
@@ -312,7 +371,7 @@ lbl_800108A8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801C35A8
 	.4byte 0x0000005C

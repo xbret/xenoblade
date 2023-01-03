@@ -703,7 +703,119 @@ func_80210BAC:
 func_80210C1C:
 /* 80210C1C 001DA1DC  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfGimmickItem_typestr
+cf_CfGimmickItem_typestr:
+	.asciz "cf::CfGimmickItem"
+	.balign 4
+
+
+.global lbl_80503ECC
+lbl_80503ECC:
+	.asciz "rectype"
+	.asciz "geItem"
+	.asciz "MSG1"
+	.asciz "MSG2"
+	.asciz "time"
+	.asciz "LODObj"
+	.asciz "LODSub"
+	.asciz "LODType"
+	.asciz "EFF"
+	.asciz "camID"
+	.asciz "swtSE"
+	.asciz "finSE"
+	.asciz "ct"
+	.asciz "quest_Max"
+	.asciz "quest_Min"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80539208
+lbl_80539208:
+	# ROM: 0x535308
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802106F8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80210844
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802108D8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80210AD0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80210BAC
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80210C1C
+
+
+.global __vt__cf_CfGimmickItem
+__vt__cf_CfGimmickItem:
+	.4byte __RTTI__cf_CfGimmickItem
+	.4byte 0
+	.4byte func_802105F4
+	.4byte func_8020896C
+	.4byte func_80210668
+	.4byte func_801F4B64
+	.4byte func_801F4BF8
+	.4byte func_801F4C8C
+	.4byte func_80208988
+
+.global cf_CfGimmickItem_hierarchy
+cf_CfGimmickItem_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0
+	.4byte __RTTI__cf_CfGimmick
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806650B0
+lbl_806650B0:
+	# ROM: 0x570C90
+	.4byte lbl_8066ACF8
+	.4byte lbl_8066AD00
+
+.global __RTTI__cf_CfGimmickItem
+__RTTI__cf_CfGimmickItem:
+	.4byte cf_CfGimmickItem_typestr
+	.4byte cf_CfGimmickItem_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066ACF8
+lbl_8066ACF8:
+	.asciz "A_Item"
+	.balign 4
+
+.global lbl_8066AD00
+lbl_8066AD00:
+	.asciz "A_Lost"
+	.balign 4
+
+
+.global lbl_8066AD08
+lbl_8066AD08:
+	# ROM: 0x574B68
+	.4byte 0
+
+
+.global lbl_8066AD0C
+lbl_8066AD0C:
+	# ROM: 0x574B6C
+	.4byte 0x40A00000
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80013294
 lbl_80013294:
@@ -756,7 +868,7 @@ lbl_800132F4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80210264
 	.4byte 0x00000390

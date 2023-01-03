@@ -4458,7 +4458,409 @@ func_80232C78:
 /* 802331AC 001FC76C  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 802331B0 001FC770  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuArtsSet_typestr
+CMenuArtsSet_typestr:
+	.asciz "CMenuArtsSet"
+	.balign 4
+
+
+.global lbl_80506198
+lbl_80506198:
+	.asciz "MNU_battle"
+	.asciz "name"
+
+.global lbl_805061A8
+lbl_805061A8:
+	.asciz "pic_arts01"
+	.balign 4
+
+.global lbl_805061B4
+lbl_805061B4:
+	.asciz "pic_arts02"
+	.balign 4
+
+.global lbl_805061C0
+lbl_805061C0:
+	.asciz "pic_arts03"
+	.balign 4
+
+.global lbl_805061CC
+lbl_805061CC:
+	.asciz "pic_arts04"
+	.balign 4
+
+.global lbl_805061D8
+lbl_805061D8:
+	.asciz "pic_arts05"
+	.balign 4
+
+.global lbl_805061E4
+lbl_805061E4:
+	.asciz "pic_arts06"
+	.balign 4
+
+.global lbl_805061F0
+lbl_805061F0:
+	.asciz "pic_arts07"
+	.balign 4
+
+.global lbl_805061FC
+lbl_805061FC:
+	.asciz "pic_arts08"
+	.balign 4
+
+
+.global lbl_80506208
+lbl_80506208:
+	# ROM: 0x502308
+	.4byte lbl_805061A8
+	.4byte lbl_805061B4
+	.4byte lbl_805061C0
+	.4byte lbl_805061CC
+	.4byte lbl_805061D8
+	.4byte lbl_805061E4
+	.4byte lbl_805061F0
+	.4byte lbl_805061FC
+
+.global lbl_80506228
+lbl_80506228:
+	.asciz "pic_icon01"
+	.balign 4
+
+.global lbl_80506234
+lbl_80506234:
+	.asciz "pic_icon02"
+	.balign 4
+
+.global lbl_80506240
+lbl_80506240:
+	.asciz "pic_icon03"
+	.balign 4
+
+.global lbl_8050624C
+lbl_8050624C:
+	.asciz "pic_icon04"
+	.balign 4
+
+.global lbl_80506258
+lbl_80506258:
+	.asciz "pic_icon05"
+	.balign 4
+
+.global lbl_80506264
+lbl_80506264:
+	.asciz "pic_icon06"
+	.balign 4
+
+.global lbl_80506270
+lbl_80506270:
+	.asciz "pic_icon07"
+	.balign 4
+
+.global lbl_8050627C
+lbl_8050627C:
+	.asciz "pic_icon08"
+	.balign 4
+
+
+.global lbl_80506288
+lbl_80506288:
+	# ROM: 0x502388
+	.4byte lbl_80506228
+	.4byte lbl_80506234
+	.4byte lbl_80506240
+	.4byte lbl_8050624C
+	.4byte lbl_80506258
+	.4byte lbl_80506264
+	.4byte lbl_80506270
+	.4byte lbl_8050627C
+
+.global lbl_805062A8
+lbl_805062A8:
+	.asciz "pic_arts00"
+	.balign 4
+
+
+.global lbl_805062B4
+lbl_805062B4:
+	# ROM: 0x5023B4
+	.4byte lbl_805061A8
+	.4byte lbl_805061B4
+	.4byte lbl_805061C0
+	.4byte lbl_805061CC
+	.4byte lbl_805062A8
+	.4byte lbl_805061D8
+	.4byte lbl_805061E4
+	.4byte lbl_805061F0
+	.4byte lbl_805061FC
+
+
+.global lbl_805062D8
+lbl_805062D8:
+	# ROM: 0x5023D8
+	.4byte lbl_805061A8
+	.4byte lbl_805061B4
+	.4byte lbl_805061C0
+	.4byte lbl_805061CC
+	.4byte lbl_805062A8
+	.4byte lbl_805061D8
+	.4byte lbl_805061E4
+	.4byte lbl_805061F0
+	.4byte lbl_805061FC
+
+
+.global lbl_805062FC
+lbl_805062FC:
+	# ROM: 0x5023FC
+	.4byte 0x00000B08
+	.4byte 0x14102504
+	.4byte 0x2D103F10
+	.4byte 0x50106710
+	.4byte func_80100000
+
+.global lbl_80506310
+lbl_80506310:
+	.asciz "pic_arts09"
+	.balign 4
+
+.global lbl_8050631C
+lbl_8050631C:
+	.asciz "pic_arts10"
+	.balign 4
+
+.global lbl_80506328
+lbl_80506328:
+	.asciz "pic_arts11"
+	.balign 4
+
+.global lbl_80506334
+lbl_80506334:
+	.asciz "pic_arts12"
+	.balign 4
+
+.global lbl_80506340
+lbl_80506340:
+	.asciz "pic_arts13"
+	.balign 4
+
+
+.global lbl_8050634C
+lbl_8050634C:
+	# ROM: 0x50244C
+	.4byte lbl_80506310
+	.4byte lbl_8050631C
+	.4byte lbl_80506328
+	.4byte lbl_80506334
+	.4byte lbl_80506340
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuArtsSet
+__vt__CMenuArtsSet:
+	.4byte __RTTI__CMenuArtsSet
+	.4byte 0
+	.4byte func_8022EB58
+	.4byte CChildListNode_Reset
+	.4byte func_8022EBE4
+	.4byte func_8022F1BC
+	.4byte func_8022F228
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuArtsSet
+	.4byte 0xFFFFFFA8
+	.4byte func_8022FA50
+	.4byte func_8022FA48
+	.4byte func_8022F364
+
+.global CMenuArtsSet_hierarchy
+CMenuArtsSet_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8053A030
+lbl_8053A030:
+	# ROM: 0x536130
+	.4byte switch_80230BF0
+	.4byte switch_80230BF8
+	.4byte switch_80230C00
+	.4byte switch_80230C08
+	.4byte switch_80230C10
+	.4byte switch_80230C18
+	.4byte switch_80230C20
+	.4byte switch_80230C28
+	.4byte switch_80230C30
+
+
+.global lbl_8053A054
+lbl_8053A054:
+	# ROM: 0x536154
+	.4byte switch_80230C3C
+	.4byte switch_80230B10
+	.4byte switch_80230B34
+	.4byte switch_80230B3C
+	.4byte switch_80230B44
+	.4byte switch_80230B4C
+	.4byte switch_80230B54
+	.4byte switch_80230B5C
+	.4byte switch_80230B64
+
+
+.global lbl_8053A078
+lbl_8053A078:
+	# ROM: 0x536178
+	.4byte switch_8023116C
+	.4byte switch_80231174
+	.4byte switch_8023117C
+	.4byte switch_80231184
+	.4byte switch_8023118C
+	.4byte switch_80231194
+	.4byte switch_8023119C
+	.4byte switch_802311A4
+	.4byte switch_802311AC
+
+
+.global lbl_8053A09C
+lbl_8053A09C:
+	# ROM: 0x53619C
+	.4byte switch_8023120C
+	.4byte switch_8023108C
+	.4byte switch_802310B0
+	.4byte switch_802310B8
+	.4byte switch_802310C0
+	.4byte switch_802310C8
+	.4byte switch_802310D0
+	.4byte switch_802310D8
+	.4byte switch_802310E0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuArtsSet
+__RTTI__CMenuArtsSet:
+	.4byte CMenuArtsSet_typestr
+	.4byte CMenuArtsSet_hierarchy
+
+
+.global lbl_806651A0
+lbl_806651A0:
+	# ROM: 0x570D80
+	.4byte 0x01000000
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AEF8
+lbl_8066AEF8:
+	# ROM: 0x574D58
+	.4byte 0
+
+
+.global lbl_8066AEFC
+lbl_8066AEFC:
+	# ROM: 0x574D5C
+	.float 1.0
+
+
+.global lbl_8066AF00
+lbl_8066AF00:
+	# ROM: 0x574D60
+	.float 10.0
+	.4byte 0
+
+.global lbl_8066AF08
+lbl_8066AF08:
+	# ROM: 0x574D68
+	.float 1.0
+
+
+.global lbl_8066AF0C
+lbl_8066AF0C:
+	# ROM: 0x574D6C
+	.4byte 0
+
+
+.global lbl_8066AF10
+lbl_8066AF10:
+	# ROM: 0x574D70
+	.4byte 0x3F333333
+
+
+.global lbl_8066AF14
+lbl_8066AF14:
+	# ROM: 0x574D74
+	.4byte 0x3F4CCCCD
+
+
+.global lbl_8066AF18
+lbl_8066AF18:
+	# ROM: 0x574D78
+	.4byte 0x3F19999A
+
+
+.global lbl_8066AF1C
+lbl_8066AF1C:
+	# ROM: 0x574D7C
+	.4byte 0x41900000
+
+
+.global lbl_8066AF20
+lbl_8066AF20:
+	# ROM: 0x574D80
+	.4byte 0x42900000
+
+
+.global lbl_8066AF24
+lbl_8066AF24:
+	# ROM: 0x574D84
+	.4byte 0x42FC0000
+
+
+.global lbl_8066AF28
+lbl_8066AF28:
+	# ROM: 0x574D88
+	.4byte 0x43340000
+	.4byte 0
+
+
+.global lbl_8066AF30
+lbl_8066AF30:
+	# ROM: 0x574D90
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066AF38
+lbl_8066AF38:
+	# ROM: 0x574D98
+	.4byte 0x438A0000
+
+
+.global lbl_8066AF3C
+lbl_8066AF3C:
+	# ROM: 0x574D9C
+	.4byte 0x41C80000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667030
+lbl_80667030:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800158A8
 lbl_800158A8:
@@ -4734,7 +5136,7 @@ lbl_80015A80:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8022F408
 	.4byte 0x00000128

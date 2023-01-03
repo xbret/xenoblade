@@ -579,7 +579,136 @@ func_802B9064:
 /* 802B91E0 002827A0  38 21 00 30 */	addi r1, r1, 0x30
 /* 802B91E4 002827A4  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CVS_THREAD_ORDER_typestr
+cf_CVS_THREAD_ORDER_typestr:
+	.asciz "cf::CVS_THREAD_ORDER"
+	.balign 4
+
+
+.global lbl_8050CDB0
+lbl_8050CDB0:
+	.asciz "voice"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053EF00
+lbl_8053EF00:
+	# ROM: 0x53B000
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B8B0C
+
+
+.global lbl_8053EF0C
+lbl_8053EF0C:
+	# ROM: 0x53B00C
+	.4byte 0x000009C5
+	.4byte 0x000009C6
+	.4byte 0xFFFFFFFF
+
+.global lbl_8053EF18
+lbl_8053EF18:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B8C00
+
+.global lbl_8053EF24
+lbl_8053EF24:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B8CFC
+
+
+.global __vt__cf_CVS_THREAD_ORDER
+__vt__cf_CVS_THREAD_ORDER:
+	.4byte __RTTI__cf_CVS_THREAD_ORDER
+	.4byte 0
+	.4byte func_802A3B50
+	.4byte func_802A3BEC
+	.4byte func_802B8D44
+	.4byte func_802A1EA0
+	.4byte func_802A3740
+
+.global cf_CVS_THREAD_ORDER_hierarchy
+cf_CVS_THREAD_ORDER_hierarchy:
+	.4byte __RTTI__cf_CVS_THREAD
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8053EF58
+lbl_8053EF58:
+	# ROM: 0x53B058
+	.4byte 0x0000001E
+	.4byte 0x00010FA1
+	.4byte 0x0000001F
+	.4byte 0x00010FA1
+	.4byte 0x0000003D
+	.4byte 0x00020FA1
+	.4byte 0x00000086
+	.4byte 0x00010FA4
+	.4byte 0x000001A1
+	.4byte 0x00020FA3
+	.4byte 0x0000027E
+	.4byte 0x00010FA6
+	.4byte 0x00000652
+	.4byte 0x00010FA7
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8053EF98
+lbl_8053EF98:
+	# ROM: 0x53B098
+	.4byte lbl_8066B810
+	.4byte play
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CVS_THREAD_ORDER
+__RTTI__cf_CVS_THREAD_ORDER:
+	.4byte cf_CVS_THREAD_ORDER_typestr
+	.4byte cf_CVS_THREAD_ORDER_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066B808
+lbl_8066B808:
+	# ROM: 0x575668
+	.float 1.0
+
+
+.global lbl_8066B80C
+lbl_8066B80C:
+	# ROM: 0x57566C
+	.4byte 0x41F00000
+
+.global lbl_8066B810
+lbl_8066B810:
+	.asciz "play"
+	.balign 4
+
+
+.global lbl_8066B818
+lbl_8066B818:
+	# ROM: 0x575678
+	.float 1.0
+
+
+.global lbl_8066B81C
+lbl_8066B81C:
+	# ROM: 0x57567C
+	.float 0.5
+
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001BE38
 lbl_8001BE38:
@@ -626,7 +755,7 @@ lbl_8001BE8C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802B8A3C
 	.4byte 0x000000D0

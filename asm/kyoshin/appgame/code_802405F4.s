@@ -1945,7 +1945,85 @@ func_80242144:
 /* 80242214 0020B7D4  38 21 00 70 */	addi r1, r1, 0x70
 /* 80242218 0020B7D8  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053A4B0
+lbl_8053A4B0:
+	# ROM: 0x5365B0
+	.4byte switch_80241E94
+	.4byte switch_80241F00
+	.4byte switch_80241F2C
+	.4byte switch_80241F38
+	.4byte switch_80241F64
+	.4byte switch_80241F70
+	.4byte switch_80241FF8
+	.4byte switch_80242014
+	.4byte switch_80242020
+	.4byte switch_80242090
+	.4byte switch_802420AC
+	.4byte switch_802420F0
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AFC0
+lbl_8066AFC0:
+	# ROM: 0x574E20
+	.4byte 0
+
+
+.global lbl_8066AFC4
+lbl_8066AFC4:
+	# ROM: 0x574E24
+	.4byte 0x41F00000
+
+
+.global lbl_8066AFC8
+lbl_8066AFC8:
+	# ROM: 0x574E28
+	.float 0.5
+
+
+.global lbl_8066AFCC
+lbl_8066AFCC:
+	# ROM: 0x574E2C
+	.float 0.25
+
+
+.global lbl_8066AFD0
+lbl_8066AFD0:
+	# ROM: 0x574E30
+	.float 1.0
+
+
+.global lbl_8066AFD4
+lbl_8066AFD4:
+	# ROM: 0x574E34
+	.float -1.0
+
+
+.global lbl_8066AFD8
+lbl_8066AFD8:
+	# ROM: 0x574E38
+	.4byte 0x40000000
+
+
+.global lbl_8066AFDC
+lbl_8066AFDC:
+	# ROM: 0x574E3C
+	.4byte 0x4222F983
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667078
+lbl_80667078:
+	.skip 0x8
+.global lbl_80667080
+lbl_80667080:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80016138
 lbl_80016138:
@@ -2070,7 +2148,7 @@ lbl_80016278:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80240614
 	.4byte 0x00000264

@@ -134,3 +134,9 @@ SFXA_MakeAlp3211Tbl:
 SFXA_IsNeedUpdateLumiTbl:
 /* 803D5DBC 0039F37C  80 63 00 04 */	lwz r3, 4(r3)
 /* 803D5DC0 0039F380  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global sfxa_work
+sfxa_work:
+	.skip 0x128

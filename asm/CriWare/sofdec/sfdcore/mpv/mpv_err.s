@@ -113,3 +113,9 @@ MPVERR_SetCode:
 /* 803A62B8 0036F878  7C 08 03 A6 */	mtlr r0
 /* 803A62BC 0036F87C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A62C0 0036F880  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80605F38
+lbl_80605F38:
+	.skip 0x18

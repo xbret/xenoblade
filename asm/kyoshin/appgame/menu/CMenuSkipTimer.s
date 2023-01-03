@@ -634,7 +634,73 @@ func_8029F0A0:
 /* 8029F0A0 00268660  38 63 FF A8 */	addi r3, r3, -88
 /* 8029F0A4 00268664  4B FF F8 00 */	b func_8029E8A4
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global CMenuSkipTimer_typestr
+CMenuSkipTimer_typestr:
+	.asciz "CMenuSkipTimer"
+	.balign 4
+
+
+.global lbl_8050BB30
+lbl_8050BB30:
+	.asciz "MNU_main"
+	.asciz "name"
+	.2byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuSkipTimer
+__vt__CMenuSkipTimer:
+	.4byte __RTTI__CMenuSkipTimer
+	.4byte 0
+	.4byte func_8029E8A4
+	.4byte CChildListNode_Reset
+	.4byte func_8029E91C
+	.4byte func_8029EBB4
+	.4byte func_8029EC20
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuSkipTimer
+	.4byte 0xFFFFFFA8
+	.4byte func_8029F0A0
+	.4byte func_8029F098
+	.4byte func_8029ED40
+
+.global CMenuSkipTimer_hierarchy
+CMenuSkipTimer_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__CMenuSkipTimer
+__RTTI__CMenuSkipTimer:
+	.4byte CMenuSkipTimer_typestr
+	.4byte CMenuSkipTimer_hierarchy
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667330
+lbl_80667330:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001A5AC
 lbl_8001A5AC:
@@ -741,7 +807,7 @@ lbl_8001A6C0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8029E7E4
 	.4byte 0x000000C0

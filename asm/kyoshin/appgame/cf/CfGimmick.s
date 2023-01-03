@@ -2480,7 +2480,271 @@ sinit_8020AB7C:
 
 .4byte sinit_8020AB7C
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80503CB8
+lbl_80503CB8:
+	.asciz "A_area_x"
+	.balign 4
+
+.global lbl_80503CC4
+lbl_80503CC4:
+	.asciz "A_area_py"
+	.balign 4
+
+.global lbl_80503CD0
+lbl_80503CD0:
+	.asciz "A_area_my"
+	.balign 4
+
+.global lbl_80503CDC
+lbl_80503CDC:
+	.asciz "A_area_z"
+	.balign 4
+
+.global lbl_80503CE8
+lbl_80503CE8:
+	.asciz "A_area_rx"
+	.balign 4
+
+.global lbl_80503CF4
+lbl_80503CF4:
+	.asciz "A_area_ry"
+	.balign 4
+
+.global lbl_80503D00
+lbl_80503D00:
+	.asciz "A_area_rz"
+	.balign 4
+
+.global lbl_80503D0C
+lbl_80503D0C:
+	.asciz "A_rectype"
+	.balign 4
+
+.global lbl_80503D18
+lbl_80503D18:
+	.asciz "S_FLG_MIN"
+	.balign 4
+
+.global lbl_80503D24
+lbl_80503D24:
+	.asciz "S_FLG_MAX"
+	.balign 4
+
+.global lbl_80503D30
+lbl_80503D30:
+	.asciz "quest_FLG"
+	.balign 4
+
+.global lbl_80503D3C
+lbl_80503D3C:
+	.asciz "quest_STFLG"
+
+.global lbl_80503D48
+lbl_80503D48:
+	.asciz "MESS ERR"
+	.balign 4
+
+
+.global lbl_80503D54
+lbl_80503D54:
+	.asciz "cl_area_x"
+	.asciz "cl_area_py"
+	.asciz "cl_area_my"
+	.asciz "cl_area_z"
+	.asciz "%s"
+	.4byte 0
+	.byte 0x00, 0x00, 0x00
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80538FA0
+lbl_80538FA0:
+	# ROM: 0x5350A0
+	.4byte lbl_8066ABE0
+	.4byte lbl_8066ABE8
+	.4byte lbl_8066ABF0
+	.4byte lbl_80503CB8
+	.4byte lbl_80503CC4
+	.4byte lbl_80503CD0
+	.4byte lbl_80503CDC
+	.4byte lbl_80503CE8
+	.4byte lbl_80503CF4
+	.4byte lbl_80503D00
+	.4byte lbl_80503D0C
+	.4byte lbl_8066ABF8
+	.4byte lbl_8066AC00
+	.4byte lbl_80503D18
+	.4byte lbl_80503D24
+	.4byte lbl_80503D30
+	.4byte lbl_80503D3C
+	.4byte lbl_8066AC08
+
+
+.global lbl_80538FE8
+lbl_80538FE8:
+	# ROM: 0x5350E8
+	.4byte func_8020A8AC
+	.4byte func_8020A8B4
+	.4byte func_8020A928
+	.4byte func_8020A9F4
+	.4byte func_8020AA8C
+
+
+.global __vt__cf_CfGimmick
+__vt__cf_CfGimmick:
+	.4byte __RTTI__cf_CfGimmick
+	.4byte 0
+	.4byte func_8020892C
+	.4byte func_8020896C
+	.4byte func_801F4994
+	.4byte func_801F4B64
+	.4byte func_801F4BF8
+	.4byte func_801F4C8C
+	.4byte func_80208988
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665078
+lbl_80665078:
+	# ROM: 0x570C58
+	.float 1.0
+
+
+.global lbl_8066507C
+lbl_8066507C:
+	# ROM: 0x570C5C
+	.float 1.0
+
+
+.global lbl_80665080
+lbl_80665080:
+	# ROM: 0x570C60
+	.4byte lbl_80503D48
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066ABE0
+lbl_8066ABE0:
+	.asciz "A_posX"
+	.balign 4
+
+.global lbl_8066ABE8
+lbl_8066ABE8:
+	.asciz "A_posY"
+	.balign 4
+
+.global lbl_8066ABF0
+lbl_8066ABF0:
+	.asciz "A_posZ"
+	.balign 4
+
+.global lbl_8066ABF8
+lbl_8066ABF8:
+	.asciz "gimID"
+	.balign 4
+
+.global lbl_8066AC00
+lbl_8066AC00:
+	.asciz "MSGID"
+	.balign 4
+
+.global lbl_8066AC08
+lbl_8066AC08:
+	.asciz "name1"
+	.balign 4
+
+
+.global lbl_8066AC10
+lbl_8066AC10:
+	# ROM: 0x574A70
+	.4byte 0
+
+
+.global lbl_8066AC14
+lbl_8066AC14:
+	# ROM: 0x574A74
+	.4byte 0x4222F983
+
+
+.global lbl_8066AC18
+lbl_8066AC18:
+	# ROM: 0x574A78
+	.float 1.0
+
+
+.global lbl_8066AC1C
+lbl_8066AC1C:
+	# ROM: 0x574A7C
+	.4byte 0x41F00000
+
+
+.global lbl_8066AC20
+lbl_8066AC20:
+	# ROM: 0x574A80
+	.4byte 0x46EA6000
+
+
+.global lbl_8066AC24
+lbl_8066AC24:
+	# ROM: 0x574A84
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066AC28
+lbl_8066AC28:
+	# ROM: 0x574A88
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066AC30
+lbl_8066AC30:
+	# ROM: 0x574A90
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066AC38
+lbl_8066AC38:
+	# ROM: 0x574A98
+	.float 1.5
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80579D98
+lbl_80579D98:
+	.skip 0x10
+.global lbl_80579DA8
+lbl_80579DA8:
+	.skip 0x28
+.global lbl_80579DD0
+lbl_80579DD0:
+	.skip 0x80
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666FA0
+lbl_80666FA0:
+	.skip 0x4
+.global lbl_80666FA4
+lbl_80666FA4:
+	.skip 0x4
+.global lbl_80666FA8
+lbl_80666FA8:
+	.skip 0x4
+.global lbl_80666FAC
+lbl_80666FAC:
+	.skip 0x4
+.global lbl_80666FB0
+lbl_80666FB0:
+	.skip 0x8
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80012F00
 lbl_80012F00:
@@ -2668,7 +2932,7 @@ lbl_80013020:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8020892C
 	.4byte 0x00000040

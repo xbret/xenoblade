@@ -2102,7 +2102,124 @@ func_802B2104:
 /* 802B2194 0027B754  38 21 00 70 */	addi r1, r1, 0x70
 /* 802B2198 0027B758  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuGCItem_typestr
+CMenuGCItem_typestr:
+	.asciz "CMenuGCItem"
+
+
+.global lbl_8050C924
+lbl_8050C924:
+	.asciz "MNU_item"
+	.asciz "name"
+	.4byte 0
+	.2byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuGCItem
+__vt__CMenuGCItem:
+	.4byte __RTTI__CMenuGCItem
+	.4byte 0
+	.4byte func_802B03D0
+	.4byte CChildListNode_Reset
+	.4byte func_802B045C
+	.4byte func_802B09AC
+	.4byte func_802B0A10
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuGCItem
+	.4byte 0xFFFFFFA8
+	.4byte func_802B0F10
+	.4byte func_802B0F08
+	.4byte func_802B0B4C
+
+.global CMenuGCItem_hierarchy
+CMenuGCItem_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8053E490
+lbl_8053E490:
+	# ROM: 0x53A590
+	.4byte switch_802B14A4
+	.4byte switch_802B154C
+	.4byte switch_802B1558
+	.4byte switch_802B15A8
+	.4byte switch_802B15B4
+	.4byte switch_802B167C
+	.4byte switch_802B1780
+	.4byte switch_802B17D0
+	.4byte switch_802B17DC
+	.4byte switch_802B1908
+	.4byte switch_802B1924
+	.4byte switch_802B1974
+	.4byte switch_802B1998
+	.4byte switch_802B19F8
+	.4byte switch_802B1A14
+	.4byte switch_802B1A64
+	.4byte switch_802B1A88
+	.4byte switch_802B1AE8
+	.4byte switch_802B1B04
+	.4byte switch_802B1B54
+	.4byte switch_802B1B78
+	.4byte switch_802B1BD8
+	.4byte switch_802B1BF4
+	.4byte switch_802B1C44
+	.4byte switch_802B1C68
+	.4byte switch_802B1CC8
+	.4byte switch_802B1CE4
+	.4byte switch_802B1D34
+	.4byte switch_802B1D58
+	.4byte switch_802B1DB8
+	.4byte switch_802B1DD4
+	.4byte switch_802B1E24
+	.4byte switch_802B1E48
+	.4byte switch_802B1EA8
+	.4byte switch_802B1EC4
+	.4byte switch_802B1F14
+	.4byte switch_802B1F38
+	.4byte switch_802B1FA0
+	.4byte switch_802B1FBC
+	.4byte switch_802B200C
+	.4byte switch_802B2034
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuGCItem
+__RTTI__CMenuGCItem:
+	.4byte CMenuGCItem_typestr
+	.4byte CMenuGCItem_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B6C0
+lbl_8066B6C0:
+	.asciz "%&'("
+	.balign 4
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806674E0
+lbl_806674E0:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001B690
 lbl_8001B690:
@@ -2249,7 +2366,7 @@ lbl_8001B828:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802B03D0
 	.4byte 0x0000008C

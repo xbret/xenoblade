@@ -1555,3 +1555,15 @@ lbl_8051ACB0:
 	.asciz "cvFsReqClose #1:illegal file handle"
 	.asciz "cvFsIsAvailableRetry #1:illegal file handle"
 	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E9D28
+lbl_805E9D28:
+	.skip 0x4
+.global lbl_805E9D2C
+lbl_805E9D2C:
+	.skip 0x14C
+.global lbl_805E9E78
+lbl_805E9E78:
+	.skip 0x338

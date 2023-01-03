@@ -1663,7 +1663,139 @@ sinit_801555E4:
 
 .4byte sinit_801555E4
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CArtsParam
+__vt__cf_CArtsParam:
+	.4byte __RTTI__cf_CArtsParam
+	.4byte 0
+	.4byte func_80155580
+	.4byte func_801555C8
+	.4byte func_801555B4
+	.4byte func_800D29E4
+
+.global cf_CArtsParam_hierarchy
+cf_CArtsParam_hierarchy:
+	.4byte __RTTI__cf_CAttackParam
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global __vt__cf_CAttackParam
+__vt__cf_CAttackParam:
+	.4byte __RTTI__cf_CAttackParam
+	.4byte 0
+	.4byte func_80153F54
+	.4byte func_800989FC
+	.4byte func_800989F4
+	.4byte func_800D29E4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CArtsParam
+__RTTI__cf_CArtsParam:
+	.4byte cf_CArtsParam_typestr
+	.4byte cf_CArtsParam_hierarchy
+
+.global __RTTI__cf_CAttackParam
+__RTTI__cf_CAttackParam:
+	.4byte cf_CAttackParam_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669D20
+lbl_80669D20:
+	# ROM: 0x573B80
+	.4byte 0
+
+
+.global lbl_80669D24
+lbl_80669D24:
+	# ROM: 0x573B84
+	.4byte 0x411CCCCD
+
+
+.global lbl_80669D28
+lbl_80669D28:
+	# ROM: 0x573B88
+	.4byte 0x42000000
+
+
+.global lbl_80669D2C
+lbl_80669D2C:
+	# ROM: 0x573B8C
+	.float 0.5
+
+
+.global lbl_80669D30
+lbl_80669D30:
+	# ROM: 0x573B90
+	.4byte 0x41700000
+
+
+.global lbl_80669D34
+lbl_80669D34:
+	# ROM: 0x573B94
+	.4byte 0x41C80000
+
+
+.global lbl_80669D38
+lbl_80669D38:
+	# ROM: 0x573B98
+	.4byte 0x40000000
+
+
+.global lbl_80669D3C
+lbl_80669D3C:
+	# ROM: 0x573B9C
+	.float 100.0
+
+
+.global lbl_80669D40
+lbl_80669D40:
+	# ROM: 0x573BA0
+	.float 1.0
+
+
+.global lbl_80669D44
+lbl_80669D44:
+	# ROM: 0x573BA4
+	.4byte 0x3CC90FDB
+
+
+.global lbl_80669D48
+lbl_80669D48:
+	# ROM: 0x573BA8
+	.float 10.0
+
+
+.global lbl_80669D4C
+lbl_80669D4C:
+	# ROM: 0x573BAC
+	.float 0.2
+
+
+.global lbl_80669D50
+lbl_80669D50:
+	# ROM: 0x573BB0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80669D58
+lbl_80669D58:
+	# ROM: 0x573BB8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80577580
+lbl_80577580:
+	.skip 0x90
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000D344
 lbl_8000D344:
@@ -1719,7 +1851,7 @@ lbl_8000D3A4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80153F00
 	.4byte 0x00000054

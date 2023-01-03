@@ -4578,7 +4578,338 @@ sinit_802059E8:
 
 .4byte sinit_802059E8
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_805037B8
+lbl_805037B8:
+	.4byte 0x00000010
+	.4byte 0x00100000
+	.4byte 0x00200000
+
+.global lbl_805037C4
+lbl_805037C4:
+	.asciz "pic_btn00"
+	.balign 4
+
+.global lbl_805037D0
+lbl_805037D0:
+	.asciz "pic_slot00"
+	.balign 4
+
+.global lbl_805037DC
+lbl_805037DC:
+	.asciz "pic_slot01"
+	.balign 4
+
+.global lbl_805037E8
+lbl_805037E8:
+	.asciz "pic_slot02"
+	.balign 4
+
+.global lbl_805037F4
+lbl_805037F4:
+	.asciz "pic_btn01"
+	.balign 4
+
+.global lbl_80503800
+lbl_80503800:
+	.asciz "pic_slot03"
+	.balign 4
+
+.global lbl_8050380C
+lbl_8050380C:
+	.asciz "pic_btn02"
+	.balign 4
+
+.global lbl_80503818
+lbl_80503818:
+	.asciz "pic_slot04"
+	.balign 4
+
+.global lbl_80503824
+lbl_80503824:
+	.asciz "pic_btn03"
+	.balign 4
+
+.global lbl_80503830
+lbl_80503830:
+	.asciz "pic_slot05"
+	.balign 4
+
+.global lbl_8050383C
+lbl_8050383C:
+	.asciz "pic_btn04"
+	.balign 4
+
+.global lbl_80503848
+lbl_80503848:
+	.asciz "pic_slot06"
+	.balign 4
+
+.global lbl_80503854
+lbl_80503854:
+	.asciz "pic_btn05"
+	.balign 4
+
+.global lbl_80503860
+lbl_80503860:
+	.asciz "pic_slot07"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80503870
+lbl_80503870:
+	# ROM: 0x4FF970
+	.4byte lbl_805037C4
+	.4byte lbl_805037D0
+	.4byte lbl_805037DC
+	.4byte lbl_805037E8
+	.4byte lbl_805037F4
+	.4byte lbl_80503800
+	.4byte lbl_8050380C
+	.4byte lbl_80503818
+	.4byte lbl_80503824
+	.4byte lbl_80503830
+	.4byte lbl_8050383C
+	.4byte lbl_80503848
+	.4byte lbl_80503854
+	.4byte lbl_80503860
+
+.global CEquipChange_typestr
+CEquipChange_typestr:
+	.asciz "CEquipChange"
+	.balign 4
+
+
+.global lbl_805038B8
+lbl_805038B8:
+	.asciz "/menu/EquipChange.arc"
+	.asciz "/menu/tpl/CrystalIcon.arc"
+	.asciz "item_keep"
+	.asciz "nul_btn"
+	.asciz "nul_proportion"
+	.asciz "txt_num00"
+	.balign 4
+	.asciz "txt_num01"
+	.asciz "txt_num02"
+	.asciz "txt_num03"
+	.asciz "txt_num04"
+	.asciz "txt_num05"
+	.asciz "txt_wpname00"
+	.asciz "S"
+	.asciz "txt_crysname%02d"
+	.asciz "pic_crys%02d"
+	.asciz "pic_slot%02d"
+	.asciz "mf00_com00_dmy.tpl"
+	.asciz "MNU_item"
+	.asciz "name"
+	.asciz "%s%s"
+	.asciz "atr_type"
+	.asciz "mf00_reg30_crys00.tpl"
+	.asciz "mf00_reg30_crys01.tpl"
+	.asciz "mf00_reg30_crys02.tpl"
+	.asciz "mf00_reg30_crys03.tpl"
+	.asciz "mf00_reg30_crys04.tpl"
+	.asciz "mf00_reg30_crys05.tpl"
+	.asciz "mf00_reg30_crys06.tpl"
+	.asciz "U"
+	.asciz "%s"
+	.asciz "txt_wpname%02d"
+	.asciz "txt_num%02d"
+	.asciz "itemType"
+	.asciz "CEquipChange"
+	.asciz "arc"
+	.asciz "mf02_eq00.brlyt"
+	.asciz "mf02_eq00_in.brlan"
+	.asciz "mf02_eq00_info_in.brlan"
+	.asciz "mf02_eq00_box_in.brlan"
+	.asciz "CEquipChangeTex"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_80538D68
+lbl_80538D68:
+	# ROM: 0x534E68
+	.4byte switch_80202190
+	.4byte switch_80202154
+	.4byte switch_8020215C
+	.4byte switch_80202190
+	.4byte switch_80202164
+	.4byte switch_8020216C
+	.4byte switch_80202174
+	.4byte switch_8020217C
+	.4byte switch_80202190
+	.4byte switch_80202184
+	.4byte switch_8020218C
+
+
+.global lbl_80538D94
+lbl_80538D94:
+	# ROM: 0x534E94
+	.4byte switch_80202950
+	.4byte switch_8020295C
+	.4byte switch_80202968
+	.4byte switch_80202974
+	.4byte switch_80202980
+	.4byte switch_8020298C
+	.4byte switch_80202998
+	.4byte switch_802029A4
+	.4byte switch_802029B0
+	.4byte switch_802029BC
+	.4byte switch_802029C8
+	.4byte switch_802029D4
+	.4byte switch_802029E0
+	.4byte switch_802029EC
+
+
+.global lbl_80538DCC
+lbl_80538DCC:
+	# ROM: 0x534ECC
+	.4byte switch_80202ADC
+	.4byte switch_80202AE8
+	.4byte switch_80202AF4
+	.4byte switch_80202B00
+	.4byte switch_80202B0C
+	.4byte switch_80202B18
+	.4byte switch_80202B24
+	.4byte switch_80202B30
+	.4byte switch_80202B3C
+	.4byte switch_80202B48
+	.4byte switch_80202B54
+	.4byte switch_80202B60
+	.4byte switch_80202B6C
+	.4byte switch_80202B78
+
+
+.global lbl_80538E04
+lbl_80538E04:
+	# ROM: 0x534F04
+	.4byte switch_80203208
+	.4byte switch_802031C8
+	.4byte switch_802031D0
+	.4byte switch_802031D8
+	.4byte switch_80203208
+	.4byte switch_802031E0
+	.4byte switch_80203208
+	.4byte switch_802031E8
+	.4byte switch_80203208
+	.4byte switch_802031F0
+	.4byte switch_80203208
+	.4byte switch_802031F8
+	.4byte switch_80203208
+	.4byte switch_80203200
+	.4byte 0
+
+
+.global __vt__CEquipChange
+__vt__CEquipChange:
+	.4byte __RTTI__CEquipChange
+	.4byte 0
+	.4byte func_80201FF4
+	.4byte func_80039E28
+	.4byte func_802055E8
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CEquipChange_hierarchy
+CEquipChange_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CEquipChange
+__RTTI__CEquipChange:
+	.4byte CEquipChange_typestr
+	.4byte CEquipChange_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AB60
+lbl_8066AB60:
+	# ROM: 0x5749C0
+	.4byte 0x04050607
+
+
+.global lbl_8066AB64
+lbl_8066AB64:
+	# ROM: 0x5749C4
+	.4byte 0x08000000
+
+
+.global lbl_8066AB68
+lbl_8066AB68:
+	# ROM: 0x5749C8
+	.float 1.0
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80579D60
+lbl_80579D60:
+	.skip 0x38
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666F58
+lbl_80666F58:
+	.skip 0x8
+.global lbl_80666F60
+lbl_80666F60:
+	.skip 0x8
+.global lbl_80666F68
+lbl_80666F68:
+	.skip 0x8
+.global lbl_80666F70
+lbl_80666F70:
+	.skip 0x8
+.global lbl_80666F78
+lbl_80666F78:
+	.skip 0x8
+.global lbl_80666F80
+lbl_80666F80:
+	.skip 0x8
+.global lbl_80666F88
+lbl_80666F88:
+	.skip 0x4
+.global lbl_80666F8C
+lbl_80666F8C:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80012AD4
 lbl_80012AD4:
@@ -4908,7 +5239,7 @@ lbl_80012E08:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80201A84
 	.4byte 0x00000570

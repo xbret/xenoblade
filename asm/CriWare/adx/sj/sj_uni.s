@@ -1210,3 +1210,12 @@ sjuni_vtbl:
 	.4byte SJUNI_GetNumData
 	.4byte SJUNI_IsGetChunk
 	.4byte SJUNI_EntryErrFunc
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global sjuni_init_cnt
+sjuni_init_cnt:
+	.skip 0x8
+.global sjuni_obj
+sjuni_obj:
+	.skip 0xC00

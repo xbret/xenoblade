@@ -1763,3 +1763,9 @@ lbl_8051F750:
 lbl_8051F768:
 	.asciz "IDCPREC"
 	.asciz "STCCODE"
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80605F50
+lbl_80605F50:
+	.skip 0xF0

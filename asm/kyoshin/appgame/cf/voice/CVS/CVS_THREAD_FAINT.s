@@ -291,7 +291,60 @@ func_802A6DF4:
 /* 802A6E7C 0027043C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A6E80 00270440  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CVS_THREAD_FAINT_typestr
+cf_CVS_THREAD_FAINT_typestr:
+	.asciz "cf::CVS_THREAD_FAINT"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053D2E8
+lbl_8053D2E8:
+	# ROM: 0x5393E8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A6BB0
+
+.global lbl_8053D2F4
+lbl_8053D2F4:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A6C6C
+
+.global lbl_8053D300
+lbl_8053D300:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A6D2C
+
+
+.global __vt__cf_CVS_THREAD_FAINT
+__vt__cf_CVS_THREAD_FAINT:
+	.4byte __RTTI__cf_CVS_THREAD_FAINT
+	.4byte 0
+	.4byte func_802A3B50
+	.4byte func_802A6D74
+	.4byte func_802A6DEC
+	.4byte func_802A1EA0
+	.4byte func_802A3740
+
+.global cf_CVS_THREAD_FAINT_hierarchy
+cf_CVS_THREAD_FAINT_hierarchy:
+	.4byte __RTTI__cf_CVS_THREAD
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CVS_THREAD_FAINT
+__RTTI__cf_CVS_THREAD_FAINT:
+	.4byte cf_CVS_THREAD_FAINT_typestr
+	.4byte cf_CVS_THREAD_FAINT_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001AC9C
 lbl_8001AC9C:
@@ -333,7 +386,7 @@ lbl_8001ACE8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A6AA8
 	.4byte 0x00000108

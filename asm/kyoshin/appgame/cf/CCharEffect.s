@@ -1304,7 +1304,164 @@ func_8015CCB4:
 /* 8015CCB4 00126274  38 60 00 00 */	li r3, 0
 /* 8015CCB8 00126278  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804FD5D0
+lbl_804FD5D0:
+	# ROM: 0x4F96D0
+	.4byte 0x00000001
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x00000001
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010100
+	.4byte 0x00010101
+	.4byte 0x01010101
+
+
+.global lbl_804FD5FC
+lbl_804FD5FC:
+	# ROM: 0x4F96FC
+	.4byte 0x00000002
+	.4byte 0x02020202
+	.4byte 0x02020000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_804FD628
+lbl_804FD628:
+	# ROM: 0x4F9728
+	.4byte 0x02020101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01000000
+	.4byte 0x00010101
+	.4byte 0x01010101
+	.4byte 0x01010102
+	.4byte 0x02020101
+	.4byte 0x01000101
+	.4byte 0x02020201
+	.4byte 0
+
+.global cf_CCharEffect_typestr
+cf_CCharEffect_typestr:
+	.asciz "cf::CCharEffect"
+
+
+.global lbl_804FD668
+lbl_804FD668:
+	.asciz "en014911"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805334D8
+lbl_805334D8:
+	# ROM: 0x52F5D8
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte func_8015CB88
+	.4byte func_8015CB90
+	.4byte func_8015CBC0
+	.4byte func_8015CBEC
+	.4byte func_8015CC50
+	.4byte 0
+	.4byte func_8015CCB4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CCharEffect
+__vt__cf_CCharEffect:
+	.4byte __RTTI__cf_CCharEffect
+	.4byte 0
+	.4byte func_80080580
+	.4byte func_8015BF04
+	.4byte func_8015C9A0
+	.4byte func_800CEE7C
+	.4byte 0
+	.4byte func_8015C2B0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CCharEffect
+__RTTI__cf_CCharEffect:
+	.4byte cf_CCharEffect_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669DF0
+lbl_80669DF0:
+	# ROM: 0x573C50
+	.float 0.25
+
+
+.global lbl_80669DF4
+lbl_80669DF4:
+	# ROM: 0x573C54
+	.float 1.0
+
+
+.global lbl_80669DF8
+lbl_80669DF8:
+	# ROM: 0x573C58
+	.4byte 0x43300000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666B18
+lbl_80666B18:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000D614
 lbl_8000D614:
@@ -1372,7 +1529,7 @@ lbl_8000D674:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8015BAA8
 	.4byte 0x00000094

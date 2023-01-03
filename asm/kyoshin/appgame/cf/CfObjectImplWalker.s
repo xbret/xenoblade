@@ -3028,7 +3028,235 @@ func_800C5990:
 /* 800C5990 0008EF50  38 63 FF F0 */	addi r3, r3, -16
 /* 800C5994 0008EF54  4B FF FF 98 */	b func_800C592C
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F7E78
+lbl_804F7E78:
+	.asciz "pctalk_01"
+	.balign 4
+
+.global lbl_804F7E84
+lbl_804F7E84:
+	.asciz "pctalk_02"
+	.balign 4
+
+.global lbl_804F7E90
+lbl_804F7E90:
+	.4byte lbl_804F7E78
+	.4byte lbl_804F7E84
+	.4byte lbl_804F7E84
+
+.global cf_CfObjectImplWalker_typestr
+cf_CfObjectImplWalker_typestr:
+	.asciz "cf::CfObjectImplWalker"
+	.balign 4
+
+
+.global lbl_804F7EB4
+lbl_804F7EB4:
+	.asciz "JUhead"
+	.asciz "type"
+	.asciz "server"
+	.asciz "message"
+	.asciz "receiver"
+	.asciz "low_receiver"
+	.asciz "high_receiver"
+	.asciz "high_server"
+	.asciz "exc_talk_id"
+	.asciz "exc_talk1"
+	.asciz "<ex>"
+	.asciz "exc_talk2"
+	.asciz "exc_talk3"
+	.asciz "present"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CfObjectImplWalker
+__vt__cf_CfObjectImplWalker:
+	.4byte __RTTI__cf_CfObjectImplWalker
+	.4byte 0
+	.4byte func_800C592C
+	.4byte func_800C6F30
+	.4byte func_800C3658
+	.4byte func_800C70BC
+	.4byte func_800C75D4
+	.4byte func_800CD268
+	.4byte func_800CD460
+	.4byte func_800CD5C0
+	.4byte func_800C36AC
+	.4byte func_800CEB68
+	.4byte func_80087448
+	.4byte func_8008742C
+	.4byte func_8008743C
+	.4byte func_80087424
+	.4byte func_800459FC
+	.4byte func_80087410
+	.4byte func_800873FC
+	.4byte func_800873E8
+	.4byte func_800873D4
+	.4byte func_800873C8
+	.4byte func_800873AC
+	.4byte func_80087390
+	.4byte func_80087378
+	.4byte func_80087364
+	.4byte func_80087334
+	.4byte func_80087348
+	.4byte func_800C4FB8
+	.4byte func_800CA458
+	.4byte func_800C3878
+	.4byte func_800C3A88
+	.4byte func_800CE8AC
+	.4byte func_800CA274
+	.4byte func_800C9A20
+	.4byte func_800C9CEC
+	.4byte func_800CB21C
+	.4byte func_800CA104
+	.4byte func_800CA084
+	.4byte func_800C3BF0
+	.4byte func_800C1F44
+	.4byte func_800C1FB8
+	.4byte func_800C596C
+	.4byte func_800C5AA0
+	.4byte func_800CAB00
+	.4byte __RTTI__cf_CfObjectImplWalker
+	.4byte 0xFFFFFFF4
+	.4byte func_800C5980
+	.4byte func_800C5978
+	.4byte __RTTI__cf_CfObjectImplWalker
+	.4byte 0xFFFFFFF0
+	.4byte func_800C5990
+	.4byte func_800C5988
+	.4byte func_800C22CC
+	.4byte func_800C2714
+	.4byte func_800C2E3C
+	.4byte func_800CC020
+	.4byte func_800C22C4
+	.4byte func_800C6EC0
+	.4byte func_800CFFA0
+	.4byte func_800C551C
+	.4byte func_800C5928
+	.4byte func_8009868C
+	.4byte func_800C5970
+	.4byte func_800C4888
+	.4byte func_800C50F4
+
+.global cf_CfObjectImplWalker_hierarchy
+cf_CfObjectImplWalker_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0x00000010
+	.4byte __RTTI__IActParamEvent
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectImpl
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectImplPc
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__cf_CfObjectImplWalker
+__RTTI__cf_CfObjectImplWalker:
+	.4byte cf_CfObjectImplWalker_typestr
+	.4byte cf_CfObjectImplWalker_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669448
+lbl_80669448:
+	# ROM: 0x5732A8
+	.4byte 0x42A00000
+
+
+.global lbl_8066944C
+lbl_8066944C:
+	# ROM: 0x5732AC
+	.4byte 0
+
+
+.global lbl_80669450
+lbl_80669450:
+	# ROM: 0x5732B0
+	.float 0.5
+
+
+.global lbl_80669454
+lbl_80669454:
+	# ROM: 0x5732B4
+	.float 1.0
+
+
+.global lbl_80669458
+lbl_80669458:
+	# ROM: 0x5732B8
+	.4byte 0x40A00000
+	.4byte 0
+
+
+.global lbl_80669460
+lbl_80669460:
+	# ROM: 0x5732C0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80669468
+lbl_80669468:
+	# ROM: 0x5732C8
+	.4byte 0x41700000
+
+
+.global lbl_8066946C
+lbl_8066946C:
+	# ROM: 0x5732CC
+	.4byte 0x41A00000
+
+
+.global lbl_80669470
+lbl_80669470:
+	# ROM: 0x5732D0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80669478
+lbl_80669478:
+	# ROM: 0x5732D8
+	.4byte 0x3F4CCCCD
+
+
+.global lbl_8066947C
+lbl_8066947C:
+	# ROM: 0x5732DC
+	.4byte 0xC0C00000
+
+
+.global lbl_80669480
+lbl_80669480:
+	# ROM: 0x5732E0
+	.4byte 0x41F00000
+
+
+.global lbl_80669484
+lbl_80669484:
+	# ROM: 0x5732E4
+	.4byte 0x3F19999A
+
+
+.global lbl_80669488
+lbl_80669488:
+	# ROM: 0x5732E8
+	.4byte 0x3CA3D70A
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000A134
 lbl_8000A134:
@@ -3152,7 +3380,7 @@ lbl_8000A25C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_800C2E3C
 	.4byte 0x0000081C

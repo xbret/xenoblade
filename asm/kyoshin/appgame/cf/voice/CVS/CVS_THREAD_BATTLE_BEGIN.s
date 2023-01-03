@@ -694,7 +694,223 @@ func_802B03A4:
 /* 802B03C8 00279988  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B03CC 0027998C  4E 80 00 20 */	blr
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CVS_THREAD_BATTLE_BEGIN_typestr
+cf_CVS_THREAD_BATTLE_BEGIN_typestr:
+	.asciz "cf::CVS_THREAD_BATTLE_BEGIN"
+
+.global cf_EVS_THREAD_LIB_typestr
+cf_EVS_THREAD_LIB_typestr:
+	.asciz "cf::EVS_THREAD_LIB"
+	.balign 4
+
+.global cf_CVS_THREAD_LIB_typestr
+cf_CVS_THREAD_LIB_typestr:
+	.asciz "cf::CVS_THREAD_LIB"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053E1C0
+lbl_8053E1C0:
+	# ROM: 0x53A2C0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8053E3A0
+lbl_8053E3A0:
+	# ROM: 0x53A4A0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802AFC54
+
+.global lbl_8053E3AC
+lbl_8053E3AC:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802AFCC8
+
+.global lbl_8053E3B8
+lbl_8053E3B8:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B00EC
+
+.global lbl_8053E3C4
+lbl_8053E3C4:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802AFCC8
+
+
+.global __vt__cf_CVS_THREAD_BATTLE_BEGIN
+__vt__cf_CVS_THREAD_BATTLE_BEGIN:
+	.4byte __RTTI__cf_CVS_THREAD_BATTLE_BEGIN
+	.4byte 0
+	.4byte func_802A3B50
+	.4byte func_802B01B0
+	.4byte func_802B033C
+	.4byte func_802A1EA0
+	.4byte func_802A3740
+	.4byte 0
+
+.global cf_CVS_THREAD_BATTLE_BEGIN_hierarchy
+cf_CVS_THREAD_BATTLE_BEGIN_hierarchy:
+	.4byte __RTTI__cf_CVS_THREAD
+	.4byte 0
+	.4byte __RTTI__cf_EVS_THREAD_LIB
+	.4byte 0x80000021
+	.4byte 0x00000001
+	.4byte __RTTI__cf_CVS_THREAD_LIB
+	.4byte 0x00000021
+	.4byte 0
+
+.global cf_EVS_THREAD_LIB_hierarchy
+cf_EVS_THREAD_LIB_hierarchy:
+	.4byte __RTTI__cf_CVS_THREAD_LIB
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CVS_THREAD_BATTLE_BEGIN
+__RTTI__cf_CVS_THREAD_BATTLE_BEGIN:
+	.4byte cf_CVS_THREAD_BATTLE_BEGIN_typestr
+	.4byte cf_CVS_THREAD_BATTLE_BEGIN_hierarchy
+
+.global __RTTI__cf_EVS_THREAD_LIB
+__RTTI__cf_EVS_THREAD_LIB:
+	.4byte cf_EVS_THREAD_LIB_typestr
+	.4byte cf_EVS_THREAD_LIB_hierarchy
+
+.global __RTTI__cf_CVS_THREAD_LIB
+__RTTI__cf_CVS_THREAD_LIB:
+	.4byte cf_CVS_THREAD_LIB_typestr
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001B62C
 lbl_8001B62C:
@@ -746,7 +962,7 @@ lbl_8001B688:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802AFA80
 	.4byte 0x000001D4

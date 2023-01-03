@@ -1165,7 +1165,84 @@ func_802A8140:
 /* 802A816C 0027172C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A8170 00271730  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CVS_THREAD_HP_typestr
+cf_CVS_THREAD_HP_typestr:
+	.asciz "cf::CVS_THREAD_HP"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053D388
+lbl_8053D388:
+	# ROM: 0x539488
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A7464
+
+.global lbl_8053D394
+lbl_8053D394:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A7508
+
+.global lbl_8053D3A0
+lbl_8053D3A0:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A75CC
+
+
+.global __vt__cf_CVS_THREAD_HP
+__vt__cf_CVS_THREAD_HP:
+	.4byte __RTTI__cf_CVS_THREAD_HP
+	.4byte 0
+	.4byte func_802A3B50
+	.4byte func_802A7614
+	.4byte func_802A766C
+	.4byte func_802A1EA0
+	.4byte func_802A3740
+
+.global cf_CVS_THREAD_HP_hierarchy
+cf_CVS_THREAD_HP_hierarchy:
+	.4byte __RTTI__cf_CVS_THREAD
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__cf_CVS_THREAD_HP
+__RTTI__cf_CVS_THREAD_HP:
+	.4byte cf_CVS_THREAD_HP_typestr
+	.4byte cf_CVS_THREAD_HP_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B548
+lbl_8066B548:
+	# ROM: 0x5753A8
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066B54C
+lbl_8066B54C:
+	# ROM: 0x5753AC
+	.float 0.5
+
+
+.global lbl_8066B550
+lbl_8066B550:
+	# ROM: 0x5753B0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001AD3C
 lbl_8001AD3C:
@@ -1262,7 +1339,7 @@ lbl_8001ADE0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A7254
 	.4byte 0x00000210

@@ -1386,7 +1386,162 @@ func_801BDD9C:
 /* 801BDD9C 0018735C  38 63 FF 90 */	addi r3, r3, -112
 /* 801BDDA0 00187360  4B FF ED A0 */	b func_801BCB40
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuKizunaTalk_typestr
+CMenuKizunaTalk_typestr:
+	.asciz "CMenuKizunaTalk"
+
+
+.global lbl_80500938
+lbl_80500938:
+	.asciz "common/jp/bdat_kzn.bin"
+	.asciz "/menu/KizunaTalk.arc"
+	.asciz "MNU_sysmes"
+	.asciz "name"
+	.asciz "title"
+	.asciz "flag"
+	.asciz "chara_01"
+	.asciz "chara_02"
+	.asciz "friendly"
+	.asciz "time"
+	.asciz "CMenuKizunaTalk"
+	.asciz "arc"
+	.asciz "mf70_cf60_syswin04.brlyt"
+	.asciz "mf70_cf60_syswin04_in.brlan"
+	.asciz "txt_sysmes01"
+	.asciz "txt_sysmes02"
+	.asciz "txt_sysmes03"
+	.asciz "txt_sysmes04"
+	.asciz "BTL_pclist"
+	.asciz "txt_sysmes02_00"
+	.asciz "txt_sysmes02_01"
+	.asciz "mf40_kiz_pcicon_e00.tpl"
+	.asciz "mf40_kiz_pcicon_d00.tpl"
+	.asciz "mf40_kiz_pcicon_c00.tpl"
+	.asciz "mf40_kiz_pcicon_b00.tpl"
+	.asciz "mf40_kiz_pcicon_a00.tpl"
+	.asciz "pic_kizicon"
+	.asciz "txt_sysmes04_00"
+	.asciz "MNU_kyeassign"
+	.asciz "help"
+	.asciz "txt_close00"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "pic_btn00"
+	.asciz "JNL_kizunalist"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuKizunaTalk
+__vt__CMenuKizunaTalk:
+	.4byte __RTTI__CMenuKizunaTalk
+	.4byte 0
+	.4byte func_801BCB40
+	.4byte CChildListNode_Reset
+	.4byte func_801BCBB8
+	.4byte func_801BCC20
+	.4byte func_801BCCE4
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuKizunaTalk
+	.4byte 0xFFFFFF94
+	.4byte func_801BDD8C
+	.4byte func_80039E28
+	.4byte func_801BDD84
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuKizunaTalk
+	.4byte 0xFFFFFF90
+	.4byte func_801BDD9C
+	.4byte func_801BDD94
+	.4byte func_801BCDEC
+	.4byte func_801BD7D8
+
+.global CMenuKizunaTalk_hierarchy
+CMenuKizunaTalk_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000070
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuKizunaTalk
+__RTTI__CMenuKizunaTalk:
+	.4byte CMenuKizunaTalk_typestr
+	.4byte CMenuKizunaTalk_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066A728
+lbl_8066A728:
+	# ROM: 0x574588
+	.float 1.0
+
+
+.global lbl_8066A72C
+lbl_8066A72C:
+	# ROM: 0x57458C
+	.4byte 0
+
+
+.global lbl_8066A730
+lbl_8066A730:
+	# ROM: 0x574590
+	.4byte 0x43300000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666D10
+lbl_80666D10:
+	.skip 0x4
+.global lbl_80666D14
+lbl_80666D14:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800100D8
 lbl_800100D8:
@@ -1517,7 +1672,7 @@ lbl_8001021C:
 	.4byte 0x82000008
 	.4byte func_8045F8C8
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801BCA38
 	.4byte 0x00000108

@@ -156,3 +156,11 @@ ZeroMemory16ByteBlocks__Q34nw4r3g3d6detailFPvUl:
 /* 803E7B90 003B1150  38 63 00 10 */	addi r3, r3, 0x10
 /* 803E7B94 003B1154  42 00 FF F4 */	bdnz .L_803E7B88
 /* 803E7B98 003B1158  4E 80 00 20 */	blr
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C3E0
+lbl_8066C3E0:
+	# ROM: 0x576240
+	.4byte 0
+	.4byte 0

@@ -2075,7 +2075,317 @@ func_8018371C:
 /* 8018371C 0014CCDC  38 63 FF C4 */	addi r3, r3, -60
 /* 80183720 0014CCE0  4B FF E4 54 */	b func_80181B74
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CREvtModelObj_typestr
+cf_CREvtModelObj_typestr:
+	.asciz "cf::CREvtModelObj"
+	.balign 4
+
+
+.global lbl_804FEF8C
+lbl_804FEF8C:
+	.asciz "eff/rec/ev/evwpn01.rec"
+	.asciz "/chr/en/"
+	.asciz "/chr/np/"
+	.asciz "/chr/wp/"
+	.asciz "/obj/"
+	.asciz ".kp"
+	.asciz ".chr"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805356C8
+lbl_805356C8:
+	# ROM: 0x5317C8
+	.4byte lbl_8066A190
+	.4byte lbl_8066A194
+	.4byte lbl_8066A198
+	.4byte 0
+
+
+.global lbl_805356D8
+lbl_805356D8:
+	# ROM: 0x5317D8
+	.4byte lbl_8066A19C
+	.4byte lbl_8066A1A4
+	.4byte lbl_8066A1AC
+	.4byte lbl_8066A1B4
+	.4byte lbl_8066A1BC
+
+.global lbl_805356EC
+lbl_805356EC:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80182084
+
+.global lbl_805356F8
+lbl_805356F8:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80183268
+
+.global lbl_80535704
+lbl_80535704:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80182084
+
+.global lbl_80535710
+lbl_80535710:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80182178
+
+
+.global lbl_8053571C
+lbl_8053571C:
+	# ROM: 0x53181C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80182084
+
+
+.global lbl_80535728
+lbl_80535728:
+	# ROM: 0x531828
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80183268
+
+.global lbl_80535734
+lbl_80535734:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80182B2C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80182178
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80183268
+
+
+.global lbl_80535758
+lbl_80535758:
+	# ROM: 0x531858
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80182178
+
+
+.global lbl_80535764
+lbl_80535764:
+	# ROM: 0x531864
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80182B2C
+
+
+.global __vt__cf_CREvtModelObj
+__vt__cf_CREvtModelObj:
+	.4byte __RTTI__cf_CREvtModelObj
+	.4byte 0
+	.4byte func_80181B74
+	.4byte func_801728F8
+	.4byte func_8017298C
+	.4byte func_8016A354
+	.4byte func_80182100
+	.4byte func_801836E4
+	.4byte func_8018351C
+	.4byte func_801727DC
+	.4byte func_801835BC
+	.4byte func_801835C4
+	.4byte func_80172CC4
+	.4byte func_80181C90
+	.4byte func_80172CC0
+	.4byte func_80181DDC
+	.4byte func_80181F28
+	.4byte __RTTI__cf_CREvtModelObj
+	.4byte 0xFFFFFFC8
+	.4byte func_8018370C
+	.4byte func_80039E28
+	.4byte func_80183704
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__cf_CREvtModelObj
+	.4byte 0xFFFFFFC4
+	.4byte func_8018371C
+	.4byte func_80183714
+	.4byte func_801835D4
+	.4byte func_801836CC
+
+.global cf_CREvtModelObj_hierarchy
+cf_CREvtModelObj_hierarchy:
+	.4byte __RTTI__cf_CREvtObj
+	.4byte 0
+	.4byte __RTTI__cf_CREvtModel
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__cf_CREvtObj
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
+	.balign 4
+	.asciz "g3d_resfile_ac.h"
+	.balign 4
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CREvtModelObj
+__RTTI__cf_CREvtModelObj:
+	.4byte cf_CREvtModelObj_typestr
+	.4byte cf_CREvtModelObj_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A190
+lbl_8066A190:
+	.4byte 0x656E0000
+
+.global lbl_8066A194
+lbl_8066A194:
+	.4byte 0x6E700000
+
+.global lbl_8066A198
+lbl_8066A198:
+	.4byte 0x6F6A0000
+
+.global lbl_8066A19C
+lbl_8066A19C:
+	.asciz "wp42"
+	.balign 4
+
+.global lbl_8066A1A4
+lbl_8066A1A4:
+	.asciz "wp82"
+	.balign 4
+
+.global lbl_8066A1AC
+lbl_8066A1AC:
+	.asciz "wp83"
+	.balign 4
+
+.global lbl_8066A1B4
+lbl_8066A1B4:
+	.asciz "wp84"
+	.balign 4
+
+.global lbl_8066A1BC
+lbl_8066A1BC:
+	.asciz "np62"
+	.balign 4
+
+
+.global lbl_8066A1C4
+lbl_8066A1C4:
+	# ROM: 0x574024
+	.4byte 0x42200000
+
+
+.global lbl_8066A1C8
+lbl_8066A1C8:
+	# ROM: 0x574028
+	.float 1.0
+
+
+.global lbl_8066A1CC
+lbl_8066A1CC:
+	# ROM: 0x57402C
+	.4byte 0
+
+
+.global lbl_8066A1D0
+lbl_8066A1D0:
+	# ROM: 0x574030
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666BA8
+lbl_80666BA8:
+	.skip 0x4
+.global lbl_80666BAC
+lbl_80666BAC:
+	.skip 0x4
+.global lbl_80666BB0
+lbl_80666BB0:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000E754
 lbl_8000E754:
@@ -2173,7 +2483,7 @@ lbl_8000E82C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80181A5C
 	.4byte 0x00000118

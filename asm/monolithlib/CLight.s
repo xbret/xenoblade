@@ -731,7 +731,7 @@ CLight_typestr:
 	.balign 4
 	.4byte 0
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80020020
 lbl_80020020:
@@ -769,7 +769,7 @@ lbl_80020050:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_804C02E4
 	.4byte 0x000000B4

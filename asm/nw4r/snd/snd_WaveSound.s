@@ -301,3 +301,9 @@ lbl_8056E650:
 	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail9WaveSoundFv
 	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
 	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667E18
+lbl_80667E18:
+	.skip 0x8

@@ -8136,7 +8136,7 @@ lbl_8066833C:
 lbl_8066833D:
 	.skip 0x3
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80020D50
 lbl_80020D50:
@@ -8477,7 +8477,7 @@ lbl_80020FB4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_804E9460
 	.4byte 0x00000098

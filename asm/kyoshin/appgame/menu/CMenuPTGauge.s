@@ -3406,7 +3406,285 @@ sinit_80189D68:
 
 .4byte sinit_80189D68
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuPTGauge_typestr
+CMenuPTGauge_typestr:
+	.asciz "CMenuPTGauge"
+	.balign 4
+
+
+.global lbl_804FF1F0
+lbl_804FF1F0:
+	.asciz "CMenuPTGauge"
+	.asciz "mf71_battle70_party00.brlyt"
+	.asciz "mf71_battle70_party00_in.brlan"
+	.asciz "mf71_battle70_party00_full_part1.brlan"
+	.asciz "mf71_battle70_party00_full_part2.brlan"
+	.asciz "mf71_battle70_party00_full.brlan"
+	.asciz "mf71_battle70_party00_wait.brlan"
+	.asciz "pic_gage00"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_804FF2D8
+lbl_804FF2D8:
+	.asciz "."
+	.asciz "/"
+	.byte 0x00
+	.asciz ".adx"
+	.asciz "%s%s%s"
+	.asciz "snd/adx/"
+	.asciz "loop"
+	.byte 0x00
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80535BC8
+lbl_80535BC8:
+	# ROM: 0x531CC8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80187778
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80187858
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80187958
+	.4byte 0
+
+
+.global lbl_80535BF0
+lbl_80535BF0:
+	# ROM: 0x531CF0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80187A88
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80187B70
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80187C90
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80187E28
+
+
+.global __vt__CMenuPTGauge
+__vt__CMenuPTGauge:
+	.4byte __RTTI__CMenuPTGauge
+	.4byte 0
+	.4byte func_80186FEC
+	.4byte CChildListNode_Reset
+	.4byte func_80187060
+	.4byte func_8018720C
+	.4byte func_8018728C
+	.4byte func_80108BE8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuPTGauge
+	.4byte 0xFFFFFFA8
+	.4byte func_80187EFC
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuPTGauge
+	.4byte 0xFFFFFFA4
+	.4byte func_80187F0C
+	.4byte func_80187F04
+	.4byte func_801875E8
+
+.global CMenuPTGauge_hierarchy
+CMenuPTGauge_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000005C
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIBattle
+	.4byte 0
+	.4byte __RTTI__IUIBattle
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuPTGauge
+__RTTI__CMenuPTGauge:
+	.4byte CMenuPTGauge_typestr
+	.4byte CMenuPTGauge_hierarchy
+
+
+.global lbl_80664D88
+lbl_80664D88:
+	# ROM: 0x570968
+	.float 1.0
+
+
+.global lbl_80664D8C
+lbl_80664D8C:
+	# ROM: 0x57096C
+	.float 1.0
+
+
+.global lbl_80664D90
+lbl_80664D90:
+	# ROM: 0x570970
+	.float 1.0
+
+
+.global lbl_80664D94
+lbl_80664D94:
+	# ROM: 0x570974
+	.float 1.0
+
+
+.global lbl_80664D98
+lbl_80664D98:
+	# ROM: 0x570978
+	.float 0.2
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A2A0
+lbl_8066A2A0:
+	# ROM: 0x574100
+	.4byte 0
+
+
+.global lbl_8066A2A4
+lbl_8066A2A4:
+	# ROM: 0x574104
+	.4byte 0x43960000
+
+
+.global lbl_8066A2A8
+lbl_8066A2A8:
+	# ROM: 0x574108
+	.4byte 0x43000000
+
+
+.global lbl_8066A2AC
+lbl_8066A2AC:
+	# ROM: 0x57410C
+	.float 1.0
+
+
+.global lbl_8066A2B0
+lbl_8066A2B0:
+	# ROM: 0x574110
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066A2B8
+lbl_8066A2B8:
+	# ROM: 0x574118
+	.4byte 0x41F00000
+
+
+.global lbl_8066A2BC
+lbl_8066A2BC:
+	# ROM: 0x57411C
+	.float 100.0
+
+
+.global lbl_8066A2C0
+lbl_8066A2C0:
+	# ROM: 0x574120
+	.4byte 0x43480000
+	.4byte 0
+
+
+.global lbl_8066A2C8
+lbl_8066A2C8:
+	# ROM: 0x574128
+	.4byte 0
+
+
+.global lbl_8066A2CC
+lbl_8066A2CC:
+	# ROM: 0x57412C
+	.float 1.0
+
+
+.global lbl_8066A2D0
+lbl_8066A2D0:
+	# ROM: 0x574130
+	.4byte 0x3E99999A
+
+
+.global lbl_8066A2D4
+lbl_8066A2D4:
+	# ROM: 0x574134
+	.4byte 0xBE99999A
+
+
+.global lbl_8066A2D8
+lbl_8066A2D8:
+	# ROM: 0x574138
+	.4byte 0x3D8F5C29
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80578F90
+lbl_80578F90:
+	.skip 0x24
+.global lbl_80578FB4
+lbl_80578FB4:
+	.skip 0x24
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666BC8
+lbl_80666BC8:
+	.skip 0x8
+.global lbl_80666BD0
+lbl_80666BD0:
+	.skip 0x4
+.global lbl_80666BD4
+lbl_80666BD4:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000EAAC
 lbl_8000EAAC:
@@ -3624,7 +3902,7 @@ lbl_8000EC44:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80186F00
 	.4byte 0x000000EC

@@ -163,7 +163,92 @@ func_800CA6DC:
 /* 800CA6DC 00093C9C  38 63 FF F0 */	addi r3, r3, -16
 /* 800CA6E0 00093CA0  4B FF FF 90 */	b func_800CA670
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfObjectImplObj_typestr
+cf_CfObjectImplObj_typestr:
+	.asciz "cf::CfObjectImplObj"
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CfObjectImplObj
+__vt__cf_CfObjectImplObj:
+	.4byte __RTTI__cf_CfObjectImplObj
+	.4byte 0
+	.4byte func_800CA670
+	.4byte func_80054A20
+	.4byte func_800CC5DC
+	.4byte func_800CC638
+	.4byte func_800CA590
+	.4byte func_800CD268
+	.4byte func_800CD460
+	.4byte func_800CD5C0
+	.4byte func_800CD5DC
+	.4byte func_800CEB68
+	.4byte func_80087448
+	.4byte func_8008742C
+	.4byte func_8008743C
+	.4byte func_80087424
+	.4byte func_800459FC
+	.4byte func_80087410
+	.4byte func_800873FC
+	.4byte func_800873E8
+	.4byte func_800873D4
+	.4byte func_800873C8
+	.4byte func_800873AC
+	.4byte func_80087390
+	.4byte func_80087378
+	.4byte func_80087364
+	.4byte func_80087334
+	.4byte func_80087348
+	.4byte func_800CE8E4
+	.4byte func_800CEBE0
+	.4byte func_800CE544
+	.4byte func_800CE6A0
+	.4byte func_800CE8AC
+	.4byte func_800CEA34
+	.4byte func_800CAB30
+	.4byte func_800CB454
+	.4byte func_800CB21C
+	.4byte func_800CB9AC
+	.4byte func_800CB94C
+	.4byte func_80087330
+	.4byte func_800CA4EC
+	.4byte func_800CA964
+	.4byte func_800C596C
+	.4byte func_800CAA44
+	.4byte func_800CA540
+	.4byte __RTTI__cf_CfObjectImplObj
+	.4byte 0xFFFFFFF4
+	.4byte func_800CA6D4
+	.4byte func_800CA6CC
+	.4byte __RTTI__cf_CfObjectImplObj
+	.4byte 0xFFFFFFF0
+	.4byte func_800CA6DC
+	.4byte func_800C5988
+	.4byte func_800CA58C
+	.4byte func_800CBBD8
+	.4byte func_800CC01C
+	.4byte func_800CC020
+	.4byte func_800CA538
+	.4byte func_800CEE28
+	.4byte func_800CFFA0
+
+.global cf_CfObjectImplObj_hierarchy
+cf_CfObjectImplObj_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0x00000010
+	.4byte __RTTI__IActParamEvent
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectImpl
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000A374
 lbl_8000A374:
@@ -186,7 +271,7 @@ lbl_8000A38C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_800CA4EC
 	.4byte 0x0000004C

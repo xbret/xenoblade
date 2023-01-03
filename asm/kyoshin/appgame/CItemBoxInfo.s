@@ -14331,7 +14331,522 @@ func_801E0260:
 /* 801E1194 001AA754  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 801E1198 001AA758  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80501B1C
+lbl_80501B1C:
+	# ROM: 0x4FDC1C
+	.4byte lbl_8066A8C8
+	.4byte lbl_80501AF4
+	.4byte lbl_80501AE8
+	.4byte lbl_80501ADC
+	.4byte lbl_80501AD0
+	.4byte lbl_80501AC4
+	.4byte lbl_80501AB8
+
+
+.global lbl_80501B38
+lbl_80501B38:
+	# ROM: 0x4FDC38
+	.4byte 0x00000002
+	.4byte 0x00000004
+	.4byte 0x00000005
+	.4byte 0x00000006
+	.4byte 0x00000007
+	.4byte 0x00000008
+
+
+.global lbl_80501B50
+lbl_80501B50:
+	# ROM: 0x4FDC50
+	.4byte lbl_8066A8C8
+	.4byte lbl_80501AF4
+	.4byte lbl_80501AE8
+	.4byte lbl_80501ADC
+	.4byte lbl_80501AD0
+	.4byte lbl_80501AC4
+	.4byte lbl_80501AB8
+
+.global CItemBoxInfo2_typestr
+CItemBoxInfo2_typestr:
+	.asciz "CItemBoxInfo2"
+	.balign 4
+
+.global CItemBoxInfo_typestr
+CItemBoxInfo_typestr:
+	.asciz "CItemBoxInfo"
+	.balign 4
+
+
+.global lbl_80501B8C
+lbl_80501B8C:
+	.asciz "%d"
+	.asciz "rvs_type"
+	.asciz "rvs_caption"
+	.asciz "%s"
+	.asciz "<col=red>%s<col=def>"
+	.asciz "<col=red>%s%%<col=def>"
+	.asciz "<col=red>%d%%<col=def>"
+	.asciz "/menu/ItemBoxInfo.arc"
+	.asciz "/menu/tpl/CrystalIcon.arc"
+	.asciz "nul_para_01"
+	.asciz "nul_para_30"
+	.asciz "nul_para_50"
+	.asciz "nul_para_60"
+	.asciz "nul_para_80"
+	.asciz "nul_para_700"
+	.asciz "nul_eth"
+	.asciz "nul_infbcln01"
+	.asciz "nul_infbcln700"
+	.asciz "MNU_item"
+	.asciz "name"
+	.asciz "%d%s"
+	.asciz "txt_gold01_00"
+	.asciz "txt_excange%02d"
+	.asciz "pic_pcbs%02d"
+	.asciz "nul_proportion"
+	.asciz "txt_scnd01"
+	.asciz "txt_scnd03"
+	.asciz "nul_scnd"
+	.asciz "dmg_low"
+	.asciz "dmg_hi"
+	.asciz "arm_phy"
+	.asciz "arm_eth"
+	.asciz "att_lev"
+	.asciz "speed"
+	.asciz "grd_rate"
+	.asciz "flag"
+	.asciz "equip_pc%d"
+	.asciz "eva_rate"
+	.asciz "arm_type"
+	.asciz "pc%d"
+	.asciz "rankType"
+	.asciz "MNU_shop"
+	.asciz "atr_type"
+	.asciz "type"
+	.asciz "MNU_collect"
+	.asciz "mapID"
+	.asciz "memory_type"
+	.asciz "pc_type"
+	.asciz "get_arts"
+	.asciz "pc_arts"
+	.asciz "idx"
+	.asciz "%d%s%d"
+	.asciz "txt_value02"
+	.asciz "txt_value08"
+	.asciz "txt_value09"
+	.asciz "%s%d%s"
+	.asciz "txt_value04"
+	.asciz "txt_value07"
+	.asciz "txt_value22"
+	.byte 0x00
+	.asciz "txt_para25"
+	.asciz "txt_para01"
+	.asciz "txt_para10"
+	.asciz "txt_para11"
+	.asciz "txt_para04"
+	.asciz "txt_para08"
+	.asciz "txt_para22"
+	.asciz "txt_para23"
+	.asciz "pic_pc%02d"
+	.asciz "pic_eq%02d"
+	.asciz "mf00_reg00_eq01.tpl"
+	.asciz "mf00_reg00_eq00.tpl"
+	.asciz "mf00_com00_dmy.tpl"
+	.asciz "txt_para24"
+	.asciz "pic_ethcol%02d"
+	.asciz "mf00_reg30_crys00.tpl"
+	.asciz "mf00_reg30_crys01.tpl"
+	.asciz "mf00_reg30_crys02.tpl"
+	.asciz "mf00_reg30_crys03.tpl"
+	.asciz "mf00_reg30_crys04.tpl"
+	.asciz "mf00_reg30_crys05.tpl"
+	.asciz "mf00_reg30_crys06.tpl"
+	.asciz "txt_ethvalue%02d"
+	.asciz "%s%s"
+	.asciz "%s "
+	.asciz "%d "
+	.asciz "txt_eth%02d"
+	.asciz "jwl_slot"
+	.asciz "jwl_skill%d"
+	.asciz "percent"
+	.asciz "txt_para80"
+	.asciz "txt_value50"
+	.asciz "txt_value51"
+	.asciz "txt_para51"
+	.asciz "attach"
+	.asciz "txt_para52"
+	.asciz "txt_value60"
+	.asciz "txt_value61"
+	.asciz "txt_value30"
+	.asciz "txt_para%02d"
+	.asciz "txt_value%02d"
+	.asciz "tag_icon"
+	.asciz "txt_para736"
+	.asciz "txt_value700"
+	.asciz "txt_value702"
+	.asciz "accum"
+	.asciz "max"
+	.asciz "txt_para7%02d"
+	.asciz "txt_value7%02d"
+	.asciz "CItemBoxInfo"
+	.asciz "arc"
+	.asciz "mf02_box02_inf.brlyt"
+	.asciz "mf02_box02_inf_in.brlan"
+	.asciz "mf02_box02_inf_info_in.brlan"
+	.asciz "txt_value31"
+	.asciz "txt_value32"
+	.asciz "txt_value33"
+	.asciz "txt_value34"
+	.asciz "txt_ethvalue01"
+	.asciz "txt_ethvalue02"
+	.asciz "txt_ethvalue03"
+	.asciz "txt_value703"
+	.asciz "txt_value704"
+	.asciz "txt_value705"
+	.asciz "txt_value708"
+	.asciz "txt_value710"
+	.asciz "txt_value706"
+	.asciz "txt_value709"
+	.asciz "txt_value712"
+	.asciz "txt_value714"
+	.asciz "txt_value715"
+	.asciz "txt_value716"
+	.asciz "txt_value717"
+	.asciz "txt_value718"
+	.asciz "txt_value719"
+	.asciz "txt_value720"
+	.asciz "txt_value721"
+	.asciz "txt_value722"
+	.asciz "txt_value723"
+	.asciz "txt_para704"
+	.asciz "txt_scnd02"
+	.asciz "nul_shop"
+	.asciz "nul_excange"
+	.asciz "txt_para30"
+	.asciz "txt_para50"
+	.asciz "txt_para60"
+	.asciz "txt_para61"
+	.asciz "txt_para700"
+	.asciz "txt_para702"
+	.asciz "txt_para703"
+	.asciz "txt_para705"
+	.asciz "txt_para706"
+	.asciz "txt_para708"
+	.asciz "txt_para709"
+	.asciz "txt_para710"
+	.asciz "txt_para713"
+	.asciz "txt_para716"
+	.asciz "txt_para717"
+	.asciz "MNU_relate"
+	.asciz "txt_npctype"
+	.asciz "txt_npcname"
+	.asciz "txt_npcframe"
+	.asciz "txt_excange00"
+	.asciz "txt_excange01"
+	.asciz "pic_pcbs01"
+	.asciz "txt_scnd00"
+	.asciz "CItemBoxInfoTex"
+	.asciz "itemID"
+	.asciz "jwl_skill1"
+	.asciz "CItemBoxInfo2"
+	.asciz "CItemBoxInfo2Tex"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_80538220
+lbl_80538220:
+	# ROM: 0x534320
+	.4byte switch_801D655C
+	.4byte switch_801D6574
+	.4byte switch_801D658C
+	.4byte switch_801D65A4
+	.4byte switch_801D65BC
+	.4byte switch_801D65D4
+	.4byte switch_801D65EC
+	.4byte switch_801D6604
+	.4byte switch_801D661C
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A8C8
+lbl_8066A8C8:
+	.4byte 0
+
+
+.global lbl_8066A8CC
+lbl_8066A8CC:
+	# ROM: 0x57472C
+	.4byte 0
+
+
+.global lbl_8066A8D0
+lbl_8066A8D0:
+	# ROM: 0x574730
+	.float 1.0
+
+
+.global lbl_8066A8D4
+lbl_8066A8D4:
+	# ROM: 0x574734
+	.float 10.0
+
+
+.global lbl_8066A8D8
+lbl_8066A8D8:
+	# ROM: 0x574738
+	.4byte 0x3FB33333
+
+
+.global lbl_8066A8DC
+lbl_8066A8DC:
+	# ROM: 0x57473C
+	.float 1.5
+
+
+.global lbl_8066A8E0
+lbl_8066A8E0:
+	# ROM: 0x574740
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066A8E8
+lbl_8066A8E8:
+	# ROM: 0x574748
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066A8F0
+lbl_8066A8F0:
+	# ROM: 0x574750
+	.4byte 0x02040506
+
+
+.global lbl_8066A8F4
+lbl_8066A8F4:
+	# ROM: 0x574754
+	.4byte 0x07080000
+
+
+.global lbl_8066A8F8
+lbl_8066A8F8:
+	# ROM: 0x574758
+	.4byte 0x04050607
+
+
+.global lbl_8066A8FC
+lbl_8066A8FC:
+	# ROM: 0x57475C
+	.4byte 0x08000000
+
+
+.global lbl_8066A900
+lbl_8066A900:
+	# ROM: 0x574760
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066A904
+lbl_8066A904:
+	# ROM: 0x574764
+	.float 100.0
+
+
+.global lbl_8066A908
+lbl_8066A908:
+	# ROM: 0x574768
+	.float 0.5
+
+
+.global lbl_8066A90C
+lbl_8066A90C:
+	# ROM: 0x57476C
+	.4byte 0x02040506
+
+
+.global lbl_8066A910
+lbl_8066A910:
+	# ROM: 0x574770
+	.4byte 0x07080000
+
+
+.global lbl_8066A914
+lbl_8066A914:
+	# ROM: 0x574774
+	.4byte 0x02040506
+
+
+.global lbl_8066A918
+lbl_8066A918:
+	# ROM: 0x574778
+	.4byte 0x07080000
+
+
+.global lbl_8066A91C
+lbl_8066A91C:
+	# ROM: 0x57477C
+	.4byte 0x02040506
+
+
+.global lbl_8066A920
+lbl_8066A920:
+	# ROM: 0x574780
+	.4byte 0x07080000
+
+
+.global lbl_8066A924
+lbl_8066A924:
+	# ROM: 0x574784
+	.4byte 0x02040506
+
+
+.global lbl_8066A928
+lbl_8066A928:
+	# ROM: 0x574788
+	.4byte 0x07080000
+
+
+.global lbl_8066A92C
+lbl_8066A92C:
+	# ROM: 0x57478C
+	.4byte 0x04050607
+
+
+.global lbl_8066A930
+lbl_8066A930:
+	# ROM: 0x574790
+	.4byte 0x08000000
+
+
+.global lbl_8066A934
+lbl_8066A934:
+	# ROM: 0x574794
+	.4byte 0x02040506
+
+
+.global lbl_8066A938
+lbl_8066A938:
+	# ROM: 0x574798
+	.4byte 0x07080000
+
+
+.global lbl_8066A93C
+lbl_8066A93C:
+	# ROM: 0x57479C
+	.4byte 0x02040506
+
+
+.global lbl_8066A940
+lbl_8066A940:
+	# ROM: 0x5747A0
+	.4byte 0x07080000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666E08
+lbl_80666E08:
+	.skip 0x4
+.global lbl_80666E0C
+lbl_80666E0C:
+	.skip 0x4
+.global lbl_80666E10
+lbl_80666E10:
+	.skip 0x4
+.global lbl_80666E14
+lbl_80666E14:
+	.skip 0x4
+.global lbl_80666E18
+lbl_80666E18:
+	.skip 0x8
+.global lbl_80666E20
+lbl_80666E20:
+	.skip 0x8
+.global lbl_80666E28
+lbl_80666E28:
+	.skip 0x8
+.global lbl_80666E30
+lbl_80666E30:
+	.skip 0x8
+.global lbl_80666E38
+lbl_80666E38:
+	.skip 0x8
+.global lbl_80666E40
+lbl_80666E40:
+	.skip 0x8
+.global lbl_80666E48
+lbl_80666E48:
+	.skip 0x4
+.global lbl_80666E4C
+lbl_80666E4C:
+	.skip 0x4
+.global lbl_80666E50
+lbl_80666E50:
+	.skip 0x4
+.global lbl_80666E54
+lbl_80666E54:
+	.skip 0x4
+.global lbl_80666E58
+lbl_80666E58:
+	.skip 0x8
+.global lbl_80666E60
+lbl_80666E60:
+	.skip 0x8
+.global lbl_80666E68
+lbl_80666E68:
+	.skip 0x8
+.global lbl_80666E70
+lbl_80666E70:
+	.skip 0x8
+.global lbl_80666E78
+lbl_80666E78:
+	.skip 0x8
+.global lbl_80666E80
+lbl_80666E80:
+	.skip 0x8
+.global lbl_80666E88
+lbl_80666E88:
+	.skip 0x8
+.global lbl_80666E90
+lbl_80666E90:
+	.skip 0x8
+.global lbl_80666E98
+lbl_80666E98:
+	.skip 0x4
+.global lbl_80666E9C
+lbl_80666E9C:
+	.skip 0x4
+.global lbl_80666EA0
+lbl_80666EA0:
+	.skip 0x4
+.global lbl_80666EA4
+lbl_80666EA4:
+	.skip 0x4
+.global lbl_80666EA8
+lbl_80666EA8:
+	.skip 0x8
+.global lbl_80666EB0
+lbl_80666EB0:
+	.skip 0x8
+.global lbl_80666EB8
+lbl_80666EB8:
+	.skip 0x4
+.global lbl_80666EBC
+lbl_80666EBC:
+	.skip 0x4
+.global lbl_80666EC0
+lbl_80666EC0:
+	.skip 0x4
+.global lbl_80666EC4
+lbl_80666EC4:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80011708
 lbl_80011708:
@@ -14605,7 +15120,7 @@ lbl_800118DC:
 	.4byte func_8045F8C8
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801D3F08
 	.4byte 0x000000E8

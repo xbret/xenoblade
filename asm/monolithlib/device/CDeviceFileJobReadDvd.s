@@ -347,7 +347,7 @@ __RTTI__CDeviceFileJobReadDvd:
 	.4byte CDeviceFileJobReadDvd_typestr
 	.4byte CDeviceFileJobReadDvd_hierarchy
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001CFAC
 lbl_8001CFAC:
@@ -390,7 +390,7 @@ lbl_8001CFE4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80451F20
 	.4byte 0x00000044

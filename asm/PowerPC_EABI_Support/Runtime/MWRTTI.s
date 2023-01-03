@@ -275,7 +275,7 @@ lbl_8050CE30:
 	.asciz "!std::exception!!std::bad_typeid!!"
 	.asciz "!std::exception!!std::bad_cast!!"
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001BF30
 lbl_8001BF30:
@@ -288,7 +288,7 @@ lbl_8001BF38:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte __dynamic_cast
 	.4byte 0x0000025C

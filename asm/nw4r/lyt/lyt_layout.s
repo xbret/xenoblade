@@ -1242,3 +1242,16 @@ lbl_8056D258:
 	.4byte Draw__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo
 	.4byte Animate__Q34nw4r3lyt6LayoutFUl
 	.4byte SetTagProcessor__Q34nw4r3lyt6LayoutFPQ34nw4r2ut19TagProcessorBase_w
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C558
+lbl_8066C558:
+	# ROM: 0x5763B8
+	.4byte 0
+
+
+.global lbl_8066C55C
+lbl_8066C55C:
+	# ROM: 0x5763BC
+	.float 0.5

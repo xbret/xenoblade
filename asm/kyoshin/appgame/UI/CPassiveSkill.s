@@ -960,7 +960,337 @@ func_8026DE8C:
 /* 8026E168 00237728  38 21 01 B0 */	addi r1, r1, 0x1b0
 /* 8026E16C 0023772C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_805091F8
+lbl_805091F8:
+	# ROM: 0x5052F8
+	.4byte 0x00000501
+	.4byte 0x02040305
+	.4byte 0x00000501
+	.4byte 0x02040305
+	.4byte 0x00010002
+	.4byte 0x03050400
+	.4byte 0x00010500
+	.4byte 0x02040305
+	.4byte 0x00010502
+	.4byte 0x00040305
+	.4byte 0x00010502
+	.4byte 0x03000405
+	.4byte 0x00010502
+	.4byte 0x03040005
+	.4byte 0x00010002
+	.4byte 0x03050400
+
+.global lbl_80509238
+lbl_80509238:
+	.asciz "nul_curs00"
+	.balign 4
+
+.global lbl_80509244
+lbl_80509244:
+	.asciz "nul_curs01"
+	.balign 4
+
+.global lbl_80509250
+lbl_80509250:
+	.4byte 0x00000010
+	.4byte 0x00100000
+	.4byte 0x00200000
+
+.global UI_CPassiveSkill_typestr
+UI_CPassiveSkill_typestr:
+	.asciz "UI::CPassiveSkill"
+	.balign 4
+
+.global UI_CPassiveSkillLine_typestr
+UI_CPassiveSkillLine_typestr:
+	.asciz "UI::CPassiveSkillLine"
+	.balign 4
+
+.global UI_CPassiveSkillInfo_typestr
+UI_CPassiveSkillInfo_typestr:
+	.asciz "UI::CPassiveSkillInfo"
+	.balign 4
+
+.global UI_CPassiveSkillCur_typestr
+UI_CPassiveSkillCur_typestr:
+	.asciz "UI::CPassiveSkillCur"
+	.balign 4
+
+
+.global lbl_805092B8
+lbl_805092B8:
+	.asciz "mf00_reg00_curs05.brlyt"
+	.asciz "mf00_reg00_curs05_roop.brlan"
+	.asciz "mf00_reg00_curs05_on.brlan"
+	.asciz "mf00_reg00_curs01.brlyt"
+	.asciz "mf00_reg00_curs01_roop.brlan"
+	.asciz "mf00_reg00_curs01_on.brlan"
+	.asciz "nul_00"
+	.asciz "pic_arrow01_l01"
+	.asciz "pic_arrow01_r01"
+	.asciz "mf20_skl02_inf.brlyt"
+	.asciz "mf20_skl02_inf_in.brlan"
+	.asciz "mf20_skl02_inf_info_in.brlan"
+	.asciz "mf20_skl02_inf_change.brlan"
+	.asciz "txt_value01"
+	.asciz "txt_value02"
+	.asciz "txt_value02_01"
+	.asciz "txt_value03"
+	.asciz "txt_value04"
+	.asciz "txt_value05"
+	.asciz "txt_exp06"
+	.byte 0x00
+	.asciz "txt_exp07"
+	.asciz "nul_sort"
+	.asciz "MNU_kyeassign"
+	.asciz "help"
+	.asciz "txt_soat01"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "pic_soatbtn"
+	.asciz "pic_pcbs01"
+	.asciz "pic_pcbs02"
+	.asciz "tag_icon"
+	.asciz "pic_face02"
+	.asciz "pic_face01"
+	.asciz "name"
+	.asciz "txt_nm01"
+	.asciz "txt_exp01"
+	.asciz "MNU_passive"
+	.asciz "txt_exp02"
+	.asciz "skill"
+	.asciz "txt_exp03"
+	.asciz "val_type"
+	.asciz "val%d"
+	.asciz "txt_exp04"
+	.asciz "%d"
+	.asciz "%d%s"
+	.asciz "val6"
+	.asciz "txt_exp05"
+	.asciz "type"
+	.asciz "val2"
+	.asciz "val1"
+	.asciz "time"
+	.asciz "mf40_kiz_pcicon_e00.tpl"
+	.asciz "mf40_kiz_pcicon_d00.tpl"
+	.asciz "mf40_kiz_pcicon_c00.tpl"
+	.asciz "mf40_kiz_pcicon_b00.tpl"
+	.asciz "mf40_kiz_pcicon_a00.tpl"
+	.asciz "pic_kizicon"
+	.asciz "nul_chsele"
+	.asciz "point_SP"
+	.asciz "%d%s%d"
+	.asciz "txt_unt01"
+	.asciz "txt_hd01"
+	.asciz "%s%s%s%s"
+	.asciz "point_PP"
+	.asciz "%d%s%d%s"
+	.asciz "txt_hd02"
+	.asciz "txt_unt02"
+	.asciz "mf20_skl00_slf.brlyt"
+	.asciz "mf20_skl00_slf_in.brlan"
+	.asciz "mf20_skl00_slf_fade_out.brlan"
+	.asciz "mf20_skl00_slf_roop.brlan"
+	.asciz "mf20_skl01_frnd.brlyt"
+	.asciz "mf20_skl01_frnd_fade_in.brlan"
+	.asciz "mf20_skl03_msk.brlyt"
+	.asciz "mf20_skl03_msk_full.brlan"
+	.asciz "pic_icbs_sl%02d_%02d"
+	.asciz "pic_lock00"
+	.asciz "pic_lock01"
+	.asciz "pic_lock02"
+	.asciz "pic_lock03"
+	.asciz "pic_lock04"
+	.asciz "pic_line_pt01"
+	.asciz "nul_fc_slpt"
+	.asciz "pic_fcbs_sl00"
+	.asciz "nul_proportion"
+	.asciz "icon_type2"
+	.asciz "pic_fc_sl00"
+	.asciz "pic_fc_sl02"
+	.asciz "pic_fc_sl01"
+	.asciz "mf20_skl01_pc%02dcat%02d.tpl"
+	.asciz "pic_cat%02d"
+	.asciz "flag"
+	.asciz "nul_cat04"
+	.asciz "mf20_skl00_plbs02.tpl"
+	.asciz "pic_bis02"
+	.asciz "mf20_skl00_plbs04.tpl"
+	.asciz "nul_cat05"
+	.asciz "mf20_skl00_plbs03.tpl"
+	.asciz "pic_bis03"
+	.asciz "mf20_skl00_plbs05.tpl"
+	.asciz "pic_ef%02d_00"
+	.asciz "pic_ef%02d_01"
+	.asciz "shape"
+	.asciz "target"
+	.asciz "mf20_skl02_icnbs_c00.tpl"
+	.asciz "mf20_skl02_icnbs_c01.tpl"
+	.asciz "mf20_skl02_icnbs_c02.tpl"
+	.asciz "mf20_skl02_icnbs_c03.tpl"
+	.asciz "mf20_skl02_icnbs_c04.tpl"
+	.asciz "mf20_skl02_icnbs_a00.tpl"
+	.asciz "mf20_skl02_icnbs_a01.tpl"
+	.asciz "mf20_skl02_icnbs_a02.tpl"
+	.asciz "mf20_skl02_icnbs_a03.tpl"
+	.asciz "mf20_skl02_icnbs_a04.tpl"
+	.asciz "mf20_skl02_icnbs_b00.tpl"
+	.asciz "mf20_skl02_icnbs_b01.tpl"
+	.asciz "mf20_skl02_icnbs_b02.tpl"
+	.asciz "mf20_skl02_icnbs_b03.tpl"
+	.asciz "mf20_skl02_icnbs_b04.tpl"
+	.asciz "icon"
+	.asciz "pic_ic_sl%02d_%02d"
+	.asciz "pic_msk_sl%02d_%02d"
+	.asciz "pic_curs_sl%02d_%02d"
+	.asciz "rvs_effect%02d"
+	.asciz "pic_fc_pt00"
+	.asciz "mf20_skl02_lck00.tpl"
+	.asciz "mf20_skl02_lck01.tpl"
+	.asciz "mf20_skl02_lck02.tpl"
+	.asciz "mf20_skl02_lck03.tpl"
+	.asciz "mf20_skl02_lck04.tpl"
+	.asciz "mf20_skl00_curs03.tpl"
+	.asciz "mf20_skl00_curs01.tpl"
+	.asciz "mf20_skl00_curs02.tpl"
+	.asciz "nul_pt01"
+	.asciz "nul_pt02"
+	.asciz "nul_pt03"
+	.asciz "nul_pt04"
+	.asciz "nul_pt05"
+	.asciz "nul_pt06"
+	.asciz "nul_pt%02d"
+	.asciz "pic_fc_pt%02d"
+	.asciz "mf20_skl02_icnbs_e00.tpl"
+	.asciz "mf20_skl02_icnbs_e01.tpl"
+	.asciz "mf20_skl02_icnbs_e02.tpl"
+	.asciz "mf20_skl02_icnbs_e03.tpl"
+	.asciz "mf20_skl02_icnbs_e04.tpl"
+	.asciz "mf00_com00_dmy.tpl"
+	.asciz "mf20_skl02_icnbs_d00.tpl"
+	.asciz "mf20_skl02_icnbs_d01.tpl"
+	.asciz "mf20_skl02_icnbs_d02.tpl"
+	.asciz "mf20_skl02_icnbs_d03.tpl"
+	.asciz "mf20_skl02_icnbs_d04.tpl"
+	.asciz "pic_icbs_pt%02d_%02d"
+	.asciz "pic_ic_pt%02d_%02d"
+	.asciz "pic_line_pt%02d"
+	.asciz "arm_type"
+	.asciz "nul_all"
+	.asciz "/menu/PassiveSkill.arc"
+	.asciz "common/jp/bdat_psv.bin"
+	.asciz "CPassiveSkill"
+	.asciz "arc"
+	.asciz "MNU_PSskil"
+	.asciz "MNU_PSlink"
+	.asciz "MNU_PSset"
+	.asciz "BTL_PSVskill"
+	.asciz "BTL_PSVlink"
+	.asciz "BTL_PSSlist"
+	.balign 4
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B1B0
+lbl_8066B1B0:
+	# ROM: 0x575010
+	.float 1.0
+
+
+.global lbl_8066B1B4
+lbl_8066B1B4:
+	# ROM: 0x575014
+	.4byte 0
+
+
+.global lbl_8066B1B8
+lbl_8066B1B8:
+	# ROM: 0x575018
+	.4byte lbl_80509238
+
+
+.global lbl_8066B1BC
+lbl_8066B1BC:
+	# ROM: 0x57501C
+	.4byte lbl_80509244
+
+
+.global lbl_8066B1C0
+lbl_8066B1C0:
+	# ROM: 0x575020
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066B1C8
+lbl_8066B1C8:
+	# ROM: 0x575028
+	.4byte 0x40800000
+	.4byte 0
+
+
+.global lbl_8066B1D0
+lbl_8066B1D0:
+	# ROM: 0x575030
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066B1D8
+lbl_8066B1D8:
+	# ROM: 0x575038
+	.4byte 0x422C0000
+
+
+.global lbl_8066B1DC
+lbl_8066B1DC:
+	# ROM: 0x57503C
+	.4byte 0x04050607
+
+
+.global lbl_8066B1E0
+lbl_8066B1E0:
+	# ROM: 0x575040
+	.4byte 0x08000000
+
+
+.global lbl_8066B1E4
+lbl_8066B1E4:
+	# ROM: 0x575044
+	.4byte 0x437F0000
+
+
+.global lbl_8066B1E8
+lbl_8066B1E8:
+	# ROM: 0x575048
+	.4byte 0x43200000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667170
+lbl_80667170:
+	.skip 0x4
+.global lbl_80667174
+lbl_80667174:
+	.skip 0x4
+.global lbl_80667178
+lbl_80667178:
+	.skip 0x4
+.global lbl_8066717C
+lbl_8066717C:
+	.skip 0x4
+.global lbl_80667180
+lbl_80667180:
+	.skip 0x4
+.global lbl_80667184
+lbl_80667184:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80017C14
 lbl_80017C14:
@@ -1070,7 +1400,7 @@ lbl_80017CF4:
 	.4byte func_8045F8C8
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8026D4C0
 	.4byte 0x0000007C

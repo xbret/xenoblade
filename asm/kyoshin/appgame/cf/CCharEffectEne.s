@@ -397,7 +397,240 @@ func_8015D144:
 /* 8015D200 001267C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8015D204 001267C4  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804FD678
+lbl_804FD678:
+	# ROM: 0x4F9778
+	.4byte 0x00790051
+	.4byte 0x00650201
+	.4byte 0x02020203
+	.4byte 0x02040205
+	.4byte 0x0206020F
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x000000A7
+	.4byte 0x00A60000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00550056
+	.4byte 0x00570052
+	.4byte 0x00590058
+	.4byte 0x02460000
+	.4byte 0
+	.4byte 0
+	.4byte 0x005A0054
+	.4byte 0x00530000
+
+.global cf_CCharEffectEne_typestr
+cf_CCharEffectEne_typestr:
+	.asciz "cf::CCharEffectEne"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_804FD6E8
+lbl_804FD6E8:
+	# ROM: 0x4F97E8
+	.4byte 0x007B0051
+	.4byte 0x00650000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x000000A7
+	.4byte 0x00A60000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00550056
+	.4byte 0x00570052
+	.4byte 0x00590058
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x005A0054
+	.4byte 0x00530000
+
+.global cf_CCharEffectNpc_typestr
+cf_CCharEffectNpc_typestr:
+	.asciz "cf::CCharEffectNpc"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_804FD758
+lbl_804FD758:
+	# ROM: 0x4F9858
+	.4byte 0x00790051
+	.4byte 0x00650000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x000000A7
+	.4byte 0x00A60000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00550056
+	.4byte 0x00570052
+	.4byte 0x00590058
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x005A0054
+	.4byte 0x00530000
+
+.global cf_CCharEffectObj_typestr
+cf_CCharEffectObj_typestr:
+	.asciz "cf::CCharEffectObj"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_804FD7C8
+lbl_804FD7C8:
+	# ROM: 0x4F98C8
+	.4byte 0x007B0051
+	.4byte 0x00650000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x020B020B
+	.4byte 0x02150215
+	.4byte 0x02290229
+	.4byte 0x000000A7
+	.4byte 0x00A60000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00550056
+	.4byte 0x00570052
+	.4byte 0x00590058
+	.4byte 0
+	.4byte 0x00000031
+	.4byte 0
+	.4byte 0x005A0054
+	.4byte 0x00530000
+
+.global cf_CCharEffectPc_typestr
+cf_CCharEffectPc_typestr:
+	.asciz "cf::CCharEffectPc"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CCharEffectEne
+__vt__cf_CCharEffectEne:
+	.4byte __RTTI__cf_CCharEffectEne
+	.4byte 0
+	.4byte func_80081C60
+	.4byte func_8015BF04
+	.4byte func_8015C9A0
+	.4byte func_800CEE7C
+	.4byte func_8015CD04
+	.4byte func_8015C2B0
+
+.global cf_CCharEffectEne_hierarchy
+cf_CCharEffectEne_hierarchy:
+	.4byte __RTTI__cf_CCharEffect
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CCharEffectNpc
+__vt__cf_CCharEffectNpc:
+	.4byte __RTTI__cf_CCharEffectNpc
+	.4byte 0
+	.4byte func_80081564
+	.4byte func_8015BF04
+	.4byte func_8015C9A0
+	.4byte func_800CEE7C
+	.4byte func_8015CD9C
+	.4byte func_8015C2B0
+
+.global cf_CCharEffectNpc_hierarchy
+cf_CCharEffectNpc_hierarchy:
+	.4byte __RTTI__cf_CCharEffect
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CCharEffectObj
+__vt__cf_CCharEffectObj:
+	.4byte __RTTI__cf_CCharEffectObj
+	.4byte 0
+	.4byte func_80081654
+	.4byte func_8015BF04
+	.4byte func_8015C9A0
+	.4byte func_800CEE7C
+	.4byte func_8015CE44
+	.4byte func_8015C2B0
+
+.global cf_CCharEffectObj_hierarchy
+cf_CCharEffectObj_hierarchy:
+	.4byte __RTTI__cf_CCharEffect
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CCharEffectPc
+__vt__cf_CCharEffectPc:
+	.4byte __RTTI__cf_CCharEffectPc
+	.4byte 0
+	.4byte func_800805C0
+	.4byte func_8015BF04
+	.4byte func_8015C9A0
+	.4byte func_800CEE7C
+	.4byte func_8015CED0
+	.4byte func_8015CF90
+
+.global cf_CCharEffectPc_hierarchy
+cf_CCharEffectPc_hierarchy:
+	.4byte __RTTI__cf_CCharEffect
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__cf_CCharEffectEne
+__RTTI__cf_CCharEffectEne:
+	.4byte cf_CCharEffectEne_typestr
+	.4byte cf_CCharEffectEne_hierarchy
+
+.global __RTTI__cf_CCharEffectNpc
+__RTTI__cf_CCharEffectNpc:
+	.4byte cf_CCharEffectNpc_typestr
+	.4byte cf_CCharEffectNpc_hierarchy
+
+.global __RTTI__cf_CCharEffectObj
+__RTTI__cf_CCharEffectObj:
+	.4byte cf_CCharEffectObj_typestr
+	.4byte cf_CCharEffectObj_hierarchy
+
+.global __RTTI__cf_CCharEffectPc
+__RTTI__cf_CCharEffectPc:
+	.4byte cf_CCharEffectPc_typestr
+	.4byte cf_CCharEffectPc_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000D67C
 lbl_8000D67C:
@@ -445,7 +678,7 @@ lbl_8000D6C8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8015CCBC
 	.4byte 0x00000048

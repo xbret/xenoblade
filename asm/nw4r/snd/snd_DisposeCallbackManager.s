@@ -258,3 +258,18 @@ DisposeWave__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv:
 /* 804153B8 003DE978  7C 08 03 A6 */	mtlr r0
 /* 804153BC 003DE97C  38 21 00 40 */	addi r1, r1, 0x40
 /* 804153C0 003DE980  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8063B1D0
+lbl_8063B1D0:
+	.skip 0xC
+.global lbl_8063B1DC
+lbl_8063B1DC:
+	.skip 0xC
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667DC0
+lbl_80667DC0:
+	.skip 0x8

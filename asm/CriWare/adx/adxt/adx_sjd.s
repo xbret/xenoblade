@@ -1558,3 +1558,15 @@ lbl_80519750:
 	.asciz "Can not decode this file format."
 	.asciz "E07021901 adxsjd_decexec_start: "
 	.asciz "8 or 4bit WAV file can't playback continuously."
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E69C0
+lbl_805E69C0:
+	.skip 0x14
+.global lbl_805E69D4
+lbl_805E69D4:
+	.skip 0x4
+.global lbl_805E69D8
+lbl_805E69D8:
+	.skip 0xB40

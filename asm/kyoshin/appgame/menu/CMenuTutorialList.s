@@ -1204,7 +1204,107 @@ func_802ACE04:
 /* 802ACE1C 002763DC  7C 63 02 2E */	lhzx r3, r3, r0
 /* 802ACE20 002763E0  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuTutorialList_typestr
+CMenuTutorialList_typestr:
+	.asciz "CMenuTutorialList"
+	.balign 4
+
+
+.global lbl_8050C15C
+lbl_8050C15C:
+	.asciz "MNU_main"
+	.asciz "name"
+	.asciz "MNU_ttrl"
+	.asciz "title"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053D9A8
+lbl_8053D9A8:
+	# ROM: 0x539AA8
+	.4byte switch_802AC354
+	.4byte switch_802AC360
+	.4byte switch_802AC36C
+	.4byte switch_802AC378
+	.4byte switch_802AC384
+	.4byte switch_802AC390
+	.4byte switch_802AC39C
+	.4byte switch_802AC3A8
+
+
+.global __vt__CMenuTutorialList
+__vt__CMenuTutorialList:
+	.4byte __RTTI__CMenuTutorialList
+	.4byte 0
+	.4byte func_802ABE9C
+	.4byte CChildListNode_Reset
+	.4byte func_802ABF20
+	.4byte func_802AC21C
+	.4byte func_802AC2A0
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuTutorialList
+	.4byte 0xFFFFFFA8
+	.4byte func_802ACBD4
+	.4byte func_802ACBCC
+	.4byte func_802AC3E4
+
+.global CMenuTutorialList_hierarchy
+CMenuTutorialList_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuTutorialList
+__RTTI__CMenuTutorialList:
+	.4byte CMenuTutorialList_typestr
+	.4byte CMenuTutorialList_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B670
+lbl_8066B670:
+	# ROM: 0x5754D0
+	.4byte 0
+
+
+.global lbl_8066B674
+lbl_8066B674:
+	# ROM: 0x5754D4
+	.float 1.0
+
+
+.global lbl_8066B678
+lbl_8066B678:
+	# ROM: 0x5754D8
+	.float 10.0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806674D0
+lbl_806674D0:
+	.skip 0x8
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001B138
 lbl_8001B138:
@@ -1360,7 +1460,7 @@ lbl_8001B2C8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802ABDB0
 	.4byte 0x000000EC

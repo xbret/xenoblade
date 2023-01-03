@@ -1005,3 +1005,12 @@ mfci_vtbl:
 	.4byte 0
 	.4byte mfCiOptFn1
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global mfci_err_func
+mfci_err_func:
+	.skip 0x4
+.global mfci_err_obj
+mfci_err_obj:
+	.skip 0x9F4

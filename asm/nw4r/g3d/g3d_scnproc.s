@@ -254,3 +254,11 @@ lbl_8056D150:
 	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
 	.4byte CalcWorldMtx__Q34nw4r3g3d7ScnLeafFPCQ34nw4r4math5MTX34PUl
 	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C4F0
+lbl_8066C4F0:
+	# ROM: 0x576350
+	.float 1.0
+	.4byte 0

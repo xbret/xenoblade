@@ -1745,3 +1745,15 @@ lbl_8056C5F0:
 	.4byte switch_803C95C8
 	.4byte switch_803C95C8
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8060A2D8
+lbl_8060A2D8:
+	.skip 0xC
+.global SFLIB_libwork
+SFLIB_libwork:
+	.skip 0x22C
+.global lbl_8060A510
+lbl_8060A510:
+	.skip 0x8

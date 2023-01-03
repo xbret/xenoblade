@@ -2972,7 +2972,130 @@ func_801179DC:
 /* 80117A10 000E0FD0  38 60 00 00 */	li r3, 0
 /* 80117A14 000E0FD4  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuKeyAssign_typestr
+CMenuKeyAssign_typestr:
+	.asciz "CMenuKeyAssign"
+	.balign 4
+
+
+.global lbl_804F9730
+lbl_804F9730:
+	.asciz "CMenuKeyAssign"
+	.asciz "mf70_cf40_keyassign.brlyt"
+	.asciz "fileID_1"
+	.asciz "fileID_2"
+	.asciz "MNU_kyeassign"
+	.asciz "SYS_filelist"
+	.asciz "filename"
+	.asciz "%s.tpl"
+	.asciz "pic_pos%02d"
+	.asciz "help"
+	.asciz "txt_pos%02d"
+	.asciz "txt_pos%02d_l"
+	.asciz "txt_pos%02d_r"
+	.asciz "txt_pos%02d_o"
+	.asciz "txt_pos%02d_u"
+	.balign 4
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuKeyAssign
+__vt__CMenuKeyAssign:
+	.4byte __RTTI__CMenuKeyAssign
+	.4byte 0
+	.4byte func_80113E50
+	.4byte CChildListNode_Reset
+	.4byte func_80113EC4
+	.4byte func_80113FA8
+	.4byte func_80114028
+	.4byte func_80114E84
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuKeyAssign
+	.4byte 0xFFFFFFA8
+	.4byte func_80115FB8
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuKeyAssign
+	.4byte 0xFFFFFFA4
+	.4byte func_80115FC8
+	.4byte func_80115FC0
+	.4byte func_80114E88
+
+.global CMenuKeyAssign_hierarchy
+CMenuKeyAssign_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000005C
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuKeyAssign
+__RTTI__CMenuKeyAssign:
+	.4byte CMenuKeyAssign_typestr
+	.4byte CMenuKeyAssign_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669948
+lbl_80669948:
+	# ROM: 0x5737A8
+	.4byte 0x43300000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806668A0
+lbl_806668A0:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000B5E4
 lbl_8000B5E4:
@@ -3075,7 +3198,7 @@ lbl_8000B6A0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80114F50
 	.4byte 0x00000110

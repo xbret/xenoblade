@@ -72,3 +72,9 @@ adxt_ExecFsSvr:
 /* 8037F668 00348C28  7C 08 03 A6 */	mtlr r0
 /* 8037F66C 00348C2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037F670 00348C30  4E 80 00 20 */	blr
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E5D30
+lbl_805E5D30:
+	.skip 0x18

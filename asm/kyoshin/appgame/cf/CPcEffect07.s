@@ -956,7 +956,113 @@ func_801B255C:
 /* 801B255C 0017BB1C  38 63 FF FC */	addi r3, r3, -4
 /* 801B2560 0017BB20  4B FF F4 14 */	b func_801B1974
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80500218
+lbl_80500218:
+	# ROM: 0x4FC318
+	.2byte 0x0064
+	.2byte 0x0065
+	.2byte 0x0066
+	.2byte 0x006C
+	.2byte 0x006D
+	.2byte 0x006E
+	.4byte 0
+
+.global cf_CPcEffect07_typestr
+cf_CPcEffect07_typestr:
+	.asciz "cf::CPcEffect07"
+
+.global cf_IPcEffect_typestr
+cf_IPcEffect_typestr:
+	.asciz "cf::IPcEffect"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80536EF0
+lbl_80536EF0:
+	# ROM: 0x532FF0
+	.4byte 0x000000C8
+	.4byte 0x000000C9
+	.4byte 0x000000CA
+
+
+.global __vt__cf_CPcEffect07
+__vt__cf_CPcEffect07:
+	.4byte __RTTI__cf_CPcEffect07
+	.4byte 0
+	.4byte func_801B1974
+	.4byte func_801B218C
+	.4byte __RTTI__cf_CPcEffect07
+	.4byte 0xFFFFFFFC
+	.4byte func_801B255C
+	.4byte func_801B2554
+	.4byte func_801B254C
+	.4byte func_801B2544
+	.4byte func_801B20C8
+	.4byte func_801B21E0
+	.4byte func_801B2318
+
+.global cf_CPcEffect07_hierarchy
+cf_CPcEffect07_hierarchy:
+	.4byte __RTTI__cf_IPcEffect
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CPcEffect07
+__RTTI__cf_CPcEffect07:
+	.4byte cf_CPcEffect07_typestr
+	.4byte cf_CPcEffect07_hierarchy
+
+.global __RTTI__cf_IPcEffect
+__RTTI__cf_IPcEffect:
+	.4byte cf_IPcEffect_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A6A8
+lbl_8066A6A8:
+	# ROM: 0x574508
+	.4byte 0
+
+
+.global lbl_8066A6AC
+lbl_8066A6AC:
+	# ROM: 0x57450C
+	.4byte 0x42500000
+
+
+.global lbl_8066A6B0
+lbl_8066A6B0:
+	# ROM: 0x574510
+	.4byte 0x40000000
+
+
+.global lbl_8066A6B4
+lbl_8066A6B4:
+	# ROM: 0x574514
+	.float 1.0
+
+
+.global lbl_8066A6B8
+lbl_8066A6B8:
+	# ROM: 0x574518
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666C88
+lbl_80666C88:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000FD24
 lbl_8000FD24:
@@ -994,7 +1100,7 @@ lbl_8000FD54:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801B1974
 	.4byte 0x0000007C

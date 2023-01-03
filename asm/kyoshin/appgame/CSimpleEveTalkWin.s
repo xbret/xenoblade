@@ -1211,7 +1211,154 @@ func_801A29C4:
 /* 801A29C4 0016BF84  38 63 FF 90 */	addi r3, r3, -112
 /* 801A29C8 0016BF88  4B FF EF 9C */	b func_801A1964
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CSimpleEveTalkWin_typestr
+CSimpleEveTalkWin_typestr:
+	.asciz "CSimpleEveTalkWin"
+	.balign 4
+
+
+.global lbl_804FF63C
+lbl_804FF63C:
+	.asciz "CSimpleEveTalkWin"
+	.asciz "mf70_cf01_esywin00.brlyt"
+	.asciz "mf70_cf01_esywin00_in.brlan"
+	.asciz "mf70_cf01_esywin00_cursor_in.brlan"
+	.asciz "mf70_cf01_esywin00_cursor_def.brlan"
+	.asciz "mf00_com00_btn30_anim00.tpl"
+	.asciz "mf00_com00_btn00_anim00.tpl"
+	.asciz "pic_cursor00"
+	.asciz "txt_name"
+	.asciz "txt_name_r"
+	.asciz "txt_name_l"
+	.asciz "txt_name_o"
+	.asciz "txt_name_u"
+	.byte 0x00
+	.asciz "txt_mes"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CSimpleEveTalkWin
+__vt__CSimpleEveTalkWin:
+	.4byte __RTTI__CSimpleEveTalkWin
+	.4byte 0
+	.4byte func_801A1964
+	.4byte CChildListNode_Reset
+	.4byte func_801A19D8
+	.4byte func_801A1DF8
+	.4byte func_801A1EBC
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CSimpleEveTalkWin
+	.4byte 0xFFFFFF94
+	.4byte func_801A29B4
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CSimpleEveTalkWin
+	.4byte 0xFFFFFF90
+	.4byte func_801A29C4
+	.4byte func_801A29BC
+	.4byte func_801A2048
+
+.global CSimpleEveTalkWin_hierarchy
+CSimpleEveTalkWin_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000070
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CSimpleEveTalkWin
+__RTTI__CSimpleEveTalkWin:
+	.4byte CSimpleEveTalkWin_typestr
+	.4byte CSimpleEveTalkWin_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A560
+lbl_8066A560:
+	# ROM: 0x5743C0
+	.4byte 0x42180000
+
+
+.global lbl_8066A564
+lbl_8066A564:
+	# ROM: 0x5743C4
+	.float -1.0
+
+
+.global lbl_8066A568
+lbl_8066A568:
+	# ROM: 0x5743C8
+	.4byte 0
+
+
+.global lbl_8066A56C
+lbl_8066A56C:
+	# ROM: 0x5743CC
+	.4byte 0x43410000
+
+
+.global lbl_8066A570
+lbl_8066A570:
+	# ROM: 0x5743D0
+	.float 1.0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666C10
+lbl_80666C10:
+	.skip 0x4
+.global lbl_80666C14
+lbl_80666C14:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000F6B0
 lbl_8000F6B0:
@@ -1297,7 +1444,7 @@ lbl_8000F788:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801A1864
 	.4byte 0x00000100

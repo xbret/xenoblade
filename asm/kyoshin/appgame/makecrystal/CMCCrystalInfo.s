@@ -1589,7 +1589,154 @@ sinit_8021BBC4:
 
 .4byte sinit_8021BBC4
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMCCrystalInfo_typestr
+CMCCrystalInfo_typestr:
+	.asciz "CMCCrystalInfo"
+	.balign 4
+
+
+.global lbl_80504510
+lbl_80504510:
+	.asciz "/menu/McCrystalInfo.arc"
+	.asciz "/menu/tpl/CrystalIcon.arc"
+	.asciz "name"
+	.asciz "txt_listname%02d"
+	.asciz "txt_listvalue%02d"
+	.asciz "txt_listpara%02d"
+	.asciz "MNU_item"
+	.asciz "atr_type"
+	.asciz "mf00_reg30_crys00.tpl"
+	.asciz "mf00_reg30_crys01.tpl"
+	.asciz "mf00_reg30_crys02.tpl"
+	.asciz "mf00_reg30_crys03.tpl"
+	.asciz "mf00_reg30_crys04.tpl"
+	.asciz "mf00_reg30_crys05.tpl"
+	.asciz "mf00_reg30_crys06.tpl"
+	.asciz "pic_ethcol%02d"
+	.byte 0x00
+	.asciz "mf00_com00_dmy.tpl"
+	.asciz "nul_list%02d"
+	.asciz "nul_proportion"
+	.asciz "txt_value30"
+	.asciz "txt_para%02d"
+	.asciz "txt_value%02d"
+	.asciz "CMCCrystalInfo"
+	.asciz "arc"
+	.asciz "mf10_cry00_inf00.brlyt"
+	.asciz "mf10_cry00_inf00_in.brlan"
+	.asciz "mf10_cry00_inf00_info_in.brlan"
+	.asciz "mf10_cry00_inf00_box.brlan"
+	.asciz "mf10_cry00_inf00_out.brlan"
+	.asciz "txt_value31"
+	.asciz "txt_value32"
+	.asciz "txt_value33"
+	.asciz "txt_value34"
+	.asciz "txt_para32"
+	.asciz "txt_para34"
+	.asciz "txt_para36"
+	.asciz "txt_para38"
+	.asciz "txt_para30"
+	.asciz "MNU_crystal"
+	.asciz "info"
+	.asciz "txt_listname00"
+	.asciz "txt_listvalue00"
+	.asciz "txt_listname01"
+	.asciz "txt_listvalue01"
+	.asciz "CItemBoxInfoTex"
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMCCrystalInfo
+__vt__CMCCrystalInfo:
+	.4byte __RTTI__CMCCrystalInfo
+	.4byte 0
+	.4byte func_8021A6B8
+	.4byte func_80039E28
+	.4byte func_8021B74C
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CMCCrystalInfo_hierarchy
+CMCCrystalInfo_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMCCrystalInfo
+__RTTI__CMCCrystalInfo:
+	.4byte CMCCrystalInfo_typestr
+	.4byte CMCCrystalInfo_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AD58
+lbl_8066AD58:
+	# ROM: 0x574BB8
+	.float 1.0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666FC8
+lbl_80666FC8:
+	.skip 0x8
+.global lbl_80666FD0
+lbl_80666FD0:
+	.skip 0x8
+.global lbl_80666FD8
+lbl_80666FD8:
+	.skip 0x8
+.global lbl_80666FE0
+lbl_80666FE0:
+	.skip 0x8
+.global lbl_80666FE8
+lbl_80666FE8:
+	.skip 0x8
+.global lbl_80666FF0
+lbl_80666FF0:
+	.skip 0x8
+.global lbl_80666FF8
+lbl_80666FF8:
+	.skip 0x8
+.global lbl_80667000
+lbl_80667000:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80013E0C
 lbl_80013E0C:
@@ -1740,7 +1887,7 @@ lbl_80013F28:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8021A634
 	.4byte 0x00000084

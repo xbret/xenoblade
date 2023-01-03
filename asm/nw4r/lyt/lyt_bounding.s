@@ -103,3 +103,9 @@ lbl_8056D460:
 	.4byte GetMaterial__Q34nw4r3lyt4PaneCFUl
 	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667D78
+lbl_80667D78:
+	.skip 0x8

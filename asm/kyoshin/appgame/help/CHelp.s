@@ -99,7 +99,685 @@ func_802B7CE4:
 /* 802B7CF8 002812B8  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 802B7CFC 002812BC  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CHelp_ToAttack_typestr
+cf_CHelp_ToAttack_typestr:
+	.asciz "cf::CHelp_ToAttack"
+	.balign 4
+	.4byte 0
+
+.global cf_CHelp_ArtsAttack_typestr
+cf_CHelp_ArtsAttack_typestr:
+	.asciz "cf::CHelp_ArtsAttack"
+	.balign 4
+
+.global cf_CHelp_ArtsSet_typestr
+cf_CHelp_ArtsSet_typestr:
+	.asciz "cf::CHelp_ArtsSet"
+	.balign 4
+	.4byte 0
+
+.global cf_CHelp_CkKizuna_typestr
+cf_CHelp_CkKizuna_typestr:
+	.asciz "cf::CHelp_CkKizuna"
+	.balign 4
+	.4byte 0
+
+.global cf_CHelp_CloseItemMenu_typestr
+cf_CHelp_CloseItemMenu_typestr:
+	.asciz "cf::CHelp_CloseItemMenu"
+
+.global cf_CHelp_CloseSysMenu_typestr
+cf_CHelp_CloseSysMenu_typestr:
+	.asciz "cf::CHelp_CloseSysMenu"
+	.balign 4
+
+.global cf_CHelp_EnemyCount_typestr
+cf_CHelp_EnemyCount_typestr:
+	.asciz "cf::CHelp_EnemyCount"
+	.balign 4
+
+.global cf_CHelp_EnemyEnable_typestr
+cf_CHelp_EnemyEnable_typestr:
+	.asciz "cf::CHelp_EnemyEnable"
+	.balign 4
+
+.global cf_CHelp_Exchange_typestr
+cf_CHelp_Exchange_typestr:
+	.asciz "cf::CHelp_Exchange"
+	.balign 4
+	.4byte 0
+
+.global cf_CHelp_GameOver_typestr
+cf_CHelp_GameOver_typestr:
+	.asciz "cf::CHelp_GameOver"
+	.balign 4
+	.4byte 0
+
+.global cf_CHelp_ItemCole_typestr
+cf_CHelp_ItemCole_typestr:
+	.asciz "cf::CHelp_ItemCole"
+	.balign 4
+	.4byte 0
+
+.global cf_CHelp_LandMark_typestr
+cf_CHelp_LandMark_typestr:
+	.asciz "cf::CHelp_LandMark"
+	.balign 4
+	.4byte 0
+
+.global cf_CHelp_LearnArts_typestr
+cf_CHelp_LearnArts_typestr:
+	.asciz "cf::CHelp_LearnArts"
+
+.global lbl_8050CCD4
+lbl_8050CCD4:
+	.asciz "wpn_type"
+	.balign 4
+
+.global cf_CHelp_ClosePartyMenu_typestr
+cf_CHelp_ClosePartyMenu_typestr:
+	.asciz "cf::CHelp_ClosePartyMenu"
+	.balign 4
+	.4byte 0
+
+.global cf_CHelp_OpenPartyMenu_typestr
+cf_CHelp_OpenPartyMenu_typestr:
+	.asciz "cf::CHelp_OpenPartyMenu"
+
+.global cf_CHelp_Pg_typestr
+cf_CHelp_Pg_typestr:
+	.asciz "cf::CHelp_Pg"
+	.balign 4
+
+.global cf_CHelp_CloseQuestMenu_typestr
+cf_CHelp_CloseQuestMenu_typestr:
+	.asciz "cf::CHelp_CloseQuestMenu"
+	.balign 4
+	.4byte 0
+
+.global cf_CHelp_ShopSel_typestr
+cf_CHelp_ShopSel_typestr:
+	.asciz "cf::CHelp_ShopSel"
+	.balign 4
+
+.global cf_CHelp_ShopBuy_typestr
+cf_CHelp_ShopBuy_typestr:
+	.asciz "cf::CHelp_ShopBuy"
+	.balign 4
+
+.global cf_CHelp_Sp_typestr
+cf_CHelp_Sp_typestr:
+	.asciz "cf::CHelp_Sp"
+	.balign 4
+
+.global cf_CHelp_Target_typestr
+cf_CHelp_Target_typestr:
+	.asciz "cf::CHelp_Target"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CHelp_ToAttack
+__vt__cf_CHelp_ToAttack:
+	.4byte __RTTI__cf_CHelp_ToAttack
+	.4byte 0
+	.4byte func_80296898
+	.4byte func_802B7BEC
+	.4byte func_802B7A90
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_ToAttack_hierarchy
+cf_CHelp_ToAttack_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp
+__vt__cf_CHelp:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte 0
+	.4byte func_80295D90
+	.4byte func_80295D80
+	.4byte 0
+
+.global __vt__cf_CHelp_ArtsAttack
+__vt__cf_CHelp_ArtsAttack:
+	.4byte __RTTI__cf_CHelp_ArtsAttack
+	.4byte 0
+	.4byte func_802B7CB0
+	.4byte func_802B7BEC
+	.4byte func_802B7D00
+	.4byte func_80295D90
+	.4byte func_80295D80
+	.4byte func_802B7CBC
+	.4byte func_802B7CE4
+
+.global cf_CHelp_ArtsAttack_hierarchy
+cf_CHelp_ArtsAttack_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte __RTTI__cf_CHelpSwitch
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_ArtsSet
+__vt__cf_CHelp_ArtsSet:
+	.4byte __RTTI__cf_CHelp_ArtsSet
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte func_802B7D9C
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_ArtsSet_hierarchy
+cf_CHelp_ArtsSet_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_CkKizuna
+__vt__cf_CHelp_CkKizuna:
+	.4byte __RTTI__cf_CHelp_CkKizuna
+	.4byte 0
+	.4byte func_802B7CB0
+	.4byte func_802B7BEC
+	.4byte func_802B7DEC
+	.4byte func_80295D90
+	.4byte func_80295D80
+	.4byte func_802B7CBC
+	.4byte func_802B7CE4
+
+.global cf_CHelp_CkKizuna_hierarchy
+cf_CHelp_CkKizuna_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte __RTTI__cf_CHelpSwitch
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_CloseItemMenu
+__vt__cf_CHelp_CloseItemMenu:
+	.4byte __RTTI__cf_CHelp_CloseItemMenu
+	.4byte 0
+	.4byte func_802B7CB0
+	.4byte func_802B7BEC
+	.4byte func_802B7E34
+	.4byte func_80295D90
+	.4byte func_80295D80
+	.4byte func_802B7CBC
+	.4byte func_802B7CE4
+
+.global cf_CHelp_CloseItemMenu_hierarchy
+cf_CHelp_CloseItemMenu_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte __RTTI__cf_CHelpSwitch
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_CloseSysMenu
+__vt__cf_CHelp_CloseSysMenu:
+	.4byte __RTTI__cf_CHelp_CloseSysMenu
+	.4byte 0
+	.4byte func_802B7CB0
+	.4byte func_802B7BEC
+	.4byte func_802B7E7C
+	.4byte func_80295D90
+	.4byte func_80295D80
+	.4byte func_802B7CBC
+	.4byte func_802B7CE4
+
+.global cf_CHelp_CloseSysMenu_hierarchy
+cf_CHelp_CloseSysMenu_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte __RTTI__cf_CHelpSwitch
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_EndEvent
+__vt__cf_CHelp_EndEvent:
+	.4byte __RTTI__cf_CHelp_EndEvent
+	.4byte 0
+	.4byte func_802B7CB0
+	.4byte func_802B7BEC
+	.4byte func_802B7EC4
+	.4byte func_80295D90
+	.4byte func_80295D80
+	.4byte func_802B7CBC
+	.4byte func_802B7CE4
+	.4byte 0
+
+
+.global __vt__cf_CHelp_EnemyCount
+__vt__cf_CHelp_EnemyCount:
+	.4byte __RTTI__cf_CHelp_EnemyCount
+	.4byte 0
+	.4byte func_802B7F54
+	.4byte func_802B7BEC
+	.4byte func_802B7F60
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_EnemyCount_hierarchy
+cf_CHelp_EnemyCount_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_EnemyEnable
+__vt__cf_CHelp_EnemyEnable:
+	.4byte __RTTI__cf_CHelp_EnemyEnable
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte func_802B8028
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_EnemyEnable_hierarchy
+cf_CHelp_EnemyEnable_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_EtherMake
+__vt__cf_CHelp_EtherMake:
+	.4byte __RTTI__cf_CHelp_EtherMake
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte func_802B80A4
+	.4byte func_802B80EC
+	.4byte func_80295D80
+	.4byte 0
+
+
+.global __vt__cf_CHelp_Exchange
+__vt__cf_CHelp_Exchange:
+	.4byte __RTTI__cf_CHelp_Exchange
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte func_802B80F0
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_Exchange_hierarchy
+cf_CHelp_Exchange_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_GameOver
+__vt__cf_CHelp_GameOver:
+	.4byte __RTTI__cf_CHelp_GameOver
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte func_802B80F4
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_GameOver_hierarchy
+cf_CHelp_GameOver_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_ItemCole
+__vt__cf_CHelp_ItemCole:
+	.4byte __RTTI__cf_CHelp_ItemCole
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte func_802B8180
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_ItemCole_hierarchy
+cf_CHelp_ItemCole_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_Kizuna
+__vt__cf_CHelp_Kizuna:
+	.4byte __RTTI__cf_CHelp_Kizuna
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte func_802B818C
+	.4byte func_80295D90
+	.4byte func_80295D80
+	.4byte 0
+
+
+.global __vt__cf_CHelp_LandMark
+__vt__cf_CHelp_LandMark:
+	.4byte __RTTI__cf_CHelp_LandMark
+	.4byte 0
+	.4byte func_802B8280
+	.4byte func_802B7BEC
+	.4byte func_802B8328
+	.4byte func_80295D90
+	.4byte func_80295D80
+	.4byte __RTTI__cf_CHelp_LandMark
+	.4byte 0xFFFFFFF4
+	.4byte func_802B8390
+	.4byte func_802B8388
+	.4byte func_802B8208
+	.4byte func_802B8290
+
+.global cf_CHelp_LandMark_hierarchy
+cf_CHelp_LandMark_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_LearnArts
+__vt__cf_CHelp_LearnArts:
+	.4byte __RTTI__cf_CHelp_LearnArts
+	.4byte 0
+	.4byte func_802B84E0
+	.4byte func_802B7BEC
+	.4byte func_802B8398
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_LearnArts_hierarchy
+cf_CHelp_LearnArts_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_ClosePartyMenu
+__vt__cf_CHelp_ClosePartyMenu:
+	.4byte __RTTI__cf_CHelp_ClosePartyMenu
+	.4byte 0
+	.4byte func_802B7CB0
+	.4byte func_802B7BEC
+	.4byte func_802B8534
+	.4byte func_80295D90
+	.4byte func_80295D80
+	.4byte func_802B7CBC
+	.4byte func_802B7CE4
+
+.global cf_CHelp_ClosePartyMenu_hierarchy
+cf_CHelp_ClosePartyMenu_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte __RTTI__cf_CHelpSwitch
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_OpenPartyMenu
+__vt__cf_CHelp_OpenPartyMenu:
+	.4byte __RTTI__cf_CHelp_OpenPartyMenu
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte func_802B84EC
+	.4byte func_80295D90
+	.4byte func_802B859C
+
+.global cf_CHelp_OpenPartyMenu_hierarchy
+cf_CHelp_OpenPartyMenu_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_Pg
+__vt__cf_CHelp_Pg:
+	.4byte __RTTI__cf_CHelp_Pg
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte func_802B85A4
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_Pg_hierarchy
+cf_CHelp_Pg_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_CloseQuestMenu
+__vt__cf_CHelp_CloseQuestMenu:
+	.4byte __RTTI__cf_CHelp_CloseQuestMenu
+	.4byte 0
+	.4byte func_802B7CB0
+	.4byte func_802B7BEC
+	.4byte func_802B8604
+	.4byte func_80295D90
+	.4byte func_80295D80
+	.4byte func_802B7CBC
+	.4byte func_802B7CE4
+
+.global cf_CHelp_CloseQuestMenu_hierarchy
+cf_CHelp_CloseQuestMenu_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte __RTTI__cf_CHelpSwitch
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_ShopSel
+__vt__cf_CHelp_ShopSel:
+	.4byte __RTTI__cf_CHelp_ShopSel
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte func_802B8650
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_ShopSel_hierarchy
+cf_CHelp_ShopSel_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_ShopBuy
+__vt__cf_CHelp_ShopBuy:
+	.4byte __RTTI__cf_CHelp_ShopBuy
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte func_802B864C
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_ShopBuy_hierarchy
+cf_CHelp_ShopBuy_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_Sp
+__vt__cf_CHelp_Sp:
+	.4byte __RTTI__cf_CHelp_Sp
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte func_802B8654
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_Sp_hierarchy
+cf_CHelp_Sp_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_Talk
+__vt__cf_CHelp_Talk:
+	.4byte __RTTI__cf_CHelp_Talk
+	.4byte 0
+	.4byte func_802B86BC
+	.4byte func_802B7BEC
+	.4byte func_802B86F0
+	.4byte func_80295D90
+	.4byte func_80295D80
+	.4byte func_802B7CBC
+	.4byte func_802B7CE4
+	.4byte 0
+
+
+.global __vt__cf_CHelp_Target
+__vt__cf_CHelp_Target:
+	.4byte __RTTI__cf_CHelp_Target
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte func_802B88C8
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_Target_hierarchy
+cf_CHelp_Target_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__cf_CHelp_ToAttack
+__RTTI__cf_CHelp_ToAttack:
+	.4byte cf_CHelp_ToAttack_typestr
+	.4byte cf_CHelp_ToAttack_hierarchy
+
+.global __RTTI__cf_CHelp_ArtsAttack
+__RTTI__cf_CHelp_ArtsAttack:
+	.4byte cf_CHelp_ArtsAttack_typestr
+	.4byte cf_CHelp_ArtsAttack_hierarchy
+
+.global __RTTI__cf_CHelp_ArtsSet
+__RTTI__cf_CHelp_ArtsSet:
+	.4byte cf_CHelp_ArtsSet_typestr
+	.4byte cf_CHelp_ArtsSet_hierarchy
+
+.global __RTTI__cf_CHelp_CkKizuna
+__RTTI__cf_CHelp_CkKizuna:
+	.4byte cf_CHelp_CkKizuna_typestr
+	.4byte cf_CHelp_CkKizuna_hierarchy
+
+.global __RTTI__cf_CHelp_CloseItemMenu
+__RTTI__cf_CHelp_CloseItemMenu:
+	.4byte cf_CHelp_CloseItemMenu_typestr
+	.4byte cf_CHelp_CloseItemMenu_hierarchy
+
+.global __RTTI__cf_CHelp_CloseSysMenu
+__RTTI__cf_CHelp_CloseSysMenu:
+	.4byte cf_CHelp_CloseSysMenu_typestr
+	.4byte cf_CHelp_CloseSysMenu_hierarchy
+
+.global __RTTI__cf_CHelp_EnemyCount
+__RTTI__cf_CHelp_EnemyCount:
+	.4byte cf_CHelp_EnemyCount_typestr
+	.4byte cf_CHelp_EnemyCount_hierarchy
+
+.global __RTTI__cf_CHelp_EnemyEnable
+__RTTI__cf_CHelp_EnemyEnable:
+	.4byte cf_CHelp_EnemyEnable_typestr
+	.4byte cf_CHelp_EnemyEnable_hierarchy
+
+.global __RTTI__cf_CHelp_Exchange
+__RTTI__cf_CHelp_Exchange:
+	.4byte cf_CHelp_Exchange_typestr
+	.4byte cf_CHelp_Exchange_hierarchy
+
+.global __RTTI__cf_CHelp_GameOver
+__RTTI__cf_CHelp_GameOver:
+	.4byte cf_CHelp_GameOver_typestr
+	.4byte cf_CHelp_GameOver_hierarchy
+
+.global __RTTI__cf_CHelp_ItemCole
+__RTTI__cf_CHelp_ItemCole:
+	.4byte cf_CHelp_ItemCole_typestr
+	.4byte cf_CHelp_ItemCole_hierarchy
+
+.global __RTTI__cf_CHelp_LandMark
+__RTTI__cf_CHelp_LandMark:
+	.4byte cf_CHelp_LandMark_typestr
+	.4byte cf_CHelp_LandMark_hierarchy
+
+.global __RTTI__cf_CHelp_LearnArts
+__RTTI__cf_CHelp_LearnArts:
+	.4byte cf_CHelp_LearnArts_typestr
+	.4byte cf_CHelp_LearnArts_hierarchy
+
+.global __RTTI__cf_CHelp_ClosePartyMenu
+__RTTI__cf_CHelp_ClosePartyMenu:
+	.4byte cf_CHelp_ClosePartyMenu_typestr
+	.4byte cf_CHelp_ClosePartyMenu_hierarchy
+
+.global __RTTI__cf_CHelp_OpenPartyMenu
+__RTTI__cf_CHelp_OpenPartyMenu:
+	.4byte cf_CHelp_OpenPartyMenu_typestr
+	.4byte cf_CHelp_OpenPartyMenu_hierarchy
+
+.global __RTTI__cf_CHelp_Pg
+__RTTI__cf_CHelp_Pg:
+	.4byte cf_CHelp_Pg_typestr
+	.4byte cf_CHelp_Pg_hierarchy
+
+.global __RTTI__cf_CHelp_CloseQuestMenu
+__RTTI__cf_CHelp_CloseQuestMenu:
+	.4byte cf_CHelp_CloseQuestMenu_typestr
+	.4byte cf_CHelp_CloseQuestMenu_hierarchy
+
+.global __RTTI__cf_CHelp_ShopSel
+__RTTI__cf_CHelp_ShopSel:
+	.4byte cf_CHelp_ShopSel_typestr
+	.4byte cf_CHelp_ShopSel_hierarchy
+
+.global __RTTI__cf_CHelp_ShopBuy
+__RTTI__cf_CHelp_ShopBuy:
+	.4byte cf_CHelp_ShopBuy_typestr
+	.4byte cf_CHelp_ShopBuy_hierarchy
+
+.global __RTTI__cf_CHelp_Sp
+__RTTI__cf_CHelp_Sp:
+	.4byte cf_CHelp_Sp_typestr
+	.4byte cf_CHelp_Sp_hierarchy
+
+.global __RTTI__cf_CHelp_Target
+__RTTI__cf_CHelp_Target:
+	.4byte cf_CHelp_Target_typestr
+	.4byte cf_CHelp_Target_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001BD48
 lbl_8001BD48:
@@ -112,7 +790,7 @@ lbl_8001BD50:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802B7BEC
 	.4byte 0x00000078

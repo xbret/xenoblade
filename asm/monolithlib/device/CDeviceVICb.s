@@ -83,7 +83,7 @@ __RTTI__CDeviceVICb:
 	.4byte CDeviceVICb_typestr
 	.4byte 0
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001CB68
 lbl_8001CB68:
@@ -96,7 +96,7 @@ lbl_8001CB70:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80448F40
 	.4byte 0x0000003C

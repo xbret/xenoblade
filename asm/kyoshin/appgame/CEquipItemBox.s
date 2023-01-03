@@ -8894,7 +8894,512 @@ sinit_8028DAB0:
 
 .4byte sinit_8028DAB0
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8050A5FC
+lbl_8050A5FC:
+	.4byte 0x00000010
+	.4byte 0x00100000
+	.4byte 0x00200000
+
+
+.global lbl_8050A608
+lbl_8050A608:
+	# ROM: 0x506708
+	.4byte 0x02000000
+	.4byte 0x01000400
+	.4byte 0x00000400
+	.4byte 0x05000000
+	.4byte 0x05000600
+	.4byte 0x00000600
+	.4byte 0x07000000
+	.4byte 0x07000800
+	.4byte 0x00000800
+
+.global lbl_8050A62C
+lbl_8050A62C:
+	.4byte 0x00000010
+	.4byte 0x00100000
+	.4byte 0x00200000
+
+.global CEquipItemBox_typestr
+CEquipItemBox_typestr:
+	.asciz "CEquipItemBox"
+	.balign 4
+
+.global CEIBPageCur_typestr
+CEIBPageCur_typestr:
+	.asciz "CEIBPageCur"
+
+
+.global lbl_8050A654
+lbl_8050A654:
+	.asciz "attach"
+	.asciz "equip_pc%d"
+	.asciz "pc%d"
+	.asciz "arm_type"
+	.asciz "item_keep"
+	.asciz "%s"
+	.asciz "MNU_item"
+	.asciz "name"
+	.asciz "%s%s"
+	.asciz "money"
+	.asciz "rankType"
+	.asciz "jwl_slot"
+	.asciz "category"
+	.asciz "att_lev"
+	.asciz "grd_rate"
+	.asciz "arm_phy"
+	.asciz "arm_eth"
+	.asciz "eva_rate"
+	.asciz "dmg_hi"
+	.asciz "flag"
+	.asciz "mf00_reg00_curs07.brlyt"
+	.asciz "mf00_reg00_curs07_roop.brlan"
+	.asciz "mf00_reg00_curs07_on.brlan"
+	.asciz "mf00_reg00_curs09.brlyt"
+	.asciz "mf00_reg00_curs09_roop.brlan"
+	.asciz "pic_pgarw_r"
+	.asciz "pic_pgarw_l"
+	.asciz "/menu/EquipItemBox.arc"
+	.asciz "/menu/tpl/ItemIcon.arc"
+	.asciz "common/jp/bdat_mes.bin"
+	.asciz "nul_inf"
+	.asciz "nul_sort"
+	.asciz "nul_proportion"
+	.asciz "help"
+	.asciz "atr_type"
+	.asciz "mf00_com00_dmy.tpl"
+	.asciz "icon_base"
+	.asciz "mf00_reg10_base21.tpl"
+	.asciz "mf00_reg10_base20.tpl"
+	.asciz "pic_btnbs%02d"
+	.asciz "icon"
+	.asciz "pic_icon%02d"
+	.asciz "txt_num%02d"
+	.asciz "%d"
+	.byte 0x00
+	.asciz "S"
+	.asciz "U"
+	.asciz "pic_eq%02d"
+	.asciz "mf00_reg00_eq01.tpl"
+	.asciz "mf00_reg00_eq00.tpl"
+	.asciz "mf00_reg00_eq03.tpl"
+	.asciz "pic_off%02d"
+	.asciz "txt_pg01"
+	.asciz "nul_pg"
+	.asciz "pic_pghole%02d"
+	.asciz "txt_pg00"
+	.asciz "pic_pghole_on"
+	.asciz "pic_hole%02d"
+	.asciz "txt_name"
+	.asciz "pic_cat%02d"
+	.asciz "txt_soat01"
+	.asciz "pic_tbbcon%02d"
+	.asciz "pic_tbbcof%02d"
+	.asciz "mf00_reg20_cat00.tpl"
+	.asciz "mf00_reg20_cat07.tpl"
+	.asciz "mf00_reg20_cat01.tpl"
+	.asciz "mf00_reg20_cat02.tpl"
+	.asciz "mf00_reg20_cat03.tpl"
+	.asciz "mf00_reg20_cat04.tpl"
+	.asciz "mf00_reg20_cat05.tpl"
+	.asciz "mf00_reg20_cat06.tpl"
+	.asciz "mf00_reg20_cat09.tpl"
+	.asciz "mf00_reg20_cat10.tpl"
+	.asciz "mf00_reg20_cat11.tpl"
+	.asciz "mf00_reg20_cat08.tpl"
+	.asciz "pic_bxbco00"
+	.asciz "pic_bxbco01"
+	.asciz "pic_bxbco02"
+	.asciz "pic_bxbco03"
+	.asciz "pic_bxbco04"
+	.asciz "pic_bxbco05"
+	.asciz "pic_bxbco06"
+	.asciz "pic_bxbco07"
+	.asciz "pic_bxbco08"
+	.asciz "pic_hole01"
+	.asciz "pic_hole02"
+	.asciz "pic_hole03"
+	.asciz "pic_hole04"
+	.asciz "pic_hole05"
+	.asciz "pic_hole06"
+	.asciz "nul_para_01"
+	.asciz "nul_para_50"
+	.asciz "txt_para01"
+	.asciz "txt_para04"
+	.asciz "txt_para08"
+	.asciz "txt_para10"
+	.asciz "txt_para11"
+	.asciz "txt_para22"
+	.asciz "txt_para23"
+	.asciz "txt_para24"
+	.asciz "txt_para25"
+	.asciz "txt_value02"
+	.asciz "txt_value04"
+	.asciz "txt_value07"
+	.asciz "txt_value08"
+	.asciz "txt_value09"
+	.asciz "txt_value22"
+	.asciz "pic_ethcol01"
+	.asciz "pic_ethcol02"
+	.asciz "pic_ethcol03"
+	.asciz "txt_eth01"
+	.asciz "txt_eth02"
+	.asciz "txt_eth03"
+	.asciz "txt_ethvalue01"
+	.asciz "txt_ethvalue02"
+	.asciz "txt_ethvalue03"
+	.asciz "txt_para50"
+	.asciz "txt_para51"
+	.asciz "txt_value50"
+	.asciz "txt_value51"
+	.asciz "dmg_low"
+	.asciz "speed"
+	.asciz "%d%s%d"
+	.asciz "%s%d%s"
+	.asciz "%d%s"
+	.asciz "pc_arts"
+	.asciz "rvs_type"
+	.asciz "%d "
+	.asciz "txt_para52"
+	.asciz "pic_ethcol%02d"
+	.asciz "mf00_reg30_crys00.tpl"
+	.asciz "mf00_reg30_crys01.tpl"
+	.asciz "mf00_reg30_crys02.tpl"
+	.asciz "mf00_reg30_crys03.tpl"
+	.asciz "mf00_reg30_crys04.tpl"
+	.asciz "mf00_reg30_crys05.tpl"
+	.asciz "mf00_reg30_crys06.tpl"
+	.asciz "txt_ethvalue%02d"
+	.asciz "txt_eth%02d"
+	.asciz "CEquipItemBox"
+	.asciz "arc"
+	.asciz "mf02_eqbox.brlyt"
+	.asciz "mf02_eqbox_box_in.brlan"
+	.asciz "txt_soattit"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "MNU_kyeassign"
+	.asciz "pic_soatbtn"
+	.asciz "pic_pghole10"
+	.asciz "pic_tbbcof01"
+	.asciz "txt_num01"
+	.asciz "CEquipItemBoxTex"
+	.asciz "MNU_skill"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053BD78
+lbl_8053BD78:
+	# ROM: 0x537E78
+	.4byte switch_8028A500
+	.4byte switch_8028A500
+	.4byte switch_8028A3B4
+	.4byte switch_8028A3D0
+	.4byte switch_8028A3EC
+	.4byte switch_8028A408
+	.4byte switch_8028A424
+	.4byte switch_8028A440
+	.4byte switch_8028A45C
+	.4byte switch_8028A478
+	.4byte switch_8028A494
+	.4byte switch_8028A4B0
+	.4byte switch_8028A4CC
+	.4byte switch_8028A4E8
+
+
+.global lbl_8053BDB0
+lbl_8053BDB0:
+	# ROM: 0x537EB0
+	.4byte switch_8028BCD8
+	.4byte switch_8028BCF0
+	.4byte switch_8028BD08
+	.4byte switch_8028BD20
+	.4byte switch_8028BD38
+	.4byte switch_8028BD50
+	.4byte switch_8028BD68
+	.4byte switch_8028BD80
+	.4byte switch_8028BD98
+
+
+.global lbl_8053BDD4
+lbl_8053BDD4:
+	# ROM: 0x537ED4
+	.4byte switch_8028D17C
+	.4byte switch_8028D17C
+	.4byte switch_8028D120
+	.4byte switch_8028D128
+	.4byte switch_8028D130
+	.4byte switch_8028D138
+	.4byte switch_8028D140
+	.4byte switch_8028D148
+	.4byte switch_8028D150
+	.4byte switch_8028D158
+	.4byte switch_8028D160
+	.4byte switch_8028D168
+	.4byte switch_8028D170
+	.4byte switch_8028D178
+	.4byte 0
+
+
+.global __vt__CEquipItemBox
+__vt__CEquipItemBox:
+	.4byte __RTTI__CEquipItemBox
+	.4byte 0
+	.4byte func_8028610C
+	.4byte func_80039E28
+	.4byte func_8028D1A0
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CEquipItemBox_hierarchy
+CEquipItemBox_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CEIBPageCur
+__vt__CEIBPageCur:
+	.4byte __RTTI__CEIBPageCur
+	.4byte 0
+	.4byte func_80285C84
+
+.global CEIBPageCur_hierarchy
+CEIBPageCur_hierarchy:
+	.4byte __RTTI__CEIBCur
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CEIBCur
+__vt__CEIBCur:
+	.4byte __RTTI__CEIBCur
+	.4byte 0
+	.4byte func_80285994
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CEquipItemBox
+__RTTI__CEquipItemBox:
+	.4byte CEquipItemBox_typestr
+	.4byte CEquipItemBox_hierarchy
+
+.global __RTTI__CEIBPageCur
+__RTTI__CEIBPageCur:
+	.4byte CEIBPageCur_typestr
+	.4byte CEIBPageCur_hierarchy
+
+.global __RTTI__CEIBCur
+__RTTI__CEIBCur:
+	.4byte CEIBCur_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B3CC
+lbl_8066B3CC:
+	# ROM: 0x57522C
+	.float 0.25
+
+
+.global lbl_8066B3D0
+lbl_8066B3D0:
+	# ROM: 0x575230
+	.float 1.0
+
+
+.global lbl_8066B3D4
+lbl_8066B3D4:
+	# ROM: 0x575234
+	.float 1.5
+
+
+.global lbl_8066B3D8
+lbl_8066B3D8:
+	# ROM: 0x575238
+	.4byte 0x43B80000
+
+
+.global lbl_8066B3DC
+lbl_8066B3DC:
+	# ROM: 0x57523C
+	.4byte 0xC1880000
+
+
+.global lbl_8066B3E0
+lbl_8066B3E0:
+	# ROM: 0x575240
+	.4byte 0x43010000
+
+
+.global lbl_8066B3E4
+lbl_8066B3E4:
+	# ROM: 0x575244
+	.4byte 0x02040506
+
+
+.global lbl_8066B3E8
+lbl_8066B3E8:
+	# ROM: 0x575248
+	.4byte 0x07080000
+
+
+.global lbl_8066B3EC
+lbl_8066B3EC:
+	# ROM: 0x57524C
+	.4byte 0x41300000
+
+
+.global lbl_8066B3F0
+lbl_8066B3F0:
+	# ROM: 0x575250
+	.float 10.0
+
+
+.global lbl_8066B3F4
+lbl_8066B3F4:
+	# ROM: 0x575254
+	.4byte 0x3FB33333
+
+
+.global lbl_8066B3F8
+lbl_8066B3F8:
+	# ROM: 0x575258
+	.4byte 0x02040506
+
+
+.global lbl_8066B3FC
+lbl_8066B3FC:
+	# ROM: 0x57525C
+	.4byte 0x07080000
+
+
+.global lbl_8066B400
+lbl_8066B400:
+	# ROM: 0x575260
+	.4byte 0x02040506
+
+
+.global lbl_8066B404
+lbl_8066B404:
+	# ROM: 0x575264
+	.4byte 0x07080000
+
+.global CEIBCur_typestr
+CEIBCur_typestr:
+	.asciz "CEIBCur"
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667210
+lbl_80667210:
+	.skip 0x8
+.global lbl_80667218
+lbl_80667218:
+	.skip 0x8
+.global lbl_80667220
+lbl_80667220:
+	.skip 0x8
+.global lbl_80667228
+lbl_80667228:
+	.skip 0x8
+.global lbl_80667230
+lbl_80667230:
+	.skip 0x8
+.global lbl_80667238
+lbl_80667238:
+	.skip 0x8
+.global lbl_80667240
+lbl_80667240:
+	.skip 0x8
+.global lbl_80667248
+lbl_80667248:
+	.skip 0x8
+.global lbl_80667250
+lbl_80667250:
+	.skip 0x8
+.global lbl_80667258
+lbl_80667258:
+	.skip 0x8
+.global lbl_80667260
+lbl_80667260:
+	.skip 0x8
+.global lbl_80667268
+lbl_80667268:
+	.skip 0x8
+.global lbl_80667270
+lbl_80667270:
+	.skip 0x8
+.global lbl_80667278
+lbl_80667278:
+	.skip 0x8
+.global lbl_80667280
+lbl_80667280:
+	.skip 0x8
+.global lbl_80667288
+lbl_80667288:
+	.skip 0x8
+.global lbl_80667290
+lbl_80667290:
+	.skip 0x8
+.global lbl_80667298
+lbl_80667298:
+	.skip 0x8
+.global lbl_806672A0
+lbl_806672A0:
+	.skip 0x8
+.global lbl_806672A8
+lbl_806672A8:
+	.skip 0x8
+.global lbl_806672B0
+lbl_806672B0:
+	.skip 0x8
+.global lbl_806672B8
+lbl_806672B8:
+	.skip 0x8
+.global lbl_806672C0
+lbl_806672C0:
+	.skip 0x8
+.global lbl_806672C8
+lbl_806672C8:
+	.skip 0x8
+.global lbl_806672D0
+lbl_806672D0:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80018E80
 lbl_80018E80:
@@ -9361,7 +9866,7 @@ lbl_800192F0:
 
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80285D7C
 	.4byte 0x00000390

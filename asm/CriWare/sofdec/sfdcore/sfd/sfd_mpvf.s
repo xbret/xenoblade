@@ -1206,3 +1206,9 @@ SFMPVF_ChkImageSize:
 /* 803C8B9C 0039215C  7C 08 03 A6 */	mtlr r0
 /* 803C8BA0 00392160  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C8BA4 00392164  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8061CD58
+lbl_8061CD58:
+	.skip 0x80

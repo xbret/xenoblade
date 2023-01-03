@@ -5164,7 +5164,291 @@ func_800CA4E4:
 /* 800CA4E4 00093AA4  38 63 FF F0 */	addi r3, r3, -16
 /* 800CA4E8 00093AA8  4B FB 61 18 */	b func_80080600
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F7F38
+lbl_804F7F38:
+	.4byte 0x00000125
+	.4byte 0x00000126
+	.4byte 0x00000127
+	.4byte 0x00000128
+	.4byte 0x00000129
+	.4byte 0x0000012A
+
+.global lbl_804F7F50
+lbl_804F7F50:
+	.4byte 0
+	.4byte 0x0000003D
+	.4byte 0x0000003D
+	.4byte 0x0000003D
+	.4byte 0x0000003D
+	.4byte 0x0000003D
+	.4byte 0x0000003D
+	.4byte 0x00000049
+	.4byte 0x00000043
+	.4byte 0
+
+
+.global lbl_804F7F78
+lbl_804F7F78:
+	# ROM: 0x4F4078
+	.byte 0x00
+	.asciz "INPUT"
+	.asciz "ENCO"
+	.asciz "AWAKE"
+	.asciz "HELP"
+	.asciz "REVIVE"
+	.asciz "REVIVE_ME"
+	.asciz "REVIVE_END"
+	.asciz "FISHING"
+	.asciz "core"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8052DE60
+lbl_8052DE60:
+	# ROM: 0x529F60
+	.4byte switch_800C86D0
+	.4byte switch_800C83E0
+	.4byte switch_800C8554
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C8554
+	.4byte switch_800C8584
+	.4byte switch_800C8554
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C8554
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C8568
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C853C
+	.4byte switch_800C86D0
+	.4byte switch_800C85B8
+	.4byte switch_800C85D4
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C86D0
+	.4byte switch_800C8554
+
+
+.global lbl_8052DF28
+lbl_8052DF28:
+	# ROM: 0x52A028
+	.4byte switch_800CA238
+	.4byte switch_800CA250
+	.4byte switch_800CA250
+	.4byte switch_800CA174
+	.4byte switch_800CA158
+	.4byte switch_800CA1C8
+	.4byte switch_800CA1C8
+	.4byte switch_800CA1C8
+	.4byte switch_800CA174
+	.4byte switch_800CA174
+	.4byte switch_800CA190
+	.4byte switch_800CA1AC
+	.4byte switch_800CA1E4
+	.4byte switch_800CA200
+	.4byte switch_800CA21C
+	.4byte switch_800CA174
+	.4byte switch_800CA174
+	.4byte switch_800CA174
+	.4byte switch_800CA174
+	.4byte switch_800CA174
+	.4byte switch_800CA174
+	.4byte switch_800CA250
+	.4byte switch_800CA174
+	.4byte switch_800CA174
+	.4byte switch_800CA174
+	.4byte switch_800CA250
+	.4byte switch_800CA250
+	.4byte switch_800CA250
+	.4byte switch_800CA174
+	.4byte switch_800CA250
+	.4byte switch_800CA250
+	.4byte switch_800CA1E4
+	.4byte switch_800CA1E4
+	.4byte switch_800CA174
+	.4byte switch_800CA174
+	.4byte 0
+
+
+.global __vt__cf_CfObjectImplPc
+__vt__cf_CfObjectImplPc:
+	.4byte __RTTI__cf_CfObjectImplPc
+	.4byte 0
+	.4byte func_80080600
+	.4byte func_800C6F30
+	.4byte func_800CC5DC
+	.4byte func_800C70BC
+	.4byte func_800C75D4
+	.4byte func_800CD268
+	.4byte func_800CD460
+	.4byte func_800CD5C0
+	.4byte func_800C819C
+	.4byte func_800CEB68
+	.4byte func_80087448
+	.4byte func_8008742C
+	.4byte func_8008743C
+	.4byte func_80087424
+	.4byte func_800459FC
+	.4byte func_80087410
+	.4byte func_800873FC
+	.4byte func_800873E8
+	.4byte func_800873D4
+	.4byte func_800873C8
+	.4byte func_800873AC
+	.4byte func_80087390
+	.4byte func_80087378
+	.4byte func_80087364
+	.4byte func_80087334
+	.4byte func_80087348
+	.4byte func_800CE8E4
+	.4byte func_800CA458
+	.4byte func_800C86E8
+	.4byte func_800C969C
+	.4byte func_800CE8AC
+	.4byte func_800CA274
+	.4byte func_800C9A20
+	.4byte func_800C9CEC
+	.4byte func_800CB21C
+	.4byte func_800CA104
+	.4byte func_800CA084
+	.4byte func_80087330
+	.4byte func_800C5998
+	.4byte func_800CA964
+	.4byte func_800C596C
+	.4byte func_800C5AA0
+	.4byte func_800CAB00
+	.4byte __RTTI__cf_CfObjectImplPc
+	.4byte 0xFFFFFFF4
+	.4byte func_800CA4DC
+	.4byte func_800C5978
+	.4byte __RTTI__cf_CfObjectImplPc
+	.4byte 0xFFFFFFF0
+	.4byte func_800CA4E4
+	.4byte func_800C5988
+	.4byte func_800C5B00
+	.4byte func_800C6A58
+	.4byte func_800CC01C
+	.4byte func_800CC020
+	.4byte func_800C22C4
+	.4byte func_800C6EC0
+	.4byte func_800CFFA0
+	.4byte func_8009C6B8
+	.4byte func_8009C6B4
+	.4byte func_8009868C
+	.4byte func_800C5970
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669490
+lbl_80669490:
+	# ROM: 0x5732F0
+	.float 1.0
+
+
+.global lbl_80669494
+lbl_80669494:
+	# ROM: 0x5732F4
+	.4byte 0
+
+
+.global lbl_80669498
+lbl_80669498:
+	# ROM: 0x5732F8
+	.4byte 0x3C23D70A
+	.4byte 0
+
+
+.global lbl_806694A0
+lbl_806694A0:
+	# ROM: 0x573300
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_806694A8
+lbl_806694A8:
+	# ROM: 0x573308
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_806694B0
+lbl_806694B0:
+	# ROM: 0x573310
+	.float 100.0
+
+
+.global lbl_806694B4
+lbl_806694B4:
+	# ROM: 0x573314
+	.4byte 0x3E19999A
+
+
+.global lbl_806694B8
+lbl_806694B8:
+	# ROM: 0x573318
+	.float -1.0
+
+
+.global lbl_806694BC
+lbl_806694BC:
+	# ROM: 0x57331C
+	.float 10.0
+
+
+.global lbl_806694C0
+lbl_806694C0:
+	# ROM: 0x573320
+	.4byte 0x41F00000
+
+
+.global lbl_806694C4
+lbl_806694C4:
+	# ROM: 0x573324
+	.4byte 0x41700000
+
+
+.global lbl_806694C8
+lbl_806694C8:
+	# ROM: 0x573328
+	.4byte 0xC1200000
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000A264
 lbl_8000A264:
@@ -5289,7 +5573,7 @@ lbl_8000A36C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_800C5998
 	.4byte 0x00000108

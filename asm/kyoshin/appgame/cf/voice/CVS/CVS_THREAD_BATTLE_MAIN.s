@@ -345,7 +345,62 @@ func_802AF9D0:
 /* 802AFA78 00279038  38 21 00 20 */	addi r1, r1, 0x20
 /* 802AFA7C 0027903C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CVS_THREAD_BATTLE_MAIN_typestr
+cf_CVS_THREAD_BATTLE_MAIN_typestr:
+	.asciz "cf::CVS_THREAD_BATTLE_MAIN"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053E170
+lbl_8053E170:
+	# ROM: 0x53A270
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802AF724
+
+.global lbl_8053E17C
+lbl_8053E17C:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802AF844
+
+.global lbl_8053E188
+lbl_8053E188:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802AF980
+
+
+.global __vt__cf_CVS_THREAD_BATTLE_MAIN
+__vt__cf_CVS_THREAD_BATTLE_MAIN:
+	.4byte __RTTI__cf_CVS_THREAD_BATTLE_MAIN
+	.4byte 0
+	.4byte func_802A3B50
+	.4byte func_802A3BEC
+	.4byte func_802AF9C8
+	.4byte func_802A1EA0
+	.4byte func_802A3740
+
+.global cf_CVS_THREAD_BATTLE_MAIN_hierarchy
+cf_CVS_THREAD_BATTLE_MAIN_hierarchy:
+	.4byte __RTTI__cf_CVS_THREAD
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__cf_CVS_THREAD_BATTLE_MAIN
+__RTTI__cf_CVS_THREAD_BATTLE_MAIN:
+	.4byte cf_CVS_THREAD_BATTLE_MAIN_typestr
+	.4byte cf_CVS_THREAD_BATTLE_MAIN_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001B5E0
 lbl_8001B5E0:
@@ -381,7 +436,7 @@ lbl_8001B624:
 	.4byte 0x18080000
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802AF5CC
 	.4byte 0x00000158

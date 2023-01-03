@@ -7290,7 +7290,255 @@ func_8024B894:
 /* 8024B8CC 00214E8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8024B8D0 00214E90  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80506CE8
+lbl_80506CE8:
+	.asciz "markerlist0000"
+	.balign 4
+
+.global lbl_80506CF8
+lbl_80506CF8:
+	.asciz "markerlist0101"
+	.balign 4
+
+.global lbl_80506D08
+lbl_80506D08:
+	.asciz "markerlist0201"
+	.balign 4
+
+.global lbl_80506D18
+lbl_80506D18:
+	.asciz "markerlist0301"
+	.balign 4
+
+.global lbl_80506D28
+lbl_80506D28:
+	.asciz "markerlist0401"
+	.balign 4
+
+.global lbl_80506D38
+lbl_80506D38:
+	.asciz "markerlist0402"
+	.balign 4
+
+.global lbl_80506D48
+lbl_80506D48:
+	.asciz "markerlist0501"
+	.balign 4
+
+.global lbl_80506D58
+lbl_80506D58:
+	.asciz "markerlist0601"
+	.balign 4
+
+.global lbl_80506D68
+lbl_80506D68:
+	.asciz "markerlist0701"
+	.balign 4
+
+.global lbl_80506D78
+lbl_80506D78:
+	.asciz "markerlist0801"
+	.balign 4
+
+.global lbl_80506D88
+lbl_80506D88:
+	.asciz "markerlist0901"
+	.balign 4
+
+.global lbl_80506D98
+lbl_80506D98:
+	.asciz "markerlist1001"
+	.balign 4
+
+.global lbl_80506DA8
+lbl_80506DA8:
+	.asciz "markerlist1101"
+	.balign 4
+
+.global lbl_80506DB8
+lbl_80506DB8:
+	.asciz "markerlist1201"
+	.balign 4
+
+.global lbl_80506DC8
+lbl_80506DC8:
+	.asciz "markerlist1202"
+	.balign 4
+
+.global lbl_80506DD8
+lbl_80506DD8:
+	.asciz "markerlist1301"
+	.balign 4
+
+.global lbl_80506DE8
+lbl_80506DE8:
+	.asciz "markerlist1401"
+	.balign 4
+
+.global lbl_80506DF8
+lbl_80506DF8:
+	.asciz "markerlist1501"
+	.balign 4
+
+.global lbl_80506E08
+lbl_80506E08:
+	.asciz "markerlist1601"
+	.balign 4
+
+.global lbl_80506E18
+lbl_80506E18:
+	.asciz "markerlist1701"
+	.balign 4
+
+.global lbl_80506E28
+lbl_80506E28:
+	.asciz "markerlist1801"
+	.balign 4
+
+.global lbl_80506E38
+lbl_80506E38:
+	.asciz "markerlist1901"
+	.balign 4
+
+.global lbl_80506E48
+lbl_80506E48:
+	.asciz "markerlist2001"
+	.balign 4
+
+.global lbl_80506E58
+lbl_80506E58:
+	.asciz "markerlist2101"
+	.balign 4
+
+.global lbl_80506E68
+lbl_80506E68:
+	.asciz "markerlist2201"
+	.balign 4
+
+.global lbl_80506E78
+lbl_80506E78:
+	.asciz "markerlist2301"
+	.balign 4
+
+.global lbl_80506E88
+lbl_80506E88:
+	.asciz "markerlist2401"
+	.balign 4
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053A6F8
+lbl_8053A6F8:
+	# ROM: 0x5367F8
+	.4byte lbl_80506CE8
+	.4byte lbl_80506CF8
+	.4byte lbl_80506D08
+	.4byte lbl_80506D18
+	.4byte lbl_80506D28
+	.4byte lbl_80506D38
+	.4byte lbl_80506D48
+	.4byte lbl_80506D58
+	.4byte lbl_80506D68
+	.4byte lbl_80506D78
+	.4byte lbl_80506D88
+	.4byte lbl_80506D98
+	.4byte lbl_80506DA8
+	.4byte lbl_80506DB8
+	.4byte lbl_80506DC8
+	.4byte lbl_80506DD8
+	.4byte lbl_80506DE8
+	.4byte lbl_80506DF8
+	.4byte lbl_80506E08
+	.4byte lbl_80506E08
+	.4byte lbl_80506E18
+	.4byte lbl_80506E28
+	.4byte lbl_80506E38
+	.4byte lbl_80506E48
+	.4byte lbl_80506E58
+	.4byte lbl_80506E68
+	.4byte lbl_80506E78
+	.4byte lbl_80506E88
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B018
+lbl_8066B018:
+	# ROM: 0x574E78
+	.float 1.0
+
+
+.global lbl_8066B01C
+lbl_8066B01C:
+	# ROM: 0x574E7C
+	.4byte 0
+
+
+.global lbl_8066B020
+lbl_8066B020:
+	# ROM: 0x574E80
+	.4byte 0xC2F00000
+
+
+.global lbl_8066B024
+lbl_8066B024:
+	# ROM: 0x574E84
+	.4byte 0xC2480000
+
+
+.global lbl_8066B028
+lbl_8066B028:
+	# ROM: 0x574E88
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066B030
+lbl_8066B030:
+	# ROM: 0x574E90
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066B034
+lbl_8066B034:
+	# ROM: 0x574E94
+	.float 1.5
+
+
+.global lbl_8066B038
+lbl_8066B038:
+	# ROM: 0x574E98
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066B040
+lbl_8066B040:
+	# ROM: 0x574EA0
+	.4byte 0x41400000
+
+
+.global lbl_8066B044
+lbl_8066B044:
+	# ROM: 0x574EA4
+	.4byte 0x3F4CCCCD
+
+
+.global lbl_8066B048
+lbl_8066B048:
+	# ROM: 0x574EA8
+	.float 0.5
+
+
+.global lbl_8066B04C
+lbl_8066B04C:
+	# ROM: 0x574EAC
+	.4byte 0x43340000
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80016508
 lbl_80016508:
@@ -7448,7 +7696,7 @@ lbl_800165F8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8024503C
 	.4byte 0x00000040

@@ -499,7 +499,22 @@ func_8010EE40:
 /* 8010F168 000D8728  38 21 00 50 */	addi r1, r1, 0x50
 /* 8010F16C 000D872C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CPcSelectCursor01
+__vt__CPcSelectCursor01:
+	.4byte __RTTI__CPcSelectCursor01
+	.4byte 0
+	.4byte func_8010A694
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CPcSelectCursor01
+__RTTI__CPcSelectCursor01:
+	.4byte CPcSelectCursor01_typestr
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000B330
 lbl_8000B330:
@@ -536,7 +551,7 @@ lbl_8000B368:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8010EA64
 	.4byte 0x00000084

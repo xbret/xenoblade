@@ -538,3 +538,41 @@ lbl_8056E0C8:
 	.4byte AssignWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2FPvUl
 	.4byte ReleaseWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2Fv
 	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066C798
+lbl_8066C798:
+	# ROM: 0x5765F8
+	.4byte 0x3CA3D70A
+
+
+.global lbl_8066C79C
+lbl_8066C79C:
+	# ROM: 0x5765FC
+	.4byte 0x40400000
+
+
+.global lbl_8066C7A0
+lbl_8066C7A0:
+	# ROM: 0x576600
+	.4byte 0x3F19999A
+
+
+.global lbl_8066C7A4
+lbl_8066C7A4:
+	# ROM: 0x576604
+	.4byte 0x3ECCCCCD
+
+
+.global lbl_8066C7A8
+lbl_8066C7A8:
+	# ROM: 0x576608
+	.float 1.0
+
+
+.global lbl_8066C7AC
+lbl_8066C7AC:
+	# ROM: 0x57660C
+	.4byte 0

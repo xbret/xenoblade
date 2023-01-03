@@ -351,3 +351,40 @@ GDLoadTexMtxImm3x3__Q34nw4r3g3d4fifoFRCQ34nw4r4math5MTX33Ul:
 /* 803E796C 003B0F2C  7C 08 03 A6 */	mtlr r0
 /* 803E7970 003B0F30  38 21 00 40 */	addi r1, r1, 0x40
 /* 803E7974 003B0F34  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C3C8
+lbl_8066C3C8:
+	# ROM: 0x576228
+	.4byte 0x00020103
+
+
+.global lbl_8066C3CC
+lbl_8066C3CC:
+	# ROM: 0x57622C
+	.float 1.0
+
+
+.global lbl_8066C3D0
+lbl_8066C3D0:
+	# ROM: 0x576230
+	.float 0.5
+
+
+.global lbl_8066C3D4
+lbl_8066C3D4:
+	# ROM: 0x576234
+	.4byte 0x40000000
+
+
+.global lbl_8066C3D8
+lbl_8066C3D8:
+	# ROM: 0x576238
+	.4byte 0x44800000
+
+
+.global lbl_8066C3DC
+lbl_8066C3DC:
+	# ROM: 0x57623C
+	.4byte 0

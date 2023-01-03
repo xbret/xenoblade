@@ -10626,7 +10626,112 @@ sinit_801EABC4:
 
 .4byte sinit_801EABC4
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CItemBoxInfo2
+__vt__CItemBoxInfo2:
+	.4byte __RTTI__CItemBoxInfo2
+	.4byte 0
+	.4byte func_801E1280
+	.4byte func_80039E28
+	.4byte func_801E9B94
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CItemBoxInfo2_hierarchy
+CItemBoxInfo2_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CItemBoxInfo
+__vt__CItemBoxInfo:
+	.4byte __RTTI__CItemBoxInfo
+	.4byte 0
+	.4byte func_801D3FF4
+	.4byte func_80039E28
+	.4byte func_801E0260
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CItemBoxInfo_hierarchy
+CItemBoxInfo_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CItemBoxInfo2
+__RTTI__CItemBoxInfo2:
+	.4byte CItemBoxInfo2_typestr
+	.4byte CItemBoxInfo2_hierarchy
+
+.global __RTTI__CItemBoxInfo
+__RTTI__CItemBoxInfo:
+	.4byte CItemBoxInfo_typestr
+	.4byte CItemBoxInfo_hierarchy
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80011904
 lbl_80011904:
@@ -10876,7 +10981,7 @@ lbl_80011AD0:
 
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801E119C
 	.4byte 0x000000E4

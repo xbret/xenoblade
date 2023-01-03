@@ -469,3 +469,40 @@ lbl_8056E0A0:
 	.4byte AssignWorkBuffer__Q34nw4r3snd11FxDelayDpl2FPvUl
 	.4byte ReleaseWorkBuffer__Q34nw4r3snd11FxDelayDpl2Fv
 	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C780
+lbl_8066C780:
+	# ROM: 0x5765E0
+	.4byte 0x43200000
+
+
+.global lbl_8066C784
+lbl_8066C784:
+	# ROM: 0x5765E4
+	.4byte 0x3ECCCCCD
+
+
+.global lbl_8066C788
+lbl_8066C788:
+	# ROM: 0x5765E8
+	.float 1.0
+
+
+.global lbl_8066C78C
+lbl_8066C78C:
+	# ROM: 0x5765EC
+	.4byte 0x3D23D70A
+
+
+.global lbl_8066C790
+lbl_8066C790:
+	# ROM: 0x5765F0
+	.4byte 0x3F7D70A4
+
+
+.global lbl_8066C794
+lbl_8066C794:
+	# ROM: 0x5765F4
+	.4byte 0

@@ -1246,7 +1246,36 @@ func_8016784C:
 /* 801678E8 00130EA8  38 21 00 70 */	addi r1, r1, 0x70
 /* 801678EC 00130EAC  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CInfoCf_typestr
+cf_CInfoCf_typestr:
+	.asciz "cf::CInfoCf"
+	.4byte 0
+	
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CInfoCf
+__vt__cf_CInfoCf:
+	.4byte __RTTI__cf_CInfoCf
+	.4byte 0
+	.4byte func_80166724
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CInfoCf
+__RTTI__cf_CInfoCf:
+	.4byte cf_CInfoCf_typestr
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666B40
+lbl_80666B40:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000DD00
 lbl_8000DD00:
@@ -1340,7 +1369,7 @@ lbl_8000DDC4:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80166724
 	.4byte 0x00000048

@@ -407,7 +407,184 @@ func_80124B78:
 /* 80124B78 000EE138  80 6D A7 50 */	lwz r3, lbl_806668D0@sda21(r13)
 /* 80124B7C 000EE13C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CSysWinSelect_typestr
+CSysWinSelect_typestr:
+	.asciz "CSysWinSelect"
+	.balign 4
+
+.global CSystemWindow_typestr
+CSystemWindow_typestr:
+	.asciz "CSystemWindow"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CSysWinSelect
+__vt__CSysWinSelect:
+	.4byte __RTTI__CSysWinSelect
+	.4byte 0
+	.4byte func_80124CD0
+	.4byte CChildListNode_Reset
+	.4byte func_80124D50
+	.4byte func_80124E0C
+	.4byte func_80124E74
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CSysWinSelect
+	.4byte 0xFFFFFF94
+	.4byte func_801252B8
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CSysWinSelect
+	.4byte 0xFFFFFF90
+	.4byte func_801252C8
+	.4byte func_801252C0
+	.4byte func_80124FD8
+
+.global CSysWinSelect_hierarchy
+CSysWinSelect_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000070
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CSystemWindow
+__vt__CSystemWindow:
+	.4byte __RTTI__CSystemWindow
+	.4byte 0
+	.4byte func_80124710
+	.4byte CChildListNode_Reset
+	.4byte func_80124784
+	.4byte func_801248A0
+	.4byte func_80124908
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CSystemWindow
+	.4byte 0xFFFFFF94
+	.4byte func_801252A0
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CSystemWindow
+	.4byte 0xFFFFFF90
+	.4byte func_801252B0
+	.4byte func_801252A8
+	.4byte func_80124A60
+
+.global CSystemWindow_hierarchy
+CSystemWindow_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000070
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CSysWinSelect
+__RTTI__CSysWinSelect:
+	.4byte CSysWinSelect_typestr
+	.4byte CSysWinSelect_hierarchy
+
+.global __RTTI__CSystemWindow
+__RTTI__CSystemWindow:
+	.4byte CSystemWindow_typestr
+	.4byte CSystemWindow_hierarchy
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806668D0
+lbl_806668D0:
+	.skip 0x4
+.global lbl_806668D4
+lbl_806668D4:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000BDB4
 lbl_8000BDB4:
@@ -471,7 +648,7 @@ lbl_8000BE4C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801245EC
 	.4byte 0x00000124

@@ -2158,3 +2158,36 @@ __sort132_RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_
 /* 803F0FF0 003BA5B0  7C 08 03 A6 */	mtlr r0
 /* 803F0FF4 003BA5B4  38 21 00 50 */	addi r1, r1, 0x50
 /* 803F0FF8 003BA5B8  4E 80 00 20 */	blr 
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665DA8
+lbl_80665DA8:
+	# ROM: 0x571988
+	.4byte 0xFFFFFFFC
+
+
+.global lbl_80665DAC
+lbl_80665DAC:
+	# ROM: 0x57198C
+	.4byte 0xFFFFFFFC
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C448
+lbl_8066C448:
+	# ROM: 0x5762A8
+	.4byte 0
+
+
+.global lbl_8066C44C
+lbl_8066C44C:
+	# ROM: 0x5762AC
+	.4byte 0xC0000000
+
+
+.global lbl_8066C450
+lbl_8066C450:
+	# ROM: 0x5762B0
+	.float 1.0
+	.4byte 0

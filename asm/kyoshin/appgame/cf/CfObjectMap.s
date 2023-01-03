@@ -11018,7 +11018,566 @@ func_800BA768:
 
 .4byte sinit_800B9A40
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global reslist_cf_IFactoryEvent_typestr
+reslist_cf_IFactoryEvent_typestr:
+	.asciz "reslist<cf::IFactoryEvent *>"
+	.balign 4
+
+.global _reslist_base_cf_IFactoryEvent_typestr
+_reslist_base_cf_IFactoryEvent_typestr:
+	.asciz "_reslist_base<cf::IFactoryEvent *>"
+	.balign 4
+
+.global reslist_cf_TboxInfo_typestr
+reslist_cf_TboxInfo_typestr:
+	.asciz "reslist<cf::TboxInfo>"
+	.balign 4
+
+.global _reslist_base_cf_TboxInfo_typestr
+_reslist_base_cf_TboxInfo_typestr:
+	.asciz "_reslist_base<cf::TboxInfo>"
+
+.global reslist_cf_CfObject_typestr
+reslist_cf_CfObject_typestr:
+	.asciz "reslist<cf::CfObject *>"
+
+
+.global lbl_804F7D00
+lbl_804F7D00:
+	.asciz "ene_disp_r"
+	.asciz "ene_release_h"
+	.asciz "ene_release_r"
+	.asciz "npc_release_r"
+	.asciz "poptest"
+	.byte 0x00
+	.asciz "ene_type"
+	.asciz "POP_TIME"
+
+.global cf_CfObjectMap_typestr
+cf_CfObjectMap_typestr:
+	.asciz "cf::CfObjectMap"
+
+
+.global lbl_804F7D60
+lbl_804F7D60:
+	.asciz ".lod"
+	.asciz "mapATR"
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8052C828
+lbl_8052C828:
+	# ROM: 0x528928
+	.4byte switch_800B982C
+	.4byte switch_800B982C
+	.4byte switch_800B97EC
+	.4byte switch_800B97F4
+	.4byte switch_800B97FC
+	.4byte switch_800B982C
+	.4byte switch_800B9804
+	.4byte switch_800B982C
+	.4byte switch_800B982C
+	.4byte switch_800B982C
+	.4byte switch_800B982C
+	.4byte switch_800B982C
+	.4byte switch_800B980C
+	.4byte switch_800B982C
+	.4byte switch_800B9818
+	.4byte switch_800B9824
+	.4byte switch_800B9824
+	.4byte switch_800B9824
+
+
+.global __vt__reslist_cf_IFactoryEvent
+__vt__reslist_cf_IFactoryEvent:
+	.4byte __RTTI__reslist_cf_IFactoryEvent
+	.4byte 0
+	.4byte func_800B0DFC
+
+.global reslist_cf_IFactoryEvent_hierarchy
+reslist_cf_IFactoryEvent_hierarchy:
+	.4byte __RTTI___reslist_base_cf_IFactoryEvent
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___reslist_base_cf_IFactoryEvent
+__vt___reslist_base_cf_IFactoryEvent:
+	.4byte __RTTI___reslist_base_cf_IFactoryEvent
+	.4byte 0
+	.4byte func_800B0D48
+
+
+.global __vt__reslist_cf_TboxInfo
+__vt__reslist_cf_TboxInfo:
+	.4byte __RTTI__reslist_cf_TboxInfo
+	.4byte 0
+	.4byte func_800B0C4C
+
+.global reslist_cf_TboxInfo_hierarchy
+reslist_cf_TboxInfo_hierarchy:
+	.4byte __RTTI___reslist_base_cf_TboxInfo
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___reslist_base_cf_TboxInfo
+__vt___reslist_base_cf_TboxInfo:
+	.4byte __RTTI___reslist_base_cf_TboxInfo
+	.4byte 0
+	.4byte func_800B0B90
+
+
+.global __vt__reslist_cf_CfObject
+__vt__reslist_cf_CfObject:
+	.4byte __RTTI__reslist_cf_CfObject
+	.4byte 0
+	.4byte func_8004093C
+
+.global reslist_cf_CfObject_hierarchy
+reslist_cf_CfObject_hierarchy:
+	.4byte __RTTI___reslist_base_cf_CfObject
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8052C8D0
+lbl_8052C8D0:
+	# ROM: 0x5289D0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800B9C70
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800B9E4C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800BA440
+	.4byte 0
+
+
+.global __vt__cf_CfObjectMap
+__vt__cf_CfObjectMap:
+	.4byte __RTTI__cf_CfObjectMap
+	.4byte 0
+	.4byte func_8003DC64
+	.4byte func_8003CB58
+	.4byte func_8003DD34
+	.4byte func_800A34A8
+	.4byte func_8009489C
+	.4byte func_800A349C
+	.4byte func_80086B4C
+	.4byte func_8003CB20
+	.4byte func_8003D98C
+	.4byte func_8003D8C0
+	.4byte func_8003D7B0
+	.4byte func_800A3494
+	.4byte func_800A3488
+	.4byte func_8003C7F8
+	.4byte func_800BB594
+	.4byte func_800A34B4
+	.4byte func_80080640
+	.4byte func_8003E664
+	.4byte func_8003DC74
+	.4byte func_800BA768
+	.4byte func_800B9A70
+	.4byte func_800B9C64
+	.4byte func_800BA610
+	.4byte func_800AC600
+	.4byte func_800B9AB4
+	.4byte func_800BA764
+	.4byte func_800BABBC
+	.4byte func_8007D814
+	.4byte func_800AC5F0
+	.4byte func_800AC5E4
+	.4byte func_800AC5E0
+	.4byte func_800AC5D8
+	.4byte func_800BA650
+	.4byte func_800AC5CC
+	.4byte func_800AC5C8
+	.4byte func_800AC5C0
+	.4byte func_800AC5B8
+	.4byte func_800BAE58
+	.4byte func_800BB0E8
+	.4byte func_800AC5A8
+	.4byte func_800BAED4
+	.4byte func_800BB12C
+	.4byte func_800BB168
+	.4byte func_800BAF50
+	.4byte func_8003C914
+	.4byte func_800BB184
+	.4byte func_800BB200
+	.4byte func_800BB23C
+	.4byte func_800BA754
+	.4byte func_800BB290
+	.4byte func_800BB2CC
+	.4byte func_800BA744
+	.4byte func_800BB2E4
+	.4byte func_800BB318
+	.4byte func_800BB338
+	.4byte func_800AC580
+	.4byte func_800AC578
+	.4byte func_800AC560
+	.4byte func_800AC568
+	.4byte func_800AC570
+	.4byte func_800AC548
+	.4byte func_800AC550
+	.4byte func_800AC558
+	.4byte func_800AC544
+	.4byte func_8008738C
+	.4byte func_8007DA78
+	.4byte func_800733A8
+	.4byte func_8003CD68
+	.4byte func_8003CDD8
+	.4byte func_800AC53C
+	.4byte func_800BB3AC
+	.4byte func_800BB454
+	.4byte func_800BB4FC
+	.4byte func_800BB534
+	.4byte func_800BB364
+	.4byte func_800AC538
+	.4byte func_800873C0
+	.4byte func_800AC534
+	.4byte func_800AC52C
+	.4byte func_800AC528
+	.4byte func_800AC520
+	.4byte func_800BACDC
+	.4byte func_8003F1E8
+	.4byte func_800AC4F8
+	.4byte func_800B9B78
+	.4byte func_800BB684
+	.4byte func_800BB974
+	.4byte func_800BB954
+	.4byte func_800BB708
+	.4byte func_80094FF8
+	.4byte func_800BB730
+	.4byte func_80094FF0
+	.4byte func_800BAB1C
+	.4byte func_800BAB60
+	.4byte func_800BB5F0
+	.4byte func_800BA73C
+	.4byte func_800BA734
+	.4byte func_800B9E3C
+	.4byte func_800BA66C
+	.4byte func_800BBA9C
+	.4byte func_800B0608
+	.4byte func_800BB738
+	.4byte func_800B0600
+	.4byte func_800BB740
+	.4byte func_800BB748
+	.4byte func_800BB7B0
+	.4byte func_800BB914
+	.4byte func_8003E3C8
+	.4byte func_800B05F8
+	.4byte func_800AC98C
+	.4byte func_800BA70C
+	.4byte func_800B05EC
+
+.global cf_CfObjectMap_hierarchy
+cf_CfObjectMap_hierarchy:
+	.4byte __RTTI__cf_CObjectState
+	.4byte 0
+	.4byte __RTTI__cf_CObjectParam
+	.4byte 0
+	.4byte __RTTI__cf_CfObject
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectModel
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806645D0
+lbl_806645D0:
+	# ROM: 0x5701B0
+	.4byte 0xFFFFFFFC
+
+
+.global lbl_806645D4
+lbl_806645D4:
+	# ROM: 0x5701B4
+	.4byte 0xFFFFFFFC
+
+.global __RTTI__reslist_cf_IFactoryEvent
+__RTTI__reslist_cf_IFactoryEvent:
+	.4byte reslist_cf_IFactoryEvent_typestr
+	.4byte reslist_cf_IFactoryEvent_hierarchy
+
+.global __RTTI___reslist_base_cf_IFactoryEvent
+__RTTI___reslist_base_cf_IFactoryEvent:
+	.4byte _reslist_base_cf_IFactoryEvent_typestr
+	.4byte 0
+
+.global __RTTI__reslist_cf_TboxInfo
+__RTTI__reslist_cf_TboxInfo:
+	.4byte reslist_cf_TboxInfo_typestr
+	.4byte reslist_cf_TboxInfo_hierarchy
+
+.global __RTTI___reslist_base_cf_TboxInfo
+__RTTI___reslist_base_cf_TboxInfo:
+	.4byte _reslist_base_cf_TboxInfo_typestr
+	.4byte 0
+
+.global __RTTI__reslist_cf_CfObject
+__RTTI__reslist_cf_CfObject:
+	.4byte reslist_cf_CfObject_typestr
+	.4byte reslist_cf_CfObject_hierarchy
+
+.global __RTTI__cf_CfObjectMap
+__RTTI__cf_CfObjectMap:
+	.4byte cf_CfObjectMap_typestr
+	.4byte cf_CfObjectMap_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_806692A0
+lbl_806692A0:
+	# ROM: 0x573100
+	.4byte 0
+
+
+.global lbl_806692A4
+lbl_806692A4:
+	# ROM: 0x573104
+	.float 1.0
+
+
+.global lbl_806692A8
+lbl_806692A8:
+	# ROM: 0x573108
+	.4byte 0x43B40000
+
+
+.global lbl_806692AC
+lbl_806692AC:
+	# ROM: 0x57310C
+	.4byte 0x40400000
+
+
+.global lbl_806692B0
+lbl_806692B0:
+	# ROM: 0x573110
+	.float 0.75
+
+
+.global lbl_806692B4
+lbl_806692B4:
+	# ROM: 0x573114
+	.float 0.5
+
+
+.global lbl_806692B8
+lbl_806692B8:
+	# ROM: 0x573118
+	.4byte 0x3ECCCCCD
+
+
+.global lbl_806692BC
+lbl_806692BC:
+	# ROM: 0x57311C
+	.float 10.0
+
+
+.global lbl_806692C0
+lbl_806692C0:
+	# ROM: 0x573120
+	.4byte 0x41F00000
+
+
+.global lbl_806692C4
+lbl_806692C4:
+	# ROM: 0x573124
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_806692C8
+lbl_806692C8:
+	# ROM: 0x573128
+	.4byte 0x40800000
+
+
+.global lbl_806692CC
+lbl_806692CC:
+	# ROM: 0x57312C
+	.4byte 0x3F19999A
+
+
+.global lbl_806692D0
+lbl_806692D0:
+	# ROM: 0x573130
+	.4byte 0x41A00000
+
+
+.global lbl_806692D4
+lbl_806692D4:
+	# ROM: 0x573134
+	.4byte 0x40000000
+
+
+.global lbl_806692D8
+lbl_806692D8:
+	# ROM: 0x573138
+	.float 1.5
+
+
+.global lbl_806692DC
+lbl_806692DC:
+	# ROM: 0x57313C
+	.4byte 0x4B189680
+
+
+.global lbl_806692E0
+lbl_806692E0:
+	# ROM: 0x573140
+	.4byte 0x42960000
+	.4byte 0
+
+
+.global lbl_806692E8
+lbl_806692E8:
+	# ROM: 0x573148
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_806692F0
+lbl_806692F0:
+	# ROM: 0x573150
+	.4byte 0x43340000
+
+
+.global lbl_806692F4
+lbl_806692F4:
+	# ROM: 0x573154
+	.4byte 0x45B04014
+
+
+.global lbl_806692F8
+lbl_806692F8:
+	# ROM: 0x573158
+	.4byte 0x41700000
+	.4byte 0
+
+
+.global lbl_80669300
+lbl_80669300:
+	# ROM: 0x573160
+	.4byte 0
+
+
+.global lbl_80669304
+lbl_80669304:
+	# ROM: 0x573164
+	.float 1.0
+
+
+.global lbl_80669308
+lbl_80669308:
+	# ROM: 0x573168
+	.float 0.5
+
+
+.global lbl_8066930C
+lbl_8066930C:
+	# ROM: 0x57316C
+	.float -1.0
+
+
+.global lbl_80669310
+lbl_80669310:
+	# ROM: 0x573170
+	.4byte 0x3E19999A
+
+
+.global lbl_80669314
+lbl_80669314:
+	# ROM: 0x573174
+	.4byte 0x42380000
+
+
+.global lbl_80669318
+lbl_80669318:
+	# ROM: 0x573178
+	.4byte 0x3D4CCCCD
+
+
+.global lbl_8066931C
+lbl_8066931C:
+	# ROM: 0x57317C
+	.4byte 0x42700000
+
+
+.global lbl_80669320
+lbl_80669320:
+	# ROM: 0x573180
+	.4byte 0x3DAE147B
+
+
+.global lbl_80669324
+lbl_80669324:
+	# ROM: 0x573184
+	.4byte 0x3DE353F8
+
+
+.global lbl_80669328
+lbl_80669328:
+	# ROM: 0x573188
+	.4byte 0x3E428F5C
+
+
+.global lbl_8066932C
+lbl_8066932C:
+	# ROM: 0x57318C
+	.4byte 0x461C4000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805764C0
+lbl_805764C0:
+	.skip 0xC
+.global lbl_805764CC
+lbl_805764CC:
+	.skip 0xD14
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806667C8
+lbl_806667C8:
+	.skip 0x4
+.global lbl_806667CC
+lbl_806667CC:
+	.skip 0x4
+.global lbl_806667D0
+lbl_806667D0:
+	.skip 0x4
+.global lbl_806667D4
+lbl_806667D4:
+	.skip 0x4
+.global lbl_806667D8
+lbl_806667D8:
+	.skip 0x4
+.global lbl_806667DC
+lbl_806667DC:
+	.skip 0x4
+.global lbl_806667E0
+lbl_806667E0:
+	.skip 0x4
+.global lbl_806667E4
+lbl_806667E4:
+	.skip 0x4
+.global lbl_806667E8
+lbl_806667E8:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800096BC
 lbl_800096BC:
@@ -11719,7 +12278,7 @@ lbl_80009B2C:
 	.4byte func_800B2D30
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_800B132C
 	.4byte 0x0000003C

@@ -239,3 +239,12 @@ lbl_8051F920:
 	# ROM: 0x51BA20
 	.4byte 0
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80607B78
+lbl_80607B78:
+	.skip 0x8
+.global lbl_80607B80
+lbl_80607B80:
+	.skip 0x400

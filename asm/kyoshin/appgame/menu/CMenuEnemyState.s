@@ -4689,7 +4689,400 @@ func_801135D8:
 
 .4byte sinit_801134E8
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_804F93B0
+lbl_804F93B0:
+	.asciz "mf71_btl00_pnmk00.tpl"
+	.balign 4
+
+.global lbl_804F93C8
+lbl_804F93C8:
+	.asciz "mf71_btl00_pnmk01.tpl"
+	.balign 4
+
+.global lbl_804F93E0
+lbl_804F93E0:
+	.asciz "mf71_btl00_pnmk02.tpl"
+	.balign 4
+
+.global lbl_804F93F8
+lbl_804F93F8:
+	.asciz "mf71_btl00_pnmk03.tpl"
+	.balign 4
+
+.global lbl_804F9410
+lbl_804F9410:
+	.4byte lbl_804F93B0
+	.4byte lbl_804F93C8
+	.4byte lbl_804F93E0
+	.4byte lbl_804F93F8
+
+.global CMenuEnemyState_typestr
+CMenuEnemyState_typestr:
+	.asciz "CMenuEnemyState"
+
+.global CPcSelectCursor_typestr
+CPcSelectCursor_typestr:
+	.asciz "CPcSelectCursor"
+
+
+.global lbl_804F9440
+lbl_804F9440:
+	.asciz "CPcSelectCursor"
+	.asciz "mf80_info00_target_pc.brlyt"
+	.asciz "mf80_info00_target_pc_in.brlan"
+	.asciz "mf80_info00_target_pc_on.brlan"
+	.asciz "nul_crs"
+	.asciz "nul_crs_f"
+	.asciz "pic_crs02"
+	.asciz "pic_crs03"
+	.asciz "pic_crs_f02"
+	.asciz "pic_crs_f03"
+	.asciz "CMenuEnemyState"
+	.asciz "mf71_battle10_hpgage.brlyt"
+	.asciz "pic_pcbar"
+	.asciz "pic_enbar"
+	.asciz "pic_tgbar_f"
+	.asciz "pic_pic_death"
+	.asciz "pic_panic"
+	.asciz "nul_pc"
+	.asciz "nul_enemmy"
+	.asciz "pic_tgbar"
+	.asciz "nul_tg"
+	.asciz "mf80_info00_target.brlyt"
+	.asciz "pic_crs00"
+	.asciz "pic_bs"
+	.asciz "pic_sns"
+	.asciz "nul_mkgr"
+	.asciz "pic_crs_s"
+	.asciz "mf80_info00_targetinfo.brlyt"
+	.asciz "mf80_info00_targetinfo_roop.brlan"
+	.asciz "txt_lv00"
+	.asciz "txt_lv01"
+	.asciz "nul_npc"
+	.asciz "nul_en_s"
+	.asciz "nul_en_g"
+	.asciz "pic_gr_e00"
+	.asciz "pic_gr_e01"
+	.asciz "pic_status_b"
+	.asciz "pic_status_g"
+	.asciz "mf80_tginf00_enmk00.tpl"
+	.asciz "mf80_tginf00_enmk01.tpl"
+	.asciz "mf80_tginf00_enmk02.tpl"
+	.asciz "MNU_battle"
+	.asciz "name"
+	.asciz "txt_name_npc"
+	.asciz "%03d"
+	.asciz "txt_name_enemmy"
+	.asciz "frame"
+	.asciz "pic_gr"
+	.asciz "icon"
+	.4byte 0
+	.2byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuEnemyState
+__vt__CMenuEnemyState:
+	.4byte __RTTI__CMenuEnemyState
+	.4byte 0
+	.4byte func_8010F3C0
+	.4byte CChildListNode_Reset
+	.4byte func_8010F448
+	.4byte func_8010FC70
+	.4byte func_8010FDAC
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuEnemyState
+	.4byte 0xFFFFFFA8
+	.4byte func_801135C8
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuEnemyState
+	.4byte 0xFFFFFFA4
+	.4byte func_801135D8
+	.4byte func_801135D0
+	.4byte func_80110764
+
+.global CMenuEnemyState_hierarchy
+CMenuEnemyState_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000005C
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CPcSelectCursor
+__vt__CPcSelectCursor:
+	.4byte __RTTI__CPcSelectCursor
+	.4byte 0
+	.4byte func_8010EAE8
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuEnemyState
+__RTTI__CMenuEnemyState:
+	.4byte CMenuEnemyState_typestr
+	.4byte CMenuEnemyState_hierarchy
+
+.global __RTTI__CPcSelectCursor
+__RTTI__CPcSelectCursor:
+	.4byte CPcSelectCursor_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_806698B0
+lbl_806698B0:
+	# ROM: 0x573710
+	.float 1.0
+
+
+.global lbl_806698B4
+lbl_806698B4:
+	# ROM: 0x573714
+	.4byte 0
+
+
+.global lbl_806698B8
+lbl_806698B8:
+	# ROM: 0x573718
+	.4byte 0x43A00000
+
+
+.global lbl_806698BC
+lbl_806698BC:
+	# ROM: 0x57371C
+	.4byte 0x43600000
+
+
+.global lbl_806698C0
+lbl_806698C0:
+	# ROM: 0x573720
+	.float -1.0
+
+
+.global lbl_806698C4
+lbl_806698C4:
+	# ROM: 0x573724
+	.4byte 0x43200000
+
+
+.global lbl_806698C8
+lbl_806698C8:
+	# ROM: 0x573728
+	.4byte 0x41800000
+
+
+.global lbl_806698CC
+lbl_806698CC:
+	# ROM: 0x57372C
+	.float 0.5
+
+
+.global lbl_806698D0
+lbl_806698D0:
+	# ROM: 0x573730
+	.4byte 0x42340000
+
+
+.global lbl_806698D4
+lbl_806698D4:
+	# ROM: 0x573734
+	.4byte 0x3D4CCCCD
+
+
+.global lbl_806698D8
+lbl_806698D8:
+	# ROM: 0x573738
+	.4byte 0x4222F983
+
+
+.global lbl_806698DC
+lbl_806698DC:
+	# ROM: 0x57373C
+	.4byte 0x461C4000
+
+
+.global lbl_806698E0
+lbl_806698E0:
+	# ROM: 0x573740
+	.4byte 0x3FAAAAAB
+
+
+.global lbl_806698E4
+lbl_806698E4:
+	# ROM: 0x573744
+	.4byte 0x43340000
+
+
+.global lbl_806698E8
+lbl_806698E8:
+	# ROM: 0x573748
+	.4byte 0x42EC0000
+
+
+.global lbl_806698EC
+lbl_806698EC:
+	# ROM: 0x57374C
+	.4byte 0x42400000
+
+
+.global lbl_806698F0
+lbl_806698F0:
+	# ROM: 0x573750
+	.4byte 0x42100000
+
+
+.global lbl_806698F4
+lbl_806698F4:
+	# ROM: 0x573754
+	.4byte 0x40000000
+
+
+.global lbl_806698F8
+lbl_806698F8:
+	# ROM: 0x573758
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80669900
+lbl_80669900:
+	# ROM: 0x573760
+	.4byte 0x42700000
+
+
+.global lbl_80669904
+lbl_80669904:
+	# ROM: 0x573764
+	.4byte 0x0F091012
+
+
+.global lbl_80669908
+lbl_80669908:
+	# ROM: 0x573768
+	.4byte 0x42BC0000
+
+
+.global lbl_8066990C
+lbl_8066990C:
+	# ROM: 0x57376C
+	.4byte 0x42C00000
+
+
+.global lbl_80669910
+lbl_80669910:
+	# ROM: 0x573770
+	.4byte 0x3F333333
+
+
+.global lbl_80669914
+lbl_80669914:
+	# ROM: 0x573774
+	.4byte 0x42380000
+
+
+.global lbl_80669918
+lbl_80669918:
+	# ROM: 0x573778
+	.4byte 0x42140000
+
+
+.global lbl_8066991C
+lbl_8066991C:
+	# ROM: 0x57377C
+	.4byte 0x41F80000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80577258
+lbl_80577258:
+	.skip 0x10
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666848
+lbl_80666848:
+	.skip 0x8
+.global lbl_80666850
+lbl_80666850:
+	.skip 0x4
+.global lbl_80666854
+lbl_80666854:
+	.skip 0x4
+.global lbl_80666858
+lbl_80666858:
+	.skip 0x4
+.global lbl_8066685C
+lbl_8066685C:
+	.skip 0x4
+.global lbl_80666860
+lbl_80666860:
+	.skip 0x8
+.global lbl_80666868
+lbl_80666868:
+	.skip 0x8
+.global lbl_80666870
+lbl_80666870:
+	.skip 0x8
+.global lbl_80666878
+lbl_80666878:
+	.skip 0x8
+.global lbl_80666880
+lbl_80666880:
+	.skip 0x8
+.global lbl_80666888
+lbl_80666888:
+	.skip 0x8
+.global lbl_80666890
+lbl_80666890:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000B370
 lbl_8000B370:
@@ -4830,7 +5223,7 @@ lbl_8000B4B8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8010F170
 	.4byte 0x00000250

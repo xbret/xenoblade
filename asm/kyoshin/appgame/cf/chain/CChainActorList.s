@@ -2631,7 +2631,166 @@ func_8027CD08:
 /* 8027CDCC 0024638C  38 21 00 30 */	addi r1, r1, 0x30
 /* 8027CDD0 00246390  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CChainActorList_typestr
+cf_CChainActorList_typestr:
+	.asciz "cf::CChainActorList"
+
+.global reslist_cf_CChainActor_typestr
+reslist_cf_CChainActor_typestr:
+	.asciz "reslist<cf::CChainActor *>"
+	.balign 4
+
+.global _reslist_base_cf_CChainActor_typestr
+_reslist_base_cf_CChainActor_typestr:
+	.asciz "_reslist_base<cf::CChainActor *>"
+	.balign 4
+
+.global cf_CChainTemp_typestr
+cf_CChainTemp_typestr:
+	.asciz "cf::CChainTemp"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_8050A450
+lbl_8050A450:
+	# ROM: 0x506550
+	.4byte 0x0000000F
+	.4byte 0x00140019
+	.4byte 0x001E0000
+	.4byte 0
+
+
+.global lbl_8050A460
+lbl_8050A460:
+	# ROM: 0x506560
+	.float 1.0
+	.4byte 0x3F99999A
+	.4byte 0x3FB33333
+	.4byte 0x3FCCCCCD
+
+.global cf_Flusher_cf_CfObjectActor_typestr
+cf_Flusher_cf_CfObjectActor_typestr:
+	.asciz "cf::Flusher<cf::CfObjectActor>"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CChainActorList
+__vt__cf_CChainActorList:
+	.4byte __RTTI__cf_CChainActorList
+	.4byte 0
+	.4byte func_8027AF5C
+
+
+.global __vt__reslist_cf_CChainActor
+__vt__reslist_cf_CChainActor:
+	.4byte __RTTI__reslist_cf_CChainActor
+	.4byte 0
+	.4byte func_8027AEA4
+
+.global reslist_cf_CChainActor_hierarchy
+reslist_cf_CChainActor_hierarchy:
+	.4byte __RTTI___reslist_base_cf_CChainActor
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___reslist_base_cf_CChainActor
+__vt___reslist_base_cf_CChainActor:
+	.4byte __RTTI___reslist_base_cf_CChainActor
+	.4byte 0
+	.4byte func_8027ADF0
+
+
+.global __vt__cf_CChainTemp
+__vt__cf_CChainTemp:
+	.4byte __RTTI__cf_CChainTemp
+	.4byte 0
+	.4byte func_800D8E30
+	.4byte 0
+
+
+.global __vt__cf_Flusher_cf_CfObjectActor
+__vt__cf_Flusher_cf_CfObjectActor:
+	.4byte __RTTI__cf_Flusher_cf_CfObjectActor
+	.4byte 0
+	.4byte func_800D8E70
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CChainActorList
+__RTTI__cf_CChainActorList:
+	.4byte cf_CChainActorList_typestr
+	.4byte 0
+
+.global __RTTI__reslist_cf_CChainActor
+__RTTI__reslist_cf_CChainActor:
+	.4byte reslist_cf_CChainActor_typestr
+	.4byte reslist_cf_CChainActor_hierarchy
+
+.global __RTTI___reslist_base_cf_CChainActor
+__RTTI___reslist_base_cf_CChainActor:
+	.4byte _reslist_base_cf_CChainActor_typestr
+	.4byte 0
+
+.global __RTTI__cf_CChainTemp
+__RTTI__cf_CChainTemp:
+	.4byte cf_CChainTemp_typestr
+	.4byte 0
+
+
+.global lbl_80665378
+lbl_80665378:
+	# ROM: 0x570F58
+	.4byte 0x00000001
+	.4byte 0
+
+.global __RTTI__cf_Flusher_cf_CfObjectActor
+__RTTI__cf_Flusher_cf_CfObjectActor:
+	.4byte cf_Flusher_cf_CfObjectActor_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B310
+lbl_8066B310:
+	# ROM: 0x575170
+	.4byte 0x41F00000
+
+
+.global lbl_8066B314
+lbl_8066B314:
+	# ROM: 0x575174
+	.4byte 0x459C4000
+
+
+.global lbl_8066B318
+lbl_8066B318:
+	# ROM: 0x575178
+	.4byte 0x41A00000
+	.4byte 0
+
+
+.global lbl_8066B320
+lbl_8066B320:
+	# ROM: 0x575180
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066B328
+lbl_8066B328:
+	# ROM: 0x575188
+	.4byte 0
+	.4byte 0
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001881C
 lbl_8001881C:
@@ -2871,7 +3030,7 @@ lbl_80018A0C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8027AA50
 	.4byte 0x000001B0

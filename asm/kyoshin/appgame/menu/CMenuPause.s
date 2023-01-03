@@ -171,7 +171,127 @@ func_80252638:
 /* 80252638 0021BBF8  38 63 FF A4 */	addi r3, r3, -92
 /* 8025263C 0021BBFC  4B FF F7 BC */	b func_80251DF8
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global CMenuPause_typestr
+CMenuPause_typestr:
+	.asciz "CMenuPause"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80507C58
+lbl_80507C58:
+	.asciz "CMenuPause"
+	.asciz "mf70_cf60_syswin13.brlyt"
+	.asciz "mf70_cf60_syswin13_in.brlan"
+	.asciz "MNU_sysmes"
+	.asciz "name"
+	.asciz "txt_titlemes"
+	.asciz "MNU_kyeassign"
+	.asciz "help"
+	.asciz "txt_sysmes00"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "pic_btn00"
+	.asciz "txt_sysmes01"
+	.asciz "pic_btn01"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuPause
+__vt__CMenuPause:
+	.4byte __RTTI__CMenuPause
+	.4byte 0
+	.4byte func_80251DF8
+	.4byte CChildListNode_Reset
+	.4byte func_80251E6C
+	.4byte func_802521FC
+	.4byte func_8025228C
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuPause
+	.4byte 0xFFFFFFA8
+	.4byte func_80252628
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuPause
+	.4byte 0xFFFFFFA4
+	.4byte func_80252638
+	.4byte func_80252630
+	.4byte func_80252374
+
+.global CMenuPause_hierarchy
+CMenuPause_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000005C
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuPause
+__RTTI__CMenuPause:
+	.4byte CMenuPause_typestr
+	.4byte CMenuPause_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B08C
+lbl_8066B08C:
+	# ROM: 0x574EEC
+	.4byte 0x3F19999A
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806670B8
+lbl_806670B8:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80016C10
 lbl_80016C10:
@@ -195,7 +315,7 @@ lbl_80016C44:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80252410
 	.4byte 0x00000114

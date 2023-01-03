@@ -1447,7 +1447,179 @@ func_80184B0C:
 /* 80184B0C 0014E0CC  38 63 FF C8 */	addi r3, r3, -56
 /* 80184B10 0014E0D0  4B FF ED 4C */	b func_8018385C
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804FEFD0
+lbl_804FEFD0:
+	# ROM: 0x4FB0D0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000003
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0x00000003
+	.4byte 0x00000002
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global cf_CREvtModelPc_typestr
+cf_CREvtModelPc_typestr:
+	.asciz "cf::CREvtModelPc"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80535950
+lbl_80535950:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80183C1C
+
+.global lbl_8053595C
+lbl_8053595C:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801846C4
+
+
+.global lbl_80535968
+lbl_80535968:
+	# ROM: 0x531A68
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80183C90
+
+
+.global lbl_80535974
+lbl_80535974:
+	# ROM: 0x531A74
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801845F0
+
+.global lbl_80535980
+lbl_80535980:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801846C4
+
+.global lbl_8053598C
+lbl_8053598C:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80183C1C
+
+.global lbl_80535998
+lbl_80535998:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80183C90
+
+.global lbl_805359A4
+lbl_805359A4:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801845F0
+
+.global lbl_805359B0
+lbl_805359B0:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801846C4
+	.4byte 0
+
+
+.global __vt__cf_CREvtModelPc
+__vt__cf_CREvtModelPc:
+	.4byte __RTTI__cf_CREvtModelPc
+	.4byte 0
+	.4byte func_8018385C
+	.4byte func_801728F8
+	.4byte func_8017298C
+	.4byte func_80184728
+	.4byte func_801731A0
+	.4byte func_80184AE4
+	.4byte func_801838D8
+	.4byte func_801727DC
+	.4byte func_8018497C
+	.4byte func_8018496C
+	.4byte func_80172CC4
+	.4byte func_801848EC
+	.4byte func_80172CC0
+	.4byte func_80183978
+	.4byte func_80183A3C
+	.4byte __RTTI__cf_CREvtModelPc
+	.4byte 0xFFFFFFC8
+	.4byte func_80184B0C
+	.4byte func_80039E28
+	.4byte func_80184B04
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80184A24
+
+.global cf_CREvtModelPc_hierarchy
+cf_CREvtModelPc_hierarchy:
+	.4byte __RTTI__cf_CREvtObj
+	.4byte 0
+	.4byte __RTTI__cf_CREvtModel
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CREvtModelPc
+__RTTI__cf_CREvtModelPc:
+	.4byte cf_CREvtModelPc_typestr
+	.4byte cf_CREvtModelPc_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A1D8
+lbl_8066A1D8:
+	# ROM: 0x574038
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066A1E0
+lbl_8066A1E0:
+	# ROM: 0x574040
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000E834
 lbl_8000E834:
@@ -1531,7 +1703,7 @@ lbl_8000E8E0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80183724
 	.4byte 0x00000138

@@ -65,3 +65,15 @@ SJCRS_Unlock:
 /* 8039698C 0035FF4C  80 63 5D 24 */	lwz r3, sjcrs_msk@l(r3)
 /* 80396990 0035FF50  4B FC 20 60 */	b OSRestoreInterrupts
 /* 80396994 0035FF54  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global sjcrs_lvl
+sjcrs_lvl:
+	.skip 0x4
+.global sjcrs_msk
+sjcrs_msk:
+	.skip 0x4
+.global sj_init_count
+sj_init_count:
+	.skip 0x8

@@ -253,7 +253,7 @@ __RTTI__CDeviceFontLoader:
 	.4byte CDeviceFontLoader_typestr
 	.4byte CDeviceFontLoader_hierarchy
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001D1F4
 lbl_8001D1F4:
@@ -286,7 +286,7 @@ lbl_8001D21C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80454E80
 	.4byte 0x00000058

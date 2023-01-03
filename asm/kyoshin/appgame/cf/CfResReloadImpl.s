@@ -2310,7 +2310,248 @@ sinit_8016ED44:
 
 .4byte sinit_8016ED44
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfResReloadImpl_typestr
+cf_CfResReloadImpl_typestr:
+	.asciz "cf::CfResReloadImpl"
+	.4byte 0
+
+
+.global lbl_804FE970
+lbl_804FE970:
+	.asciz "NONE"
+	.asciz "wb_size_X"
+	.asciz "wb_size_Y"
+	.asciz "wb_size_Z"
+	.asciz "wb_radius"
+	.asciz "wa_size_X"
+	.asciz "wa_size_Y"
+	.asciz "wa_size_Z"
+	.asciz "wa_radius"
+	.asciz "a_S_FLG_MIN"
+	.asciz "a_S_FLG_MAX"
+	.asciz "b_S_FLG_MIN"
+	.asciz "b_S_FLG_MAX"
+	.asciz "mapATR"
+	.asciz "wb_time"
+	.asciz "wa_time"
+	.asciz "wb_pop_rate"
+	.asciz "wa_pop_rate"
+	.asciz "wb_end_time"
+	.asciz "wa_end_time"
+	.asciz "wb_type"
+	.asciz "wa_type"
+	.asciz "wind_WA"
+	.asciz "wind_WB"
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80534790
+lbl_80534790:
+	# ROM: 0x530890
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8016D3F8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8016D688
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8016DAF8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8016DE68
+
+
+.global __vt__cf_CfResReloadImpl
+__vt__cf_CfResReloadImpl:
+	.4byte __RTTI__cf_CfResReloadImpl
+	.4byte 0
+	.4byte func_8016DEEC
+	.4byte func_8016DE8C
+	.4byte func_8016D240
+	.4byte func_8016CE3C
+	.4byte func_8016CE5C
+	.4byte func_8016DCE4
+	.4byte func_8016CF1C
+	.4byte func_800BC2DC
+	.4byte func_8016DDE8
+	.4byte func_8016DED4
+	.4byte func_8016CFBC
+	.4byte func_800BEA38
+	.4byte func_800BED64
+	.4byte func_800BEE30
+	.4byte func_800BC3AC
+	.4byte func_8016D2FC
+	.4byte func_8016D390
+	.4byte func_8016CD5C
+	.4byte func_8016CFDC
+	.4byte func_8016D0C0
+	.4byte func_8016D144
+	.4byte func_8016D1D8
+	.4byte func_8016DECC
+	.4byte func_8016CF24
+
+.global cf_CfResReloadImpl_hierarchy
+cf_CfResReloadImpl_hierarchy:
+	.4byte __RTTI__cf_CfResImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80534838
+lbl_80534838:
+	# ROM: 0x530938
+	.4byte lbl_80669F98
+	.4byte lbl_80669F9C
+	.4byte lbl_80669FA4
+	.4byte lbl_80669FAC
+	.4byte lbl_80669FB4
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CfResReloadImpl
+__RTTI__cf_CfResReloadImpl:
+	.4byte cf_CfResReloadImpl_typestr
+	.4byte cf_CfResReloadImpl_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+	.global lbl_80669F58
+lbl_80669F58:
+	# ROM: 0x573DB8
+	.4byte 0
+
+
+.global lbl_80669F5C
+lbl_80669F5C:
+	# ROM: 0x573DBC
+	.float 1.0
+
+
+.global lbl_80669F60
+lbl_80669F60:
+	# ROM: 0x573DC0
+	.4byte 0x40000000
+
+
+.global lbl_80669F64
+lbl_80669F64:
+	# ROM: 0x573DC4
+	.4byte 0x3F7FBE77
+
+
+.global lbl_80669F68
+lbl_80669F68:
+	# ROM: 0x573DC8
+	.4byte 0x41A00000
+	.4byte 0
+
+
+.global lbl_80669F70
+lbl_80669F70:
+	# ROM: 0x573DD0
+	.4byte 0x42F00000
+
+
+.global lbl_80669F74
+lbl_80669F74:
+	# ROM: 0x573DD4
+	.float 1.0
+
+
+.global lbl_80669F78
+lbl_80669F78:
+	# ROM: 0x573DD8
+	.4byte 0x3F333333
+
+
+.global lbl_80669F7C
+lbl_80669F7C:
+	# ROM: 0x573DDC
+	.4byte 0x40000000
+
+
+.global lbl_80669F80
+lbl_80669F80:
+	# ROM: 0x573DE0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80669F88
+lbl_80669F88:
+	# ROM: 0x573DE8
+	.4byte 0
+
+
+.global lbl_80669F8C
+lbl_80669F8C:
+	# ROM: 0x573DEC
+	.float 10.0
+
+
+.global lbl_80669F90
+lbl_80669F90:
+	# ROM: 0x573DF0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.global lbl_80669F98
+lbl_80669F98:
+	.4byte 0
+
+.global lbl_80669F9C
+lbl_80669F9C:
+	.asciz "wind_M"
+	.balign 4
+
+.global lbl_80669FA4
+lbl_80669FA4:
+	.asciz "wind_D"
+	.balign 4
+
+.global lbl_80669FAC
+lbl_80669FAC:
+	.asciz "wind_E"
+	.balign 4
+
+.global lbl_80669FB4
+lbl_80669FB4:
+	.asciz "wind_N"
+	.balign 4
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666B68
+lbl_80666B68:
+	.skip 0x2
+.global lbl_80666B6A
+lbl_80666B6A:
+	.skip 0x2
+.global lbl_80666B6C
+lbl_80666B6C:
+	.skip 0x2
+.global lbl_80666B6E
+lbl_80666B6E:
+	.skip 0x2
+.global lbl_80666B70
+lbl_80666B70:
+	.skip 0x4
+.global lbl_80666B74
+lbl_80666B74:
+	.skip 0x4
+.global lbl_80666B78
+lbl_80666B78:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000E078
 lbl_8000E078:
@@ -2448,7 +2689,7 @@ lbl_8000E148:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8016CDC0
 	.4byte 0x0000007C

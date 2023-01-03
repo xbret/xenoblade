@@ -1226,3 +1226,50 @@ lbl_8056E688:
 	.4byte InvalidateWaveData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
 	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
 	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066C908
+lbl_8066C908:
+	# ROM: 0x576768
+	.float 1.0
+
+
+.global lbl_8066C90C
+lbl_8066C90C:
+	# ROM: 0x57676C
+	.4byte 0
+
+
+.global lbl_8066C910
+lbl_8066C910:
+	# ROM: 0x576770
+	.4byte 0x427C0000
+
+
+.global lbl_8066C914
+lbl_8066C914:
+	# ROM: 0x576774
+	.4byte 0x3C800000
+
+
+.global lbl_8066C918
+lbl_8066C918:
+	# ROM: 0x576778
+	.4byte 0x42FE0000
+	.4byte 0
+
+
+.global lbl_8066C920
+lbl_8066C920:
+	# ROM: 0x576780
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066C928
+lbl_8066C928:
+	# ROM: 0x576788
+	.4byte 0x43300000
+	.4byte 0

@@ -1423,7 +1423,248 @@ func_800888FC:
 /* 800888FC 00051EBC  38 60 00 01 */	li r3, 1
 /* 80088900 00051EC0  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_IObjectInfo_typestr
+cf_IObjectInfo_typestr:
+	.asciz "cf::IObjectInfo"
+
+.global cf_CfObjectImpl_typestr
+cf_CfObjectImpl_typestr:
+	.asciz "cf::CfObjectImpl"
+	.balign 4
+
+.global IActParamEvent_typestr
+IActParamEvent_typestr:
+	.asciz "IActParamEvent"
+	.balign 4
+
+
+.global lbl_804F7094
+lbl_804F7094:
+	.asciz "bgmlist"
+	.asciz "file_name"
+	.asciz "e%02d_loop"
+	.asciz "b%02d_loop"
+	.asciz "def_head"
+	.asciz "def_body"
+	.asciz "def_arm"
+	.asciz "def_waist"
+	.asciz "def_legg"
+	.asciz "def_wpn"
+	.asciz "%s_%02d"
+	.asciz "%02d%02df"
+	.asciz "BTL_pclist"
+	.asciz "def_mount"
+	.asciz "resource"
+	.asciz "%s%02d%02d"
+	.asciz "poplist%02d%02d"
+	.asciz "ma%02d%02d"
+	.asciz "mapID"
+	.asciz "rlt_lnd"
+	.asciz "jump_posX"
+	.asciz "jump_posY"
+	.asciz "jump_posZ"
+	.asciz "jump_rotY"
+	.asciz "/ev/realtime/%s.rev"
+	.asciz "category"
+	.asciz "posX"
+	.asciz "posY"
+	.asciz "posZ"
+	.asciz "areaR"
+	.asciz "areaY"
+	.asciz "areaX"
+	.asciz "areaZ"
+	.asciz "rotY"
+	.2byte 0x0000
+	
+.global cf_CtrlEnemy_typestr
+cf_CtrlEnemy_typestr:
+	.asciz "cf::CtrlEnemy"
+	.balign 4
+
+.global cf_CtrlAct_typestr
+cf_CtrlAct_typestr:
+	.asciz "cf::CtrlAct"
+
+.global cf_CtrlBase_typestr
+cf_CtrlBase_typestr:
+	.asciz "cf::CtrlBase"
+	.balign 4
+
+.global CActInput_typestr
+CActInput_typestr:
+	.asciz "CActInput"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global cf_CfObjectImpl_hierarchy
+cf_CfObjectImpl_hierarchy:
+	.4byte __RTTI__IActParamEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CtrlEnemy
+__vt__cf_CtrlEnemy:
+	.4byte __RTTI__cf_CtrlEnemy
+	.4byte 0
+	.4byte func_800876C8
+	.4byte func_8008772C
+	.4byte func_800888FC
+	.4byte func_800D5860
+	.4byte func_800888E8
+	.4byte func_800888E0
+	.4byte func_800888D8
+	.4byte func_800888D0
+	.4byte func_800888C8
+	.4byte func_800888C0
+	.4byte func_800888B8
+	.4byte func_800888B0
+	.4byte func_800888A8
+	.4byte func_800888A0
+	.4byte func_80088898
+	.4byte func_80088890
+	.4byte func_80088888
+	.4byte func_80088880
+	.4byte func_80088878
+	.4byte func_80088870
+	.4byte func_800D1F0C
+	.4byte func_800D1CFC
+	.4byte func_800D11B0
+	.4byte func_80088800
+	.4byte func_8008884C
+	.4byte func_80088858
+	.4byte func_80088860
+	.4byte func_80088868
+	.4byte func_800D2A5C
+	.4byte func_800D2D64
+	.4byte func_800888F4
+	.4byte func_800888F0
+	.4byte func_800D34D4
+	.4byte func_800877A8
+
+.global cf_CtrlEnemy_hierarchy
+cf_CtrlEnemy_hierarchy:
+	.4byte __RTTI__CActInput
+	.4byte 0
+	.4byte __RTTI__cf_CtrlBase
+	.4byte 0
+	.4byte __RTTI__cf_CtrlAct
+	.4byte 0
+	.4byte 0
+
+.global cf_CtrlAct_hierarchy
+cf_CtrlAct_hierarchy:
+	.4byte __RTTI__CActInput
+	.4byte 0
+	.4byte __RTTI__cf_CtrlBase
+	.4byte 0
+	.4byte 0
+
+.global cf_CtrlBase_hierarchy
+cf_CtrlBase_hierarchy:
+	.4byte __RTTI__CActInput
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_IObjectInfo
+__RTTI__cf_IObjectInfo:
+	.4byte cf_IObjectInfo_typestr
+	.4byte 0
+
+
+.global __RTTI__cf_CfObjectImpl
+__RTTI__cf_CfObjectImpl:
+	.4byte cf_CfObjectImpl_typestr
+	.4byte cf_CfObjectImpl_hierarchy
+
+.global __RTTI__IActParamEvent
+__RTTI__IActParamEvent:
+	.4byte IActParamEvent_typestr
+	.4byte 0
+
+.global __RTTI__cf_CtrlEnemy
+__RTTI__cf_CtrlEnemy:
+	.4byte cf_CtrlEnemy_typestr
+	.4byte cf_CtrlEnemy_hierarchy
+
+.global __RTTI__cf_CtrlAct
+__RTTI__cf_CtrlAct:
+	.4byte cf_CtrlAct_typestr
+	.4byte cf_CtrlAct_hierarchy
+
+
+.global __RTTI__cf_CtrlBase
+__RTTI__cf_CtrlBase:
+	.4byte cf_CtrlBase_typestr
+	.4byte cf_CtrlBase_hierarchy
+
+
+.global __RTTI__CActInput
+__RTTI__CActInput:
+	.4byte CActInput_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80668DF8
+lbl_80668DF8:
+	# ROM: 0x572C58
+	.4byte 0
+
+
+.global lbl_80668DFC
+lbl_80668DFC:
+	# ROM: 0x572C5C
+	.float 10.0
+
+
+.global lbl_80668E00
+lbl_80668E00:
+	# ROM: 0x572C60
+	.4byte 0x40800000
+
+
+.global lbl_80668E04
+lbl_80668E04:
+	# ROM: 0x572C64
+	.float 1.0
+
+
+.global lbl_80668E08
+lbl_80668E08:
+	# ROM: 0x572C68
+	.4byte 0x3E19999A
+
+
+.global lbl_80668E0C
+lbl_80668E0C:
+	# ROM: 0x572C6C
+	.float 100.0
+
+
+.global lbl_80668E10
+lbl_80668E10:
+	# ROM: 0x572C70
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80668E18
+lbl_80668E18:
+	# ROM: 0x572C78
+	.4byte 0x41F00000
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80008AAC
 lbl_80008AAC:
@@ -1498,7 +1739,7 @@ lbl_80008B4C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 
 	.4byte func_800875A8

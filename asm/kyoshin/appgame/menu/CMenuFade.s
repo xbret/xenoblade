@@ -1831,7 +1831,151 @@ func_80114E88:
 /* 80114F48 000DE508  38 21 00 70 */	addi r1, r1, 0x70
 /* 80114F4C 000DE50C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuFade_typestr
+CMenuFade_typestr:
+	.asciz "CMenuFade"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_804F96F0
+lbl_804F96F0:
+	.asciz "CMenuFade"
+	.asciz "fadeout.brlyt"
+	.asciz "fadeout.brlan"
+	.asciz "win_black"
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuFade
+__vt__CMenuFade:
+	.4byte __RTTI__CMenuFade
+	.4byte 0
+	.4byte func_80113700
+	.4byte CChildListNode_Reset
+	.4byte func_80113774
+	.4byte func_801139A4
+	.4byte func_80113A24
+	.4byte func_80113BF8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuFade
+	.4byte 0xFFFFFFA8
+	.4byte func_80113E38
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuFade
+	.4byte 0xFFFFFFA4
+	.4byte func_80113E48
+	.4byte func_80113E40
+	.4byte func_80113BFC
+
+.global CMenuFade_hierarchy
+CMenuFade_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000005C
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuFade
+__RTTI__CMenuFade:
+	.4byte CMenuFade_typestr
+	.4byte CMenuFade_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669920
+lbl_80669920:
+	# ROM: 0x573780
+	.4byte 0
+
+
+.global lbl_80669924
+lbl_80669924:
+	# ROM: 0x573784
+	.float 1.0
+
+
+.global lbl_80669928
+lbl_80669928:
+	# ROM: 0x573788
+	.4byte 0x41C80000
+	.4byte 0
+
+
+.global lbl_80669930
+lbl_80669930:
+	# ROM: 0x573790
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80669938
+lbl_80669938:
+	# ROM: 0x573798
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80669940
+lbl_80669940:
+	# ROM: 0x5737A0
+	.4byte 0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666898
+lbl_80666898:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000B4C0
 lbl_8000B4C0:
@@ -1943,7 +2087,7 @@ lbl_8000B5CC:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_801135E0
 	.4byte 0x00000120

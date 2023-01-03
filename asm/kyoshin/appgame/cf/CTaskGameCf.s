@@ -877,7 +877,7 @@ lbl_80668624:
 	# ROM: 0x572484
 	.float 1.0
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80006E68
 lbl_80006E68:
@@ -940,7 +940,7 @@ lbl_80006EC0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80044168
 	.4byte 0x000000C8

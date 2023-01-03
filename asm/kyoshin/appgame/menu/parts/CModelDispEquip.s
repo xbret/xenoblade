@@ -2689,7 +2689,202 @@ func_80201A7C:
 
 .4byte sinit_802019F8
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80503728
+lbl_80503728:
+	.4byte 0x00000010
+	.4byte 0x00100000
+	.4byte 0x00200000
+
+.global lbl_80503734
+lbl_80503734:
+	.4byte 0x00000010
+	.4byte 0x00100000
+	.4byte 0x00200000
+
+.global CModelDispEquip_typestr
+CModelDispEquip_typestr:
+	.asciz "CModelDispEquip"
+
+
+.global lbl_80503750
+lbl_80503750:
+	.asciz "BBB"
+	.asciz "FFF"
+	.asciz "AAA"
+	.asciz "core"
+	.asciz "/chr/pc/mp%02d%02d%02d.mca"
+	.asciz "ITM_wpnlist"
+	.asciz "resource"
+	.asciz "/chr/wp/mw%s.mca"
+	.asciz "def_mount"
+	.asciz "bat_mount"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CModelDispEquip
+__vt__CModelDispEquip:
+	.4byte __RTTI__CModelDispEquip
+	.4byte 0
+	.4byte func_801FF75C
+	.4byte func_80039E28
+	.4byte func_80200DE0
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CModelDispEquip
+	.4byte 0xFFFFFFFC
+	.4byte func_80201A6C
+	.4byte func_80201A64
+	.4byte func_800550D8
+	.4byte func_80201A5C
+	.4byte func_80201A54
+	.4byte func_80201A4C
+	.4byte func_800554D8
+	.4byte func_800554D0
+	.4byte func_80201A44
+	.4byte __RTTI__CModelDispEquip
+	.4byte 0xFFFFFFF8
+	.4byte func_80201A7C
+	.4byte func_80201A74
+	.4byte func_80200F9C
+	.4byte func_80201298
+	.4byte func_8020131C
+	.4byte func_80201440
+	.4byte func_80201318
+	.4byte func_80201444
+
+.global CModelDispEquip_hierarchy
+CModelDispEquip_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665030
+lbl_80665030:
+	# ROM: 0x570C10
+	.4byte 0x00000007
+	.4byte 0x00000012
+
+.global __RTTI__CModelDispEquip
+__RTTI__CModelDispEquip:
+	.4byte CModelDispEquip_typestr
+	.4byte CModelDispEquip_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AB30
+lbl_8066AB30:
+	# ROM: 0x574990
+	.float 1.0
+
+
+.global lbl_8066AB34
+lbl_8066AB34:
+	# ROM: 0x574994
+	.4byte 0
+
+
+.global lbl_8066AB38
+lbl_8066AB38:
+	# ROM: 0x574998
+	.4byte 0x40A00000
+
+
+.global lbl_8066AB3C
+lbl_8066AB3C:
+	# ROM: 0x57499C
+	.float 0.2
+
+
+.global lbl_8066AB40
+lbl_8066AB40:
+	# ROM: 0x5749A0
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066AB44
+lbl_8066AB44:
+	# ROM: 0x5749A4
+	.4byte 0x40800000
+
+
+.global lbl_8066AB48
+lbl_8066AB48:
+	# ROM: 0x5749A8
+	.4byte 0x40600000
+
+
+.global lbl_8066AB4C
+lbl_8066AB4C:
+	# ROM: 0x5749AC
+	.float -1.0
+
+
+.global lbl_8066AB50
+lbl_8066AB50:
+	# ROM: 0x5749B0
+	.4byte 0xBFC00000
+
+
+.global lbl_8066AB54
+lbl_8066AB54:
+	# ROM: 0x5749B4
+	.4byte 0x40000000
+
+
+.global lbl_8066AB58
+lbl_8066AB58:
+	# ROM: 0x5749B8
+	.float 8.0
+
+
+.global lbl_8066AB5C
+lbl_8066AB5C:
+	# ROM: 0x5749BC
+	.float 1.5
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80579D48
+lbl_80579D48:
+	.skip 0xC
+.global lbl_80579D54
+lbl_80579D54:
+	.skip 0xC
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80012960
 lbl_80012960:
@@ -2878,7 +3073,7 @@ lbl_80012ACC:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801FF564
 	.4byte 0x00000178

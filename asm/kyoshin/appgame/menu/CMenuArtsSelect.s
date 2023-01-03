@@ -7663,7 +7663,413 @@ func_80108C50:
 /* 80108C50 000D2210  38 63 FF A0 */	addi r3, r3, -96
 /* 80108C54 000D2214  4B FF 97 08 */	b func_8010235C
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F88F0
+lbl_804F88F0:
+	# ROM: 0x4F49F0
+	.4byte 0xFF2AFF5C
+	.4byte 0xFF8EFFC0
+	.4byte 0x00000040
+	.4byte 0x007200A4
+	.4byte 0x00D60000
+	.4byte 0xFF66FF66
+	.4byte 0xFF66FF66
+	.4byte 0xFF6EFF66
+	.4byte 0xFF66FF66
+	.4byte 0xFF660000
+	.4byte 0x3F4CCCCD
+	.4byte 0x3F4CCCCD
+	.4byte 0x3F4CCCCD
+	.4byte 0x3F4CCCCD
+	.4byte 0x3F666666
+	.4byte 0x3F4CCCCD
+	.4byte 0x3F4CCCCD
+	.4byte 0x3F4CCCCD
+	.4byte 0x3F4CCCCD
+
+
+.global lbl_804F893C
+lbl_804F893C:
+	# ROM: 0x4F4A3C
+	.4byte 0x00010002
+	.4byte 0x00030004
+	.4byte 0x00010000
+
+.global lbl_804F8948
+lbl_804F8948:
+	.4byte 0x00000010
+	.4byte 0x00100000
+	.4byte 0x00200000
+	.4byte 0
+
+.global lbl_804F8958
+lbl_804F8958:
+	.4byte 0x008C008D
+	.4byte 0x008E008F
+	.4byte 0x008C008C
+	.4byte 0x008C008C
+
+.global lbl_804F8968
+lbl_804F8968:
+	.4byte 0x00880089
+	.4byte 0x008A008B
+	.4byte 0x007D007D
+	.4byte 0x007D007D
+
+.global CMenuArtsSelect_typestr
+CMenuArtsSelect_typestr:
+	.asciz "CMenuArtsSelect"
+	.asciz "IScnRender"
+	.balign 4
+	.4byte 0
+	.asciz "cf::IObjectInfo"
+
+.global IUIBattle_typestr
+IUIBattle_typestr:
+	.asciz "IUIBattle"
+	.balign 4
+
+.global CTTask_IUIBattle_typestr
+CTTask_IUIBattle_typestr:
+	.asciz "CTTask<IUIBattle>"
+	.balign 4
+	.asciz "IWorkEvent"
+	.balign 4
+	.asciz "CProcess"
+	.balign 4
+	.asciz "CChildListNode"
+	.balign 4
+	.asciz "CDoubleListNode"
+
+
+.global lbl_804F8A00
+lbl_804F8A00:
+	.asciz "CMenuArtsSelect"
+	.asciz "mf15_arts20_base.brlyt"
+	.asciz "mf15_arts20_base_in.brlan"
+	.asciz "mf15_arts20_base_out.brlan"
+	.asciz "txt_helpmess"
+	.asciz "txt_suject"
+	.asciz "mf15_arts22_cursor.brlyt"
+	.asciz "mf15_arts22_cursor_on.brlan"
+	.asciz "mf15_arts22_cursor_roop.brlan"
+	.asciz "nul_arts00"
+	.asciz "mf15_arts26_effect_gage.brlyt"
+	.asciz "mf15_arts26_effect_gage_full.brlan"
+	.asciz "mf15_arts26_effect_gage_full_in.brlan"
+	.asciz "nul_gage"
+	.asciz "mf15_arts28_effect_lock.brlyt"
+	.asciz "mf15_arts28_effect_lock_in.brlan"
+	.asciz "mf15_arts28_effect_lock_out.brlan"
+	.asciz "nul_lock"
+	.asciz "mf15_arts29_effect_range.brlyt"
+	.asciz "mf15_arts29_effect_range_in.brlan"
+	.asciz "nul_range"
+	.asciz "mf15_arts25_effect_kizuna.brlyt"
+	.asciz "mf15_arts25_effect_kizuna_in_out.brlan"
+	.asciz "nul_kizuna"
+	.asciz "MNU_battle"
+	.asciz "name"
+	.asciz "help"
+	.asciz "pic_arrow_o00"
+	.asciz "pic_arrow_u00"
+	.asciz "pic_gage"
+	.asciz "pic_gage01"
+	.asciz "arm_type"
+	.asciz "pc_arts"
+	.asciz "icon_base"
+	.asciz "icon"
+	.asciz "pic_arts00"
+	.asciz "pic_icon00"
+	.asciz "pic_arts%02d"
+	.asciz "pic_icon%02d"
+	.asciz "pic_ref%02d"
+	.asciz "pic_messwin00"
+	.asciz "pic_messwin01"
+	.asciz "pic_messwin02"
+	.asciz "pic_messwin03"
+	.asciz "pic_messwin04"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8052F780
+lbl_8052F780:
+	# ROM: 0x52B880
+	.4byte switch_80103498
+	.4byte switch_801034CC
+	.4byte switch_80103568
+	.4byte switch_80103574
+	.4byte switch_801035F4
+	.4byte switch_80103600
+	.4byte switch_8010364C
+	.4byte switch_80103658
+	.4byte switch_801036BC
+
+
+.global lbl_8052F7A4
+lbl_8052F7A4:
+	# ROM: 0x52B8A4
+	.4byte switch_8010743C
+	.4byte switch_80107444
+	.4byte switch_8010744C
+	.4byte switch_80107454
+	.4byte switch_8010745C
+	.4byte switch_80107464
+	.4byte switch_8010746C
+	.4byte switch_80107474
+	.4byte switch_8010747C
+
+
+.global lbl_8052F7C8
+lbl_8052F7C8:
+	# ROM: 0x52B8C8
+	.4byte switch_80107488
+	.4byte switch_80107344
+	.4byte switch_80107368
+	.4byte switch_80107370
+	.4byte switch_80107378
+	.4byte switch_80107398
+	.4byte switch_801073A0
+	.4byte switch_801073A8
+	.4byte switch_801073B0
+	.4byte switch_80107488
+	.4byte switch_80107488
+	.4byte switch_80107488
+	.4byte switch_80107378
+
+
+.global lbl_8052F7FC
+lbl_8052F7FC:
+	# ROM: 0x52B8FC
+	.4byte switch_80107738
+	.4byte switch_80107740
+	.4byte switch_80107748
+	.4byte switch_80107750
+	.4byte switch_80107758
+	.4byte switch_80107760
+	.4byte switch_80107768
+	.4byte switch_80107770
+	.4byte switch_80107778
+
+
+.global lbl_8052F820
+lbl_8052F820:
+	# ROM: 0x52B920
+	.4byte switch_80107784
+	.4byte switch_80107640
+	.4byte switch_80107664
+	.4byte switch_8010766C
+	.4byte switch_80107674
+	.4byte switch_80107694
+	.4byte switch_8010769C
+	.4byte switch_801076A4
+	.4byte switch_801076AC
+	.4byte switch_80107784
+	.4byte switch_80107784
+	.4byte switch_80107784
+	.4byte switch_80107674
+
+
+.global __vt__CMenuArtsSelect
+__vt__CMenuArtsSelect:
+	.4byte __RTTI__CMenuArtsSelect
+	.4byte 0
+	.4byte func_8010235C
+	.4byte CChildListNode_Reset
+	.4byte func_801023DC
+	.4byte func_80103038
+	.4byte func_80103280
+	.4byte func_80108BE8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuArtsSelect
+	.4byte 0xFFFFFFA8
+	.4byte func_80108C30
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuArtsSelect
+	.4byte 0xFFFFFFA4
+	.4byte func_80108C40
+	.4byte func_80108C38
+	.4byte __RTTI__CMenuArtsSelect
+	.4byte 0xFFFFFFA0
+	.4byte func_80108C50
+	.4byte func_80108C48
+	.4byte func_80103E34
+	.4byte func_801041F4
+
+.global CMenuArtsSelect_hierarchy
+CMenuArtsSelect_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0x00000060
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000005C
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIBattle
+	.4byte 0
+	.4byte __RTTI__IUIBattle
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__CMenuArtsSelect
+__RTTI__CMenuArtsSelect:
+	.4byte CMenuArtsSelect_typestr
+	.4byte CMenuArtsSelect_hierarchy
+
+.global __RTTI__IUIBattle
+__RTTI__IUIBattle:
+	.4byte IUIBattle_typestr
+	.4byte IUIBattle_hierarchy
+
+.global __RTTI__CTTask_IUIBattle
+__RTTI__CTTask_IUIBattle:
+	.4byte CTTask_IUIBattle_typestr
+	.4byte CTTask_IUIBattle_hierarchy
+
+
+.global lbl_80664700
+lbl_80664700:
+	# ROM: 0x5702E0
+	.4byte 0
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_806697F0
+lbl_806697F0:
+	# ROM: 0x573650
+	.4byte 0
+
+
+.global lbl_806697F4
+lbl_806697F4:
+	# ROM: 0x573654
+	.float 1.0
+
+
+.global lbl_806697F8
+lbl_806697F8:
+	# ROM: 0x573658
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80669800
+lbl_80669800:
+	# ROM: 0x573660
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80669808
+lbl_80669808:
+	# ROM: 0x573668
+	.4byte 0xC2A00000
+
+
+.global lbl_8066980C
+lbl_8066980C:
+	# ROM: 0x57366C
+	.float -1.0
+
+
+.global lbl_80669810
+lbl_80669810:
+	# ROM: 0x573670
+	.4byte 0x00000106
+
+
+.global lbl_80669814
+lbl_80669814:
+	# ROM: 0x573674
+	.4byte 0x05000000
+
+
+.global lbl_80669818
+lbl_80669818:
+	# ROM: 0x573678
+	.float 100.0
+
+
+.global lbl_8066981C
+lbl_8066981C:
+	# ROM: 0x57367C
+	.4byte 0x00000106
+
+
+.global lbl_80669820
+lbl_80669820:
+	# ROM: 0x573680
+	.4byte 0x05000000
+
+
+.global lbl_80669824
+lbl_80669824:
+	# ROM: 0x573684
+	.float 10.0
+
+
+.global lbl_80669828
+lbl_80669828:
+	# ROM: 0x573688
+	.4byte 0x44610000
+
+
+.global lbl_8066982C
+lbl_8066982C:
+	# ROM: 0x57368C
+	.4byte 0x441C4000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666818
+lbl_80666818:
+	.skip 0x4
+.global lbl_8066681C
+lbl_8066681C:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000AF14
 lbl_8000AF14:
@@ -7861,7 +8267,7 @@ lbl_8000B0A4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80102020
 	.4byte 0x00000288

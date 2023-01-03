@@ -214,3 +214,32 @@ sinit_8042129C:
 .global lbl_8056E510
 lbl_8056E510:
 	.asciz "<< NW4R    - SND \tfinal   build: Nov 20 2008 03:40:00 (0x4199_60831) >>"
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665E18
+lbl_80665E18:
+	# ROM: 0x5719F8
+	.4byte lbl_8056E510
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8063BB00
+lbl_8063BB00:
+	.skip 0x10
+.global lbl_8063BB10
+lbl_8063BB10:
+	.skip 0x330
+.global lbl_8063BE40
+lbl_8063BE40:
+	.skip 0x16E00
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667DE8
+lbl_80667DE8:
+	.skip 0x4
+.global lbl_80667DEC
+lbl_80667DEC:
+	.skip 0x4

@@ -310,3 +310,17 @@ GetAnmResult__Q34nw4r3g3d12ResAnmTexSrtCFPQ34nw4r3g3d15TexSrtAnmResultUlf:
 /* 803DE5E4 003A7BA4  7C 08 03 A6 */	mtlr r0
 /* 803DE5E8 003A7BA8  38 21 00 70 */	addi r1, r1, 0x70
 /* 803DE5EC 003A7BAC  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066C2D8
+lbl_8066C2D8:
+	# ROM: 0x576138
+	.float 1.0
+
+
+.global lbl_8066C2DC
+lbl_8066C2DC:
+	# ROM: 0x57613C
+	.4byte 0

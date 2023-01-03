@@ -154,3 +154,11 @@ SetGP__Q34nw4r3g3d3FogCFv:
 /* 803FD318 003C68D8  7C 08 03 A6 */	mtlr r0
 /* 803FD31C 003C68DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803FD320 003C68E0  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C4F8
+lbl_8066C4F8:
+	# ROM: 0x576358
+	.4byte 0
+	.4byte 0

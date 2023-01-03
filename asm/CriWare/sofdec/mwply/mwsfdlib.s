@@ -653,3 +653,18 @@ lbl_8051E408:
 	.asciz "SFD ERROR(%08X): Decode picture error. For example, this library can't decode MPEG-2 video."
 	.asciz "SFD ERROR(%08X)"
 	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80602958
+lbl_80602958:
+	.skip 0x4
+.global lbl_8060295C
+lbl_8060295C:
+	.skip 0x4
+.global lbl_80602960
+lbl_80602960:
+	.skip 0x8
+.global mwsfd_libwork
+mwsfd_libwork:
+	.skip 0x3548

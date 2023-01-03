@@ -144,3 +144,12 @@ lbl_80520D94:
 	.4byte 0x00490050
 	.4byte 0x0041003C
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8061D708
+lbl_8061D708:
+	.skip 0x4
+.global lbl_8061D70C
+lbl_8061D70C:
+	.skip 0x4

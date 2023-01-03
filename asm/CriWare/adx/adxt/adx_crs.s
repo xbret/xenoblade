@@ -45,3 +45,12 @@ ADXCRS_Enter:
 .global ADXCRS_Leave
 ADXCRS_Leave:
 /* 80389408 003529C8  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E99B8
+lbl_805E99B8:
+	.skip 0x4
+.global lbl_805E99BC
+lbl_805E99BC:
+	.skip 0x4

@@ -8475,7 +8475,391 @@ func_80285890:
 /* 80285920 0024EEE0  38 21 00 40 */	addi r1, r1, 0x40
 /* 80285924 0024EEE4  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CSysWinScenarioLog_typestr
+CSysWinScenarioLog_typestr:
+	.asciz "CSysWinScenarioLog"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_8050A4A8
+lbl_8050A4A8:
+	.asciz "/menu/ScenarioLog.arc"
+	.asciz "/common/jp/bdat_slog.bin"
+	.asciz "flag"
+	.asciz "MNU_main"
+	.asciz "name"
+	.asciz "txt_titlemes"
+	.asciz "help"
+	.asciz "txt_sysmes01"
+	.asciz "MNU_kyeassign"
+	.asciz "txt_close00"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "pic_btn00"
+	.asciz "CSysWinScenarioLog"
+	.asciz "arc"
+	.asciz "mf70_cf60_syswin14.brlyt"
+	.asciz "mf70_cf60_syswin14_in.brlan"
+	.asciz "MNU_scenario"
+
+.global cf_CChainActorEne_typestr
+cf_CChainActorEne_typestr:
+	.asciz "cf::CChainActorEne"
+	.balign 4
+	.4byte 0
+
+.global cf_CChainActorPc_typestr
+cf_CChainActorPc_typestr:
+	.asciz "cf::CChainActorPc"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_8050A5C8
+lbl_8050A5C8:
+	# ROM: 0x5066C8
+	.4byte 0x00000002
+	.4byte 0x00000004
+	.4byte 0x00000005
+	.4byte 0x00000006
+	.4byte 0x00000007
+	.4byte 0x00000008
+
+
+.global lbl_8050A5E0
+lbl_8050A5E0:
+	# ROM: 0x5066E0
+	.4byte 0
+	.float 1.0
+	.4byte 0x3F99999A
+	.float 1.5
+	.4byte 0x3FE66666
+	.4byte 0x40000000
+	.4byte 0x40200000
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CSysWinScenarioLog
+__vt__CSysWinScenarioLog:
+	.4byte __RTTI__CSysWinScenarioLog
+	.4byte 0
+	.4byte func_8027E5B4
+	.4byte CChildListNode_Reset
+	.4byte func_8027E628
+	.4byte func_8027E6DC
+	.4byte func_8027E7D0
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CSysWinScenarioLog
+	.4byte 0xFFFFFF94
+	.4byte func_8027EE70
+	.4byte func_80039E28
+	.4byte func_8027EE68
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CSysWinScenarioLog
+	.4byte 0xFFFFFF90
+	.4byte func_8027EE80
+	.4byte func_8027EE78
+	.4byte func_8027E93C
+	.4byte func_8027EC80
+
+.global CSysWinScenarioLog_hierarchy
+CSysWinScenarioLog_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000070
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CChainActorEne
+__vt__cf_CChainActorEne:
+	.4byte __RTTI__cf_CChainActorEne
+	.4byte 0
+	.4byte func_8027AD30
+	.4byte func_80281308
+	.4byte func_80279B34
+	.4byte func_8028133C
+	.4byte func_80279E48
+	.4byte func_80279F6C
+	.4byte func_80281384
+	.4byte func_8027A338
+	.4byte func_8027A58C
+	.4byte func_8027A8C8
+	.4byte func_80281438
+	.4byte func_80281460
+	.4byte func_80278E00
+	.4byte func_80278E04
+	.4byte func_8028146C
+	.4byte func_802818E4
+	.4byte func_802814E4
+	.4byte func_802815B8
+	.4byte func_802816FC
+	.4byte func_8028183C
+	.4byte func_8027976C
+	.4byte func_8027A584
+	.4byte func_802818DC
+	.4byte func_802818D4
+	.4byte func_80278F70
+	.4byte func_80278F5C
+	.4byte func_8027A324
+	.4byte func_8027A9D0
+
+.global cf_CChainActorEne_hierarchy
+cf_CChainActorEne_hierarchy:
+	.4byte __RTTI__cf_CChainActor
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CChainActorPc
+__vt__cf_CChainActorPc:
+	.4byte __RTTI__cf_CChainActorPc
+	.4byte 0
+	.4byte func_8027AC78
+	.4byte func_80281924
+	.4byte func_80281958
+	.4byte func_80281CB8
+	.4byte func_80281CF0
+	.4byte func_80281F38
+	.4byte func_80281FA0
+	.4byte func_8027A338
+	.4byte func_8027A58C
+	.4byte func_8027A8C8
+	.4byte func_80282020
+	.4byte func_80282048
+	.4byte func_80282490
+	.4byte func_8028248C
+	.4byte func_80282054
+	.4byte func_8028246C
+	.4byte func_80282480
+	.4byte func_8028209C
+	.4byte func_802820D4
+	.4byte func_80282100
+	.4byte func_80282174
+	.4byte func_80282464
+	.4byte func_8027A9D8
+	.4byte func_8028245C
+	.4byte func_80278F70
+	.4byte func_802822F8
+	.4byte func_8027A324
+	.4byte func_802821E0
+
+.global cf_CChainActorPc_hierarchy
+cf_CChainActorPc_hierarchy:
+	.4byte __RTTI__cf_CChainActor
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8053BD20
+lbl_8053BD20:
+	# ROM: 0x537E20
+	.4byte switch_8028383C
+	.4byte switch_80283848
+	.4byte switch_80283868
+	.4byte switch_802838A8
+	.4byte switch_802838E8
+	.4byte switch_80283928
+	.4byte switch_80283978
+	.4byte switch_802839C8
+	.4byte switch_80283A18
+	.4byte switch_80283A68
+	.4byte switch_80283AB8
+	.4byte switch_80283B08
+
+
+.global lbl_8053BD50
+lbl_8053BD50:
+	# ROM: 0x537E50
+	.4byte switch_80283B10
+	.4byte switch_80283608
+	.4byte switch_80283648
+	.4byte switch_80283688
+	.4byte switch_802836C8
+	.4byte switch_80283708
+	.4byte switch_80283748
+	.4byte switch_80283790
+	.4byte switch_802837D0
+	.4byte switch_80283810
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CSysWinScenarioLog
+__RTTI__CSysWinScenarioLog:
+	.4byte CSysWinScenarioLog_typestr
+	.4byte CSysWinScenarioLog_hierarchy
+
+.global __RTTI__cf_CChainActorEne
+__RTTI__cf_CChainActorEne:
+	.4byte cf_CChainActorEne_typestr
+	.4byte cf_CChainActorEne_hierarchy
+
+.global __RTTI__cf_CChainActorPc
+__RTTI__cf_CChainActorPc:
+	.4byte cf_CChainActorPc_typestr
+	.4byte cf_CChainActorPc_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B378
+lbl_8066B378:
+	# ROM: 0x5751D8
+	.float 1.0
+	.4byte 0
+
+
+.global lbl_8066B380
+lbl_8066B380:
+	# ROM: 0x5751E0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066B388
+lbl_8066B388:
+	# ROM: 0x5751E8
+	.4byte 0
+
+
+.global lbl_8066B38C
+lbl_8066B38C:
+	# ROM: 0x5751EC
+	.4byte 0x3E19999A
+
+
+.global lbl_8066B390
+lbl_8066B390:
+	# ROM: 0x5751F0
+	.float 1.0
+
+
+.global lbl_8066B394
+lbl_8066B394:
+	# ROM: 0x5751F4
+	.4byte 0
+
+
+.global lbl_8066B398
+lbl_8066B398:
+	# ROM: 0x5751F8
+	.4byte 0x3C23D70A
+	.4byte 0
+
+
+.global lbl_8066B3A0
+lbl_8066B3A0:
+	# ROM: 0x575200
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066B3A8
+lbl_8066B3A8:
+	# ROM: 0x575208
+	.4byte 0x41F00000
+
+
+.global lbl_8066B3AC
+lbl_8066B3AC:
+	# ROM: 0x57520C
+	.4byte 0
+
+
+.global lbl_8066B3B0
+lbl_8066B3B0:
+	# ROM: 0x575210
+	.float 0.2
+	.4byte 0
+
+
+.global lbl_8066B3B8
+lbl_8066B3B8:
+	# ROM: 0x575218
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066B3C0
+lbl_8066B3C0:
+	# ROM: 0x575220
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066B3C8
+lbl_8066B3C8:
+	# ROM: 0x575228
+	.4byte 0x43480000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806671F8
+lbl_806671F8:
+	.skip 0x4
+.global lbl_806671FC
+lbl_806671FC:
+	.skip 0x4
+.global lbl_80667200
+lbl_80667200:
+	.skip 0x1
+.global lbl_80667201
+lbl_80667201:
+	.skip 0x1
+.global lbl_80667202
+lbl_80667202:
+	.skip 0x2
+.global lbl_80667204
+lbl_80667204:
+	.skip 0x4
+.global lbl_80667208
+lbl_80667208:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80018ACC
 lbl_80018ACC:
@@ -8964,7 +9348,7 @@ lbl_80018E30:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8027E4B0
 	.4byte 0x00000104

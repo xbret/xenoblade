@@ -1181,7 +1181,581 @@ sinit_80142544:
 
 .4byte sinit_80142544
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804FC5A8
+lbl_804FC5A8:
+	.asciz "JNL_quest0000"
+	.balign 4
+
+.global lbl_804FC5B8
+lbl_804FC5B8:
+	.asciz "JNL_quest0101"
+	.balign 4
+
+.global lbl_804FC5C8
+lbl_804FC5C8:
+	.asciz "JNL_quest0201"
+	.balign 4
+
+.global lbl_804FC5D8
+lbl_804FC5D8:
+	.asciz "JNL_quest0301"
+	.balign 4
+
+.global lbl_804FC5E8
+lbl_804FC5E8:
+	.asciz "JNL_quest0401"
+	.balign 4
+
+.global lbl_804FC5F8
+lbl_804FC5F8:
+	.asciz "JNL_quest0402"
+	.balign 4
+
+.global lbl_804FC608
+lbl_804FC608:
+	.asciz "JNL_quest0501"
+	.balign 4
+
+.global lbl_804FC618
+lbl_804FC618:
+	.asciz "JNL_quest0601"
+	.balign 4
+
+.global lbl_804FC628
+lbl_804FC628:
+	.asciz "JNL_quest0701"
+	.balign 4
+
+.global lbl_804FC638
+lbl_804FC638:
+	.asciz "JNL_quest0801"
+	.balign 4
+
+.global lbl_804FC648
+lbl_804FC648:
+	.asciz "JNL_quest0901"
+	.balign 4
+
+.global lbl_804FC658
+lbl_804FC658:
+	.asciz "JNL_quest1001"
+	.balign 4
+
+.global lbl_804FC668
+lbl_804FC668:
+	.asciz "JNL_quest1101"
+	.balign 4
+
+.global lbl_804FC678
+lbl_804FC678:
+	.asciz "JNL_quest1201"
+	.balign 4
+
+.global lbl_804FC688
+lbl_804FC688:
+	.asciz "JNL_quest1202"
+	.balign 4
+
+.global lbl_804FC698
+lbl_804FC698:
+	.asciz "JNL_quest1301"
+	.balign 4
+
+.global lbl_804FC6A8
+lbl_804FC6A8:
+	.asciz "JNL_quest1401"
+	.balign 4
+
+.global lbl_804FC6B8
+lbl_804FC6B8:
+	.asciz "JNL_quest1501"
+	.balign 4
+
+.global lbl_804FC6C8
+lbl_804FC6C8:
+	.asciz "JNL_quest1601"
+	.balign 4
+
+.global lbl_804FC6D8
+lbl_804FC6D8:
+	.asciz "JNL_quest1701"
+	.balign 4
+
+.global lbl_804FC6E8
+lbl_804FC6E8:
+	.asciz "JNL_quest1801"
+	.balign 4
+
+.global lbl_804FC6F8
+lbl_804FC6F8:
+	.asciz "JNL_quest1901"
+	.balign 4
+
+.global lbl_804FC708
+lbl_804FC708:
+	.asciz "JNL_quest2001"
+	.balign 4
+
+.global lbl_804FC718
+lbl_804FC718:
+	.asciz "JNL_quest2101"
+	.balign 4
+
+.global lbl_804FC728
+lbl_804FC728:
+	.asciz "JNL_quest2201"
+	.balign 4
+
+.global lbl_804FC738
+lbl_804FC738:
+	.asciz "JNL_quest2301"
+	.balign 4
+
+.global lbl_804FC748
+lbl_804FC748:
+	.asciz "JNL_quest2401"
+	.balign 4
+
+
+.global lbl_804FC758
+lbl_804FC758:
+	# ROM: 0x4F8858
+	.4byte lbl_804FC5A8
+	.4byte lbl_804FC5B8
+	.4byte lbl_804FC5C8
+	.4byte lbl_804FC5D8
+	.4byte lbl_804FC5E8
+	.4byte lbl_804FC5F8
+	.4byte lbl_804FC608
+	.4byte lbl_804FC618
+	.4byte lbl_804FC628
+	.4byte lbl_804FC638
+	.4byte lbl_804FC648
+	.4byte lbl_804FC658
+	.4byte lbl_804FC668
+	.4byte lbl_804FC678
+	.4byte lbl_804FC688
+	.4byte lbl_804FC698
+	.4byte lbl_804FC6A8
+	.4byte lbl_804FC6B8
+	.4byte lbl_804FC6C8
+	.4byte lbl_804FC6C8
+	.4byte lbl_804FC6D8
+	.4byte lbl_804FC6E8
+	.4byte lbl_804FC6F8
+	.4byte lbl_804FC708
+	.4byte lbl_804FC718
+	.4byte lbl_804FC728
+	.4byte lbl_804FC738
+	.4byte lbl_804FC748
+
+.global cf_CfBdat_typestr
+cf_CfBdat_typestr:
+	.asciz "cf::CfBdat"
+	.balign 4
+
+
+.global lbl_804FC7D4
+lbl_804FC7D4:
+	.asciz "BTL_pclist"
+	.asciz "BTL_enelist"
+	.asciz "BTL_skilllist"
+	.asciz "BTL_growlist"
+	.asciz "BTL_bufflist"
+	.asciz "FLD_pointlist"
+	.asciz "FLD_tboxlist"
+	.asciz "BTL_camlist"
+	.asciz "BTL_camdatalist"
+	.asciz "BTL_crystalnamelist"
+	.asciz "MNU_item"
+	.asciz "FLD_npclist"
+	.asciz "FLD_maplist"
+	.asciz "landmarklist"
+	.asciz "FLD_valpoplist"
+	.asciz "FLD_dmobjlist"
+	.asciz "ITM_itemlist"
+	.asciz "ITM_wpnlist"
+	.asciz "ITM_equiplist"
+	.asciz "ITM_crystallist"
+	.asciz "ITM_dropcrystallist"
+	.asciz "ITM_collectlist"
+	.asciz "ITM_materiallist"
+	.asciz "ITM_valuablelist"
+	.asciz "ITM_artslist"
+	.asciz "ITM_headlist"
+	.asciz "ITM_bodylist"
+	.asciz "ITM_armlist"
+	.asciz "ITM_waistlist"
+	.asciz "ITM_legglist"
+	.asciz "BTL_PSVskill"
+	.asciz "BTL_PSVlink"
+	.asciz "BTL_PSSlist"
+	.asciz "routelist%02d%02d"
+	.asciz "mapefflist%02d%02d"
+	.asciz "mapobjlist%02d%02d"
+	.asciz "maplodlist%02d%02d"
+	.asciz "mapselist%02d%02d"
+	.asciz "FLD_GimCamList%02d%02d"
+	.asciz "Litemlist%02d%02d"
+	.asciz "extalklist%02d%02d"
+	.asciz "minelist%02d%02d"
+	.asciz "BTL_enelist%02d%02d"
+	.asciz "Gimlist%02d%02d"
+	.asciz "FieldLock%02d%02d"
+	.asciz "ElvGm%02d%02d"
+	.asciz "WarpGm%02d%02d"
+	.asciz "JumpGm%02d%02d"
+	.asciz "ItemGm%02d%02d"
+	.asciz "GimSVoff%02d%02d"
+	.asciz "GimEne%02d%02d"
+	.asciz "GimMess%02d%02d"
+	.asciz "drop_nmllist%02d%02d"
+	.asciz "drop_rarlist%02d%02d"
+	.asciz "drop_sprlist%02d%02d"
+	.asciz "resource"
+	.asciz "posX"
+	.asciz "posY"
+	.asciz "posZ"
+	.asciz "pc%d"
+	.asciz "parts"
+	.asciz "bat_mount"
+	.asciz "def_mount"
+	.asciz "name"
+	.asciz "itemType"
+	.asciz "itemID"
+	#未定義アイテム
+	.byte 0x96
+	.4byte 0xA292E88B
+	.4byte 0x60834183
+	.4byte 0x43836583
+	.2byte 0x8000
+	.asciz "common/jp/bdat_eve.bin"
+	.asciz "MNU_eve_start"
+	.asciz "MNU_eve_table"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80531EC0
+lbl_80531EC0:
+	# ROM: 0x52DFC0
+	.4byte lbl_80669C2C
+	.4byte lbl_80669C30
+	.4byte lbl_80669C38
+	.4byte lbl_80669C38
+	.4byte lbl_80669C40
+	.4byte lbl_80669C48
+	.4byte lbl_80669C50
+	.4byte lbl_80669C58
+	.4byte lbl_80669C58
+	.4byte 0
+
+
+.global __vt__cf_CfBdat
+__vt__cf_CfBdat:
+	.4byte __RTTI__cf_CfBdat
+	.4byte 0
+	.4byte func_8014148C
+	.4byte func_80039E28
+	.4byte func_801424BC
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global cf_CfBdat_hierarchy
+cf_CfBdat_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80664B20
+lbl_80664B20:
+	# ROM: 0x570700
+	.4byte 0x70633100
+	.4byte 0
+
+.global __RTTI__cf_CfBdat
+__RTTI__cf_CfBdat:
+	.4byte cf_CfBdat_typestr
+	.4byte cf_CfBdat_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669C28
+lbl_80669C28:
+	# ROM: 0x573A88
+	.4byte 0
+
+.global lbl_80669C2C
+lbl_80669C2C:
+	.4byte 0
+
+.global lbl_80669C30
+lbl_80669C30:
+	.asciz "EXwp_L"
+	.balign 4
+
+.global lbl_80669C38
+lbl_80669C38:
+	.asciz "EXwp_R"
+	.balign 4
+
+.global lbl_80669C40
+lbl_80669C40:
+	.asciz "EXwp_S"
+	.balign 4
+
+.global lbl_80669C48
+lbl_80669C48:
+	.asciz "EXwp_H"
+	.balign 4
+
+.global lbl_80669C50
+lbl_80669C50:
+	.asciz "EXwp_HL"
+
+.global lbl_80669C58
+lbl_80669C58:
+	.asciz "EXwp_HR"
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+#used globally
+
+.global lbl_80666980
+lbl_80666980:
+	.skip 0x4
+.global lbl_80666984
+lbl_80666984:
+	.skip 0x4
+.global lbl_80666988
+lbl_80666988:
+	.skip 0x4
+.global lbl_8066698C
+lbl_8066698C:
+	.skip 0x4
+.global lbl_80666990
+lbl_80666990:
+	.skip 0x4
+.global lbl_80666994
+lbl_80666994:
+	.skip 0x4
+.global lbl_80666998
+lbl_80666998:
+	.skip 0x4
+.global lbl_8066699C
+lbl_8066699C:
+	.skip 0x4
+.global lbl_806669A0
+lbl_806669A0:
+	.skip 0x4
+.global lbl_806669A4
+lbl_806669A4:
+	.skip 0x4
+.global lbl_806669A8
+lbl_806669A8:
+	.skip 0x4
+.global lbl_806669AC
+lbl_806669AC:
+	.skip 0x4
+.global lbl_806669B0
+lbl_806669B0:
+	.skip 0x4
+.global lbl_806669B4
+lbl_806669B4:
+	.skip 0x4
+.global lbl_806669B8
+lbl_806669B8:
+	.skip 0x4
+.global lbl_806669BC
+lbl_806669BC:
+	.skip 0x4
+.global lbl_806669C0
+lbl_806669C0:
+	.skip 0x4
+.global lbl_806669C4
+lbl_806669C4:
+	.skip 0x4
+.global lbl_806669C8
+lbl_806669C8:
+	.skip 0x4
+.global lbl_806669CC
+lbl_806669CC:
+	.skip 0x4
+.global lbl_806669D0
+lbl_806669D0:
+	.skip 0x4
+.global lbl_806669D4
+lbl_806669D4:
+	.skip 0x4
+.global lbl_806669D8
+lbl_806669D8:
+	.skip 0x4
+.global lbl_806669DC
+lbl_806669DC:
+	.skip 0x4
+.global lbl_806669E0
+lbl_806669E0:
+	.skip 0x4
+.global lbl_806669E4
+lbl_806669E4:
+	.skip 0x4
+.global lbl_806669E8
+lbl_806669E8:
+	.skip 0x4
+.global lbl_806669EC
+lbl_806669EC:
+	.skip 0x4
+.global lbl_806669F0
+lbl_806669F0:
+	.skip 0x4
+.global lbl_806669F4
+lbl_806669F4:
+	.skip 0x4
+.global lbl_806669F8
+lbl_806669F8:
+	.skip 0x4
+.global lbl_806669FC
+lbl_806669FC:
+	.skip 0x4
+.global lbl_80666A00
+lbl_80666A00:
+	.skip 0x4
+.global lbl_80666A04
+lbl_80666A04:
+	.skip 0x4
+.global lbl_80666A08
+lbl_80666A08:
+	.skip 0x4
+.global lbl_80666A0C
+lbl_80666A0C:
+	.skip 0x4
+.global lbl_80666A10
+lbl_80666A10:
+	.skip 0x4
+.global lbl_80666A14
+lbl_80666A14:
+	.skip 0x4
+.global lbl_80666A18
+lbl_80666A18:
+	.skip 0x4
+.global lbl_80666A1C
+lbl_80666A1C:
+	.skip 0x4
+.global lbl_80666A20
+lbl_80666A20:
+	.skip 0x4
+.global lbl_80666A24
+lbl_80666A24:
+	.skip 0x4
+.global lbl_80666A28
+lbl_80666A28:
+	.skip 0x4
+.global lbl_80666A2C
+lbl_80666A2C:
+	.skip 0x4
+.global lbl_80666A30
+lbl_80666A30:
+	.skip 0x4
+.global lbl_80666A34
+lbl_80666A34:
+	.skip 0x4
+.global lbl_80666A38
+lbl_80666A38:
+	.skip 0x4
+.global lbl_80666A3C
+lbl_80666A3C:
+	.skip 0x4
+.global lbl_80666A40
+lbl_80666A40:
+	.skip 0x4
+.global lbl_80666A44
+lbl_80666A44:
+	.skip 0x4
+.global lbl_80666A48
+lbl_80666A48:
+	.skip 0x4
+.global lbl_80666A4C
+lbl_80666A4C:
+	.skip 0x4
+.global lbl_80666A50
+lbl_80666A50:
+	.skip 0x4
+.global lbl_80666A54
+lbl_80666A54:
+	.skip 0x4
+.global lbl_80666A58
+lbl_80666A58:
+	.skip 0x4
+.global lbl_80666A5C
+lbl_80666A5C:
+	.skip 0x4
+.global lbl_80666A60
+lbl_80666A60:
+	.skip 0x4
+.global lbl_80666A64
+lbl_80666A64:
+	.skip 0x4
+.global lbl_80666A68
+lbl_80666A68:
+	.skip 0x4
+.global lbl_80666A6C
+lbl_80666A6C:
+	.skip 0x4
+.global lbl_80666A70
+lbl_80666A70:
+	.skip 0x4
+.global lbl_80666A74
+lbl_80666A74:
+	.skip 0x4
+.global lbl_80666A78
+lbl_80666A78:
+	.skip 0x4
+.global lbl_80666A7C
+lbl_80666A7C:
+	.skip 0x4
+.global lbl_80666A80
+lbl_80666A80:
+	.skip 0x4
+.global lbl_80666A84
+lbl_80666A84:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000CD8C
 lbl_8000CD8C:
@@ -1269,7 +1843,7 @@ lbl_8000CE0C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_801414CC
 	.4byte 0x0000028C

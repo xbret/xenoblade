@@ -4251,3 +4251,131 @@ lbl_8056CEB0:
 	.4byte __dt__Q44nw4r3g3d8G3DState11IndMtxOpStdFv
 	.4byte Reset__Q44nw4r3g3d8G3DState11IndMtxOpStdFv
 	.4byte SetNrmMapMtx__Q44nw4r3g3d8G3DState11IndMtxOpStdF14_GXIndTexMtxIDPCQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34Q44nw4r3g3d14ResMatMiscData14IndirectMethod
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665D98
+lbl_80665D98:
+	# ROM: 0x571978
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_80665D9C
+lbl_80665D9C:
+	# ROM: 0x57197C
+	.4byte lbl_80622C40
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066C3E8
+lbl_8066C3E8:
+	# ROM: 0x576248
+	.4byte 0x00020103
+
+
+.global lbl_8066C3EC
+lbl_8066C3EC:
+	# ROM: 0x57624C
+	.4byte 0
+
+
+.global lbl_8066C3F0
+lbl_8066C3F0:
+	# ROM: 0x576250
+	.float -1.0
+
+
+.global lbl_8066C3F4
+lbl_8066C3F4:
+	# ROM: 0x576254
+	.4byte 0x358637BD
+
+
+.global lbl_8066C3F8
+lbl_8066C3F8:
+	# ROM: 0x576258
+	.float 1.0
+
+
+.global lbl_8066C3FC
+lbl_8066C3FC:
+	# ROM: 0x57625C
+	.float 0.5
+
+
+.global lbl_8066C400
+lbl_8066C400:
+	# ROM: 0x576260
+	.4byte 0x3B808081
+	.4byte 0
+
+
+.global lbl_8066C408
+lbl_8066C408:
+	# ROM: 0x576268
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8061D740
+lbl_8061D740:
+	.skip 0xC
+.global lbl_8061D74C
+lbl_8061D74C:
+	.skip 0x74
+.global lbl_8061D7C0
+lbl_8061D7C0:
+	.skip 0x120
+.global lbl_8061D8E0
+lbl_8061D8E0:
+	.skip 0x70
+.global lbl_8061D950
+lbl_8061D950:
+	.skip 0x20
+.global lbl_8061D970
+lbl_8061D970:
+	.skip 0x10
+.global lbl_8061D980
+lbl_8061D980:
+	.skip 0x800
+.global lbl_8061E180
+lbl_8061E180:
+	.skip 0x614
+.global lbl_8061E794
+lbl_8061E794:
+	.skip 0x2A2C
+.global lbl_806211C0
+lbl_806211C0:
+	.skip 0x1A34
+.global lbl_80622BF4
+lbl_80622BF4:
+	.skip 0x4C
+.global lbl_80622C40
+lbl_80622C40:
+	.skip 0x98
+.global lbl_80622CD8
+lbl_80622CD8:
+	.skip 0x28
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667D28
+lbl_80667D28:
+	.skip 0x4
+.global lbl_80667D2C
+lbl_80667D2C:
+	.skip 0x4
+.global lbl_80667D30
+lbl_80667D30:
+	.skip 0x4
+.global lbl_80667D34
+lbl_80667D34:
+	.skip 0x4
+.global lbl_80667D38
+lbl_80667D38:
+	.skip 0x8
+.global lbl_80667D40
+lbl_80667D40:
+	.skip 0x8

@@ -557,7 +557,110 @@ func_8022CA88:
 /* 8022CE68 001F6428  38 21 00 40 */	addi r1, r1, 0x40
 /* 8022CE6C 001F642C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CSelShopWin_typestr
+CSelShopWin_typestr:
+	.asciz "CSelShopWin"
+
+
+.global lbl_80505D2C
+lbl_80505D2C:
+	.asciz "/menu/ShopSubWin.arc"
+	.asciz "txt_%02d"
+	.asciz "nul_proportion"
+	.asciz "CSelShopWin"
+	.asciz "arc"
+	.asciz "mf70_cf60_syswin05.brlyt"
+	.asciz "mf70_cf60_syswin05_in.brlan"
+	.asciz "nul_value"
+	.asciz "txt_titlemes"
+	.asciz "MNU_shop"
+	.asciz "name"
+	.asciz "txt_01"
+	.asciz "txt_02"
+	.asciz "txt_03"
+	.asciz "MNU_kyeassign"
+	.asciz "help"
+	.asciz "txt_close00"
+	.asciz "txt_close01"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "pic_btn00"
+	.asciz "pic_btn01"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CSelShopWin
+__vt__CSelShopWin:
+	.4byte __RTTI__CSelShopWin
+	.4byte 0
+	.4byte func_8022C71C
+	.4byte func_80039E28
+	.4byte func_8022CA88
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CSelShopWin_hierarchy
+CSelShopWin_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CSelShopWin
+__RTTI__CSelShopWin:
+	.4byte CSelShopWin_typestr
+	.4byte CSelShopWin_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AEC0
+lbl_8066AEC0:
+	# ROM: 0x574D20
+	.float 1.0
+	.4byte 0
+
+
+.global lbl_8066AEC8
+lbl_8066AEC8:
+	# ROM: 0x574D28
+	.4byte 0x43300000
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001567C
 lbl_8001567C:
@@ -614,7 +717,7 @@ lbl_800156D0:
 	.4byte func_8045F8C8
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8022C6B4
 	.4byte 0x00000068

@@ -7512,7 +7512,253 @@ func_80219D24:
 /* 8021A62C 001E3BEC  38 21 01 20 */	addi r1, r1, 0x120
 /* 8021A630 001E3BF0  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80503F90
+lbl_80503F90:
+	.4byte 0x00000044
+	.4byte 0x00000058
+	.4byte 0
+
+.global CMCCrystalBox_typestr
+CMCCrystalBox_typestr:
+	.asciz "CMCCrystalBox"
+	.balign 4
+
+
+.global lbl_80503FAC
+lbl_80503FAC:
+	.asciz "%s"
+	.asciz "category"
+	.asciz "/menu/McCrystalBox.arc"
+	.asciz "/menu/tpl/ItemIcon.arc"
+	.asciz "common/jp/bdat_mes.bin"
+	.asciz "nul_sort"
+	.asciz "nul_proportion"
+	.asciz "pic_msk01"
+	.asciz "pic_msk00"
+	.asciz "pic_tbbcon%02d"
+	.asciz "pic_tbbcof%02d"
+	.asciz "help"
+	.asciz "mf00_com00_dmy.tpl"
+	.asciz "icon_base"
+	.asciz "pic_btnbs%02d"
+	.asciz "pic_setbs%02d"
+	.asciz "icon"
+	.asciz "pic_icon%02d"
+	.asciz "MNU_item"
+	.asciz "name"
+	.asciz "txt_num%02d"
+	.asciz "pic_seticon%02d"
+	.asciz "txt_num_set%02d"
+	.asciz "txt_pg01"
+	.asciz "nul_pg"
+	.asciz "pic_pghole%02d"
+	.asciz "txt_pg00"
+	.asciz "pic_pghole_on"
+	.asciz "pic_off%02d"
+	.asciz "pic_rcm%02d_00"
+	.asciz "pic_rcm%02d_01"
+	.asciz "txt_name"
+	.asciz "nul_button"
+	.asciz "pic_cat%02d"
+	.asciz "nul_pcface%02d"
+	.asciz "txt_button01"
+	.asciz "txt_soat01"
+	.asciz "MNU_crystal"
+	.asciz "info"
+	.asciz "txt_pccmt01_00"
+	.asciz "txt_pccmt01_01"
+	.asciz "icon_type2"
+	.asciz "pic_pcface01"
+	.asciz "txt_pccmt02_00"
+	.byte 0x00
+	.asciz "txt_pccmt02_01"
+	.asciz "txt_pccmt02_02"
+	.asciz "pic_pcface02"
+	.asciz "txt_kizuna01"
+	.asciz "mf40_kiz_pclin_e.tpl"
+	.asciz "mf40_kiz_pclin_d.tpl"
+	.asciz "mf40_kiz_pclin_c.tpl"
+	.asciz "mf40_kiz_pclin_b.tpl"
+	.asciz "mf40_kiz_pclin_a.tpl"
+	.asciz "pic_kizline"
+	.asciz "mf40_kiz_pcicon_e00.tpl"
+	.asciz "mf40_kiz_pcicon_d00.tpl"
+	.asciz "mf40_kiz_pcicon_c00.tpl"
+	.asciz "mf40_kiz_pcicon_b00.tpl"
+	.asciz "mf40_kiz_pcicon_a00.tpl"
+	.asciz "pic_kizuna01"
+	.asciz "%d%s%d"
+	.asciz "txt_crnum00"
+	.asciz "CMCCrystalBox"
+	.asciz "arc"
+	.asciz "mf10_cry01_box00.brlyt"
+	.asciz "mf10_cry01_box00_in.brlan"
+	.asciz "mf10_cry01_box00_info_in.brlan"
+	.asciz "mf10_cry01_box00_rmc_roop.brlan"
+	.asciz "mf10_cry01_box00_box.brlan"
+	.asciz "mf10_cry01_box00_boxinfo.brlan"
+	.asciz "mf10_cry01_box00_frnd_in.brlan"
+	.asciz "mf10_cry01_box00_frnd_chn.brlan"
+	.asciz "mf10_cry01_box00_frd_out.brlan"
+	.asciz "mf10_cry01_box00_out.brlan"
+	.asciz "txt_button00"
+	.asciz "txt_setbc01"
+	.asciz "txt_fr00"
+	.asciz "txt_fr01"
+	.asciz "txt_soattit"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "MNU_kyeassign"
+	.asciz "pic_soatbtn"
+	.asciz "txt_pcname01"
+	.asciz "txt_pcname02"
+	.asciz "pic_pghole10"
+	.asciz "CMCCrystalBoxTex"
+	.asciz "MNU_item_mes_a"
+	.asciz "MNU_skill"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805393D8
+lbl_805393D8:
+	# ROM: 0x5354D8
+	.4byte switch_8021438C
+	.4byte switch_80214310
+	.4byte switch_80214318
+	.4byte switch_80214320
+	.4byte switch_80214330
+	.4byte switch_80214338
+	.4byte switch_80214340
+	.4byte switch_80214350
+	.4byte switch_80214358
+	.4byte switch_80214360
+	.4byte switch_80214368
+	.4byte switch_80214370
+	.4byte switch_80214378
+	.4byte switch_80214380
+	.4byte switch_80214388
+	.4byte 0
+
+
+.global __vt__CMCCrystalBox
+__vt__CMCCrystalBox:
+	.4byte __RTTI__CMCCrystalBox
+	.4byte 0
+	.4byte func_80213F0C
+	.4byte func_80039E28
+	.4byte func_80219D24
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CMCCrystalBox_hierarchy
+CMCCrystalBox_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMCCrystalBox
+__RTTI__CMCCrystalBox:
+	.4byte CMCCrystalBox_typestr
+	.4byte CMCCrystalBox_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AD30
+lbl_8066AD30:
+	# ROM: 0x574B90
+	.float 1.0
+
+
+.global lbl_8066AD34
+lbl_8066AD34:
+	# ROM: 0x574B94
+	.4byte 0xC28E0000
+
+
+.global lbl_8066AD38
+lbl_8066AD38:
+	# ROM: 0x574B98
+	.4byte 0x42300000
+
+
+.global lbl_8066AD3C
+lbl_8066AD3C:
+	# ROM: 0x574B9C
+	.4byte 0x41800000
+
+
+.global lbl_8066AD40
+lbl_8066AD40:
+	# ROM: 0x574BA0
+	.float 100.0
+
+
+.global lbl_8066AD44
+lbl_8066AD44:
+	# ROM: 0x574BA4
+	.4byte 0x3D23D70A
+
+
+.global lbl_8066AD48
+lbl_8066AD48:
+	# ROM: 0x574BA8
+	.4byte 0xC2680000
+
+
+.global lbl_8066AD4C
+lbl_8066AD4C:
+	# ROM: 0x574BAC
+	.4byte 0xC2640000
+
+
+.global lbl_8066AD50
+lbl_8066AD50:
+	# ROM: 0x574BB0
+	.4byte 0x43B90000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666FC0
+lbl_80666FC0:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800135AC
 lbl_800135AC:
@@ -8259,7 +8505,7 @@ lbl_80013DE4:
 
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80213BF0
 	.4byte 0x00000184

@@ -198,3 +198,23 @@ CalcWorldMtx_Basic__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3
 /* 803F20D0 003BB690  7C 08 03 A6 */	mtlr r0
 /* 803F20D4 003BB694  38 21 00 60 */	addi r1, r1, 0x60
 /* 803F20D8 003BB698  4E 80 00 20 */	blr
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C488
+lbl_8066C488:
+	# ROM: 0x5762E8
+	.4byte 0x3F360B61
+
+
+.global lbl_8066C48C
+lbl_8066C48C:
+	# ROM: 0x5762EC
+	.4byte 0
+
+
+.global lbl_8066C490
+lbl_8066C490:
+	# ROM: 0x5762F0
+	.float 1.0
+	.4byte 0

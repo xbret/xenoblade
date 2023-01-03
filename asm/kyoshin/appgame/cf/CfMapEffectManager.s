@@ -1229,7 +1229,130 @@ func_8016FE34:
 /* 8016FE60 00139420  38 60 00 00 */	li r3, 0
 /* 8016FE64 00139424  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfMapEffectManager_typestr
+cf_CfMapEffectManager_typestr:
+	.asciz "cf::CfMapEffectManager"
+	.balign 4
+
+
+.global lbl_804FEA78
+lbl_804FEA78:
+	.asciz "questID"
+	.asciz "qst_sflg"
+	.asciz "qst_eflg"
+	.asciz "sflg1"
+	.asciz "eflg1"
+	.asciz "sflg2"
+	.asciz "eflg2"
+	.asciz "erase"
+	.asciz "pack_no"
+	.asciz "weather"
+	.asciz "loop"
+	.asciz "flg_eff"
+	.asciz "playtime1"
+	.asciz "playtime2"
+	.asciz "playtime3"
+	.asciz "progframe"
+	.asciz "caster"
+	.asciz "posX"
+	.asciz "posY"
+	.asciz "posZ"
+	.asciz "rotX"
+	.asciz "rotY"
+	.asciz "rotZ"
+	.asciz "skip"
+	.asciz "calc_frame"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CfMapEffectManager
+__vt__cf_CfMapEffectManager:
+	.4byte __RTTI__cf_CfMapEffectManager
+	.4byte 0
+	.4byte func_8016EDF8
+	.4byte func_8016FC98
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80664CE0
+lbl_80664CE0:
+	# ROM: 0x5708C0
+	.float 10.0
+
+
+.global lbl_80664CE4
+lbl_80664CE4:
+	# ROM: 0x5708C4
+	.4byte lbl_80669FC8
+
+.global __RTTI__cf_CfMapEffectManager
+__RTTI__cf_CfMapEffectManager:
+	.4byte cf_CfMapEffectManager_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669FC0
+lbl_80669FC0:
+	# ROM: 0x573E20
+	.float 10.0
+	.4byte 0
+
+.global lbl_80669FC8
+lbl_80669FC8:
+	.asciz "signal1"
+
+
+.global lbl_80669FD0
+lbl_80669FD0:
+	# ROM: 0x573E30
+	.float 1.0
+
+
+.global lbl_80669FD4
+lbl_80669FD4:
+	# ROM: 0x573E34
+	.4byte 0x38D1B717
+
+
+.global lbl_80669FD8
+lbl_80669FD8:
+	# ROM: 0x573E38
+	.4byte 0x3C23D70A
+	.4byte 0
+
+
+.global lbl_80669FE0
+lbl_80669FE0:
+	# ROM: 0x573E40
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80669FE8
+lbl_80669FE8:
+	# ROM: 0x573E48
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80669FF0
+lbl_80669FF0:
+	# ROM: 0x573E50
+	.4byte 0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666B80
+lbl_80666B80:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000E150
 lbl_8000E150:
@@ -1292,7 +1415,7 @@ lbl_8000E1B4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8016ED50
 	.4byte 0x000000A8

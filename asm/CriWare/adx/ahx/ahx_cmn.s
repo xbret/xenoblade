@@ -15,3 +15,10 @@ AHXCMN_SetAlcInfTbl:
 /* 8038D9DC 00356F9C  80 05 9B 08 */	lwz r0, lbl_805E9B08@l(r5)
 /* 8038D9E0 00356FA0  90 04 00 00 */	stw r0, 0(r4)
 /* 8038D9E4 00356FA4  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+
+.global lbl_805E9B08
+lbl_805E9B08:
+	.skip 0x8

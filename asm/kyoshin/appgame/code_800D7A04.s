@@ -771,7 +771,46 @@ func_800D81A8:
 /* 800D84F4 000A1AB4  38 21 00 40 */	addi r1, r1, 0x40
 /* 800D84F8 000A1AB8  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669698
+lbl_80669698:
+	# ROM: 0x5734F8
+	.4byte 0x3F19999A
+
+
+.global lbl_8066969C
+lbl_8066969C:
+	# ROM: 0x5734FC
+	.float 1.0
+
+
+.global lbl_806696A0
+lbl_806696A0:
+	# ROM: 0x573500
+	.4byte 0x3C23D70A
+
+
+.global lbl_806696A4
+lbl_806696A4:
+	# ROM: 0x573504
+	.4byte 0
+
+
+.global lbl_806696A8
+lbl_806696A8:
+	# ROM: 0x573508
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_806696B0
+lbl_806696B0:
+	# ROM: 0x573510
+	.float 0.5
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000A5FC
 lbl_8000A5FC:
@@ -793,7 +832,7 @@ lbl_8000A614:
 	.4byte 0x184A0000
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_800D7A04
 	.4byte 0x00000320

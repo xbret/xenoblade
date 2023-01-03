@@ -654,6 +654,11 @@ lbl_80668A94:
 	# ROM: 0x5728F4
 	.float 1.0
 
+.global lbl_80668A98
+lbl_80668A98:
+	# ROM: 0x5728F8
+	.4byte 0x41F00000
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 .global lbl_80666688

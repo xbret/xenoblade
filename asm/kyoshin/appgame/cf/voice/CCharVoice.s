@@ -622,7 +622,71 @@ func_802A1304:
 func_802A13B8:
 /* 802A13B8 0026A978  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8050BCC0
+lbl_8050BCC0:
+	.asciz "snd/ahx/pc01/pc01_01_01.ahx"
+
+.global cf_CCharVoice_typestr
+cf_CCharVoice_typestr:
+	.asciz "cf::CCharVoice"
+	.balign 4
+
+
+.global lbl_8050BCEC
+lbl_8050BCEC:
+	# ROM: 0x507DEC
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CCharVoice
+__vt__cf_CCharVoice:
+	.4byte __RTTI__cf_CCharVoice
+	.4byte 0
+	.4byte func_80080500
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665590
+lbl_80665590:
+	# ROM: 0x571170
+	.4byte lbl_8050BCC0
+	.4byte 0
+
+.global __RTTI__cf_CCharVoice
+__RTTI__cf_CCharVoice:
+	.4byte cf_CCharVoice_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B500
+lbl_8066B500:
+	# ROM: 0x575360
+	.float 10.0
+
+
+.global lbl_8066B504
+lbl_8066B504:
+	# ROM: 0x575364
+	.4byte 0x42200000
+
+
+.global lbl_8066B508
+lbl_8066B508:
+	# ROM: 0x575368
+	.float 0.5
+
+
+.global lbl_8066B50C
+lbl_8066B50C:
+	# ROM: 0x57536C
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001A880
 lbl_8001A880:
@@ -660,7 +724,7 @@ lbl_8001A8B0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A0AFC
 	.4byte 0x00000090

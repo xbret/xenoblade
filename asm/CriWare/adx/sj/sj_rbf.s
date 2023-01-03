@@ -19,9 +19,9 @@ SJRBF_Init:
 /* 80394314 0035D8D4  80 03 09 10 */	lwz r0, sjrbf_init_cnt@l(r3)
 /* 80394318 0035D8D8  2C 00 00 00 */	cmpwi r0, 0
 /* 8039431C 0035D8DC  40 82 00 18 */	bne .L_80394334
-/* 80394320 0035D8E0  3C 60 80 5F */	lis r3, lbl_805F0918@ha
+/* 80394320 0035D8E0  3C 60 80 5F */	lis r3, sjrbf_obj@ha
 /* 80394324 0035D8E4  38 80 00 00 */	li r4, 0
-/* 80394328 0035D8E8  38 63 09 18 */	addi r3, r3, lbl_805F0918@l
+/* 80394328 0035D8E8  38 63 09 18 */	addi r3, r3, sjrbf_obj@l
 /* 8039432C 0035D8EC  38 A0 48 00 */	li r5, 0x4800
 /* 80394330 0035D8F0  4B C7 00 21 */	bl memset
 .L_80394334:
@@ -46,9 +46,9 @@ SJRBF_Finish:
 /* 80394370 0035D930  34 00 FF FF */	addic. r0, r0, -1
 /* 80394374 0035D934  90 03 09 10 */	stw r0, sjrbf_init_cnt@l(r3)
 /* 80394378 0035D938  40 82 00 18 */	bne .L_80394390
-/* 8039437C 0035D93C  3C 60 80 5F */	lis r3, lbl_805F0918@ha
+/* 8039437C 0035D93C  3C 60 80 5F */	lis r3, sjrbf_obj@ha
 /* 80394380 0035D940  38 80 00 00 */	li r4, 0
-/* 80394384 0035D944  38 63 09 18 */	addi r3, r3, lbl_805F0918@l
+/* 80394384 0035D944  38 63 09 18 */	addi r3, r3, sjrbf_obj@l
 /* 80394388 0035D948  38 A0 48 00 */	li r5, 0x4800
 /* 8039438C 0035D94C  4B C6 FF C5 */	bl memset
 .L_80394390:
@@ -90,11 +90,11 @@ SJRBF_Create:
 sjrbf_Create:
 /* 80394408 0035D9C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039440C 0035D9CC  7C 08 02 A6 */	mflr r0
-/* 80394410 0035D9D0  3C C0 80 5F */	lis r6, lbl_805F0918@ha
+/* 80394410 0035D9D0  3C C0 80 5F */	lis r6, sjrbf_obj@ha
 /* 80394414 0035D9D4  38 E0 00 00 */	li r7, 0
 /* 80394418 0035D9D8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8039441C 0035D9DC  38 00 00 20 */	li r0, 0x20
-/* 80394420 0035D9E0  38 C6 09 18 */	addi r6, r6, lbl_805F0918@l
+/* 80394420 0035D9E0  38 C6 09 18 */	addi r6, r6, sjrbf_obj@l
 /* 80394424 0035D9E4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80394428 0035D9E8  7C 09 03 A6 */	mtctr r0
 .L_8039442C:
@@ -139,9 +139,9 @@ sjrbf_Create:
 /* 803944C0 0035DA80  48 00 00 64 */	b .L_80394524
 .L_803944C4:
 /* 803944C4 0035DA84  1C 07 00 48 */	mulli r0, r7, 0x48
-/* 803944C8 0035DA88  3C C0 80 5F */	lis r6, lbl_805F0918@ha
+/* 803944C8 0035DA88  3C C0 80 5F */	lis r6, sjrbf_obj@ha
 /* 803944CC 0035DA8C  3D 00 80 57 */	lis r8, sjrbf_vtbl@ha
-/* 803944D0 0035DA90  38 C6 09 18 */	addi r6, r6, lbl_805F0918@l
+/* 803944D0 0035DA90  38 C6 09 18 */	addi r6, r6, sjrbf_obj@l
 /* 803944D4 0035DA94  7F E6 02 14 */	add r31, r6, r0
 /* 803944D8 0035DA98  3C E0 80 52 */	lis r7, sjrbf_uuid@ha
 /* 803944DC 0035DA9C  38 00 00 01 */	li r0, 1
@@ -1473,3 +1473,12 @@ sjrbf_vtbl:
 	.4byte SJRBF_GetNumData
 	.4byte SJRBF_IsGetChunk
 	.4byte SJRBF_EntryErrFunc
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global sjrbf_init_cnt
+sjrbf_init_cnt:
+	.skip 0x8
+.global sjrbf_obj
+sjrbf_obj:
+	.skip 0x4800

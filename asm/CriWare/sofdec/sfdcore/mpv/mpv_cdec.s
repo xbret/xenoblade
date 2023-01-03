@@ -445,3 +445,18 @@ lbl_8051F5F8:
 	# ROM: 0x51B6F8
 	.4byte mpvcdec_IntraBlocksInt1
 	.4byte mpvcdec_NintraBlocksInt1
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80605F10
+lbl_80605F10:
+	.skip 0xC
+.global lbl_80605F1C
+lbl_80605F1C:
+	.skip 0xC
+.global mpvcdec_ixa
+mpvcdec_ixa:
+	.skip 0x4
+.global lbl_80605F2C
+lbl_80605F2C:
+	.skip 0xC

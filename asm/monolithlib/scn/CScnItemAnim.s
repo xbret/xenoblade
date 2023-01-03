@@ -264,7 +264,7 @@ lbl_806663A8:
 	.4byte 0x72656600
 	.4byte 0
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001F700
 lbl_8001F700:
@@ -299,7 +299,7 @@ lbl_8001F724:
 	.4byte 0x8D000018
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8049E5DC
 	.4byte 0x0000006C

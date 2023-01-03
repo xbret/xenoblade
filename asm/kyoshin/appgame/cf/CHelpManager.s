@@ -1119,7 +1119,898 @@ sinit_80295DB0:
 
 .4byte sinit_80295DB0
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CHelp_EtherMakeTIPS_typestr
+cf_CHelp_EtherMakeTIPS_typestr:
+	.asciz "cf::CHelp_EtherMakeTIPS"
+
+.global cf_CHelp_EtherMake_typestr
+cf_CHelp_EtherMake_typestr:
+	.asciz "cf::CHelp_EtherMake"
+
+.global cf_CHelp_TalkTIPS_typestr
+cf_CHelp_TalkTIPS_typestr:
+	.asciz "cf::CHelp_TalkTIPS"
+	.balign 4
+
+.global cf_CHelp_Talk_typestr
+cf_CHelp_Talk_typestr:
+	.asciz "cf::CHelp_Talk"
+	.balign 4
+
+.global cf_CHelp_KizunaTIPS_typestr
+cf_CHelp_KizunaTIPS_typestr:
+	.asciz "cf::CHelp_KizunaTIPS"
+	.balign 4
+
+.global cf_CHelp_Kizuna_typestr
+cf_CHelp_Kizuna_typestr:
+	.asciz "cf::CHelp_Kizuna"
+	.balign 4
+
+.global cf_CHelp_EndEventTIPS_typestr
+cf_CHelp_EndEventTIPS_typestr:
+	.asciz "cf::CHelp_EndEventTIPS"
+	.balign 4
+
+.global cf_CHelp_EndEvent_typestr
+cf_CHelp_EndEvent_typestr:
+	.asciz "cf::CHelp_EndEvent"
+	.balign 4
+
+.global cf_CHelp_AlwaysTIPS_typestr
+cf_CHelp_AlwaysTIPS_typestr:
+	.asciz "cf::CHelp_AlwaysTIPS"
+	.balign 4
+
+.global cf_CHelp_Always_typestr
+cf_CHelp_Always_typestr:
+	.asciz "cf::CHelp_Always"
+	.balign 4
+	.4byte 0
+
+.global cf_CHelpSwitch_typestr
+cf_CHelpSwitch_typestr:
+	.asciz "cf::CHelpSwitch"
+
+.global cf_CHelp_typestr
+cf_CHelp_typestr:
+	.asciz "cf::CHelp"
+	.balign 4
+
+.global cf_CHelpManager_typestr
+cf_CHelpManager_typestr:
+	.asciz "cf::CHelpManager"
+	.balign 4
+
+.global lbl_8050B540
+lbl_8050B540:
+	.asciz "vs01240050"
+	.balign 4
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053C4E0
+lbl_8053C4E0:
+	.4byte lbl_8057A408
+	.4byte lbl_8057A418
+	.4byte lbl_8057A428
+	.4byte 0
+
+.global lbl_8053C4F0
+lbl_8053C4F0:
+	.4byte lbl_8057A438
+	.4byte lbl_8057A448
+	.4byte lbl_8057A458
+	.4byte lbl_8057A468
+	.4byte lbl_8057A478
+	.4byte lbl_8057A48C
+	.4byte lbl_8057A498
+	.4byte 0
+
+.global lbl_8053C510
+lbl_8053C510:
+	.4byte lbl_8057A4A8
+	.4byte lbl_8057A4BC
+	.4byte lbl_8057A4C8
+	.4byte lbl_8057A4D4
+	.4byte lbl_8057A4E0
+	.4byte lbl_8057A4EC
+	.4byte lbl_8057A4F8
+	.4byte lbl_8057A504
+	.4byte 0
+	.4byte 0
+
+.global lbl_8053C538
+lbl_8053C538:
+	.4byte lbl_8057A510
+	.4byte lbl_8057A520
+	.4byte lbl_8057A52C
+	.4byte 0
+
+.global lbl_8053C548
+lbl_8053C548:
+	.4byte lbl_8057A548
+	.4byte lbl_8057A55C
+	.4byte 0
+	.4byte 0
+
+.global lbl_8053C558
+lbl_8053C558:
+	.4byte lbl_8057A568
+	.4byte lbl_8057A578
+	.4byte lbl_8057A584
+	.4byte lbl_8057A590
+	.4byte lbl_8057A59C
+	.4byte 0
+
+.global lbl_8053C570
+lbl_8053C570:
+	.4byte lbl_8057A5A8
+	.4byte lbl_8057A5B8
+	.4byte lbl_8057A5C4
+	.4byte lbl_8057A5D0
+	.4byte 0
+	.4byte 0
+
+.global lbl_8053C588
+lbl_8053C588:
+	.4byte lbl_8057A5E0
+	.4byte lbl_8057A5F0
+	.4byte lbl_8057A5FC
+	.4byte lbl_8057A610
+	.4byte lbl_8057A61C
+	.4byte 0
+
+.global lbl_8053C5A0
+lbl_8053C5A0:
+	.4byte lbl_8057A670
+	.4byte lbl_8057A684
+	.4byte 0
+
+.global lbl_8053C5AC
+lbl_8053C5AC:
+	.4byte lbl_8057A6E0
+	.4byte lbl_8057A6F0
+	.4byte 0
+
+.global lbl_8053C5B8
+lbl_8053C5B8:
+	.4byte lbl_8057A700
+	.4byte lbl_8057A710
+	.4byte lbl_8057A71C
+	.4byte 0
+
+.global lbl_8053C5C8
+lbl_8053C5C8:
+	.4byte lbl_8057A73C
+	.4byte lbl_8057A750
+	.4byte lbl_8057A75C
+	.4byte 0
+
+.global lbl_8053C5D8
+lbl_8053C5D8:
+	.4byte lbl_8057A7C0
+	.4byte lbl_8057A7D4
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8053C5E8
+lbl_8053C5E8:
+	# ROM: 0x5386E8
+	.4byte lbl_8057A82C
+	.4byte lbl_8057A838
+	.4byte lbl_8057A844
+	.4byte lbl_8057A850
+	.4byte lbl_8057A85C
+	.4byte lbl_8057A868
+	.4byte lbl_8057A880
+	.4byte lbl_8057A890
+	.4byte lbl_8057A8A0
+	.4byte lbl_8057A8BC
+	.4byte lbl_8057A8D8
+	.4byte lbl_8057A8E8
+	.4byte lbl_8057A8F8
+	.4byte lbl_8057A910
+	.4byte lbl_8057A924
+	.4byte lbl_8057A938
+	.4byte lbl_8057A948
+	.4byte lbl_8057A958
+	.4byte lbl_8057A970
+	.4byte lbl_8057A988
+	.4byte lbl_8057A9A0
+	.4byte lbl_8057A9AC
+	.4byte lbl_8057A9B8
+	.4byte 0
+
+
+.global lbl_8053C648
+lbl_8053C648:
+	# ROM: 0x538748
+	.4byte 0x00000003
+	.4byte lbl_8053C4E0
+	.4byte 0x00000005
+	.4byte lbl_8053C4F0
+	.4byte 0x00000006
+	.4byte lbl_8053C510
+	.4byte 0x00000008
+	.4byte lbl_8053C538
+	.4byte 0x0000000C
+	.4byte lbl_80665438
+	.4byte 0x0000000D
+	.4byte lbl_8053C548
+	.4byte 0x0000000E
+	.4byte lbl_8053C558
+	.4byte 0x00000010
+	.4byte lbl_8053C570
+	.4byte 0x00000011
+	.4byte lbl_8053C588
+	.4byte 0x00000012
+	.4byte lbl_80665440
+	.4byte 0x00000014
+	.4byte lbl_80665448
+	.4byte 0x00000019
+	.4byte lbl_80665450
+	.4byte 0x0000001A
+	.4byte lbl_80665458
+	.4byte 0x00000021
+	.4byte lbl_8053C5A0
+	.4byte 0x00000023
+	.4byte lbl_80665460
+	.4byte 0x0000002C
+	.4byte lbl_80665468
+	.4byte 0x00000035
+	.4byte lbl_80665470
+	.4byte 0x00000036
+	.4byte lbl_80665478
+	.4byte 0x00000037
+	.4byte lbl_8053C5AC
+	.4byte 0x00000038
+	.4byte lbl_8053C5B8
+	.4byte 0x0000003C
+	.4byte lbl_80665480
+	.4byte 0x00000046
+	.4byte lbl_8053C5C8
+	.4byte 0x00000060
+	.4byte lbl_80665488
+	.4byte 0x00000065
+	.4byte lbl_80665490
+	.4byte 0x00000067
+	.4byte lbl_80665498
+	.4byte 0x0000006F
+	.4byte lbl_806654A0
+	.4byte 0x0000007C
+	.4byte lbl_806654A8
+	.4byte 0x00000081
+	.4byte lbl_8053C5D8
+	.4byte 0x0000008A
+	.4byte lbl_806654B0
+	.4byte 0x000000AF
+	.4byte lbl_806654B8
+	.4byte 0x000000D5
+	.4byte lbl_806654C0
+	.4byte 0x00000114
+	.4byte lbl_806654C8
+	.4byte 0
+	.4byte 0
+
+.global __vt__cf_CHelp_EtherMakeTIPS
+__vt__cf_CHelp_EtherMakeTIPS:
+	.4byte __RTTI__cf_CHelp_EtherMakeTIPS
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_80295D8C
+	.4byte func_802B80A4
+	.4byte func_802B80EC
+	.4byte func_80295D80
+
+.global cf_CHelp_EtherMakeTIPS_hierarchy
+cf_CHelp_EtherMakeTIPS_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte __RTTI__cf_CHelp_EtherMake
+	.4byte 0
+	.4byte 0
+
+.global cf_CHelp_EtherMake_hierarchy
+cf_CHelp_EtherMake_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_TalkTIPS
+__vt__cf_CHelp_TalkTIPS:
+	.4byte __RTTI__cf_CHelp_TalkTIPS
+	.4byte 0
+	.4byte func_802B86BC
+	.4byte func_80295D98
+	.4byte func_802B86F0
+	.4byte func_80295D90
+	.4byte func_80295D80
+	.4byte func_802B7CBC
+	.4byte func_802B7CE4
+
+.global cf_CHelp_TalkTIPS_hierarchy
+cf_CHelp_TalkTIPS_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte __RTTI__cf_CHelpSwitch
+	.4byte 0
+	.4byte __RTTI__cf_CHelp_Talk
+	.4byte 0
+	.4byte 0
+
+.global cf_CHelp_Talk_hierarchy
+cf_CHelp_Talk_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte __RTTI__cf_CHelpSwitch
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_KizunaTIPS
+__vt__cf_CHelp_KizunaTIPS:
+	.4byte __RTTI__cf_CHelp_KizunaTIPS
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_80295D9C
+	.4byte func_802B818C
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_KizunaTIPS_hierarchy
+cf_CHelp_KizunaTIPS_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte __RTTI__cf_CHelp_Kizuna
+	.4byte 0
+	.4byte 0
+
+.global cf_CHelp_Kizuna_hierarchy
+cf_CHelp_Kizuna_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_EndEventTIPS
+__vt__cf_CHelp_EndEventTIPS:
+	.4byte __RTTI__cf_CHelp_EndEventTIPS
+	.4byte 0
+	.4byte func_802B7CB0
+	.4byte func_80295DA0
+	.4byte func_802B7EC4
+	.4byte func_80295D90
+	.4byte func_80295D80
+	.4byte func_802B7CBC
+	.4byte func_802B7CE4
+
+.global cf_CHelp_EndEventTIPS_hierarchy
+cf_CHelp_EndEventTIPS_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte __RTTI__cf_CHelpSwitch
+	.4byte 0
+	.4byte __RTTI__cf_CHelp_EndEvent
+	.4byte 0
+	.4byte 0
+
+.global cf_CHelp_EndEvent_hierarchy
+cf_CHelp_EndEvent_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte __RTTI__cf_CHelpSwitch
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_AlwaysTIPS
+__vt__cf_CHelp_AlwaysTIPS:
+	.4byte __RTTI__cf_CHelp_AlwaysTIPS
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_80295DAC
+	.4byte func_80295DA4
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_AlwaysTIPS_hierarchy
+cf_CHelp_AlwaysTIPS_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte __RTTI__cf_CHelp_Always
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelp_Always
+__vt__cf_CHelp_Always:
+	.4byte __RTTI__cf_CHelp_Always
+	.4byte 0
+	.4byte func_80295D88
+	.4byte func_802B7BEC
+	.4byte func_80295DA4
+	.4byte func_80295D90
+	.4byte func_80295D80
+
+.global cf_CHelp_Always_hierarchy
+cf_CHelp_Always_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+.global cf_CHelpSwitch_hierarchy
+cf_CHelpSwitch_hierarchy:
+	.4byte __RTTI__cf_CHelp
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CHelpManager
+__vt__cf_CHelpManager:
+	.4byte __RTTI__cf_CHelpManager
+	.4byte 0
+	.4byte func_8029596C
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665438
+lbl_80665438:
+	.4byte lbl_8057A538
+	.4byte 0
+
+.global lbl_80665440
+lbl_80665440:
+	.4byte lbl_8057A628
+	.4byte 0
+
+.global lbl_80665448
+lbl_80665448:
+	.4byte lbl_8057A63C
+	.4byte 0
+
+.global lbl_80665450
+lbl_80665450:
+	.4byte lbl_8057A650
+	.4byte 0
+
+.global lbl_80665458
+lbl_80665458:
+	.4byte lbl_8057A660
+	.4byte 0
+
+.global lbl_80665460
+lbl_80665460:
+	.4byte lbl_8057A690
+	.4byte 0
+
+.global lbl_80665468
+lbl_80665468:
+	.4byte lbl_8057A6A8
+	.4byte 0
+
+.global lbl_80665470
+lbl_80665470:
+	.4byte lbl_8057A6B8
+	.4byte 0
+
+.global lbl_80665478
+lbl_80665478:
+	.4byte lbl_8057A6C8
+	.4byte 0
+
+.global lbl_80665480
+lbl_80665480:
+	.4byte lbl_8057A728
+	.4byte 0
+
+.global lbl_80665488
+lbl_80665488:
+	.4byte lbl_8057A768
+	.4byte 0
+
+.global lbl_80665490
+lbl_80665490:
+	.4byte lbl_8057A77C
+	.4byte 0
+
+.global lbl_80665498
+lbl_80665498:
+	.4byte lbl_8057A788
+	.4byte 0
+
+.global lbl_806654A0
+lbl_806654A0:
+	.4byte lbl_8057A7A0
+	.4byte 0
+
+.global lbl_806654A8
+lbl_806654A8:
+	.4byte lbl_8057A7B0
+	.4byte 0
+
+.global lbl_806654B0
+lbl_806654B0:
+	.4byte lbl_8057A7E0
+	.4byte 0
+
+.global lbl_806654B8
+lbl_806654B8:
+	.4byte lbl_8057A7F4
+	.4byte 0
+
+.global lbl_806654C0
+lbl_806654C0:
+	.4byte lbl_8057A808
+	.4byte 0
+
+.global lbl_806654C8
+lbl_806654C8:
+	.4byte lbl_8057A818
+	.4byte 0
+
+.global __RTTI__cf_CHelp_EtherMakeTIPS
+__RTTI__cf_CHelp_EtherMakeTIPS:
+	.4byte cf_CHelp_EtherMakeTIPS_typestr
+	.4byte cf_CHelp_EtherMakeTIPS_hierarchy
+
+.global __RTTI__cf_CHelp_EtherMake
+__RTTI__cf_CHelp_EtherMake:
+	.4byte cf_CHelp_EtherMake_typestr
+	.4byte cf_CHelp_EtherMake_hierarchy
+
+.global __RTTI__cf_CHelp_TalkTIPS
+__RTTI__cf_CHelp_TalkTIPS:
+	.4byte cf_CHelp_TalkTIPS_typestr
+	.4byte cf_CHelp_TalkTIPS_hierarchy
+
+.global __RTTI__cf_CHelp_Talk
+__RTTI__cf_CHelp_Talk:
+	.4byte cf_CHelp_Talk_typestr
+	.4byte cf_CHelp_Talk_hierarchy
+
+.global __RTTI__cf_CHelp_KizunaTIPS
+__RTTI__cf_CHelp_KizunaTIPS:
+	.4byte cf_CHelp_KizunaTIPS_typestr
+	.4byte cf_CHelp_KizunaTIPS_hierarchy
+
+.global __RTTI__cf_CHelp_Kizuna
+__RTTI__cf_CHelp_Kizuna:
+	.4byte cf_CHelp_Kizuna_typestr
+	.4byte cf_CHelp_Kizuna_hierarchy
+
+.global __RTTI__cf_CHelp_EndEventTIPS
+__RTTI__cf_CHelp_EndEventTIPS:
+	.4byte cf_CHelp_EndEventTIPS_typestr
+	.4byte cf_CHelp_EndEventTIPS_hierarchy
+
+.global __RTTI__cf_CHelp_EndEvent
+__RTTI__cf_CHelp_EndEvent:
+	.4byte cf_CHelp_EndEvent_typestr
+	.4byte cf_CHelp_EndEvent_hierarchy
+
+.global __RTTI__cf_CHelp_AlwaysTIPS
+__RTTI__cf_CHelp_AlwaysTIPS:
+	.4byte cf_CHelp_AlwaysTIPS_typestr
+	.4byte cf_CHelp_AlwaysTIPS_hierarchy
+
+.global __RTTI__cf_CHelp_Always
+__RTTI__cf_CHelp_Always:
+	.4byte cf_CHelp_Always_typestr
+	.4byte cf_CHelp_Always_hierarchy
+
+.global __RTTI__cf_CHelpSwitch
+__RTTI__cf_CHelpSwitch:
+	.4byte cf_CHelpSwitch_typestr
+	.4byte cf_CHelpSwitch_hierarchy
+
+.global __RTTI__cf_CHelp
+__RTTI__cf_CHelp:
+	.4byte cf_CHelp_typestr
+	.4byte 0
+
+.global __RTTI__cf_CHelpManager
+__RTTI__cf_CHelpManager:
+	.4byte cf_CHelpManager_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B470
+lbl_8066B470:
+	# ROM: 0x5752D0
+	.float 1.0
+
+
+.global lbl_8066B474
+lbl_8066B474:
+	# ROM: 0x5752D4
+	.4byte 0x43960000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8057A408
+lbl_8057A408:
+	.skip 0x10
+.global lbl_8057A418
+lbl_8057A418:
+	.skip 0x10
+.global lbl_8057A428
+lbl_8057A428:
+	.skip 0x10
+.global lbl_8057A438
+lbl_8057A438:
+	.skip 0x10
+.global lbl_8057A448
+lbl_8057A448:
+	.skip 0x10
+.global lbl_8057A458
+lbl_8057A458:
+	.skip 0x10
+.global lbl_8057A468
+lbl_8057A468:
+	.skip 0x10
+.global lbl_8057A478
+lbl_8057A478:
+	.skip 0x14
+.global lbl_8057A48C
+lbl_8057A48C:
+	.skip 0xC
+.global lbl_8057A498
+lbl_8057A498:
+	.skip 0x10
+.global lbl_8057A4A8
+lbl_8057A4A8:
+	.skip 0x14
+.global lbl_8057A4BC
+lbl_8057A4BC:
+	.skip 0xC
+.global lbl_8057A4C8
+lbl_8057A4C8:
+	.skip 0xC
+.global lbl_8057A4D4
+lbl_8057A4D4:
+	.skip 0xC
+.global lbl_8057A4E0
+lbl_8057A4E0:
+	.skip 0xC
+.global lbl_8057A4EC
+lbl_8057A4EC:
+	.skip 0xC
+.global lbl_8057A4F8
+lbl_8057A4F8:
+	.skip 0xC
+.global lbl_8057A504
+lbl_8057A504:
+	.skip 0xC
+.global lbl_8057A510
+lbl_8057A510:
+	.skip 0x10
+.global lbl_8057A520
+lbl_8057A520:
+	.skip 0xC
+.global lbl_8057A52C
+lbl_8057A52C:
+	.skip 0xC
+.global lbl_8057A538
+lbl_8057A538:
+	.skip 0x10
+.global lbl_8057A548
+lbl_8057A548:
+	.skip 0x14
+.global lbl_8057A55C
+lbl_8057A55C:
+	.skip 0xC
+.global lbl_8057A568
+lbl_8057A568:
+	.skip 0x10
+.global lbl_8057A578
+lbl_8057A578:
+	.skip 0xC
+.global lbl_8057A584
+lbl_8057A584:
+	.skip 0xC
+.global lbl_8057A590
+lbl_8057A590:
+	.skip 0xC
+.global lbl_8057A59C
+lbl_8057A59C:
+	.skip 0xC
+.global lbl_8057A5A8
+lbl_8057A5A8:
+	.skip 0x10
+.global lbl_8057A5B8
+lbl_8057A5B8:
+	.skip 0xC
+.global lbl_8057A5C4
+lbl_8057A5C4:
+	.skip 0xC
+.global lbl_8057A5D0
+lbl_8057A5D0:
+	.skip 0x10
+.global lbl_8057A5E0
+lbl_8057A5E0:
+	.skip 0x10
+.global lbl_8057A5F0
+lbl_8057A5F0:
+	.skip 0xC
+.global lbl_8057A5FC
+lbl_8057A5FC:
+	.skip 0x14
+.global lbl_8057A610
+lbl_8057A610:
+	.skip 0xC
+.global lbl_8057A61C
+lbl_8057A61C:
+	.skip 0xC
+.global lbl_8057A628
+lbl_8057A628:
+	.skip 0x14
+.global lbl_8057A63C
+lbl_8057A63C:
+	.skip 0x14
+.global lbl_8057A650
+lbl_8057A650:
+	.skip 0x10
+.global lbl_8057A660
+lbl_8057A660:
+	.skip 0x10
+.global lbl_8057A670
+lbl_8057A670:
+	.skip 0x14
+.global lbl_8057A684
+lbl_8057A684:
+	.skip 0xC
+.global lbl_8057A690
+lbl_8057A690:
+	.skip 0x18
+.global lbl_8057A6A8
+lbl_8057A6A8:
+	.skip 0x10
+.global lbl_8057A6B8
+lbl_8057A6B8:
+	.skip 0x10
+.global lbl_8057A6C8
+lbl_8057A6C8:
+	.skip 0x18
+.global lbl_8057A6E0
+lbl_8057A6E0:
+	.skip 0x10
+.global lbl_8057A6F0
+lbl_8057A6F0:
+	.skip 0x10
+.global lbl_8057A700
+lbl_8057A700:
+	.skip 0x10
+.global lbl_8057A710
+lbl_8057A710:
+	.skip 0xC
+.global lbl_8057A71C
+lbl_8057A71C:
+	.skip 0xC
+.global lbl_8057A728
+lbl_8057A728:
+	.skip 0x14
+.global lbl_8057A73C
+lbl_8057A73C:
+	.skip 0x14
+.global lbl_8057A750
+lbl_8057A750:
+	.skip 0xC
+.global lbl_8057A75C
+lbl_8057A75C:
+	.skip 0xC
+.global lbl_8057A768
+lbl_8057A768:
+	.skip 0x14
+.global lbl_8057A77C
+lbl_8057A77C:
+	.skip 0xC
+.global lbl_8057A788
+lbl_8057A788:
+	.skip 0x18
+.global lbl_8057A7A0
+lbl_8057A7A0:
+	.skip 0x10
+.global lbl_8057A7B0
+lbl_8057A7B0:
+	.skip 0x10
+.global lbl_8057A7C0
+lbl_8057A7C0:
+	.skip 0x14
+.global lbl_8057A7D4
+lbl_8057A7D4:
+	.skip 0xC
+.global lbl_8057A7E0
+lbl_8057A7E0:
+	.skip 0x14
+.global lbl_8057A7F4
+lbl_8057A7F4:
+	.skip 0x14
+.global lbl_8057A808
+lbl_8057A808:
+	.skip 0x10
+.global lbl_8057A818
+lbl_8057A818:
+	.skip 0x14
+.global lbl_8057A82C
+lbl_8057A82C:
+	.skip 0xC
+.global lbl_8057A838
+lbl_8057A838:
+	.skip 0xC
+.global lbl_8057A844
+lbl_8057A844:
+	.skip 0xC
+.global lbl_8057A850
+lbl_8057A850:
+	.skip 0xC
+.global lbl_8057A85C
+lbl_8057A85C:
+	.skip 0xC
+.global lbl_8057A868
+lbl_8057A868:
+	.skip 0x18
+.global lbl_8057A880
+lbl_8057A880:
+	.skip 0x10
+.global lbl_8057A890
+lbl_8057A890:
+	.skip 0x10
+.global lbl_8057A8A0
+lbl_8057A8A0:
+	.skip 0x1C
+.global lbl_8057A8BC
+lbl_8057A8BC:
+	.skip 0x1C
+.global lbl_8057A8D8
+lbl_8057A8D8:
+	.skip 0x10
+.global lbl_8057A8E8
+lbl_8057A8E8:
+	.skip 0x10
+.global lbl_8057A8F8
+lbl_8057A8F8:
+	.skip 0x18
+.global lbl_8057A910
+lbl_8057A910:
+	.skip 0x14
+.global lbl_8057A924
+lbl_8057A924:
+	.skip 0x14
+.global lbl_8057A938
+lbl_8057A938:
+	.skip 0x10
+.global lbl_8057A948
+lbl_8057A948:
+	.skip 0x10
+.global lbl_8057A958
+lbl_8057A958:
+	.skip 0x18
+.global lbl_8057A970
+lbl_8057A970:
+	.skip 0x18
+.global lbl_8057A988
+lbl_8057A988:
+	.skip 0x18
+.global lbl_8057A9A0
+lbl_8057A9A0:
+	.skip 0xC
+.global lbl_8057A9AC
+lbl_8057A9AC:
+	.skip 0xC
+.global lbl_8057A9B8
+lbl_8057A9B8:
+	.skip 0x10
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80019BA8
 lbl_80019BA8:
@@ -1172,7 +2063,7 @@ lbl_80019BF0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80295888
 	.4byte 0x0000009C

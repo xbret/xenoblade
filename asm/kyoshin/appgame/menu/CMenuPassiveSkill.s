@@ -962,7 +962,91 @@ func_80263EB4:
 /* 80263EB4 0022D474  38 63 FF A8 */	addi r3, r3, -88
 /* 80263EB8 0022D478  4B FF F3 70 */	b func_80263228
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuPassiveSkill_typestr
+CMenuPassiveSkill_typestr:
+	.asciz "CMenuPassiveSkill"
+	.balign 4
+
+
+.global lbl_805091E4
+lbl_805091E4:
+	.asciz "MNU_passive"
+	.asciz "name"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuPassiveSkill
+__vt__CMenuPassiveSkill:
+	.4byte __RTTI__CMenuPassiveSkill
+	.4byte 0
+	.4byte func_80263228
+	.4byte CChildListNode_Reset
+	.4byte func_802632A0
+	.4byte func_8026370C
+	.4byte func_80263778
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuPassiveSkill
+	.4byte 0xFFFFFFA8
+	.4byte func_80263EB4
+	.4byte func_80263EAC
+	.4byte func_8026382C
+
+.global CMenuPassiveSkill_hierarchy
+CMenuPassiveSkill_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuPassiveSkill
+__RTTI__CMenuPassiveSkill:
+	.4byte CMenuPassiveSkill_typestr
+	.4byte CMenuPassiveSkill_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066B1A0
+lbl_8066B1A0:
+	# ROM: 0x575000
+	.4byte 0
+
+
+.global lbl_8066B1A4
+lbl_8066B1A4:
+	# ROM: 0x575004
+	.float 1.0
+
+
+.global lbl_8066B1A8
+lbl_8066B1A8:
+	# ROM: 0x575008
+	.float 10.0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667168
+lbl_80667168:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800177E8
 lbl_800177E8:
@@ -1084,7 +1168,7 @@ lbl_80017914:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80263158
 	.4byte 0x000000D0

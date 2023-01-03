@@ -1377,7 +1377,73 @@ sinit_801A1818:
 
 .4byte sinit_801A1818
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global COccCulling_typestr
+COccCulling_typestr:
+	.asciz "COccCulling"
+
+
+.global lbl_804FF61C
+lbl_804FF61C:
+	.asciz "OCC_CULL"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__COccCulling
+__vt__COccCulling:
+	.4byte __RTTI__COccCulling
+	.4byte 0
+	.4byte func_801A0580
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__COccCulling
+__RTTI__COccCulling:
+	.4byte COccCulling_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A548
+lbl_8066A548:
+	# ROM: 0x5743A8
+	.float 1.0
+
+
+.global lbl_8066A54C
+lbl_8066A54C:
+	# ROM: 0x5743AC
+	.4byte 0
+
+
+.global lbl_8066A550
+lbl_8066A550:
+	# ROM: 0x5743B0
+	.4byte 0x4222F983
+
+
+.global lbl_8066A554
+lbl_8066A554:
+	# ROM: 0x5743B4
+	.4byte 0xBF000000
+
+
+.global lbl_8066A558
+lbl_8066A558:
+	# ROM: 0x5743B8
+	.float 0.5
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80578FE8
+lbl_80578FE8:
+	.skip 0x30
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000F634
 lbl_8000F634:
@@ -1439,7 +1505,7 @@ lbl_8000F6A8:
 
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801A04E8
 	.4byte 0x00000098

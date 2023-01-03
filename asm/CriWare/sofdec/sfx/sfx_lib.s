@@ -309,3 +309,15 @@ lbl_80520AC4:
 	.asciz "E202011: SfxAHn: can't create."
 	.balign 4
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8061CE38
+lbl_8061CE38:
+	.skip 0x4
+.global lbl_8061CE3C
+lbl_8061CE3C:
+	.skip 0xC
+.global sfx_libwork
+sfx_libwork:
+	.skip 0x528

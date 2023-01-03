@@ -150,8 +150,8 @@ getInstanceMTRand__Q22mm3mtlFv:
 /* 804355CC 003FEB8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804355D0 003FEB90  4E 80 00 20 */	blr 
 
-.global func_804355D4__Q32mm3mtl6MTRandFUl
-func_804355D4__Q32mm3mtl6MTRandFUl:
+.global mtInit__Q32mm3mtl6MTRandFUl
+mtInit__Q32mm3mtl6MTRandFUl:
 /* 804355D4 003FEB94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804355D8 003FEB98  2C 04 00 00 */	cmpwi r4, 0
 /* 804355DC 003FEB9C  93 E1 00 0C */	stw r31, 0xc(r1)
@@ -698,7 +698,7 @@ lbl_80667E60:
 lbl_80667E68:
 	.skip 0x8
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001C040
 lbl_8001C040:
@@ -731,12 +731,12 @@ lbl_8001C068:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte getInstanceMTRand__Q22mm3mtlFv
 	.4byte 0x00000238
 	.4byte lbl_8001C040
-	.4byte func_804355D4__Q32mm3mtl6MTRandFUl
+	.4byte mtInit__Q32mm3mtl6MTRandFUl
 	.4byte 0x00000214
 	.4byte lbl_8001C048
 	.4byte nextMt__Q32mm3mtl6MTRandFv

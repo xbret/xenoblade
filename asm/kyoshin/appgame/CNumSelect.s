@@ -2146,7 +2146,476 @@ func_801EC9E0:
 /* 801ECB7C 001B613C  38 21 00 40 */	addi r1, r1, 0x40
 /* 801ECB80 001B6140  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CNumSelect_typestr
+CNumSelect_typestr:
+	.asciz "CNumSelect"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_805023B0
+lbl_805023B0:
+	.asciz "/menu/ShopSubWin.arc"
+	.asciz "txt_name"
+	.asciz "txt_value"
+	.asciz "MNU_item"
+	.asciz "name"
+	.asciz "%d%s"
+	.asciz "txt_total"
+	.asciz "pic_arrow_o01"
+	.asciz "pic_arrow_u01"
+	.asciz "pic_up"
+	.asciz "pic_down"
+	.asciz "CNumSelect"
+	.asciz "arc"
+	.asciz "mf70_cf60_syswin05.brlyt"
+	.asciz "mf70_cf60_syswin05_in_value.brlan"
+	.asciz "mf70_cf60_syswin05_roop.brlan"
+	.asciz "mf70_cf60_syswin05_on.brlan"
+	.asciz "nul_shslct"
+	.asciz "MNU_shop"
+	.asciz "txt_buy01"
+	.asciz "txt_buy02"
+	.asciz "txt_buy03"
+	.asciz "MNU_kyeassign"
+	.asciz "help"
+	.asciz "txt_close00"
+	.asciz "txt_close01"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "pic_btn00"
+	.asciz "pic_btn01"
+
+
+.global lbl_80502528
+lbl_80502528:
+	# ROM: 0x4FE628
+	.4byte 0
+	.4byte 0
+	.4byte lbl_8066A958
+	.4byte 0
+	.4byte lbl_8066A95C
+	.4byte lbl_8066A964
+	.4byte lbl_8066A96C
+	.4byte lbl_8066A970
+	.4byte lbl_8066A978
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte lbl_8066A980
+
+.global lbl_80502560
+lbl_80502560:
+	.asciz "exchangelist0000"
+	.balign 4
+
+.global lbl_80502574
+lbl_80502574:
+	.asciz "exchangelist0101"
+	.balign 4
+
+.global lbl_80502588
+lbl_80502588:
+	.asciz "exchangelist0201"
+	.balign 4
+
+.global lbl_8050259C
+lbl_8050259C:
+	.asciz "exchangelist0301"
+	.balign 4
+
+.global lbl_805025B0
+lbl_805025B0:
+	.asciz "exchangelist0401"
+	.balign 4
+
+.global lbl_805025C4
+lbl_805025C4:
+	.asciz "exchangelist0402"
+	.balign 4
+
+.global lbl_805025D8
+lbl_805025D8:
+	.asciz "exchangelist0501"
+	.balign 4
+
+.global lbl_805025EC
+lbl_805025EC:
+	.asciz "exchangelist0601"
+	.balign 4
+
+.global lbl_80502600
+lbl_80502600:
+	.asciz "exchangelist0701"
+	.balign 4
+
+.global lbl_80502614
+lbl_80502614:
+	.asciz "exchangelist0801"
+	.balign 4
+
+.global lbl_80502628
+lbl_80502628:
+	.asciz "exchangelist0901"
+	.balign 4
+
+.global lbl_8050263C
+lbl_8050263C:
+	.asciz "exchangelist1001"
+	.balign 4
+
+.global lbl_80502650
+lbl_80502650:
+	.asciz "exchangelist1101"
+	.balign 4
+
+.global lbl_80502664
+lbl_80502664:
+	.asciz "exchangelist1201"
+	.balign 4
+
+.global lbl_80502678
+lbl_80502678:
+	.asciz "exchangelist1202"
+	.balign 4
+
+.global lbl_8050268C
+lbl_8050268C:
+	.asciz "exchangelist1301"
+	.balign 4
+
+.global lbl_805026A0
+lbl_805026A0:
+	.asciz "exchangelist1401"
+	.balign 4
+
+.global lbl_805026B4
+lbl_805026B4:
+	.asciz "exchangelist1501"
+	.balign 4
+
+.global lbl_805026C8
+lbl_805026C8:
+	.asciz "exchangelist1601"
+	.balign 4
+
+.global lbl_805026DC
+lbl_805026DC:
+	.asciz "exchangelist1701"
+	.balign 4
+
+.global lbl_805026F0
+lbl_805026F0:
+	.asciz "exchangelist1801"
+	.balign 4
+
+.global lbl_80502704
+lbl_80502704:
+	.asciz "exchangelist1901"
+	.balign 4
+
+.global lbl_80502718
+lbl_80502718:
+	.asciz "exchangelist2001"
+	.balign 4
+
+.global lbl_8050272C
+lbl_8050272C:
+	.asciz "exchangelist2101"
+	.balign 4
+
+.global lbl_80502740
+lbl_80502740:
+	.asciz "exchangelist2201"
+	.balign 4
+
+.global lbl_80502754
+lbl_80502754:
+	.asciz "exchangelist2301"
+	.balign 4
+	.4byte lbl_80502560
+	.4byte lbl_80502574
+	.4byte lbl_80502588
+	.4byte lbl_8050259C
+	.4byte lbl_805025B0
+	.4byte lbl_805025C4
+	.4byte lbl_805025D8
+	.4byte lbl_805025EC
+	.4byte lbl_80502600
+	.4byte lbl_80502614
+	.4byte lbl_80502628
+	.4byte lbl_8050263C
+	.4byte lbl_80502650
+	.4byte lbl_80502664
+	.4byte lbl_80502678
+	.4byte lbl_8050268C
+	.4byte lbl_805026A0
+	.4byte lbl_805026B4
+	.4byte lbl_805026C8
+	.4byte lbl_805026C8
+	.4byte lbl_805026DC
+	.4byte lbl_805026F0
+	.4byte lbl_80502704
+	.4byte lbl_80502718
+	.4byte lbl_8050272C
+	.4byte lbl_80502740
+	.4byte lbl_80502754
+
+.global lbl_805027D4
+lbl_805027D4:
+	.asciz "kessyou1"
+	.balign 4
+
+.global lbl_805027E0
+lbl_805027E0:
+	.asciz "kessyou2"
+	.balign 4
+
+.global lbl_805027EC
+lbl_805027EC:
+	.asciz "collect1"
+	.balign 4
+
+.global lbl_805027F8
+lbl_805027F8:
+	.asciz "collect2"
+	.balign 4
+
+.global lbl_80502804
+lbl_80502804:
+	.asciz "materia1"
+	.balign 4
+
+.global lbl_80502810
+lbl_80502810:
+	.asciz "materia2"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte lbl_8066A988
+	.4byte 0
+	.4byte lbl_805027D4
+	.4byte lbl_805027E0
+	.4byte lbl_8066A990
+	.4byte 0
+	.4byte lbl_8066A998
+	.4byte 0
+	.4byte lbl_8066A9A0
+	.4byte 0
+	.4byte lbl_8066A9A8
+	.4byte 0
+	.4byte lbl_8066A9B0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte lbl_805027EC
+	.4byte lbl_805027F8
+	.4byte lbl_80502804
+	.4byte lbl_80502810
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global lbl_80502890
+lbl_80502890:
+	.asciz "percent_E"
+	.balign 4
+
+.global lbl_8050289C
+lbl_8050289C:
+	.asciz "percent_D"
+	.balign 4
+
+.global lbl_805028A8
+lbl_805028A8:
+	.asciz "percent_C"
+	.balign 4
+
+.global lbl_805028B4
+lbl_805028B4:
+	.asciz "percent_B"
+	.balign 4
+
+.global lbl_805028C0
+lbl_805028C0:
+	.asciz "percent_A"
+	.balign 4
+
+.global lbl_805028CC
+lbl_805028CC:
+	.asciz "percent_S"
+	.balign 4
+
+
+.global lbl_805028D8
+lbl_805028D8:
+	# ROM: 0x4FE9D8
+	.4byte lbl_8066A9D0
+	.4byte lbl_80502890
+	.4byte lbl_8050289C
+	.4byte lbl_805028A8
+	.4byte lbl_805028B4
+	.4byte lbl_805028C0
+	.4byte lbl_805028CC
+
+
+.global lbl_805028F4
+lbl_805028F4:
+	# ROM: 0x4FE9F4
+	.4byte 0
+	.float 1.0
+	.4byte 0x3F99999A
+	.float 1.5
+	.4byte 0x3FE66666
+	.4byte 0x40000000
+	.4byte 0x40200000
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CNumSelect
+__vt__CNumSelect:
+	.4byte __RTTI__CNumSelect
+	.4byte 0
+	.4byte func_801EAE38
+	.4byte func_80039E28
+	.4byte func_801EB708
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CNumSelect_hierarchy
+CNumSelect_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CNumSelect
+__RTTI__CNumSelect:
+	.4byte CNumSelect_typestr
+	.4byte CNumSelect_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066A948
+lbl_8066A948:
+	# ROM: 0x5747A8
+	.float 1.0
+
+
+.global lbl_8066A94C
+lbl_8066A94C:
+	# ROM: 0x5747AC
+	.4byte 0
+
+
+.global lbl_8066A950
+lbl_8066A950:
+	# ROM: 0x5747B0
+	.4byte 0x43300000
+	.4byte 0
+
+.global lbl_8066A958
+lbl_8066A958:
+	.asciz "wpn"
+
+.global lbl_8066A95C
+lbl_8066A95C:
+	.asciz "head"
+	.balign 4
+
+.global lbl_8066A964
+lbl_8066A964:
+	.asciz "body"
+	.balign 4
+
+.global lbl_8066A96C
+lbl_8066A96C:
+	.asciz "arm"
+
+.global lbl_8066A970
+lbl_8066A970:
+	.asciz "waist"
+	.balign 4
+
+.global lbl_8066A978
+lbl_8066A978:
+	.asciz "legg"
+	.balign 4
+
+.global lbl_8066A980
+lbl_8066A980:
+	.asciz "arts"
+	.balign 4
+
+.global lbl_8066A988
+lbl_8066A988:
+	.asciz "wpn1"
+	.balign 4
+
+.global lbl_8066A990
+lbl_8066A990:
+	.asciz "head1"
+	.balign 4
+
+.global lbl_8066A998
+lbl_8066A998:
+	.asciz "body1"
+	.balign 4
+
+.global lbl_8066A9A0
+lbl_8066A9A0:
+	.asciz "arm1"
+	.balign 4
+
+.global lbl_8066A9A8
+lbl_8066A9A8:
+	.asciz "waist1"
+	.balign 4
+
+.global lbl_8066A9B0
+lbl_8066A9B0:
+	.asciz "legg1"
+	.balign 4
+	
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80011AD8
 lbl_80011AD8:
@@ -2283,7 +2752,7 @@ lbl_80011BBC:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801EADC0
 	.4byte 0x00000078

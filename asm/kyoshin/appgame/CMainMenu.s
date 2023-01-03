@@ -546,7 +546,360 @@ switch_800FF2B0:
 /* 800FF2F8 000C88B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 800FF2FC 000C88BC  4E 80 00 20 */	blr
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F8568
+lbl_804F8568:
+	.asciz "/menu/MainMenu.arc"
+	.balign 4
+
+
+.global lbl_804F857C
+lbl_804F857C:
+	# ROM: 0x4F467C
+	.4byte 0xFF40FF80
+	.4byte 0xFFC00000
+	.4byte 0x00400080
+	.4byte 0x00C00000
+
+.global lbl_804F858C
+lbl_804F858C:
+	.asciz "pic_icon02_01"
+	.balign 4
+
+.global lbl_804F859C
+lbl_804F859C:
+	.asciz "pic_icon02_02"
+	.balign 4
+
+.global lbl_804F85AC
+lbl_804F85AC:
+	.asciz "pic_icon02_03"
+	.balign 4
+
+.global lbl_804F85BC
+lbl_804F85BC:
+	.asciz "pic_icon03_01"
+	.balign 4
+
+.global lbl_804F85CC
+lbl_804F85CC:
+	.asciz "pic_icon03_02"
+	.balign 4
+
+.global lbl_804F85DC
+lbl_804F85DC:
+	.asciz "pic_icon05_01"
+	.balign 4
+
+.global lbl_804F85EC
+lbl_804F85EC:
+	.asciz "pic_icon05_02"
+	.balign 4
+
+.global lbl_804F85FC
+lbl_804F85FC:
+	.asciz "pic_icon05_03"
+	.balign 4
+
+.global lbl_804F860C
+lbl_804F860C:
+	.asciz "pic_icon05_04"
+	.balign 4
+
+.global lbl_804F861C
+lbl_804F861C:
+	.asciz "pic_icon06_01"
+	.balign 4
+
+.global lbl_804F862C
+lbl_804F862C:
+	.asciz "pic_icon06_02"
+	.balign 4
+
+.global lbl_804F863C
+lbl_804F863C:
+	.asciz "pic_icon07_01"
+	.balign 4
+
+.global lbl_804F864C
+lbl_804F864C:
+	.asciz "pic_icon07_02"
+	.balign 4
+
+.global lbl_804F865C
+lbl_804F865C:
+	.asciz "pic_icon07_03"
+	.balign 4
+	.4byte 0
+
+.global lbl_804F8670
+lbl_804F8670:
+	.4byte lbl_804F858C
+	.4byte lbl_804F859C
+	.4byte lbl_804F85AC
+	.4byte lbl_804F85BC
+	.4byte lbl_804F85CC
+	.4byte lbl_804F85DC
+	.4byte lbl_804F85EC
+	.4byte lbl_804F85FC
+	.4byte lbl_804F860C
+	.4byte lbl_804F861C
+	.4byte lbl_804F862C
+	.4byte lbl_804F863C
+	.4byte lbl_804F864C
+	.4byte lbl_804F865C
+
+.global CMainMenu_typestr
+CMainMenu_typestr:
+	.asciz "CMainMenu"
+	.balign 4
+
+.global CMainCur_typestr
+CMainCur_typestr:
+	.asciz "CMainCur"
+	.balign 4
+
+.global CBaseCur_typestr
+CBaseCur_typestr:
+	.asciz "CBaseCur"
+	.balign 4
+
+.global CTTask_IUICf_typestr
+CTTask_IUICf_typestr:
+	.asciz "CTTask<IUICf>"
+	.balign 4
+
+
+.global lbl_804F86DC
+lbl_804F86DC:
+	.asciz "mf01_main21_cursor.brlyt"
+	.asciz "mf01_main21_cursor_roop.brlan"
+	.asciz "mf01_main21_cursor_on.brlan"
+	.asciz "txt_cursor"
+	.asciz "MNU_main"
+	.asciz "name"
+	.asciz "help"
+	.asciz "txt_suject"
+	.asciz "txt_helpmess"
+	.byte 0x00
+	.asciz "CMainMenu"
+	.asciz "arc"
+	.asciz "mf01_main00_icon.brlyt"
+	.asciz "mf01_main00_icon_in.brlan"
+	.asciz "mf01_main00_icon_out.brlan"
+	.asciz "mf01_main00_icon_sub_in.brlan"
+	.asciz "mf01_main00_icon_sub_out.brlan"
+	.asciz "pic_base%02d_%02d"
+	.asciz "nul_proportion"
+	.asciz "pic_base02_01"
+	.asciz "pic_base02_02"
+	.asciz "pic_base02_03"
+	.asciz "pic_base03_01"
+	.asciz "pic_base03_02"
+	.asciz "pic_base05_01"
+	.asciz "pic_base05_02"
+	.asciz "pic_base05_03"
+	.asciz "pic_base05_04"
+	.asciz "pic_base06_01"
+	.asciz "pic_base06_02"
+	.asciz "pic_base07_01"
+	.asciz "pic_base07_02"
+	.asciz "pic_base07_03"
+	.asciz "pic_icon%02d"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8052F5B8
+lbl_8052F5B8:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800FEF20
+
+.global lbl_8052F5C4
+lbl_8052F5C4:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800FEF4C
+
+
+.global lbl_8052F5D0
+lbl_8052F5D0:
+	# ROM: 0x52B6D0
+	.4byte switch_800FF088
+	.4byte switch_800FF09C
+	.4byte switch_800FF160
+	.4byte switch_800FF16C
+	.4byte switch_800FF194
+	.4byte switch_800FF1E0
+	.4byte switch_800FF1EC
+	.4byte switch_800FF1F8
+	.4byte switch_800FF2B0
+
+
+.global __vt__CMainMenu
+__vt__CMainMenu:
+	.4byte __RTTI__CMainMenu
+	.4byte 0
+	.4byte func_800FED68
+	.4byte CChildListNode_Reset
+	.4byte func_800FEE00
+	.4byte func_800FEE5C
+	.4byte func_80101F70
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMainMenu
+	.4byte 0xFFFFFFA8
+	.4byte func_80102008
+	.4byte func_80039E28
+	.4byte func_80102000
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMainMenu
+	.4byte 0xFFFFFFA4
+	.4byte func_80102018
+	.4byte func_80102010
+	.4byte func_800FF604
+	.4byte func_800FF300
+
+.global CMainMenu_hierarchy
+CMainMenu_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000005C
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global __vt__CMainCur
+__vt__CMainCur:
+	.4byte __RTTI__CMainCur
+	.4byte 0
+	.4byte func_800FEA88
+	.4byte func_801D20DC
+	.4byte func_800FEB14
+	.4byte func_801D2180
+
+.global CMainCur_hierarchy
+CMainCur_hierarchy:
+	.4byte __RTTI__CBaseCur
+	.4byte 0
+	.4byte 0
+
+.global IUICf_hierarchy
+IUICf_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_IUICf
+__vt__CTTask_IUICf:
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte func_800FECB4
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_80101F70
+	.4byte func_80101FB8
+	.4byte func_80043F20
+
+.global CTTask_IUICf_hierarchy
+CTTask_IUICf_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global lbl_806646B8
+lbl_806646B8:
+	# ROM: 0x570298
+	.4byte lbl_804F8568
+	.4byte 0
+
+.global __RTTI__CMainMenu
+__RTTI__CMainMenu:
+	.4byte CMainMenu_typestr
+	.4byte CMainMenu_hierarchy
+
+.global __RTTI__CMainCur
+__RTTI__CMainCur:
+	.4byte CMainCur_typestr
+	.4byte CMainCur_hierarchy
+
+.global __RTTI__CBaseCur
+__RTTI__CBaseCur:
+	.4byte CBaseCur_typestr
+	.4byte 0
+
+.global __RTTI__IUICf
+__RTTI__IUICf:
+	.4byte IUICf_typestr
+	.4byte IUICf_hierarchy
+
+.global __RTTI__CTTask_IUICf
+__RTTI__CTTask_IUICf:
+	.4byte CTTask_IUICf_typestr
+	.4byte CTTask_IUICf_hierarchy
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666810
+lbl_80666810:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000AD80
 lbl_8000AD80:
@@ -635,7 +988,7 @@ lbl_8000AE7C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_800FEB84
 	.4byte 0x00000130

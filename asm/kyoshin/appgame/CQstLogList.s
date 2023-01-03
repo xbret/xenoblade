@@ -2036,7 +2036,199 @@ func_80229398:
 
 .4byte sinit_80229378
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CQstLogList_typestr
+CQstLogList_typestr:
+	.asciz "CQstLogList"
+
+
+.global lbl_805051C4
+lbl_805051C4:
+	.asciz "qst_genre"
+	.asciz "index"
+	.asciz "%s"
+	.asciz "/menu/QstLogList.arc"
+	.asciz "nul_sort"
+	.asciz "nul_proportion"
+	.asciz "title"
+	.asciz "txt_tit%02d"
+	.asciz "npc_id"
+	.asciz "rlt_lnd"
+	.asciz "landmarklist"
+	.asciz "mapID"
+	.asciz "name"
+	.asciz "txt_map%02d"
+	.asciz "pic_icon%02d"
+	.asciz "mf00_reg00_new.tpl"
+	.asciz "mf00_reg00_cmp.tpl"
+	.asciz "pic_icon%02d_00"
+	.asciz "mf00_reg00_qt01.tpl"
+	.asciz "mf00_reg00_qt02.tpl"
+	.asciz "mf00_reg00_qt03.tpl"
+	.byte 0x00
+	.asciz "txt_soat01"
+	.asciz "CQstLogList"
+	.asciz "arc"
+	.asciz "mf30_qst_all.brlyt"
+	.asciz "mf30_qst_all_in.brlan"
+	.asciz "mf30_qst_all_info_in.brlan"
+	.asciz "MNU_quest"
+	.asciz "category"
+	.asciz "txt_soattit"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "MNU_kyeassign"
+	.asciz "pic_soatbtn"
+	.asciz "txt_tit01"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_805399E0
+lbl_805399E0:
+	.4byte switch_8022902C
+	.4byte switch_80228FC0
+	.4byte switch_80228FC0
+	.4byte switch_80228FC0
+	.4byte switch_8022902C
+	.4byte switch_8022902C
+	.4byte switch_80228FC0
+	.4byte switch_80228FC0
+	.4byte switch_8022902C
+	.4byte switch_80228FC0
+	.4byte switch_80228FC0
+	.4byte switch_80228FC0
+	.4byte switch_80228FC0
+	.4byte switch_80228FC0
+	.4byte switch_8022902C
+	.4byte switch_80228FC0
+	.4byte switch_8022902C
+	.4byte switch_80228FC0
+	.4byte switch_80228FC0
+	.4byte switch_8022902C
+	.4byte switch_8022902C
+	.4byte switch_80228FC0
+	.4byte switch_8022902C
+	.4byte 0
+
+
+.global __vt__CQstLogList
+__vt__CQstLogList:
+	.4byte __RTTI__CQstLogList
+	.4byte 0
+	.4byte func_802279CC
+	.4byte func_80039E28
+	.4byte func_80228CD8
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CQstLogList_hierarchy
+CQstLogList_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665158
+lbl_80665158:
+	# ROM: 0x570D38
+	.4byte 0xFFFFFFFF
+	.4byte 0
+
+.global __RTTI__CQstLogList
+__RTTI__CQstLogList:
+	.4byte CQstLogList_typestr
+	.4byte CQstLogList_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AE38
+lbl_8066AE38:
+	# ROM: 0x574C98
+	.4byte 0x43560000
+
+
+.global lbl_8066AE3C
+lbl_8066AE3C:
+	# ROM: 0x574C9C
+	.4byte 0x42EC0000
+
+
+.global lbl_8066AE40
+lbl_8066AE40:
+	# ROM: 0x574CA0
+	.4byte 0
+
+
+.global lbl_8066AE44
+lbl_8066AE44:
+	# ROM: 0x574CA4
+	.float 1.0
+
+
+.global lbl_8066AE48
+lbl_8066AE48:
+	# ROM: 0x574CA8
+	.4byte 0x43300000
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80579E68
+lbl_80579E68:
+	.skip 0x458
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667018
+lbl_80667018:
+	.skip 0x4
+.global lbl_8066701C
+lbl_8066701C:
+	.skip 0x4
+.global lbl_80667020
+lbl_80667020:
+	.skip 0x4
+.global lbl_80667024
+lbl_80667024:
+	.skip 0x4
+.global lbl_80667028
+lbl_80667028:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80015304
 lbl_80015304:
@@ -2256,7 +2448,7 @@ lbl_80015504:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8022774C
 	.4byte 0x00000248

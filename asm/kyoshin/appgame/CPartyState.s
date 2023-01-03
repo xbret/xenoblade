@@ -2767,7 +2767,305 @@ func_801FF54C:
 /* 801FF55C 001C8B1C  38 84 8C 18 */	addi r4, r4, lbl_80538C18@l
 /* 801FF560 001C8B20  48 2A 16 30 */	b func_804A0B90
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80503460
+lbl_80503460:
+	.asciz "/menu/PartyState.arc"
+	.balign 4
+
+
+.global lbl_80503478
+lbl_80503478:
+	# ROM: 0x4FF578
+	.4byte 0
+	.4byte 0x41880000
+	.4byte 0x42080000
+	.4byte 0x424C0000
+	.4byte 0x42880000
+
+.global CPartyState_typestr
+CPartyState_typestr:
+	.asciz "CPartyState"
+
+
+.global lbl_80503498
+lbl_80503498:
+	.asciz "nul_pc%02d"
+	.asciz "%02d"
+	.asciz "txt_pc%02dvalue700"
+	.asciz "txt_pc%02dvalue703"
+	.asciz "txt_pc%02dvalue704"
+	.asciz "txt_pc%02dpara705"
+	.asciz "pic_gage_skl%02d"
+	.asciz "pic_gage_exp%02d"
+	.asciz "icon_type2"
+	.asciz "pic_face%02d"
+	.asciz "nul_sklcat%02d"
+	.asciz "mf20_skl01_pc%02dcat%02d.tpl"
+	.asciz "pic_sklcat%02d"
+	.asciz "pic_guest%02d_bs"
+	.asciz "rlt_texture"
+	.asciz "pic_guest%02d_face"
+	.asciz "txt_othval02"
+	.asciz "txt_othval03"
+	.asciz "BTL_PSVskill"
+	.asciz "point_PP"
+	.asciz "CPartyState"
+	.asciz "arc"
+	.asciz "mf02_pt00.brlyt"
+	.asciz "mf02_pt00_in.brlan"
+	.asciz "mf02_pt00_info_in.brlan"
+	.asciz "txt_othunit02"
+	.asciz "txt_othval01"
+	.asciz "txt_pc%02dpara704"
+	.asciz "txt_pc%02dpara700"
+	.asciz "MNU_party"
+	.asciz "name"
+	.asciz "txt_pc%02dpara703"
+	.asciz "%d%s"
+
+.global lbl_80503678
+lbl_80503678:
+	.asciz "getPcHpRate"
+
+.global lbl_80503684
+lbl_80503684:
+	.asciz "getEneHp"
+	.balign 4
+
+.global lbl_80503690
+lbl_80503690:
+	.asciz "getEneHpRate"
+	.balign 4
+
+.global lbl_805036A0
+lbl_805036A0:
+	.asciz "setPcBtlState"
+	.balign 4
+
+.global lbl_805036B0
+lbl_805036B0:
+	.asciz "clearPcBtlState"
+
+.global lbl_805036C0
+lbl_805036C0:
+	.asciz "setEneBtlState"
+	.balign 4
+
+.global lbl_805036D0
+lbl_805036D0:
+	.asciz "clearEneBtlState"
+	.balign 4
+
+.global lbl_805036E4
+lbl_805036E4:
+	.asciz "onPcArtsAttack"
+	.balign 4
+	.4byte 0
+
+.global lbl_805036F8
+lbl_805036F8:
+	.asciz "onEneArtsAttack"
+
+.global lbl_80503708
+lbl_80503708:
+	.asciz "learnArts"
+	.balign 4
+	.4byte 0
+
+#check later for text
+.global lbl_80503718
+lbl_80503718:
+	.asciz "pc_arts"
+	.4byte 0x70630075
+	.4byte 0x6E697400
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CPartyState
+__vt__CPartyState:
+	.4byte __RTTI__CPartyState
+	.4byte 0
+	.4byte func_801FCEFC
+	.4byte func_80039E28
+	.4byte func_801FE4AC
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CPartyState_hierarchy
+CPartyState_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80538C18
+lbl_80538C18:
+	# ROM: 0x534D18
+	.4byte lbl_8066AB20
+	.4byte func_801FE8F4
+	.4byte lbl_80503678
+	.4byte func_801FE990
+	.4byte lbl_80503684
+	.4byte func_801FEA6C
+	.4byte lbl_80503690
+	.4byte func_801FEB08
+	.4byte lbl_805036A0
+	.4byte func_801FEBE4
+	.4byte lbl_805036B0
+	.4byte func_801FEDE4
+	.4byte lbl_805036C0
+	.4byte func_801FEE70
+	.4byte lbl_805036D0
+	.4byte func_801FF060
+	.4byte lbl_805036E4
+	.4byte func_801FF0EC
+	.4byte lbl_805036F8
+	.4byte func_801FF24C
+	.4byte lbl_8066AB28
+	.4byte func_801FF43C
+	.4byte lbl_80503708
+	.4byte func_801FF4D0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665020
+lbl_80665020:
+	# ROM: 0x570C00
+	.4byte lbl_80503460
+	.4byte 0
+
+.global __RTTI__CPartyState
+__RTTI__CPartyState:
+	.4byte CPartyState_typestr
+	.4byte CPartyState_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AAD8
+lbl_8066AAD8:
+	# ROM: 0x574938
+	.float 1.0
+
+
+.global lbl_8066AADC
+lbl_8066AADC:
+	# ROM: 0x57493C
+	.2byte 0x0102
+
+
+.global lbl_8066AADE
+lbl_8066AADE:
+	# ROM: 0x57493E
+	.2byte 0x0300
+
+
+.global lbl_8066AAE0
+lbl_8066AAE0:
+	# ROM: 0x574940
+	.4byte 0x04050607
+	.4byte 0
+
+
+.global lbl_8066AAE8
+lbl_8066AAE8:
+	# ROM: 0x574948
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066AAF0
+lbl_8066AAF0:
+	# ROM: 0x574950
+	.4byte 0
+
+
+.global lbl_8066AAF4
+lbl_8066AAF4:
+	# ROM: 0x574954
+	.4byte 0x42A40000
+
+
+.global lbl_8066AAF8
+lbl_8066AAF8:
+	# ROM: 0x574958
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066AB00
+lbl_8066AB00:
+	# ROM: 0x574960
+	.float 0.5
+
+
+.global lbl_8066AB04
+lbl_8066AB04:
+	# ROM: 0x574964
+	.float 10.0
+
+
+.global lbl_8066AB08
+lbl_8066AB08:
+	# ROM: 0x574968
+	.4byte 0x41600000
+	.4byte 0
+
+
+.global lbl_8066AB10
+lbl_8066AB10:
+	# ROM: 0x574970
+	.float 100.0
+	.4byte 0
+
+
+.global lbl_8066AB18
+lbl_8066AB18:
+	# ROM: 0x574978
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.global lbl_8066AB20
+lbl_8066AB20:
+	.asciz "getPcHp"
+
+.global lbl_8066AB28
+lbl_8066AB28:
+	.asciz "synchro"
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800127E4
 lbl_800127E4:
@@ -2979,7 +3277,7 @@ lbl_80012958:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801FCE70
 	.4byte 0x0000008C

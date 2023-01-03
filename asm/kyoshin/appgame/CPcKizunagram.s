@@ -6470,7 +6470,402 @@ func_80261B98:
 /* 80263150 0022C710  38 21 01 10 */	addi r1, r1, 0x110
 /* 80263154 0022C714  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CPcKizunagram_typestr
+CPcKizunagram_typestr:
+	.asciz "CPcKizunagram"
+	.balign 4
+
+.global CPcKizunaCur_typestr
+CPcKizunaCur_typestr:
+	.asciz "CPcKizunaCur"
+	.balign 4
+
+
+.global lbl_80508F00
+lbl_80508F00:
+	.asciz "mf00_reg00_curs04.brlyt"
+	.asciz "mf00_reg00_curs04_roop.brlan"
+	.asciz "mf00_reg00_curs04_on.brlan"
+	.asciz "nul_curs02"
+	.asciz "nul_curs03"
+	.asciz "/menu/PcKizunagram.arc"
+	.asciz "JNL_PCrelatelist"
+	.asciz "pain1"
+	.asciz "on_pain%d"
+	.asciz "JNL_PClinelist"
+	.asciz "pain2"
+	.asciz "mf40_kiz_pclin_n.tpl"
+	.asciz "icon_pain"
+	.asciz "txt_pain"
+	.asciz "flg_s1"
+	.asciz "mf40_kiz_pclin_e.tpl"
+	.asciz "mf40_kiz_pclin_d.tpl"
+	.asciz "mf40_kiz_pclin_c.tpl"
+	.asciz "mf40_kiz_pclin_b.tpl"
+	.asciz "mf40_kiz_pclin_a.tpl"
+	.asciz "mf40_kiz_pcicon_e00.tpl"
+	.asciz "mf40_kiz_pcicon_d00.tpl"
+	.asciz "mf40_kiz_pcicon_c00.tpl"
+	.asciz "mf40_kiz_pcicon_b00.tpl"
+	.asciz "mf40_kiz_pcicon_a00.tpl"
+	.asciz "nul_proportion"
+	.asciz "mf40_kiz_pcicon_e%02d.tpl"
+	.asciz "mf40_kiz_pcicon_d%02d.tpl"
+	.asciz "mf40_kiz_pcicon_c%02d.tpl"
+	.asciz "mf40_kiz_pcicon_b%02d.tpl"
+	.asciz "mf40_kiz_pcicon_a%02d.tpl"
+	.asciz "flg_e1"
+	.asciz "flg_s2"
+	.asciz "flg_e2"
+	.asciz "CPcKizunagram"
+	.asciz "arc"
+	.asciz "mf40_kiz_pcline.brlyt"
+	.asciz "mf40_kiz_pcline_in.brlan"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_805091B0
+lbl_805091B0:
+	.asciz "name"
+	.byte 0x00
+	.asciz "skill"
+	.asciz "val1"
+	.asciz "val2"
+	.asciz "time"
+	.asciz "flag"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CPcKizunagram
+__vt__CPcKizunagram:
+	.4byte __RTTI__CPcKizunagram
+	.4byte 0
+	.4byte func_8025D820
+	.4byte func_80039E28
+	.4byte func_8025EA68
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CPcKizunagram_hierarchy
+CPcKizunagram_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CPcKizunaCur
+__vt__CPcKizunaCur:
+	.4byte __RTTI__CPcKizunaCur
+	.4byte 0
+	.4byte func_8025D4A4
+
+
+.global lbl_8053AE70
+lbl_8053AE70:
+	.asciz "NW4R:Pointer Error\nstr(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_8053AEA4
+lbl_8053AEA4:
+	.asciz "TextWriterBase.h"
+	.balign 4
+
+
+.global lbl_8053AEB8
+lbl_8053AEB8:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_8053AEEC
+lbl_8053AEEC:
+	.asciz "TextWriterBase.h"
+	.balign 4
+
+
+.global lbl_8053AF00
+lbl_8053AF00:
+	.asciz "NW4R:Pointer Error\ntagProcessor(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_8053AF3C
+lbl_8053AF3C:
+	.asciz "TextWriterBase.h"
+	.balign 4
+
+
+.global lbl_8053AF50
+lbl_8053AF50:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_8053AF84
+lbl_8053AF84:
+	.asciz "TextWriterBase.h"
+	.balign 4
+
+
+.global lbl_8053AF98
+lbl_8053AF98:
+	.asciz "NW4R:Pointer Error\n& font(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_8053AFD0
+lbl_8053AFD0:
+	.asciz "CharWriter.h"
+	.balign 4
+
+
+.global lbl_8053AFE0
+lbl_8053AFE0:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_8053B014
+lbl_8053B014:
+	.asciz "CharWriter.h"
+	.balign 4
+
+
+.global lbl_8053B024
+lbl_8053B024:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_8053B058
+lbl_8053B058:
+	.asciz "CharWriter.h"
+	.balign 4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CPcKizunagram
+__RTTI__CPcKizunagram:
+	.4byte CPcKizunagram_typestr
+	.4byte CPcKizunagram_hierarchy
+
+.global __RTTI__CPcKizunaCur
+__RTTI__CPcKizunaCur:
+	.4byte CPcKizunaCur_typestr
+	.4byte 0
+
+
+.global lbl_80665278
+lbl_80665278:
+	# ROM: 0x570E58
+	.4byte 0xFFFFFFFF
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B128
+lbl_8066B128:
+	# ROM: 0x574F88
+	.4byte 0x3F47AE14
+
+
+.global lbl_8066B12C
+lbl_8066B12C:
+	# ROM: 0x574F8C
+	.float 1.0
+
+
+.global lbl_8066B130
+lbl_8066B130:
+	# ROM: 0x574F90
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066B138
+lbl_8066B138:
+	# ROM: 0x574F98
+	.4byte 0x00010706
+
+
+.global lbl_8066B13C
+lbl_8066B13C:
+	# ROM: 0x574F9C
+	.4byte 0x03040205
+
+
+.global lbl_8066B140
+lbl_8066B140:
+	# ROM: 0x574FA0
+	.4byte 0x41880000
+
+
+.global lbl_8066B144
+lbl_8066B144:
+	# ROM: 0x574FA4
+	.4byte 0x41100000
+
+
+.global lbl_8066B148
+lbl_8066B148:
+	# ROM: 0x574FA8
+	.4byte 0x00010403
+
+
+.global lbl_8066B14C
+lbl_8066B14C:
+	# ROM: 0x574FAC
+	.4byte 0x06070205
+
+
+.global lbl_8066B150
+lbl_8066B150:
+	# ROM: 0x574FB0
+	.4byte 0x00010706
+
+
+.global lbl_8066B154
+lbl_8066B154:
+	# ROM: 0x574FB4
+	.4byte 0x03040205
+
+
+.global lbl_8066B158
+lbl_8066B158:
+	# ROM: 0x574FB8
+	.4byte 0x76616C3F
+
+
+.global lbl_8066B15C
+lbl_8066B15C:
+	# ROM: 0x574FBC
+	.4byte 0
+
+
+.global lbl_8066B160
+lbl_8066B160:
+	# ROM: 0x574FC0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066B168
+lbl_8066B168:
+	# ROM: 0x574FC8
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066B170
+lbl_8066B170:
+	# ROM: 0x574FD0
+	.4byte 0x42180000
+	.4byte 0
+
+
+.global lbl_8066B178
+lbl_8066B178:
+	# ROM: 0x574FD8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066B180
+lbl_8066B180:
+	# ROM: 0x574FE0
+	.4byte 0
+
+
+.global lbl_8066B184
+lbl_8066B184:
+	# ROM: 0x574FE4
+	.4byte 0xCB800000
+
+
+.global lbl_8066B188
+lbl_8066B188:
+	# ROM: 0x574FE8
+	.float 1.0
+
+
+.global lbl_8066B18C
+lbl_8066B18C:
+	# ROM: 0x574FEC
+	.4byte 0x3FA2067B
+
+
+.global lbl_8066B190
+lbl_8066B190:
+	# ROM: 0x574FF0
+	.4byte 0x40400000
+
+
+.global lbl_8066B194
+lbl_8066B194:
+	# ROM: 0x574FF4
+	.float -1.0
+
+
+.global lbl_8066B198
+lbl_8066B198:
+	# ROM: 0x574FF8
+	.4byte 0x43300000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+
+.global lbl_80667150
+lbl_80667150:
+	.skip 0x4
+.global lbl_80667154
+lbl_80667154:
+	.skip 0x4
+.global lbl_80667158
+lbl_80667158:
+	.skip 0x4
+.global lbl_8066715C
+lbl_8066715C:
+	.skip 0x4
+.global lbl_80667160
+lbl_80667160:
+	.skip 0x4
+.global lbl_80667164
+lbl_80667164:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80017608
 lbl_80017608:
@@ -6725,7 +7120,7 @@ lbl_80017798:
 	.4byte __dt__Q34nw4r2ut17TextWriterBase_w_Fv
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8025D794
 	.4byte 0x0000008C

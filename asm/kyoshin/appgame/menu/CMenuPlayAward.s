@@ -1042,7 +1042,112 @@ func_80270AEC:
 /* 80270B0C 0023A0CC  7C 64 02 14 */	add r3, r4, r0
 /* 80270B10 0023A0D0  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuPlayAward_typestr
+CMenuPlayAward_typestr:
+	.asciz "CMenuPlayAward"
+	.balign 4
+
+
+.global lbl_80509E30
+lbl_80509E30:
+	.asciz "MNU_update"
+	.asciz "info"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuPlayAward
+__vt__CMenuPlayAward:
+	.4byte __RTTI__CMenuPlayAward
+	.4byte 0
+	.4byte func_8026FD7C
+	.4byte CChildListNode_Reset
+	.4byte func_8026FDF4
+	.4byte func_802700E8
+	.4byte func_80270154
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuPlayAward
+	.4byte 0xFFFFFFA8
+	.4byte func_8027064C
+	.4byte func_80270644
+	.4byte func_80270264
+
+.global CMenuPlayAward_hierarchy
+CMenuPlayAward_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuPlayAward
+__RTTI__CMenuPlayAward:
+	.4byte CMenuPlayAward_typestr
+	.4byte CMenuPlayAward_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066B240
+lbl_8066B240:
+	# ROM: 0x5750A0
+	.4byte 0
+
+
+.global lbl_8066B244
+lbl_8066B244:
+	# ROM: 0x5750A4
+	.float 1.0
+
+
+.global lbl_8066B248
+lbl_8066B248:
+	# ROM: 0x5750A8
+	.float 10.0
+	.4byte 0
+
+
+.global lbl_8066B250
+lbl_8066B250:
+	# ROM: 0x5750B0
+	.4byte 0
+
+
+.global lbl_8066B254
+lbl_8066B254:
+	# ROM: 0x5750B4
+	.float 100.0
+
+
+.global lbl_8066B258
+lbl_8066B258:
+	# ROM: 0x5750B8
+	.4byte 0x43300000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667190
+lbl_80667190:
+	.skip 0x8
+.global lbl_80667198
+lbl_80667198:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80017E5C
 lbl_80017E5C:
@@ -1169,7 +1274,7 @@ lbl_80017F90:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8026FCA8
 	.4byte 0x000000D4

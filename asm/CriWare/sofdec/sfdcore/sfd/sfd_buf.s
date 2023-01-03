@@ -1188,3 +1188,15 @@ func_803BFD20:
 /* 803BFD2C 003892EC  90 04 A2 D0 */	stw r0, lbl_8060A2D0@l(r4)
 /* 803BFD30 003892F0  80 04 A2 D0 */	lwz r0, lbl_8060A2D0@l(r4)
 /* 803BFD34 003892F4  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global sfbuf_sjrbf_uuid
+sfbuf_sjrbf_uuid:
+	.skip 0x4
+.global sfbuf_sjmem_uuid
+sfbuf_sjmem_uuid:
+	.skip 0x4
+.global lbl_8060A2D0
+lbl_8060A2D0:
+	.skip 0x8

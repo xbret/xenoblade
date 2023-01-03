@@ -1175,7 +1175,350 @@ func_801D2ED8:
 /* 801D2F78 0019C538  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D2F7C 0019C53C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80501588
+lbl_80501588:
+	.asciz "nul_curs06s"
+
+.global lbl_80501594
+lbl_80501594:
+	.asciz "nul_curs06l"
+
+.global lbl_805015A0
+lbl_805015A0:
+	.asciz "nul_curs07s"
+
+.global lbl_805015AC
+lbl_805015AC:
+	.asciz "nul_curs07l"
+
+
+.global lbl_805015B8
+lbl_805015B8:
+	.asciz "mf00_reg00_curs08.brlyt"
+	.asciz "mf00_reg00_curs08_roop.brlan"
+	.asciz "mf00_reg00_curs08_on.brlan"
+	.asciz "mf00_reg00_curs07.brlyt"
+	.asciz "mf00_reg00_curs07_roop.brlan"
+	.asciz "mf00_reg00_curs07_on.brlan"
+	.asciz "mf00_reg00_curs09.brlyt"
+	.asciz "mf00_reg00_curs09_roop.brlan"
+	.asciz "pic_pgarw_r"
+	.asciz "pic_pgarw_l"
+	.asciz "mf00_reg00_curs11.brlyt"
+	.asciz "mf00_reg00_curs11_roop.brlan"
+	.asciz "mf00_reg00_curs11_on.brlan"
+	.asciz "pic_arrow08_l00"
+	.asciz "pic_arrow08_r00"
+	.asciz "mf00_reg00_curs14.brlyt"
+	.asciz "mf00_reg00_curs14_roop.brlan"
+	.asciz "mf00_reg00_curs14_on.brlan"
+	.asciz "mf00_reg00_curs15.brlyt"
+	.asciz "mf00_reg00_curs15_roop.brlan"
+	.asciz "mf00_reg00_curs15_on.brlan"
+	.asciz "mf00_reg00_curs16.brlyt"
+	.asciz "mf00_reg00_curs16_roop.brlan"
+	.asciz "mf00_reg00_curs16_on.brlan"
+	.asciz "mf00_reg00_curs17.brlyt"
+	.asciz "mf00_reg00_curs17_roop.brlan"
+	.asciz "mf00_reg00_curs17_on.brlan"
+	.asciz "mf00_reg00_curs18.brlyt"
+	.asciz "mf00_reg00_curs18_roop.brlan"
+	.asciz "mf00_reg00_curs18_on.brlan"
+	.asciz "mf00_reg00_curs21.brlyt"
+	.asciz "mf00_reg00_curs21_roop.brlan"
+	.asciz "mf00_reg00_curs21_on.brlan"
+	.asciz "mf00_reg00_curs22.brlyt"
+	.asciz "mf00_reg00_curs22_roop.brlan"
+	.asciz "mf00_reg00_curs22_on.brlan"
+	.asciz "mf01_main22_subcursor.brlyt"
+	.asciz "mf01_main22_subcursor_roop.brlan"
+	.asciz "mf01_main22_subcursor_on.brlan"
+	.asciz "pic_arrow_l00"
+	.asciz "pic_arrow_r00"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80537FE0
+lbl_80537FE0:
+	# ROM: 0x5340E0
+	.4byte lbl_80501588
+	.4byte lbl_80501594
+	.4byte lbl_805015A0
+	.4byte lbl_805015AC
+
+
+.global __vt__CSubCur
+__vt__CSubCur:
+	.4byte __RTTI__CSubCur
+	.4byte 0
+	.4byte func_801D2DC8
+	.4byte func_801D20DC
+	.4byte func_801D2144
+	.4byte func_801D2180
+
+.global CSubCur_hierarchy
+CSubCur_hierarchy:
+	.4byte __RTTI__CBaseCur
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CCur22
+__vt__CCur22:
+	.4byte __RTTI__CCur22
+	.4byte 0
+	.4byte func_801D2B78
+	.4byte func_801D20DC
+	.4byte func_801D2144
+	.4byte func_801D2180
+	.4byte func_801D2B38
+
+.global CCur22_hierarchy
+CCur22_hierarchy:
+	.4byte __RTTI__CBaseCur
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CCur18
+__vt__CCur18:
+	.4byte __RTTI__CCur18
+	.4byte 0
+	.4byte func_801D2A78
+	.4byte func_801D20DC
+	.4byte func_801D2144
+	.4byte func_801D2180
+	.4byte func_801D2A38
+
+.global CCur18_hierarchy
+CCur18_hierarchy:
+	.4byte __RTTI__CBaseCur
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CCur16
+__vt__CCur16:
+	.4byte __RTTI__CCur16
+	.4byte 0
+	.4byte func_801D2978
+	.4byte func_801D20DC
+	.4byte func_801D2144
+	.4byte func_801D2180
+
+.global CCur16_hierarchy
+CCur16_hierarchy:
+	.4byte __RTTI__CBaseCur
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CCur15
+__vt__CCur15:
+	.4byte __RTTI__CCur15
+	.4byte 0
+	.4byte func_801D2878
+	.4byte func_801D20DC
+	.4byte func_801D2144
+	.4byte func_801D2180
+
+.global CCur15_hierarchy
+CCur15_hierarchy:
+	.4byte __RTTI__CBaseCur
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CCur14
+__vt__CCur14:
+	.4byte __RTTI__CCur14
+	.4byte 0
+	.4byte func_801D2778
+	.4byte func_801D20DC
+	.4byte func_801D2144
+	.4byte func_801D2180
+
+.global CCur14_hierarchy
+CCur14_hierarchy:
+	.4byte __RTTI__CBaseCur
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CCur11
+__vt__CCur11:
+	.4byte __RTTI__CCur11
+	.4byte 0
+	.4byte func_801D25EC
+	.4byte func_801D20DC
+	.4byte func_801D2144
+	.4byte func_801D2180
+
+.global CCur11_hierarchy
+CCur11_hierarchy:
+	.4byte __RTTI__CBaseCur
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CCur09
+__vt__CCur09:
+	.4byte __RTTI__CCur09
+	.4byte 0
+	.4byte func_801D2478
+	.4byte func_801D20DC
+	.4byte func_801D2144
+	.4byte func_801D2180
+
+.global CCur09_hierarchy
+CCur09_hierarchy:
+	.4byte __RTTI__CBaseCur
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CCur07
+__vt__CCur07:
+	.4byte __RTTI__CCur07
+	.4byte 0
+	.4byte func_801D2378
+	.4byte func_801D20DC
+	.4byte func_801D2144
+	.4byte func_801D2180
+
+.global CCur07_hierarchy
+CCur07_hierarchy:
+	.4byte __RTTI__CBaseCur
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80538158
+lbl_80538158:
+	# ROM: 0x534258
+	.4byte __RTTI__CBaseCur
+	.4byte 0
+	.4byte 0
+	.4byte func_801D20DC
+	.4byte func_801D2144
+	.4byte func_801D2180
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CSubCur
+__RTTI__CSubCur:
+	.4byte CSubCur_typestr
+	.4byte CSubCur_hierarchy
+
+.global __RTTI__CCur22
+__RTTI__CCur22:
+	.4byte CCur22_typestr
+	.4byte CCur22_hierarchy
+
+.global __RTTI__CCur18
+__RTTI__CCur18:
+	.4byte CCur18_typestr
+	.4byte CCur18_hierarchy
+
+.global __RTTI__CCur16
+__RTTI__CCur16:
+	.4byte CCur16_typestr
+	.4byte CCur16_hierarchy
+
+.global __RTTI__CCur15
+__RTTI__CCur15:
+	.4byte CCur15_typestr
+	.4byte CCur15_hierarchy
+
+.global __RTTI__CCur14
+__RTTI__CCur14:
+	.4byte CCur14_typestr
+	.4byte CCur14_hierarchy
+
+.global __RTTI__CCur11
+__RTTI__CCur11:
+	.4byte CCur11_typestr
+	.4byte CCur11_hierarchy
+
+.global __RTTI__CCur09
+__RTTI__CCur09:
+	.4byte CCur09_typestr
+	.4byte CCur09_hierarchy
+
+.global __RTTI__CCur07
+__RTTI__CCur07:
+	.4byte CCur07_typestr
+	.4byte CCur07_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A860
+lbl_8066A860:
+	# ROM: 0x5746C0
+	.float 1.0
+
+
+.global lbl_8066A864
+lbl_8066A864:
+	# ROM: 0x5746C4
+	.4byte 0
+
+.global CSubCur_typestr
+CSubCur_typestr:
+	.asciz "CSubCur"
+
+.global CCur22_typestr
+CCur22_typestr:
+	.asciz "CCur22"
+	.balign 4
+
+.global CCur18_typestr
+CCur18_typestr:
+	.asciz "CCur18"
+	.balign 4
+
+.global CCur16_typestr
+CCur16_typestr:
+	.asciz "CCur16"
+	.balign 4
+
+.global CCur15_typestr
+CCur15_typestr:
+	.asciz "CCur15"
+	.balign 4
+
+.global CCur14_typestr
+CCur14_typestr:
+	.asciz "CCur14"
+	.balign 4
+
+.global CCur11_typestr
+CCur11_typestr:
+	.asciz "CCur11"
+	.balign 4
+
+.global CCur09_typestr
+CCur09_typestr:
+	.asciz "CCur09"
+	.balign 4
+
+.global CCur07_typestr
+CCur07_typestr:
+	.asciz "CCur07"
+	.balign 4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800114EC
 lbl_800114EC:
@@ -1378,7 +1721,7 @@ lbl_80011624:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801D1FEC
 	.4byte 0x00000040

@@ -4626,7 +4626,287 @@ func_8027AA10:
 /* 8027AA48 00244008  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027AA4C 0024400C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CChainChance_typestr
+cf_CChainChance_typestr:
+	.asciz "cf::CChainChance"
+	.balign 4
+	.4byte 0
+
+.global cf_CChainTimer_typestr
+cf_CChainTimer_typestr:
+	.asciz "cf::CChainTimer"
+
+.global cf_CChainMember_typestr
+cf_CChainMember_typestr:
+	.asciz "cf::CChainMember"
+	.balign 4
+	.4byte 0
+
+.global cf_CChainActor_typestr
+cf_CChainActor_typestr:
+	.asciz "cf::CChainActor"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053B980
+lbl_8053B980:
+	# ROM: 0x537A80
+	.4byte 0x000007DB
+	.4byte 0x000007DC
+	.4byte 0x000007DF
+
+
+.global lbl_8053B98C
+lbl_8053B98C:
+	# ROM: 0x537A8C
+	.4byte switch_80276F3C
+	.4byte switch_80276EA4
+	.4byte switch_80276EB8
+	.4byte switch_80276ECC
+	.4byte switch_80276EE0
+	.4byte switch_80276EF4
+	.4byte switch_80276F08
+	.4byte switch_80276F1C
+	.4byte switch_80276F30
+	.4byte switch_80276F3C
+	.4byte switch_80276F38
+
+
+.global lbl_8053B9B8
+lbl_8053B9B8:
+	# ROM: 0x537AB8
+	.4byte switch_80278DE8
+	.4byte switch_80277CDC
+	.4byte switch_80277EBC
+	.4byte switch_80277FB0
+	.4byte switch_80277FD4
+	.4byte switch_80277FE0
+	.4byte switch_80277FEC
+	.4byte switch_802780FC
+	.4byte switch_802781C8
+	.4byte switch_802781FC
+	.4byte switch_8027822C
+	.4byte switch_80278248
+	.4byte switch_80278254
+	.4byte switch_802782AC
+	.4byte switch_802783AC
+	.4byte switch_802784C0
+	.4byte switch_8027857C
+	.4byte switch_80278658
+	.4byte switch_80278690
+	.4byte switch_802786AC
+	.4byte switch_80278724
+	.4byte switch_8027878C
+	.4byte switch_802788A4
+	.4byte switch_802788E0
+	.4byte switch_80278AE4
+	.4byte switch_80278C98
+	.4byte switch_80278DC4
+
+
+.global __vt__cf_CChainChance
+__vt__cf_CChainChance:
+	.4byte __RTTI__cf_CChainChance
+	.4byte 0
+	.4byte func_800D8C5C
+
+
+.global __vt__cf_CChainTimer
+__vt__cf_CChainTimer:
+	.4byte __RTTI__cf_CChainTimer
+	.4byte 0
+	.4byte func_800D8C9C
+
+
+.global __vt__cf_CChainMember
+__vt__cf_CChainMember:
+	.4byte __RTTI__cf_CChainMember
+	.4byte 0
+	.4byte func_800D8D7C
+
+
+.global __vt__cf_CChainActor
+__vt__cf_CChainActor:
+	.4byte __RTTI__cf_CChainActor
+	.4byte 0
+	.4byte func_8027AA10
+	.4byte func_80279B24
+	.4byte func_80279B34
+	.4byte func_80279DC0
+	.4byte func_80279E48
+	.4byte func_80279F6C
+	.4byte func_8027A024
+	.4byte func_8027A338
+	.4byte func_8027A58C
+	.4byte func_8027A8C8
+	.4byte func_8027AA0C
+	.4byte func_802795D0
+	.4byte func_80278E00
+	.4byte func_80278E04
+	.4byte func_8027AA04
+	.4byte func_8027A9F4
+	.4byte func_8027A9FC
+	.4byte func_8027A9EC
+	.4byte func_8027A9E8
+	.4byte func_8027A9E0
+	.4byte func_8027976C
+	.4byte func_8027A584
+	.4byte func_8027A9D8
+	.4byte func_80279768
+	.4byte func_80278F70
+	.4byte func_80278F5C
+	.4byte func_8027A324
+	.4byte func_8027A9D0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665318
+lbl_80665318:
+	# ROM: 0x570EF8
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_8066531C
+lbl_8066531C:
+	# ROM: 0x570EFC
+	.4byte 0x000007DB
+
+
+.global lbl_80665320
+lbl_80665320:
+	# ROM: 0x570F00
+	.4byte 0x000007DB
+	.4byte 0x000007DC
+
+
+.global lbl_80665328
+lbl_80665328:
+	# ROM: 0x570F08
+	.4byte 0x000007DD
+	.4byte 0
+
+
+.global lbl_80665330
+lbl_80665330:
+	# ROM: 0x570F10
+	.4byte 0x000007DD
+	.4byte 0x000007E0
+
+.global __RTTI__cf_CChainChance
+__RTTI__cf_CChainChance:
+	.4byte cf_CChainChance_typestr
+	.4byte 0
+
+.global __RTTI__cf_CChainTimer
+__RTTI__cf_CChainTimer:
+	.4byte cf_CChainTimer_typestr
+	.4byte 0
+
+.global __RTTI__cf_CChainMember
+__RTTI__cf_CChainMember:
+	.4byte cf_CChainMember_typestr
+	.4byte 0
+
+.global __RTTI__cf_CChainActor
+__RTTI__cf_CChainActor:
+	.4byte cf_CChainActor_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B2C0
+lbl_8066B2C0:
+	# ROM: 0x575120
+	.float 1.0
+
+
+.global lbl_8066B2C4
+lbl_8066B2C4:
+	# ROM: 0x575124
+	.4byte 0
+
+
+.global lbl_8066B2C8
+lbl_8066B2C8:
+	# ROM: 0x575128
+	.4byte 0x3FE00000
+	.4byte 0
+
+
+.global lbl_8066B2D0
+lbl_8066B2D0:
+	# ROM: 0x575130
+	.4byte 0xBFE00000
+	.4byte 0
+
+
+.global lbl_8066B2D8
+lbl_8066B2D8:
+	# ROM: 0x575138
+	.4byte 0x3C23D70A
+	.4byte 0
+
+
+.global lbl_8066B2E0
+lbl_8066B2E0:
+	# ROM: 0x575140
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066B2E8
+lbl_8066B2E8:
+	# ROM: 0x575148
+	.4byte 0x3F19999A
+
+
+.global lbl_8066B2EC
+lbl_8066B2EC:
+	# ROM: 0x57514C
+	.4byte 0x3FA00000
+
+
+.global lbl_8066B2F0
+lbl_8066B2F0:
+	# ROM: 0x575150
+	.4byte 0x3E99999A
+	.4byte 0
+
+
+.global lbl_8066B2F8
+lbl_8066B2F8:
+	# ROM: 0x575158
+	.4byte 0x44992000
+
+
+.global lbl_8066B2FC
+lbl_8066B2FC:
+	# ROM: 0x57515C
+	.4byte 0x44C80000
+
+
+.global lbl_8066B300
+lbl_8066B300:
+	# ROM: 0x575160
+	.4byte 0x3CC90FDB
+
+
+.global lbl_8066B304
+lbl_8066B304:
+	# ROM: 0x575164
+	.4byte 0x420C0000
+
+
+.global lbl_8066B308
+lbl_8066B308:
+	# ROM: 0x575168
+	.4byte 0
+	.4byte 0
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800186B0
 lbl_800186B0:
@@ -4813,7 +5093,7 @@ lbl_80018814:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80276C30
 	.4byte 0x00000028

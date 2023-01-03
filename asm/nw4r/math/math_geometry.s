@@ -1098,3 +1098,51 @@ IntersectAABB_Ex__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math4AABB:
 .L_8040C45C:
 /* 8040C45C 003D5A1C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040C460 003D5A20  4E 80 00 20 */	blr
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+#0.0001
+.global lbl_80665E00
+lbl_80665E00:
+	# ROM: 0x5719E0
+	.4byte 0x38D1B717
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C658
+lbl_8066C658:
+	# ROM: 0x5764B8
+	.float 0.5
+
+
+.global lbl_8066C65C
+lbl_8066C65C:
+	# ROM: 0x5764BC
+	.4byte 0
+
+
+.global lbl_8066C660
+lbl_8066C660:
+	# ROM: 0x5764C0
+	.4byte 0x3CC90FDB
+
+
+.global lbl_8066C664
+lbl_8066C664:
+	# ROM: 0x5764C4
+	.4byte 0x3F360B61
+
+
+.global lbl_8066C668
+lbl_8066C668:
+	# ROM: 0x5764C8
+	.float 1.0
+	.4byte 0
+
+
+.global lbl_8066C670
+lbl_8066C670:
+	# ROM: 0x5764D0
+	.4byte 0
+	.4byte 0

@@ -2611,3 +2611,31 @@ lbl_8056D3D4:
 	.4byte DrawFrame__Q34nw4r3lyt6WindowFRCQ34nw4r4math4VEC2RCQ44nw4r3lyt6Window5FrameRCQ34nw4r3lyt15WindowFrameSizeUc
 	.4byte DrawFrame4__Q34nw4r3lyt6WindowFRCQ34nw4r4math4VEC2PCQ44nw4r3lyt6Window5FrameRCQ34nw4r3lyt15WindowFrameSizeUc
 	.4byte DrawFrame8__Q34nw4r3lyt6WindowFRCQ34nw4r4math4VEC2PCQ44nw4r3lyt6Window5FrameRCQ34nw4r3lyt15WindowFrameSizeUc
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C580
+lbl_8066C580:
+	# ROM: 0x5763E0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066C588
+lbl_8066C588:
+	# ROM: 0x5763E8
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066C590
+lbl_8066C590:
+	# ROM: 0x5763F0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667D70
+lbl_80667D70:
+	.skip 0x8

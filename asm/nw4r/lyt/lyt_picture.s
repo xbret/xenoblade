@@ -505,3 +505,17 @@ lbl_8056D298:
 	.4byte GetMaterial__Q34nw4r3lyt4PaneCFUl
 	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte Append__Q34nw4r3lyt7PictureFRCQ34nw4r3lyt6TexMap
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C560
+lbl_8066C560:
+	# ROM: 0x5763C0
+	.4byte 0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667D60
+lbl_80667D60:
+	.skip 0x8

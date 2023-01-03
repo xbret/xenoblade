@@ -302,7 +302,52 @@ func_80294BA4:
 func_80294CB0:
 /* 80294CB0 0025E270  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CREvtMovie_typestr
+cf_CREvtMovie_typestr:
+	.asciz "cf::CREvtMovie"
+	.balign 4
+
+
+.global lbl_8050B3D0
+lbl_8050B3D0:
+	.asciz "/ev/realtime/"
+	.asciz ".sfd"
+	.4byte 0
+	.byte 0x00
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CREvtMovie
+__vt__cf_CREvtMovie:
+	.4byte __RTTI__cf_CREvtMovie
+	.4byte 0
+	.4byte func_802948D0
+	.4byte func_80294CB0
+	.4byte func_8029493C
+	.4byte func_80185758
+	.4byte func_80169048
+	.4byte func_801809A8
+	.4byte func_801696C4
+	.4byte func_80294A70
+
+.global cf_CREvtMovie_hierarchy
+cf_CREvtMovie_hierarchy:
+	.4byte __RTTI__cf_CREvtObj
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CREvtMovie
+__RTTI__cf_CREvtMovie:
+	.4byte cf_CREvtMovie_typestr
+	.4byte cf_CREvtMovie_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80019A74
 lbl_80019A74:
@@ -340,7 +385,7 @@ lbl_80019AB0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80294874
 	.4byte 0x0000005C

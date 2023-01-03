@@ -4,8 +4,8 @@
 //Part of monolithlib? (namespace according to XCDE)
 namespace ml{
 
-    int mtRand(){
-        return mm::mtl::getInstanceMTRand()->randInt();
+    u32 mtRand(){
+        return mm::mtl::getInstanceMTRand()->rand();
     }
 
 
@@ -13,7 +13,7 @@ namespace ml{
     //Max is exclusive
     int mtRand(int max){
         if(max != 0){
-    	    int randVal = mm::mtl::getInstanceMTRand()->randInt();
+    	    int randVal = mm::mtl::getInstanceMTRand()->rand();
     	    return randVal % max;
         }else{
     	    return 0;
@@ -26,7 +26,7 @@ namespace ml{
         int range = max - min;
 
         if(range != 0){
-    	    int randVal = mm::mtl::getInstanceMTRand()->randInt();
+    	    int randVal = mm::mtl::getInstanceMTRand()->rand();
     	    return (randVal % range) + min;
         }else{
     	    return min;

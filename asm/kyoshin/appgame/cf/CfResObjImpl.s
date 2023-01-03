@@ -429,7 +429,205 @@ func_8016CD80:
 /* 8016CDB8 00136378  38 21 00 10 */	addi r1, r1, 0x10
 /* 8016CDBC 0013637C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfResObjImpl_typestr
+cf_CfResObjImpl_typestr:
+	.asciz "cf::CfResObjImpl"
+	.balign 4
+
+.global cf_CfResImpl_typestr
+cf_CfResImpl_typestr:
+	.asciz "cf::CfResImpl"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805344C0
+lbl_805344C0:
+	.asciz "ResUserData"
+
+
+.global lbl_805344CC
+lbl_805344CC:
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+
+
+.global lbl_805344E8
+lbl_805344E8:
+	.asciz "g3d_resuser_ac.h"
+	.balign 4
+
+
+.global lbl_805344FC
+lbl_805344FC:
+	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
+	.balign 4
+
+
+.global lbl_80534524
+lbl_80534524:
+	.asciz "g3d_resuser_ac.h"
+	.balign 4
+
+
+.global lbl_80534538
+lbl_80534538:
+	.asciz "ResUserDataItem"
+
+
+.global lbl_80534548
+lbl_80534548:
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+
+
+.global lbl_80534564
+lbl_80534564:
+	.asciz "g3d_resuser_ac.h"
+	.balign 4
+
+
+.global lbl_80534578
+lbl_80534578:
+	.asciz "%s::%s: Object not valid."
+	.balign 4
+
+
+.global lbl_80534594
+lbl_80534594:
+	.asciz "g3d_resuser_ac.h"
+	.balign 4
+
+
+.global lbl_805345A8
+lbl_805345A8:
+	.asciz "NW4R:Failed assertion GetValueType() == ResUserDataItemData::S32"
+	.balign 4
+
+
+.global lbl_805345EC
+lbl_805345EC:
+	.asciz "g3d_resuser_ac.h"
+	.balign 4
+
+
+.global lbl_80534600
+lbl_80534600:
+	.asciz "NW4R:Failed assertion GetValueType() == ResUserDataItemData::F32"
+	.balign 4
+
+
+.global lbl_80534644
+lbl_80534644:
+	.asciz "g3d_resuser_ac.h"
+	.balign 4
+
+
+.global lbl_80534658
+lbl_80534658:
+	.asciz "NW4R:Failed assertion GetValueType() == ResUserDataItemData::STRING"
+
+
+.global lbl_8053469C
+lbl_8053469C:
+	.asciz "g3d_resuser_ac.h"
+	.balign 4
+
+
+.global lbl_805346B0
+lbl_805346B0:
+	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
+	.balign 4
+
+
+.global lbl_805346D8
+lbl_805346D8:
+	.asciz "g3d_resdict_ac.h"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_805346F0
+lbl_805346F0:
+	# ROM: 0x5307F0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8016C98C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8016CCDC
+	.4byte 0
+
+
+.global __vt__cf_CfResObjImpl
+__vt__cf_CfResObjImpl:
+	.4byte __RTTI__cf_CfResObjImpl
+	.4byte 0
+	.4byte func_8016CD80
+	.4byte func_8016CCE0
+	.4byte func_800BEA34
+	.4byte func_8016C860
+	.4byte func_800BE9AC
+	.4byte func_8016CD64
+	.4byte func_8016C880
+	.4byte func_800BC2DC
+	.4byte func_800BF2F4
+	.4byte func_8016CD68
+	.4byte func_8016CCBC
+	.4byte func_800BEA38
+	.4byte func_800BED64
+	.4byte func_800BEE30
+	.4byte func_800BC3AC
+	.4byte func_800BEC44
+	.4byte func_800BED5C
+	.4byte func_8016CD5C
+	.4byte func_8016C888
+	.4byte func_800BF2C4
+	.4byte func_800BF2C8
+	.4byte func_8016C950
+	.4byte func_8016CD54
+	.4byte func_800BF30C
+
+.global cf_CfResObjImpl_hierarchy
+cf_CfResObjImpl_hierarchy:
+	.4byte __RTTI__cf_CfResImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CfResObjImpl
+__RTTI__cf_CfResObjImpl:
+	.4byte cf_CfResObjImpl_typestr
+	.4byte cf_CfResObjImpl_hierarchy
+
+.global __RTTI__cf_CfResImpl
+__RTTI__cf_CfResImpl:
+	.4byte cf_CfResImpl_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669F50
+lbl_80669F50:
+	# ROM: 0x573DB0
+	.4byte 0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666B60
+lbl_80666B60:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000E048
 lbl_8000E048:
@@ -462,7 +660,7 @@ lbl_8000E070:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8016C7F0
 	.4byte 0x00000070

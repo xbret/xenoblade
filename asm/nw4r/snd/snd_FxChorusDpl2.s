@@ -442,3 +442,52 @@ lbl_8056E078:
 	.4byte AssignWorkBuffer__Q34nw4r3snd12FxChorusDpl2FPvUl
 	.4byte ReleaseWorkBuffer__Q34nw4r3snd12FxChorusDpl2Fv
 	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C760
+lbl_8066C760:
+	# ROM: 0x5765C0
+	.float 10.0
+
+
+.global lbl_8066C764
+lbl_8066C764:
+	# ROM: 0x5765C4
+	.float 0.5
+
+
+.global lbl_8066C768
+lbl_8066C768:
+	# ROM: 0x5765C8
+	.float 1.0
+
+
+.global lbl_8066C76C
+lbl_8066C76C:
+	# ROM: 0x5765CC
+	.4byte 0
+
+
+.global lbl_8066C770
+lbl_8066C770:
+	# ROM: 0x5765D0
+	.4byte 0x42480000
+
+
+.global lbl_8066C774
+lbl_8066C774:
+	# ROM: 0x5765D4
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066C778
+lbl_8066C778:
+	# ROM: 0x5765D8
+	.4byte 0x40000000
+
+
+.global lbl_8066C77C
+lbl_8066C77C:
+	# ROM: 0x5765DC
+	.4byte 0x3F7D70A4

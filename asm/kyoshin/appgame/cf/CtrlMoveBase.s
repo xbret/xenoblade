@@ -1678,7 +1678,92 @@ func_8008A01C:
 func_8008A0C4:
 /* 8008A0C4 00053684  4E 80 00 20 */	blr
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CtrlMoveBase_typestr
+cf_CtrlMoveBase_typestr:
+	.asciz "cf::CtrlMoveBase"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CtrlMoveBase
+__vt__cf_CtrlMoveBase:
+	.4byte __RTTI__cf_CtrlMoveBase
+	.4byte 0
+	.4byte func_80089628
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CtrlMoveBase
+__RTTI__cf_CtrlMoveBase:
+	.4byte cf_CtrlMoveBase_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80668E20
+lbl_80668E20:
+	# ROM: 0x572C80
+	.4byte 0x40800000
+
+
+.global lbl_80668E24
+lbl_80668E24:
+	# ROM: 0x572C84
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_80668E28
+lbl_80668E28:
+	# ROM: 0x572C88
+	.4byte 0
+
+
+.global lbl_80668E2C
+lbl_80668E2C:
+	# ROM: 0x572C8C
+	.float 1.0
+
+
+.global lbl_80668E30
+lbl_80668E30:
+	# ROM: 0x572C90
+	.4byte 0xC0000000
+
+
+.global lbl_80668E34
+lbl_80668E34:
+	# ROM: 0x572C94
+	.4byte 0x3CC90FDB
+
+
+.global lbl_80668E38
+lbl_80668E38:
+	# ROM: 0x572C98
+	.4byte 0x42200000
+
+
+.global lbl_80668E3C
+lbl_80668E3C:
+	# ROM: 0x572C9C
+	.4byte 0x4222F983
+
+
+.global lbl_80668E40
+lbl_80668E40:
+	# ROM: 0x572CA0
+	.4byte 0xC0800000
+
+
+.global lbl_80668E44
+lbl_80668E44:
+	# ROM: 0x572CA4
+	.4byte 0x3F350481
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80008B54
 lbl_80008B54:
@@ -1741,7 +1826,7 @@ lbl_80008BAC:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80088974
 	.4byte 0x00000734

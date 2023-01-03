@@ -634,7 +634,149 @@ func_8029555C:
 /* 8029555C 0025EB1C  38 63 FF A8 */	addi r3, r3, -88
 /* 80295560 0025EB20  4B FF F8 A4 */	b func_80294E04
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CTaskGamePic_typestr
+CTaskGamePic_typestr:
+	.asciz "CTaskGamePic"
+	.balign 4
+
+.global CTTask_CTaskGamePic_typestr
+CTTask_CTaskGamePic_typestr:
+	.asciz "CTTask<CTaskGamePic>"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CTaskGamePic
+__vt__CTaskGamePic:
+	.4byte __RTTI__CTaskGamePic
+	.4byte 0
+	.4byte func_80294E04
+	.4byte CChildListNode_Reset
+	.4byte func_80294F24
+	.4byte func_80294F44
+	.4byte func_80294FB8
+	.4byte func_802954B0
+	.4byte func_80043F20
+	.4byte __RTTI__CTaskGamePic
+	.4byte 0xFFFFFFAC
+	.4byte func_8029554C
+	.4byte func_80039E28
+	.4byte func_80295544
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CTaskGamePic
+	.4byte 0xFFFFFFA8
+	.4byte func_8029555C
+	.4byte func_80295554
+	.4byte func_802950F4
+	.4byte func_8029539C
+
+.global CTaskGamePic_hierarchy
+CTaskGamePic_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_CTaskGamePic
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_CTaskGamePic
+__vt__CTTask_CTaskGamePic:
+	.4byte __RTTI__CTTask_CTaskGamePic
+	.4byte 0
+	.4byte func_80294DB4
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_802954B4
+	.4byte func_802954FC
+	.4byte func_80043F20
+
+.global CTTask_CTaskGamePic_hierarchy
+CTTask_CTaskGamePic_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CTaskGamePic
+__RTTI__CTaskGamePic:
+	.4byte CTaskGamePic_typestr
+	.4byte CTaskGamePic_hierarchy
+
+.global __RTTI__CTTask_CTaskGamePic
+__RTTI__CTTask_CTaskGamePic:
+	.4byte CTTask_CTaskGamePic_typestr
+	.4byte CTTask_CTaskGamePic_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B458
+lbl_8066B458:
+	# ROM: 0x5752B8
+	.4byte 0
+
+
+.global lbl_8066B45C
+lbl_8066B45C:
+	# ROM: 0x5752BC
+	.4byte 0x3B800000
+
+
+.global lbl_8066B460
+lbl_8066B460:
+	# ROM: 0x5752C0
+	.float 1.0
+	.4byte 0
+
+
+.global lbl_8066B468
+lbl_8066B468:
+	# ROM: 0x5752C8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80019AB8
 lbl_80019AB8:
@@ -708,7 +850,7 @@ lbl_80019B48:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80294CB4
 	.4byte 0x00000100

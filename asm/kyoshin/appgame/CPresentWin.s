@@ -1366,7 +1366,125 @@ func_8022E868:
 /* 8022E880 001F7E40  88 63 00 39 */	lbz r3, 0x39(r3)
 /* 8022E884 001F7E44  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CPresentWin_typestr
+CPresentWin_typestr:
+	.asciz "CPresentWin"
+
+
+.global lbl_80505F4C
+lbl_80505F4C:
+	.asciz "mf70_cf60_syswin07.brlyt"
+	.asciz "mf70_cf60_syswin07_in.brlan"
+	.asciz "mf70_cf60_syswin07_ef.brlan"
+	.asciz "nul_proportion"
+	.asciz "nul_pcface01"
+	.asciz "nul_pcface02"
+	.asciz "txt_pcname01"
+	.asciz "txt_pcname02"
+	.asciz "pic_pcface01"
+	.asciz "pic_pcface02"
+	.asciz "nul_slct"
+	.asciz "txt_sysmes00"
+	.byte 0x00
+	.asciz "MNU_kyeassign"
+	.asciz "help"
+	.asciz "txt_close00"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "pic_btn00"
+	.asciz "txt_change00"
+	.asciz "pic_btn02"
+	.asciz "mf00_com00_dmy.tpl"
+	.asciz "FSplus%d"
+	.asciz "nul_anim_b"
+	.asciz "nul_anim_g"
+	.asciz "pic_kiz_b"
+	.asciz "mf00_com00_kizp04.tpl"
+	.asciz "mf00_com00_kizp02.tpl"
+	.asciz "mf00_com00_kizp01.tpl"
+	.asciz "pic_kiz_g"
+	.asciz "mf00_com00_kizp00.tpl"
+	.asciz "mf00_com00_kizp03.tpl"
+	.asciz "name"
+	.asciz "icon_type2"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CPresentWin
+__vt__CPresentWin:
+	.4byte __RTTI__CPresentWin
+	.4byte 0
+	.4byte func_8022D5D4
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CPresentWin_hierarchy
+CPresentWin_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CPresentWin
+__RTTI__CPresentWin:
+	.4byte CPresentWin_typestr
+	.4byte CPresentWin_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AEE0
+lbl_8066AEE0:
+	# ROM: 0x574D40
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066AEE8
+lbl_8066AEE8:
+	# ROM: 0x574D48
+	.4byte 0
+
+
+.global lbl_8066AEEC
+lbl_8066AEEC:
+	# ROM: 0x574D4C
+	.float 1.0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001575C
 lbl_8001575C:
@@ -1444,7 +1562,7 @@ lbl_800157CC:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8022D5D4
 	.4byte 0x00000040

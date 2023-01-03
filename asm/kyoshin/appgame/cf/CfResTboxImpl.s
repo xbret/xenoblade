@@ -338,7 +338,97 @@ func_801F92B0:
 /* 801F92D0 001C2890  98 03 00 01 */	stb r0, 1(r3)
 /* 801F92D4 001C2894  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfResTboxImpl_typestr
+cf_CfResTboxImpl_typestr:
+	.asciz "cf::CfResTboxImpl"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80538998
+lbl_80538998:
+	# ROM: 0x534A98
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801F8EB0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801F91B0
+	.4byte 0
+
+
+.global __vt__cf_CfResTboxImpl
+__vt__cf_CfResTboxImpl:
+	.4byte __RTTI__cf_CfResTboxImpl
+	.4byte 0
+	.4byte func_801F9228
+	.4byte func_801F91B4
+	.4byte func_800BEA34
+	.4byte func_8016C860
+	.4byte func_800BE9AC
+	.4byte func_8016CD64
+	.4byte func_801F8E70
+	.4byte func_800BC2DC
+	.4byte func_800BF2F4
+	.4byte func_8016CD68
+	.4byte func_8016CCBC
+	.4byte func_800BEA38
+	.4byte func_800BED64
+	.4byte func_800BEE30
+	.4byte func_800BC3AC
+	.4byte func_800BEC44
+	.4byte func_800BED5C
+	.4byte func_8016CD5C
+	.4byte func_8016C888
+	.4byte func_800BF2C4
+	.4byte func_800BF2C8
+	.4byte func_801F8E78
+	.4byte func_8016CD54
+	.4byte func_800BF30C
+
+.global cf_CfResTboxImpl_hierarchy
+cf_CfResTboxImpl_hierarchy:
+	.4byte __RTTI__cf_CfResImpl
+	.4byte 0
+	.4byte __RTTI__cf_CfResObjImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CfResTboxImpl
+__RTTI__cf_CfResTboxImpl:
+	.4byte cf_CfResTboxImpl_typestr
+	.4byte cf_CfResTboxImpl_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AA90
+lbl_8066AA90:
+	# ROM: 0x5748F0
+	.float 1.0
+
+
+.global lbl_8066AA94
+lbl_8066AA94:
+	# ROM: 0x5748F4
+	.4byte 0x41A00000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666F50
+lbl_80666F50:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80012438
 lbl_80012438:
@@ -366,7 +456,7 @@ lbl_80012458:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801F8E34
 	.4byte 0x0000003C

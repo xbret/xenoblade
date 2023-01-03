@@ -337,3 +337,30 @@ MTX44Copy__Q24nw4r4mathFPQ34nw4r4math5MTX44PCQ34nw4r4math5MTX44:
 /* 8040B47C 003D4A3C  F0 C3 00 30 */	psq_st f6, 48(r3), 0, qr0
 /* 8040B480 003D4A40  F0 E3 00 38 */	psq_st f7, 56(r3), 0, qr0
 /* 8040B484 003D4A44  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C640
+lbl_8066C640:
+	# ROM: 0x5764A0
+	.4byte 0
+
+
+.global lbl_8066C644
+lbl_8066C644:
+	# ROM: 0x5764A4
+	.float 1.0
+
+
+.global lbl_8066C648
+lbl_8066C648:
+	# ROM: 0x5764A8
+	.4byte 0x3CC90FDB
+	.4byte 0
+
+
+.global lbl_8066C650
+lbl_8066C650:
+	# ROM: 0x5764B0
+	.4byte 0x47800000
+	.4byte 0x47800000

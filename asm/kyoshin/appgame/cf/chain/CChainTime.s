@@ -223,7 +223,20 @@ func_8027CF3C:
 /* 8027D0E0 002466A0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027D0E4 002466A4  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B330
+lbl_8066B330:
+	# ROM: 0x575190
+	.float 1.0
+
+
+.global lbl_8066B334
+lbl_8066B334:
+	# ROM: 0x575194
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80018A14
 lbl_80018A14:
@@ -246,7 +259,7 @@ lbl_80018A2C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8027CDD4
 	.4byte 0x0000005C

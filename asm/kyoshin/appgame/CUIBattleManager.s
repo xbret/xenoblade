@@ -4559,7 +4559,267 @@ func_80131820:
 /* 80131EA0 000FB460  38 21 04 90 */	addi r1, r1, 0x490
 /* 80131EA4 000FB464  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CUIBattleManager_typestr
+CUIBattleManager_typestr:
+	.asciz "CUIBattleManager"
+	.balign 4
+
+.global reslist_IUIBattle_typestr
+reslist_IUIBattle_typestr:
+	.asciz "reslist<IUIBattle *>"
+	.balign 4
+
+.global _reslist_base_IUIBattle_typestr
+_reslist_base_IUIBattle_typestr:
+	.asciz "_reslist_base<IUIBattle *>"
+	.balign 4
+
+.global CUIBattleManager_CTest_typestr
+CUIBattleManager_CTest_typestr:
+	.asciz "CUIBattleManager::CTest"
+
+.global CTTask_CUIBattleManager_CTest_typestr
+CTTask_CUIBattleManager_CTest_typestr:
+	.asciz "CTTask<CUIBattleManager::CTest>"
+
+.global CTTask_CUIBattleManager_typestr
+CTTask_CUIBattleManager_typestr:
+	.asciz "CTTask<CUIBattleManager>"
+	.balign 4
+
+
+.global lbl_804FB76C
+lbl_804FB76C:
+	.asciz "ARTS_FACE"
+	.asciz "menu/tpl/arts_elem.arc"
+	.asciz "menu/tpl/arts_sys.arc"
+	.asciz "menu/tpl/arts_pc%02d.arc"
+	.asciz "/menu/tpl/face_pc%02d.arc"
+	.asciz "arc"
+	.asciz "icon_type2"
+	.asciz "icon_type3"
+	.asciz "icon_type"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80531878
+lbl_80531878:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8012F29C
+
+.global lbl_80531884
+lbl_80531884:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8012F2BC
+
+
+.global __vt__CUIBattleManager
+__vt__CUIBattleManager:
+	.4byte __RTTI__CUIBattleManager
+	.4byte 0
+	.4byte func_8012E34C
+	.4byte CChildListNode_Reset
+	.4byte func_8012E428
+	.4byte func_8012E534
+	.4byte func_8012E79C
+	.4byte func_8012FEC0
+	.4byte func_80043F20
+	.4byte __RTTI__CUIBattleManager
+	.4byte 0xFFFFFFAC
+	.4byte func_8012FF6C
+	.4byte func_80039E28
+	.4byte func_8012FF64
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_8012F2C0
+
+.global CUIBattleManager_hierarchy
+CUIBattleManager_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000054
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_CUIBattleManager
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__reslist_IUIBattle
+__vt__reslist_IUIBattle:
+	.4byte __RTTI__reslist_IUIBattle
+	.4byte 0
+	.4byte func_8012E294
+
+.global reslist_IUIBattle_hierarchy
+reslist_IUIBattle_hierarchy:
+	.4byte __RTTI___reslist_base_IUIBattle
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___reslist_base_IUIBattle
+__vt___reslist_base_IUIBattle:
+	.4byte __RTTI___reslist_base_IUIBattle
+	.4byte 0
+	.4byte func_8012E1E0
+
+
+.global __vt__CUIBattleManager_CTest
+__vt__CUIBattleManager_CTest:
+	.4byte __RTTI__CUIBattleManager_CTest
+	.4byte 0
+	.4byte func_8012FF08
+	.4byte CChildListNode_Reset
+	.4byte func_8012FDE4
+	.4byte func_8012FDE0
+	.4byte func_8012FDDC
+	.4byte func_8012FDD8
+	.4byte func_80043F20
+
+.global CUIBattleManager_CTest_hierarchy
+CUIBattleManager_CTest_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_CUIBattleManager_CTest
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_CUIBattleManager_CTest
+__vt__CTTask_CUIBattleManager_CTest:
+	.4byte __RTTI__CTTask_CUIBattleManager_CTest
+	.4byte 0
+	.4byte func_8012E4DC
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_8012FDE8
+	.4byte func_8012FE30
+	.4byte func_80043F20
+
+.global CTTask_CUIBattleManager_CTest_hierarchy
+CTTask_CUIBattleManager_CTest_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_CUIBattleManager
+__vt__CTTask_CUIBattleManager:
+	.4byte __RTTI__CTTask_CUIBattleManager
+	.4byte 0
+	.4byte func_8012E188
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_8012FE78
+	.4byte func_8012FEC0
+	.4byte func_80043F20
+
+.global CTTask_CUIBattleManager_hierarchy
+CTTask_CUIBattleManager_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CUIBattleManager
+__RTTI__CUIBattleManager:
+	.4byte CUIBattleManager_typestr
+	.4byte CUIBattleManager_hierarchy
+
+.global __RTTI__reslist_IUIBattle
+__RTTI__reslist_IUIBattle:
+	.4byte reslist_IUIBattle_typestr
+	.4byte reslist_IUIBattle_hierarchy
+
+.global __RTTI___reslist_base_IUIBattle
+__RTTI___reslist_base_IUIBattle:
+	.4byte _reslist_base_IUIBattle_typestr
+	.4byte 0
+
+.global __RTTI__CUIBattleManager_CTest
+__RTTI__CUIBattleManager_CTest:
+	.4byte CUIBattleManager_CTest_typestr
+	.4byte CUIBattleManager_CTest_hierarchy
+
+.global __RTTI__CTTask_CUIBattleManager_CTest
+__RTTI__CTTask_CUIBattleManager_CTest:
+	.4byte CTTask_CUIBattleManager_CTest_typestr
+	.4byte CTTask_CUIBattleManager_CTest_hierarchy
+
+.global __RTTI__CTTask_CUIBattleManager
+__RTTI__CTTask_CUIBattleManager:
+	.4byte CTTask_CUIBattleManager_typestr
+	.4byte CTTask_CUIBattleManager_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669B90
+lbl_80669B90:
+	# ROM: 0x5739F0
+	.float 1.0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666940
+lbl_80666940:
+	.skip 0x4
+.global lbl_80666944
+lbl_80666944:
+	.skip 0x4
+	
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000C2EC
 lbl_8000C2EC:
@@ -4756,7 +5016,7 @@ lbl_8000C448:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8012DF90
 	.4byte 0x000001F8

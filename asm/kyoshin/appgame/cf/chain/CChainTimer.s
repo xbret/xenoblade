@@ -1424,7 +1424,76 @@ func_8027E200:
 /* 8027E4A8 00247A68  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027E4AC 00247A6C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066B338
+lbl_8066B338:
+	# ROM: 0x575198
+	.4byte 0x4048F5C3
+
+
+.global lbl_8066B33C
+lbl_8066B33C:
+	# ROM: 0x57519C
+	.4byte 0x420C0000
+
+
+.global lbl_8066B340
+lbl_8066B340:
+	# ROM: 0x5751A0
+	.float 1.0
+	.4byte 0
+
+
+.global lbl_8066B348
+lbl_8066B348:
+	# ROM: 0x5751A8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066B350
+lbl_8066B350:
+	# ROM: 0x5751B0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066B358
+lbl_8066B358:
+	# ROM: 0x5751B8
+	.4byte 0x3FE00000
+	.4byte 0
+
+
+.global lbl_8066B360
+lbl_8066B360:
+	# ROM: 0x5751C0
+	.4byte 0xBFE00000
+	.4byte 0
+
+
+.global lbl_8066B368
+lbl_8066B368:
+	# ROM: 0x5751C8
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066B36C
+lbl_8066B36C:
+	# ROM: 0x5751CC
+	.4byte 0x47C34F80
+
+
+.global lbl_8066B370
+lbl_8066B370:
+	# ROM: 0x5751D0
+	.4byte 0x451C4000
+	.4byte 0
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80018A34
 lbl_80018A34:
@@ -1498,7 +1567,7 @@ lbl_80018AC4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8027D0E8
 	.4byte 0x000000BC

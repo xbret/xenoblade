@@ -155,3 +155,36 @@ GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf:
 /* 803DDCC8 003A7288  7C 08 03 A6 */	mtlr r0
 /* 803DDCCC 003A728C  38 21 00 30 */	addi r1, r1, 0x30
 /* 803DDCD0 003A7290  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066C2B0
+lbl_8066C2B0:
+	# ROM: 0x576110
+	.float 1.0
+
+
+.global lbl_8066C2B4
+lbl_8066C2B4:
+	# ROM: 0x576114
+	.4byte 0x40000000
+
+
+.global lbl_8066C2B8
+lbl_8066C2B8:
+	# ROM: 0x576118
+	.4byte 0x40400000
+
+
+.global lbl_8066C2BC
+lbl_8066C2BC:
+	# ROM: 0x57611C
+	.4byte 0
+
+
+.global lbl_8066C2C0
+lbl_8066C2C0:
+	# ROM: 0x576120
+	.4byte 0x47000000
+	.4byte 0

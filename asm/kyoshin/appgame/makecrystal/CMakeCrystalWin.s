@@ -1691,7 +1691,141 @@ func_80213B1C:
 /* 80213BE8 001DD1A8  38 21 00 30 */	addi r1, r1, 0x30
 /* 80213BEC 001DD1AC  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMakeCrystalWin_typestr
+CMakeCrystalWin_typestr:
+	.asciz "CMakeCrystalWin"
+
+
+.global lbl_80503F58
+lbl_80503F58:
+	.asciz "CMakeCrystalWin"
+	.asciz "CMakeCrystalScn"
+	.asciz "MNU_crystal"
+	.asciz "info"
+	.balign 4
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805392F8
+lbl_805392F8:
+	# ROM: 0x5353F8
+	.4byte switch_80212AA0
+	.4byte switch_80212AA8
+	.4byte switch_80212AB0
+	.4byte switch_80212AB8
+	.4byte switch_80212AC0
+	.4byte switch_80212AC8
+	.4byte switch_80212AD0
+	.4byte switch_80212AD8
+	.4byte switch_80212AE0
+	.4byte switch_80212AE8
+	.4byte switch_80212AF0
+	.4byte switch_80212AF8
+
+
+.global __vt__CMakeCrystalWin
+__vt__CMakeCrystalWin:
+	.4byte __RTTI__CMakeCrystalWin
+	.4byte 0
+	.4byte func_80212594
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMakeCrystalWin
+	.4byte 0xFFFFFFFC
+	.4byte func_80213480
+	.4byte func_80213478
+	.4byte func_802133C8
+
+.global CMakeCrystalWin_hierarchy
+CMakeCrystalWin_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000004
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMakeCrystalWin
+__RTTI__CMakeCrystalWin:
+	.4byte CMakeCrystalWin_typestr
+	.4byte CMakeCrystalWin_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066AD10
+lbl_8066AD10:
+	# ROM: 0x574B70
+	.4byte 0
+
+
+.global lbl_8066AD14
+lbl_8066AD14:
+	# ROM: 0x574B74
+	.4byte 0x41A00000
+
+
+.global lbl_8066AD18
+lbl_8066AD18:
+	# ROM: 0x574B78
+	.4byte 0x41F00000
+
+
+.global lbl_8066AD1C
+lbl_8066AD1C:
+	# ROM: 0x574B7C
+	.4byte 0
+
+
+.global lbl_8066AD20
+lbl_8066AD20:
+	# ROM: 0x574B80
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066AD28
+lbl_8066AD28:
+	# ROM: 0x574B88
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800133E8
 lbl_800133E8:
@@ -1888,7 +2022,7 @@ lbl_800135A4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80212504
 	.4byte 0x00000090

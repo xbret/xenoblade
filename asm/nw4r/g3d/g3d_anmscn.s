@@ -1734,3 +1734,37 @@ lbl_8056CE00:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C3A0
+lbl_8066C3A0:
+	# ROM: 0x576200
+	.4byte 0
+
+
+.global lbl_8066C3A4
+lbl_8066C3A4:
+	# ROM: 0x576204
+	.4byte 0xD01502F9
+
+
+.global lbl_8066C3A8
+lbl_8066C3A8:
+	# ROM: 0x576208
+	.float 1.0
+	.4byte 0
+
+
+.global lbl_8066C3B0
+lbl_8066C3B0:
+	# ROM: 0x576210
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066C3B8
+lbl_8066C3B8:
+	# ROM: 0x576218
+	.float 0.5
+	.4byte 0

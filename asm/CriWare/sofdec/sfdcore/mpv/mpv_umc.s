@@ -1743,3 +1743,12 @@ MPVUMC_BpicSkipped:
 /* 803ADE50 00377410  7C 08 03 A6 */	mtlr r0
 /* 803ADE54 00377414  38 21 00 20 */	addi r1, r1, 0x20
 /* 803ADE58 00377418  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80607B28
+lbl_80607B28:
+	.skip 0x20
+.global lbl_80607B48
+lbl_80607B48:
+	.skip 0x20

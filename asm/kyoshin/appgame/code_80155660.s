@@ -7487,7 +7487,1100 @@ sinit_8015B9D8:
 .4byte sinit_8015B9D8
 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_804FD2D0
+lbl_804FD2D0:
+	.asciz "qst_name"
+	.balign 4
+
+.global lbl_804FD2DC
+lbl_804FD2DC:
+	.asciz "percent_E"
+	.balign 4
+
+.global lbl_804FD2E8
+lbl_804FD2E8:
+	.asciz "percent_D"
+	.balign 4
+
+.global lbl_804FD2F4
+lbl_804FD2F4:
+	.asciz "percent_C"
+	.balign 4
+
+.global lbl_804FD300
+lbl_804FD300:
+	.asciz "percent_B"
+	.balign 4
+
+.global lbl_804FD30C
+lbl_804FD30C:
+	.asciz "percent_A"
+	.balign 4
+
+.global lbl_804FD318
+lbl_804FD318:
+	.asciz "percent_S"
+	.balign 4
+
+.global lbl_804FD324
+lbl_804FD324:
+	.asciz "jwl_skill1"
+	.balign 4
+
+.global lbl_804FD330
+lbl_804FD330:
+	.asciz "crystal1"
+	.balign 4
+
+.global lbl_804FD33C
+lbl_804FD33C:
+	.asciz "crystal1Per"
+
+.global lbl_804FD348
+lbl_804FD348:
+	.asciz "wpn1_slot"
+	.balign 4
+
+.global lbl_804FD354
+lbl_804FD354:
+	.asciz "uni_wpn1"
+	.balign 4
+
+.global lbl_804FD360
+lbl_804FD360:
+	.asciz "uni_wpn1Per"
+
+.global lbl_804FD36C
+lbl_804FD36C:
+	.asciz "equip1Per"
+	.balign 4
+
+.global lbl_804FD378
+lbl_804FD378:
+	.asciz "equip1_slot"
+
+.global lbl_804FD384
+lbl_804FD384:
+	.asciz "uni_equip1"
+	.balign 4
+
+.global lbl_804FD390
+lbl_804FD390:
+	.asciz "uni_equip1Per"
+	.balign 4
+
+.global lbl_804FD3A0
+lbl_804FD3A0:
+	.asciz "arts1Per"
+	.balign 4
+
+.global lbl_804FD3AC
+lbl_804FD3AC:
+	.asciz "materia1"
+	.balign 4
+
+.global materia1PerString
+materia1PerString:
+	.asciz "materia1Per"
+
+.global cf_ItemPurifyKessyouImpl_typestr
+cf_ItemPurifyKessyouImpl_typestr:
+	.asciz "cf::ItemPurifyKessyouImpl"
+	.balign 4
+
+.global cf_ItemKessyouImpl_typestr
+cf_ItemKessyouImpl_typestr:
+	.asciz "cf::ItemKessyouImpl"
+
+.global cf_ItemPurifyCrystalImpl_typestr
+cf_ItemPurifyCrystalImpl_typestr:
+	.asciz "cf::ItemPurifyCrystalImpl"
+	.balign 4
+
+.global cf_ItemDropCrystalImpl_typestr
+cf_ItemDropCrystalImpl_typestr:
+	.asciz "cf::ItemDropCrystalImpl"
+
+.global cf_ItemCrystalImpl_typestr
+cf_ItemCrystalImpl_typestr:
+	.asciz "cf::ItemCrystalImpl"
+
+.global cf_ItemEquipImpl_typestr
+cf_ItemEquipImpl_typestr:
+	.asciz "cf::ItemEquipImpl"
+	.balign 4
+
+.global cf_ItemConsImpl_typestr
+cf_ItemConsImpl_typestr:
+	.asciz "cf::ItemConsImpl"
+	.balign 4
+
+.global cf_ItemDummyImpl_typestr
+cf_ItemDummyImpl_typestr:
+	.asciz "cf::ItemDummyImpl"
+	.balign 4
+
+.global cf_ItemImpl_typestr
+cf_ItemImpl_typestr:
+	.asciz "cf::ItemImpl"
+	.balign 4
+
+
+.global lbl_804FD488
+lbl_804FD488:
+	.asciz "drop_nml"
+	.asciz "drop_rar"
+	.asciz "drop_spr"
+	.asciz "drop_nml_per"
+	.asciz "drop_rar_per"
+	.asciz "drop_spr_per"
+	.asciz "percent"
+	.asciz "itemID"
+	.asciz "rankType"
+	.asciz "jwl_slot"
+	.balign 4
+	.asciz "crs_type"
+	.asciz "atr_type"
+	.asciz "rank_type_low"
+	.asciz "rank_type_up"
+	.asciz "skill_max"
+	.asciz "rank"
+	.asciz "cylinder"
+	.asciz "skill1"
+	.asciz "skill2"
+	.asciz "named"
+	.asciz "itemType"
+	#エーテル鉱石
+	.byte 0x83, 0x47
+	.4byte 0x815B8365
+	.4byte 0x838B8D7A
+	.2byte 0x90CE
+	.byte 0x00
+	.asciz "name"
+	.asciz "qst_name"
+	.asciz "cylinder_name"
+	.asciz "c_name_id"
+	.asciz "equip_per"
+	.asciz "wpn_per"
+	.asciz "crystal_per"
+	.asciz "arts_per"
+	.asciz "uni_wpn_per"
+	.asciz "uni_equip_per"
+	.asciz "gimID"
+	.asciz "itm%dID"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80532DF8
+lbl_80532DF8:
+	# ROM: 0x52EEF8
+	.4byte lbl_80669D68
+	.4byte lbl_80669D70
+	.4byte lbl_80669D78
+	.4byte lbl_80669D80
+	.4byte lbl_80669D88
+	.4byte lbl_80669D90
+	.4byte lbl_80669D98
+
+
+.global lbl_80532E14
+lbl_80532E14:
+	# ROM: 0x52EF14
+	.4byte lbl_80669D68
+	.4byte lbl_80669DA0
+	.4byte lbl_80669DA8
+	.4byte lbl_80669DB0
+	.4byte lbl_80669DB8
+	.4byte lbl_80669DC0
+	.4byte lbl_80669DC8
+
+
+.global lbl_80532E30
+lbl_80532E30:
+	# ROM: 0x52EF30
+	.4byte lbl_80669D68
+	.4byte lbl_804FD2DC
+	.4byte lbl_804FD2E8
+	.4byte lbl_804FD2F4
+	.4byte lbl_804FD300
+	.4byte lbl_804FD30C
+	.4byte lbl_804FD318
+
+
+.global lbl_80532E4C
+lbl_80532E4C:
+	# ROM: 0x52EF4C
+	.4byte lbl_80666AB0
+	.4byte lbl_80666AB8
+	.4byte lbl_80666AC0
+	.4byte lbl_80666AE0
+	.4byte lbl_80666AC0
+	.4byte lbl_80666AC0
+	.4byte lbl_80666AC0
+	.4byte lbl_80666AC0
+	.4byte lbl_80666AC0
+	.4byte lbl_80666AC8
+	.4byte lbl_80666AB8
+	.4byte lbl_80666AB8
+	.4byte lbl_80666AB8
+	.4byte lbl_80666AB8
+	.4byte lbl_80666AD0
+
+
+.global lbl_80532E88
+lbl_80532E88:
+	# ROM: 0x52EF88
+	.4byte 0x00030005
+	.4byte 0x00060007
+	.4byte 0x0008000B
+
+
+.global lbl_80532E94
+lbl_80532E94:
+	# ROM: 0x52EF94
+	.4byte switch_80157BF0
+	.4byte switch_80157BF0
+	.4byte switch_80157AB4
+	.4byte switch_80157B90
+	.4byte switch_80157AD0
+	.4byte switch_80157AEC
+	.4byte switch_80157B08
+	.4byte switch_80157B24
+	.4byte switch_80157B40
+	.4byte switch_80157B78
+	.4byte switch_80157BA8
+	.4byte switch_80157B5C
+	.4byte switch_80157BC0
+	.4byte switch_80157BD8
+
+
+.global lbl_80532ECC
+lbl_80532ECC:
+	# ROM: 0x52EFCC
+	.4byte switch_80157CAC
+	.4byte switch_80157CAC
+	.4byte switch_80157CAC
+	.4byte switch_80157CAC
+	.4byte switch_80157CAC
+	.4byte switch_80157CAC
+	.4byte switch_80157CAC
+	.4byte switch_80157CAC
+	.4byte switch_80157CAC
+	.4byte switch_80157CAC
+	.4byte switch_80157CAC
+	.4byte switch_80157CAC
+	.4byte switch_80157CAC
+	.4byte switch_80157CAC
+
+
+.global lbl_80532F04
+lbl_80532F04:
+	# ROM: 0x52F004
+	.4byte switch_80157FC8
+	.4byte switch_80157FC8
+	.4byte switch_80157F8C
+	.4byte switch_80157FA4
+	.4byte switch_80157F94
+	.4byte switch_80157F94
+	.4byte switch_80157F94
+	.4byte switch_80157F94
+	.4byte switch_80157F94
+	.4byte switch_80157F9C
+	.4byte switch_80157FAC
+	.4byte switch_80157FB4
+	.4byte switch_80157FBC
+	.4byte switch_80157FC4
+	.4byte 0
+
+
+.global __vt__cf_ItemPurifyKessyouImpl
+__vt__cf_ItemPurifyKessyouImpl:
+	.4byte __RTTI__cf_ItemPurifyKessyouImpl
+	.4byte 0
+	.4byte func_8015B4BC
+	.4byte func_80156F0C
+	.4byte func_8015B46C
+	.4byte func_8015B4B4
+	.4byte func_8015B460
+	.4byte func_80156ED4
+	.4byte func_80156268
+	.4byte func_801562DC
+	.4byte func_8009DB1C
+	.4byte func_8015B458
+	.4byte func_8004A2E8
+	.4byte func_8004A400
+	.4byte func_8015B3FC
+	.4byte func_801582FC
+	.4byte func_8007F114
+	.4byte func_8007EF44
+	.4byte func_8007EF48
+	.4byte func_80156048
+	.4byte func_80156924
+	.4byte func_8015B44C
+	.4byte func_80156F30
+	.4byte func_8015B3F4
+	.4byte func_8015B440
+	.4byte func_8015B3EC
+	.4byte func_80156928
+	.4byte func_8015B3E4
+	.4byte func_8015B4D8
+	.4byte func_8015B4C8
+	.4byte func_80156038
+	.4byte func_8015A230
+	.4byte func_80156040
+	.4byte func_80156BD8
+	.4byte func_8015B3DC
+	.4byte func_8015A234
+	.4byte func_8015B430
+	.4byte func_8015B420
+	.4byte func_8015B414
+	.4byte func_8015B404
+
+.global cf_ItemPurifyKessyouImpl_hierarchy
+cf_ItemPurifyKessyouImpl_hierarchy:
+	.4byte __RTTI__cf_ItemImpl
+	.4byte 0
+	.4byte __RTTI__cf_ItemKessyouImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_ItemKessyouImpl
+__vt__cf_ItemKessyouImpl:
+	.4byte __RTTI__cf_ItemKessyouImpl
+	.4byte 0
+	.4byte func_8015B4BC
+	.4byte func_80155CC0
+	.4byte func_8015B46C
+	.4byte func_8015B4B4
+	.4byte func_8015B460
+	.4byte func_80156DAC
+	.4byte func_80156268
+	.4byte func_801562DC
+	.4byte func_8009DB1C
+	.4byte func_8015B458
+	.4byte func_8004A2E8
+	.4byte func_8004A400
+	.4byte func_8015B3FC
+	.4byte func_801582FC
+	.4byte func_8007F114
+	.4byte func_8007EF44
+	.4byte func_8007EF48
+	.4byte func_80156048
+	.4byte func_80156924
+	.4byte func_8015B44C
+	.4byte func_8015B4F0
+	.4byte func_8015B3F4
+	.4byte func_8015B440
+	.4byte func_8015B3EC
+	.4byte func_80156928
+	.4byte func_8015B3E4
+	.4byte func_8015B4E8
+	.4byte func_8015B4E4
+	.4byte func_80156038
+	.4byte func_8015A230
+	.4byte func_80156040
+	.4byte func_80156BD8
+	.4byte func_8015B3DC
+	.4byte func_8015A234
+	.4byte func_8015B430
+	.4byte func_8015B420
+	.4byte func_8015B414
+	.4byte func_8015B404
+
+.global cf_ItemKessyouImpl_hierarchy
+cf_ItemKessyouImpl_hierarchy:
+	.4byte __RTTI__cf_ItemImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_ItemPurifyCrystalImpl
+__vt__cf_ItemPurifyCrystalImpl:
+	.4byte __RTTI__cf_ItemPurifyCrystalImpl
+	.4byte 0
+	.4byte func_80155CB4
+	.4byte func_80155CC0
+	.4byte func_8015B60C
+	.4byte func_8015B654
+	.4byte func_8015B5C0
+	.4byte func_80156BE4
+	.4byte func_80156164
+	.4byte func_80156050
+	.4byte func_8009DB1C
+	.4byte func_8007F0A4
+	.4byte func_8004A2E8
+	.4byte func_8004A400
+	.4byte func_8015B3FC
+	.4byte func_801582FC
+	.4byte func_8007F114
+	.4byte func_8007EF44
+	.4byte func_8007EF48
+	.4byte func_8015B5F8
+	.4byte func_80156CF8
+	.4byte func_8015B554
+	.4byte func_801583DC
+	.4byte func_8015B5E4
+	.4byte func_8015B54C
+	.4byte func_8015B5D8
+	.4byte func_8015B5CC
+	.4byte func_80156CF0
+	.4byte func_8015B5B4
+	.4byte func_8015B5A4
+	.4byte func_8015B598
+	.4byte func_8015B588
+	.4byte func_8015B57C
+	.4byte func_8015B56C
+	.4byte func_8015B564
+	.4byte func_8015B55C
+	.4byte func_8015B544
+	.4byte func_801586D0
+	.4byte func_8015B53C
+	.4byte func_8015B538
+
+.global cf_ItemPurifyCrystalImpl_hierarchy
+cf_ItemPurifyCrystalImpl_hierarchy:
+	.4byte __RTTI__cf_ItemImpl
+	.4byte 0
+	.4byte __RTTI__cf_ItemCrystalImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_ItemDropCrystalImpl
+__vt__cf_ItemDropCrystalImpl:
+	.4byte __RTTI__cf_ItemDropCrystalImpl
+	.4byte 0
+	.4byte func_80155CB4
+	.4byte func_80155CC0
+	.4byte func_8015B60C
+	.4byte func_8015B654
+	.4byte func_8015B5C0
+	.4byte func_80156934
+	.4byte func_80156060
+	.4byte func_80156050
+	.4byte func_8009DB1C
+	.4byte func_8007F0A4
+	.4byte func_8004A2E8
+	.4byte func_8004A400
+	.4byte func_8015B3FC
+	.4byte func_801582FC
+	.4byte func_8007F114
+	.4byte func_8007EF44
+	.4byte func_8007EF48
+	.4byte func_8015B5F8
+	.4byte func_8015B65C
+	.4byte func_8015B554
+	.4byte func_801583DC
+	.4byte func_8015B5E4
+	.4byte func_8015B54C
+	.4byte func_8015B5D8
+	.4byte func_8015B5CC
+	.4byte func_80156BDC
+	.4byte func_8015B5B4
+	.4byte func_8015B5A4
+	.4byte func_8015B598
+	.4byte func_8015B588
+	.4byte func_8015B57C
+	.4byte func_8015B56C
+	.4byte func_8015B564
+	.4byte func_8015B55C
+	.4byte func_8015B544
+	.4byte func_801586D0
+	.4byte func_8015B53C
+	.4byte func_8015B538
+
+.global cf_ItemDropCrystalImpl_hierarchy
+cf_ItemDropCrystalImpl_hierarchy:
+	.4byte __RTTI__cf_ItemImpl
+	.4byte 0
+	.4byte __RTTI__cf_ItemCrystalImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_ItemCrystalImpl
+__vt__cf_ItemCrystalImpl:
+	.4byte __RTTI__cf_ItemCrystalImpl
+	.4byte 0
+	.4byte func_80155CB4
+	.4byte func_80155CC0
+	.4byte func_8015B60C
+	.4byte func_8015B654
+	.4byte func_8015B5C0
+	.4byte func_8015650C
+	.4byte func_80155F34
+	.4byte func_80156050
+	.4byte func_8009DB1C
+	.4byte func_8007F0A4
+	.4byte func_8004A2E8
+	.4byte func_8004A400
+	.4byte func_8015B3FC
+	.4byte func_801582FC
+	.4byte func_8007F114
+	.4byte func_8007EF44
+	.4byte func_8007EF48
+	.4byte func_8015B5F8
+	.4byte func_8015B65C
+	.4byte func_8015B554
+	.4byte func_801583DC
+	.4byte func_8015B5E4
+	.4byte func_8015B54C
+	.4byte func_8015B5D8
+	.4byte func_8015B5CC
+	.4byte func_8015692C
+	.4byte func_8015B5B4
+	.4byte func_8015B5A4
+	.4byte func_8015B598
+	.4byte func_8015B588
+	.4byte func_8015B57C
+	.4byte func_8015B56C
+	.4byte func_8015B564
+	.4byte func_8015B55C
+	.4byte func_8015B544
+	.4byte func_801586D0
+	.4byte func_8015B53C
+	.4byte func_8015B538
+
+.global cf_ItemCrystalImpl_hierarchy
+cf_ItemCrystalImpl_hierarchy:
+	.4byte __RTTI__cf_ItemImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_ItemEquipImpl
+__vt__cf_ItemEquipImpl:
+	.4byte __RTTI__cf_ItemEquipImpl
+	.4byte 0
+	.4byte func_80155CB4
+	.4byte func_80155CC0
+	.4byte func_8015B8D0
+	.4byte func_8015B918
+	.4byte func_8015B6A8
+	.4byte func_80156350
+	.4byte func_80155E30
+	.4byte func_80155EA4
+	.4byte func_8009DB1C
+	.4byte func_8015B8C0
+	.4byte func_8015B8B8
+	.4byte func_8015B8B0
+	.4byte func_8015B8A8
+	.4byte func_8015B8A0
+	.4byte func_8015B86C
+	.4byte func_8015B75C
+	.4byte func_8015B6B4
+	.4byte func_8015B88C
+	.4byte func_80156924
+	.4byte func_8015B554
+	.4byte func_801583DC
+	.4byte func_8015B3F4
+	.4byte func_8015B54C
+	.4byte func_8015B3EC
+	.4byte func_80156928
+	.4byte func_8015B3E4
+	.4byte func_8015B4E8
+	.4byte func_8015B4E4
+	.4byte func_80156038
+	.4byte func_8015A230
+	.4byte func_80156040
+	.4byte func_80156BD8
+	.4byte func_8015B3DC
+	.4byte func_8015A234
+	.4byte func_8015B544
+	.4byte func_801586D0
+	.4byte func_8015B53C
+	.4byte func_8015B538
+
+.global cf_ItemEquipImpl_hierarchy
+cf_ItemEquipImpl_hierarchy:
+	.4byte __RTTI__cf_ItemImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_ItemConsImpl
+__vt__cf_ItemConsImpl:
+	.4byte __RTTI__cf_ItemConsImpl
+	.4byte 0
+	.4byte func_80155CB4
+	.4byte func_80155CC0
+	.4byte func_8015B92C
+	.4byte func_8015B974
+	.4byte func_8015B920
+	.4byte func_801586CC
+	.4byte func_80155D48
+	.4byte func_80155DBC
+	.4byte func_8009DB1C
+	.4byte func_8007F0A4
+	.4byte func_8004A2E8
+	.4byte func_8004A400
+	.4byte func_8015B3FC
+	.4byte func_801582FC
+	.4byte func_8007F114
+	.4byte func_8007EF44
+	.4byte func_8007EF48
+	.4byte func_80156048
+	.4byte func_80156924
+	.4byte func_8015B554
+	.4byte func_801583DC
+	.4byte func_8015B3F4
+	.4byte func_8015B54C
+	.4byte func_8015B3EC
+	.4byte func_80156928
+	.4byte func_8015B3E4
+	.4byte func_8015B4E8
+	.4byte func_8015B4E4
+	.4byte func_80156038
+	.4byte func_8015A230
+	.4byte func_80156040
+	.4byte func_80156BD8
+	.4byte func_8015B3DC
+	.4byte func_8015A234
+	.4byte func_8015B544
+	.4byte func_801586D0
+	.4byte func_8015B53C
+	.4byte func_8015B538
+
+.global cf_ItemConsImpl_hierarchy
+cf_ItemConsImpl_hierarchy:
+	.4byte __RTTI__cf_ItemImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_ItemDummyImpl
+__vt__cf_ItemDummyImpl:
+	.4byte __RTTI__cf_ItemDummyImpl
+	.4byte 0
+	.4byte func_80155CB4
+	.4byte func_80155CC0
+	.4byte func_8015B988
+	.4byte func_8015B9D0
+	.4byte func_8015B97C
+	.4byte func_801586CC
+	.4byte func_80155D28
+	.4byte func_80155D38
+	.4byte func_8009DB1C
+	.4byte func_8007F0A4
+	.4byte func_8004A2E8
+	.4byte func_8004A400
+	.4byte func_8015B3FC
+	.4byte func_801582FC
+	.4byte func_8007F114
+	.4byte func_8007EF44
+	.4byte func_8007EF48
+	.4byte func_80156048
+	.4byte func_80156924
+	.4byte func_8015B554
+	.4byte func_801583DC
+	.4byte func_8015B3F4
+	.4byte func_8015B54C
+	.4byte func_8015B3EC
+	.4byte func_80156928
+	.4byte func_8015B3E4
+	.4byte func_8015B4E8
+	.4byte func_8015B4E4
+	.4byte func_80156038
+	.4byte func_8015A230
+	.4byte func_80156040
+	.4byte func_80156BD8
+	.4byte func_8015B3DC
+	.4byte func_8015A234
+	.4byte func_8015B544
+	.4byte func_801586D0
+	.4byte func_8015B53C
+	.4byte func_8015B538
+
+.global cf_ItemDummyImpl_hierarchy
+cf_ItemDummyImpl_hierarchy:
+	.4byte __RTTI__cf_ItemImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80664B80
+lbl_80664B80:
+	# ROM: 0x570760
+	.4byte lbl_80669D60
+
+
+.global lbl_80664B84
+lbl_80664B84:
+	# ROM: 0x570764
+	.4byte lbl_804FD2D0
+
+
+.global lbl_80664B88
+lbl_80664B88:
+	# ROM: 0x570768
+	.4byte 0x141E2028
+	.4byte 0x505A5C63
+
+
+.global lbl_80664B90
+lbl_80664B90:
+	# ROM: 0x570770
+	.4byte lbl_804FD324
+
+
+.global lbl_80664B94
+lbl_80664B94:
+	# ROM: 0x570774
+	.4byte 0xFFFFFFFC
+
+
+.global lbl_80664B98
+lbl_80664B98:
+	# ROM: 0x570778
+	.4byte 0xFFFFFFFC
+
+
+.global lbl_80664B9C
+lbl_80664B9C:
+	# ROM: 0x57077C
+	.4byte lbl_804FD330
+
+
+.global lbl_80664BA0
+lbl_80664BA0:
+	# ROM: 0x570780
+	.4byte lbl_804FD33C
+
+
+.global lbl_80664BA4
+lbl_80664BA4:
+	# ROM: 0x570784
+	.4byte lbl_80669DD0
+
+
+.global lbl_80664BA8
+lbl_80664BA8:
+	# ROM: 0x570788
+	.4byte lbl_80669DD8
+
+
+.global lbl_80664BAC
+lbl_80664BAC:
+	# ROM: 0x57078C
+	.4byte lbl_804FD348
+
+
+.global lbl_80664BB0
+lbl_80664BB0:
+	# ROM: 0x570790
+	.4byte lbl_804FD354
+
+
+.global lbl_80664BB4
+lbl_80664BB4:
+	# ROM: 0x570794
+	.4byte lbl_804FD360
+
+
+.global lbl_80664BB8
+lbl_80664BB8:
+	# ROM: 0x570798
+	.4byte lbl_80669DE0
+
+
+.global lbl_80664BBC
+lbl_80664BBC:
+	# ROM: 0x57079C
+	.4byte lbl_804FD36C
+
+
+.global lbl_80664BC0
+lbl_80664BC0:
+	# ROM: 0x5707A0
+	.4byte lbl_804FD378
+
+
+.global lbl_80664BC4
+lbl_80664BC4:
+	# ROM: 0x5707A4
+	.4byte lbl_804FD384
+
+
+.global lbl_80664BC8
+lbl_80664BC8:
+	# ROM: 0x5707A8
+	.4byte lbl_804FD390
+
+
+.global lbl_80664BCC
+lbl_80664BCC:
+	# ROM: 0x5707AC
+	.4byte lbl_80669DE8
+
+
+.global lbl_80664BD0
+lbl_80664BD0:
+	# ROM: 0x5707B0
+	.4byte lbl_804FD3A0
+
+
+.global lbl_80664BD4
+lbl_80664BD4:
+	# ROM: 0x5707B4
+	.4byte lbl_804FD3AC
+
+
+.global lbl_80664BD8
+lbl_80664BD8:
+	# ROM: 0x5707B8
+	.4byte materia1PerString
+	.4byte 0
+
+
+.global __RTTI__cf_ItemPurifyKessyouImpl
+__RTTI__cf_ItemPurifyKessyouImpl:
+	.4byte cf_ItemPurifyKessyouImpl_typestr
+	.4byte cf_ItemPurifyKessyouImpl_hierarchy
+
+.global __RTTI__cf_ItemKessyouImpl
+__RTTI__cf_ItemKessyouImpl:
+	.4byte cf_ItemKessyouImpl_typestr
+	.4byte cf_ItemKessyouImpl_hierarchy
+
+.global __RTTI__cf_ItemPurifyCrystalImpl
+__RTTI__cf_ItemPurifyCrystalImpl:
+	.4byte cf_ItemPurifyCrystalImpl_typestr
+	.4byte cf_ItemPurifyCrystalImpl_hierarchy
+
+.global __RTTI__cf_ItemDropCrystalImpl
+__RTTI__cf_ItemDropCrystalImpl:
+	.4byte cf_ItemDropCrystalImpl_typestr
+	.4byte cf_ItemDropCrystalImpl_hierarchy
+
+.global __RTTI__cf_ItemCrystalImpl
+__RTTI__cf_ItemCrystalImpl:
+	.4byte cf_ItemCrystalImpl_typestr
+	.4byte cf_ItemCrystalImpl_hierarchy
+
+.global __RTTI__cf_ItemEquipImpl
+__RTTI__cf_ItemEquipImpl:
+	.4byte cf_ItemEquipImpl_typestr
+	.4byte cf_ItemEquipImpl_hierarchy
+
+.global __RTTI__cf_ItemConsImpl
+__RTTI__cf_ItemConsImpl:
+	.4byte cf_ItemConsImpl_typestr
+	.4byte cf_ItemConsImpl_hierarchy
+
+.global __RTTI__cf_ItemDummyImpl
+__RTTI__cf_ItemDummyImpl:
+	.4byte cf_ItemDummyImpl_typestr
+	.4byte cf_ItemDummyImpl_hierarchy
+
+.global __RTTI__cf_ItemImpl
+__RTTI__cf_ItemImpl:
+	.4byte cf_ItemImpl_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669D60
+lbl_80669D60:
+	.asciz "name"
+	.balign 4
+
+.global lbl_80669D68
+lbl_80669D68:
+	.4byte 0
+	.4byte 0
+
+.global lbl_80669D70
+lbl_80669D70:
+	.asciz "lower_E"
+
+.global lbl_80669D78
+lbl_80669D78:
+	.asciz "lower_D"
+
+.global lbl_80669D80
+lbl_80669D80:
+	.asciz "lower_C"
+
+.global lbl_80669D88
+lbl_80669D88:
+	.asciz "lower_B"
+
+.global lbl_80669D90
+lbl_80669D90:
+	.asciz "lower_A"
+
+.global lbl_80669D98
+lbl_80669D98:
+	.asciz "lower_S"
+
+.global lbl_80669DA0
+lbl_80669DA0:
+	.asciz "upper_E"
+
+.global lbl_80669DA8
+lbl_80669DA8:
+	.asciz "upper_D"
+
+.global lbl_80669DB0
+lbl_80669DB0:
+	.asciz "upper_C"
+
+.global lbl_80669DB8
+lbl_80669DB8:
+	.asciz "upper_B"
+
+.global lbl_80669DC0
+lbl_80669DC0:
+	.asciz "upper_A"
+
+.global lbl_80669DC8
+lbl_80669DC8:
+	.asciz "upper_S"
+
+.global lbl_80669DD0
+lbl_80669DD0:
+	.asciz "wpn1"
+	.balign 4
+
+.global lbl_80669DD8
+lbl_80669DD8:
+	.asciz "wpn1Per"
+
+.global lbl_80669DE0
+lbl_80669DE0:
+	.asciz "equip1"
+	.balign 4
+
+.global lbl_80669DE8
+lbl_80669DE8:
+	.asciz "arts1"
+	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80577610
+lbl_80577610:
+	.skip 0xD4
+.global lbl_805776E4
+lbl_805776E4:
+	.skip 0xD4
+.global lbl_805777B8
+lbl_805777B8:
+	.skip 0x44
+.global lbl_805777FC
+lbl_805777FC:
+	.skip 0x44
+.global lbl_80577840
+lbl_80577840:
+	.skip 0x48
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666AA8
+lbl_80666AA8:
+	.skip 0x4
+.global lbl_80666AAC
+lbl_80666AAC:
+	.skip 0x4
+.global lbl_80666AB0
+lbl_80666AB0:
+	.skip 0x4
+.global lbl_80666AB4
+lbl_80666AB4:
+	.skip 0x4
+.global lbl_80666AB8
+lbl_80666AB8:
+	.skip 0x4
+.global lbl_80666ABC
+lbl_80666ABC:
+	.skip 0x4
+.global lbl_80666AC0
+lbl_80666AC0:
+	.skip 0x4
+.global lbl_80666AC4
+lbl_80666AC4:
+	.skip 0x4
+.global lbl_80666AC8
+lbl_80666AC8:
+	.skip 0x4
+.global lbl_80666ACC
+lbl_80666ACC:
+	.skip 0x4
+.global lbl_80666AD0
+lbl_80666AD0:
+	.skip 0x4
+.global lbl_80666AD4
+lbl_80666AD4:
+	.skip 0x4
+.global lbl_80666AD8
+lbl_80666AD8:
+	.skip 0x4
+.global lbl_80666ADC
+lbl_80666ADC:
+	.skip 0x4
+.global lbl_80666AE0
+lbl_80666AE0:
+	.skip 0x4
+.global lbl_80666AE4
+lbl_80666AE4:
+	.skip 0x4
+.global lbl_80666AE8
+lbl_80666AE8:
+	.skip 0x4
+.global lbl_80666AEC
+lbl_80666AEC:
+	.skip 0x1
+.global lbl_80666AED
+lbl_80666AED:
+	.skip 0x1
+.global lbl_80666AEE
+lbl_80666AEE:
+	.skip 0x2
+.global lbl_80666AF0
+lbl_80666AF0:
+	.skip 0x4
+.global lbl_80666AF4
+lbl_80666AF4:
+	.skip 0x4
+.global lbl_80666AF8
+lbl_80666AF8:
+	.skip 0x4
+.global lbl_80666AFC
+lbl_80666AFC:
+	.skip 0x4
+.global lbl_80666B00
+lbl_80666B00:
+	.skip 0x4
+.global lbl_80666B04
+lbl_80666B04:
+	.skip 0x4
+.global lbl_80666B08
+lbl_80666B08:
+	.skip 0x4
+.global lbl_80666B0C
+lbl_80666B0C:
+	.skip 0x4
+.global lbl_80666B10
+lbl_80666B10:
+	.skip 0x4
+.global lbl_80666B14
+lbl_80666B14:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000D3AC
 lbl_8000D3AC:
@@ -7874,7 +8967,7 @@ lbl_8000D60C:
 	.4byte 0x08080000
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80155660
 	.4byte 0x000001F4

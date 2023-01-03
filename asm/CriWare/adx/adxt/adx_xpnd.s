@@ -313,3 +313,12 @@ ADXPD_ExecHndl:
 /* 80385AFC 0034F0BC  7C 08 03 A6 */	mtlr r0
 /* 80385B00 0034F0C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80385B04 0034F0C4  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E8600
+lbl_805E8600:
+	.skip 0x3C0
+.global adxpd_internal_error
+adxpd_internal_error:
+	.skip 0x8

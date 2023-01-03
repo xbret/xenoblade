@@ -1560,3 +1560,64 @@ SetupGXWithColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
 /* 80430618 003F9BD8  7C 08 03 A6 */	mtlr r0
 /* 8043061C 003F9BDC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80430620 003F9BE0  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C940
+lbl_8066C940:
+	# ROM: 0x5767A0
+	.4byte 0
+
+
+.global lbl_8066C944
+lbl_8066C944:
+	# ROM: 0x5767A4
+	.float 1.0
+
+
+.global lbl_8066C948
+lbl_8066C948:
+	# ROM: 0x5767A8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066C950
+lbl_8066C950:
+	# ROM: 0x5767B0
+	.float 0.5
+	.4byte 0
+
+
+.global lbl_8066C958
+lbl_8066C958:
+	# ROM: 0x5767B8
+	.4byte 0x43300000
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_806570A8
+lbl_806570A8:
+	.skip 0x10
+.global lbl_806570B8
+lbl_806570B8:
+	.skip 0x10
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667E38
+lbl_80667E38:
+	.skip 0x4
+.global lbl_80667E3C
+lbl_80667E3C:
+	.skip 0x1
+.global lbl_80667E3D
+lbl_80667E3D:
+	.skip 0x1
+.global lbl_80667E3E
+lbl_80667E3E:
+	.skip 0x1
+.global lbl_80667E3F
+lbl_80667E3F:
+	.skip 0x1

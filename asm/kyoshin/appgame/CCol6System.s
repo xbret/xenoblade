@@ -5931,7 +5931,345 @@ func_80163E78:
 /* 80163FB0 0012D570  38 21 00 40 */	addi r1, r1, 0x40
 /* 80163FB4 0012D574  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80533668
+lbl_80533668:
+	# ROM: 0x52F768
+	.4byte switch_8015EF80
+	.4byte switch_8015EF94
+	.4byte switch_8015F024
+	.4byte switch_8015F160
+	.4byte switch_8015F16C
+	.4byte switch_8015F1FC
+	.4byte switch_8015F258
+	.4byte switch_8015F40C
+	.4byte switch_8015F418
+	.4byte switch_8015F440
+	.4byte switch_8015F584
+	.4byte switch_8015F6C4
+	.4byte switch_8015F6D0
+	.4byte switch_8015F848
+	.4byte switch_8015F854
+	.4byte switch_8015F874
+	.4byte switch_8015F8DC
+	.4byte switch_8015F938
+	.4byte switch_8015F950
+	.4byte switch_8015F99C
+	.4byte switch_8015FA04
+	.4byte switch_8015FA10
+	.4byte switch_8015FA5C
+	.4byte switch_8015FA68
+	.4byte switch_8015FAC4
+	.4byte switch_8015FADC
+	.4byte switch_8015FB28
+	.4byte switch_8015FB90
+	.4byte switch_8015FC34
+	.4byte switch_8015FC40
+	.4byte switch_801600C8
+	.4byte switch_801600C8
+	.4byte switch_8015FCAC
+	.4byte switch_8015FCB8
+	.4byte switch_8015FCC4
+	.4byte switch_8015FCD0
+	.4byte switch_8015FD98
+	.4byte switch_8015FDA4
+	.4byte switch_8015FE64
+	.4byte switch_8015FFB0
+	.4byte switch_80160048
+
+
+.global __vt__CCol6Invite
+__vt__CCol6Invite:
+	.4byte __RTTI__CCol6Invite
+	.4byte 0
+	.4byte func_80163D08
+	.4byte CChildListNode_Reset
+	.4byte func_80163D68
+	.4byte func_80163E68
+	.4byte func_80163E78
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CCol6Invite
+	.4byte 0xFFFFFF94
+	.4byte func_80164118
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CCol6Invite_hierarchy
+CCol6Invite_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CCol6System
+__vt__CCol6System:
+	.4byte __RTTI__CCol6System
+	.4byte 0
+	.4byte func_8015EBB4
+	.4byte CChildListNode_Reset
+	.4byte func_8015EC58
+	.4byte func_8015EE2C
+	.4byte func_8015EF08
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CCol6System
+	.4byte 0xFFFFFF94
+	.4byte func_80164100
+	.4byte func_80039E28
+	.4byte func_801640F8
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CCol6System
+	.4byte 0xFFFFFF90
+	.4byte func_80164110
+	.4byte func_80164108
+	.4byte func_80160214
+	.4byte func_80160118
+
+.global CCol6System_hierarchy
+CCol6System_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000070
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CCol6Hint
+__vt__CCol6Hint:
+	.4byte __RTTI__CCol6Hint
+	.4byte 0
+	.4byte func_8015D594
+	.4byte CChildListNode_Reset
+	.4byte func_8015D620
+	.4byte func_8015D72C
+	.4byte func_8015D7DC
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CCol6Hint
+	.4byte 0xFFFFFF94
+	.4byte func_801640E0
+	.4byte func_80039E28
+	.4byte func_801640D8
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CCol6Hint
+	.4byte 0xFFFFFF90
+	.4byte func_801640F0
+	.4byte func_801640E8
+	.4byte func_8015DC04
+	.4byte func_8015DB08
+
+.global CCol6Hint_hierarchy
+CCol6Hint_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000070
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CCol6CheckBat
+__vt__CCol6CheckBat:
+	.4byte __RTTI__CCol6CheckBat
+	.4byte 0
+	.4byte func_8015D0D4
+	.4byte CChildListNode_Reset
+	.4byte func_8015D134
+	.4byte func_8015D138
+	.4byte func_8015D144
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CCol6CheckBat
+	.4byte 0xFFFFFF94
+	.4byte func_801640D0
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CCol6CheckBat_hierarchy
+CCol6CheckBat_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CCol6Invite
+__RTTI__CCol6Invite:
+	.4byte CCol6Invite_typestr
+	.4byte CCol6Invite_hierarchy
+
+.global __RTTI__CCol6System
+__RTTI__CCol6System:
+	.4byte CCol6System_typestr
+	.4byte CCol6System_hierarchy
+
+.global __RTTI__CCol6Hint
+__RTTI__CCol6Hint:
+	.4byte CCol6Hint_typestr
+	.4byte CCol6Hint_hierarchy
+
+.global __RTTI__CCol6CheckBat
+__RTTI__CCol6CheckBat:
+	.4byte CCol6CheckBat_typestr
+	.4byte CCol6CheckBat_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000D824
 lbl_8000D824:
@@ -6169,7 +6507,7 @@ lbl_8000DA90:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8015E950
 	.4byte 0x00000264

@@ -93,7 +93,7 @@ func_800AAC98:
 /* 800AAD20 000742E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 800AAD24 000742E4  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80009364
 lbl_80009364:
@@ -110,7 +110,7 @@ lbl_8000937C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_800AABD4
 	.4byte 0x000000C4

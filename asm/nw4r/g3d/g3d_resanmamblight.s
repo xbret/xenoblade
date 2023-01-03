@@ -63,3 +63,18 @@ GetAnmResult__Q34nw4r3g3d14ResAnmAmbLightCFPQ34nw4r3g3d17AmbLightAnmResultf:
 /* 803E054C 003A9B0C  7C 08 03 A6 */	mtlr r0
 /* 803E0550 003A9B10  38 21 00 20 */	addi r1, r1, 0x20
 /* 803E0554 003A9B14  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C310
+lbl_8066C310:
+	# ROM: 0x576170
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066C318
+lbl_8066C318:
+	# ROM: 0x576178
+	.4byte 0x43300000
+	.4byte 0

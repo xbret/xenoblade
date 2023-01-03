@@ -3248,8 +3248,6 @@ func_8037F530:
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-
-
 .global lbl_80518E78
 lbl_80518E78:
 	.asciz "E9040801:partition ID is range outside.(adxf_ChkPrmPt)"
@@ -3300,3 +3298,45 @@ lbl_80518E78:
 	.asciz "E2005072901: NULL pointer is passed."
 	.balign 4
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E3430
+lbl_805E3430:
+	.skip 0x340
+.global lbl_805E3770
+lbl_805E3770:
+	.skip 0x400
+.global lbl_805E3B70
+lbl_805E3B70:
+	.skip 0x100
+.global adxf_cmd_ncall
+adxf_cmd_ncall:
+	.skip 0x20
+.global adxf_hstry_no
+adxf_hstry_no:
+	.skip 0x4
+.global lbl_805E3C94
+lbl_805E3C94:
+	.skip 0x4
+.global lbl_805E3C98
+lbl_805E3C98:
+	.skip 0x4
+.global adxf_ldptnw_hn
+adxf_ldptnw_hn:
+	.skip 0x4
+.global lbl_805E3CA0
+lbl_805E3CA0:
+	.skip 0x4
+.global lbl_805E3CA4
+lbl_805E3CA4:
+	.skip 0x4
+.global adxf_ldpt_buf
+adxf_ldpt_buf:
+	.skip 0x4
+.global adxf_ldpt_rdsct
+adxf_ldpt_rdsct:
+	.skip 0x4
+.global lbl_805E3CB0
+lbl_805E3CB0:
+	.skip 0x2080

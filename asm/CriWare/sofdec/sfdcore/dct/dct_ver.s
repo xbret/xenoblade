@@ -17,3 +17,9 @@ DCT_version_str:
 	.asciz "\nCRI DCT/WII Ver.2.034 Build:Nov 13 2008 18:21:26\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global cri_verstr_ptr
+cri_verstr_ptr:
+	.skip 0x8

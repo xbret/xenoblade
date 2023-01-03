@@ -196,7 +196,184 @@ func_800CA940:
 /* 800CA940 00093F00  38 63 FF F0 */	addi r3, r3, -16
 /* 800CA944 00093F04  4B FF FF A0 */	b func_800CA8E4
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_804F7FD0
+lbl_804F7FD0:
+	# ROM: 0x4F40D0
+	.4byte 0x3ECCCCCD
+	.4byte 0x3ECCCCCD
+	.4byte 0x3ECCCCCD
+	.4byte 0x3ECCCCCD
+	.4byte 0x3ECCCCCD
+	.4byte 0x3ECCCCCD
+	.4byte 0x3ECCCCCD
+	.4byte 0x3ECCCCCD
+	.4byte 0x3ECCCCCD
+	.4byte 0x3DCCCCCD
+
+.global cf_CfObjectImplNpc_typestr
+cf_CfObjectImplNpc_typestr:
+	.asciz "cf::CfObjectImplNpc"
+
+
+.global lbl_804F800C
+lbl_804F800C:
+	.asciz "core"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8052E1D0
+lbl_8052E1D0:
+	# ROM: 0x52A2D0
+	.4byte lbl_806694D0
+	.4byte lbl_806694D8
+	.4byte lbl_806694E0
+	.4byte lbl_806694E8
+	.4byte lbl_806694F0
+	.4byte lbl_806694F8
+	.4byte lbl_80669500
+	.4byte lbl_80669508
+	.4byte lbl_80669510
+	.4byte lbl_80669518
+
+
+.global __vt__cf_CfObjectImplNpc
+__vt__cf_CfObjectImplNpc:
+	.4byte __RTTI__cf_CfObjectImplNpc
+	.4byte 0
+	.4byte func_800CA8E4
+	.4byte func_80054A20
+	.4byte func_800CC5DC
+	.4byte func_800CC638
+	.4byte func_800CC964
+	.4byte func_800CD268
+	.4byte func_800CD460
+	.4byte func_800CD5C0
+	.4byte func_800CD5DC
+	.4byte func_800CEB68
+	.4byte func_80087448
+	.4byte func_8008742C
+	.4byte func_8008743C
+	.4byte func_80087424
+	.4byte func_800459FC
+	.4byte func_80087410
+	.4byte func_800873FC
+	.4byte func_800873E8
+	.4byte func_800873D4
+	.4byte func_800873C8
+	.4byte func_800873AC
+	.4byte func_80087390
+	.4byte func_80087378
+	.4byte func_80087364
+	.4byte func_80087334
+	.4byte func_80087348
+	.4byte func_800CE8E4
+	.4byte func_800CA854
+	.4byte func_800CE544
+	.4byte func_800CE6A0
+	.4byte func_800CE8AC
+	.4byte func_800CEA34
+	.4byte func_800CAB30
+	.4byte func_800CB454
+	.4byte func_800CB21C
+	.4byte func_800CB9AC
+	.4byte func_800CB94C
+	.4byte func_80087330
+	.4byte func_800CA6E4
+	.4byte func_800CA7B4
+	.4byte func_800CA934
+	.4byte func_800CA930
+	.4byte func_800CA92C
+	.4byte __RTTI__cf_CfObjectImplNpc
+	.4byte 0xFFFFFFF4
+	.4byte func_800CA938
+	.4byte func_800CA6CC
+	.4byte __RTTI__cf_CfObjectImplNpc
+	.4byte 0xFFFFFFF0
+	.4byte func_800CA940
+	.4byte func_800C5988
+	.4byte func_800CAB2C
+	.4byte func_800CBBD8
+	.4byte func_800CA850
+	.4byte func_800CC020
+	.4byte func_800CA924
+	.4byte func_800CEE28
+	.4byte func_800CFFA0
+
+.global cf_CfObjectImplNpc_hierarchy
+cf_CfObjectImplNpc_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0x00000010
+	.4byte __RTTI__IActParamEvent
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectImpl
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CfObjectImplObj
+__RTTI__cf_CfObjectImplObj:
+	.4byte cf_CfObjectImplObj_typestr
+	.4byte cf_CfObjectImplObj_hierarchy
+
+.global __RTTI__cf_CfObjectImplNpc
+__RTTI__cf_CfObjectImplNpc:
+	.4byte cf_CfObjectImplNpc_typestr
+	.4byte cf_CfObjectImplNpc_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_806694D0
+lbl_806694D0:
+	.asciz "np02030"
+
+.global lbl_806694D8
+lbl_806694D8:
+	.asciz "np63010"
+
+.global lbl_806694E0
+lbl_806694E0:
+	.asciz "np66010"
+
+.global lbl_806694E8
+lbl_806694E8:
+	.asciz "np67010"
+
+.global lbl_806694F0
+lbl_806694F0:
+	.asciz "np71010"
+
+.global lbl_806694F8
+lbl_806694F8:
+	.asciz "np73010"
+
+.global lbl_80669500
+lbl_80669500:
+	.asciz "np76010"
+
+.global lbl_80669508
+lbl_80669508:
+	.asciz "np77010"
+
+.global lbl_80669510
+lbl_80669510:
+	.asciz "np81010"
+
+.global lbl_80669518
+lbl_80669518:
+	.asciz "np45080"
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000A394
 lbl_8000A394:
@@ -219,7 +396,7 @@ lbl_8000A3AC:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_800CA6E4
 	.4byte 0x000000D0

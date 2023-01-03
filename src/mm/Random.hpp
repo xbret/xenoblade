@@ -5,7 +5,7 @@
 
 namespace ml{
 
-int mtRand();
+u32 mtRand();
 int mtRand(int);
 int mtRand(int,int);
 

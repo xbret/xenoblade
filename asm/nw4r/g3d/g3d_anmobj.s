@@ -72,3 +72,26 @@ lbl_80520F68:
 	.asciz "AnmObj"
 	.balign 4
 	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665D88
+lbl_80665D88:
+	# ROM: 0x571968
+	.4byte PlayPolicy_Onetime__Q24nw4r3g3dFfff
+	.4byte PlayPolicy_Loop__Q24nw4r3g3dFfff
+
+
+.global lbl_80665D90
+lbl_80665D90:
+	# ROM: 0x571970
+	.float 1.0
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C3C0
+lbl_8066C3C0:
+	# ROM: 0x576220
+	.4byte 0
+	.4byte 0

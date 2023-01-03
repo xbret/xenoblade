@@ -3415,6 +3415,45 @@ lbl_8056D518:
 	.4byte SetAnimationEnable__Q34nw4r3lyt8MaterialFRCQ34nw4r3lyt12AnimResourceb
 
 
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C598
+lbl_8066C598:
+	# ROM: 0x5763F8
+	.float 0.5
+
+
+.global lbl_8066C59C
+lbl_8066C59C:
+	# ROM: 0x5763FC
+	.4byte 0x3F360B61
+
+
+.global lbl_8066C5A0
+lbl_8066C5A0:
+	# ROM: 0x576400
+	.4byte 0
+
+
+.global lbl_8066C5A4
+lbl_8066C5A4:
+	# ROM: 0x576404
+	.float 1.0
+
+
+.global lbl_8066C5A8
+lbl_8066C5A8:
+	# ROM: 0x576408
+	.4byte 0x40000000
+	.4byte 0
+
+
+.global lbl_8066C5B0
+lbl_8066C5B0:
+	# ROM: 0x576410
+	.4byte 0x43300000
+	.4byte 0
+
 .section .sbss2, "", @nobits #0x8066DCE0 - 0x8066DCFB
 
 .global lbl_8066DCF0

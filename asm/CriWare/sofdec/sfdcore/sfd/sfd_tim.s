@@ -2172,3 +2172,21 @@ lbl_80520648:
 	.4byte 0x40600000
 	.4byte 0x43300000
 	.4byte 0x80000000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8061CDE4
+lbl_8061CDE4:
+	.skip 0x4
+.global lbl_8061CDE8
+lbl_8061CDE8:
+	.skip 0x8
+.global lbl_8061CDF0
+lbl_8061CDF0:
+	.skip 0x4
+.global lbl_8061CDF4
+lbl_8061CDF4:
+	.skip 0x4
+.global lbl_8061CDF8
+lbl_8061CDF8:
+	.skip 0x8

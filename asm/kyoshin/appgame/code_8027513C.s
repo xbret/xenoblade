@@ -636,7 +636,307 @@ func_802759C0:
 /* 802759C0 0023EF80  38 63 FF F0 */	addi r3, r3, -16
 /* 802759C4 0023EF84  4B FF FF A4 */	b func_80275968
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_ICamControlClassic_typestr
+cf_ICamControlClassic_typestr:
+	.asciz "cf::ICamControlClassic"
+	.balign 4
+
+.global cf_ICamControlGc_typestr
+cf_ICamControlGc_typestr:
+	.asciz "cf::ICamControlGc"
+	.balign 4
+
+.global cf_ICamControlRemote_typestr
+cf_ICamControlRemote_typestr:
+	.asciz "cf::ICamControlRemote"
+	.balign 4
+	.4byte 0
+
+.global cf_ICamControl_typestr
+cf_ICamControl_typestr:
+	.asciz "cf::ICamControl"
+
+.global cf_CfObjectImplTbox_typestr
+cf_CfObjectImplTbox_typestr:
+	.asciz "cf::CfObjectImplTbox"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053B678
+lbl_8053B678:
+	# ROM: 0x537778
+	.4byte lbl_806671DC
+	.4byte lbl_806671E4
+	.4byte lbl_806671EC
+	.4byte 0
+
+
+.global __vt__cf_ICamControlClassic
+__vt__cf_ICamControlClassic:
+	.4byte __RTTI__cf_ICamControlClassic
+	.4byte 0
+	.4byte func_80274EA8
+	.4byte func_80274EB0
+	.4byte func_80274EE4
+	.4byte func_80274F34
+	.4byte func_80274F94
+	.4byte func_80274FF4
+	.4byte func_80275028
+	.4byte func_8027505C
+	.4byte func_80275090
+	.4byte func_802750C4
+
+.global cf_ICamControlClassic_hierarchy
+cf_ICamControlClassic_hierarchy:
+	.4byte __RTTI__cf_ICamControl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_ICamControlGc
+__vt__cf_ICamControlGc:
+	.4byte __RTTI__cf_ICamControlGc
+	.4byte 0
+	.4byte func_80274B28
+	.4byte func_80274C20
+	.4byte func_80274C68
+	.4byte func_80274B2C
+	.4byte func_80274BA4
+	.4byte func_80274DD8
+	.4byte func_80274E0C
+	.4byte func_80274E40
+	.4byte func_80274E74
+	.4byte func_80274DA4
+
+.global cf_ICamControlGc_hierarchy
+cf_ICamControlGc_hierarchy:
+	.4byte __RTTI__cf_ICamControl
+	.4byte 0
+	.4byte __RTTI__cf_ICamControlRemote
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_ICamControlRemote
+__vt__cf_ICamControlRemote:
+	.4byte __RTTI__cf_ICamControlRemote
+	.4byte 0
+	.4byte func_80274B28
+	.4byte func_80274C20
+	.4byte func_80274C68
+	.4byte func_80274B2C
+	.4byte func_80274BA4
+	.4byte func_80274CD4
+	.4byte func_80274D08
+	.4byte func_80274D3C
+	.4byte func_80274D70
+	.4byte func_80274DA4
+
+.global cf_ICamControlRemote_hierarchy
+cf_ICamControlRemote_hierarchy:
+	.4byte __RTTI__cf_ICamControl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8053B750
+lbl_8053B750:
+	# ROM: 0x537850
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80275454
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802756F0
+
+
+.global __vt__cf_CfObjectImplTbox
+__vt__cf_CfObjectImplTbox:
+	.4byte __RTTI__cf_CfObjectImplTbox
+	.4byte 0
+	.4byte func_80275968
+	.4byte func_80054A20
+	.4byte func_800CC5DC
+	.4byte func_800CC638
+	.4byte func_800CC964
+	.4byte func_800CD268
+	.4byte func_800CD460
+	.4byte func_800CD5C0
+	.4byte func_800CD5DC
+	.4byte func_800CEB68
+	.4byte func_80087448
+	.4byte func_8008742C
+	.4byte func_8008743C
+	.4byte func_80087424
+	.4byte func_800459FC
+	.4byte func_80087410
+	.4byte func_800873FC
+	.4byte func_800873E8
+	.4byte func_800873D4
+	.4byte func_800873C8
+	.4byte func_800873AC
+	.4byte func_80087390
+	.4byte func_80087378
+	.4byte func_80087364
+	.4byte func_80087334
+	.4byte func_80087348
+	.4byte func_800CE8E4
+	.4byte func_800CEBE0
+	.4byte func_800CE544
+	.4byte func_800CE6A0
+	.4byte func_800CE8AC
+	.4byte func_800CEA34
+	.4byte func_800CAB30
+	.4byte func_800CB454
+	.4byte func_800CB21C
+	.4byte func_800CB9AC
+	.4byte func_800CB94C
+	.4byte func_80087330
+	.4byte func_80275808
+	.4byte func_80275850
+	.4byte func_800C596C
+	.4byte func_80275824
+	.4byte func_800CAB00
+	.4byte __RTTI__cf_CfObjectImplTbox
+	.4byte 0xFFFFFFF4
+	.4byte func_802759B0
+	.4byte func_800CA6CC
+	.4byte __RTTI__cf_CfObjectImplTbox
+	.4byte 0xFFFFFFF0
+	.4byte func_802759C0
+	.4byte func_802759B8
+	.4byte func_800CAB2C
+	.4byte func_800CBBD8
+	.4byte func_800CC01C
+	.4byte func_800CC020
+	.4byte func_802759A8
+	.4byte func_800CEE28
+	.4byte func_8027594C
+
+.global cf_CfObjectImplTbox_hierarchy
+cf_CfObjectImplTbox_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0x00000010
+	.4byte __RTTI__IActParamEvent
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectImpl
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_ICamControlClassic
+__RTTI__cf_ICamControlClassic:
+	.4byte cf_ICamControlClassic_typestr
+	.4byte cf_ICamControlClassic_hierarchy
+
+.global __RTTI__cf_ICamControlGc
+__RTTI__cf_ICamControlGc:
+	.4byte cf_ICamControlGc_typestr
+	.4byte cf_ICamControlGc_hierarchy
+
+.global __RTTI__cf_ICamControlRemote
+__RTTI__cf_ICamControlRemote:
+	.4byte cf_ICamControlRemote_typestr
+	.4byte cf_ICamControlRemote_hierarchy
+
+.global __RTTI__cf_ICamControl
+__RTTI__cf_ICamControl:
+	.4byte cf_ICamControl_typestr
+	.4byte 0
+
+.global __RTTI__cf_CfObjectImplTbox
+__RTTI__cf_CfObjectImplTbox:
+	.4byte cf_CfObjectImplTbox_typestr
+	.4byte cf_CfObjectImplTbox_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B280
+lbl_8066B280:
+	# ROM: 0x5750E0
+	.4byte 0xC0800000
+
+
+.global lbl_8066B284
+lbl_8066B284:
+	# ROM: 0x5750E4
+	.4byte 0x3F666666
+
+
+.global lbl_8066B288
+lbl_8066B288:
+	# ROM: 0x5750E8
+	.4byte 0
+
+
+.global lbl_8066B28C
+lbl_8066B28C:
+	# ROM: 0x5750EC
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066B290
+lbl_8066B290:
+	# ROM: 0x5750F0
+	.float 1.0
+
+
+.global lbl_8066B294
+lbl_8066B294:
+	# ROM: 0x5750F4
+	.4byte 0x41F00000
+
+
+.global lbl_8066B298
+lbl_8066B298:
+	# ROM: 0x5750F8
+	.4byte 0x3A83126F
+
+
+.global lbl_8066B29C
+lbl_8066B29C:
+	# ROM: 0x5750FC
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066B2A0
+lbl_8066B2A0:
+	# ROM: 0x575100
+	.4byte 0x3ECCCCCD
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806671D8
+lbl_806671D8:
+	.skip 0x4
+.global lbl_806671DC
+lbl_806671DC:
+	.skip 0x4
+.global lbl_806671E0
+lbl_806671E0:
+	.skip 0x4
+.global lbl_806671E4
+lbl_806671E4:
+	.skip 0x4
+.global lbl_806671E8
+lbl_806671E8:
+	.skip 0x4
+.global lbl_806671EC
+lbl_806671EC:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80018570
 lbl_80018570:
@@ -709,7 +1009,7 @@ lbl_800185D8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8027513C
 	.4byte 0x000000BC

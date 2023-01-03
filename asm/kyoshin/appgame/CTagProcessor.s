@@ -7154,7 +7154,2373 @@ func_8012BC34:
 
 .4byte sinit_8012BA00
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804FA7F8
+lbl_804FA7F8:
+	# ROM: 0x4F68F8
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0x00000003
+	.4byte 0x00000004
+	.4byte 0x00000005
+	.4byte 0x00000006
+	.4byte 0x00000007
+	.4byte 0x00000008
+	.4byte 0x00000009
+	.4byte 0x0000000A
+	.4byte 0x0000000B
+	.4byte 0x0000000C
+	.4byte 0x0000000D
+	.4byte 0x0000000E
+	.4byte 0x0000000F
+	.4byte 0x00000010
+	.4byte 0x00000011
+	.4byte 0x00000012
+	.4byte 0x00000013
+	.4byte 0x00000014
+	.4byte 0x00000015
+	.4byte 0x00000016
+	.4byte 0x00000017
+	.4byte 0x00000018
+	.4byte 0x00000019
+	.4byte 0x0000001A
+	.4byte 0x0000001B
+	.4byte 0x0000001C
+	.4byte 0x0000001D
+	.4byte 0x0000001E
+	.4byte 0x0000001F
+	.4byte 0x00000020
+	.4byte 0x00000021
+	.4byte 0x00000022
+	.4byte 0x00000023
+	.4byte 0x00000024
+	.4byte 0x00000025
+	.4byte 0x00000026
+	.4byte 0x00000027
+	.4byte 0x00000028
+	.4byte 0x00000029
+	.4byte 0x0000002A
+	.4byte 0x0000002B
+	.4byte 0x0000002C
+	.4byte 0x0000002D
+	.4byte 0x0000002E
+	.4byte 0x0000002F
+	.4byte 0x00000030
+	.4byte 0x00000031
+	.4byte 0x00000032
+	.4byte 0x00000033
+	.4byte 0x00000034
+	.4byte 0x00000035
+	.4byte 0x00000036
+	.4byte 0x00000037
+
+.global lbl_804FA8D4
+lbl_804FA8D4:
+	.4byte 0x00540041
+	.4byte 0x004C004B
+	.4byte 0x00310000
+
+.global lbl_804FA8E0
+lbl_804FA8E0:
+	.4byte 0x00450056
+	.4byte 0x00540031
+	.4byte 0
+
+.global lbl_804FA8EC
+lbl_804FA8EC:
+	.4byte 0x00450056
+	.4byte 0x00540032
+	.4byte 0
+
+.global lbl_804FA8F8
+lbl_804FA8F8:
+	.4byte 0x00450056
+	.4byte 0x00540033
+	.4byte 0
+
+.global lbl_804FA904
+lbl_804FA904:
+	.4byte 0x00450056
+	.4byte 0x00540034
+	.4byte 0
+
+.global lbl_804FA910
+lbl_804FA910:
+	.4byte 0x00450056
+	.4byte 0x00540035
+	.4byte 0
+
+.global lbl_804FA91C
+lbl_804FA91C:
+	.4byte 0x00450056
+	.4byte 0x00540036
+	.4byte 0
+
+.global lbl_804FA928
+lbl_804FA928:
+	.4byte 0x00450056
+	.4byte 0x00540037
+	.4byte 0
+
+.global lbl_804FA934
+lbl_804FA934:
+	.4byte 0x00450056
+	.4byte 0x00540038
+	.4byte 0
+
+.global lbl_804FA940
+lbl_804FA940:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540031
+	.4byte 0
+
+.global lbl_804FA954
+lbl_804FA954:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540032
+	.4byte 0
+
+.global lbl_804FA968
+lbl_804FA968:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540033
+	.4byte 0
+
+.global lbl_804FA97C
+lbl_804FA97C:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540034
+	.4byte 0
+
+.global lbl_804FA990
+lbl_804FA990:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540035
+	.4byte 0
+
+.global lbl_804FA9A4
+lbl_804FA9A4:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540036
+	.4byte 0
+
+.global lbl_804FA9B8
+lbl_804FA9B8:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540037
+	.4byte 0
+
+.global lbl_804FA9CC
+lbl_804FA9CC:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540038
+	.4byte 0
+
+.global lbl_804FA9E0
+lbl_804FA9E0:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540039
+	.4byte 0
+
+.global lbl_804FA9F4
+lbl_804FA9F4:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540031
+	.4byte 0x00300000
+
+.global lbl_804FAA08
+lbl_804FAA08:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540031
+	.4byte 0x00310000
+
+.global lbl_804FAA1C
+lbl_804FAA1C:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540031
+	.4byte 0x00320000
+
+.global lbl_804FAA30
+lbl_804FAA30:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540031
+	.4byte 0x00330000
+
+.global lbl_804FAA44
+lbl_804FAA44:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540031
+	.4byte 0x00340000
+
+.global lbl_804FAA58
+lbl_804FAA58:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540031
+	.4byte 0x00350000
+
+.global lbl_804FAA6C
+lbl_804FAA6C:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540031
+	.4byte 0x00360000
+
+.global lbl_804FAA80
+lbl_804FAA80:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540031
+	.4byte 0x00370000
+
+.global lbl_804FAA94
+lbl_804FAA94:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540031
+	.4byte 0x00380000
+
+.global lbl_804FAAA8
+lbl_804FAAA8:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540031
+	.4byte 0x00390000
+
+.global lbl_804FAABC
+lbl_804FAABC:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540032
+	.4byte 0x00300000
+
+.global lbl_804FAAD0
+lbl_804FAAD0:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540032
+	.4byte 0x00310000
+
+.global lbl_804FAAE4
+lbl_804FAAE4:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540032
+	.4byte 0x00320000
+
+.global lbl_804FAAF8
+lbl_804FAAF8:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540032
+	.4byte 0x00330000
+
+.global lbl_804FAB0C
+lbl_804FAB0C:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540032
+	.4byte 0x00340000
+
+.global lbl_804FAB20
+lbl_804FAB20:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540032
+	.4byte 0x00350000
+
+.global lbl_804FAB34
+lbl_804FAB34:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540032
+	.4byte 0x00360000
+
+.global lbl_804FAB48
+lbl_804FAB48:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540032
+	.4byte 0x00370000
+
+.global lbl_804FAB5C
+lbl_804FAB5C:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540032
+	.4byte 0x00380000
+
+.global lbl_804FAB70
+lbl_804FAB70:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540032
+	.4byte 0x00390000
+
+.global lbl_804FAB84
+lbl_804FAB84:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540033
+	.4byte 0x00300000
+
+.global lbl_804FAB98
+lbl_804FAB98:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540033
+	.4byte 0x00310000
+
+.global lbl_804FABAC
+lbl_804FABAC:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540033
+	.4byte 0x00320000
+
+.global lbl_804FABC0
+lbl_804FABC0:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540033
+	.4byte 0x00330000
+
+.global lbl_804FABD4
+lbl_804FABD4:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540033
+	.4byte 0x00340000
+
+.global lbl_804FABE8
+lbl_804FABE8:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540033
+	.4byte 0x00350000
+
+.global lbl_804FABFC
+lbl_804FABFC:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540033
+	.4byte 0x00360000
+
+.global lbl_804FAC10
+lbl_804FAC10:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540033
+	.4byte 0x00370000
+
+.global lbl_804FAC24
+lbl_804FAC24:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540033
+	.4byte 0x00380000
+
+.global lbl_804FAC38
+lbl_804FAC38:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540033
+	.4byte 0x00390000
+
+.global lbl_804FAC4C
+lbl_804FAC4C:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540034
+	.4byte 0x00300000
+
+.global lbl_804FAC60
+lbl_804FAC60:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540034
+	.4byte 0x00310000
+
+.global lbl_804FAC74
+lbl_804FAC74:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540034
+	.4byte 0x00320000
+
+.global lbl_804FAC88
+lbl_804FAC88:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540034
+	.4byte 0x00330000
+
+.global lbl_804FAC9C
+lbl_804FAC9C:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540034
+	.4byte 0x00340000
+
+.global lbl_804FACB0
+lbl_804FACB0:
+	.4byte 0x00450056
+	.4byte 0x0054005F
+	.4byte 0x00450058
+	.4byte 0x00540034
+	.4byte 0x00350000
+	.4byte 0
+
+
+.global lbl_804FACC8
+lbl_804FACC8:
+	# ROM: 0x4F6DC8
+	.4byte lbl_80669A48
+	.4byte lbl_804FA8D4
+	.4byte lbl_804FA8E0
+	.4byte lbl_804FA8EC
+	.4byte lbl_804FA8F8
+	.4byte lbl_804FA904
+	.4byte lbl_804FA910
+	.4byte lbl_804FA91C
+	.4byte lbl_804FA928
+	.4byte lbl_804FA934
+	.4byte lbl_804FA940
+	.4byte lbl_804FA954
+	.4byte lbl_804FA968
+	.4byte lbl_804FA97C
+	.4byte lbl_804FA990
+	.4byte lbl_804FA9A4
+	.4byte lbl_804FA9B8
+	.4byte lbl_804FA9CC
+	.4byte lbl_804FA9E0
+	.4byte lbl_804FA9F4
+	.4byte lbl_804FAA08
+	.4byte lbl_804FAA1C
+	.4byte lbl_804FAA30
+	.4byte lbl_804FAA44
+	.4byte lbl_804FAA58
+	.4byte lbl_804FAA6C
+	.4byte lbl_804FAA80
+	.4byte lbl_804FAA94
+	.4byte lbl_804FAAA8
+	.4byte lbl_804FAABC
+	.4byte lbl_804FAAD0
+	.4byte lbl_804FAAE4
+	.4byte lbl_804FAAF8
+	.4byte lbl_804FAB0C
+	.4byte lbl_804FAB20
+	.4byte lbl_804FAB34
+	.4byte lbl_804FAB48
+	.4byte lbl_804FAB5C
+	.4byte lbl_804FAB70
+	.4byte lbl_804FAB84
+	.4byte lbl_804FAB98
+	.4byte lbl_804FABAC
+	.4byte lbl_804FABC0
+	.4byte lbl_804FABD4
+	.4byte lbl_804FABE8
+	.4byte lbl_804FABFC
+	.4byte lbl_804FAC10
+	.4byte lbl_804FAC24
+	.4byte lbl_804FAC38
+	.4byte lbl_804FAC4C
+	.4byte lbl_804FAC60
+	.4byte lbl_804FAC74
+	.4byte lbl_804FAC88
+	.4byte lbl_804FAC9C
+	.4byte lbl_804FACB0
+	.4byte 0
+
+.global lbl_804FADA8
+lbl_804FADA8:
+	.4byte 0x00570041
+	.4byte 0x00490054
+	.4byte 0
+
+.global lbl_804FADB4
+lbl_804FADB4:
+	.4byte 0x00520055
+	.4byte 0x00420059
+	.4byte 0
+
+.global lbl_804FADC0
+lbl_804FADC0:
+	.4byte 0x00540052
+	.4byte 0x00550053
+	.4byte 0x00540000
+
+.global lbl_804FADCC
+lbl_804FADCC:
+	.4byte 0x00540059
+	.4byte 0x00500045
+	.4byte 0
+
+.global lbl_804FADD8
+lbl_804FADD8:
+	.4byte 0x004C0049
+	.4byte 0x004E0045
+	.4byte 0
+
+.global lbl_804FADE4
+lbl_804FADE4:
+	.4byte 0x00530045
+	.4byte 0x004C0032
+	.4byte 0
+
+.global lbl_804FADF0
+lbl_804FADF0:
+	.4byte 0x00460041
+	.4byte 0x00440045
+	.4byte 0
+
+.global lbl_804FADFC
+lbl_804FADFC:
+	.4byte 0x00510053
+	.4byte 0x0054005F
+	.4byte 0x00530054
+	.4byte 0x00410052
+	.4byte 0x00540000
+
+.global lbl_804FAE10
+lbl_804FAE10:
+	.4byte 0x00500052
+	.4byte 0x00450053
+	.4byte 0x0045004E
+	.4byte 0x00540000
+
+.global lbl_804FAE20
+lbl_804FAE20:
+	.4byte 0x00540041
+	.4byte 0x0049004C
+	.4byte 0x005F004F
+	.4byte 0x00460046
+	.4byte 0
+	.4byte 0
+
+.global lbl_804FAE38
+lbl_804FAE38:
+	.4byte 0x00430052
+	.4byte 0x00590053
+	.4byte 0x00540041
+	.4byte 0x004C0000
+
+
+.global lbl_804FAE48
+lbl_804FAE48:
+	# ROM: 0x4F6F48
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x0000001F
+	.4byte 0x00000034
+	.4byte 0x00000035
+	.4byte 0x00000036
+	.4byte 0x00000037
+	.4byte 0x00000038
+	.4byte 0x00000039
+	.4byte 0x0000003A
+	.4byte 0
+	.4byte 0x0000003B
+	.4byte 0x0000003C
+	.4byte 0x0000003D
+	.4byte 0x0000003E
+	.4byte 0x0000003F
+	.4byte 0x00000040
+	.4byte 0x00000041
+	.4byte 0x00000042
+	.4byte 0x00000043
+	.4byte 0x00000044
+	.4byte 0x00000045
+	.4byte 0x00000046
+	.4byte 0x00000047
+	.4byte 0x00000048
+	.4byte 0x00000049
+	.4byte 0x0000004A
+	.4byte 0x0000004B
+	.4byte 0x0000004C
+	.4byte 0x0000004D
+	.4byte 0x0000004E
+	.4byte 0x0000004F
+	.4byte 0x00000050
+	.4byte 0x00000051
+	.4byte 0x00000052
+	.4byte 0x00000053
+	.4byte 0x00000054
+	.4byte 0x00000055
+	.4byte 0x00000056
+	.4byte 0x00000057
+	.4byte 0x00000058
+	.4byte 0x00000059
+	.4byte 0x0000005A
+	.4byte 0x0000005B
+	.4byte 0x0000005C
+	.4byte 0x0000005D
+	.4byte 0x0000005E
+	.4byte 0x0000005F
+	.4byte 0x00000060
+	.4byte 0x00000061
+	.4byte 0x00000062
+	.4byte 0x00000063
+	.4byte 0x00000064
+	.4byte 0x00000065
+
+
+.global lbl_804FAF20
+lbl_804FAF20:
+	# ROM: 0x4F7020
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x0000001F
+	.4byte 0x00000034
+	.4byte 0x00000035
+	.4byte 0x00000036
+	.4byte 0x00000037
+	.4byte 0x00000038
+	.4byte 0x00000039
+	.4byte 0x0000003A
+	.4byte 0
+	.4byte 0x0000003B
+	.4byte 0x0000003C
+	.4byte 0x0000003D
+	.4byte 0x0000003E
+	.4byte 0x0000003F
+	.4byte 0x00000040
+	.4byte 0x00000041
+	.4byte 0x00000042
+	.4byte 0x00000043
+	.4byte 0x00000044
+	.4byte 0x00000045
+	.4byte 0x00000046
+	.4byte 0x00000047
+	.4byte 0x00000048
+	.4byte 0x00000049
+	.4byte 0x0000004A
+	.4byte 0x0000004B
+	.4byte 0x0000004C
+	.4byte 0x0000004D
+	.4byte 0x0000004E
+	.4byte 0x0000004F
+	.4byte 0x00000050
+	.4byte 0x00000051
+	.4byte 0x00000052
+	.4byte 0x00000053
+	.4byte 0x00000054
+	.4byte 0x00000055
+	.4byte 0x00000056
+	.4byte 0x00000057
+	.4byte 0x00000058
+	.4byte 0x00000059
+	.4byte 0x0000005A
+	.4byte 0x0000005B
+	.4byte 0x0000005C
+	.4byte 0x0000005D
+	.4byte 0x0000005E
+	.4byte 0x0000005F
+	.4byte 0x00000060
+	.4byte 0x00000061
+	.4byte 0x00000062
+	.4byte 0x00000063
+	.4byte 0x00000064
+	.4byte 0x00000065
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeMakeCrystal"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeShop_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeShop_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeShop"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeExchange_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeExchange_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeExchange"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeTailOff_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeTailOff_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeTailOff"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodePresent_typestr
+_unnamed_CTagProcessor_cpp_CTagCodePresent_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodePresent"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeQstStart_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeQstStart_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeQstStart"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeInvisible_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeInvisible_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeInvisible"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeQuest_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeQuest_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeQuest"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeFade_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeFade_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeFade"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeAct_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeAct_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeAct"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeSelect2_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeSelect2_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeSelect2"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeSelect_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeSelect_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeSelect"
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeLine_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeLine_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeLine"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeMouth_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeMouth_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeMouth"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodePos_typestr
+_unnamed_CTagProcessor_cpp_CTagCodePos_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodePos"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeType_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeType_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeType"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeTrust_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeTrust_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeTrust"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeCol_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeCol_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeCol"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeRuby_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeRuby_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeRuby"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeDel_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeDel_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeDel"
+	.balign 4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeWait_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeWait_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeWait"
+	.balign 4
+	.4byte 0
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeCP_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeCP_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeCP"
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeCL_typestr
+_unnamed_CTagProcessor_cpp_CTagCodeCL_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::CTagCodeCL"
+
+.global _unnamed_CTagProcessor_cpp_ITagCode_typestr
+_unnamed_CTagProcessor_cpp_ITagCode_typestr:
+	.asciz "@unnamed@CTagProcessor_cpp@::ITagCode"
+	.balign 4
+
+.global CTagProcessorSE_typestr
+CTagProcessorSE_typestr:
+	.asciz "CTagProcessorSE"
+
+.global CTagProcessor_typestr
+CTagProcessor_typestr:
+	.asciz "CTagProcessor"
+	.balign 4
+
+.global CTagProcessorBase_typestr
+CTagProcessorBase_typestr:
+	.asciz "CTagProcessorBase"
+	.balign 4
+
+.global nw4r_ut_TagProcessorBase_wchar_t_typestr
+nw4r_ut_TagProcessorBase_wchar_t_typestr:
+	.asciz "nw4r::ut::TagProcessorBase<wchar_t>"
+
+
+.global lbl_804FB488
+lbl_804FB488:
+	.asciz "JNL_trustup"
+	.asciz "trust_up"
+	.asciz "CTagProcessor.cpp"
+	.asciz "NW4R:Failed assertion rubyLen > 0"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80530C48
+lbl_80530C48:
+	# ROM: 0x52CD48
+	.4byte 0
+	.4byte lbl_80669A58
+	.4byte lbl_806668D8
+	.4byte 0x00030000
+	.4byte lbl_80669A5C
+	.4byte lbl_806668DC
+	.4byte 0x00050000
+	.4byte lbl_804FADA8
+	.4byte lbl_806668E0
+	.4byte 0x00040000
+	.4byte lbl_80669A60
+	.4byte lbl_806668E4
+	.4byte 0x00010000
+	.4byte lbl_804FADB4
+	.4byte lbl_806668E8
+	.4byte 0x00020000
+	.4byte lbl_80669A68
+	.4byte lbl_806668EC
+	.4byte 0x00020000
+	.4byte lbl_80669A70
+	.4byte lbl_806668EC
+	.4byte 0x000B0000
+	.4byte lbl_804FADC0
+	.4byte lbl_806668F0
+	.4byte 0
+	.4byte lbl_804FADCC
+	.4byte lbl_806668F4
+	.4byte 0
+	.4byte lbl_80669A78
+	.4byte lbl_806668F8
+	.4byte 0x00090000
+	.4byte lbl_80669A80
+	.4byte lbl_806668FC
+	.4byte 0x000D0000
+	.4byte lbl_804FADD8
+	.4byte lbl_80666900
+	.4byte 0x00060000
+	.4byte lbl_80669A88
+	.4byte lbl_80666904
+	.4byte 0x00070000
+	.4byte lbl_804FADE4
+	.4byte lbl_80666908
+	.4byte 0x00080000
+	.4byte lbl_80669A90
+	.4byte lbl_8066690C
+	.4byte 0
+	.4byte lbl_804FADF0
+	.4byte lbl_80666910
+	.4byte 0
+	.4byte lbl_80669A98
+	.4byte lbl_80666914
+	.4byte 0
+	.4byte lbl_80669AA0
+	.4byte lbl_80666918
+	.4byte 0
+	.4byte lbl_804FADFC
+	.4byte lbl_8066691C
+	.4byte 0
+	.4byte lbl_804FAE10
+	.4byte lbl_80666920
+	.4byte 0
+	.4byte lbl_804FAE20
+	.4byte lbl_80666924
+	.4byte 0
+	.4byte lbl_80669AA8
+	.4byte lbl_80666928
+	.4byte 0
+	.4byte lbl_80669AB0
+	.4byte lbl_8066692C
+	.4byte 0
+	.4byte lbl_804FAE38
+	.4byte lbl_80666930
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	
+.global lbl_80530D74
+lbl_80530D74:
+	.4byte switch_80125FEC
+	.4byte switch_80125E00
+	.4byte switch_80125E78
+	.4byte switch_8012601C
+	.4byte switch_80125E80
+	.4byte switch_80125E88
+	.4byte switch_80125E90
+	.4byte switch_80125E90
+	.4byte switch_80125F9C
+	.4byte switch_80125FA4
+	.4byte switch_80125FEC
+	.4byte switch_80125FAC
+	.4byte switch_80125FEC
+	.4byte switch_80125FB4
+
+
+.global lbl_80530DAC
+lbl_80530DAC:
+	# ROM: 0x52CEAC
+	.4byte switch_80127568
+	.4byte switch_801263F4
+	.4byte switch_801264AC
+	.4byte switch_80126264
+	.4byte switch_801263C4
+	.4byte switch_8012626C
+	.4byte switch_80126828
+	.4byte switch_80126828
+	.4byte switch_80127440
+	.4byte switch_8012675C
+	.4byte switch_80127568
+	.4byte switch_8012650C
+	.4byte switch_80127568
+	.4byte switch_801267E0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal
+__vt___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal
+	.4byte 0
+	.4byte func_80125890
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_801289B4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeShop
+__vt___unnamed_CTagProcessor_cpp_CTagCodeShop:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeShop
+	.4byte 0
+	.4byte func_80125850
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_801289FC
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeShop_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeShop_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeExchange
+__vt___unnamed_CTagProcessor_cpp_CTagCodeExchange:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeExchange
+	.4byte 0
+	.4byte func_80125810
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_80128A70
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeExchange_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeExchange_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeTailOff
+__vt___unnamed_CTagProcessor_cpp_CTagCodeTailOff:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeTailOff
+	.4byte 0
+	.4byte func_801257D0
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_80128AB8
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeTailOff_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeTailOff_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodePresent
+__vt___unnamed_CTagProcessor_cpp_CTagCodePresent:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodePresent
+	.4byte 0
+	.4byte func_80125790
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_80128B0C
+
+.global _unnamed_CTagProcessor_cpp_CTagCodePresent_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodePresent_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeQstStart
+__vt___unnamed_CTagProcessor_cpp_CTagCodeQstStart:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeQstStart
+	.4byte 0
+	.4byte func_80125750
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_80128B80
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeQstStart_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeQstStart_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeInvisible
+__vt___unnamed_CTagProcessor_cpp_CTagCodeInvisible:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeInvisible
+	.4byte 0
+	.4byte func_80125710
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_80128BB0
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeInvisible_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeInvisible_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeQuest
+__vt___unnamed_CTagProcessor_cpp_CTagCodeQuest:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeQuest
+	.4byte 0
+	.4byte func_801256D0
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_80128BF8
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeQuest_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeQuest_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeFade
+__vt___unnamed_CTagProcessor_cpp_CTagCodeFade:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeFade
+	.4byte 0
+	.4byte func_80125690
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_80128C6C
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeFade_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeFade_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeAct
+__vt___unnamed_CTagProcessor_cpp_CTagCodeAct:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeAct
+	.4byte 0
+	.4byte func_80125650
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_80128DA0
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeAct_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeAct_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeSelect2
+__vt___unnamed_CTagProcessor_cpp_CTagCodeSelect2:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect2
+	.4byte 0
+	.4byte func_80125610
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_80128EF8
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeSelect2_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeSelect2_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeSelect
+__vt___unnamed_CTagProcessor_cpp_CTagCodeSelect:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect
+	.4byte 0
+	.4byte func_801255D0
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_80129008
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeSelect_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeSelect_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeLine
+__vt___unnamed_CTagProcessor_cpp_CTagCodeLine:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeLine
+	.4byte 0
+	.4byte func_80125590
+	.4byte func_8012968C
+	.4byte func_80129128
+	.4byte func_80129118
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeLine_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeLine_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeMouth
+__vt___unnamed_CTagProcessor_cpp_CTagCodeMouth:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeMouth
+	.4byte 0
+	.4byte func_80125550
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_8012A1A4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeMouth_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeMouth_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodePos
+__vt___unnamed_CTagProcessor_cpp_CTagCodePos:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodePos
+	.4byte 0
+	.4byte func_80125510
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_8012A224
+
+.global _unnamed_CTagProcessor_cpp_CTagCodePos_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodePos_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeType
+__vt___unnamed_CTagProcessor_cpp_CTagCodeType:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeType
+	.4byte 0
+	.4byte func_801254D0
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_8012A388
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeType_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeType_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeTrust
+__vt___unnamed_CTagProcessor_cpp_CTagCodeTrust:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeTrust
+	.4byte 0
+	.4byte func_80125490
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_8012A460
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeTrust_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeTrust_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+
+.global lbl_8053108C
+lbl_8053108C:
+	.4byte switch_8012AC70
+	.4byte switch_8012AC78
+	.4byte switch_8012AC80
+	.4byte switch_8012AC88
+	.4byte switch_8012AC90
+	.4byte switch_8012AC98
+	.4byte switch_8012ACA0
+	.4byte switch_8012ACA8
+	.4byte switch_8012ACB0
+	.4byte switch_8012ACE4
+	.4byte switch_8012ACE4
+	.4byte switch_8012ACE4
+	.4byte switch_8012ACE4
+	.4byte switch_8012ACE4
+	.4byte switch_8012ACE4
+	.4byte switch_8012ACE4
+	.4byte switch_8012ACB8
+	.4byte switch_8012ACC0
+	.4byte switch_8012ACC8
+	.4byte switch_8012ACD0
+	.4byte switch_8012ACD8
+	.4byte switch_8012ACE0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeCol
+__vt___unnamed_CTagProcessor_cpp_CTagCodeCol:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCol
+	.4byte 0
+	.4byte func_80125450
+	.4byte func_8012AD40
+	.4byte func_8012AD2C
+	.4byte func_8012AAA4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeCol_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeCol_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeRuby
+__vt___unnamed_CTagProcessor_cpp_CTagCodeRuby:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeRuby
+	.4byte 0
+	.4byte func_80125410
+	.4byte func_8012B440
+	.4byte func_8012B070
+	.4byte func_8012AF90
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeRuby_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeRuby_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeDel
+__vt___unnamed_CTagProcessor_cpp_CTagCodeDel:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeDel
+	.4byte 0
+	.4byte func_801253D0
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_8012B8C4
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeDel_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeDel_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeWait
+__vt___unnamed_CTagProcessor_cpp_CTagCodeWait:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeWait
+	.4byte 0
+	.4byte func_80125390
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_8012B944
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeWait_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeWait_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeCP
+__vt___unnamed_CTagProcessor_cpp_CTagCodeCP:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCP
+	.4byte 0
+	.4byte func_80125350
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_8012B9E0
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeCP_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeCP_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___unnamed_CTagProcessor_cpp_CTagCodeCL
+__vt___unnamed_CTagProcessor_cpp_CTagCodeCL:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCL
+	.4byte 0
+	.4byte func_80125310
+	.4byte func_80125B00
+	.4byte func_80125B50
+	.4byte func_8012B9F0
+
+.global _unnamed_CTagProcessor_cpp_CTagCodeCL_hierarchy
+_unnamed_CTagProcessor_cpp_CTagCodeCL_hierarchy:
+	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTagProcessorSE
+__vt__CTagProcessorSE:
+	.4byte __RTTI__CTagProcessorSE
+	.4byte 0
+	.4byte func_80127F64
+	.4byte func_80125AB8
+	.4byte func_80125B08
+	.4byte func_80125B58
+
+.global CTagProcessorSE_hierarchy
+CTagProcessorSE_hierarchy:
+	.4byte __RTTI__nw4r_ut_TagProcessorBase_wchar_t
+	.4byte 0
+	.4byte __RTTI__CTagProcessorBase
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTagProcessor
+__vt__CTagProcessor:
+	.4byte __RTTI__CTagProcessor
+	.4byte 0
+	.4byte func_8012610C
+	.4byte func_80125AB8
+	.4byte func_80125B08
+	.4byte func_80125B58
+
+.global CTagProcessor_hierarchy
+CTagProcessor_hierarchy:
+	.4byte __RTTI__nw4r_ut_TagProcessorBase_wchar_t
+	.4byte 0
+	.4byte __RTTI__CTagProcessorBase
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTagProcessorBase
+__vt__CTagProcessorBase:
+	.4byte __RTTI__CTagProcessorBase
+	.4byte 0
+	.4byte func_80125A68
+	.4byte func_80125AB8
+	.4byte func_80125B08
+	.4byte func_80125B58
+
+.global CTagProcessorBase_hierarchy
+CTagProcessorBase_hierarchy:
+	.4byte __RTTI__nw4r_ut_TagProcessorBase_wchar_t
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8053125C
+lbl_8053125C:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_80531290
+lbl_80531290:
+	.asciz "TextWriterBase.h"
+	.balign 4
+
+
+.global lbl_805312A4
+lbl_805312A4:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_805312D8
+lbl_805312D8:
+	.asciz "TextWriterBase.h"
+	.balign 4
+
+
+.global lbl_805312EC
+lbl_805312EC:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_80531320
+lbl_80531320:
+	.asciz "TextWriterBase.h"
+	.balign 4
+
+
+.global lbl_80531334
+lbl_80531334:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_80531368
+lbl_80531368:
+	.asciz "TextWriterBase.h"
+	.balign 4
+
+
+.global lbl_8053137C
+lbl_8053137C:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_805313B0
+lbl_805313B0:
+	.asciz "TextWriterBase.h"
+	.balign 4
+
+
+.global lbl_805313C4
+lbl_805313C4:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_805313F8
+lbl_805313F8:
+	.asciz "TextWriterBase.h"
+	.balign 4
+
+
+.global lbl_8053140C
+lbl_8053140C:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_80531440
+lbl_80531440:
+	.asciz "TextWriterBase.h"
+	.balign 4
+
+
+.global lbl_80531454
+lbl_80531454:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_80531488
+lbl_80531488:
+	.asciz "CharWriter.h"
+	.balign 4
+
+
+.global lbl_80531498
+lbl_80531498:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_805314CC
+lbl_805314CC:
+	.asciz "CharWriter.h"
+	.balign 4
+
+
+.global lbl_805314DC
+lbl_805314DC:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_80531510
+lbl_80531510:
+	.asciz "CharWriter.h"
+	.balign 4
+
+
+.global lbl_80531520
+lbl_80531520:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_80531554
+lbl_80531554:
+	.asciz "CharWriter.h"
+	.balign 4
+
+
+.global lbl_80531564
+lbl_80531564:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_80531598
+lbl_80531598:
+	.asciz "CharWriter.h"
+	.balign 4
+
+
+.global lbl_805315A8
+lbl_805315A8:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_805315DC
+lbl_805315DC:
+	.asciz "CharWriter.h"
+	.balign 4
+
+
+.global lbl_805315EC
+lbl_805315EC:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_80531620
+lbl_80531620:
+	.asciz "CharWriter.h"
+	.balign 4
+
+
+.global lbl_80531630
+lbl_80531630:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_80531664
+lbl_80531664:
+	.asciz "CharWriter.h"
+	.balign 4
+
+
+.global lbl_80531674
+lbl_80531674:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_805316A8
+lbl_805316A8:
+	.asciz "CharWriter.h"
+	.balign 4
+
+
+.global lbl_805316B8
+lbl_805316B8:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_805316EC
+lbl_805316EC:
+	.asciz "CharWriter.h"
+	.balign 4
+
+
+.global lbl_805316FC
+lbl_805316FC:
+	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
+	.balign 4
+
+
+.global lbl_80531730
+lbl_80531730:
+	.asciz "CharWriter.h"
+	.balign 4
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeShop
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeShop:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeShop_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeShop_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeExchange
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeExchange:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeExchange_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeExchange_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeTailOff
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeTailOff:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTailOff_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTailOff_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodePresent
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodePresent:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodePresent_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodePresent_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeQstStart
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeQstStart:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQstStart_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQstStart_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeInvisible
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeInvisible:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeInvisible_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeInvisible_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeQuest
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeQuest:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQuest_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQuest_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeFade
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeFade:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeFade_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeFade_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeAct
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeAct:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeAct_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeAct_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect2
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect2:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect2_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect2_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeLine
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeLine:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeLine_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeLine_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeMouth
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeMouth:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMouth_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMouth_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodePos
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodePos:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodePos_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodePos_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeType
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeType:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeType_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeType_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeTrust
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeTrust:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTrust_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTrust_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCol
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeCol:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCol_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCol_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeRuby
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeRuby:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeRuby_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeRuby_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeDel
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeDel:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeDel_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeDel_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeWait
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeWait:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeWait_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeWait_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCP
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeCP:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCP_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCP_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCL
+__RTTI___unnamed_CTagProcessor_cpp_CTagCodeCL:
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCL_typestr
+	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCL_hierarchy
+
+.global __RTTI___unnamed_CTagProcessor_cpp_ITagCode
+__RTTI___unnamed_CTagProcessor_cpp_ITagCode:
+	.4byte _unnamed_CTagProcessor_cpp_ITagCode_typestr
+	.4byte 0
+
+.global __RTTI__CTagProcessorSE
+__RTTI__CTagProcessorSE:
+	.4byte CTagProcessorSE_typestr
+	.4byte CTagProcessorSE_hierarchy
+
+.global __RTTI__CTagProcessor
+__RTTI__CTagProcessor:
+	.4byte CTagProcessor_typestr
+	.4byte CTagProcessor_hierarchy
+
+.global __RTTI__CTagProcessorBase
+__RTTI__CTagProcessorBase:
+	.4byte CTagProcessorBase_typestr
+	.4byte CTagProcessorBase_hierarchy
+
+.global __RTTI__nw4r_ut_TagProcessorBase_wchar_t
+__RTTI__nw4r_ut_TagProcessorBase_wchar_t:
+	.4byte nw4r_ut_TagProcessorBase_wchar_t_typestr
+	.4byte 0
+
+
+.global lbl_806648C0
+lbl_806648C0:
+	# ROM: 0x5704A0
+	.2byte 0x004F #O
+	.2byte 0x0055 #U
+	.2byte 0x0054 #T
+	.2byte 0x0000
+	.2byte 0x004F #O
+	.2byte 0x0055 #U
+	.2byte 0x0054 #T
+	.2byte 0x0049 #I
+	.2byte 0x004E #N
+	.2byte 0x0000
+	.2byte 0x0049 #I
+	.2byte 0x004E #N
+	.2byte 0x0000
+	.2byte 0x2500
+	.2byte 0x2500
+	.2byte 0x0000
+	.2byte 0x2500
+	.2byte 0x0000
+	.2byte 0x004F #O
+	.2byte 0x004E #N
+	.2byte 0x0000
+	.2byte 0x004F #O
+	.2byte 0x0046 #F
+	.2byte 0x0046 #F
+	.2byte 0x0000
+	.2byte 0x0054 #T
+	.2byte 0x004C #L
+	.2byte 0x0045 #E
+	.2byte 0x0046 #F
+	.2byte 0x0054 #T
+	.2byte 0x0000
+	.2byte 0x0054 #T
+	.2byte 0x0043 #C
+	.2byte 0x0045 #E
+	.2byte 0x004E #N
+	.2byte 0x0054 #T
+	.2byte 0x0045 #E
+	.2byte 0x0052 #R
+	.2byte 0x0000
+	.2byte 0x0054 #T
+	.2byte 0x0052 #R
+	.2byte 0x0049 #I
+	.2byte 0x0047 #G
+	.2byte 0x0048 #H
+	.2byte 0x0054 #T
+	.2byte 0x0000
+	.2byte 0x0043 #C
+	.2byte 0x004C #L
+	.2byte 0x0045 #E
+	.2byte 0x0046 #F
+	.2byte 0x0054 #T
+	.2byte 0x0000
+	.2byte 0x0043 #C
+	.2byte 0x0043 #C
+	.2byte 0x0045 #E
+	.2byte 0x004E #N
+	.2byte 0x0054 #T
+	.2byte 0x0045 #E
+	.2byte 0x0052 #R
+	.2byte 0x0000
+	.2byte 0x0043
+	.2byte 0x0052
+	.2byte 0x0049
+	.2byte 0x0047
+	.2byte 0x0048
+	.2byte 0x0054
+	.2byte 0x0000
+	.2byte 0x0042
+	.2byte 0x004C
+	.2byte 0x0045
+	.2byte 0x0046
+	.2byte 0x0054
+	.2byte 0x0000
+	.2byte 0x0042
+	.2byte 0x0043
+	.2byte 0x0045
+	.2byte 0x004E
+	.2byte 0x0054
+	.2byte 0x0045
+	.2byte 0x0052
+	.2byte 0x0000
+	.2byte 0x0042
+	.2byte 0x0052
+	.2byte 0x0049
+	.2byte 0x0047
+	.2byte 0x0048
+	.2byte 0x0054
+	.2byte 0x0000
+	.2byte 0x0044
+	.2byte 0x0045
+	.2byte 0x0046
+	.2byte 0x0000
+	.2byte 0x0041
+	.2byte 0x004E
+	.2byte 0x0047
+	.2byte 0x0045
+	.2byte 0x0052
+	.2byte 0x0000
+	.2byte 0x0053
+	.2byte 0x0041
+	.2byte 0x0044
+	.2byte 0x0000
+	.2byte 0x0054
+	.2byte 0x0048
+	.2byte 0x0049
+	.2byte 0x004E
+	.2byte 0x004B
+	.2byte 0x0000
+	.2byte 0x0050
+	.2byte 0x0000
+	.2byte 0x0046
+	.2byte 0x0000
+	.2byte 0x0041
+	.2byte 0x0000
+	.2byte 0x0042
+	.2byte 0x0000
+	.2byte 0x0043
+	.2byte 0x0000
+	.2byte 0x0044
+	.2byte 0x0000
+	.2byte 0x0045
+	.2byte 0x0000
+	.2byte 0x0047
+	.2byte 0x0000
+	.2byte 0x0048
+	.2byte 0x0000
+	.2byte 0x0049
+	.2byte 0x0000
+	.2byte 0x004A
+	.2byte 0x0000
+	.2byte 0x004B
+	.2byte 0x0000
+	.2byte 0x004C
+	.2byte 0x0000
+	.2byte 0x004D
+	.2byte 0x0000
+	.2byte 0x004E
+	.2byte 0x0000
+	.2byte 0x004F
+	.2byte 0x0000
+	.2byte 0x0051
+	.2byte 0x0000
+	.2byte 0x0052
+	.2byte 0x0000
+	.2byte 0x0053
+	.2byte 0x0000
+	.2byte 0x0054
+	.2byte 0x0000
+	.2byte 0x0055
+	.2byte 0x0000
+	.2byte 0x0056
+	.2byte 0x0000
+	.2byte 0x0057
+	.2byte 0x0000
+	.2byte 0x0058
+	.2byte 0x0000
+	.2byte 0x0059
+	.2byte 0x0000
+	.2byte 0x005A
+	.2byte 0x0000
+	.2byte 0x0044
+	.2byte 0x0045
+	.2byte 0x0046
+	.2byte 0x0032
+	.2byte 0x0000
+	.2byte 0x0044
+	.2byte 0x0032
+	.2byte 0x0000
+	.2byte 0x0044
+	.2byte 0x0045
+	.2byte 0x0046
+	.2byte 0x0033
+	.2byte 0x0000
+	.2byte 0x0044 #D
+	.2byte 0x0033 #3
+	.2byte 0x0000
+	.2byte 0x0052 #R
+	.2byte 0x0045 #E
+	.2byte 0x0044 #D
+	.2byte 0x0000
+	.2byte 0x0049 #I
+	.2byte 0x0054 #T
+	.2byte 0x0045 #E
+	.2byte 0x004D #M
+	.2byte 0x0000
+	.2byte 0x0053 #S
+	.2byte 0x0031 #1
+	.2byte 0x0000
+	.2byte 0x0053 #S
+	.2byte 0x0032 #2
+	.2byte 0x0000
+	.2byte 0x0041 #A
+	.2byte 0x004C #L
+	.2byte 0x004C #L
+	.2byte 0x0000
+	.2byte 0x0054 #T
+	.2byte 0x0048 #H
+	.2byte 0x0049 #I
+	.2byte 0x0053 #S
+	.2byte 0x0000
+	.2byte 0x004B #K
+	.2byte 0x0045 #E
+	.2byte 0x0059 #Y
+	.2byte 0x0000
+	.2byte 0x0056 #V
+	.2byte 0x004F #O
+	.2byte 0x0049 #I
+	.2byte 0x0043 #C
+	.2byte 0x0045 #E
+	.2byte 0x0000
+	.2byte 0
+	.2byte 0
+
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669A48
+lbl_80669A48:
+	.4byte 0x00440045
+	.4byte 0x00460000
+
+
+.global lbl_80669A50
+lbl_80669A50:
+	# ROM: 0x5738B0
+	.4byte 0x00FF00FF
+
+
+.global lbl_80669A54
+lbl_80669A54:
+	# ROM: 0x5738B4
+	.4byte 0x00FF0000
+
+.global lbl_80669A58
+lbl_80669A58:
+	.4byte 0x004E0000
+
+.global lbl_80669A5C
+lbl_80669A5C:
+	.4byte 0x00500000
+
+.global lbl_80669A60
+lbl_80669A60:
+	.4byte 0x00440045
+	.4byte 0x004C0000
+
+.global lbl_80669A68
+lbl_80669A68:
+	.4byte 0x0043004F
+	.4byte 0x004C0000
+
+.global lbl_80669A70
+lbl_80669A70:
+	.4byte 0x00430000
+	.4byte 0
+
+.global lbl_80669A78
+lbl_80669A78:
+	.4byte 0x0050004F
+	.4byte 0x00530000
+
+.global lbl_80669A80
+lbl_80669A80:
+	.4byte 0x004A0041
+	.4byte 0x00570000
+
+.global lbl_80669A88
+lbl_80669A88:
+	.4byte 0x00530045
+	.4byte 0x004C0000
+
+.global lbl_80669A90
+lbl_80669A90:
+	.4byte 0x00410043
+	.4byte 0x00540000
+
+.global lbl_80669A98
+lbl_80669A98:
+	.4byte 0x00510053
+	.4byte 0x00540000
+
+.global lbl_80669AA0
+lbl_80669AA0:
+	.4byte 0x0049004E
+	.4byte 0x00560000
+
+.global lbl_80669AA8
+lbl_80669AA8:
+	.4byte 0x00450058
+	.4byte 0
+
+.global lbl_80669AB0
+lbl_80669AB0:
+	.4byte 0x00530048
+	.4byte 0x00500000
+
+
+.global lbl_80669AB8
+lbl_80669AB8:
+	# ROM: 0x573918
+	.4byte 0
+
+
+.global lbl_80669ABC
+lbl_80669ABC:
+	# ROM: 0x57391C
+	.float 1.0
+
+
+.global lbl_80669AC0
+lbl_80669AC0:
+	# ROM: 0x573920
+	.4byte 0x40000000
+	.4byte 0
+
+
+.global lbl_80669AC8
+lbl_80669AC8:
+	# ROM: 0x573928
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80669AD0
+lbl_80669AD0:
+	# ROM: 0x573930
+	.4byte 0x40400000
+
+
+.global lbl_80669AD4
+lbl_80669AD4:
+	# ROM: 0x573934
+	.4byte 0x41800000
+
+
+.global lbl_80669AD8
+lbl_80669AD8:
+	# ROM: 0x573938
+	.4byte 0x42E00000
+
+
+.global lbl_80669ADC
+lbl_80669ADC:
+	# ROM: 0x57393C
+	.4byte 0x42300000
+
+
+.global lbl_80669AE0
+lbl_80669AE0:
+	# ROM: 0x573940
+	.4byte 0x43200000
+
+
+.global lbl_80669AE4
+lbl_80669AE4:
+	# ROM: 0x573944
+	.4byte 0x43DC0000
+
+
+.global lbl_80669AE8
+lbl_80669AE8:
+	# ROM: 0x573948
+	.4byte 0x43D80000
+
+
+.global lbl_80669AEC
+lbl_80669AEC:
+	# ROM: 0x57394C
+	.4byte 0x40C00000
+
+
+.global lbl_80669AF0
+lbl_80669AF0:
+	# ROM: 0x573950
+	.float 0.5
+
+
+.global lbl_80669AF4
+lbl_80669AF4:
+	# ROM: 0x573954
+	.4byte 0x42380000
+
+
+.global lbl_80669AF8
+lbl_80669AF8:
+	# ROM: 0x573958
+	.4byte 0x428C0000
+
+
+.global lbl_80669AFC
+lbl_80669AFC:
+	# ROM: 0x57395C
+	.4byte 0x41A00000
+
+
+.global lbl_80669B00
+lbl_80669B00:
+	# ROM: 0x573960
+	.4byte 0x42800000
+
+
+.global lbl_80669B04
+lbl_80669B04:
+	# ROM: 0x573964
+	.4byte 0x432A0000
+
+
+.global lbl_80669B08
+lbl_80669B08:
+	# ROM: 0x573968
+	.4byte 0x43160000
+
+
+.global lbl_80669B0C
+lbl_80669B0C:
+	# ROM: 0x57396C
+	.4byte 0x43020000
+
+
+.global lbl_80669B10
+lbl_80669B10:
+	# ROM: 0x573970
+	.4byte 0x42DC0000
+
+
+.global lbl_80669B14
+lbl_80669B14:
+	# ROM: 0x573974
+	.4byte 0x42B40000
+
+
+.global lbl_80669B18
+lbl_80669B18:
+	# ROM: 0x573978
+	.float 10.0
+
+
+.global lbl_80669B1C
+lbl_80669B1C:
+	# ROM: 0x57397C
+	.4byte 0x41700000
+
+
+.global lbl_80669B20
+lbl_80669B20:
+	# ROM: 0x573980
+	.4byte 0xC3410000
+
+
+.global lbl_80669B24
+lbl_80669B24:
+	# ROM: 0x573984
+	.float -1.0
+
+
+.global lbl_80669B28
+lbl_80669B28:
+	# ROM: 0x573988
+	.4byte 0x7F7FFFFF
+
+
+.global lbl_80669B2C
+lbl_80669B2C:
+	# ROM: 0x57398C
+	.4byte 0x3F19999A
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806668D8
+lbl_806668D8:
+	.skip 0x4
+.global lbl_806668DC
+lbl_806668DC:
+	.skip 0x4
+.global lbl_806668E0
+lbl_806668E0:
+	.skip 0x4
+.global lbl_806668E4
+lbl_806668E4:
+	.skip 0x4
+.global lbl_806668E8
+lbl_806668E8:
+	.skip 0x4
+.global lbl_806668EC
+lbl_806668EC:
+	.skip 0x4
+.global lbl_806668F0
+lbl_806668F0:
+	.skip 0x4
+.global lbl_806668F4
+lbl_806668F4:
+	.skip 0x4
+.global lbl_806668F8
+lbl_806668F8:
+	.skip 0x4
+.global lbl_806668FC
+lbl_806668FC:
+	.skip 0x4
+.global lbl_80666900
+lbl_80666900:
+	.skip 0x4
+.global lbl_80666904
+lbl_80666904:
+	.skip 0x4
+.global lbl_80666908
+lbl_80666908:
+	.skip 0x4
+.global lbl_8066690C
+lbl_8066690C:
+	.skip 0x4
+.global lbl_80666910
+lbl_80666910:
+	.skip 0x4
+.global lbl_80666914
+lbl_80666914:
+	.skip 0x4
+.global lbl_80666918
+lbl_80666918:
+	.skip 0x4
+.global lbl_8066691C
+lbl_8066691C:
+	.skip 0x4
+.global lbl_80666920
+lbl_80666920:
+	.skip 0x4
+.global lbl_80666924
+lbl_80666924:
+	.skip 0x4
+.global lbl_80666928
+lbl_80666928:
+	.skip 0x4
+.global lbl_8066692C
+lbl_8066692C:
+	.skip 0x4
+.global lbl_80666930
+lbl_80666930:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000BFF8
 lbl_8000BFF8:
@@ -7468,7 +9834,7 @@ lbl_8000C214:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_801259AC
 	.4byte 0x00000080

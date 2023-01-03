@@ -2134,3 +2134,61 @@ lbl_80520E18:
 	.4byte GetAnmResult_ST__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
 	.4byte GetAnmResult_RT__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
 	.4byte GetAnmResult_SRT__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C2E0
+lbl_8066C2E0:
+	# ROM: 0x576140
+	.4byte 0
+
+
+.global lbl_8066C2E4
+lbl_8066C2E4:
+	# ROM: 0x576144
+	.float 1.0
+
+
+.global lbl_8066C2E8
+lbl_8066C2E8:
+	# ROM: 0x576148
+	.4byte 0x40000000
+
+
+.global lbl_8066C2EC
+lbl_8066C2EC:
+	# ROM: 0x57614C
+	.4byte 0x40400000
+
+
+.global lbl_8066C2F0
+lbl_8066C2F0:
+	# ROM: 0x576150
+	.4byte 0x3F360B61
+	.4byte 0
+
+
+.global lbl_8066C2F8
+lbl_8066C2F8:
+	# ROM: 0x576158
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066C300
+lbl_8066C300:
+	# ROM: 0x576160
+	.4byte 0x3FB40000
+
+
+.global lbl_8066C304
+lbl_8066C304:
+	# ROM: 0x576164
+	.4byte 0x42B40000
+
+
+.global lbl_8066C308
+lbl_8066C308:
+	# ROM: 0x576168
+	.4byte 0xC2B40000
+	.4byte 0

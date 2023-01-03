@@ -2319,3 +2319,28 @@ lbl_8056D038:
 	.4byte RemoveAnmObj__Q34nw4r3g3d12ScnMdlSimpleFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 	.4byte GetAnmObj__Q34nw4r3g3d12ScnMdlSimpleFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 	.4byte GetAnmObj__Q34nw4r3g3d12ScnMdlSimpleCFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665DC0
+lbl_80665DC0:
+	.asciz "NodeMix"
+
+
+.global lbl_80665DC8
+lbl_80665DC8:
+	.asciz "DrawOpa"
+
+
+.global lbl_80665DD0
+lbl_80665DD0:
+	.asciz "DrawXlu"
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C4E8
+lbl_8066C4E8:
+	# ROM: 0x576348
+	.float 1.0
+	.4byte 0

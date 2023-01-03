@@ -1265,3 +1265,52 @@ lbl_8056D1D0:
 	.4byte GetMaterial__Q34nw4r3lyt4PaneCFUl
 	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066C538
+lbl_8066C538:
+	# ROM: 0x576398
+	.4byte 0
+
+
+.global lbl_8066C53C
+lbl_8066C53C:
+	# ROM: 0x57639C
+	.float 1.0
+
+
+.global lbl_8066C540
+lbl_8066C540:
+	# ROM: 0x5763A0
+	.4byte 0x3C8EFA35
+
+
+.global lbl_8066C544
+lbl_8066C544:
+	# ROM: 0x5763A4
+	.4byte 0x3B808081
+
+
+.global lbl_8066C548
+lbl_8066C548:
+	# ROM: 0x5763A8
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066C550
+lbl_8066C550:
+	# ROM: 0x5763B0
+	.float 0.5
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667D50
+lbl_80667D50:
+	.skip 0x8
+.global lbl_80667D58
+lbl_80667D58:
+	.skip 0x8

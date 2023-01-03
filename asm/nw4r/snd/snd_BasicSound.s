@@ -1642,3 +1642,29 @@ sinit_80413B08:
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
 .4byte sinit_80413B08
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C6E8
+lbl_8066C6E8:
+	# ROM: 0x576548
+	.float 1.0
+
+
+.global lbl_8066C6EC
+lbl_8066C6EC:
+	# ROM: 0x57654C
+	.4byte 0
+
+
+.global lbl_8066C6F0
+lbl_8066C6F0:
+	# ROM: 0x576550
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667DB0
+lbl_80667DB0:
+	.skip 0x8

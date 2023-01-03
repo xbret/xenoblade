@@ -300,3 +300,9 @@ lbl_8051CDF0:
 	.4byte 0x43770000
 	.4byte 0x401306EB
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80601380
+lbl_80601380:
+	.skip 0x1408

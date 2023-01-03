@@ -104,3 +104,9 @@ adxf_build:
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E3428
+lbl_805E3428:
+	.skip 0x8

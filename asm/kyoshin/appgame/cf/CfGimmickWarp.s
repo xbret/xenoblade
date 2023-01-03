@@ -1940,7 +1940,157 @@ func_8020EE18:
 /* 8020EF00 001D84C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8020EF04 001D84C4  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfGimmickWarp_typestr
+cf_CfGimmickWarp_typestr:
+	.asciz "cf::CfGimmickWarp"
+	.balign 4
+
+
+.global lbl_80503E2C
+lbl_80503E2C:
+	.asciz "warpEF"
+	.asciz "warpSE"
+	.asciz "A_roty"
+	.asciz "B_roty"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805390F0
+lbl_805390F0:
+	# ROM: 0x5351F0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020D824
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020D998
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020DF04
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020E27C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020E3F0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020E6C0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020E704
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020EA2C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020ED2C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020EE18
+
+
+.global __vt__cf_CfGimmickWarp
+__vt__cf_CfGimmickWarp:
+	.4byte __RTTI__cf_CfGimmickWarp
+	.4byte 0
+	.4byte func_8020D680
+	.4byte func_8020D7BC
+	.4byte func_8020D6FC
+	.4byte func_801F4B64
+	.4byte func_801F4BF8
+	.4byte func_801F4C8C
+	.4byte func_8020D7DC
+
+.global cf_CfGimmickWarp_hierarchy
+cf_CfGimmickWarp_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0
+	.4byte __RTTI__cf_CfGimmick
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CfGimmickWarp
+__RTTI__cf_CfGimmickWarp:
+	.4byte cf_CfGimmickWarp_typestr
+	.4byte cf_CfGimmickWarp_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AC88
+lbl_8066AC88:
+	# ROM: 0x574AE8
+	.4byte 0
+
+
+.global lbl_8066AC8C
+lbl_8066AC8C:
+	# ROM: 0x574AEC
+	.4byte 0x40A00000
+
+
+.global lbl_8066AC90
+lbl_8066AC90:
+	# ROM: 0x574AF0
+	.float 10.0
+
+
+.global lbl_8066AC94
+lbl_8066AC94:
+	# ROM: 0x574AF4
+	.4byte 0x41F00000
+
+
+.global lbl_8066AC98
+lbl_8066AC98:
+	# ROM: 0x574AF8
+	.4byte 0x42F00000
+
+
+.global lbl_8066AC9C
+lbl_8066AC9C:
+	# ROM: 0x574AFC
+	.4byte 0x40000000
+
+
+.global lbl_8066ACA0
+lbl_8066ACA0:
+	# ROM: 0x574B00
+	.4byte 0xC0800000
+
+
+.global lbl_8066ACA4
+lbl_8066ACA4:
+	# ROM: 0x574B04
+	.4byte 0x41A00000
+
+
+.global lbl_8066ACA8
+lbl_8066ACA8:
+	# ROM: 0x574B08
+	.float 1.0
+	.4byte 0
+
+
+.global lbl_8066ACB0
+lbl_8066ACB0:
+	# ROM: 0x574B10
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066ACB8
+lbl_8066ACB8:
+	# ROM: 0x574B18
+	.4byte 0x420C0000
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001318C
 lbl_8001318C:
@@ -2023,7 +2173,7 @@ lbl_8001321C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8020D3A0
 	.4byte 0x000002E0

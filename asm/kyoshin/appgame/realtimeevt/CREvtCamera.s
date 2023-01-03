@@ -745,7 +745,118 @@ func_801809B0:
 /* 801809B0 00149F70  80 63 00 1C */	lwz r3, 0x1c(r3)
 /* 801809B4 00149F74  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CREvtCamera_typestr
+cf_CREvtCamera_typestr:
+	.asciz "cf::CREvtCamera"
+
+
+.global lbl_804FEF08
+lbl_804FEF08:
+	.asciz "CAM"
+	.asciz "Monochrome"
+	.asciz "MonoRGB"
+	.asciz "envLGT"
+	.asciz "HideMPF"
+	.asciz "Time"
+	.asciz "HideLOD"
+	.asciz "ShowLOD"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CREvtCamera
+__vt__cf_CREvtCamera:
+	.4byte __RTTI__cf_CREvtCamera
+	.4byte 0
+	.4byte func_80180088
+	.4byte func_80180414
+	.4byte func_80180620
+	.4byte func_801809B0
+	.4byte func_80169048
+	.4byte func_801809A8
+	.4byte func_801696C4
+	.4byte func_801804CC
+
+.global cf_CREvtCamera_hierarchy
+cf_CREvtCamera_hierarchy:
+	.4byte __RTTI__cf_CREvtObj
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80664D40
+lbl_80664D40:
+	# ROM: 0x570920
+	.4byte lbl_8066A158
+
+
+.global lbl_80664D44
+lbl_80664D44:
+	# ROM: 0x570924
+	.4byte lbl_8066A160
+
+.global __RTTI__cf_CREvtCamera
+__RTTI__cf_CREvtCamera:
+	.4byte cf_CREvtCamera_typestr
+	.4byte cf_CREvtCamera_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A158
+lbl_8066A158:
+	.asciz "camAtr"
+	.balign 4
+
+.global lbl_8066A160
+lbl_8066A160:
+	.4byte 0x63616D00
+
+
+.global lbl_8066A164
+lbl_8066A164:
+	# ROM: 0x573FC4
+	.4byte 0x41F00000
+
+
+.global lbl_8066A168
+lbl_8066A168:
+	# ROM: 0x573FC8
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066A16C
+lbl_8066A16C:
+	# ROM: 0x573FCC
+	.4byte 0x47A60400
+
+
+.global lbl_8066A170
+lbl_8066A170:
+	# ROM: 0x573FD0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066A178
+lbl_8066A178:
+	# ROM: 0x573FD8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666B98
+lbl_80666B98:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000E600
 lbl_8000E600:
@@ -798,7 +909,7 @@ lbl_8000E660:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8017FF78
 	.4byte 0x00000110

@@ -1984,3 +1984,71 @@ lbl_8056E068:
 	.4byte 0
 	.4byte func_8040DD80
 	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C678
+lbl_8066C678:
+	# ROM: 0x5764D8
+	.4byte 0
+
+
+.global lbl_8066C67C
+lbl_8066C67C:
+	# ROM: 0x5764DC
+	.float 1.0
+
+
+.global lbl_8066C680
+lbl_8066C680:
+	# ROM: 0x5764E0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066C688
+lbl_8066C688:
+	# ROM: 0x5764E8
+	.4byte 0x47000000
+
+
+.global lbl_8066C68C
+lbl_8066C68C:
+	# ROM: 0x5764EC
+	.4byte 0x46FA0000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8063AD20
+lbl_8063AD20:
+	.skip 0x100
+.global lbl_8063AE20
+lbl_8063AE20:
+	.skip 0x23C
+.global lbl_8063B05C
+lbl_8063B05C:
+	.skip 0xC
+.global lbl_8063B068
+lbl_8063B068:
+	.skip 0x100
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667D88
+lbl_80667D88:
+	.skip 0x4
+.global lbl_80667D8C
+lbl_80667D8C:
+	.skip 0x4
+.global lbl_80667D90
+lbl_80667D90:
+	.skip 0x4
+.global lbl_80667D94
+lbl_80667D94:
+	.skip 0x4
+.global lbl_80667D98
+lbl_80667D98:
+	.skip 0x4
+.global lbl_80667D9C
+lbl_80667D9C:
+	.skip 0x4

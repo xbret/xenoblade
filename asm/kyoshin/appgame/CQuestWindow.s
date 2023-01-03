@@ -2591,7 +2591,720 @@ func_801245E4:
 /* 801245E4 000EDBA4  38 63 FF 90 */	addi r3, r3, -112
 /* 801245E8 000EDBA8  4B FF DD C8 */	b func_801223B0
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804FA048
+lbl_804FA048:
+	.asciz "/menu/QstWin.arc"
+	.balign 4
+
+.global lbl_804FA05C
+lbl_804FA05C:
+	.asciz "/common/jp/bdat_qs0000.bin"
+	.balign 4
+
+.global lbl_804FA078
+lbl_804FA078:
+	.asciz "/common/jp/bdat_qs0101.bin"
+	.balign 4
+
+.global lbl_804FA094
+lbl_804FA094:
+	.asciz "/common/jp/bdat_qs0201.bin"
+	.balign 4
+
+.global lbl_804FA0B0
+lbl_804FA0B0:
+	.asciz "/common/jp/bdat_qs0301.bin"
+	.balign 4
+
+.global lbl_804FA0CC
+lbl_804FA0CC:
+	.asciz "/common/jp/bdat_qs0401.bin"
+	.balign 4
+
+.global lbl_804FA0E8
+lbl_804FA0E8:
+	.asciz "/common/jp/bdat_qs0402.bin"
+	.balign 4
+
+.global lbl_804FA104
+lbl_804FA104:
+	.asciz "/common/jp/bdat_qs0501.bin"
+	.balign 4
+
+.global lbl_804FA120
+lbl_804FA120:
+	.asciz "/common/jp/bdat_qs0601.bin"
+	.balign 4
+
+.global lbl_804FA13C
+lbl_804FA13C:
+	.asciz "/common/jp/bdat_qs0701.bin"
+	.balign 4
+
+.global lbl_804FA158
+lbl_804FA158:
+	.asciz "/common/jp/bdat_qs0801.bin"
+	.balign 4
+
+.global lbl_804FA174
+lbl_804FA174:
+	.asciz "/common/jp/bdat_qs0901.bin"
+	.balign 4
+
+.global lbl_804FA190
+lbl_804FA190:
+	.asciz "/common/jp/bdat_qs1001.bin"
+	.balign 4
+
+.global lbl_804FA1AC
+lbl_804FA1AC:
+	.asciz "/common/jp/bdat_qs1101.bin"
+	.balign 4
+
+.global lbl_804FA1C8
+lbl_804FA1C8:
+	.asciz "/common/jp/bdat_qs1201.bin"
+	.balign 4
+
+.global lbl_804FA1E4
+lbl_804FA1E4:
+	.asciz "/common/jp/bdat_qs1202.bin"
+	.balign 4
+
+.global lbl_804FA200
+lbl_804FA200:
+	.asciz "/common/jp/bdat_qs1301.bin"
+	.balign 4
+
+.global lbl_804FA21C
+lbl_804FA21C:
+	.asciz "/common/jp/bdat_qs1401.bin"
+	.balign 4
+
+.global lbl_804FA238
+lbl_804FA238:
+	.asciz "/common/jp/bdat_qs1501.bin"
+	.balign 4
+
+.global lbl_804FA254
+lbl_804FA254:
+	.asciz "/common/jp/bdat_qs1601.bin"
+	.balign 4
+
+.global lbl_804FA270
+lbl_804FA270:
+	.asciz "/common/jp/bdat_qs1701.bin"
+	.balign 4
+
+.global lbl_804FA28C
+lbl_804FA28C:
+	.asciz "/common/jp/bdat_qs1801.bin"
+	.balign 4
+
+.global lbl_804FA2A8
+lbl_804FA2A8:
+	.asciz "/common/jp/bdat_qs1901.bin"
+	.balign 4
+
+.global lbl_804FA2C4
+lbl_804FA2C4:
+	.asciz "/common/jp/bdat_qs2001.bin"
+	.balign 4
+
+.global lbl_804FA2E0
+lbl_804FA2E0:
+	.asciz "/common/jp/bdat_qs2101.bin"
+	.balign 4
+
+.global lbl_804FA2FC
+lbl_804FA2FC:
+	.asciz "/common/jp/bdat_qs2201.bin"
+	.balign 4
+
+.global lbl_804FA318
+lbl_804FA318:
+	.asciz "/common/jp/bdat_qs2301.bin"
+	.balign 4
+
+.global lbl_804FA334
+lbl_804FA334:
+	.asciz "/common/jp/bdat_qs2401.bin"
+	.balign 4
+
+.global lbl_804FA350
+lbl_804FA350:
+	.asciz "MNU_qt0000"
+	.balign 4
+
+.global lbl_804FA35C
+lbl_804FA35C:
+	.asciz "MNU_qt0101"
+	.balign 4
+
+.global lbl_804FA368
+lbl_804FA368:
+	.asciz "MNU_qt0201"
+	.balign 4
+
+.global lbl_804FA374
+lbl_804FA374:
+	.asciz "MNU_qt0301"
+	.balign 4
+
+.global lbl_804FA380
+lbl_804FA380:
+	.asciz "MNU_qt0401"
+	.balign 4
+
+.global lbl_804FA38C
+lbl_804FA38C:
+	.asciz "MNU_qt0402"
+	.balign 4
+
+.global lbl_804FA398
+lbl_804FA398:
+	.asciz "MNU_qt0501"
+	.balign 4
+
+.global lbl_804FA3A4
+lbl_804FA3A4:
+	.asciz "MNU_qt0601"
+	.balign 4
+
+.global lbl_804FA3B0
+lbl_804FA3B0:
+	.asciz "MNU_qt0701"
+	.balign 4
+
+.global lbl_804FA3BC
+lbl_804FA3BC:
+	.asciz "MNU_qt0801"
+	.balign 4
+
+.global lbl_804FA3C8
+lbl_804FA3C8:
+	.asciz "MNU_qt0901"
+	.balign 4
+
+.global lbl_804FA3D4
+lbl_804FA3D4:
+	.asciz "MNU_qt1001"
+	.balign 4
+
+.global lbl_804FA3E0
+lbl_804FA3E0:
+	.asciz "MNU_qt1101"
+	.balign 4
+
+.global lbl_804FA3EC
+lbl_804FA3EC:
+	.asciz "MNU_qt1201"
+	.balign 4
+
+.global lbl_804FA3F8
+lbl_804FA3F8:
+	.asciz "MNU_qt1202"
+	.balign 4
+
+.global lbl_804FA404
+lbl_804FA404:
+	.asciz "MNU_qt1301"
+	.balign 4
+
+.global lbl_804FA410
+lbl_804FA410:
+	.asciz "MNU_qt1401"
+	.balign 4
+
+.global lbl_804FA41C
+lbl_804FA41C:
+	.asciz "MNU_qt1501"
+	.balign 4
+
+.global lbl_804FA428
+lbl_804FA428:
+	.asciz "MNU_qt1601"
+	.balign 4
+
+.global lbl_804FA434
+lbl_804FA434:
+	.asciz "MNU_qt1701"
+	.balign 4
+
+.global lbl_804FA440
+lbl_804FA440:
+	.asciz "MNU_qt1801"
+	.balign 4
+
+.global lbl_804FA44C
+lbl_804FA44C:
+	.asciz "MNU_qt1901"
+	.balign 4
+
+.global lbl_804FA458
+lbl_804FA458:
+	.asciz "MNU_qt2001"
+	.balign 4
+
+.global lbl_804FA464
+lbl_804FA464:
+	.asciz "MNU_qt2101"
+	.balign 4
+
+.global lbl_804FA470
+lbl_804FA470:
+	.asciz "MNU_qt2201"
+	.balign 4
+
+.global lbl_804FA47C
+lbl_804FA47C:
+	.asciz "MNU_qt2301"
+	.balign 4
+
+.global lbl_804FA488
+lbl_804FA488:
+	.asciz "MNU_qt2401"
+	.balign 4
+
+.global CQuestWindow_typestr
+CQuestWindow_typestr:
+	.asciz "CQuestWindow"
+	.balign 4
+
+.global IUIWindow_typestr
+IUIWindow_typestr:
+	.asciz "IUIWindow"
+	.balign 4
+
+.global CTTask_IUIWindow_typestr
+CTTask_IUIWindow_typestr:
+	.asciz "CTTask<IUIWindow>"
+	.balign 4
+
+
+.global lbl_804FA4C4
+lbl_804FA4C4:
+	.asciz "CQuestWindow"
+	.asciz "arc"
+	.asciz "mf70_cf60_qst_acp.brlyt"
+	.asciz "mf70_cf60_qst_acp_in.brlan"
+	.asciz "mf70_cf60_qst_acp_roop.brlan"
+	.asciz "txt_gold00"
+	.asciz "txt_gold01"
+	.asciz "txt_exp"
+	.asciz "MNU_item"
+	.asciz "name"
+	.asciz "txt_next"
+	.asciz "txt_purpose"
+	.asciz "qst_genre"
+	.asciz "MNU_col6"
+	.asciz "reward_exp"
+	.asciz "reward_money"
+	.asciz "reward_mes"
+	.asciz "win_main"
+	.asciz "pic_head"
+	.asciz "win_main01"
+	.asciz "pic_head01"
+	.asciz "mf00_reg00_qt01.tpl"
+	.asciz "mf00_reg00_qt02.tpl"
+	.asciz "mf00_reg00_qt03.tpl"
+	.asciz "pic_tit"
+	.asciz "force"
+	.asciz "MNU_quest"
+	.asciz "txt_head"
+	.asciz "title"
+	.asciz "txt_questtitle"
+	.asciz "npc_id"
+	.asciz "txt_irai"
+	.asciz "purpose"
+	.asciz "info_end_B"
+	.asciz "info_end_A"
+	.asciz "order_succ_A"
+	.asciz "info_prog"
+	.asciz "txt_reward01"
+	.byte 0x00
+	.asciz "txt_reward02"
+	.asciz "txt_reward03"
+	.asciz "reward_B%d"
+	.asciz "reward_A%d"
+	.asciz "txt_reward%02d"
+	.asciz "rankType"
+	.asciz "%s%s"
+	.asciz "%s"
+	.asciz "txt_yes"
+	.asciz "txt_no"
+	.asciz "txt_yes2"
+	.asciz "MNU_kyeassign"
+	.asciz "help"
+	.asciz "txt_close1"
+	.asciz "txt_close2"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "pic_btn1"
+	.asciz "pic_btn2"
+	.asciz "flg_relate_B%d"
+	.asciz "flg_relate_A%d"
+	.asciz "up_relate_B%d"
+	.asciz "up_relate_A%d"
+	.asciz "up_famous_B"
+	.asciz "up_famous_A"
+	.asciz "nul_select"
+	.asciz "nul_select2"
+	.asciz "pic_comp"
+	.asciz "pic_chbx01"
+	.asciz "nul_proportion"
+	.asciz "nul_yes2"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80530750
+lbl_80530750:
+	# ROM: 0x52C850
+	.4byte lbl_804FA05C
+	.4byte lbl_804FA078
+	.4byte lbl_804FA094
+	.4byte lbl_804FA0B0
+	.4byte lbl_804FA0CC
+	.4byte lbl_804FA0E8
+	.4byte lbl_804FA104
+	.4byte lbl_804FA120
+	.4byte lbl_804FA13C
+	.4byte lbl_804FA158
+	.4byte lbl_804FA174
+	.4byte lbl_804FA190
+	.4byte lbl_804FA1AC
+	.4byte lbl_804FA1C8
+	.4byte lbl_804FA1E4
+	.4byte lbl_804FA200
+	.4byte lbl_804FA21C
+	.4byte lbl_804FA238
+	.4byte lbl_804FA254
+	.4byte lbl_804FA254
+	.4byte lbl_804FA270
+	.4byte lbl_804FA28C
+	.4byte lbl_804FA2A8
+	.4byte lbl_804FA2C4
+	.4byte lbl_804FA2E0
+	.4byte lbl_804FA2FC
+	.4byte lbl_804FA318
+	.4byte lbl_804FA334
+	.4byte 0
+
+
+.global lbl_805307C4
+lbl_805307C4:
+	# ROM: 0x52C8C4
+	.4byte lbl_804FA350
+	.4byte lbl_804FA35C
+	.4byte lbl_804FA368
+	.4byte lbl_804FA374
+	.4byte lbl_804FA380
+	.4byte lbl_804FA38C
+	.4byte lbl_804FA398
+	.4byte lbl_804FA3A4
+	.4byte lbl_804FA3B0
+	.4byte lbl_804FA3BC
+	.4byte lbl_804FA3C8
+	.4byte lbl_804FA3D4
+	.4byte lbl_804FA3E0
+	.4byte lbl_804FA3EC
+	.4byte lbl_804FA3F8
+	.4byte lbl_804FA404
+	.4byte lbl_804FA410
+	.4byte lbl_804FA41C
+	.4byte lbl_804FA428
+	.4byte lbl_804FA428
+	.4byte lbl_804FA434
+	.4byte lbl_804FA440
+	.4byte lbl_804FA44C
+	.4byte lbl_804FA458
+	.4byte lbl_804FA464
+	.4byte lbl_804FA470
+	.4byte lbl_804FA47C
+	.4byte lbl_804FA488
+	.4byte 0
+
+.global lbl_80530838
+lbl_80530838:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80122654
+
+.global lbl_80530844
+lbl_80530844:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801226C8
+.global lbl_80530850
+lbl_80530850:
+	.4byte switch_80123BEC
+	.4byte switch_80123BEC
+	.4byte switch_80123B30
+	.4byte switch_80123B48
+	.4byte switch_80123B60
+	.4byte switch_80123B60
+	.4byte switch_80123B60
+	.4byte switch_80123B60
+	.4byte switch_80123B60
+	.4byte switch_80123B78
+	.4byte switch_80123B90
+	.4byte switch_80123BA8
+	.4byte switch_80123BC0
+	.4byte switch_80123BD8
+.global lbl_80530888
+lbl_80530888:
+	.4byte switch_801238E0
+	.4byte switch_801238E0
+	.4byte switch_80123824
+	.4byte switch_8012383C
+	.4byte switch_80123854
+	.4byte switch_80123854
+	.4byte switch_80123854
+	.4byte switch_80123854
+	.4byte switch_80123854
+	.4byte switch_8012386C
+	.4byte switch_80123884
+	.4byte switch_8012389C
+	.4byte switch_801238B4
+	.4byte switch_801238CC
+
+
+.global __vt__CQuestWindow
+__vt__CQuestWindow:
+	.4byte __RTTI__CQuestWindow
+	.4byte 0
+	.4byte func_801223B0
+	.4byte CChildListNode_Reset
+	.4byte func_80122490
+	.4byte func_80122524
+	.4byte func_8012453C
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CQuestWindow
+	.4byte 0xFFFFFF94
+	.4byte func_801245D4
+	.4byte func_80039E28
+	.4byte func_801245CC
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CQuestWindow
+	.4byte 0xFFFFFF90
+	.4byte func_801245E4
+	.4byte func_801245DC
+	.4byte func_80122A80
+	.4byte func_8012278C
+
+.global CQuestWindow_hierarchy
+CQuestWindow_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000070
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__IUIWindow
+__vt__IUIWindow:
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte func_8012235C
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_8012453C
+	.4byte func_80124584
+	.4byte func_80043F20
+
+.global IUIWindow_hierarchy
+IUIWindow_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_IUIWindow
+__vt__CTTask_IUIWindow:
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte func_8012230C
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_8012453C
+	.4byte func_80124584
+	.4byte func_80043F20
+
+.global CTTask_IUIWindow_hierarchy
+CTTask_IUIWindow_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806647B0
+lbl_806647B0:
+	# ROM: 0x570390
+	.4byte lbl_804FA048
+	.4byte 0
+
+.global __RTTI__CQuestWindow
+__RTTI__CQuestWindow:
+	.4byte CQuestWindow_typestr
+	.4byte CQuestWindow_hierarchy
+
+
+.global __RTTI__IUIWindow
+__RTTI__IUIWindow:
+	.4byte IUIWindow_typestr
+	.4byte IUIWindow_hierarchy
+
+.global __RTTI__CTTask_IUIWindow
+__RTTI__CTTask_IUIWindow:
+	.4byte CTTask_IUIWindow_typestr
+	.4byte CTTask_IUIWindow_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669A00
+lbl_80669A00:
+	# ROM: 0x573860
+	.4byte 0x40000000
+
+
+.global lbl_80669A04
+lbl_80669A04:
+	# ROM: 0x573864
+	.4byte 0
+
+
+.global lbl_80669A08
+lbl_80669A08:
+	# ROM: 0x573868
+	.float 1.0
+
+
+.global lbl_80669A0C
+lbl_80669A0C:
+	# ROM: 0x57386C
+	.4byte 0x0306090C
+
+
+.global lbl_80669A10
+lbl_80669A10:
+	# ROM: 0x573870
+	.4byte 0x0F000000
+
+
+.global lbl_80669A14
+lbl_80669A14:
+	# ROM: 0x573874
+	.4byte 0x3C23D70A
+
+
+.global lbl_80669A18
+lbl_80669A18:
+	# ROM: 0x573878
+	.4byte 0x3FE00000
+	.4byte 0
+
+
+.global lbl_80669A20
+lbl_80669A20:
+	# ROM: 0x573880
+	.4byte 0xBFE00000
+	.4byte 0
+
+
+.global lbl_80669A28
+lbl_80669A28:
+	# ROM: 0x573888
+	.4byte 0x43300000
+	.4byte 0
+
+.global lbl_80669A30
+lbl_80669A30:
+	.asciz "nul_yes"
+
+.global lbl_80669A38
+lbl_80669A38:
+	.asciz "nul_no"
+	.balign 4
+
+
+.global lbl_80669A40
+lbl_80669A40:
+	# ROM: 0x5738A0
+	.4byte lbl_80669A30
+
+
+.global lbl_80669A44
+lbl_80669A44:
+	# ROM: 0x5738A4
+	.4byte lbl_80669A38
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806668C8
+lbl_806668C8:
+	.skip 0x4
+.global lbl_806668CC
+lbl_806668CC:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000BC10
 lbl_8000BC10:
@@ -2759,7 +3472,7 @@ lbl_8000BDAC:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80122164
 	.4byte 0x000001A8

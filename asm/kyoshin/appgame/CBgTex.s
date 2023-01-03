@@ -401,7 +401,100 @@ func_801C3E58:
 /* 801C3EC8 0018D488  38 21 00 20 */	addi r1, r1, 0x20
 /* 801C3ECC 0018D48C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80500B88
+lbl_80500B88:
+	.asciz "CBgTexLyt"
+	.asciz "mf00_reg_bg06.brlyt"
+	.asciz "mf00_reg_bg07.brlyt"
+	.asciz "mf00_reg_bg01.brlyt"
+	.asciz "mf00_reg_bg02.brlyt"
+	.asciz "mf00_reg_bg03.brlyt"
+	.asciz "mf00_reg_bg04.brlyt"
+	.asciz "mf00_reg_bg05.brlyt"
+	.asciz "pic_ptm00"
+	.asciz "pic_ptm01"
+	.asciz "/menu/BgTex06.arc"
+	.asciz "/menu/BgTex07.arc"
+	.asciz "/menu/BgTex01.arc"
+	.asciz "/menu/BgTex02.arc"
+	.asciz "/menu/BgTex03.arc"
+	.asciz "/menu/BgTex04.arc"
+	.asciz "/menu/BgTex05.arc"
+	.asciz "arc"
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CBgTex
+__vt__CBgTex:
+	.4byte __RTTI__CBgTex
+	.4byte 0
+	.4byte func_801C39D0
+	.4byte func_80039E28
+	.4byte func_801C3E58
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CBgTex_hierarchy
+CBgTex_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CBgTex
+__RTTI__CBgTex:
+	.4byte CBgTex_typestr
+	.4byte CBgTex_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global CBgTex_typestr
+CBgTex_typestr:
+	.asciz "CBgTex"
+	.balign 4
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666D50
+lbl_80666D50:
+	.skip 0x4
+.global lbl_80666D54
+lbl_80666D54:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800108B0
 lbl_800108B0:
@@ -445,7 +538,7 @@ lbl_80010904:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801C3974
 	.4byte 0x0000005C

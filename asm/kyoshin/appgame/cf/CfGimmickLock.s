@@ -1156,7 +1156,100 @@ func_8020D368:
 /* 8020D398 001D6958  38 60 00 00 */	li r3, 0
 /* 8020D39C 001D695C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfGimmickLock_typestr
+cf_CfGimmickLock_typestr:
+	.asciz "cf::CfGimmickLock"
+	.balign 4
+
+
+.global lbl_80503E0C
+lbl_80503E0C:
+	.asciz "rockTYPE"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CfGimmickLock
+__vt__cf_CfGimmickLock:
+	.4byte __RTTI__cf_CfGimmickLock
+	.4byte 0
+	.4byte func_8020C558
+	.4byte func_8020896C
+	.4byte func_8020C640
+	.4byte func_801F4B64
+	.4byte func_801F4BF8
+	.4byte func_801F4C8C
+	.4byte func_8020CB28
+
+.global cf_CfGimmickLock_hierarchy
+cf_CfGimmickLock_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0
+	.4byte __RTTI__cf_CfGimmick
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665090
+lbl_80665090:
+	# ROM: 0x570C70
+	.4byte lbl_8066AC68
+	.4byte 0
+
+.global __RTTI__cf_CfGimmickLock
+__RTTI__cf_CfGimmickLock:
+	.4byte cf_CfGimmickLock_typestr
+	.4byte cf_CfGimmickLock_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066AC68
+lbl_8066AC68:
+	.asciz "popID1"
+	.balign 4
+
+
+.global lbl_8066AC70
+lbl_8066AC70:
+	# ROM: 0x574AD0
+	.4byte 0x40000000
+
+
+.global lbl_8066AC74
+lbl_8066AC74:
+	# ROM: 0x574AD4
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066AC78
+lbl_8066AC78:
+	# ROM: 0x574AD8
+	.float 0.5
+
+
+.global lbl_8066AC7C
+lbl_8066AC7C:
+	# ROM: 0x574ADC
+	.4byte 0x3D4CCCCD
+
+
+.global lbl_8066AC80
+lbl_8066AC80:
+	# ROM: 0x574AE0
+	.float 1.0
+
+
+.global lbl_8066AC84
+lbl_8066AC84:
+	# ROM: 0x574AE4
+	.4byte 0x41F00000
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800130B0
 lbl_800130B0:
@@ -1238,7 +1331,7 @@ lbl_80013184:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8020C334
 	.4byte 0x00000224

@@ -492,3 +492,18 @@ FrameProcess__Q44nw4r3snd6detail11SoundThreadFv:
 /* 804219BC 003EAF7C  7C 08 03 A6 */	mtlr r0
 /* 804219C0 003EAF80  38 21 00 30 */	addi r1, r1, 0x30
 /* 804219C4 003EAF84  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80652C40
+lbl_80652C40:
+	.skip 0x10
+.global lbl_80652C50
+lbl_80652C50:
+	.skip 0x3B0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667DF0
+lbl_80667DF0:
+	.skip 0x8

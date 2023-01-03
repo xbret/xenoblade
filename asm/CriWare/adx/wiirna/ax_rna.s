@@ -1982,3 +1982,21 @@ lbl_8056972C:
 	.4byte 0x00000077
 	.4byte 0x0000007B
 	.4byte 0x0000007F
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global axrna_init_cnt
+axrna_init_cnt:
+	.skip 0x4
+.global lbl_805F61C4
+lbl_805F61C4:
+	.skip 0x4
+.global lbl_805F61C8
+lbl_805F61C8:
+	.skip 0xE40
+.global lbl_805F7008
+lbl_805F7008:
+	.skip 0x4
+.global lbl_805F700C
+lbl_805F700C:
+	.skip 0x4

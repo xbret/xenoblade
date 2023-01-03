@@ -6965,7 +6965,384 @@ func_80221E64:
 
 .4byte sinit_80221DDC
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_805047F0
+lbl_805047F0:
+	.4byte 0x00000010
+	.4byte 0x00100000
+	.4byte 0x00200000
+
+.global CModelDispMakeCrystal_typestr
+CModelDispMakeCrystal_typestr:
+	.asciz "CModelDispMakeCrystal"
+	.balign 4
+
+
+.global lbl_80504814
+lbl_80504814:
+	.asciz "obj/oj820002.chr"
+	.asciz "eff/rec/eu/eu01.rec"
+	.asciz "menu/McData.arc"
+	.asciz "MNU_skill"
+	.asciz "help"
+	.asciz "MNU_sysmes"
+	.asciz "name"
+	.asciz "MNU_crystal"
+	.asciz "info"
+	.asciz "itemType"
+	.asciz "lower_E"
+	.asciz "upper_E"
+	.asciz "lower_D"
+	.asciz "upper_D"
+	.asciz "lower_C"
+	.asciz "upper_C"
+	.asciz "lower_B"
+	.asciz "upper_B"
+	.asciz "lower_A"
+	.asciz "upper_A"
+	.asciz "lower_S"
+	.asciz "upper_S"
+	.asciz "/chr/pc/mu%02d%02d%02d.mca"
+	.asciz "ANM"
+	.asciz "CModelDispMakeCrystal"
+	.asciz "arc"
+	.4byte 0
+	.byte 0x00
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80539548
+lbl_80539548:
+	# ROM: 0x535648
+	.4byte 0x19193250
+	.4byte 0x0A0A055A
+	.4byte 0x053C0F19
+	.4byte 0x0F3C190A
+	.4byte 0x0A500A50
+	.4byte 0x0A055A05
+
+
+.global lbl_80539560
+lbl_80539560:
+	# ROM: 0x535660
+	.4byte switch_8021FF14
+	.4byte switch_8021FF1C
+	.4byte switch_8021FF24
+	.4byte switch_8021FF2C
+	.4byte switch_8021FF34
+	.4byte switch_8021FF3C
+	.4byte switch_8021FF44
+	.4byte switch_8021FF4C
+	.4byte switch_8021FF54
+	.4byte switch_8021FF5C
+	.4byte switch_8021FF64
+	.4byte switch_8021FF6C
+	.4byte switch_8021FF74
+	.4byte switch_8021FF7C
+	.4byte switch_8021FF84
+	.4byte switch_8021FF8C
+	.4byte switch_8021FF94
+	.4byte switch_8021FF9C
+	.4byte switch_8021FFA4
+	.4byte switch_8021FFAC
+	.4byte switch_8021FFB4
+	.4byte switch_8021FFBC
+	.4byte switch_8021FFC4
+	.4byte switch_8021FFCC
+	.4byte switch_8021FFE8
+	.4byte switch_8021FFF0
+	.4byte switch_8021FFF8
+	.4byte switch_80220000
+	.4byte switch_80220008
+	.4byte switch_80220010
+	.4byte switch_80220018
+	.4byte switch_80220034
+	.4byte switch_8022003C
+	.4byte switch_80220058
+	.4byte switch_80220060
+	.4byte switch_80220068
+	.4byte switch_80220070
+	.4byte switch_80220078
+	.4byte switch_80220080
+	.4byte switch_80220088
+	.4byte switch_80220090
+
+
+.global lbl_80539604
+lbl_80539604:
+	# ROM: 0x535704
+	.4byte switch_802209AC
+	.4byte switch_802209B8
+	.4byte switch_802209EC
+	.4byte switch_80220A4C
+	.4byte switch_80220AAC
+	.4byte switch_80220AE0
+	.4byte switch_80220B40
+	.4byte switch_80220BA0
+	.4byte 0
+
+
+.global __vt__CModelDispMakeCrystal
+__vt__CModelDispMakeCrystal:
+	.4byte __RTTI__CModelDispMakeCrystal
+	.4byte 0
+	.4byte func_8021C594
+	.4byte func_80039E28
+	.4byte func_8022154C
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CModelDispMakeCrystal
+	.4byte 0xFFFFFFFC
+	.4byte func_80221E54
+	.4byte func_80054A20
+	.4byte func_800550D8
+	.4byte func_800550DC
+	.4byte func_800550E0
+	.4byte func_800550E4
+	.4byte func_800554D8
+	.4byte func_800554D0
+	.4byte func_800554D4
+	.4byte __RTTI__CModelDispMakeCrystal
+	.4byte 0xFFFFFFF8
+	.4byte func_80221E64
+	.4byte func_80221E5C
+	.4byte func_80221D58
+
+.global CModelDispMakeCrystal_hierarchy
+CModelDispMakeCrystal_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CModelDispMakeCrystal
+__RTTI__CModelDispMakeCrystal:
+	.4byte CModelDispMakeCrystal_typestr
+	.4byte CModelDispMakeCrystal_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AD60
+lbl_8066AD60:
+	# ROM: 0x574BC0
+	.float 1.0
+
+
+.global lbl_8066AD64
+lbl_8066AD64:
+	# ROM: 0x574BC4
+	.4byte 0
+
+
+.global lbl_8066AD68
+lbl_8066AD68:
+	# ROM: 0x574BC8
+	.4byte 0x3D810625
+
+
+.global lbl_8066AD6C
+lbl_8066AD6C:
+	# ROM: 0x574BCC
+	.4byte 0xBE19999A
+
+
+.global lbl_8066AD70
+lbl_8066AD70:
+	# ROM: 0x574BD0
+	.4byte 0xBFD45A1D
+
+
+.global lbl_8066AD74
+lbl_8066AD74:
+	# ROM: 0x574BD4
+	.4byte 0x40025E35
+
+
+.global lbl_8066AD78
+lbl_8066AD78:
+	# ROM: 0x574BD8
+	.4byte 0xBF70E560
+
+
+.global lbl_8066AD7C
+lbl_8066AD7C:
+	# ROM: 0x574BDC
+	.4byte 0x428C0000
+
+
+.global lbl_8066AD80
+lbl_8066AD80:
+	# ROM: 0x574BE0
+	.4byte 0xC2DC0000
+
+
+.global lbl_8066AD84
+lbl_8066AD84:
+	# ROM: 0x574BE4
+	.4byte 0xC2AC0000
+
+
+.global lbl_8066AD88
+lbl_8066AD88:
+	# ROM: 0x574BE8
+	.4byte 0x42900000
+
+
+.global lbl_8066AD8C
+lbl_8066AD8C:
+	# ROM: 0x574BEC
+	.4byte 0x40A00000
+
+
+.global lbl_8066AD90
+lbl_8066AD90:
+	# ROM: 0x574BF0
+	.float 0.2
+
+
+.global lbl_8066AD94
+lbl_8066AD94:
+	# ROM: 0x574BF4
+	.4byte 0x42480000
+
+
+.global lbl_8066AD98
+lbl_8066AD98:
+	# ROM: 0x574BF8
+	.4byte 0x41F00000
+
+
+.global lbl_8066AD9C
+lbl_8066AD9C:
+	# ROM: 0x574BFC
+	.4byte 0x41A00000
+
+
+.global lbl_8066ADA0
+lbl_8066ADA0:
+	# ROM: 0x574C00
+	.2byte 0xFFFF
+
+
+.global lbl_8066ADA2
+lbl_8066ADA2:
+	# ROM: 0x574C02
+	.2byte 0xFF00
+
+
+.global lbl_8066ADA4
+lbl_8066ADA4:
+	# ROM: 0x574C04
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_8066ADA8
+lbl_8066ADA8:
+	# ROM: 0x574C08
+	.4byte 0xFFFF0000
+
+
+.global lbl_8066ADAC
+lbl_8066ADAC:
+	# ROM: 0x574C0C
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066ADB0
+lbl_8066ADB0:
+	# ROM: 0x574C10
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066ADB8
+lbl_8066ADB8:
+	# ROM: 0x574C18
+	.float 100.0
+
+
+.global lbl_8066ADBC
+lbl_8066ADBC:
+	# ROM: 0x574C1C
+	.4byte 0x3D23D70A
+
+
+.global lbl_8066ADC0
+lbl_8066ADC0:
+	# ROM: 0x574C20
+	.4byte 0x41C80000
+
+
+.global lbl_8066ADC4
+lbl_8066ADC4:
+	# ROM: 0x574C24
+	.float 1.5
+
+
+.global lbl_8066ADC8
+lbl_8066ADC8:
+	# ROM: 0x574C28
+	.4byte 0x3F866666
+
+
+.global lbl_8066ADCC
+lbl_8066ADCC:
+	# ROM: 0x574C2C
+	.4byte 0xBFA66666
+
+
+.global lbl_8066ADD0
+lbl_8066ADD0:
+	# ROM: 0x574C30
+	.4byte 0xC1A00000
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80579E50
+lbl_80579E50:
+	.skip 0xC
+.global lbl_80579E5C
+lbl_80579E5C:
+	.skip 0xC
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667008
+lbl_80667008:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80013F30
 lbl_80013F30:
@@ -8120,7 +8497,7 @@ lbl_80014DE0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8021BC70
 	.4byte 0x0000086C

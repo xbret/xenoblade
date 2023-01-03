@@ -86,3 +86,11 @@ G3dReset__Q24nw4r3g3dFv:
 .global lbl_8056D108
 lbl_8056D108:
 	.asciz "<< NW4R    - G3D \tfinal   build: Nov 20 2008 03:23:14 (0x4199_60831) >>"
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665DE0
+lbl_80665DE0:
+	# ROM: 0x5719C0
+	.4byte lbl_8056D108
+	.4byte 0

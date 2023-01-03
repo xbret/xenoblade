@@ -247,7 +247,60 @@ func_802A5ECC:
 /* 802A5ECC 0026F48C  38 60 00 F0 */	li r3, 0xf0
 /* 802A5ED0 0026F490  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CVS_THREAD_DOWN_typestr
+cf_CVS_THREAD_DOWN_typestr:
+	.asciz "cf::CVS_THREAD_DOWN"
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053D1F8
+lbl_8053D1F8:
+	# ROM: 0x5392F8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A5C90
+
+.global lbl_8053D204
+lbl_8053D204:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A5D4C
+
+.global lbl_8053D210
+lbl_8053D210:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A5E0C
+
+
+.global __vt__cf_CVS_THREAD_DOWN
+__vt__cf_CVS_THREAD_DOWN:
+	.4byte __RTTI__cf_CVS_THREAD_DOWN
+	.4byte 0
+	.4byte func_802A3B50
+	.4byte func_802A5E54
+	.4byte func_802A5ECC
+	.4byte func_802A1EA0
+	.4byte func_802A3740
+
+.global cf_CVS_THREAD_DOWN_hierarchy
+cf_CVS_THREAD_DOWN_hierarchy:
+	.4byte __RTTI__cf_CVS_THREAD
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CVS_THREAD_DOWN
+__RTTI__cf_CVS_THREAD_DOWN:
+	.4byte cf_CVS_THREAD_DOWN_typestr
+	.4byte cf_CVS_THREAD_DOWN_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001ABE4
 lbl_8001ABE4:
@@ -284,7 +337,7 @@ lbl_8001AC28:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A5B88
 	.4byte 0x00000108

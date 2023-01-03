@@ -267,3 +267,11 @@ ReadWaveInfo__Q44nw4r3snd6detail13WsdFileReaderCFiPQ44nw4r3snd6detail8WaveInfoPC
 /* 8042A320 003F38E0  7C 08 03 A6 */	mtlr r0
 /* 8042A324 003F38E4  38 21 00 30 */	addi r1, r1, 0x30
 /* 8042A328 003F38E8  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C900
+lbl_8066C900:
+	# ROM: 0x576760
+	.float 1.0
+	.4byte 0

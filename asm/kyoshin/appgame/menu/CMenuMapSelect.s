@@ -1021,7 +1021,86 @@ func_802430A4:
 /* 802430A4 0020C664  38 63 FF A8 */	addi r3, r3, -88
 /* 802430A8 0020C668  4B FF E3 C4 */	b func_8024146C
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuMapSelect_typestr
+CMenuMapSelect_typestr:
+	.asciz "CMenuMapSelect"
+	.balign 4
+
+
+.global lbl_80506B98
+lbl_80506B98:
+	.asciz "MNU_map"
+	.asciz "name"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global __vt__CMenuMapSelect
+__vt__CMenuMapSelect:
+	.4byte __RTTI__CMenuMapSelect
+	.4byte 0
+	.4byte func_8024146C
+	.4byte CChildListNode_Reset
+	.4byte func_80241510
+	.4byte func_80241DB4
+	.4byte func_80241E3C
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuMapSelect
+	.4byte 0xFFFFFFA8
+	.4byte func_802430A4
+	.4byte func_8024309C
+	.4byte func_80242144
+
+.global CMenuMapSelect_hierarchy
+CMenuMapSelect_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuMapSelect
+__RTTI__CMenuMapSelect:
+	.4byte CMenuMapSelect_typestr
+	.4byte CMenuMapSelect_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AFE0
+lbl_8066AFE0:
+	# ROM: 0x574E40
+	.4byte 0
+
+
+.global lbl_8066AFE4
+lbl_8066AFE4:
+	# ROM: 0x574E44
+	.float 1.0
+
+
+.global lbl_8066AFE8
+lbl_8066AFE8:
+	# ROM: 0x574E48
+	.float 10.0
+	.4byte 0
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80016290
 lbl_80016290:
@@ -1072,7 +1151,7 @@ lbl_80016318:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8024221C
 	.4byte 0x00000138

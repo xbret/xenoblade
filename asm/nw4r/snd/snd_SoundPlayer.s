@@ -870,3 +870,32 @@ detail_FreePlayerHeap__Q34nw4r3snd11SoundPlayerFPQ44nw4r3snd6detail10BasicSound:
 /* 80420FB4 003EA574  7C 08 03 A6 */	mtlr r0
 /* 80420FB8 003EA578  38 21 00 20 */	addi r1, r1, 0x20
 /* 80420FBC 003EA57C  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066C858
+lbl_8066C858:
+	# ROM: 0x5766B8
+	.float 1.0
+
+
+.global lbl_8066C85C
+lbl_8066C85C:
+	# ROM: 0x5766BC
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8063B4E0
+lbl_8063B4E0:
+	.skip 0x10
+.global lbl_8063B4F0
+lbl_8063B4F0:
+	.skip 0x610
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667DE0
+lbl_80667DE0:
+	.skip 0x8

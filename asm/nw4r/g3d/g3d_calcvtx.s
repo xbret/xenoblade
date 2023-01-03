@@ -573,3 +573,12 @@ CalcVtx__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjShpPPQ34nw4r3g3d13ResV
 /* 803FE8A4 003C7E64  7C 08 03 A6 */	mtlr r0
 /* 803FE8A8 003C7E68  38 21 05 B0 */	addi r1, r1, 0x5b0
 /* 803FE8AC 003C7E6C  4E 80 00 20 */	blr
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066C530
+lbl_8066C530:
+	# ROM: 0x576390
+	.4byte 0
+	.4byte 0

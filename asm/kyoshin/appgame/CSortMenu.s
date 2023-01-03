@@ -1141,7 +1141,183 @@ func_801D3C74:
 /* 801D3F00 0019D4C0  38 21 01 20 */	addi r1, r1, 0x120
 /* 801D3F04 0019D4C4  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_805019C0
+lbl_805019C0:
+	.asciz "txt_menu01_01"
+	.balign 4
+
+.global lbl_805019D0
+lbl_805019D0:
+	.asciz "txt_menu01_02"
+	.balign 4
+
+.global lbl_805019E0
+lbl_805019E0:
+	.asciz "txt_menu01_03"
+	.balign 4
+
+.global lbl_805019F0
+lbl_805019F0:
+	.asciz "txt_menu01_04"
+	.balign 4
+
+.global lbl_80501A00
+lbl_80501A00:
+	.asciz "txt_menu01_05"
+	.balign 4
+
+.global CSortMenu_typestr
+CSortMenu_typestr:
+	.asciz "CSortMenu"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80501A20
+lbl_80501A20:
+	.asciz "/menu/SortMenu.arc"
+	.asciz "nul_scr"
+	.asciz "nul_proportion"
+	.asciz "%s"
+	.asciz "win_sortmenu01"
+	.byte 0x00
+	.asciz "CSortMenu"
+	.asciz "arc"
+	.asciz "mf00_reg00_sort.brlyt"
+	.asciz "mf00_reg00_sort_in.brlan"
+	.asciz "mf00_reg00_sort_info_in.brlan"
+
+.global lbl_80501AB8
+lbl_80501AB8:
+	.asciz "percent_E"
+	.balign 4
+
+.global lbl_80501AC4
+lbl_80501AC4:
+	.asciz "percent_D"
+	.balign 4
+
+.global lbl_80501AD0
+lbl_80501AD0:
+	.asciz "percent_C"
+	.balign 4
+
+.global lbl_80501ADC
+lbl_80501ADC:
+	.asciz "percent_B"
+	.balign 4
+
+.global lbl_80501AE8
+lbl_80501AE8:
+	.asciz "percent_A"
+	.balign 4
+
+.global lbl_80501AF4
+lbl_80501AF4:
+	.asciz "percent_S"
+	.balign 4
+
+
+.global lbl_80501B00
+lbl_80501B00:
+	# ROM: 0x4FDC00
+	.4byte lbl_8066A8C8
+	.4byte lbl_80501AB8
+	.4byte lbl_80501AC4
+	.4byte lbl_80501AD0
+	.4byte lbl_80501ADC
+	.4byte lbl_80501AE8
+	.4byte lbl_80501AF4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80538170
+lbl_80538170:
+	# ROM: 0x534270
+	.4byte lbl_805019C0
+	.4byte lbl_805019D0
+	.4byte lbl_805019E0
+	.4byte lbl_805019F0
+	.4byte lbl_80501A00
+	.4byte 0
+
+
+.global __vt__CSortMenu
+__vt__CSortMenu:
+	.4byte __RTTI__CSortMenu
+	.4byte 0
+	.4byte func_801D3004
+	.4byte func_80039E28
+	.4byte func_801D3AF0
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CSortMenu_hierarchy
+CSortMenu_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CSortMenu
+__RTTI__CSortMenu:
+	.4byte CSortMenu_typestr
+	.4byte CSortMenu_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A8B0
+lbl_8066A8B0:
+	# ROM: 0x574710
+	.4byte 0x41ACCCCD
+	.4byte 0
+
+
+.global lbl_8066A8B8
+lbl_8066A8B8:
+	# ROM: 0x574718
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066A8C0
+lbl_8066A8C0:
+	# ROM: 0x574720
+	.float 1.0
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001162C
 lbl_8001162C:
@@ -1253,7 +1429,7 @@ lbl_80011700:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801D2F80
 	.4byte 0x00000084

@@ -3331,3 +3331,54 @@ SetVoiceRmtIIRCoefs__Q44nw4r3snd6detail17AxVoiceParamBlockFUse:
 /* 80410B74 003DA134  7C 08 03 A6 */	mtlr r0
 /* 80410B78 003DA138  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 80410B7C 003DA13C  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C690
+lbl_8066C690:
+	# ROM: 0x5764F0
+	.4byte 0x46FA0000
+
+
+.global lbl_8066C694
+lbl_8066C694:
+	# ROM: 0x5764F4
+	.4byte 0x3FAAAAAB
+
+
+.global lbl_8066C698
+lbl_8066C698:
+	# ROM: 0x5764F8
+	.float 1.0
+	.4byte 0
+
+
+.global lbl_8066C6A0
+lbl_8066C6A0:
+	# ROM: 0x576500
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066C6A8
+lbl_8066C6A8:
+	# ROM: 0x576508
+	.4byte 0x477FFF00
+
+
+.global lbl_8066C6AC
+lbl_8066C6AC:
+	# ROM: 0x57650C
+	.4byte 0
+
+
+.global lbl_8066C6B0
+lbl_8066C6B0:
+	# ROM: 0x576510
+	.4byte 0x47800000
+
+
+.global lbl_8066C6B4
+lbl_8066C6B4:
+	# ROM: 0x576514
+	.4byte 0x46FFFE00

@@ -737,3 +737,18 @@ FreeAllReservedAxVoice__Q44nw4r3snd6detail14AxVoiceManagerFv:
 /* 804115A8 003DAB68  7C 08 03 A6 */	mtlr r0
 /* 804115AC 003DAB6C  38 21 00 40 */	addi r1, r1, 0x40
 /* 804115B0 003DAB70  4E 80 00 20 */	blr
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8063B168
+lbl_8063B168:
+	.skip 0xC
+.global lbl_8063B174
+lbl_8063B174:
+	.skip 0x2C
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667DA0
+lbl_80667DA0:
+	.skip 0x8

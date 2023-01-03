@@ -76,7 +76,7 @@ __RTTI__TChildListHeader_CChildListNode:
 	.4byte TChildListHeader_CChildListNode_typestr
 	.4byte 0
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001C9A4
 lbl_8001C9A4:
@@ -154,7 +154,7 @@ lbl_8001CA14:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CChildListNode
 	.4byte 0x00000054

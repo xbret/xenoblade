@@ -1605,7 +1605,279 @@ func_8015E0BC:
 /* 8015E948 00127F08  38 21 01 50 */	addi r1, r1, 0x150
 /* 8015E94C 00127F0C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804FD838
+lbl_804FD838:
+	.asciz "/menu/Col6Sys.arc"
+	.balign 4
+
+.global CCol6Invite_typestr
+CCol6Invite_typestr:
+	.asciz "CCol6Invite"
+
+.global CCol6System_typestr
+CCol6System_typestr:
+	.asciz "CCol6System"
+
+.global CCol6Hint_typestr
+CCol6Hint_typestr:
+	.asciz "CCol6Hint"
+	.balign 4
+
+.global CCol6CheckBat_typestr
+CCol6CheckBat_typestr:
+	.asciz "CCol6CheckBat"
+	.balign 4
+
+
+.global lbl_804FD880
+lbl_804FD880:
+	.asciz "MNU_col6"
+	.asciz "name"
+	.asciz "txt_%02d"
+	.asciz "nul_proportion"
+	.asciz "CL6_hintlist"
+	.asciz "U_ID"
+	.asciz "CCol6Hint"
+	.asciz "arc"
+	.asciz "mf35_rv00.brlyt"
+	.asciz "mf35_rv00_in.brlan"
+	.asciz "mf35_rv00_info_in.brlan"
+	.asciz "txt_title"
+	.asciz "txt_help"
+	.asciz "nul_inf01"
+	.asciz "flag"
+	.asciz "title"
+	.asciz "nul_sel%02d"
+	.asciz "%s<n>%s"
+	.asciz "CL6_rwdlist"
+	.asciz "itemID"
+	.asciz "CCol6System"
+	.asciz "mf35_rv00_next.brlan"
+	.asciz "mf35_rv00_out.brlan"
+	.asciz "txt_now02"
+	.asciz "txt_now_val01"
+	.asciz "txt_now_val02"
+	.asciz "txt_num01"
+	.asciz "txt_num02"
+	.asciz "txt_num03"
+	.asciz "txt_num04"
+	.asciz "txt_mat_val01"
+	.asciz "txt_mat_val02"
+	.asciz "txt_mat_val03"
+	.asciz "txt_mat_val04"
+	.asciz "txt_mat_val05"
+	.asciz "txt_gold00"
+	.asciz "txt_gold01"
+	.asciz "txt_mat_val01_01"
+	.asciz "txt_mat_val02_01"
+	.asciz "txt_mat_val03_01"
+	.asciz "txt_mat_val04_01"
+	.asciz "txt_mat_val05_01"
+	.asciz "txt_gold00_01"
+	.asciz "txt_gold01_01"
+	.asciz "txt_04"
+	.balign 4
+	.asciz "txt_05"
+	.asciz "txt_mes"
+	.asciz "txt_sel05"
+	.asciz "txt_material"
+	.asciz "txt_material_01"
+	.asciz "txt_num%02d"
+	.asciz "txt_lv%02d"
+	.asciz "txt_sel%02d"
+	.asciz "txt_now"
+	.asciz "txt_now01"
+	.asciz "help"
+	.asciz "txt_now03"
+	.asciz "txt_now04"
+	.asciz "txt_now05"
+	.asciz "txt_now06"
+	.asciz "txt_comment"
+	.asciz "CL6_materiallist"
+	.asciz "money"
+	.asciz "MNU_item"
+	.asciz "txt_material%02d"
+	.asciz "txt_mat_val%02d"
+	.asciz "txt_mat_val%02d_01"
+	.asciz "material%d"
+	.asciz "number%d"
+	.asciz "CL6_uplist"
+	.asciz "rev_LV"
+	.asciz "rev_people"
+	.asciz "rev_effflag1"
+	.asciz "rev_selflag"
+	.asciz "rev_qstflag"
+	.asciz "rev_sound"
+	.asciz "rev_cam1x"
+	.asciz "rev_cam1y"
+	.asciz "rev_cam1z"
+	.asciz "rev_cam1rx"
+	.asciz "rev_cam1ry"
+	.asciz "rev_cam2x"
+	.asciz "rev_cam2y"
+	.asciz "rev_cam2z"
+	.asciz "rev_cam2rx"
+	.asciz "rev_cam2ry"
+	.asciz "rev_cam2flm"
+	.asciz "rev_cam2key"
+	.asciz "rev_cam3x"
+	.asciz "rev_cam3y"
+	.asciz "rev_cam3z"
+	.asciz "rev_cam3rx"
+	.asciz "rev_cam3ry"
+	.asciz "rev_cam4x"
+	.asciz "rev_cam4y"
+	.asciz "rev_cam4z"
+	.asciz "rev_cam4rx"
+	.asciz "rev_cam4ry"
+	.asciz "rev_cam4flm"
+	.asciz "rev_cam4key"
+	.asciz "%s<n>%s<n>%s +%d<n>%s +%d"
+	.balign 4
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80664C50
+lbl_80664C50:
+	# ROM: 0x570830
+	.4byte lbl_804FD838
+
+
+.global lbl_80664C54
+lbl_80664C54:
+	# ROM: 0x570834
+	.4byte 0xFFFFFFFF
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669E00
+lbl_80669E00:
+	# ROM: 0x573C60
+	.4byte 0x0F23374B
+
+
+.global lbl_80669E04
+lbl_80669E04:
+	# ROM: 0x573C64
+	.4byte 0x5F000000
+
+
+.global lbl_80669E08
+lbl_80669E08:
+	# ROM: 0x573C68
+	.4byte 0x0F23374B
+
+
+.global lbl_80669E0C
+lbl_80669E0C:
+	# ROM: 0x573C6C
+	.4byte 0x5F000000
+
+
+.global lbl_80669E10
+lbl_80669E10:
+	# ROM: 0x573C70
+	.4byte 0xFDFAF7F4
+
+
+.global lbl_80669E14
+lbl_80669E14:
+	# ROM: 0x573C74
+	.4byte 0xF1000000
+
+
+.global lbl_80669E18
+lbl_80669E18:
+	# ROM: 0x573C78
+	.float 1.0
+
+
+.global lbl_80669E1C
+lbl_80669E1C:
+	# ROM: 0x573C7C
+	.4byte 0xC2EC0000
+
+
+.global lbl_80669E20
+lbl_80669E20:
+	# ROM: 0x573C80
+	.4byte 0x42D80000
+
+
+.global lbl_80669E24
+lbl_80669E24:
+	# ROM: 0x573C84
+	.4byte 0
+
+
+.global lbl_80669E28
+lbl_80669E28:
+	# ROM: 0x573C88
+	.4byte 0x090F151B
+
+
+.global lbl_80669E2C
+lbl_80669E2C:
+	# ROM: 0x573C8C
+	.2byte 0x2127
+
+
+.global lbl_80669E2E
+lbl_80669E2E:
+	# ROM: 0x573C8E
+	.2byte 0x2D00
+
+
+.global lbl_80669E30
+lbl_80669E30:
+	# ROM: 0x573C90
+	.4byte 0x010A1016
+
+
+.global lbl_80669E34
+lbl_80669E34:
+	# ROM: 0x573C94
+	.2byte 0x1C22
+
+
+.global lbl_80669E36
+lbl_80669E36:
+	# ROM: 0x573C96
+	.2byte 0x2800
+
+
+.global lbl_80669E38
+lbl_80669E38:
+	# ROM: 0x573C98
+	.float -1.0
+	.4byte 0
+
+
+.global lbl_80669E40
+lbl_80669E40:
+	# ROM: 0x573CA0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666B20
+lbl_80666B20:
+	.skip 0x4
+.global lbl_80666B24
+lbl_80666B24:
+	.skip 0x4
+.global lbl_80666B28
+lbl_80666B28:
+	.skip 0x4
+.global lbl_80666B2C
+lbl_80666B2C:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000D6D0
 lbl_8000D6D0:
@@ -1732,7 +2004,7 @@ lbl_8000D81C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8015D208
 	.4byte 0x00000108

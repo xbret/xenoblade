@@ -2025,7 +2025,231 @@ func_801F4ED8:
 /* 801F4F60 001BE520  38 21 00 20 */	addi r1, r1, 0x20
 /* 801F4F64 001BE524  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_805030F0
+lbl_805030F0:
+	.asciz "nul_scr00"
+	.balign 4
+
+.global lbl_805030FC
+lbl_805030FC:
+	.asciz "nul_scr01"
+	.balign 4
+
+.global lbl_80503108
+lbl_80503108:
+	.asciz "nul_scr02"
+	.balign 4
+
+.global lbl_80503114
+lbl_80503114:
+	.asciz "nul_scr03"
+	.balign 4
+
+.global lbl_80503120
+lbl_80503120:
+	.asciz "nul_scr04"
+	.balign 4
+
+.global lbl_8050312C
+lbl_8050312C:
+	.asciz "nul_scr05"
+	.balign 4
+
+.global lbl_80503138
+lbl_80503138:
+	.asciz "pic_scr00_bar"
+	.balign 4
+
+.global lbl_80503148
+lbl_80503148:
+	.asciz "pic_scr01_bar"
+	.balign 4
+
+.global lbl_80503158
+lbl_80503158:
+	.asciz "pic_scr02_bar"
+	.balign 4
+
+.global lbl_80503168
+lbl_80503168:
+	.asciz "pic_scr03_bar"
+	.balign 4
+
+.global lbl_80503178
+lbl_80503178:
+	.asciz "pic_scr04_bar"
+	.balign 4
+
+.global lbl_80503188
+lbl_80503188:
+	.asciz "pic_scr05_bar"
+	.balign 4
+
+.global CScrollBar_typestr
+CScrollBar_typestr:
+	.asciz "CScrollBar"
+	.balign 4
+
+
+.global lbl_805031A4
+lbl_805031A4:
+	.asciz "/menu/ScrollBar.arc"
+	.asciz "CScrollBar"
+	.asciz "arc"
+	.asciz "mf00_scr00.brlyt"
+	.asciz "mf00_scr00_info_in.brlan"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_80538560
+lbl_80538560:
+	# ROM: 0x534660
+	.4byte lbl_805030F0
+	.4byte lbl_805030FC
+	.4byte lbl_80503108
+	.4byte lbl_80503114
+	.4byte lbl_80503120
+	.4byte lbl_8050312C
+
+
+.global lbl_80538578
+lbl_80538578:
+	# ROM: 0x534678
+	.4byte lbl_80503138
+	.4byte lbl_80503148
+	.4byte lbl_80503158
+	.4byte lbl_80503168
+	.4byte lbl_80503178
+	.4byte lbl_80503188
+
+
+.global __vt__CScrollBar
+__vt__CScrollBar:
+	.4byte __RTTI__CScrollBar
+	.4byte 0
+	.4byte func_801F34A0
+	.4byte func_80039E28
+	.4byte func_801F39D0
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CScrollBar_hierarchy
+CScrollBar_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CScrollBar
+__RTTI__CScrollBar:
+	.4byte CScrollBar_typestr
+	.4byte CScrollBar_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A9F8
+lbl_8066A9F8:
+	# ROM: 0x574858
+	.4byte 0
+
+
+.global lbl_8066A9FC
+lbl_8066A9FC:
+	# ROM: 0x57485C
+	.4byte 0x40800000
+
+
+.global lbl_8066AA00
+lbl_8066AA00:
+	# ROM: 0x574860
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066AA08
+lbl_8066AA08:
+	# ROM: 0x574868
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066AA10
+lbl_8066AA10:
+	# ROM: 0x574870
+	.float 1.0
+
+
+.global lbl_8066AA14
+lbl_8066AA14:
+	# ROM: 0x574874
+	.4byte 0x40A00000
+
+
+.global lbl_8066AA18
+lbl_8066AA18:
+	# ROM: 0x574878
+	.4byte 0
+
+
+.global lbl_8066AA1C
+lbl_8066AA1C:
+	# ROM: 0x57487C
+	.float 10.0
+
+
+.global lbl_8066AA20
+lbl_8066AA20:
+	# ROM: 0x574880
+	.float 1.0
+
+
+.global lbl_8066AA24
+lbl_8066AA24:
+	# ROM: 0x574884
+	.4byte 0x40600000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666F48
+lbl_80666F48:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800121F4
 lbl_800121F4:
@@ -2187,7 +2411,7 @@ lbl_80012300:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801F3410
 	.4byte 0x00000090

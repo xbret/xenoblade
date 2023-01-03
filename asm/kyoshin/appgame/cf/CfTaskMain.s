@@ -184,7 +184,119 @@ func_80069944:
 /* 80069944 00032F04  38 63 FF AC */	addi r3, r3, -84
 /* 80069948 00032F08  4B FF FE 20 */	b func_80069768
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfTaskMain_typestr
+cf_CfTaskMain_typestr:
+	.asciz "cf::CfTaskMain"
+	.balign 4
+
+.global CTTask_cf_CfTaskMain_typestr
+CTTask_cf_CfTaskMain_typestr:
+	.asciz "CTTask<cf::CfTaskMain>"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CfTaskMain
+__vt__cf_CfTaskMain:
+	.4byte __RTTI__cf_CfTaskMain
+	.4byte 0
+	.4byte func_80069768
+	.4byte CChildListNode_Reset
+	.4byte func_800697C4
+	.4byte func_800697C8
+	.4byte func_800697CC
+	.4byte func_800697E0
+	.4byte func_800697E4
+	.4byte __RTTI__cf_CfTaskMain
+	.4byte 0xFFFFFFAC
+	.4byte func_80069944
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global cf_CfTaskMain_hierarchy
+cf_CfTaskMain_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000054
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_cf_CfTaskMain
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_cf_CfTaskMain
+__vt__CTTask_cf_CfTaskMain:
+	.4byte __RTTI__CTTask_cf_CfTaskMain
+	.4byte 0
+	.4byte func_80069710
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_800698B4
+	.4byte func_800698FC
+	.4byte func_80043F20
+
+.global CTTask_cf_CfTaskMain_hierarchy
+CTTask_cf_CfTaskMain_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CfTaskMain
+__RTTI__cf_CfTaskMain:
+	.4byte cf_CfTaskMain_typestr
+	.4byte cf_CfTaskMain_hierarchy
+
+.global __RTTI__CTTask_cf_CfTaskMain
+__RTTI__CTTask_cf_CfTaskMain:
+	.4byte CTTask_cf_CfTaskMain_typestr
+	.4byte CTTask_cf_CfTaskMain_hierarchy
+
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80007F28
 lbl_80007F28:
@@ -217,7 +329,7 @@ lbl_80007F5C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80069710
 	.4byte 0x00000058

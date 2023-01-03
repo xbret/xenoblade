@@ -2392,3 +2392,24 @@ lbl_80520FB8:
 	.4byte Calc_BILLBOARD_Y__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
 	.4byte Calc_BILLBOARD_PERSP_Y__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
 	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066C430
+lbl_8066C430:
+	# ROM: 0x576290
+	.4byte 0
+
+
+.global lbl_8066C434
+lbl_8066C434:
+	# ROM: 0x576294
+	.4byte 0x219392EF
+
+
+.global lbl_8066C438
+lbl_8066C438:
+	# ROM: 0x576298
+	.4byte 0x219392EF
+	.4byte 0

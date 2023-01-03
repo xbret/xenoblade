@@ -1332,7 +1332,126 @@ func_80271AE4:
 /* 80271DCC 0023B38C  38 21 00 60 */	addi r1, r1, 0x60
 /* 80271DD0 0023B390  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CPlayAwardList_typestr
+CPlayAwardList_typestr:
+	.asciz "CPlayAwardList"
+	.balign 4
+
+
+.global lbl_80509E50
+lbl_80509E50:
+	.asciz "JNL_playaward"
+	.asciz "order"
+	.asciz "MNU_update"
+	.asciz "info"
+	.asciz "genre"
+	.asciz "com1_terms1"
+	.asciz "com1_terms2"
+	.asciz "title"
+	.asciz "comment2"
+	.asciz "comment1"
+	.asciz "/menu/PlayAwardList.arc"
+	.asciz "/common/jp/bdat_award.bin"
+	.asciz "txt_tit%02d"
+	.asciz "txt_exp%02d"
+	.asciz "nul_proportion"
+	.asciz "txt_cat00"
+	.asciz "MNU_kyeassign"
+	.asciz "help"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "pic_soatbtn"
+	.asciz "txt_btn"
+	.asciz "MNU_battle"
+	.asciz "name"
+	.asciz "txt_btntit"
+	.asciz "CPlayAwardList"
+	.asciz "arc"
+	.asciz "mf31_award00.brlyt"
+	.asciz "mf31_award00_in.brlan"
+	.asciz "mf31_award00_info_in.brlan"
+	.asciz "txt_val01"
+	.asciz "txt_cat01"
+	.asciz "MNU_playaward"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CPlayAwardList
+__vt__CPlayAwardList:
+	.4byte __RTTI__CPlayAwardList
+	.4byte 0
+	.4byte func_80270C64
+	.4byte func_80039E28
+	.4byte func_80271AE4
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CPlayAwardList_hierarchy
+CPlayAwardList_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CPlayAwardList
+__RTTI__CPlayAwardList:
+	.4byte CPlayAwardList_typestr
+	.4byte CPlayAwardList_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B260
+lbl_8066B260:
+	# ROM: 0x5750C0
+	.4byte 0x437C0000
+
+
+.global lbl_8066B264
+lbl_8066B264:
+	# ROM: 0x5750C4
+	.4byte 0x42B00000
+
+
+.global lbl_8066B268
+lbl_8066B268:
+	# ROM: 0x5750C8
+	.float 1.0
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80017F98
 lbl_80017F98:
@@ -1513,7 +1632,7 @@ lbl_8001811C:
 	.4byte func_8045F8C8
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80270B14
 	.4byte 0x00000150

@@ -667,7 +667,193 @@ func_802B7A90:
 /* 802B7BCC 0028118C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B7BD0 00281190  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CTitleMenu_typestr
+CTitleMenu_typestr:
+	.asciz "CTitleMenu"
+	.balign 4
+
+.global CTitleLogo_typestr
+CTitleLogo_typestr:
+	.asciz "CTitleLogo"
+	.balign 4
+
+
+.global lbl_8050CA50
+lbl_8050CA50:
+	.asciz "mf99_title00.brlyt"
+	.asciz "mf99_title00_in.brlan"
+	.asciz "mf99_title00_roop.brlan"
+	.asciz "mf99_title00_out.brlan"
+	.asciz "mf99_title01.brlyt"
+	.asciz "mf99_title01_anykey_in.brlan"
+	.asciz "mf99_title01_anykey_roop.brlan"
+	.asciz "mf99_title01_anykey_on.brlan"
+	.asciz "mf99_title01_in.brlan"
+	.asciz "mf99_title01_roop.brlan"
+	.asciz "mf99_title01_out.brlan"
+	.asciz "pic_menu01_00"
+	.asciz "nul_menu%02d"
+	.asciz "nul_proportion"
+	.asciz "/menu/Title.arc"
+	.asciz "CTitle"
+	.asciz "arc"
+	.2byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053E908
+lbl_8053E908:
+	# ROM: 0x53AA08
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B6660
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B6664
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B66B8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B66C4
+
+
+.global lbl_8053E938
+lbl_8053E938:
+	# ROM: 0x53AA38
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B6DF4
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B6DF8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B6E4C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B6E58
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B6EA4
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B6EF8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B6F04
+
+
+.global lbl_8053E98C
+lbl_8053E98C:
+	# ROM: 0x53AA8C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B7838
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B783C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B7854
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B7858
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B78A4
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B7920
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802B7924
+
+
+.global __vt__CTitle
+__vt__CTitle:
+	.4byte __RTTI__CTitle
+	.4byte 0
+	.4byte func_802B7374
+	.4byte func_80039E28
+	.4byte func_802B795C
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CTitle_hierarchy
+CTitle_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTitleMenu
+__vt__CTitleMenu:
+	.4byte __RTTI__CTitleMenu
+	.4byte 0
+	.4byte func_802B6930
+
+
+.global __vt__CTitleLogo
+__vt__CTitleLogo:
+	.4byte __RTTI__CTitleLogo
+	.4byte 0
+	.4byte func_802B6364
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CTitle
+__RTTI__CTitle:
+	.4byte CTitle_typestr
+	.4byte CTitle_hierarchy
+
+.global __RTTI__CTitleMenu
+__RTTI__CTitleMenu:
+	.4byte CTitleMenu_typestr
+	.4byte 0
+
+.global __RTTI__CTitleLogo
+__RTTI__CTitleLogo:
+	.4byte CTitleLogo_typestr
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667518
+lbl_80667518:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001BC54
 lbl_8001BC54:
@@ -776,7 +962,7 @@ lbl_8001BD40:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802B72F4
 	.4byte 0x00000080

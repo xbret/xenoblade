@@ -10537,7 +10537,798 @@ func_8015396C:
 /* 80153BE4 0011D1A4  38 21 00 70 */	addi r1, r1, 0x70
 /* 80153BE8 0011D1A8  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804FD198
+lbl_804FD198:
+	# ROM: 0x4F9298
+	.byte 0x00
+	.asciz "arm_type"
+	.balign 4
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80532310
+lbl_80532310:
+	.4byte switch_8014D654
+	.4byte switch_8014D0EC
+	.4byte switch_8014D0EC
+	.4byte switch_8014D0EC
+	.4byte switch_8014D1D4
+	.4byte switch_8014D1D4
+	.4byte switch_8014D1D4
+	.4byte switch_8014D098
+	.4byte switch_8014D654
+	.4byte switch_8014D0D8
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D2BC
+	.4byte switch_8014D2D4
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D2EC
+	.4byte switch_8014D324
+	.4byte switch_8014D324
+	.4byte switch_8014D324
+	.4byte switch_8014D3C0
+	.4byte switch_8014D3C0
+	.4byte switch_8014D3C0
+	.4byte switch_8014D3C0
+	.4byte switch_8014D3C0
+	.4byte switch_8014D3C0
+	.4byte switch_8014D3C0
+	.4byte switch_8014D3C0
+	.4byte switch_8014D3C0
+	.4byte switch_8014D3C0
+	.4byte switch_8014D3C0
+	.4byte switch_8014D3C0
+	.4byte switch_8014D3C0
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D3DC
+	.4byte switch_8014D400
+	.4byte switch_8014D448
+	.4byte switch_8014D448
+	.4byte switch_8014D49C
+	.4byte switch_8014D4C0
+	.4byte switch_8014D4D8
+	.4byte switch_8014D4F0
+	.4byte switch_8014D4F0
+	.4byte switch_8014D4F0
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D654
+	.4byte switch_8014D598
+	.4byte switch_8014D598
+
+
+.global lbl_80532450
+lbl_80532450:
+	# ROM: 0x52E550
+	.4byte switch_801505E4
+	.4byte switch_8014E260
+	.4byte switch_8014EBE8
+	.4byte switch_8014EBE8
+	.4byte switch_8014F56C
+	.4byte switch_801503B4
+	.4byte switch_801503B4
+	.4byte switch_801503B4
+	.4byte switch_801503B4
+	.4byte switch_801503B4
+	.4byte switch_801503B4
+	.4byte switch_801503B4
+	.4byte switch_801503B4
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_801505E4
+	.4byte switch_801505E4
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+	.4byte switch_801505E4
+	.4byte switch_801505E4
+	.4byte switch_801505E4
+	.4byte switch_801505E4
+	.4byte switch_801505E4
+	.4byte switch_801505E4
+	.4byte switch_8014EAF0
+	.4byte switch_8014EAF0
+	.4byte switch_8014EAF0
+	.4byte switch_8014EAF0
+	.4byte switch_8014EAF0
+	.4byte switch_8014EAF0
+	.4byte switch_8014EAF0
+	.4byte switch_8014EAF0
+	.4byte switch_8014EAF0
+	.4byte switch_8014EAF0
+	.4byte switch_8014EAF0
+	.4byte switch_8014EAF0
+	.4byte switch_8014EAF0
+	.4byte switch_8014EAF0
+	.4byte switch_8014E2AC
+	.4byte switch_8014E498
+	.4byte switch_8014E684
+	.4byte switch_8014EA20
+	.4byte switch_801505E4
+	.4byte switch_801505E4
+	.4byte switch_8014E870
+	.4byte switch_8014E950
+	.4byte switch_8014EB88
+	.4byte switch_8014EB88
+	.4byte switch_8014E258
+	.4byte switch_8014E258
+	.4byte switch_8014E258
+	.4byte switch_8014E258
+	.4byte switch_8014E258
+	.4byte switch_8014E258
+	.4byte switch_8014E258
+	.4byte switch_8014E258
+	.4byte switch_8014E258
+	.4byte switch_8014E258
+	.4byte switch_8014F104
+	.4byte switch_8014F104
+	.4byte switch_8014F104
+	.4byte switch_8014F104
+	.4byte switch_8014F104
+	.4byte switch_8014F104
+	.4byte switch_8014F104
+	.4byte switch_8014F104
+	.4byte switch_8014E2A4
+	.4byte switch_8014E2A4
+	.4byte switch_8014EAF0
+	.4byte switch_8014EBE8
+	.4byte switch_8014EBE8
+	.4byte switch_8014F188
+	.4byte switch_8014F188
+	.4byte switch_8014F188
+	.4byte switch_8014F56C
+	.4byte switch_8014F56C
+
+.global lbl_805325BC
+lbl_805325BC:
+	.4byte switch_80151D54
+	.4byte switch_80151D54
+	.4byte switch_80151D54
+	.4byte switch_80151E4C
+	.4byte switch_80151E04
+	.4byte switch_80151F6C
+	.4byte switch_80151FA0
+	.4byte switch_80151FD4
+	.4byte switch_80152008
+	.4byte switch_80152038
+	.4byte switch_80152068
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_80152098
+	.4byte switch_801520E4
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_801521FC
+	.4byte switch_80152130
+	.4byte switch_8015217C
+	.4byte switch_80151F00
+	.4byte switch_80151E90
+	.4byte switch_801521C8
+	.4byte switch_801521E4
+
+
+.global lbl_805326B0
+lbl_805326B0:
+	# ROM: 0x52E7B0
+	.4byte switch_80151C9C
+	.4byte switch_80150F70
+	.4byte switch_80151054
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151138
+	.4byte switch_80151138
+	.4byte switch_80151138
+	.4byte switch_80151138
+	.4byte switch_80151138
+	.4byte switch_80151138
+	.4byte switch_80151138
+	.4byte switch_80151138
+	.4byte switch_80151138
+	.4byte switch_8015116C
+	.4byte switch_8015116C
+	.4byte switch_8015116C
+	.4byte switch_8015116C
+	.4byte switch_8015116C
+	.4byte switch_8015116C
+	.4byte switch_8015116C
+	.4byte switch_8015116C
+	.4byte switch_8015116C
+	.4byte switch_801511B4
+	.4byte switch_801511CC
+	.4byte switch_801511CC
+	.4byte switch_801511CC
+	.4byte switch_801511CC
+	.4byte switch_801511CC
+	.4byte switch_801511CC
+	.4byte switch_801511CC
+	.4byte switch_801511CC
+	.4byte switch_801511CC
+	.4byte switch_80151200
+	.4byte switch_80151200
+	.4byte switch_80151200
+	.4byte switch_80151200
+	.4byte switch_80151200
+	.4byte switch_80151200
+	.4byte switch_80151200
+	.4byte switch_80151200
+	.4byte switch_80151200
+	.4byte switch_80151234
+	.4byte switch_8015124C
+	.4byte switch_80151C9C
+	.4byte switch_80151278
+	.4byte switch_801512B0
+	.4byte switch_801512D4
+	.4byte switch_801512EC
+	.4byte switch_80151304
+	.4byte switch_8015131C
+	.4byte switch_80151334
+	.4byte switch_8015134C
+	.4byte switch_80151364
+	.4byte switch_8015137C
+	.4byte switch_80151394
+	.4byte switch_801513AC
+	.4byte switch_801513C4
+	.4byte switch_801513DC
+	.4byte switch_801513F8
+	.4byte switch_80151410
+	.4byte switch_80151440
+	.4byte switch_80151440
+	.4byte switch_80151440
+	.4byte switch_80151440
+	.4byte switch_80151440
+	.4byte switch_80151440
+	.4byte switch_80151428
+	.4byte switch_80151458
+	.4byte switch_80151458
+	.4byte switch_80151458
+	.4byte switch_80151458
+	.4byte switch_80151458
+	.4byte switch_80151458
+	.4byte switch_80151410
+	.4byte switch_80151470
+	.4byte switch_80151488
+	.4byte switch_801514A4
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_801514EC
+	.4byte switch_801514BC
+	.4byte switch_801514D4
+	.4byte switch_80151504
+	.4byte switch_8015151C
+	.4byte switch_80151534
+	.4byte switch_8015154C
+	.4byte switch_80151564
+	.4byte switch_8015157C
+	.4byte switch_80151594
+	.4byte switch_801515AC
+	.4byte switch_801515C4
+	.4byte switch_801515DC
+	.4byte switch_801515F4
+	.4byte switch_8015160C
+	.4byte switch_80151624
+	.4byte switch_8015163C
+	.4byte switch_80151654
+	.4byte switch_8015166C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151684
+	.4byte switch_8015169C
+	.4byte switch_801516B4
+	.4byte switch_801516CC
+	.4byte switch_801516E4
+	.4byte switch_801516FC
+	.4byte switch_80151C9C
+	.4byte switch_80151714
+	.4byte switch_8015172C
+	.4byte switch_80151744
+	.4byte switch_8015175C
+	.4byte switch_80151774
+	.4byte switch_8015178C
+	.4byte switch_801517BC
+	.4byte switch_801517D4
+	.4byte switch_801517EC
+	.4byte switch_80151804
+	.4byte switch_8015181C
+	.4byte switch_80151834
+	.4byte switch_801519B0
+	.4byte switch_801519B0
+	.4byte switch_80151A68
+	.4byte switch_80151A68
+	.4byte switch_80151C00
+	.4byte switch_80151C9C
+	.4byte switch_80151C1C
+	.4byte switch_80151C38
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C9C
+	.4byte switch_80151C54
+	.4byte switch_80151C54
+	.4byte switch_80151C54
+	.4byte switch_80151C54
+	.4byte switch_80151C54
+	.4byte switch_80151C54
+	.4byte switch_80151C54
+	.4byte switch_80151C54
+	.4byte switch_801517A4
+	.4byte switch_80151A68
+	.4byte switch_80151A68
+	.4byte switch_80151A68
+	.4byte switch_8015184C
+	.4byte switch_80151864
+	.4byte switch_80151864
+
+
+.global lbl_8053297C
+lbl_8053297C:
+	# ROM: 0x52EA7C
+	.4byte switch_80150F1C
+	.4byte switch_80150C3C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150D3C
+	.4byte switch_80150D54
+	.4byte switch_80150A8C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150C3C
+	.4byte switch_80150DD4
+	.4byte switch_80150EAC
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150F1C
+	.4byte switch_80150EDC
+
+
+.global lbl_80532A08
+lbl_80532A08:
+	# ROM: 0x52EB08
+	.4byte switch_80153760
+	.4byte switch_80152A78
+	.4byte switch_80152B50
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80152C28
+	.4byte switch_80152C28
+	.4byte switch_80152C28
+	.4byte switch_80152C28
+	.4byte switch_80152C28
+	.4byte switch_80152C28
+	.4byte switch_80152C28
+	.4byte switch_80152C28
+	.4byte switch_80152C28
+	.4byte switch_80152C5C
+	.4byte switch_80152C5C
+	.4byte switch_80152C5C
+	.4byte switch_80152C5C
+	.4byte switch_80152C5C
+	.4byte switch_80152C5C
+	.4byte switch_80152C5C
+	.4byte switch_80152C5C
+	.4byte switch_80152C5C
+	.4byte switch_80152CA4
+	.4byte switch_80152CBC
+	.4byte switch_80152CBC
+	.4byte switch_80152CBC
+	.4byte switch_80152CBC
+	.4byte switch_80152CBC
+	.4byte switch_80152CBC
+	.4byte switch_80152CBC
+	.4byte switch_80152CBC
+	.4byte switch_80152CBC
+	.4byte switch_80152CF0
+	.4byte switch_80152CF0
+	.4byte switch_80152CF0
+	.4byte switch_80152CF0
+	.4byte switch_80152CF0
+	.4byte switch_80152CF0
+	.4byte switch_80152CF0
+	.4byte switch_80152CF0
+	.4byte switch_80152CF0
+	.4byte switch_80152D24
+	.4byte switch_80152D3C
+	.4byte switch_80153760
+	.4byte switch_80152D68
+	.4byte switch_80152DA0
+	.4byte switch_80152DC4
+	.4byte switch_80152DDC
+	.4byte switch_80152DF4
+	.4byte switch_80152E0C
+	.4byte switch_80152E24
+	.4byte switch_80152E3C
+	.4byte switch_80152E54
+	.4byte switch_80152E6C
+	.4byte switch_80152E84
+	.4byte switch_80152E9C
+	.4byte switch_80152EB4
+	.4byte switch_80152ECC
+	.4byte switch_80152EE8
+	.4byte switch_80152F00
+	.4byte switch_80152F30
+	.4byte switch_80152F30
+	.4byte switch_80152F30
+	.4byte switch_80152F30
+	.4byte switch_80152F30
+	.4byte switch_80152F30
+	.4byte switch_80152F18
+	.4byte switch_80152F48
+	.4byte switch_80152F48
+	.4byte switch_80152F48
+	.4byte switch_80152F48
+	.4byte switch_80152F48
+	.4byte switch_80152F48
+	.4byte switch_80152F00
+	.4byte switch_80152F60
+	.4byte switch_80152F78
+	.4byte switch_80152F94
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80152FDC
+	.4byte switch_80152FAC
+	.4byte switch_80152FC4
+	.4byte switch_80152FF4
+	.4byte switch_8015300C
+	.4byte switch_80153024
+	.4byte switch_8015303C
+	.4byte switch_80153054
+	.4byte switch_8015306C
+	.4byte switch_80153084
+	.4byte switch_8015309C
+	.4byte switch_801530B4
+	.4byte switch_801530CC
+	.4byte switch_801530E4
+	.4byte switch_801530FC
+	.4byte switch_80153114
+	.4byte switch_8015312C
+	.4byte switch_80153144
+	.4byte switch_8015315C
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153760
+	.4byte switch_80153174
+	.4byte switch_8015318C
+	.4byte switch_801531A4
+	.4byte switch_801531BC
+	.4byte switch_801531D4
+	.4byte switch_801531EC
+	.4byte switch_80153760
+	.4byte switch_80153204
+	.4byte switch_8015321C
+	.4byte switch_80153234
+	.4byte switch_8015324C
+	.4byte switch_80153264
+	.4byte switch_8015327C
+	.4byte switch_80153294
+	.4byte switch_801532AC
+	.4byte switch_801532C4
+	.4byte switch_801532DC
+	.4byte switch_801532F4
+	.4byte switch_8015330C
+	.4byte switch_80153474
+	.4byte switch_80153474
+	.4byte switch_8015352C
+	.4byte switch_8015352C
+	.4byte switch_801536C4
+	.4byte switch_80153760
+	.4byte switch_801536E0
+	.4byte switch_801536FC
+	.4byte switch_80153760
+	.4byte switch_80152954
+	.4byte switch_80152954
+	.4byte switch_80152954
+	.4byte switch_80152954
+	.4byte switch_80152954
+	.4byte switch_80152954
+	.4byte switch_80152954
+	.4byte switch_80152954
+	.4byte switch_801529F4
+	.4byte switch_801529F4
+	.4byte switch_801529F4
+	.4byte switch_801529F4
+	.4byte switch_801529F4
+	.4byte switch_801529F4
+	.4byte switch_801529F4
+	.4byte switch_801529F4
+	.4byte switch_801529F4
+	.4byte switch_801529F4
+	.4byte switch_801529F4
+	.4byte switch_801529F4
+	.4byte switch_80153718
+	.4byte switch_80153718
+	.4byte switch_80153718
+	.4byte switch_80153718
+	.4byte switch_80153718
+	.4byte switch_80153718
+	.4byte switch_80153718
+	.4byte switch_80153718
+	.4byte switch_80153760
+	.4byte switch_8015352C
+	.4byte switch_8015352C
+	.4byte switch_8015352C
+	.4byte switch_80153324
+	.4byte switch_8015333C
+	.4byte switch_8015333C
+
+
+.global lbl_80532CD4
+lbl_80532CD4:
+	# ROM: 0x52EDD4
+	.4byte switch_80152900
+	.4byte switch_801524AC
+	.4byte switch_801525AC
+	.4byte switch_80152900
+	.4byte switch_801525C4
+	.4byte switch_801525DC
+	.4byte switch_80152320
+	.4byte switch_8015265C
+	.4byte switch_8015268C
+	.4byte switch_8015265C
+	.4byte switch_801524AC
+	.4byte switch_80152738
+	.4byte switch_80152810
+	.4byte switch_80152840
+	.4byte switch_80152870
+	.4byte switch_80152870
+	.4byte switch_80152870
+	.4byte switch_80152870
+	.4byte switch_80152870
+	.4byte switch_80152870
+	.4byte switch_80152870
+	.4byte switch_80152870
+	.4byte switch_80152900
+	.4byte switch_80152900
+	.4byte switch_80152900
+	.4byte switch_80152900
+	.4byte switch_80152900
+	.4byte switch_80152900
+	.4byte switch_80152900
+	.4byte switch_80152900
+	.4byte switch_80152900
+	.4byte switch_80152900
+	.4byte switch_80152900
+	.4byte switch_80152900
+	.4byte switch_801528C0
+	.4byte switch_8015245C
+	.4byte switch_80152470
+
+
+.global __vt__cf_CAIAction
+__vt__cf_CAIAction:
+	.4byte __RTTI__cf_CAIAction
+	.4byte 0
+	.4byte func_8014AA18
+	.4byte func_8014AB28
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669CE8
+lbl_80669CE8:
+	# ROM: 0x573B48
+	.4byte 0
+
+
+.global lbl_80669CEC
+lbl_80669CEC:
+	# ROM: 0x573B4C
+	.4byte 0xC1700000
+
+
+.global lbl_80669CF0
+lbl_80669CF0:
+	# ROM: 0x573B50
+	.4byte 0xC0400000
+
+
+.global lbl_80669CF4
+lbl_80669CF4:
+	# ROM: 0x573B54
+	.float 10.0
+
+
+.global lbl_80669CF8
+lbl_80669CF8:
+	# ROM: 0x573B58
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80669D00
+lbl_80669D00:
+	# ROM: 0x573B60
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80669D08
+lbl_80669D08:
+	# ROM: 0x573B68
+	.4byte 0xC1200000
+
+
+.global lbl_80669D0C
+lbl_80669D0C:
+	# ROM: 0x573B6C
+	.4byte 0x3CC90FDB
+
+
+.global lbl_80669D10
+lbl_80669D10:
+	# ROM: 0x573B70
+	.float 0.5
+
+
+.global lbl_80669D14
+lbl_80669D14:
+	# ROM: 0x573B74
+	.float 1.0
+
+
+.global lbl_80669D18
+lbl_80669D18:
+	# ROM: 0x573B78
+	.float -1.0
+
+
+.global lbl_80669D1C
+lbl_80669D1C:
+	# ROM: 0x573B7C
+	.float 0.2
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000D19C
 lbl_8000D19C:
@@ -10682,7 +11473,7 @@ lbl_8000D324:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte __ct__cf_CAIAction
 	.4byte 0x0000010C

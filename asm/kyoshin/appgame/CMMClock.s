@@ -905,7 +905,122 @@ func_8011C444:
 
 .4byte sinit_8011C418
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMMClock
+__vt__CMMClock:
+	.4byte __RTTI__CMMClock
+	.4byte 0
+	.4byte func_80117540
+	.4byte func_80039E28
+	.4byte func_8011759C
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CMMClock_hierarchy
+CMMClock_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_805302EC
+lbl_805302EC:
+	.asciz "NW4R:Pointer must not be NULL (p)"
+	.balign 4
+
+
+.global lbl_80530310
+lbl_80530310:
+	.asciz "LinkList.h"
+	.balign 4
+
+
+.global lbl_8053031C
+lbl_8053031C:
+	.asciz "NW4R:Failed assertion texMapIdx < mGXMemNum.texMap"
+	.balign 4
+
+
+.global lbl_80530350
+lbl_80530350:
+	.asciz "material.h"
+	.balign 4
+
+
+.global lbl_8053035C
+lbl_8053035C:
+	.asciz "NW4R:Failed assertion texSRTIdx < mGXMemNum.texSRT"
+	.balign 4
+
+
+.global lbl_80530390
+lbl_80530390:
+	.asciz "material.h"
+	.balign 4
+
+
+.global lbl_8053039C
+lbl_8053039C:
+	.asciz "NW4R:Failed assertion texSRTIdx < mGXMemNum.texSRT"
+	.balign 4
+
+
+.global lbl_805303D0
+lbl_805303D0:
+	.asciz "material.h"
+	.balign 4
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMMClock
+__RTTI__CMMClock:
+	.4byte CMMClock_typestr
+	.4byte CMMClock_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global CMMTex_typestr
+CMMTex_typestr:
+	.asciz "CMMTex"
+	.balign 4
+
+
+.global lbl_80669994
+lbl_80669994:
+	# ROM: 0x5737F4
+	.4byte 0x41300000
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000B804
 lbl_8000B804:
@@ -977,7 +1092,7 @@ lbl_8000B8C8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8011B778
 	.4byte 0x000003A0

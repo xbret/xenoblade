@@ -7412,7 +7412,118 @@ func_8026D3CC:
 /* 8026D4B8 00236A78  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026D4BC 00236A7C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053B0D8
+lbl_8053B0D8:
+	# ROM: 0x5371D8
+	.4byte switch_80267418
+	.4byte switch_802673A4
+	.4byte switch_802673AC
+	.4byte switch_802673E4
+	.4byte switch_802673EC
+	.4byte switch_802673B4
+	.4byte switch_802673C4
+	.4byte switch_802673CC
+	.4byte switch_802673D4
+	.4byte switch_802673DC
+	.4byte switch_80267404
+	.4byte switch_8026740C
+	.4byte switch_80267418
+	.4byte switch_802673F4
+	.4byte switch_802673FC
+	.4byte switch_80267418
+	.4byte switch_80267414
+	.4byte 0
+
+
+.global __vt__UI_CPassiveSkill
+__vt__UI_CPassiveSkill:
+	.4byte __RTTI__UI_CPassiveSkill
+	.4byte 0
+	.4byte func_8026D53C
+	.4byte func_80039E28
+	.4byte func_8026DE8C
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global UI_CPassiveSkill_hierarchy
+UI_CPassiveSkill_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__UI_CPassiveSkillLine
+__vt__UI_CPassiveSkillLine:
+	.4byte __RTTI__UI_CPassiveSkillLine
+	.4byte 0
+	.4byte func_80266B18
+
+
+.global __vt__UI_CPassiveSkillInfo
+__vt__UI_CPassiveSkillInfo:
+	.4byte __RTTI__UI_CPassiveSkillInfo
+	.4byte 0
+	.4byte func_802646A8
+
+
+.global __vt__UI_CPassiveSkillCur
+__vt__UI_CPassiveSkillCur:
+	.4byte __RTTI__UI_CPassiveSkillCur
+	.4byte 0
+	.4byte func_80263EF0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__UI_CPassiveSkill
+__RTTI__UI_CPassiveSkill:
+	.4byte UI_CPassiveSkill_typestr
+	.4byte UI_CPassiveSkill_hierarchy
+
+.global __RTTI__UI_CPassiveSkillLine
+__RTTI__UI_CPassiveSkillLine:
+	.4byte UI_CPassiveSkillLine_typestr
+	.4byte 0
+
+.global __RTTI__UI_CPassiveSkillInfo
+__RTTI__UI_CPassiveSkillInfo:
+	.4byte UI_CPassiveSkillInfo_typestr
+	.4byte 0
+
+.global __RTTI__UI_CPassiveSkillCur
+__RTTI__UI_CPassiveSkillCur:
+	.4byte UI_CPassiveSkillCur_typestr
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80017A54
 lbl_80017A54:
@@ -7677,7 +7788,7 @@ lbl_80017C0C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80266A34
 	.4byte 0x000000E4

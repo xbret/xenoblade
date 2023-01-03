@@ -1166,7 +1166,231 @@ func_8022C544:
 /* 8022C6AC 001F5C6C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8022C6B0 001F5C70  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80505B80
+lbl_80505B80:
+	.asciz "/menu/SysWin.arc"
+	.asciz "win_main"
+	.asciz "txt_sysmes01"
+	.asciz "txt_sysmes02_00"
+	.balign 4
+	.asciz "txt_sysmes02_01"
+	.asciz "txt_sysmes03"
+	.asciz "txt_sysmes04_00"
+	.asciz "txt_sysmes04_01"
+	.asciz "txt_slct01"
+	.asciz "txt_slct02"
+	.asciz "MNU_kyeassign"
+	.asciz "help"
+	.asciz "txt_close00"
+	.asciz "txt_close01"
+	.asciz "fileID_2"
+	.asciz "fileID_1"
+	.asciz "pic_btn00"
+	.asciz "pic_btn01"
+	.asciz "txt_slct%02d"
+	.asciz "nul_proportion"
+	.asciz "nul_close00"
+	.asciz "nul_slct"
+	.asciz "CSysWin"
+	.asciz "arc"
+	.asciz "mf70_cf60_syswin01.brlyt"
+	.asciz "mf70_cf60_syswin01_in.brlan"
+	.asciz "/menu/SysWin2.arc"
+	.asciz "CSysWin2"
+	.asciz "mf70_cf60_syswin00.brlyt"
+	.asciz "mf70_cf60_syswin00_in.brlan"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CSysWin
+__vt__CSysWin:
+	.4byte __RTTI__CSysWin
+	.4byte 0
+	.4byte func_8022B6A0
+	.4byte func_80039E28
+	.4byte func_8022C544
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_8022B6F4
+
+.global CSysWin_hierarchy
+CSysWin_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CSysWin
+__RTTI__CSysWin:
+	.4byte CSysWin_typestr
+	.4byte CSysWin_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AE58
+lbl_8066AE58:
+	# ROM: 0x574CB8
+	.4byte 0x432A0000
+
+
+.global lbl_8066AE5C
+lbl_8066AE5C:
+	# ROM: 0x574CBC
+	.4byte 0
+
+
+.global lbl_8066AE60
+lbl_8066AE60:
+	# ROM: 0x574CC0
+	.4byte 0xC1B80000
+
+
+.global lbl_8066AE64
+lbl_8066AE64:
+	# ROM: 0x574CC4
+	.4byte 0x43160000
+
+
+.global lbl_8066AE68
+lbl_8066AE68:
+	# ROM: 0x574CC8
+	.4byte 0xC1600000
+
+
+.global lbl_8066AE6C
+lbl_8066AE6C:
+	# ROM: 0x574CCC
+	.4byte 0x43020000
+
+
+.global lbl_8066AE70
+lbl_8066AE70:
+	# ROM: 0x574CD0
+	.4byte 0xC0A00000
+
+
+.global lbl_8066AE74
+lbl_8066AE74:
+	# ROM: 0x574CD4
+	.4byte 0x42DC0000
+
+
+.global lbl_8066AE78
+lbl_8066AE78:
+	# ROM: 0x574CD8
+	.4byte 0x40800000
+
+
+.global lbl_8066AE7C
+lbl_8066AE7C:
+	# ROM: 0x574CDC
+	.4byte 0x42B40000
+
+
+.global lbl_8066AE80
+lbl_8066AE80:
+	# ROM: 0x574CE0
+	.4byte 0x41500000
+
+
+.global lbl_8066AE84
+lbl_8066AE84:
+	# ROM: 0x574CE4
+	.4byte 0x41B00000
+
+
+.global lbl_8066AE88
+lbl_8066AE88:
+	# ROM: 0x574CE8
+	.4byte 0xC2A40000
+
+
+.global lbl_8066AE8C
+lbl_8066AE8C:
+	# ROM: 0x574CEC
+	.4byte 0xC28C0000
+
+
+.global lbl_8066AE90
+lbl_8066AE90:
+	# ROM: 0x574CF0
+	.4byte 0xC2680000
+
+
+.global lbl_8066AE94
+lbl_8066AE94:
+	# ROM: 0x574CF4
+	.4byte 0xC2380000
+
+
+.global lbl_8066AE98
+lbl_8066AE98:
+	# ROM: 0x574CF8
+	.4byte 0x428C0000
+
+
+.global lbl_8066AE9C
+lbl_8066AE9C:
+	# ROM: 0x574CFC
+	.4byte 0x2B2C2D30
+
+
+.global lbl_8066AEA0
+lbl_8066AEA0:
+	# ROM: 0x574D00
+	.4byte 0x31000000
+	.4byte 0
+
+
+.global lbl_8066AEA8
+lbl_8066AEA8:
+	# ROM: 0x574D08
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066AEB0
+lbl_8066AEB0:
+	# ROM: 0x574D10
+	.float 1.0
+	.4byte 0
+
+.global CSysWin_typestr
+CSysWin_typestr:
+	.asciz "CSysWin"
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800155E0
 lbl_800155E0:
@@ -1253,7 +1477,7 @@ lbl_80015664:
 	.4byte func_8045F8C8
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8022B618
 	.4byte 0x00000088

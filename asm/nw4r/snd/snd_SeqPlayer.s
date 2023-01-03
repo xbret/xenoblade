@@ -1560,3 +1560,36 @@ lbl_8056E3D8:
 	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C800
+lbl_8066C800:
+	# ROM: 0x576660
+	.float 1.0
+
+
+.global lbl_8066C804
+lbl_8066C804:
+	# ROM: 0x576664
+	.4byte 0
+
+
+.global lbl_8066C808
+lbl_8066C808:
+	# ROM: 0x576668
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066C810
+lbl_8066C810:
+	# ROM: 0x576670
+	.4byte 0x476A6000
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8063B4C0
+lbl_8063B4C0:
+	.skip 0x20

@@ -64,3 +64,16 @@ lbl_8056D548:
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C5D0
+lbl_8066C5D0:
+	# ROM: 0x576430
+	.4byte 0
+
+
+.global lbl_8066C5D4
+lbl_8066C5D4:
+	# ROM: 0x576434
+	.float 1.0

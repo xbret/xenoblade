@@ -556,7 +556,167 @@ func_80096FA8:
 /* 80096FFC 000605BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80097000 000605C0  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global cf_CtrlPad_typestr
+cf_CtrlPad_typestr:
+	.asciz "cf::CtrlPad"
+
+.global cf_CtrlRemote_typestr
+cf_CtrlRemote_typestr:
+	.asciz "cf::CtrlRemote"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8052B3D8
+lbl_8052B3D8:
+	# ROM: 0x5274D8
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000010
+	.4byte 0x00000020
+	.4byte 0x00000010
+	.4byte 0x00000008
+	.4byte 0x00000008
+	.4byte 0x00001000
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0x00000004
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0x00000020
+	.4byte 0x00000008
+	.4byte 0x00000800
+	.4byte 0
+	.4byte 0x00000800
+	.4byte 0x00000800
+	.4byte 0x00000080
+	.4byte 0x00000600
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CtrlPad
+__vt__cf_CtrlPad:
+	.4byte __RTTI__cf_CtrlPad
+	.4byte 0
+	.4byte func_80096FA8
+	.4byte func_80098CB8
+	.4byte func_8009C860
+	.4byte func_8009C87C
+	.4byte func_80096F9C
+	.4byte func_80096F90
+	.4byte func_80096F84
+	.4byte func_80096F78
+	.4byte func_80096F6C
+	.4byte func_80096F60
+	.4byte func_80096F54
+	.4byte func_80096F48
+	.4byte func_80096F3C
+	.4byte func_800888A0
+	.4byte func_80096F24
+	.4byte func_80096F18
+	.4byte func_80096F0C
+	.4byte func_80096F00
+	.4byte func_80096EF4
+	.4byte func_80096EE8
+	.4byte func_800D1F0C
+	.4byte func_8009C6BC
+	.4byte func_800D11B0
+	.4byte func_800987A0
+	.4byte func_800987EC
+	.4byte func_800987F8
+	.4byte func_80098800
+	.4byte func_80098808
+	.4byte func_800D2A5C
+	.4byte func_800D2D64
+	.4byte func_80098810
+	.4byte func_80098A04
+	.4byte func_800D34D4
+	.4byte func_80098EF8
+	.4byte func_80097A5C
+	.4byte func_80097C74
+	.4byte func_80097DFC
+	.4byte func_80098AF0
+	.4byte func_80098B64
+	.4byte func_8009A1DC
+	.4byte func_80096974
+	.4byte func_8009AE80
+	.4byte func_8009B788
+	.4byte func_8009BD14
+	.4byte func_8009C1BC
+	.4byte func_80096F30
+
+.global cf_CtrlPad_hierarchy
+cf_CtrlPad_hierarchy:
+	.4byte __RTTI__CActInput
+	.4byte 0
+	.4byte __RTTI__cf_CtrlBase
+	.4byte 0
+	.4byte __RTTI__cf_CtrlAct
+	.4byte 0
+	.4byte __RTTI__cf_CtrlPc
+	.4byte 0
+	.4byte __RTTI__cf_CtrlRemote
+	.4byte 0
+	.4byte 0
+
+.global cf_CtrlRemote_hierarchy
+cf_CtrlRemote_hierarchy:
+	.4byte __RTTI__CActInput
+	.4byte 0
+	.4byte __RTTI__cf_CtrlBase
+	.4byte 0
+	.4byte __RTTI__cf_CtrlAct
+	.4byte 0
+	.4byte __RTTI__cf_CtrlPc
+	.4byte 0
+	.4byte 0
+
+.global cf_CtrlPc_hierarchy
+cf_CtrlPc_hierarchy:
+	.4byte __RTTI__CActInput
+	.4byte 0
+	.4byte __RTTI__cf_CtrlBase
+	.4byte 0
+	.4byte __RTTI__cf_CtrlAct
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CtrlPad
+__RTTI__cf_CtrlPad:
+	.4byte cf_CtrlPad_typestr
+	.4byte cf_CtrlPad_hierarchy
+
+.global __RTTI__cf_CtrlRemote
+__RTTI__cf_CtrlRemote:
+	.4byte cf_CtrlRemote_typestr
+	.4byte cf_CtrlRemote_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80668FA0
+lbl_80668FA0:
+	# ROM: 0x572E00
+	.4byte 0x3CC90FDB
+	.4byte 0
+	
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80008DA4
 lbl_80008DA4:
@@ -584,7 +744,7 @@ lbl_80008DD0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8009689C
 	.4byte 0x00000080

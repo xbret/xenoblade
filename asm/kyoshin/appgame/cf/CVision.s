@@ -9886,8 +9886,9 @@ func_801ABDCC:
 /* 801ABDD8 00175398  38 63 00 15 */	addi r3, r3, 0x15
 /* 801ABDDC 0017539C  38 84 6B B0 */	addi r4, r4, lbl_80536BB0@l
 /* 801ABDE0 001753A0  48 2F 4D B0 */	b func_804A0B90
-.global switch_801ABDE4
-switch_801ABDE4:
+
+.global func_801ABDE4
+func_801ABDE4:
 /* 801ABDE4 001753A4  38 60 00 00 */	li r3, 0
 /* 801ABDE8 001753A8  4E 80 00 20 */	blr 
 
@@ -9899,7 +9900,758 @@ func_801ABDEC:
 /* 801ABDF8 001753B8  38 84 6C 48 */	addi r4, r4, lbl_80536C48@l
 /* 801ABDFC 001753BC  48 2F 4D 94 */	b func_804A0B90
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804FF788
+lbl_804FF788:
+	# ROM: 0x4FB888
+	.4byte 0x000000A1
+	.4byte 0x000000A2
+	.4byte 0x000000A3
+	.4byte 0x000000A4
+	.4byte 0x000000B8
+	.4byte 0x000000B8
+	.4byte 0x000000BD
+	.4byte 0x000000BD
+
+.global lbl_804FF7A8
+lbl_804FF7A8:
+	.4byte 0x3CF5C28F
+	.4byte 0x3D75C28F
+	.4byte 0x3DB851EC
+	.4byte 0x3DF5C28F
+	.4byte 0x3E19999A
+
+.global cf_CVision_typestr
+cf_CVision_typestr:
+	.asciz "cf::CVision"
+
+
+.global lbl_804FF7C8
+lbl_804FF7C8:
+	.asciz "PosX_L%d"
+	.asciz "PosY_L%d"
+	.asciz "PosZ_L%d"
+	.asciz "posX"
+	.asciz "posY"
+	.asciz "posZ"
+	.asciz "Radius"
+	.asciz "se_id"
+	.asciz "fixed"
+	.asciz "loop"
+	.asciz "volume"
+	.asciz "in_out"
+	.asciz "caster"
+	.asciz "se_TYPE"
+	.asciz "weather"
+	.asciz "playtime1"
+	.asciz "playtime2"
+	.asciz "playtime3"
+	.asciz "pos_questID"
+	.asciz "pos_qst_sflg"
+	.asciz "pos_qst_eflg"
+	.asciz "pos_sflg1"
+	.asciz "pos_eflg1"
+	.asciz "pos_sflg2"
+	.asciz "pos_eflg2"
+	.balign 4
+	.4byte 0
+
+.global lbl_804FF8A0
+lbl_804FF8A0:
+	.asciz "setFieldBgm"
+
+.global lbl_804FF8AC
+lbl_804FF8AC:
+	.asciz "setTownBgm"
+	.balign 4
+
+.global lbl_804FF8B8
+lbl_804FF8B8:
+	.asciz "stopFieldBgm"
+	.balign 4
+
+.global lbl_804FF8C8
+lbl_804FF8C8:
+	.asciz "stopTownBgm"
+
+.global lbl_804FF8D4
+lbl_804FF8D4:
+	.asciz "forceFieldBgm"
+	.balign 4
+
+.global lbl_804FF8E4
+lbl_804FF8E4:
+	.asciz "setVolBgm"
+	.balign 4
+
+.global lbl_804FF8F0
+lbl_804FF8F0:
+	.asciz "playVoice"
+	.balign 4
+
+.global lbl_804FF8FC
+lbl_804FF8FC:
+	.asciz "stopVoice"
+	.balign 4
+
+.global lbl_804FF908
+lbl_804FF908:
+	.asciz "waitVoice"
+	.balign 4
+
+.global lbl_804FF914
+lbl_804FF914:
+	.asciz "playSeCommon"
+	.balign 4
+
+.global lbl_804FF924
+lbl_804FF924:
+	.asciz "playSeMap"
+	.balign 4
+
+.global lbl_804FF930
+lbl_804FF930:
+	.asciz "volSeMap"
+	.balign 4
+
+.global lbl_804FF93C
+lbl_804FF93C:
+	.asciz "stopSeCommon"
+	.balign 4
+
+.global lbl_804FF94C
+lbl_804FF94C:
+	.asciz "stopSeMap"
+	.balign 4
+
+.global lbl_804FF958
+lbl_804FF958:
+	.asciz "setCamPos"
+	.balign 4
+
+.global lbl_804FF964
+lbl_804FF964:
+	.asciz "clearCamPos"
+
+
+.global lbl_804FF970
+lbl_804FF970:
+	.asciz "snd/ahx/ev/%s/%s.ahx"
+	.asciz "snd"
+	.byte 0x00, 0x00, 0x00
+	.4byte 0
+
+
+.global lbl_804FF990
+lbl_804FF990:
+	.asciz "game"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805368E0
+lbl_805368E0:
+	# ROM: 0x5329E0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A64F8
+
+.global lbl_805368EC
+lbl_805368EC:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A4CF8
+
+.global lbl_805368F8
+lbl_805368F8:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A47D0
+
+.global lbl_80536904
+lbl_80536904:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A4BC8
+
+.global lbl_80536910
+lbl_80536910:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A4CF8
+
+.global lbl_8053691C
+lbl_8053691C:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A506C
+
+.global lbl_80536928
+lbl_80536928:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A5260
+
+.global lbl_80536934
+lbl_80536934:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A5360
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A5360
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A5BA8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A5BA8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A64F8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A6540
+
+.global lbl_8053697C
+lbl_8053697C:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A5E58
+
+.global lbl_80536988
+lbl_80536988:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A60B0
+
+.global lbl_80536994
+lbl_80536994:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A6340
+
+.global lbl_805369A0
+lbl_805369A0:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A64F8
+
+.global lbl_805369AC
+lbl_805369AC:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A64F8
+
+.global lbl_805369B8
+lbl_805369B8:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A6540
+
+.global lbl_805369C4
+lbl_805369C4:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A64F8
+
+.global lbl_805369D0
+lbl_805369D0:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A6540
+
+.global lbl_805369DC
+lbl_805369DC:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A4578
+
+.global lbl_805369E8
+lbl_805369E8:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A4194
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A6340
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A64F8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A64F8
+	.4byte __RTTI__cf_CObjectState
+	.4byte 0
+	.4byte __RTTI__cf_CObjectParam
+	.4byte 0
+	.4byte __RTTI__cf_CfObject
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__cf_CObjectState
+	.4byte 0x00003E9C
+	.4byte __RTTI__cf_CObjectParam
+	.4byte 0x00003E9C
+	.4byte __RTTI__cf_CfObject
+	.4byte 0x00003E9C
+	.4byte __RTTI__cf_CfObjectModel
+	.4byte 0x00003E9C
+	.4byte __RTTI__cf_CfObjectMove
+	.4byte 0x00003E9C
+	.4byte __RTTI__cf_CAIAction
+	.4byte 0x00003380
+	.4byte __RTTI__cf_CDebugState
+	.4byte 0x000015DC
+	.4byte __RTTI__cf_CBattleState
+	.4byte 0x00000008
+	.4byte __RTTI__cf_CActorState
+	.4byte 0
+	.4byte __RTTI__cf_CActorParam
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CVision
+__vt__cf_CVision:
+	.4byte __RTTI__cf_CVision
+	.4byte 0
+	.4byte __dt__cf_CVision
+	.4byte func_801A924C
+	.4byte func_801A6BCC
+	.4byte func_801A70DC
+	.4byte func_801A7704
+	.4byte func_801A74DC
+	.4byte func_801A7D6C
+	.4byte func_801A81FC
+	.4byte func_801A5444
+	.4byte func_801A808C
+	.4byte func_801A80FC
+	.4byte func_801A8138
+
+.global cf_CVision_hierarchy
+cf_CVision_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__cf_CDebugState
+	.4byte 0x000015DC
+	.4byte __RTTI__cf_CBattleState
+	.4byte 0x00000008
+	.4byte __RTTI__cf_CActorState
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__cf_CObjectState
+	.4byte 0
+	.4byte __RTTI__cf_CObjectParam
+	.4byte 0
+	.4byte __RTTI__cf_CfObject
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectModel
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__cf_CObjectState
+	.4byte 0
+	.4byte __RTTI__cf_CObjectParam
+	.4byte 0
+	.4byte __RTTI__cf_CfObject
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__cf_CObjectState
+	.4byte 0
+	.4byte __RTTI__cf_CObjectParam
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__cf_CObjectState
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global lbl_80536B98
+lbl_80536B98:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A9338
+
+.global lbl_80536BA4
+lbl_80536BA4:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A9338
+
+
+.global lbl_80536BB0
+lbl_80536BB0:
+	# ROM: 0x532CB0
+	.4byte lbl_8066A668
+	.4byte func_801AAD20
+	.4byte lbl_8066A670
+	.4byte func_801AAE00
+	.4byte lbl_804FF8A0
+	.4byte func_801AAEB0
+	.4byte lbl_804FF8AC
+	.4byte func_801AB038
+	.4byte lbl_804FF8B8
+	.4byte func_801AB1C0
+	.4byte lbl_804FF8C8
+	.4byte func_801AB298
+	.4byte lbl_804FF8D4
+	.4byte func_801AB370
+	.4byte lbl_804FF8E4
+	.4byte func_801AB398
+	.4byte lbl_804FF8F0
+	.4byte func_801AB484
+	.4byte lbl_804FF8FC
+	.4byte func_801AB52C
+	.4byte lbl_804FF908
+	.4byte func_801AB604
+	.4byte lbl_804FF914
+	.4byte func_801AB648
+	.4byte lbl_804FF924
+	.4byte func_801AB7D8
+	.4byte lbl_804FF930
+	.4byte func_801AB968
+	.4byte lbl_804FF93C
+	.4byte func_801ABA90
+	.4byte lbl_804FF94C
+	.4byte func_801ABB30
+	.4byte lbl_804FF958
+	.4byte func_801ABBD0
+	.4byte lbl_804FF964
+	.4byte func_801ABDA0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80536C48
+lbl_80536C48:
+	# ROM: 0x532D48
+	.4byte lbl_8066A678
+	.4byte func_801ABDE4
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CVision
+__RTTI__cf_CVision:
+	.4byte cf_CVision_typestr
+	.4byte cf_CVision_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A590
+lbl_8066A590:
+	# ROM: 0x5743F0
+	.4byte 0xC0000000
+
+
+.global lbl_8066A594
+lbl_8066A594:
+	# ROM: 0x5743F4
+	.4byte 0
+
+
+.global lbl_8066A598
+lbl_8066A598:
+	# ROM: 0x5743F8
+	.float -1.0
+
+
+.global lbl_8066A59C
+lbl_8066A59C:
+	# ROM: 0x5743FC
+	.4byte 0x3D088889
+
+
+.global lbl_8066A5A0
+lbl_8066A5A0:
+	# ROM: 0x574400
+	.4byte 0x3F19999A
+
+
+.global lbl_8066A5A4
+lbl_8066A5A4:
+	# ROM: 0x574404
+	.float 0.5
+
+
+.global lbl_8066A5A8
+lbl_8066A5A8:
+	# ROM: 0x574408
+	.4byte 0x3F555556
+
+
+.global lbl_8066A5AC
+lbl_8066A5AC:
+	# ROM: 0x57440C
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066A5B0
+lbl_8066A5B0:
+	# ROM: 0x574410
+	.float 1.0
+
+
+.global lbl_8066A5B4
+lbl_8066A5B4:
+	# ROM: 0x574414
+	.4byte 0x40000000
+
+
+.global lbl_8066A5B8
+lbl_8066A5B8:
+	# ROM: 0x574418
+	.4byte 0x3F666666
+
+
+.global lbl_8066A5BC
+lbl_8066A5BC:
+	# ROM: 0x57441C
+	.4byte 0x40400000
+
+
+.global lbl_8066A5C0
+lbl_8066A5C0:
+	# ROM: 0x574420
+	.4byte 0x40800000
+
+
+.global lbl_8066A5C4
+lbl_8066A5C4:
+	# ROM: 0x574424
+	.4byte 0x3EAAAAAB
+
+
+.global lbl_8066A5C8
+lbl_8066A5C8:
+	# ROM: 0x574428
+	.4byte 0x3E2AAAAB
+
+
+.global lbl_8066A5CC
+lbl_8066A5CC:
+	# ROM: 0x57442C
+	.4byte 0x3FAAAAAB
+
+
+.global lbl_8066A5D0
+lbl_8066A5D0:
+	# ROM: 0x574430
+	.float 10.0
+	.4byte 0
+
+
+.global lbl_8066A5D8
+lbl_8066A5D8:
+	# ROM: 0x574438
+	.4byte 0x3FE00000
+	.4byte 0
+
+
+.global lbl_8066A5E0
+lbl_8066A5E0:
+	# ROM: 0x574440
+	.4byte 0xBFE00000
+	.4byte 0
+
+
+.global lbl_8066A5E8
+lbl_8066A5E8:
+	# ROM: 0x574448
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066A5F0
+lbl_8066A5F0:
+	# ROM: 0x574450
+	.float 0.25
+
+
+.global lbl_8066A5F4
+lbl_8066A5F4:
+	# ROM: 0x574454
+	.4byte 0x3ED47AE1
+
+
+.global lbl_8066A5F8
+lbl_8066A5F8:
+	# ROM: 0x574458
+	.float 8.0
+
+
+.global lbl_8066A5FC
+lbl_8066A5FC:
+	# ROM: 0x57445C
+	.4byte 0x41400000
+
+
+.global lbl_8066A600
+lbl_8066A600:
+	# ROM: 0x574460
+	.4byte 0x43960000
+
+
+.global lbl_8066A604
+lbl_8066A604:
+	# ROM: 0x574464
+	.4byte 0x3F2AAAAB
+
+
+.global lbl_8066A608
+lbl_8066A608:
+	# ROM: 0x574468
+	.4byte 0x40200000
+
+
+.global lbl_8066A60C
+lbl_8066A60C:
+	# ROM: 0x57446C
+	.4byte 0x3E19999A
+
+
+.global lbl_8066A610
+lbl_8066A610:
+	# ROM: 0x574470
+	.4byte 0x451C4000
+
+
+.global lbl_8066A614
+lbl_8066A614:
+	# ROM: 0x574474
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066A618
+lbl_8066A618:
+	# ROM: 0x574478
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066A620
+lbl_8066A620:
+	# ROM: 0x574480
+	.float 1.0
+
+
+.global lbl_8066A624
+lbl_8066A624:
+	# ROM: 0x574484
+	.4byte 0
+
+
+.global lbl_8066A628
+lbl_8066A628:
+	# ROM: 0x574488
+	.float 0.5
+
+
+.global lbl_8066A62C
+lbl_8066A62C:
+	# ROM: 0x57448C
+	.4byte 0x3CC90FDB
+
+
+.global lbl_8066A630
+lbl_8066A630:
+	# ROM: 0x574490
+	.4byte 0x4222F983
+
+
+.global lbl_8066A634
+lbl_8066A634:
+	# ROM: 0x574494
+	.4byte 0x4B189680
+
+
+.global lbl_8066A638
+lbl_8066A638:
+	# ROM: 0x574498
+	.4byte 0x3C23D70A
+	.4byte 0
+
+
+.global lbl_8066A640
+lbl_8066A640:
+	# ROM: 0x5744A0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066A648
+lbl_8066A648:
+	# ROM: 0x5744A8
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066A650
+lbl_8066A650:
+	# ROM: 0x5744B0
+	.4byte 0x45800000
+
+
+.global lbl_8066A654
+lbl_8066A654:
+	# ROM: 0x5744B4
+	.float 1.0
+
+
+.global lbl_8066A658
+lbl_8066A658:
+	# ROM: 0x5744B8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066A660
+lbl_8066A660:
+	# ROM: 0x5744C0
+	.4byte 0
+	.4byte 0
+
+.global lbl_8066A668
+lbl_8066A668:
+	.asciz "playBgm"
+
+.global lbl_8066A670
+lbl_8066A670:
+	.asciz "stopBgm"
+
+.global lbl_8066A678
+lbl_8066A678:
+	.4byte 0x636D6400
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666C20
+lbl_80666C20:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000F864
 lbl_8000F864:
@@ -10281,7 +11033,7 @@ lbl_8000FB7C:
 	.4byte 0x00080000
 	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 
 .4byte func_801A30D8

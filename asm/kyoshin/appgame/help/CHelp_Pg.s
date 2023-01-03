@@ -29,15 +29,23 @@ func_802B85A4:
 /* 802B85FC 00281BBC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B8600 00281BC0  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066B800
+lbl_8066B800:
+	# ROM: 0x575660
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001BE08
 lbl_8001BE08:
 	.4byte 0x080A0000
 	.4byte 0
 
-
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802B85A4
 	.4byte 0x00000060

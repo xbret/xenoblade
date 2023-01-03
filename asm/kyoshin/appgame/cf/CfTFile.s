@@ -1116,7 +1116,233 @@ sinit_8006A820:
 
 .4byte sinit_8006A820
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfTFile_typestr
+cf_CfTFile_typestr:
+	.asciz "cf::CfTFile"
+
+
+.global lbl_804F6C1C
+lbl_804F6C1C:
+	.asciz "script/%02d%02d.t"
+	.balign 4
+
+
+.global lbl_804F6C30
+lbl_804F6C30:
+	.asciz "morning_h"
+	.asciz "morning_m"
+	.asciz "daytime_h"
+	.asciz "daytime_m"
+	.asciz "evening_h"
+	.asciz "evening_m"
+	.asciz "night_h"
+	.asciz "night_m"
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CfTFile
+__vt__cf_CfTFile:
+	.4byte __RTTI__cf_CfTFile
+	.4byte 0
+	.4byte func_80069E60
+	.4byte func_80039E28
+	.4byte func_80069DD4
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global cf_CfTFile_hierarchy
+cf_CfTFile_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8052A800
+lbl_8052A800:
+	# ROM: 0x526900
+	.4byte 0x0006000C
+	.4byte 0x00120000
+	.4byte 0
+
+
+.global lbl_8052A80C
+lbl_8052A80C:
+	# ROM: 0x52690C
+	.4byte 0x001E001E
+	.4byte 0x001E001E
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80668A9C
+lbl_80668A9C:
+	# ROM: 0x5728FC
+	.4byte 0x3F99999A
+
+
+.global lbl_80668AA0
+lbl_80668AA0:
+	# ROM: 0x572900
+	.float 1.0
+	.4byte 0
+
+
+.global lbl_80668AA8
+lbl_80668AA8:
+	# ROM: 0x572908
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80668AB0
+lbl_80668AB0:
+	# ROM: 0x572910
+	.4byte 0x4728C000
+	.4byte 0
+
+
+.global lbl_80668AB8
+lbl_80668AB8:
+	# ROM: 0x572918
+	.4byte 0x40E51800
+	.4byte 0
+
+
+.global lbl_80668AC0
+lbl_80668AC0:
+	# ROM: 0x572920
+	.4byte 0
+
+
+.global lbl_80668AC4
+lbl_80668AC4:
+	# ROM: 0x572924
+	.4byte 0x44E10000
+
+
+.global lbl_80668AC8
+lbl_80668AC8:
+	# ROM: 0x572928
+	.4byte 0x40380000
+	.4byte 0
+
+
+.global lbl_80668AD0
+lbl_80668AD0:
+	# ROM: 0x572930
+	.4byte 0x41F00000
+	.4byte 0
+
+
+.global lbl_80668AD8
+lbl_80668AD8:
+	# ROM: 0x572938
+	.4byte 0x404E0000
+	.4byte 0
+
+
+.global lbl_80668AE0
+lbl_80668AE0:
+	# ROM: 0x572940
+	.4byte 0x40000000
+	.4byte 0
+
+
+.global lbl_80668AE8
+lbl_80668AE8:
+	# ROM: 0x572948
+	.4byte 0x403E0000
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CfTFile
+__RTTI__cf_CfTFile:
+	.4byte cf_CfTFile_typestr
+	.4byte cf_CfTFile_hierarchy
+
+
+.global lbl_806643E8
+lbl_806643E8:
+	# ROM: 0x56FFC8
+	.float 1.0
+
+
+.global lbl_806643EC
+lbl_806643EC:
+	# ROM: 0x56FFCC
+	.2byte 0x0001
+
+
+.global lbl_806643EE
+lbl_806643EE:
+	# ROM: 0x56FFCE
+	.2byte 0x0001
+
+
+.global lbl_806643F0
+lbl_806643F0:
+	# ROM: 0x56FFD0
+	.4byte 0x00010000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666690
+lbl_80666690:
+	.skip 0x4
+.global lbl_80666694
+lbl_80666694:
+	.skip 0x4
+.global lbl_80666698
+lbl_80666698:
+	.skip 0x4
+.global lbl_8066669C
+lbl_8066669C:
+	.skip 0x4
+.global lbl_806666A0
+lbl_806666A0:
+	.skip 0x4
+.global lbl_806666A4
+lbl_806666A4:
+	.skip 0x4
+.global lbl_806666A8
+lbl_806666A8:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80007F64
 lbl_80007F64:
@@ -1224,7 +1450,7 @@ lbl_80008004:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8006994C
 	.4byte 0x00000064

@@ -4552,7 +4552,99 @@ func_80149778:
 /* 80149778 00112D38  38 60 00 00 */	li r3, 0
 /* 8014977C 00112D3C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804FD0D8
+lbl_804FD0D8:
+	.asciz "name_dbg"
+	.asciz "name"
+	.byte 0x00
+	.asciz "elem"
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CBattleState
+__vt__cf_CBattleState:
+	.4byte __RTTI__cf_CBattleState
+	.4byte 0
+	.4byte func_80147784
+	.4byte func_80149778
+	.4byte func_80149770
+	.4byte func_80147790
+	.4byte func_801463A8
+	.4byte func_8014780C
+	.4byte func_801484F8
+	.4byte func_80147BE8
+	.4byte func_80148458
+	.4byte func_80148014
+	.4byte func_801485C4
+	.4byte func_80148584
+	.4byte func_80148738
+	.4byte func_80148748
+	.4byte func_80148758
+	.4byte func_80148768
+	.4byte func_8014778C
+	.4byte func_80148010
+	.4byte func_801463A4
+	.4byte func_800AFB90
+	.4byte func_800AFB80
+	.4byte func_800AFB70
+	.4byte func_800AFB60
+	.4byte func_800AFB38
+	.4byte func_800AFB30
+	.4byte func_80147960
+	.4byte func_800AFB28
+	.4byte func_800AFB18
+	.4byte func_80147A8C
+	.4byte func_80149490
+	.4byte func_801494A0
+	.4byte func_80149600
+	.4byte func_80149610
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80664B40
+lbl_80664B40:
+	# ROM: 0x570720
+	.4byte 0
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669CC0
+lbl_80669CC0:
+	# ROM: 0x573B20
+	.float 1.0
+
+
+.global lbl_80669CC4
+lbl_80669CC4:
+	# ROM: 0x573B24
+	.float 0.5
+
+
+.global lbl_80669CC8
+lbl_80669CC8:
+	# ROM: 0x573B28
+	.4byte 0x3FF80000
+	.4byte 0
+
+
+.global lbl_80669CD0
+lbl_80669CD0:
+	# ROM: 0x573B30
+	.4byte 0
+
+
+.global lbl_80669CD4
+lbl_80669CD4:
+	# ROM: 0x573B34
+	.4byte 0x3F666666
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000CFE4
 lbl_8000CFE4:
@@ -4620,7 +4712,7 @@ lbl_8000D044:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte __ct__cf_CBattleState
 	.4byte 0x000000A8

@@ -580,3 +580,9 @@ lbl_8051AC08:
 	# ROM: 0x516D08
 	.4byte lbl_8051ABD8
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E9B00
+lbl_805E9B00:
+	.skip 0x8

@@ -175,7 +175,50 @@ func_802ABCB4:
 /* 802ABDA8 00275368  38 21 00 10 */	addi r1, r1, 0x10
 /* 802ABDAC 0027536C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfGimmickSaveOff_typestr
+cf_CfGimmickSaveOff_typestr:
+	.asciz "cf::CfGimmickSaveOff"
+	.balign 4
+
+
+.global lbl_8050C140
+lbl_8050C140:
+	.asciz "naviOff"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global __vt__cf_CfGimmickSaveOff
+__vt__cf_CfGimmickSaveOff:
+	.4byte __RTTI__cf_CfGimmickSaveOff
+	.4byte 0
+	.4byte func_802ABC5C
+	.4byte func_8020896C
+	.4byte func_802ABCB4
+	.4byte func_801F4B64
+	.4byte func_801F4BF8
+	.4byte func_801F4C8C
+	.4byte func_80208988
+
+.global cf_CfGimmickSaveOff_hierarchy
+cf_CfGimmickSaveOff_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0
+	.4byte __RTTI__cf_CfGimmick
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__cf_CfGimmickSaveOff
+__RTTI__cf_CfGimmickSaveOff:
+	.4byte cf_CfGimmickSaveOff_typestr
+	.4byte cf_CfGimmickSaveOff_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001B10C
 lbl_8001B10C:
@@ -198,7 +241,7 @@ lbl_8001B130:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802ABB40
 	.4byte 0x0000011C

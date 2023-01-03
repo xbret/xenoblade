@@ -815,3 +815,12 @@ lbl_8051BAB8:
 	.asciz "E2005012822: Invalid parameter lsc=NULL\n"
 	.balign 4
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lsc_obj
+lsc_obj:
+	.skip 0x4700
+.global lbl_805EFA80
+lbl_805EFA80:
+	.skip 0x10

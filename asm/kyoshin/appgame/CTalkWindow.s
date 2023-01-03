@@ -2411,7 +2411,297 @@ func_8012DF88:
 
 .4byte sinit_8012DE98
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CTalkWindow_typestr
+CTalkWindow_typestr:
+	.asciz "CTalkWindow"
+
+
+.global lbl_804FB4E4
+lbl_804FB4E4:
+	.asciz "CTalkWindow"
+	.asciz "mf70_cf00_twin00.brlyt"
+	.asciz "mf70_cf00_twin00_in.brlan"
+	.asciz "mf70_cf00_twin00_def.brlan"
+	.asciz "mf70_cf00_twin00_out.brlan"
+	.asciz "mf70_cf00_twin00_fadeout.brlan"
+	.asciz "mf70_cf00_twin00_fadein.brlan"
+	.asciz "txt_name"
+	.asciz "txt_shadow_01"
+	.asciz "txt_shadow_02"
+	.asciz "txt_shadow_03"
+	.asciz "txt_shadow_04"
+	.asciz "txt_mess00"
+	.asciz "txt_mess01"
+	.balign 4
+	.asciz "txt_mess02"
+	.asciz "txt_mess03"
+	.asciz "pic_tail_over"
+	.asciz "pic_tail_under"
+	.asciz "win_n"
+	.asciz "win_a"
+	.asciz "mf70_cf00_twin_tail_n.tpl"
+	.asciz "mf70_cf00_twin_line_n.tpl"
+	.asciz "mf70_cf00_twin_tail_a.tpl"
+	.asciz "mf70_cf00_twin_line_a.tpl"
+	.asciz "mf70_cf00_twin_tail_t.tpl"
+	.asciz "mf70_cf00_twin_line_t.tpl"
+	.asciz "ep100"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80531740
+lbl_80531740:
+	# ROM: 0x52D840
+	.4byte lbl_80669B30
+	.4byte lbl_80669B38
+	.4byte lbl_80669B30
+	.4byte lbl_80669B30
+
+
+.global lbl_80531750
+lbl_80531750:
+	# ROM: 0x52D850
+	.4byte switch_8012BF50
+	.4byte switch_8012BE94
+	.4byte switch_8012BEB8
+	.4byte switch_8012BED4
+	.4byte switch_8012BF04
+	.4byte switch_8012BF10
+	.4byte switch_8012BF2C
+	.4byte switch_8012BF40
+	.4byte switch_8012BF50
+	.4byte 0
+
+
+.global __vt__CTalkWindow
+__vt__CTalkWindow:
+	.4byte __RTTI__CTalkWindow
+	.4byte 0
+	.4byte func_8012BD5C
+	.4byte CChildListNode_Reset
+	.4byte func_8012BDDC
+	.4byte func_8012C7F8
+	.4byte func_8012C8A8
+	.4byte func_8012CBD0
+	.4byte func_80043F20
+	.4byte __RTTI__CTalkWindow
+	.4byte 0xFFFFFF94
+	.4byte func_8012DF78
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CTalkWindow
+	.4byte 0xFFFFFF90
+	.4byte func_8012DF88
+	.4byte func_8012DF80
+	.4byte func_8012CBD4
+
+.global CTalkWindow_hierarchy
+CTalkWindow_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000070
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CTalkWindow
+__RTTI__CTalkWindow:
+	.4byte CTalkWindow_typestr
+	.4byte CTalkWindow_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669B30
+lbl_80669B30:
+	.asciz "win_n"
+	.balign 4
+
+.global lbl_80669B38
+lbl_80669B38:
+	.asciz "win_a"
+	.balign 4
+
+
+.global lbl_80669B40
+lbl_80669B40:
+	# ROM: 0x5739A0
+	.4byte 0x42180000
+
+
+.global lbl_80669B44
+lbl_80669B44:
+	# ROM: 0x5739A4
+	.float -1.0
+
+
+.global lbl_80669B48
+lbl_80669B48:
+	# ROM: 0x5739A8
+	.4byte 0
+
+
+.global lbl_80669B4C
+lbl_80669B4C:
+	# ROM: 0x5739AC
+	.float 1.0
+
+
+.global lbl_80669B50
+lbl_80669B50:
+	# ROM: 0x5739B0
+	.4byte 0x43A00000
+
+
+.global lbl_80669B54
+lbl_80669B54:
+	# ROM: 0x5739B4
+	.4byte 0x43600000
+
+
+.global lbl_80669B58
+lbl_80669B58:
+	# ROM: 0x5739B8
+	.float 0.5
+
+
+.global lbl_80669B5C
+lbl_80669B5C:
+	# ROM: 0x5739BC
+	.4byte 0x41A00000
+
+
+.global lbl_80669B60
+lbl_80669B60:
+	# ROM: 0x5739C0
+	.4byte 0xC3A00000
+
+
+.global lbl_80669B64
+lbl_80669B64:
+	# ROM: 0x5739C4
+	.4byte 0xC3600000
+
+
+.global lbl_80669B68
+lbl_80669B68:
+	# ROM: 0x5739C8
+	.4byte 0x42480000
+
+
+.global lbl_80669B6C
+lbl_80669B6C:
+	# ROM: 0x5739CC
+	.4byte 0xC3480000
+
+
+.global lbl_80669B70
+lbl_80669B70:
+	# ROM: 0x5739D0
+	.4byte 0x43480000
+
+
+.global lbl_80669B74
+lbl_80669B74:
+	# ROM: 0x5739D4
+	.4byte 0x3F4CCCCD
+
+
+.global lbl_80669B78
+lbl_80669B78:
+	# ROM: 0x5739D8
+	.4byte 0x40400000
+
+
+.global lbl_80669B7C
+lbl_80669B7C:
+	# ROM: 0x5739DC
+	.4byte 0x421C0000
+
+
+.global lbl_80669B80
+lbl_80669B80:
+	# ROM: 0x5739E0
+	.4byte 0x41900000
+
+
+.global lbl_80669B84
+lbl_80669B84:
+	# ROM: 0x5739E4
+	.4byte 0x42100000
+
+
+.global lbl_80669B88
+lbl_80669B88:
+	# ROM: 0x5739E8
+	.4byte 0x43700000
+
+
+.global lbl_80669B8C
+lbl_80669B8C:
+	# ROM: 0x5739EC
+	.4byte 0xC3700000
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80577268
+lbl_80577268:
+	.skip 0xC0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666938
+lbl_80666938:
+	.skip 0x4
+.global lbl_8066693C
+lbl_8066693C:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000C21C
 lbl_8000C21C:
@@ -2499,7 +2789,7 @@ lbl_8000C2E4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8012BC44
 	.4byte 0x00000118

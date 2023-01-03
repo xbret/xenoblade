@@ -1289,7 +1289,148 @@ func_80276C28:
 /* 80276C28 002401E8  38 63 FF A4 */	addi r3, r3, -92
 /* 80276C2C 002401EC  4B FF ED 9C */	b func_802759C8
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuLvUp_typestr
+CMenuLvUp_typestr:
+	.asciz "CMenuLvUp"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_8050A2F0
+lbl_8050A2F0:
+	.asciz "CMenuLvUp"
+	.asciz "mf71_battle18_lv.brlyt"
+	.asciz "mf71_battle18_lv_in.brlan"
+	.asciz "mf71_battle19_mstr.brlyt"
+	.asciz "mf71_battle19_mstr_in.brlan"
+	.asciz "pic_kiz00"
+	.asciz "pic_kiz01"
+	.asciz "pic_ps00"
+	.asciz "pic_ps01"
+	.asciz "pic_at00"
+	.asciz "pic_at01"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuLvUp
+__vt__CMenuLvUp:
+	.4byte __RTTI__CMenuLvUp
+	.4byte 0
+	.4byte func_802759C8
+	.4byte CChildListNode_Reset
+	.4byte func_80275A3C
+	.4byte func_80275BE4
+	.4byte func_80275CC0
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuLvUp
+	.4byte 0xFFFFFFA8
+	.4byte func_80276C18
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuLvUp
+	.4byte 0xFFFFFFA4
+	.4byte func_80276C28
+	.4byte func_80276C20
+	.4byte func_80275E7C
+
+.global CMenuLvUp_hierarchy
+CMenuLvUp_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000005C
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuLvUp
+__RTTI__CMenuLvUp:
+	.4byte CMenuLvUp_typestr
+	.4byte CMenuLvUp_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B2A8
+lbl_8066B2A8:
+	# ROM: 0x575108
+	.4byte 0
+
+
+.global lbl_8066B2AC
+lbl_8066B2AC:
+	# ROM: 0x57510C
+	.float 1.0
+
+
+.global lbl_8066B2B0
+lbl_8066B2B0:
+	# ROM: 0x575110
+	.4byte 0x43A00000
+
+
+.global lbl_8066B2B4
+lbl_8066B2B4:
+	# ROM: 0x575114
+	.4byte 0x43600000
+
+
+.global lbl_8066B2B8
+lbl_8066B2B8:
+	# ROM: 0x575118
+	.float -1.0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806671F0
+lbl_806671F0:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800185E0
 lbl_800185E0:
@@ -1377,7 +1518,7 @@ lbl_800186A8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802759C8
 	.4byte 0x00000074

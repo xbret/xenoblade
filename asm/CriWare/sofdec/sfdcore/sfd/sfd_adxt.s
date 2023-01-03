@@ -1651,3 +1651,18 @@ lbl_8051FF18:
 	.4byte 0x80000000
 	.asciz "(c)CRI"
 	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global sfadxt_para
+sfadxt_para:
+	.skip 0x1C
+.global lbl_8060A2BC
+lbl_8060A2BC:
+	.skip 0x4
+.global lbl_8060A2C0
+lbl_8060A2C0:
+	.skip 0x4
+.global lbl_8060A2C4
+lbl_8060A2C4:
+	.skip 0x4

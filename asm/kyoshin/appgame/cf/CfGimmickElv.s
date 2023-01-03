@@ -1668,7 +1668,135 @@ func_8020C274:
 /* 8020C32C 001D58EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8020C330 001D58F0  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfGimmickElv_typestr
+cf_CfGimmickElv_typestr:
+	.asciz "cf::CfGimmickElv"
+	.balign 4
+
+
+.global lbl_80503D9C
+lbl_80503D9C:
+	.asciz "mapObj"
+	.asciz "LIFTLOD"
+	.asciz "shtALOD"
+	.asciz "shtBLOD"
+	.asciz "swtLOD"
+	.asciz "switchEF"
+	.asciz "switchSE"
+	.asciz "shtSE"
+	.asciz "LSSE"
+	.asciz "LLSE"
+	.asciz "LESE"
+	.asciz "LODSTOP"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80539020
+lbl_80539020:
+	# ROM: 0x535120
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020B474
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020B5C4
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020B844
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020B870
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020B89C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020BA98
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020BCA8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8020C274
+
+
+.global __vt__cf_CfGimmickElv
+__vt__cf_CfGimmickElv:
+	.4byte __RTTI__cf_CfGimmickElv
+	.4byte 0
+	.4byte func_8020B180
+	.4byte func_8020896C
+	.4byte func_8020B20C
+	.4byte func_801F4B64
+	.4byte func_801F4BF8
+	.4byte func_801F4C8C
+	.4byte func_8020B2E4
+
+.global cf_CfGimmickElv_hierarchy
+cf_CfGimmickElv_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0
+	.4byte __RTTI__cf_CfGimmick
+	.4byte 0
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AC40
+lbl_8066AC40:
+	# ROM: 0x574AA0
+	.4byte 0
+
+
+.global lbl_8066AC44
+lbl_8066AC44:
+	# ROM: 0x574AA4
+	.float 1.0
+
+
+.global lbl_8066AC48
+lbl_8066AC48:
+	# ROM: 0x574AA8
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066AC50
+lbl_8066AC50:
+	# ROM: 0x574AB0
+	.4byte 0x40A00000
+
+
+.global lbl_8066AC54
+lbl_8066AC54:
+	# ROM: 0x574AB4
+	.4byte 0x41F00000
+
+
+.global lbl_8066AC58
+lbl_8066AC58:
+	# ROM: 0x574AB8
+	.4byte 0x40800000
+
+
+.global lbl_8066AC5C
+lbl_8066AC5C:
+	# ROM: 0x574ABC
+	.4byte 0x43480000
+
+
+.global lbl_8066AC60
+lbl_8066AC60:
+	.4byte 0x44610000
+	.4byte 0
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80013028
 lbl_80013028:
@@ -1740,8 +1868,14 @@ lbl_800130A8:
 	.4byte 0x08080000
 	.4byte 0
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.global __RTTI__cf_CfGimmickElv
+__RTTI__cf_CfGimmickElv:
+	.4byte cf_CfGimmickElv_typestr
+	.4byte cf_CfGimmickElv_hierarchy
+
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8020AB80
 	.4byte 0x00000600

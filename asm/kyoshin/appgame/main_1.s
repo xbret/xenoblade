@@ -73,7 +73,7 @@ func_80039F6C:
 func_80039F90:
 /* 80039F90 00003550  48 46 5D 1C */	b func_8049FCAC
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800067C4
 lbl_800067C4:
@@ -90,12 +90,12 @@ lbl_800067D4:
 	.4byte 0x00080000
 	.4byte 0
 
-#.global lbl_800067DC
-#lbl_800067DC:
+.global lbl_800067DC
+lbl_800067DC:
 #	.4byte 0x00080000
 #	.4byte 0
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 
 	.4byte func_80039EFC

@@ -438,3 +438,17 @@ MPSLIB_version_str:
 	.asciz "\nCRI MPS/WII Ver.2.064 Build:Nov 13 2008 18:21:29\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+#actually cri_verstr_ptr, only named this to avoid conflicts for now
+#change later
+.global cri_mps_verstr_ptr
+cri_mps_verstr_ptr:
+	.skip 0x4
+.global MPSLIB_libwork
+MPSLIB_libwork:
+	.skip 0x4
+.global mpslib_hn_last
+mpslib_hn_last:
+	.skip 0x8

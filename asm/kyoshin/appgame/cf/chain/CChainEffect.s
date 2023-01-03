@@ -244,7 +244,47 @@ func_802A0AE0:
 /* 802A0AF4 0026A0B4  90 03 00 08 */	stw r0, 8(r3)
 /* 802A0AF8 0026A0B8  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CChainEffect_typestr
+cf_CChainEffect_typestr:
+	.asciz "cf::CChainEffect"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CChainEffect
+__vt__cf_CChainEffect:
+	.4byte __RTTI__cf_CChainEffect
+	.4byte 0
+	.4byte func_800D8D3C
+	.4byte func_802A0AE0
+
+.global cf_CChainEffect_hierarchy
+cf_CChainEffect_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CChainEffect
+__RTTI__cf_CChainEffect:
+	.4byte cf_CChainEffect_typestr
+	.4byte cf_CChainEffect_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066B4F8
+lbl_8066B4F8:
+	# ROM: 0x575358
+	.4byte 0x3F19999A
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001A868
 lbl_8001A868:
@@ -262,7 +302,7 @@ lbl_8001A878:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A0818
 	.4byte 0x000000C0

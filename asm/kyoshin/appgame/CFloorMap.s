@@ -5900,7 +5900,762 @@ sinit_80250CB4:
 
 .4byte sinit_80250CB4
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80506E98
+lbl_80506E98:
+	# ROM: 0x502F98
+	.4byte 0
+	.4byte 0x00010017
+	.4byte 0x002E0048
+	.4byte 0x00530068
+	.4byte 0x007E009B
+	.4byte 0x000000B1
+	.4byte 0x00BC00D7
+	.4byte 0x00E300E8
+	.4byte 0x00FB0115
+	.4byte 0x01260135
+	.4byte 0x00000151
+	.4byte 0x0000016B
+	.4byte 0x0182019A
+	.4byte 0x01A90000
+	.4byte 0x01AF0000
+
+.global lbl_80506ED4
+lbl_80506ED4:
+	.asciz "mf03_map01_flr0101.brlyt"
+	.balign 4
+
+.global lbl_80506EF0
+lbl_80506EF0:
+	.asciz "mf03_map01_flr0201.brlyt"
+	.balign 4
+
+.global lbl_80506F0C
+lbl_80506F0C:
+	.asciz "mf03_map01_flr0301.brlyt"
+	.balign 4
+
+.global lbl_80506F28
+lbl_80506F28:
+	.asciz "mf03_map01_flr0401.brlyt"
+	.balign 4
+
+.global lbl_80506F44
+lbl_80506F44:
+	.asciz "mf03_map01_flr0402.brlyt"
+	.balign 4
+
+.global lbl_80506F60
+lbl_80506F60:
+	.asciz "mf03_map01_flr0501.brlyt"
+	.balign 4
+
+.global lbl_80506F7C
+lbl_80506F7C:
+	.asciz "mf03_map01_flr0601.brlyt"
+	.balign 4
+
+.global lbl_80506F98
+lbl_80506F98:
+	.asciz "mf03_map01_flr0701.brlyt"
+	.balign 4
+
+.global lbl_80506FB4
+lbl_80506FB4:
+	.asciz "mf03_map01_flr0801.brlyt"
+	.balign 4
+
+.global lbl_80506FD0
+lbl_80506FD0:
+	.asciz "mf03_map01_flr0901.brlyt"
+	.balign 4
+
+.global lbl_80506FEC
+lbl_80506FEC:
+	.asciz "mf03_map01_flr1001.brlyt"
+	.balign 4
+
+.global lbl_80507008
+lbl_80507008:
+	.asciz "mf03_map01_flr1101.brlyt"
+	.balign 4
+
+.global lbl_80507024
+lbl_80507024:
+	.asciz "mf03_map01_flr1201.brlyt"
+	.balign 4
+
+.global lbl_80507040
+lbl_80507040:
+	.asciz "mf03_map01_flr1202.brlyt"
+	.balign 4
+
+.global lbl_8050705C
+lbl_8050705C:
+	.asciz "mf03_map01_flr1301.brlyt"
+	.balign 4
+
+.global lbl_80507078
+lbl_80507078:
+	.asciz "mf03_map01_flr1401.brlyt"
+	.balign 4
+
+.global lbl_80507094
+lbl_80507094:
+	.asciz "mf03_map01_flr1501.brlyt"
+	.balign 4
+
+.global lbl_805070B0
+lbl_805070B0:
+	.asciz "mf03_map01_flr1601.brlyt"
+	.balign 4
+
+.global lbl_805070CC
+lbl_805070CC:
+	.asciz "mf03_map01_flr1701.brlyt"
+	.balign 4
+
+.global lbl_805070E8
+lbl_805070E8:
+	.asciz "mf03_map01_flr1801.brlyt"
+	.balign 4
+
+.global lbl_80507104
+lbl_80507104:
+	.asciz "mf03_map01_flr1901.brlyt"
+	.balign 4
+
+.global lbl_80507120
+lbl_80507120:
+	.asciz "mf03_map01_flr2001.brlyt"
+	.balign 4
+
+.global lbl_8050713C
+lbl_8050713C:
+	.asciz "mf03_map01_flr2101.brlyt"
+	.balign 4
+
+.global lbl_80507158
+lbl_80507158:
+	.asciz "mf03_map01_flr2201.brlyt"
+	.balign 4
+
+.global lbl_80507174
+lbl_80507174:
+	.asciz "mf03_map01_flr2301.brlyt"
+	.balign 4
+
+.global lbl_80507190
+lbl_80507190:
+	.asciz "mf03_map01_flr2401.brlyt"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_805071B0
+lbl_805071B0:
+	# ROM: 0x5032B0
+	.4byte 0
+	.4byte lbl_80506ED4
+	.4byte lbl_80506EF0
+	.4byte lbl_80506F0C
+	.4byte lbl_80506F28
+	.4byte lbl_80506F44
+	.4byte lbl_80506F60
+	.4byte lbl_80506F7C
+	.4byte lbl_80506F98
+	.4byte lbl_80506FB4
+	.4byte lbl_80506FD0
+	.4byte lbl_80506FEC
+	.4byte lbl_80507008
+	.4byte lbl_80507024
+	.4byte lbl_80507040
+	.4byte lbl_8050705C
+	.4byte lbl_80507078
+	.4byte lbl_80507094
+	.4byte lbl_805070B0
+	.4byte lbl_805070B0
+	.4byte lbl_805070CC
+	.4byte lbl_805070E8
+	.4byte lbl_80507104
+	.4byte lbl_80507120
+	.4byte lbl_8050713C
+	.4byte lbl_80507158
+	.4byte lbl_80507174
+	.4byte lbl_80507190
+
+.global lbl_80507220
+lbl_80507220:
+	.asciz "/menu/floor_ma0101.arc"
+	.balign 4
+
+.global lbl_80507238
+lbl_80507238:
+	.asciz "/menu/floor_ma0201.arc"
+	.balign 4
+
+.global lbl_80507250
+lbl_80507250:
+	.asciz "/menu/floor_ma0301.arc"
+	.balign 4
+
+.global lbl_80507268
+lbl_80507268:
+	.asciz "/menu/floor_ma0401.arc"
+	.balign 4
+
+.global lbl_80507280
+lbl_80507280:
+	.asciz "/menu/floor_ma0402.arc"
+	.balign 4
+
+.global lbl_80507298
+lbl_80507298:
+	.asciz "/menu/floor_ma0501.arc"
+	.balign 4
+
+.global lbl_805072B0
+lbl_805072B0:
+	.asciz "/menu/floor_ma0601.arc"
+	.balign 4
+
+.global lbl_805072C8
+lbl_805072C8:
+	.asciz "/menu/floor_ma0701.arc"
+	.balign 4
+
+.global lbl_805072E0
+lbl_805072E0:
+	.asciz "/menu/floor_ma0801.arc"
+	.balign 4
+
+.global lbl_805072F8
+lbl_805072F8:
+	.asciz "/menu/floor_ma0901.arc"
+	.balign 4
+
+.global lbl_80507310
+lbl_80507310:
+	.asciz "/menu/floor_ma1001.arc"
+	.balign 4
+
+.global lbl_80507328
+lbl_80507328:
+	.asciz "/menu/floor_ma1101.arc"
+	.balign 4
+
+.global lbl_80507340
+lbl_80507340:
+	.asciz "/menu/floor_ma1201.arc"
+	.balign 4
+
+.global lbl_80507358
+lbl_80507358:
+	.asciz "/menu/floor_ma1202.arc"
+	.balign 4
+
+.global lbl_80507370
+lbl_80507370:
+	.asciz "/menu/floor_ma1301.arc"
+	.balign 4
+
+.global lbl_80507388
+lbl_80507388:
+	.asciz "/menu/floor_ma1401.arc"
+	.balign 4
+
+.global lbl_805073A0
+lbl_805073A0:
+	.asciz "/menu/floor_ma1501.arc"
+	.balign 4
+
+.global lbl_805073B8
+lbl_805073B8:
+	.asciz "/menu/floor_ma1601.arc"
+	.balign 4
+
+.global lbl_805073D0
+lbl_805073D0:
+	.asciz "/menu/floor_ma1701.arc"
+	.balign 4
+
+.global lbl_805073E8
+lbl_805073E8:
+	.asciz "/menu/floor_ma1801.arc"
+	.balign 4
+
+.global lbl_80507400
+lbl_80507400:
+	.asciz "/menu/floor_ma1901.arc"
+	.balign 4
+
+.global lbl_80507418
+lbl_80507418:
+	.asciz "/menu/floor_ma2001.arc"
+	.balign 4
+
+.global lbl_80507430
+lbl_80507430:
+	.asciz "/menu/floor_ma2101.arc"
+	.balign 4
+
+.global lbl_80507448
+lbl_80507448:
+	.asciz "/menu/floor_ma2201.arc"
+	.balign 4
+
+.global lbl_80507460
+lbl_80507460:
+	.asciz "/menu/floor_ma2301.arc"
+	.balign 4
+
+.global lbl_80507478
+lbl_80507478:
+	.asciz "/menu/floor_ma2401.arc"
+	.balign 4
+
+
+.global lbl_80507490
+lbl_80507490:
+	# ROM: 0x503590
+	.4byte 0
+	.4byte lbl_80507220
+	.4byte lbl_80507238
+	.4byte lbl_80507250
+	.4byte lbl_80507268
+	.4byte lbl_80507280
+	.4byte lbl_80507298
+	.4byte lbl_805072B0
+	.4byte lbl_805072C8
+	.4byte lbl_805072E0
+	.4byte lbl_805072F8
+	.4byte lbl_80507310
+	.4byte lbl_80507328
+	.4byte lbl_80507340
+	.4byte lbl_80507358
+	.4byte lbl_80507370
+	.4byte lbl_80507388
+	.4byte lbl_805073A0
+	.4byte lbl_805073B8
+	.4byte lbl_805073B8
+	.4byte lbl_805073D0
+	.4byte lbl_805073E8
+	.4byte lbl_80507400
+	.4byte lbl_80507418
+	.4byte lbl_80507430
+	.4byte lbl_80507448
+	.4byte lbl_80507460
+	.4byte lbl_80507478
+
+.global CFloorMap_typestr
+CFloorMap_typestr:
+	.asciz "CFloorMap"
+	.balign 4
+
+.global CTargetCur_typestr
+CTargetCur_typestr:
+	.asciz "CTargetCur"
+	.balign 4
+
+.global CLandCur_typestr
+CLandCur_typestr:
+	.asciz "CLandCur"
+	.balign 4
+
+.global CFloorMarker_typestr
+CFloorMarker_typestr:
+	.asciz "CFloorMarker"
+	.balign 4
+
+.global CFloorCur_typestr
+CFloorCur_typestr:
+	.asciz "CFloorCur"
+	.balign 4
+
+
+.global lbl_80507540
+lbl_80507540:
+	.asciz "mf03_map01_win01.brlyt"
+	.asciz "MNU_map"
+	.asciz "name"
+	.asciz "txt_ic00"
+	.asciz "txt_ic01"
+	.asciz "txt_ic02"
+	.asciz "txt_ic03"
+	.asciz "txt_ic04"
+	.asciz "txt_ic05"
+	.asciz "txt_ic06"
+	.asciz "txt_ic07"
+	.asciz "txt_ic08"
+	.asciz "txt_ic09"
+	.asciz "mf00_reg00_curs03.brlyt"
+	.asciz "mf00_reg00_curs03_roop.brlan"
+	.asciz "mf00_reg00_curs03_on.brlan"
+	.asciz "nul_curs01"
+	.asciz "nul_curs02"
+	.asciz "nul_pcpos"
+	.asciz "nul_arw00"
+	.asciz "txt_flr"
+	.asciz "nul_curs00"
+	.asciz "mf03_map01_win.brlyt"
+	.asciz "pic_flr01"
+	.asciz "pic_flr%02d"
+	.asciz "nul_proportion"
+	.asciz "txt_tit"
+	.asciz "txt_land%02d"
+	.asciz "height"
+	.asciz "floorname"
+	.asciz "pic_god00"
+	.asciz "pic_god01"
+	.asciz "landmarklist"
+	.asciz "mapID"
+	.asciz "category"
+	.asciz "posX"
+	.asciz "posY"
+	.asciz "posZ"
+	.asciz "S_FLG_MIN1"
+	.asciz "S_FLG_MAX1"
+	.byte 0x00
+	.asciz "mf03_map01_area.brlyt"
+	.asciz "txt_area01"
+	.asciz "minimap_painx"
+	.asciz "minimap_painy"
+	.asciz "minimap_rate"
+	.asciz "UI_posX"
+	.asciz "UI_posY"
+	.asciz "nul_all"
+	.asciz "%s"
+	.asciz "pic_areabs00"
+	.asciz "pic_areabs01"
+	.asciz "pic_areabs02"
+	.asciz "mf03_map01_mask.brlyt"
+	.asciz "ico_root"
+	.asciz "ico_land"
+	.asciz "ico_mapjump"
+	.asciz "ico_mine"
+	.asciz "ico_shop"
+	.asciz "ico_elevator"
+	.asciz "ico_kizuna"
+	.asciz "ico_qst2"
+	.asciz "ico_qst1"
+	.asciz "ico_scene"
+	.asciz "ico_cam"
+	.asciz "ico_pc"
+	.asciz "ico_rot"
+	.asciz "pic_mask%02d"
+	.asciz "pic_land%d"
+	.asciz "SYS_iconlist"
+	.asciz "filename_1"
+	.asciz "%s.tpl"
+	.asciz "MNU_mappoint"
+	.asciz "map_id"
+	.asciz "sflg1"
+	.asciz "eflg1"
+	.asciz "COL6_FLG1_NO1"
+	.asciz "COL6_FLG1"
+	.asciz "COL6_FLG1_NO2"
+	.asciz "COL6_FLG2"
+	.asciz "COL6_FLG1_NO3"
+	.asciz "quest_FLG"
+	.asciz "type"
+	.asciz "pic_mapjump%d"
+	.asciz "pic_mine%d"
+	.asciz "pic_shop%d"
+	.asciz "pic_elevator%d"
+	.asciz "npc_id"
+	.asciz "pic_npc%d"
+	.asciz "FLD_npclist"
+	.asciz "rlt_lnd"
+	.asciz "pic_npc_b%d"
+	.asciz "marker"
+	.asciz "pic_point%d"
+	.asciz "pic_pop%d"
+	.asciz "FLD_valpoplist"
+	.asciz "itm1ID"
+	.asciz "pic_val%d"
+	.asciz "pic_gmk%d"
+	.asciz "quest_no"
+	.asciz "qst_genre"
+	.asciz "relate_no"
+	.asciz "scmarkerlist"
+	.asciz "map"
+	.asciz "pic_attr%d"
+	.asciz "pic_scene"
+	.asciz "pic_cam"
+	.asciz "pic_pc"
+	.asciz "pic_map"
+	.asciz "nul_f%02d"
+	.asciz "pic_obj00"
+	.asciz "mf03_map01_bg.brlyt"
+	.asciz "sflag"
+	.asciz "qflag1"
+	.asciz "val1"
+	.asciz "mapimg"
+	.asciz "mapimg1"
+	.asciz "mapimg2"
+	.asciz "/menu/tpl/%s"
+	.asciz "/menu/FloorMap.arc"
+	.asciz "/common/jp/bdat_map.bin"
+	.asciz "MNU_sysmes"
+	.asciz "minimaplist0101"
+	.asciz "minimaplist0201"
+	.asciz "minimaplist0301"
+	.asciz "minimaplist0401"
+	.asciz "minimaplist0402"
+	.asciz "minimaplist0501"
+	.asciz "minimaplist0601"
+	.asciz "minimaplist0701"
+	.asciz "minimaplist0801"
+	.asciz "minimaplist0901"
+	.asciz "minimaplist1001"
+	.asciz "minimaplist1101"
+	.asciz "minimaplist1201"
+	.asciz "minimaplist1202"
+	.asciz "minimaplist1301"
+	.asciz "minimaplist1401"
+	.asciz "minimaplist1501"
+	.asciz "minimaplist1601"
+	.asciz "minimaplist1701"
+	.asciz "minimaplist1801"
+	.asciz "minimaplist1901"
+	.asciz "minimaplist2001"
+	.asciz "minimaplist2101"
+	.asciz "minimaplist2201"
+	.asciz "minimaplist2301"
+	.asciz "minimaplist2401"
+	.asciz "CFloorMapLyt"
+	.asciz "arc"
+	.asciz "CFloorMapMap"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053A768
+lbl_8053A768:
+	# ROM: 0x536868
+	.4byte switch_8024F520
+	.4byte switch_8024F520
+	.4byte switch_8024F22C
+	.4byte switch_8024F248
+	.4byte switch_8024F264
+	.4byte switch_8024F280
+	.4byte switch_8024F29C
+	.4byte switch_8024F2B8
+	.4byte switch_8024F2D4
+	.4byte switch_8024F2F0
+	.4byte switch_8024F30C
+	.4byte switch_8024F328
+	.4byte switch_8024F344
+	.4byte switch_8024F360
+	.4byte switch_8024F37C
+	.4byte switch_8024F398
+	.4byte switch_8024F3B4
+	.4byte switch_8024F3D0
+	.4byte switch_8024F3EC
+	.4byte switch_8024F408
+	.4byte switch_8024F424
+	.4byte switch_8024F440
+	.4byte switch_8024F45C
+	.4byte switch_8024F478
+	.4byte switch_8024F494
+	.4byte switch_8024F4B0
+	.4byte switch_8024F4CC
+	.4byte switch_8024F4E8
+	.4byte switch_8024F504
+	.4byte 0
+
+
+.global __vt__CFloorMap
+__vt__CFloorMap:
+	.4byte __RTTI__CFloorMap
+	.4byte 0
+	.4byte func_8024BD84
+	.4byte func_80039E28
+	.4byte func_8024FD40
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CFloorMap_hierarchy
+CFloorMap_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTargetCur
+__vt__CTargetCur:
+	.4byte __RTTI__CTargetCur
+	.4byte 0
+	.4byte func_80244DD8
+
+.global CTargetCur_hierarchy
+CTargetCur_hierarchy:
+	.4byte __RTTI__CFloorCur
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CLandCur
+__vt__CLandCur:
+	.4byte __RTTI__CLandCur
+	.4byte 0
+	.4byte func_80244C60
+
+.global CLandCur_hierarchy
+CLandCur_hierarchy:
+	.4byte __RTTI__CFloorCur
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CFloorMarker
+__vt__CFloorMarker:
+	.4byte __RTTI__CFloorMarker
+	.4byte 0
+	.4byte func_80244AE8
+
+.global CFloorMarker_hierarchy
+CFloorMarker_hierarchy:
+	.4byte __RTTI__CFloorCur
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CFloorCur
+__vt__CFloorCur:
+	.4byte __RTTI__CFloorCur
+	.4byte 0
+	.4byte func_80244944
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CFloorMap
+__RTTI__CFloorMap:
+	.4byte CFloorMap_typestr
+	.4byte CFloorMap_hierarchy
+
+.global __RTTI__CTargetCur
+__RTTI__CTargetCur:
+	.4byte CTargetCur_typestr
+	.4byte CTargetCur_hierarchy
+
+.global __RTTI__CLandCur
+__RTTI__CLandCur:
+	.4byte CLandCur_typestr
+	.4byte CLandCur_hierarchy
+
+.global __RTTI__CFloorMarker
+__RTTI__CFloorMarker:
+	.4byte CFloorMarker_typestr
+	.4byte CFloorMarker_hierarchy
+
+.global __RTTI__CFloorCur
+__RTTI__CFloorCur:
+	.4byte CFloorCur_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B050
+lbl_8066B050:
+	# ROM: 0x574EB0
+	.float 10.0
+
+
+.global lbl_8066B054
+lbl_8066B054:
+	# ROM: 0x574EB4
+	.4byte 0xC4440000
+
+
+.global lbl_8066B058
+lbl_8066B058:
+	# ROM: 0x574EB8
+	.4byte 0x40E66666
+
+
+.global lbl_8066B05C
+lbl_8066B05C:
+	# ROM: 0x574EBC
+	.4byte 0x44440000
+
+
+.global lbl_8066B060
+lbl_8066B060:
+	# ROM: 0x574EC0
+	.4byte 0x45000000
+
+
+.global lbl_8066B064
+lbl_8066B064:
+	# ROM: 0x574EC4
+	.4byte 0x44200000
+
+
+.global lbl_8066B068
+lbl_8066B068:
+	# ROM: 0x574EC8
+	.float -1.0
+
+
+.global lbl_8066B06C
+lbl_8066B06C:
+	# ROM: 0x574ECC
+	.4byte 0x40000000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667088
+lbl_80667088:
+	.skip 0x4
+.global lbl_8066708C
+lbl_8066708C:
+	.skip 0x4
+.global lbl_80667090
+lbl_80667090:
+	.skip 0x8
+.global lbl_80667098
+lbl_80667098:
+	.skip 0x8
+.global lbl_806670A0
+lbl_806670A0:
+	.skip 0x8
+.global lbl_806670A8
+lbl_806670A8:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80016600
 lbl_80016600:
@@ -6274,7 +7029,7 @@ lbl_80016A48:
 	.4byte func_8045F8C8
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8024B8D4
 	.4byte 0x000004B0

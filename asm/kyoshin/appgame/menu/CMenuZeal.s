@@ -1247,7 +1247,183 @@ func_8017FF70:
 /* 8017FF70 00149530  38 63 FF A4 */	addi r3, r3, -92
 /* 8017FF74 00149534  4B FF EF 74 */	b func_8017EEE8
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuZeal_typestr
+CMenuZeal_typestr:
+	.asciz "CMenuZeal"
+	.balign 4
+
+
+.global lbl_804FEC84
+lbl_804FEC84:
+	.asciz "CMenuZeal"
+	.asciz "mf71_battle90_chance_gage.brlyt"
+	.asciz "mf71_battle90_chance_gage_in.brlan"
+	.asciz "mf71_battle90_chance_gage_go.brlan"
+	.asciz "mf71_battle90_chance_gage_verrygood.brlan"
+	.asciz "mf71_battle90_chance_gage_out.brlan"
+	.asciz "mf71_battle92_chance_pointer.brlyt"
+	.asciz "mf71_battle92_chance_pointer_in.brlan"
+	.asciz "mf71_battle92_chance_pointer_go.brlan"
+	.asciz "mf71_battle92_chance_pointer_verrygood.brlan"
+	.asciz "mf71_battle92_chance_pointer_out.brlan"
+	.asciz "mf71_battle91_chance_hit.brlyt"
+	.asciz "mf71_battle91_chance_hit_glow_in.brlan"
+	.asciz "mf71_btl90_chn_btn_c01.tpl"
+	.asciz "mf71_btl90_chn_btn_r01.tpl"
+	.asciz "pic_button_r"
+	.asciz "mf71_btl90_chn_btngl_c00.tpl"
+	.asciz "mf71_btl90_chn_btngl_r00.tpl"
+	.asciz "pic_line_r00"
+	.asciz "pic_line_r01"
+	.asciz "pic_pointer_def"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuZeal
+__vt__CMenuZeal:
+	.4byte __RTTI__CMenuZeal
+	.4byte 0
+	.4byte func_8017EEE8
+	.4byte CChildListNode_Reset
+	.4byte func_8017EF5C
+	.4byte func_8017F358
+	.4byte func_8017F43C
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuZeal
+	.4byte 0xFFFFFFA8
+	.4byte func_8017FF60
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuZeal
+	.4byte 0xFFFFFFA4
+	.4byte func_8017FF70
+	.4byte func_8017FF68
+	.4byte func_8017FBB4
+
+.global CMenuZeal_hierarchy
+CMenuZeal_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000005C
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global __RTTI__CMenuZeal
+__RTTI__CMenuZeal:
+	.4byte CMenuZeal_typestr
+	.4byte CMenuZeal_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A130
+lbl_8066A130:
+	# ROM: 0x573F90
+	.float 100.0
+
+
+.global lbl_8066A134
+lbl_8066A134:
+	# ROM: 0x573F94
+	.4byte 0
+
+
+.global lbl_8066A138
+lbl_8066A138:
+	# ROM: 0x573F98
+	.4byte 0x40A00000
+
+
+.global lbl_8066A13C
+lbl_8066A13C:
+	# ROM: 0x573F9C
+	.4byte 0x42480000
+
+
+.global lbl_8066A140
+lbl_8066A140:
+	# ROM: 0x573FA0
+	.4byte 0x42340000
+
+
+.global lbl_8066A144
+lbl_8066A144:
+	# ROM: 0x573FA4
+	.float 1.0
+
+
+.global lbl_8066A148
+lbl_8066A148:
+	# ROM: 0x573FA8
+	.4byte 0x40C00000
+
+
+.global lbl_8066A14C
+lbl_8066A14C:
+	# ROM: 0x573FAC
+	.float 1.5
+
+
+.global lbl_8066A150
+lbl_8066A150:
+	# ROM: 0x573FB0
+	.4byte 0x42080000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666B90
+lbl_80666B90:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000E540
 lbl_8000E540:
@@ -1325,7 +1501,7 @@ lbl_8000E5F8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8017ED94
 	.4byte 0x00000154

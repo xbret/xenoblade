@@ -822,7 +822,144 @@ func_80185688:
 /* 80185688 0014EC48  38 63 FF EC */	addi r3, r3, -20
 /* 8018568C 0014EC4C  4B FF F5 B0 */	b func_80184C3C
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CREvtEffect_typestr
+cf_CREvtEffect_typestr:
+	.asciz "cf::CREvtEffect"
+
+
+.global lbl_804FF028
+lbl_804FF028:
+	.asciz "EFF"
+	.asciz "Monochrome"
+	.asciz "MonoRGB"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__cf_CREvtEffect
+__vt__cf_CREvtEffect:
+	.4byte __RTTI__cf_CREvtEffect
+	.4byte 0
+	.4byte func_80184C3C
+	.4byte func_8018567C
+	.4byte func_80184D18
+	.4byte func_80185674
+	.4byte func_80169048
+	.4byte func_801809A8
+	.4byte func_801696C4
+	.4byte func_80184D5C
+	.4byte __RTTI__cf_CREvtEffect
+	.4byte 0xFFFFFFEC
+	.4byte func_80185688
+	.4byte func_80185680
+	.4byte func_801855C4
+
+.global cf_CREvtEffect_hierarchy
+cf_CREvtEffect_hierarchy:
+	.4byte __RTTI__cf_CREvtObj
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80664D68
+lbl_80664D68:
+	# ROM: 0x570948
+	.4byte lbl_8066A1E8
+
+
+.global lbl_80664D6C
+lbl_80664D6C:
+	# ROM: 0x57094C
+	.4byte lbl_8066A1F0
+
+
+.global lbl_80664D70
+lbl_80664D70:
+	# ROM: 0x570950
+	.4byte lbl_8066A1F8
+	.4byte 0
+
+.global __RTTI__cf_CREvtEffect
+__RTTI__cf_CREvtEffect:
+	.4byte cf_CREvtEffect_typestr
+	.4byte cf_CREvtEffect_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066A1E8
+lbl_8066A1E8:
+	.asciz "effTgt"
+	.balign 4
+
+.global lbl_8066A1F0
+lbl_8066A1F0:
+	.asciz "effAtr"
+	.balign 4
+
+.global lbl_8066A1F8
+lbl_8066A1F8:
+	.4byte 0x65666600
+
+
+.global lbl_8066A1FC
+lbl_8066A1FC:
+	# ROM: 0x57405C
+	.4byte 0
+
+
+.global lbl_8066A200
+lbl_8066A200:
+	# ROM: 0x574060
+	.float 1.0
+
+
+.global lbl_8066A204
+lbl_8066A204:
+	# ROM: 0x574064
+	.4byte 0x3F666666
+
+
+.global lbl_8066A208
+lbl_8066A208:
+	# ROM: 0x574068
+	.4byte 0x3F733333
+
+
+.global lbl_8066A20C
+lbl_8066A20C:
+	# ROM: 0x57406C
+	.4byte 0x3A83126F
+
+
+.global lbl_8066A210
+lbl_8066A210:
+	# ROM: 0x574070
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066A218
+lbl_8066A218:
+	# ROM: 0x574078
+	.float 0.5
+
+
+.global lbl_8066A21C
+lbl_8066A21C:
+	# ROM: 0x57407C
+	.4byte 0x43340000
+
+
+.global lbl_8066A220
+lbl_8066A220:
+	# ROM: 0x574080
+	.4byte 0x3DCCCCCD
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000E8E8
 lbl_8000E8E8:
@@ -891,7 +1028,7 @@ lbl_8000E97C:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80184B14
 	.4byte 0x00000128

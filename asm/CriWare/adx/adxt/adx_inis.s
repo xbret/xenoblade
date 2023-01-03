@@ -216,3 +216,9 @@ lbl_805196A8:
 	.asciz "adxt_exec_main_thrd"
 	.asciz "E2006100201: ADXT_Finish function has been executed before initialization."
 	.asciz "E2005041230: ADXT handle is still active."
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E5D48
+lbl_805E5D48:
+	.skip 0xC

@@ -1103,3 +1103,27 @@ gcci_vtbl:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805EA1B0
+lbl_805EA1B0:
+	.skip 0x4
+.global lbl_805EA1B4
+lbl_805EA1B4:
+	.skip 0x4
+.global lbl_805EA1B8
+lbl_805EA1B8:
+	.skip 0x4
+.global lbl_805EA1BC
+lbl_805EA1BC:
+	.skip 0xC
+.global lbl_805EA1C8
+lbl_805EA1C8:
+	.skip 0xFA0
+.global lbl_805EB168
+lbl_805EB168:
+	.skip 0x8
+.global lbl_805EB170
+lbl_805EB170:
+	.skip 0x100

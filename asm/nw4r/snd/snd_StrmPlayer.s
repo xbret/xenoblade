@@ -3144,3 +3144,59 @@ lbl_8056E5B8:
 	.4byte Execute__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
 	.4byte Cancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
 	.4byte OnCancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C860
+lbl_8066C860:
+	# ROM: 0x5766C0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066C868
+lbl_8066C868:
+	# ROM: 0x5766C8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066C870
+lbl_8066C870:
+	# ROM: 0x5766D0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066C878
+lbl_8066C878:
+	# ROM: 0x5766D8
+	.float 1.0
+
+
+.global lbl_8066C87C
+lbl_8066C87C:
+	# ROM: 0x5766DC
+	.4byte 0x42FE0000
+
+
+.global lbl_8066C880
+lbl_8066C880:
+	# ROM: 0x5766E0
+	.4byte 0x427C0000
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80653000
+lbl_80653000:
+	.skip 0x4000
+.global lbl_80657000
+lbl_80657000:
+	.skip 0x18
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667DF8
+lbl_80667DF8:
+	.skip 0x8

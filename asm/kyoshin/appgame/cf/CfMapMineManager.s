@@ -2583,7 +2583,205 @@ func_80207D2C:
 /* 80207F38 001D14F8  80 21 00 00 */	lwz r1, 0(r1)
 /* 80207F3C 001D14FC  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global reslist_cf_CfMapMineManager_MinePoint_typestr
+reslist_cf_CfMapMineManager_MinePoint_typestr:
+	.asciz "reslist<cf::CfMapMineManager::MinePoint>"
+	.balign 4
+
+.global _reslist_base_cf_CfMapMineManager_MinePoint_typestr
+_reslist_base_cf_CfMapMineManager_MinePoint_typestr:
+	.asciz "_reslist_base<cf::CfMapMineManager::MinePoint>"
+	.balign 4
+
+
+.global lbl_80503B44
+lbl_80503B44:
+	.asciz "cnt_min"
+	.asciz "cnt_max"
+	.asciz "posX"
+	.asciz "posY"
+	.asciz "posZ"
+	.asciz "get_id"
+	.asciz "obj_id"
+	.asciz "mine_type"
+	.asciz "FLD_pointlist"
+	.asciz "point_id"
+	.asciz "name"
+	.asciz "rank_type_up"
+	.asciz "sflg1"
+	.asciz "eflg1"
+	.asciz "reset_time"
+	.asciz "MNU_sysmes"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80538ED8
+lbl_80538ED8:
+	.asciz "skill1_per"
+	.balign 4
+
+
+.global __vt__reslist_cf_CfMapMineManager_MinePoint
+__vt__reslist_cf_CfMapMineManager_MinePoint:
+	.4byte __RTTI__reslist_cf_CfMapMineManager_MinePoint
+	.4byte 0
+	.4byte func_80206064
+
+.global reslist_cf_CfMapMineManager_MinePoint_hierarchy
+reslist_cf_CfMapMineManager_MinePoint_hierarchy:
+	.4byte __RTTI___reslist_base_cf_CfMapMineManager_MinePoint
+	.4byte 0
+	.4byte 0
+
+
+.global __vt___reslist_base_cf_CfMapMineManager_MinePoint
+__vt___reslist_base_cf_CfMapMineManager_MinePoint:
+	.4byte __RTTI___reslist_base_cf_CfMapMineManager_MinePoint
+	.4byte 0
+	.4byte func_80205FA8
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665048
+lbl_80665048:
+	# ROM: 0x570C28
+	.4byte 0x282D343C
+	.4byte 0x505A5C63
+
+
+.global lbl_80665050
+lbl_80665050:
+	.asciz "skill1"
+	.balign 4
+
+
+.global lbl_80665058
+lbl_80665058:
+	# ROM: 0x570C38
+	.4byte 0x0000000A
+	.4byte 0x0000000A
+
+.global __RTTI__reslist_cf_CfMapMineManager_MinePoint
+__RTTI__reslist_cf_CfMapMineManager_MinePoint:
+	.4byte reslist_cf_CfMapMineManager_MinePoint_typestr
+	.4byte reslist_cf_CfMapMineManager_MinePoint_hierarchy
+
+.global __RTTI___reslist_base_cf_CfMapMineManager_MinePoint
+__RTTI___reslist_base_cf_CfMapMineManager_MinePoint:
+	.4byte _reslist_base_cf_CfMapMineManager_MinePoint_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AB70
+lbl_8066AB70:
+	# ROM: 0x5749D0
+	.4byte 0
+
+
+.global lbl_8066AB74
+lbl_8066AB74:
+	# ROM: 0x5749D4
+	.4byte 0x38D1B717
+
+
+.global lbl_8066AB78
+lbl_8066AB78:
+	# ROM: 0x5749D8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066AB80
+lbl_8066AB80:
+	# ROM: 0x5749E0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066AB88
+lbl_8066AB88:
+	# ROM: 0x5749E8
+	.4byte 0x42480000
+
+
+.global lbl_8066AB8C
+lbl_8066AB8C:
+	# ROM: 0x5749EC
+	.4byte 0x471C4000
+
+
+.global lbl_8066AB90
+lbl_8066AB90:
+	# ROM: 0x5749F0
+	.4byte 0x40200000
+
+
+.global lbl_8066AB94
+lbl_8066AB94:
+	# ROM: 0x5749F4
+	.4byte 0x40C80000
+
+
+.global lbl_8066AB98
+lbl_8066AB98:
+	# ROM: 0x5749F8
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8066ABA0
+lbl_8066ABA0:
+	# ROM: 0x574A00
+	.4byte 0x41C80000
+
+
+.global lbl_8066ABA4
+lbl_8066ABA4:
+	# ROM: 0x574A04
+	.4byte 0x3F19999A
+
+
+.global lbl_8066ABA8
+lbl_8066ABA8:
+	# ROM: 0x574A08
+	.float 1.0
+
+
+.global lbl_8066ABAC
+lbl_8066ABAC:
+	# ROM: 0x574A0C
+	.4byte 0x42700000
+
+
+.global lbl_8066ABB0
+lbl_8066ABB0:
+	# ROM: 0x574A10
+	.4byte 0x41F00000
+
+
+.global lbl_8066ABB4
+lbl_8066ABB4:
+	# ROM: 0x574A14
+	.4byte 0x41B00000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666F90
+lbl_80666F90:
+	.skip 0x4
+.global lbl_80666F94
+lbl_80666F94:
+	.skip 0x4
+.global lbl_80666F98
+lbl_80666F98:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80012E10
 lbl_80012E10:
@@ -2684,7 +2882,7 @@ lbl_80012EB8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80205A7C
 	.4byte 0x000004FC

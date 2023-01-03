@@ -2856,8 +2856,8 @@ func_80291844:
 /* 8029185C 0025AE1C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80291860 0025AE20  7C 7E 1B 78 */	mr r30, r3
 /* 80291864 0025AE24  41 82 00 2C */	beq .L_80291890
-/* 80291868 0025AE28  3C 80 80 54 */	lis r4, lbl_8053C010@ha
-/* 8029186C 0025AE2C  38 84 C0 10 */	addi r4, r4, lbl_8053C010@l
+/* 80291868 0025AE28  3C 80 80 54 */	lis r4, __vt__cf_CfAward@ha
+/* 8029186C 0025AE2C  38 84 C0 10 */	addi r4, r4, __vt__cf_CfAward@l
 /* 80291870 0025AE30  90 83 00 04 */	stw r4, 4(r3)
 /* 80291874 0025AE34  38 04 00 08 */	addi r0, r4, 8
 /* 80291878 0025AE38  90 03 00 00 */	stw r0, 0(r3)
@@ -4649,10 +4649,10 @@ func_80292EC0:
 sinit_802930E0:
 /* 802930E0 0025C6A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802930E4 0025C6A4  7C 08 02 A6 */	mflr r0
-/* 802930E8 0025C6A8  3C 80 80 54 */	lis r4, lbl_8053C010@ha
+/* 802930E8 0025C6A8  3C 80 80 54 */	lis r4, __vt__cf_CfAward@ha
 /* 802930EC 0025C6AC  38 6D B1 68 */	addi r3, r13, lbl_806672E8@sda21
 /* 802930F0 0025C6B0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802930F4 0025C6B4  38 84 C0 10 */	addi r4, r4, lbl_8053C010@l
+/* 802930F4 0025C6B4  38 84 C0 10 */	addi r4, r4, __vt__cf_CfAward@l
 /* 802930F8 0025C6B8  38 04 00 08 */	addi r0, r4, 8
 /* 802930FC 0025C6BC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80293100 0025C6C0  3B ED B1 68 */	addi r31, r13, lbl_806672E8@sda21
@@ -4676,7 +4676,272 @@ sinit_802930E0:
 
 .4byte sinit_802930E0
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CSaveLoad_typestr
+CSaveLoad_typestr:
+	.asciz "CSaveLoad"
+	.balign 4
+
+
+.global lbl_8050AE44
+lbl_8050AE44:
+	.asciz "mf00_reg00_curs13.brlyt"
+	.asciz "mf00_reg00_curs13_roop.brlan"
+	.asciz "mf00_reg00_curs13_on.brlan"
+	.asciz "mf70_cf60_syswin16.brlyt"
+	.asciz "mf70_cf60_syswin16_in.brlan"
+	.asciz "txt_sysmes01"
+	.asciz "/menu/SaveLoad.arc"
+	.asciz "MNU_sysmes"
+	.asciz "name"
+	.asciz "pic_shbs%02d"
+	.asciz "nul_proportion"
+	.asciz "txt_lv%02d"
+	.asciz "%s%s"
+	.asciz "txt_lvpara%02d"
+	.asciz "txt_pc%02d"
+	.balign 4
+	.asciz "%s%s%s%s%s"
+	.asciz "txt_tm%02d_00"
+	.asciz "%s%s%s%s%s%s%s%s%s%s"
+	.asciz "txt_date%02d"
+	.asciz "txt_date%02d_01"
+	.asciz "pic_facebs%02d_%02d"
+	.asciz "txt_map%02d"
+	.asciz "mf95_sys10_new.tpl"
+	.asciz "pic_sh16_%02d"
+	.asciz "nul_comp%02d"
+	.asciz "%02d"
+	.asciz "%02d%s%02d"
+	.asciz "%04d%s%02d%s%02d"
+	.asciz "tag_icon"
+	.asciz "pic_face%02d_%02d"
+	.asciz "mf95_sys10_sys.tpl"
+	.asciz "CSaveLoad"
+	.asciz "arc"
+	.asciz "mf95_sys10_sv00.brlyt"
+	.asciz "mf95_sys10_sv00_in.brlan"
+	.asciz "mf95_sys10_sv00_info_in.brlan"
+	.asciz "txt_lv01"
+	.asciz "txt_lvpara01"
+	.asciz "txt_lv02"
+	.asciz "txt_lvpara02"
+	.asciz "txt_lv03"
+	.asciz "txt_lvpara03"
+	.asciz "txt_tm01_00"
+	.asciz "txt_tm01_01"
+	.asciz "txt_tm01_02"
+	.asciz "txt_date01"
+	.asciz "txt_date01_01"
+	.asciz "txt_tm02_00"
+	.asciz "txt_tm02_01"
+	.asciz "txt_tm02_02"
+	.asciz "txt_date02"
+	.asciz "txt_date02_01"
+	.asciz "txt_tm03_00"
+	.asciz "txt_tm03_01"
+	.asciz "txt_tm03_02"
+	.asciz "txt_date03"
+	.asciz "txt_date03_01"
+	.asciz "txt_datetit01_00"
+	.asciz "txt_datetit01_01"
+	.asciz "txt_datetit02_00"
+	.asciz "txt_datetit02_01"
+	.asciz "txt_datetit03_00"
+	.asciz "txt_datetit03_01"
+	.asciz "pic_sh43_01"
+	.asciz "pic_sh43_02"
+	.asciz "pic_sh43_03"
+	.balign 4
+
+.global cf_CfAward_typestr
+cf_CfAward_typestr:
+	.asciz "cf::CfAward"
+
+.global cf_CAwardBase_typestr
+cf_CAwardBase_typestr:
+	.asciz "cf::CAwardBase"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053BF38
+lbl_8053BF38:
+	# ROM: 0x538038
+	.4byte switch_8028F378
+	.4byte switch_8028F310
+	.4byte switch_8028F318
+	.4byte switch_8028F378
+	.4byte switch_8028F320
+	.4byte switch_8028F328
+	.4byte switch_8028F330
+	.4byte switch_8028F338
+	.4byte switch_8028F340
+	.4byte switch_8028F35C
+	.4byte switch_8028F364
+	.4byte switch_8028F36C
+	.4byte switch_8028F374
+	.4byte 0
+
+
+.global __vt__CSaveLoad
+__vt__CSaveLoad:
+	.4byte __RTTI__CSaveLoad
+	.4byte 0
+	.4byte func_8028F1B8
+	.4byte func_80039E28
+	.4byte func_802912D4
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CSaveLoad_hierarchy
+CSaveLoad_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CSLCur
+__vt__CSLCur:
+	.4byte __RTTI__CSLCur
+	.4byte 0
+	.4byte func_8028EA74
+
+
+.global __vt__cf_CfAward
+__vt__cf_CfAward:
+	# ROM: 0x538110
+	.4byte __RTTI__cf_CfAward
+	.4byte 0
+	.4byte __RTTI__cf_CfAward
+	.4byte 0
+	.4byte func_80291844
+	.4byte func_80291B18
+	.4byte func_80291844
+	.4byte func_80291B18
+
+.global cf_CfAward_hierarchy
+cf_CfAward_hierarchy:
+	.4byte __RTTI__cf_CAwardBase
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806653C0
+lbl_806653C0:
+	# ROM: 0x570FA0
+	.4byte 0x00000003
+
+
+.global lbl_806653C4
+lbl_806653C4:
+	# ROM: 0x570FA4
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_806653C8
+lbl_806653C8:
+	# ROM: 0x570FA8
+	.4byte 0xFFFFFFFF
+	.4byte 0
+
+.global __RTTI__CSaveLoad
+__RTTI__CSaveLoad:
+	.4byte CSaveLoad_typestr
+	.4byte CSaveLoad_hierarchy
+
+.global __RTTI__CSLCur
+__RTTI__CSLCur:
+	.4byte CSLCur_typestr
+	.4byte 0
+
+.global __RTTI__cf_CfAward
+__RTTI__cf_CfAward:
+	.4byte cf_CfAward_typestr
+	.4byte cf_CfAward_hierarchy
+
+.global __RTTI__cf_CAwardBase
+__RTTI__cf_CAwardBase:
+	.4byte cf_CAwardBase_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B410
+lbl_8066B410:
+	# ROM: 0x575270
+	.float 1.0
+
+
+.global lbl_8066B414
+lbl_8066B414:
+	# ROM: 0x575274
+	.4byte 0
+
+
+.global lbl_8066B418
+lbl_8066B418:
+	# ROM: 0x575278
+	.4byte 0x43520000
+
+
+.global lbl_8066B41C
+lbl_8066B41C:
+	# ROM: 0x57527C
+	.4byte 0x42EC0000
+
+.global CSLCur_typestr
+CSLCur_typestr:
+	.asciz "CSLCur"
+	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8057A3F8
+lbl_8057A3F8:
+	.skip 0x10
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806672E4
+lbl_806672E4:
+	.skip 0x4
+.global lbl_806672E8
+lbl_806672E8:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800194B0
 lbl_800194B0:
@@ -5045,7 +5310,7 @@ lbl_8001980C:
 	.4byte func_801320F0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8028EFDC
 	.4byte 0x000001DC

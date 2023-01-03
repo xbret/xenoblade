@@ -520,7 +520,45 @@ func_80294440:
 /* 802944D0 0025DA90  38 21 00 70 */	addi r1, r1, 0x70
 /* 802944D4 0025DA94  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CChainCombo_typestr
+cf_CChainCombo_typestr:
+	.asciz "cf::CChainCombo"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053C140
+lbl_8053C140:
+	# ROM: 0x538240
+	.4byte 0x00000708
+	.4byte 0x000004B0
+	.4byte 0x00000258
+
+
+.global __vt__cf_CChainCombo
+__vt__cf_CChainCombo:
+	.4byte __RTTI__cf_CChainCombo
+	.4byte 0
+	.4byte func_800D8C1C
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CChainCombo
+__RTTI__cf_CChainCombo:
+	.4byte cf_CChainCombo_typestr
+	.4byte 0
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B440
+lbl_8066B440:
+	# ROM: 0x5752A0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80019930
 lbl_80019930:
@@ -606,7 +644,7 @@ lbl_800199F8:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80293D90
 	.4byte 0x0000005C

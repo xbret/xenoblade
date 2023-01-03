@@ -5313,7 +5313,383 @@ func_8016C7E8:
 /* 8016C7E8 00135DA8  38 63 FF A8 */	addi r3, r3, -88
 /* 8016C7EC 00135DAC  4B FF BB 58 */	b func_80168344
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CTaskREvtSequence_typestr
+cf_CTaskREvtSequence_typestr:
+	.asciz "cf::CTaskREvtSequence"
+	.balign 4
+
+.global CTTask_cf_CTaskREvtSequence_typestr
+CTTask_cf_CTaskREvtSequence_typestr:
+	.asciz "CTTask<cf::CTaskREvtSequence>"
+	.balign 4
+
+
+.global lbl_804FE8C8
+lbl_804FE8C8:
+	.asciz "vs17240100"
+	.asciz "vs17220100"
+	.asciz "vs16010100"
+	.asciz "pc100101"
+	.asciz "np620109"
+	.asciz "pc090101"
+	.asciz "np730109"
+	.asciz "vs17210100"
+	.asciz "%d:"
+	.asciz "0"
+	.asciz "%d"
+	.asciz "timevis"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80534210
+lbl_80534210:
+	# ROM: 0x530310
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801686B0
+
+.global lbl_8053421C
+lbl_8053421C:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8016872C
+
+.global lbl_80534228
+lbl_80534228:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80168800
+
+.global lbl_80534234
+lbl_80534234:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80169CD0
+
+.global lbl_80534240
+lbl_80534240:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80168F38
+
+.global lbl_8053424C
+lbl_8053424C:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80169050
+
+.global lbl_80534258
+lbl_80534258:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80169CD0
+
+.global lbl_80534264
+lbl_80534264:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8016925C
+
+.global lbl_80534270
+lbl_80534270:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80169A38
+
+.global lbl_8053427C
+lbl_8053427C:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801696CC
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80169CD0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80169A38
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801696CC
+
+.global lbl_805342AC
+lbl_805342AC:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80169CD0
+
+.global lbl_805342B8
+lbl_805342B8:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80169CD0
+
+.global lbl_805342C4
+lbl_805342C4:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80168610
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80169CD0
+
+
+.global __vt__cf_CTaskREvtSequence
+__vt__cf_CTaskREvtSequence:
+	.4byte __RTTI__cf_CTaskREvtSequence
+	.4byte 0
+	.4byte func_80168344
+	.4byte CChildListNode_Reset
+	.4byte func_8016A3E0
+	.4byte func_8016A42C
+	.4byte func_8016C740
+	.4byte func_8016ABA4
+	.4byte func_80043F20
+	.4byte __RTTI__cf_CTaskREvtSequence
+	.4byte 0xFFFFFFAC
+	.4byte func_8016C7D8
+	.4byte func_80039E28
+	.4byte func_8016C7D0
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__cf_CTaskREvtSequence
+	.4byte 0xFFFFFFA8
+	.4byte func_8016C7E8
+	.4byte func_8016C7E0
+	.4byte func_8016ABA8
+	.4byte func_8016C2B4
+
+.global cf_CTaskREvtSequence_hierarchy
+cf_CTaskREvtSequence_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_cf_CTaskREvtSequence
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CTTask_cf_CTaskREvtSequence
+__vt__CTTask_cf_CTaskREvtSequence:
+	.4byte __RTTI__CTTask_cf_CTaskREvtSequence
+	.4byte 0
+	.4byte func_80168254
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_8016C740
+	.4byte func_8016C788
+	.4byte func_80043F20
+
+.global CTTask_cf_CTaskREvtSequence_hierarchy
+CTTask_cf_CTaskREvtSequence_hierarchy:
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CTaskREvtSequence
+__RTTI__cf_CTaskREvtSequence:
+	.4byte cf_CTaskREvtSequence_typestr
+	.4byte cf_CTaskREvtSequence_hierarchy
+
+.global __RTTI__CTTask_cf_CTaskREvtSequence
+__RTTI__CTTask_cf_CTaskREvtSequence:
+	.4byte CTTask_cf_CTaskREvtSequence_typestr
+	.4byte CTTask_cf_CTaskREvtSequence_hierarchy
+
+
+.global lbl_80664CB8
+lbl_80664CB8:
+	# ROM: 0x570898
+	.4byte 0x2E000000
+
+
+.global lbl_80664CBC
+lbl_80664CBC:
+	# ROM: 0x57089C
+	.4byte 0x72656600
+
+
+.global lbl_80664CC0
+lbl_80664CC0:
+	# ROM: 0x5708A0
+	.4byte 0x72656600
+
+
+.global lbl_80664CC4
+lbl_80664CC4:
+	# ROM: 0x5708A4
+	.4byte 0x72656600
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669F18
+lbl_80669F18:
+	# ROM: 0x573D78
+	.4byte 0
+
+
+.global lbl_80669F1C
+lbl_80669F1C:
+	# ROM: 0x573D7C
+	.4byte 0x3E2AAAAB
+
+
+.global lbl_80669F20
+lbl_80669F20:
+	# ROM: 0x573D80
+	.4byte 0x3F333333
+
+
+.global lbl_80669F24
+lbl_80669F24:
+	# ROM: 0x573D84
+	.4byte 0x41A00000
+
+
+.global lbl_80669F28
+lbl_80669F28:
+	# ROM: 0x573D88
+	.4byte 0x3727C5AC
+
+
+.global lbl_80669F2C
+lbl_80669F2C:
+	# ROM: 0x573D8C
+	.float 1.0
+
+
+.global lbl_80669F30
+lbl_80669F30:
+	# ROM: 0x573D90
+	.4byte 0x40A00000
+
+
+.global lbl_80669F34
+lbl_80669F34:
+	# ROM: 0x573D94
+	.4byte 0x41F00000
+
+
+.global lbl_80669F38
+lbl_80669F38:
+	# ROM: 0x573D98
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_80669F3C
+lbl_80669F3C:
+	# ROM: 0x573D9C
+	.4byte 0x47A60400
+
+
+.global lbl_80669F40
+lbl_80669F40:
+	# ROM: 0x573DA0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80669F48
+lbl_80669F48:
+	# ROM: 0x573DA8
+	.4byte 0x3C23D70A
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666B58
+lbl_80666B58:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000DE54
 lbl_8000DE54:
@@ -5567,7 +5943,7 @@ lbl_8000E040:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8016803C
 	.4byte 0x00000218

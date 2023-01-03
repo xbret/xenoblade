@@ -354,7 +354,75 @@ func_802A9B84:
 /* 802A9B84 00273144  38 60 00 32 */	li r3, 0x32
 /* 802A9B88 00273148  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global cf_CVS_THREAD_VISION_TELL_typestr
+cf_CVS_THREAD_VISION_TELL_typestr:
+	.asciz "cf::CVS_THREAD_VISION_TELL"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053D540
+lbl_8053D540:
+	# ROM: 0x539640
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A97A0
+
+.global lbl_8053D54C
+lbl_8053D54C:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A9924
+
+.global lbl_8053D558
+lbl_8053D558:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A9AC4
+
+
+.global __vt__cf_CVS_THREAD_VISION_TELL
+__vt__cf_CVS_THREAD_VISION_TELL:
+	.4byte __RTTI__cf_CVS_THREAD_VISION_TELL
+	.4byte 0
+	.4byte func_802A3B50
+	.4byte func_802A9B0C
+	.4byte func_802A9B84
+	.4byte func_802A1EA0
+	.4byte func_802A3740
+
+.global cf_CVS_THREAD_VISION_TELL_hierarchy
+cf_CVS_THREAD_VISION_TELL_hierarchy:
+	.4byte __RTTI__cf_CVS_THREAD
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665650
+lbl_80665650:
+	# ROM: 0x571230
+	.4byte 0x012E0131
+	.4byte 0x01320133
+
+
+.global lbl_80665658
+lbl_80665658:
+	# ROM: 0x571238
+	.4byte 0x01310132
+	.4byte 0x01330000
+
+.global __RTTI__cf_CVS_THREAD_VISION_TELL
+__RTTI__cf_CVS_THREAD_VISION_TELL:
+	.4byte cf_CVS_THREAD_VISION_TELL_typestr
+	.4byte cf_CVS_THREAD_VISION_TELL_hierarchy
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001AF74
 lbl_8001AF74:
@@ -391,7 +459,7 @@ lbl_8001AFB8:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A96C0
 	.4byte 0x000000E0

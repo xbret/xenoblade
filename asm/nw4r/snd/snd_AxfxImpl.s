@@ -139,3 +139,12 @@ Free__Q44nw4r3snd6detail8AxfxImplFPv:
 /* 80411774 003DAD34  38 80 00 03 */	li r4, 3
 /* 80411778 003DAD38  4B F3 81 D8 */	b MEMFreeToFrmHeap
 /* 8041177C 003DAD3C  4E 80 00 20 */	blr 
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667DA8
+lbl_80667DA8:
+	.skip 0x4
+.global lbl_80667DAC
+lbl_80667DAC:
+	.skip 0x4

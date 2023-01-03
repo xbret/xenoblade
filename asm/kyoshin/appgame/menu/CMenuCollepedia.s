@@ -823,7 +823,101 @@ func_80253190:
 /* 80253190 0021C750  38 63 FF A8 */	addi r3, r3, -88
 /* 80253194 0021C754  4B FF F5 7C */	b func_80252710
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuCollepedia_typestr
+CMenuCollepedia_typestr:
+	.asciz "CMenuCollepedia"
+
+
+.global lbl_80507D18
+lbl_80507D18:
+	.asciz "MNU_collect"
+	.asciz "name"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuCollepedia
+__vt__CMenuCollepedia:
+	.4byte __RTTI__CMenuCollepedia
+	.4byte 0
+	.4byte func_80252710
+	.4byte CChildListNode_Reset
+	.4byte func_80252788
+	.4byte func_80252ACC
+	.4byte func_80252B38
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuCollepedia
+	.4byte 0xFFFFFFA8
+	.4byte func_80253190
+	.4byte func_80253188
+	.4byte func_80252BBC
+
+.global CMenuCollepedia_hierarchy
+CMenuCollepedia_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuCollepedia
+__RTTI__CMenuCollepedia:
+	.4byte CMenuCollepedia_typestr
+	.4byte CMenuCollepedia_hierarchy
+
+.global __RTTI__CCollepedia
+__RTTI__CCollepedia:
+	.4byte CCollepedia_typestr
+	.4byte CCollepedia_hierarchy
+
+.global __RTTI__CCLPCur
+__RTTI__CCLPCur:
+	.4byte CCLPCur_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066B090
+lbl_8066B090:
+	# ROM: 0x574EF0
+	.4byte 0
+
+
+.global lbl_8066B094
+lbl_8066B094:
+	# ROM: 0x574EF4
+	.float 1.0
+
+
+.global lbl_8066B098
+lbl_8066B098:
+	# ROM: 0x574EF8
+	.float 10.0
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806670C0
+lbl_806670C0:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80016C4C
 lbl_80016C4C:
@@ -940,7 +1034,7 @@ lbl_80016D70:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80252640
 	.4byte 0x000000D0

@@ -882,3 +882,37 @@ lbl_8056CBC8:
 	.4byte Attach__Q34nw4r3g3d12AnmObjTexSrtFiPQ34nw4r3g3d15AnmObjTexSrtRes
 	.4byte Detach__Q34nw4r3g3d12AnmObjTexSrtFi
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexSrtFv
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C368
+lbl_8066C368:
+	# ROM: 0x5761C8
+	.4byte 0
+
+
+.global lbl_8066C36C
+lbl_8066C36C:
+	# ROM: 0x5761CC
+	.float 1.0
+
+
+.global lbl_8066C370
+lbl_8066C370:
+	# ROM: 0x5761D0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066C378
+lbl_8066C378:
+	# ROM: 0x5761D8
+	.4byte 0x219392EF
+	.4byte 0
+
+
+.global lbl_8066C380
+lbl_8066C380:
+	# ROM: 0x5761E0
+	.4byte 0x3FF00000
+	.4byte 0

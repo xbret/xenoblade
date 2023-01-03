@@ -39,9 +39,9 @@ Construct__Q34nw4r3g3d12ScnMdlExpandFP12MEMAllocatorPUlUlPQ34nw4r3g3d12ScnMdlSim
 /* 803FBFF4 003C55B4  7F A6 EB 78 */	mr r6, r29
 /* 803FBFF8 003C55B8  38 A3 00 F0 */	addi r5, r3, 0xf0
 /* 803FBFFC 003C55BC  4B FF 9A 11 */	bl __ct__Q34nw4r3g3d8ScnGroupFP12MEMAllocatorPPQ34nw4r3g3d6ScnObjUl
-/* 803FC000 003C55C0  3C 60 80 57 */	lis r3, lbl_8056D0C8@ha
+/* 803FC000 003C55C0  3C 60 80 57 */	lis r3, __vt__g3d_scnmdlexpand@ha
 /* 803FC004 003C55C4  2C 1D 00 00 */	cmpwi r29, 0
-/* 803FC008 003C55C8  38 63 D0 C8 */	addi r3, r3, lbl_8056D0C8@l
+/* 803FC008 003C55C8  38 63 D0 C8 */	addi r3, r3, __vt__g3d_scnmdlexpand@l
 /* 803FC00C 003C55CC  7C 1F E2 14 */	add r0, r31, r28
 /* 803FC010 003C55D0  90 7F 00 00 */	stw r3, 0(r31)
 /* 803FC014 003C55D4  38 60 00 00 */	li r3, 0
@@ -625,8 +625,8 @@ __dt__Q34nw4r3g3d12ScnMdlExpandFv:
 /* 803FC820 003C5DE0  7C 7F 1B 78 */	mr r31, r3
 /* 803FC824 003C5DE4  41 82 00 4C */	beq .L_803FC870
 /* 803FC828 003C5DE8  80 03 00 E8 */	lwz r0, 0xe8(r3)
-/* 803FC82C 003C5DEC  3C 80 80 57 */	lis r4, lbl_8056D0C8@ha
-/* 803FC830 003C5DF0  38 84 D0 C8 */	addi r4, r4, lbl_8056D0C8@l
+/* 803FC82C 003C5DEC  3C 80 80 57 */	lis r4, __vt__g3d_scnmdlexpand@ha
+/* 803FC830 003C5DF0  38 84 D0 C8 */	addi r4, r4, __vt__g3d_scnmdlexpand@l
 /* 803FC834 003C5DF4  2C 00 00 00 */	cmpwi r0, 0
 /* 803FC838 003C5DF8  90 83 00 00 */	stw r4, 0(r3)
 /* 803FC83C 003C5DFC  41 82 00 28 */	beq .L_803FC864
@@ -718,8 +718,8 @@ lbl_805210E8:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056D0C8
-lbl_8056D0C8:
+.global __vt__g3d_scnmdlexpand
+__vt__g3d_scnmdlexpand:
 	# ROM: 0x5691C8
 	.4byte 0
 	.4byte 0
@@ -737,3 +737,11 @@ lbl_8056D0C8:
 	.4byte func_803FC21C
 	.4byte Remove__Q34nw4r3g3d12ScnMdlExpandFUl
 	.4byte Remove__Q34nw4r3g3d12ScnMdlExpandFPQ34nw4r3g3d6ScnObj
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665DD8
+lbl_80665DD8:
+	# ROM: 0x5719B8
+	.4byte 0xFFFFFFFF
+	.4byte 0

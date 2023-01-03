@@ -4229,7 +4229,643 @@ func_8011B6D4:
 /* 8011B770 000E4D30  38 21 00 20 */	addi r1, r1, 0x20
 /* 8011B774 000E4D34  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F97F0
+lbl_804F97F0:
+	.asciz "txt_land"
+	.balign 4
+
+.global lbl_804F97FC
+lbl_804F97FC:
+	.asciz "txt_map_jump"
+	.balign 4
+
+.global lbl_804F980C
+lbl_804F980C:
+	.asciz "txt_crystal"
+
+.global lbl_804F9818
+lbl_804F9818:
+	.asciz "txt_commu"
+	.balign 4
+
+.global lbl_804F9824
+lbl_804F9824:
+	.asciz "txt_shop"
+	.balign 4
+
+.global lbl_804F9830
+lbl_804F9830:
+	.asciz "txt_qst1"
+	.balign 4
+
+.global lbl_804F983C
+lbl_804F983C:
+	.asciz "txt_qst2"
+	.balign 4
+
+.global lbl_804F9848
+lbl_804F9848:
+	.asciz "txt_navi"
+	.balign 4
+
+.global lbl_804F9854
+lbl_804F9854:
+	.asciz "txt_qst3"
+	.balign 4
+
+.global lbl_804F9860
+lbl_804F9860:
+	.asciz "txt_scene"
+	.balign 4
+
+.global lbl_804F986C
+lbl_804F986C:
+	.asciz "markerlist0000"
+	.balign 4
+
+.global lbl_804F987C
+lbl_804F987C:
+	.asciz "markerlist0101"
+	.balign 4
+
+.global lbl_804F988C
+lbl_804F988C:
+	.asciz "markerlist0201"
+	.balign 4
+
+.global lbl_804F989C
+lbl_804F989C:
+	.asciz "markerlist0301"
+	.balign 4
+
+.global lbl_804F98AC
+lbl_804F98AC:
+	.asciz "markerlist0401"
+	.balign 4
+
+.global lbl_804F98BC
+lbl_804F98BC:
+	.asciz "markerlist0402"
+	.balign 4
+
+.global lbl_804F98CC
+lbl_804F98CC:
+	.asciz "markerlist0501"
+	.balign 4
+
+.global lbl_804F98DC
+lbl_804F98DC:
+	.asciz "markerlist0601"
+	.balign 4
+
+.global lbl_804F98EC
+lbl_804F98EC:
+	.asciz "markerlist0701"
+	.balign 4
+
+.global lbl_804F98FC
+lbl_804F98FC:
+	.asciz "markerlist0801"
+	.balign 4
+
+.global lbl_804F990C
+lbl_804F990C:
+	.asciz "markerlist0901"
+	.balign 4
+
+.global lbl_804F991C
+lbl_804F991C:
+	.asciz "markerlist1001"
+	.balign 4
+
+.global lbl_804F992C
+lbl_804F992C:
+	.asciz "markerlist1101"
+	.balign 4
+
+.global lbl_804F993C
+lbl_804F993C:
+	.asciz "markerlist1201"
+	.balign 4
+
+.global lbl_804F994C
+lbl_804F994C:
+	.asciz "markerlist1202"
+	.balign 4
+
+.global lbl_804F995C
+lbl_804F995C:
+	.asciz "markerlist1301"
+	.balign 4
+
+.global lbl_804F996C
+lbl_804F996C:
+	.asciz "markerlist1401"
+	.balign 4
+
+.global lbl_804F997C
+lbl_804F997C:
+	.asciz "markerlist1501"
+	.balign 4
+
+.global lbl_804F998C
+lbl_804F998C:
+	.asciz "markerlist1601"
+	.balign 4
+
+.global lbl_804F999C
+lbl_804F999C:
+	.asciz "markerlist1701"
+	.balign 4
+
+.global lbl_804F99AC
+lbl_804F99AC:
+	.asciz "markerlist1801"
+	.balign 4
+
+.global lbl_804F99BC
+lbl_804F99BC:
+	.asciz "markerlist1901"
+	.balign 4
+
+.global lbl_804F99CC
+lbl_804F99CC:
+	.asciz "markerlist2001"
+	.balign 4
+
+.global lbl_804F99DC
+lbl_804F99DC:
+	.asciz "markerlist2101"
+	.balign 4
+
+.global lbl_804F99EC
+lbl_804F99EC:
+	.asciz "markerlist2201"
+	.balign 4
+
+.global lbl_804F99FC
+lbl_804F99FC:
+	.asciz "markerlist2301"
+	.balign 4
+
+.global lbl_804F9A0C
+lbl_804F9A0C:
+	.asciz "markerlist2401"
+	.balign 4
+
+.global CMenuMiniMap2_typestr
+CMenuMiniMap2_typestr:
+	.asciz "CMenuMiniMap2"
+	.balign 4
+
+.global CMiniMap_typestr
+CMiniMap_typestr:
+	.asciz "CMiniMap"
+	.balign 4
+
+.global CMMClock_typestr
+CMMClock_typestr:
+	.asciz "CMMClock"
+	.balign 4
+
+
+.global lbl_804F9A44
+lbl_804F9A44:
+	.asciz "landmarklist"
+	.asciz "txt_land"
+	.asciz "mapID"
+	.asciz "category"
+	.asciz "pic_land%d"
+	.asciz "height"
+	.asciz "txt_qst3"
+	.asciz "type"
+	.asciz "marker"
+	.asciz "quest_no"
+	.asciz "qst_genre"
+	.asciz "relate_no"
+	.asciz "txt_scene"
+	.asciz "pic_obj%d"
+	.asciz "pic_point%d"
+	.asciz "pic_pop%d"
+	.asciz "FLD_valpoplist"
+	.asciz "itm1ID"
+	.asciz "posX"
+	.asciz "posY"
+	.asciz "posZ"
+	.asciz "pic_val%d"
+	.asciz "pic_gmk%d"
+	.asciz "/menu/mmClock.arc"
+	.asciz "CMMClock"
+	.asciz "arc"
+	.asciz "mf70_cf30_clock00.brlyt"
+	.asciz "mf70_cf30_clock00_clock_in.brlan"
+	.asciz "mf70_cf30_clock00_time_all.brlan"
+	.asciz "minimaplist%04d"
+	.asciz "sflag"
+	.asciz "qflag1"
+	.asciz "val1"
+	.asciz "mapimg"
+	.asciz "mapimg1"
+	.asciz "mapimg2"
+	.asciz "/menu/tpl/%s"
+	.asciz "minimap_x"
+	.asciz "minimap_y"
+	.asciz "minimap_rate"
+	.asciz "scmarkerlist"
+	.asciz "MiniMap2"
+	.asciz "MiniMap2_ObjM"
+	.asciz "/menu/mm%04d.arc"
+	.asciz "mf00_com00_dmy.tpl"
+	.asciz "pic_map"
+	.asciz "pic_cam"
+	.asciz "txt_rot"
+	.asciz "pic_pc"
+	.asciz "mf75_minimap00_ma%04d_f01.brlyt"
+	.asciz "mf75_minimap00_ma%04d_f01_in.brlan"
+	.asciz "mf75_minimap00_ma%04d_f01_fade.brlan"
+	.asciz "nul_all"
+	.asciz "map"
+	.asciz "pic_attr%d"
+	.asciz "pic_objnpc%d"
+	.asciz "pic_objpcnpc%d"
+	.asciz "txt_commu"
+	.asciz "npc_id"
+	.asciz "txt_qst1"
+	.asciz "txt_shop"
+	.asciz "txt_crystal"
+	.asciz "txt_obj"
+	.asciz "pic_map_jump%d"
+	.asciz "txt_map_jump"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8052FF10
+lbl_8052FF10:
+	# ROM: 0x52C010
+	.4byte 0x00000065
+	.4byte 0x00C9012D
+	.4byte 0x01910192
+	.4byte 0x01F50259
+	.4byte 0x02BD0321
+	.4byte 0x038503E9
+	.4byte 0x044D04B1
+	.4byte 0x04B20515
+	.4byte 0x057905DD
+	.4byte 0x06410641
+	.4byte 0x06A50709
+	.4byte 0x076D07D1
+	.4byte 0x08350899
+	.4byte 0x08FD0961
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8052FF58
+lbl_8052FF58:
+	# ROM: 0x52C058
+	.4byte lbl_80669950
+	.4byte lbl_804F97F0
+	.4byte lbl_804F97FC
+	.4byte lbl_804F980C
+	.4byte lbl_804F9818
+	.4byte lbl_804F9824
+	.4byte lbl_804F9830
+	.4byte lbl_804F983C
+	.4byte lbl_804F9848
+	.4byte lbl_804F9854
+	.4byte lbl_804F9860
+	.4byte 0
+
+
+.global lbl_8052FF88
+lbl_8052FF88:
+	# ROM: 0x52C088
+	.4byte lbl_80669950
+	.4byte lbl_804F97FC
+	.4byte lbl_804F980C
+	.4byte lbl_804F9818
+	.4byte lbl_804F9824
+	.4byte lbl_804F9830
+	.4byte lbl_804F983C
+	.4byte lbl_804F9848
+	.4byte lbl_804F9854
+	.4byte lbl_804F9860
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8052FFB8
+lbl_8052FFB8:
+	# ROM: 0x52C0B8
+	.4byte lbl_804F986C
+	.4byte lbl_804F987C
+	.4byte lbl_804F988C
+	.4byte lbl_804F989C
+	.4byte lbl_804F98AC
+	.4byte lbl_804F98BC
+	.4byte lbl_804F98CC
+	.4byte lbl_804F98DC
+	.4byte lbl_804F98EC
+	.4byte lbl_804F98FC
+	.4byte lbl_804F990C
+	.4byte lbl_804F991C
+	.4byte lbl_804F992C
+	.4byte lbl_804F993C
+	.4byte lbl_804F994C
+	.4byte lbl_804F995C
+	.4byte lbl_804F996C
+	.4byte lbl_804F997C
+	.4byte lbl_804F998C
+	.4byte lbl_804F998C
+	.4byte lbl_804F999C
+	.4byte lbl_804F99AC
+	.4byte lbl_804F99BC
+	.4byte lbl_804F99CC
+	.4byte lbl_804F99DC
+	.4byte lbl_804F99EC
+	.4byte lbl_804F99FC
+	.4byte lbl_804F9A0C
+
+
+.global __vt__CMenuMiniMap2
+__vt__CMenuMiniMap2:
+	.4byte __RTTI__CMenuMiniMap2
+	.4byte 0
+	.4byte func_8011B6D4
+	.4byte CChildListNode_Reset
+	.4byte func_8011B778
+	.4byte func_8011BB18
+	.4byte func_8011BBCC
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuMiniMap2
+	.4byte 0xFFFFFFA8
+	.4byte func_8011C434
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuMiniMap2
+	.4byte 0xFFFFFFA4
+	.4byte func_8011C444
+	.4byte func_8011C43C
+	.4byte func_8011C0C0
+
+.global CMenuMiniMap2_hierarchy
+CMenuMiniMap2_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x0000005C
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CMiniMap
+__vt__CMiniMap:
+	.4byte __RTTI__CMiniMap
+	.4byte 0
+	.4byte func_80117BC8
+	.4byte func_80039E28
+	.4byte func_80118428
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CMiniMap_hierarchy
+CMiniMap_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__CMMTex
+__vt__CMMTex:
+	.4byte __RTTI__CMMTex
+	.4byte 0
+	.4byte func_801176F4
+	.4byte func_80039E28
+	.4byte func_801179DC
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CMMTex_hierarchy
+CMMTex_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80664740
+lbl_80664740:
+	# ROM: 0x570320
+	.float 0.2
+	.4byte 0
+
+.global __RTTI__CMenuMiniMap2
+__RTTI__CMenuMiniMap2:
+	.4byte CMenuMiniMap2_typestr
+	.4byte CMenuMiniMap2_hierarchy
+
+.global __RTTI__CMiniMap
+__RTTI__CMiniMap:
+	.4byte CMiniMap_typestr
+	.4byte CMiniMap_hierarchy
+
+.global __RTTI__CMMTex
+__RTTI__CMMTex:
+	.4byte CMMTex_typestr
+	.4byte CMMTex_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_80669950
+lbl_80669950:
+	.asciz "txt_obj"
+
+
+.global lbl_80669958
+lbl_80669958:
+	# ROM: 0x5737B8
+	.4byte 0
+
+
+.global lbl_8066995C
+lbl_8066995C:
+	# ROM: 0x5737BC
+	.4byte 0x42340000
+
+
+.global lbl_80669960
+lbl_80669960:
+	# ROM: 0x5737C0
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_80669968
+lbl_80669968:
+	# ROM: 0x5737C8
+	.4byte 0x42700000
+
+
+.global lbl_8066996C
+lbl_8066996C:
+	# ROM: 0x5737CC
+	.float 1.0
+
+
+.global lbl_80669970
+lbl_80669970:
+	# ROM: 0x5737D0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_80669978
+lbl_80669978:
+	# ROM: 0x5737D8
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_8066997C
+lbl_8066997C:
+	# ROM: 0x5737DC
+	.float 0.5
+
+
+.global lbl_80669980
+lbl_80669980:
+	# ROM: 0x5737E0
+	.4byte 0x42100000
+
+
+.global lbl_80669984
+lbl_80669984:
+	# ROM: 0x5737E4
+	.4byte 0x43340000
+
+
+.global lbl_80669988
+lbl_80669988:
+	# ROM: 0x5737E8
+	.float -1.0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806668A8
+lbl_806668A8:
+	.skip 0x4
+.global lbl_806668AC
+lbl_806668AC:
+	.skip 0x4
+.global lbl_806668B0
+lbl_806668B0:
+	.skip 0x4
+.global lbl_806668B4
+lbl_806668B4:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000B6A8
 lbl_8000B6A8:
@@ -4343,7 +4979,7 @@ lbl_8000B79C:
 	.4byte __dt__IWorkEvent
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80117A18
 	.4byte 0x000001B0

@@ -147,3 +147,10 @@ sinit_8042BFB4:
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
 .4byte sinit_8042BFB4
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80657088
+lbl_80657088:
+	.skip 0x20

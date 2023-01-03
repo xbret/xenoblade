@@ -17,3 +17,9 @@ lbl_8051CE58:
 	.asciz "\nCRI CFT/WII Ver.2.11 Build:Nov 13 2008 18:21:14\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80602788
+lbl_80602788:
+	.skip 0x8

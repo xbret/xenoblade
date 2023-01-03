@@ -2213,3 +2213,54 @@ sinit_804325F4:
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
 .4byte sinit_804325F4
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C960
+lbl_8066C960:
+	# ROM: 0x5767C0
+	.4byte 0x7F7FFFFF
+
+
+.global lbl_8066C964
+lbl_8066C964:
+	# ROM: 0x5767C4
+	.4byte 0
+
+
+.global lbl_8066C968
+lbl_8066C968:
+	# ROM: 0x5767C8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066C970
+lbl_8066C970:
+	# ROM: 0x5767D0
+	.float 0.5
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_806570C8
+lbl_806570C8:
+	.skip 0xC
+.global lbl_806570D4
+lbl_806570D4:
+	.skip 0xC
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667E40
+lbl_80667E40:
+	.skip 0x4
+.global lbl_80667E44
+lbl_80667E44:
+	.skip 0x4
+.global lbl_80667E48
+lbl_80667E48:
+	.skip 0x1
+.global lbl_80667E49
+lbl_80667E49:
+	.skip 0x7

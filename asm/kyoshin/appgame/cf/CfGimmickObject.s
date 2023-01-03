@@ -4414,7 +4414,328 @@ func_801F8BB8:
 /* 801F8CAC 001C226C  38 21 00 20 */	addi r1, r1, 0x20
 /* 801F8CB0 001C2270  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global lbl_805031F8
+lbl_805031F8:
+	.asciz "r1_quest_FLG"
+	.balign 4
+
+.global lbl_80503208
+lbl_80503208:
+	.asciz "r1_quest_STFLG"
+	.balign 4
+
+.global lbl_80503218
+lbl_80503218:
+	.asciz "r1_S_FLG_MIN"
+	.balign 4
+
+.global lbl_80503228
+lbl_80503228:
+	.asciz "r1_S_FLG_MAX"
+	.balign 4
+
+.global lbl_80503238
+lbl_80503238:
+	.asciz "r1_gimID"
+	.balign 4
+
+.global lbl_80503244
+lbl_80503244:
+	.asciz "r1_named_FLG"
+	.balign 4
+
+.global lbl_80503254
+lbl_80503254:
+	.asciz "r1_item_lost"
+	.balign 4
+
+.global lbl_80503264
+lbl_80503264:
+	.asciz "s1pcwait"
+	.balign 4
+
+.global lbl_80503270
+lbl_80503270:
+	.asciz "s1LODtype"
+	.balign 4
+
+.global lbl_8050327C
+lbl_8050327C:
+	.asciz "s1LODsub"
+	.balign 4
+
+.global lbl_80503288
+lbl_80503288:
+	.asciz "s1LODSTOP"
+	.balign 4
+
+.global cf_CfGimmickObject_typestr
+cf_CfGimmickObject_typestr:
+	.asciz "cf::CfGimmickObject"
+
+.global cf_CfGimmick_typestr
+cf_CfGimmick_typestr:
+	.asciz "cf::CfGimmick"
+	.balign 4
+
+
+.global lbl_805032B8
+lbl_805032B8:
+	.asciz "rectype"
+	.asciz "ct"
+	.asciz "visible"
+	.asciz "named_FLG"
+	.asciz "popSTIME"
+	.asciz "popETIME"
+	.asciz "mapOBJ"
+	.asciz "LODOBJ"
+	.asciz "LODOBJ2"
+	.asciz "s1MSGID"
+	.asciz "s2MSGID"
+	.asciz "s3cleartype"
+	.asciz "s4cleartype"
+	.asciz "s3gimENskip"
+	.asciz "s3gimENID1"
+	.asciz "s3gimENID2"
+	.asciz "s3gimENID3"
+	.asciz "s5gimENID1"
+	.asciz "s5gimENID2"
+	.asciz "s5gimENID3"
+	.asciz "s3touchSE"
+	.asciz "s3wait"
+	.asciz "s4wait"
+	.asciz "nextqFLG"
+	.asciz "nextqstFLG"
+	.asciz "nextwait"
+	.asciz "s2lockPC"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80538628
+lbl_80538628:
+	# ROM: 0x534728
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801F7978
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801F7B44
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801F7D38
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801F7F24
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801F8564
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801F856C
+
+
+.global lbl_80538670
+lbl_80538670:
+	# ROM: 0x534770
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801F85C4
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801F85C4
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801F8658
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801F879C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801F89B8
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801F8BB8
+
+
+.global lbl_805386B8
+lbl_805386B8:
+	# ROM: 0x5347B8
+	.4byte lbl_805031F8
+	.4byte lbl_80503208
+	.4byte lbl_80503218
+	.4byte lbl_80503228
+	.4byte lbl_80503238
+	.4byte lbl_80503244
+	.4byte lbl_8066AA28
+	.4byte lbl_80503254
+
+
+.global lbl_805386D8
+lbl_805386D8:
+	# ROM: 0x5347D8
+	.4byte lbl_80503264
+	.4byte lbl_8066AA30
+	.4byte lbl_8066AA38
+	.4byte lbl_80503270
+	.4byte lbl_8050327C
+	.4byte lbl_8066AA40
+	.4byte lbl_8066AA48
+	.4byte lbl_8066AA50
+	.4byte lbl_8066AA58
+	.4byte lbl_80503288
+
+
+.global lbl_80538700
+lbl_80538700:
+	# ROM: 0x534800
+	.4byte switch_801F728C
+	.4byte switch_801F6EAC
+	.4byte switch_801F6F34
+	.4byte switch_801F6FBC
+	.4byte switch_801F7044
+	.4byte switch_801F70F0
+	.4byte switch_801F719C
+	.4byte switch_801F7248
+	.4byte switch_801F7254
+	.4byte switch_801F6EAC
+
+
+.global __vt__cf_CfGimmickObject
+__vt__cf_CfGimmickObject:
+	.4byte __RTTI__cf_CfGimmickObject
+	.4byte 0
+	.4byte func_801F5A8C
+	.4byte func_8020896C
+	.4byte func_801F5B00
+	.4byte func_801F5BF8
+	.4byte func_801F5C08
+	.4byte func_801F5C18
+	.4byte func_801F7930
+
+.global cf_CfGimmickObject_hierarchy
+cf_CfGimmickObject_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0
+	.4byte __RTTI__cf_CfGimmick
+	.4byte 0
+	.4byte 0
+
+.global cf_CfGimmick_hierarchy
+cf_CfGimmick_hierarchy:
+	.4byte __RTTI__cf_IObjectInfo
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CfGimmickObject
+__RTTI__cf_CfGimmickObject:
+	.4byte cf_CfGimmickObject_typestr
+	.4byte cf_CfGimmickObject_hierarchy
+
+.global __RTTI__cf_CfGimmick
+__RTTI__cf_CfGimmick:
+	.4byte cf_CfGimmick_typestr
+	.4byte cf_CfGimmick_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AA28
+lbl_8066AA28:
+	.asciz "r1_item"
+
+.global lbl_8066AA30
+lbl_8066AA30:
+	.asciz "s1camID"
+
+.global lbl_8066AA38
+lbl_8066AA38:
+	.asciz "s1ACT"
+	.balign 4
+
+.global lbl_8066AA40
+lbl_8066AA40:
+	.asciz "s1EF"
+	.balign 4
+
+.global lbl_8066AA48
+lbl_8066AA48:
+	.asciz "s1EFATR"
+
+.global lbl_8066AA50
+lbl_8066AA50:
+	.asciz "s1SE"
+	.balign 4
+
+.global lbl_8066AA58
+lbl_8066AA58:
+	.asciz "s1SEATR"
+
+
+.global lbl_8066AA60
+lbl_8066AA60:
+	# ROM: 0x5748C0
+	.4byte 0
+
+
+.global lbl_8066AA64
+lbl_8066AA64:
+	# ROM: 0x5748C4
+	.float 1.0
+
+
+.global lbl_8066AA68
+lbl_8066AA68:
+	# ROM: 0x5748C8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066AA70
+lbl_8066AA70:
+	# ROM: 0x5748D0
+	.4byte 0x41A00000
+
+
+.global lbl_8066AA74
+lbl_8066AA74:
+	# ROM: 0x5748D4
+	.4byte 0x42F00000
+
+
+.global lbl_8066AA78
+lbl_8066AA78:
+	# ROM: 0x5748D8
+	.4byte 0x41F00000
+
+
+.global lbl_8066AA7C
+lbl_8066AA7C:
+	# ROM: 0x5748DC
+	.4byte 0x43700000
+
+
+.global lbl_8066AA80
+lbl_8066AA80:
+	# ROM: 0x5748E0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066AA88
+lbl_8066AA88:
+	# ROM: 0x5748E8
+	.4byte 0x40A00000
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80012308
 lbl_80012308:
@@ -4552,7 +4873,7 @@ lbl_800123F0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801F4F68
 	.4byte 0x00000B24

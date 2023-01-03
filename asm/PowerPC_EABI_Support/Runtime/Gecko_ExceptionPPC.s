@@ -1606,7 +1606,7 @@ lbl_8053F0AC:
 lbl_8057AE90:
 	.skip 0x180
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001BF40
 lbl_8001BF40:
@@ -1639,7 +1639,7 @@ lbl_8001BF6C:
 	.4byte 0
 	.4byte 0x8E000000
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte MWExceptionInfo$7ExPPC_FindExceptionRecord
 	.4byte 0x000001B0

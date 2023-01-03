@@ -757,3 +757,22 @@ lbl_8056CEC8:
 	.asciz "NodeTree"
 	.balign 4
 	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665DA0
+lbl_80665DA0:
+	.asciz "NodeMix"
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C440
+lbl_8066C440:
+	# ROM: 0x5762A0
+	.float 1.0
+
+
+.global lbl_8066C444
+lbl_8066C444:
+	# ROM: 0x5762A4
+	.4byte 0

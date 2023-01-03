@@ -606,7 +606,104 @@ func_8018A620:
 /* 8018A620 00153BE0  38 63 FF 90 */	addi r3, r3, -112
 /* 8018A624 00153BE4  4B FF F8 B4 */	b func_80189ED8
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
+.global CMenuSelectShop_typestr
+CMenuSelectShop_typestr:
+	.asciz "CMenuSelectShop"
+
+
+.global lbl_804FF308
+lbl_804FF308:
+	.asciz "CMenuSelectShop"
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuSelectShop
+__vt__CMenuSelectShop:
+	.4byte __RTTI__CMenuSelectShop
+	.4byte 0
+	.4byte func_80189ED8
+	.4byte CChildListNode_Reset
+	.4byte func_80189F50
+	.4byte func_8018A0BC
+	.4byte func_8018A12C
+	.4byte func_80124584
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuSelectShop
+	.4byte 0xFFFFFF94
+	.4byte func_8018A610
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte __RTTI__CMenuSelectShop
+	.4byte 0xFFFFFF90
+	.4byte func_8018A620
+	.4byte func_8018A618
+	.4byte func_8018A4E8
+
+.global CMenuSelectShop_hierarchy
+CMenuSelectShop_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000070
+	.4byte __RTTI__IWorkEvent
+	.4byte 0x0000006C
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIWindow
+	.4byte 0
+	.4byte __RTTI__IUIWindow
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuSelectShop
+__RTTI__CMenuSelectShop:
+	.4byte CMenuSelectShop_typestr
+	.4byte CMenuSelectShop_hierarchy
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80666BD8
+lbl_80666BD8:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000EC4C
 lbl_8000EC4C:
@@ -724,7 +821,7 @@ lbl_8000ED88:
 
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80189DE8
 	.4byte 0x000000F0

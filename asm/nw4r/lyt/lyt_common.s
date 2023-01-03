@@ -817,3 +817,28 @@ DrawQuad__Q34nw4r3lyt6detailFRCQ34nw4r4math4VEC2RCQ34nw4r3lyt4SizeUcPA4_CQ34nw4r
 /* 8040AB74 003D4134  7C 08 03 A6 */	mtlr r0
 /* 8040AB78 003D4138  38 21 00 50 */	addi r1, r1, 0x50
 /* 8040AB7C 003D413C  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C5F8
+lbl_8066C5F8:
+	# ROM: 0x576458
+	.4byte 0
+
+
+.global lbl_8066C5FC
+lbl_8066C5FC:
+	# ROM: 0x57645C
+	.float 1.0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8063AD00
+lbl_8063AD00:
+	.skip 0x20
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667D80
+lbl_80667D80:
+	.skip 0x8

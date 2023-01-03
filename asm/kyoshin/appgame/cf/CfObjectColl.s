@@ -1413,7 +1413,439 @@ func_800AC610:
 /* 800AC624 00075BE4  38 60 00 00 */	li r3, 0
 /* 800AC628 00075BE8  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CfObjectColl_typestr
+cf_CfObjectColl_typestr:
+	.asciz "cf::CfObjectColl"
+	.balign 4
+
+.global cf_CfCollCapsuleImpl_typestr
+cf_CfCollCapsuleImpl_typestr:
+	.asciz "cf::CfCollCapsuleImpl"
+	.balign 4
+
+.global cf_CfCollCylinderImpl_typestr
+cf_CfCollCylinderImpl_typestr:
+	.asciz "cf::CfCollCylinderImpl"
+	.balign 4
+
+.global cf_CfCollAABBImpl_typestr
+cf_CfCollAABBImpl_typestr:
+	.asciz "cf::CfCollAABBImpl"
+	.balign 4
+
+.global cf_CfCollSphereImpl_typestr
+cf_CfCollSphereImpl_typestr:
+	.asciz "cf::CfCollSphereImpl"
+	.balign 4
+
+.global cf_CfCollCircleImpl_typestr
+cf_CfCollCircleImpl_typestr:
+	.asciz "cf::CfCollCircleImpl"
+	.balign 4
+
+.global cf_CfCollImpl_typestr
+cf_CfCollImpl_typestr:
+	.asciz "cf::CfCollImpl"
+	.balign 4
+
+.global cf_CfObjectPoint_typestr
+cf_CfObjectPoint_typestr:
+	.asciz "cf::CfObjectPoint"
+	.balign 4
+
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F795C
+lbl_804F795C:
+	.asciz "%02d%02df"
+	.asciz "%s"
+	.4byte 0
+	.byte 0x00, 0x00, 0x00
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8052BDB8
+lbl_8052BDB8:
+	# ROM: 0x527EB8
+	.4byte lbl_806667AC
+	.4byte lbl_806667A4
+	.4byte lbl_806667AC
+	.4byte lbl_806667B4
+	.4byte lbl_806667BC
+	.4byte lbl_806667C4
+
+
+.global __vt__cf_CfObjectColl
+__vt__cf_CfObjectColl:
+	.4byte __RTTI__cf_CfObjectColl
+	.4byte 0
+	.4byte func_8003DC64
+	.4byte func_8003CB58
+	.4byte func_8003DD34
+	.4byte func_800A34A8
+	.4byte func_8009489C
+	.4byte func_800A349C
+	.4byte func_80086B4C
+	.4byte func_8003CB20
+	.4byte func_8003D98C
+	.4byte func_8003D8C0
+	.4byte func_8003D7B0
+	.4byte func_800A3494
+	.4byte func_800A3488
+	.4byte func_8003C7F8
+	.4byte func_8003C2EC
+	.4byte func_800A34B4
+	.4byte func_800C136C
+	.4byte func_8003E664
+	.4byte func_8003DC74
+	.4byte func_800AB424
+	.4byte func_800AB3EC
+	.4byte func_800AB498
+	.4byte func_800C14CC
+	.4byte func_800AC600
+	.4byte func_800C1444
+	.4byte func_800AB57C
+	.4byte func_800C1658
+	.4byte func_8006CB04
+	.4byte func_800AC5F0
+	.4byte func_800AC5E4
+	.4byte func_800AC5E0
+	.4byte func_800AC5D8
+	.4byte func_800AC5D4
+	.4byte func_800AC5CC
+	.4byte func_800AC5C8
+	.4byte func_800AC5C0
+	.4byte func_800AC5B8
+	.4byte func_80047814
+	.4byte func_800C171C
+	.4byte func_800AC5A8
+	.4byte func_800AB798
+	.4byte func_8003C0C8
+	.4byte func_800AC5A0
+	.4byte func_800BAF50
+	.4byte func_800AB7A8
+	.4byte func_8003F15C
+	.4byte func_800AC598
+	.4byte func_8003C784
+	.4byte func_8003C774
+	.4byte func_80049994
+	.4byte func_80080244
+	.4byte func_80080234
+	.4byte func_8003C250
+	.4byte func_800AC590
+	.4byte func_800AC588
+	.4byte func_800AC580
+	.4byte func_800AC578
+	.4byte func_800AC560
+	.4byte func_800AC568
+	.4byte func_800AC570
+	.4byte func_800AC548
+	.4byte func_800AC550
+	.4byte func_800AC558
+	.4byte func_800AC544
+	.4byte func_8008738C
+	.4byte func_8007DA78
+	.4byte func_800733A8
+	.4byte func_8003CD68
+	.4byte func_8003CDD8
+	.4byte func_800AC53C
+	.4byte func_80074228
+	.4byte func_8008735C
+	.4byte func_8006C668
+	.4byte func_80074204
+	.4byte func_800873A4
+	.4byte func_800AC538
+	.4byte func_800873C0
+	.4byte func_800AC534
+	.4byte func_800AC52C
+	.4byte func_800AC528
+	.4byte func_800AC520
+	.4byte func_800BAC74
+	.4byte func_8003F1E8
+	.4byte func_800AC4F8
+	.4byte func_800C16F4
+	.4byte func_800AC4D0
+	.4byte func_800AC604
+	.4byte func_800AC4C8
+	.4byte func_800AC4C4
+	.4byte func_800AC4BC
+	.4byte func_800AC4B8
+	.4byte func_800AC4B0
+
+.global cf_CfObjectColl_hierarchy
+cf_CfObjectColl_hierarchy:
+	.4byte __RTTI__cf_CObjectState
+	.4byte 0
+	.4byte __RTTI__cf_CObjectParam
+	.4byte 0
+	.4byte __RTTI__cf_CfObject
+	.4byte 0
+	.4byte __RTTI__cf_CfObjectPoint
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CfCollCapsuleImpl
+__vt__cf_CfCollCapsuleImpl:
+	.4byte __RTTI__cf_CfCollCapsuleImpl
+	.4byte 0
+	.4byte func_800AB2E4
+	.4byte func_800AB3B8
+
+.global cf_CfCollCapsuleImpl_hierarchy
+cf_CfCollCapsuleImpl_hierarchy:
+	.4byte __RTTI__cf_CfCollImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CfCollCylinderImpl
+__vt__cf_CfCollCylinderImpl:
+	.4byte __RTTI__cf_CfCollCylinderImpl
+	.4byte 0
+	.4byte func_800AB010
+	.4byte func_800AB248
+
+.global cf_CfCollCylinderImpl_hierarchy
+cf_CfCollCylinderImpl_hierarchy:
+	.4byte __RTTI__cf_CfCollImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CfCollAABBImpl
+__vt__cf_CfCollAABBImpl:
+	.4byte __RTTI__cf_CfCollAABBImpl
+	.4byte 0
+	.4byte func_800AAE24
+	.4byte func_800AAFF4
+
+.global cf_CfCollAABBImpl_hierarchy
+cf_CfCollAABBImpl_hierarchy:
+	.4byte __RTTI__cf_CfCollImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CfCollSphereImpl
+__vt__cf_CfCollSphereImpl:
+	.4byte __RTTI__cf_CfCollSphereImpl
+	.4byte 0
+	.4byte func_800AAD28
+	.4byte func_800AAD94
+
+.global cf_CfCollSphereImpl_hierarchy
+cf_CfCollSphereImpl_hierarchy:
+	.4byte __RTTI__cf_CfCollImpl
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global __vt__cf_CfCollCircleImpl
+__vt__cf_CfCollCircleImpl:
+	.4byte __RTTI__cf_CfCollCircleImpl
+	.4byte 0
+	.4byte func_800AABD4
+	.4byte func_800AAC98
+
+.global cf_CfCollCircleImpl_hierarchy
+cf_CfCollCircleImpl_hierarchy:
+	.4byte __RTTI__cf_CfCollImpl
+	.4byte 0
+	.4byte 0
+
+.global cf_CfObjectPoint_hierarchy
+cf_CfObjectPoint_hierarchy:
+	.4byte __RTTI__cf_CObjectState
+	.4byte 0
+	.4byte __RTTI__cf_CObjectParam
+	.4byte 0
+	.4byte __RTTI__cf_CfObject
+	.4byte 0
+	.4byte 0
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__cf_CfObjectColl
+__RTTI__cf_CfObjectColl:
+	.4byte cf_CfObjectColl_typestr
+	.4byte cf_CfObjectColl_hierarchy
+
+.global __RTTI__cf_CfCollCapsuleImpl
+__RTTI__cf_CfCollCapsuleImpl:
+	.4byte cf_CfCollCapsuleImpl_typestr
+	.4byte cf_CfCollCapsuleImpl_hierarchy
+
+.global __RTTI__cf_CfCollCylinderImpl
+__RTTI__cf_CfCollCylinderImpl:
+	.4byte cf_CfCollCylinderImpl_typestr
+	.4byte cf_CfCollCylinderImpl_hierarchy
+
+.global __RTTI__cf_CfCollAABBImpl
+__RTTI__cf_CfCollAABBImpl:
+	.4byte cf_CfCollAABBImpl_typestr
+	.4byte cf_CfCollAABBImpl_hierarchy
+
+.global __RTTI__cf_CfCollSphereImpl
+__RTTI__cf_CfCollSphereImpl:
+	.4byte cf_CfCollSphereImpl_typestr
+	.4byte cf_CfCollSphereImpl_hierarchy
+
+.global __RTTI__cf_CfCollCircleImpl
+__RTTI__cf_CfCollCircleImpl:
+	.4byte cf_CfCollCircleImpl_typestr
+	.4byte cf_CfCollCircleImpl_hierarchy
+
+.global __RTTI__cf_CfCollImpl
+__RTTI__cf_CfCollImpl:
+	.4byte cf_CfCollImpl_typestr
+	.4byte 0
+
+
+.global __RTTI__cf_CfObjectPoint
+__RTTI__cf_CfObjectPoint:
+	.4byte cf_CfObjectPoint_typestr
+	.4byte cf_CfObjectPoint_hierarchy
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_806691D8
+lbl_806691D8:
+	# ROM: 0x573038
+	.4byte 0
+
+
+.global lbl_806691DC
+lbl_806691DC:
+	# ROM: 0x57303C
+	.float 1.0
+
+
+.global lbl_806691E0
+lbl_806691E0:
+	# ROM: 0x573040
+	.4byte 0x3E99999A
+	.4byte 0
+
+
+.global lbl_806691E8
+lbl_806691E8:
+	# ROM: 0x573048
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_806691F0
+lbl_806691F0:
+	# ROM: 0x573050
+	.4byte 0x4222F983
+
+
+.global lbl_806691F4
+lbl_806691F4:
+	# ROM: 0x573054
+	.4byte 0x3DCCCCCD
+
+
+.global lbl_806691F8
+lbl_806691F8:
+	# ROM: 0x573058
+	.float 0.5
+
+
+.global lbl_806691FC
+lbl_806691FC:
+	# ROM: 0x57305C
+	.4byte 0x3E19999A
+
+
+.global lbl_80669200
+lbl_80669200:
+	# ROM: 0x573060
+	.4byte 0x3F333333
+
+
+.global lbl_80669204
+lbl_80669204:
+	# ROM: 0x573064
+	.float 0.2
+
+
+.global lbl_80669208
+lbl_80669208:
+	# ROM: 0x573068
+	.4byte 0x3C23D70A
+
+
+.global lbl_8066920C
+lbl_8066920C:
+	# ROM: 0x57306C
+	.4byte 0x3ECCCCCD
+
+
+.global lbl_80669210
+lbl_80669210:
+	# ROM: 0x573070
+	.float 0.75
+
+
+.global lbl_80669214
+lbl_80669214:
+	# ROM: 0x573074
+	.4byte 0x41F00000
+
+
+.global lbl_80669218
+lbl_80669218:
+	# ROM: 0x573078
+	.4byte 0x40400000
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806667A0
+lbl_806667A0:
+	.skip 0x4
+.global lbl_806667A4
+lbl_806667A4:
+	.skip 0x4
+.global lbl_806667A8
+lbl_806667A8:
+	.skip 0x4
+.global lbl_806667AC
+lbl_806667AC:
+	.skip 0x4
+.global lbl_806667B0
+lbl_806667B0:
+	.skip 0x4
+.global lbl_806667B4
+lbl_806667B4:
+	.skip 0x4
+.global lbl_806667B8
+lbl_806667B8:
+	.skip 0x4
+.global lbl_806667BC
+lbl_806667BC:
+	.skip 0x4
+.global lbl_806667C0
+lbl_806667C0:
+	.skip 0x4
+.global lbl_806667C4
+lbl_806667C4:
+	.skip 0x4
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800093C4
 lbl_800093C4:
@@ -1526,7 +1958,7 @@ lbl_80009478:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_800AB3EC
 	.4byte 0x00000038

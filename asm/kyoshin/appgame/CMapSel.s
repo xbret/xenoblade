@@ -1306,7 +1306,149 @@ func_802440E0:
 /* 802442D8 0020D898  38 21 00 40 */	addi r1, r1, 0x40
 /* 802442DC 0020D89C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_80506BA8
+lbl_80506BA8:
+	.asciz "mapID"
+	.asciz "index"
+	.asciz "/menu/MapSel.arc"
+	.asciz "txt_map%02d"
+	.asciz "name"
+	.asciz "txt_map00"
+	.asciz "map_caption"
+	.asciz "txt_comment"
+	.byte 0x00
+	.asciz "mf00_com00_dmy.tpl"
+	.asciz "pic_map"
+	.asciz "map_fileID"
+	.asciz "/menu/tpl/%s"
+	.asciz "nul_proportion"
+	.asciz "CMapSel"
+	.asciz "arc"
+	.asciz "mf03_map00_mpslct.brlyt"
+	.asciz "mf03_map00_mpslct_in.brlan"
+	.asciz "mf03_map00_mpslct_in_info.brlan"
+	.balign 4
+	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053A550
+lbl_8053A550:
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_8024326C
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_8024326C
+	.4byte switch_80243210
+	.4byte switch_8024326C
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_80243210
+	.4byte switch_8024326C
+	.4byte switch_80243210
+	.4byte switch_8024326C
+	.4byte 0
+
+
+.global __vt__CMapSel
+__vt__CMapSel:
+	.4byte __RTTI__CMapSel
+	.4byte 0
+	.4byte func_802433D0
+	.4byte func_80039E28
+	.4byte func_802440E0
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+
+.global CMapSel_hierarchy
+CMapSel_hierarchy:
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMapSel
+__RTTI__CMapSel:
+	.4byte CMapSel_typestr
+	.4byte CMapSel_hierarchy
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066AFF0
+lbl_8066AFF0:
+	# ROM: 0x574E50
+	.4byte 0
+
+
+.global lbl_8066AFF4
+lbl_8066AFF4:
+	# ROM: 0x574E54
+	.float 1.0
+
+
+.global lbl_8066AFF8
+lbl_8066AFF8:
+	# ROM: 0x574E58
+	.4byte 0xC2600000
+
+
+.global lbl_8066AFFC
+lbl_8066AFFC:
+	# ROM: 0x574E5C
+	.4byte 0x42F60000
+
+.global CMapSel_typestr
+CMapSel_typestr:
+	.asciz "CMapSel"
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80016320
 lbl_80016320:
@@ -1466,7 +1608,7 @@ lbl_8001645C:
 	.4byte func_8045F8C8
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802430AC
 	.4byte 0x00000324

@@ -1057,7 +1057,92 @@ func_802A4798:
 /* 802A4868 0026DE28  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A486C 0026DE2C  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global cf_CVS_THREAD_typestr
+cf_CVS_THREAD_typestr:
+	.asciz "cf::CVS_THREAD"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053D088
+lbl_8053D088:
+	# ROM: 0x539188
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_802A13B8
+
+.global lbl_8053D094
+lbl_8053D094:
+	.4byte 0
+
+.global lbl_8053D098
+lbl_8053D098:
+	.4byte 0xFFFFFFFF
+	.4byte func_802A13B8
+
+
+.global __vt__cf_CVS_THREAD
+__vt__cf_CVS_THREAD:
+	.4byte __RTTI__cf_CVS_THREAD
+	.4byte 0
+	.4byte func_802A3B50
+	.4byte func_802A3BEC
+	.4byte 0
+	.4byte func_802A1EA0
+	.4byte func_802A3740
+	.4byte 0
+
+
+.global lbl_8053D0C0
+lbl_8053D0C0:
+	# ROM: 0x5391C0
+	.4byte switch_802A4654
+	.4byte switch_802A4668
+	.4byte switch_802A467C
+	.4byte switch_802A4690
+	.4byte switch_802A46A4
+	.4byte switch_802A46B8
+	.4byte switch_802A46CC
+	.4byte switch_802A46E0
+	.4byte switch_802A46F4
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806655A8
+lbl_806655A8:
+	# ROM: 0x571188
+	.float 1.0
+
+
+.global lbl_806655AC
+lbl_806655AC:
+	# ROM: 0x57118C
+	.4byte 0x41F00000
+
+
+.global lbl_806655B0
+lbl_806655B0:
+	# ROM: 0x571190
+	.4byte 0x447A0000
+	.4byte 0
+
+.global __RTTI__cf_CVS_THREAD
+__RTTI__cf_CVS_THREAD:
+	.4byte cf_CVS_THREAD_typestr
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B530
+lbl_8066B530:
+	# ROM: 0x575390
+	.float 1.0
+	.4byte 0
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001AA90
 lbl_8001AA90:
@@ -1125,7 +1210,7 @@ lbl_8001AAF0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A3A80
 	.4byte 0x0000004C

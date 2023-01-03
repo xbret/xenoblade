@@ -213,7 +213,13 @@ sinit_80296B38:
 
 .4byte sinit_80296B38
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8057A9C8
+lbl_8057A9C8:
+	.skip 0x40
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80019BF8
 lbl_80019BF8:
@@ -241,7 +247,7 @@ lbl_80019C18:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802968B8
 	.4byte 0x0000006C

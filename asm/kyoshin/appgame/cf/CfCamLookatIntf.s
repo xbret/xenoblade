@@ -66,7 +66,7 @@ CamLookatIntf_setLookat:
 /* 8006B5CC 00034B8C  D0 04 02 64 */	stfs f0, 0x264(r4)
 /* 8006B5D0 00034B90  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80008098
 lbl_80008098:
@@ -79,7 +79,7 @@ lbl_800080A0:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 	.4byte CamLookatIntf_setDir
 	.4byte 0x00000074

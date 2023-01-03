@@ -17,3 +17,9 @@ SFA_Finish:
 /* 8037F9B0 00348F70  38 03 FF FF */	addi r0, r3, -1
 /* 8037F9B4 00348F74  90 04 69 B8 */	stw r0, lbl_805E69B8@l(r4)
 /* 8037F9B8 00348F78  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E69B8
+lbl_805E69B8:
+	.skip 0x8

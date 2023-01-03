@@ -2368,3 +2368,12 @@ lbl_80520310:
 	.4byte sfmps_CopyVideo
 	.4byte sfmps_CopyPrvate
 	.4byte sfmps_CopyPadding
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global sfmps_libwork
+sfmps_libwork:
+	.skip 0x810
+.global copy_sj_error
+copy_sj_error:
+	.skip 0x8

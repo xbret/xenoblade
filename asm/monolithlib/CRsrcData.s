@@ -391,7 +391,7 @@ __RTTI__CRsrcData:
 	.4byte CRsrcData_typestr
 	.4byte CRsrcData_hierarchy
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001C278
 lbl_8001C278:
@@ -439,7 +439,7 @@ lbl_8001C2C4:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80439CB4
 	.4byte 0x00000080

@@ -1231,7 +1231,97 @@ func_80257A84:
 /* 80257A84 00221044  38 63 FF A8 */	addi r3, r3, -88
 /* 80257A88 00221048  4B FF EF CC */	b func_80256A54
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuKizunagram_typestr
+CMenuKizunagram_typestr:
+	.asciz "CMenuKizunagram"
+
+
+.global lbl_80508140
+lbl_80508140:
+	.asciz "MNU_relate"
+	.asciz "name"
+
+.global lbl_80508150
+lbl_80508150:
+	.asciz "nul_curs02"
+	.balign 4
+
+.global lbl_8050815C
+lbl_8050815C:
+	.asciz "nul_curs03"
+	.balign 4
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8053AC38
+lbl_8053AC38:
+	# ROM: 0x536D38
+	.4byte switch_802570FC
+	.4byte switch_80257108
+	.4byte switch_80257114
+	.4byte switch_80257120
+	.4byte switch_8025712C
+	.4byte switch_80257138
+	.4byte switch_80257144
+	.4byte switch_80257174
+	.4byte switch_80257150
+	.4byte switch_8025715C
+	.4byte switch_80257168
+	.4byte 0
+
+
+.global __vt__CMenuKizunagram
+__vt__CMenuKizunagram:
+	.4byte __RTTI__CMenuKizunagram
+	.4byte 0
+	.4byte func_80256A54
+	.4byte CChildListNode_Reset
+	.4byte func_80256AE4
+	.4byte func_80256FA0
+	.4byte func_8025703C
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuKizunagram
+	.4byte 0xFFFFFFA8
+	.4byte func_80257A84
+	.4byte func_80257A7C
+	.4byte func_802571B8
+
+.global CMenuKizunagram_hierarchy
+CMenuKizunagram_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuKizunagram
+__RTTI__CMenuKizunagram:
+	.4byte CMenuKizunagram_typestr
+	.4byte CMenuKizunagram_hierarchy
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806670D0
+lbl_806670D0:
+	.skip 0x8
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80017130
 lbl_80017130:
@@ -1419,7 +1509,7 @@ lbl_80017334:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80256968
 	.4byte 0x000000EC

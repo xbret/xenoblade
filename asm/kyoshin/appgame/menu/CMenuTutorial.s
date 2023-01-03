@@ -623,7 +623,73 @@ func_8029A92C:
 /* 8029A92C 00263EEC  38 63 FF A8 */	addi r3, r3, -88
 /* 8029A930 00263EF0  4B FF F8 A8 */	b func_8029A1D8
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global CMenuTutorial_typestr
+CMenuTutorial_typestr:
+	.asciz "CMenuTutorial"
+	.balign 4
+
+
+.global lbl_8050B858
+lbl_8050B858:
+	.asciz "MNU_main"
+	.asciz "name"
+	.asciz "MNU_ttrl"
+	.asciz "title"
+	.balign 4
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__CMenuTutorial
+__vt__CMenuTutorial:
+	.4byte __RTTI__CMenuTutorial
+	.4byte 0
+	.4byte func_8029A1D8
+	.4byte CChildListNode_Reset
+	.4byte func_8029A244
+	.4byte func_8029A3FC
+	.4byte func_8029A498
+	.4byte func_80101FB8
+	.4byte func_80043F20
+	.4byte __RTTI__CMenuTutorial
+	.4byte 0xFFFFFFA8
+	.4byte func_8029A92C
+	.4byte func_8029A924
+	.4byte func_8029A544
+
+.global CMenuTutorial_hierarchy
+CMenuTutorial_hierarchy:
+	.4byte __RTTI__IScnRender
+	.4byte 0x00000058
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUICf
+	.4byte 0
+	.4byte __RTTI__IUICf
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global __RTTI__CMenuTutorial
+__RTTI__CMenuTutorial:
+	.4byte CMenuTutorial_typestr
+	.4byte CMenuTutorial_hierarchy
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667318
+lbl_80667318:
+	.skip 0x8
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001A020
 lbl_8001A020:
@@ -719,7 +785,7 @@ lbl_8001A108:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8029A0B8
 	.4byte 0x00000120

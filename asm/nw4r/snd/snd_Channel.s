@@ -1293,3 +1293,70 @@ FreeChannel__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail7Channel:
 /* 80415028 003DE5E8  90 03 00 E0 */	stw r0, 0xe0(r3)
 /* 8041502C 003DE5EC  90 03 00 E4 */	stw r0, 0xe4(r3)
 /* 80415030 003DE5F0  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C708
+lbl_8066C708:
+	# ROM: 0x576568
+	.4byte 0
+
+
+.global lbl_8066C70C
+lbl_8066C70C:
+	# ROM: 0x57656C
+	.float 1.0
+
+
+.global lbl_8066C710
+lbl_8066C710:
+	# ROM: 0x576570
+	.4byte 0x437F0000
+
+
+.global lbl_8066C714
+lbl_8066C714:
+	# ROM: 0x576574
+	.4byte 0x40C00000
+
+
+.global lbl_8066C718
+lbl_8066C718:
+	# ROM: 0x576578
+	.4byte 0x43800000
+	.4byte 0
+
+
+.global lbl_8066C720
+lbl_8066C720:
+	# ROM: 0x576580
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066C728
+lbl_8066C728:
+	# ROM: 0x576588
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global lbl_8066C730
+lbl_8066C730:
+	# ROM: 0x576590
+	.4byte 0xC2B4CCCD
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8063B1A0
+lbl_8063B1A0:
+	.skip 0x10
+.global lbl_8063B1B0
+lbl_8063B1B0:
+	.skip 0x20
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667DB8
+lbl_80667DB8:
+	.skip 0x8

@@ -243,3 +243,25 @@ ReplaceImage__Q34nw4r3lyt6TexMapFP10TPLPaletteUl:
 /* 8040865C 003D1C1C  7C 08 03 A6 */	mtlr r0
 /* 80408660 003D1C20  38 21 00 20 */	addi r1, r1, 0x20
 /* 80408664 003D1C24  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C5B8
+lbl_8066C5B8:
+	# ROM: 0x576418
+	.4byte 0x3B800000
+	.4byte 0
+
+
+.global lbl_8066C5C0
+lbl_8066C5C0:
+	# ROM: 0x576420
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066C5C8
+lbl_8066C5C8:
+	# ROM: 0x576428
+	.4byte 0x43800000
+	.4byte 0

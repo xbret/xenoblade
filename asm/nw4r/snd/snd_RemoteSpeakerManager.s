@@ -185,3 +185,15 @@ RemoteSpeakerAlarmProc__Q44nw4r3snd6detail20RemoteSpeakerManagerFP7OSAlarmP9OSCo
 /* 804195C8 003E2B88  7C 08 03 A6 */	mtlr r0
 /* 804195CC 003E2B8C  38 21 00 70 */	addi r1, r1, 0x70
 /* 804195D0 003E2B90  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_8063B1E8
+lbl_8063B1E8:
+	.skip 0x2D8
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667DD0
+lbl_80667DD0:
+	.skip 0x8

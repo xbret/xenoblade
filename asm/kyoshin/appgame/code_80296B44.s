@@ -648,7 +648,84 @@ func_80296FC0:
 /* 80297428 002609E8  38 21 01 B0 */	addi r1, r1, 0x1b0
 /* 8029742C 002609EC  4E 80 00 20 */	blr 
 
-.section extab, "wa"  # 0x800066E0 - 0x80021020
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8050B550
+lbl_8050B550:
+	.asciz "percent_E"
+	.balign 4
+
+.global lbl_8050B55C
+lbl_8050B55C:
+	.asciz "percent_D"
+	.balign 4
+
+.global lbl_8050B568
+lbl_8050B568:
+	.asciz "percent_C"
+	.balign 4
+
+.global lbl_8050B574
+lbl_8050B574:
+	.asciz "percent_B"
+	.balign 4
+
+.global lbl_8050B580
+lbl_8050B580:
+	.asciz "percent_A"
+	.balign 4
+
+.global lbl_8050B58C
+lbl_8050B58C:
+	.asciz "percent_S"
+	.balign 4
+
+
+.global lbl_8050B598
+lbl_8050B598:
+	# ROM: 0x507698
+	.4byte lbl_8066B490
+	.4byte lbl_8050B550
+	.4byte lbl_8050B55C
+	.4byte lbl_8050B568
+	.4byte lbl_8050B574
+	.4byte lbl_8050B580
+	.4byte lbl_8050B58C
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066B478
+lbl_8066B478:
+	# ROM: 0x5752D8
+	.4byte 0x41F00000
+
+
+.global lbl_8066B47C
+lbl_8066B47C:
+	# ROM: 0x5752DC
+	.4byte 0
+
+
+.global lbl_8066B480
+lbl_8066B480:
+	# ROM: 0x5752E0
+	.4byte 0x43300000
+	.4byte 0
+
+
+.global lbl_8066B488
+lbl_8066B488:
+	# ROM: 0x5752E8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+.global lbl_8066B490
+lbl_8066B490:
+	.4byte 0
+
+
+.section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80019C20
 lbl_80019C20:
@@ -676,7 +753,7 @@ lbl_80019C40:
 	.4byte 0
 
 
-.section extabindex, "wa"  # 0x80021020 - 0x80039220
+.section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80296BB0
 	.4byte 0x00000040
