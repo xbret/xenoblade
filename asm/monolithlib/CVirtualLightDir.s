@@ -10,7 +10,7 @@ func_804946FC:
 /* 80494708 0045DCC8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8049470C 0045DCCC  7C 7F 1B 78 */	mr r31, r3
 /* 80494710 0045DCD0  48 00 00 89 */	bl func_80494798
-/* 80494714 0045DCD4  C0 02 CE C0 */	lfs f0, lbl_8066D240@sda21(r2)
+/* 80494714 0045DCD4  C0 02 CE C0 */	lfs f0, float_8066D240@sda21(r2)
 /* 80494718 0045DCD8  3C 60 80 57 */	lis r3, __vt__CVirtualLightDir@ha
 /* 8049471C 0045DCDC  38 63 20 E0 */	addi r3, r3, __vt__CVirtualLightDir@l
 /* 80494720 0045DCE0  38 00 00 02 */	li r0, 2
@@ -95,8 +95,8 @@ __RTTI__CVirtualLightDir:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066D240
-lbl_8066D240:
+.global float_8066D240
+float_8066D240:
 	# ROM: 0x5770A0
 	.4byte 0
 	.4byte 0

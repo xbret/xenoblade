@@ -40,7 +40,7 @@ func_80433300:
 /* 80433384 003FC944  7C 03 00 40 */	cmplw r3, r0
 /* 80433388 003FC948  7F E5 32 14 */	add r31, r5, r6
 /* 8043338C 003FC94C  40 81 00 10 */	ble .L_8043339C
-/* 80433390 003FC950  C8 22 C6 38 */	lfd f1, lbl_8066C9B8@sda21(r2)
+/* 80433390 003FC950  C8 22 C6 38 */	lfd f1, double_8066C9B8@sda21(r2)
 /* 80433394 003FC954  4B E9 7E 7D */	bl log
 /* 80433398 003FC958  48 00 01 3C */	b .L_804334D4
 .L_8043339C:
@@ -177,7 +177,7 @@ func_80433300:
 /* 80433574 003FCB34  7C 03 00 40 */	cmplw r3, r0
 /* 80433578 003FCB38  7F E5 32 14 */	add r31, r5, r6
 /* 8043357C 003FCB3C  40 81 00 10 */	ble .L_8043358C
-/* 80433580 003FCB40  C8 22 C6 38 */	lfd f1, lbl_8066C9B8@sda21(r2)
+/* 80433580 003FCB40  C8 22 C6 38 */	lfd f1, double_8066C9B8@sda21(r2)
 /* 80433584 003FCB44  4B E9 7C 8D */	bl log
 /* 80433588 003FCB48  48 00 01 3C */	b .L_804336C4
 .L_8043358C:
@@ -744,8 +744,8 @@ func_80433B98:
 /* 80433D10 003FD2D0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80433D14 003FD2D4  4E 80 00 20 */	blr 
 
-.global PrintArenaMemoryInfo
-PrintArenaMemoryInfo:
+.global MemManager_initialize
+MemManager_initialize:
 /* 80433D18 003FD2D8  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80433D1C 003FD2DC  7C 08 02 A6 */	mflr r0
 /* 80433D20 003FD2E0  38 60 00 00 */	li r3, 0
@@ -938,8 +938,8 @@ PrintArenaMemoryInfo:
 /* 80433FD8 003FD598  7C 08 03 A6 */	mtlr r0
 /* 80433FDC 003FD59C  4E 80 00 20 */	blr 
 
-.global func_80433FE0
-func_80433FE0:
+.global MemManager_finalize
+MemManager_finalize:
 /* 80433FE0 003FD5A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80433FE4 003FD5A4  7C 08 02 A6 */	mflr r0
 /* 80433FE8 003FD5A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1344,7 +1344,7 @@ func_804344D8:
 /* 80434538 003FDAF8  7C 03 00 40 */	cmplw r3, r0
 /* 8043453C 003FDAFC  7F E5 32 14 */	add r31, r5, r6
 /* 80434540 003FDB00  40 81 00 10 */	ble .L_80434550
-/* 80434544 003FDB04  C8 22 C6 38 */	lfd f1, lbl_8066C9B8@sda21(r2)
+/* 80434544 003FDB04  C8 22 C6 38 */	lfd f1, double_8066C9B8@sda21(r2)
 /* 80434548 003FDB08  4B E9 6C C9 */	bl log
 /* 8043454C 003FDB0C  48 00 01 3C */	b .L_80434688
 .L_80434550:
@@ -1588,7 +1588,7 @@ func_80434830:
 /* 80434848 003FDE08  80 03 00 08 */	lwz r0, 8(r3)
 /* 8043484C 003FDE0C  2C 00 00 00 */	cmpwi r0, 0
 /* 80434850 003FDE10  40 82 00 0C */	bne .L_8043485C
-/* 80434854 003FDE14  C0 22 C6 40 */	lfs f1, lbl_8066C9C0@sda21(r2)
+/* 80434854 003FDE14  C0 22 C6 40 */	lfs f1, float_8066C9C0@sda21(r2)
 /* 80434858 003FDE18  48 00 00 44 */	b .L_8043489C
 .L_8043485C:
 /* 8043485C 003FDE1C  80 83 00 1C */	lwz r4, 0x1c(r3)
@@ -1596,9 +1596,9 @@ func_80434830:
 /* 80434864 003FDE24  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 80434868 003FDE28  90 01 00 08 */	stw r0, 8(r1)
 /* 8043486C 003FDE2C  7C 63 20 50 */	subf r3, r3, r4
-/* 80434870 003FDE30  C8 62 C6 48 */	lfd f3, lbl_8066C9C8@sda21(r2)
+/* 80434870 003FDE30  C8 62 C6 48 */	lfd f3, double_8066C9C8@sda21(r2)
 /* 80434874 003FDE34  90 61 00 0C */	stw r3, 0xc(r1)
-/* 80434878 003FDE38  C0 02 C6 44 */	lfs f0, lbl_8066C9C4@sda21(r2)
+/* 80434878 003FDE38  C0 02 C6 44 */	lfs f0, float_8066C9C4@sda21(r2)
 /* 8043487C 003FDE3C  C8 21 00 08 */	lfd f1, 8(r1)
 /* 80434880 003FDE40  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80434884 003FDE44  EC 41 18 28 */	fsubs f2, f1, f3
@@ -1753,9 +1753,9 @@ func_80434A54:
 /* 80434A54 003FE014  98 6D BC DC */	stb r3, lbl_80667E5C@sda21(r13)
 /* 80434A58 003FE018  4E 80 00 20 */	blr 
 
-#this might be a new operator function
-.global func_80434A5C
-func_80434A5C:
+
+.global mm_malloc
+mm_malloc:
 /* 80434A5C 003FE01C  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 80434A60 003FE020  3C C0 80 65 */	lis r6, memoryAllocHeapArray@ha
 /* 80434A64 003FE024  1C 00 00 70 */	mulli r0, r0, 0x70
@@ -1888,6 +1888,7 @@ func_80434B64:
 /* 80434C20 003FE1E0  4E 80 00 20 */	blr
 
 
+
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 .global lbl_80525D28
@@ -1969,30 +1970,35 @@ lbl_8066C9B0:
 	.asciz "Mem2"
 	.balign 4
 
-.global lbl_8066C9B8
-lbl_8066C9B8:
+.global double_8066C9B8
+double_8066C9B8:
 	# ROM: 0x576818
 	.4byte 0x3FF00000
 	.4byte 0
 
-.global lbl_8066C9C0
-lbl_8066C9C0:
+.global float_8066C9C0
+float_8066C9C0:
 	# ROM: 0x576820
 	.4byte 0
 
 
-.global lbl_8066C9C4
-lbl_8066C9C4:
+.global float_8066C9C4
+float_8066C9C4:
 	# ROM: 0x576824
 	.float 100.0
 
 
-.global lbl_8066C9C8
-lbl_8066C9C8:
+.global double_8066C9C8
+double_8066C9C8:
 	# ROM: 0x576828
 	.4byte 0x43300000
 	.4byte 0
 
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global memoryAllocHeapArray
+memoryAllocHeapArray:
+	.skip 0x2300
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
@@ -2086,6 +2092,16 @@ lbl_8001C008:
 	.4byte 0x18080000
 	.4byte 0
 
+.global lbl_8001C010
+lbl_8001C010:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C018
+lbl_8001C018:
+	.4byte 0x08080000
+	.4byte 0
+
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
@@ -2104,10 +2120,10 @@ lbl_8001C008:
 	.4byte func_80433B98
 	.4byte 0x00000180
 	.4byte lbl_8001BFB8
-	.4byte PrintArenaMemoryInfo
+	.4byte MemManager_initialize
 	.4byte 0x000002C8
 	.4byte lbl_8001BFC0
-	.4byte func_80433FE0
+	.4byte MemManager_finalize
 	.4byte 0x00000060
 	.4byte lbl_8001BFC8
 	.4byte func_80434040
@@ -2134,3 +2150,9 @@ lbl_8001C008:
 	.4byte func_80434B64
 	.4byte 0x000000C0
 	.4byte lbl_8001C008
+	.4byte __dl__FPv
+	.4byte 0x000001B4
+	.4byte lbl_8001C010
+	.4byte __dla__FPv
+	.4byte 0x000001B4
+	.4byte lbl_8001C018

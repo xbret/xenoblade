@@ -1186,10 +1186,10 @@ MWSFCRE_SetCondSfd:
 /* 8039FD38 003692F8  38 A0 00 00 */	li r5, 0
 /* 8039FD3C 003692FC  48 02 C6 09 */	bl func_803CC344
 /* 8039FD40 00369300  7C 1D F1 D6 */	mullw r0, r29, r30
-/* 8039FD44 00369304  3C 60 80 52 */	lis r3, lbl_8051DA6C@ha
-/* 8039FD48 00369308  3C 80 80 52 */	lis r4, lbl_8051DA70@ha
-/* 8039FD4C 0036930C  C0 43 DA 6C */	lfs f2, lbl_8051DA6C@l(r3)
-/* 8039FD50 00369310  C8 64 DA 70 */	lfd f3, lbl_8051DA70@l(r4)
+/* 8039FD44 00369304  3C 60 80 52 */	lis r3, float_8051DA6C@ha
+/* 8039FD48 00369308  3C 80 80 52 */	lis r4, double_8051DA70@ha
+/* 8039FD4C 0036930C  C0 43 DA 6C */	lfs f2, float_8051DA6C@l(r3)
+/* 8039FD50 00369310  C8 64 DA 70 */	lfd f3, double_8051DA70@l(r4)
 /* 8039FD54 00369314  1C 00 03 E8 */	mulli r0, r0, 0x3e8
 /* 8039FD58 00369318  6C 03 80 00 */	xoris r3, r0, 0x8000
 /* 8039FD5C 0036931C  90 61 00 0C */	stw r3, 0xc(r1)
@@ -2285,14 +2285,14 @@ lbl_8051DA48:
 	.4byte lbl_80520678
 
 
-.global lbl_8051DA6C
-lbl_8051DA6C:
+.global float_8051DA6C
+float_8051DA6C:
 	# ROM: 0x519B6C
 	.float 0.5
 
 
-.global lbl_8051DA70
-lbl_8051DA70:
+.global double_8051DA70
+double_8051DA70:
 	# ROM: 0x519B70
 	.4byte 0x43300000
 	.4byte 0x80000000

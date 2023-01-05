@@ -40,7 +40,7 @@ func_8047CAA8:
 /* 8047CAFC 004460BC  F0 05 80 08 */	psq_st f0, 8(r5), 1, qr0
 /* 8047CB00 004460C0  C0 23 00 14 */	lfs f1, 0x14(r3)
 /* 8047CB04 004460C4  E0 45 00 04 */	psq_l f2, 4(r5), 0, qr0
-/* 8047CB08 004460C8  C0 02 CC B0 */	lfs f0, lbl_8066D030@sda21(r2)
+/* 8047CB08 004460C8  C0 02 CC B0 */	lfs f0, float_8066D030@sda21(r2)
 /* 8047CB0C 004460CC  10 63 00 B2 */	ps_mul f3, f3, f2
 /* 8047CB10 004460D0  10 45 19 3A */	ps_madd f2, f5, f4, f3
 /* 8047CB14 004460D4  10 42 18 D4 */	ps_sum0 f2, f2, f3, f3
@@ -49,7 +49,7 @@ func_8047CAA8:
 /* 8047CB20 004460E0  40 81 00 08 */	ble .L_8047CB28
 /* 8047CB24 004460E4  FC 80 00 90 */	fmr f4, f0
 .L_8047CB28:
-/* 8047CB28 004460E8  C0 02 CC B4 */	lfs f0, lbl_8066D034@sda21(r2)
+/* 8047CB28 004460E8  C0 02 CC B4 */	lfs f0, float_8066D034@sda21(r2)
 /* 8047CB2C 004460EC  FC 00 20 40 */	fcmpo cr0, f0, f4
 /* 8047CB30 004460F0  40 80 00 08 */	bge .L_8047CB38
 /* 8047CB34 004460F4  FC 80 00 90 */	fmr f4, f0
@@ -58,7 +58,7 @@ func_8047CAA8:
 /* 8047CB3C 004460FC  38 A1 00 08 */	addi r5, r1, 8
 /* 8047CB40 00446100  80 C3 00 04 */	lwz r6, 4(r3)
 /* 8047CB44 00446104  10 60 01 18 */	ps_muls0 f3, f0, f4
-/* 8047CB48 00446108  C0 0D BF DC */	lfs f0, lbl_8066815C@sda21(r13)
+/* 8047CB48 00446108  C0 0D BF DC */	lfs f0, float_8066815C@sda21(r13)
 /* 8047CB4C 0044610C  E0 A6 00 00 */	psq_l f5, 0(r6), 0, qr0
 /* 8047CB50 00446110  EC 44 00 32 */	fmuls f2, f4, f0
 /* 8047CB54 00446114  E0 03 80 10 */	psq_l f0, 16(r3), 1, qr0
@@ -132,7 +132,7 @@ func_8047CAA8:
 func_8047CC4C:
 /* 8047CC4C 0044620C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8047CC50 00446210  7C 08 02 A6 */	mflr r0
-/* 8047CC54 00446214  C0 02 CC B4 */	lfs f0, lbl_8066D034@sda21(r2)
+/* 8047CC54 00446214  C0 02 CC B4 */	lfs f0, float_8066D034@sda21(r2)
 /* 8047CC58 00446218  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8047CC5C 0044621C  38 E1 00 08 */	addi r7, r1, 8
 /* 8047CC60 00446220  80 04 00 24 */	lwz r0, 0x24(r4)
@@ -620,14 +620,14 @@ sinit_8047D290:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066D030
-lbl_8066D030:
+.global float_8066D030
+float_8066D030:
 	# ROM: 0x576E90
 	.4byte 0
 
 
-.global lbl_8066D034
-lbl_8066D034:
+.global float_8066D034
+float_8066D034:
 	# ROM: 0x576E94
 	.float 1.0
 

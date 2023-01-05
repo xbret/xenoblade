@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_801BCA38
-func_801BCA38:
+.global __ct__CMenuKizunaTalk
+__ct__CMenuKizunaTalk:
 /* 801BCA38 00185FF8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801BCA3C 00185FFC  7C 08 02 A6 */	mflr r0
 /* 801BCA40 00186000  90 01 00 24 */	stw r0, 0x24(r1)
@@ -345,12 +345,12 @@ func_801BCEBC:
 /* 801BCEEC 001864AC  48 27 A6 C9 */	bl func_804375B4
 /* 801BCEF0 001864B0  7C 64 1B 78 */	mr r4, r3
 /* 801BCEF4 001864B4  38 60 00 FC */	li r3, 0xfc
-/* 801BCEF8 001864B8  48 27 7B 65 */	bl func_80434A5C
+/* 801BCEF8 001864B8  48 27 7B 65 */	bl mm_malloc
 /* 801BCEFC 001864BC  2C 03 00 00 */	cmpwi r3, 0
 /* 801BCF00 001864C0  41 82 00 10 */	beq .L_801BCF10
 /* 801BCF04 001864C4  7F C4 F3 78 */	mr r4, r30
 /* 801BCF08 001864C8  7F E5 FB 78 */	mr r5, r31
-/* 801BCF0C 001864CC  4B FF FB 2D */	bl func_801BCA38
+/* 801BCF0C 001864CC  4B FF FB 2D */	bl __ct__CMenuKizunaTalk
 .L_801BCF10:
 /* 801BCF10 001864D0  90 6D AB 90 */	stw r3, lbl_80666D10@sda21(r13)
 /* 801BCF14 001864D4  7F A4 EB 78 */	mr r4, r29
@@ -597,7 +597,7 @@ func_801BD228:
 /* 801BD274 00186834  48 00 00 70 */	b .L_801BD2E4
 .L_801BD278:
 /* 801BD278 00186838  80 63 00 94 */	lwz r3, 0x94(r3)
-/* 801BD27C 0018683C  C0 22 A3 A8 */	lfs f1, lbl_8066A728@sda21(r2)
+/* 801BD27C 0018683C  C0 22 A3 A8 */	lfs f1, float_8066A728@sda21(r2)
 /* 801BD280 00186840  4B F7 A1 C5 */	bl func_80137444
 /* 801BD284 00186844  2C 03 00 00 */	cmpwi r3, 0
 /* 801BD288 00186848  41 82 00 5C */	beq .L_801BD2E4
@@ -841,7 +841,7 @@ func_801BD594:
 /* 801BD5E0 00186BA0  48 00 00 3C */	b .L_801BD61C
 .L_801BD5E4:
 /* 801BD5E4 00186BA4  80 63 00 94 */	lwz r3, 0x94(r3)
-/* 801BD5E8 00186BA8  C0 22 A3 A8 */	lfs f1, lbl_8066A728@sda21(r2)
+/* 801BD5E8 00186BA8  C0 22 A3 A8 */	lfs f1, float_8066A728@sda21(r2)
 /* 801BD5EC 00186BAC  4B F7 9F 25 */	bl func_80137510
 /* 801BD5F0 00186BB0  2C 03 00 00 */	cmpwi r3, 0
 /* 801BD5F4 00186BB4  41 82 00 28 */	beq .L_801BD61C
@@ -1307,7 +1307,7 @@ func_801BD7D8:
 /* 801BDCA0 00187260  41 82 00 3C */	beq .L_801BDCDC
 /* 801BDCA4 00187264  3C 00 43 30 */	lis r0, 0x4330
 /* 801BDCA8 00187268  93 41 00 1C */	stw r26, 0x1c(r1)
-/* 801BDCAC 0018726C  C8 42 A3 B0 */	lfd f2, lbl_8066A730@sda21(r2)
+/* 801BDCAC 0018726C  C8 42 A3 B0 */	lfd f2, double_8066A730@sda21(r2)
 /* 801BDCB0 00187270  90 01 00 18 */	stw r0, 0x18(r1)
 /* 801BDCB4 00187274  C8 01 00 18 */	lfd f0, 0x18(r1)
 /* 801BDCB8 00187278  93 61 00 24 */	stw r27, 0x24(r1)
@@ -1322,7 +1322,7 @@ func_801BD7D8:
 .L_801BDCDC:
 /* 801BDCDC 0018729C  80 7F 00 94 */	lwz r3, 0x94(r31)
 /* 801BDCE0 001872A0  38 80 00 00 */	li r4, 0
-/* 801BDCE4 001872A4  C0 02 A3 AC */	lfs f0, lbl_8066A72C@sda21(r2)
+/* 801BDCE4 001872A4  C0 02 A3 AC */	lfs f0, float_8066A72C@sda21(r2)
 /* 801BDCE8 001872A8  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 801BDCEC 001872AC  80 7F 00 54 */	lwz r3, 0x54(r31)
 /* 801BDCF0 001872B0  81 83 00 00 */	lwz r12, 0(r3)
@@ -1514,20 +1514,20 @@ __RTTI__CMenuKizunaTalk:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_8066A728
-lbl_8066A728:
+.global float_8066A728
+float_8066A728:
 	# ROM: 0x574588
 	.float 1.0
 
 
-.global lbl_8066A72C
-lbl_8066A72C:
+.global float_8066A72C
+float_8066A72C:
 	# ROM: 0x57458C
 	.4byte 0
 
 
-.global lbl_8066A730
-lbl_8066A730:
+.global double_8066A730
+double_8066A730:
 	# ROM: 0x574590
 	.4byte 0x43300000
 	.4byte 0
@@ -1674,7 +1674,7 @@ lbl_8001021C:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_801BCA38
+.4byte __ct__CMenuKizunaTalk
 	.4byte 0x00000108
 	.4byte lbl_800100D8
 	.4byte func_801BCB40

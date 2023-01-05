@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804DE38C
-func_804DE38C:
+.global __ct__CPackItem
+__ct__CPackItem:
 /* 804DE38C 004A794C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804DE390 004A7950  7C 08 02 A6 */	mflr r0
 /* 804DE394 004A7954  3C C0 80 57 */	lis r6, __vt__CPackItem@ha
@@ -653,7 +653,7 @@ lbl_80020930:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_804DE38C
+.4byte __ct__CPackItem
 	.4byte 0x000000C4
 	.4byte lbl_800208F4
 	.4byte func_804DE450

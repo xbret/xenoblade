@@ -103,7 +103,7 @@ ReadWaveSoundInfo__Q44nw4r3snd6detail13WsdFileReaderCFPQ44nw4r3snd6detail13WaveS
 /* 8042A0D0 003F3690  98 1F 00 09 */	stb r0, 9(r31)
 /* 8042A0D4 003F3694  48 00 00 30 */	b .L_8042A104
 .L_8042A0D8:
-/* 8042A0D8 003F3698  C0 02 C5 80 */	lfs f0, lbl_8066C900@sda21(r2)
+/* 8042A0D8 003F3698  C0 02 C5 80 */	lfs f0, float_8066C900@sda21(r2)
 /* 8042A0DC 003F369C  38 60 00 00 */	li r3, 0
 /* 8042A0E0 003F36A0  38 80 00 40 */	li r4, 0x40
 /* 8042A0E4 003F36A4  38 00 00 7F */	li r0, 0x7f
@@ -182,7 +182,7 @@ ReadWaveSoundNoteInfo__Q44nw4r3snd6detail13WsdFileReaderCFPQ44nw4r3snd6detail17W
 /* 8042A1F8 003F37B8  D0 1F 00 10 */	stfs f0, 0x10(r31)
 /* 8042A1FC 003F37BC  48 00 00 1C */	b .L_8042A218
 .L_8042A200:
-/* 8042A200 003F37C0  C0 02 C5 80 */	lfs f0, lbl_8066C900@sda21(r2)
+/* 8042A200 003F37C0  C0 02 C5 80 */	lfs f0, float_8066C900@sda21(r2)
 /* 8042A204 003F37C4  38 60 00 40 */	li r3, 0x40
 /* 8042A208 003F37C8  38 00 00 00 */	li r0, 0
 /* 8042A20C 003F37CC  98 7F 00 0A */	stb r3, 0xa(r31)
@@ -270,8 +270,8 @@ ReadWaveInfo__Q44nw4r3snd6detail13WsdFileReaderCFiPQ44nw4r3snd6detail8WaveInfoPC
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C900
-lbl_8066C900:
+.global float_8066C900
+float_8066C900:
 	# ROM: 0x576760
 	.float 1.0
 	.4byte 0

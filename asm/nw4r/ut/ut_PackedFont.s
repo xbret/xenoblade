@@ -139,7 +139,7 @@ GetRequireBufferSize__Q34nw4r2ut10PackedFontFPCvPCcf:
 /* 8042DCD0 003F7290  80 A1 00 14 */	lwz r5, 0x14(r1)
 /* 8042DCD4 003F7294  6C 84 80 00 */	xoris r4, r4, 0x8000
 /* 8042DCD8 003F7298  90 01 00 40 */	stw r0, 0x40(r1)
-/* 8042DCDC 003F729C  C8 22 C5 B8 */	lfd f1, lbl_8066C938@sda21(r2)
+/* 8042DCDC 003F729C  C8 22 C5 B8 */	lfd f1, double_8066C938@sda21(r2)
 /* 8042DCE0 003F72A0  90 81 00 44 */	stw r4, 0x44(r1)
 /* 8042DCE4 003F72A4  A0 85 00 10 */	lhz r4, 0x10(r5)
 /* 8042DCE8 003F72A8  C8 01 00 40 */	lfd f0, 0x40(r1)
@@ -1481,8 +1481,8 @@ lbl_8056E8FC:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C938
-lbl_8066C938:
+.global double_8066C938
+double_8066C938:
 	# ROM: 0x576798
 	.4byte 0x43300000
 	.4byte 0x80000000

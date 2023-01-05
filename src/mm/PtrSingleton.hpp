@@ -1,6 +1,7 @@
 #include "types.h"
 
-template <T>
-class PtrSingleton<T>{
-    
+template <typename T>
+class PtrSingleton{
+    public:
+    static T* GetInstance();
 };

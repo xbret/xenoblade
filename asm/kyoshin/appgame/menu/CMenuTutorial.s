@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8029A0B8
-func_8029A0B8:
+.global __ct__CMenuTutorial
+__ct__CMenuTutorial:
 /* 8029A0B8 00263678  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029A0BC 0026367C  7C 08 02 A6 */	mflr r0
 /* 8029A0C0 00263680  90 01 00 24 */	stw r0, 0x24(r1)
@@ -383,12 +383,12 @@ func_8029A5DC:
 /* 8029A60C 00263BCC  48 19 CF A9 */	bl func_804375B4
 /* 8029A610 00263BD0  7C 64 1B 78 */	mr r4, r3
 /* 8029A614 00263BD4  38 60 00 F4 */	li r3, 0xf4
-/* 8029A618 00263BD8  48 19 A4 45 */	bl func_80434A5C
+/* 8029A618 00263BD8  48 19 A4 45 */	bl mm_malloc
 /* 8029A61C 00263BDC  2C 03 00 00 */	cmpwi r3, 0
 /* 8029A620 00263BE0  41 82 00 10 */	beq .L_8029A630
 /* 8029A624 00263BE4  7F C4 F3 78 */	mr r4, r30
 /* 8029A628 00263BE8  7F E5 FB 78 */	mr r5, r31
-/* 8029A62C 00263BEC  4B FF FA 8D */	bl func_8029A0B8
+/* 8029A62C 00263BEC  4B FF FA 8D */	bl __ct__CMenuTutorial
 .L_8029A630:
 /* 8029A630 00263BF0  90 6D B1 98 */	stw r3, lbl_80667318@sda21(r13)
 /* 8029A634 00263BF4  7F A4 EB 78 */	mr r4, r29
@@ -787,7 +787,7 @@ lbl_8001A108:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_8029A0B8
+.4byte __ct__CMenuTutorial
 	.4byte 0x00000120
 	.4byte lbl_8001A020
 	.4byte func_8029A1D8

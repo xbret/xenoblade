@@ -13,7 +13,7 @@ Init__Q34nw4r3g3d3FogFv:
 /* 803FD134 003C66F4  2C 03 00 00 */	cmpwi r3, 0
 /* 803FD138 003C66F8  4D 82 00 20 */	beqlr 
 /* 803FD13C 003C66FC  38 00 00 00 */	li r0, 0
-/* 803FD140 003C6700  C0 02 C1 78 */	lfs f0, lbl_8066C4F8@sda21(r2)
+/* 803FD140 003C6700  C0 02 C1 78 */	lfs f0, float_8066C4F8@sda21(r2)
 /* 803FD144 003C6704  90 03 00 00 */	stw r0, 0(r3)
 /* 803FD148 003C6708  D0 03 00 04 */	stfs f0, 4(r3)
 /* 803FD14C 003C670C  D0 03 00 08 */	stfs f0, 8(r3)
@@ -157,8 +157,8 @@ SetGP__Q34nw4r3g3d3FogCFv:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C4F8
-lbl_8066C4F8:
+.global float_8066C4F8
+float_8066C4F8:
 	# ROM: 0x576358
 	.4byte 0
 	.4byte 0

@@ -75,9 +75,9 @@ drawLine___Q210homebutton3guiFfffffUcR8_GXColor:
 /* 8031F66C 002E8C2C  38 A0 00 00 */	li r5, 0
 /* 8031F670 002E8C30  38 C0 00 05 */	li r6, 5
 /* 8031F674 002E8C34  4B FF EB 1D */	bl GXSetBlendMode
-/* 8031F678 002E8C38  3C 80 80 52 */	lis r4, lbl_80518670@ha
+/* 8031F678 002E8C38  3C 80 80 52 */	lis r4, float_80518670@ha
 /* 8031F67C 002E8C3C  38 61 00 08 */	addi r3, r1, 8
-/* 8031F680 002E8C40  C0 24 86 70 */	lfs f1, lbl_80518670@l(r4)
+/* 8031F680 002E8C40  C0 24 86 70 */	lfs f1, float_80518670@l(r4)
 /* 8031F684 002E8C44  FC 40 08 90 */	fmr f2, f1
 /* 8031F688 002E8C48  FC 60 08 90 */	fmr f3, f1
 /* 8031F68C 002E8C4C  48 02 E1 D5 */	bl PSMTXTrans
@@ -1401,9 +1401,9 @@ contain__Q310homebutton3gui13PaneComponentFff:
 /* 80320860 002E9E20  38 81 00 38 */	addi r4, r1, 0x38
 /* 80320864 002E9E24  38 63 00 84 */	addi r3, r3, 0x84
 /* 80320868 002E9E28  48 02 CC 99 */	bl PSMTXInverse
-/* 8032086C 002E9E2C  3C 60 80 52 */	lis r3, lbl_80518670@ha
+/* 8032086C 002E9E2C  3C 60 80 52 */	lis r3, float_80518670@ha
 /* 80320870 002E9E30  D3 C1 00 08 */	stfs f30, 8(r1)
-/* 80320874 002E9E34  C0 03 86 70 */	lfs f0, lbl_80518670@l(r3)
+/* 80320874 002E9E34  C0 03 86 70 */	lfs f0, float_80518670@l(r3)
 /* 80320878 002E9E38  38 61 00 38 */	addi r3, r1, 0x38
 /* 8032087C 002E9E3C  D3 E1 00 0C */	stfs f31, 0xc(r1)
 /* 80320880 002E9E40  38 81 00 08 */	addi r4, r1, 8
@@ -1465,8 +1465,8 @@ draw__Q310homebutton3gui13PaneComponentFv:
 /* 80320944 002E9F04  DB C1 00 20 */	stfd f30, 0x20(r1)
 /* 80320948 002E9F08  F3 C1 00 28 */	psq_st f30, 40(r1), 0, qr0
 /* 8032094C 002E9F0C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80320950 002E9F10  3F E0 80 52 */	lis r31, lbl_80518670@ha
-/* 80320954 002E9F14  3B FF 86 70 */	addi r31, r31, lbl_80518670@l
+/* 80320950 002E9F10  3F E0 80 52 */	lis r31, float_80518670@ha
+/* 80320954 002E9F14  3B FF 86 70 */	addi r31, r31, float_80518670@l
 /* 80320958 002E9F18  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8032095C 002E9F1C  7C 7E 1B 78 */	mr r30, r3
 /* 80320960 002E9F20  80 63 00 28 */	lwz r3, 0x28(r3)
@@ -1785,8 +1785,8 @@ setDrawInfo__Q310homebutton3gui11PaneManagerFPCQ36nw4hbm3lyt8DrawInfo:
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80518670
-lbl_80518670:
+.global float_80518670
+float_80518670:
 	# ROM: 0x514770
 	.4byte 0
 	.4byte 0xFF0000FF

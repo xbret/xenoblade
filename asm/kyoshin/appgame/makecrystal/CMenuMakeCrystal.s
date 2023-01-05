@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80210C20
-func_80210C20:
+.global __ct__CMenuMakeCrystal
+__ct__CMenuMakeCrystal:
 /* 80210C20 001DA1E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80210C24 001DA1E4  7C 08 02 A6 */	mflr r0
 /* 80210C28 001DA1E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1469,7 +1469,7 @@ func_802121EC:
 /* 80212234 001DB7F4  38 7F 00 80 */	addi r3, r31, 0x80
 /* 80212238 001DB7F8  48 00 07 65 */	bl func_8021299C
 /* 8021223C 001DB7FC  38 00 00 00 */	li r0, 0
-/* 80212240 001DB800  90 0D AE 38 */	stw r0, lbl_80666FB8@sda21(r13)
+/* 80212240 001DB800  90 0D AE 38 */	stw r0, instance@sda21(r13)
 /* 80212244 001DB804  38 60 00 00 */	li r3, 0
 /* 80212248 001DB808  4B E7 07 05 */	bl func_8008294C
 /* 8021224C 001DB80C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1612,7 +1612,7 @@ func_8021240C:
 /* 80212418 001DB9D8  BF C1 00 08 */	stmw r30, 8(r1)
 /* 8021241C 001DB9DC  7C 7E 1B 78 */	mr r30, r3
 /* 80212420 001DB9E0  7C 9F 23 78 */	mr r31, r4
-/* 80212424 001DB9E4  80 0D AE 38 */	lwz r0, lbl_80666FB8@sda21(r13)
+/* 80212424 001DB9E4  80 0D AE 38 */	lwz r0, instance@sda21(r13)
 /* 80212428 001DB9E8  2C 00 00 00 */	cmpwi r0, 0
 /* 8021242C 001DB9EC  41 82 00 0C */	beq .L_80212438
 /* 80212430 001DB9F0  38 60 00 00 */	li r3, 0
@@ -1621,17 +1621,17 @@ func_8021240C:
 /* 80212438 001DB9F8  48 22 51 7D */	bl func_804375B4
 /* 8021243C 001DB9FC  7C 64 1B 78 */	mr r4, r3
 /* 80212440 001DBA00  38 60 43 C8 */	li r3, 0x43c8
-/* 80212444 001DBA04  48 22 26 19 */	bl func_80434A5C
+/* 80212444 001DBA04  48 22 26 19 */	bl mm_malloc
 /* 80212448 001DBA08  2C 03 00 00 */	cmpwi r3, 0
 /* 8021244C 001DBA0C  41 82 00 0C */	beq .L_80212458
 /* 80212450 001DBA10  7F E4 FB 78 */	mr r4, r31
-/* 80212454 001DBA14  4B FF E7 CD */	bl func_80210C20
+/* 80212454 001DBA14  4B FF E7 CD */	bl __ct__CMenuMakeCrystal
 .L_80212458:
-/* 80212458 001DBA18  90 6D AE 38 */	stw r3, lbl_80666FB8@sda21(r13)
+/* 80212458 001DBA18  90 6D AE 38 */	stw r3, instance@sda21(r13)
 /* 8021245C 001DBA1C  7F C4 F3 78 */	mr r4, r30
 /* 80212460 001DBA20  38 A0 00 00 */	li r5, 0
 /* 80212464 001DBA24  48 23 28 11 */	bl func_80444C74
-/* 80212468 001DBA28  80 6D AE 38 */	lwz r3, lbl_80666FB8@sda21(r13)
+/* 80212468 001DBA28  80 6D AE 38 */	lwz r3, instance@sda21(r13)
 .L_8021246C:
 /* 8021246C 001DBA2C  BB C1 00 08 */	lmw r30, 8(r1)
 /* 80212470 001DBA30  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1641,14 +1641,14 @@ func_8021240C:
 
 .global func_80212480
 func_80212480:
-/* 80212480 001DBA40  80 6D AE 38 */	lwz r3, lbl_80666FB8@sda21(r13)
+/* 80212480 001DBA40  80 6D AE 38 */	lwz r3, instance@sda21(r13)
 /* 80212484 001DBA44  30 03 FF FF */	addic r0, r3, -1
 /* 80212488 001DBA48  7C 60 19 10 */	subfe r3, r0, r3
 /* 8021248C 001DBA4C  4E 80 00 20 */	blr 
 
 .global func_80212490
 func_80212490:
-/* 80212490 001DBA50  80 6D AE 38 */	lwz r3, lbl_80666FB8@sda21(r13)
+/* 80212490 001DBA50  80 6D AE 38 */	lwz r3, instance@sda21(r13)
 /* 80212494 001DBA54  2C 03 00 00 */	cmpwi r3, 0
 /* 80212498 001DBA58  41 82 00 0C */	beq .L_802124A4
 /* 8021249C 001DBA5C  38 63 00 80 */	addi r3, r3, 0x80
@@ -1743,8 +1743,7 @@ __RTTI__CMenuMakeCrystal:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80666FB8
-lbl_80666FB8:
+instance:
 	.skip 0x8
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
@@ -1844,7 +1843,7 @@ lbl_800133E0:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_80210C20
+.4byte __ct__CMenuMakeCrystal
 	.4byte 0x000000C0
 	.4byte lbl_800132FC
 	.4byte func_80210CE0

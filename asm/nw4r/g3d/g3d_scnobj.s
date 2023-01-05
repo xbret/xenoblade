@@ -90,7 +90,7 @@ __ct__Q34nw4r3g3d6ScnObjFP12MEMAllocator:
 /* 803F452C 003BDAEC  4B F5 8C B5 */	bl PSMTXIdentity
 /* 803F4530 003BDAF0  38 7F 00 6C */	addi r3, r31, 0x6c
 /* 803F4534 003BDAF4  4B F5 8C AD */	bl PSMTXIdentity
-/* 803F4538 003BDAF8  C0 02 C1 58 */	lfs f0, lbl_8066C4D8@sda21(r2)
+/* 803F4538 003BDAF8  C0 02 C1 58 */	lfs f0, float_8066C4D8@sda21(r2)
 /* 803F453C 003BDAFC  7F E3 FB 78 */	mr r3, r31
 /* 803F4540 003BDB00  D0 1F 00 9C */	stfs f0, 0x9c(r31)
 /* 803F4544 003BDB04  D0 1F 00 A0 */	stfs f0, 0xa0(r31)
@@ -678,7 +678,7 @@ GetScaleProperty__Q34nw4r3g3d7ScnLeafCFv:
 /* 803F4C58 003BE218  C0 03 00 E4 */	lfs f0, 0xe4(r3)
 /* 803F4C5C 003BE21C  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 803F4C60 003BE220  40 82 00 20 */	bne .L_803F4C80
-/* 803F4C64 003BE224  C0 02 C1 5C */	lfs f0, lbl_8066C4DC@sda21(r2)
+/* 803F4C64 003BE224  C0 02 C1 5C */	lfs f0, float_8066C4DC@sda21(r2)
 /* 803F4C68 003BE228  FC 00 10 00 */	fcmpu cr0, f0, f2
 /* 803F4C6C 003BE22C  40 82 00 0C */	bne .L_803F4C78
 /* 803F4C70 003BE230  38 60 00 00 */	li r3, 0
@@ -1921,13 +1921,13 @@ lbl_8056CF68:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_8066C4D8
-lbl_8066C4D8:
+.global float_8066C4D8
+float_8066C4D8:
 	# ROM: 0x576338
 	.4byte 0
 
 
-.global lbl_8066C4DC
-lbl_8066C4DC:
+.global float_8066C4DC
+float_8066C4DC:
 	# ROM: 0x57633C
 	.float 1.0

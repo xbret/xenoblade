@@ -615,8 +615,8 @@ __RTTI__mpfsys_MPFDrawBillboard:
 	.4byte mpfsys_MPFDrawBillboard_hierarchy
 
 
-.global lbl_806661C0
-lbl_806661C0:
+.global float_806661C0
+float_806661C0:
 	# ROM: 0x571DA0
 	.4byte 0x3EAAAAAB
 	.4byte 0

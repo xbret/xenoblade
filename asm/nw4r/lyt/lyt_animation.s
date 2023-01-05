@@ -51,13 +51,13 @@ GetStepCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res7S
 /* 804087B0 003D1D70  40 82 FF B8 */	bne .L_80408768
 .L_804087B4:
 /* 804087B4 003D1D74  54 C4 18 38 */	slwi r4, r6, 3
-/* 804087B8 003D1D78  C0 02 C2 58 */	lfs f0, lbl_8066C5D8@sda21(r2)
+/* 804087B8 003D1D78  C0 02 C2 58 */	lfs f0, float_8066C5D8@sda21(r2)
 /* 804087BC 003D1D7C  7C 43 24 2E */	lfsx f2, r3, r4
 /* 804087C0 003D1D80  38 00 00 00 */	li r0, 0
 /* 804087C4 003D1D84  EC 21 10 28 */	fsubs f1, f1, f2
 /* 804087C8 003D1D88  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 804087CC 003D1D8C  40 80 00 14 */	bge .L_804087E0
-/* 804087D0 003D1D90  C0 02 C2 5C */	lfs f0, lbl_8066C5DC@sda21(r2)
+/* 804087D0 003D1D90  C0 02 C2 5C */	lfs f0, float_8066C5DC@sda21(r2)
 /* 804087D4 003D1D94  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 804087D8 003D1D98  40 80 00 08 */	bge .L_804087E0
 /* 804087DC 003D1D9C  38 00 00 01 */	li r0, 1
@@ -126,7 +126,7 @@ GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3re
 /* 804088A8 003D1E68  40 82 FF B4 */	bne .L_8040885C
 .L_804088AC:
 /* 804088AC 003D1E6C  1C A7 00 0C */	mulli r5, r7, 0xc
-/* 804088B0 003D1E70  C0 02 C2 58 */	lfs f0, lbl_8066C5D8@sda21(r2)
+/* 804088B0 003D1E70  C0 02 C2 58 */	lfs f0, float_8066C5D8@sda21(r2)
 /* 804088B4 003D1E74  38 00 00 00 */	li r0, 0
 /* 804088B8 003D1E78  7C 43 2C 2E */	lfsx f2, r3, r5
 /* 804088BC 003D1E7C  7D 03 2A 14 */	add r8, r3, r5
@@ -135,7 +135,7 @@ GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3re
 /* 804088C8 003D1E88  7C A3 2A 14 */	add r5, r3, r5
 /* 804088CC 003D1E8C  FC 00 10 40 */	fcmpo cr0, f0, f2
 /* 804088D0 003D1E90  40 80 00 14 */	bge .L_804088E4
-/* 804088D4 003D1E94  C0 02 C2 5C */	lfs f0, lbl_8066C5DC@sda21(r2)
+/* 804088D4 003D1E94  C0 02 C2 5C */	lfs f0, float_8066C5DC@sda21(r2)
 /* 804088D8 003D1E98  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 804088DC 003D1E9C  40 80 00 08 */	bge .L_804088E4
 /* 804088E0 003D1EA0  38 00 00 01 */	li r0, 1
@@ -161,13 +161,13 @@ GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3re
 /* 80408924 003D1EE4  C0 45 00 00 */	lfs f2, 0(r5)
 /* 80408928 003D1EE8  C0 08 00 00 */	lfs f0, 0(r8)
 /* 8040892C 003D1EEC  EC E1 10 28 */	fsubs f7, f1, f2
-/* 80408930 003D1EF0  C0 C2 C2 60 */	lfs f6, lbl_8066C5E0@sda21(r2)
+/* 80408930 003D1EF0  C0 C2 C2 60 */	lfs f6, float_8066C5E0@sda21(r2)
 /* 80408934 003D1EF4  EC 00 10 28 */	fsubs f0, f0, f2
-/* 80408938 003D1EF8  C0 82 C2 64 */	lfs f4, lbl_8066C5E4@sda21(r2)
-/* 8040893C 003D1EFC  C0 22 C2 68 */	lfs f1, lbl_8066C5E8@sda21(r2)
+/* 80408938 003D1EF8  C0 82 C2 64 */	lfs f4, float_8066C5E4@sda21(r2)
+/* 8040893C 003D1EFC  C0 22 C2 68 */	lfs f1, float_8066C5E8@sda21(r2)
 /* 80408940 003D1F00  EC 47 01 F2 */	fmuls f2, f7, f7
 /* 80408944 003D1F04  EC A6 00 24 */	fdivs f5, f6, f0
-/* 80408948 003D1F08  C0 02 C2 6C */	lfs f0, lbl_8066C5EC@sda21(r2)
+/* 80408948 003D1F08  C0 02 C2 6C */	lfs f0, float_8066C5EC@sda21(r2)
 /* 8040894C 003D1F0C  C1 05 00 04 */	lfs f8, 4(r5)
 /* 80408950 003D1F10  C1 28 00 04 */	lfs f9, 4(r8)
 /* 80408954 003D1F14  C1 45 00 08 */	lfs f10, 8(r5)
@@ -216,7 +216,7 @@ IsLoopData__Q34nw4r3lyt13AnimTransformCFv:
 
 .global __ct__Q34nw4r3lyt18AnimTransformBasicFv
 __ct__Q34nw4r3lyt18AnimTransformBasicFv:
-/* 804089E4 003D1FA4  C0 02 C2 70 */	lfs f0, lbl_8066C5F0@sda21(r2)
+/* 804089E4 003D1FA4  C0 02 C2 70 */	lfs f0, float_8066C5F0@sda21(r2)
 /* 804089E8 003D1FA8  3C 80 80 57 */	lis r4, lbl_8056D558@ha
 /* 804089EC 003D1FAC  38 00 00 00 */	li r0, 0
 /* 804089F0 003D1FB0  38 84 D5 58 */	addi r4, r4, lbl_8056D558@l
@@ -614,7 +614,7 @@ Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt4Pane:
 /* 80408F14 003D24D4  80 C3 00 0C */	lwz r6, 0xc(r3)
 /* 80408F18 003D24D8  3F E0 52 4C */	lis r31, 0x524C5643@ha
 /* 80408F1C 003D24DC  54 84 10 3A */	slwi r4, r4, 2
-/* 80408F20 003D24E0  C3 E2 C2 74 */	lfs f31, lbl_8066C5F4@sda21(r2)
+/* 80408F20 003D24E0  C3 E2 C2 74 */	lfs f31, float_8066C5F4@sda21(r2)
 /* 80408F24 003D24E4  80 06 00 10 */	lwz r0, 0x10(r6)
 /* 80408F28 003D24E8  7C 76 1B 78 */	mr r22, r3
 /* 80408F2C 003D24EC  7C B7 2B 78 */	mr r23, r5
@@ -756,7 +756,7 @@ Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt8Material:
 /* 80409108 003D26C8  80 C3 00 0C */	lwz r6, 0xc(r3)
 /* 8040910C 003D26CC  3F E0 52 4C */	lis r31, 0x524C5450@ha
 /* 80409110 003D26D0  54 84 10 3A */	slwi r4, r4, 2
-/* 80409114 003D26D4  C3 C2 C2 74 */	lfs f30, lbl_8066C5F4@sda21(r2)
+/* 80409114 003D26D4  C3 C2 C2 74 */	lfs f30, float_8066C5F4@sda21(r2)
 /* 80409118 003D26D8  80 06 00 10 */	lwz r0, 0x10(r6)
 /* 8040911C 003D26DC  7C 74 1B 78 */	mr r20, r3
 /* 80409120 003D26E0  7C B5 2B 78 */	mr r21, r5
@@ -1624,49 +1624,49 @@ lbl_8056D558:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C5D8
-lbl_8066C5D8:
+.global float_8066C5D8
+float_8066C5D8:
 	# ROM: 0x576438
 	.4byte 0xBA83126F
 
 
-.global lbl_8066C5DC
-lbl_8066C5DC:
+.global float_8066C5DC
+float_8066C5DC:
 	# ROM: 0x57643C
 	.4byte 0x3A83126F
 
 
-.global lbl_8066C5E0
-lbl_8066C5E0:
+.global float_8066C5E0
+float_8066C5E0:
 	# ROM: 0x576440
 	.float 1.0
 
 
-.global lbl_8066C5E4
-lbl_8066C5E4:
+.global float_8066C5E4
+float_8066C5E4:
 	# ROM: 0x576444
 	.4byte 0x40000000
 
 
-.global lbl_8066C5E8
-lbl_8066C5E8:
+.global float_8066C5E8
+float_8066C5E8:
 	# ROM: 0x576448
 	.4byte 0x40400000
 
 
-.global lbl_8066C5EC
-lbl_8066C5EC:
+.global float_8066C5EC
+float_8066C5EC:
 	# ROM: 0x57644C
 	.4byte 0xC0000000
 
 
-.global lbl_8066C5F0
-lbl_8066C5F0:
+.global float_8066C5F0
+float_8066C5F0:
 	# ROM: 0x576450
 	.4byte 0
 
 
-.global lbl_8066C5F4
-lbl_8066C5F4:
+.global float_8066C5F4
+float_8066C5F4:
 	# ROM: 0x576454
 	.float 0.5

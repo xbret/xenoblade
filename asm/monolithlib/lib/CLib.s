@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80459790
-func_80459790:
+.global __ct__CLib
+__ct__CLib:
 /* 80459790 00422D50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80459794 00422D54  7C 08 02 A6 */	mflr r0
 /* 80459798 00422D58  90 01 00 24 */	stw r0, 0x24(r1)
@@ -18,7 +18,7 @@ func_80459790:
 /* 804597BC 00422D7C  4B FD DD F9 */	bl func_804375B4
 /* 804597C0 00422D80  7C 64 1B 78 */	mr r4, r3
 /* 804597C4 00422D84  38 60 01 C8 */	li r3, 0x1c8
-/* 804597C8 00422D88  4B FD B2 95 */	bl func_80434A5C
+/* 804597C8 00422D88  4B FD B2 95 */	bl mm_malloc
 /* 804597CC 00422D8C  2C 03 00 00 */	cmpwi r3, 0
 /* 804597D0 00422D90  7C 7D 1B 78 */	mr r29, r3
 /* 804597D4 00422D94  41 82 00 2C */	beq .L_80459800
@@ -149,7 +149,7 @@ lbl_8001D4A0:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_80459790
+.4byte __ct__CLib
 	.4byte 0x000000A0
 	.4byte lbl_8001D498
 	.4byte func_80459830

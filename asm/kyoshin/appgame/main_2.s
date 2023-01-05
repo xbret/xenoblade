@@ -2,13 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8003A05C
-func_8003A05C:
+.global put
+put:
 /* 8003A05C 0000361C  38 60 00 00 */	li r3, 0
 /* 8003A060 00003620  4E 80 00 20 */	blr 
 
-.global func_8003A064
-func_8003A064:
+.global performanceStart
+performanceStart:
 /* 8003A064 00003624  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003A068 00003628  7C 08 02 A6 */	mflr r0
 /* 8003A06C 0000362C  38 80 00 01 */	li r4, 1
@@ -23,8 +23,8 @@ func_8003A064:
 /* 8003A090 00003650  38 21 00 10 */	addi r1, r1, 0x10
 /* 8003A094 00003654  4E 80 00 20 */	blr 
 
-.global func_8003A098
-func_8003A098:
+.global performanceEnd
+performanceEnd:
 /* 8003A098 00003658  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003A09C 0000365C  7C 08 02 A6 */	mflr r0
 /* 8003A0A0 00003660  38 80 00 01 */	li r4, 1
@@ -48,8 +48,8 @@ func_8003A0CC:
 /* 8003A0DC 0000369C  48 46 6A B4 */	b func_804A0B90
 
 
-.global func_8003A0E0
-func_8003A0E0:
+.global frame
+frame:
 /* 8003A0E0 000036A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003A0E4 000036A4  7C 08 02 A6 */	mflr r0
 /* 8003A0E8 000036A8  38 80 00 01 */	li r4, 1
@@ -108,8 +108,8 @@ func_8003A198:
 /* 8003A1A8 00003768  48 46 69 E8 */	b func_804A0B90
 
 
-.global func_8003A1AC
-func_8003A1AC:
+.global isExistProperty
+isExistProperty:
 /* 8003A1AC 0000376C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003A1B0 00003770  7C 08 02 A6 */	mflr r0
 /* 8003A1B4 00003774  38 80 00 01 */	li r4, 1
@@ -143,8 +143,8 @@ func_8003A1AC:
 /* 8003A224 000037E4  4E 80 00 20 */	blr
 
 
-.global func_8003A228
-func_8003A228:
+.global isExistSelector
+isExistSelector:
 /* 8003A228 000037E8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003A22C 000037EC  7C 08 02 A6 */	mflr r0
 /* 8003A230 000037F0  38 80 00 01 */	li r4, 1
@@ -178,8 +178,8 @@ func_8003A228:
 /* 8003A2A0 00003860  4E 80 00 20 */	blr
 
 
-.global func_8003A2A4
-func_8003A2A4:
+.global getOCName
+getOCName:
 /* 8003A2A4 00003864  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003A2A8 00003868  7C 08 02 A6 */	mflr r0
 /* 8003A2AC 0000386C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -212,8 +212,8 @@ func_8003A304:
 /* 8003A30C 000038CC  48 46 6D 0C */	b func_804A1018
 
 
-.global func_8003A310
-func_8003A310:
+.global thread
+thread:
 /* 8003A310 000038D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003A314 000038D4  7C 08 02 A6 */	mflr r0
 /* 8003A318 000038D8  38 80 00 01 */	li r4, 1
@@ -255,8 +255,7 @@ func_8003A310:
 /* 8003A3A0 00003960  4E 80 00 20 */	blr
 
 
-.global func_8003A3A4
-func_8003A3A4:
+start:
 /* 8003A3A4 00003964  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003A3A8 00003968  7C 08 02 A6 */	mflr r0
 /* 8003A3AC 0000396C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -267,8 +266,7 @@ func_8003A3A4:
 /* 8003A3C0 00003980  38 21 00 10 */	addi r1, r1, 0x10
 /* 8003A3C4 00003984  4E 80 00 20 */	blr 
 
-.global func_8003A3C8
-func_8003A3C8:
+end:
 /* 8003A3C8 00003988  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003A3CC 0000398C  7C 08 02 A6 */	mflr r0
 /* 8003A3D0 00003990  7C 83 23 78 */	mr r3, r4
@@ -281,8 +279,8 @@ func_8003A3C8:
 /* 8003A3EC 000039AC  4E 80 00 20 */	blr
 
 
-.global func_8003A3F0
-func_8003A3F0:
+.global isAlive
+isAlive:
 /* 8003A3F0 000039B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003A3F4 000039B4  7C 08 02 A6 */	mflr r0
 /* 8003A3F8 000039B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -305,8 +303,8 @@ func_8003A3F0:
 /* 8003A43C 000039FC  4E 80 00 20 */	blr
 
 
-.global func_8003A440
-func_8003A440:
+.global join
+join:
 /* 8003A440 00003A00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003A444 00003A04  7C 08 02 A6 */	mflr r0
 /* 8003A448 00003A08  90 01 00 14 */	stw r0, 0x14(r1)
@@ -327,8 +325,8 @@ func_8003A440:
 /* 8003A480 00003A40  4E 80 00 20 */	blr
 
 
-.global func_8003A484
-func_8003A484:
+.global sleep
+sleep:
 /* 8003A484 00003A44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003A488 00003A48  7C 08 02 A6 */	mflr r0
 /* 8003A48C 00003A4C  7C 83 23 78 */	mr r3, r4
@@ -341,8 +339,8 @@ func_8003A484:
 /* 8003A4A8 00003A68  4E 80 00 20 */	blr
 
 
-.global func_8003A4AC
-func_8003A4AC:
+.global wakeup
+wakeup:
 /* 8003A4AC 00003A6C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003A4B0 00003A70  7C 08 02 A6 */	mflr r0
 /* 8003A4B4 00003A74  7C 83 23 78 */	mr r3, r4
@@ -396,6 +394,17 @@ sinit_8003A4F8:
 
 .4byte sinit_8003A4F8
 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F5B88
+lbl_804F5B88:
+	#ゲームメイン
+	.4byte 0x8351815B
+	.4byte 0x83808381
+	.4byte 0x83438393
+	.4byte 0
+	.balign 4
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
@@ -466,11 +475,11 @@ lbl_80528390:
 lbl_80528458:
 	# ROM: 0x524558
 	.4byte lbl_80668418
-	.4byte func_8003A05C
+	.4byte put
 	.4byte lbl_804F5CF0
-	.4byte func_8003A064
+	.4byte performanceStart
 	.4byte lbl_804F5D04
-	.4byte func_8003A098
+	.4byte performanceEnd
 	.4byte 0
 	.4byte 0
 
@@ -479,20 +488,20 @@ lbl_80528458:
 lbl_80528478:
 	# ROM: 0x524578
 	.4byte lbl_80668420
-	.4byte func_8003A0E0
+	.4byte frame
 	.4byte 0
 	.4byte 0
 
 .global lbl_80528488
 lbl_80528488:
 	.4byte lbl_804F5D20
-	.4byte func_8003A1AC
+	.4byte isExistProperty
 	.4byte 0
 	.4byte lbl_804F5D30
-	.4byte func_8003A228
+	.4byte isExistSelector
 	.4byte 0
 	.4byte lbl_804F5D40
-	.4byte func_8003A2A4
+	.4byte getOCName
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -510,22 +519,22 @@ lbl_805284B8:
 .global lbl_805284C8
 lbl_805284C8:
 	.4byte lbl_80668430
-	.4byte func_8003A3A4
+	.4byte start
 	.4byte 0
 	.4byte lbl_80668438
-	.4byte func_8003A3C8
+	.4byte end
 	.4byte 0
 	.4byte lbl_80668440
-	.4byte func_8003A3F0
+	.4byte isAlive
 	.4byte 0
 	.4byte lbl_80668448
-	.4byte func_8003A440
+	.4byte join
 	.4byte 0
 	.4byte lbl_80668450
-	.4byte func_8003A484
+	.4byte sleep
 	.4byte 0
 	.4byte lbl_80668458
-	.4byte func_8003A4AC
+	.4byte wakeup
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -537,7 +546,7 @@ lbl_805284C8:
 lbl_80528520:
 	# ROM: 0x524620
 	.4byte lbl_80668460
-	.4byte func_8003A310
+	.4byte thread
 	.4byte 0
 	.4byte lbl_805284C8
 
@@ -729,6 +738,7 @@ lbl_806683EC:
 lbl_806683F4:
 	.asciz "43"
 	.byte 0x00
+
 .global lbl_806683F8
 lbl_806683F8:
 	.asciz "BDAT"
@@ -868,42 +878,42 @@ lbl_80006844:
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
 
-	.4byte func_8003A064
+	.4byte performanceStart
 	.4byte 0x00000034
 	.4byte lbl_800067E4
-	.4byte func_8003A098
+	.4byte performanceEnd
 	.4byte 0x00000034
 	.4byte lbl_800067EC
-	.4byte func_8003A0E0
+	.4byte frame
 	.4byte 0x000000B8
 	.4byte lbl_800067F4
-	.4byte func_8003A1AC
+	.4byte isExistProperty
 	.4byte 0x0000007C
 	.4byte lbl_800067FC
-	.4byte func_8003A228
+	.4byte isExistSelector
 	.4byte 0x0000007C
 	.4byte lbl_80006804
-	.4byte func_8003A2A4
+	.4byte getOCName
 	.4byte 0x00000060
 	.4byte lbl_8000680C
-	.4byte func_8003A310
+	.4byte thread
 	.4byte 0x00000094
 	.4byte lbl_80006814
-	.4byte func_8003A3A4
+	.4byte start
 	.4byte 0x00000024
 	.4byte lbl_8000681C
-	.4byte func_8003A3C8
+	.4byte end
 	.4byte 0x00000028
 	.4byte lbl_80006824
-	.4byte func_8003A3F0
+	.4byte isAlive
 	.4byte 0x00000050
 	.4byte lbl_8000682C
-	.4byte func_8003A440
+	.4byte join
 	.4byte 0x00000044
 	.4byte lbl_80006834
-	.4byte func_8003A484
+	.4byte sleep
 	.4byte 0x00000028
 	.4byte lbl_8000683C
-	.4byte func_8003A4AC
+	.4byte wakeup
 	.4byte 0x00000028
 	.4byte lbl_80006844

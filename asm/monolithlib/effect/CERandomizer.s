@@ -4,7 +4,7 @@
 
 .global __ct__18CERandomizerSimpleFv
 __ct__18CERandomizerSimpleFv:
-/* 804DB438 004A49F8  C0 02 D6 58 */	lfs f0, lbl_8066D9D8@sda21(r2)
+/* 804DB438 004A49F8  C0 02 D6 58 */	lfs f0, float_8066D9D8@sda21(r2)
 /* 804DB43C 004A49FC  3C 80 80 57 */	lis r4, __vt__18CERandomizerSimple@ha
 /* 804DB440 004A4A00  38 00 3A 90 */	li r0, 0x3a90
 /* 804DB444 004A4A04  B0 03 00 04 */	sth r0, 4(r3)
@@ -27,7 +27,7 @@ create__18CERandomizerSimpleFi:
 /* 804DB478 004A4A38  B0 83 00 04 */	sth r4, 4(r3)
 .L_804DB47C:
 /* 804DB47C 004A4A3C  A0 03 00 04 */	lhz r0, 4(r3)
-/* 804DB480 004A4A40  C0 02 D6 58 */	lfs f0, lbl_8066D9D8@sda21(r2)
+/* 804DB480 004A4A40  C0 02 D6 58 */	lfs f0, float_8066D9D8@sda21(r2)
 /* 804DB484 004A4A44  B0 03 00 06 */	sth r0, 6(r3)
 /* 804DB488 004A4A48  D0 03 00 08 */	stfs f0, 8(r3)
 /* 804DB48C 004A4A4C  4E 80 00 20 */	blr 
@@ -100,7 +100,7 @@ rand__18CERandomizerSimpleFv:
 .global init__6CERandFv
 init__6CERandFv:
 /* 804DB574 004A4B34  3C 60 80 66 */	lis r3, ceRandomizerSimple@ha
-/* 804DB578 004A4B38  C0 02 D6 58 */	lfs f0, lbl_8066D9D8@sda21(r2)
+/* 804DB578 004A4B38  C0 02 D6 58 */	lfs f0, float_8066D9D8@sda21(r2)
 /* 804DB57C 004A4B3C  38 63 29 30 */	addi r3, r3, ceRandomizerSimple@l
 /* 804DB580 004A4B40  38 00 3A 90 */	li r0, 0x3a90
 /* 804DB584 004A4B44  B0 03 00 04 */	sth r0, 4(r3)
@@ -158,11 +158,11 @@ randVec__6CERandFP4Vec3:
 /* 804DB634 004A4BF4  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 804DB638 004A4BF8  3F E0 43 30 */	lis r31, 0x4330
 /* 804DB63C 004A4BFC  90 01 00 0C */	stw r0, 0xc(r1)
-/* 804DB640 004A4C00  C8 62 D6 68 */	lfd f3, lbl_8066D9E8@sda21(r2)
+/* 804DB640 004A4C00  C8 62 D6 68 */	lfd f3, double_8066D9E8@sda21(r2)
 /* 804DB644 004A4C04  93 E1 00 08 */	stw r31, 8(r1)
-/* 804DB648 004A4C08  C0 22 D6 5C */	lfs f1, lbl_8066D9DC@sda21(r2)
+/* 804DB648 004A4C08  C0 22 D6 5C */	lfs f1, float_8066D9DC@sda21(r2)
 /* 804DB64C 004A4C0C  C8 41 00 08 */	lfd f2, 8(r1)
-/* 804DB650 004A4C10  C0 02 D6 60 */	lfs f0, lbl_8066D9E0@sda21(r2)
+/* 804DB650 004A4C10  C0 02 D6 60 */	lfs f0, float_8066D9E0@sda21(r2)
 /* 804DB654 004A4C14  EC 42 18 28 */	fsubs f2, f2, f3
 /* 804DB658 004A4C18  EC 22 08 24 */	fdivs f1, f2, f1
 /* 804DB65C 004A4C1C  EC 01 00 28 */	fsubs f0, f1, f0
@@ -170,11 +170,11 @@ randVec__6CERandFP4Vec3:
 /* 804DB664 004A4C24  4B F5 A8 75 */	bl mtRand__2mlFv
 /* 804DB668 004A4C28  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 804DB66C 004A4C2C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 804DB670 004A4C30  C8 62 D6 68 */	lfd f3, lbl_8066D9E8@sda21(r2)
+/* 804DB670 004A4C30  C8 62 D6 68 */	lfd f3, double_8066D9E8@sda21(r2)
 /* 804DB674 004A4C34  93 E1 00 10 */	stw r31, 0x10(r1)
-/* 804DB678 004A4C38  C0 22 D6 5C */	lfs f1, lbl_8066D9DC@sda21(r2)
+/* 804DB678 004A4C38  C0 22 D6 5C */	lfs f1, float_8066D9DC@sda21(r2)
 /* 804DB67C 004A4C3C  C8 41 00 10 */	lfd f2, 0x10(r1)
-/* 804DB680 004A4C40  C0 02 D6 60 */	lfs f0, lbl_8066D9E0@sda21(r2)
+/* 804DB680 004A4C40  C0 02 D6 60 */	lfs f0, float_8066D9E0@sda21(r2)
 /* 804DB684 004A4C44  EC 42 18 28 */	fsubs f2, f2, f3
 /* 804DB688 004A4C48  EC 22 08 24 */	fdivs f1, f2, f1
 /* 804DB68C 004A4C4C  EC 01 00 28 */	fsubs f0, f1, f0
@@ -182,11 +182,11 @@ randVec__6CERandFP4Vec3:
 /* 804DB694 004A4C54  4B F5 A8 45 */	bl mtRand__2mlFv
 /* 804DB698 004A4C58  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 804DB69C 004A4C5C  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 804DB6A0 004A4C60  C8 62 D6 68 */	lfd f3, lbl_8066D9E8@sda21(r2)
+/* 804DB6A0 004A4C60  C8 62 D6 68 */	lfd f3, double_8066D9E8@sda21(r2)
 /* 804DB6A4 004A4C64  93 E1 00 18 */	stw r31, 0x18(r1)
-/* 804DB6A8 004A4C68  C0 22 D6 5C */	lfs f1, lbl_8066D9DC@sda21(r2)
+/* 804DB6A8 004A4C68  C0 22 D6 5C */	lfs f1, float_8066D9DC@sda21(r2)
 /* 804DB6AC 004A4C6C  C8 41 00 18 */	lfd f2, 0x18(r1)
-/* 804DB6B0 004A4C70  C0 02 D6 60 */	lfs f0, lbl_8066D9E0@sda21(r2)
+/* 804DB6B0 004A4C70  C0 02 D6 60 */	lfs f0, float_8066D9E0@sda21(r2)
 /* 804DB6B4 004A4C74  EC 42 18 28 */	fsubs f2, f2, f3
 /* 804DB6B8 004A4C78  EC 22 08 24 */	fdivs f1, f2, f1
 /* 804DB6BC 004A4C7C  EC 01 00 28 */	fsubs f0, f1, f0
@@ -207,11 +207,11 @@ randFHalf__12CERandomizerFv:
 /* 804DB6EC 004A4CAC  6C 63 80 00 */	xoris r3, r3, 0x8000
 /* 804DB6F0 004A4CB0  3C 00 43 30 */	lis r0, 0x4330
 /* 804DB6F4 004A4CB4  90 01 00 08 */	stw r0, 8(r1)
-/* 804DB6F8 004A4CB8  C8 62 D6 68 */	lfd f3, lbl_8066D9E8@sda21(r2)
+/* 804DB6F8 004A4CB8  C8 62 D6 68 */	lfd f3, double_8066D9E8@sda21(r2)
 /* 804DB6FC 004A4CBC  90 61 00 0C */	stw r3, 0xc(r1)
-/* 804DB700 004A4CC0  C0 22 D6 5C */	lfs f1, lbl_8066D9DC@sda21(r2)
+/* 804DB700 004A4CC0  C0 22 D6 5C */	lfs f1, float_8066D9DC@sda21(r2)
 /* 804DB704 004A4CC4  C8 41 00 08 */	lfd f2, 8(r1)
-/* 804DB708 004A4CC8  C0 02 D6 60 */	lfs f0, lbl_8066D9E0@sda21(r2)
+/* 804DB708 004A4CC8  C0 02 D6 60 */	lfs f0, float_8066D9E0@sda21(r2)
 /* 804DB70C 004A4CCC  EC 42 18 28 */	fsubs f2, f2, f3
 /* 804DB710 004A4CD0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804DB714 004A4CD4  EC 22 08 24 */	fdivs f1, f2, f1
@@ -233,10 +233,10 @@ randSignVec__6CERandFP4Vec3:
 /* 804DB748 004A4D08  7C 00 22 78 */	xor r0, r0, r4
 /* 804DB74C 004A4D0C  7C 04 00 51 */	subf. r0, r4, r0
 /* 804DB750 004A4D10  41 82 00 0C */	beq .L_804DB75C
-/* 804DB754 004A4D14  C0 22 D6 70 */	lfs f1, lbl_8066D9F0@sda21(r2)
+/* 804DB754 004A4D14  C0 22 D6 70 */	lfs f1, float_8066D9F0@sda21(r2)
 /* 804DB758 004A4D18  48 00 00 08 */	b .L_804DB760
 .L_804DB75C:
-/* 804DB75C 004A4D1C  C0 22 D6 74 */	lfs f1, lbl_8066D9F4@sda21(r2)
+/* 804DB75C 004A4D1C  C0 22 D6 74 */	lfs f1, float_8066D9F4@sda21(r2)
 .L_804DB760:
 /* 804DB760 004A4D20  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 804DB764 004A4D24  EC 00 00 72 */	fmuls f0, f0, f1
@@ -247,10 +247,10 @@ randSignVec__6CERandFP4Vec3:
 /* 804DB778 004A4D38  7C 00 22 78 */	xor r0, r0, r4
 /* 804DB77C 004A4D3C  7C 04 00 51 */	subf. r0, r4, r0
 /* 804DB780 004A4D40  41 82 00 0C */	beq .L_804DB78C
-/* 804DB784 004A4D44  C0 22 D6 70 */	lfs f1, lbl_8066D9F0@sda21(r2)
+/* 804DB784 004A4D44  C0 22 D6 70 */	lfs f1, float_8066D9F0@sda21(r2)
 /* 804DB788 004A4D48  48 00 00 08 */	b .L_804DB790
 .L_804DB78C:
-/* 804DB78C 004A4D4C  C0 22 D6 74 */	lfs f1, lbl_8066D9F4@sda21(r2)
+/* 804DB78C 004A4D4C  C0 22 D6 74 */	lfs f1, float_8066D9F4@sda21(r2)
 .L_804DB790:
 /* 804DB790 004A4D50  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 804DB794 004A4D54  EC 00 00 72 */	fmuls f0, f0, f1
@@ -261,10 +261,10 @@ randSignVec__6CERandFP4Vec3:
 /* 804DB7A8 004A4D68  7C 00 22 78 */	xor r0, r0, r4
 /* 804DB7AC 004A4D6C  7C 04 00 51 */	subf. r0, r4, r0
 /* 804DB7B0 004A4D70  41 82 00 0C */	beq .L_804DB7BC
-/* 804DB7B4 004A4D74  C0 22 D6 70 */	lfs f1, lbl_8066D9F0@sda21(r2)
+/* 804DB7B4 004A4D74  C0 22 D6 70 */	lfs f1, float_8066D9F0@sda21(r2)
 /* 804DB7B8 004A4D78  48 00 00 08 */	b .L_804DB7C0
 .L_804DB7BC:
-/* 804DB7BC 004A4D7C  C0 22 D6 74 */	lfs f1, lbl_8066D9F4@sda21(r2)
+/* 804DB7BC 004A4D7C  C0 22 D6 74 */	lfs f1, float_8066D9F4@sda21(r2)
 .L_804DB7C0:
 /* 804DB7C0 004A4D80  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 804DB7C4 004A4D84  EC 00 00 72 */	fmuls f0, f0, f1
@@ -286,10 +286,10 @@ randSign__12CERandomizerFv:
 /* 804DB7F8 004A4DB8  7C 00 22 78 */	xor r0, r0, r4
 /* 804DB7FC 004A4DBC  7C 04 00 51 */	subf. r0, r4, r0
 /* 804DB800 004A4DC0  41 82 00 0C */	beq .L_804DB80C
-/* 804DB804 004A4DC4  C0 22 D6 70 */	lfs f1, lbl_8066D9F0@sda21(r2)
+/* 804DB804 004A4DC4  C0 22 D6 70 */	lfs f1, float_8066D9F0@sda21(r2)
 /* 804DB808 004A4DC8  48 00 00 08 */	b .L_804DB810
 .L_804DB80C:
-/* 804DB80C 004A4DCC  C0 22 D6 74 */	lfs f1, lbl_8066D9F4@sda21(r2)
+/* 804DB80C 004A4DCC  C0 22 D6 74 */	lfs f1, float_8066D9F4@sda21(r2)
 .L_804DB810:
 /* 804DB810 004A4DD0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804DB814 004A4DD4  7C 08 03 A6 */	mtlr r0
@@ -307,10 +307,10 @@ randSign__18CERandomizerSimpleFv:
 /* 804DB838 004A4DF8  4E 80 04 21 */	bctrl 
 /* 804DB83C 004A4DFC  54 60 07 FF */	clrlwi. r0, r3, 0x1f
 /* 804DB840 004A4E00  41 82 00 0C */	beq .L_804DB84C
-/* 804DB844 004A4E04  C0 22 D6 70 */	lfs f1, lbl_8066D9F0@sda21(r2)
+/* 804DB844 004A4E04  C0 22 D6 70 */	lfs f1, float_8066D9F0@sda21(r2)
 /* 804DB848 004A4E08  48 00 00 08 */	b .L_804DB850
 .L_804DB84C:
-/* 804DB84C 004A4E0C  C0 22 D6 74 */	lfs f1, lbl_8066D9F4@sda21(r2)
+/* 804DB84C 004A4E0C  C0 22 D6 74 */	lfs f1, float_8066D9F4@sda21(r2)
 .L_804DB850:
 /* 804DB850 004A4E10  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804DB854 004A4E14  7C 08 03 A6 */	mtlr r0
@@ -328,11 +328,11 @@ randFHalf__18CERandomizerSimpleFv:
 /* 804DB878 004A4E38  4E 80 04 21 */	bctrl 
 /* 804DB87C 004A4E3C  3C 00 43 30 */	lis r0, 0x4330
 /* 804DB880 004A4E40  90 01 00 08 */	stw r0, 8(r1)
-/* 804DB884 004A4E44  C8 62 D6 80 */	lfd f3, lbl_8066DA00@sda21(r2)
+/* 804DB884 004A4E44  C8 62 D6 80 */	lfd f3, double_8066DA00@sda21(r2)
 /* 804DB888 004A4E48  90 61 00 0C */	stw r3, 0xc(r1)
-/* 804DB88C 004A4E4C  C0 22 D6 78 */	lfs f1, lbl_8066D9F8@sda21(r2)
+/* 804DB88C 004A4E4C  C0 22 D6 78 */	lfs f1, float_8066D9F8@sda21(r2)
 /* 804DB890 004A4E50  C8 41 00 08 */	lfd f2, 8(r1)
-/* 804DB894 004A4E54  C0 02 D6 60 */	lfs f0, lbl_8066D9E0@sda21(r2)
+/* 804DB894 004A4E54  C0 02 D6 60 */	lfs f0, float_8066D9E0@sda21(r2)
 /* 804DB898 004A4E58  EC 42 18 28 */	fsubs f2, f2, f3
 /* 804DB89C 004A4E5C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804DB8A0 004A4E60  EC 22 08 24 */	fdivs f1, f2, f1
@@ -352,9 +352,9 @@ randF__18CERandomizerSimpleFv:
 /* 804DB8CC 004A4E8C  4E 80 04 21 */	bctrl 
 /* 804DB8D0 004A4E90  3C 00 43 30 */	lis r0, 0x4330
 /* 804DB8D4 004A4E94  90 01 00 08 */	stw r0, 8(r1)
-/* 804DB8D8 004A4E98  C8 42 D6 80 */	lfd f2, lbl_8066DA00@sda21(r2)
+/* 804DB8D8 004A4E98  C8 42 D6 80 */	lfd f2, double_8066DA00@sda21(r2)
 /* 804DB8DC 004A4E9C  90 61 00 0C */	stw r3, 0xc(r1)
-/* 804DB8E0 004A4EA0  C0 02 D6 78 */	lfs f0, lbl_8066D9F8@sda21(r2)
+/* 804DB8E0 004A4EA0  C0 02 D6 78 */	lfs f0, float_8066D9F8@sda21(r2)
 /* 804DB8E4 004A4EA4  C8 21 00 08 */	lfd f1, 8(r1)
 /* 804DB8E8 004A4EA8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804DB8EC 004A4EAC  EC 21 10 28 */	fsubs f1, f1, f2
@@ -369,7 +369,7 @@ __sinit_CERand_cpp:
 /* 804DB900 004A4EC0  3C A0 80 66 */	lis r5, ceRandomizerSimple@ha
 /* 804DB904 004A4EC4  3C C0 80 57 */	lis r6, __vt__CERandomizer@ha
 /* 804DB908 004A4EC8  3C 80 80 57 */	lis r4, __vt__18CERandomizerSimple@ha
-/* 804DB90C 004A4ECC  C0 02 D6 58 */	lfs f0, lbl_8066D9D8@sda21(r2)
+/* 804DB90C 004A4ECC  C0 02 D6 58 */	lfs f0, float_8066D9D8@sda21(r2)
 /* 804DB910 004A4ED0  38 65 29 30 */	addi r3, r5, ceRandomizerSimple@l
 /* 804DB914 004A4ED4  38 00 3A 90 */	li r0, 0x3a90
 /* 804DB918 004A4ED8  38 C6 36 78 */	addi r6, r6, __vt__CERandomizer@l
@@ -390,9 +390,9 @@ randF__12CERandomizerFv:
 /* 804DB948 004A4F08  6C 63 80 00 */	xoris r3, r3, 0x8000
 /* 804DB94C 004A4F0C  3C 00 43 30 */	lis r0, 0x4330
 /* 804DB950 004A4F10  90 01 00 08 */	stw r0, 8(r1)
-/* 804DB954 004A4F14  C8 42 D6 68 */	lfd f2, lbl_8066D9E8@sda21(r2)
+/* 804DB954 004A4F14  C8 42 D6 68 */	lfd f2, double_8066D9E8@sda21(r2)
 /* 804DB958 004A4F18  90 61 00 0C */	stw r3, 0xc(r1)
-/* 804DB95C 004A4F1C  C0 02 D6 5C */	lfs f0, lbl_8066D9DC@sda21(r2)
+/* 804DB95C 004A4F1C  C0 02 D6 5C */	lfs f0, float_8066D9DC@sda21(r2)
 /* 804DB960 004A4F20  C8 21 00 08 */	lfd f1, 8(r1)
 /* 804DB964 004A4F24  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804DB968 004A4F28  EC 21 10 28 */	fsubs f1, f1, f2
@@ -482,55 +482,55 @@ __RTTI__CERandomizer:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066D9D8
-lbl_8066D9D8:
+.global float_8066D9D8
+float_8066D9D8:
 	# ROM: 0x577838
 	.4byte 0
 
 
 #2147483648
-.global lbl_8066D9DC
-lbl_8066D9DC:
+.global float_8066D9DC
+float_8066D9DC:
 	# ROM: 0x57783C
 	.4byte 0x4F000000
 
 
 #0.5
-.global lbl_8066D9E0
-lbl_8066D9E0:
+.global float_8066D9E0
+float_8066D9E0:
 	.4byte 0x3f000000
 	.4byte 0
 
 
 #int to float constant
-.global lbl_8066D9E8
-lbl_8066D9E8:
+.global double_8066D9E8
+double_8066D9E8:
 	# ROM: 0x577848
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
-.global lbl_8066D9F0
-lbl_8066D9F0:
+.global float_8066D9F0
+float_8066D9F0:
 	# ROM: 0x577850
 	.float 1.0
 
 
-.global lbl_8066D9F4
-lbl_8066D9F4:
+.global float_8066D9F4
+float_8066D9F4:
 	# ROM: 0x577854
 	.float -1.0
 
 
-.global lbl_8066D9F8
-lbl_8066D9F8:
+.global float_8066D9F8
+float_8066D9F8:
 	# ROM: 0x577858
 	.4byte 0x461C5800
 	.4byte 0
 
 
-.global lbl_8066DA00
-lbl_8066DA00:
+.global double_8066DA00
+double_8066DA00:
 	# ROM: 0x577860
 	.4byte 0x43300000
 	.4byte 0

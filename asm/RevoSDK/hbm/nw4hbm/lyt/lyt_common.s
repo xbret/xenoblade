@@ -152,14 +152,14 @@ SetSize__Q46nw4hbm3lyt6detail11TexCoordAryFUc:
 /* 8032C77C 002F5D3C  88 08 D7 90 */	lbz r0, lbl_805CD790@l(r8)
 /* 8032C780 002F5D40  7C 00 07 75 */	extsb. r0, r0
 /* 8032C784 002F5D44  40 82 00 44 */	bne .L_8032C7C8
-/* 8032C788 002F5D48  3C C0 80 52 */	lis r6, lbl_80518A48@ha
-/* 8032C78C 002F5D4C  3C A0 80 52 */	lis r5, lbl_80518A4C@ha
-/* 8032C790 002F5D50  3C E0 80 5D */	lis r7, lbl_805CD798@ha
-/* 8032C794 002F5D54  C0 26 8A 48 */	lfs f1, lbl_80518A48@l(r6)
-/* 8032C798 002F5D58  38 C7 D7 98 */	addi r6, r7, lbl_805CD798@l
-/* 8032C79C 002F5D5C  C0 05 8A 4C */	lfs f0, lbl_80518A4C@l(r5)
+/* 8032C788 002F5D48  3C C0 80 52 */	lis r6, float_80518A48@ha
+/* 8032C78C 002F5D4C  3C A0 80 52 */	lis r5, float_80518A4C@ha
+/* 8032C790 002F5D50  3C E0 80 5D */	lis r7, float_805CD798@ha
+/* 8032C794 002F5D54  C0 26 8A 48 */	lfs f1, float_80518A48@l(r6)
+/* 8032C798 002F5D58  38 C7 D7 98 */	addi r6, r7, float_805CD798@l
+/* 8032C79C 002F5D5C  C0 05 8A 4C */	lfs f0, float_80518A4C@l(r5)
 /* 8032C7A0 002F5D60  38 00 00 01 */	li r0, 1
-/* 8032C7A4 002F5D64  D0 27 D7 98 */	stfs f1, lbl_805CD798@l(r7)
+/* 8032C7A4 002F5D64  D0 27 D7 98 */	stfs f1, float_805CD798@l(r7)
 /* 8032C7A8 002F5D68  D0 26 00 04 */	stfs f1, 4(r6)
 /* 8032C7AC 002F5D6C  D0 06 00 08 */	stfs f0, 8(r6)
 /* 8032C7B0 002F5D70  D0 26 00 0C */	stfs f1, 0xc(r6)
@@ -170,9 +170,9 @@ SetSize__Q46nw4hbm3lyt6detail11TexCoordAryFUc:
 /* 8032C7C4 002F5D84  98 08 D7 90 */	stb r0, lbl_805CD790@l(r8)
 .L_8032C7C8:
 /* 8032C7C8 002F5D88  88 E3 00 01 */	lbz r7, 1(r3)
-/* 8032C7CC 002F5D8C  3C C0 80 5D */	lis r6, lbl_805CD798@ha
-/* 8032C7D0 002F5D90  38 A6 D7 98 */	addi r5, r6, lbl_805CD798@l
-/* 8032C7D4 002F5D94  C0 E6 D7 98 */	lfs f7, lbl_805CD798@l(r6)
+/* 8032C7CC 002F5D8C  3C C0 80 5D */	lis r6, float_805CD798@ha
+/* 8032C7D0 002F5D90  38 A6 D7 98 */	addi r5, r6, float_805CD798@l
+/* 8032C7D4 002F5D94  C0 E6 D7 98 */	lfs f7, float_805CD798@l(r6)
 /* 8032C7D8 002F5D98  7C 07 20 50 */	subf r0, r7, r4
 /* 8032C7DC 002F5D9C  54 E6 28 34 */	slwi r6, r7, 5
 /* 8032C7E0 002F5DA0  C0 C5 00 04 */	lfs f6, 4(r5)
@@ -992,7 +992,7 @@ InitGXTexObjFromTPL__Q36nw4hbm3lyt6detailFP9_GXTexObjP10TPLPaletteUl:
 .L_8032D3AC:
 /* 8032D3AC 002F696C  81 3E 00 00 */	lwz r9, 0(r30)
 /* 8032D3B0 002F6970  3C A0 43 30 */	lis r5, 0x4330
-/* 8032D3B4 002F6974  3C 80 80 52 */	lis r4, lbl_80518A50@ha
+/* 8032D3B4 002F6974  3C 80 80 52 */	lis r4, double_80518A50@ha
 /* 8032D3B8 002F6978  90 A1 00 10 */	stw r5, 0x10(r1)
 /* 8032D3BC 002F697C  88 E9 00 21 */	lbz r7, 0x21(r9)
 /* 8032D3C0 002F6980  7F E3 FB 78 */	mr r3, r31
@@ -1000,7 +1000,7 @@ InitGXTexObjFromTPL__Q36nw4hbm3lyt6detailFP9_GXTexObjP10TPLPaletteUl:
 /* 8032D3C8 002F6988  38 C0 00 00 */	li r6, 0
 /* 8032D3CC 002F698C  88 09 00 22 */	lbz r0, 0x22(r9)
 /* 8032D3D0 002F6990  39 00 00 00 */	li r8, 0
-/* 8032D3D4 002F6994  C8 44 8A 50 */	lfd f2, lbl_80518A50@l(r4)
+/* 8032D3D4 002F6994  C8 44 8A 50 */	lfd f2, double_80518A50@l(r4)
 /* 8032D3D8 002F6998  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 8032D3DC 002F699C  90 A1 00 18 */	stw r5, 0x18(r1)
 /* 8032D3E0 002F69A0  EC 20 10 28 */	fsubs f1, f0, f2
@@ -1024,20 +1024,20 @@ InitGXTexObjFromTPL__Q36nw4hbm3lyt6detailFP9_GXTexObjP10TPLPaletteUl:
 
 
 
-.global lbl_80518A48
-lbl_80518A48:
+.global float_80518A48
+float_80518A48:
 	# ROM: 0x514B48
 	.4byte 0
 
 
-.global lbl_80518A4C
-lbl_80518A4C:
+.global float_80518A4C
+float_80518A4C:
 	# ROM: 0x514B4C
 	.float 1.0
 
 
-.global lbl_80518A50
-lbl_80518A50:
+.global double_80518A50
+double_80518A50:
 	# ROM: 0x514B50
 	.4byte 0x43300000
 	.4byte 0

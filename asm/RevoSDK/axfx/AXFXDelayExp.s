@@ -6,7 +6,7 @@
 .global AXFXDelayExpGetMemSize
 AXFXDelayExpGetMemSize:
 /* 802D65F0 0029FBB0  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 802D65F4 0029FBB4  C0 22 BA A0 */	lfs f1, lbl_8066BE20@sda21(r2)
+/* 802D65F4 0029FBB4  C0 22 BA A0 */	lfs f1, float_8066BE20@sda21(r2)
 /* 802D65F8 0029FBB8  C0 03 00 38 */	lfs f0, 0x38(r3)
 /* 802D65FC 0029FBBC  EC 01 00 32 */	fmuls f0, f1, f0
 /* 802D6600 0029FBC0  FC 00 00 1E */	fctiwz f0, f0
@@ -29,7 +29,7 @@ AXFXDelayExpInit:
 /* 802D663C 0029FBFC  48 08 23 75 */	bl OSDisableInterrupts
 /* 802D6640 0029FC00  C0 3E 00 38 */	lfs f1, 0x38(r30)
 /* 802D6644 0029FC04  3B A0 00 01 */	li r29, 1
-/* 802D6648 0029FC08  C0 02 BA A4 */	lfs f0, lbl_8066BE24@sda21(r2)
+/* 802D6648 0029FC08  C0 02 BA A4 */	lfs f0, float_8066BE24@sda21(r2)
 /* 802D664C 0029FC0C  7C 7F 1B 78 */	mr r31, r3
 /* 802D6650 0029FC10  93 BE 00 34 */	stw r29, 0x34(r30)
 /* 802D6654 0029FC14  FC 01 00 40 */	fcmpo cr0, f1, f0
@@ -75,7 +75,7 @@ AXFXDelayExpInit:
 /* 802D66E8 0029FCA8  38 60 00 00 */	li r3, 0
 /* 802D66EC 0029FCAC  48 00 01 E8 */	b .L_802D68D4
 .L_802D66F0:
-/* 802D66F0 0029FCB0  C0 02 BA A0 */	lfs f0, lbl_8066BE20@sda21(r2)
+/* 802D66F0 0029FCB0  C0 02 BA A0 */	lfs f0, float_8066BE20@sda21(r2)
 /* 802D66F4 0029FCB4  EC 20 00 72 */	fmuls f1, f0, f1
 /* 802D66F8 0029FCB8  4B FE 39 35 */	bl __cvt_fp2unsigned
 /* 802D66FC 0029FCBC  2C 03 00 00 */	cmpwi r3, 0
@@ -639,10 +639,10 @@ __InitParams:
 /* 802D6EE8 002A04A8  48 00 01 B8 */	b .L_802D70A0
 .L_802D6EEC:
 /* 802D6EEC 002A04AC  C0 03 00 40 */	lfs f0, 0x40(r3)
-/* 802D6EF0 002A04B0  C0 42 BA A4 */	lfs f2, lbl_8066BE24@sda21(r2)
+/* 802D6EF0 002A04B0  C0 42 BA A4 */	lfs f2, float_8066BE24@sda21(r2)
 /* 802D6EF4 002A04B4  FC 00 10 40 */	fcmpo cr0, f0, f2
 /* 802D6EF8 002A04B8  41 80 00 14 */	blt .L_802D6F0C
-/* 802D6EFC 002A04BC  C0 22 BA A8 */	lfs f1, lbl_8066BE28@sda21(r2)
+/* 802D6EFC 002A04BC  C0 22 BA A8 */	lfs f1, float_8066BE28@sda21(r2)
 /* 802D6F00 002A04C0  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 802D6F04 002A04C4  4C 41 13 82 */	cror 2, 1, 2
 /* 802D6F08 002A04C8  40 82 00 0C */	bne .L_802D6F14
@@ -710,7 +710,7 @@ __InitParams:
 /* 802D6FD4 002A0594  80 7F 00 08 */	lwz r3, 8(r31)
 /* 802D6FD8 002A0598  54 05 10 3A */	slwi r5, r0, 2
 /* 802D6FDC 002A059C  4B D2 D3 75 */	bl memset
-/* 802D6FE0 002A05A0  C0 22 BA A0 */	lfs f1, lbl_8066BE20@sda21(r2)
+/* 802D6FE0 002A05A0  C0 22 BA A0 */	lfs f1, float_8066BE20@sda21(r2)
 /* 802D6FE4 002A05A4  C0 1F 00 3C */	lfs f0, 0x3c(r31)
 /* 802D6FE8 002A05A8  EC 21 00 32 */	fmuls f1, f1, f0
 /* 802D6FEC 002A05AC  4B FE 30 41 */	bl __cvt_fp2unsigned
@@ -720,13 +720,13 @@ __InitParams:
 /* 802D6FFC 002A05BC  38 00 00 01 */	li r0, 1
 /* 802D7000 002A05C0  90 1F 00 10 */	stw r0, 0x10(r31)
 .L_802D7004:
-/* 802D7004 002A05C4  C0 22 BA AC */	lfs f1, lbl_8066BE2C@sda21(r2)
+/* 802D7004 002A05C4  C0 22 BA AC */	lfs f1, float_8066BE2C@sda21(r2)
 /* 802D7008 002A05C8  38 00 00 00 */	li r0, 0
 /* 802D700C 002A05CC  C0 1F 00 40 */	lfs f0, 0x40(r31)
-/* 802D7010 002A05D0  C0 42 BA A8 */	lfs f2, lbl_8066BE28@sda21(r2)
+/* 802D7010 002A05D0  C0 42 BA A8 */	lfs f2, float_8066BE28@sda21(r2)
 /* 802D7014 002A05D4  EC 61 00 32 */	fmuls f3, f1, f0
 /* 802D7018 002A05D8  C0 3F 00 44 */	lfs f1, 0x44(r31)
-/* 802D701C 002A05DC  C0 02 BA B0 */	lfs f0, lbl_8066BE30@sda21(r2)
+/* 802D701C 002A05DC  C0 02 BA B0 */	lfs f0, float_8066BE30@sda21(r2)
 /* 802D7020 002A05E0  EC 42 08 28 */	fsubs f2, f2, f1
 /* 802D7024 002A05E4  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 802D7028 002A05E8  FC 20 18 1E */	fctiwz f1, f3
@@ -737,7 +737,7 @@ __InitParams:
 /* 802D703C 002A05FC  40 81 00 08 */	ble .L_802D7044
 /* 802D7040 002A0600  FC 40 00 90 */	fmr f2, f0
 .L_802D7044:
-/* 802D7044 002A0604  C0 62 BA AC */	lfs f3, lbl_8066BE2C@sda21(r2)
+/* 802D7044 002A0604  C0 62 BA AC */	lfs f3, float_8066BE2C@sda21(r2)
 /* 802D7048 002A0608  38 A0 00 00 */	li r5, 0
 /* 802D704C 002A060C  C0 3F 00 50 */	lfs f1, 0x50(r31)
 /* 802D7050 002A0610  38 60 00 01 */	li r3, 1
@@ -769,31 +769,31 @@ __InitParams:
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-.global lbl_8066BE20
-lbl_8066BE20:
+.global float_8066BE20
+float_8066BE20:
 	# ROM: 0x575C80
 	.4byte 0x42000000
 
 
-.global lbl_8066BE24
-lbl_8066BE24:
+.global float_8066BE24
+float_8066BE24:
 	# ROM: 0x575C84
 	.4byte 0
 
 
-.global lbl_8066BE28
-lbl_8066BE28:
+.global float_8066BE28
+float_8066BE28:
 	# ROM: 0x575C88
 	.float 1.0
 
 
-.global lbl_8066BE2C
-lbl_8066BE2C:
+.global float_8066BE2C
+float_8066BE2C:
 	# ROM: 0x575C8C
 	.4byte 0x43000000
 
 
-.global lbl_8066BE30
-lbl_8066BE30:
+.global float_8066BE30
+float_8066BE30:
 	.4byte 0x3F733333
 	.4byte 0

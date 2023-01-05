@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8026FCA8
-func_8026FCA8:
+.global __ct__CMenuPlayAward
+__ct__CMenuPlayAward:
 /* 8026FCA8 00239268  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8026FCAC 0023926C  7C 08 02 A6 */	mflr r0
 /* 8026FCB0 00239270  90 01 00 24 */	stw r0, 0x24(r1)
@@ -47,7 +47,7 @@ func_8026FCA8:
 /* 8026FD48 00239308  38 7D 00 B8 */	addi r3, r29, 0xb8
 /* 8026FD4C 0023930C  38 80 00 00 */	li r4, 0
 /* 8026FD50 00239310  48 00 0D C5 */	bl func_80270B14
-/* 8026FD54 00239314  C0 02 AE C0 */	lfs f0, lbl_8066B240@sda21(r2)
+/* 8026FD54 00239314  C0 02 AE C0 */	lfs f0, float_8066B240@sda21(r2)
 /* 8026FD58 00239318  39 61 00 20 */	addi r11, r1, 0x20
 /* 8026FD5C 0023931C  D0 1D 11 5C */	stfs f0, 0x115c(r29)
 /* 8026FD60 00239320  7F A3 EB 78 */	mr r3, r29
@@ -462,11 +462,11 @@ func_80270308:
 /* 80270334 002398F4  48 1C 72 81 */	bl func_804375B4
 /* 80270338 002398F8  7C 64 1B 78 */	mr r4, r3
 /* 8027033C 002398FC  38 60 11 64 */	li r3, 0x1164
-/* 80270340 00239900  48 1C 47 1D */	bl func_80434A5C
+/* 80270340 00239900  48 1C 47 1D */	bl mm_malloc
 /* 80270344 00239904  2C 03 00 00 */	cmpwi r3, 0
 /* 80270348 00239908  41 82 00 0C */	beq .L_80270354
 /* 8027034C 0023990C  7F E4 FB 78 */	mr r4, r31
-/* 80270350 00239910  4B FF F9 59 */	bl func_8026FCA8
+/* 80270350 00239910  4B FF F9 59 */	bl __ct__CMenuPlayAward
 .L_80270354:
 /* 80270354 00239914  90 6D B0 10 */	stw r3, lbl_80667190@sda21(r13)
 /* 80270358 00239918  7F C4 F3 78 */	mr r4, r30
@@ -549,9 +549,9 @@ func_80270404:
 func_80270454:
 /* 80270454 00239A14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80270458 00239A18  7C 08 02 A6 */	mflr r0
-/* 8027045C 00239A1C  C0 22 AE C4 */	lfs f1, lbl_8066B244@sda21(r2)
+/* 8027045C 00239A1C  C0 22 AE C4 */	lfs f1, float_8066B244@sda21(r2)
 /* 80270460 00239A20  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80270464 00239A24  C0 02 AE C8 */	lfs f0, lbl_8066B248@sda21(r2)
+/* 80270464 00239A24  C0 02 AE C8 */	lfs f0, float_8066B248@sda21(r2)
 /* 80270468 00239A28  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8027046C 00239A2C  7C 7F 1B 78 */	mr r31, r3
 /* 80270470 00239A30  93 C1 00 08 */	stw r30, 8(r1)
@@ -709,7 +709,7 @@ func_80270654:
 /* 80270678 00239C38  7C 7F 1B 78 */	mr r31, r3
 /* 8027067C 00239C3C  38 E0 02 00 */	li r7, 0x200
 /* 80270680 00239C40  48 04 94 81 */	bl __construct_array
-/* 80270684 00239C44  C0 02 AE D0 */	lfs f0, lbl_8066B250@sda21(r2)
+/* 80270684 00239C44  C0 02 AE D0 */	lfs f0, float_8066B250@sda21(r2)
 /* 80270688 00239C48  38 00 00 00 */	li r0, 0
 /* 8027068C 00239C4C  98 1F 10 00 */	stb r0, 0x1000(r31)
 /* 80270690 00239C50  7F E3 FB 78 */	mr r3, r31
@@ -825,10 +825,10 @@ func_80270770:
 /* 80270804 00239DC4  3C 00 43 30 */	lis r0, 0x4330
 /* 80270808 00239DC8  90 61 01 14 */	stw r3, 0x114(r1)
 /* 8027080C 00239DCC  38 61 00 10 */	addi r3, r1, 0x10
-/* 80270810 00239DD0  C8 42 AE D8 */	lfd f2, lbl_8066B258@sda21(r2)
+/* 80270810 00239DD0  C8 42 AE D8 */	lfd f2, double_8066B258@sda21(r2)
 /* 80270814 00239DD4  38 C0 00 00 */	li r6, 0
 /* 80270818 00239DD8  90 01 01 10 */	stw r0, 0x110(r1)
-/* 8027081C 00239DDC  C0 02 AE D4 */	lfs f0, lbl_8066B254@sda21(r2)
+/* 8027081C 00239DDC  C0 02 AE D4 */	lfs f0, float_8066B254@sda21(r2)
 /* 80270820 00239DE0  C8 21 01 10 */	lfd f1, 0x110(r1)
 /* 80270824 00239DE4  90 A1 01 1C */	stw r5, 0x11c(r1)
 /* 80270828 00239DE8  EC 61 10 28 */	fsubs f3, f1, f2
@@ -1101,39 +1101,39 @@ __RTTI__CMenuPlayAward:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_8066B240
-lbl_8066B240:
+.global float_8066B240
+float_8066B240:
 	# ROM: 0x5750A0
 	.4byte 0
 
 
-.global lbl_8066B244
-lbl_8066B244:
+.global float_8066B244
+float_8066B244:
 	# ROM: 0x5750A4
 	.float 1.0
 
 
-.global lbl_8066B248
-lbl_8066B248:
+.global float_8066B248
+float_8066B248:
 	# ROM: 0x5750A8
 	.float 10.0
 	.4byte 0
 
 
-.global lbl_8066B250
-lbl_8066B250:
+.global float_8066B250
+float_8066B250:
 	# ROM: 0x5750B0
 	.4byte 0
 
 
-.global lbl_8066B254
-lbl_8066B254:
+.global float_8066B254
+float_8066B254:
 	# ROM: 0x5750B4
 	.float 100.0
 
 
-.global lbl_8066B258
-lbl_8066B258:
+.global double_8066B258
+double_8066B258:
 	# ROM: 0x5750B8
 	.4byte 0x43300000
 	.4byte 0
@@ -1276,7 +1276,7 @@ lbl_80017F90:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_8026FCA8
+.4byte __ct__CMenuPlayAward
 	.4byte 0x000000D4
 	.4byte lbl_80017E5C
 	.4byte func_8026FD7C

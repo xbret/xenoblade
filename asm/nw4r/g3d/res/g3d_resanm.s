@@ -56,13 +56,13 @@ GetResKeyFrameAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d18ResKeyFrameAnmDataf:
 .L_803DDB58:
 /* 803DDB58 003A7118  C0 43 00 0C */	lfs f2, 0xc(r3)
 /* 803DDB5C 003A711C  ED 41 18 28 */	fsubs f10, f1, f3
-/* 803DDB60 003A7120  C0 02 BF 34 */	lfs f0, lbl_8066C2B4@sda21(r2)
+/* 803DDB60 003A7120  C0 02 BF 34 */	lfs f0, float_8066C2B4@sda21(r2)
 /* 803DDB64 003A7124  ED 62 18 28 */	fsubs f11, f2, f3
 /* 803DDB68 003A7128  C0 43 00 10 */	lfs f2, 0x10(r3)
 /* 803DDB6C 003A712C  C0 A3 00 04 */	lfs f5, 4(r3)
-/* 803DDB70 003A7130  C0 22 BF 38 */	lfs f1, lbl_8066C2B8@sda21(r2)
+/* 803DDB70 003A7130  C0 22 BF 38 */	lfs f1, float_8066C2B8@sda21(r2)
 /* 803DDB74 003A7134  ED 00 58 30 */	fres f8, f11
-/* 803DDB78 003A7138  C0 82 BF 30 */	lfs f4, lbl_8066C2B0@sda21(r2)
+/* 803DDB78 003A7138  C0 82 BF 30 */	lfs f4, float_8066C2B0@sda21(r2)
 /* 803DDB7C 003A713C  C0 E3 00 14 */	lfs f7, 0x14(r3)
 /* 803DDB80 003A7140  C0 C3 00 08 */	lfs f6, 8(r3)
 /* 803DDB84 003A7144  11 28 40 2A */	ps_add f9, f8, f8
@@ -98,7 +98,7 @@ GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf:
 /* 803DDBEC 003A71AC  4B EE D3 D5 */	bl modf
 /* 803DDBF0 003A71B0  C8 41 00 18 */	lfd f2, 0x18(r1)
 /* 803DDBF4 003A71B4  FC 20 08 18 */	frsp f1, f1
-/* 803DDBF8 003A71B8  C0 02 BF 3C */	lfs f0, lbl_8066C2BC@sda21(r2)
+/* 803DDBF8 003A71B8  C0 02 BF 3C */	lfs f0, float_8066C2BC@sda21(r2)
 /* 803DDBFC 003A71BC  FC 40 10 18 */	frsp f2, f2
 /* 803DDC00 003A71C0  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 803DDC04 003A71C4  FC 00 10 1E */	fctiwz f0, f2
@@ -110,7 +110,7 @@ GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf:
 /* 803DDC1C 003A71DC  48 00 00 A4 */	b .L_803DDCC0
 .L_803DDC20:
 /* 803DDC20 003A71E0  38 03 00 01 */	addi r0, r3, 1
-/* 803DDC24 003A71E4  C0 02 BF 40 */	lfs f0, lbl_8066C2C0@sda21(r2)
+/* 803DDC24 003A71E4  C0 02 BF 40 */	lfs f0, float_8066C2C0@sda21(r2)
 /* 803DDC28 003A71E8  54 63 10 3A */	slwi r3, r3, 2
 /* 803DDC2C 003A71EC  54 00 10 3A */	slwi r0, r0, 2
 /* 803DDC30 003A71F0  7C 7F 18 2E */	lwzx r3, r31, r3
@@ -159,32 +159,32 @@ GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_8066C2B0
-lbl_8066C2B0:
+.global float_8066C2B0
+float_8066C2B0:
 	# ROM: 0x576110
 	.float 1.0
 
 
-.global lbl_8066C2B4
-lbl_8066C2B4:
+.global float_8066C2B4
+float_8066C2B4:
 	# ROM: 0x576114
 	.4byte 0x40000000
 
 
-.global lbl_8066C2B8
-lbl_8066C2B8:
+.global float_8066C2B8
+float_8066C2B8:
 	# ROM: 0x576118
 	.4byte 0x40400000
 
 
-.global lbl_8066C2BC
-lbl_8066C2BC:
+.global float_8066C2BC
+float_8066C2BC:
 	# ROM: 0x57611C
 	.4byte 0
 
 
-.global lbl_8066C2C0
-lbl_8066C2C0:
+.global float_8066C2C0
+float_8066C2C0:
 	# ROM: 0x576120
 	.4byte 0x47000000
 	.4byte 0

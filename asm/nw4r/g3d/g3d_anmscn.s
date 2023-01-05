@@ -43,7 +43,7 @@ MakeDiffuseLightObj__Q34nw4r3g3d24_unnamed_g3d_anmscn_cpp_FPQ34nw4r3g3d8LightObj
 /* 803E5DAC 003AF36C  C0 5F 00 0C */	lfs f2, 0xc(r31)
 /* 803E5DB0 003AF370  C0 7F 00 10 */	lfs f3, 0x10(r31)
 /* 803E5DB4 003AF374  48 01 77 7D */	bl InitLightPos__Q34nw4r3g3d8LightObjFfff
-/* 803E5DB8 003AF378  C0 22 C0 20 */	lfs f1, lbl_8066C3A0@sda21(r2)
+/* 803E5DB8 003AF378  C0 22 C0 20 */	lfs f1, float_8066C3A0@sda21(r2)
 /* 803E5DBC 003AF37C  7F C3 F3 78 */	mr r3, r30
 /* 803E5DC0 003AF380  38 80 00 00 */	li r4, 0
 /* 803E5DC4 003AF384  48 01 77 E9 */	bl InitLightSpot__Q34nw4r3g3d8LightObjFf9_GXSpotFn
@@ -52,7 +52,7 @@ MakeDiffuseLightObj__Q34nw4r3g3d24_unnamed_g3d_anmscn_cpp_FPQ34nw4r3g3d8LightObj
 /* 803E5DD0 003AF390  C0 5F 00 2C */	lfs f2, 0x2c(r31)
 /* 803E5DD4 003AF394  80 9F 00 24 */	lwz r4, 0x24(r31)
 /* 803E5DD8 003AF398  48 01 78 55 */	bl InitLightDistAttn__Q34nw4r3g3d8LightObjFff13_GXDistAttnFn
-/* 803E5DDC 003AF39C  C0 22 C0 20 */	lfs f1, lbl_8066C3A0@sda21(r2)
+/* 803E5DDC 003AF39C  C0 22 C0 20 */	lfs f1, float_8066C3A0@sda21(r2)
 /* 803E5DE0 003AF3A0  7F C3 F3 78 */	mr r3, r30
 /* 803E5DE4 003AF3A4  FC 40 08 90 */	fmr f2, f1
 /* 803E5DE8 003AF3A8  FC 60 08 90 */	fmr f3, f1
@@ -73,7 +73,7 @@ MakeDiffuseLightObj__Q34nw4r3g3d24_unnamed_g3d_anmscn_cpp_FPQ34nw4r3g3d8LightObj
 /* 803E5E20 003AF3E0  E0 3F 80 10 */	psq_l f1, 16(r31), 1, qr0
 /* 803E5E24 003AF3E4  F0 41 00 2C */	psq_st f2, 44(r1), 0, qr0
 /* 803E5E28 003AF3E8  10 40 08 28 */	ps_sub f2, f0, f1
-/* 803E5E2C 003AF3EC  C0 62 C0 24 */	lfs f3, lbl_8066C3A4@sda21(r2)
+/* 803E5E2C 003AF3EC  C0 62 C0 24 */	lfs f3, float_8066C3A4@sda21(r2)
 /* 803E5E30 003AF3F0  98 E1 00 0C */	stb r7, 0xc(r1)
 /* 803E5E34 003AF3F4  10 04 00 D8 */	ps_muls0 f0, f4, f3
 /* 803E5E38 003AF3F8  F0 41 80 34 */	psq_st f2, 52(r1), 1, qr0
@@ -89,17 +89,17 @@ MakeDiffuseLightObj__Q34nw4r3g3d24_unnamed_g3d_anmscn_cpp_FPQ34nw4r3g3d8LightObj
 /* 803E5E60 003AF420  C0 41 00 24 */	lfs f2, 0x24(r1)
 /* 803E5E64 003AF424  C0 61 00 28 */	lfs f3, 0x28(r1)
 /* 803E5E68 003AF428  48 01 76 C9 */	bl InitLightPos__Q34nw4r3g3d8LightObjFfff
-/* 803E5E6C 003AF42C  C0 42 C0 20 */	lfs f2, lbl_8066C3A0@sda21(r2)
+/* 803E5E6C 003AF42C  C0 42 C0 20 */	lfs f2, float_8066C3A0@sda21(r2)
 /* 803E5E70 003AF430  7F C3 F3 78 */	mr r3, r30
-/* 803E5E74 003AF434  C0 22 C0 28 */	lfs f1, lbl_8066C3A8@sda21(r2)
+/* 803E5E74 003AF434  C0 22 C0 28 */	lfs f1, float_8066C3A8@sda21(r2)
 /* 803E5E78 003AF438  FC 60 10 90 */	fmr f3, f2
 /* 803E5E7C 003AF43C  48 01 77 71 */	bl InitLightAttnA__Q34nw4r3g3d8LightObjFfff
-/* 803E5E80 003AF440  C0 42 C0 20 */	lfs f2, lbl_8066C3A0@sda21(r2)
+/* 803E5E80 003AF440  C0 42 C0 20 */	lfs f2, float_8066C3A0@sda21(r2)
 /* 803E5E84 003AF444  7F C3 F3 78 */	mr r3, r30
-/* 803E5E88 003AF448  C0 22 C0 28 */	lfs f1, lbl_8066C3A8@sda21(r2)
+/* 803E5E88 003AF448  C0 22 C0 28 */	lfs f1, float_8066C3A8@sda21(r2)
 /* 803E5E8C 003AF44C  FC 60 10 90 */	fmr f3, f2
 /* 803E5E90 003AF450  48 01 77 DD */	bl InitLightAttnK__Q34nw4r3g3d8LightObjFfff
-/* 803E5E94 003AF454  C0 22 C0 20 */	lfs f1, lbl_8066C3A0@sda21(r2)
+/* 803E5E94 003AF454  C0 22 C0 20 */	lfs f1, float_8066C3A0@sda21(r2)
 /* 803E5E98 003AF458  7F C3 F3 78 */	mr r3, r30
 /* 803E5E9C 003AF45C  FC 40 08 90 */	fmr f2, f1
 /* 803E5EA0 003AF460  FC 60 08 90 */	fmr f3, f1
@@ -656,18 +656,18 @@ __ct__Q34nw4r3g3d9AnmScnResFP12MEMAllocatorQ34nw4r3g3d9ResAnmScnPQ34nw4r3g3d17Am
 /* 803E6598 003AFB58  90 01 00 24 */	stw r0, 0x24(r1)
 /* 803E659C 003AFB5C  3C 00 43 30 */	lis r0, 0x4330
 /* 803E65A0 003AFB60  39 8C CE 00 */	addi r12, r12, lbl_8056CE00@l
-/* 803E65A4 003AFB64  C8 62 C0 30 */	lfd f3, lbl_8066C3B0@sda21(r2)
+/* 803E65A4 003AFB64  C8 62 C0 30 */	lfd f3, double_8066C3B0@sda21(r2)
 /* 803E65A8 003AFB68  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 803E65AC 003AFB6C  3B E0 00 00 */	li r31, 0
 /* 803E65B0 003AFB70  39 6D 9C 08 */	addi r11, r13, lbl_80665D88@sda21
-/* 803E65B4 003AFB74  C0 22 C0 20 */	lfs f1, lbl_8066C3A0@sda21(r2)
+/* 803E65B4 003AFB74  C0 22 C0 20 */	lfs f1, float_8066C3A0@sda21(r2)
 /* 803E65B8 003AFB78  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 803E65BC 003AFB7C  2C 06 00 00 */	cmpwi r6, 0
 /* 803E65C0 003AFB80  83 C5 00 00 */	lwz r30, 0(r5)
 /* 803E65C4 003AFB84  39 4A CD 70 */	addi r10, r10, lbl_8056CD70@l
 /* 803E65C8 003AFB88  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 803E65CC 003AFB8C  7C 7D 1B 78 */	mr r29, r3
-/* 803E65D0 003AFB90  C0 02 C0 28 */	lfs f0, lbl_8066C3A8@sda21(r2)
+/* 803E65D0 003AFB90  C0 02 C0 28 */	lfs f0, float_8066C3A8@sda21(r2)
 /* 803E65D4 003AFB94  93 E3 00 04 */	stw r31, 4(r3)
 /* 803E65D8 003AFB98  90 83 00 08 */	stw r4, 8(r3)
 /* 803E65DC 003AFB9C  91 83 00 00 */	stw r12, 0(r3)
@@ -773,7 +773,7 @@ GetFrame__Q34nw4r3g3d9AnmScnResCFv:
 
 .global SetUpdateRate__Q34nw4r3g3d9AnmScnResFf
 SetUpdateRate__Q34nw4r3g3d9AnmScnResFf:
-/* 803E6734 003AFCF4  C0 02 C0 20 */	lfs f0, lbl_8066C3A0@sda21(r2)
+/* 803E6734 003AFCF4  C0 02 C0 20 */	lfs f0, float_8066C3A0@sda21(r2)
 /* 803E6738 003AFCF8  D0 23 00 10 */	stfs f1, 0x10(r3)
 /* 803E673C 003AFCFC  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 803E6740 003AFD00  4C 82 00 20 */	bnelr 
@@ -792,7 +792,7 @@ GetUpdateRate__Q34nw4r3g3d9AnmScnResCFv:
 UpdateFrame__Q34nw4r3g3d9AnmScnResFv:
 /* 803E6760 003AFD20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803E6764 003AFD24  7C 08 02 A6 */	mflr r0
-/* 803E6768 003AFD28  C0 02 C0 20 */	lfs f0, lbl_8066C3A0@sda21(r2)
+/* 803E6768 003AFD28  C0 02 C0 20 */	lfs f0, float_8066C3A0@sda21(r2)
 /* 803E676C 003AFD2C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803E6770 003AFD30  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803E6774 003AFD34  7C 7F 1B 78 */	mr r31, r3
@@ -800,7 +800,7 @@ UpdateFrame__Q34nw4r3g3d9AnmScnResFv:
 /* 803E677C 003AFD3C  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 803E6780 003AFD40  41 82 00 44 */	beq .L_803E67C4
 /* 803E6784 003AFD44  C0 43 00 10 */	lfs f2, 0x10(r3)
-/* 803E6788 003AFD48  C0 2D 9C 10 */	lfs f1, lbl_80665D90@sda21(r13)
+/* 803E6788 003AFD48  C0 2D 9C 10 */	lfs f1, float_80665D90@sda21(r13)
 /* 803E678C 003AFD4C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 803E6790 003AFD50  EC 62 00 72 */	fmuls f3, f2, f1
 /* 803E6794 003AFD54  81 83 00 1C */	lwz r12, 0x1c(r3)
@@ -1169,7 +1169,7 @@ GetCamera__Q34nw4r3g3d9AnmScnResFQ34nw4r3g3d6CameraUl:
 /* 803E6C84 003B0244  48 00 00 30 */	b .L_803E6CB4
 .L_803E6C88:
 /* 803E6C88 003B0248  C0 43 00 30 */	lfs f2, 0x30(r3)
-/* 803E6C8C 003B024C  C0 22 C0 38 */	lfs f1, lbl_8066C3B8@sda21(r2)
+/* 803E6C8C 003B024C  C0 22 C0 38 */	lfs f1, float_8066C3B8@sda21(r2)
 /* 803E6C90 003B0250  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 803E6C94 003B0254  7F C3 F3 78 */	mr r3, r30
 /* 803E6C98 003B0258  EC 22 00 72 */	fmuls f1, f2, f1
@@ -1737,34 +1737,34 @@ lbl_8056CE00:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C3A0
-lbl_8066C3A0:
+.global float_8066C3A0
+float_8066C3A0:
 	# ROM: 0x576200
 	.4byte 0
 
 
-.global lbl_8066C3A4
-lbl_8066C3A4:
+.global float_8066C3A4
+float_8066C3A4:
 	# ROM: 0x576204
 	.4byte 0xD01502F9
 
 
-.global lbl_8066C3A8
-lbl_8066C3A8:
+.global float_8066C3A8
+float_8066C3A8:
 	# ROM: 0x576208
 	.float 1.0
 	.4byte 0
 
 
-.global lbl_8066C3B0
-lbl_8066C3B0:
+.global double_8066C3B0
+double_8066C3B0:
 	# ROM: 0x576210
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
-.global lbl_8066C3B8
-lbl_8066C3B8:
+.global float_8066C3B8
+float_8066C3B8:
 	# ROM: 0x576218
 	.float 0.5
 	.4byte 0

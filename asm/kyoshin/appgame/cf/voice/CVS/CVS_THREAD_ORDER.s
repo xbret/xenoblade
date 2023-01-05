@@ -438,9 +438,9 @@ play:
 /* 802B8FFC 002825BC  A0 1D 3F 28 */	lhz r0, 0x3f28(r29)
 /* 802B9000 002825C0  7C 1E 00 00 */	cmpw r30, r0
 /* 802B9004 002825C4  40 82 00 20 */	bne .L_802B9024
-/* 802B9008 002825C8  C0 22 B4 88 */	lfs f1, lbl_8066B808@sda21(r2)
+/* 802B9008 002825C8  C0 22 B4 88 */	lfs f1, float_8066B808@sda21(r2)
 /* 802B900C 002825CC  7F 64 DB 78 */	mr r4, r27
-/* 802B9010 002825D0  C0 42 B4 8C */	lfs f2, lbl_8066B80C@sda21(r2)
+/* 802B9010 002825D0  C0 42 B4 8C */	lfs f2, float_8066B80C@sda21(r2)
 /* 802B9014 002825D4  38 7D 3E 9C */	addi r3, r29, 0x3e9c
 /* 802B9018 002825D8  38 A0 00 14 */	li r5, 0x14
 /* 802B901C 002825DC  4B E0 58 7D */	bl func_800BE898
@@ -522,7 +522,7 @@ func_802B9064:
 /* 802B9118 002826D8  7D 89 03 A6 */	mtctr r12
 /* 802B911C 002826DC  4E 80 04 21 */	bctrl 
 /* 802B9120 002826E0  EC 3E 08 24 */	fdivs f1, f30, f1
-/* 802B9124 002826E4  C0 02 B4 98 */	lfs f0, lbl_8066B818@sda21(r2)
+/* 802B9124 002826E4  C0 02 B4 98 */	lfs f0, float_8066B818@sda21(r2)
 /* 802B9128 002826E8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 802B912C 002826EC  40 80 00 18 */	bge .L_802B9144
 /* 802B9130 002826F0  FC 00 F8 40 */	fcmpo cr0, f0, f31
@@ -531,7 +531,7 @@ func_802B9064:
 /* 802B913C 002826FC  3B E0 0A 2A */	li r31, 0xa2a
 /* 802B9140 00282700  48 00 00 2C */	b .L_802B916C
 .L_802B9144:
-/* 802B9144 00282704  C0 02 B4 9C */	lfs f0, lbl_8066B81C@sda21(r2)
+/* 802B9144 00282704  C0 02 B4 9C */	lfs f0, float_8066B81C@sda21(r2)
 /* 802B9148 00282708  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 802B914C 0028270C  40 80 00 18 */	bge .L_802B9164
 /* 802B9150 00282710  FC 00 F8 40 */	fcmpo cr0, f0, f31
@@ -678,14 +678,14 @@ __RTTI__cf_CVS_THREAD_ORDER:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_8066B808
-lbl_8066B808:
+.global float_8066B808
+float_8066B808:
 	# ROM: 0x575668
 	.float 1.0
 
 
-.global lbl_8066B80C
-lbl_8066B80C:
+.global float_8066B80C
+float_8066B80C:
 	# ROM: 0x57566C
 	.4byte 0x41F00000
 
@@ -695,14 +695,14 @@ lbl_8066B810:
 	.balign 4
 
 
-.global lbl_8066B818
-lbl_8066B818:
+.global float_8066B818
+float_8066B818:
 	# ROM: 0x575678
 	.float 1.0
 
 
-.global lbl_8066B81C
-lbl_8066B81C:
+.global float_8066B81C
+float_8066B81C:
 	# ROM: 0x57567C
 	.float 0.5
 

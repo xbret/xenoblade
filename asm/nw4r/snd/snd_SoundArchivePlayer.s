@@ -2377,9 +2377,9 @@ PrepareSeqImpl__Q34nw4r3snd18SoundArchivePlayerFPQ44nw4r3snd6detail8SeqSoundPCQ4
 /* 8041FB8C 003E914C  90 01 00 28 */	stw r0, 0x28(r1)
 /* 8041FB90 003E9150  7F 63 DB 78 */	mr r3, r27
 /* 8041FB94 003E9154  6C 80 80 00 */	xoris r0, r4, 0x8000
-/* 8041FB98 003E9158  C8 42 C4 D0 */	lfd f2, lbl_8066C850@sda21(r2)
+/* 8041FB98 003E9158  C8 42 C4 D0 */	lfd f2, double_8066C850@sda21(r2)
 /* 8041FB9C 003E915C  90 01 00 2C */	stw r0, 0x2c(r1)
-/* 8041FBA0 003E9160  C0 02 C4 C8 */	lfs f0, lbl_8066C848@sda21(r2)
+/* 8041FBA0 003E9160  C0 02 C4 C8 */	lfs f0, float_8066C848@sda21(r2)
 /* 8041FBA4 003E9164  C8 21 00 28 */	lfd f1, 0x28(r1)
 /* 8041FBA8 003E9168  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8041FBAC 003E916C  EC 21 00 24 */	fdivs f1, f1, f0
@@ -2562,9 +2562,9 @@ PrepareStrmImpl__Q34nw4r3snd18SoundArchivePlayerFPQ44nw4r3snd6detail9StrmSoundPC
 /* 8041FE04 003E93C4  90 01 00 08 */	stw r0, 8(r1)
 /* 8041FE08 003E93C8  7F 63 DB 78 */	mr r3, r27
 /* 8041FE0C 003E93CC  6C 80 80 00 */	xoris r0, r4, 0x8000
-/* 8041FE10 003E93D0  C8 42 C4 D0 */	lfd f2, lbl_8066C850@sda21(r2)
+/* 8041FE10 003E93D0  C8 42 C4 D0 */	lfd f2, double_8066C850@sda21(r2)
 /* 8041FE14 003E93D4  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8041FE18 003E93D8  C0 02 C4 C8 */	lfs f0, lbl_8066C848@sda21(r2)
+/* 8041FE18 003E93D8  C0 02 C4 C8 */	lfs f0, float_8066C848@sda21(r2)
 /* 8041FE1C 003E93DC  C8 21 00 08 */	lfd f1, 8(r1)
 /* 8041FE20 003E93E0  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8041FE24 003E93E4  EC 21 00 24 */	fdivs f1, f1, f0
@@ -2648,9 +2648,9 @@ PrepareWaveSoundImpl__Q34nw4r3snd18SoundArchivePlayerFPQ44nw4r3snd6detail9WaveSo
 /* 8041FF2C 003E94EC  90 01 00 08 */	stw r0, 8(r1)
 /* 8041FF30 003E94F0  7F 63 DB 78 */	mr r3, r27
 /* 8041FF34 003E94F4  6C 80 80 00 */	xoris r0, r4, 0x8000
-/* 8041FF38 003E94F8  C8 42 C4 D0 */	lfd f2, lbl_8066C850@sda21(r2)
+/* 8041FF38 003E94F8  C8 42 C4 D0 */	lfd f2, double_8066C850@sda21(r2)
 /* 8041FF3C 003E94FC  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8041FF40 003E9500  C0 02 C4 C8 */	lfs f0, lbl_8066C848@sda21(r2)
+/* 8041FF40 003E9500  C0 02 C4 C8 */	lfs f0, float_8066C848@sda21(r2)
 /* 8041FF44 003E9504  C8 21 00 08 */	lfd f1, 8(r1)
 /* 8041FF48 003E9508  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8041FF4C 003E950C  EC 21 00 24 */	fdivs f1, f1, f0
@@ -2997,15 +2997,15 @@ lbl_8056E500:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C848
-lbl_8066C848:
+.global float_8066C848
+float_8066C848:
 	# ROM: 0x5766A8
 	.4byte 0x42FE0000
 	.4byte 0
 
 
-.global lbl_8066C850
-lbl_8066C850:
+.global double_8066C850
+double_8066C850:
 	# ROM: 0x5766B0
 	.4byte 0x43300000
 	.4byte 0x80000000

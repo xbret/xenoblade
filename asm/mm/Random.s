@@ -113,10 +113,10 @@ func_80435FA4:
 /* 8043600C 003FF5CC  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80436010 003FF5D0  41 82 00 20 */	beq .L_80436030
 /* 80436014 003FF5D4  FC 20 F8 18 */	frsp f1, f31
-/* 80436018 003FF5D8  C0 02 C6 94 */	lfs f0, lbl_8066CA14@sda21(r2)
+/* 80436018 003FF5D8  C0 02 C6 94 */	lfs f0, float_8066CA14@sda21(r2)
 /* 8043601C 003FF5DC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80436020 003FF5E0  41 81 00 10 */	bgt .L_80436030
-/* 80436024 003FF5E4  C0 02 C6 98 */	lfs f0, lbl_8066CA18@sda21(r2)
+/* 80436024 003FF5E4  C0 02 C6 98 */	lfs f0, float_8066CA18@sda21(r2)
 /* 80436028 003FF5E8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8043602C 003FF5EC  40 80 00 08 */	bge .L_80436034
 .L_80436030:
@@ -136,13 +136,13 @@ func_80435FA4:
 .global sinit_80436058
 sinit_80436058:
 /* 80436058 003FF618  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 8043605C 003FF61C  C0 42 C6 A0 */	lfs f2, lbl_8066CA20@sda21(r2)
+/* 8043605C 003FF61C  C0 42 C6 A0 */	lfs f2, float_8066CA20@sda21(r2)
 /* 80436060 003FF620  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80436064 003FF624  C0 02 C6 A8 */	lfs f0, lbl_8066CA28@sda21(r2)
+/* 80436064 003FF624  C0 02 C6 A8 */	lfs f0, float_8066CA28@sda21(r2)
 /* 80436068 003FF628  93 C1 00 08 */	stw r30, 8(r1)
-/* 8043606C 003FF62C  3F C0 80 66 */	lis r30, lbl_80659E40@ha
-/* 80436070 003FF630  3B DE 9E 40 */	addi r30, r30, lbl_80659E40@l
-/* 80436074 003FF634  C0 22 C6 A4 */	lfs f1, lbl_8066CA24@sda21(r2)
+/* 8043606C 003FF62C  3F C0 80 66 */	lis r30, float_80659E40@ha
+/* 80436070 003FF630  3B DE 9E 40 */	addi r30, r30, float_80659E40@l
+/* 80436074 003FF634  C0 22 C6 A4 */	lfs f1, float_8066CA24@sda21(r2)
 /* 80436078 003FF638  3B FE 00 00 */	addi r31, r30, 0
 /* 8043607C 003FF63C  D0 5E 00 00 */	stfs f2, 0(r30)
 /* 80436080 003FF640  39 9E 00 0C */	addi r12, r30, 0xc
@@ -198,33 +198,33 @@ sinit_80436058:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066CA14
-lbl_8066CA14:
+.global float_8066CA14
+float_8066CA14:
 	# ROM: 0x576874
 	.4byte 0x56B5E621
 
 
-.global lbl_8066CA18
-lbl_8066CA18:
+.global float_8066CA18
+float_8066CA18:
 	# ROM: 0x576878
 	.4byte 0xD6B5E621
 	.4byte 0
 
 
-.global lbl_8066CA20
-lbl_8066CA20:
+.global float_8066CA20
+float_8066CA20:
 	# ROM: 0x576880
 	.float 1.0
 
 
-.global lbl_8066CA24
-lbl_8066CA24:
+.global float_8066CA24
+float_8066CA24:
 	# ROM: 0x576884
 	.float 0.5
 
 
-.global lbl_8066CA28
-lbl_8066CA28:
+.global float_8066CA28
+float_8066CA28:
 	# ROM: 0x576888
 	.4byte 0
 	.4byte 0

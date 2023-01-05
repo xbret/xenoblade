@@ -6,7 +6,7 @@
 .global AXFXDelayExpGetMemSizeDpl2
 AXFXDelayExpGetMemSizeDpl2:
 /* 802D70C0 002A0680  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 802D70C4 002A0684  C0 22 BA B8 */	lfs f1, lbl_8066BE38@sda21(r2)
+/* 802D70C4 002A0684  C0 22 BA B8 */	lfs f1, float_8066BE38@sda21(r2)
 /* 802D70C8 002A0688  C0 03 00 40 */	lfs f0, 0x40(r3)
 /* 802D70CC 002A068C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 802D70D0 002A0690  FC 00 00 1E */	fctiwz f0, f0
@@ -37,7 +37,7 @@ AXFXDelayExpInitDpl2:
 .L_802D712C:
 /* 802D712C 002A06EC  C0 3E 00 40 */	lfs f1, 0x40(r30)
 /* 802D7130 002A06F0  3B A0 00 01 */	li r29, 1
-/* 802D7134 002A06F4  C0 02 BA BC */	lfs f0, lbl_8066BE3C@sda21(r2)
+/* 802D7134 002A06F4  C0 02 BA BC */	lfs f0, float_8066BE3C@sda21(r2)
 /* 802D7138 002A06F8  93 BE 00 3C */	stw r29, 0x3c(r30)
 /* 802D713C 002A06FC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 802D7140 002A0700  4C 40 13 82 */	cror 2, 0, 2
@@ -69,7 +69,7 @@ AXFXDelayExpInitDpl2:
 /* 802D71A0 002A0760  38 60 00 00 */	li r3, 0
 /* 802D71A4 002A0764  48 00 01 58 */	b .L_802D72FC
 .L_802D71A8:
-/* 802D71A8 002A0768  C0 02 BA B8 */	lfs f0, lbl_8066BE38@sda21(r2)
+/* 802D71A8 002A0768  C0 02 BA B8 */	lfs f0, float_8066BE38@sda21(r2)
 /* 802D71AC 002A076C  EC 20 00 72 */	fmuls f1, f0, f1
 /* 802D71B0 002A0770  4B FE 2E 7D */	bl __cvt_fp2unsigned
 /* 802D71B4 002A0774  2C 03 00 00 */	cmpwi r3, 0
@@ -523,10 +523,10 @@ __InitParams:
 /* 802D7804 002A0DC4  48 00 01 64 */	b .L_802D7968
 .L_802D7808:
 /* 802D7808 002A0DC8  C0 03 00 48 */	lfs f0, 0x48(r3)
-/* 802D780C 002A0DCC  C0 42 BA BC */	lfs f2, lbl_8066BE3C@sda21(r2)
+/* 802D780C 002A0DCC  C0 42 BA BC */	lfs f2, float_8066BE3C@sda21(r2)
 /* 802D7810 002A0DD0  FC 00 10 40 */	fcmpo cr0, f0, f2
 /* 802D7814 002A0DD4  41 80 00 14 */	blt .L_802D7828
-/* 802D7818 002A0DD8  C0 22 BA C0 */	lfs f1, lbl_8066BE40@sda21(r2)
+/* 802D7818 002A0DD8  C0 22 BA C0 */	lfs f1, float_8066BE40@sda21(r2)
 /* 802D781C 002A0DDC  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 802D7820 002A0DE0  4C 41 13 82 */	cror 2, 1, 2
 /* 802D7824 002A0DE4  40 82 00 0C */	bne .L_802D7830
@@ -561,7 +561,7 @@ __InitParams:
 /* 802D787C 002A0E3C  38 60 00 00 */	li r3, 0
 /* 802D7880 002A0E40  48 00 00 E8 */	b .L_802D7968
 .L_802D7884:
-/* 802D7884 002A0E44  C0 02 BA B8 */	lfs f0, lbl_8066BE38@sda21(r2)
+/* 802D7884 002A0E44  C0 02 BA B8 */	lfs f0, float_8066BE38@sda21(r2)
 /* 802D7888 002A0E48  EC 20 00 F2 */	fmuls f1, f0, f3
 /* 802D788C 002A0E4C  4B FE 27 A1 */	bl __cvt_fp2unsigned
 /* 802D7890 002A0E50  2C 03 00 00 */	cmpwi r3, 0
@@ -570,13 +570,13 @@ __InitParams:
 /* 802D789C 002A0E5C  38 00 00 01 */	li r0, 1
 /* 802D78A0 002A0E60  90 1C 00 14 */	stw r0, 0x14(r28)
 .L_802D78A4:
-/* 802D78A4 002A0E64  C0 22 BA C4 */	lfs f1, lbl_8066BE44@sda21(r2)
+/* 802D78A4 002A0E64  C0 22 BA C4 */	lfs f1, float_8066BE44@sda21(r2)
 /* 802D78A8 002A0E68  38 00 00 00 */	li r0, 0
 /* 802D78AC 002A0E6C  C0 1C 00 48 */	lfs f0, 0x48(r28)
-/* 802D78B0 002A0E70  C0 42 BA C0 */	lfs f2, lbl_8066BE40@sda21(r2)
+/* 802D78B0 002A0E70  C0 42 BA C0 */	lfs f2, float_8066BE40@sda21(r2)
 /* 802D78B4 002A0E74  EC 61 00 32 */	fmuls f3, f1, f0
 /* 802D78B8 002A0E78  C0 3C 00 4C */	lfs f1, 0x4c(r28)
-/* 802D78BC 002A0E7C  C0 02 BA C8 */	lfs f0, lbl_8066BE48@sda21(r2)
+/* 802D78BC 002A0E7C  C0 02 BA C8 */	lfs f0, float_8066BE48@sda21(r2)
 /* 802D78C0 002A0E80  EC 42 08 28 */	fsubs f2, f2, f1
 /* 802D78C4 002A0E84  90 1C 00 10 */	stw r0, 0x10(r28)
 /* 802D78C8 002A0E88  FC 20 18 1E */	fctiwz f1, f3
@@ -587,7 +587,7 @@ __InitParams:
 /* 802D78DC 002A0E9C  40 81 00 08 */	ble .L_802D78E4
 /* 802D78E0 002A0EA0  FC 40 00 90 */	fmr f2, f0
 .L_802D78E4:
-/* 802D78E4 002A0EA4  C0 02 BA C4 */	lfs f0, lbl_8066BE44@sda21(r2)
+/* 802D78E4 002A0EA4  C0 02 BA C4 */	lfs f0, float_8066BE44@sda21(r2)
 /* 802D78E8 002A0EA8  7F 9E E3 78 */	mr r30, r28
 /* 802D78EC 002A0EAC  3B A0 00 00 */	li r29, 0
 /* 802D78F0 002A0EB0  3B E0 00 00 */	li r31, 0
@@ -607,7 +607,7 @@ __InitParams:
 /* 802D7924 002A0EE4  28 1D 00 04 */	cmplwi r29, 4
 /* 802D7928 002A0EE8  3B DE 00 04 */	addi r30, r30, 4
 /* 802D792C 002A0EEC  41 80 FF DC */	blt .L_802D7908
-/* 802D7930 002A0EF0  C0 42 BA C4 */	lfs f2, lbl_8066BE44@sda21(r2)
+/* 802D7930 002A0EF0  C0 42 BA C4 */	lfs f2, float_8066BE44@sda21(r2)
 /* 802D7934 002A0EF4  38 60 00 01 */	li r3, 1
 /* 802D7938 002A0EF8  C0 3C 00 58 */	lfs f1, 0x58(r28)
 /* 802D793C 002A0EFC  C0 1C 00 5C */	lfs f0, 0x5c(r28)
@@ -632,31 +632,31 @@ __InitParams:
 /* 802D7984 002A0F44  4E 80 00 20 */	blr 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-.global lbl_8066BE38
-lbl_8066BE38:
+.global float_8066BE38
+float_8066BE38:
 	# ROM: 0x575C98
 	.4byte 0x42000000
 
 
-.global lbl_8066BE3C
-lbl_8066BE3C:
+.global float_8066BE3C
+float_8066BE3C:
 	# ROM: 0x575C9C
 	.4byte 0
 
 
-.global lbl_8066BE40
-lbl_8066BE40:
+.global float_8066BE40
+float_8066BE40:
 	# ROM: 0x575CA0
 	.float 1.0
 
 
-.global lbl_8066BE44
-lbl_8066BE44:
+.global float_8066BE44
+float_8066BE44:
 	# ROM: 0x575CA4
 	.4byte 0x43000000
 
 
-.global lbl_8066BE48
-lbl_8066BE48:
+.global float_8066BE48
+float_8066BE48:
 	.4byte 0x3F733333
 	.4byte 0

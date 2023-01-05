@@ -22,7 +22,7 @@ func_802944D8:
 /* 80294510 0025DAD0  48 1A 30 A5 */	bl func_804375B4
 /* 80294514 0025DAD4  7C 64 1B 78 */	mr r4, r3
 /* 80294518 0025DAD8  38 60 00 E0 */	li r3, 0xe0
-/* 8029451C 0025DADC  48 1A 05 41 */	bl func_80434A5C
+/* 8029451C 0025DADC  48 1A 05 41 */	bl mm_malloc
 /* 80294520 0025DAE0  2C 03 00 00 */	cmpwi r3, 0
 /* 80294524 0025DAE4  7C 7C 1B 78 */	mr r28, r3
 /* 80294528 0025DAE8  41 82 00 C4 */	beq .L_802945EC
@@ -244,28 +244,28 @@ func_8029481C:
 
 .global func_80294824
 func_80294824:
-/* 80294824 0025DDE4  C0 02 B0 C8 */	lfs f0, lbl_8066B448@sda21(r2)
+/* 80294824 0025DDE4  C0 02 B0 C8 */	lfs f0, float_8066B448@sda21(r2)
 /* 80294828 0025DDE8  D0 03 00 00 */	stfs f0, 0(r3)
 /* 8029482C 0025DDEC  D0 03 00 04 */	stfs f0, 4(r3)
 /* 80294830 0025DDF0  4E 80 00 20 */	blr 
 
 .global func_80294834
 func_80294834:
-/* 80294834 0025DDF4  C0 02 B0 C8 */	lfs f0, lbl_8066B448@sda21(r2)
+/* 80294834 0025DDF4  C0 02 B0 C8 */	lfs f0, float_8066B448@sda21(r2)
 /* 80294838 0025DDF8  D0 03 00 00 */	stfs f0, 0(r3)
 /* 8029483C 0025DDFC  D0 03 00 04 */	stfs f0, 4(r3)
 /* 80294840 0025DE00  4E 80 00 20 */	blr 
 
 .global func_80294844
 func_80294844:
-/* 80294844 0025DE04  C0 42 B0 CC */	lfs f2, lbl_8066B44C@sda21(r2)
-/* 80294848 0025DE08  C0 02 B0 C8 */	lfs f0, lbl_8066B448@sda21(r2)
+/* 80294844 0025DE04  C0 42 B0 CC */	lfs f2, float_8066B44C@sda21(r2)
+/* 80294848 0025DE08  C0 02 B0 C8 */	lfs f0, float_8066B448@sda21(r2)
 /* 8029484C 0025DE0C  FC 02 08 40 */	fcmpo cr0, f2, f1
 /* 80294850 0025DE10  D0 03 00 00 */	stfs f0, 0(r3)
 /* 80294854 0025DE14  D0 03 00 04 */	stfs f0, 4(r3)
 /* 80294858 0025DE18  4C 80 00 20 */	bgelr 
 /* 8029485C 0025DE1C  EC 21 10 28 */	fsubs f1, f1, f2
-/* 80294860 0025DE20  C0 02 B0 D0 */	lfs f0, lbl_8066B450@sda21(r2)
+/* 80294860 0025DE20  C0 02 B0 D0 */	lfs f0, float_8066B450@sda21(r2)
 /* 80294864 0025DE24  EC 00 10 78 */	fmsubs f0, f0, f1, f2
 /* 80294868 0025DE28  D0 03 00 04 */	stfs f0, 4(r3)
 /* 8029486C 0025DE2C  D0 03 00 00 */	stfs f0, 0(r3)
@@ -367,20 +367,20 @@ __RTTI__CSysWinSave:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066B448
-lbl_8066B448:
+.global float_8066B448
+float_8066B448:
 	# ROM: 0x5752A8
 	.4byte 0
 
 
-.global lbl_8066B44C
-lbl_8066B44C:
+.global float_8066B44C
+float_8066B44C:
 	# ROM: 0x5752AC
 	.float 1.0
 
 
-.global lbl_8066B450
-lbl_8066B450:
+.global float_8066B450
+float_8066B450:
 	# ROM: 0x5752B0
 	.4byte 0x40000000
 	.4byte 0

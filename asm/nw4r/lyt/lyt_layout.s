@@ -208,7 +208,7 @@ IsIncludeAnimationGroupRef__Q34nw4r3lyt24_unnamed_lyt_layout_cpp_FPQ34nw4r3lyt14
 .global __ct__Q34nw4r3lyt6LayoutFv
 __ct__Q34nw4r3lyt6LayoutFv:
 /* 803FFEE8 003C94A8  38 00 00 00 */	li r0, 0
-/* 803FFEEC 003C94AC  C0 02 C1 D8 */	lfs f0, lbl_8066C558@sda21(r2)
+/* 803FFEEC 003C94AC  C0 02 C1 D8 */	lfs f0, float_8066C558@sda21(r2)
 /* 803FFEF0 003C94B0  3C 80 80 57 */	lis r4, lbl_8056D258@ha
 /* 803FFEF4 003C94B4  90 03 00 08 */	stw r0, 8(r3)
 /* 803FFEF8 003C94B8  38 A3 00 08 */	addi r5, r3, 8
@@ -922,7 +922,7 @@ GetLayoutRect__Q34nw4r3lyt6LayoutCFv:
 /* 8040086C 003C9E2C  C0 84 00 1C */	lfs f4, 0x1c(r4)
 /* 80400870 003C9E30  C0 24 00 18 */	lfs f1, 0x18(r4)
 /* 80400874 003C9E34  FC 60 20 50 */	fneg f3, f4
-/* 80400878 003C9E38  C0 42 C1 DC */	lfs f2, lbl_8066C55C@sda21(r2)
+/* 80400878 003C9E38  C0 42 C1 DC */	lfs f2, float_8066C55C@sda21(r2)
 /* 8040087C 003C9E3C  FC 00 08 50 */	fneg f0, f1
 /* 80400880 003C9E40  EC A1 00 B2 */	fmuls f5, f1, f2
 /* 80400884 003C9E44  EC 63 00 B2 */	fmuls f3, f3, f2
@@ -1245,13 +1245,13 @@ lbl_8056D258:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C558
-lbl_8066C558:
+.global float_8066C558
+float_8066C558:
 	# ROM: 0x5763B8
 	.4byte 0
 
 
-.global lbl_8066C55C
-lbl_8066C55C:
+.global float_8066C55C
+float_8066C55C:
 	# ROM: 0x5763BC
 	.float 0.5

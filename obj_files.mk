@@ -5,6 +5,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/main_1.o \
 	$(BUILD_DIR)/src/kyoshin/appgame/main.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/main_2.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8003A53C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGame.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskGameCf.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGameEff.o \
@@ -94,6 +95,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuLandTelop.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CBattleState.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuGetItem.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8014A864.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CAIAction.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CArtsSet.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CArtsParam.o \
@@ -840,27 +842,27 @@ CRIWARE_O_FILES :=\
 NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/db/db_console.o \
 	$(BUILD_DIR)/asm/nw4r/db/db_assert.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_rescommon.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resdict.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resfile.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resmdl.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resshp.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_restev.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resmat.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resvtx.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_restex.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resnode.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanm.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmclr.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmtexpat.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmtexsrt.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmchr.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_reslightset.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmamblight.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmlight.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmfog.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmcamera.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_resanmscn.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_rescommon.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resdict.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resfile.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resmdl.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resshp.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_restev.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resmat.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resvtx.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_restex.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resnode.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resanm.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resanmclr.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resanmtexpat.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resanmtexsrt.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resanmchr.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_reslightset.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resanmamblight.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resanmlight.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resanmfog.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resanmcamera.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/res/g3d_resanmscn.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_transform.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmvis.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmclr.o \
@@ -871,8 +873,8 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmscn.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_obj.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_anmobj.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_gpu.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_cpu.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/platform/g3d_gpu.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/platform/g3d_cpu.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_state.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_draw1mat1shp.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_calcview.o \
@@ -881,10 +883,10 @@ NW4R_O_FILES :=\
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_calcworld.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_draw.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_camera.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_basic.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_maya.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_xsi.o \
-	$(BUILD_DIR)/asm/nw4r/g3d/g3d_3dsmax.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/dcc/g3d_basic.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/dcc/g3d_maya.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/dcc/g3d_xsi.o \
+	$(BUILD_DIR)/asm/nw4r/g3d/dcc/g3d_3dsmax.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_scnobj.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_scnroot.o \
 	$(BUILD_DIR)/asm/nw4r/g3d/g3d_scnmdlsmpl.o \
@@ -992,8 +994,9 @@ NW4R_O_FILES :=\
 
 MM_O_FILES :=\
 	$(BUILD_DIR)/asm/mm/code_80432678.o \
-	$(BUILD_DIR)/asm/mm/code_80433300.o \
+	$(BUILD_DIR)/asm/mm/MemManager.o \
 	$(BUILD_DIR)/asm/mm/Operators.o \
+	$(BUILD_DIR)/asm/mm/code_80434F94.o \
 	$(BUILD_DIR)/asm/mm/MTRand.o \
 	$(BUILD_DIR)/asm/mm/Globals1.o \
 	$(BUILD_DIR)/asm/mm/code_80435D28.o \
@@ -1019,7 +1022,7 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/CViewRoot.o \
 	$(BUILD_DIR)/asm/monolithlib/work/CWorkControl.o \
 	$(BUILD_DIR)/asm/monolithlib/work/CWorkFlowSetup.o \
-	$(BUILD_DIR)/asm/monolithlib/work/CWorkRootThread.o \
+	$(BUILD_DIR)/asm/monolithlib/work/CWorkRoot.o \
 	$(BUILD_DIR)/asm/monolithlib/work/CWorkSystem.o \
 	$(BUILD_DIR)/asm/monolithlib/work/CWorkSystemMem.o \
 	$(BUILD_DIR)/asm/monolithlib/CProcess.o \
@@ -1142,6 +1145,7 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/CMdlAnmEye.o \
 	$(BUILD_DIR)/asm/monolithlib/CMdlLook.o \
 	$(BUILD_DIR)/asm/monolithlib/CMdlDynamics.o \
+	$(BUILD_DIR)/asm/monolithlib/code_804EE0F4.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804F0258.o \
 	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskSaveBanner.o \
 	$(BUILD_DIR)/asm/monolithlib/nand/CNBanner.o

@@ -14,7 +14,7 @@ PlayPolicy_Loop__Q24nw4r3g3dFfff:
 /* 803E73C0 003B0980  90 01 00 24 */	stw r0, 0x24(r1)
 /* 803E73C4 003B0984  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 803E73C8 003B0988  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
-/* 803E73CC 003B098C  C0 02 C0 40 */	lfs f0, lbl_8066C3C0@sda21(r2)
+/* 803E73CC 003B098C  C0 02 C0 40 */	lfs f0, float_8066C3C0@sda21(r2)
 /* 803E73D0 003B0990  EF E2 08 28 */	fsubs f31, f2, f1
 /* 803E73D4 003B0994  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 803E73D8 003B0998  4C 41 13 82 */	cror 2, 1, 2
@@ -29,7 +29,7 @@ PlayPolicy_Loop__Q24nw4r3g3dFfff:
 /* 803E73F8 003B09B8  EC 23 F8 2A */	fadds f1, f3, f31
 /* 803E73FC 003B09BC  4B EE 3E 11 */	bl fmod
 /* 803E7400 003B09C0  FC 20 08 18 */	frsp f1, f1
-/* 803E7404 003B09C4  C0 02 C0 40 */	lfs f0, lbl_8066C3C0@sda21(r2)
+/* 803E7404 003B09C4  C0 02 C0 40 */	lfs f0, float_8066C3C0@sda21(r2)
 /* 803E7408 003B09C8  FC 01 F8 2E */	fsel f0, f1, f0, f31
 /* 803E740C 003B09CC  EC 21 00 2A */	fadds f1, f1, f0
 .L_803E7410:
@@ -82,16 +82,16 @@ lbl_80665D88:
 	.4byte PlayPolicy_Loop__Q24nw4r3g3dFfff
 
 
-.global lbl_80665D90
-lbl_80665D90:
+.global float_80665D90
+float_80665D90:
 	# ROM: 0x571970
 	.float 1.0
 	.4byte 0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C3C0
-lbl_8066C3C0:
+.global float_8066C3C0
+float_8066C3C0:
 	# ROM: 0x576220
 	.4byte 0
 	.4byte 0

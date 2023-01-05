@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8011C44C
-func_8011C44C:
+.global __ct__CMenuQuestLog
+__ct__CMenuQuestLog:
 /* 8011C44C 000E5A0C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8011C450 000E5A10  7C 08 02 A6 */	mflr r0
 /* 8011C454 000E5A14  90 01 00 24 */	stw r0, 0x24(r1)
@@ -628,12 +628,12 @@ func_8011CCE0:
 /* 8011CD10 000E62D0  48 31 A8 A5 */	bl func_804375B4
 /* 8011CD14 000E62D4  7C 64 1B 78 */	mr r4, r3
 /* 8011CD18 000E62D8  38 60 22 88 */	li r3, 0x2288
-/* 8011CD1C 000E62DC  48 31 7D 41 */	bl func_80434A5C
+/* 8011CD1C 000E62DC  48 31 7D 41 */	bl mm_malloc
 /* 8011CD20 000E62E0  2C 03 00 00 */	cmpwi r3, 0
 /* 8011CD24 000E62E4  41 82 00 10 */	beq .L_8011CD34
 /* 8011CD28 000E62E8  7F C4 F3 78 */	mr r4, r30
 /* 8011CD2C 000E62EC  7F E5 FB 78 */	mr r5, r31
-/* 8011CD30 000E62F0  4B FF F7 1D */	bl func_8011C44C
+/* 8011CD30 000E62F0  4B FF F7 1D */	bl __ct__CMenuQuestLog
 .L_8011CD34:
 /* 8011CD34 000E62F4  90 6D A7 38 */	stw r3, lbl_806668B8@sda21(r13)
 /* 8011CD38 000E62F8  7F A4 EB 78 */	mr r4, r29
@@ -1413,7 +1413,7 @@ lbl_8000BA8C:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-	.4byte func_8011C44C
+	.4byte __ct__CMenuQuestLog
 	.4byte 0x000000E0
 	.4byte lbl_8000B8D0
 	.4byte func_8011C52C

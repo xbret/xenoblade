@@ -201,7 +201,7 @@ func_80244538:
 func_80244558:
 /* 80244558 0020DB18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8024455C 0020DB1C  7C 08 02 A6 */	mflr r0
-/* 80244560 0020DB20  C0 22 AC 88 */	lfs f1, lbl_8066B008@sda21(r2)
+/* 80244560 0020DB20  C0 22 AC 88 */	lfs f1, float_8066B008@sda21(r2)
 /* 80244564 0020DB24  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80244568 0020DB28  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8024456C 0020DB2C  7C 7F 1B 78 */	mr r31, r3
@@ -224,7 +224,7 @@ func_80244558:
 func_802445A4:
 /* 802445A4 0020DB64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802445A8 0020DB68  7C 08 02 A6 */	mflr r0
-/* 802445AC 0020DB6C  C0 22 AC 88 */	lfs f1, lbl_8066B008@sda21(r2)
+/* 802445AC 0020DB6C  C0 22 AC 88 */	lfs f1, float_8066B008@sda21(r2)
 /* 802445B0 0020DB70  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802445B4 0020DB74  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802445B8 0020DB78  7C 7F 1B 78 */	mr r31, r3
@@ -937,8 +937,8 @@ __RTTI__CFade:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066B008
-lbl_8066B008:
+.global float_8066B008
+float_8066B008:
 	# ROM: 0x574E68
 	.float 1.0
 	

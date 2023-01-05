@@ -21,7 +21,7 @@ CalcVtx__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjShpPPQ34nw4r3g3d13ResV
 /* 803FE0F0 003C76B0  7C 8E C0 50 */	subf r4, r14, r24
 /* 803FE0F4 003C76B4  7C 77 1B 78 */	mr r23, r3
 /* 803FE0F8 003C76B8  38 A4 00 0F */	addi r5, r4, 0xf
-/* 803FE0FC 003C76BC  C3 E2 C1 B0 */	lfs f31, lbl_8066C530@sda21(r2)
+/* 803FE0FC 003C76BC  C3 E2 C1 B0 */	lfs f31, float_8066C530@sda21(r2)
 /* 803FE100 003C76C0  7C A0 26 70 */	srawi r0, r5, 4
 /* 803FE104 003C76C4  54 94 00 00 */	rlwinm r20, r4, 0, 0, 0
 /* 803FE108 003C76C8  7C 60 01 94 */	addze r3, r0
@@ -577,8 +577,8 @@ CalcVtx__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjShpPPQ34nw4r3g3d13ResV
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_8066C530
-lbl_8066C530:
+.global float_8066C530
+float_8066C530:
 	# ROM: 0x576390
 	.4byte 0
 	.4byte 0

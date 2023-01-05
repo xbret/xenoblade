@@ -370,7 +370,7 @@ SetGlbSettings__Q34nw4r3g3d7ScnRootFv:
 /* 803F6138 003BF6F8  41 80 FF D0 */	blt .L_803F6108
 /* 803F613C 003BF6FC  80 A1 00 28 */	lwz r5, 0x28(r1)
 /* 803F6140 003BF700  38 00 00 08 */	li r0, 8
-/* 803F6144 003BF704  C3 E2 C1 60 */	lfs f31, lbl_8066C4E0@sda21(r2)
+/* 803F6144 003BF704  C3 E2 C1 60 */	lfs f31, float_8066C4E0@sda21(r2)
 /* 803F6148 003BF708  3B 7C 22 78 */	addi r27, r28, 0x2278
 /* 803F614C 003BF70C  80 65 00 A8 */	lwz r3, 0xa8(r5)
 /* 803F6150 003BF710  3B E0 00 00 */	li r31, 0
@@ -2013,8 +2013,8 @@ lbl_80665DBC:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C4E0
-lbl_8066C4E0:
+.global float_8066C4E0
+float_8066C4E0:
 	# ROM: 0x576340
 	.float 0.5
 	.4byte 0

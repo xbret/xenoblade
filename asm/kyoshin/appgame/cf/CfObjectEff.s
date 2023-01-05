@@ -7,10 +7,10 @@ func_800AC62C:
 /* 800AC62C 00075BEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800AC630 00075BF0  7C 08 02 A6 */	mflr r0
 /* 800AC634 00075BF4  3D 80 80 53 */	lis r12, __vt__cf_CfObject@ha
-/* 800AC638 00075BF8  C0 22 8E A0 */	lfs f1, lbl_80669220@sda21(r2)
+/* 800AC638 00075BF8  C0 22 8E A0 */	lfs f1, float_80669220@sda21(r2)
 /* 800AC63C 00075BFC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800AC640 00075C00  39 8C CC B0 */	addi r12, r12, __vt__cf_CfObject@l
-/* 800AC644 00075C04  C0 02 8E A4 */	lfs f0, lbl_80669224@sda21(r2)
+/* 800AC644 00075C04  C0 02 8E A4 */	lfs f0, float_80669224@sda21(r2)
 /* 800AC648 00075C08  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800AC64C 00075C0C  3B E0 00 00 */	li r31, 0
 /* 800AC650 00075C10  93 C1 00 08 */	stw r30, 8(r1)
@@ -562,11 +562,11 @@ func_800ACD4C:
 func_800ACD5C:
 /* 800ACD5C 0007631C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800ACD60 00076320  7C 08 02 A6 */	mflr r0
-/* 800ACD64 00076324  C0 02 8E A8 */	lfs f0, lbl_80669228@sda21(r2)
+/* 800ACD64 00076324  C0 02 8E A8 */	lfs f0, float_80669228@sda21(r2)
 /* 800ACD68 00076328  90 01 00 24 */	stw r0, 0x24(r1)
 /* 800ACD6C 0007632C  38 81 00 08 */	addi r4, r1, 8
 /* 800ACD70 00076330  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800ACD74 00076334  C0 22 8E AC */	lfs f1, lbl_8066922C@sda21(r2)
+/* 800ACD74 00076334  C0 22 8E AC */	lfs f1, float_8066922C@sda21(r2)
 /* 800ACD78 00076338  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800ACD7C 0007633C  D0 41 00 10 */	stfs f2, 0x10(r1)
 /* 800ACD80 00076340  81 83 00 00 */	lwz r12, 0(r3)
@@ -1541,26 +1541,26 @@ __vt__cf_CfObjectEff:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_80669220
-lbl_80669220:
+.global float_80669220
+float_80669220:
 	# ROM: 0x573080
 	.4byte 0
 
 
-.global lbl_80669224
-lbl_80669224:
+.global float_80669224
+float_80669224:
 	# ROM: 0x573084
 	.float 1.0
 
 
-.global lbl_80669228
-lbl_80669228:
+.global float_80669228
+float_80669228:
 	# ROM: 0x573088
 	.float 0.5
 
 
-.global lbl_8066922C
-lbl_8066922C:
+.global float_8066922C
+float_8066922C:
 	# ROM: 0x57308C
 	.4byte 0x447A0000
 

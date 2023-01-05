@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8028DCAC
-func_8028DCAC:
+.global __ct__CMenuSave
+__ct__CMenuSave:
 /* 8028DCAC 0025726C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028DCB0 00257270  7C 08 02 A6 */	mflr r0
 /* 8028DCB4 00257274  90 01 00 24 */	stw r0, 0x24(r1)
@@ -509,14 +509,14 @@ func_8028E3B4:
 /* 8028E3EC 002579AC  48 1A 91 C9 */	bl func_804375B4
 /* 8028E3F0 002579B0  7C 64 1B 78 */	mr r4, r3
 /* 8028E3F4 002579B4  38 60 02 0C */	li r3, 0x20c
-/* 8028E3F8 002579B8  48 1A 66 65 */	bl func_80434A5C
+/* 8028E3F8 002579B8  48 1A 66 65 */	bl mm_malloc
 /* 8028E3FC 002579BC  2C 03 00 00 */	cmpwi r3, 0
 /* 8028E400 002579C0  41 82 00 18 */	beq .L_8028E418
 /* 8028E404 002579C4  7F 84 E3 78 */	mr r4, r28
 /* 8028E408 002579C8  7F A5 EB 78 */	mr r5, r29
 /* 8028E40C 002579CC  7F C6 F3 78 */	mr r6, r30
 /* 8028E410 002579D0  7F E7 FB 78 */	mr r7, r31
-/* 8028E414 002579D4  4B FF F8 99 */	bl func_8028DCAC
+/* 8028E414 002579D4  4B FF F8 99 */	bl __ct__CMenuSave
 .L_8028E418:
 /* 8028E418 002579D8  90 6D B1 58 */	stw r3, lbl_806672D8@sda21(r13)
 /* 8028E41C 002579DC  7F 64 DB 78 */	mr r4, r27
@@ -1168,7 +1168,7 @@ lbl_80019440:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_8028DCAC
+.4byte __ct__CMenuSave
 	.4byte 0x000000F0
 	.4byte lbl_800192F8
 	.4byte func_8028DD9C

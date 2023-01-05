@@ -150,7 +150,7 @@ func_8022EA64:
 /* 8022EA68 001F8028  90 03 00 14 */	stw r0, 0x14(r3)
 /* 8022EA6C 001F802C  80 83 00 0C */	lwz r4, 0xc(r3)
 /* 8022EA70 001F8030  38 00 00 00 */	li r0, 0
-/* 8022EA74 001F8034  C0 02 AB 70 */	lfs f0, lbl_8066AEF0@sda21(r2)
+/* 8022EA74 001F8034  C0 02 AB 70 */	lfs f0, float_8066AEF0@sda21(r2)
 /* 8022EA78 001F8038  D0 04 00 10 */	stfs f0, 0x10(r4)
 /* 8022EA7C 001F803C  98 03 00 18 */	stb r0, 0x18(r3)
 /* 8022EA80 001F8040  38 60 00 8E */	li r3, 0x8e
@@ -197,7 +197,7 @@ func_8022EA88:
 func_8022EB0C:
 /* 8022EB0C 001F80CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022EB10 001F80D0  7C 08 02 A6 */	mflr r0
-/* 8022EB14 001F80D4  C0 22 AB 74 */	lfs f1, lbl_8066AEF4@sda21(r2)
+/* 8022EB14 001F80D4  C0 22 AB 74 */	lfs f1, float_8066AEF4@sda21(r2)
 /* 8022EB18 001F80D8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8022EB1C 001F80DC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8022EB20 001F80E0  7C 7F 1B 78 */	mr r31, r3
@@ -338,7 +338,7 @@ func_8022EBE4:
 /* 8022ED18 001F82D8  38 7F 00 80 */	addi r3, r31, 0x80
 /* 8022ED1C 001F82DC  4B F9 52 89 */	bl func_801C3FA4
 /* 8022ED20 001F82E0  38 61 00 60 */	addi r3, r1, 0x60
-/* 8022ED24 001F82E4  48 00 44 91 */	bl func_802331B4
+/* 8022ED24 001F82E4  48 00 44 91 */	bl __ct__CArtsList
 /* 8022ED28 001F82E8  80 01 00 64 */	lwz r0, 0x64(r1)
 /* 8022ED2C 001F82EC  90 1F 00 BC */	stw r0, 0xbc(r31)
 /* 8022ED30 001F82F0  80 01 00 68 */	lwz r0, 0x68(r1)
@@ -874,14 +874,14 @@ __RTTI__CMCCrystalSupport:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066AEF0
-lbl_8066AEF0:
+.global float_8066AEF0
+float_8066AEF0:
 	# ROM: 0x574D50
 	.4byte 0
 
 
-.global lbl_8066AEF4
-lbl_8066AEF4:
+.global float_8066AEF4
+float_8066AEF4:
 	# ROM: 0x574D54
 	.float 1.0
 

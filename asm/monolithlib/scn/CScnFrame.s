@@ -4,7 +4,7 @@
 
 .global func_8049E380
 func_8049E380:
-/* 8049E380 00467940  C0 02 D0 10 */	lfs f0, lbl_8066D390@sda21(r2)
+/* 8049E380 00467940  C0 02 D0 10 */	lfs f0, float_8066D390@sda21(r2)
 /* 8049E384 00467944  3C A0 80 57 */	lis r5, __vt__CScnFrame@ha
 /* 8049E388 00467948  38 A5 24 B8 */	addi r5, r5, __vt__CScnFrame@l
 /* 8049E38C 0046794C  38 00 00 00 */	li r0, 0
@@ -48,9 +48,9 @@ func_8049E3E8:
 /* 8049E408 004679C8  4B FA A0 19 */	bl func_80448420
 /* 8049E40C 004679CC  3C 00 43 30 */	lis r0, 0x4330
 /* 8049E410 004679D0  90 61 00 0C */	stw r3, 0xc(r1)
-/* 8049E414 004679D4  C8 62 D0 18 */	lfd f3, lbl_8066D398@sda21(r2)
+/* 8049E414 004679D4  C8 62 D0 18 */	lfd f3, double_8066D398@sda21(r2)
 /* 8049E418 004679D8  90 01 00 08 */	stw r0, 8(r1)
-/* 8049E41C 004679DC  C0 22 D0 14 */	lfs f1, lbl_8066D394@sda21(r2)
+/* 8049E41C 004679DC  C0 22 D0 14 */	lfs f1, float_8066D394@sda21(r2)
 /* 8049E420 004679E0  C8 41 00 08 */	lfd f2, 8(r1)
 /* 8049E424 004679E4  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 8049E428 004679E8  EC 42 18 28 */	fsubs f2, f2, f3
@@ -97,20 +97,20 @@ __RTTI__CScnFrame:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066D390
-lbl_8066D390:
+.global float_8066D390
+float_8066D390:
 	# ROM: 0x5771F0
 	.float 1.0
 
 
-.global lbl_8066D394
-lbl_8066D394:
+.global float_8066D394
+float_8066D394:
 	# ROM: 0x5771F4
 	.float 0.5
 
 
-.global lbl_8066D398
-lbl_8066D398:
+.global double_8066D398
+double_8066D398:
 	# ROM: 0x5771F8
 	.4byte 0x43300000
 	.4byte 0

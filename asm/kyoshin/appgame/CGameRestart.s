@@ -58,6 +58,13 @@ sinit_80039EE0:
 /* 80039EE4 000034A4  38 63 3C 80 */	addi r3, r3, lbl_80573C80@l
 /* 80039EE8 000034A8  48 00 00 04 */	b func_80039EEC
 
+.global func_80039EEC
+func_80039EEC:
+/* 80039EEC 000034AC  38 00 00 00 */	li r0, 0
+/* 80039EF0 000034B0  98 03 00 00 */	stb r0, 0(r3)
+/* 80039EF4 000034B4  90 03 00 40 */	stw r0, 0x40(r3)
+/* 80039EF8 000034B8  4E 80 00 20 */	blr
+
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
 .4byte sinit_80039EE0

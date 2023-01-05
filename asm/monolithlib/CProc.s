@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80438C30
-func_80438C30:
+.global __ct__CProc
+__ct__CProc:
 /* 80438C30 004021F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80438C34 004021F4  7C 08 02 A6 */	mflr r0
 /* 80438C38 004021F8  7C C6 07 34 */	extsh r6, r6
@@ -543,7 +543,7 @@ func_804392F4:
 /* 80439360 00402920  4B FF E2 55 */	bl func_804375B4
 /* 80439364 00402924  7C 64 1B 78 */	mr r4, r3
 /* 80439368 00402928  38 60 04 70 */	li r3, 0x470
-/* 8043936C 0040292C  4B FF B6 F1 */	bl func_80434A5C
+/* 8043936C 0040292C  4B FF B6 F1 */	bl mm_malloc
 /* 80439370 00402930  2C 03 00 00 */	cmpwi r3, 0
 /* 80439374 00402934  7C 7D 1B 78 */	mr r29, r3
 /* 80439378 00402938  41 82 00 14 */	beq .L_8043938C
@@ -704,9 +704,9 @@ func_804392F4:
 /* 80439594 00402B54  6C 04 80 00 */	xoris r4, r0, 0x8000
 /* 80439598 00402B58  90 9F 00 B4 */	stw r4, 0xb4(r31)
 /* 8043959C 00402B5C  6C 66 80 00 */	xoris r6, r3, 0x8000
-/* 804395A0 00402B60  C8 62 C7 00 */	lfd f3, lbl_8066CA80@sda21(r2)
+/* 804395A0 00402B60  C8 62 C7 00 */	lfd f3, double_8066CA80@sda21(r2)
 /* 804395A4 00402B64  90 FF 00 B0 */	stw r7, 0xb0(r31)
-/* 804395A8 00402B68  C0 42 C6 F8 */	lfs f2, lbl_8066CA78@sda21(r2)
+/* 804395A8 00402B68  C0 42 C6 F8 */	lfs f2, float_8066CA78@sda21(r2)
 /* 804395AC 00402B6C  7C A5 07 34 */	extsh r5, r5
 /* 804395B0 00402B70  C8 1F 00 B0 */	lfd f0, 0xb0(r31)
 /* 804395B4 00402B74  38 9F 00 48 */	addi r4, r31, 0x48
@@ -925,15 +925,15 @@ __RTTI___reslist_base_unsigned_long:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066CA78
-lbl_8066CA78:
+.global float_8066CA78
+float_8066CA78:
 	# ROM: 0x5768D8
 	.4byte 0x3F19999A
 	.4byte 0
 
 
-.global lbl_8066CA80
-lbl_8066CA80:
+.global double_8066CA80
+double_8066CA80:
 	# ROM: 0x5768E0
 	.4byte 0x43300000
 	.4byte 0x80000000
@@ -1001,7 +1001,7 @@ lbl_8001C228:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_80438C30
+.4byte __ct__CProc
 	.4byte 0x0000012C
 	.4byte lbl_8001C1B4
 	.4byte func_80438D5C

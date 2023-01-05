@@ -229,9 +229,9 @@ func_80332980:
 /* 80332A60 002FC020  80 04 00 50 */	lwz r0, 0x50(r4)
 /* 80332A64 002FC024  54 04 27 3E */	srwi r4, r0, 0x1c
 /* 80332A68 002FC028  4B FF 9C F9 */	bl SetSize__Q46nw4hbm3lyt6detail11TexCoordAryFUc
-/* 80332A6C 002FC02C  3C 60 80 52 */	lis r3, lbl_80518AB8@ha
+/* 80332A6C 002FC02C  3C 60 80 52 */	lis r3, float_80518AB8@ha
 /* 80332A70 002FC030  C0 1F 00 4C */	lfs f0, 0x4c(r31)
-/* 80332A74 002FC034  C0 23 8A B8 */	lfs f1, lbl_80518AB8@l(r3)
+/* 80332A74 002FC034  C0 23 8A B8 */	lfs f1, float_80518AB8@l(r3)
 /* 80332A78 002FC038  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 80332A7C 002FC03C  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80332A80 002FC040  D0 21 00 1C */	stfs f1, 0x1c(r1)
@@ -394,8 +394,8 @@ __sinit_lyt_picture_cpp:
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80518AB8
-lbl_80518AB8:
+.global float_80518AB8
+float_80518AB8:
 	# ROM: 0x514BB8
 	.4byte 0
 	.4byte 0

@@ -5,8 +5,8 @@
 
 .global MTX33Identity__Q24nw4r4mathFPQ34nw4r4math5MTX33
 MTX33Identity__Q24nw4r4mathFPQ34nw4r4math5MTX33:
-/* 8040B000 003D45C0  C0 02 C2 C0 */	lfs f0, lbl_8066C640@sda21(r2)
-/* 8040B004 003D45C4  C0 22 C2 C4 */	lfs f1, lbl_8066C644@sda21(r2)
+/* 8040B000 003D45C0  C0 02 C2 C0 */	lfs f0, float_8066C640@sda21(r2)
+/* 8040B004 003D45C4  C0 22 C2 C4 */	lfs f1, float_8066C644@sda21(r2)
 /* 8040B008 003D45C8  F0 03 00 08 */	psq_st f0, 8(r3), 0, qr0
 /* 8040B00C 003D45CC  10 41 04 20 */	ps_merge00 f2, f1, f0
 /* 8040B010 003D45D0  F0 03 00 18 */	psq_st f0, 24(r3), 0, qr0
@@ -33,7 +33,7 @@ MTX34ToMTX33__Q24nw4r4mathFPQ34nw4r4math5MTX33PCQ34nw4r4math5MTX34:
 
 .global MTX34Zero__Q24nw4r4mathFPQ34nw4r4math5MTX34
 MTX34Zero__Q24nw4r4mathFPQ34nw4r4math5MTX34:
-/* 8040B058 003D4618  C0 02 C2 C0 */	lfs f0, lbl_8066C640@sda21(r2)
+/* 8040B058 003D4618  C0 02 C2 C0 */	lfs f0, float_8066C640@sda21(r2)
 /* 8040B05C 003D461C  F0 03 00 00 */	psq_st f0, 0(r3), 0, qr0
 /* 8040B060 003D4620  F0 03 00 08 */	psq_st f0, 8(r3), 0, qr0
 /* 8040B064 003D4624  F0 03 00 10 */	psq_st f0, 16(r3), 0, qr0
@@ -150,7 +150,7 @@ MTX34Trans__Q24nw4r4mathFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34PCQ34nw4r4math4V
 MTX34RotAxisFIdx__Q24nw4r4mathFPQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3f:
 /* 8040B1E8 003D47A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040B1EC 003D47AC  7C 08 02 A6 */	mflr r0
-/* 8040B1F0 003D47B0  C0 02 C2 C8 */	lfs f0, lbl_8066C648@sda21(r2)
+/* 8040B1F0 003D47B0  C0 02 C2 C8 */	lfs f0, float_8066C648@sda21(r2)
 /* 8040B1F4 003D47B4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8040B1F8 003D47B8  EC 20 00 72 */	fmuls f1, f0, f1
 /* 8040B1FC 003D47BC  93 E1 00 0C */	stw r31, 0xc(r1)
@@ -304,8 +304,8 @@ VEC3TransformNormal__Q24nw4r4mathFPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4
 
 .global MTX44Identity__Q24nw4r4mathFPQ34nw4r4math5MTX44
 MTX44Identity__Q24nw4r4mathFPQ34nw4r4math5MTX44:
-/* 8040B410 003D49D0  C0 02 C2 C0 */	lfs f0, lbl_8066C640@sda21(r2)
-/* 8040B414 003D49D4  C0 22 C2 C4 */	lfs f1, lbl_8066C644@sda21(r2)
+/* 8040B410 003D49D0  C0 02 C2 C0 */	lfs f0, float_8066C640@sda21(r2)
+/* 8040B414 003D49D4  C0 22 C2 C4 */	lfs f1, float_8066C644@sda21(r2)
 /* 8040B418 003D49D8  F0 03 00 08 */	psq_st f0, 8(r3), 0, qr0
 /* 8040B41C 003D49DC  10 40 0C 60 */	ps_merge01 f2, f0, f1
 /* 8040B420 003D49E0  10 21 04 A0 */	ps_merge10 f1, f1, f0
@@ -340,20 +340,20 @@ MTX44Copy__Q24nw4r4mathFPQ34nw4r4math5MTX44PCQ34nw4r4math5MTX44:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C640
-lbl_8066C640:
+.global float_8066C640
+float_8066C640:
 	# ROM: 0x5764A0
 	.4byte 0
 
 
-.global lbl_8066C644
-lbl_8066C644:
+.global float_8066C644
+float_8066C644:
 	# ROM: 0x5764A4
 	.float 1.0
 
 
-.global lbl_8066C648
-lbl_8066C648:
+.global float_8066C648
+float_8066C648:
 	# ROM: 0x5764A8
 	.4byte 0x3CC90FDB
 	.4byte 0

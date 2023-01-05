@@ -45,11 +45,11 @@ Get__Q34nw4r3lyt6TexMapCFP9_GXTexObj:
 /* 8040838C 003D194C  80 1E 00 18 */	lwz r0, 0x18(r30)
 /* 80408390 003D1950  7F E3 FB 78 */	mr r3, r31
 /* 80408394 003D1954  90 81 00 14 */	stw r4, 0x14(r1)
-/* 80408398 003D1958  C8 62 C2 40 */	lfd f3, lbl_8066C5C0@sda21(r2)
+/* 80408398 003D1958  C8 62 C2 40 */	lfd f3, double_8066C5C0@sda21(r2)
 /* 8040839C 003D195C  54 04 67 7E */	rlwinm r4, r0, 0xc, 0x1d, 0x1f
 /* 804083A0 003D1960  90 A1 00 10 */	stw r5, 0x10(r1)
 /* 804083A4 003D1964  54 05 6F FE */	rlwinm r5, r0, 0xd, 0x1f, 0x1f
-/* 804083A8 003D1968  C0 02 C2 38 */	lfs f0, lbl_8066C5B8@sda21(r2)
+/* 804083A8 003D1968  C0 02 C2 38 */	lfs f0, float_8066C5B8@sda21(r2)
 /* 804083AC 003D196C  54 06 77 FE */	rlwinm r6, r0, 0xe, 0x1f, 0x1f
 /* 804083B0 003D1970  C8 21 00 10 */	lfd f1, 0x10(r1)
 /* 804083B4 003D1974  54 07 7F FE */	rlwinm r7, r0, 0xf, 0x1f, 0x1f
@@ -118,11 +118,11 @@ Set__Q34nw4r3lyt6TexMapFPC13TPLDescriptor:
 /* 80408488 003D1A48  80 C3 00 18 */	lwz r6, 0x18(r3)
 /* 8040848C 003D1A4C  2C 08 00 00 */	cmpwi r8, 0
 /* 80408490 003D1A50  90 83 00 00 */	stw r4, 0(r3)
-/* 80408494 003D1A54  C8 62 C2 40 */	lfd f3, lbl_8066C5C0@sda21(r2)
+/* 80408494 003D1A54  C8 62 C2 40 */	lfd f3, double_8066C5C0@sda21(r2)
 /* 80408498 003D1A58  A0 A7 00 00 */	lhz r5, 0(r7)
 /* 8040849C 003D1A5C  A0 87 00 02 */	lhz r4, 2(r7)
 /* 804084A0 003D1A60  90 01 00 08 */	stw r0, 8(r1)
-/* 804084A4 003D1A64  C0 02 C2 48 */	lfs f0, lbl_8066C5C8@sda21(r2)
+/* 804084A4 003D1A64  C0 02 C2 48 */	lfs f0, float_8066C5C8@sda21(r2)
 /* 804084A8 003D1A68  B0 83 00 08 */	sth r4, 8(r3)
 /* 804084AC 003D1A6C  B0 A3 00 0A */	sth r5, 0xa(r3)
 /* 804084B0 003D1A70  80 87 00 04 */	lwz r4, 4(r7)
@@ -246,22 +246,22 @@ ReplaceImage__Q34nw4r3lyt6TexMapFP10TPLPaletteUl:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C5B8
-lbl_8066C5B8:
+.global float_8066C5B8
+float_8066C5B8:
 	# ROM: 0x576418
 	.4byte 0x3B800000
 	.4byte 0
 
 
-.global lbl_8066C5C0
-lbl_8066C5C0:
+.global double_8066C5C0
+double_8066C5C0:
 	# ROM: 0x576420
 	.4byte 0x43300000
 	.4byte 0
 
 
-.global lbl_8066C5C8
-lbl_8066C5C8:
+.global float_8066C5C8
+float_8066C5C8:
 	# ROM: 0x576428
 	.4byte 0x43800000
 	.4byte 0

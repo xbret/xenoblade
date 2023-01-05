@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8044E148
-func_8044E148:
+.global __ct__CDeviceFile
+__ct__CDeviceFile:
 /* 8044E148 00417708  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044E14C 0041770C  7C 08 02 A6 */	mflr r0
 /* 8044E150 00417710  38 C0 00 08 */	li r6, 8
@@ -475,6 +475,9 @@ func_8044E780:
 /* 8044E78C 00417D4C  90 04 01 C8 */	stw r0, 0x1c8(r4)
 /* 8044E790 00417D50  4E 80 00 20 */	blr 
 
+#get arc file at the given path?
+#might reference files in pkb archives (cannot find list of archive file names anywhere though)
+#r3: ?, r4: path string pointer, r5, r6, r7
 .global func_8044E794
 func_8044E794:
 /* 8044E794 00417D54  94 21 FF 10 */	stwu r1, -0xf0(r1)
@@ -574,7 +577,7 @@ func_8044E794:
 /* 8044E8E4 00417EA4  4B FE 8C D1 */	bl func_804375B4
 /* 8044E8E8 00417EA8  7C 64 1B 78 */	mr r4, r3
 /* 8044E8EC 00417EAC  38 60 01 A8 */	li r3, 0x1a8
-/* 8044E8F0 00417EB0  4B FE 61 6D */	bl func_80434A5C
+/* 8044E8F0 00417EB0  4B FE 61 6D */	bl mm_malloc
 /* 8044E8F4 00417EB4  2C 03 00 00 */	cmpwi r3, 0
 /* 8044E8F8 00417EB8  7C 7E 1B 78 */	mr r30, r3
 /* 8044E8FC 00417EBC  41 82 00 18 */	beq .L_8044E914
@@ -692,7 +695,7 @@ func_8044E794:
 /* 8044EA84 00418044  4B FE 8B 31 */	bl func_804375B4
 /* 8044EA88 00418048  7C 64 1B 78 */	mr r4, r3
 /* 8044EA8C 0041804C  38 60 02 50 */	li r3, 0x250
-/* 8044EA90 00418050  4B FE 5F CD */	bl func_80434A5C
+/* 8044EA90 00418050  4B FE 5F CD */	bl mm_malloc
 /* 8044EA94 00418054  2C 03 00 00 */	cmpwi r3, 0
 /* 8044EA98 00418058  7C 7B 1B 78 */	mr r27, r3
 /* 8044EA9C 0041805C  41 82 00 14 */	beq .L_8044EAB0
@@ -715,7 +718,7 @@ func_8044E794:
 /* 8044EAD8 00418098  4B FE 8A DD */	bl func_804375B4
 /* 8044EADC 0041809C  7C 64 1B 78 */	mr r4, r3
 /* 8044EAE0 004180A0  38 60 02 50 */	li r3, 0x250
-/* 8044EAE4 004180A4  4B FE 5F 79 */	bl func_80434A5C
+/* 8044EAE4 004180A4  4B FE 5F 79 */	bl mm_malloc
 /* 8044EAE8 004180A8  2C 03 00 00 */	cmpwi r3, 0
 /* 8044EAEC 004180AC  7C 7B 1B 78 */	mr r27, r3
 /* 8044EAF0 004180B0  41 82 00 14 */	beq .L_8044EB04
@@ -752,6 +755,7 @@ func_8044E794:
 /* 8044EB5C 0041811C  7C 08 03 A6 */	mtlr r0
 /* 8044EB60 00418120  4E 80 00 20 */	blr 
 
+#does something with bdat files?
 .global func_8044EB64
 func_8044EB64:
 /* 8044EB64 00418124  94 21 FF 10 */	stwu r1, -0xf0(r1)
@@ -856,7 +860,7 @@ func_8044EB64:
 /* 8044ECC4 00418284  4B FE 88 F1 */	bl func_804375B4
 /* 8044ECC8 00418288  7C 64 1B 78 */	mr r4, r3
 /* 8044ECCC 0041828C  38 60 01 A8 */	li r3, 0x1a8
-/* 8044ECD0 00418290  4B FE 5D 8D */	bl func_80434A5C
+/* 8044ECD0 00418290  4B FE 5D 8D */	bl mm_malloc
 /* 8044ECD4 00418294  2C 03 00 00 */	cmpwi r3, 0
 /* 8044ECD8 00418298  7C 7E 1B 78 */	mr r30, r3
 /* 8044ECDC 0041829C  41 82 00 18 */	beq .L_8044ECF4
@@ -974,7 +978,7 @@ func_8044EB64:
 /* 8044EE64 00418424  4B FE 87 51 */	bl func_804375B4
 /* 8044EE68 00418428  7C 64 1B 78 */	mr r4, r3
 /* 8044EE6C 0041842C  38 60 02 50 */	li r3, 0x250
-/* 8044EE70 00418430  4B FE 5B ED */	bl func_80434A5C
+/* 8044EE70 00418430  4B FE 5B ED */	bl mm_malloc
 /* 8044EE74 00418434  2C 03 00 00 */	cmpwi r3, 0
 /* 8044EE78 00418438  7C 7B 1B 78 */	mr r27, r3
 /* 8044EE7C 0041843C  41 82 00 14 */	beq .L_8044EE90
@@ -997,7 +1001,7 @@ func_8044EB64:
 /* 8044EEB8 00418478  4B FE 86 FD */	bl func_804375B4
 /* 8044EEBC 0041847C  7C 64 1B 78 */	mr r4, r3
 /* 8044EEC0 00418480  38 60 02 50 */	li r3, 0x250
-/* 8044EEC4 00418484  4B FE 5B 99 */	bl func_80434A5C
+/* 8044EEC4 00418484  4B FE 5B 99 */	bl mm_malloc
 /* 8044EEC8 00418488  2C 03 00 00 */	cmpwi r3, 0
 /* 8044EECC 0041848C  7C 7B 1B 78 */	mr r27, r3
 /* 8044EED0 00418490  41 82 00 14 */	beq .L_8044EEE4
@@ -1034,6 +1038,7 @@ func_8044EB64:
 /* 8044EF3C 004184FC  7C 08 03 A6 */	mtlr r0
 /* 8044EF40 00418500  4E 80 00 20 */	blr 
 
+#does something with arc files?
 .global func_8044EF44
 func_8044EF44:
 /* 8044EF44 00418504  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1433,7 +1438,7 @@ func_8044F424:
 /* 8044F454 00418A14  4B FE 81 61 */	bl func_804375B4
 /* 8044F458 00418A18  7C 64 1B 78 */	mr r4, r3
 /* 8044F45C 00418A1C  38 60 01 D8 */	li r3, 0x1d8
-/* 8044F460 00418A20  4B FE 55 FD */	bl func_80434A5C
+/* 8044F460 00418A20  4B FE 55 FD */	bl mm_malloc
 /* 8044F464 00418A24  2C 03 00 00 */	cmpwi r3, 0
 /* 8044F468 00418A28  41 82 00 10 */	beq .L_8044F478
 /* 8044F46C 00418A2C  7F E4 FB 78 */	mr r4, r31
@@ -1449,7 +1454,7 @@ func_8044F424:
 /* 8044F490 00418A50  4B FE 81 25 */	bl func_804375B4
 /* 8044F494 00418A54  7C 64 1B 78 */	mr r4, r3
 /* 8044F498 00418A58  38 60 01 E8 */	li r3, 0x1e8
-/* 8044F49C 00418A5C  4B FE 55 C1 */	bl func_80434A5C
+/* 8044F49C 00418A5C  4B FE 55 C1 */	bl mm_malloc
 /* 8044F4A0 00418A60  2C 03 00 00 */	cmpwi r3, 0
 /* 8044F4A4 00418A64  41 82 00 10 */	beq .L_8044F4B4
 /* 8044F4A8 00418A68  7F E4 FB 78 */	mr r4, r31
@@ -1771,7 +1776,7 @@ lbl_8001CE30:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_8044E148
+.4byte __ct__CDeviceFile
 	.4byte 0x00000178
 	.4byte lbl_8001CD84
 	.4byte func_8044E2C0

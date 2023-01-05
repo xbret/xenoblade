@@ -278,7 +278,7 @@ func_8022D19C:
 func_8022D1F8:
 /* 8022D1F8 001F67B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022D1FC 001F67BC  7C 08 02 A6 */	mflr r0
-/* 8022D200 001F67C0  C0 22 AB 50 */	lfs f1, lbl_8066AED0@sda21(r2)
+/* 8022D200 001F67C0  C0 22 AB 50 */	lfs f1, float_8066AED0@sda21(r2)
 /* 8022D204 001F67C4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8022D208 001F67C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8022D20C 001F67CC  7C 7F 1B 78 */	mr r31, r3
@@ -301,7 +301,7 @@ func_8022D1F8:
 func_8022D244:
 /* 8022D244 001F6804  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022D248 001F6808  7C 08 02 A6 */	mflr r0
-/* 8022D24C 001F680C  C0 22 AB 50 */	lfs f1, lbl_8066AED0@sda21(r2)
+/* 8022D24C 001F680C  C0 22 AB 50 */	lfs f1, float_8066AED0@sda21(r2)
 /* 8022D250 001F6810  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8022D254 001F6814  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8022D258 001F6818  7C 7F 1B 78 */	mr r31, r3
@@ -473,7 +473,7 @@ func_8022D294:
 /* 8022D4DC 001F6A9C  41 82 00 3C */	beq .L_8022D518
 /* 8022D4E0 001F6AA0  3C 00 43 30 */	lis r0, 0x4330
 /* 8022D4E4 001F6AA4  93 A1 00 1C */	stw r29, 0x1c(r1)
-/* 8022D4E8 001F6AA8  C8 42 AB 58 */	lfd f2, lbl_8066AED8@sda21(r2)
+/* 8022D4E8 001F6AA8  C8 42 AB 58 */	lfd f2, double_8066AED8@sda21(r2)
 /* 8022D4EC 001F6AAC  90 01 00 18 */	stw r0, 0x18(r1)
 /* 8022D4F0 001F6AB0  C8 01 00 18 */	lfd f0, 0x18(r1)
 /* 8022D4F4 001F6AB4  93 C1 00 24 */	stw r30, 0x24(r1)
@@ -598,15 +598,15 @@ __RTTI__CExchangeWin:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066AED0
-lbl_8066AED0:
+.global float_8066AED0
+float_8066AED0:
 	# ROM: 0x574D30
 	.float 1.0
 	.4byte 0
 
 
-.global lbl_8066AED8
-lbl_8066AED8:
+.global double_8066AED8
+double_8066AED8:
 	# ROM: 0x574D38
 	.4byte 0x43300000
 	.4byte 0

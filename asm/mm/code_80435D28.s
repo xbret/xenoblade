@@ -37,10 +37,10 @@ func_80435D28:
 
 .global sinit_80435D94
 sinit_80435D94:
-/* 80435D94 003FF354  3D 00 80 66 */	lis r8, lbl_80659DB0@ha
-/* 80435D98 003FF358  C0 22 C6 68 */	lfs f1, lbl_8066C9E8@sda21(r2)
-/* 80435D9C 003FF35C  39 08 9D B0 */	addi r8, r8, lbl_80659DB0@l
-/* 80435DA0 003FF360  C0 02 C6 6C */	lfs f0, lbl_8066C9EC@sda21(r2)
+/* 80435D94 003FF354  3D 00 80 66 */	lis r8, float_80659DB0@ha
+/* 80435D98 003FF358  C0 22 C6 68 */	lfs f1, float_8066C9E8@sda21(r2)
+/* 80435D9C 003FF35C  39 08 9D B0 */	addi r8, r8, float_80659DB0@l
+/* 80435DA0 003FF360  C0 02 C6 6C */	lfs f0, float_8066C9EC@sda21(r2)
 /* 80435DA4 003FF364  38 E8 00 00 */	addi r7, r8, 0
 /* 80435DA8 003FF368  D0 28 00 00 */	stfs f1, 0(r8)
 /* 80435DAC 003FF36C  38 C8 00 0C */	addi r6, r8, 0xc
@@ -69,14 +69,14 @@ sinit_80435D94:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C9E8
-lbl_8066C9E8:
+.global float_8066C9E8
+float_8066C9E8:
 	# ROM: 0x576848
 	.4byte 0
 
 
-.global lbl_8066C9EC
-lbl_8066C9EC:
+.global float_8066C9EC
+float_8066C9EC:
 	# ROM: 0x57684C
 	.float 1.0
 

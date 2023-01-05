@@ -325,7 +325,7 @@ func_804B27EC:
 func_804B29EC:
 /* 804B29EC 0047BFAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804B29F0 0047BFB0  7C 08 02 A6 */	mflr r0
-/* 804B29F4 0047BFB4  C0 02 D2 D8 */	lfs f0, lbl_8066D658@sda21(r2)
+/* 804B29F4 0047BFB4  C0 02 D2 D8 */	lfs f0, float_8066D658@sda21(r2)
 /* 804B29F8 0047BFB8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804B29FC 0047BFBC  3C 00 80 66 */	lis r0, lbl_8065F9A8@ha
 /* 804B2A00 0047BFC0  34 E0 F9 A8 */	addic. r7, r0, lbl_8065F9A8@l
@@ -879,8 +879,8 @@ __RTTI__CColiResCall:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066D658
-lbl_8066D658:
+.global float_8066D658
+float_8066D658:
 	# ROM: 0x5774B8
 	.4byte 0
 	.4byte 0

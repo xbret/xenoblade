@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8011D424
-func_8011D424:
+.global __ct__CMenuSymbolMark
+__ct__CMenuSymbolMark:
 /* 8011D424 000E69E4  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8011D428 000E69E8  7C 08 02 A6 */	mflr r0
 /* 8011D42C 000E69EC  90 01 00 64 */	stw r0, 0x64(r1)
@@ -193,15 +193,15 @@ func_8011D424:
 /* 8011D6F8 000E6CB8  39 08 00 20 */	addi r8, r8, 0x20
 /* 8011D6FC 000E6CBC  42 00 FF D4 */	bdnz .L_8011D6D0
 .L_8011D700:
-/* 8011D700 000E6CC0  C0 42 96 1C */	lfs f2, lbl_8066999C@sda21(r2)
+/* 8011D700 000E6CC0  C0 42 96 1C */	lfs f2, float_8066999C@sda21(r2)
 /* 8011D704 000E6CC4  38 00 00 04 */	li r0, 4
 /* 8011D708 000E6CC8  38 C0 00 00 */	li r6, 0
 /* 8011D70C 000E6CCC  80 A1 00 14 */	lwz r5, 0x14(r1)
 /* 8011D710 000E6CD0  80 81 00 18 */	lwz r4, 0x18(r1)
 /* 8011D714 000E6CD4  39 00 00 00 */	li r8, 0
 /* 8011D718 000E6CD8  80 61 00 1C */	lwz r3, 0x1c(r1)
-/* 8011D71C 000E6CDC  C0 22 96 20 */	lfs f1, lbl_806699A0@sda21(r2)
-/* 8011D720 000E6CE0  C0 02 96 24 */	lfs f0, lbl_806699A4@sda21(r2)
+/* 8011D71C 000E6CDC  C0 22 96 20 */	lfs f1, float_806699A0@sda21(r2)
+/* 8011D720 000E6CE0  C0 02 96 24 */	lfs f0, float_806699A4@sda21(r2)
 /* 8011D724 000E6CE4  98 DF 02 74 */	stb r6, 0x274(r31)
 /* 8011D728 000E6CE8  98 DF 02 75 */	stb r6, 0x275(r31)
 /* 8011D72C 000E6CEC  D0 5F 02 78 */	stfs f2, 0x278(r31)
@@ -628,7 +628,7 @@ lbl_8000BADC:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-	.4byte func_8011D424
+	.4byte __ct__CMenuSymbolMark
 	.4byte 0x0000059C
 	.4byte lbl_8000BA94
 	.4byte func_8011D9C0

@@ -124,10 +124,10 @@ __dt__Q44nw4r3snd6detail8SeqTrackFv:
 InitParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041B4D8 003E4A98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041B4DC 003E4A9C  7C 08 02 A6 */	mflr r0
-/* 8041B4E0 003E4AA0  C0 22 C4 98 */	lfs f1, lbl_8066C818@sda21(r2)
+/* 8041B4E0 003E4AA0  C0 22 C4 98 */	lfs f1, float_8066C818@sda21(r2)
 /* 8041B4E4 003E4AA4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041B4E8 003E4AA8  38 00 00 01 */	li r0, 1
-/* 8041B4EC 003E4AAC  C0 02 C4 9C */	lfs f0, lbl_8066C81C@sda21(r2)
+/* 8041B4EC 003E4AAC  C0 02 C4 9C */	lfs f0, float_8066C81C@sda21(r2)
 /* 8041B4F0 003E4AB0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8041B4F4 003E4AB4  3B E0 00 00 */	li r31, 0
 /* 8041B4F8 003E4AB8  93 C1 00 08 */	stw r30, 8(r1)
@@ -154,7 +154,7 @@ InitParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041B54C 003E4B0C  93 E3 00 54 */	stw r31, 0x54(r3)
 /* 8041B550 003E4B10  38 63 00 58 */	addi r3, r3, 0x58
 /* 8041B554 003E4B14  4B FF BA 0D */	bl Init__Q44nw4r3snd6detail8LfoParamFv
-/* 8041B558 003E4B18  C0 02 C4 9C */	lfs f0, lbl_8066C81C@sda21(r2)
+/* 8041B558 003E4B18  C0 02 C4 9C */	lfs f0, float_8066C81C@sda21(r2)
 /* 8041B55C 003E4B1C  38 E0 00 7F */	li r7, 0x7f
 /* 8041B560 003E4B20  38 60 00 FF */	li r3, 0xff
 /* 8041B564 003E4B24  38 C0 00 02 */	li r6, 2
@@ -605,7 +605,7 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 .L_8041BB7C:
 /* 8041BB7C 003E513C  A8 9D 00 72 */	lha r4, 0x72(r29)
 /* 8041BB80 003E5140  A8 7D 00 74 */	lha r3, 0x74(r29)
-/* 8041BB84 003E5144  C3 A2 C4 98 */	lfs f29, lbl_8066C818@sda21(r2)
+/* 8041BB84 003E5144  C3 A2 C4 98 */	lfs f29, float_8066C818@sda21(r2)
 /* 8041BB88 003E5148  7C 03 20 00 */	cmpw r3, r4
 /* 8041BB8C 003E514C  41 80 00 0C */	blt .L_8041BB98
 /* 8041BB90 003E5150  88 1D 00 71 */	lbz r0, 0x71(r29)
@@ -623,12 +623,12 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BBB8 003E5178  88 1D 00 82 */	lbz r0, 0x82(r29)
 /* 8041BBBC 003E517C  80 7D 00 C0 */	lwz r3, 0xc0(r29)
 /* 8041BBC0 003E5180  90 01 00 44 */	stw r0, 0x44(r1)
-/* 8041BBC4 003E5184  C9 02 C4 B8 */	lfd f8, lbl_8066C838@sda21(r2)
+/* 8041BBC4 003E5184  C9 02 C4 B8 */	lfd f8, double_8066C838@sda21(r2)
 /* 8041BBC8 003E5188  C8 21 00 38 */	lfd f1, 0x38(r1)
 /* 8041BBCC 003E518C  88 03 01 08 */	lbz r0, 0x108(r3)
 /* 8041BBD0 003E5190  C8 01 00 40 */	lfd f0, 0x40(r1)
 /* 8041BBD4 003E5194  EC 21 40 28 */	fsubs f1, f1, f8
-/* 8041BBD8 003E5198  C0 E2 C4 A0 */	lfs f7, lbl_8066C820@sda21(r2)
+/* 8041BBD8 003E5198  C0 E2 C4 A0 */	lfs f7, float_8066C820@sda21(r2)
 /* 8041BBDC 003E519C  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 8041BBE0 003E51A0  EC 00 40 28 */	fsubs f0, f0, f8
 /* 8041BBE4 003E51A4  EC 41 38 24 */	fdivs f2, f1, f7
@@ -638,18 +638,18 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BBF4 003E51B4  88 1D 00 85 */	lbz r0, 0x85(r29)
 /* 8041BBF8 003E51B8  6C 84 80 00 */	xoris r4, r4, 0x8000
 /* 8041BBFC 003E51BC  EC A2 00 B2 */	fmuls f5, f2, f2
-/* 8041BC00 003E51C0  C3 62 C4 98 */	lfs f27, lbl_8066C818@sda21(r2)
+/* 8041BC00 003E51C0  C3 62 C4 98 */	lfs f27, float_8066C818@sda21(r2)
 /* 8041BC04 003E51C4  EC C1 40 28 */	fsubs f6, f1, f8
 /* 8041BC08 003E51C8  90 81 00 44 */	stw r4, 0x44(r1)
 /* 8041BC0C 003E51CC  ED 20 38 24 */	fdivs f9, f0, f7
-/* 8041BC10 003E51D0  C8 62 C4 C0 */	lfd f3, lbl_8066C840@sda21(r2)
+/* 8041BC10 003E51D0  C8 62 C4 C0 */	lfd f3, double_8066C840@sda21(r2)
 /* 8041BC14 003E51D4  C8 01 00 40 */	lfd f0, 0x40(r1)
 /* 8041BC18 003E51D8  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 8041BC1C 003E51DC  C0 9D 00 08 */	lfs f4, 8(r29)
 /* 8041BC20 003E51E0  C8 21 00 38 */	lfd f1, 0x38(r1)
 /* 8041BC24 003E51E4  ED 46 38 24 */	fdivs f10, f6, f7
 /* 8041BC28 003E51E8  C0 C3 00 08 */	lfs f6, 8(r3)
-/* 8041BC2C 003E51EC  C0 42 C4 A4 */	lfs f2, lbl_8066C824@sda21(r2)
+/* 8041BC2C 003E51EC  C0 42 C4 A4 */	lfs f2, float_8066C824@sda21(r2)
 /* 8041BC30 003E51F0  C0 E3 00 04 */	lfs f7, 4(r3)
 /* 8041BC34 003E51F4  A8 DD 00 78 */	lha r6, 0x78(r29)
 /* 8041BC38 003E51F8  A8 BD 00 7A */	lha r5, 0x7a(r29)
@@ -658,7 +658,7 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BC44 003E5204  EF 7B 01 B2 */	fmuls f27, f27, f6
 /* 8041BC48 003E5208  7C 05 30 00 */	cmpw r5, r6
 /* 8041BC4C 003E520C  EF BD 01 72 */	fmuls f29, f29, f5
-/* 8041BC50 003E5210  C3 42 C4 9C */	lfs f26, lbl_8066C81C@sda21(r2)
+/* 8041BC50 003E5210  C3 42 C4 9C */	lfs f26, float_8066C81C@sda21(r2)
 /* 8041BC54 003E5214  EC C9 02 72 */	fmuls f6, f9, f9
 /* 8041BC58 003E5218  EC AA 02 B2 */	fmuls f5, f10, f10
 /* 8041BC5C 003E521C  EC 43 00 B2 */	fmuls f2, f3, f2
@@ -685,18 +685,18 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BCAC 003E526C  7C 00 07 74 */	extsb r0, r0
 .L_8041BCB0:
 /* 8041BCB0 003E5270  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 8041BCB4 003E5274  C8 42 C4 C0 */	lfd f2, lbl_8066C840@sda21(r2)
+/* 8041BCB4 003E5274  C8 42 C4 C0 */	lfd f2, double_8066C840@sda21(r2)
 /* 8041BCB8 003E5278  90 01 00 44 */	stw r0, 0x44(r1)
-/* 8041BCBC 003E527C  C0 02 C4 A8 */	lfs f0, lbl_8066C828@sda21(r2)
+/* 8041BCBC 003E527C  C0 02 C4 A8 */	lfs f0, float_8066C828@sda21(r2)
 /* 8041BCC0 003E5280  C8 21 00 40 */	lfd f1, 0x40(r1)
-/* 8041BCC4 003E5284  C0 62 C4 98 */	lfs f3, lbl_8066C818@sda21(r2)
+/* 8041BCC4 003E5284  C0 62 C4 98 */	lfs f3, float_8066C818@sda21(r2)
 /* 8041BCC8 003E5288  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8041BCCC 003E528C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8041BCD0 003E5290  FC 00 18 40 */	fcmpo cr0, f0, f3
 /* 8041BCD4 003E5294  40 81 00 08 */	ble .L_8041BCDC
 /* 8041BCD8 003E5298  48 00 00 18 */	b .L_8041BCF0
 .L_8041BCDC:
-/* 8041BCDC 003E529C  C0 62 C4 AC */	lfs f3, lbl_8066C82C@sda21(r2)
+/* 8041BCDC 003E529C  C0 62 C4 AC */	lfs f3, float_8066C82C@sda21(r2)
 /* 8041BCE0 003E52A0  FC 00 18 40 */	fcmpo cr0, f0, f3
 /* 8041BCE4 003E52A4  40 80 00 08 */	bge .L_8041BCEC
 /* 8041BCE8 003E52A8  48 00 00 08 */	b .L_8041BCF0
@@ -712,7 +712,7 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BD08 003E52C8  A8 DD 00 7E */	lha r6, 0x7e(r29)
 /* 8041BD0C 003E52CC  A8 BD 00 80 */	lha r5, 0x80(r29)
 /* 8041BD10 003E52D0  EF 5A 00 B2 */	fmuls f26, f26, f2
-/* 8041BD14 003E52D4  C3 22 C4 9C */	lfs f25, lbl_8066C81C@sda21(r2)
+/* 8041BD14 003E52D4  C3 22 C4 9C */	lfs f25, float_8066C81C@sda21(r2)
 /* 8041BD18 003E52D8  7C 05 30 00 */	cmpw r5, r6
 /* 8041BD1C 003E52DC  EF 5A 00 2A */	fadds f26, f26, f0
 /* 8041BD20 003E52E0  EF 5A 08 2A */	fadds f26, f26, f1
@@ -732,18 +732,18 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BD54 003E5314  7C 00 07 74 */	extsb r0, r0
 .L_8041BD58:
 /* 8041BD58 003E5318  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 8041BD5C 003E531C  C8 42 C4 C0 */	lfd f2, lbl_8066C840@sda21(r2)
+/* 8041BD5C 003E531C  C8 42 C4 C0 */	lfd f2, double_8066C840@sda21(r2)
 /* 8041BD60 003E5320  90 01 00 3C */	stw r0, 0x3c(r1)
-/* 8041BD64 003E5324  C0 02 C4 A8 */	lfs f0, lbl_8066C828@sda21(r2)
+/* 8041BD64 003E5324  C0 02 C4 A8 */	lfs f0, float_8066C828@sda21(r2)
 /* 8041BD68 003E5328  C8 21 00 38 */	lfd f1, 0x38(r1)
-/* 8041BD6C 003E532C  C0 62 C4 B0 */	lfs f3, lbl_8066C830@sda21(r2)
+/* 8041BD6C 003E532C  C0 62 C4 B0 */	lfs f3, float_8066C830@sda21(r2)
 /* 8041BD70 003E5330  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8041BD74 003E5334  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8041BD78 003E5338  FC 00 18 40 */	fcmpo cr0, f0, f3
 /* 8041BD7C 003E533C  40 81 00 08 */	ble .L_8041BD84
 /* 8041BD80 003E5340  48 00 00 18 */	b .L_8041BD98
 .L_8041BD84:
-/* 8041BD84 003E5344  C0 62 C4 9C */	lfs f3, lbl_8066C81C@sda21(r2)
+/* 8041BD84 003E5344  C0 62 C4 9C */	lfs f3, float_8066C81C@sda21(r2)
 /* 8041BD88 003E5348  FC 00 18 40 */	fcmpo cr0, f0, f3
 /* 8041BD8C 003E534C  40 80 00 08 */	bge .L_8041BD94
 /* 8041BD90 003E5350  48 00 00 08 */	b .L_8041BD98
@@ -752,7 +752,7 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 .L_8041BD98:
 /* 8041BD98 003E5358  EF 39 18 2A */	fadds f25, f25, f3
 /* 8041BD9C 003E535C  C0 3D 00 14 */	lfs f1, 0x14(r29)
-/* 8041BDA0 003E5360  C3 02 C4 9C */	lfs f24, lbl_8066C81C@sda21(r2)
+/* 8041BDA0 003E5360  C3 02 C4 9C */	lfs f24, float_8066C81C@sda21(r2)
 /* 8041BDA4 003E5364  C0 1D 00 98 */	lfs f0, 0x98(r29)
 /* 8041BDA8 003E5368  EF 39 08 2A */	fadds f25, f25, f1
 /* 8041BDAC 003E536C  C0 23 00 10 */	lfs f1, 0x10(r3)
@@ -770,15 +770,15 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 .L_8041BDDC:
 /* 8041BDDC 003E539C  88 1D 00 92 */	lbz r0, 0x92(r29)
 /* 8041BDE0 003E53A0  3B 21 00 28 */	addi r25, r1, 0x28
-/* 8041BDE4 003E53A4  C2 C2 C4 9C */	lfs f22, lbl_8066C81C@sda21(r2)
+/* 8041BDE4 003E53A4  C2 C2 C4 9C */	lfs f22, float_8066C81C@sda21(r2)
 /* 8041BDE8 003E53A8  3B 40 00 00 */	li r26, 0
 /* 8041BDEC 003E53AC  90 01 00 44 */	stw r0, 0x44(r1)
-/* 8041BDF0 003E53B0  CB C2 C4 B8 */	lfd f30, lbl_8066C838@sda21(r2)
+/* 8041BDF0 003E53B0  CB C2 C4 B8 */	lfd f30, double_8066C838@sda21(r2)
 /* 8041BDF4 003E53B4  FE A0 B0 90 */	fmr f21, f22
 /* 8041BDF8 003E53B8  C8 21 00 40 */	lfd f1, 0x40(r1)
-/* 8041BDFC 003E53BC  C3 E2 C4 A0 */	lfs f31, lbl_8066C820@sda21(r2)
+/* 8041BDFC 003E53BC  C3 E2 C4 A0 */	lfs f31, float_8066C820@sda21(r2)
 /* 8041BE00 003E53C0  EC 21 F0 28 */	fsubs f1, f1, f30
-/* 8041BE04 003E53C4  C0 02 C4 98 */	lfs f0, lbl_8066C818@sda21(r2)
+/* 8041BE04 003E53C4  C0 02 C4 98 */	lfs f0, float_8066C818@sda21(r2)
 /* 8041BE08 003E53C8  C0 43 00 28 */	lfs f2, 0x28(r3)
 /* 8041BE0C 003E53CC  8B 83 00 1D */	lbz r28, 0x1d(r3)
 /* 8041BE10 003E53D0  EC 21 F8 24 */	fdivs f1, f1, f31
@@ -806,7 +806,7 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BE64 003E5424  D0 19 00 00 */	stfs f0, 0(r25)
 /* 8041BE68 003E5428  3B 39 00 04 */	addi r25, r25, 4
 /* 8041BE6C 003E542C  41 80 FF B4 */	blt .L_8041BE20
-/* 8041BE70 003E5430  C3 C2 C4 9C */	lfs f30, lbl_8066C81C@sda21(r2)
+/* 8041BE70 003E5430  C3 C2 C4 9C */	lfs f30, float_8066C81C@sda21(r2)
 /* 8041BE74 003E5434  3B 21 00 18 */	addi r25, r1, 0x18
 /* 8041BE78 003E5438  3B 41 00 08 */	addi r26, r1, 8
 /* 8041BE7C 003E543C  3B 60 00 00 */	li r27, 0
@@ -1205,9 +1205,9 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C3E8 003E59A8  6F 60 80 00 */	xoris r0, r27, 0x8000
 /* 8041C3EC 003E59AC  57 43 06 3E */	clrlwi r3, r26, 0x18
 /* 8041C3F0 003E59B0  90 01 00 34 */	stw r0, 0x34(r1)
-/* 8041C3F4 003E59B4  C8 42 C4 C0 */	lfd f2, lbl_8066C840@sda21(r2)
+/* 8041C3F4 003E59B4  C8 42 C4 C0 */	lfd f2, double_8066C840@sda21(r2)
 /* 8041C3F8 003E59B8  C8 21 00 30 */	lfd f1, 0x30(r1)
-/* 8041C3FC 003E59BC  C0 02 C4 A0 */	lfs f0, lbl_8066C820@sda21(r2)
+/* 8041C3FC 003E59BC  C0 02 C4 A0 */	lfs f0, float_8066C820@sda21(r2)
 /* 8041C400 003E59C0  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8041C404 003E59C4  90 7E 00 C8 */	stw r3, 0xc8(r30)
 /* 8041C408 003E59C8  EC 01 00 24 */	fdivs f0, f1, f0
@@ -1231,9 +1231,9 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C448 003E5A08  6F 60 80 00 */	xoris r0, r27, 0x8000
 /* 8041C44C 003E5A0C  57 43 06 3E */	clrlwi r3, r26, 0x18
 /* 8041C450 003E5A10  90 01 00 3C */	stw r0, 0x3c(r1)
-/* 8041C454 003E5A14  C8 42 C4 C0 */	lfd f2, lbl_8066C840@sda21(r2)
+/* 8041C454 003E5A14  C8 42 C4 C0 */	lfd f2, double_8066C840@sda21(r2)
 /* 8041C458 003E5A18  C8 21 00 38 */	lfd f1, 0x38(r1)
-/* 8041C45C 003E5A1C  C0 02 C4 A0 */	lfs f0, lbl_8066C820@sda21(r2)
+/* 8041C45C 003E5A1C  C0 02 C4 A0 */	lfs f0, float_8066C820@sda21(r2)
 /* 8041C460 003E5A20  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8041C464 003E5A24  90 7E 00 C8 */	stw r3, 0xc8(r30)
 /* 8041C468 003E5A28  EC 01 00 24 */	fdivs f0, f1, f0
@@ -1359,7 +1359,7 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C614 003E5BD4  2C 00 00 00 */	cmpwi r0, 0
 /* 8041C618 003E5BD8  41 82 00 24 */	beq .L_8041C63C
 /* 8041C61C 003E5BDC  88 19 00 89 */	lbz r0, 0x89(r25)
-/* 8041C620 003E5BE0  C8 42 C4 C0 */	lfd f2, lbl_8066C840@sda21(r2)
+/* 8041C620 003E5BE0  C8 42 C4 C0 */	lfd f2, double_8066C840@sda21(r2)
 /* 8041C624 003E5BE4  7C 1A 00 50 */	subf r0, r26, r0
 /* 8041C628 003E5BE8  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8041C62C 003E5BEC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1376,7 +1376,7 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C654 003E5C14  4B FF 86 5D */	bl SetSweepParam__Q44nw4r3snd6detail7ChannelFfib
 /* 8041C658 003E5C18  48 00 00 60 */	b .L_8041C6B8
 .L_8041C65C:
-/* 8041C65C 003E5C1C  C0 02 C4 9C */	lfs f0, lbl_8066C81C@sda21(r2)
+/* 8041C65C 003E5C1C  C0 02 C4 9C */	lfs f0, float_8066C81C@sda21(r2)
 /* 8041C660 003E5C20  7C 00 01 D6 */	mullw r0, r0, r0
 /* 8041C664 003E5C24  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8041C668 003E5C28  4C 41 13 82 */	cror 2, 1, 2
@@ -1387,7 +1387,7 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C678 003E5C38  FC 60 08 50 */	fneg f3, f1
 .L_8041C67C:
 /* 8041C67C 003E5C3C  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 8041C680 003E5C40  C8 42 C4 C0 */	lfd f2, lbl_8066C840@sda21(r2)
+/* 8041C680 003E5C40  C8 42 C4 C0 */	lfd f2, double_8066C840@sda21(r2)
 /* 8041C684 003E5C44  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 8041C688 003E5C48  7F C3 F3 78 */	mr r3, r30
 /* 8041C68C 003E5C4C  38 A0 00 01 */	li r5, 1
@@ -1488,58 +1488,58 @@ lbl_8056E490:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C818
-lbl_8066C818:
+.global float_8066C818
+float_8066C818:
 	# ROM: 0x576678
 	.float 1.0
 
 
-.global lbl_8066C81C
-lbl_8066C81C:
+.global float_8066C81C
+float_8066C81C:
 	# ROM: 0x57667C
 	.4byte 0
 
 
-.global lbl_8066C820
-lbl_8066C820:
+.global float_8066C820
+float_8066C820:
 	# ROM: 0x576680
 	.4byte 0x42FE0000
 
 
-.global lbl_8066C824
-lbl_8066C824:
+.global float_8066C824
+float_8066C824:
 	# ROM: 0x576684
 	.4byte 0x3C000000
 
 
-.global lbl_8066C828
-lbl_8066C828:
+.global float_8066C828
+float_8066C828:
 	# ROM: 0x576688
 	.4byte 0x427C0000
 
 
-.global lbl_8066C82C
-lbl_8066C82C:
+.global float_8066C82C
+float_8066C82C:
 	# ROM: 0x57668C
 	.float -1.0
 
 
-.global lbl_8066C830
-lbl_8066C830:
+.global float_8066C830
+float_8066C830:
 	# ROM: 0x576690
 	.4byte 0x40000000
 	.4byte 0
 
 
-.global lbl_8066C838
-lbl_8066C838:
+.global double_8066C838
+double_8066C838:
 	# ROM: 0x576698
 	.4byte 0x43300000
 	.4byte 0
 
 
-.global lbl_8066C840
-lbl_8066C840:
+.global double_8066C840
+double_8066C840:
 	# ROM: 0x5766A0
 	.4byte 0x43300000
 	.4byte 0x80000000

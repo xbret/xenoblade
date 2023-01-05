@@ -64,9 +64,9 @@ func_802B92A4:
 /* 802B92B0 00282870  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802B92B4 00282874  7C 7F 1B 78 */	mr r31, r3
 /* 802B92B8 00282878  48 17 E2 FD */	bl func_804375B4
-/* 802B92BC 0028287C  3C 80 80 51 */	lis r4, lbl_8050CDC8@ha
+/* 802B92BC 0028287C  3C 80 80 51 */	lis r4, CBattery_strpool@ha
 /* 802B92C0 00282880  7F E5 FB 78 */	mr r5, r31
-/* 802B92C4 00282884  38 84 CD C8 */	addi r4, r4, lbl_8050CDC8@l
+/* 802B92C4 00282884  38 84 CD C8 */	addi r4, r4, CBattery_strpool@l
 /* 802B92C8 00282888  38 C0 00 00 */	li r6, 0
 /* 802B92CC 0028288C  38 E0 00 00 */	li r7, 0
 /* 802B92D0 00282890  48 19 54 C5 */	bl func_8044E794
@@ -173,9 +173,9 @@ func_802B93EC:
 /* 802B9418 002829D8  38 00 00 04 */	li r0, 4
 /* 802B941C 002829DC  98 03 00 24 */	stb r0, 0x24(r3)
 .L_802B9420:
-/* 802B9420 002829E0  3F C0 80 51 */	lis r30, lbl_8050CDC8@ha
+/* 802B9420 002829E0  3F C0 80 51 */	lis r30, CBattery_strpool@ha
 /* 802B9424 002829E4  3B A0 00 01 */	li r29, 1
-/* 802B9428 002829E8  3B DE CD C8 */	addi r30, r30, lbl_8050CDC8@l
+/* 802B9428 002829E8  3B DE CD C8 */	addi r30, r30, CBattery_strpool@l
 /* 802B942C 002829EC  3B E0 FF FF */	li r31, -1
 .L_802B9430:
 /* 802B9430 002829F0  38 61 00 08 */	addi r3, r1, 8
@@ -243,9 +243,9 @@ func_802B94D0:
 /* 802B9508 00282AC8  48 00 00 9C */	b .L_802B95A4
 .L_802B950C:
 /* 802B950C 00282ACC  48 17 E0 A9 */	bl func_804375B4
-/* 802B9510 00282AD0  3F C0 80 51 */	lis r30, lbl_8050CDC8@ha
+/* 802B9510 00282AD0  3F C0 80 51 */	lis r30, CBattery_strpool@ha
 /* 802B9514 00282AD4  7C 64 1B 78 */	mr r4, r3
-/* 802B9518 00282AD8  3B DE CD C8 */	addi r30, r30, lbl_8050CDC8@l
+/* 802B9518 00282AD8  3B DE CD C8 */	addi r30, r30, CBattery_strpool@l
 /* 802B951C 00282ADC  38 7C 00 04 */	addi r3, r28, 4
 /* 802B9520 00282AE0  38 DE 00 1B */	addi r6, r30, 0x1b
 /* 802B9524 00282AE4  38 A0 0C 00 */	li r5, 0xc00
@@ -297,8 +297,8 @@ CBattery_typestr:
 	.4byte 0
 
 
-.global lbl_8050CDC8
-lbl_8050CDC8:
+.global CBattery_strpool
+CBattery_strpool:
 	.asciz "/menu/Battery.arc"
 	.asciz "pic_%02d"
 	.asciz "CBattery"

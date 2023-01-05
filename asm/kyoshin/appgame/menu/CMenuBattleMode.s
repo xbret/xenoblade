@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global func_801A0374
-func_801A0374:
+.global __ct__CMenuBattleMode
+__ct__CMenuBattleMode:
 /* 801A0374 00169934  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801A0378 00169938  7C 08 02 A6 */	mflr r0
 /* 801A037C 0016993C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -23,7 +23,7 @@ func_801A0374:
 /* 801A03AC 0016996C  48 29 72 09 */	bl func_804375B4
 /* 801A03B0 00169970  7C 64 1B 78 */	mr r4, r3
 /* 801A03B4 00169974  38 60 00 84 */	li r3, 0x84
-/* 801A03B8 00169978  48 29 46 A5 */	bl func_80434A5C
+/* 801A03B8 00169978  48 29 46 A5 */	bl mm_malloc
 /* 801A03BC 0016997C  2C 03 00 00 */	cmpwi r3, 0
 /* 801A03C0 00169980  7C 7E 1B 78 */	mr r30, r3
 /* 801A03C4 00169984  41 82 00 90 */	beq .L_801A0454
@@ -218,6 +218,6 @@ lbl_8000F600:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-	.4byte func_801A0374
+	.4byte __ct__CMenuBattleMode
 	.4byte 0x00000118
 	.4byte lbl_8000F600

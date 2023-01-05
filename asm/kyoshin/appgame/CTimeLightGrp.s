@@ -14,7 +14,7 @@ func_80059EB8:
 /* 80059ED4 00023494  38 C3 00 10 */	addi r6, r3, 0x10
 /* 80059ED8 00023498  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80059EDC 0002349C  3B E0 00 00 */	li r31, 0
-/* 80059EE0 000234A0  C0 02 85 48 */	lfs f0, lbl_806688C8@sda21(r2)
+/* 80059EE0 000234A0  C0 02 85 48 */	lfs f0, float_806688C8@sda21(r2)
 /* 80059EE4 000234A4  93 C1 00 08 */	stw r30, 8(r1)
 /* 80059EE8 000234A8  7C 7E 1B 78 */	mr r30, r3
 /* 80059EEC 000234AC  90 A3 00 00 */	stw r5, 0(r3)
@@ -466,8 +466,8 @@ __RTTI___reslist_base_CVirtualLightObj:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_806688C8
-lbl_806688C8:
+.global float_806688C8
+float_806688C8:
 	.float 1.0
 	.4byte 0
 

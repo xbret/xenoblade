@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802B219C
-func_802B219C:
+.global __ct__CMenuGameClear
+__ct__CMenuGameClear:
 /* 802B219C 0027B75C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B21A0 0027B760  7C 08 02 A6 */	mflr r0
 /* 802B21A4 0027B764  90 01 00 24 */	stw r0, 0x24(r1)
@@ -23,7 +23,7 @@ func_802B219C:
 /* 802B21D8 0027B798  3C A0 00 01 */	lis r5, 0x00012E60@ha
 /* 802B21DC 0027B79C  7C 64 1B 78 */	mr r4, r3
 /* 802B21E0 0027B7A0  38 65 2E 60 */	addi r3, r5, 0x00012E60@l
-/* 802B21E4 0027B7A4  48 18 28 79 */	bl func_80434A5C
+/* 802B21E4 0027B7A4  48 18 28 79 */	bl mm_malloc
 /* 802B21E8 0027B7A8  2C 03 00 00 */	cmpwi r3, 0
 /* 802B21EC 0027B7AC  7C 7D 1B 78 */	mr r29, r3
 /* 802B21F0 0027B7B0  41 82 00 B8 */	beq .L_802B22A8
@@ -448,7 +448,7 @@ lbl_8001B8AC:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_802B219C
+.4byte __ct__CMenuGameClear
 	.4byte 0x00000144
 	.4byte lbl_8001B840
 	.4byte func_802B22F4

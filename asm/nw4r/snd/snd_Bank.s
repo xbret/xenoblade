@@ -93,15 +93,15 @@ NoteOn__Q44nw4r3snd6detail4BankCFRCQ44nw4r3snd6detail10NoteOnInfo:
 /* 804118AC 003DAE6C  80 1E 00 08 */	lwz r0, 8(r30)
 /* 804118B0 003DAE70  90 83 00 C8 */	stw r4, 0xc8(r3)
 /* 804118B4 003DAE74  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 804118B8 003DAE78  C8 22 C3 48 */	lfd f1, lbl_8066C6C8@sda21(r2)
+/* 804118B8 003DAE78  C8 22 C3 48 */	lfd f1, double_8066C6C8@sda21(r2)
 /* 804118BC 003DAE7C  88 81 00 21 */	lbz r4, 0x21(r1)
 /* 804118C0 003DAE80  90 01 00 AC */	stw r0, 0xac(r1)
-/* 804118C4 003DAE84  C0 42 C3 38 */	lfs f2, lbl_8066C6B8@sda21(r2)
+/* 804118C4 003DAE84  C0 42 C3 38 */	lfs f2, float_8066C6B8@sda21(r2)
 /* 804118C8 003DAE88  90 83 00 CC */	stw r4, 0xcc(r3)
 /* 804118CC 003DAE8C  C8 01 00 A8 */	lfd f0, 0xa8(r1)
 /* 804118D0 003DAE90  88 01 00 23 */	lbz r0, 0x23(r1)
 /* 804118D4 003DAE94  EC 60 08 28 */	fsubs f3, f0, f1
-/* 804118D8 003DAE98  C8 22 C3 50 */	lfd f1, lbl_8066C6D0@sda21(r2)
+/* 804118D8 003DAE98  C8 22 C3 50 */	lfd f1, double_8066C6D0@sda21(r2)
 /* 804118DC 003DAE9C  90 01 00 B4 */	stw r0, 0xb4(r1)
 /* 804118E0 003DAEA0  C8 01 00 B0 */	lfd f0, 0xb0(r1)
 /* 804118E4 003DAEA4  EC 63 10 24 */	fdivs f3, f3, f2
@@ -129,16 +129,16 @@ NoteOn__Q44nw4r3snd6detail4BankCFRCQ44nw4r3snd6detail10NoteOnInfo:
 /* 8041193C 003DAEFC  88 61 00 22 */	lbz r3, 0x22(r1)
 /* 80411940 003DAF00  80 1E 00 10 */	lwz r0, 0x10(r30)
 /* 80411944 003DAF04  38 63 FF C0 */	addi r3, r3, -64
-/* 80411948 003DAF08  C8 82 C3 48 */	lfd f4, lbl_8066C6C8@sda21(r2)
+/* 80411948 003DAF08  C8 82 C3 48 */	lfd f4, double_8066C6C8@sda21(r2)
 /* 8041194C 003DAF0C  6C 63 80 00 */	xoris r3, r3, 0x8000
 /* 80411950 003DAF10  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80411954 003DAF14  90 61 00 AC */	stw r3, 0xac(r1)
-/* 80411958 003DAF18  C0 42 C3 3C */	lfs f2, lbl_8066C6BC@sda21(r2)
+/* 80411958 003DAF18  C0 42 C3 3C */	lfs f2, float_8066C6BC@sda21(r2)
 /* 8041195C 003DAF1C  90 01 00 B4 */	stw r0, 0xb4(r1)
 /* 80411960 003DAF20  C8 01 00 A8 */	lfd f0, 0xa8(r1)
 /* 80411964 003DAF24  C8 21 00 B0 */	lfd f1, 0xb0(r1)
 /* 80411968 003DAF28  EC 60 20 28 */	fsubs f3, f0, f4
-/* 8041196C 003DAF2C  C0 02 C3 40 */	lfs f0, lbl_8066C6C0@sda21(r2)
+/* 8041196C 003DAF2C  C0 02 C3 40 */	lfs f0, float_8066C6C0@sda21(r2)
 /* 80411970 003DAF30  EC 21 20 28 */	fsubs f1, f1, f4
 /* 80411974 003DAF34  EC 63 10 24 */	fdivs f3, f3, f2
 /* 80411978 003DAF38  EC 21 10 24 */	fdivs f1, f1, f2
@@ -176,34 +176,34 @@ NoteOn__Q44nw4r3snd6detail4BankCFRCQ44nw4r3snd6detail10NoteOnInfo:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C6B8
-lbl_8066C6B8:
+.global float_8066C6B8
+float_8066C6B8:
 	# ROM: 0x576518
 	.4byte 0x42FE0000
 
 
-.global lbl_8066C6BC
-lbl_8066C6BC:
+.global float_8066C6BC
+float_8066C6BC:
 	# ROM: 0x57651C
 	.4byte 0x427C0000
 
 
-.global lbl_8066C6C0
-lbl_8066C6C0:
+.global float_8066C6C0
+float_8066C6C0:
 	# ROM: 0x576520
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_8066C6C8
-lbl_8066C6C8:
+.global double_8066C6C8
+double_8066C6C8:
 	# ROM: 0x576528
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
-.global lbl_8066C6D0
-lbl_8066C6D0:
+.global double_8066C6D0
+double_8066C6D0:
 	# ROM: 0x576530
 	.4byte 0x43300000
 	.4byte 0

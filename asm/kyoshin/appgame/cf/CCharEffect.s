@@ -649,7 +649,7 @@ func_8015C2B0:
 /* 8015C3AC 0012596C  7F E3 FB 78 */	mr r3, r31
 /* 8015C3B0 00125970  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8015C3B4 00125974  80 84 00 98 */	lwz r4, 0x98(r4)
-/* 8015C3B8 00125978  C0 22 9A 70 */	lfs f1, lbl_80669DF0@sda21(r2)
+/* 8015C3B8 00125978  C0 22 9A 70 */	lfs f1, float_80669DF0@sda21(r2)
 /* 8015C3BC 0012597C  C0 04 02 E8 */	lfs f0, 0x2e8(r4)
 /* 8015C3C0 00125980  81 8C 00 DC */	lwz r12, 0xdc(r12)
 /* 8015C3C4 00125984  EC 21 00 32 */	fmuls f1, f1, f0
@@ -868,9 +868,9 @@ func_8015C404:
 /* 8015C6D8 00125C98  41 82 00 24 */	beq .L_8015C6FC
 /* 8015C6DC 00125C9C  3C 00 43 30 */	lis r0, 0x4330
 /* 8015C6E0 00125CA0  90 81 00 1C */	stw r4, 0x1c(r1)
-/* 8015C6E4 00125CA4  C8 22 9A 78 */	lfd f1, lbl_80669DF8@sda21(r2)
+/* 8015C6E4 00125CA4  C8 22 9A 78 */	lfd f1, double_80669DF8@sda21(r2)
 /* 8015C6E8 00125CA8  90 01 00 18 */	stw r0, 0x18(r1)
-/* 8015C6EC 00125CAC  C0 42 9A 74 */	lfs f2, lbl_80669DF4@sda21(r2)
+/* 8015C6EC 00125CAC  C0 42 9A 74 */	lfs f2, float_80669DF4@sda21(r2)
 /* 8015C6F0 00125CB0  C8 01 00 18 */	lfd f0, 0x18(r1)
 /* 8015C6F4 00125CB4  EC 20 08 28 */	fsubs f1, f0, f1
 /* 8015C6F8 00125CB8  48 38 75 E5 */	bl func_804E3CDC
@@ -1437,20 +1437,20 @@ __RTTI__cf_CCharEffect:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_80669DF0
-lbl_80669DF0:
+.global float_80669DF0
+float_80669DF0:
 	# ROM: 0x573C50
 	.float 0.25
 
 
-.global lbl_80669DF4
-lbl_80669DF4:
+.global float_80669DF4
+float_80669DF4:
 	# ROM: 0x573C54
 	.float 1.0
 
 
-.global lbl_80669DF8
-lbl_80669DF8:
+.global double_80669DF8
+double_80669DF8:
 	# ROM: 0x573C58
 	.4byte 0x43300000
 	.4byte 0

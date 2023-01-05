@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8029E7E4
-func_8029E7E4:
+.global __ct__CMenuSkipTimer
+__ct__CMenuSkipTimer:
 /* 8029E7E4 00267DA4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029E7E8 00267DA8  7C 08 02 A6 */	mflr r0
 /* 8029E7EC 00267DAC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -437,11 +437,11 @@ func_8029EDE4:
 /* 8029EE10 002683D0  48 19 87 A5 */	bl func_804375B4
 /* 8029EE14 002683D4  7C 64 1B 78 */	mr r4, r3
 /* 8029EE18 002683D8  38 60 01 54 */	li r3, 0x154
-/* 8029EE1C 002683DC  48 19 5C 41 */	bl func_80434A5C
+/* 8029EE1C 002683DC  48 19 5C 41 */	bl mm_malloc
 /* 8029EE20 002683E0  2C 03 00 00 */	cmpwi r3, 0
 /* 8029EE24 002683E4  41 82 00 0C */	beq .L_8029EE30
 /* 8029EE28 002683E8  7F E4 FB 78 */	mr r4, r31
-/* 8029EE2C 002683EC  4B FF F9 B9 */	bl func_8029E7E4
+/* 8029EE2C 002683EC  4B FF F9 B9 */	bl __ct__CMenuSkipTimer
 .L_8029EE30:
 /* 8029EE30 002683F0  90 6D B1 B0 */	stw r3, lbl_80667330@sda21(r13)
 /* 8029EE34 002683F4  7F C4 F3 78 */	mr r4, r30
@@ -809,7 +809,7 @@ lbl_8001A6C0:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_8029E7E4
+.4byte __ct__CMenuSkipTimer
 	.4byte 0x000000C0
 	.4byte lbl_8001A5AC
 	.4byte func_8029E8A4

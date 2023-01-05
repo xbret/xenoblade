@@ -7,7 +7,7 @@ GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallba
 /* 80413B14 003DD0D4  38 80 00 6F */	li r4, 0x6f
 /* 80413B18 003DD0D8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80413B1C 003DD0DC  3C 00 43 30 */	lis r0, 0x4330
-/* 80413B20 003DD0E0  C8 42 C3 78 */	lfd f2, lbl_8066C6F8@sda21(r2)
+/* 80413B20 003DD0E0  C8 42 C3 78 */	lfd f2, double_8066C6F8@sda21(r2)
 /* 80413B24 003DD0E4  6C 83 80 00 */	xoris r3, r4, 0x8000
 /* 80413B28 003DD0E8  90 01 00 08 */	stw r0, 8(r1)
 /* 80413B2C 003DD0EC  90 61 00 0C */	stw r3, 0xc(r1)
@@ -47,7 +47,7 @@ GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallba
 /* 80413B9C 003DD15C  38 80 00 60 */	li r4, 0x60
 /* 80413BA0 003DD160  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80413BA4 003DD164  3C 00 43 30 */	lis r0, 0x4330
-/* 80413BA8 003DD168  C8 42 C3 78 */	lfd f2, lbl_8066C6F8@sda21(r2)
+/* 80413BA8 003DD168  C8 42 C3 78 */	lfd f2, double_8066C6F8@sda21(r2)
 /* 80413BAC 003DD16C  6C 83 80 00 */	xoris r3, r4, 0x8000
 /* 80413BB0 003DD170  90 01 00 08 */	stw r0, 8(r1)
 /* 80413BB4 003DD174  90 61 00 0C */	stw r3, 0xc(r1)
@@ -84,14 +84,14 @@ GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallba
 
 .global GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef:
-/* 80413C24 003DD1E4  C0 02 C3 80 */	lfs f0, lbl_8066C700@sda21(r2)
+/* 80413C24 003DD1E4  C0 02 C3 80 */	lfs f0, float_8066C700@sda21(r2)
 /* 80413C28 003DD1E8  38 80 00 79 */	li r4, 0x79
 /* 80413C2C 003DD1EC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80413C30 003DD1F0  6C 83 80 00 */	xoris r3, r4, 0x8000
 /* 80413C34 003DD1F4  3C 00 43 30 */	lis r0, 0x4330
 /* 80413C38 003DD1F8  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80413C3C 003DD1FC  90 61 00 0C */	stw r3, 0xc(r1)
-/* 80413C40 003DD200  C8 42 C3 78 */	lfd f2, lbl_8066C6F8@sda21(r2)
+/* 80413C40 003DD200  C8 42 C3 78 */	lfd f2, double_8066C6F8@sda21(r2)
 /* 80413C44 003DD204  90 01 00 08 */	stw r0, 8(r1)
 /* 80413C48 003DD208  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80413C4C 003DD20C  C8 01 00 08 */	lfd f0, 8(r1)
@@ -127,14 +127,14 @@ GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCal
 
 .global GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef:
-/* 80413CB8 003DD278  C0 02 C3 80 */	lfs f0, lbl_8066C700@sda21(r2)
+/* 80413CB8 003DD278  C0 02 C3 80 */	lfs f0, float_8066C700@sda21(r2)
 /* 80413CBC 003DD27C  38 80 00 5C */	li r4, 0x5c
 /* 80413CC0 003DD280  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80413CC4 003DD284  6C 83 80 00 */	xoris r3, r4, 0x8000
 /* 80413CC8 003DD288  3C 00 43 30 */	lis r0, 0x4330
 /* 80413CCC 003DD28C  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80413CD0 003DD290  90 61 00 0C */	stw r3, 0xc(r1)
-/* 80413CD4 003DD294  C8 42 C3 78 */	lfd f2, lbl_8066C6F8@sda21(r2)
+/* 80413CD4 003DD294  C8 42 C3 78 */	lfd f2, double_8066C6F8@sda21(r2)
 /* 80413CD8 003DD298  90 01 00 08 */	stw r0, 8(r1)
 /* 80413CDC 003DD29C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80413CE0 003DD2A0  C8 01 00 08 */	lfd f0, 8(r1)
@@ -170,14 +170,14 @@ GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCa
 
 .global GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef:
-/* 80413D4C 003DD30C  C0 02 C3 80 */	lfs f0, lbl_8066C700@sda21(r2)
+/* 80413D4C 003DD30C  C0 02 C3 80 */	lfs f0, float_8066C700@sda21(r2)
 /* 80413D50 003DD310  38 80 00 5C */	li r4, 0x5c
 /* 80413D54 003DD314  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80413D58 003DD318  6C 83 80 00 */	xoris r3, r4, 0x8000
 /* 80413D5C 003DD31C  3C 00 43 30 */	lis r0, 0x4330
 /* 80413D60 003DD320  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80413D64 003DD324  90 61 00 0C */	stw r3, 0xc(r1)
-/* 80413D68 003DD328  C8 42 C3 78 */	lfd f2, lbl_8066C6F8@sda21(r2)
+/* 80413D68 003DD328  C8 42 C3 78 */	lfd f2, double_8066C6F8@sda21(r2)
 /* 80413D6C 003DD32C  90 01 00 08 */	stw r0, 8(r1)
 /* 80413D70 003DD330  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80413D74 003DD334  C8 01 00 08 */	lfd f0, 8(r1)
@@ -1533,15 +1533,15 @@ lbl_805231B4:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C6F8
-lbl_8066C6F8:
+.global double_8066C6F8
+double_8066C6F8:
 	# ROM: 0x576558
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
-.global lbl_8066C700
-lbl_8066C700:
+.global float_8066C700
+float_8066C700:
 	# ROM: 0x576560
 	.4byte 0x40000000
 	.4byte 0

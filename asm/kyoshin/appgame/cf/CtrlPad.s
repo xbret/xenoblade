@@ -362,7 +362,7 @@ func_80096974:
 /* 80096DDC 0006039C  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80096DE0 000603A0  D0 41 00 28 */	stfs f2, 0x28(r1)
 /* 80096DE4 000603A4  48 37 40 75 */	bl Atan2FIdx__Q24nw4r4mathFff
-/* 80096DE8 000603A8  C0 02 8C 20 */	lfs f0, lbl_80668FA0@sda21(r2)
+/* 80096DE8 000603A8  C0 02 8C 20 */	lfs f0, float_80668FA0@sda21(r2)
 /* 80096DEC 000603AC  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80096DF0 000603B0  D0 19 00 10 */	stfs f0, 0x10(r25)
 /* 80096DF4 000603B4  48 00 00 08 */	b .L_80096DFC
@@ -709,8 +709,8 @@ __RTTI__cf_CtrlRemote:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_80668FA0
-lbl_80668FA0:
+.global float_80668FA0
+float_80668FA0:
 	# ROM: 0x572E00
 	.4byte 0x3CC90FDB
 	.4byte 0

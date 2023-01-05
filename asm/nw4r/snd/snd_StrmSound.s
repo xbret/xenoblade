@@ -20,7 +20,7 @@ __ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager_Q44
 /* 80424FEC 003EE5AC  38 84 E5 D0 */	addi r4, r4, lbl_8056E5D0@l
 /* 80424FF0 003EE5B0  90 9F 00 00 */	stw r4, 0(r31)
 /* 80424FF4 003EE5B4  4B FF D5 A5 */	bl __ct__Q44nw4r3snd6detail10StrmPlayerFv
-/* 80424FF8 003EE5B8  C0 02 C5 08 */	lfs f0, lbl_8066C888@sda21(r2)
+/* 80424FF8 003EE5B8  C0 02 C5 08 */	lfs f0, float_8066C888@sda21(r2)
 /* 80424FFC 003EE5BC  38 BF 0E 5C */	addi r5, r31, 0xe5c
 /* 80425000 003EE5C0  38 00 00 00 */	li r0, 0
 /* 80425004 003EE5C4  38 7F 0E CC */	addi r3, r31, 0xecc
@@ -73,7 +73,7 @@ __ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager_Q44
 /* 804250B0 003EE670  2C 03 00 00 */	cmpwi r3, 0
 /* 804250B4 003EE674  41 82 00 AC */	beq .L_80425160
 /* 804250B8 003EE678  38 04 00 7F */	addi r0, r4, 0x7f
-/* 804250BC 003EE67C  C0 02 C5 08 */	lfs f0, lbl_8066C888@sda21(r2)
+/* 804250BC 003EE67C  C0 02 C5 08 */	lfs f0, float_8066C888@sda21(r2)
 /* 804250C0 003EE680  7C 05 00 50 */	subf r0, r5, r0
 /* 804250C4 003EE684  38 60 00 00 */	li r3, 0
 /* 804250C8 003EE688  54 00 C9 FE */	srwi r0, r0, 7
@@ -117,7 +117,7 @@ __ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager_Q44
 /* 8042515C 003EE71C  42 00 FF 7C */	bdnz .L_804250D8
 .L_80425160:
 /* 80425160 003EE720  38 7F 0E CC */	addi r3, r31, 0xecc
-/* 80425164 003EE724  C0 02 C5 08 */	lfs f0, lbl_8066C888@sda21(r2)
+/* 80425164 003EE724  C0 02 C5 08 */	lfs f0, float_8066C888@sda21(r2)
 /* 80425168 003EE728  38 03 00 0F */	addi r0, r3, 0xf
 /* 8042516C 003EE72C  38 80 00 00 */	li r4, 0
 /* 80425170 003EE730  7C 05 00 50 */	subf r0, r5, r0
@@ -150,11 +150,11 @@ InitParam__Q44nw4r3snd6detail9StrmSoundFv:
 /* 804251C8 003EE788  7C 7F 1B 78 */	mr r31, r3
 /* 804251CC 003EE78C  4B FE D3 B1 */	bl InitParam__Q44nw4r3snd6detail10BasicSoundFv
 /* 804251D0 003EE790  38 00 00 04 */	li r0, 4
-/* 804251D4 003EE794  C0 C2 C5 08 */	lfs f6, lbl_8066C888@sda21(r2)
+/* 804251D4 003EE794  C0 C2 C5 08 */	lfs f6, float_8066C888@sda21(r2)
 /* 804251D8 003EE798  38 C0 00 00 */	li r6, 0
-/* 804251DC 003EE79C  C8 A2 C5 10 */	lfd f5, lbl_8066C890@sda21(r2)
+/* 804251DC 003EE79C  C8 A2 C5 10 */	lfd f5, double_8066C890@sda21(r2)
 /* 804251E0 003EE7A0  38 A0 00 00 */	li r5, 0
-/* 804251E4 003EE7A4  C0 02 C5 0C */	lfs f0, lbl_8066C88C@sda21(r2)
+/* 804251E4 003EE7A4  C0 02 C5 0C */	lfs f0, float_8066C88C@sda21(r2)
 /* 804251E8 003EE7A8  3C 80 43 30 */	lis r4, 0x4330
 /* 804251EC 003EE7AC  38 60 00 01 */	li r3, 1
 /* 804251F0 003EE7B0  7C 09 03 A6 */	mtctr r0
@@ -337,7 +337,7 @@ UpdateParam__Q44nw4r3snd6detail9StrmSoundFv:
 /* 80425460 003EEA20  4B E9 4C F5 */	bl _savegpr_27
 /* 80425464 003EEA24  7C 7B 1B 78 */	mr r27, r3
 /* 80425468 003EEA28  4B FE DD 5D */	bl UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
-/* 8042546C 003EEA2C  CB E2 C5 10 */	lfd f31, lbl_8066C890@sda21(r2)
+/* 8042546C 003EEA2C  CB E2 C5 10 */	lfd f31, double_8066C890@sda21(r2)
 /* 80425470 003EEA30  7F 7D DB 78 */	mr r29, r27
 /* 80425474 003EEA34  3B 80 00 00 */	li r28, 0
 /* 80425478 003EEA38  3B C0 00 01 */	li r30, 1
@@ -593,20 +593,20 @@ lbl_8056E5D0:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C888
-lbl_8066C888:
+.global float_8066C888
+float_8066C888:
 	# ROM: 0x5766E8
 	.4byte 0
 
 
-.global lbl_8066C88C
-lbl_8066C88C:
+.global float_8066C88C
+float_8066C88C:
 	# ROM: 0x5766EC
 	.float 1.0
 
 
-.global lbl_8066C890
-lbl_8066C890:
+.global double_8066C890
+double_8066C890:
 	# ROM: 0x5766F0
 	.4byte 0x43300000
 	.4byte 0x80000000

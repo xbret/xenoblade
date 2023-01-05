@@ -7,7 +7,7 @@ func_8016C7F0:
 /* 8016C7F0 00135DB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8016C7F4 00135DB4  7C 08 02 A6 */	mflr r0
 /* 8016C7F8 00135DB8  3C C0 80 53 */	lis r6, __vt__cf_CfResObjImpl@ha
-/* 8016C7FC 00135DBC  C0 02 9B D0 */	lfs f0, lbl_80669F50@sda21(r2)
+/* 8016C7FC 00135DBC  C0 02 9B D0 */	lfs f0, float_80669F50@sda21(r2)
 /* 8016C800 00135DC0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8016C804 00135DC4  38 E0 FF FF */	li r7, -1
 /* 8016C808 00135DC8  38 C6 47 18 */	addi r6, r6, __vt__cf_CfResObjImpl@l
@@ -615,8 +615,8 @@ __RTTI__cf_CfResImpl:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_80669F50
-lbl_80669F50:
+.global float_80669F50
+float_80669F50:
 	# ROM: 0x573DB0
 	.4byte 0
 	.4byte 0

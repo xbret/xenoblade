@@ -374,12 +374,12 @@ PSMTXRotTrig:
 __PSMTXRotAxisRadInternal:
 /* 8034D730 00316CF0  E0 64 00 00 */	psq_l f3, 0(r4), 0, qr0
 /* 8034D734 00316CF4  FD 60 10 18 */	frsp f11, f2
-/* 8034D738 00316CF8  C1 42 BD B0 */	lfs f10, lbl_8066C130@sda21(r2)
+/* 8034D738 00316CF8  C1 42 BD B0 */	lfs f10, float_8066C130@sda21(r2)
 /* 8034D73C 00316CFC  FD 80 08 18 */	frsp f12, f1
 /* 8034D740 00316D00  10 83 00 F2 */	ps_mul f4, f3, f3
 /* 8034D744 00316D04  C0 44 00 08 */	lfs f2, 8(r4)
 /* 8034D748 00316D08  ED 0A 50 2A */	fadds f8, f10, f10
-/* 8034D74C 00316D0C  C1 22 BD B4 */	lfs f9, lbl_8066C134@sda21(r2)
+/* 8034D74C 00316D0C  C1 22 BD B4 */	lfs f9, float_8066C134@sda21(r2)
 /* 8034D750 00316D10  EC 2A 50 28 */	fsubs f1, f10, f10
 /* 8034D754 00316D14  10 A2 20 BA */	ps_madd f5, f2, f2, f4
 /* 8034D758 00316D18  EC 08 58 28 */	fsubs f0, f8, f11
@@ -684,10 +684,10 @@ C_MTXLightFrustum:
 /* 8034DBC0 00317180  C1 42 BD AC */	lfs f10, zero_c@sda21(r2)
 /* 8034DBC4 00317184  C1 82 BD A8 */	lfs f12, one_c@sda21(r2)
 /* 8034DBC8 00317188  ED 21 10 28 */	fsubs f9, f1, f2
-/* 8034DBCC 0031718C  C1 62 BD B8 */	lfs f11, lbl_8066C138@sda21(r2)
+/* 8034DBCC 0031718C  C1 62 BD B8 */	lfs f11, float_8066C138@sda21(r2)
 /* 8034DBD0 00317190  EC 64 18 2A */	fadds f3, f4, f3
 /* 8034DBD4 00317194  ED AC 00 24 */	fdivs f13, f12, f0
-/* 8034DBD8 00317198  C0 02 BD BC */	lfs f0, lbl_8066C13C@sda21(r2)
+/* 8034DBD8 00317198  C0 02 BD BC */	lfs f0, float_8066C13C@sda21(r2)
 /* 8034DBDC 0031719C  D0 03 00 28 */	stfs f0, 0x28(r3)
 /* 8034DBE0 003171A0  C3 E1 00 28 */	lfs f31, 0x28(r1)
 /* 8034DBE4 003171A4  D1 43 00 04 */	stfs f10, 4(r3)
@@ -724,10 +724,10 @@ C_MTXLightFrustum:
 C_MTXLightPerspective:
 /* 8034DC60 00317220  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8034DC64 00317224  7C 08 02 A6 */	mflr r0
-/* 8034DC68 00317228  C0 E2 BD B0 */	lfs f7, lbl_8066C130@sda21(r2)
+/* 8034DC68 00317228  C0 E2 BD B0 */	lfs f7, float_8066C130@sda21(r2)
 /* 8034DC6C 0031722C  90 01 00 64 */	stw r0, 0x64(r1)
 /* 8034DC70 00317230  EC 27 00 72 */	fmuls f1, f7, f1
-/* 8034DC74 00317234  C0 02 BD C0 */	lfs f0, lbl_8066C140@sda21(r2)
+/* 8034DC74 00317234  C0 02 BD C0 */	lfs f0, float_8066C140@sda21(r2)
 /* 8034DC78 00317238  DB E1 00 50 */	stfd f31, 0x50(r1)
 /* 8034DC7C 0031723C  F3 E1 00 58 */	psq_st f31, 88(r1), 0, qr0
 /* 8034DC80 00317240  EC 20 00 72 */	fmuls f1, f0, f1
@@ -751,7 +751,7 @@ C_MTXLightPerspective:
 /* 8034DCC8 00317288  C0 62 BD AC */	lfs f3, zero_c@sda21(r2)
 /* 8034DCCC 0031728C  C0 82 BD A8 */	lfs f4, one_c@sda21(r2)
 /* 8034DCD0 00317290  FC 20 F8 50 */	fneg f1, f31
-/* 8034DCD4 00317294  C0 02 BD BC */	lfs f0, lbl_8066C13C@sda21(r2)
+/* 8034DCD4 00317294  C0 02 BD BC */	lfs f0, float_8066C13C@sda21(r2)
 /* 8034DCD8 00317298  FC 40 F0 50 */	fneg f2, f30
 /* 8034DCDC 0031729C  EC 84 28 24 */	fdivs f4, f4, f5
 /* 8034DCE0 003172A0  D0 3F 00 18 */	stfs f1, 0x18(r31)
@@ -793,7 +793,7 @@ C_MTXLightOrtho:
 /* 8034DD68 00317328  C1 42 BD A8 */	lfs f10, one_c@sda21(r2)
 /* 8034DD6C 0031732C  EC 01 10 28 */	fsubs f0, f1, f2
 /* 8034DD70 00317330  EC 64 18 2A */	fadds f3, f4, f3
-/* 8034DD74 00317334  C0 82 BD B8 */	lfs f4, lbl_8066C138@sda21(r2)
+/* 8034DD74 00317334  C0 82 BD B8 */	lfs f4, float_8066C138@sda21(r2)
 /* 8034DD78 00317338  ED 8A 58 24 */	fdivs f12, f10, f11
 /* 8034DD7C 0031733C  D1 23 00 04 */	stfs f9, 4(r3)
 /* 8034DD80 00317340  D1 23 00 08 */	stfs f9, 8(r3)

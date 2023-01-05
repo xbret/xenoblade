@@ -25,7 +25,7 @@ func_804532D4:
 /* 8045331C 0041C8DC  93 FC 00 60 */	stw r31, 0x60(r28)
 /* 80453320 0041C8E0  38 82 D9 78 */	addi r4, r2, lbl_8066DCF8@sda21
 /* 80453324 0041C8E4  80 7C 00 18 */	lwz r3, 0x18(r28)
-/* 80453328 0041C8E8  C0 22 C8 40 */	lfs f1, lbl_8066CBC0@sda21(r2)
+/* 80453328 0041C8E8  C0 22 C8 40 */	lfs f1, float_8066CBC0@sda21(r2)
 /* 8045332C 0041C8EC  4B FD A8 65 */	bl GetRequireBufferSize__Q34nw4r2ut10PackedFontFPCvPCcf
 /* 80453330 0041C8F0  7C 7E 1B 78 */	mr r30, r3
 /* 80453334 0041C8F4  4B FF 9D 2D */	bl func_8044D060
@@ -194,7 +194,7 @@ func_80453564:
 /* 80453584 0041CB44  7C 64 1B 78 */	mr r4, r3
 /* 80453588 0041CB48  38 60 00 64 */	li r3, 0x64
 /* 8045358C 0041CB4C  80 84 00 54 */	lwz r4, 0x54(r4)
-/* 80453590 0041CB50  4B FE 14 CD */	bl func_80434A5C
+/* 80453590 0041CB50  4B FE 14 CD */	bl mm_malloc
 /* 80453594 0041CB54  2C 03 00 00 */	cmpwi r3, 0
 /* 80453598 0041CB58  41 82 00 10 */	beq .L_804535A8
 /* 8045359C 0041CB5C  7F C4 F3 78 */	mr r4, r30
@@ -334,8 +334,8 @@ __RTTI__IDeviceFontInfo:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066CBC0
-lbl_8066CBC0:
+.global float_8066CBC0
+float_8066CBC0:
 	# ROM: 0x576A20
 	.float 1.0
 	.4byte 0

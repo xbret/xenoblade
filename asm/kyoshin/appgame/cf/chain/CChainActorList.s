@@ -1786,13 +1786,13 @@ func_8027C1A8:
 /* 8027C284 00245844  3C 80 43 30 */	lis r4, 0x4330
 /* 8027C288 00245848  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8027C28C 0024584C  7C 05 FA 14 */	add r0, r5, r31
-/* 8027C290 00245850  C8 62 AF A0 */	lfd f3, lbl_8066B320@sda21(r2)
+/* 8027C290 00245850  C8 62 AF A0 */	lfd f3, double_8066B320@sda21(r2)
 /* 8027C294 00245854  7C 03 02 14 */	add r0, r3, r0
 /* 8027C298 00245858  90 81 00 08 */	stw r4, 8(r1)
 /* 8027C29C 0024585C  28 1E 13 88 */	cmplwi r30, 0x1388
-/* 8027C2A0 00245860  C0 02 AF 90 */	lfs f0, lbl_8066B310@sda21(r2)
+/* 8027C2A0 00245860  C0 02 AF 90 */	lfs f0, float_8066B310@sda21(r2)
 /* 8027C2A4 00245864  C8 21 00 08 */	lfd f1, 8(r1)
-/* 8027C2A8 00245868  C0 42 AF 94 */	lfs f2, lbl_8066B314@sda21(r2)
+/* 8027C2A8 00245868  C0 42 AF 94 */	lfs f2, float_8066B314@sda21(r2)
 /* 8027C2AC 0024586C  EC 21 18 28 */	fsubs f1, f1, f3
 /* 8027C2B0 00245870  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8027C2B4 00245874  EC 00 10 24 */	fdivs f0, f0, f2
@@ -1805,7 +1805,7 @@ func_8027C1A8:
 /* 8027C2D0 00245890  38 1E EC 78 */	addi r0, r30, -5000
 /* 8027C2D4 00245894  90 81 00 18 */	stw r4, 0x18(r1)
 /* 8027C2D8 00245898  54 00 04 3E */	clrlwi r0, r0, 0x10
-/* 8027C2DC 0024589C  C0 02 AF 98 */	lfs f0, lbl_8066B318@sda21(r2)
+/* 8027C2DC 0024589C  C0 02 AF 98 */	lfs f0, float_8066B318@sda21(r2)
 /* 8027C2E0 002458A0  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 8027C2E4 002458A4  C8 21 00 18 */	lfd f1, 0x18(r1)
 /* 8027C2E8 002458A8  EC 21 18 28 */	fsubs f1, f1, f3
@@ -2530,7 +2530,7 @@ func_8027CC3C:
 /* 8027CC64 00246224  81 8C 02 7C */	lwz r12, 0x27c(r12)
 /* 8027CC68 00246228  7D 89 03 A6 */	mtctr r12
 /* 8027CC6C 0024622C  4E 80 04 21 */	bctrl 
-/* 8027CC70 00246230  C3 E2 AF A8 */	lfs f31, lbl_8066B328@sda21(r2)
+/* 8027CC70 00246230  C3 E2 AF A8 */	lfs f31, float_8066B328@sda21(r2)
 /* 8027CC74 00246234  7C 7D 1B 78 */	mr r29, r3
 /* 8027CC78 00246238  7F 5F D3 78 */	mr r31, r26
 /* 8027CC7C 0024623C  3B 80 00 00 */	li r28, 0
@@ -2757,34 +2757,34 @@ __RTTI__cf_Flusher_cf_CfObjectActor:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066B310
-lbl_8066B310:
+.global float_8066B310
+float_8066B310:
 	# ROM: 0x575170
 	.4byte 0x41F00000
 
 
-.global lbl_8066B314
-lbl_8066B314:
+.global float_8066B314
+float_8066B314:
 	# ROM: 0x575174
 	.4byte 0x459C4000
 
 
-.global lbl_8066B318
-lbl_8066B318:
+.global float_8066B318
+float_8066B318:
 	# ROM: 0x575178
 	.4byte 0x41A00000
 	.4byte 0
 
 
-.global lbl_8066B320
-lbl_8066B320:
+.global double_8066B320
+double_8066B320:
 	# ROM: 0x575180
 	.4byte 0x43300000
 	.4byte 0
 
 
-.global lbl_8066B328
-lbl_8066B328:
+.global float_8066B328
+float_8066B328:
 	# ROM: 0x575188
 	.4byte 0
 	.4byte 0

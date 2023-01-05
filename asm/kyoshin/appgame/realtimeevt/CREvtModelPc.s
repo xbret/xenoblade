@@ -14,7 +14,7 @@ func_80183724:
 /* 80183740 0014CD00  3C 60 80 53 */	lis r3, __vt__cf_CREvtModelPc@ha
 /* 80183744 0014CD04  38 80 00 00 */	li r4, 0
 /* 80183748 0014CD08  38 63 59 C0 */	addi r3, r3, __vt__cf_CREvtModelPc@l
-/* 8018374C 0014CD0C  C0 02 9E 58 */	lfs f0, lbl_8066A1D8@sda21(r2)
+/* 8018374C 0014CD0C  C0 02 9E 58 */	lfs f0, float_8066A1D8@sda21(r2)
 /* 80183750 0014CD10  38 C3 00 44 */	addi r6, r3, 0x44
 /* 80183754 0014CD14  38 00 FF FF */	li r0, -1
 /* 80183758 0014CD18  90 7F 00 00 */	stw r3, 0(r31)
@@ -1126,7 +1126,7 @@ func_801846C4:
 /* 801846E8 0014DCA8  6C 63 80 00 */	xoris r3, r3, 0x8000
 /* 801846EC 0014DCAC  3C 00 43 30 */	lis r0, 0x4330
 /* 801846F0 0014DCB0  90 61 00 0C */	stw r3, 0xc(r1)
-/* 801846F4 0014DCB4  C8 22 9E 60 */	lfd f1, lbl_8066A1E0@sda21(r2)
+/* 801846F4 0014DCB4  C8 22 9E 60 */	lfd f1, double_8066A1E0@sda21(r2)
 /* 801846F8 0014DCB8  90 01 00 08 */	stw r0, 8(r1)
 /* 801846FC 0014DCBC  80 7F 00 20 */	lwz r3, 0x20(r31)
 /* 80184700 0014DCC0  C8 01 00 08 */	lfd f0, 8(r1)
@@ -1201,7 +1201,7 @@ func_80184730:
 /* 801847E0 0014DDA0  38 C0 00 01 */	li r6, 1
 /* 801847E4 0014DDA4  48 31 16 A9 */	bl func_80495E8C
 /* 801847E8 0014DDA8  90 7B 00 20 */	stw r3, 0x20(r27)
-/* 801847EC 0014DDAC  C0 22 9E 58 */	lfs f1, lbl_8066A1D8@sda21(r2)
+/* 801847EC 0014DDAC  C0 22 9E 58 */	lfs f1, float_8066A1D8@sda21(r2)
 /* 801847F0 0014DDB0  48 30 06 6D */	bl func_80484E5C
 /* 801847F4 0014DDB4  80 7B 00 20 */	lwz r3, 0x20(r27)
 /* 801847F8 0014DDB8  38 80 00 01 */	li r4, 1
@@ -1606,15 +1606,15 @@ __RTTI__cf_CREvtModelPc:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066A1D8
-lbl_8066A1D8:
+.global float_8066A1D8
+float_8066A1D8:
 	# ROM: 0x574038
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_8066A1E0
-lbl_8066A1E0:
+.global double_8066A1E0
+double_8066A1E0:
 	# ROM: 0x574040
 	.4byte 0x43300000
 	.4byte 0x80000000

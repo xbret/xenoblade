@@ -99,14 +99,14 @@ func_80296BF0:
 /* 80296C80 00260240  A0 83 01 00 */	lhz r4, 0x100(r3)
 /* 80296C84 00260244  3C 00 43 30 */	lis r0, 0x4330
 /* 80296C88 00260248  90 81 00 0C */	stw r4, 0xc(r1)
-/* 80296C8C 0026024C  C8 42 B1 00 */	lfd f2, lbl_8066B480@sda21(r2)
+/* 80296C8C 0026024C  C8 42 B1 00 */	lfd f2, double_8066B480@sda21(r2)
 /* 80296C90 00260250  90 01 00 08 */	stw r0, 8(r1)
-/* 80296C94 00260254  C0 22 B0 F8 */	lfs f1, lbl_8066B478@sda21(r2)
+/* 80296C94 00260254  C0 22 B0 F8 */	lfs f1, float_8066B478@sda21(r2)
 /* 80296C98 00260258  C8 01 00 08 */	lfd f0, 8(r1)
 /* 80296C9C 0026025C  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80296CA0 00260260  EC 60 10 28 */	fsubs f3, f0, f2
-/* 80296CA4 00260264  C8 42 B1 08 */	lfd f2, lbl_8066B488@sda21(r2)
-/* 80296CA8 00260268  C0 02 B0 FC */	lfs f0, lbl_8066B47C@sda21(r2)
+/* 80296CA4 00260264  C8 42 B1 08 */	lfd f2, double_8066B488@sda21(r2)
+/* 80296CA8 00260268  C0 02 B0 FC */	lfs f0, float_8066B47C@sda21(r2)
 /* 80296CAC 0026026C  EC 63 08 24 */	fdivs f3, f3, f1
 /* 80296CB0 00260270  FC 20 18 1E */	fctiwz f1, f3
 /* 80296CB4 00260274  D8 21 00 10 */	stfd f1, 0x10(r1)
@@ -695,27 +695,27 @@ lbl_8050B598:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066B478
-lbl_8066B478:
+.global float_8066B478
+float_8066B478:
 	# ROM: 0x5752D8
 	.4byte 0x41F00000
 
 
-.global lbl_8066B47C
-lbl_8066B47C:
+.global float_8066B47C
+float_8066B47C:
 	# ROM: 0x5752DC
 	.4byte 0
 
 
-.global lbl_8066B480
-lbl_8066B480:
+.global double_8066B480
+double_8066B480:
 	# ROM: 0x5752E0
 	.4byte 0x43300000
 	.4byte 0
 
 
-.global lbl_8066B488
-lbl_8066B488:
+.global double_8066B488
+double_8066B488:
 	# ROM: 0x5752E8
 	.4byte 0x43300000
 	.4byte 0x80000000

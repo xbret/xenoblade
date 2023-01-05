@@ -20,7 +20,7 @@ GetAnmResult__Q34nw4r3g3d14ResAnmAmbLightCFPQ34nw4r3g3d17AmbLightAnmResultf:
 .L_803E04BC:
 /* 803E04BC 003A9A7C  38 60 00 00 */	li r3, 0
 .L_803E04C0:
-/* 803E04C0 003A9A80  C0 02 BF 90 */	lfs f0, lbl_8066C310@sda21(r2)
+/* 803E04C0 003A9A80  C0 02 BF 90 */	lfs f0, float_8066C310@sda21(r2)
 /* 803E04C4 003A9A84  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 803E04C8 003A9A88  4C 40 13 82 */	cror 2, 0, 2
 /* 803E04CC 003A9A8C  40 82 00 08 */	bne .L_803E04D4
@@ -29,7 +29,7 @@ GetAnmResult__Q34nw4r3g3d14ResAnmAmbLightCFPQ34nw4r3g3d17AmbLightAnmResultf:
 /* 803E04D4 003A9A94  A0 63 00 34 */	lhz r3, 0x34(r3)
 /* 803E04D8 003A9A98  3C 00 43 30 */	lis r0, 0x4330
 /* 803E04DC 003A9A9C  90 01 00 08 */	stw r0, 8(r1)
-/* 803E04E0 003A9AA0  C8 42 BF 98 */	lfd f2, lbl_8066C318@sda21(r2)
+/* 803E04E0 003A9AA0  C8 42 BF 98 */	lfd f2, double_8066C318@sda21(r2)
 /* 803E04E4 003A9AA4  90 61 00 0C */	stw r3, 0xc(r1)
 /* 803E04E8 003A9AA8  C8 01 00 08 */	lfd f0, 8(r1)
 /* 803E04EC 003A9AAC  EC 00 10 28 */	fsubs f0, f0, f2
@@ -66,15 +66,15 @@ GetAnmResult__Q34nw4r3g3d14ResAnmAmbLightCFPQ34nw4r3g3d17AmbLightAnmResultf:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C310
-lbl_8066C310:
+.global float_8066C310
+float_8066C310:
 	# ROM: 0x576170
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_8066C318
-lbl_8066C318:
+.global double_8066C318
+double_8066C318:
 	# ROM: 0x576178
 	.4byte 0x43300000
 	.4byte 0

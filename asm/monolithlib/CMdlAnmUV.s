@@ -495,9 +495,9 @@ func_804E72D0:
 /* 804E7308 004B08C8  7C 9B 23 78 */	mr r27, r4
 /* 804E730C 004B08CC  C3 A2 C6 88 */	lfs f29, epsilon__2mm@sda21(r2)
 /* 804E7310 004B08D0  7C BC 2B 78 */	mr r28, r5
-/* 804E7314 004B08D4  C3 C2 D7 78 */	lfs f30, lbl_8066DAF8@sda21(r2)
+/* 804E7314 004B08D4  C3 C2 D7 78 */	lfs f30, float_8066DAF8@sda21(r2)
 /* 804E7318 004B08D8  7F 5F D3 78 */	mr r31, r26
-/* 804E731C 004B08DC  C3 E2 D7 7C */	lfs f31, lbl_8066DAFC@sda21(r2)
+/* 804E731C 004B08DC  C3 E2 D7 7C */	lfs f31, float_8066DAFC@sda21(r2)
 /* 804E7320 004B08E0  3B A0 00 00 */	li r29, 0
 /* 804E7324 004B08E4  48 00 01 D8 */	b .L_804E74FC
 .L_804E7328:
@@ -715,14 +715,14 @@ lbl_8066DAF0:
 	.balign 4
 
 
-.global lbl_8066DAF8
-lbl_8066DAF8:
+.global float_8066DAF8
+float_8066DAF8:
 	# ROM: 0x577958
 	.float 1.0
 
 
-.global lbl_8066DAFC
-lbl_8066DAFC:
+.global float_8066DAFC
+float_8066DAFC:
 	# ROM: 0x57795C
 	.4byte 0
 

@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804DEB14
-func_804DEB14:
+.global __ct__CArcItem
+__ct__CArcItem:
 /* 804DEB14 004A80D4  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 804DEB18 004A80D8  7C 08 02 A6 */	mflr r0
 /* 804DEB1C 004A80DC  3C A0 80 57 */	lis r5, __vt__CArcItem@ha
@@ -44,8 +44,8 @@ func_804DEB14:
 /* 804DEBA8 004A8168  38 21 00 60 */	addi r1, r1, 0x60
 /* 804DEBAC 004A816C  4E 80 00 20 */	blr 
 
-.global func_804DEBB0
-func_804DEBB0:
+.global __dt__CArcItem
+__dt__CArcItem:
 /* 804DEBB0 004A8170  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DEBB4 004A8174  7C 08 02 A6 */	mflr r0
 /* 804DEBB8 004A8178  2C 03 00 00 */	cmpwi r3, 0
@@ -217,7 +217,7 @@ lbl_80528014:
 __vt__CArcItem:
 	.4byte __RTTI__CArcItem
 	.4byte 0
-	.4byte func_804DEBB0
+	.4byte __dt__CArcItem
 	.4byte func_80039E28
 	.4byte func_804DED18
 	.4byte func_80039E18
@@ -292,10 +292,10 @@ lbl_80020978:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_804DEB14
+.4byte __ct__CArcItem
 	.4byte 0x0000009C
 	.4byte lbl_80020938
-	.4byte func_804DEBB0
+	.4byte __dt__CArcItem
 	.4byte 0x00000080
 	.4byte lbl_80020954
 	.4byte func_804DEC6C

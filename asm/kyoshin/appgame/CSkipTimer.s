@@ -551,7 +551,7 @@ func_802A01F0:
 func_802A0234:
 /* 802A0234 002697F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A0238 002697F8  7C 08 02 A6 */	mflr r0
-/* 802A023C 002697FC  C0 22 B1 58 */	lfs f1, lbl_8066B4D8@sda21(r2)
+/* 802A023C 002697FC  C0 22 B1 58 */	lfs f1, float_8066B4D8@sda21(r2)
 /* 802A0240 00269800  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802A0244 00269804  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802A0248 00269808  7C 7F 1B 78 */	mr r31, r3
@@ -601,7 +601,7 @@ func_802A02B8:
 func_802A02D4:
 /* 802A02D4 00269894  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A02D8 00269898  7C 08 02 A6 */	mflr r0
-/* 802A02DC 0026989C  C0 22 B1 58 */	lfs f1, lbl_8066B4D8@sda21(r2)
+/* 802A02DC 0026989C  C0 22 B1 58 */	lfs f1, float_8066B4D8@sda21(r2)
 /* 802A02E0 002698A0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802A02E4 002698A4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802A02E8 002698A8  7C 7F 1B 78 */	mr r31, r3
@@ -699,7 +699,7 @@ func_802A03AC:
 func_802A041C:
 /* 802A041C 002699DC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802A0420 002699E0  7C 08 02 A6 */	mflr r0
-/* 802A0424 002699E4  C8 62 B1 60 */	lfd f3, lbl_8066B4E0@sda21(r2)
+/* 802A0424 002699E4  C8 62 B1 60 */	lfd f3, double_8066B4E0@sda21(r2)
 /* 802A0428 002699E8  90 01 00 34 */	stw r0, 0x34(r1)
 /* 802A042C 002699EC  DB E1 00 20 */	stfd f31, 0x20(r1)
 /* 802A0430 002699F0  F3 E1 00 28 */	psq_st f31, 40(r1), 0, qr0
@@ -711,8 +711,8 @@ func_802A041C:
 /* 802A0448 00269A08  A8 83 00 2E */	lha r4, 0x2e(r3)
 /* 802A044C 00269A0C  1C 00 00 3C */	mulli r0, r0, 0x3c
 /* 802A0450 00269A10  93 E1 00 08 */	stw r31, 8(r1)
-/* 802A0454 00269A14  C0 2D 93 F0 */	lfs f1, lbl_80665570@sda21(r13)
-/* 802A0458 00269A18  C0 0D B1 B8 */	lfs f0, lbl_80667338@sda21(r13)
+/* 802A0454 00269A14  C0 2D 93 F0 */	lfs f1, float_80665570@sda21(r13)
+/* 802A0458 00269A18  C0 0D B1 B8 */	lfs f0, float_80667338@sda21(r13)
 /* 802A045C 00269A1C  7C 04 02 14 */	add r0, r4, r0
 /* 802A0460 00269A20  80 63 00 24 */	lwz r3, 0x24(r3)
 /* 802A0464 00269A24  6C 00 80 00 */	xoris r0, r0, 0x8000
@@ -723,7 +723,7 @@ func_802A041C:
 /* 802A0478 00269A38  48 16 85 49 */	bl GetFrameSize__Q34nw4r3lyt13AnimTransformCFv
 /* 802A047C 00269A3C  54 60 04 3E */	clrlwi r0, r3, 0x10
 /* 802A0480 00269A40  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802A0484 00269A44  C8 22 B1 68 */	lfd f1, lbl_8066B4E8@sda21(r2)
+/* 802A0484 00269A44  C8 22 B1 68 */	lfd f1, double_8066B4E8@sda21(r2)
 /* 802A0488 00269A48  93 E1 00 10 */	stw r31, 0x10(r1)
 /* 802A048C 00269A4C  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 802A0490 00269A50  EC 00 08 28 */	fsubs f0, f0, f1
@@ -962,12 +962,12 @@ func_802A066C:
 
 .global sinit_802A07D8
 sinit_802A07D8:
-/* 802A07D8 00269D98  C0 42 B1 74 */	lfs f2, lbl_8066B4F4@sda21(r2)
-/* 802A07DC 00269D9C  C0 2D 93 F0 */	lfs f1, lbl_80665570@sda21(r13)
-/* 802A07E0 00269DA0  C0 02 B1 70 */	lfs f0, lbl_8066B4F0@sda21(r2)
+/* 802A07D8 00269D98  C0 42 B1 74 */	lfs f2, float_8066B4F4@sda21(r2)
+/* 802A07DC 00269D9C  C0 2D 93 F0 */	lfs f1, float_80665570@sda21(r13)
+/* 802A07E0 00269DA0  C0 02 B1 70 */	lfs f0, float_8066B4F0@sda21(r2)
 /* 802A07E4 00269DA4  EC 22 00 72 */	fmuls f1, f2, f1
 /* 802A07E8 00269DA8  EC 00 00 72 */	fmuls f0, f0, f1
-/* 802A07EC 00269DAC  D0 0D B1 B8 */	stfs f0, lbl_80667338@sda21(r13)
+/* 802A07EC 00269DAC  D0 0D B1 B8 */	stfs f0, float_80667338@sda21(r13)
 /* 802A07F0 00269DB0  4E 80 00 20 */	blr 
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
@@ -1069,8 +1069,8 @@ __vt__CSkipTimer2:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665570
-lbl_80665570:
+.global float_80665570
+float_80665570:
 	# ROM: 0x571150
 	.float 0.2
 	.4byte 0
@@ -1087,42 +1087,42 @@ __RTTI__CSkipTimer2:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066B4D8
-lbl_8066B4D8:
+.global float_8066B4D8
+float_8066B4D8:
 	# ROM: 0x575338
 	.float 1.0
 	.4byte 0
 
 
-.global lbl_8066B4E0
-lbl_8066B4E0:
+.global double_8066B4E0
+double_8066B4E0:
 	# ROM: 0x575340
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
-.global lbl_8066B4E8
-lbl_8066B4E8:
+.global double_8066B4E8
+double_8066B4E8:
 	# ROM: 0x575348
 	.4byte 0x43300000
 	.4byte 0
 
 
-.global lbl_8066B4F0
-lbl_8066B4F0:
+.global float_8066B4F0
+float_8066B4F0:
 	# ROM: 0x575350
 	.4byte 0x41300000
 
 
-.global lbl_8066B4F4
-lbl_8066B4F4:
+.global float_8066B4F4
+float_8066B4F4:
 	# ROM: 0x575354
 	.4byte 0x42700000
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667338
-lbl_80667338:
+.global float_80667338
+float_80667338:
 	.skip 0x8
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

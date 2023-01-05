@@ -761,7 +761,7 @@ func_8018140C:
 /* 80181464 0014AA24  38 80 00 00 */	li r4, 0
 /* 80181468 0014AA28  48 30 24 75 */	bl func_804838DC
 /* 8018146C 0014AA2C  80 7F 00 E4 */	lwz r3, 0xe4(r31)
-/* 80181470 0014AA30  C0 22 9E 00 */	lfs f1, lbl_8066A180@sda21(r2)
+/* 80181470 0014AA30  C0 22 9E 00 */	lfs f1, float_8066A180@sda21(r2)
 /* 80181474 0014AA34  48 30 39 E9 */	bl func_80484E5C
 /* 80181478 0014AA38  80 9F 00 E4 */	lwz r4, 0xe4(r31)
 /* 8018147C 0014AA3C  38 60 00 00 */	li r3, 0
@@ -828,7 +828,7 @@ func_8018152C:
 /* 80181550 0014AB10  6C 63 80 00 */	xoris r3, r3, 0x8000
 /* 80181554 0014AB14  3C 00 43 30 */	lis r0, 0x4330
 /* 80181558 0014AB18  90 61 00 0C */	stw r3, 0xc(r1)
-/* 8018155C 0014AB1C  C8 22 9E 08 */	lfd f1, lbl_8066A188@sda21(r2)
+/* 8018155C 0014AB1C  C8 22 9E 08 */	lfd f1, double_8066A188@sda21(r2)
 /* 80181560 0014AB20  90 01 00 08 */	stw r0, 8(r1)
 /* 80181564 0014AB24  80 7F 00 E4 */	lwz r3, 0xe4(r31)
 /* 80181568 0014AB28  C8 01 00 08 */	lfd f0, 8(r1)
@@ -1368,15 +1368,15 @@ __RTTI__cf_CREvtModelMap:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066A180
-lbl_8066A180:
+.global float_8066A180
+float_8066A180:
 	# ROM: 0x573FE0
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_8066A188
-lbl_8066A188:
+.global double_8066A188
+double_8066A188:
 	# ROM: 0x573FE8
 	.4byte 0x43300000
 	.4byte 0x80000000

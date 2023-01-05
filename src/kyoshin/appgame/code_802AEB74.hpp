@@ -1,5 +1,5 @@
-#ifndef _CF_CODE_802AEB74_H
-#define _CF_CODE_802AEB74_H
+#ifndef _CODE_802AEB74_HPP
+#define _CODE_802AEB74_HPP
 
 #include "types.h"
 

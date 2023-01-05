@@ -6,10 +6,10 @@
 sinit_80436E84:
 /* 80436E84 00400444  3C C0 80 66 */	lis r6, lbl_80659FE8@ha
 /* 80436E88 00400448  3C 80 80 66 */	lis r4, lbl_8065A028@ha
-/* 80436E8C 0040044C  C0 22 C6 D8 */	lfs f1, lbl_8066CA58@sda21(r2)
+/* 80436E8C 0040044C  C0 22 C6 D8 */	lfs f1, float_8066CA58@sda21(r2)
 /* 80436E90 00400450  38 A6 9F E8 */	addi r5, r6, lbl_80659FE8@l
 /* 80436E94 00400454  38 64 A0 28 */	addi r3, r4, lbl_8065A028@l
-/* 80436E98 00400458  C0 02 C6 DC */	lfs f0, lbl_8066CA5C@sda21(r2)
+/* 80436E98 00400458  C0 02 C6 DC */	lfs f0, float_8066CA5C@sda21(r2)
 /* 80436E9C 0040045C  D0 26 9F E8 */	stfs f1, lbl_80659FE8@l(r6)
 /* 80436EA0 00400460  D0 25 00 04 */	stfs f1, 4(r5)
 /* 80436EA4 00400464  D0 25 00 08 */	stfs f1, 8(r5)
@@ -50,13 +50,13 @@ sinit_80436E84:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066CA58
-lbl_8066CA58:
+.global float_8066CA58
+float_8066CA58:
 	# ROM: 0x5768B8
 	.4byte 0
 
 
-.global lbl_8066CA5C
-lbl_8066CA5C:
+.global float_8066CA5C
+float_8066CA5C:
 	# ROM: 0x5768BC
 	.float 1.0

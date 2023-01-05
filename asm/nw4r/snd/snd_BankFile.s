@@ -212,7 +212,7 @@ ReadInstInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8InstInfoii
 /* 80411CB8 003DB278  D0 1F 00 18 */	stfs f0, 0x18(r31)
 /* 80411CBC 003DB27C  48 00 00 14 */	b .L_80411CD0
 .L_80411CC0:
-/* 80411CC0 003DB280  C0 02 C3 58 */	lfs f0, lbl_8066C6D8@sda21(r2)
+/* 80411CC0 003DB280  C0 02 C3 58 */	lfs f0, float_8066C6D8@sda21(r2)
 /* 80411CC4 003DB284  38 00 00 7F */	li r0, 0x7f
 /* 80411CC8 003DB288  98 1F 00 17 */	stb r0, 0x17(r31)
 /* 80411CCC 003DB28C  D0 1F 00 18 */	stfs f0, 0x18(r31)
@@ -508,8 +508,8 @@ ReadWaveInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8WaveInfoRC
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C6D8
-lbl_8066C6D8:
+.global float_8066C6D8
+float_8066C6D8:
 	# ROM: 0x576538
 	.float 1.0
 	.4byte 0

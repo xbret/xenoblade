@@ -57,7 +57,7 @@ GXSetProjection:
 .balign 16, 0
 .global GXSetProjectionv
 GXSetProjectionv:
-/* 8031E5B0 002E7B70  C0 22 BD 20 */	lfs f1, lbl_8066C0A0@sda21(r2)
+/* 8031E5B0 002E7B70  C0 22 BD 20 */	lfs f1, float_8066C0A0@sda21(r2)
 /* 8031E5B4 002E7B74  C0 03 00 00 */	lfs f0, 0(r3)
 /* 8031E5B8 002E7B78  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 8031E5BC 002E7B7C  40 82 00 0C */	bne .L_8031E5C8
@@ -232,7 +232,7 @@ GXLoadTexMtxImm:
 __GXSetViewport:
 /* 8031E800 002E7DC0  80 C2 BC 20 */	lwz r6, lbl_8066BFA0@sda21(r2)
 /* 8031E804 002E7DC4  3C 60 00 05 */	lis r3, 0x0005101A@ha
-/* 8031E808 002E7DC8  C0 E2 BD 24 */	lfs f7, lbl_8066C0A4@sda21(r2)
+/* 8031E808 002E7DC8  C0 E2 BD 24 */	lfs f7, float_8066C0A4@sda21(r2)
 /* 8031E80C 002E7DCC  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031E810 002E7DD0  C0 26 05 50 */	lfs f1, 0x550(r6)
 /* 8031E814 002E7DD4  38 A0 00 10 */	li r5, 0x10
@@ -250,7 +250,7 @@ __GXSetViewport:
 /* 8031E844 002E7E04  C0 06 05 5C */	lfs f0, 0x55c(r6)
 /* 8031E848 002E7E08  ED 23 00 B2 */	fmuls f9, f3, f2
 /* 8031E84C 002E7E0C  ED 41 00 B2 */	fmuls f10, f1, f2
-/* 8031E850 002E7E10  C0 42 BD 28 */	lfs f2, lbl_8066C0A8@sda21(r2)
+/* 8031E850 002E7E10  C0 42 BD 28 */	lfs f2, float_8066C0A8@sda21(r2)
 /* 8031E854 002E7E14  98 A4 80 00 */	stb r5, 0xCC008000@l(r4)
 /* 8031E858 002E7E18  EC 24 28 2A */	fadds f1, f4, f5
 /* 8031E85C 002E7E1C  EC 66 40 2A */	fadds f3, f6, f8
@@ -272,7 +272,7 @@ __GXSetViewport:
 GXSetViewportJitter:
 /* 8031E890 002E7E50  2C 03 00 00 */	cmpwi r3, 0
 /* 8031E894 002E7E54  40 82 00 0C */	bne .L_8031E8A0
-/* 8031E898 002E7E58  C0 02 BD 24 */	lfs f0, lbl_8066C0A4@sda21(r2)
+/* 8031E898 002E7E58  C0 02 BD 24 */	lfs f0, float_8066C0A4@sda21(r2)
 /* 8031E89C 002E7E5C  EC 42 00 28 */	fsubs f2, f2, f0
 .L_8031E8A0:
 /* 8031E8A0 002E7E60  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)

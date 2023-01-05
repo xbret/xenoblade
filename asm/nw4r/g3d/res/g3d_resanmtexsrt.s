@@ -50,9 +50,9 @@ GetAnmResult__Q34nw4r3g3d12ResAnmTexSrtCFPQ34nw4r3g3d15TexSrtAnmResultUlf:
 /* 803DE274 003A7834  3B 64 00 0C */	addi r27, r4, 0xc
 /* 803DE278 003A7838  90 04 00 00 */	stw r0, 0(r4)
 /* 803DE27C 003A783C  3B 80 00 00 */	li r28, 0
-/* 803DE280 003A7840  C3 E2 BF 58 */	lfs f31, lbl_8066C2D8@sda21(r2)
+/* 803DE280 003A7840  C3 E2 BF 58 */	lfs f31, float_8066C2D8@sda21(r2)
 /* 803DE284 003A7844  90 04 00 04 */	stw r0, 4(r4)
-/* 803DE288 003A7848  C3 C2 BF 5C */	lfs f30, lbl_8066C2DC@sda21(r2)
+/* 803DE288 003A7848  C3 C2 BF 5C */	lfs f30, float_8066C2DC@sda21(r2)
 /* 803DE28C 003A784C  80 03 00 24 */	lwz r0, 0x24(r3)
 /* 803DE290 003A7850  90 04 00 08 */	stw r0, 8(r4)
 /* 803DE294 003A7854  48 00 01 80 */	b .L_803DE414
@@ -173,9 +173,9 @@ GetAnmResult__Q34nw4r3g3d12ResAnmTexSrtCFPQ34nw4r3g3d15TexSrtAnmResultUlf:
 .L_803DE414:
 /* 803DE414 003A79D4  2C 1A 00 00 */	cmpwi r26, 0
 /* 803DE418 003A79D8  40 82 FE 80 */	bne .L_803DE298
-/* 803DE41C 003A79DC  C3 C2 BF 58 */	lfs f30, lbl_8066C2D8@sda21(r2)
+/* 803DE41C 003A79DC  C3 C2 BF 58 */	lfs f30, float_8066C2D8@sda21(r2)
 /* 803DE420 003A79E0  3B 40 00 00 */	li r26, 0
-/* 803DE424 003A79E4  C3 E2 BF 5C */	lfs f31, lbl_8066C2DC@sda21(r2)
+/* 803DE424 003A79E4  C3 E2 BF 5C */	lfs f31, float_8066C2DC@sda21(r2)
 /* 803DE428 003A79E8  3B 60 00 00 */	li r27, 0
 /* 803DE42C 003A79EC  48 00 01 8C */	b .L_803DE5B8
 .L_803DE430:
@@ -314,13 +314,13 @@ GetAnmResult__Q34nw4r3g3d12ResAnmTexSrtCFPQ34nw4r3g3d15TexSrtAnmResultUlf:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_8066C2D8
-lbl_8066C2D8:
+.global float_8066C2D8
+float_8066C2D8:
 	# ROM: 0x576138
 	.float 1.0
 
 
-.global lbl_8066C2DC
-lbl_8066C2DC:
+.global float_8066C2DC
+float_8066C2DC:
 	# ROM: 0x57613C
 	.4byte 0

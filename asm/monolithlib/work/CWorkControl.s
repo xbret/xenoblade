@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global func_80443718
-func_80443718:
+.global __ct__CWorkControl
+__ct__CWorkControl:
 /* 80443718 0040CCD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044371C 0040CCDC  7C 08 02 A6 */	mflr r0
 /* 80443720 0040CCE0  38 C0 00 20 */	li r6, 0x20
@@ -75,7 +75,7 @@ func_804437C4:
 /* 804437F8 0040CDB8  4B FF 3D BD */	bl func_804375B4
 /* 804437FC 0040CDBC  7C 64 1B 78 */	mr r4, r3
 /* 80443800 0040CDC0  38 60 01 C8 */	li r3, 0x1c8
-/* 80443804 0040CDC4  4B FF 12 59 */	bl func_80434A5C
+/* 80443804 0040CDC4  4B FF 12 59 */	bl mm_malloc
 /* 80443808 0040CDC8  2C 03 00 00 */	cmpwi r3, 0
 /* 8044380C 0040CDCC  41 82 00 10 */	beq .L_8044381C
 /* 80443810 0040CDD0  7F E4 FB 78 */	mr r4, r31
@@ -183,8 +183,8 @@ func_80443904:
 /* 80443950 0040CF10  38 21 00 10 */	addi r1, r1, 0x10
 /* 80443954 0040CF14  4E 80 00 20 */	blr 
 
-.global func_80443958
-func_80443958:
+.global CWorkControl_create
+CWorkControl_create:
 /* 80443958 0040CF18  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044395C 0040CF1C  7C 08 02 A6 */	mflr r0
 /* 80443960 0040CF20  3C 80 80 52 */	lis r4, lbl_80525FA0@ha
@@ -196,13 +196,13 @@ func_80443958:
 /* 80443978 0040CF38  4B FF 3C 3D */	bl func_804375B4
 /* 8044397C 0040CF3C  7C 64 1B 78 */	mr r4, r3
 /* 80443980 0040CF40  38 60 01 C8 */	li r3, 0x1c8
-/* 80443984 0040CF44  4B FF 10 D9 */	bl func_80434A5C
+/* 80443984 0040CF44  4B FF 10 D9 */	bl mm_malloc
 /* 80443988 0040CF48  2C 03 00 00 */	cmpwi r3, 0
 /* 8044398C 0040CF4C  7C 7E 1B 78 */	mr r30, r3
 /* 80443990 0040CF50  41 82 00 14 */	beq .L_804439A4
 /* 80443994 0040CF54  7F E4 FB 78 */	mr r4, r31
 /* 80443998 0040CF58  7F A5 EB 78 */	mr r5, r29
-/* 8044399C 0040CF5C  4B FF FD 7D */	bl func_80443718
+/* 8044399C 0040CF5C  4B FF FD 7D */	bl __ct__CWorkControl
 /* 804439A0 0040CF60  7C 7E 1B 78 */	mr r30, r3
 .L_804439A4:
 /* 804439A4 0040CF64  7F C3 F3 78 */	mr r3, r30
@@ -344,7 +344,7 @@ lbl_8001C754:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_80443718
+.4byte __ct__CWorkControl
 	.4byte 0x0000004C
 	.4byte lbl_8001C724
 	.4byte func_80443764
@@ -362,6 +362,6 @@ lbl_8001C754:
 	.4byte func_80443904
 	.4byte 0x00000054
 	.4byte lbl_8001C74C
-	.4byte func_80443958
+	.4byte CWorkControl_create
 	.4byte 0x00000074
 	.4byte lbl_8001C754

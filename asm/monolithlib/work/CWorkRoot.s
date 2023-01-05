@@ -2,10 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#inside of CWorkRoot.cpp
-
-.global func_80443B08
-func_80443B08:
+.global __ct__CWorkRootThread
+__ct__CWorkRootThread:
 /* 80443B08 0040D0C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80443B0C 0040D0CC  7C 08 02 A6 */	mflr r0
 /* 80443B10 0040D0D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,7 +17,7 @@ func_80443B08:
 /* 80443B30 0040D0F0  4B FF 3A 85 */	bl func_804375B4
 /* 80443B34 0040D0F4  7C 64 1B 78 */	mr r4, r3
 /* 80443B38 0040D0F8  38 60 02 08 */	li r3, 0x208
-/* 80443B3C 0040D0FC  4B FF 0F 21 */	bl func_80434A5C
+/* 80443B3C 0040D0FC  4B FF 0F 21 */	bl mm_malloc
 /* 80443B40 0040D100  2C 03 00 00 */	cmpwi r3, 0
 /* 80443B44 0040D104  7C 7E 1B 78 */	mr r30, r3
 /* 80443B48 0040D108  41 82 00 50 */	beq .L_80443B98
@@ -47,7 +45,7 @@ func_80443B08:
 /* 80443B9C 0040D15C  38 80 00 00 */	li r4, 0
 /* 80443BA0 0040D160  38 A0 00 00 */	li r5, 0
 /* 80443BA4 0040D164  4B FF 50 35 */	bl func_80438BD8
-/* 80443BA8 0040D168  93 CD BD 68 */	stw r30, lbl_80667EE8@sda21(r13)
+/* 80443BA8 0040D168  93 CD BD 68 */	stw r30, cDesktopPointer@sda21(r13)
 /* 80443BAC 0040D16C  BB C1 00 08 */	lmw r30, 8(r1)
 /* 80443BB0 0040D170  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80443BB4 0040D174  7C 08 03 A6 */	mtlr r0
@@ -125,7 +123,7 @@ func_80443C8C:
 /* 80443C94 0040D254  38 60 00 00 */	li r3, 0
 /* 80443C98 0040D258  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80443C9C 0040D25C  4B F2 0C 45 */	bl VISetPreRetraceCallback
-/* 80443CA0 0040D260  80 6D BD 68 */	lwz r3, lbl_80667EE8@sda21(r13)
+/* 80443CA0 0040D260  80 6D BD 68 */	lwz r3, cDesktopPointer@sda21(r13)
 /* 80443CA4 0040D264  2C 03 00 00 */	cmpwi r3, 0
 /* 80443CA8 0040D268  41 82 00 24 */	beq .L_80443CCC
 /* 80443CAC 0040D26C  41 82 00 18 */	beq .L_80443CC4
@@ -136,7 +134,7 @@ func_80443C8C:
 /* 80443CC0 0040D280  4E 80 04 21 */	bctrl 
 .L_80443CC4:
 /* 80443CC4 0040D284  38 00 00 00 */	li r0, 0
-/* 80443CC8 0040D288  90 0D BD 68 */	stw r0, lbl_80667EE8@sda21(r13)
+/* 80443CC8 0040D288  90 0D BD 68 */	stw r0, cDesktopPointer@sda21(r13)
 .L_80443CCC:
 /* 80443CCC 0040D28C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80443CD0 0040D290  7C 08 03 A6 */	mtlr r0
@@ -187,7 +185,7 @@ func_80443D50:
 /* 80443D60 0040D320  7C 04 03 78 */	mr r4, r0
 /* 80443D64 0040D324  4B FF 40 44 */	b func_80437DA8
 .L_80443D68:
-/* 80443D68 0040D328  80 6D BD 68 */	lwz r3, lbl_80667EE8@sda21(r13)
+/* 80443D68 0040D328  80 6D BD 68 */	lwz r3, cDesktopPointer@sda21(r13)
 /* 80443D6C 0040D32C  2C 03 00 00 */	cmpwi r3, 0
 /* 80443D70 0040D330  4D 82 00 20 */	beqlr 
 /* 80443D74 0040D334  7C 04 03 78 */	mr r4, r0
@@ -262,6 +260,7 @@ func_80443E04:
 /* 80443E54 0040D414  38 60 FF FF */	li r3, -1
 /* 80443E58 0040D418  4E 80 00 20 */	blr 
 
+#r3: CDesktop instance pointer
 .global func_80443E5C
 func_80443E5C:
 /* 80443E5C 0040D41C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -428,7 +427,7 @@ func_8044406C:
 /* 80444070 0040D630  7C 08 02 A6 */	mflr r0
 /* 80444074 0040D634  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80444078 0040D638  BF A1 00 14 */	stmw r29, 0x14(r1)
-/* 8044407C 0040D63C  83 ED BD 68 */	lwz r31, lbl_80667EE8@sda21(r13)
+/* 8044407C 0040D63C  83 ED BD 68 */	lwz r31, cDesktopPointer@sda21(r13)
 /* 80444080 0040D640  48 00 00 54 */	b .L_804440D4
 .L_80444084:
 /* 80444084 0040D644  80 9F 01 E8 */	lwz r4, 0x1e8(r31)
@@ -469,9 +468,9 @@ func_8044406C:
 /* 80444104 0040D6C4  4B FF FA F9 */	bl func_80443BFC
 /* 80444108 0040D6C8  38 7F 01 E4 */	addi r3, r31, 0x1e4
 /* 8044410C 0040D6CC  4B FF FA F1 */	bl func_80443BFC
-/* 80444110 0040D6D0  80 6D BD 68 */	lwz r3, lbl_80667EE8@sda21(r13)
+/* 80444110 0040D6D0  80 6D BD 68 */	lwz r3, cDesktopPointer@sda21(r13)
 /* 80444114 0040D6D4  38 80 00 00 */	li r4, 0
-/* 80444118 0040D6D8  4B FF FD 45 */	bl func_80443E5C
+/* 80444118 0040D6D8  4B FF FD 45 */	bl func_80443E5C #leads to GameMain
 /* 8044411C 0040D6DC  BB A1 00 14 */	lmw r29, 0x14(r1)
 /* 80444120 0040D6E0  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80444124 0040D6E4  7C 08 03 A6 */	mtlr r0
@@ -538,7 +537,7 @@ func_804441BC:
 /* 804441E4 0040D7A4  48 00 46 95 */	bl func_80448878
 .L_804441E8:
 /* 804441E8 0040D7A8  4B FF FE 85 */	bl func_8044406C
-/* 804441EC 0040D7AC  80 6D BD 68 */	lwz r3, lbl_80667EE8@sda21(r13)
+/* 804441EC 0040D7AC  80 6D BD 68 */	lwz r3, cDesktopPointer@sda21(r13)
 /* 804441F0 0040D7B0  38 80 00 00 */	li r4, 0
 /* 804441F4 0040D7B4  4B FF FD 81 */	bl func_80443F74
 /* 804441F8 0040D7B8  4B FF FF 5D */	bl func_80444154
@@ -547,7 +546,7 @@ func_804441BC:
 /* 80444204 0040D7C4  41 82 00 08 */	beq .L_8044420C
 /* 80444208 0040D7C8  48 00 48 7D */	bl func_80448A84
 .L_8044420C:
-/* 8044420C 0040D7CC  80 6D BD 68 */	lwz r3, lbl_80667EE8@sda21(r13)
+/* 8044420C 0040D7CC  80 6D BD 68 */	lwz r3, cDesktopPointer@sda21(r13)
 /* 80444210 0040D7D0  4B FF 58 C5 */	bl func_80439AD4
 /* 80444214 0040D7D4  7C 60 00 34 */	cntlzw r0, r3
 /* 80444218 0040D7D8  54 00 D9 7E */	srwi r0, r0, 5
@@ -606,31 +605,31 @@ ExitGame:
 /* 804442D0 0040D890  38 21 00 10 */	addi r1, r1, 0x10
 /* 804442D4 0040D894  4E 80 00 20 */	blr 
 
-.global func_804442D8
-func_804442D8:
+.global CWorkRoot_Run
+CWorkRoot_Run:
 /* 804442D8 0040D898  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804442DC 0040D89C  7C 08 02 A6 */	mflr r0
 /* 804442E0 0040D8A0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 804442E4 0040D8A4  4B FE FA 35 */	bl PrintArenaMemoryInfo
+/* 804442E4 0040D8A4  4B FE FA 35 */	bl MemManager_initialize
 /* 804442E8 0040D8A8  48 0A 9F 39 */	bl SetOSErrorHandlers1
 /* 804442EC 0040D8AC  48 00 96 DD */	bl func_8044D9C8
 /* 804442F0 0040D8B0  4B FF 30 9D */	bl func_8043738C
-/* 804442F4 0040D8B4  4B FF F8 15 */	bl func_80443B08
-/* 804442F8 0040D8B8  80 6D BD 68 */	lwz r3, lbl_80667EE8@sda21(r13)
-/* 804442FC 0040D8BC  4B FF F6 5D */	bl func_80443958
-/* 80444300 0040D8C0  48 00 96 29 */	bl func_8044D928
-/* 80444304 0040D8C4  48 01 54 8D */	bl func_80459790
+/* 804442F4 0040D8B4  4B FF F8 15 */	bl __ct__CWorkRootThread
+/* 804442F8 0040D8B8  80 6D BD 68 */	lwz r3, cDesktopPointer@sda21(r13)
+/* 804442FC 0040D8BC  4B FF F6 5D */	bl CWorkControl_create
+/* 80444300 0040D8C0  48 00 96 29 */	bl __ct__CDevice
+/* 80444304 0040D8C4  48 01 54 8D */	bl __ct__CLib
 /* 80444308 0040D8C8  48 00 04 F5 */	bl func_804447FC
 .L_8044430C:
-/* 8044430C 0040D8CC  4B FF FD 61 */	bl func_8044406C
+/* 8044430C 0040D8CC  4B FF FD 61 */	bl func_8044406C #this function call leads to GameMain
 /* 80444310 0040D8D0  48 00 8D 41 */	bl func_8044D050
 /* 80444314 0040D8D4  2C 03 00 00 */	cmpwi r3, 0
 /* 80444318 0040D8D8  41 82 FF F4 */	beq .L_8044430C
 /* 8044431C 0040D8DC  48 00 8F 2D */	bl func_8044D248
 /* 80444320 0040D8E0  2C 03 00 00 */	cmpwi r3, 0
 /* 80444324 0040D8E4  40 82 FF E8 */	bne .L_8044430C
-/* 80444328 0040D8E8  3C 60 80 44 */	lis r3, func_80444368@ha
-/* 8044432C 0040D8EC  38 63 43 68 */	addi r3, r3, func_80444368@l
+/* 80444328 0040D8E8  3C 60 80 44 */	lis r3, CWorkRoot_PreRetraceCallback@ha
+/* 8044432C 0040D8EC  38 63 43 68 */	addi r3, r3, CWorkRoot_PreRetraceCallback@l
 /* 80444330 0040D8F0  4B F2 05 B1 */	bl VISetPreRetraceCallback
 .L_80444334:
 /* 80444334 0040D8F4  4B FF FE 89 */	bl func_804441BC
@@ -640,15 +639,15 @@ func_804442D8:
 /* 80444344 0040D904  4B FF 32 0D */	bl func_80437550
 /* 80444348 0040D908  48 00 96 FD */	bl func_8044DA44
 /* 8044434C 0040D90C  48 0A 9F 65 */	bl SetOSErrorHandlers2
-/* 80444350 0040D910  4B FE FC 91 */	bl func_80433FE0
+/* 80444350 0040D910  4B FE FC 91 */	bl MemManager_finalize
 /* 80444354 0040D914  4B FF FE E1 */	bl ExitGame
 /* 80444358 0040D918  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8044435C 0040D91C  7C 08 03 A6 */	mtlr r0
 /* 80444360 0040D920  38 21 00 10 */	addi r1, r1, 0x10
 /* 80444364 0040D924  4E 80 00 20 */	blr
 
-.global func_80444368
-func_80444368:
+.global CWorkRoot_PreRetraceCallback
+CWorkRoot_PreRetraceCallback:
 /* 80444368 0040D928  48 00 49 A8 */	b func_80448D10
 
 .global func_8044436C
@@ -804,8 +803,8 @@ lbl_8065A0F8:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667EE8
-lbl_80667EE8:
+.global cDesktopPointer
+cDesktopPointer:
 	.skip 0x4
 .global lbl_80667EEC
 lbl_80667EEC:
@@ -913,7 +912,7 @@ lbl_8001C830:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_80443B08
+.4byte __ct__CWorkRootThread
 	.4byte 0x000000B8
 	.4byte lbl_8001C774
 	.4byte func_80443C2C
@@ -949,7 +948,7 @@ lbl_8001C830:
 	.4byte ExitGame
 	.4byte 0x000000A4
 	.4byte lbl_8001C818
-	.4byte func_804442D8
+	.4byte CWorkRoot_Run
 	.4byte 0x00000090
 	.4byte lbl_8001C820
 	.4byte func_8044438C

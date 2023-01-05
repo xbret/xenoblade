@@ -4,7 +4,7 @@
 
 .global func_80167C40
 func_80167C40:
-/* 80167C40 00131200  C0 02 9B 90 */	lfs f0, lbl_80669F10@sda21(r2)
+/* 80167C40 00131200  C0 02 9B 90 */	lfs f0, float_80669F10@sda21(r2)
 /* 80167C44 00131204  3C 80 80 53 */	lis r4, __vt__cf_CREvtMem@ha
 /* 80167C48 00131208  38 00 00 00 */	li r0, 0
 /* 80167C4C 0013120C  90 03 00 04 */	stw r0, 4(r3)
@@ -326,8 +326,8 @@ __RTTI__cf_CREvtMem:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_80669F10
-lbl_80669F10:
+.global float_80669F10
+float_80669F10:
 	# ROM: 0x573D70
 	.4byte 0
 	.4byte 0

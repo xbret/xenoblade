@@ -43,7 +43,7 @@ Construct__Q34nw4r3g3d7ScnProcFP12MEMAllocatorPUlPFPQ34nw4r3g3d7ScnProcb_vbbUl:
 /* 803FCEBC 003C647C  7F A3 EB 78 */	mr r3, r29
 /* 803FCEC0 003C6480  7F 24 CB 78 */	mr r4, r25
 /* 803FCEC4 003C6484  4B FF 76 05 */	bl __ct__Q34nw4r3g3d6ScnObjFP12MEMAllocator
-/* 803FCEC8 003C6488  C0 02 C1 70 */	lfs f0, lbl_8066C4F0@sda21(r2)
+/* 803FCEC8 003C6488  C0 02 C1 70 */	lfs f0, float_8066C4F0@sda21(r2)
 /* 803FCECC 003C648C  3C 60 80 57 */	lis r3, lbl_8056D150@ha
 /* 803FCED0 003C6490  38 63 D1 50 */	addi r3, r3, lbl_8056D150@l
 /* 803FCED4 003C6494  38 00 00 00 */	li r0, 0
@@ -257,8 +257,8 @@ lbl_8056D150:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C4F0
-lbl_8066C4F0:
+.global float_8066C4F0
+float_8066C4F0:
 	# ROM: 0x576350
 	.float 1.0
 	.4byte 0

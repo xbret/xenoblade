@@ -14,7 +14,7 @@ func_802B85A4:
 /* 802B85C0 00281B80  3C 00 43 30 */	lis r0, 0x4330
 /* 802B85C4 00281B84  90 01 00 08 */	stw r0, 8(r1)
 /* 802B85C8 00281B88  6C 60 80 00 */	xoris r0, r3, 0x8000
-/* 802B85CC 00281B8C  C8 22 B4 80 */	lfd f1, lbl_8066B800@sda21(r2)
+/* 802B85CC 00281B8C  C8 22 B4 80 */	lfd f1, double_8066B800@sda21(r2)
 /* 802B85D0 00281B90  90 01 00 0C */	stw r0, 0xc(r1)
 /* 802B85D4 00281B94  C0 5F 00 0C */	lfs f2, 0xc(r31)
 /* 802B85D8 00281B98  C8 01 00 08 */	lfd f0, 8(r1)
@@ -32,8 +32,8 @@ func_802B85A4:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_8066B800
-lbl_8066B800:
+.global double_8066B800
+double_8066B800:
 	# ROM: 0x575660
 	.4byte 0x43300000
 	.4byte 0x80000000

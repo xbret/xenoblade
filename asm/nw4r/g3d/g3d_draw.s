@@ -64,11 +64,11 @@ GetIndMtxOp__Q34nw4r3g3d6detailFQ34nw4r3g3d6ResMatQ34nw4r3g3d7ResNodeQ34nw4r3g3d
 /* 803EF278 003B8838  81 8C 00 10 */	lwz r12, 0x10(r12)
 /* 803EF27C 003B883C  7D 89 03 A6 */	mtctr r12
 /* 803EF280 003B8840  4E 80 04 21 */	bctrl 
-/* 803EF284 003B8844  C3 A2 C0 CC */	lfs f29, lbl_8066C44C@sda21(r2)
+/* 803EF284 003B8844  C3 A2 C0 CC */	lfs f29, float_8066C44C@sda21(r2)
 /* 803EF288 003B8848  3B E1 00 68 */	addi r31, r1, 0x68
-/* 803EF28C 003B884C  C3 C2 C0 D0 */	lfs f30, lbl_8066C450@sda21(r2)
+/* 803EF28C 003B884C  C3 C2 C0 D0 */	lfs f30, float_8066C450@sda21(r2)
 /* 803EF290 003B8850  3B C1 00 0C */	addi r30, r1, 0xc
-/* 803EF294 003B8854  C3 E2 C0 C8 */	lfs f31, lbl_8066C448@sda21(r2)
+/* 803EF294 003B8854  C3 E2 C0 C8 */	lfs f31, float_8066C448@sda21(r2)
 /* 803EF298 003B8858  3B 80 00 00 */	li r28, 0
 .L_803EF29C:
 /* 803EF29C 003B885C  80 1F 00 00 */	lwz r0, 0(r31)
@@ -906,7 +906,7 @@ SetUpMdlZ__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FPUlQ34nw4r3g3d6ResMdlPCQ34nw4r4ma
 /* 803EFE30 003B93F0  3B C0 00 00 */	li r30, 0
 /* 803EFE34 003B93F4  4B FF E8 85 */	bl GetMdlZTemporary__Q44nw4r3g3d6detail7workmemFv
 /* 803EFE38 003B93F8  7C 7C 1B 78 */	mr r28, r3
-/* 803EFE3C 003B93FC  C3 E2 C0 C8 */	lfs f31, lbl_8066C448@sda21(r2)
+/* 803EFE3C 003B93FC  C3 E2 C0 C8 */	lfs f31, float_8066C448@sda21(r2)
 /* 803EFE40 003B9400  7F 9F E3 78 */	mr r31, r28
 /* 803EFE44 003B9404  48 00 00 E4 */	b .L_803EFF28
 .L_803EFE48:
@@ -2174,20 +2174,20 @@ lbl_80665DAC:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C448
-lbl_8066C448:
+.global float_8066C448
+float_8066C448:
 	# ROM: 0x5762A8
 	.4byte 0
 
 
-.global lbl_8066C44C
-lbl_8066C44C:
+.global float_8066C44C
+float_8066C44C:
 	# ROM: 0x5762AC
 	.4byte 0xC0000000
 
 
-.global lbl_8066C450
-lbl_8066C450:
+.global float_8066C450
+float_8066C450:
 	# ROM: 0x5762B0
 	.float 1.0
 	.4byte 0

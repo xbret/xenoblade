@@ -1194,14 +1194,14 @@ lbl_805092B8:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066B1B0
-lbl_8066B1B0:
+.global float_8066B1B0
+float_8066B1B0:
 	# ROM: 0x575010
 	.float 1.0
 
 
-.global lbl_8066B1B4
-lbl_8066B1B4:
+.global float_8066B1B4
+float_8066B1B4:
 	# ROM: 0x575014
 	.4byte 0
 
@@ -1218,29 +1218,29 @@ lbl_8066B1BC:
 	.4byte lbl_80509244
 
 
-.global lbl_8066B1C0
-lbl_8066B1C0:
+.global double_8066B1C0
+double_8066B1C0:
 	# ROM: 0x575020
 	.4byte 0x43300000
 	.4byte 0
 
 
-.global lbl_8066B1C8
-lbl_8066B1C8:
+.global float_8066B1C8
+float_8066B1C8:
 	# ROM: 0x575028
 	.4byte 0x40800000
 	.4byte 0
 
 
-.global lbl_8066B1D0
-lbl_8066B1D0:
+.global double_8066B1D0
+double_8066B1D0:
 	# ROM: 0x575030
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
-.global lbl_8066B1D8
-lbl_8066B1D8:
+.global float_8066B1D8
+float_8066B1D8:
 	# ROM: 0x575038
 	.4byte 0x422C0000
 
@@ -1257,14 +1257,14 @@ lbl_8066B1E0:
 	.4byte 0x08000000
 
 
-.global lbl_8066B1E4
-lbl_8066B1E4:
+.global float_8066B1E4
+float_8066B1E4:
 	# ROM: 0x575044
 	.4byte 0x437F0000
 
 
-.global lbl_8066B1E8
-lbl_8066B1E8:
+.global float_8066B1E8
+float_8066B1E8:
 	# ROM: 0x575048
 	.4byte 0x43200000
 	.4byte 0

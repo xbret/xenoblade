@@ -175,7 +175,7 @@ func_802A0950:
 /* 802A0A08 00269FC8  2C 1F 00 00 */	cmpwi r31, 0
 /* 802A0A0C 00269FCC  93 DB 00 08 */	stw r30, 8(r27)
 /* 802A0A10 00269FD0  41 82 00 78 */	beq .L_802A0A88
-/* 802A0A14 00269FD4  C0 22 B1 78 */	lfs f1, lbl_8066B4F8@sda21(r2)
+/* 802A0A14 00269FD4  C0 22 B1 78 */	lfs f1, float_8066B4F8@sda21(r2)
 /* 802A0A18 00269FD8  7F E4 FB 78 */	mr r4, r31
 /* 802A0A1C 00269FDC  38 60 00 00 */	li r3, 0
 /* 802A0A20 00269FE0  38 A0 00 00 */	li r5, 0
@@ -278,8 +278,8 @@ __RTTI__cf_CChainEffect:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_8066B4F8
-lbl_8066B4F8:
+.global float_8066B4F8
+float_8066B4F8:
 	# ROM: 0x575358
 	.4byte 0x3F19999A
 	.4byte 0

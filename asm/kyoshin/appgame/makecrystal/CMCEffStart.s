@@ -155,7 +155,7 @@ func_80223F24:
 /* 80223F28 001ED4E8  98 03 00 04 */	stb r0, 4(r3)
 /* 80223F2C 001ED4EC  80 83 00 10 */	lwz r4, 0x10(r3)
 /* 80223F30 001ED4F0  38 00 00 00 */	li r0, 0
-/* 80223F34 001ED4F4  C0 02 AA 90 */	lfs f0, lbl_8066AE10@sda21(r2)
+/* 80223F34 001ED4F4  C0 02 AA 90 */	lfs f0, float_8066AE10@sda21(r2)
 /* 80223F38 001ED4F8  D0 04 00 10 */	stfs f0, 0x10(r4)
 /* 80223F3C 001ED4FC  98 03 00 05 */	stb r0, 5(r3)
 /* 80223F40 001ED500  4E 80 00 20 */	blr 
@@ -164,7 +164,7 @@ func_80223F24:
 func_80223F44:
 /* 80223F44 001ED504  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80223F48 001ED508  7C 08 02 A6 */	mflr r0
-/* 80223F4C 001ED50C  C0 22 AA 94 */	lfs f1, lbl_8066AE14@sda21(r2)
+/* 80223F4C 001ED50C  C0 22 AA 94 */	lfs f1, float_8066AE14@sda21(r2)
 /* 80223F50 001ED510  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80223F54 001ED514  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80223F58 001ED518  7C 7F 1B 78 */	mr r31, r3
@@ -485,27 +485,27 @@ __RTTI__CMCEffStart:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066AE10
-lbl_8066AE10:
+.global float_8066AE10
+float_8066AE10:
 	# ROM: 0x574C70
 	.4byte 0
 
 
-.global lbl_8066AE14
-lbl_8066AE14:
+.global float_8066AE14
+float_8066AE14:
 	# ROM: 0x574C74
 	.float 1.0
 
 
-.global lbl_8066AE18
-lbl_8066AE18:
+.global double_8066AE18
+double_8066AE18:
 	# ROM: 0x574C78
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
-.global lbl_8066AE20
-lbl_8066AE20:
+.global float_8066AE20
+float_8066AE20:
 	# ROM: 0x574C80
 	.4byte 0x40A00000
 	.4byte 0

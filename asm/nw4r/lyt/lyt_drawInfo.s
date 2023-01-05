@@ -7,10 +7,10 @@ __ct__Q34nw4r3lyt8DrawInfoFv:
 /* 80408668 003D1C28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040866C 003D1C2C  7C 08 02 A6 */	mflr r0
 /* 80408670 003D1C30  3C 80 80 57 */	lis r4, lbl_8056D548@ha
-/* 80408674 003D1C34  C0 22 C2 50 */	lfs f1, lbl_8066C5D0@sda21(r2)
+/* 80408674 003D1C34  C0 22 C2 50 */	lfs f1, float_8066C5D0@sda21(r2)
 /* 80408678 003D1C38  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8040867C 003D1C3C  38 84 D5 48 */	addi r4, r4, lbl_8056D548@l
-/* 80408680 003D1C40  C0 02 C2 54 */	lfs f0, lbl_8066C5D4@sda21(r2)
+/* 80408680 003D1C40  C0 02 C2 54 */	lfs f0, float_8066C5D4@sda21(r2)
 /* 80408684 003D1C44  38 A0 00 01 */	li r5, 1
 /* 80408688 003D1C48  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8040868C 003D1C4C  7C 7F 1B 78 */	mr r31, r3
@@ -67,13 +67,13 @@ lbl_8056D548:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C5D0
-lbl_8066C5D0:
+.global float_8066C5D0
+float_8066C5D0:
 	# ROM: 0x576430
 	.4byte 0
 
 
-.global lbl_8066C5D4
-lbl_8066C5D4:
+.global float_8066C5D4
+float_8066C5D4:
 	# ROM: 0x576434
 	.float 1.0

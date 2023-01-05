@@ -307,7 +307,7 @@ Append__Q34nw4r3lyt7PictureFRCQ34nw4r3lyt6TexMap:
 /* 804010B0 003CA670  80 04 00 3C */	lwz r0, 0x3c(r4)
 /* 804010B4 003CA674  54 04 27 3E */	srwi r4, r0, 0x1c
 /* 804010B8 003CA678  48 00 90 E9 */	bl SetSize__Q44nw4r3lyt6detail11TexCoordAryFUc
-/* 804010BC 003CA67C  C0 22 C1 E0 */	lfs f1, lbl_8066C560@sda21(r2)
+/* 804010BC 003CA67C  C0 22 C1 E0 */	lfs f1, float_8066C560@sda21(r2)
 /* 804010C0 003CA680  C0 1E 00 4C */	lfs f0, 0x4c(r30)
 /* 804010C4 003CA684  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 804010C8 003CA688  FC 00 08 00 */	fcmpu cr0, f0, f1
@@ -508,8 +508,8 @@ lbl_8056D298:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C560
-lbl_8066C560:
+.global float_8066C560
+float_8066C560:
 	# ROM: 0x5763C0
 	.4byte 0
 	.4byte 0

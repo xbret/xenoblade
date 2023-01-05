@@ -631,31 +631,31 @@ __RTTI__cf_IResInfo:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_80668A88
-lbl_80668A88:
+.global float_80668A88
+float_80668A88:
 	# ROM: 0x5728E8
 	.4byte 0
 
 
-.global lbl_80668A8C
-lbl_80668A8C:
+.global float_80668A8C
+float_80668A8C:
 	# ROM: 0x5728EC
 	.4byte 0x40400000
 
 
-.global lbl_80668A90
-lbl_80668A90:
+.global float_80668A90
+float_80668A90:
 	# ROM: 0x5728F0
 	.4byte 0x42F00000
 
 
-.global lbl_80668A94
-lbl_80668A94:
+.global float_80668A94
+float_80668A94:
 	# ROM: 0x5728F4
 	.float 1.0
 
-.global lbl_80668A98
-lbl_80668A98:
+.global float_80668A98
+float_80668A98:
 	# ROM: 0x5728F8
 	.4byte 0x41F00000
 

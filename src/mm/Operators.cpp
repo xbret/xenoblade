@@ -1,10 +1,15 @@
 #include "mm/Operators.hpp"
 #include "fdlibm.h"
 
+//Compiled with the ec++ flag? without it the compiler requires throw() to be added for the operators, which messes them up
+
+//based on xcde
+//namespace mtl{
+//    namespace MemManager{
+
 
 u32 memoryAllocHeapArray[80][28]; //bss
 u32 lbl_80665E30 = -1;
-f64 lbl_8066C9B8 = 1.0;
 
 
 //doesn't seem like operator new
@@ -20,9 +25,7 @@ void operator delete(void* p) {
             u32* memoryAllocHeapArray_ptr = memoryAllocHeapArray[(u8)temp_r4->unk10];
             
             if((temp_r4->size - 0x21) > 0x07FFFFDE){
-                //calculates ln(1), which is 0 (also 0 in hex). it gets put into f1, so it should be returned?
-                //this might be part of debug code and this line wasn't commented out
-                float f0 = log(lbl_8066C9B8);
+                log(true);
                 return;
             }
         

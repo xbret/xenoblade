@@ -66,7 +66,7 @@ Copy32ByteBlocks__Q34nw4r3g3d6detailFPvPCvUl:
 .global ZeroMemory32ByteBlocks__Q34nw4r3g3d6detailFPvUl
 ZeroMemory32ByteBlocks__Q34nw4r3g3d6detailFPvUl:
 /* 803E7A54 003B1014  54 84 D9 7F */	rlwinm. r4, r4, 0x1b, 5, 0x1f
-/* 803E7A58 003B1018  C0 02 C0 60 */	lfs f0, lbl_8066C3E0@sda21(r2)
+/* 803E7A58 003B1018  C0 02 C0 60 */	lfs f0, float_8066C3E0@sda21(r2)
 /* 803E7A5C 003B101C  4D 82 00 20 */	beqlr 
 /* 803E7A60 003B1020  54 80 E8 FF */	rlwinm. r0, r4, 0x1d, 3, 0x1f
 /* 803E7A64 003B1024  7C 09 03 A6 */	mtctr r0
@@ -122,7 +122,7 @@ ZeroMemory32ByteBlocks__Q34nw4r3g3d6detailFPvUl:
 .global ZeroMemory16ByteBlocks__Q34nw4r3g3d6detailFPvUl
 ZeroMemory16ByteBlocks__Q34nw4r3g3d6detailFPvUl:
 /* 803E7B1C 003B10DC  54 84 E1 3F */	rlwinm. r4, r4, 0x1c, 4, 0x1f
-/* 803E7B20 003B10E0  C0 02 C0 60 */	lfs f0, lbl_8066C3E0@sda21(r2)
+/* 803E7B20 003B10E0  C0 02 C0 60 */	lfs f0, float_8066C3E0@sda21(r2)
 /* 803E7B24 003B10E4  4D 82 00 20 */	beqlr 
 /* 803E7B28 003B10E8  54 80 E8 FF */	rlwinm. r0, r4, 0x1d, 3, 0x1f
 /* 803E7B2C 003B10EC  7C 09 03 A6 */	mtctr r0
@@ -159,8 +159,8 @@ ZeroMemory16ByteBlocks__Q34nw4r3g3d6detailFPvUl:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C3E0
-lbl_8066C3E0:
+.global float_8066C3E0
+float_8066C3E0:
 	# ROM: 0x576240
 	.4byte 0
 	.4byte 0

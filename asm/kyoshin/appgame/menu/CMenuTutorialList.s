@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802ABDB0
-func_802ABDB0:
+.global __ct__CMenuTutorialList
+__ct__CMenuTutorialList:
 /* 802ABDB0 00275370  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802ABDB4 00275374  7C 08 02 A6 */	mflr r0
 /* 802ABDB8 00275378  90 01 00 24 */	stw r0, 0x24(r1)
@@ -52,7 +52,7 @@ func_802ABDB0:
 /* 802ABE64 00275424  38 80 00 00 */	li r4, 0
 /* 802ABE68 00275428  38 A0 00 00 */	li r5, 0
 /* 802ABE6C 0027542C  4B FE EA C9 */	bl func_8029A934
-/* 802ABE70 00275430  C0 02 B2 F0 */	lfs f0, lbl_8066B670@sda21(r2)
+/* 802ABE70 00275430  C0 02 B2 F0 */	lfs f0, float_8066B670@sda21(r2)
 /* 802ABE74 00275434  39 61 00 20 */	addi r11, r1, 0x20
 /* 802ABE78 00275438  D0 1C 03 94 */	stfs f0, 0x394(r28)
 /* 802ABE7C 0027543C  7F 83 E3 78 */	mr r3, r28
@@ -510,12 +510,12 @@ func_802AC494:
 /* 802AC4C4 00275A84  48 18 B0 F1 */	bl func_804375B4
 /* 802AC4C8 00275A88  7C 64 1B 78 */	mr r4, r3
 /* 802AC4CC 00275A8C  38 60 03 9C */	li r3, 0x39c
-/* 802AC4D0 00275A90  48 18 85 8D */	bl func_80434A5C
+/* 802AC4D0 00275A90  48 18 85 8D */	bl mm_malloc
 /* 802AC4D4 00275A94  2C 03 00 00 */	cmpwi r3, 0
 /* 802AC4D8 00275A98  41 82 00 10 */	beq .L_802AC4E8
 /* 802AC4DC 00275A9C  7F C4 F3 78 */	mr r4, r30
 /* 802AC4E0 00275AA0  7F E5 FB 78 */	mr r5, r31
-/* 802AC4E4 00275AA4  4B FF F8 CD */	bl func_802ABDB0
+/* 802AC4E4 00275AA4  4B FF F8 CD */	bl __ct__CMenuTutorialList
 .L_802AC4E8:
 /* 802AC4E8 00275AA8  90 6D B3 50 */	stw r3, lbl_806674D0@sda21(r13)
 /* 802AC4EC 00275AAC  7F A4 EB 78 */	mr r4, r29
@@ -598,9 +598,9 @@ func_802AC598:
 func_802AC5E8:
 /* 802AC5E8 00275BA8  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802AC5EC 00275BAC  7C 08 02 A6 */	mflr r0
-/* 802AC5F0 00275BB0  C0 22 B2 F4 */	lfs f1, lbl_8066B674@sda21(r2)
+/* 802AC5F0 00275BB0  C0 22 B2 F4 */	lfs f1, float_8066B674@sda21(r2)
 /* 802AC5F4 00275BB4  90 01 00 74 */	stw r0, 0x74(r1)
-/* 802AC5F8 00275BB8  C0 02 B2 F8 */	lfs f0, lbl_8066B678@sda21(r2)
+/* 802AC5F8 00275BB8  C0 02 B2 F8 */	lfs f0, float_8066B678@sda21(r2)
 /* 802AC5FC 00275BBC  93 E1 00 6C */	stw r31, 0x6c(r1)
 /* 802AC600 00275BC0  7C 7F 1B 78 */	mr r31, r3
 /* 802AC604 00275BC4  93 C1 00 68 */	stw r30, 0x68(r1)
@@ -1279,20 +1279,20 @@ __RTTI__CMenuTutorialList:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066B670
-lbl_8066B670:
+.global float_8066B670
+float_8066B670:
 	# ROM: 0x5754D0
 	.4byte 0
 
 
-.global lbl_8066B674
-lbl_8066B674:
+.global float_8066B674
+float_8066B674:
 	# ROM: 0x5754D4
 	.float 1.0
 
 
-.global lbl_8066B678
-lbl_8066B678:
+.global float_8066B678
+float_8066B678:
 	# ROM: 0x5754D8
 	.float 10.0
 	.4byte 0
@@ -1462,7 +1462,7 @@ lbl_8001B2C8:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_802ABDB0
+.4byte __ct__CMenuTutorialList
 	.4byte 0x000000EC
 	.4byte lbl_8001B138
 	.4byte func_802ABE9C

@@ -109,8 +109,8 @@ func_80460194:
 /* 80460234 004297F4  38 60 00 01 */	li r3, 1
 /* 80460238 004297F8  4E 80 00 20 */	blr 
 
-.global func_8046023C
-func_8046023C:
+.global CLibVM_SetCallbacks
+CLibVM_SetCallbacks:
 /* 8046023C 004297FC  90 6D BE 7C */	stw r3, lbl_80667FFC@sda21(r13)
 /* 80460240 00429800  90 8D BE 80 */	stw r4, lbl_80668000@sda21(r13)
 /* 80460244 00429804  4E 80 00 20 */	blr 

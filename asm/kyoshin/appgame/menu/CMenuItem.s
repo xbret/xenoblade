@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_801678F0
-func_801678F0:
+.global __ct__CMenuItem
+__ct__CMenuItem:
 /* 801678F0 00130EB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801678F4 00130EB4  7C 08 02 A6 */	mflr r0
 /* 801678F8 00130EB8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -21,7 +21,7 @@ func_801678F0:
 /* 80167924 00130EE4  48 2C FC 91 */	bl func_804375B4
 /* 80167928 00130EE8  7C 64 1B 78 */	mr r4, r3
 /* 8016792C 00130EEC  38 60 4A C8 */	li r3, 0x4ac8
-/* 80167930 00130EF0  48 2C D1 2D */	bl func_80434A5C
+/* 80167930 00130EF0  48 2C D1 2D */	bl mm_malloc
 /* 80167934 00130EF4  2C 03 00 00 */	cmpwi r3, 0
 /* 80167938 00130EF8  7C 7E 1B 78 */	mr r30, r3
 /* 8016793C 00130EFC  41 82 00 B0 */	beq .L_801679EC
@@ -342,7 +342,7 @@ lbl_8000DE2C:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_801678F0
+.4byte __ct__CMenuItem
 	.4byte 0x00000128
 	.4byte lbl_8000DDDC
 	.4byte func_80167A2C

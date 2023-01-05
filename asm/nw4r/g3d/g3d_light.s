@@ -288,11 +288,11 @@ InitLightShininess__Q34nw4r3g3d8LightObjFf:
 /* 803FD6EC 003C6CAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FD6F0 003C6CB0  7C 08 02 A6 */	mflr r0
 /* 803FD6F4 003C6CB4  FC 80 08 90 */	fmr f4, f1
-/* 803FD6F8 003C6CB8  C0 02 C1 88 */	lfs f0, lbl_8066C508@sda21(r2)
-/* 803FD6FC 003C6CBC  C0 22 C1 80 */	lfs f1, lbl_8066C500@sda21(r2)
+/* 803FD6F8 003C6CB8  C0 02 C1 88 */	lfs f0, float_8066C508@sda21(r2)
+/* 803FD6FC 003C6CBC  C0 22 C1 80 */	lfs f1, float_8066C500@sda21(r2)
 /* 803FD700 003C6CC0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803FD704 003C6CC4  EC 84 00 32 */	fmuls f4, f4, f0
-/* 803FD708 003C6CC8  C0 62 C1 84 */	lfs f3, lbl_8066C504@sda21(r2)
+/* 803FD708 003C6CC8  C0 62 C1 84 */	lfs f3, float_8066C504@sda21(r2)
 /* 803FD70C 003C6CCC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803FD710 003C6CD0  7C 7F 1B 78 */	mr r31, r3
 /* 803FD714 003C6CD4  FC 40 08 90 */	fmr f2, f1
@@ -469,22 +469,22 @@ __ct__Q34nw4r3g3d12LightSettingFPQ34nw4r3g3d8LightObjPQ34nw4r3g3d11AmbLightObjUl
 /* 803FD980 003C6F40  38 81 00 10 */	addi r4, r1, 0x10
 /* 803FD984 003C6F44  90 01 00 10 */	stw r0, 0x10(r1)
 /* 803FD988 003C6F48  4B F1 E4 09 */	bl GXInitLightColor
-/* 803FD98C 003C6F4C  C0 22 C1 94 */	lfs f1, lbl_8066C514@sda21(r2)
+/* 803FD98C 003C6F4C  C0 22 C1 94 */	lfs f1, float_8066C514@sda21(r2)
 /* 803FD990 003C6F50  38 61 00 EC */	addi r3, r1, 0xec
 /* 803FD994 003C6F54  FC 40 08 90 */	fmr f2, f1
 /* 803FD998 003C6F58  FC 60 08 90 */	fmr f3, f1
 /* 803FD99C 003C6F5C  4B F1 E2 65 */	bl GXInitLightPos
 /* 803FD9A0 003C6F60  80 01 00 E8 */	lwz r0, 0xe8(r1)
 /* 803FD9A4 003C6F64  38 61 00 EC */	addi r3, r1, 0xec
-/* 803FD9A8 003C6F68  C0 22 C1 80 */	lfs f1, lbl_8066C500@sda21(r2)
+/* 803FD9A8 003C6F68  C0 22 C1 80 */	lfs f1, float_8066C500@sda21(r2)
 /* 803FD9AC 003C6F6C  54 00 07 FA */	rlwinm r0, r0, 0, 0x1f, 0x1d
-/* 803FD9B0 003C6F70  C0 42 C1 98 */	lfs f2, lbl_8066C518@sda21(r2)
+/* 803FD9B0 003C6F70  C0 42 C1 98 */	lfs f2, float_8066C518@sda21(r2)
 /* 803FD9B4 003C6F74  FC 60 08 90 */	fmr f3, f1
 /* 803FD9B8 003C6F78  90 01 00 E8 */	stw r0, 0xe8(r1)
 /* 803FD9BC 003C6F7C  4B F1 E2 75 */	bl GXInitLightDir
 /* 803FD9C0 003C6F80  80 01 00 E8 */	lwz r0, 0xe8(r1)
 /* 803FD9C4 003C6F84  38 61 00 EC */	addi r3, r1, 0xec
-/* 803FD9C8 003C6F88  C0 22 C1 9C */	lfs f1, lbl_8066C51C@sda21(r2)
+/* 803FD9C8 003C6F88  C0 22 C1 9C */	lfs f1, float_8066C51C@sda21(r2)
 /* 803FD9CC 003C6F8C  38 80 00 00 */	li r4, 0
 /* 803FD9D0 003C6F90  54 00 07 FA */	rlwinm r0, r0, 0, 0x1f, 0x1d
 /* 803FD9D4 003C6F94  60 00 00 01 */	ori r0, r0, 1
@@ -492,10 +492,10 @@ __ct__Q34nw4r3g3d12LightSettingFPQ34nw4r3g3d8LightObjPQ34nw4r3g3d11AmbLightObjUl
 /* 803FD9DC 003C6F9C  4B F1 DF B5 */	bl GXInitLightSpot
 /* 803FD9E0 003C6FA0  80 01 00 E8 */	lwz r0, 0xe8(r1)
 /* 803FD9E4 003C6FA4  38 61 00 EC */	addi r3, r1, 0xec
-/* 803FD9E8 003C6FA8  C0 22 C1 A0 */	lfs f1, lbl_8066C520@sda21(r2)
+/* 803FD9E8 003C6FA8  C0 22 C1 A0 */	lfs f1, float_8066C520@sda21(r2)
 /* 803FD9EC 003C6FAC  38 80 00 00 */	li r4, 0
 /* 803FD9F0 003C6FB0  54 00 07 FA */	rlwinm r0, r0, 0, 0x1f, 0x1d
-/* 803FD9F4 003C6FB4  C0 42 C1 88 */	lfs f2, lbl_8066C508@sda21(r2)
+/* 803FD9F4 003C6FB4  C0 42 C1 88 */	lfs f2, float_8066C508@sda21(r2)
 /* 803FD9F8 003C6FB8  60 00 00 01 */	ori r0, r0, 1
 /* 803FD9FC 003C6FBC  90 01 00 E8 */	stw r0, 0xe8(r1)
 /* 803FDA00 003C6FC0  4B F1 E1 31 */	bl GXInitLightDistAttn
@@ -508,7 +508,7 @@ __ct__Q34nw4r3g3d12LightSettingFPQ34nw4r3g3d8LightObjPQ34nw4r3g3d11AmbLightObjUl
 /* 803FDA1C 003C6FDC  90 01 00 0C */	stw r0, 0xc(r1)
 /* 803FDA20 003C6FE0  90 A1 00 E8 */	stw r5, 0xe8(r1)
 /* 803FDA24 003C6FE4  4B F1 E3 6D */	bl GXInitLightColor
-/* 803FDA28 003C6FE8  C0 22 C1 94 */	lfs f1, lbl_8066C514@sda21(r2)
+/* 803FDA28 003C6FE8  C0 22 C1 94 */	lfs f1, float_8066C514@sda21(r2)
 /* 803FDA2C 003C6FEC  38 61 00 A8 */	addi r3, r1, 0xa8
 /* 803FDA30 003C6FF0  FC 40 08 90 */	fmr f2, f1
 /* 803FDA34 003C6FF4  FC 60 08 90 */	fmr f3, f1
@@ -522,30 +522,30 @@ __ct__Q34nw4r3g3d12LightSettingFPQ34nw4r3g3d8LightObjPQ34nw4r3g3d11AmbLightObjUl
 /* 803FDA54 003C7014  90 01 00 08 */	stw r0, 8(r1)
 /* 803FDA58 003C7018  90 A1 00 A4 */	stw r5, 0xa4(r1)
 /* 803FDA5C 003C701C  4B F1 E3 35 */	bl GXInitLightColor
-/* 803FDA60 003C7020  C0 22 C1 94 */	lfs f1, lbl_8066C514@sda21(r2)
+/* 803FDA60 003C7020  C0 22 C1 94 */	lfs f1, float_8066C514@sda21(r2)
 /* 803FDA64 003C7024  38 61 00 64 */	addi r3, r1, 0x64
 /* 803FDA68 003C7028  FC 40 08 90 */	fmr f2, f1
 /* 803FDA6C 003C702C  FC 60 08 90 */	fmr f3, f1
 /* 803FDA70 003C7030  4B F1 E1 91 */	bl GXInitLightPos
 /* 803FDA74 003C7034  80 01 00 60 */	lwz r0, 0x60(r1)
 /* 803FDA78 003C7038  38 61 00 64 */	addi r3, r1, 0x64
-/* 803FDA7C 003C703C  C0 22 C1 80 */	lfs f1, lbl_8066C500@sda21(r2)
+/* 803FDA7C 003C703C  C0 22 C1 80 */	lfs f1, float_8066C500@sda21(r2)
 /* 803FDA80 003C7040  54 00 07 FA */	rlwinm r0, r0, 0, 0x1f, 0x1d
-/* 803FDA84 003C7044  C0 42 C1 98 */	lfs f2, lbl_8066C518@sda21(r2)
+/* 803FDA84 003C7044  C0 42 C1 98 */	lfs f2, float_8066C518@sda21(r2)
 /* 803FDA88 003C7048  FC 60 08 90 */	fmr f3, f1
 /* 803FDA8C 003C704C  90 01 00 60 */	stw r0, 0x60(r1)
 /* 803FDA90 003C7050  4B F1 E1 A1 */	bl GXInitLightDir
 /* 803FDA94 003C7054  80 01 00 60 */	lwz r0, 0x60(r1)
 /* 803FDA98 003C7058  38 61 00 64 */	addi r3, r1, 0x64
-/* 803FDA9C 003C705C  C0 22 C1 80 */	lfs f1, lbl_8066C500@sda21(r2)
+/* 803FDA9C 003C705C  C0 22 C1 80 */	lfs f1, float_8066C500@sda21(r2)
 /* 803FDAA0 003C7060  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
-/* 803FDAA4 003C7064  C0 62 C1 84 */	lfs f3, lbl_8066C504@sda21(r2)
+/* 803FDAA4 003C7064  C0 62 C1 84 */	lfs f3, float_8066C504@sda21(r2)
 /* 803FDAA8 003C7068  60 00 00 0A */	ori r0, r0, 0xa
 /* 803FDAAC 003C706C  FC 40 08 90 */	fmr f2, f1
 /* 803FDAB0 003C7070  FC A0 08 90 */	fmr f5, f1
 /* 803FDAB4 003C7074  90 01 00 60 */	stw r0, 0x60(r1)
-/* 803FDAB8 003C7078  C0 82 C1 A4 */	lfs f4, lbl_8066C524@sda21(r2)
-/* 803FDABC 003C707C  C0 C2 C1 A8 */	lfs f6, lbl_8066C528@sda21(r2)
+/* 803FDAB8 003C7078  C0 82 C1 A4 */	lfs f4, float_8066C524@sda21(r2)
+/* 803FDABC 003C707C  C0 C2 C1 A8 */	lfs f6, float_8066C528@sda21(r2)
 /* 803FDAC0 003C7080  4B F1 DE 91 */	bl GXInitLightAttn
 /* 803FDAC4 003C7084  80 61 00 60 */	lwz r3, 0x60(r1)
 /* 803FDAC8 003C7088  80 01 00 1C */	lwz r0, 0x1c(r1)
@@ -982,20 +982,20 @@ SelectAmbLightObj__Q34nw4r3g3d8LightSetFi:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C500
-lbl_8066C500:
+.global float_8066C500
+float_8066C500:
 	# ROM: 0x576360
 	.4byte 0
 
 
-.global lbl_8066C504
-lbl_8066C504:
+.global float_8066C504
+float_8066C504:
 	# ROM: 0x576364
 	.float 1.0
 
 
-.global lbl_8066C508
-lbl_8066C508:
+.global float_8066C508
+float_8066C508:
 	# ROM: 0x576368
 	.float 0.5
 
@@ -1048,38 +1048,38 @@ lbl_8066C513:
 	.byte 0xFF
 
 
-.global lbl_8066C514
-lbl_8066C514:
+.global float_8066C514
+float_8066C514:
 	# ROM: 0x576374
 	.4byte 0x4A742400
 
 
-.global lbl_8066C518
-lbl_8066C518:
+.global float_8066C518
+float_8066C518:
 	# ROM: 0x576378
 	.float -1.0
 
 
-.global lbl_8066C51C
-lbl_8066C51C:
+.global float_8066C51C
+float_8066C51C:
 	# ROM: 0x57637C
 	.4byte 0x42B40000
 
 
-.global lbl_8066C520
-lbl_8066C520:
+.global float_8066C520
+float_8066C520:
 	# ROM: 0x576380
 	.float 10.0
 
 
-.global lbl_8066C524
-lbl_8066C524:
+.global float_8066C524
+float_8066C524:
 	# ROM: 0x576384
 	.float 8.0
 
 
-.global lbl_8066C528
-lbl_8066C528:
+.global float_8066C528
+float_8066C528:
 	# ROM: 0x576388
 	.4byte 0xC0E00000
 	.4byte 0

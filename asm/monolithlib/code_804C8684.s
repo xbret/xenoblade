@@ -32,15 +32,15 @@ func_804C8690:
 .global sinit_804C86C0
 sinit_804C86C0:
 /* 804C86C0 00491C80  3C C0 80 66 */	lis r6, lbl_806624A8@ha
-/* 804C86C4 00491C84  C0 82 D4 B8 */	lfs f4, lbl_8066D838@sda21(r2)
+/* 804C86C4 00491C84  C0 82 D4 B8 */	lfs f4, float_8066D838@sda21(r2)
 /* 804C86C8 00491C88  38 C6 24 A8 */	addi r6, r6, lbl_806624A8@l
-/* 804C86CC 00491C8C  C0 22 D4 C4 */	lfs f1, lbl_8066D844@sda21(r2)
+/* 804C86CC 00491C8C  C0 22 D4 C4 */	lfs f1, float_8066D844@sda21(r2)
 /* 804C86D0 00491C90  38 86 00 10 */	addi r4, r6, 0x10
-/* 804C86D4 00491C94  C0 42 D4 C0 */	lfs f2, lbl_8066D840@sda21(r2)
+/* 804C86D4 00491C94  C0 42 D4 C0 */	lfs f2, float_8066D840@sda21(r2)
 /* 804C86D8 00491C98  38 A6 00 00 */	addi r5, r6, 0
-/* 804C86DC 00491C9C  C0 62 D4 BC */	lfs f3, lbl_8066D83C@sda21(r2)
+/* 804C86DC 00491C9C  C0 62 D4 BC */	lfs f3, float_8066D83C@sda21(r2)
 /* 804C86E0 00491CA0  38 66 00 20 */	addi r3, r6, 0x20
-/* 804C86E4 00491CA4  C0 02 D4 C8 */	lfs f0, lbl_8066D848@sda21(r2)
+/* 804C86E4 00491CA4  C0 02 D4 C8 */	lfs f0, float_8066D848@sda21(r2)
 /* 804C86E8 00491CA8  D0 86 00 00 */	stfs f4, 0(r6)
 /* 804C86EC 00491CAC  D0 65 00 04 */	stfs f3, 4(r5)
 /* 804C86F0 00491CB0  D0 65 00 08 */	stfs f3, 8(r5)
@@ -61,32 +61,32 @@ sinit_804C86C0:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066D838
-lbl_8066D838:
+.global float_8066D838
+float_8066D838:
 	# ROM: 0x577698
 	.float 1.0
 
 
-.global lbl_8066D83C
-lbl_8066D83C:
+.global float_8066D83C
+float_8066D83C:
 	# ROM: 0x57769C
 	.4byte 0
 
 
-.global lbl_8066D840
-lbl_8066D840:
+.global float_8066D840
+float_8066D840:
 	# ROM: 0x5776A0
 	.4byte 0x3F4CCCCD
 
 
-.global lbl_8066D844
-lbl_8066D844:
+.global float_8066D844
+float_8066D844:
 	# ROM: 0x5776A4
 	.4byte 0x40A00000
 
 
-.global lbl_8066D848
-lbl_8066D848:
+.global float_8066D848
+float_8066D848:
 	# ROM: 0x5776A8
 	.4byte 0x43C58000
 	.4byte 0

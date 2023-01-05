@@ -5,7 +5,7 @@
 .global func_8049C7F8
 func_8049C7F8:
 /* 8049C7F8 00465DB8  38 80 00 00 */	li r4, 0
-/* 8049C7FC 00465DBC  C0 02 CF D0 */	lfs f0, lbl_8066D350@sda21(r2)
+/* 8049C7FC 00465DBC  C0 02 CF D0 */	lfs f0, float_8066D350@sda21(r2)
 /* 8049C800 00465DC0  3C A0 80 57 */	lis r5, __vt__CScnFilter@ha
 /* 8049C804 00465DC4  98 83 00 04 */	stb r4, 4(r3)
 /* 8049C808 00465DC8  38 A5 23 A8 */	addi r5, r5, __vt__CScnFilter@l
@@ -51,7 +51,7 @@ func_8049C868:
 /* 8049C88C 00465E4C  41 82 00 30 */	beq .L_8049C8BC
 /* 8049C890 00465E50  3C 00 43 30 */	lis r0, 0x4330
 /* 8049C894 00465E54  90 C1 00 0C */	stw r6, 0xc(r1)
-/* 8049C898 00465E58  C8 22 CF D8 */	lfd f1, lbl_8066D358@sda21(r2)
+/* 8049C898 00465E58  C8 22 CF D8 */	lfd f1, double_8066D358@sda21(r2)
 /* 8049C89C 00465E5C  90 01 00 08 */	stw r0, 8(r1)
 /* 8049C8A0 00465E60  C0 43 00 10 */	lfs f2, 0x10(r3)
 /* 8049C8A4 00465E64  C8 01 00 08 */	lfd f0, 8(r1)
@@ -75,7 +75,7 @@ func_8049C868:
 /* 8049C8E4 00465EA4  41 82 00 2C */	beq .L_8049C910
 /* 8049C8E8 00465EA8  3C 00 43 30 */	lis r0, 0x4330
 /* 8049C8EC 00465EAC  90 E1 00 0C */	stw r7, 0xc(r1)
-/* 8049C8F0 00465EB0  C8 22 CF D8 */	lfd f1, lbl_8066D358@sda21(r2)
+/* 8049C8F0 00465EB0  C8 22 CF D8 */	lfd f1, double_8066D358@sda21(r2)
 /* 8049C8F4 00465EB4  90 01 00 08 */	stw r0, 8(r1)
 /* 8049C8F8 00465EB8  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8049C8FC 00465EBC  EC 00 08 28 */	fsubs f0, f0, f1
@@ -114,15 +114,15 @@ __vt__CScnFilter:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066D350
-lbl_8066D350:
+.global float_8066D350
+float_8066D350:
 	# ROM: 0x5771B0
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_8066D358
-lbl_8066D358:
+.global double_8066D358
+double_8066D358:
 	# ROM: 0x5771B8
 	.4byte 0x43300000
 	.4byte 0

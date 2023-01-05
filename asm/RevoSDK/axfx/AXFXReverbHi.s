@@ -7,13 +7,13 @@
 AXFXReverbHiInit:
 /* 802D5710 0029ECD0  C0 E3 01 58 */	lfs f7, 0x158(r3)
 /* 802D5714 0029ECD4  38 00 00 00 */	li r0, 0
-/* 802D5718 0029ECD8  C0 42 BA 58 */	lfs f2, lbl_8066BDD8@sda21(r2)
+/* 802D5718 0029ECD8  C0 42 BA 58 */	lfs f2, float_8066BDD8@sda21(r2)
 /* 802D571C 0029ECDC  38 80 00 05 */	li r4, 5
 /* 802D5720 0029ECE0  C0 C3 01 50 */	lfs f6, 0x150(r3)
 /* 802D5724 0029ECE4  C0 A3 01 48 */	lfs f5, 0x148(r3)
 /* 802D5728 0029ECE8  C0 83 01 54 */	lfs f4, 0x154(r3)
 /* 802D572C 0029ECEC  C0 63 01 5C */	lfs f3, 0x15c(r3)
-/* 802D5730 0029ECF0  C0 22 BA 5C */	lfs f1, lbl_8066BDDC@sda21(r2)
+/* 802D5730 0029ECF0  C0 22 BA 5C */	lfs f1, float_8066BDDC@sda21(r2)
 /* 802D5734 0029ECF4  C0 03 01 4C */	lfs f0, 0x14c(r3)
 /* 802D5738 0029ECF8  90 83 01 10 */	stw r4, 0x110(r3)
 /* 802D573C 0029ECFC  D0 E3 01 14 */	stfs f7, 0x114(r3)
@@ -51,13 +51,13 @@ AXFXReverbHiCallback:
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-.global lbl_8066BDD8
-lbl_8066BDD8:
+.global float_8066BDD8
+float_8066BDD8:
 	# ROM: 0x575C38
 	.4byte 0
 
 
-.global lbl_8066BDDC
-lbl_8066BDDC:
+.global float_8066BDDC
+float_8066BDDC:
 	# ROM: 0x575C3C
 	.float 1.0

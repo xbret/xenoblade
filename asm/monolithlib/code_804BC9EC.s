@@ -440,10 +440,10 @@ func_804BCC78:
 /* 804BCFA0 00486560  42 00 FF D4 */	bdnz .L_804BCF74
 .L_804BCFA4:
 /* 804BCFA4 00486564  38 00 00 00 */	li r0, 0
-/* 804BCFA8 00486568  C3 A2 D3 44 */	lfs f29, lbl_8066D6C4@sda21(r2)
-/* 804BCFAC 0048656C  C3 C2 D3 48 */	lfs f30, lbl_8066D6C8@sda21(r2)
+/* 804BCFA8 00486568  C3 A2 D3 44 */	lfs f29, float_8066D6C4@sda21(r2)
+/* 804BCFAC 0048656C  C3 C2 D3 48 */	lfs f30, float_8066D6C8@sda21(r2)
 /* 804BCFB0 00486570  3B 01 00 68 */	addi r24, r1, 0x68
-/* 804BCFB4 00486574  C3 E2 D3 40 */	lfs f31, lbl_8066D6C0@sda21(r2)
+/* 804BCFB4 00486574  C3 E2 D3 40 */	lfs f31, float_8066D6C0@sda21(r2)
 /* 804BCFB8 00486578  3A E1 00 5C */	addi r23, r1, 0x5c
 /* 804BCFBC 0048657C  90 01 01 84 */	stw r0, 0x184(r1)
 /* 804BCFC0 00486580  3A C1 00 74 */	addi r22, r1, 0x74
@@ -564,7 +564,7 @@ func_804BCC78:
 .L_804BD174:
 /* 804BD174 00486734  E0 96 00 00 */	psq_l f4, 0(r22), 0, qr0
 /* 804BD178 00486738  E0 78 00 00 */	psq_l f3, 0(r24), 0, qr0
-/* 804BD17C 0048673C  C0 0D A2 70 */	lfs f0, lbl_806663F0@sda21(r13)
+/* 804BD17C 0048673C  C0 0D A2 70 */	lfs f0, float_806663F0@sda21(r13)
 /* 804BD180 00486740  10 44 18 28 */	ps_sub f2, f4, f3
 /* 804BD184 00486744  E0 96 80 08 */	psq_l f4, 8(r22), 1, qr0
 /* 804BD188 00486748  E0 78 80 08 */	psq_l f3, 8(r24), 1, qr0
@@ -700,7 +700,7 @@ func_804BCC78:
 /* 804BD358 00486918  38 63 00 08 */	addi r3, r3, 8
 /* 804BD35C 0048691C  42 00 FF C4 */	bdnz .L_804BD320
 .L_804BD360:
-/* 804BD360 00486920  C3 E2 D3 48 */	lfs f31, lbl_8066D6C8@sda21(r2)
+/* 804BD360 00486920  C3 E2 D3 48 */	lfs f31, float_8066D6C8@sda21(r2)
 /* 804BD364 00486924  3A E1 00 50 */	addi r23, r1, 0x50
 /* 804BD368 00486928  3B E1 00 2C */	addi r31, r1, 0x2c
 /* 804BD36C 0048692C  3B A0 00 00 */	li r29, 0
@@ -776,7 +776,7 @@ func_804BCC78:
 /* 804BD480 00486A40  D0 01 00 4C */	stfs f0, 0x4c(r1)
 /* 804BD484 00486A44  4B E9 0C 7D */	bl PSVECMag
 /* 804BD488 00486A48  E0 57 00 04 */	psq_l f2, 4(r23), 0, qr0
-/* 804BD48C 00486A4C  C0 0D A2 74 */	lfs f0, lbl_806663F4@sda21(r13)
+/* 804BD48C 00486A4C  C0 0D A2 74 */	lfs f0, float_806663F4@sda21(r13)
 /* 804BD490 00486A50  10 42 00 B2 */	ps_mul f2, f2, f2
 /* 804BD494 00486A54  E0 77 80 00 */	psq_l f3, 0(r23), 1, qr0
 /* 804BD498 00486A58  EC 00 08 2A */	fadds f0, f0, f1
@@ -896,7 +896,7 @@ func_804BCC78:
 /* 804BD638 00486BF8  80 01 01 68 */	lwz r0, 0x168(r1)
 /* 804BD63C 00486BFC  54 84 18 38 */	slwi r4, r4, 3
 /* 804BD640 00486C00  3C 60 80 66 */	lis r3, lbl_80661BEC@ha
-/* 804BD644 00486C04  C3 E2 D3 48 */	lfs f31, lbl_8066D6C8@sda21(r2)
+/* 804BD644 00486C04  C3 E2 D3 48 */	lfs f31, float_8066D6C8@sda21(r2)
 /* 804BD648 00486C08  7C 80 22 14 */	add r4, r0, r4
 /* 804BD64C 00486C0C  3A 81 00 50 */	addi r20, r1, 0x50
 /* 804BD650 00486C10  38 63 1B EC */	addi r3, r3, lbl_80661BEC@l
@@ -952,7 +952,7 @@ func_804BCC78:
 /* 804BD714 00486CD4  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 804BD718 00486CD8  4B E9 09 E9 */	bl PSVECMag
 /* 804BD71C 00486CDC  E0 54 00 04 */	psq_l f2, 4(r20), 0, qr0
-/* 804BD720 00486CE0  C0 0D A2 74 */	lfs f0, lbl_806663F4@sda21(r13)
+/* 804BD720 00486CE0  C0 0D A2 74 */	lfs f0, float_806663F4@sda21(r13)
 /* 804BD724 00486CE4  10 42 00 B2 */	ps_mul f2, f2, f2
 /* 804BD728 00486CE8  E0 74 80 00 */	psq_l f3, 0(r20), 1, qr0
 /* 804BD72C 00486CEC  EC 00 08 2A */	fadds f0, f0, f1
@@ -1109,33 +1109,33 @@ lbl_80573138:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_806663F0
-lbl_806663F0:
+.global float_806663F0
+float_806663F0:
 	# ROM: 0x571FD0
 	.4byte 0x42480000
 
 
-.global lbl_806663F4
-lbl_806663F4:
+.global float_806663F4
+float_806663F4:
 	# ROM: 0x571FD4
 	.4byte 0x41A00000
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066D6C0
-lbl_8066D6C0:
+.global float_8066D6C0
+float_8066D6C0:
 	# ROM: 0x577520
 	.4byte 0x3EAAAAAB
 
 
-.global lbl_8066D6C4
-lbl_8066D6C4:
+.global float_8066D6C4
+float_8066D6C4:
 	# ROM: 0x577524
 	.4byte 0
 
 
-.global lbl_8066D6C8
-lbl_8066D6C8:
+.global float_8066D6C8
+float_8066D6C8:
 	# ROM: 0x577528
 	.4byte 0x437F0000
 	.4byte 0

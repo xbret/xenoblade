@@ -44,7 +44,7 @@ InitParam__Q44nw4r3snd6detail9WsdPlayerFiPCQ54nw4r3snd6detail9WsdPlayer11WsdCall
 /* 8042A3B4 003F3974  7C BD 2B 78 */	mr r29, r5
 /* 8042A3B8 003F3978  7C DE 33 78 */	mr r30, r6
 /* 8042A3BC 003F397C  4B FE 80 29 */	bl InitParam__Q44nw4r3snd6detail11BasicPlayerFv
-/* 8042A3C0 003F3980  C0 02 C5 88 */	lfs f0, lbl_8066C908@sda21(r2)
+/* 8042A3C0 003F3980  C0 02 C5 88 */	lfs f0, float_8066C908@sda21(r2)
 /* 8042A3C4 003F3984  3B E0 00 00 */	li r31, 0
 /* 8042A3C8 003F3988  38 A0 00 40 */	li r5, 0x40
 /* 8042A3CC 003F398C  38 80 FF FF */	li r4, -1
@@ -820,22 +820,22 @@ UpdateChannel__Q44nw4r3snd6detail9WsdPlayerFv:
 /* 8042AE88 003F4448  4B F2 EE B9 */	bl OSUnlockMutex
 /* 8042AE8C 003F444C  48 00 03 9C */	b .L_8042B228
 .L_8042AE90:
-/* 8042AE90 003F4450  C3 82 C5 88 */	lfs f28, lbl_8066C908@sda21(r2)
+/* 8042AE90 003F4450  C3 82 C5 88 */	lfs f28, float_8066C908@sda21(r2)
 /* 8042AE94 003F4454  C0 1B 00 08 */	lfs f0, 8(r27)
 /* 8042AE98 003F4458  88 7B 01 2C */	lbz r3, 0x12c(r27)
 /* 8042AE9C 003F445C  EF 9C 00 32 */	fmuls f28, f28, f0
 /* 8042AEA0 003F4460  C0 1B 01 28 */	lfs f0, 0x128(r27)
-/* 8042AEA4 003F4464  C3 A2 C5 88 */	lfs f29, lbl_8066C908@sda21(r2)
+/* 8042AEA4 003F4464  C3 A2 C5 88 */	lfs f29, float_8066C908@sda21(r2)
 /* 8042AEA8 003F4468  28 03 00 01 */	cmplwi r3, 1
 /* 8042AEAC 003F446C  C0 3B 00 04 */	lfs f1, 4(r27)
 /* 8042AEB0 003F4470  EF 9C 00 32 */	fmuls f28, f28, f0
 /* 8042AEB4 003F4474  EF BD 00 72 */	fmuls f29, f29, f1
-/* 8042AEB8 003F4478  C3 62 C5 8C */	lfs f27, lbl_8066C90C@sda21(r2)
+/* 8042AEB8 003F4478  C3 62 C5 8C */	lfs f27, float_8066C90C@sda21(r2)
 /* 8042AEBC 003F447C  41 81 00 2C */	bgt .L_8042AEE8
 /* 8042AEC0 003F4480  38 03 FF C1 */	addi r0, r3, -63
-/* 8042AEC4 003F4484  C8 42 C5 A0 */	lfd f2, lbl_8066C920@sda21(r2)
+/* 8042AEC4 003F4484  C8 42 C5 A0 */	lfd f2, double_8066C920@sda21(r2)
 /* 8042AEC8 003F4488  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 8042AECC 003F448C  C0 02 C5 90 */	lfs f0, lbl_8066C910@sda21(r2)
+/* 8042AECC 003F448C  C0 02 C5 90 */	lfs f0, float_8066C910@sda21(r2)
 /* 8042AED0 003F4490  90 01 00 44 */	stw r0, 0x44(r1)
 /* 8042AED4 003F4494  C8 21 00 40 */	lfd f1, 0x40(r1)
 /* 8042AED8 003F4498  EC 21 10 28 */	fsubs f1, f1, f2
@@ -844,9 +844,9 @@ UpdateChannel__Q44nw4r3snd6detail9WsdPlayerFv:
 /* 8042AEE4 003F44A4  48 00 00 28 */	b .L_8042AF0C
 .L_8042AEE8:
 /* 8042AEE8 003F44A8  38 03 FF C0 */	addi r0, r3, -64
-/* 8042AEEC 003F44AC  C8 42 C5 A0 */	lfd f2, lbl_8066C920@sda21(r2)
+/* 8042AEEC 003F44AC  C8 42 C5 A0 */	lfd f2, double_8066C920@sda21(r2)
 /* 8042AEF0 003F44B0  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 8042AEF4 003F44B4  C0 02 C5 90 */	lfs f0, lbl_8066C910@sda21(r2)
+/* 8042AEF4 003F44B4  C0 02 C5 90 */	lfs f0, float_8066C910@sda21(r2)
 /* 8042AEF8 003F44B8  90 01 00 4C */	stw r0, 0x4c(r1)
 /* 8042AEFC 003F44BC  C8 21 00 48 */	lfd f1, 0x48(r1)
 /* 8042AF00 003F44C0  EC 21 10 28 */	fsubs f1, f1, f2
@@ -858,13 +858,13 @@ UpdateChannel__Q44nw4r3snd6detail9WsdPlayerFv:
 /* 8042AF14 003F44D4  EF 7B 00 32 */	fmuls f27, f27, f0
 /* 8042AF18 003F44D8  C0 1B 00 0C */	lfs f0, 0xc(r27)
 /* 8042AF1C 003F44DC  28 03 00 01 */	cmplwi r3, 1
-/* 8042AF20 003F44E0  C3 42 C5 8C */	lfs f26, lbl_8066C90C@sda21(r2)
+/* 8042AF20 003F44E0  C3 42 C5 8C */	lfs f26, float_8066C90C@sda21(r2)
 /* 8042AF24 003F44E4  EF 7B 00 2A */	fadds f27, f27, f0
 /* 8042AF28 003F44E8  41 81 00 2C */	bgt .L_8042AF54
 /* 8042AF2C 003F44EC  38 03 00 01 */	addi r0, r3, 1
-/* 8042AF30 003F44F0  C8 42 C5 A0 */	lfd f2, lbl_8066C920@sda21(r2)
+/* 8042AF30 003F44F0  C8 42 C5 A0 */	lfd f2, double_8066C920@sda21(r2)
 /* 8042AF34 003F44F4  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 8042AF38 003F44F8  C0 02 C5 90 */	lfs f0, lbl_8066C910@sda21(r2)
+/* 8042AF38 003F44F8  C0 02 C5 90 */	lfs f0, float_8066C910@sda21(r2)
 /* 8042AF3C 003F44FC  90 01 00 44 */	stw r0, 0x44(r1)
 /* 8042AF40 003F4500  C8 21 00 40 */	lfd f1, 0x40(r1)
 /* 8042AF44 003F4504  EC 21 10 28 */	fsubs f1, f1, f2
@@ -873,9 +873,9 @@ UpdateChannel__Q44nw4r3snd6detail9WsdPlayerFv:
 /* 8042AF50 003F4510  48 00 00 20 */	b .L_8042AF70
 .L_8042AF54:
 /* 8042AF54 003F4514  90 61 00 4C */	stw r3, 0x4c(r1)
-/* 8042AF58 003F4518  C8 42 C5 A8 */	lfd f2, lbl_8066C928@sda21(r2)
+/* 8042AF58 003F4518  C8 42 C5 A8 */	lfd f2, double_8066C928@sda21(r2)
 /* 8042AF5C 003F451C  C8 21 00 48 */	lfd f1, 0x48(r1)
-/* 8042AF60 003F4520  C0 02 C5 90 */	lfs f0, lbl_8066C910@sda21(r2)
+/* 8042AF60 003F4520  C0 02 C5 90 */	lfs f0, float_8066C910@sda21(r2)
 /* 8042AF64 003F4524  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8042AF68 003F4528  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8042AF6C 003F452C  EF 5A 00 2A */	fadds f26, f26, f0
@@ -884,20 +884,20 @@ UpdateChannel__Q44nw4r3snd6detail9WsdPlayerFv:
 /* 8042AF74 003F4534  3B C1 00 30 */	addi r30, r1, 0x30
 /* 8042AF78 003F4538  90 61 00 44 */	stw r3, 0x44(r1)
 /* 8042AF7C 003F453C  3B E1 00 08 */	addi r31, r1, 8
-/* 8042AF80 003F4540  C2 E2 C5 8C */	lfs f23, lbl_8066C90C@sda21(r2)
+/* 8042AF80 003F4540  C2 E2 C5 8C */	lfs f23, float_8066C90C@sda21(r2)
 /* 8042AF84 003F4544  3B 40 00 00 */	li r26, 0
 /* 8042AF88 003F4548  90 01 00 4C */	stw r0, 0x4c(r1)
-/* 8042AF8C 003F454C  CB C2 C5 A8 */	lfd f30, lbl_8066C928@sda21(r2)
+/* 8042AF8C 003F454C  CB C2 C5 A8 */	lfd f30, double_8066C928@sda21(r2)
 /* 8042AF90 003F4550  FF 20 B8 90 */	fmr f25, f23
 /* 8042AF94 003F4554  C8 01 00 48 */	lfd f0, 0x48(r1)
 /* 8042AF98 003F4558  C8 21 00 40 */	lfd f1, 0x40(r1)
 /* 8042AF9C 003F455C  EC 00 F0 28 */	fsubs f0, f0, f30
-/* 8042AFA0 003F4560  C3 E2 C5 98 */	lfs f31, lbl_8066C918@sda21(r2)
+/* 8042AFA0 003F4560  C3 E2 C5 98 */	lfs f31, float_8066C918@sda21(r2)
 /* 8042AFA4 003F4564  EC 61 F0 28 */	fsubs f3, f1, f30
-/* 8042AFA8 003F4568  C0 42 C5 94 */	lfs f2, lbl_8066C914@sda21(r2)
+/* 8042AFA8 003F4568  C0 42 C5 94 */	lfs f2, float_8066C914@sda21(r2)
 /* 8042AFAC 003F456C  88 9B 01 2E */	lbz r4, 0x12e(r27)
 /* 8042AFB0 003F4570  EC 20 F8 24 */	fdivs f1, f0, f31
-/* 8042AFB4 003F4574  C0 02 C5 88 */	lfs f0, lbl_8066C908@sda21(r2)
+/* 8042AFB4 003F4574  C0 02 C5 88 */	lfs f0, float_8066C908@sda21(r2)
 /* 8042AFB8 003F4578  88 7B 01 2F */	lbz r3, 0x12f(r27)
 /* 8042AFBC 003F457C  88 1B 01 30 */	lbz r0, 0x130(r27)
 /* 8042AFC0 003F4580  C0 9B 00 10 */	lfs f4, 0x10(r27)
@@ -916,7 +916,7 @@ UpdateChannel__Q44nw4r3snd6detail9WsdPlayerFv:
 /* 8042AFF4 003F45B4  EE F7 18 2A */	fadds f23, f23, f3
 /* 8042AFF8 003F45B8  8B 9B 00 1D */	lbz r28, 0x1d(r27)
 /* 8042AFFC 003F45BC  98 01 00 0A */	stb r0, 0xa(r1)
-/* 8042B000 003F45C0  C2 C2 C5 8C */	lfs f22, lbl_8066C90C@sda21(r2)
+/* 8042B000 003F45C0  C2 C2 C5 8C */	lfs f22, float_8066C90C@sda21(r2)
 .L_8042B004:
 /* 8042B004 003F45C4  88 1F 00 00 */	lbz r0, 0(r31)
 /* 8042B008 003F45C8  7F 63 DB 78 */	mr r3, r27
@@ -938,7 +938,7 @@ UpdateChannel__Q44nw4r3snd6detail9WsdPlayerFv:
 /* 8042B048 003F4608  D0 1E 00 00 */	stfs f0, 0(r30)
 /* 8042B04C 003F460C  3B DE 00 04 */	addi r30, r30, 4
 /* 8042B050 003F4610  41 80 FF B4 */	blt .L_8042B004
-/* 8042B054 003F4614  C3 C2 C5 8C */	lfs f30, lbl_8066C90C@sda21(r2)
+/* 8042B054 003F4614  C3 C2 C5 8C */	lfs f30, float_8066C90C@sda21(r2)
 /* 8042B058 003F4618  3B C1 00 20 */	addi r30, r1, 0x20
 /* 8042B05C 003F461C  3B E1 00 10 */	addi r31, r1, 0x10
 /* 8042B060 003F4620  3B 40 00 00 */	li r26, 0
@@ -1230,46 +1230,46 @@ lbl_8056E688:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_8066C908
-lbl_8066C908:
+.global float_8066C908
+float_8066C908:
 	# ROM: 0x576768
 	.float 1.0
 
 
-.global lbl_8066C90C
-lbl_8066C90C:
+.global float_8066C90C
+float_8066C90C:
 	# ROM: 0x57676C
 	.4byte 0
 
 
-.global lbl_8066C910
-lbl_8066C910:
+.global float_8066C910
+float_8066C910:
 	# ROM: 0x576770
 	.4byte 0x427C0000
 
 
-.global lbl_8066C914
-lbl_8066C914:
+.global float_8066C914
+float_8066C914:
 	# ROM: 0x576774
 	.4byte 0x3C800000
 
 
-.global lbl_8066C918
-lbl_8066C918:
+.global float_8066C918
+float_8066C918:
 	# ROM: 0x576778
 	.4byte 0x42FE0000
 	.4byte 0
 
 
-.global lbl_8066C920
-lbl_8066C920:
+.global double_8066C920
+double_8066C920:
 	# ROM: 0x576780
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
-.global lbl_8066C928
-lbl_8066C928:
+.global double_8066C928
+double_8066C928:
 	# ROM: 0x576788
 	.4byte 0x43300000
 	.4byte 0

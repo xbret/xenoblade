@@ -1983,7 +1983,7 @@ __ct__Q34nw4r3g3d12ScnMdlSimpleFP12MEMAllocatorQ34nw4r3g3d6ResMdlPQ34nw4r4math5M
 /* 803F9118 003C26D8  7D 39 4B 78 */	mr r25, r9
 /* 803F911C 003C26DC  7D 5A 53 78 */	mr r26, r10
 /* 803F9120 003C26E0  4B FF B3 A9 */	bl __ct__Q34nw4r3g3d6ScnObjFP12MEMAllocator
-/* 803F9124 003C26E4  C0 02 C1 68 */	lfs f0, lbl_8066C4E8@sda21(r2)
+/* 803F9124 003C26E4  C0 02 C1 68 */	lfs f0, float_8066C4E8@sda21(r2)
 /* 803F9128 003C26E8  3C A0 80 57 */	lis r5, lbl_8056D038@ha
 /* 803F912C 003C26EC  38 A5 D0 38 */	addi r5, r5, lbl_8056D038@l
 /* 803F9130 003C26F0  3C 80 80 57 */	lis r4, lbl_8056D02C@ha
@@ -2339,8 +2339,8 @@ lbl_80665DD0:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C4E8
-lbl_8066C4E8:
+.global float_8066C4E8
+float_8066C4E8:
 	# ROM: 0x576348
 	.float 1.0
 	.4byte 0

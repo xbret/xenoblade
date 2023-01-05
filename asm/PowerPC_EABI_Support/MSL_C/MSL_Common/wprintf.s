@@ -1057,7 +1057,7 @@ double2hex:
 /* 802C5B38 0028F0F8  B7 E3 FF FE */	sthu r31, -2(r3)
 .L_802C5B3C:
 /* 802C5B3C 0028F0FC  FC 20 FA 10 */	fabs f1, f31
-/* 802C5B40 0028F100  C8 02 B5 18 */	lfd f0, lbl_8066B898@sda21(r2)
+/* 802C5B40 0028F100  C8 02 B5 18 */	lfd f0, double_8066B898@sda21(r2)
 /* 802C5B44 0028F104  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 802C5B48 0028F108  41 82 00 10 */	beq .L_802C5B58
 /* 802C5B4C 0028F10C  38 00 00 31 */	li r0, 0x31
@@ -1258,7 +1258,7 @@ float2str:
 /* 802C5DE4 0028F3A4  B0 01 00 0E */	sth r0, 0xe(r1)
 /* 802C5DE8 0028F3A8  48 00 01 D4 */	b .L_802C5FBC
 .L_802C5DEC:
-/* 802C5DEC 0028F3AC  C8 02 B5 18 */	lfd f0, lbl_8066B898@sda21(r2)
+/* 802C5DEC 0028F3AC  C8 02 B5 18 */	lfd f0, double_8066B898@sda21(r2)
 /* 802C5DF0 0028F3B0  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 802C5DF4 0028F3B4  40 80 00 70 */	bge .L_802C5E64
 /* 802C5DF8 0028F3B8  A0 1D 00 06 */	lhz r0, 6(r29)
@@ -2715,8 +2715,8 @@ lbl_8050DB88:
 	.4byte 0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-.global lbl_8066B898
-lbl_8066B898:
+.global double_8066B898
+double_8066B898:
 	# ROM: 0x5756F8
 	.4byte 0
 	.4byte 0

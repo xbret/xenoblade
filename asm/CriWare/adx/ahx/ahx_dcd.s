@@ -1567,8 +1567,8 @@ AHXDCD_GetSample_Dequantize_Denormalize:
 /* 8038EFB0 00358570  4B F2 B1 71 */	bl _savegpr_14
 /* 8038EFB4 00358574  54 E0 38 30 */	slwi r0, r7, 7
 /* 8038EFB8 00358578  3D 80 43 30 */	lis r12, 0x4330
-/* 8038EFBC 0035857C  3D 60 80 52 */	lis r11, lbl_8051ACA0@ha
-/* 8038EFC0 00358580  3D 40 80 52 */	lis r10, lbl_8051AC98@ha
+/* 8038EFBC 0035857C  3D 60 80 52 */	lis r11, double_8051ACA0@ha
+/* 8038EFC0 00358580  3D 40 80 52 */	lis r10, float_8051AC98@ha
 /* 8038EFC4 00358584  7C 06 02 14 */	add r0, r6, r0
 /* 8038EFC8 00358588  3F 40 80 57 */	lis r26, lbl_805691E0@ha
 /* 8038EFCC 0035858C  91 81 00 10 */	stw r12, 0x10(r1)
@@ -1587,8 +1587,8 @@ AHXDCD_GetSample_Dequantize_Denormalize:
 /* 8038F000 003585C0  3F 80 66 66 */	lis r28, 0x6666
 /* 8038F004 003585C4  83 04 00 18 */	lwz r24, 0x18(r4)
 /* 8038F008 003585C8  3F 60 55 55 */	lis r27, 0x5555
-/* 8038F00C 003585CC  CB EB AC A0 */	lfd f31, lbl_8051ACA0@l(r11)
-/* 8038F010 003585D0  C3 8A AC 98 */	lfs f28, lbl_8051AC98@l(r10)
+/* 8038F00C 003585CC  CB EB AC A0 */	lfd f31, double_8051ACA0@l(r11)
+/* 8038F010 003585D0  C3 8A AC 98 */	lfs f28, float_8051AC98@l(r10)
 /* 8038F014 003585D4  90 01 00 20 */	stw r0, 0x20(r1)
 /* 8038F018 003585D8  48 00 04 40 */	b .L_8038F458
 .L_8038F01C:
@@ -1877,8 +1877,8 @@ AHXDCD_GetSample_Dequantize_Denormalize:
 .L_8038F458:
 /* 8038F458 00358A18  7C 13 70 00 */	cmpw r19, r14
 /* 8038F45C 00358A1C  41 80 FB C0 */	blt .L_8038F01C
-/* 8038F460 00358A20  3C 60 80 52 */	lis r3, lbl_8051AC98@ha
-/* 8038F464 00358A24  C0 03 AC 98 */	lfs f0, lbl_8051AC98@l(r3)
+/* 8038F460 00358A20  3C 60 80 52 */	lis r3, float_8051AC98@ha
+/* 8038F464 00358A24  C0 03 AC 98 */	lfs f0, float_8051AC98@l(r3)
 /* 8038F468 00358A28  55 C3 10 3A */	slwi r3, r14, 2
 /* 8038F46C 00358A2C  48 00 00 34 */	b .L_8038F4A0
 .L_8038F470:
@@ -1916,15 +1916,15 @@ AHXDCD_GetSample_Dequantize_Denormalize:
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051AC98
-lbl_8051AC98:
+.global float_8051AC98
+float_8051AC98:
 	# ROM: 0x516D98
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_8051ACA0
-lbl_8051ACA0:
+.global double_8051ACA0
+double_8051ACA0:
 	# ROM: 0x516DA0
 	.4byte 0x43300000
 	.4byte 0x80000000

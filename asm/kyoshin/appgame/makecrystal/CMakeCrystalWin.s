@@ -113,7 +113,7 @@ func_8021260C:
 /* 80212690 001DBC50  80 7F 00 14 */	lwz r3, 0x14(r31)
 /* 80212694 001DBC54  38 81 00 10 */	addi r4, r1, 0x10
 /* 80212698 001DBC58  48 22 A4 E5 */	bl func_8043CB7C
-/* 8021269C 001DBC5C  C0 02 A9 90 */	lfs f0, lbl_8066AD10@sda21(r2)
+/* 8021269C 001DBC5C  C0 02 A9 90 */	lfs f0, float_8066AD10@sda21(r2)
 /* 802126A0 001DBC60  38 00 00 03 */	li r0, 3
 /* 802126A4 001DBC64  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 802126A8 001DBC68  38 E1 00 28 */	addi r7, r1, 0x28
@@ -154,7 +154,7 @@ func_8021260C:
 /* 80212730 001DBCF0  39 00 00 00 */	li r8, 0
 /* 80212734 001DBCF4  90 09 00 04 */	stw r0, 4(r9)
 /* 80212738 001DBCF8  38 00 00 0A */	li r0, 0xa
-/* 8021273C 001DBCFC  C0 02 A9 94 */	lfs f0, lbl_8066AD14@sda21(r2)
+/* 8021273C 001DBCFC  C0 02 A9 94 */	lfs f0, float_8066AD14@sda21(r2)
 /* 80212740 001DBD00  38 81 00 B8 */	addi r4, r1, 0xb8
 /* 80212744 001DBD04  A0 A7 00 08 */	lhz r5, 8(r7)
 /* 80212748 001DBD08  38 C0 00 20 */	li r6, 0x20
@@ -1268,14 +1268,14 @@ func_80213570:
 /* 80213640 001DCC00  A0 7F 10 00 */	lhz r3, 0x1000(r31)
 /* 80213644 001DCC04  3C 00 43 30 */	lis r0, 0x4330
 /* 80213648 001DCC08  90 61 00 14 */	stw r3, 0x14(r1)
-/* 8021364C 001DCC0C  C8 42 A9 A0 */	lfd f2, lbl_8066AD20@sda21(r2)
+/* 8021364C 001DCC0C  C8 42 A9 A0 */	lfd f2, double_8066AD20@sda21(r2)
 /* 80213650 001DCC10  90 01 00 10 */	stw r0, 0x10(r1)
-/* 80213654 001DCC14  C0 22 A9 98 */	lfs f1, lbl_8066AD18@sda21(r2)
+/* 80213654 001DCC14  C0 22 A9 98 */	lfs f1, float_8066AD18@sda21(r2)
 /* 80213658 001DCC18  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 8021365C 001DCC1C  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80213660 001DCC20  EC 60 10 28 */	fsubs f3, f0, f2
-/* 80213664 001DCC24  C8 42 A9 A8 */	lfd f2, lbl_8066AD28@sda21(r2)
-/* 80213668 001DCC28  C0 02 A9 9C */	lfs f0, lbl_8066AD1C@sda21(r2)
+/* 80213664 001DCC24  C8 42 A9 A8 */	lfd f2, double_8066AD28@sda21(r2)
+/* 80213668 001DCC28  C0 02 A9 9C */	lfs f0, float_8066AD1C@sda21(r2)
 /* 8021366C 001DCC2C  EC 63 08 24 */	fdivs f3, f3, f1
 /* 80213670 001DCC30  FC 20 18 1E */	fctiwz f1, f3
 /* 80213674 001DCC34  D8 21 00 18 */	stfd f1, 0x18(r1)
@@ -1788,39 +1788,39 @@ __RTTI__CMakeCrystalWin:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_8066AD10
-lbl_8066AD10:
+.global float_8066AD10
+float_8066AD10:
 	# ROM: 0x574B70
 	.4byte 0
 
 
-.global lbl_8066AD14
-lbl_8066AD14:
+.global float_8066AD14
+float_8066AD14:
 	# ROM: 0x574B74
 	.4byte 0x41A00000
 
 
-.global lbl_8066AD18
-lbl_8066AD18:
+.global float_8066AD18
+float_8066AD18:
 	# ROM: 0x574B78
 	.4byte 0x41F00000
 
 
-.global lbl_8066AD1C
-lbl_8066AD1C:
+.global float_8066AD1C
+float_8066AD1C:
 	# ROM: 0x574B7C
 	.4byte 0
 
 
-.global lbl_8066AD20
-lbl_8066AD20:
+.global double_8066AD20
+double_8066AD20:
 	# ROM: 0x574B80
 	.4byte 0x43300000
 	.4byte 0
 
 
-.global lbl_8066AD28
-lbl_8066AD28:
+.global double_8066AD28
+double_8066AD28:
 	# ROM: 0x574B88
 	.4byte 0x43300000
 	.4byte 0x80000000

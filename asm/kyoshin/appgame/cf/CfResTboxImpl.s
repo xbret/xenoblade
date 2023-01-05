@@ -200,7 +200,7 @@ func_801F8EB0:
 /* 801F9108 001C26C8  54 00 00 85 */	rlwinm. r0, r0, 0, 2, 2
 /* 801F910C 001C26CC  41 82 00 34 */	beq .L_801F9140
 /* 801F9110 001C26D0  80 03 00 6C */	lwz r0, 0x6c(r3)
-/* 801F9114 001C26D4  C0 22 A7 10 */	lfs f1, lbl_8066AA90@sda21(r2)
+/* 801F9114 001C26D4  C0 22 A7 10 */	lfs f1, float_8066AA90@sda21(r2)
 /* 801F9118 001C26D8  54 00 00 C2 */	rlwinm r0, r0, 0, 3, 1
 /* 801F911C 001C26DC  90 03 00 6C */	stw r0, 0x6c(r3)
 /* 801F9120 001C26E0  80 7F 00 00 */	lwz r3, 0(r31)
@@ -209,7 +209,7 @@ func_801F8EB0:
 /* 801F912C 001C26EC  7D 89 03 A6 */	mtctr r12
 /* 801F9130 001C26F0  4E 80 04 21 */	bctrl 
 /* 801F9134 001C26F4  80 7F 00 00 */	lwz r3, 0(r31)
-/* 801F9138 001C26F8  C0 22 A7 14 */	lfs f1, lbl_8066AA94@sda21(r2)
+/* 801F9138 001C26F8  C0 22 A7 14 */	lfs f1, float_8066AA94@sda21(r2)
 /* 801F913C 001C26FC  4B EC 32 75 */	bl func_800BC3B0
 .L_801F9140:
 /* 801F9140 001C2700  80 7F 00 00 */	lwz r3, 0(r31)
@@ -411,14 +411,14 @@ __RTTI__cf_CfResTboxImpl:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066AA90
-lbl_8066AA90:
+.global float_8066AA90
+float_8066AA90:
 	# ROM: 0x5748F0
 	.float 1.0
 
 
-.global lbl_8066AA94
-lbl_8066AA94:
+.global float_8066AA94
+float_8066AA94:
 	# ROM: 0x5748F4
 	.4byte 0x41A00000
 

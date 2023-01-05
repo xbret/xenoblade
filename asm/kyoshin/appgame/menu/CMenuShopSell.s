@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8018A628
-func_8018A628:
+.global __ct__CMenuShopSell
+__ct__CMenuShopSell:
 /* 8018A628 00153BE8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8018A62C 00153BEC  7C 08 02 A6 */	mflr r0
 /* 8018A630 00153BF0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -896,11 +896,11 @@ func_8018B324:
 /* 8018B350 00154910  48 2A C2 65 */	bl func_804375B4
 /* 8018B354 00154914  7C 64 1B 78 */	mr r4, r3
 /* 8018B358 00154918  38 60 4A C8 */	li r3, 0x4ac8
-/* 8018B35C 0015491C  48 2A 97 01 */	bl func_80434A5C
+/* 8018B35C 0015491C  48 2A 97 01 */	bl mm_malloc
 /* 8018B360 00154920  2C 03 00 00 */	cmpwi r3, 0
 /* 8018B364 00154924  41 82 00 0C */	beq .L_8018B370
 /* 8018B368 00154928  7F E4 FB 78 */	mr r4, r31
-/* 8018B36C 0015492C  4B FF F2 BD */	bl func_8018A628
+/* 8018B36C 0015492C  4B FF F2 BD */	bl __ct__CMenuShopSell
 .L_8018B370:
 /* 8018B370 00154930  90 6D AA 60 */	stw r3, lbl_80666BE0@sda21(r13)
 /* 8018B374 00154934  7F C4 F3 78 */	mr r4, r30
@@ -1324,7 +1324,7 @@ lbl_8000EEA4:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-	.4byte func_8018A628
+	.4byte __ct__CMenuShopSell
 	.4byte 0x000000D0
 	.4byte lbl_8000ED90
 	.4byte func_8018A6F8

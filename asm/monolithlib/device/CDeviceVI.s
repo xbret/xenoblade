@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80447DD4
-func_80447DD4:
+.global __ct__CDeviceVI
+__ct__CDeviceVI:
 /* 80447DD4 00411394  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80447DD8 00411398  7C 08 02 A6 */	mflr r0
 /* 80447DDC 0041139C  38 C0 00 08 */	li r6, 8
@@ -21,7 +21,7 @@ func_80447DD4:
 /* 80447E0C 004113CC  39 08 F7 98 */	addi r8, r8, __vt___reslist_base_CDeviceVICb@l
 /* 80447E10 004113D0  90 1F 01 C8 */	stw r0, 0x1c8(r31)
 /* 80447E14 004113D4  3C C0 80 57 */	lis r6, __vt__reslist_CDeviceVICb@ha
-/* 80447E18 004113D8  C0 02 C7 E0 */	lfs f0, lbl_8066CB60@sda21(r2)
+/* 80447E18 004113D8  C0 02 C7 E0 */	lfs f0, float_8066CB60@sda21(r2)
 /* 80447E1C 004113DC  38 C6 F7 80 */	addi r6, r6, __vt__reslist_CDeviceVICb@l
 /* 80447E20 004113E0  91 3F 01 C4 */	stw r9, 0x1c4(r31)
 /* 80447E24 004113E4  38 A0 00 09 */	li r5, 9
@@ -587,10 +587,10 @@ func_80448548:
 /* 80448554 00411B14  4B FF F6 D5 */	bl func_80447C28
 /* 80448558 00411B18  2C 03 00 00 */	cmpwi r3, 0
 /* 8044855C 00411B1C  41 82 00 0C */	beq .L_80448568
-/* 80448560 00411B20  C0 22 C7 E4 */	lfs f1, lbl_8066CB64@sda21(r2)
+/* 80448560 00411B20  C0 22 C7 E4 */	lfs f1, float_8066CB64@sda21(r2)
 /* 80448564 00411B24  48 00 00 08 */	b .L_8044856C
 .L_80448568:
-/* 80448568 00411B28  C0 22 C7 E8 */	lfs f1, lbl_8066CB68@sda21(r2)
+/* 80448568 00411B28  C0 22 C7 E8 */	lfs f1, float_8066CB68@sda21(r2)
 .L_8044856C:
 /* 8044856C 00411B2C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80448570 00411B30  7C 08 03 A6 */	mtlr r0
@@ -929,12 +929,12 @@ func_80448878:
 .L_804489F8:
 /* 804489F8 00411FB8  90 04 02 B8 */	stw r0, 0x2b8(r4)
 /* 804489FC 00411FBC  3C 00 43 30 */	lis r0, 0x4330
-/* 80448A00 00411FC0  C8 42 C7 F0 */	lfd f2, lbl_8066CB70@sda21(r2)
+/* 80448A00 00411FC0  C8 42 C7 F0 */	lfd f2, double_8066CB70@sda21(r2)
 /* 80448A04 00411FC4  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
 /* 80448A08 00411FC8  90 01 00 08 */	stw r0, 8(r1)
 /* 80448A0C 00411FCC  80 03 02 B8 */	lwz r0, 0x2b8(r3)
 /* 80448A10 00411FD0  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80448A14 00411FD4  C0 02 C7 E8 */	lfs f0, lbl_8066CB68@sda21(r2)
+/* 80448A14 00411FD4  C0 02 C7 E8 */	lfs f0, float_8066CB68@sda21(r2)
 /* 80448A18 00411FD8  C8 21 00 08 */	lfd f1, 8(r1)
 /* 80448A1C 00411FDC  EC 21 10 28 */	fsubs f1, f1, f2
 /* 80448A20 00411FE0  EC 00 08 24 */	fdivs f0, f0, f1
@@ -1511,27 +1511,27 @@ __RTTI___reslist_base_CDeviceVICb:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066CB60
-lbl_8066CB60:
+.global float_8066CB60
+float_8066CB60:
 	# ROM: 0x5769C0
 	.4byte 0x3D088889
 
 
-.global lbl_8066CB64
-lbl_8066CB64:
+.global float_8066CB64
+float_8066CB64:
 	# ROM: 0x5769C4
 	.4byte 0x3FAAAAAB
 
 
-.global lbl_8066CB68
-lbl_8066CB68:
+.global float_8066CB68
+float_8066CB68:
 	# ROM: 0x5769C8
 	.float 1.0
 	.4byte 0
 
 
-.global lbl_8066CB70
-lbl_8066CB70:
+.global double_8066CB70
+double_8066CB70:
 	# ROM: 0x5769D0
 	.4byte 0x43300000
 	.4byte 0
@@ -1667,7 +1667,7 @@ lbl_8001CB60:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_80447DD4
+.4byte __ct__CDeviceVI
 	.4byte 0x00000208
 	.4byte lbl_8001CA70
 	.4byte func_80447FDC

@@ -1,4 +1,4 @@
-#include "monolithlib/code_80450B14.h"
+#include "monolithlib/code_80450B14.hpp"
 
 extern u32** lbl_80665FF0;
 extern u32** lbl_80665FF4;

@@ -21,8 +21,8 @@ PSVECNormalize:
 /* 8034E0B0 00317670  E0 43 00 00 */	psq_l f2, 0(r3), 0, qr0
 /* 8034E0B4 00317674  E0 63 80 08 */	psq_l f3, 8(r3), 1, qr0
 /* 8034E0B8 00317678  10 A2 00 B2 */	ps_mul f5, f2, f2
-/* 8034E0BC 0031767C  C0 02 BD E0 */	lfs f0, lbl_8066C160@sda21(r2)
-/* 8034E0C0 00317680  C0 22 BD E4 */	lfs f1, lbl_8066C164@sda21(r2)
+/* 8034E0BC 0031767C  C0 02 BD E0 */	lfs f0, float_8066C160@sda21(r2)
+/* 8034E0C0 00317680  C0 22 BD E4 */	lfs f1, float_8066C164@sda21(r2)
 /* 8034E0C4 00317684  10 83 28 FA */	ps_madd f4, f3, f3, f5
 /* 8034E0C8 00317688  10 84 28 D4 */	ps_sum0 f4, f4, f3, f5
 /* 8034E0CC 0031768C  FC A0 20 34 */	frsqrte f5, f4
@@ -40,7 +40,7 @@ PSVECNormalize:
 .global PSVECMag
 PSVECMag:
 /* 8034E100 003176C0  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
-/* 8034E104 003176C4  C0 82 BD E0 */	lfs f4, lbl_8066C160@sda21(r2)
+/* 8034E104 003176C4  C0 82 BD E0 */	lfs f4, float_8066C160@sda21(r2)
 /* 8034E108 003176C8  10 00 00 32 */	ps_mul f0, f0, f0
 /* 8034E10C 003176CC  C0 23 00 08 */	lfs f1, 8(r3)
 /* 8034E110 003176D0  EC 44 20 28 */	fsubs f2, f4, f4
@@ -49,7 +49,7 @@ PSVECMag:
 /* 8034E11C 003176DC  FC 01 10 00 */	fcmpu cr0, f1, f2
 /* 8034E120 003176E0  4D 82 00 20 */	beqlr 
 /* 8034E124 003176E4  FC 00 08 34 */	frsqrte f0, f1
-/* 8034E128 003176E8  C0 62 BD E4 */	lfs f3, lbl_8066C164@sda21(r2)
+/* 8034E128 003176E8  C0 62 BD E4 */	lfs f3, float_8066C164@sda21(r2)
 /* 8034E12C 003176EC  EC 40 00 32 */	fmuls f2, f0, f0
 /* 8034E130 003176F0  EC 00 01 32 */	fmuls f0, f0, f4
 /* 8034E134 003176F4  EC 42 18 7C */	fnmsubs f2, f2, f1, f3
@@ -127,7 +127,7 @@ C_VECHalfAngle:
 /* 8034E234 003177F4  38 61 00 08 */	addi r3, r1, 8
 /* 8034E238 003177F8  7C 64 1B 78 */	mr r4, r3
 /* 8034E23C 003177FC  4B FF FF 15 */	bl PSVECDotProduct
-/* 8034E240 00317800  C0 02 BD E8 */	lfs f0, lbl_8066C168@sda21(r2)
+/* 8034E240 00317800  C0 02 BD E8 */	lfs f0, float_8066C168@sda21(r2)
 /* 8034E244 00317804  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8034E248 00317808  40 81 00 14 */	ble .L_8034E25C
 /* 8034E24C 0031780C  7F E4 FB 78 */	mr r4, r31

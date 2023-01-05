@@ -667,9 +667,9 @@ switch_80417EC8:
 .global switch_80417ED0
 switch_80417ED0:
 /* 80417ED0 003E1490  54 C0 06 3E */	clrlwi r0, r6, 0x18
-/* 80417ED4 003E1494  C8 42 C4 70 */	lfd f2, lbl_8066C7F0@sda21(r2)
+/* 80417ED4 003E1494  C8 42 C4 70 */	lfd f2, double_8066C7F0@sda21(r2)
 /* 80417ED8 003E1498  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80417EDC 003E149C  C0 02 C4 60 */	lfs f0, lbl_8066C7E0@sda21(r2)
+/* 80417EDC 003E149C  C0 02 C4 60 */	lfs f0, float_8066C7E0@sda21(r2)
 /* 80417EE0 003E14A0  C8 21 00 08 */	lfd f1, 8(r1)
 /* 80417EE4 003E14A4  EC 21 10 28 */	fsubs f1, f1, f2
 /* 80417EE8 003E14A8  EC 01 00 32 */	fmuls f0, f1, f0
@@ -678,9 +678,9 @@ switch_80417ED0:
 .global switch_80417EF4
 switch_80417EF4:
 /* 80417EF4 003E14B4  54 C0 06 3E */	clrlwi r0, r6, 0x18
-/* 80417EF8 003E14B8  C8 42 C4 70 */	lfd f2, lbl_8066C7F0@sda21(r2)
+/* 80417EF8 003E14B8  C8 42 C4 70 */	lfd f2, double_8066C7F0@sda21(r2)
 /* 80417EFC 003E14BC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80417F00 003E14C0  C0 02 C4 64 */	lfs f0, lbl_8066C7E4@sda21(r2)
+/* 80417F00 003E14C0  C0 02 C4 64 */	lfs f0, float_8066C7E4@sda21(r2)
 /* 80417F04 003E14C4  C8 21 00 10 */	lfd f1, 0x10(r1)
 /* 80417F08 003E14C8  EC 21 10 28 */	fsubs f1, f1, f2
 /* 80417F0C 003E14CC  EC 00 00 72 */	fmuls f0, f0, f1
@@ -703,9 +703,9 @@ switch_80417F28:
 .global switch_80417F38
 switch_80417F38:
 /* 80417F38 003E14F8  6C C0 80 00 */	xoris r0, r6, 0x8000
-/* 80417F3C 003E14FC  C8 42 C4 78 */	lfd f2, lbl_8066C7F8@sda21(r2)
+/* 80417F3C 003E14FC  C8 42 C4 78 */	lfd f2, double_8066C7F8@sda21(r2)
 /* 80417F40 003E1500  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80417F44 003E1504  C0 02 C4 68 */	lfs f0, lbl_8066C7E8@sda21(r2)
+/* 80417F44 003E1504  C0 02 C4 68 */	lfs f0, float_8066C7E8@sda21(r2)
 /* 80417F48 003E1508  C8 21 00 08 */	lfd f1, 8(r1)
 /* 80417F4C 003E150C  EC 21 10 28 */	fsubs f1, f1, f2
 /* 80417F50 003E1510  EC 01 00 32 */	fmuls f0, f1, f0
@@ -795,9 +795,9 @@ switch_80418034:
 .global switch_80418048
 switch_80418048:
 /* 80418048 003E1608  38 06 FF C0 */	addi r0, r6, -64
-/* 8041804C 003E160C  C8 42 C4 78 */	lfd f2, lbl_8066C7F8@sda21(r2)
+/* 8041804C 003E160C  C8 42 C4 78 */	lfd f2, double_8066C7F8@sda21(r2)
 /* 80418050 003E1610  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 80418054 003E1614  C0 02 C4 68 */	lfs f0, lbl_8066C7E8@sda21(r2)
+/* 80418054 003E1614  C0 02 C4 68 */	lfs f0, float_8066C7E8@sda21(r2)
 /* 80418058 003E1618  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041805C 003E161C  C8 21 00 10 */	lfd f1, 0x10(r1)
 /* 80418060 003E1620  EC 21 10 28 */	fsubs f1, f1, f2
@@ -811,9 +811,9 @@ switch_80418070:
 .global switch_80418078
 switch_80418078:
 /* 80418078 003E1638  6C C0 80 00 */	xoris r0, r6, 0x8000
-/* 8041807C 003E163C  C8 42 C4 78 */	lfd f2, lbl_8066C7F8@sda21(r2)
+/* 8041807C 003E163C  C8 42 C4 78 */	lfd f2, double_8066C7F8@sda21(r2)
 /* 80418080 003E1640  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80418084 003E1644  C0 02 C4 6C */	lfs f0, lbl_8066C7EC@sda21(r2)
+/* 80418084 003E1644  C0 02 C4 6C */	lfs f0, float_8066C7EC@sda21(r2)
 /* 80418088 003E1648  C8 21 00 08 */	lfd f1, 8(r1)
 /* 8041808C 003E164C  EC 21 10 28 */	fsubs f1, f1, f2
 /* 80418090 003E1650  EC 01 00 24 */	fdivs f0, f1, f0
@@ -1519,39 +1519,39 @@ lbl_80665E10:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C7E0
-lbl_8066C7E0:
+.global float_8066C7E0
+float_8066C7E0:
 	# ROM: 0x576640
 	.4byte 0x3C000000
 
 
-.global lbl_8066C7E4
-lbl_8066C7E4:
+.global float_8066C7E4
+float_8066C7E4:
 	# ROM: 0x576644
 	.4byte 0x3EC80000
 
 
-.global lbl_8066C7E8
-lbl_8066C7E8:
+.global float_8066C7E8
+float_8066C7E8:
 	# ROM: 0x576648
 	.4byte 0x3C800000
 
 
-.global lbl_8066C7EC
-lbl_8066C7EC:
+.global float_8066C7EC
+float_8066C7EC:
 	# ROM: 0x57664C
 	.4byte 0x42FE0000
 
 
-.global lbl_8066C7F0
-lbl_8066C7F0:
+.global double_8066C7F0
+double_8066C7F0:
 	# ROM: 0x576650
 	.4byte 0x43300000
 	.4byte 0
 
 
-.global lbl_8066C7F8
-lbl_8066C7F8:
+.global double_8066C7F8
+double_8066C7F8:
 	# ROM: 0x576658
 	.4byte 0x43300000
 	.4byte 0x80000000

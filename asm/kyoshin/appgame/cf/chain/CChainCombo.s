@@ -89,7 +89,7 @@ func_80293E24:
 /* 80293EB0 0025D470  3C 00 43 30 */	lis r0, 0x4330
 /* 80293EB4 0025D474  6C 83 80 00 */	xoris r3, r4, 0x8000
 /* 80293EB8 0025D478  90 61 00 0C */	stw r3, 0xc(r1)
-/* 80293EBC 0025D47C  C8 22 B0 C0 */	lfd f1, lbl_8066B440@sda21(r2)
+/* 80293EBC 0025D47C  C8 22 B0 C0 */	lfd f1, double_8066B440@sda21(r2)
 /* 80293EC0 0025D480  38 7F 00 0C */	addi r3, r31, 0xc
 /* 80293EC4 0025D484  90 01 00 08 */	stw r0, 8(r1)
 /* 80293EC8 0025D488  C8 01 00 08 */	lfd f0, 8(r1)
@@ -552,8 +552,8 @@ __RTTI__cf_CChainCombo:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066B440
-lbl_8066B440:
+.global double_8066B440
+double_8066B440:
 	# ROM: 0x5752A0
 	.4byte 0x43300000
 	.4byte 0x80000000

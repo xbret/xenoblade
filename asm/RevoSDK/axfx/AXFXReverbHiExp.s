@@ -15,7 +15,7 @@ AXFXReverbHiExpInit:
 /* 802D57DC 0029ED9C  48 08 31 D5 */	bl OSDisableInterrupts
 /* 802D57E0 0029EDA0  C0 3E 01 14 */	lfs f1, 0x114(r30)
 /* 802D57E4 0029EDA4  38 00 00 01 */	li r0, 1
-/* 802D57E8 0029EDA8  C0 02 BA 64 */	lfs f0, lbl_8066BDE4@sda21(r2)
+/* 802D57E8 0029EDA8  C0 02 BA 64 */	lfs f0, float_8066BDE4@sda21(r2)
 /* 802D57EC 0029EDAC  7C 7F 1B 78 */	mr r31, r3
 /* 802D57F0 0029EDB0  90 1E 01 0C */	stw r0, 0x10c(r30)
 /* 802D57F4 0029EDB4  FC 01 00 40 */	fcmpo cr0, f1, f0
@@ -34,7 +34,7 @@ AXFXReverbHiExpInit:
 /* 802D5828 0029EDE8  38 60 00 00 */	li r3, 0
 /* 802D582C 0029EDEC  48 00 01 14 */	b .L_802D5940
 .L_802D5830:
-/* 802D5830 0029EDF0  C0 02 BA 60 */	lfs f0, lbl_8066BDE0@sda21(r2)
+/* 802D5830 0029EDF0  C0 02 BA 60 */	lfs f0, float_8066BDE0@sda21(r2)
 /* 802D5834 0029EDF4  3C 60 80 54 */	lis r3, lbl_80543120@ha
 /* 802D5838 0029EDF8  38 63 31 20 */	addi r3, r3, lbl_80543120@l
 /* 802D583C 0029EDFC  80 03 00 5C */	lwz r0, 0x5c(r3)
@@ -176,21 +176,21 @@ AXFXReverbHiExpCallback:
 /* 802D5A38 0029EFF8  80 A7 00 04 */	lwz r5, 4(r7)
 /* 802D5A3C 0029EFFC  80 C7 00 08 */	lwz r6, 8(r7)
 .L_802D5A40:
-/* 802D5A40 0029F000  C0 02 BA 68 */	lfs f0, lbl_8066BDE8@sda21(r2)
+/* 802D5A40 0029F000  C0 02 BA 68 */	lfs f0, float_8066BDE8@sda21(r2)
 /* 802D5A44 0029F004  3B E0 00 00 */	li r31, 0
 /* 802D5A48 0029F008  C0 24 01 08 */	lfs f1, 0x108(r4)
 /* 802D5A4C 0029F00C  3B A0 00 00 */	li r29, 0
-/* 802D5A50 0029F010  C0 A2 BA 6C */	lfs f5, lbl_8066BDEC@sda21(r2)
+/* 802D5A50 0029F010  C0 A2 BA 6C */	lfs f5, float_8066BDEC@sda21(r2)
 /* 802D5A54 0029F014  3C 00 43 30 */	lis r0, 0x4330
 /* 802D5A58 0029F018  C0 64 01 34 */	lfs f3, 0x134(r4)
 /* 802D5A5C 0029F01C  EC 80 08 28 */	fsubs f4, f0, f1
-/* 802D5A60 0029F020  C0 42 BA 70 */	lfs f2, lbl_8066BDF0@sda21(r2)
+/* 802D5A60 0029F020  C0 42 BA 70 */	lfs f2, float_8066BDF0@sda21(r2)
 /* 802D5A64 0029F024  3B C0 00 03 */	li r30, 3
 /* 802D5A68 0029F028  C0 04 01 2C */	lfs f0, 0x12c(r4)
 /* 802D5A6C 0029F02C  EC A5 00 F2 */	fmuls f5, f5, f3
 /* 802D5A70 0029F030  C0 64 00 F8 */	lfs f3, 0xf8(r4)
 /* 802D5A74 0029F034  EC C2 00 32 */	fmuls f6, f2, f0
-/* 802D5A78 0029F038  C8 02 BA 78 */	lfd f0, lbl_8066BDF8@sda21(r2)
+/* 802D5A78 0029F038  C8 02 BA 78 */	lfd f0, double_8066BDF8@sda21(r2)
 /* 802D5A7C 0029F03C  60 00 00 00 */	nop 
 .L_802D5A80:
 /* 802D5A80 0029F040  7C 89 23 78 */	mr r9, r4
@@ -263,7 +263,7 @@ AXFXReverbHiExpCallback:
 /* 802D5B78 0029F138  57 7B 10 3A */	slwi r27, r27, 2
 /* 802D5B7C 0029F13C  C0 E4 00 8C */	lfs f7, 0x8c(r4)
 /* 802D5B80 0029F140  7D 19 DC 2E */	lfsx f8, r25, r27
-/* 802D5B84 0029F144  C1 42 BA 64 */	lfs f10, lbl_8066BDE4@sda21(r2)
+/* 802D5B84 0029F144  C1 42 BA 64 */	lfs f10, float_8066BDE4@sda21(r2)
 /* 802D5B88 0029F148  EC E8 01 F2 */	fmuls f7, f8, f7
 /* 802D5B8C 0029F14C  ED 4A 40 2A */	fadds f10, f10, f8
 /* 802D5B90 0029F150  EC E9 38 2A */	fadds f7, f9, f7
@@ -785,7 +785,7 @@ __InitParams:
 /* 802D6308 0029F8C8  48 00 02 AC */	b .L_802D65B4
 .L_802D630C:
 /* 802D630C 0029F8CC  C0 83 01 18 */	lfs f4, 0x118(r3)
-/* 802D6310 0029F8D0  C0 42 BA 64 */	lfs f2, lbl_8066BDE4@sda21(r2)
+/* 802D6310 0029F8D0  C0 42 BA 64 */	lfs f2, float_8066BDE4@sda21(r2)
 /* 802D6314 0029F8D4  FC 04 10 40 */	fcmpo cr0, f4, f2
 /* 802D6318 0029F8D8  41 80 00 10 */	blt .L_802D6328
 /* 802D631C 0029F8DC  C0 03 01 14 */	lfs f0, 0x114(r3)
@@ -810,7 +810,7 @@ __InitParams:
 /* 802D6358 0029F918  C0 03 01 24 */	lfs f0, 0x124(r3)
 /* 802D635C 0029F91C  FC 00 10 40 */	fcmpo cr0, f0, f2
 /* 802D6360 0029F920  41 80 00 10 */	blt .L_802D6370
-/* 802D6364 0029F924  C0 22 BA 68 */	lfs f1, lbl_8066BDE8@sda21(r2)
+/* 802D6364 0029F924  C0 22 BA 68 */	lfs f1, float_8066BDE8@sda21(r2)
 /* 802D6368 0029F928  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 802D636C 0029F92C  40 81 00 0C */	ble .L_802D6378
 .L_802D6370:
@@ -873,9 +873,9 @@ __InitParams:
 .L_802D6420:
 /* 802D6420 0029F9E0  1D 04 00 0C */	mulli r8, r4, 0xc
 /* 802D6424 0029F9E4  39 3F 00 00 */	addi r9, r31, 0
-/* 802D6428 0029F9E8  C0 02 BA 60 */	lfs f0, lbl_8066BDE0@sda21(r2)
+/* 802D6428 0029F9E8  C0 02 BA 60 */	lfs f0, float_8066BDE0@sda21(r2)
 /* 802D642C 0029F9EC  38 BF 00 60 */	addi r5, r31, 0x60
-/* 802D6430 0029F9F0  C0 42 BA 6C */	lfs f2, lbl_8066BDEC@sda21(r2)
+/* 802D6430 0029F9F0  C0 42 BA 6C */	lfs f2, float_8066BDEC@sda21(r2)
 /* 802D6434 0029F9F4  3B 60 00 00 */	li r27, 0
 /* 802D6438 0029F9F8  7C E9 42 14 */	add r7, r9, r8
 /* 802D643C 0029F9FC  EC 20 01 32 */	fmuls f1, f0, f4
@@ -907,16 +907,16 @@ __InitParams:
 /* 802D64A4 0029FA64  4B FE 3B 89 */	bl __cvt_fp2unsigned
 /* 802D64A8 0029FA68  90 7E 00 3C */	stw r3, 0x3c(r30)
 /* 802D64AC 0029FA6C  7F DA F3 78 */	mr r26, r30
-/* 802D64B0 0029FA70  CB A2 BA 98 */	lfd f29, lbl_8066BE18@sda21(r2)
+/* 802D64B0 0029FA70  CB A2 BA 98 */	lfd f29, double_8066BE18@sda21(r2)
 /* 802D64B4 0029FA74  3B 9F 00 C0 */	addi r28, r31, 0xc0
-/* 802D64B8 0029FA78  C3 C2 BA 80 */	lfs f30, lbl_8066BE00@sda21(r2)
+/* 802D64B8 0029FA78  C3 C2 BA 80 */	lfs f30, float_8066BE00@sda21(r2)
 /* 802D64BC 0029FA7C  3B 00 00 00 */	li r24, 0
-/* 802D64C0 0029FA80  C3 E2 BA 60 */	lfs f31, lbl_8066BDE0@sda21(r2)
+/* 802D64C0 0029FA80  C3 E2 BA 60 */	lfs f31, float_8066BDE0@sda21(r2)
 /* 802D64C4 0029FA84  3B 20 00 00 */	li r25, 0
 /* 802D64C8 0029FA88  3F A0 43 30 */	lis r29, 0x4330
 .L_802D64CC:
 /* 802D64CC 0029FA8C  93 7A 00 68 */	stw r27, 0x68(r26)
-/* 802D64D0 0029FA90  C8 22 BA 88 */	lfd f1, lbl_8066BE08@sda21(r2)
+/* 802D64D0 0029FA90  C8 22 BA 88 */	lfd f1, double_8066BE08@sda21(r2)
 /* 802D64D4 0029FA94  80 1E 01 1C */	lwz r0, 0x11c(r30)
 /* 802D64D8 0029FA98  93 A1 00 08 */	stw r29, 8(r1)
 /* 802D64DC 0029FA9C  54 00 28 34 */	slwi r0, r0, 5
@@ -943,12 +943,12 @@ __InitParams:
 /* 802D6530 0029FAF0  90 9E 00 B0 */	stw r4, 0xb0(r30)
 /* 802D6534 0029FAF4  38 7F 00 C0 */	addi r3, r31, 0xc0
 /* 802D6538 0029FAF8  54 00 28 34 */	slwi r0, r0, 5
-/* 802D653C 0029FAFC  C0 22 BA 68 */	lfs f1, lbl_8066BDE8@sda21(r2)
+/* 802D653C 0029FAFC  C0 22 BA 68 */	lfs f1, float_8066BDE8@sda21(r2)
 /* 802D6540 0029FB00  7C 63 02 14 */	add r3, r3, r0
 /* 802D6544 0029FB04  C0 1E 01 28 */	lfs f0, 0x128(r30)
 /* 802D6548 0029FB08  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 802D654C 0029FB0C  EC 21 00 28 */	fsubs f1, f1, f0
-/* 802D6550 0029FB10  C0 02 BA 90 */	lfs f0, lbl_8066BE10@sda21(r2)
+/* 802D6550 0029FB10  C0 02 BA 90 */	lfs f0, float_8066BE10@sda21(r2)
 /* 802D6554 0029FB14  90 1E 00 B8 */	stw r0, 0xb8(r30)
 /* 802D6558 0029FB18  C0 5E 01 24 */	lfs f2, 0x124(r30)
 /* 802D655C 0029FB1C  90 9E 00 B4 */	stw r4, 0xb4(r30)
@@ -969,7 +969,7 @@ __InitParams:
 /* 802D6598 0029FB58  40 81 00 08 */	ble .L_802D65A0
 /* 802D659C 0029FB5C  D0 1E 01 08 */	stfs f0, 0x108(r30)
 .L_802D65A0:
-/* 802D65A0 0029FB60  C0 02 BA 64 */	lfs f0, lbl_8066BDE4@sda21(r2)
+/* 802D65A0 0029FB60  C0 02 BA 64 */	lfs f0, float_8066BDE4@sda21(r2)
 /* 802D65A4 0029FB64  38 60 00 01 */	li r3, 1
 /* 802D65A8 0029FB68  D0 1E 00 FC */	stfs f0, 0xfc(r30)
 /* 802D65AC 0029FB6C  D0 1E 01 00 */	stfs f0, 0x100(r30)
@@ -1105,66 +1105,66 @@ lbl_805431E0:
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-.global lbl_8066BDE0
-lbl_8066BDE0:
+.global float_8066BDE0
+float_8066BDE0:
 	# ROM: 0x575C40
 	.4byte 0x46FA0000
 
 
-.global lbl_8066BDE4
-lbl_8066BDE4:
+.global float_8066BDE4
+float_8066BDE4:
 	# ROM: 0x575C44
 	.4byte 0
 
 
-.global lbl_8066BDE8
-lbl_8066BDE8:
+.global float_8066BDE8
+float_8066BDE8:
 	# ROM: 0x575C48
 	.float 1.0
 
 
-.global lbl_8066BDEC
-lbl_8066BDEC:
+.global float_8066BDEC
+float_8066BDEC:
 	# ROM: 0x575C4C
 	.4byte 0x3F19999A
 
 
-.global lbl_8066BDF0
-lbl_8066BDF0:
+.global float_8066BDF0
+float_8066BDF0:
 	# ROM: 0x575C50
 	.float 0.5
 	.4byte 0
 
 
-.global lbl_8066BDF8
-lbl_8066BDF8:
+.global double_8066BDF8
+double_8066BDF8:
 	# ROM: 0x575C58
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
-.global lbl_8066BE00
-lbl_8066BE00:
+.global float_8066BE00
+float_8066BE00:
 	# ROM: 0x575C60
 	.4byte 0xC0400000
 	.4byte 0
 
 
-.global lbl_8066BE08
-lbl_8066BE08:
+.global double_8066BE08
+double_8066BE08:
 	# ROM: 0x575C68
 	.4byte 0x40240000
 	.4byte 0
 
 
-.global lbl_8066BE10
-lbl_8066BE10:
+.global float_8066BE10
+float_8066BE10:
 	.4byte 0x3F733333
 	.4byte 0
 
 
-.global lbl_8066BE18
-lbl_8066BE18:
+.global double_8066BE18
+double_8066BE18:
 	# ROM: 0x575C78
 	.4byte 0x43300000
 	.4byte 0

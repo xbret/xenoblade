@@ -35,8 +35,8 @@ __ct__Q44nw4r3snd6detail9SeqPlayerFv:
 /* 8041976C 003E2D2C  3D 20 80 57 */	lis r9, lbl_8056E3D8@ha
 /* 80419770 003E2D30  39 40 00 00 */	li r10, 0
 /* 80419774 003E2D34  39 29 E3 D8 */	addi r9, r9, lbl_8056E3D8@l
-/* 80419778 003E2D38  C0 22 C4 80 */	lfs f1, lbl_8066C800@sda21(r2)
-/* 8041977C 003E2D3C  C0 02 C4 84 */	lfs f0, lbl_8066C804@sda21(r2)
+/* 80419778 003E2D38  C0 22 C4 80 */	lfs f1, float_8066C800@sda21(r2)
+/* 8041977C 003E2D3C  C0 02 C4 84 */	lfs f0, float_8066C804@sda21(r2)
 /* 80419780 003E2D40  39 09 00 24 */	addi r8, r9, 0x24
 /* 80419784 003E2D44  38 E9 00 38 */	addi r7, r9, 0x38
 /* 80419788 003E2D48  38 C0 00 78 */	li r6, 0x78
@@ -229,9 +229,9 @@ InitParam__Q44nw4r3snd6detail9SeqPlayerFiPQ44nw4r3snd6detail14NoteOnCallback:
 /* 80419A34 003E2FF4  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80419A38 003E2FF8  7C 7D 1B 78 */	mr r29, r3
 /* 80419A3C 003E2FFC  4B FF 89 A9 */	bl InitParam__Q44nw4r3snd6detail11BasicPlayerFv
-/* 80419A40 003E3000  C0 22 C4 80 */	lfs f1, lbl_8066C800@sda21(r2)
+/* 80419A40 003E3000  C0 22 C4 80 */	lfs f1, float_8066C800@sda21(r2)
 /* 80419A44 003E3004  38 E0 00 00 */	li r7, 0
-/* 80419A48 003E3008  C0 02 C4 84 */	lfs f0, lbl_8066C804@sda21(r2)
+/* 80419A48 003E3008  C0 02 C4 84 */	lfs f0, float_8066C804@sda21(r2)
 /* 80419A4C 003E300C  38 C0 00 78 */	li r6, 0x78
 /* 80419A50 003E3010  38 A0 00 30 */	li r5, 0x30
 /* 80419A54 003E3014  38 80 00 7F */	li r4, 0x7f
@@ -722,7 +722,7 @@ Skip__Q44nw4r3snd6detail9SeqPlayerFQ54nw4r3snd6detail9SeqPlayer10OffsetTypei:
 /* 8041A10C 003E36CC  6F E3 80 00 */	xoris r3, r31, 0x8000
 /* 8041A110 003E36D0  3C 00 43 30 */	lis r0, 0x4330
 /* 8041A114 003E36D4  90 61 00 0C */	stw r3, 0xc(r1)
-/* 8041A118 003E36D8  C8 42 C4 88 */	lfd f2, lbl_8066C808@sda21(r2)
+/* 8041A118 003E36D8  C8 42 C4 88 */	lfd f2, double_8066C808@sda21(r2)
 /* 8041A11C 003E36DC  90 01 00 08 */	stw r0, 8(r1)
 /* 8041A120 003E36E0  C0 1D 01 00 */	lfs f0, 0x100(r29)
 /* 8041A124 003E36E4  C8 21 00 08 */	lfd f1, 8(r1)
@@ -1086,7 +1086,7 @@ Update__Q44nw4r3snd6detail9SeqPlayerFv:
 /* 8041A5D0 003E3B90  2C 00 00 00 */	cmpwi r0, 0
 /* 8041A5D4 003E3B94  40 82 00 14 */	bne .L_8041A5E8
 /* 8041A5D8 003E3B98  C0 3E 01 00 */	lfs f1, 0x100(r30)
-/* 8041A5DC 003E3B9C  C0 02 C4 84 */	lfs f0, lbl_8066C804@sda21(r2)
+/* 8041A5DC 003E3B9C  C0 02 C4 84 */	lfs f0, float_8066C804@sda21(r2)
 /* 8041A5E0 003E3BA0  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8041A5E4 003E3BA4  40 81 00 10 */	ble .L_8041A5F4
 .L_8041A5E8:
@@ -1150,13 +1150,13 @@ UpdateTick__Q44nw4r3snd6detail9SeqPlayerFi:
 /* 8041A6A4 003E3C64  F3 81 00 38 */	psq_st f28, 56(r1), 0, qr0
 /* 8041A6A8 003E3C68  DB 61 00 20 */	stfd f27, 0x20(r1)
 /* 8041A6AC 003E3C6C  F3 61 00 28 */	psq_st f27, 40(r1), 0, qr0
-/* 8041A6B0 003E3C70  CB 82 C4 88 */	lfd f28, lbl_8066C808@sda21(r2)
+/* 8041A6B0 003E3C70  CB 82 C4 88 */	lfd f28, double_8066C808@sda21(r2)
 /* 8041A6B4 003E3C74  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8041A6B8 003E3C78  7C 7F 1B 78 */	mr r31, r3
-/* 8041A6BC 003E3C7C  C3 A2 C4 90 */	lfs f29, lbl_8066C810@sda21(r2)
+/* 8041A6BC 003E3C7C  C3 A2 C4 90 */	lfs f29, float_8066C810@sda21(r2)
 /* 8041A6C0 003E3C80  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8041A6C4 003E3C84  3F C0 43 30 */	lis r30, 0x4330
-/* 8041A6C8 003E3C88  C3 C2 C4 84 */	lfs f30, lbl_8066C804@sda21(r2)
+/* 8041A6C8 003E3C88  C3 C2 C4 84 */	lfs f30, float_8066C804@sda21(r2)
 /* 8041A6CC 003E3C8C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8041A6D0 003E3C90  93 81 00 10 */	stw r28, 0x10(r1)
 /* 8041A6D4 003E3C94  88 A3 01 0A */	lbz r5, 0x10a(r3)
@@ -1176,7 +1176,7 @@ UpdateTick__Q44nw4r3snd6detail9SeqPlayerFi:
 /* 8041A70C 003E3CCC  6C 80 80 00 */	xoris r0, r4, 0x8000
 /* 8041A710 003E3CD0  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8041A714 003E3CD4  EC 40 08 24 */	fdivs f2, f0, f1
-/* 8041A718 003E3CD8  C3 E2 C4 80 */	lfs f31, lbl_8066C800@sda21(r2)
+/* 8041A718 003E3CD8  C3 E2 C4 80 */	lfs f31, float_8066C800@sda21(r2)
 /* 8041A71C 003E3CDC  93 C1 00 08 */	stw r30, 8(r1)
 /* 8041A720 003E3CE0  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8041A724 003E3CE4  EF 60 E0 28 */	fsubs f27, f0, f28
@@ -1342,11 +1342,11 @@ SkipTick__Q44nw4r3snd6detail9SeqPlayerFv:
 /* 8041A954 003E3F14  3B 9C 00 04 */	addi r28, r28, 4
 /* 8041A958 003E3F18  2C 1D 00 10 */	cmpwi r29, 0x10
 /* 8041A95C 003E3F1C  41 80 FF C4 */	blt .L_8041A920
-/* 8041A960 003E3F20  CB A2 C4 88 */	lfd f29, lbl_8066C808@sda21(r2)
+/* 8041A960 003E3F20  CB A2 C4 88 */	lfd f29, double_8066C808@sda21(r2)
 /* 8041A964 003E3F24  3B 80 00 00 */	li r28, 0
-/* 8041A968 003E3F28  C3 C2 C4 90 */	lfs f30, lbl_8066C810@sda21(r2)
+/* 8041A968 003E3F28  C3 C2 C4 90 */	lfs f30, float_8066C810@sda21(r2)
 /* 8041A96C 003E3F2C  3F C0 43 30 */	lis r30, 0x4330
-/* 8041A970 003E3F30  C3 E2 C4 80 */	lfs f31, lbl_8066C800@sda21(r2)
+/* 8041A970 003E3F30  C3 E2 C4 80 */	lfs f31, float_8066C800@sda21(r2)
 /* 8041A974 003E3F34  48 00 01 80 */	b .L_8041AAF4
 .L_8041A978:
 /* 8041A978 003E3F38  2C 1C 03 00 */	cmpwi r28, 0x300
@@ -1476,7 +1476,7 @@ SkipTick__Q44nw4r3snd6detail9SeqPlayerFv:
 /* 8041AB34 003E40F4  FC 00 F8 40 */	fcmpo cr0, f0, f31
 /* 8041AB38 003E40F8  4C 41 13 82 */	cror 2, 1, 2
 /* 8041AB3C 003E40FC  41 82 FE 3C */	beq .L_8041A978
-/* 8041AB40 003E4100  C0 02 C4 84 */	lfs f0, lbl_8066C804@sda21(r2)
+/* 8041AB40 003E4100  C0 02 C4 84 */	lfs f0, float_8066C804@sda21(r2)
 /* 8041AB44 003E4104  D0 1F 01 00 */	stfs f0, 0x100(r31)
 .L_8041AB48:
 /* 8041AB48 003E4108  E3 E1 00 48 */	psq_l f31, 72(r1), 0, qr0
@@ -1563,27 +1563,27 @@ lbl_8056E3D8:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C800
-lbl_8066C800:
+.global float_8066C800
+float_8066C800:
 	# ROM: 0x576660
 	.float 1.0
 
 
-.global lbl_8066C804
-lbl_8066C804:
+.global float_8066C804
+float_8066C804:
 	# ROM: 0x576664
 	.4byte 0
 
 
-.global lbl_8066C808
-lbl_8066C808:
+.global double_8066C808
+double_8066C808:
 	# ROM: 0x576668
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
-.global lbl_8066C810
-lbl_8066C810:
+.global float_8066C810
+float_8066C810:
 	# ROM: 0x576670
 	.4byte 0x476A6000
 	.4byte 0

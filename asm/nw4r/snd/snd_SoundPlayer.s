@@ -5,8 +5,8 @@
 .global __ct__Q34nw4r3snd11SoundPlayerFv
 __ct__Q34nw4r3snd11SoundPlayerFv:
 /* 80420418 003E99D8  38 C0 00 00 */	li r6, 0
-/* 8042041C 003E99DC  C0 22 C4 D8 */	lfs f1, lbl_8066C858@sda21(r2)
-/* 80420420 003E99E0  C0 02 C4 DC */	lfs f0, lbl_8066C85C@sda21(r2)
+/* 8042041C 003E99DC  C0 22 C4 D8 */	lfs f1, float_8066C858@sda21(r2)
+/* 80420420 003E99E0  C0 02 C4 DC */	lfs f0, float_8066C85C@sda21(r2)
 /* 80420424 003E99E4  3C 80 80 00 */	lis r4, 0x7FFFFFFF@ha
 /* 80420428 003E99E8  38 A0 00 01 */	li r5, 1
 /* 8042042C 003E99EC  90 C3 00 04 */	stw r6, 4(r3)
@@ -874,14 +874,14 @@ detail_FreePlayerHeap__Q34nw4r3snd11SoundPlayerFPQ44nw4r3snd6detail10BasicSound:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_8066C858
-lbl_8066C858:
+.global float_8066C858
+float_8066C858:
 	# ROM: 0x5766B8
 	.float 1.0
 
 
-.global lbl_8066C85C
-lbl_8066C85C:
+.global float_8066C85C
+float_8066C85C:
 	# ROM: 0x5766BC
 	.4byte 0
 

@@ -79,7 +79,7 @@ Process__Q34nw4r2ut19TagProcessorBase_c_FUsPQ34nw4r2ut15PrintContext_c:
 /* 8042B7E8 003F4DA8  3C 00 43 30 */	lis r0, 0x4330
 /* 8042B7EC 003F4DAC  6F C3 80 00 */	xoris r3, r30, 0x8000
 /* 8042B7F0 003F4DB0  90 61 00 0C */	stw r3, 0xc(r1)
-/* 8042B7F4 003F4DB4  C8 42 C5 B0 */	lfd f2, lbl_8066C930@sda21(r2)
+/* 8042B7F4 003F4DB4  C8 42 C5 B0 */	lfd f2, double_8066C930@sda21(r2)
 /* 8042B7F8 003F4DB8  90 01 00 08 */	stw r0, 8(r1)
 /* 8042B7FC 003F4DBC  C0 9F 00 2C */	lfs f4, 0x2c(r31)
 /* 8042B800 003F4DC0  C8 01 00 08 */	lfd f0, 8(r1)
@@ -193,7 +193,7 @@ CalcRect__Q34nw4r2ut19TagProcessorBase_c_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintCo
 /* 8042B984 003F4F44  3C 00 43 30 */	lis r0, 0x4330
 /* 8042B988 003F4F48  6F C3 80 00 */	xoris r3, r30, 0x8000
 /* 8042B98C 003F4F4C  90 61 00 0C */	stw r3, 0xc(r1)
-/* 8042B990 003F4F50  C8 42 C5 B0 */	lfd f2, lbl_8066C930@sda21(r2)
+/* 8042B990 003F4F50  C8 42 C5 B0 */	lfd f2, double_8066C930@sda21(r2)
 /* 8042B994 003F4F54  90 01 00 08 */	stw r0, 8(r1)
 /* 8042B998 003F4F58  C0 9F 00 2C */	lfs f4, 0x2c(r31)
 /* 8042B99C 003F4F5C  C8 01 00 08 */	lfd f0, 8(r1)
@@ -328,7 +328,7 @@ Process__Q34nw4r2ut19TagProcessorBase_w_FUsPQ34nw4r2ut15PrintContext_w:
 /* 8042BB50 003F5110  3C 00 43 30 */	lis r0, 0x4330
 /* 8042BB54 003F5114  6F C3 80 00 */	xoris r3, r30, 0x8000
 /* 8042BB58 003F5118  90 61 00 0C */	stw r3, 0xc(r1)
-/* 8042BB5C 003F511C  C8 42 C5 B0 */	lfd f2, lbl_8066C930@sda21(r2)
+/* 8042BB5C 003F511C  C8 42 C5 B0 */	lfd f2, double_8066C930@sda21(r2)
 /* 8042BB60 003F5120  90 01 00 08 */	stw r0, 8(r1)
 /* 8042BB64 003F5124  C0 9F 00 2C */	lfs f4, 0x2c(r31)
 /* 8042BB68 003F5128  C8 01 00 08 */	lfd f0, 8(r1)
@@ -442,7 +442,7 @@ CalcRect__Q34nw4r2ut19TagProcessorBase_w_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintCo
 /* 8042BCEC 003F52AC  3C 00 43 30 */	lis r0, 0x4330
 /* 8042BCF0 003F52B0  6F C3 80 00 */	xoris r3, r30, 0x8000
 /* 8042BCF4 003F52B4  90 61 00 0C */	stw r3, 0xc(r1)
-/* 8042BCF8 003F52B8  C8 42 C5 B0 */	lfd f2, lbl_8066C930@sda21(r2)
+/* 8042BCF8 003F52B8  C8 42 C5 B0 */	lfd f2, double_8066C930@sda21(r2)
 /* 8042BCFC 003F52BC  90 01 00 08 */	stw r0, 8(r1)
 /* 8042BD00 003F52C0  C0 9F 00 2C */	lfs f4, 0x2c(r31)
 /* 8042BD04 003F52C4  C8 01 00 08 */	lfd f0, 8(r1)
@@ -525,8 +525,8 @@ lbl_8056E6FC:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C930
-lbl_8066C930:
+.global double_8066C930
+double_8066C930:
 	# ROM: 0x576790
 	.4byte 0x43300000
 	.4byte 0x80000000

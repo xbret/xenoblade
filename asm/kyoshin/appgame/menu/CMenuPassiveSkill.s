@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80263158
-func_80263158:
+.global __ct__CMenuPassiveSkill
+__ct__CMenuPassiveSkill:
 /* 80263158 0022C718  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8026315C 0022C71C  7C 08 02 A6 */	mflr r0
 /* 80263160 0022C720  90 01 00 24 */	stw r0, 0x24(r1)
@@ -46,7 +46,7 @@ func_80263158:
 /* 802631F4 0022C7B4  4B F6 0C DD */	bl func_801C3ED0
 /* 802631F8 0022C7B8  38 7D 00 B8 */	addi r3, r29, 0xb8
 /* 802631FC 0022C7BC  48 00 A2 C5 */	bl func_8026D4C0
-/* 80263200 0022C7C0  C0 02 AE 20 */	lfs f0, lbl_8066B1A0@sda21(r2)
+/* 80263200 0022C7C0  C0 02 AE 20 */	lfs f0, float_8066B1A0@sda21(r2)
 /* 80263204 0022C7C4  39 61 00 20 */	addi r11, r1, 0x20
 /* 80263208 0022C7C8  9B FD 02 AC */	stb r31, 0x2ac(r29)
 /* 8026320C 0022C7CC  7F A3 EB 78 */	mr r3, r29
@@ -529,11 +529,11 @@ func_802638D0:
 /* 802638FC 0022CEBC  48 1D 3C B9 */	bl func_804375B4
 /* 80263900 0022CEC0  7C 64 1B 78 */	mr r4, r3
 /* 80263904 0022CEC4  38 60 02 B4 */	li r3, 0x2b4
-/* 80263908 0022CEC8  48 1D 11 55 */	bl func_80434A5C
+/* 80263908 0022CEC8  48 1D 11 55 */	bl mm_malloc
 /* 8026390C 0022CECC  2C 03 00 00 */	cmpwi r3, 0
 /* 80263910 0022CED0  41 82 00 0C */	beq .L_8026391C
 /* 80263914 0022CED4  7F E4 FB 78 */	mr r4, r31
-/* 80263918 0022CED8  4B FF F8 41 */	bl func_80263158
+/* 80263918 0022CED8  4B FF F8 41 */	bl __ct__CMenuPassiveSkill
 .L_8026391C:
 /* 8026391C 0022CEDC  90 6D AF E8 */	stw r3, lbl_80667168@sda21(r13)
 /* 80263920 0022CEE0  7F C4 F3 78 */	mr r4, r30
@@ -631,8 +631,8 @@ func_80263A34:
 /* 80263A54 0022D014  2C 03 00 00 */	cmpwi r3, 0
 /* 80263A58 0022D018  41 82 02 CC */	beq .L_80263D24
 /* 80263A5C 0022D01C  C0 5F 02 B0 */	lfs f2, 0x2b0(r31)
-/* 80263A60 0022D020  C0 22 AE 24 */	lfs f1, lbl_8066B1A4@sda21(r2)
-/* 80263A64 0022D024  C0 02 AE 28 */	lfs f0, lbl_8066B1A8@sda21(r2)
+/* 80263A60 0022D020  C0 22 AE 24 */	lfs f1, float_8066B1A4@sda21(r2)
+/* 80263A64 0022D024  C0 02 AE 28 */	lfs f0, float_8066B1A8@sda21(r2)
 /* 80263A68 0022D028  EC 22 08 2A */	fadds f1, f2, f1
 /* 80263A6C 0022D02C  D0 3F 02 B0 */	stfs f1, 0x2b0(r31)
 /* 80263A70 0022D030  FC 01 00 40 */	fcmpo cr0, f1, f0
@@ -747,13 +747,13 @@ func_80263A34:
 /* 80263BF0 0022D1B0  2C 03 00 00 */	cmpwi r3, 0
 /* 80263BF4 0022D1B4  40 82 00 5C */	bne .L_80263C50
 /* 80263BF8 0022D1B8  C0 3F 02 B0 */	lfs f1, 0x2b0(r31)
-/* 80263BFC 0022D1BC  C0 02 AE 24 */	lfs f0, lbl_8066B1A4@sda21(r2)
+/* 80263BFC 0022D1BC  C0 02 AE 24 */	lfs f0, float_8066B1A4@sda21(r2)
 /* 80263C00 0022D1C0  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80263C04 0022D1C4  40 81 00 0C */	ble .L_80263C10
 /* 80263C08 0022D1C8  38 60 00 02 */	li r3, 2
 /* 80263C0C 0022D1CC  4B ED 44 6D */	bl func_80138078
 .L_80263C10:
-/* 80263C10 0022D1D0  C0 02 AE 20 */	lfs f0, lbl_8066B1A0@sda21(r2)
+/* 80263C10 0022D1D0  C0 02 AE 20 */	lfs f0, float_8066B1A0@sda21(r2)
 /* 80263C14 0022D1D4  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 80263C18 0022D1D8  D0 1F 02 B0 */	stfs f0, 0x2b0(r31)
 /* 80263C1C 0022D1DC  38 80 00 01 */	li r4, 1
@@ -1022,20 +1022,20 @@ __RTTI__CMenuPassiveSkill:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_8066B1A0
-lbl_8066B1A0:
+.global float_8066B1A0
+float_8066B1A0:
 	# ROM: 0x575000
 	.4byte 0
 
 
-.global lbl_8066B1A4
-lbl_8066B1A4:
+.global float_8066B1A4
+float_8066B1A4:
 	# ROM: 0x575004
 	.float 1.0
 
 
-.global lbl_8066B1A8
-lbl_8066B1A8:
+.global float_8066B1A8
+float_8066B1A8:
 	# ROM: 0x575008
 	.float 10.0
 	.4byte 0
@@ -1170,7 +1170,7 @@ lbl_80017914:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_80263158
+.4byte __ct__CMenuPassiveSkill
 	.4byte 0x000000D0
 	.4byte lbl_800177E8
 	.4byte func_80263228

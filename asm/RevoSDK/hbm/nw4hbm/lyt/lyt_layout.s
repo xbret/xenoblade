@@ -141,9 +141,9 @@ SetTagProcessorImpl__24_unnamed_lyt_layout_cpp_FPQ36nw4hbm3lyt4PanePQ36nw4hbm2ut
 .balign 16, 0
 .global __ct__Q36nw4hbm3lyt6LayoutFv
 __ct__Q36nw4hbm3lyt6LayoutFv:
-/* 8032D9D0 002F6F90  3C 80 80 52 */	lis r4, lbl_80518A60@ha
+/* 8032D9D0 002F6F90  3C 80 80 52 */	lis r4, float_80518A60@ha
 /* 8032D9D4 002F6F94  38 00 00 00 */	li r0, 0
-/* 8032D9D8 002F6F98  C0 04 8A 60 */	lfs f0, lbl_80518A60@l(r4)
+/* 8032D9D8 002F6F98  C0 04 8A 60 */	lfs f0, float_80518A60@l(r4)
 /* 8032D9DC 002F6F9C  3C 80 80 55 */	lis r4, lbl_8054D7F8@ha
 /* 8032D9E0 002F6FA0  38 A3 00 08 */	addi r5, r3, 8
 /* 8032D9E4 002F6FA4  90 03 00 04 */	stw r0, 4(r3)
@@ -653,10 +653,10 @@ GetLayoutRect__Q36nw4hbm3lyt6LayoutCFv:
 /* 8032E0B4 002F7674  28 00 00 01 */	cmplwi r0, 1
 /* 8032E0B8 002F7678  40 82 00 40 */	bne .L_8032E0F8
 /* 8032E0BC 002F767C  C0 84 00 1C */	lfs f4, 0x1c(r4)
-/* 8032E0C0 002F7680  3C A0 80 52 */	lis r5, lbl_80518A64@ha
+/* 8032E0C0 002F7680  3C A0 80 52 */	lis r5, float_80518A64@ha
 /* 8032E0C4 002F7684  C0 24 00 18 */	lfs f1, 0x18(r4)
 /* 8032E0C8 002F7688  FC 60 20 50 */	fneg f3, f4
-/* 8032E0CC 002F768C  C0 45 8A 64 */	lfs f2, lbl_80518A64@l(r5)
+/* 8032E0CC 002F768C  C0 45 8A 64 */	lfs f2, float_80518A64@l(r5)
 /* 8032E0D0 002F7690  FC 00 08 50 */	fneg f0, f1
 /* 8032E0D4 002F7694  EC A1 00 B2 */	fmuls f5, f1, f2
 /* 8032E0D8 002F7698  EC 63 00 B2 */	fmuls f3, f3, f2
@@ -668,9 +668,9 @@ GetLayoutRect__Q36nw4hbm3lyt6LayoutCFv:
 /* 8032E0F0 002F76B0  D0 63 00 0C */	stfs f3, 0xc(r3)
 /* 8032E0F4 002F76B4  4E 80 00 20 */	blr
 .L_8032E0F8:
-/* 8032E0F8 002F76B8  3C A0 80 52 */	lis r5, lbl_80518A60@ha
+/* 8032E0F8 002F76B8  3C A0 80 52 */	lis r5, float_80518A60@ha
 /* 8032E0FC 002F76BC  C0 44 00 1C */	lfs f2, 0x1c(r4)
-/* 8032E100 002F76C0  C0 05 8A 60 */	lfs f0, lbl_80518A60@l(r5)
+/* 8032E100 002F76C0  C0 05 8A 60 */	lfs f0, float_80518A60@l(r5)
 /* 8032E104 002F76C4  C0 24 00 18 */	lfs f1, 0x18(r4)
 /* 8032E108 002F76C8  D0 03 00 00 */	stfs f0, 0(r3)
 /* 8032E10C 002F76CC  D0 03 00 04 */	stfs f0, 4(r3)
@@ -962,13 +962,13 @@ BuildPaneObj__Q36nw4hbm3lyt6LayoutFlPCvRCQ36nw4hbm3lyt11ResBlockSet:
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
-.global lbl_80518A60
-lbl_80518A60:
+.global float_80518A60
+float_80518A60:
 	# ROM: 0x514B60
 	.4byte 0
 
 
-.global lbl_80518A64
-lbl_80518A64:
+.global float_80518A64
+float_80518A64:
 	# ROM: 0x514B64
 	.float 0.5

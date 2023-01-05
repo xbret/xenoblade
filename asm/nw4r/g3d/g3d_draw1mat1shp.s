@@ -617,13 +617,13 @@ Draw1Mat1ShpDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMatQ34nw4r3g3d6ResShpPCQ34nw4r4
 /* 803EBF00 003B54C0  4B FE E8 69 */	bl GetResVtxFurPos__Q34nw4r3g3d6ResShpCFv
 /* 803EBF04 003B54C4  90 61 00 48 */	stw r3, 0x48(r1)
 /* 803EBF08 003B54C8  3A 41 00 A0 */	addi r18, r1, 0xa0
-/* 803EBF0C 003B54CC  CB E2 C0 A8 */	lfd f31, lbl_8066C428@sda21(r2)
+/* 803EBF0C 003B54CC  CB E2 C0 A8 */	lfd f31, double_8066C428@sda21(r2)
 /* 803EBF10 003B54D0  3A 61 00 90 */	addi r19, r1, 0x90
 /* 803EBF14 003B54D4  83 C3 00 20 */	lwz r30, 0x20(r3)
 /* 803EBF18 003B54D8  3A 81 00 78 */	addi r20, r1, 0x78
-/* 803EBF1C 003B54DC  C3 A2 C0 90 */	lfs f29, lbl_8066C410@sda21(r2)
+/* 803EBF1C 003B54DC  C3 A2 C0 90 */	lfs f29, float_8066C410@sda21(r2)
 /* 803EBF20 003B54E0  3A A1 00 80 */	addi r21, r1, 0x80
-/* 803EBF24 003B54E4  C3 C2 C0 A0 */	lfs f30, lbl_8066C420@sda21(r2)
+/* 803EBF24 003B54E4  C3 C2 C0 A0 */	lfs f30, float_8066C420@sda21(r2)
 /* 803EBF28 003B54E8  3A 21 00 60 */	addi r17, r1, 0x60
 /* 803EBF2C 003B54EC  3A 01 00 64 */	addi r16, r1, 0x64
 /* 803EBF30 003B54F0  3B A0 00 00 */	li r29, 0
@@ -645,7 +645,7 @@ Draw1Mat1ShpDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMatQ34nw4r3g3d6ResShpPCQ34nw4r4
 /* 803EBF6C 003B552C  FC 40 C8 90 */	fmr f2, f25
 /* 803EBF70 003B5530  4B ED F2 A9 */	bl pow
 /* 803EBF74 003B5534  FF 60 08 18 */	frsp f27, f1
-/* 803EBF78 003B5538  C8 42 C0 98 */	lfd f2, lbl_8066C418@sda21(r2)
+/* 803EBF78 003B5538  C8 42 C0 98 */	lfd f2, double_8066C418@sda21(r2)
 /* 803EBF7C 003B553C  FC 20 C0 90 */	fmr f1, f24
 /* 803EBF80 003B5540  4B ED F2 99 */	bl pow
 /* 803EBF84 003B5544  93 E1 01 5C */	stw r31, 0x15c(r1)
@@ -957,29 +957,29 @@ lbl_80520FA8:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C410
-lbl_8066C410:
+.global float_8066C410
+float_8066C410:
 	# ROM: 0x576270
 	.float 1.0
 	.4byte 0
 
 
-.global lbl_8066C418
-lbl_8066C418:
+.global double_8066C418
+double_8066C418:
 	# ROM: 0x576278
 	.4byte 0x40100000
 	.4byte 0
 
 
-.global lbl_8066C420
-lbl_8066C420:
+.global float_8066C420
+float_8066C420:
 	# ROM: 0x576280
 	.4byte 0x437F0000
 	.4byte 0
 
 
-.global lbl_8066C428
-lbl_8066C428:
+.global double_8066C428
+double_8066C428:
 	# ROM: 0x576288
 	.4byte 0x43300000
 	.4byte 0

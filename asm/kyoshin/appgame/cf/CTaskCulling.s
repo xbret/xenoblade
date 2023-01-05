@@ -438,7 +438,7 @@ func_801A2F30:
 /* 801A2F50 0016C510  48 29 46 65 */	bl func_804375B4
 /* 801A2F54 0016C514  7C 64 1B 78 */	mr r4, r3
 /* 801A2F58 0016C518  38 60 01 24 */	li r3, 0x124
-/* 801A2F5C 0016C51C  48 29 1B 01 */	bl func_80434A5C
+/* 801A2F5C 0016C51C  48 29 1B 01 */	bl mm_malloc
 /* 801A2F60 0016C520  2C 03 00 00 */	cmpwi r3, 0
 /* 801A2F64 0016C524  7C 7F 1B 78 */	mr r31, r3
 /* 801A2F68 0016C528  41 82 00 10 */	beq .L_801A2F78
@@ -506,17 +506,17 @@ func_801A2FF0:
 .global sinit_801A3038
 sinit_801A3038:
 /* 801A3038 0016C5F8  3C E0 80 58 */	lis r7, lbl_80579018@ha
-/* 801A303C 0016C5FC  C0 A2 A1 F8 */	lfs f5, lbl_8066A578@sda21(r2)
+/* 801A303C 0016C5FC  C0 A2 A1 F8 */	lfs f5, float_8066A578@sda21(r2)
 /* 801A3040 0016C600  38 E7 90 18 */	addi r7, r7, lbl_80579018@l
-/* 801A3044 0016C604  C0 42 A2 04 */	lfs f2, lbl_8066A584@sda21(r2)
+/* 801A3044 0016C604  C0 42 A2 04 */	lfs f2, float_8066A584@sda21(r2)
 /* 801A3048 0016C608  38 87 00 18 */	addi r4, r7, 0x18
-/* 801A304C 0016C60C  C0 82 A1 FC */	lfs f4, lbl_8066A57C@sda21(r2)
+/* 801A304C 0016C60C  C0 82 A1 FC */	lfs f4, float_8066A57C@sda21(r2)
 /* 801A3050 0016C610  38 C7 00 00 */	addi r6, r7, 0
 /* 801A3054 0016C614  38 A7 00 0C */	addi r5, r7, 0xc
-/* 801A3058 0016C618  C0 62 A2 00 */	lfs f3, lbl_8066A580@sda21(r2)
+/* 801A3058 0016C618  C0 62 A2 00 */	lfs f3, float_8066A580@sda21(r2)
 /* 801A305C 0016C61C  38 67 00 28 */	addi r3, r7, 0x28
-/* 801A3060 0016C620  C0 22 A2 08 */	lfs f1, lbl_8066A588@sda21(r2)
-/* 801A3064 0016C624  C0 02 A2 0C */	lfs f0, lbl_8066A58C@sda21(r2)
+/* 801A3060 0016C620  C0 22 A2 08 */	lfs f1, float_8066A588@sda21(r2)
+/* 801A3064 0016C624  C0 02 A2 0C */	lfs f0, float_8066A58C@sda21(r2)
 /* 801A3068 0016C628  D0 A7 00 00 */	stfs f5, 0(r7)
 /* 801A306C 0016C62C  D0 86 00 04 */	stfs f4, 4(r6)
 /* 801A3070 0016C630  D0 66 00 08 */	stfs f3, 8(r6)
@@ -702,38 +702,38 @@ __RTTI__CTTask_cf_CTaskCulling:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066A578
-lbl_8066A578:
+.global float_8066A578
+float_8066A578:
 	# ROM: 0x5743D8
 	.4byte 0x40A00000
 
 
-.global lbl_8066A57C
-lbl_8066A57C:
+.global float_8066A57C
+float_8066A57C:
 	# ROM: 0x5743DC
 	.4byte 0x41F00000
 
 
-.global lbl_8066A580
-lbl_8066A580:
+.global float_8066A580
+float_8066A580:
 	# ROM: 0x5743E0
 	.4byte 0x42480000
 
 
-.global lbl_8066A584
-lbl_8066A584:
+.global float_8066A584
+float_8066A584:
 	# ROM: 0x5743E4
 	.4byte 0
 
 
-.global lbl_8066A588
-lbl_8066A588:
+.global float_8066A588
+float_8066A588:
 	# ROM: 0x5743E8
 	.float 1.0
 
 
-.global lbl_8066A58C
-lbl_8066A58C:
+.global float_8066A58C
+float_8066A58C:
 	# ROM: 0x5743EC
 	.float 0.2
 

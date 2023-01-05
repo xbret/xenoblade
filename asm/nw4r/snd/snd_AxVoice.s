@@ -1257,11 +1257,11 @@ SetSrcType__Q44nw4r3snd6detail7AxVoiceFQ54nw4r3snd6detail7AxVoice7SrcTypef:
 /* 8040EF40 003D8500  3C 00 43 30 */	lis r0, 0x4330
 /* 8040EF44 003D8504  90 01 00 08 */	stw r0, 8(r1)
 /* 8040EF48 003D8508  6C 60 80 00 */	xoris r0, r3, 0x8000
-/* 8040EF4C 003D850C  C8 62 C3 20 */	lfd f3, lbl_8066C6A0@sda21(r2)
+/* 8040EF4C 003D850C  C8 62 C3 20 */	lfd f3, double_8066C6A0@sda21(r2)
 /* 8040EF50 003D8510  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8040EF54 003D8514  C0 22 C3 10 */	lfs f1, lbl_8066C690@sda21(r2)
+/* 8040EF54 003D8514  C0 22 C3 10 */	lfs f1, float_8066C690@sda21(r2)
 /* 8040EF58 003D8518  C8 41 00 08 */	lfd f2, 8(r1)
-/* 8040EF5C 003D851C  C0 02 C3 14 */	lfs f0, lbl_8066C694@sda21(r2)
+/* 8040EF5C 003D851C  C0 02 C3 14 */	lfs f0, float_8066C694@sda21(r2)
 /* 8040EF60 003D8520  EC 42 18 28 */	fsubs f2, f2, f3
 /* 8040EF64 003D8524  EC 5F 00 B2 */	fmuls f2, f31, f2
 /* 8040EF68 003D8528  EC 22 08 24 */	fdivs f1, f2, f1
@@ -1270,7 +1270,7 @@ SetSrcType__Q44nw4r3snd6detail7AxVoiceFQ54nw4r3snd6detail7AxVoice7SrcTypef:
 /* 8040EF74 003D8534  3B C0 00 02 */	li r30, 2
 /* 8040EF78 003D8538  48 00 00 1C */	b .L_8040EF94
 .L_8040EF7C:
-/* 8040EF7C 003D853C  C0 02 C3 18 */	lfs f0, lbl_8066C698@sda21(r2)
+/* 8040EF7C 003D853C  C0 02 C3 18 */	lfs f0, float_8066C698@sda21(r2)
 /* 8040EF80 003D8540  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8040EF84 003D8544  40 81 00 0C */	ble .L_8040EF90
 /* 8040EF88 003D8548  3B C0 00 03 */	li r30, 3
@@ -2064,11 +2064,11 @@ SetSrc__Q44nw4r3snd6detail7AxVoiceFfb:
 /* 8040FA18 003D8FD8  3C 00 43 30 */	lis r0, 0x4330
 /* 8040FA1C 003D8FDC  90 01 00 18 */	stw r0, 0x18(r1)
 /* 8040FA20 003D8FE0  6C 60 80 00 */	xoris r0, r3, 0x8000
-/* 8040FA24 003D8FE4  C8 42 C3 20 */	lfd f2, lbl_8066C6A0@sda21(r2)
+/* 8040FA24 003D8FE4  C8 42 C3 20 */	lfd f2, double_8066C6A0@sda21(r2)
 /* 8040FA28 003D8FE8  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 8040FA2C 003D8FEC  C0 02 C3 10 */	lfs f0, lbl_8066C690@sda21(r2)
+/* 8040FA2C 003D8FEC  C0 02 C3 10 */	lfs f0, float_8066C690@sda21(r2)
 /* 8040FA30 003D8FF0  C8 21 00 18 */	lfd f1, 0x18(r1)
-/* 8040FA34 003D8FF4  C0 62 C3 28 */	lfs f3, lbl_8066C6A8@sda21(r2)
+/* 8040FA34 003D8FF4  C0 62 C3 28 */	lfs f3, float_8066C6A8@sda21(r2)
 /* 8040FA38 003D8FF8  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8040FA3C 003D8FFC  EC 3F 00 72 */	fmuls f1, f31, f1
 /* 8040FA40 003D9000  EC 01 00 24 */	fdivs f0, f1, f0
@@ -2076,14 +2076,14 @@ SetSrc__Q44nw4r3snd6detail7AxVoiceFfb:
 /* 8040FA48 003D9008  40 81 00 08 */	ble .L_8040FA50
 /* 8040FA4C 003D900C  48 00 00 18 */	b .L_8040FA64
 .L_8040FA50:
-/* 8040FA50 003D9010  C0 62 C3 2C */	lfs f3, lbl_8066C6AC@sda21(r2)
+/* 8040FA50 003D9010  C0 62 C3 2C */	lfs f3, float_8066C6AC@sda21(r2)
 /* 8040FA54 003D9014  FC 00 18 40 */	fcmpo cr0, f0, f3
 /* 8040FA58 003D9018  40 80 00 08 */	bge .L_8040FA60
 /* 8040FA5C 003D901C  48 00 00 08 */	b .L_8040FA64
 .L_8040FA60:
 /* 8040FA60 003D9020  FC 60 00 90 */	fmr f3, f0
 .L_8040FA64:
-/* 8040FA64 003D9024  C0 02 C3 30 */	lfs f0, lbl_8066C6B0@sda21(r2)
+/* 8040FA64 003D9024  C0 02 C3 30 */	lfs f0, float_8066C6B0@sda21(r2)
 /* 8040FA68 003D9028  EC 20 00 F2 */	fmuls f1, f0, f3
 /* 8040FA6C 003D902C  4B EA A5 C1 */	bl __cvt_fp2unsigned
 /* 8040FA70 003D9030  38 00 00 00 */	li r0, 0
@@ -2119,9 +2119,9 @@ SetSrc__Q44nw4r3snd6detail7AxVoiceFfb:
 /* 8040FAE0 003D90A0  3C 00 43 30 */	lis r0, 0x4330
 /* 8040FAE4 003D90A4  90 01 00 18 */	stw r0, 0x18(r1)
 /* 8040FAE8 003D90A8  6C 60 80 00 */	xoris r0, r3, 0x8000
-/* 8040FAEC 003D90AC  C8 42 C3 20 */	lfd f2, lbl_8066C6A0@sda21(r2)
+/* 8040FAEC 003D90AC  C8 42 C3 20 */	lfd f2, double_8066C6A0@sda21(r2)
 /* 8040FAF0 003D90B0  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 8040FAF4 003D90B4  C0 02 C3 10 */	lfs f0, lbl_8066C690@sda21(r2)
+/* 8040FAF4 003D90B4  C0 02 C3 10 */	lfs f0, float_8066C690@sda21(r2)
 /* 8040FAF8 003D90B8  C8 21 00 18 */	lfd f1, 0x18(r1)
 /* 8040FAFC 003D90BC  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8040FB00 003D90C0  EC 3F 00 72 */	fmuls f1, f31, f1
@@ -2134,7 +2134,7 @@ SetSrc__Q44nw4r3snd6detail7AxVoiceFfb:
 /* 8040FB1C 003D90DC  4B F4 8E D5 */	bl OSRestoreInterrupts
 /* 8040FB20 003D90E0  48 00 00 3C */	b .L_8040FB5C
 .L_8040FB24:
-/* 8040FB24 003D90E4  C0 02 C3 30 */	lfs f0, lbl_8066C6B0@sda21(r2)
+/* 8040FB24 003D90E4  C0 02 C3 30 */	lfs f0, float_8066C6B0@sda21(r2)
 /* 8040FB28 003D90E8  EC 20 07 F2 */	fmuls f1, f0, f31
 /* 8040FB2C 003D90EC  4B EA A5 01 */	bl __cvt_fp2unsigned
 /* 8040FB30 003D90F0  54 60 84 3E */	srwi r0, r3, 0x10
@@ -2196,7 +2196,7 @@ SetVe__Q44nw4r3snd6detail7AxVoiceFff:
 /* 8040FBF0 003D91B0  88 1E 00 0C */	lbz r0, 0xc(r30)
 /* 8040FBF4 003D91B4  2C 00 00 00 */	cmpwi r0, 0
 /* 8040FBF8 003D91B8  41 82 00 24 */	beq .L_8040FC1C
-/* 8040FBFC 003D91BC  C0 02 C3 34 */	lfs f0, lbl_8066C6B4@sda21(r2)
+/* 8040FBFC 003D91BC  C0 02 C3 34 */	lfs f0, float_8066C6B4@sda21(r2)
 /* 8040FC00 003D91C0  38 00 00 00 */	li r0, 0
 /* 8040FC04 003D91C4  98 1E 00 0C */	stb r0, 0xc(r30)
 /* 8040FC08 003D91C8  EC 00 07 F2 */	fmuls f0, f0, f31
@@ -2205,7 +2205,7 @@ SetVe__Q44nw4r3snd6detail7AxVoiceFff:
 /* 8040FC14 003D91D4  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8040FC18 003D91D8  B0 1E 00 08 */	sth r0, 8(r30)
 .L_8040FC1C:
-/* 8040FC1C 003D91DC  C0 02 C3 34 */	lfs f0, lbl_8066C6B4@sda21(r2)
+/* 8040FC1C 003D91DC  C0 02 C3 34 */	lfs f0, float_8066C6B4@sda21(r2)
 /* 8040FC20 003D91E0  EC 00 07 B2 */	fmuls f0, f0, f30
 /* 8040FC24 003D91E4  FC 00 00 1E */	fctiwz f0, f0
 /* 8040FC28 003D91E8  D8 01 00 08 */	stfd f0, 8(r1)
@@ -3334,51 +3334,51 @@ SetVoiceRmtIIRCoefs__Q44nw4r3snd6detail17AxVoiceParamBlockFUse:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C690
-lbl_8066C690:
+.global float_8066C690
+float_8066C690:
 	# ROM: 0x5764F0
 	.4byte 0x46FA0000
 
 
-.global lbl_8066C694
-lbl_8066C694:
+.global float_8066C694
+float_8066C694:
 	# ROM: 0x5764F4
 	.4byte 0x3FAAAAAB
 
 
-.global lbl_8066C698
-lbl_8066C698:
+.global float_8066C698
+float_8066C698:
 	# ROM: 0x5764F8
 	.float 1.0
 	.4byte 0
 
 
-.global lbl_8066C6A0
-lbl_8066C6A0:
+.global double_8066C6A0
+double_8066C6A0:
 	# ROM: 0x576500
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
-.global lbl_8066C6A8
-lbl_8066C6A8:
+.global float_8066C6A8
+float_8066C6A8:
 	# ROM: 0x576508
 	.4byte 0x477FFF00
 
 
-.global lbl_8066C6AC
-lbl_8066C6AC:
+.global float_8066C6AC
+float_8066C6AC:
 	# ROM: 0x57650C
 	.4byte 0
 
 
-.global lbl_8066C6B0
-lbl_8066C6B0:
+.global float_8066C6B0
+float_8066C6B0:
 	# ROM: 0x576510
 	.4byte 0x47800000
 
 
-.global lbl_8066C6B4
-lbl_8066C6B4:
+.global float_8066C6B4
+float_8066C6B4:
 	# ROM: 0x576514
 	.4byte 0x46FFFE00

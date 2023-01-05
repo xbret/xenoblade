@@ -120,8 +120,8 @@ lbl_805CD788:
 .global lbl_805CD790
 lbl_805CD790:
 	.skip 0x8
-.global lbl_805CD798
-lbl_805CD798:
+.global float_805CD798
+float_805CD798:
 	.skip 0x20
 .global lbl_805CD7B8
 lbl_805CD7B8:
@@ -225,11 +225,11 @@ lbl_805CE600:
 .global lbl_805CFBE0
 lbl_805CFBE0:
 	.skip 0x30
-.global lbl_805CFC10
-lbl_805CFC10:
+.global double_805CFC10
+double_805CFC10:
 	.skip 0x20
-.global lbl_805CFC30
-lbl_805CFC30:
+.global double_805CFC30
+double_805CFC30:
 	.skip 0x20
 .global lbl_805CFC50
 lbl_805CFC50:

@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8026F37C
-func_8026F37C:
+.global __ct__CMenuBattleEnd
+__ct__CMenuBattleEnd:
 /* 8026F37C 0023893C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8026F380 00238940  7C 08 02 A6 */	mflr r0
 /* 8026F384 00238944  90 01 00 24 */	stw r0, 0x24(r1)
@@ -396,13 +396,13 @@ func_8026F8B0:
 /* 8026F900 00238EC0  48 1C 7C B5 */	bl func_804375B4
 /* 8026F904 00238EC4  7C 64 1B 78 */	mr r4, r3
 /* 8026F908 00238EC8  38 60 00 BC */	li r3, 0xbc
-/* 8026F90C 00238ECC  48 1C 51 51 */	bl func_80434A5C
+/* 8026F90C 00238ECC  48 1C 51 51 */	bl mm_malloc
 /* 8026F910 00238ED0  2C 03 00 00 */	cmpwi r3, 0
 /* 8026F914 00238ED4  41 82 00 14 */	beq .L_8026F928
 /* 8026F918 00238ED8  7F A4 EB 78 */	mr r4, r29
 /* 8026F91C 00238EDC  7F C5 F3 78 */	mr r5, r30
 /* 8026F920 00238EE0  7F E6 FB 78 */	mr r6, r31
-/* 8026F924 00238EE4  4B FF FA 59 */	bl func_8026F37C
+/* 8026F924 00238EE4  4B FF FA 59 */	bl __ct__CMenuBattleEnd
 .L_8026F928:
 /* 8026F928 00238EE8  90 6D B0 08 */	stw r3, lbl_80667188@sda21(r13)
 /* 8026F92C 00238EEC  7F 84 E3 78 */	mr r4, r28
@@ -423,7 +423,7 @@ func_8026F8B0:
 func_8026F95C:
 /* 8026F95C 00238F1C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8026F960 00238F20  7C 08 02 A6 */	mflr r0
-/* 8026F964 00238F24  C0 22 AE B8 */	lfs f1, lbl_8066B238@sda21(r2)
+/* 8026F964 00238F24  C0 22 AE B8 */	lfs f1, float_8066B238@sda21(r2)
 /* 8026F968 00238F28  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8026F96C 00238F2C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8026F970 00238F30  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -448,7 +448,7 @@ func_8026F95C:
 /* 8026F9BC 00238F7C  4E 80 04 21 */	bctrl 
 /* 8026F9C0 00238F80  80 BC 00 90 */	lwz r5, 0x90(r28)
 /* 8026F9C4 00238F84  3C 60 80 51 */	lis r3, lbl_80509D88@ha
-/* 8026F9C8 00238F88  C0 02 AE BC */	lfs f0, lbl_8066B23C@sda21(r2)
+/* 8026F9C8 00238F88  C0 02 AE BC */	lfs f0, float_8066B23C@sda21(r2)
 /* 8026F9CC 00238F8C  38 80 00 00 */	li r4, 0
 /* 8026F9D0 00238F90  D0 05 00 10 */	stfs f0, 0x10(r5)
 /* 8026F9D4 00238F94  38 00 00 01 */	li r0, 1
@@ -765,14 +765,14 @@ __RTTI__CMenuBattleEnd:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
-.global lbl_8066B238
-lbl_8066B238:
+.global float_8066B238
+float_8066B238:
 	# ROM: 0x575098
 	.float 1.0
 
 
-.global lbl_8066B23C
-lbl_8066B23C:
+.global float_8066B23C
+float_8066B23C:
 	# ROM: 0x57509C
 	.4byte 0
 
@@ -863,7 +863,7 @@ lbl_80017E54:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_8026F37C
+.4byte __ct__CMenuBattleEnd
 	.4byte 0x00000150
 	.4byte lbl_80017D9C
 	.4byte func_8026F4CC

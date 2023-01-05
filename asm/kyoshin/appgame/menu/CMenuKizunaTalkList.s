@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80271DD4
-func_80271DD4:
+.global __ct__CMenuKizunaTalkList
+__ct__CMenuKizunaTalkList:
 /* 80271DD4 0023B394  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80271DD8 0023B398  7C 08 02 A6 */	mflr r0
 /* 80271DDC 0023B39C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -454,11 +454,11 @@ func_80272414:
 /* 80272440 0023BA00  48 1C 51 75 */	bl func_804375B4
 /* 80272444 0023BA04  7C 64 1B 78 */	mr r4, r3
 /* 80272448 0023BA08  38 60 15 50 */	li r3, 0x1550
-/* 8027244C 0023BA0C  48 1C 26 11 */	bl func_80434A5C
+/* 8027244C 0023BA0C  48 1C 26 11 */	bl mm_malloc
 /* 80272450 0023BA10  2C 03 00 00 */	cmpwi r3, 0
 /* 80272454 0023BA14  41 82 00 0C */	beq .L_80272460
 /* 80272458 0023BA18  7F E4 FB 78 */	mr r4, r31
-/* 8027245C 0023BA1C  4B FF F9 79 */	bl func_80271DD4
+/* 8027245C 0023BA1C  4B FF F9 79 */	bl __ct__CMenuKizunaTalkList
 .L_80272460:
 /* 80272460 0023BA20  90 6D B0 20 */	stw r3, lbl_806671A0@sda21(r13)
 /* 80272464 0023BA24  7F C4 F3 78 */	mr r4, r30
@@ -1573,7 +1573,7 @@ lbl_80018270:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_80271DD4
+.4byte __ct__CMenuKizunaTalkList
 	.4byte 0x000000C4
 	.4byte lbl_80018134
 	.4byte func_80271E98

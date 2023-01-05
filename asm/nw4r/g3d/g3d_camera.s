@@ -41,27 +41,27 @@ Init__Q34nw4r3g3d6CameraFUsUsUsUsUsUs:
 /* 803F106C 003BA62C  41 82 00 FC */	beq .L_803F1168
 /* 803F1070 003BA630  38 60 00 21 */	li r3, 0x21
 /* 803F1074 003BA634  91 21 00 0C */	stw r9, 0xc(r1)
-/* 803F1078 003BA638  C1 02 C0 D8 */	lfs f8, lbl_8066C458@sda21(r2)
+/* 803F1078 003BA638  C1 02 C0 D8 */	lfs f8, float_8066C458@sda21(r2)
 /* 803F107C 003BA63C  38 00 00 00 */	li r0, 0
 /* 803F1080 003BA640  90 6A 00 70 */	stw r3, 0x70(r10)
 /* 803F1084 003BA644  C8 01 00 08 */	lfd f0, 8(r1)
 /* 803F1088 003BA648  D1 0A 00 74 */	stfs f8, 0x74(r10)
-/* 803F108C 003BA64C  C0 22 C0 DC */	lfs f1, lbl_8066C45C@sda21(r2)
+/* 803F108C 003BA64C  C0 22 C0 DC */	lfs f1, float_8066C45C@sda21(r2)
 /* 803F1090 003BA650  D1 0A 00 78 */	stfs f8, 0x78(r10)
-/* 803F1094 003BA654  C8 62 C0 F8 */	lfd f3, lbl_8066C478@sda21(r2)
+/* 803F1094 003BA654  C8 62 C0 F8 */	lfd f3, double_8066C478@sda21(r2)
 /* 803F1098 003BA658  D0 2A 00 7C */	stfs f1, 0x7c(r10)
-/* 803F109C 003BA65C  C0 E2 C0 E0 */	lfs f7, lbl_8066C460@sda21(r2)
+/* 803F109C 003BA65C  C0 E2 C0 E0 */	lfs f7, float_8066C460@sda21(r2)
 /* 803F10A0 003BA660  EC 40 18 28 */	fsubs f2, f0, f3
 /* 803F10A4 003BA664  D1 0A 00 80 */	stfs f8, 0x80(r10)
-/* 803F10A8 003BA668  C0 C2 C0 E4 */	lfs f6, lbl_8066C464@sda21(r2)
+/* 803F10A8 003BA668  C0 C2 C0 E4 */	lfs f6, float_8066C464@sda21(r2)
 /* 803F10AC 003BA66C  D0 EA 00 84 */	stfs f7, 0x84(r10)
-/* 803F10B0 003BA670  C0 A2 C0 E8 */	lfs f5, lbl_8066C468@sda21(r2)
+/* 803F10B0 003BA670  C0 A2 C0 E8 */	lfs f5, float_8066C468@sda21(r2)
 /* 803F10B4 003BA674  D1 0A 00 88 */	stfs f8, 0x88(r10)
-/* 803F10B8 003BA678  C0 82 C0 EC */	lfs f4, lbl_8066C46C@sda21(r2)
+/* 803F10B8 003BA678  C0 82 C0 EC */	lfs f4, float_8066C46C@sda21(r2)
 /* 803F10BC 003BA67C  D1 0A 00 8C */	stfs f8, 0x8c(r10)
-/* 803F10C0 003BA680  C0 22 C0 F0 */	lfs f1, lbl_8066C470@sda21(r2)
+/* 803F10C0 003BA680  C0 22 C0 F0 */	lfs f1, float_8066C470@sda21(r2)
 /* 803F10C4 003BA684  D1 0A 00 90 */	stfs f8, 0x90(r10)
-/* 803F10C8 003BA688  C0 02 C0 F4 */	lfs f0, lbl_8066C474@sda21(r2)
+/* 803F10C8 003BA688  C0 02 C0 F4 */	lfs f0, float_8066C474@sda21(r2)
 /* 803F10CC 003BA68C  D1 0A 00 94 */	stfs f8, 0x94(r10)
 /* 803F10D0 003BA690  D1 0A 00 98 */	stfs f8, 0x98(r10)
 /* 803F10D4 003BA694  D1 0A 00 9C */	stfs f8, 0x9c(r10)
@@ -612,9 +612,9 @@ GetEnvironmentTexMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34:
 /* 803F1834 003BADF4  7F C3 F3 78 */	mr r3, r30
 /* 803F1838 003BADF8  4B F5 B9 A9 */	bl PSMTXIdentity
 /* 803F183C 003BADFC  C0 1F 00 CC */	lfs f0, 0xcc(r31)
-/* 803F1840 003BAE00  C0 22 C0 D8 */	lfs f1, lbl_8066C458@sda21(r2)
+/* 803F1840 003BAE00  C0 22 C0 D8 */	lfs f1, float_8066C458@sda21(r2)
 /* 803F1844 003BAE04  D0 1E 00 00 */	stfs f0, 0(r30)
-/* 803F1848 003BAE08  C0 02 C0 E0 */	lfs f0, lbl_8066C460@sda21(r2)
+/* 803F1848 003BAE08  C0 02 C0 E0 */	lfs f0, float_8066C460@sda21(r2)
 /* 803F184C 003BAE0C  C0 5F 00 D4 */	lfs f2, 0xd4(r31)
 /* 803F1850 003BAE10  D0 5E 00 0C */	stfs f2, 0xc(r30)
 /* 803F1854 003BAE14  C0 5F 00 D0 */	lfs f2, 0xd0(r31)
@@ -776,7 +776,7 @@ UpdateCameraMtx__Q34nw4r3g3d6CameraCFv:
 /* 803F1A64 003BB024  C0 9F 00 7C */	lfs f4, 0x7c(r31)
 /* 803F1A68 003BB028  EC A1 00 28 */	fsubs f5, f1, f0
 /* 803F1A6C 003BB02C  C0 7F 00 94 */	lfs f3, 0x94(r31)
-/* 803F1A70 003BB030  C0 42 C0 D8 */	lfs f2, lbl_8066C458@sda21(r2)
+/* 803F1A70 003BB030  C0 42 C0 D8 */	lfs f2, float_8066C458@sda21(r2)
 /* 803F1A74 003BB034  C0 3F 00 78 */	lfs f1, 0x78(r31)
 /* 803F1A78 003BB038  EC 64 18 28 */	fsubs f3, f4, f3
 /* 803F1A7C 003BB03C  C0 1F 00 90 */	lfs f0, 0x90(r31)
@@ -788,7 +788,7 @@ UpdateCameraMtx__Q34nw4r3g3d6CameraCFv:
 /* 803F1A94 003BB054  40 82 00 90 */	bne .L_803F1B24
 /* 803F1A98 003BB058  FC 02 18 00 */	fcmpu cr0, f2, f3
 /* 803F1A9C 003BB05C  40 82 00 88 */	bne .L_803F1B24
-/* 803F1AA0 003BB060  C0 22 C0 E0 */	lfs f1, lbl_8066C460@sda21(r2)
+/* 803F1AA0 003BB060  C0 22 C0 E0 */	lfs f1, float_8066C460@sda21(r2)
 /* 803F1AA4 003BB064  D0 3F 00 00 */	stfs f1, 0(r31)
 /* 803F1AA8 003BB068  D0 5F 00 04 */	stfs f2, 4(r31)
 /* 803F1AAC 003BB06C  D0 5F 00 08 */	stfs f2, 8(r31)
@@ -804,7 +804,7 @@ UpdateCameraMtx__Q34nw4r3g3d6CameraCFv:
 /* 803F1AD4 003BB094  4C 40 13 82 */	cror 2, 0, 2
 /* 803F1AD8 003BB098  40 82 00 28 */	bne .L_803F1B00
 /* 803F1ADC 003BB09C  D0 3F 00 18 */	stfs f1, 0x18(r31)
-/* 803F1AE0 003BB0A0  C0 02 C1 00 */	lfs f0, lbl_8066C480@sda21(r2)
+/* 803F1AE0 003BB0A0  C0 02 C1 00 */	lfs f0, float_8066C480@sda21(r2)
 /* 803F1AE4 003BB0A4  C0 3F 00 7C */	lfs f1, 0x7c(r31)
 /* 803F1AE8 003BB0A8  FC 20 08 50 */	fneg f1, f1
 /* 803F1AEC 003BB0AC  D0 3F 00 1C */	stfs f1, 0x1c(r31)
@@ -813,7 +813,7 @@ UpdateCameraMtx__Q34nw4r3g3d6CameraCFv:
 /* 803F1AF8 003BB0B8  D0 1F 00 2C */	stfs f0, 0x2c(r31)
 /* 803F1AFC 003BB0BC  48 00 02 F4 */	b .L_803F1DF0
 .L_803F1B00:
-/* 803F1B00 003BB0C0  C0 02 C1 00 */	lfs f0, lbl_8066C480@sda21(r2)
+/* 803F1B00 003BB0C0  C0 02 C1 00 */	lfs f0, float_8066C480@sda21(r2)
 /* 803F1B04 003BB0C4  D0 1F 00 18 */	stfs f0, 0x18(r31)
 /* 803F1B08 003BB0C8  C0 1F 00 7C */	lfs f0, 0x7c(r31)
 /* 803F1B0C 003BB0CC  D0 1F 00 1C */	stfs f0, 0x1c(r31)
@@ -828,7 +828,7 @@ UpdateCameraMtx__Q34nw4r3g3d6CameraCFv:
 /* 803F1B2C 003BB0EC  C0 21 00 84 */	lfs f1, 0x84(r1)
 /* 803F1B30 003BB0F0  7C 64 1B 78 */	mr r4, r3
 /* 803F1B34 003BB0F4  FC 40 00 50 */	fneg f2, f0
-/* 803F1B38 003BB0F8  C0 02 C0 D8 */	lfs f0, lbl_8066C458@sda21(r2)
+/* 803F1B38 003BB0F8  C0 02 C0 D8 */	lfs f0, float_8066C458@sda21(r2)
 /* 803F1B3C 003BB0FC  D0 21 00 70 */	stfs f1, 0x70(r1)
 /* 803F1B40 003BB100  D0 01 00 74 */	stfs f0, 0x74(r1)
 /* 803F1B44 003BB104  D0 41 00 78 */	stfs f2, 0x78(r1)
@@ -842,7 +842,7 @@ UpdateCameraMtx__Q34nw4r3g3d6CameraCFv:
 /* 803F1B64 003BB124  4B F5 C6 0D */	bl PSVECCrossProduct
 /* 803F1B68 003BB128  C0 3F 00 A4 */	lfs f1, 0xa4(r31)
 /* 803F1B6C 003BB12C  38 61 00 24 */	addi r3, r1, 0x24
-/* 803F1B70 003BB130  C0 02 C1 04 */	lfs f0, lbl_8066C484@sda21(r2)
+/* 803F1B70 003BB130  C0 02 C1 04 */	lfs f0, float_8066C484@sda21(r2)
 /* 803F1B74 003BB134  38 81 00 20 */	addi r4, r1, 0x20
 /* 803F1B78 003BB138  EC 20 00 72 */	fmuls f1, f0, f1
 /* 803F1B7C 003BB13C  48 01 92 71 */	bl SinCosFIdx__Q24nw4r4mathFPfPff
@@ -916,19 +916,19 @@ UpdateCameraMtx__Q34nw4r3g3d6CameraCFv:
 .L_803F1C8C:
 /* 803F1C8C 003BB24C  C0 3F 00 98 */	lfs f1, 0x98(r31)
 /* 803F1C90 003BB250  38 61 00 1C */	addi r3, r1, 0x1c
-/* 803F1C94 003BB254  C0 02 C1 04 */	lfs f0, lbl_8066C484@sda21(r2)
+/* 803F1C94 003BB254  C0 02 C1 04 */	lfs f0, float_8066C484@sda21(r2)
 /* 803F1C98 003BB258  38 81 00 10 */	addi r4, r1, 0x10
 /* 803F1C9C 003BB25C  EC 20 00 72 */	fmuls f1, f0, f1
 /* 803F1CA0 003BB260  48 01 91 4D */	bl SinCosFIdx__Q24nw4r4mathFPfPff
 /* 803F1CA4 003BB264  C0 3F 00 9C */	lfs f1, 0x9c(r31)
 /* 803F1CA8 003BB268  38 61 00 18 */	addi r3, r1, 0x18
-/* 803F1CAC 003BB26C  C0 02 C1 04 */	lfs f0, lbl_8066C484@sda21(r2)
+/* 803F1CAC 003BB26C  C0 02 C1 04 */	lfs f0, float_8066C484@sda21(r2)
 /* 803F1CB0 003BB270  38 81 00 0C */	addi r4, r1, 0xc
 /* 803F1CB4 003BB274  EC 20 00 72 */	fmuls f1, f0, f1
 /* 803F1CB8 003BB278  48 01 91 35 */	bl SinCosFIdx__Q24nw4r4mathFPfPff
 /* 803F1CBC 003BB27C  C0 3F 00 A0 */	lfs f1, 0xa0(r31)
 /* 803F1CC0 003BB280  38 61 00 14 */	addi r3, r1, 0x14
-/* 803F1CC4 003BB284  C0 02 C1 04 */	lfs f0, lbl_8066C484@sda21(r2)
+/* 803F1CC4 003BB284  C0 02 C1 04 */	lfs f0, float_8066C484@sda21(r2)
 /* 803F1CC8 003BB288  38 81 00 08 */	addi r4, r1, 8
 /* 803F1CCC 003BB28C  EC 20 00 72 */	fmuls f1, f0, f1
 /* 803F1CD0 003BB290  48 01 91 1D */	bl SinCosFIdx__Q24nw4r4mathFPfPff
@@ -1017,68 +1017,68 @@ UpdateCameraMtx__Q34nw4r3g3d6CameraCFv:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C458
-lbl_8066C458:
+.global float_8066C458
+float_8066C458:
 	# ROM: 0x5762B8
 	.4byte 0
 
 
-.global lbl_8066C45C
-lbl_8066C45C:
+.global float_8066C45C
+float_8066C45C:
 	# ROM: 0x5762BC
 	.4byte 0x41700000
 
 
-.global lbl_8066C460
-lbl_8066C460:
+.global float_8066C460
+float_8066C460:
 	# ROM: 0x5762C0
 	.float 1.0
 
 
-.global lbl_8066C464
-lbl_8066C464:
+.global float_8066C464
+float_8066C464:
 	# ROM: 0x5762C4
 	.4byte 0x42700000
 
 
-.global lbl_8066C468
-lbl_8066C468:
+.global float_8066C468
+float_8066C468:
 	# ROM: 0x5762C8
 	.4byte 0x3FAAAAAB
 
 
-.global lbl_8066C46C
-lbl_8066C46C:
+.global float_8066C46C
+float_8066C46C:
 	# ROM: 0x5762CC
 	.4byte 0x3DCCCCCD
 
 
-.global lbl_8066C470
-lbl_8066C470:
+.global float_8066C470
+float_8066C470:
 	# ROM: 0x5762D0
 	.4byte 0x447A0000
 
 
-.global lbl_8066C474
-lbl_8066C474:
+.global float_8066C474
+float_8066C474:
 	# ROM: 0x5762D4
 	.float 0.5
 
 
-.global lbl_8066C478
-lbl_8066C478:
+.global double_8066C478
+double_8066C478:
 	# ROM: 0x5762D8
 	.4byte 0x43300000
 	.4byte 0
 
 
-.global lbl_8066C480
-lbl_8066C480:
+.global float_8066C480
+float_8066C480:
 	# ROM: 0x5762E0
 	.float -1.0
 
 
-.global lbl_8066C484
-lbl_8066C484:
+.global float_8066C484
+float_8066C484:
 	# ROM: 0x5762E4
 	.4byte 0x3F360B61

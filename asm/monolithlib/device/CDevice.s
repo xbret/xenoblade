@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8044D820
-func_8044D820:
+.global __ct__CDeviceException
+__ct__CDeviceException:
 /* 8044D820 00416DE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044D824 00416DE4  7C 08 02 A6 */	mflr r0
 /* 8044D828 00416DE8  3C 80 80 52 */	lis r4, lbl_805263E8@ha
@@ -17,7 +17,7 @@ func_8044D820:
 /* 8044D848 00416E08  4B FE 9D 6D */	bl func_804375B4
 /* 8044D84C 00416E0C  7C 64 1B 78 */	mr r4, r3
 /* 8044D850 00416E10  38 60 01 C8 */	li r3, 0x1c8
-/* 8044D854 00416E14  4B FE 72 09 */	bl func_80434A5C
+/* 8044D854 00416E14  4B FE 72 09 */	bl mm_malloc
 /* 8044D858 00416E18  2C 03 00 00 */	cmpwi r3, 0
 /* 8044D85C 00416E1C  7C 7E 1B 78 */	mr r30, r3
 /* 8044D860 00416E20  41 82 00 24 */	beq .L_8044D884
@@ -77,8 +77,8 @@ func_8044D8C8:
 /* 8044D920 00416EE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044D924 00416EE4  4E 80 00 20 */	blr 
 
-.global func_8044D928
-func_8044D928:
+.global __ct__CDevice
+__ct__CDevice:
 /* 8044D928 00416EE8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044D92C 00416EEC  7C 08 02 A6 */	mflr r0
 /* 8044D930 00416EF0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -93,7 +93,7 @@ func_8044D928:
 /* 8044D954 00416F14  4B FE 9C 61 */	bl func_804375B4
 /* 8044D958 00416F18  7C 64 1B 78 */	mr r4, r3
 /* 8044D95C 00416F1C  38 60 01 C8 */	li r3, 0x1c8
-/* 8044D960 00416F20  4B FE 70 FD */	bl func_80434A5C
+/* 8044D960 00416F20  4B FE 70 FD */	bl mm_malloc
 /* 8044D964 00416F24  2C 03 00 00 */	cmpwi r3, 0
 /* 8044D968 00416F28  7C 7D 1B 78 */	mr r29, r3
 /* 8044D96C 00416F2C  41 82 00 2C */	beq .L_8044D998
@@ -359,7 +359,7 @@ __vt__CDevice:
 	.4byte func_80438A50
 	.4byte func_80039E3C
 	.4byte func_80039E38
-	.4byte func_8044D820
+	.4byte __ct__CDeviceException
 	.4byte func_8044D8C8
 	.4byte func_80039E30
 
@@ -443,13 +443,13 @@ lbl_8001CD00:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_8044D820
+.4byte __ct__CDeviceException
 	.4byte 0x000000A8
 	.4byte lbl_8001CCD8
 	.4byte func_8044D8C8
 	.4byte 0x00000060
 	.4byte lbl_8001CCE0
-	.4byte func_8044D928
+	.4byte __ct__CDevice
 	.4byte 0x000000A0
 	.4byte lbl_8001CCE8
 	.4byte func_8044D9C8

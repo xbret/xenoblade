@@ -540,10 +540,10 @@ randFloat__Q32mm3mtl6MTRandFv:
 /* 80435B8C 003FF14C  3C 60 9D 2C */	lis r3, 0x9D2C5680@ha
 /* 80435B90 003FF150  90 01 00 08 */	stw r0, 8(r1)
 /* 80435B94 003FF154  38 85 00 04 */	addi r4, r5, 4
-/* 80435B98 003FF158  C8 42 C6 58 */	lfd f2, lbl_8066C9D8@sda21(r2)
+/* 80435B98 003FF158  C8 42 C6 58 */	lfd f2, double_8066C9D8@sda21(r2)
 /* 80435B9C 003FF15C  90 9F 09 C8 */	stw r4, 0x9c8(r31)
 /* 80435BA0 003FF160  38 03 56 80 */	addi r0, r3, 0x9D2C5680@l
-/* 80435BA4 003FF164  C0 02 C6 50 */	lfs f0, lbl_8066C9D0@sda21(r2)
+/* 80435BA4 003FF164  C0 02 C6 50 */	lfs f0, float_8066C9D0@sda21(r2)
 /* 80435BA8 003FF168  80 85 00 00 */	lwz r4, 0(r5)
 /* 80435BAC 003FF16C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80435BB0 003FF170  54 83 AA FE */	srwi r3, r4, 0xb
@@ -583,12 +583,12 @@ randFloat1__Q32mm3mtl6MTRandFv:
 /* 80435C28 003FF1E8  3C 60 9D 2C */	lis r3, 0x9D2C5680@ha
 /* 80435C2C 003FF1EC  90 01 00 08 */	stw r0, 8(r1)
 /* 80435C30 003FF1F0  38 85 00 04 */	addi r4, r5, 4
-/* 80435C34 003FF1F4  C8 62 C6 58 */	lfd f3, lbl_8066C9D8@sda21(r2)
+/* 80435C34 003FF1F4  C8 62 C6 58 */	lfd f3, double_8066C9D8@sda21(r2)
 /* 80435C38 003FF1F8  90 9F 09 C8 */	stw r4, 0x9c8(r31)
 /* 80435C3C 003FF1FC  38 03 56 80 */	addi r0, r3, 0x9D2C5680@l
-/* 80435C40 003FF200  C0 22 C6 60 */	lfs f1, lbl_8066C9E0@sda21(r2)
+/* 80435C40 003FF200  C0 22 C6 60 */	lfs f1, float_8066C9E0@sda21(r2)
 /* 80435C44 003FF204  80 85 00 00 */	lwz r4, 0(r5)
-/* 80435C48 003FF208  C0 02 C6 50 */	lfs f0, lbl_8066C9D0@sda21(r2)
+/* 80435C48 003FF208  C0 02 C6 50 */	lfs f0, float_8066C9D0@sda21(r2)
 /* 80435C4C 003FF20C  54 83 AA FE */	srwi r3, r4, 0xb
 /* 80435C50 003FF210  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80435C54 003FF214  7C 84 1A 78 */	xor r4, r4, r3
@@ -663,23 +663,23 @@ __sinit_MTRand_cpp:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C9D0
-lbl_8066C9D0:
+.global float_8066C9D0
+float_8066C9D0:
 	# ROM: 0x576830
 	.4byte 0x2F800000
 	.4byte 0
 
 
 #unsigned int to float constant
-.global lbl_8066C9D8
-lbl_8066C9D8:
+.global double_8066C9D8
+double_8066C9D8:
 	# ROM: 0x576838
 	.4byte 0x43300000
 	.4byte 0
 
 
-.global lbl_8066C9E0
-lbl_8066C9E0:
+.global float_8066C9E0
+float_8066C9E0:
 	# ROM: 0x576840
 	.float 0.5
 	.4byte 0

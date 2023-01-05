@@ -621,15 +621,15 @@ func_803A1A8C:
 MWSFPLY_SetFlowLimit:
 /* 803A1BC4 0036B184  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A1BC8 0036B188  7C 08 02 A6 */	mflr r0
-/* 803A1BCC 0036B18C  3C E0 80 52 */	lis r7, lbl_8051E7B8@ha
-/* 803A1BD0 0036B190  3C 80 80 52 */	lis r4, lbl_8051E7B0@ha
+/* 803A1BCC 0036B18C  3C E0 80 52 */	lis r7, double_8051E7B8@ha
+/* 803A1BD0 0036B190  3C 80 80 52 */	lis r4, double_8051E7B0@ha
 /* 803A1BD4 0036B194  90 01 00 24 */	stw r0, 0x24(r1)
 /* 803A1BD8 0036B198  3C 00 43 30 */	lis r0, 0x4330
-/* 803A1BDC 0036B19C  C8 47 E7 B8 */	lfd f2, lbl_8051E7B8@l(r7)
+/* 803A1BDC 0036B19C  C8 47 E7 B8 */	lfd f2, double_8051E7B8@l(r7)
 /* 803A1BE0 0036B1A0  80 A3 04 FC */	lwz r5, 0x4fc(r3)
 /* 803A1BE4 0036B1A4  90 01 00 08 */	stw r0, 8(r1)
 /* 803A1BE8 0036B1A8  6C A6 80 00 */	xoris r6, r5, 0x8000
-/* 803A1BEC 0036B1AC  C8 04 E7 B0 */	lfd f0, lbl_8051E7B0@l(r4)
+/* 803A1BEC 0036B1AC  C8 04 E7 B0 */	lfd f0, double_8051E7B0@l(r4)
 /* 803A1BF0 0036B1B0  90 C1 00 0C */	stw r6, 0xc(r1)
 /* 803A1BF4 0036B1B4  C8 21 00 08 */	lfd f1, 8(r1)
 /* 803A1BF8 0036B1B8  FC 21 10 28 */	fsub f1, f1, f2
@@ -738,15 +738,15 @@ MWSFD_IsEndPrepareStop:
 
 
 
-.global lbl_8051E7B0
-lbl_8051E7B0:
+.global double_8051E7B0
+double_8051E7B0:
 	# ROM: 0x51A8B0
 	.4byte 0x3FE99999
 	.4byte 0x9999999A
 
 
-.global lbl_8051E7B8
-lbl_8051E7B8:
+.global double_8051E7B8
+double_8051E7B8:
 	# ROM: 0x51A8B8
 	.4byte 0x43300000
 	.4byte 0x80000000

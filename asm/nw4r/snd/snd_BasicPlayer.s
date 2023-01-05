@@ -4,9 +4,9 @@
 
 .global Init__Q44nw4r3snd6detail14PlayerParamSetFv
 Init__Q44nw4r3snd6detail14PlayerParamSetFv:
-/* 804120AC 003DB66C  C0 02 C3 64 */	lfs f0, lbl_8066C6E4@sda21(r2)
+/* 804120AC 003DB66C  C0 02 C3 64 */	lfs f0, float_8066C6E4@sda21(r2)
 /* 804120B0 003DB670  38 80 00 00 */	li r4, 0
-/* 804120B4 003DB674  C0 22 C3 60 */	lfs f1, lbl_8066C6E0@sda21(r2)
+/* 804120B4 003DB674  C0 22 C3 60 */	lfs f1, float_8066C6E0@sda21(r2)
 /* 804120B8 003DB678  38 00 00 01 */	li r0, 1
 /* 804120BC 003DB67C  D0 03 00 08 */	stfs f0, 8(r3)
 /* 804120C0 003DB680  D0 23 00 00 */	stfs f1, 0(r3)
@@ -67,11 +67,11 @@ __ct__Q44nw4r3snd6detail11BasicPlayerFv:
 /* 80412190 003DB750  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80412194 003DB754  7C 08 02 A6 */	mflr r0
 /* 80412198 003DB758  3C 80 80 57 */	lis r4, lbl_8056DFC8@ha
-/* 8041219C 003DB75C  C0 02 C3 64 */	lfs f0, lbl_8066C6E4@sda21(r2)
+/* 8041219C 003DB75C  C0 02 C3 64 */	lfs f0, float_8066C6E4@sda21(r2)
 /* 804121A0 003DB760  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804121A4 003DB764  38 C3 00 88 */	addi r6, r3, 0x88
 /* 804121A8 003DB768  38 A3 00 D0 */	addi r5, r3, 0xd0
-/* 804121AC 003DB76C  C0 22 C3 60 */	lfs f1, lbl_8066C6E0@sda21(r2)
+/* 804121AC 003DB76C  C0 22 C3 60 */	lfs f1, float_8066C6E0@sda21(r2)
 /* 804121B0 003DB770  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804121B4 003DB774  38 84 DF C8 */	addi r4, r4, lbl_8056DFC8@l
 /* 804121B8 003DB778  7C 06 28 40 */	cmplw r6, r5
@@ -131,9 +131,9 @@ __ct__Q44nw4r3snd6detail11BasicPlayerFv:
 /* 80412280 003DB840  38 87 00 BF */	addi r4, r7, 0xbf
 /* 80412284 003DB844  38 00 00 C0 */	li r0, 0xc0
 /* 80412288 003DB848  7C 86 20 50 */	subf r4, r6, r4
-/* 8041228C 003DB84C  C0 22 C3 60 */	lfs f1, lbl_8066C6E0@sda21(r2)
+/* 8041228C 003DB84C  C0 22 C3 60 */	lfs f1, float_8066C6E0@sda21(r2)
 /* 80412290 003DB850  7C 84 03 96 */	divwu r4, r4, r0
-/* 80412294 003DB854  C0 02 C3 64 */	lfs f0, lbl_8066C6E4@sda21(r2)
+/* 80412294 003DB854  C0 02 C3 64 */	lfs f0, float_8066C6E4@sda21(r2)
 /* 80412298 003DB858  7C 89 03 A6 */	mtctr r4
 /* 8041229C 003DB85C  7C 06 38 40 */	cmplw r6, r7
 /* 804122A0 003DB860  40 80 00 CC */	bge .L_8041236C
@@ -192,9 +192,9 @@ __ct__Q44nw4r3snd6detail11BasicPlayerFv:
 /* 8041236C 003DB92C  38 A3 00 D0 */	addi r5, r3, 0xd0
 /* 80412370 003DB930  38 00 00 18 */	li r0, 0x18
 /* 80412374 003DB934  38 85 00 17 */	addi r4, r5, 0x17
-/* 80412378 003DB938  C0 22 C3 60 */	lfs f1, lbl_8066C6E0@sda21(r2)
+/* 80412378 003DB938  C0 22 C3 60 */	lfs f1, float_8066C6E0@sda21(r2)
 /* 8041237C 003DB93C  7C 86 20 50 */	subf r4, r6, r4
-/* 80412380 003DB940  C0 02 C3 64 */	lfs f0, lbl_8066C6E4@sda21(r2)
+/* 80412380 003DB940  C0 02 C3 64 */	lfs f0, float_8066C6E4@sda21(r2)
 /* 80412384 003DB944  7C 84 03 96 */	divwu r4, r4, r0
 /* 80412388 003DB948  7C 89 03 A6 */	mtctr r4
 /* 8041238C 003DB94C  7C 06 28 40 */	cmplw r6, r5
@@ -302,13 +302,13 @@ __dt__Q44nw4r3snd6detail11BasicPlayerFv:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C6E0
-lbl_8066C6E0:
+.global float_8066C6E0
+float_8066C6E0:
 	# ROM: 0x576540
 	.float 1.0
 
 
-.global lbl_8066C6E4
-lbl_8066C6E4:
+.global float_8066C6E4
+float_8066C6E4:
 	# ROM: 0x576544
 	.4byte 0

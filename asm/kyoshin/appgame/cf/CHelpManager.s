@@ -13,7 +13,7 @@ func_80295888:
 /* 802958A0 0025EE60  48 19 EB 01 */	bl func_804343A0
 /* 802958A4 0025EE64  7C 64 1B 78 */	mr r4, r3
 /* 802958A8 0025EE68  38 60 00 20 */	li r3, 0x20
-/* 802958AC 0025EE6C  48 19 F1 B1 */	bl func_80434A5C
+/* 802958AC 0025EE6C  48 19 F1 B1 */	bl mm_malloc
 /* 802958B0 0025EE70  2C 03 00 00 */	cmpwi r3, 0
 /* 802958B4 0025EE74  7C 7E 1B 78 */	mr r30, r3
 /* 802958B8 0025EE78  41 82 00 4C */	beq .L_80295904
@@ -451,7 +451,7 @@ sinit_80295DB0:
 /* 80295E30 0025F3F0  48 02 1D A5 */	bl func_802B7BD4
 /* 80295E34 0025F3F4  3F 20 80 54 */	lis r25, __vt__cf_CHelp_Sp@ha
 /* 80295E38 0025F3F8  38 D6 00 20 */	addi r6, r22, 0x20
-/* 80295E3C 0025F3FC  C0 02 B0 F0 */	lfs f0, lbl_8066B470@sda21(r2)
+/* 80295E3C 0025F3FC  C0 02 B0 F0 */	lfs f0, float_8066B470@sda21(r2)
 /* 80295E40 0025F400  3B 39 EE 88 */	addi r25, r25, __vt__cf_CHelp_Sp@l
 /* 80295E44 0025F404  93 26 00 08 */	stw r25, 8(r6)
 /* 80295E48 0025F408  38 76 00 30 */	addi r3, r22, 0x30
@@ -486,7 +486,7 @@ sinit_80295DB0:
 /* 80295EBC 0025F47C  38 A0 00 08 */	li r5, 8
 /* 80295EC0 0025F480  48 02 1D 15 */	bl func_802B7BD4
 /* 80295EC4 0025F484  38 D6 00 60 */	addi r6, r22, 0x60
-/* 80295EC8 0025F488  C0 02 B0 F0 */	lfs f0, lbl_8066B470@sda21(r2)
+/* 80295EC8 0025F488  C0 02 B0 F0 */	lfs f0, float_8066B470@sda21(r2)
 /* 80295ECC 0025F48C  93 26 00 08 */	stw r25, 8(r6)
 /* 80295ED0 0025F490  38 76 00 70 */	addi r3, r22, 0x70
 /* 80295ED4 0025F494  38 80 33 48 */	li r4, 0x3348
@@ -1104,7 +1104,7 @@ sinit_80295DB0:
 /* 80296864 0025FE24  48 02 13 71 */	bl func_802B7BD4
 /* 80296868 0025FE28  3C 80 80 54 */	lis r4, __vt__cf_CHelp_Pg@ha
 /* 8029686C 0025FE2C  38 76 05 B0 */	addi r3, r22, 0x5b0
-/* 80296870 0025FE30  C0 02 B0 F4 */	lfs f0, lbl_8066B474@sda21(r2)
+/* 80296870 0025FE30  C0 02 B0 F4 */	lfs f0, float_8066B474@sda21(r2)
 /* 80296874 0025FE34  38 84 ED D8 */	addi r4, r4, __vt__cf_CHelp_Pg@l
 /* 80296878 0025FE38  90 83 00 08 */	stw r4, 8(r3)
 /* 8029687C 0025FE3C  39 61 00 30 */	addi r11, r1, 0x30
@@ -1723,14 +1723,14 @@ __RTTI__cf_CHelpManager:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066B470
-lbl_8066B470:
+.global float_8066B470
+float_8066B470:
 	# ROM: 0x5752D0
 	.float 1.0
 
 
-.global lbl_8066B474
-lbl_8066B474:
+.global float_8066B474
+float_8066B474:
 	# ROM: 0x5752D4
 	.4byte 0x43960000
 

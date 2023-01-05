@@ -149,14 +149,14 @@ Construct__Q34nw4r3g3d15AnmObjMatClrResFP12MEMAllocatorPUlQ34nw4r3g3d9ResAnmClrQ
 /* 803E1DB0 003AB370  80 BE 00 24 */	lwz r5, 0x24(r30)
 /* 803E1DB4 003AB374  3C 60 80 57 */	lis r3, lbl_8056CA60@ha
 /* 803E1DB8 003AB378  6C 84 80 00 */	xoris r4, r4, 0x8000
-/* 803E1DBC 003AB37C  C0 22 BF C8 */	lfs f1, lbl_8066C348@sda21(r2)
+/* 803E1DBC 003AB37C  C0 22 BF C8 */	lfs f1, float_8066C348@sda21(r2)
 /* 803E1DC0 003AB380  90 81 00 0C */	stw r4, 0xc(r1)
 /* 803E1DC4 003AB384  54 A5 10 3A */	slwi r5, r5, 2
-/* 803E1DC8 003AB388  C0 02 BF CC */	lfs f0, lbl_8066C34C@sda21(r2)
+/* 803E1DC8 003AB388  C0 02 BF CC */	lfs f0, float_8066C34C@sda21(r2)
 /* 803E1DCC 003AB38C  38 8D 9C 08 */	addi r4, r13, lbl_80665D88@sda21
 /* 803E1DD0 003AB390  90 01 00 08 */	stw r0, 8(r1)
 /* 803E1DD4 003AB394  38 63 CA 60 */	addi r3, r3, lbl_8056CA60@l
-/* 803E1DD8 003AB398  C8 62 BF D0 */	lfd f3, lbl_8066C350@sda21(r2)
+/* 803E1DD8 003AB398  C8 62 BF D0 */	lfd f3, double_8066C350@sda21(r2)
 /* 803E1DDC 003AB39C  2C 1B 00 00 */	cmpwi r27, 0
 /* 803E1DE0 003AB3A0  D0 3F 00 18 */	stfs f1, 0x18(r31)
 /* 803E1DE4 003AB3A4  C8 41 00 08 */	lfd f2, 8(r1)
@@ -272,7 +272,7 @@ SetUpdateRate__Q34nw4r3g3d15AnmObjMatClrResFf:
 /* 803E1F54 003AB514  90 01 00 34 */	stw r0, 0x34(r1)
 /* 803E1F58 003AB518  DB E1 00 20 */	stfd f31, 0x20(r1)
 /* 803E1F5C 003AB51C  F3 E1 00 28 */	psq_st f31, 40(r1), 0, qr0
-/* 803E1F60 003AB520  C0 02 BF C8 */	lfs f0, lbl_8066C348@sda21(r2)
+/* 803E1F60 003AB520  C0 02 BF C8 */	lfs f0, float_8066C348@sda21(r2)
 /* 803E1F64 003AB524  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 803E1F68 003AB528  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 803E1F6C 003AB52C  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -329,7 +329,7 @@ UpdateFrame__Q34nw4r3g3d15AnmObjMatClrResFv:
 /* 803E2010 003AB5D0  90 01 00 34 */	stw r0, 0x34(r1)
 /* 803E2014 003AB5D4  DB E1 00 20 */	stfd f31, 0x20(r1)
 /* 803E2018 003AB5D8  F3 E1 00 28 */	psq_st f31, 40(r1), 0, qr0
-/* 803E201C 003AB5DC  C0 02 BF C8 */	lfs f0, lbl_8066C348@sda21(r2)
+/* 803E201C 003AB5DC  C0 02 BF C8 */	lfs f0, float_8066C348@sda21(r2)
 /* 803E2020 003AB5E0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 803E2024 003AB5E4  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 803E2028 003AB5E8  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -338,7 +338,7 @@ UpdateFrame__Q34nw4r3g3d15AnmObjMatClrResFv:
 /* 803E2034 003AB5F4  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 803E2038 003AB5F8  41 82 00 8C */	beq .L_803E20C4
 /* 803E203C 003AB5FC  C0 43 00 1C */	lfs f2, 0x1c(r3)
-/* 803E2040 003AB600  C0 2D 9C 10 */	lfs f1, lbl_80665D90@sda21(r13)
+/* 803E2040 003AB600  C0 2D 9C 10 */	lfs f1, float_80665D90@sda21(r13)
 /* 803E2044 003AB604  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 803E2048 003AB608  EC 62 00 72 */	fmuls f3, f2, f1
 /* 803E204C 003AB60C  81 83 00 28 */	lwz r12, 0x28(r3)
@@ -1080,20 +1080,20 @@ lbl_8056CAA8:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C348
-lbl_8066C348:
+.global float_8066C348
+float_8066C348:
 	# ROM: 0x5761A8
 	.4byte 0
 
 
-.global lbl_8066C34C
-lbl_8066C34C:
+.global float_8066C34C
+float_8066C34C:
 	# ROM: 0x5761AC
 	.float 1.0
 
 
-.global lbl_8066C350
-lbl_8066C350:
+.global double_8066C350
+double_8066C350:
 	# ROM: 0x5761B0
 	.4byte 0x43300000
 	.4byte 0x80000000

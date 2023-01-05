@@ -3,13 +3,6 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global func_80039EEC
-func_80039EEC:
-/* 80039EEC 000034AC  38 00 00 00 */	li r0, 0
-/* 80039EF0 000034B0  98 03 00 00 */	stb r0, 0(r3)
-/* 80039EF4 000034B4  90 03 00 40 */	stw r0, 0x40(r3)
-/* 80039EF8 000034B8  4E 80 00 20 */	blr
-
 .global func_80039EFC
 func_80039EFC:
 /* 80039EFC 000034BC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -72,6 +65,7 @@ func_80039F6C:
 .global func_80039F90
 func_80039F90:
 /* 80039F90 00003550  48 46 5D 1C */	b func_8049FCAC
+
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

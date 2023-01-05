@@ -1,40 +1,12 @@
 #include "kyoshin/appgame/main.hpp"
+#include "kyoshin/appgame/CGame.hpp"
 
-//namespace cf {
 extern char* pkhFilenames[];
-extern u32 lbl_80528380[];
 extern u32 lbl_80528390[];
 
 const char* const staticArcStr = "static.arc";
-
-
-/*
-extern void func_8003AA50();
-extern void func_8003AA78(u32, s32);
-extern void func_8003AA8C(u32);
-
-typedef struct UnkStruct80039EEC {
-    s8 unk0;
-    s8 filler[0x3F];
-    s32 unk40;
-} UnkStruct80039EEC;
-
-
-void func_80039EEC(UnkStruct80039EEC* arg0) {
-    arg0->unk0 = 0;
-    arg0->unk40 = 0;
-}
-
-void func_80039EFC(s32 arg0) {
-    func_8003AA50();
-    func_8003AA78(0, arg0);
-}
-
-void func_80039F34(void) {
-    func_8003AA8C(0);
-    func_8003AA50();
-}
-*/
+//FunctionStruct lbl_80528380 = {"ÉQÅ[ÉÄÉÅÉCÉì", &GameMain};
+extern u32 lbl_80528380[]; //fakematch
 
 void main(int argc, char* argv[]) {
     /*
@@ -53,13 +25,12 @@ void main(int argc, char* argv[]) {
     SetArenaMemorySize(0x680000, 0);
     func_80448E78(0);
     func_804559A8(0, 0x180000);
-    func_80455FC8(lbl_80528380, 1);
+    CDesktop_SaveStartFunctionCallback((FunctionStruct*)lbl_80528380, 1); //Pass the start function struct to CDesktop to have it be run later
     func_8045FBB0(lbl_80528390);
-    func_8046023C(&func_80039F6C, &func_80039F90);
+    CLibVM_SetCallbacks(&func_80039F6C, &func_80039F90);
     SaveStaticArcFilenameStringPtr(&staticArcStr);
     SavePkhFilenamesArrayPtr(pkhFilenames);
     func_80057CDC();
     func_8045D5C8(1);
-    func_804442D8();
+    CWorkRoot_Run(); //Start up CWorkRoot, which later starts CGame
 }
-//}

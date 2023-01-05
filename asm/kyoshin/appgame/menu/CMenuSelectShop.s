@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80189DE8
-func_80189DE8:
+.global __ct__CMenuSelectShop
+__ct__CMenuSelectShop:
 /* 80189DE8 001533A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80189DEC 001533AC  7C 08 02 A6 */	mflr r0
 /* 80189DF0 001533B0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -567,12 +567,12 @@ func_8018A58C:
 /* 8018A5BC 00153B7C  48 2A CF F9 */	bl func_804375B4
 /* 8018A5C0 00153B80  7C 64 1B 78 */	mr r4, r3
 /* 8018A5C4 00153B84  38 60 00 D4 */	li r3, 0xd4
-/* 8018A5C8 00153B88  48 2A A4 95 */	bl func_80434A5C
+/* 8018A5C8 00153B88  48 2A A4 95 */	bl mm_malloc
 /* 8018A5CC 00153B8C  2C 03 00 00 */	cmpwi r3, 0
 /* 8018A5D0 00153B90  41 82 00 10 */	beq .L_8018A5E0
 /* 8018A5D4 00153B94  7F C4 F3 78 */	mr r4, r30
 /* 8018A5D8 00153B98  7F E5 FB 78 */	mr r5, r31
-/* 8018A5DC 00153B9C  4B FF F8 0D */	bl func_80189DE8
+/* 8018A5DC 00153B9C  4B FF F8 0D */	bl __ct__CMenuSelectShop
 .L_8018A5E0:
 /* 8018A5E0 00153BA0  90 6D AA 58 */	stw r3, lbl_80666BD8@sda21(r13)
 /* 8018A5E4 00153BA4  7F A4 EB 78 */	mr r4, r29
@@ -823,7 +823,7 @@ lbl_8000ED88:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_80189DE8
+.4byte __ct__CMenuSelectShop
 	.4byte 0x000000F0
 	.4byte lbl_8000EC4C
 	.4byte func_80189ED8

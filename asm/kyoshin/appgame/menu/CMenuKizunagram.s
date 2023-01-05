@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80256968
-func_80256968:
+.global __ct__CMenuKizunagram
+__ct__CMenuKizunagram:
 /* 80256968 0021FF28  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8025696C 0021FF2C  7C 08 02 A6 */	mflr r0
 /* 80256970 0021FF30  90 01 00 24 */	stw r0, 0x24(r1)
@@ -440,7 +440,7 @@ func_80256FA0:
 /* 80256FFC 002205BC  38 7F 01 F4 */	addi r3, r31, 0x1f4
 /* 80257000 002205C0  4B FE D4 8D */	bl func_8024448C
 /* 80257004 002205C4  38 00 00 00 */	li r0, 0
-/* 80257008 002205C8  90 0D AF 50 */	stw r0, lbl_806670D0@sda21(r13)
+/* 80257008 002205C8  90 0D AF 50 */	stw r0, instance@sda21(r13)
 /* 8025700C 002205CC  4B EE 49 75 */	bl func_8013B980
 /* 80257010 002205D0  4B EE 49 95 */	bl func_8013B9A4
 /* 80257014 002205D4  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -651,7 +651,7 @@ func_8025728C:
 /* 8025729C 0022085C  7C 7D 1B 78 */	mr r29, r3
 /* 802572A0 00220860  7C 9E 23 78 */	mr r30, r4
 /* 802572A4 00220864  7C BF 2B 78 */	mr r31, r5
-/* 802572A8 00220868  80 0D AF 50 */	lwz r0, lbl_806670D0@sda21(r13)
+/* 802572A8 00220868  80 0D AF 50 */	lwz r0, instance@sda21(r13)
 /* 802572AC 0022086C  2C 00 00 00 */	cmpwi r0, 0
 /* 802572B0 00220870  41 82 00 0C */	beq .L_802572BC
 /* 802572B4 00220874  38 60 00 00 */	li r3, 0
@@ -660,18 +660,18 @@ func_8025728C:
 /* 802572BC 0022087C  48 1E 02 F9 */	bl func_804375B4
 /* 802572C0 00220880  7C 64 1B 78 */	mr r4, r3
 /* 802572C4 00220884  38 60 02 20 */	li r3, 0x220
-/* 802572C8 00220888  48 1D D7 95 */	bl func_80434A5C
+/* 802572C8 00220888  48 1D D7 95 */	bl mm_malloc
 /* 802572CC 0022088C  2C 03 00 00 */	cmpwi r3, 0
 /* 802572D0 00220890  41 82 00 10 */	beq .L_802572E0
 /* 802572D4 00220894  7F C4 F3 78 */	mr r4, r30
 /* 802572D8 00220898  7F E5 FB 78 */	mr r5, r31
-/* 802572DC 0022089C  4B FF F6 8D */	bl func_80256968
+/* 802572DC 0022089C  4B FF F6 8D */	bl __ct__CMenuKizunagram
 .L_802572E0:
-/* 802572E0 002208A0  90 6D AF 50 */	stw r3, lbl_806670D0@sda21(r13)
+/* 802572E0 002208A0  90 6D AF 50 */	stw r3, instance@sda21(r13)
 /* 802572E4 002208A4  7F A4 EB 78 */	mr r4, r29
 /* 802572E8 002208A8  38 A0 00 00 */	li r5, 0
 /* 802572EC 002208AC  48 1E D9 89 */	bl func_80444C74
-/* 802572F0 002208B0  80 6D AF 50 */	lwz r3, lbl_806670D0@sda21(r13)
+/* 802572F0 002208B0  80 6D AF 50 */	lwz r3, instance@sda21(r13)
 .L_802572F4:
 /* 802572F4 002208B4  BB A1 00 14 */	lmw r29, 0x14(r1)
 /* 802572F8 002208B8  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -681,7 +681,7 @@ func_8025728C:
 
 .global func_80257308
 func_80257308:
-/* 80257308 002208C8  80 6D AF 50 */	lwz r3, lbl_806670D0@sda21(r13)
+/* 80257308 002208C8  80 6D AF 50 */	lwz r3, instance@sda21(r13)
 /* 8025730C 002208CC  30 03 FF FF */	addic r0, r3, -1
 /* 80257310 002208D0  7C 60 19 10 */	subfe r3, r0, r3
 /* 80257314 002208D4  4E 80 00 20 */	blr 
@@ -1316,8 +1316,7 @@ __RTTI__CMenuKizunagram:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_806670D0
-lbl_806670D0:
+instance:
 	.skip 0x8
 
 
@@ -1511,7 +1510,7 @@ lbl_80017334:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_80256968
+.4byte __ct__CMenuKizunagram
 	.4byte 0x000000EC
 	.4byte lbl_80017130
 	.4byte func_80256A54

@@ -7,7 +7,7 @@ __ct__Q34nw4r2ut10CharWriterFv:
 /* 8042EEE0 003F84A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042EEE4 003F84A4  7C 08 02 A6 */	mflr r0
 /* 8042EEE8 003F84A8  3C E0 80 65 */	lis r7, lbl_806570B8@ha
-/* 8042EEEC 003F84AC  C0 02 C5 C0 */	lfs f0, lbl_8066C940@sda21(r2)
+/* 8042EEEC 003F84AC  C0 02 C5 C0 */	lfs f0, float_8066C940@sda21(r2)
 /* 8042EEF0 003F84B0  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8042EEF4 003F84B4  39 00 FF FF */	li r8, -1
 /* 8042EEF8 003F84B8  38 00 00 FF */	li r0, 0xff
@@ -129,9 +129,9 @@ __ct__Q34nw4r2ut10CharWriterFv:
 /* 8042F0B0 003F8670  98 BF 00 17 */	stb r5, 0x17(r31)
 /* 8042F0B4 003F8674  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8042F0B8 003F8678  4B FA 82 61 */	bl SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5Color
-/* 8042F0BC 003F867C  C0 02 C5 C0 */	lfs f0, lbl_8066C940@sda21(r2)
+/* 8042F0BC 003F867C  C0 02 C5 C0 */	lfs f0, float_8066C940@sda21(r2)
 /* 8042F0C0 003F8680  38 00 00 01 */	li r0, 1
-/* 8042F0C4 003F8684  C0 22 C5 C4 */	lfs f1, lbl_8066C944@sda21(r2)
+/* 8042F0C4 003F8684  C0 22 C5 C4 */	lfs f1, float_8066C944@sda21(r2)
 /* 8042F0C8 003F8688  7F E3 FB 78 */	mr r3, r31
 /* 8042F0CC 003F868C  D0 1F 00 2C */	stfs f0, 0x2c(r31)
 /* 8042F0D0 003F8690  D0 3F 00 24 */	stfs f1, 0x24(r31)
@@ -240,7 +240,7 @@ SetupGX__Q34nw4r2ut10CharWriterFv:
 /* 8042F240 003F8800  38 00 00 01 */	li r0, 1
 /* 8042F244 003F8804  98 0D BC B8 */	stb r0, lbl_80667E38@sda21(r13)
 .L_8042F248:
-/* 8042F248 003F8808  C0 22 C5 C0 */	lfs f1, lbl_8066C940@sda21(r2)
+/* 8042F248 003F8808  C0 22 C5 C0 */	lfs f1, float_8066C940@sda21(r2)
 /* 8042F24C 003F880C  38 81 00 18 */	addi r4, r1, 0x18
 /* 8042F250 003F8810  88 6D BC BC */	lbz r3, lbl_80667E3C@sda21(r13)
 /* 8042F254 003F8814  88 CD BC BD */	lbz r6, lbl_80667E3D@sda21(r13)
@@ -381,7 +381,7 @@ SetupGX__Q34nw4r2ut10CharWriterFv:
 /* 8042F46C 003F8A2C  38 00 00 01 */	li r0, 1
 /* 8042F470 003F8A30  98 0D BC B8 */	stb r0, lbl_80667E38@sda21(r13)
 .L_8042F474:
-/* 8042F474 003F8A34  C0 22 C5 C0 */	lfs f1, lbl_8066C940@sda21(r2)
+/* 8042F474 003F8A34  C0 22 C5 C0 */	lfs f1, float_8066C940@sda21(r2)
 /* 8042F478 003F8A38  38 81 00 14 */	addi r4, r1, 0x14
 /* 8042F47C 003F8A3C  88 6D BC BC */	lbz r3, lbl_80667E3C@sda21(r13)
 /* 8042F480 003F8A40  88 CD BC BD */	lbz r6, lbl_80667E3D@sda21(r13)
@@ -499,7 +499,7 @@ SetupGX__Q34nw4r2ut10CharWriterFv:
 /* 8042F63C 003F8BFC  38 00 00 01 */	li r0, 1
 /* 8042F640 003F8C00  98 0D BC B8 */	stb r0, lbl_80667E38@sda21(r13)
 .L_8042F644:
-/* 8042F644 003F8C04  C0 22 C5 C0 */	lfs f1, lbl_8066C940@sda21(r2)
+/* 8042F644 003F8C04  C0 22 C5 C0 */	lfs f1, float_8066C940@sda21(r2)
 /* 8042F648 003F8C08  38 81 00 10 */	addi r4, r1, 0x10
 /* 8042F64C 003F8C0C  88 6D BC BC */	lbz r3, lbl_80667E3C@sda21(r13)
 /* 8042F650 003F8C10  88 CD BC BD */	lbz r6, lbl_80667E3D@sda21(r13)
@@ -618,7 +618,7 @@ SetupGX__Q34nw4r2ut10CharWriterFv:
 /* 8042F810 003F8DD0  38 00 00 01 */	li r0, 1
 /* 8042F814 003F8DD4  98 0D BC B8 */	stb r0, lbl_80667E38@sda21(r13)
 .L_8042F818:
-/* 8042F818 003F8DD8  C0 22 C5 C0 */	lfs f1, lbl_8066C940@sda21(r2)
+/* 8042F818 003F8DD8  C0 22 C5 C0 */	lfs f1, float_8066C940@sda21(r2)
 /* 8042F81C 003F8DDC  38 81 00 0C */	addi r4, r1, 0xc
 /* 8042F820 003F8DE0  88 6D BC BC */	lbz r3, lbl_80667E3C@sda21(r13)
 /* 8042F824 003F8DE4  88 CD BC BD */	lbz r6, lbl_80667E3D@sda21(r13)
@@ -736,7 +736,7 @@ SetupGX__Q34nw4r2ut10CharWriterFv:
 /* 8042F9E0 003F8FA0  38 00 00 01 */	li r0, 1
 /* 8042F9E4 003F8FA4  98 0D BC B8 */	stb r0, lbl_80667E38@sda21(r13)
 .L_8042F9E8:
-/* 8042F9E8 003F8FA8  C0 22 C5 C0 */	lfs f1, lbl_8066C940@sda21(r2)
+/* 8042F9E8 003F8FA8  C0 22 C5 C0 */	lfs f1, float_8066C940@sda21(r2)
 /* 8042F9EC 003F8FAC  38 81 00 08 */	addi r4, r1, 8
 /* 8042F9F0 003F8FB0  88 6D BC BC */	lbz r3, lbl_80667E3C@sda21(r13)
 /* 8042F9F4 003F8FB4  88 CD BC BD */	lbz r6, lbl_80667E3D@sda21(r13)
@@ -870,7 +870,7 @@ SetFontSize__Q34nw4r2ut10CharWriterFff:
 /* 8042FBE4 003F91A4  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8042FBE8 003F91A8  80 7E 00 48 */	lwz r3, 0x48(r30)
 /* 8042FBEC 003F91AC  93 E1 00 08 */	stw r31, 8(r1)
-/* 8042FBF0 003F91B0  C8 22 C5 C8 */	lfd f1, lbl_8066C948@sda21(r2)
+/* 8042FBF0 003F91B0  C8 22 C5 C8 */	lfd f1, double_8066C948@sda21(r2)
 /* 8042FBF4 003F91B4  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8042FBF8 003F91B8  81 83 00 00 */	lwz r12, 0(r3)
 /* 8042FBFC 003F91BC  EC 00 08 28 */	fsubs f0, f0, f1
@@ -880,7 +880,7 @@ SetFontSize__Q34nw4r2ut10CharWriterFff:
 /* 8042FC0C 003F91CC  4E 80 04 21 */	bctrl 
 /* 8042FC10 003F91D0  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 8042FC14 003F91D4  93 E1 00 10 */	stw r31, 0x10(r1)
-/* 8042FC18 003F91D8  C8 22 C5 C8 */	lfd f1, lbl_8066C948@sda21(r2)
+/* 8042FC18 003F91D8  C8 22 C5 C8 */	lfd f1, double_8066C948@sda21(r2)
 /* 8042FC1C 003F91DC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8042FC20 003F91E0  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 8042FC24 003F91E4  D3 FE 00 28 */	stfs f31, 0x28(r30)
@@ -915,7 +915,7 @@ GetFontWidth__Q34nw4r2ut10CharWriterCFv:
 /* 8042FC8C 003F924C  90 61 00 0C */	stw r3, 0xc(r1)
 /* 8042FC90 003F9250  C0 1F 00 24 */	lfs f0, 0x24(r31)
 /* 8042FC94 003F9254  90 01 00 08 */	stw r0, 8(r1)
-/* 8042FC98 003F9258  C8 42 C5 C8 */	lfd f2, lbl_8066C948@sda21(r2)
+/* 8042FC98 003F9258  C8 42 C5 C8 */	lfd f2, double_8066C948@sda21(r2)
 /* 8042FC9C 003F925C  C8 21 00 08 */	lfd f1, 8(r1)
 /* 8042FCA0 003F9260  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8042FCA4 003F9264  EC 21 10 28 */	fsubs f1, f1, f2
@@ -942,7 +942,7 @@ GetFontHeight__Q34nw4r2ut10CharWriterCFv:
 /* 8042FCEC 003F92AC  90 61 00 0C */	stw r3, 0xc(r1)
 /* 8042FCF0 003F92B0  C0 1F 00 28 */	lfs f0, 0x28(r31)
 /* 8042FCF4 003F92B4  90 01 00 08 */	stw r0, 8(r1)
-/* 8042FCF8 003F92B8  C8 42 C5 C8 */	lfd f2, lbl_8066C948@sda21(r2)
+/* 8042FCF8 003F92B8  C8 42 C5 C8 */	lfd f2, double_8066C948@sda21(r2)
 /* 8042FCFC 003F92BC  C8 21 00 08 */	lfd f1, 8(r1)
 /* 8042FD00 003F92C0  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8042FD04 003F92C4  EC 21 10 28 */	fsubs f1, f1, f2
@@ -969,7 +969,7 @@ GetFontAscent__Q34nw4r2ut10CharWriterCFv:
 /* 8042FD4C 003F930C  90 61 00 0C */	stw r3, 0xc(r1)
 /* 8042FD50 003F9310  C0 1F 00 28 */	lfs f0, 0x28(r31)
 /* 8042FD54 003F9314  90 01 00 08 */	stw r0, 8(r1)
-/* 8042FD58 003F9318  C8 42 C5 C8 */	lfd f2, lbl_8066C948@sda21(r2)
+/* 8042FD58 003F9318  C8 42 C5 C8 */	lfd f2, double_8066C948@sda21(r2)
 /* 8042FD5C 003F931C  C8 21 00 08 */	lfd f1, 8(r1)
 /* 8042FD60 003F9320  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8042FD64 003F9324  EC 21 10 28 */	fsubs f1, f1, f2
@@ -996,7 +996,7 @@ GetFontDescent__Q34nw4r2ut10CharWriterCFv:
 /* 8042FDAC 003F936C  90 61 00 0C */	stw r3, 0xc(r1)
 /* 8042FDB0 003F9370  C0 1F 00 28 */	lfs f0, 0x28(r31)
 /* 8042FDB4 003F9374  90 01 00 08 */	stw r0, 8(r1)
-/* 8042FDB8 003F9378  C8 42 C5 C8 */	lfd f2, lbl_8066C948@sda21(r2)
+/* 8042FDB8 003F9378  C8 42 C5 C8 */	lfd f2, double_8066C948@sda21(r2)
 /* 8042FDBC 003F937C  C8 21 00 08 */	lfd f1, 8(r1)
 /* 8042FDC0 003F9380  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8042FDC4 003F9384  EC 21 10 28 */	fsubs f1, f1, f2
@@ -1031,7 +1031,7 @@ Print__Q34nw4r2ut10CharWriterFUs:
 /* 8042FE2C 003F93EC  88 61 00 0E */	lbz r3, 0xe(r1)
 /* 8042FE30 003F93F0  88 01 00 0C */	lbz r0, 0xc(r1)
 /* 8042FE34 003F93F4  7C 63 07 74 */	extsb r3, r3
-/* 8042FE38 003F93F8  C8 82 C5 C8 */	lfd f4, lbl_8066C948@sda21(r2)
+/* 8042FE38 003F93F8  C8 82 C5 C8 */	lfd f4, double_8066C948@sda21(r2)
 /* 8042FE3C 003F93FC  6C 63 80 00 */	xoris r3, r3, 0x8000
 /* 8042FE40 003F9400  7C 00 07 74 */	extsb r0, r0
 /* 8042FE44 003F9404  90 61 00 24 */	stw r3, 0x24(r1)
@@ -1042,7 +1042,7 @@ Print__Q34nw4r2ut10CharWriterFUs:
 /* 8042FE58 003F9418  EC 40 20 28 */	fsubs f2, f0, f4
 /* 8042FE5C 003F941C  C3 FF 00 44 */	lfs f31, 0x44(r31)
 /* 8042FE60 003F9420  C8 01 00 28 */	lfd f0, 0x28(r1)
-/* 8042FE64 003F9424  C0 22 C5 D0 */	lfs f1, lbl_8066C950@sda21(r2)
+/* 8042FE64 003F9424  C0 22 C5 D0 */	lfs f1, float_8066C950@sda21(r2)
 /* 8042FE68 003F9428  EC 42 00 F2 */	fmuls f2, f2, f3
 /* 8042FE6C 003F942C  EC 00 20 28 */	fsubs f0, f0, f4
 /* 8042FE70 003F9430  EC 5F 10 28 */	fsubs f2, f31, f2
@@ -1054,7 +1054,7 @@ Print__Q34nw4r2ut10CharWriterFUs:
 /* 8042FE84 003F9444  88 61 00 0E */	lbz r3, 0xe(r1)
 /* 8042FE88 003F9448  88 01 00 0C */	lbz r0, 0xc(r1)
 /* 8042FE8C 003F944C  7C 63 07 74 */	extsb r3, r3
-/* 8042FE90 003F9450  C8 62 C5 C8 */	lfd f3, lbl_8066C948@sda21(r2)
+/* 8042FE90 003F9450  C8 62 C5 C8 */	lfd f3, double_8066C948@sda21(r2)
 /* 8042FE94 003F9454  7C 00 07 74 */	extsb r0, r0
 /* 8042FE98 003F9458  C0 3F 00 24 */	lfs f1, 0x24(r31)
 /* 8042FE9C 003F945C  6C 63 80 00 */	xoris r3, r3, 0x8000
@@ -1137,7 +1137,7 @@ PrintGlyph__Q34nw4r2ut10CharWriterFfffRCQ34nw4r2ut5Glyph:
 /* 8042FFC0 003F9580  81 23 00 3C */	lwz r9, 0x3c(r3)
 /* 8042FFC4 003F9584  7C EC 33 96 */	divwu r7, r12, r6
 /* 8042FFC8 003F9588  57 9D 04 3E */	clrlwi r29, r28, 0x10
-/* 8042FFCC 003F958C  C8 A2 C5 D8 */	lfd f5, lbl_8066C958@sda21(r2)
+/* 8042FFCC 003F958C  C8 A2 C5 D8 */	lfd f5, double_8066C958@sda21(r2)
 /* 8042FFD0 003F9590  C8 01 00 38 */	lfd f0, 0x38(r1)
 /* 8042FFD4 003F9594  FF 80 10 90 */	fmr f28, f2
 /* 8042FFD8 003F9598  C8 61 00 40 */	lfd f3, 0x40(r1)
@@ -1178,7 +1178,7 @@ PrintGlyph__Q34nw4r2ut10CharWriterFfffRCQ34nw4r2ut5Glyph:
 /* 8043005C 003F961C  39 20 00 00 */	li r9, 0
 /* 80430060 003F9620  39 40 00 00 */	li r10, 0
 /* 80430064 003F9624  4B EE C2 4D */	bl GXInitTexObj
-/* 80430068 003F9628  C0 22 C5 C0 */	lfs f1, lbl_8066C940@sda21(r2)
+/* 80430068 003F9628  C0 22 C5 C0 */	lfs f1, float_8066C940@sda21(r2)
 /* 8043006C 003F962C  38 61 00 18 */	addi r3, r1, 0x18
 /* 80430070 003F9630  80 9B 00 38 */	lwz r4, 0x38(r27)
 /* 80430074 003F9634  38 C0 00 00 */	li r6, 0
@@ -1369,7 +1369,7 @@ SetupGXWithColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
 /* 80430320 003F98E0  38 00 00 01 */	li r0, 1
 /* 80430324 003F98E4  98 0D BC B8 */	stb r0, lbl_80667E38@sda21(r13)
 .L_80430328:
-/* 80430328 003F98E8  C0 22 C5 C0 */	lfs f1, lbl_8066C940@sda21(r2)
+/* 80430328 003F98E8  C0 22 C5 C0 */	lfs f1, float_8066C940@sda21(r2)
 /* 8043032C 003F98EC  38 81 00 08 */	addi r4, r1, 8
 /* 80430330 003F98F0  88 6D BC BC */	lbz r3, lbl_80667E3C@sda21(r13)
 /* 80430334 003F98F4  88 CD BC BD */	lbz r6, lbl_80667E3D@sda21(r13)
@@ -1563,34 +1563,34 @@ SetupGXWithColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C940
-lbl_8066C940:
+.global float_8066C940
+float_8066C940:
 	# ROM: 0x5767A0
 	.4byte 0
 
 
-.global lbl_8066C944
-lbl_8066C944:
+.global float_8066C944
+float_8066C944:
 	# ROM: 0x5767A4
 	.float 1.0
 
 
-.global lbl_8066C948
-lbl_8066C948:
+.global double_8066C948
+double_8066C948:
 	# ROM: 0x5767A8
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
-.global lbl_8066C950
-lbl_8066C950:
+.global float_8066C950
+float_8066C950:
 	# ROM: 0x5767B0
 	.float 0.5
 	.4byte 0
 
 
-.global lbl_8066C958
-lbl_8066C958:
+.global double_8066C958
+double_8066C958:
 	# ROM: 0x5767B8
 	.4byte 0x43300000
 	.4byte 0

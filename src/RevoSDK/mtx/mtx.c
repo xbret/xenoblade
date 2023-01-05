@@ -464,12 +464,12 @@ static asm void __PSMTXRotAxisRadInternal(
 {
    psq_l f3, 0(r4), 0, qr0
 	frsp f11, f2
-	lfs f10, lbl_8066C130@sda21(r2)
+	lfs f10, float_8066C130 //@sda21(r2)
 	frsp f12, f1
 	ps_mul f4, f3, f3
 	lfs f2, 8(r4)
 	fadds f8, f10, f10
-	lfs f9, lbl_8066C134@sda21(r2)
+	lfs f9, float_8066C134 //@sda21(r2)
 	fsubs f1, f10, f10
 	ps_madd f5, f2, f2, f4
 	fsubs f0, f8, f11
@@ -730,10 +730,10 @@ fsubs f0, f4, f3
 lfs f10, zero_c@sda21(r2)
 lfs f12, one_c@sda21(r2)
 fsubs f9, f1, f2
-lfs f11, lbl_8066C138@sda21(r2)
+lfs f11, float_8066C138 //@sda21(r2)
 fadds f3, f4, f3
 fdivs f13, f12, f0
-lfs f0, lbl_8066C13C@sda21(r2)
+lfs f0, float_8066C13C //@sda21(r2)
 stfs f0, 0x28(r3)
 lfs f31, 0x28(r1)
 stfs f10, 4(r3)

@@ -7,7 +7,7 @@ func_8049C438:
 /* 8049C438 004659F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049C43C 004659FC  7C 08 02 A6 */	mflr r0
 /* 8049C440 00465A00  3C E0 80 57 */	lis r7, __vt__CScnFadeMan@ha
-/* 8049C444 00465A04  C0 02 CF B8 */	lfs f0, lbl_8066D338@sda21(r2)
+/* 8049C444 00465A04  C0 02 CF B8 */	lfs f0, float_8066D338@sda21(r2)
 /* 8049C448 00465A08  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8049C44C 00465A0C  38 00 00 00 */	li r0, 0
 /* 8049C450 00465A10  38 E7 23 98 */	addi r7, r7, __vt__CScnFadeMan@l
@@ -101,7 +101,7 @@ func_8049C534:
 /* 8049C590 00465B50  7C 06 00 50 */	subf r0, r6, r0
 /* 8049C594 00465B54  80 E3 00 3C */	lwz r7, 0x3c(r3)
 /* 8049C598 00465B58  54 05 40 3E */	rotlwi r5, r0, 8
-/* 8049C59C 00465B5C  C8 A2 CF C8 */	lfd f5, lbl_8066D348@sda21(r2)
+/* 8049C59C 00465B5C  C8 A2 CF C8 */	lfd f5, double_8066D348@sda21(r2)
 /* 8049C5A0 00465B60  7C C5 32 14 */	add r6, r5, r6
 /* 8049C5A4 00465B64  7C 80 46 70 */	srawi r0, r4, 8
 /* 8049C5A8 00465B68  7C 80 01 94 */	addze r4, r0
@@ -111,7 +111,7 @@ func_8049C534:
 /* 8049C5B8 00465B78  90 C1 00 0C */	stw r6, 0xc(r1)
 /* 8049C5BC 00465B7C  6C 84 80 00 */	xoris r4, r4, 0x8000
 /* 8049C5C0 00465B80  7C 05 00 50 */	subf r0, r5, r0
-/* 8049C5C4 00465B84  C0 62 CF BC */	lfs f3, lbl_8066D33C@sda21(r2)
+/* 8049C5C4 00465B84  C0 62 CF BC */	lfs f3, float_8066D33C@sda21(r2)
 /* 8049C5C8 00465B88  90 81 00 14 */	stw r4, 0x14(r1)
 /* 8049C5CC 00465B8C  54 04 40 3E */	rotlwi r4, r0, 8
 /* 8049C5D0 00465B90  7C E0 46 70 */	srawi r0, r7, 8
@@ -129,7 +129,7 @@ func_8049C534:
 /* 8049C600 00465BC0  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 8049C604 00465BC4  EC 44 10 FA */	fmadds f2, f4, f3, f2
 /* 8049C608 00465BC8  EC 21 28 28 */	fsubs f1, f1, f5
-/* 8049C60C 00465BCC  C1 02 CF C0 */	lfs f8, lbl_8066D340@sda21(r2)
+/* 8049C60C 00465BCC  C1 02 CF C0 */	lfs f8, float_8066D340@sda21(r2)
 /* 8049C610 00465BD0  EC 00 28 28 */	fsubs f0, f0, f5
 /* 8049C614 00465BD4  C0 E3 00 28 */	lfs f7, 0x28(r3)
 /* 8049C618 00465BD8  C0 A3 00 2C */	lfs f5, 0x2c(r3)
@@ -162,7 +162,7 @@ func_8049C534:
 func_8049C678:
 /* 8049C678 00465C38  94 21 FF 10 */	stwu r1, -0xf0(r1)
 /* 8049C67C 00465C3C  7C 08 02 A6 */	mflr r0
-/* 8049C680 00465C40  C0 22 CF B8 */	lfs f1, lbl_8066D338@sda21(r2)
+/* 8049C680 00465C40  C0 22 CF B8 */	lfs f1, float_8066D338@sda21(r2)
 /* 8049C684 00465C44  90 01 00 F4 */	stw r0, 0xf4(r1)
 /* 8049C688 00465C48  93 E1 00 EC */	stw r31, 0xec(r1)
 /* 8049C68C 00465C4C  7C 7F 1B 78 */	mr r31, r3
@@ -251,7 +251,7 @@ func_8049C7A8:
 
 .global func_8049C7B0
 func_8049C7B0:
-/* 8049C7B0 00465D70  C0 22 CF C0 */	lfs f1, lbl_8066D340@sda21(r2)
+/* 8049C7B0 00465D70  C0 22 CF C0 */	lfs f1, float_8066D340@sda21(r2)
 /* 8049C7B4 00465D74  38 80 00 00 */	li r4, 0
 /* 8049C7B8 00465D78  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 8049C7BC 00465D7C  FC 01 00 00 */	fcmpu cr0, f1, f0
@@ -260,7 +260,7 @@ func_8049C7B0:
 /* 8049C7C8 00465D88  2C 00 00 00 */	cmpwi r0, 0
 /* 8049C7CC 00465D8C  41 82 00 20 */	beq .L_8049C7EC
 .L_8049C7D0:
-/* 8049C7D0 00465D90  C0 22 CF C0 */	lfs f1, lbl_8066D340@sda21(r2)
+/* 8049C7D0 00465D90  C0 22 CF C0 */	lfs f1, float_8066D340@sda21(r2)
 /* 8049C7D4 00465D94  C0 03 00 34 */	lfs f0, 0x34(r3)
 /* 8049C7D8 00465D98  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 8049C7DC 00465D9C  40 82 00 14 */	bne .L_8049C7F0
@@ -300,27 +300,27 @@ __RTTI__CScnFadeMan:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066D338
-lbl_8066D338:
+.global float_8066D338
+float_8066D338:
 	# ROM: 0x577198
 	.4byte 0
 
 
-.global lbl_8066D33C
-lbl_8066D33C:
+.global float_8066D33C
+float_8066D33C:
 	# ROM: 0x57719C
 	.4byte 0x3B800000
 
 
-.global lbl_8066D340
-lbl_8066D340:
+.global float_8066D340
+float_8066D340:
 	# ROM: 0x5771A0
 	.float 1.0
 	.4byte 0
 
 
-.global lbl_8066D348
-lbl_8066D348:
+.global double_8066D348
+double_8066D348:
 	# ROM: 0x5771A8
 	.4byte 0x43300000
 	.4byte 0x80000000
