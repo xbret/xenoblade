@@ -238,3 +238,22 @@ FindGroupByName__Q36nw4hbm3lyt14GroupContainerFPCc:
 /* 8032D820 002F6DE0  7C 08 03 A6 */	mtlr r0
 /* 8032D824 002F6DE4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032D828 002F6DE8  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054D7D0
+lbl_8054D7D0:
+	# ROM: 0x5498D0
+	.4byte lbl_8054D7F0
+	.4byte 0
+	.4byte __dt__Q36nw4hbm3lyt5GroupFv
+
+.global lbl_8054D7DC
+lbl_8054D7DC:
+	.asciz "nw4hbm::lyt::Group"
+	.balign 4
+
+.global lbl_8054D7F0
+lbl_8054D7F0:
+	.4byte lbl_8054D7DC
+	.4byte 0

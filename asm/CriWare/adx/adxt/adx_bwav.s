@@ -1085,3 +1085,16 @@ lbl_8051AA88:
 	.asciz "WAVE"
 	.2byte 0
 	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80563728
+lbl_80563728:
+	# ROM: 0x55F828
+	.4byte lbl_8051AA78
+
+
+.global lbl_8056372C
+lbl_8056372C:
+	# ROM: 0x55F82C
+	.4byte lbl_8051AA80

@@ -454,3 +454,83 @@ bta_hh_co_close:
 bta_dm_co_get_compress_memory:
 /* 8037C5C0 00345B80  38 60 00 00 */	li r3, 0
 /* 8037C5C4 00345B84  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_80563470
+lbl_80563470:
+	.asciz "BTA_HH_ENABLE_EVT\n"
+	.balign 4
+	.asciz "BTA_HH_DISABLE_EVT\n"
+	.asciz "BTA_HH_OPEN_EVT\n"
+	.balign 4
+	.asciz "handle: %d, addr: %02x:%02x:%02x:%02x:%02x:%02x\n"
+	.balign 4
+	.asciz "Nintendo RVL-CNT"
+	.balign 4
+	.4byte 0
+	.asciz "error code: %d\n"
+	.asciz "BTA_HH_CLOSE_EVT\n"
+	.balign 4
+	.asciz "device handle : %d   status = %d\n"
+	.balign 4
+	.asciz "BTA_HH_ADD_DEV_EVT\n"
+	.asciz "result: %d, handle: %d, addr: %02x:%02x:%02x:%02x:%02x:%02x\n"
+	.balign 4
+	.asciz "BTA_HH_RMV_DEV_EVT\n"
+	.asciz "WARNING: link num count is modified.\n"
+	.balign 4
+	.asciz "BTA_HH_SET_RPT_EVT\n"
+	.asciz "BTA_HH_GET_RPT_EVT\n"
+	.asciz "BTA_HH_SET_PROTO_EVT\n"
+	.balign 4
+	.asciz "BTA_HH_GET_PROTO_EVT\n"
+	.balign 4
+	.asciz "BTA_HH_SET_IDLE_EVT\n"
+	.balign 4
+	.asciz "BTA_HH_GET_IDLE_EVT\n"
+	.balign 4
+	.asciz "BTA_HH_GET_DCSP_EVT\n"
+	.balign 4
+	.asciz "BTA_HH_VS_UNPLUG_EVT\n"
+	.balign 4
+
+
+.global lbl_80563688
+lbl_80563688:
+	# ROM: 0x55F788
+	.4byte switch_8037C030
+	.4byte switch_8037C04C
+	.4byte switch_8037C05C
+	.4byte switch_8037C2B8
+	.4byte switch_8037C4D4
+	.4byte switch_8037C4C4
+	.4byte switch_8037C4F4
+	.4byte switch_8037C4E4
+	.4byte switch_8037C514
+	.4byte switch_8037C504
+	.4byte switch_8037C524
+	.4byte switch_8037C398
+	.4byte switch_8037C40C
+	.4byte switch_8037C534
+	.4byte switch_8037C540
+	.4byte switch_8037C44C
+
+
+.global lbl_805636C8
+lbl_805636C8:
+	.asciz "Invalid app_id [%d]\n"
+	.balign 4
+
+
+.global lbl_805636E0
+lbl_805636E0:
+	.asciz "bta_hh_co_open()\n"
+	.balign 4
+
+
+.global lbl_805636F4
+lbl_805636F4:
+	.asciz "bta_hh_co_close()\n"
+	.balign 4

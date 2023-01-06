@@ -207,3 +207,67 @@ nandUserAreaCallback:
 /* 80351278 0031A838  7C 08 03 A6 */	mtlr r0
 /* 8035127C 0031A83C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80351280 0031A840  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_805511D0
+lbl_805511D0:
+	.asciz "/title/00010000"
+
+.global lbl_805511E0
+lbl_805511E0:
+	.asciz "/title/00010001"
+
+.global lbl_805511F0
+lbl_805511F0:
+	.asciz "/title/00010003"
+
+.global lbl_80551200
+lbl_80551200:
+	.asciz "/title/00010004"
+
+.global lbl_80551210
+lbl_80551210:
+	.asciz "/title/00010005"
+
+.global lbl_80551220
+lbl_80551220:
+	.asciz "/title/00010006"
+
+.global lbl_80551230
+lbl_80551230:
+	.asciz "/title/00010007"
+
+.global lbl_80551240
+lbl_80551240:
+	.asciz "/shared2/title"
+	.balign 4
+
+
+.global lbl_80551250
+lbl_80551250:
+	# ROM: 0x54D350
+	.4byte lbl_80665B10
+	.4byte lbl_80665B18
+	.4byte lbl_805511D0
+	.4byte lbl_805511E0
+	.4byte lbl_805511F0
+	.4byte lbl_80551200
+	.4byte lbl_80551210
+	.4byte lbl_80551220
+	.4byte lbl_80551230
+	.4byte lbl_80551240
+	.4byte 0
+
+
+.global lbl_8055127C
+lbl_8055127C:
+	.asciz "nandUserAreaCallback"
+	.balign 4
+
+
+.global lbl_80551294
+lbl_80551294:
+	.asciz "Illegal status is detected at %s()"
+	.balign 4

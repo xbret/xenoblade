@@ -961,7 +961,6 @@ BuildPaneObj__Q36nw4hbm3lyt6LayoutFlPCvRCQ36nw4hbm3lyt11ResBlockSet:
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-
 .global float_80518A60
 float_80518A60:
 	# ROM: 0x514B60
@@ -972,3 +971,31 @@ float_80518A60:
 float_80518A64:
 	# ROM: 0x514B64
 	.float 0.5
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054D7F8
+lbl_8054D7F8:
+	# ROM: 0x5498F8
+	.4byte lbl_8054D840
+	.4byte 0
+	.4byte __dt__Q36nw4hbm3lyt6LayoutFv
+	.4byte Build__Q36nw4hbm3lyt6LayoutFPCvPQ36nw4hbm3lyt16ResourceAccessor
+	.4byte CreateAnimTransform__Q36nw4hbm3lyt6LayoutFPCvPQ36nw4hbm3lyt16ResourceAccessor
+	.4byte BindAnimation__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm3lyt13AnimTransform
+	.4byte UnbindAnimation__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm3lyt13AnimTransform
+	.4byte UnbindAllAnimation__Q36nw4hbm3lyt6LayoutFv
+	.4byte SetAnimationEnable__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm3lyt13AnimTransformb
+	.4byte CalculateMtx__Q36nw4hbm3lyt6LayoutFRCQ36nw4hbm3lyt8DrawInfo
+	.4byte Draw__Q36nw4hbm3lyt6LayoutFRCQ36nw4hbm3lyt8DrawInfo
+	.4byte Animate__Q36nw4hbm3lyt6LayoutFUl
+	.4byte SetTagProcessor__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm2ut19TagProcessorBase_w_
+
+.global lbl_8054D82C
+lbl_8054D82C:
+	.asciz "nw4hbm::lyt::Layout"
+
+.global lbl_8054D840
+lbl_8054D840:
+	.4byte lbl_8054D82C
+	.4byte 0

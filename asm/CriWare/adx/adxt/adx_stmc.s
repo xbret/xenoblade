@@ -1555,6 +1555,17 @@ lbl_805197E0:
 	.balign 4
 	.4byte 0
 
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80563710
+lbl_80563710:
+	# ROM: 0x55F810
+	.4byte 0x00000018
+	.4byte 0x00000018
+	.4byte 0x00000010
+	.4byte 0
+
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global adxstm_init_count

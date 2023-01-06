@@ -537,3 +537,13 @@ __OSInitMemoryProtection:
 /* 80359C10 003231D0  7C 08 03 A6 */	mtlr r0
 /* 80359C14 003231D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80359C18 003231D8  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80552AE0
+lbl_80552AE0:
+	# ROM: 0x54EBE0
+	.4byte OnShutdown
+	.4byte 0x0000007F
+	.4byte 0
+	.4byte 0

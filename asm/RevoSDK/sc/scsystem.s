@@ -1846,3 +1846,146 @@ lbl_80518D58:
 	.asciz "/title/00000001/00000002/data/setting.txt"
 	.balign 4
 	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8055EEF8
+lbl_8055EEF8:
+	.asciz "<< RVL_SDK - SC \trelease build: Feb 27 2009 10:05:17 (0x4302_145) >>"
+	.balign 4
+
+.global lbl_8055EF40
+lbl_8055EF40:
+	.asciz "IPL.EULA"
+	.balign 4
+
+.global lbl_8055EF4C
+lbl_8055EF4C:
+	.asciz "IPL.SADR"
+	.balign 4
+
+.global lbl_8055EF58
+lbl_8055EF58:
+	.asciz "NET.CTPC"
+	.balign 4
+
+.global lbl_8055EF64
+lbl_8055EF64:
+	.asciz "NET.PROF"
+	.balign 4
+
+.global lbl_8055EF70
+lbl_8055EF70:
+	.asciz "NET.WCPC"
+	.balign 4
+
+.global lbl_8055EF7C
+lbl_8055EF7C:
+	.asciz "NET.WCFG"
+	.balign 4
+
+
+.global lbl_8055EF88
+lbl_8055EF88:
+	# ROM: 0x55B088
+	.4byte lbl_80665BC4
+	.4byte 0
+	.4byte lbl_80665BCC
+	.4byte 0x00000001
+	.4byte lbl_80665BD8
+	.4byte 0x00000002
+	.4byte lbl_80665BE0
+	.4byte 0x00000003
+	.4byte lbl_80665BE8
+	.4byte 0x00000004
+	.4byte lbl_80665BF0
+	.4byte 0x00000005
+	.4byte lbl_80665BF8
+	.4byte 0x00000006
+	.4byte lbl_8055EF40
+	.4byte 0x00000007
+	.4byte lbl_80665C00
+	.4byte 0x00000008
+	.4byte lbl_80665C08
+	.4byte 0x00000009
+	.4byte lbl_80665C10
+	.4byte 0x0000000A
+	.4byte lbl_80665C18
+	.4byte 0x0000000B
+	.4byte lbl_80665C20
+	.4byte 0x0000000C
+	.4byte lbl_80665C28
+	.4byte 0x0000000D
+	.4byte lbl_80665C30
+	.4byte 0x0000000E
+	.4byte lbl_80665C38
+	.4byte 0x0000000F
+	.4byte lbl_8055EF4C
+	.4byte 0x00000010
+	.4byte lbl_80665C40
+	.4byte 0x00000011
+	.4byte lbl_80665C48
+	.4byte 0x00000012
+	.4byte lbl_80665C50
+	.4byte 0x00000013
+	.4byte lbl_8055EF58
+	.4byte 0x00000014
+	.4byte lbl_8055EF64
+	.4byte 0x00000015
+	.4byte lbl_8055EF70
+	.4byte 0x00000016
+	.4byte lbl_8055EF7C
+	.4byte 0x00000017
+	.4byte lbl_80665C58
+	.4byte 0x00000018
+	.4byte lbl_80665C60
+	.4byte 0x00000019
+	.4byte lbl_80665C68
+	.4byte 0x0000001A
+	.4byte lbl_80665C70
+	.4byte 0x0000001B
+	.4byte lbl_80665C78
+	.4byte 0x0000001C
+	.4byte lbl_80665C80
+	.4byte 0x0000001D
+	.4byte lbl_80665C88
+	.4byte 0x0000001E
+	.4byte lbl_80665C90
+	.4byte 0x0000001F
+	.4byte lbl_80665C98
+	.4byte 0x00000020
+	.4byte lbl_80665CA0
+	.4byte 0x00000021
+	.4byte lbl_80665CA8
+	.4byte 0x00000022
+	.4byte lbl_80665CB0
+	.4byte 0x00000023
+	.4byte lbl_80665CB8
+	.4byte 0x00000024
+
+
+.global lbl_8055F0B0
+lbl_8055F0B0:
+	# ROM: 0x55B1B0
+	.4byte switch_80360BC0
+	.4byte switch_80360C04
+	.4byte switch_80360C44
+	.4byte switch_80360C74
+	.4byte switch_80360CBC
+	.4byte switch_80360CF0
+	.4byte switch_80360D24
+	.4byte switch_80360D68
+	.4byte switch_80360DA4
+	.4byte switch_80360DAC
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805D5540
+lbl_805D5540:
+	.skip 0x1A0
+.global lbl_805D56E0
+lbl_805D56E0:
+	.skip 0x4000
+.global lbl_805D96E0
+lbl_805D96E0:
+	.skip 0x4000

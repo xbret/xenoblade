@@ -515,3 +515,60 @@ __OSStateEventHandler:
 /* 8035D718 00326CD8  7C 08 03 A6 */	mtlr r0
 /* 8035D71C 00326CDC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035D720 00326CE0  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8055EBF8
+lbl_8055EBF8:
+	.asciz "/dev/stm/immediate"
+	.balign 4
+
+
+.global lbl_8055EC0C
+lbl_8055EC0C:
+	.asciz "/dev/stm/eventhook"
+	.balign 4
+
+
+.global lbl_8055EC20
+lbl_8055EC20:
+	.asciz "OSStateTM.c"
+
+
+.global lbl_8055EC2C
+lbl_8055EC2C:
+	.asciz "Error: The firmware doesn't support shutdown feature.\n"
+	.balign 4
+
+
+.global lbl_8055EC64
+lbl_8055EC64:
+	.asciz "Error: The firmware doesn't support reboot feature.\n"
+	.balign 4
+
+
+.global lbl_8055EC9C
+lbl_8055EC9C:
+	.asciz "Error on STM state event handler\n"
+	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805D5160
+lbl_805D5160:
+	.skip 0x20
+.global lbl_805D5180
+lbl_805D5180:
+	.skip 0x20
+.global lbl_805D51A0
+lbl_805D51A0:
+	.skip 0x20
+.global lbl_805D51C0
+lbl_805D51C0:
+	.skip 0x20
+.global lbl_805D51E0
+lbl_805D51E0:
+	.skip 0x20
+.global lbl_805D5200
+lbl_805D5200:
+	.skip 0x20

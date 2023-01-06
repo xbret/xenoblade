@@ -831,3 +831,27 @@ DVDGetTransferredSize:
 .L_8030A890:
 /* 8030A890 002D3E50  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 8030A894 002D3E54  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805497B8
+lbl_805497B8:
+	.asciz "DVDConvertEntrynumToPath(possibly DVDOpen or DVDChangeDir or DVDOpenDir): specified directory or file (%s) doesn't match standard 8.3 format. This is a temporary restriction and will be removed soon\n"
+
+
+.global lbl_80549880
+lbl_80549880:
+	.asciz "Warning: DVDOpen(): file '%s' was not found under %s.\n"
+	.balign 4
+
+
+.global lbl_805498B8
+lbl_805498B8:
+	.asciz "DVDReadAsync(): specified area is out of the file  "
+
+
+.global lbl_805498EC
+lbl_805498EC:
+	.asciz "DVDRead(): specified area is out of the file  "
+	.balign 4
+	.4byte 0

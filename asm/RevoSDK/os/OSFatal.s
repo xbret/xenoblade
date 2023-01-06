@@ -840,3 +840,12 @@ Halt:
 /* 8035770C 00320CCC  7C 08 03 A6 */	mtlr r0
 /* 80357710 00320CD0  38 21 00 50 */	addi r1, r1, 0x50
 /* 80357714 00320CD4  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805D4420
+lbl_805D4420:
+	.skip 0x2C8
+.global lbl_805D46E8
+lbl_805D46E8:
+	.skip 0x18

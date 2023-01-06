@@ -1183,3 +1183,35 @@ float_80518AB0:
 	# ROM: 0x514BB0
 	.float 0.5
 	.4byte 0x3B808081
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054D8D0
+lbl_8054D8D0:
+	# ROM: 0x5499D0
+	.4byte lbl_8054D770
+	.4byte 0
+	.4byte __dt__Q36nw4hbm3lyt4PaneFv
+	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt4PaneCFv
+	.4byte func_80331CD0
+	.4byte func_80331FD0
+	.4byte func_80332060
+	.4byte func_803320E0
+	.4byte func_80332170
+	.4byte func_80331AC0
+	.4byte func_80331AD0
+	.4byte func_80331AE0
+	.4byte func_80331B10
+	.4byte func_80331B40
+	.4byte func_80331B50
+	.4byte func_80331B60
+	.4byte func_80331C10
+	.4byte func_80332230
+	.4byte func_80332250
+	.4byte func_803322E0
+	.4byte func_80332300
+	.4byte func_803323E0
+	.4byte func_80332460
+	.4byte func_80332710
+	.4byte func_80332520
+	.4byte 0

@@ -5,9 +5,9 @@
 .balign 16, 0
 .global __ct__Q210homebutton18GroupAnmControllerFv
 __ct__Q210homebutton18GroupAnmControllerFv:
-/* 8031F450 002E8A10  3C 80 80 55 */	lis r4, lbl_8054C240@ha
+/* 8031F450 002E8A10  3C 80 80 55 */	lis r4, __vt__homebutton_GroupAnmController@ha
 /* 8031F454 002E8A14  38 00 00 00 */	li r0, 0
-/* 8031F458 002E8A18  38 84 C2 40 */	addi r4, r4, lbl_8054C240@l
+/* 8031F458 002E8A18  38 84 C2 40 */	addi r4, r4, __vt__homebutton_GroupAnmController@l
 /* 8031F45C 002E8A1C  90 83 00 00 */	stw r4, 0(r3)
 /* 8031F460 002E8A20  90 03 00 20 */	stw r0, 0x20(r3)
 /* 8031F464 002E8A24  90 03 00 24 */	stw r0, 0x24(r3)
@@ -85,3 +85,30 @@ do_calc__Q210homebutton18GroupAnmControllerFv:
 /* 8031F554 002E8B14  7C 08 03 A6 */	mtlr r0
 /* 8031F558 002E8B18  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031F55C 002E8B1C  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__homebutton_GroupAnmController
+__vt__homebutton_GroupAnmController:
+	# ROM: 0x548340
+	.4byte __RTTI__homebutton_GroupAnmController
+	.4byte 0
+	.4byte __dt__Q210homebutton15FrameControllerFv
+	.4byte calc__Q210homebutton15FrameControllerFv
+
+.global homebutton_GroupAnmController_typestr
+homebutton_GroupAnmController_typestr:
+	.asciz "homebutton::GroupAnmController"
+	.balign 4
+
+.global homebutton_GroupAnmController_hierarchy
+homebutton_GroupAnmController_hierarchy:
+	.4byte __RTTI__homebutton_FrameController
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global __RTTI__homebutton_GroupAnmController
+__RTTI__homebutton_GroupAnmController:
+	.4byte homebutton_GroupAnmController_typestr
+	.4byte homebutton_GroupAnmController_hierarchy

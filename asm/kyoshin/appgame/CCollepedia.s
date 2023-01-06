@@ -2452,19 +2452,32 @@ func_8025650C:
 lbl_80507D30:
 	# ROM: 0x503E30
 	.4byte 0
-	.4byte 0x00010008
-	.4byte 0x000F0016
-	.4byte 0x001A0020
-	.4byte 0x0027002E
-	.4byte 0x00000032
-	.4byte 0x0036003C
-	.4byte 0x00000040
-	.4byte 0x0047004E
-	.4byte 0x00540058
-	.4byte 0x0000005F
-	.4byte 0x00000066
-	.4byte 0x006D0074
-	.4byte 0x00780000
+	.2byte 0x0001
+	.2byte 0x0008
+	.2byte 0x000F
+	.2byte 0x0016
+	.2byte 0x001A
+	.2byte 0x0020
+	.2byte 0x0027
+	.2byte 0x002E
+	.2byte 0x0000
+	.2byte 0x0032
+	.2byte 0x0036
+	.2byte 0x003C
+	.2byte 0x0000
+	.2byte 0x0040
+	.2byte 0x0047
+	.2byte 0x004E
+	.2byte 0x0054
+	.2byte 0x0058
+	.2byte 0x0000
+	.2byte 0x005F
+	.2byte 0x0000
+	.2byte 0x0066
+	.2byte 0x006D
+	.2byte 0x0074
+	.2byte 0x0078
+	.2byte 0x0000
 	.4byte 0
 
 .global CCollepedia_typestr

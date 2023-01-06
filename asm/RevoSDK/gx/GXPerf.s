@@ -656,3 +656,72 @@ GXClearGPMetric:
 /* 8031F294 002E8854  38 00 00 04 */	li r0, 4
 /* 8031F298 002E8858  B0 03 00 04 */	sth r0, 4(r3)
 /* 8031F29C 002E885C  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054C130
+lbl_8054C130:
+	# ROM: 0x548230
+	.4byte switch_8031EFB0
+	.4byte switch_8031EFCC
+	.4byte switch_8031EFE8
+	.4byte switch_8031F004
+	.4byte switch_8031F058
+	.4byte switch_8031F074
+	.4byte switch_8031F090
+	.4byte switch_8031F0AC
+	.4byte switch_8031F020
+	.4byte switch_8031F0C8
+	.4byte switch_8031F0F8
+	.4byte switch_8031F128
+	.4byte switch_8031F158
+	.4byte switch_8031F188
+	.4byte switch_8031F1B8
+	.4byte switch_8031F1E8
+	.4byte switch_8031F218
+	.4byte switch_8031F244
+	.4byte switch_8031F254
+	.4byte switch_8031F264
+	.4byte switch_8031F274
+	.4byte switch_8031F03C
+
+
+.global lbl_8054C188
+lbl_8054C188:
+	# ROM: 0x548288
+	.4byte switch_8031EB8C
+	.4byte switch_8031EBAC
+	.4byte switch_8031EBCC
+	.4byte switch_8031EBEC
+	.4byte switch_8031EC0C
+	.4byte switch_8031EC2C
+	.4byte switch_8031EC4C
+	.4byte switch_8031EC6C
+	.4byte switch_8031EC8C
+	.4byte switch_8031ECAC
+	.4byte switch_8031ECEC
+	.4byte switch_8031ED0C
+	.4byte switch_8031ED28
+	.4byte switch_8031ED44
+	.4byte switch_8031ED60
+	.4byte switch_8031ED7C
+	.4byte switch_8031ED98
+	.4byte switch_8031EDB4
+	.4byte switch_8031EDD0
+	.4byte switch_8031EDEC
+	.4byte switch_8031EE08
+	.4byte switch_8031EE24
+	.4byte switch_8031EE40
+	.4byte switch_8031EE5C
+	.4byte switch_8031EE78
+	.4byte switch_8031EE94
+	.4byte switch_8031EEB0
+	.4byte switch_8031EECC
+	.4byte switch_8031EEE8
+	.4byte switch_8031EF04
+	.4byte switch_8031EF20
+	.4byte switch_8031EF3C
+	.4byte switch_8031EF58
+	.4byte switch_8031EF74
+	.4byte switch_8031ECCC
+	.4byte 0

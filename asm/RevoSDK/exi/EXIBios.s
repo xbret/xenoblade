@@ -1761,3 +1761,16 @@ EXIGetID:
 /* 803159DC 002DEF9C  7C 08 03 A6 */	mtlr r0
 /* 803159E0 002DEFA0  38 21 00 40 */	addi r1, r1, 0x40
 /* 803159E4 002DEFA4  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054B610
+lbl_8054B610:
+	.asciz "<< RVL_SDK - EXI \trelease build: Feb 27 2009 10:02:03 (0x4302_145) >>"
+	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CCE20
+lbl_805CCE20:
+	.skip 0xC0

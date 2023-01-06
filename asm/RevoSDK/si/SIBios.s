@@ -1143,3 +1143,77 @@ SIGetType:
 /* 803626B8 0032BC78  7C 08 03 A6 */	mtlr r0
 /* 803626BC 0032BC7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803626C0 0032BC80  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8055F138
+lbl_8055F138:
+	.asciz "<< RVL_SDK - SI \trelease build: Feb 27 2009 10:04:44 (0x4302_145) >>"
+	.balign 4
+
+
+.global lbl_8055F180
+lbl_8055F180:
+	# ROM: 0x55B280
+	.4byte 0xFFFFFFFF
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8055F198
+lbl_8055F198:
+	# ROM: 0x55B298
+	.4byte 0x00000008
+	.4byte 0x00000008
+	.4byte 0x00000008
+	.4byte 0x00000008
+
+
+.global lbl_8055F1A8
+lbl_8055F1A8:
+	# ROM: 0x55B2A8
+	.4byte 0x00F60200
+	.4byte 0x000E1300
+	.4byte 0x001E0900
+	.4byte 0x002C0600
+	.4byte 0x00340500
+	.4byte 0x00410400
+	.4byte 0x00570300
+	.4byte 0x00570300
+	.4byte 0x00570300
+	.4byte 0x00830200
+	.4byte 0x00830200
+	.4byte 0x00830200
+	.4byte 0x01280200
+	.4byte 0x000F1500
+	.4byte 0x001D0B00
+	.4byte 0x002D0700
+	.4byte 0x00340600
+	.4byte 0x003F0500
+	.4byte 0x004E0400
+	.4byte 0x00680300
+	.4byte 0x00680300
+	.4byte 0x00680300
+	.4byte 0x00680300
+	.4byte 0x009C0200
+	.asciz "SISetSamplingRate: unknown TV format. Use default."
+	.balign 4
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805DD6E0
+lbl_805DD6E0:
+	.skip 0x80
+.global lbl_805DD760
+lbl_805DD760:
+	.skip 0x20
+.global lbl_805DD780
+lbl_805DD780:
+	.skip 0x20
+.global lbl_805DD7A0
+lbl_805DD7A0:
+	.skip 0x160

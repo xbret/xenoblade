@@ -756,3 +756,9 @@ __OSClearRTCFlags:
 /* 8035B2A4 00324864  7C 08 03 A6 */	mtlr r0
 /* 8035B2A8 00324868  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035B2AC 0032486C  4E 80 00 20 */	blr
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805D4700
+lbl_805D4700:
+	.skip 0x58

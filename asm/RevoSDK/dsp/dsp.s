@@ -202,3 +202,15 @@ DSPAssertTask:
 /* 803094A0 002D2A60  7C 08 03 A6 */	mtlr r0
 /* 803094A4 002D2A64  38 21 00 10 */	addi r1, r1, 0x10
 /* 803094A8 002D2A68  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805495F8
+lbl_805495F8:
+	.asciz "<< RVL_SDK - DSP \trelease build: Feb 27 2009 10:01:57 (0x4302_145) >>"
+	.balign 4
+	.asciz "DSPInit(): Build Date: %s %s\n"
+	.balign 4
+	.asciz "Feb 27 2009"
+	.asciz "10:01:57"
+	.balign 4

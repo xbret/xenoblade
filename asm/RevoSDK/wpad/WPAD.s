@@ -8497,3 +8497,218 @@ lbl_80518DF8:
 	.4byte 0x63033503
 	.4byte 0x1F030000
 	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_80560608
+lbl_80560608:
+	.asciz "<< RVL_SDK - WPAD \trelease build: Jun 22 2009 18:33:21 (0x4302_145) >>"
+	.balign 4
+
+
+.global lbl_80560650
+lbl_80560650:
+	.asciz "WBCReadDummy\n"
+	.balign 4
+
+
+.global lbl_80560660
+lbl_80560660:
+	.asciz "WBCSetZEROPointDummy\n"
+	.balign 4
+
+
+.global lbl_80560678
+lbl_80560678:
+	.asciz "WBCGetTGCWeightDummy\n"
+	.balign 4
+
+
+.global lbl_80560690
+lbl_80560690:
+	.asciz "Wait for %d ms until start reconnect!\n"
+	.balign 4
+
+
+.global lbl_805606B8
+lbl_805606B8:
+	# ROM: 0x55C7B8
+	.4byte func_80368E90
+	.4byte 0x0000007F
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_805606C8
+lbl_805606C8:
+	.asciz "handle = %d, repid = %02x\n"
+	.balign 4
+
+
+.global lbl_805606E4
+lbl_805606E4:
+	# ROM: 0x55C7E4
+	.4byte switch_803696E0
+	.4byte switch_803696E0
+	.4byte switch_803696E0
+	.4byte switch_80369858
+	.4byte switch_80369858
+	.4byte switch_80369858
+	.4byte switch_80369C2C
+	.4byte switch_803699F4
+	.4byte switch_80369858
+	.4byte switch_80369A6C
+	.4byte switch_80369BA8
+	.4byte switch_80369BA8
+	.4byte switch_80369858
+	.asciz "Reconnect Start!!\n"
+	.balign 4
+	.4byte 0
+	.asciz "Check the update of WiFi using channel\n"
+	.asciz "WiFi uses channel = %d\n"
+
+
+.global lbl_80560770
+lbl_80560770:
+	.asciz "WPADInit()\n"
+
+
+.global lbl_8056077C
+lbl_8056077C:
+	.asciz " ==>this error means that the firmware is for NDEV %s\n"
+	.balign 4
+
+
+.global lbl_805607B4
+lbl_805607B4:
+	.asciz "2.1 or later"
+	.balign 4
+
+
+.global lbl_805607C4
+lbl_805607C4:
+	.asciz "Nintendo RVL-WBC"
+	.balign 4
+	.asciz "connection is %s\n"
+	.balign 4
+	.asciz "Nintendo RVL-CNT"
+	.balign 4
+	.asciz "clean up command queue\n"
+	.asciz "WARNING: disconnection for device handle not assigned to channel.\n"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80560860
+lbl_80560860:
+	.asciz "HID Parser reports: %d\n"
+
+
+.global lbl_80560878
+lbl_80560878:
+	.asciz "WARNING: Overwritten the callback needed by KPAD.\n"
+	.balign 4
+
+
+.global lbl_805608AC
+lbl_805608AC:
+	.asciz "         Please call KPADSetSamplingCallback instead of WPADSetSamplingCallback.\n"
+	.balign 4
+
+
+.global lbl_80560900
+lbl_80560900:
+	.asciz "         Please call KPADSetConnectCallback instead of WPADSetConnectCallback.\n"
+
+
+.global lbl_80560950
+lbl_80560950:
+	# ROM: 0x55CA50
+	.4byte switch_8036CBE4
+	.4byte switch_8036CBE4
+	.4byte switch_8036CBE4
+	.4byte switch_8036CBEC
+	.4byte switch_8036CBEC
+	.4byte switch_8036CBEC
+	.4byte switch_8036CC0C
+	.4byte switch_8036CBF4
+	.4byte switch_8036CBEC
+	.4byte switch_8036CBFC
+	.4byte switch_8036CC04
+	.4byte switch_8036CC04
+	.4byte switch_8036CBEC
+
+
+.global lbl_80560984
+lbl_80560984:
+	# ROM: 0x55CA84
+	.4byte switch_8036CCD0
+	.4byte switch_8036CCD0
+	.4byte switch_8036CCD0
+	.4byte switch_8036CCD8
+	.4byte switch_8036CCD8
+	.4byte switch_8036CCD8
+	.4byte switch_8036CCF8
+	.4byte switch_8036CCE0
+	.4byte switch_8036CCD8
+	.4byte switch_8036CCE8
+	.4byte switch_8036CCF0
+	.4byte switch_8036CCF0
+	.4byte switch_8036CCD8
+
+
+.global lbl_805609B8
+lbl_805609B8:
+	# ROM: 0x55CAB8
+	.4byte switch_8036CFA4
+	.4byte switch_8036CFA4
+	.4byte switch_8036CFA4
+	.4byte switch_8036CFAC
+	.4byte switch_8036CFAC
+	.4byte switch_8036CFAC
+	.4byte switch_8036CFCC
+	.4byte switch_8036CFB4
+	.4byte switch_8036CFAC
+	.4byte switch_8036CFBC
+	.4byte switch_8036CFC4
+	.4byte switch_8036CFC4
+	.4byte switch_8036CFAC
+
+
+.global lbl_805609EC
+lbl_805609EC:
+	# ROM: 0x55CAEC
+	.4byte switch_8036FF58
+	.4byte switch_8036FF64
+	.4byte switch_8036FF70
+	.4byte switch_8036FF7C
+	.4byte switch_8036FF88
+	.4byte switch_8036FF94
+	.4byte switch_8036FFA0
+	.4byte switch_8036FFAC
+	.4byte switch_8036FFB8
+	.4byte switch_8036FFC4
+	.4byte switch_8036FFD0
+	.4byte switch_8036FFDC
+	.4byte switch_8036FFF4
+	.4byte switch_80370000
+	.4byte switch_8037000C
+	.4byte switch_8036FFE8
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+
+.global _wpadManageAlarm
+_wpadManageAlarm:
+	.skip 0x30
+.global __rvl_p_wpadcb
+__rvl_p_wpadcb:
+	.skip 0x10
+.global _wpadHandle2PortTable
+_wpadHandle2PortTable:
+	.skip 0x1000
+.global lbl_805DEAE0
+lbl_805DEAE0:
+	.skip 0x2720

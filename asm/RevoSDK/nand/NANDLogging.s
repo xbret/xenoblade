@@ -407,3 +407,25 @@ asyncRoutine:
 /* 80351868 0031AE28  7C 08 03 A6 */	mtlr r0
 /* 8035186C 0031AE2C  38 21 00 90 */	addi r1, r1, 0x90
 /* 80351870 0031AE30  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_805512B8
+lbl_805512B8:
+	.asciz "/shared2/test2/nanderr.log"
+	.balign 4
+
+
+.global lbl_805512D4
+lbl_805512D4:
+	.asciz "%d %04d/%02d/%02d %02d:%02d:%02d %s %s"
+	.balign 4
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+
+.global lbl_805D4040
+lbl_805D4040:
+	.skip 0x300

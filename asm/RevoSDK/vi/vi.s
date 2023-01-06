@@ -3056,3 +3056,320 @@ __VIResetRFIdle:
 /* 803669F4 0032FFB4  90 0D BA AC */	stw r0, lbl_80667C2C@sda21(r13)
 /* 803669F8 0032FFB8  38 60 00 01 */	li r3, 1
 /* 803669FC 0032FFBC  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8055FAA0
+lbl_8055FAA0:
+	.asciz "<< RVL_SDK - VI \trelease build: Feb 27 2009 10:04:46 (0x4302_145) >>"
+	.balign 4
+
+
+.global lbl_8055FAE8
+lbl_8055FAE8:
+	# ROM: 0x55BBE8
+	.4byte 0x060000F0
+	.4byte 0x00180019
+	.4byte 0x00030002
+	.4byte 0x0C0D0C0D
+	.4byte 0x02080207
+	.4byte 0x02080207
+	.4byte 0x020D01AD
+	.4byte 0x404769A2
+	.4byte 0x01757A00
+	.4byte 0x019C0600
+	.4byte 0x00F00018
+	.4byte 0x00180004
+	.4byte 0x00040C0C
+	.4byte 0x0C0C0208
+	.4byte 0x02080208
+	.4byte 0x0208020E
+	.4byte 0x01AD4047
+	.4byte 0x69A20175
+	.4byte 0x7A00019C
+	.4byte 0x0500011F
+	.4byte 0x00230024
+	.4byte 0x00010000
+	.4byte 0x0D0C0B0A
+	.4byte 0x026B026A
+	.4byte 0x0269026C
+	.4byte 0x027101B0
+	.4byte 0x404B6AAC
+	.4byte 0x017C8500
+	.4byte 0x01A40500
+	.4byte 0x011F0021
+	.4byte 0x00210002
+	.4byte 0x00020D0B
+	.4byte 0x0D0B026B
+	.4byte 0x026D026B
+	.4byte 0x026D0270
+	.4byte 0x01B0404B
+	.4byte 0x6AAC017C
+	.4byte 0x850001A4
+	.4byte 0x060000F0
+	.4byte 0x00180019
+	.4byte 0x00030002
+	.4byte 0x100F0E0D
+	.4byte 0x02060205
+	.4byte 0x02040207
+	.4byte 0x020D01AD
+	.4byte 0x404E70A2
+	.4byte 0x01757A00
+	.4byte 0x019C0600
+	.4byte 0x00F00018
+	.4byte 0x00180004
+	.4byte 0x0004100E
+	.4byte 0x100E0206
+	.4byte 0x02080206
+	.4byte 0x0208020E
+	.4byte 0x01AD404E
+	.4byte 0x70A20175
+	.4byte 0x7A00019C
+	.4byte 0x0C0001E0
+	.4byte 0x00300030
+	.4byte 0x00060006
+	.4byte 0x18181818
+	.4byte 0x040E040E
+	.4byte 0x040E040E
+	.4byte 0x041A01AD
+	.4byte 0x404769A2
+	.4byte 0x01757A00
+	.4byte 0x019C0C00
+	.4byte 0x01E0002C
+	.4byte 0x002C000A
+	.4byte 0x000A1818
+	.4byte 0x1818040E
+	.4byte 0x040E040E
+	.4byte 0x040E041A
+	.4byte 0x01AD4047
+	.4byte 0x69A8017B
+	.4byte 0x7A00019C
+	.4byte 0x060000F1
+	.4byte 0x00180019
+	.4byte 0x00010000
+	.4byte 0x0C0D0C0D
+	.4byte 0x02080207
+	.4byte 0x02080207
+	.4byte 0x020D01AD
+	.4byte 0x4047699F
+	.4byte 0x01727A00
+	.4byte 0x019C0C00
+	.4byte 0x01E00030
+	.4byte 0x00300006
+	.4byte 0x00061818
+	.4byte 0x1818040E
+	.4byte 0x040E040E
+	.4byte 0x040E041A
+	.4byte 0x01AD4047
+	.4byte 0x69B40187
+	.4byte 0x7A00019C
+	.4byte 0x0A000240
+	.4byte 0x003E003E
+	.4byte 0x00060006
+	.4byte 0x14141414
+	.4byte 0x04D804D8
+	.4byte 0x04D804D8
+	.4byte 0x04E201B0
+	.4byte 0x404B6AAC
+	.4byte 0x017C7A00
+	.4byte 0x019C0000
+
+
+.global lbl_8055FC8C
+lbl_8055FC8C:
+	# ROM: 0x55BD8C
+	.4byte 0x01F001DC
+	.4byte 0x01AE0174
+	.4byte 0x012900DB
+	.4byte 0x008E0046
+	.4byte 0x000C00E2
+	.4byte 0x00CB00C0
+	.4byte 0x00C400CF
+	.4byte 0x00DE00EC
+	.4byte 0x00FC0008
+	.4byte 0x000F0013
+	.4byte 0x0013000F
+	.4byte 0x000C0008
+	.4byte 0x00010000
+	.4byte 0x00000006
+	.4byte 0x02800210
+	.4byte 0x02100028
+	.4byte 0x00170280
+	.4byte 0x02100000
+	.4byte 0
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060000
+	.4byte 0x15161500
+	.4byte 0
+	.4byte 0x00000006
+	.4byte 0x02800210
+	.4byte 0x02100028
+	.4byte 0x00170280
+	.4byte 0x02100000
+	.4byte 0
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060808
+	.4byte 0x0A0C0A08
+	.4byte 0x08000000
+	.4byte 0x00000006
+	.4byte 0x02800108
+	.4byte 0x020C0028
+	.4byte 0x00170280
+	.4byte 0x020C0000
+	.4byte 0
+	.4byte 0x00010302
+	.4byte 0x0906030A
+	.4byte 0x03020906
+	.4byte 0x030A0902
+	.4byte 0x0306090A
+	.4byte 0x09020306
+	.4byte 0x090A0408
+	.4byte 0x0C100C08
+	.4byte 0x04000000
+	.4byte 0
+
+
+.global lbl_8055FD78
+lbl_8055FD78:
+	# ROM: 0x55BE78
+	.4byte func_80363F30
+	.4byte 0x0000007F
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8055FD88
+lbl_8055FD88:
+	# ROM: 0x55BE88
+	.4byte switch_80364420
+	.4byte switch_80364428
+	.4byte switch_80364430
+	.4byte switch_80364420
+	.4byte switch_80364428
+	.4byte switch_80364430
+	.4byte switch_80364420
+	.4byte switch_80364420
+	.4byte switch_80364420
+
+
+.global lbl_8055FDAC
+lbl_8055FDAC:
+	# ROM: 0x55BEAC
+	.4byte switch_803649A0
+	.4byte switch_803649AC
+	.4byte switch_80364A18
+	.4byte switch_80364A28
+	.4byte switch_803649BC
+	.4byte switch_803649CC
+	.4byte switch_80364A78
+	.4byte switch_80364A90
+	.4byte switch_803649F8
+	.4byte switch_80364A08
+	.4byte switch_80364A18
+	.4byte switch_80364A90
+	.4byte switch_80364A90
+	.4byte switch_80364A90
+	.4byte switch_80364A90
+	.4byte switch_80364A90
+	.4byte switch_80364A38
+	.4byte switch_80364A48
+	.4byte switch_80364A90
+	.4byte switch_80364A90
+	.4byte switch_803649DC
+	.4byte switch_803649E8
+	.4byte switch_80364A18
+	.4byte switch_80364A90
+	.4byte switch_80364A58
+	.4byte switch_80364A90
+	.4byte switch_80364A68
+	.4byte switch_80364A90
+	.4byte switch_80364A88
+	.4byte switch_80364A88
+	.4byte switch_80364A88
+	.4byte switch_80364A90
+	.4byte switch_80364A90
+	.4byte switch_80364A90
+	.4byte switch_80364A88
+
+
+.global lbl_8055FE38
+lbl_8055FE38:
+	# ROM: 0x55BF38
+	.4byte switch_80365134
+	.4byte switch_8036513C
+	.4byte switch_80365144
+	.4byte switch_80365134
+	.4byte switch_8036513C
+	.4byte switch_80365144
+	.4byte switch_80365134
+	.4byte switch_80365134
+	.4byte switch_80365134
+
+	.asciz "***************************************\n"
+	.balign 4
+	.asciz " ! ! ! C A U T I O N ! ! !             \n"
+	.balign 4
+	.asciz "This TV format \"DEBUG_PAL\" is only for \n"
+	.balign 4
+	.asciz "temporary solution until PAL DAC board \n"
+	.balign 4
+	.asciz "is available. Please do NOT use this   \n"
+	.balign 4
+	.asciz "mode in real games!!!                  \n"
+	.balign 4
+	.asciz "VIConfigure(): Tried to change mode from (%d) to (%d), which is forbidden\n"
+	.balign 4
+
+
+.global lbl_8055FFB0
+lbl_8055FFB0:
+	# ROM: 0x55C0B0
+	.4byte switch_80366538
+	.4byte switch_80366540
+	.4byte switch_80366544
+	.4byte switch_80366538
+	.4byte switch_80366540
+	.4byte switch_80366544
+	.4byte switch_80366538
+	.4byte switch_80366538
+	.4byte switch_80366538
+
+
+.global lbl_8055FFD4
+lbl_8055FFD4:
+	# ROM: 0x55C0D4
+	.4byte switch_80366914
+	.4byte switch_8036691C
+	.4byte switch_80366920
+	.4byte switch_80366914
+	.4byte switch_8036691C
+	.4byte switch_80366920
+	.4byte switch_80366914
+	.4byte switch_80366914
+	.4byte switch_80366914
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805DD900
+lbl_805DD900:
+	.skip 0x78
+.global lbl_805DD978
+lbl_805DD978:
+	.skip 0x78
+.global lbl_805DD9F0
+lbl_805DD9F0:
+	.skip 0x58
+.global lbl_805DDA48
+lbl_805DDA48:
+	.skip 0x28

@@ -72,3 +72,23 @@ float_80518A58:
 float_80518A5C:
 	# ROM: 0x514B5C
 	.float 1.0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054D7A0
+lbl_8054D7A0:
+	# ROM: 0x5498A0
+	.4byte lbl_8054D7C8
+	.4byte 0
+	.4byte __dt__Q36nw4hbm3lyt8DrawInfoFv
+
+.global lbl_8054D7AC
+lbl_8054D7AC:
+	.asciz "nw4hbm::lyt::DrawInfo"
+	.balign 4
+	.4byte 0
+
+.global lbl_8054D7C8
+lbl_8054D7C8:
+	.4byte lbl_8054D7AC
+	.4byte 0

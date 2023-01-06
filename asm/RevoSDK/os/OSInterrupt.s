@@ -621,3 +621,21 @@ __OSModuleInit:
 /* 8035918C 0032274C  90 03 30 C8 */	stw r0, 0x30c8(r3)
 /* 80359190 00322750  90 03 30 D0 */	stw r0, 0x30d0(r3)
 /* 80359194 00322754  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80552AB0
+lbl_80552AB0:
+	# ROM: 0x54EBB0
+	.4byte 0x00000100
+	.4byte 0x00000040
+	.4byte 0xF8000000
+	.4byte 0x00000200
+	.4byte 0x00000080
+	.4byte 0x00000010
+	.4byte 0x00003000
+	.4byte 0x00000020
+	.4byte 0x03FF8C00
+	.4byte 0x04000000
+	.4byte 0x00004000
+	.4byte 0xFFFFFFFF

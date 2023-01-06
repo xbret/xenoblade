@@ -672,3 +672,51 @@ lbl_80518B90:
 	.4byte 0x80000000
 	.4byte 0x467A0000
 	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_80550410
+lbl_80550410:
+	# ROM: 0x54C510
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x01010101
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x02020202
+	.4byte 0x00000201
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CE3B8
+lbl_805CE3B8:
+	.skip 0x4
+.global lbl_805CE3BC
+lbl_805CE3BC:
+	.skip 0x4

@@ -7098,3 +7098,545 @@ WUDiSetNotAckNumForHandle:
 /* 8037BFC8 00345588  38 A5 34 08 */	addi r5, r5, lbl_805E3408@l
 /* 8037BFCC 0034558C  7C 85 03 2E */	sthx r4, r5, r0
 /* 8037BFD0 00345590  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805622C8
+lbl_805622C8:
+	# ROM: 0x55E3C8
+	.4byte 0x05010905
+	.4byte 0xA1018510
+	.4byte 0x150026FF
+	.4byte 0x00750895
+	.4byte 0x010600FF
+	.4byte 0x09019100
+	.4byte 0x85119501
+	.4byte 0x09019100
+	.4byte 0x85129502
+	.4byte 0x09019100
+	.4byte 0x85139501
+	.4byte 0x09019100
+	.4byte 0x85149501
+	.4byte 0x09019100
+	.4byte 0x85159501
+	.4byte 0x09019100
+	.4byte 0x85169515
+	.4byte 0x09019100
+	.4byte 0x85179506
+	.4byte 0x09019100
+	.4byte 0x85189515
+	.4byte 0x09019100
+	.4byte 0x85199501
+	.4byte 0x09019100
+	.4byte 0x851A9501
+	.4byte 0x09019100
+	.4byte 0x85209506
+	.4byte 0x09018100
+	.4byte 0x85219515
+	.4byte 0x09018100
+	.4byte 0x85229504
+	.4byte 0x09018100
+	.4byte 0x85309502
+	.4byte 0x09018100
+	.4byte 0x85319505
+	.4byte 0x09018100
+	.4byte 0x8532950A
+	.4byte 0x09018100
+	.4byte 0x85339511
+	.4byte 0x09018100
+	.4byte 0x85349515
+	.4byte 0x09018100
+	.4byte 0x85359515
+	.4byte 0x09018100
+	.4byte 0x85369515
+	.4byte 0x09018100
+	.4byte 0x85379515
+	.4byte 0x09018100
+	.4byte 0x853D9515
+	.4byte 0x09018100
+	.4byte 0x853E9515
+	.4byte 0x09018100
+	.4byte 0x853F9515
+	.4byte 0x09018100
+	.4byte 0xC0000000
+	.4byte 0x05009A0E
+	.4byte 0x00010000
+	.4byte 0
+	.4byte 0x70990800
+	.4byte 0xB4000000
+	.4byte 0x8843D107
+	.4byte 0x090C0843
+	.4byte 0xA0621923
+	.4byte 0xDB013380
+	.4byte 0x7CF788F8
+	.4byte 0x287680F7
+	.4byte 0x17FF4378
+	.4byte 0xEB701923
+	.4byte 0xDB013387
+	.4byte 0x7CF7BCFB
+	.4byte 0x0B60A37B
+	.4byte 0x01490B60
+	.4byte 0x90F796FB
+	.4byte 0xD81D0800
+	.4byte 0x00F004F8
+	.4byte 0x002379F7
+	.4byte 0xE3FA0000
+	.4byte 0x00B50023
+	.4byte 0x11490B60
+	.4byte 0x1D21C903
+	.4byte 0x0B607D20
+	.4byte 0x80010138
+	.4byte 0xFDD10E4B
+	.4byte 0x0E4A1360
+	.4byte 0x47200021
+	.4byte 0x96F796FF
+	.4byte 0x46200021
+	.4byte 0x96F792FF
+	.4byte 0x0A4A1368
+	.4byte 0x0A480340
+	.4byte 0x13600A4A
+	.4byte 0x13680A48
+	.4byte 0x03401360
+	.4byte 0x094A1368
+	.4byte 0x09480340
+	.4byte 0x136000BD
+	.4byte 0x24800E00
+	.4byte 0x81030FFE
+	.4byte 0x5C000F00
+	.4byte 0x60FC0E00
+	.4byte 0xFEFF0000
+	.4byte 0xFCFC0E00
+	.4byte 0xFF9F0000
+	.4byte 0x30FC0E00
+	.4byte 0x7FFF0000
+	.4byte 0x0720BC65
+	.4byte 0x01008442
+	.4byte 0x09D28442
+	.4byte 0x09D12184
+	.4byte 0x5A000083
+	.4byte 0xF074FF09
+	.4byte 0x0C084322
+	.4byte 0x00610000
+	.4byte 0x83F040FC
+	.4byte 0
+	.4byte 0x23CC9F01
+	.4byte 0x006FF0E4
+	.4byte 0xFC03287D
+	.4byte 0xD1243C62
+	.4byte 0x01002820
+	.4byte 0x00E0608D
+	.4byte 0x23682504
+	.4byte 0x12010020
+	.4byte 0x1C201C24
+	.4byte 0xE0B02126
+	.4byte 0x742F0000
+	.4byte 0x86F018FD
+	.4byte 0x214F3B60
+	.4byte 0x30360800
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_805624E4
+lbl_805624E4:
+	.asciz "App_MEMalloc\n"
+	.balign 4
+
+
+.global lbl_805624F4
+lbl_805624F4:
+	.asciz "App_MEMfree\n"
+	.balign 4
+
+
+.global lbl_80562504
+lbl_80562504:
+	.asciz "__wudSyncFlushCallback() : %d, Sync: %d\n"
+	.balign 4
+
+.global lbl_80562530
+lbl_80562530:
+	.asciz "Nintendo RVL-CNT"
+	.balign 4
+
+
+.global lbl_80562544
+lbl_80562544:
+	.asciz "Nintendo RVL-WBC"
+	.balign 4
+	.asciz "Found the registered WBC in database\n"
+	.balign 4
+	.asciz "Removed WBC data\n"
+	.balign 4
+	.asciz "new entry index is %d\n"
+	.balign 4
+
+
+.global lbl_805625AC
+lbl_805625AC:
+	.asciz "%d devices is stored into SC.\n"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_805625D0
+lbl_805625D0:
+	.asciz "NANDOpen. [%d]\n"
+
+
+.global lbl_805625E0
+lbl_805625E0:
+	.asciz "NANDSeek. [%d]\n"
+
+
+.global lbl_805625F0
+lbl_805625F0:
+	.asciz "NANDWrite. [%d]\n"
+	.balign 4
+
+
+.global lbl_80562604
+lbl_80562604:
+	.asciz "NANDClose. [%d]\n"
+	.balign 4
+
+
+.global lbl_80562618
+lbl_80562618:
+	.asciz "Pairing Done\n"
+	.balign 4
+	.asciz "write stored link key\n"
+	.balign 4
+	.asciz "addr : %02x:%02x:%02x:%02x:%02x:%02x\n"
+	.balign 4
+	.asciz "key  : %02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x\n"
+	.asciz "Cancel searching because 4 connections exist.\n"
+	.balign 4
+	.asciz "/title/00010004/52464e4a/data/RPHealth.dat"
+	.balign 4
+	.asciz "WbcSaveData: %s\n"
+	.balign 4
+	.asciz "WBC to WiiFit\n"
+	.balign 4
+	.asciz " %02x %02x %02x %02x %02x %02x\n"
+	.asciz " %02x %02x %02x %02x %02x %02x %02x %02x\n"
+	.balign 4
+	.asciz " %02x%02x%02x%02x\n"
+	.balign 4
+	.asciz "WARNING: Illigal status\n"
+	.balign 4
+
+
+.global lbl_805627BC
+lbl_805627BC:
+	.asciz "__wudDeleteFlushCallback() : %d, Delete: %d\n"
+	.balign 4
+	.asciz "hci_version   : %02x\n"
+	.balign 4
+	.asciz "hci_revision  : %04x\n"
+	.balign 4
+	.asciz "lmp_version   : %02x\n"
+	.balign 4
+	.asciz "lmp_subversion: %04x\n"
+	.balign 4
+	.asciz "manufacturer  : %04x\n"
+	.balign 4
+	.asciz " ==> 2045 firmware ver.002.003.014.%d\n"
+	.balign 4
+
+
+.global lbl_8056288C
+lbl_8056288C:
+	.asciz "__wudInitFlushCallback() : %d, Init: %d\n"
+	.balign 4
+	.asciz "name : %s\n"
+	.balign 4
+	.asciz "Nintendo RVL-CNT-01"
+	.asciz "Error: the workarea for synchronizing WBC pairing information is not allocated.\n"
+	.balign 4
+	.4byte 0
+	.asciz "NANDInit. [%d]\n"
+	.asciz "CRC  = %d:%08x\n"
+	.asciz "CRC' = %d:%08x\n"
+	.asciz "CRC Error on WiiFit SaveData.\n"
+	.balign 4
+	.asciz "WiiFit does not register WBC yet.\n"
+	.balign 4
+	.asciz "LinkKey saved in WiiFit SaveData is invalid.\n"
+	.balign 4
+	.asciz "WBC from WiiFit\n"
+	.balign 4
+
+
+.global lbl_805629E8
+lbl_805629E8:
+	.asciz "__wudShutdownFlushCallback() : %d, Shutdown: %d\n"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80562A20
+lbl_80562A20:
+	.asciz "__wudClearControlBlock\n"
+
+
+.global lbl_80562A38
+lbl_80562A38:
+	.asciz "BTA_Init() is started\n"
+	.balign 4
+
+
+.global lbl_80562A50
+lbl_80562A50:
+	.asciz "BTA_Init() is done\n"
+
+
+.global lbl_80562A64
+lbl_80562A64:
+	.asciz "WUDShutdown()\n"
+	.balign 4
+
+
+.global lbl_80562A74
+lbl_80562A74:
+	.asciz "WUDSetSyncDeviceCallback\n"
+	.balign 4
+	.asciz "WUDSetClearDeviceCallback\n"
+	.balign 4
+	.4byte 0
+	.asciz "WUDStartSyncSpDevice()\n"
+	.asciz "WUDStartClearDevice()\n"
+	.balign 4
+
+
+.global lbl_80562AE0
+lbl_80562AE0:
+	.asciz "WUDSetDisableChannel()\n"
+
+
+.global lbl_80562AF8
+lbl_80562AF8:
+	.asciz "BTM_SetAfhChannels() : %d\n"
+	.balign 4
+
+
+.global lbl_80562B14
+lbl_80562B14:
+	.asciz "WUDSetHidRecvCallback()\n"
+	.balign 4
+
+
+.global lbl_80562B30
+lbl_80562B30:
+	.asciz "WUDSetHidConnCallback()\n"
+	.balign 4
+
+
+.global lbl_80562B4C
+lbl_80562B4C:
+	.asciz "Initialize the BCM2045 firmware complete.\n"
+	.balign 4
+	.asciz "Reset again!\n"
+	.balign 4
+	.asciz "Install the patches\n"
+	.balign 4
+	.asciz "Download the patch codes [%d]\n"
+	.balign 4
+	.asciz "RemovePatch Callback\n"
+	.balign 4
+
+
+.global lbl_80562BD8
+lbl_80562BD8:
+	.asciz "SuperPeekPoke Callback\n"
+
+
+.global lbl_80562BF0
+lbl_80562BF0:
+	.asciz "RemovePatch\n"
+	.balign 4
+	.asciz "__wudAppendRuntimePatch()\n"
+	.balign 4
+	.asciz "SuperPeekPoke\n"
+	.balign 4
+
+
+.global lbl_80562C2C
+lbl_80562C2C:
+	.asciz "start __wudInitSub()\n"
+	.balign 4
+	.asciz "BTA_DmAddDevice(): %d\n"
+	.balign 4
+	.4byte 0
+	.asciz "BTA_HhAddDev()\n"
+	.asciz "WUDiRemoveDevice : \n"
+	.balign 4
+	.asciz " handle : %d,  addr : %02x:%02x:%02x:%02x:%02x:%02x\n"
+	.balign 4
+	.asciz "remove device info from database.\n"
+	.balign 4
+	.asciz "BTA_HhRemoveDev()\n"
+	.balign 4
+	.asciz " handle : %d\n"
+	.balign 4
+	.asciz "BTA_DmRemoveDevice(): %d\n"
+	.balign 4
+
+
+.global lbl_80562D24
+lbl_80562D24:
+	.asciz "WARNING: USB_CLOSE_FAILURE!\n"
+	.balign 4
+	.asciz "__wudCleanupStackCallback: "
+	.asciz "BTA_ENABLE_EVT\n"
+	.asciz "host : %02x:%02x:%02x:%02x:%02x:%02x\n"
+	.balign 4
+	.asciz "BTA_DISABLE_EVT\n"
+	.balign 4
+	.asciz "BTA_DM_PIN_REQ_EVT\n"
+	.asciz "BTA_DM_AUTH_CMPL_EVT\n"
+	.balign 4
+	.asciz "  addr : %02x:%02x:%02x:%02x:%02x:%02x\n"
+	.asciz "  key  : %02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x\n"
+	.balign 4
+	.asciz "  result = %d\n"
+	.balign 4
+	.asciz "BTA_DM_AUTHORIZE_EVT\n"
+	.balign 4
+	.asciz "BTA_DM_LINK_UP_EVT\n"
+	.asciz "   addr : %02x:%02x:%02x:%02x:%02x:%02x\n"
+	.balign 4
+	.asciz "%s --> %02x:%02x:%02x:%02x:%02x:%02x\n"
+	.balign 4
+	.asciz "not paired"
+	.balign 4
+	.asciz "4 links exist"
+	.balign 4
+	.asciz "BTA_DM_LINK_DOWN_EVT\n"
+	.balign 4
+	.asciz "result: %d\n"
+	.asciz "this device in not paired\n"
+	.balign 4
+	.asciz "WARNING: link num count is reset.\n"
+	.balign 4
+	.asciz "BTA_DM_SIG_STRENGTH_EVT\n"
+	.balign 4
+	.asciz "BTA_DM_BUSY_LEVEL_EVT\n"
+	.balign 4
+
+
+.global lbl_80562FA0
+lbl_80562FA0:
+	# ROM: 0x55F0A0
+	.4byte switch_8037AE1C
+	.4byte switch_8037AEC8
+	.4byte switch_8037AEE4
+	.4byte switch_8037AF84
+	.4byte switch_8037B090
+	.4byte switch_8037B0A0
+	.4byte switch_8037B18C
+	.4byte switch_8037B2E0
+	.4byte switch_8037B2F0
+	.asciz "INQUIRY RESULT: %02x:%02x:%02x:%02x:%02x:%02x   %02x%02x%02x   %d\n"
+	.balign 4
+	.asciz "INQUIRY_COMPLETED\n"
+	.balign 4
+	.asciz "DISCOVER RESULT:  %02x:%02x:%02x:%02x:%02x:%02x   %s (%04x)\n"
+	.balign 4
+	.asciz "DISCOVER COMPLETED\n"
+	.asciz "SEARCH CANCEL\n\n"
+	.asciz "Warning: Search Callback returns invalid event\n"
+	.asciz "__wudProcSyncEvent()\n"
+	.balign 4
+	.asciz "__wudProcDeleteEvent()\n"
+	.asciz "MODULE FATAL ERROR\n"
+
+
+.global lbl_805630F4
+lbl_805630F4:
+	.asciz "__wudDeviceStatusEventStackCallback\n"
+	.balign 4
+
+
+.global lbl_8056311C
+lbl_8056311C:
+	.asciz "---- WARNING: USB FATAL ERROR! ----\n"
+	.balign 4
+	.asciz "BTM_CB_EVT_RETURN_LINK_KEYS\n"
+	.balign 4
+	.asciz "BD_ADDR:  %02x:%02x:%02x:%02x:%02x:%02x\n"
+	.balign 4
+	.asciz "LINKKEY: %02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x\n"
+	.balign 4
+	.asciz "this device is not stored in NAND\n"
+	.balign 4
+	.asciz "   LAST: %02x:%02x:%02x:%02x:%02x:%02x\n"
+	.asciz "BTM_CB_EVT_READ_STORED_LINK_KEYS\n"
+	.balign 4
+	.asciz "  status: %d  max_keys: %d  num_keys: %d\n"
+	.balign 4
+	.asciz "BTM_CB_EVT_WRITE_STORED_LINK_KEYS\n"
+	.balign 4
+	.asciz "  status: %d  num_keys: %d\n"
+	.asciz "BTM_CB_EVT_DELETE_STORED_LINK_KEYS\n"
+	.asciz "WARNING: no entry is deleted\n"
+	.balign 4
+	.asciz "Unknown event\n"
+	.balign 4
+	.asciz "__wudPowerMangeEventStackCallback\n"
+	.balign 4
+	.asciz "hci_status = %d\n"
+	.balign 4
+	.asciz "Unknown device is connected and changes the connection type!!!!\n"
+	.balign 4
+	.asciz " addr = %02x:%02x:%02x:%02x:%02x:%02x,  status = %d\n"
+	.balign 4
+	.asciz "_WUDEnableTestMode\n"
+	.asciz "_WUDStartSyncDevice()\n"
+	.balign 4
+	.asciz "_WUDDeleteStoreDevice()\n"
+	.balign 4
+	.asciz "dev number = %d\n"
+	.balign 4
+	.asciz "Not Found"
+	.balign 4
+	.asciz "Found the registered WBC\n"
+	.balign 4
+	.asciz "Removed\n"
+	.balign 4
+	.asciz "Not Found WBC\n"
+	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global __rvl_wudcb
+__rvl_wudcb:
+	.skip 0x750
+.global lbl_805E19D0
+lbl_805E19D0:
+	.skip 0x108
+.global lbl_805E1AD8
+lbl_805E1AD8:
+	.skip 0x60
+.global lbl_805E1B38
+lbl_805E1B38:
+	.skip 0x468
+.global lbl_805E1FA0
+lbl_805E1FA0:
+	.skip 0xA0
+.global lbl_805E2040
+lbl_805E2040:
+	.skip 0x1A0
+.global lbl_805E21E0
+lbl_805E21E0:
+	.skip 0x1208
+.global lbl_805E33E8
+lbl_805E33E8:
+	.skip 0x20
+.global lbl_805E3408
+lbl_805E3408:
+	.skip 0x20

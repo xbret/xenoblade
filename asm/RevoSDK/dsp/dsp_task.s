@@ -635,3 +635,23 @@ __DSP_remove_task:
 /* 80309D8C 002D334C  80 03 00 3C */	lwz r0, 0x3c(r3)
 /* 80309D90 002D3350  90 04 00 3C */	stw r0, 0x3c(r4)
 /* 80309D94 002D3354  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80549678
+lbl_80549678:
+	.asciz "DSP is booting task: 0x%08X\n"
+	.balign 4
+	.asciz "__DSP_boot_task()  : IRAM MMEM ADDR: 0x%08X\n"
+	.balign 4
+	.asciz "__DSP_boot_task()  : IRAM DSP ADDR : 0x%08X\n"
+	.balign 4
+	.asciz "__DSP_boot_task()  : IRAM LENGTH   : 0x%08X\n"
+	.balign 4
+	.asciz "__DSP_boot_task()  : DRAM MMEM ADDR: 0x%08X\n"
+	.balign 4
+	.asciz "__DSP_boot_task()  : Start Vector  : 0x%08X\n"
+	.balign 4
+	.asciz "__DSP_add_task() : Added task    : 0x%08X\n"
+	.balign 4
+	.4byte 0

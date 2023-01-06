@@ -2770,3 +2770,163 @@ DVDLowClearCoverInterrupt:
 __DVDLowTestAlarm:
 /* 80312CA0 002DC260  38 60 00 00 */	li r3, 0
 /* 80312CA4 002DC264  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054A6C0
+lbl_8054A6C0:
+	.asciz "(doTransactionCallback) Error - context mangled!\n"
+	.balign 4
+	.asciz "(doCoverCallback) Error - context mangled!\n"
+
+
+.global lbl_8054A720
+lbl_8054A720:
+	.asciz "(DVDLowFinish) Error: IOS_Close failed\n"
+	.asciz "IPCCltInit returned error: %d\n"
+	.balign 4
+	.asciz "(ddrAllocAligned32) Not enough space to allocate %d bytes\n"
+	.balign 4
+	.asciz "Allocation of diCommand blocks failed\n"
+	.balign 4
+	.asciz "Allocation of pathBuf failed\n"
+	.balign 4
+	.asciz "(DVDLowInit) Error: IOS_Open failed - pathname '/dev/di' does not exist\n"
+	.balign 4
+	.asciz "(DVDLowInit) Error: IOS_Open failed - calling thread lacks permission\n"
+	.balign 4
+	.asciz "(DVDLowInit) Error: IOS_Open failed - connection limit has been reached\n"
+	.balign 4
+	.asciz "(DVDLowInit) IOS_Open failed, errorcode = %d\n"
+	.balign 4
+	.4byte 0
+	.asciz "(newContext) ERROR: freeDvdContext.inUse (#%d) is true\n"
+	.asciz "(newContext) Now spinning in infinite loop\n"
+	.4byte 0
+	.asciz "(newContext) Something overwrote the context magic - spinning \n"
+	.asciz "@@@@@@ WARNING - Calling DVDLowReadDiskId with NULL ptr\n"
+	.balign 4
+	.asciz "@@@ (DVDLowReadDiskID) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "(DVDLowOpenPartition) eTicket memory is unaligned\n"
+	.balign 4
+	.4byte 0
+	.asciz "(DVDLowOpenPartition) certificates memory is unaligned\n"
+	.asciz "@@@ (DVDLowOpenPartition) IOS_IoctlvAsync returned error: %d\n"
+	.balign 4
+	.asciz "DVDLowOpenPartitionWithTmdAndTicket"
+	.asciz "(%s) eTicket memory is unaligned\n"
+	.balign 4
+	.asciz "(%s) tmd parameter cannot be NULL\n"
+	.balign 4
+	.asciz "(%s) tmd memory is unaligned\n"
+	.balign 4
+	.asciz "(%s) eTicket parameter cannot be NULL\n"
+	.balign 4
+	.4byte 0
+	.asciz "DVDLowOpenPartitionWithTmdAndTicketView"
+	.asciz "(%s) eTicketView parameter cannot be NULL\n"
+	.balign 4
+	.asciz "(%s) eTicketView memory is unaligned\n"
+	.balign 4
+	.asciz "DVDLowGetNoDiscBufferSizes"
+	.balign 4
+	.asciz "(%s) Error: NULL pointer argument\n"
+	.balign 4
+	.asciz "(%s) numTmdBytes memory is unaligned\n"
+	.balign 4
+	.asciz "(%s) certificates memory is unaligned\n"
+	.balign 4
+	.asciz "@@@ (%s) IOS_IoctlvAsync returned error: %d\n"
+	.balign 4
+	.asciz "DVDLowGetNoDiscOpenPartitionParams"
+	.balign 4
+	.asciz "(%s) pointer argument is unaligned\n"
+	.asciz "DVDLowNoDiscOpenPartition"
+	.balign 4
+	.asciz "@@@ (DVDLowClosePartition) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowUnencryptedRead) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowStopMotor) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowWaitForCoverClose) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowInquiry) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowRequestError) IOS_IoctlAsync returned error: %d\n"
+	.asciz "(DVDLowSetSpinupFlag): Synch functions can't be called in callbacks\n"
+	.balign 4
+	.asciz "@@@ (DVDLowNotifyReset) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowReset) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowAudioBufferConfig) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "(DVDLowGetCoverStatus): Synch functions can't be called in callbacks\n"
+	.balign 4
+	.asciz "@@@ (DVDLowGetCoverStatus) IOS_Ioctl returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowReadDVD) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowReadDVDConfig) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowReadDvdCopyright) IOS_IoctlAsync returned error: %d\n"
+	.asciz "@@@ (DVDLowReadDvdPhysical) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowReadDvdDiscKey) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowReportKey) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowOffset) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowStopLaser) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowReadDiskBca) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowSerMeasControl) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowRequestDiscStatus) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowRequestRetryNumber) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowSetMaxRotation) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "(DVDLowRead): ERROR - destAddr buffer is not 32 byte aligned\n"
+	.balign 4
+	.asciz "@@@ (DVDLowRead) IOS_IoctlAsync returned error: %d\n"
+	.asciz "@@@ (DVDLowSeek) IOS_IoctlAsync returned error: %d\n"
+	.asciz "(DVDLowGetCoverReg): Synch functions can't be called in callbacks\n"
+	.balign 4
+	.asciz "@@@ (DVDLowGetCoverReg) IOS_Ioctl returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowPrepareCoverRegsiter) IOS_IoctlAsync returned error: %d\n"
+	.asciz "@@@ (DVDLowPrepareStatusRegsiter) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowPrepareControlRegister) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowClearCoverInterrupt) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+	.asciz "@@@ (DVDLowEnableDvdVideo) IOS_IoctlAsync returned error: %d\n"
+	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CCC60
+lbl_805CCC60:
+	.skip 0x80
+.global lbl_805CCCE0
+lbl_805CCCE0:
+	.skip 0x20
+.global lbl_805CCD00
+lbl_805CCD00:
+	.skip 0x20
+.global lbl_805CCD20
+lbl_805CCD20:
+	.skip 0xC0
+.global lbl_805CCDE0
+lbl_805CCDE0:
+	.skip 0x20
+.global lbl_805CCE00
+lbl_805CCE00:
+	.skip 0x20

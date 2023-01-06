@@ -135,3 +135,15 @@ float_80518668:
 	# ROM: 0x514768
 	.float 1.0
 	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global homebutton_FrameController_typestr
+homebutton_FrameController_typestr:
+	.asciz "homebutton::FrameController"
+	.4byte 0
+
+.global __RTTI__homebutton_FrameController
+__RTTI__homebutton_FrameController:
+	.4byte homebutton_FrameController_typestr
+	.4byte 0

@@ -719,3 +719,30 @@ __DVDStoreErrorCode:
 /* 803100FC 002D96BC  7C 08 03 A6 */	mtlr r0
 /* 80310100 002D96C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80310104 002D96C4  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80549D30
+lbl_80549D30:
+	# ROM: 0x545E30
+	.asciz "/shared2/test2/dvderror.dat"
+
+
+.global lbl_80549D4C
+lbl_80549D4C:
+	# ROM: 0x545E4C
+	.asciz "/shared2/test2"
+	.balign 4
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CC9E0
+lbl_805CC9E0:
+	.skip 0x8C
+.global lbl_805CCA6C
+lbl_805CCA6C:
+	.skip 0xD4
+.global lbl_805CCB40
+lbl_805CCB40:
+	.skip 0x100

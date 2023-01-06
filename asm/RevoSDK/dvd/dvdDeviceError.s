@@ -207,3 +207,85 @@ lbl_8050E3E0:
 	.4byte lbl_8054A654
 	.4byte lbl_8054A690
 	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054A528
+lbl_8054A528:
+	#"\n\n\nエラーコード００１。\n不明なデバイスが見つかりました。"
+.global lbl_8054A528
+lbl_8054A528:
+	.4byte 0x0A0A0A83
+	.4byte 0x47838981
+	.4byte 0x5B835281
+	.4byte 0x5B836882
+	.4byte 0x4F824F82
+	.4byte 0x5081420A
+	.4byte 0x957396BE
+	.4byte 0x82C88366
+	.4byte 0x836F8343
+	.4byte 0x835882AA
+	.4byte 0x8CA982C2
+	.4byte 0x82A982E8
+	.4byte 0x82DC82B5
+	.4byte 0x82BD8142
+	.4byte 0
+
+.global lbl_8054A564
+lbl_8054A564:
+	.asciz "\n\n\nError #001,\nunauthorized device has been detected."
+	.balign 4
+
+.global lbl_8054A59C
+lbl_8054A59C:
+	#"\n\n\nFehler #001:\nEs wurde eine unzulässige Komponente\nentdeckt."
+	.4byte 0x0A0A0A46
+	.4byte 0x65686C65
+	.4byte 0x72202330
+	.4byte 0x30313A0A
+	.4byte 0x45732077
+	.4byte 0x75726465
+	.4byte 0x2065696E
+	.4byte 0x6520756E
+	.4byte 0x7A756CE4
+	.asciz "ssige Komponente\nentdeckt."
+	.balign 4
+
+.global lbl_8054A5DC
+lbl_8054A5DC:
+	#.asciz "\n\n\nErreur 001:\nun dispositif non autorisé a été détecté."
+	.4byte 0x0A0A0A45
+	.4byte 0x72726575
+	.4byte 0x72203030
+	.4byte 0x313A0A75
+	.4byte 0x6E206469
+	.4byte 0x73706F73
+	.4byte 0x69746966
+	.4byte 0x206E6F6E
+	.4byte 0x20617574
+	.4byte 0x6F726973
+	.4byte 0xE9206120
+	.4byte 0xE974E920
+	.4byte 0x64E97465
+	.4byte 0x6374E92E
+	.4byte 0
+
+.global lbl_8054A618
+lbl_8054A618:
+	.asciz "\n\n\nError 001:\nSe ha detectado un dispositivo no\nautorizado."
+	
+.global lbl_8054A654
+lbl_8054A654:
+	.asciz "\n\n\nErrore #001:\nrilevato un dispositivo non autorizzato."
+	.balign 4
+
+.global lbl_8054A690
+lbl_8054A690:
+	.asciz "\n\n\nFout #001:\nongeoorloofd onderdeel gevonden."
+	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CCC40
+lbl_805CCC40:
+	.skip 0x20

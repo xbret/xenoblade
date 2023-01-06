@@ -637,3 +637,13 @@ __OSCancelInternalAlarms:
 /* 8035366C 0031CC2C  7C 08 03 A6 */	mtlr r0
 /* 80353670 0031CC30  38 21 00 20 */	addi r1, r1, 0x20
 /* 80353674 0031CC34  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805517A8
+lbl_805517A8:
+	# ROM: 0x54D8A8
+	.4byte OnReset
+	.4byte 0xFFFFFFFF
+	.4byte 0
+	.4byte 0

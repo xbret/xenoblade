@@ -502,3 +502,36 @@ __OSCacheInit:
 /* 803545FC 0031DBBC  7C 08 03 A6 */	mtlr r0
 /* 80354600 0031DBC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80354604 0031DBC4  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80551838
+lbl_80551838:
+	.asciz ">>> L2 INVALIDATE : SHOULD NEVER HAPPEN\n"
+	.balign 4
+	.4byte 0
+	.asciz "Machine check received\n"
+	.asciz "HID2 = 0x%x   SRR1 = 0x%x\n"
+	.balign 4
+	.4byte 0
+	.asciz "Machine check was not DMA/locked cache related\n"
+	.asciz "DMAErrorHandler(): An error occurred while processing DMA.\n"
+	.asciz "The following errors have been detected and cleared :\n"
+	.balign 4
+	.asciz "\t- Requested a locked cache tag that was already in the cache\n"
+	.balign 4
+	.asciz "\t- DMA attempted to access normal cache\n"
+	.balign 4
+	.asciz "\t- DMA missed in data cache\n"
+	.balign 4
+	.asciz "\t- DMA queue overflowed\n"
+	.balign 4
+	.asciz "L1 i-caches initialized\n"
+	.balign 4
+	.asciz "L1 d-caches initialized\n"
+	.balign 4
+	.asciz "L2 cache initialized\n"
+	.balign 4
+	.asciz "Locked cache machine check handler installed\n"
+	.balign 4
+	.4byte 0

@@ -1807,3 +1807,15 @@ double_80518B30:
 	# ROM: 0x514C30
 	.4byte 0x43300000
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CD7E0
+lbl_805CD7E0:
+	.skip 0x4
+.global lbl_805CD7E4
+lbl_805CD7E4:
+	.skip 0x4
+.global lbl_805CD7E8
+lbl_805CD7E8:
+	.skip 0x10

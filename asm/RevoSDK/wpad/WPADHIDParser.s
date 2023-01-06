@@ -4600,3 +4600,139 @@ lbl_80518E08:
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFF000000
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80560A30
+lbl_80560A30:
+	# ROM: 0x55CB30
+	.4byte __a1_20_status_report
+	.4byte __a1_21_user_data
+	.4byte __a1_22_ack
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_30_data_type
+	.4byte __a1_31_data_type
+	.4byte __a1_32_data_type
+	.4byte __a1_33_data_type
+	.4byte __a1_34_data_type
+	.4byte __a1_35_data_type
+	.4byte __a1_36_data_type
+	.4byte __a1_37_data_type
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_unused_report
+	.4byte __a1_3d_data_type
+	.4byte __a1_3e_data_type
+	.4byte __a1_3f_data_type
+
+.global lbl_80560AB0
+lbl_80560AB0:
+	.asciz "detaching extension during initialization.\n"
+	.asciz "Dpd Setting is ok.\n"
+	.asciz "Dpd Setting is broken.\n"
+	.asciz "Old Firmware uses default values because it has no Dpd Setting.\n"
+	.balign 4
+	.asciz "x = %lf, y = %lf\n"
+	.balign 4
+	.asciz "difaveX = %lf, difaveY = %lf\n"
+	.balign 4
+	.asciz "deltaX  = %lf, deltaY  = %lf\n"
+	.balign 4
+	.asciz "_wpadCalibrationX = %lf, _wpadCalibrationY = %lf\n"
+	.balign 4
+	.asciz "centX  = %lf, centY  = %lf\n"
+	.asciz "_wpadRolag  = %lf\n"
+	.balign 4
+	.asciz "Acc is ok.\n"
+	.asciz "Acc is broken.\n"
+	.asciz "0G:  accX = %d,  accY = %d,  accZ = %d\n"
+	.asciz "1G:  accX = %d,  accY = %d,  accZ = %d\n"
+	.asciz "Volume: %d,   Motor: %d\n"
+	.balign 4
+	.asciz "check sum error.\n"
+	.balign 4
+	.asciz "0G:  fsaccX = %d,  fsaccY = %d,  fsaccZ = %d\n"
+	.balign 4
+	.asciz "1G:  fsaccX = %d,  fsaccY = %d,  fsaccZ = %d\n"
+	.balign 4
+	.asciz "FS:  X = %d,  X max = %d,  X min = %d\n"
+	.balign 4
+	.asciz "FS:  Y = %d,  Y max = %d,  Y min = %d\n"
+	.balign 4
+	.asciz "CL:  X = %d,  X max = %d,  X min = %d\n"
+	.balign 4
+	.asciz "CL:  Y = %d,  Y max = %d,  Y min = %d\n"
+	.balign 4
+	.asciz "CR:  X = %d,  X max = %d,  X min = %d\n"
+	.balign 4
+	.asciz "CR:  Y = %d,  Y max = %d,  Y min = %d\n"
+	.balign 4
+	.asciz "LR:  L = %d,  R = %d\n"
+	.balign 4
+	.asciz "devId: %d, subId: %d\n"
+	.balign 4
+	.asciz "type : %d\n"
+	.balign 4
+	.asciz "mode : %d\n"
+	.balign 4
+	.asciz "last : %d\n"
+	.balign 4
+	.asciz "Keep calibration!\n"
+	.balign 4
+	.asciz "Recalibration!\n"
+
+
+.global lbl_80560E68
+lbl_80560E68:
+	.asciz "Received report 20\n"
+
+
+.global lbl_80560E7C
+lbl_80560E7C:
+	.asciz "initialize attachment\n"
+	.balign 4
+	.asciz "read error happens!\n"
+	.balign 4
+	.asciz "base addr: %08x\n"
+	.balign 4
+	.asciz "length   : %d\n"
+	.balign 4
+	.asciz "i2c = %04x\n"
+	.asciz "enc = %d\n"
+	.balign 4
+	.asciz "Access to extension register.\n"
+	.balign 4
+	.asciz "Decode!!!!\n"
+	.asciz "    len = %d, addr = %04x\n"
+	.balign 4
+	.asciz "received data is out of range!\n"
+	.asciz "Received ack!\n"
+	.balign 4
+	.asciz "ack --> report ID = %02x, error code = %d\n"
+	.balign 4
+	.asciz "invalid ack!\n"
+	.balign 4
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805E1200
+lbl_805E1200:
+	.skip 0x50
+.global lbl_805E1250
+lbl_805E1250:
+	.skip 0x30

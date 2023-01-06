@@ -2735,16 +2735,16 @@ read_kpad_stick:
 /* 803471EC 003107AC  41 82 00 4C */	beq .L_80347238
 /* 803471F0 003107B0  38 00 00 00 */	li r0, 0
 /* 803471F4 003107B4  98 03 05 55 */	stb r0, 0x555(r3)
-/* 803471F8 003107B8  3C E0 80 5D */	lis r7, double_805CFC10@ha
-/* 803471FC 003107BC  3C C0 80 5D */	lis r6, double_805CFC30@ha
+/* 803471F8 003107B8  3C E0 80 5D */	lis r7, lbl_805CFC10@ha
+/* 803471FC 003107BC  3C C0 80 5D */	lis r6, lbl_805CFC30@ha
 /* 80347200 003107C0  C8 02 BD 68 */	lfd f0, double_8066C0E8@sda21(r2)
-/* 80347204 003107C4  38 A7 FC 10 */	addi r5, r7, double_805CFC10@l
-/* 80347208 003107C8  38 66 FC 30 */	addi r3, r6, double_805CFC30@l
+/* 80347204 003107C4  38 A7 FC 10 */	addi r5, r7, lbl_805CFC10@l
+/* 80347208 003107C8  38 66 FC 30 */	addi r3, r6, lbl_805CFC30@l
 /* 8034720C 003107CC  98 0D B8 42 */	stb r0, lbl_806679C2@sda21(r13)
 /* 80347210 003107D0  B0 0D B8 40 */	sth r0, lbl_806679C0@sda21(r13)
 /* 80347214 003107D4  98 0D B8 43 */	stb r0, lbl_806679C3@sda21(r13)
-/* 80347218 003107D8  D8 07 FC 10 */	stfd f0, double_805CFC10@l(r7)
-/* 8034721C 003107DC  D8 06 FC 30 */	stfd f0, double_805CFC30@l(r6)
+/* 80347218 003107D8  D8 07 FC 10 */	stfd f0, lbl_805CFC10@l(r7)
+/* 8034721C 003107DC  D8 06 FC 30 */	stfd f0, lbl_805CFC30@l(r6)
 /* 80347220 003107E0  D8 05 00 08 */	stfd f0, 8(r5)
 /* 80347224 003107E4  D8 03 00 08 */	stfd f0, 8(r3)
 /* 80347228 003107E8  D8 05 00 10 */	stfd f0, 0x10(r5)
@@ -2785,11 +2785,11 @@ read_kpad_stick:
 /* 803472A0 00310860  2C 03 00 00 */	cmpwi r3, 0
 /* 803472A4 00310864  90 7E 00 48 */	stw r3, 0x48(r30)
 /* 803472A8 00310868  41 80 01 C4 */	blt .L_8034746C
-/* 803472AC 0031086C  3C 80 80 5D */	lis r4, double_805CFC30@ha
+/* 803472AC 0031086C  3C 80 80 5D */	lis r4, lbl_805CFC30@ha
 /* 803472B0 00310870  88 0D B8 43 */	lbz r0, lbl_806679C3@sda21(r13)
 /* 803472B4 00310874  C0 2D 99 50 */	lfs f1, float_80665AD0@sda21(r13)
-/* 803472B8 00310878  38 64 FC 30 */	addi r3, r4, double_805CFC30@l
-/* 803472BC 0031087C  C8 04 FC 30 */	lfd f0, double_805CFC30@l(r4)
+/* 803472B8 00310878  38 64 FC 30 */	addi r3, r4, lbl_805CFC30@l
+/* 803472BC 0031087C  C8 04 FC 30 */	lfd f0, lbl_805CFC30@l(r4)
 /* 803472C0 00310880  2C 00 00 00 */	cmpwi r0, 0
 /* 803472C4 00310884  C0 42 BD 3C */	lfs f2, float_8066C0BC@sda21(r2)
 /* 803472C8 00310888  38 DE 00 10 */	addi r6, r30, 0x10
@@ -2804,7 +2804,7 @@ read_kpad_stick:
 /* 803472EC 003108AC  FC C1 01 32 */	fmul f6, f1, f4
 /* 803472F0 003108B0  39 1E 00 20 */	addi r8, r30, 0x20
 /* 803472F4 003108B4  FC 85 38 24 */	fdiv f4, f5, f7
-/* 803472F8 003108B8  D8 84 FC 30 */	stfd f4, double_805CFC30@l(r4)
+/* 803472F8 003108B8  D8 84 FC 30 */	stfd f4, lbl_805CFC30@l(r4)
 /* 803472FC 003108BC  FC 81 00 F2 */	fmul f4, f1, f3
 /* 80347300 003108C0  C8 BE 00 10 */	lfd f5, 0x10(r30)
 /* 80347304 003108C4  FC 61 00 B2 */	fmul f3, f1, f2
@@ -2821,11 +2821,11 @@ read_kpad_stick:
 /* 80347330 003108F0  D8 43 00 18 */	stfd f2, 0x18(r3)
 /* 80347334 003108F4  41 82 01 38 */	beq .L_8034746C
 /* 80347338 003108F8  A0 AD B8 40 */	lhz r5, lbl_806679C0@sda21(r13)
-/* 8034733C 003108FC  3C 80 80 5D */	lis r4, double_805CFC10@ha
+/* 8034733C 003108FC  3C 80 80 5D */	lis r4, lbl_805CFC10@ha
 /* 80347340 00310900  C9 62 BD 50 */	lfd f11, double_8066C0D0@sda21(r2)
-/* 80347344 00310904  38 64 FC 10 */	addi r3, r4, double_805CFC10@l
+/* 80347344 00310904  38 64 FC 10 */	addi r3, r4, lbl_805CFC10@l
 /* 80347348 00310908  38 A5 00 01 */	addi r5, r5, 1
-/* 8034734C 0031090C  C8 84 FC 10 */	lfd f4, double_805CFC10@l(r4)
+/* 8034734C 0031090C  C8 84 FC 10 */	lfd f4, lbl_805CFC10@l(r4)
 /* 80347350 00310910  54 A9 04 3E */	clrlwi r9, r5, 0x10
 /* 80347354 00310914  91 21 00 14 */	stw r9, 0x14(r1)
 /* 80347358 00310918  38 09 FF FF */	addi r0, r9, -1
@@ -2858,7 +2858,7 @@ read_kpad_stick:
 /* 803473C4 00310984  90 01 00 0C */	stw r0, 0xc(r1)
 /* 803473C8 00310988  C8 41 00 10 */	lfd f2, 0x10(r1)
 /* 803473CC 0031098C  FC C6 58 28 */	fsub f6, f6, f11
-/* 803473D0 00310990  D9 24 FC 10 */	stfd f9, double_805CFC10@l(r4)
+/* 803473D0 00310990  D9 24 FC 10 */	stfd f9, lbl_805CFC10@l(r4)
 /* 803473D4 00310994  C8 61 00 08 */	lfd f3, 8(r1)
 /* 803473D8 00310998  FC 84 50 28 */	fsub f4, f4, f10
 /* 803473DC 0031099C  FC 42 50 28 */	fsub f2, f2, f10
@@ -2898,9 +2898,9 @@ read_kpad_stick:
 /* 80347464 00310A24  38 00 FF FC */	li r0, -4
 /* 80347468 00310A28  90 1E 00 48 */	stw r0, 0x48(r30)
 .L_8034746C:
-/* 8034746C 00310A2C  3C 60 80 5D */	lis r3, double_805CFC30@ha
-/* 80347470 00310A30  C8 03 FC 30 */	lfd f0, double_805CFC30@l(r3)
-/* 80347474 00310A34  38 63 FC 30 */	addi r3, r3, double_805CFC30@l
+/* 8034746C 00310A2C  3C 60 80 5D */	lis r3, lbl_805CFC30@ha
+/* 80347470 00310A30  C8 03 FC 30 */	lfd f0, lbl_805CFC30@l(r3)
+/* 80347474 00310A34  38 63 FC 30 */	addi r3, r3, lbl_805CFC30@l
 /* 80347478 00310A38  D8 1E 00 28 */	stfd f0, 0x28(r30)
 /* 8034747C 00310A3C  C8 03 00 08 */	lfd f0, 8(r3)
 /* 80347480 00310A40  D8 1E 00 30 */	stfd f0, 0x30(r30)
@@ -4524,3 +4524,36 @@ KPADiSamplingCallback:
 /* 80348B3C 003120FC  7C 08 03 A6 */	mtlr r0
 /* 80348B40 00312100  38 21 00 60 */	addi r1, r1, 0x60
 /* 80348B44 00312104  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80550490
+lbl_80550490:
+	.asciz "<< RVL_SDK - KPAD \trelease build: Jun 22 2009 18:32:13 (0x4302_145) >>"
+	.balign 4
+
+
+.global lbl_805504D8
+lbl_805504D8:
+	# ROM: 0x54C5D8
+	.4byte 0x00010302
+	.4byte 0x00040105
+	.4byte 0x00070108
+	.4byte 0x000B010B
+	.4byte 0x000C000C
+	.4byte 0x000A000A
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CE600
+lbl_805CE600:
+	.skip 0x15E0
+.global lbl_805CFBE0
+lbl_805CFBE0:
+	.skip 0x30
+.global lbl_805CFC10
+lbl_805CFC10:
+	.skip 0x20
+.global lbl_805CFC30
+lbl_805CFC30:
+	.skip 0x20

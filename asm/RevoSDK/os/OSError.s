@@ -428,3 +428,40 @@ __OSUnhandledException:
 /* 80355500 0031EAC0  7C 08 03 A6 */	mtlr r0
 /* 80355504 0031EAC4  38 21 00 30 */	addi r1, r1, 0x30
 /* 80355508 0031EAC8  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80551C50
+lbl_80551C50:
+	.asciz " in \"%s\" on line %d.\n"
+	.balign 4
+	.asciz "\nAddress:      Back Chain    LR Save\n"
+	.balign 4
+	.asciz "0x%08x:   0x%08x    0x%08x\n"
+	.asciz "Non-recoverable Exception %d"
+	.balign 4
+	.asciz "Unhandled Exception %d"
+	.balign 4
+	.asciz "\nDSISR = 0x%08x                   DAR  = 0x%08x\n"
+	.balign 4
+	.asciz "TB = 0x%016llx\n"
+	.asciz "\nInstruction at 0x%x (read from SRR0) attempted to access invalid address 0x%x (read from DAR)\n"
+	.asciz "\nAttempted to fetch instruction from invalid address 0x%x (read from SRR0)\n"
+	.asciz "\nInstruction at 0x%x (read from SRR0) attempted to access unaligned address 0x%x (read from DAR)\n"
+	.balign 4
+	.asciz "\nProgram exception : Possible illegal instruction/operation at or around 0x%x (read from SRR0)\n"
+	.asciz "AI DMA Address =   0x%04x%04x\n"
+	.balign 4
+	.asciz "ARAM DMA Address = 0x%04x%04x\n"
+	.balign 4
+	.asciz "DI DMA Address =   0x%08x\n"
+	.balign 4
+	.asciz "\nLast interrupt (%d): SRR0 = 0x%08x  TB = 0x%016llx\n"
+	.balign 4
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805D43B0
+lbl_805D43B0:
+	.skip 0x50

@@ -903,3 +903,18 @@ float_80518688:
 float_8051868C:
 	# ROM: 0x51478C
 	.float 10.0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CD5B0
+lbl_805CD5B0:
+	.skip 0x8
+.global lbl_805CD5B8
+lbl_805CD5B8:
+	.skip 0xC0
+.global lbl_805CD678
+lbl_805CD678:
+	.skip 0xC0
+.global lbl_805CD738
+lbl_805CD738:
+	.skip 0x10

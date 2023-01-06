@@ -506,3 +506,153 @@ func_80339000:
 /* 803390FC 003026BC  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80339100 003026C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80339104 003026C4  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8054ECA0
+lbl_8054ECA0:
+	# ROM: 0x54ADA0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80336970
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_803369F0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80336A30
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80336A10
+
+
+.global __vt__8054ECD0
+__vt__8054ECD0:
+	.4byte lbl_8054ED50
+	.4byte 0
+	.4byte func_80338800
+	.4byte func_80338B60
+	.4byte func_80338B70
+	.4byte func_80338B80
+	.4byte func_80338B90
+	.4byte func_80338BB0
+	.4byte func_80338BD0
+	.4byte func_80338BE0
+	.4byte func_80338BF0
+	.4byte func_80338C00
+	.4byte func_80338C10
+	.4byte func_80338C20
+	.4byte func_80338C30
+	.4byte func_80338C50
+	.4byte func_80338C70
+	.4byte func_80338D10
+	.4byte func_80338D20
+	.4byte func_80338D70
+	.4byte func_80338E70
+	.4byte func_80338F20
+
+#dol offset: 0x54ae28
+.global lbl_8054ED28
+lbl_8054ED28:
+	.asciz "nw4hbm::ut::ResFont"
+
+.global lbl_8054ED3C
+lbl_8054ED3C:
+	.4byte lbl_8054EDA8
+	.4byte 0
+	.4byte lbl_8054ED88
+	.4byte 0
+	.4byte 0
+
+.global lbl_8054ED50
+lbl_8054ED50:
+	.4byte lbl_8054ED28
+	.4byte lbl_8054ED3C
+
+.global lbl_8054ED58
+lbl_8054ED58:
+	.asciz "nw4hbm::ut::detail::ResFontBase"
+
+.global lbl_8054ED78
+lbl_8054ED78:
+	.4byte lbl_8054EDA8
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global lbl_8054ED88
+lbl_8054ED88:
+	.4byte lbl_8054ED58
+	.4byte lbl_8054ED78
+
+.global lbl_8054ED90
+lbl_8054ED90:
+	.asciz "nw4hbm::ut::Font"
+	.balign 4
+	.4byte 0
+
+.global lbl_8054EDA8
+lbl_8054EDA8:
+	.4byte lbl_8054ED90
+	.4byte 0
+
+.global lbl_8054EDB0
+lbl_8054EDB0:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80336A10
+	.4byte 0
+
+
+.global lbl_8054EDC0
+lbl_8054EDC0:
+	# ROM: 0x54AEC0
+	.4byte lbl_8054ED88
+	.4byte 0
+	.4byte func_80338B10
+	.4byte func_80338B60
+	.4byte func_80338B70
+	.4byte func_80338B80
+	.4byte func_80338B90
+	.4byte func_80338BB0
+	.4byte func_80338BD0
+	.4byte func_80338BE0
+	.4byte func_80338BF0
+	.4byte func_80338C00
+	.4byte func_80338C10
+	.4byte func_80338C20
+	.4byte func_80338C30
+	.4byte func_80338C50
+	.4byte func_80338C70
+	.4byte func_80338D10
+	.4byte func_80338D20
+	.4byte func_80338D70
+	.4byte func_80338E70
+	.4byte func_80338F20
+
+
+.global __vt__8054EE18
+__vt__8054EE18:
+	.4byte lbl_8054EDA8
+	.4byte 0
+	.4byte func_80333F60
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0

@@ -122,3 +122,84 @@ __sinit_lyt_bounding_cpp:
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
 .4byte __sinit_lyt_bounding_cpp
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054D6B8
+lbl_8054D6B8:
+	# ROM: 0x5497B8
+	.4byte lbl_8054D748
+	.4byte 0
+	.4byte __dt__Q36nw4hbm3lyt8BoundingFv
+	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv
+	.4byte func_80331CD0
+	.4byte func_80331FD0
+	.4byte DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo
+	.4byte func_803320E0
+	.4byte func_80332170
+	.4byte func_80331AC0
+	.4byte func_80331AD0
+	.4byte func_80331AE0
+	.4byte func_80331B10
+	.4byte func_80331B40
+	.4byte func_80331B50
+	.4byte func_80331B60
+	.4byte func_80331C10
+	.4byte func_80332230
+	.4byte func_80332250
+	.4byte func_803322E0
+	.4byte func_80332300
+	.4byte func_803323E0
+	.4byte func_80332460
+	.4byte func_80332710
+	.4byte func_80332520
+
+.global lbl_8054D71C
+lbl_8054D71C:
+	.asciz "nw4hbm::lyt::Bounding"
+	.balign 4
+
+.global lbl_8054D734
+lbl_8054D734:
+	.4byte lbl_8054D798
+	.4byte 0
+	.4byte lbl_8054D770
+	.4byte 0
+	.4byte 0
+
+.global lbl_8054D748
+lbl_8054D748:
+	.4byte lbl_8054D71C
+	.4byte lbl_8054D734
+
+.global lbl_8054D750
+lbl_8054D750:
+	.asciz "nw4hbm::lyt::Pane"
+	.balign 4
+
+.global lbl_8054D764
+lbl_8054D764:
+	.4byte lbl_8054D798
+	.4byte 0
+	.4byte 0
+
+.global lbl_8054D770
+lbl_8054D770:
+	.4byte lbl_8054D750
+	.4byte lbl_8054D764
+
+.global lbl_8054D778
+lbl_8054D778:
+	.asciz "nw4hbm::lyt::detail::PaneBase"
+	.balign 4
+
+.global lbl_8054D798
+lbl_8054D798:
+	.4byte lbl_8054D778
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CD788
+lbl_805CD788:
+	.skip 0x8

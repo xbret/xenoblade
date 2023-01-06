@@ -152,3 +152,11 @@ TPLGetGXTexObjFromPalette:
 /* 803629D4 0032BF94  7C 08 03 A6 */	mtlr r0
 /* 803629D8 0032BF98  38 21 00 30 */	addi r1, r1, 0x30
 /* 803629DC 0032BF9C  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8055F240
+lbl_8055F240:
+	.asciz "invalid version number for texture palette"
+	.balign 4
+	.4byte 0

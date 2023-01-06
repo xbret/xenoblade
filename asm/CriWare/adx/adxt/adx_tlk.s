@@ -2526,6 +2526,20 @@ lbl_80519990:
 	.asciz "E04041902 ADXT_SetCbDec: parameter error"
 	.asciz "E02080860 adxt_SetKeyString: parameter error"
 
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_80563720
+lbl_80563720:
+	# ROM: 0x55F820
+	.4byte 0x00000019
+
+
+.global lbl_80563724
+lbl_80563724:
+	# ROM: 0x55F824
+	.4byte 0x00000001
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805E8570

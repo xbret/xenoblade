@@ -198,9 +198,9 @@ __ct__Q210homebutton9RemoteSpkFPv:
 /* 80321C38 002EB1F8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80321C3C 002EB1FC  39 61 00 20 */	addi r11, r1, 0x20
 /* 80321C40 002EB200  4B F9 85 11 */	bl _savegpr_26
-/* 80321C44 002EB204  3C A0 80 55 */	lis r5, lbl_8054C4F8@ha
+/* 80321C44 002EB204  3C A0 80 55 */	lis r5, __vt__homebutton_RemoteSpk@ha
 /* 80321C48 002EB208  2C 04 00 00 */	cmpwi r4, 0
-/* 80321C4C 002EB20C  38 A5 C4 F8 */	addi r5, r5, lbl_8054C4F8@l
+/* 80321C4C 002EB20C  38 A5 C4 F8 */	addi r5, r5, __vt__homebutton_RemoteSpk@l
 /* 80321C50 002EB210  90 A3 01 F0 */	stw r5, 0x1f0(r3)
 /* 80321C54 002EB214  3C A0 80 5D */	lis r5, lbl_805CD748@ha
 /* 80321C58 002EB218  7C 7A 1B 78 */	mr r26, r3
@@ -258,9 +258,9 @@ __dt__Q210homebutton9RemoteSpkFv:
 /* 80321D10 002EB2D0  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80321D14 002EB2D4  7C 7C 1B 78 */	mr r28, r3
 /* 80321D18 002EB2D8  41 82 00 58 */	beq .L_80321D70
-/* 80321D1C 002EB2DC  3C A0 80 55 */	lis r5, lbl_8054C4F8@ha
+/* 80321D1C 002EB2DC  3C A0 80 55 */	lis r5, __vt__homebutton_RemoteSpk@ha
 /* 80321D20 002EB2E0  3C 80 80 5D */	lis r4, lbl_805CD748@ha
-/* 80321D24 002EB2E4  38 A5 C4 F8 */	addi r5, r5, lbl_8054C4F8@l
+/* 80321D24 002EB2E4  38 A5 C4 F8 */	addi r5, r5, __vt__homebutton_RemoteSpk@l
 /* 80321D28 002EB2E8  90 A3 01 F0 */	stw r5, 0x1f0(r3)
 /* 80321D2C 002EB2EC  38 00 00 00 */	li r0, 0
 /* 80321D30 002EB2F0  90 04 D7 48 */	stw r0, lbl_805CD748@l(r4)
@@ -658,3 +658,29 @@ isPlayReady__Q210homebutton9RemoteSpkCFl:
 /* 803222A0 002EB860  7C 00 1B 78 */	or r0, r0, r3
 /* 803222A4 002EB864  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 803222A8 002EB868  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__homebutton_RemoteSpk
+__vt__homebutton_RemoteSpk:
+	# ROM: 0x5485F8
+	.4byte __RTTI__homebutton_RemoteSpk
+	.4byte 0
+	.4byte __dt__Q210homebutton9RemoteSpkFv
+
+.global homebutton_RemoteSpk_typestr
+homebutton_RemoteSpk_typestr:
+	.asciz "homebutton::RemoteSpk"
+	.balign 4
+	.4byte 0
+
+.global __RTTI__homebutton_RemoteSpk
+__RTTI__homebutton_RemoteSpk:
+	.4byte homebutton_RemoteSpk_typestr
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CD748
+lbl_805CD748:
+	.skip 0x8

@@ -7216,419 +7216,709 @@ lbl_804FA7F8:
 	.4byte 0x00000036
 	.4byte 0x00000037
 
+
+#"TALK1"
 .global lbl_804FA8D4
 lbl_804FA8D4:
-	.4byte 0x00540041
-	.4byte 0x004C004B
-	.4byte 0x00310000
+	.2byte 0x0054
+	.2byte 0x0041
+	.2byte 0x004C
+	.2byte 0x004B
+	.2byte 0x0031
+	.2byte 0x0000
 
+#"EVT1"
 .global lbl_804FA8E0
 lbl_804FA8E0:
-	.4byte 0x00450056
-	.4byte 0x00540031
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x0031
 	.4byte 0
 
+#"EVT2"
 .global lbl_804FA8EC
 lbl_804FA8EC:
-	.4byte 0x00450056
-	.4byte 0x00540032
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x0032
 	.4byte 0
 
+#"EVT3"
 .global lbl_804FA8F8
 lbl_804FA8F8:
-	.4byte 0x00450056
-	.4byte 0x00540033
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x0033
 	.4byte 0
 
+#"EVT4"
 .global lbl_804FA904
 lbl_804FA904:
-	.4byte 0x00450056
-	.4byte 0x00540034
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x0034
 	.4byte 0
 
+#"EVT5"
 .global lbl_804FA910
 lbl_804FA910:
-	.4byte 0x00450056
-	.4byte 0x00540035
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x0035
 	.4byte 0
 
+#"EVT6"
 .global lbl_804FA91C
 lbl_804FA91C:
-	.4byte 0x00450056
-	.4byte 0x00540036
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x0036
 	.4byte 0
 
+#"EVT7"
 .global lbl_804FA928
 lbl_804FA928:
-	.4byte 0x00450056
-	.4byte 0x00540037
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x0037
 	.4byte 0
 
+#"EVT8"
 .global lbl_804FA934
 lbl_804FA934:
-	.4byte 0x00450056
-	.4byte 0x00540038
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x0038
 	.4byte 0
 
+#"EVT_EXT1"
 .global lbl_804FA940
 lbl_804FA940:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540031
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0031
 	.4byte 0
 
+#"EVT_EXT2"
 .global lbl_804FA954
 lbl_804FA954:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540032
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0032
 	.4byte 0
 
+#"EVT_EXT3"
 .global lbl_804FA968
 lbl_804FA968:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540033
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0033
 	.4byte 0
 
+#"EVT_EXT4"
 .global lbl_804FA97C
 lbl_804FA97C:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540034
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0034
 	.4byte 0
 
+#"EVT_EXT5"
 .global lbl_804FA990
 lbl_804FA990:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540035
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0035
 	.4byte 0
 
+#"EVT_EXT6"
 .global lbl_804FA9A4
 lbl_804FA9A4:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540036
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0036
 	.4byte 0
 
+#"EVT_EXT7"
 .global lbl_804FA9B8
 lbl_804FA9B8:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540037
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0037
 	.4byte 0
 
+#"EVT_EXT8"
 .global lbl_804FA9CC
 lbl_804FA9CC:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540038
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0038
 	.4byte 0
 
+#"EVT_EXT9"
 .global lbl_804FA9E0
 lbl_804FA9E0:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540039
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0039
 	.4byte 0
 
+#"EVT_EXT10"
 .global lbl_804FA9F4
 lbl_804FA9F4:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540031
-	.4byte 0x00300000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0031
+	.2byte 0x0030
+	.2byte 0x0000
 
+#"EVT_EXT11"
 .global lbl_804FAA08
 lbl_804FAA08:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540031
-	.4byte 0x00310000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0031
+	.2byte 0x0031
+	.2byte 0x0000
 
+#"EVT_EXT12"
 .global lbl_804FAA1C
 lbl_804FAA1C:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540031
-	.4byte 0x00320000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0031
+	.2byte 0x0032
+	.2byte 0x0000
 
+#"EVT_EXT13"
 .global lbl_804FAA30
 lbl_804FAA30:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540031
-	.4byte 0x00330000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0031
+	.2byte 0x0033
+	.2byte 0x0000
 
+#"EVT_EXT14"
 .global lbl_804FAA44
 lbl_804FAA44:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540031
-	.4byte 0x00340000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0031
+	.2byte 0x0034
+	.2byte 0x0000
 
+#"EVT_EXT15"
 .global lbl_804FAA58
 lbl_804FAA58:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540031
-	.4byte 0x00350000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0031
+	.2byte 0x0035
+	.2byte 0x0000
 
+#"EVT_EXT16"
 .global lbl_804FAA6C
 lbl_804FAA6C:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540031
-	.4byte 0x00360000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0031
+	.2byte 0x0036
+	.2byte 0x0000
 
+#"EVT_EXT17"
 .global lbl_804FAA80
 lbl_804FAA80:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540031
-	.4byte 0x00370000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0031
+	.2byte 0x0037
+	.2byte 0x0000
 
+#"EVT_EXT18"
 .global lbl_804FAA94
 lbl_804FAA94:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540031
-	.4byte 0x00380000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0031
+	.2byte 0x0038
+	.2byte 0x0000
 
+#"EVT_EXT19"
 .global lbl_804FAAA8
 lbl_804FAAA8:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540031
-	.4byte 0x00390000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0031
+	.2byte 0x0039
+	.2byte 0x0000
 
+#"EVT_EXT20"
 .global lbl_804FAABC
 lbl_804FAABC:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540032
-	.4byte 0x00300000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0032
+	.2byte 0x0030
+	.2byte 0x0000
 
+#"EVT_EXT21"
 .global lbl_804FAAD0
 lbl_804FAAD0:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540032
-	.4byte 0x00310000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0032
+	.2byte 0x0031
+	.2byte 0x0000
 
+#"EVT_EXT22"
 .global lbl_804FAAE4
 lbl_804FAAE4:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540032
-	.4byte 0x00320000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0032
+	.2byte 0x0032
+	.2byte 0x0000
 
+#"EVT_EXT23"
 .global lbl_804FAAF8
 lbl_804FAAF8:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540032
-	.4byte 0x00330000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0032
+	.2byte 0x0033
+	.2byte 0x0000
 
+#"EVT_EXT24"
 .global lbl_804FAB0C
 lbl_804FAB0C:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540032
-	.4byte 0x00340000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0032
+	.2byte 0x0034
+	.2byte 0x0000
 
+#"EVT_EXT25"
 .global lbl_804FAB20
 lbl_804FAB20:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540032
-	.4byte 0x00350000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0032
+	.2byte 0x0035
+	.2byte 0x0000
 
+#"EVT_EXT26"
 .global lbl_804FAB34
 lbl_804FAB34:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540032
-	.4byte 0x00360000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0032
+	.2byte 0x0036
+	.2byte 0x0000
 
+#"EVT_EXT27"
 .global lbl_804FAB48
 lbl_804FAB48:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540032
-	.4byte 0x00370000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0032
+	.2byte 0x0037
+	.2byte 0x0000
 
+#"EVT_EXT28"
 .global lbl_804FAB5C
 lbl_804FAB5C:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540032
-	.4byte 0x00380000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0032
+	.2byte 0x0038
+	.2byte 0x0000
 
+#"EVT_EXT29"
 .global lbl_804FAB70
 lbl_804FAB70:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540032
-	.4byte 0x00390000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0032
+	.2byte 0x0039
+	.2byte 0x0000
 
+#"EVT_EXT30"
 .global lbl_804FAB84
 lbl_804FAB84:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540033
-	.4byte 0x00300000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0033
+	.2byte 0x0030
+	.2byte 0x0000
 
+#"EVT_EXT31"
 .global lbl_804FAB98
 lbl_804FAB98:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540033
-	.4byte 0x00310000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0033
+	.2byte 0x0031
+	.2byte 0x0000
 
+#"EVT_EXT32"
 .global lbl_804FABAC
 lbl_804FABAC:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540033
-	.4byte 0x00320000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0033
+	.2byte 0x0032
+	.2byte 0x0000
 
+#"EVT_EXT33"
 .global lbl_804FABC0
 lbl_804FABC0:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540033
-	.4byte 0x00330000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0033
+	.2byte 0x0033
+	.2byte 0x0000
 
+#"EVT_EXT34"
 .global lbl_804FABD4
 lbl_804FABD4:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540033
-	.4byte 0x00340000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0033
+	.2byte 0x0034
+	.2byte 0x0000
 
+#"EVT_EXT35"
 .global lbl_804FABE8
 lbl_804FABE8:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540033
-	.4byte 0x00350000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0033
+	.2byte 0x0035
+	.2byte 0x0000
 
+#"EVT_EXT36"
 .global lbl_804FABFC
 lbl_804FABFC:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540033
-	.4byte 0x00360000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0033
+	.2byte 0x0036
+	.2byte 0x0000
 
+#"EVT_EXT37"
 .global lbl_804FAC10
 lbl_804FAC10:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540033
-	.4byte 0x00370000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0033
+	.2byte 0x0037
+	.2byte 0x0000
 
+#"EVT_EXT38"
 .global lbl_804FAC24
 lbl_804FAC24:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540033
-	.4byte 0x00380000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0033
+	.2byte 0x0038
+	.2byte 0x0000
 
+#"EVT_EXT39"
 .global lbl_804FAC38
 lbl_804FAC38:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540033
-	.4byte 0x00390000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0033
+	.2byte 0x0039
+	.2byte 0x0000
 
+#"EVT_EXT40"
 .global lbl_804FAC4C
 lbl_804FAC4C:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540034
-	.4byte 0x00300000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0034
+	.2byte 0x0030
+	.2byte 0x0000
 
+#"EVT_EXT41"
 .global lbl_804FAC60
 lbl_804FAC60:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540034
-	.4byte 0x00310000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0034
+	.2byte 0x0031
+	.2byte 0x0000
 
+#"EVT_EXT42"
 .global lbl_804FAC74
 lbl_804FAC74:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540034
-	.4byte 0x00320000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0034
+	.2byte 0x0032
+	.2byte 0x0000
 
+#"EVT_EXT43"
 .global lbl_804FAC88
 lbl_804FAC88:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540034
-	.4byte 0x00330000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0034
+	.2byte 0x0033
+	.2byte 0x0000
 
+#"EVT_EXT44"
 .global lbl_804FAC9C
 lbl_804FAC9C:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540034
-	.4byte 0x00340000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0034
+	.2byte 0x0034
+	.2byte 0x0000
 
+#"EVT_EXT45"
 .global lbl_804FACB0
 lbl_804FACB0:
-	.4byte 0x00450056
-	.4byte 0x0054005F
-	.4byte 0x00450058
-	.4byte 0x00540034
-	.4byte 0x00350000
+	.2byte 0x0045
+	.2byte 0x0056
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0045
+	.2byte 0x0058
+	.2byte 0x0054
+	.2byte 0x0034
+	.2byte 0x0035
+	.2byte 0x0000
 	.4byte 0
 
 
@@ -7692,78 +7982,121 @@ lbl_804FACC8:
 	.4byte lbl_804FACB0
 	.4byte 0
 
+#"WAIT"
 .global lbl_804FADA8
 lbl_804FADA8:
-	.4byte 0x00570041
-	.4byte 0x00490054
+	.2byte 0x0057
+	.2byte 0x0041
+	.2byte 0x0049
+	.2byte 0x0054
 	.4byte 0
 
+#"RUBY"
 .global lbl_804FADB4
 lbl_804FADB4:
-	.4byte 0x00520055
-	.4byte 0x00420059
+	.2byte 0x0052
+	.2byte 0x0055
+	.2byte 0x0042
+	.2byte 0x0059
 	.4byte 0
 
+#"TRUST"
 .global lbl_804FADC0
 lbl_804FADC0:
-	.4byte 0x00540052
-	.4byte 0x00550053
-	.4byte 0x00540000
+	.2byte 0x0054
+	.2byte 0x0052
+	.2byte 0x0055
+	.2byte 0x0053
+	.2byte 0x0054
+	.2byte 0x0000
 
+#"TYPE"
 .global lbl_804FADCC
 lbl_804FADCC:
-	.4byte 0x00540059
-	.4byte 0x00500045
+	.2byte 0x0054
+	.2byte 0x0059
+	.2byte 0x0050
+	.2byte 0x0045
 	.4byte 0
 
+#"LINE"
 .global lbl_804FADD8
 lbl_804FADD8:
-	.4byte 0x004C0049
-	.4byte 0x004E0045
+	.2byte 0x004C
+	.2byte 0x0049
+	.2byte 0x004E
+	.2byte 0x0045
 	.4byte 0
 
+#"SEL2"
 .global lbl_804FADE4
 lbl_804FADE4:
-	.4byte 0x00530045
-	.4byte 0x004C0032
+	.2byte 0x0053
+	.2byte 0x0045
+	.2byte 0x004C
+	.2byte 0x0032
 	.4byte 0
 
+#"FADE"
 .global lbl_804FADF0
 lbl_804FADF0:
-	.4byte 0x00460041
-	.4byte 0x00440045
+	.2byte 0x0046
+	.2byte 0x0041
+	.2byte 0x0044
+	.2byte 0x0045
 	.4byte 0
 
+#"QST_START"
 .global lbl_804FADFC
 lbl_804FADFC:
-	.4byte 0x00510053
-	.4byte 0x0054005F
-	.4byte 0x00530054
-	.4byte 0x00410052
-	.4byte 0x00540000
+	.2byte 0x0051
+	.2byte 0x0053
+	.2byte 0x0054
+	.2byte 0x005F
+	.2byte 0x0053
+	.2byte 0x0054
+	.2byte 0x0041
+	.2byte 0x0052
+	.2byte 0x0054
+	.2byte 0x0000
 
+#"PRESENT"
 .global lbl_804FAE10
 lbl_804FAE10:
-	.4byte 0x00500052
-	.4byte 0x00450053
-	.4byte 0x0045004E
-	.4byte 0x00540000
+	.2byte 0x0050
+	.2byte 0x0052
+	.2byte 0x0045
+	.2byte 0x0053
+	.2byte 0x0045
+	.2byte 0x004E
+	.2byte 0x0054
+	.2byte 0x0000
 
+#"TAIL_OFF"
 .global lbl_804FAE20
 lbl_804FAE20:
-	.4byte 0x00540041
-	.4byte 0x0049004C
-	.4byte 0x005F004F
-	.4byte 0x00460046
+	.2byte 0x0054
+	.2byte 0x0041
+	.2byte 0x0049
+	.2byte 0x004C
+	.2byte 0x005F
+	.2byte 0x004F
+	.2byte 0x0046
+	.2byte 0x0046
 	.4byte 0
 	.4byte 0
 
+#"CRYSTAL"
 .global lbl_804FAE38
 lbl_804FAE38:
-	.4byte 0x00430052
-	.4byte 0x00590053
-	.4byte 0x00540041
-	.4byte 0x004C0000
+	.2byte 0x0043
+	.2byte 0x0052
+	.2byte 0x0059
+	.2byte 0x0053
+	.2byte 0x0054
+	.2byte 0x0041
+	.2byte 0x004C
+	.2byte 0x0000
 
 
 .global lbl_804FAE48

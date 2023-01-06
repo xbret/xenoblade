@@ -188,3 +188,9 @@ __DVDDequeueWaitingQueue:
 /* 8030F6E4 002D8CA4  7C 08 03 A6 */	mtlr r0
 /* 8030F6E8 002D8CA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030F6EC 002D8CAC  4E 80 00 20 */	blr
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CC9B0
+lbl_805CC9B0:
+	.skip 0x30

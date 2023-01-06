@@ -520,3 +520,28 @@ __OSStopPlayRecord:
 /* 8035DE40 00327400  7C 08 03 A6 */	mtlr r0
 /* 8035DE44 00327404  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035DE48 00327408  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8055ECC0
+lbl_8055ECC0:
+	.asciz "/title/00000001/00000002/data/play_rec.dat"
+	.balign 4
+
+
+.global lbl_8055ECEC
+lbl_8055ECEC:
+	# ROM: 0x55ADEC
+	.4byte switch_8035D7B0
+	.4byte switch_8035D7BC
+	.4byte switch_8035D838
+	.4byte switch_8035D87C
+	.4byte switch_8035D8A4
+	.4byte switch_8035D8B0
+	.4byte switch_8035D938
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805D5220
+lbl_805D5220:
+	.skip 0x200

@@ -563,3 +563,29 @@ __OSInitPlayTime:
 /* 8035EFEC 003285AC  7C 08 03 A6 */	mtlr r0
 /* 8035EFF0 003285B0  7D 41 53 78 */	mr r1, r10
 /* 8035EFF4 003285B4  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8055EEB8
+lbl_8055EEB8:
+	.asciz "/shared2/expired"
+	.balign 4
+
+
+.global lbl_8055EECC
+lbl_8055EECC:
+	.asciz "OSPlayTime.c"
+	.balign 4
+
+
+.global lbl_8055EEDC
+lbl_8055EEDC:
+	.asciz "PlayTime: %d seconds left\n"
+	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805D5500
+lbl_805D5500:
+	.skip 0x40

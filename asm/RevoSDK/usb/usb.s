@@ -1471,3 +1471,127 @@ IUSB_WriteCtrlMsgAsync:
 /* 80363F20 0032D4E0  7C 08 03 A6 */	mtlr r0
 /* 80363F24 0032D4E4  38 21 00 40 */	addi r1, r1, 0x40
 /* 80363F28 0032D4E8  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+
+.global lbl_8055F270
+lbl_8055F270:
+	.asciz "USB ERR: "
+	.balign 4
+	.asciz "Library is already initialized. Heap Id = %d\n"
+	.balign 4
+	.asciz "iusb size: %d lo: %x hi: %x\n"
+	.balign 4
+	.asciz "Not enough IPC arena\n"
+	.balign 4
+	.asciz "Not enough heaps\n"
+	.balign 4
+	.asciz "_intrBlkCtrlIsoCb returned: %d\n"
+	.asciz "_intrBlkCtrlIsoCb: nclean = %d\n"
+	.asciz "__intrBlkCtrlIsoCb: got invalid nclean\n"
+	.asciz "Freeing clean[%d] = %x\n"
+	.asciz "iosFree(%d, 0x%x) failed: %d\n"
+	.balign 4
+	.asciz "cb = %x cbArg = %x\n"
+	.asciz "calling iso callback\n"
+	.balign 4
+	.asciz "iosAllocAligned(%d, %u) failed: %d\n"
+	.asciz "OpenDeviceIds: Not enough memory\n"
+	.balign 4
+	.asciz "/dev/usb/%s/%x/%x"
+	.balign 4
+	.asciz "OpenDevice - %s\n"
+	.balign 4
+	.asciz "OpenDevice returned: %d\n"
+	.balign 4
+	.asciz "OpenDevice\n"
+	.asciz "OpenDeviceIdsAsync: Not enough memory\n"
+	.balign 4
+	.asciz "CloseDevice\n"
+	.balign 4
+	.asciz "CloseDevice returned: %d\n"
+	.balign 4
+	.asciz "CloseDeviceAsync: Not enough memory\n"
+	.balign 4
+	.asciz "openDevice: Not enough memory\n"
+	.balign 4
+	.asciz "getDeviceList: Not enough memory\n"
+	.balign 4
+	.4byte 0
+	.asciz "__LongBlkMsgInt"
+	.asciz "__LongBlkMsgInt: Not enough memory\n"
+	.asciz "Long bulk ioctl returned: %d\n"
+	.balign 4
+	.asciz "LongBlkMsgInt (async): Not enough memory\n"
+	.balign 4
+	.asciz "longblkmsg: cb = 0x%x cbArg = 0x%x\n"
+	.asciz "%s: IoctlvAsync returned error %d\n"
+	.balign 4
+	.asciz "__IntrBlkMsgInt"
+	.asciz "__IntrBlkMsgInt: Not enough memory\n"
+	.asciz "intr/blk ioctl returned: %d\n"
+	.balign 4
+	.asciz "IntBlkMsgInt (async): Not enough memory\n"
+	.balign 4
+	.asciz "intrblkmsg: cb = 0x%x cbArg = 0x%x\n"
+	.asciz "calling short blk transfer fn: buflen = %u limit = %u\n"
+	.balign 4
+	.asciz "calling long blk transfer fn: buflen = %u limit = %u\n"
+	.balign 4
+	.asciz "ctrlmsg: bad data buffer\n"
+	.balign 4
+	.asciz "Ctrl Msg: Not enough memory\n"
+	.balign 4
+	.asciz "CtrlMsgInt (async): Not enough memory\n"
+	.balign 4
+	.asciz "ctrlmsgint: cb = 0x%x cbArg = 0x%x\n"
+	.asciz "Ctrl Msg async returned: %d\n"
+	.balign 4
+	.asciz "GetStrCb returned: %d\n"
+	.balign 4
+	.asciz "GetStrCb: buf = 0x%x buflen = %u\n"
+	.balign 4
+	.asciz "Failed to convert buffer from unicode 2 ascii\n"
+	.balign 4
+	.asciz "calling cb 0x%x with arg 0x%x\n"
+	.balign 4
+	.asciz "Failed __CtrlMsg: %d"
+	.balign 4
+	.asciz "Failed to convert unicode 2 ascii\n"
+	.balign 4
+	.asciz "GetStr - _GetStrCb\n"
+	.asciz " GetAsciiStrAsync: Not enough memory\n"
+	.balign 4
+	.asciz "__CtrlMsgInt failed %d\n"
+	.asciz "GetDescrCb returned: %d\n"
+	.balign 4
+	.asciz "GetDevDescr\n"
+	.balign 4
+	.4byte 0
+	.asciz "GetDevDescr: Not enough memory\n"
+	.asciz "GetDevDescr: %d\n"
+	.balign 4
+	.asciz "GetDevDescr - _GetDescrCb\n"
+	.balign 4
+	.asciz "GetDevDescrAsync: Not enough memory\n"
+	.balign 4
+	.asciz "DeviceRemovalNotifyAsync\n"
+	.balign 4
+	.asciz "packet %u too big: %u\n"
+	.balign 4
+	.asciz "Invalid parameters for ISO transfer request\n"
+	.balign 4
+	.asciz "IUSB_IsoMsgAsync: Not enough memory\n"
+	.balign 4
+	.asciz "Open(%s) failed\n"
+	.balign 4
+	.asciz "Invalid path or devClass in insertion notification call\n"
+	.balign 4
+	.4byte 0
+	.asciz "IUSB_RegisterInsertionNotifyWithIdAsync"
+	.asciz "%s: Not enough memory\n"
+	.balign 4
+	.asciz "Failed to open %s: %d\n"
+	.balign 4

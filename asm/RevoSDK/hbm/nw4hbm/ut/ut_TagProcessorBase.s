@@ -771,3 +771,44 @@ double_80518B38:
 	# ROM: 0x514C38
 	.4byte 0x43300000
 	.4byte 0x80000000
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global __vt__8054EE70
+__vt__8054EE70:
+	.4byte lbl_8054EEB0
+	.4byte 0
+	.4byte func_80339680
+	.4byte func_803396C0
+	.4byte func_80339820
+
+.global lbl_8054EE84
+lbl_8054EE84:
+	.asciz "nw4hbm::ut::TagProcessorBase<wchar_t>"
+	.balign 4
+	.4byte 0
+
+.global lbl_8054EEB0
+lbl_8054EEB0:
+	.4byte lbl_8054EE84
+	.4byte 0
+
+.global lbl_8054EEB8
+lbl_8054EEB8:
+	# ROM: 0x54AFB8
+	.4byte lbl_8054EEF0
+	.4byte 0
+	.4byte __dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv
+	.4byte func_80339160
+	.4byte func_803392C0
+
+.global lbl_8054EECC
+lbl_8054EECC:
+	.asciz "nw4hbm::ut::TagProcessorBase<char>"
+	.balign 4
+
+.global lbl_8054EEF0
+lbl_8054EEF0:
+	.4byte lbl_8054EECC
+	.4byte 0

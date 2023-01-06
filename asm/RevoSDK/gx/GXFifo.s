@@ -853,3 +853,25 @@ __GXCleanGPFifo:
 /* 80319224 002E27E4  7C 08 03 A6 */	mtlr r0
 /* 80319228 002E27E8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031922C 002E27EC  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054B8C0
+lbl_8054B8C0:
+	.asciz "CPUFifo: %08X - %08X\n"
+	.balign 4
+
+
+.global lbl_8054B8D8
+lbl_8054B8D8:
+	.asciz "GP Fifo: %08X - %08X\n"
+	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CD560
+lbl_805CD560:
+	.skip 0x24
+.global lbl_805CD584
+lbl_805CD584:
+	.skip 0x24

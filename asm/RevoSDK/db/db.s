@@ -79,3 +79,9 @@ DBPrintf:
 /* 80309204 002D27C4  91 41 00 24 */	stw r10, 0x24(r1)
 /* 80309208 002D27C8  38 21 00 70 */	addi r1, r1, 0x70
 /* 8030920C 002D27CC  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805495E0
+lbl_805495E0:
+	.asciz "DBExceptionDestination\n"

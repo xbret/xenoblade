@@ -1647,3 +1647,15 @@ OSSetThreadPriority:
 OSGetThreadPriority:
 /* 8035C950 00325F10  80 63 02 D4 */	lwz r3, 0x2d4(r3)
 /* 8035C954 00325F14  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805D4758
+lbl_805D4758:
+	.skip 0x318
+.global lbl_805D4A70
+lbl_805D4A70:
+	.skip 0x100
+.global lbl_805D4B70
+lbl_805D4B70:
+	.skip 0x5F0

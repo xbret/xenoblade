@@ -344,3 +344,41 @@ __OSStopAudioSystem:
 /* 80353F54 0031D514  7C 08 03 A6 */	mtlr r0
 /* 80353F58 0031D518  38 21 00 10 */	addi r1, r1, 0x10
 /* 80353F5C 0031D51C  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_805517B8
+lbl_805517B8:
+	# ROM: 0x54D8B8
+	.4byte 0x029F0010
+	.4byte 0x029F0033
+	.4byte 0x029F0034
+	.4byte 0x029F0035
+	.4byte 0x029F0036
+	.4byte 0x029F0037
+	.4byte 0x029F0038
+	.4byte 0x029F0039
+	.4byte 0x12061203
+	.4byte 0x12041205
+	.4byte 0x00808000
+	.4byte 0x0088FFFF
+	.4byte 0x00841000
+	.4byte 0x0064001D
+	.4byte 0x02180000
+	.4byte 0x81001C1E
+	.4byte 0x00441B1E
+	.4byte 0x00840800
+	.4byte 0x00640027
+	.4byte 0x191E0000
+	.4byte 0x00DEFFFC
+	.4byte 0x02A08000
+	.4byte 0x029C0028
+	.4byte 0x16FC0054
+	.4byte 0x16FD4348
+	.4byte 0x002102FF
+	.4byte 0x02FF02FF
+	.4byte 0x02FF02FF
+	.4byte 0x02FF02FF
+	.4byte 0
+	.4byte 0
+	.4byte 0

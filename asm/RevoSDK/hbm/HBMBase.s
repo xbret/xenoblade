@@ -1109,8 +1109,8 @@ create__Q210homebutton10HomeButtonFv:
 /* 80323D74 002ED334  3C 80 80 55 */	lis r4, lbl_8054C8C4@ha
 /* 80323D78 002ED338  80 1F 02 54 */	lwz r0, 0x254(r31)
 /* 80323D7C 002ED33C  80 A4 C8 C4 */	lwz r5, lbl_8054C8C4@l(r4)
-/* 80323D80 002ED340  3C 80 80 55 */	lis r4, lbl_8054C3D0@ha
-/* 80323D84 002ED344  38 84 C3 D0 */	addi r4, r4, lbl_8054C3D0@l
+/* 80323D80 002ED340  3C 80 80 55 */	lis r4, __vt__homebutton_gui_Manager@ha
+/* 80323D84 002ED344  38 84 C3 D0 */	addi r4, r4, __vt__homebutton_gui_Manager@l
 /* 80323D88 002ED348  2C 00 00 00 */	cmpwi r0, 0
 /* 80323D8C 002ED34C  90 83 00 00 */	stw r4, 0(r3)
 /* 80323D90 002ED350  90 03 00 04 */	stw r0, 4(r3)
@@ -1126,9 +1126,9 @@ create__Q210homebutton10HomeButtonFv:
 /* 80323DB4 002ED374  38 75 00 08 */	addi r3, r21, 8
 /* 80323DB8 002ED378  38 80 00 08 */	li r4, 8
 /* 80323DBC 002ED37C  48 01 48 95 */	bl List_Init__Q26nw4hbm2utFPQ36nw4hbm2ut4ListUs
-/* 80323DC0 002ED380  3C 60 80 55 */	lis r3, lbl_8054C330@ha
+/* 80323DC0 002ED380  3C 60 80 55 */	lis r3, __vt__homebutton_gui_PaneManager@ha
 /* 80323DC4 002ED384  38 00 00 00 */	li r0, 0
-/* 80323DC8 002ED388  38 63 C3 30 */	addi r3, r3, lbl_8054C330@l
+/* 80323DC8 002ED388  38 63 C3 30 */	addi r3, r3, __vt__homebutton_gui_PaneManager@l
 /* 80323DCC 002ED38C  90 75 00 00 */	stw r3, 0(r21)
 /* 80323DD0 002ED390  38 75 00 18 */	addi r3, r21, 0x18
 /* 80323DD4 002ED394  38 80 00 08 */	li r4, 8
@@ -9903,3 +9903,1039 @@ float_805189F8:
 	.4byte 0x0006F800
 	.4byte 0x00000004
 	.4byte 0x00000003
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054C878
+lbl_8054C878:
+	.asciz "<< RVL_SDK - HBM \trelease build: Mar  3 2009 14:00:03 (0x4201_142) >>"
+	.balign 4
+
+
+.global lbl_8054C8C0
+lbl_8054C8C0:
+	# ROM: 0x5489C0
+	.4byte lbl_8054C878
+
+
+.global lbl_8054C8C4
+lbl_8054C8C4:
+	# ROM: 0x5489C4
+	.4byte lbl_805CD758
+
+
+.global lbl_8054C8C8
+lbl_8054C8C8:
+	.asciz "P1_Def.brlyt"
+	.balign 4
+
+.global lbl_8054C8D8
+lbl_8054C8D8:
+	.asciz "P2_Def.brlyt"
+	.balign 4
+
+.global lbl_8054C8E8
+lbl_8054C8E8:
+	.asciz "P3_Def.brlyt"
+	.balign 4
+
+.global lbl_8054C8F8
+lbl_8054C8F8:
+	.asciz "P4_Def.brlyt"
+	.balign 4
+
+#unreferenced?
+	.4byte lbl_8054C8C8
+	.4byte lbl_8054C8D8
+	.4byte lbl_8054C8E8
+	.4byte lbl_8054C8F8
+
+.global lbl_8054C918
+lbl_8054C918:
+	.asciz "N_Trans"
+
+.global lbl_8054C920
+lbl_8054C920:
+	.4byte lbl_8054C918
+
+.global lbl_8054C924
+lbl_8054C924:
+	.asciz "N_Rot"
+	.balign 4
+	.4byte lbl_8054C924
+
+.global lbl_8054C930
+lbl_8054C930:
+	.asciz "N_SRot"
+	.balign 4
+	.4byte lbl_8054C930
+
+.global lbl_8054C93C
+lbl_8054C93C:
+	.asciz "B_btnL_00"
+	.balign 4
+
+.global lbl_8054C948
+lbl_8054C948:
+	.asciz "B_btnL_01"
+	.balign 4
+
+.global lbl_8054C954
+lbl_8054C954:
+	.asciz "B_btnL_10"
+	.balign 4
+
+
+.global lbl_8054C960
+lbl_8054C960:
+	# ROM: 0x548A60
+	.4byte lbl_8054C93C
+	.4byte lbl_8054C948
+	.4byte lbl_8054C954
+	.4byte 0
+
+.global lbl_8054C970
+lbl_8054C970:
+	.asciz "T_btnL_00"
+	.balign 4
+
+.global lbl_8054C97C
+lbl_8054C97C:
+	.asciz "T_btnL_01"
+	.balign 4
+
+.global lbl_8054C988
+lbl_8054C988:
+	.asciz "T_btnL_10"
+	.balign 4
+	.4byte 0
+	.4byte lbl_8054C970
+	.4byte lbl_8054C97C
+	.4byte lbl_8054C988
+	.4byte 0
+
+.global lbl_8054C9A8
+lbl_8054C9A8:
+	.asciz "btnL_00_inOut"
+	.balign 4
+
+.global lbl_8054C9B8
+lbl_8054C9B8:
+	.asciz "btnL_01_inOut"
+	.balign 4
+
+.global lbl_8054C9C8
+lbl_8054C9C8:
+	.asciz "btnL_10_inOut"
+	.balign 4
+
+.global lbl_8054C9D8
+lbl_8054C9D8:
+	.asciz "btnL_11_inOut"
+	.balign 4
+
+.global lbl_8054C9E8
+lbl_8054C9E8:
+	.asciz "btnL_00_psh"
+
+.global lbl_8054C9F4
+lbl_8054C9F4:
+	.asciz "btnL_01_psh"
+
+.global lbl_8054CA00
+lbl_8054CA00:
+	.asciz "btnL_10_psh"
+
+.global lbl_8054CA0C
+lbl_8054CA0C:
+	.asciz "btnL_11_psh"
+	.4byte lbl_8054C9A8
+	.4byte lbl_8054C9B8
+	.4byte lbl_8054C9C8
+	.4byte lbl_8054C9D8
+	.4byte lbl_8054C9E8
+	.4byte lbl_8054C9F4
+	.4byte lbl_8054CA00
+	.4byte lbl_8054CA0C
+
+.global lbl_8054CA38
+lbl_8054CA38:
+	.asciz "_cntBtn_in.brlan"
+	.balign 4
+
+.global lbl_8054CA4C
+lbl_8054CA4C:
+	.asciz "_cntBtn_psh.brlan"
+	.balign 4
+
+.global lbl_8054CA60
+lbl_8054CA60:
+	.asciz "_cntBtn_out.brlan"
+	.balign 4
+	.4byte lbl_8054CA38
+	.4byte lbl_8054CA4C
+	.4byte lbl_8054CA60
+
+.global lbl_8054CA80
+lbl_8054CA80:
+	.asciz "_ltrIcn_on.brlan"
+	.balign 4
+
+.global lbl_8054CA94
+lbl_8054CA94:
+	.asciz "_optn_bar_psh.brlan"
+
+.global lbl_8054CAA8
+lbl_8054CAA8:
+	.asciz "_close_bar_psh.brlan"
+	.balign 4
+
+.global lbl_8054CAC0
+lbl_8054CAC0:
+	.asciz "_hmMenu_bar_in.brlan"
+	.balign 4
+
+.global lbl_8054CAD8
+lbl_8054CAD8:
+	.asciz "_hmMenu_bar_psh.brlan"
+	.balign 4
+
+.global lbl_8054CAF0
+lbl_8054CAF0:
+	.asciz "_link_msg_in.brlan"
+	.balign 4
+
+.global lbl_8054CB04
+lbl_8054CB04:
+	.asciz "_link_msg_out.brlan"
+
+.global lbl_8054CB18
+lbl_8054CB18:
+	.asciz "_cmn_msg_in.brlan"
+	.balign 4
+
+.global lbl_8054CB2C
+lbl_8054CB2C:
+	.asciz "_cmn_msg_out.brlan"
+	.balign 4
+
+.global lbl_8054CB40
+lbl_8054CB40:
+	.asciz "_cntrl_up.brlan"
+
+.global lbl_8054CB50
+lbl_8054CB50:
+	.asciz "_cntrl_wndw_opn.brlan"
+	.balign 4
+
+.global lbl_8054CB68
+lbl_8054CB68:
+	.asciz "_cntrl_dwn.brlan"
+	.balign 4
+
+.global lbl_8054CB7C
+lbl_8054CB7C:
+	.asciz "_hmMenu_bar_out.brlan"
+	.balign 4
+
+.global lbl_8054CB94
+lbl_8054CB94:
+	.asciz "_cmn_msg_rtrn.brlan"
+
+.global lbl_8054CBA8
+lbl_8054CBA8:
+	.asciz "_12btn_on.brlan"
+	.4byte lbl_8054CA80
+	.4byte lbl_8054CA94
+	.4byte lbl_8054CAA8
+	.4byte lbl_8054CAC0
+	.4byte lbl_8054CAD8
+	.4byte lbl_8054CAF0
+	.4byte lbl_8054CB04
+	.4byte lbl_8054CB18
+	.4byte lbl_8054CB2C
+	.4byte lbl_8054CB40
+	.4byte lbl_8054CB50
+	.4byte lbl_8054CB68
+	.4byte lbl_8054CB7C
+	.4byte lbl_8054CB94
+	.4byte lbl_8054CBA8
+
+.global lbl_8054CBF4
+lbl_8054CBF4:
+	.asciz "ltrIcn_on"
+	.balign 4
+
+.global lbl_8054CC00
+lbl_8054CC00:
+	.asciz "optn_bar_psh"
+	.balign 4
+
+.global lbl_8054CC10
+lbl_8054CC10:
+	.asciz "close_bar_psh"
+	.balign 4
+
+.global lbl_8054CC20
+lbl_8054CC20:
+	.asciz "hmMenu_bar_in"
+	.balign 4
+
+.global lbl_8054CC30
+lbl_8054CC30:
+	.asciz "hmMenu_bar_psh"
+	.balign 4
+
+.global lbl_8054CC40
+lbl_8054CC40:
+	.asciz "link_msg_in"
+
+.global lbl_8054CC4C
+lbl_8054CC4C:
+	.asciz "link_msg_out"
+	.balign 4
+
+.global lbl_8054CC5C
+lbl_8054CC5C:
+	.asciz "cmn_msg_in"
+	.balign 4
+
+.global lbl_8054CC68
+lbl_8054CC68:
+	.asciz "cmn_msg_out"
+
+.global lbl_8054CC74
+lbl_8054CC74:
+	.asciz "cntrl_up"
+	.balign 4
+
+.global lbl_8054CC80
+lbl_8054CC80:
+	.asciz "cntrl_wndw_opn"
+	.balign 4
+
+.global lbl_8054CC90
+lbl_8054CC90:
+	.asciz "cntrl_dwn"
+	.balign 4
+
+.global lbl_8054CC9C
+lbl_8054CC9C:
+	.asciz "hmMenu_bar_out"
+	.balign 4
+
+.global lbl_8054CCAC
+lbl_8054CCAC:
+	.asciz "cmn_msg_rtrn"
+	.balign 4
+
+.global lbl_8054CCBC
+lbl_8054CCBC:
+	.asciz "12btn_on"
+	.balign 4
+
+	.4byte lbl_8054CBF4
+	.4byte lbl_8054CC00
+	.4byte lbl_8054CC10
+	.4byte lbl_8054CC20
+	.4byte lbl_8054CC30
+	.4byte lbl_8054CC40
+	.4byte lbl_8054CC4C
+	.4byte lbl_8054CC5C
+	.4byte lbl_8054CC68
+	.4byte lbl_8054CC74
+	.4byte lbl_8054CC80
+	.4byte lbl_8054CC90
+	.4byte lbl_8054CC9C
+	.4byte lbl_8054CCAC
+	.4byte lbl_8054CCBC
+
+.global lbl_8054CD04
+lbl_8054CD04:
+	.asciz "_hmMenu_strt.brlan"
+	.balign 4
+
+.global lbl_8054CD18
+lbl_8054CD18:
+	.asciz "_hmMenu_fnsh.brlan"
+	.balign 4
+
+.global lbl_8054CD2C
+lbl_8054CD2C:
+	.asciz "_optn_bar_in.brlan"
+	.balign 4
+
+.global lbl_8054CD40
+lbl_8054CD40:
+	.asciz "_optn_bar_out.brlan"
+
+.global lbl_8054CD54
+lbl_8054CD54:
+	.asciz "_optn_btn_in.brlan"
+	.balign 4
+
+.global lbl_8054CD68
+lbl_8054CD68:
+	.asciz "_optn_btn_psh.brlan"
+
+.global lbl_8054CD7C
+lbl_8054CD7C:
+	.asciz "_vb_btn_wht_psh.brlan"
+	.balign 4
+
+.global lbl_8054CD94
+lbl_8054CD94:
+	.asciz "_optn_btn_out.brlan"
+
+.global lbl_8054CDA8
+lbl_8054CDA8:
+	.asciz "_vb_btn_ylw_psh.brlan"
+	.balign 4
+
+.global lbl_8054CDC0
+lbl_8054CDC0:
+	.asciz "_sound_gry.brlan"
+	.balign 4
+
+.global lbl_8054CDD4
+lbl_8054CDD4:
+	.asciz "_sound_ylw.brlan"
+	.balign 4
+
+.global lbl_8054CDE8
+lbl_8054CDE8:
+	.asciz "_cmn_msg_btn_in.brlan"
+	.balign 4
+
+.global lbl_8054CE00
+lbl_8054CE00:
+	.asciz "_cmn_msg_btn_out.brlan"
+	.balign 4
+
+.global lbl_8054CE18
+lbl_8054CE18:
+	.asciz "_cmn_msg_btn_psh.brlan"
+	.balign 4
+
+.global lbl_8054CE30
+lbl_8054CE30:
+	.asciz "_vb_btn_ylw_ylw.brlan"
+	.balign 4
+
+.global lbl_8054CE48
+lbl_8054CE48:
+	.asciz "_btry_wink.brlan"
+	.balign 4
+	.4byte 0
+
+.global lbl_8054CE60
+lbl_8054CE60:
+	.asciz "_btry_gry.brlan"
+
+.global lbl_8054CE70
+lbl_8054CE70:
+	.asciz "_btry_wht.brlan"
+
+.global lbl_8054CE80
+lbl_8054CE80:
+	.asciz "_btry_wink_gry.brlan"
+	.balign 4
+
+.global lbl_8054CE98
+lbl_8054CE98:
+	.asciz "_close_bar_in.brlan"
+
+.global lbl_8054CEAC
+lbl_8054CEAC:
+	.asciz "_close_bar_out.brlan"
+	.balign 4
+	.4byte 0
+
+.global lbl_8054CEC8
+lbl_8054CEC8:
+	.asciz "_btry_red.brlan"
+	.4byte lbl_8054CD04
+	.4byte lbl_8054CD18
+	.4byte lbl_8054CD2C
+	.4byte lbl_8054CD40
+	.4byte lbl_8054CD54
+	.4byte lbl_8054CD68
+	.4byte lbl_8054CD7C
+	.4byte lbl_8054CD94
+	.4byte lbl_8054CDA8
+	.4byte lbl_8054CDC0
+	.4byte lbl_8054CDD4
+	.4byte lbl_8054CDE8
+	.4byte lbl_8054CE00
+	.4byte lbl_8054CE18
+	.4byte lbl_8054CE30
+	.4byte lbl_8054CE48
+	.4byte lbl_8054CE60
+	.4byte lbl_8054CE70
+	.4byte lbl_8054CE80
+	.4byte lbl_8054CE98
+	.4byte lbl_8054CEAC
+	.4byte lbl_8054CEC8
+
+.global lbl_8054CF30
+lbl_8054CF30:
+	.asciz "hmMenu_strt"
+
+.global lbl_8054CF3C
+lbl_8054CF3C:
+	.asciz "hmMenu_fnsh"
+
+.global lbl_8054CF48
+lbl_8054CF48:
+	.asciz "hmMenuBck_strt"
+	.balign 4
+
+.global lbl_8054CF58
+lbl_8054CF58:
+	.asciz "hmMenuBck_fnsh"
+	.balign 4
+
+.global lbl_8054CF68
+lbl_8054CF68:
+	.asciz "optn_bar_in"
+
+.global lbl_8054CF74
+lbl_8054CF74:
+	.asciz "optn_bar_out"
+	.balign 4
+
+.global lbl_8054CF84
+lbl_8054CF84:
+	.asciz "optnBtn_00_inOut"
+	.balign 4
+
+.global lbl_8054CF98
+lbl_8054CF98:
+	.asciz "optnBtn_01_inOut"
+	.balign 4
+
+.global lbl_8054CFAC
+lbl_8054CFAC:
+	.asciz "optnBtn_10_inOut"
+	.balign 4
+
+.global lbl_8054CFC0
+lbl_8054CFC0:
+	.asciz "optnBtn_11_inOut"
+	.balign 4
+
+.global lbl_8054CFD4
+lbl_8054CFD4:
+	.asciz "optnBtn_20_inOut"
+	.balign 4
+
+.global lbl_8054CFE8
+lbl_8054CFE8:
+	.asciz "optnBtn_00_psh"
+	.balign 4
+
+.global lbl_8054CFF8
+lbl_8054CFF8:
+	.asciz "optnBtn_01_psh"
+	.balign 4
+
+.global lbl_8054D008
+lbl_8054D008:
+	.asciz "optnBtn_10_psh"
+	.balign 4
+
+.global lbl_8054D018
+lbl_8054D018:
+	.asciz "optnBtn_11_psh"
+	.balign 4
+
+.global lbl_8054D028
+lbl_8054D028:
+	.asciz "optnBtn_20_psh"
+	.balign 4
+
+.global lbl_8054D038
+lbl_8054D038:
+	.asciz "optnBtn_10_cntrl"
+	.balign 4
+	.4byte 0
+
+.global lbl_8054D050
+lbl_8054D050:
+	.asciz "msgBtn_00_inOut"
+
+.global lbl_8054D060
+lbl_8054D060:
+	.asciz "msgBtn_01_inOut"
+
+.global lbl_8054D070
+lbl_8054D070:
+	.asciz "msgBtn_00_psh"
+	.balign 4
+
+.global lbl_8054D080
+lbl_8054D080:
+	.asciz "msgBtn_01_psh"
+	.balign 4
+
+.global lbl_8054D090
+lbl_8054D090:
+	.asciz "vol_00"
+	.balign 4
+
+.global lbl_8054D098
+lbl_8054D098:
+	.asciz "vol_01"
+	.balign 4
+
+.global lbl_8054D0A0
+lbl_8054D0A0:
+	.asciz "vol_02"
+	.balign 4
+
+.global lbl_8054D0A8
+lbl_8054D0A8:
+	.asciz "vol_03"
+	.balign 4
+
+.global lbl_8054D0B0
+lbl_8054D0B0:
+	.asciz "vol_04"
+	.balign 4
+
+.global lbl_8054D0B8
+lbl_8054D0B8:
+	.asciz "vol_05"
+	.balign 4
+
+.global lbl_8054D0C0
+lbl_8054D0C0:
+	.asciz "vol_06"
+	.balign 4
+
+.global lbl_8054D0C8
+lbl_8054D0C8:
+	.asciz "vol_07"
+	.balign 4
+
+.global lbl_8054D0D0
+lbl_8054D0D0:
+	.asciz "vol_08"
+	.balign 4
+
+.global lbl_8054D0D8
+lbl_8054D0D8:
+	.asciz "vol_09"
+	.balign 4
+
+.global lbl_8054D0E0
+lbl_8054D0E0:
+	.asciz "plyr_00"
+
+.global lbl_8054D0E8
+lbl_8054D0E8:
+	.asciz "plyr_01"
+
+.global lbl_8054D0F0
+lbl_8054D0F0:
+	.asciz "plyr_02"
+
+.global lbl_8054D0F8
+lbl_8054D0F8:
+	.asciz "plyr_03"
+	.4byte lbl_8054CF30
+	.4byte lbl_8054CF3C
+	.4byte lbl_8054CF48
+	.4byte lbl_8054CF58
+	.4byte lbl_8054CF68
+	.4byte lbl_8054CF74
+	.4byte lbl_8054CF84
+	.4byte lbl_8054CF98
+	.4byte lbl_8054CFAC
+	.4byte lbl_8054CFC0
+	.4byte lbl_8054CFD4
+	.4byte lbl_8054CFE8
+	.4byte lbl_8054CFF8
+	.4byte lbl_8054D008
+	.4byte lbl_8054D018
+	.4byte lbl_8054D028
+	.4byte lbl_8054D038
+	.4byte lbl_8054D050
+	.4byte lbl_8054D060
+	.4byte lbl_8054D070
+	.4byte lbl_8054D080
+	.4byte lbl_8054D090
+	.4byte lbl_8054D098
+	.4byte lbl_8054D0A0
+	.4byte lbl_8054D0A8
+	.4byte lbl_8054D0B0
+	.4byte lbl_8054D0B8
+	.4byte lbl_8054D0C0
+	.4byte lbl_8054D0C8
+	.4byte lbl_8054D0D0
+	.4byte lbl_8054D0D8
+	.4byte lbl_8054D0E0
+	.4byte lbl_8054D0E8
+	.4byte lbl_8054D0F0
+	.4byte lbl_8054D0F8
+
+.global lbl_8054D18C
+lbl_8054D18C:
+	.asciz "let_icn_00"
+	.balign 4
+
+.global lbl_8054D198
+lbl_8054D198:
+	.asciz "N_plyr_00"
+	.balign 4
+
+.global lbl_8054D1A4
+lbl_8054D1A4:
+	.asciz "N_plyr_01"
+	.balign 4
+
+.global lbl_8054D1B0
+lbl_8054D1B0:
+	.asciz "N_plyr_02"
+	.balign 4
+
+.global lbl_8054D1BC
+lbl_8054D1BC:
+	.asciz "N_plyr_03"
+	.balign 4
+	.4byte lbl_8054D18C
+	.4byte lbl_8054D198
+	.4byte lbl_8054D1A4
+	.4byte lbl_8054D1B0
+	.4byte lbl_8054D1BC
+
+.global lbl_8054D1DC
+lbl_8054D1DC:
+	.asciz "B_btn_00"
+	.balign 4
+
+.global lbl_8054D1E8
+lbl_8054D1E8:
+	.asciz "B_bar_10"
+	.balign 4
+
+.global lbl_8054D1F4
+lbl_8054D1F4:
+	.asciz "B_optnBtn_00"
+	.balign 4
+
+.global lbl_8054D204
+lbl_8054D204:
+	.asciz "B_optnBtn_01"
+	.balign 4
+
+.global lbl_8054D214
+lbl_8054D214:
+	.asciz "B_optnBtn_10"
+	.balign 4
+
+.global lbl_8054D224
+lbl_8054D224:
+	.asciz "B_optnBtn_11"
+	.balign 4
+
+.global lbl_8054D234
+lbl_8054D234:
+	.asciz "B_optnBtn_20"
+	.balign 4
+
+.global lbl_8054D244
+lbl_8054D244:
+	.asciz "B_BtnA"
+	.balign 4
+
+.global lbl_8054D24C
+lbl_8054D24C:
+	.asciz "B_BtnB"
+	.balign 4
+
+.global lbl_8054D254
+lbl_8054D254:
+	.asciz "cntrl_00"
+	.balign 4
+
+
+.global lbl_8054D260
+lbl_8054D260:
+	# ROM: 0x549360
+	.4byte lbl_8054D1DC
+	.4byte lbl_8054D1E8
+	.4byte lbl_8054D1F4
+	.4byte lbl_8054D204
+	.4byte lbl_8054D214
+	.4byte lbl_8054D224
+	.4byte lbl_8054D234
+	.4byte lbl_8054D244
+	.4byte lbl_8054D24C
+	.4byte lbl_8054D254
+
+.global lbl_8054D288
+lbl_8054D288:
+	.asciz "T_msg_00"
+	.balign 4
+
+.global lbl_8054D294
+lbl_8054D294:
+	.asciz "T_msg_01"
+	.balign 4
+
+.global lbl_8054D2A0
+lbl_8054D2A0:
+	.asciz "T_Dialog"
+	.balign 4
+
+
+.global lbl_8054D2AC
+lbl_8054D2AC:
+	# ROM: 0x5493AC
+	.4byte lbl_8054D288
+	.4byte lbl_8054D294
+	.4byte lbl_8054D2A0
+
+.global lbl_8054D2B8
+lbl_8054D2B8:
+	.asciz "btryPwr_00_0"
+	.balign 4
+
+.global lbl_8054D2C8
+lbl_8054D2C8:
+	.asciz "btryPwr_00_1"
+	.balign 4
+
+.global lbl_8054D2D8
+lbl_8054D2D8:
+	.asciz "btryPwr_00_2"
+	.balign 4
+
+.global lbl_8054D2E8
+lbl_8054D2E8:
+	.asciz "btryPwr_00_3"
+	.balign 4
+
+.global lbl_8054D2F8
+lbl_8054D2F8:
+	.asciz "btryPwr_01_0"
+	.balign 4
+
+.global lbl_8054D308
+lbl_8054D308:
+	.asciz "btryPwr_01_1"
+	.balign 4
+
+.global lbl_8054D318
+lbl_8054D318:
+	.asciz "btryPwr_01_2"
+	.balign 4
+
+.global lbl_8054D328
+lbl_8054D328:
+	.asciz "btryPwr_01_3"
+	.balign 4
+
+.global lbl_8054D338
+lbl_8054D338:
+	.asciz "btryPwr_02_0"
+	.balign 4
+
+.global lbl_8054D348
+lbl_8054D348:
+	.asciz "btryPwr_02_1"
+	.balign 4
+
+.global lbl_8054D358
+lbl_8054D358:
+	.asciz "btryPwr_02_2"
+	.balign 4
+
+.global lbl_8054D368
+lbl_8054D368:
+	.asciz "btryPwr_02_3"
+	.balign 4
+
+.global lbl_8054D378
+lbl_8054D378:
+	.asciz "btryPwr_03_0"
+	.balign 4
+
+.global lbl_8054D388
+lbl_8054D388:
+	.asciz "btryPwr_03_1"
+	.balign 4
+
+.global lbl_8054D398
+lbl_8054D398:
+	.asciz "btryPwr_03_2"
+	.balign 4
+
+.global lbl_8054D3A8
+lbl_8054D3A8:
+	.asciz "btryPwr_03_3"
+	.balign 4
+
+
+.global lbl_8054D3B8
+lbl_8054D3B8:
+	# ROM: 0x5494B8
+	.4byte lbl_8054D2B8
+	.4byte lbl_8054D2C8
+	.4byte lbl_8054D2D8
+	.4byte lbl_8054D2E8
+	.4byte lbl_8054D2F8
+	.4byte lbl_8054D308
+	.4byte lbl_8054D318
+	.4byte lbl_8054D328
+	.4byte lbl_8054D338
+	.4byte lbl_8054D348
+	.4byte lbl_8054D358
+	.4byte lbl_8054D368
+	.4byte lbl_8054D378
+	.4byte lbl_8054D388
+	.4byte lbl_8054D398
+	.4byte lbl_8054D3A8
+	.4byte 0x61726300
+	.4byte 0
+	.asciz "back_01"
+	.asciz "N_cntrl_01"
+	.balign 4
+	.4byte 0
+	.asciz "back_00"
+	.asciz "back_02"
+
+
+.global lbl_8054D428
+lbl_8054D428:
+	# ROM: 0x549528
+	.4byte switch_80324E0C
+	.4byte switch_80324FD8
+	.4byte switch_803265BC
+	.4byte switch_80325248
+	.4byte switch_80325340
+	.4byte switch_80325460
+	.4byte switch_80325460
+	.4byte switch_80325728
+	.4byte switch_803257EC
+	.4byte switch_803259A4
+	.4byte switch_803259F8
+	.4byte switch_80325AF0
+	.4byte switch_80325B34
+	.4byte switch_80325B6C
+	.4byte switch_80325C64
+	.4byte switch_80325DF4
+	.4byte switch_80325E78
+	.4byte switch_80325F28
+	.4byte switch_803261A4
+	.4byte switch_803261B0
+
+
+.global lbl_8054D478
+lbl_8054D478:
+	# ROM: 0x549578
+	.4byte switch_80328514
+	.4byte switch_803285D4
+	.4byte switch_80328B88
+	.4byte switch_80328C58
+	.4byte switch_80328D28
+	.4byte switch_80328DF8
+	.4byte switch_80328EC8
+	.4byte switch_80328F98
+	.4byte switch_80329068
+	.4byte switch_803285D4
+
+
+.global lbl_8054D4A0
+lbl_8054D4A0:
+	# ROM: 0x5495A0
+	.4byte switch_80329364
+	.4byte switch_803293D8
+	.4byte switch_8032990C
+	.4byte switch_80329994
+	.4byte switch_80329A1C
+	.4byte switch_80329AA4
+	.4byte switch_80329B2C
+	.4byte switch_80329BB4
+	.4byte switch_80329C3C
+	.4byte switch_803293D8
+
+
+.global lbl_8054D4C8
+lbl_8054D4C8:
+	# ROM: 0x5495C8
+	.4byte switch_80329FD4
+	.4byte switch_8032A068
+	.4byte switch_8032A1C0
+	.4byte switch_8032A48C
+	.4byte switch_8032A75C
+	.4byte switch_8032A990
+	.4byte switch_8032AB1C
+	.4byte switch_8032ACE0
+	.4byte switch_8032AE48
+	.4byte switch_8032A068
+
+
+.global lbl_8054D4F0
+lbl_8054D4F0:
+	# ROM: 0x5495F0
+	.4byte lbl_8054D530
+	.4byte 0
+	.4byte onEvent__Q210homebutton22HomeButtonEventHandlerFUlUlPv
+	.4byte setManager__Q310homebutton3gui12EventHandlerFPQ310homebutton3gui7Manager
+
+.global lbl_8054D500
+lbl_8054D500:
+	.asciz "homebutton::HomeButtonEventHandler"
+	.balign 4
+
+.global lbl_8054D524
+lbl_8054D524:
+	.4byte lbl_8054D568
+	.4byte 0
+	.4byte 0
+
+.global lbl_8054D530
+lbl_8054D530:
+	.4byte lbl_8054D500
+	.4byte lbl_8054D524
+	.4byte lbl_8054D568
+	.4byte 0
+	.4byte onEvent__Q310homebutton3gui12EventHandlerFUlUlPv
+	.4byte setManager__Q310homebutton3gui12EventHandlerFPQ310homebutton3gui7Manager
+
+.global lbl_8054D548
+lbl_8054D548:
+	.asciz "homebutton::gui::EventHandler"
+	.balign 4
+
+.global lbl_8054D568
+lbl_8054D568:
+	.4byte lbl_8054D548
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.asciz "homebutton::gui::Interface"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CD758
+lbl_805CD758:
+	.skip 0x10
+.global lbl_805CD768
+lbl_805CD768:
+	.skip 0x8
+.global lbl_805CD770
+lbl_805CD770:
+	.skip 0x18

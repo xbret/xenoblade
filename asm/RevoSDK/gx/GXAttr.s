@@ -914,3 +914,440 @@ GXSetNumTexGens:
 /* 80319D68 002E3328  60 00 00 04 */	ori r0, r0, 4
 /* 80319D6C 002E332C  90 04 05 FC */	stw r0, 0x5fc(r4)
 /* 80319D70 002E3330  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054B8F0
+lbl_8054B8F0:
+	# ROM: 0x5479F0
+	.4byte switch_80319250
+	.4byte switch_80319264
+	.4byte switch_80319278
+	.4byte switch_8031928C
+	.4byte switch_803192A0
+	.4byte switch_803192B4
+	.4byte switch_803192C8
+	.4byte switch_803192DC
+	.4byte switch_803192F0
+	.4byte switch_80319304
+	.4byte switch_80319318
+	.4byte switch_80319380
+	.4byte switch_80319394
+	.4byte switch_803193A8
+	.4byte switch_803193BC
+	.4byte switch_803193D0
+	.4byte switch_803193E4
+	.4byte switch_803193F8
+	.4byte switch_8031940C
+	.4byte switch_80319420
+	.4byte switch_80319434
+	.4byte switch_80319444
+	.4byte switch_80319444
+	.4byte switch_80319444
+	.4byte switch_80319444
+	.4byte switch_8031934C
+
+
+.global lbl_8054B958
+lbl_8054B958:
+	# ROM: 0x547A58
+	.4byte switch_803196F0
+	.4byte switch_80319708
+	.4byte switch_80319744
+	.4byte switch_80319758
+	.4byte switch_8031976C
+	.4byte switch_80319784
+	.4byte switch_8031979C
+	.4byte switch_803197B4
+	.4byte switch_803197CC
+	.4byte switch_803197EC
+	.4byte switch_80319804
+	.4byte switch_8031981C
+	.4byte switch_80319830
+	.4byte switch_80319830
+	.4byte switch_80319830
+	.4byte switch_80319830
+	.4byte switch_80319708
+
+.global lbl_8054B99C
+lbl_8054B99C:
+	.4byte switch_803198A8
+	.4byte switch_803198C0
+	.4byte switch_803198FC
+	.4byte switch_80319910
+	.4byte switch_80319924
+	.4byte switch_8031993C
+	.4byte switch_80319954
+	.4byte switch_8031996C
+	.4byte switch_80319984
+	.4byte switch_803199A4
+	.4byte switch_803199BC
+	.4byte switch_803199D4
+	.4byte switch_803199E8
+	.4byte switch_803199E8
+	.4byte switch_803199E8
+	.4byte switch_803199E8
+	.4byte switch_803198C0
+
+
+.global lbl_8054B9E0
+lbl_8054B9E0:
+	# ROM: 0x547AE0
+	.4byte switch_80319B2C
+	.4byte switch_80319B38
+	.4byte switch_80319B44
+	.4byte switch_80319B50
+	.4byte switch_80319B6C
+	.4byte switch_80319B74
+	.4byte switch_80319B7C
+	.4byte switch_80319B84
+	.4byte switch_80319B8C
+	.4byte switch_80319B94
+	.4byte switch_80319B9C
+	.4byte switch_80319BA4
+	.4byte switch_80319BA8
+	.4byte switch_80319BA8
+	.4byte switch_80319BA8
+	.4byte switch_80319BA8
+	.4byte switch_80319BA8
+	.4byte switch_80319BA8
+	.4byte switch_80319BA8
+	.4byte switch_80319B5C
+	.4byte switch_80319B64
+	.4byte 0
+
+
+#the rest might belong in another file
+
+.global lbl_8054BA38
+lbl_8054BA38:
+	.4byte 0x00000001
+	.4byte 0x028000F0
+	.4byte 0x00F00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060000
+	.4byte 0x15161500
+	.4byte 0
+
+.global lbl_8054BA74
+lbl_8054BA74:
+	# ROM: 0x547B74
+	.4byte 0
+	.4byte 0x028001E0
+	.4byte 0x01E00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0x00000001
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060808
+	.4byte 0x0A0C0A08
+	.4byte 0x08000000
+
+
+.global lbl_8054BAB0
+lbl_8054BAB0:
+	# ROM: 0x547BB0
+	.4byte 0
+	.4byte 0x028001E0
+	.4byte 0x01E00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0x00000001
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060000
+	.4byte 0x15161500
+	.4byte 0
+
+.global lbl_8054BAEC
+lbl_8054BAEC:
+	.4byte 0x00000002
+	.4byte 0x028001E0
+	.4byte 0x01E00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060000
+	.4byte 0x15161500
+	.4byte 0
+
+.global lbl_8054BB28
+lbl_8054BB28:
+	.4byte 0x00000002
+	.4byte 0x028001E0
+	.4byte 0x01E00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060808
+	.4byte 0x0A0C0A08
+	.4byte 0x08000000
+
+.global lbl_8054BB64
+lbl_8054BB64:
+	.4byte 0x00000009
+	.4byte 0x028000F0
+	.4byte 0x00F00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060000
+	.4byte 0x15161500
+	.4byte 0
+
+
+.global lbl_8054BBA0
+lbl_8054BBA0:
+	# ROM: 0x547CA0
+	.4byte 0x00000008
+	.4byte 0x028001E0
+	.4byte 0x01E00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0x00000001
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060808
+	.4byte 0x0A0C0A08
+	.4byte 0x08000000
+
+.global lbl_8054BBDC
+lbl_8054BBDC:
+	.4byte 0x00000008
+	.4byte 0x028001E0
+	.4byte 0x01E00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0x00000001
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060000
+	.4byte 0x15161500
+	.4byte 0
+
+.global lbl_8054BC18
+lbl_8054BC18:
+	.4byte 0x0000000A
+	.4byte 0x028001E0
+	.4byte 0x01E00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060000
+	.4byte 0x15161500
+	.4byte 0
+
+.global lbl_8054BC54
+lbl_8054BC54:
+	.4byte 0x0000000A
+	.4byte 0x028001E0
+	.4byte 0x01E00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060808
+	.4byte 0x0A0C0A08
+	.4byte 0x08000000
+
+.global lbl_8054BC90
+lbl_8054BC90:
+	.4byte 0x00000005
+	.4byte 0x02800108
+	.4byte 0x01080028
+	.4byte 0x000B0280
+	.4byte 0x02100000
+	.4byte 0
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060000
+	.4byte 0x15161500
+	.4byte 0
+
+
+.global lbl_8054BCCC
+lbl_8054BCCC:
+	# ROM: 0x547DCC
+	.4byte 0x00000004
+	.4byte 0x02800210
+	.4byte 0x02100028
+	.4byte 0x00170280
+	.4byte 0x02100000
+	.4byte 0x00000001
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060808
+	.4byte 0x0A0C0A08
+	.4byte 0x08000000
+
+.global lbl_8054BD08
+lbl_8054BD08:
+	.4byte 0x00000004
+	.4byte 0x02800210
+	.4byte 0x02100028
+	.4byte 0x00170280
+	.4byte 0x02100000
+	.4byte 0x00000001
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060000
+	.4byte 0x15161500
+	.4byte 0
+
+.global lbl_8054BD44
+lbl_8054BD44:
+	.4byte 0x00000015
+	.4byte 0x028000F0
+	.4byte 0x00F00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060000
+	.4byte 0x15161500
+	.4byte 0
+
+
+.global lbl_8054BD80
+lbl_8054BD80:
+	# ROM: 0x547E80
+	.4byte 0x00000014
+	.4byte 0x028001E0
+	.4byte 0x01E00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0x00000001
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060808
+	.4byte 0x0A0C0A08
+	.4byte 0x08000000
+
+.global lbl_8054BDBC
+lbl_8054BDBC:
+	.4byte 0x00000014
+	.4byte 0x028001E0
+	.4byte 0x01E00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0x00000001
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060000
+	.4byte 0x15161500
+	.4byte 0
+
+.global lbl_8054BDF8
+lbl_8054BDF8:
+	.4byte 0x00000016
+	.4byte 0x028001E0
+	.4byte 0x01E00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060000
+	.4byte 0x15161500
+	.4byte 0
+
+.global lbl_8054BE34
+lbl_8054BE34:
+	.4byte 0x00000016
+	.4byte 0x028001E0
+	.4byte 0x01E00028
+	.4byte 0x00000280
+	.4byte 0x01E00000
+	.4byte 0
+	.4byte 0x00000606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060606
+	.4byte 0x06060808
+	.4byte 0x0A0C0A08
+	.4byte 0x08000000

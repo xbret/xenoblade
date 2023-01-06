@@ -172,3 +172,10 @@ ENCiWriteBreakType:
 /* 80312EE4 002DC4A4  7C 08 03 A6 */	mtlr r0
 /* 80312EE8 002DC4A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80312EEC 002DC4AC  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054B5C8
+lbl_8054B5C8:
+	.asciz "<< RVL_SDK - ENC \trelease build: Feb 27 2009 10:05:42 (0x4302_145) >>"
+	.balign 4

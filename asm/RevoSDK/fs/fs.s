@@ -1542,3 +1542,11 @@ ISFS_ShutdownAsync:
 /* 80317464 002E0A24  7C 08 03 A6 */	mtlr r0
 /* 80317468 002E0A28  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031746C 002E0A2C  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054B658
+lbl_8054B658:
+	.asciz "APP ERROR: Not enough IPC arena\n"
+	.balign 4
+	.4byte 0

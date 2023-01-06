@@ -885,3 +885,44 @@ float_80518A40:
 float_80518A44:
 	# ROM: 0x514B44
 	.float 0.5
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054D5B8
+lbl_8054D5B8:
+	# ROM: 0x5496B8
+	.4byte lbl_8054D608
+	.4byte 0
+	.4byte __dt__Q36nw4hbm3lyt18AnimTransformBasicFv
+	.4byte SetResource__Q36nw4hbm3lyt18AnimTransformBasicFPCQ46nw4hbm3lyt3res14AnimationBlockPQ36nw4hbm3lyt16ResourceAccessor
+	.4byte Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt4Paneb
+	.4byte Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt8Material
+	.4byte Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt4Pane
+	.4byte Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt8Material
+
+.global lbl_8054D5D8
+lbl_8054D5D8:
+	.asciz "nw4hbm::lyt::AnimTransformBasic"
+
+.global lbl_8054D5F8
+lbl_8054D5F8:
+	.4byte lbl_8054D630
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global lbl_8054D608
+lbl_8054D608:
+	.4byte lbl_8054D5D8
+	.4byte lbl_8054D5F8
+
+.global lbl_8054D610
+lbl_8054D610:
+	.asciz "nw4hbm::lyt::AnimTransform"
+	.balign 4
+	.4byte 0
+
+.global lbl_8054D630
+lbl_8054D630:
+	.4byte lbl_8054D610
+	.4byte 0

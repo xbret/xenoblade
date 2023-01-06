@@ -136,3 +136,12 @@ IPCiProfReply:
 /* 80344AB0 0030E070  38 A5 00 01 */	addi r5, r5, 1
 /* 80344AB4 0030E074  42 00 FF B4 */	bdnz .L_80344A68
 /* 80344AB8 0030E078  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CE500
+lbl_805CE500:
+	.skip 0x80
+.global lbl_805CE580
+lbl_805CE580:
+	.skip 0x80

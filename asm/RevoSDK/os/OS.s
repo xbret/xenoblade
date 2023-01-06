@@ -1541,3 +1541,91 @@ OSGetAppType:
 /* 80352DB4 0031C374  3C 60 80 00 */	lis r3, 0x80003184@ha
 /* 80352DB8 0031C378  88 63 31 84 */	lbz r3, 0x80003184@l(r3)
 /* 80352DBC 0031C37C  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80551300
+lbl_80551300:
+	.asciz "<< RVL_SDK - OS \trelease build: Feb 27 2009 10:04:29 (0x4302_145) >>"
+	.balign 4
+	.asciz "\nRevolution OS\n"
+	.asciz "Kernel built : %s %s\n"
+	.balign 4
+	.asciz "Feb 27 2009"
+	.asciz "10:04:29"
+	.balign 4
+	.asciz "Console Type : "
+	.asciz "Pre-production board 1\n"
+	.asciz "Pre-production board 2-1\n"
+	.balign 4
+	.asciz "Pre-production board 2-2\n"
+	.balign 4
+	.asciz "Retail %d\n"
+	.balign 4
+	.asciz "NDEV 2.1\n"
+	.balign 4
+	.asciz "NDEV 2.0\n"
+	.balign 4
+	.asciz "NDEV 1.2\n"
+	.balign 4
+	.asciz "NDEV 1.1\n"
+	.balign 4
+	.asciz "NDEV 1.0\n"
+	.balign 4
+	.asciz "Revolution Emulator\n"
+	.balign 4
+	.asciz "Emulation platform (%08x)\n"
+	.balign 4
+	.asciz "TDEV-based emulation HW%d\n"
+	.balign 4
+	.asciz "Firmware     : %d.%d.%d "
+	.balign 4
+	.asciz "(%d/%d/%d)\n"
+	.asciz "Memory %d MB\n"
+	.balign 4
+	.asciz "MEM1 Arena : 0x%x - 0x%x\n"
+	.balign 4
+	.asciz "MEM2 Arena : 0x%x - 0x%x\n"
+	.balign 4
+	.asciz "OS ERROR: boot program is not for RVL target. Please use correct boot program.\n"
+	.asciz "Failed to run app"
+	.balign 4
+	.4byte 0
+	.asciz "OS ERROR: apploader[D].img is not for RVL target. Please use correct apploader[D].img.\n"
+	.asciz "OS ERROR: This firmware is an improper version for this SDK. Please use a correct Firmware.\n"
+	.balign 4
+	.asciz "\n\nERROR #002\nAn error has occurred.\nPress the Eject Button, remove the\nGame Disc, and turn off the power to \nthe console. \nPlease read the Wii Operations Manual \nfor further instructions.\n"
+	.balign 4
+	.4byte 0x00000100
+	.4byte 0x00000200
+	.4byte 0x00000300
+	.4byte 0x00000400
+	.4byte 0x00000500
+	.4byte 0x00000600
+	.4byte 0x00000700
+	.4byte 0x00000800
+	.4byte 0x00000900
+	.4byte 0x00000C00
+	.4byte 0x00000D00
+	.4byte 0x00000F00
+	.4byte 0x00001300
+	.4byte 0x00001400
+	.4byte 0x00001700
+	.asciz "Installing OSDBIntegrator\n"
+	.balign 4
+	.asciz ">>> OSINIT: exception %d commandeered by TRK\n"
+	.balign 4
+	.asciz ">>> OSINIT: exception %d vectored to debugger\n"
+	.balign 4
+	.asciz "Exceptions initialized...\n"
+	.balign 4
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805D4340
+lbl_805D4340:
+	.skip 0x20
+.global lbl_805D4360
+lbl_805D4360:
+	.skip 0x50

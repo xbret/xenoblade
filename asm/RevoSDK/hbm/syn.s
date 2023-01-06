@@ -336,3 +336,15 @@ func_80340E40:
 /* 80340E40 0030A400  54 80 80 1E */	slwi r0, r4, 0x10
 /* 80340E44 0030A404  90 03 00 68 */	stw r0, 0x68(r3)
 /* 80340E48 0030A408  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CDEE8
+lbl_805CDEE8:
+	.skip 0x4
+.global lbl_805CDEEC
+lbl_805CDEEC:
+	.skip 0x4C4
+.global lbl_805CE3B0
+lbl_805CE3B0:
+	.skip 0x8

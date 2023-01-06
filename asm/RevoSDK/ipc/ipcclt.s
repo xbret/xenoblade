@@ -1824,3 +1824,15 @@ IOS_IoctlvReboot:
 /* 803443A0 0030D960  7C 08 03 A6 */	mtlr r0
 /* 803443A4 0030D964  38 21 00 30 */	addi r1, r1, 0x30
 /* 803443A8 0030D968  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CE3C0
+lbl_805CE3C0:
+	.skip 0x50
+.global lbl_805CE410
+lbl_805CE410:
+	.skip 0x30
+.global lbl_805CE440
+lbl_805CE440:
+	.skip 0x40

@@ -537,7 +537,6 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/cx/CXStreamingUncompression.o \
 	$(BUILD_DIR)/asm/RevoSDK/cx/CXUncompression.o \
 	$(BUILD_DIR)/src/RevoSDK/cx/CXSecureUncompression.o \
-	$(BUILD_DIR)/asm/data_sdk.o \
 	$(BUILD_DIR)/asm/sbss_sdk.o \
 	$(BUILD_DIR)/asm/RevoSDK/db/db.o \
 	$(BUILD_DIR)/asm/sdata_sdk.o \
@@ -545,7 +544,6 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp_debug.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp_task.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdfs.o \
-	$(BUILD_DIR)/asm/bss_sdk.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdqueue.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvderror.o \

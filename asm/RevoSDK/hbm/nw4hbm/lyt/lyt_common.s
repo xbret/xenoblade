@@ -154,12 +154,12 @@ SetSize__Q46nw4hbm3lyt6detail11TexCoordAryFUc:
 /* 8032C784 002F5D44  40 82 00 44 */	bne .L_8032C7C8
 /* 8032C788 002F5D48  3C C0 80 52 */	lis r6, float_80518A48@ha
 /* 8032C78C 002F5D4C  3C A0 80 52 */	lis r5, float_80518A4C@ha
-/* 8032C790 002F5D50  3C E0 80 5D */	lis r7, float_805CD798@ha
+/* 8032C790 002F5D50  3C E0 80 5D */	lis r7, lbl_805CD798@ha
 /* 8032C794 002F5D54  C0 26 8A 48 */	lfs f1, float_80518A48@l(r6)
-/* 8032C798 002F5D58  38 C7 D7 98 */	addi r6, r7, float_805CD798@l
+/* 8032C798 002F5D58  38 C7 D7 98 */	addi r6, r7, lbl_805CD798@l
 /* 8032C79C 002F5D5C  C0 05 8A 4C */	lfs f0, float_80518A4C@l(r5)
 /* 8032C7A0 002F5D60  38 00 00 01 */	li r0, 1
-/* 8032C7A4 002F5D64  D0 27 D7 98 */	stfs f1, float_805CD798@l(r7)
+/* 8032C7A4 002F5D64  D0 27 D7 98 */	stfs f1, lbl_805CD798@l(r7)
 /* 8032C7A8 002F5D68  D0 26 00 04 */	stfs f1, 4(r6)
 /* 8032C7AC 002F5D6C  D0 06 00 08 */	stfs f0, 8(r6)
 /* 8032C7B0 002F5D70  D0 26 00 0C */	stfs f1, 0xc(r6)
@@ -170,9 +170,9 @@ SetSize__Q46nw4hbm3lyt6detail11TexCoordAryFUc:
 /* 8032C7C4 002F5D84  98 08 D7 90 */	stb r0, lbl_805CD790@l(r8)
 .L_8032C7C8:
 /* 8032C7C8 002F5D88  88 E3 00 01 */	lbz r7, 1(r3)
-/* 8032C7CC 002F5D8C  3C C0 80 5D */	lis r6, float_805CD798@ha
-/* 8032C7D0 002F5D90  38 A6 D7 98 */	addi r5, r6, float_805CD798@l
-/* 8032C7D4 002F5D94  C0 E6 D7 98 */	lfs f7, float_805CD798@l(r6)
+/* 8032C7CC 002F5D8C  3C C0 80 5D */	lis r6, lbl_805CD798@ha
+/* 8032C7D0 002F5D90  38 A6 D7 98 */	addi r5, r6, lbl_805CD798@l
+/* 8032C7D4 002F5D94  C0 E6 D7 98 */	lfs f7, lbl_805CD798@l(r6)
 /* 8032C7D8 002F5D98  7C 07 20 50 */	subf r0, r7, r4
 /* 8032C7DC 002F5D9C  54 E6 28 34 */	slwi r6, r7, 5
 /* 8032C7E0 002F5DA0  C0 C5 00 04 */	lfs f6, 4(r5)
@@ -1041,3 +1041,12 @@ double_80518A50:
 	# ROM: 0x514B50
 	.4byte 0x43300000
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CD790
+lbl_805CD790:
+	.skip 0x8
+.global lbl_805CD798
+lbl_805CD798:
+	.skip 0x20

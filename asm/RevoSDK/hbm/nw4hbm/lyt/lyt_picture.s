@@ -399,3 +399,65 @@ float_80518AB8:
 	# ROM: 0x514BB8
 	.4byte 0
 	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__8054D938
+__vt__8054D938:
+	.4byte lbl_8054D9D0
+	.4byte 0
+	.4byte func_80332860
+	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt7PictureCFv
+	.4byte func_80331CD0
+	.4byte func_80331FD0
+	.4byte DrawSelf__Q36nw4hbm3lyt7PictureFRCQ36nw4hbm3lyt8DrawInfo
+	.4byte func_803320E0
+	.4byte func_80332170
+	.4byte func_80332AF0
+	.4byte func_80332B10
+	.4byte func_80331AE0
+	.4byte func_80331B10
+	.4byte GetVtxColorElement__Q36nw4hbm3lyt7PictureCFUl
+	.4byte SetVtxColorElement__Q36nw4hbm3lyt7PictureFUlUc
+	.4byte func_80331B60
+	.4byte func_80331C10
+	.4byte func_80332230
+	.4byte func_80332250
+	.4byte func_803322E0
+	.4byte func_80332300
+	.4byte func_803323E0
+	.4byte func_80332460
+	.4byte func_80332710
+	.4byte func_80332520
+	.4byte func_80332930
+	.4byte func_80332980
+
+.global lbl_8054D9A4
+lbl_8054D9A4:
+	.asciz "nw4hbm::lyt::Picture"
+	.balign 4
+
+.global lbl_8054D9BC
+lbl_8054D9BC:
+	.4byte lbl_8054D798
+	.4byte 0
+	.4byte lbl_8054D770
+	.4byte 0
+	.4byte 0
+
+.global lbl_8054D9D0
+lbl_8054D9D0:
+	.4byte lbl_8054D9A4
+	.4byte lbl_8054D9BC
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CD7B8
+lbl_805CD7B8:
+	.skip 0x8
+.global lbl_805CD7C0
+lbl_805CD7C0:
+	.skip 0x8
+.global lbl_805CD7C8
+lbl_805CD7C8:
+	.skip 0x8

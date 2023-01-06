@@ -1173,3 +1173,156 @@ __GXInitGX:
 /* 803185F4 002E1BB4  7C 08 03 A6 */	mtlr r0
 /* 803185F8 002E1BB8  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 803185FC 002E1BBC  4E 80 00 20 */	blr
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8054B680
+lbl_8054B680:
+	.asciz "<< RVL_SDK - GX \trelease build: Feb 27 2009 10:04:13 (0x4302_145) >>"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0x00000009
+	.4byte 0x00000001
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0x0000000A
+	.4byte 0
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0x0000000B
+	.4byte 0x00000001
+	.4byte 0x00000005
+	.4byte 0
+	.4byte 0x0000000C
+	.4byte 0x00000001
+	.4byte 0x00000005
+	.4byte 0
+	.4byte 0x0000000D
+	.4byte 0x00000001
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0x0000000E
+	.4byte 0x00000001
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0x0000000F
+	.4byte 0x00000001
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0x00000010
+	.4byte 0x00000001
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0x00000011
+	.4byte 0x00000001
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0x00000012
+	.4byte 0x00000001
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0x00000013
+	.4byte 0x00000001
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0x00000014
+	.4byte 0x00000001
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0x000000FF
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.float 1.0
+	.4byte 0
+	.float 1.0
+	.4byte 0
+	.float -1.0
+	.4byte 0xC0000000
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_8054B7F0
+lbl_8054B7F0:
+	# ROM: 0x5478F0
+	.4byte 0
+	.4byte 0x00010000
+	.4byte 0x00020000
+	.4byte 0x00030000
+	.4byte 0x00040000
+	.4byte 0x00050000
+	.4byte 0x00060000
+	.4byte 0x00070000
+	.4byte 0x00008000
+	.4byte 0x00018000
+	.4byte 0x00028000
+	.4byte 0x00038000
+	.4byte 0x00048000
+	.4byte 0x00058000
+	.4byte 0x00068000
+	.4byte 0x00078000
+	.4byte 0
+	.4byte 0x00090000
+	.4byte 0x00020000
+	.4byte 0x000B0000
+	.4byte 0x00040000
+	.4byte 0x00098000
+	.4byte 0x00060000
+	.4byte 0x000B8000
+	.4byte 0x00080000
+	.4byte 0x00010000
+	.4byte 0x000A0000
+	.4byte 0x00030000
+	.4byte 0x00088000
+	.4byte 0x00050000
+	.4byte 0x000A8000
+	.4byte 0x00070000
+	.4byte 0
+	.4byte 0x00090000
+	.4byte 0x00020000
+	.4byte 0x000B0000
+	.4byte 0x00040000
+	.4byte 0x00090000
+	.4byte 0x00060000
+	.4byte 0x000B0000
+	.4byte 0x00080000
+	.4byte 0x00010000
+	.4byte 0x000A0000
+	.4byte 0x00030000
+	.4byte 0x00080000
+	.4byte 0x00050000
+	.4byte 0x000A0000
+	.4byte 0x00070000
+
+
+.global lbl_8054B8B0
+lbl_8054B8B0:
+	# ROM: 0x5479B0
+	.4byte __GXShutdown
+	.4byte 0x0000007F
+	.4byte 0
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CCEE0
+lbl_805CCEE0:
+	.skip 0x80
+.global lbl_805CCF60
+lbl_805CCF60:
+	.skip 0x600

@@ -328,9 +328,9 @@ __dt__Q310homebutton3gui7ManagerFv:
 /* 8031F9FC 002E8FBC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8031FA00 002E8FC0  7C 7D 1B 78 */	mr r29, r3
 /* 8031FA04 002E8FC4  41 82 00 78 */	beq .L_8031FA7C
-/* 8031FA08 002E8FC8  3C A0 80 55 */	lis r5, lbl_8054C3D0@ha
+/* 8031FA08 002E8FC8  3C A0 80 55 */	lis r5, __vt__homebutton_gui_Manager@ha
 /* 8031FA0C 002E8FCC  38 80 00 00 */	li r4, 0
-/* 8031FA10 002E8FD0  38 A5 C3 D0 */	addi r5, r5, lbl_8054C3D0@l
+/* 8031FA10 002E8FD0  38 A5 C3 D0 */	addi r5, r5, __vt__homebutton_gui_Manager@l
 /* 8031FA14 002E8FD4  90 A3 00 00 */	stw r5, 0(r3)
 /* 8031FA18 002E8FD8  38 63 00 08 */	addi r3, r3, 8
 /* 8031FA1C 002E8FDC  48 01 8D 35 */	bl List_GetNext__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListPCv
@@ -811,9 +811,9 @@ __dt__Q310homebutton3gui11PaneManagerFv:
 /* 8032008C 002E964C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80320090 002E9650  7C 7D 1B 78 */	mr r29, r3
 /* 80320094 002E9654  41 82 01 10 */	beq .L_803201A4
-/* 80320098 002E9658  3C A0 80 55 */	lis r5, lbl_8054C330@ha
+/* 80320098 002E9658  3C A0 80 55 */	lis r5, __vt__homebutton_gui_PaneManager@ha
 /* 8032009C 002E965C  38 80 00 00 */	li r4, 0
-/* 803200A0 002E9660  38 A5 C3 30 */	addi r5, r5, lbl_8054C330@l
+/* 803200A0 002E9660  38 A5 C3 30 */	addi r5, r5, __vt__homebutton_gui_PaneManager@l
 /* 803200A4 002E9664  90 A3 00 00 */	stw r5, 0(r3)
 /* 803200A8 002E9668  38 63 00 18 */	addi r3, r3, 0x18
 /* 803200AC 002E966C  48 01 86 A5 */	bl List_GetNext__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListPCv
@@ -854,9 +854,9 @@ __dt__Q310homebutton3gui11PaneManagerFv:
 /* 80320124 002E96E4  40 82 FF 94 */	bne .L_803200B8
 /* 80320128 002E96E8  2C 1D 00 00 */	cmpwi r29, 0
 /* 8032012C 002E96EC  41 82 00 68 */	beq .L_80320194
-/* 80320130 002E96F0  3C 80 80 55 */	lis r4, lbl_8054C3D0@ha
+/* 80320130 002E96F0  3C 80 80 55 */	lis r4, __vt__homebutton_gui_Manager@ha
 /* 80320134 002E96F4  38 7D 00 08 */	addi r3, r29, 8
-/* 80320138 002E96F8  38 84 C3 D0 */	addi r4, r4, lbl_8054C3D0@l
+/* 80320138 002E96F8  38 84 C3 D0 */	addi r4, r4, __vt__homebutton_gui_Manager@l
 /* 8032013C 002E96FC  90 9D 00 00 */	stw r4, 0(r29)
 /* 80320140 002E9700  38 80 00 00 */	li r4, 0
 /* 80320144 002E9704  48 01 86 0D */	bl List_GetNext__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListPCv
@@ -972,14 +972,14 @@ walkinchildren__q310homebutton3gui11panemanagerfrq36nw4hbm2ut30linklist_Q36nw4hb
 /* 803202A8 002E9868  90 01 00 44 */	stw r0, 0x44(r1)
 /* 803202AC 002E986C  39 61 00 40 */	addi r11, r1, 0x40
 /* 803202B0 002E9870  4B F9 9E 8D */	bl _savegpr_21
-/* 803202B4 002E9874  3E E0 80 55 */	lis r23, lbl_8054C440@ha
-/* 803202B8 002E9878  3F 20 80 55 */	lis r25, lbl_8054C288@ha
+/* 803202B4 002E9874  3E E0 80 55 */	lis r23, __vt__homebutton_gui_Component@ha
+/* 803202B8 002E9878  3F 20 80 55 */	lis r25, __vt__homebutton_gui_PaneComponent@ha
 /* 803202BC 002E987C  3F E0 80 5D */	lis r31, lbl_805CD7C8@ha
 /* 803202C0 002E9880  3F C0 80 5D */	lis r30, lbl_805CD7D8@ha
 /* 803202C4 002E9884  83 64 00 04 */	lwz r27, 4(r4)
 /* 803202C8 002E9888  7C 7C 1B 78 */	mr r28, r3
-/* 803202CC 002E988C  3A F7 C4 40 */	addi r23, r23, lbl_8054C440@l
-/* 803202D0 002E9890  3B 39 C2 88 */	addi r25, r25, lbl_8054C288@l
+/* 803202CC 002E988C  3A F7 C4 40 */	addi r23, r23, __vt__homebutton_gui_Component@l
+/* 803202D0 002E9890  3B 39 C2 88 */	addi r25, r25, __vt__homebutton_gui_PaneComponent@l
 /* 803202D4 002E9894  3B FF D7 C8 */	addi r31, r31, lbl_805CD7C8@l
 /* 803202D8 002E9898  3B DE D7 D8 */	addi r30, r30, lbl_805CD7D8@l
 /* 803202DC 002E989C  3B 44 00 04 */	addi r26, r4, 4
@@ -1792,3 +1792,202 @@ float_80518670:
 	.4byte 0xFF0000FF
 	.float 0.5
 	.float 1.0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global __vt__homebutton_gui_PaneComponent
+__vt__homebutton_gui_PaneComponent:
+	# ROM: 0x548388
+	.4byte __RTTI__homebutton_gui_PaneComponent
+	.4byte 0
+	.4byte create__Q310homebutton3gui9InterfaceFv
+	.4byte init__Q310homebutton3gui9ComponentFv
+	.4byte calc__Q310homebutton3gui9InterfaceFv
+	.4byte draw__Q310homebutton3gui9InterfaceFRA3_A4_f
+	.4byte draw__Q310homebutton3gui13PaneComponentFv
+	.4byte __dt__Q310homebutton3gui13PaneComponentFv
+	.4byte getID__Q310homebutton3gui9ComponentFv
+	.4byte isPointed__Q310homebutton3gui9ComponentFi
+	.4byte setPointed__Q310homebutton3gui9ComponentFib
+	.4byte onPoint__Q310homebutton3gui9ComponentFv
+	.4byte offPoint__Q310homebutton3gui9ComponentFv
+	.4byte onDrag__Q310homebutton3gui9ComponentFff
+	.4byte onMove__Q310homebutton3gui9ComponentFff
+	.4byte onTrig__Q310homebutton3gui9ComponentFUlR3Vec
+	.4byte setDraggingButton__Q310homebutton3gui9ComponentFUl
+	.4byte update__Q310homebutton3gui9ComponentFiPC10KPADStatusffPv
+	.4byte update__Q310homebutton3gui9ComponentFiffUlUlUlPv
+	.4byte isTriggerTarger__Q310homebutton3gui9ComponentFv
+	.4byte setTriggerTarget__Q310homebutton3gui9ComponentFb
+	.4byte setManager__Q310homebutton3gui9ComponentFPQ310homebutton3gui7Manager
+	.4byte isVisible__Q310homebutton3gui13PaneComponentFv
+	.4byte contain__Q310homebutton3gui13PaneComponentFff
+	.4byte setPane__Q310homebutton3gui13PaneComponentFPQ36nw4hbm3lyt4Pane
+	.4byte getPane__Q310homebutton3gui13PaneComponentFv
+
+.global homebutton_gui_PaneComponent_typestr
+homebutton_gui_PaneComponent_typestr:
+	.asciz "homebutton::gui::PaneComponent"
+	.balign 4
+
+.global homebutton_gui_PaneComponent_hierarchy
+homebutton_gui_PaneComponent_hierarchy:
+	.4byte __RTTI__homebutton_gui_Interface
+	.4byte 0
+	.4byte __RTTI__homebutton_gui_Component
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global __RTTI__homebutton_gui_PaneComponent
+__RTTI__homebutton_gui_PaneComponent:
+	.4byte homebutton_gui_PaneComponent_typestr
+	.4byte homebutton_gui_PaneComponent_hierarchy
+
+
+.global __vt__homebutton_gui_PaneManager
+__vt__homebutton_gui_PaneManager:
+	# ROM: 0x548430
+	.4byte __RTTI__homebutton_gui_PaneManager
+	.4byte 0
+	.4byte create__Q310homebutton3gui9InterfaceFv
+	.4byte init__Q310homebutton3gui7ManagerFv
+	.4byte calc__Q310homebutton3gui7ManagerFv
+	.4byte draw__Q310homebutton3gui9InterfaceFRA3_A4_f
+	.4byte draw__Q310homebutton3gui7ManagerFv
+	.4byte __dt__Q310homebutton3gui11PaneManagerFv
+	.4byte addComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component
+	.4byte delComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component
+	.4byte getComponent__Q310homebutton3gui7ManagerFUl
+	.4byte update__Q310homebutton3gui7ManagerFiPC10KPADStatusffPv
+	.4byte update__Q310homebutton3gui7ManagerFiffUlUlUlPv
+	.4byte onEvent__Q310homebutton3gui7ManagerFUlUlPv
+	.4byte setAllComponentTriggerTarget__Q310homebutton3gui7ManagerFb
+	.4byte setEventHandler__Q310homebutton3gui7ManagerFPQ310homebutton3gui12EventHandler
+	.4byte createLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout
+	.4byte addLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout
+	.4byte delLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout
+	.4byte getPaneComponentByPane__Q310homebutton3gui11PaneManagerFPQ36nw4hbm3lyt4Pane
+	.4byte getDrawInfo__Q310homebutton3gui11PaneManagerFv
+	.4byte setDrawInfo__Q310homebutton3gui11PaneManagerFPCQ36nw4hbm3lyt8DrawInfo
+	.4byte setAllBoundingBoxComponentTriggerTarget__Q310homebutton3gui11PaneManagerFb
+	.4byte walkinchildren__q310homebutton3gui11panemanagerfrq36nw4hbm2ut30linklist_Q36nw4hbm3lyt4Pane_4_
+	.4byte walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList_Q36nw4hbm3lyt4Pane_4_
+
+.global homebutton_gui_PaneManager_typestr
+homebutton_gui_PaneManager_typestr:
+	.asciz "homebutton::gui::PaneManager"
+	.balign 4
+
+.global homebutton_gui_PaneManager_hierarchy
+homebutton_gui_PaneManager_hierarchy:
+	.4byte __RTTI__homebutton_gui_Interface
+	.4byte 0
+	.4byte __RTTI__homebutton_gui_Manager
+	.4byte 0
+	.4byte 0
+
+.global __RTTI__homebutton_gui_PaneManager
+__RTTI__homebutton_gui_PaneManager:
+	.4byte homebutton_gui_PaneManager_typestr
+	.4byte homebutton_gui_PaneManager_hierarchy
+
+
+.global __vt__homebutton_gui_Manager
+__vt__homebutton_gui_Manager:
+	# ROM: 0x5484D0
+	.4byte __RTTI__homebutton_gui_Manager
+	.4byte 0
+	.4byte create__Q310homebutton3gui9InterfaceFv
+	.4byte init__Q310homebutton3gui7ManagerFv
+	.4byte calc__Q310homebutton3gui7ManagerFv
+	.4byte draw__Q310homebutton3gui9InterfaceFRA3_A4_f
+	.4byte draw__Q310homebutton3gui7ManagerFv
+	.4byte __dt__Q310homebutton3gui7ManagerFv
+	.4byte addComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component
+	.4byte delComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component
+	.4byte getComponent__Q310homebutton3gui7ManagerFUl
+	.4byte update__Q310homebutton3gui7ManagerFiPC10KPADStatusffPv
+	.4byte update__Q310homebutton3gui7ManagerFiffUlUlUlPv
+	.4byte onEvent__Q310homebutton3gui7ManagerFUlUlPv
+	.4byte setAllComponentTriggerTarget__Q310homebutton3gui7ManagerFb
+	.4byte setEventHandler__Q310homebutton3gui7ManagerFPQ310homebutton3gui12EventHandler
+
+.global homebutton_gui_Manager_typestr
+homebutton_gui_Manager_typestr:
+	.asciz "homebutton::gui::Manager"
+	.balign 4
+
+.global homebutton_gui_Manager_hierarchy
+homebutton_gui_Manager_hierarchy:
+	.4byte __RTTI__homebutton_gui_Interface
+	.4byte 0
+	.4byte 0
+
+.global __RTTI__homebutton_gui_Manager
+__RTTI__homebutton_gui_Manager:
+	.4byte homebutton_gui_Manager_typestr
+	.4byte homebutton_gui_Manager_hierarchy
+
+
+.global __vt__homebutton_gui_Component
+__vt__homebutton_gui_Component:
+	# ROM: 0x548540
+	.4byte __RTTI__homebutton_gui_Component
+	.4byte 0
+	.4byte create__Q310homebutton3gui9InterfaceFv
+	.4byte init__Q310homebutton3gui9ComponentFv
+	.4byte calc__Q310homebutton3gui9InterfaceFv
+	.4byte draw__Q310homebutton3gui9InterfaceFRA3_A4_f
+	.4byte draw__Q310homebutton3gui9InterfaceFv
+	.4byte __dt__Q310homebutton3gui9ComponentFv
+	.4byte getID__Q310homebutton3gui9ComponentFv
+	.4byte isPointed__Q310homebutton3gui9ComponentFi
+	.4byte setPointed__Q310homebutton3gui9ComponentFib
+	.4byte onPoint__Q310homebutton3gui9ComponentFv
+	.4byte offPoint__Q310homebutton3gui9ComponentFv
+	.4byte onDrag__Q310homebutton3gui9ComponentFff
+	.4byte onMove__Q310homebutton3gui9ComponentFff
+	.4byte onTrig__Q310homebutton3gui9ComponentFUlR3Vec
+	.4byte setDraggingButton__Q310homebutton3gui9ComponentFUl
+	.4byte update__Q310homebutton3gui9ComponentFiPC10KPADStatusffPv
+	.4byte update__Q310homebutton3gui9ComponentFiffUlUlUlPv
+	.4byte isTriggerTarger__Q310homebutton3gui9ComponentFv
+	.4byte setTriggerTarget__Q310homebutton3gui9ComponentFb
+	.4byte setManager__Q310homebutton3gui9ComponentFPQ310homebutton3gui7Manager
+	.4byte isVisible__Q310homebutton3gui9ComponentFv
+	.4byte 0
+
+.global homebutton_gui_Component_typestr
+homebutton_gui_Component_typestr:
+	.asciz "homebutton::gui::Component"
+	.balign 4
+
+.global homebutton_gui_Component_hierarchy
+homebutton_gui_Component_hierarchy:
+	.4byte __RTTI__homebutton_gui_Interface
+	.4byte 0
+	.4byte 0
+
+.global __RTTI__homebutton_gui_Component
+__RTTI__homebutton_gui_Component:
+	.4byte homebutton_gui_Component_typestr
+	.4byte homebutton_gui_Component_hierarchy
+
+.global homebutton_gui_Interface_typestr
+homebutton_gui_Interface_typestr:
+	.asciz "homebutton::gui::Interface"
+	.balign 4
+	.4byte 0
+
+.global __RTTI__homebutton_gui_Interface
+__RTTI__homebutton_gui_Interface:
+	.4byte homebutton_gui_Interface_typestr
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CD5A8
+lbl_805CD5A8:
+	.skip 0x8

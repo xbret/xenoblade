@@ -661,3 +661,51 @@ OSResetSystem:
 /* 8035A7F0 00323DB0  38 A5 2C DC */	addi r5, r5, lbl_80552CDC@l
 /* 8035A7F4 00323DB4  4C C6 31 82 */	crclr 6
 /* 8035A7F8 00323DB8  4B FF B0 C4 */	b OSPanic
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80552AF0
+lbl_80552AF0:
+	.asciz "OSReset.c"
+	.balign 4
+
+
+.global lbl_80552AFC
+lbl_80552AFC:
+	.asciz "__OSHotReset(): Falied to reset system.\n"
+	.balign 4
+	.asciz "__OSReturnToMenu(): Falied to boot system menu.\n"
+	.balign 4
+
+
+.global lbl_80552B5C
+lbl_80552B5C:
+	.asciz "OSReturnToMenu(): Falied to boot system menu.\n"
+	.balign 4
+	.asciz "OSReturnToDataManager(): Falied to boot system menu.\n"
+	.balign 4
+	.asciz "Calendar/Calendar_index.html"
+	.balign 4
+	.asciz "Display/Display_index.html"
+	.balign 4
+	.asciz "Sound/Sound_index.html"
+	.balign 4
+	.asciz "Parental_Control/Parental_Control_index.html"
+	.balign 4
+	.asciz "Internet/Internet_index.html"
+	.balign 4
+	.asciz "WiiConnect24/Wiiconnect24_index.html"
+	.balign 4
+	.asciz "Update/Update_index.html"
+	.balign 4
+	.asciz "OSReturnToSetting(): You can't specify %d.  \n"
+	.balign 4
+
+.global lbl_80552CDC
+lbl_80552CDC:
+	# ROM: 0x54EDDC
+	.asciz "OSResetSystem() is obsoleted. It doesn't work any longer.\n"
+	.balign 4
+	.asciz "OSSetBootDol() is obsoleted. It doesn't work any longer.\n"
+	.balign 4
+	.4byte 0

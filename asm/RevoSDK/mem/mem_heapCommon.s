@@ -335,3 +335,12 @@ MEMiFinalizeHeap:
 /* 80348FB0 00312570  7C 08 03 A6 */	mtlr r0
 /* 80348FB4 00312574  38 21 00 20 */	addi r1, r1, 0x20
 /* 80348FB8 00312578  4E 80 00 20 */	blr 
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CFC50
+lbl_805CFC50:
+	.skip 0x10
+.global lbl_805CFC60
+lbl_805CFC60:
+	.skip 0x18

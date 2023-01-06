@@ -374,3 +374,9 @@ iosFree:
 /* 803448CC 0030DE8C  7C 08 03 A6 */	mtlr r0
 /* 803448D0 0030DE90  38 21 00 20 */	addi r1, r1, 0x20
 /* 803448D4 0030DE94  4E 80 00 20 */	blr
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CE480
+lbl_805CE480:
+	.skip 0x80

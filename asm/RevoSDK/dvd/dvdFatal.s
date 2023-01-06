@@ -134,3 +134,332 @@ lbl_8050E3C4:
 	.4byte lbl_8054A330
 	.4byte lbl_8054A0A8
 	.4byte lbl_8054A154
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80549D60
+lbl_80549D60:
+	#"\n\n\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
+.global lbl_80549D60
+lbl_80549D60:
+	.4byte 0x0A0A0A83
+	.4byte 0x47838981
+	.4byte 0x5B82AA94
+	.4byte 0xAD90B682
+	.4byte 0xB582DC82
+	.4byte 0xB582BD81
+	.4byte 0x420A0A83
+	.4byte 0x43835783
+	.4byte 0x46834E83
+	.4byte 0x67837B83
+	.4byte 0x5E839382
+	.4byte 0xF0899F82
+	.4byte 0xB582C483
+	.4byte 0x66834283
+	.4byte 0x58834E82
+	.4byte 0xF08EE682
+	.4byte 0xE88F6F82
+	.4byte 0xB582C482
+	.4byte 0xA90A82E7
+	.4byte 0x8141967B
+	.4byte 0x91CC82CC
+	.4byte 0x93648CB9
+	.4byte 0x82F04F46
+	.4byte 0x4682C982
+	.4byte 0xB582C481
+	.4byte 0x41967B91
+	.4byte 0xCC82CC8E
+	.4byte 0xE688B590
+	.4byte 0xE096BE8F
+	.4byte 0x9182CC0A
+	.4byte 0x8E778EA6
+	.4byte 0x82C98F5D
+	.4byte 0x82C182C4
+	.4byte 0x82AD82BE
+	.4byte 0x82B382A2
+	.4byte 0x81420000
+
+.global lbl_80549DF0
+lbl_80549DF0:
+	.asciz "\n\n\nAn error has occurred.\nPress the Eject Button, remove the\nGame Disc, and turn off the power to the\nconsole. Please read the Wii Operations\nManual for further instructions."
+	.balign 4
+
+.global lbl_80549EA0
+lbl_80549EA0:
+	#"\n\n\nEin Fehler ist aufgetreten.\nDrücke den Ausgabeknopf, entnimm die\nDisc und schalte die Wii-Konsole aus.\nBitte lies die Wii-Bedienungsanleitung,\num weitere Informationen zu erhalten."
+.global lbl_80549EA0
+lbl_80549EA0:
+	.4byte 0x0A0A0A45
+	.4byte 0x696E2046
+	.4byte 0x65686C65
+	.4byte 0x72206973
+	.4byte 0x74206175
+	.4byte 0x66676574
+	.4byte 0x72657465
+	.4byte 0x6E2E0A44
+	.4byte 0x72FC636B
+	.asciz "e den Ausgabeknopf, entnimm die\nDisc und schalte die Wii-Konsole aus.\nBitte lies die Wii-Bedienungsanleitung,\num weitere Informationen zu erhalten."
+
+.global lbl_80549F58
+lbl_80549F58:
+	#.asciz "\n\n\nUne erreur est survenue.\nAppuyez sur le bouton EJECT, retirez\nle disque et éteignez la console.\nVeuillez vous référer au Mode d'emploi\nde la Wii pour plus de détails."
+.global lbl_80549F58
+lbl_80549F58:
+	.4byte 0x0A0A0A55
+	.4byte 0x6E652065
+	.4byte 0x72726575
+	.4byte 0x72206573
+	.4byte 0x74207375
+	.4byte 0x7276656E
+	.4byte 0x75652E0A
+	.4byte 0x41707075
+	.4byte 0x79657A20
+	.4byte 0x73757220
+	.4byte 0x6C652062
+	.4byte 0x6F75746F
+	.4byte 0x6E20454A
+	.4byte 0x4543542C
+	.4byte 0x20726574
+	.4byte 0x6972657A
+	.4byte 0x0A6C6520
+	.4byte 0x64697371
+	.4byte 0x75652065
+	.4byte 0x7420E974
+	.4byte 0x6569676E
+	.4byte 0x657A206C
+	.4byte 0x6120636F
+	.4byte 0x6E736F6C
+	.4byte 0x652E0A56
+	.4byte 0x6575696C
+	.4byte 0x6C657A20
+	.4byte 0x766F7573
+	.4byte 0x2072E966
+	.4byte 0xE9726572
+	.4byte 0x20617520
+	.4byte 0x4D6F6465
+	.4byte 0x20642765
+	.4byte 0x6D706C6F
+	.4byte 0x690A6465
+	.4byte 0x206C6120
+	.4byte 0x57696920
+	.4byte 0x706F7572
+	.4byte 0x20706C75
+	.4byte 0x73206465
+	.4byte 0x2064E974
+	.asciz "ails."
+	.balign 4
+	.4byte 0
+
+.global lbl_8054A008
+lbl_8054A008:
+	#"\n\n\nOcurrió un Error.\nOprime el Botón EJECT, saca el disco\ny apaga la consola. Consulta el manual\nde operaciones de la consola Wii para\nobtener más información."
+.global lbl_8054A008
+lbl_8054A008:
+	.4byte 0x0A0A0A4F
+	.4byte 0x63757272
+	.4byte 0x69F32075
+	.4byte 0x6E204572
+	.4byte 0x726F722E
+	.4byte 0x0A4F7072
+	.4byte 0x696D6520
+	.4byte 0x656C2042
+	.4byte 0x6F74F36E
+	.4byte 0x20454A45
+	.4byte 0x43542C20
+	.4byte 0x73616361
+	.4byte 0x20656C20
+	.4byte 0x64697363
+	.4byte 0x6F0A7920
+	.4byte 0x61706167
+	.4byte 0x61206C61
+	.4byte 0x20636F6E
+	.4byte 0x736F6C61
+	.4byte 0x2E20436F
+	.4byte 0x6E73756C
+	.4byte 0x74612065
+	.4byte 0x6C206D61
+	.4byte 0x6E75616C
+	.4byte 0x0A646520
+	.4byte 0x6F706572
+	.4byte 0x6163696F
+	.4byte 0x6E657320
+	.4byte 0x6465206C
+	.4byte 0x6120636F
+	.4byte 0x6E736F6C
+	.4byte 0x61205769
+	.4byte 0x69207061
+	.4byte 0x72610A6F
+	.4byte 0x6274656E
+	.4byte 0x6572206D
+	.4byte 0xE1732069
+	.4byte 0x6E666F72
+	.4byte 0x6D616369
+	.4byte 0xF36E2E00
+
+.global lbl_8054A0A8
+lbl_8054A0A8:
+	#"\n\n\nSi è verificato un errore.\nPremi il pulsante EJECT, estrai il disco\ne spegni la console. Per maggiori\ninformazioni, consulta il manuale di\nistruzioni della console Wii."
+.global lbl_8054A0A8
+lbl_8054A0A8:
+	.4byte 0x0A0A0A53
+	.4byte 0x6920E820
+	.asciz "verificato un errore.\nPremi il pulsante EJECT, estrai il disco\ne spegni la console. Per maggiori\ninformazioni, consulta il manuale di\nistruzioni della console Wii."
+
+.global lbl_8054A154
+lbl_8054A154:
+	.asciz "\n\n\nEr is een fout opgetreden.\nDruk op de EJECT-knop, verwijder de\ndisk en zet het Wii-systeem uit. Lees\nde Wii-handleiding voor meer informatie."
+	.balign 4
+
+.global lbl_8054A1E8
+lbl_8054A1E8:
+	.asciz "\n\n\nAn error has occurred.\nPress the EJECT Button, remove the Disc,\nand turn off the power to the console.\nPlease refer to the Wii Operations Manual\nfor details."
+	.balign 4
+
+.global lbl_8054A28C
+lbl_8054A28C:
+	#"\n\n\nUne erreur est survenue.\nAppuyez sur le bouton EJECT, retirez\nle disque et éteignez la console.\nVeuillez vous référer au mode d'emploi\nWii pour plus de détails."
+.global lbl_8054A28C
+lbl_8054A28C:
+	.4byte 0x0A0A0A55
+	.4byte 0x6E652065
+	.4byte 0x72726575
+	.4byte 0x72206573
+	.4byte 0x74207375
+	.4byte 0x7276656E
+	.4byte 0x75652E0A
+	.4byte 0x41707075
+	.4byte 0x79657A20
+	.4byte 0x73757220
+	.4byte 0x6C652062
+	.4byte 0x6F75746F
+	.4byte 0x6E20454A
+	.4byte 0x4543542C
+	.4byte 0x20726574
+	.4byte 0x6972657A
+	.4byte 0x0A6C6520
+	.4byte 0x64697371
+	.4byte 0x75652065
+	.4byte 0x7420E974
+	.4byte 0x6569676E
+	.4byte 0x657A206C
+	.4byte 0x6120636F
+	.4byte 0x6E736F6C
+	.4byte 0x652E0A56
+	.4byte 0x6575696C
+	.4byte 0x6C657A20
+	.4byte 0x766F7573
+	.4byte 0x2072E966
+	.4byte 0xE9726572
+	.4byte 0x20617520
+	.4byte 0x6D6F6465
+	.4byte 0x20642765
+	.4byte 0x6D706C6F
+	.4byte 0x690A5769
+	.4byte 0x6920706F
+	.4byte 0x75722070
+	.4byte 0x6C757320
+	.4byte 0x64652064
+	.4byte 0xE9746169
+	.4byte 0x6C732E00
+
+.global lbl_8054A330
+lbl_8054A330:
+	#"\n\n\nSe ha producido un error.\nPulsa el Botón EJECT, extrae el disco y\napaga la consola. Consulta el manual de\ninstrucciones de la consola Wii para\nobtener más información."
+	#.byte 0
+.global lbl_8054A330
+lbl_8054A330:
+	.4byte 0x0A0A0A53
+	.4byte 0x65206861
+	.4byte 0x2070726F
+	.4byte 0x64756369
+	.4byte 0x646F2075
+	.4byte 0x6E206572
+	.4byte 0x726F722E
+	.4byte 0x0A50756C
+	.4byte 0x73612065
+	.4byte 0x6C20426F
+	.4byte 0x74F36E20
+	.4byte 0x454A4543
+	.4byte 0x542C2065
+	.4byte 0x78747261
+	.4byte 0x6520656C
+	.4byte 0x20646973
+	.4byte 0x636F2079
+	.4byte 0x0A617061
+	.4byte 0x6761206C
+	.4byte 0x6120636F
+	.4byte 0x6E736F6C
+	.4byte 0x612E2043
+	.4byte 0x6F6E7375
+	.4byte 0x6C746120
+	.4byte 0x656C206D
+	.4byte 0x616E7561
+	.4byte 0x6C206465
+	.4byte 0x0A696E73
+	.4byte 0x74727563
+	.4byte 0x63696F6E
+	.4byte 0x65732064
+	.4byte 0x65206C61
+	.4byte 0x20636F6E
+	.4byte 0x736F6C61
+	.4byte 0x20576969
+	.4byte 0x20706172
+	.4byte 0x610A6F62
+	.4byte 0x74656E65
+	.4byte 0x72206DE1
+	.4byte 0x7320696E
+	.4byte 0x666F726D
+	.4byte 0x616369F3
+	.4byte 0x6E2E0000
+	
+.global lbl_8054A3DC
+lbl_8054A3DC:
+	#"\n\nエラーコード１０４。\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
+.global lbl_8054A3DC
+lbl_8054A3DC:
+	.4byte 0x0A0A8347
+	.4byte 0x8389815B
+	.4byte 0x8352815B
+	.4byte 0x83688250
+	.4byte 0x824F8253
+	.4byte 0x81420A83
+	.4byte 0x47838981
+	.4byte 0x5B82AA94
+	.4byte 0xAD90B682
+	.4byte 0xB582DC82
+	.4byte 0xB582BD81
+	.4byte 0x420A0A83
+	.4byte 0x43835783
+	.4byte 0x46834E83
+	.4byte 0x67837B83
+	.4byte 0x5E839382
+	.4byte 0xF0899F82
+	.4byte 0xB582C483
+	.4byte 0x66834283
+	.4byte 0x58834E82
+	.4byte 0xF08EE682
+	.4byte 0xE88F6F82
+	.4byte 0xB582C482
+	.4byte 0xA90A82E7
+	.4byte 0x8141967B
+	.4byte 0x91CC82CC
+	.4byte 0x93648CB9
+	.4byte 0x82F04F46
+	.4byte 0x4682C982
+	.4byte 0xB582C481
+	.4byte 0x41967B91
+	.4byte 0xCC82CC8E
+	.4byte 0xE688B590
+	.4byte 0xE096BE8F
+	.4byte 0x9182CC0A
+	.4byte 0x8E778EA6
+	.4byte 0x82C98F5D
+	.4byte 0x82C182C4
+	.4byte 0x82AD82BE
+	.4byte 0x82B382A2
+	.4byte 0x81420000
+
+.global lbl_8054A480
+lbl_8054A480:
+	.asciz "\n\nError #104,\nAn error has occurred.\nPress the EJECT Button, remove the\nGame Disc, and turn the power off.\nPlease read the Wii Operations Manual\nfor more information."
+	.balign 4

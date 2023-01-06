@@ -5792,3 +5792,43 @@ float_80518B50:
 	# ROM: 0x514C50
 	.float 0.5
 	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054EEF8
+lbl_8054EEF8:
+	# ROM: 0x54AFF8
+	.4byte 0x00000100
+
+
+.global lbl_8054EEFC
+lbl_8054EEFC:
+	# ROM: 0x54AFFC
+	.4byte 0x00000100
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CD7F8
+lbl_805CD7F8:
+	.skip 0xC
+.global lbl_805CD804
+lbl_805CD804:
+	.skip 0xC
+.global lbl_805CD810
+lbl_805CD810:
+	.skip 0x4
+.global lbl_805CD814
+lbl_805CD814:
+	.skip 0x4
+.global lbl_805CD818
+lbl_805CD818:
+	.skip 0x4
+.global lbl_805CD81C
+lbl_805CD81C:
+	.skip 0x4
+.global lbl_805CD820
+lbl_805CD820:
+	.skip 0x1
+.global lbl_805CD821
+lbl_805CD821:
+	.skip 0x7

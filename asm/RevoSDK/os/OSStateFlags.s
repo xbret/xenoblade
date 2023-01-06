@@ -148,3 +148,15 @@ __OSReadStateFlags:
 /* 8035E05C 0032761C  7C 08 03 A6 */	mtlr r0
 /* 8035E060 00327620  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 8035E064 00327624  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8055ED08
+lbl_8055ED08:
+	.asciz "/title/00000001/00000002/data/state.dat"
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805D5420
+lbl_805D5420:
+	.skip 0x20

@@ -1392,3 +1392,66 @@ lbl_80518BC8:
 	.4byte 0xFFFFFFFE
 	.4byte 0xFFFFFFE9
 	.4byte 0xFFFFFFC0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80551080
+lbl_80551080:
+	.asciz "<< RVL_SDK - NAND \trelease build: Feb 27 2009 10:05:16 (0x4302_145) >>"
+	.balign 4
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_805510E0
+lbl_805510E0:
+	# ROM: 0x54D1E0
+	.4byte 0x2F000000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte nandOnShutdown
+	.4byte 0x000000FF
+	.4byte 0
+	.4byte 0
+
+
+.global lbl_80551130
+lbl_80551130:
+	.asciz "/shared2"
+	.balign 4
+
+
+.global lbl_8055113C
+lbl_8055113C:
+	.asciz "/shared2/"
+	.balign 4
+	.asciz "ISFS error code: %d"
+	.asciz "CAUTION!  Unexpected error code [%d] was found.\n"
+	.balign 4
+	.asciz "ISFS unexpected error code: %d"
+	.balign 4
+	.asciz "Failed to set home directory.\n"
+	.balign 4
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805D4000
+lbl_805D4000:
+	.skip 0x40

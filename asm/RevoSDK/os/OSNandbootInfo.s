@@ -149,3 +149,11 @@ __OSWriteNandbootInfo:
 /* 8035E80C 00327DCC  7C 08 03 A6 */	mtlr r0
 /* 8035E810 00327DD0  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 8035E814 00327DD4  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8055EE98
+lbl_8055EE98:
+	.asciz "/shared2/sys/NANDBOOTINFO"
+	.balign 4
+	.4byte 0

@@ -1211,3 +1211,157 @@ __GXSetTmemConfig:
 /* 8031D154 002E6714  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8031D158 002E6718  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031D15C 002E671C  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054BE70
+lbl_8054BE70:
+	# ROM: 0x547F70
+	.4byte switch_8031C0E0
+	.4byte switch_8031C0EC
+	.4byte switch_8031C0EC
+	.4byte switch_8031C0F8
+	.4byte switch_8031C0F8
+	.4byte switch_8031C0F8
+	.4byte switch_8031C0F8
+	.4byte switch_8031C104
+	.4byte switch_8031C0E0
+	.4byte switch_8031C0EC
+	.4byte switch_8031C0F8
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C0E0
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C0EC
+	.4byte switch_8031C104
+	.4byte switch_8031C0F8
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C0F8
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C0E0
+	.4byte switch_8031C104
+	.4byte switch_8031C0EC
+	.4byte switch_8031C0F8
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C0EC
+	.4byte switch_8031C0EC
+	.4byte switch_8031C0EC
+	.4byte switch_8031C0EC
+	.4byte switch_8031C0F8
+	.4byte switch_8031C0F8
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C0E0
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C104
+	.4byte switch_8031C0EC
+	.4byte switch_8031C0EC
+	.4byte switch_8031C104
+	.4byte switch_8031C0F8
+
+
+.global lbl_8054BF64
+lbl_8054BF64:
+	# ROM: 0x548064
+	.4byte switch_8031C210
+	.4byte switch_8031C21C
+	.4byte switch_8031C21C
+	.4byte switch_8031C228
+	.4byte switch_8031C228
+	.4byte switch_8031C228
+	.4byte switch_8031C228
+	.4byte switch_8031C234
+	.4byte switch_8031C210
+	.4byte switch_8031C21C
+	.4byte switch_8031C228
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C210
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C21C
+	.4byte switch_8031C234
+	.4byte switch_8031C228
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C228
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C210
+	.4byte switch_8031C234
+	.4byte switch_8031C21C
+	.4byte switch_8031C228
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C21C
+	.4byte switch_8031C21C
+	.4byte switch_8031C21C
+	.4byte switch_8031C21C
+	.4byte switch_8031C228
+	.4byte switch_8031C228
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C210
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C234
+	.4byte switch_8031C21C
+	.4byte switch_8031C21C
+	.4byte switch_8031C234
+	.4byte switch_8031C228
+
+
+.global lbl_8054C058
+lbl_8054C058:
+	# ROM: 0x548158
+	.4byte switch_8031C3F4
+	.4byte switch_8031C408
+	.4byte switch_8031C408
+	.4byte switch_8031C41C
+	.4byte switch_8031C41C
+	.4byte switch_8031C41C
+	.4byte switch_8031C430
+	.4byte switch_8031C458
+	.4byte switch_8031C3F4
+	.4byte switch_8031C408
+	.4byte switch_8031C41C
+	.4byte switch_8031C458
+	.4byte switch_8031C458
+	.4byte switch_8031C458
+	.4byte switch_8031C444
+	.4byte 0

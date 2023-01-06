@@ -1556,3 +1556,28 @@ __OSBootDol:
 /* 80356AE4 003200A4  7C 08 03 A6 */	mtlr r0
 /* 80356AE8 003200A8  38 21 00 40 */	addi r1, r1, 0x40
 /* 80356AEC 003200AC  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80551F30
+lbl_80551F30:
+	.asciz "\nOSExec(): Failed to exec %d in %d\n"
+
+
+.global lbl_80551F54
+lbl_80551F54:
+	.asciz "\nOSExec(): The specified game doesn't exist in the disc\n"
+	.balign 4
+
+
+.global lbl_80551F90
+lbl_80551F90:
+	.asciz "2004/02/01"
+	.balign 4
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805D4400
+lbl_805D4400:
+	.skip 0x20

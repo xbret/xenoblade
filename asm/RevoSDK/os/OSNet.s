@@ -428,3 +428,64 @@ CallbackAsyncIpc:
 /* 8035E600 00327BC0  90 0D B9 AC */	stw r0, lbl_80667B2C@sda21(r13)
 /* 8035E604 00327BC4  38 60 00 00 */	li r3, 0
 /* 8035E608 00327BC8  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8055ED30
+lbl_8055ED30:
+	.asciz "Failed to register network shutdown function. %d\n"
+	.balign 4
+	.asciz "Failed to suspend the WiiConnect24 scheduler. %d\n"
+	.balign 4
+	.asciz "Failed to synchronize time with network resource managers. %d\n"
+	.balign 4
+	.asciz "NWC24iPrepareShutdown"
+	.balign 4
+
+
+.global lbl_8055EDF0
+lbl_8055EDF0:
+	.asciz "/dev/net/kd/request"
+	.asciz "NWC24SuspendScheduler"
+	.balign 4
+	.asciz "NWC24ResumeScheduler"
+	.balign 4
+	.asciz "NWC24iRequestShutdown"
+	.balign 4
+
+
+.global lbl_8055EE4C
+lbl_8055EE4C:
+	.asciz "NWC24Shutdown_: Give up!\n"
+	.balign 4
+	.asciz "NWC24iSetRtcCounter_"
+	.balign 4
+
+
+.global lbl_8055EE80
+lbl_8055EE80:
+	.asciz "/dev/net/kd/time"
+	.balign 4
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805D5440
+lbl_805D5440:
+	.skip 0x20
+.global lbl_805D5460
+lbl_805D5460:
+	.skip 0x20
+.global lbl_805D5480
+lbl_805D5480:
+	.skip 0x20
+.global lbl_805D54A0
+lbl_805D54A0:
+	.skip 0x20
+.global lbl_805D54C0
+lbl_805D54C0:
+	.skip 0x20
+.global lbl_805D54E0
+lbl_805D54E0:
+	.skip 0x20

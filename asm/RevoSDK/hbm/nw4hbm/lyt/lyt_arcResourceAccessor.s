@@ -266,3 +266,53 @@ GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc:
 /* 8032C404 002F59C4  7C 08 03 A6 */	mtlr r0
 /* 8032C408 002F59C8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032C40C 002F59CC  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054D638
+lbl_8054D638:
+	# ROM: 0x549738
+	.4byte 0x2E000000
+
+
+.global lbl_8054D63C
+lbl_8054D63C:
+	# ROM: 0x54973C
+	.4byte 0x2E2E0000
+
+
+.global lbl_8054D640
+lbl_8054D640:
+	# ROM: 0x549740
+	.4byte lbl_8054D688
+	.4byte 0
+	.4byte __dt__Q36nw4hbm3lyt19ArcResourceAccessorFv
+	.4byte GetResource__Q36nw4hbm3lyt19ArcResourceAccessorFUlPCcPUl
+	.4byte GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc
+
+.global lbl_8054D654
+lbl_8054D654:
+	.asciz "nw4hbm::lyt::ArcResourceAccessor"
+	.balign 4
+
+.global lbl_8054D678
+lbl_8054D678:
+	.4byte lbl_8054D6B0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global lbl_8054D688
+lbl_8054D688:
+	.4byte lbl_8054D654
+	.4byte lbl_8054D678
+
+.global lbl_8054D690
+lbl_8054D690:
+	.asciz "nw4hbm::lyt::ResourceAccessor"
+	.balign 4
+
+.global lbl_8054D6B0
+lbl_8054D6B0:
+	.4byte lbl_8054D690
+	.4byte 0

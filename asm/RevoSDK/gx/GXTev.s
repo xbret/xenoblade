@@ -504,3 +504,44 @@ GXSetNumTevStages:
 /* 8031DCD8 002E7298  60 00 00 04 */	ori r0, r0, 4
 /* 8031DCDC 002E729C  90 04 05 FC */	stw r0, 0x5fc(r4)
 /* 8031DCE0 002E72A0  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054C098
+lbl_8054C098:
+	# ROM: 0x548198
+	.4byte 0xC008F8AF
+	.4byte 0xC008A89F
+	.4byte 0xC008AC8F
+	.4byte 0xC008FFF8
+	.4byte 0xC008FFFA
+	.4byte 0xC008F80F
+	.4byte 0xC008089F
+	.4byte 0xC0080C8F
+	.4byte 0xC008FFF8
+	.4byte 0xC008FFF0
+	.4byte 0xC108F2F0
+	.4byte 0xC108FFD0
+	.4byte 0xC108F2F0
+	.4byte 0xC108FFC0
+	.4byte 0xC108FFD0
+	.4byte 0xC108F070
+	.4byte 0xC108FF80
+	.4byte 0xC108F070
+	.4byte 0xC108FFC0
+	.4byte 0xC108FF80
+
+
+.global lbl_8054C0E8
+lbl_8054C0E8:
+	# ROM: 0x5481E8
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000007
+	.4byte 0x00000005
+	.4byte 0x00000006
+	.4byte 0

@@ -290,3 +290,38 @@ OSTicksToCalendarTime:
 /* 8035CD80 00326340  7C 08 03 A6 */	mtlr r0
 /* 8035CD84 00326344  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035CD88 00326348  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80552D58
+lbl_80552D58:
+	# ROM: 0x54EE58
+	.4byte 0
+	.4byte 0x0000001F
+	.4byte 0x0000003B
+	.4byte 0x0000005A
+	.4byte 0x00000078
+	.4byte 0x00000097
+	.4byte 0x000000B5
+	.4byte 0x000000D4
+	.4byte 0x000000F3
+	.4byte 0x00000111
+	.4byte 0x00000130
+	.4byte 0x0000014E
+
+
+.global lbl_80552D88
+lbl_80552D88:
+	# ROM: 0x54EE88
+	.4byte 0
+	.4byte 0x0000001F
+	.4byte 0x0000003C
+	.4byte 0x0000005B
+	.4byte 0x00000079
+	.4byte 0x00000098
+	.4byte 0x000000B6
+	.4byte 0x000000D5
+	.4byte 0x000000F4
+	.4byte 0x00000112
+	.4byte 0x00000131
+	.4byte 0x0000014F

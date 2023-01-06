@@ -1448,3 +1448,63 @@ double_80518AC8:
 	.4byte 0x80000000
 	.float 0.5
 	.float 1.0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global __vt__8054D9F4
+__vt__8054D9F4:
+	.4byte lbl_8054DA98
+	.4byte 0
+	.4byte func_80332FB0
+	.4byte func_80334110
+	.4byte func_80331CD0
+	.4byte func_80331FD0
+	.4byte func_803331E0
+	.4byte func_803320E0
+	.4byte func_80332170
+	.4byte func_80333140
+	.4byte func_80333160
+	.4byte func_80331AE0
+	.4byte func_80331B10
+	.4byte func_803331A0
+	.4byte func_803331C0
+	.4byte func_80331B60
+	.4byte func_80331C10
+	.4byte func_80332230
+	.4byte func_80332250
+	.4byte func_803322E0
+	.4byte func_80332300
+	.4byte func_803323E0
+	.4byte func_80332460
+	.4byte func_80332710
+	.4byte func_80332520
+	.4byte func_80333D50
+	.4byte FreeStringBuffer__Q36nw4hbm3lyt7TextBoxFv
+	.4byte SetString__Q36nw4hbm3lyt7TextBoxFPCwUs
+	.4byte func_80333E90
+
+.global lbl_8054DA68
+lbl_8054DA68:
+	.asciz "nw4hbm::lyt::TextBox"
+	.balign 4
+
+.global lbl_8054DA80
+lbl_8054DA80:
+	.4byte lbl_8054D798
+	.4byte 0
+	.4byte lbl_8054D770
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+.global lbl_8054DA98
+lbl_8054DA98:
+	.4byte lbl_8054DA68
+	.4byte lbl_8054DA80
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CD7D0
+lbl_805CD7D0:
+	.skip 0x8

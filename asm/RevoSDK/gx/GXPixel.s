@@ -539,3 +539,17 @@ GXSetFieldMode:
 /* 8031E464 002E7A24  7C 08 03 A6 */	mtlr r0
 /* 8031E468 002E7A28  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031E46C 002E7A2C  4E 80 00 20 */	blr 
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054C110
+lbl_8054C110:
+	# ROM: 0x548210
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0x00000003
+	.4byte 0x00000004
+	.4byte 0x00000004
+	.4byte 0x00000004
+	.4byte 0x00000005

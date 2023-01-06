@@ -834,3 +834,179 @@ lbl_805186A4:
 	.float 10.0
 	.4byte 0x41A00000
 	.4byte 0
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8054C528
+lbl_8054C528:
+	.asciz "midi\\00_home_button.mid"
+
+.global lbl_8054C540
+lbl_8054C540:
+	.asciz "midi\\01_return_app.mid"
+	.balign 4
+
+.global lbl_8054C558
+lbl_8054C558:
+	.asciz "midi\\02_goto_menu.mid"
+	.balign 4
+
+.global lbl_8054C570
+lbl_8054C570:
+	.asciz "midi\\03_reset_app.mid"
+	.balign 4
+
+.global lbl_8054C588
+lbl_8054C588:
+	.asciz "midi\\04_focus.mid"
+	.balign 4
+
+.global lbl_8054C59C
+lbl_8054C59C:
+	.asciz "midi\\05_select.mid"
+	.balign 4
+
+.global lbl_8054C5B0
+lbl_8054C5B0:
+	.asciz "midi\\06_cancel.mid"
+	.balign 4
+
+.global lbl_8054C5C4
+lbl_8054C5C4:
+	.asciz "midi\\07_open_controller.mid"
+
+.global lbl_8054C5E0
+lbl_8054C5E0:
+	.asciz "midi\\08_close_controller.mid"
+	.balign 4
+
+.global lbl_8054C600
+lbl_8054C600:
+	.asciz "midi\\09_volume_plus.mid"
+
+.global lbl_8054C618
+lbl_8054C618:
+	.asciz "midi\\10_volume_minus.mid"
+	.balign 4
+
+.global lbl_8054C634
+lbl_8054C634:
+	.asciz "midi\\11_volume_plus_limit.mid"
+	.balign 4
+
+.global lbl_8054C654
+lbl_8054C654:
+	.asciz "midi\\12_volume_minus_limit.mid"
+	.balign 4
+
+.global lbl_8054C674
+lbl_8054C674:
+	.asciz "midi\\13_nothing_done.mid"
+	.balign 4
+
+.global lbl_8054C690
+lbl_8054C690:
+	.asciz "midi\\14_vibe_on.mid"
+
+.global lbl_8054C6A4
+lbl_8054C6A4:
+	.asciz "midi\\15_vibe_off.mid"
+	.balign 4
+
+.global lbl_8054C6BC
+lbl_8054C6BC:
+	.asciz "midi\\16_start_connect_window.mid"
+	.balign 4
+
+.global lbl_8054C6E0
+lbl_8054C6E0:
+	.asciz "midi\\17_connected1.mid"
+	.balign 4
+
+.global lbl_8054C6F8
+lbl_8054C6F8:
+	.asciz "midi\\18_connected2.mid"
+	.balign 4
+
+.global lbl_8054C710
+lbl_8054C710:
+	.asciz "midi\\19_connected3.mid"
+	.balign 4
+
+.global lbl_8054C728
+lbl_8054C728:
+	.asciz "midi\\20_connected4.mid"
+	.balign 4
+
+.global lbl_8054C740
+lbl_8054C740:
+	.asciz "midi\\21_end_connect_window.mid"
+	.balign 4
+
+.global lbl_8054C760
+lbl_8054C760:
+	.asciz "midi\\22_manual_open.mid"
+
+.global lbl_8054C778
+lbl_8054C778:
+	.asciz "midi\\23_manual_focus.mid"
+	.balign 4
+
+.global lbl_8054C794
+lbl_8054C794:
+	.asciz "midi\\24_manual_select.mid"
+	.balign 4
+
+.global lbl_8054C7B0
+lbl_8054C7B0:
+	.asciz "midi\\25_manual_scroll.mid"
+	.balign 4
+
+.global lbl_8054C7CC
+lbl_8054C7CC:
+	.asciz "midi\\26_manual_cancel.mid"
+	.balign 4
+
+.global lbl_8054C7E8
+lbl_8054C7E8:
+	.asciz "midi\\27_manual_return_app.mid"
+	.balign 4
+
+
+.global lbl_8054C808
+lbl_8054C808:
+	# ROM: 0x548908
+	.4byte lbl_8054C528
+	.4byte lbl_8054C540
+	.4byte lbl_8054C558
+	.4byte lbl_8054C570
+	.4byte lbl_8054C588
+	.4byte lbl_8054C59C
+	.4byte lbl_8054C5B0
+	.4byte lbl_8054C5C4
+	.4byte lbl_8054C5E0
+	.4byte lbl_8054C600
+	.4byte lbl_8054C618
+	.4byte lbl_8054C634
+	.4byte lbl_8054C654
+	.4byte lbl_8054C674
+	.4byte lbl_8054C690
+	.4byte lbl_8054C6A4
+	.4byte lbl_8054C6BC
+	.4byte lbl_8054C6E0
+	.4byte lbl_8054C6F8
+	.4byte lbl_8054C710
+	.4byte lbl_8054C728
+	.4byte lbl_8054C740
+	.4byte lbl_8054C760
+	.4byte lbl_8054C778
+	.4byte lbl_8054C794
+	.4byte lbl_8054C7B0
+	.4byte lbl_8054C7CC
+	.4byte lbl_8054C7E8
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CD750
+lbl_805CD750:
+	.skip 0x8

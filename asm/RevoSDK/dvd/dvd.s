@@ -5423,3 +5423,311 @@ __DVDStopMotorAsync:
 .global __DVDRestartMotor
 __DVDRestartMotor:
 /* 8030F460 002D8A20  4E 80 00 20 */	blr 
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_80549920
+lbl_80549920:
+	.asciz "<< RVL_SDK - DVD \trelease build: Feb 27 2009 10:01:59 (0x4302_145) >>"
+	.balign 4
+
+
+.global lbl_80549968
+lbl_80549968:
+	.asciz "DVDChangeDisk(): FST in the new disc is too big.   "
+
+
+.global lbl_8054999C
+lbl_8054999C:
+	# ROM: 0x545A9C
+	.4byte switch_8030CBA8
+	.4byte switch_8030CB9C
+	.4byte switch_8030CB9C
+	.4byte switch_8030CBA8
+	.4byte switch_8030CB48
+	.4byte switch_8030CB48
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CB48
+	.4byte switch_8030CBA8
+	.4byte switch_8030CB48
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CB7C
+	.4byte switch_8030CB48
+	.4byte switch_8030CB48
+	.4byte switch_8030CB84
+	.4byte switch_8030CB84
+	.4byte switch_8030CB48
+	.4byte switch_8030CB84
+	.4byte switch_8030CBA8
+	.4byte switch_8030CBA8
+	.4byte switch_8030CB48
+	.4byte switch_8030CB48
+
+
+.global lbl_80549A48
+lbl_80549A48:
+	# ROM: 0x545B48
+	.4byte switch_8030DEF0
+	.4byte switch_8030DA84
+	.4byte switch_8030DBAC
+	.4byte switch_8030DBC8
+	.4byte switch_8030DA84
+	.4byte switch_8030DA60
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DBF8
+	.4byte switch_8030DC18
+	.4byte switch_8030DBE0
+	.4byte switch_8030DC3C
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DC5C
+	.4byte switch_8030DC74
+	.4byte switch_8030DD9C
+	.4byte switch_8030DDC8
+	.4byte switch_8030DDF0
+	.4byte switch_8030DE00
+	.4byte switch_8030DDE0
+	.4byte switch_8030DEF0
+	.4byte switch_8030DE1C
+	.4byte switch_8030DE48
+	.4byte switch_8030DEBC
+
+
+.global lbl_80549AF4
+lbl_80549AF4:
+	# ROM: 0x545BF4
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030D9B8
+	.4byte switch_8030D9B8
+	.4byte switch_8030DA3C
+	.4byte switch_8030D9B8
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030D9B8
+	.4byte switch_8030D9B8
+	.4byte switch_8030D9B8
+	.4byte switch_8030D9B8
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030D9B8
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030D9B8
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030DA3C
+	.4byte switch_8030D9B8
+	.4byte switch_8030D9B8
+.global lbl_80549BA0
+lbl_80549BA0:
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_80549BAC
+lbl_80549BAC:
+	# ROM: 0x545CAC
+	.4byte switch_8030EE64
+	.4byte switch_8030EE04
+	.4byte switch_8030EE04
+	.4byte switch_8030EE64
+	.4byte switch_8030EDE4
+	.4byte switch_8030EDE4
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EDE4
+	.4byte switch_8030EE64
+	.4byte switch_8030EDE4
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EDE4
+	.4byte switch_8030EDE4
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EDE4
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EE64
+	.4byte switch_8030EDE4
+	.4byte switch_8030EDE4
+
+
+.global lbl_80549C58
+lbl_80549C58:
+	# ROM: 0x545D58
+	.4byte switch_8030ECF0
+	.4byte switch_8030ECF0
+	.4byte switch_8030ED10
+	.4byte switch_8030ED74
+	.4byte switch_8030EDC0
+	.4byte switch_8030EE90
+	.4byte switch_8030EE90
+	.4byte switch_8030EE90
+	.4byte switch_8030EE90
+	.4byte switch_8030EFDC
+	.4byte switch_8030EFDC
+	.4byte switch_8030ECF0
+	.4byte switch_8030EE90
+	.4byte switch_8030EF8C
+	
+.global lbl_80549C90
+lbl_80549C90:
+	.4byte switch_8030F0A8
+	.4byte switch_8030F0A8
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F0A8
+	.4byte switch_8030F09C
+	.4byte switch_8030F0A8
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F0A8
+	.4byte switch_8030F0A8
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F0A8
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F09C
+	.4byte switch_8030F0A8
+	.4byte switch_8030F0A8
+	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805C7D00
+lbl_805C7D00:
+	.skip 0x100
+.global lbl_805C7E00
+lbl_805C7E00:
+	.skip 0x4A00
+.global lbl_805CC800
+lbl_805CC800:
+	.skip 0x20
+.global lbl_805CC820
+lbl_805CC820:
+	.skip 0x30
+.global lbl_805CC850
+lbl_805CC850:
+	.skip 0x30
+.global lbl_805CC880
+lbl_805CC880:
+	.skip 0x40
+.global lbl_805CC8C0
+lbl_805CC8C0:
+	.skip 0x20
+.global lbl_805CC8E0
+lbl_805CC8E0:
+	.skip 0x20
+.global lbl_805CC900
+lbl_805CC900:
+	.skip 0x20
+.global lbl_805CC920
+lbl_805CC920:
+	.skip 0x30
+.global lbl_805CC950
+lbl_805CC950:
+	.skip 0x60

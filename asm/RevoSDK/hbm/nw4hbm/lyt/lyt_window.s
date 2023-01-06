@@ -2495,3 +2495,83 @@ double_80518AE8:
 	# ROM: 0x514BE8
 	.4byte 0x43300000
 	.4byte 0x80000000
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8054DAA0
+lbl_8054DAA0:
+	# ROM: 0x549BA0
+	.4byte 0x00000100
+	.4byte 0x00010101
+	.4byte 0x00010100
+	.4byte 0x00000101
+	.4byte 0x00010001
+	.4byte 0x00010101
+	.4byte 0x00000100
+	.4byte 0x00010001
+	.4byte 0x00000101
+	.4byte 0x01000100
+	.4byte 0x01010001
+	.4byte 0x01000000
+	.4byte 0x00010100
+	.4byte 0x01010000
+	.4byte 0x00010100
+
+
+.global __vt__Q36nw4hbm3lyt6Window
+__vt__Q36nw4hbm3lyt6Window:
+	.4byte lbl_8054DB80
+	.4byte 0
+	.4byte func_80334350
+	.4byte func_80336610
+	.4byte func_80331CD0
+	.4byte func_80331FD0
+	.4byte func_80334780
+	.4byte func_803320E0
+	.4byte func_803348C0
+	.4byte func_803346F0
+	.4byte func_80334710
+	.4byte func_80331AE0
+	.4byte func_80331B10
+	.4byte func_80334740
+	.4byte func_80334760
+	.4byte func_80331B60
+	.4byte func_803344A0
+	.4byte func_80332230
+	.4byte func_80332250
+	.4byte func_803322E0
+	.4byte func_80334950
+	.4byte func_803345A0
+	.4byte func_80334650
+	.4byte func_80332710
+	.4byte func_80332520
+	.4byte func_80336600
+	.4byte func_803365D0
+	.4byte func_803349E0
+	.4byte func_80334AF0
+	.4byte func_803350D0
+	.4byte func_803357A0
+
+.global lbl_8054DB58
+lbl_8054DB58:
+	.asciz "nw4hbm::lyt::Window"
+
+.global lbl_8054DB6C
+lbl_8054DB6C:
+	.4byte lbl_8054D798
+	.4byte 0
+	.4byte lbl_8054D770
+	.4byte 0
+	.4byte 0
+
+.global lbl_8054DB80
+lbl_8054DB80:
+	.4byte lbl_8054DB58
+	.4byte lbl_8054DB6C
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_805CD7D8
+lbl_805CD7D8:
+	.skip 0x8
