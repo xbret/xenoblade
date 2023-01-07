@@ -228,3 +228,16 @@ lbl_8055F120:
 	.4byte 0x044B5200
 	.4byte 0x05434E00
 	.4byte 0xFF000000
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665CD0
+lbl_80665CD0:
+	.asciz "AREA"
+	.balign 4
+
+
+.global lbl_80665CD8
+lbl_80665CD8:
+	.asciz "GAME"
+	.balign 4

@@ -1825,6 +1825,19 @@ IOS_IoctlvReboot:
 /* 803443A4 0030D964  38 21 00 30 */	addi r1, r1, 0x30
 /* 803443A8 0030D968  4E 80 00 20 */	blr 
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665A50
+lbl_80665A50:
+	# ROM: 0x571630
+	.4byte 0x00000001
+
+
+.global lbl_80665A54
+lbl_80665A54:
+	# ROM: 0x571634
+	.4byte 0xFFFFFFFF
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805CE3C0
@@ -1836,3 +1849,18 @@ lbl_805CE410:
 .global lbl_805CE440
 lbl_805CE440:
 	.skip 0x40
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667980
+lbl_80667980:
+	.skip 0x4
+.global lbl_80667984
+lbl_80667984:
+	.skip 0x4
+.global lbl_80667988
+lbl_80667988:
+	.skip 0x4
+.global lbl_8066798C
+lbl_8066798C:
+	.skip 0x4

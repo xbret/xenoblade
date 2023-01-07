@@ -214,3 +214,27 @@ lbl_805495F8:
 	.asciz "Feb 27 2009"
 	.asciz "10:01:57"
 	.balign 4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665968
+lbl_80665968:
+	# ROM: 0x571548
+	.4byte lbl_805495F8
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+
+.global lbl_80667788
+lbl_80667788:
+	.skip 0x8
+.global lbl_80667790
+lbl_80667790:
+	.skip 0x4
+.global lbl_80667794
+lbl_80667794:
+	.skip 0x4
+.global lbl_80667798
+lbl_80667798:
+	.skip 0x4

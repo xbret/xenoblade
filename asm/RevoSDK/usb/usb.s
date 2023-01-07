@@ -1595,3 +1595,34 @@ lbl_8055F270:
 	.balign 4
 	.asciz "Failed to open %s: %d\n"
 	.balign 4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665CF0
+lbl_80665CF0:
+	# ROM: 0x5718D0
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_80665CF4
+lbl_80665CF4:
+	# ROM: 0x5718D4
+	.4byte 0x01000000
+
+
+.global lbl_80665CF8
+lbl_80665CF8:
+	.asciz "USB: "
+	.balign 4
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667B88
+lbl_80667B88:
+	.skip 0x4
+.global lbl_80667B8C
+lbl_80667B8C:
+	.skip 0x4
+.global lbl_80667B90
+lbl_80667B90:
+	.skip 0x8

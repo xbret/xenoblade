@@ -647,3 +647,10 @@ lbl_805517A8:
 	.4byte 0xFFFFFFFF
 	.4byte 0
 	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+
+.global lbl_80667A48
+lbl_80667A48:
+	.skip 0x8

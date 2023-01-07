@@ -843,3 +843,18 @@ GXClearBoundingBox:
 /* 8031B93C 002E4EFC  90 85 80 00 */	stw r4, -0x8000(r5)
 /* 8031B940 002E4F00  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031B944 002E4F04  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global float_8066BFC8
+float_8066BFC8:
+	# ROM: 0x575E28
+	.4byte 0x43800000
+	.4byte 0
+
+
+.global double_8066BFD0
+double_8066BFD0:
+	# ROM: 0x575E30
+	.4byte 0x43300000
+	.4byte 0

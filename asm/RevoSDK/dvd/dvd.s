@@ -5696,6 +5696,37 @@ lbl_80549C90:
 	.4byte switch_8030F0A8
 	.4byte 0
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665980
+lbl_80665980:
+	# ROM: 0x571560
+	.4byte lbl_80549920
+
+
+.global lbl_80665984
+lbl_80665984:
+	# ROM: 0x571564
+	.4byte 0x00000001
+
+
+.global lbl_80665988
+lbl_80665988:
+	# ROM: 0x571568
+	.4byte defaultOptionalCommandChecker
+
+
+.global lbl_8066598C
+lbl_8066598C:
+	.asciz "dvd.c"
+	.balign 4
+
+
+.global lbl_80665994
+lbl_80665994:
+	# ROM: 0x571574
+	.4byte 0xFFFFFFFF
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805C7D00
@@ -5731,3 +5762,108 @@ lbl_805CC920:
 .global lbl_805CC950
 lbl_805CC950:
 	.skip 0x60
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806677E0
+lbl_806677E0:
+	.skip 0x4
+.global lbl_806677E4
+lbl_806677E4:
+	.skip 0x4
+.global lbl_806677E8
+lbl_806677E8:
+	.skip 0x4
+.global lbl_806677EC
+lbl_806677EC:
+	.skip 0x4
+.global lbl_806677F0
+lbl_806677F0:
+	.skip 0x4
+.global lbl_806677F4
+lbl_806677F4:
+	.skip 0x4
+.global lbl_806677F8
+lbl_806677F8:
+	.skip 0x4
+.global lbl_806677FC
+lbl_806677FC:
+	.skip 0x4
+.global lbl_80667800
+lbl_80667800:
+	.skip 0x4
+.global lbl_80667804
+lbl_80667804:
+	.skip 0x4
+.global lbl_80667808
+lbl_80667808:
+	.skip 0x4
+.global lbl_8066780C
+lbl_8066780C:
+	.skip 0x4
+.global lbl_80667810
+lbl_80667810:
+	.skip 0x4
+.global lbl_80667814
+lbl_80667814:
+	.skip 0x4
+.global lbl_80667818
+lbl_80667818:
+	.skip 0x4
+.global lbl_8066781C
+lbl_8066781C:
+	.skip 0x4
+.global lbl_80667820
+lbl_80667820:
+	.skip 0x4
+.global lbl_80667824
+lbl_80667824:
+	.skip 0x4
+.global lbl_80667828
+lbl_80667828:
+	.skip 0x4
+.global lbl_8066782C
+lbl_8066782C:
+	.skip 0x4
+.global lbl_80667830
+lbl_80667830:
+	.skip 0x10
+.global lbl_80667840
+lbl_80667840:
+	.skip 0x8
+.global lbl_80667848
+lbl_80667848:
+	.skip 0x4
+.global lbl_8066784C
+lbl_8066784C:
+	.skip 0x4
+.global lbl_80667850
+lbl_80667850:
+	.skip 0x4
+.global lbl_80667854
+lbl_80667854:
+	.skip 0x4
+.global lbl_80667858
+lbl_80667858:
+	.skip 0x4
+.global lbl_8066785C
+lbl_8066785C:
+	.skip 0x4
+.global lbl_80667860
+lbl_80667860:
+	.skip 0x4
+.global lbl_80667864
+lbl_80667864:
+	.skip 0x4
+.global lbl_80667868
+lbl_80667868:
+	.skip 0x4
+.global lbl_8066786C
+lbl_8066786C:
+	.skip 0x4
+.global lbl_80667870
+lbl_80667870:
+	.skip 0x4
+.global lbl_80667874
+lbl_80667874:
+	.skip 0x4

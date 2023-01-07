@@ -246,3 +246,26 @@ OSCreateHeap:
 .L_80353998:
 /* 80353998 0031CF58  38 60 FF FF */	li r3, -1
 /* 8035399C 0031CF5C  4E 80 00 20 */	blr 
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665B58
+lbl_80665B58:
+	# ROM: 0x571738
+	.4byte 0xFFFFFFFF
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667A50
+lbl_80667A50:
+	.skip 0x4
+.global lbl_80667A54
+lbl_80667A54:
+	.skip 0x4
+.global lbl_80667A58
+lbl_80667A58:
+	.skip 0x4
+.global lbl_80667A5C
+lbl_80667A5C:
+	.skip 0x4

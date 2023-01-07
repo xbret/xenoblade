@@ -537,9 +537,7 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/cx/CXStreamingUncompression.o \
 	$(BUILD_DIR)/asm/RevoSDK/cx/CXUncompression.o \
 	$(BUILD_DIR)/src/RevoSDK/cx/CXSecureUncompression.o \
-	$(BUILD_DIR)/asm/sbss_sdk.o \
 	$(BUILD_DIR)/asm/RevoSDK/db/db.o \
-	$(BUILD_DIR)/asm/sdata_sdk.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp_debug.o \
 	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp_task.o \
@@ -549,7 +547,6 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvderror.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdidutils.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdFatal.o \
-	$(BUILD_DIR)/asm/sdata2_sdk.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdDeviceError.o \
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd_broadway.o \
 	$(BUILD_DIR)/asm/RevoSDK/enc/encutility.o \
@@ -659,6 +656,7 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSUtf.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSIpc.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSStateTM.o \
+	$(BUILD_DIR)/src/RevoSDK/os/__start.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayRecord.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSStateFlags.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSNet.o \
@@ -666,8 +664,6 @@ RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayTime.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSCrc.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/OSLaunch.o \
-	$(BUILD_DIR)/src/RevoSDK/os/__start.o \
-	$(BUILD_DIR)/asm/sbss_sdk_2.o \
 	$(BUILD_DIR)/asm/RevoSDK/os/__ppc_eabi_init.o \
 	$(BUILD_DIR)/asm/RevoSDK/pad/Pad.o \
 	$(BUILD_DIR)/asm/RevoSDK/sc/scsystem.o \
@@ -1147,9 +1143,3 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_804F0258.o \
 	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskSaveBanner.o \
 	$(BUILD_DIR)/asm/monolithlib/nand/CNBanner.o
-
-EXTAB_O_FILES :=\
-	$(BUILD_DIR)/asm/extab.o
-
-EXTABINDEX_O_FILES :=\
-	$(BUILD_DIR)/asm/extabindex.o

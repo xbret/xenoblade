@@ -15866,3 +15866,11 @@ lbl_80518468:
 	.2byte 0x1CC6
 	.2byte 0x1CE3
 	.2byte 0x1CFB
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806659C0
+lbl_806659C0:
+	# ROM: 0x5715A0
+	.4byte 0x00000001
+	.4byte 0

@@ -344,3 +344,9 @@ lbl_805CFC50:
 .global lbl_805CFC60
 lbl_805CFC60:
 	.skip 0x18
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806679D0
+lbl_806679D0:
+	.skip 0x8

@@ -82,3 +82,22 @@ __PADDisableRecalibration:
 /* 8035F520 00328AE0  7C 08 03 A6 */	mtlr r0
 /* 8035F524 00328AE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035F528 00328AE8  4E 80 00 20 */	blr 
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665BB8
+lbl_80665BB8:
+	# ROM: 0x571798
+	.4byte 0x00000300
+
+
+.global lbl_80665BBC
+lbl_80665BBC:
+	# ROM: 0x57179C
+	.4byte 0x00000005
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667B54
+lbl_80667B54:
+	.skip 0x4

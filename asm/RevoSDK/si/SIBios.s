@@ -1203,6 +1203,14 @@ lbl_8055F1A8:
 	.balign 4
 	.4byte 0
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665CE0
+lbl_80665CE0:
+	# ROM: 0x5718C0
+	.4byte lbl_8055F138
+	.4byte 0
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805DD6E0
@@ -1217,3 +1225,18 @@ lbl_805DD780:
 .global lbl_805DD7A0
 lbl_805DD7A0:
 	.skip 0x160
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667B70
+lbl_80667B70:
+	.skip 0x4
+.global lbl_80667B74
+lbl_80667B74:
+	.skip 0x4
+.global lbl_80667B78
+lbl_80667B78:
+	.skip 0x4
+.global lbl_80667B7C
+lbl_80667B7C:
+	.skip 0x4

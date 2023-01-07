@@ -4728,6 +4728,121 @@ lbl_80560E7C:
 	.balign 4
 	.4byte 0
 
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C200
+lbl_8066C200:
+	# ROM: 0x576060
+	.4byte 0x007F0380
+
+
+.global lbl_8066C204
+lbl_8066C204:
+	# ROM: 0x576064
+	.4byte 0x0380007F
+
+
+.global lbl_8066C208
+lbl_8066C208:
+	# ROM: 0x576068
+	.4byte 0x005D005D
+
+
+.global lbl_8066C20C
+lbl_8066C20C:
+	# ROM: 0x57606C
+	.4byte 0x02A202A2
+
+
+.global float_8066C210
+float_8066C210:
+	# ROM: 0x576070
+	.4byte 0
+
+
+.global float_8066C214
+float_8066C214:
+	# ROM: 0x576074
+	.float 0.25
+
+
+.global float_8066C218
+float_8066C218:
+	# ROM: 0x576078
+	.4byte 0x42FD0000
+
+
+.global float_8066C21C
+float_8066C21C:
+	# ROM: 0x57607C
+	.4byte 0x44A69000
+
+
+.global double_8066C220
+double_8066C220:
+	# ROM: 0x576080
+	.4byte 0x3FB84D9D
+	.4byte 0xE0000000
+
+
+.global float_8066C228
+float_8066C228:
+	# ROM: 0x576088
+	.4byte 0x42BA0000
+
+
+.global float_8066C22C
+float_8066C22C:
+	# ROM: 0x57608C
+	.4byte 0x44A72CCD
+
+
+.global double_8066C230
+double_8066C230:
+	# ROM: 0x576090
+	.4byte 0x3FB1CD3C
+	.4byte 0x80000000
+
+
+.global float_8066C238
+float_8066C238:
+	# ROM: 0x576098
+	.float -1.0
+
+
+.global float_8066C23C
+float_8066C23C:
+	# ROM: 0x57609C
+	.4byte 0x43BFC000
+
+
+.global float_8066C240
+float_8066C240:
+	# ROM: 0x5760A0
+	.4byte 0x43FFC000
+	.4byte 0
+
+
+.global double_8066C248
+double_8066C248:
+	# ROM: 0x5760A8
+	.4byte 0x43300000
+	.4byte 0x80000000
+
+
+.global float_8066C250
+float_8066C250:
+	# ROM: 0x5760B0
+	.4byte 0x40490FD8
+	.4byte 0
+
+
+.global double_8066C258
+double_8066C258:
+	# ROM: 0x5760B8
+	.4byte 0x43300000
+	.4byte 0
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805E1200
@@ -4736,3 +4851,24 @@ lbl_805E1200:
 .global lbl_805E1250
 lbl_805E1250:
 	.skip 0x30
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667CC0
+lbl_80667CC0:
+	.skip 0x4
+.global lbl_80667CC4
+lbl_80667CC4:
+	.skip 0x4
+.global lbl_80667CC8
+lbl_80667CC8:
+	.skip 0x4
+.global lbl_80667CCC
+lbl_80667CCC:
+	.skip 0x4
+.global lbl_80667CD0
+lbl_80667CD0:
+	.skip 0x4
+.global lbl_80667CD4
+lbl_80667CD4:
+	.skip 0x4

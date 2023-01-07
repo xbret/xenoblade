@@ -81,3 +81,21 @@ IPCGetBufferLo:
 IPCSetBufferLo:
 /* 80342AA0 0030C060  90 6D B7 EC */	stw r3, lbl_8066796C@sda21(r13)
 /* 80342AA4 0030C064  4E 80 00 20 */	blr 
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667968
+lbl_80667968:
+	.skip 0x4
+.global lbl_8066796C
+lbl_8066796C:
+	.skip 0x4
+.global lbl_80667970
+lbl_80667970:
+	.skip 0x4
+.global lbl_80667974
+lbl_80667974:
+	.skip 0x4
+.global lbl_80667978
+lbl_80667978:
+	.skip 0x8

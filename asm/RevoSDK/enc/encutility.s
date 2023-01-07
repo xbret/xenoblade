@@ -179,3 +179,18 @@ ENCiWriteBreakType:
 lbl_8054B5C8:
 	.asciz "<< RVL_SDK - ENC \trelease build: Feb 27 2009 10:05:42 (0x4302_145) >>"
 	.balign 4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global lbl_806659B8
+lbl_806659B8:
+	# ROM: 0x571598
+	.4byte lbl_8054B5C8
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806678C0
+lbl_806678C0:
+	.skip 0x8

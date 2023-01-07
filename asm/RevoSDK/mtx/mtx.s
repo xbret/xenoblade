@@ -822,3 +822,55 @@ C_MTXLightOrtho:
 /* 8034DDDC 0031739C  D0 23 00 14 */	stfs f1, 0x14(r3)
 /* 8034DDE0 003173A0  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 8034DDE4 003173A4  4E 80 00 20 */	blr
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global Unit01
+Unit01:
+	# ROM: 0x5716B8
+	.4byte 0
+	.float 1.0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global one_c
+one_c:
+	# ROM: 0x575F88
+	.float 1.0
+
+
+.global zero_c
+zero_c:
+	# ROM: 0x575F8C
+	.4byte 0
+
+
+.global float_8066C130
+float_8066C130:
+	# ROM: 0x575F90
+	.float 0.5
+
+
+.global float_8066C134
+float_8066C134:
+	# ROM: 0x575F94
+	.4byte 0x40400000
+
+
+.global float_8066C138
+float_8066C138:
+	# ROM: 0x575F98
+	.4byte 0x40000000
+
+
+.global float_8066C13C
+float_8066C13C:
+	# ROM: 0x575F9C
+	.float -1.0
+
+
+.global float_8066C140
+float_8066C140:
+	# ROM: 0x575FA0
+	.4byte 0x3C8EFA35
+	.4byte 0

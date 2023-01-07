@@ -8697,8 +8697,91 @@ lbl_805609EC:
 	.4byte switch_8036FFE8
 	.4byte 0
 
-.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.global lbl_80665D38
+lbl_80665D38:
+	# ROM: 0x571918
+	.4byte lbl_80560608
+
+
+.global lbl_80665D3C
+lbl_80665D3C:
+	# ROM: 0x57191C
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_80665D40
+lbl_80665D40:
+	# ROM: 0x571920
+	.4byte 0x00060004
+	.4byte 0x00060000
+
+
+.global lbl_80665D48
+lbl_80665D48:
+	# ROM: 0x571928
+	.4byte 0x001E001E
+	.4byte 0x001E0000
+
+
+.global lbl_80665D50
+lbl_80665D50:
+	# ROM: 0x571930
+	.4byte 0x322E3000
+
+
+.global lbl_80665D54
+lbl_80665D54:
+	.asciz "opened"
+	.balign 4
+
+
+.global lbl_80665D5C
+lbl_80665D5C:
+	.asciz "closed"
+	.balign 4
+	.4byte 0
+
+
+.global lbl_80665D68
+lbl_80665D68:
+	.asciz " %s\n"
+	.balign 4
+
+
+.global lbl_80665D70
+lbl_80665D70:
+	.asciz "RFNJ"
+	.balign 4
+
+
+.global lbl_80665D78
+lbl_80665D78:
+	.asciz "WUD.c"
+	.balign 4
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+.global lbl_8066C1F8
+lbl_8066C1F8:
+	# ROM: 0x576058
+	.4byte 0x0000D007
+
+
+.global lbl_8066C1FC
+lbl_8066C1FC:
+	# ROM: 0x57605C
+	.2byte 0x400C
+
+
+.global lbl_8066C1FE
+lbl_8066C1FE:
+	# ROM: 0x57605E
+	.2byte 0x0E00
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global _wpadManageAlarm
 _wpadManageAlarm:
@@ -8712,3 +8795,93 @@ _wpadHandle2PortTable:
 .global lbl_805DEAE0
 lbl_805DEAE0:
 	.skip 0x2720
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667C68
+lbl_80667C68:
+	.skip 0x2
+.global lbl_80667C6A
+lbl_80667C6A:
+	.skip 0x2
+.global lbl_80667C6C
+lbl_80667C6C:
+	.skip 0x2
+.global lbl_80667C6E
+lbl_80667C6E:
+	.skip 0x2
+.global lbl_80667C70
+lbl_80667C70:
+	.skip 0x4
+.global lbl_80667C74
+lbl_80667C74:
+	.skip 0x4
+.global lbl_80667C78
+lbl_80667C78:
+	.skip 0x4
+.global lbl_80667C7C
+lbl_80667C7C:
+	.skip 0x4
+.global lbl_80667C80
+lbl_80667C80:
+	.skip 0x4
+.global lbl_80667C84
+lbl_80667C84:
+	.skip 0x4
+.global lbl_80667C88
+lbl_80667C88:
+	.skip 0x4
+.global lbl_80667C8C
+lbl_80667C8C:
+	.skip 0x4
+.global lbl_80667C90
+lbl_80667C90:
+	.skip 0x4
+.global lbl_80667C94
+lbl_80667C94:
+	.skip 0x4
+.global lbl_80667C98
+lbl_80667C98:
+	.skip 0x4
+.global lbl_80667C9C
+lbl_80667C9C:
+	.skip 0x4
+.global lbl_80667CA0
+lbl_80667CA0:
+	.skip 0x4
+.global lbl_80667CA4
+lbl_80667CA4:
+	.skip 0x4
+.global lbl_80667CA8
+lbl_80667CA8:
+	.skip 0x4
+.global lbl_80667CAC
+lbl_80667CAC:
+	.skip 0x1
+.global lbl_80667CAD
+lbl_80667CAD:
+	.skip 0x1
+.global lbl_80667CAE
+lbl_80667CAE:
+	.skip 0x1
+.global lbl_80667CAF
+lbl_80667CAF:
+	.skip 0x1
+.global lbl_80667CB0
+lbl_80667CB0:
+	.skip 0x4
+.global lbl_80667CB4
+lbl_80667CB4:
+	.skip 0x1
+.global lbl_80667CB5
+lbl_80667CB5:
+	.skip 0x1
+.global lbl_80667CB6
+lbl_80667CB6:
+	.skip 0x2
+.global lbl_80667CB8
+lbl_80667CB8:
+	.skip 0x4
+.global lbl_80667CBC
+lbl_80667CBC:
+	.skip 0x4

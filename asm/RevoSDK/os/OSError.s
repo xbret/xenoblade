@@ -460,6 +460,19 @@ lbl_80551C50:
 	.balign 4
 	.4byte 0
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665B68
+lbl_80665B68:
+	# ROM: 0x571748
+	.4byte 0x000000F8
+
+
+.global lbl_80665B6C
+lbl_80665B6C:
+	# ROM: 0x57174C
+	.4byte 0x0A000000
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805D43B0

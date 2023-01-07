@@ -4356,3 +4356,21 @@ lbl_805CFC78:
 .global lbl_805D2678
 lbl_805D2678:
 	.skip 0x1988
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806679D8
+lbl_806679D8:
+	.skip 0x4
+.global lbl_806679DC
+lbl_806679DC:
+	.skip 0x4
+.global lbl_806679E0
+lbl_806679E0:
+	.skip 0x4
+.global lbl_806679E4
+lbl_806679E4:
+	.skip 0x4
+.global lbl_806679E8
+lbl_806679E8:
+	.skip 0x8

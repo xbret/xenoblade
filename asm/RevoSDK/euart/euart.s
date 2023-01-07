@@ -259,3 +259,26 @@ WriteUARTN:
 /* 803140E4 002DD6A4  7C 08 03 A6 */	mtlr r0
 /* 803140E8 002DD6A8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803140EC 002DD6AC  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066BF98
+lbl_8066BF98:
+	# ROM: 0x575DF8
+	.4byte 0x00000004
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806678C8
+lbl_806678C8:
+	.skip 0x4
+.global lbl_806678CC
+lbl_806678CC:
+	.skip 0x4
+.global lbl_806678D0
+lbl_806678D0:
+	.skip 0x4
+.global lbl_806678D4
+lbl_806678D4:
+	.skip 0x4

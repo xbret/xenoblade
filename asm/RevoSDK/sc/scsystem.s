@@ -1978,6 +1978,157 @@ lbl_8055F0B0:
 	.4byte switch_80360DA4
 	.4byte switch_80360DAC
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665BC0
+lbl_80665BC0:
+	# ROM: 0x5717A0
+	.4byte lbl_8055EEF8
+
+.global lbl_80665BC4
+lbl_80665BC4:
+	.asciz "IPL.CB"
+	.balign 4
+
+.global lbl_80665BCC
+lbl_80665BCC:
+	.asciz "IPL.AR"
+	.balign 4
+	.4byte 0
+
+.global lbl_80665BD8
+lbl_80665BD8:
+	.asciz "IPL.ARN"
+
+.global lbl_80665BE0
+lbl_80665BE0:
+	.asciz "IPL.CD"
+	.balign 4
+
+.global lbl_80665BE8
+lbl_80665BE8:
+	.asciz "IPL.CD2"
+
+.global lbl_80665BF0
+lbl_80665BF0:
+	.asciz "IPL.DH"
+	.balign 4
+
+.global lbl_80665BF8
+lbl_80665BF8:
+	.asciz "IPL.E60"
+
+.global lbl_80665C00
+lbl_80665C00:
+	.asciz "IPL.FRC"
+
+.global lbl_80665C08
+lbl_80665C08:
+	.asciz "IPL.IDL"
+
+.global lbl_80665C10
+lbl_80665C10:
+	.asciz "IPL.INC"
+
+.global lbl_80665C18
+lbl_80665C18:
+	.asciz "IPL.LNG"
+
+.global lbl_80665C20
+lbl_80665C20:
+	.asciz "IPL.NIK"
+
+.global lbl_80665C28
+lbl_80665C28:
+	.asciz "IPL.PC"
+	.balign 4
+
+.global lbl_80665C30
+lbl_80665C30:
+	.asciz "IPL.PGS"
+
+.global lbl_80665C38
+lbl_80665C38:
+	.asciz "IPL.SSV"
+
+.global lbl_80665C40
+lbl_80665C40:
+	.asciz "IPL.SND"
+
+.global lbl_80665C48
+lbl_80665C48:
+	.asciz "IPL.UPT"
+
+.global lbl_80665C50
+lbl_80665C50:
+	.asciz "NET.CNF"
+
+.global lbl_80665C58
+lbl_80665C58:
+	.asciz "DEV.BTM"
+
+.global lbl_80665C60
+lbl_80665C60:
+	.asciz "DEV.VIM"
+
+.global lbl_80665C68
+lbl_80665C68:
+	.asciz "DEV.CTC"
+
+.global lbl_80665C70
+lbl_80665C70:
+	.asciz "DEV.DSM"
+
+.global lbl_80665C78
+lbl_80665C78:
+	.asciz "BT.DINF"
+
+.global lbl_80665C80
+lbl_80665C80:
+	.asciz "BT.CDIF"
+
+.global lbl_80665C88
+lbl_80665C88:
+	.asciz "BT.SENS"
+
+.global lbl_80665C90
+lbl_80665C90:
+	.asciz "BT.SPKV"
+
+.global lbl_80665C98
+lbl_80665C98:
+	.asciz "BT.MOT"
+	.balign 4
+
+.global lbl_80665CA0
+lbl_80665CA0:
+	.asciz "BT.BAR"
+	.balign 4
+
+.global lbl_80665CA8
+lbl_80665CA8:
+	.asciz "DVD.CNF"
+
+.global lbl_80665CB0
+lbl_80665CB0:
+	.asciz "WWW.RST"
+
+.global lbl_80665CB8
+lbl_80665CB8:
+	.asciz "IPL.TID"
+
+
+.global lbl_80665CC0
+lbl_80665CC0:
+	.asciz "SCv0"
+	.balign 4
+
+
+.global lbl_80665CC8
+lbl_80665CC8:
+	.asciz "SCed"
+	.balign 4
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805D5540
@@ -1989,3 +2140,30 @@ lbl_805D56E0:
 .global lbl_805D96E0
 lbl_805D96E0:
 	.skip 0x4000
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667B58
+lbl_80667B58:
+	.skip 0x4
+.global lbl_80667B5C
+lbl_80667B5C:
+	.skip 0x4
+.global lbl_80667B60
+lbl_80667B60:
+	.skip 0x4
+.global lbl_80667B64
+lbl_80667B64:
+	.skip 0x4
+.global lbl_80667B68
+lbl_80667B68:
+	.skip 0x4
+.global lbl_80667B6C
+lbl_80667B6C:
+	.skip 0x1
+.global lbl_80667B6D
+lbl_80667B6D:
+	.skip 0x1
+.global lbl_80667B6E
+lbl_80667B6E:
+	.skip 0x2

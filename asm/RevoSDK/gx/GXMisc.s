@@ -705,3 +705,18 @@ __GXPEInit:
 /* 8031A748 002E3D08  7C 08 03 A6 */	mtlr r0
 /* 8031A74C 002E3D0C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031A750 002E3D10  4E 80 00 20 */	blr 
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667950
+lbl_80667950:
+	.skip 0x8
+.global lbl_80667958
+lbl_80667958:
+	.skip 0x4
+.global lbl_8066795C
+lbl_8066795C:
+	.skip 0x4
+.global lbl_80667960
+lbl_80667960:
+	.skip 0x8

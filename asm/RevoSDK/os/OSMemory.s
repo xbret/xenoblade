@@ -547,3 +547,9 @@ lbl_80552AE0:
 	.4byte 0x0000007F
 	.4byte 0
 	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667AA8
+lbl_80667AA8:
+	.skip 0x8

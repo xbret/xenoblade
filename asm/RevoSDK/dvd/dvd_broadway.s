@@ -2910,6 +2910,19 @@ lbl_8054A720:
 	.asciz "@@@ (DVDLowEnableDvdVideo) IOS_IoctlAsync returned error: %d\n"
 	.balign 4
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806659A8
+lbl_806659A8:
+	# ROM: 0x571588
+	.4byte 0xFFFFFFFF
+	.4byte 0
+
+
+.global lbl_806659B0
+lbl_806659B0:
+	.asciz "/dev/di"
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805CCC60
@@ -2930,3 +2943,39 @@ lbl_805CCDE0:
 .global lbl_805CCE00
 lbl_805CCE00:
 	.skip 0x20
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667898
+lbl_80667898:
+	.skip 0x1
+.global lbl_80667899
+lbl_80667899:
+	.skip 0x3
+.global lbl_8066789C
+lbl_8066789C:
+	.skip 0x4
+.global lbl_806678A0
+lbl_806678A0:
+	.skip 0x4
+.global lbl_806678A4
+lbl_806678A4:
+	.skip 0x1
+.global lbl_806678A5
+lbl_806678A5:
+	.skip 0x3
+.global lbl_806678A8
+lbl_806678A8:
+	.skip 0x4
+.global lbl_806678AC
+lbl_806678AC:
+	.skip 0x4
+.global lbl_806678B0
+lbl_806678B0:
+	.skip 0x4
+.global lbl_806678B4
+lbl_806678B4:
+	.skip 0x4
+.global lbl_806678B8
+lbl_806678B8:
+	.skip 0x8

@@ -655,3 +655,15 @@ lbl_80549678:
 	.asciz "__DSP_add_task() : Added task    : 0x%08X\n"
 	.balign 4
 	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_8066779C
+lbl_8066779C:
+	.skip 0x4
+.global lbl_806677A0
+lbl_806677A0:
+	.skip 0x4
+.global lbl_806677A4
+lbl_806677A4:
+	.skip 0x4

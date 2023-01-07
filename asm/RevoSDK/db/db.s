@@ -85,3 +85,12 @@ DBPrintf:
 .global lbl_805495E0
 lbl_805495E0:
 	.asciz "DBExceptionDestination\n"
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667780
+lbl_80667780:
+	.skip 0x4
+.global lbl_80667784
+lbl_80667784:
+	.skip 0x4

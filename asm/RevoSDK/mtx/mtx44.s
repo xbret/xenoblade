@@ -149,3 +149,40 @@ C_MTXOrtho:
 /* 8034E06C 0031762C  D0 43 00 1C */	stfs f2, 0x1c(r3)
 /* 8034E070 00317630  D0 23 00 28 */	stfs f1, 0x28(r3)
 /* 8034E074 00317634  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global float_8066C148
+float_8066C148:
+	# ROM: 0x575FA8
+	.float 1.0
+
+
+.global float_8066C14C
+float_8066C14C:
+	# ROM: 0x575FAC
+	.4byte 0x40000000
+
+
+.global float_8066C150
+float_8066C150:
+	# ROM: 0x575FB0
+	.4byte 0
+
+
+.global float_8066C154
+float_8066C154:
+	# ROM: 0x575FB4
+	.float -1.0
+
+
+.global float_8066C158
+float_8066C158:
+	# ROM: 0x575FB8
+	.float 0.5
+
+
+.global float_8066C15C
+float_8066C15C:
+	# ROM: 0x575FBC
+	.4byte 0x3C8EFA35

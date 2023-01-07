@@ -1550,3 +1550,37 @@ lbl_8054B658:
 	.asciz "APP ERROR: Not enough IPC arena\n"
 	.balign 4
 	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806659E0
+lbl_806659E0:
+	# ROM: 0x5715C0
+	.4byte 0xFFFFFFFF
+	.4byte 0
+
+
+.global lbl_806659E8
+lbl_806659E8:
+	.asciz "/dev/fs"
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806678F0
+lbl_806678F0:
+	.skip 0x4
+.global lbl_806678F4
+lbl_806678F4:
+	.skip 0x4
+.global lbl_806678F8
+lbl_806678F8:
+	.skip 0x4
+.global lbl_806678FC
+lbl_806678FC:
+	.skip 0x4
+.global lbl_80667900
+lbl_80667900:
+	.skip 0x4
+.global lbl_80667904
+lbl_80667904:
+	.skip 0x4

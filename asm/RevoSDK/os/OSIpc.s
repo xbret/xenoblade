@@ -23,3 +23,18 @@ __OSInitIPCBuffer:
 /* 8035D00C 003265CC  80 03 31 34 */	lwz r0, 0x3134(r3)
 /* 8035D010 003265D0  90 0D B9 58 */	stw r0, lbl_80667AD8@sda21(r13)
 /* 8035D014 003265D4  4E 80 00 20 */	blr 
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665B98
+lbl_80665B98:
+	# ROM: 0x571778
+	.4byte 0xFFFFFFFF
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+
+.global lbl_80667AD8
+lbl_80667AD8:
+	.skip 0x8

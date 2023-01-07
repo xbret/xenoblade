@@ -90,3 +90,25 @@ OSAllocFromMEM1ArenaLo:
 /* 80353A88 0031D048  7C C0 00 38 */	and r0, r6, r0
 /* 80353A8C 0031D04C  90 0D 99 E0 */	stw r0, lbl_80665B60@sda21(r13)
 /* 80353A90 0031D050  4E 80 00 20 */	blr 
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665B60
+lbl_80665B60:
+	# ROM: 0x571740
+	.4byte 0xFFFFFFFF
+
+
+.global lbl_80665B64
+lbl_80665B64:
+	# ROM: 0x571744
+	.4byte 0xFFFFFFFF
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667A60
+lbl_80667A60:
+	.skip 0x4
+.global lbl_80667A64
+lbl_80667A64:
+	.skip 0x4

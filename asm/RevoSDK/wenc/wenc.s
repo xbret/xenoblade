@@ -225,3 +225,11 @@ lbl_80518D88:
 	.4byte 0
 	.4byte 0x40033000
 	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global double_8066C1F0
+double_8066C1F0:
+	# ROM: 0x576050
+	.4byte 0x43300000
+	.4byte 0x80000000

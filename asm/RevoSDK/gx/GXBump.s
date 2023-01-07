@@ -346,3 +346,11 @@ __GXFlushTextureState:
 /* 8031D608 002E6BC8  90 64 80 00 */	stw r3, -0x8000(r4)
 /* 8031D60C 002E6BCC  B0 05 00 02 */	sth r0, 2(r5)
 /* 8031D610 002E6BD0  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global float_8066C048
+float_8066C048:
+	# ROM: 0x575EA8
+	.4byte 0x44800000
+	.4byte 0

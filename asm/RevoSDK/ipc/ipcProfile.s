@@ -145,3 +145,12 @@ lbl_805CE500:
 .global lbl_805CE580
 lbl_805CE580:
 	.skip 0x80
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667990
+lbl_80667990:
+	.skip 0x4
+.global lbl_80667994
+lbl_80667994:
+	.skip 0x4

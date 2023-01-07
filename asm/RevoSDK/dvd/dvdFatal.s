@@ -463,3 +463,25 @@ lbl_8054A3DC:
 lbl_8054A480:
 	.asciz "\n\nError #104,\nAn error has occurred.\nPress the EJECT Button, remove the\nGame Disc, and turn the power off.\nPlease read the Wii Operations Manual\nfor more information."
 	.balign 4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665998
+lbl_80665998:
+	# ROM: 0x571578
+	.4byte lbl_8054A3DC
+	.4byte lbl_8054A480
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066BF88
+lbl_8066BF88:
+	# ROM: 0x575DE8
+	.4byte 0xFFFFFF00
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667888
+lbl_80667888:
+	.skip 0x8

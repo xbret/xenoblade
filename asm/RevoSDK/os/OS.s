@@ -1621,6 +1621,61 @@ lbl_80551300:
 	.balign 4
 	.4byte 0
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665B28
+lbl_80665B28:
+	# ROM: 0x571708
+	.4byte lbl_80551300
+
+
+.global lbl_80665B2C
+lbl_80665B2C:
+	.asciz "RVA 1\n"
+	.balign 4
+
+
+.global lbl_80665B34
+lbl_80665B34:
+	.asciz "%08x\n"
+	.balign 4
+
+
+.global lbl_80665B3C
+lbl_80665B3C:
+	.asciz "%s\n"
+
+
+.global lbl_80665B40
+lbl_80665B40:
+	.asciz "OS.c"
+	.balign 4
+
+.global lbl_80665B48
+lbl_80665B48:
+	.asciz "HAEA"
+	.balign 4
+
+
+.global lbl_80665B50
+lbl_80665B50:
+	# ROM: 0x571730
+	.4byte lbl_80665B48
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C188
+lbl_8066C188:
+	# ROM: 0x575FE8
+	.4byte 0x0000FF00
+
+
+.global lbl_8066C18C
+lbl_8066C18C:
+	# ROM: 0x575FEC
+	.4byte 0xFFFFFF00
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805D4340
@@ -1629,3 +1684,45 @@ lbl_805D4340:
 .global lbl_805D4360
 lbl_805D4360:
 	.skip 0x50
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667A00
+lbl_80667A00:
+	.skip 0x4
+.global lbl_80667A04
+lbl_80667A04:
+	.skip 0x4
+.global lbl_80667A08
+lbl_80667A08:
+	.skip 0x4
+.global lbl_80667A0C
+lbl_80667A0C:
+	.skip 0x4
+.global lbl_80667A10
+lbl_80667A10:
+	.skip 0x8
+.global lbl_80667A18
+lbl_80667A18:
+	.skip 0x8
+.global double_80667A20
+double_80667A20:
+	.skip 0x8
+.global lbl_80667A28
+lbl_80667A28:
+	.skip 0x8
+.global lbl_80667A30
+lbl_80667A30:
+	.skip 0x4
+.global lbl_80667A34
+lbl_80667A34:
+	.skip 0x4
+.global lbl_80667A38
+lbl_80667A38:
+	.skip 0x8
+.global lbl_80667A40
+lbl_80667A40:
+	.skip 0x4
+.global lbl_80667A44
+lbl_80667A44:
+	.skip 0x4

@@ -7611,6 +7611,25 @@ lbl_8056311C:
 	.asciz "Not Found WBC\n"
 	.balign 4
 
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C260
+lbl_8066C260:
+	# ROM: 0x5760C0
+	.4byte 0x57696900
+
+
+.global lbl_8066C264
+lbl_8066C264:
+	# ROM: 0x5760C4
+	.2byte 0x0004
+
+
+.global lbl_8066C266
+lbl_8066C266:
+	# ROM: 0x5760C6
+	.2byte 0x4800
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global __rvl_wudcb
@@ -7640,3 +7659,67 @@ lbl_805E33E8:
 .global lbl_805E3408
 lbl_805E3408:
 	.skip 0x20
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+
+.global lbl_80667CE0
+lbl_80667CE0:
+	.skip 0x4
+.global lbl_80667CE4
+lbl_80667CE4:
+	.skip 0x4
+.global lbl_80667CE8
+lbl_80667CE8:
+	.skip 0x4
+.global lbl_80667CEC
+lbl_80667CEC:
+	.skip 0x1
+.global lbl_80667CED
+lbl_80667CED:
+	.skip 0x3
+.global lbl_80667CF0
+lbl_80667CF0:
+	.skip 0x4
+.global lbl_80667CF4
+lbl_80667CF4:
+	.skip 0x4
+.global lbl_80667CF8
+lbl_80667CF8:
+	.skip 0x4
+.global lbl_80667CFC
+lbl_80667CFC:
+	.skip 0x4
+.global lbl_80667D00
+lbl_80667D00:
+	.skip 0x4
+.global lbl_80667D04
+lbl_80667D04:
+	.skip 0x1
+.global lbl_80667D05
+lbl_80667D05:
+	.skip 0x1
+.global lbl_80667D06
+lbl_80667D06:
+	.skip 0x2
+.global lbl_80667D08
+lbl_80667D08:
+	.skip 0x4
+.global lbl_80667D0C
+lbl_80667D0C:
+	.skip 0x4
+.global lbl_80667D10
+lbl_80667D10:
+	.skip 0x4
+.global lbl_80667D14
+lbl_80667D14:
+	.skip 0x1
+.global lbl_80667D15
+lbl_80667D15:
+	.skip 0x1
+.global lbl_80667D16
+lbl_80667D16:
+	.skip 0x1
+.global lbl_80667D17
+lbl_80667D17:
+	.skip 0x1

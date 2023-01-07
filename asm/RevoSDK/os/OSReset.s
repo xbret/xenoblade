@@ -709,3 +709,15 @@ lbl_80552CDC:
 	.asciz "OSSetBootDol() is obsoleted. It doesn't work any longer.\n"
 	.balign 4
 	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667AB8
+lbl_80667AB8:
+	.skip 0x4
+.global lbl_80667ABC
+lbl_80667ABC:
+	.skip 0x4
+.global lbl_80667AC0
+lbl_80667AC0:
+	.skip 0x8

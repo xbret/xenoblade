@@ -1258,3 +1258,16 @@ NANDPrivateGetStatusAsync:
 /* 8034F898 00318E58  7C 08 03 A6 */	mtlr r0
 /* 8034F89C 00318E5C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034F8A0 00318E60  4E 80 00 20 */	blr 
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665AE0
+lbl_80665AE0:
+	# ROM: 0x5716C0
+	.4byte 0x2F000000
+
+
+.global lbl_80665AE4
+lbl_80665AE4:
+	# ROM: 0x5716C4
+	.4byte 0x2F257300

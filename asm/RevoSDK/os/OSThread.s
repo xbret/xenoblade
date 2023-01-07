@@ -1648,6 +1648,14 @@ OSGetThreadPriority:
 /* 8035C950 00325F10  80 63 02 D4 */	lwz r3, 0x2d4(r3)
 /* 8035C954 00325F14  4E 80 00 20 */	blr 
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665B90
+lbl_80665B90:
+	# ROM: 0x571770
+	.4byte DefaultSwitchThreadCallback
+	.4byte 0
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805D4758
@@ -1659,3 +1667,15 @@ lbl_805D4A70:
 .global lbl_805D4B70
 lbl_805D4B70:
 	.skip 0x5F0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667AC8
+lbl_80667AC8:
+	.skip 0x4
+.global lbl_80667ACC
+lbl_80667ACC:
+	.skip 0x4
+.global lbl_80667AD0
+lbl_80667AD0:
+	.skip 0x8

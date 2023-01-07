@@ -160,3 +160,23 @@ PSVECSquareDistance:
 /* 8034E2A8 00317868  F0 05 00 00 */	psq_st f0, 0(r5), 0, qr0
 /* 8034E2AC 0031786C  F0 25 00 08 */	psq_st f1, 8(r5), 0, qr0
 /* 8034E2B0 00317870  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global float_8066C160
+float_8066C160:
+	# ROM: 0x575FC0
+	.float 0.5
+
+
+.global float_8066C164
+float_8066C164:
+	# ROM: 0x575FC4
+	.4byte 0x40400000
+
+
+.global float_8066C168
+float_8066C168:
+	# ROM: 0x575FC8
+	.4byte 0
+	.4byte 0

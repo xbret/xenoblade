@@ -540,8 +540,47 @@ lbl_8055ECEC:
 	.4byte switch_8035D8B0
 	.4byte switch_8035D938
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665BA0
+lbl_80665BA0:
+	# ROM: 0x571780
+	.4byte 0x00000009
+	.4byte 0
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805D5220
 lbl_805D5220:
 	.skip 0x200
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+#__start.c padding? (maybe put in file)
+.global lbl_80667B01
+lbl_80667B01:
+	.skip 0x7
+.global lbl_80667B08
+lbl_80667B08:
+	.skip 0x4
+.global lbl_80667B0C
+lbl_80667B0C:
+	.skip 0x4
+.global lbl_80667B10
+lbl_80667B10:
+	.skip 0x4
+.global lbl_80667B14
+lbl_80667B14:
+	.skip 0x4
+.global lbl_80667B18
+lbl_80667B18:
+	.skip 0x4
+.global lbl_80667B1C
+lbl_80667B1C:
+	.skip 0x4
+.global lbl_80667B20
+lbl_80667B20:
+	.skip 0x4
+.global lbl_80667B24
+lbl_80667B24:
+	.skip 0x4

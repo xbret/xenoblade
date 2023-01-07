@@ -284,8 +284,31 @@ lbl_8054A690:
 	.asciz "\n\n\nFout #001:\nongeoorloofd onderdeel gevonden."
 	.balign 4
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806659A0
+lbl_806659A0:
+	# ROM: 0x571580
+	.4byte 0x00000001
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066BF90
+lbl_8066BF90:
+	# ROM: 0x575DF0
+	.4byte 0xFFFFFF00
+	.4byte 0
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805CCC40
 lbl_805CCC40:
 	.skip 0x20
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+
+.global lbl_80667890
+lbl_80667890:
+	.skip 0x8

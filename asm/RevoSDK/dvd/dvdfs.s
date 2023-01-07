@@ -855,3 +855,38 @@ lbl_805498EC:
 	.asciz "DVDRead(): specified area is out of the file  "
 	.balign 4
 	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+.global lbl_80665970
+lbl_80665970:
+	# ROM: 0x571550
+	.4byte 0x00000001
+	.4byte 0
+
+
+.global lbl_80665978
+lbl_80665978:
+	.asciz "dvdfs.c"
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806677A8
+lbl_806677A8:
+	.skip 0x8
+.global lbl_806677B0
+lbl_806677B0:
+	.skip 0x8
+.global lbl_806677B8
+lbl_806677B8:
+	.skip 0x4
+.global lbl_806677BC
+lbl_806677BC:
+	.skip 0x4
+.global lbl_806677C0
+lbl_806677C0:
+	.skip 0x4
+.global lbl_806677C4
+lbl_806677C4:
+	.skip 0x1C

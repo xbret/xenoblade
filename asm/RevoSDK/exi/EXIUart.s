@@ -229,3 +229,19 @@ __OSEnableBarnacle:
 /* 80315D20 002DF2E0  7C 08 03 A6 */	mtlr r0
 /* 80315D24 002DF2E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80315D28 002DF2E8  4E 80 00 20 */	blr 
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+
+.global lbl_806678E0
+lbl_806678E0:
+	.skip 0x4
+.global lbl_806678E4
+lbl_806678E4:
+	.skip 0x4
+.global lbl_806678E8
+lbl_806678E8:
+	.skip 0x4
+.global lbl_806678EC
+lbl_806678EC:
+	.skip 0x4

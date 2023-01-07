@@ -634,3 +634,18 @@ __VISendI2CData:
 /* 80367308 003308C8  7C 08 03 A6 */	mtlr r0
 /* 8036730C 003308CC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80367310 003308D0  4E 80 00 20 */	blr 
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665D20
+lbl_80665D20:
+	# ROM: 0x571900
+	.4byte 0x00000001
+	.4byte 0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+
+.global lbl_80667C48
+lbl_80667C48:
+	.skip 0x8

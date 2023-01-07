@@ -404,3 +404,23 @@ __GXSetMatrixIndex:
 /* 8031EA5C 002E801C  38 00 00 01 */	li r0, 1
 /* 8031EA60 002E8020  B0 06 00 02 */	sth r0, 2(r6)
 /* 8031EA64 002E8024  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global float_8066C0A0
+float_8066C0A0:
+	# ROM: 0x575F00
+	.4byte 0
+
+
+.global float_8066C0A4
+float_8066C0A4:
+	# ROM: 0x575F04
+	.float 0.5
+
+
+.global float_8066C0A8
+float_8066C0A8:
+	# ROM: 0x575F08
+	.4byte 0x43AB0000
+	.4byte 0

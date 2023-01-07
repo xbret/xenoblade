@@ -572,3 +572,30 @@ lbl_805D51E0:
 .global lbl_805D5200
 lbl_805D5200:
 	.skip 0x20
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667AE0
+lbl_80667AE0:
+	.skip 0x4
+.global lbl_80667AE4
+lbl_80667AE4:
+	.skip 0x4
+.global lbl_80667AE8
+lbl_80667AE8:
+	.skip 0x4
+.global lbl_80667AEC
+lbl_80667AEC:
+	.skip 0x4
+.global lbl_80667AF0
+lbl_80667AF0:
+	.skip 0x4
+.global lbl_80667AF4
+lbl_80667AF4:
+	.skip 0x4
+.global lbl_80667AF8
+lbl_80667AF8:
+	.skip 0x4
+.global lbl_80667AFC
+lbl_80667AFC:
+	.skip 0x4

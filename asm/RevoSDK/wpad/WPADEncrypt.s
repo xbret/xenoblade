@@ -2288,3 +2288,18 @@ lbl_80562200:
 	.balign 4
 	.asciz "sb  : %d %d %d %d %d %d %d %d\n"
 	.balign 4
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667CD8
+lbl_80667CD8:
+	.skip 0x1
+.global lbl_80667CD9
+lbl_80667CD9:
+	.skip 0x1
+.global lbl_80667CDA
+lbl_80667CDA:
+	.skip 0x1
+.global lbl_80667CDB
+lbl_80667CDB:
+	.skip 0x5

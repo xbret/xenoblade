@@ -271,3 +271,14 @@ lbl_8055127C:
 lbl_80551294:
 	.asciz "Illegal status is detected at %s()"
 	.balign 4
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665B10
+lbl_80665B10:
+	.asciz "/meta"
+	.balign 4
+
+.global lbl_80665B18
+lbl_80665B18:
+	.asciz "/ticket"

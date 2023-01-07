@@ -69,3 +69,9 @@ SISetSamplingRate:
 SIRefreshSamplingRate:
 /* 803627B0 0032BD70  80 6D BA 00 */	lwz r3, lbl_80667B80@sda21(r13)
 /* 803627B4 0032BD74  4B FF FF 1C */	b SISetSamplingRate
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667B80
+lbl_80667B80:
+	.skip 0x8

@@ -445,3 +445,16 @@ ESP_GetConsumption:
 /* 80313D64 002DD324  7C 08 03 A6 */	mtlr r0
 /* 80313D68 002DD328  7D 41 53 78 */	mr r1, r10
 /* 80313D6C 002DD32C  4E 80 00 20 */	blr 
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806659C8
+lbl_806659C8:
+	# ROM: 0x5715A8
+	.4byte 0xFFFFFFFF
+	.4byte 0
+
+
+.global lbl_806659D0
+lbl_806659D0:
+	.asciz "/dev/es"

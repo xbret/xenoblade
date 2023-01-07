@@ -42,3 +42,11 @@ MEMInitAllocatorForExpHeap:
 /* 80349AC0 00313080  90 A3 00 08 */	stw r5, 8(r3)
 /* 80349AC4 00313084  90 03 00 0C */	stw r0, 0xc(r3)
 /* 80349AC8 00313088  4E 80 00 20 */	blr 
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C120
+lbl_8066C120:
+	# ROM: 0x575F80
+	.4byte AllocatorAllocForExpHeap_
+	.4byte AllocatorFreeForExpHeap_

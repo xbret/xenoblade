@@ -1769,8 +1769,23 @@ lbl_8054B610:
 	.asciz "<< RVL_SDK - EXI \trelease build: Feb 27 2009 10:02:03 (0x4302_145) >>"
 	.balign 4
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806659D8
+lbl_806659D8:
+	# ROM: 0x5715B8
+	.4byte lbl_8054B610
+	.4byte 0
+
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805CCE20
 lbl_805CCE20:
 	.skip 0xC0
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_806678D8
+lbl_806678D8:
+	.skip 0x8

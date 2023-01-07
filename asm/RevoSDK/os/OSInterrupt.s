@@ -639,3 +639,22 @@ lbl_80552AB0:
 	.4byte 0x04000000
 	.4byte 0x00004000
 	.4byte 0xFFFFFFFF
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+
+.global lbl_80667A90
+lbl_80667A90:
+	.skip 0x4
+.global lbl_80667A94
+lbl_80667A94:
+	.skip 0x4
+.global lbl_80667A98
+lbl_80667A98:
+	.skip 0x4
+.global lbl_80667A9C
+lbl_80667A9C:
+	.skip 0x4
+.global lbl_80667AA0
+lbl_80667AA0:
+	.skip 0x8

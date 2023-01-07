@@ -2039,3 +2039,39 @@ lbl_80552120:
 	.4byte 0x031A031B
 	.4byte 0
 	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665B88
+lbl_80665B88:
+	# ROM: 0x571768
+	.4byte 0xFFFF0000
+	.4byte 0
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global lbl_8066C1D0
+lbl_8066C1D0:
+	# ROM: 0x576030
+	.4byte 0x2ABE003D
+
+
+.global lbl_8066C1D4
+lbl_8066C1D4:
+	# ROM: 0x576034
+	.4byte 0x003D003D
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667A80
+lbl_80667A80:
+	.skip 0x4
+.global lbl_80667A84
+lbl_80667A84:
+	.skip 0x4
+.global lbl_80667A88
+lbl_80667A88:
+	.skip 0x4
+.global lbl_80667A8C
+lbl_80667A8C:
+	.skip 0x4

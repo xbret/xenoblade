@@ -1351,3 +1351,23 @@ lbl_8054BE34:
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_806659F8
+lbl_806659F8:
+	# ROM: 0x5715D8
+	.4byte 0x00040102
+
+
+.global lbl_806659FC
+lbl_806659FC:
+	# ROM: 0x5715DC
+	.4byte 0x00080102
+
+
+.global lbl_80665A00
+lbl_80665A00:
+	# ROM: 0x5715E0
+	.4byte 0x000C0102
+	.4byte 0

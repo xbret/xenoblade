@@ -160,3 +160,18 @@ lbl_8055F240:
 	.asciz "invalid version number for texture palette"
 	.balign 4
 	.4byte 0
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665CE8
+lbl_80665CE8:
+	.asciz "TPL.c"
+	.balign 4
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global double_8066C1E8
+double_8066C1E8:
+	# ROM: 0x576048
+	.4byte 0x43300000
+	.4byte 0

@@ -584,8 +584,52 @@ lbl_8055EEDC:
 	.asciz "PlayTime: %d seconds left\n"
 	.balign 4
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665BB0
+lbl_80665BB0:
+	.asciz "Expired"
+
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global float_8066C1D8
+float_8066C1D8:
+	# ROM: 0x576038
+	.4byte 0x3F7EB852
+	.4byte 0
+
+
+.global double_8066C1E0
+double_8066C1E0:
+	# ROM: 0x576040
+	.4byte 0x43300000
+	.4byte 0x80000000
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805D5500
 lbl_805D5500:
 	.skip 0x40
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global lbl_80667B38
+lbl_80667B38:
+	.skip 0x4
+.global lbl_80667B3C
+lbl_80667B3C:
+	.skip 0x4
+.global lbl_80667B40
+lbl_80667B40:
+	.skip 0x8
+.global lbl_80667B48
+lbl_80667B48:
+	.skip 0x4
+.global lbl_80667B4C
+lbl_80667B4C:
+	.skip 0x4
+#might belong in another file
+.global lbl_80667B50
+lbl_80667B50:
+	.skip 0x4
