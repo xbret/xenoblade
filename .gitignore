@@ -14,7 +14,6 @@ build/
 include/*.s
 
 # IDE
-.vscode/
 build.bat
 clean.bat
 
