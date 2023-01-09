@@ -417,10 +417,7 @@ __AI_SRC_INIT:
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 #needed to align DebuggerDriver.c
-#try testing balign here later
-.4byte 0
-.2byte 0
-.byte 0
+.balign 8
 
 .global lbl_806658A0
 lbl_806658A0:

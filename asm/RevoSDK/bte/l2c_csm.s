@@ -13,31 +13,22 @@ l2c_csm_execute:
 /* 802F74E8 002C0AA8  7C C6 00 2E */	lwzx r6, r6, r0
 /* 802F74EC 002C0AAC  7C C9 03 A6 */	mtctr r6
 /* 802F74F0 002C0AB0  4E 80 04 20 */	bctr
-.global switch_802F74F4
 switch_802F74F4:
 /* 802F74F4 002C0AB4  48 00 00 28 */	b l2c_csm_closed
-.global switch_802F74F8
 switch_802F74F8:
 /* 802F74F8 002C0AB8  48 00 02 B8 */	b l2c_csm_orig_w4_sec_comp
-.global switch_802F74FC
 switch_802F74FC:
 /* 802F74FC 002C0ABC  48 00 04 24 */	b l2c_csm_term_w4_sec_comp
-.global switch_802F7500
 switch_802F7500:
 /* 802F7500 002C0AC0  48 00 05 88 */	b l2c_csm_w4_l2cap_connect_rsp
-.global switch_802F7504
 switch_802F7504:
 /* 802F7504 002C0AC4  48 00 07 C8 */	b l2c_csm_w4_l2ca_connect_rsp
-.global switch_802F7508
 switch_802F7508:
 /* 802F7508 002C0AC8  48 00 09 9C */	b l2c_csm_config
-.global switch_802F750C
 switch_802F750C:
 /* 802F750C 002C0ACC  48 00 0D 60 */	b l2c_csm_open
-.global switch_802F7510
 switch_802F7510:
 /* 802F7510 002C0AD0  48 00 0F B8 */	b l2c_csm_w4_l2cap_disconnect_rsp
-.global switch_802F7514
 switch_802F7514:
 /* 802F7514 002C0AD4  48 00 11 98 */	b l2c_csm_w4_l2ca_disconnect_rsp
 /* 802F7518 002C0AD8  4E 80 00 20 */	blr
@@ -76,7 +67,6 @@ l2c_csm_closed:
 /* 802F758C 002C0B4C  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802F7590 002C0B50  7C 69 03 A6 */	mtctr r3
 /* 802F7594 002C0B54  4E 80 04 20 */	bctr
-.global switch_802F7598
 switch_802F7598:
 /* 802F7598 002C0B58  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F759C 002C0B5C  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)
@@ -96,7 +86,6 @@ switch_802F7598:
 /* 802F75D0 002C0B90  7D 89 03 A6 */	mtctr r12
 /* 802F75D4 002C0B94  4E 80 04 21 */	bctrl 
 /* 802F75D8 002C0B98  48 00 01 C0 */	b switch_802F7798
-.global switch_802F75DC
 switch_802F75DC:
 /* 802F75DC 002C0B9C  38 00 00 01 */	li r0, 1
 /* 802F75E0 002C0BA0  80 BC 00 10 */	lwz r5, 0x10(r28)
@@ -110,7 +99,6 @@ switch_802F75DC:
 /* 802F7600 002C0BC0  38 C0 00 01 */	li r6, 1
 /* 802F7604 002C0BC4  4B FF 4D E9 */	bl btm_sec_l2cap_access_req
 /* 802F7608 002C0BC8  48 00 01 90 */	b switch_802F7798
-.global switch_802F760C
 switch_802F760C:
 /* 802F760C 002C0BCC  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F7610 002C0BD0  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)
@@ -131,7 +119,6 @@ switch_802F760C:
 /* 802F7648 002C0C08  7D 89 03 A6 */	mtctr r12
 /* 802F764C 002C0C0C  4E 80 04 21 */	bctrl 
 /* 802F7650 002C0C10  48 00 01 48 */	b switch_802F7798
-.global switch_802F7654
 switch_802F7654:
 /* 802F7654 002C0C14  80 7C 00 10 */	lwz r3, 0x10(r28)
 /* 802F7658 002C0C18  3C E0 80 30 */	lis r7, l2c_link_sec_comp@ha
@@ -148,7 +135,6 @@ switch_802F7654:
 /* 802F7684 002C0C44  38 00 00 01 */	li r0, 1
 /* 802F7688 002C0C48  90 1C 00 04 */	stw r0, 4(r28)
 /* 802F768C 002C0C4C  48 00 01 0C */	b switch_802F7798
-.global switch_802F7690
 switch_802F7690:
 /* 802F7690 002C0C50  7F 83 E3 78 */	mr r3, r28
 /* 802F7694 002C0C54  48 00 39 91 */	bl l2cu_send_peer_connect_req
@@ -159,7 +145,6 @@ switch_802F7690:
 /* 802F76A8 002C0C68  38 A0 00 3C */	li r5, 0x3c
 /* 802F76AC 002C0C6C  4B FE 6F 05 */	bl btu_start_timer
 /* 802F76B0 002C0C70  48 00 00 E8 */	b switch_802F7798
-.global switch_802F76B4
 switch_802F76B4:
 /* 802F76B4 002C0C74  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F76B8 002C0C78  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)
@@ -181,7 +166,6 @@ switch_802F76B4:
 /* 802F76F4 002C0CB4  7D 89 03 A6 */	mtctr r12
 /* 802F76F8 002C0CB8  4E 80 04 21 */	bctrl 
 /* 802F76FC 002C0CBC  48 00 00 9C */	b switch_802F7798
-.global switch_802F7700
 switch_802F7700:
 /* 802F7700 002C0CC0  38 00 00 02 */	li r0, 2
 /* 802F7704 002C0CC4  80 BC 00 10 */	lwz r5, 0x10(r28)
@@ -195,7 +179,6 @@ switch_802F7700:
 /* 802F7724 002C0CE4  38 C0 00 00 */	li r6, 0
 /* 802F7728 002C0CE8  4B FF 4C C5 */	bl btm_sec_l2cap_access_req
 /* 802F772C 002C0CEC  48 00 00 6C */	b switch_802F7798
-.global switch_802F7730
 switch_802F7730:
 /* 802F7730 002C0CF0  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F7734 002C0CF4  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)
@@ -219,16 +202,13 @@ switch_802F7730:
 /* 802F7778 002C0D38  7D 89 03 A6 */	mtctr r12
 /* 802F777C 002C0D3C  4E 80 04 21 */	bctrl 
 /* 802F7780 002C0D40  48 00 00 18 */	b switch_802F7798
-.global switch_802F7784
 switch_802F7784:
 /* 802F7784 002C0D44  7F 43 D3 78 */	mr r3, r26
 /* 802F7788 002C0D48  4B FE 3D 59 */	bl GKI_freebuf
 /* 802F778C 002C0D4C  48 00 00 0C */	b switch_802F7798
-.global switch_802F7790
 switch_802F7790:
 /* 802F7790 002C0D50  7F 83 E3 78 */	mr r3, r28
 /* 802F7794 002C0D54  48 00 48 E1 */	bl l2cu_release_ccb
-.global switch_802F7798
 switch_802F7798:
 /* 802F7798 002C0D58  39 61 00 30 */	addi r11, r1, 0x30
 /* 802F779C 002C0D5C  4B FC 29 FD */	bl _restgpr_25
@@ -272,7 +252,6 @@ l2c_csm_orig_w4_sec_comp:
 /* 802F7824 002C0DE4  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802F7828 002C0DE8  7C 69 03 A6 */	mtctr r3
 /* 802F782C 002C0DEC  4E 80 04 20 */	bctr 
-.global switch_802F7830
 switch_802F7830:
 /* 802F7830 002C0DF0  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F7834 002C0DF4  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)
@@ -292,7 +271,6 @@ switch_802F7830:
 /* 802F7868 002C0E28  7D 89 03 A6 */	mtctr r12
 /* 802F786C 002C0E2C  4E 80 04 21 */	bctrl 
 /* 802F7870 002C0E30  48 00 00 98 */	b switch_802F7908
-.global switch_802F7874
 switch_802F7874:
 /* 802F7874 002C0E34  38 00 00 03 */	li r0, 3
 /* 802F7878 002C0E38  38 7F 00 18 */	addi r3, r31, 0x18
@@ -305,7 +283,6 @@ switch_802F7874:
 /* 802F7894 002C0E54  38 00 00 00 */	li r0, 0
 /* 802F7898 002C0E58  98 1F 00 37 */	stb r0, 0x37(r31)
 /* 802F789C 002C0E5C  48 00 00 6C */	b switch_802F7908
-.global switch_802F78A0
 switch_802F78A0:
 /* 802F78A0 002C0E60  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F78A4 002C0E64  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)
@@ -326,19 +303,16 @@ switch_802F78A0:
 /* 802F78DC 002C0E9C  7D 89 03 A6 */	mtctr r12
 /* 802F78E0 002C0EA0  4E 80 04 21 */	bctrl 
 /* 802F78E4 002C0EA4  48 00 00 24 */	b switch_802F7908
-.global switch_802F78E8
 switch_802F78E8:
 /* 802F78E8 002C0EA8  7F 43 D3 78 */	mr r3, r26
 /* 802F78EC 002C0EAC  4B FE 3B F5 */	bl GKI_freebuf
 /* 802F78F0 002C0EB0  48 00 00 18 */	b switch_802F7908
-.global switch_802F78F4
 switch_802F78F4:
 /* 802F78F4 002C0EB4  80 7F 00 10 */	lwz r3, 0x10(r31)
 /* 802F78F8 002C0EB8  38 63 00 2A */	addi r3, r3, 0x2a
 /* 802F78FC 002C0EBC  4B FF 53 79 */	bl btm_sec_abort_access_req
 /* 802F7900 002C0EC0  7F E3 FB 78 */	mr r3, r31
 /* 802F7904 002C0EC4  48 00 47 71 */	bl l2cu_release_ccb
-.global switch_802F7908
 switch_802F7908:
 /* 802F7908 002C0EC8  39 61 00 30 */	addi r11, r1, 0x30
 /* 802F790C 002C0ECC  4B FC 28 8D */	bl _restgpr_25
@@ -378,7 +352,6 @@ l2c_csm_term_w4_sec_comp:
 /* 802F7984 002C0F44  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802F7988 002C0F48  7C 69 03 A6 */	mtctr r3
 /* 802F798C 002C0F4C  4E 80 04 20 */	bctr 
-.global switch_802F7990
 switch_802F7990:
 /* 802F7990 002C0F50  80 7D 00 10 */	lwz r3, 0x10(r29)
 /* 802F7994 002C0F54  38 63 00 2A */	addi r3, r3, 0x2a
@@ -386,7 +359,6 @@ switch_802F7990:
 /* 802F799C 002C0F5C  7F A3 EB 78 */	mr r3, r29
 /* 802F79A0 002C0F60  48 00 46 D5 */	bl l2cu_release_ccb
 /* 802F79A4 002C0F64  48 00 00 C8 */	b switch_802F7A6C
-.global switch_802F79A8
 switch_802F79A8:
 /* 802F79A8 002C0F68  38 00 00 04 */	li r0, 4
 /* 802F79AC 002C0F6C  38 7D 00 18 */	addi r3, r29, 0x18
@@ -415,7 +387,6 @@ switch_802F79A8:
 /* 802F7A04 002C0FC4  7D 89 03 A6 */	mtctr r12
 /* 802F7A08 002C0FC8  4E 80 04 21 */	bctrl 
 /* 802F7A0C 002C0FCC  48 00 00 60 */	b switch_802F7A6C
-.global switch_802F7A10
 switch_802F7A10:
 /* 802F7A10 002C0FD0  7F A3 EB 78 */	mr r3, r29
 /* 802F7A14 002C0FD4  38 80 00 03 */	li r4, 3
@@ -424,17 +395,14 @@ switch_802F7A10:
 /* 802F7A20 002C0FE0  7F A3 EB 78 */	mr r3, r29
 /* 802F7A24 002C0FE4  48 00 46 51 */	bl l2cu_release_ccb
 /* 802F7A28 002C0FE8  48 00 00 44 */	b switch_802F7A6C
-.global switch_802F7A2C
 switch_802F7A2C:
 /* 802F7A2C 002C0FEC  7F E3 FB 78 */	mr r3, r31
 /* 802F7A30 002C0FF0  4B FE 3A B1 */	bl GKI_freebuf
 /* 802F7A34 002C0FF4  48 00 00 38 */	b switch_802F7A6C
-.global switch_802F7A38
 switch_802F7A38:
 /* 802F7A38 002C0FF8  7F A3 EB 78 */	mr r3, r29
 /* 802F7A3C 002C0FFC  48 00 46 39 */	bl l2cu_release_ccb
 /* 802F7A40 002C1000  48 00 00 2C */	b switch_802F7A6C
-.global switch_802F7A44
 switch_802F7A44:
 /* 802F7A44 002C1004  80 7D 00 10 */	lwz r3, 0x10(r29)
 /* 802F7A48 002C1008  88 9D 00 36 */	lbz r4, 0x36(r29)
@@ -446,7 +414,6 @@ switch_802F7A44:
 /* 802F7A60 002C1020  4B FF 52 15 */	bl btm_sec_abort_access_req
 /* 802F7A64 002C1024  7F A3 EB 78 */	mr r3, r29
 /* 802F7A68 002C1028  48 00 46 0D */	bl l2cu_release_ccb
-.global switch_802F7A6C
 switch_802F7A6C:
 /* 802F7A6C 002C102C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 802F7A70 002C1030  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -491,7 +458,6 @@ l2c_csm_w4_l2cap_connect_rsp:
 /* 802F7AFC 002C10BC  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802F7B00 002C10C0  7C 69 03 A6 */	mtctr r3
 /* 802F7B04 002C10C4  4E 80 04 20 */	bctr 
-.global switch_802F7B08
 switch_802F7B08:
 /* 802F7B08 002C10C8  38 00 00 00 */	li r0, 0
 /* 802F7B0C 002C10CC  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
@@ -513,7 +479,6 @@ switch_802F7B08:
 /* 802F7B48 002C1108  7D 89 03 A6 */	mtctr r12
 /* 802F7B4C 002C110C  4E 80 04 21 */	bctrl 
 /* 802F7B50 002C1110  48 00 01 64 */	b switch_802F7CB4
-.global switch_802F7B54
 switch_802F7B54:
 /* 802F7B54 002C1114  A0 BA 00 0E */	lhz r5, 0xe(r26)
 /* 802F7B58 002C1118  38 00 00 05 */	li r0, 5
@@ -540,7 +505,6 @@ switch_802F7B54:
 /* 802F7BA8 002C1168  7D 89 03 A6 */	mtctr r12
 /* 802F7BAC 002C116C  4E 80 04 21 */	bctrl 
 /* 802F7BB0 002C1170  48 00 01 04 */	b switch_802F7CB4
-.global switch_802F7BB4
 switch_802F7BB4:
 /* 802F7BB4 002C1174  38 7D 00 18 */	addi r3, r29, 0x18
 /* 802F7BB8 002C1178  38 80 00 03 */	li r4, 3
@@ -565,7 +529,6 @@ switch_802F7BB4:
 /* 802F7C00 002C11C0  7D 89 03 A6 */	mtctr r12
 /* 802F7C04 002C11C4  4E 80 04 21 */	bctrl 
 /* 802F7C08 002C11C8  48 00 00 AC */	b switch_802F7CB4
-.global switch_802F7C0C
 switch_802F7C0C:
 /* 802F7C0C 002C11CC  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F7C10 002C11D0  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)
@@ -586,7 +549,6 @@ switch_802F7C0C:
 /* 802F7C48 002C1208  7D 89 03 A6 */	mtctr r12
 /* 802F7C4C 002C120C  4E 80 04 21 */	bctrl 
 /* 802F7C50 002C1210  48 00 00 64 */	b switch_802F7CB4
-.global switch_802F7C54
 switch_802F7C54:
 /* 802F7C54 002C1214  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F7C58 002C1218  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)
@@ -608,16 +570,13 @@ switch_802F7C54:
 /* 802F7C94 002C1254  7D 89 03 A6 */	mtctr r12
 /* 802F7C98 002C1258  4E 80 04 21 */	bctrl 
 /* 802F7C9C 002C125C  48 00 00 18 */	b switch_802F7CB4
-.global switch_802F7CA0
 switch_802F7CA0:
 /* 802F7CA0 002C1260  7F A3 EB 78 */	mr r3, r29
 /* 802F7CA4 002C1264  48 00 43 D1 */	bl l2cu_release_ccb
 /* 802F7CA8 002C1268  48 00 00 0C */	b switch_802F7CB4
-.global switch_802F7CAC
 switch_802F7CAC:
 /* 802F7CAC 002C126C  7F 43 D3 78 */	mr r3, r26
 /* 802F7CB0 002C1270  4B FE 38 31 */	bl GKI_freebuf
-.global switch_802F7CB4
 switch_802F7CB4:
 /* 802F7CB4 002C1274  39 61 00 30 */	addi r11, r1, 0x30
 /* 802F7CB8 002C1278  4B FC 24 E1 */	bl _restgpr_25
@@ -659,7 +618,6 @@ l2c_csm_w4_l2ca_connect_rsp:
 /* 802F7D38 002C12F8  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802F7D3C 002C12FC  7C 69 03 A6 */	mtctr r3
 /* 802F7D40 002C1300  4E 80 04 20 */	bctr 
-.global switch_802F7D44
 switch_802F7D44:
 /* 802F7D44 002C1304  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F7D48 002C1308  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)
@@ -680,7 +638,6 @@ switch_802F7D44:
 /* 802F7D80 002C1340  7D 89 03 A6 */	mtctr r12
 /* 802F7D84 002C1344  4E 80 04 21 */	bctrl 
 /* 802F7D88 002C1348  48 00 01 04 */	b switch_802F7E8C
-.global switch_802F7D8C
 switch_802F7D8C:
 /* 802F7D8C 002C134C  2C 1C 00 00 */	cmpwi r28, 0
 /* 802F7D90 002C1350  41 82 00 10 */	beq .L_802F7DA0
@@ -708,7 +665,6 @@ switch_802F7D8C:
 /* 802F7DE0 002C13A0  38 A0 00 78 */	li r5, 0x78
 /* 802F7DE4 002C13A4  4B FE 67 CD */	bl btu_start_timer
 /* 802F7DE8 002C13A8  48 00 00 A4 */	b switch_802F7E8C
-.global switch_802F7DEC
 switch_802F7DEC:
 /* 802F7DEC 002C13AC  A0 9C 00 0A */	lhz r4, 0xa(r28)
 /* 802F7DF0 002C13B0  7F E3 FB 78 */	mr r3, r31
@@ -717,7 +673,6 @@ switch_802F7DEC:
 /* 802F7DFC 002C13BC  7F E3 FB 78 */	mr r3, r31
 /* 802F7E00 002C13C0  48 00 42 75 */	bl l2cu_release_ccb
 /* 802F7E04 002C13C4  48 00 00 88 */	b switch_802F7E8C
-.global switch_802F7E08
 switch_802F7E08:
 /* 802F7E08 002C13C8  7F E3 FB 78 */	mr r3, r31
 /* 802F7E0C 002C13CC  38 80 00 02 */	li r4, 2
@@ -742,12 +697,10 @@ switch_802F7E08:
 /* 802F7E54 002C1414  7D 89 03 A6 */	mtctr r12
 /* 802F7E58 002C1418  4E 80 04 21 */	bctrl 
 /* 802F7E5C 002C141C  48 00 00 30 */	b switch_802F7E8C
-.global switch_802F7E60
 switch_802F7E60:
 /* 802F7E60 002C1420  7F 83 E3 78 */	mr r3, r28
 /* 802F7E64 002C1424  4B FE 36 7D */	bl GKI_freebuf
 /* 802F7E68 002C1428  48 00 00 24 */	b switch_802F7E8C
-.global switch_802F7E6C
 switch_802F7E6C:
 /* 802F7E6C 002C142C  7F E3 FB 78 */	mr r3, r31
 /* 802F7E70 002C1430  48 00 3B B5 */	bl l2cu_send_peer_disc_req
@@ -757,7 +710,6 @@ switch_802F7E6C:
 /* 802F7E80 002C1440  38 80 00 03 */	li r4, 3
 /* 802F7E84 002C1444  38 A0 00 1E */	li r5, 0x1e
 /* 802F7E88 002C1448  4B FE 67 29 */	bl btu_start_timer
-.global switch_802F7E8C
 switch_802F7E8C:
 /* 802F7E8C 002C144C  39 61 00 20 */	addi r11, r1, 0x20
 /* 802F7E90 002C1450  4B FC 23 11 */	bl _restgpr_27
@@ -800,7 +752,6 @@ l2c_csm_config:
 /* 802F7F14 002C14D4  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802F7F18 002C14D8  7C 69 03 A6 */	mtctr r3
 /* 802F7F1C 002C14DC  4E 80 04 20 */	bctr
-.global switch_802F7F20
 switch_802F7F20:
 /* 802F7F20 002C14E0  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F7F24 002C14E4  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)
@@ -820,7 +771,6 @@ switch_802F7F20:
 /* 802F7F58 002C1518  7D 89 03 A6 */	mtctr r12
 /* 802F7F5C 002C151C  4E 80 04 21 */	bctrl 
 /* 802F7F60 002C1520  48 00 02 F4 */	b switch_802F8254
-.global switch_802F7F64
 switch_802F7F64:
 /* 802F7F64 002C1524  7F A3 EB 78 */	mr r3, r29
 /* 802F7F68 002C1528  7F C4 F3 78 */	mr r4, r30
@@ -849,7 +799,6 @@ switch_802F7F64:
 /* 802F7FBC 002C157C  7F C4 F3 78 */	mr r4, r30
 /* 802F7FC0 002C1580  48 00 35 B9 */	bl l2cu_send_peer_config_rsp
 /* 802F7FC4 002C1584  48 00 02 90 */	b switch_802F8254
-.global switch_802F7FC8
 switch_802F7FC8:
 /* 802F7FC8 002C1588  7F A3 EB 78 */	mr r3, r29
 /* 802F7FCC 002C158C  7F C4 F3 78 */	mr r4, r30
@@ -884,7 +833,6 @@ switch_802F7FC8:
 /* 802F8038 002C15F8  7D 89 03 A6 */	mtctr r12
 /* 802F803C 002C15FC  4E 80 04 21 */	bctrl 
 /* 802F8040 002C1600  48 00 02 14 */	b switch_802F8254
-.global switch_802F8044
 switch_802F8044:
 /* 802F8044 002C1604  38 7D 00 18 */	addi r3, r29, 0x18
 /* 802F8048 002C1608  4B FE 65 D9 */	bl btu_stop_timer
@@ -906,7 +854,6 @@ switch_802F8044:
 /* 802F8084 002C1644  7D 89 03 A6 */	mtctr r12
 /* 802F8088 002C1648  4E 80 04 21 */	bctrl 
 /* 802F808C 002C164C  48 00 01 C8 */	b switch_802F8254
-.global switch_802F8090
 switch_802F8090:
 /* 802F8090 002C1650  38 7D 00 18 */	addi r3, r29, 0x18
 /* 802F8094 002C1654  38 80 00 03 */	li r4, 3
@@ -931,7 +878,6 @@ switch_802F8090:
 /* 802F80DC 002C169C  7D 89 03 A6 */	mtctr r12
 /* 802F80E0 002C16A0  4E 80 04 21 */	bctrl 
 /* 802F80E4 002C16A4  48 00 01 70 */	b switch_802F8254
-.global switch_802F80E8
 switch_802F80E8:
 /* 802F80E8 002C16A8  7F A3 EB 78 */	mr r3, r29
 /* 802F80EC 002C16AC  7F C4 F3 78 */	mr r4, r30
@@ -944,7 +890,6 @@ switch_802F80E8:
 /* 802F8108 002C16C8  38 A0 00 1E */	li r5, 0x1e
 /* 802F810C 002C16CC  4B FE 64 A5 */	bl btu_start_timer
 /* 802F8110 002C16D0  48 00 01 44 */	b switch_802F8254
-.global switch_802F8114
 switch_802F8114:
 /* 802F8114 002C16D4  7F A3 EB 78 */	mr r3, r29
 /* 802F8118 002C16D8  7F C4 F3 78 */	mr r4, r30
@@ -966,7 +911,6 @@ switch_802F8114:
 /* 802F8154 002C1714  7F C4 F3 78 */	mr r4, r30
 /* 802F8158 002C1718  48 00 34 21 */	bl l2cu_send_peer_config_rsp
 /* 802F815C 002C171C  48 00 00 F8 */	b switch_802F8254
-.global switch_802F8160
 switch_802F8160:
 /* 802F8160 002C1720  7F A3 EB 78 */	mr r3, r29
 /* 802F8164 002C1724  7F C4 F3 78 */	mr r4, r30
@@ -976,7 +920,6 @@ switch_802F8160:
 /* 802F8174 002C1734  38 A0 00 1E */	li r5, 0x1e
 /* 802F8178 002C1738  4B FE 64 39 */	bl btu_start_timer
 /* 802F817C 002C173C  48 00 00 D8 */	b switch_802F8254
-.global switch_802F8180
 switch_802F8180:
 /* 802F8180 002C1740  7F A3 EB 78 */	mr r3, r29
 /* 802F8184 002C1744  48 00 38 A1 */	bl l2cu_send_peer_disc_req
@@ -987,7 +930,6 @@ switch_802F8180:
 /* 802F8198 002C1758  38 A0 00 1E */	li r5, 0x1e
 /* 802F819C 002C175C  4B FE 64 15 */	bl btu_start_timer
 /* 802F81A0 002C1760  48 00 00 B4 */	b switch_802F8254
-.global switch_802F81A4
 switch_802F81A4:
 /* 802F81A4 002C1764  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F81A8 002C1768  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)
@@ -1006,7 +948,6 @@ switch_802F81A4:
 /* 802F81D8 002C1798  7D 89 03 A6 */	mtctr r12
 /* 802F81DC 002C179C  4E 80 04 21 */	bctrl 
 /* 802F81E0 002C17A0  48 00 00 74 */	b switch_802F8254
-.global switch_802F81E4
 switch_802F81E4:
 /* 802F81E4 002C17A4  88 1D 00 34 */	lbz r0, 0x34(r29)
 /* 802F81E8 002C17A8  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
@@ -1019,7 +960,6 @@ switch_802F81E4:
 /* 802F8200 002C17C0  7F C3 F3 78 */	mr r3, r30
 /* 802F8204 002C17C4  4B FE 32 DD */	bl GKI_freebuf
 /* 802F8208 002C17C8  48 00 00 4C */	b switch_802F8254
-.global switch_802F820C
 switch_802F820C:
 /* 802F820C 002C17CC  7F A3 EB 78 */	mr r3, r29
 /* 802F8210 002C17D0  48 00 38 15 */	bl l2cu_send_peer_disc_req
@@ -1040,7 +980,6 @@ switch_802F820C:
 /* 802F8248 002C1808  38 80 00 00 */	li r4, 0
 /* 802F824C 002C180C  7D 89 03 A6 */	mtctr r12
 /* 802F8250 002C1810  4E 80 04 21 */	bctrl 
-.global switch_802F8254
 switch_802F8254:
 /* 802F8254 002C1814  39 61 00 20 */	addi r11, r1, 0x20
 /* 802F8258 002C1818  4B FC 1F 45 */	bl _restgpr_26
@@ -1083,7 +1022,6 @@ l2c_csm_open:
 /* 802F82DC 002C189C  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802F82E0 002C18A0  7C 69 03 A6 */	mtctr r3
 /* 802F82E4 002C18A4  4E 80 04 20 */	bctr 
-.global switch_802F82E8
 switch_802F82E8:
 /* 802F82E8 002C18A8  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F82EC 002C18AC  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)
@@ -1103,7 +1041,6 @@ switch_802F82E8:
 /* 802F8320 002C18E0  7D 89 03 A6 */	mtctr r12
 /* 802F8324 002C18E4  4E 80 04 21 */	bctrl 
 /* 802F8328 002C18E8  48 00 01 88 */	b switch_802F84B0
-.global switch_802F832C
 switch_802F832C:
 /* 802F832C 002C18EC  80 7F 00 30 */	lwz r3, 0x30(r31)
 /* 802F8330 002C18F0  81 83 00 20 */	lwz r12, 0x20(r3)
@@ -1114,7 +1051,6 @@ switch_802F832C:
 /* 802F8344 002C1904  7D 89 03 A6 */	mtctr r12
 /* 802F8348 002C1908  4E 80 04 21 */	bctrl 
 /* 802F834C 002C190C  48 00 01 64 */	b switch_802F84B0
-.global switch_802F8350
 switch_802F8350:
 /* 802F8350 002C1910  83 9F 00 04 */	lwz r28, 4(r31)
 /* 802F8354 002C1914  38 60 00 05 */	li r3, 5
@@ -1147,7 +1083,6 @@ switch_802F8350:
 /* 802F83BC 002C197C  9B BF 00 34 */	stb r29, 0x34(r31)
 /* 802F83C0 002C1980  48 00 31 B9 */	bl l2cu_send_peer_config_rsp
 /* 802F83C4 002C1984  48 00 00 EC */	b switch_802F84B0
-.global switch_802F83C8
 switch_802F83C8:
 /* 802F83C8 002C1988  38 00 00 08 */	li r0, 8
 /* 802F83CC 002C198C  38 7F 00 18 */	addi r3, r31, 0x18
@@ -1172,7 +1107,6 @@ switch_802F83C8:
 /* 802F8414 002C19D4  7D 89 03 A6 */	mtctr r12
 /* 802F8418 002C19D8  4E 80 04 21 */	bctrl 
 /* 802F841C 002C19DC  48 00 00 94 */	b switch_802F84B0
-.global switch_802F8420
 switch_802F8420:
 /* 802F8420 002C19E0  80 BF 00 30 */	lwz r5, 0x30(r31)
 /* 802F8424 002C19E4  7F 64 DB 78 */	mr r4, r27
@@ -1181,7 +1115,6 @@ switch_802F8420:
 /* 802F8430 002C19F0  7D 89 03 A6 */	mtctr r12
 /* 802F8434 002C19F4  4E 80 04 21 */	bctrl 
 /* 802F8438 002C19F8  48 00 00 78 */	b switch_802F84B0
-.global switch_802F843C
 switch_802F843C:
 /* 802F843C 002C19FC  7F E3 FB 78 */	mr r3, r31
 /* 802F8440 002C1A00  48 00 35 E5 */	bl l2cu_send_peer_disc_req
@@ -1192,7 +1125,6 @@ switch_802F843C:
 /* 802F8454 002C1A14  38 A0 00 1E */	li r5, 0x1e
 /* 802F8458 002C1A18  4B FE 61 59 */	bl btu_start_timer
 /* 802F845C 002C1A1C  48 00 00 54 */	b switch_802F84B0
-.global switch_802F8460
 switch_802F8460:
 /* 802F8460 002C1A20  A0 1F 00 14 */	lhz r0, 0x14(r31)
 /* 802F8464 002C1A24  7F E3 FB 78 */	mr r3, r31
@@ -1200,7 +1132,6 @@ switch_802F8460:
 /* 802F846C 002C1A2C  B0 1B 00 00 */	sth r0, 0(r27)
 /* 802F8470 002C1A30  48 00 03 99 */	bl forward_peer_data
 /* 802F8474 002C1A34  48 00 00 3C */	b switch_802F84B0
-.global switch_802F8478
 switch_802F8478:
 /* 802F8478 002C1A38  7F E3 FB 78 */	mr r3, r31
 /* 802F847C 002C1A3C  7F 64 DB 78 */	mr r4, r27
@@ -1216,7 +1147,6 @@ switch_802F8478:
 /* 802F84A4 002C1A64  38 A0 00 1E */	li r5, 0x1e
 /* 802F84A8 002C1A68  98 1F 00 34 */	stb r0, 0x34(r31)
 /* 802F84AC 002C1A6C  4B FE 61 05 */	bl btu_start_timer
-.global switch_802F84B0
 switch_802F84B0:
 /* 802F84B0 002C1A70  39 61 00 20 */	addi r11, r1, 0x20
 /* 802F84B4 002C1A74  4B FC 1C E9 */	bl _restgpr_26
@@ -1260,7 +1190,6 @@ l2c_csm_w4_l2cap_disconnect_rsp:
 /* 802F853C 002C1AFC  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802F8540 002C1B00  7C 69 03 A6 */	mtctr r3
 /* 802F8544 002C1B04  4E 80 04 20 */	bctr 
-.global switch_802F8548
 switch_802F8548:
 /* 802F8548 002C1B08  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F854C 002C1B0C  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)
@@ -1280,7 +1209,6 @@ switch_802F8548:
 /* 802F8580 002C1B40  7D 89 03 A6 */	mtctr r12
 /* 802F8584 002C1B44  4E 80 04 21 */	bctrl 
 /* 802F8588 002C1B48  48 00 01 0C */	b switch_802F8694
-.global switch_802F858C
 switch_802F858C:
 /* 802F858C 002C1B4C  7F 23 CB 78 */	mr r3, r25
 /* 802F8590 002C1B50  48 00 3A E5 */	bl l2cu_release_ccb
@@ -1302,7 +1230,6 @@ switch_802F858C:
 /* 802F85CC 002C1B8C  7D 89 03 A6 */	mtctr r12
 /* 802F85D0 002C1B90  4E 80 04 21 */	bctrl 
 /* 802F85D4 002C1B94  48 00 00 C0 */	b switch_802F8694
-.global switch_802F85D8
 switch_802F85D8:
 /* 802F85D8 002C1B98  80 79 00 10 */	lwz r3, 0x10(r25)
 /* 802F85DC 002C1B9C  88 99 00 36 */	lbz r4, 0x36(r25)
@@ -1329,7 +1256,6 @@ switch_802F85D8:
 /* 802F862C 002C1BEC  7D 89 03 A6 */	mtctr r12
 /* 802F8630 002C1BF0  4E 80 04 21 */	bctrl 
 /* 802F8634 002C1BF4  48 00 00 60 */	b switch_802F8694
-.global switch_802F8638
 switch_802F8638:
 /* 802F8638 002C1BF8  7F 23 CB 78 */	mr r3, r25
 /* 802F863C 002C1BFC  48 00 3A 39 */	bl l2cu_release_ccb
@@ -1353,11 +1279,9 @@ switch_802F8638:
 /* 802F8680 002C1C40  7D 89 03 A6 */	mtctr r12
 /* 802F8684 002C1C44  4E 80 04 21 */	bctrl 
 /* 802F8688 002C1C48  48 00 00 0C */	b switch_802F8694
-.global switch_802F868C
 switch_802F868C:
 /* 802F868C 002C1C4C  7F 63 DB 78 */	mr r3, r27
 /* 802F8690 002C1C50  4B FE 2E 51 */	bl GKI_freebuf
-.global switch_802F8694
 switch_802F8694:
 /* 802F8694 002C1C54  39 61 00 30 */	addi r11, r1, 0x30
 /* 802F8698 002C1C58  4B FC 1B 01 */	bl _restgpr_25
@@ -1399,7 +1323,6 @@ l2c_csm_w4_l2ca_disconnect_rsp:
 /* 802F8718 002C1CD8  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802F871C 002C1CDC  7C 69 03 A6 */	mtctr r3
 /* 802F8720 002C1CE0  4E 80 04 20 */	bctr 
-.global switch_802F8724
 switch_802F8724:
 /* 802F8724 002C1CE4  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F8728 002C1CE8  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)
@@ -1420,7 +1343,6 @@ switch_802F8724:
 /* 802F8760 002C1D20  7D 89 03 A6 */	mtctr r12
 /* 802F8764 002C1D24  4E 80 04 21 */	bctrl 
 /* 802F8768 002C1D28  48 00 00 88 */	b switch_802F87F0
-.global switch_802F876C
 switch_802F876C:
 /* 802F876C 002C1D2C  80 7B 00 10 */	lwz r3, 0x10(r27)
 /* 802F8770 002C1D30  88 9B 00 36 */	lbz r4, 0x36(r27)
@@ -1446,7 +1368,6 @@ switch_802F876C:
 /* 802F87BC 002C1D7C  7D 89 03 A6 */	mtctr r12
 /* 802F87C0 002C1D80  4E 80 04 21 */	bctrl 
 /* 802F87C4 002C1D84  48 00 00 2C */	b switch_802F87F0
-.global switch_802F87C8
 switch_802F87C8:
 /* 802F87C8 002C1D88  80 7B 00 10 */	lwz r3, 0x10(r27)
 /* 802F87CC 002C1D8C  88 9B 00 36 */	lbz r4, 0x36(r27)
@@ -1456,11 +1377,9 @@ switch_802F87C8:
 /* 802F87DC 002C1D9C  7F 63 DB 78 */	mr r3, r27
 /* 802F87E0 002C1DA0  48 00 38 95 */	bl l2cu_release_ccb
 /* 802F87E4 002C1DA4  48 00 00 0C */	b switch_802F87F0
-.global switch_802F87E8
 switch_802F87E8:
 /* 802F87E8 002C1DA8  7F A3 EB 78 */	mr r3, r29
 /* 802F87EC 002C1DAC  4B FE 2C F5 */	bl GKI_freebuf
-.global switch_802F87F0
 switch_802F87F0:
 /* 802F87F0 002C1DB0  39 61 00 20 */	addi r11, r1, 0x20
 /* 802F87F4 002C1DB4  4B FC 19 AD */	bl _restgpr_27

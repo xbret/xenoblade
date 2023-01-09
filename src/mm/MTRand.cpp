@@ -4,6 +4,9 @@
 namespace mm{
 namespace mtl{
 
+    //FUN_003e4740
+    //FUN_002c29e4
+    //FUN_0027229c
     void MTRand::mtInit(u32 seed) {
         if(seed == 0) seed = 0x012BD6AA;
 

@@ -186,15 +186,17 @@ func_80459A94:
 .global func_80459A98
 func_80459A98:
 /* 80459A98 00423058  48 00 23 B0 */	b func_8045BE48
-.global switch_80459A9C
-switch_80459A9C:
+
+.global func_80459A9C
+func_80459A9C:
 /* 80459A9C 0042305C  48 00 32 60 */	b func_8045CCFC
 
 .global func_80459AA0
 func_80459AA0:
 /* 80459AA0 00423060  48 00 35 3C */	b func_8045CFDC
-.global switch_80459AA4
-switch_80459AA4:
+
+.global func_80459AA4
+func_80459AA4:
 /* 80459AA4 00423064  48 00 35 98 */	b func_8045D03C
 
 .global func_80459AA8
@@ -211,8 +213,9 @@ func_80459AB0:
 /* 80459AB4 00423074  7C 83 23 78 */	mr r3, r4
 /* 80459AB8 00423078  7C 04 03 78 */	mr r4, r0
 /* 80459ABC 0042307C  48 00 18 54 */	b func_8045B310
-.global switch_80459AC0
-switch_80459AC0:
+
+.global func_80459AC0
+func_80459AC0:
 /* 80459AC0 00423080  48 00 0C 48 */	b func_8045A708
 
 .global func_80459AC4

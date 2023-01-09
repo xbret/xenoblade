@@ -33,7 +33,6 @@ SFD_Init:
 /* 803C0AB8 0038A078  81 85 00 24 */	lwz r12, 0x24(r5)
 /* 803C0ABC 0038A07C  7D 89 03 A6 */	mtctr r12
 /* 803C0AC0 0038A080  4E 80 04 21 */	bctrl 
-.global switch_803C0AC4
 switch_803C0AC4:
 /* 803C0AC4 0038A084  3C 80 80 52 */	lis r4, SFLIB_version_str@ha
 /* 803C0AC8 0038A088  38 00 39 88 */	li r0, 0x3988
@@ -1731,19 +1730,6 @@ lbl_8056C580:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0
-
-
-.global lbl_8056C5F0
-lbl_8056C5F0:
-	# ROM: 0x5686F0
-	.4byte switch_803C95C8
-	.4byte switch_803C923C
-	.4byte switch_803C9268
-	.4byte switch_803C9274
-	.4byte switch_803C9348
-	.4byte switch_803C95C8
-	.4byte switch_803C95C8
 	.4byte 0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

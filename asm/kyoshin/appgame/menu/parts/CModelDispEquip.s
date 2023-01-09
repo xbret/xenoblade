@@ -629,6 +629,7 @@ func_801FFDB0:
 .L_801FFDC0:
 /* 801FFDC0 001C9380  48 00 05 D4 */	b func_80200394
 
+#FUN_002021e8 in xc3d debug?
 .global func_801FFDC4
 func_801FFDC4:
 /* 801FFDC4 001C9384  94 21 FF A0 */	stwu r1, -0x60(r1)
@@ -762,10 +763,10 @@ func_801FFDC4:
 /* 801FFFB0 001C9570  3B 5A 00 01 */	addi r26, r26, 1
 /* 801FFFB4 001C9574  28 1A 00 05 */	cmplwi r26, 5
 /* 801FFFB8 001C9578  40 81 FF 80 */	ble .L_801FFF38
-/* 801FFFBC 001C957C  3F 80 80 50 */	lis r28, lbl_80503750@ha
+/* 801FFFBC 001C957C  3F 80 80 50 */	lis r28, CModelDispEquip_strpool@ha
 /* 801FFFC0 001C9580  80 7D 00 0C */	lwz r3, 0xc(r29)
 /* 801FFFC4 001C9584  80 9F 3F 30 */	lwz r4, 0x3f30(r31)
-/* 801FFFC8 001C9588  38 BC 37 50 */	addi r5, r28, lbl_80503750@l
+/* 801FFFC8 001C9588  38 BC 37 50 */	addi r5, r28, CModelDispEquip_strpool@l
 /* 801FFFCC 001C958C  4B E5 84 ED */	bl func_800584B8
 /* 801FFFD0 001C9590  90 7E 00 04 */	stw r3, 4(r30)
 /* 801FFFD4 001C9594  38 7F 3E 9C */	addi r3, r31, 0x3e9c
@@ -774,7 +775,7 @@ func_801FFDC4:
 /* 801FFFE0 001C95A0  7D 89 03 A6 */	mtctr r12
 /* 801FFFE4 001C95A4  4E 80 04 21 */	bctrl 
 /* 801FFFE8 001C95A8  7C 64 1B 78 */	mr r4, r3
-/* 801FFFEC 001C95AC  38 BC 37 50 */	addi r5, r28, lbl_80503750@l
+/* 801FFFEC 001C95AC  38 BC 37 50 */	addi r5, r28, CModelDispEquip_strpool@l
 /* 801FFFF0 001C95B0  80 7D 00 0C */	lwz r3, 0xc(r29)
 /* 801FFFF4 001C95B4  38 A5 00 04 */	addi r5, r5, 4
 /* 801FFFF8 001C95B8  4B E5 84 C1 */	bl func_800584B8
@@ -909,9 +910,9 @@ func_801FFDC4:
 /* 802001F0 001C97B0  7C 64 1B 78 */	mr r4, r3
 /* 802001F4 001C97B4  38 61 00 28 */	addi r3, r1, 0x28
 /* 802001F8 001C97B8  4B E5 82 1D */	bl func_80058414
-/* 802001FC 001C97BC  3C A0 80 50 */	lis r5, lbl_80503750@ha
+/* 802001FC 001C97BC  3C A0 80 50 */	lis r5, CModelDispEquip_strpool@ha
 /* 80200200 001C97C0  80 7D 00 0C */	lwz r3, 0xc(r29)
-/* 80200204 001C97C4  38 A5 37 50 */	addi r5, r5, lbl_80503750@l
+/* 80200204 001C97C4  38 A5 37 50 */	addi r5, r5, CModelDispEquip_strpool@l
 /* 80200208 001C97C8  80 81 00 34 */	lwz r4, 0x34(r1)
 /* 8020020C 001C97CC  38 A5 00 08 */	addi r5, r5, 8
 /* 80200210 001C97D0  48 29 5C 9D */	bl func_80495EAC
@@ -963,8 +964,8 @@ func_801FFDC4:
 /* 802002BC 001C987C  28 03 01 67 */	cmplwi r3, 0x167
 /* 802002C0 001C9880  41 80 00 28 */	blt .L_802002E8
 /* 802002C4 001C9884  80 7F 3F 34 */	lwz r3, 0x3f34(r31)
-/* 802002C8 001C9888  3C 80 80 50 */	lis r4, lbl_80503750@ha
-/* 802002CC 001C988C  38 84 37 50 */	addi r4, r4, lbl_80503750@l
+/* 802002C8 001C9888  3C 80 80 50 */	lis r4, CModelDispEquip_strpool@ha
+/* 802002CC 001C988C  38 84 37 50 */	addi r4, r4, CModelDispEquip_strpool@l
 /* 802002D0 001C9890  38 A0 00 00 */	li r5, 0
 /* 802002D4 001C9894  81 83 00 00 */	lwz r12, 0(r3)
 /* 802002D8 001C9898  38 84 00 0C */	addi r4, r4, 0xc
@@ -1022,6 +1023,7 @@ func_80200388:
 /* 8020038C 001C994C  90 83 00 34 */	stw r4, 0x34(r3)
 /* 80200390 001C9950  4E 80 00 20 */	blr
 
+#0x00202860 in XC3D Debug
 .global func_80200394
 func_80200394:
 /* 80200394 001C9954  94 21 FE E0 */	stwu r1, -0x120(r1)
@@ -1104,9 +1106,9 @@ func_80200394:
 .L_802004C8:
 /* 802004C8 001C9A88  28 06 00 2B */	cmplwi r6, 0x2b
 /* 802004CC 001C9A8C  40 82 00 28 */	bne .L_802004F4
-/* 802004D0 001C9A90  3C 80 80 50 */	lis r4, lbl_80503750@ha
+/* 802004D0 001C9A90  3C 80 80 50 */	lis r4, CModelDispEquip_strpool@ha
 /* 802004D4 001C9A94  7F A5 EB 78 */	mr r5, r29
-/* 802004D8 001C9A98  38 84 37 50 */	addi r4, r4, lbl_80503750@l
+/* 802004D8 001C9A98  38 84 37 50 */	addi r4, r4, CModelDispEquip_strpool@l
 /* 802004DC 001C9A9C  38 61 00 80 */	addi r3, r1, 0x80
 /* 802004E0 001C9AA0  38 E0 00 0A */	li r7, 0xa
 /* 802004E4 001C9AA4  38 84 00 11 */	addi r4, r4, 0x11
@@ -1114,9 +1116,9 @@ func_80200394:
 /* 802004EC 001C9AAC  48 0C 0B 4D */	bl sprintf
 /* 802004F0 001C9AB0  48 00 00 28 */	b .L_80200518
 .L_802004F4:
-/* 802004F4 001C9AB4  3C 80 80 50 */	lis r4, lbl_80503750@ha
+/* 802004F4 001C9AB4  3C 80 80 50 */	lis r4, CModelDispEquip_strpool@ha
 /* 802004F8 001C9AB8  7F A5 EB 78 */	mr r5, r29
-/* 802004FC 001C9ABC  38 84 37 50 */	addi r4, r4, lbl_80503750@l
+/* 802004FC 001C9ABC  38 84 37 50 */	addi r4, r4, CModelDispEquip_strpool@l
 /* 80200500 001C9AC0  38 61 00 80 */	addi r3, r1, 0x80
 /* 80200504 001C9AC4  38 84 00 11 */	addi r4, r4, 0x11
 /* 80200508 001C9AC8  38 C0 00 00 */	li r6, 0
@@ -1157,9 +1159,9 @@ func_80200394:
 .L_80200588:
 /* 80200588 001C9B48  28 06 00 2B */	cmplwi r6, 0x2b
 /* 8020058C 001C9B4C  40 82 00 28 */	bne .L_802005B4
-/* 80200590 001C9B50  3C 80 80 50 */	lis r4, lbl_80503750@ha
+/* 80200590 001C9B50  3C 80 80 50 */	lis r4, CModelDispEquip_strpool@ha
 /* 80200594 001C9B54  7F A5 EB 78 */	mr r5, r29
-/* 80200598 001C9B58  38 84 37 50 */	addi r4, r4, lbl_80503750@l
+/* 80200598 001C9B58  38 84 37 50 */	addi r4, r4, CModelDispEquip_strpool@l
 /* 8020059C 001C9B5C  38 61 00 60 */	addi r3, r1, 0x60
 /* 802005A0 001C9B60  38 E0 00 14 */	li r7, 0x14
 /* 802005A4 001C9B64  38 84 00 11 */	addi r4, r4, 0x11
@@ -1167,9 +1169,9 @@ func_80200394:
 /* 802005AC 001C9B6C  48 0C 0A 8D */	bl sprintf
 /* 802005B0 001C9B70  48 00 00 28 */	b .L_802005D8
 .L_802005B4:
-/* 802005B4 001C9B74  3C 80 80 50 */	lis r4, lbl_80503750@ha
+/* 802005B4 001C9B74  3C 80 80 50 */	lis r4, CModelDispEquip_strpool@ha
 /* 802005B8 001C9B78  7F A5 EB 78 */	mr r5, r29
-/* 802005BC 001C9B7C  38 84 37 50 */	addi r4, r4, lbl_80503750@l
+/* 802005BC 001C9B7C  38 84 37 50 */	addi r4, r4, CModelDispEquip_strpool@l
 /* 802005C0 001C9B80  38 61 00 60 */	addi r3, r1, 0x60
 /* 802005C4 001C9B84  38 84 00 11 */	addi r4, r4, 0x11
 /* 802005C8 001C9B88  38 C0 00 00 */	li r6, 0
@@ -1198,9 +1200,9 @@ func_80200394:
 /* 80200618 001C9BD8  80 1C 10 84 */	lwz r0, 0x1084(r28)
 /* 8020061C 001C9BDC  2C 00 00 00 */	cmpwi r0, 0
 /* 80200620 001C9BE0  40 82 00 D4 */	bne .L_802006F4
-/* 80200624 001C9BE4  3F 00 80 50 */	lis r24, lbl_80503750@ha
+/* 80200624 001C9BE4  3F 00 80 50 */	lis r24, CModelDispEquip_strpool@ha
 /* 80200628 001C9BE8  A0 BF 00 18 */	lhz r5, 0x18(r31)
-/* 8020062C 001C9BEC  3B 18 37 50 */	addi r24, r24, lbl_80503750@l
+/* 8020062C 001C9BEC  3B 18 37 50 */	addi r24, r24, CModelDispEquip_strpool@l
 /* 80200630 001C9BF0  38 78 00 2C */	addi r3, r24, 0x2c
 /* 80200634 001C9BF4  38 98 00 38 */	addi r4, r24, 0x38
 /* 80200638 001C9BF8  4B F3 5B 59 */	bl func_80136190
@@ -1362,9 +1364,9 @@ func_80200394:
 /* 80200880 001C9E40  80 7E 00 00 */	lwz r3, 0(r30)
 /* 80200884 001C9E44  80 9C 10 58 */	lwz r4, 0x1058(r28)
 /* 80200888 001C9E48  48 28 29 3D */	bl func_804831C4
-/* 8020088C 001C9E4C  3F 40 80 50 */	lis r26, lbl_80503750@ha
+/* 8020088C 001C9E4C  3F 40 80 50 */	lis r26, CModelDispEquip_strpool@ha
 /* 80200890 001C9E50  82 9C 10 64 */	lwz r20, 0x1064(r28)
-/* 80200894 001C9E54  3B 5A 37 50 */	addi r26, r26, lbl_80503750@l
+/* 80200894 001C9E54  3B 5A 37 50 */	addi r26, r26, CModelDispEquip_strpool@l
 /* 80200898 001C9E58  A0 BF 00 18 */	lhz r5, 0x18(r31)
 /* 8020089C 001C9E5C  38 7A 00 2C */	addi r3, r26, 0x2c
 /* 802008A0 001C9E60  38 9A 00 52 */	addi r4, r26, 0x52
@@ -1415,9 +1417,9 @@ func_80200394:
 /* 80200944 001C9F04  80 1E 0F C8 */	lwz r0, 0xfc8(r30)
 /* 80200948 001C9F08  2C 00 00 00 */	cmpwi r0, 0
 /* 8020094C 001C9F0C  41 82 00 48 */	beq .L_80200994
-/* 80200950 001C9F10  3C 80 80 50 */	lis r4, lbl_80503750@ha
+/* 80200950 001C9F10  3C 80 80 50 */	lis r4, CModelDispEquip_strpool@ha
 /* 80200954 001C9F14  A0 7F 00 18 */	lhz r3, 0x18(r31)
-/* 80200958 001C9F18  38 84 37 50 */	addi r4, r4, lbl_80503750@l
+/* 80200958 001C9F18  38 84 37 50 */	addi r4, r4, CModelDispEquip_strpool@l
 /* 8020095C 001C9F1C  38 A0 00 00 */	li r5, 0
 /* 80200960 001C9F20  38 84 00 52 */	addi r4, r4, 0x52
 /* 80200964 001C9F24  4B F4 19 F9 */	bl func_8014235C
@@ -1436,9 +1438,9 @@ func_80200394:
 /* 80200994 001C9F54  80 1E 0F CC */	lwz r0, 0xfcc(r30)
 /* 80200998 001C9F58  2C 00 00 00 */	cmpwi r0, 0
 /* 8020099C 001C9F5C  41 82 00 48 */	beq .L_802009E4
-/* 802009A0 001C9F60  3C 80 80 50 */	lis r4, lbl_80503750@ha
+/* 802009A0 001C9F60  3C 80 80 50 */	lis r4, CModelDispEquip_strpool@ha
 /* 802009A4 001C9F64  A0 7F 00 18 */	lhz r3, 0x18(r31)
-/* 802009A8 001C9F68  38 84 37 50 */	addi r4, r4, lbl_80503750@l
+/* 802009A8 001C9F68  38 84 37 50 */	addi r4, r4, CModelDispEquip_strpool@l
 /* 802009AC 001C9F6C  38 A0 00 01 */	li r5, 1
 /* 802009B0 001C9F70  38 84 00 52 */	addi r4, r4, 0x52
 /* 802009B4 001C9F74  4B F4 19 A9 */	bl func_8014235C
@@ -1455,14 +1457,14 @@ func_80200394:
 /* 802009E0 001C9FA0  4E 80 04 21 */	bctrl 
 .L_802009E4:
 /* 802009E4 001C9FA4  82 BC 10 7C */	lwz r21, 0x107c(r28)
-/* 802009E8 001C9FA8  3F 40 80 50 */	lis r26, lbl_80503750@ha
+/* 802009E8 001C9FA8  3F 40 80 50 */	lis r26, CModelDispEquip_strpool@ha
 /* 802009EC 001C9FAC  82 9C 10 70 */	lwz r20, 0x1070(r28)
-/* 802009F0 001C9FB0  38 BA 37 50 */	addi r5, r26, lbl_80503750@l
+/* 802009F0 001C9FB0  38 BA 37 50 */	addi r5, r26, CModelDispEquip_strpool@l
 /* 802009F4 001C9FB4  80 7C 00 0C */	lwz r3, 0xc(r28)
 /* 802009F8 001C9FB8  7E A4 AB 78 */	mr r4, r21
 /* 802009FC 001C9FBC  4B E5 7A BD */	bl func_800584B8
 /* 80200A00 001C9FC0  90 7E 00 04 */	stw r3, 4(r30)
-/* 80200A04 001C9FC4  38 BA 37 50 */	addi r5, r26, lbl_80503750@l
+/* 80200A04 001C9FC4  38 BA 37 50 */	addi r5, r26, CModelDispEquip_strpool@l
 /* 80200A08 001C9FC8  80 7C 00 0C */	lwz r3, 0xc(r28)
 /* 80200A0C 001C9FCC  7E 84 A3 78 */	mr r4, r20
 /* 80200A10 001C9FD0  38 A5 00 04 */	addi r5, r5, 4
@@ -1520,9 +1522,9 @@ func_80200394:
 /* 80200ADC 001CA09C  90 1C 10 A0 */	stw r0, 0x10a0(r28)
 /* 80200AE0 001CA0A0  D0 1C 10 A4 */	stfs f0, 0x10a4(r28)
 /* 80200AE4 001CA0A4  4B E5 79 31 */	bl func_80058414
-/* 80200AE8 001CA0A8  3C A0 80 50 */	lis r5, lbl_80503750@ha
+/* 80200AE8 001CA0A8  3C A0 80 50 */	lis r5, CModelDispEquip_strpool@ha
 /* 80200AEC 001CA0AC  80 7C 00 0C */	lwz r3, 0xc(r28)
-/* 80200AF0 001CA0B0  38 A5 37 50 */	addi r5, r5, lbl_80503750@l
+/* 80200AF0 001CA0B0  38 A5 37 50 */	addi r5, r5, CModelDispEquip_strpool@l
 /* 80200AF4 001CA0B4  80 81 00 3C */	lwz r4, 0x3c(r1)
 /* 80200AF8 001CA0B8  38 A5 00 08 */	addi r5, r5, 8
 /* 80200AFC 001CA0BC  48 29 53 B1 */	bl func_80495EAC
@@ -1567,8 +1569,8 @@ func_80200394:
 /* 80200B90 001CA150  28 03 01 67 */	cmplwi r3, 0x167
 /* 80200B94 001CA154  41 80 00 28 */	blt .L_80200BBC
 /* 80200B98 001CA158  80 7E 00 00 */	lwz r3, 0(r30)
-/* 80200B9C 001CA15C  3C 80 80 50 */	lis r4, lbl_80503750@ha
-/* 80200BA0 001CA160  38 84 37 50 */	addi r4, r4, lbl_80503750@l
+/* 80200B9C 001CA15C  3C 80 80 50 */	lis r4, CModelDispEquip_strpool@ha
+/* 80200BA0 001CA160  38 84 37 50 */	addi r4, r4, CModelDispEquip_strpool@l
 /* 80200BA4 001CA164  38 A0 00 00 */	li r5, 0
 /* 80200BA8 001CA168  81 83 00 00 */	lwz r12, 0(r3)
 /* 80200BAC 001CA16C  38 84 00 0C */	addi r4, r4, 0xc
@@ -1659,6 +1661,7 @@ func_80200C20:
 /* 80200CE0 001CA2A0  38 21 00 60 */	addi r1, r1, 0x60
 /* 80200CE4 001CA2A4  4E 80 00 20 */	blr
 
+#0x00203994 in xc3d
 .global func_80200CE8
 func_80200CE8:
 /* 80200CE8 001CA2A8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1982,6 +1985,7 @@ func_80200FB0:
 /* 80201140 001CA700  38 21 00 40 */	addi r1, r1, 0x40
 /* 80201144 001CA704  4E 80 00 20 */	blr
 
+#FUN_00203414 in xcde debug
 .global func_80201148
 func_80201148:
 /* 80201148 001CA708  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2007,9 +2011,9 @@ func_80201148:
 /* 80201194 001CA754  41 82 00 34 */	beq .L_802011C8
 /* 80201198 001CA758  48 00 00 58 */	b .L_802011F0
 .L_8020119C:
-/* 8020119C 001CA75C  3C 80 80 50 */	lis r4, lbl_80503750@ha
+/* 8020119C 001CA75C  3C 80 80 50 */	lis r4, CModelDispEquip_strpool@ha
 /* 802011A0 001CA760  80 7C 10 0C */	lwz r3, 0x100c(r28)
-/* 802011A4 001CA764  38 84 37 50 */	addi r4, r4, lbl_80503750@l
+/* 802011A4 001CA764  38 84 37 50 */	addi r4, r4, CModelDispEquip_strpool@l
 /* 802011A8 001CA768  3B E0 00 00 */	li r31, 0
 /* 802011AC 001CA76C  38 84 00 5C */	addi r4, r4, 0x5c
 /* 802011B0 001CA770  38 A0 00 00 */	li r5, 0
@@ -2019,9 +2023,9 @@ func_80201148:
 /* 802011C0 001CA780  7C 64 1B 78 */	mr r4, r3
 /* 802011C4 001CA784  48 00 00 2C */	b .L_802011F0
 .L_802011C8:
-/* 802011C8 001CA788  3C 80 80 50 */	lis r4, lbl_80503750@ha
+/* 802011C8 001CA788  3C 80 80 50 */	lis r4, CModelDispEquip_strpool@ha
 /* 802011CC 001CA78C  80 7C 10 0C */	lwz r3, 0x100c(r28)
-/* 802011D0 001CA790  38 84 37 50 */	addi r4, r4, lbl_80503750@l
+/* 802011D0 001CA790  38 84 37 50 */	addi r4, r4, CModelDispEquip_strpool@l
 /* 802011D4 001CA794  3B E0 00 01 */	li r31, 1
 /* 802011D8 001CA798  38 84 00 5C */	addi r4, r4, 0x5c
 /* 802011DC 001CA79C  38 A0 00 01 */	li r5, 1
@@ -2043,9 +2047,9 @@ func_80201148:
 /* 80201214 001CA7D4  41 82 00 34 */	beq .L_80201248
 /* 80201218 001CA7D8  48 00 00 58 */	b .L_80201270
 .L_8020121C:
-/* 8020121C 001CA7DC  3C 80 80 50 */	lis r4, lbl_80503750@ha
+/* 8020121C 001CA7DC  3C 80 80 50 */	lis r4, CModelDispEquip_strpool@ha
 /* 80201220 001CA7E0  80 7C 10 0C */	lwz r3, 0x100c(r28)
-/* 80201224 001CA7E4  38 84 37 50 */	addi r4, r4, lbl_80503750@l
+/* 80201224 001CA7E4  38 84 37 50 */	addi r4, r4, CModelDispEquip_strpool@l
 /* 80201228 001CA7E8  3B E0 00 00 */	li r31, 0
 /* 8020122C 001CA7EC  38 84 00 52 */	addi r4, r4, 0x52
 /* 80201230 001CA7F0  38 A0 00 00 */	li r5, 0
@@ -2055,9 +2059,9 @@ func_80201148:
 /* 80201240 001CA800  7C 64 1B 78 */	mr r4, r3
 /* 80201244 001CA804  48 00 00 2C */	b .L_80201270
 .L_80201248:
-/* 80201248 001CA808  3C 80 80 50 */	lis r4, lbl_80503750@ha
+/* 80201248 001CA808  3C 80 80 50 */	lis r4, CModelDispEquip_strpool@ha
 /* 8020124C 001CA80C  80 7C 10 0C */	lwz r3, 0x100c(r28)
-/* 80201250 001CA810  38 84 37 50 */	addi r4, r4, lbl_80503750@l
+/* 80201250 001CA810  38 84 37 50 */	addi r4, r4, CModelDispEquip_strpool@l
 /* 80201254 001CA814  3B E0 00 01 */	li r31, 1
 /* 80201258 001CA818  38 84 00 52 */	addi r4, r4, 0x52
 /* 8020125C 001CA81C  38 A0 00 01 */	li r5, 1
@@ -2709,18 +2713,18 @@ CModelDispEquip_typestr:
 	.asciz "CModelDispEquip"
 
 
-.global lbl_80503750
-lbl_80503750:
-	.asciz "BBB"
-	.asciz "FFF"
-	.asciz "AAA"
-	.asciz "core"
-	.asciz "/chr/pc/mp%02d%02d%02d.mca"
-	.asciz "ITM_wpnlist"
-	.asciz "resource"
-	.asciz "/chr/wp/mw%s.mca"
-	.asciz "def_mount"
-	.asciz "bat_mount"
+.global CModelDispEquip_strpool
+CModelDispEquip_strpool:
+	.asciz "BBB" #0x0
+	.asciz "FFF" #0x4
+	.asciz "AAA" #0x8
+	.asciz "core" #0xC
+	.asciz "/chr/pc/mp%02d%02d%02d.mca" #0x11
+	.asciz "ITM_wpnlist" #0x2C
+	.asciz "resource" #0x38
+	.asciz "/chr/wp/mw%s.mca" #0x41
+	.asciz "def_mount" #0x52
+	.asciz "bat_mount" #0x5C
 	.balign 4
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

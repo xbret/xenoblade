@@ -593,7 +593,6 @@ func_800399E0:
 /* 80039A28 00002FE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039A2C 00002FEC  4E 80 00 20 */	blr 
 
-#game main function?
 .global GameMain
 GameMain:
 /* 80039A30 00002FF0  94 21 FF E0 */	stwu r1, -0x20(r1)

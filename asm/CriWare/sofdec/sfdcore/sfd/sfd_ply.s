@@ -160,7 +160,6 @@ sfply_ExecOne:
 /* 803C9230 003927F0  7C 84 00 2E */	lwzx r4, r4, r0
 /* 803C9234 003927F4  7C 89 03 A6 */	mtctr r4
 /* 803C9238 003927F8  4E 80 04 20 */	bctr
-.global switch_803C923C
 switch_803C923C:
 /* 803C923C 003927FC  80 1D 00 54 */	lwz r0, 0x54(r29)
 /* 803C9240 00392800  2C 00 00 05 */	cmpwi r0, 5
@@ -175,12 +174,10 @@ switch_803C923C:
 .L_803C9260:
 /* 803C9260 00392820  38 60 00 02 */	li r3, 2
 /* 803C9264 00392824  48 00 03 64 */	b switch_803C95C8
-.global switch_803C9268
 switch_803C9268:
 /* 803C9268 00392828  7F A3 EB 78 */	mr r3, r29
 /* 803C926C 0039282C  48 00 03 99 */	bl sfply_StatPrep
 /* 803C9270 00392830  48 00 03 58 */	b switch_803C95C8
-.global switch_803C9274
 switch_803C9274:
 /* 803C9274 00392834  80 1D 00 54 */	lwz r0, 0x54(r29)
 /* 803C9278 00392838  7C 7C 1B 78 */	mr r28, r3
@@ -245,7 +242,6 @@ switch_803C9274:
 .L_803C9340:
 /* 803C9340 00392900  7F 83 E3 78 */	mr r3, r28
 /* 803C9344 00392904  48 00 02 84 */	b switch_803C95C8
-.global switch_803C9348
 switch_803C9348:
 /* 803C9348 00392908  83 7D 0A 64 */	lwz r27, 0xa64(r29)
 /* 803C934C 0039290C  83 9D 0A 68 */	lwz r28, 0xa68(r29)
@@ -425,7 +421,6 @@ switch_803C9348:
 /* 803C95BC 00392B7C  2C 00 00 07 */	cmpwi r0, 7
 /* 803C95C0 00392B80  40 80 00 08 */	bge switch_803C95C8
 /* 803C95C4 00392B84  38 60 00 06 */	li r3, 6
-.global switch_803C95C8
 switch_803C95C8:
 /* 803C95C8 00392B88  90 7D 00 50 */	stw r3, 0x50(r29)
 /* 803C95CC 00392B8C  7F A3 EB 78 */	mr r3, r29
@@ -3050,6 +3045,21 @@ float_80520584:
 .global lbl_80520588
 lbl_80520588:
 	.asciz "%p, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %d, %p, %ld"
+	.4byte 0
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global lbl_8056C5F0
+lbl_8056C5F0:
+	# ROM: 0x5686F0
+	.4byte switch_803C95C8
+	.4byte switch_803C923C
+	.4byte switch_803C9268
+	.4byte switch_803C9274
+	.4byte switch_803C9348
+	.4byte switch_803C95C8
+	.4byte switch_803C95C8
 	.4byte 0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

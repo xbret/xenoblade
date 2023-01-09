@@ -13,77 +13,66 @@ GXSetVtxDesc:
 /* 80319244 002E2804  7C A5 00 2E */	lwzx r5, r5, r0
 /* 80319248 002E2808  7C A9 03 A6 */	mtctr r5
 /* 8031924C 002E280C  4E 80 04 20 */	bctr 
-.global switch_80319250
 switch_80319250:
 /* 80319250 002E2810  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 80319254 002E2814  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 80319258 002E2818  50 80 07 FE */	rlwimi r0, r4, 0, 0x1f, 0x1f
 /* 8031925C 002E281C  90 03 00 14 */	stw r0, 0x14(r3)
 /* 80319260 002E2820  48 00 01 E4 */	b switch_80319444
-.global switch_80319264
 switch_80319264:
 /* 80319264 002E2824  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 80319268 002E2828  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 8031926C 002E282C  50 80 0F BC */	rlwimi r0, r4, 1, 0x1e, 0x1e
 /* 80319270 002E2830  90 03 00 14 */	stw r0, 0x14(r3)
 /* 80319274 002E2834  48 00 01 D0 */	b switch_80319444
-.global switch_80319278
 switch_80319278:
 /* 80319278 002E2838  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 8031927C 002E283C  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 80319280 002E2840  50 80 17 7A */	rlwimi r0, r4, 2, 0x1d, 0x1d
 /* 80319284 002E2844  90 03 00 14 */	stw r0, 0x14(r3)
 /* 80319288 002E2848  48 00 01 BC */	b switch_80319444
-.global switch_8031928C
 switch_8031928C:
 /* 8031928C 002E284C  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 80319290 002E2850  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 80319294 002E2854  50 80 1F 38 */	rlwimi r0, r4, 3, 0x1c, 0x1c
 /* 80319298 002E2858  90 03 00 14 */	stw r0, 0x14(r3)
 /* 8031929C 002E285C  48 00 01 A8 */	b switch_80319444
-.global switch_803192A0
 switch_803192A0:
 /* 803192A0 002E2860  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 803192A4 002E2864  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 803192A8 002E2868  50 80 26 F6 */	rlwimi r0, r4, 4, 0x1b, 0x1b
 /* 803192AC 002E286C  90 03 00 14 */	stw r0, 0x14(r3)
 /* 803192B0 002E2870  48 00 01 94 */	b switch_80319444
-.global switch_803192B4
 switch_803192B4:
 /* 803192B4 002E2874  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 803192B8 002E2878  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 803192BC 002E287C  50 80 2E B4 */	rlwimi r0, r4, 5, 0x1a, 0x1a
 /* 803192C0 002E2880  90 03 00 14 */	stw r0, 0x14(r3)
 /* 803192C4 002E2884  48 00 01 80 */	b switch_80319444
-.global switch_803192C8
 switch_803192C8:
 /* 803192C8 002E2888  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 803192CC 002E288C  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 803192D0 002E2890  50 80 36 72 */	rlwimi r0, r4, 6, 0x19, 0x19
 /* 803192D4 002E2894  90 03 00 14 */	stw r0, 0x14(r3)
 /* 803192D8 002E2898  48 00 01 6C */	b switch_80319444
-.global switch_803192DC
 switch_803192DC:
 /* 803192DC 002E289C  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 803192E0 002E28A0  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 803192E4 002E28A4  50 80 3E 30 */	rlwimi r0, r4, 7, 0x18, 0x18
 /* 803192E8 002E28A8  90 03 00 14 */	stw r0, 0x14(r3)
 /* 803192EC 002E28AC  48 00 01 58 */	b switch_80319444
-.global switch_803192F0
 switch_803192F0:
 /* 803192F0 002E28B0  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 803192F4 002E28B4  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 803192F8 002E28B8  50 80 45 EE */	rlwimi r0, r4, 8, 0x17, 0x17
 /* 803192FC 002E28BC  90 03 00 14 */	stw r0, 0x14(r3)
 /* 80319300 002E28C0  48 00 01 44 */	b switch_80319444
-.global switch_80319304
 switch_80319304:
 /* 80319304 002E28C4  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 80319308 002E28C8  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 8031930C 002E28CC  50 80 4D 6C */	rlwimi r0, r4, 9, 0x15, 0x16
 /* 80319310 002E28D0  90 03 00 14 */	stw r0, 0x14(r3)
 /* 80319314 002E28D4  48 00 01 30 */	b switch_80319444
-.global switch_80319318
 switch_80319318:
 /* 80319318 002E28D8  2C 04 00 00 */	cmpwi r4, 0
 /* 8031931C 002E28DC  41 82 00 20 */	beq .L_8031933C
@@ -99,7 +88,6 @@ switch_80319318:
 /* 80319340 002E2900  38 00 00 00 */	li r0, 0
 /* 80319344 002E2904  98 03 05 24 */	stb r0, 0x524(r3)
 /* 80319348 002E2908  48 00 00 FC */	b switch_80319444
-.global switch_8031934C
 switch_8031934C:
 /* 8031934C 002E290C  2C 04 00 00 */	cmpwi r4, 0
 /* 80319350 002E2910  41 82 00 20 */	beq .L_80319370
@@ -115,76 +103,65 @@ switch_8031934C:
 /* 80319374 002E2934  38 00 00 00 */	li r0, 0
 /* 80319378 002E2938  98 03 05 25 */	stb r0, 0x525(r3)
 /* 8031937C 002E293C  48 00 00 C8 */	b switch_80319444
-.global switch_80319380
 switch_80319380:
 /* 80319380 002E2940  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 80319384 002E2944  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 80319388 002E2948  50 80 6C 64 */	rlwimi r0, r4, 0xd, 0x11, 0x12
 /* 8031938C 002E294C  90 03 00 14 */	stw r0, 0x14(r3)
 /* 80319390 002E2950  48 00 00 B4 */	b switch_80319444
-.global switch_80319394
 switch_80319394:
 /* 80319394 002E2954  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 80319398 002E2958  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 8031939C 002E295C  50 80 7B E0 */	rlwimi r0, r4, 0xf, 0xf, 0x10
 /* 803193A0 002E2960  90 03 00 14 */	stw r0, 0x14(r3)
 /* 803193A4 002E2964  48 00 00 A0 */	b switch_80319444
-.global switch_803193A8
 switch_803193A8:
 /* 803193A8 002E2968  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 803193AC 002E296C  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 803193B0 002E2970  50 80 07 BE */	rlwimi r0, r4, 0, 0x1e, 0x1f
 /* 803193B4 002E2974  90 03 00 18 */	stw r0, 0x18(r3)
 /* 803193B8 002E2978  48 00 00 8C */	b switch_80319444
-.global switch_803193BC
 switch_803193BC:
 /* 803193BC 002E297C  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 803193C0 002E2980  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 803193C4 002E2984  50 80 17 3A */	rlwimi r0, r4, 2, 0x1c, 0x1d
 /* 803193C8 002E2988  90 03 00 18 */	stw r0, 0x18(r3)
 /* 803193CC 002E298C  48 00 00 78 */	b switch_80319444
-.global switch_803193D0
 switch_803193D0:
 /* 803193D0 002E2990  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 803193D4 002E2994  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 803193D8 002E2998  50 80 26 B6 */	rlwimi r0, r4, 4, 0x1a, 0x1b
 /* 803193DC 002E299C  90 03 00 18 */	stw r0, 0x18(r3)
 /* 803193E0 002E29A0  48 00 00 64 */	b switch_80319444
-.global switch_803193E4
 switch_803193E4:
 /* 803193E4 002E29A4  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 803193E8 002E29A8  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 803193EC 002E29AC  50 80 36 32 */	rlwimi r0, r4, 6, 0x18, 0x19
 /* 803193F0 002E29B0  90 03 00 18 */	stw r0, 0x18(r3)
 /* 803193F4 002E29B4  48 00 00 50 */	b switch_80319444
-.global switch_803193F8
 switch_803193F8:
 /* 803193F8 002E29B8  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 803193FC 002E29BC  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 80319400 002E29C0  50 80 45 AE */	rlwimi r0, r4, 8, 0x16, 0x17
 /* 80319404 002E29C4  90 03 00 18 */	stw r0, 0x18(r3)
 /* 80319408 002E29C8  48 00 00 3C */	b switch_80319444
-.global switch_8031940C
 switch_8031940C:
 /* 8031940C 002E29CC  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 80319410 002E29D0  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 80319414 002E29D4  50 80 55 2A */	rlwimi r0, r4, 0xa, 0x14, 0x15
 /* 80319418 002E29D8  90 03 00 18 */	stw r0, 0x18(r3)
 /* 8031941C 002E29DC  48 00 00 28 */	b switch_80319444
-.global switch_80319420
 switch_80319420:
 /* 80319420 002E29E0  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 80319424 002E29E4  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 80319428 002E29E8  50 80 64 A6 */	rlwimi r0, r4, 0xc, 0x12, 0x13
 /* 8031942C 002E29EC  90 03 00 18 */	stw r0, 0x18(r3)
 /* 80319430 002E29F0  48 00 00 14 */	b switch_80319444
-.global switch_80319434
 switch_80319434:
 /* 80319434 002E29F4  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 80319438 002E29F8  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8031943C 002E29FC  50 80 74 22 */	rlwimi r0, r4, 0xe, 0x10, 0x11
 /* 80319440 002E2A00  90 03 00 18 */	stw r0, 0x18(r3)
-.global switch_80319444
 switch_80319444:
 /* 80319444 002E2A04  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 80319448 002E2A08  88 04 05 24 */	lbz r0, 0x524(r4)
@@ -373,7 +350,6 @@ GXSetVtxAttrFmt:
 /* 803196E4 002E2CA4  7C 84 00 2E */	lwzx r4, r4, r0
 /* 803196E8 002E2CA8  7C 89 03 A6 */	mtctr r4
 /* 803196EC 002E2CAC  4E 80 04 20 */	bctr 
-.global switch_803196F0
 switch_803196F0:
 /* 803196F0 002E2CB0  80 08 00 1C */	lwz r0, 0x1c(r8)
 /* 803196F4 002E2CB4  50 A0 07 FE */	rlwimi r0, r5, 0, 0x1f, 0x1f
@@ -381,7 +357,6 @@ switch_803196F0:
 /* 803196FC 002E2CBC  50 E0 25 F6 */	rlwimi r0, r7, 4, 0x17, 0x1b
 /* 80319700 002E2CC0  90 08 00 1C */	stw r0, 0x1c(r8)
 /* 80319704 002E2CC4  48 00 01 2C */	b switch_80319830
-.global switch_80319708
 switch_80319708:
 /* 80319708 002E2CC8  80 08 00 1C */	lwz r0, 0x1c(r8)
 /* 8031970C 002E2CCC  2C 05 00 02 */	cmpwi r5, 2
@@ -399,21 +374,18 @@ switch_80319708:
 /* 80319738 002E2CF8  54 00 00 7E */	clrlwi r0, r0, 1
 /* 8031973C 002E2CFC  90 08 00 1C */	stw r0, 0x1c(r8)
 /* 80319740 002E2D00  48 00 00 F0 */	b switch_80319830
-.global switch_80319744
 switch_80319744:
 /* 80319744 002E2D04  80 08 00 1C */	lwz r0, 0x1c(r8)
 /* 80319748 002E2D08  50 A0 6C A4 */	rlwimi r0, r5, 0xd, 0x12, 0x12
 /* 8031974C 002E2D0C  50 C0 73 E2 */	rlwimi r0, r6, 0xe, 0xf, 0x11
 /* 80319750 002E2D10  90 08 00 1C */	stw r0, 0x1c(r8)
 /* 80319754 002E2D14  48 00 00 DC */	b switch_80319830
-.global switch_80319758
 switch_80319758:
 /* 80319758 002E2D18  80 08 00 1C */	lwz r0, 0x1c(r8)
 /* 8031975C 002E2D1C  50 A0 8B 9C */	rlwimi r0, r5, 0x11, 0xe, 0xe
 /* 80319760 002E2D20  50 C0 92 DA */	rlwimi r0, r6, 0x12, 0xb, 0xd
 /* 80319764 002E2D24  90 08 00 1C */	stw r0, 0x1c(r8)
 /* 80319768 002E2D28  48 00 00 C8 */	b switch_80319830
-.global switch_8031976C
 switch_8031976C:
 /* 8031976C 002E2D2C  80 08 00 1C */	lwz r0, 0x1c(r8)
 /* 80319770 002E2D30  50 A0 AA 94 */	rlwimi r0, r5, 0x15, 0xa, 0xa
@@ -421,7 +393,6 @@ switch_8031976C:
 /* 80319778 002E2D38  50 E0 C8 8C */	rlwimi r0, r7, 0x19, 2, 6
 /* 8031977C 002E2D3C  90 08 00 1C */	stw r0, 0x1c(r8)
 /* 80319780 002E2D40  48 00 00 B0 */	b switch_80319830
-.global switch_80319784
 switch_80319784:
 /* 80319784 002E2D44  80 08 00 3C */	lwz r0, 0x3c(r8)
 /* 80319788 002E2D48  50 A0 07 FE */	rlwimi r0, r5, 0, 0x1f, 0x1f
@@ -429,7 +400,6 @@ switch_80319784:
 /* 80319790 002E2D50  50 E0 25 F6 */	rlwimi r0, r7, 4, 0x17, 0x1b
 /* 80319794 002E2D54  90 08 00 3C */	stw r0, 0x3c(r8)
 /* 80319798 002E2D58  48 00 00 98 */	b switch_80319830
-.global switch_8031979C
 switch_8031979C:
 /* 8031979C 002E2D5C  80 08 00 3C */	lwz r0, 0x3c(r8)
 /* 803197A0 002E2D60  50 A0 4D AC */	rlwimi r0, r5, 9, 0x16, 0x16
@@ -437,7 +407,6 @@ switch_8031979C:
 /* 803197A8 002E2D68  50 E0 6B A4 */	rlwimi r0, r7, 0xd, 0xe, 0x12
 /* 803197AC 002E2D6C  90 08 00 3C */	stw r0, 0x3c(r8)
 /* 803197B0 002E2D70  48 00 00 80 */	b switch_80319830
-.global switch_803197B4
 switch_803197B4:
 /* 803197B4 002E2D74  80 08 00 3C */	lwz r0, 0x3c(r8)
 /* 803197B8 002E2D78  50 A0 93 5A */	rlwimi r0, r5, 0x12, 0xd, 0xd
@@ -445,7 +414,6 @@ switch_803197B4:
 /* 803197C0 002E2D80  50 E0 B1 52 */	rlwimi r0, r7, 0x16, 5, 9
 /* 803197C4 002E2D84  90 08 00 3C */	stw r0, 0x3c(r8)
 /* 803197C8 002E2D88  48 00 00 68 */	b switch_80319830
-.global switch_803197CC
 switch_803197CC:
 /* 803197CC 002E2D8C  80 08 00 3C */	lwz r0, 0x3c(r8)
 /* 803197D0 002E2D90  50 A0 D9 08 */	rlwimi r0, r5, 0x1b, 4, 4
@@ -455,7 +423,6 @@ switch_803197CC:
 /* 803197E0 002E2DA0  50 E0 06 FE */	rlwimi r0, r7, 0, 0x1b, 0x1f
 /* 803197E4 002E2DA4  90 08 00 5C */	stw r0, 0x5c(r8)
 /* 803197E8 002E2DA8  48 00 00 48 */	b switch_80319830
-.global switch_803197EC
 switch_803197EC:
 /* 803197EC 002E2DAC  80 08 00 5C */	lwz r0, 0x5c(r8)
 /* 803197F0 002E2DB0  50 A0 2E B4 */	rlwimi r0, r5, 5, 0x1a, 0x1a
@@ -463,7 +430,6 @@ switch_803197EC:
 /* 803197F8 002E2DB8  50 E0 4C AC */	rlwimi r0, r7, 9, 0x12, 0x16
 /* 803197FC 002E2DBC  90 08 00 5C */	stw r0, 0x5c(r8)
 /* 80319800 002E2DC0  48 00 00 30 */	b switch_80319830
-.global switch_80319804
 switch_80319804:
 /* 80319804 002E2DC4  80 08 00 5C */	lwz r0, 0x5c(r8)
 /* 80319808 002E2DC8  50 A0 74 62 */	rlwimi r0, r5, 0xe, 0x11, 0x11
@@ -471,14 +437,12 @@ switch_80319804:
 /* 80319810 002E2DD0  50 E0 92 5A */	rlwimi r0, r7, 0x12, 9, 0xd
 /* 80319814 002E2DD4  90 08 00 5C */	stw r0, 0x5c(r8)
 /* 80319818 002E2DD8  48 00 00 18 */	b switch_80319830
-.global switch_8031981C
 switch_8031981C:
 /* 8031981C 002E2DDC  80 08 00 5C */	lwz r0, 0x5c(r8)
 /* 80319820 002E2DE0  50 A0 BA 10 */	rlwimi r0, r5, 0x17, 8, 8
 /* 80319824 002E2DE4  50 C0 C1 4E */	rlwimi r0, r6, 0x18, 5, 7
 /* 80319828 002E2DE8  50 E0 D8 08 */	rlwimi r0, r7, 0x1b, 0, 4
 /* 8031982C 002E2DEC  90 08 00 5C */	stw r0, 0x5c(r8)
-.global switch_80319830
 switch_80319830:
 /* 80319830 002E2DF0  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
 /* 80319834 002E2DF4  54 60 06 3E */	clrlwi r0, r3, 0x18
@@ -515,7 +479,6 @@ GXSetVtxAttrFmtv:
 /* 8031989C 002E2E5C  7C C6 00 2E */	lwzx r6, r6, r0
 /* 803198A0 002E2E60  7C C9 03 A6 */	mtctr r6
 /* 803198A4 002E2E64  4E 80 04 20 */	bctr 
-.global switch_803198A8
 switch_803198A8:
 /* 803198A8 002E2E68  80 08 00 1C */	lwz r0, 0x1c(r8)
 /* 803198AC 002E2E6C  51 20 07 FE */	rlwimi r0, r9, 0, 0x1f, 0x1f
@@ -523,7 +486,6 @@ switch_803198A8:
 /* 803198B4 002E2E74  50 E0 25 F6 */	rlwimi r0, r7, 4, 0x17, 0x1b
 /* 803198B8 002E2E78  90 08 00 1C */	stw r0, 0x1c(r8)
 /* 803198BC 002E2E7C  48 00 01 2C */	b switch_803199E8
-.global switch_803198C0
 switch_803198C0:
 /* 803198C0 002E2E80  80 08 00 1C */	lwz r0, 0x1c(r8)
 /* 803198C4 002E2E84  2C 09 00 02 */	cmpwi r9, 2
@@ -541,21 +503,18 @@ switch_803198C0:
 /* 803198F0 002E2EB0  54 00 00 7E */	clrlwi r0, r0, 1
 /* 803198F4 002E2EB4  90 08 00 1C */	stw r0, 0x1c(r8)
 /* 803198F8 002E2EB8  48 00 00 F0 */	b switch_803199E8
-.global switch_803198FC
 switch_803198FC:
 /* 803198FC 002E2EBC  80 08 00 1C */	lwz r0, 0x1c(r8)
 /* 80319900 002E2EC0  51 20 6C A4 */	rlwimi r0, r9, 0xd, 0x12, 0x12
 /* 80319904 002E2EC4  51 40 73 E2 */	rlwimi r0, r10, 0xe, 0xf, 0x11
 /* 80319908 002E2EC8  90 08 00 1C */	stw r0, 0x1c(r8)
 /* 8031990C 002E2ECC  48 00 00 DC */	b switch_803199E8
-.global switch_80319910
 switch_80319910:
 /* 80319910 002E2ED0  80 08 00 1C */	lwz r0, 0x1c(r8)
 /* 80319914 002E2ED4  51 20 8B 9C */	rlwimi r0, r9, 0x11, 0xe, 0xe
 /* 80319918 002E2ED8  51 40 92 DA */	rlwimi r0, r10, 0x12, 0xb, 0xd
 /* 8031991C 002E2EDC  90 08 00 1C */	stw r0, 0x1c(r8)
 /* 80319920 002E2EE0  48 00 00 C8 */	b switch_803199E8
-.global switch_80319924
 switch_80319924:
 /* 80319924 002E2EE4  80 08 00 1C */	lwz r0, 0x1c(r8)
 /* 80319928 002E2EE8  51 20 AA 94 */	rlwimi r0, r9, 0x15, 0xa, 0xa
@@ -563,7 +522,6 @@ switch_80319924:
 /* 80319930 002E2EF0  50 E0 C8 8C */	rlwimi r0, r7, 0x19, 2, 6
 /* 80319934 002E2EF4  90 08 00 1C */	stw r0, 0x1c(r8)
 /* 80319938 002E2EF8  48 00 00 B0 */	b switch_803199E8
-.global switch_8031993C
 switch_8031993C:
 /* 8031993C 002E2EFC  80 08 00 3C */	lwz r0, 0x3c(r8)
 /* 80319940 002E2F00  51 20 07 FE */	rlwimi r0, r9, 0, 0x1f, 0x1f
@@ -571,7 +529,6 @@ switch_8031993C:
 /* 80319948 002E2F08  50 E0 25 F6 */	rlwimi r0, r7, 4, 0x17, 0x1b
 /* 8031994C 002E2F0C  90 08 00 3C */	stw r0, 0x3c(r8)
 /* 80319950 002E2F10  48 00 00 98 */	b switch_803199E8
-.global switch_80319954
 switch_80319954:
 /* 80319954 002E2F14  80 08 00 3C */	lwz r0, 0x3c(r8)
 /* 80319958 002E2F18  51 20 4D AC */	rlwimi r0, r9, 9, 0x16, 0x16
@@ -579,7 +536,6 @@ switch_80319954:
 /* 80319960 002E2F20  50 E0 6B A4 */	rlwimi r0, r7, 0xd, 0xe, 0x12
 /* 80319964 002E2F24  90 08 00 3C */	stw r0, 0x3c(r8)
 /* 80319968 002E2F28  48 00 00 80 */	b switch_803199E8
-.global switch_8031996C
 switch_8031996C:
 /* 8031996C 002E2F2C  80 08 00 3C */	lwz r0, 0x3c(r8)
 /* 80319970 002E2F30  51 20 93 5A */	rlwimi r0, r9, 0x12, 0xd, 0xd
@@ -587,7 +543,6 @@ switch_8031996C:
 /* 80319978 002E2F38  50 E0 B1 52 */	rlwimi r0, r7, 0x16, 5, 9
 /* 8031997C 002E2F3C  90 08 00 3C */	stw r0, 0x3c(r8)
 /* 80319980 002E2F40  48 00 00 68 */	b switch_803199E8
-.global switch_80319984
 switch_80319984:
 /* 80319984 002E2F44  80 08 00 3C */	lwz r0, 0x3c(r8)
 /* 80319988 002E2F48  51 20 D9 08 */	rlwimi r0, r9, 0x1b, 4, 4
@@ -597,7 +552,6 @@ switch_80319984:
 /* 80319998 002E2F58  50 E0 06 FE */	rlwimi r0, r7, 0, 0x1b, 0x1f
 /* 8031999C 002E2F5C  90 08 00 5C */	stw r0, 0x5c(r8)
 /* 803199A0 002E2F60  48 00 00 48 */	b switch_803199E8
-.global switch_803199A4
 switch_803199A4:
 /* 803199A4 002E2F64  80 08 00 5C */	lwz r0, 0x5c(r8)
 /* 803199A8 002E2F68  51 20 2E B4 */	rlwimi r0, r9, 5, 0x1a, 0x1a
@@ -605,7 +559,6 @@ switch_803199A4:
 /* 803199B0 002E2F70  50 E0 4C AC */	rlwimi r0, r7, 9, 0x12, 0x16
 /* 803199B4 002E2F74  90 08 00 5C */	stw r0, 0x5c(r8)
 /* 803199B8 002E2F78  48 00 00 30 */	b switch_803199E8
-.global switch_803199BC
 switch_803199BC:
 /* 803199BC 002E2F7C  80 08 00 5C */	lwz r0, 0x5c(r8)
 /* 803199C0 002E2F80  51 20 74 62 */	rlwimi r0, r9, 0xe, 0x11, 0x11
@@ -613,14 +566,12 @@ switch_803199BC:
 /* 803199C8 002E2F88  50 E0 92 5A */	rlwimi r0, r7, 0x12, 9, 0xd
 /* 803199CC 002E2F8C  90 08 00 5C */	stw r0, 0x5c(r8)
 /* 803199D0 002E2F90  48 00 00 18 */	b switch_803199E8
-.global switch_803199D4
 switch_803199D4:
 /* 803199D4 002E2F94  80 08 00 5C */	lwz r0, 0x5c(r8)
 /* 803199D8 002E2F98  51 20 BA 10 */	rlwimi r0, r9, 0x17, 8, 8
 /* 803199DC 002E2F9C  51 40 C1 4E */	rlwimi r0, r10, 0x18, 5, 7
 /* 803199E0 002E2FA0  50 E0 D8 08 */	rlwimi r0, r7, 0x1b, 0, 4
 /* 803199E4 002E2FA4  90 08 00 5C */	stw r0, 0x5c(r8)
-.global switch_803199E8
 switch_803199E8:
 /* 803199E8 002E2FA8  38 84 00 10 */	addi r4, r4, 0x10
 .L_803199EC:
@@ -721,66 +672,51 @@ GXSetTexCoordGen2:
 /* 80319B20 002E30E0  7D 29 00 2E */	lwzx r9, r9, r0
 /* 80319B24 002E30E4  7D 29 03 A6 */	mtctr r9
 /* 80319B28 002E30E8  4E 80 04 20 */	bctr 
-.global switch_80319B2C
 switch_80319B2C:
 /* 80319B2C 002E30EC  39 60 00 00 */	li r11, 0
 /* 80319B30 002E30F0  39 80 00 01 */	li r12, 1
 /* 80319B34 002E30F4  48 00 00 74 */	b switch_80319BA8
-.global switch_80319B38
 switch_80319B38:
 /* 80319B38 002E30F8  39 60 00 01 */	li r11, 1
 /* 80319B3C 002E30FC  39 80 00 01 */	li r12, 1
 /* 80319B40 002E3100  48 00 00 68 */	b switch_80319BA8
-.global switch_80319B44
 switch_80319B44:
 /* 80319B44 002E3104  39 60 00 03 */	li r11, 3
 /* 80319B48 002E3108  39 80 00 01 */	li r12, 1
 /* 80319B4C 002E310C  48 00 00 5C */	b switch_80319BA8
-.global switch_80319B50
 switch_80319B50:
 /* 80319B50 002E3110  39 60 00 04 */	li r11, 4
 /* 80319B54 002E3114  39 80 00 01 */	li r12, 1
 /* 80319B58 002E3118  48 00 00 50 */	b switch_80319BA8
-.global switch_80319B5C
 switch_80319B5C:
 /* 80319B5C 002E311C  39 60 00 02 */	li r11, 2
 /* 80319B60 002E3120  48 00 00 48 */	b switch_80319BA8
-.global switch_80319B64
 switch_80319B64:
 /* 80319B64 002E3124  39 60 00 02 */	li r11, 2
 /* 80319B68 002E3128  48 00 00 40 */	b switch_80319BA8
-.global switch_80319B6C
 switch_80319B6C:
 /* 80319B6C 002E312C  39 60 00 05 */	li r11, 5
 /* 80319B70 002E3130  48 00 00 38 */	b switch_80319BA8
-.global switch_80319B74
 switch_80319B74:
 /* 80319B74 002E3134  39 60 00 06 */	li r11, 6
 /* 80319B78 002E3138  48 00 00 30 */	b switch_80319BA8
-.global switch_80319B7C
 switch_80319B7C:
 /* 80319B7C 002E313C  39 60 00 07 */	li r11, 7
 /* 80319B80 002E3140  48 00 00 28 */	b switch_80319BA8
-.global switch_80319B84
 switch_80319B84:
 /* 80319B84 002E3144  39 60 00 08 */	li r11, 8
 /* 80319B88 002E3148  48 00 00 20 */	b switch_80319BA8
-.global switch_80319B8C
 switch_80319B8C:
 /* 80319B8C 002E314C  39 60 00 09 */	li r11, 9
 /* 80319B90 002E3150  48 00 00 18 */	b switch_80319BA8
-.global switch_80319B94
 switch_80319B94:
 /* 80319B94 002E3154  39 60 00 0A */	li r11, 0xa
 /* 80319B98 002E3158  48 00 00 10 */	b switch_80319BA8
-.global switch_80319B9C
 switch_80319B9C:
 /* 80319B9C 002E315C  39 60 00 0B */	li r11, 0xb
 /* 80319BA0 002E3160  48 00 00 08 */	b switch_80319BA8
-.global switch_80319BA4
 switch_80319BA4:
 /* 80319BA4 002E3164  39 60 00 0C */	li r11, 0xc
-.global switch_80319BA8
 switch_80319BA8:
 /* 80319BA8 002E3168  39 24 FF FE */	addi r9, r4, -2
 /* 80319BAC 002E316C  28 09 00 07 */	cmplwi r9, 7

@@ -320,7 +320,6 @@ process_l2cap_cmd:
 /* 802F9FBC 002C357C  3F A0 00 08 */	lis r29, 8
 /* 802F9FC0 002C3580  3F 60 80 5C */	lis r27, lbl_805C2AC0@ha
 /* 802F9FC4 002C3584  3F 40 80 55 */	lis r26, lbl_805480BC@ha
-.global switch_802F9FC8
 switch_802F9FC8:
 /* 802F9FC8 002C3588  7C 15 C0 40 */	cmplw r21, r24
 /* 802F9FCC 002C358C  7E B0 AB 78 */	mr r16, r21
@@ -355,7 +354,6 @@ switch_802F9FC8:
 /* 802FA03C 002C35FC  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802FA040 002C3600  7C 69 03 A6 */	mtctr r3
 /* 802FA044 002C3604  4E 80 04 20 */	bctr 
-.global switch_802FA048
 switch_802FA048:
 /* 802FA048 002C3608  88 10 00 05 */	lbz r0, 5(r16)
 /* 802FA04C 002C360C  88 70 00 04 */	lbz r3, 4(r16)
@@ -412,7 +410,6 @@ switch_802FA048:
 /* 802FA110 002C36D0  38 A0 00 00 */	li r5, 0
 /* 802FA114 002C36D4  4B FF D3 BD */	bl l2c_csm_execute
 /* 802FA118 002C36D8  4B FF FE B0 */	b switch_802F9FC8
-.global switch_802FA11C
 switch_802FA11C:
 /* 802FA11C 002C36DC  88 10 00 05 */	lbz r0, 5(r16)
 /* 802FA120 002C36E0  88 70 00 04 */	lbz r3, 4(r16)
@@ -469,7 +466,6 @@ switch_802FA11C:
 /* 802FA1DC 002C379C  B2 23 00 16 */	sth r17, 0x16(r3)
 /* 802FA1E0 002C37A0  4B FF D2 F1 */	bl l2c_csm_execute
 /* 802FA1E4 002C37A4  4B FF FD E4 */	b switch_802F9FC8
-.global switch_802FA1E8
 switch_802FA1E8:
 /* 802FA1E8 002C37A8  88 10 00 05 */	lbz r0, 5(r16)
 /* 802FA1EC 002C37AC  7D E3 7B 78 */	mr r3, r15
@@ -537,7 +533,6 @@ switch_802FA1E8:
 /* 802FA2D4 002C3894  38 80 00 0D */	li r4, 0xd
 /* 802FA2D8 002C3898  4B FF D1 F9 */	bl l2c_csm_execute
 /* 802FA2DC 002C389C  4B FF FC EC */	b switch_802F9FC8
-.global switch_802FA2E0
 switch_802FA2E0:
 /* 802FA2E0 002C38A0  88 10 00 07 */	lbz r0, 7(r16)
 /* 802FA2E4 002C38A4  3A 60 00 00 */	li r19, 0
@@ -722,7 +717,6 @@ switch_802FA2E0:
 /* 802FA584 002C3B44  38 E0 00 00 */	li r7, 0
 /* 802FA588 002C3B48  48 00 09 A1 */	bl l2cu_send_peer_cmd_reject
 /* 802FA58C 002C3B4C  4B FF FA 3C */	b switch_802F9FC8
-.global switch_802FA590
 switch_802FA590:
 /* 802FA590 002C3B50  88 10 00 07 */	lbz r0, 7(r16)
 /* 802FA594 002C3B54  88 70 00 06 */	lbz r3, 6(r16)
@@ -906,7 +900,6 @@ switch_802FA590:
 /* 802FA834 002C3DF4  38 97 02 5C */	addi r4, r23, 0x25c
 /* 802FA838 002C3DF8  4B FE 37 89 */	bl LogMsg_1
 /* 802FA83C 002C3DFC  4B FF F7 8C */	b switch_802F9FC8
-.global switch_802FA840
 switch_802FA840:
 /* 802FA840 002C3E00  88 90 00 05 */	lbz r4, 5(r16)
 /* 802FA844 002C3E04  7D E3 7B 78 */	mr r3, r15
@@ -938,7 +931,6 @@ switch_802FA840:
 /* 802FA8A8 002C3E68  7E 26 8B 78 */	mr r6, r17
 /* 802FA8AC 002C3E6C  48 00 12 4D */	bl l2cu_send_peer_disc_rsp
 /* 802FA8B0 002C3E70  4B FF F7 18 */	b switch_802F9FC8
-.global switch_802FA8B4
 switch_802FA8B4:
 /* 802FA8B4 002C3E74  88 90 00 05 */	lbz r4, 5(r16)
 /* 802FA8B8 002C3E78  7D E3 7B 78 */	mr r3, r15
@@ -964,7 +956,6 @@ switch_802FA8B4:
 /* 802FA908 002C3EC8  38 80 00 12 */	li r4, 0x12
 /* 802FA90C 002C3ECC  4B FF CB C5 */	bl l2c_csm_execute
 /* 802FA910 002C3ED0  4B FF F6 B8 */	b switch_802F9FC8
-.global switch_802FA914
 switch_802FA914:
 /* 802FA914 002C3ED4  A0 7E 00 7E */	lhz r3, 0x7e(r30)
 /* 802FA918 002C3ED8  38 03 FF F4 */	addi r0, r3, -12
@@ -983,7 +974,6 @@ switch_802FA914:
 /* 802FA948 002C3F08  38 C0 00 00 */	li r6, 0
 /* 802FA94C 002C3F0C  48 00 13 DD */	bl l2cu_send_peer_echo_rsp
 /* 802FA950 002C3F10  4B FF F6 78 */	b switch_802F9FC8
-.global switch_802FA954
 switch_802FA954:
 /* 802FA954 002C3F14  81 8F 00 54 */	lwz r12, 0x54(r15)
 /* 802FA958 002C3F18  2C 0C 00 00 */	cmpwi r12, 0
@@ -993,7 +983,6 @@ switch_802FA954:
 /* 802FA968 002C3F28  7D 89 03 A6 */	mtctr r12
 /* 802FA96C 002C3F2C  4E 80 04 21 */	bctrl 
 /* 802FA970 002C3F30  4B FF F6 58 */	b switch_802F9FC8
-.global switch_802FA974
 switch_802FA974:
 /* 802FA974 002C3F34  88 10 00 05 */	lbz r0, 5(r16)
 /* 802FA978 002C3F38  7D E3 7B 78 */	mr r3, r15
@@ -1004,7 +993,6 @@ switch_802FA974:
 /* 802FA98C 002C3F4C  54 05 04 3E */	clrlwi r5, r0, 0x10
 /* 802FA990 002C3F50  48 00 15 35 */	bl l2cu_send_peer_info_rsp
 /* 802FA994 002C3F54  4B FF F6 34 */	b switch_802F9FC8
-.global switch_802FA998
 switch_802FA998:
 /* 802FA998 002C3F58  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802FA99C 002C3F5C  88 03 2A C0 */	lbz r0, lbl_805C2AC0@l(r3)

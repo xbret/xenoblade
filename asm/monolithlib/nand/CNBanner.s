@@ -678,14 +678,14 @@ lbl_80021010:
 	.4byte 0x00000104
 	.4byte lbl_80021010
 
-#	.global _eti_init_info
-#_eti_init_info:
-#	# ROM: 0x4F19E0
-#	.4byte extabTable
-#	.4byte _eti_init_info
-#	.4byte __ct__CGame
-#	.4byte sz_text
-#	.4byte 0
-#	.4byte 0
-#	.4byte 0
-#	.4byte 0
+	.global _eti_init_info
+_eti_init_info:
+	# ROM: 0x4F19E0
+	.4byte extabTable
+	.4byte _eti_init_info
+	.4byte __ct__CGame
+	.4byte sz_text
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0

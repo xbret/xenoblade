@@ -2421,7 +2421,6 @@ stateCoverClosed:
 /* 8030CB3C 002D60FC  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8030CB40 002D6100  7C 69 03 A6 */	mtctr r3
 /* 8030CB44 002D6104  4E 80 04 20 */	bctr 
-.global switch_8030CB48
 switch_8030CB48:
 /* 8030CB48 002D6108  48 00 29 29 */	bl __DVDClearWaitingQueue
 /* 8030CB4C 002D610C  80 8D B6 F0 */	lwz r4, lbl_80667870@sda21(r13)
@@ -2437,11 +2436,9 @@ switch_8030CB48:
 .L_8030CB74:
 /* 8030CB74 002D6134  48 00 0A DD */	bl stateReady
 /* 8030CB78 002D6138  48 00 00 4C */	b .L_8030CBC4
-.global switch_8030CB7C
 switch_8030CB7C:
 /* 8030CB7C 002D613C  38 00 00 00 */	li r0, 0
 /* 8030CB80 002D6140  90 0D B6 D0 */	stw r0, lbl_80667850@sda21(r13)
-.global switch_8030CB84
 switch_8030CB84:
 /* 8030CB84 002D6144  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
 /* 8030CB88 002D6148  38 00 00 01 */	li r0, 1
@@ -2449,12 +2446,10 @@ switch_8030CB84:
 /* 8030CB90 002D6150  80 6D B6 F0 */	lwz r3, lbl_80667870@sda21(r13)
 /* 8030CB94 002D6154  48 00 0D DD */	bl stateBusy
 /* 8030CB98 002D6158  48 00 00 2C */	b .L_8030CBC4
-.global switch_8030CB9C
 switch_8030CB9C:
 /* 8030CB9C 002D615C  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
 /* 8030CBA0 002D6160  2C 00 00 00 */	cmpwi r0, 0
 /* 8030CBA4 002D6164  40 82 00 20 */	bne .L_8030CBC4
-.global switch_8030CBA8
 switch_8030CBA8:
 /* 8030CBA8 002D6168  38 00 00 00 */	li r0, 0
 /* 8030CBAC 002D616C  90 0D B6 D0 */	stw r0, lbl_80667850@sda21(r13)
@@ -3444,7 +3439,6 @@ stateBusy:
 /* 8030D9AC 002D6F6C  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8030D9B0 002D6F70  7C 89 03 A6 */	mtctr r4
 /* 8030D9B4 002D6F74  4E 80 04 20 */	bctr 
-.global switch_8030D9B8
 switch_8030D9B8:
 /* 8030D9B8 002D6F78  83 43 00 14 */	lwz r26, 0x14(r3)
 /* 8030D9BC 002D6F7C  83 63 00 10 */	lwz r27, 0x10(r3)
@@ -3480,7 +3474,6 @@ switch_8030D9B8:
 /* 8030DA30 002D6FF0  90 64 00 2C */	stw r3, 0x2c(r4)
 /* 8030DA34 002D6FF4  7F E3 FB 78 */	mr r3, r31
 /* 8030DA38 002D6FF8  48 04 AF B9 */	bl OSRestoreInterrupts
-.global switch_8030DA3C
 switch_8030DA3C:
 /* 8030DA3C 002D6FFC  80 1D 00 08 */	lwz r0, 8(r29)
 /* 8030DA40 002D7000  28 00 00 2A */	cmplwi r0, 0x2a
@@ -3491,7 +3484,6 @@ switch_8030DA3C:
 /* 8030DA54 002D7014  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8030DA58 002D7018  7C 69 03 A6 */	mtctr r3
 /* 8030DA5C 002D701C  4E 80 04 20 */	bctr 
-.global switch_8030DA60
 switch_8030DA60:
 /* 8030DA60 002D7020  38 60 00 00 */	li r3, 0
 /* 8030DA64 002D7024  48 00 50 CD */	bl DVDLowClearCoverInterrupt
@@ -3502,7 +3494,6 @@ switch_8030DA60:
 /* 8030DA78 002D7038  80 7D 00 18 */	lwz r3, 0x18(r29)
 /* 8030DA7C 002D703C  48 00 2F C5 */	bl DVDLowReadDiskID
 /* 8030DA80 002D7040  48 00 04 88 */	b .L_8030DF08
-.global switch_8030DA84
 switch_8030DA84:
 /* 8030DA84 002D7044  80 1D 00 14 */	lwz r0, 0x14(r29)
 /* 8030DA88 002D7048  2C 00 00 00 */	cmpwi r0, 0
@@ -3582,7 +3573,6 @@ switch_8030DA84:
 /* 8030DBA0 002D7160  7C A5 02 14 */	add r5, r5, r0
 /* 8030DBA4 002D7164  48 00 47 AD */	bl DVDLowRead
 /* 8030DBA8 002D7168  48 00 03 60 */	b .L_8030DF08
-.global switch_8030DBAC
 switch_8030DBAC:
 /* 8030DBAC 002D716C  38 60 00 00 */	li r3, 0
 /* 8030DBB0 002D7170  48 00 4F 81 */	bl DVDLowClearCoverInterrupt
@@ -3591,7 +3581,6 @@ switch_8030DBAC:
 /* 8030DBBC 002D717C  38 84 DF 20 */	addi r4, r4, cbForStateBusy@l
 /* 8030DBC0 002D7180  48 00 49 41 */	bl DVDLowSeek
 /* 8030DBC4 002D7184  48 00 03 44 */	b .L_8030DF08
-.global switch_8030DBC8
 switch_8030DBC8:
 /* 8030DBC8 002D7188  3C A0 80 31 */	lis r5, cbForStateBusy@ha
 /* 8030DBCC 002D718C  38 60 00 00 */	li r3, 0
@@ -3599,7 +3588,6 @@ switch_8030DBC8:
 /* 8030DBD4 002D7194  38 80 00 00 */	li r4, 0
 /* 8030DBD8 002D7198  48 00 3C 99 */	bl DVDLowStopMotor
 /* 8030DBDC 002D719C  48 00 03 2C */	b .L_8030DF08
-.global switch_8030DBE0
 switch_8030DBE0:
 /* 8030DBE0 002D71A0  3C A0 80 31 */	lis r5, cbForStateBusy@ha
 /* 8030DBE4 002D71A4  38 60 00 00 */	li r3, 0
@@ -3607,7 +3595,6 @@ switch_8030DBE0:
 /* 8030DBEC 002D71AC  38 80 00 00 */	li r4, 0
 /* 8030DBF0 002D71B0  48 00 3C 81 */	bl DVDLowStopMotor
 /* 8030DBF4 002D71B4  48 00 03 14 */	b .L_8030DF08
-.global switch_8030DBF8
 switch_8030DBF8:
 /* 8030DBF8 002D71B8  38 60 00 00 */	li r3, 0
 /* 8030DBFC 002D71BC  48 00 4F 35 */	bl DVDLowClearCoverInterrupt
@@ -3617,7 +3604,6 @@ switch_8030DBF8:
 /* 8030DC0C 002D71CC  38 A5 DF 20 */	addi r5, r5, cbForStateBusy@l
 /* 8030DC10 002D71D0  48 00 42 71 */	bl DVDLowAudioBufferConfig
 /* 8030DC14 002D71D4  48 00 02 F4 */	b .L_8030DF08
-.global switch_8030DC18
 switch_8030DC18:
 /* 8030DC18 002D71D8  38 60 00 00 */	li r3, 0
 /* 8030DC1C 002D71DC  48 00 4F 15 */	bl DVDLowClearCoverInterrupt
@@ -3628,7 +3614,6 @@ switch_8030DC18:
 /* 8030DC30 002D71F0  80 7D 00 18 */	lwz r3, 0x18(r29)
 /* 8030DC34 002D71F4  48 00 3D DD */	bl DVDLowInquiry
 /* 8030DC38 002D71F8  48 00 02 D0 */	b .L_8030DF08
-.global switch_8030DC3C
 switch_8030DC3C:
 /* 8030DC3C 002D71FC  38 60 00 00 */	li r3, 0
 /* 8030DC40 002D7200  48 00 4E F1 */	bl DVDLowClearCoverInterrupt
@@ -3638,7 +3623,6 @@ switch_8030DC3C:
 /* 8030DC50 002D7210  38 80 00 00 */	li r4, 0
 /* 8030DC54 002D7214  48 00 3C 1D */	bl DVDLowStopMotor
 /* 8030DC58 002D7218  48 00 02 B0 */	b .L_8030DF08
-.global switch_8030DC5C
 switch_8030DC5C:
 /* 8030DC5C 002D721C  38 60 00 01 */	li r3, 1
 /* 8030DC60 002D7220  48 00 40 91 */	bl DVDLowSetSpinupFlag
@@ -3646,7 +3630,6 @@ switch_8030DC5C:
 /* 8030DC68 002D7228  38 63 DF 20 */	addi r3, r3, cbForStateBusy@l
 /* 8030DC6C 002D722C  48 00 40 95 */	bl DVDLowReset
 /* 8030DC70 002D7230  48 00 02 98 */	b .L_8030DF08
-.global switch_8030DC74
 switch_8030DC74:
 /* 8030DC74 002D7234  80 1D 00 14 */	lwz r0, 0x14(r29)
 /* 8030DC78 002D7238  2C 00 00 00 */	cmpwi r0, 0
@@ -3726,7 +3709,6 @@ switch_8030DC74:
 /* 8030DD90 002D7350  7C A5 02 14 */	add r5, r5, r0
 /* 8030DD94 002D7354  48 00 39 3D */	bl DVDLowUnencryptedRead
 /* 8030DD98 002D7358  48 00 01 70 */	b .L_8030DF08
-.global switch_8030DD9C
 switch_8030DD9C:
 /* 8030DD9C 002D735C  38 60 00 00 */	li r3, 0
 /* 8030DDA0 002D7360  48 00 4D 91 */	bl DVDLowClearCoverInterrupt
@@ -3739,7 +3721,6 @@ switch_8030DD9C:
 /* 8030DDBC 002D737C  38 C0 00 00 */	li r6, 0
 /* 8030DDC0 002D7380  48 00 2E 11 */	bl DVDLowOpenPartition
 /* 8030DDC4 002D7384  48 00 01 44 */	b .L_8030DF08
-.global switch_8030DDC8
 switch_8030DDC8:
 /* 8030DDC8 002D7388  38 60 00 00 */	li r3, 0
 /* 8030DDCC 002D738C  48 00 4D 65 */	bl DVDLowClearCoverInterrupt
@@ -3747,19 +3728,16 @@ switch_8030DDC8:
 /* 8030DDD4 002D7394  38 63 DF 20 */	addi r3, r3, cbForStateBusy@l
 /* 8030DDD8 002D7398  48 00 37 89 */	bl DVDLowClosePartition
 /* 8030DDDC 002D739C  48 00 01 2C */	b .L_8030DF08
-.global switch_8030DDE0
 switch_8030DDE0:
 /* 8030DDE0 002D73A0  3C 60 80 31 */	lis r3, cbForStateBusy@ha
 /* 8030DDE4 002D73A4  38 63 DF 20 */	addi r3, r3, cbForStateBusy@l
 /* 8030DDE8 002D73A8  48 00 48 C9 */	bl DVDLowPrepareCoverRegister
 /* 8030DDEC 002D73AC  48 00 01 1C */	b .L_8030DF08
-.global switch_8030DDF0
 switch_8030DDF0:
 /* 8030DDF0 002D73B0  3C 60 80 31 */	lis r3, cbForStateBusy@ha
 /* 8030DDF4 002D73B4  38 63 DF 20 */	addi r3, r3, cbForStateBusy@l
 /* 8030DDF8 002D73B8  48 00 48 B9 */	bl DVDLowPrepareCoverRegister
 /* 8030DDFC 002D73BC  48 00 01 0C */	b .L_8030DF08
-.global switch_8030DE00
 switch_8030DE00:
 /* 8030DE00 002D73C0  38 60 00 00 */	li r3, 0
 /* 8030DE04 002D73C4  48 00 4D 2D */	bl DVDLowClearCoverInterrupt
@@ -3768,7 +3746,6 @@ switch_8030DE00:
 /* 8030DE10 002D73D0  38 84 DF 20 */	addi r4, r4, cbForStateBusy@l
 /* 8030DE14 002D73D4  48 00 43 AD */	bl DVDLowSetMaximumRotation
 /* 8030DE18 002D73D8  48 00 00 F0 */	b .L_8030DF08
-.global switch_8030DE1C
 switch_8030DE1C:
 /* 8030DE1C 002D73DC  38 60 00 00 */	li r3, 0
 /* 8030DE20 002D73E0  48 00 4D 11 */	bl DVDLowClearCoverInterrupt
@@ -3781,7 +3758,6 @@ switch_8030DE1C:
 /* 8030DE3C 002D73FC  90 1D 00 1C */	stw r0, 0x1c(r29)
 /* 8030DE40 002D7400  48 00 2C 01 */	bl DVDLowReadDiskID
 /* 8030DE44 002D7404  48 00 00 C4 */	b .L_8030DF08
-.global switch_8030DE48
 switch_8030DE48:
 /* 8030DE48 002D7408  38 60 00 00 */	li r3, 0
 /* 8030DE4C 002D740C  48 00 4C E5 */	bl DVDLowClearCoverInterrupt
@@ -3813,7 +3789,6 @@ switch_8030DE48:
 /* 8030DEB0 002D7470  39 4A 5E 00 */	addi r10, r10, 0x5e00
 /* 8030DEB4 002D7474  48 00 34 0D */	bl DVDLowGetNoDiscOpenPartitionParams
 /* 8030DEB8 002D7478  48 00 00 50 */	b .L_8030DF08
-.global switch_8030DEBC
 switch_8030DEBC:
 /* 8030DEBC 002D747C  38 60 00 00 */	li r3, 0
 /* 8030DEC0 002D7480  48 00 4C 71 */	bl DVDLowClearCoverInterrupt
@@ -3828,7 +3803,6 @@ switch_8030DEBC:
 /* 8030DEE4 002D74A4  39 08 4D E0 */	addi r8, r8, 0x4de0
 /* 8030DEE8 002D74A8  48 00 2F 59 */	bl DVDLowOpenPartitionWithTmdAndTicketView
 /* 8030DEEC 002D74AC  48 00 00 1C */	b .L_8030DF08
-.global switch_8030DEF0
 switch_8030DEF0:
 /* 8030DEF0 002D74B0  81 8D 98 08 */	lwz r12, lbl_80665988@sda21(r13)
 /* 8030DEF4 002D74B4  3C 80 80 31 */	lis r4, cbForStateBusy@ha
@@ -4851,7 +4825,6 @@ DVDCancelAsync:
 /* 8030ECE4 002D82A4  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8030ECE8 002D82A8  7C 89 03 A6 */	mtctr r4
 /* 8030ECEC 002D82AC  4E 80 04 20 */	bctr 
-.global switch_8030ECF0
 switch_8030ECF0:
 /* 8030ECF0 002D82B0  2C 1E 00 00 */	cmpwi r30, 0
 /* 8030ECF4 002D82B4  41 82 02 E8 */	beq switch_8030EFDC
@@ -4861,7 +4834,6 @@ switch_8030ECF0:
 /* 8030ED04 002D82C4  7D 89 03 A6 */	mtctr r12
 /* 8030ED08 002D82C8  4E 80 04 21 */	bctrl 
 /* 8030ED0C 002D82CC  48 00 02 D0 */	b switch_8030EFDC
-.global switch_8030ED10
 switch_8030ED10:
 /* 8030ED10 002D82D0  80 0D B6 70 */	lwz r0, lbl_806677F0@sda21(r13)
 /* 8030ED14 002D82D4  2C 00 00 00 */	cmpwi r0, 0
@@ -4890,7 +4862,6 @@ switch_8030ED10:
 /* 8030ED68 002D8328  38 00 00 01 */	li r0, 1
 /* 8030ED6C 002D832C  90 0D B6 80 */	stw r0, lbl_80667800@sda21(r13)
 /* 8030ED70 002D8330  48 00 02 6C */	b switch_8030EFDC
-.global switch_8030ED74
 switch_8030ED74:
 /* 8030ED74 002D8334  7F A3 EB 78 */	mr r3, r29
 /* 8030ED78 002D8338  48 00 09 19 */	bl __DVDDequeueWaitingQueue
@@ -4912,7 +4883,6 @@ switch_8030ED74:
 /* 8030EDB4 002D8374  7D 89 03 A6 */	mtctr r12
 /* 8030EDB8 002D8378  4E 80 04 21 */	bctrl 
 /* 8030EDBC 002D837C  48 00 02 20 */	b switch_8030EFDC
-.global switch_8030EDC0
 switch_8030EDC0:
 /* 8030EDC0 002D8380  80 1D 00 08 */	lwz r0, 8(r29)
 /* 8030EDC4 002D8384  28 00 00 2A */	cmplwi r0, 0x2a
@@ -4923,7 +4893,6 @@ switch_8030EDC0:
 /* 8030EDD8 002D8398  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8030EDDC 002D839C  7C 69 03 A6 */	mtctr r3
 /* 8030EDE0 002D83A0  4E 80 04 20 */	bctr 
-.global switch_8030EDE4
 switch_8030EDE4:
 /* 8030EDE4 002D83A4  2C 1E 00 00 */	cmpwi r30, 0
 /* 8030EDE8 002D83A8  41 82 01 F4 */	beq switch_8030EFDC
@@ -4933,7 +4902,6 @@ switch_8030EDE4:
 /* 8030EDF8 002D83B8  7D 89 03 A6 */	mtctr r12
 /* 8030EDFC 002D83BC  4E 80 04 21 */	bctrl 
 /* 8030EE00 002D83C0  48 00 01 DC */	b switch_8030EFDC
-.global switch_8030EE04
 switch_8030EE04:
 /* 8030EE04 002D83C4  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
 /* 8030EE08 002D83C8  2C 00 00 00 */	cmpwi r0, 0
@@ -4961,7 +4929,6 @@ switch_8030EE04:
 .L_8030EE5C:
 /* 8030EE5C 002D841C  4B FF E7 F5 */	bl stateReady
 /* 8030EE60 002D8420  48 00 01 7C */	b switch_8030EFDC
-.global switch_8030EE64
 switch_8030EE64:
 /* 8030EE64 002D8424  80 0D B6 70 */	lwz r0, lbl_806677F0@sda21(r13)
 /* 8030EE68 002D8428  2C 00 00 00 */	cmpwi r0, 0
@@ -4975,7 +4942,6 @@ switch_8030EE64:
 /* 8030EE84 002D8444  90 0D B6 70 */	stw r0, lbl_806677F0@sda21(r13)
 /* 8030EE88 002D8448  93 CD B6 E0 */	stw r30, lbl_80667860@sda21(r13)
 /* 8030EE8C 002D844C  48 00 01 50 */	b switch_8030EFDC
-.global switch_8030EE90
 switch_8030EE90:
 /* 8030EE90 002D8450  80 0D B6 88 */	lwz r0, lbl_80667808@sda21(r13)
 /* 8030EE94 002D8454  2C 00 00 00 */	cmpwi r0, 0
@@ -5049,7 +5015,6 @@ switch_8030EE90:
 .L_8030EF84:
 /* 8030EF84 002D8544  4B FF E6 CD */	bl stateReady
 /* 8030EF88 002D8548  48 00 00 54 */	b switch_8030EFDC
-.global switch_8030EF8C
 switch_8030EF8C:
 /* 8030EF8C 002D854C  3C 60 80 5D */	lis r3, lbl_805CC820@ha
 /* 8030EF90 002D8550  38 00 00 0A */	li r0, 0xa
@@ -5073,7 +5038,6 @@ switch_8030EF8C:
 /* 8030EFD4 002D8594  4E 80 04 21 */	bctrl 
 .L_8030EFD8:
 /* 8030EFD8 002D8598  4B FF E6 79 */	bl stateReady
-.global switch_8030EFDC
 switch_8030EFDC:
 /* 8030EFDC 002D859C  7F E3 FB 78 */	mr r3, r31
 /* 8030EFE0 002D85A0  48 04 9A 11 */	bl OSRestoreInterrupts
@@ -5127,12 +5091,10 @@ DVDCancel:
 /* 8030F090 002D8650  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8030F094 002D8654  7C 69 03 A6 */	mtctr r3
 /* 8030F098 002D8658  4E 80 04 20 */	bctr 
-.global switch_8030F09C
 switch_8030F09C:
 /* 8030F09C 002D865C  38 6D B6 30 */	addi r3, r13, lbl_806677B0@sda21
 /* 8030F0A0 002D8660  48 04 D5 D1 */	bl OSSleepThread
 /* 8030F0A4 002D8664  4B FF FF B0 */	b .L_8030F054
-.global switch_8030F0A8
 switch_8030F0A8:
 /* 8030F0A8 002D8668  7F C3 F3 78 */	mr r3, r30
 /* 8030F0AC 002D866C  48 04 99 45 */	bl OSRestoreInterrupts
