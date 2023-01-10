@@ -898,7 +898,6 @@ CalcWorldMtx_Maya_SSC_Apply__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34PQ34nw4r4
 
 .global lbl_80520FD8
 lbl_80520FD8:
-	# ROM: 0x51D0D8
 	.4byte MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -910,7 +909,6 @@ lbl_80520FD8:
 
 .global lbl_80520FF4
 lbl_80520FF4:
-	# ROM: 0x51D0F4
 	.4byte ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -924,30 +922,25 @@ lbl_80520FF4:
 
 .global float_8066C498
 float_8066C498:
-	# ROM: 0x5762F8
-	.4byte 0
+	.float 0
 
 
 .global float_8066C49C
 float_8066C49C:
-	# ROM: 0x5762FC
 	.float 1.0
 
 
 .global float_8066C4A0
 float_8066C4A0:
-	# ROM: 0x576300
-	.4byte 0x3F360B61
+	.float 0.7111111 #0x3F360B61
 
 
 .global float_8066C4A4
 float_8066C4A4:
-	# ROM: 0x576304
 	.float 0.5
 
 
 .global float_8066C4A8
 float_8066C4A8:
-	# ROM: 0x576308
 	.4byte 0xBF000000
 	.4byte 0

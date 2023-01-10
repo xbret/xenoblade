@@ -1703,33 +1703,28 @@ __RTTI___reslist_base_const_CDeviceFontLayer_LAYER_QUE:
 
 .global float_8066CBC8
 float_8066CBC8:
-	# ROM: 0x576A28
 	.float 1.0
 
 
 .global float_8066CBCC
 float_8066CBCC:
-	# ROM: 0x576A2C
-	.4byte 0
+	.float 0
 
 
 .global float_8066CBD0
 float_8066CBD0:
-	# ROM: 0x576A30
 	.float -1.0
 	.4byte 0
 
 
 .global double_8066CBD8
 double_8066CBD8:
-	# ROM: 0x576A38
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_8066CBE0
 double_8066CBE0:
-	# ROM: 0x576A40
 	.4byte 0x43300000
 	.4byte 0
 

@@ -1932,41 +1932,35 @@ __RTTI__CMenuFade:
 
 .global float_80669920
 float_80669920:
-	# ROM: 0x573780
-	.4byte 0
+	.float 0
 
 
 .global float_80669924
 float_80669924:
-	# ROM: 0x573784
 	.float 1.0
 
 
 .global float_80669928
 float_80669928:
-	# ROM: 0x573788
-	.4byte 0x41C80000
+	.float 25 #0x41C80000
 	.4byte 0
 
 
 .global double_80669930
 double_80669930:
-	# ROM: 0x573790
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_80669938
 double_80669938:
-	# ROM: 0x573798
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80669940
 float_80669940:
-	# ROM: 0x5737A0
-	.4byte 0
+	.float 0
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

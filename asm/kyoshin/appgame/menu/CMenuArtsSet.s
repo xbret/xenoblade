@@ -4478,7 +4478,6 @@ lbl_805061FC:
 
 .global lbl_80506208
 lbl_80506208:
-	# ROM: 0x502308
 	.4byte lbl_805061A8
 	.4byte lbl_805061B4
 	.4byte lbl_805061C0
@@ -4531,7 +4530,6 @@ lbl_8050627C:
 
 .global lbl_80506288
 lbl_80506288:
-	# ROM: 0x502388
 	.4byte lbl_80506228
 	.4byte lbl_80506234
 	.4byte lbl_80506240
@@ -4549,7 +4547,6 @@ lbl_805062A8:
 
 .global lbl_805062B4
 lbl_805062B4:
-	# ROM: 0x5023B4
 	.4byte lbl_805061A8
 	.4byte lbl_805061B4
 	.4byte lbl_805061C0
@@ -4563,7 +4560,6 @@ lbl_805062B4:
 
 .global lbl_805062D8
 lbl_805062D8:
-	# ROM: 0x5023D8
 	.4byte lbl_805061A8
 	.4byte lbl_805061B4
 	.4byte lbl_805061C0
@@ -4577,7 +4573,6 @@ lbl_805062D8:
 
 .global lbl_805062FC
 lbl_805062FC:
-	# ROM: 0x5023FC
 	.4byte 0x00000B08
 	.4byte 0x14102504
 	.4byte 0x2D103F10
@@ -4612,7 +4607,6 @@ lbl_80506340:
 
 .global lbl_8050634C
 lbl_8050634C:
-	# ROM: 0x50244C
 	.4byte lbl_80506310
 	.4byte lbl_8050631C
 	.4byte lbl_80506328
@@ -4658,7 +4652,6 @@ CMenuArtsSet_hierarchy:
 
 .global lbl_8053A030
 lbl_8053A030:
-	# ROM: 0x536130
 	.4byte switch_80230BF0
 	.4byte switch_80230BF8
 	.4byte switch_80230C00
@@ -4672,7 +4665,6 @@ lbl_8053A030:
 
 .global lbl_8053A054
 lbl_8053A054:
-	# ROM: 0x536154
 	.4byte switch_80230C3C
 	.4byte switch_80230B10
 	.4byte switch_80230B34
@@ -4686,7 +4678,6 @@ lbl_8053A054:
 
 .global lbl_8053A078
 lbl_8053A078:
-	# ROM: 0x536178
 	.4byte switch_8023116C
 	.4byte switch_80231174
 	.4byte switch_8023117C
@@ -4700,7 +4691,6 @@ lbl_8053A078:
 
 .global lbl_8053A09C
 lbl_8053A09C:
-	# ROM: 0x53619C
 	.4byte switch_8023120C
 	.4byte switch_8023108C
 	.4byte switch_802310B0
@@ -4721,7 +4711,6 @@ __RTTI__CMenuArtsSet:
 
 .global lbl_806651A0
 lbl_806651A0:
-	# ROM: 0x570D80
 	.4byte 0x01000000
 	.4byte 0
 
@@ -4729,94 +4718,79 @@ lbl_806651A0:
 
 .global float_8066AEF8
 float_8066AEF8:
-	# ROM: 0x574D58
-	.4byte 0
+	.float 0
 
 
 .global float_8066AEFC
 float_8066AEFC:
-	# ROM: 0x574D5C
 	.float 1.0
 
 
 .global float_8066AF00
 float_8066AF00:
-	# ROM: 0x574D60
 	.float 10.0
 	.4byte 0
 
 .global float_8066AF08
 float_8066AF08:
-	# ROM: 0x574D68
 	.float 1.0
 
 
 .global float_8066AF0C
 float_8066AF0C:
-	# ROM: 0x574D6C
-	.4byte 0
+	.float 0
 
 
 .global float_8066AF10
 float_8066AF10:
-	# ROM: 0x574D70
-	.4byte 0x3F333333
+	.float 0.7 #0x3F333333
 
 
 .global float_8066AF14
 float_8066AF14:
-	# ROM: 0x574D74
-	.4byte 0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
 
 
 .global float_8066AF18
 float_8066AF18:
-	# ROM: 0x574D78
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 
 
 .global float_8066AF1C
 float_8066AF1C:
-	# ROM: 0x574D7C
-	.4byte 0x41900000
+	.float 18 #0x41900000
 
 
 .global float_8066AF20
 float_8066AF20:
-	# ROM: 0x574D80
-	.4byte 0x42900000
+	.float 72 #0x42900000
 
 
 .global float_8066AF24
 float_8066AF24:
-	# ROM: 0x574D84
-	.4byte 0x42FC0000
+	.float 126 #0x42FC0000
 
 
 .global float_8066AF28
 float_8066AF28:
-	# ROM: 0x574D88
-	.4byte 0x43340000
+	.float 180 #0x43340000
 	.4byte 0
 
 
 .global double_8066AF30
 double_8066AF30:
-	# ROM: 0x574D90
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066AF38
 float_8066AF38:
-	# ROM: 0x574D98
-	.4byte 0x438A0000
+	.float 276 #0x438A0000
 
 
 .global float_8066AF3C
 float_8066AF3C:
-	# ROM: 0x574D9C
-	.4byte 0x41C80000
+	.float 25 #0x41C80000
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

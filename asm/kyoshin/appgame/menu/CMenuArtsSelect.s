@@ -7623,7 +7623,6 @@ func_80108C50:
 
 .global lbl_804F88F0
 lbl_804F88F0:
-	# ROM: 0x4F49F0
 	.4byte 0xFF2AFF5C
 	.4byte 0xFF8EFFC0
 	.4byte 0x00000040
@@ -7647,7 +7646,6 @@ lbl_804F88F0:
 
 .global lbl_804F893C
 lbl_804F893C:
-	# ROM: 0x4F4A3C
 	.4byte 0x00010002
 	.4byte 0x00030004
 	.4byte 0x00010000
@@ -7751,7 +7749,6 @@ lbl_804F8A00:
 
 .global lbl_8052F780
 lbl_8052F780:
-	# ROM: 0x52B880
 	.4byte switch_80103498
 	.4byte switch_801034CC
 	.4byte switch_80103568
@@ -7765,7 +7762,6 @@ lbl_8052F780:
 
 .global lbl_8052F7A4
 lbl_8052F7A4:
-	# ROM: 0x52B8A4
 	.4byte switch_8010743C
 	.4byte switch_80107444
 	.4byte switch_8010744C
@@ -7779,7 +7775,6 @@ lbl_8052F7A4:
 
 .global lbl_8052F7C8
 lbl_8052F7C8:
-	# ROM: 0x52B8C8
 	.4byte switch_80107488
 	.4byte switch_80107344
 	.4byte switch_80107368
@@ -7797,7 +7792,6 @@ lbl_8052F7C8:
 
 .global lbl_8052F7FC
 lbl_8052F7FC:
-	# ROM: 0x52B8FC
 	.4byte switch_80107738
 	.4byte switch_80107740
 	.4byte switch_80107748
@@ -7811,7 +7805,6 @@ lbl_8052F7FC:
 
 .global lbl_8052F820
 lbl_8052F820:
-	# ROM: 0x52B920
 	.4byte switch_80107784
 	.4byte switch_80107640
 	.4byte switch_80107664
@@ -7924,7 +7917,6 @@ __RTTI__CTTask_IUIBattle:
 
 .global lbl_80664700
 lbl_80664700:
-	# ROM: 0x5702E0
 	.4byte 0
 	.4byte 0
 
@@ -7932,88 +7924,74 @@ lbl_80664700:
 
 .global float_806697F0
 float_806697F0:
-	# ROM: 0x573650
-	.4byte 0
+	.float 0
 
 
 .global float_806697F4
 float_806697F4:
-	# ROM: 0x573654
 	.float 1.0
 
 
 .global double_806697F8
 double_806697F8:
-	# ROM: 0x573658
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_80669800
 double_80669800:
-	# ROM: 0x573660
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_80669808
 float_80669808:
-	# ROM: 0x573668
-	.4byte 0xC2A00000
+	.float -80 #0xC2A00000
 
 
 .global float_8066980C
 float_8066980C:
-	# ROM: 0x57366C
 	.float -1.0
 
 
 .global lbl_80669810
 lbl_80669810:
-	# ROM: 0x573670
 	.4byte 0x00000106
 
 
 .global lbl_80669814
 lbl_80669814:
-	# ROM: 0x573674
 	.4byte 0x05000000
 
 
 .global float_80669818
 float_80669818:
-	# ROM: 0x573678
 	.float 100.0
 
 
 .global lbl_8066981C
 lbl_8066981C:
-	# ROM: 0x57367C
 	.4byte 0x00000106
 
 
 .global lbl_80669820
 lbl_80669820:
-	# ROM: 0x573680
 	.4byte 0x05000000
 
 
 .global float_80669824
 float_80669824:
-	# ROM: 0x573684
 	.float 10.0
 
 
 .global float_80669828
 float_80669828:
-	# ROM: 0x573688
-	.4byte 0x44610000
+	.float 900 #0x44610000
 
 
 .global float_8066982C
 float_8066982C:
-	# ROM: 0x57368C
-	.4byte 0x441C4000
+	.float 625 #0x441C4000
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

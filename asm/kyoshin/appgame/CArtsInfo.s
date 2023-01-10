@@ -7112,7 +7112,6 @@ CArtsInfo_stringpool:
 
 .global lbl_8053A158
 lbl_8053A158:
-	# ROM: 0x536258
 	.4byte switch_8023590C
 	.4byte switch_802358C0
 	.4byte switch_802358C8
@@ -7130,7 +7129,6 @@ lbl_8053A158:
 
 .global lbl_8053A18C
 lbl_8053A18C:
-	# ROM: 0x53628C
 	.4byte switch_802379F8
 	.4byte switch_80237664
 	.4byte switch_80237678
@@ -7235,96 +7233,81 @@ __RTTI__CArtsInfo:
 
 .global float_8066AF40
 float_8066AF40:
-	# ROM: 0x574DA0
-	.4byte 0
+	.float 0
 
 
 .global float_8066AF44
 float_8066AF44:
-	# ROM: 0x574DA4
 	.float 1.0
 
 
 .global float_8066AF48
 float_8066AF48:
-	# ROM: 0x574DA8
-	.4byte 0x3FB33333
+	.float 1.4 #0x3FB33333
 
 
 .global float_8066AF4C
 float_8066AF4C:
-	# ROM: 0x574DAC
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global double_8066AF50
 double_8066AF50:
-	# ROM: 0x574DB0
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066AF58
 float_8066AF58:
-	# ROM: 0x574DB8
 	.float 1.5
 
 
 .global float_8066AF5C
 float_8066AF5C:
-	# ROM: 0x574DBC
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global double_8066AF60
 double_8066AF60:
-	# ROM: 0x574DC0
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066AF68
 float_8066AF68:
-	# ROM: 0x574DC8
-	.4byte 0x41A00000
+	.float 20 #0x41A00000
 
 
 .global float_8066AF6C
 float_8066AF6C:
-	# ROM: 0x574DCC
 	.float 10.0
 
 
 .global float_8066AF70
 float_8066AF70:
-	# ROM: 0x574DD0
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066AF74
 float_8066AF74:
-	# ROM: 0x574DD4
 	.float 0.5
 
 
 .global double_8066AF78
 double_8066AF78:
-	# ROM: 0x574DD8
 	.4byte 0x40140000
 	.4byte 0
 
 
 .global double_8066AF80
 double_8066AF80:
-	# ROM: 0x574DE0
 	.4byte 0x3FF40000
 	.4byte 0
 
 
 .global float_8066AF88
 float_8066AF88:
-	# ROM: 0x574DE8
-	.4byte 0x43EE0000
+	.float 476 #0x43EE0000
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

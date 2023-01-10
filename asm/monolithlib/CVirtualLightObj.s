@@ -32,8 +32,8 @@ func_804947EC:
 /* 804947F0 0045DDB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804947F4 0045DDB4  2C 00 00 00 */	cmpwi r0, 0
 /* 804947F8 0045DDB8  40 82 00 2C */	bne .L_80494824
-/* 804947FC 0045DDBC  3C A0 80 66 */	lis r5, float_80659EE8@ha
-/* 80494800 0045DDC0  84 85 9E E8 */	lwzu r4, float_80659EE8@l(r5)
+/* 804947FC 0045DDBC  3C A0 80 66 */	lis r5, lbl_80659EE8@ha
+/* 80494800 0045DDC0  84 85 9E E8 */	lwzu r4, lbl_80659EE8@l(r5)
 /* 80494804 0045DDC4  80 05 00 04 */	lwz r0, 4(r5)
 /* 80494808 0045DDC8  90 03 00 04 */	stw r0, 4(r3)
 /* 8049480C 0045DDCC  90 83 00 00 */	stw r4, 0(r3)
@@ -1440,51 +1440,43 @@ __vt__CVirtualLightObj:
 
 .global float_8066D248
 float_8066D248:
-	# ROM: 0x5770A8
 	.float 1.0
 
 
 .global float_8066D24C
 float_8066D24C:
-	# ROM: 0x5770AC
-	.4byte 0
+	.float 0
 
 
 .global float_8066D250
 float_8066D250:
-	# ROM: 0x5770B0
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 	.4byte 0
 
 
 .global float_8066D258
 float_8066D258:
-	# ROM: 0x5770B8
 	.float 1.0
 
 
 .global float_8066D25C
 float_8066D25C:
-	# ROM: 0x5770BC
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 
 .global double_8066D260
 double_8066D260:
-	# ROM: 0x5770C0
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066D268
 float_8066D268:
-	# ROM: 0x5770C8
-	.4byte 0
+	.float 0
 
 
 .global float_8066D26C
 float_8066D26C:
-	# ROM: 0x5770CC
 	.float 0.5
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

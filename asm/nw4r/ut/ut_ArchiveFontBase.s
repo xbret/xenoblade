@@ -1097,7 +1097,6 @@ RequestData__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPQ54nw4r2ut6
 
 .global lbl_8056E868
 lbl_8056E868:
-	# ROM: 0x56A968
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r2ut6detail15ArchiveFontBaseFv

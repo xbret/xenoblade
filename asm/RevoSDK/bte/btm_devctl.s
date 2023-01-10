@@ -1921,7 +1921,6 @@ lbl_805452A8:
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 .global lbl_80665928
 lbl_80665928:
-	# ROM: 0x571508
 	.4byte 0x001F0000
 
 

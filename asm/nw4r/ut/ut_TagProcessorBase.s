@@ -506,7 +506,6 @@ CalcRect__Q34nw4r2ut19TagProcessorBase_w_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintCo
 
 .global lbl_8056E6E8
 lbl_8056E6E8:
-	# ROM: 0x56A7E8
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r2ut19TagProcessorBase_w_Fv
@@ -516,7 +515,6 @@ lbl_8056E6E8:
 
 .global lbl_8056E6FC
 lbl_8056E6FC:
-	# ROM: 0x56A7FC
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r2ut19TagProcessorBase_c_Fv
@@ -527,6 +525,5 @@ lbl_8056E6FC:
 
 .global double_8066C930
 double_8066C930:
-	# ROM: 0x576790
 	.4byte 0x43300000
 	.4byte 0x80000000

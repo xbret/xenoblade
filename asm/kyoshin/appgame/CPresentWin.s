@@ -1468,20 +1468,17 @@ __RTTI__CPresentWin:
 
 .global double_8066AEE0
 double_8066AEE0:
-	# ROM: 0x574D40
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066AEE8
 float_8066AEE8:
-	# ROM: 0x574D48
-	.4byte 0
+	.float 0
 
 
 .global float_8066AEEC
 float_8066AEEC:
-	# ROM: 0x574D4C
 	.float 1.0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

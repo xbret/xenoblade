@@ -500,7 +500,6 @@ AHXBSR_SearchSync:
 
 .global lbl_8051AC10
 lbl_8051AC10:
-	# ROM: 0x516D10
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000003

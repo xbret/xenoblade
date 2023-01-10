@@ -1265,68 +1265,57 @@ __RTTI__CModelDisp:
 
 .global float_8066AAA8
 float_8066AAA8:
-	# ROM: 0x574908
 	.float 1.0
 
 
 .global float_8066AAAC
 float_8066AAAC:
-	# ROM: 0x57490C
-	.4byte 0
+	.float 0
 
 
 .global float_8066AAB0
 float_8066AAB0:
-	# ROM: 0x574910
 	.float 1.5
 
 
 .global float_8066AAB4
 float_8066AAB4:
-	# ROM: 0x574914
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 
 .global float_8066AAB8
 float_8066AAB8:
-	# ROM: 0x574918
 	.float 0.2
 
 
 .global float_8066AABC
 float_8066AABC:
-	# ROM: 0x57491C
-	.4byte 0xBF333333
+	.float -0.7 #0xBF333333
 
 
 .global float_8066AAC0
 float_8066AAC0:
-	# ROM: 0x574920
-	.4byte 0xC0000000
+	.float -2 #0xC0000000
 
 
 .global float_8066AAC4
 float_8066AAC4:
-	# ROM: 0x574924
 	.float -1.0
 
 
 .global float_8066AAC8
 float_8066AAC8:
-	# ROM: 0x574928
-	.4byte 0x3E99999A
+	.float 0.3 #0x3E99999A
 
 
 .global float_8066AACC
 float_8066AACC:
-	# ROM: 0x57492C
 	.float 0.25
 
 
 .global float_8066AAD0
 float_8066AAD0:
-	# ROM: 0x574930
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 	.4byte 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

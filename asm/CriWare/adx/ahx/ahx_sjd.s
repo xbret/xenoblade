@@ -577,7 +577,6 @@ lbl_8051ABD8:
 
 .global lbl_8051AC08
 lbl_8051AC08:
-	# ROM: 0x516D08
 	.4byte lbl_8051ABD8
 	.4byte 0
 

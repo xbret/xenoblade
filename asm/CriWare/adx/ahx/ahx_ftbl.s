@@ -2089,5 +2089,4 @@ ahxsbf_synthesis_filter_table:
 
 .global lbl_805657B0
 lbl_805657B0:
-	# ROM: 0x5618B0
 	.4byte ahxsbf_synthesis_filter_table

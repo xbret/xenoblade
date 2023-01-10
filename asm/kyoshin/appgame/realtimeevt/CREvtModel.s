@@ -955,39 +955,33 @@ __RTTI__cf_CREvtObj:
 
 .global lbl_80664D10
 lbl_80664D10:
-	# ROM: 0x5708F0
 	.4byte 0x72656600
 
 
 .global lbl_80664D14
 lbl_80664D14:
-	# ROM: 0x5708F4
 	.4byte 0x72656600
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .global float_8066A030
 float_8066A030:
-	# ROM: 0x573E90
-	.4byte 0
+	.float 0
 
 
 .global float_8066A034
 float_8066A034:
-	# ROM: 0x573E94
-	.4byte 0x3F666666
+	.float 0.9 #0x3F666666
 
 
 .global float_8066A038
 float_8066A038:
-	# ROM: 0x573E98
-	.4byte 0x3EB33333
+	.float 0.35 #0x3EB33333
 
 
 .global float_8066A03C
 float_8066A03C:
-	# ROM: 0x573E9C
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

@@ -101,7 +101,6 @@ ApplyVisAnmResult__Q24nw4r3g3dFPUcQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjVis:
 
 .global lbl_80520E38
 lbl_80520E38:
-	# ROM: 0x51CF38
 	.4byte 0x0000000A
 	.asciz "AnmObjVis"
 	.balign 4

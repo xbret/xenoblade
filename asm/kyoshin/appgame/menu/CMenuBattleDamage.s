@@ -2466,7 +2466,6 @@ CTTask_IUIBattle_hierarchy:
 
 .global lbl_8052F9D0
 lbl_8052F9D0:
-	# ROM: 0x52BAD0
 	.4byte switch_80109D0C
 	.4byte switch_80109D30
 	.4byte switch_80109D54
@@ -2562,50 +2561,42 @@ __RTTI__CMenuBattleDamage:
 
 .global float_80669830
 float_80669830:
-	# ROM: 0x573690
-	.4byte 0
+	.float 0
 
 
 .global float_80669834
 float_80669834:
-	# ROM: 0x573694
 	.float 1.0
 
 
 .global float_80669838
 float_80669838:
-	# ROM: 0x573698
-	.4byte 0x43A00000
+	.float 320 #0x43A00000
 
 
 .global float_8066983C
 float_8066983C:
-	# ROM: 0x57369C
-	.4byte 0x43600000
+	.float 224 #0x43600000
 
 
 .global float_80669840
 float_80669840:
-	# ROM: 0x5736A0
 	.float -1.0
 
 
 .global float_80669844
 float_80669844:
-	# ROM: 0x5736A4
-	.4byte 0x41C80000
+	.float 25 #0x41C80000
 
 
 .global float_80669848
 float_80669848:
-	# ROM: 0x5736A8
 	.float 0.5
 	.4byte 0
 
 
 .global double_80669850
 double_80669850:
-	# ROM: 0x5736B0
 	.4byte 0x43300000
 	.4byte 0
 

@@ -2749,7 +2749,6 @@ lbl_805057C4:
 
 .global lbl_80539AD8
 lbl_80539AD8:
-	# ROM: 0x535BD8
 	.4byte lbl_80505380
 	.4byte lbl_8050539C
 	.4byte lbl_805053B8
@@ -2784,7 +2783,6 @@ lbl_80539AD8:
 
 .global lbl_80539B50
 lbl_80539B50:
-	# ROM: 0x535C50
 	.4byte lbl_80505674
 	.4byte lbl_80505680
 	.4byte lbl_8050568C
@@ -2904,7 +2902,6 @@ __RTTI__CQstLogInfo:
 
 .global float_8066AE50
 float_8066AE50:
-	# ROM: 0x574CB0
 	.float 1.0
 	.4byte 0
 

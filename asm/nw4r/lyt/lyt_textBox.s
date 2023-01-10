@@ -1972,7 +1972,6 @@ sinit_80402E1C:
 
 .global lbl_8056D310
 lbl_8056D310:
-	# ROM: 0x569410
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt7TextBoxFv
@@ -2013,7 +2012,6 @@ lbl_8056D310:
 
 .global lbl_80665DF0
 lbl_80665DF0:
-	# ROM: 0x5719D0
 	.4byte 0x000A0000
 	.4byte 0
 
@@ -2021,27 +2019,23 @@ lbl_80665DF0:
 
 .global float_8066C568
 float_8066C568:
-	# ROM: 0x5763C8
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066C570
 double_8066C570:
-	# ROM: 0x5763D0
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066C578
 float_8066C578:
-	# ROM: 0x5763D8
 	.float 0.5
 
 
 .global float_8066C57C
 float_8066C57C:
-	# ROM: 0x5763DC
 	.float 1.0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

@@ -1019,66 +1019,55 @@ UpdateCameraMtx__Q34nw4r3g3d6CameraCFv:
 
 .global float_8066C458
 float_8066C458:
-	# ROM: 0x5762B8
-	.4byte 0
+	.float 0
 
 
 .global float_8066C45C
 float_8066C45C:
-	# ROM: 0x5762BC
-	.4byte 0x41700000
+	.float 15 #0x41700000
 
 
 .global float_8066C460
 float_8066C460:
-	# ROM: 0x5762C0
 	.float 1.0
 
 
 .global float_8066C464
 float_8066C464:
-	# ROM: 0x5762C4
-	.4byte 0x42700000
+	.float 60 #0x42700000
 
 
 .global float_8066C468
 float_8066C468:
-	# ROM: 0x5762C8
-	.4byte 0x3FAAAAAB
+	.float 1.33333333 #0x3FAAAAAB
 
 
 .global float_8066C46C
 float_8066C46C:
-	# ROM: 0x5762CC
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_8066C470
 float_8066C470:
-	# ROM: 0x5762D0
-	.4byte 0x447A0000
+	.float 1000 #0x447A0000
 
 
 .global float_8066C474
 float_8066C474:
-	# ROM: 0x5762D4
 	.float 0.5
 
 
 .global double_8066C478
 double_8066C478:
-	# ROM: 0x5762D8
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066C480
 float_8066C480:
-	# ROM: 0x5762E0
 	.float -1.0
 
 
 .global float_8066C484
 float_8066C484:
-	# ROM: 0x5762E4
 	.4byte 0x3F360B61

@@ -284,8 +284,8 @@ func_80075298:
 /* 80075334 0003E8F4  38 80 00 00 */	li r4, 0
 /* 80075338 0003E8F8  38 A0 00 0C */	li r5, 0xc
 /* 8007533C 0003E8FC  4B F8 F0 15 */	bl memset
-/* 80075340 0003E900  3C A0 80 66 */	lis r5, float_80659DB0@ha
-/* 80075344 0003E904  84 85 9D B0 */	lwzu r4, float_80659DB0@l(r5)
+/* 80075340 0003E900  3C A0 80 66 */	lis r5, lbl_80659DB0@ha
+/* 80075344 0003E904  84 85 9D B0 */	lwzu r4, lbl_80659DB0@l(r5)
 /* 80075348 0003E908  C0 02 89 48 */	lfs f0, float_80668CC8@sda21(r2)
 /* 8007534C 0003E90C  38 00 00 00 */	li r0, 0
 /* 80075350 0003E910  80 65 00 04 */	lwz r3, 4(r5)
@@ -704,8 +704,8 @@ func_800756D0:
 /* 800758F0 0003EEB0  D0 1F 00 04 */	stfs f0, 4(r31)
 /* 800758F4 0003EEB4  48 00 00 20 */	b .L_80075914
 .L_800758F8:
-/* 800758F8 0003EEB8  3C A0 80 66 */	lis r5, float_80659DB0@ha
-/* 800758FC 0003EEBC  84 85 9D B0 */	lwzu r4, float_80659DB0@l(r5)
+/* 800758F8 0003EEB8  3C A0 80 66 */	lis r5, lbl_80659DB0@ha
+/* 800758FC 0003EEBC  84 85 9D B0 */	lwzu r4, lbl_80659DB0@l(r5)
 /* 80075900 0003EEC0  80 05 00 04 */	lwz r0, 4(r5)
 /* 80075904 0003EEC4  90 03 00 04 */	stw r0, 4(r3)
 /* 80075908 0003EEC8  90 83 00 00 */	stw r4, 0(r3)
@@ -7867,7 +7867,6 @@ lbl_804F6E40:
 
 .global lbl_8052AB98
 lbl_8052AB98:
-	# ROM: 0x526C98
 	.float 1.0
 	.4byte 0
 	.4byte 0
@@ -8046,173 +8045,145 @@ lbl_806644B0:
 
 .global float_80668CA0
 float_80668CA0:
-	# ROM: 0x572B00
 	.float 0.5
 
 
 .global float_80668CA4
 float_80668CA4:
-	# ROM: 0x572B04
-	.4byte 0
+	.float 0
 
 
 .global double_80668CA8
 double_80668CA8:
-	# ROM: 0x572B08
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_80668CB0
 float_80668CB0:
-	# ROM: 0x572B10
 	.float 1.0
 
 
 .global float_80668CB4
 float_80668CB4:
-	# ROM: 0x572B14
-	.4byte 0x3A83126F
+	.float 0.001 #0x3A83126F
 
 
 .global float_80668CB8
 float_80668CB8:
-	# ROM: 0x572B18
-	.4byte 0x4222F983
+	.float 40.7436638 #0x4222F983
 	.4byte 0
 
 
 .global double_80668CC0
 double_80668CC0:
-	# ROM: 0x572B20
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80668CC8
 float_80668CC8:
-	# ROM: 0x572B28
-	.4byte 0x42200000
+	.float 40 #0x42200000
 
 
 .global float_80668CCC
 float_80668CCC:
-	# ROM: 0x572B2C
 	.float 0.25
 
 
 .global float_80668CD0
 float_80668CD0:
-	# ROM: 0x572B30
 	.float 1.5
 
 
 .global float_80668CD4
 float_80668CD4:
-	# ROM: 0x572B34
-	.4byte 0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
 
 
 .global float_80668CD8
 float_80668CD8:
-	# ROM: 0x572B38
-	.4byte 0x3E99999A
+	.float 0.3 #0x3E99999A
 
 
 .global float_80668CDC
 float_80668CDC:
-	# ROM: 0x572B3C
-	.4byte 0x3CC90FDB
+	.float 0.0245436933 #0x3CC90FDB
 
 
 .global float_80668CE0
 float_80668CE0:
-	# ROM: 0x572B40
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_80668CE4
 float_80668CE4:
-	# ROM: 0x572B44
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_80668CE8
 float_80668CE8:
-	# ROM: 0x572B48
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_80668CEC
 float_80668CEC:
-	# ROM: 0x572B4C
 	.float 0.2
 
 
 .global float_80668CF0
 float_80668CF0:
-	# ROM: 0x572B50
 	.float -1.0
 
 
 .global float_80668CF4
 float_80668CF4:
-	# ROM: 0x572B54
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 
 .global float_80668CF8
 float_80668CF8:
-	# ROM: 0x572B58
 	.float 10.0
 
 
 .global float_80668CFC
 float_80668CFC:
-	# ROM: 0x572B5C
-	.4byte 0x3CA3D70A
+	.float 0.02 #0x3CA3D70A
 
 
 .global float_80668D00
 float_80668D00:
-	# ROM: 0x572B60
-	.4byte 0x3CF5C28F
+	.float 0.03 #0x3CF5C28F
 
 
 .global float_80668D04
 float_80668D04:
-	# ROM: 0x572B64
-	.4byte 0x3D4CCCCD
+	.float 0.05 #0x3D4CCCCD
 
 
 .global float_80668D08
 float_80668D08:
-	# ROM: 0x572B68
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_80668D0C
 float_80668D0C:
-	# ROM: 0x572B6C
-	.4byte 0x3DA3D70A
+	.float 0.08 #0x3DA3D70A
 
 
 .global float_80668D10
 float_80668D10:
-	# ROM: 0x572B70
-	.4byte 0x3E051EB8
+	.float 0.13 #0x3E051EB8
 
 
 .global float_80668D14
 float_80668D14:
-	# ROM: 0x572B74
-	.4byte 0x3EE66666
+	.float 0.45 #0x3EE66666
 
 
 .global float_80668D18
 float_80668D18:
-	# ROM: 0x572B78
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 	.4byte 0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

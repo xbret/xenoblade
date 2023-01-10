@@ -104,7 +104,6 @@ bta_dm_search_sm_execute:
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global lbl_8050E090
 lbl_8050E090:
-	# ROM: 0x50A190
 	.4byte bta_dm_enable
 	.4byte bta_dm_disable
 	.4byte bta_dm_set_dev_name
@@ -122,7 +121,6 @@ lbl_8050E090:
 
 .global lbl_8050E0C4
 lbl_8050E0C4:
-	# ROM: 0x50A1C4
 	.4byte 0x000D0001
 	.4byte 0x0D00020D
 	.4byte 0x00030D00
@@ -138,7 +136,6 @@ lbl_8050E0C4:
 
 .global lbl_8050E0F0
 lbl_8050E0F0:
-	# ROM: 0x50A1F0
 	.4byte bta_dm_search_start
 	.4byte bta_dm_search_cancel
 	.4byte bta_dm_discover
@@ -201,7 +198,6 @@ lbl_8050E18C:
 
 .global lbl_8050E1A8
 lbl_8050E1A8:
-	# ROM: 0x50A2A8
 	.4byte lbl_8050E138
 	.4byte lbl_8050E154
 	.4byte lbl_8050E170

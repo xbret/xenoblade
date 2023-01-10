@@ -248,20 +248,17 @@ ReplaceImage__Q34nw4r3lyt6TexMapFP10TPLPaletteUl:
 
 .global float_8066C5B8
 float_8066C5B8:
-	# ROM: 0x576418
-	.4byte 0x3B800000
+	.float 0.00390625 #0x3B800000
 	.4byte 0
 
 
 .global double_8066C5C0
 double_8066C5C0:
-	# ROM: 0x576420
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066C5C8
 float_8066C5C8:
-	# ROM: 0x576428
 	.4byte 0x43800000
 	.4byte 0

@@ -1448,7 +1448,6 @@ ahxsbf_mult_float_win15:
 
 .global lbl_8051ABC0
 lbl_8051ABC0:
-	# ROM: 0x516CC0
 	.4byte 0
 	.4byte 0x4F000000
 	.4byte 0xCF000000

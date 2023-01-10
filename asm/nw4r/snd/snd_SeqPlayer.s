@@ -1533,7 +1533,6 @@ _192___dt__Q44nw4r3snd6detail9SeqPlayerFv:
 
 .global lbl_8056E3D8
 lbl_8056E3D8:
-	# ROM: 0x56A4D8
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail9SeqPlayerFv
@@ -1565,27 +1564,23 @@ lbl_8056E3D8:
 
 .global float_8066C800
 float_8066C800:
-	# ROM: 0x576660
 	.float 1.0
 
 
 .global float_8066C804
 float_8066C804:
-	# ROM: 0x576664
-	.4byte 0
+	.float 0
 
 
 .global double_8066C808
 double_8066C808:
-	# ROM: 0x576668
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066C810
 float_8066C810:
-	# ROM: 0x576670
-	.4byte 0x476A6000
+	.float 60000 #0x476A6000
 	.4byte 0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

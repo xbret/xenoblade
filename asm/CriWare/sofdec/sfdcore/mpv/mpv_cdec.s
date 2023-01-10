@@ -442,7 +442,6 @@ mpvcdec_NintraBlocksInt1:
 
 .global lbl_8051F5F8
 lbl_8051F5F8:
-	# ROM: 0x51B6F8
 	.4byte mpvcdec_IntraBlocksInt1
 	.4byte mpvcdec_NintraBlocksInt1
 

@@ -89,9 +89,9 @@ ahxsbf_init_filter:
 /* 8038C548 00355B08  98 05 FF F9 */	stb r0, -7(r5)
 /* 8038C54C 00355B0C  42 00 FF 68 */	bdnz .L_8038C4B4
 /* 8038C550 00355B10  7C A7 40 AE */	lbzx r5, r7, r8
-/* 8038C554 00355B14  3C 80 80 52 */	lis r4, float_8051ABD0@ha
+/* 8038C554 00355B14  3C 80 80 52 */	lis r4, lbl_8051ABD0@ha
 /* 8038C558 00355B18  38 00 00 40 */	li r0, 0x40
-/* 8038C55C 00355B1C  C0 24 AB D0 */	lfs f1, float_8051ABD0@l(r4)
+/* 8038C55C 00355B1C  C0 24 AB D0 */	lfs f1, lbl_8051ABD0@l(r4)
 /* 8038C560 00355B20  7C A6 41 AE */	stbx r5, r6, r8
 /* 8038C564 00355B24  38 A0 00 00 */	li r5, 0
 /* 8038C568 00355B28  7C 09 03 A6 */	mtctr r0
@@ -234,8 +234,8 @@ AHXSBF_Destroy:
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global float_8051ABD0
-float_8051ABD0:
+.global lbl_8051ABD0
+lbl_8051ABD0:
 	.asciz "O"
 	.4byte 0
 	.2byte 0

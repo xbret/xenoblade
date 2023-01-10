@@ -2427,7 +2427,6 @@ func_8025650C:
 
 .global lbl_80507D30
 lbl_80507D30:
-	# ROM: 0x503E30
 	.4byte 0
 	.2byte 0x0001
 	.2byte 0x0008
@@ -2539,7 +2538,6 @@ lbl_80507D78:
 
 .global lbl_8053AB30
 lbl_8053AB30:
-	# ROM: 0x536C30
 	.4byte switch_80254B10
 	.4byte switch_80254A6C
 	.4byte switch_80254A74
@@ -2561,7 +2559,6 @@ lbl_8053AB30:
 
 .global lbl_8053AB74
 lbl_8053AB74:
-	# ROM: 0x536C74
 	.4byte switch_8025551C
 	.4byte switch_802554C0
 	.4byte switch_802554CC
@@ -2627,57 +2624,48 @@ __vt__CCLPCur:
 
 .global float_8066B0A0
 float_8066B0A0:
-	# ROM: 0x574F00
-	.4byte 0x43A70000
+	.float 334 #0x43A70000
 
 
 .global float_8066B0A4
 float_8066B0A4:
-	# ROM: 0x574F04
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_8066B0A8
 float_8066B0A8:
-	# ROM: 0x574F08
-	.4byte 0
+	.float 0
 
 
 .global float_8066B0AC
 float_8066B0AC:
-	# ROM: 0x574F0C
-	.4byte 0xC3A20000
+	.float -324 #0xC3A20000
 
 
 .global float_8066B0B0
 float_8066B0B0:
-	# ROM: 0x574F10
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066B0B8
 double_8066B0B8:
-	# ROM: 0x574F18
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066B0C0
 float_8066B0C0:
-	# ROM: 0x574F20
-	.4byte 0x41800000
+	.float 16 #0x41800000
 
 
 .global float_8066B0C4
 float_8066B0C4:
-	# ROM: 0x574F24
 	.float 100.0
 
 
 .global double_8066B0C8
 double_8066B0C8:
-	# ROM: 0x574F28
 	.4byte 0x43300000
 	.4byte 0x80000000
 

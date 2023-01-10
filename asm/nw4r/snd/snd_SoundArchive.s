@@ -307,7 +307,6 @@ detail_OpenFileStream__Q34nw4r3snd12SoundArchiveCFUlPvi:
 
 .global lbl_8056E4A0
 lbl_8056E4A0:
-	# ROM: 0x56A5A0
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3snd12SoundArchiveFv

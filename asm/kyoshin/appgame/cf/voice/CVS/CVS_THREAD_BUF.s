@@ -716,7 +716,6 @@ cf_CVS_THREAD_BUF_typestr:
 
 .global lbl_8053D170
 lbl_8053D170:
-	# ROM: 0x539270
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A4FA4

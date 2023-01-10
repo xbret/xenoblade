@@ -3874,7 +3874,6 @@ lbl_804FE7B4:
 
 .global lbl_804FE7C0
 lbl_804FE7C0:
-	# ROM: 0x4FA8C0
 	.4byte 0x0004000A
 	.4byte 0x000E000F
 	.4byte 0x00230038
@@ -3920,7 +3919,6 @@ lbl_804FE838:
 
 .global lbl_80533AD0
 lbl_80533AD0:
-	# ROM: 0x52FBD0
 	.4byte lbl_804FDF80
 	.4byte lbl_804FDD20
 	.4byte lbl_804FDF80
@@ -4001,7 +3999,6 @@ lbl_80533AD0:
 
 .global lbl_80533C00
 lbl_80533C00:
-	# ROM: 0x52FD00
 	.4byte 0x00010203
 	.4byte 0x04050607
 	.4byte 0x08090A0B
@@ -4011,12 +4008,11 @@ lbl_80533C00:
 	.4byte 0x18191A1B
 	.4byte 0x1C1D1E1F
 	.4byte 0x20212223
-	.4byte 0x00000000
+	.4byte 0x24250000
 
 
 .global lbl_80533C28
 lbl_80533C28:
-	# ROM: 0x52FD28
 	.4byte lbl_804FDF98
 	.4byte lbl_804FDFA4
 	.4byte lbl_804FDFB0
@@ -4195,7 +4191,6 @@ lbl_80533C28:
 
 .global lbl_80533EE0
 lbl_80533EE0:
-	# ROM: 0x52FFE0
 	.4byte lbl_804FDFA4
 	.4byte lbl_804FDFC8
 	.4byte lbl_804FDFE0
@@ -4384,13 +4379,11 @@ CTTask_cf_CTaskREvent_hierarchy:
 
 .global lbl_80664C78
 lbl_80664C78:
-	# ROM: 0x570858
 	.4byte lbl_804FE800
 
 
 .global lbl_80664C7C
 lbl_80664C7C:
-	# ROM: 0x57085C
 	.4byte 0x00000064
 
 .global __RTTI__cf_CTaskREvent
@@ -4510,51 +4503,43 @@ lbl_80669EE0:
 
 .global float_80669EE8
 float_80669EE8:
-	# ROM: 0x573D48
-	.4byte 0
+	.float 0
 
 
 .global float_80669EEC
 float_80669EEC:
-	# ROM: 0x573D4C
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global double_80669EF0
 double_80669EF0:
-	# ROM: 0x573D50
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80669EF8
 float_80669EF8:
-	# ROM: 0x573D58
-	.4byte 0x3D75C28F
+	.float 0.06 #0x3D75C28F
 
 
 .global float_80669EFC
 float_80669EFC:
-	# ROM: 0x573D5C
-	.4byte 0x42700000
+	.float 60 #0x42700000
 
 
 .global float_80669F00
 float_80669F00:
-	# ROM: 0x573D60
-	.4byte 0x3F7D70A4
+	.float 0.99 #0x3F7D70A4
 
 
 .global float_80669F04
 float_80669F04:
-	# ROM: 0x573D64
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_80669F08
 float_80669F08:
-	# ROM: 0x573D68
-	.4byte 0x47A60400
+	.float 85000 #0x47A60400
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

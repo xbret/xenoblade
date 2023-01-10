@@ -1617,51 +1617,43 @@ __RTTI__CActInput:
 
 .global float_80668DF8
 float_80668DF8:
-	# ROM: 0x572C58
-	.4byte 0
+	.float 0
 
 
 .global float_80668DFC
 float_80668DFC:
-	# ROM: 0x572C5C
 	.float 10.0
 
 
 .global float_80668E00
 float_80668E00:
-	# ROM: 0x572C60
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_80668E04
 float_80668E04:
-	# ROM: 0x572C64
 	.float 1.0
 
 
 .global float_80668E08
 float_80668E08:
-	# ROM: 0x572C68
-	.4byte 0x3E19999A
+	.float 0.15 #0x3E19999A
 
 
 .global float_80668E0C
 float_80668E0C:
-	# ROM: 0x572C6C
 	.float 100.0
 
 
 .global double_80668E10
 double_80668E10:
-	# ROM: 0x572C70
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80668E18
 float_80668E18:
-	# ROM: 0x572C78
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 	.4byte 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

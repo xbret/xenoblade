@@ -3103,7 +3103,6 @@ _208___dt__Q44nw4r3snd6detail10StrmPlayerFv:
 
 .global lbl_8056E558
 lbl_8056E558:
-	# ROM: 0x56A658
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail10StrmPlayerFv
@@ -3126,7 +3125,6 @@ lbl_8056E558:
 
 .global lbl_8056E5A0
 lbl_8056E5A0:
-	# ROM: 0x56A6A0
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
@@ -3137,7 +3135,6 @@ lbl_8056E5A0:
 
 .global lbl_8056E5B8
 lbl_8056E5B8:
-	# ROM: 0x56A6B8
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
@@ -3149,41 +3146,35 @@ lbl_8056E5B8:
 
 .global float_8066C860
 float_8066C860:
-	# ROM: 0x5766C0
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066C868
 double_8066C868:
-	# ROM: 0x5766C8
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_8066C870
 double_8066C870:
-	# ROM: 0x5766D0
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066C878
 float_8066C878:
-	# ROM: 0x5766D8
 	.float 1.0
 
 
 .global float_8066C87C
 float_8066C87C:
-	# ROM: 0x5766DC
-	.4byte 0x42FE0000
+	.float 127 #0x42FE0000
 
 
 .global float_8066C880
 float_8066C880:
-	# ROM: 0x5766E0
-	.4byte 0x427C0000
+	.float 63 #0x427C0000
 	.4byte 0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

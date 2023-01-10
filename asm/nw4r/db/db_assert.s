@@ -377,13 +377,11 @@ lbl_8056C820:
 
 .global lbl_80665D80
 lbl_80665D80:
-	# ROM: 0x571960
 	.4byte 0x01000000
 
 
 .global lbl_80665D84
 lbl_80665D84:
-	# ROM: 0x571964
 	.4byte 0x0A000000
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

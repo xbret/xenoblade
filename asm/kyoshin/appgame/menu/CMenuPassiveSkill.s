@@ -1024,19 +1024,16 @@ __RTTI__CMenuPassiveSkill:
 
 .global float_8066B1A0
 float_8066B1A0:
-	# ROM: 0x575000
-	.4byte 0
+	.float 0
 
 
 .global float_8066B1A4
 float_8066B1A4:
-	# ROM: 0x575004
 	.float 1.0
 
 
 .global float_8066B1A8
 float_8066B1A8:
-	# ROM: 0x575008
 	.float 10.0
 	.4byte 0
 

@@ -4869,13 +4869,11 @@ cf_CfObjectEne_hierarchy:
 
 .global lbl_806645B0
 lbl_806645B0:
-	# ROM: 0x570190
 	.4byte lbl_8066923C
 
 
 .global lbl_806645B4
 lbl_806645B4:
-	# ROM: 0x570194
 	.4byte lbl_804F7970
 
 .global __RTTI__cf_CfObjectEne
@@ -4886,45 +4884,38 @@ __RTTI__cf_CfObjectEne:
 
 .global float_806645C0
 float_806645C0:
-	# ROM: 0x5701A0
-	.4byte 0x42B40000
+	.float 90 #0x42B40000
 
 
 .global float_806645C4
 float_806645C4:
-	# ROM: 0x5701A4
-	.4byte 0x42480000
+	.float 50 #0x42480000
 
 
 .global float_806645C8
 float_806645C8:
-	# ROM: 0x5701A8
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_806645CC
 float_806645CC:
-	# ROM: 0x5701AC
 	.float 10.0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .global float_80669230
 float_80669230:
-	# ROM: 0x573090
-	.4byte 0
+	.float 0
 
 
 .global float_80669234
 float_80669234:
-	# ROM: 0x573094
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 
 
 .global float_80669238
 float_80669238:
-	# ROM: 0x573098
-	.4byte 0x3FE66666
+	.float 1.8 #0x3FE66666
 
 .global lbl_8066923C
 lbl_8066923C:
@@ -4934,103 +4925,87 @@ lbl_8066923C:
 
 .global float_80669244
 float_80669244:
-	# ROM: 0x5730A4
 	.float 10.0
 
 
 .global float_80669248
 float_80669248:
-	# ROM: 0x5730A8
 	.float 1.0
 
 
 .global float_8066924C
 float_8066924C:
-	# ROM: 0x5730AC
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_80669250
 float_80669250:
-	# ROM: 0x5730B0
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_80669254
 float_80669254:
-	# ROM: 0x5730B4
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_80669258
 float_80669258:
-	# ROM: 0x5730B8
-	.4byte 0x43340000
+	.float 180 #0x43340000
 
 
 .global float_8066925C
 float_8066925C:
-	# ROM: 0x5730BC
 	.float 100.0
 
 
 .global float_80669260
 float_80669260:
-	# ROM: 0x5730C0
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 	.4byte 0
 
 
 .global double_80669268
 double_80669268:
-	# ROM: 0x5730C8
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_80669270
 double_80669270:
-	# ROM: 0x5730D0
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80669278
 float_80669278:
-	# ROM: 0x5730D8
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_8066927C
 float_8066927C:
-	# ROM: 0x5730DC
-	.4byte 0x461C4000
+	.float 10000 #0x461C4000
 
 
 .global double_80669280
 double_80669280:
-	# ROM: 0x5730E0
 	.4byte 0x3FE00000
 	.4byte 0
 
 
 .global double_80669288
 double_80669288:
-	# ROM: 0x5730E8
 	.4byte 0xBFE00000
 	.4byte 0
 
 
 .global float_80669290
 float_80669290:
-	# ROM: 0x5730F0
-	.4byte 0x43340000
+	.float 180 #0x43340000
 	.4byte 0
 
 
 .global double_80669298
 double_80669298:
-	# ROM: 0x5730F8
 	.4byte 0x43300000
 	.4byte 0
 

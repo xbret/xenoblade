@@ -663,7 +663,6 @@ isPlayReady__Q210homebutton9RemoteSpkCFl:
 
 .global __vt__homebutton_RemoteSpk
 __vt__homebutton_RemoteSpk:
-	# ROM: 0x5485F8
 	.4byte __RTTI__homebutton_RemoteSpk
 	.4byte 0
 	.4byte __dt__Q210homebutton9RemoteSpkFv

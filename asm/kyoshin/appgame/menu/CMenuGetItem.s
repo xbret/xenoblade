@@ -1329,20 +1329,17 @@ __RTTI__CMenuGetItem:
 
 .global float_80669CD8
 float_80669CD8:
-	# ROM: 0x573B38
-	.4byte 0
+	.float 0
 
 
 .global float_80669CDC
 float_80669CDC:
-	# ROM: 0x573B3C
 	.float 1.0
 
 
 .global float_80669CE0
 float_80669CE0:
-	# ROM: 0x573B40
-	.4byte 0x42B40000
+	.float 90 #0x42B40000
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

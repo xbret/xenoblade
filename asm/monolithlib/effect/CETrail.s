@@ -12,16 +12,16 @@ func_804D6C60:
 /* 804D6C74 004A0234  3D 60 80 57 */	lis r11, __vt__CETrail@ha
 /* 804D6C78 004A0238  3D 80 80 57 */	lis r12, __vt___reslist_base_CETrail_POINT@ha
 /* 804D6C7C 004A023C  39 6B 34 88 */	addi r11, r11, __vt__CETrail@l
-/* 804D6C80 004A0240  3F 00 80 66 */	lis r24, float_80659DB0@ha
+/* 804D6C80 004A0240  3F 00 80 66 */	lis r24, lbl_80659DB0@ha
 /* 804D6C84 004A0244  39 8C 34 AC */	addi r12, r12, __vt___reslist_base_CETrail_POINT@l
 /* 804D6C88 004A0248  91 63 01 84 */	stw r11, 0x184(r3)
-/* 804D6C8C 004A024C  3A F8 9D B0 */	addi r23, r24, float_80659DB0@l
+/* 804D6C8C 004A024C  3A F8 9D B0 */	addi r23, r24, lbl_80659DB0@l
 /* 804D6C90 004A0250  3D 60 80 57 */	lis r11, __vt__reslist_CETrail_POINT@ha
 /* 804D6C94 004A0254  91 83 00 00 */	stw r12, 0(r3)
 /* 804D6C98 004A0258  7D 5F 53 78 */	mr r31, r10
 /* 804D6C9C 004A025C  C0 02 D5 84 */	lfs f0, float_8066D904@sda21(r2)
 /* 804D6CA0 004A0260  7C 99 23 78 */	mr r25, r4
-/* 804D6CA4 004A0264  C0 78 9D B0 */	lfs f3, float_80659DB0@l(r24)
+/* 804D6CA4 004A0264  C0 78 9D B0 */	lfs f3, lbl_80659DB0@l(r24)
 /* 804D6CA8 004A0268  7C BA 2B 78 */	mr r26, r5
 /* 804D6CAC 004A026C  C0 57 00 04 */	lfs f2, 4(r23)
 /* 804D6CB0 004A0270  7C DB 33 78 */	mr r27, r6
@@ -308,11 +308,11 @@ func_804D6C60:
 
 .global func_804D70A0
 func_804D70A0:
-/* 804D70A0 004A0660  3C A0 80 66 */	lis r5, float_80659DB0@ha
+/* 804D70A0 004A0660  3C A0 80 66 */	lis r5, lbl_80659DB0@ha
 /* 804D70A4 004A0664  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 804D70A8 004A0668  38 85 9D B0 */	addi r4, r5, float_80659DB0@l
+/* 804D70A8 004A0668  38 85 9D B0 */	addi r4, r5, lbl_80659DB0@l
 /* 804D70AC 004A066C  C0 02 D5 84 */	lfs f0, float_8066D904@sda21(r2)
-/* 804D70B0 004A0670  C0 65 9D B0 */	lfs f3, float_80659DB0@l(r5)
+/* 804D70B0 004A0670  C0 65 9D B0 */	lfs f3, lbl_80659DB0@l(r5)
 /* 804D70B4 004A0674  C0 44 00 04 */	lfs f2, 4(r4)
 /* 804D70B8 004A0678  C0 24 00 08 */	lfs f1, 8(r4)
 /* 804D70BC 004A067C  D0 61 00 08 */	stfs f3, 8(r1)
@@ -2379,34 +2379,29 @@ __RTTI___reslist_base_CETrail_POINT:
 
 .global lbl_80666458
 lbl_80666458:
-	# ROM: 0x572038
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_8066645C
 lbl_8066645C:
-	# ROM: 0x57203C
 	.4byte 0x01000000
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .global float_8066D920
 float_8066D920:
-	# ROM: 0x577780
 	.float 0.5
 	.4byte 0
 
 
 .global double_8066D928
 double_8066D928:
-	# ROM: 0x577788
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066D930
 float_8066D930:
-	# ROM: 0x577790
 	.float -1.0
 	.4byte 0
 
@@ -2417,95 +2412,80 @@ CETrail_typestr:
 
 .global float_8066D940
 float_8066D940:
-	# ROM: 0x5777A0
-	.4byte 0
+	.float 0
 
 
 .global float_8066D944
 float_8066D944:
-	# ROM: 0x5777A4
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_8066D948
 float_8066D948:
-	# ROM: 0x5777A8
-	.4byte 0x3F7D70A4
+	.float 0.99 #0x3F7D70A4
 
 
 .global float_8066D94C
 float_8066D94C:
-	# ROM: 0x5777AC
 	.float 1.0
 
 
 .global float_8066D950
 float_8066D950:
-	# ROM: 0x5777B0
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_8066D954
 float_8066D954:
-	# ROM: 0x5777B4
-	.4byte 0x47C34F80
+	.float 99999 #0x47C34F80
 
 
 .global double_8066D958
 double_8066D958:
-	# ROM: 0x5777B8
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066D960
 float_8066D960:
-	# ROM: 0x5777C0
 	.float 1.0
 
 
 .global float_8066D964
 float_8066D964:
-	# ROM: 0x5777C4
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066D968
 float_8066D968:
-	# ROM: 0x5777C8
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 
 .global float_8066D96C
 float_8066D96C:
-	# ROM: 0x5777CC
 	.float 0.5
 
 
 .global double_8066D970
 double_8066D970:
-	# ROM: 0x5777D0
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_8066D978
 double_8066D978:
-	# ROM: 0x5777D8
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066D980
 float_8066D980:
-	# ROM: 0x5777E0
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066D988
 double_8066D988:
-	# ROM: 0x5777E8
 	.4byte 0x43300000
 	.4byte 0x80000000
 

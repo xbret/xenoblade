@@ -26,7 +26,7 @@ InitMetroTRK:
 /* 802CBF4C  48 00 11 AD */		bl TRKSaveExtended1Block
 /* 802CBF50  3C 60 80 57 */		lis r3, gTRKCPUState@h
 /* 802CBF54  60 63 D3 F8 */		ori r3,r3, gTRKCPUState@l
-/* 802CBF58  B8 03 00 00 */		.4byte 0xB8030000  /* illegal lmw r0, 0(r3) */
+/* 802CBF58  B8 03 00 00 */	.4byte 0xB8030000  /* illegal lmw r0, 0(r3) */
 /* 802CBF5C  38 00 00 00 */		li r0,0
 /* 802CBF60  7C 12 FB A6 */		mtspr 0x3f2 ,r0
 /* 802CBF64  7C 15 FB A6 */		mtspr 0x3f5 ,r0
@@ -38,7 +38,7 @@ InitMetroTRK:
 /* 802CBF7C  40 82 00 14 */		bne .L_802CBF90
 /* 802CBF80  80 83 00 84 */		lwz r4,132(r3)
 /* 802CBF84  7C 88 03 A6 */		mtlr r4
-/* 802CBF88  B8 03 00 00 */		.4byte 0xB8030000  /* illegal lmw r0, 0(r3) */
+/* 802CBF88  B8 03 00 00 */	.4byte 0xB8030000  /* illegal lmw r0, 0(r3) */
 /* 802CBF8C  4E 80 00 20 */		blr
 .L_802CBF90:
 /* 802CBF90  4B FF FA C4 */		b TRK_main
@@ -242,7 +242,6 @@ __TRKreset:
 
 .global lbl_8053FD40
 lbl_8053FD40:
-	# ROM: 0x53BE40
 	.4byte 0x00000100
 	.4byte 0x00000200
 	.4byte 0x00000300

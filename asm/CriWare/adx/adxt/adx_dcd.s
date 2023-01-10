@@ -517,7 +517,6 @@ ADX_DecodeFooter:
 
 .global lbl_8051AAD8
 lbl_8051AAD8:
-	# ROM: 0x516BD8
 	.float 6.2831853
 	.4byte 0
 	.4byte 0x40000000

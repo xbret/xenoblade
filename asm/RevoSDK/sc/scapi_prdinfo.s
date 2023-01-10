@@ -198,7 +198,6 @@ SCGetProductSN:
 
 .global lbl_8055F0D8
 lbl_8055F0D8:
-	# ROM: 0x55B1D8
 	.4byte 0x004A504E
 	.4byte 0x00015553
 	.4byte 0x41000245
@@ -221,7 +220,6 @@ lbl_8055F0D8:
 
 .global lbl_8055F120
 lbl_8055F120:
-	# ROM: 0x55B220
 	.4byte 0x004A5000
 	.4byte 0x01555300
 	.4byte 0x02455500

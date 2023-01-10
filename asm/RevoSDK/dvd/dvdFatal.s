@@ -114,7 +114,6 @@ __DVDPrintFatalMessage:
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global lbl_8050E3A8
 lbl_8050E3A8:
-	# ROM: 0x50A4A8
 	.4byte lbl_80549D60
 	.4byte lbl_80549DF0
 	.4byte lbl_80549EA0
@@ -126,7 +125,6 @@ lbl_8050E3A8:
 
 .global lbl_8050E3C4
 lbl_8050E3C4:
-	# ROM: 0x50A4C4
 	.4byte lbl_80549D60
 	.4byte lbl_8054A1E8
 	.4byte lbl_80549EA0
@@ -468,7 +466,6 @@ lbl_8054A480:
 
 .global lbl_80665998
 lbl_80665998:
-	# ROM: 0x571578
 	.4byte lbl_8054A3DC
 	.4byte lbl_8054A480
 
@@ -476,7 +473,6 @@ lbl_80665998:
 
 .global lbl_8066BF88
 lbl_8066BF88:
-	# ROM: 0x575DE8
 	.4byte 0xFFFFFF00
 	.4byte 0
 

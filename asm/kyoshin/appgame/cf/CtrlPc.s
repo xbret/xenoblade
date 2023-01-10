@@ -41,8 +41,8 @@ func_80097004:
 /* 8009708C 0006064C  90 1D 00 84 */	stw r0, 0x84(r29)
 /* 80097090 00060650  48 00 00 20 */	b .L_800970B0
 .L_80097094:
-/* 80097094 00060654  3C 80 80 66 */	lis r4, float_80659DB0@ha
-/* 80097098 00060658  84 64 9D B0 */	lwzu r3, float_80659DB0@l(r4)
+/* 80097094 00060654  3C 80 80 66 */	lis r4, lbl_80659DB0@ha
+/* 80097098 00060658  84 64 9D B0 */	lwzu r3, lbl_80659DB0@l(r4)
 /* 8009709C 0006065C  80 04 00 04 */	lwz r0, 4(r4)
 /* 800970A0 00060660  90 1D 00 80 */	stw r0, 0x80(r29)
 /* 800970A4 00060664  90 7D 00 7C */	stw r3, 0x7c(r29)
@@ -2058,7 +2058,6 @@ cf_CfObjectImplMove_hierarchy:
 
 .global lbl_8052B668
 lbl_8052B668:
-	# ROM: 0x527768
 	.4byte 0
 	.4byte 0x00000020
 	.4byte 0x00000020
@@ -2093,7 +2092,6 @@ lbl_8052B668:
 
 .global lbl_8052B6E0
 lbl_8052B6E0:
-	# ROM: 0x5277E0
 	.4byte 0
 	.4byte 0x00000020
 	.4byte 0x00000020
@@ -2149,20 +2147,17 @@ __RTTI__cf_CfObjectImplMove:
 
 .global float_80668FA8
 float_80668FA8:
-	# ROM: 0x572E08
-	.4byte 0
+	.float 0
 
 
 .global float_80668FAC
 float_80668FAC:
-	# ROM: 0x572E0C
 	.float 10.0
 
 
 .global float_80668FB0
 float_80668FB0:
-	# ROM: 0x572E10
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 	.4byte 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

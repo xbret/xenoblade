@@ -61,7 +61,6 @@ AHXSBF_Synthesize:
 
 .global lbl_805657B8
 lbl_805657B8:
-	# ROM: 0x5618B8
 	.4byte ahxsbf_mult_float_win0
 	.4byte ahxsbf_mult_float_win1
 	.4byte ahxsbf_mult_float_win2

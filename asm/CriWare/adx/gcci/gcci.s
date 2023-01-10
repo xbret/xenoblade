@@ -1076,7 +1076,6 @@ lbl_8051B830:
 
 .global gcci_vtbl
 gcci_vtbl:
-	# ROM: 0x565308
 	.4byte gcCiExecServer
 	.4byte gcCiEntryErrFunc
 	.4byte gcCiGetFileSize

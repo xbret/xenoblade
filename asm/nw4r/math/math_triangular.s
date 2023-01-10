@@ -220,7 +220,6 @@ Atan2FIdx__Q24nw4r4mathFff:
 
 .global lbl_80521110
 lbl_80521110:
-	# ROM: 0x51D210
 	.4byte 0
 	.float 1.0
 	.4byte 0x3CC90A35
@@ -1254,7 +1253,6 @@ lbl_80521110:
 
 .global lbl_8056DEC0
 lbl_8056DEC0:
-	# ROM: 0x569FC0
 	.4byte 0
 	.4byte 0x3FA2EBF1
 	.4byte 0x3FA2EBF1
@@ -1327,42 +1325,35 @@ lbl_8056DEC0:
 
 .global float_8066C620
 float_8066C620:
-	# ROM: 0x576480
-	.4byte 0x47800000
+	.float 65536 #0x47800000
 
 
 .global float_8066C624
 float_8066C624:
-	# ROM: 0x576484
-	.4byte 0
+	.float 0
 
 
 .global float_8066C628
 float_8066C628:
-	# ROM: 0x576488
-	.4byte 0x42000000
+	.float 32 #0x42000000
 
 
 .global float_8066C62C
 float_8066C62C:
-	# ROM: 0x57648C
-	.4byte 0x42800000
+	.float 64 #0x42800000
 
 
 .global float_8066C630
 float_8066C630:
-	# ROM: 0x576490
-	.4byte 0xC2800000
+	.float -64 #0xC2800000
 
 
 .global float_8066C634
 float_8066C634:
-	# ROM: 0x576494
-	.4byte 0x43000000
+	.float 128 #0x43000000
 
 
 .global float_8066C638
 float_8066C638:
-	# ROM: 0x576498
 	.4byte 0xC3000000
 	.4byte 0

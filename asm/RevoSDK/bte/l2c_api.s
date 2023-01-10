@@ -1007,6 +1007,5 @@ lbl_805471B0:
 #might not be here
 .global lbl_8066BF80
 lbl_8066BF80:
-	# ROM: 0x575DE0
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFF0000

@@ -8870,7 +8870,6 @@ lbl_8050A5FC:
 
 .global lbl_8050A608
 lbl_8050A608:
-	# ROM: 0x506708
 	.4byte 0x02000000
 	.4byte 0x01000400
 	.4byte 0x00000400
@@ -9059,7 +9058,6 @@ lbl_8050A654:
 
 .global lbl_8053BD78
 lbl_8053BD78:
-	# ROM: 0x537E78
 	.4byte switch_8028A500
 	.4byte switch_8028A500
 	.4byte switch_8028A3B4
@@ -9078,7 +9076,6 @@ lbl_8053BD78:
 
 .global lbl_8053BDB0
 lbl_8053BDB0:
-	# ROM: 0x537EB0
 	.4byte switch_8028BCD8
 	.4byte switch_8028BCF0
 	.4byte switch_8028BD08
@@ -9092,7 +9089,6 @@ lbl_8053BDB0:
 
 .global lbl_8053BDD4
 lbl_8053BDD4:
-	# ROM: 0x537ED4
 	.4byte switch_8028D17C
 	.4byte switch_8028D17C
 	.4byte switch_8028D120
@@ -9195,91 +9191,76 @@ __RTTI__CEIBCur:
 
 .global float_8066B3CC
 float_8066B3CC:
-	# ROM: 0x57522C
 	.float 0.25
 
 
 .global float_8066B3D0
 float_8066B3D0:
-	# ROM: 0x575230
 	.float 1.0
 
 
 .global float_8066B3D4
 float_8066B3D4:
-	# ROM: 0x575234
 	.float 1.5
 
 
 .global float_8066B3D8
 float_8066B3D8:
-	# ROM: 0x575238
-	.4byte 0x43B80000
+	.float 368 #0x43B80000
 
 
 .global float_8066B3DC
 float_8066B3DC:
-	# ROM: 0x57523C
-	.4byte 0xC1880000
+	.float -17 #0xC1880000
 
 
 .global float_8066B3E0
 float_8066B3E0:
-	# ROM: 0x575240
-	.4byte 0x43010000
+	.float 129 #0x43010000
 
 
 .global lbl_8066B3E4
 lbl_8066B3E4:
-	# ROM: 0x575244
 	.4byte 0x02040506
 
 
 .global lbl_8066B3E8
 lbl_8066B3E8:
-	# ROM: 0x575248
 	.4byte 0x07080000
 
 
 .global float_8066B3EC
 float_8066B3EC:
-	# ROM: 0x57524C
-	.4byte 0x41300000
+	.float 11 #0x41300000
 
 
 .global float_8066B3F0
 float_8066B3F0:
-	# ROM: 0x575250
 	.float 10.0
 
 
 .global float_8066B3F4
 float_8066B3F4:
-	# ROM: 0x575254
-	.4byte 0x3FB33333
+	.float 1.4 #0x3FB33333
 
 
 .global lbl_8066B3F8
 lbl_8066B3F8:
-	# ROM: 0x575258
 	.4byte 0x02040506
 
 
 .global lbl_8066B3FC
 lbl_8066B3FC:
-	# ROM: 0x57525C
 	.4byte 0x07080000
 
 
 .global lbl_8066B400
 lbl_8066B400:
-	# ROM: 0x575260
 	.4byte 0x02040506
 
 
 .global lbl_8066B404
 lbl_8066B404:
-	# ROM: 0x575264
 	.4byte 0x07080000
 
 .global CEIBCur_typestr

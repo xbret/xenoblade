@@ -213,7 +213,6 @@ what__Q23std8bad_castCFv:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_8053F040
 lbl_8053F040:
-	# ROM: 0x53B140
 	.4byte __RTTI__std_bad_cast
 	.4byte 0
 	.4byte __dt__Q23std8bad_castFv
@@ -239,7 +238,6 @@ __RTTI__std_exception:
 
 .global lbl_80665860
 lbl_80665860:
-	# ROM: 0x571440
 	.4byte dthandler__3stdFv
 	.4byte 0
 
@@ -257,7 +255,6 @@ std_exception_typestr:
 
 .global lbl_8050CE10
 lbl_8050CE10:
-	# ROM: 0x508F10
 	.4byte 0
 	.4byte 0
 	.4byte 0

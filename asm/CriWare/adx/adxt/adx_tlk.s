@@ -236,9 +236,9 @@ adxt_Create:
 /* 803828EC 0034BEAC  3C 60 80 5F */	lis r3, lbl_805E8598@ha
 /* 803828F0 0034BEB0  3C 80 80 52 */	lis r4, double_80519970@ha
 /* 803828F4 0034BEB4  80 A3 85 98 */	lwz r5, lbl_805E8598@l(r3)
-/* 803828F8 0034BEB8  3C 60 80 52 */	lis r3, float_80519968@ha
+/* 803828F8 0034BEB8  3C 60 80 52 */	lis r3, lbl_80519968@ha
 /* 803828FC 0034BEBC  3C 00 43 30 */	lis r0, 0x4330
-/* 80382900 0034BEC0  C0 03 99 68 */	lfs f0, float_80519968@l(r3)
+/* 80382900 0034BEC0  C0 03 99 68 */	lfs f0, lbl_80519968@l(r3)
 /* 80382904 0034BEC4  90 BF 00 38 */	stw r5, 0x38(r31)
 /* 80382908 0034BEC8  2C 9D 00 00 */	cmpwi cr1, r29, 0
 /* 8038290C 0034BECC  C8 44 99 70 */	lfd f2, double_80519970@l(r4)
@@ -1013,14 +1013,14 @@ adxt_GetTime:
 /* 803833A4 0034C964  4B F3 6D AD */	bl _savegpr_26
 /* 803833A8 0034C968  3C 00 43 30 */	lis r0, 0x4330
 /* 803833AC 0034C96C  2C 03 00 00 */	cmpwi r3, 0
-/* 803833B0 0034C970  3F C0 80 52 */	lis r30, float_80519968@ha
+/* 803833B0 0034C970  3F C0 80 52 */	lis r30, lbl_80519968@ha
 /* 803833B4 0034C974  3F E0 80 5F */	lis r31, lbl_805E8570@ha
 /* 803833B8 0034C978  90 01 00 10 */	stw r0, 0x10(r1)
 /* 803833BC 0034C97C  7C 7B 1B 78 */	mr r27, r3
 /* 803833C0 0034C980  7C 9C 23 78 */	mr r28, r4
 /* 803833C4 0034C984  7C BD 2B 78 */	mr r29, r5
 /* 803833C8 0034C988  90 01 00 18 */	stw r0, 0x18(r1)
-/* 803833CC 0034C98C  3B DE 99 68 */	addi r30, r30, float_80519968@l
+/* 803833CC 0034C98C  3B DE 99 68 */	addi r30, r30, lbl_80519968@l
 /* 803833D0 0034C990  3B FF 85 70 */	addi r31, r31, lbl_805E8570@l
 /* 803833D4 0034C994  41 82 00 14 */	beq .L_803833E8
 /* 803833D8 0034C998  2C 04 00 00 */	cmpwi r4, 0
@@ -1219,12 +1219,12 @@ ADXT_GetTimeReal:
 /* 803836A4 0034CC64  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 803836A8 0034CC68  3C C0 80 52 */	lis r6, double_80519970@ha
 /* 803836AC 0034CC6C  6C 65 80 00 */	xoris r5, r3, 0x8000
-/* 803836B0 0034CC70  3C 60 80 52 */	lis r3, float_80519988@ha
+/* 803836B0 0034CC70  3C 60 80 52 */	lis r3, lbl_80519988@ha
 /* 803836B4 0034CC74  90 A1 00 14 */	stw r5, 0x14(r1)
 /* 803836B8 0034CC78  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 803836BC 0034CC7C  C8 66 99 70 */	lfd f3, double_80519970@l(r6)
 /* 803836C0 0034CC80  90 81 00 10 */	stw r4, 0x10(r1)
-/* 803836C4 0034CC84  C0 03 99 88 */	lfs f0, float_80519988@l(r3)
+/* 803836C4 0034CC84  C0 03 99 88 */	lfs f0, lbl_80519988@l(r3)
 /* 803836C8 0034CC88  C8 21 00 10 */	lfd f1, 0x10(r1)
 /* 803836CC 0034CC8C  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 803836D0 0034CC90  EC 41 18 28 */	fsubs f2, f1, f3
@@ -2453,16 +2453,14 @@ adxt_InsertSilence:
 
 
 
-.global float_80519968
-float_80519968:
-	# ROM: 0x515A68
+.global lbl_80519968
+lbl_80519968:
 	.4byte 0x3F59999A
 	.4byte 0
 
 
 .global double_80519970
 double_80519970:
-	# ROM: 0x515A70
 	.4byte 0x43300000
 	.4byte 0x80000000
 	.4byte 0
@@ -2471,9 +2469,8 @@ double_80519970:
 	.4byte 0xC2700000
 
 
-.global float_80519988
-float_80519988:
-	# ROM: 0x515A88
+.global lbl_80519988
+lbl_80519988:
 	.float 100.0
 	.float -1.0
 
@@ -2531,13 +2528,11 @@ lbl_80519990:
 
 .global lbl_80563720
 lbl_80563720:
-	# ROM: 0x55F820
 	.4byte 0x00000019
 
 
 .global lbl_80563724
 lbl_80563724:
-	# ROM: 0x55F824
 	.4byte 0x00000001
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

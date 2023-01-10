@@ -97,7 +97,6 @@ FrSqrt__Q24nw4r4mathFf:
 
 .global lbl_8056D5B0
 lbl_8056D5B0:
-	# ROM: 0x5696B0
 	.float 0.5
 	.4byte 0x3CB5586D
 	.4byte 0x3F05AAC3
@@ -168,7 +167,6 @@ lbl_8056D5B0:
 
 .global lbl_8056D6B8
 lbl_8056D6B8:
-	# ROM: 0x5697B8
 	.4byte 0
 	.4byte 0x3B7F8053
 	.4byte 0x3B7F8053
@@ -688,42 +686,35 @@ lbl_8056D6B8:
 
 .global float_8066C600
 float_8066C600:
-	# ROM: 0x576460
-	.4byte 0x3FB8AA3B
+	.float 1.44269502 #0x3FB8AA3B
 
 
 .global float_8066C604
 float_8066C604:
-	# ROM: 0x576464
-	.4byte 0x3F317218
+	.float 0.693147182 #0x3F317218
 
 
 .global float_8066C608
 float_8066C608:
-	# ROM: 0x576468
-	.4byte 0x41B8AA3B
+	.float 23.0831203 #0x41B8AA3B
 
 
 .global float_8066C60C
 float_8066C60C:
-	# ROM: 0x57646C
-	.4byte 0x43800000
+	.float 256 #0x43800000
 
 
 .global float_8066C610
 float_8066C610:
-	# ROM: 0x576470
 	.float 1.0
 
 
 .global float_8066C614
 float_8066C614:
-	# ROM: 0x576474
 	.float 0.5
 
 
 .global float_8066C618
 float_8066C618:
-	# ROM: 0x576478
 	.4byte 0x40400000
 	.4byte 0

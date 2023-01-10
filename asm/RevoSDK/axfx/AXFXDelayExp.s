@@ -771,26 +771,22 @@ __InitParams:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global float_8066BE20
 float_8066BE20:
-	# ROM: 0x575C80
-	.4byte 0x42000000
+	.float 32 #0x42000000
 
 
 .global float_8066BE24
 float_8066BE24:
-	# ROM: 0x575C84
-	.4byte 0
+	.float 0
 
 
 .global float_8066BE28
 float_8066BE28:
-	# ROM: 0x575C88
 	.float 1.0
 
 
 .global float_8066BE2C
 float_8066BE2C:
-	# ROM: 0x575C8C
-	.4byte 0x43000000
+	.float 128 #0x43000000
 
 
 .global float_8066BE30

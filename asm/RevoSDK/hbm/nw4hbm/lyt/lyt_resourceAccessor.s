@@ -41,7 +41,6 @@ GetFont__Q36nw4hbm3lyt16ResourceAccessorFPCc:
 
 .global lbl_8054D9D8
 lbl_8054D9D8:
-	# ROM: 0x549AD8
 	.4byte lbl_8054D6B0
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt16ResourceAccessorFv

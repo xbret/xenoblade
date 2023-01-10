@@ -280,8 +280,7 @@ __RTTI__cf_CChainEffect:
 
 .global float_8066B4F8
 float_8066B4F8:
-	# ROM: 0x575358
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 	.4byte 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

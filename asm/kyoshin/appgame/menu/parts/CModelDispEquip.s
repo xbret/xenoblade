@@ -2797,7 +2797,6 @@ CModelDispEquip_hierarchy:
 
 .global lbl_80665030
 lbl_80665030:
-	# ROM: 0x570C10
 	.4byte 0x00000007
 	.4byte 0x00000012
 
@@ -2810,73 +2809,61 @@ __RTTI__CModelDispEquip:
 
 .global float_8066AB30
 float_8066AB30:
-	# ROM: 0x574990
 	.float 1.0
 
 
 .global float_8066AB34
 float_8066AB34:
-	# ROM: 0x574994
-	.4byte 0
+	.float 0
 
 
 .global float_8066AB38
 float_8066AB38:
-	# ROM: 0x574998
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 
 .global float_8066AB3C
 float_8066AB3C:
-	# ROM: 0x57499C
 	.float 0.2
 
 
 .global float_8066AB40
 float_8066AB40:
-	# ROM: 0x5749A0
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_8066AB44
 float_8066AB44:
-	# ROM: 0x5749A4
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_8066AB48
 float_8066AB48:
-	# ROM: 0x5749A8
-	.4byte 0x40600000
+	.float 3.5 #0x40600000
 
 
 .global float_8066AB4C
 float_8066AB4C:
-	# ROM: 0x5749AC
 	.float -1.0
 
 
 .global float_8066AB50
 float_8066AB50:
-	# ROM: 0x5749B0
-	.4byte 0xBFC00000
+	.float -1.5 #0xBFC00000
 
 
 .global float_8066AB54
 float_8066AB54:
-	# ROM: 0x5749B4
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066AB58
 float_8066AB58:
-	# ROM: 0x5749B8
 	.float 8.0
 
 
 .global float_8066AB5C
 float_8066AB5C:
-	# ROM: 0x5749BC
 	.float 1.5
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

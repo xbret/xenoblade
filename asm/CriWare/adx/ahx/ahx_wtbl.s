@@ -552,5 +552,4 @@ ahxsbf_synthesis_window_table:
 
 .global lbl_80566078
 lbl_80566078:
-	# ROM: 0x562178
 	.4byte ahxsbf_synthesis_window_table

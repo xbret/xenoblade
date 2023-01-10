@@ -495,62 +495,52 @@ __RTTI__CScnFogMan:
 
 .global float_8066D360
 float_8066D360:
-	# ROM: 0x5771C0
-	.4byte 0
+	.float 0
 
 
 .global float_8066D364
 float_8066D364:
-	# ROM: 0x5771C4
 	.float 1.0
 
 
 .global float_8066D368
 float_8066D368:
-	# ROM: 0x5771C8
-	.4byte 0x447A0000
+	.float 1000 #0x447A0000
 
 
 .global float_8066D36C
 float_8066D36C:
-	# ROM: 0x5771CC
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_8066D370
 float_8066D370:
-	# ROM: 0x5771D0
 	.float 100.0
 
 
 .global float_8066D374
 float_8066D374:
-	# ROM: 0x5771D4
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 
 .global float_8066D378
 float_8066D378:
-	# ROM: 0x5771D8
-	.4byte 0x3DEA72EB
+	.float 0.114477001 #0x3DEA72EB
 
 
 .global float_8066D37C
 float_8066D37C:
-	# ROM: 0x5771DC
-	.4byte 0x3E990AFE
+	.float 0.298911989 #0x3E990AFE
 
 
 .global float_8066D380
 float_8066D380:
-	# ROM: 0x5771E0
-	.4byte 0x3F162C23
+	.float 0.586610973 #0x3F162C23
 	.4byte 0
 
 
 .global double_8066D388
 double_8066D388:
-	# ROM: 0x5771E8
 	.4byte 0x43300000
 	.4byte 0
 

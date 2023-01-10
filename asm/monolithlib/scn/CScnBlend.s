@@ -131,9 +131,9 @@ func_80498DE8:
 /* 80498E1C 004623DC  C0 02 CF 28 */	lfs f0, float_8066D2A8@sda21(r2)
 /* 80498E20 004623E0  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80498E24 004623E4  41 82 03 98 */	beq .L_804991BC
-/* 80498E28 004623E8  3C 60 80 66 */	lis r3, float_80659FB8@ha
+/* 80498E28 004623E8  3C 60 80 66 */	lis r3, lbl_80659FB8@ha
 /* 80498E2C 004623EC  38 80 00 00 */	li r4, 0
-/* 80498E30 004623F0  38 63 9F B8 */	addi r3, r3, float_80659FB8@l
+/* 80498E30 004623F0  38 63 9F B8 */	addi r3, r3, lbl_80659FB8@l
 /* 80498E34 004623F4  4B E8 57 CD */	bl GXLoadPosMtxImm
 /* 80498E38 004623F8  38 60 00 00 */	li r3, 0
 /* 80498E3C 004623FC  4B E8 58 E5 */	bl GXSetCurrentMtx
@@ -422,26 +422,22 @@ __RTTI__CScnFilter:
 
 .global float_8066D2A0
 float_8066D2A0:
-	# ROM: 0x577100
 	.float 1.0
 
 
 .global float_8066D2A4
 float_8066D2A4:
-	# ROM: 0x577104
 	.float 0.5
 
 
 .global float_8066D2A8
 float_8066D2A8:
-	# ROM: 0x577108
-	.4byte 0
+	.float 0
 
 
 .global float_8066D2AC
 float_8066D2AC:
-	# ROM: 0x57710C
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

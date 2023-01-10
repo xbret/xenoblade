@@ -1592,7 +1592,6 @@ __VISetRevolutionModeSimple:
 
 .global lbl_8055FFF8
 lbl_8055FFF8:
-	# ROM: 0x55C0F8
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1957,79 +1956,66 @@ lbl_8055FFF8:
 
 .global lbl_80665D28
 lbl_80665D28:
-	# ROM: 0x571908
 	.4byte 0x000000FF
 
 
 .global lbl_80665D2C
 lbl_80665D2C:
-	# ROM: 0x57190C
 	.byte 0xFF
 
 
 .global lbl_80665D2D
 lbl_80665D2D:
-	# ROM: 0x57190D
 	.byte 0xFF
 
 
 .global lbl_80665D2E
 lbl_80665D2E:
-	# ROM: 0x57190E
 	.byte 0xFF
 
 
 .global lbl_80665D2F
 lbl_80665D2F:
-	# ROM: 0x57190F
 	.byte 0xFF
 
 
 .global lbl_80665D30
 lbl_80665D30:
-	# ROM: 0x571910
 	.byte 0xFF
 
 
 .global lbl_80665D31
 lbl_80665D31:
-	# ROM: 0x571911
 	.byte 0xFF
 
 
 .global lbl_80665D32
 lbl_80665D32:
-	# ROM: 0x571912
 	.byte 0xFF
 
 
 .global lbl_80665D33
 lbl_80665D33:
-	# ROM: 0x571913
 	.byte 0xFF
 
 
 .global lbl_80665D34
 lbl_80665D34:
-	# ROM: 0x571914
 	.byte 0xFF
 
 
 .global lbl_80665D35
 lbl_80665D35:
-	# ROM: 0x571915
 	.byte 0xFF
 
 
 .global lbl_80665D36
 lbl_80665D36:
-	# ROM: 0x571916
 	.byte 0xFF
 
 
 .global lbl_80665D37
 lbl_80665D37:
-	# ROM: 0x571917
 	.byte 0xFF
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

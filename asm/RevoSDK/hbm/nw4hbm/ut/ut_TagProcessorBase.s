@@ -768,7 +768,6 @@ func_80339AD0:
 
 .global double_80518B38
 double_80518B38:
-	# ROM: 0x514C38
 	.4byte 0x43300000
 	.4byte 0x80000000
 
@@ -796,7 +795,6 @@ lbl_8054EEB0:
 
 .global lbl_8054EEB8
 lbl_8054EEB8:
-	# ROM: 0x54AFB8
 	.4byte lbl_8054EEF0
 	.4byte 0
 	.4byte __dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv

@@ -1701,7 +1701,6 @@ lbl_80503F58:
 
 .global lbl_805392F8
 lbl_805392F8:
-	# ROM: 0x5353F8
 	.4byte switch_80212AA0
 	.4byte switch_80212AA8
 	.4byte switch_80212AB0
@@ -1778,38 +1777,32 @@ __RTTI__CMakeCrystalWin:
 
 .global float_8066AD10
 float_8066AD10:
-	# ROM: 0x574B70
-	.4byte 0
+	.float 0
 
 
 .global float_8066AD14
 float_8066AD14:
-	# ROM: 0x574B74
-	.4byte 0x41A00000
+	.float 20 #0x41A00000
 
 
 .global float_8066AD18
 float_8066AD18:
-	# ROM: 0x574B78
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066AD1C
 float_8066AD1C:
-	# ROM: 0x574B7C
-	.4byte 0
+	.float 0
 
 
 .global double_8066AD20
 double_8066AD20:
-	# ROM: 0x574B80
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_8066AD28
 double_8066AD28:
-	# ROM: 0x574B88
 	.4byte 0x43300000
 	.4byte 0x80000000
 

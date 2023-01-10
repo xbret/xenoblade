@@ -2477,51 +2477,43 @@ __RTTI__CMenuUpdate:
 
 .global float_80669C60
 float_80669C60:
-	# ROM: 0x573AC0
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global lbl_80669C68
 lbl_80669C68:
-	# ROM: 0x573AC8
 	.4byte lbl_804FCBB8
 
 
 .global lbl_80669C6C
 lbl_80669C6C:
-	# ROM: 0x573ACC
 	.4byte lbl_804FCBC4
 
 
 .global lbl_80669C70
 lbl_80669C70:
-	# ROM: 0x573AD0
 	.4byte lbl_804FCBD0
 
 
 .global lbl_80669C74
 lbl_80669C74:
-	# ROM: 0x573AD4
 	.4byte lbl_804FCBDC
 
 
 .global double_80669C78
 double_80669C78:
-	# ROM: 0x573AD8
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_80669C80
 float_80669C80:
-	# ROM: 0x573AE0
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_80669C84
 float_80669C84:
-	# ROM: 0x573AE4
 	.float 1.0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

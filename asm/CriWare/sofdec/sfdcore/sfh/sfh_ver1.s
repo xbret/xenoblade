@@ -2464,7 +2464,6 @@ lbl_805207F8:
 
 .global lbl_8056C728
 lbl_8056C728:
-	# ROM: 0x568828
 	.4byte switch_803D1D7C
 	.4byte switch_803D1D84
 	.4byte switch_803D1D8C
@@ -2476,7 +2475,6 @@ lbl_8056C728:
 
 .global lbl_8056C744
 lbl_8056C744:
-	# ROM: 0x568844
 	.4byte switch_803D2D04
 	.4byte switch_803D2CB8
 	.4byte switch_803D2CC0

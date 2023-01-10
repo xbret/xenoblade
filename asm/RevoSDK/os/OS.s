@@ -1625,7 +1625,6 @@ lbl_80551300:
 
 .global lbl_80665B28
 lbl_80665B28:
-	# ROM: 0x571708
 	.4byte lbl_80551300
 
 
@@ -1659,7 +1658,6 @@ lbl_80665B48:
 
 .global lbl_80665B50
 lbl_80665B50:
-	# ROM: 0x571730
 	.4byte lbl_80665B48
 	.4byte 0
 
@@ -1667,13 +1665,11 @@ lbl_80665B50:
 
 .global lbl_8066C188
 lbl_8066C188:
-	# ROM: 0x575FE8
 	.4byte 0x0000FF00
 
 
 .global lbl_8066C18C
 lbl_8066C18C:
-	# ROM: 0x575FEC
 	.4byte 0xFFFFFF00
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

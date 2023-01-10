@@ -476,30 +476,25 @@ __RTTI__CScnRoot:
 
 .global float_8066D1A8
 float_8066D1A8:
-	# ROM: 0x577008
-	.4byte 0x41A00000
+	.float 20 #0x41A00000
 
 
 .global float_8066D1AC
 float_8066D1AC:
-	# ROM: 0x57700C
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_8066D1B0
 float_8066D1B0:
-	# ROM: 0x577010
-	.4byte 0x3DA3D70A
+	.float 0.08 #0x3DA3D70A
 
 
 .global float_8066D1B4
 float_8066D1B4:
-	# ROM: 0x577014
-	.4byte 0
+	.float 0
 
 
 .global double_8066D1B8
 double_8066D1B8:
-	# ROM: 0x577018
 	.4byte 0x43300000
 	.4byte 0x80000000

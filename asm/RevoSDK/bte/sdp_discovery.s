@@ -1362,7 +1362,6 @@ lbl_80549038:
 
 .global lbl_80549120
 lbl_80549120:
-	# ROM: 0x545220
 	.4byte switch_80305BD0
 	.4byte switch_8030579C
 	.4byte switch_8030584C

@@ -1435,19 +1435,16 @@ __RTTI__CPlayAwardList:
 
 .global float_8066B260
 float_8066B260:
-	# ROM: 0x5750C0
-	.4byte 0x437C0000
+	.float 252 #0x437C0000
 
 
 .global float_8066B264
 float_8066B264:
-	# ROM: 0x5750C4
-	.4byte 0x42B00000
+	.float 88 #0x42B00000
 
 
 .global float_8066B268
 float_8066B268:
-	# ROM: 0x5750C8
 	.float 1.0
 	.4byte 0
 

@@ -56,7 +56,6 @@ InitReaderFunc__Q34nw4r2ut4FontFQ34nw4r2ut12FontEncoding:
 
 .global lbl_8056E710
 lbl_8056E710:
-	# ROM: 0x56A810
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte ReadNextCharUTF8__Q34nw4r2ut14CharStrmReaderFv

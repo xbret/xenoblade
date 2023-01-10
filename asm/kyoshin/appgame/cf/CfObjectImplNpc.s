@@ -202,7 +202,6 @@ func_800CA940:
 
 .global lbl_804F7FD0
 lbl_804F7FD0:
-	# ROM: 0x4F40D0
 	.4byte 0x3ECCCCCD
 	.4byte 0x3ECCCCCD
 	.4byte 0x3ECCCCCD
@@ -229,7 +228,6 @@ lbl_804F800C:
 
 .global lbl_8052E1D0
 lbl_8052E1D0:
-	# ROM: 0x52A2D0
 	.4byte lbl_806694D0
 	.4byte lbl_806694D8
 	.4byte lbl_806694E0

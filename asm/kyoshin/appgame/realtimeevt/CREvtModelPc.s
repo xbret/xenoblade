@@ -1451,7 +1451,6 @@ func_80184B0C:
 
 .global lbl_804FEFD0
 lbl_804FEFD0:
-	# ROM: 0x4FB0D0
 	.4byte 0
 	.4byte 0x00000002
 	.4byte 0x00000003
@@ -1488,7 +1487,6 @@ lbl_8053595C:
 
 .global lbl_80535968
 lbl_80535968:
-	# ROM: 0x531A68
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80183C90
@@ -1496,7 +1494,6 @@ lbl_80535968:
 
 .global lbl_80535974
 lbl_80535974:
-	# ROM: 0x531A74
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801845F0
@@ -1608,14 +1605,12 @@ __RTTI__cf_CREvtModelPc:
 
 .global float_8066A1D8
 float_8066A1D8:
-	# ROM: 0x574038
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066A1E0
 double_8066A1E0:
-	# ROM: 0x574040
 	.4byte 0x43300000
 	.4byte 0x80000000
 

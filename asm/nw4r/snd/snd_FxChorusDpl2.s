@@ -431,7 +431,6 @@ OnChangeOutputMode__Q34nw4r3snd12FxChorusDpl2Fv:
 
 .global lbl_8056E078
 lbl_8056E078:
-	# ROM: 0x56A178
 	.4byte 0
 	.4byte 0
 	.4byte func_801C2E34
@@ -447,47 +446,39 @@ lbl_8056E078:
 
 .global float_8066C760
 float_8066C760:
-	# ROM: 0x5765C0
 	.float 10.0
 
 
 .global float_8066C764
 float_8066C764:
-	# ROM: 0x5765C4
 	.float 0.5
 
 
 .global float_8066C768
 float_8066C768:
-	# ROM: 0x5765C8
 	.float 1.0
 
 
 .global float_8066C76C
 float_8066C76C:
-	# ROM: 0x5765CC
-	.4byte 0
+	.float 0
 
 
 .global float_8066C770
 float_8066C770:
-	# ROM: 0x5765D0
-	.4byte 0x42480000
+	.float 50 #0x42480000
 
 
 .global float_8066C774
 float_8066C774:
-	# ROM: 0x5765D4
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_8066C778
 float_8066C778:
-	# ROM: 0x5765D8
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066C77C
 float_8066C77C:
-	# ROM: 0x5765DC
 	.4byte 0x3F7D70A4

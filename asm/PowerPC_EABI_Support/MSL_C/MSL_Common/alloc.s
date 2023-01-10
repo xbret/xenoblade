@@ -386,7 +386,6 @@ lbl_80667528:
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global lbl_8050CF00
 lbl_8050CF00:
-	# ROM: 0x509000
 	.4byte 0x00000004
 	.4byte 0x0000000C
 	.4byte 0x00000014

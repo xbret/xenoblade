@@ -678,12 +678,12 @@ func_80210BAC:
 /* 80210BC8 001DA188  40 82 00 38 */	bne .L_80210C00
 /* 80210BCC 001DA18C  80 03 00 60 */	lwz r0, 0x60(r3)
 /* 80210BD0 001DA190  3C C0 80 54 */	lis r6, lbl_80538FE8@ha
-/* 80210BD4 001DA194  3C 80 80 58 */	lis r4, float_80579D98@ha
+/* 80210BD4 001DA194  3C 80 80 58 */	lis r4, lbl_80579D98@ha
 /* 80210BD8 001DA198  38 A3 00 04 */	addi r5, r3, 4
 /* 80210BDC 001DA19C  54 00 10 3A */	slwi r0, r0, 2
 /* 80210BE0 001DA1A0  38 C6 8F E8 */	addi r6, r6, lbl_80538FE8@l
 /* 80210BE4 001DA1A4  7D 86 00 2E */	lwzx r12, r6, r0
-/* 80210BE8 001DA1A8  38 84 9D 98 */	addi r4, r4, float_80579D98@l
+/* 80210BE8 001DA1A8  38 84 9D 98 */	addi r4, r4, lbl_80579D98@l
 /* 80210BEC 001DA1AC  7D 89 03 A6 */	mtctr r12
 /* 80210BF0 001DA1B0  38 63 00 1C */	addi r3, r3, 0x1c
 /* 80210BF4 001DA1B4  4E 80 04 21 */	bctrl 
@@ -736,7 +736,6 @@ lbl_80503ECC:
 
 .global lbl_80539208
 lbl_80539208:
-	# ROM: 0x535308
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802106F8
@@ -781,7 +780,6 @@ cf_CfGimmickItem_hierarchy:
 
 .global lbl_806650B0
 lbl_806650B0:
-	# ROM: 0x570C90
 	.4byte lbl_8066ACF8
 	.4byte lbl_8066AD00
 
@@ -806,14 +804,12 @@ lbl_8066AD00:
 
 .global float_8066AD08
 float_8066AD08:
-	# ROM: 0x574B68
-	.4byte 0
+	.float 0
 
 
 .global float_8066AD0C
 float_8066AD0C:
-	# ROM: 0x574B6C
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

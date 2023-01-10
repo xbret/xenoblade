@@ -251,7 +251,6 @@ OSCreateHeap:
 
 .global lbl_80665B58
 lbl_80665B58:
-	# ROM: 0x571738
 	.4byte 0xFFFFFFFF
 	.4byte 0
 

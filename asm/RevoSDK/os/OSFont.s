@@ -1325,7 +1325,6 @@ OSGetFontTexture:
 
 .global lbl_80551FA0
 lbl_80551FA0:
-	# ROM: 0x54E0A0
 	.4byte 0x020C020D
 	.4byte 0x020E020F
 	.4byte 0x02100211
@@ -1426,7 +1425,6 @@ lbl_80551FA0:
 
 .global lbl_80552120
 lbl_80552120:
-	# ROM: 0x54E220
 	.4byte 0x00000001
 	.4byte 0x00020003
 	.4byte 0x00040005
@@ -2044,7 +2042,6 @@ lbl_80552120:
 
 .global lbl_80665B88
 lbl_80665B88:
-	# ROM: 0x571768
 	.4byte 0xFFFF0000
 	.4byte 0
 
@@ -2052,13 +2049,11 @@ lbl_80665B88:
 
 .global lbl_8066C1D0
 lbl_8066C1D0:
-	# ROM: 0x576030
 	.4byte 0x2ABE003D
 
 
 .global lbl_8066C1D4
 lbl_8066C1D4:
-	# ROM: 0x576034
 	.4byte 0x003D003D
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

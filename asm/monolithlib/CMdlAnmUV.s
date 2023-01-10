@@ -676,13 +676,11 @@ __vt__CMdlAnmUV:
 
 .global lbl_80666588
 lbl_80666588:
-	# ROM: 0x572168
 	.4byte lbl_8066DAE8
 
 
 .global lbl_8066658C
 lbl_8066658C:
-	# ROM: 0x57216C
 	.4byte lbl_8066DAF0
 
 .global __RTTI__CMdlAnmUV
@@ -693,13 +691,11 @@ __RTTI__CMdlAnmUV:
 
 .global lbl_80666598
 lbl_80666598:
-	# ROM: 0x572178
 	.4byte 0x72656600
 
 
 .global lbl_8066659C
 lbl_8066659C:
-	# ROM: 0x57217C
 	.4byte 0x72656600
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -717,14 +713,12 @@ lbl_8066DAF0:
 
 .global float_8066DAF8
 float_8066DAF8:
-	# ROM: 0x577958
 	.float 1.0
 
 
 .global float_8066DAFC
 float_8066DAFC:
-	# ROM: 0x57795C
-	.4byte 0
+	.float 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

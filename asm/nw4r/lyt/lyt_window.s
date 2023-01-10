@@ -2555,7 +2555,6 @@ sinit_804053D0:
 
 .global lbl_8056D398
 lbl_8056D398:
-	# ROM: 0x569498
 	.4byte 0x00000100
 	.4byte 0x00010101
 	.4byte 0x00010100
@@ -2575,7 +2574,6 @@ lbl_8056D398:
 
 .global lbl_8056D3D4
 lbl_8056D3D4:
-	# ROM: 0x5694D4
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt6WindowFv
@@ -2616,21 +2614,18 @@ lbl_8056D3D4:
 
 .global float_8066C580
 float_8066C580:
-	# ROM: 0x5763E0
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066C588
 double_8066C588:
-	# ROM: 0x5763E8
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_8066C590
 double_8066C590:
-	# ROM: 0x5763F0
 	.4byte 0x43300000
 	.4byte 0x80000000
 

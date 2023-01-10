@@ -5174,7 +5174,6 @@ lbl_804F7F50:
 
 .global lbl_804F7F78
 lbl_804F7F78:
-	# ROM: 0x4F4078
 	.byte 0x00
 	.asciz "INPUT"
 	.asciz "ENCO"
@@ -5191,7 +5190,6 @@ lbl_804F7F78:
 
 .global lbl_8052DE60
 lbl_8052DE60:
-	# ROM: 0x529F60
 	.4byte switch_800C86D0
 	.4byte switch_800C83E0
 	.4byte switch_800C8554
@@ -5246,7 +5244,6 @@ lbl_8052DE60:
 
 .global lbl_8052DF28
 lbl_8052DF28:
-	# ROM: 0x52A028
 	.4byte switch_800CA238
 	.4byte switch_800CA250
 	.4byte switch_800CA250
@@ -5357,77 +5354,65 @@ __vt__cf_CfObjectImplPc:
 
 .global float_80669490
 float_80669490:
-	# ROM: 0x5732F0
 	.float 1.0
 
 
 .global float_80669494
 float_80669494:
-	# ROM: 0x5732F4
-	.4byte 0
+	.float 0
 
 
 .global float_80669498
 float_80669498:
-	# ROM: 0x5732F8
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 	.4byte 0
 
 
 .global double_806694A0
 double_806694A0:
-	# ROM: 0x573300
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_806694A8
 double_806694A8:
-	# ROM: 0x573308
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_806694B0
 float_806694B0:
-	# ROM: 0x573310
 	.float 100.0
 
 
 .global float_806694B4
 float_806694B4:
-	# ROM: 0x573314
-	.4byte 0x3E19999A
+	.float 0.15 #0x3E19999A
 
 
 .global float_806694B8
 float_806694B8:
-	# ROM: 0x573318
 	.float -1.0
 
 
 .global float_806694BC
 float_806694BC:
-	# ROM: 0x57331C
 	.float 10.0
 
 
 .global float_806694C0
 float_806694C0:
-	# ROM: 0x573320
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_806694C4
 float_806694C4:
-	# ROM: 0x573324
-	.4byte 0x41700000
+	.float 15 #0x41700000
 
 
 .global float_806694C8
 float_806694C8:
-	# ROM: 0x573328
-	.4byte 0xC1200000
+	.float -10 #0xC1200000
 	.4byte 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

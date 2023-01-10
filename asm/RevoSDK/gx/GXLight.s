@@ -560,78 +560,65 @@ GXSetChanCtrl:
 
 .global float_8066BFD8
 float_8066BFD8:
-	# ROM: 0x575E38
-	.4byte 0
+	.float 0
 
 
 .global float_8066BFDC
 float_8066BFDC:
-	# ROM: 0x575E3C
-	.4byte 0x42B40000
+	.float 90 #0x42B40000
 
 
 .global float_8066BFE0
 float_8066BFE0:
-	# ROM: 0x575E40
 	.float 3.14159265
 
 
 .global float_8066BFE4
 float_8066BFE4:
-	# ROM: 0x575E44
-	.4byte 0x43340000
+	.float 180 #0x43340000
 
 
 .global float_8066BFE8
 float_8066BFE8:
-	# ROM: 0x575E48
-	.4byte 0xC47A0000
+	.float -1000 #0xC47A0000
 
 
 .global float_8066BFEC
 float_8066BFEC:
-	# ROM: 0x575E4C
-	.4byte 0x447A0000
+	.float 1000 #0x447A0000
 
 
 .global float_8066BFF0
 float_8066BFF0:
-	# ROM: 0x575E50
 	.float 1.0
 
 
 .global float_8066BFF4
 float_8066BFF4:
-	# ROM: 0x575E54
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066BFF8
 float_8066BFF8:
-	# ROM: 0x575E58
-	.4byte 0xC0800000
+	.float -4 #0xC0800000
 
 
 .global float_8066BFFC
 float_8066BFFC:
-	# ROM: 0x575E5C
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_8066C000
 float_8066C000:
-	# ROM: 0x575E60
-	.4byte 0xC0000000
+	.float -2 #0xC0000000
 
 
 .global float_8066C004
 float_8066C004:
-	# ROM: 0x575E64
 	.float 0.5
 
 
 .global float_8066C008
 float_8066C008:
-	# ROM: 0x575E68
 	.4byte 0xDD5E0B6B
 	.4byte 0

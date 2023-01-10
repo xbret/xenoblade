@@ -1650,59 +1650,50 @@ __RTTI__CMenuLandTelop:
 
 .global float_80669C88
 float_80669C88:
-	# ROM: 0x573AE8
-	.4byte 0
+	.float 0
 
 
 .global float_80669C8C
 float_80669C8C:
-	# ROM: 0x573AEC
 	.float 1.0
 
 
 .global float_80669C90
 float_80669C90:
-	# ROM: 0x573AF0
-	.4byte 0x40400000
+	.float 3 #0x40400000
 	.4byte 0
 
 
 .global double_80669C98
 double_80669C98:
-	# ROM: 0x573AF8
 	.4byte 0x3FE00000
 	.4byte 0
 
 
 .global double_80669CA0
 double_80669CA0:
-	# ROM: 0x573B00
 	.4byte 0xBFE00000
 	.4byte 0
 
 
 .global float_80669CA8
 float_80669CA8:
-	# ROM: 0x573B08
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_80669CAC
 float_80669CAC:
-	# ROM: 0x573B0C
 	.float 0.5
 
 
 .global float_80669CB0
 float_80669CB0:
-	# ROM: 0x573B10
-	.4byte 0x42B40000
+	.float 90 #0x42B40000
 	.4byte 0
 
 
 .global double_80669CB8
 double_80669CB8:
-	# ROM: 0x573B18
 	.4byte 0x43300000
 	.4byte 0
 

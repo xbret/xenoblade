@@ -1193,8 +1193,7 @@ __vt__cf_CfObjectSelectorObj:
 
 .global float_806646A8
 float_806646A8:
-	# ROM: 0x570288
-	.4byte 0x402CCCCD
+	.float 2.7 #0x402CCCCD
 	.4byte 0
 
 .global __RTTI__cf_CfObjectSelectorObj
@@ -1206,20 +1205,17 @@ __RTTI__cf_CfObjectSelectorObj:
 
 .global float_806697CC
 float_806697CC:
-	# ROM: 0x57362C
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_806697D0
 float_806697D0:
-	# ROM: 0x573630
-	.4byte 0x41600000
+	.float 14 #0x41600000
 
 
 .global float_806697D4
 float_806697D4:
-	# ROM: 0x573634
-	.4byte 0x41900000
+	.float 18 #0x41900000
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

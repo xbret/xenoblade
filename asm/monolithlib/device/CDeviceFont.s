@@ -1361,13 +1361,11 @@ __vt___reslist_base_IDeviceFontInfo:
 
 .global lbl_80666020
 lbl_80666020:
-	# ROM: 0x571C00
 	.4byte lbl_80526680
 
 
 .global lbl_80666024
 lbl_80666024:
-	# ROM: 0x571C04
 	.4byte lbl_80526694
 
 .global __RTTI__CDeviceFont
@@ -1390,7 +1388,6 @@ __RTTI___reslist_base_IDeviceFontInfo:
 
 .global double_8066CBB8
 double_8066CBB8:
-	# ROM: 0x576A18
 	.4byte 0x43300000
 	.4byte 0x80000000
 

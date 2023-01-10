@@ -4119,75 +4119,63 @@ __RTTI__CViewFrame:
 
 .global float_8066CAE8
 float_8066CAE8:
-	# ROM: 0x576948
-	.4byte 0
+	.float 0
 
 
 .global float_8066CAEC
 float_8066CAEC:
-	# ROM: 0x57694C
 	.float 0.5
 
 
 .global float_8066CAF0
 float_8066CAF0:
-	# ROM: 0x576950
 	.float 1.0
 
 
 .global float_8066CAF4
 float_8066CAF4:
-	# ROM: 0x576954
-	.4byte 0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
 
 
 .global float_8066CAF8
 float_8066CAF8:
-	# ROM: 0x576958
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 
 
 .global float_8066CAFC
 float_8066CAFC:
-	# ROM: 0x57695C
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 
 
 .global double_8066CB00
 double_8066CB00:
-	# ROM: 0x576960
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066CB08
 float_8066CB08:
-	# ROM: 0x576968
-	.4byte 0x3DEA72EB
+	.float 0.114477001 #0x3DEA72EB
 
 
 .global float_8066CB0C
 float_8066CB0C:
-	# ROM: 0x57696C
-	.4byte 0x3E990AFE
+	.float 0.298911989 #0x3E990AFE
 
 
 .global float_8066CB10
 float_8066CB10:
-	# ROM: 0x576970
-	.4byte 0x3F162C23
+	.float 0.586610973 #0x3F162C23
 
 
 .global float_8066CB14
 float_8066CB14:
-	# ROM: 0x576974
-	.4byte 0x3F333333
+	.float 0.7 #0x3F333333
 
 
 .global float_8066CB18
 float_8066CB18:
-	# ROM: 0x576978
-	.4byte 0x3F99999A
+	.float 1.2 #0x3F99999A
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

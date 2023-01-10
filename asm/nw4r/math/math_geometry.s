@@ -1104,45 +1104,38 @@ IntersectAABB_Ex__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math4AABB:
 #0.0001
 .global float_80665E00
 float_80665E00:
-	# ROM: 0x5719E0
-	.4byte 0x38D1B717
+	.float 0.0001 #0x38D1B717
 	.4byte 0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .global float_8066C658
 float_8066C658:
-	# ROM: 0x5764B8
 	.float 0.5
 
 
 .global float_8066C65C
 float_8066C65C:
-	# ROM: 0x5764BC
-	.4byte 0
+	.float 0
 
 
 .global float_8066C660
 float_8066C660:
-	# ROM: 0x5764C0
-	.4byte 0x3CC90FDB
+	.float 0.0245436933 #0x3CC90FDB
 
 
 .global float_8066C664
 float_8066C664:
-	# ROM: 0x5764C4
-	.4byte 0x3F360B61
+	.float 0.7111111 #0x3F360B61
 
 
 .global float_8066C668
 float_8066C668:
-	# ROM: 0x5764C8
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066C670
 double_8066C670:
-	# ROM: 0x5764D0
 	.4byte 0
 	.4byte 0

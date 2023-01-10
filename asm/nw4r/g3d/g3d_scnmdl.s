@@ -3133,7 +3133,6 @@ GetTypeObj__Q34nw4r3g3d6ScnMdlCFv:
 
 .global lbl_805210D8
 lbl_805210D8:
-	# ROM: 0x51D1D8
 	.4byte 0x00000007
 	.asciz "ScnMdl"
 	.balign 4
@@ -3144,7 +3143,6 @@ lbl_805210D8:
 
 .global lbl_8056D080
 lbl_8056D080:
-	# ROM: 0x569180
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d6G3dObj7TypeObj

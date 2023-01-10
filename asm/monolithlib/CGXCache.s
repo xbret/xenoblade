@@ -128,8 +128,8 @@ func_80449164:
 /* 80449348 00412908  38 80 00 09 */	li r4, 9
 /* 8044934C 0041290C  38 AD 9D E4 */	addi r5, r13, lbl_80665F64@sda21
 /* 80449350 00412910  48 00 08 45 */	bl func_80449B94
-/* 80449354 00412914  3C 60 80 66 */	lis r3, float_80659EC8@ha
-/* 80449358 00412918  38 63 9E C8 */	addi r3, r3, float_80659EC8@l
+/* 80449354 00412914  3C 60 80 66 */	lis r3, lbl_80659EC8@ha
+/* 80449358 00412918  38 63 9E C8 */	addi r3, r3, lbl_80659EC8@l
 /* 8044935C 0041291C  48 00 01 F5 */	bl func_80449550
 /* 80449360 00412920  90 61 00 08 */	stw r3, 8(r1)
 /* 80449364 00412924  38 A1 00 08 */	addi r5, r1, 8
@@ -1431,7 +1431,6 @@ IStateCache_typestr:
 
 .global lbl_8056F7D0
 lbl_8056F7D0:
-	# ROM: 0x56B8D0
 	.4byte switch_80449DB4
 	.4byte switch_80449DCC
 	.4byte switch_80449DE4
@@ -1480,78 +1479,65 @@ __vt__IStateCache:
 
 .global lbl_80665F48
 lbl_80665F48:
-	# ROM: 0x571B28
 	.4byte 0x00000001
 
 
 .global lbl_80665F4C
 lbl_80665F4C:
-	# ROM: 0x571B2C
 	.4byte 0x00FFFFFF
 
 
 .global lbl_80665F50
 lbl_80665F50:
-	# ROM: 0x571B30
 	.4byte 0x00000001
 
 
 .global lbl_80665F54
 lbl_80665F54:
-	# ROM: 0x571B34
 	.4byte 0x00000001
 
 
 .global lbl_80665F58
 lbl_80665F58:
-	# ROM: 0x571B38
 	.4byte 0x00000001
 
 
 .global lbl_80665F5C
 lbl_80665F5C:
-	# ROM: 0x571B3C
 	.4byte 0x00000001
 
 
 .global lbl_80665F60
 lbl_80665F60:
-	# ROM: 0x571B40
 	.4byte 0x00000001
 
 
 .global lbl_80665F64
 lbl_80665F64:
-	# ROM: 0x571B44
 	.4byte 0
 
 
 .global lbl_80665F68
 lbl_80665F68:
-	# ROM: 0x571B48
 	.4byte 0
 
 .global lbl_80665F6C
 lbl_80665F6C:
-	# ROM: 0x571B4C
 	.4byte 0
 
 
 .global lbl_80665F70
 lbl_80665F70:
-	# ROM: 0x571B50
 	.4byte 0x00000001
 
 
 .global lbl_80665F74
 lbl_80665F74:
-	# ROM: 0x571B54
 	.4byte 0x00000002
 
 
 .global lbl_80665F78
 lbl_80665F78:
-	# ROM: 0x571B58
 	.4byte 0x00000003
 	.4byte 0
 
@@ -1575,58 +1561,50 @@ __RTTI__IStateCache:
 
 .global float_8066CB78
 float_8066CB78:
-	# ROM: 0x5769D8
-	.4byte 0
+	.float 0
 
 
 .global float_8066CB7C
 float_8066CB7C:
-	# ROM: 0x5769DC
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 
 .global float_8066CB80
 float_8066CB80:
-	# ROM: 0x5769E0
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066CB88
 double_8066CB88:
-	# ROM: 0x5769E8
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_8066CB90
 double_8066CB90:
-	# ROM: 0x5769F0
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066CB98
 float_8066CB98:
-	# ROM: 0x5769F8
-	.4byte 0x3F726E98
+	.float 0.947 #0x3F726E98
 
 
 .global float_8066CB9C
 float_8066CB9C:
-	# ROM: 0x5769FC
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066CBA0
 float_8066CBA0:
-	# ROM: 0x576A00
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_8066CBA4
 float_8066CBA4:
-	.4byte 0x447A0000
+	.float 1000 #0x447A0000
 
 .global CDevice_typestr
 CDevice_typestr:

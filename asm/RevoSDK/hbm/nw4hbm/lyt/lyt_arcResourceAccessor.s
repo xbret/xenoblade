@@ -271,19 +271,16 @@ GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc:
 
 .global lbl_8054D638
 lbl_8054D638:
-	# ROM: 0x549738
 	.4byte 0x2E000000
 
 
 .global lbl_8054D63C
 lbl_8054D63C:
-	# ROM: 0x54973C
 	.4byte 0x2E2E0000
 
 
 .global lbl_8054D640
 lbl_8054D640:
-	# ROM: 0x549740
 	.4byte lbl_8054D688
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt19ArcResourceAccessorFv

@@ -1321,31 +1321,26 @@ __RTTI__CSimpleEveTalkWin:
 
 .global float_8066A560
 float_8066A560:
-	# ROM: 0x5743C0
-	.4byte 0x42180000
+	.float 38 #0x42180000
 
 
 .global float_8066A564
 float_8066A564:
-	# ROM: 0x5743C4
 	.float -1.0
 
 
 .global float_8066A568
 float_8066A568:
-	# ROM: 0x5743C8
-	.4byte 0
+	.float 0
 
 
 .global float_8066A56C
 float_8066A56C:
-	# ROM: 0x5743CC
-	.4byte 0x43410000
+	.float 193 #0x43410000
 
 
 .global float_8066A570
 float_8066A570:
-	# ROM: 0x5743D0
 	.float 1.0
 	.4byte 0
 

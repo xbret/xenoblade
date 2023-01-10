@@ -1934,7 +1934,6 @@ lbl_80570AA8:
 
 .global lbl_806660E0
 lbl_806660E0:
-	# ROM: 0x571CC0
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
@@ -1948,69 +1947,58 @@ __RTTI__CLibHbm:
 
 .global float_8066CCF0
 float_8066CCF0:
-	# ROM: 0x576B50
-	.4byte 0
+	.float 0
 
 
 .global float_8066CCF4
 float_8066CCF4:
-	# ROM: 0x576B54
-	.4byte 0x3FAF286C
+	.float 1.36842108 #0x3FAF286C
 
 
 .global float_8066CCF8
 float_8066CCF8:
-	# ROM: 0x576B58
 	.float 1.0
 
 
 .global float_8066CCFC
 float_8066CCFC:
-	# ROM: 0x576B5C
-	.4byte 0x3F99999A
+	.float 1.2 #0x3F99999A
 
 
 .global double_8066CD00
 double_8066CD00:
-	# ROM: 0x576B60
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066CD08
 float_8066CD08:
-	# ROM: 0x576B68
 	.float 0.25
 
 
 .global float_8066CD0C
 float_8066CD0C:
-	# ROM: 0x576B6C
-	.4byte 0x3FA00000
+	.float 1.25 #0x3FA00000
 
 
 .global float_8066CD10
 float_8066CD10:
-	# ROM: 0x576B70
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_8066CD14
 float_8066CD14:
-	# ROM: 0x576B74
-	.4byte 0x442B8000
+	.float 686 #0x442B8000
 
 
 .global float_8066CD18
 float_8066CD18:
-	# ROM: 0x576B78
-	.4byte 0x44200000
+	.float 640 #0x44200000
 	.4byte 0
 
 
 .global double_8066CD20
 double_8066CD20:
-	# ROM: 0x576B80
 	.4byte 0x43300000
 	.4byte 0x80000000
 
@@ -2021,91 +2009,76 @@ CLibHbm_typestr:
 
 .global float_8066CD30
 float_8066CD30:
-	# ROM: 0x576B90
-	.4byte 0x3D100000
+	.float 0.03515625 #0x3D100000
 
 
 .global float_8066CD34
 float_8066CD34:
-	# ROM: 0x576B94
-	.4byte 0x3F350481
+	.float 0.7071 #0x3F350481
 
 
 .global float_8066CD38
 float_8066CD38:
-	# ROM: 0x576B98
-	.4byte 0
+	.float 0
 
 
 .global float_8066CD3C
 float_8066CD3C:
-	# ROM: 0x576B9C
 	.float 1.0
 
 
 .global float_8066CD40
 float_8066CD40:
-	# ROM: 0x576BA0
 	.float -1.0
 
 
 .global float_8066CD44
 float_8066CD44:
-	# ROM: 0x576BA4
-	.4byte 0x3D800000
+	.float 0.0625 #0x3D800000
 
 
 .global float_8066CD48
 float_8066CD48:
-	# ROM: 0x576BA8
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 
 
 .global float_8066CD4C
 float_8066CD4C:
-	# ROM: 0x576BAC
-	.4byte 0x44278000
+	.float 670 #0x44278000
 
 
 .global float_8066CD50
 float_8066CD50:
-	# ROM: 0x576BB0
-	.4byte 0x43E40000
+	.float 456 #0x43E40000
 
 
 .global float_8066CD54
 float_8066CD54:
-	# ROM: 0x576BB4
-	.4byte 0x43640000
+	.float 228 #0x43640000
 
 
 .global float_8066CD58
 float_8066CD58:
-	# ROM: 0x576BB8
-	.4byte 0x43980000
+	.float 304 #0x43980000
 
 
 .global float_8066CD5C
 float_8066CD5C:
-	# ROM: 0x576BBC
-	.4byte 0x43FA0000
+	.float 500 #0x43FA0000
 
 
 .global float_8066CD60
 float_8066CD60:
-	# ROM: 0x576BC0
-	.4byte 0x442B8000
+	.float 686 #0x442B8000
 
 
 .global float_8066CD64
 float_8066CD64:
-	# ROM: 0x576BC4
-	.4byte 0x43D00000
+	.float 416 #0x43D00000
 
 
 .global double_8066CD68
 double_8066CD68:
-	# ROM: 0x576BC8
 	.4byte 0x43300000
 	.4byte 0
 

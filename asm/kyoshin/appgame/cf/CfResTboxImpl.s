@@ -351,7 +351,6 @@ cf_CfResTboxImpl_typestr:
 
 .global lbl_80538998
 lbl_80538998:
-	# ROM: 0x534A98
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -413,14 +412,12 @@ __RTTI__cf_CfResTboxImpl:
 
 .global float_8066AA90
 float_8066AA90:
-	# ROM: 0x5748F0
 	.float 1.0
 
 
 .global float_8066AA94
 float_8066AA94:
-	# ROM: 0x5748F4
-	.4byte 0x41A00000
+	.float 20 #0x41A00000
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

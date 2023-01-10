@@ -1706,86 +1706,72 @@ __RTTI__cf_CAttackParam:
 
 .global float_80669D20
 float_80669D20:
-	# ROM: 0x573B80
-	.4byte 0
+	.float 0
 
 
 .global float_80669D24
 float_80669D24:
-	# ROM: 0x573B84
-	.4byte 0x411CCCCD
+	.float 9.8 #0x411CCCCD
 
 
 .global float_80669D28
 float_80669D28:
-	# ROM: 0x573B88
-	.4byte 0x42000000
+	.float 32 #0x42000000
 
 
 .global float_80669D2C
 float_80669D2C:
-	# ROM: 0x573B8C
 	.float 0.5
 
 
 .global float_80669D30
 float_80669D30:
-	# ROM: 0x573B90
-	.4byte 0x41700000
+	.float 15 #0x41700000
 
 
 .global float_80669D34
 float_80669D34:
-	# ROM: 0x573B94
-	.4byte 0x41C80000
+	.float 25 #0x41C80000
 
 
 .global float_80669D38
 float_80669D38:
-	# ROM: 0x573B98
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_80669D3C
 float_80669D3C:
-	# ROM: 0x573B9C
 	.float 100.0
 
 
 .global float_80669D40
 float_80669D40:
-	# ROM: 0x573BA0
 	.float 1.0
 
 
 .global float_80669D44
 float_80669D44:
-	# ROM: 0x573BA4
-	.4byte 0x3CC90FDB
+	.float 0.0245436933 #0x3CC90FDB
 
 
 .global float_80669D48
 float_80669D48:
-	# ROM: 0x573BA8
 	.float 10.0
 
 
 .global float_80669D4C
 float_80669D4C:
-	# ROM: 0x573BAC
 	.float 0.2
 
 
 .global double_80669D50
 double_80669D50:
-	# ROM: 0x573BB0
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_80669D58
 double_80669D58:
-	# ROM: 0x573BB8
 	.4byte 0x43300000
 	.4byte 0x80000000
 

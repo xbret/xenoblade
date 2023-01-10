@@ -689,40 +689,34 @@ __RTTI__CMCCylinderGauge:
 
 .global float_8066ADD8
 float_8066ADD8:
-	# ROM: 0x574C38
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066ADE0
 double_8066ADE0:
-	# ROM: 0x574C40
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066ADE8
 float_8066ADE8:
-	# ROM: 0x574C48
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066ADEC
 float_8066ADEC:
-	# ROM: 0x574C4C
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global double_8066ADF0
 double_8066ADF0:
-	# ROM: 0x574C50
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066ADF8
 float_8066ADF8:
-	# ROM: 0x574C58
 	.float 1.0
 	.4byte 0
 

@@ -1555,7 +1555,6 @@ lbl_8054B658:
 
 .global lbl_806659E0
 lbl_806659E0:
-	# ROM: 0x5715C0
 	.4byte 0xFFFFFFFF
 	.4byte 0
 

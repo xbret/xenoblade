@@ -368,7 +368,6 @@ GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUl
 
 .global lbl_805238A8
 lbl_805238A8:
-	# ROM: 0x51F9A8
 	.float 1.0
 	.4byte 0x3F879C7D
 	.4byte 0x3F8FACD6
@@ -385,7 +384,6 @@ lbl_805238A8:
 
 .global lbl_805238D8
 lbl_805238D8:
-	# ROM: 0x51F9D8
 	.float 1.0
 	.4byte 0x3F800765
 	.4byte 0x3F800ECA
@@ -646,7 +644,6 @@ lbl_805238D8:
 
 .global lbl_80523CD8
 lbl_80523CD8:
-	# ROM: 0x51FDD8
 	.4byte 0
 	.4byte 0x380021F4
 	.4byte 0x38019DD8
@@ -2397,7 +2394,6 @@ lbl_805253F4:
 
 .global lbl_805257F8
 lbl_805257F8:
-	# ROM: 0x5218F8
 	.4byte 0x387C70F7
 	.4byte 0x387C8144
 	.4byte 0xC13E3549
@@ -2722,7 +2718,6 @@ lbl_805257F8:
 
 .global lbl_80525CF8
 lbl_80525CF8:
-	# ROM: 0x521DF8
 	.4byte 0x00500064
 	.4byte 0x008000A0
 	.4byte 0x00C80100
@@ -2742,7 +2737,6 @@ lbl_80525CF8:
 
 .global lbl_8056E640
 lbl_8056E640:
-	# ROM: 0x56A740
 	.4byte lbl_80524BEC
 	.4byte lbl_80524FF0
 	.4byte lbl_805253F4
@@ -2752,7 +2746,6 @@ lbl_8056E640:
 
 .global lbl_80665E20
 lbl_80665E20:
-	# ROM: 0x571A00
 	.4byte 0x12345678
 	.4byte 0
 
@@ -2760,71 +2753,59 @@ lbl_80665E20:
 
 .global float_8066C8D0
 float_8066C8D0:
-	# ROM: 0x576730
 	.float 1.0
 
 
 .global float_8066C8D4
 float_8066C8D4:
-	# ROM: 0x576734
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066C8D8
 float_8066C8D8:
-	# ROM: 0x576738
 	.float 0.5
 
 
 .global float_8066C8DC
 float_8066C8DC:
-	# ROM: 0x57673C
-	.4byte 0x40C00000
+	.float 6 #0x40C00000
 
 
 .global float_8066C8E0
 float_8066C8E0:
-	# ROM: 0x576740
-	.4byte 0xC2B4CCCD
+	.float -90.4 #0xC2B4CCCD
 
 
 .global float_8066C8E4
 float_8066C8E4:
-	# ROM: 0x576744
 	.float 10.0
 
 
 .global float_8066C8E8
 float_8066C8E8:
-	# ROM: 0x576748
 	.float -1.0
 
 
 .global float_8066C8EC
 float_8066C8EC:
-	# ROM: 0x57674C
-	.4byte 0x43800000
+	.float 256 #0x43800000
 
 
 .global float_8066C8F0
 float_8066C8F0:
-	# ROM: 0x576750
-	.4byte 0
+	.float 0
 
 
 .global float_8066C8F4
 float_8066C8F4:
-	# ROM: 0x576754
-	.4byte 0x3E0ADE7F
+	.float 0.13561438 #0x3E0ADE7F
 
 
 .global float_8066C8F8
 float_8066C8F8:
-	# ROM: 0x576758
-	.4byte 0x3F666666
+	.float 0.9 #0x3F666666
 
 
 .global float_8066C8FC
 float_8066C8FC:
-	# ROM: 0x57675C
 	.4byte 0x3D088889

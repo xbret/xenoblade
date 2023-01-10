@@ -427,7 +427,6 @@ lbl_805512D4:
 
 .global lbl_80665B20
 lbl_80665B20:
-	# ROM: 0x571700
 	.4byte 0xFFFFFF01
 	.4byte 0
 

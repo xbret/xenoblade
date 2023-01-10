@@ -1182,9 +1182,9 @@ MWSFCRE_SetCondSfd:
 /* 8039FD38 003692F8  38 A0 00 00 */	li r5, 0
 /* 8039FD3C 003692FC  48 02 C6 09 */	bl func_803CC344
 /* 8039FD40 00369300  7C 1D F1 D6 */	mullw r0, r29, r30
-/* 8039FD44 00369304  3C 60 80 52 */	lis r3, float_8051DA6C@ha
+/* 8039FD44 00369304  3C 60 80 52 */	lis r3, lbl_8051DA6C@ha
 /* 8039FD48 00369308  3C 80 80 52 */	lis r4, double_8051DA70@ha
-/* 8039FD4C 0036930C  C0 43 DA 6C */	lfs f2, float_8051DA6C@l(r3)
+/* 8039FD4C 0036930C  C0 43 DA 6C */	lfs f2, lbl_8051DA6C@l(r3)
 /* 8039FD50 00369310  C8 64 DA 70 */	lfd f3, double_8051DA70@l(r4)
 /* 8039FD54 00369314  1C 00 03 E8 */	mulli r0, r0, 0x3e8
 /* 8039FD58 00369318  6C 03 80 00 */	xoris r3, r0, 0x8000
@@ -2281,15 +2281,13 @@ lbl_8051DA48:
 	.4byte lbl_80520678
 
 
-.global float_8051DA6C
-float_8051DA6C:
-	# ROM: 0x519B6C
+.global lbl_8051DA6C
+lbl_8051DA6C:
 	.float 0.5
 
 
 .global double_8051DA70
 double_8051DA70:
-	# ROM: 0x519B70
 	.4byte 0x43300000
 	.4byte 0x80000000
 
@@ -2364,7 +2362,6 @@ lbl_8051E134:
 
 .global lbl_8051E170
 lbl_8051E170:
-	# ROM: 0x51A270
 	.4byte lbl_8051E134
 	.4byte 0x0000EA24
 	.4byte 0x00000670
@@ -2401,7 +2398,6 @@ lbl_8051E1CC:
 
 .global lbl_805697D0
 lbl_805697D0:
-	# ROM: 0x5658D0
 	.4byte lbl_8051DA00
 	.4byte 0
 	.4byte 0x00010000
@@ -2479,7 +2475,6 @@ lbl_805697D0:
 
 .global lbl_805698F8
 lbl_805698F8:
-	# ROM: 0x5659F8
 	.4byte switch_8039F84C
 	.4byte switch_8039F84C
 	.4byte switch_8039F844
@@ -2496,7 +2491,6 @@ lbl_805698F8:
 
 .global lbl_80569928
 lbl_80569928:
-	# ROM: 0x565A28
 	.4byte switch_8039F70C
 	.4byte switch_8039F70C
 	.4byte switch_8039F704
@@ -2514,7 +2508,6 @@ lbl_80569928:
 
 .global lbl_80569958
 lbl_80569958:
-	# ROM: 0x565A58
 	.4byte lbl_8051E17C
 	.4byte 0
 	.4byte 0
@@ -2572,7 +2565,6 @@ lbl_80569958:
 
 .global lbl_80569A2C
 lbl_80569A2C:
-	# ROM: 0x565B2C
 	.4byte lbl_8051E1A0
 	.4byte 0
 	.4byte 0x00000001
@@ -2630,7 +2622,6 @@ lbl_80569A2C:
 
 .global lbl_80569B00
 lbl_80569B00:
-	# ROM: 0x565C00
 	.4byte lbl_8051E1CC
 	.4byte 0
 	.4byte 0x00000001

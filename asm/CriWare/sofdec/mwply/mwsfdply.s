@@ -740,14 +740,12 @@ MWSFD_IsEndPrepareStop:
 
 .global double_8051E7B0
 double_8051E7B0:
-	# ROM: 0x51A8B0
 	.4byte 0x3FE99999
 	.4byte 0x9999999A
 
 
 .global double_8051E7B8
 double_8051E7B8:
-	# ROM: 0x51A8B8
 	.4byte 0x43300000
 	.4byte 0x80000000
 
@@ -798,7 +796,6 @@ lbl_8051E7C0:
 
 .global lbl_80569BD4
 lbl_80569BD4:
-	# ROM: 0x565CD4
 	.4byte lbl_8051E1E0
 	.4byte 0
 	.4byte 0x00000002
@@ -856,7 +853,6 @@ lbl_80569BD4:
 
 .global lbl_80569CA8
 lbl_80569CA8:
-	# ROM: 0x565DA8
 	.4byte lbl_8051E274
 	.4byte 0
 	.4byte 0x00000002
@@ -914,7 +910,6 @@ lbl_80569CA8:
 
 .global lbl_80569D7C
 lbl_80569D7C:
-	# ROM: 0x565E7C
 	.4byte lbl_8051E288
 	.4byte 0
 	.4byte 0x00000001
@@ -972,7 +967,6 @@ lbl_80569D7C:
 
 .global lbl_80569E50
 lbl_80569E50:
-	# ROM: 0x565F50
 	.4byte lbl_8051E2C0
 	.4byte 0
 	.4byte 0x00000002
@@ -1030,7 +1024,6 @@ lbl_80569E50:
 
 .global lbl_80569F24
 lbl_80569F24:
-	# ROM: 0x566024
 	.4byte lbl_8051E2D0
 	.4byte 0
 	.4byte 0x00000001
@@ -1088,7 +1081,6 @@ lbl_80569F24:
 
 .global lbl_80569FF8
 lbl_80569FF8:
-	# ROM: 0x5660F8
 	.4byte lbl_8051E2E4
 	.4byte 0
 	.4byte 0x00000001
@@ -1146,7 +1138,6 @@ lbl_80569FF8:
 
 .global lbl_8056A0CC
 lbl_8056A0CC:
-	# ROM: 0x5661CC
 	.4byte lbl_8051E2FC
 	.4byte 0
 	.4byte 0x00000002
@@ -1204,7 +1195,6 @@ lbl_8056A0CC:
 
 .global lbl_8056A1A0
 lbl_8056A1A0:
-	# ROM: 0x5662A0
 	.4byte lbl_8051E318
 	.4byte 0
 	.4byte 0x00000001
@@ -1262,7 +1252,6 @@ lbl_8056A1A0:
 
 .global lbl_8056A274
 lbl_8056A274:
-	# ROM: 0x566374
 	.4byte lbl_8051E338
 	.4byte 0
 	.4byte 0x00000001
@@ -1320,7 +1309,6 @@ lbl_8056A274:
 
 .global lbl_8056A348
 lbl_8056A348:
-	# ROM: 0x566448
 	.4byte lbl_8051E350
 	.4byte 0
 	.4byte 0

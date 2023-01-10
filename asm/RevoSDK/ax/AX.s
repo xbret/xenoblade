@@ -72,7 +72,6 @@ lbl_80540070:
 
 .global lbl_806658B0
 lbl_806658B0:
-	# ROM: 0x571490
 	.4byte lbl_80540070
 	.4byte 0
 

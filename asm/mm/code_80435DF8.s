@@ -60,11 +60,9 @@ func_80435E70:
 
 .global float_8066C9F0
 float_8066C9F0:
-	# ROM: 0x576850
-	.4byte 0
+	.float 0
 
 
 .global float_8066C9F4
 float_8066C9F4:
-	# ROM: 0x576854
 	.float 1.0

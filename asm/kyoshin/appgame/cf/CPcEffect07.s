@@ -961,7 +961,6 @@ func_801B255C:
 
 .global lbl_80500218
 lbl_80500218:
-	# ROM: 0x4FC318
 	.2byte 0x0064
 	.2byte 0x0065
 	.2byte 0x0066
@@ -983,7 +982,6 @@ cf_IPcEffect_typestr:
 
 .global lbl_80536EF0
 lbl_80536EF0:
-	# ROM: 0x532FF0
 	.4byte 0x000000C8
 	.4byte 0x000000C9
 	.4byte 0x000000CA
@@ -1028,31 +1026,26 @@ __RTTI__cf_IPcEffect:
 
 .global float_8066A6A8
 float_8066A6A8:
-	# ROM: 0x574508
-	.4byte 0
+	.float 0
 
 
 .global float_8066A6AC
 float_8066A6AC:
-	# ROM: 0x57450C
-	.4byte 0x42500000
+	.float 52 #0x42500000
 
 
 .global float_8066A6B0
 float_8066A6B0:
-	# ROM: 0x574510
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066A6B4
 float_8066A6B4:
-	# ROM: 0x574514
 	.float 1.0
 
 
 .global double_8066A6B8
 double_8066A6B8:
-	# ROM: 0x574518
 	.4byte 0x43300000
 	.4byte 0x80000000
 

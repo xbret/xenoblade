@@ -295,7 +295,6 @@ cf_CVS_THREAD_HAGE_typestr:
 
 .global lbl_8053D338
 lbl_8053D338:
-	# ROM: 0x539438
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A6F8C

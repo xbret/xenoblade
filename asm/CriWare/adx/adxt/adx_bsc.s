@@ -1915,7 +1915,6 @@ ADXB_ExecHndl:
 
 .global lbl_8051A1C8
 lbl_8051A1C8:
-	# ROM: 0x5162C8
 	.4byte 0x401B4021
 	.4byte 0x4025402B
 	.4byte 0x4031403F

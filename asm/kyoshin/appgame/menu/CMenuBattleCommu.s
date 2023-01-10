@@ -1939,13 +1939,11 @@ __RTTI__CMenuBattleCommu:
 
 .global float_8066A6A0
 float_8066A6A0:
-	# ROM: 0x574500
-	.4byte 0
+	.float 0
 
 
 .global float_8066A6A4
 float_8066A6A4:
-	# ROM: 0x574504
 	.float 1.0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

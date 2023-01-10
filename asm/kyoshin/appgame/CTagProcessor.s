@@ -7121,7 +7121,6 @@ func_8012BC34:
 
 .global lbl_804FA7F8
 lbl_804FA7F8:
-	# ROM: 0x4F68F8
 	.4byte 0x00000001
 	.4byte 0x00000002
 	.4byte 0x00000003
@@ -7886,7 +7885,6 @@ lbl_804FACB0:
 
 .global lbl_804FACC8
 lbl_804FACC8:
-	# ROM: 0x4F6DC8
 	.4byte lbl_80669A48
 	.4byte lbl_804FA8D4
 	.4byte lbl_804FA8E0
@@ -8063,7 +8061,6 @@ lbl_804FAE38:
 
 .global lbl_804FAE48
 lbl_804FAE48:
-	# ROM: 0x4F6F48
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x0000001F
@@ -8122,7 +8119,6 @@ lbl_804FAE48:
 
 .global lbl_804FAF20
 lbl_804FAF20:
-	# ROM: 0x4F7020
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x0000001F
@@ -8328,7 +8324,6 @@ lbl_804FB488:
 
 .global lbl_80530C48
 lbl_80530C48:
-	# ROM: 0x52CD48
 	.4byte 0
 	.4byte lbl_80669A58
 	.4byte lbl_806668D8
@@ -8425,7 +8420,6 @@ lbl_80530D74:
 
 .global lbl_80530DAC
 lbl_80530DAC:
-	# ROM: 0x52CEAC
 	.4byte switch_80127568
 	.4byte switch_801263F4
 	.4byte switch_801264AC
@@ -9275,7 +9269,6 @@ __RTTI__nw4r_ut_TagProcessorBase_wchar_t:
 
 .global lbl_806648C0
 lbl_806648C0:
-	# ROM: 0x5704A0
 	.2byte 0x004F #O
 	.2byte 0x0055 #U
 	.2byte 0x0054 #T
@@ -9501,13 +9494,11 @@ lbl_80669A48:
 
 .global lbl_80669A50
 lbl_80669A50:
-	# ROM: 0x5738B0
 	.4byte 0x00FF00FF
 
 
 .global lbl_80669A54
 lbl_80669A54:
-	# ROM: 0x5738B4
 	.4byte 0x00FF0000
 
 .global lbl_80669A58
@@ -9576,172 +9567,144 @@ lbl_80669AB0:
 
 .global float_80669AB8
 float_80669AB8:
-	# ROM: 0x573918
-	.4byte 0
+	.float 0
 
 
 .global float_80669ABC
 float_80669ABC:
-	# ROM: 0x57391C
 	.float 1.0
 
 
 .global float_80669AC0
 float_80669AC0:
-	# ROM: 0x573920
-	.4byte 0x40000000
+	.float 2 #0x40000000
 	.4byte 0
 
 
 .global double_80669AC8
 double_80669AC8:
-	# ROM: 0x573928
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80669AD0
 float_80669AD0:
-	# ROM: 0x573930
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_80669AD4
 float_80669AD4:
-	# ROM: 0x573934
-	.4byte 0x41800000
+	.float 16 #0x41800000
 
 
 .global float_80669AD8
 float_80669AD8:
-	# ROM: 0x573938
-	.4byte 0x42E00000
+	.float 112 #0x42E00000
 
 
 .global float_80669ADC
 float_80669ADC:
-	# ROM: 0x57393C
-	.4byte 0x42300000
+	.float 44 #0x42300000
 
 
 .global float_80669AE0
 float_80669AE0:
-	# ROM: 0x573940
-	.4byte 0x43200000
+	.float 160 #0x43200000
 
 
 .global float_80669AE4
 float_80669AE4:
-	# ROM: 0x573944
-	.4byte 0x43DC0000
+	.float 440 #0x43DC0000
 
 
 .global float_80669AE8
 float_80669AE8:
-	# ROM: 0x573948
-	.4byte 0x43D80000
+	.float 432 #0x43D80000
 
 
 .global float_80669AEC
 float_80669AEC:
-	# ROM: 0x57394C
-	.4byte 0x40C00000
+	.float 6 #0x40C00000
 
 
 .global float_80669AF0
 float_80669AF0:
-	# ROM: 0x573950
 	.float 0.5
 
 
 .global float_80669AF4
 float_80669AF4:
-	# ROM: 0x573954
-	.4byte 0x42380000
+	.float 46 #0x42380000
 
 
 .global float_80669AF8
 float_80669AF8:
-	# ROM: 0x573958
-	.4byte 0x428C0000
+	.float 70 #0x428C0000
 
 
 .global float_80669AFC
 float_80669AFC:
-	# ROM: 0x57395C
-	.4byte 0x41A00000
+	.float 20 #0x41A00000
 
 
 .global float_80669B00
 float_80669B00:
-	# ROM: 0x573960
-	.4byte 0x42800000
+	.float 64 #0x42800000
 
 
 .global float_80669B04
 float_80669B04:
-	# ROM: 0x573964
-	.4byte 0x432A0000
+	.float 170 #0x432A0000
 
 
 .global float_80669B08
 float_80669B08:
-	# ROM: 0x573968
-	.4byte 0x43160000
+	.float 150 #0x43160000
 
 
 .global float_80669B0C
 float_80669B0C:
-	# ROM: 0x57396C
-	.4byte 0x43020000
+	.float 130 #0x43020000
 
 
 .global float_80669B10
 float_80669B10:
-	# ROM: 0x573970
-	.4byte 0x42DC0000
+	.float 110 #0x42DC0000
 
 
 .global float_80669B14
 float_80669B14:
-	# ROM: 0x573974
-	.4byte 0x42B40000
+	.float 90 #0x42B40000
 
 
 .global float_80669B18
 float_80669B18:
-	# ROM: 0x573978
 	.float 10.0
 
 
 .global float_80669B1C
 float_80669B1C:
-	# ROM: 0x57397C
-	.4byte 0x41700000
+	.float 15 #0x41700000
 
 
 .global float_80669B20
 float_80669B20:
-	# ROM: 0x573980
-	.4byte 0xC3410000
+	.float -193 #0xC3410000
 
 
 .global float_80669B24
 float_80669B24:
-	# ROM: 0x573984
 	.float -1.0
 
 
 .global float_80669B28
 float_80669B28:
-	# ROM: 0x573988
-	.4byte 0x7F7FFFFF
+	.4byte 0x7F7FFFFF #max float val
 
 
 .global float_80669B2C
 float_80669B2C:
-	# ROM: 0x57398C
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

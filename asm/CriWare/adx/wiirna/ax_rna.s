@@ -1898,7 +1898,6 @@ lbl_8051C760:
 
 .global lbl_8051C78C
 lbl_8051C78C:
-	# ROM: 0x51888C
 	.4byte lbl_8051C760
 
 
@@ -1944,13 +1943,11 @@ lbl_8051C790:
 
 .global axrna_def_src_type
 axrna_def_src_type:
-	# ROM: 0x565828
 	.4byte 0x00000001
 
 
 .global lbl_8056972C
 lbl_8056972C:
-	# ROM: 0x56582C
 	.4byte 0
 	.4byte 0x00000004
 	.4byte 0x00000008

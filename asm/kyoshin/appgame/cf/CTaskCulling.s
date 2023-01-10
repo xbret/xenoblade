@@ -587,7 +587,6 @@ CTTask_cf_CTaskCulling_typestr:
 
 .global lbl_804FF780
 lbl_804FF780:
-	# ROM: 0x4FB880
 	.4byte 0x2F006F63
 	.4byte 0x63000000
 
@@ -704,37 +703,31 @@ __RTTI__CTTask_cf_CTaskCulling:
 
 .global float_8066A578
 float_8066A578:
-	# ROM: 0x5743D8
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 
 .global float_8066A57C
 float_8066A57C:
-	# ROM: 0x5743DC
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066A580
 float_8066A580:
-	# ROM: 0x5743E0
-	.4byte 0x42480000
+	.float 50 #0x42480000
 
 
 .global float_8066A584
 float_8066A584:
-	# ROM: 0x5743E4
-	.4byte 0
+	.float 0
 
 
 .global float_8066A588
 float_8066A588:
-	# ROM: 0x5743E8
 	.float 1.0
 
 
 .global float_8066A58C
 float_8066A58C:
-	# ROM: 0x5743EC
 	.float 0.2
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

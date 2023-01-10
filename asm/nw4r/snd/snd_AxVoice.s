@@ -3336,49 +3336,41 @@ SetVoiceRmtIIRCoefs__Q44nw4r3snd6detail17AxVoiceParamBlockFUse:
 
 .global float_8066C690
 float_8066C690:
-	# ROM: 0x5764F0
-	.4byte 0x46FA0000
+	.float 32000 #0x46FA0000
 
 
 .global float_8066C694
 float_8066C694:
-	# ROM: 0x5764F4
-	.4byte 0x3FAAAAAB
+	.float 1.33333333 #0x3FAAAAAB
 
 
 .global float_8066C698
 float_8066C698:
-	# ROM: 0x5764F8
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066C6A0
 double_8066C6A0:
-	# ROM: 0x576500
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066C6A8
 float_8066C6A8:
-	# ROM: 0x576508
-	.4byte 0x477FFF00
+	.float 65535 #0x477FFF00
 
 
 .global float_8066C6AC
 float_8066C6AC:
-	# ROM: 0x57650C
-	.4byte 0
+	.float 0
 
 
 .global float_8066C6B0
 float_8066C6B0:
-	# ROM: 0x576510
-	.4byte 0x47800000
+	.float 65536 #0x47800000
 
 
 .global float_8066C6B4
 float_8066C6B4:
-	# ROM: 0x576514
 	.4byte 0x46FFFE00

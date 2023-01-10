@@ -1750,7 +1750,6 @@ GetThreadInfo:
 
 .global lbl_8053FFA8
 lbl_8053FFA8:
-	# ROM: 0x53C0A8
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1759,7 +1758,6 @@ lbl_8053FFA8:
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global lbl_8050DEA8
 lbl_8050DEA8:
-	# ROM: 0x509FA8
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000001

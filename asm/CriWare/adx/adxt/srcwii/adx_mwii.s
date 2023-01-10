@@ -645,7 +645,6 @@ lbl_8051CCE0:
 
 .global lbl_8051CD10
 lbl_8051CD10:
-	# ROM: 0x518E10
 	.4byte lbl_8051CCE0
 
 

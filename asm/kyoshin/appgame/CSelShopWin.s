@@ -649,14 +649,12 @@ __RTTI__CSelShopWin:
 
 .global float_8066AEC0
 float_8066AEC0:
-	# ROM: 0x574D20
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066AEC8
 double_8066AEC8:
-	# ROM: 0x574D28
 	.4byte 0x43300000
 	.4byte 0
 

@@ -965,7 +965,6 @@ lbl_80500CC4:
 
 .global lbl_80537618
 lbl_80537618:
-	# ROM: 0x533718
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1448,14 +1447,12 @@ __RTTI__CTitleAHelp:
 
 .global double_8066A7E0
 double_8066A7E0:
-	# ROM: 0x574640
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066A7E8
 float_8066A7E8:
-	# ROM: 0x574648
 	.float 1.0
 	.4byte 0
 

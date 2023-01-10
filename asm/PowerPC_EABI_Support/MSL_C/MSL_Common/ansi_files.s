@@ -87,7 +87,6 @@ __flush_all:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_8053F0F0
 lbl_8053F0F0:
-	# ROM: 0x53B1F0
 	.4byte 0
 	.4byte 0x0A800000
 	.4byte 0

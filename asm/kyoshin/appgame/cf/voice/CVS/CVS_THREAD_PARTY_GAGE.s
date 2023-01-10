@@ -415,7 +415,6 @@ cf_CVS_THREAD_PARTY_GAGE_typestr:
 
 .global lbl_8053D3D8
 lbl_8053D3D8:
-	# ROM: 0x5394D8
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A82D4
@@ -454,7 +453,6 @@ cf_CVS_THREAD_PARTY_GAGE_hierarchy:
 
 .global lbl_80665610
 lbl_80665610:
-	# ROM: 0x5711F0
 	.4byte 0x00000659
 	.4byte 0x0000065A
 

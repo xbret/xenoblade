@@ -2978,7 +2978,6 @@ mpvvlc_SetVlcRunLevel:
 
 .global lbl_8051F830
 lbl_8051F830:
-	# ROM: 0x51B930
 	.4byte 0x12011101
 	.4byte 0x10010F01
 	.4byte 0x03060210

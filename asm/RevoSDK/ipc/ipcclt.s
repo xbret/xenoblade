@@ -1829,13 +1829,11 @@ IOS_IoctlvReboot:
 
 .global lbl_80665A50
 lbl_80665A50:
-	# ROM: 0x571630
 	.4byte 0x00000001
 
 
 .global lbl_80665A54
 lbl_80665A54:
-	# ROM: 0x571634
 	.4byte 0xFFFFFFFF
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

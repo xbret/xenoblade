@@ -327,7 +327,6 @@ lbl_805281B0:
 
 .global lbl_80573B70
 lbl_80573B70:
-	# ROM: 0x56FC70
 	.4byte switch_804F4E90
 	.4byte switch_804F4EC4
 	.4byte switch_804F4EEC
@@ -361,13 +360,11 @@ CNReqtaskSaveBanner_hierarchy:
 
 .global lbl_806665E8
 lbl_806665E8:
-	# ROM: 0x5721C8
 	.4byte lbl_8066DCD0
 
 
 .global lbl_806665EC
 lbl_806665EC:
-	# ROM: 0x5721CC
 	.4byte lbl_80528190
 
 .global __RTTI__CNReqtaskSaveBanner

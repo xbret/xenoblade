@@ -132,9 +132,9 @@ ahxsbf_mult_flt_ex:
 /* 8038ABA0 00354160  D0 08 00 00 */	stfs f0, 0(r8)
 /* 8038ABA4 00354164  39 08 FF FC */	addi r8, r8, -4
 /* 8038ABA8 00354168  40 82 FE 64 */	bne .L_8038AA0C
-/* 8038ABAC 0035416C  3C C0 80 52 */	lis r6, float_8051ABB8@ha
+/* 8038ABAC 0035416C  3C C0 80 52 */	lis r6, lbl_8051ABB8@ha
 /* 8038ABB0 00354170  38 87 10 80 */	addi r4, r7, 0x1080
-/* 8038ABB4 00354174  C0 06 AB B8 */	lfs f0, float_8051ABB8@l(r6)
+/* 8038ABB4 00354174  C0 06 AB B8 */	lfs f0, lbl_8051ABB8@l(r6)
 /* 8038ABB8 00354178  38 00 00 0F */	li r0, 0xf
 /* 8038ABBC 0035417C  D0 05 00 40 */	stfs f0, 0x40(r5)
 .L_8038ABC0:
@@ -327,8 +327,7 @@ ahxsbf_mult_flt_ex:
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global float_8051ABB8
-float_8051ABB8:
-	# ROM: 0x516CB8
+.global lbl_8051ABB8
+lbl_8051ABB8:
 	.4byte 0
 	.4byte 0

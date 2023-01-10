@@ -290,6 +290,5 @@ lbl_80544690:
 
 .global lbl_8066BF60
 lbl_8066BF60:
-	# ROM: 0x575DC0
 	.4byte bta_hh_hdl_event
 	.4byte BTA_HhDisable

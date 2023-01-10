@@ -2581,7 +2581,6 @@ bta_dm_send_hci_reset:
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global lbl_8050DFE8
 lbl_8050DFE8:
-	# ROM: 0x50A0E8
 	.4byte 0x12001101
 	.4byte 0x11031111
 	.4byte 0x11021108
@@ -2598,7 +2597,6 @@ lbl_8050DFE8:
 
 .global lbl_8050E018
 lbl_8050E018:
-	# ROM: 0x50A118
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000003
@@ -2627,7 +2625,6 @@ lbl_8050E018:
 
 .global lbl_8050E078
 lbl_8050E078:
-	# ROM: 0x50A178
 	.4byte bta_dm_authorize_cback
 	.4byte bta_dm_pin_cback
 	.4byte bta_dm_new_link_key_cback
@@ -2683,13 +2680,11 @@ lbl_80544108:
 
 .global lbl_8066BF48
 lbl_8066BF48:
-	# ROM: 0x575DA8
 	.2byte 0x0001
 
 
 .global lbl_8066BF4A
 lbl_8066BF4A:
-	# ROM: 0x575DAA
 	.byte 0x80, 0x01
 	.4byte 0
 

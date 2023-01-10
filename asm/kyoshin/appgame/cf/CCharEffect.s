@@ -1309,7 +1309,6 @@ func_8015CCB4:
 
 .global lbl_804FD5D0
 lbl_804FD5D0:
-	# ROM: 0x4F96D0
 	.4byte 0x00000001
 	.4byte 0x01010101
 	.4byte 0x01010101
@@ -1325,7 +1324,6 @@ lbl_804FD5D0:
 
 .global lbl_804FD5FC
 lbl_804FD5FC:
-	# ROM: 0x4F96FC
 	.4byte 0x00000002
 	.4byte 0x02020202
 	.4byte 0x02020000
@@ -1341,7 +1339,6 @@ lbl_804FD5FC:
 
 .global lbl_804FD628
 lbl_804FD628:
-	# ROM: 0x4F9728
 	.4byte 0x02020101
 	.4byte 0x01010101
 	.4byte 0x01010101
@@ -1370,7 +1367,6 @@ lbl_804FD668:
 
 .global lbl_805334D8
 lbl_805334D8:
-	# ROM: 0x52F5D8
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1439,19 +1435,16 @@ __RTTI__cf_CCharEffect:
 
 .global float_80669DF0
 float_80669DF0:
-	# ROM: 0x573C50
 	.float 0.25
 
 
 .global float_80669DF4
 float_80669DF4:
-	# ROM: 0x573C54
 	.float 1.0
 
 
 .global double_80669DF8
 double_80669DF8:
-	# ROM: 0x573C58
 	.4byte 0x43300000
 	.4byte 0
 

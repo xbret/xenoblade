@@ -909,8 +909,8 @@ func_8049B834:
 /* 8049B924 00464EE4  EC 00 08 3A */	fmadds f0, f0, f0, f1
 /* 8049B928 00464EE8  FC 03 00 00 */	fcmpu cr0, f3, f0
 /* 8049B92C 00464EEC  40 82 00 24 */	bne .L_8049B950
-/* 8049B930 00464EF0  3C A0 80 66 */	lis r5, float_80659DB0@ha
-/* 8049B934 00464EF4  84 85 9D B0 */	lwzu r4, float_80659DB0@l(r5)
+/* 8049B930 00464EF0  3C A0 80 66 */	lis r5, lbl_80659DB0@ha
+/* 8049B934 00464EF4  84 85 9D B0 */	lwzu r4, lbl_80659DB0@l(r5)
 /* 8049B938 00464EF8  90 81 00 20 */	stw r4, 0x20(r1)
 /* 8049B93C 00464EFC  80 65 00 04 */	lwz r3, 4(r5)
 /* 8049B940 00464F00  80 05 00 08 */	lwz r0, 8(r5)
@@ -1001,13 +1001,11 @@ CScnCameraMan_hierarchy:
 
 .global lbl_80666328
 lbl_80666328:
-	# ROM: 0x571F08
 	.4byte lbl_80527A00
 
 
 .global lbl_8066632C
 lbl_8066632C:
-	# ROM: 0x571F0C
 	.4byte 0xFFFFFFFF
 
 .global __RTTI__CScnCameraMan
@@ -1020,47 +1018,40 @@ __RTTI__CScnCameraMan:
 
 .global float_8066D308
 float_8066D308:
-	# ROM: 0x577168
-	.4byte 0x3C8EFA33
+	.float 0.0174532887 #0x3C8EFA33
 	.4byte 0
 
 
 .global float_8066D310
 float_8066D310:
-	# ROM: 0x577170
-	.4byte 0xC3FA0000
+	.float -500 #0xC3FA0000
 
 
 .global float_8066D314
 float_8066D314:
-	# ROM: 0x577174
 	.float 1.0
 
 
 .global float_8066D318
 float_8066D318:
-	# ROM: 0x577178
 	.float 0.5
 	.4byte 0
 
 
 .global double_8066D320
 double_8066D320:
-	# ROM: 0x577180
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066D328
 float_8066D328:
-	# ROM: 0x577188
-	.4byte 0
+	.float 0
 
 
 .global float_8066D32C
 float_8066D32C:
-	# ROM: 0x57718C
-	.4byte 0x3F726E98
+	.float 0.947 #0x3F726E98
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

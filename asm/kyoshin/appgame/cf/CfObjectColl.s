@@ -1470,7 +1470,6 @@ lbl_804F795C:
 
 .global lbl_8052BDB8
 lbl_8052BDB8:
-	# ROM: 0x527EB8
 	.4byte lbl_806667AC
 	.4byte lbl_806667A4
 	.4byte lbl_806667AC
@@ -1722,94 +1721,79 @@ __RTTI__cf_CfObjectPoint:
 
 .global float_806691D8
 float_806691D8:
-	# ROM: 0x573038
-	.4byte 0
+	.float 0
 
 
 .global float_806691DC
 float_806691DC:
-	# ROM: 0x57303C
 	.float 1.0
 
 
 .global float_806691E0
 float_806691E0:
-	# ROM: 0x573040
-	.4byte 0x3E99999A
+	.float 0.3 #0x3E99999A
 	.4byte 0
 
 
 .global double_806691E8
 double_806691E8:
-	# ROM: 0x573048
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_806691F0
 float_806691F0:
-	# ROM: 0x573050
-	.4byte 0x4222F983
+	.float 40.7436638 #0x4222F983
 
 
 .global float_806691F4
 float_806691F4:
-	# ROM: 0x573054
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_806691F8
 float_806691F8:
-	# ROM: 0x573058
 	.float 0.5
 
 
 .global float_806691FC
 float_806691FC:
-	# ROM: 0x57305C
-	.4byte 0x3E19999A
+	.float 0.15 #0x3E19999A
 
 
 .global float_80669200
 float_80669200:
-	# ROM: 0x573060
-	.4byte 0x3F333333
+	.float 0.7 #0x3F333333
 
 
 .global float_80669204
 float_80669204:
-	# ROM: 0x573064
 	.float 0.2
 
 
 .global float_80669208
 float_80669208:
-	# ROM: 0x573068
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_8066920C
 float_8066920C:
-	# ROM: 0x57306C
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 
 
 .global float_80669210
 float_80669210:
-	# ROM: 0x573070
 	.float 0.75
 
 
 .global float_80669214
 float_80669214:
-	# ROM: 0x573074
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_80669218
 float_80669218:
-	# ROM: 0x573078
-	.4byte 0x40400000
+	.float 3 #0x40400000
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

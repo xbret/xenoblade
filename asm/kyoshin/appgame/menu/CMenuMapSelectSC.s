@@ -1646,7 +1646,6 @@ lbl_80507C34:
 
 .global lbl_8053A8C8
 lbl_8053A8C8:
-	# ROM: 0x5369C8
 	.4byte switch_80251398
 	.4byte switch_802513A4
 	.4byte switch_802513B0
@@ -1703,33 +1702,28 @@ __RTTI__CMenuMapSelectSC:
 
 .global float_8066B070
 float_8066B070:
-	# ROM: 0x574ED0
-	.4byte 0
+	.float 0
 
 
 .global float_8066B074
 float_8066B074:
-	# ROM: 0x574ED4
 	.float 1.0
 
 
 .global float_8066B078
 float_8066B078:
-	# ROM: 0x574ED8
 	.float 10.0
 	.4byte 0
 
 
 .global double_8066B080
 double_8066B080:
-	# ROM: 0x574EE0
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066B088
 float_8066B088:
-	# ROM: 0x574EE8
 	.float 1.0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

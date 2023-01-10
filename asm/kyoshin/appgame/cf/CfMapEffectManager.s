@@ -1280,13 +1280,11 @@ __vt__cf_CfMapEffectManager:
 
 .global float_80664CE0
 float_80664CE0:
-	# ROM: 0x5708C0
 	.float 10.0
 
 
 .global lbl_80664CE4
 lbl_80664CE4:
-	# ROM: 0x5708C4
 	.4byte lbl_80669FC8
 
 .global __RTTI__cf_CfMapEffectManager
@@ -1298,7 +1296,6 @@ __RTTI__cf_CfMapEffectManager:
 
 .global float_80669FC0
 float_80669FC0:
-	# ROM: 0x573E20
 	.float 10.0
 	.4byte 0
 
@@ -1309,41 +1306,35 @@ lbl_80669FC8:
 
 .global float_80669FD0
 float_80669FD0:
-	# ROM: 0x573E30
 	.float 1.0
 
 
 .global float_80669FD4
 float_80669FD4:
-	# ROM: 0x573E34
-	.4byte 0x38D1B717
+	.float 0.0001 #0x38D1B717
 
 
 .global float_80669FD8
 float_80669FD8:
-	# ROM: 0x573E38
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 	.4byte 0
 
 
 .global double_80669FE0
 double_80669FE0:
-	# ROM: 0x573E40
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_80669FE8
 double_80669FE8:
-	# ROM: 0x573E48
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_80669FF0
 float_80669FF0:
-	# ROM: 0x573E50
-	.4byte 0
+	.float 0
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

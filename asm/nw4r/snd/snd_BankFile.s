@@ -510,6 +510,5 @@ ReadWaveInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8WaveInfoRC
 
 .global float_8066C6D8
 float_8066C6D8:
-	# ROM: 0x576538
 	.float 1.0
 	.4byte 0

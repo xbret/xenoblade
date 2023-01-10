@@ -1847,7 +1847,6 @@ lbl_8050BEA4:
 
 .global lbl_8053D590
 lbl_8053D590:
-	# ROM: 0x539690
 	.4byte switch_802A9FA0
 	.4byte switch_802AA030
 	.4byte switch_802AA0BC
@@ -1861,7 +1860,6 @@ lbl_8053D590:
 
 .global lbl_8053D5B4
 lbl_8053D5B4:
-	# ROM: 0x5396B4
 	.4byte switch_802AAC60
 	.4byte switch_802AA5C4
 	.4byte switch_802AA698
@@ -1947,145 +1945,121 @@ CMenuBattleChain_hierarchy:
 
 .global lbl_80665668
 lbl_80665668:
-	# ROM: 0x571248
 	.4byte 0xF06969FF
 
 
 .global lbl_8066566C
 lbl_8066566C:
-	# ROM: 0x57124C
 	.4byte 0x8A64FEFF
 
 
 .global lbl_80665670
 lbl_80665670:
-	# ROM: 0x571250
 	.4byte 0x48BA2AFF
 
 
 .global lbl_80665674
 lbl_80665674:
-	# ROM: 0x571254
 	.4byte 0xF0DC40FF
 
 
 .global lbl_80665678
 lbl_80665678:
-	# ROM: 0x571258
 	.4byte 0xEA7F2DFF
 
 
 .global lbl_8066567C
 lbl_8066567C:
-	# ROM: 0x57125C
 	.4byte 0x4D97F2FF
 
 
 .global lbl_80665680
 lbl_80665680:
-	# ROM: 0x571260
 	.4byte 0xE672DEFF
 
 
 .global lbl_80665684
 lbl_80665684:
-	# ROM: 0x571264
 	.4byte 0xA0A0A0FF
 
 
 .global lbl_80665688
 lbl_80665688:
-	# ROM: 0x571268
 	.4byte 0xF0F0F0FF
 
 
 .global lbl_8066568C
 lbl_8066568C:
-	# ROM: 0x57126C
 	.4byte 0xF06969FF
 
 
 .global lbl_80665690
 lbl_80665690:
-	# ROM: 0x571270
 	.4byte 0xF0F0F0FF
 
 
 .global lbl_80665694
 lbl_80665694:
-	# ROM: 0x571274
 	.4byte 0x8A64FEFF
 
 
 .global lbl_80665698
 lbl_80665698:
-	# ROM: 0x571278
 	.4byte 0xF0F0F0FF
 
 
 .global lbl_8066569C
 lbl_8066569C:
-	# ROM: 0x57127C
 	.4byte 0x48BA2AFF
 
 
 .global lbl_806656A0
 lbl_806656A0:
-	# ROM: 0x571280
 	.4byte 0xF0F0F0FF
 
 
 .global lbl_806656A4
 lbl_806656A4:
-	# ROM: 0x571284
 	.4byte 0xF0DC40FF
 
 
 .global lbl_806656A8
 lbl_806656A8:
-	# ROM: 0x571288
 	.4byte 0xF0F0F0FF
 
 
 .global lbl_806656AC
 lbl_806656AC:
-	# ROM: 0x57128C
 	.4byte 0xEA7F2DFF
 
 
 .global lbl_806656B0
 lbl_806656B0:
-	# ROM: 0x571290
 	.4byte 0xF0F0F0FF
 
 
 .global lbl_806656B4
 lbl_806656B4:
-	# ROM: 0x571294
 	.4byte 0x4D97F2FF
 
 
 .global lbl_806656B8
 lbl_806656B8:
-	# ROM: 0x571298
 	.4byte 0xF0F0F0FF
 
 
 .global lbl_806656BC
 lbl_806656BC:
-	# ROM: 0x57129C
 	.4byte 0xE672DEFF
 
 
 .global lbl_806656C0
 lbl_806656C0:
-	# ROM: 0x5712A0
 	.4byte 0xF0F0F0FF
 
 
 .global lbl_806656C4
 lbl_806656C4:
-	# ROM: 0x5712A4
 	.4byte 0xA0A0A0FF
 
 .global __RTTI__CMenuBattleChain
@@ -2097,13 +2071,11 @@ __RTTI__CMenuBattleChain:
 
 .global float_8066B558
 float_8066B558:
-	# ROM: 0x5753B8
-	.4byte 0
+	.float 0
 
 
 .global float_8066B55C
 float_8066B55C:
-	# ROM: 0x5753BC
 	.float 1.0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

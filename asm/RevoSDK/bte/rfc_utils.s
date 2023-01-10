@@ -624,7 +624,6 @@ lbl_80548EE8:
 
 .global lbl_8050E298
 lbl_8050E298:
-	# ROM: 0x50A398
 	.4byte 0x0091E372
 	.4byte 0x0796E475
 	.4byte 0x0E9FED7C

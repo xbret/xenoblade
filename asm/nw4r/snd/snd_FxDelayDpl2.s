@@ -458,7 +458,6 @@ OnChangeOutputMode__Q34nw4r3snd11FxDelayDpl2Fv:
 
 .global lbl_8056E0A0
 lbl_8056E0A0:
-	# ROM: 0x56A1A0
 	.4byte 0
 	.4byte 0
 	.4byte func_801C2EB0
@@ -474,35 +473,29 @@ lbl_8056E0A0:
 
 .global float_8066C780
 float_8066C780:
-	# ROM: 0x5765E0
-	.4byte 0x43200000
+	.float 160 #0x43200000
 
 
 .global float_8066C784
 float_8066C784:
-	# ROM: 0x5765E4
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 
 
 .global float_8066C788
 float_8066C788:
-	# ROM: 0x5765E8
 	.float 1.0
 
 
 .global float_8066C78C
 float_8066C78C:
-	# ROM: 0x5765EC
-	.4byte 0x3D23D70A
+	.float 0.04 #0x3D23D70A
 
 
 .global float_8066C790
 float_8066C790:
-	# ROM: 0x5765F0
-	.4byte 0x3F7D70A4
+	.float 0.99 #0x3F7D70A4
 
 
 .global float_8066C794
 float_8066C794:
-	# ROM: 0x5765F4
 	.4byte 0

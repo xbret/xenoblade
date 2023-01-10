@@ -3171,89 +3171,75 @@ __RTTI__cf_CfObjectImplWalker:
 
 .global float_80669448
 float_80669448:
-	# ROM: 0x5732A8
-	.4byte 0x42A00000
+	.float 80 #0x42A00000
 
 
 .global float_8066944C
 float_8066944C:
-	# ROM: 0x5732AC
-	.4byte 0
+	.float 0
 
 
 .global float_80669450
 float_80669450:
-	# ROM: 0x5732B0
 	.float 0.5
 
 
 .global float_80669454
 float_80669454:
-	# ROM: 0x5732B4
 	.float 1.0
 
 
 .global float_80669458
 float_80669458:
-	# ROM: 0x5732B8
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 	.4byte 0
 
 
 .global double_80669460
 double_80669460:
-	# ROM: 0x5732C0
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_80669468
 float_80669468:
-	# ROM: 0x5732C8
-	.4byte 0x41700000
+	.float 15 #0x41700000
 
 
 .global float_8066946C
 float_8066946C:
-	# ROM: 0x5732CC
-	.4byte 0x41A00000
+	.float 20 #0x41A00000
 
 
 .global double_80669470
 double_80669470:
-	# ROM: 0x5732D0
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80669478
 float_80669478:
-	# ROM: 0x5732D8
-	.4byte 0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
 
 
 .global float_8066947C
 float_8066947C:
-	# ROM: 0x5732DC
-	.4byte 0xC0C00000
+	.float -6 #0xC0C00000
 
 
 .global float_80669480
 float_80669480:
-	# ROM: 0x5732E0
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_80669484
 float_80669484:
-	# ROM: 0x5732E4
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 
 
 .global float_80669488
 float_80669488:
-	# ROM: 0x5732E8
-	.4byte 0x3CA3D70A
+	.float 0.02 #0x3CA3D70A
 	.4byte 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

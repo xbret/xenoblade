@@ -8498,7 +8498,6 @@ cf_CChainActorPc_typestr:
 
 .global lbl_8050A5C8
 lbl_8050A5C8:
-	# ROM: 0x5066C8
 	.4byte 0x00000002
 	.4byte 0x00000004
 	.4byte 0x00000005
@@ -8509,7 +8508,6 @@ lbl_8050A5C8:
 
 .global lbl_8050A5E0
 lbl_8050A5E0:
-	# ROM: 0x5066E0
 	.4byte 0
 	.float 1.0
 	.4byte 0x3F99999A
@@ -8675,7 +8673,6 @@ cf_CChainActorPc_hierarchy:
 
 .global lbl_8053BD20
 lbl_8053BD20:
-	# ROM: 0x537E20
 	.4byte switch_8028383C
 	.4byte switch_80283848
 	.4byte switch_80283868
@@ -8692,7 +8689,6 @@ lbl_8053BD20:
 
 .global lbl_8053BD50
 lbl_8053BD50:
-	# ROM: 0x537E50
 	.4byte switch_80283B10
 	.4byte switch_80283608
 	.4byte switch_80283648
@@ -8725,93 +8721,79 @@ __RTTI__cf_CChainActorPc:
 
 .global float_8066B378
 float_8066B378:
-	# ROM: 0x5751D8
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066B380
 double_8066B380:
-	# ROM: 0x5751E0
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066B388
 float_8066B388:
-	# ROM: 0x5751E8
-	.4byte 0
+	.float 0
 
 
 .global float_8066B38C
 float_8066B38C:
-	# ROM: 0x5751EC
-	.4byte 0x3E19999A
+	.float 0.15 #0x3E19999A
 
 
 .global float_8066B390
 float_8066B390:
-	# ROM: 0x5751F0
 	.float 1.0
 
 
 .global float_8066B394
 float_8066B394:
-	# ROM: 0x5751F4
-	.4byte 0
+	.float 0
 
 
 .global float_8066B398
 float_8066B398:
-	# ROM: 0x5751F8
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 	.4byte 0
 
 
 .global double_8066B3A0
 double_8066B3A0:
-	# ROM: 0x575200
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066B3A8
 float_8066B3A8:
-	# ROM: 0x575208
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066B3AC
 float_8066B3AC:
-	# ROM: 0x57520C
-	.4byte 0
+	.float 0
 
 
 .global float_8066B3B0
 float_8066B3B0:
-	# ROM: 0x575210
 	.float 0.2
 	.4byte 0
 
 
 .global double_8066B3B8
 double_8066B3B8:
-	# ROM: 0x575218
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_8066B3C0
 double_8066B3C0:
-	# ROM: 0x575220
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066B3C8
 float_8066B3C8:
-	# ROM: 0x575228
-	.4byte 0x43480000
+	.float 200 #0x43480000
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

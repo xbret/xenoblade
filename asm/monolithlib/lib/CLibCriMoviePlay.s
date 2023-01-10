@@ -917,9 +917,9 @@ func_8045A8C8:
 /* 8045A968 00423F28  38 80 00 03 */	li r4, 3
 /* 8045A96C 00423F2C  38 A0 00 00 */	li r5, 0
 /* 8045A970 00423F30  4B EC 38 D1 */	bl GXSetZMode
-/* 8045A974 00423F34  3F A0 80 66 */	lis r29, float_80659FB8@ha
+/* 8045A974 00423F34  3F A0 80 66 */	lis r29, lbl_80659FB8@ha
 /* 8045A978 00423F38  38 80 00 1E */	li r4, 0x1e
-/* 8045A97C 00423F3C  38 7D 9F B8 */	addi r3, r29, float_80659FB8@l
+/* 8045A97C 00423F3C  38 7D 9F B8 */	addi r3, r29, lbl_80659FB8@l
 /* 8045A980 00423F40  38 A0 00 01 */	li r5, 1
 /* 8045A984 00423F44  4B EC 3D BD */	bl GXLoadTexMtxImm
 /* 8045A988 00423F48  4B EB EC F9 */	bl GXClearVtxDesc
@@ -929,7 +929,7 @@ func_8045A8C8:
 /* 8045A998 00423F58  38 60 00 0D */	li r3, 0xd
 /* 8045A99C 00423F5C  38 80 00 01 */	li r4, 1
 /* 8045A9A0 00423F60  4B EB E8 91 */	bl GXSetVtxDesc
-/* 8045A9A4 00423F64  38 7D 9F B8 */	addi r3, r29, float_80659FB8@l
+/* 8045A9A4 00423F64  38 7D 9F B8 */	addi r3, r29, lbl_80659FB8@l
 /* 8045A9A8 00423F68  38 80 00 00 */	li r4, 0
 /* 8045A9AC 00423F6C  4B EC 3C 55 */	bl GXLoadPosMtxImm
 /* 8045A9B0 00423F70  38 60 00 00 */	li r3, 0
@@ -1792,56 +1792,47 @@ __RTTI__CLibCriMoviePlay:
 
 .global lbl_8066CC98
 lbl_8066CC98:
-	# ROM: 0x576AF8
 	.4byte 0xFF910000
 
 
 .global lbl_8066CC9C
 lbl_8066CC9C:
-	# ROM: 0x576AFC
 	.4byte 0xFF760044
 
 
 .global lbl_8066CCA0
 lbl_8066CCA0:
-	# ROM: 0x576B00
 	.4byte 0x6600FF32
 
 
 .global lbl_8066CCA4
 lbl_8066CCA4:
-	# ROM: 0x576B04
 	.4byte 0x94009494
 
 
 .global lbl_8066CCA8
 lbl_8066CCA8:
-	# ROM: 0x576B08
 	.4byte 0xCB0005CF
 
 
 .global lbl_8066CCAC
 lbl_8066CCAC:
-	# ROM: 0x576B0C
 	.4byte 0x00FF0000
 
 
 .global float_8066CCB0
 float_8066CCB0:
-	# ROM: 0x576B10
-	.4byte 0
+	.float 0
 
 
 .global float_8066CCB4
 float_8066CCB4:
-	# ROM: 0x576B14
 	.float 1.0
 
 
 .global float_8066CCB8
 float_8066CCB8:
-	# ROM: 0x576B18
-	.4byte 0x426FC28F
+	.float 59.9399986 #0x426FC28F
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

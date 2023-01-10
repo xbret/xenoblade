@@ -401,7 +401,6 @@ func_8015D144:
 
 .global lbl_804FD678
 lbl_804FD678:
-	# ROM: 0x4F9778
 	.4byte 0x00790051
 	.4byte 0x00650201
 	.4byte 0x02020203
@@ -434,7 +433,6 @@ cf_CCharEffectEne_typestr:
 
 .global lbl_804FD6E8
 lbl_804FD6E8:
-	# ROM: 0x4F97E8
 	.4byte 0x007B0051
 	.4byte 0x00650000
 	.4byte 0
@@ -467,7 +465,6 @@ cf_CCharEffectNpc_typestr:
 
 .global lbl_804FD758
 lbl_804FD758:
-	# ROM: 0x4F9858
 	.4byte 0x00790051
 	.4byte 0x00650000
 	.4byte 0
@@ -500,7 +497,6 @@ cf_CCharEffectObj_typestr:
 
 .global lbl_804FD7C8
 lbl_804FD7C8:
-	# ROM: 0x4F98C8
 	.4byte 0x007B0051
 	.4byte 0x00650000
 	.4byte 0

@@ -13,6 +13,5 @@ ADXMNG_SetFramework:
 
 .global adxm_framework
 adxm_framework:
-	# ROM: 0x55F808
 	.4byte 0xFFFFFFFF
 	.4byte 0

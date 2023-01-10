@@ -1071,7 +1071,6 @@ __vt__CSkipTimer2:
 
 .global float_80665570
 float_80665570:
-	# ROM: 0x571150
 	.float 0.2
 	.4byte 0
 
@@ -1089,35 +1088,30 @@ __RTTI__CSkipTimer2:
 
 .global float_8066B4D8
 float_8066B4D8:
-	# ROM: 0x575338
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066B4E0
 double_8066B4E0:
-	# ROM: 0x575340
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_8066B4E8
 double_8066B4E8:
-	# ROM: 0x575348
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066B4F0
 float_8066B4F0:
-	# ROM: 0x575350
-	.4byte 0x41300000
+	.float 11 #0x41300000
 
 
 .global float_8066B4F4
 float_8066B4F4:
-	# ROM: 0x575354
-	.4byte 0x42700000
+	.float 60 #0x42700000
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

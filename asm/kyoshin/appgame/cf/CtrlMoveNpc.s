@@ -138,8 +138,8 @@ func_8019F6E8:
 .L_8019F878:
 /* 8019F878 00168E38  7F E3 FB 78 */	mr r3, r31
 /* 8019F87C 00168E3C  4B EE A1 15 */	bl func_80089990
-/* 8019F880 00168E40  3C A0 80 66 */	lis r5, float_80659DB0@ha
-/* 8019F884 00168E44  84 65 9D B0 */	lwzu r3, float_80659DB0@l(r5)
+/* 8019F880 00168E40  3C A0 80 66 */	lis r5, lbl_80659DB0@ha
+/* 8019F884 00168E44  84 65 9D B0 */	lwzu r3, lbl_80659DB0@l(r5)
 /* 8019F888 00168E48  3C 80 80 53 */	lis r4, lbl_80536560@ha
 /* 8019F88C 00168E4C  80 05 00 04 */	lwz r0, 4(r5)
 /* 8019F890 00168E50  90 1F 00 1C */	stw r0, 0x1c(r31)
@@ -964,68 +964,57 @@ __RTTI__cf_CtrlMoveNpc:
 
 .global float_8066A518
 float_8066A518:
-	# ROM: 0x574378
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_8066A51C
 float_8066A51C:
-	# ROM: 0x57437C
-	.4byte 0
+	.float 0
 
 
 .global float_8066A520
 float_8066A520:
-	# ROM: 0x574380
 	.float 0.2
 
 
 .global float_8066A524
 float_8066A524:
-	# ROM: 0x574384
-	.4byte 0x40666666
+	.float 3.6 #0x40666666
 
 
 .global float_8066A528
 float_8066A528:
-	# ROM: 0x574388
 	.float 1.0
 
 
 .global float_8066A52C
 float_8066A52C:
-	# ROM: 0x57438C
-	.4byte 0x3D23D70B
+	.float 0.040000003 #0x3D23D70B
 
 
 .global float_8066A530
 float_8066A530:
-	# ROM: 0x574390
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_8066A534
 float_8066A534:
-	# ROM: 0x574394
 	.float 0.5
 
 
 .global float_8066A538
 float_8066A538:
-	# ROM: 0x574398
-	.4byte 0x43B40000
+	.float 360 #0x43B40000
 	.4byte 0
 
 
 .global float_8066A540
 float_8066A540:
-	# ROM: 0x5743A0
-	.4byte 0
+	.float 0
 
 
 .global float_8066A544
 float_8066A544:
-	# ROM: 0x5743A4
 	.float 1.0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

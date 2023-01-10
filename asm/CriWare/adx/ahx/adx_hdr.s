@@ -310,7 +310,6 @@ AHXTBL_GetMtblInfo:
 
 .global lbl_8056607C
 lbl_8056607C:
-	# ROM: 0x56217C
 	.4byte 0x00000880
 
 .global lbl_80566080
@@ -3460,23 +3459,19 @@ ahxcmn_multiple_tbl:
 
 .global lbl_80569180
 lbl_80569180:
-	# ROM: 0x565280
 	.4byte lbl_80566080
 
 
 .global lbl_80569184
 lbl_80569184:
-	# ROM: 0x565284
 	.4byte 0x00003000
 
 
 .global lbl_80569188
 lbl_80569188:
-	# ROM: 0x565288
 	.4byte ahxcmn_multiple_tbl
 
 
 .global lbl_8056918C
 lbl_8056918C:
-	# ROM: 0x56528C
 	.4byte 0x00000100

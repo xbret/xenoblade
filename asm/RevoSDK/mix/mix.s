@@ -3606,7 +3606,6 @@ MIXUpdateSettings:
 
 .global lbl_805504F0
 lbl_805504F0:
-	# ROM: 0x54C5F0
 	.4byte 0x00000001
 	.4byte 0x00010001
 	.4byte 0x00010001

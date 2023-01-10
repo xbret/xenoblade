@@ -548,7 +548,6 @@ lbl_804F9F08:
 
 .global lbl_80530478
 lbl_80530478:
-	# ROM: 0x52C578
 	.4byte lbl_804F9D68
 	.4byte lbl_804F9D78
 	.4byte lbl_804F9D88

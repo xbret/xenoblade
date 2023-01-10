@@ -844,7 +844,6 @@ IWorkEvent_typestr:
 
 .global lbl_804F5B5C
 lbl_804F5B5C:
-	# ROM: 0x4F1C5C
 	.asciz "CGameRestart"
 	.byte 0x00
 	.asciz "43"
@@ -859,7 +858,6 @@ lbl_804F5B5C:
 
 .global __vt___unnamed_CGame_cpp_CGameRestart
 __vt___unnamed_CGame_cpp_CGameRestart:
-	# ROM: 0x5242E0
 	.4byte __RTTI___unnamed_CGame_cpp_CGameRestart
 	.4byte 0
 	.4byte func_80039E90
@@ -985,7 +983,6 @@ CWorkThread_hierarchy:
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 .global lbl_80664180
 lbl_80664180:
-	# ROM: 0x56FD60
 	.4byte lbl_80668380
 	.4byte 0
 
@@ -1021,21 +1018,19 @@ __RTTI__cf_CfObjectActor:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global lbl_80668380
-lbl_80668380:	# ROM: 0x5721E0
+lbl_80668380:
 	.4byte 0x8B90905F
 	.4byte 0
 
 
 .global float_80668388
 float_80668388:
-	# ROM: 0x5721E8
 	.float 1.0
 
 
 .global float_8066838C
 float_8066838C:
-	# ROM: 0x5721EC
-	.4byte 0
+	.float 0
 
 .global CGame_typestr
 CGame_typestr:
@@ -1063,7 +1058,6 @@ lbl_80666608:
 
 .global lbl_800066E0
 lbl_800066E0:
-	# ROM: 0x4BEEC0
 	.4byte 0x080A0000
 	.4byte 0x0000006C
 	.4byte 0x00060010

@@ -28,7 +28,6 @@ __OSInitIPCBuffer:
 
 .global lbl_80665B98
 lbl_80665B98:
-	# ROM: 0x571778
 	.4byte 0xFFFFFFFF
 	.4byte 0
 

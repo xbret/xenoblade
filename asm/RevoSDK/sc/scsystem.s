@@ -1877,7 +1877,6 @@ lbl_8055EF7C:
 
 .global lbl_8055EF88
 lbl_8055EF88:
-	# ROM: 0x55B088
 	.4byte lbl_80665BC4
 	.4byte 0
 	.4byte lbl_80665BCC
@@ -1956,7 +1955,6 @@ lbl_8055EF88:
 
 .global lbl_8055F0B0
 lbl_8055F0B0:
-	# ROM: 0x55B1B0
 	.4byte switch_80360BC0
 	.4byte switch_80360C04
 	.4byte switch_80360C44
@@ -1972,7 +1970,6 @@ lbl_8055F0B0:
 
 .global lbl_80665BC0
 lbl_80665BC0:
-	# ROM: 0x5717A0
 	.4byte lbl_8055EEF8
 
 .global lbl_80665BC4

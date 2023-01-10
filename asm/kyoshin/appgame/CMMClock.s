@@ -1017,8 +1017,7 @@ CMMTex_typestr:
 
 .global float_80669994
 float_80669994:
-	# ROM: 0x5737F4
-	.4byte 0x41300000
+	.float 11 #0x41300000
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

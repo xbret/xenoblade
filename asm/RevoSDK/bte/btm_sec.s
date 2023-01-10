@@ -3585,31 +3585,26 @@ lbl_80546224:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global lbl_8066BF78
 lbl_8066BF78:
-	# ROM: 0x575DD8
 	.byte 0xFF
 
 
 .global lbl_8066BF79
 lbl_8066BF79:
-	# ROM: 0x575DD9
 	.byte 0xFF
 
 
 .global lbl_8066BF7A
 lbl_8066BF7A:
-	# ROM: 0x575DDA
 	.byte 0xFF
 
 
 .global lbl_8066BF7B
 lbl_8066BF7B:
-	# ROM: 0x575DDB
 	.byte 0xFF
 
 
 .global lbl_8066BF7C
 lbl_8066BF7C:
-	# ROM: 0x575DDC
 	.byte 0xFF
 
 

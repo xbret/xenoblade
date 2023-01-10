@@ -2648,7 +2648,6 @@ __vt___reslist_base_cf_CfMapMineManager_MinePoint:
 
 .global lbl_80665048
 lbl_80665048:
-	# ROM: 0x570C28
 	.4byte 0x282D343C
 	.4byte 0x505A5C63
 
@@ -2661,7 +2660,6 @@ lbl_80665050:
 
 .global lbl_80665058
 lbl_80665058:
-	# ROM: 0x570C38
 	.4byte 0x0000000A
 	.4byte 0x0000000A
 
@@ -2679,95 +2677,80 @@ __RTTI___reslist_base_cf_CfMapMineManager_MinePoint:
 
 .global float_8066AB70
 float_8066AB70:
-	# ROM: 0x5749D0
-	.4byte 0
+	.float 0
 
 
 .global float_8066AB74
 float_8066AB74:
-	# ROM: 0x5749D4
-	.4byte 0x38D1B717
+	.float 0.0001 #0x38D1B717
 
 
 .global double_8066AB78
 double_8066AB78:
-	# ROM: 0x5749D8
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_8066AB80
 double_8066AB80:
-	# ROM: 0x5749E0
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066AB88
 float_8066AB88:
-	# ROM: 0x5749E8
-	.4byte 0x42480000
+	.float 50 #0x42480000
 
 
 .global float_8066AB8C
 float_8066AB8C:
-	# ROM: 0x5749EC
-	.4byte 0x471C4000
+	.float 40000 #0x471C4000
 
 
 .global float_8066AB90
 float_8066AB90:
-	# ROM: 0x5749F0
-	.4byte 0x40200000
+	.float 2.5 #0x40200000
 
 
 .global float_8066AB94
 float_8066AB94:
-	# ROM: 0x5749F4
-	.4byte 0x40C80000
+	.float 6.25 #0x40C80000
 
 
 .global double_8066AB98
 double_8066AB98:
-	# ROM: 0x5749F8
 	.4byte 0
 	.4byte 0
 
 
 .global float_8066ABA0
 float_8066ABA0:
-	# ROM: 0x574A00
-	.4byte 0x41C80000
+	.float 25 #0x41C80000
 
 
 .global float_8066ABA4
 float_8066ABA4:
-	# ROM: 0x574A04
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 
 
 .global float_8066ABA8
 float_8066ABA8:
-	# ROM: 0x574A08
 	.float 1.0
 
 
 .global float_8066ABAC
 float_8066ABAC:
-	# ROM: 0x574A0C
-	.4byte 0x42700000
+	.float 60 #0x42700000
 
 
 .global float_8066ABB0
 float_8066ABB0:
-	# ROM: 0x574A10
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066ABB4
 float_8066ABB4:
-	# ROM: 0x574A14
-	.4byte 0x41B00000
+	.float 22 #0x41B00000
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

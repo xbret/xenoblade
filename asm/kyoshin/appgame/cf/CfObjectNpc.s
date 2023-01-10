@@ -679,55 +679,46 @@ lbl_80009F10:
 
 .global float_806693A8
 float_806693A8:
-	# ROM: 0x573208
-	.4byte 0
+	.float 0
 
 
 .global float_806693AC
 float_806693AC:
-	# ROM: 0x57320C
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 
 
 .global float_806693B0
 float_806693B0:
-	# ROM: 0x573210
-	.4byte 0x3FE66666
+	.float 1.8 #0x3FE66666
 
 
 .global float_806693B4
 float_806693B4:
-	# ROM: 0x573214
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_806693B8
 float_806693B8:
-	# ROM: 0x573218
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_806693BC
 float_806693BC:
-	# ROM: 0x57321C
-	.4byte 0x41C80000
+	.float 25 #0x41C80000
 
 
 .global float_806693C0
 float_806693C0:
-	# ROM: 0x573220
-	.4byte 0x41480000
+	.float 12.5 #0x41480000
 
 
 .global float_806693C4
 float_806693C4:
-	# ROM: 0x573224
 	.float 100.0
 
 
 .global double_806693C8
 double_806693C8:
-	# ROM: 0x573228
 	.4byte 0x43300000
 	.4byte 0
 

@@ -377,25 +377,21 @@ CDevice_hierarchy:
 
 .global lbl_80665F98
 lbl_80665F98:
-	# ROM: 0x571B78
 	.4byte lbl_805263A0
 
 
 .global lbl_80665F9C
 lbl_80665F9C:
-	# ROM: 0x571B7C
 	.4byte lbl_805263B0
 
 
 .global lbl_80665FA0
 lbl_80665FA0:
-	# ROM: 0x571B80
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_80665FA4
 lbl_80665FA4:
-	# ROM: 0x571B84
 	.4byte 0xFFFFFFFF
 
 .global __RTTI___unnamed_CDevice_cpp_CDeviceException

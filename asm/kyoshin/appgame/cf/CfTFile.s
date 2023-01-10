@@ -1191,7 +1191,6 @@ cf_CfTFile_hierarchy:
 
 .global lbl_8052A800
 lbl_8052A800:
-	# ROM: 0x526900
 	.4byte 0x0006000C
 	.4byte 0x00120000
 	.4byte 0
@@ -1199,7 +1198,6 @@ lbl_8052A800:
 
 .global lbl_8052A80C
 lbl_8052A80C:
-	# ROM: 0x52690C
 	.4byte 0x001E001E
 	.4byte 0x001E001E
 	.4byte 0
@@ -1208,81 +1206,69 @@ lbl_8052A80C:
 
 .global float_80668A9C
 float_80668A9C:
-	# ROM: 0x5728FC
-	.4byte 0x3F99999A
+	.float 1.2 #0x3F99999A
 
 
 .global float_80668AA0
 float_80668AA0:
-	# ROM: 0x572900
 	.float 1.0
 	.4byte 0
 
 
 .global double_80668AA8
 double_80668AA8:
-	# ROM: 0x572908
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_80668AB0
 float_80668AB0:
-	# ROM: 0x572910
-	.4byte 0x4728C000
+	.float 43200 #0x4728C000
 	.4byte 0
 
 
 .global double_80668AB8
 double_80668AB8:
-	# ROM: 0x572918
 	.4byte 0x40E51800
 	.4byte 0
 
 
 .global float_80668AC0
 float_80668AC0:
-	# ROM: 0x572920
-	.4byte 0
+	.float 0
 
 
 .global float_80668AC4
 float_80668AC4:
-	# ROM: 0x572924
-	.4byte 0x44E10000
+	.float 1800 #0x44E10000
 
 
 .global double_80668AC8
 double_80668AC8:
-	# ROM: 0x572928
 	.4byte 0x40380000
 	.4byte 0
 
 
 .global float_80668AD0
 float_80668AD0:
-	# ROM: 0x572930
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 	.4byte 0
 
 
 .global double_80668AD8
 double_80668AD8:
-	# ROM: 0x572938
 	.4byte 0x404E0000
 	.4byte 0
 
 
 .global float_80668AE0
 float_80668AE0:
-	# ROM: 0x572940
-	.4byte 0x40000000
+	.float 2 #0x40000000
 	.4byte 0
 
 
 .global double_80668AE8
 double_80668AE8:
-	# ROM: 0x572948
 	.4byte 0x403E0000
 	.4byte 0
 
@@ -1296,25 +1282,21 @@ __RTTI__cf_CfTFile:
 
 .global float_806643E8
 float_806643E8:
-	# ROM: 0x56FFC8
 	.float 1.0
 
 
 .global lbl_806643EC
 lbl_806643EC:
-	# ROM: 0x56FFCC
 	.2byte 0x0001
 
 
 .global lbl_806643EE
 lbl_806643EE:
-	# ROM: 0x56FFCE
 	.2byte 0x0001
 
 
 .global lbl_806643F0
 lbl_806643F0:
-	# ROM: 0x56FFD0
 	.4byte 0x00010000
 	.4byte 0
 

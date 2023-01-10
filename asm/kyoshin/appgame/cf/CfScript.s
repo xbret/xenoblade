@@ -1004,7 +1004,6 @@ sinit_800696C8:
 
 .global lbl_8052A5A0
 lbl_8052A5A0:
-	# ROM: 0x5266A0
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_800691B8
@@ -1084,7 +1083,6 @@ lbl_804F6BB4:
 
 .global lbl_806643B8
 lbl_806643B8:
-	# ROM: 0x56FF98
 	.4byte lbl_804F6B98
 	.4byte 0
 
@@ -1096,7 +1094,6 @@ __RTTI__cf_CfScript:
 
 .global lbl_806643C8
 lbl_806643C8:
-	# ROM: 0x56FFA8
 	.4byte 0x2E000000
 	.4byte 0
 

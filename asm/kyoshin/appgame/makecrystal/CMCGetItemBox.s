@@ -3267,38 +3267,32 @@ __RTTI__CMCGetItemBox:
 
 .global float_8066B494
 float_8066B494:
-	# ROM: 0x5752F4
 	.float 0.25
 
 
 .global float_8066B498
 float_8066B498:
-	# ROM: 0x5752F8
 	.float 1.0
 
 
 .global float_8066B49C
 float_8066B49C:
-	# ROM: 0x5752FC
-	.4byte 0x41800000
+	.float 16 #0x41800000
 
 
 .global float_8066B4A0
 float_8066B4A0:
-	# ROM: 0x575300
-	.4byte 0xC2680000
+	.float -58 #0xC2680000
 
 
 .global float_8066B4A4
 float_8066B4A4:
-	# ROM: 0x575304
-	.4byte 0xC24C0000
+	.float -51 #0xC24C0000
 
 
 .global float_8066B4A8
 float_8066B4A8:
-	# ROM: 0x575308
-	.4byte 0x43B98000
+	.float 371 #0x43B98000
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

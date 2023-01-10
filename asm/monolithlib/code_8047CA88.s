@@ -622,13 +622,11 @@ sinit_8047D290:
 
 .global float_8066D030
 float_8066D030:
-	# ROM: 0x576E90
-	.4byte 0
+	.float 0
 
 
 .global float_8066D034
 float_8066D034:
-	# ROM: 0x576E94
 	.float 1.0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

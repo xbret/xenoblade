@@ -1124,7 +1124,6 @@ AXGetMaxVoices:
 #not sure where this data goes
 .global lbl_805400B8
 lbl_805400B8:
-	# ROM: 0x53C1B8
 	.4byte 0x00000002
 	.4byte 0x00000198
 	.4byte 0x00000198
@@ -1161,7 +1160,6 @@ lbl_805400B8:
 
 .global lbl_80540138
 lbl_80540138:
-	# ROM: 0x53C238
 	.4byte 0x00000004
 	.4byte 0x00000056
 	.4byte 0x00000097
@@ -1175,7 +1173,6 @@ lbl_80540138:
 
 .global lbl_80540160
 lbl_80540160:
-	# ROM: 0x53C260
 	.4byte 0x7F637EC7
 	.4byte 0x7E2B7D91
 	.4byte 0x7CF77C5E
@@ -2187,7 +2184,6 @@ lbl_80540160:
 
 .global lbl_80541120
 lbl_80541120:
-	# ROM: 0x53D220
 	.4byte 0
 	.4byte 0x029F0F3A
 	.4byte 0x029F0F46
@@ -4241,38 +4237,32 @@ lbl_80541120:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global float_8066BDB8
 float_8066BDB8:
-	# ROM: 0x575C18
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066BDBC
 float_8066BDBC:
-	# ROM: 0x575C1C
 	.float 6.2831853
 
 
 .global float_8066BDC0
 float_8066BDC0:
-	# ROM: 0x575C20
-	.4byte 0x46FA0000
+	.float 32000 #0x46FA0000
 
 
 .global float_8066BDC4
 float_8066BDC4:
-	# ROM: 0x575C24
 	.float 1.0
 
 
 .global float_8066BDC8
 float_8066BDC8:
-	# ROM: 0x575C28
-	.4byte 0x47000000
+	.float 32768 #0x47000000
 	.4byte 0
 
 
 .global double_8066BDD0
 double_8066BDD0:
-	# ROM: 0x575C30
 	.4byte 0x43300000
 	.4byte 0
 

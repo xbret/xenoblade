@@ -868,13 +868,11 @@ lbl_80666638:
 
 .global float_80668620
 float_80668620:
-	# ROM: 0x572480
-	.4byte 0
+	.float 0
 
 
 .global float_80668624
 float_80668624:
-	# ROM: 0x572484
 	.float 1.0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

@@ -524,7 +524,6 @@ lbl_8055ECC0:
 
 .global lbl_8055ECEC
 lbl_8055ECEC:
-	# ROM: 0x55ADEC
 	.4byte switch_8035D7B0
 	.4byte switch_8035D7BC
 	.4byte switch_8035D838
@@ -537,7 +536,6 @@ lbl_8055ECEC:
 
 .global lbl_80665BA0
 lbl_80665BA0:
-	# ROM: 0x571780
 	.4byte 0x00000009
 	.4byte 0
 

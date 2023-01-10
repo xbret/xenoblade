@@ -36,6 +36,5 @@ lbl_8056D188:
 
 .global lbl_80665DE8
 lbl_80665DE8:
-	# ROM: 0x5719C8
 	.4byte lbl_8056D188
 	.4byte 0

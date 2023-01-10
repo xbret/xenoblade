@@ -1508,7 +1508,6 @@ forward_peer_data:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_80547370
 lbl_80547370:
-	# ROM: 0x543470
 	.4byte switch_802F74F4
 	.4byte switch_802F74F8
 	.4byte switch_802F74FC
@@ -1531,7 +1530,6 @@ lbl_805473B0:
 
 .global lbl_80547430
 lbl_80547430:
-	# ROM: 0x543530
 	.4byte switch_802F75DC
 	.4byte switch_802F760C
 	.4byte switch_802F7798
@@ -1569,7 +1567,6 @@ lbl_80547430:
 
 .global lbl_805474D4
 lbl_805474D4:
-	# ROM: 0x5435D4
 	.4byte switch_802F7830
 	.4byte switch_802F7908
 	.4byte switch_802F7908
@@ -1613,7 +1610,6 @@ lbl_80547568:
 
 .global lbl_80547598
 lbl_80547598:
-	# ROM: 0x543698
 	.4byte switch_802F7990
 	.4byte switch_802F7A6C
 	.4byte switch_802F7A6C
@@ -1656,7 +1652,6 @@ lbl_80547598:
 
 .global lbl_80547700
 lbl_80547700:
-	# ROM: 0x543800
 	.4byte switch_802F7B08
 	.4byte switch_802F7CB4
 	.4byte switch_802F7CB4
@@ -1694,7 +1689,6 @@ lbl_80547770:
 
 .global lbl_80547794
 lbl_80547794:
-	# ROM: 0x543894
 	.4byte switch_802F7D44
 	.4byte switch_802F7E8C
 	.4byte switch_802F7E8C
@@ -1739,7 +1733,6 @@ lbl_80547794:
 
 .global lbl_80547928
 lbl_80547928:
-	# ROM: 0x543A28
 	.4byte switch_802F7F20
 	.4byte switch_802F8254
 	.4byte switch_802F8254
@@ -1774,7 +1767,6 @@ lbl_80547928:
 
 .global lbl_805479B4
 lbl_805479B4:
-	# ROM: 0x543AB4
 	.4byte switch_802F82E8
 	.4byte switch_802F84B0
 	.4byte switch_802F84B0
@@ -1809,7 +1801,6 @@ lbl_805479B4:
 
 .global lbl_80547A78
 lbl_80547A78:
-	# ROM: 0x543B78
 	.4byte switch_802F8548
 	.4byte switch_802F8694
 	.4byte switch_802F8694
@@ -1848,7 +1839,6 @@ lbl_80547AE8:
 
 .global lbl_80547B10
 lbl_80547B10:
-	# ROM: 0x543C10
 	.4byte switch_802F8724
 	.4byte switch_802F87F0
 	.4byte switch_802F87F0

@@ -59,7 +59,6 @@ __dt__Q34nw4r3lyt8DrawInfoFv:
 
 .global lbl_8056D548
 lbl_8056D548:
-	# ROM: 0x569648
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
@@ -69,11 +68,9 @@ lbl_8056D548:
 
 .global float_8066C5D0
 float_8066C5D0:
-	# ROM: 0x576430
-	.4byte 0
+	.float 0
 
 
 .global float_8066C5D4
 float_8066C5D4:
-	# ROM: 0x576434
 	.float 1.0

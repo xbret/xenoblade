@@ -106,7 +106,6 @@ func_80418928:
 
 .global lbl_8056E3B0
 lbl_8056E3B0:
-	# ROM: 0x56A4B0
 	.4byte 0
 	.4byte 0
 	.4byte func_80418928

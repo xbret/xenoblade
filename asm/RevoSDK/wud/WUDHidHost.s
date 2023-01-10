@@ -483,7 +483,6 @@ lbl_80563470:
 
 .global lbl_80563688
 lbl_80563688:
-	# ROM: 0x55F788
 	.4byte switch_8037C030
 	.4byte switch_8037C04C
 	.4byte switch_8037C05C

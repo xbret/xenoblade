@@ -3101,7 +3101,6 @@ CColiManCall_hierarchy:
 
 .global lbl_806663C8
 lbl_806663C8:
-	# ROM: 0x571FA8
 	.4byte 0x72656600
 	.4byte 0
 
@@ -3124,39 +3123,33 @@ __RTTI__CColiManCall:
 
 .global float_8066D660
 float_8066D660:
-	# ROM: 0x5774C0
-	.4byte 0
+	.float 0
 
 
 .global float_8066D664
 float_8066D664:
-	# ROM: 0x5774C4
 	.float 1.0
 
 
 .global float_8066D668
 float_8066D668:
-	# ROM: 0x5774C8
 	.float 0.5
 	.4byte 0
 
 
 .global float_8066D670
 float_8066D670:
-	# ROM: 0x5774D0
-	.4byte 0
+	.float 0
 
 
 .global float_8066D674
 float_8066D674:
-	# ROM: 0x5774D4
 	.float 1.0
 
 
 .global float_8066D678
 float_8066D678:
-	# ROM: 0x5774D8
-	.4byte 0x49742400
+	.float 1000000 #0x49742400
 	.4byte 0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

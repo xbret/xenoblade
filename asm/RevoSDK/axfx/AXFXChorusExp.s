@@ -799,66 +799,55 @@ __CalcLFO:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global float_8066BED0
 float_8066BED0:
-	# ROM: 0x575D30
-	.4byte 0x42000000
+	.float 32 #0x42000000
 
 
 .global float_8066BED4
 float_8066BED4:
-	# ROM: 0x575D34
-	.4byte 0
+	.float 0
 
 
 .global double_8066BED8
 double_8066BED8:
-	# ROM: 0x575D38
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066BEE0
 float_8066BEE0:
-	# ROM: 0x575D40
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_8066BEE4
 float_8066BEE4:
-	# ROM: 0x575D44
-	.4byte 0x42480000
+	.float 50 #0x42480000
 
 
 .global float_8066BEE8
 float_8066BEE8:
-	# ROM: 0x575D48
 	.float 1.0
 
 
 .global float_8066BEEC
 float_8066BEEC:
-	# ROM: 0x575D4C
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066BEF0
 float_8066BEF0:
-	# ROM: 0x575D50
-	.4byte 0x47800000
+	.float 65536 #0x47800000
 
 
 .global float_8066BEF4
 float_8066BEF4:
-	# ROM: 0x575D54
-	.4byte 0x43800000
+	.float 256 #0x43800000
 
 
 .global float_8066BEF8
 float_8066BEF8:
-	# ROM: 0x575D58
-	.4byte 0x46FA0000
+	.float 32000 #0x46FA0000
 
 
 .global float_8066BEFC
 float_8066BEFC:
-	# ROM: 0x575D5C
 	.4byte 0x3B800000

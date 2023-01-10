@@ -7653,7 +7653,6 @@ lbl_804FD488:
 
 .global lbl_80532DF8
 lbl_80532DF8:
-	# ROM: 0x52EEF8
 	.4byte lbl_80669D68
 	.4byte lbl_80669D70
 	.4byte lbl_80669D78
@@ -7665,7 +7664,6 @@ lbl_80532DF8:
 
 .global lbl_80532E14
 lbl_80532E14:
-	# ROM: 0x52EF14
 	.4byte lbl_80669D68
 	.4byte lbl_80669DA0
 	.4byte lbl_80669DA8
@@ -7677,7 +7675,6 @@ lbl_80532E14:
 
 .global lbl_80532E30
 lbl_80532E30:
-	# ROM: 0x52EF30
 	.4byte lbl_80669D68
 	.4byte lbl_804FD2DC
 	.4byte lbl_804FD2E8
@@ -7689,7 +7686,6 @@ lbl_80532E30:
 
 .global lbl_80532E4C
 lbl_80532E4C:
-	# ROM: 0x52EF4C
 	.4byte lbl_80666AB0
 	.4byte lbl_80666AB8
 	.4byte lbl_80666AC0
@@ -7709,7 +7705,6 @@ lbl_80532E4C:
 
 .global lbl_80532E88
 lbl_80532E88:
-	# ROM: 0x52EF88
 	.4byte 0x00030005
 	.4byte 0x00060007
 	.4byte 0x0008000B
@@ -7717,7 +7712,6 @@ lbl_80532E88:
 
 .global lbl_80532E94
 lbl_80532E94:
-	# ROM: 0x52EF94
 	.4byte switch_80157BF0
 	.4byte switch_80157BF0
 	.4byte switch_80157AB4
@@ -7736,7 +7730,6 @@ lbl_80532E94:
 
 .global lbl_80532ECC
 lbl_80532ECC:
-	# ROM: 0x52EFCC
 	.4byte switch_80157CAC
 	.4byte switch_80157CAC
 	.4byte switch_80157CAC
@@ -7755,7 +7748,6 @@ lbl_80532ECC:
 
 .global lbl_80532F04
 lbl_80532F04:
-	# ROM: 0x52F004
 	.4byte switch_80157FC8
 	.4byte switch_80157FC8
 	.4byte switch_80157F8C
@@ -8190,134 +8182,112 @@ cf_ItemDummyImpl_hierarchy:
 
 .global lbl_80664B80
 lbl_80664B80:
-	# ROM: 0x570760
 	.4byte lbl_80669D60
 
 
 .global lbl_80664B84
 lbl_80664B84:
-	# ROM: 0x570764
 	.4byte lbl_804FD2D0
 
 
 .global lbl_80664B88
 lbl_80664B88:
-	# ROM: 0x570768
 	.4byte 0x141E2028
 	.4byte 0x505A5C63
 
 
 .global lbl_80664B90
 lbl_80664B90:
-	# ROM: 0x570770
 	.4byte lbl_804FD324
 
 
 .global lbl_80664B94
 lbl_80664B94:
-	# ROM: 0x570774
 	.4byte 0xFFFFFFFC
 
 
 .global lbl_80664B98
 lbl_80664B98:
-	# ROM: 0x570778
 	.4byte 0xFFFFFFFC
 
 
 .global lbl_80664B9C
 lbl_80664B9C:
-	# ROM: 0x57077C
 	.4byte lbl_804FD330
 
 
 .global lbl_80664BA0
 lbl_80664BA0:
-	# ROM: 0x570780
 	.4byte lbl_804FD33C
 
 
 .global lbl_80664BA4
 lbl_80664BA4:
-	# ROM: 0x570784
 	.4byte lbl_80669DD0
 
 
 .global lbl_80664BA8
 lbl_80664BA8:
-	# ROM: 0x570788
 	.4byte lbl_80669DD8
 
 
 .global lbl_80664BAC
 lbl_80664BAC:
-	# ROM: 0x57078C
 	.4byte lbl_804FD348
 
 
 .global lbl_80664BB0
 lbl_80664BB0:
-	# ROM: 0x570790
 	.4byte lbl_804FD354
 
 
 .global lbl_80664BB4
 lbl_80664BB4:
-	# ROM: 0x570794
 	.4byte lbl_804FD360
 
 
 .global lbl_80664BB8
 lbl_80664BB8:
-	# ROM: 0x570798
 	.4byte lbl_80669DE0
 
 
 .global lbl_80664BBC
 lbl_80664BBC:
-	# ROM: 0x57079C
 	.4byte lbl_804FD36C
 
 
 .global lbl_80664BC0
 lbl_80664BC0:
-	# ROM: 0x5707A0
 	.4byte lbl_804FD378
 
 
 .global lbl_80664BC4
 lbl_80664BC4:
-	# ROM: 0x5707A4
 	.4byte lbl_804FD384
 
 
 .global lbl_80664BC8
 lbl_80664BC8:
-	# ROM: 0x5707A8
 	.4byte lbl_804FD390
 
 
 .global lbl_80664BCC
 lbl_80664BCC:
-	# ROM: 0x5707AC
 	.4byte lbl_80669DE8
 
 
 .global lbl_80664BD0
 lbl_80664BD0:
-	# ROM: 0x5707B0
 	.4byte lbl_804FD3A0
 
 
 .global lbl_80664BD4
 lbl_80664BD4:
-	# ROM: 0x5707B4
 	.4byte lbl_804FD3AC
 
 
 .global lbl_80664BD8
 lbl_80664BD8:
-	# ROM: 0x5707B8
 	.4byte materia1PerString
 	.4byte 0
 

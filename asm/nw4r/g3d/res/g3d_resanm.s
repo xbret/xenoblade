@@ -161,30 +161,25 @@ GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf:
 
 .global float_8066C2B0
 float_8066C2B0:
-	# ROM: 0x576110
 	.float 1.0
 
 
 .global float_8066C2B4
 float_8066C2B4:
-	# ROM: 0x576114
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066C2B8
 float_8066C2B8:
-	# ROM: 0x576118
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_8066C2BC
 float_8066C2BC:
-	# ROM: 0x57611C
-	.4byte 0
+	.float 0
 
 
 .global float_8066C2C0
 float_8066C2C0:
-	# ROM: 0x576120
-	.4byte 0x47000000
+	.float 32768 #0x47000000
 	.4byte 0

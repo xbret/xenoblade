@@ -4615,7 +4615,6 @@ lbl_80503860:
 
 .global lbl_80503870
 lbl_80503870:
-	# ROM: 0x4FF970
 	.4byte lbl_805037C4
 	.4byte lbl_805037D0
 	.4byte lbl_805037DC
@@ -4687,7 +4686,6 @@ lbl_805038B8:
 
 .global lbl_80538D68
 lbl_80538D68:
-	# ROM: 0x534E68
 	.4byte switch_80202190
 	.4byte switch_80202154
 	.4byte switch_8020215C
@@ -4703,7 +4701,6 @@ lbl_80538D68:
 
 .global lbl_80538D94
 lbl_80538D94:
-	# ROM: 0x534E94
 	.4byte switch_80202950
 	.4byte switch_8020295C
 	.4byte switch_80202968
@@ -4722,7 +4719,6 @@ lbl_80538D94:
 
 .global lbl_80538DCC
 lbl_80538DCC:
-	# ROM: 0x534ECC
 	.4byte switch_80202ADC
 	.4byte switch_80202AE8
 	.4byte switch_80202AF4
@@ -4741,7 +4737,6 @@ lbl_80538DCC:
 
 .global lbl_80538E04
 lbl_80538E04:
-	# ROM: 0x534F04
 	.4byte switch_80203208
 	.4byte switch_802031C8
 	.4byte switch_802031D0
@@ -4814,19 +4809,16 @@ __RTTI__CEquipChange:
 
 .global lbl_8066AB60
 lbl_8066AB60:
-	# ROM: 0x5749C0
 	.4byte 0x04050607
 
 
 .global lbl_8066AB64
 lbl_8066AB64:
-	# ROM: 0x5749C4
 	.4byte 0x08000000
 
 
 .global float_8066AB68
 float_8066AB68:
-	# ROM: 0x5749C8
 	.float 1.0
 	.4byte 0
 

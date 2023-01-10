@@ -429,8 +429,8 @@ func_8006ACC0:
 /* 8006ADF4 000343B4  48 3C AF 35 */	bl func_80435D28
 /* 8006ADF8 000343B8  2C 03 00 00 */	cmpwi r3, 0
 /* 8006ADFC 000343BC  41 82 00 20 */	beq .L_8006AE1C
-/* 8006AE00 000343C0  3C 80 80 66 */	lis r4, float_80659DB0@ha
-/* 8006AE04 000343C4  84 64 9D B0 */	lwzu r3, float_80659DB0@l(r4)
+/* 8006AE00 000343C0  3C 80 80 66 */	lis r4, lbl_80659DB0@ha
+/* 8006AE04 000343C4  84 64 9D B0 */	lwzu r3, lbl_80659DB0@l(r4)
 /* 8006AE08 000343C8  80 04 00 04 */	lwz r0, 4(r4)
 /* 8006AE0C 000343CC  90 1E 01 90 */	stw r0, 0x190(r30)
 /* 8006AE10 000343D0  90 7E 01 8C */	stw r3, 0x18c(r30)
@@ -797,13 +797,13 @@ func_8006B310:
 /* 8006B350 00034910  7F C5 F3 78 */	mr r5, r30
 /* 8006B354 00034914  48 00 08 D9 */	bl func_8006BC2C
 /* 8006B358 00034918  3C 60 80 53 */	lis r3, __vt__cf_CfCamEvent@ha
-/* 8006B35C 0003491C  3C 80 80 66 */	lis r4, float_80659DB0@ha
+/* 8006B35C 0003491C  3C 80 80 66 */	lis r4, lbl_80659DB0@ha
 /* 8006B360 00034920  38 63 A8 18 */	addi r3, r3, __vt__cf_CfCamEvent@l
 /* 8006B364 00034924  90 7F 00 00 */	stw r3, 0(r31)
 /* 8006B368 00034928  38 60 00 00 */	li r3, 0
 /* 8006B36C 0003492C  38 00 00 08 */	li r0, 8
 /* 8006B370 00034930  90 7F 02 90 */	stw r3, 0x290(r31)
-/* 8006B374 00034934  38 84 9D B0 */	addi r4, r4, float_80659DB0@l
+/* 8006B374 00034934  38 84 9D B0 */	addi r4, r4, lbl_80659DB0@l
 /* 8006B378 00034938  98 7F 02 94 */	stb r3, 0x294(r31)
 /* 8006B37C 0003493C  90 1F 00 08 */	stw r0, 8(r31)
 /* 8006B380 00034940  80 04 00 04 */	lwz r0, 4(r4)
@@ -996,50 +996,42 @@ __RTTI__cf_CfCamFollow:
 
 .global float_80668AF0
 float_80668AF0:
-	# ROM: 0x572950
-	.4byte 0
+	.float 0
 
 
 .global float_80668AF4
 float_80668AF4:
-	# ROM: 0x572954
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_80668AF8
 float_80668AF8:
-	# ROM: 0x572958
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_80668AFC
 float_80668AFC:
-	# ROM: 0x57295C
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_80668B00
 float_80668B00:
-	# ROM: 0x572960
 	.float 0.5
 
 
 .global float_80668B04
 float_80668B04:
-	# ROM: 0x572964
 	.float -1.0
 
 
 .global float_80668B08
 float_80668B08:
-	# ROM: 0x572968
 	.float 1.0
 
 
 .global float_80668B0C
 float_80668B0C:
-	# ROM: 0x57296C
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

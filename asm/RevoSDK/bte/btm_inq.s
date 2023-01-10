@@ -2024,11 +2024,9 @@ lbl_805454B4:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global lbl_8066BF68
 lbl_8066BF68:
-	# ROM: 0x575DC8
 	.4byte 0x9E8B3300
 
 
 .global lbl_8066BF6C
 lbl_8066BF6C:
-	# ROM: 0x575DCC
 	.4byte 0x9E8B0000

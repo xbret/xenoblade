@@ -948,7 +948,6 @@ __RTTI__CTutorial:
 
 .global float_8066B4B0
 float_8066B4B0:
-	# ROM: 0x575310
 	.float 1.0
 	.4byte 0
 

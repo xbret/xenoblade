@@ -1059,7 +1059,6 @@ cf_CVS_THREAD_typestr:
 
 .global lbl_8053D088
 lbl_8053D088:
-	# ROM: 0x539188
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A13B8
@@ -1088,7 +1087,6 @@ __vt__cf_CVS_THREAD:
 
 .global lbl_8053D0C0
 lbl_8053D0C0:
-	# ROM: 0x5391C0
 	.4byte switch_802A4654
 	.4byte switch_802A4668
 	.4byte switch_802A467C
@@ -1104,20 +1102,17 @@ lbl_8053D0C0:
 
 .global float_806655A8
 float_806655A8:
-	# ROM: 0x571188
 	.float 1.0
 
 
 .global float_806655AC
 float_806655AC:
-	# ROM: 0x57118C
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_806655B0
 float_806655B0:
-	# ROM: 0x571190
-	.4byte 0x447A0000
+	.float 1000 #0x447A0000
 	.4byte 0
 
 .global __RTTI__cf_CVS_THREAD
@@ -1129,7 +1124,6 @@ __RTTI__cf_CVS_THREAD:
 
 .global float_8066B530
 float_8066B530:
-	# ROM: 0x575390
 	.float 1.0
 	.4byte 0
 

@@ -876,13 +876,11 @@ __RTTI__CMCCrystalSupport:
 
 .global float_8066AEF0
 float_8066AEF0:
-	# ROM: 0x574D50
-	.4byte 0
+	.float 0
 
 
 .global float_8066AEF4
 float_8066AEF4:
-	# ROM: 0x574D54
 	.float 1.0
 
 

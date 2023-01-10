@@ -715,7 +715,6 @@ cf_CVS_THREAD_LIB_typestr:
 
 .global lbl_8053E1C0
 lbl_8053E1C0:
-	# ROM: 0x53A2C0
 	.4byte 0
 	.4byte 0x00000002
 	.4byte 0x00000002
@@ -840,7 +839,6 @@ lbl_8053E1C0:
 
 .global lbl_8053E3A0
 lbl_8053E3A0:
-	# ROM: 0x53A4A0
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802AFC54

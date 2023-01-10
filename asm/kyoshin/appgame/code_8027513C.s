@@ -667,7 +667,6 @@ cf_CfObjectImplTbox_typestr:
 
 .global lbl_8053B678
 lbl_8053B678:
-	# ROM: 0x537778
 	.4byte lbl_806671DC
 	.4byte lbl_806671E4
 	.4byte lbl_806671EC
@@ -747,7 +746,6 @@ cf_ICamControlRemote_hierarchy:
 
 .global lbl_8053B750
 lbl_8053B750:
-	# ROM: 0x537850
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80275454
@@ -863,56 +861,47 @@ __RTTI__cf_CfObjectImplTbox:
 
 .global float_8066B280
 float_8066B280:
-	# ROM: 0x5750E0
-	.4byte 0xC0800000
+	.float -4 #0xC0800000
 
 
 .global float_8066B284
 float_8066B284:
-	# ROM: 0x5750E4
-	.4byte 0x3F666666
+	.float 0.9 #0x3F666666
 
 
 .global float_8066B288
 float_8066B288:
-	# ROM: 0x5750E8
-	.4byte 0
+	.float 0
 
 
 .global float_8066B28C
 float_8066B28C:
-	# ROM: 0x5750EC
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_8066B290
 float_8066B290:
-	# ROM: 0x5750F0
 	.float 1.0
 
 
 .global float_8066B294
 float_8066B294:
-	# ROM: 0x5750F4
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066B298
 float_8066B298:
-	# ROM: 0x5750F8
-	.4byte 0x3A83126F
+	.float 0.001 #0x3A83126F
 
 
 .global float_8066B29C
 float_8066B29C:
-	# ROM: 0x5750FC
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_8066B2A0
 float_8066B2A0:
-	# ROM: 0x575100
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

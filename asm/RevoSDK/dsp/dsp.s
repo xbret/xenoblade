@@ -219,7 +219,6 @@ lbl_805495F8:
 
 .global lbl_80665968
 lbl_80665968:
-	# ROM: 0x571548
 	.4byte lbl_805495F8
 	.4byte 0
 

@@ -227,14 +227,12 @@ func_8027CF3C:
 
 .global float_8066B330
 float_8066B330:
-	# ROM: 0x575190
 	.float 1.0
 
 
 .global float_8066B334
 float_8066B334:
-	# ROM: 0x575194
-	.4byte 0
+	.float 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

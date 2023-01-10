@@ -12,7 +12,6 @@ __AXFXGetLfoSinTable:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_805433E0
 lbl_805433E0:
-	# ROM: 0x53F4E0
 	.4byte 0
 	.4byte 0x00064855
 	.4byte 0x000C8FB3

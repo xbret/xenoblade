@@ -1383,7 +1383,6 @@ lbl_80503E5C:
 
 .global lbl_805391A0
 lbl_805391A0:
-	# ROM: 0x5352A0
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8020F8C4
@@ -1429,70 +1428,59 @@ __RTTI__cf_CfGimmickJump:
 
 .global float_8066ACC0
 float_8066ACC0:
-	# ROM: 0x574B20
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_8066ACC4
 float_8066ACC4:
-	# ROM: 0x574B24
-	.4byte 0
+	.float 0
 
 
 .global float_8066ACC8
 float_8066ACC8:
-	# ROM: 0x574B28
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066ACCC
 float_8066ACCC:
-	# ROM: 0x574B2C
 	.float 1.0
 
 
 .global double_8066ACD0
 double_8066ACD0:
-	# ROM: 0x574B30
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_8066ACD8
 double_8066ACD8:
-	# ROM: 0x574B38
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066ACE0
 float_8066ACE0:
-	# ROM: 0x574B40
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 
 .global float_8066ACE4
 float_8066ACE4:
-	# ROM: 0x574B44
-	.4byte 0x3E99999A
+	.float 0.3 #0x3E99999A
 
 
 .global float_8066ACE8
 float_8066ACE8:
-	# ROM: 0x574B48
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_8066ACEC
 float_8066ACEC:
-	# ROM: 0x574B4C
-	.4byte 0xBDCCCCCD
+	.float -0.1 #0xBDCCCCCD
 
 
 .global float_8066ACF0
 float_8066ACF0:
-	# ROM: 0x574B50
-	.4byte 0x43160000
+	.float 150 #0x43160000
 	.4byte 0
 
 

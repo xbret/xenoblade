@@ -1621,7 +1621,6 @@ lbl_805265B8:
 
 .global lbl_8056FB70
 lbl_8056FB70:
-	# ROM: 0x56BC70
 	.4byte switch_80450638
 	.4byte switch_80450780
 	.4byte switch_80450790
@@ -1692,7 +1691,6 @@ CDeviceFileCri_hierarchy:
 
 .global lbl_8056FC5C
 lbl_8056FC5C:
-	# ROM: 0x56BD5C
 	.4byte 0x00460041
 	.4byte 0x00540041
 	.4byte 0x004C0000
@@ -1702,19 +1700,16 @@ lbl_8056FC5C:
 
 .global lbl_80665FF0
 lbl_80665FF0:
-	# ROM: 0x571BD0
 	.4byte lbl_8066CBB0
 
 
 .global lbl_80665FF4
 lbl_80665FF4:
-	# ROM: 0x571BD4
 	.4byte lbl_8066CBB0
 
 
 .global lbl_80665FF8
 lbl_80665FF8:
-	# ROM: 0x571BD8
 	.4byte lbl_8066CBB0
 	.4byte 0
 

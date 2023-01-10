@@ -8435,7 +8435,6 @@ WPADSetCallbackByKPAD:
 
 .global lbl_80518DC8
 lbl_80518DC8:
-	# ROM: 0x514EC8
 	.4byte 0x02000071
 	.4byte 0x01006400
 	.4byte 0xFE020000
@@ -8452,7 +8451,6 @@ lbl_80518DC8:
 
 .global lbl_80518DF8
 lbl_80518DF8:
-	# ROM: 0x514EF8
 	.4byte 0xFD05B304
 	.4byte 0x63033503
 	.4byte 0x1F030000
@@ -8493,7 +8491,6 @@ lbl_80560690:
 
 .global lbl_805606B8
 lbl_805606B8:
-	# ROM: 0x55C7B8
 	.4byte func_80368E90
 	.4byte 0x0000007F
 	.4byte 0
@@ -8508,7 +8505,6 @@ lbl_805606C8:
 
 .global lbl_805606E4
 lbl_805606E4:
-	# ROM: 0x55C7E4
 	.4byte switch_803696E0
 	.4byte switch_803696E0
 	.4byte switch_803696E0
@@ -8584,7 +8580,6 @@ lbl_80560900:
 
 .global lbl_80560950
 lbl_80560950:
-	# ROM: 0x55CA50
 	.4byte switch_8036CBE4
 	.4byte switch_8036CBE4
 	.4byte switch_8036CBE4
@@ -8602,7 +8597,6 @@ lbl_80560950:
 
 .global lbl_80560984
 lbl_80560984:
-	# ROM: 0x55CA84
 	.4byte switch_8036CCD0
 	.4byte switch_8036CCD0
 	.4byte switch_8036CCD0
@@ -8620,7 +8614,6 @@ lbl_80560984:
 
 .global lbl_805609B8
 lbl_805609B8:
-	# ROM: 0x55CAB8
 	.4byte switch_8036CFA4
 	.4byte switch_8036CFA4
 	.4byte switch_8036CFA4
@@ -8638,7 +8631,6 @@ lbl_805609B8:
 
 .global lbl_805609EC
 lbl_805609EC:
-	# ROM: 0x55CAEC
 	.4byte switch_8036FF58
 	.4byte switch_8036FF64
 	.4byte switch_8036FF70
@@ -8661,33 +8653,28 @@ lbl_805609EC:
 
 .global lbl_80665D38
 lbl_80665D38:
-	# ROM: 0x571918
 	.4byte lbl_80560608
 
 
 .global lbl_80665D3C
 lbl_80665D3C:
-	# ROM: 0x57191C
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_80665D40
 lbl_80665D40:
-	# ROM: 0x571920
 	.4byte 0x00060004
 	.4byte 0x00060000
 
 
 .global lbl_80665D48
 lbl_80665D48:
-	# ROM: 0x571928
 	.4byte 0x001E001E
 	.4byte 0x001E0000
 
 
 .global lbl_80665D50
 lbl_80665D50:
-	# ROM: 0x571930
 	.4byte 0x322E3000
 
 
@@ -8726,19 +8713,16 @@ lbl_80665D78:
 
 .global lbl_8066C1F8
 lbl_8066C1F8:
-	# ROM: 0x576058
 	.4byte 0x0000D007
 
 
 .global lbl_8066C1FC
 lbl_8066C1FC:
-	# ROM: 0x57605C
 	.2byte 0x400C
 
 
 .global lbl_8066C1FE
 lbl_8066C1FE:
-	# ROM: 0x57605E
 	.2byte 0x0E00
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

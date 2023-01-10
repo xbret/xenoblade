@@ -52,11 +52,9 @@ sinit_80436E84:
 
 .global float_8066CA58
 float_8066CA58:
-	# ROM: 0x5768B8
-	.4byte 0
+	.float 0
 
 
 .global float_8066CA5C
 float_8066CA5C:
-	# ROM: 0x5768BC
 	.float 1.0

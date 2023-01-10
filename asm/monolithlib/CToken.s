@@ -1354,7 +1354,6 @@ func_8043BAA4:
 
 .global lbl_80525E70
 lbl_80525E70:
-	# ROM: 0x521F70
 	.4byte 0x00000004
 	.4byte 0x00000002
 	.4byte 0x00000002
@@ -1373,7 +1372,6 @@ lbl_80525E70:
 
 .global lbl_8056ED48
 lbl_8056ED48:
-	# ROM: 0x56AE48
 	.4byte lbl_8066CA88
 	.4byte lbl_8066CA90
 	.4byte lbl_8066CA94
@@ -1468,7 +1466,6 @@ lbl_8066CAB8:
 
 .global double_8066CAC0
 double_8066CAC0:
-	# ROM: 0x576920
 	.4byte 0x43300000
 	.4byte 0x80000000
 

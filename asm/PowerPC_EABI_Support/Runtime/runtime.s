@@ -670,7 +670,6 @@ __cvt_dbl_ull:
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global lbl_8050CE78
 lbl_8050CE78:
-	# ROM: 0x508F78
 	.4byte 0
 	.4byte 0
 	.4byte 0x41F00000

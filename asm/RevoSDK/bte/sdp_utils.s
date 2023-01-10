@@ -1211,7 +1211,6 @@ sdpu_sort_attr_list:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_805494E8
 lbl_805494E8:
-	# ROM: 0x5455E8
 	.4byte switch_803078FC
 	.4byte switch_8030789C
 	.4byte switch_803078AC
@@ -1256,7 +1255,6 @@ lbl_80549580:
 
 .global lbl_805495A0
 lbl_805495A0:
-	# ROM: 0x5456A0
 	.4byte switch_80307B38
 	.4byte switch_80307AC8
 	.4byte switch_80307AD0
@@ -1269,7 +1267,6 @@ lbl_805495A0:
 
 .global lbl_805495C0
 lbl_805495C0:
-	# ROM: 0x5456C0
 	.4byte switch_80308048
 	.4byte switch_80308054
 	.4byte switch_80308060
@@ -1282,7 +1279,6 @@ lbl_805495C0:
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global lbl_8050E398
 lbl_8050E398:
-	# ROM: 0x50A498
 	.4byte 0
 	.4byte 0x00001000
 	.4byte 0x80000080

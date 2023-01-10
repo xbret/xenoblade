@@ -219,7 +219,6 @@ lbl_8056E510:
 
 .global lbl_80665E18
 lbl_80665E18:
-	# ROM: 0x5719F8
 	.4byte lbl_8056E510
 	.4byte 0
 

@@ -127,7 +127,6 @@ __sinit_lyt_bounding_cpp:
 
 .global lbl_8054D6B8
 lbl_8054D6B8:
-	# ROM: 0x5497B8
 	.4byte lbl_8054D748
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt8BoundingFv

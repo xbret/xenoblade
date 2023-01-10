@@ -2986,44 +2986,37 @@ __RTTI__cf_CCharVoiceMan:
 
 .global float_8066B510
 float_8066B510:
-	# ROM: 0x575370
-	.4byte 0
+	.float 0
 
 
 .global float_8066B514
 float_8066B514:
-	# ROM: 0x575374
-	.4byte 0x43160000
+	.float 150 #0x43160000
 
 
 .global float_8066B518
 float_8066B518:
-	# ROM: 0x575378
 	.float 0.5
 
 
 .global float_8066B51C
 float_8066B51C:
-	# ROM: 0x57537C
-	.4byte 0x44E10000
+	.float 1800 #0x44E10000
 
 
 .global float_8066B520
 float_8066B520:
-	# ROM: 0x575380
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_8066B524
 float_8066B524:
-	# ROM: 0x575384
 	.float 1.0
 
 
 .global float_8066B528
 float_8066B528:
-	# ROM: 0x575388
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

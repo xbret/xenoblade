@@ -1300,7 +1300,6 @@ func_80447890:
 
 .global lbl_80526188
 lbl_80526188:
-	# ROM: 0x522288
 	.4byte 0x00000001
 	.4byte 0x00000001
 	.4byte 0x00000002
@@ -1333,7 +1332,6 @@ lbl_80526188:
 
 .global lbl_805261F8
 lbl_805261F8:
-	# ROM: 0x5222F8
 	.4byte 0x00000002
 	.4byte 0x00000001
 	.4byte 0x00008000
@@ -1439,72 +1437,61 @@ __RTTI__CDeviceRemotePad:
 
 .global float_8066CB20
 float_8066CB20:
-	# ROM: 0x576980
-	.4byte 0x3E19999A
+	.float 0.15 #0x3E19999A
 
 
 .global float_8066CB24
 float_8066CB24:
-	# ROM: 0x576984
-	.4byte 0
+	.float 0
 
 
 .global float_8066CB28
 float_8066CB28:
-	# ROM: 0x576988
-	.4byte 0x42600000
+	.float 56 #0x42600000
 
 
 .global float_8066CB2C
 float_8066CB2C:
-	# ROM: 0x57698C
-	.4byte 0x43160000
+	.float 150 #0x43160000
 
 
 .global float_8066CB30
 float_8066CB30:
-	# ROM: 0x576990
-	.4byte 0x43A00000
+	.float 320 #0x43A00000
 
 
 .global float_8066CB34
 float_8066CB34:
-	# ROM: 0x576994
-	.4byte 0x43520000
+	.float 210 #0x43520000
 
 
 .global double_8066CB38
 double_8066CB38:
-	# ROM: 0x576998
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_8066CB40
 double_8066CB40:
-	# ROM: 0x5769A0
 	.4byte 0x3FA11111
 	.4byte 0x11111111
 
 
 .global float_8066CB48
 float_8066CB48:
-	# ROM: 0x5769A8
-	.4byte 0x46823555
+	.float 16666.666 #0x46823555
 	.4byte 0
 
 
 .global double_8066CB50
 double_8066CB50:
-	# ROM: 0x5769B0
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066CB58
 float_8066CB58:
-	# ROM: 0x5769B8
-	.4byte 0
+	.float 0
 	.4byte 0
 
 

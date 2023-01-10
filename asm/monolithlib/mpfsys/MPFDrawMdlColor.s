@@ -617,8 +617,7 @@ __RTTI__mpfsys_MPFDrawBillboard:
 
 .global float_806661C0
 float_806661C0:
-	# ROM: 0x571DA0
-	.4byte 0x3EAAAAAB
+	.float 0.33333333 #0x3EAAAAAB
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

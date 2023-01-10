@@ -159,6 +159,5 @@ SetGP__Q34nw4r3g3d3FogCFv:
 
 .global float_8066C4F8
 float_8066C4F8:
-	# ROM: 0x576358
-	.4byte 0
+	.float 0
 	.4byte 0

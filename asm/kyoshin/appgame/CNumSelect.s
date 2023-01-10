@@ -2192,7 +2192,6 @@ lbl_805023B0:
 
 .global lbl_80502528
 lbl_80502528:
-	# ROM: 0x4FE628
 	.4byte 0
 	.4byte 0
 	.4byte lbl_8066A958
@@ -2457,7 +2456,6 @@ lbl_805028CC:
 
 .global lbl_805028D8
 lbl_805028D8:
-	# ROM: 0x4FE9D8
 	.4byte lbl_8066A9D0
 	.4byte lbl_80502890
 	.4byte lbl_8050289C
@@ -2469,7 +2467,6 @@ lbl_805028D8:
 
 .global lbl_805028F4
 lbl_805028F4:
-	# ROM: 0x4FE9F4
 	.4byte 0
 	.float 1.0
 	.4byte 0x3F99999A
@@ -2536,19 +2533,16 @@ __RTTI__CNumSelect:
 
 .global float_8066A948
 float_8066A948:
-	# ROM: 0x5747A8
 	.float 1.0
 
 
 .global float_8066A94C
 float_8066A94C:
-	# ROM: 0x5747AC
-	.4byte 0
+	.float 0
 
 
 .global double_8066A950
 double_8066A950:
-	# ROM: 0x5747B0
 	.4byte 0x43300000
 	.4byte 0
 

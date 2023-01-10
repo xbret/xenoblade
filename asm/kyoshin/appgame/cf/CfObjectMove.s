@@ -1365,8 +1365,8 @@ func_800BCD04:
 /* 800BCF5C 0008651C  D0 1F 00 4C */	stfs f0, 0x4c(r31)
 /* 800BCF60 00086520  48 00 00 2C */	b .L_800BCF8C
 .L_800BCF64:
-/* 800BCF64 00086524  3C C0 80 66 */	lis r6, float_80659DB0@ha
-/* 800BCF68 00086528  84 A6 9D B0 */	lwzu r5, float_80659DB0@l(r6)
+/* 800BCF64 00086524  3C C0 80 66 */	lis r6, lbl_80659DB0@ha
+/* 800BCF68 00086528  84 A6 9D B0 */	lwzu r5, lbl_80659DB0@l(r6)
 /* 800BCF6C 0008652C  38 9F 00 3C */	addi r4, r31, 0x3c
 /* 800BCF70 00086530  80 06 00 04 */	lwz r0, 4(r6)
 /* 800BCF74 00086534  90 03 00 58 */	stw r0, 0x58(r3)
@@ -4264,128 +4264,107 @@ __vt__cf_CfObjectMove:
 
 .global float_80669350
 float_80669350:
-	# ROM: 0x5731B0
-	.4byte 0
+	.float 0
 
 
 .global float_80669354
 float_80669354:
-	# ROM: 0x5731B4
-	.4byte 0x3F666666
+	.float 0.9 #0x3F666666
 
 
 .global float_80669358
 float_80669358:
-	# ROM: 0x5731B8
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066935C
 float_8066935C:
-	# ROM: 0x5731BC
 	.float 1.0
 
 
 .global float_80669360
 float_80669360:
-	# ROM: 0x5731C0
-	.4byte 0x404F5C28
+	.float 3.23999977 #0x404F5C28
 
 
 .global float_80669364
 float_80669364:
-	# ROM: 0x5731C4
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 
 
 .global float_80669368
 float_80669368:
-	# ROM: 0x5731C8
-	.4byte 0x3FB33333
+	.float 1.4 #0x3FB33333
 
 
 .global float_8066936C
 float_8066936C:
-	# ROM: 0x5731CC
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_80669370
 float_80669370:
-	# ROM: 0x5731D0
-	.4byte 0x3F333333
+	.float 0.7 #0x3F333333
 
 
 .global float_80669374
 float_80669374:
-	# ROM: 0x5731D4
-	.4byte 0x3CF5C28F
+	.float 0.03 #0x3CF5C28F
 
 
 .global float_80669378
 float_80669378:
-	# ROM: 0x5731D8
-	.4byte 0x3D75C28F
+	.float 0.06 #0x3D75C28F
 
 
 .global float_8066937C
 float_8066937C:
-	# ROM: 0x5731DC
-	.4byte 0x3D4CCCCD
+	.float 0.05 #0x3D4CCCCD
 
 
 .global float_80669380
 float_80669380:
-	# ROM: 0x5731E0
-	.4byte 0x3C17B426
+	.float 0.00925925933 #0x3C17B426
 
 
 .global float_80669384
 float_80669384:
-	# ROM: 0x5731E4
-	.4byte 0x4222F983
+	.float 40.7436638 #0x4222F983
 
 
 .global float_80669388
 float_80669388:
-	# ROM: 0x5731E8
-	.4byte 0xBDCCCCCD
+	.float -0.1 #0xBDCCCCCD
 
 
 .global float_8066938C
 float_8066938C:
-	# ROM: 0x5731EC
-	.4byte 0x3E99999A
+	.float 0.3 #0x3E99999A
 
 
 .global float_80669390
 float_80669390:
-	# ROM: 0x5731F0
 	.float 10.0
 
 
 .global float_80669394
 float_80669394:
-	# ROM: 0x5731F4
-	.4byte 0x461C4000
+	.float 10000 #0x461C4000
 
 
 .global float_80669398
 float_80669398:
-	# ROM: 0x5731F8
 	.float 0.5
 
 
 .global float_8066939C
 float_8066939C:
-	# ROM: 0x5731FC
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_806693A0
 float_806693A0:
-	# ROM: 0x573200
-	.4byte 0x4019999A
+	.float 2.4 #0x4019999A
 	.4byte 0
 
 

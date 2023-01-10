@@ -1322,7 +1322,6 @@ lbl_80548AA4:
 
 .global lbl_80548AC8
 lbl_80548AC8:
-	# ROM: 0x544BC8
 	.4byte switch_802FFADC
 	.4byte switch_802FFB14
 	.4byte switch_802FFB18
@@ -1348,7 +1347,6 @@ lbl_80548B04:
 
 .global lbl_80548B30
 lbl_80548B30:
-	# ROM: 0x544C30
 	.4byte switch_802FFCE4
 	.4byte switch_802FFC74
 	.4byte switch_802FFC98
@@ -1371,7 +1369,6 @@ lbl_80548B30:
 
 .global lbl_80548BC8
 lbl_80548BC8:
-	# ROM: 0x544CC8
 	.4byte switch_802FFE64
 	.4byte switch_802FFEE4
 	.4byte switch_802FFEE4
@@ -1396,7 +1393,6 @@ lbl_80548BC8:
 
 .global lbl_80548C68
 lbl_80548C68:
-	# ROM: 0x544D68
 	.4byte switch_802FFFB8
 	.4byte switch_80300034
 	.4byte switch_80300034
@@ -1423,7 +1419,6 @@ lbl_80548CA8:
 
 .global lbl_80548CCC
 lbl_80548CCC:
-	# ROM: 0x544DCC
 	.4byte switch_80300188
 	.4byte switch_80300184
 	.4byte switch_80300198
@@ -1449,7 +1444,6 @@ lbl_80548D08:
 
 .global lbl_80548D34
 lbl_80548D34:
-	# ROM: 0x544E34
 	.4byte switch_803002F0
 	.4byte switch_803002D8
 	.4byte switch_803002E4

@@ -295,27 +295,23 @@ __RTTI__CMenuPTState:
 
 .global float_8066A358
 float_8066A358:
-	# ROM: 0x5741B8
-	.4byte 0
+	.float 0
 
 
 .global float_8066A35C
 float_8066A35C:
-	# ROM: 0x5741BC
 	.float 1.0
 
 
 .global double_8066A360
 double_8066A360:
-	# ROM: 0x5741C0
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066A368
 float_8066A368:
-	# ROM: 0x5741C8
-	.4byte 0x3D088889
+	.float 0.033333335 #0x3D088889
 	.4byte 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

@@ -595,8 +595,8 @@ func_804C09E8:
 /* 804C0AE0 0048A0A0  EC 00 08 3A */	fmadds f0, f0, f0, f1
 /* 804C0AE4 0048A0A4  FC 03 00 00 */	fcmpu cr0, f3, f0
 /* 804C0AE8 0048A0A8  40 82 00 24 */	bne .L_804C0B0C
-/* 804C0AEC 0048A0AC  3C A0 80 66 */	lis r5, float_80659DB0@ha
-/* 804C0AF0 0048A0B0  84 85 9D B0 */	lwzu r4, float_80659DB0@l(r5)
+/* 804C0AEC 0048A0AC  3C A0 80 66 */	lis r5, lbl_80659DB0@ha
+/* 804C0AF0 0048A0B0  84 85 9D B0 */	lwzu r4, lbl_80659DB0@l(r5)
 /* 804C0AF4 0048A0B4  90 81 00 08 */	stw r4, 8(r1)
 /* 804C0AF8 0048A0B8  80 65 00 04 */	lwz r3, 4(r5)
 /* 804C0AFC 0048A0BC  80 05 00 08 */	lwz r0, 8(r5)
@@ -638,8 +638,8 @@ func_804C09E8:
 /* 804C0B7C 0048A13C  EC 00 08 3A */	fmadds f0, f0, f0, f1
 /* 804C0B80 0048A140  FC 03 00 00 */	fcmpu cr0, f3, f0
 /* 804C0B84 0048A144  40 82 00 24 */	bne .L_804C0BA8
-/* 804C0B88 0048A148  3C A0 80 66 */	lis r5, float_80659DB0@ha
-/* 804C0B8C 0048A14C  84 85 9D B0 */	lwzu r4, float_80659DB0@l(r5)
+/* 804C0B88 0048A148  3C A0 80 66 */	lis r5, lbl_80659DB0@ha
+/* 804C0B8C 0048A14C  84 85 9D B0 */	lwzu r4, lbl_80659DB0@l(r5)
 /* 804C0B90 0048A150  90 81 00 08 */	stw r4, 8(r1)
 /* 804C0B94 0048A154  80 65 00 04 */	lwz r3, 4(r5)
 /* 804C0B98 0048A158  80 05 00 08 */	lwz r0, 8(r5)
@@ -686,44 +686,37 @@ __RTTI__CLight:
 
 .global float_8066D758
 float_8066D758:
-	# ROM: 0x5775B8
-	.4byte 0
+	.float 0
 
 
 .global float_8066D75C
 float_8066D75C:
-	# ROM: 0x5775BC
 	.float 0.5
 
 
 .global float_8066D760
 float_8066D760:
-	# ROM: 0x5775C0
 	.float 1.0
 
 
 .global float_8066D764
 float_8066D764:
-	# ROM: 0x5775C4
-	.4byte 0x461C4000
+	.float 10000 #0x461C4000
 
 
 .global float_8066D768
 float_8066D768:
-	# ROM: 0x5775C8
-	.4byte 0x49742400
+	.float 1000000 #0x49742400
 
 
 .global float_8066D76C
 float_8066D76C:
-	# ROM: 0x5775CC
-	.4byte 0x4222F983
+	.float 40.7436638 #0x4222F983
 
 
 .global float_8066D770
 float_8066D770:
-	# ROM: 0x5775D0
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 .global CLight_typestr
 CLight_typestr:

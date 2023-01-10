@@ -4607,7 +4607,6 @@ __vt__cf_CBattleState:
 
 .global lbl_80664B40
 lbl_80664B40:
-	# ROM: 0x570720
 	.4byte 0
 	.4byte 0
 
@@ -4615,33 +4614,28 @@ lbl_80664B40:
 
 .global float_80669CC0
 float_80669CC0:
-	# ROM: 0x573B20
 	.float 1.0
 
 
 .global float_80669CC4
 float_80669CC4:
-	# ROM: 0x573B24
 	.float 0.5
 
 
 .global double_80669CC8
 double_80669CC8:
-	# ROM: 0x573B28
 	.4byte 0x3FF80000
 	.4byte 0
 
 
 .global float_80669CD0
 float_80669CD0:
-	# ROM: 0x573B30
-	.4byte 0
+	.float 0
 
 
 .global float_80669CD4
 float_80669CD4:
-	# ROM: 0x573B34
-	.4byte 0x3F666666
+	.float 0.9 #0x3F666666
 
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

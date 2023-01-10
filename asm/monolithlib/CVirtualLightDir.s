@@ -97,8 +97,7 @@ __RTTI__CVirtualLightDir:
 
 .global float_8066D240
 float_8066D240:
-	# ROM: 0x5770A0
-	.4byte 0
+	.float 0
 	.4byte 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

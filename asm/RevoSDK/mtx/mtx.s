@@ -827,7 +827,6 @@ C_MTXLightOrtho:
 
 .global Unit01
 Unit01:
-	# ROM: 0x5716B8
 	.4byte 0
 	.float 1.0
 
@@ -835,42 +834,35 @@ Unit01:
 
 .global one_c
 one_c:
-	# ROM: 0x575F88
 	.float 1.0
 
 
 .global zero_c
 zero_c:
-	# ROM: 0x575F8C
 	.4byte 0
 
 
 .global float_8066C130
 float_8066C130:
-	# ROM: 0x575F90
 	.float 0.5
 
 
 .global float_8066C134
 float_8066C134:
-	# ROM: 0x575F94
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_8066C138
 float_8066C138:
-	# ROM: 0x575F98
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066C13C
 float_8066C13C:
-	# ROM: 0x575F9C
 	.float -1.0
 
 
 .global float_8066C140
 float_8066C140:
-	# ROM: 0x575FA0
 	.4byte 0x3C8EFA35
 	.4byte 0

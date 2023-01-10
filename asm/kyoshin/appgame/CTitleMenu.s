@@ -739,22 +739,19 @@ func_802B725C:
 
 .global float_8066B7E0
 float_8066B7E0:
-	# ROM: 0x575640
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066B7E8
 double_8066B7E8:
-	# ROM: 0x575648
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066B7F0
 float_8066B7F0:
-	# ROM: 0x575650
-	.4byte 0
+	.float 0
 
 .global CTitle_typestr
 CTitle_typestr:

@@ -3120,21 +3120,18 @@ func_80102018:
 
 .global double_806697D8
 double_806697D8:
-	# ROM: 0x573638
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_806697E0
 float_806697E0:
-	# ROM: 0x573640
 	.float 1.0
 
 
 .global float_806697E4
 float_806697E4:
-	# ROM: 0x573644
-	.4byte 0
+	.float 0
 
 .global IUICf_typestr
 IUICf_typestr:

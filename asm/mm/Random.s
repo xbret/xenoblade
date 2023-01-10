@@ -140,8 +140,8 @@ sinit_80436058:
 /* 80436060 003FF620  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80436064 003FF624  C0 02 C6 A8 */	lfs f0, float_8066CA28@sda21(r2)
 /* 80436068 003FF628  93 C1 00 08 */	stw r30, 8(r1)
-/* 8043606C 003FF62C  3F C0 80 66 */	lis r30, float_80659E40@ha
-/* 80436070 003FF630  3B DE 9E 40 */	addi r30, r30, float_80659E40@l
+/* 8043606C 003FF62C  3F C0 80 66 */	lis r30, lbl_80659E40@ha
+/* 80436070 003FF630  3B DE 9E 40 */	addi r30, r30, lbl_80659E40@l
 /* 80436074 003FF634  C0 22 C6 A4 */	lfs f1, float_8066CA24@sda21(r2)
 /* 80436078 003FF638  3B FE 00 00 */	addi r31, r30, 0
 /* 8043607C 003FF63C  D0 5E 00 00 */	stfs f2, 0(r30)
@@ -200,33 +200,28 @@ sinit_80436058:
 
 .global float_8066CA14
 float_8066CA14:
-	# ROM: 0x576874
-	.4byte 0x56B5E621
+	.float 1E+14 #0x56B5E621
 
 
 .global float_8066CA18
 float_8066CA18:
-	# ROM: 0x576878
 	.4byte 0xD6B5E621
 	.4byte 0
 
 
 .global float_8066CA20
 float_8066CA20:
-	# ROM: 0x576880
 	.float 1.0
 
 
 .global float_8066CA24
 float_8066CA24:
-	# ROM: 0x576884
 	.float 0.5
 
 
 .global float_8066CA28
 float_8066CA28:
-	# ROM: 0x576888
-	.4byte 0
+	.float 0
 	.4byte 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

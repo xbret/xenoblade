@@ -403,8 +403,8 @@ func_8007C5B8:
 /* 8007C654 00045C14  38 A0 00 0C */	li r5, 0xc
 /* 8007C658 00045C18  90 1F 00 8C */	stw r0, 0x8c(r31)
 /* 8007C65C 00045C1C  4B F8 7C F5 */	bl memset
-/* 8007C660 00045C20  3C A0 80 66 */	lis r5, float_80659DB0@ha
-/* 8007C664 00045C24  84 85 9D B0 */	lwzu r4, float_80659DB0@l(r5)
+/* 8007C660 00045C20  3C A0 80 66 */	lis r5, lbl_80659DB0@ha
+/* 8007C664 00045C24  84 85 9D B0 */	lwzu r4, lbl_80659DB0@l(r5)
 /* 8007C668 00045C28  80 7F 00 AC */	lwz r3, 0xac(r31)
 /* 8007C66C 00045C2C  80 05 00 04 */	lwz r0, 4(r5)
 /* 8007C670 00045C30  90 1F 00 1C */	stw r0, 0x1c(r31)
@@ -1774,8 +1774,8 @@ func_8007D84C:
 /* 8007D92C 00046EEC  41 82 00 08 */	beq .L_8007D934
 /* 8007D930 00046EF0  48 10 8D 35 */	bl func_80186664
 .L_8007D934:
-/* 8007D934 00046EF4  3C A0 80 66 */	lis r5, float_80659DB0@ha
-/* 8007D938 00046EF8  84 85 9D B0 */	lwzu r4, float_80659DB0@l(r5)
+/* 8007D934 00046EF4  3C A0 80 66 */	lis r5, lbl_80659DB0@ha
+/* 8007D938 00046EF8  84 85 9D B0 */	lwzu r4, lbl_80659DB0@l(r5)
 /* 8007D93C 00046EFC  80 7F 00 B4 */	lwz r3, 0xb4(r31)
 /* 8007D940 00046F00  80 05 00 04 */	lwz r0, 4(r5)
 /* 8007D944 00046F04  90 1F 00 1C */	stw r0, 0x1c(r31)
@@ -9842,10 +9842,10 @@ func_8008413C:
 /* 8008458C 0004DB4C  80 7F 3F 60 */	lwz r3, 0x3f60(r31)
 /* 80084590 0004DB50  2C 03 00 00 */	cmpwi r3, 0
 /* 80084594 0004DB54  41 82 00 78 */	beq .L_8008460C
-/* 80084598 0004DB58  3F A0 80 66 */	lis r29, float_80659DB0@ha
-/* 8008459C 0004DB5C  38 9D 9D B0 */	addi r4, r29, float_80659DB0@l
+/* 80084598 0004DB58  3F A0 80 66 */	lis r29, lbl_80659DB0@ha
+/* 8008459C 0004DB5C  38 9D 9D B0 */	addi r4, r29, lbl_80659DB0@l
 /* 800845A0 0004DB60  4B FC 72 21 */	bl func_8004B7C0
-/* 800845A4 0004DB64  38 9D 9D B0 */	addi r4, r29, float_80659DB0@l
+/* 800845A4 0004DB64  38 9D 9D B0 */	addi r4, r29, lbl_80659DB0@l
 /* 800845A8 0004DB68  80 BF 3F 60 */	lwz r5, 0x3f60(r31)
 /* 800845AC 0004DB6C  80 04 00 04 */	lwz r0, 4(r4)
 /* 800845B0 0004DB70  80 64 00 00 */	lwz r3, 0(r4)
@@ -13408,7 +13408,6 @@ lbl_804F7020:
 
 .global lbl_8052AE18
 lbl_8052AE18:
-	# ROM: 0x526F18
 	.4byte lbl_80668D30
 	.4byte 0
 	.4byte lbl_80668D34
@@ -13455,7 +13454,6 @@ lbl_8052AE18:
 
 .global lbl_8052AEC0
 lbl_8052AEC0:
-	# ROM: 0x526FC0
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -13475,38 +13473,32 @@ lbl_8052AEC0:
 
 .global lbl_806644B8
 lbl_806644B8:
-	# ROM: 0x570098
 	.4byte 0
 
 
 .global lbl_806644BC
 lbl_806644BC:
-	# ROM: 0x57009C
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_806644C0
 lbl_806644C0:
-	# ROM: 0x5700A0
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_806644C4
 lbl_806644C4:
-	# ROM: 0x5700A4
 	.4byte 0xFFFF0000
 
 
 .global lbl_806644C8
 lbl_806644C8:
-	# ROM: 0x5700A8
 	.4byte 0x00010003
 	.4byte 0x000C0000
 
 
 .global lbl_806644D0
 lbl_806644D0:
-	# ROM: 0x5700B0
 	.4byte 0x000A000B
 	.4byte 0x000C0000
 
@@ -13514,26 +13506,22 @@ lbl_806644D0:
 
 .global float_80668D20
 float_80668D20:
-	# ROM: 0x572B80
-	.4byte 0
+	.float 0
 
 
 .global float_80668D24
 float_80668D24:
-	# ROM: 0x572B84
 	.float 1.0
 
 
 .global float_80668D28
 float_80668D28:
-	# ROM: 0x572B88
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_80668D2C
 float_80668D2C:
-	# ROM: 0x572B8C
-	.4byte 0x42700000
+	.float 60 #0x42700000
 
 .global lbl_80668D30
 lbl_80668D30:
@@ -13618,152 +13606,128 @@ lbl_80668D7C:
 
 .global float_80668D80
 float_80668D80:
-	# ROM: 0x572BE0
-	.4byte 0x42340000
+	.float 45 #0x42340000
 	.4byte 0
 
 
 .global double_80668D88
 double_80668D88:
-	# ROM: 0x572BE8
 	.4byte 0
 	.4byte 0
 
 
 .global float_80668D90
 float_80668D90:
-	# ROM: 0x572BF0
-	.4byte 0x40200000
+	.float 2.5 #0x40200000
 
 
 .global float_80668D94
 float_80668D94:
-	# ROM: 0x572BF4
-	.4byte 0x3F266666
+	.float 0.65 #0x3F266666
 
 
 .global float_80668D98
 float_80668D98:
-	# ROM: 0x572BF8
-	.4byte 0x3F333333
+	.float 0.7 #0x3F333333
 
 
 .global float_80668D9C
 float_80668D9C:
-	# ROM: 0x572BFC
 	.float 1.5
 
 
 .global double_80668DA0
 double_80668DA0:
-	# ROM: 0x572C00
 	.4byte 0x3FE00000
 	.4byte 0
 
 
 .global double_80668DA8
 double_80668DA8:
-	# ROM: 0x572C08
 	.4byte 0xBFE00000
 	.4byte 0
 
 
 .global double_80668DB0
 double_80668DB0:
-	# ROM: 0x572C10
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_80668DB8
 double_80668DB8:
-	# ROM: 0x572C18
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80668DC0
 float_80668DC0:
-	# ROM: 0x572C20
-	.4byte 0x41A00000
+	.float 20 #0x41A00000
 
 
 .global float_80668DC4
 float_80668DC4:
-	# ROM: 0x572C24
 	.float 10.0
 
 
 .global float_80668DC8
 float_80668DC8:
-	# ROM: 0x572C28
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_80668DCC
 float_80668DCC:
-	# ROM: 0x572C2C
 	.float 0.25
 
 
 .global float_80668DD0
 float_80668DD0:
-	# ROM: 0x572C30
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_80668DD4
 float_80668DD4:
-	# ROM: 0x572C34
-	.4byte 0x461C4000
+	.float 10000 #0x461C4000
 
 
 .global float_80668DD8
 float_80668DD8:
-	# ROM: 0x572C38
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_80668DDC
 float_80668DDC:
-	# ROM: 0x572C3C
-	.4byte 0x447A0000
+	.float 1000 #0x447A0000
 
 
 .global float_80668DE0
 float_80668DE0:
-	# ROM: 0x572C40
-	.4byte 0x42A00000
+	.float 80 #0x42A00000
 
 
 .global float_80668DE4
 float_80668DE4:
-	# ROM: 0x572C44
 	.float 100.0
 
 
 .global float_80668DE8
 float_80668DE8:
-	# ROM: 0x572C48
-	.4byte 0x43B40000
+	.float 360 #0x43B40000
 
 
 .global float_80668DEC
 float_80668DEC:
-	# ROM: 0x572C4C
-	.4byte 0x41100000
+	.float 9 #0x41100000
 
 
 .global float_80668DF0
 float_80668DF0:
-	# ROM: 0x572C50
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 
 .global float_80668DF4
 float_80668DF4:
-	# ROM: 0x572C54
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

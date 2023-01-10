@@ -1095,7 +1095,6 @@ WPADiDecode:
 
 .global lbl_80560FA0
 lbl_80560FA0:
-	# ROM: 0x55D0A0
 	.4byte 0xA877A6E0
 	.4byte 0xF7435A35
 	.4byte 0x85E27297

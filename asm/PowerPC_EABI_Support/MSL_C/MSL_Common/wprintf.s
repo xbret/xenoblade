@@ -2512,7 +2512,6 @@ vswprintf:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_8053FA30
 lbl_8053FA30:
-	# ROM: 0x53BB30
 	.4byte switch_802C50F0
 	.4byte switch_802C5250
 	.4byte switch_802C5250
@@ -2659,7 +2658,6 @@ lbl_8053FB10:
 
 .global lbl_8053FC60
 lbl_8053FC60:
-	# ROM: 0x53BD60
 	.4byte 0x002D0030
 	.4byte 0x00580030
 	.4byte 0x0000002D
@@ -2698,6 +2696,5 @@ lbl_8050DB88:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global double_8066B898
 double_8066B898:
-	# ROM: 0x5756F8
 	.4byte 0
 	.4byte 0

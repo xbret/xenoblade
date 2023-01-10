@@ -4414,24 +4414,24 @@ draw__Q210homebutton10HomeButtonFv:
 /* 80326C44 002F0204  38 80 00 00 */	li r4, 0
 /* 80326C48 002F0208  38 A0 00 04 */	li r5, 4
 /* 80326C4C 002F020C  4B FF 3D 95 */	bl GXBegin
-/* 80326C50 002F0210  3C A0 80 52 */	lis r5, float_805189C0@ha
+/* 80326C50 002F0210  3C A0 80 52 */	lis r5, lbl_805189C0@ha
 /* 80326C54 002F0214  3C 80 CC 01 */	lis r4, 0xCC008000@ha
-/* 80326C58 002F0218  C0 05 89 C0 */	lfs f0, float_805189C0@l(r5)
-/* 80326C5C 002F021C  3C 60 80 52 */	lis r3, float_805189F8@ha
+/* 80326C58 002F0218  C0 05 89 C0 */	lfs f0, lbl_805189C0@l(r5)
+/* 80326C5C 002F021C  3C 60 80 52 */	lis r3, lbl_805189F8@ha
 /* 80326C60 002F0220  D0 04 80 00 */	stfs f0, 0xCC008000@l(r4)
-/* 80326C64 002F0224  C0 05 89 C0 */	lfs f0, float_805189C0@l(r5)
+/* 80326C64 002F0224  C0 05 89 C0 */	lfs f0, lbl_805189C0@l(r5)
 /* 80326C68 002F0228  D0 04 80 00 */	stfs f0, -0x8000(r4)
-/* 80326C6C 002F022C  C0 05 89 C0 */	lfs f0, float_805189C0@l(r5)
+/* 80326C6C 002F022C  C0 05 89 C0 */	lfs f0, lbl_805189C0@l(r5)
 /* 80326C70 002F0230  D0 04 80 00 */	stfs f0, -0x8000(r4)
-/* 80326C74 002F0234  C0 03 89 F8 */	lfs f0, float_805189F8@l(r3)
+/* 80326C74 002F0234  C0 03 89 F8 */	lfs f0, lbl_805189F8@l(r3)
 /* 80326C78 002F0238  D0 04 80 00 */	stfs f0, -0x8000(r4)
-/* 80326C7C 002F023C  C0 03 89 F8 */	lfs f0, float_805189F8@l(r3)
+/* 80326C7C 002F023C  C0 03 89 F8 */	lfs f0, lbl_805189F8@l(r3)
 /* 80326C80 002F0240  D0 04 80 00 */	stfs f0, -0x8000(r4)
-/* 80326C84 002F0244  C0 03 89 F8 */	lfs f0, float_805189F8@l(r3)
+/* 80326C84 002F0244  C0 03 89 F8 */	lfs f0, lbl_805189F8@l(r3)
 /* 80326C88 002F0248  D0 04 80 00 */	stfs f0, -0x8000(r4)
-/* 80326C8C 002F024C  C0 03 89 F8 */	lfs f0, float_805189F8@l(r3)
+/* 80326C8C 002F024C  C0 03 89 F8 */	lfs f0, lbl_805189F8@l(r3)
 /* 80326C90 002F0250  D0 04 80 00 */	stfs f0, -0x8000(r4)
-/* 80326C94 002F0254  C0 05 89 C0 */	lfs f0, float_805189C0@l(r5)
+/* 80326C94 002F0254  C0 05 89 C0 */	lfs f0, lbl_805189C0@l(r5)
 /* 80326C98 002F0258  D0 04 80 00 */	stfs f0, -0x8000(r4)
 /* 80326C9C 002F025C  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 80326CA0 002F0260  83 E1 00 2C */	lwz r31, 0x2c(r1)
@@ -9498,8 +9498,8 @@ setAdjustFlag__Q210homebutton10HomeButtonFi:
 /* 8032B320 002F48E0  48 00 00 7C */	b .L_8032B39C
 .L_8032B324:
 /* 8032B324 002F48E4  80 83 02 38 */	lwz r4, 0x238(r3)
-/* 8032B328 002F48E8  3C A0 80 52 */	lis r5, float_805189AC@ha
-/* 8032B32C 002F48EC  C0 05 89 AC */	lfs f0, float_805189AC@l(r5)
+/* 8032B328 002F48E8  3C A0 80 52 */	lis r5, lbl_805189AC@ha
+/* 8032B32C 002F48EC  C0 05 89 AC */	lfs f0, lbl_805189AC@l(r5)
 /* 8032B330 002F48F0  80 84 00 10 */	lwz r4, 0x10(r4)
 /* 8032B334 002F48F4  D0 01 00 08 */	stfs f0, 8(r1)
 /* 8032B338 002F48F8  D0 04 00 44 */	stfs f0, 0x44(r4)
@@ -9615,14 +9615,12 @@ update_sound__Q210homebutton10HomeButtonFv:
 
 .global lbl_805186C8
 lbl_805186C8:
-	# ROM: 0x5147C8
 	.4byte 0x000000FF
 	.4byte 0
 
 
 .global lbl_805186D0
 lbl_805186D0:
-	# ROM: 0x5147D0
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -9651,7 +9649,6 @@ lbl_805186D0:
 
 .global lbl_80518730
 lbl_80518730:
-	# ROM: 0x514830
 	.4byte 0
 	.4byte 0
 	.4byte 0x00000001
@@ -9813,9 +9810,8 @@ lbl_80518730:
 	.4byte 0
 
 
-.global float_805189AC
-float_805189AC:
-	# ROM: 0x514AAC
+.global lbl_805189AC
+lbl_805189AC:
 	.float 1.0
 	.4byte 0x43300000
 	.4byte 0
@@ -9823,9 +9819,8 @@ float_805189AC:
 	.4byte 0x455F2000
 
 
-.global float_805189C0
-float_805189C0:
-	# ROM: 0x514AC0
+.global lbl_805189C0
+lbl_805189C0:
 	.4byte 0xC47A0000
 	.4byte 0xC61C4000
 	.4byte 0x41F00000
@@ -9842,9 +9837,8 @@ float_805189C0:
 	.4byte 0x414B3333
 
 
-.global float_805189F8
-float_805189F8:
-	# ROM: 0x514AF8
+.global lbl_805189F8
+lbl_805189F8:
 	.4byte 0x447A0000
 	.4byte 0x40A00000
 	.4byte 0x41700000
@@ -9868,13 +9862,11 @@ lbl_8054C878:
 
 .global lbl_8054C8C0
 lbl_8054C8C0:
-	# ROM: 0x5489C0
 	.4byte lbl_8054C878
 
 
 .global lbl_8054C8C4
 lbl_8054C8C4:
-	# ROM: 0x5489C4
 	.4byte lbl_805CD758
 
 
@@ -9942,7 +9934,6 @@ lbl_8054C954:
 
 .global lbl_8054C960
 lbl_8054C960:
-	# ROM: 0x548A60
 	.4byte lbl_8054C93C
 	.4byte lbl_8054C948
 	.4byte lbl_8054C954
@@ -10616,7 +10607,6 @@ lbl_8054D254:
 
 .global lbl_8054D260
 lbl_8054D260:
-	# ROM: 0x549360
 	.4byte lbl_8054D1DC
 	.4byte lbl_8054D1E8
 	.4byte lbl_8054D1F4
@@ -10646,7 +10636,6 @@ lbl_8054D2A0:
 
 .global lbl_8054D2AC
 lbl_8054D2AC:
-	# ROM: 0x5493AC
 	.4byte lbl_8054D288
 	.4byte lbl_8054D294
 	.4byte lbl_8054D2A0
@@ -10734,7 +10723,6 @@ lbl_8054D3A8:
 
 .global lbl_8054D3B8
 lbl_8054D3B8:
-	# ROM: 0x5494B8
 	.4byte lbl_8054D2B8
 	.4byte lbl_8054D2C8
 	.4byte lbl_8054D2D8
@@ -10763,7 +10751,6 @@ lbl_8054D3B8:
 
 .global lbl_8054D428
 lbl_8054D428:
-	# ROM: 0x549528
 	.4byte switch_80324E0C
 	.4byte switch_80324FD8
 	.4byte switch_803265BC
@@ -10788,7 +10775,6 @@ lbl_8054D428:
 
 .global lbl_8054D478
 lbl_8054D478:
-	# ROM: 0x549578
 	.4byte switch_80328514
 	.4byte switch_803285D4
 	.4byte switch_80328B88
@@ -10803,7 +10789,6 @@ lbl_8054D478:
 
 .global lbl_8054D4A0
 lbl_8054D4A0:
-	# ROM: 0x5495A0
 	.4byte switch_80329364
 	.4byte switch_803293D8
 	.4byte switch_8032990C
@@ -10818,7 +10803,6 @@ lbl_8054D4A0:
 
 .global lbl_8054D4C8
 lbl_8054D4C8:
-	# ROM: 0x5495C8
 	.4byte switch_80329FD4
 	.4byte switch_8032A068
 	.4byte switch_8032A1C0
@@ -10833,7 +10817,6 @@ lbl_8054D4C8:
 
 .global lbl_8054D4F0
 lbl_8054D4F0:
-	# ROM: 0x5495F0
 	.4byte lbl_8054D530
 	.4byte 0
 	.4byte onEvent__Q210homebutton22HomeButtonEventHandlerFUlUlPv

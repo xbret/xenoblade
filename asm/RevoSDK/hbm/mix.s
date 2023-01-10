@@ -1859,7 +1859,6 @@ HBMFreeIndexByKey:
 
 .global lbl_8054EF00
 lbl_8054EF00:
-	# ROM: 0x54B000
 	.4byte 0x00000001
 	.4byte 0x00010001
 	.4byte 0x00010001

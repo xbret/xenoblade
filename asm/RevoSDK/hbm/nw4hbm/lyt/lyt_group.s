@@ -243,7 +243,6 @@ FindGroupByName__Q36nw4hbm3lyt14GroupContainerFPCc:
 
 .global lbl_8054D7D0
 lbl_8054D7D0:
-	# ROM: 0x5498D0
 	.4byte lbl_8054D7F0
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt5GroupFv

@@ -272,6 +272,5 @@ ReadWaveInfo__Q44nw4r3snd6detail13WsdFileReaderCFiPQ44nw4r3snd6detail8WaveInfoPC
 
 .global float_8066C900
 float_8066C900:
-	# ROM: 0x576760
 	.float 1.0
 	.4byte 0

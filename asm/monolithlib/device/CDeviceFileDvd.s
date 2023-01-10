@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global func_80450B54
-func_80450B54:
+.global __ct__CDeviceFileDvd
+__ct__CDeviceFileDvd:
 /* 80450B54 0041A114  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80450B58 0041A118  7C 08 02 A6 */	mflr r0
 /* 80450B5C 0041A11C  38 C0 01 00 */	li r6, 0x100
@@ -887,8 +887,8 @@ func_804516CC:
 /* 80451718 0041ACD8  38 60 00 01 */	li r3, 1
 /* 8045171C 0041ACDC  4E 80 00 20 */	blr 
 
-.global func_80451720
-func_80451720:
+.global __ct__80451720
+__ct__80451720:
 /* 80451720 0041ACE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80451724 0041ACE4  7C 08 02 A6 */	mflr r0
 /* 80451728 0041ACE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1638,7 +1638,7 @@ lbl_8001CF94:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_80450B54
+.4byte __ct__CDeviceFileDvd
 	.4byte 0x00000060
 	.4byte lbl_8001CF14
 	.4byte func_80450BB4
@@ -1671,7 +1671,7 @@ lbl_8001CF94:
 	.4byte func_8045166C
 	.4byte 0x00000060
 	.4byte lbl_8001CF64
-	.4byte func_80451720
+	.4byte __ct__80451720
 	.4byte 0x00000098
 	.4byte lbl_8001CF6C
 	.4byte func_804517B8

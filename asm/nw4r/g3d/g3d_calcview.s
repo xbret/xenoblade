@@ -2383,7 +2383,6 @@ CalcView_LC_DMA_ModelMtx__Q24nw4r3g3dFPQ34nw4r4math5MTX34PQ34nw4r4math5MTX33PCQ3
 
 .global lbl_80520FB8
 lbl_80520FB8:
-	# ROM: 0x51D0B8
 	.4byte 0
 	.4byte Calc_BILLBOARD_STD__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
 	.4byte Calc_BILLBOARD_PERSP_STD__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
@@ -2398,18 +2397,15 @@ lbl_80520FB8:
 
 .global float_8066C430
 float_8066C430:
-	# ROM: 0x576290
-	.4byte 0
+	.float 0
 
 
 .global float_8066C434
 float_8066C434:
-	# ROM: 0x576294
-	.4byte 0x219392EF
+	.float 1e-18 #0x219392EF
 
 
 .global lbl_8066C438
 lbl_8066C438:
-	# ROM: 0x576298
 	.4byte 0x219392EF
 	.4byte 0

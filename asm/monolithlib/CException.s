@@ -1552,9 +1552,9 @@ func_80459118:
 .L_80459188:
 /* 80459188 00422748  48 00 00 00 */	b .L_80459188
 .L_8045918C:
-/* 8045918C 0042274C  3C 80 80 66 */	lis r4, float_80659EE8@ha
+/* 8045918C 0042274C  3C 80 80 66 */	lis r4, lbl_80659EE8@ha
 /* 80459190 00422750  80 6D BD FC */	lwz r3, lbl_80667F7C@sda21(r13)
-/* 80459194 00422754  38 84 9E E8 */	addi r4, r4, float_80659EE8@l
+/* 80459194 00422754  38 84 9E E8 */	addi r4, r4, lbl_80659EE8@l
 /* 80459198 00422758  38 A0 00 01 */	li r5, 1
 /* 8045919C 0042275C  4B FF 13 DD */	bl func_8044A578
 /* 804591A0 00422760  38 00 00 00 */	li r0, 0
@@ -2112,89 +2112,75 @@ __RTTI__CException:
 
 .global float_8066CC40
 float_8066CC40:
-	# ROM: 0x576AA0
-	.4byte 0
+	.float 0
 
 
 .global float_8066CC44
 float_8066CC44:
-	# ROM: 0x576AA4
-	.4byte 0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
 
 
 .global float_8066CC48
 float_8066CC48:
-	# ROM: 0x576AA8
 	.float 1.0
 
 
 .global float_8066CC4C
 float_8066CC4C:
-	# ROM: 0x576AAC
 	.float 0.5
 
 
 .global float_8066CC50
 float_8066CC50:
-	# ROM: 0x576AB0
-	.4byte 0x3FA2067B
+	.float 1.26582277 #0x3FA2067B
 
 
 .global float_8066CC54
 float_8066CC54:
-	# ROM: 0x576AB4
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066CC58
 float_8066CC58:
-	# ROM: 0x576AB8
-	.4byte 0xCB800000
+	.float -16777216 #0xCB800000
 
 
 .global float_8066CC5C
 float_8066CC5C:
-	# ROM: 0x576ABC
-	.4byte 0x3F819EC9
+	.float 1.01265824 #0x3F819EC9
 
 
 .global float_8066CC60
 float_8066CC60:
-	# ROM: 0x576AC0
 	.float -1.0
 
 
 .global float_8066CC64
 float_8066CC64:
-	# ROM: 0x576AC4
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 
 .global float_8066CC68
 float_8066CC68:
-	# ROM: 0x576AC8
-	.4byte 0x41E00000
+	.float 28 #0x41E00000
 	.4byte 0
 
 
 .global double_8066CC70
 double_8066CC70:
-	# ROM: 0x576AD0
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_8066CC78
 double_8066CC78:
-	# ROM: 0x576AD8
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066CC80
 float_8066CC80:
-	# ROM: 0x576AE0
-	.4byte 0x3D23D70A
+	.float 0.04 #0x3D23D70A
 	.4byte 0
 
 

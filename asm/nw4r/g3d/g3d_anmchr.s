@@ -2345,7 +2345,6 @@ GetTypeObj__Q34nw4r3g3d9AnmObjChrCFv:
 
 .global lbl_80520ED8
 lbl_80520ED8:
-	# ROM: 0x51CFD8
 	.4byte 0x0000000A
 	.asciz "AnmObjChr"
 	.balign 4
@@ -2353,7 +2352,6 @@ lbl_80520ED8:
 
 .global lbl_80520EE8
 lbl_80520EE8:
-	# ROM: 0x51CFE8
 	.4byte 0x0000000E
 	.asciz "AnmObjChrNode"
 	.balign 4
@@ -2361,7 +2359,6 @@ lbl_80520EE8:
 
 .global lbl_80520EFC
 lbl_80520EFC:
-	# ROM: 0x51CFFC
 	.4byte 0x0000000F
 	.asciz "AnmObjChrBlend"
 	.balign 4
@@ -2369,7 +2366,6 @@ lbl_80520EFC:
 
 .global lbl_80520F10
 lbl_80520F10:
-	# ROM: 0x51D010
 	.4byte 0x0000000D
 	.asciz "AnmObjChrRes"
 	.balign 4
@@ -2382,7 +2378,6 @@ lbl_80520F10:
 
 .global lbl_8056CC10
 lbl_8056CC10:
-	# ROM: 0x568D10
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjChrResCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2409,7 +2404,6 @@ lbl_8056CC10:
 
 .global lbl_8056CC68
 lbl_8056CC68:
-	# ROM: 0x568D68
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d14AnmObjChrBlendCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2436,7 +2430,6 @@ lbl_8056CC68:
 
 .global lbl_8056CCC0
 lbl_8056CCC0:
-	# ROM: 0x568DC0
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d13AnmObjChrNodeCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2463,7 +2456,6 @@ lbl_8056CCC0:
 
 .global lbl_8056CD18
 lbl_8056CD18:
-	# ROM: 0x568E18
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d9AnmObjChrCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2491,25 +2483,21 @@ lbl_8056CD18:
 
 .global float_8066C388
 float_8066C388:
-	# ROM: 0x5761E8
-	.4byte 0
+	.float 0
 
 
 .global float_8066C38C
 float_8066C38C:
-	# ROM: 0x5761EC
 	.float 1.0
 
 
 .global float_8066C390
 float_8066C390:
-	# ROM: 0x5761F0
 	.4byte 0x7FC00000
 	.4byte 0
 
 
 .global double_8066C398
 double_8066C398:
-	# ROM: 0x5761F8
 	.4byte 0x43300000
 	.4byte 0x80000000

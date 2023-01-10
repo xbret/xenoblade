@@ -175,7 +175,6 @@ SJ_SearchTag:
 
 .global sj_val_to_hexstr_tbl
 sj_val_to_hexstr_tbl:
-	# ROM: 0x565468
 	.4byte 0 #0
 	.4byte 0
 	.4byte 0

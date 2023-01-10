@@ -5511,7 +5511,6 @@ sfmpv_ReprocessShc:
 
 .global lbl_80520320
 lbl_80520320:
-	# ROM: 0x51C420
 	.4byte SFMPV_Init
 	.4byte SFMPV_Finish
 	.4byte SFMPV_ExecServer
@@ -5530,7 +5529,6 @@ lbl_80520320:
 
 .global lbl_80520358
 lbl_80520358:
-	# ROM: 0x51C458
 	.4byte 0
 	.4byte 0x00000018
 	.4byte 0x00000018

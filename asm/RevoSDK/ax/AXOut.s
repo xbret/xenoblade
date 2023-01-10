@@ -630,19 +630,16 @@ AXRmtAdvancePtr:
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 .global lbl_806658B8
 lbl_806658B8:
-	# ROM: 0x571498
 	.2byte 0x0010
 
 
 .global lbl_806658BA
 lbl_806658BA:
-	# ROM: 0x57149A
 	.2byte 0x0037
 
 
 .global lbl_806658BC
 lbl_806658BC:
-	# ROM: 0x57149C
 	.4byte 0x20000000
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

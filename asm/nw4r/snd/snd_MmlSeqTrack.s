@@ -61,7 +61,6 @@ __dt__Q44nw4r3snd6detail11MmlSeqTrackFv:
 
 .global lbl_8056E390
 lbl_8056E390:
-	# ROM: 0x56A490
 	.4byte 0
 	.4byte 0
 	.4byte CommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackUlll
@@ -70,7 +69,6 @@ lbl_8056E390:
 
 .global lbl_8056E3A0
 lbl_8056E3A0:
-	# ROM: 0x56A4A0
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail11MmlSeqTrackFv

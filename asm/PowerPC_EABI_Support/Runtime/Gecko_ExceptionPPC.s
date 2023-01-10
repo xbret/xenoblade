@@ -1532,7 +1532,6 @@ __throw:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_8053F068
 lbl_8053F068:
-	# ROM: 0x53B168
 	.4byte switch_802BAC08
 	.4byte switch_802BAC08
 	.4byte switch_802BAB60

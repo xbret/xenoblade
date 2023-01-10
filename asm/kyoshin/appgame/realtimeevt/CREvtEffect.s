@@ -866,19 +866,16 @@ cf_CREvtEffect_hierarchy:
 
 .global lbl_80664D68
 lbl_80664D68:
-	# ROM: 0x570948
 	.4byte lbl_8066A1E8
 
 
 .global lbl_80664D6C
 lbl_80664D6C:
-	# ROM: 0x57094C
 	.4byte lbl_8066A1F0
 
 
 .global lbl_80664D70
 lbl_80664D70:
-	# ROM: 0x570950
 	.4byte lbl_8066A1F8
 	.4byte 0
 
@@ -906,57 +903,48 @@ lbl_8066A1F8:
 
 .global float_8066A1FC
 float_8066A1FC:
-	# ROM: 0x57405C
-	.4byte 0
+	.float 0
 
 
 .global float_8066A200
 float_8066A200:
-	# ROM: 0x574060
 	.float 1.0
 
 
 .global float_8066A204
 float_8066A204:
-	# ROM: 0x574064
-	.4byte 0x3F666666
+	.float 0.9 #0x3F666666
 
 
 .global float_8066A208
 float_8066A208:
-	# ROM: 0x574068
-	.4byte 0x3F733333
+	.float 0.95 #0x3F733333
 
 
 .global float_8066A20C
 float_8066A20C:
-	# ROM: 0x57406C
-	.4byte 0x3A83126F
+	.float 0.001 #0x3A83126F
 
 
 .global double_8066A210
 double_8066A210:
-	# ROM: 0x574070
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066A218
 float_8066A218:
-	# ROM: 0x574078
 	.float 0.5
 
 
 .global float_8066A21C
 float_8066A21C:
-	# ROM: 0x57407C
-	.4byte 0x43340000
+	.float 180 #0x43340000
 
 
 .global float_8066A220
 float_8066A220:
-	# ROM: 0x574080
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 	.4byte 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

@@ -710,7 +710,6 @@ GetGlyphFromIndex__Q44nw4r2ut6detail11ResFontBaseCFPQ34nw4r2ut5GlyphUs:
 
 .global lbl_8056E740
 lbl_8056E740:
-	# ROM: 0x56A840
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r2ut4FontFv
@@ -745,7 +744,6 @@ lbl_8056E7A0:
 
 .global lbl_8056E7AC
 lbl_8056E7AC:
-	# ROM: 0x56A8AC
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r2ut6detail11ResFontBaseFv

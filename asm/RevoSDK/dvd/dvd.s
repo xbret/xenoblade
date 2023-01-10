@@ -5402,7 +5402,6 @@ lbl_80549968:
 
 .global lbl_8054999C
 lbl_8054999C:
-	# ROM: 0x545A9C
 	.4byte switch_8030CBA8
 	.4byte switch_8030CB9C
 	.4byte switch_8030CB9C
@@ -5450,7 +5449,6 @@ lbl_8054999C:
 
 .global lbl_80549A48
 lbl_80549A48:
-	# ROM: 0x545B48
 	.4byte switch_8030DEF0
 	.4byte switch_8030DA84
 	.4byte switch_8030DBAC
@@ -5498,7 +5496,6 @@ lbl_80549A48:
 
 .global lbl_80549AF4
 lbl_80549AF4:
-	# ROM: 0x545BF4
 	.4byte switch_8030DA3C
 	.4byte switch_8030DA3C
 	.4byte switch_8030D9B8
@@ -5551,7 +5548,6 @@ lbl_80549BA0:
 
 .global lbl_80549BAC
 lbl_80549BAC:
-	# ROM: 0x545CAC
 	.4byte switch_8030EE64
 	.4byte switch_8030EE04
 	.4byte switch_8030EE04
@@ -5599,7 +5595,6 @@ lbl_80549BAC:
 
 .global lbl_80549C58
 lbl_80549C58:
-	# ROM: 0x545D58
 	.4byte switch_8030ECF0
 	.4byte switch_8030ECF0
 	.4byte switch_8030ED10
@@ -5662,19 +5657,16 @@ lbl_80549C90:
 
 .global lbl_80665980
 lbl_80665980:
-	# ROM: 0x571560
 	.4byte lbl_80549920
 
 
 .global lbl_80665984
 lbl_80665984:
-	# ROM: 0x571564
 	.4byte 0x00000001
 
 
 .global lbl_80665988
 lbl_80665988:
-	# ROM: 0x571568
 	.4byte defaultOptionalCommandChecker
 
 
@@ -5686,7 +5678,6 @@ lbl_8066598C:
 
 .global lbl_80665994
 lbl_80665994:
-	# ROM: 0x571574
 	.4byte 0xFFFFFFFF
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

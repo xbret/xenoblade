@@ -31451,7 +31451,6 @@ func_800F4798:
 
 .global lbl_804F8048
 lbl_804F8048:
-	# ROM: 0x4F4148
 	.4byte 0x00000003
 	.4byte 0x00640000
 	.4byte 0x00000032
@@ -31576,7 +31575,6 @@ lbl_804F8048:
 
 .global lbl_804F8228
 lbl_804F8228:
-	# ROM: 0x4F4328
 	.4byte 0
 	.4byte 0x000001AD
 	.4byte 0x000001AA
@@ -31594,7 +31592,6 @@ lbl_804F8228:
 
 .global lbl_804F825C
 lbl_804F825C:
-	# ROM: 0x4F435C
 	.4byte 0
 	.4byte 0x000A000F
 	.4byte 0x001E0000
@@ -31602,7 +31599,6 @@ lbl_804F825C:
 
 .global lbl_804F8268
 lbl_804F8268:
-	# ROM: 0x4F4368
 	.4byte 0
 	.4byte 0
 	.4byte 0x00000100
@@ -31817,7 +31813,6 @@ lbl_8052E98C:
 
 .global lbl_8052E9C4
 lbl_8052E9C4:
-	# ROM: 0x52AAC4
 	.4byte switch_800DEE38
 	.4byte switch_800DED90
 	.4byte switch_800DED90
@@ -31832,7 +31827,6 @@ lbl_8052E9C4:
 
 .global lbl_8052E9EC
 lbl_8052E9EC:
-	# ROM: 0x52AAEC
 	.4byte switch_800DECE8
 	.4byte switch_800DEC40
 	.4byte switch_800DEC40
@@ -31847,7 +31841,6 @@ lbl_8052E9EC:
 
 .global lbl_8052EA14
 lbl_8052EA14:
-	# ROM: 0x52AB14
 	.4byte switch_800DEBE8
 	.4byte switch_800DEB40
 	.4byte switch_800DEB40
@@ -31862,7 +31855,6 @@ lbl_8052EA14:
 
 .global lbl_8052EA3C
 lbl_8052EA3C:
-	# ROM: 0x52AB3C
 	.4byte switch_800DEA98
 	.4byte switch_800DE9F0
 	.4byte switch_800DE9F0
@@ -31877,7 +31869,6 @@ lbl_8052EA3C:
 
 .global lbl_8052EA64
 lbl_8052EA64:
-	# ROM: 0x52AB64
 	.4byte switch_800DE988
 	.4byte switch_800DE8E0
 	.4byte switch_800DE8E0
@@ -31892,7 +31883,6 @@ lbl_8052EA64:
 
 .global lbl_8052EA8C
 lbl_8052EA8C:
-	# ROM: 0x52AB8C
 	.4byte switch_800DE838
 	.4byte switch_800DE790
 	.4byte switch_800DE790
@@ -31907,7 +31897,6 @@ lbl_8052EA8C:
 
 .global lbl_8052EAB4
 lbl_8052EAB4:
-	# ROM: 0x52ABB4
 	.4byte switch_800DDA8C
 	.4byte switch_800DD9E4
 	.4byte switch_800DD9E4
@@ -31922,7 +31911,6 @@ lbl_8052EAB4:
 
 .global lbl_8052EADC
 lbl_8052EADC:
-	# ROM: 0x52ABDC
 	.4byte switch_800DD93C
 	.4byte switch_800DD894
 	.4byte switch_800DD894
@@ -31937,7 +31925,6 @@ lbl_8052EADC:
 
 .global lbl_8052EB04
 lbl_8052EB04:
-	# ROM: 0x52AC04
 	.4byte switch_800DD83C
 	.4byte switch_800DD794
 	.4byte switch_800DD794
@@ -31952,7 +31939,6 @@ lbl_8052EB04:
 
 .global lbl_8052EB2C
 lbl_8052EB2C:
-	# ROM: 0x52AC2C
 	.4byte switch_800DD6EC
 	.4byte switch_800DD644
 	.4byte switch_800DD644
@@ -31967,7 +31953,6 @@ lbl_8052EB2C:
 
 .global lbl_8052EB54
 lbl_8052EB54:
-	# ROM: 0x52AC54
 	.4byte switch_800DD5DC
 	.4byte switch_800DD534
 	.4byte switch_800DD534
@@ -31982,7 +31967,6 @@ lbl_8052EB54:
 
 .global lbl_8052EB7C
 lbl_8052EB7C:
-	# ROM: 0x52AC7C
 	.4byte switch_800DD48C
 	.4byte switch_800DD3E4
 	.4byte switch_800DD3E4
@@ -31997,7 +31981,6 @@ lbl_8052EB7C:
 
 .global lbl_8052EBA4
 lbl_8052EBA4:
-	# ROM: 0x52ACA4
 	.4byte switch_800E0BBC
 	.4byte switch_800E0AD8
 	.4byte switch_800E0AEC
@@ -32028,7 +32011,6 @@ lbl_8052EBA4:
 
 .global lbl_8052EC0C
 lbl_8052EC0C:
-	# ROM: 0x52AD0C
 	.4byte switch_800E4EF4
 	.4byte switch_800E4EAC
 	.4byte switch_800E4EB4
@@ -32043,7 +32025,6 @@ lbl_8052EC0C:
 
 .global lbl_8052EC34
 lbl_8052EC34:
-	# ROM: 0x52AD34
 	.4byte switch_800E4DA8
 	.4byte switch_800E4D54
 	.4byte switch_800E4D54
@@ -32115,7 +32096,6 @@ lbl_8052ECD4:
 
 .global lbl_8052ED10
 lbl_8052ED10:
-	# ROM: 0x52AE10
 	.4byte switch_800E7E8C
 	.4byte switch_800E7D9C
 	.4byte switch_800E7A40
@@ -32134,7 +32114,6 @@ lbl_8052ED10:
 
 .global lbl_8052ED48
 lbl_8052ED48:
-	# ROM: 0x52AE48
 	.4byte switch_800E7748
 	.4byte switch_800E764C
 	.4byte switch_800E7660
@@ -32165,7 +32144,6 @@ lbl_8052ED48:
 
 .global lbl_8052EDB0
 lbl_8052EDB0:
-	# ROM: 0x52AEB0
 	.4byte switch_800E74D4
 	.4byte switch_800E748C
 	.4byte switch_800E7494
@@ -32180,7 +32158,6 @@ lbl_8052EDB0:
 
 .global lbl_8052EDD8
 lbl_8052EDD8:
-	# ROM: 0x52AED8
 	.4byte switch_800E7388
 	.4byte switch_800E72E0
 	.4byte switch_800E72E0
@@ -32252,7 +32229,6 @@ lbl_8052EE78:
 
 .global lbl_8052EEB4
 lbl_8052EEB4:
-	# ROM: 0x52AFB4
 	.4byte switch_800EB074
 	.4byte switch_800EB020
 	.4byte switch_800EB020
@@ -32267,7 +32243,6 @@ lbl_8052EEB4:
 
 .global lbl_8052EEDC
 lbl_8052EEDC:
-	# ROM: 0x52AFDC
 	.4byte switch_800EAF78
 	.4byte switch_800EAF24
 	.4byte switch_800EAF24
@@ -32282,7 +32257,6 @@ lbl_8052EEDC:
 
 .global lbl_8052EF04
 lbl_8052EF04:
-	# ROM: 0x52B004
 	.4byte switch_800EAEE0
 	.4byte switch_800EAE8C
 	.4byte switch_800EAE8C
@@ -32297,7 +32271,6 @@ lbl_8052EF04:
 
 .global lbl_8052EF2C
 lbl_8052EF2C:
-	# ROM: 0x52B02C
 	.4byte switch_800EADE4
 	.4byte switch_800EAD90
 	.4byte switch_800EAD90
@@ -32324,7 +32297,6 @@ lbl_8052EF60:
 
 .global lbl_8052EF6C
 lbl_8052EF6C:
-	# ROM: 0x52B06C
 	.4byte switch_800ED6B8
 	.4byte switch_800F3518
 	.4byte switch_800ED814
@@ -32625,7 +32597,6 @@ lbl_8052EF6C:
 
 .global lbl_8052F40C
 lbl_8052F40C:
-	# ROM: 0x52B50C
 	.4byte switch_800ED248
 	.4byte switch_800ED1F4
 	.4byte switch_800ED1F4
@@ -32640,7 +32611,6 @@ lbl_8052F40C:
 
 .global lbl_8052F434
 lbl_8052F434:
-	# ROM: 0x52B534
 	.4byte switch_800ED14C
 	.4byte switch_800ED0F8
 	.4byte switch_800ED0F8
@@ -32655,7 +32625,6 @@ lbl_8052F434:
 
 .global lbl_8052F45C
 lbl_8052F45C:
-	# ROM: 0x52B55C
 	.4byte switch_800ED0AC
 	.4byte switch_800ED058
 	.4byte switch_800ED058
@@ -32670,7 +32639,6 @@ lbl_8052F45C:
 
 .global lbl_8052F484
 lbl_8052F484:
-	# ROM: 0x52B584
 	.4byte switch_800ECFB0
 	.4byte switch_800ECF5C
 	.4byte switch_800ECF5C
@@ -32798,246 +32766,207 @@ __RTTI__cf_IFactoryEvent:
 
 .global float_806696B4
 float_806696B4:
-	# ROM: 0x573514
-	.4byte 0x3D088889
+	.float 0.033333335 #0x3D088889
 
 
 .global float_806696B8
 float_806696B8:
-	# ROM: 0x573518
-	.4byte 0x41A00000
+	.float 20 #0x41A00000
 
 
 .global float_806696BC
 float_806696BC:
-	# ROM: 0x57351C
-	.4byte 0x41700000
+	.float 15 #0x41700000
 
 
 .global float_806696C0
 float_806696C0:
-	# ROM: 0x573520
-	.4byte 0x41C80000
+	.float 25 #0x41C80000
 
 
 .global float_806696C4
 float_806696C4:
-	# ROM: 0x573524
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_806696C8
 float_806696C8:
-	# ROM: 0x573528
 	.float 100.0
 	.4byte 0
 
 
 .global double_806696D0
 double_806696D0:
-	# ROM: 0x573530
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_806696D8
 float_806696D8:
-	# ROM: 0x573538
-	.4byte 0x3CC90FDB
+	.float 0.0245436933 #0x3CC90FDB
 
 
 .global float_806696DC
 float_806696DC:
-	# ROM: 0x57353C
-	.4byte 0x42BE0000
+	.float 95 #0x42BE0000
 
 
 .global float_806696E0
 float_806696E0:
-	# ROM: 0x573540
-	.4byte 0x42480000
+	.float 50 #0x42480000
 
 
 .global float_806696E4
 float_806696E4:
-	# ROM: 0x573544
 	.float 0.25
 
 
 .global float_806696E8
 float_806696E8:
-	# ROM: 0x573548
-	.4byte 0x43480000
+	.float 200 #0x43480000
 
 
 .global float_806696EC
 float_806696EC:
-	# ROM: 0x57354C
-	.4byte 0x3E19999A
+	.float 0.15 #0x3E19999A
 
 
 .global float_806696F0
 float_806696F0:
-	# ROM: 0x573550
-	.4byte 0x42B40000
+	.float 90 #0x42B40000
 
 
 .global float_806696F4
 float_806696F4:
-	# ROM: 0x573554
 	.float -1.0
 
 
 .global float_806696F8
 float_806696F8:
-	# ROM: 0x573558
-	.4byte 0x3F666666
+	.float 0.9 #0x3F666666
 
 
 .global float_806696FC
 float_806696FC:
-	# ROM: 0x57355C
 	.float 10.0
 
 
 .global float_80669700
 float_80669700:
-	# ROM: 0x573560
 	.float 0.75
 
 
 .global float_80669704
 float_80669704:
-	# ROM: 0x573564
 	.float 1.5
 
 
 .global float_80669708
 float_80669708:
-	# ROM: 0x573568
-	.4byte 0x3FA00000
+	.float 1.25 #0x3FA00000
 	.4byte 0
 
 
 .global double_80669710
 double_80669710:
-	# ROM: 0x573570
 	.4byte 0x3FF00000
 	.4byte 0
 
 
 .global float_80669718
 float_80669718:
-	# ROM: 0x573578
-	.4byte 0x43160000
+	.float 150 #0x43160000
 
 
 .global float_8066971C
 float_8066971C:
-	# ROM: 0x57357C
-	.4byte 0x42000000
+	.float 32 #0x42000000
 
 
 .global double_80669720
 double_80669720:
-	# ROM: 0x573580
 	.4byte 0x3FE00000
 	.4byte 0
 
 
 .global double_80669728
 double_80669728:
-	# ROM: 0x573588
 	.4byte 0xBFE00000
 	.4byte 0
 
 
 .global float_80669730
 float_80669730:
-	# ROM: 0x573590
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_80669734
 float_80669734:
-	# ROM: 0x573594
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 
 .global float_80669738
 float_80669738:
-	# ROM: 0x573598
-	.4byte 0x3EB33333
+	.float 0.35 #0x3EB33333
 
 
 .global float_8066973C
 float_8066973C:
-	# ROM: 0x57359C
-	.4byte 0x3C23D70B
+	.float 0.0100000007 #0x3C23D70B
 
 
 .global float_80669740
 float_80669740:
-	# ROM: 0x5735A0
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_80669744
 float_80669744:
-	# ROM: 0x5735A4
-	.4byte 0x42960000
+	.float 75 #0x42960000
 
 
 .global float_80669748
 float_80669748:
-	# ROM: 0x5735A8
-	.4byte 0x40200000
+	.float 2.5 #0x40200000
 
 
 .global float_8066974C
 float_8066974C:
-	# ROM: 0x5735AC
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_80669750
 float_80669750:
-	# ROM: 0x5735B0
-	.4byte 0x42C60000
+	.float 99 #0x42C60000
 	.4byte 0
 
 
 .global float_80669758
 float_80669758:
-	# ROM: 0x5735B8
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_80669760
 double_80669760:
-	# ROM: 0x5735C0
 	.4byte 0x3FE00000
 	.4byte 0
 
 
 .global double_80669768
 double_80669768:
-	# ROM: 0x5735C8
 	.4byte 0xBFE00000
 	.4byte 0
 
 
 .global double_80669770
 double_80669770:
-	# ROM: 0x5735D0
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80669778
 float_80669778:
-	# ROM: 0x5735D8
 	.float 1.0
 	.4byte 0
 

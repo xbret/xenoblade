@@ -1244,7 +1244,6 @@ lbl_805015B8:
 
 .global lbl_80537FE0
 lbl_80537FE0:
-	# ROM: 0x5340E0
 	.4byte lbl_80501588
 	.4byte lbl_80501594
 	.4byte lbl_805015A0
@@ -1406,7 +1405,6 @@ CCur07_hierarchy:
 
 .global lbl_80538158
 lbl_80538158:
-	# ROM: 0x534258
 	.4byte __RTTI__CBaseCur
 	.4byte 0
 	.4byte 0
@@ -1465,14 +1463,12 @@ __RTTI__CCur07:
 
 .global float_8066A860
 float_8066A860:
-	# ROM: 0x5746C0
 	.float 1.0
 
 
 .global float_8066A864
 float_8066A864:
-	# ROM: 0x5746C4
-	.4byte 0
+	.float 0
 
 .global CSubCur_typestr
 CSubCur_typestr:

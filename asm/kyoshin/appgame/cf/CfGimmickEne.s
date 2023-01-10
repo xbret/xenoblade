@@ -467,9 +467,9 @@ func_8026E7F8:
 /* 8026E808 00237DC8  7C 7F 1B 78 */	mr r31, r3
 /* 8026E80C 00237DCC  38 60 00 00 */	li r3, 0
 /* 8026E810 00237DD0  48 0A FF 11 */	bl GXSetCurrentMtx
-/* 8026E814 00237DD4  3C 60 80 66 */	lis r3, float_80659FB8@ha
+/* 8026E814 00237DD4  3C 60 80 66 */	lis r3, lbl_80659FB8@ha
 /* 8026E818 00237DD8  38 80 00 00 */	li r4, 0
-/* 8026E81C 00237DDC  38 63 9F B8 */	addi r3, r3, float_80659FB8@l
+/* 8026E81C 00237DDC  38 63 9F B8 */	addi r3, r3, lbl_80659FB8@l
 /* 8026E820 00237DE0  48 0A FD E1 */	bl GXLoadPosMtxImm
 /* 8026E824 00237DE4  38 60 00 00 */	li r3, 0
 /* 8026E828 00237DE8  38 80 00 09 */	li r4, 9
@@ -1305,7 +1305,6 @@ lbl_80509D34:
 
 .global lbl_8053B1D8
 lbl_8053B1D8:
-	# ROM: 0x5372D8
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8026EA20
@@ -1328,7 +1327,6 @@ lbl_8053B1D8:
 
 .global lbl_8053B220
 lbl_8053B220:
-	# ROM: 0x537320
 	.4byte lbl_8066B1F0
 	.4byte lbl_8066B1F8
 	.4byte lbl_8066B200
@@ -1359,7 +1357,6 @@ cf_CfGimmickEne_hierarchy:
 
 .global lbl_806652A8
 lbl_806652A8:
-	# ROM: 0x570E88
 	.4byte lbl_8066B20C
 	.4byte 0
 
@@ -1396,57 +1393,48 @@ lbl_8066B20C:
 
 .global float_8066B210
 float_8066B210:
-	# ROM: 0x575070
 	.float 1.0
 
 
 .global float_8066B214
 float_8066B214:
-	# ROM: 0x575074
-	.4byte 0
+	.float 0
 
 
 .global lbl_8066B218
 lbl_8066B218:
-	# ROM: 0x575078
 	.4byte 0xFFFFFFFF
 
 
 .global float_8066B21C
 float_8066B21C:
-	# ROM: 0x57507C
-	.4byte 0xC2C80000
+	.float -100 #0xC2C80000
 
 
 .global float_8066B220
 float_8066B220:
-	# ROM: 0x575080
 	.float 100.0
 
 
 .global float_8066B224
 float_8066B224:
-	# ROM: 0x575084
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global double_8066B228
 double_8066B228:
-	# ROM: 0x575088
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066B230
 float_8066B230:
-	# ROM: 0x575090
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 
 .global float_8066B234
 float_8066B234:
-	# ROM: 0x575094
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

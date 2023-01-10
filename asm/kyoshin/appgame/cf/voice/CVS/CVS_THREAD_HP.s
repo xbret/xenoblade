@@ -1177,7 +1177,6 @@ cf_CVS_THREAD_HP_typestr:
 
 .global lbl_8053D388
 lbl_8053D388:
-	# ROM: 0x539488
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A7464
@@ -1225,19 +1224,16 @@ __RTTI__cf_CVS_THREAD_HP:
 
 .global float_8066B548
 float_8066B548:
-	# ROM: 0x5753A8
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_8066B54C
 float_8066B54C:
-	# ROM: 0x5753AC
 	.float 0.5
 
 
 .global double_8066B550
 double_8066B550:
-	# ROM: 0x5753B0
 	.4byte 0x43300000
 	.4byte 0x80000000
 

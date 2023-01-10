@@ -848,13 +848,11 @@ GXClearBoundingBox:
 
 .global float_8066BFC8
 float_8066BFC8:
-	# ROM: 0x575E28
-	.4byte 0x43800000
+	.float 256 #0x43800000
 	.4byte 0
 
 
 .global double_8066BFD0
 double_8066BFD0:
-	# ROM: 0x575E30
 	.4byte 0x43300000
 	.4byte 0

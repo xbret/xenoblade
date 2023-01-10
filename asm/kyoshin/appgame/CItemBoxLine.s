@@ -7296,7 +7296,6 @@ lbl_80502944:
 
 .global lbl_80538410
 lbl_80538410:
-	# ROM: 0x534510
 	.4byte switch_801ED490
 	.4byte switch_801ED42C
 	.4byte switch_801ED434
@@ -7313,7 +7312,6 @@ lbl_80538410:
 
 .global lbl_80538440
 lbl_80538440:
-	# ROM: 0x534540
 	.4byte switch_801EFCB0
 	.4byte switch_801EFCB0
 	.4byte switch_801EFB64
@@ -7332,7 +7330,6 @@ lbl_80538440:
 
 .global lbl_80538478
 lbl_80538478:
-	# ROM: 0x534578
 	.4byte switch_801F1CCC
 	.4byte switch_801F1CE4
 	.4byte switch_801F1CFC
@@ -7423,21 +7420,18 @@ __RTTI__CIBLTabCur:
 
 .global float_8066A9B8
 float_8066A9B8:
-	# ROM: 0x574818
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066A9C0
 double_8066A9C0:
-	# ROM: 0x574820
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_8066A9C8
 double_8066A9C8:
-	# ROM: 0x574828
 	.4byte 0x43300000
 	.4byte 0
 
@@ -7448,49 +7442,41 @@ lbl_8066A9D0:
 
 .global float_8066A9D4
 float_8066A9D4:
-	# ROM: 0x574834
 	.float 1.0
 
 
 .global float_8066A9D8
 float_8066A9D8:
-	# ROM: 0x574838
 	.float 0.2
 
 
 .global float_8066A9DC
 float_8066A9DC:
-	# ROM: 0x57483C
-	.4byte 0x438A0000
+	.float 276 #0x438A0000
 
 
 .global float_8066A9E0
 float_8066A9E0:
-	# ROM: 0x574840
-	.4byte 0x42540000
+	.float 53 #0x42540000
 
 
 .global float_8066A9E4
 float_8066A9E4:
-	# ROM: 0x574844
 	.float 0.25
 
 
 .global float_8066A9E8
 float_8066A9E8:
-	# ROM: 0x574848
 	.float 10.0
 
 
 .global float_8066A9EC
 float_8066A9EC:
-	# ROM: 0x57484C
-	.4byte 0x3FB33333
+	.float 1.4 #0x3FB33333
 
 
 .global float_8066A9F0
 float_8066A9F0:
-	# ROM: 0x574850
 	.float 1.5
 	.4byte 0
 

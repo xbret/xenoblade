@@ -542,7 +542,6 @@ __OSInitMemoryProtection:
 
 .global lbl_80552AE0
 lbl_80552AE0:
-	# ROM: 0x54EBE0
 	.4byte OnShutdown
 	.4byte 0x0000007F
 	.4byte 0

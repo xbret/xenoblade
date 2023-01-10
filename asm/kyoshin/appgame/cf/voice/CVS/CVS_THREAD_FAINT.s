@@ -302,7 +302,6 @@ cf_CVS_THREAD_FAINT_typestr:
 
 .global lbl_8053D2E8
 lbl_8053D2E8:
-	# ROM: 0x5393E8
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A6BB0

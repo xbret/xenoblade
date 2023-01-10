@@ -754,7 +754,6 @@ CalcTexMtx_3dsmax__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexS
 
 .global lbl_80521048
 lbl_80521048:
-	# ROM: 0x51D148
 	.4byte MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -766,7 +765,6 @@ lbl_80521048:
 
 .global lbl_80521064
 lbl_80521064:
-	# ROM: 0x51D164
 	.4byte ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -779,30 +777,25 @@ lbl_80521064:
 
 .global float_8066C4C0
 float_8066C4C0:
-	# ROM: 0x576320
-	.4byte 0
+	.float 0
 
 
 .global float_8066C4C4
 float_8066C4C4:
-	# ROM: 0x576324
 	.float 0.5
 
 
 .global float_8066C4C8
 float_8066C4C8:
-	# ROM: 0x576328
 	.float 1.0
 
 
 .global float_8066C4CC
 float_8066C4CC:
-	# ROM: 0x57632C
-	.4byte 0x3F360B61
+	.float 0.7111111 #0x3F360B61
 
 
 .global float_8066C4D0
 float_8066C4D0:
-	# ROM: 0x576330
 	.4byte 0xBF000000
 	.4byte 0

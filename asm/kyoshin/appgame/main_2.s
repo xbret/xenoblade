@@ -395,22 +395,10 @@ sinit_8003A4F8:
 .4byte sinit_8003A4F8
 
 
-.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-
-.global lbl_804F5B88
-lbl_804F5B88:
-	#ゲームメイン
-	.4byte 0x8351815B
-	.4byte 0x83808381
-	.4byte 0x83438393
-	.4byte 0
-	.balign 4
-
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 .global lbl_80528380
 lbl_80528380:
-	# ROM: 0x524480
 	.4byte lbl_804F5B88
 	.4byte GameMain
 	.4byte 0
@@ -418,7 +406,6 @@ lbl_80528380:
 
 .global lbl_80528390
 lbl_80528390:
-	# ROM: 0x524490
 	.4byte lbl_806683E0
 	.4byte lbl_804F5C14
 	.4byte 0x00000001
@@ -473,7 +460,6 @@ lbl_80528390:
 
 .global lbl_80528458
 lbl_80528458:
-	# ROM: 0x524558
 	.4byte lbl_80668418
 	.4byte put
 	.4byte lbl_804F5CF0
@@ -486,7 +472,6 @@ lbl_80528458:
 
 .global lbl_80528478
 lbl_80528478:
-	# ROM: 0x524578
 	.4byte lbl_80668420
 	.4byte frame
 	.4byte 0
@@ -510,7 +495,6 @@ lbl_80528488:
 
 .global lbl_805284B8
 lbl_805284B8:
-	# ROM: 0x5245B8
 	.4byte lbl_80668428
 	.4byte 0
 	.4byte 0
@@ -544,7 +528,6 @@ lbl_805284C8:
 
 .global lbl_80528520
 lbl_80528520:
-	# ROM: 0x524620
 	.4byte lbl_80668460
 	.4byte thread
 	.4byte 0
@@ -581,7 +564,6 @@ lbl_804F5BD4:
 
 .global pkhFilenames
 pkhFilenames:
-	# ROM: 0x4F1CE0
 	.4byte lbl_806683A8
 	.4byte lbl_806683B0
 	.4byte lbl_806683B8

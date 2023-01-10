@@ -8692,7 +8692,6 @@ lbl_80536F78:
 
 .global lbl_80536FB0
 lbl_80536FB0:
-	# ROM: 0x5330B0
 	.4byte switch_801B412C
 	.4byte switch_801B415C
 	.4byte switch_801B4274
@@ -8743,7 +8742,6 @@ lbl_80537018:
 
 .global lbl_80537050
 lbl_80537050:
-	# ROM: 0x533150
 	.4byte switch_801B6F20
 	.4byte switch_801B6F38
 	.4byte switch_801B6F50
@@ -8837,58 +8835,49 @@ __RTTI__CMenuGetItemMulti:
 
 .global float_8066A6C0
 float_8066A6C0:
-	# ROM: 0x574520
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066A6C8
 double_8066A6C8:
-	# ROM: 0x574528
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066A6D0
 float_8066A6D0:
-	# ROM: 0x574530
 	.float 1.0
 
 
 .global float_8066A6D4
 float_8066A6D4:
-	# ROM: 0x574534
-	.4byte 0x42000000
+	.float 32 #0x42000000
 
 
 .global double_8066A6D8
 double_8066A6D8:
-	# ROM: 0x574538
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066A6E0
 float_8066A6E0:
-	# ROM: 0x574540
 	.float 10.0
 
 
 .global float_8066A6E4
 float_8066A6E4:
-	# ROM: 0x574544
-	.4byte 0x3FB33333
+	.float 1.4 #0x3FB33333
 
 
 .global float_8066A6E8
 float_8066A6E8:
-	# ROM: 0x574548
 	.float 1.5
 
 
 .global float_8066A6EC
 float_8066A6EC:
-	# ROM: 0x57454C
 	.float 0.25
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

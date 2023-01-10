@@ -36,11 +36,9 @@ AXFXGetHooks:
 #might not belong here
 .global lbl_806658C0
 lbl_806658C0:
-	# ROM: 0x5714A0
 	.4byte __AXFXAllocFunction
 
 
 .global lbl_806658C4
 lbl_806658C4:
-	# ROM: 0x5714A4
 	.4byte __AXFXFreeFunction

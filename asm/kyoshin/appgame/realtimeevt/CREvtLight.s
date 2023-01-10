@@ -321,20 +321,17 @@ __RTTI__cf_CREvtLight:
 
 .global float_8066A7C8
 float_8066A7C8:
-	# ROM: 0x574628
-	.4byte 0x3CC90FDB
+	.float 0.0245436933 #0x3CC90FDB
 
 
 .global float_8066A7CC
 float_8066A7CC:
-	# ROM: 0x57462C
-	.4byte 0x42700000
+	.float 60 #0x42700000
 
 
 .global float_8066A7D0
 float_8066A7D0:
-	# ROM: 0x574630
-	.4byte 0x40000000
+	.float 2 #0x40000000
 	.4byte 0
 
 

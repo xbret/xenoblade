@@ -1083,19 +1083,16 @@ __RTTI__CMenuMapSelect:
 
 .global float_8066AFE0
 float_8066AFE0:
-	# ROM: 0x574E40
-	.4byte 0
+	.float 0
 
 
 .global float_8066AFE4
 float_8066AFE4:
-	# ROM: 0x574E44
 	.float 1.0
 
 
 .global float_8066AFE8
 float_8066AFE8:
-	# ROM: 0x574E48
 	.float 10.0
 	.4byte 0
 

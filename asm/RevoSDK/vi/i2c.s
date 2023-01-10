@@ -639,7 +639,6 @@ __VISendI2CData:
 
 .global lbl_80665D20
 lbl_80665D20:
-	# ROM: 0x571900
 	.4byte 0x00000001
 	.4byte 0
 

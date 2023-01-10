@@ -905,7 +905,6 @@ rfc_mx_conf_ind:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_805487B8
 lbl_805487B8:
-	# ROM: 0x5448B8
 	.4byte switch_802FEDA8
 	.4byte switch_802FEDAC
 	.4byte switch_802FEDB0
@@ -929,7 +928,6 @@ lbl_80548828:
 
 .global lbl_80548850
 lbl_80548850:
-	# ROM: 0x544950
 	.4byte switch_802FEF90
 	.4byte switch_802FEF64
 	.4byte switch_802FEF64
@@ -951,7 +949,6 @@ lbl_80548850:
 
 .global lbl_805488D0
 lbl_805488D0:
-	# ROM: 0x5449D0
 	.4byte switch_802FF214
 	.4byte switch_802FF274
 	.4byte switch_802FF274
@@ -967,7 +964,6 @@ lbl_805488D0:
 
 .global lbl_80548918
 lbl_80548918:
-	# ROM: 0x544A18
 	.4byte switch_802FF3E8
 	.4byte switch_802FF398
 	.4byte switch_802FF3C0
@@ -998,7 +994,6 @@ lbl_80548978:
 
 .global lbl_8054899C
 lbl_8054899C:
-	# ROM: 0x544A9C
 	.4byte switch_802FF5F8
 	.4byte switch_802FF624
 	.4byte switch_802FF5C0
@@ -1021,7 +1016,6 @@ lbl_805489CC:
 
 .global lbl_805489F4
 lbl_805489F4:
-	# ROM: 0x544AF4
 	.4byte switch_802FF798
 	.4byte switch_802FF6DC
 	.4byte switch_802FF6DC

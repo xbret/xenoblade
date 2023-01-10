@@ -2169,13 +2169,11 @@ lbl_80572098:
 
 .global lbl_806662C8
 lbl_806662C8:
-	# ROM: 0x571EA8
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_806662CC
 lbl_806662CC:
-	# ROM: 0x571EAC
 	.4byte 0xFFFFFFFF
 
 .global __RTTI__CScnTexWorkMan
@@ -2186,13 +2184,11 @@ __RTTI__CScnTexWorkMan:
 
 .global lbl_806662D8
 lbl_806662D8:
-	# ROM: 0x571EB8
 	.4byte 0x72656600
 
 
 .global lbl_806662DC
 lbl_806662DC:
-	# ROM: 0x571EBC
 	.4byte 0x72656600
 
 
@@ -2200,20 +2196,17 @@ lbl_806662DC:
 
 .global float_8066D1C0
 float_8066D1C0:
-	# ROM: 0x577020
-	.4byte 0
+	.float 0
 
 
 .global float_8066D1C4
 float_8066D1C4:
-	# ROM: 0x577024
-	.4byte 0x49742400
+	.float 1000000 #0x49742400
 
 
 .global float_8066D1C8
 float_8066D1C8:
-	# ROM: 0x577028
-	.4byte 0xC9742400
+	.float -1000000 #0xC9742400
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

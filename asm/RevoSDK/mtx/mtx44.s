@@ -154,35 +154,29 @@ C_MTXOrtho:
 
 .global float_8066C148
 float_8066C148:
-	# ROM: 0x575FA8
 	.float 1.0
 
 
 .global float_8066C14C
 float_8066C14C:
-	# ROM: 0x575FAC
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066C150
 float_8066C150:
-	# ROM: 0x575FB0
-	.4byte 0
+	.float 0
 
 
 .global float_8066C154
 float_8066C154:
-	# ROM: 0x575FB4
 	.float -1.0
 
 
 .global float_8066C158
 float_8066C158:
-	# ROM: 0x575FB8
 	.float 0.5
 
 
 .global float_8066C15C
 float_8066C15C:
-	# ROM: 0x575FBC
 	.4byte 0x3C8EFA35

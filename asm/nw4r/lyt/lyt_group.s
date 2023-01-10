@@ -247,7 +247,6 @@ FindGroupByName__Q34nw4r3lyt14GroupContainerFPCc:
 
 .global lbl_8056D248
 lbl_8056D248:
-	# ROM: 0x569348
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt5GroupFv

@@ -4555,7 +4555,6 @@ lbl_804FFA90:
 
 .global lbl_80536C58
 lbl_80536C58:
-	# ROM: 0x532D58
 	.4byte switch_801AEB44
 	.4byte switch_801AE90C
 	.4byte switch_801AE940
@@ -4572,7 +4571,6 @@ lbl_80536C58:
 
 .global lbl_80536C88
 lbl_80536C88:
-	# ROM: 0x532D88
 	.4byte switch_801AEB44
 	.4byte switch_801AE298
 	.4byte switch_801AE3A8
@@ -4590,7 +4588,6 @@ lbl_80536C88:
 
 .global lbl_80536CBC
 lbl_80536CBC:
-	# ROM: 0x532DBC
 	.4byte switch_801ADC64
 	.4byte switch_801AD628
 	.4byte switch_801AD738
@@ -4680,85 +4677,71 @@ CMenuVision_hierarchy:
 
 .global lbl_80664E78
 lbl_80664E78:
-	# ROM: 0x570A58
 	.4byte 0x3C738AFF
 
 
 .global lbl_80664E7C
 lbl_80664E7C:
-	# ROM: 0x570A5C
 	.4byte 0xF0F0FAFF
 
 
 .global lbl_80664E80
 lbl_80664E80:
-	# ROM: 0x570A60
 	.4byte 0xF0F0FAFF
 
 
 .global lbl_80664E84
 lbl_80664E84:
-	# ROM: 0x570A64
 	.4byte 0x4014D2FF
 
 
 .global lbl_80664E88
 lbl_80664E88:
-	# ROM: 0x570A68
 	.4byte 0xD42D1DFF
 
 
 .global lbl_80664E8C
 lbl_80664E8C:
-	# ROM: 0x570A6C
 	.4byte 0x0F0F0FFF
 
 
 .global lbl_80664E90
 lbl_80664E90:
-	# ROM: 0x570A70
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_80664E94
 lbl_80664E94:
-	# ROM: 0x570A74
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_80664E98
 lbl_80664E98:
-	# ROM: 0x570A78
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_80664E9C
 lbl_80664E9C:
-	# ROM: 0x570A7C
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_80664EA0
 lbl_80664EA0:
-	# ROM: 0x570A80
 	.4byte 0x785AFFFF
 
 
 .global lbl_80664EA4
 lbl_80664EA4:
-	# ROM: 0x570A84
 	.4byte 0xFFAC98FF
 
 
 .global lbl_80664EA8
 lbl_80664EA8:
-	# ROM: 0x570A88
 	.4byte 0x79E56DFF
 
 
 .global lbl_80664EAC
 lbl_80664EAC:
-	# ROM: 0x570A8C
 	.4byte 0x808080FF
 
 .global __RTTI__CMenuVision
@@ -4770,50 +4753,42 @@ __RTTI__CMenuVision:
 
 .global float_8066A680
 float_8066A680:
-	# ROM: 0x5744E0
-	.4byte 0
+	.float 0
 
 
 .global float_8066A684
 float_8066A684:
-	# ROM: 0x5744E4
 	.float 1.0
 
 
 .global float_8066A688
 float_8066A688:
-	# ROM: 0x5744E8
-	.4byte 0x43950000
+	.float 298 #0x43950000
 
 
 .global float_8066A68C
 float_8066A68C:
-	# ROM: 0x5744EC
 	.float 8.0
 
 
 .global lbl_8066A690
 lbl_8066A690:
-	# ROM: 0x5744F0
 	.4byte 0x0F091012
 
 
 .global float_8066A694
 float_8066A694:
-	# ROM: 0x5744F4
-	.4byte 0x3F2147AE
+	.float 0.62999999 #0x3F2147AE
 
 
 .global float_8066A698
 float_8066A698:
-	# ROM: 0x5744F8
 	.float -1.0
 
 
 .global float_8066A69C
 float_8066A69C:
-	# ROM: 0x5744FC
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

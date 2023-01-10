@@ -1220,7 +1220,6 @@ lbl_804FEF5C:
 
 .global lbl_805354F0
 lbl_805354F0:
-	# ROM: 0x5315F0
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80180EBC
@@ -1370,14 +1369,12 @@ __RTTI__cf_CREvtModelMap:
 
 .global float_8066A180
 float_8066A180:
-	# ROM: 0x573FE0
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066A188
 double_8066A188:
-	# ROM: 0x573FE8
 	.4byte 0x43300000
 	.4byte 0x80000000
 

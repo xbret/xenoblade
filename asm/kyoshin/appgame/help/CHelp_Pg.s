@@ -34,7 +34,6 @@ func_802B85A4:
 
 .global double_8066B800
 double_8066B800:
-	# ROM: 0x575660
 	.4byte 0x43300000
 	.4byte 0x80000000
 

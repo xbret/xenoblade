@@ -7094,7 +7094,6 @@ WUDiSetNotAckNumForHandle:
 
 .global lbl_805622C8
 lbl_805622C8:
-	# ROM: 0x55E3C8
 	.4byte 0x05010905
 	.4byte 0xA1018510
 	.4byte 0x150026FF
@@ -7522,7 +7521,6 @@ lbl_80562D24:
 
 .global lbl_80562FA0
 lbl_80562FA0:
-	# ROM: 0x55F0A0
 	.4byte switch_8037AE1C
 	.4byte switch_8037AEC8
 	.4byte switch_8037AEE4
@@ -7606,19 +7604,16 @@ lbl_8056311C:
 
 .global lbl_8066C260
 lbl_8066C260:
-	# ROM: 0x5760C0
 	.4byte 0x57696900
 
 
 .global lbl_8066C264
 lbl_8066C264:
-	# ROM: 0x5760C4
 	.2byte 0x0004
 
 
 .global lbl_8066C266
 lbl_8066C266:
-	# ROM: 0x5760C6
 	.2byte 0x4800
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

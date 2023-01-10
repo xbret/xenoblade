@@ -703,7 +703,6 @@ lbl_80552B5C:
 
 .global lbl_80552CDC
 lbl_80552CDC:
-	# ROM: 0x54EDDC
 	.asciz "OSResetSystem() is obsoleted. It doesn't work any longer.\n"
 	.balign 4
 	.asciz "OSSetBootDol() is obsoleted. It doesn't work any longer.\n"

@@ -600,14 +600,12 @@ __RTTI__CExchangeWin:
 
 .global float_8066AED0
 float_8066AED0:
-	# ROM: 0x574D30
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066AED8
 double_8066AED8:
-	# ROM: 0x574D38
 	.4byte 0x43300000
 	.4byte 0
 

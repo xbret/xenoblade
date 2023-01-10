@@ -95,13 +95,11 @@ OSAllocFromMEM1ArenaLo:
 
 .global lbl_80665B60
 lbl_80665B60:
-	# ROM: 0x571740
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_80665B64
 lbl_80665B64:
-	# ROM: 0x571744
 	.4byte 0xFFFFFFFF
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

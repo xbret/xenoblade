@@ -502,14 +502,12 @@ lbl_80543F9C:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global lbl_8066BF30
 lbl_8066BF30:
-	# ROM: 0x575D90
 	.4byte 0x03040302
 	.4byte 0
 
 
 .global lbl_8066BF38
 lbl_8066BF38:
-	# ROM: 0x575D98
 	.4byte 0x13001100
 	.4byte 0x12001000
 

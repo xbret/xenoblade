@@ -304,13 +304,11 @@ GetAnmResult__Q34nw4r3g3d11ResAnmLightCFPQ34nw4r3g3d14LightAnmResultf:
 
 .global float_8066C320
 float_8066C320:
-	# ROM: 0x576180
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066C328
 double_8066C328:
-	# ROM: 0x576188
 	.4byte 0x43300000
 	.4byte 0

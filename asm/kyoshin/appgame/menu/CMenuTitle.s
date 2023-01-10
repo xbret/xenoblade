@@ -530,19 +530,16 @@ __RTTI__CTTask_CMenuTitle:
 
 .global float_8066B7D0
 float_8066B7D0:
-	# ROM: 0x575630
 	.float 10.0
 
 
 .global float_8066B7D4
 float_8066B7D4:
-	# ROM: 0x575634
-	.4byte 0
+	.float 0
 
 
 .global float_8066B7D8
 float_8066B7D8:
-	# ROM: 0x575638
 	.float 1.0
 	.4byte 0
 

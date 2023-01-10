@@ -1446,9 +1446,9 @@ func_8020BCA8:
 /* 8020C004 001D55C4  54 00 05 66 */	rlwinm r0, r0, 0, 0x15, 0x13
 /* 8020C008 001D55C8  90 1D 00 74 */	stw r0, 0x74(r29)
 /* 8020C00C 001D55CC  41 82 02 28 */	beq .L_8020C234
-/* 8020C010 001D55D0  3D 00 80 58 */	lis r8, float_80579D98@ha
+/* 8020C010 001D55D0  3D 00 80 58 */	lis r8, lbl_80579D98@ha
 /* 8020C014 001D55D4  38 DD 00 04 */	addi r6, r29, 4
-/* 8020C018 001D55D8  39 08 9D 98 */	addi r8, r8, float_80579D98@l
+/* 8020C018 001D55D8  39 08 9D 98 */	addi r8, r8, lbl_80579D98@l
 /* 8020C01C 001D55DC  38 9D 00 84 */	addi r4, r29, 0x84
 /* 8020C020 001D55E0  E0 68 00 00 */	psq_l f3, 0(r8), 0, qr0
 /* 8020C024 001D55E4  38 E1 00 14 */	addi r7, r1, 0x14
@@ -1629,12 +1629,12 @@ func_8020C274:
 /* 8020C29C 001D585C  40 82 00 7C */	bne .L_8020C318
 /* 8020C2A0 001D5860  80 03 01 58 */	lwz r0, 0x158(r3)
 /* 8020C2A4 001D5864  3C C0 80 54 */	lis r6, lbl_80538FE8@ha
-/* 8020C2A8 001D5868  3C 80 80 58 */	lis r4, float_80579D98@ha
+/* 8020C2A8 001D5868  3C 80 80 58 */	lis r4, lbl_80579D98@ha
 /* 8020C2AC 001D586C  38 A3 00 90 */	addi r5, r3, 0x90
 /* 8020C2B0 001D5870  54 00 10 3A */	slwi r0, r0, 2
 /* 8020C2B4 001D5874  38 C6 8F E8 */	addi r6, r6, lbl_80538FE8@l
 /* 8020C2B8 001D5878  7D 86 00 2E */	lwzx r12, r6, r0
-/* 8020C2BC 001D587C  38 84 9D 98 */	addi r4, r4, float_80579D98@l
+/* 8020C2BC 001D587C  38 84 9D 98 */	addi r4, r4, lbl_80579D98@l
 /* 8020C2C0 001D5880  7D 89 03 A6 */	mtctr r12
 /* 8020C2C4 001D5884  38 63 01 14 */	addi r3, r3, 0x114
 /* 8020C2C8 001D5888  4E 80 04 21 */	bctrl 
@@ -1647,12 +1647,12 @@ func_8020C274:
 /* 8020C2E0 001D58A0  40 82 00 38 */	bne .L_8020C318
 /* 8020C2E4 001D58A4  80 03 01 A0 */	lwz r0, 0x1a0(r3)
 /* 8020C2E8 001D58A8  3C C0 80 54 */	lis r6, lbl_80538FE8@ha
-/* 8020C2EC 001D58AC  3C 80 80 58 */	lis r4, float_80579D98@ha
+/* 8020C2EC 001D58AC  3C 80 80 58 */	lis r4, lbl_80579D98@ha
 /* 8020C2F0 001D58B0  38 A3 00 9C */	addi r5, r3, 0x9c
 /* 8020C2F4 001D58B4  54 00 10 3A */	slwi r0, r0, 2
 /* 8020C2F8 001D58B8  38 C6 8F E8 */	addi r6, r6, lbl_80538FE8@l
 /* 8020C2FC 001D58BC  7D 86 00 2E */	lwzx r12, r6, r0
-/* 8020C300 001D58C0  38 84 9D 98 */	addi r4, r4, float_80579D98@l
+/* 8020C300 001D58C0  38 84 9D 98 */	addi r4, r4, lbl_80579D98@l
 /* 8020C304 001D58C4  7D 89 03 A6 */	mtctr r12
 /* 8020C308 001D58C8  38 63 01 5C */	addi r3, r3, 0x15c
 /* 8020C30C 001D58CC  4E 80 04 21 */	bctrl 
@@ -1698,7 +1698,6 @@ lbl_80503D9C:
 
 .global lbl_80539020
 lbl_80539020:
-	# ROM: 0x535120
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8020B474
@@ -1749,50 +1748,43 @@ cf_CfGimmickElv_hierarchy:
 
 .global float_8066AC40
 float_8066AC40:
-	# ROM: 0x574AA0
-	.4byte 0
+	.float 0
 
 
 .global float_8066AC44
 float_8066AC44:
-	# ROM: 0x574AA4
 	.float 1.0
 
 
 .global double_8066AC48
 double_8066AC48:
-	# ROM: 0x574AA8
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066AC50
 float_8066AC50:
-	# ROM: 0x574AB0
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 
 .global float_8066AC54
 float_8066AC54:
-	# ROM: 0x574AB4
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066AC58
 float_8066AC58:
-	# ROM: 0x574AB8
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_8066AC5C
 float_8066AC5C:
-	# ROM: 0x574ABC
-	.4byte 0x43480000
+	.float 200 #0x43480000
 
 
 .global float_8066AC60
 float_8066AC60:
-	.4byte 0x44610000
+	.float 900 #0x44610000
 	.4byte 0
 
 

@@ -11328,7 +11328,6 @@ switch_803B9648:
 
 .global lbl_8051F8F0
 lbl_8051F8F0:
-	# ROM: 0x51B9F0
 	.4byte mpvabdec_IntraBlock_Isr
 	.4byte mpvabdec_IntraBlockDc11_Isr
 	.4byte mpvabdec_NintraBlock_Isr

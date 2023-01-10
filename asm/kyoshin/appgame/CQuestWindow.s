@@ -2946,7 +2946,6 @@ lbl_804FA4C4:
 
 .global lbl_80530750
 lbl_80530750:
-	# ROM: 0x52C850
 	.4byte lbl_804FA05C
 	.4byte lbl_804FA078
 	.4byte lbl_804FA094
@@ -2980,7 +2979,6 @@ lbl_80530750:
 
 .global lbl_805307C4
 lbl_805307C4:
-	# ROM: 0x52C8C4
 	.4byte lbl_804FA350
 	.4byte lbl_804FA35C
 	.4byte lbl_804FA368
@@ -3178,7 +3176,6 @@ CTTask_IUIWindow_hierarchy:
 
 .global lbl_806647B0
 lbl_806647B0:
-	# ROM: 0x570390
 	.4byte lbl_804FA048
 	.4byte 0
 
@@ -3202,57 +3199,48 @@ __RTTI__CTTask_IUIWindow:
 
 .global float_80669A00
 float_80669A00:
-	# ROM: 0x573860
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_80669A04
 float_80669A04:
-	# ROM: 0x573864
-	.4byte 0
+	.float 0
 
 
 .global float_80669A08
 float_80669A08:
-	# ROM: 0x573868
 	.float 1.0
 
 
 .global lbl_80669A0C
 lbl_80669A0C:
-	# ROM: 0x57386C
 	.4byte 0x0306090C
 
 
 .global lbl_80669A10
 lbl_80669A10:
-	# ROM: 0x573870
 	.4byte 0x0F000000
 
 
 .global float_80669A14
 float_80669A14:
-	# ROM: 0x573874
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global double_80669A18
 double_80669A18:
-	# ROM: 0x573878
 	.4byte 0x3FE00000
 	.4byte 0
 
 
 .global double_80669A20
 double_80669A20:
-	# ROM: 0x573880
 	.4byte 0xBFE00000
 	.4byte 0
 
 
 .global double_80669A28
 double_80669A28:
-	# ROM: 0x573888
 	.4byte 0x43300000
 	.4byte 0
 
@@ -3268,13 +3256,11 @@ lbl_80669A38:
 
 .global lbl_80669A40
 lbl_80669A40:
-	# ROM: 0x5738A0
 	.4byte lbl_80669A30
 
 
 .global lbl_80669A44
 lbl_80669A44:
-	# ROM: 0x5738A4
 	.4byte lbl_80669A38
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

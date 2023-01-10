@@ -6193,7 +6193,6 @@ lbl_804FC1AC:
 
 .global lbl_804FC1D0
 lbl_804FC1D0:
-	# ROM: 0x4F82D0
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000056
@@ -6237,7 +6236,6 @@ lbl_804FC240:
 
 .global lbl_804FC260
 lbl_804FC260:
-	# ROM: 0x4F8360
 	.4byte 0x0000006F
 	.4byte 0x00000070
 	.4byte 0x00000079

@@ -72,7 +72,6 @@ sinit_8040547C:
 
 .global lbl_8056D460
 lbl_8056D460:
-	# ROM: 0x569560
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt8BoundingFv

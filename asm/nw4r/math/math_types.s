@@ -342,25 +342,21 @@ MTX44Copy__Q24nw4r4mathFPQ34nw4r4math5MTX44PCQ34nw4r4math5MTX44:
 
 .global float_8066C640
 float_8066C640:
-	# ROM: 0x5764A0
-	.4byte 0
+	.float 0
 
 
 .global float_8066C644
 float_8066C644:
-	# ROM: 0x5764A4
 	.float 1.0
 
 
 .global float_8066C648
 float_8066C648:
-	# ROM: 0x5764A8
-	.4byte 0x3CC90FDB
+	.float 0.0245436933 #0x3CC90FDB
 	.4byte 0
 
 
 .global lbl_8066C650
 lbl_8066C650:
-	# ROM: 0x5764B0
 	.4byte 0x47800000
 	.4byte 0x47800000

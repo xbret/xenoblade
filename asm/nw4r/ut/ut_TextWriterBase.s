@@ -2218,26 +2218,22 @@ sinit_804325F4:
 
 .global float_8066C960
 float_8066C960:
-	# ROM: 0x5767C0
-	.4byte 0x7F7FFFFF
+	.4byte 0x7F7FFFFF #max float val
 
 
 .global float_8066C964
 float_8066C964:
-	# ROM: 0x5767C4
-	.4byte 0
+	.float 0
 
 
 .global double_8066C968
 double_8066C968:
-	# ROM: 0x5767C8
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066C970
 float_8066C970:
-	# ROM: 0x5767D0
 	.float 0.5
 	.4byte 0
 

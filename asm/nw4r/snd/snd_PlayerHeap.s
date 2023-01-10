@@ -162,7 +162,6 @@ DetachSound__Q44nw4r3snd6detail10PlayerHeapFPQ44nw4r3snd6detail10BasicSound:
 
 .global lbl_8056E3C8
 lbl_8056E3C8:
-	# ROM: 0x56A4C8
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail10PlayerHeapFv

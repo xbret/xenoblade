@@ -634,7 +634,6 @@ ENCiFindSjisFromUnicode:
 
 .global lbl_8050E400
 lbl_8050E400:
-	# ROM: 0x50A500
 	.2byte 0x3000
 	.2byte 0x3001
 	.2byte 0x3002
@@ -10038,7 +10037,6 @@ lbl_8050E400:
 
     .global lbl_80512D70
 lbl_80512D70:
-	# ROM: 0x50EE70
 	.4byte 0x2281CD25
 	.4byte 0x849F3081
 	.4byte 0x404E88EA
@@ -15609,7 +15607,6 @@ lbl_80512D70:
 
 .global lbl_80518468
 lbl_80518468:
-	# ROM: 0x514568
 	.2byte 0x001B
 	.2byte 0x0039
 	.2byte 0x0056
@@ -15871,6 +15868,5 @@ lbl_80518468:
 
 .global lbl_806659C0
 lbl_806659C0:
-	# ROM: 0x5715A0
 	.4byte 0x00000001
 	.4byte 0

@@ -1154,7 +1154,6 @@ lbl_8055F138:
 
 .global lbl_8055F180
 lbl_8055F180:
-	# ROM: 0x55B280
 	.4byte 0xFFFFFFFF
 	.4byte 0
 	.4byte 0
@@ -1165,7 +1164,6 @@ lbl_8055F180:
 
 .global lbl_8055F198
 lbl_8055F198:
-	# ROM: 0x55B298
 	.4byte 0x00000008
 	.4byte 0x00000008
 	.4byte 0x00000008
@@ -1174,7 +1172,6 @@ lbl_8055F198:
 
 .global lbl_8055F1A8
 lbl_8055F1A8:
-	# ROM: 0x55B2A8
 	.4byte 0x00F60200
 	.4byte 0x000E1300
 	.4byte 0x001E0900
@@ -1207,7 +1204,6 @@ lbl_8055F1A8:
 
 .global lbl_80665CE0
 lbl_80665CE0:
-	# ROM: 0x5718C0
 	.4byte lbl_8055F138
 	.4byte 0
 

@@ -3039,7 +3039,6 @@ lbl_8055FAA0:
 
 .global lbl_8055FAE8
 lbl_8055FAE8:
-	# ROM: 0x55BBE8
 	.4byte 0x060000F0
 	.4byte 0x00180019
 	.4byte 0x00030002
@@ -3149,7 +3148,6 @@ lbl_8055FAE8:
 
 .global lbl_8055FC8C
 lbl_8055FC8C:
-	# ROM: 0x55BD8C
 	.4byte 0x01F001DC
 	.4byte 0x01AE0174
 	.4byte 0x012900DB
@@ -3213,7 +3211,6 @@ lbl_8055FC8C:
 
 .global lbl_8055FD78
 lbl_8055FD78:
-	# ROM: 0x55BE78
 	.4byte func_80363F30
 	.4byte 0x0000007F
 	.4byte 0
@@ -3222,7 +3219,6 @@ lbl_8055FD78:
 
 .global lbl_8055FD88
 lbl_8055FD88:
-	# ROM: 0x55BE88
 	.4byte switch_80364420
 	.4byte switch_80364428
 	.4byte switch_80364430
@@ -3236,7 +3232,6 @@ lbl_8055FD88:
 
 .global lbl_8055FDAC
 lbl_8055FDAC:
-	# ROM: 0x55BEAC
 	.4byte switch_803649A0
 	.4byte switch_803649AC
 	.4byte switch_80364A18
@@ -3276,7 +3271,6 @@ lbl_8055FDAC:
 
 .global lbl_8055FE38
 lbl_8055FE38:
-	# ROM: 0x55BF38
 	.4byte switch_80365134
 	.4byte switch_8036513C
 	.4byte switch_80365144
@@ -3305,7 +3299,6 @@ lbl_8055FE38:
 
 .global lbl_8055FFB0
 lbl_8055FFB0:
-	# ROM: 0x55C0B0
 	.4byte switch_80366538
 	.4byte switch_80366540
 	.4byte switch_80366544
@@ -3319,7 +3312,6 @@ lbl_8055FFB0:
 
 .global lbl_8055FFD4
 lbl_8055FFD4:
-	# ROM: 0x55C0D4
 	.4byte switch_80366914
 	.4byte switch_8036691C
 	.4byte switch_80366920
@@ -3334,37 +3326,31 @@ lbl_8055FFD4:
 
 .global lbl_80665D00
 lbl_80665D00:
-	# ROM: 0x5718E0
 	.4byte lbl_8055FAA0
 
 
 .global lbl_80665D04
 lbl_80665D04:
-	# ROM: 0x5718E4
 	.4byte 0x00000001
 
 
 .global lbl_80665D08
 lbl_80665D08:
-	# ROM: 0x5718E8
 	.4byte 0x000003E7
 
 
 .global lbl_80665D0C
 lbl_80665D0C:
-	# ROM: 0x5718EC
 	.4byte 0x000003E7
 
 
 .global lbl_80665D10
 lbl_80665D10:
-	# ROM: 0x5718F0
 	.4byte 0x00000001
 
 
 .global lbl_80665D14
 lbl_80665D14:
-	# ROM: 0x5718F4
 	.4byte 0x00000001
 
 

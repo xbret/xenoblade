@@ -547,7 +547,6 @@ lbl_804F8568:
 
 .global lbl_804F857C
 lbl_804F857C:
-	# ROM: 0x4F467C
 	.4byte 0xFF40FF80
 	.4byte 0xFFC00000
 	.4byte 0x00400080
@@ -717,7 +716,6 @@ lbl_8052F5C4:
 
 .global lbl_8052F5D0
 lbl_8052F5D0:
-	# ROM: 0x52B6D0
 	.4byte switch_800FF088
 	.4byte switch_800FF09C
 	.4byte switch_800FF160
@@ -855,7 +853,6 @@ CTTask_IUICf_hierarchy:
 
 .global lbl_806646B8
 lbl_806646B8:
-	# ROM: 0x570298
 	.4byte lbl_804F8568
 	.4byte 0
 

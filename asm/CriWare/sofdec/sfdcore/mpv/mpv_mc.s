@@ -880,7 +880,6 @@ MPVMC08_OneRef4p_TuneC:
 
 .global lbl_8051F820
 lbl_8051F820:
-	# ROM: 0x51B920
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -890,7 +889,6 @@ lbl_8051F820:
 
 .global lbl_8056A918
 lbl_8056A918:
-	# ROM: 0x566A18
 	.4byte switch_803A8A64
 	.4byte switch_803A8C70
 	.4byte switch_803A8B44

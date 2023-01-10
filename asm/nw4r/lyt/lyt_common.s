@@ -133,12 +133,12 @@ SetSize__Q44nw4r3lyt6detail11TexCoordAryFUc:
 /* 8040A1B8 003D3778  88 0D BC 00 */	lbz r0, lbl_80667D80@sda21(r13)
 /* 8040A1BC 003D377C  7C 00 07 75 */	extsb. r0, r0
 /* 8040A1C0 003D3780  40 82 00 3C */	bne .L_8040A1FC
-/* 8040A1C4 003D3784  3C C0 80 64 */	lis r6, float_8063AD00@ha
+/* 8040A1C4 003D3784  3C C0 80 64 */	lis r6, lbl_8063AD00@ha
 /* 8040A1C8 003D3788  C0 22 C2 78 */	lfs f1, float_8066C5F8@sda21(r2)
-/* 8040A1CC 003D378C  38 A6 AD 00 */	addi r5, r6, float_8063AD00@l
+/* 8040A1CC 003D378C  38 A6 AD 00 */	addi r5, r6, lbl_8063AD00@l
 /* 8040A1D0 003D3790  C0 02 C2 7C */	lfs f0, float_8066C5FC@sda21(r2)
 /* 8040A1D4 003D3794  38 00 00 01 */	li r0, 1
-/* 8040A1D8 003D3798  D0 26 AD 00 */	stfs f1, float_8063AD00@l(r6)
+/* 8040A1D8 003D3798  D0 26 AD 00 */	stfs f1, lbl_8063AD00@l(r6)
 /* 8040A1DC 003D379C  D0 25 00 04 */	stfs f1, 4(r5)
 /* 8040A1E0 003D37A0  D0 05 00 08 */	stfs f0, 8(r5)
 /* 8040A1E4 003D37A4  D0 25 00 0C */	stfs f1, 0xc(r5)
@@ -149,9 +149,9 @@ SetSize__Q44nw4r3lyt6detail11TexCoordAryFUc:
 /* 8040A1F8 003D37B8  98 0D BC 00 */	stb r0, lbl_80667D80@sda21(r13)
 .L_8040A1FC:
 /* 8040A1FC 003D37BC  88 E3 00 01 */	lbz r7, 1(r3)
-/* 8040A200 003D37C0  3C C0 80 64 */	lis r6, float_8063AD00@ha
-/* 8040A204 003D37C4  38 A6 AD 00 */	addi r5, r6, float_8063AD00@l
-/* 8040A208 003D37C8  C0 E6 AD 00 */	lfs f7, float_8063AD00@l(r6)
+/* 8040A200 003D37C0  3C C0 80 64 */	lis r6, lbl_8063AD00@ha
+/* 8040A204 003D37C4  38 A6 AD 00 */	addi r5, r6, lbl_8063AD00@l
+/* 8040A208 003D37C8  C0 E6 AD 00 */	lfs f7, lbl_8063AD00@l(r6)
 /* 8040A20C 003D37CC  7C 07 20 50 */	subf r0, r7, r4
 /* 8040A210 003D37D0  54 E6 28 34 */	slwi r6, r7, 5
 /* 8040A214 003D37D4  C0 C5 00 04 */	lfs f6, 4(r5)
@@ -822,19 +822,17 @@ DrawQuad__Q34nw4r3lyt6detailFRCQ34nw4r4math4VEC2RCQ34nw4r3lyt4SizeUcPA4_CQ34nw4r
 
 .global float_8066C5F8
 float_8066C5F8:
-	# ROM: 0x576458
-	.4byte 0
+	.float 0
 
 
 .global float_8066C5FC
 float_8066C5FC:
-	# ROM: 0x57645C
 	.float 1.0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global float_8063AD00
-float_8063AD00:
+.global lbl_8063AD00
+lbl_8063AD00:
 	.skip 0x20
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

@@ -174,13 +174,11 @@ lbl_80525D78:
 
 .global lbl_80665E40
 lbl_80665E40:
-	# ROM: 0x571A20
 	.4byte lbl_80525D78
 
 
 .global lbl_80665E44
 lbl_80665E44:
-	# ROM: 0x571A24
 	.4byte 0xFFFFFFFF
 
 

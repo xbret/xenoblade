@@ -1217,7 +1217,6 @@ lbl_8050C15C:
 
 .global lbl_8053D9A8
 lbl_8053D9A8:
-	# ROM: 0x539AA8
 	.4byte switch_802AC354
 	.4byte switch_802AC360
 	.4byte switch_802AC36C
@@ -1273,19 +1272,16 @@ __RTTI__CMenuTutorialList:
 
 .global float_8066B670
 float_8066B670:
-	# ROM: 0x5754D0
-	.4byte 0
+	.float 0
 
 
 .global float_8066B674
 float_8066B674:
-	# ROM: 0x5754D4
 	.float 1.0
 
 
 .global float_8066B678
 float_8066B678:
-	# ROM: 0x5754D8
 	.float 10.0
 	.4byte 0
 

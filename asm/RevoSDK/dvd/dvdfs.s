@@ -861,7 +861,6 @@ lbl_805498EC:
 
 .global lbl_80665970
 lbl_80665970:
-	# ROM: 0x571550
 	.4byte 0x00000001
 	.4byte 0
 

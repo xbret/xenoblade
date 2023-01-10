@@ -2122,7 +2122,6 @@ func_803CE380:
 
 .global lbl_805205D8
 lbl_805205D8:
-	# ROM: 0x51C6D8
 	.4byte 0x00000001
 	.4byte 0x00005DA8
 	.4byte 0x00005DC0
@@ -2137,7 +2136,6 @@ lbl_805205D8:
 
 .global lbl_80520600
 lbl_80520600:
-	# ROM: 0x51C700
 	.4byte 0
 	.4byte 0
 	.4byte func_803CD7A8

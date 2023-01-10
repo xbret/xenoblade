@@ -776,38 +776,32 @@ func_800D81A8:
 
 .global float_80669698
 float_80669698:
-	# ROM: 0x5734F8
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 
 
 .global float_8066969C
 float_8066969C:
-	# ROM: 0x5734FC
 	.float 1.0
 
 
 .global float_806696A0
 float_806696A0:
-	# ROM: 0x573500
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_806696A4
 float_806696A4:
-	# ROM: 0x573504
-	.4byte 0
+	.float 0
 
 
 .global double_806696A8
 double_806696A8:
-	# ROM: 0x573508
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_806696B0
 float_806696B0:
-	# ROM: 0x573510
 	.float 0.5
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

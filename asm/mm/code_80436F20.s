@@ -66,8 +66,8 @@ func_80436F20:
 /* 8043700C 004005CC  EC 00 08 3A */	fmadds f0, f0, f0, f1
 /* 80437010 004005D0  FC 02 00 00 */	fcmpu cr0, f2, f0
 /* 80437014 004005D4  40 82 00 24 */	bne .L_80437038
-/* 80437018 004005D8  3C 80 80 66 */	lis r4, float_80659DB0@ha
-/* 8043701C 004005DC  84 64 9D B0 */	lwzu r3, float_80659DB0@l(r4)
+/* 80437018 004005D8  3C 80 80 66 */	lis r4, lbl_80659DB0@ha
+/* 8043701C 004005DC  84 64 9D B0 */	lwzu r3, lbl_80659DB0@l(r4)
 /* 80437020 004005E0  80 04 00 04 */	lwz r0, 4(r4)
 /* 80437024 004005E4  90 1E 00 04 */	stw r0, 4(r30)
 /* 80437028 004005E8  90 7E 00 00 */	stw r3, 0(r30)
@@ -314,26 +314,22 @@ sinit_80437350:
 
 .global float_8066CA60
 float_8066CA60:
-	# ROM: 0x5768C0
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global float_8066CA68
 float_8066CA68:
-	# ROM: 0x5768C8
-	.4byte 0x4222F983
+	.float 40.7436638 #0x4222F983
 
 
 .global float_8066CA6C
 float_8066CA6C:
-	# ROM: 0x5768CC
-	.4byte 0
+	.float 0
 
 
 .global float_8066CA70
 float_8066CA70:
-	# ROM: 0x5768D0
 	.float 1.0
 	.4byte 0
 

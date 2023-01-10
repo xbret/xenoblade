@@ -380,7 +380,6 @@ cf_CVS_THREAD_TENSION_UP_typestr:
 
 .global lbl_8053D4B0
 lbl_8053D4B0:
-	# ROM: 0x5395B0
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A8EEC

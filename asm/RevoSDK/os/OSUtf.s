@@ -194,7 +194,6 @@ OSUTF32toSJIS:
 
 .global lbl_80552DB8
 lbl_80552DB8:
-	# ROM: 0x54EEB8
 	.4byte 0x20AC0000
 	.4byte 0x201A0192
 	.4byte 0x201E2026
@@ -12399,7 +12398,6 @@ lbl_8055E5F8:
 
 .global lbl_8055E7F8
 lbl_8055E7F8:
-	# ROM: 0x55A8F8
 	.4byte lbl_80552DF8
 	.4byte 0
 	.4byte 0

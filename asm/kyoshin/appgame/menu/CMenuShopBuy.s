@@ -1417,39 +1417,33 @@ __RTTI__CMenuShopBuy:
 
 .global float_8066A2E0
 float_8066A2E0:
-	# ROM: 0x574140
-	.4byte 0
+	.float 0
 
 
 .global float_8066A2E4
 float_8066A2E4:
-	# ROM: 0x574144
 	.float 1.0
 
 
 .global float_8066A2E8
 float_8066A2E8:
-	# ROM: 0x574148
 	.float 10.0
 	.4byte 0
 
 
 .global float_8066A2F0
 float_8066A2F0:
-	# ROM: 0x574150
-	.4byte 0
+	.float 0
 
 
 .global float_8066A2F4
 float_8066A2F4:
-	# ROM: 0x574154
 	.float 1.0
 
 
 .global float_8066A2F8
 float_8066A2F8:
-	# ROM: 0x574158
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

@@ -47,6 +47,5 @@ MEMInitAllocatorForExpHeap:
 
 .global lbl_8066C120
 lbl_8066C120:
-	# ROM: 0x575F80
 	.4byte AllocatorAllocForExpHeap_
 	.4byte AllocatorFreeForExpHeap_

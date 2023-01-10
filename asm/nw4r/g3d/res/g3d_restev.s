@@ -622,7 +622,6 @@ DCStore__Q34nw4r3g3d6ResTevFb:
 
 .global lbl_80520DB8
 lbl_80520DB8:
-	# ROM: 0x51CEB8
 	.4byte 0x00000004
 	.4byte 0x00000005
 	.4byte 0x000000FF
@@ -635,7 +634,6 @@ lbl_80520DB8:
 
 .global lbl_80520DD8
 lbl_80520DD8:
-	# ROM: 0x51CED8
 	.4byte 0x000000A0
 	.4byte 0x000000A0
 	.4byte 0x000000C0
@@ -658,7 +656,6 @@ lbl_80520DD8:
 
 .global lbl_8056C9A0
 lbl_8056C9A0:
-	# ROM: 0x568AA0
 	.4byte 0x00010001
 	.4byte 0x00010705
 	.4byte 0x06000000

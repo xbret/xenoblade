@@ -287,7 +287,6 @@ SetRelease__Q44nw4r3snd6detail12EnvGeneratorFi:
 
 .global lbl_80523558
 lbl_80523558:
-	# ROM: 0x51F658
 	.4byte 0xFD2DFD2E
 	.4byte 0xFD2FFD75
 	.4byte 0xFDA7FDCE
@@ -356,7 +355,6 @@ lbl_80523558:
 
 .global lbl_80523658
 lbl_80523658:
-	# ROM: 0x51F758
 	.4byte 0x3F7FCCB8
 	.4byte 0x3F7F9947
 	.4byte 0x3F7F65AD
@@ -490,55 +488,46 @@ lbl_80523658:
 
 .global float_8066C734
 float_8066C734:
-	# ROM: 0x576594
-	.4byte 0x477FFF00
+	.float 65535 #0x477FFF00
 
 
 .global float_8066C738
 float_8066C738:
-	# ROM: 0x576598
 	.float 10.0
 
 
 .global float_8066C73C
 float_8066C73C:
-	# ROM: 0x57659C
-	.4byte 0
+	.float 0
 
 
 .global float_8066C740
 float_8066C740:
-	# ROM: 0x5765A0
-	.4byte 0xBD000000
+	.float -0.03125 #0xBD000000
 	.4byte 0
 
 
 .global double_8066C748
 double_8066C748:
-	# ROM: 0x5765A8
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066C750
 float_8066C750:
-	# ROM: 0x5765B0
-	.4byte 0x41C00000
+	.float 24 #0x41C00000
 
 
 .global float_8066C754
 float_8066C754:
-	# ROM: 0x5765B4
-	.4byte 0x3C000000
+	.float 0.0078125 #0x3C000000
 
 
 .global float_8066C758
 float_8066C758:
-	# ROM: 0x5765B8
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 
 .global float_8066C75C
 float_8066C75C:
-	# ROM: 0x5765BC
 	.4byte 0x42700000

@@ -386,7 +386,6 @@ func_804E77C4:
 
 .global lbl_805280E0
 lbl_805280E0:
-	# ROM: 0x5241E0
 	.4byte 0
 	.4byte 0x3EAC0831
 	.4byte 0x3F2C0831
@@ -394,7 +393,6 @@ lbl_805280E0:
 
 .global lbl_805280EC
 lbl_805280EC:
-	# ROM: 0x5241EC
 	.4byte 0
 	.4byte 0xBE000000
 	.4byte 0xBE800000
@@ -419,7 +417,6 @@ __vt__CMdlAnmEye:
 
 .global lbl_806665A0
 lbl_806665A0:
-	# ROM: 0x572180
 	.4byte lbl_8066DB00
 	.4byte 0
 
@@ -431,7 +428,6 @@ __RTTI__CMdlAnmEye:
 
 .global lbl_806665B0
 lbl_806665B0:
-	# ROM: 0x572190
 	.4byte 0x72656600
 	.4byte 0
 
@@ -445,25 +441,21 @@ lbl_8066DB00:
 
 .global float_8066DB08
 float_8066DB08:
-	# ROM: 0x577968
-	.4byte 0
+	.float 0
 
 
 .global float_8066DB0C
 float_8066DB0C:
-	# ROM: 0x57796C
 	.float 1.0
 
 
 .global float_8066DB10
 float_8066DB10:
-	# ROM: 0x577970
 	.float 10.0
 
 
 .global float_8066DB14
 float_8066DB14:
-	# ROM: 0x577974
 	.float 0.2
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

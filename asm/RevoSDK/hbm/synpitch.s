@@ -73,8 +73,8 @@ __HBMSYNGetRelativePitch:
 /* 8034190C 0030AECC  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80341910 0030AED0  4E 80 00 20 */	blr
 .L_80341914:
-/* 80341914 0030AED4  3C 60 80 52 */	lis r3, float_80518B78@ha
-/* 80341918 0030AED8  C0 23 8B 78 */	lfs f1, float_80518B78@l(r3)
+/* 80341914 0030AED4  3C 60 80 52 */	lis r3, lbl_80518B78@ha
+/* 80341918 0030AED8  C0 23 8B 78 */	lfs f1, lbl_80518B78@l(r3)
 /* 8034191C 0030AEDC  4E 80 00 20 */	blr 
 
 
@@ -83,14 +83,14 @@ func_80341920:
 /* 80341920 0030AEE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341924 0030AEE4  3C 00 43 30 */	lis r0, 0x4330
 /* 80341928 0030AEE8  3C A0 80 52 */	lis r5, double_80518B80@ha
-/* 8034192C 0030AEEC  3C 80 80 52 */	lis r4, float_80518B7C@ha
+/* 8034192C 0030AEEC  3C 80 80 52 */	lis r4, lbl_80518B7C@ha
 /* 80341930 0030AEF0  80 C3 00 18 */	lwz r6, 0x18(r3)
 /* 80341934 0030AEF4  90 01 00 08 */	stw r0, 8(r1)
 /* 80341938 0030AEF8  A0 C6 00 02 */	lhz r6, 2(r6)
 /* 8034193C 0030AEFC  90 C1 00 0C */	stw r6, 0xc(r1)
 /* 80341940 0030AF00  C8 45 8B 80 */	lfd f2, double_80518B80@l(r5)
 /* 80341944 0030AF04  C8 21 00 08 */	lfd f1, 8(r1)
-/* 80341948 0030AF08  C0 04 8B 7C */	lfs f0, float_80518B7C@l(r4)
+/* 80341948 0030AF08  C0 04 8B 7C */	lfs f0, lbl_80518B7C@l(r4)
 /* 8034194C 0030AF0C  EC 21 10 28 */	fsubs f1, f1, f2
 /* 80341950 0030AF10  80 A3 00 10 */	lwz r5, 0x10(r3)
 /* 80341954 0030AF14  88 03 00 0D */	lbz r0, 0xd(r3)
@@ -117,8 +117,8 @@ func_80341990:
 /* 803419A0 0030AF60  7C 7F 1B 78 */	mr r31, r3
 /* 803419A4 0030AF64  4B FF FE 6D */	bl __HBMSYNGetRelativePitch
 /* 803419A8 0030AF68  C0 5F 00 24 */	lfs f2, 0x24(r31)
-/* 803419AC 0030AF6C  3C 60 80 52 */	lis r3, float_80518B88@ha
-/* 803419B0 0030AF70  C0 03 8B 88 */	lfs f0, float_80518B88@l(r3)
+/* 803419AC 0030AF6C  3C 60 80 52 */	lis r3, lbl_80518B88@ha
+/* 803419B0 0030AF70  C0 03 8B 88 */	lfs f0, lbl_80518B88@l(r3)
 /* 803419B4 0030AF74  EC 22 00 72 */	fmuls f1, f2, f1
 /* 803419B8 0030AF78  EC 20 00 72 */	fmuls f1, f0, f1
 /* 803419BC 0030AF7C  4B F7 86 71 */	bl __cvt_fp2unsigned
@@ -160,8 +160,8 @@ __HBMSYNUpdateSrc:
 /* 80341A40 0030B000  7C 7F 1B 78 */	mr r31, r3
 /* 80341A44 0030B004  4B FF FD CD */	bl __HBMSYNGetRelativePitch
 /* 80341A48 0030B008  C0 5F 00 24 */	lfs f2, 0x24(r31)
-/* 80341A4C 0030B00C  3C 60 80 52 */	lis r3, float_80518B88@ha
-/* 80341A50 0030B010  C0 03 8B 88 */	lfs f0, float_80518B88@l(r3)
+/* 80341A4C 0030B00C  3C 60 80 52 */	lis r3, lbl_80518B88@ha
+/* 80341A50 0030B010  C0 03 8B 88 */	lfs f0, lbl_80518B88@l(r3)
 /* 80341A54 0030B014  EC 22 00 72 */	fmuls f1, f2, f1
 /* 80341A58 0030B018  EC 20 00 72 */	fmuls f1, f0, f1
 /* 80341A5C 0030B01C  4B F7 85 D1 */	bl __cvt_fp2unsigned
@@ -180,28 +180,24 @@ __HBMSYNUpdateSrc:
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
-.global float_80518B78
-float_80518B78:
-	# ROM: 0x514C78
+.global lbl_80518B78
+lbl_80518B78:
 	.float 1.0
 
 
-.global float_80518B7C
-float_80518B7C:
-	# ROM: 0x514C7C
-	.4byte 0x46FA0000
+.global lbl_80518B7C
+lbl_80518B7C:
+	.float 32000 #0x46FA0000
 
 
 .global double_80518B80
 double_80518B80:
-	# ROM: 0x514C80
 	.4byte 0x43300000
 	.4byte 0
 
 
-.global float_80518B88
-float_80518B88:
-	# ROM: 0x514C88
+.global lbl_80518B88
+lbl_80518B88:
 	.4byte 0x47800000
 	.4byte 0
 
@@ -209,7 +205,6 @@ float_80518B88:
 
 .global lbl_80550020
 lbl_80550020:
-	# ROM: 0x54C120
 	.float 1.0
 	.4byte 0x3F8012F1
 	.4byte 0x3F8025E1

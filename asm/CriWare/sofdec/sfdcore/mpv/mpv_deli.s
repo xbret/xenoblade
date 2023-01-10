@@ -162,7 +162,6 @@ MPV_SearchDelim:
 
 .global lbl_8051F608
 lbl_8051F608:
-	# ROM: 0x51B708
 	.4byte 0x04030101
 	.4byte 0x01010101
 	.4byte 0x01010101

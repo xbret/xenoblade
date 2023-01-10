@@ -496,7 +496,6 @@ lbl_805280A0:
 
 .global lbl_805280AC
 lbl_805280AC:
-	# ROM: 0x5241AC
 	.4byte 0
 	.float 0.25
 	.float 0.5
@@ -521,13 +520,11 @@ __vt__CMdlMouth:
 
 .global lbl_80666570
 lbl_80666570:
-	# ROM: 0x572150
 	.4byte lbl_8066DAB0
 
 
 .global lbl_80666574
 lbl_80666574:
-	# ROM: 0x572154
 	.4byte lbl_805280A0
 
 .global __RTTI__CMdlMouth
@@ -538,13 +535,11 @@ __RTTI__CMdlMouth:
 
 .global lbl_80666580
 lbl_80666580:
-	# ROM: 0x572160
 	.4byte 0x72656600
 
 
 .global lbl_80666584
 lbl_80666584:
-	# ROM: 0x572164
 	.4byte 0x72656600
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -557,58 +552,49 @@ lbl_8066DAB0:
 
 .global float_8066DAB8
 float_8066DAB8:
-	# ROM: 0x577918
-	.4byte 0
+	.float 0
 
 
 .global float_8066DABC
 float_8066DABC:
-	# ROM: 0x57791C
 	.float 1.0
 
 
 .global float_8066DAC0
 float_8066DAC0:
-	# ROM: 0x577920
 	.float 0.2
 
 
 .global float_8066DAC4
 float_8066DAC4:
-	# ROM: 0x577924
-	.4byte 0x3B03126F
+	.float 0.002 #0x3B03126F
 
 
 .global float_8066DAC8
 float_8066DAC8:
-	# ROM: 0x577928
-	.4byte 0x3BC49BA6
+	.float 0.006 #0x3BC49BA6
 	.4byte 0
 
 
 .global double_8066DAD0
 double_8066DAD0:
-	# ROM: 0x577930
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066DAD8
 float_8066DAD8:
-	# ROM: 0x577938
-	.4byte 0x4222F983
+	.float 40.7436638 #0x4222F983
 
 
 .global float_8066DADC
 float_8066DADC:
-	# ROM: 0x57793C
-	.4byte 0x42040000
+	.float 33 #0x42040000
 
 
 .global float_8066DAE0
 float_8066DAE0:
-	# ROM: 0x577940
-	.4byte 0x40800000
+	.float 4 #0x40800000
 	.4byte 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

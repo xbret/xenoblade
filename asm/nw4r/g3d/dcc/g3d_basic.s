@@ -203,18 +203,15 @@ CalcWorldMtx_Basic__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3
 
 .global float_8066C488
 float_8066C488:
-	# ROM: 0x5762E8
-	.4byte 0x3F360B61
+	.float 0.7111111 #0x3F360B61
 
 
 .global float_8066C48C
 float_8066C48C:
-	# ROM: 0x5762EC
-	.4byte 0
+	.float 0
 
 
 .global float_8066C490
 float_8066C490:
-	# ROM: 0x5762F0
 	.float 1.0
 	.4byte 0

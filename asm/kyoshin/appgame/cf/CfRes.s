@@ -3616,7 +3616,6 @@ cf_CfRes_hierarchy:
 
 .global lbl_8052A0F8
 lbl_8052A0F8:
-	# ROM: 0x5261F8
 	.4byte switch_800660A4
 	.4byte switch_80065FF8
 	.4byte switch_80066018
@@ -3632,7 +3631,6 @@ lbl_8052A0F8:
 
 .global lbl_8052A124
 lbl_8052A124:
-	# ROM: 0x526224
 	.4byte switch_8006620C
 	.4byte switch_800661E8
 	.4byte switch_800661E8
@@ -3696,7 +3694,6 @@ __RTTI__cf_CfRes:
 #referenced in CfTaskGameEffAfter
 .global lbl_80664340
 lbl_80664340:
-	# ROM: 0x56FF20
 	.4byte 0x2E000000
 	.4byte 0
 

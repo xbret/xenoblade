@@ -302,26 +302,22 @@ __RTTI__CScnFadeMan:
 
 .global float_8066D338
 float_8066D338:
-	# ROM: 0x577198
-	.4byte 0
+	.float 0
 
 
 .global float_8066D33C
 float_8066D33C:
-	# ROM: 0x57719C
-	.4byte 0x3B800000
+	.float 0.00390625 #0x3B800000
 
 
 .global float_8066D340
 float_8066D340:
-	# ROM: 0x5771A0
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066D348
 double_8066D348:
-	# ROM: 0x5771A8
 	.4byte 0x43300000
 	.4byte 0x80000000
 

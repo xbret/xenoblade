@@ -99,19 +99,16 @@ __RTTI__CScnFrame:
 
 .global float_8066D390
 float_8066D390:
-	# ROM: 0x5771F0
 	.float 1.0
 
 
 .global float_8066D394
 float_8066D394:
-	# ROM: 0x5771F4
 	.float 0.5
 
 
 .global double_8066D398
 double_8066D398:
-	# ROM: 0x5771F8
 	.4byte 0x43300000
 	.4byte 0
 

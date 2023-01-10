@@ -172,6 +172,5 @@ lbl_80665CE8:
 
 .global double_8066C1E8
 double_8066C1E8:
-	# ROM: 0x576048
 	.4byte 0x43300000
 	.4byte 0

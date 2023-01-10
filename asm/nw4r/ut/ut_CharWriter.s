@@ -1565,33 +1565,28 @@ SetupGXWithColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
 
 .global float_8066C940
 float_8066C940:
-	# ROM: 0x5767A0
-	.4byte 0
+	.float 0
 
 
 .global float_8066C944
 float_8066C944:
-	# ROM: 0x5767A4
 	.float 1.0
 
 
 .global double_8066C948
 double_8066C948:
-	# ROM: 0x5767A8
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066C950
 float_8066C950:
-	# ROM: 0x5767B0
 	.float 0.5
 	.4byte 0
 
 
 .global double_8066C958
 double_8066C958:
-	# ROM: 0x5767B8
 	.4byte 0x43300000
 	.4byte 0
 

@@ -357,7 +357,6 @@ cf_CVS_THREAD_BATTLE_MAIN_typestr:
 
 .global lbl_8053E170
 lbl_8053E170:
-	# ROM: 0x53A270
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802AF724

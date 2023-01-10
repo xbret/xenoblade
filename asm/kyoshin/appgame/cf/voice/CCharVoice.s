@@ -636,7 +636,6 @@ cf_CCharVoice_typestr:
 
 .global lbl_8050BCEC
 lbl_8050BCEC:
-	# ROM: 0x507DEC
 	.4byte 0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
@@ -652,7 +651,6 @@ __vt__cf_CCharVoice:
 
 .global lbl_80665590
 lbl_80665590:
-	# ROM: 0x571170
 	.4byte lbl_8050BCC0
 	.4byte 0
 
@@ -665,26 +663,22 @@ __RTTI__cf_CCharVoice:
 
 .global float_8066B500
 float_8066B500:
-	# ROM: 0x575360
 	.float 10.0
 
 
 .global float_8066B504
 float_8066B504:
-	# ROM: 0x575364
-	.4byte 0x42200000
+	.float 40 #0x42200000
 
 
 .global float_8066B508
 float_8066B508:
-	# ROM: 0x575368
 	.float 0.5
 
 
 .global float_8066B50C
 float_8066B50C:
-	# ROM: 0x57536C
-	.4byte 0
+	.float 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

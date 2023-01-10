@@ -793,56 +793,47 @@ __RTTI__CItemBoxGridSubMenu:
 
 .global double_8066ABB8
 double_8066ABB8:
-	# ROM: 0x574A18
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066ABC0
 float_8066ABC0:
-	# ROM: 0x574A20
-	.4byte 0x42A00000
+	.float 80 #0x42A00000
 
 
 .global float_8066ABC4
 float_8066ABC4:
-	# ROM: 0x574A24
-	.4byte 0
+	.float 0
 
 
 .global float_8066ABC8
 float_8066ABC8:
-	# ROM: 0x574A28
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_8066ABCC
 float_8066ABCC:
-	# ROM: 0x574A2C
 	.float 100.0
 
 
 .global float_8066ABD0
 float_8066ABD0:
-	# ROM: 0x574A30
-	.4byte 0xC1880000
+	.float -17 #0xC1880000
 
 
 .global float_8066ABD4
 float_8066ABD4:
-	# ROM: 0x574A34
-	.4byte 0x42F00000
+	.float 120 #0x42F00000
 
 
 .global float_8066ABD8
 float_8066ABD8:
-	# ROM: 0x574A38
-	.4byte 0xC2140000
+	.float -37 #0xC2140000
 
 
 .global float_8066ABDC
 float_8066ABDC:
-	# ROM: 0x574A3C
 	.float 1.0
 
 

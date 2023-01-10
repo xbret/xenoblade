@@ -1365,56 +1365,47 @@ __RTTI__CMenuZeal:
 
 .global float_8066A130
 float_8066A130:
-	# ROM: 0x573F90
 	.float 100.0
 
 
 .global float_8066A134
 float_8066A134:
-	# ROM: 0x573F94
-	.4byte 0
+	.float 0
 
 
 .global float_8066A138
 float_8066A138:
-	# ROM: 0x573F98
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 
 .global float_8066A13C
 float_8066A13C:
-	# ROM: 0x573F9C
-	.4byte 0x42480000
+	.float 50 #0x42480000
 
 
 .global float_8066A140
 float_8066A140:
-	# ROM: 0x573FA0
-	.4byte 0x42340000
+	.float 45 #0x42340000
 
 
 .global float_8066A144
 float_8066A144:
-	# ROM: 0x573FA4
 	.float 1.0
 
 
 .global float_8066A148
 float_8066A148:
-	# ROM: 0x573FA8
-	.4byte 0x40C00000
+	.float 6 #0x40C00000
 
 
 .global float_8066A14C
 float_8066A14C:
-	# ROM: 0x573FAC
 	.float 1.5
 
 
 .global float_8066A150
 float_8066A150:
-	# ROM: 0x573FB0
-	.4byte 0x42080000
+	.float 34 #0x42080000
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

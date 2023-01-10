@@ -324,35 +324,29 @@ lbl_80518BB8:
 
 .global float_8066C170
 float_8066C170:
-	# ROM: 0x575FD0
-	.4byte 0x3727C5AC
+	.float 0.00001 #0x3727C5AC
 
 
 .global float_8066C174
 float_8066C174:
-	# ROM: 0x575FD4
 	.float 1.0
 
 
 .global float_8066C178
 float_8066C178:
-	# ROM: 0x575FD8
-	.4byte 0
+	.float 0
 
 
 .global float_8066C17C
 float_8066C17C:
-	# ROM: 0x575FDC
 	.float 0.5
 
 
 .global float_8066C180
 float_8066C180:
-	# ROM: 0x575FE0
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_8066C184
 float_8066C184:
-	# ROM: 0x575FE4
 	.4byte 0x3F7FFF58

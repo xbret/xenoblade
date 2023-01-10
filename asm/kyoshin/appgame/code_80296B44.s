@@ -683,7 +683,6 @@ lbl_8050B58C:
 
 .global lbl_8050B598
 lbl_8050B598:
-	# ROM: 0x507698
 	.4byte lbl_8066B490
 	.4byte lbl_8050B550
 	.4byte lbl_8050B55C
@@ -697,26 +696,22 @@ lbl_8050B598:
 
 .global float_8066B478
 float_8066B478:
-	# ROM: 0x5752D8
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066B47C
 float_8066B47C:
-	# ROM: 0x5752DC
-	.4byte 0
+	.float 0
 
 
 .global double_8066B480
 double_8066B480:
-	# ROM: 0x5752E0
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_8066B488
 double_8066B488:
-	# ROM: 0x5752E8
 	.4byte 0x43300000
 	.4byte 0x80000000
 

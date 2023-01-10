@@ -1920,30 +1920,25 @@ lbl_80525D28:
 
 .global lbl_80665E28
 lbl_80665E28:
-	# ROM: 0x571A08
 	.4byte lbl_8066C9A8
 
 
 .global lbl_80665E2C
 lbl_80665E2C:
-	# ROM: 0x571A0C
 	.4byte lbl_8066C9B0
 
 .global lbl_80665E30
 lbl_80665E30:
-	# ROM: 0x571A10
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_80665E34
 lbl_80665E34:
-	# ROM: 0x571A14
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_80665E38
 lbl_80665E38:
-	# ROM: 0x571A18
 	.byte 0x01
 
 
@@ -1955,7 +1950,6 @@ lbl_80665E39:
 
 .global arenaMemorySize
 arenaMemorySize:
-	# ROM: 0x571A1C
 	.4byte 0x00600000
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -1972,25 +1966,21 @@ lbl_8066C9B0:
 
 .global double_8066C9B8
 double_8066C9B8:
-	# ROM: 0x576818
 	.4byte 0x3FF00000
 	.4byte 0
 
 .global float_8066C9C0
 float_8066C9C0:
-	# ROM: 0x576820
-	.4byte 0
+	.float 0
 
 
 .global float_8066C9C4
 float_8066C9C4:
-	# ROM: 0x576824
 	.float 100.0
 
 
 .global double_8066C9C8
 double_8066C9C8:
-	# ROM: 0x576828
 	.4byte 0x43300000
 	.4byte 0
 

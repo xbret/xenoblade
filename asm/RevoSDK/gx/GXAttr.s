@@ -855,7 +855,6 @@ GXSetNumTexGens:
 
 .global lbl_8054B8F0
 lbl_8054B8F0:
-	# ROM: 0x5479F0
 	.4byte switch_80319250
 	.4byte switch_80319264
 	.4byte switch_80319278
@@ -886,7 +885,6 @@ lbl_8054B8F0:
 
 .global lbl_8054B958
 lbl_8054B958:
-	# ROM: 0x547A58
 	.4byte switch_803196F0
 	.4byte switch_80319708
 	.4byte switch_80319744
@@ -928,7 +926,6 @@ lbl_8054B99C:
 
 .global lbl_8054B9E0
 lbl_8054B9E0:
-	# ROM: 0x547AE0
 	.4byte switch_80319B2C
 	.4byte switch_80319B38
 	.4byte switch_80319B44
@@ -975,7 +972,6 @@ lbl_8054BA38:
 
 .global lbl_8054BA74
 lbl_8054BA74:
-	# ROM: 0x547B74
 	.4byte 0
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -995,7 +991,6 @@ lbl_8054BA74:
 
 .global lbl_8054BAB0
 lbl_8054BAB0:
-	# ROM: 0x547BB0
 	.4byte 0
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1069,7 +1064,6 @@ lbl_8054BB64:
 
 .global lbl_8054BBA0
 lbl_8054BBA0:
-	# ROM: 0x547CA0
 	.4byte 0x00000008
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1161,7 +1155,6 @@ lbl_8054BC90:
 
 .global lbl_8054BCCC
 lbl_8054BCCC:
-	# ROM: 0x547DCC
 	.4byte 0x00000004
 	.4byte 0x02800210
 	.4byte 0x02100028
@@ -1217,7 +1210,6 @@ lbl_8054BD44:
 
 .global lbl_8054BD80
 lbl_8054BD80:
-	# ROM: 0x547E80
 	.4byte 0x00000014
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1292,18 +1284,15 @@ lbl_8054BE34:
 
 .global lbl_806659F8
 lbl_806659F8:
-	# ROM: 0x5715D8
 	.4byte 0x00040102
 
 
 .global lbl_806659FC
 lbl_806659FC:
-	# ROM: 0x5715DC
 	.4byte 0x00080102
 
 
 .global lbl_80665A00
 lbl_80665A00:
-	# ROM: 0x5715E0
 	.4byte 0x000C0102
 	.4byte 0

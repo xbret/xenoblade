@@ -267,7 +267,6 @@ MPVBDEC_StartFrame:
 
 .global lbl_8051F538
 lbl_8051F538:
-	# ROM: 0x51B638
 	.4byte 0xFFFF7FFF
 	.4byte 0x3FFF1FFF
 	.4byte 0x0FFF07FF

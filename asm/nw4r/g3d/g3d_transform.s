@@ -207,6 +207,5 @@ CalcInvWorldMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34:
 
 .global lbl_8066C340
 lbl_8066C340:
-	# ROM: 0x5761A0
 	.4byte 0x03AA2425
 	.4byte 0

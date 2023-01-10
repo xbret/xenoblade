@@ -945,7 +945,6 @@ __InitParams:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_805432C0
 lbl_805432C0:
-	# ROM: 0x53F3C0
 	.4byte 0x000000A3
 	.4byte 0x0000013D
 	.4byte 0x000001DF
@@ -958,7 +957,6 @@ lbl_805432C0:
 
 .global lbl_805432E0
 lbl_805432E0:
-	# ROM: 0x53F3E0
 	.4byte 0x000006FD
 	.4byte 0x000007CF
 	.4byte 0x000001B1
@@ -991,69 +989,59 @@ lbl_805432E0:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global float_8066BE50
 float_8066BE50:
-	# ROM: 0x575CB0
-	.4byte 0x46FA0000
+	.float 32000 #0x46FA0000
 
 
 .global float_8066BE54
 float_8066BE54:
-	# ROM: 0x575CB4
-	.4byte 0
+	.float 0
 
 
 .global float_8066BE58
 float_8066BE58:
-	# ROM: 0x575CB8
 	.float 1.0
 
 
 .global float_8066BE5C
 float_8066BE5C:
-	# ROM: 0x575CBC
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 
 
 .global double_8066BE60
 double_8066BE60:
-	# ROM: 0x575CC0
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066BE68
 float_8066BE68:
-	# ROM: 0x575CC8
-	.4byte 0xBEA8F5C3
+	.float -0.33 #0xBEA8F5C3
 
 
 .global float_8066BE6C
 float_8066BE6C:
-	# ROM: 0x575CCC
-	.4byte 0x3EA8F5C3
+	.float 0.33 #0x3EA8F5C3
 
 
 .global float_8066BE70
 float_8066BE70:
-	# ROM: 0x575CD0
-	.4byte 0xC0400000
+	.float -3 #0xC0400000
 	.4byte 0
 
 
 .global double_8066BE78
 double_8066BE78:
-	# ROM: 0x575CD8
 	.4byte 0x40240000
 	.4byte 0
 
 
 .global float_8066BE80
 float_8066BE80:
-	.4byte 0x3F733333
+	.float 0.95 #0x3F733333
 	.4byte 0
 
 
 .global double_8066BE88
 double_8066BE88:
-	# ROM: 0x575CE8
 	.4byte 0x43300000
 	.4byte 0

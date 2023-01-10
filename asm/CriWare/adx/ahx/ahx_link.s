@@ -262,5 +262,4 @@ lbl_8051AB10:
 
 .global lbl_805657B4
 lbl_805657B4:
-	# ROM: 0x5618B4
 	.4byte 0x00002080

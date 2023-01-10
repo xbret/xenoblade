@@ -12,6 +12,26 @@ u32 memoryAllocHeapArray[80][28]; //bss
 u32 lbl_80665E30 = -1;
 
 
+/*Operator new seems to have been inlined in Monolithsoft's code, with it following this general pattern:
+
+int r4; //seems to often be the result of func_804375B4, but not always
+void* p = mm_malloc(sizeof(Class),r4);
+Class* c;
+
+if(p != null){
+    c = Class(p,...); //can be any one of the class's constructors, with/without params
+}
+
+bl func_804375B4
+mr r4, r3
+li r3, size
+bl mm_malloc
+cmpwi r3, 0
+beq .skip
+bl constructor
+.skip
+*/
+
 //doesn't seem like operator new
 void* operator new(u32 arg0) {
     return 0;

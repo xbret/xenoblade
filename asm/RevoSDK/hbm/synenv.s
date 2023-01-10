@@ -279,7 +279,6 @@ func_803415C0:
 
 .global lbl_80518B58
 lbl_80518B58:
-	# ROM: 0x514C58
 	.4byte 0x40000000
 	.4byte 0
 	.4byte 0x4C960000
@@ -293,7 +292,6 @@ lbl_80518B58:
 
 .global lbl_8054FA90
 lbl_8054FA90:
-	# ROM: 0x54BB90
 	.4byte 0
 	.4byte 0x3C000219
 	.4byte 0x3C800000

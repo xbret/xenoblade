@@ -1037,7 +1037,6 @@ SJMEM_GetBufSize:
 
 .global sjmem_uuid
 sjmem_uuid:
-	# ROM: 0x518198
 	.4byte 0xDD9EEE41
 	.4byte 0x167911D2
 	.4byte 0x936C0060
@@ -1077,7 +1076,6 @@ lbl_8051C0A8:
 
 .global sjmem_vtbl
 sjmem_vtbl:
-	# ROM: 0x5653D8
 	.4byte 0
 	.4byte 0
 	.4byte 0

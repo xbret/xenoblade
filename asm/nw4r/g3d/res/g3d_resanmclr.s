@@ -113,13 +113,11 @@ GetAnmResult__Q34nw4r3g3d9ResAnmClrCFPQ34nw4r3g3d12ClrAnmResultUlf:
 
 .global float_8066C2C8
 float_8066C2C8:
-	# ROM: 0x576128
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066C2D0
 double_8066C2D0:
-	# ROM: 0x576130
 	.4byte 0x43300000
 	.4byte 0

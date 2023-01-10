@@ -1769,38 +1769,32 @@ __vt__cf_CObjectState:
 
 .global float_80668FF8
 float_80668FF8:
-	# ROM: 0x572E58
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_80668FFC
 float_80668FFC:
-	# ROM: 0x572E5C
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global double_80669000
 double_80669000:
-	# ROM: 0x572E60
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_80669008
 float_80669008:
-	# ROM: 0x572E68
-	.4byte 0x3FB33333
+	.float 1.4 #0x3FB33333
 
 
 .global float_8066900C
 float_8066900C:
-	# ROM: 0x572E6C
 	.float 1.5
 
 
 .global double_80669010
 double_80669010:
-	# ROM: 0x572E70
 	.4byte 0x43300000
 	.4byte 0x80000000
 

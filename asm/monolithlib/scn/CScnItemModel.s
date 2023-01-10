@@ -4610,19 +4610,16 @@ __vt__CScnItemModel:
 
 .global float_8066D080
 float_8066D080:
-	# ROM: 0x576EE0
-	.4byte 0
+	.float 0
 
 
 .global float_8066D084
 float_8066D084:
-	# ROM: 0x576EE4
 	.float 1.0
 
 
 .global float_8066D088
 float_8066D088:
-	# ROM: 0x576EE8
 	.float -1.0
 	.4byte 0
 

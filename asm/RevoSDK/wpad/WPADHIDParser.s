@@ -4593,7 +4593,6 @@ __a1_unused_report:
 
 .global lbl_80518E08
 lbl_80518E08:
-	# ROM: 0x514F08
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
@@ -4605,7 +4604,6 @@ lbl_80518E08:
 
 .global lbl_80560A30
 lbl_80560A30:
-	# ROM: 0x55CB30
 	.4byte __a1_20_status_report
 	.4byte __a1_21_user_data
 	.4byte __a1_22_ack
@@ -4732,114 +4730,96 @@ lbl_80560E7C:
 
 .global lbl_8066C200
 lbl_8066C200:
-	# ROM: 0x576060
 	.4byte 0x007F0380
 
 
 .global lbl_8066C204
 lbl_8066C204:
-	# ROM: 0x576064
 	.4byte 0x0380007F
 
 
 .global lbl_8066C208
 lbl_8066C208:
-	# ROM: 0x576068
 	.4byte 0x005D005D
 
 
 .global lbl_8066C20C
 lbl_8066C20C:
-	# ROM: 0x57606C
 	.4byte 0x02A202A2
 
 
 .global float_8066C210
 float_8066C210:
-	# ROM: 0x576070
-	.4byte 0
+	.float 0
 
 
 .global float_8066C214
 float_8066C214:
-	# ROM: 0x576074
 	.float 0.25
 
 
 .global float_8066C218
 float_8066C218:
-	# ROM: 0x576078
-	.4byte 0x42FD0000
+	.float 126.5 #0x42FD0000
 
 
 .global float_8066C21C
 float_8066C21C:
-	# ROM: 0x57607C
-	.4byte 0x44A69000
+	.float 1332.5 #0x44A69000
 
 
 .global double_8066C220
 double_8066C220:
-	# ROM: 0x576080
 	.4byte 0x3FB84D9D
 	.4byte 0xE0000000
 
 
 .global float_8066C228
 float_8066C228:
-	# ROM: 0x576088
-	.4byte 0x42BA0000
+	.float 93 #0x42BA0000
 
 
 .global float_8066C22C
 float_8066C22C:
-	# ROM: 0x57608C
-	.4byte 0x44A72CCD
+	.float 1337.4 #0x44A72CCD
 
 
 .global double_8066C230
 double_8066C230:
-	# ROM: 0x576090
 	.4byte 0x3FB1CD3C
 	.4byte 0x80000000
 
 
 .global float_8066C238
 float_8066C238:
-	# ROM: 0x576098
 	.float -1.0
 
 
 .global float_8066C23C
 float_8066C23C:
-	# ROM: 0x57609C
-	.4byte 0x43BFC000
+	.float 383.5 #0x43BFC000
 
 
 .global float_8066C240
 float_8066C240:
-	# ROM: 0x5760A0
-	.4byte 0x43FFC000
+	.float 511.5 #0x43FFC000
 	.4byte 0
 
 
 .global double_8066C248
 double_8066C248:
-	# ROM: 0x5760A8
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066C250
 float_8066C250:
-	# ROM: 0x5760B0
-	.4byte 0x40490FD8
+	.float 3.141592 #0x40490FD8
 	.4byte 0
 
 
 .global double_8066C258
 double_8066C258:
-	# ROM: 0x5760B8
 	.4byte 0x43300000
 	.4byte 0
 

@@ -512,7 +512,6 @@ func_80339000:
 
 .global lbl_8054ECA0
 lbl_8054ECA0:
-	# ROM: 0x54ADA0
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80336970
@@ -607,7 +606,6 @@ lbl_8054EDB0:
 
 .global lbl_8054EDC0
 lbl_8054EDC0:
-	# ROM: 0x54AEC0
 	.4byte lbl_8054ED88
 	.4byte 0
 	.4byte func_80338B10

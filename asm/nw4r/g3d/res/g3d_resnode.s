@@ -239,18 +239,15 @@ func_803DDA88:
 
 .global float_8066C2A0
 float_8066C2A0:
-	# ROM: 0x576100
 	.float 1.0
 
 
 .global float_8066C2A4
 float_8066C2A4:
-	# ROM: 0x576104
-	.4byte 0x3F360B61
+	.float 0.7111111 #0x3F360B61
 
 
 .global float_8066C2A8
 float_8066C2A8:
-	# ROM: 0x576108
-	.4byte 0
+	.float 0
 	.4byte 0

@@ -356,35 +356,29 @@ GDLoadTexMtxImm3x3__Q34nw4r3g3d4fifoFRCQ34nw4r4math5MTX33Ul:
 
 .global lbl_8066C3C8
 lbl_8066C3C8:
-	# ROM: 0x576228
 	.4byte 0x00020103
 
 
 .global float_8066C3CC
 float_8066C3CC:
-	# ROM: 0x57622C
 	.float 1.0
 
 
 .global float_8066C3D0
 float_8066C3D0:
-	# ROM: 0x576230
 	.float 0.5
 
 
 .global float_8066C3D4
 float_8066C3D4:
-	# ROM: 0x576234
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066C3D8
 float_8066C3D8:
-	# ROM: 0x576238
-	.4byte 0x44800000
+	.float 1024 #0x44800000
 
 
 .global float_8066C3DC
 float_8066C3DC:
-	# ROM: 0x57623C
 	.4byte 0

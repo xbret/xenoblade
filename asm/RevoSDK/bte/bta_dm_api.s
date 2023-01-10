@@ -335,13 +335,11 @@ BTA_DmSendHciReset:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global lbl_8066BF50
 lbl_8066BF50:
-	# ROM: 0x575DB0
 	.4byte bta_dm_sm_execute
 	.4byte 0
 
 
 .global lbl_8066BF58
 lbl_8066BF58:
-	# ROM: 0x575DB8
 	.4byte bta_dm_search_sm_execute
 	.4byte 0

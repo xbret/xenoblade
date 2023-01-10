@@ -921,7 +921,6 @@ func_804C0254:
 
 .global lbl_80573188
 lbl_80573188:
-	# ROM: 0x56F288
 	.4byte 0x3F19999A
 	.float 0.2
 	.4byte 0x3E99999A
@@ -931,56 +930,47 @@ lbl_80573188:
 
 .global float_8066D730
 float_8066D730:
-	# ROM: 0x577590
-	.4byte 0
+	.float 0
 
 
 .global float_8066D734
 float_8066D734:
-	# ROM: 0x577594
 	.float 0.5
 
 
 .global float_8066D738
 float_8066D738:
-	# ROM: 0x577598
 	.float 1.0
 
 
 .global float_8066D73C
 float_8066D73C:
-	# ROM: 0x57759C
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 
 .global float_8066D740
 float_8066D740:
-	# ROM: 0x5775A0
-	.4byte 0x3B23D70B
+	.float 0.00250000018 #0x3B23D70B
 
 
 .global float_8066D744
 float_8066D744:
-	# ROM: 0x5775A4
 	.float 0.2
 
 
 .global float_8066D748
 float_8066D748:
-	# ROM: 0x5775A8
-	.4byte 0x3D4CCCCD
+	.float 0.05 #0x3D4CCCCD
 
 
 .global float_8066D74C
 float_8066D74C:
-	# ROM: 0x5775AC
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066D750
 float_8066D750:
-	# ROM: 0x5775B0
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

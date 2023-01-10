@@ -92,7 +92,6 @@ lbl_8051BA28:
 
 .global lsc_build
 lsc_build:
-	# ROM: 0x517B58
 	.4byte lbl_8051BA28
 	.4byte 0
 

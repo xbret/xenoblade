@@ -552,7 +552,6 @@ lbl_805346D8:
 
 .global lbl_805346F0
 lbl_805346F0:
-	# ROM: 0x5307F0
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -617,8 +616,7 @@ __RTTI__cf_CfResImpl:
 
 .global float_80669F50
 float_80669F50:
-	# ROM: 0x573DB0
-	.4byte 0
+	.float 0
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

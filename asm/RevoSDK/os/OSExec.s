@@ -1585,7 +1585,6 @@ lbl_80665B70:
 
 .global lbl_80665B78
 lbl_80665B78:
-	# ROM: 0x571758
 	.4byte 0x25640000
 	.4byte 0
 

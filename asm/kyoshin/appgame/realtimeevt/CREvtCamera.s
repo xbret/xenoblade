@@ -792,13 +792,11 @@ cf_CREvtCamera_hierarchy:
 
 .global lbl_80664D40
 lbl_80664D40:
-	# ROM: 0x570920
 	.4byte lbl_8066A158
 
 
 .global lbl_80664D44
 lbl_80664D44:
-	# ROM: 0x570924
 	.4byte lbl_8066A160
 
 .global __RTTI__cf_CREvtCamera
@@ -821,32 +819,27 @@ lbl_8066A160:
 
 .global float_8066A164
 float_8066A164:
-	# ROM: 0x573FC4
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066A168
 float_8066A168:
-	# ROM: 0x573FC8
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_8066A16C
 float_8066A16C:
-	# ROM: 0x573FCC
-	.4byte 0x47A60400
+	.float 85000 #0x47A60400
 
 
 .global float_8066A170
 float_8066A170:
-	# ROM: 0x573FD0
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066A178
 double_8066A178:
-	# ROM: 0x573FD8
 	.4byte 0x43300000
 	.4byte 0x80000000
 

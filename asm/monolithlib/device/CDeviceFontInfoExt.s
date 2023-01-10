@@ -336,7 +336,6 @@ __RTTI__IDeviceFontInfo:
 
 .global float_8066CBC0
 float_8066CBC0:
-	# ROM: 0x576A20
 	.float 1.0
 	.4byte 0
 

@@ -895,19 +895,16 @@ __RTTI__CCLPCur:
 
 .global float_8066B090
 float_8066B090:
-	# ROM: 0x574EF0
-	.4byte 0
+	.float 0
 
 
 .global float_8066B094
 float_8066B094:
-	# ROM: 0x574EF4
 	.float 1.0
 
 
 .global float_8066B098
 float_8066B098:
-	# ROM: 0x574EF8
 	.float 10.0
 	.4byte 0
 

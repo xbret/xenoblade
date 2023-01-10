@@ -271,7 +271,6 @@ GetFont__Q34nw4r3lyt19ArcResourceAccessorFPCc:
 
 .global lbl_8056D598
 lbl_8056D598:
-	# ROM: 0x569698
 	.4byte 0
 	.4byte 0
 	.4byte func_8003997C
@@ -283,11 +282,9 @@ lbl_8056D598:
 
 .global lbl_80665DF8
 lbl_80665DF8:
-	# ROM: 0x5719D8
 	.4byte 0x2E000000
 
 
 .global lbl_80665DFC
 lbl_80665DFC:
-	# ROM: 0x5719DC
 	.4byte 0x2E2E0000

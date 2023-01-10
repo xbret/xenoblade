@@ -1705,7 +1705,6 @@ __RTTI__CMCCrystalInfo:
 
 .global float_8066AD58
 float_8066AD58:
-	# ROM: 0x574BB8
 	.float 1.0
 	.4byte 0
 

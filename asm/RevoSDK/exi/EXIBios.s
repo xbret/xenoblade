@@ -1773,7 +1773,6 @@ lbl_8054B610:
 
 .global lbl_806659D8
 lbl_806659D8:
-	# ROM: 0x5715B8
 	.4byte lbl_8054B610
 	.4byte 0
 

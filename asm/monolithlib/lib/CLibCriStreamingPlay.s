@@ -2166,7 +2166,6 @@ func_8045D148:
 
 .global lbl_80526970
 lbl_80526970:
-	# ROM: 0x522A70
 	.4byte 0x00000064
 	.4byte 0
 	.4byte 0x00000046
@@ -2306,13 +2305,11 @@ CLibCriStreamingPlay_hierarchy:
 
 .global lbl_806660C8
 lbl_806660C8:
-	# ROM: 0x571CA8
 	.4byte 0x0000BB80
 
 
 .global lbl_806660CC
 lbl_806660CC:
-	# ROM: 0x571CAC
 	.4byte lbl_8066CCC0
 
 .global __RTTI__CLibCriStreamingPlay
@@ -2331,33 +2328,29 @@ lbl_8066CCC0:
 
 .global float_8066CCC8
 float_8066CCC8:
-	# ROM: 0x576B28
 	.float 1.0
 
 
 .global float_8066CCCC
 float_8066CCCC:
-	# ROM: 0x576B2C
-	.4byte 0
+	.float 0
 
 
 .global float_8066CCD0
 float_8066CCD0:
-	# ROM: 0x576B30
 	.float 100.0
 	.4byte 0
 
 
 .global double_8066CCD8
 double_8066CCD8:
-	# ROM: 0x576B38
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066CCE0
 float_8066CCE0:
-	.4byte 0x41700000
+	.float 15 #0x41700000
 	.4byte 0
 
 

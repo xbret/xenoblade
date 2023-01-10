@@ -5242,7 +5242,6 @@ __vt__cf_CtrlRemote:
 
 .global lbl_8052B818
 lbl_8052B818:
-	# ROM: 0x527918
 	.4byte 0x000000FF
 	.4byte 0x0000FF00
 	.4byte 0x00FF0000
@@ -5251,7 +5250,6 @@ lbl_8052B818:
 
 .global lbl_8052B828
 lbl_8052B828:
-	# ROM: 0x527928
 	.4byte 0x00000001
 	.4byte 0x00000002
 	.4byte 0x00000004
@@ -5285,13 +5283,19 @@ lbl_8052B828:
 	.4byte 0x40000000
 	.4byte 0x80000000
 
+.global lbl_8052B8A8
+lbl_8052B8A8:
+	.4byte lbl_80669038
+	.4byte lbl_804F7498
+	.4byte lbl_804F74A4
+	.4byte lbl_804F74B0
+
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 
 .global lbl_80664568
 lbl_80664568:
-	# ROM: 0x570148
 	.4byte 0x0000FFFF
 	.4byte 0xFFFF0000
 
@@ -5299,88 +5303,74 @@ lbl_80664568:
 
 .global float_80668FB8
 float_80668FB8:
-	# ROM: 0x572E18
-	.4byte 0
+	.float 0
 
 
 .global float_80668FBC
 float_80668FBC:
-	# ROM: 0x572E1C
-	.4byte 0xC25C0000
+	.float -55 #0xC25C0000
 
 
 .global float_80668FC0
 float_80668FC0:
-	# ROM: 0x572E20
-	.4byte 0x425C0000
+	.float 55 #0x425C0000
 	.4byte 0
 
 
 .global double_80668FC8
 double_80668FC8:
-	# ROM: 0x572E28
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80668FD0
 float_80668FD0:
-	# ROM: 0x572E30
 	.float 100.0
 
 
 .global float_80668FD4
 float_80668FD4:
-	# ROM: 0x572E34
-	.4byte 0x3CC90FDB
+	.float 0.0245436933 #0x3CC90FDB
 
 
 .global float_80668FD8
 float_80668FD8:
-	# ROM: 0x572E38
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 
 
 .global float_80668FDC
 float_80668FDC:
-	# ROM: 0x572E3C
-	.4byte 0x43610000
+	.float 225 #0x43610000
 
 
 .global float_80668FE0
 float_80668FE0:
-	# ROM: 0x572E40
-	.4byte 0x420C0000
+	.float 35 #0x420C0000
 
 
 .global float_80668FE4
 float_80668FE4:
-	# ROM: 0x572E44
-	.4byte 0x430C0000
+	.float 140 #0x430C0000
 
 
 .global float_80668FE8
 float_80668FE8:
-	# ROM: 0x572E48
-	.4byte 0xC20C0000
+	.float -35 #0xC20C0000
 
 
 .global float_80668FEC
 float_80668FEC:
-	# ROM: 0x572E4C
-	.4byte 0xC30C0000
+	.float -140 #0xC30C0000
 
 
 .global float_80668FF0
 float_80668FF0:
-	# ROM: 0x572E50
 	.float 1.0
 
 
 .global float_80668FF4
 float_80668FF4:
-	# ROM: 0x572E54
-	.4byte 0x3F4F5C29
+	.float 0.81 #0x3F4F5C29
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

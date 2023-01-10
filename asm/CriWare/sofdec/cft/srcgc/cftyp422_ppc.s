@@ -273,7 +273,6 @@ func_8039B960:
 
 .global lbl_8051CDF0
 lbl_8051CDF0:
-	# ROM: 0x518EF0
 	.4byte 0x3F950A85
 	.float 0.5
 	.4byte 0xBEC880BB

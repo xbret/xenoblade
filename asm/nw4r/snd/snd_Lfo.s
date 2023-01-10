@@ -153,7 +153,6 @@ GetValue__Q44nw4r3snd6detail3LfoCFv:
 
 .global lbl_80523858
 lbl_80523858:
-	# ROM: 0x51F958
 	.4byte 0x00060C13
 	.4byte 0x191F252B
 	.4byte 0x31363C41
@@ -169,51 +168,43 @@ lbl_80523858:
 
 .global float_8066C7B0
 float_8066C7B0:
-	# ROM: 0x576610
-	.4byte 0
+	.float 0
 
 
 .global float_8066C7B4
 float_8066C7B4:
-	# ROM: 0x576614
-	.4byte 0x40C80000
+	.float 6.25 #0x40C80000
 
 
 .global float_8066C7B8
 float_8066C7B8:
-	# ROM: 0x576618
-	.4byte 0x447A0000
+	.float 1000 #0x447A0000
 	.4byte 0
 
 
 .global double_8066C7C0
 double_8066C7C0:
-	# ROM: 0x576620
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066C7C8
 float_8066C7C8:
-	# ROM: 0x576628
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_8066C7CC
 float_8066C7CC:
-	# ROM: 0x57662C
-	.4byte 0x42000000
+	.float 32 #0x42000000
 
 
 .global float_8066C7D0
 float_8066C7D0:
-	# ROM: 0x576630
-	.4byte 0x42FE0000
+	.float 127 #0x42FE0000
 	.4byte 0
 
 
 .global double_8066C7D8
 double_8066C7D8:
-	# ROM: 0x576638
 	.4byte 0x43300000
 	.4byte 0

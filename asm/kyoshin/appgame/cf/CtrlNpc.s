@@ -3591,7 +3591,6 @@ lbl_804F737C:
 
 .global lbl_8052B218
 lbl_8052B218:
-	# ROM: 0x527318
 	.4byte lbl_804F72C8
 	.4byte lbl_804F72D4
 	.4byte lbl_804F72E0
@@ -3602,7 +3601,6 @@ lbl_8052B218:
 
 .global lbl_8052B230
 lbl_8052B230:
-	# ROM: 0x527330
 	.4byte lbl_804F7310
 	.4byte lbl_804F731C
 	.4byte lbl_804F7328
@@ -3615,7 +3613,6 @@ lbl_8052B230:
 
 .global lbl_8052B250
 lbl_8052B250:
-	# ROM: 0x527350
 	.4byte lbl_804F7310
 	.4byte lbl_804F731C
 	.4byte lbl_804F7328
@@ -3628,7 +3625,6 @@ lbl_8052B250:
 
 .global lbl_8052B270
 lbl_8052B270:
-	# ROM: 0x527370
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80095000
@@ -3639,7 +3635,6 @@ lbl_8052B270:
 
 .global lbl_8052B288
 lbl_8052B288:
-	# ROM: 0x527388
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8009505C
@@ -3654,7 +3649,6 @@ lbl_8052B288:
 
 .global lbl_8052B2B0
 lbl_8052B2B0:
-	# ROM: 0x5273B0
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_800951A0
@@ -3671,7 +3665,6 @@ lbl_8052B2B0:
 
 .global lbl_8052B2E0
 lbl_8052B2E0:
-	# ROM: 0x5273E0
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8009565C
@@ -3758,184 +3751,154 @@ __RTTI__cf_CtrlNpc:
 
 .global float_80668F20
 float_80668F20:
-	# ROM: 0x572D80
-	.4byte 0
+	.float 0
 
 
 .global float_80668F24
 float_80668F24:
-	# ROM: 0x572D84
 	.float 10.0
 
 
 .global float_80668F28
 float_80668F28:
-	# ROM: 0x572D88
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_80668F2C
 float_80668F2C:
-	# ROM: 0x572D8C
 	.float 1.0
 
 
 .global float_80668F30
 float_80668F30:
-	# ROM: 0x572D90
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_80668F34
 float_80668F34:
-	# ROM: 0x572D94
-	.4byte 0x3CC90FDB
+	.float 0.0245436933 #0x3CC90FDB
 
 
 .global float_80668F38
 float_80668F38:
-	# ROM: 0x572D98
-	.4byte 0x40666666
+	.float 3.6 #0x40666666
 
 
 .global float_80668F3C
 float_80668F3C:
-	# ROM: 0x572D9C
-	.4byte 0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
 
 
 .global float_80668F40
 float_80668F40:
-	# ROM: 0x572DA0
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_80668F44
 float_80668F44:
-	# ROM: 0x572DA4
-	.4byte 0x43340000
+	.float 180 #0x43340000
 
 
 .global double_80668F48
 double_80668F48:
-	# ROM: 0x572DA8
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80668F50
 float_80668F50:
-	# ROM: 0x572DB0
-	.4byte 0x447A0000
+	.float 1000 #0x447A0000
 
 
 .global float_80668F54
 float_80668F54:
-	# ROM: 0x572DB4
-	.4byte 0x45610000
+	.float 3600 #0x45610000
 
 
 .global float_80668F58
 float_80668F58:
-	# ROM: 0x572DB8
-	.4byte 0x42480000
+	.float 50 #0x42480000
 
 
 .global float_80668F5C
 float_80668F5C:
-	# ROM: 0x572DBC
-	.4byte 0x41100000
+	.float 9 #0x41100000
 
 
 .global float_80668F60
 float_80668F60:
-	# ROM: 0x572DC0
-	.4byte 0x40BCCCCD
+	.float 5.9 #0x40BCCCCD
 
 
 .global float_80668F64
 float_80668F64:
-	# ROM: 0x572DC4
-	.4byte 0xBE570A3D
+	.float -0.21 #0xBE570A3D
 
 
 .global float_80668F68
 float_80668F68:
-	# ROM: 0x572DC8
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_80668F6C
 float_80668F6C:
-	# ROM: 0x572DCC
 	.float 100.0
 
 
 .global double_80668F70
 double_80668F70:
-	# ROM: 0x572DD0
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_80668F78
 float_80668F78:
-	# ROM: 0x572DD8
 	.float 8.0
 
 
 .global float_80668F7C
 float_80668F7C:
-	# ROM: 0x572DDC
-	.4byte 0x3D800000
+	.float 0.0625 #0x3D800000
 
 
 .global float_80668F80
 float_80668F80:
-	# ROM: 0x572DE0
-	.4byte 0x3C463F14
+	.float 0.0121 #0x3C463F14
 
 
 .global float_80668F84
 float_80668F84:
-	# ROM: 0x572DE4
-	.4byte 0x3E99999A
+	.float 0.3 #0x3E99999A
 
 
 .global float_80668F88
 float_80668F88:
-	# ROM: 0x572DE8
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 
 .global float_80668F8C
 float_80668F8C:
-	# ROM: 0x572DEC
-	.4byte 0x3DB851EC
+	.float 0.09 #0x3DB851EC
 
 
 .global float_80668F90
 float_80668F90:
-	# ROM: 0x572DF0
-	.4byte 0x3D23D70B
+	.float 0.040000003 #0x3D23D70B
 
 
 .global float_80668F94
 float_80668F94:
-	# ROM: 0x572DF4
 	.float 0.2
 
 
 .global float_80668F98
 float_80668F98:
-	# ROM: 0x572DF8
 	.float 0.5
 
 
 .global float_80668F9C
 float_80668F9C:
-	# ROM: 0x572DFC
-	.4byte 0x43B40000
+	.float 360 #0x43B40000
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

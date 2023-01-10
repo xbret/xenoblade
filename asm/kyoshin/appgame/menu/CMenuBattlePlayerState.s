@@ -4306,114 +4306,96 @@ __RTTI__CMenuBattlePlayerState:
 
 .global float_80669858
 float_80669858:
-	# ROM: 0x5736B8
 	.float 1.0
 
 
 .global float_8066985C
 float_8066985C:
-	# ROM: 0x5736BC
-	.4byte 0
+	.float 0
 
 
 .global float_80669860
 float_80669860:
-	# ROM: 0x5736C0
-	.4byte 0x42DC0000
+	.float 110 #0x42DC0000
 
 
 .global float_80669864
 float_80669864:
-	# ROM: 0x5736C4
-	.4byte 0x42AC0000
+	.float 86 #0x42AC0000
 
 
 .global float_80669868
 float_80669868:
-	# ROM: 0x5736C8
-	.4byte 0xC3320000
+	.float -178 #0xC3320000
 	.4byte 0
 
 
 .global double_80669870
 double_80669870:
-	# ROM: 0x5736D0
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_80669878
 float_80669878:
-	# ROM: 0x5736D8
 	.float -1.0
 	.4byte 0
 
 
 .global double_80669880
 double_80669880:
-	# ROM: 0x5736E0
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80669888
 float_80669888:
-	# ROM: 0x5736E8
 	.float 100.0
 
 
 .global float_8066988C
 float_8066988C:
-	# ROM: 0x5736EC
-	.4byte 0x43B40000
+	.float 360 #0x43B40000
 
 
 .global float_80669890
 float_80669890:
-	# ROM: 0x5736F0
-	.4byte 0x42A40000
+	.float 82 #0x42A40000
 
 
 .global float_80669894
 float_80669894:
-	# ROM: 0x5736F4
 	.float 0.5
 
 
 .global float_80669898
 float_80669898:
-	# ROM: 0x5736F8
 	.float 10.0
 
 
 .global float_8066989C
 float_8066989C:
-	# ROM: 0x5736FC
-	.4byte 0x41600000
+	.float 14 #0x41600000
 
 
 .global float_806698A0
 float_806698A0:
-	# ROM: 0x573700
 	.float 0.2
 
 
 .global float_806698A4
 float_806698A4:
-	# ROM: 0x573704
-	.4byte 0x42700000
+	.float 60 #0x42700000
 
 
 .global float_806698A8
 float_806698A8:
-	# ROM: 0x573708
-	.4byte 0x42480000
+	.float 50 #0x42480000
 
 
 .global float_806698AC
 float_806698AC:
-	# ROM: 0x57370C
-	.4byte 0x41700000
+	.float 15 #0x41700000
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

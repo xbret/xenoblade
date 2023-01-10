@@ -1322,7 +1322,6 @@ lbl_804FC748:
 
 .global lbl_804FC758
 lbl_804FC758:
-	# ROM: 0x4F8858
 	.4byte lbl_804FC5A8
 	.4byte lbl_804FC5B8
 	.4byte lbl_804FC5C8
@@ -1442,7 +1441,6 @@ lbl_804FC7D4:
 
 .global lbl_80531EC0
 lbl_80531EC0:
-	# ROM: 0x52DFC0
 	.4byte lbl_80669C2C
 	.4byte lbl_80669C30
 	.4byte lbl_80669C38
@@ -1503,7 +1501,6 @@ cf_CfBdat_hierarchy:
 
 .global lbl_80664B20
 lbl_80664B20:
-	# ROM: 0x570700
 	.4byte 0x70633100
 	.4byte 0
 
@@ -1516,8 +1513,7 @@ __RTTI__cf_CfBdat:
 
 .global float_80669C28
 float_80669C28:
-	# ROM: 0x573A88
-	.4byte 0
+	.float 0
 
 .global lbl_80669C2C
 lbl_80669C2C:

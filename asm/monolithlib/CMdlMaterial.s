@@ -1277,13 +1277,11 @@ lbl_805739E8:
 
 .global lbl_80666548
 lbl_80666548:
-	# ROM: 0x572128
 	.4byte lbl_8066DAA0
 
 
 .global lbl_8066654C
 lbl_8066654C:
-	# ROM: 0x57212C
 	.4byte lbl_8066DAA8
 
 .global __RTTI__CMdlMaterial
@@ -1294,37 +1292,31 @@ __RTTI__CMdlMaterial:
 
 .global lbl_80666558
 lbl_80666558:
-	# ROM: 0x572138
 	.4byte 0x72656600
 
 
 .global lbl_8066655C
 lbl_8066655C:
-	# ROM: 0x57213C
 	.4byte 0x72656600
 
 
 .global lbl_80666560
 lbl_80666560:
-	# ROM: 0x572140
 	.4byte 0x72656600
 
 
 .global lbl_80666564
 lbl_80666564:
-	# ROM: 0x572144
 	.4byte 0x72656600
 
 
 .global lbl_80666568
 lbl_80666568:
-	# ROM: 0x572148
 	.4byte 0x72656600
 
 
 .global lbl_8066656C
 lbl_8066656C:
-	# ROM: 0x57214C
 	.4byte 0x72656600
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -1341,8 +1333,7 @@ lbl_8066DAA8:
 
 .global float_8066DAAC
 float_8066DAAC:
-	# ROM: 0x57790C
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

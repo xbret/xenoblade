@@ -3466,7 +3466,6 @@ lbl_80527370:
 
 .global lbl_805273F0
 lbl_805273F0:
-	# ROM: 0x5234F0
 	.4byte 0x00100011
 	.4byte 0x00120000
 	.4byte 0x00080007
@@ -3502,7 +3501,6 @@ lbl_80527418:
 
 .global lbl_80527588
 lbl_80527588:
-	# ROM: 0x523688
 	.4byte 0x00030004
 	.4byte 0x00050006
 	.4byte 0x00070008
@@ -3523,7 +3521,6 @@ lbl_80527588:
 
 .global lbl_805275C8
 lbl_805275C8:
-	# ROM: 0x5236C8
 	.4byte 0x00100010
 	.4byte 0x00100010
 	.4byte 0x00100010
@@ -3544,7 +3541,6 @@ lbl_805275C8:
 
 .global lbl_80527608
 lbl_80527608:
-	# ROM: 0x523708
 	.4byte 0x00010002
 	.4byte 0x00030004
 	.4byte 0x00050007
@@ -3565,7 +3561,6 @@ lbl_80527608:
 
 .global lbl_80527648
 lbl_80527648:
-	# ROM: 0x523748
 	.4byte 0x00100010
 	.4byte 0x00100010
 	.4byte 0x00110011
@@ -3640,7 +3635,6 @@ CLibVM_hierarchy:
 
 .global lbl_80570E48
 lbl_80570E48:
-	# ROM: 0x56CF48
 	.4byte switch_80461054
 	.4byte switch_80461E8C
 	.4byte switch_80461E8C

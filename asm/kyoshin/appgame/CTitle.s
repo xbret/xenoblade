@@ -705,7 +705,6 @@ lbl_8050CA50:
 
 .global lbl_8053E908
 lbl_8053E908:
-	# ROM: 0x53AA08
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B6660
@@ -722,7 +721,6 @@ lbl_8053E908:
 
 .global lbl_8053E938
 lbl_8053E938:
-	# ROM: 0x53AA38
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B6DF4
@@ -748,7 +746,6 @@ lbl_8053E938:
 
 .global lbl_8053E98C
 lbl_8053E98C:
-	# ROM: 0x53AA8C
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B7838

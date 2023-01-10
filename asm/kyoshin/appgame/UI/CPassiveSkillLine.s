@@ -7401,7 +7401,6 @@ func_8026D3CC:
 
 .global lbl_8053B0D8
 lbl_8053B0D8:
-	# ROM: 0x5371D8
 	.4byte switch_80267418
 	.4byte switch_802673A4
 	.4byte switch_802673AC

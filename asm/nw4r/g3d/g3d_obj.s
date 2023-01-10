@@ -99,7 +99,6 @@ GetTypeObj__Q34nw4r3g3d6G3dObjCFv:
 
 .global lbl_80520F58
 lbl_80520F58:
-	# ROM: 0x51D058
 	.4byte 0x00000007
 	.asciz "G3dObj"
 	.balign 4
@@ -111,7 +110,6 @@ lbl_80520F58:
 
 .global lbl_8056CE90
 lbl_8056CE90:
-	# ROM: 0x568F90
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d6G3dObjCFQ44nw4r3g3d6G3dObj7TypeObj

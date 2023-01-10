@@ -1260,129 +1260,108 @@ __RTTI__CSysWin:
 
 .global float_8066AE58
 float_8066AE58:
-	# ROM: 0x574CB8
-	.4byte 0x432A0000
+	.float 170 #0x432A0000
 
 
 .global float_8066AE5C
 float_8066AE5C:
-	# ROM: 0x574CBC
-	.4byte 0
+	.float 0
 
 
 .global float_8066AE60
 float_8066AE60:
-	# ROM: 0x574CC0
-	.4byte 0xC1B80000
+	.float -23 #0xC1B80000
 
 
 .global float_8066AE64
 float_8066AE64:
-	# ROM: 0x574CC4
-	.4byte 0x43160000
+	.float 150 #0x43160000
 
 
 .global float_8066AE68
 float_8066AE68:
-	# ROM: 0x574CC8
-	.4byte 0xC1600000
+	.float -14 #0xC1600000
 
 
 .global float_8066AE6C
 float_8066AE6C:
-	# ROM: 0x574CCC
-	.4byte 0x43020000
+	.float 130 #0x43020000
 
 
 .global float_8066AE70
 float_8066AE70:
-	# ROM: 0x574CD0
-	.4byte 0xC0A00000
+	.float -5 #0xC0A00000
 
 
 .global float_8066AE74
 float_8066AE74:
-	# ROM: 0x574CD4
-	.4byte 0x42DC0000
+	.float 110 #0x42DC0000
 
 
 .global float_8066AE78
 float_8066AE78:
-	# ROM: 0x574CD8
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_8066AE7C
 float_8066AE7C:
-	# ROM: 0x574CDC
-	.4byte 0x42B40000
+	.float 90 #0x42B40000
 
 
 .global float_8066AE80
 float_8066AE80:
-	# ROM: 0x574CE0
-	.4byte 0x41500000
+	.float 13 #0x41500000
 
 
 .global float_8066AE84
 float_8066AE84:
-	# ROM: 0x574CE4
-	.4byte 0x41B00000
+	.float 22 #0x41B00000
 
 
 .global float_8066AE88
 float_8066AE88:
-	# ROM: 0x574CE8
-	.4byte 0xC2A40000
+	.float -82 #0xC2A40000
 
 
 .global float_8066AE8C
 float_8066AE8C:
-	# ROM: 0x574CEC
-	.4byte 0xC28C0000
+	.float -70 #0xC28C0000
 
 
 .global float_8066AE90
 float_8066AE90:
-	# ROM: 0x574CF0
-	.4byte 0xC2680000
+	.float -58 #0xC2680000
 
 
 .global float_8066AE94
 float_8066AE94:
-	# ROM: 0x574CF4
-	.4byte 0xC2380000
+	.float -46 #0xC2380000
 
 
 .global float_8066AE98
 float_8066AE98:
-	# ROM: 0x574CF8
-	.4byte 0x428C0000
+	.float 70 #0x428C0000
 
 
 .global lbl_8066AE9C
 lbl_8066AE9C:
-	# ROM: 0x574CFC
 	.4byte 0x2B2C2D30
 
 
 .global lbl_8066AEA0
 lbl_8066AEA0:
-	# ROM: 0x574D00
 	.4byte 0x31000000
 	.4byte 0
 
 
 .global double_8066AEA8
 double_8066AEA8:
-	# ROM: 0x574D08
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066AEB0
 float_8066AEB0:
-	# ROM: 0x574D10
 	.float 1.0
 	.4byte 0
 

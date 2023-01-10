@@ -1652,7 +1652,6 @@ OSGetThreadPriority:
 
 .global lbl_80665B90
 lbl_80665B90:
-	# ROM: 0x571770
 	.4byte DefaultSwitchThreadCallback
 	.4byte 0
 

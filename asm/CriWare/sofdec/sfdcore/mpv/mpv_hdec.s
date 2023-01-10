@@ -1750,7 +1750,6 @@ MPV_MoveChunk:
 
 .global lbl_8051F750
 lbl_8051F750:
-	# ROM: 0x51B850
 	.4byte 0
 	.4byte MPVDEC_DecIpicMb
 	.4byte MPVDEC_DecPpicMb

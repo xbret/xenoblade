@@ -1621,7 +1621,6 @@ SFADXT_Seek:
 
 .global lbl_8051FEE0
 lbl_8051FEE0:
-	# ROM: 0x51BFE0
 	.4byte SFADXT_Init
 	.4byte SFADXT_Finish
 	.4byte SFADXT_ExecServer

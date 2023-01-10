@@ -4774,7 +4774,6 @@ cf_CObjectParam_hierarchy:
 
 .global lbl_80528DC0
 lbl_80528DC0:
-	# ROM: 0x524EC0
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80041024
@@ -5517,7 +5516,6 @@ __RTTI__cf_CObjectState:
 
 .global lbl_80664208
 lbl_80664208:
-	# ROM: 0x56FDE8
 	.4byte lbl_80668600
 	.4byte 0
 
@@ -5609,20 +5607,17 @@ lbl_80668600:
 
 .global float_80668604
 float_80668604:
-	# ROM: 0x572464
 	.float 1.0
 
 
 .global float_80668608
 float_80668608:
-	# ROM: 0x572468
 	.float 10.0
 
 
 .global float_8066860C
 float_8066860C:
-	# ROM: 0x57246C
-	.4byte 0
+	.float 0
 
 
 .global float_80668610
@@ -5633,7 +5628,6 @@ float_80668610:
 
 .global double_80668618
 double_80668618:
-	# ROM: 0x572478
 	.4byte 0x43300000
 	.4byte 0x80000000
 

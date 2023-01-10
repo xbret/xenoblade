@@ -1309,7 +1309,6 @@ NANDInitBanner:
 
 .global lbl_80518BC8
 lbl_80518BC8:
-	# ROM: 0x514CC8
 	.4byte 0
 	.4byte 0
 	.4byte 0xFFFFFF9A
@@ -1409,7 +1408,6 @@ lbl_80551080:
 
 .global lbl_805510E0
 lbl_805510E0:
-	# ROM: 0x54D1E0
 	.4byte 0x2F000000
 	.4byte 0
 	.4byte 0
@@ -1454,37 +1452,31 @@ lbl_8055113C:
 
 .global lbl_80665AE8
 lbl_80665AE8:
-	# ROM: 0x5716C8
 	.4byte lbl_80551080
 
 
 .global lbl_80665AEC
 lbl_80665AEC:
-	# ROM: 0x5716CC
 	.4byte 0x2F000000
 
 
 .global lbl_80665AF0
 lbl_80665AF0:
-	# ROM: 0x5716D0
 	.4byte 0
 
 
 .global lbl_80665AF4
 lbl_80665AF4:
-	# ROM: 0x5716D4
 	.4byte 0x2E000000
 
 
 .global lbl_80665AF8
 lbl_80665AF8:
-	# ROM: 0x5716D8
 	.4byte 0x2E2E0000
 
 
 .global lbl_80665AFC
 lbl_80665AFC:
-	# ROM: 0x5716DC
 	.4byte 0x2F257300
 
 
@@ -1496,13 +1488,11 @@ lbl_80665B00:
 
 .global lbl_80665B08
 lbl_80665B08:
-	# ROM: 0x5716E8
 	.4byte 0
 
 
 .global lbl_80665B0C
 lbl_80665B0C:
-	# ROM: 0x5716EC
 	.4byte 0x00200000
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

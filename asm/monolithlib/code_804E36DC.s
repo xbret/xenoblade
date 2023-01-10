@@ -98,8 +98,8 @@ func_804E36DC:
 /* 804E382C 004ACDEC  D0 1F 00 8C */	stfs f0, 0x8c(r31)
 /* 804E3830 004ACDF0  48 00 00 68 */	b .L_804E3898
 .L_804E3834:
-/* 804E3834 004ACDF4  3C 80 80 66 */	lis r4, float_80659FB8@ha
-/* 804E3838 004ACDF8  84 64 9F B8 */	lwzu r3, float_80659FB8@l(r4)
+/* 804E3834 004ACDF4  3C 80 80 66 */	lis r4, lbl_80659FB8@ha
+/* 804E3838 004ACDF8  84 64 9F B8 */	lwzu r3, lbl_80659FB8@l(r4)
 /* 804E383C 004ACDFC  80 04 00 04 */	lwz r0, 4(r4)
 /* 804E3840 004ACE00  90 1F 00 64 */	stw r0, 0x64(r31)
 /* 804E3844 004ACE04  90 7F 00 60 */	stw r3, 0x60(r31)
@@ -919,26 +919,22 @@ func_804E42F4:
 
 .global float_8066DA88
 float_8066DA88:
-	# ROM: 0x5778E8
 	.float 1.0
 
 
 .global float_8066DA8C
 float_8066DA8C:
-	# ROM: 0x5778EC
-	.4byte 0
+	.float 0
 
 
 .global double_8066DA90
 double_8066DA90:
-	# ROM: 0x5778F0
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_8066DA98
 double_8066DA98:
-	# ROM: 0x5778F8
 	.4byte 0x43300000
 	.4byte 0
 

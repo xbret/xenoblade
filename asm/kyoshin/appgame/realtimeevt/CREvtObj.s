@@ -1899,7 +1899,6 @@ __vt__cf_CREvtObj:
 
 .global lbl_80535B18
 lbl_80535B18:
-	# ROM: 0x531C18
 	.4byte lbl_8066A228
 	.4byte func_80185760
 	.4byte lbl_8066A230
@@ -1910,7 +1909,6 @@ lbl_80535B18:
 
 .global lbl_80535B30
 lbl_80535B30:
-	# ROM: 0x531C30
 	.4byte lbl_804FF048
 	.4byte func_80185808
 	.4byte lbl_804FF058
@@ -1965,7 +1963,6 @@ lbl_8066A230:
 
 .global double_8066A238
 double_8066A238:
-	# ROM: 0x574098
 	.4byte 0x43300000
 	.4byte 0x80000000
 
@@ -2012,38 +2009,32 @@ lbl_8066A274:
 
 .global float_8066A280
 float_8066A280:
-	# ROM: 0x5740E0
-	.4byte 0x38D1B717
+	.float 0.0001 #0x38D1B717
 
 
 .global float_8066A284
 float_8066A284:
-	# ROM: 0x5740E4
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_8066A288
 float_8066A288:
-	# ROM: 0x5740E8
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_8066A28C
 float_8066A28C:
-	# ROM: 0x5740EC
-	.4byte 0x447A0000
+	.float 1000 #0x447A0000
 
 
 .global double_8066A290
 double_8066A290:
-	# ROM: 0x5740F0
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_8066A298
 double_8066A298:
-	# ROM: 0x5740F8
 	.4byte 0x43300000
 	.4byte 0
 

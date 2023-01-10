@@ -2161,7 +2161,6 @@ CQstLogList_hierarchy:
 
 .global lbl_80665158
 lbl_80665158:
-	# ROM: 0x570D38
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
@@ -2174,31 +2173,26 @@ __RTTI__CQstLogList:
 
 .global float_8066AE38
 float_8066AE38:
-	# ROM: 0x574C98
-	.4byte 0x43560000
+	.float 214 #0x43560000
 
 
 .global float_8066AE3C
 float_8066AE3C:
-	# ROM: 0x574C9C
-	.4byte 0x42EC0000
+	.float 118 #0x42EC0000
 
 
 .global float_8066AE40
 float_8066AE40:
-	# ROM: 0x574CA0
-	.4byte 0
+	.float 0
 
 
 .global float_8066AE44
 float_8066AE44:
-	# ROM: 0x574CA4
 	.float 1.0
 
 
 .global double_8066AE48
 double_8066AE48:
-	# ROM: 0x574CA8
 	.4byte 0x43300000
 	.4byte 0
 

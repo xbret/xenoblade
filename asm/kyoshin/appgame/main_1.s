@@ -66,6 +66,16 @@ func_80039F6C:
 func_80039F90:
 /* 80039F90 00003550  48 46 5D 1C */	b func_8049FCAC
 
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F5B88
+lbl_804F5B88:
+	#ゲームメイン
+	.4byte 0x8351815B
+	.4byte 0x83808381
+	.4byte 0x83438393
+	.4byte 0
+	.balign 4
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

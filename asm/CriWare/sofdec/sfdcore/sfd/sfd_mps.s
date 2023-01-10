@@ -2363,7 +2363,6 @@ lbl_805202D8:
 
 .global lbl_80520310
 lbl_80520310:
-	# ROM: 0x51C410
 	.4byte sfmps_CopyAudio
 	.4byte sfmps_CopyVideo
 	.4byte sfmps_CopyPrvate

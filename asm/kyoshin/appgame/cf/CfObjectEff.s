@@ -1421,7 +1421,6 @@ func_800AD860:
 
 .global lbl_8052C028
 lbl_8052C028:
-	# ROM: 0x528128
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_800AD060
@@ -1543,26 +1542,22 @@ __vt__cf_CfObjectEff:
 
 .global float_80669220
 float_80669220:
-	# ROM: 0x573080
-	.4byte 0
+	.float 0
 
 
 .global float_80669224
 float_80669224:
-	# ROM: 0x573084
 	.float 1.0
 
 
 .global float_80669228
 float_80669228:
-	# ROM: 0x573088
 	.float 0.5
 
 
 .global float_8066922C
 float_8066922C:
-	# ROM: 0x57308C
-	.4byte 0x447A0000
+	.float 1000 #0x447A0000
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

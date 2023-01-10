@@ -1619,20 +1619,17 @@ __RTTI__CMenuQstCnt:
 
 .global float_8066AE28
 float_8066AE28:
-	# ROM: 0x574C88
-	.4byte 0
+	.float 0
 
 
 .global float_8066AE2C
 float_8066AE2C:
-	# ROM: 0x574C8C
 	.float 1.0
 
 
 .global float_8066AE30
 float_8066AE30:
-	# ROM: 0x574C90
-	.4byte 0x42B40000
+	.float 90 #0x42B40000
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

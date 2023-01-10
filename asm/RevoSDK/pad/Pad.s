@@ -87,13 +87,11 @@ __PADDisableRecalibration:
 
 .global lbl_80665BB8
 lbl_80665BB8:
-	# ROM: 0x571798
 	.4byte 0x00000300
 
 
 .global lbl_80665BBC
 lbl_80665BBC:
-	# ROM: 0x57179C
 	.4byte 0x00000005
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

@@ -178,32 +178,27 @@ NoteOn__Q44nw4r3snd6detail4BankCFRCQ44nw4r3snd6detail10NoteOnInfo:
 
 .global float_8066C6B8
 float_8066C6B8:
-	# ROM: 0x576518
-	.4byte 0x42FE0000
+	.float 127 #0x42FE0000
 
 
 .global float_8066C6BC
 float_8066C6BC:
-	# ROM: 0x57651C
-	.4byte 0x427C0000
+	.float 63 #0x427C0000
 
 
 .global float_8066C6C0
 float_8066C6C0:
-	# ROM: 0x576520
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066C6C8
 double_8066C6C8:
-	# ROM: 0x576528
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_8066C6D0
 double_8066C6D0:
-	# ROM: 0x576530
 	.4byte 0x43300000
 	.4byte 0

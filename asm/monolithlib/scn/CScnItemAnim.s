@@ -260,7 +260,6 @@ __RTTI__CScnItemAnim:
 
 .global lbl_806663A8
 lbl_806663A8:
-	# ROM: 0x571F88
 	.4byte 0x72656600
 	.4byte 0
 

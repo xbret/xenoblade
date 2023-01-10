@@ -247,7 +247,6 @@ lbl_80551240:
 
 .global lbl_80551250
 lbl_80551250:
-	# ROM: 0x54D350
 	.4byte lbl_80665B10
 	.4byte lbl_80665B18
 	.4byte lbl_805511D0

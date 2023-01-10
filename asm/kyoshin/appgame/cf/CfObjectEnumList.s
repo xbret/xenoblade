@@ -10432,7 +10432,6 @@ cf_CfObjEnumList_hierarchy:
 
 .global lbl_8052F570
 lbl_8052F570:
-	# ROM: 0x52B670
 	.4byte __RTTI__cf_CfObjEnumList_OBJ_LIST
 	.4byte 0
 	.4byte __RTTI__cf_CfObjEnumList_OBJ_LIST
@@ -10478,90 +10477,76 @@ __RTTI__fixvector_cf_CfObjEnumList_sObjInfo_384:
 
 .global float_80669780
 float_80669780:
-	# ROM: 0x5735E0
-	.4byte 0
+	.float 0
 
 
 .global float_80669784
 float_80669784:
-	# ROM: 0x5735E4
 	.float 1.0
 
 
 .global double_80669788
 double_80669788:
-	# ROM: 0x5735E8
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80669790
 float_80669790:
-	# ROM: 0x5735F0
 	.float 0.2
 
 
 .global float_80669794
 float_80669794:
-	# ROM: 0x5735F4
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_80669798
 float_80669798:
-	# ROM: 0x5735F8
-	.4byte 0x3CC90FDB
+	.float 0.0245436933 #0x3CC90FDB
 
 
 .global float_8066979C
 float_8066979C:
-	# ROM: 0x5735FC
 	.float 0.5
 
 
 .global float_806697A0
 float_806697A0:
-	# ROM: 0x573600
-	.4byte 0x4222F983
+	.float 40.7436638 #0x4222F983
 	.4byte 0
 
 
 .global double_806697A8
 double_806697A8:
-	# ROM: 0x573608
 	.4byte 0
 	.4byte 0
 
 
 .global double_806697B0
 double_806697B0:
-	# ROM: 0x573610
 	.4byte 0x3FF00000
 	.4byte 0
 
 
 .global float_806697B8
 float_806697B8:
-	# ROM: 0x573618
 	.float -1.0
 	.4byte 0
 
 
 .global float_806697C0
 float_806697C0:
-	# ROM: 0x573620
-	.4byte 0
+	.float 0
 
 
 .global float_806697C4
 float_806697C4:
-	# ROM: 0x573624
-	.4byte 0x3CC90FDB
+	.float 0.0245436933 #0x3CC90FDB
 
 
 .global float_806697C8
 float_806697C8:
-	# ROM: 0x573628
 	.float 0.5
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

@@ -1016,7 +1016,6 @@ GetTypeObj__Q34nw4r3g3d12AnmObjMatClrCFv:
 
 .global lbl_80520E48
 lbl_80520E48:
-	# ROM: 0x51CF48
 	.4byte 0x0000000D
 	.asciz "AnmObjMatClr"
 	.balign 4
@@ -1025,7 +1024,6 @@ lbl_80520E48:
 
 .global lbl_80520E60
 lbl_80520E60:
-	# ROM: 0x51CF60
 	.4byte 0x00000010
 	.asciz "AnmObjMatClrRes"
 	.4byte 0
@@ -1035,7 +1033,6 @@ lbl_80520E60:
 
 .global lbl_8056CA60
 lbl_8056CA60:
-	# ROM: 0x568B60
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d15AnmObjMatClrResCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1058,7 +1055,6 @@ lbl_8056CA60:
 
 .global lbl_8056CAA8
 lbl_8056CAA8:
-	# ROM: 0x568BA8
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjMatClrCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1082,18 +1078,15 @@ lbl_8056CAA8:
 
 .global float_8066C348
 float_8066C348:
-	# ROM: 0x5761A8
-	.4byte 0
+	.float 0
 
 
 .global float_8066C34C
 float_8066C34C:
-	# ROM: 0x5761AC
 	.float 1.0
 
 
 .global double_8066C350
 double_8066C350:
-	# ROM: 0x5761B0
 	.4byte 0x43300000
 	.4byte 0x80000000

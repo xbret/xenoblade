@@ -116,14 +116,12 @@ __vt__CScnFilter:
 
 .global float_8066D350
 float_8066D350:
-	# ROM: 0x5771B0
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066D358
 double_8066D358:
-	# ROM: 0x5771B8
 	.4byte 0x43300000
 	.4byte 0
 

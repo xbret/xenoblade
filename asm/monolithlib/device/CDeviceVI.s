@@ -1341,7 +1341,6 @@ sinit_80448E98:
 
 .global lbl_805262A8
 lbl_805262A8:
-	# ROM: 0x5223A8
 	.4byte 0x00000001
 	.4byte 0x00000002
 	.4byte 0x00000003
@@ -1394,7 +1393,6 @@ _reslist_base_CDeviceVICb_typestr:
 
 .global lbl_8056F670
 lbl_8056F670:
-	# ROM: 0x56B770
 	.4byte lbl_8054BA38
 	.4byte lbl_8054BAB0
 	.4byte lbl_8054BAEC
@@ -1513,26 +1511,22 @@ __RTTI___reslist_base_CDeviceVICb:
 
 .global float_8066CB60
 float_8066CB60:
-	# ROM: 0x5769C0
-	.4byte 0x3D088889
+	.float 0.033333335 #0x3D088889
 
 
 .global float_8066CB64
 float_8066CB64:
-	# ROM: 0x5769C4
-	.4byte 0x3FAAAAAB
+	.float 1.33333333 #0x3FAAAAAB
 
 
 .global float_8066CB68
 float_8066CB68:
-	# ROM: 0x5769C8
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066CB70
 double_8066CB70:
-	# ROM: 0x5769D0
 	.4byte 0x43300000
 	.4byte 0
 

@@ -1911,7 +1911,6 @@ func_8040DE80:
 
 .global lbl_8056DFC8
 lbl_8056DFC8:
-	# ROM: 0x56A0C8
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail11BasicPlayerFv
@@ -1925,7 +1924,6 @@ lbl_8056DFC8:
 
 .global lbl_8056DFF0
 lbl_8056DFF0:
-	# ROM: 0x56A0F0
 	.4byte 0
 	.4byte 0
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail10BasicSoundCFv
@@ -1943,7 +1941,6 @@ lbl_8056DFF0:
 
 .global lbl_8056E028
 lbl_8056E028:
-	# ROM: 0x56A128
 	.4byte 0
 	.4byte 0
 	.4byte func_8040DE80
@@ -1952,7 +1949,6 @@ lbl_8056E028:
 
 .global lbl_8056E038
 lbl_8056E038:
-	# ROM: 0x56A138
 	.4byte 0
 	.4byte 0
 	.4byte func_8040DE40
@@ -1961,7 +1957,6 @@ lbl_8056E038:
 
 .global lbl_8056E048
 lbl_8056E048:
-	# ROM: 0x56A148
 	.4byte 0
 	.4byte 0
 	.4byte func_8040DE00
@@ -1970,7 +1965,6 @@ lbl_8056E048:
 
 .global lbl_8056E058
 lbl_8056E058:
-	# ROM: 0x56A158
 	.4byte 0
 	.4byte 0
 	.4byte func_8040DDC0
@@ -1979,7 +1973,6 @@ lbl_8056E058:
 
 .global lbl_8056E068
 lbl_8056E068:
-	# ROM: 0x56A168
 	.4byte 0
 	.4byte 0
 	.4byte func_8040DD80
@@ -1989,33 +1982,28 @@ lbl_8056E068:
 
 .global float_8066C678
 float_8066C678:
-	# ROM: 0x5764D8
-	.4byte 0
+	.float 0
 
 
 .global float_8066C67C
 float_8066C67C:
-	# ROM: 0x5764DC
 	.float 1.0
 
 
 .global double_8066C680
 double_8066C680:
-	# ROM: 0x5764E0
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066C688
 float_8066C688:
-	# ROM: 0x5764E8
-	.4byte 0x47000000
+	.float 32768 #0x47000000
 
 
 .global float_8066C68C
 float_8066C68C:
-	# ROM: 0x5764EC
-	.4byte 0x46FA0000
+	.float 32000 #0x46FA0000
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

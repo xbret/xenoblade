@@ -626,7 +626,6 @@ __OSModuleInit:
 
 .global lbl_80552AB0
 lbl_80552AB0:
-	# ROM: 0x54EBB0
 	.4byte 0x00000100
 	.4byte 0x00000040
 	.4byte 0xF8000000

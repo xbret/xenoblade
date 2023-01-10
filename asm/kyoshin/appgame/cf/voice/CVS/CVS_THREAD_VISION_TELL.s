@@ -367,7 +367,6 @@ cf_CVS_THREAD_VISION_TELL_typestr:
 
 .global lbl_8053D540
 lbl_8053D540:
-	# ROM: 0x539640
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A97A0
@@ -406,14 +405,12 @@ cf_CVS_THREAD_VISION_TELL_hierarchy:
 
 .global lbl_80665650
 lbl_80665650:
-	# ROM: 0x571230
 	.4byte 0x012E0131
 	.4byte 0x01320133
 
 
 .global lbl_80665658
 lbl_80665658:
-	# ROM: 0x571238
 	.4byte 0x01310132
 	.4byte 0x01330000
 

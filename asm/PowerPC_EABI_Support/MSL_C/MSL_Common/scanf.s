@@ -1548,7 +1548,6 @@ sscanf:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_8053F7C0
 lbl_8053F7C0:
-	# ROM: 0x53B8C0
 	.4byte switch_802C141C
 	.4byte switch_802C1754
 	.4byte switch_802C1754
@@ -1609,7 +1608,6 @@ lbl_8053F7C0:
 
 .global lbl_8053F8A0
 lbl_8053F8A0:
-	# ROM: 0x53B9A0
 	.4byte switch_802C1D2C
 	.4byte switch_802C1D34
 	.4byte switch_802C1D3C
@@ -1622,7 +1620,6 @@ lbl_8053F8A0:
 
 .global lbl_8053F8C0
 lbl_8053F8C0:
-	# ROM: 0x53B9C0
 	.4byte switch_802C1B94
 	.4byte switch_802C1B9C
 	.4byte switch_802C1BA4
@@ -1635,7 +1632,6 @@ lbl_8053F8C0:
 
 .global lbl_8053F8E0
 lbl_8053F8E0:
-	# ROM: 0x53B9E0
 	.4byte switch_802C1FE8
 	.4byte switch_802C240C
 	.4byte switch_802C240C

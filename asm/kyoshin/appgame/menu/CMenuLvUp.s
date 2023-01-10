@@ -1396,31 +1396,26 @@ __RTTI__CMenuLvUp:
 
 .global float_8066B2A8
 float_8066B2A8:
-	# ROM: 0x575108
-	.4byte 0
+	.float 0
 
 
 .global float_8066B2AC
 float_8066B2AC:
-	# ROM: 0x57510C
 	.float 1.0
 
 
 .global float_8066B2B0
 float_8066B2B0:
-	# ROM: 0x575110
-	.4byte 0x43A00000
+	.float 320 #0x43A00000
 
 
 .global float_8066B2B4
 float_8066B2B4:
-	# ROM: 0x575114
-	.4byte 0x43600000
+	.float 224 #0x43600000
 
 
 .global float_8066B2B8
 float_8066B2B8:
-	# ROM: 0x575118
 	.float -1.0
 	.4byte 0
 

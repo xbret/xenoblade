@@ -264,7 +264,6 @@ WriteUARTN:
 
 .global lbl_8066BF98
 lbl_8066BF98:
-	# ROM: 0x575DF8
 	.4byte 0x00000004
 	.4byte 0
 

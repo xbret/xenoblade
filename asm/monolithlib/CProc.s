@@ -927,14 +927,12 @@ __RTTI___reslist_base_unsigned_long:
 
 .global float_8066CA78
 float_8066CA78:
-	# ROM: 0x5768D8
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 	.4byte 0
 
 
 .global double_8066CA80
 double_8066CA80:
-	# ROM: 0x5768E0
 	.4byte 0x43300000
 	.4byte 0x80000000
 

@@ -409,18 +409,15 @@ __GXSetMatrixIndex:
 
 .global float_8066C0A0
 float_8066C0A0:
-	# ROM: 0x575F00
-	.4byte 0
+	.float 0
 
 
 .global float_8066C0A4
 float_8066C0A4:
-	# ROM: 0x575F04
 	.float 0.5
 
 
 .global float_8066C0A8
 float_8066C0A8:
-	# ROM: 0x575F08
 	.4byte 0x43AB0000
 	.4byte 0

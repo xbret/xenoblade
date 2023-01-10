@@ -1225,7 +1225,6 @@ BuildPaneObj__Q34nw4r3lyt6LayoutFlPCvRCQ34nw4r3lyt11ResBlockSet:
 
 .global lbl_8056D258
 lbl_8056D258:
-	# ROM: 0x569358
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt6LayoutFv
@@ -1247,11 +1246,9 @@ lbl_8056D258:
 
 .global float_8066C558
 float_8066C558:
-	# ROM: 0x5763B8
-	.4byte 0
+	.float 0
 
 
 .global float_8066C55C
 float_8066C55C:
-	# ROM: 0x5763BC
 	.float 0.5

@@ -575,7 +575,6 @@ sinit_80425740:
 
 .global lbl_8056E5D0
 lbl_8056E5D0:
-	# ROM: 0x56A6D0
 	.4byte 0
 	.4byte 0
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv
@@ -595,19 +594,16 @@ lbl_8056E5D0:
 
 .global float_8066C888
 float_8066C888:
-	# ROM: 0x5766E8
-	.4byte 0
+	.float 0
 
 
 .global float_8066C88C
 float_8066C88C:
-	# ROM: 0x5766EC
 	.float 1.0
 
 
 .global double_8066C890
 double_8066C890:
-	# ROM: 0x5766F0
 	.4byte 0x43300000
 	.4byte 0x80000000
 

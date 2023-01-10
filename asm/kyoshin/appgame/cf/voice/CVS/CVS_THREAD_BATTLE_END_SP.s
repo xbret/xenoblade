@@ -771,7 +771,6 @@ lbl_8053D884:
 
 .global lbl_8053D890
 lbl_8053D890:
-	# ROM: 0x539990
 	.4byte lbl_8053D6D8
 	.4byte lbl_8053D6EC
 	.4byte lbl_8053D6F8
@@ -813,7 +812,6 @@ lbl_8053D890:
 
 .global lbl_8053D924
 lbl_8053D924:
-	# ROM: 0x539A24
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802AB900
@@ -1066,7 +1064,6 @@ lbl_8066B654:
 
 .global lbl_8066B658
 lbl_8066B658:
-	# ROM: 0x5754B8
 	.4byte 0x050F040E
 	.4byte 0x070E0000
 

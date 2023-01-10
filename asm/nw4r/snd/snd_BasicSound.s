@@ -1647,19 +1647,16 @@ sinit_80413B08:
 
 .global float_8066C6E8
 float_8066C6E8:
-	# ROM: 0x576548
 	.float 1.0
 
 
 .global float_8066C6EC
 float_8066C6EC:
-	# ROM: 0x57654C
-	.4byte 0
+	.float 0
 
 
 .global double_8066C6F0
 double_8066C6F0:
-	# ROM: 0x576550
 	.4byte 0x43300000
 	.4byte 0x80000000
 

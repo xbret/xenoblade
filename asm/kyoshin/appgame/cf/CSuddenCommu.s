@@ -2922,7 +2922,6 @@ sinit_801BC86C:
 
 .global lbl_805008D0
 lbl_805008D0:
-	# ROM: 0x4FC9D0
 	.4byte 0x01020304
 	.4byte 0x05060703
 	.4byte 0x08010900
@@ -3009,47 +3008,40 @@ cf_CSuddenCommu_hierarchy:
 
 .global lbl_80664ED8
 lbl_80664ED8:
-	# ROM: 0x570AB8
 	.4byte 0x00000032
 
 
 .global lbl_80664EDC
 lbl_80664EDC:
-	# ROM: 0x570ABC
 	.4byte 0x00000004
 
 
 .global lbl_80664EE0
 lbl_80664EE0:
-	# ROM: 0x570AC0
 	.4byte 0x0F0A050A
 	.4byte 0x0F000000
 
 
 .global lbl_80664EE8
 lbl_80664EE8:
-	# ROM: 0x570AC8
 	.4byte 0x0003050A
 	.4byte 0
 
 
 .global lbl_80664EF0
 lbl_80664EF0:
-	# ROM: 0x570AD0
 	.4byte 0x140F050A
 	.4byte 0
 
 
 .global lbl_80664EF8
 lbl_80664EF8:
-	# ROM: 0x570AD8
 	.4byte 0x000A0F32
 	.4byte 0
 
 
 .global lbl_80664F00
 lbl_80664F00:
-	# ROM: 0x570AE0
 	.4byte 0x03EB03EC
 	.4byte 0x03EE0000
 
@@ -3062,76 +3054,64 @@ __RTTI__cf_CSuddenCommu:
 
 .global float_8066A6F0
 float_8066A6F0:
-	# ROM: 0x574550
-	.4byte 0x43E10000
+	.float 450 #0x43E10000
 
 
 .global float_8066A6F4
 float_8066A6F4:
-	# ROM: 0x574554
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_8066A6F8
 float_8066A6F8:
-	# ROM: 0x574558
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066A700
 double_8066A700:
-	# ROM: 0x574560
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066A708
 float_8066A708:
-	# ROM: 0x574568
-	.4byte 0
+	.float 0
 
 
 .global float_8066A70C
 float_8066A70C:
-	# ROM: 0x57456C
-	.4byte 0x42700000
+	.float 60 #0x42700000
 
 
 .global float_8066A710
 float_8066A710:
-	# ROM: 0x574570
-	.4byte 0x43960000
+	.float 300 #0x43960000
 
 
 .global float_8066A714
 float_8066A714:
-	# ROM: 0x574574
 	.float 0.2
 
 
 .global float_8066A718
 float_8066A718:
-	# ROM: 0x574578
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 
 .global float_8066A71C
 float_8066A71C:
-	# ROM: 0x57457C
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066A720
 float_8066A720:
-	# ROM: 0x574580
-	.4byte 0x3F99999A
+	.float 1.2 #0x3F99999A
 
 
 .global float_8066A724
 float_8066A724:
-	# ROM: 0x574584
-	.4byte 0x42B40000
+	.float 90 #0x42B40000
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

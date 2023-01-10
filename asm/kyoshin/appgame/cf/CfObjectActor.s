@@ -3090,65 +3090,55 @@ CScnMaruShadowNw4r_hierarchy:
 
 .global float_80669FF8
 float_80669FF8:
-	# ROM: 0x573E58
-	.4byte 0
+	.float 0
 
 
 .global float_80669FFC
 float_80669FFC:
-	# ROM: 0x573E5C
 	.float 0.5
 
 
 .global float_8066A000
 float_8066A000:
-	# ROM: 0x573E60
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066A008
 double_8066A008:
-	# ROM: 0x573E68
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_8066A010
 double_8066A010:
-	# ROM: 0x573E70
 	.4byte 0x3FE00000
 	.4byte 0
 
 
 .global double_8066A018
 double_8066A018:
-	# ROM: 0x573E78
 	.4byte 0xBFE00000
 	.4byte 0
 
 
 .global float_8066A020
 float_8066A020:
-	# ROM: 0x573E80
 	.float 100.0
 
 
 .global float_8066A024
 float_8066A024:
-	# ROM: 0x573E84
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_8066A028
 float_8066A028:
-	# ROM: 0x573E88
-	.4byte 0x42480000
+	.float 50 #0x42480000
 
 
 .global float_8066A02C
 float_8066A02C:
-	# ROM: 0x573E8C
 	.float -1.0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

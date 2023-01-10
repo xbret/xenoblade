@@ -1633,10 +1633,10 @@ sfply_InitHn:
 /* 803CA644 00393C04  38 7F 27 98 */	addi r3, r31, 0x2798
 /* 803CA648 00393C08  48 00 49 DD */	bl SFTMR_InitTsum
 /* 803CA64C 00393C0C  38 00 00 00 */	li r0, 0
-/* 803CA650 00393C10  3C 80 80 52 */	lis r4, float_80520584@ha
+/* 803CA650 00393C10  3C 80 80 52 */	lis r4, lbl_80520584@ha
 /* 803CA654 00393C14  90 1F 27 BC */	stw r0, 0x27bc(r31)
 /* 803CA658 00393C18  38 7F 0A 00 */	addi r3, r31, 0xa00
-/* 803CA65C 00393C1C  C0 04 05 84 */	lfs f0, float_80520584@l(r4)
+/* 803CA65C 00393C1C  C0 04 05 84 */	lfs f0, lbl_80520584@l(r4)
 /* 803CA660 00393C20  90 1F 27 B8 */	stw r0, 0x27b8(r31)
 /* 803CA664 00393C24  90 1F 27 C4 */	stw r0, 0x27c4(r31)
 /* 803CA668 00393C28  90 1F 27 C0 */	stw r0, 0x27c0(r31)
@@ -2932,7 +2932,6 @@ SFD_SetSupplySj:
 
 .global lbl_805203F0
 lbl_805203F0:
-	# ROM: 0x51C4F0
 	.4byte 0x00000001
 	.4byte 0x00000001
 	.4byte 0x00000001
@@ -3036,9 +3035,8 @@ lbl_805203F0:
 	.4byte 0
 
 
-.global float_80520584
-float_80520584:
-	# ROM: 0x51C684
+.global lbl_80520584
+lbl_80520584:
 	.4byte 0
 
 
@@ -3052,7 +3050,6 @@ lbl_80520588:
 
 .global lbl_8056C5F0
 lbl_8056C5F0:
-	# ROM: 0x5686F0
 	.4byte switch_803C95C8
 	.4byte switch_803C923C
 	.4byte switch_803C9268

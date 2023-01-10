@@ -211,7 +211,6 @@ CNReqtaskSave_hierarchy:
 
 .global lbl_806664A0
 lbl_806664A0:
-	# ROM: 0x572080
 	.4byte lbl_8066D9D0
 	.4byte 0
 

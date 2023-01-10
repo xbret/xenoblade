@@ -881,25 +881,21 @@ UUSB_Unregister:
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 .global lbl_806658C8
 lbl_806658C8:
-	# ROM: 0x5714A8
 	.4byte 0x00000001
 
 
 .global lbl_806658CC
 lbl_806658CC:
-	# ROM: 0x5714AC
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_806658D0
 lbl_806658D0:
-	# ROM: 0x5714B0
 	.4byte 0x6F683000
 
 
 .global lbl_806658D4
 lbl_806658D4:
-	# ROM: 0x5714B4
 	.4byte 0x6F683100
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

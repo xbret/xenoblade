@@ -642,7 +642,6 @@ __OSCancelInternalAlarms:
 
 .global lbl_805517A8
 lbl_805517A8:
-	# ROM: 0x54D8A8
 	.4byte OnReset
 	.4byte 0xFFFFFFFF
 	.4byte 0

@@ -2086,7 +2086,6 @@ __vt__cf_CfObjectPoint:
 
 .global lbl_8052DCF8
 lbl_8052DCF8:
-	# ROM: 0x529DF8
 	.4byte lbl_80669420
 	.4byte 0
 	.4byte lbl_80669424
@@ -2104,20 +2103,17 @@ lbl_8052DCF8:
 
 .global float_80669410
 float_80669410:
-	# ROM: 0x573270
-	.4byte 0
+	.float 0
 
 
 .global float_80669414
 float_80669414:
-	# ROM: 0x573274
 	.float -1.0
 
 
 .global float_80669418
 float_80669418:
-	# ROM: 0x573278
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 	.4byte 0
 
 .global lbl_80669420

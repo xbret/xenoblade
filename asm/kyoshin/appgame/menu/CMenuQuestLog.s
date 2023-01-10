@@ -1165,7 +1165,6 @@ lbl_804F9D58:
 
 .global lbl_805303E0
 lbl_805303E0:
-	# ROM: 0x52C4E0
 	.4byte switch_8011CB88
 	.4byte switch_8011CB94
 	.4byte switch_8011CBA0

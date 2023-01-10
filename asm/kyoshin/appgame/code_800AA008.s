@@ -924,7 +924,6 @@ lbl_804F786C:
 
 .global lbl_8052BB80
 lbl_8052BB80:
-	# ROM: 0x527C80
 	.4byte 0
 	.4byte lbl_806690B0
 	.4byte lbl_806690B0
@@ -1053,7 +1052,6 @@ lbl_8052BB80:
 
 .global lbl_8052BD70
 lbl_8052BD70:
-	# ROM: 0x527E70
 	.4byte switch_800AA074
 	.4byte switch_800AA0AC
 	.4byte switch_800AA05C
@@ -1067,7 +1065,6 @@ lbl_8052BD70:
 
 .global lbl_8052BD94
 lbl_8052BD94:
-	# ROM: 0x527E94
 	.4byte switch_800AA8BC
 	.4byte switch_800AA914
 	.4byte switch_800AAA00

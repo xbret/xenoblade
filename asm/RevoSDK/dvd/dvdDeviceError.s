@@ -198,7 +198,6 @@ __DVDCheckDevice:
 
 .global lbl_8050E3E0
 lbl_8050E3E0:
-	# ROM: 0x50A4E0
 	.4byte lbl_8054A528
 	.4byte lbl_8054A564
 	.4byte lbl_8054A59C
@@ -288,7 +287,6 @@ lbl_8054A690:
 
 .global lbl_806659A0
 lbl_806659A0:
-	# ROM: 0x571580
 	.4byte 0x00000001
 	.4byte 0
 
@@ -296,7 +294,6 @@ lbl_806659A0:
 
 .global lbl_8066BF90
 lbl_8066BF90:
-	# ROM: 0x575DF0
 	.4byte 0xFFFFFF00
 	.4byte 0
 

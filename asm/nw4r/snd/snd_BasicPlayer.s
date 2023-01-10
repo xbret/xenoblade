@@ -304,11 +304,9 @@ __dt__Q44nw4r3snd6detail11BasicPlayerFv:
 
 .global float_8066C6E0
 float_8066C6E0:
-	# ROM: 0x576540
 	.float 1.0
 
 
 .global float_8066C6E4
 float_8066C6E4:
-	# ROM: 0x576544
 	.4byte 0

@@ -876,14 +876,12 @@ detail_FreePlayerHeap__Q34nw4r3snd11SoundPlayerFPQ44nw4r3snd6detail10BasicSound:
 
 .global float_8066C858
 float_8066C858:
-	# ROM: 0x5766B8
 	.float 1.0
 
 
 .global float_8066C85C
 float_8066C85C:
-	# ROM: 0x5766BC
-	.4byte 0
+	.float 0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

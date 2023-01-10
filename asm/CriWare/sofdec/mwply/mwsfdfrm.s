@@ -1359,7 +1359,6 @@ lbl_8051CEB0:
 
 .global lbl_805697A8
 lbl_805697A8:
-	# ROM: 0x5658A8
 	.4byte switch_8039C878
 	.4byte switch_8039C860
 	.4byte switch_8039C878

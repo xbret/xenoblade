@@ -665,7 +665,6 @@ __sinit_MTRand_cpp:
 
 .global float_8066C9D0
 float_8066C9D0:
-	# ROM: 0x576830
 	.4byte 0x2F800000
 	.4byte 0
 
@@ -673,14 +672,12 @@ float_8066C9D0:
 #unsigned int to float constant
 .global double_8066C9D8
 double_8066C9D8:
-	# ROM: 0x576838
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066C9E0
 float_8066C9E0:
-	# ROM: 0x576840
 	.float 0.5
 	.4byte 0
 

@@ -1600,13 +1600,11 @@ lbl_8055F270:
 
 .global lbl_80665CF0
 lbl_80665CF0:
-	# ROM: 0x5718D0
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_80665CF4
 lbl_80665CF4:
-	# ROM: 0x5718D4
 	.4byte 0x01000000
 
 

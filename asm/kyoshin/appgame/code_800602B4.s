@@ -1283,7 +1283,6 @@ func_800614E0:
 #seems like it should be in a camera related file
 .global lbl_80529D90
 lbl_80529D90:
-	# ROM: 0x525E90
 	.4byte lbl_80668A08
 	.4byte func_800602B8
 	.4byte lbl_80668A10
@@ -1377,27 +1376,23 @@ lbl_804F69E4:
 
 .global float_806689F0
 float_806689F0:
-	# ROM: 0x572850
-	.4byte 0x45800000
+	.float 4096 #0x45800000
 	.4byte 0
 
 
 .global double_806689F8
 double_806689F8:
-	# ROM: 0x572858
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80668A00
 float_80668A00:
-	# ROM: 0x572860
-	.4byte 0
+	.float 0
 
 
 .global float_80668A04
 float_80668A04:
-	# ROM: 0x572864
 	.float 1.0
     
 .global lbl_80668A08

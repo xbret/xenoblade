@@ -1036,7 +1036,6 @@ lbl_8051F450:
 
 .global lbl_8056A41C
 lbl_8056A41C:
-	# ROM: 0x56651C
 	.4byte lbl_8051E368
 	.4byte 0
 	.4byte 0
@@ -1094,7 +1093,6 @@ lbl_8056A41C:
 
 .global lbl_8056A4F0
 lbl_8056A4F0:
-	# ROM: 0x5665F0
 	.4byte lbl_8051E394
 	.4byte 0
 	.4byte 0
@@ -1152,7 +1150,6 @@ lbl_8056A4F0:
 
 .global lbl_8056A5C4
 lbl_8056A5C4:
-	# ROM: 0x5666C4
 	.4byte lbl_8051E3AC
 	.4byte 0
 	.4byte 0
@@ -1210,7 +1207,6 @@ lbl_8056A5C4:
 
 .global lbl_8056A698
 lbl_8056A698:
-	# ROM: 0x566798
 	.4byte lbl_8051E3C4
 	.4byte 0
 	.4byte 0
@@ -1268,7 +1264,6 @@ lbl_8056A698:
 
 .global lbl_8056A76C
 lbl_8056A76C:
-	# ROM: 0x56686C
 	.4byte lbl_8051E3DC
 	.4byte 0
 	.4byte 0x00000001
@@ -1326,7 +1321,6 @@ lbl_8056A76C:
 
 .global lbl_8056A840
 lbl_8056A840:
-	# ROM: 0x566940
 	.4byte lbl_8051E3F0
 	.4byte 0
 	.4byte 0

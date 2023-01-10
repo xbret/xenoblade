@@ -5301,7 +5301,6 @@ CTTask_CTaskGameEffAfter_hierarchy:
 
 .global lbl_80529EC0
 lbl_80529EC0:
-	# ROM: 0x525FC0
 	.4byte lbl_80668A68
 	.4byte func_800616E0
 	.4byte lbl_80668A6C
@@ -5312,7 +5311,6 @@ lbl_80529EC0:
 
 .global lbl_80529ED8
 lbl_80529ED8:
-	# ROM: 0x525FD8
 	.4byte switch_800642E8
 	.4byte switch_800642E8
 	.4byte .L_80064348
@@ -5337,7 +5335,6 @@ lbl_80529ED8:
 
 .global lbl_80529F28
 lbl_80529F28:
-	# ROM: 0x526028
 	.4byte switch_80064258
 	.4byte switch_80064244
 	.4byte .L_80064274
@@ -5362,7 +5359,6 @@ lbl_80529F28:
 
 .global lbl_80529F78
 lbl_80529F78:
-	# ROM: 0x526078
 	.4byte .L_80064570
 	.4byte .L_80064570
 	.4byte switch_8006449C
@@ -5421,13 +5417,11 @@ __RTTI__CTTask_CTaskGameEffAfter:
 
 .global lbl_80664320
 lbl_80664320:
-	# ROM: 0x56FF00
 	.4byte lbl_80668A78
 
 
 .global lbl_80664324
 lbl_80664324:
-	# ROM: 0x56FF04
 	.4byte lbl_80668A7C
 
 

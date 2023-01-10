@@ -1516,19 +1516,16 @@ __RTTI__CMenuKizunaTalk:
 
 .global float_8066A728
 float_8066A728:
-	# ROM: 0x574588
 	.float 1.0
 
 
 .global float_8066A72C
 float_8066A72C:
-	# ROM: 0x57458C
-	.4byte 0
+	.float 0
 
 
 .global double_8066A730
 double_8066A730:
-	# ROM: 0x574590
 	.4byte 0x43300000
 	.4byte 0
 

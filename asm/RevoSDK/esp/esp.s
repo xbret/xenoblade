@@ -450,7 +450,6 @@ ESP_GetConsumption:
 
 .global lbl_806659C8
 lbl_806659C8:
-	# ROM: 0x5715A8
 	.4byte 0xFFFFFFFF
 	.4byte 0
 

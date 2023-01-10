@@ -165,18 +165,15 @@ PSVECSquareDistance:
 
 .global float_8066C160
 float_8066C160:
-	# ROM: 0x575FC0
 	.float 0.5
 
 
 .global float_8066C164
 float_8066C164:
-	# ROM: 0x575FC4
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_8066C168
 float_8066C168:
-	# ROM: 0x575FC8
-	.4byte 0
+	.float 0
 	.4byte 0

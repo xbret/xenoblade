@@ -2657,7 +2657,6 @@ cf_CChainTemp_typestr:
 
 .global lbl_8050A450
 lbl_8050A450:
-	# ROM: 0x506550
 	.4byte 0x0000000F
 	.4byte 0x00140019
 	.4byte 0x001E0000
@@ -2666,7 +2665,6 @@ lbl_8050A450:
 
 .global lbl_8050A460
 lbl_8050A460:
-	# ROM: 0x506560
 	.float 1.0
 	.4byte 0x3F99999A
 	.4byte 0x3FB33333
@@ -2746,7 +2744,6 @@ __RTTI__cf_CChainTemp:
 
 .global lbl_80665378
 lbl_80665378:
-	# ROM: 0x570F58
 	.4byte 0x00000001
 	.4byte 0
 
@@ -2759,34 +2756,29 @@ __RTTI__cf_Flusher_cf_CfObjectActor:
 
 .global float_8066B310
 float_8066B310:
-	# ROM: 0x575170
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066B314
 float_8066B314:
-	# ROM: 0x575174
-	.4byte 0x459C4000
+	.float 5000 #0x459C4000
 
 
 .global float_8066B318
 float_8066B318:
-	# ROM: 0x575178
-	.4byte 0x41A00000
+	.float 20 #0x41A00000
 	.4byte 0
 
 
 .global double_8066B320
 double_8066B320:
-	# ROM: 0x575180
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066B328
 float_8066B328:
-	# ROM: 0x575188
-	.4byte 0
+	.float 0
 	.4byte 0
 
 

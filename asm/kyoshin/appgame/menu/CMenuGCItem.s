@@ -2114,7 +2114,6 @@ CMenuGCItem_hierarchy:
 
 .global lbl_8053E490
 lbl_8053E490:
-	# ROM: 0x53A590
 	.4byte switch_802B14A4
 	.4byte switch_802B154C
 	.4byte switch_802B1558

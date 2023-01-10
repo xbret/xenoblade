@@ -159,7 +159,6 @@ cf_CVS_THREAD_SUDDEN_typestr:
 
 .global lbl_8053D478
 lbl_8053D478:
-	# ROM: 0x539578
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A8CCC

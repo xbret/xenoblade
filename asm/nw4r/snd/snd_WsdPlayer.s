@@ -1201,7 +1201,6 @@ _192___dt__Q44nw4r3snd6detail9WsdPlayerFv:
 
 .global lbl_8056E688
 lbl_8056E688:
-	# ROM: 0x56A788
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail9WsdPlayerFv
@@ -1232,44 +1231,37 @@ lbl_8056E688:
 
 .global float_8066C908
 float_8066C908:
-	# ROM: 0x576768
 	.float 1.0
 
 
 .global float_8066C90C
 float_8066C90C:
-	# ROM: 0x57676C
-	.4byte 0
+	.float 0
 
 
 .global float_8066C910
 float_8066C910:
-	# ROM: 0x576770
-	.4byte 0x427C0000
+	.float 63 #0x427C0000
 
 
 .global float_8066C914
 float_8066C914:
-	# ROM: 0x576774
-	.4byte 0x3C800000
+	.float 0.015625 #0x3C800000
 
 
 .global float_8066C918
 float_8066C918:
-	# ROM: 0x576778
-	.4byte 0x42FE0000
+	.float 127 #0x42FE0000
 	.4byte 0
 
 
 .global double_8066C920
 double_8066C920:
-	# ROM: 0x576780
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global double_8066C928
 double_8066C928:
-	# ROM: 0x576788
 	.4byte 0x43300000
 	.4byte 0

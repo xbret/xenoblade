@@ -1441,7 +1441,6 @@ lbl_8056E8C8:
 
 .global lbl_8056E8FC
 lbl_8056E8FC:
-	# ROM: 0x56A9FC
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r2ut10PackedFontFv
@@ -1470,6 +1469,5 @@ lbl_8056E8FC:
 
 .global double_8066C938
 double_8066C938:
-	# ROM: 0x576798
 	.4byte 0x43300000
 	.4byte 0x80000000

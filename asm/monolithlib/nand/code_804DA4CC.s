@@ -660,19 +660,16 @@ __vt__CNRequest:
 
 .global lbl_80666480
 lbl_80666480:
-	# ROM: 0x572060
 	.4byte lbl_8066D9C8
 
 
 .global lbl_80666484
 lbl_80666484:
-	# ROM: 0x572064
 	.4byte lbl_8066D9C8
 
 
 .global lbl_80666488
 lbl_80666488:
-	# ROM: 0x572068
 	.4byte lbl_8066D9C8
 	.4byte 0
 

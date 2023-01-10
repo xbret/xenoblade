@@ -5895,7 +5895,6 @@ func_80163E78:
 
 .global lbl_80533668
 lbl_80533668:
-	# ROM: 0x52F768
 	.4byte switch_8015EF80
 	.4byte switch_8015EF94
 	.4byte switch_8015F024

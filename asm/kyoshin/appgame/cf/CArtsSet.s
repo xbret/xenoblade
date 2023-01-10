@@ -254,7 +254,6 @@ func_80153EF0:
 
 .global lbl_804FD1A8
 lbl_804FD1A8:
-	# ROM: 0x4F92A8
 	.float 6.5
 	.float 8.0
 	.float 10.0
@@ -265,7 +264,6 @@ lbl_804FD1A8:
 
 .global lbl_804FD1C0
 lbl_804FD1C0:
-	# ROM: 0x4F92C0
 	.4byte 0x40400000
 	.4byte 0x40800000
 	.4byte 0x40B00000
@@ -276,7 +274,6 @@ lbl_804FD1C0:
 
 .global lbl_804FD1D8
 lbl_804FD1D8:
-	# ROM: 0x4F92D8
 	.float 1.0
 	.4byte 0x3F99999A
 	.float 1.5
@@ -287,7 +284,6 @@ lbl_804FD1D8:
 
 .global lbl_804FD1F0
 lbl_804FD1F0:
-	# ROM: 0x4F92F0
 	.4byte 0
 	.4byte 0
 	.4byte 0x40400000
@@ -298,7 +294,6 @@ lbl_804FD1F0:
 
 .global lbl_804FD208
 lbl_804FD208:
-	# ROM: 0x4F9308
 	.4byte 0
 	.4byte 0
 	.4byte 0x00000100

@@ -604,7 +604,6 @@ GXClearGPMetric:
 
 .global lbl_8054C130
 lbl_8054C130:
-	# ROM: 0x548230
 	.4byte switch_8031EFB0
 	.4byte switch_8031EFCC
 	.4byte switch_8031EFE8
@@ -631,7 +630,6 @@ lbl_8054C130:
 
 .global lbl_8054C188
 lbl_8054C188:
-	# ROM: 0x548288
 	.4byte switch_8031EB8C
 	.4byte switch_8031EBAC
 	.4byte switch_8031EBCC

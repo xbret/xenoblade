@@ -509,7 +509,6 @@ GXSetNumTevStages:
 
 .global lbl_8054C098
 lbl_8054C098:
-	# ROM: 0x548198
 	.4byte 0xC008F8AF
 	.4byte 0xC008A89F
 	.4byte 0xC008AC8F
@@ -534,7 +533,6 @@ lbl_8054C098:
 
 .global lbl_8054C0E8
 lbl_8054C0E8:
-	# ROM: 0x5481E8
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0

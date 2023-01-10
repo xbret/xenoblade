@@ -351,6 +351,5 @@ __GXFlushTextureState:
 
 .global float_8066C048
 float_8066C048:
-	# ROM: 0x575EA8
-	.4byte 0x44800000
+	.float 1024 #0x44800000
 	.4byte 0

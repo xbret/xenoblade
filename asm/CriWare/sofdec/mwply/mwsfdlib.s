@@ -208,9 +208,9 @@ mwsflib_InitLibWork:
 /* 803A0F44 0036A504  90 1F 00 10 */	stw r0, 0x10(r31)
 /* 803A0F48 0036A508  48 00 00 20 */	b .L_803A0F68
 .L_803A0F4C:
-/* 803A0F4C 0036A50C  3C 60 80 52 */	lis r3, float_8051E404@ha
+/* 803A0F4C 0036A50C  3C 60 80 52 */	lis r3, lbl_8051E404@ha
 /* 803A0F50 0036A510  38 00 00 01 */	li r0, 1
-/* 803A0F54 0036A514  C0 03 E4 04 */	lfs f0, float_8051E404@l(r3)
+/* 803A0F54 0036A514  C0 03 E4 04 */	lfs f0, lbl_8051E404@l(r3)
 /* 803A0F58 0036A518  90 1F 00 08 */	stw r0, 8(r31)
 /* 803A0F5C 0036A51C  D0 1F 00 04 */	stfs f0, 4(r31)
 /* 803A0F60 0036A520  90 1F 00 0C */	stw r0, 0xc(r31)
@@ -627,10 +627,9 @@ lbl_8051E3F0:
 	.4byte 0x447A0000
 
 
-.global float_8051E404
-float_8051E404:
-	# ROM: 0x51A504
-	.4byte 0x426FC28F
+.global lbl_8051E404
+lbl_8051E404:
+	.float 59.94 #0x426FC28F
 
 
 .global lbl_8051E408

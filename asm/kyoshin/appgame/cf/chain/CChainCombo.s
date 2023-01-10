@@ -530,7 +530,6 @@ cf_CChainCombo_typestr:
 
 .global lbl_8053C140
 lbl_8053C140:
-	# ROM: 0x538240
 	.4byte 0x00000708
 	.4byte 0x000004B0
 	.4byte 0x00000258
@@ -554,7 +553,6 @@ __RTTI__cf_CChainCombo:
 
 .global double_8066B440
 double_8066B440:
-	# ROM: 0x5752A0
 	.4byte 0x43300000
 	.4byte 0x80000000
 

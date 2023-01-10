@@ -1926,7 +1926,6 @@ GetTypeObj__Q34nw4r3g3d7ScnRootCFv:
 
 .global lbl_80521090
 lbl_80521090:
-	# ROM: 0x51D190
 	.4byte 0x00000008
 	.asciz "ScnLeaf"
 	.4byte 0
@@ -1934,14 +1933,12 @@ lbl_80521090:
 
 .global lbl_805210A0
 lbl_805210A0:
-	# ROM: 0x51D1A0
 	.4byte 0x00000009
 	.asciz "ScnGroup"
 	.balign 4
 
 .global lbl_805210B0
 lbl_805210B0:
-	# ROM: 0x51D1B0
 	.4byte 0x00000008
 	.asciz "ScnRoot"
 	.4byte 0
@@ -1950,7 +1947,6 @@ lbl_805210B0:
 
 .global lbl_8056CFA0
 lbl_8056CFA0:
-	# ROM: 0x5690A0
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3g3d12ScnObjGatherFv
@@ -1967,7 +1963,6 @@ lbl_8056CFA0:
 
 .global lbl_8056CFD0
 lbl_8056CFD0:
-	# ROM: 0x5690D0
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d7ScnRootCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1990,32 +1985,27 @@ lbl_8056CFD0:
 
 .global lbl_80665DB0
 lbl_80665DB0:
-	# ROM: 0x571990
 	.4byte 0x00000020
 
 
 .global lbl_80665DB4
 lbl_80665DB4:
-	# ROM: 0x571994
 	.4byte 0x00000020
 
 
 .global lbl_80665DB8
 lbl_80665DB8:
-	# ROM: 0x571998
 	.4byte 0xFFFFFFFC
 
 
 .global lbl_80665DBC
 lbl_80665DBC:
-	# ROM: 0x57199C
 	.4byte 0xFFFFFFFC
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .global float_8066C4E0
 float_8066C4E0:
-	# ROM: 0x576340
 	.float 0.5
 	.4byte 0
 

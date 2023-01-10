@@ -4807,7 +4807,6 @@ __RTTI__CTTask_CUIBattleManager:
 
 .global float_80669B90
 float_80669B90:
-	# ROM: 0x5739F0
 	.float 1.0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

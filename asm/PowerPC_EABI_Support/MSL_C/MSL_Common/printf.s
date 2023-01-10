@@ -2722,7 +2722,6 @@ sprintf:
 #the locale data might not belong here
 .global lbl_8053F398
 lbl_8053F398:
-	# ROM: 0x53B498
 	.4byte lbl_8066B858
 	.4byte lbl_8066B85C
 	.4byte lbl_8066B85C
@@ -2867,7 +2866,6 @@ _loc_tim_C:
 
 .global _current_locale
 _current_locale:
-	# ROM: 0x53B648
 	.4byte 0 #0x0
 	.asciz "C" #0x4
 	.2byte 0
@@ -2890,7 +2888,6 @@ _current_locale:
 
 .global lbl_8053F590
 lbl_8053F590:
-	# ROM: 0x53B690
 	.4byte switch_802BF070
 	.4byte switch_802BF1C0
 	.4byte switch_802BF1C0
@@ -3036,9 +3033,10 @@ lbl_8053F670:
 	.4byte switch_802C05E4 #x
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
+#needed to align MWRTTI.s
+.balign 8
 .global lbl_80665878
 lbl_80665878:
-	# ROM: 0x571458
 	.4byte 0
 	.4byte 0
 
@@ -4165,6 +4163,5 @@ lbl_8066B868:
 
 .global double_8066B870
 double_8066B870:
-	# ROM: 0x5756D0
 	.4byte 0
 	.4byte 0

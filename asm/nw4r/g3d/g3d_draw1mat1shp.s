@@ -959,27 +959,23 @@ lbl_80520FA8:
 
 .global float_8066C410
 float_8066C410:
-	# ROM: 0x576270
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066C418
 double_8066C418:
-	# ROM: 0x576278
 	.4byte 0x40100000
 	.4byte 0
 
 
 .global float_8066C420
 float_8066C420:
-	# ROM: 0x576280
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 	.4byte 0
 
 
 .global double_8066C428
 double_8066C428:
-	# ROM: 0x576288
 	.4byte 0x43300000
 	.4byte 0

@@ -1998,76 +1998,64 @@ __vt__cf_CfObjectPc:
 
 .global float_806693D0
 float_806693D0:
-	# ROM: 0x573230
-	.4byte 0x4200CCCD
+	.float 32.2 #0x4200CCCD
 
 
 .global float_806693D4
 float_806693D4:
-	# ROM: 0x573234
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 
 
 .global float_806693D8
 float_806693D8:
-	# ROM: 0x573238
-	.4byte 0x3FE66666
+	.float 1.8 #0x3FE66666
 
 
 .global float_806693DC
 float_806693DC:
-	# ROM: 0x57323C
-	.4byte 0
+	.float 0
 
 
 .global float_806693E0
 float_806693E0:
-	# ROM: 0x573240
-	.4byte 0x4200CCCD
+	.float 32.2 #0x4200CCCD
 
 
 .global float_806693E4
 float_806693E4:
-	# ROM: 0x573244
-	.4byte 0x3E1F0197
+	.float 0.155279502 #0x3E1F0197
 
 
 .global float_806693E8
 float_806693E8:
-	# ROM: 0x573248
-	.4byte 0x4180CCCD
+	.float 16.1 #0x4180CCCD
 
 
 .global float_806693EC
 float_806693EC:
-	# ROM: 0x57324C
 	.float 1.0
 
 
 .global float_806693F0
 float_806693F0:
-	# ROM: 0x573250
 	.float 100.0
 	.4byte 0
 
 
 .global double_806693F8
 double_806693F8:
-	# ROM: 0x573258
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80669400
 float_80669400:
-	# ROM: 0x573260
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 	.4byte 0
 
 
 .global double_80669408
 double_80669408:
-	# ROM: 0x573268
 	.4byte 0x43300000
 	.4byte 0
 

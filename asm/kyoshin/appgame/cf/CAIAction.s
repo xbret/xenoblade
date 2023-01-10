@@ -10308,7 +10308,6 @@ func_8015396C:
 
 .global lbl_804FD198
 lbl_804FD198:
-	# ROM: 0x4F9298
 	.byte 0x00
 	.asciz "arm_type"
 	.balign 4
@@ -10403,7 +10402,6 @@ lbl_80532310:
 
 .global lbl_80532450
 lbl_80532450:
-	# ROM: 0x52E550
 	.4byte switch_801505E4
 	.4byte switch_8014E260
 	.4byte switch_8014EBE8
@@ -10563,7 +10561,6 @@ lbl_805325BC:
 
 .global lbl_805326B0
 lbl_805326B0:
-	# ROM: 0x52E7B0
 	.4byte switch_80151C9C
 	.4byte switch_80150F70
 	.4byte switch_80151054
@@ -10747,7 +10744,6 @@ lbl_805326B0:
 
 .global lbl_8053297C
 lbl_8053297C:
-	# ROM: 0x52EA7C
 	.4byte switch_80150F1C
 	.4byte switch_80150C3C
 	.4byte switch_80150F1C
@@ -10787,7 +10783,6 @@ lbl_8053297C:
 
 .global lbl_80532A08
 lbl_80532A08:
-	# ROM: 0x52EB08
 	.4byte switch_80153760
 	.4byte switch_80152A78
 	.4byte switch_80152B50
@@ -10971,7 +10966,6 @@ lbl_80532A08:
 
 .global lbl_80532CD4
 lbl_80532CD4:
-	# ROM: 0x52EDD4
 	.4byte switch_80152900
 	.4byte switch_801524AC
 	.4byte switch_801525AC
@@ -11023,75 +11017,63 @@ __vt__cf_CAIAction:
 
 .global float_80669CE8
 float_80669CE8:
-	# ROM: 0x573B48
-	.4byte 0
+	.float 0
 
 
 .global float_80669CEC
 float_80669CEC:
-	# ROM: 0x573B4C
-	.4byte 0xC1700000
+	.float -15 #0xC1700000
 
 
 .global float_80669CF0
 float_80669CF0:
-	# ROM: 0x573B50
-	.4byte 0xC0400000
+	.float -3 #0xC0400000
 
 
 .global float_80669CF4
 float_80669CF4:
-	# ROM: 0x573B54
 	.float 10.0
 
 
 .global double_80669CF8
 double_80669CF8:
-	# ROM: 0x573B58
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_80669D00
 double_80669D00:
-	# ROM: 0x573B60
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_80669D08
 float_80669D08:
-	# ROM: 0x573B68
-	.4byte 0xC1200000
+	.float -10 #0xC1200000
 
 
 .global float_80669D0C
 float_80669D0C:
-	# ROM: 0x573B6C
-	.4byte 0x3CC90FDB
+	.float 0.0245436933 #0x3CC90FDB
 
 
 .global float_80669D10
 float_80669D10:
-	# ROM: 0x573B70
 	.float 0.5
 
 
 .global float_80669D14
 float_80669D14:
-	# ROM: 0x573B74
 	.float 1.0
 
 
 .global float_80669D18
 float_80669D18:
-	# ROM: 0x573B78
 	.float -1.0
 
 
 .global float_80669D1C
 float_80669D1C:
-	# ROM: 0x573B7C
 	.float 0.2
 
 

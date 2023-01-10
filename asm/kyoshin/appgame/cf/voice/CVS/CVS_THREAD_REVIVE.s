@@ -401,7 +401,6 @@ cf_CVS_THREAD_REVIVE_typestr:
 
 .global lbl_8053D428
 lbl_8053D428:
-	# ROM: 0x539528
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A87D4

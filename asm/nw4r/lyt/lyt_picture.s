@@ -474,7 +474,6 @@ sinit_804012B0:
 
 .global lbl_8056D298
 lbl_8056D298:
-	# ROM: 0x569398
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt7PictureFv
@@ -510,8 +509,7 @@ lbl_8056D298:
 
 .global float_8066C560
 float_8066C560:
-	# ROM: 0x5763C0
-	.4byte 0
+	.float 0
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

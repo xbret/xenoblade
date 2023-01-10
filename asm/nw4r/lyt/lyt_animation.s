@@ -1610,7 +1610,6 @@ UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13Anima
 
 .global lbl_8056D558
 lbl_8056D558:
-	# ROM: 0x569658
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt18AnimTransformBasicFv
@@ -1626,47 +1625,39 @@ lbl_8056D558:
 
 .global float_8066C5D8
 float_8066C5D8:
-	# ROM: 0x576438
-	.4byte 0xBA83126F
+	.float -0.001 #0xBA83126F
 
 
 .global float_8066C5DC
 float_8066C5DC:
-	# ROM: 0x57643C
-	.4byte 0x3A83126F
+	.float 0.001 #0x3A83126F
 
 
 .global float_8066C5E0
 float_8066C5E0:
-	# ROM: 0x576440
 	.float 1.0
 
 
 .global float_8066C5E4
 float_8066C5E4:
-	# ROM: 0x576444
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066C5E8
 float_8066C5E8:
-	# ROM: 0x576448
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_8066C5EC
 float_8066C5EC:
-	# ROM: 0x57644C
-	.4byte 0xC0000000
+	.float -2 #0xC0000000
 
 
 .global float_8066C5F0
 float_8066C5F0:
-	# ROM: 0x576450
-	.4byte 0
+	.float 0
 
 
 .global float_8066C5F4
 float_8066C5F4:
-	# ROM: 0x576454
 	.float 0.5

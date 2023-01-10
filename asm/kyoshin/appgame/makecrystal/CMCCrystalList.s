@@ -1623,7 +1623,6 @@ lbl_805049D0:
 
 .global lbl_80539710
 lbl_80539710:
-	# ROM: 0x535810
 	.4byte switch_80222938
 	.4byte switch_802228FC
 	.4byte switch_80222904
@@ -1692,19 +1691,16 @@ __RTTI__CMCCrystalList:
 
 .global float_8066AE00
 float_8066AE00:
-	# ROM: 0x574C60
-	.4byte 0
+	.float 0
 
 
 .global float_8066AE04
 float_8066AE04:
-	# ROM: 0x574C64
 	.float 1.0
 
 
 .global double_8066AE08
 double_8066AE08:
-	# ROM: 0x574C68
 	.4byte 0x43300000
 	.4byte 0
 

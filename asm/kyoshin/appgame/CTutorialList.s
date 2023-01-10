@@ -1676,31 +1676,26 @@ __RTTI__CTutorialList:
 
 .global float_8066B680
 float_8066B680:
-	# ROM: 0x5754E0
-	.4byte 0x43100000
+	.float 144 #0x43100000
 
 
 .global float_8066B684
 float_8066B684:
-	# ROM: 0x5754E4
-	.4byte 0x42D80000
+	.float 108 #0x42D80000
 
 
 .global float_8066B688
 float_8066B688:
-	# ROM: 0x5754E8
-	.4byte 0
+	.float 0
 
 
 .global float_8066B68C
 float_8066B68C:
-	# ROM: 0x5754EC
 	.float 1.0
 
 
 .global double_8066B690
 double_8066B690:
-	# ROM: 0x5754F0
 	.4byte 0x43300000
 	.4byte 0
 

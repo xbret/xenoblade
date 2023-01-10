@@ -14326,7 +14326,6 @@ func_801E0260:
 
 .global lbl_80501B1C
 lbl_80501B1C:
-	# ROM: 0x4FDC1C
 	.4byte lbl_8066A8C8
 	.4byte lbl_80501AF4
 	.4byte lbl_80501AE8
@@ -14338,7 +14337,6 @@ lbl_80501B1C:
 
 .global lbl_80501B38
 lbl_80501B38:
-	# ROM: 0x4FDC38
 	.4byte 0x00000002
 	.4byte 0x00000004
 	.4byte 0x00000005
@@ -14349,7 +14347,6 @@ lbl_80501B38:
 
 .global lbl_80501B50
 lbl_80501B50:
-	# ROM: 0x4FDC50
 	.4byte lbl_8066A8C8
 	.4byte lbl_80501AF4
 	.4byte lbl_80501AE8
@@ -14549,7 +14546,6 @@ lbl_80501B8C:
 
 .global lbl_80538220
 lbl_80538220:
-	# ROM: 0x534320
 	.4byte switch_801D655C
 	.4byte switch_801D6574
 	.4byte switch_801D658C
@@ -14570,171 +14566,143 @@ lbl_8066A8C8:
 
 .global float_8066A8CC
 float_8066A8CC:
-	# ROM: 0x57472C
-	.4byte 0
+	.float 0
 
 
 .global float_8066A8D0
 float_8066A8D0:
-	# ROM: 0x574730
 	.float 1.0
 
 
 .global float_8066A8D4
 float_8066A8D4:
-	# ROM: 0x574734
 	.float 10.0
 
 
 .global float_8066A8D8
 float_8066A8D8:
-	# ROM: 0x574738
-	.4byte 0x3FB33333
+	.float 1.4 #0x3FB33333
 
 
 .global float_8066A8DC
 float_8066A8DC:
-	# ROM: 0x57473C
 	.float 1.5
 
 
 .global double_8066A8E0
 double_8066A8E0:
-	# ROM: 0x574740
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_8066A8E8
 double_8066A8E8:
-	# ROM: 0x574748
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global lbl_8066A8F0
 lbl_8066A8F0:
-	# ROM: 0x574750
 	.4byte 0x02040506
 
 
 .global lbl_8066A8F4
 lbl_8066A8F4:
-	# ROM: 0x574754
 	.4byte 0x07080000
 
 
 .global lbl_8066A8F8
 lbl_8066A8F8:
-	# ROM: 0x574758
 	.4byte 0x04050607
 
 
 .global lbl_8066A8FC
 lbl_8066A8FC:
-	# ROM: 0x57475C
 	.4byte 0x08000000
 
 
 .global float_8066A900
 float_8066A900:
-	# ROM: 0x574760
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 
 
 .global float_8066A904
 float_8066A904:
-	# ROM: 0x574764
 	.float 100.0
 
 
 .global float_8066A908
 float_8066A908:
-	# ROM: 0x574768
 	.float 0.5
 
 
 .global lbl_8066A90C
 lbl_8066A90C:
-	# ROM: 0x57476C
 	.4byte 0x02040506
 
 
 .global lbl_8066A910
 lbl_8066A910:
-	# ROM: 0x574770
 	.4byte 0x07080000
 
 
 .global lbl_8066A914
 lbl_8066A914:
-	# ROM: 0x574774
 	.4byte 0x02040506
 
 
 .global lbl_8066A918
 lbl_8066A918:
-	# ROM: 0x574778
 	.4byte 0x07080000
 
 
 .global lbl_8066A91C
 lbl_8066A91C:
-	# ROM: 0x57477C
 	.4byte 0x02040506
 
 
 .global lbl_8066A920
 lbl_8066A920:
-	# ROM: 0x574780
 	.4byte 0x07080000
 
 
 .global lbl_8066A924
 lbl_8066A924:
-	# ROM: 0x574784
 	.4byte 0x02040506
 
 
 .global lbl_8066A928
 lbl_8066A928:
-	# ROM: 0x574788
 	.4byte 0x07080000
 
 
 .global lbl_8066A92C
 lbl_8066A92C:
-	# ROM: 0x57478C
 	.4byte 0x04050607
 
 
 .global lbl_8066A930
 lbl_8066A930:
-	# ROM: 0x574790
 	.4byte 0x08000000
 
 
 .global lbl_8066A934
 lbl_8066A934:
-	# ROM: 0x574794
 	.4byte 0x02040506
 
 
 .global lbl_8066A938
 lbl_8066A938:
-	# ROM: 0x574798
 	.4byte 0x07080000
 
 
 .global lbl_8066A93C
 lbl_8066A93C:
-	# ROM: 0x57479C
 	.4byte 0x02040506
 
 
 .global lbl_8066A940
 lbl_8066A940:
-	# ROM: 0x5747A0
 	.4byte 0x07080000
 	.4byte 0
 

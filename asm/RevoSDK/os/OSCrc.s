@@ -91,7 +91,6 @@ NETCalcCRC16:
 
 .global lbl_80518D10
 lbl_80518D10:
-	# ROM: 0x514E10
 	.4byte 0x0000CC01
 	.4byte 0xD8011400
 	.4byte 0xF0013C00

@@ -6688,7 +6688,6 @@ __RTTI__CPcKizunaCur:
 
 .global lbl_80665278
 lbl_80665278:
-	# ROM: 0x570E58
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
@@ -6696,150 +6695,126 @@ lbl_80665278:
 
 .global float_8066B128
 float_8066B128:
-	# ROM: 0x574F88
-	.4byte 0x3F47AE14
+	.float 0.78 #0x3F47AE14
 
 
 .global float_8066B12C
 float_8066B12C:
-	# ROM: 0x574F8C
 	.float 1.0
 
 
 .global float_8066B130
 float_8066B130:
-	# ROM: 0x574F90
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global lbl_8066B138
 lbl_8066B138:
-	# ROM: 0x574F98
 	.4byte 0x00010706
 
 
 .global lbl_8066B13C
 lbl_8066B13C:
-	# ROM: 0x574F9C
 	.4byte 0x03040205
 
 
 .global float_8066B140
 float_8066B140:
-	# ROM: 0x574FA0
-	.4byte 0x41880000
+	.float 17 #0x41880000
 
 
 .global float_8066B144
 float_8066B144:
-	# ROM: 0x574FA4
-	.4byte 0x41100000
+	.float 9 #0x41100000
 
 
 .global lbl_8066B148
 lbl_8066B148:
-	# ROM: 0x574FA8
 	.4byte 0x00010403
 
 
 .global lbl_8066B14C
 lbl_8066B14C:
-	# ROM: 0x574FAC
 	.4byte 0x06070205
 
 
 .global lbl_8066B150
 lbl_8066B150:
-	# ROM: 0x574FB0
 	.4byte 0x00010706
 
 
 .global lbl_8066B154
 lbl_8066B154:
-	# ROM: 0x574FB4
 	.4byte 0x03040205
 
 
 .global lbl_8066B158
 lbl_8066B158:
-	# ROM: 0x574FB8
 	.4byte 0x76616C3F
 
 
 .global lbl_8066B15C
 lbl_8066B15C:
-	# ROM: 0x574FBC
 	.4byte 0
 
 
 .global double_8066B160
 double_8066B160:
-	# ROM: 0x574FC0
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066B168
 float_8066B168:
-	# ROM: 0x574FC8
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global float_8066B170
 float_8066B170:
-	# ROM: 0x574FD0
-	.4byte 0x42180000
+	.float 38 #0x42180000
 	.4byte 0
 
 
 .global double_8066B178
 double_8066B178:
-	# ROM: 0x574FD8
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066B180
 float_8066B180:
-	# ROM: 0x574FE0
-	.4byte 0
+	.float 0
 
 
 .global float_8066B184
 float_8066B184:
-	# ROM: 0x574FE4
-	.4byte 0xCB800000
+	.float -16777216 #0xCB800000
 
 
 .global float_8066B188
 float_8066B188:
-	# ROM: 0x574FE8
 	.float 1.0
 
 
 .global float_8066B18C
 float_8066B18C:
-	# ROM: 0x574FEC
-	.4byte 0x3FA2067B
+	.float 1.26582277 #0x3FA2067B
 
 
 .global float_8066B190
 float_8066B190:
-	# ROM: 0x574FF0
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_8066B194
 float_8066B194:
-	# ROM: 0x574FF4
 	.float -1.0
 
 
 .global double_8066B198
 double_8066B198:
-	# ROM: 0x574FF8
 	.4byte 0x43300000
 	.4byte 0
 

@@ -108,13 +108,11 @@ GetAnmResult__Q34nw4r3g3d9ResAnmFogCFPQ34nw4r3g3d12FogAnmResultf:
 
 .global float_8066C330
 float_8066C330:
-	# ROM: 0x576190
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066C338
 double_8066C338:
-	# ROM: 0x576198
 	.4byte 0x43300000
 	.4byte 0

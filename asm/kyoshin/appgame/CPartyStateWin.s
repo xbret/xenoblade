@@ -3065,7 +3065,6 @@ lbl_805033EC:
 
 .global lbl_80538A40
 lbl_80538A40:
-	# ROM: 0x534B40
 	.4byte switch_801FA370
 	.4byte switch_801FA378
 	.4byte switch_801FA380
@@ -3153,25 +3152,21 @@ __RTTI__CPartyStateWin:
 
 .global float_8066AA98
 float_8066AA98:
-	# ROM: 0x5748F8
-	.4byte 0
+	.float 0
 
 
 .global float_8066AA9C
 float_8066AA9C:
-	# ROM: 0x5748FC
 	.float 1.0
 
 
 .global float_8066AAA0
 float_8066AAA0:
-	# ROM: 0x574900
 	.float 10.0
 
 
 .global lbl_8066AAA4
 lbl_8066AAA4:
-	# ROM: 0x574904
 	.4byte 0x10121113
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

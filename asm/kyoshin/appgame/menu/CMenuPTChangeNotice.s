@@ -995,7 +995,6 @@ CMenuPTChangeNotice_hierarchy:
 
 .global lbl_806653F0
 lbl_806653F0:
-	# ROM: 0x570FD0
 	.4byte lbl_8050B228
 	.4byte 0
 
@@ -1008,26 +1007,22 @@ __RTTI__CMenuPTChangeNotice:
 
 .global float_8066B428
 float_8066B428:
-	# ROM: 0x575288
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_8066B42C
 float_8066B42C:
-	# ROM: 0x57528C
-	.4byte 0
+	.float 0
 
 
 .global double_8066B430
 double_8066B430:
-	# ROM: 0x575290
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066B438
 float_8066B438:
-	# ROM: 0x575298
 	.float 1.0
 	.4byte 0
 

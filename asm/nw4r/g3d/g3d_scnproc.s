@@ -230,7 +230,6 @@ __dt__Q34nw4r3g3d7ScnProcFv:
 
 .global lbl_80521100
 lbl_80521100:
-	# ROM: 0x51D200
 	.4byte 0x00000008
 	.asciz "ScnProc"
 	.4byte 0
@@ -239,7 +238,6 @@ lbl_80521100:
 
 .global lbl_8056D150
 lbl_8056D150:
-	# ROM: 0x569250
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d7ScnProcCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -259,6 +257,5 @@ lbl_8056D150:
 
 .global float_8066C4F0
 float_8066C4F0:
-	# ROM: 0x576350
 	.float 1.0
 	.4byte 0

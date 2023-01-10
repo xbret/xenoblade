@@ -1770,7 +1770,6 @@ IdctColumn_1111_1:
 
 .global lbl_8051F928
 lbl_8051F928:
-	# ROM: 0x51BA28
 	.4byte 0x800100FF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF

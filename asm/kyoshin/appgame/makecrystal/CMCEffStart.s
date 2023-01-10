@@ -487,27 +487,23 @@ __RTTI__CMCEffStart:
 
 .global float_8066AE10
 float_8066AE10:
-	# ROM: 0x574C70
-	.4byte 0
+	.float 0
 
 
 .global float_8066AE14
 float_8066AE14:
-	# ROM: 0x574C74
 	.float 1.0
 
 
 .global double_8066AE18
 double_8066AE18:
-	# ROM: 0x574C78
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066AE20
 float_8066AE20:
-	# ROM: 0x574C80
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 	.4byte 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

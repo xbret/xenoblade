@@ -2447,7 +2447,6 @@ lbl_804FB4E4:
 
 .global lbl_80531740
 lbl_80531740:
-	# ROM: 0x52D840
 	.4byte lbl_80669B30
 	.4byte lbl_80669B38
 	.4byte lbl_80669B30
@@ -2456,7 +2455,6 @@ lbl_80531740:
 
 .global lbl_80531750
 lbl_80531750:
-	# ROM: 0x52D850
 	.4byte switch_8012BF50
 	.4byte switch_8012BE94
 	.4byte switch_8012BEB8
@@ -2561,122 +2559,102 @@ lbl_80669B38:
 
 .global float_80669B40
 float_80669B40:
-	# ROM: 0x5739A0
-	.4byte 0x42180000
+	.float 38 #0x42180000
 
 
 .global float_80669B44
 float_80669B44:
-	# ROM: 0x5739A4
 	.float -1.0
 
 
 .global float_80669B48
 float_80669B48:
-	# ROM: 0x5739A8
-	.4byte 0
+	.float 0
 
 
 .global float_80669B4C
 float_80669B4C:
-	# ROM: 0x5739AC
 	.float 1.0
 
 
 .global float_80669B50
 float_80669B50:
-	# ROM: 0x5739B0
-	.4byte 0x43A00000
+	.float 320 #0x43A00000
 
 
 .global float_80669B54
 float_80669B54:
-	# ROM: 0x5739B4
-	.4byte 0x43600000
+	.float 224 #0x43600000
 
 
 .global float_80669B58
 float_80669B58:
-	# ROM: 0x5739B8
 	.float 0.5
 
 
 .global float_80669B5C
 float_80669B5C:
-	# ROM: 0x5739BC
-	.4byte 0x41A00000
+	.float 20 #0x41A00000
 
 
 .global float_80669B60
 float_80669B60:
-	# ROM: 0x5739C0
-	.4byte 0xC3A00000
+	.float -320 #0xC3A00000
 
 
 .global float_80669B64
 float_80669B64:
-	# ROM: 0x5739C4
-	.4byte 0xC3600000
+	.float -224 #0xC3600000
 
 
 .global float_80669B68
 float_80669B68:
-	# ROM: 0x5739C8
-	.4byte 0x42480000
+	.float 50 #0x42480000
 
 
 .global float_80669B6C
 float_80669B6C:
-	# ROM: 0x5739CC
-	.4byte 0xC3480000
+	.float -200 #0xC3480000
 
 
 .global float_80669B70
 float_80669B70:
-	# ROM: 0x5739D0
-	.4byte 0x43480000
+	.float 200 #0x43480000
 
 
 .global float_80669B74
 float_80669B74:
-	# ROM: 0x5739D4
-	.4byte 0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
 
 
 .global float_80669B78
 float_80669B78:
-	# ROM: 0x5739D8
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_80669B7C
 float_80669B7C:
-	# ROM: 0x5739DC
-	.4byte 0x421C0000
+	.float 39 #0x421C0000
 
 
 .global float_80669B80
 float_80669B80:
-	# ROM: 0x5739E0
-	.4byte 0x41900000
+	.float 18 #0x41900000
 
 
 .global float_80669B84
 float_80669B84:
-	# ROM: 0x5739E4
-	.4byte 0x42100000
+	.float 36 #0x42100000
 
 
 .global float_80669B88
 float_80669B88:
-	# ROM: 0x5739E8
-	.4byte 0x43700000
+	.float 240 #0x43700000
 
 
 .global float_80669B8C
 float_80669B8C:
-	# ROM: 0x5739EC
-	.4byte 0xC3700000
+	.float -240 #0xC3700000
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

@@ -71,12 +71,10 @@ lbl_8051CD48:
 
 .global lbl_8051CD84
 lbl_8051CD84:
-	# ROM: 0x518E84
 	.4byte lbl_8051CD48
 
 
 .global lbl_8051CD88
 lbl_8051CD88:
-	# ROM: 0x518E88
 	.4byte 0x4D465300
 	.4byte 0x47434400

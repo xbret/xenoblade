@@ -975,7 +975,6 @@ lbl_8054C7E8:
 
 .global lbl_8054C808
 lbl_8054C808:
-	# ROM: 0x548908
 	.4byte lbl_8054C528
 	.4byte lbl_8054C540
 	.4byte lbl_8054C558

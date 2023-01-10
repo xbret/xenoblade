@@ -328,8 +328,7 @@ __RTTI__cf_CREvtMem:
 
 .global float_80669F10
 float_80669F10:
-	# ROM: 0x573D70
-	.4byte 0
+	.float 0
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

@@ -768,11 +768,9 @@ lbl_80665DA0:
 
 .global float_8066C440
 float_8066C440:
-	# ROM: 0x5762A0
 	.float 1.0
 
 
 .global float_8066C444
 float_8066C444:
-	# ROM: 0x5762A4
 	.4byte 0

@@ -4225,7 +4225,6 @@ __dt__Q54nw4r3g3d8G3DState23_unnamed_g3d_state_cpp_10LightStateFv:
 
 .global lbl_80520F78
 lbl_80520F78:
-	# ROM: 0x51D078
 	.float 0.5
 	.4byte 0
 	.4byte 0
@@ -4244,7 +4243,6 @@ lbl_80520F78:
 
 .global lbl_8056CEB0
 lbl_8056CEB0:
-	# ROM: 0x568FB0
 	.4byte 0
 	.4byte 0
 	.4byte __cl__Q44nw4r3g3d8G3DState11IndMtxOpStdFPQ44nw4r3g3d8G3DState13IndTexMtxInfo
@@ -4256,13 +4254,11 @@ lbl_8056CEB0:
 
 .global lbl_80665D98
 lbl_80665D98:
-	# ROM: 0x571978
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_80665D9C
 lbl_80665D9C:
-	# ROM: 0x57197C
 	.4byte lbl_80622C40
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -4270,50 +4266,42 @@ lbl_80665D9C:
 
 .global lbl_8066C3E8
 lbl_8066C3E8:
-	# ROM: 0x576248
 	.4byte 0x00020103
 
 
 .global float_8066C3EC
 float_8066C3EC:
-	# ROM: 0x57624C
-	.4byte 0
+	.float 0
 
 
 .global float_8066C3F0
 float_8066C3F0:
-	# ROM: 0x576250
 	.float -1.0
 
 
 .global float_8066C3F4
 float_8066C3F4:
-	# ROM: 0x576254
-	.4byte 0x358637BD
+	.float 0.000001 #0x358637BD
 
 
 .global float_8066C3F8
 float_8066C3F8:
-	# ROM: 0x576258
 	.float 1.0
 
 
 .global float_8066C3FC
 float_8066C3FC:
-	# ROM: 0x57625C
 	.float 0.5
 
 
 .global float_8066C400
 float_8066C400:
-	# ROM: 0x576260
-	.4byte 0x3B808081
+	.float 0.00392156886 #0x3B808081
 	.4byte 0
 
 
 .global double_8066C408
 double_8066C408:
-	# ROM: 0x576268
 	.4byte 0x43300000
 	.4byte 0x80000000
 

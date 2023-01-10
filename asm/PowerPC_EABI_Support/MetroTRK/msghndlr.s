@@ -1121,7 +1121,6 @@ TRKDoSetOption:
 
 .global lbl_8053FF40
 lbl_8053FF40:
-	# ROM: 0x53C040
 	.4byte switch_802CE000
 	.4byte switch_802CE020
 	.4byte switch_802CDFF8
@@ -1133,7 +1132,6 @@ lbl_8053FF40:
 
 .global lbl_8053FF5C
 lbl_8053FF5C:
-	# ROM: 0x53C05C
 	.4byte switch_802CE210
 	.4byte switch_802CE230
 	.4byte switch_802CE208

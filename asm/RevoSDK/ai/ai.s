@@ -421,7 +421,6 @@ __AI_SRC_INIT:
 
 .global lbl_806658A0
 lbl_806658A0:
-	# ROM: 0x571480
 	.4byte lbl_8053FFB8
 	.4byte 0
 

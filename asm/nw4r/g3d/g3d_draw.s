@@ -2163,31 +2163,26 @@ __sort132_RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_
 
 .global lbl_80665DA8
 lbl_80665DA8:
-	# ROM: 0x571988
 	.4byte 0xFFFFFFFC
 
 
 .global lbl_80665DAC
 lbl_80665DAC:
-	# ROM: 0x57198C
 	.4byte 0xFFFFFFFC
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .global float_8066C448
 float_8066C448:
-	# ROM: 0x5762A8
-	.4byte 0
+	.float 0
 
 
 .global float_8066C44C
 float_8066C44C:
-	# ROM: 0x5762AC
-	.4byte 0xC0000000
+	.float -2 #0xC0000000
 
 
 .global float_8066C450
 float_8066C450:
-	# ROM: 0x5762B0
 	.float 1.0
 	.4byte 0

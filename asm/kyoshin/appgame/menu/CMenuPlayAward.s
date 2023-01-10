@@ -1103,38 +1103,32 @@ __RTTI__CMenuPlayAward:
 
 .global float_8066B240
 float_8066B240:
-	# ROM: 0x5750A0
-	.4byte 0
+	.float 0
 
 
 .global float_8066B244
 float_8066B244:
-	# ROM: 0x5750A4
 	.float 1.0
 
 
 .global float_8066B248
 float_8066B248:
-	# ROM: 0x5750A8
 	.float 10.0
 	.4byte 0
 
 
 .global float_8066B250
 float_8066B250:
-	# ROM: 0x5750B0
-	.4byte 0
+	.float 0
 
 
 .global float_8066B254
 float_8066B254:
-	# ROM: 0x5750B4
 	.float 100.0
 
 
 .global double_8066B258
 double_8066B258:
-	# ROM: 0x5750B8
 	.4byte 0x43300000
 	.4byte 0
 

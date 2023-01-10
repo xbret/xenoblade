@@ -369,20 +369,17 @@ __RTTI__CSysWinSave:
 
 .global float_8066B448
 float_8066B448:
-	# ROM: 0x5752A8
-	.4byte 0
+	.float 0
 
 
 .global float_8066B44C
 float_8066B44C:
-	# ROM: 0x5752AC
 	.float 1.0
 
 
 .global float_8066B450
 float_8066B450:
-	# ROM: 0x5752B0
-	.4byte 0x40000000
+	.float 2 #0x40000000
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

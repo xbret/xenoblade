@@ -1821,7 +1821,6 @@ GetTypeObj__Q34nw4r3g3d6ScnObjCFv:
 
 .global lbl_80521080
 lbl_80521080:
-	# ROM: 0x51D180
 	.4byte 0x00000007
 	.asciz "ScnObj"
 	.balign 4
@@ -1831,7 +1830,6 @@ lbl_80521080:
 
 .global lbl_8056CED8
 lbl_8056CED8:
-	# ROM: 0x568FD8
 	.4byte switch_803F4800
 	.4byte switch_803F4698
 	.4byte switch_803F46C0
@@ -1846,7 +1844,6 @@ lbl_8056CED8:
 
 .global lbl_8056CF00
 lbl_8056CF00:
-	# ROM: 0x569000
 	.4byte switch_803F48D0
 	.4byte switch_803F4840
 	.4byte switch_803F4850
@@ -1861,7 +1858,6 @@ lbl_8056CF00:
 
 .global lbl_8056CF28
 lbl_8056CF28:
-	# ROM: 0x569028
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d8ScnGroupCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1882,7 +1878,6 @@ lbl_8056CF28:
 
 .global lbl_8056CF68
 lbl_8056CF68:
-	# ROM: 0x569068
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d6ScnObjCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1903,11 +1898,9 @@ lbl_8056CF68:
 
 .global float_8066C4D8
 float_8066C4D8:
-	# ROM: 0x576338
-	.4byte 0
+	.float 0
 
 
 .global float_8066C4DC
 float_8066C4DC:
-	# ROM: 0x57633C
 	.float 1.0

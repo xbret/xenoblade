@@ -710,7 +710,6 @@ GetTypeObj__Q34nw4r3g3d12ScnMdlExpandCFv:
 
 .global lbl_805210E8
 lbl_805210E8:
-	# ROM: 0x51D1E8
 	.4byte 0x0000000D
 	.asciz "ScnMdlExpand"
 	.balign 4
@@ -720,7 +719,6 @@ lbl_805210E8:
 
 .global __vt__g3d_scnmdlexpand
 __vt__g3d_scnmdlexpand:
-	# ROM: 0x5691C8
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d12ScnMdlExpandCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -742,6 +740,5 @@ __vt__g3d_scnmdlexpand:
 
 .global lbl_80665DD8
 lbl_80665DD8:
-	# ROM: 0x5719B8
 	.4byte 0xFFFFFFFF
 	.4byte 0

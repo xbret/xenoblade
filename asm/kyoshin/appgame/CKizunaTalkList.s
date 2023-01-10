@@ -1500,25 +1500,21 @@ __RTTI__CKizunaTalkList:
 
 .global float_8066B270
 float_8066B270:
-	# ROM: 0x5750D0
-	.4byte 0x436E0000
+	.float 238 #0x436E0000
 
 
 .global float_8066B274
 float_8066B274:
-	# ROM: 0x5750D4
-	.4byte 0x42EC0000
+	.float 118 #0x42EC0000
 
 
 .global float_8066B278
 float_8066B278:
-	# ROM: 0x5750D8
-	.4byte 0
+	.float 0
 
 
 .global float_8066B27C
 float_8066B27C:
-	# ROM: 0x5750DC
 	.float 1.0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

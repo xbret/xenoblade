@@ -753,26 +753,22 @@ __RTTI__CTTask_CTaskGamePic:
 
 .global float_8066B458
 float_8066B458:
-	# ROM: 0x5752B8
-	.4byte 0
+	.float 0
 
 
 .global float_8066B45C
 float_8066B45C:
-	# ROM: 0x5752BC
-	.4byte 0x3B800000
+	.float 0.00390625 #0x3B800000
 
 
 .global float_8066B460
 float_8066B460:
-	# ROM: 0x5752C0
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066B468
 double_8066B468:
-	# ROM: 0x5752C8
 	.4byte 0x43300000
 	.4byte 0x80000000
 

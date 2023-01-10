@@ -984,102 +984,85 @@ SelectAmbLightObj__Q34nw4r3g3d8LightSetFi:
 
 .global float_8066C500
 float_8066C500:
-	# ROM: 0x576360
-	.4byte 0
+	.float 0
 
 
 .global float_8066C504
 float_8066C504:
-	# ROM: 0x576364
 	.float 1.0
 
 
 .global float_8066C508
 float_8066C508:
-	# ROM: 0x576368
 	.float 0.5
 
 
 .global lbl_8066C50C
 lbl_8066C50C:
-	# ROM: 0x57636C
 	.byte 0xFF
 
 
 .global lbl_8066C50D
 lbl_8066C50D:
-	# ROM: 0x57636D
 	.byte 0xFF
 
 
 .global lbl_8066C50E
 lbl_8066C50E:
-	# ROM: 0x57636E
 	.byte 0xFF
 
 
 .global lbl_8066C50F
 lbl_8066C50F:
-	# ROM: 0x57636F
 	.byte 0xFF
 
 
 .global lbl_8066C510
 lbl_8066C510:
-	# ROM: 0x576370
 	.byte 0xFF
 
 
 .global lbl_8066C511
 lbl_8066C511:
-	# ROM: 0x576371
 	.byte 0xFF
 
 
 .global lbl_8066C512
 lbl_8066C512:
-	# ROM: 0x576372
 	.byte 0xFF
 
 
 .global lbl_8066C513
 lbl_8066C513:
-	# ROM: 0x576373
 	.byte 0xFF
 
 
 .global float_8066C514
 float_8066C514:
-	# ROM: 0x576374
-	.4byte 0x4A742400
+	.float 4000000 #0x4A742400
 
 
 .global float_8066C518
 float_8066C518:
-	# ROM: 0x576378
 	.float -1.0
 
 
 .global float_8066C51C
 float_8066C51C:
-	# ROM: 0x57637C
-	.4byte 0x42B40000
+	.float 90 #0x42B40000
 
 
 .global float_8066C520
 float_8066C520:
-	# ROM: 0x576380
 	.float 10.0
 
 
 .global float_8066C524
 float_8066C524:
-	# ROM: 0x576384
 	.float 8.0
 
 
 .global float_8066C528
 float_8066C528:
-	# ROM: 0x576388
 	.4byte 0xC0E00000
 	.4byte 0

@@ -800,7 +800,6 @@ lbl_8051F778:
 
 .global lbl_8051F7D0
 lbl_8051F7D0:
-	# ROM: 0x51B8D0
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000001

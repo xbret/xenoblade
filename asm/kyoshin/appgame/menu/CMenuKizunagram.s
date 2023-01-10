@@ -1247,7 +1247,6 @@ lbl_8050815C:
 
 .global lbl_8053AC38
 lbl_8053AC38:
-	# ROM: 0x536D38
 	.4byte switch_802570FC
 	.4byte switch_80257108
 	.4byte switch_80257114

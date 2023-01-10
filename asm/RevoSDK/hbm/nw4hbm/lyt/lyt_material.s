@@ -1565,12 +1565,12 @@ ReserveGXMem__Q36nw4hbm3lyt8MaterialFUcUcUcUcbUcUcbbbb:
 /* 8032FBFC 002F91BC  38 A6 FF F8 */	addi r5, r6, -8
 /* 8032FC00 002F91C0  40 81 00 E8 */	ble .L_8032FCE8
 /* 8032FC04 002F91C4  38 05 00 07 */	addi r0, r5, 7
-/* 8032FC08 002F91C8  3C 80 80 52 */	lis r4, float_80518A80@ha
-/* 8032FC0C 002F91CC  3C 60 80 52 */	lis r3, float_80518A84@ha
+/* 8032FC08 002F91C8  3C 80 80 52 */	lis r4, lbl_80518A80@ha
+/* 8032FC0C 002F91CC  3C 60 80 52 */	lis r3, lbl_80518A84@ha
 /* 8032FC10 002F91D0  7D 09 43 78 */	mr r9, r8
 /* 8032FC14 002F91D4  54 00 E8 FE */	srwi r0, r0, 3
-/* 8032FC18 002F91D8  C0 24 8A 80 */	lfs f1, float_80518A80@l(r4)
-/* 8032FC1C 002F91DC  C0 03 8A 84 */	lfs f0, float_80518A84@l(r3)
+/* 8032FC18 002F91D8  C0 24 8A 80 */	lfs f1, lbl_80518A80@l(r4)
+/* 8032FC1C 002F91DC  C0 03 8A 84 */	lfs f0, lbl_80518A84@l(r3)
 /* 8032FC20 002F91E0  7C 09 03 A6 */	mtctr r0
 /* 8032FC24 002F91E4  28 05 00 00 */	cmplwi r5, 0
 /* 8032FC28 002F91E8  40 81 00 C0 */	ble .L_8032FCE8
@@ -1624,11 +1624,11 @@ ReserveGXMem__Q36nw4hbm3lyt8MaterialFUcUcUcUcbUcUcbbbb:
 /* 8032FCE4 002F92A4  42 00 FF 48 */	bdnz .L_8032FC2C
 .L_8032FCE8:
 /* 8032FCE8 002F92A8  1C A7 00 14 */	mulli r5, r7, 0x14
-/* 8032FCEC 002F92AC  3C 80 80 52 */	lis r4, float_80518A80@ha
-/* 8032FCF0 002F92B0  3C 60 80 52 */	lis r3, float_80518A84@ha
-/* 8032FCF4 002F92B4  C0 24 8A 80 */	lfs f1, float_80518A80@l(r4)
+/* 8032FCEC 002F92AC  3C 80 80 52 */	lis r4, lbl_80518A80@ha
+/* 8032FCF0 002F92B0  3C 60 80 52 */	lis r3, lbl_80518A84@ha
+/* 8032FCF4 002F92B4  C0 24 8A 80 */	lfs f1, lbl_80518A80@l(r4)
 /* 8032FCF8 002F92B8  7C 07 30 50 */	subf r0, r7, r6
-/* 8032FCFC 002F92BC  C0 03 8A 84 */	lfs f0, float_80518A84@l(r3)
+/* 8032FCFC 002F92BC  C0 03 8A 84 */	lfs f0, lbl_80518A84@l(r3)
 /* 8032FD00 002F92C0  7C 68 2A 14 */	add r3, r8, r5
 /* 8032FD04 002F92C4  7C 09 03 A6 */	mtctr r0
 /* 8032FD08 002F92C8  7C 07 30 40 */	cmplw r7, r6
@@ -1678,12 +1678,12 @@ ReserveGXMem__Q36nw4hbm3lyt8MaterialFUcUcUcUcbUcUcbbbb:
 /* 8032FDB0 002F9370  38 E3 FF F8 */	addi r7, r3, -8
 /* 8032FDB4 002F9374  40 81 00 E8 */	ble .L_8032FE9C
 /* 8032FDB8 002F9378  38 07 00 07 */	addi r0, r7, 7
-/* 8032FDBC 002F937C  3C C0 80 52 */	lis r6, float_80518A80@ha
-/* 8032FDC0 002F9380  3C A0 80 52 */	lis r5, float_80518A84@ha
+/* 8032FDBC 002F937C  3C C0 80 52 */	lis r6, lbl_80518A80@ha
+/* 8032FDC0 002F9380  3C A0 80 52 */	lis r5, lbl_80518A84@ha
 /* 8032FDC4 002F9384  7D 09 43 78 */	mr r9, r8
 /* 8032FDC8 002F9388  54 00 E8 FE */	srwi r0, r0, 3
-/* 8032FDCC 002F938C  C0 26 8A 80 */	lfs f1, float_80518A80@l(r6)
-/* 8032FDD0 002F9390  C0 05 8A 84 */	lfs f0, float_80518A84@l(r5)
+/* 8032FDCC 002F938C  C0 26 8A 80 */	lfs f1, lbl_80518A80@l(r6)
+/* 8032FDD0 002F9390  C0 05 8A 84 */	lfs f0, lbl_80518A84@l(r5)
 /* 8032FDD4 002F9394  7C 09 03 A6 */	mtctr r0
 /* 8032FDD8 002F9398  28 07 00 00 */	cmplwi r7, 0
 /* 8032FDDC 002F939C  40 81 00 C0 */	ble .L_8032FE9C
@@ -1737,11 +1737,11 @@ ReserveGXMem__Q36nw4hbm3lyt8MaterialFUcUcUcUcbUcUcbbbb:
 /* 8032FE98 002F9458  42 00 FF 48 */	bdnz .L_8032FDE0
 .L_8032FE9C:
 /* 8032FE9C 002F945C  1C E4 00 14 */	mulli r7, r4, 0x14
-/* 8032FEA0 002F9460  3C C0 80 52 */	lis r6, float_80518A80@ha
-/* 8032FEA4 002F9464  3C A0 80 52 */	lis r5, float_80518A84@ha
-/* 8032FEA8 002F9468  C0 26 8A 80 */	lfs f1, float_80518A80@l(r6)
+/* 8032FEA0 002F9460  3C C0 80 52 */	lis r6, lbl_80518A80@ha
+/* 8032FEA4 002F9464  3C A0 80 52 */	lis r5, lbl_80518A84@ha
+/* 8032FEA8 002F9468  C0 26 8A 80 */	lfs f1, lbl_80518A80@l(r6)
 /* 8032FEAC 002F946C  7C 04 18 50 */	subf r0, r4, r3
-/* 8032FEB0 002F9470  C0 05 8A 84 */	lfs f0, float_80518A84@l(r5)
+/* 8032FEB0 002F9470  C0 05 8A 84 */	lfs f0, lbl_80518A84@l(r5)
 /* 8032FEB4 002F9474  7C A8 3A 14 */	add r5, r8, r7
 /* 8032FEB8 002F9478  7C 09 03 A6 */	mtctr r0
 /* 8032FEBC 002F947C  7C 04 18 40 */	cmplw r4, r3
@@ -3037,8 +3037,8 @@ SetupGX__Q36nw4hbm3lyt8MaterialFbUc:
 /* 80331170 002FA730  2C 1B 00 00 */	cmpwi r27, 0
 /* 80331174 002FA734  41 82 01 00 */	beq .L_80331274
 /* 80331178 002FA738  81 3A 00 4C */	lwz r9, 0x4c(r26)
-/* 8033117C 002FA73C  3C 60 80 52 */	lis r3, float_80518A7C@ha
-/* 80331180 002FA740  C3 C3 8A 7C */	lfs f30, float_80518A7C@l(r3)
+/* 8033117C 002FA73C  3C 60 80 52 */	lis r3, lbl_80518A7C@ha
+/* 80331180 002FA740  C3 C3 8A 7C */	lfs f30, lbl_80518A7C@l(r3)
 /* 80331184 002FA744  3B E1 00 2C */	addi r31, r1, 0x2c
 /* 80331188 002FA748  55 20 47 3E */	rlwinm r0, r9, 8, 0x1c, 0x1f
 /* 8033118C 002FA74C  55 28 E7 7A */	rlwinm r8, r9, 0x1c, 0x1d, 0x1d
@@ -3389,8 +3389,8 @@ GetTextureSize__Q36nw4hbm3lyt6detailFPQ36nw4hbm3lyt8MaterialUc:
 /* 80331658 002FAC18  54 00 27 3E */	srwi r0, r0, 0x1c
 /* 8033165C 002FAC1C  7C 05 00 40 */	cmplw r5, r0
 /* 80331660 002FAC20  41 80 00 18 */	blt .L_80331678
-/* 80331664 002FAC24  3C 80 80 52 */	lis r4, float_80518A80@ha
-/* 80331668 002FAC28  C0 04 8A 80 */	lfs f0, float_80518A80@l(r4)
+/* 80331664 002FAC24  3C 80 80 52 */	lis r4, lbl_80518A80@ha
+/* 80331668 002FAC28  C0 04 8A 80 */	lfs f0, lbl_80518A80@l(r4)
 /* 8033166C 002FAC2C  D0 03 00 00 */	stfs f0, 0(r3)
 /* 80331670 002FAC30  D0 03 00 04 */	stfs f0, 4(r3)
 /* 80331674 002FAC34  48 00 00 A8 */	b .L_8033171C
@@ -3453,7 +3453,6 @@ GetTextureSize__Q36nw4hbm3lyt6detailFPQ36nw4hbm3lyt8MaterialUc:
 
 .global lbl_80518A68
 lbl_80518A68:
-	# ROM: 0x514B68
 	.4byte 0
 	.4byte 0
 	.4byte 0x00FF00FF
@@ -3461,21 +3460,18 @@ lbl_80518A68:
 	.float 0.5
 
 
-.global float_80518A7C
-float_80518A7C:
-	# ROM: 0x514B7C
-	.4byte 0x3F360B61
+.global lbl_80518A7C
+lbl_80518A7C:
+	.float 0.7111111 #0x3F360B61
 
 
-.global float_80518A80
-float_80518A80:
-	# ROM: 0x514B80
+.global lbl_80518A80
+lbl_80518A80:
 	.4byte 0
 
 
-.global float_80518A84
-float_80518A84:
-	# ROM: 0x514B84
+.global lbl_80518A84
+lbl_80518A84:
 	.float 1.0
 	.4byte 0x40000000
 	.4byte 0
@@ -3483,7 +3479,6 @@ float_80518A84:
 
 .global double_80518A90
 double_80518A90:
-	# ROM: 0x514B90
 	.4byte 0x43300000
 	.4byte 0
 
@@ -3491,7 +3486,6 @@ double_80518A90:
 
 .global lbl_8054D848
 lbl_8054D848:
-	# ROM: 0x549948
 	.4byte 0x0000001F
 	.4byte 0x0000001B
 	.4byte 0x00000017
@@ -3504,7 +3498,6 @@ lbl_8054D848:
 
 .global lbl_8054D868
 lbl_8054D868:
-	# ROM: 0x549968
 	.4byte 0x0000001F
 	.4byte 0x0000001B
 	.4byte 0x00000017
@@ -3517,7 +3510,6 @@ lbl_8054D868:
 
 .global lbl_8054D888
 lbl_8054D888:
-	# ROM: 0x549988
 	.4byte lbl_8054D8C8
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt8MaterialFv

@@ -595,14 +595,12 @@ lbl_80665BB0:
 
 .global float_8066C1D8
 float_8066C1D8:
-	# ROM: 0x576038
-	.4byte 0x3F7EB852
+	.float 0.995 #0x3F7EB852
 	.4byte 0
 
 
 .global double_8066C1E0
 double_8066C1E0:
-	# ROM: 0x576040
 	.4byte 0x43300000
 	.4byte 0x80000000
 

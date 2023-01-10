@@ -1301,7 +1301,6 @@ lbl_8053C5D8:
 
 .global lbl_8053C5E8
 lbl_8053C5E8:
-	# ROM: 0x5386E8
 	.4byte lbl_8057A82C
 	.4byte lbl_8057A838
 	.4byte lbl_8057A844
@@ -1330,7 +1329,6 @@ lbl_8053C5E8:
 
 .global lbl_8053C648
 lbl_8053C648:
-	# ROM: 0x538748
 	.4byte 0x00000003
 	.4byte lbl_8053C4E0
 	.4byte 0x00000005
@@ -1725,14 +1723,12 @@ __RTTI__cf_CHelpManager:
 
 .global float_8066B470
 float_8066B470:
-	# ROM: 0x5752D0
 	.float 1.0
 
 
 .global float_8066B474
 float_8066B474:
-	# ROM: 0x5752D4
-	.4byte 0x43960000
+	.float 300 #0x43960000
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

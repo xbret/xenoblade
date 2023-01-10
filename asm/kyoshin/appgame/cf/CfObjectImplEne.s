@@ -1002,8 +1002,8 @@ func_800D0C2C:
 /* 800D0E34 0009A3F4  EC 00 08 3A */	fmadds f0, f0, f0, f1
 /* 800D0E38 0009A3F8  FC 03 00 00 */	fcmpu cr0, f3, f0
 /* 800D0E3C 0009A3FC  40 82 00 24 */	bne .L_800D0E60
-/* 800D0E40 0009A400  3C A0 80 66 */	lis r5, float_80659DB0@ha
-/* 800D0E44 0009A404  84 85 9D B0 */	lwzu r4, float_80659DB0@l(r5)
+/* 800D0E40 0009A400  3C A0 80 66 */	lis r5, lbl_80659DB0@ha
+/* 800D0E44 0009A404  84 85 9D B0 */	lwzu r4, lbl_80659DB0@l(r5)
 /* 800D0E48 0009A408  90 81 00 38 */	stw r4, 0x38(r1)
 /* 800D0E4C 0009A40C  80 65 00 04 */	lwz r3, 4(r5)
 /* 800D0E50 0009A410  80 05 00 08 */	lwz r0, 8(r5)
@@ -1299,7 +1299,6 @@ cf_CfObjectImplEne_hierarchy:
 
 .global lbl_80664640
 lbl_80664640:
-	# ROM: 0x570220
 	.4byte lbl_806695A0
 	.4byte 0
 
@@ -1318,38 +1317,32 @@ lbl_806695A0:
 
 .global float_806695A8
 float_806695A8:
-	# ROM: 0x573408
-	.4byte 0x3CA3D70A
+	.float 0.02 #0x3CA3D70A
 
 
 .global float_806695AC
 float_806695AC:
-	# ROM: 0x57340C
-	.4byte 0
+	.float 0
 
 
 .global float_806695B0
 float_806695B0:
-	# ROM: 0x573410
-	.4byte 0x41A00000
+	.float 20 #0x41A00000
 
 
 .global float_806695B4
 float_806695B4:
-	# ROM: 0x573414
 	.float 1.0
 
 
 .global float_806695B8
 float_806695B8:
-	# ROM: 0x573418
-	.4byte 0x3F051EB8
+	.float 0.52 #0x3F051EB8
 
 
 .global float_806695BC
 float_806695BC:
-	# ROM: 0x57341C
-	.4byte 0x3CC90FDB
+	.float 0.0245436933 #0x3CC90FDB
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

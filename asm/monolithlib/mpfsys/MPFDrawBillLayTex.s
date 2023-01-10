@@ -2095,14 +2095,14 @@ func_8047BDA0:
 func_8047BDA8:
 /* 8047BDA8 00445368  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8047BDAC 0044536C  7C 08 02 A6 */	mflr r0
-/* 8047BDB0 00445370  3C C0 80 66 */	lis r6, float_80659DB0@ha
+/* 8047BDB0 00445370  3C C0 80 66 */	lis r6, lbl_80659DB0@ha
 /* 8047BDB4 00445374  38 80 00 00 */	li r4, 0
 /* 8047BDB8 00445378  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8047BDBC 0044537C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8047BDC0 00445380  93 C1 00 08 */	stw r30, 8(r1)
 /* 8047BDC4 00445384  7C 7E 1B 78 */	mr r30, r3
 /* 8047BDC8 00445388  80 03 00 10 */	lwz r0, 0x10(r3)
-/* 8047BDCC 0044538C  84 A6 9D B0 */	lwzu r5, float_80659DB0@l(r6)
+/* 8047BDCC 0044538C  84 A6 9D B0 */	lwzu r5, lbl_80659DB0@l(r6)
 /* 8047BDD0 00445390  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 8047BDD4 00445394  80 06 00 04 */	lwz r0, 4(r6)
 /* 8047BDD8 00445398  90 03 00 04 */	stw r0, 4(r3)
@@ -2311,8 +2311,8 @@ func_8047C040:
 /* 8047C0A8 00445668  4B E3 E0 79 */	bl _savegpr_14
 /* 8047C0AC 0044566C  80 CD BF 90 */	lwz r6, lbl_80668110@sda21(r13)
 /* 8047C0B0 00445670  3F 80 80 66 */	lis r28, lbl_8065ADA0@ha
-/* 8047C0B4 00445674  3F 00 80 66 */	lis r24, float_8065ACC8@ha
-/* 8047C0B8 00445678  3E E0 80 66 */	lis r23, float_8065ACD4@ha
+/* 8047C0B4 00445674  3F 00 80 66 */	lis r24, lbl_8065ACC8@ha
+/* 8047C0B8 00445678  3E E0 80 66 */	lis r23, lbl_8065ACD4@ha
 /* 8047C0BC 0044567C  C3 E2 CC A4 */	lfs f31, float_8066D024@sda21(r2)
 /* 8047C0C0 00445680  7C 7E 1B 78 */	mr r30, r3
 /* 8047C0C4 00445684  C3 A6 2D FC */	lfs f29, 0x2dfc(r6)
@@ -2320,12 +2320,12 @@ func_8047C040:
 /* 8047C0CC 0044568C  C3 86 2E 00 */	lfs f28, 0x2e00(r6)
 /* 8047C0D0 00445690  3B 9C AD A0 */	addi r28, r28, lbl_8065ADA0@l
 /* 8047C0D4 00445694  C2 A2 CC A8 */	lfs f21, float_8066D028@sda21(r2)
-/* 8047C0D8 00445698  3B 18 AC C8 */	addi r24, r24, float_8065ACC8@l
+/* 8047C0D8 00445698  3B 18 AC C8 */	addi r24, r24, lbl_8065ACC8@l
 /* 8047C0DC 0044569C  C3 C2 CC A0 */	lfs f30, float_8066D020@sda21(r2)
 /* 8047C0E0 004456A0  3B 21 00 18 */	addi r25, r1, 0x18
 /* 8047C0E4 004456A4  90 A1 00 08 */	stw r5, 8(r1)
 /* 8047C0E8 004456A8  3A C1 00 0C */	addi r22, r1, 0xc
-/* 8047C0EC 004456AC  3A F7 AC D4 */	addi r23, r23, float_8065ACD4@l
+/* 8047C0EC 004456AC  3A F7 AC D4 */	addi r23, r23, lbl_8065ACD4@l
 /* 8047C0F0 004456B0  39 C0 00 00 */	li r14, 0
 /* 8047C0F4 004456B4  3F 40 80 53 */	lis r26, lbl_80529B54@ha
 /* 8047C0F8 004456B8  3F 60 80 53 */	lis r27, lbl_80529B30@ha
@@ -2776,12 +2776,12 @@ func_8047C588:
 /* 8047C784 00445D44  42 00 FF E4 */	bdnz .L_8047C768
 .L_8047C788:
 /* 8047C788 00445D48  48 00 03 01 */	bl func_8047CA88
-/* 8047C78C 00445D4C  3C A0 80 66 */	lis r5, float_8065ACC8@ha
-/* 8047C790 00445D50  3C C0 80 66 */	lis r6, float_8065ACD4@ha
+/* 8047C78C 00445D4C  3C A0 80 66 */	lis r5, lbl_8065ACC8@ha
+/* 8047C790 00445D50  3C C0 80 66 */	lis r6, lbl_8065ACD4@ha
 /* 8047C794 00445D54  80 9B 00 00 */	lwz r4, 0(r27)
-/* 8047C798 00445D58  38 A5 AC C8 */	addi r5, r5, float_8065ACC8@l
+/* 8047C798 00445D58  38 A5 AC C8 */	addi r5, r5, lbl_8065ACC8@l
 /* 8047C79C 00445D5C  C0 3D 00 10 */	lfs f1, 0x10(r29)
-/* 8047C7A0 00445D60  38 C6 AC D4 */	addi r6, r6, float_8065ACD4@l
+/* 8047C7A0 00445D60  38 C6 AC D4 */	addi r6, r6, lbl_8065ACD4@l
 /* 8047C7A4 00445D64  48 00 04 A9 */	bl func_8047CC4C
 /* 8047C7A8 00445D68  3F 40 80 66 */	lis r26, lbl_8065ADA0@ha
 /* 8047C7AC 00445D6C  83 DC 00 0C */	lwz r30, 0xc(r28)
@@ -2997,46 +2997,39 @@ sinit_8047CA2C:
 
 .global float_8066D008
 float_8066D008:
-	# ROM: 0x576E68
-	.4byte 0
+	.float 0
 
 
 .global float_8066D00C
 float_8066D00C:
-	# ROM: 0x576E6C
 	.float 1.0
 
 
 .global float_8066D010
 float_8066D010:
-	# ROM: 0x576E70
 	.float 0.5
 	.4byte 0
 
 
 .global float_8066D018
 float_8066D018:
-	# ROM: 0x576E78
-	.4byte 0x40800000
+	.float 4 #0x40800000
 	.4byte 0
 
 
 .global float_8066D020
 float_8066D020:
-	# ROM: 0x576E80
 	.float 1.0
 
 
 .global float_8066D024
 float_8066D024:
-	# ROM: 0x576E84
-	.4byte 0
+	.float 0
 
 
 .global float_8066D028
 float_8066D028:
-	# ROM: 0x576E88
-	.4byte 0x40400000
+	.float 3 #0x40400000
 	.4byte 0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

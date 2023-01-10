@@ -767,14 +767,12 @@ __RTTI__CMenuBattleEnd:
 
 .global float_8066B238
 float_8066B238:
-	# ROM: 0x575098
 	.float 1.0
 
 
 .global float_8066B23C
 float_8066B23C:
-	# ROM: 0x57509C
-	.4byte 0
+	.float 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

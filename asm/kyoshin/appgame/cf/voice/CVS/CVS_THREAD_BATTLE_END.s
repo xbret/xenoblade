@@ -440,7 +440,6 @@ cf_CVS_THREAD_BATTLE_END_typestr:
 
 .global lbl_8053D0E8
 lbl_8053D0E8:
-	# ROM: 0x5391E8
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A497C
@@ -466,7 +465,6 @@ lbl_8053D10C:
 
 .global lbl_8053D118
 lbl_8053D118:
-	# ROM: 0x539218
 	.4byte 0x00000B55
 	.4byte 0x00000B56
 	.4byte 0x00000B61
@@ -479,7 +477,6 @@ lbl_8053D118:
 
 .global lbl_8053D138
 lbl_8053D138:
-	# ROM: 0x539238
 	.4byte 0x00000B5B
 	.4byte 0x00000B5C
 	.4byte 0x00000B5F
@@ -506,14 +503,12 @@ cf_CVS_THREAD_BATTLE_END_hierarchy:
 
 .global lbl_806655C0
 lbl_806655C0:
-	# ROM: 0x5711A0
 	.4byte 0x00000B57
 	.4byte 0x00000B58
 
 
 .global lbl_806655C8
 lbl_806655C8:
-	# ROM: 0x5711A8
 	.4byte 0x00000B5D
 	.4byte 0x00000B5E
 

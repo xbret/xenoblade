@@ -2797,7 +2797,6 @@ lbl_8050B9C8:
 
 .global lbl_8053CAF0
 lbl_8053CAF0:
-	# ROM: 0x538BF0
 	.4byte 0x0089003C
 	.4byte 0
 	.4byte 0
@@ -2882,7 +2881,6 @@ lbl_8053CAF0:
 
 .global lbl_8053CC30
 lbl_8053CC30:
-	# ROM: 0x538D30
 	.4byte 0x10020202
 	.4byte 0x02020202
 	.4byte 0x02050505
@@ -2897,7 +2895,6 @@ lbl_8053CC30:
 
 .global lbl_8053CC58
 lbl_8053CC58:
-	# ROM: 0x538D58
 	.4byte switch_8029C574
 	.4byte switch_8029C538
 	.4byte switch_8029C540
@@ -2913,7 +2910,6 @@ lbl_8053CC58:
 
 .global lbl_8053CC84
 lbl_8053CC84:
-	# ROM: 0x538D84
 	.4byte switch_8029D654
 	.4byte switch_8029D6B4
 	.4byte switch_8029D6C4
@@ -2938,7 +2934,6 @@ lbl_8053CC84:
 
 .global lbl_8053CCD4
 lbl_8053CCD4:
-	# ROM: 0x538DD4
 	.4byte switch_8029D830
 	.4byte switch_8029D840
 	.4byte switch_8029D850
@@ -2963,7 +2958,6 @@ lbl_8053CCD4:
 
 .global lbl_8053CD24
 lbl_8053CD24:
-	# ROM: 0x538E24
 	.4byte switch_8029D9E0
 	.4byte switch_8029DA0C
 	.4byte switch_8029DA38
@@ -2988,7 +2982,6 @@ lbl_8053CD24:
 
 .global lbl_8053CD74
 lbl_8053CD74:
-	# ROM: 0x538E74
 	.4byte switch_8029DDBC
 	.4byte switch_8029DDE4
 	.4byte switch_8029DE10
@@ -3123,26 +3116,22 @@ __RTTI__CCur19:
 
 .global float_8066B4B8
 float_8066B4B8:
-	# ROM: 0x575318
 	.float 1.0
 
 
 .global float_8066B4BC
 float_8066B4BC:
-	# ROM: 0x57531C
-	.4byte 0x43300000
+	.float 176 #0x43300000
 
 
 .global float_8066B4C0
 float_8066B4C0:
-	# ROM: 0x575320
-	.4byte 0x43160000
+	.float 150 #0x43160000
 
 
 .global float_8066B4C4
 float_8066B4C4:
-	# ROM: 0x575324
-	.4byte 0
+	.float 0
 
 .global COption_typestr
 COption_typestr:

@@ -3443,7 +3443,6 @@ lbl_804FF2D8:
 
 .global lbl_80535BC8
 lbl_80535BC8:
-	# ROM: 0x531CC8
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80187778
@@ -3458,7 +3457,6 @@ lbl_80535BC8:
 
 .global lbl_80535BF0
 lbl_80535BF0:
-	# ROM: 0x531CF0
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80187A88
@@ -3553,31 +3551,26 @@ __RTTI__CMenuPTGauge:
 
 .global float_80664D88
 float_80664D88:
-	# ROM: 0x570968
 	.float 1.0
 
 
 .global float_80664D8C
 float_80664D8C:
-	# ROM: 0x57096C
 	.float 1.0
 
 
 .global float_80664D90
 float_80664D90:
-	# ROM: 0x570970
 	.float 1.0
 
 
 .global float_80664D94
 float_80664D94:
-	# ROM: 0x570974
 	.float 1.0
 
 
 .global float_80664D98
 float_80664D98:
-	# ROM: 0x570978
 	.float 0.2
 	.4byte 0
 
@@ -3585,82 +3578,69 @@ float_80664D98:
 
 .global float_8066A2A0
 float_8066A2A0:
-	# ROM: 0x574100
-	.4byte 0
+	.float 0
 
 
 .global float_8066A2A4
 float_8066A2A4:
-	# ROM: 0x574104
-	.4byte 0x43960000
+	.float 300 #0x43960000
 
 
 .global float_8066A2A8
 float_8066A2A8:
-	# ROM: 0x574108
-	.4byte 0x43000000
+	.float 128 #0x43000000
 
 
 .global float_8066A2AC
 float_8066A2AC:
-	# ROM: 0x57410C
 	.float 1.0
 
 
 .global double_8066A2B0
 double_8066A2B0:
-	# ROM: 0x574110
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066A2B8
 float_8066A2B8:
-	# ROM: 0x574118
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 
 .global float_8066A2BC
 float_8066A2BC:
-	# ROM: 0x57411C
 	.float 100.0
 
 
 .global float_8066A2C0
 float_8066A2C0:
-	# ROM: 0x574120
-	.4byte 0x43480000
+	.float 200 #0x43480000
 	.4byte 0
 
 
 .global float_8066A2C8
 float_8066A2C8:
-	# ROM: 0x574128
-	.4byte 0
+	.float 0
 
 
 .global float_8066A2CC
 float_8066A2CC:
-	# ROM: 0x57412C
 	.float 1.0
 
 
 .global float_8066A2D0
 float_8066A2D0:
-	# ROM: 0x574130
-	.4byte 0x3E99999A
+	.float 0.3 #0x3E99999A
 
 
 .global float_8066A2D4
 float_8066A2D4:
-	# ROM: 0x574134
-	.4byte 0xBE99999A
+	.float -0.3 #0xBE99999A
 
 
 .global float_8066A2D8
 float_8066A2D8:
-	# ROM: 0x574138
-	.4byte 0x3D8F5C29
+	.float 0.07 #0x3D8F5C29
 	.4byte 0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

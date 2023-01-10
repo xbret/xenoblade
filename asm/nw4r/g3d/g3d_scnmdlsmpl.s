@@ -2265,7 +2265,6 @@ GetTypeObj__Q34nw4r3g3d12ScnMdlSimpleCFv:
 
 .global lbl_805210C0
 lbl_805210C0:
-	# ROM: 0x51D1C0
 	.4byte 0x0000000D
 	.asciz "ScnMdlSimple"
 	.balign 4
@@ -2275,7 +2274,6 @@ lbl_805210C0:
 
 .global lbl_8056D010
 lbl_8056D010:
-	# ROM: 0x569110
 	.4byte switch_803F8690
 	.4byte switch_803F86E8
 	.4byte switch_803F8740
@@ -2293,7 +2291,6 @@ lbl_8056D02C:
 
 .global lbl_8056D038
 lbl_8056D038:
-	# ROM: 0x569138
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d12ScnMdlSimpleCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2334,6 +2331,5 @@ lbl_80665DD0:
 
 .global float_8066C4E8
 float_8066C4E8:
-	# ROM: 0x576348
 	.float 1.0
 	.4byte 0

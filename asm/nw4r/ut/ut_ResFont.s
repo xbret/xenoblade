@@ -233,7 +233,6 @@ Rebuild__Q34nw4r2ut7ResFontFPQ34nw4r2ut16BinaryFileHeader:
 
 .global lbl_8056E808
 lbl_8056E808:
-	# ROM: 0x56A908
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r2ut7ResFontFv

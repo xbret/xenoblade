@@ -5,10 +5,10 @@
 .balign 16, 0
 .global SinFIdx__Q26nw4hbm4mathFf
 SinFIdx__Q26nw4hbm4mathFf:
-/* 80336640 002FFC00  3C 60 80 52 */	lis r3, float_80518AF0@ha
+/* 80336640 002FFC00  3C 60 80 52 */	lis r3, lbl_80518AF0@ha
 /* 80336644 002FFC04  FC 40 0A 10 */	fabs f2, f1
 /* 80336648 002FFC08  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 8033664C 002FFC0C  C0 03 8A F0 */	lfs f0, float_80518AF0@l(r3)
+/* 8033664C 002FFC0C  C0 03 8A F0 */	lfs f0, lbl_80518AF0@l(r3)
 /* 80336650 002FFC10  48 00 00 0C */	b .L_8033665C
 /* 80336654 002FFC14  60 00 00 00 */	nop
 .L_80336658:
@@ -44,10 +44,10 @@ SinFIdx__Q26nw4hbm4mathFf:
 .balign 16, 0
 .global CosFIdx__Q26nw4hbm4mathFf
 CosFIdx__Q26nw4hbm4mathFf:
-/* 803366C0 002FFC80  3C 60 80 52 */	lis r3, float_80518AF0@ha
+/* 803366C0 002FFC80  3C 60 80 52 */	lis r3, lbl_80518AF0@ha
 /* 803366C4 002FFC84  FC 20 0A 10 */	fabs f1, f1
 /* 803366C8 002FFC88  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 803366CC 002FFC8C  C0 03 8A F0 */	lfs f0, float_80518AF0@l(r3)
+/* 803366CC 002FFC8C  C0 03 8A F0 */	lfs f0, lbl_80518AF0@l(r3)
 /* 803366D0 002FFC90  48 00 00 0C */	b .L_803366DC
 /* 803366D4 002FFC94  60 00 00 00 */	nop 
 .L_803366D8:
@@ -77,9 +77,9 @@ CosFIdx__Q26nw4hbm4mathFf:
 .balign 16, 0
 .global Atan2FIdx__Q26nw4hbm4mathFff
 Atan2FIdx__Q26nw4hbm4mathFff:
-/* 80336730 002FFCF0  3C 60 80 52 */	lis r3, float_80518AF0@ha
+/* 80336730 002FFCF0  3C 60 80 52 */	lis r3, lbl_80518AF0@ha
 /* 80336734 002FFCF4  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 80336738 002FFCF8  38 63 8A F0 */	addi r3, r3, float_80518AF0@l
+/* 80336738 002FFCF8  38 63 8A F0 */	addi r3, r3, lbl_80518AF0@l
 /* 8033673C 002FFCFC  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80336740 002FFD00  FC 00 10 00 */	fcmpu cr0, f0, f2
 /* 80336744 002FFD04  40 82 00 14 */	bne .L_80336758
@@ -204,15 +204,13 @@ Atan2FIdx__Q26nw4hbm4mathFff:
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
-.global float_80518AF0
-float_80518AF0:
-	# ROM: 0x514BF0
-	.4byte 0x47800000
+.global lbl_80518AF0
+lbl_80518AF0:
+	.float 65536 #0x47800000
 
 
 .global lbl_80518AF4
 lbl_80518AF4:
-	# ROM: 0x514BF4
 	.4byte 0
 	.float 1.0
 	.4byte 0x42000000
@@ -228,7 +226,6 @@ lbl_80518AF4:
 
 .global lbl_8054DB88
 lbl_8054DB88:
-	# ROM: 0x549C88
 	.4byte 0
 	.float 1.0
 	.4byte 0x3CC90A35
@@ -1261,7 +1258,6 @@ lbl_8054DB88:
 
 .global lbl_8054EB98
 lbl_8054EB98:
-	# ROM: 0x54AC98
 	.4byte 0
 	.4byte 0x3FA2EBF1
 	.4byte 0x3FA2EBF1

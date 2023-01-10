@@ -258,7 +258,6 @@ cf_CVS_THREAD_DOWN_typestr:
 
 .global lbl_8053D1F8
 lbl_8053D1F8:
-	# ROM: 0x5392F8
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A5C90

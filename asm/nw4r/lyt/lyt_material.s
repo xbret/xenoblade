@@ -3375,7 +3375,6 @@ GetTextureSize__Q34nw4r3lyt6detailFPQ34nw4r3lyt8MaterialUc:
 
 .global lbl_8056D4D8
 lbl_8056D4D8:
-	# ROM: 0x5695D8
 	.4byte 0x0000001F
 	.4byte 0x0000001B
 	.4byte 0x00000017
@@ -3388,7 +3387,6 @@ lbl_8056D4D8:
 
 .global lbl_8056D4F8
 lbl_8056D4F8:
-	# ROM: 0x5695F8
 	.4byte 0x0000001F
 	.4byte 0x0000001B
 	.4byte 0x00000017
@@ -3400,7 +3398,6 @@ lbl_8056D4F8:
 
 .global lbl_8056D518
 lbl_8056D518:
-	# ROM: 0x569618
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt8MaterialFv
@@ -3419,38 +3416,32 @@ lbl_8056D518:
 
 .global float_8066C598
 float_8066C598:
-	# ROM: 0x5763F8
 	.float 0.5
 
 
 .global float_8066C59C
 float_8066C59C:
-	# ROM: 0x5763FC
-	.4byte 0x3F360B61
+	.float 0.7111111 #0x3F360B61
 
 
 .global float_8066C5A0
 float_8066C5A0:
-	# ROM: 0x576400
-	.4byte 0
+	.float 0
 
 
 .global float_8066C5A4
 float_8066C5A4:
-	# ROM: 0x576404
 	.float 1.0
 
 
 .global float_8066C5A8
 float_8066C5A8:
-	# ROM: 0x576408
-	.4byte 0x40000000
+	.float 2 #0x40000000
 	.4byte 0
 
 
 .global double_8066C5B0
 double_8066C5B0:
-	# ROM: 0x576410
 	.4byte 0x43300000
 	.4byte 0
 

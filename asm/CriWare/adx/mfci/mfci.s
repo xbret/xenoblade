@@ -950,7 +950,6 @@ lbl_8051BE50:
 
 .global mfci_build
 mfci_build:
-	# ROM: 0x517F80
 	.4byte lbl_8051BE50
 
 
@@ -978,7 +977,6 @@ lbl_8051BE84:
 
 .global mfci_vtbl
 mfci_vtbl:
-	# ROM: 0x565370
 	.4byte func_803928A4
 	.4byte mfCiEntryErrFunc
 	.4byte func_803928BC

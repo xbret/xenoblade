@@ -367,7 +367,6 @@ __dt__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv:
 
 .global lbl_8056E0F0
 lbl_8056E0F0:
-	# ROM: 0x56A1F0
 	.4byte 0
 	.4byte 0
 	.4byte GetRuntimeTypeInfo__Q34nw4r2ut10FileStreamCFv
@@ -396,7 +395,6 @@ lbl_8056E0F0:
 
 .global lbl_8056E150
 lbl_8056E150:
-	# ROM: 0x56A250
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3snd18MemorySoundArchiveFv

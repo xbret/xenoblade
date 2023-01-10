@@ -1096,33 +1096,28 @@ lbl_80573138:
 
 .global float_806663F0
 float_806663F0:
-	# ROM: 0x571FD0
-	.4byte 0x42480000
+	.float 50 #0x42480000
 
 
 .global float_806663F4
 float_806663F4:
-	# ROM: 0x571FD4
-	.4byte 0x41A00000
+	.float 20 #0x41A00000
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .global float_8066D6C0
 float_8066D6C0:
-	# ROM: 0x577520
-	.4byte 0x3EAAAAAB
+	.float 0.33333333 #0x3EAAAAAB
 
 
 .global float_8066D6C4
 float_8066D6C4:
-	# ROM: 0x577524
-	.4byte 0
+	.float 0
 
 
 .global float_8066D6C8
 float_8066D6C8:
-	# ROM: 0x577528
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 	.4byte 0
 
 #used in game code/monolithlib

@@ -969,7 +969,6 @@ CLoad_hierarchy:
 
 .global lbl_8053DB68
 lbl_8053DB68:
-	# ROM: 0x539C68
 	.4byte lbl_8050C3B8
 	.4byte lbl_8050C3CC
 	.4byte lbl_8050C3E0
@@ -983,7 +982,6 @@ lbl_8053DB68:
 
 .global lbl_8053DB8C
 lbl_8053DB8C:
-	# ROM: 0x539C8C
 	.4byte 0x00000002
 	.4byte 0x00000002
 	.4byte 0x00000002
@@ -1005,80 +1003,67 @@ __RTTI__CLoad:
 
 .global lbl_806656F8
 lbl_806656F8:
-	# ROM: 0x5712D8
 	.4byte lbl_8050C370
 
 
 .global lbl_806656FC
 lbl_806656FC:
-	# ROM: 0x5712DC
 	.4byte lbl_8050C380
 
 
 .global lbl_80665700
 lbl_80665700:
-	# ROM: 0x5712E0
 	.4byte lbl_8050C3A4
 	.4byte 0
 
 
 .global lbl_80665708
 lbl_80665708:
-	# ROM: 0x5712E8
 	.4byte lbl_8050C458
 
 
 .global lbl_8066570C
 lbl_8066570C:
-	# ROM: 0x5712EC
 	.4byte lbl_8050C488
 
 
 .global lbl_80665710
 lbl_80665710:
-	# ROM: 0x5712F0
 	.4byte lbl_8050C4D8
 
 
 .global lbl_80665714
 lbl_80665714:
-	# ROM: 0x5712F4
 	.4byte lbl_8050C4F4
 
 
 .global lbl_80665718
 lbl_80665718:
-	# ROM: 0x5712F8
 	.4byte lbl_8050C518
 
 
 .global lbl_8066571C
 lbl_8066571C:
-	# ROM: 0x5712FC
 	.4byte lbl_8050C5F4
 
 
 .global lbl_80665720
 lbl_80665720:
-	# ROM: 0x571300
 	.4byte lbl_8050C6C4
 
 
 .global lbl_80665724
 lbl_80665724:
-	# ROM: 0x571304
 	.4byte lbl_8050C738
 
 
 .global lbl_80665728
 lbl_80665728:
-	# ROM: 0x571308
 	.4byte lbl_8050C790
 
 
 .global lbl_8066572C
 lbl_8066572C:
-	# ROM: 0x57130C
 	.4byte lbl_8050C808
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -1086,14 +1071,12 @@ lbl_8066572C:
 
 .global float_8066B698
 float_8066B698:
-	# ROM: 0x5754F8
 	.float 1.0
 
 
 .global float_8066B69C
 float_8066B69C:
-	# ROM: 0x5754FC
-	.4byte 0
+	.float 0
 
 .global CLoad_typestr
 CLoad_typestr:

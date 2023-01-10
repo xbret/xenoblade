@@ -96,7 +96,6 @@ __HBMSYNUpdateMix:
 
 .global lbl_8054FC90
 lbl_8054FC90:
-	# ROM: 0x54BD90
 	.4byte 0xFC400000
 	.4byte 0xFCB67A80
 	.4byte 0xFD2EE3F9
@@ -229,7 +228,6 @@ lbl_8054FC90:
 
 .global lbl_8054FE90
 lbl_8054FE90:
-	# ROM: 0x54BF90
 	.4byte 0xFC400000
 	.4byte 0xFE70DF7B
 	.4byte 0xFEAD1437

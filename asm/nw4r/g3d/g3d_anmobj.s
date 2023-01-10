@@ -67,7 +67,6 @@ TestAnmFlag__Q34nw4r3g3d6AnmObjCFQ44nw4r3g3d6AnmObj7AnmFlag:
 
 .global lbl_80520F68
 lbl_80520F68:
-	# ROM: 0x51D068
 	.4byte 0x00000007
 	.asciz "AnmObj"
 	.balign 4
@@ -77,14 +76,12 @@ lbl_80520F68:
 
 .global lbl_80665D88
 lbl_80665D88:
-	# ROM: 0x571968
 	.4byte PlayPolicy_Onetime__Q24nw4r3g3dFfff
 	.4byte PlayPolicy_Loop__Q24nw4r3g3dFfff
 
 
 .global float_80665D90
 float_80665D90:
-	# ROM: 0x571970
 	.float 1.0
 	.4byte 0
 
@@ -92,6 +89,5 @@ float_80665D90:
 
 .global float_8066C3C0
 float_8066C3C0:
-	# ROM: 0x576220
-	.4byte 0
+	.float 0
 	.4byte 0

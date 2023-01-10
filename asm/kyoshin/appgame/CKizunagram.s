@@ -2097,7 +2097,6 @@ lbl_805081A8:
 
 .global lbl_8053ACD8
 lbl_8053ACD8:
-	# ROM: 0x536DD8
 	.4byte switch_8025BD94
 	.4byte switch_8025BDAC
 	.4byte switch_8025BDC4
@@ -2215,111 +2214,93 @@ __RTTI__CKizunaRadar:
 
 .global float_8066B0D8
 float_8066B0D8:
-	# ROM: 0x574F38
-	.4byte 0
+	.float 0
 
 
 .global float_8066B0DC
 float_8066B0DC:
-	# ROM: 0x574F3C
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066B0E0
 float_8066B0E0:
-	# ROM: 0x574F40
 	.float -1.0
 
 
 .global float_8066B0E4
 float_8066B0E4:
-	# ROM: 0x574F44
 	.float 1.0
 
 
 .global lbl_8066B0E8
 lbl_8066B0E8:
-	# ROM: 0x574F48
 	.4byte lbl_80508150
 
 
 .global lbl_8066B0EC
 lbl_8066B0EC:
-	# ROM: 0x574F4C
 	.4byte lbl_8050815C
 
 
 .global double_8066B0F0
 double_8066B0F0:
-	# ROM: 0x574F50
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066B0F8
 float_8066B0F8:
-	# ROM: 0x574F58
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 
 .global float_8066B0FC
 float_8066B0FC:
-	# ROM: 0x574F5C
 	.float 0.5
 
 
 .global float_8066B100
 float_8066B100:
-	# ROM: 0x574F60
-	.4byte 0x41E00000
+	.float 28 #0x41E00000
 
 
 .global float_8066B104
 float_8066B104:
-	# ROM: 0x574F64
-	.4byte 0x40800000
+	.float 4 #0x40800000
 
 
 .global float_8066B108
 float_8066B108:
-	# ROM: 0x574F68
-	.4byte 0x42C00000
+	.float 96 #0x42C00000
 
 
 .global float_8066B10C
 float_8066B10C:
-	# ROM: 0x574F6C
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 
 .global float_8066B110
 float_8066B110:
-	# ROM: 0x574F70
-	.4byte 0x41880000
+	.float 17 #0x41880000
 
 
 .global float_8066B114
 float_8066B114:
-	# ROM: 0x574F74
-	.4byte 0x41100000
+	.float 9 #0x41100000
 
 
 .global float_8066B118
 float_8066B118:
-	# ROM: 0x574F78
-	.4byte 0xC1A00000
+	.float -20 #0xC1A00000
 
 
 .global float_8066B11C
 float_8066B11C:
-	# ROM: 0x574F7C
-	.4byte 0x41A00000
+	.float 20 #0x41A00000
 
 
 .global float_8066B120
 float_8066B120:
-	# ROM: 0x574F80
-	.4byte 0x40400000
+	.float 3 #0x40400000
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

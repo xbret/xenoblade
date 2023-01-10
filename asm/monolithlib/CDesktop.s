@@ -1039,11 +1039,11 @@ switch_8045676C:
 /* 80456770 0041FD30  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
 /* 80456774 0041FD34  40 82 02 84 */	bne .L_804569F8
 /* 80456778 0041FD38  4B EC 2F 09 */	bl GXClearVtxDesc
-/* 8045677C 0041FD3C  3F 80 80 66 */	lis r28, float_80659FB8@ha
+/* 8045677C 0041FD3C  3F 80 80 66 */	lis r28, lbl_80659FB8@ha
 /* 80456780 0041FD40  38 80 00 00 */	li r4, 0
-/* 80456784 0041FD44  38 7C 9F B8 */	addi r3, r28, float_80659FB8@l
+/* 80456784 0041FD44  38 7C 9F B8 */	addi r3, r28, lbl_80659FB8@l
 /* 80456788 0041FD48  4B EC 7E 79 */	bl GXLoadPosMtxImm
-/* 8045678C 0041FD4C  38 7C 9F B8 */	addi r3, r28, float_80659FB8@l
+/* 8045678C 0041FD4C  38 7C 9F B8 */	addi r3, r28, lbl_80659FB8@l
 /* 80456790 0041FD50  38 80 00 00 */	li r4, 0
 /* 80456794 0041FD54  4B EC 7E ED */	bl GXLoadNrmMtxImm
 /* 80456798 0041FD58  38 60 00 00 */	li r3, 0
@@ -2622,7 +2622,6 @@ CDesktop_hierarchy:
 
 .global lbl_805704D0
 lbl_805704D0:
-	# ROM: 0x56C5D0
 	.4byte switch_8045676C
 	.4byte switch_8045670C
 	.4byte switch_80456714
@@ -2638,7 +2637,6 @@ lbl_805704D0:
 
 .global lbl_805704FC
 lbl_805704FC:
-	# ROM: 0x56C5FC
 	.4byte switch_804566EC
 	.4byte switch_80456628
 	.4byte switch_8045663C
@@ -2656,7 +2654,6 @@ lbl_805704FC:
 
 .global lbl_80666088
 lbl_80666088:
-	# ROM: 0x571C68
 	.4byte lbl_8066CC10
 	.4byte 0
 
@@ -2684,51 +2681,43 @@ lbl_8066CC10:
 
 .global float_8066CC18
 float_8066CC18:
-	# ROM: 0x576A78
 	.float 0.5
 
 
 .global float_8066CC1C
 float_8066CC1C:
-	# ROM: 0x576A7C
 	.float 1.0
 
 
 .global float_8066CC20
 float_8066CC20:
-	# ROM: 0x576A80
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 #file boundary?
 .global float_8066CC28
 float_8066CC28:
-	# ROM: 0x576A88
 	.float 1.0
 
 
 .global float_8066CC2C
 float_8066CC2C:
-	# ROM: 0x576A8C
-	.4byte 0
+	.float 0
 
 
 .global float_8066CC30
 float_8066CC30:
-	# ROM: 0x576A90
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 
 .global float_8066CC34
 float_8066CC34:
-	# ROM: 0x576A94
-	.4byte 0x4222F983
+	.float 40.7436638 #0x4222F983
 
 
 .global double_8066CC38
 double_8066CC38:
-	# ROM: 0x576A98
 	.4byte 0x43300000
 	.4byte 0x80000000
 

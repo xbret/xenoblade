@@ -579,6 +579,5 @@ CalcVtx__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjShpPPQ34nw4r3g3d13ResV
 
 .global float_8066C530
 float_8066C530:
-	# ROM: 0x576390
-	.4byte 0
+	.float 0
 	.4byte 0

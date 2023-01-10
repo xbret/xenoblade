@@ -939,7 +939,6 @@ __RTTI__CFade:
 
 .global float_8066B008
 float_8066B008:
-	# ROM: 0x574E68
 	.float 1.0
 	
 .global CFade_typestr

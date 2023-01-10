@@ -189,11 +189,11 @@ soundOnCallback__Q210homebutton10ControllerFP7OSAlarmP9OSContext:
 __ct__Q210homebutton10ControllerFiPQ210homebutton9RemoteSpk:
 /* 80321010 002EA5D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80321014 002EA5D4  7C 08 02 A6 */	mflr r0
-/* 80321018 002EA5D8  3C C0 80 52 */	lis r6, float_80518680@ha
+/* 80321018 002EA5D8  3C C0 80 52 */	lis r6, lbl_80518680@ha
 /* 8032101C 002EA5DC  2C 04 00 04 */	cmpwi r4, 4
 /* 80321020 002EA5E0  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80321024 002EA5E4  38 E0 00 00 */	li r7, 0
-/* 80321028 002EA5E8  C0 06 86 80 */	lfs f0, float_80518680@l(r6)
+/* 80321028 002EA5E8  C0 06 86 80 */	lfs f0, lbl_80518680@l(r6)
 /* 8032102C 002EA5EC  38 00 00 01 */	li r0, 1
 /* 80321030 002EA5F0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80321034 002EA5F4  3F E0 80 5D */	lis r31, lbl_805CD5B0@ha
@@ -479,10 +479,10 @@ clrKpadButton__Q210homebutton10ControllerFv:
 .balign 16, 0
 .global setInValidPos__Q210homebutton10ControllerFv
 setInValidPos__Q210homebutton10ControllerFv:
-/* 80321420 002EA9E0  3C A0 80 52 */	lis r5, float_80518684@ha
-/* 80321424 002EA9E4  3C 80 80 52 */	lis r4, float_80518688@ha
-/* 80321428 002EA9E8  C0 25 86 84 */	lfs f1, float_80518684@l(r5)
-/* 8032142C 002EA9EC  C0 04 86 88 */	lfs f0, float_80518688@l(r4)
+/* 80321420 002EA9E0  3C A0 80 52 */	lis r5, lbl_80518684@ha
+/* 80321424 002EA9E4  3C 80 80 52 */	lis r4, lbl_80518688@ha
+/* 80321428 002EA9E8  C0 25 86 84 */	lfs f1, lbl_80518684@l(r5)
+/* 8032142C 002EA9EC  C0 04 86 88 */	lfs f0, lbl_80518688@l(r4)
 /* 80321430 002EA9F0  D0 23 00 08 */	stfs f1, 8(r3)
 /* 80321434 002EA9F4  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 80321438 002EA9F8  4E 80 00 20 */	blr 
@@ -517,9 +517,9 @@ playSound__Q210homebutton10ControllerFi:
 /* 80321484 002EAA44  88 03 00 41 */	lbz r0, 0x41(r3)
 /* 80321488 002EAA48  2C 00 00 00 */	cmpwi r0, 0
 /* 8032148C 002EAA4C  40 82 00 6C */	bne .L_803214F8
-/* 80321490 002EAA50  3C A0 80 52 */	lis r5, float_8051868C@ha
+/* 80321490 002EAA50  3C A0 80 52 */	lis r5, lbl_8051868C@ha
 /* 80321494 002EAA54  C0 23 00 04 */	lfs f1, 4(r3)
-/* 80321498 002EAA58  C0 05 86 8C */	lfs f0, float_8051868C@l(r5)
+/* 80321498 002EAA58  C0 05 86 8C */	lfs f0, lbl_8051868C@l(r5)
 /* 8032149C 002EAA5C  7C 85 23 78 */	mr r5, r4
 /* 803214A0 002EAA60  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 803214A4 002EAA64  EC 00 00 72 */	fmuls f0, f0, f1
@@ -881,27 +881,23 @@ clrBatteryFlag__Q210homebutton10ControllerFv:
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global float_80518680
-float_80518680:
-	# ROM: 0x514780
+.global lbl_80518680
+lbl_80518680:
 	.float 1.0
 
 
-.global float_80518684
-float_80518684:
-	# ROM: 0x514784
-	.4byte 0xC61C4000
+.global lbl_80518684
+lbl_80518684:
+	.float -10000 #0xC61C4000
 
 
-.global float_80518688
-float_80518688:
-	# ROM: 0x514788
-	.4byte 0xC66A6000
+.global lbl_80518688
+lbl_80518688:
+	.float -15000 #0xC66A6000
 
 
-.global float_8051868C
-float_8051868C:
-	# ROM: 0x51478C
+.global lbl_8051868C
+lbl_8051868C:
 	.float 10.0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

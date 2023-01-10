@@ -223,7 +223,6 @@ DCT_AcIdctDouble:
 
 .global lbl_8051F900
 lbl_8051F900:
-	# ROM: 0x51BA00
 	.4byte 0x3FD6A09E
 	.4byte 0x667F3BCD
 	.4byte 0x3FE00000
@@ -236,7 +235,6 @@ lbl_8051F900:
 
 .global double_8051F920
 double_8051F920:
-	# ROM: 0x51BA20
 	.4byte 0
 	.4byte 0
 

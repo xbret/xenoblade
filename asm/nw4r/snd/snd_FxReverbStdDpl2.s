@@ -527,7 +527,6 @@ OnChangeOutputMode__Q34nw4r3snd15FxReverbStdDpl2Fv:
 
 .global lbl_8056E0C8
 lbl_8056E0C8:
-	# ROM: 0x56A1C8
 	.4byte 0
 	.4byte 0
 	.4byte func_801C2D78
@@ -544,35 +543,29 @@ lbl_8056E0C8:
 
 .global float_8066C798
 float_8066C798:
-	# ROM: 0x5765F8
-	.4byte 0x3CA3D70A
+	.float 0.02 #0x3CA3D70A
 
 
 .global float_8066C79C
 float_8066C79C:
-	# ROM: 0x5765FC
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_8066C7A0
 float_8066C7A0:
-	# ROM: 0x576600
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 
 
 .global float_8066C7A4
 float_8066C7A4:
-	# ROM: 0x576604
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 
 
 .global float_8066C7A8
 float_8066C7A8:
-	# ROM: 0x576608
 	.float 1.0
 
 
 .global float_8066C7AC
 float_8066C7AC:
-	# ROM: 0x57660C
 	.4byte 0

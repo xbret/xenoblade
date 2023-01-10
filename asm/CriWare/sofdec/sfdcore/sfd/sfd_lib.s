@@ -582,7 +582,6 @@ lbl_80520294:
 
 .global lbl_8056B5B8
 lbl_8056B5B8:
-	# ROM: 0x5676B8
 	.4byte lbl_8051FFD8
 	.4byte 0
 	.4byte 0x00000001
@@ -640,7 +639,6 @@ lbl_8056B5B8:
 
 .global lbl_8056B68C
 lbl_8056B68C:
-	# ROM: 0x56778C
 	.4byte lbl_8051FFFC
 	.4byte 0
 	.4byte 0x00000001
@@ -698,7 +696,6 @@ lbl_8056B68C:
 
 .global lbl_8056B760
 lbl_8056B760:
-	# ROM: 0x567860
 	.4byte lbl_80520020
 	.4byte 0
 	.4byte 0x00000001
@@ -756,7 +753,6 @@ lbl_8056B760:
 
 .global lbl_8056B834
 lbl_8056B834:
-	# ROM: 0x567934
 	.4byte lbl_8052002C
 	.4byte 0
 	.4byte 0x00000001
@@ -814,7 +810,6 @@ lbl_8056B834:
 
 .global lbl_8056B908
 lbl_8056B908:
-	# ROM: 0x567A08
 	.4byte lbl_80520038
 	.4byte 0
 	.4byte 0x00000001
@@ -872,7 +867,6 @@ lbl_8056B908:
 
 .global lbl_8056B9DC
 lbl_8056B9DC:
-	# ROM: 0x567ADC
 	.4byte lbl_80520048
 	.4byte 0
 	.4byte 0x00000001
@@ -930,7 +924,6 @@ lbl_8056B9DC:
 
 .global lbl_8056BAB0
 lbl_8056BAB0:
-	# ROM: 0x567BB0
 	.4byte lbl_80520058
 	.4byte 0
 	.4byte 0x00000001
@@ -988,7 +981,6 @@ lbl_8056BAB0:
 
 .global lbl_8056BB84
 lbl_8056BB84:
-	# ROM: 0x567C84
 	.4byte lbl_80520068
 	.4byte 0
 	.4byte 0x00000001
@@ -1046,7 +1038,6 @@ lbl_8056BB84:
 
 .global lbl_8056BC58
 lbl_8056BC58:
-	# ROM: 0x567D58
 	.4byte lbl_8052008C
 	.4byte 0
 	.4byte 0x00000002
@@ -1104,7 +1095,6 @@ lbl_8056BC58:
 
 .global lbl_8056BD2C
 lbl_8056BD2C:
-	# ROM: 0x567E2C
 	.4byte lbl_80520098
 	.4byte 0
 	.4byte 0x00000001
@@ -1162,7 +1152,6 @@ lbl_8056BD2C:
 
 .global lbl_8056BE00
 lbl_8056BE00:
-	# ROM: 0x567F00
 	.4byte lbl_805200A4
 	.4byte 0
 	.4byte 0x00000002
@@ -1220,7 +1209,6 @@ lbl_8056BE00:
 
 .global lbl_8056BED4
 lbl_8056BED4:
-	# ROM: 0x567FD4
 	.4byte lbl_805200B4
 	.4byte 0
 	.4byte 0x00000001
@@ -1278,7 +1266,6 @@ lbl_8056BED4:
 
 .global lbl_8056BFA8
 lbl_8056BFA8:
-	# ROM: 0x5680A8
 	.4byte lbl_805200EC
 	.4byte 0
 	.4byte 0x00000001
@@ -1336,7 +1323,6 @@ lbl_8056BFA8:
 
 .global lbl_8056C07C
 lbl_8056C07C:
-	# ROM: 0x56817C
 	.4byte lbl_80520100
 	.4byte 0
 	.4byte 0x00000001
@@ -1394,7 +1380,6 @@ lbl_8056C07C:
 
 .global lbl_8056C150
 lbl_8056C150:
-	# ROM: 0x568250
 	.4byte lbl_80520114
 	.4byte 0
 	.4byte 0x00000002
@@ -1452,7 +1437,6 @@ lbl_8056C150:
 
 .global lbl_8056C224
 lbl_8056C224:
-	# ROM: 0x568324
 	.4byte lbl_80520150
 	.4byte 0
 	.4byte 0x00000004
@@ -1510,7 +1494,6 @@ lbl_8056C224:
 
 .global lbl_8056C2F8
 lbl_8056C2F8:
-	# ROM: 0x5683F8
 	.4byte lbl_8052019C
 	.4byte 0
 	.4byte 0x00000004
@@ -1542,7 +1525,6 @@ lbl_8056C2F8:
 
 .global lbl_8056C364
 lbl_8056C364:
-	# ROM: 0x568464
 	.4byte lbl_805201C4
 	.4byte 0
 	.4byte 0x00000005
@@ -1574,7 +1556,6 @@ lbl_8056C364:
 
 .global lbl_8056C3D0
 lbl_8056C3D0:
-	# ROM: 0x5684D0
 	.4byte lbl_805201FC
 	.4byte 0
 	.4byte 0x00000002
@@ -1606,7 +1587,6 @@ lbl_8056C3D0:
 
 .global lbl_8056C43C
 lbl_8056C43C:
-	# ROM: 0x56853C
 	.4byte lbl_80520210
 	.4byte 0
 	.4byte 0x00000001
@@ -1638,7 +1618,6 @@ lbl_8056C43C:
 
 .global lbl_8056C4A8
 lbl_8056C4A8:
-	# ROM: 0x5685A8
 	.4byte lbl_80520220
 	.4byte 0
 	.4byte 0x00000001
@@ -1670,7 +1649,6 @@ lbl_8056C4A8:
 
 .global lbl_8056C514
 lbl_8056C514:
-	# ROM: 0x568614
 	.4byte lbl_80520230
 	.4byte 0
 	.4byte 0x00000005
@@ -1702,7 +1680,6 @@ lbl_8056C514:
 
 .global lbl_8056C580
 lbl_8056C580:
-	# ROM: 0x568680
 	.4byte lbl_80520278
 	.4byte 0
 	.4byte 0x00000003

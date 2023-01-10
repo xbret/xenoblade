@@ -295,7 +295,6 @@ OSTicksToCalendarTime:
 
 .global lbl_80552D58
 lbl_80552D58:
-	# ROM: 0x54EE58
 	.4byte 0
 	.4byte 0x0000001F
 	.4byte 0x0000003B
@@ -312,7 +311,6 @@ lbl_80552D58:
 
 .global lbl_80552D88
 lbl_80552D88:
-	# ROM: 0x54EE88
 	.4byte 0
 	.4byte 0x0000001F
 	.4byte 0x0000003C

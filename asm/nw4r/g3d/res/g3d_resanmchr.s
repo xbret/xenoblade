@@ -2125,7 +2125,6 @@ SetTranslate__Q34nw4r3g3d12ChrAnmResultFPCQ34nw4r4math4VEC3:
 
 .global lbl_80520E18
 lbl_80520E18:
-	# ROM: 0x51CF18
 	.4byte GetAnmResult___Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
 	.4byte GetAnmResult_S__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
 	.4byte GetAnmResult_R__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
@@ -2139,56 +2138,47 @@ lbl_80520E18:
 
 .global float_8066C2E0
 float_8066C2E0:
-	# ROM: 0x576140
-	.4byte 0
+	.float 0
 
 
 .global float_8066C2E4
 float_8066C2E4:
-	# ROM: 0x576144
 	.float 1.0
 
 
 .global float_8066C2E8
 float_8066C2E8:
-	# ROM: 0x576148
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 
 .global float_8066C2EC
 float_8066C2EC:
-	# ROM: 0x57614C
-	.4byte 0x40400000
+	.float 3 #0x40400000
 
 
 .global float_8066C2F0
 float_8066C2F0:
-	# ROM: 0x576150
-	.4byte 0x3F360B61
+	.float 0.711111128 #0x3F360B61
 	.4byte 0
 
 
 .global double_8066C2F8
 double_8066C2F8:
-	# ROM: 0x576158
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066C300
 float_8066C300:
-	# ROM: 0x576160
-	.4byte 0x3FB40000
+	.float 1.40625 #0x3FB40000
 
 
 .global float_8066C304
 float_8066C304:
-	# ROM: 0x576164
-	.4byte 0x42B40000
+	.float 90 #0x42B40000
 
 
 .global float_8066C308
 float_8066C308:
-	# ROM: 0x576168
 	.4byte 0xC2B40000
 	.4byte 0

@@ -349,7 +349,6 @@ __OSStopAudioSystem:
 
 .global lbl_805517B8
 lbl_805517B8:
-	# ROM: 0x54D8B8
 	.4byte 0x029F0010
 	.4byte 0x029F0033
 	.4byte 0x029F0034

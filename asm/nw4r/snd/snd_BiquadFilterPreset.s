@@ -215,7 +215,6 @@ GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCa
 
 .global lbl_80522120
 lbl_80522120:
-	# ROM: 0x51E220
 	.4byte 0x3AB37566
 	.4byte 0x3AB383B8
 	.4byte 0xC391371B
@@ -500,7 +499,6 @@ lbl_80522120:
 
 .global lbl_80522580
 lbl_80522580:
-	# ROM: 0x51E680
 	.4byte 0x3BB58895
 	.4byte 0x3BB57E7B
 	.4byte 0xC17F3BAD
@@ -748,7 +746,6 @@ lbl_80522580:
 
 .global lbl_8052294C
 lbl_8052294C:
-	# ROM: 0x51EA4C
 	.4byte 0x2EFA0000
 	.4byte 0xD10621D7
 	.4byte 0x1DF42E8F
@@ -1058,7 +1055,6 @@ lbl_8052294C:
 
 .global lbl_80522E10
 lbl_80522E10:
-	# ROM: 0x51EF10
 	.4byte 0x2F040000
 	.4byte 0xD0FC21DE
 	.4byte 0x1E082E99
@@ -1296,7 +1292,6 @@ lbl_80522E10:
 
 .global lbl_805231B4
 lbl_805231B4:
-	# ROM: 0x51F2B4
 	.4byte 0x3F420000
 	.4byte 0xC0BE0136
 	.4byte 0x3E833E8A
@@ -1535,13 +1530,11 @@ lbl_805231B4:
 
 .global double_8066C6F8
 double_8066C6F8:
-	# ROM: 0x576558
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066C700
 float_8066C700:
-	# ROM: 0x576560
-	.4byte 0x40000000
+	.float 2 #0x40000000
 	.4byte 0

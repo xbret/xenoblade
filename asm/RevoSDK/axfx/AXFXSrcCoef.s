@@ -15,7 +15,6 @@ __AXFXGetSrcCoef:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_805435E0
 lbl_805435E0:
-	# ROM: 0x53F6E0
 	.4byte 0x3DC7B000
 	.4byte 0x3F4D5E00
 	.4byte 0x3DD01000

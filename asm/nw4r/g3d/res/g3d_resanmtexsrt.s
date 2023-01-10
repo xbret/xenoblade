@@ -316,11 +316,9 @@ GetAnmResult__Q34nw4r3g3d12ResAnmTexSrtCFPQ34nw4r3g3d15TexSrtAnmResultUlf:
 
 .global float_8066C2D8
 float_8066C2D8:
-	# ROM: 0x576138
 	.float 1.0
 
 
 .global float_8066C2DC
 float_8066C2DC:
-	# ROM: 0x57613C
-	.4byte 0
+	.float 0

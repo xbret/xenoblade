@@ -789,7 +789,6 @@ Bind__Q34nw4r3g3d9ResAnmScnFQ34nw4r3g3d9ResAnmScn:
 
 .global lbl_8056C9C0
 lbl_8056C9C0:
-	# ROM: 0x568AC0
 	.4byte 0x0000000E
 	.asciz "LightSet(NW4R)"
 	.balign 4
@@ -800,7 +799,6 @@ lbl_8056C9C0:
 
 .global lbl_8056C9E0
 lbl_8056C9E0:
-	# ROM: 0x568AE0
 	.4byte 0x0000000F
 	.asciz "AmbLights(NW4R)"
 	.4byte 0
@@ -810,7 +808,6 @@ lbl_8056C9E0:
 
 .global lbl_8056CA00
 lbl_8056CA00:
-	# ROM: 0x568B00
 	.4byte 0x0000000C
 	.asciz "Lights(NW4R)"
 	.balign 4
@@ -821,7 +818,6 @@ lbl_8056CA00:
 
 .global lbl_8056CA20
 lbl_8056CA20:
-	# ROM: 0x568B20
 	.4byte 0x0000000A
 	.asciz "Fogs(NW4R)"
 	.balign 4
@@ -833,7 +829,6 @@ lbl_8056CA20:
 
 .global lbl_8056CA40
 lbl_8056CA40:
-	# ROM: 0x568B40
 	.4byte 0x0000000D
 	.asciz "Cameras(NW4R)"
 	.balign 4

@@ -1480,7 +1480,6 @@ lbl_80523880:
 
 .global lbl_8056E490
 lbl_8056E490:
-	# ROM: 0x56A590
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail8SeqTrackFv
@@ -1490,56 +1489,47 @@ lbl_8056E490:
 
 .global float_8066C818
 float_8066C818:
-	# ROM: 0x576678
 	.float 1.0
 
 
 .global float_8066C81C
 float_8066C81C:
-	# ROM: 0x57667C
-	.4byte 0
+	.float 0
 
 
 .global float_8066C820
 float_8066C820:
-	# ROM: 0x576680
-	.4byte 0x42FE0000
+	.float 127 #0x42FE0000
 
 
 .global float_8066C824
 float_8066C824:
-	# ROM: 0x576684
-	.4byte 0x3C000000
+	.float 0.0078125 #0x3C000000
 
 
 .global float_8066C828
 float_8066C828:
-	# ROM: 0x576688
-	.4byte 0x427C0000
+	.float 63 #0x427C0000
 
 
 .global float_8066C82C
 float_8066C82C:
-	# ROM: 0x57668C
 	.float -1.0
 
 
 .global float_8066C830
 float_8066C830:
-	# ROM: 0x576690
-	.4byte 0x40000000
+	.float 2 #0x40000000
 	.4byte 0
 
 
 .global double_8066C838
 double_8066C838:
-	# ROM: 0x576698
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_8066C840
 double_8066C840:
-	# ROM: 0x5766A0
 	.4byte 0x43300000
 	.4byte 0x80000000

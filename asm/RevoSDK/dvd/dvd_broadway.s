@@ -2914,7 +2914,6 @@ lbl_8054A720:
 
 .global lbl_806659A8
 lbl_806659A8:
-	# ROM: 0x571588
 	.4byte 0xFFFFFFFF
 	.4byte 0
 

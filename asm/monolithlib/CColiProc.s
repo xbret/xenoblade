@@ -800,7 +800,6 @@ CColiResCall_hierarchy:
 
 .global lbl_80572C08
 lbl_80572C08:
-	# ROM: 0x56ED08
 	.4byte 0x00040010
 	.4byte 0x000C0018
 	.4byte 0x00300008
@@ -810,7 +809,6 @@ lbl_80572C08:
 
 .global lbl_80572C1C
 lbl_80572C1C:
-	# ROM: 0x56ED1C
 	.4byte 0x00140014
 	.4byte 0x001C001C
 	.4byte 0x00340034
@@ -820,7 +818,6 @@ lbl_80572C1C:
 
 .global lbl_80572C30
 lbl_80572C30:
-	# ROM: 0x56ED30
 	.4byte 0
 	.4byte 0x00010001
 	.4byte 0x00020002
@@ -829,7 +826,6 @@ lbl_80572C30:
 
 .global lbl_80572C44
 lbl_80572C44:
-	# ROM: 0x56ED44
 	.4byte func_804B30CC
 	.4byte func_804B30CC
 	.4byte func_804B30CC
@@ -843,7 +839,6 @@ lbl_80572C44:
 
 .global lbl_80572C68
 lbl_80572C68:
-	# ROM: 0x56ED68
 	.4byte func_804B34F4
 	.4byte func_804B3658
 	.4byte func_804B37E4
@@ -857,7 +852,6 @@ lbl_80572C68:
 
 .global lbl_80572C8C
 lbl_80572C8C:
-	# ROM: 0x56ED8C
 	.4byte func_804B43B4
 	.4byte func_804B43B4
 	.4byte func_804B4478
@@ -881,8 +875,7 @@ __RTTI__CColiResCall:
 
 .global float_8066D658
 float_8066D658:
-	# ROM: 0x5774B8
-	.4byte 0
+	.float 0
 	.4byte 0
 
 

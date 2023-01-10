@@ -1263,11 +1263,9 @@ NANDPrivateGetStatusAsync:
 
 .global lbl_80665AE0
 lbl_80665AE0:
-	# ROM: 0x5716C0
 	.4byte 0x2F000000
 
 
 .global lbl_80665AE4
 lbl_80665AE4:
-	# ROM: 0x5716C4
 	.4byte 0x2F257300

@@ -4757,7 +4757,6 @@ cf_CAwardBase_typestr:
 
 .global lbl_8053BF38
 lbl_8053BF38:
-	# ROM: 0x538038
 	.4byte switch_8028F378
 	.4byte switch_8028F310
 	.4byte switch_8028F318
@@ -4827,7 +4826,6 @@ __vt__CSLCur:
 
 .global __vt__cf_CfAward
 __vt__cf_CfAward:
-	# ROM: 0x538110
 	.4byte __RTTI__cf_CfAward
 	.4byte 0
 	.4byte __RTTI__cf_CfAward
@@ -4848,19 +4846,16 @@ cf_CfAward_hierarchy:
 
 .global lbl_806653C0
 lbl_806653C0:
-	# ROM: 0x570FA0
 	.4byte 0x00000003
 
 
 .global lbl_806653C4
 lbl_806653C4:
-	# ROM: 0x570FA4
 	.4byte 0xFFFFFFFF
 
 
 .global lbl_806653C8
 lbl_806653C8:
-	# ROM: 0x570FA8
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
@@ -4888,26 +4883,22 @@ __RTTI__cf_CAwardBase:
 
 .global float_8066B410
 float_8066B410:
-	# ROM: 0x575270
 	.float 1.0
 
 
 .global float_8066B414
 float_8066B414:
-	# ROM: 0x575274
-	.4byte 0
+	.float 0
 
 
 .global float_8066B418
 float_8066B418:
-	# ROM: 0x575278
-	.4byte 0x43520000
+	.float 210 #0x43520000
 
 
 .global float_8066B41C
 float_8066B41C:
-	# ROM: 0x57527C
-	.4byte 0x42EC0000
+	.float 118 #0x42EC0000
 
 .global CSLCur_typestr
 CSLCur_typestr:

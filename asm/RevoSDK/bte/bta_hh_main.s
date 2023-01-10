@@ -474,7 +474,6 @@ lbl_8054479C:
 
 .global lbl_80544960
 lbl_80544960:
-	# ROM: 0x540A60
 	.4byte switch_802E40DC
 	.4byte switch_802E40E4
 	.4byte switch_802E40EC
@@ -495,7 +494,6 @@ lbl_80544960:
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global lbl_8050E1B8
 lbl_8050E1B8:
-	# ROM: 0x50A2B8
 	.4byte bta_hh_api_disc_act
 	.4byte bta_hh_open_act
 	.4byte bta_hh_close_act
@@ -539,7 +537,6 @@ lbl_8050E218:
 
 .global lbl_8050E230
 lbl_8050E230:
-	# ROM: 0x50A330
 	.4byte lbl_8050E1E8
 	.4byte lbl_8050E200
 	.4byte lbl_8050E218

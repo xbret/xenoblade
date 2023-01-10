@@ -271,7 +271,6 @@ cf_CVS_THREAD_CHAIN_typestr:
 
 .global lbl_8053D1C0
 lbl_8053D1C0:
-	# ROM: 0x5392C0
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A58F8

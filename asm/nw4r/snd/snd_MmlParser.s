@@ -1319,7 +1319,6 @@ lbl_8056E170:
 
 .global lbl_8056E198
 lbl_8056E198:
-	# ROM: 0x56A298
 	.4byte switch_80417D48
 	.4byte switch_804185BC
 	.4byte switch_804185BC
@@ -1452,19 +1451,16 @@ lbl_8056E198:
 
 .global lbl_80665E08
 lbl_80665E08:
-	# ROM: 0x5719E8
 	.4byte 0x54000000
 
 
 .global lbl_80665E0C
 lbl_80665E0C:
-	# ROM: 0x5719EC
 	.4byte 0x47000000
 
 
 .global lbl_80665E10
 lbl_80665E10:
-	# ROM: 0x5719F0
 	.4byte 0
 	.4byte 0
 
@@ -1472,38 +1468,32 @@ lbl_80665E10:
 
 .global float_8066C7E0
 float_8066C7E0:
-	# ROM: 0x576640
-	.4byte 0x3C000000
+	.float 0.0078125 #0x3C000000
 
 
 .global float_8066C7E4
 float_8066C7E4:
-	# ROM: 0x576644
-	.4byte 0x3EC80000
+	.float 0.390625 #0x3EC80000
 
 
 .global float_8066C7E8
 float_8066C7E8:
-	# ROM: 0x576648
-	.4byte 0x3C800000
+	.float 0.015625 #0x3C800000
 
 
 .global float_8066C7EC
 float_8066C7EC:
-	# ROM: 0x57664C
-	.4byte 0x42FE0000
+	.float 127 #0x42FE0000
 
 
 .global double_8066C7F0
 double_8066C7F0:
-	# ROM: 0x576650
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_8066C7F8
 double_8066C7F8:
-	# ROM: 0x576658
 	.4byte 0x43300000
 	.4byte 0x80000000
 

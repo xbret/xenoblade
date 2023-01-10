@@ -1222,7 +1222,6 @@ lbl_80501AF4:
 
 .global lbl_80501B00
 lbl_80501B00:
-	# ROM: 0x4FDC00
 	.4byte lbl_8066A8C8
 	.4byte lbl_80501AB8
 	.4byte lbl_80501AC4
@@ -1235,7 +1234,6 @@ lbl_80501B00:
 
 .global lbl_80538170
 lbl_80538170:
-	# ROM: 0x534270
 	.4byte lbl_805019C0
 	.4byte lbl_805019D0
 	.4byte lbl_805019E0
@@ -1299,21 +1297,18 @@ __RTTI__CSortMenu:
 
 .global float_8066A8B0
 float_8066A8B0:
-	# ROM: 0x574710
-	.4byte 0x41ACCCCD
+	.float 21.6 #0x41ACCCCD
 	.4byte 0
 
 
 .global double_8066A8B8
 double_8066A8B8:
-	# ROM: 0x574718
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066A8C0
 float_8066A8C0:
-	# ROM: 0x574720
 	.float 1.0
 	.4byte 0
 

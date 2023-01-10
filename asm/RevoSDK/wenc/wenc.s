@@ -230,6 +230,5 @@ lbl_80518D88:
 
 .global double_8066C1F0
 double_8066C1F0:
-	# ROM: 0x576050
 	.4byte 0x43300000
 	.4byte 0x80000000

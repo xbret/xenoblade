@@ -1234,7 +1234,6 @@ sinit_lyt_pane_cpp:
 
 .global lbl_8056D1D0
 lbl_8056D1D0:
-	# ROM: 0x5692D0
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt4PaneFv
@@ -1271,38 +1270,32 @@ lbl_8056D1D0:
 
 .global float_8066C538
 float_8066C538:
-	# ROM: 0x576398
-	.4byte 0
+	.float 0
 
 
 .global float_8066C53C
 float_8066C53C:
-	# ROM: 0x57639C
 	.float 1.0
 
 
 .global float_8066C540
 float_8066C540:
-	# ROM: 0x5763A0
-	.4byte 0x3C8EFA35
+	.float 0.0174532924 #0x3C8EFA35
 
 
 .global float_8066C544
 float_8066C544:
-	# ROM: 0x5763A4
-	.4byte 0x3B808081
+	.float 0.00392156886 #0x3B808081
 
 
 .global double_8066C548
 double_8066C548:
-	# ROM: 0x5763A8
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global float_8066C550
 float_8066C550:
-	# ROM: 0x5763B0
 	.float 0.5
 	.4byte 0
 

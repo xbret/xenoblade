@@ -661,7 +661,6 @@ func_803429B0:
 
 .global lbl_80518B90
 lbl_80518B90:
-	# ROM: 0x514C90
 	.4byte 0x49742400
 	.4byte 0x47800000
 	.4byte 0x42C00000
@@ -678,7 +677,6 @@ lbl_80518B90:
 
 .global lbl_80550410
 lbl_80550410:
-	# ROM: 0x54C510
 	.4byte 0x02020202
 	.4byte 0x02020202
 	.4byte 0x02020202

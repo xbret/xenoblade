@@ -473,7 +473,6 @@ lbl_8055EE80:
 
 .global lbl_80665BA8
 lbl_80665BA8:
-	# ROM: 0x571788
 	.4byte 0xFFFFFFFF
 	.4byte 0
 

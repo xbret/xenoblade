@@ -152,12 +152,12 @@ SetSize__Q46nw4hbm3lyt6detail11TexCoordAryFUc:
 /* 8032C77C 002F5D3C  88 08 D7 90 */	lbz r0, lbl_805CD790@l(r8)
 /* 8032C780 002F5D40  7C 00 07 75 */	extsb. r0, r0
 /* 8032C784 002F5D44  40 82 00 44 */	bne .L_8032C7C8
-/* 8032C788 002F5D48  3C C0 80 52 */	lis r6, float_80518A48@ha
-/* 8032C78C 002F5D4C  3C A0 80 52 */	lis r5, float_80518A4C@ha
+/* 8032C788 002F5D48  3C C0 80 52 */	lis r6, lbl_80518A48@ha
+/* 8032C78C 002F5D4C  3C A0 80 52 */	lis r5, lbl_80518A4C@ha
 /* 8032C790 002F5D50  3C E0 80 5D */	lis r7, lbl_805CD798@ha
-/* 8032C794 002F5D54  C0 26 8A 48 */	lfs f1, float_80518A48@l(r6)
+/* 8032C794 002F5D54  C0 26 8A 48 */	lfs f1, lbl_80518A48@l(r6)
 /* 8032C798 002F5D58  38 C7 D7 98 */	addi r6, r7, lbl_805CD798@l
-/* 8032C79C 002F5D5C  C0 05 8A 4C */	lfs f0, float_80518A4C@l(r5)
+/* 8032C79C 002F5D5C  C0 05 8A 4C */	lfs f0, lbl_80518A4C@l(r5)
 /* 8032C7A0 002F5D60  38 00 00 01 */	li r0, 1
 /* 8032C7A4 002F5D64  D0 27 D7 98 */	stfs f1, lbl_805CD798@l(r7)
 /* 8032C7A8 002F5D68  D0 26 00 04 */	stfs f1, 4(r6)
@@ -1024,21 +1024,18 @@ InitGXTexObjFromTPL__Q36nw4hbm3lyt6detailFP9_GXTexObjP10TPLPaletteUl:
 
 
 
-.global float_80518A48
-float_80518A48:
-	# ROM: 0x514B48
+.global lbl_80518A48
+lbl_80518A48:
 	.4byte 0
 
 
-.global float_80518A4C
-float_80518A4C:
-	# ROM: 0x514B4C
+.global lbl_80518A4C
+lbl_80518A4C:
 	.float 1.0
 
 
 .global double_80518A50
 double_80518A50:
-	# ROM: 0x514B50
 	.4byte 0x43300000
 	.4byte 0
 

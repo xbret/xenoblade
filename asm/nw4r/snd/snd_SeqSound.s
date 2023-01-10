@@ -579,7 +579,6 @@ sinit_8041B2F8:
 
 .global lbl_8056E440
 lbl_8056E440:
-	# ROM: 0x56A540
 	.4byte 0
 	.4byte 0
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail8SeqSoundCFv
@@ -598,7 +597,6 @@ lbl_8056E440:
 
 .global lbl_8056E478
 lbl_8056E478:
-	# ROM: 0x56A578
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv

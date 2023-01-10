@@ -2963,7 +2963,6 @@ _12___dt__Q34nw4r3snd18SoundArchivePlayerFv:
 
 .global lbl_8056E4C0
 lbl_8056E4C0:
-	# ROM: 0x56A5C0
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3snd18SoundArchivePlayerFv
@@ -2980,7 +2979,6 @@ lbl_8056E4C0:
 
 .global lbl_8056E4F0
 lbl_8056E4F0:
-	# ROM: 0x56A5F0
 	.4byte 0
 	.4byte 0
 	.4byte func_8041DCFC
@@ -2989,7 +2987,6 @@ lbl_8056E4F0:
 
 .global lbl_8056E500
 lbl_8056E500:
-	# ROM: 0x56A600
 	.4byte 0
 	.4byte 0
 	.4byte func_8041DCBC
@@ -2999,13 +2996,11 @@ lbl_8056E500:
 
 .global float_8066C848
 float_8066C848:
-	# ROM: 0x5766A8
-	.4byte 0x42FE0000
+	.float 127 #0x42FE0000
 	.4byte 0
 
 
 .global double_8066C850
 double_8066C850:
-	# ROM: 0x5766B0
 	.4byte 0x43300000
 	.4byte 0x80000000

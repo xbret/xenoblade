@@ -1404,7 +1404,6 @@ SJRBF_GetFlowCnt:
 
 .global sjrbf_uuid
 sjrbf_uuid:
-	# ROM: 0x5182F8
 	.4byte 0x3B9A9E81
 	.4byte 0x0DBB11D2
 	.4byte 0xA6BF4445
@@ -1460,7 +1459,6 @@ lbl_8051C208:
 
 .global sjrbf_vtbl
 sjrbf_vtbl:
-	# ROM: 0x565408
 	.4byte 0
 	.4byte 0
 	.4byte 0

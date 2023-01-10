@@ -744,13 +744,11 @@ CDeviceGX_hierarchy:
 
 .global lbl_80666078
 lbl_80666078:
-	# ROM: 0x571C58
 	.4byte 0x00200000
 
 
 .global lbl_8066607C
 lbl_8066607C:
-	# ROM: 0x571C5C
 	.4byte lbl_8066CBE8
 
 .global __RTTI__CDeviceGX
@@ -769,33 +767,28 @@ lbl_8066CBE8:
 
 .global float_8066CBF0
 float_8066CBF0:
-	# ROM: 0x576A50
-	.4byte 0
+	.float 0
 
 
 .global float_8066CBF4
 float_8066CBF4:
-	# ROM: 0x576A54
 	.float 1.0
 
 
 .global float_8066CBF8
 float_8066CBF8:
-	# ROM: 0x576A58
-	.4byte 0x40000000
+	.float 2 #0x40000000
 	.4byte 0
 
 
 .global double_8066CC00
 double_8066CC00:
-	# ROM: 0x576A60
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_8066CC08
 double_8066CC08:
-	# ROM: 0x576A68
 	.4byte 0x43300000
 	.4byte 0x80000000
 

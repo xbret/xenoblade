@@ -504,7 +504,6 @@ ADX_DecodeSte4:
 
 .global lbl_8051AA98
 lbl_8051AA98:
-	# ROM: 0x516B98
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000002

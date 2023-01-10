@@ -1298,53 +1298,45 @@ FreeChannel__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail7Channel:
 
 .global float_8066C708
 float_8066C708:
-	# ROM: 0x576568
-	.4byte 0
+	.float 0
 
 
 .global float_8066C70C
 float_8066C70C:
-	# ROM: 0x57656C
 	.float 1.0
 
 
 .global float_8066C710
 float_8066C710:
-	# ROM: 0x576570
-	.4byte 0x437F0000
+	.float 255 #0x437F0000
 
 
 .global float_8066C714
 float_8066C714:
-	# ROM: 0x576574
-	.4byte 0x40C00000
+	.float 6 #0x40C00000
 
 
 .global float_8066C718
 float_8066C718:
-	# ROM: 0x576578
-	.4byte 0x43800000
+	.float 256 #0x43800000
 	.4byte 0
 
 
 .global double_8066C720
 double_8066C720:
-	# ROM: 0x576580
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_8066C728
 double_8066C728:
-	# ROM: 0x576588
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066C730
 float_8066C730:
-	# ROM: 0x576590
-	.4byte 0xC2B4CCCD
+	.float -90.4 #0xC2B4CCCD
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

@@ -5166,7 +5166,6 @@ lbl_8053A2D8:
 
 .global lbl_8053A2E4
 lbl_8053A2E4:
-	# ROM: 0x5363E4
 	.4byte switch_8023EB74
 	.4byte switch_8023EB34
 	.4byte switch_8023EB34
@@ -5301,7 +5300,6 @@ CTTask_cf_CfNandManager_hierarchy:
 
 .global lbl_806651B8
 lbl_806651B8:
-	# ROM: 0x570D98
 	.4byte lbl_8066AF90
 	.4byte 0
 
@@ -5325,35 +5323,30 @@ lbl_8066AF90:
 
 .global float_8066AF98
 float_8066AF98:
-	# ROM: 0x574DF8
-	.4byte 0
+	.float 0
 	.4byte 0
 
 
 .global double_8066AFA0
 double_8066AFA0:
-	# ROM: 0x574E00
 	.4byte 0x3FE00000
 	.4byte 0
 
 
 .global double_8066AFA8
 double_8066AFA8:
-	# ROM: 0x574E08
 	.4byte 0xBFE00000
 	.4byte 0
 
 
 .global double_8066AFB0
 double_8066AFB0:
-	# ROM: 0x574E10
 	.4byte 0x43300000
 	.4byte 0
 
 
 .global double_8066AFB8
 double_8066AFB8:
-	# ROM: 0x574E18
 	.4byte 0x43300000
 	.4byte 0x80000000
 

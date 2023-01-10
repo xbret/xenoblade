@@ -11,8 +11,8 @@ sinit_80436138:
 /* 80436148 003FF708  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8043614C 003FF70C  C0 22 C6 B4 */	lfs f1, float_8066CA34@sda21(r2)
 /* 80436150 003FF710  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 80436154 003FF714  3F A0 80 66 */	lis r29, float_80659EC8@ha
-/* 80436158 003FF718  3B BD 9E C8 */	addi r29, r29, float_80659EC8@l
+/* 80436154 003FF714  3F A0 80 66 */	lis r29, lbl_80659EC8@ha
+/* 80436158 003FF718  3B BD 9E C8 */	addi r29, r29, lbl_80659EC8@l
 /* 8043615C 003FF71C  3B DD 00 00 */	addi r30, r29, 0
 /* 80436160 003FF720  D0 5D 00 00 */	stfs f2, 0(r29)
 /* 80436164 003FF724  3B FD 00 10 */	addi r31, r29, 0x10
@@ -87,20 +87,17 @@ sinit_80436138:
 
 .global float_8066CA30
 float_8066CA30:
-	# ROM: 0x576890
 	.float 1.0
 
 
 .global float_8066CA34
 float_8066CA34:
-	# ROM: 0x576894
 	.float 0.5
 
 
 .global float_8066CA38
 float_8066CA38:
-	# ROM: 0x576898
-	.4byte 0
+	.float 0
 	.4byte 0
 
 .section extab, "a"  # 0x800066E0 - 0x80021020

@@ -596,7 +596,6 @@ lbl_8050CDB0:
 
 .global lbl_8053EF00
 lbl_8053EF00:
-	# ROM: 0x53B000
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B8B0C
@@ -604,7 +603,6 @@ lbl_8053EF00:
 
 .global lbl_8053EF0C
 lbl_8053EF0C:
-	# ROM: 0x53B00C
 	.4byte 0x000009C5
 	.4byte 0x000009C6
 	.4byte 0xFFFFFFFF
@@ -641,7 +639,6 @@ cf_CVS_THREAD_ORDER_hierarchy:
 
 .global lbl_8053EF58
 lbl_8053EF58:
-	# ROM: 0x53B058
 	.4byte 0x0000001E
 	.4byte 0x00010FA1
 	.4byte 0x0000001F
@@ -662,7 +659,6 @@ lbl_8053EF58:
 
 .global lbl_8053EF98
 lbl_8053EF98:
-	# ROM: 0x53B098
 	.4byte lbl_8066B810
 	.4byte play
 	.4byte 0
@@ -680,14 +676,12 @@ __RTTI__cf_CVS_THREAD_ORDER:
 
 .global float_8066B808
 float_8066B808:
-	# ROM: 0x575668
 	.float 1.0
 
 
 .global float_8066B80C
 float_8066B80C:
-	# ROM: 0x57566C
-	.4byte 0x41F00000
+	.float 30 #0x41F00000
 
 .global lbl_8066B810
 lbl_8066B810:
@@ -697,13 +691,11 @@ lbl_8066B810:
 
 .global float_8066B818
 float_8066B818:
-	# ROM: 0x575678
 	.float 1.0
 
 
 .global float_8066B81C
 float_8066B81C:
-	# ROM: 0x57567C
 	.float 0.5
 
 

@@ -1157,7 +1157,6 @@ SJUNI_GetNumChunk:
 
 .global lbl_8051C430
 lbl_8051C430:
-	# ROM: 0x518530
 	.4byte 0x2E534FA3
 	.4byte 0xAF9711D2
 	.4byte 0xA5270060
@@ -1197,7 +1196,6 @@ lbl_8051C440:
 
 .global sjuni_vtbl
 sjuni_vtbl:
-	# ROM: 0x565438
 	.4byte 0
 	.4byte 0
 	.4byte 0

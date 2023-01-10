@@ -1595,7 +1595,6 @@ lbl_8050CA08:
 
 .global lbl_8053E5C8
 lbl_8053E5C8:
-	# ROM: 0x53A6C8
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B4EF4
@@ -1714,7 +1713,6 @@ CTTask_CUIErrMesWin_hierarchy:
 
 .global lbl_8053E758
 lbl_8053E758:
-	# ROM: 0x53A858
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B5F0C
@@ -1762,32 +1760,27 @@ __RTTI__CTTask_CUIErrMesWin:
 
 .global float_8066B7B8
 float_8066B7B8:
-	# ROM: 0x575618
-	.4byte 0x3FE00000
+	.float 1.75 #0x3FE00000
 
 
 .global float_8066B7BC
 float_8066B7BC:
-	# ROM: 0x57561C
 	.float 0.75
 
 
 .global float_8066B7C0
 float_8066B7C0:
-	# ROM: 0x575620
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 
 
 .global float_8066B7C4
 float_8066B7C4:
-	# ROM: 0x575624
 	.float 1.0
 
 
 .global float_8066B7C8
 float_8066B7C8:
-	# ROM: 0x575628
-	.4byte 0
+	.float 0
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

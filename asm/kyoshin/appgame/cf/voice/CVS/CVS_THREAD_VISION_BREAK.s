@@ -305,7 +305,6 @@ cf_CVS_THREAD_VISION_BREAK_typestr:
 
 .global lbl_8053D500
 lbl_8053D500:
-	# ROM: 0x539600
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A93FC
@@ -338,14 +337,12 @@ cf_CVS_THREAD_VISION_BREAK_hierarchy:
 
 .global lbl_80665638
 lbl_80665638:
-	# ROM: 0x571218
 	.4byte 0x01920195
 	.4byte 0x01960000
 
 
 .global lbl_80665640
 lbl_80665640:
-	# ROM: 0x571220
 	.4byte 0x01910193
 	.4byte 0x01940000
 

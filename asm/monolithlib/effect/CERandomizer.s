@@ -484,54 +484,47 @@ __RTTI__CERandomizer:
 
 .global float_8066D9D8
 float_8066D9D8:
-	# ROM: 0x577838
-	.4byte 0
+	.float 0
 
 
 #2147483648
 .global float_8066D9DC
 float_8066D9DC:
-	# ROM: 0x57783C
-	.4byte 0x4F000000
+	.float 2147483648 #0x4F000000
 
 
 #0.5
 .global float_8066D9E0
 float_8066D9E0:
-	.4byte 0x3f000000
+	.float 0.5 #0x3f000000
 	.4byte 0
 
 
 #int to float constant
 .global double_8066D9E8
 double_8066D9E8:
-	# ROM: 0x577848
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066D9F0
 float_8066D9F0:
-	# ROM: 0x577850
 	.float 1.0
 
 
 .global float_8066D9F4
 float_8066D9F4:
-	# ROM: 0x577854
 	.float -1.0
 
 
 .global float_8066D9F8
 float_8066D9F8:
-	# ROM: 0x577858
-	.4byte 0x461C5800
+	.float 10006 #0x461C5800
 	.4byte 0
 
 
 .global double_8066DA00
 double_8066DA00:
-	# ROM: 0x577860
 	.4byte 0x43300000
 	.4byte 0
 

@@ -501,7 +501,6 @@ MPV_IsEmptyPpic:
 
 .global lbl_8051F708
 lbl_8051F708:
-	# ROM: 0x51B808
 	.4byte 0x00000101
 	.4byte 0x03030203
 	.4byte 0x03040204

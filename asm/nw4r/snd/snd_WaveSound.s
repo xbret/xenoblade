@@ -286,7 +286,6 @@ sinit_80429F2C:
 
 .global lbl_8056E650
 lbl_8056E650:
-	# ROM: 0x56A750
 	.4byte 0
 	.4byte 0
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail9WaveSoundCFv

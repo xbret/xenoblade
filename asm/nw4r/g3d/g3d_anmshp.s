@@ -16,7 +16,6 @@ TestExistence__Q34nw4r3g3d9AnmObjShpCFUl:
 
 .global lbl_80520F28
 lbl_80520F28:
-	# ROM: 0x51D028
 	.4byte 0x0000000A
 	.asciz "AnmObjShp"
 	.balign 4

@@ -1421,26 +1421,22 @@ __RTTI__CMapSel:
 
 .global float_8066AFF0
 float_8066AFF0:
-	# ROM: 0x574E50
-	.4byte 0
+	.float 0
 
 
 .global float_8066AFF4
 float_8066AFF4:
-	# ROM: 0x574E54
 	.float 1.0
 
 
 .global float_8066AFF8
 float_8066AFF8:
-	# ROM: 0x574E58
-	.4byte 0xC2600000
+	.float -56 #0xC2600000
 
 
 .global float_8066AFFC
 float_8066AFFC:
-	# ROM: 0x574E5C
-	.4byte 0x42F60000
+	.float 123 #0x42F60000
 
 .global CMapSel_typestr
 CMapSel_typestr:

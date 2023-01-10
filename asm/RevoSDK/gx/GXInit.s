@@ -1259,7 +1259,6 @@ lbl_8054B680:
 
 .global lbl_8054B7F0
 lbl_8054B7F0:
-	# ROM: 0x5478F0
 	.4byte 0
 	.4byte 0x00010000
 	.4byte 0x00020000
@@ -1312,7 +1311,6 @@ lbl_8054B7F0:
 
 .global lbl_8054B8B0
 lbl_8054B8B0:
-	# ROM: 0x5479B0
 	.4byte __GXShutdown
 	.4byte 0x0000007F
 	.4byte 0
@@ -1322,7 +1320,6 @@ lbl_8054B8B0:
 
 .global lbl_806659F0
 lbl_806659F0:
-	# ROM: 0x5715D0
 	.4byte lbl_8054B680
 	.4byte 0
 
@@ -1330,50 +1327,42 @@ lbl_806659F0:
 
 .global lbl_8066BFA0
 lbl_8066BFA0:
-	# ROM: 0x575E00
 	.4byte lbl_805CCF60
 
 
 .global float_8066BFA4
 float_8066BFA4:
-	# ROM: 0x575E04
-	.4byte 0x4B800000
+	.float 16777216 #0x4B800000
 
 
 .global float_8066BFA8
 float_8066BFA8:
-	# ROM: 0x575E08
-	.4byte 0
+	.float 0
 
 
 .global lbl_8066BFAC
 lbl_8066BFAC:
-	# ROM: 0x575E0C
 	.4byte 0x404040FF
 
 
 .global lbl_8066BFB0
 lbl_8066BFB0:
-	# ROM: 0x575E10
 	.4byte 0xFFFFFFFF
 
 
 .global float_8066BFB4
 float_8066BFB4:
-	# ROM: 0x575E14
 	.float 1.0
 
 
 .global float_8066BFB8
 float_8066BFB8:
-	# ROM: 0x575E18
-	.4byte 0x3DCCCCCD
+	.float 0.1 #0x3DCCCCCD
 	.4byte 0
 
 
 .global double_8066BFC0
 double_8066BFC0:
-	# ROM: 0x575E20
 	.4byte 0x43300000
 	.4byte 0
 

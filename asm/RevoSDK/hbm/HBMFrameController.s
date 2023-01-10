@@ -53,9 +53,9 @@ calc__Q210homebutton15FrameControllerFv:
 /* 8031F32C 002E88EC  41 82 00 A8 */	beq .L_8031F3D4
 /* 8031F330 002E88F0  4E 80 00 20 */	blr
 .L_8031F334:
-/* 8031F334 002E88F4  3C 80 80 52 */	lis r4, float_80518668@ha
+/* 8031F334 002E88F4  3C 80 80 52 */	lis r4, lbl_80518668@ha
 /* 8031F338 002E88F8  C0 63 00 04 */	lfs f3, 4(r3)
-/* 8031F33C 002E88FC  C0 44 86 68 */	lfs f2, float_80518668@l(r4)
+/* 8031F33C 002E88FC  C0 44 86 68 */	lfs f2, lbl_80518668@l(r4)
 /* 8031F340 002E8900  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 8031F344 002E8904  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 8031F348 002E8908  EC 43 10 28 */	fsubs f2, f3, f2
@@ -99,9 +99,9 @@ calc__Q210homebutton15FrameControllerFv:
 /* 8031F3D4 002E8994  88 03 00 1C */	lbz r0, 0x1c(r3)
 /* 8031F3D8 002E8998  2C 00 00 00 */	cmpwi r0, 0
 /* 8031F3DC 002E899C  40 82 00 40 */	bne .L_8031F41C
-/* 8031F3E0 002E89A0  3C 80 80 52 */	lis r4, float_80518668@ha
+/* 8031F3E0 002E89A0  3C 80 80 52 */	lis r4, lbl_80518668@ha
 /* 8031F3E4 002E89A4  C0 63 00 04 */	lfs f3, 4(r3)
-/* 8031F3E8 002E89A8  C0 44 86 68 */	lfs f2, float_80518668@l(r4)
+/* 8031F3E8 002E89A8  C0 44 86 68 */	lfs f2, lbl_80518668@l(r4)
 /* 8031F3EC 002E89AC  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 8031F3F0 002E89B0  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 8031F3F4 002E89B4  EC 43 10 28 */	fsubs f2, f3, f2
@@ -130,9 +130,8 @@ calc__Q210homebutton15FrameControllerFv:
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global float_80518668
-float_80518668:
-	# ROM: 0x514768
+.global lbl_80518668
+lbl_80518668:
 	.float 1.0
 	.4byte 0
 

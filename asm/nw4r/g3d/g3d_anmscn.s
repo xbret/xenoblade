@@ -1638,7 +1638,6 @@ GetTypeObj__Q34nw4r3g3d6AnmScnCFv:
 
 .global lbl_80520F38
 lbl_80520F38:
-	# ROM: 0x51D038
 	.4byte 0x00000007
 	.asciz "AnmScn"
 	.balign 4
@@ -1647,7 +1646,6 @@ lbl_80520F38:
 
 .global lbl_80520F48
 lbl_80520F48:
-	# ROM: 0x51D048
 	.4byte 0x0000000A
 	.asciz "AnmScnRes"
 	.balign 4
@@ -1656,7 +1654,6 @@ lbl_80520F48:
 
 .global lbl_8056CD70
 lbl_8056CD70:
-	# ROM: 0x568E70
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d9AnmScnResCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1697,7 +1694,6 @@ lbl_8056CD70:
 
 .global lbl_8056CE00
 lbl_8056CE00:
-	# ROM: 0x568F00
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d6AnmScnCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1739,32 +1735,27 @@ lbl_8056CE00:
 
 .global float_8066C3A0
 float_8066C3A0:
-	# ROM: 0x576200
-	.4byte 0
+	.float 0
 
 
 .global float_8066C3A4
 float_8066C3A4:
-	# ROM: 0x576204
-	.4byte 0xD01502F9
+	.float -10000000000 #0xD01502F9
 
 
 .global float_8066C3A8
 float_8066C3A8:
-	# ROM: 0x576208
 	.float 1.0
 	.4byte 0
 
 
 .global double_8066C3B0
 double_8066C3B0:
-	# ROM: 0x576210
 	.4byte 0x43300000
 	.4byte 0x80000000
 
 
 .global float_8066C3B8
 float_8066C3B8:
-	# ROM: 0x576218
 	.float 0.5
 	.4byte 0

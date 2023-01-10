@@ -2807,7 +2807,6 @@ btsnd_hcic_vendor_spec_cmd:
 
 .global lbl_8050E260
 lbl_8050E260:
-	# ROM: 0x50A360
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFF7F0000

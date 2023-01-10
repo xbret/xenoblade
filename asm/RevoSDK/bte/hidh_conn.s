@@ -2406,7 +2406,6 @@ lbl_80546BB0:
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global lbl_8050E270
 lbl_8050E270:
-	# ROM: 0x50A370
 	.4byte hidh_l2cif_connect_ind
 	.4byte hidh_l2cif_connect_cfm
 	.4byte 0

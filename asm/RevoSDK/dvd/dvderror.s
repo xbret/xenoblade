@@ -724,13 +724,11 @@ __DVDStoreErrorCode:
 
 .global lbl_80549D30
 lbl_80549D30:
-	# ROM: 0x545E30
 	.asciz "/shared2/test2/dvderror.dat"
 
 
 .global lbl_80549D4C
 lbl_80549D4C:
-	# ROM: 0x545E4C
 	.asciz "/shared2/test2"
 	.balign 4
 	.4byte 0

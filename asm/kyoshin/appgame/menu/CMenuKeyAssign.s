@@ -3085,7 +3085,6 @@ __RTTI__CMenuKeyAssign:
 
 .global double_80669948
 double_80669948:
-	# ROM: 0x5737A8
 	.4byte 0x43300000
 	.4byte 0
 

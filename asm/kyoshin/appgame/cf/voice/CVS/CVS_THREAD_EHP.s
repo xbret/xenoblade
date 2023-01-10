@@ -869,7 +869,6 @@ cf_CVS_THREAD_EHP_typestr:
 
 .global lbl_8053D248
 lbl_8053D248:
-	# ROM: 0x539348
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A617C
@@ -895,7 +894,6 @@ lbl_8053D26C:
 
 .global lbl_8053D278
 lbl_8053D278:
-	# ROM: 0x539378
 	.4byte switch_802A652C
 	.4byte switch_802A64B8
 	.4byte switch_802A64C0
@@ -951,19 +949,16 @@ __RTTI__cf_CVS_THREAD_EHP:
 
 .global float_8066B538
 float_8066B538:
-	# ROM: 0x575398
-	.4byte 0
+	.float 0
 
 
 .global float_8066B53C
 float_8066B53C:
-	# ROM: 0x57539C
-	.4byte 0x3E99999A
+	.float 0.3 #0x3E99999A
 
 
 .global double_8066B540
 double_8066B540:
-	# ROM: 0x5753A0
 	.4byte 0x43300000
 	.4byte 0x80000000
 

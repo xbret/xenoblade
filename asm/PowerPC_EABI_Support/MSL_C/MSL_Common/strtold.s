@@ -258,13 +258,13 @@ __strtold:
 .L_802C2DAC:
 /* 802C2DAC 0028C36C  2C 0E 00 00 */	cmpwi r14, 0
 /* 802C2DB0 0028C370  41 82 00 14 */	beq .L_802C2DC4
-/* 802C2DB4 0028C374  3C 60 80 66 */	lis r3, float_8066588C@ha
-/* 802C2DB8 0028C378  C0 03 58 8C */	lfs f0, float_8066588C@l(r3)
+/* 802C2DB4 0028C374  3C 60 80 66 */	lis r3, lbl_8066588C@ha
+/* 802C2DB8 0028C378  C0 03 58 8C */	lfs f0, lbl_8066588C@l(r3)
 /* 802C2DBC 0028C37C  FC 20 00 50 */	fneg f1, f0
 /* 802C2DC0 0028C380  48 00 00 0C */	b .L_802C2DCC
 .L_802C2DC4:
-/* 802C2DC4 0028C384  3C 60 80 66 */	lis r3, float_8066588C@ha
-/* 802C2DC8 0028C388  C0 23 58 8C */	lfs f1, float_8066588C@l(r3)
+/* 802C2DC4 0028C384  3C 60 80 66 */	lis r3, lbl_8066588C@ha
+/* 802C2DC8 0028C388  C0 23 58 8C */	lfs f1, lbl_8066588C@l(r3)
 .L_802C2DCC:
 /* 802C2DCC 0028C38C  80 01 00 98 */	lwz r0, 0x98(r1)
 /* 802C2DD0 0028C390  80 61 00 0C */	lwz r3, 0xc(r1)
@@ -1451,47 +1451,40 @@ strtof:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global float_8066588C
-float_8066588C:
-	# ROM: 0x57146C
-	.4byte 0x7F800000
+.global lbl_8066588C
+lbl_8066588C:
+	.4byte 0x7F800000 #infinity
 
 
 .global double_80665890
 double_80665890:
-	# ROM: 0x571470
 	.4byte 0x7FF00000
 	.4byte 0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global lbl_8066B878
 lbl_8066B878:
-	# ROM: 0x5756D8
 	.4byte 0x4E414E28
 
 
 .global lbl_8066B87C
 lbl_8066B87C:
-	# ROM: 0x5756DC
 	.4byte 0
 
 
 .global double_8066B880
 double_8066B880:
-	# ROM: 0x5756E0
 	.4byte 0
 	.4byte 0
 
 
 .global double_8066B888
 double_8066B888:
-	# ROM: 0x5756E8
 	.4byte 0x00100000
 	.4byte 0
 
 
 .global double_8066B890
 double_8066B890:
-	# ROM: 0x5756F0
 	.4byte 0x7FEFFFFF
 	.4byte 0xFFFFFFFF

@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80451F20
-func_80451F20:
+.global __ct__CDeviceFileJobReadDvd
+__ct__CDeviceFileJobReadDvd:
 /* 80451F20 0041B4E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80451F24 0041B4E4  7C 08 02 A6 */	mflr r0
 /* 80451F28 0041B4E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -392,7 +392,7 @@ lbl_8001CFE4:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-.4byte func_80451F20
+.4byte __ct__CDeviceFileJobReadDvd
 	.4byte 0x00000044
 	.4byte lbl_8001CFAC
 	.4byte func_80451F64

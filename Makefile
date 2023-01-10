@@ -204,11 +204,10 @@ $(ELF): $(O_FILES) $(LDSCRIPT_DOL)
 	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT_DOL) @build/o_files
 endif
 
-#$(BUILD_DIR)/%.o: %.s | $(DTK)
-$(BUILD_DIR)/%.o: %.s
+$(BUILD_DIR)/%.o: %.s | $(DTK)
 	@echo Assembling $<
 	$(QUIET) $(AS) $(ASFLAGS) -o $@ $<
-#$(QUIET) $(DTK) elf fixup $@ $@
+	$(QUIET) $(DTK) elf fixup $@ $@
 
 $(BUILD_DIR)/%.o: %.c
 	@echo "Compiling " $<

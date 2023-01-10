@@ -90,7 +90,6 @@ do_calc__Q210homebutton18GroupAnmControllerFv:
 
 .global __vt__homebutton_GroupAnmController
 __vt__homebutton_GroupAnmController:
-	# ROM: 0x548340
 	.4byte __RTTI__homebutton_GroupAnmController
 	.4byte 0
 	.4byte __dt__Q210homebutton15FrameControllerFv

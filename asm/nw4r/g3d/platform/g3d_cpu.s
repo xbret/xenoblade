@@ -161,6 +161,5 @@ ZeroMemory16ByteBlocks__Q34nw4r3g3d6detailFPvUl:
 
 .global float_8066C3E0
 float_8066C3E0:
-	# ROM: 0x576240
-	.4byte 0
+	.float 0
 	.4byte 0

@@ -63,32 +63,27 @@ sinit_804C86C0:
 
 .global float_8066D838
 float_8066D838:
-	# ROM: 0x577698
 	.float 1.0
 
 
 .global float_8066D83C
 float_8066D83C:
-	# ROM: 0x57769C
-	.4byte 0
+	.float 0
 
 
 .global float_8066D840
 float_8066D840:
-	# ROM: 0x5776A0
-	.4byte 0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
 
 
 .global float_8066D844
 float_8066D844:
-	# ROM: 0x5776A4
-	.4byte 0x40A00000
+	.float 5 #0x40A00000
 
 
 .global float_8066D848
 float_8066D848:
-	# ROM: 0x5776A8
-	.4byte 0x43C58000
+	.float 395 #0x43C58000
 	.4byte 0
 
 

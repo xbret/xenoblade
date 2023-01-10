@@ -7610,7 +7610,6 @@ lbl_80503FAC:
 
 .global lbl_805393D8
 lbl_805393D8:
-	# ROM: 0x5354D8
 	.4byte switch_8021438C
 	.4byte switch_80214310
 	.4byte switch_80214318
@@ -7685,56 +7684,47 @@ __RTTI__CMCCrystalBox:
 
 .global float_8066AD30
 float_8066AD30:
-	# ROM: 0x574B90
 	.float 1.0
 
 
 .global float_8066AD34
 float_8066AD34:
-	# ROM: 0x574B94
-	.4byte 0xC28E0000
+	.float -71 #0xC28E0000
 
 
 .global float_8066AD38
 float_8066AD38:
-	# ROM: 0x574B98
-	.4byte 0x42300000
+	.float 44 #0x42300000
 
 
 .global float_8066AD3C
 float_8066AD3C:
-	# ROM: 0x574B9C
-	.4byte 0x41800000
+	.float 16 #0x41800000
 
 
 .global float_8066AD40
 float_8066AD40:
-	# ROM: 0x574BA0
 	.float 100.0
 
 
 .global float_8066AD44
 float_8066AD44:
-	# ROM: 0x574BA4
-	.4byte 0x3D23D70A
+	.float 0.04 #0x3D23D70A
 
 
 .global float_8066AD48
 float_8066AD48:
-	# ROM: 0x574BA8
-	.4byte 0xC2680000
+	.float -58 #0xC2680000
 
 
 .global float_8066AD4C
 float_8066AD4C:
-	# ROM: 0x574BAC
-	.4byte 0xC2640000
+	.float -57 #0xC2640000
 
 
 .global float_8066AD50
 float_8066AD50:
-	# ROM: 0x574BB0
-	.4byte 0x43B90000
+	.float 370 #0x43B90000
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

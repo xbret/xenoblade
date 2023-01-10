@@ -114,7 +114,6 @@ bta_usb_close_evt:
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global lbl_8050DF30
 lbl_8050DF30:
-	# ROM: 0x50A030
 	.4byte hcisu_h2_init
 	.4byte hcisu_h2_open
 	.4byte hcisu_h2_close
@@ -124,7 +123,6 @@ lbl_8050DF30:
 
 .global lbl_8050DF48
 lbl_8050DF48:
-	# ROM: 0x50A048
 	.4byte 0x40020400
 	.4byte 0x000F2000
 	.4byte 0x13880000
@@ -186,30 +184,25 @@ lbl_8050DFD8:
 
 .global lbl_806658D8
 lbl_806658D8:
-	# ROM: 0x5714B8
 	.4byte lbl_8050DF54
 
 
 .global lbl_806658DC
 lbl_806658DC:
-	# ROM: 0x5714BC
 	.4byte lbl_8050DF60
 
 .global lbl_806658E0
 lbl_806658E0:
-	# ROM: 0x5714C0
 	.4byte lbl_8066DCE0
 
 
 .global lbl_806658E4
 lbl_806658E4:
-	# ROM: 0x5714C4
 	.4byte lbl_8050DF74
 
 
 .global lbl_806658E8
 lbl_806658E8:
-	# ROM: 0x5714C8
 	.4byte lbl_8050DFC0
 	.4byte 0
 
@@ -221,13 +214,11 @@ lbl_806658F0:
 
 .global lbl_806658F8
 lbl_806658F8:
-	# ROM: 0x5714D8
 	.4byte lbl_8050DFD8
 	.4byte 0
 
 .global lbl_80665900
 lbl_80665900:
-	# ROM: 0x5714E0
 	.4byte lbl_8066BF40
 	.4byte 0
 
@@ -238,19 +229,16 @@ lbl_80665908:
 
 .global lbl_80665910
 lbl_80665910:
-	# ROM: 0x5714F0
 	.4byte 0x0A5C2101
 	.4byte 0
 
 .global lbl_80665918
 lbl_80665918:
-	# ROM: 0x5714F8
 	.4byte 0x01000000
 
 
 .global lbl_8066591C
 lbl_8066591C:
-	# ROM: 0x5714FC
 	.4byte 0x00000001
 
 

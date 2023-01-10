@@ -5877,7 +5877,6 @@ sinit_80250CB4:
 
 .global lbl_80506E98
 lbl_80506E98:
-	# ROM: 0x502F98
 	.4byte 0
 	.4byte 0x00010017
 	.4byte 0x002E0048
@@ -6028,7 +6027,6 @@ lbl_80507190:
 
 .global lbl_805071B0
 lbl_805071B0:
-	# ROM: 0x5032B0
 	.4byte 0
 	.4byte lbl_80506ED4
 	.4byte lbl_80506EF0
@@ -6191,7 +6189,6 @@ lbl_80507478:
 
 .global lbl_80507490
 lbl_80507490:
-	# ROM: 0x503590
 	.4byte 0
 	.4byte lbl_80507220
 	.4byte lbl_80507238
@@ -6407,7 +6404,6 @@ lbl_80507540:
 
 .global lbl_8053A768
 lbl_8053A768:
-	# ROM: 0x536868
 	.4byte switch_8024F520
 	.4byte switch_8024F520
 	.4byte switch_8024F22C
@@ -6561,50 +6557,42 @@ __RTTI__CFloorCur:
 
 .global float_8066B050
 float_8066B050:
-	# ROM: 0x574EB0
 	.float 10.0
 
 
 .global float_8066B054
 float_8066B054:
-	# ROM: 0x574EB4
-	.4byte 0xC4440000
+	.float -784 #0xC4440000
 
 
 .global float_8066B058
 float_8066B058:
-	# ROM: 0x574EB8
-	.4byte 0x40E66666
+	.float 7.2 #0x40E66666
 
 
 .global float_8066B05C
 float_8066B05C:
-	# ROM: 0x574EBC
-	.4byte 0x44440000
+	.float 784 #0x44440000
 
 
 .global float_8066B060
 float_8066B060:
-	# ROM: 0x574EC0
-	.4byte 0x45000000
+	.float 2048 #0x45000000
 
 
 .global float_8066B064
 float_8066B064:
-	# ROM: 0x574EC4
-	.4byte 0x44200000
+	.float 640 #0x44200000
 
 
 .global float_8066B068
 float_8066B068:
-	# ROM: 0x574EC8
 	.float -1.0
 
 
 .global float_8066B06C
 float_8066B06C:
-	# ROM: 0x574ECC
-	.4byte 0x40000000
+	.float 2 #0x40000000
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

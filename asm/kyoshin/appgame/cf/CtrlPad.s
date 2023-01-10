@@ -573,7 +573,6 @@ cf_CtrlRemote_typestr:
 
 .global lbl_8052B3D8
 lbl_8052B3D8:
-	# ROM: 0x5274D8
 	.4byte 0
 	.4byte 0
 	.4byte 0x00000010
@@ -711,8 +710,7 @@ __RTTI__cf_CtrlRemote:
 
 .global float_80668FA0
 float_80668FA0:
-	# ROM: 0x572E00
-	.4byte 0x3CC90FDB
+	.float 0.0245436933 #0x3CC90FDB
 	.4byte 0
 	
 
