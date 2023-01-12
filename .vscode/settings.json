@@ -5,4 +5,7 @@
 	"[cpp]": {
 	  "files.encoding": "shiftjis"
 	},
+	"files.exclude": {
+        "**/CVS": false
+    }
 }
