@@ -4770,8 +4770,7 @@ float_8066C21C:
 
 .global double_8066C220
 double_8066C220:
-	.4byte 0x3FB84D9D
-	.4byte 0xE0000000
+	.double 0.094934336841106415 #0x3FB84D9DE0000000
 
 
 .global float_8066C228
@@ -4786,8 +4785,7 @@ float_8066C22C:
 
 .global double_8066C230
 double_8066C230:
-	.4byte 0x3FB1CD3C
-	.4byte 0x80000000
+	.double 0.069537907838821411 #0x3FB1CD3C80000000
 
 
 .global float_8066C238
@@ -4808,9 +4806,7 @@ float_8066C240:
 
 .global double_8066C248
 double_8066C248:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066C250
 float_8066C250:
@@ -4820,9 +4816,7 @@ float_8066C250:
 
 .global double_8066C258
 double_8066C258:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805E1200

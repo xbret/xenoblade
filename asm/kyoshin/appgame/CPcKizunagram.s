@@ -6761,9 +6761,7 @@ lbl_8066B15C:
 
 .global double_8066B160
 double_8066B160:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066B168
 float_8066B168:
@@ -6779,9 +6777,7 @@ float_8066B170:
 
 .global double_8066B178
 double_8066B178:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066B180
 float_8066B180:
@@ -6815,9 +6811,7 @@ float_8066B194:
 
 .global double_8066B198
 double_8066B198:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 

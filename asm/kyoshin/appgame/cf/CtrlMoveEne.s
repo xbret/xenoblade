@@ -10594,9 +10594,7 @@ float_80668EA4:
 
 .global double_80668EA8
 double_80668EA8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_80668EB0
 float_80668EB0:
@@ -10646,9 +10644,7 @@ float_80668ED0:
 
 .global double_80668ED8
 double_80668ED8:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_80668EE0
 float_80668EE0:

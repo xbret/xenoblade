@@ -2543,9 +2543,7 @@ float_8066A94C:
 
 .global double_8066A950
 double_8066A950:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .global lbl_8066A958
 lbl_8066A958:
 	.asciz "wpn"

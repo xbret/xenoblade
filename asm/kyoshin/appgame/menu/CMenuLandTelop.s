@@ -1666,14 +1666,12 @@ float_80669C90:
 
 .global double_80669C98
 double_80669C98:
-	.4byte 0x3FE00000
-	.4byte 0
+	.double 0.5 #0x3FE0000000000000
 
 
 .global double_80669CA0
 double_80669CA0:
-	.4byte 0xBFE00000
-	.4byte 0
+	.double -0.5 #0xBFE0000000000000
 
 
 .global float_80669CA8
@@ -1694,9 +1692,7 @@ float_80669CB0:
 
 .global double_80669CB8
 double_80669CB8:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

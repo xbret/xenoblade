@@ -192,9 +192,7 @@ lbl_80518B7C:
 
 .global double_80518B80
 double_80518B80:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global lbl_80518B88
 lbl_80518B88:

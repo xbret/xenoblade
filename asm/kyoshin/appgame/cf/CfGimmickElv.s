@@ -1758,9 +1758,7 @@ float_8066AC44:
 
 .global double_8066AC48
 double_8066AC48:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066AC50
 float_8066AC50:

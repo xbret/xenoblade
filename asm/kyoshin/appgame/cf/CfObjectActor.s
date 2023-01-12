@@ -3106,20 +3106,16 @@ float_8066A000:
 
 .global double_8066A008
 double_8066A008:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global double_8066A010
 double_8066A010:
-	.4byte 0x3FE00000
-	.4byte 0
+	.double 0.5 #0x3FE0000000000000
 
 
 .global double_8066A018
 double_8066A018:
-	.4byte 0xBFE00000
-	.4byte 0
+	.double -0.5 #0xBFE0000000000000
 
 
 .global float_8066A020

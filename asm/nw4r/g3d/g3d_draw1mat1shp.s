@@ -965,8 +965,7 @@ float_8066C410:
 
 .global double_8066C418
 double_8066C418:
-	.4byte 0x40100000
-	.4byte 0
+	.double 4 #0x4010000000000000
 
 
 .global float_8066C420

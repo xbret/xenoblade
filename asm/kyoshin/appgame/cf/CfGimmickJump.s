@@ -1448,15 +1448,11 @@ float_8066ACCC:
 
 .global double_8066ACD0
 double_8066ACD0:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global double_8066ACD8
 double_8066ACD8:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066ACE0
 float_8066ACE0:

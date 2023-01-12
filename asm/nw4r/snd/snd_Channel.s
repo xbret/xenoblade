@@ -1324,15 +1324,11 @@ float_8066C718:
 
 .global double_8066C720
 double_8066C720:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_8066C728
 double_8066C728:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066C730
 float_8066C730:

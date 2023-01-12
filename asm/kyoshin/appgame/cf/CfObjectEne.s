@@ -4966,15 +4966,11 @@ float_80669260:
 
 .global double_80669268
 double_80669268:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_80669270
 double_80669270:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_80669278
 float_80669278:
@@ -4988,14 +4984,12 @@ float_8066927C:
 
 .global double_80669280
 double_80669280:
-	.4byte 0x3FE00000
-	.4byte 0
+	.double 0.5 #0x3FE0000000000000
 
 
 .global double_80669288
 double_80669288:
-	.4byte 0xBFE00000
-	.4byte 0
+	.double -0.5 #0xBFE0000000000000
 
 
 .global float_80669290
@@ -5006,9 +5000,7 @@ float_80669290:
 
 .global double_80669298
 double_80669298:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80009584

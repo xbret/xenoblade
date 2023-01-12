@@ -2736,7 +2736,7 @@ func_8007E514:
 /* 8007E670 00047C30  38 7E 00 28 */	addi r3, r30, 0x28
 /* 8007E674 00047C34  38 84 00 5D */	addi r4, r4, 0x5d
 /* 8007E678 00047C38  4C C6 31 82 */	crclr 6
-/* 8007E67C 00047C3C  4B FC 81 9D */	bl Print_80046818
+/* 8007E67C 00047C3C  4B FC 81 9D */	bl CTaskGameEff_vsnprintf
 /* 8007E680 00047C40  48 00 00 24 */	b .L_8007E6A4
 .L_8007E684:
 /* 8007E684 00047C44  3C 80 80 4F */	lis r4, lbl_804F7094@ha
@@ -2746,7 +2746,7 @@ func_8007E514:
 /* 8007E694 00047C54  38 7E 00 28 */	addi r3, r30, 0x28
 /* 8007E698 00047C58  38 84 00 65 */	addi r4, r4, 0x65
 /* 8007E69C 00047C5C  4C C6 31 82 */	crclr 6
-/* 8007E6A0 00047C60  4B FC 81 79 */	bl Print_80046818
+/* 8007E6A0 00047C60  4B FC 81 79 */	bl CTaskGameEff_vsnprintf
 .L_8007E6A4:
 /* 8007E6A4 00047C64  48 01 E7 E5 */	bl func_8009CE88
 /* 8007E6A8 00047C68  48 10 7C 19 */	bl func_801862C0
@@ -7263,7 +7263,7 @@ func_8008228C:
 /* 800822C0 0004B880  38 61 00 08 */	addi r3, r1, 8
 /* 800822C4 0004B884  38 84 00 98 */	addi r4, r4, 0x98
 /* 800822C8 0004B888  4C C6 31 82 */	crclr 6
-/* 800822CC 0004B88C  4B FC 45 4D */	bl Print_80046818
+/* 800822CC 0004B88C  4B FC 45 4D */	bl CTaskGameEff_vsnprintf
 /* 800822D0 0004B890  38 61 00 08 */	addi r3, r1, 8
 /* 800822D4 0004B894  4B FE 17 F9 */	bl func_80063ACC
 /* 800822D8 0004B898  4B FF FF 81 */	bl func_80082258
@@ -12027,7 +12027,7 @@ func_800863F4:
 /* 8008645C 0004FA1C  90 01 00 48 */	stw r0, 0x48(r1)
 /* 80086460 0004FA20  38 84 00 E9 */	addi r4, r4, 0xe9
 /* 80086464 0004FA24  4C C6 31 82 */	crclr 6
-/* 80086468 0004FA28  4B FC 03 B1 */	bl Print_80046818
+/* 80086468 0004FA28  4B FC 03 B1 */	bl CTaskGameEff_vsnprintf
 /* 8008646C 0004FA2C  38 61 00 08 */	addi r3, r1, 8
 /* 80086470 0004FA30  38 80 00 00 */	li r4, 0
 /* 80086474 0004FA34  38 A0 00 00 */	li r5, 0
@@ -13612,8 +13612,7 @@ float_80668D80:
 
 .global double_80668D88
 double_80668D88:
-	.4byte 0
-	.4byte 0
+	.double 0
 
 
 .global float_80668D90
@@ -13638,27 +13637,21 @@ float_80668D9C:
 
 .global double_80668DA0
 double_80668DA0:
-	.4byte 0x3FE00000
-	.4byte 0
+	.double 0.5 #0x3FE0000000000000
 
 
 .global double_80668DA8
 double_80668DA8:
-	.4byte 0xBFE00000
-	.4byte 0
+	.double -0.5 #0xBFE0000000000000
 
 
 .global double_80668DB0
 double_80668DB0:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_80668DB8
 double_80668DB8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_80668DC0
 float_80668DC0:

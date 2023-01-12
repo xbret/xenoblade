@@ -12811,9 +12811,7 @@ float_80669BB4:
 
 .global double_80669BB8
 double_80669BB8:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_80669BC0
 float_80669BC0:
@@ -12913,21 +12911,17 @@ float_80669C08:
 
 .global double_80669C10
 double_80669C10:
-	.4byte 0x40000000
-	.4byte 0
+	.double 2 #0x4000000000000000
 
 
 .global double_80669C18
 double_80669C18:
-	.4byte 0x3FE00000
-	.4byte 0
+	.double 0.5 #0x3FE0000000000000
 
 
 .global double_80669C20
 double_80669C20:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_80577328

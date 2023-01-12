@@ -809,9 +809,7 @@ float_8066BED4:
 
 .global double_8066BED8
 double_8066BED8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066BEE0
 float_8066BEE0:

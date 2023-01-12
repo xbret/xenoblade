@@ -929,15 +929,11 @@ float_8066DA8C:
 
 .global double_8066DA90
 double_8066DA90:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global double_8066DA98
 double_8066DA98:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80020B20

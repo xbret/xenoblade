@@ -2433,9 +2433,7 @@ float_8066A058:
 
 .global double_8066A060
 double_8066A060:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066A068
 float_8066A068:
@@ -2445,9 +2443,7 @@ float_8066A068:
 
 .global double_8066A070
 double_8066A070:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066A078
 float_8066A078:

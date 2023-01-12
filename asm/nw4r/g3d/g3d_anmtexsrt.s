@@ -893,9 +893,7 @@ float_8066C36C:
 
 .global double_8066C370
 double_8066C370:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066C378
 float_8066C378:

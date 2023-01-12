@@ -1737,9 +1737,7 @@ float_806691E0:
 
 .global double_806691E8
 double_806691E8:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_806691F0
 float_806691F0:

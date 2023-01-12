@@ -1967,9 +1967,7 @@ float_8066CCFC:
 
 .global double_8066CD00
 double_8066CD00:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066CD08
 float_8066CD08:
@@ -1999,9 +1997,7 @@ float_8066CD18:
 
 .global double_8066CD20
 double_8066CD20:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 .global CLibHbm_typestr
 CLibHbm_typestr:
 	.asciz "CLibHbm"
@@ -2079,9 +2075,7 @@ float_8066CD64:
 
 .global double_8066CD68
 double_8066CD68:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

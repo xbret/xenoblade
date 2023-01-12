@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_800602B8
-func_800602B8:
+.global select
+select:
 /* 800602B8 00029878  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800602BC 0002987C  7C 08 02 A6 */	mflr r0
 /* 800602C0 00029880  38 80 00 01 */	li r4, 1
@@ -19,8 +19,8 @@ func_800602B8:
 /* 800602E8 000298A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 800602EC 000298AC  4E 80 00 20 */	blr 
 
-.global func_800602F0
-func_800602F0:
+.global restore
+restore:
 /* 800602F0 000298B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800602F4 000298B4  7C 08 02 A6 */	mflr r0
 /* 800602F8 000298B8  38 80 00 01 */	li r4, 1
@@ -78,8 +78,8 @@ func_800602F0:
 /* 800603B8 00029978  38 21 00 20 */	addi r1, r1, 0x20
 /* 800603BC 0002997C  4E 80 00 20 */	blr 
 
-.global func_800603C0
-func_800603C0:
+.global setPos
+setPos:
 /* 800603C0 00029980  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 800603C4 00029984  7C 08 02 A6 */	mflr r0
 /* 800603C8 00029988  38 80 00 01 */	li r4, 1
@@ -146,8 +146,8 @@ func_800603C0:
 /* 800604BC 00029A7C  38 21 00 40 */	addi r1, r1, 0x40
 /* 800604C0 00029A80  4E 80 00 20 */	blr 
 
-.global func_800604C4
-func_800604C4:
+.global setLookat
+setLookat:
 /* 800604C4 00029A84  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 800604C8 00029A88  7C 08 02 A6 */	mflr r0
 /* 800604CC 00029A8C  38 80 00 01 */	li r4, 1
@@ -220,8 +220,8 @@ func_800604C4:
 func_800605D0:
 /* 800605D0 00029B90  4E 80 00 20 */	blr 
 
-.global func_800605D4
-func_800605D4:
+.global setDir
+setDir:
 /* 800605D4 00029B94  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 800605D8 00029B98  7C 08 02 A6 */	mflr r0
 /* 800605DC 00029B9C  38 80 00 01 */	li r4, 1
@@ -281,8 +281,8 @@ func_800605D4:
 func_800606AC:
 /* 800606AC 00029C6C  4E 80 00 20 */	blr 
 
-.global func_800606B0
-func_800606B0:
+.global setRotX
+setRotX:
 /* 800606B0 00029C70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800606B4 00029C74  7C 08 02 A6 */	mflr r0
 /* 800606B8 00029C78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -322,8 +322,8 @@ func_800606B0:
 func_80060738:
 /* 80060738 00029CF8  4E 80 00 20 */	blr 
 
-.global func_8006073C
-func_8006073C:
+.global setRotY
+setRotY:
 /* 8006073C 00029CFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80060740 00029D00  7C 08 02 A6 */	mflr r0
 /* 80060744 00029D04  90 01 00 24 */	stw r0, 0x24(r1)
@@ -363,8 +363,8 @@ func_8006073C:
 func_800607C4:
 /* 800607C4 00029D84  4E 80 00 20 */	blr 
 
-.global func_800607C8
-func_800607C8:
+.global setFov
+setFov:
 /* 800607C8 00029D88  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800607CC 00029D8C  7C 08 02 A6 */	mflr r0
 /* 800607D0 00029D90  38 80 00 01 */	li r4, 1
@@ -396,8 +396,8 @@ func_800607C8:
 /* 80060838 00029DF8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8006083C 00029DFC  4E 80 00 20 */	blr 
 
-.global func_80060840
-func_80060840:
+.global setTarget
+setTarget:
 /* 80060840 00029E00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80060844 00029E04  7C 08 02 A6 */	mflr r0
 /* 80060848 00029E08  38 80 00 01 */	li r4, 1
@@ -422,8 +422,8 @@ func_80060840:
 /* 80060894 00029E54  38 21 00 10 */	addi r1, r1, 0x10
 /* 80060898 00029E58  4E 80 00 20 */	blr 
 
-.global func_8006089C
-func_8006089C:
+.global setPosOfs
+setPosOfs:
 /* 8006089C 00029E5C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 800608A0 00029E60  7C 08 02 A6 */	mflr r0
 /* 800608A4 00029E64  90 01 00 54 */	stw r0, 0x54(r1)
@@ -522,8 +522,8 @@ func_8006089C:
 func_80060A08:
 /* 80060A08 00029FC8  4E 80 00 20 */	blr 
 
-.global func_80060A0C
-func_80060A0C:
+.global setLookatOfs
+setLookatOfs:
 /* 80060A0C 00029FCC  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80060A10 00029FD0  7C 08 02 A6 */	mflr r0
 /* 80060A14 00029FD4  90 01 00 54 */	stw r0, 0x54(r1)
@@ -625,8 +625,8 @@ func_80060A0C:
 func_80060B84:
 /* 80060B84 0002A144  4E 80 00 20 */	blr 
 
-.global func_80060B88
-func_80060B88:
+.global getPos
+getPos:
 /* 80060B88 0002A148  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80060B8C 0002A14C  7C 08 02 A6 */	mflr r0
 /* 80060B90 0002A150  38 80 00 01 */	li r4, 1
@@ -690,8 +690,8 @@ func_80060B88:
 /* 80060C6C 0002A22C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80060C70 0002A230  4E 80 00 20 */	blr 
 
-.global func_80060C74
-func_80060C74:
+.global getRot
+getRot:
 /* 80060C74 0002A234  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80060C78 0002A238  7C 08 02 A6 */	mflr r0
 /* 80060C7C 0002A23C  38 80 00 01 */	li r4, 1
@@ -761,8 +761,8 @@ func_80060C74:
 /* 80060D70 0002A330  38 21 00 20 */	addi r1, r1, 0x20
 /* 80060D74 0002A334  4E 80 00 20 */	blr 
 
-.global func_80060D78
-func_80060D78:
+.global keyBegin
+keyBegin:
 /* 80060D78 0002A338  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80060D7C 0002A33C  7C 08 02 A6 */	mflr r0
 /* 80060D80 0002A340  38 80 00 01 */	li r4, 1
@@ -854,8 +854,8 @@ func_80060D78:
 /* 80060EBC 0002A47C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80060EC0 0002A480  4E 80 00 20 */	blr 
 
-.global func_80060EC4
-func_80060EC4:
+.global keyEnd
+keyEnd:
 /* 80060EC4 0002A484  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80060EC8 0002A488  7C 08 02 A6 */	mflr r0
 /* 80060ECC 0002A48C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -866,8 +866,8 @@ func_80060EC4:
 /* 80060EE0 0002A4A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80060EE4 0002A4A4  4E 80 00 20 */	blr 
 
-.global func_80060EE8
-func_80060EE8:
+.global keyAdd
+keyAdd:
 /* 80060EE8 0002A4A8  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80060EEC 0002A4AC  7C 08 02 A6 */	mflr r0
 /* 80060EF0 0002A4B0  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1016,8 +1016,8 @@ func_80060EE8:
 /* 8006111C 0002A6DC  38 21 00 60 */	addi r1, r1, 0x60
 /* 80061120 0002A6E0  4E 80 00 20 */	blr 
 
-.global func_80061124
-func_80061124:
+.global isKeyMove
+isKeyMove:
 /* 80061124 0002A6E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80061128 0002A6E8  7C 08 02 A6 */	mflr r0
 /* 8006112C 0002A6EC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1038,8 +1038,8 @@ func_80061124:
 /* 80061168 0002A728  38 21 00 20 */	addi r1, r1, 0x20
 /* 8006116C 0002A72C  4E 80 00 20 */	blr 
 
-.global func_80061170
-func_80061170:
+.global waitKeyMove
+waitKeyMove:
 /* 80061170 0002A730  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80061174 0002A734  7C 08 02 A6 */	mflr r0
 /* 80061178 0002A738  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1058,8 +1058,8 @@ func_80061170:
 /* 800611A8 0002A768  38 21 00 10 */	addi r1, r1, 0x10
 /* 800611AC 0002A76C  4E 80 00 20 */	blr 
 
-.global func_800611B0
-func_800611B0:
+.global shake
+shake:
 /* 800611B0 0002A770  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 800611B4 0002A774  7C 08 02 A6 */	mflr r0
 /* 800611B8 0002A778  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -1255,8 +1255,8 @@ func_800611B0:
 /* 800614B0 0002AA70  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 800614B4 0002AA74  4E 80 00 20 */	blr 
 
-.global func_800614B8
-func_800614B8:
+.global stopShake
+stopShake:
 /* 800614B8 0002AA78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800614BC 0002AA7C  7C 08 02 A6 */	mflr r0
 /* 800614C0 0002AA80  38 60 00 00 */	li r3, 0
@@ -1284,45 +1284,45 @@ func_800614E0:
 .global lbl_80529D90
 lbl_80529D90:
 	.4byte lbl_80668A08
-	.4byte func_800602B8
+	.4byte select
 	.4byte lbl_80668A10
-	.4byte func_800602F0
+	.4byte restore
 	.4byte lbl_80668A18
-	.4byte func_800603C0
+	.4byte setPos
 	.4byte lbl_80668A20
-	.4byte func_800605D4
+	.4byte setDir
 	.4byte lbl_804F6980
-	.4byte func_800604C4
+	.4byte setLookat
 	.4byte lbl_804F698C
-	.4byte func_80060840
+	.4byte setTarget
 	.4byte lbl_80668A28
-	.4byte func_800606B0
+	.4byte setRotX
 	.4byte lbl_80668A30
-	.4byte func_8006073C
+	.4byte setRotY
 	.4byte lbl_80668A38
-	.4byte func_800607C8
+	.4byte setFov
 	.4byte lbl_80668A40
-	.4byte func_80060B88
+	.4byte getPos
 	.4byte lbl_80668A48
-	.4byte func_80060C74
+	.4byte getRot
 	.4byte lbl_804F6998
-	.4byte func_8006089C
+	.4byte setPosOfs
 	.4byte lbl_804F69A4
-	.4byte func_80060A0C
+	.4byte setLookatOfs
 	.4byte lbl_804F69B4
-	.4byte func_80060D78
+	.4byte keyBegin
 	.4byte lbl_80668A50
-	.4byte func_80060EC4
+	.4byte keyEnd
 	.4byte lbl_80668A58
-	.4byte func_80060EE8
+	.4byte keyAdd
 	.4byte lbl_804F69C0
-	.4byte func_80061124
+	.4byte isKeyMove
 	.4byte lbl_804F69CC
-	.4byte func_80061170
+	.4byte waitKeyMove
 	.4byte lbl_80668A60
-	.4byte func_800611B0
+	.4byte shake
 	.4byte lbl_804F69D8
-	.4byte func_800614B8
+	.4byte stopShake
 	.4byte 0
 	.4byte 0
 
@@ -1382,9 +1382,7 @@ float_806689F0:
 
 .global double_806689F8
 double_806689F8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_80668A00
 float_80668A00:
@@ -1557,63 +1555,63 @@ lbl_80007984:
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
-	.4byte func_800602B8
+	.4byte select
 	.4byte 0x00000038
 	.4byte lbl_800078EC
-	.4byte func_800602F0
+	.4byte restore
 	.4byte 0x000000D0
 	.4byte lbl_800078F4
-	.4byte func_800603C0
+	.4byte setPos
 	.4byte 0x00000104
 	.4byte lbl_800078FC
-	.4byte func_800604C4
+	.4byte setLookat
 	.4byte 0x0000010C
 	.4byte lbl_80007904
-	.4byte func_800605D4
+	.4byte setDir
 	.4byte 0x000000D8
 	.4byte lbl_8000790C
-	.4byte func_800606B0
+	.4byte setRotX
 	.4byte 0x00000088
 	.4byte lbl_80007914
-	.4byte func_8006073C
+	.4byte setRotY
 	.4byte 0x00000088
 	.4byte lbl_8000791C
-	.4byte func_800607C8
+	.4byte setFov
 	.4byte 0x00000078
 	.4byte lbl_80007924
-	.4byte func_80060840
+	.4byte setTarget
 	.4byte 0x0000005C
 	.4byte lbl_8000792C
-	.4byte func_8006089C
+	.4byte setPosOfs
 	.4byte 0x0000016C
 	.4byte lbl_80007934
-	.4byte func_80060A0C
+	.4byte setLookatOfs
 	.4byte 0x00000178
 	.4byte lbl_8000793C
-	.4byte func_80060B88
+	.4byte getPos
 	.4byte 0x000000EC
 	.4byte lbl_80007944
-	.4byte func_80060C74
+	.4byte getRot
 	.4byte 0x00000104
 	.4byte lbl_8000794C
-	.4byte func_80060D78
+	.4byte keyBegin
 	.4byte 0x0000014C
 	.4byte lbl_80007954
-	.4byte func_80060EC4
+	.4byte keyEnd
 	.4byte 0x00000024
 	.4byte lbl_8000795C
-	.4byte func_80060EE8
+	.4byte keyAdd
 	.4byte 0x0000023C
 	.4byte lbl_80007964
-	.4byte func_80061124
+	.4byte isKeyMove
 	.4byte 0x0000004C
 	.4byte lbl_8000796C
-	.4byte func_80061170
+	.4byte waitKeyMove
 	.4byte 0x00000040
 	.4byte lbl_80007974
-	.4byte func_800611B0
+	.4byte shake
 	.4byte 0x00000308
 	.4byte lbl_8000797C
-	.4byte func_800614B8
+	.4byte stopShake
 	.4byte 0x00000028
 	.4byte lbl_80007984

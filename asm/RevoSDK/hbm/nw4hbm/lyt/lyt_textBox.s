@@ -919,10 +919,10 @@ func_80333900:
 /* 80333A2C 002FCFEC  4B F8 63 31 */	bl __ptmf_scall
 /* 80333A30 002FCFF0  60 00 00 00 */	nop 
 /* 80333A34 002FCFF4  3C A0 80 52 */	lis r5, lbl_80518AC0@ha
-/* 80333A38 002FCFF8  3C 80 80 52 */	lis r4, double_80518AC8@ha
+/* 80333A38 002FCFF8  3C 80 80 52 */	lis r4, lbl_80518AC8@ha
 /* 80333A3C 002FCFFC  C3 65 8A C0 */	lfs f27, lbl_80518AC0@l(r5)
 /* 80333A40 002FD000  7C 7D 1B 78 */	mr r29, r3
-/* 80333A44 002FD004  CB A4 8A C8 */	lfd f29, double_80518AC8@l(r4)
+/* 80333A44 002FD004  CB A4 8A C8 */	lfd f29, lbl_80518AC8@l(r4)
 /* 80333A48 002FD008  3E E0 43 30 */	lis r23, 0x4330
 /* 80333A4C 002FD00C  48 00 02 40 */	b .L_80333C8C
 .L_80333A50:
@@ -1440,12 +1440,11 @@ lbl_80518AC0:
 	.4byte 0
 
 
-.global double_80518AC8
-double_80518AC8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-	.float 0.5
-	.float 1.0
+.global lbl_80518AC8
+lbl_80518AC8:
+	.8byte 0x4330000080000000
+	.4byte 0x3F000000
+	.4byte 0x3F800000
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

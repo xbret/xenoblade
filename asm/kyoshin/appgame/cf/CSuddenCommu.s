@@ -3070,9 +3070,7 @@ float_8066A6F8:
 
 .global double_8066A700
 double_8066A700:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066A708
 float_8066A708:

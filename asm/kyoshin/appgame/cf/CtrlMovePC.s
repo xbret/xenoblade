@@ -7117,9 +7117,7 @@ float_8066A4A4:
 
 .global double_8066A4A8
 double_8066A4A8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066A4B0
 float_8066A4B0:

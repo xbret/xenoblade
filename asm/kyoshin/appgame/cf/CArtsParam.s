@@ -1766,15 +1766,11 @@ float_80669D4C:
 
 .global double_80669D50
 double_80669D50:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_80669D58
 double_80669D58:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_80577580

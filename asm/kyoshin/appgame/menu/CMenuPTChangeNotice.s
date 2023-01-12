@@ -1017,9 +1017,7 @@ float_8066B42C:
 
 .global double_8066B430
 double_8066B430:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066B438
 float_8066B438:

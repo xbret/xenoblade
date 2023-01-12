@@ -10824,8 +10824,7 @@ float_80668C00:
 
 .global double_80668C08
 double_80668C08:
-	.4byte 0
-	.4byte 0
+	.double 0
 
 
 .global float_80668C10

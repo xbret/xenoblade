@@ -3120,9 +3120,7 @@ func_80102018:
 
 .global double_806697D8
 double_806697D8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_806697E0
 float_806697E0:

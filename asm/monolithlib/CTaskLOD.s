@@ -2260,15 +2260,11 @@ float_8066CD84:
 
 .global double_8066CD88
 double_8066CD88:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_8066CD90
 double_8066CD90:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066CD98
 float_8066CD98:
@@ -2317,9 +2313,7 @@ float_8066CDBC:
 
 .global double_8066CDC0
 double_8066CDC0:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

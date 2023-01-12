@@ -1268,13 +1268,13 @@ double_80520B38:
 	.4byte 0x43300000
 	.4byte 0x80000000
 	.4byte 0x3FF00000
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x40EFFFE0
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x41DFFFFF
 	.4byte 0xFFC00000
 	.4byte 0x43300000
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x416FFFFF
 	.4byte 0xE0000000
 	.4byte 0xC1600000

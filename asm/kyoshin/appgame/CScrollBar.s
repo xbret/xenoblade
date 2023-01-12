@@ -2192,15 +2192,11 @@ float_8066A9FC:
 
 .global double_8066AA00
 double_8066AA00:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_8066AA08
 double_8066AA08:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066AA10
 float_8066AA10:

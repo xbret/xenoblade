@@ -7556,9 +7556,7 @@ float_8066A380:
 
 .global double_8066A388
 double_8066A388:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066A390
 float_8066A390:
@@ -7591,9 +7589,7 @@ float_8066A3AC:
 
 .global double_8066A3B0
 double_8066A3B0:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066A3B8
 float_8066A3B8:
@@ -7713,9 +7709,7 @@ float_8066A410:
 
 .global double_8066A418
 double_8066A418:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 .global lbl_80666BF8

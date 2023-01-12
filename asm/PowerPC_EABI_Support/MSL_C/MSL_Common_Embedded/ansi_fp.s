@@ -1907,39 +1907,32 @@ lbl_8050CF18:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global double_8066B820
 double_8066B820:
-	.4byte 0
-	.4byte 0
+	.double 0
 
 
 .global double_8066B828
 double_8066B828:
-	.4byte 0x3FF00000
-	.4byte 0
+	.double 1 #0x3FF0000000000000
 
 
 .global double_8066B830
 double_8066B830:
-	.4byte 0xBFF00000
-	.4byte 0
+	.double -1 #0xBFF0000000000000
 
 
 .global double_8066B838
 double_8066B838:
-	.4byte 0x40140000
-	.4byte 0
+	.double 5 #0x4014000000000000
 
 
 .global double_8066B840
 double_8066B840:
-	.4byte 0x7FEFFFFF
-	.4byte 0xFFFFFFFF
+	.8byte 0x7FEFFFFFFFFFFFFF #max double val
 
 
 .global double_8066B848
 double_8066B848:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_8066B850
 double_8066B850:

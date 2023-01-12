@@ -3085,9 +3085,7 @@ __RTTI__CMenuKeyAssign:
 
 .global double_80669948
 double_80669948:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 .global lbl_806668A0

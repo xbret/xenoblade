@@ -1853,9 +1853,7 @@ float_8066D108:
 
 .global double_8066D110
 double_8066D110:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .global lbl_8066D118
 lbl_8066D118:
 	.asciz "move"
@@ -1920,14 +1918,12 @@ float_8066D160:
 
 .global double_8066D168
 double_8066D168:
-	.4byte 0x3FF00000
-	.4byte 0
+	.double 1 #0x3FF0000000000000
 
 
 .global double_8066D170
 double_8066D170:
-	.4byte 0
-	.4byte 0
+	.double 0
 
 
 .global float_8066D178

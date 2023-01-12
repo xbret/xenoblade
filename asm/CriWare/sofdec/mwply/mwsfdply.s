@@ -740,15 +740,12 @@ MWSFD_IsEndPrepareStop:
 
 .global double_8051E7B0
 double_8051E7B0:
-	.4byte 0x3FE99999
-	.4byte 0x9999999A
+	.double 0.8 #0x3FE999999999999A
 
 
 .global double_8051E7B8
 double_8051E7B8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global lbl_8051E7C0
 lbl_8051E7C0:

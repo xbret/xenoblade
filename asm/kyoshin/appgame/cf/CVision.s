@@ -8703,8 +8703,8 @@ func_801AAD08:
 /* 801AAD18 001742D8  98 03 00 18 */	stb r0, 0x18(r3)
 /* 801AAD1C 001742DC  4E 80 00 20 */	blr 
 
-.global func_801AAD20
-func_801AAD20:
+.global playBgm
+playBgm:
 /* 801AAD20 001742E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801AAD24 001742E4  7C 08 02 A6 */	mflr r0
 /* 801AAD28 001742E8  38 80 00 01 */	li r4, 1
@@ -8764,8 +8764,8 @@ func_801AAD20:
 /* 801AADF8 001743B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 801AADFC 001743BC  4E 80 00 20 */	blr 
 
-.global func_801AAE00
-func_801AAE00:
+.global stopBgm
+stopBgm:
 /* 801AAE00 001743C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801AAE04 001743C4  7C 08 02 A6 */	mflr r0
 /* 801AAE08 001743C8  38 80 00 01 */	li r4, 1
@@ -8813,8 +8813,8 @@ func_801AAE00:
 /* 801AAEA8 00174468  38 21 00 20 */	addi r1, r1, 0x20
 /* 801AAEAC 0017446C  4E 80 00 20 */	blr 
 
-.global func_801AAEB0
-func_801AAEB0:
+.global setFieldBgm
+setFieldBgm:
 /* 801AAEB0 00174470  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AAEB4 00174474  7C 08 02 A6 */	mflr r0
 /* 801AAEB8 00174478  90 01 00 34 */	stw r0, 0x34(r1)
@@ -8922,8 +8922,8 @@ func_801AAEB0:
 /* 801AB030 001745F0  38 21 00 30 */	addi r1, r1, 0x30
 /* 801AB034 001745F4  4E 80 00 20 */	blr 
 
-.global func_801AB038
-func_801AB038:
+.global setTownBgm
+setTownBgm:
 /* 801AB038 001745F8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AB03C 001745FC  7C 08 02 A6 */	mflr r0
 /* 801AB040 00174600  90 01 00 34 */	stw r0, 0x34(r1)
@@ -9031,8 +9031,8 @@ func_801AB038:
 /* 801AB1B8 00174778  38 21 00 30 */	addi r1, r1, 0x30
 /* 801AB1BC 0017477C  4E 80 00 20 */	blr 
 
-.global func_801AB1C0
-func_801AB1C0:
+.global stopFieldBgm
+stopFieldBgm:
 /* 801AB1C0 00174780  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AB1C4 00174784  7C 08 02 A6 */	mflr r0
 /* 801AB1C8 00174788  38 80 00 01 */	li r4, 1
@@ -9090,8 +9090,8 @@ func_801AB1C0:
 /* 801AB290 00174850  38 21 00 30 */	addi r1, r1, 0x30
 /* 801AB294 00174854  4E 80 00 20 */	blr 
 
-.global func_801AB298
-func_801AB298:
+.global stopTownBgm
+stopTownBgm:
 /* 801AB298 00174858  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AB29C 0017485C  7C 08 02 A6 */	mflr r0
 /* 801AB2A0 00174860  38 80 00 01 */	li r4, 1
@@ -9149,8 +9149,8 @@ func_801AB298:
 /* 801AB368 00174928  38 21 00 30 */	addi r1, r1, 0x30
 /* 801AB36C 0017492C  4E 80 00 20 */	blr 
 
-.global func_801AB370
-func_801AB370:
+.global forceFieldBgm
+forceFieldBgm:
 /* 801AB370 00174930  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AB374 00174934  7C 08 02 A6 */	mflr r0
 /* 801AB378 00174938  38 60 00 00 */	li r3, 0
@@ -9162,8 +9162,8 @@ func_801AB370:
 /* 801AB390 00174950  38 21 00 10 */	addi r1, r1, 0x10
 /* 801AB394 00174954  4E 80 00 20 */	blr 
 
-.global func_801AB398
-func_801AB398:
+.global setVolBgm
+setVolBgm:
 /* 801AB398 00174958  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AB39C 0017495C  7C 08 02 A6 */	mflr r0
 /* 801AB3A0 00174960  38 80 00 01 */	li r4, 1
@@ -9226,8 +9226,8 @@ func_801AB398:
 /* 801AB47C 00174A3C  38 21 00 30 */	addi r1, r1, 0x30
 /* 801AB480 00174A40  4E 80 00 20 */	blr 
 
-.global func_801AB484
-func_801AB484:
+.global playVoice
+playVoice:
 /* 801AB484 00174A44  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 801AB488 00174A48  7C 08 02 A6 */	mflr r0
 /* 801AB48C 00174A4C  38 80 00 01 */	li r4, 1
@@ -9273,8 +9273,8 @@ func_801AB484:
 /* 801AB524 00174AE4  38 21 01 20 */	addi r1, r1, 0x120
 /* 801AB528 00174AE8  4E 80 00 20 */	blr 
 
-.global func_801AB52C
-func_801AB52C:
+.global stopVoice
+stopVoice:
 /* 801AB52C 00174AEC  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 801AB530 00174AF0  7C 08 02 A6 */	mflr r0
 /* 801AB534 00174AF4  38 80 00 01 */	li r4, 1
@@ -9336,8 +9336,8 @@ func_801AB52C:
 /* 801AB5FC 00174BBC  38 21 01 20 */	addi r1, r1, 0x120
 /* 801AB600 00174BC0  4E 80 00 20 */	blr 
 
-.global func_801AB604
-func_801AB604:
+.global waitVoice
+waitVoice:
 /* 801AB604 00174BC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AB608 00174BC8  7C 08 02 A6 */	mflr r0
 /* 801AB60C 00174BCC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -9357,8 +9357,8 @@ func_801AB604:
 /* 801AB640 00174C00  38 21 00 10 */	addi r1, r1, 0x10
 /* 801AB644 00174C04  4E 80 00 20 */	blr 
 
-.global func_801AB648
-func_801AB648:
+.global playSeCommon
+playSeCommon:
 /* 801AB648 00174C08  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AB64C 00174C0C  7C 08 02 A6 */	mflr r0
 /* 801AB650 00174C10  38 80 00 01 */	li r4, 1
@@ -9465,8 +9465,8 @@ func_801AB648:
 /* 801AB7D0 00174D90  38 21 00 30 */	addi r1, r1, 0x30
 /* 801AB7D4 00174D94  4E 80 00 20 */	blr 
 
-.global func_801AB7D8
-func_801AB7D8:
+.global playSeMap
+playSeMap:
 /* 801AB7D8 00174D98  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AB7DC 00174D9C  7C 08 02 A6 */	mflr r0
 /* 801AB7E0 00174DA0  38 80 00 01 */	li r4, 1
@@ -9573,8 +9573,8 @@ func_801AB7D8:
 /* 801AB960 00174F20  38 21 00 30 */	addi r1, r1, 0x30
 /* 801AB964 00174F24  4E 80 00 20 */	blr 
 
-.global func_801AB968
-func_801AB968:
+.global volSeMap
+volSeMap:
 /* 801AB968 00174F28  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AB96C 00174F2C  7C 08 02 A6 */	mflr r0
 /* 801AB970 00174F30  38 80 00 01 */	li r4, 1
@@ -9654,8 +9654,8 @@ func_801AB968:
 /* 801ABA88 00175048  38 21 00 30 */	addi r1, r1, 0x30
 /* 801ABA8C 0017504C  4E 80 00 20 */	blr 
 
-.global func_801ABA90
-func_801ABA90:
+.global stopSeCommon
+stopSeCommon:
 /* 801ABA90 00175050  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801ABA94 00175054  7C 08 02 A6 */	mflr r0
 /* 801ABA98 00175058  38 80 00 01 */	li r4, 1
@@ -9697,8 +9697,8 @@ func_801ABA90:
 /* 801ABB28 001750E8  38 21 00 20 */	addi r1, r1, 0x20
 /* 801ABB2C 001750EC  4E 80 00 20 */	blr 
 
-.global func_801ABB30
-func_801ABB30:
+.global stopSeMap
+stopSeMap:
 /* 801ABB30 001750F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801ABB34 001750F4  7C 08 02 A6 */	mflr r0
 /* 801ABB38 001750F8  38 80 00 01 */	li r4, 1
@@ -9740,8 +9740,8 @@ func_801ABB30:
 /* 801ABBC8 00175188  38 21 00 20 */	addi r1, r1, 0x20
 /* 801ABBCC 0017518C  4E 80 00 20 */	blr 
 
-.global func_801ABBD0
-func_801ABBD0:
+.global seCamPos
+seCamPos:
 /* 801ABBD0 00175190  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 801ABBD4 00175194  7C 08 02 A6 */	mflr r0
 /* 801ABBD8 00175198  90 01 00 54 */	stw r0, 0x54(r1)
@@ -9864,8 +9864,8 @@ func_801ABBD0:
 /* 801ABD98 00175358  38 21 00 50 */	addi r1, r1, 0x50
 /* 801ABD9C 0017535C  4E 80 00 20 */	blr 
 
-.global func_801ABDA0
-func_801ABDA0:
+.global clearCamPos
+clearCamPos:
 /* 801ABDA0 00175360  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ABDA4 00175364  7C 08 02 A6 */	mflr r0
 /* 801ABDA8 00175368  90 01 00 14 */	stw r0, 0x14(r1)
@@ -10300,41 +10300,41 @@ lbl_80536BA4:
 .global lbl_80536BB0
 lbl_80536BB0:
 	.4byte lbl_8066A668
-	.4byte func_801AAD20
+	.4byte playBgm
 	.4byte lbl_8066A670
-	.4byte func_801AAE00
+	.4byte stopBgm
 	.4byte lbl_804FF8A0
-	.4byte func_801AAEB0
+	.4byte setFieldBgm
 	.4byte lbl_804FF8AC
-	.4byte func_801AB038
+	.4byte setTownBgm
 	.4byte lbl_804FF8B8
-	.4byte func_801AB1C0
+	.4byte stopFieldBgm
 	.4byte lbl_804FF8C8
-	.4byte func_801AB298
+	.4byte stopTownBgm
 	.4byte lbl_804FF8D4
-	.4byte func_801AB370
+	.4byte forceFieldBgm
 	.4byte lbl_804FF8E4
-	.4byte func_801AB398
+	.4byte setVolBgm
 	.4byte lbl_804FF8F0
-	.4byte func_801AB484
+	.4byte playVoice
 	.4byte lbl_804FF8FC
-	.4byte func_801AB52C
+	.4byte stopVoice
 	.4byte lbl_804FF908
-	.4byte func_801AB604
+	.4byte waitVoice
 	.4byte lbl_804FF914
-	.4byte func_801AB648
+	.4byte playSeCommon
 	.4byte lbl_804FF924
-	.4byte func_801AB7D8
+	.4byte playSeMap
 	.4byte lbl_804FF930
-	.4byte func_801AB968
+	.4byte volSeMap
 	.4byte lbl_804FF93C
-	.4byte func_801ABA90
+	.4byte stopSeCommon
 	.4byte lbl_804FF94C
-	.4byte func_801ABB30
+	.4byte stopSeMap
 	.4byte lbl_804FF958
-	.4byte func_801ABBD0
+	.4byte seCamPos
 	.4byte lbl_804FF964
-	.4byte func_801ABDA0
+	.4byte clearCamPos
 	.4byte 0
 	.4byte 0
 
@@ -10443,21 +10443,17 @@ float_8066A5D0:
 
 .global double_8066A5D8
 double_8066A5D8:
-	.4byte 0x3FE00000
-	.4byte 0
+	.double 0.5 #0x3FE0000000000000
 
 
 .global double_8066A5E0
 double_8066A5E0:
-	.4byte 0xBFE00000
-	.4byte 0
+	.double -0.5 #0xBFE0000000000000
 
 
 .global double_8066A5E8
 double_8066A5E8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066A5F0
 float_8066A5F0:
@@ -10511,9 +10507,7 @@ float_8066A614:
 
 .global double_8066A618
 double_8066A618:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066A620
 float_8066A620:
@@ -10553,15 +10547,11 @@ float_8066A638:
 
 .global double_8066A640
 double_8066A640:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global double_8066A648
 double_8066A648:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066A650
 float_8066A650:
@@ -10575,9 +10565,7 @@ float_8066A654:
 
 .global double_8066A658
 double_8066A658:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066A660
 float_8066A660:
@@ -11114,57 +11102,57 @@ lbl_8000FB7C:
 	.4byte func_801AAB64
 	.4byte 0x0000010C
 	.4byte lbl_8000FAEC
-	.4byte func_801AAD20
+	.4byte playBgm
 	.4byte 0x000000E0
 	.4byte lbl_8000FAF4
-	.4byte func_801AAE00
+	.4byte stopBgm
 	.4byte 0x000000B0
 	.4byte lbl_8000FAFC
-	.4byte func_801AAEB0
+	.4byte setFieldBgm
 	.4byte 0x00000188
 	.4byte lbl_8000FB04
-	.4byte func_801AB038
+	.4byte setTownBgm
 	.4byte 0x00000188
 	.4byte lbl_8000FB0C
-	.4byte func_801AB1C0
+	.4byte stopFieldBgm
 	.4byte 0x000000D8
 	.4byte lbl_8000FB14
-	.4byte func_801AB298
+	.4byte stopTownBgm
 	.4byte 0x000000D8
 	.4byte lbl_8000FB1C
-	.4byte func_801AB370
+	.4byte forceFieldBgm
 	.4byte 0x00000028
 	.4byte lbl_8000FB24
-	.4byte func_801AB398
+	.4byte setVolBgm
 	.4byte 0x000000EC
 	.4byte lbl_8000FB2C
-	.4byte func_801AB484
+	.4byte playVoice
 	.4byte 0x000000A8
 	.4byte lbl_8000FB34
-	.4byte func_801AB52C
+	.4byte stopVoice
 	.4byte 0x000000D8
 	.4byte lbl_8000FB3C
-	.4byte func_801AB604
+	.4byte waitVoice
 	.4byte 0x00000044
 	.4byte lbl_8000FB44
-	.4byte func_801AB648
+	.4byte playSeCommon
 	.4byte 0x00000190
 	.4byte lbl_8000FB4C
-	.4byte func_801AB7D8
+	.4byte playSeMap
 	.4byte 0x00000190
 	.4byte lbl_8000FB54
-	.4byte func_801AB968
+	.4byte volSeMap
 	.4byte 0x00000128
 	.4byte lbl_8000FB5C
-	.4byte func_801ABA90
+	.4byte stopSeCommon
 	.4byte 0x000000A0
 	.4byte lbl_8000FB64
-	.4byte func_801ABB30
+	.4byte stopSeMap
 	.4byte 0x000000A0
 	.4byte lbl_8000FB6C
-	.4byte func_801ABBD0
+	.4byte seCamPos
 	.4byte 0x000001D0
 	.4byte lbl_8000FB74
-	.4byte func_801ABDA0
+	.4byte clearCamPos
 	.4byte 0x0000002C
 	.4byte lbl_8000FB7C

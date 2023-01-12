@@ -4149,9 +4149,7 @@ float_8066CAFC:
 
 .global double_8066CB00
 double_8066CB00:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066CB08
 float_8066CB08:

@@ -601,9 +601,7 @@ float_8066C1D8:
 
 .global double_8066C1E0
 double_8066C1E0:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805D5500

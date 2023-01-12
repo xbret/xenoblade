@@ -606,9 +606,7 @@ float_8066AED0:
 
 .global double_8066AED8
 double_8066AED8:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800156E8

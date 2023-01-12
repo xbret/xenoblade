@@ -4980,9 +4980,7 @@ func_804E30F0:
 
 .global double_8066DA30
 double_8066DA30:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066DA38
 float_8066DA38:
@@ -4992,15 +4990,11 @@ float_8066DA38:
 
 .global double_8066DA40
 double_8066DA40:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_8066DA48
 double_8066DA48:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066DA50
 float_8066DA50:

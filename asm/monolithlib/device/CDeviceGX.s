@@ -783,15 +783,11 @@ float_8066CBF8:
 
 .global double_8066CC00
 double_8066CC00:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_8066CC08
 double_8066CC08:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 .global lbl_80667F70

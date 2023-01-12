@@ -672,9 +672,7 @@ float_8066C9D0:
 #unsigned int to float constant
 .global double_8066C9D8
 double_8066C9D8:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066C9E0
 float_8066C9E0:

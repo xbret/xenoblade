@@ -4263,9 +4263,7 @@ float_8066BDC8:
 
 .global double_8066BDD0
 double_8066BDD0:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 .global lbl_80581A40
 lbl_80581A40:

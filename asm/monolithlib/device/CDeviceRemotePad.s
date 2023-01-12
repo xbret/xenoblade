@@ -1467,14 +1467,11 @@ float_8066CB34:
 
 .global double_8066CB38
 double_8066CB38:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_8066CB40
 double_8066CB40:
-	.4byte 0x3FA11111
-	.4byte 0x11111111
+	.double 0.033333333333333333 #0x3FA1111111111111
 
 
 .global float_8066CB48
@@ -1485,9 +1482,7 @@ float_8066CB48:
 
 .global double_8066CB50
 double_8066CB50:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066CB58
 float_8066CB58:

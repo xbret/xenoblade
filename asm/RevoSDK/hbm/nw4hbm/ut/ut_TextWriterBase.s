@@ -5781,9 +5781,7 @@ lbl_80518B40:
 
 .global double_80518B48
 double_80518B48:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global lbl_80518B50
 lbl_80518B50:

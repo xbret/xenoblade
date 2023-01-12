@@ -1,6 +1,6 @@
 .include "macros.inc"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900s
+.section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .global func_8049FCAC
 func_8049FCAC:
@@ -22127,9 +22127,7 @@ float_8066D5F4:
 
 .global double_8066D5F8
 double_8066D5F8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066D600
 float_8066D600:

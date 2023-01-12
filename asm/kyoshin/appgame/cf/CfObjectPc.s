@@ -2044,9 +2044,7 @@ float_806693F0:
 
 .global double_806693F8
 double_806693F8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_80669400
 float_80669400:
@@ -2056,9 +2054,7 @@ float_80669400:
 
 .global double_80669408
 double_80669408:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80009F70

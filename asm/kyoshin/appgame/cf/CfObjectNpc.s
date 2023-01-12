@@ -719,9 +719,7 @@ float_806693C4:
 
 .global double_806693C8
 double_806693C8:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_800BF340

@@ -155,8 +155,8 @@ func_80061698:
 /* 800616D8 0002AC98  38 21 00 10 */	addi r1, r1, 0x10
 /* 800616DC 0002AC9C  4E 80 00 20 */	blr 
 
-.global func_800616E0
-func_800616E0:
+
+get:
 /* 800616E0 0002ACA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800616E4 0002ACA4  7C 08 02 A6 */	mflr r0
 /* 800616E8 0002ACA8  38 80 00 01 */	li r4, 1
@@ -221,8 +221,7 @@ func_800616E0:
 /* 800617B4 0002AD74  38 21 00 20 */	addi r1, r1, 0x20
 /* 800617B8 0002AD78  4E 80 00 20 */	blr 
 
-.global func_800617BC
-func_800617BC:
+enable:
 /* 800617BC 0002AD7C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800617C0 0002AD80  7C 08 02 A6 */	mflr r0
 /* 800617C4 0002AD84  38 80 00 01 */	li r4, 1
@@ -5302,9 +5301,9 @@ CTTask_CTaskGameEffAfter_hierarchy:
 .global lbl_80529EC0
 lbl_80529EC0:
 	.4byte lbl_80668A68
-	.4byte func_800616E0
+	.4byte get
 	.4byte lbl_80668A6C
-	.4byte func_800617BC
+	.4byte enable
 	.4byte 0
 	.4byte 0
 
@@ -5914,10 +5913,10 @@ lbl_80007C3C:
 	.4byte func_80061698
 	.4byte 0x00000048
 	.4byte lbl_800079AC
-	.4byte func_800616E0
+	.4byte get
 	.4byte 0x000000DC
 	.4byte lbl_800079B4
-	.4byte func_800617BC
+	.4byte enable
 	.4byte 0x000000A0
 	.4byte lbl_800079BC
 	.4byte func_80061870

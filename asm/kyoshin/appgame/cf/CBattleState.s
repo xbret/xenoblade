@@ -4624,8 +4624,7 @@ float_80669CC4:
 
 .global double_80669CC8
 double_80669CC8:
-	.4byte 0x3FF80000
-	.4byte 0
+	.double 1.5 #0x3FF8000000000000
 
 
 .global float_80669CD0

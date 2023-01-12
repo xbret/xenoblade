@@ -14591,15 +14591,11 @@ float_8066A8DC:
 
 .global double_8066A8E0
 double_8066A8E0:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_8066A8E8
 double_8066A8E8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global lbl_8066A8F0
 lbl_8066A8F0:

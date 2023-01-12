@@ -9256,14 +9256,12 @@ float_8066CE84:
 
 .global double_8066CE88
 double_8066CE88:
-	.4byte 0x3FF33333
-	.4byte 0x40000000
+	.double 1.2000000476837158 #0x3FF3333340000000
 
 
 .global double_8066CE90
 double_8066CE90:
-	.4byte 0x3F70624D
-	.4byte 0xD2F1A9FC
+	.double 0.004 #0x3F70624DD2F1A9FC
 
 
 .global float_8066CE98
@@ -9274,15 +9272,11 @@ float_8066CE98:
 
 .global double_8066CEA0
 double_8066CEA0:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_8066CEA8
 double_8066CEA8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066CEB0
 float_8066CEB0:
@@ -9432,9 +9426,7 @@ float_8066CF24:
 
 .global double_8066CF28
 double_8066CF28:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066CF30
 float_8066CF30:
@@ -9540,9 +9532,7 @@ float_8066CF80:
 
 .global double_8066CF88
 double_8066CF88:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global lbl_8066CF90
 lbl_8066CF90:

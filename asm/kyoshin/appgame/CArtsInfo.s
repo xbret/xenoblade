@@ -7253,9 +7253,7 @@ float_8066AF4C:
 
 .global double_8066AF50
 double_8066AF50:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066AF58
 float_8066AF58:
@@ -7269,9 +7267,7 @@ float_8066AF5C:
 
 .global double_8066AF60
 double_8066AF60:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066AF68
 float_8066AF68:
@@ -7295,14 +7291,12 @@ float_8066AF74:
 
 .global double_8066AF78
 double_8066AF78:
-	.4byte 0x40140000
-	.4byte 0
+	.double 5 #0x4014000000000000
 
 
 .global double_8066AF80
 double_8066AF80:
-	.4byte 0x3FF40000
-	.4byte 0
+	.double 1.25 #0x3FF4000000000000
 
 
 .global float_8066AF88

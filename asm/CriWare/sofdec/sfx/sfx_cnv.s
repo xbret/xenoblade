@@ -1038,9 +1038,7 @@ lbl_80520854:
 
 .global double_80520858
 double_80520858:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global lbl_80520860
 lbl_80520860:

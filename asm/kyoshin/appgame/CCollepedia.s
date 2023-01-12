@@ -2650,9 +2650,7 @@ float_8066B0B0:
 
 .global double_8066B0B8
 double_8066B0B8:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066B0C0
 float_8066B0C0:
@@ -2666,9 +2664,7 @@ float_8066B0C4:
 
 .global double_8066B0C8
 double_8066B0C8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 .global CCLPCur_typestr
 CCLPCur_typestr:
 	.asciz "CCLPCur"

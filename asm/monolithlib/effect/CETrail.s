@@ -2396,9 +2396,7 @@ float_8066D920:
 
 .global double_8066D928
 double_8066D928:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066D930
 float_8066D930:
@@ -2442,9 +2440,7 @@ float_8066D954:
 
 .global double_8066D958
 double_8066D958:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066D960
 float_8066D960:
@@ -2468,15 +2464,11 @@ float_8066D96C:
 
 .global double_8066D970
 double_8066D970:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global double_8066D978
 double_8066D978:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066D980
 float_8066D980:
@@ -2486,9 +2478,7 @@ float_8066D980:
 
 .global double_8066D988
 double_8066D988:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

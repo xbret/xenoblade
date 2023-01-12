@@ -625,9 +625,7 @@ float_80668B28:
 
 .global double_80668B30
 double_80668B30:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_80668B38
 float_80668B38:
@@ -699,10 +697,10 @@ float_80668B6C:
 	.float 40.7436638 #0x4222F983
 
 
+#weird muladd constant?
 .global double_80668B70
 double_80668B70:
-	.4byte 0x3F847AE1
-	.4byte 0x40000000
+	.8byte 0x3F847AE140000000 #0.0099999997764825821
 
 .section extab, "a"  # 0x800066E0 - 0x80021020
 

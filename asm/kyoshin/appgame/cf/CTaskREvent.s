@@ -4513,9 +4513,7 @@ float_80669EEC:
 
 .global double_80669EF0
 double_80669EF0:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_80669EF8
 float_80669EF8:

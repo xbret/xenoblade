@@ -1788,9 +1788,7 @@ lbl_80518B1C:
 
 .global double_80518B20
 double_80518B20:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global lbl_80518B28
 lbl_80518B28:
@@ -1800,9 +1798,7 @@ lbl_80518B28:
 
 .global double_80518B30
 double_80518B30:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805CD7E0

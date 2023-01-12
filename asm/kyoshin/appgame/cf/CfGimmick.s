@@ -2684,15 +2684,11 @@ float_8066AC24:
 
 .global double_8066AC28
 double_8066AC28:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global double_8066AC30
 double_8066AC30:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066AC38
 float_8066AC38:

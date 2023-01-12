@@ -541,9 +541,7 @@ float_8066D380:
 
 .global double_8066D388
 double_8066D388:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001F698

@@ -2117,9 +2117,7 @@ float_8066DA08:
 
 .global double_8066DA10
 double_8066DA10:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066DA18
 float_8066DA18:
@@ -2139,9 +2137,7 @@ float_8066DA20:
 
 .global double_8066DA28
 double_8066DA28:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 .section extab, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800207E8

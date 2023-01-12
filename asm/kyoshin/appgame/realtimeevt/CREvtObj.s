@@ -125,8 +125,8 @@ func_801857F4:
 /* 80185800 0014EDC0  38 84 5B 18 */	addi r4, r4, lbl_80535B18@l
 /* 80185804 0014EDC4  48 31 B3 8C */	b func_804A0B90
 
-.global func_80185808
-func_80185808:
+.global startObserve
+startObserve:
 /* 80185808 0014EDC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8018580C 0014EDCC  7C 08 02 A6 */	mflr r0
 /* 80185810 0014EDD0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -139,8 +139,8 @@ func_80185808:
 /* 8018582C 0014EDEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80185830 0014EDF0  4E 80 00 20 */	blr 
 
-.global func_80185834
-func_80185834:
+.global endObserve
+endObserve:
 /* 80185834 0014EDF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80185838 0014EDF8  7C 08 02 A6 */	mflr r0
 /* 8018583C 0014EDFC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -153,8 +153,8 @@ func_80185834:
 /* 80185858 0014EE18  38 21 00 10 */	addi r1, r1, 0x10
 /* 8018585C 0014EE1C  4E 80 00 20 */	blr 
 
-.global func_80185860
-func_80185860:
+.global defeatingCount
+defeatingCount:
 /* 80185860 0014EE20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80185864 0014EE24  7C 08 02 A6 */	mflr r0
 /* 80185868 0014EE28  38 80 00 01 */	li r4, 1
@@ -184,8 +184,8 @@ func_80185860:
 /* 801858C8 0014EE88  38 21 00 20 */	addi r1, r1, 0x20
 /* 801858CC 0014EE8C  4E 80 00 20 */	blr 
 
-.global func_801858D0
-func_801858D0:
+.global isEnd
+isEnd:
 /* 801858D0 0014EE90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801858D4 0014EE94  7C 08 02 A6 */	mflr r0
 /* 801858D8 0014EE98  90 01 00 24 */	stw r0, 0x24(r1)
@@ -242,8 +242,8 @@ func_801858D0:
 /* 80185994 0014EF54  38 21 00 20 */	addi r1, r1, 0x20
 /* 80185998 0014EF58  4E 80 00 20 */	blr 
 
-.global func_8018599C
-func_8018599C:
+.global end
+end:
 /* 8018599C 0014EF5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801859A0 0014EF60  7C 08 02 A6 */	mflr r0
 /* 801859A4 0014EF64  90 01 00 14 */	stw r0, 0x14(r1)
@@ -255,8 +255,8 @@ func_8018599C:
 /* 801859BC 0014EF7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 801859C0 0014EF80  4E 80 00 20 */	blr 
 
-.global func_801859C4
-func_801859C4:
+.global attack
+attack:
 /* 801859C4 0014EF84  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801859C8 0014EF88  7C 08 02 A6 */	mflr r0
 /* 801859CC 0014EF8C  38 80 00 01 */	li r4, 1
@@ -330,8 +330,8 @@ func_801859C4:
 /* 80185AC8 0014F088  38 21 00 20 */	addi r1, r1, 0x20
 /* 80185ACC 0014F08C  4E 80 00 20 */	blr 
 
-.global func_80185AD0
-func_80185AD0:
+.global attackEne
+attackEne:
 /* 80185AD0 0014F090  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80185AD4 0014F094  7C 08 02 A6 */	mflr r0
 /* 80185AD8 0014F098  38 80 00 01 */	li r4, 1
@@ -396,8 +396,8 @@ func_80185AD0:
 /* 80185BB0 0014F170  38 21 00 20 */	addi r1, r1, 0x20
 /* 80185BB4 0014F174  4E 80 00 20 */	blr 
 
-.global func_80185BB8
-func_80185BB8:
+.global selectTgt
+selectTgt:
 /* 80185BB8 0014F178  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80185BBC 0014F17C  7C 08 02 A6 */	mflr r0
 /* 80185BC0 0014F180  38 80 00 01 */	li r4, 1
@@ -473,8 +473,8 @@ func_80185BB8:
 /* 80185CC8 0014F288  38 21 00 20 */	addi r1, r1, 0x20
 /* 80185CCC 0014F28C  4E 80 00 20 */	blr 
 
-.global func_80185CD0
-func_80185CD0:
+.global vision
+vision:
 /* 80185CD0 0014F290  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80185CD4 0014F294  7C 08 02 A6 */	mflr r0
 /* 80185CD8 0014F298  38 80 00 01 */	li r4, 1
@@ -519,8 +519,8 @@ func_80185CD0:
 /* 80185D64 0014F324  38 21 00 10 */	addi r1, r1, 0x10
 /* 80185D68 0014F328  4E 80 00 20 */	blr 
 
-.global func_80185D6C
-func_80185D6C:
+.global voiceEvent
+voiceEvent:
 /* 80185D6C 0014F32C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80185D70 0014F330  7C 08 02 A6 */	mflr r0
 /* 80185D74 0014F334  38 80 00 01 */	li r4, 1
@@ -556,8 +556,8 @@ func_80185D6C:
 /* 80185DDC 0014F39C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80185DE0 0014F3A0  4E 80 00 20 */	blr 
 
-.global func_80185DE4
-func_80185DE4:
+.global isVoiceEvent
+isVoiceEvent:
 /* 80185DE4 0014F3A4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80185DE8 0014F3A8  7C 08 02 A6 */	mflr r0
 /* 80185DEC 0014F3AC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -593,8 +593,8 @@ func_80185DE4:
 /* 80185E60 0014F420  38 21 00 20 */	addi r1, r1, 0x20
 /* 80185E64 0014F424  4E 80 00 20 */	blr 
 
-.global func_80185E68
-func_80185E68:
+.global unlockMonadoArts
+unlockMonadoArts:
 /* 80185E68 0014F428  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80185E6C 0014F42C  7C 08 02 A6 */	mflr r0
 /* 80185E70 0014F430  38 60 00 01 */	li r3, 1
@@ -626,8 +626,8 @@ func_80185E68:
 /* 80185ED4 0014F494  38 21 00 10 */	addi r1, r1, 0x10
 /* 80185ED8 0014F498  4E 80 00 20 */	blr 
 
-.global func_80185EDC
-func_80185EDC:
+.global setTensionLv
+setTensionLv:
 /* 80185EDC 0014F49C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80185EE0 0014F4A0  7C 08 02 A6 */	mflr r0
 /* 80185EE4 0014F4A4  38 80 00 01 */	li r4, 1
@@ -673,8 +673,8 @@ func_80185EDC:
 /* 80185F74 0014F534  38 21 00 10 */	addi r1, r1, 0x10
 /* 80185F78 0014F538  4E 80 00 20 */	blr 
 
-.global func_80185F7C
-func_80185F7C:
+.global setTP
+setTP:
 /* 80185F7C 0014F53C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80185F80 0014F540  7C 08 02 A6 */	mflr r0
 /* 80185F84 0014F544  38 80 00 01 */	li r4, 1
@@ -759,8 +759,8 @@ func_80185F7C:
 /* 801860A4 0014F664  38 21 00 30 */	addi r1, r1, 0x30
 /* 801860A8 0014F668  4E 80 00 20 */	blr 
 
-.global func_801860AC
-func_801860AC:
+.global breakVision
+breakVision:
 /* 801860AC 0014F66C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801860B0 0014F670  7C 08 02 A6 */	mflr r0
 /* 801860B4 0014F674  38 80 00 01 */	li r4, 1
@@ -809,8 +809,8 @@ func_801860AC:
 /* 80186158 0014F718  38 21 00 10 */	addi r1, r1, 0x10
 /* 8018615C 0014F71C  4E 80 00 20 */	blr 
 
-.global func_80186160
-func_80186160:
+.global setPTG
+setPTG:
 /* 80186160 0014F720  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80186164 0014F724  7C 08 02 A6 */	mflr r0
 /* 80186168 0014F728  38 80 00 01 */	li r4, 1
@@ -836,8 +836,8 @@ func_80186160:
 /* 801861B4 0014F774  38 21 00 10 */	addi r1, r1, 0x10
 /* 801861B8 0014F778  4E 80 00 20 */	blr 
 
-.global func_801861BC
-func_801861BC:
+.global getPTG
+getPTG:
 /* 801861BC 0014F77C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801861C0 0014F780  7C 08 02 A6 */	mflr r0
 /* 801861C4 0014F784  90 01 00 24 */	stw r0, 0x24(r1)
@@ -865,8 +865,8 @@ func_801861BC:
 /* 80186218 0014F7D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8018621C 0014F7DC  4E 80 00 20 */	blr 
 
-.global func_80186220
-func_80186220:
+.global test
+test:
 /* 80186220 0014F7E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80186224 0014F7E4  7C 08 02 A6 */	mflr r0
 /* 80186228 0014F7E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1910,41 +1910,41 @@ lbl_80535B18:
 .global lbl_80535B30
 lbl_80535B30:
 	.4byte lbl_804FF048
-	.4byte func_80185808
+	.4byte startObserve
 	.4byte lbl_804FF058
-	.4byte func_80185834
+	.4byte endObserve
 	.4byte lbl_804FF064
-	.4byte func_80185860
+	.4byte defeatingCount
 	.4byte lbl_8066A240
-	.4byte func_801858D0
+	.4byte isEnd
 	.4byte lbl_8066A248
-	.4byte func_8018599C
+	.4byte end
 	.4byte lbl_8066A24C
-	.4byte func_801859C4
+	.4byte attack
 	.4byte lbl_804FF074
-	.4byte func_80185AD0
+	.4byte attackEne
 	.4byte lbl_804FF080
-	.4byte func_80185BB8
+	.4byte selectTgt
 	.4byte lbl_8066A254
-	.4byte func_80185CD0
+	.4byte vision
 	.4byte lbl_804FF08C
-	.4byte func_80185D6C
+	.4byte voiceEvent
 	.4byte lbl_804FF098
-	.4byte func_80185DE4
+	.4byte isVoiceEvent
 	.4byte lbl_804FF0A8
-	.4byte func_80185E68
+	.4byte unlockMonadoArts
 	.4byte lbl_804FF0BC
-	.4byte func_80185EDC
+	.4byte setTensionLv
 	.4byte lbl_8066A25C
-	.4byte func_80185F7C
+	.4byte setTP
 	.4byte lbl_804FF0CC
-	.4byte func_801860AC
+	.4byte breakVision
 	.4byte lbl_8066A264
-	.4byte func_80186160
+	.4byte setPTG
 	.4byte lbl_8066A26C
-	.4byte func_801861BC
+	.4byte getPTG
 	.4byte lbl_8066A274
-	.4byte func_80186220
+	.4byte test
 	.4byte 0
 	.4byte 0
 
@@ -1963,9 +1963,7 @@ lbl_8066A230:
 
 .global double_8066A238
 double_8066A238:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 .global lbl_8066A240
 lbl_8066A240:
 	.asciz "isEnd"
@@ -2029,15 +2027,11 @@ float_8066A28C:
 
 .global double_8066A290
 double_8066A290:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global double_8066A298
 double_8066A298:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_80577888
@@ -2237,58 +2231,58 @@ lbl_8000EAA4:
 	.4byte func_801857A8
 	.4byte 0x0000004C
 	.4byte lbl_8000E99C
-	.4byte func_80185808
+	.4byte startObserve
 	.4byte 0x0000002C
 	.4byte lbl_8000E9A4
-	.4byte func_80185834
+	.4byte endObserve
 	.4byte 0x0000002C
 	.4byte lbl_8000E9AC
-	.4byte func_80185860
+	.4byte defeatingCount
 	.4byte 0x00000070
 	.4byte lbl_8000E9B4
-	.4byte func_801858D0
+	.4byte isEnd
 	.4byte 0x000000CC
 	.4byte lbl_8000E9BC
-	.4byte func_8018599C
+	.4byte end
 	.4byte 0x00000028
 	.4byte lbl_8000E9D4
-	.4byte func_801859C4
+	.4byte attack
 	.4byte 0x0000010C
 	.4byte lbl_8000E9DC
-	.4byte func_80185AD0
+	.4byte attackEne
 	.4byte 0x000000E8
 	.4byte lbl_8000E9E4
-	.4byte func_80185BB8
+	.4byte selectTgt
 	.4byte 0x00000118
 	.4byte lbl_8000E9FC
-	.4byte func_80185CD0
+	.4byte vision
 	.4byte 0x0000009C
 	.4byte lbl_8000EA14
-	.4byte func_80185D6C
+	.4byte voiceEvent
 	.4byte 0x00000078
 	.4byte lbl_8000EA1C
-	.4byte func_80185DE4
+	.4byte isVoiceEvent
 	.4byte 0x00000084
 	.4byte lbl_8000EA24
-	.4byte func_80185E68
+	.4byte unlockMonadoArts
 	.4byte 0x00000074
 	.4byte lbl_8000EA2C
-	.4byte func_80185EDC
+	.4byte setTensionLv
 	.4byte 0x000000A0
 	.4byte lbl_8000EA34
-	.4byte func_80185F7C
+	.4byte setTP
 	.4byte 0x00000130
 	.4byte lbl_8000EA3C
-	.4byte func_801860AC
+	.4byte breakVision
 	.4byte 0x000000B4
 	.4byte lbl_8000EA44
-	.4byte func_80186160
+	.4byte setPTG
 	.4byte 0x0000005C
 	.4byte lbl_8000EA4C
-	.4byte func_801861BC
+	.4byte getPTG
 	.4byte 0x00000064
 	.4byte lbl_8000EA54
-	.4byte func_80186220
+	.4byte test
 	.4byte 0x00000088
 	.4byte lbl_8000EA5C
 	.4byte func_801864DC

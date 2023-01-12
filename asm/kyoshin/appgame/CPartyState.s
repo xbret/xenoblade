@@ -1894,8 +1894,8 @@ func_801FE4AC:
 /* 801FE8EC 001C7EAC  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 801FE8F0 001C7EB0  4E 80 00 20 */	blr 
 
-.global func_801FE8F4
-func_801FE8F4:
+.global getPcHp
+getPcHp:
 /* 801FE8F4 001C7EB4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801FE8F8 001C7EB8  7C 08 02 A6 */	mflr r0
 /* 801FE8FC 001C7EBC  38 80 00 01 */	li r4, 1
@@ -1938,8 +1938,8 @@ func_801FE8F4:
 /* 801FE988 001C7F48  38 21 00 20 */	addi r1, r1, 0x20
 /* 801FE98C 001C7F4C  4E 80 00 20 */	blr 
 
-.global func_801FE990
-func_801FE990:
+.global getPcHpRate
+getPcHpRate:
 /* 801FE990 001C7F50  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801FE994 001C7F54  7C 08 02 A6 */	mflr r0
 /* 801FE998 001C7F58  38 80 00 01 */	li r4, 1
@@ -1998,8 +1998,8 @@ func_801FE990:
 /* 801FEA64 001C8024  38 21 00 30 */	addi r1, r1, 0x30
 /* 801FEA68 001C8028  4E 80 00 20 */	blr 
 
-.global func_801FEA6C
-func_801FEA6C:
+.global getEneHp
+getEneHp:
 /* 801FEA6C 001C802C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801FEA70 001C8030  7C 08 02 A6 */	mflr r0
 /* 801FEA74 001C8034  38 80 00 01 */	li r4, 1
@@ -2042,8 +2042,8 @@ func_801FEA6C:
 /* 801FEB00 001C80C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 801FEB04 001C80C4  4E 80 00 20 */	blr 
 
-.global func_801FEB08
-func_801FEB08:
+.global getEneHpRate
+getEneHpRate:
 /* 801FEB08 001C80C8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801FEB0C 001C80CC  7C 08 02 A6 */	mflr r0
 /* 801FEB10 001C80D0  38 80 00 01 */	li r4, 1
@@ -2102,8 +2102,8 @@ func_801FEB08:
 /* 801FEBDC 001C819C  38 21 00 30 */	addi r1, r1, 0x30
 /* 801FEBE0 001C81A0  4E 80 00 20 */	blr 
 
-.global func_801FEBE4
-func_801FEBE4:
+.global setPcBtlState
+setPcBtlState:
 /* 801FEBE4 001C81A4  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 801FEBE8 001C81A8  7C 08 02 A6 */	mflr r0
 /* 801FEBEC 001C81AC  90 01 00 74 */	stw r0, 0x74(r1)
@@ -2243,8 +2243,8 @@ func_801FEBE4:
 /* 801FEDDC 001C839C  38 21 00 70 */	addi r1, r1, 0x70
 /* 801FEDE0 001C83A0  4E 80 00 20 */	blr 
 
-.global func_801FEDE4
-func_801FEDE4:
+.global clearPcBtlState
+clearPcBtlState:
 /* 801FEDE4 001C83A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FEDE8 001C83A8  7C 08 02 A6 */	mflr r0
 /* 801FEDEC 001C83AC  38 80 00 01 */	li r4, 1
@@ -2282,8 +2282,8 @@ func_801FEDE4:
 /* 801FEE68 001C8428  38 21 00 10 */	addi r1, r1, 0x10
 /* 801FEE6C 001C842C  4E 80 00 20 */	blr 
 
-.global func_801FEE70
-func_801FEE70:
+.global setEneBtlState
+setEneBtlState:
 /* 801FEE70 001C8430  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 801FEE74 001C8434  7C 08 02 A6 */	mflr r0
 /* 801FEE78 001C8438  90 01 00 74 */	stw r0, 0x74(r1)
@@ -2418,8 +2418,8 @@ func_801FEE70:
 /* 801FF058 001C8618  38 21 00 70 */	addi r1, r1, 0x70
 /* 801FF05C 001C861C  4E 80 00 20 */	blr 
 
-.global func_801FF060
-func_801FF060:
+.global clearEneBtlState
+clearEneBtlState:
 /* 801FF060 001C8620  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FF064 001C8624  7C 08 02 A6 */	mflr r0
 /* 801FF068 001C8628  38 80 00 01 */	li r4, 1
@@ -2457,8 +2457,8 @@ func_801FF060:
 /* 801FF0E4 001C86A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801FF0E8 001C86A8  4E 80 00 20 */	blr 
 
-.global func_801FF0EC
-func_801FF0EC:
+.global onPcArtsAttack
+onPcArtsAttack:
 /* 801FF0EC 001C86AC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801FF0F0 001C86B0  7C 08 02 A6 */	mflr r0
 /* 801FF0F4 001C86B4  38 80 00 01 */	li r4, 1
@@ -2550,8 +2550,8 @@ func_801FF0EC:
 /* 801FF244 001C8804  38 21 00 30 */	addi r1, r1, 0x30
 /* 801FF248 001C8808  4E 80 00 20 */	blr 
 
-.global func_801FF24C
-func_801FF24C:
+.global onEneArtsAttack
+onEneArtsAttack:
 /* 801FF24C 001C880C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801FF250 001C8810  7C 08 02 A6 */	mflr r0
 /* 801FF254 001C8814  38 80 00 01 */	li r4, 1
@@ -2683,8 +2683,8 @@ func_801FF24C:
 /* 801FF434 001C89F4  38 21 00 30 */	addi r1, r1, 0x30
 /* 801FF438 001C89F8  4E 80 00 20 */	blr 
 
-.global func_801FF43C
-func_801FF43C:
+.global synchro
+synchro:
 /* 801FF43C 001C89FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FF440 001C8A00  7C 08 02 A6 */	mflr r0
 /* 801FF444 001C8A04  38 80 00 01 */	li r4, 1
@@ -2724,8 +2724,8 @@ func_801FF43C:
 /* 801FF4C8 001C8A88  38 21 00 10 */	addi r1, r1, 0x10
 /* 801FF4CC 001C8A8C  4E 80 00 20 */	blr 
 
-.global func_801FF4D0
-func_801FF4D0:
+.global learnArts
+learnArts:
 /* 801FF4D0 001C8A90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801FF4D4 001C8A94  7C 08 02 A6 */	mflr r0
 /* 801FF4D8 001C8A98  38 80 00 01 */	li r4, 1
@@ -2930,29 +2930,29 @@ CPartyState_hierarchy:
 .global lbl_80538C18
 lbl_80538C18:
 	.4byte lbl_8066AB20
-	.4byte func_801FE8F4
+	.4byte getPcHp
 	.4byte lbl_80503678
-	.4byte func_801FE990
+	.4byte getPcHpRate
 	.4byte lbl_80503684
-	.4byte func_801FEA6C
+	.4byte getEneHp
 	.4byte lbl_80503690
-	.4byte func_801FEB08
+	.4byte getEneHpRate
 	.4byte lbl_805036A0
-	.4byte func_801FEBE4
+	.4byte setPcBtlState
 	.4byte lbl_805036B0
-	.4byte func_801FEDE4
+	.4byte clearPcBtlState
 	.4byte lbl_805036C0
-	.4byte func_801FEE70
+	.4byte setEneBtlState
 	.4byte lbl_805036D0
-	.4byte func_801FF060
+	.4byte clearEneBtlState
 	.4byte lbl_805036E4
-	.4byte func_801FF0EC
+	.4byte onPcArtsAttack
 	.4byte lbl_805036F8
-	.4byte func_801FF24C
+	.4byte onEneArtsAttack
 	.4byte lbl_8066AB28
-	.4byte func_801FF43C
+	.4byte synchro
 	.4byte lbl_80503708
-	.4byte func_801FF4D0
+	.4byte learnArts
 	.4byte 0
 	.4byte 0
 
@@ -2993,9 +2993,7 @@ lbl_8066AAE0:
 
 .global double_8066AAE8
 double_8066AAE8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066AAF0
 float_8066AAF0:
@@ -3009,9 +3007,7 @@ float_8066AAF4:
 
 .global double_8066AAF8
 double_8066AAF8:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066AB00
 float_8066AB00:
@@ -3037,9 +3033,7 @@ float_8066AB10:
 
 .global double_8066AB18
 double_8066AB18:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 .global lbl_8066AB20
 lbl_8066AB20:
 	.asciz "getPcHp"
@@ -3340,39 +3334,39 @@ lbl_80012958:
 	.4byte func_801FE4AC
 	.4byte 0x00000448
 	.4byte lbl_800128E8
-	.4byte func_801FE8F4
+	.4byte getPcHp
 	.4byte 0x0000009C
 	.4byte lbl_80012900
-	.4byte func_801FE990
+	.4byte getPcHpRate
 	.4byte 0x000000DC
 	.4byte lbl_80012908
-	.4byte func_801FEA6C
+	.4byte getEneHp
 	.4byte 0x0000009C
 	.4byte lbl_80012910
-	.4byte func_801FEB08
+	.4byte getEneHpRate
 	.4byte 0x000000DC
 	.4byte lbl_80012918
-	.4byte func_801FEBE4
+	.4byte setPcBtlState
 	.4byte 0x00000200
 	.4byte lbl_80012920
-	.4byte func_801FEDE4
+	.4byte clearPcBtlState
 	.4byte 0x0000008C
 	.4byte lbl_80012928
-	.4byte func_801FEE70
+	.4byte setEneBtlState
 	.4byte 0x000001F0
 	.4byte lbl_80012930
-	.4byte func_801FF060
+	.4byte clearEneBtlState
 	.4byte 0x0000008C
 	.4byte lbl_80012938
-	.4byte func_801FF0EC
+	.4byte onPcArtsAttack
 	.4byte 0x00000160
 	.4byte lbl_80012940
-	.4byte func_801FF24C
+	.4byte onEneArtsAttack
 	.4byte 0x000001F0
 	.4byte lbl_80012948
-	.4byte func_801FF43C
+	.4byte synchro
 	.4byte 0x00000094
 	.4byte lbl_80012950
-	.4byte func_801FF4D0
+	.4byte learnArts
 	.4byte 0x0000007C
 	.4byte lbl_80012958

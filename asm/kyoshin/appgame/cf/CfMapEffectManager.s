@@ -1322,15 +1322,11 @@ float_80669FD8:
 
 .global double_80669FE0
 double_80669FE0:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global double_80669FE8
 double_80669FE8:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_80669FF0
 float_80669FF0:

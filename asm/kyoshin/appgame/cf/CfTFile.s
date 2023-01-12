@@ -161,7 +161,7 @@ func_80069ACC:
 /* 80069B6C 0003312C  38 61 00 08 */	addi r3, r1, 8
 /* 80069B70 00033130  38 84 6C 1C */	addi r4, r4, lbl_804F6C1C@l
 /* 80069B74 00033134  4C C6 31 82 */	crclr 6
-/* 80069B78 00033138  4B FD CC A1 */	bl Print_80046818
+/* 80069B78 00033138  4B FD CC A1 */	bl CTaskGameEff_vsnprintf
 .L_80069B7C:
 /* 80069B7C 0003313C  38 61 00 08 */	addi r3, r1, 8
 /* 80069B80 00033140  48 3E 53 C5 */	bl func_8044EF44
@@ -1217,9 +1217,7 @@ float_80668AA0:
 
 .global double_80668AA8
 double_80668AA8:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_80668AB0
 float_80668AB0:
@@ -1229,8 +1227,7 @@ float_80668AB0:
 
 .global double_80668AB8
 double_80668AB8:
-	.4byte 0x40E51800
-	.4byte 0
+	.double 43200 #0x40E5180000000000
 
 
 .global float_80668AC0
@@ -1245,8 +1242,7 @@ float_80668AC4:
 
 .global double_80668AC8
 double_80668AC8:
-	.4byte 0x40380000
-	.4byte 0
+	.double 24 #0x4038000000000000
 
 
 .global float_80668AD0
@@ -1257,8 +1253,7 @@ float_80668AD0:
 
 .global double_80668AD8
 double_80668AD8:
-	.4byte 0x404E0000
-	.4byte 0
+	.double 60 #0x404E000000000000
 
 
 .global float_80668AE0
@@ -1269,8 +1264,7 @@ float_80668AE0:
 
 .global double_80668AE8
 double_80668AE8:
-	.4byte 0x403E0000
-	.4byte 0
+	.double 30 #0x403E000000000000
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

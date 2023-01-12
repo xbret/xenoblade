@@ -2007,15 +2007,12 @@ float_8066C26C:
 
 .global double_8066C270
 double_8066C270:
-	.4byte 0x3FE33333
-	.4byte 0x40000000
+	.double 0.60000002384185791 #0x3FE3333340000000
 
 
 .global double_8066C278
 double_8066C278:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066C280
 float_8066C280:
@@ -2035,9 +2032,7 @@ float_8066C288:
 
 .global double_8066C290
 double_8066C290:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066C298
 float_8066C298:

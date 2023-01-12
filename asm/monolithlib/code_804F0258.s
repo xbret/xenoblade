@@ -5090,15 +5090,11 @@ float_8066DC0C:
 
 .global double_8066DC10
 double_8066DC10:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global double_8066DC18
 double_8066DC18:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066DC20
 float_8066DC20:
@@ -5142,15 +5138,11 @@ float_8066DC3C:
 
 .global double_8066DC40
 double_8066DC40:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_8066DC48
 double_8066DC48:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066DC50
 float_8066DC50:
@@ -5170,9 +5162,7 @@ float_8066DC58:
 
 .global double_8066DC60
 double_8066DC60:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global lbl_8066DC68
 lbl_8066DC68:
@@ -5202,9 +5192,7 @@ float_8066DC78:
 
 .global double_8066DC80
 double_8066DC80:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_8066DC88
 float_8066DC88:
@@ -5240,9 +5228,7 @@ float_8066DCA0:
 
 .global double_8066DCA8
 double_8066DCA8:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global float_8066DCB0
 float_8066DCB0:
@@ -5266,15 +5252,11 @@ float_8066DCBC:
 
 .global double_8066DCC0
 double_8066DCC0:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_8066DCC8
 double_8066DCC8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_806640C8

@@ -1864,7 +1864,7 @@ mesGetArts:
 /* 800463A4 0000F964  38 61 00 08 */	addi r3, r1, 8
 /* 800463A8 0000F968  38 9F 00 18 */	addi r4, r31, 0x18
 /* 800463AC 0000F96C  4C C6 31 82 */	crclr 6
-/* 800463B0 0000F970  48 00 04 69 */	bl Print_80046818
+/* 800463B0 0000F970  48 00 04 69 */	bl CTaskGameEff_vsnprintf
 /* 800463B4 0000F974  7F 64 DB 78 */	mr r4, r27
 /* 800463B8 0000F978  38 61 00 08 */	addi r3, r1, 8
 /* 800463BC 0000F97C  38 A0 00 00 */	li r5, 0
@@ -2199,8 +2199,8 @@ func_80046800:
 /* 80046810 0000FDD0  38 84 95 C0 */	addi r4, r4, lbl_805295C0@l
 /* 80046814 0000FDD4  48 45 A3 7C */	b func_804A0B90
 
-.global Print_80046818
-Print_80046818:
+.global CTaskGameEff_vsnprintf
+CTaskGameEff_vsnprintf:
 /* 80046818 0000FDD8  94 21 FE 70 */	stwu r1, -0x190(r1)
 /* 8004681C 0000FDDC  7C 08 02 A6 */	mflr r0
 /* 80046820 0000FDE0  90 01 01 94 */	stw r0, 0x194(r1)
@@ -8375,7 +8375,7 @@ lbl_80668640:
 
 .global lbl_80668648
 lbl_80668648:
-	.4byte 0x63667000
+	.asciz "cfp"
 	.4byte 0
 
 
@@ -8387,9 +8387,7 @@ float_80668650:
 
 .global double_80668658
 double_80668658:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 .global lbl_80668660
 lbl_80668660:
 	.asciz "winTalk"
@@ -8477,9 +8475,7 @@ float_806686D4:
 
 .global double_806686D8
 double_806686D8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_806686E0
 float_806686E0:
@@ -9461,7 +9457,7 @@ lbl_80007390:
 	.4byte isSETalkVoiceWait
 	.4byte 0x0000004C
 	.4byte lbl_80007100
-	.4byte Print_80046818
+	.4byte CTaskGameEff_vsnprintf
 	.4byte 0x000000C8
 	.4byte lbl_80007108
 	.4byte getFlag

@@ -1458,8 +1458,7 @@ lbl_8066588C:
 
 .global double_80665890
 double_80665890:
-	.4byte 0x7FF00000
-	.4byte 0
+	.8byte 0x7FF0000000000000 #infinity
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global lbl_8066B878
@@ -1474,14 +1473,12 @@ lbl_8066B87C:
 
 .global double_8066B880
 double_8066B880:
-	.4byte 0
-	.4byte 0
+	.double 0
 
 
 .global double_8066B888
 double_8066B888:
-	.4byte 0x00100000
-	.4byte 0
+	.8byte 0x0010000000000000 #min double val
 
 
 .global double_8066B890

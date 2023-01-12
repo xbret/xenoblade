@@ -5370,15 +5370,11 @@ float_80669498:
 
 .global double_806694A0
 double_806694A0:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 
 .global double_806694A8
 double_806694A8:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 
 .global float_806694B0
 float_806694B0:

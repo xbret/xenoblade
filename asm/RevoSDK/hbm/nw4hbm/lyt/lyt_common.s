@@ -1036,9 +1036,7 @@ lbl_80518A4C:
 
 .global double_80518A50
 double_80518A50:
-	.4byte 0x43300000
-	.4byte 0
-
+	.8byte 0x4330000000000000 #unsigned int to float constant
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_805CD790

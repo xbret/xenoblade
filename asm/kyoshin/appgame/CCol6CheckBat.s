@@ -1839,9 +1839,7 @@ float_80669E38:
 
 .global double_80669E40
 double_80669E40:
-	.4byte 0x43300000
-	.4byte 0x80000000
-
+	.8byte 0x4330000080000000 #signed int to float constant
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 .global lbl_80666B20

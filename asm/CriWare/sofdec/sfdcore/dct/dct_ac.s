@@ -235,8 +235,7 @@ lbl_8051F900:
 
 .global double_8051F920
 double_8051F920:
-	.4byte 0
-	.4byte 0
+	.double 0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
