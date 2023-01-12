@@ -1016,30 +1016,30 @@ lbl_80543120:
 	.4byte 0x000004FF
 	.4byte 0x000009AD
 	.4byte 0x00000F31
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.float -1.0
-	.4byte 0x3E99999A
+	.float 0.3 #0x3E99999A
 	.float 0.5
-	.4byte 0xBF733333
-	.4byte 0x3E99999A
-	.4byte 0x3F19999A
-	.4byte 0xBF666666
-	.4byte 0x3E99999A
+	.float -0.95
+	.float 0.3 #0x3E99999A
+	.float 0.6 #0x3F19999A
+	.float -0.9
+	.float 0.3 #0x3E99999A
 	.float 0.75
-	.4byte 0xBF59999A
-	.4byte 0x3E99999A
-	.4byte 0xBF666666
-	.4byte 0x3F4CCCCD
-	.4byte 0x3E99999A
+	.float -0.85
+	.float 0.3 #0x3E99999A
+	.float -0.9
+	.float 0.8 #0x3F4CCCCD
+	.float 0.3 #0x3E99999A
 	.float -1.0
-	.4byte 0x3F333333
-	.4byte 0x3E99999A
+	.float 0.7 #0x3F333333
+	.float 0.3 #0x3E99999A
 	.float -1.0
-	.4byte 0x3F333333
-	.4byte 0x3E99999A
+	.float 0.7 #0x3F333333
+	.float 0.3 #0x3E99999A
 	.float -1.0
-	.4byte 0x3F333333
-	.4byte 0x3E99999A
+	.float 0.7 #0x3F333333
+	.float 0.3 #0x3E99999A
 
 
 .global lbl_805431E0

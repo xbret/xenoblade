@@ -31627,14 +31627,14 @@ lbl_804F8268:
 	.4byte 0
 	.4byte 0x00000064
 	.float 8.0
-	.4byte 0x40800000
-	.4byte 0x40000000
+	.float 4
+	.float 2 #0x40000000
 	.4byte 0
 	.4byte 0
 	.4byte 0x00000064
 	.float 8.0
-	.4byte 0x40800000
-	.4byte 0x40000000
+	.float 4
+	.float 2 #0x40000000
 
 .global lbl_804F82F8
 lbl_804F82F8:
@@ -31645,8 +31645,8 @@ lbl_804F82F8:
 .global lbl_804F8304
 lbl_804F8304:
 	.float 8.0
-	.4byte 0x40800000
-	.4byte 0x40000000
+	.float 4
+	.float 2 #0x40000000
 
 .global lbl_804F8310
 lbl_804F8310:

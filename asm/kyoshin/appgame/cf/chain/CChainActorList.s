@@ -2666,9 +2666,9 @@ lbl_8050A450:
 .global lbl_8050A460
 lbl_8050A460:
 	.float 1.0
-	.4byte 0x3F99999A
-	.4byte 0x3FB33333
-	.4byte 0x3FCCCCCD
+	.float 1.2
+	.float 1.4
+	.float 1.6
 
 .global cf_Flusher_cf_CfObjectActor_typestr
 cf_Flusher_cf_CfObjectActor_typestr:

@@ -330,7 +330,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000007
 	.4byte 0x00000003
@@ -426,7 +426,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000007
 	.4byte 0x00000003
@@ -522,103 +522,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
-	.4byte 0xBF4CCCCD
-	.4byte 0x00000007
-	.4byte 0x00000003
-	.4byte 0x00000003
-	.4byte 0x00000002
-	.4byte 0x3E924925
-	.4byte 0xBF5B6DB7
-	.4byte 0x00000009
-	.4byte 0x0000000A
-	.4byte 0x00000001
-	.4byte 0x00000003
-	.4byte 0x3E638E39
-	.4byte 0xBF638E39
-	.4byte 0x0000000F
-	.4byte 0x00000004
-	.4byte 0x00000003
-	.4byte 0x00000004
-	.4byte 0x3E088889
-	.4byte 0xBF6EEEEF
-	.4byte 0x0000001F
-	.4byte 0x00000005
-	.4byte 0x00000003
-	.4byte 0x00000005
-	.4byte 0x3D842108
-	.4byte 0xBF77BDF0
-	.4byte 0x0000003F
-	.4byte 0x00000006
-	.4byte 0x00000003
-	.4byte 0x00000006
-	.4byte 0x3D020821
-	.4byte 0xBF7BEFBF
-	.4byte 0x0000007F
-	.4byte 0x00000007
-	.4byte 0x00000003
-	.4byte 0x00000007
-	.4byte 0x3C810204
-	.4byte 0xBF7DFBF8
-	.4byte 0x000000FF
-	.4byte 0x00000008
-	.4byte 0x00000003
-	.4byte 0x00000008
-	.4byte 0x3C008081
-	.4byte 0xBF7EFEFF
-	.4byte 0x000001FF
-	.4byte 0x00000009
-	.4byte 0x00000003
-	.4byte 0x00000009
-	.4byte 0x3B804020
-	.4byte 0xBF7F7FC0
-	.4byte 0x000003FF
-	.4byte 0x0000000A
-	.4byte 0x00000003
-	.4byte 0x0000000A
-	.4byte 0x3B002008
-	.4byte 0xBF7FBFF0
-	.4byte 0x000007FF
-	.4byte 0x0000000B
-	.4byte 0x00000003
-	.4byte 0x0000000B
-	.4byte 0x3A801002
-	.4byte 0xBF7FDFFC
-	.4byte 0x00000FFF
-	.4byte 0x0000000C
-	.4byte 0x00000003
-	.4byte 0x0000000C
-	.4byte 0x3A000801
-	.4byte 0xBF7FEFFF
-	.4byte 0x00001FFF
-	.4byte 0x0000000D
-	.4byte 0x00000003
-	.4byte 0x0000000D
-	.4byte 0x39800400
-	.4byte 0xBF7FF800
-	.4byte 0x00003FFF
-	.4byte 0x0000000E
-	.4byte 0x00000003
-	.4byte 0x0000000E
-	.4byte 0x39000200
-	.4byte 0xBF7FFC00
-	.4byte 0
-	.4byte 0x00000004
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000003
-	.4byte 0x00000005
-	.4byte 0x00000001
-	.4byte 0
-	.4byte 0x3F2AAAAB
-	.4byte 0xBF2AAAAA
-	.4byte 0x00000005
-	.4byte 0x00000007
-	.4byte 0x00000001
-	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000007
 	.4byte 0x00000003
@@ -699,6 +603,102 @@ lbl_80566080:
 	.4byte 0x39000200
 	.4byte 0xBF7FFC00
 	.4byte 0
+	.4byte 0x00000004
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000003
+	.4byte 0x00000005
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x3F2AAAAB
+	.4byte 0xBF2AAAAA
+	.4byte 0x00000005
+	.4byte 0x00000007
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.float 0.4 #0x3ECCCCCD
+	.4byte 0xBF4CCCCD
+	.4byte 0x00000007
+	.4byte 0x00000003
+	.4byte 0x00000003
+	.4byte 0x00000002
+	.4byte 0x3E924925
+	.4byte 0xBF5B6DB7
+	.4byte 0x00000009
+	.4byte 0x0000000A
+	.4byte 0x00000001
+	.4byte 0x00000003
+	.4byte 0x3E638E39
+	.4byte 0xBF638E39
+	.4byte 0x0000000F
+	.4byte 0x00000004
+	.4byte 0x00000003
+	.4byte 0x00000004
+	.4byte 0x3E088889
+	.4byte 0xBF6EEEEF
+	.4byte 0x0000001F
+	.4byte 0x00000005
+	.4byte 0x00000003
+	.4byte 0x00000005
+	.4byte 0x3D842108
+	.4byte 0xBF77BDF0
+	.4byte 0x0000003F
+	.4byte 0x00000006
+	.4byte 0x00000003
+	.4byte 0x00000006
+	.4byte 0x3D020821
+	.4byte 0xBF7BEFBF
+	.4byte 0x0000007F
+	.4byte 0x00000007
+	.4byte 0x00000003
+	.4byte 0x00000007
+	.4byte 0x3C810204
+	.4byte 0xBF7DFBF8
+	.4byte 0x000000FF
+	.4byte 0x00000008
+	.4byte 0x00000003
+	.4byte 0x00000008
+	.4byte 0x3C008081
+	.4byte 0xBF7EFEFF
+	.4byte 0x000001FF
+	.4byte 0x00000009
+	.4byte 0x00000003
+	.4byte 0x00000009
+	.4byte 0x3B804020
+	.4byte 0xBF7F7FC0
+	.4byte 0x000003FF
+	.4byte 0x0000000A
+	.4byte 0x00000003
+	.4byte 0x0000000A
+	.4byte 0x3B002008
+	.4byte 0xBF7FBFF0
+	.4byte 0x000007FF
+	.4byte 0x0000000B
+	.4byte 0x00000003
+	.4byte 0x0000000B
+	.4byte 0x3A801002
+	.4byte 0xBF7FDFFC
+	.4byte 0x00000FFF
+	.4byte 0x0000000C
+	.4byte 0x00000003
+	.4byte 0x0000000C
+	.4byte 0x3A000801
+	.4byte 0xBF7FEFFF
+	.4byte 0x00001FFF
+	.4byte 0x0000000D
+	.4byte 0x00000003
+	.4byte 0x0000000D
+	.4byte 0x39800400
+	.4byte 0xBF7FF800
+	.4byte 0x00003FFF
+	.4byte 0x0000000E
+	.4byte 0x00000003
+	.4byte 0x0000000E
+	.4byte 0x39000200
+	.4byte 0xBF7FFC00
+	.4byte 0
 	.4byte 0x00000003
 	.4byte 0
 	.4byte 0
@@ -714,7 +714,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -810,7 +810,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -906,7 +906,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -1002,7 +1002,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -1098,7 +1098,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -1194,7 +1194,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -1290,7 +1290,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -1386,7 +1386,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -1482,7 +1482,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -1578,7 +1578,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -1674,7 +1674,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -1770,7 +1770,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -1866,7 +1866,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -1962,7 +1962,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -2058,7 +2058,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -2154,7 +2154,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -2250,7 +2250,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -2346,7 +2346,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -2442,7 +2442,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -2538,7 +2538,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -2634,7 +2634,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -2730,7 +2730,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -2826,7 +2826,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -2922,7 +2922,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -3018,7 +3018,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A
@@ -3114,7 +3114,7 @@ lbl_80566080:
 	.4byte 0x00000007
 	.4byte 0x00000001
 	.4byte 0x00000001
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.4byte 0xBF4CCCCD
 	.4byte 0x00000009
 	.4byte 0x0000000A

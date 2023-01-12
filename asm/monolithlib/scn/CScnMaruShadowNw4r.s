@@ -1746,11 +1746,12 @@ lbl_80527890:
 .global lbl_805278A0
 lbl_805278A0:
 	.float 1.0
-	.asciz "?333?333?"
-	.balign 4
+	.float 0.7
+	.float 0.7
 	.float 0.5
-	.4byte 0x3F333333
-	.4byte 0x3F333333
+	.float 0.5
+	.float 0.7
+	.float 0.7
 
 
 .global lbl_805278BC

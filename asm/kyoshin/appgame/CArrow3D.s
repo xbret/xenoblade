@@ -4990,9 +4990,9 @@ lbl_80530508:
 	.float 1.0
 	.float 1.0
 	.float 1.0
-	.4byte 0x3F666666
-	.4byte 0x3F333333
-	.4byte 0x3F666666
+	.float 0.9 #0x3F666666
+	.float 0.7 #0x3F333333
+	.float 0.9 #0x3F666666
 
 
 .global __vt__CArrow3D

@@ -868,7 +868,7 @@ lbl_80518A28:
 lbl_80518A2C:
 	.4byte 0x3A83126F
 	.float 1.0
-	.4byte 0x40000000
+	.float 2 #0x40000000
 	.4byte 0x40400000
 	.4byte 0xC0000000
 

@@ -1644,7 +1644,7 @@ lbl_8051FF18:
 	.4byte 0
 	.4byte 0
 	.4byte 0x44D8677D
-	.4byte 0x3C23D70A
+	.float 0.01 #0x3C23D70A
 	.float 0.5
 	.4byte 0x43300000
 	.4byte 0x80000000

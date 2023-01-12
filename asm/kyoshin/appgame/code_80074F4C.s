@@ -7875,7 +7875,7 @@ lbl_8052AB98:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0x40400000
+	.float 3
 	.float 0.5
 	.float 0.5
 	.float 1.0
@@ -7888,7 +7888,7 @@ lbl_8052AB98:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0x40400000
+	.float 3
 	.float 0.5
 	.float 0.5
 	.float 1.0
@@ -7901,7 +7901,7 @@ lbl_8052AB98:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0x40400000
+	.float 3
 	.float 0.5
 	.float 0.5
 	.float 1.0
@@ -7914,7 +7914,7 @@ lbl_8052AB98:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0x40400000
+	.float 3
 	.float 0.5
 	.float 0.5
 	.float 1.0
@@ -7927,7 +7927,7 @@ lbl_8052AB98:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0x40800000
+	.float 4
 	.float 0.5
 	.float 0.5
 	.float 1.0
@@ -7940,7 +7940,7 @@ lbl_8052AB98:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0x40800000
+	.float 4
 	.float 0.5
 	.float 0.5
 	.float 1.0
@@ -7953,7 +7953,7 @@ lbl_8052AB98:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0x40400000
+	.float 3
 	.float 0.5
 	.float 1.0
 	.float 0.25
@@ -7966,9 +7966,9 @@ lbl_8052AB98:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0x40400000
+	.float 3
 	.float 0.2
-	.4byte 0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
 	.float 0.5
 	.float 0.5
 	.float 1.0
@@ -7979,12 +7979,12 @@ lbl_8052AB98:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0x40400000
+	.float 3
 	.float 1.0
-	.4byte 0x40800000
+	.float 4
 	.float 0.2
-	.asciz "?333@"
-	.balign 4
+	.float 0.7
+	.float 2
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -7992,25 +7992,25 @@ lbl_8052AB98:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0x40000000
+	.float 2 #0x40000000
 	.4byte 0
-	.4byte 0x40400000
-	.4byte 0x3E99999A
-	.4byte 0x3E99999A
-	.4byte 0x40000000
-	.4byte 0
-	.4byte 0
+	.float 3
+	.float 0.3 #0x3E99999A
+	.float 0.3 #0x3E99999A
+	.float 2 #0x40000000
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0x40000000
 	.4byte 0
-	.4byte 0x40400000
-	.4byte 0x3E99999A
-	.4byte 0x3E99999A
-	.4byte 0x40000000
+	.4byte 0
+	.float 2 #0x40000000
+	.4byte 0
+	.float 3
+	.float 0.3 #0x3E99999A
+	.float 0.3 #0x3E99999A
+	.float 2 #0x40000000
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -8020,9 +8020,9 @@ lbl_8052AB98:
 	.4byte 0
 	.float 1.0
 	.4byte 0
-	.4byte 0x40800000
+	.float 4
 	.float 1.0
-	.4byte 0x3D8F5C29
+	.float 0.07 #0x3D8F5C29
 
 
 .global lbl_8052AE08

@@ -2469,11 +2469,11 @@ lbl_805028D8:
 lbl_805028F4:
 	.4byte 0
 	.float 1.0
-	.4byte 0x3F99999A
+	.float 1.2 #0x3F99999A
 	.float 1.5
-	.4byte 0x3FE66666
-	.4byte 0x40000000
-	.4byte 0x40200000
+	.float 1.8 #0x3FE66666
+	.float 2 #0x40000000
+	.float 2.5 #0x40200000
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

@@ -14367,11 +14367,11 @@ lbl_80500DF8:
 lbl_80500E14:
 	.4byte 0
 	.float 1.0
-	.4byte 0x3F99999A
+	.float 1.2 #0x3F99999A
 	.float 1.5
-	.4byte 0x3FE66666
-	.4byte 0x40000000
-	.4byte 0x40200000
+	.float 1.8 #0x3FE66666
+	.float 2 #0x40000000
+	.float 2.5 #0x40200000
 
 .global lbl_80500E30
 lbl_80500E30:

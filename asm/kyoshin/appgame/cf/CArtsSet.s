@@ -257,39 +257,39 @@ lbl_804FD1A8:
 	.float 6.5
 	.float 8.0
 	.float 10.0
-	.4byte 0x41480000
-	.4byte 0x41700000
+	.float 12.5
+	.float 15
 	.4byte 0
 
 
 .global lbl_804FD1C0
 lbl_804FD1C0:
-	.4byte 0x40400000
-	.4byte 0x40800000
-	.4byte 0x40B00000
-	.4byte 0x40E00000
-	.4byte 0x41080000
+	.float 3
+	.float 4
+	.float 5.5
+	.float 7
+	.float 8.5
 	.float 10.0
 
 
 .global lbl_804FD1D8
 lbl_804FD1D8:
 	.float 1.0
-	.4byte 0x3F99999A
+	.float 1.2 #0x3F99999A
 	.float 1.5
-	.4byte 0x3FE66666
-	.4byte 0x40066666
-	.4byte 0x4019999A
+	.float 1.8 #0x3FE66666
+	.float 2.1
+	.float 2.4
 
 
 .global lbl_804FD1F0
 lbl_804FD1F0:
 	.4byte 0
 	.4byte 0
-	.4byte 0x40400000
-	.4byte 0x40A00000
+	.float 3
+	.float 5
 	.float 10.0
-	.4byte 0x41700000
+	.float 15
 
 
 .global lbl_804FD208

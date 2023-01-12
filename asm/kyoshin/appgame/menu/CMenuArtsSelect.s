@@ -7633,15 +7633,15 @@ lbl_804F88F0:
 	.4byte 0xFF6EFF66
 	.4byte 0xFF66FF66
 	.4byte 0xFF660000
-	.4byte 0x3F4CCCCD
-	.4byte 0x3F4CCCCD
-	.4byte 0x3F4CCCCD
-	.4byte 0x3F4CCCCD
-	.4byte 0x3F666666
-	.4byte 0x3F4CCCCD
-	.4byte 0x3F4CCCCD
-	.4byte 0x3F4CCCCD
-	.4byte 0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
+	.float 0.9 #0x3F666666
+	.float 0.8 #0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
+	.float 0.8 #0x3F4CCCCD
 
 
 .global lbl_804F893C

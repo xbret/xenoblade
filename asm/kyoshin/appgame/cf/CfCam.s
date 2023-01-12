@@ -498,7 +498,7 @@ lbl_8052A930:
 	.float 0.2
 	.float 1.0
 	.float 1.0
-	.4byte 0x40000000
+	.float 2 #0x40000000
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -511,7 +511,7 @@ lbl_8052A930:
 	.float 1.0
 	.float 0.5
 	.float 0.5
-	.4byte 0x40000000
+	.float 2 #0x40000000
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -534,29 +534,29 @@ lbl_8052A9CC:
 
 .global lbl_8052A9D8
 lbl_8052A9D8:
-	.4byte 0x3DCCCCCD
-	.4byte 0x3DA3D70A
-	.4byte 0x3D75C28F
-	.4byte 0x3D3851EC
-	.4byte 0x3CF5C28F
+	.float 0.1
+	.float 0.08
+	.float 0.06
+	.float 0.045
+	.float 0.03
 
 
 .global lbl_8052A9EC
 lbl_8052A9EC:
-	.4byte 0x3D8F5C29
-	.4byte 0x3D4CCCCD
-	.4byte 0x3CF5C28F
-	.4byte 0x3CA3D70A
-	.4byte 0x3C23D70A
+	.float 0.07
+	.float 0.05
+	.float 0.03
+	.float 0.02
+	.float 0.01
 
 
 .global lbl_8052AA00
 lbl_8052AA00:
-	.4byte 0x3E8A3D71
+	.float 0.27
 	.float 0.2
-	.4byte 0x3E051EB8
-	.4byte 0x3DCCCCCD
-	.4byte 0x3D8F5C29
+	.float 0.13
+	.float 0.1
+	.float 0.07
 	
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

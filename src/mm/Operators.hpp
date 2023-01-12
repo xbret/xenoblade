@@ -13,11 +13,21 @@ struct HeapListEntry {
 
 extern HeapListEntry* func_804339B8(void*, HeapListEntry*);
 extern void func_80433AA8(void*, HeapListEntry*);
+extern void* mm_malloc(size_t size, int param);
+
+extern u32 memoryAllocHeapArray[80][28];
+extern double double_8066C9B8;
+
 
 void operator delete(void*);
 void operator delete[](void*);
 
-extern u32 memoryAllocHeapArray[80][28];
-extern f64 double_8066C9B8;
+/* Allocates the needed amount of memory for the class through mm_malloc, and returns it
+Not sure what the second param is
+The second parameter is often the result from func_804375B4. They might've used some
+type of macro for those cases? */
+inline void* operator new(size_t size, int param){
+    return mm_malloc(size,param);
+}
 
 #endif

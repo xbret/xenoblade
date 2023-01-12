@@ -12604,7 +12604,7 @@ lbl_804F77D0:
 lbl_8052B948:
 	.float 1.0
 	.float 1.7
-	.4byte 0x3DCCCCCD
+	.float 0.1
 	.4byte 0
 
 .global lbl_8052B958

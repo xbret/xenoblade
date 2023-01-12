@@ -9806,7 +9806,7 @@ lbl_80518730:
 	.4byte 0x41100000
 	.4byte 0x0000001E
 	.4byte 0x000000B4
-	.4byte 0x3F99999A
+	.float 1.2 #0x3F99999A
 	.4byte 0
 
 
@@ -9824,12 +9824,12 @@ lbl_805189C0:
 	.4byte 0xC47A0000
 	.4byte 0xC61C4000
 	.4byte 0x41F00000
-	.4byte 0x3F666666
+	.float 0.9 #0x3F666666
 	.4byte 0x3DA14285
 	.float 10.0
 	.4byte 0x43300000
 	.4byte 0x80000000
-	.4byte 0x40200000
+	.float 2.5 #0x40200000
 	.float 0.5
 	.4byte 0x41100000
 	.4byte 0x43340000

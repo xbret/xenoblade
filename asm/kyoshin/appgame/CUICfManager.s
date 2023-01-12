@@ -12380,15 +12380,15 @@ lbl_804FBDD8:
 .global lbl_804FBE60
 lbl_804FBE60:
 	.float 1.5
-	.4byte 0x40000000
+	.float 2
 	.float 1.7
 	.float 1.7
-	.4byte 0x406CCCCD
+	.float 3.7
 	.float 1.5
-	.4byte 0x3FF33333
+	.float 1.9
 	.float 1.7
 	.float 1.7
-	.4byte 0x3FCCCCCD
+	.float 1.6
 	.float 1.5
 	.float 1.7
 	.float 1.7

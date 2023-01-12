@@ -921,10 +921,10 @@ func_804C0254:
 
 .global lbl_80573188
 lbl_80573188:
-	.4byte 0x3F19999A
+	.float 0.6 #0x3F19999A
 	.float 0.2
-	.4byte 0x3E99999A
-	.4byte 0x3DCCCCCD
+	.float 0.3 #0x3E99999A
+	.float 0.1
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

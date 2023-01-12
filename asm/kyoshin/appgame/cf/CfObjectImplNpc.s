@@ -202,16 +202,16 @@ func_800CA940:
 
 .global lbl_804F7FD0
 lbl_804F7FD0:
-	.4byte 0x3ECCCCCD
-	.4byte 0x3ECCCCCD
-	.4byte 0x3ECCCCCD
-	.4byte 0x3ECCCCCD
-	.4byte 0x3ECCCCCD
-	.4byte 0x3ECCCCCD
-	.4byte 0x3ECCCCCD
-	.4byte 0x3ECCCCCD
-	.4byte 0x3ECCCCCD
-	.4byte 0x3DCCCCCD
+	.float 0.4 #0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
+	.float 0.1
 
 .global cf_CfObjectImplNpc_typestr
 cf_CfObjectImplNpc_typestr:

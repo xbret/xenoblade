@@ -10380,12 +10380,12 @@ lbl_8052B0B4:
 
 .global lbl_8052B100
 lbl_8052B100:
-	.4byte 0x3F333333
-	.4byte 0x3F333333
-	.4byte 0x3F333333
-	.4byte 0x40000000
-	.4byte 0x40900000
-	.4byte 0x40900000
+	.float 0.7 #0x3F333333
+	.float 0.7 #0x3F333333
+	.float 0.7 #0x3F333333
+	.float 2 #0x40000000
+	.float 4.5
+	.float 4.5
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8008F9EC

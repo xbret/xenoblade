@@ -6798,26 +6798,26 @@ func_80192A2C:
 
 .global lbl_804FF358
 lbl_804FF358:
-	.4byte 0x3DCCCCCD
-	.4byte 0x3F666666
-	.4byte 0x3D23D70A
-	.4byte 0x3F666666
-	.4byte 0x3E428F5C
-	.4byte 0x3F666666
-	.4byte 0x3D8F5C29
-	.4byte 0x3F666666
-	.4byte 0x3DCCCCCD
-	.4byte 0x3F666666
-	.4byte 0x3E428F5C
-	.4byte 0x3F666666
-	.4byte 0x3DCCCCCD
-	.4byte 0x3F666666
-	.4byte 0x3E428F5C
-	.4byte 0x3F666666
-	.4byte 0x3DCCCCCD
-	.4byte 0x3F666666
-	.4byte 0x3DCCCCCD
-	.4byte 0x3F666666
+	.float 0.1
+	.float 0.9 #0x3F666666
+	.float 0.04 #0x3D23D70A
+	.float 0.9 #0x3F666666
+	.float 0.19 #0x3E428F5C
+	.float 0.9 #0x3F666666
+	.float 0.07 #0x3D8F5C29
+	.float 0.9 #0x3F666666
+	.float 0.1
+	.float 0.9 #0x3F666666
+	.float 0.19 #0x3E428F5C
+	.float 0.9 #0x3F666666
+	.float 0.1
+	.float 0.9 #0x3F666666
+	.float 0.19 #0x3E428F5C
+	.float 0.9 #0x3F666666
+	.float 0.1
+	.float 0.9 #0x3F666666
+	.float 0.1
+	.float 0.9 #0x3F666666
 
 .global CScnItemModelNw4r_typestr
 CScnItemModelNw4r_typestr:

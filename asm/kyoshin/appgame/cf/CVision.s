@@ -9915,8 +9915,8 @@ lbl_804FF788:
 
 .global lbl_804FF7A8
 lbl_804FF7A8:
-	.4byte 0x3CF5C28F
-	.4byte 0x3D75C28F
+	.float 0.03 #0x3CF5C28F
+	.float 0.06 #0x3D75C28F
 	.4byte 0x3DB851EC
 	.4byte 0x3DF5C28F
 	.4byte 0x3E19999A

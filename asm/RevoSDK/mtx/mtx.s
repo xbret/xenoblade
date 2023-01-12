@@ -827,7 +827,7 @@ C_MTXLightOrtho:
 
 .global Unit01
 Unit01:
-	.4byte 0
+	.float 0
 	.float 1.0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

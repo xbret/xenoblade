@@ -2383,26 +2383,28 @@ lbl_8050C9A8:
 
 .global lbl_8050C9B0
 lbl_8050C9B0:
-	.4byte 0x41A80000
-	.4byte 0x42200000
-	.4byte 0x3D430C31
-	.4byte 0x3D579436
+	.float 21
+	.float 40
+	#1 - 20/21?
+	.float 0.047619048 #0x3D430C31
+	#13/247?
+	.float 0.052631579 #0x3D579436
 
 
 .global lbl_8050C9C0
 lbl_8050C9C0:
 	.float 10.0
-	.4byte 0x42200000
-	.4byte 0x3DCCCCCD
-	.4byte 0x3D088889
+	.float 40
+	.float 0.1
+	.float 0.033333335 #0x3D088889
 
 
 .global lbl_8050C9D0
 lbl_8050C9D0:
 	.float 10.0
-	.4byte 0x42200000
-	.4byte 0x3DCCCCCD
-	.4byte 0x3D088889
+	.float 40
+	.float 0.1
+	.float 0.033333335 #0x3D088889
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

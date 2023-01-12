@@ -2158,7 +2158,7 @@ lbl_80520600:
 #unreferenced?
 .global lbl_80520648
 lbl_80520648:
-	.4byte 0x3ECCCCCD
+	.float 0.4 #0x3ECCCCCD
 	.float 0.5
 	.float 1.0
 	.float 0.75
