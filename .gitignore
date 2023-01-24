@@ -24,3 +24,9 @@ __pycache__
 *.exe
 *.dll
 *.bat
+
+# DTK stuff
+#OS X
+tools/dtk
+#Linux
+tools/dtk-*
