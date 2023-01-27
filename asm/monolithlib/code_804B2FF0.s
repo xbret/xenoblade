@@ -3227,7 +3227,7 @@ lbl_8001FCE8:
 
 .global lbl_8001FCF0
 lbl_8001FCF0:
-	.4byte switch_80080000
+	.4byte 0x80080000
 	.4byte 0
 
 .global lbl_8001FCF8

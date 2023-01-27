@@ -14953,7 +14953,7 @@ lbl_80011824:
 
 .global lbl_8001182C
 lbl_8001182C:
-	.4byte switch_80080000
+	.4byte 0x80080000
 	.4byte 0
 
 .global lbl_80011834

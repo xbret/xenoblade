@@ -6232,7 +6232,7 @@ __RTTI__CCol6CheckBat:
 
 .global lbl_8000D824
 lbl_8000D824:
-	.4byte switch_800A0000
+	.4byte 0x800A0000
 	.4byte 0x000000B4
 	.4byte 0x00000060
 	.4byte 0x000000F0

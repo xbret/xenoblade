@@ -56,8 +56,8 @@ __ct__CPackItem:
 /* 804DE448 004A7A08  38 21 00 20 */	addi r1, r1, 0x20
 /* 804DE44C 004A7A0C  4E 80 00 20 */	blr 
 
-.global func_804DE450
-func_804DE450:
+.global __dt__CPackItem
+__dt__CPackItem:
 /* 804DE450 004A7A10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DE454 004A7A14  7C 08 02 A6 */	mflr r0
 /* 804DE458 004A7A18  2C 03 00 00 */	cmpwi r3, 0
@@ -482,6 +482,8 @@ func_804DE990:
 /* 804DEA00 004A7FC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DEA04 004A7FC4  4E 80 00 20 */	blr 
 
+#Calculates a 64 bit hash of the given filename, used for finding the file
+#in the pkb file using the hash table in the pkh file.
 .global func_804DEA08
 func_804DEA08:
 /* 804DEA08 004A7FC8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -572,7 +574,7 @@ CPackItem_typestr:
 __vt__CPackItem:
 	.4byte __RTTI__CPackItem
 	.4byte 0
-	.4byte func_804DE450
+	.4byte __dt__CPackItem
 	.4byte func_80039E28
 	.4byte func_804DE990
 	.4byte func_80039E18
@@ -656,7 +658,7 @@ lbl_80020930:
 .4byte __ct__CPackItem
 	.4byte 0x000000C4
 	.4byte lbl_800208F4
-	.4byte func_804DE450
+	.4byte __dt__CPackItem
 	.4byte 0x000000AC
 	.4byte lbl_800208FC
 	.4byte func_804DE4FC

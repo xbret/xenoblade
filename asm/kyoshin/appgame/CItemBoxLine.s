@@ -8055,7 +8055,7 @@ lbl_800121AC:
 
 .global lbl_800121B4
 lbl_800121B4:
-	.4byte switch_80080000
+	.4byte 0x80080000
 	.4byte 0
 
 .global lbl_800121BC

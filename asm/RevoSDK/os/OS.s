@@ -1195,10 +1195,10 @@ OSExceptionInit:
 /* 8035292C 0031BEEC  48 00 17 75 */	bl ICInvalidateRange
 .L_80352930:
 /* 80352930 0031BEF0  3F E0 80 35 */	lis r31, __OSDBJump@ha
-/* 80352934 0031BEF4  3C 60 80 35 */	lis r3, func_80352B54@ha
+/* 80352934 0031BEF4  3C 60 80 35 */	lis r3, __OSSetExceptionHandler1@ha
 /* 80352938 0031BEF8  38 1F 2B 50 */	addi r0, r31, __OSDBJump@l
 /* 8035293C 0031BEFC  3B 1E 03 D0 */	addi r24, r30, 0x3d0
-/* 80352940 0031BF00  38 63 2B 54 */	addi r3, r3, func_80352B54@l
+/* 80352940 0031BF00  38 63 2B 54 */	addi r3, r3, __OSSetExceptionHandler1@l
 /* 80352944 0031BF04  3B A0 00 00 */	li r29, 0
 /* 80352948 0031BF08  7E A0 18 50 */	subf r21, r0, r3
 /* 8035294C 0031BF0C  3E E0 60 00 */	lis r23, 0x6000
@@ -1340,15 +1340,15 @@ __OSDBIntegrator:
 /* 80352B3C 0031C0FC  7C 60 01 24 */	mtmsr r3
 /* 80352B40 0031C100  4E 80 00 20 */	blr
 
+#These extra labels shouldn't exist, but are needed because of alignment shenanigans
 
-.global __OSDBJump1
 __OSDBJump1:
 .balign 16, 0
 .global __OSDBJump
 __OSDBJump:
 /* 80352B50 0031C110  48 00 00 63 */	bla 0x60
 
-func_80352B54:
+__OSSetExceptionHandler1:
 .balign 16, 0
 .global __OSSetExceptionHandler
 __OSSetExceptionHandler:

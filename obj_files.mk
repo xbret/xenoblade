@@ -99,7 +99,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CAIAction.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CArtsSet.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CArtsParam.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_80155660.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CItem.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CCharEffect.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CCharEffectEne.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CCol6CheckBat.o \
@@ -248,9 +248,12 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainTime.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainTimer.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSysWinScenarioLog.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainActorEne.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainActorPc.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CEquipItemBox.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CEIBCur.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CEIBPageCur.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/CEquipItemBox.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/CEquipItemBox_1.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuSave.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSLCur.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSaveLoad.o \
@@ -1132,7 +1135,7 @@ MONOLITHLIB_O_FILES :=\
 	$(BUILD_DIR)/asm/monolithlib/code_804DEDA8.o \
 	$(BUILD_DIR)/asm/monolithlib/CSchedule.o \
 	$(BUILD_DIR)/asm/monolithlib/code_804E36DC.o \
-	$(BUILD_DIR)/asm/monolithlib/CScheduleList.o \
+	$(BUILD_DIR)/asm/monolithlib/ScheduleList.o \
 	$(BUILD_DIR)/asm/monolithlib/CMdlMaterial.o \
 	$(BUILD_DIR)/asm/monolithlib/CMdlMouth.o \
 	$(BUILD_DIR)/asm/monolithlib/CMdlAnmUV.o \

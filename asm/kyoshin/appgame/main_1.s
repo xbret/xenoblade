@@ -96,8 +96,8 @@ lbl_800067D4:
 
 .global lbl_800067DC
 lbl_800067DC:
-#	.4byte 0x00080000
-#	.4byte 0
+	.4byte 0x00080000
+	.4byte 0
 
 .section extabindex, "a"  # 0x80021020 - 0x80039220
 
@@ -112,6 +112,6 @@ lbl_800067DC:
 	.4byte 0x00000024
 	.4byte lbl_800067D4
 
-	#.4byte main
-	#.4byte 0x000000C8
-	#.4byte lbl_800067DC
+	.4byte main
+	.4byte 0x000000C8
+	.4byte lbl_800067DC

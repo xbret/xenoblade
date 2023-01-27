@@ -4298,7 +4298,7 @@ lbl_80020310:
 
 .global lbl_80020318
 lbl_80020318:
-	.4byte switch_804A0000
+	.4byte 0x804A0000
 	.4byte 0
 
 .global lbl_80020320

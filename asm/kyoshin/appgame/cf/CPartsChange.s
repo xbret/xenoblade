@@ -7887,7 +7887,7 @@ lbl_8000F404:
 
 .global lbl_8000F40C
 lbl_8000F40C:
-	.4byte switch_804A0000
+	.4byte 0x804A0000
 	.4byte 0
 
 .global lbl_8000F414

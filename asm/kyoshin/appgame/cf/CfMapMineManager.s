@@ -2816,7 +2816,7 @@ lbl_80012E70:
 
 .global lbl_80012E78
 lbl_80012E78:
-	.4byte switch_80080000
+	.4byte 0x80080000
 	.4byte 0
 
 .global lbl_80012E80

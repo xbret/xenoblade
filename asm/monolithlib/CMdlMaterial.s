@@ -1359,7 +1359,7 @@ lbl_80020CA0:
 
 .global lbl_80020CA8
 lbl_80020CA8:
-	.4byte switch_80080000
+	.4byte 0x80080000
 	.4byte 0
 
 .global lbl_80020CB0

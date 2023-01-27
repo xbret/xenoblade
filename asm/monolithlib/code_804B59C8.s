@@ -6306,7 +6306,7 @@ lbl_8001FE80:
 
 .global lbl_8001FE88
 lbl_8001FE88:
-	.4byte switch_800A0000
+	.4byte 0x800A0000
 	.4byte 0
 
 .global lbl_8001FE90

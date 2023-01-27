@@ -2414,7 +2414,7 @@ lbl_8001DCA4:
 
 .global lbl_8001DCAC
 lbl_8001DCAC:
-	.4byte switch_804A0000
+	.4byte 0x804A0000
 	.4byte 0
 
 .global lbl_8001DCB4
