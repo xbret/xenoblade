@@ -26,7 +26,7 @@
 .text
 .balign 4
 
-.fn fn_80435D28, local
+.fn fn_80435D28, global
 /* 80435D28 003FF2E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80435D2C 003FF2EC  7C 08 02 A6 */	mflr r0
 /* 80435D30 003FF2F0  C0 23 00 00 */	lfs f1, 0x0(r3)
@@ -94,7 +94,7 @@
 # 0x8066C9E8 - 0x8066C9F0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C9E8, local
+.sym lbl_8066C9E8, global
 	.4byte 0x00000000
-.sym lbl_8066C9EC, local
+.sym lbl_8066C9EC, global
 	.4byte 0x3F800000

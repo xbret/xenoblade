@@ -3,7 +3,7 @@
 
 # 0x800062C0 - 0x800065C0
 .section .init, "ax"
-.balign 4
+.balign 16
 
 .fn __check_pad3, local
 /* 800062C0 000023C0  3C 60 80 00 */	lis r3, 0x8000

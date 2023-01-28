@@ -1134,7 +1134,7 @@
 # 0x8051C750 - 0x8051C760
 .rodata
 .balign 8
-.sym lbl_8051C750, local
+.sym lbl_8051C750, global
 	.4byte 0x2E736E64
 	.4byte 0x002E7364
 	.4byte 0x00000000
@@ -1143,7 +1143,7 @@
 # 0x80569528 - 0x80569728
 .data
 .balign 8
-.sym lbl_80569528, local
+.sym lbl_80569528, global
 	.4byte 0x82848684
 	.4byte 0x8A848E84
 	.4byte 0x92849684

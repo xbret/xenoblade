@@ -3,7 +3,7 @@
 
 # 0x802F08A0 - 0x802F0EBC
 .text
-.balign 4
+.balign 16
 
 .fn btm_cback, global
 /* 802F08A0 002B9E60  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -492,7 +492,7 @@
 # 0x805463A0 - 0x80546690
 .data
 .balign 8
-.sym lbl_805463A0, local
+.sym lbl_805463A0, global
 	.4byte 0x20202047
 	.4byte 0x41502049
 	.4byte 0x6E717569
@@ -590,7 +590,7 @@
 	.4byte 0x20307825
 	.4byte 0x30347829
 	.4byte 0x00000000
-.sym lbl_80546518, local
+.sym lbl_80546518, global
 	.4byte 0x20202047
 	.4byte 0x41503A20
 	.4byte 0x46696E64
@@ -608,7 +608,7 @@
 	.4byte 0x204E616D
 	.4byte 0x65205B25
 	.4byte 0x735D2900
-.sym lbl_8054655C, local
+.sym lbl_8054655C, global
 	.4byte 0x20202047
 	.4byte 0x41503A20
 	.4byte 0x46696E64
@@ -648,7 +648,7 @@
 	.rel gap_find_addr_name_cb, .L_802F0BB4
 	.rel gap_find_addr_name_cb, .L_802F0BBC
 .endobj jumptable_805465BC
-.sym lbl_805465E0, local
+.sym lbl_805465E0, global
 	.4byte 0x20202047
 	.4byte 0x41503A20
 	.4byte 0x46696E64

@@ -26,7 +26,7 @@
 .text
 .balign 4
 
-.fn fn_802B7D9C, local
+.fn fn_802B7D9C, global
 /* 802B7D9C 0028135C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B7DA0 00281360  7C 08 02 A6 */	mflr r0
 /* 802B7DA4 00281364  90 01 00 14 */	stw r0, 0x14(r1)

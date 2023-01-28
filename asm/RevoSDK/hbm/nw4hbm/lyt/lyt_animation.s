@@ -872,23 +872,23 @@
 # 0x80518A28 - 0x80518A48
 .rodata
 .balign 8
-.sym lbl_80518A28, local
+.sym lbl_80518A28, global
 	.4byte 0xBA83126F
-.sym lbl_80518A2C, local
+.sym lbl_80518A2C, global
 	.4byte 0x3A83126F
 	.4byte 0x3F800000
 	.4byte 0x40000000
 	.4byte 0x40400000
 	.4byte 0xC0000000
-.sym lbl_80518A40, local
+.sym lbl_80518A40, global
 	.4byte 0x00000000
-.sym lbl_80518A44, local
+.sym lbl_80518A44, global
 	.4byte 0x3F000000
 
 # 0x8054D5B8 - 0x8054D638
 .data
 .balign 8
-.sym lbl_8054D5B8, local
+.sym lbl_8054D5B8, global
 	.4byte lbl_8054D608
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt18AnimTransformBasicFv
@@ -897,7 +897,7 @@
 	.4byte Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt8Material
 	.4byte Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt4Pane
 	.4byte Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt8Material
-.sym lbl_8054D5D8, local
+.sym lbl_8054D5D8, global
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
@@ -906,15 +906,15 @@
 	.4byte 0x6E73666F
 	.4byte 0x726D4261
 	.4byte 0x73696300
-.sym lbl_8054D5F8, local
+.sym lbl_8054D5F8, global
 	.4byte lbl_8054D630
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8054D608, local
+.sym lbl_8054D608, global
 	.4byte lbl_8054D5D8
 	.4byte lbl_8054D5F8
-.sym lbl_8054D610, local
+.sym lbl_8054D610, global
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
@@ -923,6 +923,6 @@
 	.4byte 0x6E73666F
 	.4byte 0x726D0000
 	.4byte 0x00000000
-.sym lbl_8054D630, local
+.sym lbl_8054D630, global
 	.4byte lbl_8054D610
 	.4byte 0x00000000

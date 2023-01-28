@@ -62,7 +62,7 @@
 /* 803C90D0 00392690  4E 80 00 20 */	blr
 .endfn SFD_IsHnSvrWait
 
-.fn fn_803C90D4, local
+.fn fn_803C90D4, global
 /* 803C90D4 00392694  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C90D8 00392698  7C 08 02 A6 */	mflr r0
 /* 803C90DC 0039269C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1159,7 +1159,7 @@
 /* 803C9FBC 0039357C  4E 80 00 20 */	blr
 .endfn sfply_IsEtrg
 
-.fn fn_803C9FC0, local
+.fn fn_803C9FC0, global
 /* 803C9FC0 00393580  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C9FC4 00393584  7C 08 02 A6 */	mflr r0
 /* 803C9FC8 00393588  38 80 00 01 */	li r4, 0x1
@@ -1265,7 +1265,7 @@
 /* 803CA120 003936E0  4E 80 00 20 */	blr
 .endfn sfply_IsPlayTimeAutoStop
 
-.fn fn_803CA124, local
+.fn fn_803CA124, global
 /* 803CA124 003936E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CA128 003936E8  7C 08 02 A6 */	mflr r0
 /* 803CA12C 003936EC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2008,7 +2008,7 @@
 /* 803CAB78 00394138  4E 80 00 20 */	blr
 .endfn SFD_Start
 
-.fn fn_803CAB7C, local
+.fn fn_803CAB7C, global
 /* 803CAB7C 0039413C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CAB80 00394140  7C 08 02 A6 */	mflr r0
 /* 803CAB84 00394144  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2933,7 +2933,7 @@
 # 0x805203F0 - 0x805205D8
 .rodata
 .balign 8
-.sym lbl_805203F0, local
+.sym lbl_805203F0, global
 	.4byte 0x00000001
 	.4byte 0x00000001
 	.4byte 0x00000001
@@ -3035,9 +3035,9 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_80520584, local
+.sym lbl_80520584, global
 	.4byte 0x00000000
-.sym lbl_80520588, local
+.sym lbl_80520588, global
 	.4byte 0x25702C20
 	.4byte 0x256C642C
 	.4byte 0x20256C64
@@ -3077,10 +3077,10 @@
 # 0x8061CDD8 - 0x8061CDE4
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061CDD8, local
+.sym lbl_8061CDD8, global
 	.skip 0x4
 
 .obj sfply_last_hnctrl_wksiz, global
 	.skip 0x4
-.sym lbl_8061CDE0, local
+.sym lbl_8061CDE0, global
 	.skip 0x4

@@ -774,7 +774,7 @@
 /* 8039C6A8 00365C68  48 02 FF DC */	b fn_803CC684
 .endfn MWSFFRM_SetShfCbFn
 
-.fn fn_8039C6AC, local
+.fn fn_8039C6AC, global
 /* 8039C6AC 00365C6C  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8039C6B0 00365C70  7C 08 02 A6 */	mflr r0
 /* 8039C6B4 00365C74  2C 05 08 00 */	cmpwi r5, 0x800
@@ -1098,7 +1098,7 @@
 /* 8039CB04 003660C4  4E 80 00 20 */	blr
 .endfn mwsffrm_AnalyAudioInfo
 
-.fn fn_8039CB08, local
+.fn fn_8039CB08, global
 /* 8039CB08 003660C8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039CB0C 003660CC  7C 08 02 A6 */	mflr r0
 /* 8039CB10 003660D0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1274,7 +1274,7 @@
 /* 8039CD78 00366338  4E 80 00 20 */	blr
 .endfn fn_8039CB08
 
-.fn fn_8039CD7C, local
+.fn fn_8039CD7C, global
 /* 8039CD7C 0036633C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039CD80 00366340  7C 08 02 A6 */	mflr r0
 /* 8039CD84 00366344  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1338,7 +1338,7 @@
 # 0x8051CEB0 - 0x8051D1D0
 .rodata
 .balign 8
-.sym lbl_8051CEB0, local
+.sym lbl_8051CEB0, global
 	.4byte 0x45313132
 	.4byte 0x32363239
 	.4byte 0x206D7750

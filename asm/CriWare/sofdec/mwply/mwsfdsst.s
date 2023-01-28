@@ -5,7 +5,7 @@
 .text
 .balign 4
 
-.fn fn_803A31C0, local
+.fn fn_803A31C0, global
 /* 803A31C0 0036C780  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A31C4 0036C784  7C 08 02 A6 */	mflr r0
 /* 803A31C8 0036C788  90 01 00 24 */	stw r0, 0x24(r1)
@@ -80,7 +80,7 @@
 /* 803A32C4 0036C884  4E 80 00 20 */	blr
 .endfn MWSFD_DisconnectSst
 
-.fn fn_803A32C8, local
+.fn fn_803A32C8, global
 /* 803A32C8 0036C888  1C 04 00 28 */	mulli r0, r4, 0x28
 /* 803A32CC 0036C88C  7C 63 02 14 */	add r3, r3, r0
 /* 803A32D0 0036C890  80 63 05 EC */	lwz r3, 0x5ec(r3)
@@ -250,7 +250,7 @@
 /* 803A34F4 0036CAB4  4E 80 00 20 */	blr
 .endfn MWSST_GetTime
 
-.fn fn_803A34F8, local
+.fn fn_803A34F8, global
 /* 803A34F8 0036CAB8  80 03 00 04 */	lwz r0, 0x4(r3)
 /* 803A34FC 0036CABC  3C A0 80 60 */	lis r5, lbl_80605EC0@ha
 /* 803A3500 0036CAC0  38 A5 5E C0 */	addi r5, r5, lbl_80605EC0@l
@@ -336,7 +336,7 @@
 /* 803A3610 0036CBD0  4E 80 00 20 */	blr
 .endfn MWSST_GetOutVol
 
-.fn fn_803A3614, local
+.fn fn_803A3614, global
 /* 803A3614 0036CBD4  80 03 00 04 */	lwz r0, 0x4(r3)
 /* 803A3618 0036CBD8  3C A0 80 60 */	lis r5, lbl_80605EC0@ha
 /* 803A361C 0036CBDC  38 A5 5E C0 */	addi r5, r5, lbl_80605EC0@l
@@ -372,7 +372,7 @@
 /* 803A3688 0036CC48  4E 80 00 20 */	blr
 .endfn fn_803A3614
 
-.fn fn_803A368C, local
+.fn fn_803A368C, global
 /* 803A368C 0036CC4C  80 03 00 04 */	lwz r0, 0x4(r3)
 /* 803A3690 0036CC50  3C 80 80 60 */	lis r4, lbl_80605EC0@ha
 /* 803A3694 0036CC54  38 84 5E C0 */	addi r4, r4, lbl_80605EC0@l
@@ -604,5 +604,5 @@
 # 0x80605EC0 - 0x80605ED0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80605EC0, local
+.sym lbl_80605EC0, global
 	.skip 0x10

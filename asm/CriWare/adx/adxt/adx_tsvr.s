@@ -829,7 +829,7 @@
 /* 8038531C 0034E8DC  4E 80 00 20 */	blr
 .endfn adxt_stat_prep
 
-.fn fn_80385320, local
+.fn fn_80385320, global
 /* 80385320 0034E8E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80385324 0034E8E4  7C 08 02 A6 */	mflr r0
 /* 80385328 0034E8E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1123,7 +1123,7 @@
 # 0x8051A120 - 0x8051A1B8
 .rodata
 .balign 8
-.sym lbl_8051A120, local
+.sym lbl_8051A120, global
 	.4byte 0x45383130
 	.4byte 0x31323031
 	.4byte 0x20616478
@@ -1166,9 +1166,9 @@
 # 0x805E85F0 - 0x805E8600
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E85F0, local
+.sym lbl_805E85F0, global
 	.skip 0x4
-.sym lbl_805E85F4, local
+.sym lbl_805E85F4, global
 	.skip 0x4
 
 .obj adxt_dbg_ndt, global

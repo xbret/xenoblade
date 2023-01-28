@@ -3,9 +3,9 @@
 
 # 0x8033F040 - 0x803409B0
 .text
-.balign 4
+.balign 16
 
-.fn fn_8033F040, local
+.fn fn_8033F040, global
 /* 8033F040 00308600  3C 80 80 5D */	lis r4, lbl_805CD898@ha
 /* 8033F044 00308604  3C C0 80 55 */	lis r6, lbl_8054EF00@ha
 /* 8033F048 00308608  80 04 D8 98 */	lwz r0, lbl_805CD898@l(r4)
@@ -49,7 +49,7 @@
 /* 8033F0DC 0030869C  4E 80 00 20 */	blr
 .endfn fn_8033F040
 
-.fn fn_8033F0E0, local
+.fn fn_8033F0E0, global
 /* 8033F0E0 003086A0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8033F0E4 003086A4  7C 08 02 A6 */	mflr r0
 /* 8033F0E8 003086A8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -183,7 +183,7 @@
 /* 8033F2DC 0030889C  4E 80 00 20 */	blr
 .endfn fn_8033F0E0
 
-.fn fn_8033F2E0, local
+.fn fn_8033F2E0, global
 /* 8033F2E0 003088A0  3C 80 80 5D */	lis r4, lbl_805CD89C@ha
 /* 8033F2E4 003088A4  3C 60 80 5D */	lis r3, lbl_805CDEE0@ha
 /* 8033F2E8 003088A8  38 00 00 00 */	li r0, 0x0
@@ -201,7 +201,7 @@
 .endfn HBMMIXSetSoundMode
 /* 8033F30C 003088CC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_8033F310, local
+.fn fn_8033F310, global
 /* 8033F310 003088D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8033F314 003088D4  7C 08 02 A6 */	mflr r0
 /* 8033F318 003088D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -988,7 +988,7 @@
 /* 8033FDC8 00309388  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8033FDCC 0030938C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_8033FDD0, local
+.fn fn_8033FDD0, global
 /* 8033FDD0 00309390  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8033FDD4 00309394  3C C0 80 5D */	lis r6, lbl_805CD828@ha
 /* 8033FDD8 00309398  38 C6 D8 28 */	addi r6, r6, lbl_805CD828@l
@@ -1794,7 +1794,7 @@
 /* 803408C8 00309E88  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803408CC 00309E8C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_803408D0, local
+.fn fn_803408D0, global
 /* 803408D0 00309E90  3C 80 80 5D */	lis r4, lbl_805CD828@ha
 /* 803408D4 00309E94  38 00 00 10 */	li r0, 0x10
 /* 803408D8 00309E98  38 84 D8 28 */	addi r4, r4, lbl_805CD828@l
@@ -1823,7 +1823,7 @@
 /* 80340928 00309EE8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8034092C 00309EEC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80340930, local
+.fn fn_80340930, global
 /* 80340930 00309EF0  3C 80 80 5D */	lis r4, lbl_805CD838@ha
 /* 80340934 00309EF4  38 84 D8 38 */	addi r4, r4, lbl_805CD838@l
 /* 80340938 00309EF8  7C 64 18 AE */	lbzx r3, r4, r3
@@ -1834,7 +1834,7 @@
 /* 80340948 00309F08  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8034094C 00309F0C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80340950, local
+.fn fn_80340950, global
 /* 80340950 00309F10  3C A0 80 5D */	lis r5, lbl_805CD828@ha
 /* 80340954 00309F14  3C 80 80 5D */	lis r4, lbl_805CD838@ha
 /* 80340958 00309F18  38 A5 D8 28 */	addi r5, r5, lbl_805CD828@l
@@ -1867,7 +1867,7 @@
 # 0x8054EF00 - 0x8054FA90
 .data
 .balign 8
-.sym lbl_8054EF00, local
+.sym lbl_8054EF00, global
 	.4byte 0x00000001
 	.4byte 0x00010001
 	.4byte 0x00010001
@@ -2612,13 +2612,13 @@
 # 0x805CD828 - 0x805CDEE8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CD828, local
+.sym lbl_805CD828, global
 	.skip 0x10
-.sym lbl_805CD838, local
+.sym lbl_805CD838, global
 	.skip 0x60
-.sym lbl_805CD898, local
+.sym lbl_805CD898, global
 	.skip 0x4
-.sym lbl_805CD89C, local
+.sym lbl_805CD89C, global
 	.skip 0x644
-.sym lbl_805CDEE0, local
+.sym lbl_805CDEE0, global
 	.skip 0x8

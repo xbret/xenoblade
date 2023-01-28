@@ -1632,7 +1632,7 @@
 # 0x8056D558 - 0x8056D580
 .data
 .balign 8
-.sym lbl_8056D558, local
+.sym lbl_8056D558, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt18AnimTransformBasicFv
@@ -1647,19 +1647,19 @@
 # 0x8066C5D8 - 0x8066C5F8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C5D8, local
+.sym lbl_8066C5D8, global
 	.4byte 0xBA83126F
-.sym lbl_8066C5DC, local
+.sym lbl_8066C5DC, global
 	.4byte 0x3A83126F
-.sym lbl_8066C5E0, local
+.sym lbl_8066C5E0, global
 	.4byte 0x3F800000
-.sym lbl_8066C5E4, local
+.sym lbl_8066C5E4, global
 	.4byte 0x40000000
-.sym lbl_8066C5E8, local
+.sym lbl_8066C5E8, global
 	.4byte 0x40400000
-.sym lbl_8066C5EC, local
+.sym lbl_8066C5EC, global
 	.4byte 0xC0000000
-.sym lbl_8066C5F0, local
+.sym lbl_8066C5F0, global
 	.4byte 0x00000000
-.sym lbl_8066C5F4, local
+.sym lbl_8066C5F4, global
 	.4byte 0x3F000000

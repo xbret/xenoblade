@@ -167,6 +167,6 @@
 # 0x8066C4F8 - 0x8066C500
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C4F8, local
+.sym lbl_8066C4F8, global
 	.4byte 0x00000000
 	.4byte 0x00000000

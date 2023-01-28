@@ -3,7 +3,7 @@
 
 # 0x80353F60 - 0x80354610
 .text
-.balign 4
+.balign 16
 
 .fn DCEnable, global
 /* 80353F60 0031D520  7C 00 04 AC */	sync

@@ -263,7 +263,7 @@
 # 0x8051BA60 - 0x8051BAB8
 .rodata
 .balign 8
-.sym lbl_8051BA60, local
+.sym lbl_8051BA60, global
 	.4byte 0x45303031
 	.4byte 0x333A2027
 	.4byte 0x25732720

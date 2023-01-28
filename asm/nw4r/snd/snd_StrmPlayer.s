@@ -3142,7 +3142,7 @@
 # 0x8056E558 - 0x8056E5D0
 .data
 .balign 8
-.sym lbl_8056E558, local
+.sym lbl_8056E558, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r3snd6detail10StrmPlayerFv
@@ -3161,14 +3161,14 @@
 	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
 	.4byte OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
 	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
-.sym lbl_8056E5A0, local
+.sym lbl_8056E5A0, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
 	.4byte Execute__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
 	.4byte Cancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
 	.4byte OnCancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
-.sym lbl_8056E5B8, local
+.sym lbl_8056E5B8, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
@@ -3179,33 +3179,33 @@
 # 0x80653000 - 0x80657018
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80653000, local
+.sym lbl_80653000, global
 	.skip 0x4000
-.sym lbl_80657000, local
+.sym lbl_80657000, global
 	.skip 0x18
 
 # 0x80667DF8 - 0x80667E00
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DF8, local
+.sym lbl_80667DF8, global
 	.skip 0x8
 
 # 0x8066C860 - 0x8066C888
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C860, local
+.sym lbl_8066C860, global
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066C868, local
+.sym lbl_8066C868, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C870, local
+.sym lbl_8066C870, global
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C878, local
+.sym lbl_8066C878, global
 	.4byte 0x3F800000
-.sym lbl_8066C87C, local
+.sym lbl_8066C87C, global
 	.4byte 0x42FE0000
-.sym lbl_8066C880, local
+.sym lbl_8066C880, global
 	.4byte 0x427C0000
 	.4byte 0x00000000

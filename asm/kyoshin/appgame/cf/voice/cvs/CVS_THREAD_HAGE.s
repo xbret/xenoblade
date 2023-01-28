@@ -87,7 +87,7 @@
 .text
 .balign 4
 
-.fn fn_802A6E84, local
+.fn fn_802A6E84, global
 /* 802A6E84 00270444  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802A6E88 00270448  7C 08 02 A6 */	mflr r0
 /* 802A6E8C 0027044C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -162,7 +162,7 @@
 /* 802A6F88 00270548  4E 80 00 20 */	blr
 .endfn fn_802A6E84
 
-.fn fn_802A6F8C, local
+.fn fn_802A6F8C, global
 /* 802A6F8C 0027054C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A6F90 00270550  7C 08 02 A6 */	mflr r0
 /* 802A6F94 00270554  3C A0 80 54 */	lis r5, lbl_8053D344@ha
@@ -251,7 +251,7 @@
 /* 802A70C4 00270684  4E 80 00 20 */	blr
 .endfn fn_802A6F8C
 
-.fn fn_802A70C8, local
+.fn fn_802A70C8, global
 /* 802A70C8 00270688  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A70CC 0027068C  7C 08 02 A6 */	mflr r0
 /* 802A70D0 00270690  90 01 00 14 */	stw r0, 0x14(r1)
@@ -305,7 +305,7 @@
 /* 802A7188 00270748  4E 80 00 20 */	blr
 .endfn fn_802A70C8
 
-.fn fn_802A718C, local
+.fn fn_802A718C, global
 /* 802A718C 0027074C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A7190 00270750  7C 08 02 A6 */	mflr r0
 /* 802A7194 00270754  90 01 00 14 */	stw r0, 0x14(r1)
@@ -327,7 +327,7 @@
 /* 802A71D0 00270790  4E 80 00 20 */	blr
 .endfn fn_802A718C
 
-.fn fn_802A71D4, local
+.fn fn_802A71D4, global
 /* 802A71D4 00270794  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A71D8 00270798  7C 08 02 A6 */	mflr r0
 /* 802A71DC 0027079C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -364,7 +364,7 @@
 /* 802A7248 00270808  4E 80 00 20 */	blr
 .endfn fn_802A71D4
 
-.fn fn_802A724C, local
+.fn fn_802A724C, global
 /* 802A724C 0027080C  38 60 00 F0 */	li r3, 0xf0
 /* 802A7250 00270810  4E 80 00 20 */	blr
 .endfn fn_802A724C
@@ -384,15 +384,15 @@
 # 0x8053D338 - 0x8053D388
 .data
 .balign 8
-.sym lbl_8053D338, local
+.sym lbl_8053D338, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A6F8C
-.sym lbl_8053D344, local
+.sym lbl_8053D344, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A70C8
-.sym lbl_8053D350, local
+.sym lbl_8053D350, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A718C

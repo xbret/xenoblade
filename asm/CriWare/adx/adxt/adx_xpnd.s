@@ -320,7 +320,7 @@
 # 0x805E8600 - 0x805E89C8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E8600, local
+.sym lbl_805E8600, global
 	.skip 0x3C0
 
 .obj adxpd_internal_error, global

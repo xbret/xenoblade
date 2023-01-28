@@ -1217,7 +1217,7 @@
 # 0x8056E688 - 0x8056E6E8
 .data
 .balign 8
-.sym lbl_8056E688, local
+.sym lbl_8056E688, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r3snd6detail9WsdPlayerFv
@@ -1246,20 +1246,20 @@
 # 0x8066C908 - 0x8066C930
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C908, local
+.sym lbl_8066C908, global
 	.4byte 0x3F800000
-.sym lbl_8066C90C, local
+.sym lbl_8066C90C, global
 	.4byte 0x00000000
-.sym lbl_8066C910, local
+.sym lbl_8066C910, global
 	.4byte 0x427C0000
-.sym lbl_8066C914, local
+.sym lbl_8066C914, global
 	.4byte 0x3C800000
-.sym lbl_8066C918, local
+.sym lbl_8066C918, global
 	.4byte 0x42FE0000
 	.4byte 0x00000000
-.sym lbl_8066C920, local
+.sym lbl_8066C920, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C928, local
+.sym lbl_8066C928, global
 	.4byte 0x43300000
 	.4byte 0x00000000

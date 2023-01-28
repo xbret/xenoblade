@@ -3,7 +3,7 @@
 
 # 0x8031F560 - 0x80320D80
 .text
-.balign 4
+.balign 16
 
 .fn drawLine___Q210homebutton3guiFfffffUcR8_GXColor, global
 /* 8031F560 002E8B20  94 21 FF 70 */	stwu r1, -0x90(r1)
@@ -1888,7 +1888,7 @@
 # 0x80518670 - 0x80518680
 .rodata
 .balign 8
-.sym lbl_80518670, local
+.sym lbl_80518670, global
 	.4byte 0x00000000
 	.4byte 0xFF0000FF
 	.4byte 0x3F000000
@@ -2093,5 +2093,5 @@
 # 0x805CD5A8 - 0x805CD5B0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CD5A8, local
+.sym lbl_805CD5A8, global
 	.skip 0x8

@@ -39,7 +39,7 @@
 .text
 .balign 4
 
-.fn fn_804DB240, local
+.fn fn_804DB240, global
 /* 804DB240 004A4800  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB244 004A4804  7C 08 02 A6 */	mflr r0
 /* 804DB248 004A4808  90 01 00 14 */	stw r0, 0x14(r1)
@@ -56,7 +56,7 @@
 /* 804DB274 004A4834  4E 80 00 20 */	blr
 .endfn fn_804DB240
 
-.fn fn_804DB278, local
+.fn fn_804DB278, global
 /* 804DB278 004A4838  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB27C 004A483C  7C 08 02 A6 */	mflr r0
 /* 804DB280 004A4840  90 01 00 14 */	stw r0, 0x14(r1)
@@ -165,5 +165,5 @@
 # 0x806682D0 - 0x806682D8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806682D0, local
+.sym lbl_806682D0, global
 	.skip 0x8

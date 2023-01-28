@@ -3,7 +3,7 @@
 
 # 0x80308D70 - 0x80308F10
 .text
-.balign 4
+.balign 16
 
 .fn CXGetUncompressedSize, global
 /* 80308D70 002D2330  80 A3 00 00 */	lwz r5, 0x0(r3)

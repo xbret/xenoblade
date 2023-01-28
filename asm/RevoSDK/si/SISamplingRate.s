@@ -3,7 +3,7 @@
 
 # 0x803626D0 - 0x803627C0
 .text
-.balign 4
+.balign 16
 
 .fn SISetSamplingRate, global
 /* 803626D0 0032BC90  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -75,6 +75,51 @@
 .endfn SIRefreshSamplingRate
 /* 803627B8 0032BD78  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803627BC 0032BD7C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+
+# 0x8055F1A8 - 0x8055F240
+.data
+.balign 8
+
+.obj XYNTSC, local
+	.4byte 0x00F60200
+	.4byte 0x000E1300
+	.4byte 0x001E0900
+	.4byte 0x002C0600
+	.4byte 0x00340500
+	.4byte 0x00410400
+	.4byte 0x00570300
+	.4byte 0x00570300
+	.4byte 0x00570300
+	.4byte 0x00830200
+	.4byte 0x00830200
+	.4byte 0x00830200
+.endobj XYNTSC
+	.4byte 0x01280200
+	.4byte 0x000F1500
+	.4byte 0x001D0B00
+	.4byte 0x002D0700
+	.4byte 0x00340600
+	.4byte 0x003F0500
+	.4byte 0x004E0400
+	.4byte 0x00680300
+	.4byte 0x00680300
+	.4byte 0x00680300
+	.4byte 0x00680300
+	.4byte 0x009C0200
+	.4byte 0x53495365
+	.4byte 0x7453616D
+	.4byte 0x706C696E
+	.4byte 0x67526174
+	.4byte 0x653A2075
+	.4byte 0x6E6B6E6F
+	.4byte 0x776E2054
+	.4byte 0x5620666F
+	.4byte 0x726D6174
+	.4byte 0x2E205573
+	.4byte 0x65206465
+	.4byte 0x6661756C
+	.4byte 0x742E0000
+	.4byte 0x00000000
 
 # 0x80667B80 - 0x80667B88
 .section .sbss, "wa", @nobits

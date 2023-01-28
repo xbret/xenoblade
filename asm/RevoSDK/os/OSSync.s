@@ -3,7 +3,7 @@
 
 # 0x8035B2B0 - 0x8035B330
 .text
-.balign 4
+.balign 16
 
 .fn SystemCallVector, global
 .sym __OSSystemCallVectorStart, global

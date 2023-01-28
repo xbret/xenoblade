@@ -39,7 +39,7 @@
 .text
 .balign 4
 
-.fn fn_804DAF70, local
+.fn fn_804DAF70, global
 /* 804DAF70 004A4530  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804DAF74 004A4534  7C 08 02 A6 */	mflr r0
 /* 804DAF78 004A4538  90 01 00 24 */	stw r0, 0x24(r1)
@@ -60,7 +60,7 @@
 /* 804DAFB4 004A4574  4E 80 00 20 */	blr
 .endfn fn_804DAF70
 
-.fn fn_804DAFB8, local
+.fn fn_804DAFB8, global
 /* 804DAFB8 004A4578  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DAFBC 004A457C  7C 08 02 A6 */	mflr r0
 /* 804DAFC0 004A4580  90 01 00 14 */	stw r0, 0x14(r1)
@@ -199,5 +199,5 @@
 # 0x806682C0 - 0x806682C8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806682C0, local
+.sym lbl_806682C0, global
 	.skip 0x8

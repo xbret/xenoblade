@@ -3,7 +3,7 @@
 
 # 0x802E4500 - 0x802E6244
 .text
-.balign 4
+.balign 16
 
 .fn btm_acl_init, global
 /* 802E4500 002ADAC0  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
@@ -2163,7 +2163,7 @@
 # 0x80544C60 - 0x80545080
 .data
 .balign 8
-.sym lbl_80544C60, local
+.sym lbl_80544C60, global
 	.4byte 0x4475706C
 	.4byte 0x69636174
 	.4byte 0x65206274
@@ -2180,7 +2180,7 @@
 	.4byte 0x32782530
 	.4byte 0x32782530
 	.4byte 0x32780000
-.sym lbl_80544CA0, local
+.sym lbl_80544CA0, global
 	.4byte 0x53657450
 	.4byte 0x61636B65
 	.4byte 0x74547970
@@ -2189,7 +2189,7 @@
 	.4byte 0x3E203078
 	.4byte 0x25303478
 	.4byte 0x00000000
-.sym lbl_80544CC0, local
+.sym lbl_80544CC0, global
 	.4byte 0x526F6C65
 	.4byte 0x20636861
 	.4byte 0x6E676520
@@ -2286,7 +2286,7 @@
 	.4byte 0x30327825
 	.4byte 0x30327825
 	.4byte 0x30327800
-.sym lbl_80544E40, local
+.sym lbl_80544E40, global
 	.4byte 0x42544D5F
 	.4byte 0x52656164
 	.4byte 0x436C6F63
@@ -2302,7 +2302,7 @@
 	.4byte 0x25303278
 	.4byte 0x25303278
 	.4byte 0x00000000
-.sym lbl_80544E7C, local
+.sym lbl_80544E7C, global
 	.4byte 0x526F6C65
 	.4byte 0x20537769
 	.4byte 0x74636820
@@ -2329,7 +2329,7 @@
 	.4byte 0x25303278
 	.4byte 0x25303278
 	.4byte 0x00000000
-.sym lbl_80544EE4, local
+.sym lbl_80544EE4, global
 	.4byte 0x42544D3A
 	.4byte 0x20705F66
 	.4byte 0x6C6F772D
@@ -2340,7 +2340,7 @@
 	.4byte 0x3A203078
 	.4byte 0x25303278
 	.4byte 0x00000000
-.sym lbl_80544F0C, local
+.sym lbl_80544F0C, global
 	.4byte 0x42544D5F
 	.4byte 0x52656164
 	.4byte 0x52535349
@@ -2354,7 +2354,7 @@
 	.4byte 0x78253032
 	.4byte 0x78253032
 	.4byte 0x78000000
-.sym lbl_80544F40, local
+.sym lbl_80544F40, global
 	.4byte 0x42544D5F
 	.4byte 0x52656164
 	.4byte 0x4C696E6B
@@ -2370,7 +2370,7 @@
 	.4byte 0x25303278
 	.4byte 0x25303278
 	.4byte 0x00000000
-.sym lbl_80544F7C, local
+.sym lbl_80544F7C, global
 	.4byte 0x42544D20
 	.4byte 0x52535349
 	.4byte 0x20436F6D
@@ -2383,7 +2383,7 @@
 	.4byte 0x75732030
 	.4byte 0x78253032
 	.4byte 0x78000000
-.sym lbl_80544FAC, local
+.sym lbl_80544FAC, global
 	.4byte 0x42544D20
 	.4byte 0x4C696E6B
 	.4byte 0x20517561

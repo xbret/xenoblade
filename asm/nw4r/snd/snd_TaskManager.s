@@ -574,13 +574,13 @@
 # 0x80657018 - 0x80657060
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80657018, local
+.sym lbl_80657018, global
 	.skip 0xC
-.sym lbl_80657024, local
+.sym lbl_80657024, global
 	.skip 0x3C
 
 # 0x80667E08 - 0x80667E10
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E08, local
+.sym lbl_80667E08, global
 	.skip 0x8

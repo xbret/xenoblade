@@ -3,7 +3,7 @@
 
 # 0x8035F000 - 0x8035F140
 .text
-.balign 4
+.balign 16
 
 .fn NETCalcCRC16, global
 /* 8035F000 003285C0  2C 04 00 00 */	cmpwi r4, 0x0
@@ -95,7 +95,7 @@
 # 0x80518D10 - 0x80518D30
 .rodata
 .balign 8
-.sym lbl_80518D10, local
+.sym lbl_80518D10, global
 	.4byte 0x0000CC01
 	.4byte 0xD8011400
 	.4byte 0xF0013C00

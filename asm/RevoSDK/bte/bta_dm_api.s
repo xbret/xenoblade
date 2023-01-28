@@ -3,7 +3,7 @@
 
 # 0x802E1100 - 0x802E156C
 .text
-.balign 4
+.balign 16
 
 .fn BTA_EnableBluetooth, global
 /* 802E1100 002AA6C0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -338,9 +338,9 @@
 # 0x8066BF50 - 0x8066BF60
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF50, local
+.sym lbl_8066BF50, global
 	.4byte bta_dm_sm_execute
 	.4byte 0x00000000
-.sym lbl_8066BF58, local
+.sym lbl_8066BF58, global
 	.4byte bta_dm_search_sm_execute
 	.4byte 0x00000000

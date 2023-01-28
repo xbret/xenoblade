@@ -39,7 +39,7 @@
 .text
 .balign 4
 
-.fn fn_8049E380, local
+.fn fn_8049E380, global
 /* 8049E380 00467940  C0 02 D0 10 */	lfs f0, lbl_8066D390@sda21(r2)
 /* 8049E384 00467944  3C A0 80 57 */	lis r5, __vt__CScnFrame@ha
 /* 8049E388 00467948  38 A5 24 B8 */	addi r5, r5, __vt__CScnFrame@l
@@ -52,7 +52,7 @@
 /* 8049E3A4 00467964  4E 80 00 20 */	blr
 .endfn fn_8049E380
 
-.fn fn_8049E3A8, local
+.fn fn_8049E3A8, global
 /* 8049E3A8 00467968  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049E3AC 0046796C  7C 08 02 A6 */	mflr r0
 /* 8049E3B0 00467970  2C 03 00 00 */	cmpwi r3, 0x0
@@ -72,7 +72,7 @@
 /* 8049E3E4 004679A4  4E 80 00 20 */	blr
 .endfn fn_8049E3A8
 
-.fn fn_8049E3E8, local
+.fn fn_8049E3E8, global
 /* 8049E3E8 004679A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8049E3EC 004679AC  7C 08 02 A6 */	mflr r0
 /* 8049E3F0 004679B0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -136,10 +136,10 @@
 # 0x8066D390 - 0x8066D3A0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066D390, local
+.sym lbl_8066D390, global
 	.4byte 0x3F800000
-.sym lbl_8066D394, local
+.sym lbl_8066D394, global
 	.4byte 0x3F000000
-.sym lbl_8066D398, local
+.sym lbl_8066D398, global
 	.4byte 0x43300000
 	.4byte 0x00000000

@@ -5,11 +5,11 @@
 .text
 .balign 4
 
-.fn fn_8042BDFC, local
+.fn fn_8042BDFC, global
 /* 8042BDFC 003F53BC  4E 80 00 20 */	blr
 .endfn fn_8042BDFC
 
-.fn fn_8042BE00, local
+.fn fn_8042BE00, global
 /* 8042BE00 003F53C0  38 60 00 01 */	li r3, 0x1
 /* 8042BE04 003F53C4  4E 80 00 20 */	blr
 .endfn fn_8042BE00
@@ -28,5 +28,5 @@
 # 0x80667E20 - 0x80667E28
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E20, local
+.sym lbl_80667E20, global
 	.skip 0x8

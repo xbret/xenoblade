@@ -188,13 +188,13 @@
 # 0x80543FD0 - 0x80544008
 .data
 .balign 8
-.sym lbl_80543FD0, local
+.sym lbl_80543FD0, global
 	.4byte 0x42544120
 	.4byte 0x676F7420
 	.4byte 0x6576656E
 	.4byte 0x74203078
 	.4byte 0x25780000
-.sym lbl_80543FE4, local
+.sym lbl_80543FE4, global
 	.4byte 0x42544120
 	.4byte 0x676F7420
 	.4byte 0x756E7265
@@ -208,6 +208,6 @@
 # 0x8066BF40 - 0x8066BF48
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF40, local
+.sym lbl_8066BF40, global
 	.4byte 0x00040201
 	.4byte 0x00000000

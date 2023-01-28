@@ -3,7 +3,7 @@
 
 # 0x802E6910 - 0x802E8298
 .text
-.balign 4
+.balign 16
 
 .fn btm_dev_init, global
 /* 802E6910 002AFED0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1864,7 +1864,7 @@
 # 0x80545080 - 0x805452E0
 .data
 .balign 8
-.sym lbl_80545080, local
+.sym lbl_80545080, global
 	.4byte 0x42544D5F
 	.4byte 0x53657441
 	.4byte 0x66684368
@@ -1877,7 +1877,7 @@
 	.4byte 0x73743A20
 	.4byte 0x25642028
 	.4byte 0x25642900
-.sym lbl_805450B0, local
+.sym lbl_805450B0, global
 	.4byte 0x62746D5F
 	.4byte 0x72657365
 	.4byte 0x745F636F
@@ -1905,7 +1905,7 @@
 	.4byte 0x3A203078
 	.4byte 0x25303478
 	.4byte 0x00000000
-.sym lbl_8054511C, local
+.sym lbl_8054511C, global
 	.4byte 0x42544D3A
 	.4byte 0x2042544D
 	.4byte 0x5F56656E
@@ -1922,7 +1922,7 @@
 	.4byte 0x6D4C656E
 	.4byte 0x3A202569
 	.4byte 0x2E000000
-.sym lbl_8054515C, local
+.sym lbl_8054515C, global
 	.4byte 0x42544D3A
 	.4byte 0x20556E61
 	.4byte 0x626C6520
@@ -1940,7 +1940,7 @@
 	.4byte 0x69732062
 	.4byte 0x75737929
 	.4byte 0x2E000000
-.sym lbl_805451A0, local
+.sym lbl_805451A0, global
 	.4byte 0x42544D20
 	.4byte 0x4576656E
 	.4byte 0x743A2052
@@ -1957,7 +1957,7 @@
 	.4byte 0x74726F6C
 	.4byte 0x6C657200
 	.4byte 0x00000000
-.sym lbl_805451E0, local
+.sym lbl_805451E0, global
 	.4byte 0x42544D3A
 	.4byte 0x2042544D
 	.4byte 0x5F577269
@@ -1986,7 +1986,7 @@
 	.4byte 0x626C6554
 	.4byte 0x6573744D
 	.4byte 0x6F646500
-.sym lbl_80545250, local
+.sym lbl_80545250, global
 	.4byte 0x42544D3A
 	.4byte 0x2042544D
 	.4byte 0x5F526561
@@ -1998,7 +1998,7 @@
 	.4byte 0x5F416C6C
 	.4byte 0x3A202573
 	.4byte 0x00000000
-.sym lbl_8054527C, local
+.sym lbl_8054527C, global
 	.4byte 0x42544D3A
 	.4byte 0x2042544D
 	.4byte 0x5F577269
@@ -2010,7 +2010,7 @@
 	.4byte 0x5F6B6579
 	.4byte 0x733A2025
 	.4byte 0x64000000
-.sym lbl_805452A8, local
+.sym lbl_805452A8, global
 	.4byte 0x42544D3A
 	.4byte 0x2042544D
 	.4byte 0x5F44656C
@@ -2029,12 +2029,12 @@
 # 0x80665928 - 0x80665940
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665928, local
+.sym lbl_80665928, global
 	.4byte 0x001F0000
-.sym lbl_8066592C, local
+.sym lbl_8066592C, global
 	.4byte 0x54525545
 	.4byte 0x00000000
-.sym lbl_80665934, local
+.sym lbl_80665934, global
 	.4byte 0x46414C53
 	.4byte 0x45000000
 	.4byte 0x00000000

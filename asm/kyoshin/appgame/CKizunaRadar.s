@@ -65,7 +65,7 @@
 .text
 .balign 4
 
-.fn fn_80257A8C, local
+.fn fn_80257A8C, global
 /* 80257A8C 0022104C  C0 02 AD 58 */	lfs f0, lbl_8066B0D8@sda21(r2)
 /* 80257A90 00221050  3C A0 80 54 */	lis r5, __vt__CKizunaRadar@ha
 /* 80257A94 00221054  38 00 00 00 */	li r0, 0x0
@@ -80,7 +80,7 @@
 /* 80257AB8 00221078  4E 80 00 20 */	blr
 .endfn fn_80257A8C
 
-.fn fn_80257ABC, local
+.fn fn_80257ABC, global
 /* 80257ABC 0022107C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80257AC0 00221080  7C 08 02 A6 */	mflr r0
 /* 80257AC4 00221084  2C 03 00 00 */	cmpwi r3, 0x0
@@ -100,7 +100,7 @@
 /* 80257AF8 002210B8  4E 80 00 20 */	blr
 .endfn fn_80257ABC
 
-.fn fn_80257AFC, local
+.fn fn_80257AFC, global
 /* 80257AFC 002210BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80257B00 002210C0  7C 08 02 A6 */	mflr r0
 /* 80257B04 002210C4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -131,7 +131,7 @@
 /* 80257B68 00221128  4E 80 00 20 */	blr
 .endfn fn_80257AFC
 
-.fn fn_80257B6C, local
+.fn fn_80257B6C, global
 /* 80257B6C 0022112C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 80257B70 00221130  7C 08 02 A6 */	mflr r0
 /* 80257B74 00221134  90 01 00 74 */	stw r0, 0x74(r1)
@@ -274,7 +274,7 @@
 /* 80257D8C 0022134C  4E 80 00 20 */	blr
 .endfn fn_80257B6C
 
-.fn fn_80257D90, local
+.fn fn_80257D90, global
 /* 80257D90 00221350  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80257D94 00221354  7C 08 02 A6 */	mflr r0
 /* 80257D98 00221358  90 01 00 14 */	stw r0, 0x14(r1)

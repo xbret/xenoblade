@@ -224,7 +224,7 @@
 # 0x8051F900 - 0x8051F928
 .rodata
 .balign 8
-.sym lbl_8051F900, local
+.sym lbl_8051F900, global
 	.4byte 0x3FD6A09E
 	.4byte 0x667F3BCD
 	.4byte 0x3FE00000
@@ -233,18 +233,18 @@
 	.4byte 0x54442D18
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8051F920, local
+.sym lbl_8051F920, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 
 # 0x80607B78 - 0x80607F80
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80607B78, local
+.sym lbl_80607B78, global
 	.skip 0x8
-.sym lbl_80607B80, local
+.sym lbl_80607B80, global
 	.skip 0x8
-.sym lbl_80607B88, local
+.sym lbl_80607B88, global
 	.skip 0x238
-.sym lbl_80607DC0, local
+.sym lbl_80607DC0, global
 	.skip 0x1C0

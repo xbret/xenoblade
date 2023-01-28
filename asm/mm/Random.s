@@ -91,7 +91,7 @@
 .text
 .balign 4
 
-.fn fn_80435EA4, local
+.fn fn_80435EA4, global
 /* 80435EA4 003FF464  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80435EA8 003FF468  7C 08 02 A6 */	mflr r0
 /* 80435EAC 003FF46C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -174,7 +174,7 @@
 /* 80435FA0 003FF560  4E 80 00 20 */	blr
 .endfn mtRand__2mlFii
 
-.fn fn_80435FA4, local
+.fn fn_80435FA4, global
 /* 80435FA4 003FF564  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80435FA8 003FF568  7C 08 02 A6 */	mflr r0
 /* 80435FAC 003FF56C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -291,15 +291,15 @@
 # 0x8066CA14 - 0x8066CA30
 .section .sdata2, "a"
 .balign 4
-.sym lbl_8066CA14, local
+.sym lbl_8066CA14, global
 	.4byte 0x56B5E621
-.sym lbl_8066CA18, local
+.sym lbl_8066CA18, global
 	.4byte 0xD6B5E621
 	.4byte 0x00000000
-.sym lbl_8066CA20, local
+.sym lbl_8066CA20, global
 	.4byte 0x3F800000
-.sym lbl_8066CA24, local
+.sym lbl_8066CA24, global
 	.4byte 0x3F000000
-.sym lbl_8066CA28, local
+.sym lbl_8066CA28, global
 	.4byte 0x00000000
 	.4byte 0x00000000

@@ -2086,5 +2086,5 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_805657B0, local
+.sym lbl_805657B0, global
 	.4byte ahxsbf_synthesis_filter_table

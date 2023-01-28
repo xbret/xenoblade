@@ -104,7 +104,7 @@
 .text
 .balign 4
 
-.fn fn_804C0280, local
+.fn fn_804C0280, global
 /* 804C0280 00489840  C0 62 D3 D8 */	lfs f3, lbl_8066D758@sda21(r2)
 /* 804C0284 00489844  38 80 00 00 */	li r4, 0x0
 /* 804C0288 00489848  C0 42 D3 DC */	lfs f2, lbl_8066D75C@sda21(r2)
@@ -132,7 +132,7 @@
 /* 804C02E0 004898A0  4E 80 00 20 */	blr
 .endfn fn_804C0280
 
-.fn fn_804C02E4, local
+.fn fn_804C02E4, global
 /* 804C02E4 004898A4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804C02E8 004898A8  7C 08 02 A6 */	mflr r0
 /* 804C02EC 004898AC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -180,12 +180,12 @@
 /* 804C0394 00489954  4E 80 00 20 */	blr
 .endfn fn_804C02E4
 
-.fn fn_804C0398, local
+.fn fn_804C0398, global
 /* 804C0398 00489958  90 83 00 2C */	stw r4, 0x2c(r3)
 /* 804C039C 0048995C  4E 80 00 20 */	blr
 .endfn fn_804C0398
 
-.fn fn_804C03A0, local
+.fn fn_804C03A0, global
 /* 804C03A0 00489960  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804C03A4 00489964  7C 08 02 A6 */	mflr r0
 /* 804C03A8 00489968  90 01 00 14 */	stw r0, 0x14(r1)
@@ -237,7 +237,7 @@
 /* 804C0450 00489A10  4E 80 00 20 */	blr
 .endfn fn_804C03A0
 
-.fn fn_804C0454, local
+.fn fn_804C0454, global
 /* 804C0454 00489A14  80 C4 00 00 */	lwz r6, 0x0(r4)
 /* 804C0458 00489A18  7C 67 1B 78 */	mr r7, r3
 /* 804C045C 00489A1C  80 A4 00 04 */	lwz r5, 0x4(r4)
@@ -252,7 +252,7 @@
 /* 804C0480 00489A40  4B F3 D0 B0 */	b InitLightPos__Q34nw4r3g3d8LightObjFfff
 .endfn fn_804C0454
 
-.fn fn_804C0484, local
+.fn fn_804C0484, global
 /* 804C0484 00489A44  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804C0488 00489A48  7C 08 02 A6 */	mflr r0
 /* 804C048C 00489A4C  80 C4 00 00 */	lwz r6, 0x0(r4)
@@ -318,7 +318,7 @@
 /* 804C056C 00489B2C  4E 80 00 20 */	blr
 .endfn fn_804C0484
 
-.fn fn_804C0570, local
+.fn fn_804C0570, global
 /* 804C0570 00489B30  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 804C0574 00489B34  7C 08 02 A6 */	mflr r0
 /* 804C0578 00489B38  C0 62 D3 D8 */	lfs f3, lbl_8066D758@sda21(r2)
@@ -485,7 +485,7 @@
 /* 804C07EC 00489DAC  4E 80 00 20 */	blr
 .endfn fn_804C0570
 
-.fn fn_804C07F0, local
+.fn fn_804C07F0, global
 /* 804C07F0 00489DB0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 804C07F4 00489DB4  7C 08 02 A6 */	mflr r0
 /* 804C07F8 00489DB8  80 E4 00 00 */	lwz r7, 0x0(r4)
@@ -542,7 +542,7 @@
 /* 804C08C4 00489E84  4E 80 00 20 */	blr
 .endfn fn_804C07F0
 
-.fn fn_804C08C8, local
+.fn fn_804C08C8, global
 /* 804C08C8 00489E88  2C 04 00 00 */	cmpwi r4, 0x0
 /* 804C08CC 00489E8C  41 82 00 14 */	beq .L_804C08E0
 /* 804C08D0 00489E90  80 03 00 30 */	lwz r0, 0x30(r3)
@@ -570,12 +570,12 @@
 /* 804C091C 00489EDC  4E 80 00 20 */	blr
 .endfn fn_804C08C8
 
-.fn fn_804C0920, local
+.fn fn_804C0920, global
 /* 804C0920 00489EE0  80 63 00 2C */	lwz r3, 0x2c(r3)
 /* 804C0924 00489EE4  4B F3 CC 88 */	b InitLightSpot__Q34nw4r3g3d8LightObjFf9_GXSpotFn
 .endfn fn_804C0920
 
-.fn fn_804C0928, local
+.fn fn_804C0928, global
 /* 804C0928 00489EE8  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 804C092C 00489EEC  7C 08 02 A6 */	mflr r0
 /* 804C0930 00489EF0  FC 80 08 18 */	frsp f4, f1
@@ -624,12 +624,12 @@
 /* 804C09DC 00489F9C  4E 80 00 20 */	blr
 .endfn fn_804C0928
 
-.fn fn_804C09E0, local
+.fn fn_804C09E0, global
 /* 804C09E0 00489FA0  80 63 00 2C */	lwz r3, 0x2c(r3)
 /* 804C09E4 00489FA4  4B F3 CC 48 */	b InitLightDistAttn__Q34nw4r3g3d8LightObjFff13_GXDistAttnFn
 .endfn fn_804C09E0
 
-.fn fn_804C09E8, local
+.fn fn_804C09E8, global
 /* 804C09E8 00489FA8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804C09EC 00489FAC  7C 08 02 A6 */	mflr r0
 /* 804C09F0 00489FB0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -788,19 +788,19 @@
 # 0x8066D758 - 0x8066D780
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066D758, local
+.sym lbl_8066D758, global
 	.4byte 0x00000000
-.sym lbl_8066D75C, local
+.sym lbl_8066D75C, global
 	.4byte 0x3F000000
-.sym lbl_8066D760, local
+.sym lbl_8066D760, global
 	.4byte 0x3F800000
-.sym lbl_8066D764, local
+.sym lbl_8066D764, global
 	.4byte 0x461C4000
-.sym lbl_8066D768, local
+.sym lbl_8066D768, global
 	.4byte 0x49742400
-.sym lbl_8066D76C, local
+.sym lbl_8066D76C, global
 	.4byte 0x4222F983
-.sym lbl_8066D770, local
+.sym lbl_8066D770, global
 	.4byte 0x437F0000
 
 .obj CLight_typestr, global

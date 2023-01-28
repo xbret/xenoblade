@@ -300,7 +300,7 @@
 # 0x80520A90 - 0x80520B30
 .rodata
 .balign 8
-.sym lbl_80520A90, local
+.sym lbl_80520A90, global
 	.4byte 0x0A435249
 	.4byte 0x20534658
 	.4byte 0x2F574949
@@ -314,7 +314,7 @@
 	.4byte 0x31383A32
 	.4byte 0x323A3039
 	.4byte 0x0A000000
-.sym lbl_80520AC4, local
+.sym lbl_80520AC4, global
 	.4byte 0x45323031
 	.4byte 0x3139343A
 	.4byte 0x20736678
@@ -346,9 +346,9 @@
 # 0x8061CE38 - 0x8061D370
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061CE38, local
+.sym lbl_8061CE38, global
 	.skip 0x4
-.sym lbl_8061CE3C, local
+.sym lbl_8061CE3C, global
 	.skip 0xC
 
 .obj sfx_libwork, global

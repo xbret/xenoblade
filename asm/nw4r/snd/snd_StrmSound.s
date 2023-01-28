@@ -591,7 +591,7 @@
 # 0x8056E5D0 - 0x8056E608
 .data
 .balign 8
-.sym lbl_8056E5D0, local
+.sym lbl_8056E5D0, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv
@@ -610,16 +610,16 @@
 # 0x80667E00 - 0x80667E08
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E00, local
+.sym lbl_80667E00, global
 	.skip 0x8
 
 # 0x8066C888 - 0x8066C898
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C888, local
+.sym lbl_8066C888, global
 	.4byte 0x00000000
-.sym lbl_8066C88C, local
+.sym lbl_8066C88C, global
 	.4byte 0x3F800000
-.sym lbl_8066C890, local
+.sym lbl_8066C890, global
 	.4byte 0x43300000
 	.4byte 0x80000000

@@ -166,6 +166,6 @@
 # 0x8066C3E0 - 0x8066C3E8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C3E0, local
+.sym lbl_8066C3E0, global
 	.4byte 0x00000000
 	.4byte 0x00000000

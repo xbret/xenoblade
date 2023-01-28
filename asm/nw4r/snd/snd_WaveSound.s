@@ -301,7 +301,7 @@
 # 0x8056E650 - 0x8056E688
 .data
 .balign 8
-.sym lbl_8056E650, local
+.sym lbl_8056E650, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail9WaveSoundCFv
@@ -320,5 +320,5 @@
 # 0x80667E18 - 0x80667E20
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E18, local
+.sym lbl_80667E18, global
 	.skip 0x8

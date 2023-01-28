@@ -94,7 +94,7 @@
 	.4byte 0x00000000
 	.4byte 0x0A800000
 	.4byte 0x00000000
-.sym lbl_8053F0FC, local
+.sym lbl_8053F0FC, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -112,7 +112,7 @@
 	.4byte __close_console
 	.4byte 0x00000000
 	.4byte lbl_8053F140
-.sym lbl_8053F140, local
+.sym lbl_8053F140, global
 	.4byte 0x00000001
 	.4byte 0x12800000
 	.4byte 0x00000000
@@ -133,7 +133,7 @@
 	.4byte __close_console
 	.4byte 0x00000000
 	.4byte lbl_8053F190
-.sym lbl_8053F190, local
+.sym lbl_8053F190, global
 	.4byte 0x00000002
 	.4byte 0x10800000
 	.4byte 0x00000000
@@ -154,7 +154,7 @@
 	.4byte __close_console
 	.4byte 0x00000000
 	.4byte lbl_8053F1E0
-.sym lbl_8053F1E0, local
+.sym lbl_8053F1E0, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -180,9 +180,9 @@
 # 0x8057B048 - 0x8057B348
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057B048, local
+.sym lbl_8057B048, global
 	.skip 0x100
-.sym lbl_8057B148, local
+.sym lbl_8057B148, global
 	.skip 0x100
-.sym lbl_8057B248, local
+.sym lbl_8057B248, global
 	.skip 0x100

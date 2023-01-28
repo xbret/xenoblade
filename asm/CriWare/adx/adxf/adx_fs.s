@@ -5,7 +5,7 @@
 .text
 .balign 4
 
-.fn fn_8037C778, local
+.fn fn_8037C778, global
 /* 8037C778 00345D38  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8037C77C 00345D3C  7C 08 02 A6 */	mflr r0
 /* 8037C780 00345D40  90 01 00 34 */	stw r0, 0x34(r1)
@@ -3226,7 +3226,7 @@
 /* 8037F52C 00348AEC  4E 80 00 20 */	blr
 .endfn adxf_GetFnameRangeEx
 
-.fn fn_8037F530, local
+.fn fn_8037F530, global
 /* 8037F530 00348AF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037F534 00348AF4  7C 08 02 A6 */	mflr r0
 /* 8037F538 00348AF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3250,7 +3250,7 @@
 # 0x80518E78 - 0x80519650
 .rodata
 .balign 8
-.sym lbl_80518E78, local
+.sym lbl_80518E78, global
 	.4byte 0x45393034
 	.4byte 0x30383031
 	.4byte 0x3A706172
@@ -3757,11 +3757,11 @@
 # 0x805E3430 - 0x805E5D30
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E3430, local
+.sym lbl_805E3430, global
 	.skip 0x340
-.sym lbl_805E3770, local
+.sym lbl_805E3770, global
 	.skip 0x400
-.sym lbl_805E3B70, local
+.sym lbl_805E3B70, global
 	.skip 0x100
 
 .obj adxf_cmd_ncall, global
@@ -3769,16 +3769,16 @@
 
 .obj adxf_hstry_no, global
 	.skip 0x4
-.sym lbl_805E3C94, local
+.sym lbl_805E3C94, global
 	.skip 0x4
-.sym lbl_805E3C98, local
+.sym lbl_805E3C98, global
 	.skip 0x4
 
 .obj adxf_ldptnw_hn, global
 	.skip 0x4
-.sym lbl_805E3CA0, local
+.sym lbl_805E3CA0, global
 	.skip 0x4
-.sym lbl_805E3CA4, local
+.sym lbl_805E3CA4, global
 	.skip 0x4
 
 .obj adxf_ldpt_buf, global
@@ -3786,7 +3786,7 @@
 
 .obj adxf_ldpt_rdsct, global
 	.skip 0x4
-.sym lbl_805E3CB0, local
+.sym lbl_805E3CB0, global
 	.skip 0x1169
-.sym lbl_805E4E19, local
+.sym lbl_805E4E19, global
 	.skip 0xF17

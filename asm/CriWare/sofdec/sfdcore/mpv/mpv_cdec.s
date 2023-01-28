@@ -444,19 +444,19 @@
 # 0x8051F5F8 - 0x8051F600
 .rodata
 .balign 8
-.sym lbl_8051F5F8, local
+.sym lbl_8051F5F8, global
 	.4byte mpvcdec_IntraBlocksInt1
 	.4byte mpvcdec_NintraBlocksInt1
 
 # 0x80605F10 - 0x80605F38
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80605F10, local
+.sym lbl_80605F10, global
 	.skip 0xC
-.sym lbl_80605F1C, local
+.sym lbl_80605F1C, global
 	.skip 0xC
 
 .obj mpvcdec_ixa, global
 	.skip 0x4
-.sym lbl_80605F2C, local
+.sym lbl_80605F2C, global
 	.skip 0xC

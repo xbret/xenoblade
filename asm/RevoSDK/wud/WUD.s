@@ -3,7 +3,7 @@
 
 # 0x80375BE0 - 0x8037BFE0
 .text
-.balign 4
+.balign 16
 
 .fn WUDIsLinkedWBC, global
 /* 80375BE0 0033F1A0  80 6D BB 78 */	lwz r3, lbl_80667CF8@sda21(r13)
@@ -202,10 +202,10 @@
 /* 80375E7C 0033F43C  39 61 00 30 */	addi r11, r1, 0x30
 /* 80375E80 0033F440  4B F4 42 CD */	bl _savegpr_25
 /* 80375E84 0033F444  3F E0 80 5E */	lis r31, __rvl_wudcb@ha
-/* 80375E88 0033F448  3F C0 80 56 */	lis r30, lbl_805622C8@ha
+/* 80375E88 0033F448  3F C0 80 56 */	lis r30, _wudWiiRemoteDescriptor@ha
 /* 80375E8C 0033F44C  3B FF 12 80 */	addi r31, r31, __rvl_wudcb@l
 /* 80375E90 0033F450  3B 20 00 FF */	li r25, 0xff
-/* 80375E94 0033F454  3B DE 22 C8 */	addi r30, r30, lbl_805622C8@l
+/* 80375E94 0033F454  3B DE 22 C8 */	addi r30, r30, _wudWiiRemoteDescriptor@l
 /* 80375E98 0033F458  38 A0 00 10 */	li r5, 0x10
 /* 80375E9C 0033F45C  38 7F 07 50 */	addi r3, r31, 0x750
 /* 80375EA0 0033F460  38 63 00 06 */	addi r3, r3, 0x6
@@ -307,9 +307,9 @@
 /* 80375FF4 0033F5B4  80 0D BB 78 */	lwz r0, lbl_80667CF8@sda21(r13)
 /* 80375FF8 0033F5B8  3F E0 80 5E */	lis r31, __rvl_wudcb@ha
 /* 80375FFC 0033F5BC  3B FF 12 80 */	addi r31, r31, __rvl_wudcb@l
-/* 80376000 0033F5C0  3F A0 80 56 */	lis r29, lbl_805622C8@ha
+/* 80376000 0033F5C0  3F A0 80 56 */	lis r29, _wudWiiRemoteDescriptor@ha
 /* 80376004 0033F5C4  2C 00 00 00 */	cmpwi r0, 0x0
-/* 80376008 0033F5C8  3B BD 22 C8 */	addi r29, r29, lbl_805622C8@l
+/* 80376008 0033F5C8  3B BD 22 C8 */	addi r29, r29, _wudWiiRemoteDescriptor@l
 /* 8037600C 0033F5CC  3B 5F 00 00 */	addi r26, r31, 0x0
 /* 80376010 0033F5D0  41 82 00 9C */	beq .L_803760AC
 /* 80376014 0033F5D4  38 7F 08 58 */	addi r3, r31, 0x858
@@ -893,10 +893,10 @@
 /* 8037680C 0033FDCC  39 61 00 60 */	addi r11, r1, 0x60
 /* 80376810 0033FDD0  4B F4 39 3D */	bl _savegpr_25
 /* 80376814 0033FDD4  3F E0 80 5E */	lis r31, __rvl_wudcb@ha
-/* 80376818 0033FDD8  3F C0 80 56 */	lis r30, lbl_805622C8@ha
+/* 80376818 0033FDD8  3F C0 80 56 */	lis r30, _wudWiiRemoteDescriptor@ha
 /* 8037681C 0033FDDC  3B FF 12 80 */	addi r31, r31, __rvl_wudcb@l
 /* 80376820 0033FDE0  3B 9F 00 00 */	addi r28, r31, 0x0
-/* 80376824 0033FDE4  3B DE 22 C8 */	addi r30, r30, lbl_805622C8@l
+/* 80376824 0033FDE4  3B DE 22 C8 */	addi r30, r30, _wudWiiRemoteDescriptor@l
 /* 80376828 0033FDE8  88 1C 00 0C */	lbz r0, 0xc(r28)
 /* 8037682C 0033FDEC  2C 00 00 13 */	cmpwi r0, 0x13
 /* 80376830 0033FDF0  41 82 04 D4 */	beq .L_80376D04
@@ -1928,8 +1928,8 @@
 /* 80377638 00340BF8  3F C0 80 5E */	lis r30, __rvl_wudcb@ha
 /* 8037763C 00340BFC  3B DE 12 80 */	addi r30, r30, __rvl_wudcb@l
 /* 80377640 00340C00  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 80377644 00340C04  3F A0 80 56 */	lis r29, lbl_805622C8@ha
-/* 80377648 00340C08  3B BD 22 C8 */	addi r29, r29, lbl_805622C8@l
+/* 80377644 00340C04  3F A0 80 56 */	lis r29, _wudWiiRemoteDescriptor@ha
+/* 80377648 00340C08  3B BD 22 C8 */	addi r29, r29, _wudWiiRemoteDescriptor@l
 /* 8037764C 00340C0C  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80377650 00340C10  3B 9E 00 00 */	addi r28, r30, 0x0
 /* 80377654 00340C14  88 1C 00 0D */	lbz r0, 0xd(r28)
@@ -2242,8 +2242,8 @@
 /* 80377AA4 00341064  7C 08 02 A6 */	mflr r0
 /* 80377AA8 00341068  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80377AAC 0034106C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80377AB0 00341070  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 80377AB4 00341074  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 80377AB0 00341070  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 80377AB4 00341074  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 80377AB8 00341078  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80377ABC 0034107C  3F C0 80 5E */	lis r30, __rvl_wudcb@ha
 /* 80377AC0 00341080  3B DE 12 80 */	addi r30, r30, __rvl_wudcb@l
@@ -2374,10 +2374,10 @@
 /* 80377C6C 0034122C  39 61 00 60 */	addi r11, r1, 0x60
 /* 80377C70 00341230  4B F4 24 B1 */	bl __save_gpr
 /* 80377C74 00341234  3F 20 80 5E */	lis r25, __rvl_wudcb@ha
-/* 80377C78 00341238  3F 00 80 56 */	lis r24, lbl_805622C8@ha
+/* 80377C78 00341238  3F 00 80 56 */	lis r24, _wudWiiRemoteDescriptor@ha
 /* 80377C7C 0034123C  3B 39 12 80 */	addi r25, r25, __rvl_wudcb@l
 /* 80377C80 00341240  38 80 00 00 */	li r4, 0x0
-/* 80377C84 00341244  3B 18 22 C8 */	addi r24, r24, lbl_805622C8@l
+/* 80377C84 00341244  3B 18 22 C8 */	addi r24, r24, _wudWiiRemoteDescriptor@l
 /* 80377C88 00341248  38 A0 04 61 */	li r5, 0x461
 /* 80377C8C 0034124C  38 79 08 B8 */	addi r3, r25, 0x8b8
 /* 80377C90 00341250  4B C8 C6 C1 */	bl memset
@@ -2861,11 +2861,11 @@
 /* 80378350 00341910  4B F4 1E 05 */	bl _savegpr_27
 /* 80378354 00341914  88 0D BB 84 */	lbz r0, lbl_80667D04@sda21(r13)
 /* 80378358 00341918  38 60 00 00 */	li r3, 0x0
-/* 8037835C 0034191C  3F C0 80 56 */	lis r30, lbl_805622C8@ha
+/* 8037835C 0034191C  3F C0 80 56 */	lis r30, _wudWiiRemoteDescriptor@ha
 /* 80378360 00341920  3F E0 80 5E */	lis r31, __rvl_wudcb@ha
 /* 80378364 00341924  2C 00 00 00 */	cmpwi r0, 0x0
 /* 80378368 00341928  90 61 00 18 */	stw r3, 0x18(r1)
-/* 8037836C 0034192C  3B DE 22 C8 */	addi r30, r30, lbl_805622C8@l
+/* 8037836C 0034192C  3B DE 22 C8 */	addi r30, r30, _wudWiiRemoteDescriptor@l
 /* 80378370 00341930  3B FF 12 80 */	addi r31, r31, __rvl_wudcb@l
 /* 80378374 00341934  90 61 00 1C */	stw r3, 0x1c(r1)
 /* 80378378 00341938  3B 7E 04 28 */	addi r27, r30, 0x428
@@ -4350,8 +4350,8 @@
 /* 80379844 00342E04  7C 08 02 A6 */	mflr r0
 /* 80379848 00342E08  90 01 01 24 */	stw r0, 0x124(r1)
 /* 8037984C 00342E0C  93 E1 01 1C */	stw r31, 0x11c(r1)
-/* 80379850 00342E10  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 80379854 00342E14  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 80379850 00342E10  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 80379854 00342E14  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 80379858 00342E18  93 C1 01 18 */	stw r30, 0x118(r1)
 /* 8037985C 00342E1C  93 A1 01 14 */	stw r29, 0x114(r1)
 /* 80379860 00342E20  88 AD BB 85 */	lbz r5, lbl_80667D05@sda21(r13)
@@ -4419,8 +4419,8 @@
 /* 80379938 00342EF8  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8037993C 00342EFC  90 01 02 24 */	stw r0, 0x224(r1)
 /* 80379940 00342F00  93 E1 02 1C */	stw r31, 0x21c(r1)
-/* 80379944 00342F04  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 80379948 00342F08  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 80379944 00342F04  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 80379948 00342F08  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 8037994C 00342F0C  93 C1 02 18 */	stw r30, 0x218(r1)
 /* 80379950 00342F10  93 A1 02 14 */	stw r29, 0x214(r1)
 /* 80379954 00342F14  41 82 01 FC */	beq .L_80379B50
@@ -4583,8 +4583,8 @@
 /* 80379B94 00343154  7C 08 02 A6 */	mflr r0
 /* 80379B98 00343158  90 01 01 14 */	stw r0, 0x114(r1)
 /* 80379B9C 0034315C  93 E1 01 0C */	stw r31, 0x10c(r1)
-/* 80379BA0 00343160  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 80379BA4 00343164  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 80379BA0 00343160  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 80379BA4 00343164  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 80379BA8 00343168  93 C1 01 08 */	stw r30, 0x108(r1)
 /* 80379BAC 0034316C  7C 7E 1B 78 */	mr r30, r3
 /* 80379BB0 00343170  38 7F 08 F8 */	addi r3, r31, 0x8f8
@@ -4733,8 +4733,8 @@
 /* 80379DB4 00343374  7C 08 02 A6 */	mflr r0
 /* 80379DB8 00343378  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80379DBC 0034337C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80379DC0 00343380  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 80379DC4 00343384  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 80379DC0 00343380  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 80379DC4 00343384  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 80379DC8 00343388  38 7F 09 38 */	addi r3, r31, 0x938
 /* 80379DCC 0034338C  4C C6 31 82 */	crclr 4*cr1+eq
 /* 80379DD0 00343390  48 00 28 01 */	bl WUD_DEBUGPrint
@@ -4901,8 +4901,8 @@
 /* 8037A024 003435E4  7C 08 02 A6 */	mflr r0
 /* 8037A028 003435E8  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8037A02C 003435EC  93 E1 00 2C */	stw r31, 0x2c(r1)
-/* 8037A030 003435F0  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 8037A034 003435F4  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 8037A030 003435F0  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 8037A034 003435F4  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 8037A038 003435F8  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 8037A03C 003435FC  3F C0 80 5E */	lis r30, __rvl_wudcb@ha
 /* 8037A040 00343600  3B DE 12 80 */	addi r30, r30, __rvl_wudcb@l
@@ -4997,8 +4997,8 @@
 /* 8037A184 00343744  7C 08 02 A6 */	mflr r0
 /* 8037A188 00343748  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8037A18C 0034374C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 8037A190 00343750  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 8037A194 00343754  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 8037A190 00343750  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 8037A194 00343754  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 8037A198 00343758  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8037A19C 0034375C  3F C0 80 5E */	lis r30, __rvl_wudcb@ha
 /* 8037A1A0 00343760  3B DE 12 80 */	addi r30, r30, __rvl_wudcb@l
@@ -5877,11 +5877,11 @@
 /* 8037ADC8 00344388  90 01 00 64 */	stw r0, 0x64(r1)
 /* 8037ADCC 0034438C  39 61 00 60 */	addi r11, r1, 0x60
 /* 8037ADD0 00344390  4B F3 F3 7D */	bl _savegpr_25
-/* 8037ADD4 00344394  3F C0 80 56 */	lis r30, lbl_805622C8@ha
+/* 8037ADD4 00344394  3F C0 80 56 */	lis r30, _wudWiiRemoteDescriptor@ha
 /* 8037ADD8 00344398  3F E0 80 5E */	lis r31, __rvl_wudcb@ha
 /* 8037ADDC 0034439C  3B FF 12 80 */	addi r31, r31, __rvl_wudcb@l
 /* 8037ADE0 003443A0  7C 79 1B 78 */	mr r25, r3
-/* 8037ADE4 003443A4  3B DE 22 C8 */	addi r30, r30, lbl_805622C8@l
+/* 8037ADE4 003443A4  3B DE 22 C8 */	addi r30, r30, _wudWiiRemoteDescriptor@l
 /* 8037ADE8 003443A8  7C 9C 23 78 */	mr r28, r4
 /* 8037ADEC 003443AC  3B BF 00 00 */	addi r29, r31, 0x0
 /* 8037ADF0 003443B0  38 7E 0A 7C */	addi r3, r30, 0xa7c
@@ -6251,8 +6251,8 @@
 /* 8037B330 003448F0  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 8037B334 003448F4  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 8037B338 003448F8  93 A1 00 24 */	stw r29, 0x24(r1)
-/* 8037B33C 003448FC  3F A0 80 56 */	lis r29, lbl_805622C8@ha
-/* 8037B340 00344900  3B BD 22 C8 */	addi r29, r29, lbl_805622C8@l
+/* 8037B33C 003448FC  3F A0 80 56 */	lis r29, _wudWiiRemoteDescriptor@ha
+/* 8037B340 00344900  3B BD 22 C8 */	addi r29, r29, _wudWiiRemoteDescriptor@l
 /* 8037B344 00344904  93 81 00 20 */	stw r28, 0x20(r1)
 /* 8037B348 00344908  7C 9C 23 78 */	mr r28, r4
 /* 8037B34C 0034490C  41 82 00 28 */	beq .L_8037B374
@@ -6393,8 +6393,8 @@
 /* 8037B534 00344AF4  7C 08 02 A6 */	mflr r0
 /* 8037B538 00344AF8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8037B53C 00344AFC  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 8037B540 00344B00  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 8037B544 00344B04  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 8037B540 00344B00  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 8037B544 00344B04  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 8037B548 00344B08  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8037B54C 00344B0C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8037B550 00344B10  93 81 00 10 */	stw r28, 0x10(r1)
@@ -6607,11 +6607,11 @@
 /* 8037B83C 00344DFC  39 61 00 60 */	addi r11, r1, 0x60
 /* 8037B840 00344E00  4B F3 E8 F9 */	bl _savegpr_20
 /* 8037B844 00344E04  88 03 00 00 */	lbz r0, 0x0(r3)
-/* 8037B848 00344E08  3F C0 80 56 */	lis r30, lbl_805622C8@ha
+/* 8037B848 00344E08  3F C0 80 56 */	lis r30, _wudWiiRemoteDescriptor@ha
 /* 8037B84C 00344E0C  3C 80 80 5E */	lis r4, __rvl_wudcb@ha
 /* 8037B850 00344E10  7C 7A 1B 78 */	mr r26, r3
 /* 8037B854 00344E14  2C 00 00 01 */	cmpwi r0, 0x1
-/* 8037B858 00344E18  3B DE 22 C8 */	addi r30, r30, lbl_805622C8@l
+/* 8037B858 00344E18  3B DE 22 C8 */	addi r30, r30, _wudWiiRemoteDescriptor@l
 /* 8037B85C 00344E1C  3B 84 12 80 */	addi r28, r4, __rvl_wudcb@l
 /* 8037B860 00344E20  41 82 00 20 */	beq .L_8037B880
 /* 8037B864 00344E24  2C 00 00 02 */	cmpwi r0, 0x2
@@ -6843,8 +6843,8 @@
 /* 8037BB94 00345154  7C 08 02 A6 */	mflr r0
 /* 8037BB98 00345158  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8037BB9C 0034515C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 8037BBA0 00345160  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 8037BBA4 00345164  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 8037BBA0 00345160  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 8037BBA4 00345164  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 8037BBA8 00345168  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8037BBAC 0034516C  7C DE 33 78 */	mr r30, r6
 /* 8037BBB0 00345170  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -7173,7 +7173,8 @@
 # 0x805622C8 - 0x80563470
 .data
 .balign 8
-.sym lbl_805622C8, local
+
+.obj _wudWiiRemoteDescriptor, local
 	.4byte 0x05010905
 	.4byte 0xA1018510
 	.4byte 0x150026FF
@@ -7228,10 +7229,18 @@
 	.4byte 0x09018100
 	.4byte 0x853F9515
 	.4byte 0x09018100
-	.4byte 0xC0000000
+	.byte 0xC0
+.endobj _wudWiiRemoteDescriptor
+	.byte 0x00, 0x00, 0x00
+
+.obj _wudSuperPeekPokeCmd, local
 	.4byte 0x05009A0E
 	.4byte 0x00010000
-	.4byte 0x00000000
+	.byte 0x00
+.endobj _wudSuperPeekPokeCmd
+	.byte 0x00, 0x00, 0x00
+
+.obj _wudPatchData, local
 	.4byte 0x70990800
 	.4byte 0xB4000000
 	.4byte 0x8843D107
@@ -7255,7 +7264,7 @@
 	.4byte 0x11490B60
 	.4byte 0x1D21C903
 	.4byte 0x0B607D20
-	.4byte "@etb_80010134"+0x4
+	.4byte 0x80010138
 	.4byte 0xFDD10E4B
 	.4byte 0x0E4A1360
 	.4byte 0x47200021
@@ -7279,6 +7288,9 @@
 	.4byte 0xFF9F0000
 	.4byte 0x30FC0E00
 	.4byte 0x7FFF0000
+.endobj _wudPatchData
+
+.obj _wudPatchInstallCmd, local
 	.4byte 0x0720BC65
 	.4byte 0x01008442
 	.4byte 0x09D28442
@@ -7302,6 +7314,9 @@
 	.4byte 0x742F0000
 	.4byte 0x86F018FD
 	.4byte 0x214F3B60
+.endobj _wudPatchInstallCmd
+
+.obj _wudResetAuthCountCmd, local
 	.4byte 0x30360800
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -7309,17 +7324,18 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_805624E4, local
+.endobj _wudResetAuthCountCmd
+.sym lbl_805624E4, global
 	.4byte 0x4170705F
 	.4byte 0x4D454D61
 	.4byte 0x6C6C6F63
 	.4byte 0x0A000000
-.sym lbl_805624F4, local
+.sym lbl_805624F4, global
 	.4byte 0x4170705F
 	.4byte 0x4D454D66
 	.4byte 0x7265650A
 	.4byte 0x00000000
-.sym lbl_80562504, local
+.sym lbl_80562504, global
 	.4byte 0x5F5F7775
 	.4byte 0x6453796E
 	.4byte 0x63466C75
@@ -7331,13 +7347,13 @@
 	.4byte 0x796E633A
 	.4byte 0x2025640A
 	.4byte 0x00000000
-.sym lbl_80562530, local
+.sym lbl_80562530, global
 	.4byte 0x4E696E74
 	.4byte 0x656E646F
 	.4byte 0x2052564C
 	.4byte 0x2D434E54
 	.4byte 0x00000000
-.sym lbl_80562544, local
+.sym lbl_80562544, global
 	.4byte 0x4E696E74
 	.4byte 0x656E646F
 	.4byte 0x2052564C
@@ -7364,7 +7380,7 @@
 	.4byte 0x64657820
 	.4byte 0x69732025
 	.4byte 0x640A0000
-.sym lbl_805625AC, local
+.sym lbl_805625AC, global
 	.4byte 0x25642064
 	.4byte 0x65766963
 	.4byte 0x65732069
@@ -7374,29 +7390,29 @@
 	.4byte 0x6F205343
 	.4byte 0x2E0A0000
 	.4byte 0x00000000
-.sym lbl_805625D0, local
+.sym lbl_805625D0, global
 	.4byte 0x4E414E44
 	.4byte 0x4F70656E
 	.4byte 0x2E205B25
 	.4byte 0x645D0A00
-.sym lbl_805625E0, local
+.sym lbl_805625E0, global
 	.4byte 0x4E414E44
 	.4byte 0x5365656B
 	.4byte 0x2E205B25
 	.4byte 0x645D0A00
-.sym lbl_805625F0, local
+.sym lbl_805625F0, global
 	.4byte 0x4E414E44
 	.4byte 0x57726974
 	.4byte 0x652E205B
 	.4byte 0x25645D0A
 	.4byte 0x00000000
-.sym lbl_80562604, local
+.sym lbl_80562604, global
 	.4byte 0x4E414E44
 	.4byte 0x436C6F73
 	.4byte 0x652E205B
 	.4byte 0x25645D0A
 	.4byte 0x00000000
-.sym lbl_80562618, local
+.sym lbl_80562618, global
 	.4byte 0x50616972
 	.4byte 0x696E6720
 	.4byte 0x446F6E65
@@ -7502,7 +7518,7 @@
 	.4byte 0x20737461
 	.4byte 0x7475730A
 	.4byte 0x00000000
-.sym lbl_805627BC, local
+.sym lbl_805627BC, global
 	.4byte 0x5F5F7775
 	.4byte 0x6444656C
 	.4byte 0x65746546
@@ -7555,7 +7571,7 @@
 	.4byte 0x30332E30
 	.4byte 0x31342E25
 	.4byte 0x640A0000
-.sym lbl_8056288C, local
+.sym lbl_8056288C, global
 	.4byte 0x5F5F7775
 	.4byte 0x64496E69
 	.4byte 0x74466C75
@@ -7643,7 +7659,7 @@
 	.4byte 0x20576969
 	.4byte 0x4669740A
 	.4byte 0x00000000
-.sym lbl_805629E8, local
+.sym lbl_805629E8, global
 	.4byte 0x5F5F7775
 	.4byte 0x64536875
 	.4byte 0x74646F77
@@ -7658,32 +7674,32 @@
 	.4byte 0x2025640A
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_80562A20, local
+.sym lbl_80562A20, global
 	.4byte 0x5F5F7775
 	.4byte 0x64436C65
 	.4byte 0x6172436F
 	.4byte 0x6E74726F
 	.4byte 0x6C426C6F
 	.4byte 0x636B0A00
-.sym lbl_80562A38, local
+.sym lbl_80562A38, global
 	.4byte 0x4254415F
 	.4byte 0x496E6974
 	.4byte 0x28292069
 	.4byte 0x73207374
 	.4byte 0x61727465
 	.4byte 0x640A0000
-.sym lbl_80562A50, local
+.sym lbl_80562A50, global
 	.4byte 0x4254415F
 	.4byte 0x496E6974
 	.4byte 0x28292069
 	.4byte 0x7320646F
 	.4byte 0x6E650A00
-.sym lbl_80562A64, local
+.sym lbl_80562A64, global
 	.4byte 0x57554453
 	.4byte 0x68757464
 	.4byte 0x6F776E28
 	.4byte 0x290A0000
-.sym lbl_80562A74, local
+.sym lbl_80562A74, global
 	.4byte 0x57554453
 	.4byte 0x65745379
 	.4byte 0x6E634465
@@ -7711,14 +7727,14 @@
 	.4byte 0x72446576
 	.4byte 0x69636528
 	.4byte 0x290A0000
-.sym lbl_80562AE0, local
+.sym lbl_80562AE0, global
 	.4byte 0x57554453
 	.4byte 0x65744469
 	.4byte 0x7361626C
 	.4byte 0x65436861
 	.4byte 0x6E6E656C
 	.4byte 0x28290A00
-.sym lbl_80562AF8, local
+.sym lbl_80562AF8, global
 	.4byte 0x42544D5F
 	.4byte 0x53657441
 	.4byte 0x66684368
@@ -7726,7 +7742,7 @@
 	.4byte 0x6C732829
 	.4byte 0x203A2025
 	.4byte 0x640A0000
-.sym lbl_80562B14, local
+.sym lbl_80562B14, global
 	.4byte 0x57554453
 	.4byte 0x65744869
 	.4byte 0x64526563
@@ -7734,7 +7750,7 @@
 	.4byte 0x6C626163
 	.4byte 0x6B28290A
 	.4byte 0x00000000
-.sym lbl_80562B30, local
+.sym lbl_80562B30, global
 	.4byte 0x57554453
 	.4byte 0x65744869
 	.4byte 0x64436F6E
@@ -7742,7 +7758,7 @@
 	.4byte 0x6C626163
 	.4byte 0x6B28290A
 	.4byte 0x00000000
-.sym lbl_80562B4C, local
+.sym lbl_80562B4C, global
 	.4byte 0x496E6974
 	.4byte 0x69616C69
 	.4byte 0x7A652074
@@ -7778,14 +7794,14 @@
 	.4byte 0x43616C6C
 	.4byte 0x6261636B
 	.4byte 0x0A000000
-.sym lbl_80562BD8, local
+.sym lbl_80562BD8, global
 	.4byte 0x53757065
 	.4byte 0x72506565
 	.4byte 0x6B506F6B
 	.4byte 0x65204361
 	.4byte 0x6C6C6261
 	.4byte 0x636B0A00
-.sym lbl_80562BF0, local
+.sym lbl_80562BF0, global
 	.4byte 0x52656D6F
 	.4byte 0x76655061
 	.4byte 0x7463680A
@@ -7801,7 +7817,7 @@
 	.4byte 0x72506565
 	.4byte 0x6B506F6B
 	.4byte 0x650A0000
-.sym lbl_80562C2C, local
+.sym lbl_80562C2C, global
 	.4byte 0x73746172
 	.4byte 0x74205F5F
 	.4byte 0x77756449
@@ -7864,7 +7880,7 @@
 	.4byte 0x63652829
 	.4byte 0x3A202564
 	.4byte 0x0A000000
-.sym lbl_80562D24, local
+.sym lbl_80562D24, global
 	.4byte 0x5741524E
 	.4byte 0x494E473A
 	.4byte 0x20555342
@@ -8112,7 +8128,7 @@
 	.4byte 0x4154414C
 	.4byte 0x20455252
 	.4byte 0x4F520A00
-.sym lbl_805630F4, local
+.sym lbl_805630F4, global
 	.4byte 0x5F5F7775
 	.4byte 0x64446576
 	.4byte 0x69636553
@@ -8123,7 +8139,7 @@
 	.4byte 0x616C6C62
 	.4byte 0x61636B0A
 	.4byte 0x00000000
-.sym lbl_8056311C, local
+.sym lbl_8056311C, global
 	.4byte 0x2D2D2D2D
 	.4byte 0x20574152
 	.4byte 0x4E494E47
@@ -8344,113 +8360,113 @@
 
 .obj __rvl_wudcb, global
 	.skip 0xC
-.sym lbl_805E128C, local
+.sym lbl_805E128C, global
 	.skip 0xC
-.sym lbl_805E1298, local
+.sym lbl_805E1298, global
 	.skip 0x4
-.sym lbl_805E129C, local
+.sym lbl_805E129C, global
 	.skip 0x4
-.sym lbl_805E12A0, local
+.sym lbl_805E12A0, global
 	.skip 0x4
-.sym lbl_805E12A4, local
+.sym lbl_805E12A4, global
 	.skip 0x4
-.sym lbl_805E12A8, local
+.sym lbl_805E12A8, global
 	.skip 0x4
-.sym lbl_805E12AC, local
+.sym lbl_805E12AC, global
 	.skip 0x4
-.sym lbl_805E12B0, local
+.sym lbl_805E12B0, global
 	.skip 0x30
-.sym lbl_805E12E0, local
+.sym lbl_805E12E0, global
 	.skip 0xC
-.sym lbl_805E12EC, local
+.sym lbl_805E12EC, global
 	.skip 0x4
-.sym lbl_805E12F0, local
+.sym lbl_805E12F0, global
 	.skip 0x4
-.sym lbl_805E12F4, local
+.sym lbl_805E12F4, global
 	.skip 0x70
-.sym lbl_805E1364, local
+.sym lbl_805E1364, global
 	.skip 0x40
-.sym lbl_805E13A4, local
+.sym lbl_805E13A4, global
 	.skip 0x19
-.sym lbl_805E13BD, local
+.sym lbl_805E13BD, global
 	.skip 0x3A7
-.sym lbl_805E1764, local
+.sym lbl_805E1764, global
 	.skip 0x19
-.sym lbl_805E177D, local
+.sym lbl_805E177D, global
 	.skip 0x253
-.sym lbl_805E19D0, local
+.sym lbl_805E19D0, global
 	.skip 0x108
-.sym lbl_805E1AD8, local
+.sym lbl_805E1AD8, global
 	.skip 0x46
-.sym lbl_805E1B1E, local
+.sym lbl_805E1B1E, global
 	.skip 0x13
-.sym lbl_805E1B31, local
+.sym lbl_805E1B31, global
 	.skip 0x7
-.sym lbl_805E1B38, local
+.sym lbl_805E1B38, global
 	.skip 0x47
-.sym lbl_805E1B7F, local
+.sym lbl_805E1B7F, global
 	.skip 0x421
-.sym lbl_805E1FA0, local
+.sym lbl_805E1FA0, global
 	.skip 0xA0
-.sym lbl_805E2040, local
+.sym lbl_805E2040, global
 	.skip 0x1A0
-.sym lbl_805E21E0, local
+.sym lbl_805E21E0, global
 	.skip 0x1208
-.sym lbl_805E33E8, local
+.sym lbl_805E33E8, global
 	.skip 0x20
-.sym lbl_805E3408, local
+.sym lbl_805E3408, global
 	.skip 0x20
 
 # 0x80667CE0 - 0x80667D18
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667CE0, local
+.sym lbl_80667CE0, global
 	.skip 0x4
-.sym lbl_80667CE4, local
+.sym lbl_80667CE4, global
 	.skip 0x4
-.sym lbl_80667CE8, local
+.sym lbl_80667CE8, global
 	.skip 0x4
-.sym lbl_80667CEC, local
+.sym lbl_80667CEC, global
 	.skip 0x1
-.sym lbl_80667CED, local
+.sym lbl_80667CED, global
 	.skip 0x3
-.sym lbl_80667CF0, local
+.sym lbl_80667CF0, global
 	.skip 0x4
-.sym lbl_80667CF4, local
+.sym lbl_80667CF4, global
 	.skip 0x4
-.sym lbl_80667CF8, local
+.sym lbl_80667CF8, global
 	.skip 0x4
-.sym lbl_80667CFC, local
+.sym lbl_80667CFC, global
 	.skip 0x4
-.sym lbl_80667D00, local
+.sym lbl_80667D00, global
 	.skip 0x4
-.sym lbl_80667D04, local
+.sym lbl_80667D04, global
 	.skip 0x1
-.sym lbl_80667D05, local
+.sym lbl_80667D05, global
 	.skip 0x1
-.sym lbl_80667D06, local
+.sym lbl_80667D06, global
 	.skip 0x2
-.sym lbl_80667D08, local
+.sym lbl_80667D08, global
 	.skip 0x4
-.sym lbl_80667D0C, local
+.sym lbl_80667D0C, global
 	.skip 0x4
-.sym lbl_80667D10, local
+.sym lbl_80667D10, global
 	.skip 0x4
-.sym lbl_80667D14, local
+.sym lbl_80667D14, global
 	.skip 0x1
-.sym lbl_80667D15, local
+.sym lbl_80667D15, global
 	.skip 0x1
-.sym lbl_80667D16, local
+.sym lbl_80667D16, global
 	.skip 0x1
-.sym lbl_80667D17, local
+.sym lbl_80667D17, global
 	.skip 0x1
 
 # 0x8066C260 - 0x8066C268
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C260, local
+.sym lbl_8066C260, global
 	.4byte 0x57696900
-.sym lbl_8066C264, local
+.sym lbl_8066C264, global
 	.2byte 0x0004
-.sym lbl_8066C266, local
+.sym lbl_8066C266, global
 	.2byte 0x4800

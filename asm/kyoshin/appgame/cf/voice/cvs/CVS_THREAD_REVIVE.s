@@ -113,7 +113,7 @@
 .text
 .balign 4
 
-.fn fn_802A86CC, local
+.fn fn_802A86CC, global
 /* 802A86CC 00271C8C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802A86D0 00271C90  7C 08 02 A6 */	mflr r0
 /* 802A86D4 00271C94  90 01 00 34 */	stw r0, 0x34(r1)
@@ -188,7 +188,7 @@
 /* 802A87D0 00271D90  4E 80 00 20 */	blr
 .endfn fn_802A86CC
 
-.fn fn_802A87D4, local
+.fn fn_802A87D4, global
 /* 802A87D4 00271D94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A87D8 00271D98  7C 08 02 A6 */	mflr r0
 /* 802A87DC 00271D9C  3C A0 80 54 */	lis r5, lbl_8053D434@ha
@@ -271,7 +271,7 @@
 /* 802A8900 00271EC0  4E 80 00 20 */	blr
 .endfn fn_802A87D4
 
-.fn fn_802A8904, local
+.fn fn_802A8904, global
 /* 802A8904 00271EC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A8908 00271EC8  7C 08 02 A6 */	mflr r0
 /* 802A890C 00271ECC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -342,7 +342,7 @@
 /* 802A89FC 00271FBC  4E 80 00 20 */	blr
 .endfn fn_802A8904
 
-.fn fn_802A8A00, local
+.fn fn_802A8A00, global
 /* 802A8A00 00271FC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A8A04 00271FC4  7C 08 02 A6 */	mflr r0
 /* 802A8A08 00271FC8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -364,7 +364,7 @@
 /* 802A8A44 00272004  4E 80 00 20 */	blr
 .endfn fn_802A8A00
 
-.fn fn_802A8A48, local
+.fn fn_802A8A48, global
 /* 802A8A48 00272008  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A8A4C 0027200C  7C 08 02 A6 */	mflr r0
 /* 802A8A50 00272010  90 01 00 14 */	stw r0, 0x14(r1)
@@ -401,12 +401,12 @@
 /* 802A8ABC 0027207C  4E 80 00 20 */	blr
 .endfn fn_802A8A48
 
-.fn fn_802A8AC0, local
+.fn fn_802A8AC0, global
 /* 802A8AC0 00272080  38 60 00 E6 */	li r3, 0xe6
 /* 802A8AC4 00272084  4E 80 00 20 */	blr
 .endfn fn_802A8AC0
 
-.fn fn_802A8AC8, local
+.fn fn_802A8AC8, global
 /* 802A8AC8 00272088  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A8ACC 0027208C  7C 08 02 A6 */	mflr r0
 /* 802A8AD0 00272090  90 01 00 14 */	stw r0, 0x14(r1)
@@ -455,7 +455,7 @@
 /* 802A8B68 00272128  4E 80 00 20 */	blr
 .endfn fn_802A8AC8
 
-.fn fn_802A8B6C, local
+.fn fn_802A8B6C, global
 /* 802A8B6C 0027212C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A8B70 00272130  7C 08 02 A6 */	mflr r0
 /* 802A8B74 00272134  90 01 00 14 */	stw r0, 0x14(r1)
@@ -516,15 +516,15 @@
 # 0x8053D428 - 0x8053D478
 .data
 .balign 8
-.sym lbl_8053D428, local
+.sym lbl_8053D428, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A87D4
-.sym lbl_8053D434, local
+.sym lbl_8053D434, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A8904
-.sym lbl_8053D440, local
+.sym lbl_8053D440, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A8A00

@@ -81,7 +81,7 @@
 /* 8039B4DC 00364A9C  4B F2 59 E4 */	b vsprintf
 .endfn criCrw_Vsprintf
 
-.fn fn_8039B4E0, local
+.fn fn_8039B4E0, global
 /* 8039B4E0 00364AA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039B4E4 00364AA4  7C 08 02 A6 */	mflr r0
 /* 8039B4E8 00364AA8  7C 04 30 00 */	cmpw r4, r6
@@ -304,7 +304,7 @@
 # 0x8051CD90 - 0x8051CDF0
 .rodata
 .balign 8
-.sym lbl_8051CD90, local
+.sym lbl_8051CD90, global
 	.4byte 0x0A435249
 	.4byte 0x20435257
 	.4byte 0x3A535444
@@ -333,5 +333,5 @@
 # 0x80601360 - 0x80601380
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80601360, local
+.sym lbl_80601360, global
 	.skip 0x20

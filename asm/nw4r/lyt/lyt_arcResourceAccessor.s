@@ -278,7 +278,7 @@
 # 0x8056D598 - 0x8056D5B0
 .data
 .balign 8
-.sym lbl_8056D598, local
+.sym lbl_8056D598, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte fn_8003997C
@@ -289,7 +289,7 @@
 # 0x80665DF8 - 0x80665E00
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665DF8, local
+.sym lbl_80665DF8, global
 	.4byte 0x2E000000
-.sym lbl_80665DFC, local
+.sym lbl_80665DFC, global
 	.4byte 0x2E2E0000

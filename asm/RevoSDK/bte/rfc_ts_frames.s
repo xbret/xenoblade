@@ -1595,7 +1595,7 @@
 # 0x80548D98 - 0x80548E70
 .data
 .balign 8
-.sym lbl_80548D98, local
+.sym lbl_80548D98, global
 	.4byte 0x42616420
 	.4byte 0x4C656E67
 	.4byte 0x7468313A
@@ -1654,9 +1654,9 @@
 # 0x80665958 - 0x80665968
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665958, local
+.sym lbl_80665958, global
 	.4byte 0x42616420
 	.4byte 0x55410000
-.sym lbl_80665960, local
+.sym lbl_80665960, global
 	.4byte 0x42616420
 	.4byte 0x444D0000

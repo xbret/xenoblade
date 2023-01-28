@@ -65,7 +65,7 @@
 .text
 .balign 4
 
-.fn fn_8047986C, local
+.fn fn_8047986C, global
 /* 8047986C 00442E2C  88 0D BF F0 */	lbz r0, lbl_80668170@sda21(r13)
 /* 80479870 00442E30  7C 00 07 75 */	extsb. r0, r0
 /* 80479874 00442E34  40 82 00 18 */	bne .L_8047988C
@@ -79,7 +79,7 @@
 /* 80479890 00442E50  4E 80 00 20 */	blr
 .endfn fn_8047986C
 
-.fn fn_80479894, local
+.fn fn_80479894, global
 /* 80479894 00442E54  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80479898 00442E58  7C 08 02 A6 */	mflr r0
 /* 8047989C 00442E5C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -190,7 +190,7 @@
 /* 80479A18 00442FD8  4E 80 00 20 */	blr
 .endfn fn_80479894
 
-.fn fn_80479A1C, local
+.fn fn_80479A1C, global
 /* 80479A1C 00442FDC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80479A20 00442FE0  7C 08 02 A6 */	mflr r0
 /* 80479A24 00442FE4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -298,7 +298,7 @@
 /* 80479B9C 0044315C  4E 80 00 20 */	blr
 .endfn fn_80479A1C
 
-.fn fn_80479BA0, local
+.fn fn_80479BA0, global
 /* 80479BA0 00443160  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80479BA4 00443164  7C 08 02 A6 */	mflr r0
 /* 80479BA8 00443168  90 01 00 34 */	stw r0, 0x34(r1)
@@ -415,7 +415,7 @@
 /* 80479D3C 004432FC  4E 80 00 20 */	blr
 .endfn fn_80479BA0
 
-.fn fn_80479D40, local
+.fn fn_80479D40, global
 /* 80479D40 00443300  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80479D44 00443304  7C 08 02 A6 */	mflr r0
 /* 80479D48 00443308  90 01 00 34 */	stw r0, 0x34(r1)
@@ -550,12 +550,12 @@
 	.4byte 0x436F6C6F
 	.4byte 0x72000000
 	.4byte 0x00000000
-.sym lbl_80527728, local
+.sym lbl_80527728, global
 	.4byte 0x00000000
 	.4byte 0x00000001
 	.4byte 0x00000002
 	.4byte 0x00000003
-.sym lbl_80527738, local
+.sym lbl_80527738, global
 	.4byte 0x00000003
 	.4byte 0x00000002
 	.4byte 0x00000001
@@ -676,14 +676,14 @@
 .obj __RTTI__mpfsys_MPFDrawBillboard, global
 	.4byte mpfsys_MPFDrawBillboard_typestr
 	.4byte mpfsys_MPFDrawBillboard_hierarchy
-.sym lbl_806661C0, local
+.sym lbl_806661C0, global
 	.4byte 0x3EAAAAAB
 	.4byte 0x00000000
 
 # 0x80668170 - 0x80668178
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80668170, local
+.sym lbl_80668170, global
 	.skip 0x4
-.sym lbl_80668174, local
+.sym lbl_80668174, global
 	.skip 0x4

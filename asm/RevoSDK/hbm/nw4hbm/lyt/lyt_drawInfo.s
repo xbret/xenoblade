@@ -65,19 +65,19 @@
 # 0x80518A58 - 0x80518A60
 .rodata
 .balign 8
-.sym lbl_80518A58, local
+.sym lbl_80518A58, global
 	.4byte 0x00000000
-.sym lbl_80518A5C, local
+.sym lbl_80518A5C, global
 	.4byte 0x3F800000
 
 # 0x8054D7A0 - 0x8054D7D0
 .data
 .balign 8
-.sym lbl_8054D7A0, local
+.sym lbl_8054D7A0, global
 	.4byte lbl_8054D7C8
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt8DrawInfoFv
-.sym lbl_8054D7AC, local
+.sym lbl_8054D7AC, global
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
@@ -85,6 +85,6 @@
 	.4byte 0x77496E66
 	.4byte 0x6F000000
 	.4byte 0x00000000
-.sym lbl_8054D7C8, local
+.sym lbl_8054D7C8, global
 	.4byte lbl_8054D7AC
 	.4byte 0x00000000

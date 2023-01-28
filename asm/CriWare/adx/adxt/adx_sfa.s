@@ -24,5 +24,5 @@
 # 0x805E69B8 - 0x805E69C0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E69B8, local
+.sym lbl_805E69B8, global
 	.skip 0x8

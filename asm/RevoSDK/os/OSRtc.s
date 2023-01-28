@@ -3,7 +3,7 @@
 
 # 0x8035A800 - 0x8035B2B0
 .text
-.balign 4
+.balign 16
 
 .fn WriteSramCallback, global
 /* 8035A800 00323DC0  94 21 FF E0 */	stwu r1, -0x20(r1)

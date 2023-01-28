@@ -3,7 +3,7 @@
 
 # 0x802D7990 - 0x802D86C0
 .text
-.balign 4
+.balign 16
 
 .fn AXFXReverbStdExpGetMemSize, global
 /* 802D7990 002A0F50  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -952,7 +952,7 @@
 # 0x805432C0 - 0x80543350
 .data
 .balign 8
-.sym lbl_805432C0, local
+.sym lbl_805432C0, global
 	.4byte 0x000000A3
 	.4byte 0x0000013D
 	.4byte 0x000001DF
@@ -961,7 +961,7 @@
 	.4byte 0x000003C7
 	.4byte 0x00000463
 	.4byte 0x00000503
-.sym lbl_805432E0, local
+.sym lbl_805432E0, global
 	.4byte 0x000006FD
 	.4byte 0x000007CF
 	.4byte 0x000001B1
@@ -994,30 +994,30 @@
 # 0x8066BE50 - 0x8066BE90
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BE50, local
+.sym lbl_8066BE50, global
 	.4byte 0x46FA0000
-.sym lbl_8066BE54, local
+.sym lbl_8066BE54, global
 	.4byte 0x00000000
-.sym lbl_8066BE58, local
+.sym lbl_8066BE58, global
 	.4byte 0x3F800000
-.sym lbl_8066BE5C, local
+.sym lbl_8066BE5C, global
 	.4byte 0x3F19999A
-.sym lbl_8066BE60, local
+.sym lbl_8066BE60, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066BE68, local
+.sym lbl_8066BE68, global
 	.4byte 0xBEA8F5C3
-.sym lbl_8066BE6C, local
+.sym lbl_8066BE6C, global
 	.4byte 0x3EA8F5C3
-.sym lbl_8066BE70, local
+.sym lbl_8066BE70, global
 	.4byte 0xC0400000
 	.4byte 0x00000000
-.sym lbl_8066BE78, local
+.sym lbl_8066BE78, global
 	.4byte 0x40240000
 	.4byte 0x00000000
-.sym lbl_8066BE80, local
+.sym lbl_8066BE80, global
 	.4byte 0x3F733333
 	.4byte 0x00000000
-.sym lbl_8066BE88, local
+.sym lbl_8066BE88, global
 	.4byte 0x43300000
 	.4byte 0x00000000

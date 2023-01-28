@@ -3,7 +3,7 @@
 
 # 0x80348FC0 - 0x80349770
 .text
-.balign 4
+.balign 16
 
 .fn AllocUsedBlockFromFreeBlock_, global
 /* 80348FC0 00312580  94 21 FF E0 */	stwu r1, -0x20(r1)

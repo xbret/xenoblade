@@ -128,7 +128,7 @@
 # 0x80667580 - 0x80667590
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667580, local
+.sym lbl_80667580, global
 	.skip 0x8
 
 .obj gTRKInputPendingPtr, global

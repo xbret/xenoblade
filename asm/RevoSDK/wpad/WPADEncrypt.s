@@ -3,7 +3,7 @@
 
 # 0x803749D0 - 0x80375A90
 .text
-.balign 4
+.balign 16
 
 .fn WPADiCreateKey, global
 /* 803749D0 0033DF90  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -1095,7 +1095,7 @@
 # 0x80560FA0 - 0x805622C8
 .data
 .balign 8
-.sym lbl_80560FA0, local
+.sym lbl_80560FA0, global
 	.4byte 0xA877A6E0
 	.4byte 0xF7435A35
 	.4byte 0x85E27297
@@ -2326,11 +2326,11 @@
 # 0x80667CD8 - 0x80667CE0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667CD8, local
+.sym lbl_80667CD8, global
 	.skip 0x1
-.sym lbl_80667CD9, local
+.sym lbl_80667CD9, global
 	.skip 0x1
-.sym lbl_80667CDA, local
+.sym lbl_80667CDA, global
 	.skip 0x1
-.sym lbl_80667CDB, local
+.sym lbl_80667CDB, global
 	.skip 0x5

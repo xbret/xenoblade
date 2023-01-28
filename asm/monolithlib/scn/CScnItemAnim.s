@@ -69,7 +69,7 @@
 .text
 .balign 4
 
-.fn fn_8049E5DC, local
+.fn fn_8049E5DC, global
 /* 8049E5DC 00467B9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049E5E0 00467BA0  7C 08 02 A6 */	mflr r0
 /* 8049E5E4 00467BA4  2C 03 00 00 */	cmpwi r3, 0x0
@@ -100,7 +100,7 @@
 /* 8049E644 00467C04  4E 80 00 20 */	blr
 .endfn fn_8049E5DC
 
-.fn fn_8049E648, local
+.fn fn_8049E648, global
 /* 8049E648 00467C08  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8049E64C 00467C0C  7C 08 02 A6 */	mflr r0
 /* 8049E650 00467C10  90 01 00 34 */	stw r0, 0x34(r1)
@@ -158,12 +158,12 @@
 /* 8049E704 00467CC4  4E 80 00 20 */	blr
 .endfn fn_8049E648
 
-.fn fn_8049E708, local
+.fn fn_8049E708, global
 /* 8049E708 00467CC8  38 63 00 0C */	addi r3, r3, 0xc
 /* 8049E70C 00467CCC  4B F3 99 CC */	b GetResAnmChr__Q34nw4r3g3d7ResFileCFi
 .endfn fn_8049E708
 
-.fn fn_8049E710, local
+.fn fn_8049E710, global
 /* 8049E710 00467CD0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8049E714 00467CD4  7C 08 02 A6 */	mflr r0
 /* 8049E718 00467CD8  90 01 00 54 */	stw r0, 0x54(r1)
@@ -279,12 +279,12 @@
 /* 8049E8B0 00467E70  4E 80 00 20 */	blr
 .endfn fn_8049E710
 
-.fn fn_8049E8B4, local
+.fn fn_8049E8B4, global
 /* 8049E8B4 00467E74  38 63 00 10 */	addi r3, r3, 0x10
 /* 8049E8B8 00467E78  4E 80 00 20 */	blr
 .endfn fn_8049E8B4
 
-.fn fn_8049E8BC, local
+.fn fn_8049E8BC, global
 /* 8049E8BC 00467E7C  80 63 00 54 */	lwz r3, 0x54(r3)
 /* 8049E8C0 00467E80  4E 80 00 20 */	blr
 .endfn fn_8049E8BC
@@ -326,6 +326,6 @@
 .obj __RTTI__CScnItemAnim, global
 	.4byte CScnItemAnim_typestr
 	.4byte CScnItemAnim_hierarchy
-.sym lbl_806663A8, local
+.sym lbl_806663A8, global
 	.4byte 0x72656600
 	.4byte 0x00000000

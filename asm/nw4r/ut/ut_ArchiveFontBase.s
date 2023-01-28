@@ -1121,7 +1121,7 @@
 # 0x8056E868 - 0x8056E8C8
 .data
 .balign 8
-.sym lbl_8056E868, local
+.sym lbl_8056E868, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r2ut6detail15ArchiveFontBaseFv

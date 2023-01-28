@@ -300,7 +300,7 @@
 /* 8039E294 00367854  4E 80 00 20 */	blr
 .endfn MWSFD_CnvFrmInfToSfx
 
-.fn fn_8039E298, local
+.fn fn_8039E298, global
 /* 8039E298 00367858  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039E29C 0036785C  7C 08 02 A6 */	mflr r0
 /* 8039E2A0 00367860  90 01 00 14 */	stw r0, 0x14(r1)
@@ -799,7 +799,7 @@
 /* 8039E924 00367EE4  4E 80 00 20 */	blr
 .endfn mwsftag_GetAinfFromSj
 
-.fn fn_8039E928, local
+.fn fn_8039E928, global
 /* 8039E928 00367EE8  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 8039E92C 00367EEC  7C 08 02 A6 */	mflr r0
 /* 8039E930 00367EF0  90 01 00 C4 */	stw r0, 0xc4(r1)
@@ -1064,7 +1064,7 @@
 # 0x8051D508 - 0x8051DA00
 .rodata
 .balign 8
-.sym lbl_8051D508, local
+.sym lbl_8051D508, global
 	.4byte 0x45323031
 	.4byte 0x31383420
 	.4byte 0x4D777366

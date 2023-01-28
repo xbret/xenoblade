@@ -3,7 +3,7 @@
 
 # 0x80351880 - 0x80352DC0
 .text
-.balign 4
+.balign 16
 
 .fn __OSFPRInit, global
 /* 80351880 0031AE40  7C 60 00 A6 */	mfmsr r3
@@ -1867,7 +1867,7 @@
 	.skip 0x1C
 .endobj __OSRebootParams
 	.skip 0x4
-.sym lbl_805D4360, local
+.sym lbl_805D4360, global
 	.skip 0x50
 
 # 0x80665B28 - 0x80665B58
@@ -1899,10 +1899,10 @@
 	.byte 0x00
 .endobj "@1856"
 	.byte 0x00, 0x00, 0x00
-.sym lbl_80665B48, local
+.sym lbl_80665B48, global
 	.4byte 0x48414541
 	.4byte 0x00000000
-.sym lbl_80665B50, local
+.sym lbl_80665B50, global
 	.4byte lbl_80665B48
 	.4byte 0x00000000
 
@@ -1938,7 +1938,7 @@
 .obj ZeroF, local
 	.skip 0x8
 .endobj ZeroF
-.sym lbl_80667A28, local
+.sym lbl_80667A28, global
 	.skip 0x8
 
 .obj BI2DebugFlagHolder, local
@@ -1956,7 +1956,7 @@
 
 .obj __OSStartTime, global
 	.skip 0x4
-.sym lbl_80667A44, local
+.sym lbl_80667A44, global
 	.skip 0x4
 .endobj __OSStartTime
 

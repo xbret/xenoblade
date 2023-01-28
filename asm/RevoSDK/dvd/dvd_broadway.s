@@ -3,7 +3,7 @@
 
 # 0x80310600 - 0x80312CB0
 .text
-.balign 4
+.balign 16
 
 .fn doTransactionCallback, local
 /* 80310600 002D9BC0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2818,7 +2818,7 @@
 	.4byte 0x6D616E67
 	.4byte 0x6C656421
 	.2byte 0x0A00
-.sym lbl_8054A720, local
+.sym lbl_8054A720, global
 	.4byte 0x28445644
 	.4byte 0x4C6F7746
 	.4byte 0x696E6973
@@ -3769,13 +3769,13 @@
 .obj diRegValCache, local
 	.skip 0x20
 .endobj diRegValCache
-.sym lbl_805CCD00, local
+.sym lbl_805CCD00, global
 	.skip 0x20
-.sym lbl_805CCD20, local
+.sym lbl_805CCD20, global
 	.skip 0xC0
-.sym lbl_805CCDE0, local
+.sym lbl_805CCDE0, global
 	.skip 0x20
-.sym lbl_805CCE00, local
+.sym lbl_805CCE00, global
 	.skip 0x20
 
 # 0x806659A8 - 0x806659B8
@@ -3786,7 +3786,7 @@
 	.4byte 0xFFFFFFFF
 .endobj DiFD
 	.4byte 0x00000000
-.sym lbl_806659B0, local
+.sym lbl_806659B0, global
 	.4byte 0x2F646576
 	.4byte 0x2F646900
 
@@ -3797,7 +3797,7 @@
 .obj requestInProgress, local
 	.skip 0x1
 .endobj requestInProgress
-.sym lbl_80667899, local
+.sym lbl_80667899, global
 	.skip 0x3
 
 .obj freeCommandBuf, local
@@ -3807,21 +3807,21 @@
 .obj freeDvdContext, local
 	.skip 0x4
 .endobj freeDvdContext
-.sym lbl_806678A4, local
+.sym lbl_806678A4, global
 	.skip 0x1
-.sym lbl_806678A5, local
+.sym lbl_806678A5, global
 	.skip 0x3
 
 .obj spinUpValue, local
 	.skip 0x4
 .endobj spinUpValue
-.sym lbl_806678AC, local
+.sym lbl_806678AC, global
 	.skip 0x4
-.sym lbl_806678B0, local
+.sym lbl_806678B0, global
 	.skip 0x4
 
 .obj diCommand, local
 	.skip 0x4
 .endobj diCommand
-.sym lbl_806678B8, local
+.sym lbl_806678B8, global
 	.skip 0x8

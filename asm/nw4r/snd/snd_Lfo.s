@@ -158,7 +158,7 @@
 # 0x80523858 - 0x80523880
 .rodata
 .balign 8
-.sym lbl_80523858, local
+.sym lbl_80523858, global
 	.4byte 0x00060C13
 	.4byte 0x191F252B
 	.4byte 0x31363C41
@@ -173,23 +173,23 @@
 # 0x8066C7B0 - 0x8066C7E0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C7B0, local
+.sym lbl_8066C7B0, global
 	.4byte 0x00000000
-.sym lbl_8066C7B4, local
+.sym lbl_8066C7B4, global
 	.4byte 0x40C80000
-.sym lbl_8066C7B8, local
+.sym lbl_8066C7B8, global
 	.4byte 0x447A0000
 	.4byte 0x00000000
-.sym lbl_8066C7C0, local
+.sym lbl_8066C7C0, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C7C8, local
+.sym lbl_8066C7C8, global
 	.4byte 0x40800000
-.sym lbl_8066C7CC, local
+.sym lbl_8066C7CC, global
 	.4byte 0x42000000
-.sym lbl_8066C7D0, local
+.sym lbl_8066C7D0, global
 	.4byte 0x42FE0000
 	.4byte 0x00000000
-.sym lbl_8066C7D8, local
+.sym lbl_8066C7D8, global
 	.4byte 0x43300000
 	.4byte 0x00000000

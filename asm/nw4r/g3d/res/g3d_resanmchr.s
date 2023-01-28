@@ -5,7 +5,7 @@
 .text
 .balign 4
 
-.fn fn_803DE5F0, local
+.fn fn_803DE5F0, global
 /* 803DE5F0 003A7BB0  80 63 00 00 */	lwz r3, 0x0(r3)
 /* 803DE5F4 003A7BB4  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 803DE5F8 003A7BB8  2C 00 00 00 */	cmpwi r0, 0x0
@@ -2129,7 +2129,7 @@
 # 0x80520E18 - 0x80520E38
 .rodata
 .balign 8
-.sym lbl_80520E18, local
+.sym lbl_80520E18, global
 	.4byte GetAnmResult___Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
 	.4byte GetAnmResult_S__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
 	.4byte GetAnmResult_R__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
@@ -2142,24 +2142,24 @@
 # 0x8066C2E0 - 0x8066C310
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C2E0, local
+.sym lbl_8066C2E0, global
 	.4byte 0x00000000
-.sym lbl_8066C2E4, local
+.sym lbl_8066C2E4, global
 	.4byte 0x3F800000
-.sym lbl_8066C2E8, local
+.sym lbl_8066C2E8, global
 	.4byte 0x40000000
-.sym lbl_8066C2EC, local
+.sym lbl_8066C2EC, global
 	.4byte 0x40400000
-.sym lbl_8066C2F0, local
+.sym lbl_8066C2F0, global
 	.4byte 0x3F360B61
 	.4byte 0x00000000
-.sym lbl_8066C2F8, local
+.sym lbl_8066C2F8, global
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C300, local
+.sym lbl_8066C300, global
 	.4byte 0x3FB40000
-.sym lbl_8066C304, local
+.sym lbl_8066C304, global
 	.4byte 0x42B40000
-.sym lbl_8066C308, local
+.sym lbl_8066C308, global
 	.4byte 0xC2B40000
 	.4byte 0x00000000

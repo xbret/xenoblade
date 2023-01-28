@@ -19,7 +19,7 @@
 # 0x80667E28 - 0x80667E38
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E28, local
+.sym lbl_80667E28, global
 	.skip 0x8
-.sym lbl_80667E30, local
+.sym lbl_80667E30, global
 	.skip 0x8

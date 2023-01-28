@@ -39,7 +39,7 @@
 .text
 .balign 4
 
-.fn fn_80058414, local
+.fn fn_80058414, global
 /* 80058414 000219D4  3C A0 80 53 */	lis r5, __vt__CMcaFile@ha
 /* 80058418 000219D8  38 00 00 00 */	li r0, 0x0
 /* 8005841C 000219DC  38 A5 9B 78 */	addi r5, r5, __vt__CMcaFile@l
@@ -67,7 +67,7 @@
 /* 80058474 00021A34  4E 80 00 20 */	blr
 .endfn fn_80058414
 
-.fn fn_80058478, local
+.fn fn_80058478, global
 /* 80058478 00021A38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005847C 00021A3C  7C 08 02 A6 */	mflr r0
 /* 80058480 00021A40  2C 03 00 00 */	cmpwi r3, 0x0
@@ -87,7 +87,7 @@
 /* 800584B4 00021A74  4E 80 00 20 */	blr
 .endfn fn_80058478
 
-.fn fn_800584B8, local
+.fn fn_800584B8, global
 /* 800584B8 00021A78  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 800584BC 00021A7C  7C 08 02 A6 */	mflr r0
 /* 800584C0 00021A80  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -160,7 +160,7 @@
 	.4byte __RTTI__CMcaFile
 	.4byte 0x00000000
 	.4byte fn_80058478
-.sym lbl_80529B84, local
+.sym lbl_80529B84, global
 	.4byte 0x4E573452
 	.4byte 0x3A466169
 	.4byte 0x6C656420
@@ -171,7 +171,7 @@
 	.4byte 0x29702026
 	.4byte 0x20307831
 	.4byte 0x66290000
-.sym lbl_80529BAC, local
+.sym lbl_80529BAC, global
 	.4byte 0x6733645F
 	.4byte 0x72657366
 	.4byte 0x696C655F

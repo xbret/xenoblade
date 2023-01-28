@@ -366,6 +366,6 @@
 # 0x8066BDB0 - 0x8066BDB8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BDB0, local
+.sym lbl_8066BDB0, global
 	.4byte 0x00454E44
 	.4byte 0x00000000

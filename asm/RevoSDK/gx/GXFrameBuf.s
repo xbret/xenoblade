@@ -3,7 +3,7 @@
 
 # 0x8031AD70 - 0x8031B950
 .text
-.balign 4
+.balign 16
 
 .fn GXAdjustForOverscan, global
 /* 8031AD70 002E4330  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -856,9 +856,9 @@
 # 0x8066BFC8 - 0x8066BFD8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BFC8, local
+.sym lbl_8066BFC8, global
 	.4byte 0x43800000
 	.4byte 0x00000000
-.sym lbl_8066BFD0, local
+.sym lbl_8066BFD0, global
 	.4byte 0x43300000
 	.4byte 0x00000000

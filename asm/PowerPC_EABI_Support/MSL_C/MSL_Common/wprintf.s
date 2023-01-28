@@ -2521,7 +2521,7 @@
 # 0x8050DB88 - 0x8050DB90
 .rodata
 .balign 8
-.sym lbl_8050DB88, local
+.sym lbl_8050DB88, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 
@@ -2674,7 +2674,7 @@
 	.rel __wpformatter, .L_802C6C38
 	.rel __wpformatter, .L_802C6718
 .endobj jumptable_8053FB10
-.sym lbl_8053FC60, local
+.sym lbl_8053FC60, global
 	.4byte 0x002D0030
 	.4byte 0x00580030
 	.4byte 0x0000002D
@@ -2707,6 +2707,6 @@
 # 0x8066B898 - 0x8066B8A0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066B898, local
+.sym lbl_8066B898, global
 	.4byte 0x00000000
 	.4byte 0x00000000

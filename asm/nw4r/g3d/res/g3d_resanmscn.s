@@ -808,7 +808,7 @@
 # 0x8056C9C0 - 0x8056CA60
 .data
 .balign 8
-.sym lbl_8056C9C0, local
+.sym lbl_8056C9C0, global
 	.4byte 0x0000000E
 	.4byte 0x4C696768
 	.4byte 0x74536574
@@ -817,7 +817,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056C9E0, local
+.sym lbl_8056C9E0, global
 	.4byte 0x0000000F
 	.4byte 0x416D624C
 	.4byte 0x69676874
@@ -826,7 +826,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056CA00, local
+.sym lbl_8056CA00, global
 	.4byte 0x0000000C
 	.4byte 0x4C696768
 	.4byte 0x7473284E
@@ -835,7 +835,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056CA20, local
+.sym lbl_8056CA20, global
 	.4byte 0x0000000A
 	.4byte 0x466F6773
 	.4byte 0x284E5734
@@ -844,7 +844,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056CA40, local
+.sym lbl_8056CA40, global
 	.4byte 0x0000000D
 	.4byte 0x43616D65
 	.4byte 0x72617328

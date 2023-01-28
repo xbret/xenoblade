@@ -3,7 +3,7 @@
 
 # 0x80348B50 - 0x80348FC0
 .text
-.balign 4
+.balign 16
 
 .fn FindContainHeap_, global
 /* 80348B50 00312110  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -340,13 +340,13 @@
 # 0x805CFC50 - 0x805CFC78
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CFC50, local
+.sym lbl_805CFC50, global
 	.skip 0x10
-.sym lbl_805CFC60, local
+.sym lbl_805CFC60, global
 	.skip 0x18
 
 # 0x806679D0 - 0x806679D8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806679D0, local
+.sym lbl_806679D0, global
 	.skip 0x8

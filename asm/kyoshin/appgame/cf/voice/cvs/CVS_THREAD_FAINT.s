@@ -100,7 +100,7 @@
 .text
 .balign 4
 
-.fn fn_802A6AA8, local
+.fn fn_802A6AA8, global
 /* 802A6AA8 00270068  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802A6AAC 0027006C  7C 08 02 A6 */	mflr r0
 /* 802A6AB0 00270070  90 01 00 34 */	stw r0, 0x34(r1)
@@ -175,7 +175,7 @@
 /* 802A6BAC 0027016C  4E 80 00 20 */	blr
 .endfn fn_802A6AA8
 
-.fn fn_802A6BB0, local
+.fn fn_802A6BB0, global
 /* 802A6BB0 00270170  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A6BB4 00270174  7C 08 02 A6 */	mflr r0
 /* 802A6BB8 00270178  3C A0 80 54 */	lis r5, lbl_8053D2F4@ha
@@ -227,7 +227,7 @@
 /* 802A6C68 00270228  4E 80 00 20 */	blr
 .endfn fn_802A6BB0
 
-.fn fn_802A6C6C, local
+.fn fn_802A6C6C, global
 /* 802A6C6C 0027022C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A6C70 00270230  7C 08 02 A6 */	mflr r0
 /* 802A6C74 00270234  90 01 00 14 */	stw r0, 0x14(r1)
@@ -281,7 +281,7 @@
 /* 802A6D28 002702E8  4E 80 00 20 */	blr
 .endfn fn_802A6C6C
 
-.fn fn_802A6D2C, local
+.fn fn_802A6D2C, global
 /* 802A6D2C 002702EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A6D30 002702F0  7C 08 02 A6 */	mflr r0
 /* 802A6D34 002702F4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -303,7 +303,7 @@
 /* 802A6D70 00270330  4E 80 00 20 */	blr
 .endfn fn_802A6D2C
 
-.fn fn_802A6D74, local
+.fn fn_802A6D74, global
 /* 802A6D74 00270334  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A6D78 00270338  7C 08 02 A6 */	mflr r0
 /* 802A6D7C 0027033C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -340,12 +340,12 @@
 /* 802A6DE8 002703A8  4E 80 00 20 */	blr
 .endfn fn_802A6D74
 
-.fn fn_802A6DEC, local
+.fn fn_802A6DEC, global
 /* 802A6DEC 002703AC  38 60 00 F0 */	li r3, 0xf0
 /* 802A6DF0 002703B0  4E 80 00 20 */	blr
 .endfn fn_802A6DEC
 
-.fn fn_802A6DF4, local
+.fn fn_802A6DF4, global
 /* 802A6DF4 002703B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A6DF8 002703B8  7C 08 02 A6 */	mflr r0
 /* 802A6DFC 002703BC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -404,15 +404,15 @@
 # 0x8053D2E8 - 0x8053D338
 .data
 .balign 8
-.sym lbl_8053D2E8, local
+.sym lbl_8053D2E8, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A6BB0
-.sym lbl_8053D2F4, local
+.sym lbl_8053D2F4, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A6C6C
-.sym lbl_8053D300, local
+.sym lbl_8053D300, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A6D2C

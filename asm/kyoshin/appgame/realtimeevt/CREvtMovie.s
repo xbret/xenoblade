@@ -96,7 +96,7 @@
 .text
 .balign 4
 
-.fn fn_80294874, local
+.fn fn_80294874, global
 /* 80294874 0025DE34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294878 0025DE38  7C 08 02 A6 */	mflr r0
 /* 8029487C 0025DE3C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -122,7 +122,7 @@
 /* 802948CC 0025DE8C  4E 80 00 20 */	blr
 .endfn fn_80294874
 
-.fn fn_802948D0, local
+.fn fn_802948D0, global
 /* 802948D0 0025DE90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802948D4 0025DE94  7C 08 02 A6 */	mflr r0
 /* 802948D8 0025DE98  2C 03 00 00 */	cmpwi r3, 0x0
@@ -153,7 +153,7 @@
 /* 80294938 0025DEF8  4E 80 00 20 */	blr
 .endfn fn_802948D0
 
-.fn fn_8029493C, local
+.fn fn_8029493C, global
 /* 8029493C 0025DEFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294940 0025DF00  7C 08 02 A6 */	mflr r0
 /* 80294944 0025DF04  90 01 00 14 */	stw r0, 0x14(r1)
@@ -174,7 +174,7 @@
 /* 8029497C 0025DF3C  4E 80 00 20 */	blr
 .endfn fn_8029493C
 
-.fn fn_80294980, local
+.fn fn_80294980, global
 /* 80294980 0025DF40  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80294984 0025DF44  7C 08 02 A6 */	mflr r0
 /* 80294988 0025DF48  90 01 00 44 */	stw r0, 0x44(r1)
@@ -238,7 +238,7 @@
 /* 80294A6C 0025E02C  4E 80 00 20 */	blr
 .endfn fn_80294980
 
-.fn fn_80294A70, local
+.fn fn_80294A70, global
 /* 80294A70 0025E030  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80294A74 0025E034  7C 08 02 A6 */	mflr r0
 /* 80294A78 0025E038  90 01 00 44 */	stw r0, 0x44(r1)
@@ -319,7 +319,7 @@
 /* 80294BA0 0025E160  4E 80 00 20 */	blr
 .endfn fn_80294A70
 
-.fn fn_80294BA4, local
+.fn fn_80294BA4, global
 /* 80294BA4 0025E164  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80294BA8 0025E168  7C 08 02 A6 */	mflr r0
 /* 80294BAC 0025E16C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -392,7 +392,7 @@
 /* 80294CAC 0025E26C  4E 80 00 20 */	blr
 .endfn fn_80294BA4
 
-.fn fn_80294CB0, local
+.fn fn_80294CB0, global
 /* 80294CB0 0025E270  4E 80 00 20 */	blr
 .endfn fn_80294CB0
 
@@ -405,7 +405,7 @@
 	.4byte 0x43524576
 	.4byte 0x744D6F76
 	.4byte 0x69650000
-.sym lbl_8050B3D0, local
+.sym lbl_8050B3D0, global
 	.4byte 0x2F65762F
 	.4byte 0x7265616C
 	.4byte 0x74696D65

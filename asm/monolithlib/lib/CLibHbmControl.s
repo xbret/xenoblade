@@ -52,7 +52,7 @@
 .text
 .balign 4
 
-.fn fn_8045ECC4, local
+.fn fn_8045ECC4, global
 /* 8045ECC4 00428284  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8045ECC8 00428288  7C 08 02 A6 */	mflr r0
 /* 8045ECCC 0042828C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -106,7 +106,7 @@
 /* 8045ED88 00428348  4E 80 00 20 */	blr
 .endfn fn_8045ECC4
 
-.fn fn_8045ED8C, local
+.fn fn_8045ED8C, global
 /* 8045ED8C 0042834C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8045ED90 00428350  7C 08 02 A6 */	mflr r0
 /* 8045ED94 00428354  90 01 00 74 */	stw r0, 0x74(r1)
@@ -215,7 +215,7 @@
 /* 8045EF2C 004284EC  4E 80 00 20 */	blr
 .endfn fn_8045ED8C
 
-.fn fn_8045EF30, local
+.fn fn_8045EF30, global
 /* 8045EF30 004284F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045EF34 004284F4  7C 08 02 A6 */	mflr r0
 /* 8045EF38 004284F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -250,7 +250,7 @@
 	.4byte 0x48626D43
 	.4byte 0x6F6E7472
 	.4byte 0x6F6C0000
-.sym lbl_80526AA8, local
+.sym lbl_80526AA8, global
 	.4byte 0x65786974
 	.4byte 0x20776969
 	.4byte 0x206D656E

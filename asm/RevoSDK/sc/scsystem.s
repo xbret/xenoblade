@@ -3,7 +3,7 @@
 
 # 0x8035F530 - 0x80360EC0
 .text
-.balign 4
+.balign 16
 
 .fn SCInit, global
 /* 8035F530 00328AF0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1846,7 +1846,7 @@
 # 0x80518D30 - 0x80518D88
 .rodata
 .balign 8
-.sym lbl_80518D30, local
+.sym lbl_80518D30, global
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x2F737973
@@ -1881,7 +1881,7 @@
 # 0x8055EEF8 - 0x8055F0D8
 .data
 .balign 8
-.sym lbl_8055EEF8, local
+.sym lbl_8055EEF8, global
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -1900,31 +1900,31 @@
 	.4byte 0x5F313435
 	.4byte 0x29203E3E
 	.4byte 0x00000000
-.sym lbl_8055EF40, local
+.sym lbl_8055EF40, global
 	.4byte 0x49504C2E
 	.4byte 0x45554C41
 	.4byte 0x00000000
-.sym lbl_8055EF4C, local
+.sym lbl_8055EF4C, global
 	.4byte 0x49504C2E
 	.4byte 0x53414452
 	.4byte 0x00000000
-.sym lbl_8055EF58, local
+.sym lbl_8055EF58, global
 	.4byte 0x4E45542E
 	.4byte 0x43545043
 	.4byte 0x00000000
-.sym lbl_8055EF64, local
+.sym lbl_8055EF64, global
 	.4byte 0x4E45542E
 	.4byte 0x50524F46
 	.4byte 0x00000000
-.sym lbl_8055EF70, local
+.sym lbl_8055EF70, global
 	.4byte 0x4E45542E
 	.4byte 0x57435043
 	.4byte 0x00000000
-.sym lbl_8055EF7C, local
+.sym lbl_8055EF7C, global
 	.4byte 0x4E45542E
 	.4byte 0x57434647
 	.4byte 0x00000000
-.sym lbl_8055EF88, local
+.sym lbl_8055EF88, global
 	.4byte lbl_80665BC4
 	.4byte 0x00000000
 	.4byte lbl_80665BCC
@@ -2025,7 +2025,7 @@
 .obj ConfBuf, local
 	.skip 0x4000
 .endobj ConfBuf
-.sym lbl_805D96E0, local
+.sym lbl_805D96E0, global
 	.skip 0x4000
 
 # 0x80665BC0 - 0x80665CD0
@@ -2035,98 +2035,98 @@
 .obj __SCVersion, global
 	.4byte lbl_8055EEF8
 .endobj __SCVersion
-.sym lbl_80665BC4, local
+.sym lbl_80665BC4, global
 	.4byte 0x49504C2E
 	.4byte 0x43420000
-.sym lbl_80665BCC, local
+.sym lbl_80665BCC, global
 	.4byte 0x49504C2E
 	.4byte 0x41520000
 	.4byte 0x00000000
-.sym lbl_80665BD8, local
+.sym lbl_80665BD8, global
 	.4byte 0x49504C2E
 	.4byte 0x41524E00
-.sym lbl_80665BE0, local
+.sym lbl_80665BE0, global
 	.4byte 0x49504C2E
 	.4byte 0x43440000
-.sym lbl_80665BE8, local
+.sym lbl_80665BE8, global
 	.4byte 0x49504C2E
 	.4byte 0x43443200
-.sym lbl_80665BF0, local
+.sym lbl_80665BF0, global
 	.4byte 0x49504C2E
 	.4byte 0x44480000
-.sym lbl_80665BF8, local
+.sym lbl_80665BF8, global
 	.4byte 0x49504C2E
 	.4byte 0x45363000
-.sym lbl_80665C00, local
+.sym lbl_80665C00, global
 	.4byte 0x49504C2E
 	.4byte 0x46524300
-.sym lbl_80665C08, local
+.sym lbl_80665C08, global
 	.4byte 0x49504C2E
 	.4byte 0x49444C00
-.sym lbl_80665C10, local
+.sym lbl_80665C10, global
 	.4byte 0x49504C2E
 	.4byte 0x494E4300
-.sym lbl_80665C18, local
+.sym lbl_80665C18, global
 	.4byte 0x49504C2E
 	.4byte 0x4C4E4700
-.sym lbl_80665C20, local
+.sym lbl_80665C20, global
 	.4byte 0x49504C2E
 	.4byte 0x4E494B00
-.sym lbl_80665C28, local
+.sym lbl_80665C28, global
 	.4byte 0x49504C2E
 	.4byte 0x50430000
-.sym lbl_80665C30, local
+.sym lbl_80665C30, global
 	.4byte 0x49504C2E
 	.4byte 0x50475300
-.sym lbl_80665C38, local
+.sym lbl_80665C38, global
 	.4byte 0x49504C2E
 	.4byte 0x53535600
-.sym lbl_80665C40, local
+.sym lbl_80665C40, global
 	.4byte 0x49504C2E
 	.4byte 0x534E4400
-.sym lbl_80665C48, local
+.sym lbl_80665C48, global
 	.4byte 0x49504C2E
 	.4byte 0x55505400
-.sym lbl_80665C50, local
+.sym lbl_80665C50, global
 	.4byte 0x4E45542E
 	.4byte 0x434E4600
-.sym lbl_80665C58, local
+.sym lbl_80665C58, global
 	.4byte 0x4445562E
 	.4byte 0x42544D00
-.sym lbl_80665C60, local
+.sym lbl_80665C60, global
 	.4byte 0x4445562E
 	.4byte 0x56494D00
-.sym lbl_80665C68, local
+.sym lbl_80665C68, global
 	.4byte 0x4445562E
 	.4byte 0x43544300
-.sym lbl_80665C70, local
+.sym lbl_80665C70, global
 	.4byte 0x4445562E
 	.4byte 0x44534D00
-.sym lbl_80665C78, local
+.sym lbl_80665C78, global
 	.4byte 0x42542E44
 	.4byte 0x494E4600
-.sym lbl_80665C80, local
+.sym lbl_80665C80, global
 	.4byte 0x42542E43
 	.4byte 0x44494600
-.sym lbl_80665C88, local
+.sym lbl_80665C88, global
 	.4byte 0x42542E53
 	.4byte 0x454E5300
-.sym lbl_80665C90, local
+.sym lbl_80665C90, global
 	.4byte 0x42542E53
 	.4byte 0x504B5600
-.sym lbl_80665C98, local
+.sym lbl_80665C98, global
 	.4byte 0x42542E4D
 	.4byte 0x4F540000
-.sym lbl_80665CA0, local
+.sym lbl_80665CA0, global
 	.4byte 0x42542E42
 	.4byte 0x41520000
-.sym lbl_80665CA8, local
+.sym lbl_80665CA8, global
 	.4byte 0x4456442E
 	.4byte 0x434E4600
-.sym lbl_80665CB0, local
+.sym lbl_80665CB0, global
 	.4byte 0x5757572E
 	.4byte 0x52535400
-.sym lbl_80665CB8, local
+.sym lbl_80665CB8, global
 	.4byte 0x49504C2E
 	.4byte 0x54494400
 
@@ -2158,7 +2158,7 @@
 .obj ItemNumTotal, local
 	.skip 0x4
 .endobj ItemNumTotal
-.sym lbl_80667B64, local
+.sym lbl_80667B64, global
 	.skip 0x4
 
 .obj ItemIDOffsetTblOffset, local
@@ -2168,7 +2168,7 @@
 .obj IsDevKit, local
 	.skip 0x1
 .endobj IsDevKit
-.sym lbl_80667B6D, local
+.sym lbl_80667B6D, global
 	.skip 0x1
 
 .obj Initialized, local

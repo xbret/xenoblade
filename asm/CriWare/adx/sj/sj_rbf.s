@@ -1412,7 +1412,7 @@
 	.4byte 0x0DBB11D2
 	.4byte 0xA6BF4445
 	.4byte 0x53540000
-.sym lbl_8051C208, local
+.sym lbl_8051C208, global
 	.4byte 0x534A5242
 	.4byte 0x46204572
 	.4byte 0x726F7200

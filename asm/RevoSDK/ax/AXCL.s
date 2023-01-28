@@ -3,7 +3,7 @@
 
 # 0x802D2F70 - 0x802D3A70
 .text
-.balign 4
+.balign 16
 
 .fn __AXGetCommandListCycles, global
 /* 802D2F70 0029C530  80 6D B4 F4 */	lwz r3, lbl_80667674@sda21(r13)
@@ -767,31 +767,31 @@
 # 0x80580AC0 - 0x80580BC0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80580AC0, local
+.sym lbl_80580AC0, global
 	.skip 0x100
 
 # 0x80667660 - 0x80667688
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667660, local
+.sym lbl_80667660, global
 	.skip 0x2
-.sym lbl_80667662, local
+.sym lbl_80667662, global
 	.skip 0x2
-.sym lbl_80667664, local
+.sym lbl_80667664, global
 	.skip 0x2
-.sym lbl_80667666, local
+.sym lbl_80667666, global
 	.skip 0x2
-.sym lbl_80667668, local
+.sym lbl_80667668, global
 	.skip 0x4
-.sym lbl_8066766C, local
+.sym lbl_8066766C, global
 	.skip 0x4
-.sym lbl_80667670, local
+.sym lbl_80667670, global
 	.skip 0x4
-.sym lbl_80667674, local
+.sym lbl_80667674, global
 	.skip 0x4
-.sym lbl_80667678, local
+.sym lbl_80667678, global
 	.skip 0x4
-.sym lbl_8066767C, local
+.sym lbl_8066767C, global
 	.skip 0x4
-.sym lbl_80667680, local
+.sym lbl_80667680, global
 	.skip 0x8

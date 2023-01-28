@@ -761,7 +761,7 @@
 # 0x8056CEC8 - 0x8056CED8
 .data
 .balign 8
-.sym lbl_8056CEC8, local
+.sym lbl_8056CEC8, global
 	.4byte 0x4E6F6465
 	.4byte 0x54726565
 	.4byte 0x00000000
@@ -770,14 +770,14 @@
 # 0x80665DA0 - 0x80665DA8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665DA0, local
+.sym lbl_80665DA0, global
 	.4byte 0x4E6F6465
 	.4byte 0x4D697800
 
 # 0x8066C440 - 0x8066C448
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C440, local
+.sym lbl_8066C440, global
 	.4byte 0x3F800000
-.sym lbl_8066C444, local
+.sym lbl_8066C444, global
 	.4byte 0x00000000

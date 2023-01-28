@@ -5,7 +5,7 @@
 .text
 .balign 4
 
-.fn fn_803A3A48, local
+.fn fn_803A3A48, global
 /* 803A3A48 0036D008  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A3A4C 0036D00C  7C 08 02 A6 */	mflr r0
 /* 803A3A50 0036D010  90 01 00 24 */	stw r0, 0x24(r1)
@@ -51,7 +51,7 @@
 /* 803A3AE0 0036D0A0  4E 80 00 20 */	blr
 .endfn fn_803A3A48
 
-.fn fn_803A3AE4, local
+.fn fn_803A3AE4, global
 /* 803A3AE4 0036D0A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A3AE8 0036D0A8  7C 08 02 A6 */	mflr r0
 /* 803A3AEC 0036D0AC  2C 04 00 00 */	cmpwi r4, 0x0
@@ -105,13 +105,13 @@
 /* 803A3B94 0036D154  4E 80 00 20 */	blr
 .endfn fn_803A3AE4
 
-.fn fn_803A3B98, local
+.fn fn_803A3B98, global
 /* 803A3B98 0036D158  38 00 00 00 */	li r0, 0x0
 /* 803A3B9C 0036D15C  90 03 05 44 */	stw r0, 0x544(r3)
 /* 803A3BA0 0036D160  4E 80 00 20 */	blr
 .endfn fn_803A3B98
 
-.fn fn_803A3BA4, local
+.fn fn_803A3BA4, global
 /* 803A3BA4 0036D164  80 63 05 44 */	lwz r3, 0x544(r3)
 /* 803A3BA8 0036D168  4E 80 00 20 */	blr
 .endfn fn_803A3BA4
@@ -119,7 +119,7 @@
 # 0x8051F510 - 0x8051F538
 .rodata
 .balign 8
-.sym lbl_8051F510, local
+.sym lbl_8051F510, global
 	.4byte 0x45323035
 	.4byte 0x33303031
 	.4byte 0x204D5753

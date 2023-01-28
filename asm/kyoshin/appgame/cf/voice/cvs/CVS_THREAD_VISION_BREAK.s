@@ -87,7 +87,7 @@
 .text
 .balign 4
 
-.fn fn_802A92D8, local
+.fn fn_802A92D8, global
 /* 802A92D8 00272898  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802A92DC 0027289C  7C 08 02 A6 */	mflr r0
 /* 802A92E0 002728A0  2C 04 00 00 */	cmpwi r4, 0x0
@@ -170,7 +170,7 @@
 /* 802A93F8 002729B8  4E 80 00 20 */	blr
 .endfn fn_802A92D8
 
-.fn fn_802A93FC, local
+.fn fn_802A93FC, global
 /* 802A93FC 002729BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A9400 002729C0  7C 08 02 A6 */	mflr r0
 /* 802A9404 002729C4  3C A0 80 54 */	lis r5, lbl_8053D50C@ha
@@ -268,7 +268,7 @@
 /* 802A9558 00272B18  4E 80 00 20 */	blr
 .endfn fn_802A93FC
 
-.fn fn_802A955C, local
+.fn fn_802A955C, global
 /* 802A955C 00272B1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A9560 00272B20  7C 08 02 A6 */	mflr r0
 /* 802A9564 00272B24  90 01 00 14 */	stw r0, 0x14(r1)
@@ -290,7 +290,7 @@
 /* 802A95A0 00272B60  4E 80 00 20 */	blr
 .endfn fn_802A955C
 
-.fn fn_802A95A4, local
+.fn fn_802A95A4, global
 /* 802A95A4 00272B64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A95A8 00272B68  7C 08 02 A6 */	mflr r0
 /* 802A95AC 00272B6C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -317,12 +317,12 @@
 /* 802A95F8 00272BB8  4E 80 00 20 */	blr
 .endfn fn_802A95A4
 
-.fn fn_802A95FC, local
+.fn fn_802A95FC, global
 /* 802A95FC 00272BBC  38 60 00 0F */	li r3, 0xf
 /* 802A9600 00272BC0  4E 80 00 20 */	blr
 .endfn fn_802A95FC
 
-.fn fn_802A9604, local
+.fn fn_802A9604, global
 /* 802A9604 00272BC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A9608 00272BC8  7C 08 02 A6 */	mflr r0
 /* 802A960C 00272BCC  38 60 00 01 */	li r3, 0x1
@@ -396,11 +396,11 @@
 # 0x8053D500 - 0x8053D540
 .data
 .balign 8
-.sym lbl_8053D500, local
+.sym lbl_8053D500, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A93FC
-.sym lbl_8053D50C, local
+.sym lbl_8053D50C, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A955C
@@ -422,10 +422,10 @@
 # 0x80665638 - 0x80665650
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665638, local
+.sym lbl_80665638, global
 	.4byte 0x01920195
 	.4byte 0x01960000
-.sym lbl_80665640, local
+.sym lbl_80665640, global
 	.4byte 0x01910193
 	.4byte 0x01940000
 

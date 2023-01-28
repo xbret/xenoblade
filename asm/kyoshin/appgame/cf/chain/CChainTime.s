@@ -65,7 +65,7 @@
 .text
 .balign 4
 
-.fn fn_8027CDD4, local
+.fn fn_8027CDD4, global
 /* 8027CDD4 00246394  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027CDD8 00246398  7C 08 02 A6 */	mflr r0
 /* 8027CDDC 0024639C  3C 80 80 53 */	lis r4, __vt__cf_CChainTime@ha
@@ -91,7 +91,7 @@
 /* 8027CE2C 002463EC  4E 80 00 20 */	blr
 .endfn fn_8027CDD4
 
-.fn fn_8027CE30, local
+.fn fn_8027CE30, global
 /* 8027CE30 002463F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027CE34 002463F4  7C 08 02 A6 */	mflr r0
 /* 8027CE38 002463F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -127,7 +127,7 @@
 /* 8027CEAC 0024646C  4E 80 00 20 */	blr
 .endfn fn_8027CE30
 
-.fn fn_8027CEB0, local
+.fn fn_8027CEB0, global
 /* 8027CEB0 00246470  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027CEB4 00246474  7C 08 02 A6 */	mflr r0
 /* 8027CEB8 00246478  90 01 00 14 */	stw r0, 0x14(r1)
@@ -166,7 +166,7 @@
 /* 8027CF38 002464F8  4E 80 00 20 */	blr
 .endfn fn_8027CEB0
 
-.fn fn_8027CF3C, local
+.fn fn_8027CF3C, global
 /* 8027CF3C 002464FC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027CF40 00246500  7C 08 02 A6 */	mflr r0
 /* 8027CF44 00246504  C0 02 AF B0 */	lfs f0, lbl_8066B330@sda21(r2)
@@ -289,7 +289,7 @@
 # 0x8066B330 - 0x8066B338
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066B330, local
+.sym lbl_8066B330, global
 	.4byte 0x3F800000
-.sym lbl_8066B334, local
+.sym lbl_8066B334, global
 	.4byte 0x00000000

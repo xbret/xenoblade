@@ -3,7 +3,7 @@
 
 # 0x8031C0C0 - 0x8031D160
 .text
-.balign 4
+.balign 16
 
 .fn GXGetTexBufferSize, global
 /* 8031C0C0 002E5680  28 05 00 3C */	cmplwi r5, 0x3c
@@ -1383,59 +1383,59 @@
 # 0x80665A08 - 0x80665A50
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665A08, local
+.sym lbl_80665A08, global
 	.4byte 0x80818283
 	.4byte 0xA0A1A2A3
-.sym lbl_80665A10, local
+.sym lbl_80665A10, global
 	.4byte 0x84858687
 	.4byte 0xA4A5A6A7
-.sym lbl_80665A18, local
+.sym lbl_80665A18, global
 	.4byte 0x88898A8B
 	.4byte 0xA8A9AAAB
-.sym lbl_80665A20, local
+.sym lbl_80665A20, global
 	.4byte 0x8C8D8E8F
 	.4byte 0xACADAEAF
-.sym lbl_80665A28, local
+.sym lbl_80665A28, global
 	.4byte 0x90919293
 	.4byte 0xB0B1B2B3
-.sym lbl_80665A30, local
+.sym lbl_80665A30, global
 	.4byte 0x94959697
 	.4byte 0xB4B5B6B7
-.sym lbl_80665A38, local
+.sym lbl_80665A38, global
 	.4byte 0x98999A9B
 	.4byte 0xB8B9BABB
-.sym lbl_80665A40, local
+.sym lbl_80665A40, global
 	.4byte 0x00040105
 	.4byte 0x02060000
-.sym lbl_80665A48, local
+.sym lbl_80665A48, global
 	.4byte 0x00020400
 	.4byte 0x01030500
 
 # 0x8066C010 - 0x8066C048
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C010, local
+.sym lbl_8066C010, global
 	.4byte 0x41800000
 	.4byte 0x00000000
-.sym lbl_8066C018, local
+.sym lbl_8066C018, global
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C020, local
+.sym lbl_8066C020, global
 	.4byte 0xC0800000
-.sym lbl_8066C024, local
+.sym lbl_8066C024, global
 	.4byte 0x407F5C29
-.sym lbl_8066C028, local
+.sym lbl_8066C028, global
 	.4byte 0x40800000
-.sym lbl_8066C02C, local
+.sym lbl_8066C02C, global
 	.4byte 0x42000000
-.sym lbl_8066C030, local
+.sym lbl_8066C030, global
 	.4byte 0x00000000
-.sym lbl_8066C034, local
+.sym lbl_8066C034, global
 	.4byte 0x41200000
-.sym lbl_8066C038, local
+.sym lbl_8066C038, global
 	.4byte 0x3D800000
-.sym lbl_8066C03C, local
+.sym lbl_8066C03C, global
 	.4byte 0x3D000000
-.sym lbl_8066C040, local
+.sym lbl_8066C040, global
 	.4byte 0x43300000
 	.4byte 0x80000000

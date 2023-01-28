@@ -1902,7 +1902,7 @@
 /* 803300E8 002F96A8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803300EC 002F96AC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_803300F0, local
+.fn fn_803300F0, global
 /* 803300F0 002F96B0  80 03 00 4C */	lwz r0, 0x4c(r3)
 /* 803300F4 002F96B4  80 63 00 58 */	lwz r3, 0x58(r3)
 /* 803300F8 002F96B8  54 00 4D F4 */	rlwinm r0, r0, 9, 23, 26
@@ -1913,7 +1913,7 @@
 /* 80330108 002F96C8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8033010C 002F96CC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80330110, local
+.fn fn_80330110, global
 /* 80330110 002F96D0  80 83 00 4C */	lwz r4, 0x4c(r3)
 /* 80330114 002F96D4  80 A3 00 58 */	lwz r5, 0x58(r3)
 /* 80330118 002F96D8  54 80 47 3E */	extrwi r0, r4, 4, 4
@@ -1924,7 +1924,7 @@
 /* 8033012C 002F96EC  4E 80 00 20 */	blr
 .endfn fn_80330110
 
-.fn fn_80330130, local
+.fn fn_80330130, global
 /* 80330130 002F96F0  81 23 00 4C */	lwz r9, 0x4c(r3)
 /* 80330134 002F96F4  81 63 00 58 */	lwz r11, 0x58(r3)
 /* 80330138 002F96F8  55 20 47 3E */	extrwi r0, r9, 4, 4
@@ -3485,28 +3485,28 @@
 # 0x80518A68 - 0x80518A98
 .rodata
 .balign 8
-.sym lbl_80518A68, local
+.sym lbl_80518A68, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00FF00FF
 	.4byte 0x00FF00FF
 	.4byte 0x3F000000
-.sym lbl_80518A7C, local
+.sym lbl_80518A7C, global
 	.4byte 0x3F360B61
-.sym lbl_80518A80, local
+.sym lbl_80518A80, global
 	.4byte 0x00000000
-.sym lbl_80518A84, local
+.sym lbl_80518A84, global
 	.4byte 0x3F800000
 	.4byte 0x40000000
 	.4byte 0x00000000
-.sym lbl_80518A90, local
+.sym lbl_80518A90, global
 	.4byte 0x43300000
 	.4byte 0x00000000
 
 # 0x8054D848 - 0x8054D8D0
 .data
 .balign 8
-.sym lbl_8054D848, local
+.sym lbl_8054D848, global
 	.4byte 0x0000001F
 	.4byte 0x0000001B
 	.4byte 0x00000017
@@ -3515,7 +3515,7 @@
 	.4byte 0x0000001A
 	.4byte 0x00000016
 	.4byte 0x00000012
-.sym lbl_8054D868, local
+.sym lbl_8054D868, global
 	.4byte 0x0000001F
 	.4byte 0x0000001B
 	.4byte 0x00000017
@@ -3524,7 +3524,7 @@
 	.4byte 0x0000001A
 	.4byte 0x00000016
 	.4byte 0x00000012
-.sym lbl_8054D888, local
+.sym lbl_8054D888, global
 	.4byte lbl_8054D8C8
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt8MaterialFv
@@ -3535,13 +3535,13 @@
 	.4byte Animate__Q36nw4hbm3lyt8MaterialFv
 	.4byte FindAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform
 	.4byte SetAnimationEnable__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransformb
-.sym lbl_8054D8B0, local
+.sym lbl_8054D8B0, global
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
 	.4byte 0x3A4D6174
 	.4byte 0x65726961
 	.4byte 0x6C000000
-.sym lbl_8054D8C8, local
+.sym lbl_8054D8C8, global
 	.4byte lbl_8054D8B0
 	.4byte 0x00000000

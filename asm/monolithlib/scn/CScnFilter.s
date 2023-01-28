@@ -39,7 +39,7 @@
 .text
 .balign 4
 
-.fn fn_8049C7F8, local
+.fn fn_8049C7F8, global
 /* 8049C7F8 00465DB8  38 80 00 00 */	li r4, 0x0
 /* 8049C7FC 00465DBC  C0 02 CF D0 */	lfs f0, lbl_8066D350@sda21(r2)
 /* 8049C800 00465DC0  3C A0 80 57 */	lis r5, __vt__CScnFilter@ha
@@ -54,7 +54,7 @@
 /* 8049C824 00465DE4  4E 80 00 20 */	blr
 .endfn fn_8049C7F8
 
-.fn fn_8049C828, local
+.fn fn_8049C828, global
 /* 8049C828 00465DE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049C82C 00465DEC  7C 08 02 A6 */	mflr r0
 /* 8049C830 00465DF0  2C 03 00 00 */	cmpwi r3, 0x0
@@ -74,7 +74,7 @@
 /* 8049C864 00465E24  4E 80 00 20 */	blr
 .endfn fn_8049C828
 
-.fn fn_8049C868, local
+.fn fn_8049C868, global
 /* 8049C868 00465E28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049C86C 00465E2C  7C 08 02 A6 */	mflr r0
 /* 8049C870 00465E30  7C 65 1B 78 */	mr r5, r3
@@ -153,9 +153,9 @@
 # 0x8066D350 - 0x8066D360
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066D350, local
+.sym lbl_8066D350, global
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066D358, local
+.sym lbl_8066D358, global
 	.4byte 0x43300000
 	.4byte 0x00000000

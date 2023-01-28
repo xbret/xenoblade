@@ -3,7 +3,7 @@
 
 # 0x803448E0 - 0x80344AC0
 .text
-.balign 4
+.balign 16
 
 .fn IPCiProfInit, global
 /* 803448E0 0030DEA0  3C A0 80 5D */	lis r5, IpcReqPtrArray@ha

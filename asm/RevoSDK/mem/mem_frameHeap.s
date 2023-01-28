@@ -3,7 +3,7 @@
 
 # 0x80349770 - 0x80349A70
 .text
-.balign 4
+.balign 16
 
 .fn MEMCreateFrmHeapEx, global
 /* 80349770 00312D30  94 21 FF F0 */	stwu r1, -0x10(r1)

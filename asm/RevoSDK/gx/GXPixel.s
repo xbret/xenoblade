@@ -3,7 +3,7 @@
 
 # 0x8031DCF0 - 0x8031E470
 .text
-.balign 4
+.balign 16
 
 .fn GXSetFog, global
 /* 8031DCF0 002E72B0  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -545,7 +545,7 @@
 # 0x8054C110 - 0x8054C130
 .data
 .balign 8
-.sym lbl_8054C110, local
+.sym lbl_8054C110, global
 	.4byte 0x00000000
 	.4byte 0x00000001
 	.4byte 0x00000002
@@ -558,35 +558,35 @@
 # 0x8066C050 - 0x8066C0A0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C050, local
+.sym lbl_8066C050, global
 	.4byte 0x00000000
-.sym lbl_8066C054, local
+.sym lbl_8066C054, global
 	.4byte 0x3F800000
-.sym lbl_8066C058, local
+.sym lbl_8066C058, global
 	.4byte 0x3F000000
 	.4byte 0x00000000
-.sym lbl_8066C060, local
+.sym lbl_8066C060, global
 	.4byte 0x3FF00000
 	.4byte 0x00000000
-.sym lbl_8066C068, local
+.sym lbl_8066C068, global
 	.4byte 0x40000000
 	.4byte 0x00000000
-.sym lbl_8066C070, local
+.sym lbl_8066C070, global
 	.4byte 0x3FE00000
 	.4byte 0x00000000
-.sym lbl_8066C078, local
+.sym lbl_8066C078, global
 	.4byte 0x4B00001E
 	.4byte 0x00000000
-.sym lbl_8066C080, local
+.sym lbl_8066C080, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C088, local
+.sym lbl_8066C088, global
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066C090, local
+.sym lbl_8066C090, global
 	.4byte 0x3FDDB3D0
-.sym lbl_8066C094, local
+.sym lbl_8066C094, global
 	.4byte 0x43800000
-.sym lbl_8066C098, local
+.sym lbl_8066C098, global
 	.4byte 0x43300000
 	.4byte 0x00000000

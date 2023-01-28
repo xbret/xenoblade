@@ -172,7 +172,7 @@
 .text
 .balign 4
 
-.fn fn_8027D0E8, local
+.fn fn_8027D0E8, global
 /* 8027D0E8 002466A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027D0EC 002466AC  7C 08 02 A6 */	mflr r0
 /* 8027D0F0 002466B0  3C 80 80 54 */	lis r4, __vt__cf_Flusher_cf_CfObjectActor@ha
@@ -223,7 +223,7 @@
 /* 8027D1A0 00246760  4E 80 00 20 */	blr
 .endfn fn_8027D0E8
 
-.fn fn_8027D1A4, local
+.fn fn_8027D1A4, global
 /* 8027D1A4 00246764  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027D1A8 00246768  7C 08 02 A6 */	mflr r0
 /* 8027D1AC 0024676C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -253,7 +253,7 @@
 /* 8027D208 002467C8  4E 80 00 20 */	blr
 .endfn fn_8027D1A4
 
-.fn fn_8027D20C, local
+.fn fn_8027D20C, global
 /* 8027D20C 002467CC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8027D210 002467D0  7C 08 02 A6 */	mflr r0
 /* 8027D214 002467D4  90 01 00 44 */	stw r0, 0x44(r1)
@@ -423,7 +423,7 @@
 /* 8027D474 00246A34  4E 80 00 20 */	blr
 .endfn fn_8027D20C
 
-.fn fn_8027D478, local
+.fn fn_8027D478, global
 /* 8027D478 00246A38  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8027D47C 00246A3C  7C 08 02 A6 */	mflr r0
 /* 8027D480 00246A40  3C 60 43 30 */	lis r3, 0x4330
@@ -730,7 +730,7 @@
 /* 8027D8C0 00246E80  4E 80 00 20 */	blr
 .endfn fn_8027D478
 
-.fn fn_8027D8C4, local
+.fn fn_8027D8C4, global
 /* 8027D8C4 00246E84  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027D8C8 00246E88  7C 08 02 A6 */	mflr r0
 /* 8027D8CC 00246E8C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -924,7 +924,7 @@
 /* 8027DB70 00247130  4E 80 00 20 */	blr
 .endfn fn_8027D8C4
 
-.fn fn_8027DB74, local
+.fn fn_8027DB74, global
 /* 8027DB74 00247134  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8027DB78 00247138  7C 08 02 A6 */	mflr r0
 /* 8027DB7C 0024713C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1120,7 +1120,7 @@
 /* 8027DE40 00247400  4E 80 00 20 */	blr
 .endfn fn_8027DB74
 
-.fn fn_8027DE44, local
+.fn fn_8027DE44, global
 /* 8027DE44 00247404  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027DE48 00247408  7C 08 02 A6 */	mflr r0
 /* 8027DE4C 0024740C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1190,7 +1190,7 @@
 /* 8027DF34 002474F4  4E 80 00 20 */	blr
 .endfn fn_8027DE44
 
-.fn fn_8027DF38, local
+.fn fn_8027DF38, global
 /* 8027DF38 002474F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027DF3C 002474FC  7C 08 02 A6 */	mflr r0
 /* 8027DF40 00247500  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1256,7 +1256,7 @@
 /* 8027E014 002475D4  4E 80 00 20 */	blr
 .endfn fn_8027DF38
 
-.fn fn_8027E018, local
+.fn fn_8027E018, global
 /* 8027E018 002475D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027E01C 002475DC  7C 08 02 A6 */	mflr r0
 /* 8027E020 002475E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1283,7 +1283,7 @@
 /* 8027E06C 0024762C  4E 80 00 20 */	blr
 .endfn fn_8027E018
 
-.fn fn_8027E070, local
+.fn fn_8027E070, global
 /* 8027E070 00247630  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8027E074 00247634  7C 08 02 A6 */	mflr r0
 /* 8027E078 00247638  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1394,7 +1394,7 @@
 /* 8027E1FC 002477BC  4E 80 00 20 */	blr
 .endfn fn_8027E070
 
-.fn fn_8027E200, local
+.fn fn_8027E200, global
 /* 8027E200 002477C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027E204 002477C4  7C 08 02 A6 */	mflr r0
 /* 8027E208 002477C8  2C 05 00 00 */	cmpwi r5, 0x0
@@ -1597,29 +1597,29 @@
 # 0x8066B338 - 0x8066B378
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066B338, local
+.sym lbl_8066B338, global
 	.4byte 0x4048F5C3
-.sym lbl_8066B33C, local
+.sym lbl_8066B33C, global
 	.4byte 0x420C0000
-.sym lbl_8066B340, local
+.sym lbl_8066B340, global
 	.4byte 0x3F800000
 	.4byte 0x00000000
-.sym lbl_8066B348, local
+.sym lbl_8066B348, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066B350, local
+.sym lbl_8066B350, global
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066B358, local
+.sym lbl_8066B358, global
 	.4byte 0x3FE00000
 	.4byte 0x00000000
-.sym lbl_8066B360, local
+.sym lbl_8066B360, global
 	.4byte 0xBFE00000
 	.4byte 0x00000000
-.sym lbl_8066B368, local
+.sym lbl_8066B368, global
 	.4byte 0x3C23D70A
-.sym lbl_8066B36C, local
+.sym lbl_8066B36C, global
 	.4byte 0x47C34F80
-.sym lbl_8066B370, local
+.sym lbl_8066B370, global
 	.4byte 0x451C4000
 	.4byte 0x00000000

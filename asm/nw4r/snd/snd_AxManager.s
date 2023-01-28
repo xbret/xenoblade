@@ -323,7 +323,7 @@
 /* 8040C908 003D5EC8  4E 80 00 20 */	blr
 .endfn __ct__Q44nw4r3snd6detail9AxManagerFv
 
-.fn fn_8040C90C, local
+.fn fn_8040C90C, global
 /* 8040C90C 003D5ECC  38 00 00 00 */	li r0, 0x0
 /* 8040C910 003D5ED0  38 83 00 04 */	addi r4, r3, 0x4
 /* 8040C914 003D5ED4  90 03 00 04 */	stw r0, 0x4(r3)
@@ -1824,7 +1824,7 @@
 /* 8040DD7C 003D733C  4E 80 00 20 */	blr
 .endfn sinit_8040DCB4
 
-.fn fn_8040DD80, local
+.fn fn_8040DD80, global
 /* 8040DD80 003D7340  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DD84 003D7344  7C 08 02 A6 */	mflr r0
 /* 8040DD88 003D7348  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1844,7 +1844,7 @@
 /* 8040DDBC 003D737C  4E 80 00 20 */	blr
 .endfn fn_8040DD80
 
-.fn fn_8040DDC0, local
+.fn fn_8040DDC0, global
 /* 8040DDC0 003D7380  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DDC4 003D7384  7C 08 02 A6 */	mflr r0
 /* 8040DDC8 003D7388  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1864,7 +1864,7 @@
 /* 8040DDFC 003D73BC  4E 80 00 20 */	blr
 .endfn fn_8040DDC0
 
-.fn fn_8040DE00, local
+.fn fn_8040DE00, global
 /* 8040DE00 003D73C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DE04 003D73C4  7C 08 02 A6 */	mflr r0
 /* 8040DE08 003D73C8  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1884,7 +1884,7 @@
 /* 8040DE3C 003D73FC  4E 80 00 20 */	blr
 .endfn fn_8040DE00
 
-.fn fn_8040DE40, local
+.fn fn_8040DE40, global
 /* 8040DE40 003D7400  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DE44 003D7404  7C 08 02 A6 */	mflr r0
 /* 8040DE48 003D7408  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1904,7 +1904,7 @@
 /* 8040DE7C 003D743C  4E 80 00 20 */	blr
 .endfn fn_8040DE40
 
-.fn fn_8040DE80, local
+.fn fn_8040DE80, global
 /* 8040DE80 003D7440  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DE84 003D7444  7C 08 02 A6 */	mflr r0
 /* 8040DE88 003D7448  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1932,7 +1932,7 @@
 # 0x8056DFC8 - 0x8056E078
 .data
 .balign 8
-.sym lbl_8056DFC8, local
+.sym lbl_8056DFC8, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r3snd6detail11BasicPlayerFv
@@ -1943,7 +1943,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056DFF0, local
+.sym lbl_8056DFF0, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail10BasicSoundCFv
@@ -1958,27 +1958,27 @@
 	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail10BasicSoundFv
 	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
 	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
-.sym lbl_8056E028, local
+.sym lbl_8056E028, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte fn_8040DE80
 	.4byte GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-.sym lbl_8056E038, local
+.sym lbl_8056E038, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte fn_8040DE40
 	.4byte GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-.sym lbl_8056E048, local
+.sym lbl_8056E048, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte fn_8040DE00
 	.4byte GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-.sym lbl_8056E058, local
+.sym lbl_8056E058, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte fn_8040DDC0
 	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-.sym lbl_8056E068, local
+.sym lbl_8056E068, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte fn_8040DD80
@@ -1987,42 +1987,42 @@
 # 0x8063AD20 - 0x8063B168
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8063AD20, local
+.sym lbl_8063AD20, global
 	.skip 0x100
-.sym lbl_8063AE20, local
+.sym lbl_8063AE20, global
 	.skip 0x23C
-.sym lbl_8063B05C, local
+.sym lbl_8063B05C, global
 	.skip 0xC
-.sym lbl_8063B068, local
+.sym lbl_8063B068, global
 	.skip 0x100
 
 # 0x80667D88 - 0x80667DA0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D88, local
+.sym lbl_80667D88, global
 	.skip 0x4
-.sym lbl_80667D8C, local
+.sym lbl_80667D8C, global
 	.skip 0x4
-.sym lbl_80667D90, local
+.sym lbl_80667D90, global
 	.skip 0x4
-.sym lbl_80667D94, local
+.sym lbl_80667D94, global
 	.skip 0x4
-.sym lbl_80667D98, local
+.sym lbl_80667D98, global
 	.skip 0x4
-.sym lbl_80667D9C, local
+.sym lbl_80667D9C, global
 	.skip 0x4
 
 # 0x8066C678 - 0x8066C690
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C678, local
+.sym lbl_8066C678, global
 	.4byte 0x00000000
-.sym lbl_8066C67C, local
+.sym lbl_8066C67C, global
 	.4byte 0x3F800000
-.sym lbl_8066C680, local
+.sym lbl_8066C680, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C688, local
+.sym lbl_8066C688, global
 	.4byte 0x47000000
-.sym lbl_8066C68C, local
+.sym lbl_8066C68C, global
 	.4byte 0x46FA0000

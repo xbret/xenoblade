@@ -3,7 +3,7 @@
 
 # 0x80313D70 - 0x803140F0
 .text
-.balign 4
+.balign 16
 
 .fn EUARTInit, global
 /* 80313D70 002DD330  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -266,18 +266,18 @@
 # 0x806678C8 - 0x806678D8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806678C8, local
+.sym lbl_806678C8, global
 	.skip 0x4
-.sym lbl_806678CC, local
+.sym lbl_806678CC, global
 	.skip 0x4
-.sym lbl_806678D0, local
+.sym lbl_806678D0, global
 	.skip 0x4
-.sym lbl_806678D4, local
+.sym lbl_806678D4, global
 	.skip 0x4
 
 # 0x8066BF98 - 0x8066BFA0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF98, local
+.sym lbl_8066BF98, global
 	.4byte 0x00000004
 	.4byte 0x00000000

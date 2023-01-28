@@ -357,14 +357,14 @@
 # 0x8051AB08 - 0x8051AB10
 .rodata
 .balign 8
-.sym lbl_8051AB08, local
+.sym lbl_8051AB08, global
 	.4byte 0x4572726F
 	.4byte 0x72002000
 
 # 0x805E99C0 - 0x805E9AE8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E99C0, local
+.sym lbl_805E99C0, global
 	.skip 0x108
-.sym lbl_805E9AC8, local
+.sym lbl_805E9AC8, global
 	.skip 0x20

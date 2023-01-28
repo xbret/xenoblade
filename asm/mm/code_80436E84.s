@@ -55,7 +55,7 @@
 # 0x8066CA58 - 0x8066CA60
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066CA58, local
+.sym lbl_8066CA58, global
 	.4byte 0x00000000
-.sym lbl_8066CA5C, local
+.sym lbl_8066CA5C, global
 	.4byte 0x3F800000

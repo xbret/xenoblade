@@ -76,7 +76,7 @@
 # 0x8056D460 - 0x8056D4D8
 .data
 .balign 8
-.sym lbl_8056D460, local
+.sym lbl_8056D460, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt8BoundingFv
@@ -111,5 +111,5 @@
 # 0x80667D78 - 0x80667D80
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D78, local
+.sym lbl_80667D78, global
 	.skip 0x8

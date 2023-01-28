@@ -3,7 +3,7 @@
 
 # 0x8031E4F0 - 0x8031EA70
 .text
-.balign 4
+.balign 16
 
 .fn __GXSetProjection, global
 /* 8031E4F0 002E7AB0  3C 80 CC 01 */	lis r4, 0xcc01
@@ -420,10 +420,10 @@
 # 0x8066C0A0 - 0x8066C0B0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C0A0, local
+.sym lbl_8066C0A0, global
 	.4byte 0x00000000
-.sym lbl_8066C0A4, local
+.sym lbl_8066C0A4, global
 	.4byte 0x3F000000
-.sym lbl_8066C0A8, local
+.sym lbl_8066C0A8, global
 	.4byte 0x43AB0000
 	.4byte 0x00000000

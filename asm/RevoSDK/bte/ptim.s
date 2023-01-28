@@ -3,7 +3,7 @@
 
 # 0x802DEBA0 - 0x802DED80
 .text
-.balign 4
+.balign 16
 
 .fn ptim_init, global
 /* 802DEBA0 002A8160  94 21 FF E0 */	stwu r1, -0x20(r1)

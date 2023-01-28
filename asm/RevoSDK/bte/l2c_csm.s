@@ -3,7 +3,7 @@
 
 # 0x802F74D0 - 0x802F89AC
 .text
-.balign 4
+.balign 16
 
 .fn l2c_csm_execute, global
 /* 802F74D0 002C0A90  80 03 00 04 */	lwz r0, 0x4(r3)
@@ -1529,7 +1529,7 @@
 	.4byte 0x45442065
 	.4byte 0x76743A20
 	.4byte 0x25640000
-.sym lbl_805473B0, local
+.sym lbl_805473B0, global
 	.4byte 0x4C324341
 	.4byte 0x50202D20
 	.4byte 0x43616C6C
@@ -1636,7 +1636,7 @@
 	.rel l2c_csm_orig_w4_sec_comp, .L_802F7908
 	.rel l2c_csm_orig_w4_sec_comp, .L_802F78E8
 .endobj jumptable_805474D4
-.sym lbl_80547540, local
+.sym lbl_80547540, global
 	.4byte 0x4C324341
 	.4byte 0x50202D20
 	.4byte 0x73743A20
@@ -1647,7 +1647,7 @@
 	.4byte 0x20657674
 	.4byte 0x3A202564
 	.4byte 0x00000000
-.sym lbl_80547568, local
+.sym lbl_80547568, global
 	.4byte 0x4C324341
 	.4byte 0x50202D20
 	.4byte 0x43616C6C
@@ -1784,7 +1784,7 @@
 	.rel l2c_csm_w4_l2cap_connect_rsp, .L_802F7CAC
 	.rel l2c_csm_w4_l2cap_connect_rsp, .L_802F7C54
 .endobj jumptable_80547700
-.sym lbl_80547770, local
+.sym lbl_80547770, global
 	.4byte 0x4C324341
 	.4byte 0x50202D20
 	.4byte 0x73743A20
@@ -2019,7 +2019,7 @@
 	.rel l2c_csm_w4_l2cap_disconnect_rsp, .L_802F868C
 	.rel l2c_csm_w4_l2cap_disconnect_rsp, .L_802F8638
 .endobj jumptable_80547A78
-.sym lbl_80547AE8, local
+.sym lbl_80547AE8, global
 	.4byte 0x4C324341
 	.4byte 0x50202D20
 	.4byte 0x73743A20
@@ -2061,7 +2061,7 @@
 	.rel l2c_csm_w4_l2ca_disconnect_rsp, .L_802F87E8
 	.rel l2c_csm_w4_l2ca_disconnect_rsp, .L_802F876C
 .endobj jumptable_80547B10
-.sym lbl_80547B80, local
+.sym lbl_80547B80, global
 	.4byte 0x4C324341
 	.4byte 0x50202D20
 	.4byte 0x63616E6E
@@ -2076,5 +2076,5 @@
 # 0x805C2AC0 - 0x805C32A8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805C2AC0, local
+.sym lbl_805C2AC0, global
 	.skip 0x7E8

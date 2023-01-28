@@ -3,7 +3,7 @@
 
 # 0x8034D1E0 - 0x8034DDF0
 .text
-.balign 4
+.balign 16
 
 .fn PSMTXIdentity, global
 /* 8034D1E0 003167A0  C0 02 BD AC */	lfs f0, zero_c@sda21(r2)
@@ -856,14 +856,14 @@
 
 .obj zero_c, global
 	.4byte 0x00000000
-.sym lbl_8066C130, local
+.sym lbl_8066C130, global
 	.4byte 0x3F000000
-.sym lbl_8066C134, local
+.sym lbl_8066C134, global
 	.4byte 0x40400000
-.sym lbl_8066C138, local
+.sym lbl_8066C138, global
 	.4byte 0x40000000
-.sym lbl_8066C13C, local
+.sym lbl_8066C13C, global
 	.4byte 0xBF800000
-.sym lbl_8066C140, local
+.sym lbl_8066C140, global
 	.4byte 0x3C8EFA35
 	.4byte 0x00000000

@@ -39,7 +39,7 @@
 .text
 .balign 4
 
-.fn fn_800AAD28, local
+.fn fn_800AAD28, global
 /* 800AAD28 000742E8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800AAD2C 000742EC  7C 08 02 A6 */	mflr r0
 /* 800AAD30 000742F0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -69,7 +69,7 @@
 /* 800AAD90 00074350  4E 80 00 20 */	blr
 .endfn fn_800AAD28
 
-.fn fn_800AAD94, local
+.fn fn_800AAD94, global
 /* 800AAD94 00074354  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800AAD98 00074358  7C 08 02 A6 */	mflr r0
 /* 800AAD9C 0007435C  90 01 00 24 */	stw r0, 0x24(r1)

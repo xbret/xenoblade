@@ -87,7 +87,7 @@
 .text
 .balign 4
 
-.fn fn_802A4870, local
+.fn fn_802A4870, global
 /* 802A4870 0026DE30  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802A4874 0026DE34  7C 08 02 A6 */	mflr r0
 /* 802A4878 0026DE38  38 80 00 01 */	li r4, 0x1
@@ -161,7 +161,7 @@
 /* 802A4978 0026DF38  4E 80 00 20 */	blr
 .endfn fn_802A4870
 
-.fn fn_802A497C, local
+.fn fn_802A497C, global
 /* 802A497C 0026DF3C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A4980 0026DF40  7C 08 02 A6 */	mflr r0
 /* 802A4984 0026DF44  3C E0 80 54 */	lis r7, lbl_8053D0F4@ha
@@ -234,7 +234,7 @@
 /* 802A4A74 0026E034  4E 80 00 20 */	blr
 .endfn fn_802A497C
 
-.fn fn_802A4A78, local
+.fn fn_802A4A78, global
 /* 802A4A78 0026E038  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A4A7C 0026E03C  7C 08 02 A6 */	mflr r0
 /* 802A4A80 0026E040  3C E0 80 54 */	lis r7, lbl_8053D100@ha
@@ -414,7 +414,7 @@
 /* 802A4D00 0026E2C0  4E 80 00 20 */	blr
 .endfn fn_802A4A78
 
-.fn fn_802A4D04, local
+.fn fn_802A4D04, global
 /* 802A4D04 0026E2C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A4D08 0026E2C8  7C 08 02 A6 */	mflr r0
 /* 802A4D0C 0026E2CC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -470,7 +470,7 @@
 /* 802A4DC4 0026E384  4E 80 00 20 */	blr
 .endfn fn_802A4D04
 
-.fn fn_802A4DC8, local
+.fn fn_802A4DC8, global
 /* 802A4DC8 0026E388  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A4DCC 0026E38C  7C 08 02 A6 */	mflr r0
 /* 802A4DD0 0026E390  90 01 00 14 */	stw r0, 0x14(r1)
@@ -507,7 +507,7 @@
 /* 802A4E3C 0026E3FC  4E 80 00 20 */	blr
 .endfn fn_802A4DC8
 
-.fn fn_802A4E40, local
+.fn fn_802A4E40, global
 /* 802A4E40 0026E400  38 60 00 46 */	li r3, 0x46
 /* 802A4E44 0026E404  4E 80 00 20 */	blr
 .endfn fn_802A4E40
@@ -529,23 +529,23 @@
 # 0x8053D0E8 - 0x8053D170
 .data
 .balign 8
-.sym lbl_8053D0E8, local
+.sym lbl_8053D0E8, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A497C
-.sym lbl_8053D0F4, local
+.sym lbl_8053D0F4, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A4A78
-.sym lbl_8053D100, local
+.sym lbl_8053D100, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A4D04
-.sym lbl_8053D10C, local
+.sym lbl_8053D10C, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A4A78
-.sym lbl_8053D118, local
+.sym lbl_8053D118, global
 	.4byte 0x00000B55
 	.4byte 0x00000B56
 	.4byte 0x00000B61
@@ -554,7 +554,7 @@
 	.4byte 0x00000B59
 	.4byte 0x00000B5A
 	.4byte 0x00000000
-.sym lbl_8053D138, local
+.sym lbl_8053D138, global
 	.4byte 0x00000B5B
 	.4byte 0x00000B5C
 	.4byte 0x00000B5F
@@ -577,10 +577,10 @@
 # 0x806655C0 - 0x806655D8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806655C0, local
+.sym lbl_806655C0, global
 	.4byte 0x00000B57
 	.4byte 0x00000B58
-.sym lbl_806655C8, local
+.sym lbl_806655C8, global
 	.4byte 0x00000B5D
 	.4byte 0x00000B5E
 

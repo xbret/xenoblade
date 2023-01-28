@@ -1895,7 +1895,7 @@
 /* 803D95B0 003A2B70  4E 80 00 20 */	blr
 .endfn CheckRevision__Q34nw4r3g3d7ResFileCFv
 
-.fn fn_803D95B4, local
+.fn fn_803D95B4, global
 /* 803D95B4 003A2B74  80 63 00 00 */	lwz r3, 0x0(r3)
 /* 803D95B8 003A2B78  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 803D95BC 003A2B7C  2C 00 00 00 */	cmpwi r0, 0x0
@@ -1910,7 +1910,7 @@
 # 0x8056C840 - 0x8056C9A0
 .data
 .balign 8
-.sym lbl_8056C840, local
+.sym lbl_8056C840, global
 	.4byte 0x0000000E
 	.4byte 0x33444D6F
 	.4byte 0x64656C73
@@ -1919,7 +1919,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056C860, local
+.sym lbl_8056C860, global
 	.4byte 0x0000000E
 	.4byte 0x50616C65
 	.4byte 0x74746573
@@ -1928,7 +1928,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056C880, local
+.sym lbl_8056C880, global
 	.4byte 0x0000000E
 	.4byte 0x54657874
 	.4byte 0x75726573
@@ -1937,7 +1937,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056C8A0, local
+.sym lbl_8056C8A0, global
 	.4byte 0x0000000C
 	.4byte 0x416E6D43
 	.4byte 0x6872284E
@@ -1954,7 +1954,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056C8E0, local
+.sym lbl_8056C8E0, global
 	.4byte 0x0000000C
 	.4byte 0x416E6D43
 	.4byte 0x6C72284E
@@ -1963,7 +1963,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056C900, local
+.sym lbl_8056C900, global
 	.4byte 0x0000000F
 	.4byte 0x416E6D54
 	.4byte 0x65785061
@@ -1972,7 +1972,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056C920, local
+.sym lbl_8056C920, global
 	.4byte 0x0000000F
 	.4byte 0x416E6D54
 	.4byte 0x65785372
@@ -1981,7 +1981,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056C940, local
+.sym lbl_8056C940, global
 	.4byte 0x0000000C
 	.4byte 0x416E6D53
 	.4byte 0x6870284E
@@ -1990,7 +1990,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056C960, local
+.sym lbl_8056C960, global
 	.4byte 0x0000000C
 	.4byte 0x416E6D53
 	.4byte 0x636E284E

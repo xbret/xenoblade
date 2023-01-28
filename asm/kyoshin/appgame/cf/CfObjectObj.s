@@ -101,7 +101,7 @@
 .text
 .balign 4
 
-.fn fn_800BF98C, local
+.fn fn_800BF98C, global
 /* 800BF98C 00088F4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800BF990 00088F50  7C 08 02 A6 */	mflr r0
 /* 800BF994 00088F54  90 01 00 14 */	stw r0, 0x14(r1)
@@ -140,7 +140,7 @@
 /* 800BFA10 00088FD0  4E 80 00 20 */	blr
 .endfn fn_800BF98C
 
-.fn fn_800BFA14, local
+.fn fn_800BFA14, global
 /* 800BFA14 00088FD4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800BFA18 00088FD8  7C 08 02 A6 */	mflr r0
 /* 800BFA1C 00088FDC  2C 03 00 00 */	cmpwi r3, 0x0
@@ -173,7 +173,7 @@
 /* 800BFA84 00089044  4E 80 00 20 */	blr
 .endfn fn_800BFA14
 
-.fn fn_800BFA88, local
+.fn fn_800BFA88, global
 /* 800BFA88 00089048  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800BFA8C 0008904C  7C 08 02 A6 */	mflr r0
 /* 800BFA90 00089050  90 01 00 14 */	stw r0, 0x14(r1)
@@ -185,11 +185,11 @@
 /* 800BFAA8 00089068  4E 80 00 20 */	blr
 .endfn fn_800BFA88
 
-.fn fn_800BFAAC, local
+.fn fn_800BFAAC, global
 /* 800BFAAC 0008906C  4E 80 00 20 */	blr
 .endfn fn_800BFAAC
 
-.fn fn_800BFAB0, local
+.fn fn_800BFAB0, global
 /* 800BFAB0 00089070  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800BFAB4 00089074  7C 08 02 A6 */	mflr r0
 /* 800BFAB8 00089078  90 01 00 24 */	stw r0, 0x24(r1)
@@ -250,7 +250,7 @@
 /* 800BFB8C 0008914C  4E 80 00 20 */	blr
 .endfn fn_800BFAB0
 
-.fn fn_800BFB90, local
+.fn fn_800BFB90, global
 /* 800BFB90 00089150  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800BFB94 00089154  7C 08 02 A6 */	mflr r0
 /* 800BFB98 00089158  90 01 00 14 */	stw r0, 0x14(r1)
@@ -279,7 +279,7 @@
 /* 800BFBF0 000891B0  4E 80 00 20 */	blr
 .endfn fn_800BFB90
 
-.fn fn_800BFBF4, local
+.fn fn_800BFBF4, global
 /* 800BFBF4 000891B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800BFBF8 000891B8  7C 08 02 A6 */	mflr r0
 /* 800BFBFC 000891BC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -313,7 +313,7 @@
 /* 800BFC64 00089224  4E 80 00 20 */	blr
 .endfn fn_800BFBF4
 
-.fn fn_800BFC68, local
+.fn fn_800BFC68, global
 /* 800BFC68 00089228  2C 83 00 00 */	cmpwi cr1, r3, 0x0
 /* 800BFC6C 0008922C  41 86 00 1C */	beq cr1, .L_800BFC88
 /* 800BFC70 00089230  80 03 00 64 */	lwz r0, 0x64(r3)

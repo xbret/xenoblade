@@ -3,7 +3,7 @@
 
 # 0x802D1670 - 0x802D2050
 .text
-.balign 4
+.balign 16
 
 .fn ARCInitHandle, global
 /* 802D1670 0029AC30  94 21 FF F0 */	stwu r1, -0x10(r1)

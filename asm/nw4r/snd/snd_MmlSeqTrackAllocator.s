@@ -88,7 +88,7 @@
 /* 80418924 003E1EE4  4B FF E5 48 */	b CountImpl__Q44nw4r3snd6detail8PoolImplCFv
 .endfn GetAllocatableTrackCount__Q44nw4r3snd6detail20MmlSeqTrackAllocatorCFv
 
-.fn fn_80418928, local
+.fn fn_80418928, global
 /* 80418928 003E1EE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041892C 003E1EEC  7C 08 02 A6 */	mflr r0
 /* 80418930 003E1EF0  2C 03 00 00 */	cmpwi r3, 0x0
@@ -111,7 +111,7 @@
 # 0x8056E3B0 - 0x8056E3C8
 .data
 .balign 8
-.sym lbl_8056E3B0, local
+.sym lbl_8056E3B0, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte fn_80418928

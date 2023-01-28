@@ -1048,7 +1048,7 @@
 # 0x8050E250 - 0x8050E260
 .rodata
 .balign 8
-.sym lbl_8050E250, local
+.sym lbl_8050E250, global
 	.4byte 0x00001F40
 	.4byte 0x00001F40
 	.4byte 0x000A0060
@@ -1057,7 +1057,7 @@
 # 0x80545530 - 0x80545830
 .data
 .balign 8
-.sym lbl_80545530, local
+.sym lbl_80545530, global
 	.4byte 0x62746D5F
 	.4byte 0x6573636F
 	.4byte 0x5F636F6E
@@ -1093,7 +1093,7 @@
 	.4byte 0x72656420
 	.4byte 0x54797065
 	.4byte 0x20256400
-.sym lbl_805455BC, local
+.sym lbl_805455BC, global
 	.4byte 0x20202020
 	.4byte 0x20207478
 	.4byte 0x62772030
@@ -1114,7 +1114,7 @@
 	.4byte 0x74203078
 	.4byte 0x25303478
 	.4byte 0x00000000
-.sym lbl_8054560C, local
+.sym lbl_8054560C, global
 	.4byte 0x62746D5F
 	.4byte 0x73636F5F
 	.4byte 0x63686B5F
@@ -1135,7 +1135,7 @@
 	.4byte 0x64205479
 	.4byte 0x70652025
 	.4byte 0x64000000
-.sym lbl_8054565C, local
+.sym lbl_8054565C, global
 	.4byte 0x62746D5F
 	.4byte 0x73636F5F
 	.4byte 0x636F6E6E
@@ -1238,7 +1238,7 @@
 	.4byte 0x646C6520
 	.4byte 0x30782530
 	.4byte 0x34780000
-.sym lbl_805457F4, local
+.sym lbl_805457F4, global
 	.4byte 0x62746D5F
 	.4byte 0x6573636F
 	.4byte 0x5F70726F

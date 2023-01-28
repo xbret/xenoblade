@@ -3,7 +3,7 @@
 
 # 0x802F3640 - 0x802F3700
 .text
-.balign 4
+.balign 16
 
 .fn hidd_conn_initiate, global
 /* 802F3640 002BCC00  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -63,14 +63,14 @@
 # 0x80546690 - 0x805466C0
 .data
 .balign 8
-.sym lbl_80546690, local
+.sym lbl_80546690, global
 	.4byte 0x48494420
 	.4byte 0x2D204F72
 	.4byte 0x6967696E
 	.4byte 0x61746520
 	.4byte 0x73746172
 	.4byte 0x74656400
-.sym lbl_805466A8, local
+.sym lbl_805466A8, global
 	.4byte 0x48494420
 	.4byte 0x2D204F72
 	.4byte 0x6967696E

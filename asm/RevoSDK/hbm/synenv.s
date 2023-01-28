@@ -3,7 +3,7 @@
 
 # 0x803412F0 - 0x803416D0
 .text
-.balign 4
+.balign 16
 
 .fn __HBMSYNSetupVolumeEnvelope, global
 /* 803412F0 0030A8B0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -199,7 +199,7 @@
 .endfn __HBMSYNSetupVolumeEnvelope
 /* 803415BC 0030AB7C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_803415C0, local
+.fn fn_803415C0, global
 /* 803415C0 0030AB80  80 03 00 30 */	lwz r0, 0x30(r3)
 /* 803415C4 0030AB84  2C 00 00 00 */	cmpwi r0, 0x0
 /* 803415C8 0030AB88  41 82 00 18 */	beq .L_803415E0
@@ -280,7 +280,7 @@
 # 0x80518B58 - 0x80518B78
 .rodata
 .balign 8
-.sym lbl_80518B58, local
+.sym lbl_80518B58, global
 	.4byte 0x40000000
 	.4byte 0x00000000
 	.4byte 0x4C960000
@@ -293,7 +293,7 @@
 # 0x8054FA90 - 0x8054FC90
 .data
 .balign 8
-.sym lbl_8054FA90, local
+.sym lbl_8054FA90, global
 	.4byte 0x00000000
 	.4byte 0x3C000219
 	.4byte 0x3C800000

@@ -73,5 +73,5 @@
 .section .sbss, "wa", @nobits
 .balign 4
 	.skip 0x4
-.sym lbl_80667538, local
+.sym lbl_80667538, global
 	.skip 0x8

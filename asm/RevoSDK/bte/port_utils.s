@@ -3,7 +3,7 @@
 
 # 0x802FDE78 - 0x802FE450
 .text
-.balign 4
+.balign 8
 
 .fn port_select_mtu, global
 /* 802FDE78 002C7438  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -439,7 +439,7 @@
 # 0x80548530 - 0x80548678
 .data
 .balign 8
-.sym lbl_80548530, local
+.sym lbl_80548530, global
 	.4byte 0x706F7274
 	.4byte 0x5F73656C
 	.4byte 0x6563745F
@@ -504,14 +504,14 @@
 	.4byte 0x72697469
 	.4byte 0x63616C20
 	.4byte 0x25640000
-.sym lbl_80548630, local
+.sym lbl_80548630, global
 	.4byte 0x7266635F
 	.4byte 0x706F7274
 	.4byte 0x5F636C6F
 	.4byte 0x73656420
 	.4byte 0x444F4E45
 	.4byte 0x00000000
-.sym lbl_80548648, local
+.sym lbl_80548648, global
 	.4byte 0x504F5254
 	.4byte 0x5F446174
 	.4byte 0x61496E64

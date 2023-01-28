@@ -894,21 +894,21 @@
 # 0x8063B4E0 - 0x8063BB00
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8063B4E0, local
+.sym lbl_8063B4E0, global
 	.skip 0x10
-.sym lbl_8063B4F0, local
+.sym lbl_8063B4F0, global
 	.skip 0x610
 
 # 0x80667DE0 - 0x80667DE8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DE0, local
+.sym lbl_80667DE0, global
 	.skip 0x8
 
 # 0x8066C858 - 0x8066C860
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C858, local
+.sym lbl_8066C858, global
 	.4byte 0x3F800000
-.sym lbl_8066C85C, local
+.sym lbl_8066C85C, global
 	.4byte 0x00000000

@@ -3,7 +3,7 @@
 
 # 0x80310110 - 0x80310200
 .text
-.balign 4
+.balign 16
 
 .fn DVDCompareDiskID, global
 /* 80310110 002D96D0  94 21 FF F0 */	stwu r1, -0x10(r1)

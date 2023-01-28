@@ -1009,38 +1009,38 @@
 # 0x8066C500 - 0x8066C530
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C500, local
+.sym lbl_8066C500, global
 	.4byte 0x00000000
-.sym lbl_8066C504, local
+.sym lbl_8066C504, global
 	.4byte 0x3F800000
-.sym lbl_8066C508, local
+.sym lbl_8066C508, global
 	.4byte 0x3F000000
-.sym lbl_8066C50C, local
+.sym lbl_8066C50C, global
 	.byte 0xFF
-.sym lbl_8066C50D, local
+.sym lbl_8066C50D, global
 	.byte 0xFF
-.sym lbl_8066C50E, local
+.sym lbl_8066C50E, global
 	.byte 0xFF
-.sym lbl_8066C50F, local
+.sym lbl_8066C50F, global
 	.byte 0xFF
-.sym lbl_8066C510, local
+.sym lbl_8066C510, global
 	.byte 0xFF
-.sym lbl_8066C511, local
+.sym lbl_8066C511, global
 	.byte 0xFF
-.sym lbl_8066C512, local
+.sym lbl_8066C512, global
 	.byte 0xFF
-.sym lbl_8066C513, local
+.sym lbl_8066C513, global
 	.byte 0xFF
-.sym lbl_8066C514, local
+.sym lbl_8066C514, global
 	.4byte 0x4A742400
-.sym lbl_8066C518, local
+.sym lbl_8066C518, global
 	.4byte 0xBF800000
-.sym lbl_8066C51C, local
+.sym lbl_8066C51C, global
 	.4byte 0x42B40000
-.sym lbl_8066C520, local
+.sym lbl_8066C520, global
 	.4byte 0x41200000
-.sym lbl_8066C524, local
+.sym lbl_8066C524, global
 	.4byte 0x41000000
-.sym lbl_8066C528, local
+.sym lbl_8066C528, global
 	.4byte 0xC0E00000
 	.4byte 0x00000000

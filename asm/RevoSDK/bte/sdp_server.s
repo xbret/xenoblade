@@ -929,7 +929,7 @@
 # 0x805494A8 - 0x805494E8
 .data
 .balign 8
-.sym lbl_805494A8, local
+.sym lbl_805494A8, global
 	.4byte 0x53445020
 	.4byte 0x2D207365
 	.4byte 0x72766572
@@ -939,7 +939,7 @@
 	.4byte 0x20504455
 	.4byte 0x3A203078
 	.4byte 0x25780000
-.sym lbl_805494CC, local
+.sym lbl_805494CC, global
 	.4byte 0x53445020
 	.4byte 0x2D206E6F
 	.4byte 0x20627566

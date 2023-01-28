@@ -5,7 +5,7 @@
 .text
 .balign 4
 
-.fn fn_8038CF04, local
+.fn fn_8038CF04, global
 /* 8038CF04 003564C4  2C 04 00 00 */	cmpwi r4, 0x0
 /* 8038CF08 003564C8  40 82 00 10 */	bne .L_8038CF18
 /* 8038CF0C 003564CC  38 00 00 00 */	li r0, 0x0
@@ -308,9 +308,9 @@
 # 0x8056607C - 0x80569190
 .data
 .balign 4
-.sym lbl_8056607C, local
+.sym lbl_8056607C, global
 	.4byte 0x00000880
-.sym lbl_80566080, local
+.sym lbl_80566080, global
 	.4byte 0x00000000
 	.4byte 0x00000004
 	.4byte 0x00000000
@@ -3449,11 +3449,11 @@
 	.4byte 0x35CB2FF5
 	.4byte 0x35A14518
 	.4byte 0x1E3CE508
-.sym lbl_80569180, local
+.sym lbl_80569180, global
 	.4byte lbl_80566080
-.sym lbl_80569184, local
+.sym lbl_80569184, global
 	.4byte 0x00003000
-.sym lbl_80569188, local
+.sym lbl_80569188, global
 	.4byte ahxcmn_multiple_tbl
-.sym lbl_8056918C, local
+.sym lbl_8056918C, global
 	.4byte 0x00000100

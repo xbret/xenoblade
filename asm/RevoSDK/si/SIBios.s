@@ -3,7 +3,7 @@
 
 # 0x80361660 - 0x803626D0
 .text
-.balign 4
+.balign 16
 
 .fn CompleteTransfer, global
 /* 80361660 0032AC20  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1155,10 +1155,10 @@
 /* 803626C8 0032BC88  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803626CC 0032BC8C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8055F138 - 0x8055F240
+# 0x8055F138 - 0x8055F1A8
 .data
 .balign 8
-.sym lbl_8055F138, local
+.sym lbl_8055F138, global
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -1194,47 +1194,6 @@
 	.4byte 0x00000008
 .endobj Type
 
-.obj XYNTSC, local
-	.4byte 0x00F60200
-	.4byte 0x000E1300
-	.4byte 0x001E0900
-	.4byte 0x002C0600
-	.4byte 0x00340500
-	.4byte 0x00410400
-	.4byte 0x00570300
-	.4byte 0x00570300
-	.4byte 0x00570300
-	.4byte 0x00830200
-	.4byte 0x00830200
-	.4byte 0x00830200
-.endobj XYNTSC
-	.4byte 0x01280200
-	.4byte 0x000F1500
-	.4byte 0x001D0B00
-	.4byte 0x002D0700
-	.4byte 0x00340600
-	.4byte 0x003F0500
-	.4byte 0x004E0400
-	.4byte 0x00680300
-	.4byte 0x00680300
-	.4byte 0x00680300
-	.4byte 0x00680300
-	.4byte 0x009C0200
-	.4byte 0x53495365
-	.4byte 0x7453616D
-	.4byte 0x706C696E
-	.4byte 0x67526174
-	.4byte 0x653A2075
-	.4byte 0x6E6B6E6F
-	.4byte 0x776E2054
-	.4byte 0x5620666F
-	.4byte 0x726D6174
-	.4byte 0x2E205573
-	.4byte 0x65206465
-	.4byte 0x6661756C
-	.4byte 0x742E0000
-	.4byte 0x00000000
-
 # 0x805DD6E0 - 0x805DD900
 .section .bss, "wa", @nobits
 .balign 8
@@ -1242,13 +1201,13 @@
 .obj Packet, local
 	.skip 0x80
 .endobj Packet
-.sym lbl_805DD760, local
+.sym lbl_805DD760, global
 	.skip 0x20
 
 .obj TypeTime, local
 	.skip 0x20
 .endobj TypeTime
-.sym lbl_805DD7A0, local
+.sym lbl_805DD7A0, global
 	.skip 0x160
 
 # 0x80665CE0 - 0x80665CE8
@@ -1263,7 +1222,7 @@
 # 0x80667B70 - 0x80667B80
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667B70, local
+.sym lbl_80667B70, global
 	.skip 0x4
 
 # SIInit()::Initialized
@@ -1275,5 +1234,5 @@
 .obj "@LOCAL@SIGetType__Fl@cmdTypeAndStatus", weak
 	.skip 0x4
 .endobj "@LOCAL@SIGetType__Fl@cmdTypeAndStatus"
-.sym lbl_80667B7C, local
+.sym lbl_80667B7C, global
 	.skip 0x4

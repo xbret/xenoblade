@@ -137,7 +137,7 @@
 /* 8044D8C4 00416E84  4E 80 00 20 */	blr
 .endfn __ct__CDeviceException
 
-.fn fn_8044D8C8, local
+.fn fn_8044D8C8, global
 /* 8044D8C8 00416E88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044D8CC 00416E8C  7C 08 02 A6 */	mflr r0
 /* 8044D8D0 00416E90  90 01 00 14 */	stw r0, 0x14(r1)
@@ -210,7 +210,7 @@
 /* 8044D9C4 00416F84  4E 80 00 20 */	blr
 .endfn __ct__CDevice
 
-.fn fn_8044D9C8, local
+.fn fn_8044D9C8, global
 /* 8044D9C8 00416F88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044D9CC 00416F8C  7C 08 02 A6 */	mflr r0
 /* 8044D9D0 00416F90  90 01 00 14 */	stw r0, 0x14(r1)
@@ -246,7 +246,7 @@
 /* 8044DA40 00417000  4E 80 00 20 */	blr
 .endfn fn_8044D9C8
 
-.fn fn_8044DA44, local
+.fn fn_8044DA44, global
 /* 8044DA44 00417004  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044DA48 00417008  7C 08 02 A6 */	mflr r0
 /* 8044DA4C 0041700C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -263,7 +263,7 @@
 /* 8044DA78 00417038  4E 80 00 20 */	blr
 .endfn fn_8044DA44
 
-.fn fn_8044DA7C, local
+.fn fn_8044DA7C, global
 /* 8044DA7C 0041703C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044DA80 00417040  7C 08 02 A6 */	mflr r0
 /* 8044DA84 00417044  2C 03 00 00 */	cmpwi r3, 0x0
@@ -291,7 +291,7 @@
 /* 8044DAD8 00417098  4E 80 00 20 */	blr
 .endfn fn_8044DA7C
 
-.fn fn_8044DADC, local
+.fn fn_8044DADC, global
 /* 8044DADC 0041709C  80 83 00 60 */	lwz r4, 0x60(r3)
 /* 8044DAE0 004170A0  80 04 00 00 */	lwz r0, 0x0(r4)
 /* 8044DAE4 004170A4  7C 00 20 40 */	cmplw r0, r4
@@ -324,12 +324,12 @@
 # 0x805263A0 - 0x80526460
 .rodata
 .balign 8
-.sym lbl_805263A0, local
+.sym lbl_805263A0, global
 	.4byte 0x44657669
 	.4byte 0x63655379
 	.4byte 0x7374656D
 	.4byte 0x31000000
-.sym lbl_805263B0, local
+.sym lbl_805263B0, global
 	.4byte 0x44657669
 	.4byte 0x63655379
 	.4byte 0x7374656D
@@ -346,7 +346,7 @@
 	.4byte 0x63654578
 	.4byte 0x63657074
 	.4byte 0x696F6E00
-.sym lbl_805263E8, local
+.sym lbl_805263E8, global
 	.4byte 0x43446576
 	.4byte 0x69636556
 	.4byte 0x49004344
@@ -485,13 +485,13 @@
 # 0x80665F98 - 0x80665FB8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665F98, local
+.sym lbl_80665F98, global
 	.4byte lbl_805263A0
-.sym lbl_80665F9C, local
+.sym lbl_80665F9C, global
 	.4byte lbl_805263B0
-.sym lbl_80665FA0, local
+.sym lbl_80665FA0, global
 	.4byte 0xFFFFFFFF
-.sym lbl_80665FA4, local
+.sym lbl_80665FA4, global
 	.4byte 0xFFFFFFFF
 
 .obj __RTTI___unnamed_CDevice_cpp_CDeviceException, global

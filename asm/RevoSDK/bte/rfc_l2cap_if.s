@@ -3,7 +3,7 @@
 
 # 0x802FE450 - 0x802FED84
 .text
-.balign 4
+.balign 16
 
 .fn rfcomm_l2cap_if_init, global
 /* 802FE450 002C7A10  3C 60 80 30 */	lis r3, RFCOMM_ConnectInd@ha
@@ -681,7 +681,7 @@
 # 0x80548678 - 0x805487B8
 .data
 .balign 8
-.sym lbl_80548678, local
+.sym lbl_80548678, global
 	.4byte 0x7266635F
 	.4byte 0x66696E64
 	.4byte 0x5F6C6369
@@ -766,11 +766,11 @@
 # 0x805C32A8 - 0x805C36C0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805C32A8, local
+.sym lbl_805C32A8, global
 	.skip 0x68
-.sym lbl_805C3310, local
+.sym lbl_805C3310, global
 	.skip 0x88
-.sym lbl_805C3398, local
+.sym lbl_805C3398, global
 	.skip 0x4
-.sym lbl_805C339C, local
+.sym lbl_805C339C, global
 	.skip 0x324

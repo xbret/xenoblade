@@ -210,13 +210,13 @@
 # 0x8057B368 - 0x8057B888
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057B368, local
+.sym lbl_8057B368, global
 	.skip 0x500
-.sym lbl_8057B868, local
+.sym lbl_8057B868, global
 	.skip 0x20
 
 # 0x80667560 - 0x80667568
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667560, local
+.sym lbl_80667560, global
 	.skip 0x8

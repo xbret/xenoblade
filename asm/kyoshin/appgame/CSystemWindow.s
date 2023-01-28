@@ -130,7 +130,7 @@
 .text
 .balign 4
 
-.fn fn_801245EC, local
+.fn fn_801245EC, global
 /* 801245EC 000EDBAC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801245F0 000EDBB0  7C 08 02 A6 */	mflr r0
 /* 801245F4 000EDBB4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -210,7 +210,7 @@
 /* 8012470C 000EDCCC  4E 80 00 20 */	blr
 .endfn fn_801245EC
 
-.fn fn_80124710, local
+.fn fn_80124710, global
 /* 80124710 000EDCD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80124714 000EDCD4  7C 08 02 A6 */	mflr r0
 /* 80124718 000EDCD8  2C 03 00 00 */	cmpwi r3, 0x0
@@ -244,7 +244,7 @@
 /* 80124780 000EDD40  4E 80 00 20 */	blr
 .endfn fn_80124710
 
-.fn fn_80124784, local
+.fn fn_80124784, global
 /* 80124784 000EDD44  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80124788 000EDD48  7C 08 02 A6 */	mflr r0
 /* 8012478C 000EDD4C  90 01 00 54 */	stw r0, 0x54(r1)
@@ -320,7 +320,7 @@
 /* 8012489C 000EDE5C  4E 80 00 20 */	blr
 .endfn fn_80124784
 
-.fn fn_801248A0, local
+.fn fn_801248A0, global
 /* 801248A0 000EDE60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801248A4 000EDE64  7C 08 02 A6 */	mflr r0
 /* 801248A8 000EDE68  90 01 00 14 */	stw r0, 0x14(r1)
@@ -351,7 +351,7 @@
 /* 80124904 000EDEC4  4E 80 00 20 */	blr
 .endfn fn_801248A0
 
-.fn fn_80124908, local
+.fn fn_80124908, global
 /* 80124908 000EDEC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8012490C 000EDECC  7C 08 02 A6 */	mflr r0
 /* 80124910 000EDED0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -449,7 +449,7 @@
 /* 80124A5C 000EE01C  4E 80 00 20 */	blr
 .endfn fn_80124908
 
-.fn fn_80124A60, local
+.fn fn_80124A60, global
 /* 80124A60 000EE020  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 80124A64 000EE024  7C 08 02 A6 */	mflr r0
 /* 80124A68 000EE028  90 01 00 74 */	stw r0, 0x74(r1)
@@ -489,7 +489,7 @@
 /* 80124AE8 000EE0A8  4E 80 00 20 */	blr
 .endfn fn_80124A60
 
-.fn fn_80124AEC, local
+.fn fn_80124AEC, global
 /* 80124AEC 000EE0AC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80124AF0 000EE0B0  7C 08 02 A6 */	mflr r0
 /* 80124AF4 000EE0B4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -530,7 +530,7 @@
 /* 80124B74 000EE134  4E 80 00 20 */	blr
 .endfn fn_80124AEC
 
-.fn fn_80124B78, local
+.fn fn_80124B78, global
 /* 80124B78 000EE138  80 6D A7 50 */	lwz r3, lbl_806668D0@sda21(r13)
 /* 80124B7C 000EE13C  4E 80 00 20 */	blr
 .endfn fn_80124B78
@@ -706,7 +706,7 @@
 # 0x806668D0 - 0x806668D8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806668D0, local
+.sym lbl_806668D0, global
 	.skip 0x4
-.sym lbl_806668D4, local
+.sym lbl_806668D4, global
 	.skip 0x4

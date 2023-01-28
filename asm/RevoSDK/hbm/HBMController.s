@@ -3,7 +3,7 @@
 
 # 0x80320D80 - 0x80321990
 .text
-.balign 4
+.balign 16
 
 # homebutton::Controller::wpadConnectCallback(long, long)
 .fn wpadConnectCallback__Q210homebutton10ControllerFll, global
@@ -920,23 +920,23 @@
 # 0x80518680 - 0x80518690
 .rodata
 .balign 8
-.sym lbl_80518680, local
+.sym lbl_80518680, global
 	.4byte 0x3F800000
-.sym lbl_80518684, local
+.sym lbl_80518684, global
 	.4byte 0xC61C4000
-.sym lbl_80518688, local
+.sym lbl_80518688, global
 	.4byte 0xC66A6000
-.sym lbl_8051868C, local
+.sym lbl_8051868C, global
 	.4byte 0x41200000
 
 # 0x805CD5B0 - 0x805CD748
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CD5B0, local
+.sym lbl_805CD5B0, global
 	.skip 0x8
-.sym lbl_805CD5B8, local
+.sym lbl_805CD5B8, global
 	.skip 0xC0
-.sym lbl_805CD678, local
+.sym lbl_805CD678, global
 	.skip 0xC0
-.sym lbl_805CD738, local
+.sym lbl_805CD738, global
 	.skip 0x10

@@ -5,22 +5,22 @@
 .text
 .balign 4
 
-.fn fn_8042BDD0, local
+.fn fn_8042BDD0, global
 /* 8042BDD0 003F5390  38 60 00 00 */	li r3, 0x0
 /* 8042BDD4 003F5394  4E 80 00 20 */	blr
 .endfn fn_8042BDD0
 
-.fn fn_8042BDD8, local
+.fn fn_8042BDD8, global
 /* 8042BDD8 003F5398  38 60 00 00 */	li r3, 0x0
 /* 8042BDDC 003F539C  4E 80 00 20 */	blr
 .endfn fn_8042BDD8
 
-.fn fn_8042BDE0, local
+.fn fn_8042BDE0, global
 /* 8042BDE0 003F53A0  38 60 00 00 */	li r3, 0x0
 /* 8042BDE4 003F53A4  4E 80 00 20 */	blr
 .endfn fn_8042BDE0
 
-.fn fn_8042BDE8, local
+.fn fn_8042BDE8, global
 /* 8042BDE8 003F53A8  38 60 00 00 */	li r3, 0x0
 /* 8042BDEC 003F53AC  4E 80 00 20 */	blr
 .endfn fn_8042BDE8

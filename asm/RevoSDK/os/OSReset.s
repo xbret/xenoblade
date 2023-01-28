@@ -3,7 +3,7 @@
 
 # 0x80359F10 - 0x8035A800
 .text
-.balign 4
+.balign 16
 
 .fn OSRegisterShutdownFunction, global
 /* 80359F10 003234D0  80 AD B9 40 */	lwz r5, ShutdownFunctionQueue@sda21(r13)
@@ -678,7 +678,7 @@
 	.2byte 0x6300
 .endobj "@2083"
 	.2byte 0x0000
-.sym lbl_80552AFC, local
+.sym lbl_80552AFC, global
 	.4byte 0x5F5F4F53
 	.4byte 0x486F7452
 	.4byte 0x65736574
@@ -842,9 +842,9 @@
 # 0x80667AB8 - 0x80667AC8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667AB8, local
+.sym lbl_80667AB8, global
 	.skip 0x4
-.sym lbl_80667ABC, local
+.sym lbl_80667ABC, global
 	.skip 0x4
 
 .obj ShutdownFunctionQueue, local

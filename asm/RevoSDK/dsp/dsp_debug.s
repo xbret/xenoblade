@@ -3,7 +3,7 @@
 
 # 0x803094B0 - 0x80309500
 .text
-.balign 4
+.balign 16
 
 .fn __DSP_debug_printf, global
 /* 803094B0 002D2A70  94 21 FF 90 */	stwu r1, -0x70(r1)

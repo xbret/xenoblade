@@ -1180,7 +1180,7 @@
 # 0x8051F8E0 - 0x8051F8F0
 .rodata
 .balign 8
-.sym lbl_8051F8E0, local
+.sym lbl_8051F8E0, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000

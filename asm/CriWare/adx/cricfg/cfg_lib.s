@@ -64,7 +64,7 @@
 # 0x805E9D20 - 0x805E9D28
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E9D20, local
+.sym lbl_805E9D20, global
 	.skip 0x4
-.sym lbl_805E9D24, local
+.sym lbl_805E9D24, global
 	.skip 0x4

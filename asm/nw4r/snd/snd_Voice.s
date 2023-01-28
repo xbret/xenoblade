@@ -3307,7 +3307,7 @@
 	.rel CalcMixParam__Q44nw4r3snd6detail5VoiceFiiPQ54nw4r3snd6detail7AxVoice8MixParamPQ54nw4r3snd6detail7AxVoice14RemoteMixParam, .L_804281D8
 	.rel CalcMixParam__Q44nw4r3snd6detail5VoiceFiiPQ54nw4r3snd6detail7AxVoice8MixParamPQ54nw4r3snd6detail7AxVoice14RemoteMixParam, .L_804281EC
 .endobj jumptable_8056E608
-.sym lbl_8056E62C, local
+.sym lbl_8056E62C, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r3snd6detail5VoiceFv
@@ -3317,30 +3317,30 @@
 # 0x8066C898 - 0x8066C8D0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C898, local
+.sym lbl_8066C898, global
 	.4byte 0x3F800000
-.sym lbl_8066C89C, local
+.sym lbl_8066C89C, global
 	.4byte 0x00000000
-.sym lbl_8066C8A0, local
+.sym lbl_8066C8A0, global
 	.4byte 0xBDF5C28F
-.sym lbl_8066C8A4, local
+.sym lbl_8066C8A4, global
 	.4byte 0x3F6147AE
-.sym lbl_8066C8A8, local
+.sym lbl_8066C8A8, global
 	.4byte 0x3F000000
-.sym lbl_8066C8AC, local
+.sym lbl_8066C8AC, global
 	.4byte 0x3F8F5C29
-.sym lbl_8066C8B0, local
+.sym lbl_8066C8B0, global
 	.4byte 0x3F59999A
-.sym lbl_8066C8B4, local
+.sym lbl_8066C8B4, global
 	.4byte 0x3E199998
-.sym lbl_8066C8B8, local
+.sym lbl_8066C8B8, global
 	.4byte 0x40000000
-.sym lbl_8066C8BC, local
+.sym lbl_8066C8BC, global
 	.4byte 0x3EB33334
-.sym lbl_8066C8C0, local
+.sym lbl_8066C8C0, global
 	.4byte 0xBF800000
-.sym lbl_8066C8C4, local
+.sym lbl_8066C8C4, global
 	.4byte 0xC0400000
-.sym lbl_8066C8C8, local
+.sym lbl_8066C8C8, global
 	.4byte 0x47000000
 	.4byte 0x00000000

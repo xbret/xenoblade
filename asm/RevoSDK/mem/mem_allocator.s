@@ -3,7 +3,7 @@
 
 # 0x80349A70 - 0x80349AD0
 .text
-.balign 4
+.balign 16
 
 .fn AllocatorAllocForExpHeap_, global
 /* 80349A70 00313030  7C 65 1B 78 */	mr r5, r3
@@ -47,6 +47,6 @@
 # 0x8066C120 - 0x8066C128
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C120, local
+.sym lbl_8066C120, global
 	.4byte AllocatorAllocForExpHeap_
 	.4byte AllocatorFreeForExpHeap_

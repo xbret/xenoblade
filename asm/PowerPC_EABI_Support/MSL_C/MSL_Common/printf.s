@@ -2723,7 +2723,7 @@
 # 0x8050D020 - 0x8050DB88
 .rodata
 .balign 8
-.sym lbl_8050D020, local
+.sym lbl_8050D020, global
 	.4byte 0x00040004
 	.4byte 0x00040004
 	.4byte 0x00040004
@@ -2984,20 +2984,20 @@
 	.4byte 0xF4F5F6F7
 	.4byte 0xF8F9FAFB
 	.4byte 0xFCFDFEFF
-.sym lbl_8050D420, local
+.sym lbl_8050D420, global
 	.4byte 0x25612025
 	.4byte 0x62202565
 	.4byte 0x20255420
 	.4byte 0x25590000
-.sym lbl_8050D430, local
+.sym lbl_8050D430, global
 	.4byte 0x25493A25
 	.4byte 0x4D3A2553
 	.4byte 0x20257000
-.sym lbl_8050D43C, local
+.sym lbl_8050D43C, global
 	.4byte 0x256D2F25
 	.4byte 0x642F2579
 	.4byte 0x00000000
-.sym lbl_8050D448, local
+.sym lbl_8050D448, global
 	.4byte 0x53756E7C
 	.4byte 0x53756E64
 	.4byte 0x61797C4D
@@ -3020,7 +3020,7 @@
 	.4byte 0x53617475
 	.4byte 0x72646179
 	.4byte 0x00000000
-.sym lbl_8050D4A0, local
+.sym lbl_8050D4A0, global
 	.4byte 0x4A616E7C
 	.4byte 0x4A616E75
 	.4byte 0x6172797C
@@ -3069,7 +3069,7 @@
 	.byte 0x00
 .endobj "@stringBase0"
 	.byte 0x00, 0x00, 0x00
-.sym lbl_8050D550, local
+.sym lbl_8050D550, global
 	.4byte 0x00000000
 	.4byte 0x7FFFFFFF
 	.4byte 0x00000000
@@ -3080,7 +3080,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8050D578, local
+.sym lbl_8050D578, global
 	.4byte 0x494E4649
 	.4byte 0x4E495459
 	.4byte 0x00000000
@@ -3479,7 +3479,7 @@
 # 0x8053F398 - 0x8053F7C0
 .data
 .balign 8
-.sym lbl_8053F398, local
+.sym lbl_8053F398, global
 	.4byte lbl_8066B858
 	.4byte lbl_8066B85C
 	.4byte lbl_8066B85C
@@ -3506,7 +3506,7 @@
 	.4byte __wlower_mapC
 	.4byte __mbtowc_noconv
 	.4byte __wctomb_noconv
-.sym lbl_8053F3F8, local
+.sym lbl_8053F3F8, global
 	.4byte 0x00010002
 	.4byte 0x00030004
 	.4byte 0x00050006
@@ -3779,16 +3779,16 @@
 # 0x8066B858 - 0x8066B878
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066B858, local
+.sym lbl_8066B858, global
 	.4byte 0x2E000000
-.sym lbl_8066B85C, local
+.sym lbl_8066B85C, global
 	.4byte 0x00000000
-.sym lbl_8066B860, local
+.sym lbl_8066B860, global
 	.4byte 0x414D7C50
 	.4byte 0x4D000000
-.sym lbl_8066B868, local
+.sym lbl_8066B868, global
 	.4byte 0x25540000
 	.4byte 0x00000000
-.sym lbl_8066B870, local
+.sym lbl_8066B870, global
 	.4byte 0x00000000
 	.4byte 0x00000000

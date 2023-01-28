@@ -386,6 +386,6 @@
 # 0x8051C748 - 0x8051C750
 .rodata
 .balign 8
-.sym lbl_8051C748, local
+.sym lbl_8051C748, global
 	.4byte 0x53505344
 	.4byte 0x00000000

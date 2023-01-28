@@ -3,7 +3,7 @@
 
 # 0x8035E070 - 0x8035E610
 .text
-.balign 4
+.balign 16
 
 .fn __OSInitNet, global
 /* 8035E070 00327630  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -494,7 +494,7 @@
 	.4byte 0x68757464
 	.4byte 0x6F776E00
 	.2byte 0x0000
-.sym lbl_8055EDF0, local
+.sym lbl_8055EDF0, global
 	.4byte 0x2F646576
 	.4byte 0x2F6E6574
 	.4byte 0x2F6B642F
@@ -518,7 +518,7 @@
 	.4byte 0x74536875
 	.4byte 0x74646F77
 	.4byte 0x6E000000
-.sym lbl_8055EE4C, local
+.sym lbl_8055EE4C, global
 	.4byte 0x4E574332
 	.4byte 0x34536875
 	.4byte 0x74646F77
@@ -532,7 +532,7 @@
 	.4byte 0x436F756E
 	.4byte 0x7465725F
 	.4byte 0x00000000
-.sym lbl_8055EE80, local
+.sym lbl_8055EE80, global
 	.4byte 0x2F646576
 	.4byte 0x2F6E6574
 	.4byte 0x2F6B642F
@@ -543,34 +543,34 @@
 # 0x805D5440 - 0x805D5500
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D5440, local
+.sym lbl_805D5440, global
 	.skip 0x20
-.sym lbl_805D5460, local
+.sym lbl_805D5460, global
 	.skip 0x20
-.sym lbl_805D5480, local
+.sym lbl_805D5480, global
 	.skip 0x20
-.sym lbl_805D54A0, local
+.sym lbl_805D54A0, global
 	.skip 0x20
-.sym lbl_805D54C0, local
+.sym lbl_805D54C0, global
 	.skip 0x20
-.sym lbl_805D54E0, local
+.sym lbl_805D54E0, global
 	.skip 0x20
 
 # 0x80665BA8 - 0x80665BB0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665BA8, local
+.sym lbl_80665BA8, global
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000000
 
 # 0x80667B28 - 0x80667B38
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667B28, local
+.sym lbl_80667B28, global
 	.skip 0x4
-.sym lbl_80667B2C, local
+.sym lbl_80667B2C, global
 	.skip 0x4
-.sym lbl_80667B30, local
+.sym lbl_80667B30, global
 	.skip 0x4
-.sym lbl_80667B34, local
+.sym lbl_80667B34, global
 	.skip 0x4

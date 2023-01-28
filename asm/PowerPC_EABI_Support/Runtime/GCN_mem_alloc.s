@@ -58,7 +58,7 @@
 # 0x8050CE90 - 0x8050CF00
 .rodata
 .balign 8
-.sym lbl_8050CE90, local
+.sym lbl_8050CE90, global
 	.4byte 0x47434E5F
 	.4byte 0x4D656D5F
 	.4byte 0x416C6C6F

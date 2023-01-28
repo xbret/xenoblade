@@ -3,7 +3,7 @@
 
 # 0x80359480 - 0x80359C20
 .text
-.balign 4
+.balign 16
 
 .fn OSGetPhysicalMem2Size, global
 /* 80359480 00322A40  3C 60 80 00 */	lis r3, 0x8000

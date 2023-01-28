@@ -1453,7 +1453,7 @@
 	.rel StreamingConstruct__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPCvUl, .L_8042DF38
 	.rel StreamingConstruct__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPCvUl, .L_8042DEC0
 .endobj jumptable_8056E8C8
-.sym lbl_8056E8FC, local
+.sym lbl_8056E8FC, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r2ut10PackedFontFv
@@ -1481,6 +1481,6 @@
 # 0x8066C938 - 0x8066C940
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C938, local
+.sym lbl_8066C938, global
 	.4byte 0x43300000
 	.4byte 0x80000000

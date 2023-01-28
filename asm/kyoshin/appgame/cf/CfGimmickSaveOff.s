@@ -57,7 +57,7 @@
 .text
 .balign 4
 
-.fn fn_802ABB40, local
+.fn fn_802ABB40, global
 /* 802ABB40 00275100  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802ABB44 00275104  7C 08 02 A6 */	mflr r0
 /* 802ABB48 00275108  90 01 00 34 */	stw r0, 0x34(r1)
@@ -131,7 +131,7 @@
 /* 802ABC58 00275218  4E 80 00 20 */	blr
 .endfn fn_802ABB40
 
-.fn fn_802ABC5C, local
+.fn fn_802ABC5C, global
 /* 802ABC5C 0027521C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802ABC60 00275220  7C 08 02 A6 */	mflr r0
 /* 802ABC64 00275224  2C 03 00 00 */	cmpwi r3, 0x0
@@ -157,7 +157,7 @@
 /* 802ABCB0 00275270  4E 80 00 20 */	blr
 .endfn fn_802ABC5C
 
-.fn fn_802ABCB4, local
+.fn fn_802ABCB4, global
 /* 802ABCB4 00275274  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802ABCB8 00275278  7C 08 02 A6 */	mflr r0
 /* 802ABCBC 0027527C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -241,7 +241,7 @@
 	.4byte 0x6B536176
 	.4byte 0x654F6666
 	.4byte 0x00000000
-.sym lbl_8050C140, local
+.sym lbl_8050C140, global
 	.4byte 0x6E617669
 	.4byte 0x4F666600
 

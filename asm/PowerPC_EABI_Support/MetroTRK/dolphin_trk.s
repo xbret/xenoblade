@@ -242,7 +242,7 @@
 # 0x8053FD40 - 0x8053FD80
 .data
 .balign 8
-.sym lbl_8053FD40, local
+.sym lbl_8053FD40, global
 	.4byte 0x00000100
 	.4byte 0x00000200
 	.4byte 0x00000300
@@ -263,5 +263,5 @@
 # 0x80667570 - 0x80667578
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667570, local
+.sym lbl_80667570, global
 	.skip 0x8

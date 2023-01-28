@@ -164,11 +164,11 @@
 /* 8038A880 00353E40  48 00 26 70 */	b .L_8038CEF0
 .endfn AHXLINK_ExecOneAhx
 
-.fn fn_8038A884, local
+.fn fn_8038A884, global
 /* 8038A884 00353E44  48 00 26 74 */	b fn_8038CEF8
 .endfn fn_8038A884
 
-.fn fn_8038A888, local
+.fn fn_8038A888, global
 /* 8038A888 00353E48  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038A88C 00353E4C  7C 08 02 A6 */	mflr r0
 /* 8038A890 00353E50  90 01 00 24 */	stw r0, 0x24(r1)
@@ -255,7 +255,7 @@
 # 0x8051AB10 - 0x8051ABB8
 .rodata
 .balign 8
-.sym lbl_8051AB10, local
+.sym lbl_8051AB10, global
 	.4byte 0x45323030
 	.4byte 0x35303932
 	.4byte 0x32303320
@@ -302,5 +302,5 @@
 # 0x805657B4 - 0x805657B8
 .data
 .balign 4
-.sym lbl_805657B4, local
+.sym lbl_805657B4, global
 	.4byte 0x00002080

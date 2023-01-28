@@ -3,7 +3,7 @@
 
 # 0x803613D0 - 0x80361660
 .text
-.balign 4
+.balign 16
 
 .fn __SCF1, global
 /* 803613D0 0032A990  3C C0 73 B6 */	lis r6, 0x73b6
@@ -203,7 +203,7 @@
 # 0x8055F0D8 - 0x8055F138
 .data
 .balign 8
-.sym lbl_8055F0D8, local
+.sym lbl_8055F0D8, global
 	.4byte 0x004A504E
 	.4byte 0x00015553
 	.4byte 0x41000245
@@ -222,7 +222,7 @@
 	.4byte 0x0B43484E
 	.4byte 0x00FF0000
 	.4byte 0x00000000
-.sym lbl_8055F120, local
+.sym lbl_8055F120, global
 	.4byte 0x004A5000
 	.4byte 0x01555300
 	.4byte 0x02455500
@@ -233,9 +233,9 @@
 # 0x80665CD0 - 0x80665CE0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665CD0, local
+.sym lbl_80665CD0, global
 	.4byte 0x41524541
 	.4byte 0x00000000
-.sym lbl_80665CD8, local
+.sym lbl_80665CD8, global
 	.4byte 0x47414D45
 	.4byte 0x00000000

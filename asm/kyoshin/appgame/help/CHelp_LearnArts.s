@@ -26,7 +26,7 @@
 .text
 .balign 4
 
-.fn fn_802B8398, local
+.fn fn_802B8398, global
 /* 802B8398 00281958  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802B839C 0028195C  7C 08 02 A6 */	mflr r0
 /* 802B83A0 00281960  90 01 00 34 */	stw r0, 0x34(r1)
@@ -123,7 +123,7 @@
 /* 802B84DC 00281A9C  4E 80 00 20 */	blr
 .endfn fn_802B8398
 
-.fn fn_802B84E0, local
+.fn fn_802B84E0, global
 /* 802B84E0 00281AA0  38 00 00 00 */	li r0, 0x0
 /* 802B84E4 00281AA4  98 03 00 0E */	stb r0, 0xe(r3)
 /* 802B84E8 00281AA8  4E 80 00 20 */	blr

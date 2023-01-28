@@ -59,5 +59,5 @@
 # 0x8057B348 - 0x8057B368
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057B348, local
+.sym lbl_8057B348, global
 	.skip 0x20

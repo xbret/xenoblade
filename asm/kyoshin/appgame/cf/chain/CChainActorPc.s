@@ -188,7 +188,7 @@
 .text
 .balign 4
 
-.fn fn_80281924, local
+.fn fn_80281924, global
 /* 80281924 0024AEE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80281928 0024AEE8  7C 08 02 A6 */	mflr r0
 /* 8028192C 0024AEEC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -204,7 +204,7 @@
 /* 80281954 0024AF14  4E 80 00 20 */	blr
 .endfn fn_80281924
 
-.fn fn_80281958, local
+.fn fn_80281958, global
 /* 80281958 0024AF18  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8028195C 0024AF1C  7C 08 02 A6 */	mflr r0
 /* 80281960 0024AF20  90 01 00 34 */	stw r0, 0x34(r1)
@@ -434,7 +434,7 @@
 /* 80281CB4 0024B274  4E 80 00 20 */	blr
 .endfn fn_80281958
 
-.fn fn_80281CB8, local
+.fn fn_80281CB8, global
 /* 80281CB8 0024B278  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80281CBC 0024B27C  7C 08 02 A6 */	mflr r0
 /* 80281CC0 0024B280  90 01 00 14 */	stw r0, 0x14(r1)
@@ -451,7 +451,7 @@
 /* 80281CEC 0024B2AC  4E 80 00 20 */	blr
 .endfn fn_80281CB8
 
-.fn fn_80281CF0, local
+.fn fn_80281CF0, global
 /* 80281CF0 0024B2B0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80281CF4 0024B2B4  7C 08 02 A6 */	mflr r0
 /* 80281CF8 0024B2B8  90 01 00 54 */	stw r0, 0x54(r1)
@@ -611,7 +611,7 @@
 /* 80281F34 0024B4F4  4E 80 00 20 */	blr
 .endfn fn_80281CF0
 
-.fn fn_80281F38, local
+.fn fn_80281F38, global
 /* 80281F38 0024B4F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80281F3C 0024B4FC  7C 08 02 A6 */	mflr r0
 /* 80281F40 0024B500  90 01 00 14 */	stw r0, 0x14(r1)
@@ -641,7 +641,7 @@
 /* 80281F9C 0024B55C  4E 80 00 20 */	blr
 .endfn fn_80281F38
 
-.fn fn_80281FA0, local
+.fn fn_80281FA0, global
 /* 80281FA0 0024B560  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80281FA4 0024B564  7C 08 02 A6 */	mflr r0
 /* 80281FA8 0024B568  90 01 00 14 */	stw r0, 0x14(r1)
@@ -679,7 +679,7 @@
 /* 8028201C 0024B5DC  4E 80 00 20 */	blr
 .endfn fn_80281FA0
 
-.fn fn_80282020, local
+.fn fn_80282020, global
 /* 80282020 0024B5E0  7C C8 33 78 */	mr r8, r6
 /* 80282024 0024B5E4  7C 66 1B 78 */	mr r6, r3
 /* 80282028 0024B5E8  7C 08 00 D0 */	neg r0, r8
@@ -692,13 +692,13 @@
 /* 80282044 0024B604  48 01 E9 0C */	b fn_802A0950
 .endfn fn_80282020
 
-.fn fn_80282048, local
+.fn fn_80282048, global
 /* 80282048 0024B608  7C 64 1B 78 */	mr r4, r3
 /* 8028204C 0024B60C  38 60 00 B3 */	li r3, 0xb3
 /* 80282050 0024B610  48 01 E7 B4 */	b fn_802A0804
 .endfn fn_80282048
 
-.fn fn_80282054, local
+.fn fn_80282054, global
 /* 80282054 0024B614  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80282058 0024B618  7C 08 02 A6 */	mflr r0
 /* 8028205C 0024B61C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -720,7 +720,7 @@
 /* 80282098 0024B658  4E 80 00 20 */	blr
 .endfn fn_80282054
 
-.fn fn_8028209C, local
+.fn fn_8028209C, global
 /* 8028209C 0024B65C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802820A0 0024B660  7C 08 02 A6 */	mflr r0
 /* 802820A4 0024B664  90 01 00 14 */	stw r0, 0x14(r1)
@@ -737,7 +737,7 @@
 /* 802820D0 0024B690  4E 80 00 20 */	blr
 .endfn fn_8028209C
 
-.fn fn_802820D4, local
+.fn fn_802820D4, global
 /* 802820D4 0024B694  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802820D8 0024B698  7C 08 02 A6 */	mflr r0
 /* 802820DC 0024B69C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -751,7 +751,7 @@
 /* 802820FC 0024B6BC  4E 80 00 20 */	blr
 .endfn fn_802820D4
 
-.fn fn_80282100, local
+.fn fn_80282100, global
 /* 80282100 0024B6C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80282104 0024B6C4  7C 08 02 A6 */	mflr r0
 /* 80282108 0024B6C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -786,7 +786,7 @@
 /* 80282170 0024B730  4E 80 00 20 */	blr
 .endfn fn_80282100
 
-.fn fn_80282174, local
+.fn fn_80282174, global
 /* 80282174 0024B734  80 63 00 00 */	lwz r3, 0x0(r3)
 /* 80282178 0024B738  A0 03 3F 28 */	lhz r0, 0x3f28(r3)
 /* 8028217C 0024B73C  2C 00 00 08 */	cmpwi r0, 0x8
@@ -821,7 +821,7 @@
 /* 802821DC 0024B79C  4E 80 00 20 */	blr
 .endfn fn_80282174
 
-.fn fn_802821E0, local
+.fn fn_802821E0, global
 /* 802821E0 0024B7A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802821E4 0024B7A4  7C 08 02 A6 */	mflr r0
 /* 802821E8 0024B7A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -899,7 +899,7 @@
 /* 802822F4 0024B8B4  4E 80 00 20 */	blr
 .endfn fn_802821E0
 
-.fn fn_802822F8, local
+.fn fn_802822F8, global
 /* 802822F8 0024B8B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802822FC 0024B8BC  7C 08 02 A6 */	mflr r0
 /* 80282300 0024B8C0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -937,7 +937,7 @@
 /* 8028237C 0024B93C  4E 80 00 20 */	blr
 .endfn fn_802822F8
 
-.fn fn_80282380, local
+.fn fn_80282380, global
 /* 80282380 0024B940  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80282384 0024B944  7C 08 02 A6 */	mflr r0
 /* 80282388 0024B948  90 01 00 24 */	stw r0, 0x24(r1)
@@ -998,17 +998,17 @@
 /* 80282458 0024BA18  4E 80 00 20 */	blr
 .endfn fn_80282380
 
-.fn fn_8028245C, local
+.fn fn_8028245C, global
 /* 8028245C 0024BA1C  38 63 00 74 */	addi r3, r3, 0x74
 /* 80282460 0024BA20  48 01 E6 40 */	b fn_802A0AA0
 .endfn fn_8028245C
 
-.fn fn_80282464, local
+.fn fn_80282464, global
 /* 80282464 0024BA24  38 60 00 01 */	li r3, 0x1
 /* 80282468 0024BA28  4E 80 00 20 */	blr
 .endfn fn_80282464
 
-.fn fn_8028246C, local
+.fn fn_8028246C, global
 /* 8028246C 0024BA2C  81 83 00 70 */	lwz r12, 0x70(r3)
 /* 80282470 0024BA30  80 84 00 00 */	lwz r4, 0x0(r4)
 /* 80282474 0024BA34  81 8C 00 48 */	lwz r12, 0x48(r12)
@@ -1016,17 +1016,17 @@
 /* 8028247C 0024BA3C  4E 80 04 20 */	bctr
 .endfn fn_8028246C
 
-.fn fn_80282480, local
+.fn fn_80282480, global
 /* 80282480 0024BA40  80 04 3F 00 */	lwz r0, 0x3f00(r4)
 /* 80282484 0024BA44  54 03 FF FE */	extrwi r3, r0, 1, 30
 /* 80282488 0024BA48  4E 80 00 20 */	blr
 .endfn fn_80282480
 
-.fn fn_8028248C, local
+.fn fn_8028248C, global
 /* 8028248C 0024BA4C  4B FF 4C C8 */	b fn_80277154
 .endfn fn_8028248C
 
-.fn fn_80282490, local
+.fn fn_80282490, global
 /* 80282490 0024BA50  7C 66 1B 78 */	mr r6, r3
 /* 80282494 0024BA54  2C 05 00 00 */	cmpwi r5, 0x0
 /* 80282498 0024BA58  7C 83 23 78 */	mr r3, r4
@@ -1105,13 +1105,13 @@
 # 0x8066B390 - 0x8066B3A8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066B390, local
+.sym lbl_8066B390, global
 	.4byte 0x3F800000
-.sym lbl_8066B394, local
+.sym lbl_8066B394, global
 	.4byte 0x00000000
-.sym lbl_8066B398, local
+.sym lbl_8066B398, global
 	.4byte 0x3C23D70A
 	.4byte 0x00000000
-.sym lbl_8066B3A0, local
+.sym lbl_8066B3A0, global
 	.4byte 0x43300000
 	.4byte 0x80000000

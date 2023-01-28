@@ -3,7 +3,7 @@
 
 # 0x802DE080 - 0x802DE1F0
 .text
-.balign 4
+.balign 16
 
 .fn BTUInterruptHandler, global
 /* 802DE080 002A7640  3C 80 80 5C */	lis r4, lbl_805BE4A0@ha
@@ -117,28 +117,28 @@
 # 0x8050DF30 - 0x8050DFE8
 .rodata
 .balign 8
-.sym lbl_8050DF30, local
+.sym lbl_8050DF30, global
 	.4byte hcisu_h2_init
 	.4byte hcisu_h2_open
 	.4byte hcisu_h2_close
 	.4byte hcisu_h2_send
 	.4byte hcisu_h2_handle_event
 	.4byte 0x00000000
-.sym lbl_8050DF48, local
+.sym lbl_8050DF48, global
 	.4byte 0x40020400
 	.4byte 0x000F2000
 	.4byte 0x13880000
-.sym lbl_8050DF54, local
+.sym lbl_8050DF54, global
 	.4byte 0x0002010E
 	.4byte 0x01020E02
 	.4byte 0x0212FF01
-.sym lbl_8050DF60, local
+.sym lbl_8050DF60, global
 	.4byte 0x0005000A
 	.4byte 0xFF0108FF
 	.4byte 0x0106FF01
 	.4byte 0x07FF0112
 	.4byte 0xFF020000
-.sym lbl_8050DF74, local
+.sym lbl_8050DF74, global
 	.4byte 0x03000200
 	.4byte 0x13880000
 	.4byte 0x00001000
@@ -158,14 +158,14 @@
 	.4byte 0x00000800
 	.4byte 0x13880000
 	.4byte 0x00000000
-.sym lbl_8050DFC0, local
+.sym lbl_8050DFC0, global
 	.4byte 0x019000C8
 	.4byte 0x00040004
 	.4byte 0x02000320
 	.4byte 0x01900000
 	.4byte 0x00000300
 	.4byte 0x00000000
-.sym lbl_8050DFD8, local
+.sym lbl_8050DFD8, global
 	.4byte 0x04000000
 	.4byte lbl_806658F0
 	.4byte 0x04000000
@@ -174,49 +174,49 @@
 # 0x805BE4A0 - 0x805BF4D0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805BE4A0, local
+.sym lbl_805BE4A0, global
 	.skip 0x89E
-.sym lbl_805BED3E, local
+.sym lbl_805BED3E, global
 	.skip 0x762
-.sym lbl_805BF4A0, local
+.sym lbl_805BF4A0, global
 	.skip 0x30
 
 # 0x806658D8 - 0x80665920
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806658D8, local
+.sym lbl_806658D8, global
 	.4byte lbl_8050DF54
-.sym lbl_806658DC, local
+.sym lbl_806658DC, global
 	.4byte lbl_8050DF60
-.sym lbl_806658E0, local
+.sym lbl_806658E0, global
 	.4byte lbl_8066DCE0
-.sym lbl_806658E4, local
+.sym lbl_806658E4, global
 	.4byte lbl_8050DF74
-.sym lbl_806658E8, local
+.sym lbl_806658E8, global
 	.4byte lbl_8050DFC0
 	.4byte 0x00000000
-.sym lbl_806658F0, local
+.sym lbl_806658F0, global
 	.4byte 0x20011002
 	.4byte 0x01033102
-.sym lbl_806658F8, local
+.sym lbl_806658F8, global
 	.4byte lbl_8050DFD8
 	.4byte 0x00000000
-.sym lbl_80665900, local
+.sym lbl_80665900, global
 	.4byte lbl_8066BF40
 	.4byte 0x00000000
-.sym lbl_80665908, local
+.sym lbl_80665908, global
 	.4byte 0x25730A00
 	.4byte 0x00000000
-.sym lbl_80665910, local
+.sym lbl_80665910, global
 	.4byte 0x0A5C2101
 	.4byte 0x00000000
-.sym lbl_80665918, local
+.sym lbl_80665918, global
 	.4byte 0x01000000
-.sym lbl_8066591C, local
+.sym lbl_8066591C, global
 	.4byte 0x00000001
 
 # 0x8066776C - 0x80667770
 .section .sbss, "wa", @nobits
 .balign 4
-.sym lbl_8066776C, local
+.sym lbl_8066776C, global
 	.skip 0x4

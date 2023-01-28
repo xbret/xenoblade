@@ -3,7 +3,7 @@
 
 # 0x802DAD60 - 0x802DC200
 .text
-.balign 4
+.balign 16
 
 .fn gki_init_free_queue, global
 /* 802DAD60 002A4320  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1496,14 +1496,14 @@
 # 0x80543E18 - 0x80543F60
 .data
 .balign 8
-.sym lbl_80543E18, local
+.sym lbl_80543E18, global
 	.4byte 0x67657462
 	.4byte 0x75663A20
 	.4byte 0x53697A65
 	.4byte 0x20697320
 	.4byte 0x7A65726F
 	.4byte 0x00000000
-.sym lbl_80543E30, local
+.sym lbl_80543E30, global
 	.4byte 0x67657462
 	.4byte 0x75663A20
 	.4byte 0x53697A65
@@ -1542,7 +1542,7 @@
 	.4byte 0x72206C69
 	.4byte 0x6E6B6564
 	.4byte 0x00000000
-.sym lbl_80543EC8, local
+.sym lbl_80543EC8, global
 	.4byte 0x456E7175
 	.4byte 0x65756520
 	.4byte 0x2D204275
@@ -1550,7 +1550,7 @@
 	.4byte 0x20636F72
 	.4byte 0x72757074
 	.4byte 0x65640000
-.sym lbl_80543EE4, local
+.sym lbl_80543EE4, global
 	.4byte 0x456E6575
 	.4byte 0x65756520
 	.4byte 0x2D206275
@@ -1559,7 +1559,7 @@
 	.4byte 0x79206C69
 	.4byte 0x6E6B6564
 	.4byte 0x00000000
-.sym lbl_80543F04, local
+.sym lbl_80543F04, global
 	.4byte 0x456E6575
 	.4byte 0x65756520
 	.4byte 0x68656164
@@ -1577,7 +1577,7 @@
 	.4byte 0x62616420
 	.4byte 0x61646472
 	.4byte 0x00000000
-.sym lbl_80543F48, local
+.sym lbl_80543F48, global
 	.4byte 0x44656C65
 	.4byte 0x74696E67
 	.4byte 0x20626164
@@ -1588,115 +1588,115 @@
 # 0x80593140 - 0x805BBC20
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80593140, local
+.sym lbl_80593140, global
 	.skip 0x92EC
-.sym lbl_8059C42C, local
+.sym lbl_8059C42C, global
 	.skip 0xD458
-.sym lbl_805A9884, local
+.sym lbl_805A9884, global
 	.skip 0x120A4
-.sym lbl_805BB928, local
+.sym lbl_805BB928, global
 	.skip 0x1A
-.sym lbl_805BB942, local
+.sym lbl_805BB942, global
 	.skip 0xA
-.sym lbl_805BB94C, local
+.sym lbl_805BB94C, global
 	.skip 0x1C
-.sym lbl_805BB968, local
+.sym lbl_805BB968, global
 	.skip 0x10
-.sym lbl_805BB978, local
+.sym lbl_805BB978, global
 	.skip 0x4
-.sym lbl_805BB97C, local
+.sym lbl_805BB97C, global
 	.skip 0x4
-.sym lbl_805BB980, local
+.sym lbl_805BB980, global
 	.skip 0x4
-.sym lbl_805BB984, local
+.sym lbl_805BB984, global
 	.skip 0x4
-.sym lbl_805BB988, local
+.sym lbl_805BB988, global
 	.skip 0x4
-.sym lbl_805BB98C, local
+.sym lbl_805BB98C, global
 	.skip 0x4
-.sym lbl_805BB990, local
+.sym lbl_805BB990, global
 	.skip 0x4
-.sym lbl_805BB994, local
+.sym lbl_805BB994, global
 	.skip 0x4
-.sym lbl_805BB998, local
+.sym lbl_805BB998, global
 	.skip 0x4
-.sym lbl_805BB99C, local
+.sym lbl_805BB99C, global
 	.skip 0x4
-.sym lbl_805BB9A0, local
+.sym lbl_805BB9A0, global
 	.skip 0x4
-.sym lbl_805BB9A4, local
+.sym lbl_805BB9A4, global
 	.skip 0x4
-.sym lbl_805BB9A8, local
+.sym lbl_805BB9A8, global
 	.skip 0x4
-.sym lbl_805BB9AC, local
+.sym lbl_805BB9AC, global
 	.skip 0x4
-.sym lbl_805BB9B0, local
+.sym lbl_805BB9B0, global
 	.skip 0x4
-.sym lbl_805BB9B4, local
+.sym lbl_805BB9B4, global
 	.skip 0x4
-.sym lbl_805BB9B8, local
+.sym lbl_805BB9B8, global
 	.skip 0x4
-.sym lbl_805BB9BC, local
+.sym lbl_805BB9BC, global
 	.skip 0x4
-.sym lbl_805BB9C0, local
+.sym lbl_805BB9C0, global
 	.skip 0x4
-.sym lbl_805BB9C4, local
+.sym lbl_805BB9C4, global
 	.skip 0x4
-.sym lbl_805BB9C8, local
+.sym lbl_805BB9C8, global
 	.skip 0x4
-.sym lbl_805BB9CC, local
+.sym lbl_805BB9CC, global
 	.skip 0x4
-.sym lbl_805BB9D0, local
+.sym lbl_805BB9D0, global
 	.skip 0x4
-.sym lbl_805BB9D4, local
+.sym lbl_805BB9D4, global
 	.skip 0x4
-.sym lbl_805BB9D8, local
+.sym lbl_805BB9D8, global
 	.skip 0x4
-.sym lbl_805BB9DC, local
+.sym lbl_805BB9DC, global
 	.skip 0x4
-.sym lbl_805BB9E0, local
+.sym lbl_805BB9E0, global
 	.skip 0x4
-.sym lbl_805BB9E4, local
+.sym lbl_805BB9E4, global
 	.skip 0x4
-.sym lbl_805BB9E8, local
+.sym lbl_805BB9E8, global
 	.skip 0x4
-.sym lbl_805BB9EC, local
+.sym lbl_805BB9EC, global
 	.skip 0x4
-.sym lbl_805BB9F0, local
+.sym lbl_805BB9F0, global
 	.skip 0x4
-.sym lbl_805BB9F4, local
+.sym lbl_805BB9F4, global
 	.skip 0x4
-.sym lbl_805BB9F8, local
+.sym lbl_805BB9F8, global
 	.skip 0x4
-.sym lbl_805BB9FC, local
+.sym lbl_805BB9FC, global
 	.skip 0x4
-.sym lbl_805BBA00, local
+.sym lbl_805BBA00, global
 	.skip 0x4
-.sym lbl_805BBA04, local
+.sym lbl_805BBA04, global
 	.skip 0x4
-.sym lbl_805BBA08, local
+.sym lbl_805BBA08, global
 	.skip 0x4
-.sym lbl_805BBA0C, local
+.sym lbl_805BBA0C, global
 	.skip 0x4
-.sym lbl_805BBA10, local
+.sym lbl_805BBA10, global
 	.skip 0x4
-.sym lbl_805BBA14, local
+.sym lbl_805BBA14, global
 	.skip 0x4
-.sym lbl_805BBA18, local
+.sym lbl_805BBA18, global
 	.skip 0x4
-.sym lbl_805BBA1C, local
+.sym lbl_805BBA1C, global
 	.skip 0x1F4
-.sym lbl_805BBC10, local
+.sym lbl_805BBC10, global
 	.skip 0x2
-.sym lbl_805BBC12, local
+.sym lbl_805BBC12, global
 	.skip 0x1
-.sym lbl_805BBC13, local
+.sym lbl_805BBC13, global
 	.skip 0x1
-.sym lbl_805BBC14, local
+.sym lbl_805BBC14, global
 	.skip 0x1
-.sym lbl_805BBC15, local
+.sym lbl_805BBC15, global
 	.skip 0x1
-.sym lbl_805BBC16, local
+.sym lbl_805BBC16, global
 	.skip 0x5
-.sym lbl_805BBC1B, local
+.sym lbl_805BBC1B, global
 	.skip 0x5

@@ -65,7 +65,7 @@
 .text
 .balign 4
 
-.fn fn_80167C40, local
+.fn fn_80167C40, global
 /* 80167C40 00131200  C0 02 9B 90 */	lfs f0, lbl_80669F10@sda21(r2)
 /* 80167C44 00131204  3C 80 80 53 */	lis r4, __vt__cf_CREvtMem@ha
 /* 80167C48 00131208  38 00 00 00 */	li r0, 0x0
@@ -85,7 +85,7 @@
 /* 80167C80 00131240  4E 80 00 20 */	blr
 .endfn fn_80167C40
 
-.fn fn_80167C84, local
+.fn fn_80167C84, global
 /* 80167C84 00131244  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80167C88 00131248  7C 08 02 A6 */	mflr r0
 /* 80167C8C 0013124C  2C 03 00 00 */	cmpwi r3, 0x0
@@ -138,7 +138,7 @@
 /* 80167D3C 001312FC  4E 80 00 20 */	blr
 .endfn fn_80167C84
 
-.fn fn_80167D40, local
+.fn fn_80167D40, global
 /* 80167D40 00131300  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80167D44 00131304  7C 08 02 A6 */	mflr r0
 /* 80167D48 00131308  90 01 00 14 */	stw r0, 0x14(r1)
@@ -262,7 +262,7 @@
 /* 80167EF4 001314B4  4E 80 00 20 */	blr
 .endfn fn_80167D40
 
-.fn fn_80167EF8, local
+.fn fn_80167EF8, global
 /* 80167EF8 001314B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80167EFC 001314BC  7C 08 02 A6 */	mflr r0
 /* 80167F00 001314C0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -296,7 +296,7 @@
 /* 80167F68 00131528  4E 80 00 20 */	blr
 .endfn fn_80167EF8
 
-.fn fn_80167F6C, local
+.fn fn_80167F6C, global
 /* 80167F6C 0013152C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80167F70 00131530  7C 08 02 A6 */	mflr r0
 /* 80167F74 00131534  90 01 00 14 */	stw r0, 0x14(r1)
@@ -339,7 +339,7 @@
 /* 80167FF8 001315B8  4E 80 00 20 */	blr
 .endfn fn_80167F6C
 
-.fn fn_80167FFC, local
+.fn fn_80167FFC, global
 /* 80167FFC 001315BC  80 8D A9 D0 */	lwz r4, lbl_80666B50@sda21(r13)
 /* 80168000 001315C0  80 04 00 18 */	lwz r0, 0x18(r4)
 /* 80168004 001315C4  7C 00 18 40 */	cmplw r0, r3
@@ -354,7 +354,7 @@
 /* 80168024 001315E4  4E 80 00 20 */	blr
 .endfn fn_80167FFC
 
-.fn fn_80168028, local
+.fn fn_80168028, global
 /* 80168028 001315E8  80 8D A9 D0 */	lwz r4, lbl_80666B50@sda21(r13)
 /* 8016802C 001315EC  54 60 10 3A */	slwi r0, r3, 2
 /* 80168030 001315F0  7C 64 02 14 */	add r3, r4, r0
@@ -393,12 +393,12 @@
 # 0x80666B50 - 0x80666B58
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80666B50, local
+.sym lbl_80666B50, global
 	.skip 0x8
 
 # 0x80669F10 - 0x80669F18
 .section .sdata2, "a"
 .balign 8
-.sym lbl_80669F10, local
+.sym lbl_80669F10, global
 	.4byte 0x00000000
 	.4byte 0x00000000

@@ -87,7 +87,7 @@
 # 0x8051BA28 - 0x8051BA60
 .rodata
 .balign 8
-.sym lbl_8051BA28, local
+.sym lbl_8051BA28, global
 	.4byte 0x0A4C5343
 	.4byte 0x2F574949
 	.4byte 0x20566572

@@ -2979,7 +2979,7 @@
 # 0x8051F830 - 0x8051F8E0
 .rodata
 .balign 8
-.sym lbl_8051F830, local
+.sym lbl_8051F830, global
 	.4byte 0x12011101
 	.4byte 0x10010F01
 	.4byte 0x03060210
@@ -3028,80 +3028,80 @@
 # 0x806064B8 - 0x80607B28
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_806064B8, local
+.sym lbl_806064B8, global
 	.skip 0x400
-.sym lbl_806068B8, local
+.sym lbl_806068B8, global
 	.skip 0x8
-.sym lbl_806068C0, local
+.sym lbl_806068C0, global
 	.skip 0x80
-.sym lbl_80606940, local
+.sym lbl_80606940, global
 	.skip 0x8
-.sym lbl_80606948, local
+.sym lbl_80606948, global
 	.skip 0x80
-.sym lbl_806069C8, local
+.sym lbl_806069C8, global
 	.skip 0x8
-.sym lbl_806069D0, local
+.sym lbl_806069D0, global
 	.skip 0x100
-.sym lbl_80606AD0, local
+.sym lbl_80606AD0, global
 	.skip 0x8
-.sym lbl_80606AD8, local
+.sym lbl_80606AD8, global
 	.skip 0x40
-.sym lbl_80606B18, local
+.sym lbl_80606B18, global
 	.skip 0x8
-.sym lbl_80606B20, local
+.sym lbl_80606B20, global
 	.skip 0x40
-.sym lbl_80606B60, local
+.sym lbl_80606B60, global
 	.skip 0x8
-.sym lbl_80606B68, local
+.sym lbl_80606B68, global
 	.skip 0x80
-.sym lbl_80606BE8, local
+.sym lbl_80606BE8, global
 	.skip 0x200
-.sym lbl_80606DE8, local
+.sym lbl_80606DE8, global
 	.skip 0x80
-.sym lbl_80606E68, local
+.sym lbl_80606E68, global
 	.skip 0x100
-.sym lbl_80606F68, local
+.sym lbl_80606F68, global
 	.skip 0x40
-.sym lbl_80606FA8, local
+.sym lbl_80606FA8, global
 	.skip 0x100
-.sym lbl_806070A8, local
+.sym lbl_806070A8, global
 	.skip 0x40
-.sym lbl_806070E8, local
+.sym lbl_806070E8, global
 	.skip 0x400
-.sym lbl_806074E8, local
+.sym lbl_806074E8, global
 	.skip 0x400
-.sym lbl_806078E8, local
+.sym lbl_806078E8, global
 	.skip 0x200
-.sym lbl_80607AE8, local
+.sym lbl_80607AE8, global
 	.skip 0x4
-.sym lbl_80607AEC, local
+.sym lbl_80607AEC, global
 	.skip 0x4
-.sym lbl_80607AF0, local
+.sym lbl_80607AF0, global
 	.skip 0x4
-.sym lbl_80607AF4, local
+.sym lbl_80607AF4, global
 	.skip 0x4
-.sym lbl_80607AF8, local
+.sym lbl_80607AF8, global
 	.skip 0x4
-.sym lbl_80607AFC, local
+.sym lbl_80607AFC, global
 	.skip 0x4
-.sym lbl_80607B00, local
+.sym lbl_80607B00, global
 	.skip 0x4
-.sym lbl_80607B04, local
+.sym lbl_80607B04, global
 	.skip 0x4
-.sym lbl_80607B08, local
+.sym lbl_80607B08, global
 	.skip 0x4
 
 .obj mpvvlc_run_level_0c, global
 	.skip 0x4
-.sym lbl_80607B10, local
+.sym lbl_80607B10, global
 	.skip 0x4
-.sym lbl_80607B14, local
+.sym lbl_80607B14, global
 	.skip 0x4
-.sym lbl_80607B18, local
+.sym lbl_80607B18, global
 	.skip 0x4
-.sym lbl_80607B1C, local
+.sym lbl_80607B1C, global
 	.skip 0x4
-.sym lbl_80607B20, local
+.sym lbl_80607B20, global
 	.skip 0x4
-.sym lbl_80607B24, local
+.sym lbl_80607B24, global
 	.skip 0x4

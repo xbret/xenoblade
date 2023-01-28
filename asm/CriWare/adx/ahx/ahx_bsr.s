@@ -501,7 +501,7 @@
 # 0x8051AC10 - 0x8051AC98
 .rodata
 .balign 8
-.sym lbl_8051AC10, local
+.sym lbl_8051AC10, global
 	.4byte 0x00000000
 	.4byte 0x00000001
 	.4byte 0x00000003

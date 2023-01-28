@@ -3,7 +3,7 @@
 
 # 0x803589B0 - 0x803591A0
 .text
-.balign 4
+.balign 16
 
 .fn OSDisableInterrupts, global
 /* 803589B0 00321F70  7C 60 00 A6 */	mfmsr r3
@@ -633,7 +633,7 @@
 # 0x80552AB0 - 0x80552AE0
 .data
 .balign 8
-.sym lbl_80552AB0, local
+.sym lbl_80552AB0, global
 	.4byte 0x00000100
 	.4byte 0x00000040
 	.4byte 0xF8000000
@@ -662,7 +662,7 @@
 
 .obj __OSLastInterruptTime, global
 	.skip 0x4
-.sym lbl_80667A9C, local
+.sym lbl_80667A9C, global
 	.skip 0x4
 .endobj __OSLastInterruptTime
 

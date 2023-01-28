@@ -574,7 +574,7 @@
 /* 803D9C30 003A31F0  4E 80 00 20 */	blr
 .endfn GetResMatNumEntries__Q34nw4r3g3d6ResMdlCFv
 
-.fn fn_803D9C34, local
+.fn fn_803D9C34, global
 /* 803D9C34 003A31F4  80 63 00 00 */	lwz r3, 0x0(r3)
 /* 803D9C38 003A31F8  80 03 00 34 */	lwz r0, 0x34(r3)
 /* 803D9C3C 003A31FC  2C 00 00 00 */	cmpwi r0, 0x0
@@ -680,7 +680,7 @@
 /* 803D9D60 003A3320  4E 80 00 20 */	blr
 .endfn GetResShpNumEntries__Q34nw4r3g3d6ResMdlCFv
 
-.fn fn_803D9D64, local
+.fn fn_803D9D64, global
 /* 803D9D64 003A3324  80 63 00 00 */	lwz r3, 0x0(r3)
 /* 803D9D68 003A3328  80 03 00 3C */	lwz r0, 0x3c(r3)
 /* 803D9D6C 003A332C  2C 00 00 00 */	cmpwi r0, 0x0

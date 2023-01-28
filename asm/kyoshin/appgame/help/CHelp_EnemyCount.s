@@ -26,13 +26,13 @@
 .text
 .balign 4
 
-.fn fn_802B7F54, local
+.fn fn_802B7F54, global
 /* 802B7F54 00281514  38 00 00 00 */	li r0, 0x0
 /* 802B7F58 00281518  90 03 00 0C */	stw r0, 0xc(r3)
 /* 802B7F5C 0028151C  4E 80 00 20 */	blr
 .endfn fn_802B7F54
 
-.fn fn_802B7F60, local
+.fn fn_802B7F60, global
 /* 802B7F60 00281520  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B7F64 00281524  7C 08 02 A6 */	mflr r0
 /* 802B7F68 00281528  90 01 00 14 */	stw r0, 0x14(r1)

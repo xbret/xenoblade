@@ -3,7 +3,7 @@
 
 # 0x802E3830 - 0x802E3C00
 .text
-.balign 4
+.balign 16
 
 .fn BTA_HhEnable, global
 /* 802E3830 002ACDF0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -285,7 +285,7 @@
 # 0x80544690 - 0x805446C0
 .data
 .balign 8
-.sym lbl_80544690, local
+.sym lbl_80544690, global
 	.4byte 0x4E6F2072
 	.4byte 0x65736F75
 	.4byte 0x72636520
@@ -302,6 +302,6 @@
 # 0x8066BF60 - 0x8066BF68
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF60, local
+.sym lbl_8066BF60, global
 	.4byte bta_hh_hdl_event
 	.4byte BTA_HhDisable

@@ -764,20 +764,20 @@
 # 0x80667E60 - 0x80667E70
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E60, local
+.sym lbl_80667E60, global
 	.skip 0x8
-.sym lbl_80667E68, local
+.sym lbl_80667E68, global
 	.skip 0x8
 
 # 0x8066C9D0 - 0x8066C9E8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C9D0, local
+.sym lbl_8066C9D0, global
 	.4byte 0x2F800000
 	.4byte 0x00000000
-.sym lbl_8066C9D8, local
+.sym lbl_8066C9D8, global
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C9E0, local
+.sym lbl_8066C9E0, global
 	.4byte 0x3F000000
 	.4byte 0x00000000

@@ -154,7 +154,7 @@
 /* 802B92A0 00282860  4E 80 00 20 */	blr
 .endfn __dt__CBattery
 
-.fn fn_802B92A4, local
+.fn fn_802B92A4, global
 /* 802B92A4 00282864  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B92A8 00282868  7C 08 02 A6 */	mflr r0
 /* 802B92AC 0028286C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -179,7 +179,7 @@
 /* 802B92F8 002828B8  4E 80 00 20 */	blr
 .endfn fn_802B92A4
 
-.fn fn_802B92FC, local
+.fn fn_802B92FC, global
 /* 802B92FC 002828BC  88 03 00 22 */	lbz r0, 0x22(r3)
 /* 802B9300 002828C0  2C 00 00 00 */	cmpwi r0, 0x0
 /* 802B9304 002828C4  4D 82 00 20 */	beqlr
@@ -197,7 +197,7 @@
 /* 802B9330 002828F0  4E 80 00 20 */	blr
 .endfn fn_802B92FC
 
-.fn fn_802B9334, local
+.fn fn_802B9334, global
 /* 802B9334 002828F4  88 03 00 22 */	lbz r0, 0x22(r3)
 /* 802B9338 002828F8  2C 00 00 00 */	cmpwi r0, 0x0
 /* 802B933C 002828FC  4D 82 00 20 */	beqlr
@@ -213,7 +213,7 @@
 /* 802B9360 00282920  4E 80 00 20 */	blr
 .endfn fn_802B9334
 
-.fn fn_802B9364, local
+.fn fn_802B9364, global
 /* 802B9364 00282924  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B9368 00282928  7C 08 02 A6 */	mflr r0
 /* 802B936C 0028292C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -250,12 +250,12 @@
 /* 802B93E0 002829A0  4E 80 00 20 */	blr
 .endfn fn_802B9364
 
-.fn fn_802B93E4, local
+.fn fn_802B93E4, global
 /* 802B93E4 002829A4  98 83 00 24 */	stb r4, 0x24(r3)
 /* 802B93E8 002829A8  48 00 00 04 */	b fn_802B93EC
 .endfn fn_802B93E4
 
-.fn fn_802B93EC, local
+.fn fn_802B93EC, global
 /* 802B93EC 002829AC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802B93F0 002829B0  7C 08 02 A6 */	mflr r0
 /* 802B93F4 002829B4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -311,7 +311,7 @@
 /* 802B94AC 00282A6C  4E 80 00 20 */	blr
 .endfn fn_802B93EC
 
-.fn fn_802B94B0, local
+.fn fn_802B94B0, global
 /* 802B94B0 00282A70  80 03 00 1C */	lwz r0, 0x1c(r3)
 /* 802B94B4 00282A74  2C 00 00 00 */	cmpwi r0, 0x0
 /* 802B94B8 00282A78  4D 82 00 20 */	beqlr
@@ -322,7 +322,7 @@
 /* 802B94CC 00282A8C  4E 80 00 20 */	blr
 .endfn fn_802B94B0
 
-.fn fn_802B94D0, local
+.fn fn_802B94D0, global
 /* 802B94D0 00282A90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B94D4 00282A94  7C 08 02 A6 */	mflr r0
 /* 802B94D8 00282A98  90 01 00 24 */	stw r0, 0x24(r1)

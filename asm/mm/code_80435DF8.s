@@ -38,7 +38,7 @@
 /* 80435E6C 003FF42C  4E 80 00 20 */	blr
 .endfn sinit_80435DF8
 
-.fn fn_80435E70, local
+.fn fn_80435E70, global
 /* 80435E70 003FF430  38 60 00 04 */	li r3, 0x4
 /* 80435E74 003FF434  64 63 00 04 */	oris r3, r3, 0x4
 /* 80435E78 003FF438  7C 72 E3 A6 */	mtspr GQR2, r3
@@ -62,7 +62,7 @@
 # 0x8066C9F0 - 0x8066C9F8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C9F0, local
+.sym lbl_8066C9F0, global
 	.4byte 0x00000000
-.sym lbl_8066C9F4, local
+.sym lbl_8066C9F4, global
 	.4byte 0x3F800000

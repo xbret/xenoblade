@@ -1675,12 +1675,12 @@
 # 0x80520F38 - 0x80520F58
 .rodata
 .balign 8
-.sym lbl_80520F38, local
+.sym lbl_80520F38, global
 	.4byte 0x00000007
 	.4byte 0x416E6D53
 	.4byte 0x636E0000
 	.4byte 0x00000000
-.sym lbl_80520F48, local
+.sym lbl_80520F48, global
 	.4byte 0x0000000A
 	.4byte 0x416E6D53
 	.4byte 0x636E5265
@@ -1689,7 +1689,7 @@
 # 0x8056CD70 - 0x8056CE90
 .data
 .balign 8
-.sym lbl_8056CD70, local
+.sym lbl_8056CD70, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d9AnmScnResCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1726,7 +1726,7 @@
 	.4byte GetLightResult__Q34nw4r3g3d9AnmScnResFPQ34nw4r3g3d14LightAnmResultUl
 	.4byte GetFogResult__Q34nw4r3g3d9AnmScnResFPQ34nw4r3g3d12FogAnmResultUl
 	.4byte GetCameraResult__Q34nw4r3g3d9AnmScnResFPQ34nw4r3g3d15CameraAnmResultUl
-.sym lbl_8056CE00, local
+.sym lbl_8056CE00, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d6AnmScnCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1767,16 +1767,16 @@
 # 0x8066C3A0 - 0x8066C3C0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C3A0, local
+.sym lbl_8066C3A0, global
 	.4byte 0x00000000
-.sym lbl_8066C3A4, local
+.sym lbl_8066C3A4, global
 	.4byte 0xD01502F9
-.sym lbl_8066C3A8, local
+.sym lbl_8066C3A8, global
 	.4byte 0x3F800000
 	.4byte 0x00000000
-.sym lbl_8066C3B0, local
+.sym lbl_8066C3B0, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C3B8, local
+.sym lbl_8066C3B8, global
 	.4byte 0x3F000000
 	.4byte 0x00000000

@@ -78,21 +78,21 @@
 .text
 .balign 4
 
-.fn fn_80296898, local
+.fn fn_80296898, global
 /* 80296898 0025FE58  38 00 00 00 */	li r0, 0x0
 /* 8029689C 0025FE5C  98 03 00 0C */	stb r0, 0xc(r3)
 /* 802968A0 0025FE60  98 03 00 0D */	stb r0, 0xd(r3)
 /* 802968A4 0025FE64  4E 80 00 20 */	blr
 .endfn fn_80296898
 
-.fn fn_802968A8, local
+.fn fn_802968A8, global
 /* 802968A8 0025FE68  38 00 00 00 */	li r0, 0x0
 /* 802968AC 0025FE6C  90 03 00 00 */	stw r0, 0x0(r3)
 /* 802968B0 0025FE70  98 03 00 04 */	stb r0, 0x4(r3)
 /* 802968B4 0025FE74  4E 80 00 20 */	blr
 .endfn fn_802968A8
 
-.fn fn_802968B8, local
+.fn fn_802968B8, global
 /* 802968B8 0025FE78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802968BC 0025FE7C  7C 08 02 A6 */	mflr r0
 /* 802968C0 0025FE80  2C 04 00 00 */	cmpwi r4, 0x0
@@ -125,7 +125,7 @@
 /* 80296920 0025FEE0  4E 80 00 20 */	blr
 .endfn fn_802968B8
 
-.fn fn_80296924, local
+.fn fn_80296924, global
 /* 80296924 0025FEE4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80296928 0025FEE8  7C 08 02 A6 */	mflr r0
 /* 8029692C 0025FEEC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -189,7 +189,7 @@
 /* 80296A00 0025FFC0  4E 80 00 20 */	blr
 .endfn fn_80296924
 
-.fn fn_80296A04, local
+.fn fn_80296A04, global
 /* 80296A04 0025FFC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80296A08 0025FFC8  7C 08 02 A6 */	mflr r0
 /* 80296A0C 0025FFCC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -204,7 +204,7 @@
 /* 80296A30 0025FFF0  4E 80 00 20 */	blr
 .endfn fn_80296A04
 
-.fn fn_80296A34, local
+.fn fn_80296A34, global
 /* 80296A34 0025FFF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80296A38 0025FFF8  7C 08 02 A6 */	mflr r0
 /* 80296A3C 0025FFFC  38 80 00 00 */	li r4, 0x0
@@ -249,13 +249,13 @@
 /* 80296AD8 00260098  4E 80 00 20 */	blr
 .endfn fn_80296A34
 
-.fn fn_80296ADC, local
+.fn fn_80296ADC, global
 /* 80296ADC 0026009C  3C 60 80 58 */	lis r3, lbl_8057A9C8@ha
 /* 80296AE0 002600A0  38 63 A9 C8 */	addi r3, r3, lbl_8057A9C8@l
 /* 80296AE4 002600A4  4E 80 00 20 */	blr
 .endfn fn_80296ADC
 
-.fn fn_80296AE8, local
+.fn fn_80296AE8, global
 /* 80296AE8 002600A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80296AEC 002600AC  7C 08 02 A6 */	mflr r0
 /* 80296AF0 002600B0  7C 64 1B 78 */	mr r4, r3
@@ -293,5 +293,5 @@
 # 0x8057A9C8 - 0x8057AA08
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057A9C8, local
+.sym lbl_8057A9C8, global
 	.skip 0x40

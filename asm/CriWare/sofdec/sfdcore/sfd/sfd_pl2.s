@@ -290,7 +290,7 @@
 /* 803C8F94 00392554  4E 80 00 20 */	blr
 .endfn SFPL2_Standby
 
-.fn fn_803C8F98, local
+.fn fn_803C8F98, global
 /* 803C8F98 00392558  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C8F9C 0039255C  7C 08 02 A6 */	mflr r0
 /* 803C8FA0 00392560  90 01 00 24 */	stw r0, 0x24(r1)

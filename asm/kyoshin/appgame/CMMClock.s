@@ -130,7 +130,7 @@
 .text
 .balign 4
 
-.fn fn_8011B778, local
+.fn fn_8011B778, global
 /* 8011B778 000E4D38  94 21 F6 C0 */	stwu r1, -0x940(r1)
 /* 8011B77C 000E4D3C  7C 08 02 A6 */	mflr r0
 /* 8011B780 000E4D40  2C 03 00 00 */	cmpwi r3, 0x0
@@ -370,7 +370,7 @@
 /* 8011BB14 000E50D4  4E 80 00 20 */	blr
 .endfn fn_8011B778
 
-.fn fn_8011BB18, local
+.fn fn_8011BB18, global
 /* 8011BB18 000E50D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8011BB1C 000E50DC  7C 08 02 A6 */	mflr r0
 /* 8011BB20 000E50E0  2C 03 00 00 */	cmpwi r3, 0x0
@@ -422,7 +422,7 @@
 /* 8011BBC8 000E5188  4E 80 00 20 */	blr
 .endfn fn_8011BB18
 
-.fn fn_8011BBCC, local
+.fn fn_8011BBCC, global
 /* 8011BBCC 000E518C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8011BBD0 000E5190  7C 08 02 A6 */	mflr r0
 /* 8011BBD4 000E5194  90 01 00 44 */	stw r0, 0x44(r1)
@@ -766,7 +766,7 @@
 /* 8011C0BC 000E567C  4E 80 00 20 */	blr
 .endfn fn_8011BBCC
 
-.fn fn_8011C0C0, local
+.fn fn_8011C0C0, global
 /* 8011C0C0 000E5680  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8011C0C4 000E5684  7C 08 02 A6 */	mflr r0
 /* 8011C0C8 000E5688  90 01 00 74 */	stw r0, 0x74(r1)
@@ -835,7 +835,7 @@
 /* 8011C1B4 000E5774  4E 80 00 20 */	blr
 .endfn fn_8011C0C0
 
-.fn fn_8011C1B8, local
+.fn fn_8011C1B8, global
 /* 8011C1B8 000E5778  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8011C1BC 000E577C  7C 08 02 A6 */	mflr r0
 /* 8011C1C0 000E5780  90 01 00 24 */	stw r0, 0x24(r1)
@@ -917,7 +917,7 @@
 /* 8011C2E4 000E58A4  4E 80 00 20 */	blr
 .endfn fn_8011C1B8
 
-.fn fn_8011C2E8, local
+.fn fn_8011C2E8, global
 /* 8011C2E8 000E58A8  80 6D A7 28 */	lwz r3, lbl_806668A8@sda21(r13)
 /* 8011C2EC 000E58AC  7C 03 00 D0 */	neg r0, r3
 /* 8011C2F0 000E58B0  7C 00 1B 78 */	or r0, r0, r3
@@ -925,7 +925,7 @@
 /* 8011C2F8 000E58B8  4E 80 00 20 */	blr
 .endfn fn_8011C2E8
 
-.fn fn_8011C2FC, local
+.fn fn_8011C2FC, global
 /* 8011C2FC 000E58BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8011C300 000E58C0  7C 08 02 A6 */	mflr r0
 /* 8011C304 000E58C4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -995,7 +995,7 @@
 /* 8011C3FC 000E59BC  4E 80 00 20 */	blr
 .endfn fn_8011C2FC
 
-.fn fn_8011C400, local
+.fn fn_8011C400, global
 /* 8011C400 000E59C0  80 6D A7 28 */	lwz r3, lbl_806668A8@sda21(r13)
 /* 8011C404 000E59C4  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8011C408 000E59C8  4D 82 00 20 */	beqlr
@@ -1014,17 +1014,17 @@
 /* 8011C430 000E59F0  4E 80 00 20 */	blr
 .endfn sinit_8011C418
 
-.fn fn_8011C434, local
+.fn fn_8011C434, global
 /* 8011C434 000E59F4  38 63 FF A8 */	addi r3, r3, -0x58
 /* 8011C438 000E59F8  4B FF F2 9C */	b fn_8011B6D4
 .endfn fn_8011C434
 
-.fn fn_8011C43C, local
+.fn fn_8011C43C, global
 /* 8011C43C 000E59FC  38 63 FF A4 */	addi r3, r3, -0x5c
 /* 8011C440 000E5A00  4B FF FC 80 */	b fn_8011C0C0
 .endfn fn_8011C43C
 
-.fn fn_8011C444, local
+.fn fn_8011C444, global
 /* 8011C444 000E5A04  38 63 FF A4 */	addi r3, r3, -0x5c
 /* 8011C448 000E5A08  4B FF F2 8C */	b fn_8011B6D4
 .endfn fn_8011C444
@@ -1078,7 +1078,7 @@
 	.4byte __RTTI__IWorkEvent
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_805302EC, local
+.sym lbl_805302EC, global
 	.4byte 0x4E573452
 	.4byte 0x3A506F69
 	.4byte 0x6E746572
@@ -1088,11 +1088,11 @@
 	.4byte 0x204E554C
 	.4byte 0x4C202870
 	.4byte 0x29000000
-.sym lbl_80530310, local
+.sym lbl_80530310, global
 	.4byte 0x4C696E6B
 	.4byte 0x4C697374
 	.4byte 0x2E680000
-.sym lbl_8053031C, local
+.sym lbl_8053031C, global
 	.4byte 0x4E573452
 	.4byte 0x3A466169
 	.4byte 0x6C656420
@@ -1106,11 +1106,11 @@
 	.4byte 0x4E756D2E
 	.4byte 0x7465784D
 	.4byte 0x61700000
-.sym lbl_80530350, local
+.sym lbl_80530350, global
 	.4byte 0x6D617465
 	.4byte 0x7269616C
 	.4byte 0x2E680000
-.sym lbl_8053035C, local
+.sym lbl_8053035C, global
 	.4byte 0x4E573452
 	.4byte 0x3A466169
 	.4byte 0x6C656420
@@ -1124,11 +1124,11 @@
 	.4byte 0x4E756D2E
 	.4byte 0x74657853
 	.4byte 0x52540000
-.sym lbl_80530390, local
+.sym lbl_80530390, global
 	.4byte 0x6D617465
 	.4byte 0x7269616C
 	.4byte 0x2E680000
-.sym lbl_8053039C, local
+.sym lbl_8053039C, global
 	.4byte 0x4E573452
 	.4byte 0x3A466169
 	.4byte 0x6C656420
@@ -1142,7 +1142,7 @@
 	.4byte 0x4E756D2E
 	.4byte 0x74657853
 	.4byte 0x52540000
-.sym lbl_805303D0, local
+.sym lbl_805303D0, global
 	.4byte 0x6D617465
 	.4byte 0x7269616C
 	.4byte 0x2E680000
@@ -1163,5 +1163,5 @@
 .obj CMMTex_typestr, global
 	.4byte 0x434D4D54
 	.4byte 0x65780000
-.sym lbl_80669994, local
+.sym lbl_80669994, global
 	.4byte 0x41300000

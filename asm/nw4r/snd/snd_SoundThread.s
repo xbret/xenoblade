@@ -508,13 +508,13 @@
 # 0x80652C40 - 0x80653000
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80652C40, local
+.sym lbl_80652C40, global
 	.skip 0x10
-.sym lbl_80652C50, local
+.sym lbl_80652C50, global
 	.skip 0x3B0
 
 # 0x80667DF0 - 0x80667DF8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DF0, local
+.sym lbl_80667DF0, global
 	.skip 0x8

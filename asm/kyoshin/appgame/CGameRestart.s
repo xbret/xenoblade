@@ -39,7 +39,7 @@
 .text
 .balign 4
 
-.fn fn_80039E40, local
+.fn fn_80039E40, global
 /* 80039E40 00003400  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039E44 00003404  7C 08 02 A6 */	mflr r0
 /* 80039E48 00003408  90 01 00 14 */	stw r0, 0x14(r1)
@@ -63,7 +63,7 @@
 /* 80039E8C 0000344C  4E 80 00 20 */	blr
 .endfn fn_80039E40
 
-.fn fn_80039E90, local
+.fn fn_80039E90, global
 /* 80039E90 00003450  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039E94 00003454  7C 08 02 A6 */	mflr r0
 /* 80039E98 00003458  2C 03 00 00 */	cmpwi r3, 0x0
@@ -93,7 +93,7 @@
 /* 80039EE8 000034A8  48 00 00 04 */	b fn_80039EEC
 .endfn sinit_80039EE0
 
-.fn fn_80039EEC, local
+.fn fn_80039EEC, global
 /* 80039EEC 000034AC  38 00 00 00 */	li r0, 0x0
 /* 80039EF0 000034B0  98 03 00 00 */	stb r0, 0x0(r3)
 /* 80039EF4 000034B4  90 03 00 40 */	stw r0, 0x40(r3)
@@ -108,5 +108,5 @@
 # 0x8066660C - 0x80666610
 .section .sbss, "wa", @nobits
 .balign 4
-.sym lbl_8066660C, local
+.sym lbl_8066660C, global
 	.skip 0x4

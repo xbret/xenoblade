@@ -3,7 +3,7 @@
 
 # 0x802E8298 - 0x802E83CC
 .text
-.balign 4
+.balign 8
 
 .fn btm_discovery_db_init, global
 /* 802E8298 002B1858  94 21 FF F0 */	stwu r1, -0x10(r1)

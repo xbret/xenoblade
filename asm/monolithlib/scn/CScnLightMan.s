@@ -65,7 +65,7 @@
 .text
 .balign 4
 
-.fn fn_8048D024, local
+.fn fn_8048D024, global
 /* 8048D024 004565E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8048D028 004565E8  7C 08 02 A6 */	mflr r0
 /* 8048D02C 004565EC  3C A0 80 57 */	lis r5, __vt__CScnLightMan@ha
@@ -119,7 +119,7 @@
 /* 8048D0E0 004566A0  4E 80 00 20 */	blr
 .endfn fn_8048D024
 
-.fn fn_8048D0E4, local
+.fn fn_8048D0E4, global
 /* 8048D0E4 004566A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8048D0E8 004566A8  7C 08 02 A6 */	mflr r0
 /* 8048D0EC 004566AC  2C 03 00 00 */	cmpwi r3, 0x0
@@ -139,7 +139,7 @@
 /* 8048D120 004566E0  4E 80 00 20 */	blr
 .endfn fn_8048D0E4
 
-.fn fn_8048D124, local
+.fn fn_8048D124, global
 /* 8048D124 004566E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8048D128 004566E8  7C 08 02 A6 */	mflr r0
 /* 8048D12C 004566EC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -157,7 +157,7 @@
 /* 8048D15C 0045671C  4E 80 00 20 */	blr
 .endfn fn_8048D124
 
-.fn fn_8048D160, local
+.fn fn_8048D160, global
 /* 8048D160 00456720  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8048D164 00456724  7C 08 02 A6 */	mflr r0
 /* 8048D168 00456728  90 01 00 14 */	stw r0, 0x14(r1)
@@ -181,7 +181,7 @@
 /* 8048D1AC 0045676C  4E 80 00 20 */	blr
 .endfn fn_8048D160
 
-.fn fn_8048D1B0, local
+.fn fn_8048D1B0, global
 /* 8048D1B0 00456770  80 63 00 08 */	lwz r3, 0x8(r3)
 /* 8048D1B4 00456774  81 83 00 00 */	lwz r12, 0x0(r3)
 /* 8048D1B8 00456778  81 8C 00 14 */	lwz r12, 0x14(r12)

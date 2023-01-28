@@ -3,7 +3,7 @@
 
 # 0x802D9F50 - 0x802DAAD0
 .text
-.balign 4
+.balign 16
 
 .fn AXFXChorusExpGetMemSizeDpl2, global
 /* 802D9F50 002A3510  3C 60 00 01 */	lis r3, 0x1
@@ -830,26 +830,26 @@
 # 0x8066BF00 - 0x8066BF30
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF00, local
+.sym lbl_8066BF00, global
 	.4byte 0x42000000
-.sym lbl_8066BF04, local
+.sym lbl_8066BF04, global
 	.4byte 0x00000000
-.sym lbl_8066BF08, local
+.sym lbl_8066BF08, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066BF10, local
+.sym lbl_8066BF10, global
 	.4byte 0x3DCCCCCD
-.sym lbl_8066BF14, local
+.sym lbl_8066BF14, global
 	.4byte 0x42480000
-.sym lbl_8066BF18, local
+.sym lbl_8066BF18, global
 	.4byte 0x3F800000
-.sym lbl_8066BF1C, local
+.sym lbl_8066BF1C, global
 	.4byte 0x40000000
-.sym lbl_8066BF20, local
+.sym lbl_8066BF20, global
 	.4byte 0x47800000
-.sym lbl_8066BF24, local
+.sym lbl_8066BF24, global
 	.4byte 0x43800000
-.sym lbl_8066BF28, local
+.sym lbl_8066BF28, global
 	.4byte 0x46FA0000
-.sym lbl_8066BF2C, local
+.sym lbl_8066BF2C, global
 	.4byte 0x3B800000

@@ -114,7 +114,7 @@
 .endfn __restore_fpr
 .sym _savegpr_14, global
 
-.fn __save_gpr, local
+.fn __save_gpr, global
 /* 802BA120 002836E0  91 CB FF B8 */	stw r14, -0x48(r11)
 .sym _savegpr_15, global
 /* 802BA124 002836E4  91 EB FF BC */	stw r15, -0x44(r11)
@@ -154,7 +154,7 @@
 .endfn __save_gpr
 .sym _restgpr_14, global
 
-.fn __restore_gpr, local
+.fn __restore_gpr, global
 /* 802BA16C 0028372C  81 CB FF B8 */	lwz r14, -0x48(r11)
 .sym _restgpr_15, global
 /* 802BA170 00283730  81 EB FF BC */	lwz r15, -0x44(r11)
@@ -640,7 +640,7 @@
 # 0x8050CE78 - 0x8050CE90
 .rodata
 .balign 8
-.sym lbl_8050CE78, local
+.sym lbl_8050CE78, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x41F00000

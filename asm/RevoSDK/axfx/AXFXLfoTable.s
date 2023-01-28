@@ -3,7 +3,7 @@
 
 # 0x802DAAD0 - 0x802DAAE0
 .text
-.balign 4
+.balign 16
 
 .fn __AXFXGetLfoSinTable, global
 /* 802DAAD0 002A4090  3C 60 80 54 */	lis r3, lbl_805433E0@ha
@@ -15,7 +15,7 @@
 # 0x805433E0 - 0x805435E0
 .data
 .balign 8
-.sym lbl_805433E0, local
+.sym lbl_805433E0, global
 	.4byte 0x00000000
 	.4byte 0x00064855
 	.4byte 0x000C8FB3

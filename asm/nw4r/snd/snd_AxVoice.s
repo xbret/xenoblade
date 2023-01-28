@@ -26,7 +26,7 @@
 /* 8040DF00 003D74C0  4E 80 00 20 */	blr
 .endfn __ct__Q44nw4r3snd6detail7AxVoiceFv
 
-.fn fn_8040DF04, local
+.fn fn_8040DF04, global
 /* 8040DF04 003D74C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DF08 003D74C8  7C 08 02 A6 */	mflr r0
 /* 8040DF0C 003D74CC  2C 03 00 00 */	cmpwi r3, 0x0
@@ -3370,21 +3370,21 @@
 # 0x8066C690 - 0x8066C6B8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C690, local
+.sym lbl_8066C690, global
 	.4byte 0x46FA0000
-.sym lbl_8066C694, local
+.sym lbl_8066C694, global
 	.4byte 0x3FAAAAAB
-.sym lbl_8066C698, local
+.sym lbl_8066C698, global
 	.4byte 0x3F800000
 	.4byte 0x00000000
-.sym lbl_8066C6A0, local
+.sym lbl_8066C6A0, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C6A8, local
+.sym lbl_8066C6A8, global
 	.4byte 0x477FFF00
-.sym lbl_8066C6AC, local
+.sym lbl_8066C6AC, global
 	.4byte 0x00000000
-.sym lbl_8066C6B0, local
+.sym lbl_8066C6B0, global
 	.4byte 0x47800000
-.sym lbl_8066C6B4, local
+.sym lbl_8066C6B4, global
 	.4byte 0x46FFFE00

@@ -3,7 +3,7 @@
 
 # 0x802EE950 - 0x802EFBAC
 .text
-.balign 4
+.balign 16
 
 .fn btu_hcif_process_event, global
 /* 802EE950 002B7F10  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1327,14 +1327,14 @@
 # 0x80546240 - 0x805462D0
 .data
 .balign 8
-.sym lbl_80546240, local
+.sym lbl_80546240, global
 	.4byte 0x43746C72
 	.4byte 0x20482F77
 	.4byte 0x20657272
 	.4byte 0x6F722065
 	.4byte 0x76656E74
 	.4byte 0x00000000
-.sym lbl_80546258, local
+.sym lbl_80546258, global
 	.4byte 0x4576656E
 	.4byte 0x74206D69
 	.4byte 0x736D6174
@@ -1345,7 +1345,7 @@
 	.4byte 0x206F7063
 	.4byte 0x6F64653D
 	.4byte 0x25580000
-.sym lbl_80546280, local
+.sym lbl_80546280, global
 	.4byte 0x436D6420
 	.4byte 0x74696D65
 	.4byte 0x6F75743B
@@ -1354,7 +1354,7 @@
 	.4byte 0x696E2071
 	.4byte 0x75657565
 	.4byte 0x00000000
-.sym lbl_805462A0, local
+.sym lbl_805462A0, global
 	.4byte 0x42545520
 	.4byte 0x48434920
 	.4byte 0x636F6D6D

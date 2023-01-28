@@ -95,7 +95,7 @@
 .text
 .balign 4
 
-.fn fn_8010EA64, local
+.fn fn_8010EA64, global
 /* 8010EA64 000D8024  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8010EA68 000D8028  7C 08 02 A6 */	mflr r0
 /* 8010EA6C 000D802C  3C 80 80 53 */	lis r4, __vt__CPcSelectCursor@ha
@@ -131,7 +131,7 @@
 /* 8010EAE4 000D80A4  4E 80 00 20 */	blr
 .endfn fn_8010EA64
 
-.fn fn_8010EAE8, local
+.fn fn_8010EAE8, global
 /* 8010EAE8 000D80A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8010EAEC 000D80AC  7C 08 02 A6 */	mflr r0
 /* 8010EAF0 000D80B0  2C 03 00 00 */	cmpwi r3, 0x0
@@ -158,7 +158,7 @@
 /* 8010EB40 000D8100  4E 80 00 20 */	blr
 .endfn fn_8010EAE8
 
-.fn fn_8010EB44, local
+.fn fn_8010EB44, global
 /* 8010EB44 000D8104  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8010EB48 000D8108  7C 08 02 A6 */	mflr r0
 /* 8010EB4C 000D810C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -278,7 +278,7 @@
 /* 8010ED14 000D82D4  4E 80 00 20 */	blr
 .endfn fn_8010EB44
 
-.fn fn_8010ED18, local
+.fn fn_8010ED18, global
 /* 8010ED18 000D82D8  80 03 00 44 */	lwz r0, 0x44(r3)
 /* 8010ED1C 000D82DC  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8010ED20 000D82E0  4C 82 00 20 */	bnelr
@@ -289,7 +289,7 @@
 /* 8010ED34 000D82F4  4E 80 00 20 */	blr
 .endfn fn_8010ED18
 
-.fn fn_8010ED38, local
+.fn fn_8010ED38, global
 /* 8010ED38 000D82F8  80 03 00 44 */	lwz r0, 0x44(r3)
 /* 8010ED3C 000D82FC  2C 00 00 02 */	cmpwi r0, 0x2
 /* 8010ED40 000D8300  4C 82 00 20 */	bnelr
@@ -300,7 +300,7 @@
 /* 8010ED54 000D8314  4E 80 00 20 */	blr
 .endfn fn_8010ED38
 
-.fn fn_8010ED58, local
+.fn fn_8010ED58, global
 /* 8010ED58 000D8318  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8010ED5C 000D831C  7C 08 02 A6 */	mflr r0
 /* 8010ED60 000D8320  90 01 00 14 */	stw r0, 0x14(r1)
@@ -335,17 +335,17 @@
 /* 8010EDD0 000D8390  4E 80 00 20 */	blr
 .endfn fn_8010ED58
 
-.fn fn_8010EDD4, local
+.fn fn_8010EDD4, global
 /* 8010EDD4 000D8394  88 63 00 40 */	lbz r3, 0x40(r3)
 /* 8010EDD8 000D8398  4E 80 00 20 */	blr
 .endfn fn_8010EDD4
 
-.fn fn_8010EDDC, local
+.fn fn_8010EDDC, global
 /* 8010EDDC 000D839C  98 83 00 41 */	stb r4, 0x41(r3)
 /* 8010EDE0 000D83A0  48 00 00 60 */	b fn_8010EE40
 .endfn fn_8010EDDC
 
-.fn fn_8010EDE4, local
+.fn fn_8010EDE4, global
 /* 8010EDE4 000D83A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8010EDE8 000D83A8  7C 08 02 A6 */	mflr r0
 /* 8010EDEC 000D83AC  C0 02 95 34 */	lfs f0, lbl_806698B4@sda21(r2)
@@ -371,7 +371,7 @@
 /* 8010EE3C 000D83FC  4E 80 00 20 */	blr
 .endfn fn_8010EDE4
 
-.fn fn_8010EE40, local
+.fn fn_8010EE40, global
 /* 8010EE40 000D8400  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8010EE44 000D8404  7C 08 02 A6 */	mflr r0
 /* 8010EE48 000D8408  90 01 00 54 */	stw r0, 0x54(r1)

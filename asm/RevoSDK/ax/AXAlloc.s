@@ -3,7 +3,7 @@
 
 # 0x802D2110 - 0x802D26B0
 .text
-.balign 4
+.balign 16
 
 .fn __AXGetStackHead, global
 /* 802D2110 0029B6D0  3C 80 80 58 */	lis r4, lbl_8057D828@ha
@@ -421,13 +421,13 @@
 # 0x8057D828 - 0x8057D940
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057D828, local
+.sym lbl_8057D828, global
 	.skip 0x80
-.sym lbl_8057D8A8, local
+.sym lbl_8057D8A8, global
 	.skip 0x98
 
 # 0x80667610 - 0x80667618
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667610, local
+.sym lbl_80667610, global
 	.skip 0x8

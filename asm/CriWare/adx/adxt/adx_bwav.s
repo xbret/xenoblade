@@ -1071,13 +1071,13 @@
 # 0x8051AA78 - 0x8051AA98
 .rodata
 .balign 8
-.sym lbl_8051AA78, local
+.sym lbl_8051AA78, global
 	.4byte 0x666D7420
 	.4byte 0x00000000
-.sym lbl_8051AA80, local
+.sym lbl_8051AA80, global
 	.4byte 0x64617461
 	.4byte 0x00000000
-.sym lbl_8051AA88, local
+.sym lbl_8051AA88, global
 	.4byte 0x52494646
 	.4byte 0x00574156
 	.4byte 0x45000000
@@ -1086,7 +1086,7 @@
 # 0x80563728 - 0x80563730
 .data
 .balign 8
-.sym lbl_80563728, local
+.sym lbl_80563728, global
 	.4byte lbl_8051AA78
-.sym lbl_8056372C, local
+.sym lbl_8056372C, global
 	.4byte lbl_8051AA80

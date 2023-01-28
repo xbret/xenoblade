@@ -3,7 +3,7 @@
 
 # 0x803629E0 - 0x80363F30
 .text
-.balign 4
+.balign 16
 
 .fn USB_LOG, global
 /* 803629E0 0032BFA0  94 21 FF 80 */	stwu r1, -0x80(r1)
@@ -1491,7 +1491,7 @@
 # 0x8055F270 - 0x8055FAA0
 .data
 .balign 8
-.sym lbl_8055F270, local
+.sym lbl_8055F270, global
 	.4byte 0x55534220
 	.4byte 0x4552523A
 	.4byte 0x20000000
@@ -2020,20 +2020,20 @@
 # 0x80665CF0 - 0x80665D00
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665CF0, local
+.sym lbl_80665CF0, global
 	.4byte 0xFFFFFFFF
-.sym lbl_80665CF4, local
+.sym lbl_80665CF4, global
 	.4byte 0x01000000
-.sym lbl_80665CF8, local
+.sym lbl_80665CF8, global
 	.4byte 0x5553423A
 	.4byte 0x20000000
 
 # 0x80667B88 - 0x80667B98
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667B88, local
+.sym lbl_80667B88, global
 	.skip 0x4
-.sym lbl_80667B8C, local
+.sym lbl_80667B8C, global
 	.skip 0x4
-.sym lbl_80667B90, local
+.sym lbl_80667B90, global
 	.skip 0x8

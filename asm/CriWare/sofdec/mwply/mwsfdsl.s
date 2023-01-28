@@ -87,7 +87,7 @@
 /* 8039CF90 00366550  4E 80 00 20 */	blr
 .endfn mwPlyEntryFname
 
-.fn fn_8039CF94, local
+.fn fn_8039CF94, global
 /* 8039CF94 00366554  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039CF98 00366558  7C 08 02 A6 */	mflr r0
 /* 8039CF9C 0036655C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -168,7 +168,7 @@
 /* 8039D0B0 00366670  4E 80 00 20 */	blr
 .endfn fn_8039CF94
 
-.fn fn_8039D0B4, local
+.fn fn_8039D0B4, global
 /* 8039D0B4 00366674  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039D0B8 00366678  7C 08 02 A6 */	mflr r0
 /* 8039D0BC 0036667C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -222,7 +222,7 @@
 /* 8039D170 00366730  4E 80 00 20 */	blr
 .endfn fn_8039D0B4
 
-.fn fn_8039D174, local
+.fn fn_8039D174, global
 /* 8039D174 00366734  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039D178 00366738  7C 08 02 A6 */	mflr r0
 /* 8039D17C 0036673C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -489,7 +489,7 @@
 /* 8039D524 00366AE4  4E 80 00 20 */	blr
 .endfn MWSFLSC_Pause
 
-.fn fn_8039D528, local
+.fn fn_8039D528, global
 /* 8039D528 00366AE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039D52C 00366AEC  7C 08 02 A6 */	mflr r0
 /* 8039D530 00366AF0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -912,7 +912,7 @@
 # 0x8051D1D0 - 0x8051D508
 .rodata
 .balign 8
-.sym lbl_8051D1D0, local
+.sym lbl_8051D1D0, global
 	.4byte 0x45313132
 	.4byte 0x32363333
 	.4byte 0x206D7750

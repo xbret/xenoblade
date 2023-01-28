@@ -155,7 +155,7 @@
 /* 804DEC2C 004A81EC  4E 80 00 20 */	blr
 .endfn __dt__CArcItem
 
-.fn fn_804DEC30, local
+.fn fn_804DEC30, global
 /* 804DEC30 004A81F0  80 03 00 2C */	lwz r0, 0x2c(r3)
 /* 804DEC34 004A81F4  2C 00 00 00 */	cmpwi r0, 0x0
 /* 804DEC38 004A81F8  4C 82 00 20 */	bnelr
@@ -174,7 +174,7 @@
 /* 804DEC68 004A8228  4E 80 00 20 */	blr
 .endfn fn_804DEC30
 
-.fn fn_804DEC6C, local
+.fn fn_804DEC6C, global
 /* 804DEC6C 004A822C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804DEC70 004A8230  7C 08 02 A6 */	mflr r0
 /* 804DEC74 004A8234  90 01 00 34 */	stw r0, 0x34(r1)
@@ -225,7 +225,7 @@
 /* 804DED14 004A82D4  4E 80 00 20 */	blr
 .endfn fn_804DEC6C
 
-.fn fn_804DED18, local
+.fn fn_804DED18, global
 /* 804DED18 004A82D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DED1C 004A82DC  7C 08 02 A6 */	mflr r0
 /* 804DED20 004A82E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -276,7 +276,7 @@
 	.4byte 0x43417263
 	.4byte 0x4974656D
 	.4byte 0x00000000
-.sym lbl_80528014, local
+.sym lbl_80528014, global
 	.4byte 0x61647800
 	.4byte 0x61687800
 	.4byte 0x2E706B62

@@ -728,7 +728,7 @@
 /* 803ECE24 003B63E4  4E 80 00 20 */	blr
 .endfn Calc_BILLBOARD_ROT__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
 
-.fn fn_803ECE28, local
+.fn fn_803ECE28, global
 /* 803ECE28 003B63E8  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803ECE2C 003B63EC  7C 08 02 A6 */	mflr r0
 /* 803ECE30 003B63F0  90 01 00 74 */	stw r0, 0x74(r1)
@@ -2386,7 +2386,7 @@
 # 0x80520FB8 - 0x80520FD8
 .rodata
 .balign 8
-.sym lbl_80520FB8, local
+.sym lbl_80520FB8, global
 	.4byte 0x00000000
 	.4byte Calc_BILLBOARD_STD__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
 	.4byte Calc_BILLBOARD_PERSP_STD__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
@@ -2399,10 +2399,10 @@
 # 0x8066C430 - 0x8066C440
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C430, local
+.sym lbl_8066C430, global
 	.4byte 0x00000000
-.sym lbl_8066C434, local
+.sym lbl_8066C434, global
 	.4byte 0x219392EF
-.sym lbl_8066C438, local
+.sym lbl_8066C438, global
 	.4byte 0x219392EF
 	.4byte 0x00000000

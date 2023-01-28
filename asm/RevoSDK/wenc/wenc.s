@@ -210,7 +210,7 @@
 # 0x80518D88 - 0x80518DC8
 .rodata
 .balign 8
-.sym lbl_80518D88, local
+.sym lbl_80518D88, global
 	.4byte 0x3FECC000
 	.4byte 0x00000000
 	.4byte 0x3FECC000
@@ -231,6 +231,6 @@
 # 0x8066C1F0 - 0x8066C1F8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C1F0, local
+.sym lbl_8066C1F0, global
 	.4byte 0x43300000
 	.4byte 0x80000000

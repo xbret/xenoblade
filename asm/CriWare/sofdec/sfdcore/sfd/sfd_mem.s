@@ -94,7 +94,7 @@
 # 0x805202A0 - 0x805202D8
 .rodata
 .balign 8
-.sym lbl_805202A0, local
+.sym lbl_805202A0, global
 	.4byte SFMEM_Init
 	.4byte SFMEM_Finish
 	.4byte SFMEM_ExecServer

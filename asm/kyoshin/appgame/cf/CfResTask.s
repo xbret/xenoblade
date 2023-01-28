@@ -70,7 +70,7 @@
 .text
 .balign 4
 
-.fn fn_80065848, local
+.fn fn_80065848, global
 /* 80065848 0002EE08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8006584C 0002EE0C  7C 08 02 A6 */	mflr r0
 /* 80065850 0002EE10  2C 03 00 00 */	cmpwi r3, 0x0
@@ -96,7 +96,7 @@
 /* 8006589C 0002EE5C  4E 80 00 20 */	blr
 .endfn fn_80065848
 
-.fn fn_800658A0, local
+.fn fn_800658A0, global
 /* 800658A0 0002EE60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800658A4 0002EE64  7C 08 02 A6 */	mflr r0
 /* 800658A8 0002EE68  2C 03 00 00 */	cmpwi r3, 0x0
@@ -123,7 +123,7 @@
 /* 800658F8 0002EEB8  4E 80 00 20 */	blr
 .endfn fn_800658A0
 
-.fn fn_800658FC, local
+.fn fn_800658FC, global
 /* 800658FC 0002EEBC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80065900 0002EEC0  7C 08 02 A6 */	mflr r0
 /* 80065904 0002EEC4  2C 03 00 00 */	cmpwi r3, 0x0
@@ -159,11 +159,11 @@
 /* 80065970 0002EF30  4E 80 00 20 */	blr
 .endfn fn_800658FC
 
-.fn fn_80065974, local
+.fn fn_80065974, global
 /* 80065974 0002EF34  4E 80 00 20 */	blr
 .endfn fn_80065974
 
-.fn fn_80065978, local
+.fn fn_80065978, global
 /* 80065978 0002EF38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8006597C 0002EF3C  7C 08 02 A6 */	mflr r0
 /* 80065980 0002EF40  90 01 00 14 */	stw r0, 0x14(r1)
@@ -184,6 +184,6 @@
 /* 800659BC 0002EF7C  4E 80 00 20 */	blr
 .endfn fn_80065978
 
-.fn fn_800659C0, local
+.fn fn_800659C0, global
 /* 800659C0 0002EF80  4E 80 00 20 */	blr
 .endfn fn_800659C0

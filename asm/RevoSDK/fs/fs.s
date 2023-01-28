@@ -3,7 +3,7 @@
 
 # 0x80315EC0 - 0x80317470
 .text
-.balign 4
+.balign 16
 
 .fn ISFS_OpenLib, global
 /* 80315EC0 002DF480  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1613,7 +1613,7 @@
 .obj __devfs, local
 	.skip 0x4
 .endobj __devfs
-.sym lbl_806678F8, local
+.sym lbl_806678F8, global
 	.skip 0x4
 
 .obj lo$688, local

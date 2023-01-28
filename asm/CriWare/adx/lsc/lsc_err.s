@@ -82,7 +82,7 @@
 # 0x805EB270 - 0x805EB378
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805EB270, local
+.sym lbl_805EB270, global
 	.skip 0x4
-.sym lbl_805EB274, local
+.sym lbl_805EB274, global
 	.skip 0x104

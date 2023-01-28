@@ -1680,7 +1680,7 @@
 /* 80383CC4 0034D284  4E 80 00 20 */	blr
 .endfn ADXT_SetSvrFreq
 
-.fn fn_80383CC8, local
+.fn fn_80383CC8, global
 /* 80383CC8 0034D288  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80383CCC 0034D28C  7C 08 02 A6 */	mflr r0
 /* 80383CD0 0034D290  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1713,7 +1713,7 @@
 /* 80383D30 0034D2F0  4E 80 00 20 */	blr
 .endfn fn_80383CC8
 
-.fn fn_80383D34, local
+.fn fn_80383D34, global
 /* 80383D34 0034D2F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80383D38 0034D2F8  7C 08 02 A6 */	mflr r0
 /* 80383D3C 0034D2FC  2C 03 00 00 */	cmpwi r3, 0x0
@@ -2453,20 +2453,20 @@
 # 0x80519968 - 0x8051A120
 .rodata
 .balign 8
-.sym lbl_80519968, local
+.sym lbl_80519968, global
 	.4byte 0x3F59999A
 	.4byte 0x00000000
-.sym lbl_80519970, local
+.sym lbl_80519970, global
 	.4byte 0x43300000
 	.4byte 0x80000000
 	.4byte 0x00000000
 	.4byte 0x447A0000
 	.4byte 0x42700000
 	.4byte 0xC2700000
-.sym lbl_80519988, local
+.sym lbl_80519988, global
 	.4byte 0x42C80000
 	.4byte 0xBF800000
-.sym lbl_80519990, local
+.sym lbl_80519990, global
 	.4byte 0x45303230
 	.4byte 0x38303830
 	.4byte 0x34206164
@@ -2955,25 +2955,25 @@
 # 0x80563720 - 0x80563728
 .data
 .balign 8
-.sym lbl_80563720, local
+.sym lbl_80563720, global
 	.4byte 0x00000019
-.sym lbl_80563724, local
+.sym lbl_80563724, global
 	.4byte 0x00000001
 
 # 0x805E8570 - 0x805E85F0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E8570, local
+.sym lbl_805E8570, global
 	.skip 0x20
-.sym lbl_805E8590, local
+.sym lbl_805E8590, global
 	.skip 0x8
-.sym lbl_805E8598, local
+.sym lbl_805E8598, global
 	.skip 0x4
-.sym lbl_805E859C, local
+.sym lbl_805E859C, global
 	.skip 0x4
-.sym lbl_805E85A0, local
+.sym lbl_805E85A0, global
 	.skip 0x4
-.sym lbl_805E85A4, local
+.sym lbl_805E85A4, global
 	.skip 0x4
-.sym lbl_805E85A8, local
+.sym lbl_805E85A8, global
 	.skip 0x48

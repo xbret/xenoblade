@@ -3156,7 +3156,7 @@
 # 0x805210D8 - 0x805210E8
 .rodata
 .balign 8
-.sym lbl_805210D8, local
+.sym lbl_805210D8, global
 	.4byte 0x00000007
 	.4byte 0x53636E4D
 	.4byte 0x646C0000
@@ -3165,7 +3165,7 @@
 # 0x8056D080 - 0x8056D0C8
 .data
 .balign 8
-.sym lbl_8056D080, local
+.sym lbl_8056D080, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d6G3dObj7TypeObj

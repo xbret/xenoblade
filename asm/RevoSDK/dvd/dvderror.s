@@ -3,7 +3,7 @@
 
 # 0x8030F6F0 - 0x80310110
 .text
-.balign 4
+.balign 16
 
 .fn cbForNandClose, global
 /* 8030F6F0 002D8CB0  81 8D B7 00 */	lwz r12, Callback@sda21(r13)
@@ -729,7 +729,7 @@
 # 0x80549D30 - 0x80549D60
 .data
 .balign 8
-.sym lbl_80549D30, local
+.sym lbl_80549D30, global
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x2F746573
@@ -737,7 +737,7 @@
 	.4byte 0x76646572
 	.4byte 0x726F722E
 	.4byte 0x64617400
-.sym lbl_80549D4C, local
+.sym lbl_80549D4C, global
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x2F746573
@@ -747,9 +747,9 @@
 # 0x805CC9E0 - 0x805CCC40
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CC9E0, local
+.sym lbl_805CC9E0, global
 	.skip 0x8C
-.sym lbl_805CCA6C, local
+.sym lbl_805CCA6C, global
 	.skip 0xD4
 
 .obj __ErrorInfo, global
@@ -760,9 +760,9 @@
 # 0x80667878 - 0x80667888
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667878, local
+.sym lbl_80667878, global
 	.skip 0x4
-.sym lbl_8066787C, local
+.sym lbl_8066787C, global
 	.skip 0x4
 
 .obj Callback, local

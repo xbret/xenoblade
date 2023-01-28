@@ -11326,7 +11326,7 @@
 # 0x8051F8F0 - 0x8051F900
 .rodata
 .balign 8
-.sym lbl_8051F8F0, local
+.sym lbl_8051F8F0, global
 	.4byte mpvabdec_IntraBlock_Isr
 	.4byte mpvabdec_IntraBlockDc11_Isr
 	.4byte mpvabdec_NintraBlock_Isr
@@ -12116,5 +12116,5 @@
 # 0x80607B68 - 0x80607B78
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80607B68, local
+.sym lbl_80607B68, global
 	.skip 0x10

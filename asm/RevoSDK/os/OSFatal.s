@@ -3,7 +3,7 @@
 
 # 0x80356AF0 - 0x80357720
 .text
-.balign 4
+.balign 16
 
 .fn ScreenReport, global
 /* 80356AF0 003200B0  94 21 FE 80 */	stwu r1, -0x180(r1)
@@ -849,48 +849,48 @@
 # 0x805D4420 - 0x805D4700
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D4420, local
+.sym lbl_805D4420, global
 	.skip 0x2C8
-.sym lbl_805D46E8, local
+.sym lbl_805D46E8, global
 	.skip 0x18
 
 # 0x80665B80 - 0x80665B88
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B80, local
+.sym lbl_80665B80, global
 	.4byte 0x25730A00
 	.4byte 0x00000000
 
 # 0x8066C190 - 0x8066C1D0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C190, local
+.sym lbl_8066C190, global
 	.4byte 0x3F000000
-.sym lbl_8066C194, local
+.sym lbl_8066C194, global
 	.4byte 0x41800000
-.sym lbl_8066C198, local
+.sym lbl_8066C198, global
 	.4byte 0x3DC8B439
-.sym lbl_8066C19C, local
+.sym lbl_8066C19C, global
 	.4byte 0x3E839581
-.sym lbl_8066C1A0, local
+.sym lbl_8066C1A0, global
 	.4byte 0x3F010625
-.sym lbl_8066C1A4, local
+.sym lbl_8066C1A4, global
 	.4byte 0x43000000
-.sym lbl_8066C1A8, local
+.sym lbl_8066C1A8, global
 	.4byte 0x3EE0C49C
-.sym lbl_8066C1AC, local
+.sym lbl_8066C1AC, global
 	.4byte 0xBE178D50
-.sym lbl_8066C1B0, local
+.sym lbl_8066C1B0, global
 	.4byte 0x3E94FDF4
-.sym lbl_8066C1B4, local
+.sym lbl_8066C1B4, global
 	.4byte 0x3EBC6A7F
-.sym lbl_8066C1B8, local
+.sym lbl_8066C1B8, global
 	.4byte 0x3D916873
-.sym lbl_8066C1BC, local
+.sym lbl_8066C1BC, global
 	.4byte 0x436B0000
-.sym lbl_8066C1C0, local
+.sym lbl_8066C1C0, global
 	.4byte 0x43700000
 	.4byte 0x00000000
-.sym lbl_8066C1C8, local
+.sym lbl_8066C1C8, global
 	.4byte 0x43300000
 	.4byte 0x00000000

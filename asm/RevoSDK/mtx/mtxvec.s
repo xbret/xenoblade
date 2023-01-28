@@ -3,7 +3,7 @@
 
 # 0x8034DDF0 - 0x8034DE50
 .text
-.balign 4
+.balign 16
 
 .fn PSMTXMultVec, global
 /* 8034DDF0 003173B0  E0 04 00 00 */	psq_l f0, 0x0(r4), 0, qr0

@@ -65,7 +65,7 @@
 .text
 .balign 4
 
-.fn fn_80436F20, local
+.fn fn_80436F20, global
 /* 80436F20 004004E0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80436F24 004004E4  7C 08 02 A6 */	mflr r0
 /* 80436F28 004004E8  E0 45 00 00 */	psq_l f2, 0x0(r5), 0, qr0
@@ -159,7 +159,7 @@
 /* 80437080 00400640  4E 80 00 20 */	blr
 .endfn fn_80436F20
 
-.fn fn_80437084, local
+.fn fn_80437084, global
 /* 80437084 00400644  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80437088 00400648  E0 45 00 04 */	psq_l f2, 0x4(r5), 0, qr0
 /* 8043708C 0040064C  E0 64 00 04 */	psq_l f3, 0x4(r4), 0, qr0
@@ -211,7 +211,7 @@
 /* 80437144 00400704  4E 80 00 20 */	blr
 .endfn fn_80437084
 
-.fn fn_80437148, local
+.fn fn_80437148, global
 /* 80437148 00400708  7C 60 1B 78 */	mr r0, r3
 /* 8043714C 0040070C  7C 83 23 78 */	mr r3, r4
 /* 80437150 00400710  7C A4 2B 78 */	mr r4, r5
@@ -219,7 +219,7 @@
 /* 80437158 00400718  4B F1 74 38 */	b C_QUATSlerp
 .endfn fn_80437148
 
-.fn fn_8043715C, local
+.fn fn_8043715C, global
 /* 8043715C 0040071C  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 80437160 00400720  7C 08 02 A6 */	mflr r0
 /* 80437164 00400724  C0 02 C6 E8 */	lfs f0, lbl_8066CA68@sda21(r2)
@@ -331,7 +331,7 @@
 /* 8043730C 004008CC  4E 80 00 20 */	blr
 .endfn fn_8043715C
 
-.fn fn_80437310, local
+.fn fn_80437310, global
 /* 80437310 004008D0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80437314 004008D4  7C 08 02 A6 */	mflr r0
 /* 80437318 004008D8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -376,21 +376,21 @@
 # 0x8065A068 - 0x8065A088
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8065A068, local
+.sym lbl_8065A068, global
 	.skip 0x10
-.sym lbl_8065A078, local
+.sym lbl_8065A078, global
 	.skip 0x10
 
 # 0x8066CA60 - 0x8066CA78
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066CA60, local
+.sym lbl_8066CA60, global
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066CA68, local
+.sym lbl_8066CA68, global
 	.4byte 0x4222F983
-.sym lbl_8066CA6C, local
+.sym lbl_8066CA6C, global
 	.4byte 0x00000000
-.sym lbl_8066CA70, local
+.sym lbl_8066CA70, global
 	.4byte 0x3F800000
 	.4byte 0x00000000

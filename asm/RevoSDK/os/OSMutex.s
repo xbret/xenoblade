@@ -3,7 +3,7 @@
 
 # 0x80359C20 - 0x80359E80
 .text
-.balign 4
+.balign 16
 
 .fn OSInitMutex, global
 /* 80359C20 003231E0  94 21 FF F0 */	stwu r1, -0x10(r1)

@@ -3,7 +3,7 @@
 
 # 0x80341810 - 0x80341A90
 .text
-.balign 4
+.balign 16
 
 .fn __HBMSYNGetRelativePitch, global
 /* 80341810 0030ADD0  80 63 00 28 */	lwz r3, 0x28(r3)
@@ -79,7 +79,7 @@
 /* 8034191C 0030AEDC  4E 80 00 20 */	blr
 .endfn __HBMSYNGetRelativePitch
 
-.fn fn_80341920, local
+.fn fn_80341920, global
 /* 80341920 0030AEE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341924 0030AEE4  3C 00 43 30 */	lis r0, 0x4330
 /* 80341928 0030AEE8  3C A0 80 52 */	lis r5, lbl_80518B80@ha
@@ -110,7 +110,7 @@
 /* 80341988 0030AF48  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8034198C 0030AF4C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80341990, local
+.fn fn_80341990, global
 /* 80341990 0030AF50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341994 0030AF54  7C 08 02 A6 */	mflr r0
 /* 80341998 0030AF58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -183,21 +183,21 @@
 # 0x80518B78 - 0x80518B90
 .rodata
 .balign 8
-.sym lbl_80518B78, local
+.sym lbl_80518B78, global
 	.4byte 0x3F800000
-.sym lbl_80518B7C, local
+.sym lbl_80518B7C, global
 	.4byte 0x46FA0000
-.sym lbl_80518B80, local
+.sym lbl_80518B80, global
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_80518B88, local
+.sym lbl_80518B88, global
 	.4byte 0x47800000
 	.4byte 0x00000000
 
 # 0x80550020 - 0x80550410
 .data
 .balign 8
-.sym lbl_80550020, local
+.sym lbl_80550020, global
 	.4byte 0x3F800000
 	.4byte 0x3F8012F1
 	.4byte 0x3F8025E1
@@ -216,7 +216,7 @@
 	.4byte 0x3F811D26
 	.4byte 0x3F813040
 	.4byte 0x3F81435B
-.sym lbl_80550068, local
+.sym lbl_80550068, global
 	.4byte 0x3F815675
 	.4byte 0x3F816998
 	.4byte 0x3F817CBB

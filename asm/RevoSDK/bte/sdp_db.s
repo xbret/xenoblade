@@ -940,7 +940,7 @@
 # 0x80548F50 - 0x80548FE8
 .data
 .balign 8
-.sym lbl_80548F50, local
+.sym lbl_80548F50, global
 	.4byte 0x5344505F
 	.4byte 0x41646441
 	.4byte 0x74747269
@@ -956,7 +956,7 @@
 	.4byte 0x20746F20
 	.4byte 0x28256429
 	.4byte 0x00000000
-.sym lbl_80548F8C, local
+.sym lbl_80548F8C, global
 	.4byte 0x5344505F
 	.4byte 0x41646455
 	.4byte 0x75696453
@@ -970,7 +970,7 @@
 	.4byte 0x75696473
 	.4byte 0x206F6620
 	.4byte 0x25640000
-.sym lbl_80548FC0, local
+.sym lbl_80548FC0, global
 	.4byte 0x44656C65
 	.4byte 0x74696E67
 	.4byte 0x20617474

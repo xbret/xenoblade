@@ -111,9 +111,9 @@
 # 0x8066C330 - 0x8066C340
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C330, local
+.sym lbl_8066C330, global
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066C338, local
+.sym lbl_8066C338, global
 	.4byte 0x43300000
 	.4byte 0x00000000

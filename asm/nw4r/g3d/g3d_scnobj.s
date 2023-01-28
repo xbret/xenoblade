@@ -448,7 +448,7 @@
 /* 803F498C 003BDF4C  4E 80 00 20 */	blr
 .endfn EnableScnObjCallbackTiming__Q34nw4r3g3d6ScnObjFQ44nw4r3g3d6ScnObj6Timing
 
-.fn fn_803F4990, local
+.fn fn_803F4990, global
 /* 803F4990 003BDF50  A0 A3 00 DA */	lhz r5, 0xda(r3)
 /* 803F4994 003BDF54  54 80 04 3E */	clrlwi r0, r4, 16
 /* 803F4998 003BDF58  7C A0 03 78 */	or r0, r5, r0
@@ -1860,7 +1860,7 @@
 # 0x80521080 - 0x80521090
 .rodata
 .balign 8
-.sym lbl_80521080, local
+.sym lbl_80521080, global
 	.4byte 0x00000007
 	.4byte 0x53636E4F
 	.4byte 0x626A0000
@@ -1895,7 +1895,7 @@
 	.rel GetScnObjOption__Q34nw4r3g3d6ScnObjCFUlPUl, .L_803F48B0
 	.rel GetScnObjOption__Q34nw4r3g3d6ScnObjCFUlPUl, .L_803F48C0
 .endobj jumptable_8056CF00
-.sym lbl_8056CF28, local
+.sym lbl_8056CF28, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d8ScnGroupCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1912,7 +1912,7 @@
 	.4byte Insert__Q34nw4r3g3d8ScnGroupFUlPQ34nw4r3g3d6ScnObj
 	.4byte Remove__Q34nw4r3g3d8ScnGroupFUl
 	.4byte Remove__Q34nw4r3g3d8ScnGroupFPQ34nw4r3g3d6ScnObj
-.sym lbl_8056CF68, local
+.sym lbl_8056CF68, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d6ScnObjCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1931,7 +1931,7 @@
 # 0x8066C4D8 - 0x8066C4E0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C4D8, local
+.sym lbl_8066C4D8, global
 	.4byte 0x00000000
-.sym lbl_8066C4DC, local
+.sym lbl_8066C4DC, global
 	.4byte 0x3F800000

@@ -3,7 +3,7 @@
 
 # 0x8034E730 - 0x8034F8B0
 .text
-.balign 4
+.balign 16
 
 .fn NANDPrivateCreate, global
 /* 8034E730 00317CF0  94 21 FF 90 */	stwu r1, -0x70(r1)
@@ -72,7 +72,7 @@
 /* 8034E81C 00317DDC  4E 80 00 20 */	blr
 .endfn NANDPrivateCreate
 
-.fn fn_8034E820, local
+.fn fn_8034E820, global
 /* 8034E820 00317DE0  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8034E824 00317DE4  7C 08 02 A6 */	mflr r0
 /* 8034E828 00317DE8  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1279,7 +1279,7 @@
 # 0x80665AE0 - 0x80665AE8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665AE0, local
+.sym lbl_80665AE0, global
 	.4byte 0x2F000000
-.sym lbl_80665AE4, local
+.sym lbl_80665AE4, global
 	.4byte 0x2F257300

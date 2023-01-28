@@ -1113,24 +1113,24 @@
 # 0x80665E00 - 0x80665E08
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665E00, local
+.sym lbl_80665E00, global
 	.4byte 0x38D1B717
 	.4byte 0x00000000
 
 # 0x8066C658 - 0x8066C678
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C658, local
+.sym lbl_8066C658, global
 	.4byte 0x3F000000
-.sym lbl_8066C65C, local
+.sym lbl_8066C65C, global
 	.4byte 0x00000000
-.sym lbl_8066C660, local
+.sym lbl_8066C660, global
 	.4byte 0x3CC90FDB
-.sym lbl_8066C664, local
+.sym lbl_8066C664, global
 	.4byte 0x3F360B61
-.sym lbl_8066C668, local
+.sym lbl_8066C668, global
 	.4byte 0x3F800000
 	.4byte 0x00000000
-.sym lbl_8066C670, local
+.sym lbl_8066C670, global
 	.4byte 0x00000000
 	.4byte 0x00000000

@@ -3,7 +3,7 @@
 
 # 0x80351290 - 0x80351880
 .text
-.balign 4
+.balign 16
 
 .fn reserveFileDescriptor, local
 /* 80351290 0031A850  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -431,7 +431,7 @@
 	.byte 0x6F, 0x67, 0x00
 .endobj "@1208"
 	.byte 0x00
-.sym lbl_805512D4, local
+.sym lbl_805512D4, global
 	.4byte 0x25642025
 	.4byte 0x3034642F
 	.4byte 0x25303264
@@ -456,7 +456,7 @@
 # 0x80665B20 - 0x80665B28
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B20, local
+.sym lbl_80665B20, global
 	.4byte 0xFFFFFF01
 	.4byte 0x00000000
 

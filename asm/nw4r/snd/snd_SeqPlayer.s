@@ -950,7 +950,7 @@
 /* 8041A3D8 003E3998  4E 80 00 20 */	blr
 .endfn InvalidateData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
 
-.fn fn_8041A3DC, local
+.fn fn_8041A3DC, global
 /* 8041A3DC 003E399C  2C 04 00 0F */	cmpwi r4, 0xf
 /* 8041A3E0 003E39A0  40 81 00 0C */	ble .L_8041A3EC
 /* 8041A3E4 003E39A4  38 60 00 00 */	li r3, 0x0
@@ -1530,7 +1530,7 @@
 /* 8041ABA4 003E4164  4E 80 04 20 */	bctr
 .endfn NoteOn__Q44nw4r3snd6detail9SeqPlayerFiRCQ44nw4r3snd6detail10NoteOnInfo
 
-.fn fn_8041ABA8, local
+.fn fn_8041ABA8, global
 /* 8041ABA8 003E4168  4E 80 00 20 */	blr
 .endfn fn_8041ABA8
 
@@ -1547,7 +1547,7 @@
 # 0x8056E3D8 - 0x8056E440
 .data
 .balign 8
-.sym lbl_8056E3D8, local
+.sym lbl_8056E3D8, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r3snd6detail9SeqPlayerFv
@@ -1578,19 +1578,19 @@
 # 0x8063B4C0 - 0x8063B4E0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8063B4C0, local
+.sym lbl_8063B4C0, global
 	.skip 0x20
 
 # 0x8066C800 - 0x8066C818
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C800, local
+.sym lbl_8066C800, global
 	.4byte 0x3F800000
-.sym lbl_8066C804, local
+.sym lbl_8066C804, global
 	.4byte 0x00000000
-.sym lbl_8066C808, local
+.sym lbl_8066C808, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C810, local
+.sym lbl_8066C810, global
 	.4byte 0x476A6000
 	.4byte 0x00000000

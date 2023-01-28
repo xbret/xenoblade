@@ -3,7 +3,7 @@
 
 # 0x80310200 - 0x80310370
 .text
-.balign 4
+.balign 16
 
 .fn __DVDShowFatalMessage, global
 /* 80310200 002D97C0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -120,7 +120,7 @@
 # 0x8050E3A8 - 0x8050E3E0
 .rodata
 .balign 8
-.sym lbl_8050E3A8, local
+.sym lbl_8050E3A8, global
 	.4byte lbl_80549D60
 	.4byte lbl_80549DF0
 	.4byte lbl_80549EA0
@@ -128,7 +128,7 @@
 	.4byte lbl_8054A008
 	.4byte lbl_8054A0A8
 	.4byte lbl_8054A154
-.sym lbl_8050E3C4, local
+.sym lbl_8050E3C4, global
 	.4byte lbl_80549D60
 	.4byte lbl_8054A1E8
 	.4byte lbl_80549EA0
@@ -140,7 +140,7 @@
 # 0x80549D60 - 0x8054A528
 .data
 .balign 8
-.sym lbl_80549D60, local
+.sym lbl_80549D60, global
 	.4byte 0x0A0A0A83
 	.4byte 0x47838981
 	.4byte 0x5B82AA94
@@ -177,7 +177,7 @@
 	.4byte 0x82AD82BE
 	.4byte 0x82B382A2
 	.4byte 0x81420000
-.sym lbl_80549DF0, local
+.sym lbl_80549DF0, global
 	.4byte 0x0A0A0A41
 	.4byte 0x6E206572
 	.4byte 0x726F7220
@@ -222,7 +222,7 @@
 	.4byte 0x74727563
 	.4byte 0x74696F6E
 	.4byte 0x732E0000
-.sym lbl_80549EA0, local
+.sym lbl_80549EA0, global
 	.4byte 0x0A0A0A45
 	.4byte 0x696E2046
 	.4byte 0x65686C65
@@ -269,7 +269,7 @@
 	.4byte 0x75206572
 	.4byte 0x68616C74
 	.4byte 0x656E2E00
-.sym lbl_80549F58, local
+.sym lbl_80549F58, global
 	.4byte 0x0A0A0A55
 	.4byte 0x6E652065
 	.4byte 0x72726575
@@ -314,7 +314,7 @@
 	.4byte 0x61696C73
 	.4byte 0x2E000000
 	.4byte 0x00000000
-.sym lbl_8054A008, local
+.sym lbl_8054A008, global
 	.4byte 0x0A0A0A4F
 	.4byte 0x63757272
 	.4byte 0x69F32075
@@ -355,7 +355,7 @@
 	.4byte 0x6E666F72
 	.4byte 0x6D616369
 	.4byte 0xF36E2E00
-.sym lbl_8054A0A8, local
+.sym lbl_8054A0A8, global
 	.4byte 0x0A0A0A53
 	.4byte 0x6920E820
 	.4byte 0x76657269
@@ -399,7 +399,7 @@
 	.4byte 0x6F6E736F
 	.4byte 0x6C652057
 	.4byte 0x69692E00
-.sym lbl_8054A154, local
+.sym lbl_8054A154, global
 	.4byte 0x0A0A0A45
 	.4byte 0x72206973
 	.4byte 0x2065656E
@@ -437,7 +437,7 @@
 	.4byte 0x6F726D61
 	.4byte 0x7469652E
 	.4byte 0x00000000
-.sym lbl_8054A1E8, local
+.sym lbl_8054A1E8, global
 	.4byte 0x0A0A0A41
 	.4byte 0x6E206572
 	.4byte 0x726F7220
@@ -479,7 +479,7 @@
 	.4byte 0x64657461
 	.4byte 0x696C732E
 	.4byte 0x00000000
-.sym lbl_8054A28C, local
+.sym lbl_8054A28C, global
 	.4byte 0x0A0A0A55
 	.4byte 0x6E652065
 	.4byte 0x72726575
@@ -521,7 +521,7 @@
 	.4byte 0x64652064
 	.4byte 0xE9746169
 	.4byte 0x6C732E00
-.sym lbl_8054A330, local
+.sym lbl_8054A330, global
 	.4byte 0x0A0A0A53
 	.4byte 0x65206861
 	.4byte 0x2070726F
@@ -565,7 +565,7 @@
 	.4byte 0x666F726D
 	.4byte 0x616369F3
 	.4byte 0x6E2E0000
-.sym lbl_8054A3DC, local
+.sym lbl_8054A3DC, global
 	.4byte 0x0A0A8347
 	.4byte 0x8389815B
 	.4byte 0x8352815B
@@ -607,7 +607,7 @@
 	.4byte 0x82AD82BE
 	.4byte 0x82B382A2
 	.4byte 0x81420000
-.sym lbl_8054A480, local
+.sym lbl_8054A480, global
 	.4byte 0x0A0A4572
 	.4byte 0x726F7220
 	.4byte 0x23313034
@@ -654,7 +654,7 @@
 # 0x80665998 - 0x806659A0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665998, local
+.sym lbl_80665998, global
 	.4byte lbl_8054A3DC
 	.4byte lbl_8054A480
 
@@ -670,6 +670,6 @@
 # 0x8066BF88 - 0x8066BF90
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF88, local
+.sym lbl_8066BF88, global
 	.4byte 0xFFFFFF00
 	.4byte 0x00000000

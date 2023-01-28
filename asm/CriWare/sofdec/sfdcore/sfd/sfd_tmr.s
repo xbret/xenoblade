@@ -191,5 +191,5 @@
 # 0x8061CE00 - 0x8061CE08
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061CE00, local
+.sym lbl_8061CE00, global
 	.skip 0x8

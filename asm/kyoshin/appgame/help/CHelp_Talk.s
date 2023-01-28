@@ -39,7 +39,7 @@
 .text
 .balign 4
 
-.fn fn_802B86BC, local
+.fn fn_802B86BC, global
 /* 802B86BC 00281C7C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B86C0 00281C80  7C 08 02 A6 */	mflr r0
 /* 802B86C4 00281C84  90 01 00 14 */	stw r0, 0x14(r1)
@@ -55,7 +55,7 @@
 /* 802B86EC 00281CAC  4E 80 00 20 */	blr
 .endfn fn_802B86BC
 
-.fn fn_802B86F0, local
+.fn fn_802B86F0, global
 /* 802B86F0 00281CB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B86F4 00281CB4  7C 08 02 A6 */	mflr r0
 /* 802B86F8 00281CB8  90 01 00 24 */	stw r0, 0x24(r1)

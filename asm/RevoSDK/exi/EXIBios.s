@@ -3,7 +3,7 @@
 
 # 0x803140F0 - 0x803159F0
 .text
-.balign 4
+.balign 16
 
 .fn SetExiInterruptMask, local
 /* 803140F0 002DD6B0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1785,7 +1785,7 @@
 # 0x8054B610 - 0x8054B658
 .data
 .balign 8
-.sym lbl_8054B610, local
+.sym lbl_8054B610, global
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D

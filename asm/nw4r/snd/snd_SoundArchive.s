@@ -332,7 +332,7 @@
 # 0x8056E4A0 - 0x8056E4C0
 .data
 .balign 8
-.sym lbl_8056E4A0, local
+.sym lbl_8056E4A0, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3snd12SoundArchiveFv

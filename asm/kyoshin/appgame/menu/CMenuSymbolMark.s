@@ -437,7 +437,7 @@
 /* 8011D9BC 000E6F7C  4E 80 00 20 */	blr
 .endfn __ct__CMenuSymbolMark
 
-.fn fn_8011D9C0, local
+.fn fn_8011D9C0, global
 /* 8011D9C0 000E6F80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8011D9C4 000E6F84  7C 08 02 A6 */	mflr r0
 /* 8011D9C8 000E6F88  2C 03 00 00 */	cmpwi r3, 0x0
@@ -474,137 +474,137 @@
 # 0x804F9D68 - 0x804F9F18
 .rodata
 .balign 8
-.sym lbl_804F9D68, local
+.sym lbl_804F9D68, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743030
 	.4byte 0x30300000
-.sym lbl_804F9D78, local
+.sym lbl_804F9D78, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743031
 	.4byte 0x30310000
-.sym lbl_804F9D88, local
+.sym lbl_804F9D88, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743032
 	.4byte 0x30310000
-.sym lbl_804F9D98, local
+.sym lbl_804F9D98, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743033
 	.4byte 0x30310000
-.sym lbl_804F9DA8, local
+.sym lbl_804F9DA8, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743034
 	.4byte 0x30310000
-.sym lbl_804F9DB8, local
+.sym lbl_804F9DB8, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743034
 	.4byte 0x30320000
-.sym lbl_804F9DC8, local
+.sym lbl_804F9DC8, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743035
 	.4byte 0x30310000
-.sym lbl_804F9DD8, local
+.sym lbl_804F9DD8, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743036
 	.4byte 0x30310000
-.sym lbl_804F9DE8, local
+.sym lbl_804F9DE8, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743037
 	.4byte 0x30310000
-.sym lbl_804F9DF8, local
+.sym lbl_804F9DF8, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743038
 	.4byte 0x30310000
-.sym lbl_804F9E08, local
+.sym lbl_804F9E08, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743039
 	.4byte 0x30310000
-.sym lbl_804F9E18, local
+.sym lbl_804F9E18, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743130
 	.4byte 0x30310000
-.sym lbl_804F9E28, local
+.sym lbl_804F9E28, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743131
 	.4byte 0x30310000
-.sym lbl_804F9E38, local
+.sym lbl_804F9E38, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743132
 	.4byte 0x30310000
-.sym lbl_804F9E48, local
+.sym lbl_804F9E48, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743132
 	.4byte 0x30320000
-.sym lbl_804F9E58, local
+.sym lbl_804F9E58, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743133
 	.4byte 0x30310000
-.sym lbl_804F9E68, local
+.sym lbl_804F9E68, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743134
 	.4byte 0x30310000
-.sym lbl_804F9E78, local
+.sym lbl_804F9E78, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743135
 	.4byte 0x30310000
-.sym lbl_804F9E88, local
+.sym lbl_804F9E88, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743136
 	.4byte 0x30310000
-.sym lbl_804F9E98, local
+.sym lbl_804F9E98, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743137
 	.4byte 0x30310000
-.sym lbl_804F9EA8, local
+.sym lbl_804F9EA8, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743138
 	.4byte 0x30310000
-.sym lbl_804F9EB8, local
+.sym lbl_804F9EB8, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743139
 	.4byte 0x30310000
-.sym lbl_804F9EC8, local
+.sym lbl_804F9EC8, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743230
 	.4byte 0x30310000
-.sym lbl_804F9ED8, local
+.sym lbl_804F9ED8, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743231
 	.4byte 0x30310000
-.sym lbl_804F9EE8, local
+.sym lbl_804F9EE8, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743232
 	.4byte 0x30310000
-.sym lbl_804F9EF8, local
+.sym lbl_804F9EF8, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743233
 	.4byte 0x30310000
-.sym lbl_804F9F08, local
+.sym lbl_804F9F08, global
 	.4byte 0x6D61726B
 	.4byte 0x65726C69
 	.4byte 0x73743234
@@ -613,7 +613,7 @@
 # 0x80530478 - 0x80530508
 .data
 .balign 8
-.sym lbl_80530478, local
+.sym lbl_80530478, global
 	.4byte lbl_804F9D68
 	.4byte lbl_804F9D78
 	.4byte lbl_804F9D88

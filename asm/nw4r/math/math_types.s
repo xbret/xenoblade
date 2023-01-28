@@ -355,13 +355,13 @@
 # 0x8066C640 - 0x8066C658
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C640, local
+.sym lbl_8066C640, global
 	.4byte 0x00000000
-.sym lbl_8066C644, local
+.sym lbl_8066C644, global
 	.4byte 0x3F800000
-.sym lbl_8066C648, local
+.sym lbl_8066C648, global
 	.4byte 0x3CC90FDB
 	.4byte 0x00000000
-.sym lbl_8066C650, local
+.sym lbl_8066C650, global
 	.4byte 0x47800000
 	.4byte 0x47800000

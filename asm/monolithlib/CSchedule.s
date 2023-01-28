@@ -52,7 +52,7 @@
 .text
 .balign 4
 
-.fn fn_804E3294, local
+.fn fn_804E3294, global
 /* 804E3294 004AC854  3C A0 80 57 */	lis r5, __vt__CSchedule@ha
 /* 804E3298 004AC858  38 80 00 00 */	li r4, 0x0
 /* 804E329C 004AC85C  38 A5 38 B0 */	addi r5, r5, __vt__CSchedule@l
@@ -98,7 +98,7 @@
 /* 804E333C 004AC8FC  4E 80 00 20 */	blr
 .endfn fn_804E3294
 
-.fn fn_804E3340, local
+.fn fn_804E3340, global
 /* 804E3340 004AC900  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804E3344 004AC904  7C 08 02 A6 */	mflr r0
 /* 804E3348 004AC908  2C 03 00 00 */	cmpwi r3, 0x0
@@ -169,7 +169,7 @@
 /* 804E3430 004AC9F0  4E 80 00 20 */	blr
 .endfn fn_804E3340
 
-.fn fn_804E3434, local
+.fn fn_804E3434, global
 /* 804E3434 004AC9F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E3438 004AC9F8  7C 08 02 A6 */	mflr r0
 /* 804E343C 004AC9FC  2C 04 00 00 */	cmpwi r4, 0x0
@@ -295,7 +295,7 @@
 /* 804E3610 004ACBD0  4E 80 00 20 */	blr
 .endfn fn_804E3434
 
-.fn fn_804E3614, local
+.fn fn_804E3614, global
 /* 804E3614 004ACBD4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804E3618 004ACBD8  7C 08 02 A6 */	mflr r0
 /* 804E361C 004ACBDC  90 01 00 24 */	stw r0, 0x24(r1)

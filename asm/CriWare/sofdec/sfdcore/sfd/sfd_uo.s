@@ -205,7 +205,7 @@
 # 0x80520678 - 0x805206B0
 .rodata
 .balign 8
-.sym lbl_80520678, local
+.sym lbl_80520678, global
 	.4byte SFUO_Init
 	.4byte SFUO_Finish
 	.4byte SFUO_ExecServer

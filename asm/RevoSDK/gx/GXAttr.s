@@ -3,7 +3,7 @@
 
 # 0x80319230 - 0x80319D80
 .text
-.balign 4
+.balign 16
 
 .fn GXSetVtxDesc, global
 /* 80319230 002E27F0  28 03 00 19 */	cmplwi r3, 0x19
@@ -955,7 +955,7 @@
 	.rel GXSetTexCoordGen2, .L_80319B64
 .endobj jumptable_8054B9E0
 	.4byte 0x00000000
-.sym lbl_8054BA38, local
+.sym lbl_8054BA38, global
 	.4byte 0x00000001
 	.4byte 0x028000F0
 	.4byte 0x00F00028
@@ -971,7 +971,7 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BA74, local
+.sym lbl_8054BA74, global
 	.4byte 0x00000000
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -987,7 +987,7 @@
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
-.sym lbl_8054BAB0, local
+.sym lbl_8054BAB0, global
 	.4byte 0x00000000
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1003,7 +1003,7 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BAEC, local
+.sym lbl_8054BAEC, global
 	.4byte 0x00000002
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1019,7 +1019,7 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BB28, local
+.sym lbl_8054BB28, global
 	.4byte 0x00000002
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1035,7 +1035,7 @@
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
-.sym lbl_8054BB64, local
+.sym lbl_8054BB64, global
 	.4byte 0x00000009
 	.4byte 0x028000F0
 	.4byte 0x00F00028
@@ -1051,7 +1051,7 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BBA0, local
+.sym lbl_8054BBA0, global
 	.4byte 0x00000008
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1067,7 +1067,7 @@
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
-.sym lbl_8054BBDC, local
+.sym lbl_8054BBDC, global
 	.4byte 0x00000008
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1083,7 +1083,7 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BC18, local
+.sym lbl_8054BC18, global
 	.4byte 0x0000000A
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1099,7 +1099,7 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BC54, local
+.sym lbl_8054BC54, global
 	.4byte 0x0000000A
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1115,7 +1115,7 @@
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
-.sym lbl_8054BC90, local
+.sym lbl_8054BC90, global
 	.4byte 0x00000005
 	.4byte 0x02800108
 	.4byte 0x01080028
@@ -1131,7 +1131,7 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BCCC, local
+.sym lbl_8054BCCC, global
 	.4byte 0x00000004
 	.4byte 0x02800210
 	.4byte 0x02100028
@@ -1147,7 +1147,7 @@
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
-.sym lbl_8054BD08, local
+.sym lbl_8054BD08, global
 	.4byte 0x00000004
 	.4byte 0x02800210
 	.4byte 0x02100028
@@ -1163,7 +1163,7 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BD44, local
+.sym lbl_8054BD44, global
 	.4byte 0x00000015
 	.4byte 0x028000F0
 	.4byte 0x00F00028
@@ -1179,7 +1179,7 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BD80, local
+.sym lbl_8054BD80, global
 	.4byte 0x00000014
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1195,7 +1195,7 @@
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
-.sym lbl_8054BDBC, local
+.sym lbl_8054BDBC, global
 	.4byte 0x00000014
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1211,7 +1211,7 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BDF8, local
+.sym lbl_8054BDF8, global
 	.4byte 0x00000016
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1227,7 +1227,7 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BE34, local
+.sym lbl_8054BE34, global
 	.4byte 0x00000016
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1247,10 +1247,10 @@
 # 0x806659F8 - 0x80665A08
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806659F8, local
+.sym lbl_806659F8, global
 	.4byte 0x00040102
-.sym lbl_806659FC, local
+.sym lbl_806659FC, global
 	.4byte 0x00080102
-.sym lbl_80665A00, local
+.sym lbl_80665A00, global
 	.4byte 0x000C0102
 	.4byte 0x00000000

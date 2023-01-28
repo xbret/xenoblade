@@ -52,7 +52,7 @@
 .text
 .balign 4
 
-.fn fn_801C4B74, local
+.fn fn_801C4B74, global
 /* 801C4B74 0018E134  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C4B78 0018E138  7C 08 02 A6 */	mflr r0
 /* 801C4B7C 0018E13C  2C 03 00 00 */	cmpwi r3, 0x0
@@ -72,7 +72,7 @@
 /* 801C4BB0 0018E170  4E 80 00 20 */	blr
 .endfn fn_801C4B74
 
-.fn fn_801C4BB4, local
+.fn fn_801C4BB4, global
 /* 801C4BB4 0018E174  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801C4BB8 0018E178  7C 08 02 A6 */	mflr r0
 /* 801C4BBC 0018E17C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -456,7 +456,7 @@
 /* 801C5154 0018E714  4E 80 00 20 */	blr
 .endfn fn_801C4BB4
 
-.fn fn_801C5158, local
+.fn fn_801C5158, global
 /* 801C5158 0018E718  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C515C 0018E71C  7C 08 02 A6 */	mflr r0
 /* 801C5160 0018E720  90 01 00 14 */	stw r0, 0x14(r1)
@@ -485,7 +485,7 @@
 /* 801C51B8 0018E778  4E 80 00 20 */	blr
 .endfn fn_801C5158
 
-.fn fn_801C51BC, local
+.fn fn_801C51BC, global
 /* 801C51BC 0018E77C  A0 C3 08 04 */	lhz r6, 0x804(r3)
 /* 801C51C0 0018E780  38 E0 00 00 */	li r7, 0x0
 /* 801C51C4 0018E784  48 00 00 24 */	b .L_801C51E8

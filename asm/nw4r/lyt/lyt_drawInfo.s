@@ -62,7 +62,7 @@
 # 0x8056D548 - 0x8056D558
 .data
 .balign 8
-.sym lbl_8056D548, local
+.sym lbl_8056D548, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
@@ -71,7 +71,7 @@
 # 0x8066C5D0 - 0x8066C5D8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C5D0, local
+.sym lbl_8066C5D0, global
 	.4byte 0x00000000
-.sym lbl_8066C5D4, local
+.sym lbl_8066C5D4, global
 	.4byte 0x3F800000

@@ -48,7 +48,7 @@
 /* 803D73D0 003A0990  4E 80 00 20 */	blr
 .endfn Assertion_Printf___Q24nw4r2dbFPCce
 
-.fn fn_803D73D4, local
+.fn fn_803D73D4, global
 /* 803D73D4 003A0994  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D73D8 003A0998  7C 08 02 A6 */	mflr r0
 /* 803D73DC 003A099C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -356,7 +356,7 @@
 # 0x8056C7B0 - 0x8056C840
 .data
 .balign 8
-.sym lbl_8056C7B0, local
+.sym lbl_8056C7B0, global
 	.4byte 0x2D2D2D2D
 	.4byte 0x2D2D2D2D
 	.4byte 0x2D2D2D2D
@@ -381,12 +381,12 @@
 	.4byte 0x20202025
 	.4byte 0x30385820
 	.4byte 0x00000000
-.sym lbl_8056C810, local
+.sym lbl_8056C810, global
 	.4byte 0x25733A25
 	.4byte 0x64205061
 	.4byte 0x6E69633A
 	.4byte 0x00000000
-.sym lbl_8056C820, local
+.sym lbl_8056C820, global
 	.4byte 0x25733A25
 	.4byte 0x64205761
 	.4byte 0x726E696E
@@ -399,23 +399,23 @@
 # 0x8061D710 - 0x8061D740
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061D710, local
+.sym lbl_8061D710, global
 	.skip 0x30
 
 # 0x80665D80 - 0x80665D88
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665D80, local
+.sym lbl_80665D80, global
 	.4byte 0x01000000
-.sym lbl_80665D84, local
+.sym lbl_80665D84, global
 	.4byte 0x0A000000
 
 # 0x80667D18 - 0x80667D28
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D18, local
+.sym lbl_80667D18, global
 	.skip 0x4
-.sym lbl_80667D1C, local
+.sym lbl_80667D1C, global
 	.skip 0x4
-.sym lbl_80667D20, local
+.sym lbl_80667D20, global
 	.skip 0x8

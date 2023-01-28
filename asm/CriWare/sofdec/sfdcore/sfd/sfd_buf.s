@@ -1182,7 +1182,7 @@
 /* 803BFD1C 003892DC  4E 80 00 20 */	blr
 .endfn SFBUF_UpdateFlowCnt
 
-.fn fn_803BFD20, local
+.fn fn_803BFD20, global
 /* 803BFD20 003892E0  3C 80 80 61 */	lis r4, lbl_8060A2D0@ha
 /* 803BFD24 003892E4  80 64 A2 D0 */	lwz r3, lbl_8060A2D0@l(r4)
 /* 803BFD28 003892E8  38 03 00 01 */	addi r0, r3, 0x1
@@ -1200,5 +1200,5 @@
 
 .obj sfbuf_sjmem_uuid, global
 	.skip 0x4
-.sym lbl_8060A2D0, local
+.sym lbl_8060A2D0, global
 	.skip 0x8

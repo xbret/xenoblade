@@ -3,9 +3,9 @@
 
 # 0x80363F30 - 0x80366A00
 .text
-.balign 4
+.balign 16
 
-.fn fn_80363F30, local
+.fn fn_80363F30, global
 /* 80363F30 0032D4F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80363F34 0032D4F4  7C 08 02 A6 */	mflr r0
 /* 80363F38 0032D4F8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2910,7 +2910,7 @@
 /* 80366838 0032FDF8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8036683C 0032FDFC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80366840, local
+.fn fn_80366840, global
 /* 80366840 0032FE00  80 0D BA 34 */	lwz r0, lbl_80667BB4@sda21(r13)
 /* 80366844 0032FE04  80 AD BA 28 */	lwz r5, lbl_80667BA8@sda21(r13)
 /* 80366848 0032FE08  80 6D BA 34 */	lwz r3, lbl_80667BB4@sda21(r13)
@@ -3052,7 +3052,7 @@
 # 0x8055FAA0 - 0x8055FFF8
 .data
 .balign 8
-.sym lbl_8055FAA0, local
+.sym lbl_8055FAA0, global
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -3071,7 +3071,7 @@
 	.4byte 0x5F313435
 	.4byte 0x29203E3E
 	.4byte 0x00000000
-.sym lbl_8055FAE8, local
+.sym lbl_8055FAE8, global
 	.4byte 0x060000F0
 	.4byte 0x00180019
 	.4byte 0x00030002
@@ -3177,7 +3177,7 @@
 	.4byte 0x404B6AAC
 	.4byte 0x017C7A00
 	.4byte 0x019C0000
-.sym lbl_8055FC8C, local
+.sym lbl_8055FC8C, global
 	.4byte 0x01F001DC
 	.4byte 0x01AE0174
 	.4byte 0x012900DB
@@ -3237,7 +3237,7 @@
 	.4byte 0x0C100C08
 	.4byte 0x04000000
 	.4byte 0x00000000
-.sym lbl_8055FD78, local
+.sym lbl_8055FD78, global
 	.4byte fn_80363F30
 	.4byte 0x0000007F
 	.4byte 0x00000000
@@ -3417,118 +3417,118 @@
 # 0x805DD900 - 0x805DDA70
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805DD900, local
+.sym lbl_805DD900, global
 	.skip 0x78
-.sym lbl_805DD978, local
+.sym lbl_805DD978, global
 	.skip 0x78
-.sym lbl_805DD9F0, local
+.sym lbl_805DD9F0, global
 	.skip 0x58
-.sym lbl_805DDA48, local
+.sym lbl_805DDA48, global
 	.skip 0x28
 
 # 0x80665D00 - 0x80665D20
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665D00, local
+.sym lbl_80665D00, global
 	.4byte lbl_8055FAA0
-.sym lbl_80665D04, local
+.sym lbl_80665D04, global
 	.4byte 0x00000001
-.sym lbl_80665D08, local
+.sym lbl_80665D08, global
 	.4byte 0x000003E7
-.sym lbl_80665D0C, local
+.sym lbl_80665D0C, global
 	.4byte 0x000003E7
-.sym lbl_80665D10, local
+.sym lbl_80665D10, global
 	.4byte 0x00000001
-.sym lbl_80665D14, local
+.sym lbl_80665D14, global
 	.4byte 0x00000001
-.sym lbl_80665D18, local
+.sym lbl_80665D18, global
 	.4byte 0x76692E63
 	.4byte 0x00000000
 
 # 0x80667B98 - 0x80667C48
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667B98, local
+.sym lbl_80667B98, global
 	.skip 0x4
-.sym lbl_80667B9C, local
+.sym lbl_80667B9C, global
 	.skip 0x4
-.sym lbl_80667BA0, local
+.sym lbl_80667BA0, global
 	.skip 0x4
-.sym lbl_80667BA4, local
+.sym lbl_80667BA4, global
 	.skip 0x4
-.sym lbl_80667BA8, local
+.sym lbl_80667BA8, global
 	.skip 0x4
-.sym lbl_80667BAC, local
+.sym lbl_80667BAC, global
 	.skip 0x4
-.sym lbl_80667BB0, local
+.sym lbl_80667BB0, global
 	.skip 0x4
-.sym lbl_80667BB4, local
+.sym lbl_80667BB4, global
 	.skip 0x4
-.sym lbl_80667BB8, local
+.sym lbl_80667BB8, global
 	.skip 0x4
-.sym lbl_80667BBC, local
+.sym lbl_80667BBC, global
 	.skip 0x4
-.sym lbl_80667BC0, local
+.sym lbl_80667BC0, global
 	.skip 0x4
-.sym lbl_80667BC4, local
+.sym lbl_80667BC4, global
 	.skip 0x2
-.sym lbl_80667BC6, local
+.sym lbl_80667BC6, global
 	.skip 0x2
-.sym lbl_80667BC8, local
+.sym lbl_80667BC8, global
 	.skip 0x8
-.sym lbl_80667BD0, local
+.sym lbl_80667BD0, global
 	.skip 0x4
-.sym lbl_80667BD4, local
+.sym lbl_80667BD4, global
 	.skip 0x4
-.sym lbl_80667BD8, local
+.sym lbl_80667BD8, global
 	.skip 0x8
-.sym lbl_80667BE0, local
+.sym lbl_80667BE0, global
 	.skip 0x4
-.sym lbl_80667BE4, local
+.sym lbl_80667BE4, global
 	.skip 0x4
-.sym lbl_80667BE8, local
+.sym lbl_80667BE8, global
 	.skip 0x4
-.sym lbl_80667BEC, local
+.sym lbl_80667BEC, global
 	.skip 0x4
-.sym lbl_80667BF0, local
+.sym lbl_80667BF0, global
 	.skip 0x4
-.sym lbl_80667BF4, local
+.sym lbl_80667BF4, global
 	.skip 0x4
-.sym lbl_80667BF8, local
+.sym lbl_80667BF8, global
 	.skip 0x4
-.sym lbl_80667BFC, local
+.sym lbl_80667BFC, global
 	.skip 0x4
-.sym lbl_80667C00, local
+.sym lbl_80667C00, global
 	.skip 0x4
-.sym lbl_80667C04, local
+.sym lbl_80667C04, global
 	.skip 0x4
 
 .obj CurrTvMode, local
 	.skip 0x4
 .endobj CurrTvMode
-.sym lbl_80667C0C, local
+.sym lbl_80667C0C, global
 	.skip 0x4
-.sym lbl_80667C10, local
+.sym lbl_80667C10, global
 	.skip 0x4
-.sym lbl_80667C14, local
+.sym lbl_80667C14, global
 	.skip 0x4
-.sym lbl_80667C18, local
+.sym lbl_80667C18, global
 	.skip 0x8
-.sym lbl_80667C20, local
+.sym lbl_80667C20, global
 	.skip 0x8
-.sym lbl_80667C28, local
+.sym lbl_80667C28, global
 	.skip 0x4
-.sym lbl_80667C2C, local
+.sym lbl_80667C2C, global
 	.skip 0x4
-.sym lbl_80667C30, local
+.sym lbl_80667C30, global
 	.skip 0x4
-.sym lbl_80667C34, local
+.sym lbl_80667C34, global
 	.skip 0x4
-.sym lbl_80667C38, local
+.sym lbl_80667C38, global
 	.skip 0x4
-.sym lbl_80667C3C, local
+.sym lbl_80667C3C, global
 	.skip 0x4
-.sym lbl_80667C40, local
+.sym lbl_80667C40, global
 	.skip 0x4
-.sym lbl_80667C44, local
+.sym lbl_80667C44, global
 	.skip 0x4

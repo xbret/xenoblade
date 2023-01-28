@@ -105,7 +105,7 @@
 # 0x80520E38 - 0x80520E48
 .rodata
 .balign 8
-.sym lbl_80520E38, local
+.sym lbl_80520E38, global
 	.4byte 0x0000000A
 	.4byte 0x416E6D4F
 	.4byte 0x626A5669

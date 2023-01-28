@@ -229,7 +229,7 @@
 	.4byte 0x61746368
 	.4byte 0x30320A00
 	.4byte 0x00000000
-.sym lbl_805196A8, local
+.sym lbl_805196A8, global
 	.4byte 0x61647874
 	.4byte 0x5F657865
 	.4byte 0x635F7473
@@ -276,5 +276,5 @@
 # 0x805E5D48 - 0x805E5D54
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E5D48, local
+.sym lbl_805E5D48, global
 	.skip 0xC

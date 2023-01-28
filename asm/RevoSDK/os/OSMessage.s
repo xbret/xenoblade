@@ -3,7 +3,7 @@
 
 # 0x803591A0 - 0x80359480
 .text
-.balign 4
+.balign 16
 
 .fn OSInitMessageQueue, global
 /* 803591A0 00322760  94 21 FF E0 */	stwu r1, -0x20(r1)

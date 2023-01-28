@@ -172,7 +172,7 @@
 # 0x805206B0 - 0x805206E8
 .rodata
 .balign 8
-.sym lbl_805206B0, local
+.sym lbl_805206B0, global
 	.4byte SFVOM_Init
 	.4byte SFVOM_Finish
 	.4byte SFVOM_ExecServer

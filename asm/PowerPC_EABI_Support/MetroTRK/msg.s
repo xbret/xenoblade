@@ -38,7 +38,7 @@
 # 0x8053FEF0 - 0x8053FF18
 .data
 .balign 8
-.sym lbl_8053FEF0, local
+.sym lbl_8053FEF0, global
 	.4byte 0x4D657472
 	.4byte 0x6F54524B
 	.4byte 0x202D2054
@@ -53,5 +53,5 @@
 # 0x80667590 - 0x80667598
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667590, local
+.sym lbl_80667590, global
 	.skip 0x8

@@ -1751,14 +1751,14 @@
 # 0x8051F750 - 0x8051F778
 .rodata
 .balign 8
-.sym lbl_8051F750, local
+.sym lbl_8051F750, global
 	.4byte 0x00000000
 	.4byte MPVDEC_DecIpicMb
 	.4byte MPVDEC_DecPpicMb
 	.4byte MPVDEC_DecBpicMb
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8051F768, local
+.sym lbl_8051F768, global
 	.4byte 0x49444350
 	.4byte 0x52454300
 	.4byte 0x53544343
@@ -1767,5 +1767,5 @@
 # 0x80605F50 - 0x80606040
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80605F50, local
+.sym lbl_80605F50, global
 	.skip 0xF0

@@ -409,7 +409,7 @@
 /* 803C148C 0038AA4C  4E 80 00 20 */	blr
 .endfn sfmps_DecodeSomeUnit
 
-.fn fn_803C1490, local
+.fn fn_803C1490, global
 /* 803C1490 0038AA50  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803C1494 0038AA54  7C 08 02 A6 */	mflr r0
 /* 803C1498 0038AA58  90 01 00 44 */	stw r0, 0x44(r1)
@@ -472,7 +472,7 @@
 /* 803C156C 0038AB2C  4E 80 00 20 */	blr
 .endfn fn_803C1490
 
-.fn fn_803C1570, local
+.fn fn_803C1570, global
 /* 803C1570 0038AB30  2C 03 00 00 */	cmpwi r3, 0x0
 /* 803C1574 0038AB34  4D 82 00 20 */	beqlr
 /* 803C1578 0038AB38  90 83 39 74 */	stw r4, 0x3974(r3)
@@ -480,7 +480,7 @@
 /* 803C1580 0038AB40  4E 80 00 20 */	blr
 .endfn fn_803C1570
 
-.fn fn_803C1584, local
+.fn fn_803C1584, global
 /* 803C1584 0038AB44  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803C1588 0038AB48  7C 08 02 A6 */	mflr r0
 /* 803C158C 0038AB4C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -2346,7 +2346,7 @@
 # 0x805202D8 - 0x80520320
 .rodata
 .balign 8
-.sym lbl_805202D8, local
+.sym lbl_805202D8, global
 	.4byte SFMPS_Init
 	.4byte SFMPS_Finish
 	.4byte SFMPS_ExecServer
@@ -2361,7 +2361,7 @@
 	.4byte SFMPS_GetRead
 	.4byte SFMPS_AddRead
 	.4byte SFMPS_Seek
-.sym lbl_80520310, local
+.sym lbl_80520310, global
 	.4byte sfmps_CopyAudio
 	.4byte sfmps_CopyVideo
 	.4byte sfmps_CopyPrvate

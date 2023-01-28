@@ -78,7 +78,7 @@
 .text
 .balign 4
 
-.fn fn_80481E6C, local
+.fn fn_80481E6C, global
 /* 80481E6C 0044B42C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80481E70 0044B430  7C 08 02 A6 */	mflr r0
 /* 80481E74 0044B434  90 01 00 14 */	stw r0, 0x14(r1)
@@ -96,7 +96,7 @@
 /* 80481EA4 0044B464  4E 80 00 20 */	blr
 .endfn fn_80481E6C
 
-.fn fn_80481EA8, local
+.fn fn_80481EA8, global
 /* 80481EA8 0044B468  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80481EAC 0044B46C  7C 08 02 A6 */	mflr r0
 /* 80481EB0 0044B470  2C 03 00 00 */	cmpwi r3, 0x0
@@ -122,7 +122,7 @@
 /* 80481EFC 0044B4BC  4E 80 00 20 */	blr
 .endfn fn_80481EA8
 
-.fn fn_80481F00, local
+.fn fn_80481F00, global
 /* 80481F00 0044B4C0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80481F04 0044B4C4  7C 08 02 A6 */	mflr r0
 /* 80481F08 0044B4C8  90 01 00 54 */	stw r0, 0x54(r1)
@@ -164,7 +164,7 @@
 /* 80481F98 0044B558  4E 80 00 20 */	blr
 .endfn fn_80481F00
 
-.fn fn_80481F9C, local
+.fn fn_80481F9C, global
 /* 80481F9C 0044B55C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80481FA0 0044B560  7C 08 02 A6 */	mflr r0
 /* 80481FA4 0044B564  90 01 00 54 */	stw r0, 0x54(r1)
@@ -206,26 +206,26 @@
 /* 80482034 0044B5F4  4E 80 00 20 */	blr
 .endfn fn_80481F9C
 
-.fn fn_80482038, local
+.fn fn_80482038, global
 /* 80482038 0044B5F8  38 63 02 B8 */	addi r3, r3, 0x2b8
 /* 8048203C 0044B5FC  4B F8 A1 20 */	b IntersectSphere__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math6SPHERE
 .endfn fn_80482038
 
-.fn fn_80482040, local
+.fn fn_80482040, global
 /* 80482040 0044B600  38 60 00 00 */	li r3, 0x0
 /* 80482044 0044B604  4E 80 00 20 */	blr
 .endfn fn_80482040
 
-.fn fn_80482048, local
+.fn fn_80482048, global
 /* 80482048 0044B608  4E 80 00 20 */	blr
 .endfn fn_80482048
 
-.fn fn_8048204C, local
+.fn fn_8048204C, global
 /* 8048204C 0044B60C  38 63 00 10 */	addi r3, r3, 0x10
 /* 80482050 0044B610  4E 80 00 20 */	blr
 .endfn fn_8048204C
 
-.fn fn_80482054, local
+.fn fn_80482054, global
 /* 80482054 0044B614  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80482058 0044B618  7C 08 02 A6 */	mflr r0
 /* 8048205C 0044B61C  2C 03 00 00 */	cmpwi r3, 0x0

@@ -1054,18 +1054,18 @@
 # 0x80518A48 - 0x80518A58
 .rodata
 .balign 8
-.sym lbl_80518A48, local
+.sym lbl_80518A48, global
 	.4byte 0x00000000
-.sym lbl_80518A4C, local
+.sym lbl_80518A4C, global
 	.4byte 0x3F800000
-.sym lbl_80518A50, local
+.sym lbl_80518A50, global
 	.4byte 0x43300000
 	.4byte 0x00000000
 
 # 0x805CD790 - 0x805CD7B8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CD790, local
+.sym lbl_805CD790, global
 	.skip 0x8
-.sym lbl_805CD798, local
+.sym lbl_805CD798, global
 	.skip 0x20

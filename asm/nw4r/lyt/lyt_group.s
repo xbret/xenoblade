@@ -253,7 +253,7 @@
 # 0x8056D248 - 0x8056D258
 .data
 .balign 8
-.sym lbl_8056D248, local
+.sym lbl_8056D248, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt5GroupFv

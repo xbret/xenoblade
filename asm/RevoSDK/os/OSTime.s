@@ -3,7 +3,7 @@
 
 # 0x8035C960 - 0x8035CD90
 .text
-.balign 4
+.balign 16
 
 .fn OSGetTime, global
 /* 8035C960 00325F20  7C 6D 42 E6 */	mftb r3, 269
@@ -302,7 +302,7 @@
 # 0x80552D58 - 0x80552DB8
 .data
 .balign 8
-.sym lbl_80552D58, local
+.sym lbl_80552D58, global
 	.4byte 0x00000000
 	.4byte 0x0000001F
 	.4byte 0x0000003B
@@ -315,7 +315,7 @@
 	.4byte 0x00000111
 	.4byte 0x00000130
 	.4byte 0x0000014E
-.sym lbl_80552D88, local
+.sym lbl_80552D88, global
 	.4byte 0x00000000
 	.4byte 0x0000001F
 	.4byte 0x0000003C

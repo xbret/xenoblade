@@ -488,7 +488,7 @@
 # 0x8056D298 - 0x8056D310
 .data
 .balign 8
-.sym lbl_8056D298, local
+.sym lbl_8056D298, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt7PictureFv
@@ -523,12 +523,12 @@
 # 0x80667D60 - 0x80667D68
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D60, local
+.sym lbl_80667D60, global
 	.skip 0x8
 
 # 0x8066C560 - 0x8066C568
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C560, local
+.sym lbl_8066C560, global
 	.4byte 0x00000000
 	.4byte 0x00000000

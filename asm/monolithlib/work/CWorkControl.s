@@ -126,7 +126,7 @@
 /* 80443760 0040CD20  4E 80 00 20 */	blr
 .endfn __ct__CWorkControl
 
-.fn fn_80443764, local
+.fn fn_80443764, global
 /* 80443764 0040CD24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80443768 0040CD28  7C 08 02 A6 */	mflr r0
 /* 8044376C 0040CD2C  2C 03 00 00 */	cmpwi r3, 0x0
@@ -152,12 +152,12 @@
 /* 804437B8 0040CD78  4E 80 00 20 */	blr
 .endfn fn_80443764
 
-.fn fn_804437BC, local
+.fn fn_804437BC, global
 /* 804437BC 0040CD7C  80 6D BD 38 */	lwz r3, lbl_80667EB8@sda21(r13)
 /* 804437C0 0040CD80  4E 80 00 20 */	blr
 .endfn fn_804437BC
 
-.fn fn_804437C4, local
+.fn fn_804437C4, global
 /* 804437C4 0040CD84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804437C8 0040CD88  7C 08 02 A6 */	mflr r0
 /* 804437CC 0040CD8C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -194,7 +194,7 @@
 /* 8044383C 0040CDFC  4E 80 00 20 */	blr
 .endfn fn_804437C4
 
-.fn fn_80443840, local
+.fn fn_80443840, global
 /* 80443840 0040CE00  7C 60 1B 79 */	mr. r0, r3
 /* 80443844 0040CE04  80 6D BD 38 */	lwz r3, lbl_80667EB8@sda21(r13)
 /* 80443848 0040CE08  38 80 00 06 */	li r4, 0x6
@@ -204,7 +204,7 @@
 /* 80443854 0040CE14  4B FF 49 18 */	b fn_8043816C
 .endfn fn_80443840
 
-.fn fn_80443858, local
+.fn fn_80443858, global
 /* 80443858 0040CE18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044385C 0040CE1C  7C 08 02 A6 */	mflr r0
 /* 80443860 0040CE20  90 01 00 14 */	stw r0, 0x14(r1)
@@ -242,7 +242,7 @@
 /* 804438CC 0040CE8C  4E 80 00 20 */	blr
 .endfn fn_80443858
 
-.fn fn_804438D0, local
+.fn fn_804438D0, global
 /* 804438D0 0040CE90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804438D4 0040CE94  7C 08 02 A6 */	mflr r0
 /* 804438D8 0040CE98  90 01 00 14 */	stw r0, 0x14(r1)
@@ -258,7 +258,7 @@
 /* 80443900 0040CEC0  4E 80 00 20 */	blr
 .endfn fn_804438D0
 
-.fn fn_80443904, local
+.fn fn_80443904, global
 /* 80443904 0040CEC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80443908 0040CEC8  7C 08 02 A6 */	mflr r0
 /* 8044390C 0040CECC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -326,7 +326,7 @@
 	.4byte 0x6B436F6E
 	.4byte 0x74726F6C
 	.4byte 0x00000000
-.sym lbl_80525FA0, local
+.sym lbl_80525FA0, global
 	.4byte 0x43576F72
 	.4byte 0x6B466C6F
 	.4byte 0x7754764D
@@ -425,5 +425,5 @@
 # 0x80667EB8 - 0x80667EC0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667EB8, local
+.sym lbl_80667EB8, global
 	.skip 0x8

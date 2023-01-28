@@ -161,5 +161,5 @@
 # 0x80657088 - 0x806570A8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80657088, local
+.sym lbl_80657088, global
 	.skip 0x20

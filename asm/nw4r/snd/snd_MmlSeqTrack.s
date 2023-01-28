@@ -63,12 +63,12 @@
 # 0x8056E390 - 0x8056E3B0
 .data
 .balign 8
-.sym lbl_8056E390, local
+.sym lbl_8056E390, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte CommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackUlll
 	.4byte NoteOnCommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackiilb
-.sym lbl_8056E3A0, local
+.sym lbl_8056E3A0, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r3snd6detail11MmlSeqTrackFv

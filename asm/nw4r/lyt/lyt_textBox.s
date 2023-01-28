@@ -1989,7 +1989,7 @@
 # 0x8056D310 - 0x8056D398
 .data
 .balign 8
-.sym lbl_8056D310, local
+.sym lbl_8056D310, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt7TextBoxFv
@@ -2028,26 +2028,26 @@
 # 0x80665DF0 - 0x80665DF8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665DF0, local
+.sym lbl_80665DF0, global
 	.4byte 0x000A0000
 	.4byte 0x00000000
 
 # 0x80667D68 - 0x80667D70
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D68, local
+.sym lbl_80667D68, global
 	.skip 0x8
 
 # 0x8066C568 - 0x8066C580
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C568, local
+.sym lbl_8066C568, global
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066C570, local
+.sym lbl_8066C570, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C578, local
+.sym lbl_8066C578, global
 	.4byte 0x3F000000
-.sym lbl_8066C57C, local
+.sym lbl_8066C57C, global
 	.4byte 0x3F800000

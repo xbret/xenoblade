@@ -3,7 +3,7 @@
 
 # 0x80353680 - 0x803539A0
 .text
-.balign 4
+.balign 16
 
 .fn DLInsert, global
 /* 80353680 0031CC40  7C 67 1B 78 */	mr r7, r3
@@ -260,11 +260,11 @@
 # 0x80667A50 - 0x80667A60
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667A50, local
+.sym lbl_80667A50, global
 	.skip 0x4
-.sym lbl_80667A54, local
+.sym lbl_80667A54, global
 	.skip 0x4
-.sym lbl_80667A58, local
+.sym lbl_80667A58, global
 	.skip 0x4
-.sym lbl_80667A5C, local
+.sym lbl_80667A5C, global
 	.skip 0x4

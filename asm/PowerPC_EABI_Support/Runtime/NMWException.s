@@ -537,3 +537,14 @@
 /* 802B9CE8 002832A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B9CEC 002832AC  4E 80 00 20 */	blr
 .endfn __destroy_new_array
+
+# 0x80665858 - 0x80665868
+.section .sdata, "wa"
+.balign 8
+
+.obj __RTTI__std_exception, global
+	.4byte std_exception_typestr
+	.4byte 0x00000000
+.sym lbl_80665860, global
+	.4byte dthandler__3stdFv
+	.4byte 0x00000000

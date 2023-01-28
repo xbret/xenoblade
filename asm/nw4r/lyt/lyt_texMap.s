@@ -255,12 +255,12 @@
 # 0x8066C5B8 - 0x8066C5D0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C5B8, local
+.sym lbl_8066C5B8, global
 	.4byte 0x3B800000
 	.4byte 0x00000000
-.sym lbl_8066C5C0, local
+.sym lbl_8066C5C0, global
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C5C8, local
+.sym lbl_8066C5C8, global
 	.4byte 0x43800000
 	.4byte 0x00000000

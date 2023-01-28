@@ -5511,7 +5511,7 @@
 # 0x80520320 - 0x805203F0
 .rodata
 .balign 8
-.sym lbl_80520320, local
+.sym lbl_80520320, global
 	.4byte SFMPV_Init
 	.4byte SFMPV_Finish
 	.4byte SFMPV_ExecServer
@@ -5526,7 +5526,7 @@
 	.4byte SFMPV_GetRead
 	.4byte SFMPV_AddRead
 	.4byte SFMPV_Seek
-.sym lbl_80520358, local
+.sym lbl_80520358, global
 	.4byte 0x00000000
 	.4byte 0x00000018
 	.4byte 0x00000018
@@ -5553,7 +5553,7 @@
 	.4byte 0x0000003C
 	.4byte 0x0000000A
 	.4byte 0x00000004
-.sym lbl_805203C0, local
+.sym lbl_805203C0, global
 	.4byte 0x6265666F
 	.4byte 0x72652073
 	.4byte 0x65656B20
@@ -5573,7 +5573,7 @@
 
 .obj sfmpv_work, global
 	.skip 0xD619
-.sym lbl_80618349, local
+.sym lbl_80618349, global
 	.skip 0x4A07
-.sym lbl_8061CD50, local
+.sym lbl_8061CD50, global
 	.skip 0x8

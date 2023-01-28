@@ -52,7 +52,7 @@
 # 0x805E99B8 - 0x805E99C0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E99B8, local
+.sym lbl_805E99B8, global
 	.skip 0x4
-.sym lbl_805E99BC, local
+.sym lbl_805E99BC, global
 	.skip 0x4

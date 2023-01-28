@@ -68,7 +68,7 @@
 	.4byte 0x3D7DF000
 	.4byte 0x3D026FFF
 	.4byte 0x3B930000
-.sym lbl_805658F0, local
+.sym lbl_805658F0, global
 	.4byte 0x3B440001
 	.4byte 0x39A8000F
 	.4byte 0xB7800074
@@ -551,5 +551,5 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_80566078, local
+.sym lbl_80566078, global
 	.4byte ahxsbf_synthesis_window_table

@@ -1482,7 +1482,7 @@
 # 0x80523880 - 0x805238A8
 .rodata
 .balign 8
-.sym lbl_80523880, local
+.sym lbl_80523880, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1497,7 +1497,7 @@
 # 0x8056E490 - 0x8056E4A0
 .data
 .balign 8
-.sym lbl_8056E490, local
+.sym lbl_8056E490, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r3snd6detail8SeqTrackFv
@@ -1506,24 +1506,24 @@
 # 0x8066C818 - 0x8066C848
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C818, local
+.sym lbl_8066C818, global
 	.4byte 0x3F800000
-.sym lbl_8066C81C, local
+.sym lbl_8066C81C, global
 	.4byte 0x00000000
-.sym lbl_8066C820, local
+.sym lbl_8066C820, global
 	.4byte 0x42FE0000
-.sym lbl_8066C824, local
+.sym lbl_8066C824, global
 	.4byte 0x3C000000
-.sym lbl_8066C828, local
+.sym lbl_8066C828, global
 	.4byte 0x427C0000
-.sym lbl_8066C82C, local
+.sym lbl_8066C82C, global
 	.4byte 0xBF800000
-.sym lbl_8066C830, local
+.sym lbl_8066C830, global
 	.4byte 0x40000000
 	.4byte 0x00000000
-.sym lbl_8066C838, local
+.sym lbl_8066C838, global
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C840, local
+.sym lbl_8066C840, global
 	.4byte 0x43300000
 	.4byte 0x80000000

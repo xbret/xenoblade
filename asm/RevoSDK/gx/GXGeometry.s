@@ -3,7 +3,7 @@
 
 # 0x8031A760 - 0x8031AD70
 .text
-.balign 4
+.balign 16
 
 .fn __GXSetDirtyState, global
 /* 8031A760 002E3D20  94 21 FF F0 */	stwu r1, -0x10(r1)

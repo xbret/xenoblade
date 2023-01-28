@@ -3,7 +3,7 @@
 
 # 0x80354610 - 0x80354EF0
 .text
-.balign 4
+.balign 16
 
 .fn __OSLoadFPUContext, local
 /* 80354610 0031DBD0  A0 A4 01 A2 */	lhz r5, 0x1a2(r4)
@@ -640,7 +640,7 @@
 # 0x80551A70 - 0x80551C50
 .data
 .balign 8
-.sym lbl_80551A70, local
+.sym lbl_80551A70, global
 	.4byte 0x2D2D2D2D
 	.4byte 0x2D2D2D2D
 	.4byte 0x2D2D2D2D

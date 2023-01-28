@@ -3,7 +3,7 @@
 
 # 0x80353AA0 - 0x80353F60
 .text
-.balign 4
+.balign 16
 
 .fn __AIClockInit, local
 /* 80353AA0 0031D060  94 21 FF E0 */	stwu r1, -0x20(r1)

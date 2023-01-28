@@ -155,7 +155,7 @@
 # 0x80519838 - 0x80519968
 .rodata
 .balign 8
-.sym lbl_80519838, local
+.sym lbl_80519838, global
 	.4byte 0x45303230
 	.4byte 0x38303831
 	.4byte 0x31206164

@@ -207,10 +207,10 @@
 # 0x8066C488 - 0x8066C498
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C488, local
+.sym lbl_8066C488, global
 	.4byte 0x3F360B61
-.sym lbl_8066C48C, local
+.sym lbl_8066C48C, global
 	.4byte 0x00000000
-.sym lbl_8066C490, local
+.sym lbl_8066C490, global
 	.4byte 0x3F800000
 	.4byte 0x00000000

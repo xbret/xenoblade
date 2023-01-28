@@ -1658,5 +1658,5 @@
 # 0x8057AE90 - 0x8057B010
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057AE90, local
+.sym lbl_8057AE90, global
 	.skip 0x180

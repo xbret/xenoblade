@@ -304,7 +304,7 @@
 /* 8039ADF4 003643B4  4E 80 00 20 */	blr
 .endfn adxm_mwidle_proc
 
-.fn fn_8039ADF8, local
+.fn fn_8039ADF8, global
 /* 8039ADF8 003643B8  4B FF C6 28 */	b SVM_SetCbErr
 .endfn fn_8039ADF8
 
@@ -640,7 +640,7 @@
 # 0x8051CCE0 - 0x8051CD48
 .rodata
 .balign 8
-.sym lbl_8051CCE0, local
+.sym lbl_8051CCE0, global
 	.4byte 0x0A414458
 	.4byte 0x57494920
 	.4byte 0x5665722E
@@ -653,9 +653,9 @@
 	.4byte 0x303A3533
 	.4byte 0x3A30310A
 	.4byte 0x00000000
-.sym lbl_8051CD10, local
+.sym lbl_8051CD10, global
 	.4byte lbl_8051CCE0
-.sym lbl_8051CD14, local
+.sym lbl_8051CD14, global
 	.4byte 0x31303630
 	.4byte 0x3130323A
 	.4byte 0x20496E74
@@ -673,13 +673,13 @@
 # 0x805F7010 - 0x80601360
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805F7010, local
+.sym lbl_805F7010, global
 	.skip 0x1052
-.sym lbl_805F8062, local
+.sym lbl_805F8062, global
 	.skip 0x6FD6
-.sym lbl_805FF038, local
+.sym lbl_805FF038, global
 	.skip 0x4
-.sym lbl_805FF03C, local
+.sym lbl_805FF03C, global
 	.skip 0x2320
 
 .obj adxm_wii_framework, global

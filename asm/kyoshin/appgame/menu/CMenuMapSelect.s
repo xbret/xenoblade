@@ -177,7 +177,7 @@
 /* 80242350 0020B910  4E 80 00 20 */	blr
 .endfn __ct__CMenuMapSelect
 
-.fn fn_80242354, local
+.fn fn_80242354, global
 /* 80242354 0020B914  80 6D AF 00 */	lwz r3, lbl_80667080@sda21(r13)
 /* 80242358 0020B918  7C 03 00 D0 */	neg r0, r3
 /* 8024235C 0020B91C  7C 00 1B 78 */	or r0, r0, r3
@@ -185,7 +185,7 @@
 /* 80242364 0020B924  4E 80 00 20 */	blr
 .endfn fn_80242354
 
-.fn fn_80242368, local
+.fn fn_80242368, global
 /* 80242368 0020B928  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8024236C 0020B92C  7C 08 02 A6 */	mflr r0
 /* 80242370 0020B930  90 01 00 14 */	stw r0, 0x14(r1)
@@ -309,7 +309,7 @@
 /* 80242520 0020BAE0  4E 80 00 20 */	blr
 .endfn fn_80242368
 
-.fn fn_80242524, local
+.fn fn_80242524, global
 /* 80242524 0020BAE4  94 21 CC A0 */	stwu r1, -0x3360(r1)
 /* 80242528 0020BAE8  7C 08 02 A6 */	mflr r0
 /* 8024252C 0020BAEC  90 01 33 64 */	stw r0, 0x3364(r1)
@@ -636,7 +636,7 @@
 /* 80242A24 0020BFE4  4E 80 00 20 */	blr
 .endfn fn_80242524
 
-.fn fn_80242A28, local
+.fn fn_80242A28, global
 /* 80242A28 0020BFE8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80242A2C 0020BFEC  7C 08 02 A6 */	mflr r0
 /* 80242A30 0020BFF0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1102,12 +1102,12 @@
 /* 80243098 0020C658  4E 80 00 20 */	blr
 .endfn fn_80242A28
 
-.fn fn_8024309C, local
+.fn fn_8024309C, global
 /* 8024309C 0020C65C  38 63 FF A8 */	addi r3, r3, -0x58
 /* 802430A0 0020C660  4B FF F0 A4 */	b fn_80242144
 .endfn fn_8024309C
 
-.fn fn_802430A4, local
+.fn fn_802430A4, global
 /* 802430A4 0020C664  38 63 FF A8 */	addi r3, r3, -0x58
 /* 802430A8 0020C668  4B FF E3 C4 */	b fn_8024146C
 .endfn fn_802430A4
@@ -1121,7 +1121,7 @@
 	.4byte 0x754D6170
 	.4byte 0x53656C65
 	.4byte 0x63740000
-.sym lbl_80506B98, local
+.sym lbl_80506B98, global
 	.4byte 0x4D4E555F
 	.4byte 0x6D617000
 	.4byte 0x6E616D65
@@ -1174,10 +1174,10 @@
 # 0x8066AFE0 - 0x8066AFF0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066AFE0, local
+.sym lbl_8066AFE0, global
 	.4byte 0x00000000
-.sym lbl_8066AFE4, local
+.sym lbl_8066AFE4, global
 	.4byte 0x3F800000
-.sym lbl_8066AFE8, local
+.sym lbl_8066AFE8, global
 	.4byte 0x41200000
 	.4byte 0x00000000

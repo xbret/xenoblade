@@ -112,7 +112,7 @@
 .text
 .balign 4
 
-.fn fn_80059EB8, local
+.fn fn_80059EB8, global
 /* 80059EB8 00023478  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80059EBC 0002347C  7C 08 02 A6 */	mflr r0
 /* 80059EC0 00023480  3C A0 80 53 */	lis r5, __vt__CTimeLightGrp@ha
@@ -213,7 +213,7 @@
 /* 8005A038 000235F8  4E 80 00 20 */	blr
 .endfn fn_80059EB8
 
-.fn fn_8005A03C, local
+.fn fn_8005A03C, global
 /* 8005A03C 000235FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005A040 00023600  7C 08 02 A6 */	mflr r0
 /* 8005A044 00023604  2C 03 00 00 */	cmpwi r3, 0x0
@@ -233,7 +233,7 @@
 /* 8005A078 00023638  4E 80 00 20 */	blr
 .endfn fn_8005A03C
 
-.fn fn_8005A07C, local
+.fn fn_8005A07C, global
 /* 8005A07C 0002363C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005A080 00023640  7C 08 02 A6 */	mflr r0
 /* 8005A084 00023644  2C 03 00 00 */	cmpwi r3, 0x0
@@ -285,7 +285,7 @@
 /* 8005A12C 000236EC  4E 80 00 20 */	blr
 .endfn fn_8005A07C
 
-.fn fn_8005A130, local
+.fn fn_8005A130, global
 /* 8005A130 000236F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005A134 000236F4  7C 08 02 A6 */	mflr r0
 /* 8005A138 000236F8  2C 03 00 00 */	cmpwi r3, 0x0
@@ -338,7 +338,7 @@
 /* 8005A1E4 000237A4  4E 80 00 20 */	blr
 .endfn fn_8005A130
 
-.fn fn_8005A1E8, local
+.fn fn_8005A1E8, global
 /* 8005A1E8 000237A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8005A1EC 000237AC  7C 08 02 A6 */	mflr r0
 /* 8005A1F0 000237B0  2C 03 00 00 */	cmpwi r3, 0x0
@@ -413,7 +413,7 @@
 /* 8005A2EC 000238AC  4E 80 00 20 */	blr
 .endfn fn_8005A1E8
 
-.fn fn_8005A2F0, local
+.fn fn_8005A2F0, global
 /* 8005A2F0 000238B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8005A2F4 000238B4  38 C0 00 00 */	li r6, 0x0
 /* 8005A2F8 000238B8  38 E0 00 00 */	li r7, 0x0
@@ -453,7 +453,7 @@
 /* 8005A370 00023930  4E 80 00 20 */	blr
 .endfn fn_8005A2F0
 
-.fn fn_8005A374, local
+.fn fn_8005A374, global
 /* 8005A374 00023934  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8005A378 00023938  C0 63 00 38 */	lfs f3, 0x38(r3)
 /* 8005A37C 0002393C  C0 43 00 30 */	lfs f2, 0x30(r3)
@@ -582,6 +582,6 @@
 # 0x806688C8 - 0x806688D0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_806688C8, local
+.sym lbl_806688C8, global
 	.4byte 0x3F800000
 	.4byte 0x00000000

@@ -1158,12 +1158,12 @@
 # 0x8051C430 - 0x8051C590
 .rodata
 .balign 8
-.sym lbl_8051C430, local
+.sym lbl_8051C430, global
 	.4byte 0x2E534FA3
 	.4byte 0xAF9711D2
 	.4byte 0xA5270060
 	.4byte 0x089448BC
-.sym lbl_8051C440, local
+.sym lbl_8051C440, global
 	.4byte 0x534A554E
 	.4byte 0x49204572
 	.4byte 0x726F7200

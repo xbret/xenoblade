@@ -3,7 +3,7 @@
 
 # 0x803539A0 - 0x80353AA0
 .text
-.balign 4
+.balign 16
 
 .fn OSGetMEM1ArenaHi, global
 /* 803539A0 0031CF60  80 6D B8 E0 */	lwz r3, __OSArenaHi@sda21(r13)

@@ -3,7 +3,7 @@
 
 # 0x802D2050 - 0x802D2110
 .text
-.balign 4
+.balign 16
 
 .fn AXInitSpecifyMem, global
 /* 802D2050 0029B610  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -67,7 +67,7 @@
 # 0x80540070 - 0x805400B8
 .data
 .balign 8
-.sym lbl_80540070, local
+.sym lbl_80540070, global
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -90,12 +90,12 @@
 # 0x806658B0 - 0x806658B8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806658B0, local
+.sym lbl_806658B0, global
 	.4byte lbl_80540070
 	.4byte 0x00000000
 
 # 0x80667608 - 0x80667610
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667608, local
+.sym lbl_80667608, global
 	.skip 0x8

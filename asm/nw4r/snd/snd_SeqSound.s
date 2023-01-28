@@ -595,7 +595,7 @@
 # 0x8056E440 - 0x8056E490
 .data
 .balign 8
-.sym lbl_8056E440, local
+.sym lbl_8056E440, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail8SeqSoundCFv
@@ -610,7 +610,7 @@
 	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail8SeqSoundFv
 	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
 	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
-.sym lbl_8056E478, local
+.sym lbl_8056E478, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
@@ -621,5 +621,5 @@
 # 0x80667DD8 - 0x80667DE0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DD8, local
+.sym lbl_80667DD8, global
 	.skip 0x8

@@ -379,7 +379,7 @@
 # 0x8050CF00 - 0x8050CF18
 .rodata
 .balign 8
-.sym lbl_8050CF00, local
+.sym lbl_8050CF00, global
 	.4byte 0x00000004
 	.4byte 0x0000000C
 	.4byte 0x00000014
@@ -390,12 +390,12 @@
 # 0x8057B010 - 0x8057B048
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057B010, local
+.sym lbl_8057B010, global
 	.skip 0x38
 
 # 0x80667524 - 0x80667530
 .section .sbss, "wa", @nobits
 .balign 4
 	.skip 0x4
-.sym lbl_80667528, local
+.sym lbl_80667528, global
 	.skip 0x8

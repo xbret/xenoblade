@@ -3,7 +3,7 @@
 
 # 0x802DAAE0 - 0x802DAB00
 .text
-.balign 4
+.balign 16
 
 .fn __AXFXGetSrcCoef, global
 /* 802DAAE0 002A40A0  3C 80 80 54 */	lis r4, lbl_805435E0@ha
@@ -19,7 +19,7 @@
 # 0x805435E0 - 0x80543DE0
 .data
 .balign 8
-.sym lbl_805435E0, local
+.sym lbl_805435E0, global
 	.4byte 0x3DC7B000
 	.4byte 0x3F4D5E00
 	.4byte 0x3DD01000

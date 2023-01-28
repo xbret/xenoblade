@@ -59,7 +59,7 @@
 /* 803A59AC 0036EF6C  4E 80 00 20 */	blr
 .endfn MPV_CheckDelim
 
-.fn fn_803A59B0, local
+.fn fn_803A59B0, global
 /* 803A59B0 0036EF70  94 21 FE F0 */	stwu r1, -0x110(r1)
 /* 803A59B4 0036EF74  7C 08 02 A6 */	mflr r0
 /* 803A59B8 0036EF78  90 01 01 14 */	stw r0, 0x114(r1)
@@ -81,7 +81,7 @@
 /* 803A59F0 0036EFB0  4E 80 00 20 */	blr
 .endfn fn_803A59B0
 
-.fn fn_803A59F4, local
+.fn fn_803A59F4, global
 /* 803A59F4 0036EFB4  88 A3 00 00 */	lbz r5, 0x0(r3)
 /* 803A59F8 0036EFB8  88 83 00 01 */	lbz r4, 0x1(r3)
 /* 803A59FC 0036EFBC  54 A5 40 2E */	slwi r5, r5, 8
@@ -162,7 +162,7 @@
 # 0x8051F608 - 0x8051F708
 .rodata
 .balign 8
-.sym lbl_8051F608, local
+.sym lbl_8051F608, global
 	.4byte 0x04030101
 	.4byte 0x01010101
 	.4byte 0x01010101

@@ -1300,6 +1300,6 @@
 # 0x8051F600 - 0x8051F608
 .rodata
 .balign 8
-.sym lbl_8051F600, local
+.sym lbl_8051F600, global
 	.4byte 0x322E3035
 	.4byte 0x39000000

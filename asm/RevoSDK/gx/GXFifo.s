@@ -3,7 +3,7 @@
 
 # 0x80318600 - 0x80319230
 .text
-.balign 4
+.balign 16
 
 .fn GXCPInterruptHandler, global
 /* 80318600 002E1BC0  94 21 FD 20 */	stwu r1, -0x2e0(r1)
@@ -634,7 +634,7 @@
 /* 80318EFC 002E24BC  4E 80 00 20 */	blr
 .endfn GXGetCPUFifo
 
-.fn fn_80318F00, local
+.fn fn_80318F00, global
 /* 80318F00 002E24C0  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 80318F04 002E24C4  90 04 00 00 */	stw r0, 0x0(r4)
 /* 80318F08 002E24C8  80 03 00 18 */	lwz r0, 0x18(r3)
@@ -858,14 +858,14 @@
 # 0x8054B8C0 - 0x8054B8F0
 .data
 .balign 8
-.sym lbl_8054B8C0, local
+.sym lbl_8054B8C0, global
 	.4byte 0x43505546
 	.4byte 0x69666F3A
 	.4byte 0x20253038
 	.4byte 0x58202D20
 	.4byte 0x25303858
 	.4byte 0x0A000000
-.sym lbl_8054B8D8, local
+.sym lbl_8054B8D8, global
 	.4byte 0x47502046
 	.4byte 0x69666F3A
 	.4byte 0x20253038
@@ -876,27 +876,27 @@
 # 0x805CD560 - 0x805CD5A8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CD560, local
+.sym lbl_805CD560, global
 	.skip 0x24
-.sym lbl_805CD584, local
+.sym lbl_805CD584, global
 	.skip 0x24
 
 # 0x80667930 - 0x80667950
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667930, local
+.sym lbl_80667930, global
 	.skip 0x1
-.sym lbl_80667931, local
+.sym lbl_80667931, global
 	.skip 0x3
-.sym lbl_80667934, local
+.sym lbl_80667934, global
 	.skip 0x4
-.sym lbl_80667938, local
+.sym lbl_80667938, global
 	.skip 0x4
-.sym lbl_8066793C, local
+.sym lbl_8066793C, global
 	.skip 0x4
-.sym lbl_80667940, local
+.sym lbl_80667940, global
 	.skip 0x4
-.sym lbl_80667944, local
+.sym lbl_80667944, global
 	.skip 0x4
-.sym lbl_80667948, local
+.sym lbl_80667948, global
 	.skip 0x8

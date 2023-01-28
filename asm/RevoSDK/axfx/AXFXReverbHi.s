@@ -3,7 +3,7 @@
 
 # 0x802D5710 - 0x802D57C0
 .text
-.balign 4
+.balign 16
 
 .fn AXFXReverbHiInit, global
 /* 802D5710 0029ECD0  C0 E3 01 58 */	lfs f7, 0x158(r3)
@@ -61,7 +61,7 @@
 # 0x8066BDD8 - 0x8066BDE0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BDD8, local
+.sym lbl_8066BDD8, global
 	.4byte 0x00000000
-.sym lbl_8066BDDC, local
+.sym lbl_8066BDDC, global
 	.4byte 0x3F800000

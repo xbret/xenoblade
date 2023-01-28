@@ -3,7 +3,7 @@
 
 # 0x80350FA0 - 0x80351290
 .text
-.balign 4
+.balign 16
 
 .fn NANDCheckAsync, global
 /* 80350FA0 0031A560  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -217,47 +217,47 @@
 # 0x805511D0 - 0x805512B8
 .data
 .balign 8
-.sym lbl_805511D0, local
+.sym lbl_805511D0, global
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303130
 	.4byte 0x30303000
-.sym lbl_805511E0, local
+.sym lbl_805511E0, global
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303130
 	.4byte 0x30303100
-.sym lbl_805511F0, local
+.sym lbl_805511F0, global
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303130
 	.4byte 0x30303300
-.sym lbl_80551200, local
+.sym lbl_80551200, global
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303130
 	.4byte 0x30303400
-.sym lbl_80551210, local
+.sym lbl_80551210, global
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303130
 	.4byte 0x30303500
-.sym lbl_80551220, local
+.sym lbl_80551220, global
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303130
 	.4byte 0x30303600
-.sym lbl_80551230, local
+.sym lbl_80551230, global
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303130
 	.4byte 0x30303700
-.sym lbl_80551240, local
+.sym lbl_80551240, global
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x2F746974
 	.4byte 0x6C650000
-.sym lbl_80551250, local
+.sym lbl_80551250, global
 	.4byte lbl_80665B10
 	.4byte lbl_80665B18
 	.4byte lbl_805511D0
@@ -269,14 +269,14 @@
 	.4byte lbl_80551230
 	.4byte lbl_80551240
 	.4byte 0x00000000
-.sym lbl_8055127C, local
+.sym lbl_8055127C, global
 	.4byte 0x6E616E64
 	.4byte 0x55736572
 	.4byte 0x41726561
 	.4byte 0x43616C6C
 	.4byte 0x6261636B
 	.4byte 0x00000000
-.sym lbl_80551294, local
+.sym lbl_80551294, global
 	.4byte 0x496C6C65
 	.4byte 0x67616C20
 	.4byte 0x73746174
@@ -290,9 +290,9 @@
 # 0x80665B10 - 0x80665B20
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B10, local
+.sym lbl_80665B10, global
 	.4byte 0x2F6D6574
 	.4byte 0x61000000
-.sym lbl_80665B18, local
+.sym lbl_80665B18, global
 	.4byte 0x2F746963
 	.4byte 0x6B657400

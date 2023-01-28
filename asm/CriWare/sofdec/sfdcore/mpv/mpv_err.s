@@ -119,5 +119,5 @@
 # 0x80605F38 - 0x80605F50
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80605F38, local
+.sym lbl_80605F38, global
 	.skip 0x18

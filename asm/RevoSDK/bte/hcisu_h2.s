@@ -3,7 +3,7 @@
 
 # 0x802DCAA0 - 0x802DD160
 .text
-.balign 4
+.balign 16
 
 .fn hcisu_h2_usb_cback, global
 /* 802DCAA0 002A6060  2C 03 00 04 */	cmpwi r3, 0x4
@@ -496,7 +496,7 @@
 # 0x80543F60 - 0x80543FD0
 .data
 .balign 8
-.sym lbl_80543F60, local
+.sym lbl_80543F60, global
 	.4byte 0x48434953
 	.4byte 0x3A20556E
 	.4byte 0x61626C65
@@ -512,7 +512,7 @@
 	.4byte 0x206D6573
 	.4byte 0x73616765
 	.4byte 0x2E000000
-.sym lbl_80543F9C, local
+.sym lbl_80543F9C, global
 	.4byte 0x48434953
 	.4byte 0x3A20496E
 	.4byte 0x76616C69
@@ -530,15 +530,15 @@
 # 0x805BBC20 - 0x805BBC60
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805BBC20, local
+.sym lbl_805BBC20, global
 	.skip 0x40
 
 # 0x8066BF30 - 0x8066BF40
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF30, local
+.sym lbl_8066BF30, global
 	.4byte 0x03040302
 	.4byte 0x00000000
-.sym lbl_8066BF38, local
+.sym lbl_8066BF38, global
 	.4byte 0x13001100
 	.4byte 0x12001000

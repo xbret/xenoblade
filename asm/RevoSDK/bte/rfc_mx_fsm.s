@@ -938,7 +938,7 @@
 	.4byte 0x636F6E66
 	.4byte 0x69675F72
 	.4byte 0x65710000
-.sym lbl_80548828, local
+.sym lbl_80548828, global
 	.4byte 0x5246434F
 	.4byte 0x4D4D204D
 	.4byte 0x58206967
@@ -1023,7 +1023,7 @@
 	.rel rfc_mx_sm_sabme_wait_ua, .L_802FF3E8
 	.rel rfc_mx_sm_sabme_wait_ua, .L_802FF384
 .endobj jumptable_80548918
-.sym lbl_80548954, local
+.sym lbl_80548954, global
 	.4byte 0x7266635F
 	.4byte 0x6D785F73
 	.4byte 0x6D5F7374
@@ -1033,7 +1033,7 @@
 	.4byte 0x6D65202D
 	.4byte 0x20657674
 	.4byte 0x3A256400
-.sym lbl_80548978, local
+.sym lbl_80548978, global
 	.4byte 0x7266635F
 	.4byte 0x6D785F73
 	.4byte 0x6D5F7374
@@ -1058,7 +1058,7 @@
 	.rel rfc_mx_sm_state_connected, .L_802FF624
 	.rel rfc_mx_sm_state_connected, .L_802FF5E4
 .endobj jumptable_8054899C
-.sym lbl_805489CC, local
+.sym lbl_805489CC, global
 	.4byte 0x7266635F
 	.4byte 0x6D785F73
 	.4byte 0x6D5F7374
@@ -1087,7 +1087,7 @@
 	.rel rfc_mx_sm_state_disc_wait_ua, .L_802FF798
 	.rel rfc_mx_sm_state_disc_wait_ua, .L_802FF780
 .endobj jumptable_805489F4
-.sym lbl_80548A30, local
+.sym lbl_80548A30, global
 	.4byte 0x7266635F
 	.4byte 0x6D785F63
 	.4byte 0x6F6E665F
@@ -1097,7 +1097,7 @@
 	.4byte 0x38782072
 	.4byte 0x65733A25
 	.4byte 0x64200000
-.sym lbl_80548A54, local
+.sym lbl_80548A54, global
 	.4byte 0x7266635F
 	.4byte 0x6D785F63
 	.4byte 0x6F6E665F

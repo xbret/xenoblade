@@ -3,7 +3,7 @@
 
 # 0x80340E50 - 0x803412F0
 .text
-.balign 4
+.balign 16
 
 .fn __HBMSYNResetAllControllers, global
 /* 80340E50 0030A410  3C A0 80 55 */	lis r5, lbl_8054FC90@ha

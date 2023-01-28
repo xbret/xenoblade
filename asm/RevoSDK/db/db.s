@@ -3,7 +3,7 @@
 
 # 0x80309110 - 0x80309210
 .text
-.balign 4
+.balign 16
 
 .fn DBInit, global
 /* 80309110 002D26D0  3C 80 80 00 */	lis r4, 0x8000
@@ -88,7 +88,7 @@
 # 0x805495E0 - 0x805495F8
 .data
 .balign 8
-.sym lbl_805495E0, local
+.sym lbl_805495E0, global
 	.4byte 0x44424578
 	.4byte 0x63657074
 	.4byte 0x696F6E44

@@ -3,7 +3,7 @@
 
 # 0x8034FDC0 - 0x80350FA0
 .text
-.balign 4
+.balign 16
 
 .fn nandRemoveTailToken, global
 /* 8034FDC0 00319380  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1472,11 +1472,11 @@
 	.4byte 0x000000FF
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_80551130, local
+.sym lbl_80551130, global
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x00000000
-.sym lbl_8055113C, local
+.sym lbl_8055113C, global
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x2F000000
@@ -1530,25 +1530,25 @@
 .obj __NANDVersion, global
 	.4byte "@2834"
 .endobj __NANDVersion
-.sym lbl_80665AEC, local
+.sym lbl_80665AEC, global
 	.4byte 0x2F000000
 
 .obj "@3775", local
 	.byte 0x00
 .endobj "@3775"
 	.byte 0x00, 0x00, 0x00
-.sym lbl_80665AF4, local
+.sym lbl_80665AF4, global
 	.4byte 0x2E000000
-.sym lbl_80665AF8, local
+.sym lbl_80665AF8, global
 	.4byte 0x2E2E0000
-.sym lbl_80665AFC, local
+.sym lbl_80665AFC, global
 	.4byte 0x2F257300
-.sym lbl_80665B00, local
+.sym lbl_80665B00, global
 	.4byte 0x25732F25
 	.4byte 0x73000000
-.sym lbl_80665B08, local
+.sym lbl_80665B08, global
 	.4byte 0x00000000
-.sym lbl_80665B0C, local
+.sym lbl_80665B0C, global
 	.4byte 0x00200000
 
 # 0x806679F0 - 0x806679F8

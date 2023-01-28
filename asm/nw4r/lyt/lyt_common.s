@@ -838,19 +838,19 @@
 # 0x8063AD00 - 0x8063AD20
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8063AD00, local
+.sym lbl_8063AD00, global
 	.skip 0x20
 
 # 0x80667D80 - 0x80667D88
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D80, local
+.sym lbl_80667D80, global
 	.skip 0x8
 
 # 0x8066C5F8 - 0x8066C600
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C5F8, local
+.sym lbl_8066C5F8, global
 	.4byte 0x00000000
-.sym lbl_8066C5FC, local
+.sym lbl_8066C5FC, global
 	.4byte 0x3F800000

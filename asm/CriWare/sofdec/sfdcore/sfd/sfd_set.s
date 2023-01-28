@@ -27,7 +27,7 @@
 /* 803CC340 00395900  4E 80 00 20 */	blr
 .endfn SFD_GetHnStat
 
-.fn fn_803CC344, local
+.fn fn_803CC344, global
 /* 803CC344 00395904  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CC348 00395908  7C 08 02 A6 */	mflr r0
 /* 803CC34C 0039590C  2C 03 00 00 */	cmpwi r3, 0x0
@@ -220,7 +220,7 @@
 /* 803CC5DC 00395B9C  4E 80 00 20 */	blr
 .endfn SFSET_SetCond
 
-.fn fn_803CC5E0, local
+.fn fn_803CC5E0, global
 /* 803CC5E0 00395BA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CC5E4 00395BA4  7C 08 02 A6 */	mflr r0
 /* 803CC5E8 00395BA8  2C 03 00 00 */	cmpwi r3, 0x0
@@ -271,7 +271,7 @@
 /* 803CC680 00395C40  4E 80 00 20 */	blr
 .endfn SFSET_GetCond
 
-.fn fn_803CC684, local
+.fn fn_803CC684, global
 /* 803CC684 00395C44  90 A3 0D 38 */	stw r5, 0xd38(r3)
 /* 803CC688 00395C48  90 83 0D 34 */	stw r4, 0xd34(r3)
 /* 803CC68C 00395C4C  4E 80 00 20 */	blr

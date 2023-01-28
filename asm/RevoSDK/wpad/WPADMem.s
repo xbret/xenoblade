@@ -3,7 +3,7 @@
 
 # 0x80375A90 - 0x80375B90
 .text
-.balign 4
+.balign 16
 
 .fn WPADiClearMemBlock, global
 /* 80375A90 0033F050  3C 80 80 5E */	lis r4, __rvl_p_wpadcb@ha

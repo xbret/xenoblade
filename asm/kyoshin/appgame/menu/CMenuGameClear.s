@@ -163,7 +163,7 @@
 /* 802B22DC 0027B89C  4E 80 00 20 */	blr
 .endfn __ct__CMenuGameClear
 
-.fn fn_802B22E0, local
+.fn fn_802B22E0, global
 /* 802B22E0 0027B8A0  80 6D B3 68 */	lwz r3, lbl_806674E8@sda21(r13)
 /* 802B22E4 0027B8A4  7C 03 00 D0 */	neg r0, r3
 /* 802B22E8 0027B8A8  7C 00 1B 78 */	or r0, r0, r3
@@ -171,7 +171,7 @@
 /* 802B22F0 0027B8B0  4E 80 00 20 */	blr
 .endfn fn_802B22E0
 
-.fn fn_802B22F4, local
+.fn fn_802B22F4, global
 /* 802B22F4 0027B8B4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802B22F8 0027B8B8  7C 08 02 A6 */	mflr r0
 /* 802B22FC 0027B8BC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -282,7 +282,7 @@
 /* 802B2484 0027BA44  4E 80 00 20 */	blr
 .endfn fn_802B22F4
 
-.fn fn_802B2488, local
+.fn fn_802B2488, global
 /* 802B2488 0027BA48  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802B248C 0027BA4C  7C 08 02 A6 */	mflr r0
 /* 802B2490 0027BA50  90 01 00 34 */	stw r0, 0x34(r1)
@@ -393,17 +393,17 @@
 /* 802B2618 0027BBD8  4E 80 00 20 */	blr
 .endfn fn_802B2488
 
-.fn fn_802B261C, local
+.fn fn_802B261C, global
 /* 802B261C 0027BBDC  38 63 FF A8 */	addi r3, r3, -0x58
 /* 802B2620 0027BBE0  4B FF FA E4 */	b fn_802B2104
 .endfn fn_802B261C
 
-.fn fn_802B2624, local
+.fn fn_802B2624, global
 /* 802B2624 0027BBE4  38 63 FF A8 */	addi r3, r3, -0x58
 /* 802B2628 0027BBE8  4B FF E8 F0 */	b fn_802B0F18
 .endfn fn_802B2624
 
-.fn fn_802B262C, local
+.fn fn_802B262C, global
 /* 802B262C 0027BBEC  80 6D B3 70 */	lwz r3, lbl_806674F0@sda21(r13)
 /* 802B2630 0027BBF0  4E 80 00 20 */	blr
 .endfn fn_802B262C
@@ -417,7 +417,7 @@
 	.4byte 0x7547616D
 	.4byte 0x65436C65
 	.4byte 0x61720000
-.sym lbl_8050C948, local
+.sym lbl_8050C948, global
 	.4byte 0x4A4E4C5F
 	.4byte 0x706C6179
 	.4byte 0x61776172
@@ -484,5 +484,5 @@
 # 0x806674E8 - 0x806674F0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806674E8, local
+.sym lbl_806674E8, global
 	.skip 0x8

@@ -68,7 +68,7 @@
 # 0x8051CD48 - 0x8051CD90
 .rodata
 .balign 8
-.sym lbl_8051CD48, local
+.sym lbl_8051CD48, global
 	.4byte 0x0A414458
 	.4byte 0x57494953
 	.4byte 0x444B2056
@@ -84,8 +84,8 @@
 	.4byte 0x38203130
 	.4byte 0x3A35333A
 	.4byte 0x30310A00
-.sym lbl_8051CD84, local
+.sym lbl_8051CD84, global
 	.4byte lbl_8051CD48
-.sym lbl_8051CD88, local
+.sym lbl_8051CD88, global
 	.4byte 0x4D465300
 	.4byte 0x47434400

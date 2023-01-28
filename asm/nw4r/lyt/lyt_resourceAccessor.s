@@ -43,7 +43,7 @@
 # 0x8056D580 - 0x8056D598
 .data
 .balign 8
-.sym lbl_8056D580, local
+.sym lbl_8056D580, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt16ResourceAccessorFv

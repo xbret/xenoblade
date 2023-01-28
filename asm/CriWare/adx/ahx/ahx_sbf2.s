@@ -62,7 +62,7 @@
 # 0x805657B8 - 0x805657F8
 .data
 .balign 8
-.sym lbl_805657B8, local
+.sym lbl_805657B8, global
 	.4byte ahxsbf_mult_float_win0
 	.4byte ahxsbf_mult_float_win1
 	.4byte ahxsbf_mult_float_win2

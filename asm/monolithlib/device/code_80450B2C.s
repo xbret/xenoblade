@@ -14,12 +14,12 @@
 /* 80450B40 0041A100  4E 80 00 20 */	blr
 .endfn sinit_80450B2C
 
-.fn fn_80450B44, local
+.fn fn_80450B44, global
 /* 80450B44 0041A104  38 63 FE 3C */	addi r3, r3, -0x1c4
 /* 80450B48 0041A108  4B FF FF 70 */	b fn_80450AB8
 .endfn fn_80450B44
 
-.fn fn_80450B4C, local
+.fn fn_80450B4C, global
 /* 80450B4C 0041A10C  38 63 FE 3C */	addi r3, r3, -0x1c4
 /* 80450B50 0041A110  4B FF EB 4C */	b fn_8044F69C
 .endfn fn_80450B4C
@@ -32,5 +32,5 @@
 # 0x8065A780 - 0x8065A808
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8065A780, local
+.sym lbl_8065A780, global
 	.skip 0x88

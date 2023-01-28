@@ -81,7 +81,7 @@
 /* 8039B3D8 00364998  4B FF F4 1C */	b AXRNA_SetBitPerSmpl
 .endfn ADXRNA_SetBitPerSmpl
 
-.fn fn_8039B3DC, local
+.fn fn_8039B3DC, global
 /* 8039B3DC 0036499C  4B FF F4 30 */	b fn_8039A80C
 .endfn fn_8039B3DC
 

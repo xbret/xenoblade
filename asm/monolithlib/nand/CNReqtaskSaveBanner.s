@@ -52,7 +52,7 @@
 .text
 .balign 4
 
-.fn fn_804F4D7C, local
+.fn fn_804F4D7C, global
 /* 804F4D7C 004BE33C  38 00 00 00 */	li r0, 0x0
 /* 804F4D80 004BE340  90 83 00 00 */	stw r4, 0x0(r3)
 /* 804F4D84 004BE344  98 03 00 04 */	stb r0, 0x4(r3)
@@ -60,7 +60,7 @@
 /* 804F4D8C 004BE34C  4E 80 00 20 */	blr
 .endfn fn_804F4D7C
 
-.fn fn_804F4D90, local
+.fn fn_804F4D90, global
 /* 804F4D90 004BE350  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804F4D94 004BE354  7C 08 02 A6 */	mflr r0
 /* 804F4D98 004BE358  90 01 00 14 */	stw r0, 0x14(r1)
@@ -286,7 +286,7 @@
 /* 804F507C 004BE63C  4E 80 00 20 */	blr
 .endfn fn_804F4D90
 
-.fn fn_804F5080, local
+.fn fn_804F5080, global
 /* 804F5080 004BE640  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804F5084 004BE644  7C 08 02 A6 */	mflr r0
 /* 804F5088 004BE648  2C 04 00 00 */	cmpwi r4, 0x0
@@ -310,7 +310,7 @@
 /* 804F50CC 004BE68C  4E 80 00 20 */	blr
 .endfn fn_804F5080
 
-.fn fn_804F50D0, local
+.fn fn_804F50D0, global
 /* 804F50D0 004BE690  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804F50D4 004BE694  7C 08 02 A6 */	mflr r0
 /* 804F50D8 004BE698  90 01 00 14 */	stw r0, 0x14(r1)
@@ -360,7 +360,7 @@
 # 0x80528190 - 0x805281B8
 .rodata
 .balign 8
-.sym lbl_80528190, local
+.sym lbl_80528190, global
 	.4byte 0x62616E6E
 	.4byte 0x65722E62
 	.4byte 0x696E0000
@@ -371,7 +371,7 @@
 	.4byte 0x6B536176
 	.4byte 0x6542616E
 	.4byte 0x6E657200
-.sym lbl_805281B0, local
+.sym lbl_805281B0, global
 	.4byte 0x25732573
 	.4byte 0x00000000
 
@@ -409,15 +409,15 @@
 # 0x80664158 - 0x8066417C
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80664158, local
+.sym lbl_80664158, global
 	.skip 0x24
 
 # 0x806665E8 - 0x806665F8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806665E8, local
+.sym lbl_806665E8, global
 	.4byte lbl_8066DCD0
-.sym lbl_806665EC, local
+.sym lbl_806665EC, global
 	.4byte lbl_80528190
 
 .obj __RTTI__CNReqtaskSaveBanner, global
@@ -427,14 +427,14 @@
 # 0x80668368 - 0x80668370
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80668368, local
+.sym lbl_80668368, global
 	.skip 0x4
-.sym lbl_8066836C, local
+.sym lbl_8066836C, global
 	.skip 0x4
 
 # 0x8066DCD0 - 0x8066DCD8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066DCD0, local
+.sym lbl_8066DCD0, global
 	.4byte 0x2F746D70
 	.4byte 0x2F000000

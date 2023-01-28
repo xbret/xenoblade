@@ -3,7 +3,7 @@
 
 # 0x802DC790 - 0x802DCAA0
 .text
-.balign 4
+.balign 16
 
 .fn GKI_init, global
 /* 802DC790 002A5D50  94 21 FF F0 */	stwu r1, -0x10(r1)

@@ -3,7 +3,7 @@
 
 # 0x803049F0 - 0x80305C68
 .text
-.balign 4
+.balign 16
 
 .fn sdpu_build_uuid_seq, global
 /* 803049F0 002CDFB0  38 00 00 35 */	li r0, 0x35
@@ -1335,7 +1335,7 @@
 # 0x80548FE8 - 0x80549148
 .data
 .balign 8
-.sym lbl_80548FE8, local
+.sym lbl_80548FE8, global
 	.4byte 0x53445020
 	.4byte 0x2D20556E
 	.4byte 0x6578702E
@@ -1346,7 +1346,7 @@
 	.4byte 0x653A2025
 	.4byte 0x64000000
 	.4byte 0x00000000
-.sym lbl_80549010, local
+.sym lbl_80549010, global
 	.4byte 0x53445020
 	.4byte 0x2D205263
 	.4byte 0x76642053
@@ -1357,7 +1357,7 @@
 	.4byte 0x206E6F20
 	.4byte 0x6D617463
 	.4byte 0x68657300
-.sym lbl_80549038, local
+.sym lbl_80549038, global
 	.4byte 0x53445020
 	.4byte 0x2D205772
 	.4byte 0x6F6E6720

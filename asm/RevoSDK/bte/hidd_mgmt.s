@@ -3,7 +3,7 @@
 
 # 0x802F3700 - 0x802F37C8
 .text
-.balign 4
+.balign 16
 
 .fn hidd_proc_repage_timeout, global
 /* 802F3700 002BCCC0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -65,7 +65,7 @@
 # 0x805466C0 - 0x805466E0
 .data
 .balign 8
-.sym lbl_805466C0, local
+.sym lbl_805466C0, global
 	.4byte 0x68696464
 	.4byte 0x5F70726F
 	.4byte 0x635F7265

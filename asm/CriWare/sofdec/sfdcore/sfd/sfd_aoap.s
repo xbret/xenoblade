@@ -350,7 +350,7 @@
 # 0x8051FF48 - 0x8051FF80
 .rodata
 .balign 8
-.sym lbl_8051FF48, local
+.sym lbl_8051FF48, global
 	.4byte SFAOAP_Init
 	.4byte SFAOAP_Finish
 	.4byte SFAOAP_ExecServer

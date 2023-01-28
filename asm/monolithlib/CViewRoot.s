@@ -43,7 +43,7 @@
 .text
 .balign 4
 
-.fn fn_804434FC, local
+.fn fn_804434FC, global
 /* 804434FC 0040CABC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80443500 0040CAC0  7C 08 02 A6 */	mflr r0
 /* 80443504 0040CAC4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -191,7 +191,7 @@
 	.4byte 0x43566965
 	.4byte 0x77526F6F
 	.4byte 0x74000000
-.sym lbl_80525F84, local
+.sym lbl_80525F84, global
 	.4byte 0x43566965
 	.4byte 0x77526F6F
 	.4byte 0x74000000

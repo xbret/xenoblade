@@ -3,7 +3,7 @@
 
 # 0x80352DC0 - 0x80353680
 .text
-.balign 4
+.balign 16
 
 .fn __OSInitAlarm, global
 /* 80352DC0 0031C380  94 21 FF F0 */	stwu r1, -0x10(r1)

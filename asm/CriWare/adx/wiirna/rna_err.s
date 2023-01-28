@@ -42,7 +42,7 @@
 # 0x805F60B8 - 0x805F61C0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805F60B8, local
+.sym lbl_805F60B8, global
 	.skip 0x4
-.sym lbl_805F60BC, local
+.sym lbl_805F60BC, global
 	.skip 0x104

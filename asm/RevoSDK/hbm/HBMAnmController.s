@@ -3,7 +3,7 @@
 
 # 0x8031F450 - 0x8031F560
 .text
-.balign 4
+.balign 16
 
 # homebutton::GroupAnmController::GroupAnmController()
 .fn __ct__Q210homebutton18GroupAnmControllerFv, global

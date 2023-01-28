@@ -164,14 +164,14 @@
 # 0x8066C2B0 - 0x8066C2C8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C2B0, local
+.sym lbl_8066C2B0, global
 	.4byte 0x3F800000
-.sym lbl_8066C2B4, local
+.sym lbl_8066C2B4, global
 	.4byte 0x40000000
-.sym lbl_8066C2B8, local
+.sym lbl_8066C2B8, global
 	.4byte 0x40400000
-.sym lbl_8066C2BC, local
+.sym lbl_8066C2BC, global
 	.4byte 0x00000000
-.sym lbl_8066C2C0, local
+.sym lbl_8066C2C0, global
 	.4byte 0x47000000
 	.4byte 0x00000000

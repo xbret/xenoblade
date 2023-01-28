@@ -3,7 +3,7 @@
 
 # 0x80357720 - 0x803589B0
 .text
-.balign 4
+.balign 16
 
 .fn GetFontCode, global
 /* 80357720 00320CE0  28 03 00 01 */	cmplwi r3, 0x1
@@ -1333,7 +1333,7 @@
 # 0x80551FA0 - 0x80552AB0
 .data
 .balign 8
-.sym lbl_80551FA0, local
+.sym lbl_80551FA0, global
 	.4byte 0x020C020D
 	.4byte 0x020E020F
 	.4byte 0x02100211
@@ -1430,7 +1430,7 @@
 	.4byte 0x02A402A5
 	.4byte 0x02A602A7
 	.4byte 0x02A802A9
-.sym lbl_80552120, local
+.sym lbl_80552120, global
 	.4byte 0x00000001
 	.4byte 0x00020003
 	.4byte 0x00040005
@@ -2047,26 +2047,26 @@
 # 0x80665B88 - 0x80665B90
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B88, local
+.sym lbl_80665B88, global
 	.4byte 0xFFFF0000
 	.4byte 0x00000000
 
 # 0x80667A80 - 0x80667A90
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667A80, local
+.sym lbl_80667A80, global
 	.skip 0x4
-.sym lbl_80667A84, local
+.sym lbl_80667A84, global
 	.skip 0x4
-.sym lbl_80667A88, local
+.sym lbl_80667A88, global
 	.skip 0x4
-.sym lbl_80667A8C, local
+.sym lbl_80667A8C, global
 	.skip 0x4
 
 # 0x8066C1D0 - 0x8066C1D8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C1D0, local
+.sym lbl_8066C1D0, global
 	.4byte 0x2ABE003D
-.sym lbl_8066C1D4, local
+.sym lbl_8066C1D4, global
 	.4byte 0x003D003D

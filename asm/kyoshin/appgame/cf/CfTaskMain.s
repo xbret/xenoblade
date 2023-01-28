@@ -83,7 +83,7 @@
 .text
 .balign 4
 
-.fn fn_80069710, local
+.fn fn_80069710, global
 /* 80069710 00032CD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80069714 00032CD4  7C 08 02 A6 */	mflr r0
 /* 80069718 00032CD8  2C 03 00 00 */	cmpwi r3, 0x0
@@ -109,7 +109,7 @@
 /* 80069764 00032D24  4E 80 00 20 */	blr
 .endfn fn_80069710
 
-.fn fn_80069768, local
+.fn fn_80069768, global
 /* 80069768 00032D28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8006976C 00032D2C  7C 08 02 A6 */	mflr r0
 /* 80069770 00032D30  2C 03 00 00 */	cmpwi r3, 0x0
@@ -137,15 +137,15 @@
 /* 800697C0 00032D80  4E 80 00 20 */	blr
 .endfn fn_80069768
 
-.fn fn_800697C4, local
+.fn fn_800697C4, global
 /* 800697C4 00032D84  4E 80 00 20 */	blr
 .endfn fn_800697C4
 
-.fn fn_800697C8, local
+.fn fn_800697C8, global
 /* 800697C8 00032D88  4E 80 00 20 */	blr
 .endfn fn_800697C8
 
-.fn fn_800697CC, local
+.fn fn_800697CC, global
 /* 800697CC 00032D8C  80 0D A5 A8 */	lwz r0, lbl_80666728@sda21(r13)
 /* 800697D0 00032D90  54 00 02 95 */	rlwinm. r0, r0, 0, 10, 10
 /* 800697D4 00032D94  4C 82 00 20 */	bnelr
@@ -153,15 +153,15 @@
 /* 800697DC 00032D9C  4E 80 00 20 */	blr
 .endfn fn_800697CC
 
-.fn fn_800697E0, local
+.fn fn_800697E0, global
 /* 800697E0 00032DA0  48 01 64 1C */	b fn_8007FBFC
 .endfn fn_800697E0
 
-.fn fn_800697E4, local
+.fn fn_800697E4, global
 /* 800697E4 00032DA4  48 01 64 48 */	b fn_8007FC2C
 .endfn fn_800697E4
 
-.fn fn_800697E8, local
+.fn fn_800697E8, global
 /* 800697E8 00032DA8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800697EC 00032DAC  7C 08 02 A6 */	mflr r0
 /* 800697F0 00032DB0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -216,7 +216,7 @@
 /* 800698B0 00032E70  4E 80 00 20 */	blr
 .endfn fn_800697E8
 
-.fn fn_800698B4, local
+.fn fn_800698B4, global
 /* 800698B4 00032E74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800698B8 00032E78  7C 08 02 A6 */	mflr r0
 /* 800698BC 00032E7C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -238,7 +238,7 @@
 /* 800698F8 00032EB8  4E 80 00 20 */	blr
 .endfn fn_800698B4
 
-.fn fn_800698FC, local
+.fn fn_800698FC, global
 /* 800698FC 00032EBC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80069900 00032EC0  7C 08 02 A6 */	mflr r0
 /* 80069904 00032EC4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -260,7 +260,7 @@
 /* 80069940 00032F00  4E 80 00 20 */	blr
 .endfn fn_800698FC
 
-.fn fn_80069944, local
+.fn fn_80069944, global
 /* 80069944 00032F04  38 63 FF AC */	addi r3, r3, -0x54
 /* 80069948 00032F08  4B FF FE 20 */	b fn_80069768
 .endfn fn_80069944

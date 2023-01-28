@@ -3,7 +3,7 @@
 
 # 0x8035DE50 - 0x8035E070
 .text
-.balign 4
+.balign 16
 
 .fn __OSWriteStateFlags, global
 /* 8035DE50 00327410  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -158,7 +158,7 @@
 # 0x8055ED08 - 0x8055ED30
 .data
 .balign 8
-.sym lbl_8055ED08, local
+.sym lbl_8055ED08, global
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303030
@@ -173,5 +173,5 @@
 # 0x805D5420 - 0x805D5440
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D5420, local
+.sym lbl_805D5420, global
 	.skip 0x20

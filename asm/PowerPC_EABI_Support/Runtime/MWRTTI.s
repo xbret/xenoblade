@@ -201,9 +201,9 @@
 .L_802B9F98:
 /* 802B9F98 00283558  2C 07 00 00 */	cmpwi r7, 0x0
 /* 802B9F9C 0028355C  41 82 00 2C */	beq .L_802B9FC8
-/* 802B9FA0 00283560  3C 80 80 54 */	lis r4, lbl_8053F040@ha
+/* 802B9FA0 00283560  3C 80 80 54 */	lis r4, __vt__Q23std8bad_cast@ha
 /* 802B9FA4 00283564  3C 60 80 51 */	lis r3, lbl_8050CE30@ha
-/* 802B9FA8 00283568  38 84 F0 40 */	addi r4, r4, lbl_8053F040@l
+/* 802B9FA8 00283568  38 84 F0 40 */	addi r4, r4, __vt__Q23std8bad_cast@l
 /* 802B9FAC 0028356C  3C A0 80 2C */	lis r5, __dt__Q23std8bad_castFv@ha
 /* 802B9FB0 00283570  38 63 CE 30 */	addi r3, r3, lbl_8050CE30@l
 /* 802B9FB4 00283574  90 81 00 08 */	stw r4, 0x8(r1)
@@ -258,7 +258,7 @@
 	.4byte 0x3A657863
 	.4byte 0x65707469
 	.4byte 0x6F6E0000
-.sym lbl_8050CE10, local
+.sym lbl_8050CE10, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -269,7 +269,7 @@
 	.4byte 0x3A626164
 	.4byte 0x5F636173
 	.4byte 0x74000000
-.sym lbl_8050CE30, local
+.sym lbl_8050CE30, global
 	.4byte 0x3F3F3F00
 	.4byte 0x21737464
 	.4byte 0x3A3A6578
@@ -292,32 +292,30 @@
 # 0x8053F040 - 0x8053F068
 .data
 .balign 8
-.sym lbl_8053F040, local
-	.4byte __RTTI__std_bad_cast
+
+# std::bad_cast::__vtable
+.obj __vt__Q23std8bad_cast, global
+	.4byte __RTTI__Q23std8bad_cast
 	.4byte 0x00000000
 	.4byte __dt__Q23std8bad_castFv
 	.4byte what__Q23std8bad_castCFv
+.endobj __vt__Q23std8bad_cast
 
 .obj std_bad_cast_hierarchy, global
 	.4byte __RTTI__std_exception
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8053F05C, local
+.sym lbl_8053F05C, global
 	.4byte 0x6261645F
 	.4byte 0x63617374
 	.4byte 0x00000000
 
-# 0x80665858 - 0x80665870
+# 0x80665868 - 0x80665870
 .section .sdata, "wa"
 .balign 8
 
-.obj __RTTI__std_exception, global
-	.4byte std_exception_typestr
-	.4byte 0x00000000
-.sym lbl_80665860, local
-	.4byte dthandler__3stdFv
-	.4byte 0x00000000
-
-.obj __RTTI__std_bad_cast, global
+# std::bad_cast::__RTTI
+.obj __RTTI__Q23std8bad_cast, global
 	.4byte std_bad_cast_typestr
 	.4byte std_bad_cast_hierarchy
+.endobj __RTTI__Q23std8bad_cast

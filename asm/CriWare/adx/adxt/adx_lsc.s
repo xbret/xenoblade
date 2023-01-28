@@ -39,11 +39,11 @@
 # 0x805E5D54 - 0x805E69B8
 .section .bss, "wa", @nobits
 .balign 4
-.sym lbl_805E5D54, local
+.sym lbl_805E5D54, global
 	.skip 0x8
-.sym lbl_805E5D5C, local
+.sym lbl_805E5D5C, global
 	.skip 0xC
-.sym lbl_805E5D68, local
+.sym lbl_805E5D68, global
 	.skip 0xC40
-.sym lbl_805E69A8, local
+.sym lbl_805E69A8, global
 	.skip 0x10

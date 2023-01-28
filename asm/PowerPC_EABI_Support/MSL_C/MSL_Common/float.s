@@ -9,11 +9,11 @@
 	.4byte 0x7FFFFFFF
 .endobj __float_nan
 
-.obj lbl_8066588C, global
+.obj __float_huge, global
 	.4byte 0x7F800000
-.endobj lbl_8066588C
+.endobj __float_huge
 
-.obj lbl_80665890, global
+.obj __double_huge, global
 	.4byte 0x7FF00000
 	.4byte 0x00000000
-.endobj lbl_80665890
+.endobj __double_huge

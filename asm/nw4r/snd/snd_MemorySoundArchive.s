@@ -380,7 +380,7 @@
 # 0x8056E0F0 - 0x8056E170
 .data
 .balign 8
-.sym lbl_8056E0F0, local
+.sym lbl_8056E0F0, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte GetRuntimeTypeInfo__Q34nw4r2ut10FileStreamCFv
@@ -405,7 +405,7 @@
 	.4byte CanCancel__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte Tell__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte 0x00000000
-.sym lbl_8056E150, local
+.sym lbl_8056E150, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3snd18MemorySoundArchiveFv

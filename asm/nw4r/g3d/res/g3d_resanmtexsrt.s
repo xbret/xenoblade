@@ -318,7 +318,7 @@
 # 0x8066C2D8 - 0x8066C2E0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C2D8, local
+.sym lbl_8066C2D8, global
 	.4byte 0x3F800000
-.sym lbl_8066C2DC, local
+.sym lbl_8066C2DC, global
 	.4byte 0x00000000

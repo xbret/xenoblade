@@ -1578,38 +1578,38 @@
 # 0x806570A8 - 0x806570C8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_806570A8, local
+.sym lbl_806570A8, global
 	.skip 0x10
-.sym lbl_806570B8, local
+.sym lbl_806570B8, global
 	.skip 0x10
 
 # 0x80667E38 - 0x80667E40
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E38, local
+.sym lbl_80667E38, global
 	.skip 0x4
-.sym lbl_80667E3C, local
+.sym lbl_80667E3C, global
 	.skip 0x1
-.sym lbl_80667E3D, local
+.sym lbl_80667E3D, global
 	.skip 0x1
-.sym lbl_80667E3E, local
+.sym lbl_80667E3E, global
 	.skip 0x1
-.sym lbl_80667E3F, local
+.sym lbl_80667E3F, global
 	.skip 0x1
 
 # 0x8066C940 - 0x8066C960
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C940, local
+.sym lbl_8066C940, global
 	.4byte 0x00000000
-.sym lbl_8066C944, local
+.sym lbl_8066C944, global
 	.4byte 0x3F800000
-.sym lbl_8066C948, local
+.sym lbl_8066C948, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C950, local
+.sym lbl_8066C950, global
 	.4byte 0x3F000000
 	.4byte 0x00000000
-.sym lbl_8066C958, local
+.sym lbl_8066C958, global
 	.4byte 0x43300000
 	.4byte 0x00000000

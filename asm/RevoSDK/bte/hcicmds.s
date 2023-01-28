@@ -2809,7 +2809,7 @@
 # 0x8050E260 - 0x8050E270
 .rodata
 .balign 8
-.sym lbl_8050E260, local
+.sym lbl_8050E260, global
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFF7F0000

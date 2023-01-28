@@ -3,7 +3,7 @@
 
 # 0x8035F140 - 0x8035F350
 .text
-.balign 4
+.balign 16
 
 .fn __OSRelaunchTitle, global
 /* 8035F140 00328700  54 2B 06 FE */	clrlwi r11, r1, 27

@@ -3,7 +3,7 @@
 
 # 0x80308530 - 0x80308D70
 .text
-.balign 4
+.balign 16
 
 .fn CXInitUncompContextLH, global
 /* 80308530 002D1AF0  38 E0 FF FF */	li r7, -0x1

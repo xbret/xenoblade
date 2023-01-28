@@ -3424,7 +3424,7 @@
 # 0x8056D4D8 - 0x8056D548
 .data
 .balign 8
-.sym lbl_8056D4D8, local
+.sym lbl_8056D4D8, global
 	.4byte 0x0000001F
 	.4byte 0x0000001B
 	.4byte 0x00000017
@@ -3433,7 +3433,7 @@
 	.4byte 0x0000001A
 	.4byte 0x00000016
 	.4byte 0x00000012
-.sym lbl_8056D4F8, local
+.sym lbl_8056D4F8, global
 	.4byte 0x0000001F
 	.4byte 0x0000001B
 	.4byte 0x00000017
@@ -3442,7 +3442,7 @@
 	.4byte 0x0000001A
 	.4byte 0x00000016
 	.4byte 0x00000012
-.sym lbl_8056D518, local
+.sym lbl_8056D518, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt8MaterialFv
@@ -3459,18 +3459,18 @@
 # 0x8066C598 - 0x8066C5B8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C598, local
+.sym lbl_8066C598, global
 	.4byte 0x3F000000
-.sym lbl_8066C59C, local
+.sym lbl_8066C59C, global
 	.4byte 0x3F360B61
-.sym lbl_8066C5A0, local
+.sym lbl_8066C5A0, global
 	.4byte 0x00000000
-.sym lbl_8066C5A4, local
+.sym lbl_8066C5A4, global
 	.4byte 0x3F800000
-.sym lbl_8066C5A8, local
+.sym lbl_8066C5A8, global
 	.4byte 0x40000000
 	.4byte 0x00000000
-.sym lbl_8066C5B0, local
+.sym lbl_8066C5B0, global
 	.4byte 0x43300000
 	.4byte 0x00000000
 
@@ -3478,7 +3478,7 @@
 .section .sbss2, "a", @nobits
 .balign 8
 
-.obj obj_8066DCF0, local
+.obj obj_8066DCF0, global
 	.skip 0x2
 .endobj obj_8066DCF0
 	.skip 0x6

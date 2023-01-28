@@ -3,7 +3,7 @@
 
 # 0x8035E820 - 0x8035F000
 .text
-.balign 4
+.balign 16
 
 .fn OSPlayTimeIsLimited, global
 /* 8035E820 00327DE0  80 0D B9 C8 */	lwz r0, __OSExpireTime@sda21(r13)
@@ -574,7 +574,7 @@
 # 0x8055EEB8 - 0x8055EEF8
 .data
 .balign 8
-.sym lbl_8055EEB8, local
+.sym lbl_8055EEB8, global
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x2F657870
@@ -621,7 +621,7 @@
 # 0x80667B38 - 0x80667B50
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667B38, local
+.sym lbl_80667B38, global
 	.skip 0x4
 
 .obj __OSExpireSetExpiredFlag, global
@@ -640,9 +640,9 @@
 # 0x8066C1D8 - 0x8066C1E8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C1D8, local
+.sym lbl_8066C1D8, global
 	.4byte 0x3F7EB852
 	.4byte 0x00000000
-.sym lbl_8066C1E0, local
+.sym lbl_8066C1E0, global
 	.4byte 0x43300000
 	.4byte 0x80000000

@@ -3,7 +3,7 @@
 
 # 0x802DE708 - 0x802DE95C
 .text
-.balign 4
+.balign 8
 
 .fn bta_sys_rm_register, global
 /* 802DE708 002A7CC8  3C 80 80 5C */	lis r4, lbl_805BF558@ha

@@ -1550,7 +1550,7 @@
 # 0x805197E0 - 0x80519838
 .rodata
 .balign 8
-.sym lbl_805197E0, local
+.sym lbl_805197E0, global
 	.4byte 0x45303231
 	.4byte 0x31303530
 	.4byte 0x31206164
@@ -1577,7 +1577,7 @@
 # 0x80563710 - 0x80563720
 .data
 .balign 8
-.sym lbl_80563710, local
+.sym lbl_80563710, global
 	.4byte 0x00000018
 	.4byte 0x00000018
 	.4byte 0x00000010
@@ -1592,11 +1592,11 @@
 
 .obj adxstmf_rtim_ofst, global
 	.skip 0x4
-.sym lbl_805E7520, local
+.sym lbl_805E7520, global
 	.skip 0x4
-.sym lbl_805E7524, local
+.sym lbl_805E7524, global
 	.skip 0x4
-.sym lbl_805E7528, local
+.sym lbl_805E7528, global
 	.skip 0x1040
-.sym lbl_805E8568, local
+.sym lbl_805E8568, global
 	.skip 0x8

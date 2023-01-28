@@ -3,7 +3,7 @@
 
 # 0x802DAB50 - 0x802DAD60
 .text
-.balign 4
+.balign 16
 
 .fn PPCMfmsr, global
 /* 802DAB50 002A4110  7C 60 00 A6 */	mfmsr r3

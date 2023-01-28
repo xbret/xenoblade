@@ -183,16 +183,16 @@
 # 0x8066C6B8 - 0x8066C6D8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C6B8, local
+.sym lbl_8066C6B8, global
 	.4byte 0x42FE0000
-.sym lbl_8066C6BC, local
+.sym lbl_8066C6BC, global
 	.4byte 0x427C0000
-.sym lbl_8066C6C0, local
+.sym lbl_8066C6C0, global
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066C6C8, local
+.sym lbl_8066C6C8, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C6D0, local
+.sym lbl_8066C6D0, global
 	.4byte 0x43300000
 	.4byte 0x00000000

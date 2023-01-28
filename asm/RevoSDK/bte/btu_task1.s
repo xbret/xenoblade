@@ -3,7 +3,7 @@
 
 # 0x802DE1F0 - 0x802DE634
 .text
-.balign 4
+.balign 16
 
 .fn btu_task_init, global
 /* 802DE1F0 002A77B0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -337,7 +337,7 @@
 # 0x80667770 - 0x80667778
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667770, local
+.sym lbl_80667770, global
 	.skip 0x4
-.sym lbl_80667774, local
+.sym lbl_80667774, global
 	.skip 0x4

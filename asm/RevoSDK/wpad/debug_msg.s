@@ -3,7 +3,7 @@
 
 # 0x80375B90 - 0x80375BE0
 .text
-.balign 4
+.balign 16
 
 .fn DEBUGPrint, global
 /* 80375B90 0033F150  94 21 FF 90 */	stwu r1, -0x70(r1)

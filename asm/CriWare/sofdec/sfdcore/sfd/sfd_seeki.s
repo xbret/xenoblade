@@ -17,7 +17,7 @@
 /* 803D0050 00399610  4E 80 00 20 */	blr
 .endfn SFSEEKI_InitHn
 
-.fn fn_803D0054, local
+.fn fn_803D0054, global
 /* 803D0054 00399614  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D0058 00399618  7C 08 02 A6 */	mflr r0
 /* 803D005C 0039961C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -86,7 +86,7 @@
 /* 803D0140 00399700  4E 80 00 20 */	blr
 .endfn fn_803D0054
 
-.fn fn_803D0144, local
+.fn fn_803D0144, global
 /* 803D0144 00399704  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D0148 00399708  7C 08 02 A6 */	mflr r0
 /* 803D014C 0039970C  2C 04 00 00 */	cmpwi r4, 0x0
@@ -186,7 +186,7 @@
 /* 803D02A0 00399860  4E 80 00 20 */	blr
 .endfn fn_803D0144
 
-.fn fn_803D02A4, local
+.fn fn_803D02A4, global
 /* 803D02A4 00399864  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D02A8 00399868  7C 08 02 A6 */	mflr r0
 /* 803D02AC 0039986C  2C 04 00 00 */	cmpwi r4, 0x0
@@ -273,7 +273,7 @@
 /* 803D03D4 00399994  4E 80 00 20 */	blr
 .endfn fn_803D02A4
 
-.fn fn_803D03D8, local
+.fn fn_803D03D8, global
 /* 803D03D8 00399998  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D03DC 0039999C  7C 08 02 A6 */	mflr r0
 /* 803D03E0 003999A0  2C 04 00 00 */	cmpwi r4, 0x0
@@ -400,7 +400,7 @@
 /* 803D05A8 00399B68  4E 80 00 20 */	blr
 .endfn fn_803D03D8
 
-.fn fn_803D05AC, local
+.fn fn_803D05AC, global
 /* 803D05AC 00399B6C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D05B0 00399B70  7C 08 02 A6 */	mflr r0
 /* 803D05B4 00399B74  90 01 00 14 */	stw r0, 0x14(r1)
@@ -433,7 +433,7 @@
 # 0x80520778 - 0x805207F8
 .rodata
 .balign 8
-.sym lbl_80520778, local
+.sym lbl_80520778, global
 	.4byte 0x6265666F
 	.4byte 0x72652073
 	.4byte 0x65656B69
@@ -442,7 +442,7 @@
 	.4byte 0x65656B69
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_80520798, local
+.sym lbl_80520798, global
 	.4byte 0x286E6279
 	.4byte 0x7465203E
 	.4byte 0x20302920

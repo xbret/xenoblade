@@ -190,7 +190,7 @@
 /* 803BD514 00386AD4  4E 80 00 20 */	blr
 .endfn SFADXT_Finish
 
-.fn fn_803BD518, local
+.fn fn_803BD518, global
 /* 803BD518 00386AD8  7C C5 33 78 */	mr r5, r6
 /* 803BD51C 00386ADC  7C E4 3B 78 */	mr r4, r7
 /* 803BD520 00386AE0  48 00 29 D0 */	b SFCON_WriteTotSmplQue
@@ -1622,7 +1622,7 @@
 # 0x8051FEE0 - 0x8051FF48
 .rodata
 .balign 8
-.sym lbl_8051FEE0, local
+.sym lbl_8051FEE0, global
 	.4byte SFADXT_Init
 	.4byte SFADXT_Finish
 	.4byte SFADXT_ExecServer
@@ -1637,7 +1637,7 @@
 	.4byte SFADXT_GetRead
 	.4byte SFADXT_AddRead
 	.4byte SFADXT_Seek
-.sym lbl_8051FF18, local
+.sym lbl_8051FF18, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1657,9 +1657,9 @@
 
 .obj sfadxt_para, global
 	.skip 0x1C
-.sym lbl_8060A2BC, local
+.sym lbl_8060A2BC, global
 	.skip 0x4
-.sym lbl_8060A2C0, local
+.sym lbl_8060A2C0, global
 	.skip 0x4
-.sym lbl_8060A2C4, local
+.sym lbl_8060A2C4, global
 	.skip 0x4

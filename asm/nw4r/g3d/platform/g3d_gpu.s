@@ -365,15 +365,15 @@
 # 0x8066C3C8 - 0x8066C3E0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C3C8, local
+.sym lbl_8066C3C8, global
 	.4byte 0x00020103
-.sym lbl_8066C3CC, local
+.sym lbl_8066C3CC, global
 	.4byte 0x3F800000
-.sym lbl_8066C3D0, local
+.sym lbl_8066C3D0, global
 	.4byte 0x3F000000
-.sym lbl_8066C3D4, local
+.sym lbl_8066C3D4, global
 	.4byte 0x40000000
-.sym lbl_8066C3D8, local
+.sym lbl_8066C3D8, global
 	.4byte 0x44800000
-.sym lbl_8066C3DC, local
+.sym lbl_8066C3DC, global
 	.4byte 0x00000000

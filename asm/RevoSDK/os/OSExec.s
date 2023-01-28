@@ -3,7 +3,7 @@
 
 # 0x80355510 - 0x80356AF0
 .text
-.balign 4
+.balign 16
 
 .fn PackArgs, global
 /* 80355510 0031EAD0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1571,7 +1571,7 @@
 # 0x80551F30 - 0x80551FA0
 .data
 .balign 8
-.sym lbl_80551F30, local
+.sym lbl_80551F30, global
 	.4byte 0x0A4F5345
 	.4byte 0x78656328
 	.4byte 0x293A2046
@@ -1581,7 +1581,7 @@
 	.4byte 0x63202564
 	.4byte 0x20696E20
 	.4byte 0x25640A00
-.sym lbl_80551F54, local
+.sym lbl_80551F54, global
 	.4byte 0x0A4F5345
 	.4byte 0x78656328
 	.4byte 0x293A2054
@@ -1597,7 +1597,7 @@
 	.4byte 0x68652064
 	.4byte 0x6973630A
 	.4byte 0x00000000
-.sym lbl_80551F90, local
+.sym lbl_80551F90, global
 	.4byte 0x32303034
 	.4byte 0x2F30322F
 	.4byte 0x30310000
@@ -1606,31 +1606,31 @@
 # 0x805D4400 - 0x805D4420
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D4400, local
+.sym lbl_805D4400, global
 	.skip 0x20
 
 # 0x80665B70 - 0x80665B80
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B70, local
+.sym lbl_80665B70, global
 	.4byte 0x25303136
 	.4byte 0x6C6C7800
-.sym lbl_80665B78, local
+.sym lbl_80665B78, global
 	.4byte 0x25640000
 	.4byte 0x00000000
 
 # 0x80667A68 - 0x80667A80
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667A68, local
+.sym lbl_80667A68, global
 	.skip 0x4
-.sym lbl_80667A6C, local
+.sym lbl_80667A6C, global
 	.skip 0x4
-.sym lbl_80667A70, local
+.sym lbl_80667A70, global
 	.skip 0x4
 
 .obj __OSInReboot, global
 	.skip 0x4
 .endobj __OSInReboot
-.sym lbl_80667A78, local
+.sym lbl_80667A78, global
 	.skip 0x8

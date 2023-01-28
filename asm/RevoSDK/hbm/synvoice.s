@@ -3,7 +3,7 @@
 
 # 0x80341F10 - 0x803420C0
 .text
-.balign 4
+.balign 16
 
 .fn __HBMSYNClearVoiceReferences, global
 /* 80341F10 0030B4D0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -53,14 +53,14 @@
 /* 80341FB8 0030B578  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80341FBC 0030B57C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80341FC0, local
+.fn fn_80341FC0, global
 /* 80341FC0 0030B580  38 00 00 03 */	li r0, 0x3
 /* 80341FC4 0030B584  90 03 00 30 */	stw r0, 0x30(r3)
 /* 80341FC8 0030B588  4E 80 00 20 */	blr
 .endfn fn_80341FC0
 /* 80341FCC 0030B58C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80341FD0, local
+.fn fn_80341FD0, global
 /* 80341FD0 0030B590  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341FD4 0030B594  7C 08 02 A6 */	mflr r0
 /* 80341FD8 0030B598  3C 80 80 5D */	lis r4, lbl_805CDEEC@ha

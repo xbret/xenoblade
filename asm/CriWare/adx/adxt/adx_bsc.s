@@ -510,7 +510,7 @@
 /* 803870FC 003506BC  4E 80 00 20 */	blr
 .endfn SKG_GenerateKey
 
-.fn fn_80387100, local
+.fn fn_80387100, global
 /* 80387100 003506C0  3C 60 80 5F */	lis r3, adxb_dec_err_mode@ha
 /* 80387104 003506C4  80 63 89 F0 */	lwz r3, adxb_dec_err_mode@l(r3)
 /* 80387108 003506C8  4E 80 00 20 */	blr
@@ -1322,7 +1322,7 @@
 /* 80387BB8 00351178  4E 80 00 20 */	blr
 .endfn adxb_get_key
 
-.fn fn_80387BBC, local
+.fn fn_80387BBC, global
 /* 80387BBC 0035117C  2C 04 00 00 */	cmpwi r4, 0x0
 /* 80387BC0 00351180  40 82 00 10 */	bne .L_80387BD0
 /* 80387BC4 00351184  38 00 00 00 */	li r0, 0x0
@@ -1407,7 +1407,7 @@
 /* 80387CC0 00351280  4E 80 00 20 */	blr
 .endfn ADXB_Stop
 
-.fn fn_80387CC4, local
+.fn fn_80387CC4, global
 /* 80387CC4 00351284  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80387CC8 00351288  7C 08 02 A6 */	mflr r0
 /* 80387CCC 0035128C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1916,7 +1916,7 @@
 # 0x8051A1C8 - 0x8051AA78
 .rodata
 .balign 8
-.sym lbl_8051A1C8, local
+.sym lbl_8051A1C8, global
 	.4byte 0x401B4021
 	.4byte 0x4025402B
 	.4byte 0x4031403F
@@ -2429,7 +2429,7 @@
 	.4byte 0x68036809
 	.4byte 0x68116817
 	.4byte 0x682D6839
-.sym lbl_8051A9C8, local
+.sym lbl_8051A9C8, global
 	.4byte 0x45303431
 	.4byte 0x30323530
 	.4byte 0x31206164
@@ -2493,5 +2493,5 @@
 
 .obj adxb_dec_err_mode, global
 	.skip 0x8
-.sym lbl_805E89F8, local
+.sym lbl_805E89F8, global
 	.skip 0xFC0

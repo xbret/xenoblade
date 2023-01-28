@@ -3,7 +3,7 @@
 
 # 0x802DD160 - 0x802DDDE0
 .text
-.balign 4
+.balign 16
 
 .fn uusb_CloseDeviceCB, local
 /* 802DD160 002A6720  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -896,39 +896,39 @@
 # 0x805BBC60 - 0x805BDCC0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805BBC60, local
+.sym lbl_805BBC60, global
 	.skip 0x60
-.sym lbl_805BBCC0, local
+.sym lbl_805BBCC0, global
 	.skip 0x1000
-.sym lbl_805BCCC0, local
+.sym lbl_805BCCC0, global
 	.skip 0x1000
 
 # 0x806658C8 - 0x806658D8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806658C8, local
+.sym lbl_806658C8, global
 	.4byte 0x00000001
-.sym lbl_806658CC, local
+.sym lbl_806658CC, global
 	.4byte 0xFFFFFFFF
-.sym lbl_806658D0, local
+.sym lbl_806658D0, global
 	.4byte 0x6F683000
-.sym lbl_806658D4, local
+.sym lbl_806658D4, global
 	.4byte 0x6F683100
 
 # 0x80667748 - 0x80667760
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667748, local
+.sym lbl_80667748, global
 	.skip 0x1
-.sym lbl_80667749, local
+.sym lbl_80667749, global
 	.skip 0x3
-.sym lbl_8066774C, local
+.sym lbl_8066774C, global
 	.skip 0x4
-.sym lbl_80667750, local
+.sym lbl_80667750, global
 	.skip 0x4
-.sym lbl_80667754, local
+.sym lbl_80667754, global
 	.skip 0x4
-.sym lbl_80667758, local
+.sym lbl_80667758, global
 	.skip 0x4
-.sym lbl_8066775C, local
+.sym lbl_8066775C, global
 	.skip 0x4

@@ -3,7 +3,7 @@
 
 # 0x8031E470 - 0x8031E4F0
 .text
-.balign 4
+.balign 16
 
 .fn GXCallDisplayList, global
 /* 8031E470 002E7A30  94 21 FF E0 */	stwu r1, -0x20(r1)

@@ -3,7 +3,7 @@
 
 # 0x802E9EC0 - 0x802EAB54
 .text
-.balign 4
+.balign 16
 
 .fn BTM_PmRegister, global
 /* 802E9EC0 002B3480  54 60 07 7B */	rlwinm. r0, r3, 0, 29, 29
@@ -925,7 +925,7 @@
 # 0x8050E240 - 0x8050E250
 .rodata
 .balign 8
-.sym lbl_8050E240, local
+.sym lbl_8050E240, global
 	.4byte 0x03020201
 	.4byte 0x03010102
 	.4byte 0x03000000
@@ -934,7 +934,7 @@
 # 0x805454F0 - 0x80545530
 .data
 .balign 8
-.sym lbl_805454F0, local
+.sym lbl_805454F0, global
 	.4byte 0x62746D20
 	.4byte 0x6D6F6465
 	.4byte 0x20636861
@@ -955,7 +955,7 @@
 # 0x8066BF70 - 0x8066BF78
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF70, local
+.sym lbl_8066BF70, global
 	.4byte 0x00000100
-.sym lbl_8066BF74, local
+.sym lbl_8066BF74, global
 	.4byte 0x40800100

@@ -150,7 +150,7 @@
 /* 804DE44C 004A7A0C  4E 80 00 20 */	blr
 .endfn __ct__CPackItem
 
-.fn fn_804DE450, local
+.fn fn_804DE450, global
 /* 804DE450 004A7A10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DE454 004A7A14  7C 08 02 A6 */	mflr r0
 /* 804DE458 004A7A18  2C 03 00 00 */	cmpwi r3, 0x0
@@ -201,7 +201,7 @@
 /* 804DE4F8 004A7AB8  4E 80 00 20 */	blr
 .endfn fn_804DE450
 
-.fn fn_804DE4FC, local
+.fn fn_804DE4FC, global
 /* 804DE4FC 004A7ABC  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 804DE500 004A7AC0  7C 08 02 A6 */	mflr r0
 /* 804DE504 004A7AC4  90 01 00 84 */	stw r0, 0x84(r1)
@@ -383,7 +383,7 @@
 /* 804DE788 004A7D48  4E 80 00 20 */	blr
 .endfn fn_804DE4FC
 
-.fn fn_804DE78C, local
+.fn fn_804DE78C, global
 /* 804DE78C 004A7D4C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804DE790 004A7D50  7C 08 02 A6 */	mflr r0
 /* 804DE794 004A7D54  90 01 00 24 */	stw r0, 0x24(r1)
@@ -442,7 +442,7 @@
 /* 804DE850 004A7E10  4E 80 00 20 */	blr
 .endfn fn_804DE78C
 
-.fn fn_804DE854, local
+.fn fn_804DE854, global
 /* 804DE854 004A7E14  7C E4 28 50 */	subf r7, r4, r5
 /* 804DE858 004A7E18  2C 07 00 10 */	cmpwi r7, 0x10
 /* 804DE85C 004A7E1C  40 80 00 58 */	bge .L_804DE8B4
@@ -504,7 +504,7 @@
 /* 804DE91C 004A7EDC  4E 80 00 20 */	blr
 .endfn fn_804DE854
 
-.fn fn_804DE920, local
+.fn fn_804DE920, global
 /* 804DE920 004A7EE0  80 03 00 74 */	lwz r0, 0x74(r3)
 /* 804DE924 004A7EE4  38 80 00 00 */	li r4, 0x0
 /* 804DE928 004A7EE8  2C 00 00 03 */	cmpwi r0, 0x3
@@ -518,7 +518,7 @@
 /* 804DE944 004A7F04  4E 80 00 20 */	blr
 .endfn fn_804DE920
 
-.fn fn_804DE948, local
+.fn fn_804DE948, global
 /* 804DE948 004A7F08  80 C3 00 50 */	lwz r6, 0x50(r3)
 /* 804DE94C 004A7F0C  2C 06 00 00 */	cmpwi r6, 0x0
 /* 804DE950 004A7F10  4D 82 00 20 */	beqlr
@@ -539,7 +539,7 @@
 /* 804DE98C 004A7F4C  4E 80 00 20 */	blr
 .endfn fn_804DE948
 
-.fn fn_804DE990, local
+.fn fn_804DE990, global
 /* 804DE990 004A7F50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DE994 004A7F54  7C 08 02 A6 */	mflr r0
 /* 804DE998 004A7F58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -576,7 +576,7 @@
 /* 804DEA04 004A7FC4  4E 80 00 20 */	blr
 .endfn fn_804DE990
 
-.fn fn_804DEA08, local
+.fn fn_804DEA08, global
 /* 804DEA08 004A7FC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DEA0C 004A7FCC  7C 08 02 A6 */	mflr r0
 /* 804DEA10 004A7FD0  90 01 00 14 */	stw r0, 0x14(r1)

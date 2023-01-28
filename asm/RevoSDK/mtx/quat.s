@@ -3,7 +3,7 @@
 
 # 0x8034E2C0 - 0x8034E730
 .text
-.balign 4
+.balign 16
 
 .fn PSQUATMultiply, global
 /* 8034E2C0 00317880  E0 03 00 00 */	psq_l f0, 0x0(r3), 0, qr0
@@ -318,7 +318,7 @@
 # 0x80518BB8 - 0x80518BC8
 .rodata
 .balign 8
-.sym lbl_80518BB8, local
+.sym lbl_80518BB8, global
 	.4byte 0x00000001
 	.4byte 0x00000002
 	.4byte 0x00000000
@@ -327,15 +327,15 @@
 # 0x8066C170 - 0x8066C188
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C170, local
+.sym lbl_8066C170, global
 	.4byte 0x3727C5AC
-.sym lbl_8066C174, local
+.sym lbl_8066C174, global
 	.4byte 0x3F800000
-.sym lbl_8066C178, local
+.sym lbl_8066C178, global
 	.4byte 0x00000000
-.sym lbl_8066C17C, local
+.sym lbl_8066C17C, global
 	.4byte 0x3F000000
-.sym lbl_8066C180, local
+.sym lbl_8066C180, global
 	.4byte 0x40400000
-.sym lbl_8066C184, local
+.sym lbl_8066C184, global
 	.4byte 0x3F7FFF58

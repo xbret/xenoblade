@@ -3,7 +3,7 @@
 
 # 0x80315D30 - 0x80315EC0
 .text
-.balign 4
+.balign 16
 
 .fn EXIWriteReg, global
 /* 80315D30 002DF2F0  94 21 FF E0 */	stwu r1, -0x20(r1)

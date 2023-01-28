@@ -3,7 +3,7 @@
 
 # 0x802DC200 - 0x802DC790
 .text
-.balign 4
+.balign 16
 
 .fn gki_timers_init, global
 /* 802DC200 002A57C0  3C 60 80 59 */	lis r3, lbl_80593140@ha

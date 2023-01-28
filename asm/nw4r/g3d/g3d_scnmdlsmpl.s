@@ -422,11 +422,11 @@
 /* 803F7C2C 003C11EC  4E 80 00 20 */	blr
 .endfn ScnMdlSmpl_G3DPROC_CALC_VIEW__Q34nw4r3g3d12ScnMdlSimpleFUlPCQ34nw4r4math5MTX34
 
-.fn fn_803F7C30, local
+.fn fn_803F7C30, global
 /* 803F7C30 003C11F0  4E 80 00 20 */	blr
 .endfn fn_803F7C30
 
-.fn fn_803F7C34, local
+.fn fn_803F7C34, global
 /* 803F7C34 003C11F4  4E 80 00 20 */	blr
 .endfn fn_803F7C34
 
@@ -2281,7 +2281,7 @@
 # 0x805210C0 - 0x805210D8
 .rodata
 .balign 8
-.sym lbl_805210C0, local
+.sym lbl_805210C0, global
 	.4byte 0x0000000D
 	.4byte 0x53636E4D
 	.4byte 0x646C5369
@@ -2302,11 +2302,11 @@
 	.rel SetAnmObj__Q34nw4r3g3d12ScnMdlSimpleFPQ34nw4r3g3d6AnmObjQ44nw4r3g3d12ScnMdlSimple10AnmObjType, .L_803F89F4
 	.rel SetAnmObj__Q34nw4r3g3d12ScnMdlSimpleFPQ34nw4r3g3d6AnmObjQ44nw4r3g3d12ScnMdlSimple10AnmObjType, .L_803F8844
 .endobj jumptable_8056D010
-.sym lbl_8056D02C, local
+.sym lbl_8056D02C, global
 	.4byte 0x4E6F6465
 	.4byte 0x54726565
 	.4byte 0x00000000
-.sym lbl_8056D038, local
+.sym lbl_8056D038, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d12ScnMdlSimpleCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2329,19 +2329,19 @@
 # 0x80665DC0 - 0x80665DD8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665DC0, local
+.sym lbl_80665DC0, global
 	.4byte 0x4E6F6465
 	.4byte 0x4D697800
-.sym lbl_80665DC8, local
+.sym lbl_80665DC8, global
 	.4byte 0x44726177
 	.4byte 0x4F706100
-.sym lbl_80665DD0, local
+.sym lbl_80665DD0, global
 	.4byte 0x44726177
 	.4byte 0x586C7500
 
 # 0x8066C4E8 - 0x8066C4F0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C4E8, local
+.sym lbl_8066C4E8, global
 	.4byte 0x3F800000
 	.4byte 0x00000000

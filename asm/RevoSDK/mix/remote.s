@@ -3,7 +3,7 @@
 
 # 0x8034CC90 - 0x8034D1E0
 .text
-.balign 4
+.balign 16
 
 .fn MIXRmtSetVolumes, global
 /* 8034CC90 00316250  80 63 00 18 */	lwz r3, 0x18(r3)

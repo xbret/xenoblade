@@ -3,7 +3,7 @@
 
 # 0x8034E080 - 0x8034E2C0
 .text
-.balign 4
+.balign 16
 
 .fn PSVECAdd, global
 /* 8034E080 00317640  E0 43 00 00 */	psq_l f2, 0x0(r3), 0, qr0
@@ -175,10 +175,10 @@
 # 0x8066C160 - 0x8066C170
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C160, local
+.sym lbl_8066C160, global
 	.4byte 0x3F000000
-.sym lbl_8066C164, local
+.sym lbl_8066C164, global
 	.4byte 0x40400000
-.sym lbl_8066C168, local
+.sym lbl_8066C168, global
 	.4byte 0x00000000
 	.4byte 0x00000000

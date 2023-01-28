@@ -768,7 +768,7 @@
 /* 803DC094 003A5654  4E 80 00 20 */	blr
 .endfn GXGetBlendMode__Q34nw4r3g3d9ResMatPixCFP12_GXBlendModeP14_GXBlendFactorP14_GXBlendFactorP10_GXLogicOp
 
-.fn fn_803DC098, local
+.fn fn_803DC098, global
 /* 803DC098 003A5658  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803DC09C 003A565C  7C 08 02 A6 */	mflr r0
 /* 803DC0A0 003A5660  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1824,7 +1824,7 @@
 /* 803DCEB4 003A6474  4E 80 00 20 */	blr
 .endfn GetResMatFur__Q34nw4r3g3d6ResMatFv
 
-.fn fn_803DCEB8, local
+.fn fn_803DCEB8, global
 /* 803DCEB8 003A6478  80 63 00 00 */	lwz r3, 0x0(r3)
 /* 803DCEBC 003A647C  80 03 00 38 */	lwz r0, 0x38(r3)
 /* 803DCEC0 003A6480  2C 00 00 00 */	cmpwi r0, 0x0
@@ -2050,26 +2050,26 @@
 # 0x8066C268 - 0x8066C2A0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C268, local
+.sym lbl_8066C268, global
 	.4byte 0x00000000
-.sym lbl_8066C26C, local
+.sym lbl_8066C26C, global
 	.4byte 0x3F800000
-.sym lbl_8066C270, local
+.sym lbl_8066C270, global
 	.4byte 0x3FE33333
 	.4byte 0x40000000
-.sym lbl_8066C278, local
+.sym lbl_8066C278, global
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C280, local
+.sym lbl_8066C280, global
 	.4byte 0x40000000
-.sym lbl_8066C284, local
+.sym lbl_8066C284, global
 	.4byte 0x3F000000
-.sym lbl_8066C288, local
+.sym lbl_8066C288, global
 	.4byte 0x3A800000
 	.4byte 0x00000000
-.sym lbl_8066C290, local
+.sym lbl_8066C290, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C298, local
+.sym lbl_8066C298, global
 	.4byte 0x44800000
 	.4byte 0x00000000

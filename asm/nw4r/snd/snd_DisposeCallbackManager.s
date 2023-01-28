@@ -271,13 +271,13 @@
 # 0x8063B1D0 - 0x8063B1E8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8063B1D0, local
+.sym lbl_8063B1D0, global
 	.skip 0xC
-.sym lbl_8063B1DC, local
+.sym lbl_8063B1DC, global
 	.skip 0xC
 
 # 0x80667DC0 - 0x80667DC8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DC0, local
+.sym lbl_80667DC0, global
 	.skip 0x8

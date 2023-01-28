@@ -450,7 +450,7 @@
 # 0x8053FEA8 - 0x8053FEF0
 .data
 .balign 8
-.sym lbl_8053FEA8, local
+.sym lbl_8053FEA8, global
 	.4byte 0x4D657472
 	.4byte 0x6F54524B
 	.4byte 0x202D2062

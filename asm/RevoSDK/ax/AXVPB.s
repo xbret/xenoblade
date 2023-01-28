@@ -3,7 +3,7 @@
 
 # 0x802D4760 - 0x802D56D0
 .text
-.balign 4
+.balign 16
 
 .fn __AXGetNumVoices, global
 /* 802D4760 0029DD20  80 6D B5 A8 */	lwz r3, lbl_80667728@sda21(r13)
@@ -1125,7 +1125,7 @@
 # 0x805400B8 - 0x80543120
 .data
 .balign 8
-.sym lbl_805400B8, local
+.sym lbl_805400B8, global
 	.4byte 0x00000002
 	.4byte 0x00000198
 	.4byte 0x00000198
@@ -1158,7 +1158,7 @@
 	.4byte 0x0000083F
 	.4byte 0x0000083F
 	.4byte 0x0000083F
-.sym lbl_80540138, local
+.sym lbl_80540138, global
 	.4byte 0x00000004
 	.4byte 0x00000056
 	.4byte 0x00000097
@@ -1169,7 +1169,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_80540160, local
+.sym lbl_80540160, global
 	.4byte 0x7F637EC7
 	.4byte 0x7E2B7D91
 	.4byte 0x7CF77C5E
@@ -2178,7 +2178,7 @@
 	.4byte 0x545D5468
 	.4byte 0x5472547C
 	.4byte 0x54875491
-.sym lbl_80541120, local
+.sym lbl_80541120, global
 	.4byte 0x00000000
 	.4byte 0x029F0F3A
 	.4byte 0x029F0F46
@@ -4231,47 +4231,47 @@
 # 0x80581A40 - 0x80593140
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80581A40, local
+.sym lbl_80581A40, global
 	.skip 0x661A
-.sym lbl_8058805A, local
+.sym lbl_8058805A, global
 	.skip 0x11E6
-.sym lbl_80589240, local
+.sym lbl_80589240, global
 	.skip 0x1800
-.sym lbl_8058AA40, local
+.sym lbl_8058AA40, global
 	.skip 0x8700
 
 # 0x80667718 - 0x80667738
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667718, local
+.sym lbl_80667718, global
 	.skip 0x4
-.sym lbl_8066771C, local
+.sym lbl_8066771C, global
 	.skip 0x4
-.sym lbl_80667720, local
+.sym lbl_80667720, global
 	.skip 0x4
-.sym lbl_80667724, local
+.sym lbl_80667724, global
 	.skip 0x4
-.sym lbl_80667728, local
+.sym lbl_80667728, global
 	.skip 0x4
-.sym lbl_8066772C, local
+.sym lbl_8066772C, global
 	.skip 0x4
-.sym lbl_80667730, local
+.sym lbl_80667730, global
 	.skip 0x8
 
 # 0x8066BDB8 - 0x8066BDD8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BDB8, local
+.sym lbl_8066BDB8, global
 	.4byte 0x40000000
-.sym lbl_8066BDBC, local
+.sym lbl_8066BDBC, global
 	.4byte 0x40C90FDB
-.sym lbl_8066BDC0, local
+.sym lbl_8066BDC0, global
 	.4byte 0x46FA0000
-.sym lbl_8066BDC4, local
+.sym lbl_8066BDC4, global
 	.4byte 0x3F800000
-.sym lbl_8066BDC8, local
+.sym lbl_8066BDC8, global
 	.4byte 0x47000000
 	.4byte 0x00000000
-.sym lbl_8066BDD0, local
+.sym lbl_8066BDD0, global
 	.4byte 0x43300000
 	.4byte 0x00000000

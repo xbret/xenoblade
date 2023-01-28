@@ -987,7 +987,7 @@
 # 0x805466E0 - 0x805467F8
 .data
 .balign 8
-.sym lbl_805466E0, local
+.sym lbl_805466E0, global
 	.4byte 0x4849445F
 	.4byte 0x4552525F
 	.4byte 0x4E4F545F

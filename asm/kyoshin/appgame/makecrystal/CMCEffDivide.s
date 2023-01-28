@@ -65,7 +65,7 @@
 .text
 .balign 4
 
-.fn fn_80225BCC, local
+.fn fn_80225BCC, global
 /* 80225BCC 001EF18C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80225BD0 001EF190  7C 08 02 A6 */	mflr r0
 /* 80225BD4 001EF194  90 01 00 14 */	stw r0, 0x14(r1)
@@ -83,7 +83,7 @@
 /* 80225C04 001EF1C4  4E 80 00 20 */	blr
 .endfn fn_80225BCC
 
-.fn fn_80225C08, local
+.fn fn_80225C08, global
 /* 80225C08 001EF1C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80225C0C 001EF1CC  7C 08 02 A6 */	mflr r0
 /* 80225C10 001EF1D0  2C 03 00 00 */	cmpwi r3, 0x0
@@ -103,7 +103,7 @@
 /* 80225C44 001EF204  4E 80 00 20 */	blr
 .endfn fn_80225C08
 
-.fn fn_80225C48, local
+.fn fn_80225C48, global
 /* 80225C48 001EF208  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80225C4C 001EF20C  7C 08 02 A6 */	mflr r0
 /* 80225C50 001EF210  90 01 00 14 */	stw r0, 0x14(r1)
@@ -142,7 +142,7 @@
 /* 80225CD4 001EF294  4E 80 00 20 */	blr
 .endfn fn_80225C48
 
-.fn fn_80225CD8, local
+.fn fn_80225CD8, global
 /* 80225CD8 001EF298  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80225CDC 001EF29C  7C 08 02 A6 */	mflr r0
 /* 80225CE0 001EF2A0  90 01 00 14 */	stw r0, 0x14(r1)

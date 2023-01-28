@@ -111,10 +111,10 @@
 # 0x8066CA30 - 0x8066CA40
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066CA30, local
+.sym lbl_8066CA30, global
 	.4byte 0x3F800000
-.sym lbl_8066CA34, local
+.sym lbl_8066CA34, global
 	.4byte 0x3F000000
-.sym lbl_8066CA38, local
+.sym lbl_8066CA38, global
 	.4byte 0x00000000
 	.4byte 0x00000000

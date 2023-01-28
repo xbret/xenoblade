@@ -1750,7 +1750,7 @@
 # 0x80607B28 - 0x80607B68
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80607B28, local
+.sym lbl_80607B28, global
 	.skip 0x20
-.sym lbl_80607B48, local
+.sym lbl_80607B48, global
 	.skip 0x20

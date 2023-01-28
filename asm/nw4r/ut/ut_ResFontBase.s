@@ -739,7 +739,7 @@
 # 0x8056E740 - 0x8056E808
 .data
 .balign 8
-.sym lbl_8056E740, local
+.sym lbl_8056E740, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r2ut4FontFv
@@ -764,11 +764,11 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056E7A0, local
+.sym lbl_8056E7A0, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte ReadNextCharCP1252__Q34nw4r2ut14CharStrmReaderFv
-.sym lbl_8056E7AC, local
+.sym lbl_8056E7AC, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r2ut6detail11ResFontBaseFv

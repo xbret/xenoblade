@@ -100,7 +100,7 @@
 .text
 .balign 4
 
-.fn fn_802A8174, local
+.fn fn_802A8174, global
 /* 802A8174 00271734  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802A8178 00271738  7C 08 02 A6 */	mflr r0
 /* 802A817C 0027173C  7C 03 20 00 */	cmpw r3, r4
@@ -202,7 +202,7 @@
 /* 802A82D0 00271890  4E 80 00 20 */	blr
 .endfn fn_802A8174
 
-.fn fn_802A82D4, local
+.fn fn_802A82D4, global
 /* 802A82D4 00271894  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A82D8 00271898  7C 08 02 A6 */	mflr r0
 /* 802A82DC 0027189C  3C A0 80 54 */	lis r5, lbl_8053D3E4@ha
@@ -274,7 +274,7 @@
 /* 802A83C8 00271988  4E 80 00 20 */	blr
 .endfn fn_802A82D4
 
-.fn fn_802A83CC, local
+.fn fn_802A83CC, global
 /* 802A83CC 0027198C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A83D0 00271990  7C 08 02 A6 */	mflr r0
 /* 802A83D4 00271994  90 01 00 24 */	stw r0, 0x24(r1)
@@ -388,7 +388,7 @@
 /* 802A855C 00271B1C  4E 80 00 20 */	blr
 .endfn fn_802A83CC
 
-.fn fn_802A8560, local
+.fn fn_802A8560, global
 /* 802A8560 00271B20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A8564 00271B24  7C 08 02 A6 */	mflr r0
 /* 802A8568 00271B28  90 01 00 14 */	stw r0, 0x14(r1)
@@ -410,7 +410,7 @@
 /* 802A85A4 00271B64  4E 80 00 20 */	blr
 .endfn fn_802A8560
 
-.fn fn_802A85A8, local
+.fn fn_802A85A8, global
 /* 802A85A8 00271B68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A85AC 00271B6C  7C 08 02 A6 */	mflr r0
 /* 802A85B0 00271B70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -447,12 +447,12 @@
 /* 802A861C 00271BDC  4E 80 00 20 */	blr
 .endfn fn_802A85A8
 
-.fn fn_802A8620, local
+.fn fn_802A8620, global
 /* 802A8620 00271BE0  38 60 00 8C */	li r3, 0x8c
 /* 802A8624 00271BE4  4E 80 00 20 */	blr
 .endfn fn_802A8620
 
-.fn fn_802A8628, local
+.fn fn_802A8628, global
 /* 802A8628 00271BE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A862C 00271BEC  7C 08 02 A6 */	mflr r0
 /* 802A8630 00271BF0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -518,15 +518,15 @@
 # 0x8053D3D8 - 0x8053D428
 .data
 .balign 8
-.sym lbl_8053D3D8, local
+.sym lbl_8053D3D8, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A82D4
-.sym lbl_8053D3E4, local
+.sym lbl_8053D3E4, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A83CC
-.sym lbl_8053D3F0, local
+.sym lbl_8053D3F0, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A8560
@@ -549,7 +549,7 @@
 # 0x80665610 - 0x80665620
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665610, local
+.sym lbl_80665610, global
 	.4byte 0x00000659
 	.4byte 0x0000065A
 

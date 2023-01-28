@@ -810,14 +810,14 @@
 # 0x80520E78 - 0x80520EA8
 .rodata
 .balign 8
-.sym lbl_80520E78, local
+.sym lbl_80520E78, global
 	.4byte 0x0000000D
 	.4byte 0x416E6D4F
 	.4byte 0x626A5465
 	.4byte 0x78506174
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_80520E90, local
+.sym lbl_80520E90, global
 	.4byte 0x00000010
 	.4byte 0x416E6D4F
 	.4byte 0x626A5465
@@ -828,7 +828,7 @@
 # 0x8056CAF0 - 0x8056CB80
 .data
 .balign 8
-.sym lbl_8056CAF0, local
+.sym lbl_8056CAF0, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d15AnmObjTexPatResCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -847,7 +847,7 @@
 	.4byte Attach__Q34nw4r3g3d12AnmObjTexPatFiPQ34nw4r3g3d15AnmObjTexPatRes
 	.4byte Detach__Q34nw4r3g3d12AnmObjTexPatFi
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexPatFv
-.sym lbl_8056CB38, local
+.sym lbl_8056CB38, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjTexPatCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -870,10 +870,10 @@
 # 0x8066C358 - 0x8066C368
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C358, local
+.sym lbl_8066C358, global
 	.4byte 0x00000000
-.sym lbl_8066C35C, local
+.sym lbl_8066C35C, global
 	.4byte 0x3F800000
-.sym lbl_8066C360, local
+.sym lbl_8066C360, global
 	.4byte 0x43300000
 	.4byte 0x80000000

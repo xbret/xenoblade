@@ -3,7 +3,7 @@
 
 # 0x8035B330 - 0x8035C960
 .text
-.balign 4
+.balign 16
 
 .fn DefaultSwitchThreadCallback, global
 /* 8035B330 003248F0  4E 80 00 20 */	blr
@@ -1669,9 +1669,9 @@
 .obj DefaultThread, local
 	.skip 0x318
 .endobj DefaultThread
-.sym lbl_805D4A70, local
+.sym lbl_805D4A70, global
 	.skip 0x100
-.sym lbl_805D4B70, local
+.sym lbl_805D4B70, global
 	.skip 0x5F0
 
 # 0x80665B90 - 0x80665B98

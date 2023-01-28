@@ -1958,17 +1958,17 @@
 # 0x80521090 - 0x805210C0
 .rodata
 .balign 8
-.sym lbl_80521090, local
+.sym lbl_80521090, global
 	.4byte 0x00000008
 	.4byte 0x53636E4C
 	.4byte 0x65616600
 	.4byte 0x00000000
-.sym lbl_805210A0, local
+.sym lbl_805210A0, global
 	.4byte 0x00000009
 	.4byte 0x53636E47
 	.4byte 0x726F7570
 	.4byte 0x00000000
-.sym lbl_805210B0, local
+.sym lbl_805210B0, global
 	.4byte 0x00000008
 	.4byte 0x53636E52
 	.4byte 0x6F6F7400
@@ -1977,7 +1977,7 @@
 # 0x8056CFA0 - 0x8056D010
 .data
 .balign 8
-.sym lbl_8056CFA0, local
+.sym lbl_8056CFA0, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3g3d12ScnObjGatherFv
@@ -1990,7 +1990,7 @@
 	.4byte DrawXlu__Q34nw4r3g3d12ScnObjGatherFPQ34nw4r3g3d14ResMdlDrawMode
 	.4byte CheckScnObj__Q34nw4r3g3d12ScnObjGatherFPQ34nw4r3g3d6ScnObj
 	.4byte 0x00000000
-.sym lbl_8056CFD0, local
+.sym lbl_8056CFD0, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d7ScnRootCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2011,24 +2011,24 @@
 # 0x80665DB0 - 0x80665DC0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665DB0, local
+.sym lbl_80665DB0, global
 	.4byte 0x00000020
-.sym lbl_80665DB4, local
+.sym lbl_80665DB4, global
 	.4byte 0x00000020
-.sym lbl_80665DB8, local
+.sym lbl_80665DB8, global
 	.4byte 0xFFFFFFFC
-.sym lbl_80665DBC, local
+.sym lbl_80665DBC, global
 	.4byte 0xFFFFFFFC
 
 # 0x80667D48 - 0x80667D50
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D48, local
+.sym lbl_80667D48, global
 	.skip 0x8
 
 # 0x8066C4E0 - 0x8066C4E8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C4E0, local
+.sym lbl_8066C4E0, global
 	.4byte 0x3F000000
 	.4byte 0x00000000

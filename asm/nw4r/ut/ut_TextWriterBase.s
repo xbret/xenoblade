@@ -2218,33 +2218,33 @@
 # 0x806570C8 - 0x806570E0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_806570C8, local
+.sym lbl_806570C8, global
 	.skip 0xC
-.sym lbl_806570D4, local
+.sym lbl_806570D4, global
 	.skip 0xC
 
 # 0x80667E40 - 0x80667E50
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E40, local
+.sym lbl_80667E40, global
 	.skip 0x4
-.sym lbl_80667E44, local
+.sym lbl_80667E44, global
 	.skip 0x4
-.sym lbl_80667E48, local
+.sym lbl_80667E48, global
 	.skip 0x1
-.sym lbl_80667E49, local
+.sym lbl_80667E49, global
 	.skip 0x7
 
 # 0x8066C960 - 0x8066C978
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C960, local
+.sym lbl_8066C960, global
 	.4byte 0x7F7FFFFF
-.sym lbl_8066C964, local
+.sym lbl_8066C964, global
 	.4byte 0x00000000
-.sym lbl_8066C968, local
+.sym lbl_8066C968, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C970, local
+.sym lbl_8066C970, global
 	.4byte 0x3F000000
 	.4byte 0x00000000

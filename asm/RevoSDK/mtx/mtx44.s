@@ -3,7 +3,7 @@
 
 # 0x8034DE50 - 0x8034E080
 .text
-.balign 4
+.balign 16
 
 .fn C_MTXFrustum, global
 /* 8034DE50 00317410  EC 04 18 28 */	fsubs f0, f4, f3
@@ -157,15 +157,15 @@
 # 0x8066C148 - 0x8066C160
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C148, local
+.sym lbl_8066C148, global
 	.4byte 0x3F800000
-.sym lbl_8066C14C, local
+.sym lbl_8066C14C, global
 	.4byte 0x40000000
-.sym lbl_8066C150, local
+.sym lbl_8066C150, global
 	.4byte 0x00000000
-.sym lbl_8066C154, local
+.sym lbl_8066C154, global
 	.4byte 0xBF800000
-.sym lbl_8066C158, local
+.sym lbl_8066C158, global
 	.4byte 0x3F000000
-.sym lbl_8066C15C, local
+.sym lbl_8066C15C, global
 	.4byte 0x3C8EFA35

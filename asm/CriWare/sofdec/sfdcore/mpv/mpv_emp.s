@@ -501,7 +501,7 @@
 # 0x8051F708 - 0x8051F750
 .rodata
 .balign 8
-.sym lbl_8051F708, local
+.sym lbl_8051F708, global
 	.4byte 0x00000101
 	.4byte 0x03030203
 	.4byte 0x03040204

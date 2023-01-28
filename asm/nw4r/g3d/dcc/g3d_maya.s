@@ -901,7 +901,7 @@
 # 0x80520FD8 - 0x80521010
 .rodata
 .balign 8
-.sym lbl_80520FD8, local
+.sym lbl_80520FD8, global
 	.4byte MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -909,7 +909,7 @@
 	.4byte MakeTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.sym lbl_80520FF4, local
+.sym lbl_80520FF4, global
 	.4byte ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -921,14 +921,14 @@
 # 0x8066C498 - 0x8066C4B0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C498, local
+.sym lbl_8066C498, global
 	.4byte 0x00000000
-.sym lbl_8066C49C, local
+.sym lbl_8066C49C, global
 	.4byte 0x3F800000
-.sym lbl_8066C4A0, local
+.sym lbl_8066C4A0, global
 	.4byte 0x3F360B61
-.sym lbl_8066C4A4, local
+.sym lbl_8066C4A4, global
 	.4byte 0x3F000000
-.sym lbl_8066C4A8, local
+.sym lbl_8066C4A8, global
 	.4byte 0xBF000000
 	.4byte 0x00000000

@@ -1216,7 +1216,7 @@
 # 0x8050E398 - 0x8050E3A8
 .rodata
 .balign 8
-.sym lbl_8050E398, local
+.sym lbl_8050E398, global
 	.4byte 0x00000000
 	.4byte 0x00001000
 	.4byte 0x80000080
@@ -1245,7 +1245,7 @@
 	.rel sdpu_build_attrib_entry, .L_803078FC
 	.rel sdpu_build_attrib_entry, .L_803078E8
 .endobj jumptable_805494E8
-.sym lbl_8054952C, local
+.sym lbl_8054952C, global
 	.4byte 0x53445020
 	.4byte 0x2D207364
 	.4byte 0x70755F62
@@ -1260,7 +1260,7 @@
 	.4byte 0x49443A20
 	.4byte 0x30782578
 	.4byte 0x00000000
-.sym lbl_80549564, local
+.sym lbl_80549564, global
 	.4byte 0x53445020
 	.4byte 0x2D206E6F
 	.4byte 0x20627566

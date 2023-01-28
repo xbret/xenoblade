@@ -3,7 +3,7 @@
 
 # 0x80359E80 - 0x80359F10
 .text
-.balign 4
+.balign 16
 
 .fn __OSReboot, global
 /* 80359E80 00323440  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -50,7 +50,7 @@
 # 0x80667AB0 - 0x80667AB8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667AB0, local
+.sym lbl_80667AB0, global
 	.skip 0x4
-.sym lbl_80667AB4, local
+.sym lbl_80667AB4, global
 	.skip 0x4

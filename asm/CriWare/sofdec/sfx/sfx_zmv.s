@@ -1256,11 +1256,11 @@
 # 0x80520B30 - 0x80520D60
 .rodata
 .balign 8
-.sym lbl_80520B30, local
+.sym lbl_80520B30, global
 	.4byte 0x00000000
-.sym lbl_80520B34, local
+.sym lbl_80520B34, global
 	.4byte 0x3F94FDF4
-.sym lbl_80520B38, local
+.sym lbl_80520B38, global
 	.4byte 0x43300000
 	.4byte 0x80000000
 	.4byte 0x3FF00000
@@ -1274,7 +1274,7 @@
 	.4byte 0x416FFFFF
 	.4byte 0xE0000000
 	.4byte 0xC1600000
-.sym lbl_80520B6C, local
+.sym lbl_80520B6C, global
 	.4byte 0x5A4D4844
 	.4byte 0x52005346
 	.4byte 0x58494E46
@@ -1404,5 +1404,5 @@
 # 0x8061D498 - 0x8061D708
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061D498, local
+.sym lbl_8061D498, global
 	.skip 0x270

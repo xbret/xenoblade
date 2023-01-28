@@ -3,7 +3,7 @@
 
 # 0x80310370 - 0x80310600
 .text
-.balign 4
+.balign 16
 
 .fn lowCallback, local
 /* 80310370 002D9930  90 6D B7 10 */	stw r3, lowIntType@sda21(r13)
@@ -215,7 +215,7 @@
 # 0x8054A528 - 0x8054A6C0
 .data
 .balign 8
-.sym lbl_8054A528, local
+.sym lbl_8054A528, global
 	.4byte 0x0A0A0A83
 	.4byte 0x47838981
 	.4byte 0x5B835281
@@ -231,7 +231,7 @@
 	.4byte 0x82DC82B5
 	.4byte 0x82BD8142
 	.4byte 0x00000000
-.sym lbl_8054A564, local
+.sym lbl_8054A564, global
 	.4byte 0x0A0A0A45
 	.4byte 0x72726F72
 	.4byte 0x20233030
@@ -246,7 +246,7 @@
 	.4byte 0x64657465
 	.4byte 0x63746564
 	.4byte 0x2E000000
-.sym lbl_8054A59C, local
+.sym lbl_8054A59C, global
 	.4byte 0x0A0A0A46
 	.4byte 0x65686C65
 	.4byte 0x72202330
@@ -263,7 +263,7 @@
 	.4byte 0x0A656E74
 	.4byte 0x6465636B
 	.4byte 0x742E0000
-.sym lbl_8054A5DC, local
+.sym lbl_8054A5DC, global
 	.4byte 0x0A0A0A45
 	.4byte 0x72726575
 	.4byte 0x72203030
@@ -279,7 +279,7 @@
 	.4byte 0x64E97465
 	.4byte 0x6374E92E
 	.4byte 0x00000000
-.sym lbl_8054A618, local
+.sym lbl_8054A618, global
 	.4byte 0x0A0A0A45
 	.4byte 0x72726F72
 	.4byte 0x20303031
@@ -295,7 +295,7 @@
 	.4byte 0x6175746F
 	.4byte 0x72697A61
 	.4byte 0x646F2E00
-.sym lbl_8054A654, local
+.sym lbl_8054A654, global
 	.4byte 0x0A0A0A45
 	.4byte 0x72726F72
 	.4byte 0x65202330
@@ -311,7 +311,7 @@
 	.4byte 0x72697A7A
 	.4byte 0x61746F2E
 	.4byte 0x00000000
-.sym lbl_8054A690, local
+.sym lbl_8054A690, global
 	.4byte 0x0A0A0A46
 	.4byte 0x6F757420
 	.4byte 0x23303031

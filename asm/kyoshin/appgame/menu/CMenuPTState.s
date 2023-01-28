@@ -147,7 +147,7 @@
 /* 80192BCC 0015C18C  4E 80 00 20 */	blr
 .endfn __ct__CMenuPTState
 
-.fn fn_80192BD0, local
+.fn fn_80192BD0, global
 /* 80192BD0 0015C190  80 6D AA 70 */	lwz r3, lbl_80666BF0@sda21(r13)
 /* 80192BD4 0015C194  7C 03 00 D0 */	neg r0, r3
 /* 80192BD8 0015C198  7C 00 1B 78 */	or r0, r0, r3
@@ -155,17 +155,17 @@
 /* 80192BE0 0015C1A0  4E 80 00 20 */	blr
 .endfn fn_80192BD0
 
-.fn fn_80192BE4, local
+.fn fn_80192BE4, global
 /* 80192BE4 0015C1A4  38 63 FF A8 */	addi r3, r3, -0x58
 /* 80192BE8 0015C1A8  4B FF FE 44 */	b fn_80192A2C
 .endfn fn_80192BE4
 
-.fn fn_80192BEC, local
+.fn fn_80192BEC, global
 /* 80192BEC 0015C1AC  38 63 FF A8 */	addi r3, r3, -0x58
 /* 80192BF0 0015C1B0  4B FF E8 30 */	b fn_80191420
 .endfn fn_80192BEC
 
-.fn fn_80192BF4, local
+.fn fn_80192BF4, global
 /* 80192BF4 0015C1B4  C0 22 9F D8 */	lfs f1, lbl_8066A358@sda21(r2)
 /* 80192BF8 0015C1B8  38 00 00 00 */	li r0, 0x0
 /* 80192BFC 0015C1BC  C0 02 9F DC */	lfs f0, lbl_8066A35C@sda21(r2)
@@ -175,7 +175,7 @@
 /* 80192C0C 0015C1CC  4E 80 00 20 */	blr
 .endfn fn_80192BF4
 
-.fn fn_80192C10, local
+.fn fn_80192C10, global
 /* 80192C10 0015C1D0  C0 22 9F D8 */	lfs f1, lbl_8066A358@sda21(r2)
 /* 80192C14 0015C1D4  38 00 00 00 */	li r0, 0x0
 /* 80192C18 0015C1D8  C0 02 9F DC */	lfs f0, lbl_8066A35C@sda21(r2)
@@ -185,7 +185,7 @@
 /* 80192C28 0015C1E8  4E 80 00 20 */	blr
 .endfn fn_80192C10
 
-.fn fn_80192C2C, local
+.fn fn_80192C2C, global
 /* 80192C2C 0015C1EC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80192C30 0015C1F0  7C 08 02 A6 */	mflr r0
 /* 80192C34 0015C1F4  C0 02 9F D8 */	lfs f0, lbl_8066A358@sda21(r2)
@@ -222,7 +222,7 @@
 /* 80192CAC 0015C26C  4E 80 00 20 */	blr
 .endfn fn_80192C2C
 
-.fn fn_80192CB0, local
+.fn fn_80192CB0, global
 /* 80192CB0 0015C270  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80192CB4 0015C274  7C 08 02 A6 */	mflr r0
 /* 80192CB8 0015C278  C0 02 9F D8 */	lfs f0, lbl_8066A358@sda21(r2)
@@ -367,13 +367,13 @@
 # 0x8066A358 - 0x8066A370
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066A358, local
+.sym lbl_8066A358, global
 	.4byte 0x00000000
-.sym lbl_8066A35C, local
+.sym lbl_8066A35C, global
 	.4byte 0x3F800000
-.sym lbl_8066A360, local
+.sym lbl_8066A360, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066A368, local
+.sym lbl_8066A368, global
 	.4byte 0x3D088889
 	.4byte 0x00000000

@@ -744,7 +744,7 @@
 # 0x80521048 - 0x80521080
 .rodata
 .balign 8
-.sym lbl_80521048, local
+.sym lbl_80521048, global
 	.4byte MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -752,7 +752,7 @@
 	.4byte MakeTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.sym lbl_80521064, local
+.sym lbl_80521064, global
 	.4byte ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -764,14 +764,14 @@
 # 0x8066C4C0 - 0x8066C4D8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C4C0, local
+.sym lbl_8066C4C0, global
 	.4byte 0x00000000
-.sym lbl_8066C4C4, local
+.sym lbl_8066C4C4, global
 	.4byte 0x3F000000
-.sym lbl_8066C4C8, local
+.sym lbl_8066C4C8, global
 	.4byte 0x3F800000
-.sym lbl_8066C4CC, local
+.sym lbl_8066C4CC, global
 	.4byte 0x3F360B61
-.sym lbl_8066C4D0, local
+.sym lbl_8066C4D0, global
 	.4byte 0xBF000000
 	.4byte 0x00000000

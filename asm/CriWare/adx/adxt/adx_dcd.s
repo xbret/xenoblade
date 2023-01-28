@@ -519,7 +519,7 @@
 # 0x8051AAD8 - 0x8051AB08
 .rodata
 .balign 8
-.sym lbl_8051AAD8, local
+.sym lbl_8051AAD8, global
 	.4byte 0x40C90FDB
 	.4byte 0x00000000
 	.4byte 0x40000000

@@ -3,7 +3,7 @@
 
 # 0x80349BF0 - 0x8034CC90
 .text
-.balign 4
+.balign 16
 
 .fn __MIXSetPan, global
 /* 80349BF0 003131B0  80 0D B8 64 */	lwz r0, lbl_806679E4@sda21(r13)
@@ -3622,7 +3622,7 @@
 # 0x805504F0 - 0x80551080
 .data
 .balign 8
-.sym lbl_805504F0, local
+.sym lbl_805504F0, global
 	.4byte 0x00000001
 	.4byte 0x00010001
 	.4byte 0x00010001
@@ -4367,21 +4367,21 @@
 # 0x805CFC78 - 0x805D4000
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CFC78, local
+.sym lbl_805CFC78, global
 	.skip 0x2A00
-.sym lbl_805D2678, local
+.sym lbl_805D2678, global
 	.skip 0x1988
 
 # 0x806679D8 - 0x806679F0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806679D8, local
+.sym lbl_806679D8, global
 	.skip 0x4
-.sym lbl_806679DC, local
+.sym lbl_806679DC, global
 	.skip 0x4
-.sym lbl_806679E0, local
+.sym lbl_806679E0, global
 	.skip 0x4
-.sym lbl_806679E4, local
+.sym lbl_806679E4, global
 	.skip 0x4
-.sym lbl_806679E8, local
+.sym lbl_806679E8, global
 	.skip 0x8

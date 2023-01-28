@@ -99,7 +99,7 @@
 # 0x8056D5B0 - 0x8056DEC0
 .data
 .balign 8
-.sym lbl_8056D5B0, local
+.sym lbl_8056D5B0, global
 	.4byte 0x3F000000
 	.4byte 0x3CB5586D
 	.4byte 0x3F05AAC3
@@ -166,7 +166,7 @@
 	.4byte 0x3DADA82F
 	.4byte 0x40000000
 	.4byte 0x3DB5586D
-.sym lbl_8056D6B8, local
+.sym lbl_8056D6B8, global
 	.4byte 0x00000000
 	.4byte 0x3B7F8053
 	.4byte 0x3B7F8053
@@ -685,18 +685,18 @@
 # 0x8066C600 - 0x8066C620
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C600, local
+.sym lbl_8066C600, global
 	.4byte 0x3FB8AA3B
-.sym lbl_8066C604, local
+.sym lbl_8066C604, global
 	.4byte 0x3F317218
-.sym lbl_8066C608, local
+.sym lbl_8066C608, global
 	.4byte 0x41B8AA3B
-.sym lbl_8066C60C, local
+.sym lbl_8066C60C, global
 	.4byte 0x43800000
-.sym lbl_8066C610, local
+.sym lbl_8066C610, global
 	.4byte 0x3F800000
-.sym lbl_8066C614, local
+.sym lbl_8066C614, global
 	.4byte 0x3F000000
-.sym lbl_8066C618, local
+.sym lbl_8066C618, global
 	.4byte 0x40400000
 	.4byte 0x00000000

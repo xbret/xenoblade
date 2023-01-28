@@ -3,7 +3,7 @@
 
 # 0x802E20E8 - 0x802E3830
 .text
-.balign 4
+.balign 8
 
 .fn bta_hh_api_enable, global
 /* 802E20E8 002AB6A8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1702,7 +1702,7 @@
 # 0x80544198 - 0x80544690
 .data
 .balign 8
-.sym lbl_80544198, local
+.sym lbl_80544198, global
 	.4byte 0x6274615F
 	.4byte 0x68685F73
 	.4byte 0x64705F63
@@ -1725,7 +1725,7 @@
 	.4byte 0x61736B20
 	.4byte 0x30782530
 	.4byte 0x32780000
-.sym lbl_805441F0, local
+.sym lbl_805441F0, global
 	.4byte 0x6274615F
 	.4byte 0x68685F73
 	.4byte 0x74617274
@@ -1738,7 +1738,7 @@
 	.4byte 0x6E206465
 	.4byte 0x76696365
 	.4byte 0x73000000
-.sym lbl_80544220, local
+.sym lbl_80544220, global
 	.4byte 0x6274615F
 	.4byte 0x68685F73
 	.4byte 0x74617274
@@ -1759,7 +1759,7 @@
 	.4byte 0x75732030
 	.4byte 0x78253258
 	.4byte 0x00000000
-.sym lbl_80544270, local
+.sym lbl_80544270, global
 	.4byte 0x6274615F
 	.4byte 0x68685F73
 	.4byte 0x64705F63
@@ -1768,7 +1768,7 @@
 	.4byte 0x61747573
 	.4byte 0x20307825
 	.4byte 0x32580000
-.sym lbl_80544290, local
+.sym lbl_80544290, global
 	.4byte 0x6274615F
 	.4byte 0x68685F73
 	.4byte 0x64705F63
@@ -1788,7 +1788,7 @@
 	.4byte 0x61747573
 	.4byte 0x20307825
 	.4byte 0x32580000
-.sym lbl_805442DC, local
+.sym lbl_805442DC, global
 	.4byte 0x6274615F
 	.4byte 0x68685F6F
 	.4byte 0x70656E5F
@@ -1934,12 +1934,12 @@
 	.rel bta_hh_ctrl_dat_act, .L_802E2DC8
 .endobj jumptable_805444C4
 	.4byte 0x00000000
-.sym lbl_805444F0, local
+.sym lbl_805444F0, global
 	.4byte 0x696E7661
 	.4byte 0x6C696420
 	.4byte 0x636F6D6D
 	.4byte 0x616E6400
-.sym lbl_80544500, local
+.sym lbl_80544500, global
 	.4byte 0x4849445F
 	.4byte 0x486F7374
 	.4byte 0x57726974
@@ -1947,7 +1947,7 @@
 	.4byte 0x20457272
 	.4byte 0x6F722025
 	.4byte 0x64000000
-.sym lbl_8054451C, local
+.sym lbl_8054451C, global
 	.4byte 0x6274615F
 	.4byte 0x68685F77
 	.4byte 0x72697465
@@ -2051,18 +2051,18 @@
 # 0x805BF7C8 - 0x805BF9F8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805BF7C8, local
+.sym lbl_805BF7C8, global
 	.skip 0x230
 
 # 0x80665920 - 0x80665928
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665920, local
+.sym lbl_80665920, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 
 # 0x80667778 - 0x80667780
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667778, local
+.sym lbl_80667778, global
 	.skip 0x8

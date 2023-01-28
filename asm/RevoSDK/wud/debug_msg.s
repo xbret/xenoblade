@@ -3,7 +3,7 @@
 
 # 0x8037C5D0 - 0x8037C620
 .text
-.balign 4
+.balign 16
 
 .fn WUD_DEBUGPrint, global
 /* 8037C5D0 00345B90  94 21 FF 90 */	stwu r1, -0x70(r1)

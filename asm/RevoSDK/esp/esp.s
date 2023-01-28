@@ -3,7 +3,7 @@
 
 # 0x80313750 - 0x80313D70
 .text
-.balign 4
+.balign 16
 
 .fn ESP_InitLib, global
 /* 80313750 002DCD10  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -468,6 +468,6 @@
 	.4byte 0xFFFFFFFF
 .endobj __esFd
 	.4byte 0x00000000
-.sym lbl_806659D0, local
+.sym lbl_806659D0, global
 	.4byte 0x2F646576
 	.4byte 0x2F657300

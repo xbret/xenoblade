@@ -3,7 +3,7 @@
 
 # 0x8035D730 - 0x8035DE50
 .text
-.balign 4
+.balign 16
 
 .fn PlayRecordAlarmCallback, global
 /* 8035D730 00326CF0  38 60 00 00 */	li r3, 0x0
@@ -524,7 +524,7 @@
 # 0x8055ECC0 - 0x8055ED08
 .data
 .balign 8
-.sym lbl_8055ECC0, local
+.sym lbl_8055ECC0, global
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303030
@@ -550,7 +550,7 @@
 # 0x805D5220 - 0x805D5420
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D5220, local
+.sym lbl_805D5220, global
 	.skip 0x200
 
 # 0x80665BA0 - 0x80665BA8
@@ -589,7 +589,7 @@
 .obj PlayRecordLastError, local
 	.skip 0x4
 .endobj PlayRecordLastError
-.sym lbl_80667B20, local
+.sym lbl_80667B20, global
 	.skip 0x4
-.sym lbl_80667B24, local
+.sym lbl_80667B24, global
 	.skip 0x4

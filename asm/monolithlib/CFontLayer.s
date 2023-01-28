@@ -52,7 +52,7 @@
 .text
 .balign 4
 
-.fn fn_80448FDC, local
+.fn fn_80448FDC, global
 /* 80448FDC 0041259C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448FE0 004125A0  7C 08 02 A6 */	mflr r0
 /* 80448FE4 004125A4  3C 80 80 57 */	lis r4, __vt__CFontLayer@ha
@@ -70,7 +70,7 @@
 /* 80449014 004125D4  4E 80 00 20 */	blr
 .endfn fn_80448FDC
 
-.fn fn_80449018, local
+.fn fn_80449018, global
 /* 80449018 004125D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044901C 004125DC  7C 08 02 A6 */	mflr r0
 /* 80449020 004125E0  2C 03 00 00 */	cmpwi r3, 0x0
@@ -98,7 +98,7 @@
 /* 80449074 00412634  4E 80 00 20 */	blr
 .endfn fn_80449018
 
-.fn fn_80449078, local
+.fn fn_80449078, global
 /* 80449078 00412638  94 21 FD 70 */	stwu r1, -0x290(r1)
 /* 8044907C 0041263C  7C 08 02 A6 */	mflr r0
 /* 80449080 00412640  90 01 02 94 */	stw r0, 0x294(r1)
@@ -154,31 +154,31 @@
 /* 80449144 00412704  4E 80 00 20 */	blr
 .endfn fn_80449078
 
-.fn fn_80449148, local
+.fn fn_80449148, global
 /* 80449148 00412708  48 00 96 5C */	b fn_804527A4
 .endfn fn_80449148
 
-.fn fn_8044914C, local
+.fn fn_8044914C, global
 /* 8044914C 0041270C  48 00 96 F0 */	b fn_8045283C
 .endfn fn_8044914C
 
-.fn fn_80449150, local
+.fn fn_80449150, global
 /* 80449150 00412710  48 00 97 74 */	b fn_804528C4
 .endfn fn_80449150
 
-.fn fn_80449154, local
+.fn fn_80449154, global
 /* 80449154 00412714  48 00 97 F8 */	b fn_8045294C
 .endfn fn_80449154
 
-.fn fn_80449158, local
+.fn fn_80449158, global
 /* 80449158 00412718  48 00 98 7C */	b fn_804529D4
 .endfn fn_80449158
 
-.fn fn_8044915C, local
+.fn fn_8044915C, global
 /* 8044915C 0041271C  48 00 9B 9C */	b fn_80452CF8
 .endfn fn_8044915C
 
-.fn fn_80449160, local
+.fn fn_80449160, global
 /* 80449160 00412720  48 00 9A 18 */	b fn_80452B78
 .endfn fn_80449160
 

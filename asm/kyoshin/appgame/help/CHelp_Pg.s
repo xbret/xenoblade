@@ -26,7 +26,7 @@
 .text
 .balign 4
 
-.fn fn_802B85A4, local
+.fn fn_802B85A4, global
 /* 802B85A4 00281B64  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B85A8 00281B68  7C 08 02 A6 */	mflr r0
 /* 802B85AC 00281B6C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -56,6 +56,6 @@
 # 0x8066B800 - 0x8066B808
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066B800, local
+.sym lbl_8066B800, global
 	.4byte 0x43300000
 	.4byte 0x80000000

@@ -396,7 +396,7 @@
 /* 803D0AA0 0039A060  4E 80 00 20 */	blr
 .endfn SFH_AnlyMaxFrmNum
 
-.fn fn_803D0AA4, local
+.fn fn_803D0AA4, global
 /* 803D0AA4 0039A064  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 803D0AA8 0039A068  2C 00 00 C8 */	cmpwi r0, 0xc8
 /* 803D0AAC 0039A06C  40 80 00 08 */	bge .L_803D0AB4
@@ -410,7 +410,7 @@
 /* 803D0AC4 0039A084  4E 80 00 20 */	blr
 .endfn fn_803D0AA4
 
-.fn fn_803D0AC8, local
+.fn fn_803D0AC8, global
 /* 803D0AC8 0039A088  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 803D0ACC 0039A08C  2C 00 00 C8 */	cmpwi r0, 0xc8
 /* 803D0AD0 0039A090  40 80 00 0C */	bge .L_803D0ADC
@@ -635,7 +635,7 @@
 /* 803D0D08 0039A2C8  4E 80 00 20 */	blr
 .endfn SFH_AnlyFtrGopM
 
-.fn fn_803D0D0C, local
+.fn fn_803D0D0C, global
 /* 803D0D0C 0039A2CC  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 803D0D10 0039A2D0  2C 00 00 C8 */	cmpwi r0, 0xc8
 /* 803D0D14 0039A2D4  40 80 00 08 */	bge .L_803D0D1C
@@ -649,7 +649,7 @@
 /* 803D0D2C 0039A2EC  4E 80 00 20 */	blr
 .endfn fn_803D0D0C
 
-.fn fn_803D0D30, local
+.fn fn_803D0D30, global
 /* 803D0D30 0039A2F0  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 803D0D34 0039A2F4  2C 00 00 C8 */	cmpwi r0, 0xc8
 /* 803D0D38 0039A2F8  40 80 00 08 */	bge .L_803D0D40
@@ -663,7 +663,7 @@
 /* 803D0D50 0039A310  4E 80 00 20 */	blr
 .endfn fn_803D0D30
 
-.fn fn_803D0D54, local
+.fn fn_803D0D54, global
 /* 803D0D54 0039A314  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 803D0D58 0039A318  2C 00 00 C8 */	cmpwi r0, 0xc8
 /* 803D0D5C 0039A31C  40 80 00 08 */	bge .L_803D0D64
@@ -680,5 +680,5 @@
 # 0x8061CE20 - 0x8061CE28
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061CE20, local
+.sym lbl_8061CE20, global
 	.skip 0x8

@@ -3,7 +3,7 @@
 
 # 0x8034F8B0 - 0x8034FDC0
 .text
-.balign 4
+.balign 16
 
 .fn nandOpen, local
 /* 8034F8B0 00318E70  94 21 FF A0 */	stwu r1, -0x60(r1)

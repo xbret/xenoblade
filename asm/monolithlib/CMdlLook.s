@@ -78,7 +78,7 @@
 .text
 .balign 4
 
-.fn fn_804E7A80, local
+.fn fn_804E7A80, global
 /* 804E7A80 004B1040  C0 02 D7 98 */	lfs f0, lbl_8066DB18@sda21(r2)
 /* 804E7A84 004B1044  3C 80 80 57 */	lis r4, __vt__CMdlLook@ha
 /* 804E7A88 004B1048  38 00 FF FF */	li r0, -0x1
@@ -111,7 +111,7 @@
 /* 804E7AF4 004B10B4  4E 80 00 20 */	blr
 .endfn fn_804E7A80
 
-.fn fn_804E7AF8, local
+.fn fn_804E7AF8, global
 /* 804E7AF8 004B10B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E7AFC 004B10BC  7C 08 02 A6 */	mflr r0
 /* 804E7B00 004B10C0  2C 03 00 00 */	cmpwi r3, 0x0
@@ -131,7 +131,7 @@
 /* 804E7B34 004B10F4  4E 80 00 20 */	blr
 .endfn fn_804E7AF8
 
-.fn fn_804E7B38, local
+.fn fn_804E7B38, global
 /* 804E7B38 004B10F8  94 21 FE 00 */	stwu r1, -0x200(r1)
 /* 804E7B3C 004B10FC  7C 08 02 A6 */	mflr r0
 /* 804E7B40 004B1100  90 01 02 04 */	stw r0, 0x204(r1)
@@ -615,7 +615,7 @@
 /* 804E821C 004B17DC  4E 80 00 20 */	blr
 .endfn fn_804E7B38
 
-.fn fn_804E8220, local
+.fn fn_804E8220, global
 /* 804E8220 004B17E0  C0 23 00 34 */	lfs f1, 0x34(r3)
 /* 804E8224 004B17E4  38 00 00 00 */	li r0, 0x0
 /* 804E8228 004B17E8  C0 04 00 00 */	lfs f0, 0x0(r4)
@@ -646,13 +646,13 @@
 /* 804E8280 004B1840  4E 80 00 20 */	blr
 .endfn fn_804E8220
 
-.fn fn_804E8284, local
+.fn fn_804E8284, global
 /* 804E8284 004B1844  D0 23 00 58 */	stfs f1, 0x58(r3)
 /* 804E8288 004B1848  D0 43 00 5C */	stfs f2, 0x5c(r3)
 /* 804E828C 004B184C  4E 80 00 20 */	blr
 .endfn fn_804E8284
 
-.fn fn_804E8290, local
+.fn fn_804E8290, global
 /* 804E8290 004B1850  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804E8294 004B1854  7C 08 02 A6 */	mflr r0
 /* 804E8298 004B1858  90 01 00 24 */	stw r0, 0x24(r1)
@@ -688,7 +688,7 @@
 /* 804E8308 004B18C8  4E 80 00 20 */	blr
 .endfn fn_804E8290
 
-.fn fn_804E830C, local
+.fn fn_804E830C, global
 /* 804E830C 004B18CC  94 21 FE 10 */	stwu r1, -0x1f0(r1)
 /* 804E8310 004B18D0  7C 08 02 A6 */	mflr r0
 /* 804E8314 004B18D4  90 01 01 F4 */	stw r0, 0x1f4(r1)
@@ -1207,7 +1207,7 @@
 /* 804E8AA8 004B2068  4E 80 00 20 */	blr
 .endfn fn_804E830C
 
-.fn fn_804E8AAC, local
+.fn fn_804E8AAC, global
 /* 804E8AAC 004B206C  94 21 FD C0 */	stwu r1, -0x240(r1)
 /* 804E8AB0 004B2070  7C 08 02 A6 */	mflr r0
 /* 804E8AB4 004B2074  90 01 02 44 */	stw r0, 0x244(r1)
@@ -1867,7 +1867,7 @@
 	.4byte 0x434D646C
 	.4byte 0x4C6F6F6B
 	.4byte 0x00000000
-.sym lbl_80528114, local
+.sym lbl_80528114, global
 	.4byte 0x4A557370
 	.4byte 0x41004A55
 	.4byte 0x68656164
@@ -1891,55 +1891,55 @@
 .obj __RTTI__CMdlLook, global
 	.4byte CMdlLook_typestr
 	.4byte 0x00000000
-.sym lbl_806665C0, local
+.sym lbl_806665C0, global
 	.4byte 0x72656600
-.sym lbl_806665C4, local
+.sym lbl_806665C4, global
 	.4byte 0x72656600
 
 # 0x80668330 - 0x80668338
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80668330, local
+.sym lbl_80668330, global
 	.skip 0x4
-.sym lbl_80668334, local
+.sym lbl_80668334, global
 	.skip 0x4
 
 # 0x8066DB18 - 0x8066DB60
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066DB18, local
+.sym lbl_8066DB18, global
 	.4byte 0x00000000
-.sym lbl_8066DB1C, local
+.sym lbl_8066DB1C, global
 	.4byte 0x41C80000
-.sym lbl_8066DB20, local
+.sym lbl_8066DB20, global
 	.4byte 0x42A00000
-.sym lbl_8066DB24, local
+.sym lbl_8066DB24, global
 	.4byte 0x3DCCCCCD
-.sym lbl_8066DB28, local
+.sym lbl_8066DB28, global
 	.4byte 0x3F800000
-.sym lbl_8066DB2C, local
+.sym lbl_8066DB2C, global
 	.4byte 0x4222F983
-.sym lbl_8066DB30, local
+.sym lbl_8066DB30, global
 	.4byte 0x3F733333
-.sym lbl_8066DB34, local
+.sym lbl_8066DB34, global
 	.4byte 0xBF7FF972
-.sym lbl_8066DB38, local
+.sym lbl_8066DB38, global
 	.4byte 0x40000000
-.sym lbl_8066DB3C, local
+.sym lbl_8066DB3C, global
 	.4byte 0x3F000000
-.sym lbl_8066DB40, local
+.sym lbl_8066DB40, global
 	.4byte 0x41200000
-.sym lbl_8066DB44, local
+.sym lbl_8066DB44, global
 	.4byte 0x3C23D70A
-.sym lbl_8066DB48, local
+.sym lbl_8066DB48, global
 	.4byte 0x3F666666
-.sym lbl_8066DB4C, local
+.sym lbl_8066DB4C, global
 	.4byte 0x3F4CCCCD
-.sym lbl_8066DB50, local
+.sym lbl_8066DB50, global
 	.4byte 0x3F7FFF58
-.sym lbl_8066DB54, local
+.sym lbl_8066DB54, global
 	.4byte 0xBF7FBE77
-.sym lbl_8066DB58, local
+.sym lbl_8066DB58, global
 	.4byte 0xBF800000
-.sym lbl_8066DB5C, local
+.sym lbl_8066DB5C, global
 	.4byte 0x3CC90FDB

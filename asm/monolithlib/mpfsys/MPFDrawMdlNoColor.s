@@ -5,7 +5,7 @@
 .text
 .balign 4
 
-.fn fn_80479844, local
+.fn fn_80479844, global
 /* 80479844 00442E04  88 0D BF E8 */	lbz r0, lbl_80668168@sda21(r13)
 /* 80479848 00442E08  7C 00 07 75 */	extsb. r0, r0
 /* 8047984C 00442E0C  40 82 00 18 */	bne .L_80479864
@@ -22,7 +22,7 @@
 # 0x80668168 - 0x80668170
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80668168, local
+.sym lbl_80668168, global
 	.skip 0x4
-.sym lbl_8066816C, local
+.sym lbl_8066816C, global
 	.skip 0x4

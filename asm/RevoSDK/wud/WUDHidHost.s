@@ -3,7 +3,7 @@
 
 # 0x8037BFE0 - 0x8037C5D0
 .text
-.balign 4
+.balign 16
 
 .fn WUDHidHostCallback, global
 /* 8037BFE0 003455A0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -443,7 +443,7 @@
 # 0x80563470 - 0x80563708
 .data
 .balign 8
-.sym lbl_80563470, local
+.sym lbl_80563470, global
 	.4byte 0x4254415F
 	.4byte 0x48485F45
 	.4byte 0x4E41424C
@@ -597,20 +597,20 @@
 	.rel WUDHidHostCallback, .L_8037C540
 	.rel WUDHidHostCallback, .L_8037C44C
 .endobj jumptable_80563688
-.sym lbl_805636C8, local
+.sym lbl_805636C8, global
 	.4byte 0x496E7661
 	.4byte 0x6C696420
 	.4byte 0x6170705F
 	.4byte 0x6964205B
 	.4byte 0x25645D0A
 	.4byte 0x00000000
-.sym lbl_805636E0, local
+.sym lbl_805636E0, global
 	.4byte 0x6274615F
 	.4byte 0x68685F63
 	.4byte 0x6F5F6F70
 	.4byte 0x656E2829
 	.4byte 0x0A000000
-.sym lbl_805636F4, local
+.sym lbl_805636F4, global
 	.4byte 0x6274615F
 	.4byte 0x68685F63
 	.4byte 0x6F5F636C

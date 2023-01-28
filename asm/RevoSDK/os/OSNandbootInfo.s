@@ -3,7 +3,7 @@
 
 # 0x8035E610 - 0x8035E820
 .text
-.balign 4
+.balign 16
 
 .fn __OSCreateNandbootInfo, global
 /* 8035E610 00327BD0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -155,7 +155,7 @@
 # 0x8055EE98 - 0x8055EEB8
 .data
 .balign 8
-.sym lbl_8055EE98, local
+.sym lbl_8055EE98, global
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x2F737973

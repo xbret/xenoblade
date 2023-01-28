@@ -2573,7 +2573,7 @@
 # 0x8056D398 - 0x8056D460
 .data
 .balign 8
-.sym lbl_8056D398, local
+.sym lbl_8056D398, global
 	.4byte 0x00000100
 	.4byte 0x00010101
 	.4byte 0x00010100
@@ -2589,7 +2589,7 @@
 	.4byte 0x00010100
 	.4byte 0x01010000
 	.4byte 0x00010100
-.sym lbl_8056D3D4, local
+.sym lbl_8056D3D4, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt6WindowFv
@@ -2629,18 +2629,18 @@
 # 0x80667D70 - 0x80667D78
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D70, local
+.sym lbl_80667D70, global
 	.skip 0x8
 
 # 0x8066C580 - 0x8066C598
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C580, local
+.sym lbl_8066C580, global
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066C588, local
+.sym lbl_8066C588, global
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C590, local
+.sym lbl_8066C590, global
 	.4byte 0x43300000
 	.4byte 0x80000000

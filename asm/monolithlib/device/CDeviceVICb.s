@@ -39,17 +39,17 @@
 .text
 .balign 4
 
-.fn fn_80448F30, local
+.fn fn_80448F30, global
 /* 80448F30 004124F0  38 63 FE 38 */	addi r3, r3, -0x1c8
 /* 80448F34 004124F4  4B FF FF 54 */	b fn_80448E88
 .endfn fn_80448F30
 
-.fn fn_80448F38, local
+.fn fn_80448F38, global
 /* 80448F38 004124F8  38 63 FE 38 */	addi r3, r3, -0x1c8
 /* 80448F3C 004124FC  4B FF F2 4C */	b fn_80448188
 .endfn fn_80448F38
 
-.fn fn_80448F40, local
+.fn fn_80448F40, global
 /* 80448F40 00412500  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448F44 00412504  7C 08 02 A6 */	mflr r0
 /* 80448F48 00412508  3C 80 80 57 */	lis r4, __vt__CDeviceVICb@ha
@@ -67,7 +67,7 @@
 /* 80448F78 00412538  4E 80 00 20 */	blr
 .endfn fn_80448F40
 
-.fn fn_80448F7C, local
+.fn fn_80448F7C, global
 /* 80448F7C 0041253C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448F80 00412540  7C 08 02 A6 */	mflr r0
 /* 80448F84 00412544  2C 03 00 00 */	cmpwi r3, 0x0

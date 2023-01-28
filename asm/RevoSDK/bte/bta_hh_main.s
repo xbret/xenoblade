@@ -3,7 +3,7 @@
 
 # 0x802E3C00 - 0x802E4154
 .text
-.balign 4
+.balign 16
 
 .fn bta_hh_sm_execute, global
 /* 802E3C00 002AD1C0  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -423,7 +423,7 @@
 # 0x8050E1B8 - 0x8050E240
 .rodata
 .balign 8
-.sym lbl_8050E1B8, local
+.sym lbl_8050E1B8, global
 	.4byte bta_hh_api_disc_act
 	.4byte bta_hh_open_act
 	.4byte bta_hh_close_act
@@ -436,28 +436,28 @@
 	.4byte bta_hh_get_dscp_act
 	.4byte bta_hh_maint_dev_act
 	.4byte bta_hh_open_cmpl_act
-.sym lbl_8050E1E8, local
+.sym lbl_8050E1E8, global
 	.4byte 0x06020C01
 	.4byte 0x01020201
 	.4byte 0x0C010C01
 	.4byte 0x0C010C01
 	.4byte 0x0C010C01
 	.4byte 0x0A010C01
-.sym lbl_8050E200, local
+.sym lbl_8050E200, global
 	.4byte 0x0C020C01
 	.4byte 0x01020201
 	.4byte 0x0C020C02
 	.4byte 0x0C020702
 	.4byte 0x0C020C02
 	.4byte 0x0A010B03
-.sym lbl_8050E218, local
+.sym lbl_8050E218, global
 	.4byte 0x0C030003
 	.4byte 0x01030201
 	.4byte 0x03030403
 	.4byte 0x05030C03
 	.4byte 0x08030903
 	.4byte 0x0A030C03
-.sym lbl_8050E230, local
+.sym lbl_8050E230, global
 	.4byte lbl_8050E1E8
 	.4byte lbl_8050E200
 	.4byte lbl_8050E218
@@ -466,7 +466,7 @@
 # 0x805446C0 - 0x805449A0
 .data
 .balign 8
-.sym lbl_805446C0, local
+.sym lbl_805446C0, global
 	.4byte 0x77726F6E
 	.4byte 0x67206465
 	.4byte 0x76696365
@@ -522,7 +522,7 @@
 	.4byte 0x4576656E
 	.4byte 0x74205B25
 	.4byte 0x735D0000
-.sym lbl_8054479C, local
+.sym lbl_8054479C, global
 	.4byte 0x6274615F
 	.4byte 0x68685F68
 	.4byte 0x646C5F65

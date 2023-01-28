@@ -782,7 +782,7 @@
 /* 803C8630 00391BF0  4E 80 00 20 */	blr
 .endfn SFMPVF_IsTermDec
 
-.fn fn_803C8634, local
+.fn fn_803C8634, global
 /* 803C8634 00391BF4  80 A3 28 44 */	lwz r5, 0x2844(r3)
 /* 803C8638 00391BF8  38 83 28 50 */	addi r4, r3, 0x2850
 /* 803C863C 00391BFC  38 00 00 01 */	li r0, 0x1
@@ -1211,5 +1211,5 @@
 # 0x8061CD58 - 0x8061CDD8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061CD58, local
+.sym lbl_8061CD58, global
 	.skip 0x80

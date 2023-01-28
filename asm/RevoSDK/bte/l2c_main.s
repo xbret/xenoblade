@@ -3,7 +3,7 @@
 
 # 0x802F9B38 - 0x802FAB68
 .text
-.balign 4
+.balign 8
 
 .fn l2c_init, global
 /* 802F9B38 002C30F8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1136,7 +1136,7 @@
 # 0x80547E18 - 0x80548118
 .data
 .balign 8
-.sym lbl_80547E18, local
+.sym lbl_80547E18, global
 	.4byte 0x4C324341
 	.4byte 0x50202D20
 	.4byte 0x65787065
@@ -1321,13 +1321,13 @@
 	.rel process_l2cap_cmd, .L_802FA974
 	.rel process_l2cap_cmd, .L_802F9FC8
 .endobj jumptable_805480BC
-.sym lbl_805480EC, local
+.sym lbl_805480EC, global
 	.4byte 0x4C324341
 	.4byte 0x5020484F
 	.4byte 0x4C442043
 	.4byte 0x4F4E5449
 	.4byte 0x4E554500
-.sym lbl_80548100, local
+.sym lbl_80548100, global
 	.4byte 0x4C324341
 	.4byte 0x5020484F
 	.4byte 0x4C442054

@@ -33,7 +33,7 @@
 # 0x80667540 - 0x80667550
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667540, local
+.sym lbl_80667540, global
 	.skip 0x4
 
 .obj __stdio_exit, global

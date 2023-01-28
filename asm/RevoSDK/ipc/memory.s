@@ -3,7 +3,7 @@
 
 # 0x803443B0 - 0x803448E0
 .text
-.balign 4
+.balign 16
 
 .fn iosCreateHeap, global
 /* 803443B0 0030D970  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -383,5 +383,5 @@
 # 0x805CE480 - 0x805CE500
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CE480, local
+.sym lbl_805CE480, global
 	.skip 0x80

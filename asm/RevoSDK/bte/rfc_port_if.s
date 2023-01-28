@@ -3,7 +3,7 @@
 
 # 0x80300B68 - 0x80301094
 .text
-.balign 4
+.balign 8
 
 .fn RFCOMM_StartRsp, global
 /* 80300B68 002CA128  94 21 FF F0 */	stwu r1, -0x10(r1)

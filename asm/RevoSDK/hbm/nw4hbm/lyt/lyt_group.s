@@ -256,16 +256,16 @@
 # 0x8054D7D0 - 0x8054D7F8
 .data
 .balign 8
-.sym lbl_8054D7D0, local
+.sym lbl_8054D7D0, global
 	.4byte lbl_8054D7F0
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt5GroupFv
-.sym lbl_8054D7DC, local
+.sym lbl_8054D7DC, global
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
 	.4byte 0x3A47726F
 	.4byte 0x75700000
-.sym lbl_8054D7F0, local
+.sym lbl_8054D7F0, global
 	.4byte lbl_8054D7DC
 	.4byte 0x00000000

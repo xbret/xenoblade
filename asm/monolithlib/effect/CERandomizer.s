@@ -653,23 +653,23 @@
 # 0x8066D9D8 - 0x8066DA08
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066D9D8, local
+.sym lbl_8066D9D8, global
 	.4byte 0x00000000
-.sym lbl_8066D9DC, local
+.sym lbl_8066D9DC, global
 	.4byte 0x4F000000
-.sym lbl_8066D9E0, local
+.sym lbl_8066D9E0, global
 	.4byte 0x3F000000
 	.4byte 0x00000000
-.sym lbl_8066D9E8, local
+.sym lbl_8066D9E8, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066D9F0, local
+.sym lbl_8066D9F0, global
 	.4byte 0x3F800000
-.sym lbl_8066D9F4, local
+.sym lbl_8066D9F4, global
 	.4byte 0xBF800000
-.sym lbl_8066D9F8, local
+.sym lbl_8066D9F8, global
 	.4byte 0x461C5800
 	.4byte 0x00000000
-.sym lbl_8066DA00, local
+.sym lbl_8066DA00, global
 	.4byte 0x43300000
 	.4byte 0x00000000

@@ -238,20 +238,20 @@
 # 0x8051ABD0 - 0x8051ABD8
 .rodata
 .balign 8
-.sym lbl_8051ABD0, local
+.sym lbl_8051ABD0, global
 	.4byte 0x4F000000
 	.4byte 0x00000000
 
 # 0x805E9AE8 - 0x805E9B00
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E9AE8, local
+.sym lbl_805E9AE8, global
 	.skip 0x4
-.sym lbl_805E9AEC, local
+.sym lbl_805E9AEC, global
 	.skip 0x4
-.sym lbl_805E9AF0, local
+.sym lbl_805E9AF0, global
 	.skip 0x8
-.sym lbl_805E9AF8, local
+.sym lbl_805E9AF8, global
 	.skip 0x4
-.sym lbl_805E9AFC, local
+.sym lbl_805E9AFC, global
 	.skip 0x4

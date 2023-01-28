@@ -130,5 +130,5 @@
 # 0x805E3428 - 0x805E3430
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E3428, local
+.sym lbl_805E3428, global
 	.skip 0x8

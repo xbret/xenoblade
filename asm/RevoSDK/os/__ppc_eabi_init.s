@@ -1,9 +1,9 @@
 .include "macros.inc"
 .file "RevoSDK/os/__ppc_eabi_init.o"
 
-# 0x800065C0 - 0x80006618
+# 0x800065C0 - 0x80006624
 .section .init, "ax"
-.balign 4
+.balign 16
 
 .fn __init_hardware, global
 /* 800065C0 000026C0  7C 00 00 A6 */	mfmsr r0
@@ -26,15 +26,20 @@
 /* 800065F8 000026F8  7C A5 18 38 */	and r5, r5, r3
 /* 800065FC 000026FC  7C 65 18 50 */	subf r3, r5, r3
 /* 80006600 00002700  7C 84 1A 14 */	add r4, r4, r3
+.L_80006604:
 /* 80006604 00002704  7C 00 28 6C */	dcbst r0, r5
 /* 80006608 00002708  7C 00 04 AC */	sync
 /* 8000660C 0000270C  7C 00 2F AC */	icbi r0, r5
 /* 80006610 00002710  30 A5 00 08 */	addic r5, r5, 0x8
 /* 80006614 00002714  34 84 FF F8 */	addic. r4, r4, -0x8
+/* 80006618 00002718  40 80 FF EC */	bge .L_80006604
+/* 8000661C 0000271C  4C 00 01 2C */	isync
+/* 80006620 00002720  4E 80 00 20 */	blr
+.endfn __flush_cache
 
 # 0x8035F350 - 0x8035F410
 .text
-.balign 4
+.balign 16
 
 .fn __init_user, global
 /* 8035F350 00328910  94 21 FF F0 */	stwu r1, -0x10(r1)

@@ -3,7 +3,7 @@
 
 # 0x80360EC0 - 0x803613D0
 .text
-.balign 4
+.balign 16
 
 .fn SCGetAspectRatio, global
 /* 80360EC0 0032A480  94 21 FF F0 */	stwu r1, -0x10(r1)

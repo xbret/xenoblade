@@ -218,7 +218,7 @@
 # 0x8056E510 - 0x8056E558
 .data
 .balign 8
-.sym lbl_8056E510, local
+.sym lbl_8056E510, global
 	.4byte 0x3C3C204E
 	.4byte 0x57345220
 	.4byte 0x2020202D
@@ -241,26 +241,26 @@
 # 0x8063BB00 - 0x80652C40
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8063BB00, local
+.sym lbl_8063BB00, global
 	.skip 0x10
-.sym lbl_8063BB10, local
+.sym lbl_8063BB10, global
 	.skip 0x330
-.sym lbl_8063BE40, local
+.sym lbl_8063BE40, global
 	.skip 0x4278
-.sym lbl_806400B8, local
+.sym lbl_806400B8, global
 	.skip 0x12B88
 
 # 0x80665E18 - 0x80665E20
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665E18, local
+.sym lbl_80665E18, global
 	.4byte lbl_8056E510
 	.4byte 0x00000000
 
 # 0x80667DE8 - 0x80667DF0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DE8, local
+.sym lbl_80667DE8, global
 	.skip 0x4
-.sym lbl_80667DEC, local
+.sym lbl_80667DEC, global
 	.skip 0x4

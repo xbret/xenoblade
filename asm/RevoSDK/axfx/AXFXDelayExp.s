@@ -3,7 +3,7 @@
 
 # 0x802D65F0 - 0x802D70C0
 .text
-.balign 4
+.balign 16
 
 .fn AXFXDelayExpGetMemSize, global
 /* 802D65F0 0029FBB0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -778,14 +778,14 @@
 # 0x8066BE20 - 0x8066BE38
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BE20, local
+.sym lbl_8066BE20, global
 	.4byte 0x42000000
-.sym lbl_8066BE24, local
+.sym lbl_8066BE24, global
 	.4byte 0x00000000
-.sym lbl_8066BE28, local
+.sym lbl_8066BE28, global
 	.4byte 0x3F800000
-.sym lbl_8066BE2C, local
+.sym lbl_8066BE2C, global
 	.4byte 0x43000000
-.sym lbl_8066BE30, local
+.sym lbl_8066BE30, global
 	.4byte 0x3F733333
 	.4byte 0x00000000

@@ -113,17 +113,17 @@
 /* 801A0488 00169A48  4E 80 00 20 */	blr
 .endfn __ct__CMenuBattleMode
 
-.fn fn_801A048C, local
+.fn fn_801A048C, global
 /* 801A048C 00169A4C  38 63 FF A8 */	addi r3, r3, -0x58
 /* 801A0490 00169A50  4B FF F9 C0 */	b fn_8019FE50
 .endfn fn_801A048C
 
-.fn fn_801A0494, local
+.fn fn_801A0494, global
 /* 801A0494 00169A54  38 63 FF A4 */	addi r3, r3, -0x5c
 /* 801A0498 00169A58  4B FF FE 28 */	b fn_801A02C0
 .endfn fn_801A0494
 
-.fn fn_801A049C, local
+.fn fn_801A049C, global
 /* 801A049C 00169A5C  38 63 FF A4 */	addi r3, r3, -0x5c
 /* 801A04A0 00169A60  4B FF F9 B0 */	b fn_8019FE50
 .endfn fn_801A049C
@@ -137,7 +137,7 @@
 	.4byte 0x75426174
 	.4byte 0x746C654D
 	.4byte 0x6F646500
-.sym lbl_804FF5A8, local
+.sym lbl_804FF5A8, global
 	.4byte 0x434D656E
 	.4byte 0x75426174
 	.4byte 0x746C654D
@@ -248,5 +248,5 @@
 # 0x80666C08 - 0x80666C10
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80666C08, local
+.sym lbl_80666C08, global
 	.skip 0x8

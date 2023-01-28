@@ -3,7 +3,7 @@
 
 # 0x802D56D0 - 0x802D5710
 .text
-.balign 4
+.balign 16
 
 .fn __AXGetCurrentProfile, global
 /* 802D56D0 0029EC90  80 0D B5 B8 */	lwz r0, lbl_80667738@sda21(r13)
@@ -28,11 +28,11 @@
 # 0x80667738 - 0x80667748
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667738, local
+.sym lbl_80667738, global
 	.skip 0x4
-.sym lbl_8066773C, local
+.sym lbl_8066773C, global
 	.skip 0x4
-.sym lbl_80667740, local
+.sym lbl_80667740, global
 	.skip 0x4
-.sym lbl_80667744, local
+.sym lbl_80667744, global
 	.skip 0x4

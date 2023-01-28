@@ -1239,7 +1239,7 @@
 # 0x8056D258 - 0x8056D298
 .data
 .balign 8
-.sym lbl_8056D258, local
+.sym lbl_8056D258, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt6LayoutFv
@@ -1260,7 +1260,7 @@
 # 0x8066C558 - 0x8066C560
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C558, local
+.sym lbl_8066C558, global
 	.4byte 0x00000000
-.sym lbl_8066C55C, local
+.sym lbl_8066C55C, global
 	.4byte 0x3F000000

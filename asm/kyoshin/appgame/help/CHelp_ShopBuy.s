@@ -5,6 +5,6 @@
 .text
 .balign 4
 
-.fn fn_802B864C, local
+.fn fn_802B864C, global
 /* 802B864C 00281C0C  4B ED 3B 34 */	b fn_8018C180
 .endfn fn_802B864C

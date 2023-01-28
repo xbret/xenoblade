@@ -87,7 +87,7 @@
 .text
 .balign 4
 
-.fn fn_802A4E48, local
+.fn fn_802A4E48, global
 /* 802A4E48 0026E408  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802A4E4C 0026E40C  7C 08 02 A6 */	mflr r0
 /* 802A4E50 0026E410  7C A6 2B 78 */	mr r6, r5
@@ -184,7 +184,7 @@
 /* 802A4FA0 0026E560  4E 80 00 20 */	blr
 .endfn fn_802A4E48
 
-.fn fn_802A4FA4, local
+.fn fn_802A4FA4, global
 /* 802A4FA4 0026E564  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A4FA8 0026E568  7C 08 02 A6 */	mflr r0
 /* 802A4FAC 0026E56C  3C E0 80 54 */	lis r7, lbl_8053D17C@ha
@@ -237,7 +237,7 @@
 /* 802A505C 0026E61C  4E 80 00 20 */	blr
 .endfn fn_802A4FA4
 
-.fn fn_802A5060, local
+.fn fn_802A5060, global
 /* 802A5060 0026E620  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A5064 0026E624  7C 08 02 A6 */	mflr r0
 /* 802A5068 0026E628  90 01 00 14 */	stw r0, 0x14(r1)
@@ -274,7 +274,7 @@
 /* 802A50DC 0026E69C  4E 80 00 20 */	blr
 .endfn fn_802A5060
 
-.fn fn_802A50E0, local
+.fn fn_802A50E0, global
 /* 802A50E0 0026E6A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A50E4 0026E6A4  7C 08 02 A6 */	mflr r0
 /* 802A50E8 0026E6A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -320,7 +320,7 @@
 /* 802A5170 0026E730  4E 80 00 20 */	blr
 .endfn fn_802A50E0
 
-.fn fn_802A5174, local
+.fn fn_802A5174, global
 /* 802A5174 0026E734  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A5178 0026E738  7C 08 02 A6 */	mflr r0
 /* 802A517C 0026E73C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -784,7 +784,7 @@
 /* 802A5824 0026EDE4  4E 80 00 20 */	blr
 .endfn fn_802A5174
 
-.fn fn_802A5828, local
+.fn fn_802A5828, global
 /* 802A5828 0026EDE8  38 60 01 04 */	li r3, 0x104
 /* 802A582C 0026EDEC  4E 80 00 20 */	blr
 .endfn fn_802A5828
@@ -804,15 +804,15 @@
 # 0x8053D170 - 0x8053D1C0
 .data
 .balign 8
-.sym lbl_8053D170, local
+.sym lbl_8053D170, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A4FA4
-.sym lbl_8053D17C, local
+.sym lbl_8053D17C, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A5060
-.sym lbl_8053D188, local
+.sym lbl_8053D188, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte fn_802A4FA4

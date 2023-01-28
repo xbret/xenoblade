@@ -3,7 +3,7 @@
 
 # 0x80349AD0 - 0x80349BF0
 .text
-.balign 4
+.balign 16
 
 .fn MEMInitList, global
 /* 80349AD0 00313090  38 00 00 00 */	li r0, 0x0

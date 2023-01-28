@@ -3,7 +3,7 @@
 
 # 0x8035D020 - 0x8035D730
 .text
-.balign 4
+.balign 16
 
 .fn OSSetResetCallback, global
 /* 8035D020 003265E0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -550,11 +550,11 @@
 	.byte 0x6F, 0x6B, 0x00
 .endobj "@981"
 	.byte 0x00
-.sym lbl_8055EC20, local
+.sym lbl_8055EC20, global
 	.4byte 0x4F535374
 	.4byte 0x61746554
 	.4byte 0x4D2E6300
-.sym lbl_8055EC2C, local
+.sym lbl_8055EC2C, global
 	.4byte 0x4572726F
 	.4byte 0x723A2054
 	.4byte 0x68652066
@@ -569,7 +569,7 @@
 	.4byte 0x20666561
 	.4byte 0x74757265
 	.4byte 0x2E0A0000
-.sym lbl_8055EC64, local
+.sym lbl_8055EC64, global
 	.4byte 0x4572726F
 	.4byte 0x723A2054
 	.4byte 0x68652066
@@ -584,7 +584,7 @@
 	.4byte 0x65617475
 	.4byte 0x72652E0A
 	.4byte 0x00000000
-.sym lbl_8055EC9C, local
+.sym lbl_8055EC9C, global
 	.4byte 0x4572726F
 	.4byte 0x72206F6E
 	.4byte 0x2053544D
@@ -606,13 +606,13 @@
 .obj StmEhOutBuf, local
 	.skip 0x20
 .endobj StmEhOutBuf
-.sym lbl_805D51A0, local
+.sym lbl_805D51A0, global
 	.skip 0x20
-.sym lbl_805D51C0, local
+.sym lbl_805D51C0, global
 	.skip 0x20
-.sym lbl_805D51E0, local
+.sym lbl_805D51E0, global
 	.skip 0x20
-.sym lbl_805D5200, local
+.sym lbl_805D5200, global
 	.skip 0x20
 
 # 0x80667AE0 - 0x80667B00

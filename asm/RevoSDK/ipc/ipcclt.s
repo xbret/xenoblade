@@ -3,7 +3,7 @@
 
 # 0x80342AB0 - 0x803443B0
 .text
-.balign 4
+.balign 16
 
 .fn strnlen, global
 /* 80342AB0 0030C070  7C 65 1B 78 */	mr r5, r3
@@ -1844,7 +1844,7 @@
 .obj __timeout_alarm, local
 	.skip 0x30
 .endobj __timeout_alarm
-.sym lbl_805CE440, local
+.sym lbl_805CE440, global
 	.skip 0x40
 
 # 0x80665A50 - 0x80665A58
@@ -1862,11 +1862,11 @@
 # 0x80667980 - 0x80667990
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667980, local
+.sym lbl_80667980, global
 	.skip 0x4
-.sym lbl_80667984, local
+.sym lbl_80667984, global
 	.skip 0x4
-.sym lbl_80667988, local
+.sym lbl_80667988, global
 	.skip 0x4
 
 # IPCCltInit()::initialized

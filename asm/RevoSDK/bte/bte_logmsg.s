@@ -3,7 +3,7 @@
 
 # 0x802DDEE0 - 0x802DE080
 .text
-.balign 4
+.balign 16
 
 .fn LogMsg, global
 /* 802DDEE0 002A74A0  94 21 FF 80 */	stwu r1, -0x80(r1)
@@ -137,11 +137,11 @@
 # 0x805BDCC0 - 0x805BE4A0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805BDCC0, local
+.sym lbl_805BDCC0, global
 	.skip 0x7E0
 
 # 0x80667768 - 0x8066776C
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667768, local
+.sym lbl_80667768, global
 	.skip 0x4

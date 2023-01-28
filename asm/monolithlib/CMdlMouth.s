@@ -78,7 +78,7 @@
 .text
 .balign 4
 
-.fn fn_804E6544, local
+.fn fn_804E6544, global
 /* 804E6544 004AFB04  C0 22 D7 38 */	lfs f1, lbl_8066DAB8@sda21(r2)
 /* 804E6548 004AFB08  3C A0 80 57 */	lis r5, __vt__CMdlMouth@ha
 /* 804E654C 004AFB0C  38 80 00 00 */	li r4, 0x0
@@ -99,7 +99,7 @@
 /* 804E6588 004AFB48  4E 80 00 20 */	blr
 .endfn fn_804E6544
 
-.fn fn_804E658C, local
+.fn fn_804E658C, global
 /* 804E658C 004AFB4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E6590 004AFB50  7C 08 02 A6 */	mflr r0
 /* 804E6594 004AFB54  2C 03 00 00 */	cmpwi r3, 0x0
@@ -119,7 +119,7 @@
 /* 804E65C8 004AFB88  4E 80 00 20 */	blr
 .endfn fn_804E658C
 
-.fn fn_804E65CC, local
+.fn fn_804E65CC, global
 /* 804E65CC 004AFB8C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 804E65D0 004AFB90  7C 08 02 A6 */	mflr r0
 /* 804E65D4 004AFB94  90 01 00 44 */	stw r0, 0x44(r1)
@@ -251,7 +251,7 @@
 /* 804E6798 004AFD58  4E 80 00 20 */	blr
 .endfn fn_804E65CC
 
-.fn fn_804E679C, local
+.fn fn_804E679C, global
 /* 804E679C 004AFD5C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804E67A0 004AFD60  7C 08 02 A6 */	mflr r0
 /* 804E67A4 004AFD64  90 01 00 34 */	stw r0, 0x34(r1)
@@ -320,12 +320,12 @@
 /* 804E6894 004AFE54  4E 80 00 20 */	blr
 .endfn fn_804E679C
 
-.fn fn_804E6898, local
+.fn fn_804E6898, global
 /* 804E6898 004AFE58  D0 23 00 2C */	stfs f1, 0x2c(r3)
 /* 804E689C 004AFE5C  4E 80 00 20 */	blr
 .endfn fn_804E6898
 
-.fn fn_804E68A0, local
+.fn fn_804E68A0, global
 /* 804E68A0 004AFE60  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 804E68A4 004AFE64  7C 08 02 A6 */	mflr r0
 /* 804E68A8 004AFE68  90 01 00 44 */	stw r0, 0x44(r1)
@@ -431,7 +431,7 @@
 /* 804E6A24 004AFFE4  4E 80 00 20 */	blr
 .endfn fn_804E68A0
 
-.fn fn_804E6A28, local
+.fn fn_804E6A28, global
 /* 804E6A28 004AFFE8  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 804E6A2C 004AFFEC  7C 08 02 A6 */	mflr r0
 /* 804E6A30 004AFFF0  90 01 00 94 */	stw r0, 0x94(r1)
@@ -564,11 +564,11 @@
 # 0x805280A0 - 0x805280C8
 .rodata
 .balign 8
-.sym lbl_805280A0, local
+.sym lbl_805280A0, global
 	.4byte 0x6D744972
 	.4byte 0x69733033
 	.4byte 0x00000000
-.sym lbl_805280AC, local
+.sym lbl_805280AC, global
 	.4byte 0x00000000
 	.4byte 0x3E800000
 	.4byte 0x3F000000
@@ -592,43 +592,43 @@
 # 0x80666570 - 0x80666588
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80666570, local
+.sym lbl_80666570, global
 	.4byte lbl_8066DAB0
-.sym lbl_80666574, local
+.sym lbl_80666574, global
 	.4byte lbl_805280A0
 
 .obj __RTTI__CMdlMouth, global
 	.4byte CMdlMouth_typestr
 	.4byte 0x00000000
-.sym lbl_80666580, local
+.sym lbl_80666580, global
 	.4byte 0x72656600
-.sym lbl_80666584, local
+.sym lbl_80666584, global
 	.4byte 0x72656600
 
 # 0x8066DAB0 - 0x8066DAE8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066DAB0, local
+.sym lbl_8066DAB0, global
 	.4byte 0x4A556A61
 	.4byte 0x77000000
-.sym lbl_8066DAB8, local
+.sym lbl_8066DAB8, global
 	.4byte 0x00000000
-.sym lbl_8066DABC, local
+.sym lbl_8066DABC, global
 	.4byte 0x3F800000
-.sym lbl_8066DAC0, local
+.sym lbl_8066DAC0, global
 	.4byte 0x3E4CCCCD
-.sym lbl_8066DAC4, local
+.sym lbl_8066DAC4, global
 	.4byte 0x3B03126F
-.sym lbl_8066DAC8, local
+.sym lbl_8066DAC8, global
 	.4byte 0x3BC49BA6
 	.4byte 0x00000000
-.sym lbl_8066DAD0, local
+.sym lbl_8066DAD0, global
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066DAD8, local
+.sym lbl_8066DAD8, global
 	.4byte 0x4222F983
-.sym lbl_8066DADC, local
+.sym lbl_8066DADC, global
 	.4byte 0x42040000
-.sym lbl_8066DAE0, local
+.sym lbl_8066DAE0, global
 	.4byte 0x40800000
 	.4byte 0x00000000

@@ -3,7 +3,7 @@
 
 # 0x8035CFE0 - 0x8035D020
 .text
-.balign 4
+.balign 16
 
 .fn __OSGetIPCBufferHi, global
 /* 8035CFE0 003265A0  80 6D B9 58 */	lwz r3, IpcBufferHi@sda21(r13)

@@ -3,7 +3,7 @@
 
 # 0x80308F10 - 0x80309110
 .text
-.balign 4
+.balign 16
 
 .fn CXiLHVerifyTable, global
 /* 80308F10 002D24D0  94 21 FF 60 */	stwu r1, -0xa0(r1)

@@ -3,7 +3,7 @@
 
 # 0x802DDDE0 - 0x802DDEB0
 .text
-.balign 4
+.balign 16
 
 .fn bte_hcisu_send, global
 /* 802DDDE0 002A73A0  B0 83 00 00 */	sth r4, 0x0(r3)
@@ -75,7 +75,7 @@
 # 0x80667760 - 0x80667768
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667760, local
+.sym lbl_80667760, global
 	.skip 0x4
-.sym lbl_80667764, local
+.sym lbl_80667764, global
 	.skip 0x4

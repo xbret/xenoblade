@@ -3,7 +3,7 @@
 
 # 0x80312CB0 - 0x80312EF0
 .text
-.balign 4
+.balign 16
 
 .fn ENCiCheckParameters, global
 /* 80312CB0 002DC270  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -185,7 +185,7 @@
 # 0x8054B5C8 - 0x8054B610
 .data
 .balign 8
-.sym lbl_8054B5C8, local
+.sym lbl_8054B5C8, global
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -208,12 +208,12 @@
 # 0x806659B8 - 0x806659C0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806659B8, local
+.sym lbl_806659B8, global
 	.4byte lbl_8054B5C8
 	.4byte 0x00000000
 
 # 0x806678C0 - 0x806678C8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806678C0, local
+.sym lbl_806678C0, global
 	.skip 0x8

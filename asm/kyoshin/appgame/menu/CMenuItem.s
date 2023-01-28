@@ -137,7 +137,7 @@
 /* 80167A14 00130FD4  4E 80 00 20 */	blr
 .endfn __ct__CMenuItem
 
-.fn fn_80167A18, local
+.fn fn_80167A18, global
 /* 80167A18 00130FD8  80 6D A9 C8 */	lwz r3, lbl_80666B48@sda21(r13)
 /* 80167A1C 00130FDC  7C 03 00 D0 */	neg r0, r3
 /* 80167A20 00130FE0  7C 00 1B 78 */	or r0, r0, r3
@@ -145,7 +145,7 @@
 /* 80167A28 00130FE8  4E 80 00 20 */	blr
 .endfn fn_80167A18
 
-.fn fn_80167A2C, local
+.fn fn_80167A2C, global
 /* 80167A2C 00130FEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80167A30 00130FF0  7C 08 02 A6 */	mflr r0
 /* 80167A34 00130FF4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -289,12 +289,12 @@
 /* 80167C2C 001311EC  4E 80 00 20 */	blr
 .endfn fn_80167A2C
 
-.fn fn_80167C30, local
+.fn fn_80167C30, global
 /* 80167C30 001311F0  38 63 FF A8 */	addi r3, r3, -0x58
 /* 80167C34 001311F4  4B FF FC 18 */	b fn_8016784C
 .endfn fn_80167C30
 
-.fn fn_80167C38, local
+.fn fn_80167C38, global
 /* 80167C38 001311F8  38 63 FF A8 */	addi r3, r3, -0x58
 /* 80167C3C 001311FC  4B FF EB FC */	b fn_80166838
 .endfn fn_80167C38
@@ -307,7 +307,7 @@
 	.4byte 0x434D656E
 	.4byte 0x75497465
 	.4byte 0x6D000000
-.sym lbl_804FE86C, local
+.sym lbl_804FE86C, global
 	.4byte 0x4D4E555F
 	.4byte 0x6974656D
 	.4byte 0x006E616D
@@ -361,5 +361,5 @@
 # 0x80666B48 - 0x80666B50
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80666B48, local
+.sym lbl_80666B48, global
 	.skip 0x8

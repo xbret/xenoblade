@@ -79,7 +79,7 @@
 .text
 .balign 4
 
-.fn fn_8049C438, local
+.fn fn_8049C438, global
 /* 8049C438 004659F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049C43C 004659FC  7C 08 02 A6 */	mflr r0
 /* 8049C440 00465A00  3C E0 80 57 */	lis r7, __vt__CScnFadeMan@ha
@@ -119,7 +119,7 @@
 /* 8049C4C8 00465A88  4E 80 00 20 */	blr
 .endfn fn_8049C438
 
-.fn fn_8049C4CC, local
+.fn fn_8049C4CC, global
 /* 8049C4CC 00465A8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049C4D0 00465A90  7C 08 02 A6 */	mflr r0
 /* 8049C4D4 00465A94  2C 03 00 00 */	cmpwi r3, 0x0
@@ -149,7 +149,7 @@
 /* 8049C530 00465AF0  4E 80 00 20 */	blr
 .endfn fn_8049C4CC
 
-.fn fn_8049C534, local
+.fn fn_8049C534, global
 /* 8049C534 00465AF4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8049C538 00465AF8  3C 00 43 30 */	lis r0, 0x4330
 /* 8049C53C 00465AFC  80 83 00 38 */	lwz r4, 0x38(r3)
@@ -235,7 +235,7 @@
 /* 8049C674 00465C34  4E 80 00 20 */	blr
 .endfn fn_8049C534
 
-.fn fn_8049C678, local
+.fn fn_8049C678, global
 /* 8049C678 00465C38  94 21 FF 10 */	stwu r1, -0xf0(r1)
 /* 8049C67C 00465C3C  7C 08 02 A6 */	mflr r0
 /* 8049C680 00465C40  C0 22 CF B8 */	lfs f1, lbl_8066D338@sda21(r2)
@@ -284,7 +284,7 @@
 /* 8049C728 00465CE8  4E 80 00 20 */	blr
 .endfn fn_8049C678
 
-.fn fn_8049C72C, local
+.fn fn_8049C72C, global
 /* 8049C72C 00465CEC  54 8C 40 2E */	slwi r12, r4, 8
 /* 8049C730 00465CF0  81 63 00 08 */	lwz r11, 0x8(r3)
 /* 8049C734 00465CF4  2C 04 00 00 */	cmpwi r4, 0x0
@@ -313,7 +313,7 @@
 /* 8049C790 00465D50  4E 80 00 20 */	blr
 .endfn fn_8049C72C
 
-.fn fn_8049C794, local
+.fn fn_8049C794, global
 /* 8049C794 00465D54  80 03 00 38 */	lwz r0, 0x38(r3)
 /* 8049C798 00465D58  38 60 00 01 */	li r3, 0x1
 /* 8049C79C 00465D5C  7C 00 00 34 */	cntlzw r0, r0
@@ -321,12 +321,12 @@
 /* 8049C7A4 00465D64  4E 80 00 20 */	blr
 .endfn fn_8049C794
 
-.fn fn_8049C7A8, local
+.fn fn_8049C7A8, global
 /* 8049C7A8 00465D68  38 63 00 08 */	addi r3, r3, 0x8
 /* 8049C7AC 00465D6C  4E 80 00 20 */	blr
 .endfn fn_8049C7A8
 
-.fn fn_8049C7B0, local
+.fn fn_8049C7B0, global
 /* 8049C7B0 00465D70  C0 22 CF C0 */	lfs f1, lbl_8066D340@sda21(r2)
 /* 8049C7B4 00465D74  38 80 00 00 */	li r4, 0x0
 /* 8049C7B8 00465D78  C0 03 00 14 */	lfs f0, 0x14(r3)
@@ -381,13 +381,13 @@
 # 0x8066D338 - 0x8066D350
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066D338, local
+.sym lbl_8066D338, global
 	.4byte 0x00000000
-.sym lbl_8066D33C, local
+.sym lbl_8066D33C, global
 	.4byte 0x3B800000
-.sym lbl_8066D340, local
+.sym lbl_8066D340, global
 	.4byte 0x3F800000
 	.4byte 0x00000000
-.sym lbl_8066D348, local
+.sym lbl_8066D348, global
 	.4byte 0x43300000
 	.4byte 0x80000000

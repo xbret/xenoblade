@@ -120,16 +120,16 @@
 # 0x80520838 - 0x80520840
 .rodata
 .balign 8
-.sym lbl_80520838, local
+.sym lbl_80520838, global
 	.4byte 0x544D525F
 	.4byte 0x43480000
 
 # 0x8061CE28 - 0x8061CE38
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061CE28, local
+.sym lbl_8061CE28, global
 	.skip 0x4
-.sym lbl_8061CE2C, local
+.sym lbl_8061CE2C, global
 	.skip 0x4
 
 .obj utytmr_unit, global

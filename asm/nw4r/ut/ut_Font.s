@@ -58,7 +58,7 @@
 # 0x8056E710 - 0x8056E740
 .data
 .balign 8
-.sym lbl_8056E710, local
+.sym lbl_8056E710, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte ReadNextCharUTF8__Q34nw4r2ut14CharStrmReaderFv

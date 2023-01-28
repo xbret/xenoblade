@@ -1077,7 +1077,7 @@
 # 0x805206E8 - 0x80520778
 .rodata
 .balign 8
-.sym lbl_805206E8, local
+.sym lbl_805206E8, global
 	.4byte 0x25702C20
 	.4byte 0x256C642C
 	.4byte 0x20256C64
@@ -1118,7 +1118,7 @@
 # 0x8056C610 - 0x8056C728
 .data
 .balign 8
-.sym lbl_8056C610, local
+.sym lbl_8056C610, global
 	.4byte 0x7473742C
 	.4byte 0x2068656C
 	.4byte 0x705F7469
@@ -1193,5 +1193,5 @@
 # 0x8061CE08 - 0x8061CE20
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061CE08, local
+.sym lbl_8061CE08, global
 	.skip 0x18

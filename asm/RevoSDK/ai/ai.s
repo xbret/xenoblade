@@ -3,7 +3,7 @@
 
 # 0x802D10A0 - 0x802D1670
 .text
-.balign 4
+.balign 16
 
 .fn AIRegisterDMACallback, global
 /* 802D10A0 0029A660  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -428,7 +428,7 @@
 # 0x8053FFB8 - 0x80540000
 .data
 .balign 8
-.sym lbl_8053FFB8, local
+.sym lbl_8053FFB8, global
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -451,40 +451,40 @@
 # 0x806658A0 - 0x806658A8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806658A0, local
+.sym lbl_806658A0, global
 	.4byte lbl_8053FFB8
 	.4byte 0x00000000
 
 # 0x806675C8 - 0x80667608
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806675C8, local
+.sym lbl_806675C8, global
 	.skip 0x4
-.sym lbl_806675CC, local
+.sym lbl_806675CC, global
 	.skip 0x4
-.sym lbl_806675D0, local
+.sym lbl_806675D0, global
 	.skip 0x4
-.sym lbl_806675D4, local
+.sym lbl_806675D4, global
 	.skip 0x4
-.sym lbl_806675D8, local
+.sym lbl_806675D8, global
 	.skip 0x4
-.sym lbl_806675DC, local
+.sym lbl_806675DC, global
 	.skip 0x4
-.sym lbl_806675E0, local
+.sym lbl_806675E0, global
 	.skip 0x4
-.sym lbl_806675E4, local
+.sym lbl_806675E4, global
 	.skip 0x4
-.sym lbl_806675E8, local
+.sym lbl_806675E8, global
 	.skip 0x4
-.sym lbl_806675EC, local
+.sym lbl_806675EC, global
 	.skip 0x4
-.sym lbl_806675F0, local
+.sym lbl_806675F0, global
 	.skip 0x4
-.sym lbl_806675F4, local
+.sym lbl_806675F4, global
 	.skip 0x4
-.sym lbl_806675F8, local
+.sym lbl_806675F8, global
 	.skip 0x4
-.sym lbl_806675FC, local
+.sym lbl_806675FC, global
 	.skip 0x4
-.sym lbl_80667600, local
+.sym lbl_80667600, global
 	.skip 0x8

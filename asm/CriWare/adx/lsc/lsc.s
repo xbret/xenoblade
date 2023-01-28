@@ -793,7 +793,7 @@
 # 0x8051BAB8 - 0x8051BE50
 .rodata
 .balign 8
-.sym lbl_8051BAB8, local
+.sym lbl_8051BAB8, global
 	.4byte 0x45323030
 	.4byte 0x35303132
 	.4byte 0x3830313A
@@ -1031,5 +1031,5 @@
 
 .obj lsc_obj, global
 	.skip 0x4700
-.sym lbl_805EFA80, local
+.sym lbl_805EFA80, global
 	.skip 0x10

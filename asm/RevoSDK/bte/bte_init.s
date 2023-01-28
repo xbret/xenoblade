@@ -3,7 +3,7 @@
 
 # 0x802DDEB0 - 0x802DDEE0
 .text
-.balign 4
+.balign 16
 
 .fn BTE_InitStack, global
 /* 802DDEB0 002A7470  94 21 FF F0 */	stwu r1, -0x10(r1)

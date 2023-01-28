@@ -1143,7 +1143,7 @@
 	.rel TRKDoWriteMemory, .L_802CE220
 	.rel TRKDoWriteMemory, .L_802CE228
 .endobj jumptable_8053FF5C
-.sym lbl_8053FF78, local
+.sym lbl_8053FF78, global
 	.4byte 0x0A4D6574
 	.4byte 0x726F5452
 	.4byte 0x4B204F70
@@ -1160,7 +1160,7 @@
 # 0x80667598 - 0x806675A0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667598, local
+.sym lbl_80667598, global
 	.skip 0x4
-.sym lbl_8066759C, local
+.sym lbl_8066759C, global
 	.skip 0x4

@@ -3,7 +3,7 @@
 
 # 0x80354EF0 - 0x80355510
 .text
-.balign 4
+.balign 16
 
 .fn OSReport, global
 /* 80354EF0 0031E4B0  94 21 FF 80 */	stwu r1, -0x80(r1)
@@ -637,7 +637,7 @@
 # 0x80665B68 - 0x80665B70
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B68, local
+.sym lbl_80665B68, global
 	.4byte 0x000000F8
 
 .obj "@703", local

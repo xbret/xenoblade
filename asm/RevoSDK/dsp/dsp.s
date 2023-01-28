@@ -3,7 +3,7 @@
 
 # 0x80309210 - 0x803094B0
 .text
-.balign 4
+.balign 16
 
 .fn DSPCheckMailToDSP, global
 /* 80309210 002D27D0  3C 60 CC 00 */	lis r3, 0xcc00
@@ -209,7 +209,7 @@
 # 0x805495F8 - 0x80549678
 .data
 .balign 8
-.sym lbl_805495F8, local
+.sym lbl_805495F8, global
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -246,24 +246,24 @@
 # 0x80665968 - 0x80665970
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665968, local
+.sym lbl_80665968, global
 	.4byte lbl_805495F8
 	.4byte 0x00000000
 
 # 0x80667788 - 0x806677A8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667788, local
+.sym lbl_80667788, global
 	.skip 0x8
-.sym lbl_80667790, local
+.sym lbl_80667790, global
 	.skip 0x4
-.sym lbl_80667794, local
+.sym lbl_80667794, global
 	.skip 0x4
-.sym lbl_80667798, local
+.sym lbl_80667798, global
 	.skip 0x4
-.sym lbl_8066779C, local
+.sym lbl_8066779C, global
 	.skip 0x4
-.sym lbl_806677A0, local
+.sym lbl_806677A0, global
 	.skip 0x4
-.sym lbl_806677A4, local
+.sym lbl_806677A4, global
 	.skip 0x4

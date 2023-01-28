@@ -3,7 +3,7 @@
 
 # 0x803429C0 - 0x80342AB0
 .text
-.balign 4
+.balign 16
 
 .fn IPCInit, global
 /* 803429C0 0030BF80  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -90,13 +90,13 @@
 # 0x80667968 - 0x80667980
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667968, local
+.sym lbl_80667968, global
 	.skip 0x4
-.sym lbl_8066796C, local
+.sym lbl_8066796C, global
 	.skip 0x4
-.sym lbl_80667970, local
+.sym lbl_80667970, global
 	.skip 0x4
-.sym lbl_80667974, local
+.sym lbl_80667974, global
 	.skip 0x4
-.sym lbl_80667978, local
+.sym lbl_80667978, global
 	.skip 0x8

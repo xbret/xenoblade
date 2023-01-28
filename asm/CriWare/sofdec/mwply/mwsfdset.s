@@ -12,7 +12,7 @@
 /* 803A1D60 0036B320  48 02 A5 E4 */	b fn_803CC344
 .endfn MWSFD_SetAudioSw
 
-.fn fn_803A1D64, local
+.fn fn_803A1D64, global
 /* 803A1D64 0036B324  80 63 00 48 */	lwz r3, 0x48(r3)
 /* 803A1D68 0036B328  7C 85 23 78 */	mr r5, r4
 /* 803A1D6C 0036B32C  38 80 00 05 */	li r4, 0x5
@@ -75,7 +75,7 @@
 /* 803A1E00 0036B3C0  4E 80 00 20 */	blr
 .endfn MWSFD_GetStmHn
 
-.fn fn_803A1E04, local
+.fn fn_803A1E04, global
 /* 803A1E04 0036B3C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A1E08 0036B3C8  7C 08 02 A6 */	mflr r0
 /* 803A1E0C 0036B3CC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -142,7 +142,7 @@
 /* 803A1ED8 0036B498  4E 80 00 20 */	blr
 .endfn mwPlyGetStat
 
-.fn fn_803A1EDC, local
+.fn fn_803A1EDC, global
 /* 803A1EDC 0036B49C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A1EE0 0036B4A0  7C 08 02 A6 */	mflr r0
 /* 803A1EE4 0036B4A4  2C 03 00 00 */	cmpwi r3, 0x0
@@ -204,7 +204,7 @@
 /* 803A1FA4 0036B564  4E 80 00 20 */	blr
 .endfn fn_803A1EDC
 
-.fn fn_803A1FA8, local
+.fn fn_803A1FA8, global
 /* 803A1FA8 0036B568  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A1FAC 0036B56C  7C 08 02 A6 */	mflr r0
 /* 803A1FB0 0036B570  90 01 00 24 */	stw r0, 0x24(r1)
@@ -239,7 +239,7 @@
 /* 803A2020 0036B5E0  4E 80 00 20 */	blr
 .endfn fn_803A1FA8
 
-.fn fn_803A2024, local
+.fn fn_803A2024, global
 /* 803A2024 0036B5E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A2028 0036B5E8  7C 08 02 A6 */	mflr r0
 /* 803A202C 0036B5EC  2C 03 00 00 */	cmpwi r3, 0x0
@@ -341,7 +341,7 @@
 /* 803A217C 0036B73C  4E 80 00 20 */	blr
 .endfn mwPlySetOutVol
 
-.fn fn_803A2180, local
+.fn fn_803A2180, global
 /* 803A2180 0036B740  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A2184 0036B744  7C 08 02 A6 */	mflr r0
 /* 803A2188 0036B748  2C 03 00 00 */	cmpwi r3, 0x0
@@ -407,7 +407,7 @@
 /* 803A2254 0036B814  4E 80 00 20 */	blr
 .endfn fn_803A2180
 
-.fn fn_803A2258, local
+.fn fn_803A2258, global
 /* 803A2258 0036B818  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A225C 0036B81C  7C 08 02 A6 */	mflr r0
 /* 803A2260 0036B820  38 83 05 C8 */	addi r4, r3, 0x5c8
@@ -518,7 +518,7 @@
 # 0x8051ED98 - 0x8051F450
 .rodata
 .balign 8
-.sym lbl_8051ED98, local
+.sym lbl_8051ED98, global
 	.4byte 0x45313132
 	.4byte 0x32363137
 	.4byte 0x206D7750

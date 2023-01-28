@@ -1044,7 +1044,7 @@
 	.4byte 0x167911D2
 	.4byte 0x936C0060
 	.4byte 0x089448BC
-.sym lbl_8051C0A8, local
+.sym lbl_8051C0A8, global
 	.4byte 0x534A4D45
 	.4byte 0x4D204572
 	.4byte 0x726F7200

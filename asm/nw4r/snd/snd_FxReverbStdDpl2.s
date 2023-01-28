@@ -538,7 +538,7 @@
 # 0x8056E0C8 - 0x8056E0F0
 .data
 .balign 8
-.sym lbl_8056E0C8, local
+.sym lbl_8056E0C8, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte fn_801C2D78
@@ -553,15 +553,15 @@
 # 0x8066C798 - 0x8066C7B0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C798, local
+.sym lbl_8066C798, global
 	.4byte 0x3CA3D70A
-.sym lbl_8066C79C, local
+.sym lbl_8066C79C, global
 	.4byte 0x40400000
-.sym lbl_8066C7A0, local
+.sym lbl_8066C7A0, global
 	.4byte 0x3F19999A
-.sym lbl_8066C7A4, local
+.sym lbl_8066C7A4, global
 	.4byte 0x3ECCCCCD
-.sym lbl_8066C7A8, local
+.sym lbl_8066C7A8, global
 	.4byte 0x3F800000
-.sym lbl_8066C7AC, local
+.sym lbl_8066C7AC, global
 	.4byte 0x00000000

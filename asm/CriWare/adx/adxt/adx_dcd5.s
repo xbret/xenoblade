@@ -505,7 +505,7 @@
 # 0x8051AA98 - 0x8051AAD8
 .rodata
 .balign 8
-.sym lbl_8051AA98, local
+.sym lbl_8051AA98, global
 	.4byte 0x00000000
 	.4byte 0x00000001
 	.4byte 0x00000002

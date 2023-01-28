@@ -1555,7 +1555,7 @@
 # 0x80519750 - 0x805197E0
 .rodata
 .balign 8
-.sym lbl_80519750, local
+.sym lbl_80519750, global
 	.4byte 0x45303330
 	.4byte 0x31303930
 	.4byte 0x31204144
@@ -1596,9 +1596,9 @@
 # 0x805E69C0 - 0x805E7518
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E69C0, local
+.sym lbl_805E69C0, global
 	.skip 0x14
-.sym lbl_805E69D4, local
+.sym lbl_805E69D4, global
 	.skip 0x4
-.sym lbl_805E69D8, local
+.sym lbl_805E69D8, global
 	.skip 0xB40

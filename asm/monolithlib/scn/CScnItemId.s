@@ -54,7 +54,7 @@
 .text
 .balign 4
 
-.fn fn_80482094, local
+.fn fn_80482094, global
 /* 80482094 0044B654  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80482098 0044B658  7C 08 02 A6 */	mflr r0
 /* 8048209C 0044B65C  2C 03 00 00 */	cmpwi r3, 0x0
@@ -83,7 +83,7 @@
 /* 804820F4 0044B6B4  4E 80 00 20 */	blr
 .endfn fn_80482094
 
-.fn fn_804820F8, local
+.fn fn_804820F8, global
 /* 804820F8 0044B6B8  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 804820FC 0044B6BC  7C 08 02 A6 */	mflr r0
 /* 80482100 0044B6C0  90 01 00 64 */	stw r0, 0x64(r1)
@@ -193,20 +193,20 @@
 /* 80482284 0044B844  4E 80 00 20 */	blr
 .endfn fn_804820F8
 
-.fn fn_80482288, local
+.fn fn_80482288, global
 /* 80482288 0044B848  4E 80 00 20 */	blr
 .endfn fn_80482288
 
-.fn fn_8048228C, local
+.fn fn_8048228C, global
 /* 8048228C 0044B84C  4E 80 00 20 */	blr
 .endfn fn_8048228C
 
-.fn fn_80482290, local
+.fn fn_80482290, global
 /* 80482290 0044B850  38 63 00 0C */	addi r3, r3, 0xc
 /* 80482294 0044B854  4E 80 00 20 */	blr
 .endfn fn_80482290
 
-.fn fn_80482298, local
+.fn fn_80482298, global
 /* 80482298 0044B858  80 63 00 50 */	lwz r3, 0x50(r3)
 /* 8048229C 0044B85C  4E 80 00 20 */	blr
 .endfn fn_80482298

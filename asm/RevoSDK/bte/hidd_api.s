@@ -3,7 +3,7 @@
 
 # 0x802F35D8 - 0x802F3640
 .text
-.balign 4
+.balign 8
 
 .fn HID_DevInit, global
 /* 802F35D8 002BCB98  94 21 FF F0 */	stwu r1, -0x10(r1)

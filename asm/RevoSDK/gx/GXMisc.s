@@ -3,7 +3,7 @@
 
 # 0x80319D80 - 0x8031A760
 .text
-.balign 4
+.balign 16
 
 .fn GXSetMisc, global
 /* 80319D80 002E3340  2C 03 00 01 */	cmpwi r3, 0x1
@@ -735,11 +735,11 @@
 # 0x80667950 - 0x80667968
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667950, local
+.sym lbl_80667950, global
 	.skip 0x8
-.sym lbl_80667958, local
+.sym lbl_80667958, global
 	.skip 0x4
-.sym lbl_8066795C, local
+.sym lbl_8066795C, global
 	.skip 0x4
-.sym lbl_80667960, local
+.sym lbl_80667960, global
 	.skip 0x8

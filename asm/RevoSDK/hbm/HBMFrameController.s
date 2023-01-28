@@ -3,7 +3,7 @@
 
 # 0x8031F2A0 - 0x8031F450
 .text
-.balign 4
+.balign 16
 
 # homebutton::FrameController::init(int, float, float, float)
 .fn init__Q210homebutton15FrameControllerFifff, global
@@ -137,7 +137,7 @@
 # 0x80518668 - 0x80518670
 .rodata
 .balign 8
-.sym lbl_80518668, local
+.sym lbl_80518668, global
 	.4byte 0x3F800000
 	.4byte 0x00000000
 

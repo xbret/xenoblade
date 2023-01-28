@@ -3,7 +3,7 @@
 
 # 0x8031D160 - 0x8031D620
 .text
-.balign 4
+.balign 16
 
 .fn GXSetTevIndirect, global
 /* 8031D160 002E6720  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -358,6 +358,6 @@
 # 0x8066C048 - 0x8066C050
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C048, local
+.sym lbl_8066C048, global
 	.4byte 0x44800000
 	.4byte 0x00000000

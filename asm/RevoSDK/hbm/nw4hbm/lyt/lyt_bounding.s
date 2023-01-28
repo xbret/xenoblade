@@ -135,7 +135,7 @@
 # 0x8054D6B8 - 0x8054D7A0
 .data
 .balign 8
-.sym lbl_8054D6B8, local
+.sym lbl_8054D6B8, global
 	.4byte lbl_8054D748
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt8BoundingFv
@@ -161,36 +161,36 @@
 	.4byte fn_80332460
 	.4byte fn_80332710
 	.4byte fn_80332520
-.sym lbl_8054D71C, local
+.sym lbl_8054D71C, global
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
 	.4byte 0x3A426F75
 	.4byte 0x6E64696E
 	.4byte 0x67000000
-.sym lbl_8054D734, local
+.sym lbl_8054D734, global
 	.4byte lbl_8054D798
 	.4byte 0x00000000
 	.4byte lbl_8054D770
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8054D748, local
+.sym lbl_8054D748, global
 	.4byte lbl_8054D71C
 	.4byte lbl_8054D734
-.sym lbl_8054D750, local
+.sym lbl_8054D750, global
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
 	.4byte 0x3A50616E
 	.4byte 0x65000000
-.sym lbl_8054D764, local
+.sym lbl_8054D764, global
 	.4byte lbl_8054D798
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8054D770, local
+.sym lbl_8054D770, global
 	.4byte lbl_8054D750
 	.4byte lbl_8054D764
-.sym lbl_8054D778, local
+.sym lbl_8054D778, global
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
@@ -199,12 +199,12 @@
 	.4byte 0x3A50616E
 	.4byte 0x65426173
 	.4byte 0x65000000
-.sym lbl_8054D798, local
+.sym lbl_8054D798, global
 	.4byte lbl_8054D778
 	.4byte 0x00000000
 
 # 0x805CD788 - 0x805CD790
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CD788, local
+.sym lbl_805CD788, global
 	.skip 0x8

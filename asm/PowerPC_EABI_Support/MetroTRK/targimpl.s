@@ -1753,12 +1753,12 @@
 # 0x8050DEA8 - 0x8050DF30
 .rodata
 .balign 8
-.sym lbl_8050DEA8, local
+.sym lbl_8050DEA8, global
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000001
 	.4byte 0x00000001
-.sym lbl_8050DEB8, local
+.sym lbl_8050DEB8, global
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
@@ -1769,7 +1769,7 @@
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
-.sym lbl_8050DEE0, local
+.sym lbl_8050DEE0, global
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
@@ -1780,7 +1780,7 @@
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
-.sym lbl_8050DF08, local
+.sym lbl_8050DF08, global
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
@@ -1811,14 +1811,14 @@
 	.skip 0x9
 .endobj gTRKRestoreFlags
 	.skip 0x7
-.sym lbl_8057D290, local
+.sym lbl_8057D290, global
 	.skip 0x18
 
 .obj gTRKSaveState, global
 	.skip 0x94
 .endobj gTRKSaveState
 	.skip 0x4
-.sym lbl_8057D340, local
+.sym lbl_8057D340, global
 	.skip 0x10
 
 .obj gTRKState, global

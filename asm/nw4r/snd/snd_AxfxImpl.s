@@ -152,7 +152,7 @@
 # 0x80667DA8 - 0x80667DB0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DA8, local
+.sym lbl_80667DA8, global
 	.skip 0x4
-.sym lbl_80667DAC, local
+.sym lbl_80667DAC, global
 	.skip 0x4

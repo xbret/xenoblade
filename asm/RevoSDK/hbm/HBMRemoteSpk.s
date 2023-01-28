@@ -3,7 +3,7 @@
 
 # 0x80321990 - 0x803222B0
 .text
-.balign 4
+.balign 16
 
 # homebutton::RemoteSpk::UpdateSpeaker(OSAlarm*, OSContext*)
 .fn UpdateSpeaker__Q210homebutton9RemoteSpkFP7OSAlarmP9OSContext, global
@@ -707,5 +707,5 @@
 # 0x805CD748 - 0x805CD750
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CD748, local
+.sym lbl_805CD748, global
 	.skip 0x8

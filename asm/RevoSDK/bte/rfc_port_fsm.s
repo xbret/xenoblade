@@ -3,7 +3,7 @@
 
 # 0x802FF9C8 - 0x80300B68
 .text
-.balign 4
+.balign 8
 
 .fn rfc_port_sm_execute, global
 /* 802FF9C8 002C8F88  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1306,13 +1306,13 @@
 # 0x80548A70 - 0x80548D98
 .data
 .balign 8
-.sym lbl_80548A70, local
+.sym lbl_80548A70, global
 	.4byte 0x4E554C4C
 	.4byte 0x20706F72
 	.4byte 0x74206576
 	.4byte 0x656E7420
 	.4byte 0x25640000
-.sym lbl_80548A84, local
+.sym lbl_80548A84, global
 	.4byte 0x506F7274
 	.4byte 0x20657272
 	.4byte 0x6F722073
@@ -1321,7 +1321,7 @@
 	.4byte 0x6576656E
 	.4byte 0x74202564
 	.4byte 0x00000000
-.sym lbl_80548AA4, local
+.sym lbl_80548AA4, global
 	.4byte 0x506F7274
 	.4byte 0x20737461
 	.4byte 0x74652063
@@ -1349,7 +1349,7 @@
 	.rel rfc_port_sm_state_closed, .L_802FFACC
 	.rel rfc_port_sm_state_closed, .L_802FFAD0
 .endobj jumptable_80548AC8
-.sym lbl_80548B04, local
+.sym lbl_80548B04, global
 	.4byte 0x506F7274
 	.4byte 0x20737461
 	.4byte 0x74652073
@@ -1464,7 +1464,7 @@
 	.rel rfc_port_sm_orig_wait_sec_check, .L_802FFFFC
 	.rel rfc_port_sm_orig_wait_sec_check, .L_802FFF68
 .endobj jumptable_80548C68
-.sym lbl_80548CA8, local
+.sym lbl_80548CA8, global
 	.4byte 0x506F7274
 	.4byte 0x20737461
 	.4byte 0x7465206F
@@ -1492,7 +1492,7 @@
 	.rel rfc_port_sm_opened, .L_80300108
 	.rel rfc_port_sm_opened, .L_80300110
 .endobj jumptable_80548CCC
-.sym lbl_80548D08, local
+.sym lbl_80548D08, global
 	.4byte 0x506F7274
 	.4byte 0x20737461
 	.4byte 0x74652064
@@ -1522,7 +1522,7 @@
 	.rel rfc_port_sm_disc_wait_ua, .L_803002C4
 	.rel rfc_port_sm_disc_wait_ua, .L_803002CC
 .endobj jumptable_80548D34
-.sym lbl_80548D70, local
+.sym lbl_80548D70, global
 	.4byte 0x2A2A2A2A
 	.4byte 0x2A204D58
 	.4byte 0x20504E20

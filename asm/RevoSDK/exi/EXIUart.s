@@ -3,7 +3,7 @@
 
 # 0x803159F0 - 0x80315D30
 .text
-.balign 4
+.balign 16
 
 .fn ProbeBarnacle, global
 /* 803159F0 002DEFB0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -237,11 +237,11 @@
 # 0x806678E0 - 0x806678F0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806678E0, local
+.sym lbl_806678E0, global
 	.skip 0x4
-.sym lbl_806678E4, local
+.sym lbl_806678E4, global
 	.skip 0x4
-.sym lbl_806678E8, local
+.sym lbl_806678E8, global
 	.skip 0x4
-.sym lbl_806678EC, local
+.sym lbl_806678EC, global
 	.skip 0x4

@@ -3,7 +3,7 @@
 
 # 0x8031B950 - 0x8031C0C0
 .text
-.balign 4
+.balign 16
 
 .fn GXInitLightAttn, global
 /* 8031B950 002E4F10  D0 23 00 10 */	stfs f1, 0x10(r3)
@@ -567,30 +567,30 @@
 # 0x8066BFD8 - 0x8066C010
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BFD8, local
+.sym lbl_8066BFD8, global
 	.4byte 0x00000000
-.sym lbl_8066BFDC, local
+.sym lbl_8066BFDC, global
 	.4byte 0x42B40000
-.sym lbl_8066BFE0, local
+.sym lbl_8066BFE0, global
 	.4byte 0x40490FDB
-.sym lbl_8066BFE4, local
+.sym lbl_8066BFE4, global
 	.4byte 0x43340000
-.sym lbl_8066BFE8, local
+.sym lbl_8066BFE8, global
 	.4byte 0xC47A0000
-.sym lbl_8066BFEC, local
+.sym lbl_8066BFEC, global
 	.4byte 0x447A0000
-.sym lbl_8066BFF0, local
+.sym lbl_8066BFF0, global
 	.4byte 0x3F800000
-.sym lbl_8066BFF4, local
+.sym lbl_8066BFF4, global
 	.4byte 0x40000000
-.sym lbl_8066BFF8, local
+.sym lbl_8066BFF8, global
 	.4byte 0xC0800000
-.sym lbl_8066BFFC, local
+.sym lbl_8066BFFC, global
 	.4byte 0x40800000
-.sym lbl_8066C000, local
+.sym lbl_8066C000, global
 	.4byte 0xC0000000
-.sym lbl_8066C004, local
+.sym lbl_8066C004, global
 	.4byte 0x3F000000
-.sym lbl_8066C008, local
+.sym lbl_8066C008, global
 	.4byte 0xDD5E0B6B
 	.4byte 0x00000000

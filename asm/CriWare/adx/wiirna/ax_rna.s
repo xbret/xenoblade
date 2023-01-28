@@ -1103,7 +1103,7 @@
 /* 80399F48 00363508  4E 80 00 20 */	blr
 .endfn axrna_start_trans
 
-.fn fn_80399F4C, local
+.fn fn_80399F4C, global
 /* 80399F4C 0036350C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80399F50 00363510  7C 08 02 A6 */	mflr r0
 /* 80399F54 00363514  3C 80 51 EC */	lis r4, 0x51ec
@@ -1726,12 +1726,12 @@
 /* 8039A800 00363DC0  4E 80 00 20 */	blr
 .endfn AXRNA_SetBitPerSmpl
 
-.fn fn_8039A804, local
+.fn fn_8039A804, global
 /* 8039A804 00363DC4  38 60 00 00 */	li r3, 0x0
 /* 8039A808 00363DC8  4E 80 00 20 */	blr
 .endfn fn_8039A804
 
-.fn fn_8039A80C, local
+.fn fn_8039A80C, global
 /* 8039A80C 00363DCC  38 60 00 00 */	li r3, 0x0
 /* 8039A810 00363DD0  4E 80 00 20 */	blr
 .endfn fn_8039A80C
@@ -1797,7 +1797,7 @@
 /* 8039A8DC 00363E9C  4E 80 00 20 */	blr
 .endfn AXRNA_SetMain
 
-.fn fn_8039A8E0, local
+.fn fn_8039A8E0, global
 /* 8039A8E0 00363EA0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8039A8E4 00363EA4  7C 08 02 A6 */	mflr r0
 /* 8039A8E8 00363EA8  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1892,7 +1892,7 @@
 # 0x8051C760 - 0x8051CCE0
 .rodata
 .balign 8
-.sym lbl_8051C760, local
+.sym lbl_8051C760, global
 	.4byte 0x0A415852
 	.4byte 0x4E412056
 	.4byte 0x65722E31
@@ -1904,9 +1904,9 @@
 	.4byte 0x38203130
 	.4byte 0x3A35333A
 	.4byte 0x30300A00
-.sym lbl_8051C78C, local
+.sym lbl_8051C78C, global
 	.4byte lbl_8051C760
-.sym lbl_8051C790, local
+.sym lbl_8051C790, global
 	.4byte 0x45313037
 	.4byte 0x30333031
 	.4byte 0x3A496E76
@@ -2254,7 +2254,7 @@
 
 .obj axrna_def_src_type, global
 	.4byte 0x00000001
-.sym lbl_8056972C, local
+.sym lbl_8056972C, global
 	.4byte 0x00000000
 	.4byte 0x00000004
 	.4byte 0x00000008
@@ -2293,13 +2293,13 @@
 
 .obj axrna_init_cnt, global
 	.skip 0x4
-.sym lbl_805F61C4, local
+.sym lbl_805F61C4, global
 	.skip 0x4
-.sym lbl_805F61C8, local
+.sym lbl_805F61C8, global
 	.skip 0x8
-.sym lbl_805F61D0, local
+.sym lbl_805F61D0, global
 	.skip 0xE38
-.sym lbl_805F7008, local
+.sym lbl_805F7008, global
 	.skip 0x4
-.sym lbl_805F700C, local
+.sym lbl_805F700C, global
 	.skip 0x4

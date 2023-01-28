@@ -3,7 +3,7 @@
 
 # 0x80309DA0 - 0x8030A8A0
 .text
-.balign 4
+.balign 16
 
 .fn __DVDFSInit, global
 /* 80309DA0 002D3360  3C 60 80 00 */	lis r3, 0x8000
@@ -848,7 +848,7 @@
 # 0x805497B8 - 0x80549920
 .data
 .balign 8
-.sym lbl_805497B8, local
+.sym lbl_805497B8, global
 	.4byte 0x44564443
 	.4byte 0x6F6E7665
 	.4byte 0x7274456E
@@ -899,7 +899,7 @@
 	.4byte 0x6D6F7665
 	.4byte 0x6420736F
 	.4byte 0x6F6E0A00
-.sym lbl_80549880, local
+.sym lbl_80549880, global
 	.4byte 0x5761726E
 	.4byte 0x696E673A
 	.4byte 0x20445644
@@ -914,7 +914,7 @@
 	.4byte 0x756E6465
 	.4byte 0x72202573
 	.4byte 0x2E0A0000
-.sym lbl_805498B8, local
+.sym lbl_805498B8, global
 	.4byte 0x44564452
 	.4byte 0x65616441
 	.4byte 0x73796E63
@@ -928,7 +928,7 @@
 	.4byte 0x20746865
 	.4byte 0x2066696C
 	.4byte 0x65202000
-.sym lbl_805498EC, local
+.sym lbl_805498EC, global
 	.4byte 0x44564452
 	.4byte 0x65616428
 	.4byte 0x293A2073
@@ -951,14 +951,14 @@
 	.4byte 0x00000001
 .endobj __DVDLongFileNameFlag
 	.4byte 0x00000000
-.sym lbl_80665978, local
+.sym lbl_80665978, global
 	.4byte 0x64766466
 	.4byte 0x732E6300
 
 # 0x806677A8 - 0x806677E0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806677A8, local
+.sym lbl_806677A8, global
 	.skip 0x8
 
 .obj __DVDThreadQueue, global

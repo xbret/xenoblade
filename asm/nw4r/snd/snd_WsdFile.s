@@ -278,6 +278,6 @@
 # 0x8066C900 - 0x8066C908
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C900, local
+.sym lbl_8066C900, global
 	.4byte 0x3F800000
 	.4byte 0x00000000

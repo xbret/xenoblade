@@ -3,7 +3,7 @@
 
 # 0x802D3A70 - 0x802D4320
 .text
-.balign 4
+.balign 16
 
 .fn __AXOutNewFrame, global
 /* 802D3A70 0029D030  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -639,53 +639,53 @@
 # 0x80580BC0 - 0x805819C0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80580BC0, local
+.sym lbl_80580BC0, global
 	.skip 0x40
-.sym lbl_80580C00, local
+.sym lbl_80580C00, global
 	.skip 0x8A0
-.sym lbl_805814A0, local
+.sym lbl_805814A0, global
 	.skip 0x480
-.sym lbl_80581920, local
+.sym lbl_80581920, global
 	.skip 0x60
-.sym lbl_80581980, local
+.sym lbl_80581980, global
 	.skip 0x40
 
 # 0x806658B8 - 0x806658C0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806658B8, local
+.sym lbl_806658B8, global
 	.2byte 0x0010
-.sym lbl_806658BA, local
+.sym lbl_806658BA, global
 	.2byte 0x0037
-.sym lbl_806658BC, local
+.sym lbl_806658BC, global
 	.4byte 0x20000000
 
 # 0x80667688 - 0x806676C8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667688, local
+.sym lbl_80667688, global
 	.skip 0x4
-.sym lbl_8066768C, local
+.sym lbl_8066768C, global
 	.skip 0x4
-.sym lbl_80667690, local
+.sym lbl_80667690, global
 	.skip 0x4
-.sym lbl_80667694, local
+.sym lbl_80667694, global
 	.skip 0x4
-.sym lbl_80667698, local
+.sym lbl_80667698, global
 	.skip 0x8
-.sym lbl_806676A0, local
+.sym lbl_806676A0, global
 	.skip 0x8
-.sym lbl_806676A8, local
+.sym lbl_806676A8, global
 	.skip 0x4
-.sym lbl_806676AC, local
+.sym lbl_806676AC, global
 	.skip 0x4
-.sym lbl_806676B0, local
+.sym lbl_806676B0, global
 	.skip 0x4
-.sym lbl_806676B4, local
+.sym lbl_806676B4, global
 	.skip 0x4
-.sym lbl_806676B8, local
+.sym lbl_806676B8, global
 	.skip 0x4
-.sym lbl_806676BC, local
+.sym lbl_806676BC, global
 	.skip 0x4
-.sym lbl_806676C0, local
+.sym lbl_806676C0, global
 	.skip 0x8

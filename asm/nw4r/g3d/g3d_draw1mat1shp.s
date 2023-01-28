@@ -954,7 +954,7 @@
 # 0x80520FA8 - 0x80520FB8
 .rodata
 .balign 8
-.sym lbl_80520FA8, local
+.sym lbl_80520FA8, global
 	.4byte 0x00000000
 	.4byte 0x00000002
 	.4byte 0x00000001
@@ -963,15 +963,15 @@
 # 0x8066C410 - 0x8066C430
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C410, local
+.sym lbl_8066C410, global
 	.4byte 0x3F800000
 	.4byte 0x00000000
-.sym lbl_8066C418, local
+.sym lbl_8066C418, global
 	.4byte 0x40100000
 	.4byte 0x00000000
-.sym lbl_8066C420, local
+.sym lbl_8066C420, global
 	.4byte 0x437F0000
 	.4byte 0x00000000
-.sym lbl_8066C428, local
+.sym lbl_8066C428, global
 	.4byte 0x43300000
 	.4byte 0x00000000

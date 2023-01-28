@@ -375,7 +375,7 @@
 /* 803A2904 0036BEC4  4E 80 00 20 */	blr
 .endfn MWSFSVR_MainThrdProc
 
-.fn fn_803A2908, local
+.fn fn_803A2908, global
 /* 803A2908 0036BEC8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A290C 0036BECC  7C 08 02 A6 */	mflr r0
 /* 803A2910 0036BED0  3C 80 80 60 */	lis r4, lbl_80602960@ha
@@ -1025,7 +1025,7 @@
 # 0x8051F450 - 0x8051F510
 .rodata
 .balign 8
-.sym lbl_8051F450, local
+.sym lbl_8051F450, global
 	.4byte 0x45323131
 	.4byte 0x31343120
 	.4byte 0x4D575354
@@ -1078,7 +1078,7 @@
 # 0x8056A41C - 0x8056A918
 .data
 .balign 4
-.sym lbl_8056A41C, local
+.sym lbl_8056A41C, global
 	.4byte lbl_8051E368
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1132,7 +1132,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056A4F0, local
+.sym lbl_8056A4F0, global
 	.4byte lbl_8051E394
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1186,7 +1186,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056A5C4, local
+.sym lbl_8056A5C4, global
 	.4byte lbl_8051E3AC
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1240,7 +1240,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056A698, local
+.sym lbl_8056A698, global
 	.4byte lbl_8051E3C4
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1294,7 +1294,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056A76C, local
+.sym lbl_8056A76C, global
 	.4byte lbl_8051E3DC
 	.4byte 0x00000000
 	.4byte 0x00000001
@@ -1348,7 +1348,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056A840, local
+.sym lbl_8056A840, global
 	.4byte lbl_8051E3F0
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1407,9 +1407,9 @@
 # 0x80605EB0 - 0x80605EC0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80605EB0, local
+.sym lbl_80605EB0, global
 	.skip 0x4
-.sym lbl_80605EB4, local
+.sym lbl_80605EB4, global
 	.skip 0x4
-.sym lbl_80605EB8, local
+.sym lbl_80605EB8, global
 	.skip 0x8

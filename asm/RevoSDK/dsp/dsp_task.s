@@ -3,7 +3,7 @@
 
 # 0x80309500 - 0x80309DA0
 .text
-.balign 4
+.balign 16
 
 .fn __DSPHandler, global
 /* 80309500 002D2AC0  94 21 FD 20 */	stwu r1, -0x2e0(r1)
@@ -644,7 +644,7 @@
 # 0x80549678 - 0x805497B8
 .data
 .balign 8
-.sym lbl_80549678, local
+.sym lbl_80549678, global
 	.4byte 0x44535020
 	.4byte 0x69732062
 	.4byte 0x6F6F7469

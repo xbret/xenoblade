@@ -3,7 +3,7 @@
 
 # 0x8031D620 - 0x8031DCF0
 .text
-.balign 4
+.balign 16
 
 .fn GXSetTevOp, global
 /* 8031D620 002E6BE0  2C 03 00 00 */	cmpwi r3, 0x0
@@ -517,7 +517,7 @@
 # 0x8054C098 - 0x8054C110
 .data
 .balign 8
-.sym lbl_8054C098, local
+.sym lbl_8054C098, global
 	.4byte 0xC008F8AF
 	.4byte 0xC008A89F
 	.4byte 0xC008AC8F
@@ -538,7 +538,7 @@
 	.4byte 0xC108F070
 	.4byte 0xC108FFC0
 	.4byte 0xC108FF80
-.sym lbl_8054C0E8, local
+.sym lbl_8054C0E8, global
 	.4byte 0x00000000
 	.4byte 0x00000001
 	.4byte 0x00000000

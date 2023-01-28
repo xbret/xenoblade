@@ -206,13 +206,13 @@
 # 0x80602790 - 0x806028A0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80602790, local
+.sym lbl_80602790, global
 	.skip 0x4
-.sym lbl_80602794, local
+.sym lbl_80602794, global
 	.skip 0x4
-.sym lbl_80602798, local
+.sym lbl_80602798, global
 	.skip 0x4
-.sym lbl_8060279C, local
+.sym lbl_8060279C, global
 	.skip 0x4
-.sym lbl_806027A0, local
+.sym lbl_806027A0, global
 	.skip 0x100

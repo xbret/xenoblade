@@ -329,12 +329,12 @@
 /* 80039330 000028F0  4E 80 00 20 */	blr
 .endfn __dt__CGame
 
-.fn fn_80039334, local
+.fn fn_80039334, global
 /* 80039334 000028F4  80 6D A4 80 */	lwz r3, lbl_80666600@sda21(r13)
 /* 80039338 000028F8  4E 80 00 20 */	blr
 .endfn fn_80039334
 
-.fn fn_8003933C, local
+.fn fn_8003933C, global
 /* 8003933C 000028FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039340 00002900  7C 08 02 A6 */	mflr r0
 /* 80039344 00002904  90 01 00 14 */	stw r0, 0x14(r1)
@@ -406,7 +406,7 @@
 /* 80039434 000029F4  4E 80 00 20 */	blr
 .endfn CGameRestart
 
-.fn fn_80039438, local
+.fn fn_80039438, global
 /* 80039438 000029F8  80 8D A4 80 */	lwz r4, lbl_80666600@sda21(r13)
 /* 8003943C 000029FC  2C 04 00 00 */	cmpwi r4, 0x0
 /* 80039440 00002A00  4D 82 00 20 */	beqlr
@@ -414,7 +414,7 @@
 /* 80039448 00002A08  4E 80 00 20 */	blr
 .endfn fn_80039438
 
-.fn fn_8003944C, local
+.fn fn_8003944C, global
 /* 8003944C 00002A0C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039450 00002A10  7C 08 02 A6 */	mflr r0
 /* 80039454 00002A14  90 01 00 14 */	stw r0, 0x14(r1)
@@ -488,7 +488,7 @@
 /* 8003954C 00002B0C  4E 80 00 20 */	blr
 .endfn fn_8003944C
 
-.fn fn_80039550, local
+.fn fn_80039550, global
 /* 80039550 00002B10  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80039554 00002B14  7C 08 02 A6 */	mflr r0
 /* 80039558 00002B18  90 01 00 64 */	stw r0, 0x64(r1)
@@ -534,7 +534,7 @@
 /* 800395F0 00002BB0  4E 80 00 20 */	blr
 .endfn fn_80039550
 
-.fn fn_800395F4, local
+.fn fn_800395F4, global
 /* 800395F4 00002BB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800395F8 00002BB8  7C 08 02 A6 */	mflr r0
 /* 800395FC 00002BBC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -579,7 +579,7 @@
 /* 80039690 00002C50  4E 80 00 20 */	blr
 .endfn fn_800395F4
 
-.fn fn_80039694, local
+.fn fn_80039694, global
 /* 80039694 00002C54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039698 00002C58  7C 08 02 A6 */	mflr r0
 /* 8003969C 00002C5C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -595,7 +595,7 @@
 /* 800396C4 00002C84  4E 80 00 20 */	blr
 .endfn fn_80039694
 
-.fn fn_800396C8, local
+.fn fn_800396C8, global
 /* 800396C8 00002C88  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 800396CC 00002C8C  7C 08 02 A6 */	mflr r0
 /* 800396D0 00002C90  90 01 00 34 */	stw r0, 0x34(r1)
@@ -718,7 +718,7 @@
 /* 8003988C 00002E4C  4E 80 00 20 */	blr
 .endfn fn_800396C8
 
-.fn fn_80039890, local
+.fn fn_80039890, global
 /* 80039890 00002E50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039894 00002E54  7C 08 02 A6 */	mflr r0
 /* 80039898 00002E58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -789,7 +789,7 @@
 /* 80039978 00002F38  4E 80 00 20 */	blr
 .endfn fn_80039890
 
-.fn fn_8003997C, local
+.fn fn_8003997C, global
 /* 8003997C 00002F3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039980 00002F40  7C 08 02 A6 */	mflr r0
 /* 80039984 00002F44  2C 03 00 00 */	cmpwi r3, 0x0
@@ -819,7 +819,7 @@
 /* 800399DC 00002F9C  4E 80 00 20 */	blr
 .endfn fn_8003997C
 
-.fn fn_800399E0, local
+.fn fn_800399E0, global
 /* 800399E0 00002FA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800399E4 00002FA4  7C 08 02 A6 */	mflr r0
 /* 800399E8 00002FA8  2C 03 00 00 */	cmpwi r3, 0x0
@@ -886,7 +886,7 @@
 /* 80039AC0 00003080  4E 80 00 20 */	blr
 .endfn GameMain
 
-.fn fn_80039AC4, local
+.fn fn_80039AC4, global
 /* 80039AC4 00003084  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80039AC8 00003088  7C 08 02 A6 */	mflr r0
 /* 80039ACC 0000308C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -919,7 +919,7 @@
 /* 80039B34 000030F4  4E 80 00 20 */	blr
 .endfn fn_80039AC4
 
-.fn fn_80039B38, local
+.fn fn_80039B38, global
 /* 80039B38 000030F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039B3C 000030FC  7C 08 02 A6 */	mflr r0
 /* 80039B40 00003100  90 01 00 14 */	stw r0, 0x14(r1)
@@ -983,7 +983,7 @@
 /* 80039C04 000031C4  4E 80 00 20 */	blr
 .endfn fn_80039B38
 
-.fn fn_80039C08, local
+.fn fn_80039C08, global
 /* 80039C08 000031C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039C0C 000031CC  7C 08 02 A6 */	mflr r0
 /* 80039C10 000031D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1056,7 +1056,7 @@
 /* 80039D04 000032C4  4E 80 00 20 */	blr
 .endfn fn_80039C08
 
-.fn fn_80039D08, local
+.fn fn_80039D08, global
 /* 80039D08 000032C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039D0C 000032CC  7C 08 02 A6 */	mflr r0
 /* 80039D10 000032D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1098,7 +1098,7 @@
 	.4byte 0x49576F72
 	.4byte 0x6B457665
 	.4byte 0x6E740000
-.sym lbl_804F5B5C, local
+.sym lbl_804F5B5C, global
 	.4byte 0x4347616D
 	.4byte 0x65526573
 	.4byte 0x74617274
@@ -1234,7 +1234,7 @@
 # 0x80664180 - 0x806641B8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80664180, local
+.sym lbl_80664180, global
 	.4byte lbl_80668380
 	.4byte 0x00000000
 
@@ -1265,22 +1265,22 @@
 # 0x80666600 - 0x8066660C
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80666600, local
+.sym lbl_80666600, global
 	.skip 0x4
-.sym lbl_80666604, local
+.sym lbl_80666604, global
 	.skip 0x4
-.sym lbl_80666608, local
+.sym lbl_80666608, global
 	.skip 0x4
 
 # 0x80668380 - 0x806683A0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_80668380, local
+.sym lbl_80668380, global
 	.4byte 0x8B90905F
 	.4byte 0x00000000
-.sym lbl_80668388, local
+.sym lbl_80668388, global
 	.4byte 0x3F800000
-.sym lbl_8066838C, local
+.sym lbl_8066838C, global
 	.4byte 0x00000000
 
 .obj CGame_typestr, global

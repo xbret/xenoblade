@@ -3,7 +3,7 @@
 
 # 0x802F37C8 - 0x802F3B44
 .text
-.balign 4
+.balign 8
 
 .fn hidd_pm_set_now, global
 /* 802F37C8 002BCD88  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -259,5 +259,5 @@
 # 0x805C2570 - 0x805C26B8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805C2570, local
+.sym lbl_805C2570, global
 	.skip 0x148

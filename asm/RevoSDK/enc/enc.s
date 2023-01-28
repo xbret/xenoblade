@@ -3,7 +3,7 @@
 
 # 0x80312EF0 - 0x80313750
 .text
-.balign 4
+.balign 16
 
 .fn ENCConvertStringSjisToUnicode, global
 /* 80312EF0 002DC4B0  38 E0 00 00 */	li r7, 0x0
@@ -61,9 +61,9 @@
 /* 80312FA4 002DC564  38 60 FF FE */	li r3, -0x2
 /* 80312FA8 002DC568  48 00 02 C0 */	b .L_80313268
 .L_80312FAC:
-/* 80312FAC 002DC56C  3C 60 80 51 */	lis r3, lbl_8050E400@ha
+/* 80312FAC 002DC56C  3C 60 80 51 */	lis r3, enc_tbl_jp_mbtowc@ha
 /* 80312FB0 002DC570  3F E0 00 01 */	lis r31, 0x1
-/* 80312FB4 002DC574  3B C3 E4 00 */	addi r30, r3, lbl_8050E400@l
+/* 80312FB4 002DC574  3B C3 E4 00 */	addi r30, r3, enc_tbl_jp_mbtowc@l
 /* 80312FB8 002DC578  48 00 02 70 */	b .L_80313228
 .L_80312FBC:
 /* 80312FBC 002DC57C  80 01 00 10 */	lwz r0, 0x10(r1)
@@ -555,19 +555,19 @@
 /* 80313634 002DCBF4  54 86 C6 3E */	extrwi r6, r4, 8, 16
 /* 80313638 002DCBF8  41 82 00 1C */	beq .L_80313654
 /* 8031363C 002DCBFC  38 07 FF FF */	addi r0, r7, -0x1
-/* 80313640 002DCC00  3C 80 80 52 */	lis r4, lbl_80518468@ha
+/* 80313640 002DCC00  3C 80 80 52 */	lis r4, enc_offset_jp@ha
 /* 80313644 002DCC04  54 00 08 3C */	slwi r0, r0, 1
-/* 80313648 002DCC08  38 84 84 68 */	addi r4, r4, lbl_80518468@l
+/* 80313648 002DCC08  38 84 84 68 */	addi r4, r4, enc_offset_jp@l
 /* 8031364C 002DCC0C  7D 04 02 2E */	lhzx r8, r4, r0
 /* 80313650 002DCC10  48 00 00 08 */	b .L_80313658
 .L_80313654:
 /* 80313654 002DCC14  39 00 00 00 */	li r8, 0x0
 .L_80313658:
-/* 80313658 002DCC18  3C A0 80 52 */	lis r5, lbl_80518468@ha
-/* 8031365C 002DCC1C  3C 80 80 51 */	lis r4, lbl_80512D70@ha
+/* 80313658 002DCC18  3C A0 80 52 */	lis r5, enc_offset_jp@ha
+/* 8031365C 002DCC1C  3C 80 80 51 */	lis r4, enc_tbl_jp_wctomb@ha
 /* 80313660 002DCC20  54 E0 0D FC */	clrlslwi r0, r7, 24, 1
-/* 80313664 002DCC24  38 A5 84 68 */	addi r5, r5, lbl_80518468@l
-/* 80313668 002DCC28  38 84 2D 70 */	addi r4, r4, lbl_80512D70@l
+/* 80313664 002DCC24  38 A5 84 68 */	addi r5, r5, enc_offset_jp@l
+/* 80313668 002DCC28  38 84 2D 70 */	addi r4, r4, enc_tbl_jp_wctomb@l
 /* 8031366C 002DCC2C  7C A5 02 2E */	lhzx r5, r5, r0
 /* 80313670 002DCC30  38 E5 FF FF */	addi r7, r5, -0x1
 /* 80313674 002DCC34  48 00 00 5C */	b .L_803136D0
@@ -601,9 +601,9 @@
 /* 803136D4 002DCC94  2C 00 00 01 */	cmpwi r0, 0x1
 /* 803136D8 002DCC98  41 81 FF A0 */	bgt .L_80313678
 /* 803136DC 002DCC9C  55 00 10 3A */	slwi r0, r8, 2
-/* 803136E0 002DCCA0  3C 80 80 51 */	lis r4, lbl_80512D70@ha
+/* 803136E0 002DCCA0  3C 80 80 51 */	lis r4, enc_tbl_jp_wctomb@ha
 /* 803136E4 002DCCA4  7C 08 00 50 */	subf r0, r8, r0
-/* 803136E8 002DCCA8  38 84 2D 70 */	addi r4, r4, lbl_80512D70@l
+/* 803136E8 002DCCA8  38 84 2D 70 */	addi r4, r4, enc_tbl_jp_wctomb@l
 /* 803136EC 002DCCAC  7C A4 02 14 */	add r5, r4, r0
 /* 803136F0 002DCCB0  7C 04 00 AE */	lbzx r0, r4, r0
 /* 803136F4 002DCCB4  7C 00 30 40 */	cmplw r0, r6
@@ -636,7 +636,8 @@
 # 0x8050E400 - 0x80518668
 .rodata
 .balign 8
-.sym lbl_8050E400, local
+
+.obj enc_tbl_jp_mbtowc, local
 	.4byte 0x30003001
 	.4byte 0x3002FF0C
 	.4byte 0xFF0E30FB
@@ -1787,7 +1788,7 @@
 	.4byte 0x7CE07D05
 	.4byte 0x7D187D5E
 	.4byte 0x7DB18015
-	.4byte "@eti_800380A8"+0x7
+	.4byte 0x800380AF
 	.4byte 0x80B18154
 	.4byte 0x818F822A
 	.4byte 0x8352884C
@@ -2107,7 +2108,7 @@
 	.4byte 0x6B636E05
 	.4byte 0x7272751F
 	.4byte 0x76DB7CBE
-	.4byte lbl_805658F0
+	.4byte 0x805658F0
 	.4byte 0x88FD897F
 	.4byte 0x8AA08A93
 	.4byte 0x8ACB901D
@@ -2180,7 +2181,7 @@
 	.4byte 0x75E976F8
 	.4byte 0x7A937CDF
 	.4byte 0x7DCF7D9C
-	.4byte lbl_80618349
+	.4byte 0x80618349
 	.4byte 0x8358846C
 	.4byte 0x84BC85FB
 	.4byte 0x88C58D70
@@ -2576,7 +2577,7 @@
 	.4byte 0x596E7C89
 	.4byte 0x7CDE7D1B
 	.4byte 0x96F06587
-	.4byte lbl_805E4E19
+	.4byte 0x805E4E19
 	.4byte 0x4F755175
 	.4byte 0x58405E63
 	.4byte 0x5E735F0A
@@ -2810,7 +2811,7 @@
 	.4byte 0x69946D6A
 	.4byte 0x6F0F7262
 	.4byte 0x72FC7BED
-	.4byte "@etb_8001807C"+0x2
+	.4byte 0x8001807E
 	.4byte 0x874B90CE
 	.4byte 0x516D9E93
 	.4byte 0x7984808B
@@ -3902,15 +3903,15 @@
 	.4byte 0x7FE17FE6
 	.4byte 0x7FE97FF3
 	.4byte 0x7FF998DC
-	.4byte fn_80067FE0+0x24
+	.4byte 0x80068004
 	.4byte 0x800B8012
 	.4byte 0x80188019
 	.4byte 0x801C8021
 	.4byte 0x8028803F
 	.4byte 0x803B804A
 	.4byte 0x80468052
-	.4byte lbl_8058805A
-	.4byte lbl_805F8062
+	.4byte 0x8058805A
+	.4byte 0x805F8062
 	.4byte 0x80688073
 	.4byte 0x80728070
 	.4byte 0x80768079
@@ -5337,7 +5338,9 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_80512D70, local
+.endobj enc_tbl_jp_mbtowc
+
+.obj enc_tbl_jp_wctomb, local
 	.4byte 0x2281CD25
 	.4byte 0x849F3081
 	.4byte 0x404E88EA
@@ -7695,7 +7698,7 @@
 	.4byte 0x935F8DCA
 	.4byte 0x6089B663
 	.4byte 0x9D806496
-	.4byte lbl_806694D3
+	.4byte 0x806694D3
 	.4byte 0x6B95E06D
 	.4byte 0x8D5F7194
 	.4byte 0xCF7295A8
@@ -10668,7 +10671,7 @@
 	.4byte 0x8F9888B9
 	.4byte 0x9AE99C9C
 	.4byte 0x96C29EEA
-	.4byte "@etb_80006EF8"+0x8
+	.4byte 0x80006F00
 	.4byte 0x3083954F
 	.4byte 0x95555099
 	.4byte 0x4B519981
@@ -10902,9 +10905,12 @@
 	.4byte 0xF391E7E1
 	.4byte 0x92FBDC97
 	.4byte 0x8BBF998F
-	.4byte 0x78000000
+	.byte 0x78
+.endobj enc_tbl_jp_wctomb
 	.4byte 0x00000000
-.sym lbl_80518468, local
+	.byte 0x00, 0x00, 0x00
+
+.obj enc_offset_jp, local
 	.4byte 0x001B0039
 	.4byte 0x00560075
 	.4byte 0x008F00AB
@@ -11033,10 +11039,11 @@
 	.4byte 0x1C6C1C92
 	.4byte 0x1CAB1CC6
 	.4byte 0x1CE31CFB
+.endobj enc_offset_jp
 
 # 0x806659C0 - 0x806659C8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806659C0, local
+.sym lbl_806659C0, global
 	.4byte 0x00000001
 	.4byte 0x00000000

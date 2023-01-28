@@ -195,7 +195,7 @@
 /* 803FC218 003C57D8  4E 80 00 20 */	blr
 .endfn PushBack__Q34nw4r3g3d12ScnMdlExpandFPQ34nw4r3g3d6ScnObjUl
 
-.fn fn_803FC21C, local
+.fn fn_803FC21C, global
 /* 803FC21C 003C57DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803FC220 003C57E0  7C 08 02 A6 */	mflr r0
 /* 803FC224 003C57E4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -718,7 +718,7 @@
 # 0x805210E8 - 0x80521100
 .rodata
 .balign 8
-.sym lbl_805210E8, local
+.sym lbl_805210E8, global
 	.4byte 0x0000000D
 	.4byte 0x53636E4D
 	.4byte 0x646C4578
@@ -751,6 +751,6 @@
 # 0x80665DD8 - 0x80665DE0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665DD8, local
+.sym lbl_80665DD8, global
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000000

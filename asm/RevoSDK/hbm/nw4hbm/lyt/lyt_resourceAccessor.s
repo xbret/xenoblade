@@ -45,12 +45,12 @@
 # 0x8054D9D8 - 0x8054D9F4
 .data
 .balign 8
-.sym lbl_8054D9D8, local
+.sym lbl_8054D9D8, global
 	.4byte lbl_8054D6B0
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt16ResourceAccessorFv
 	.4byte 0x00000000
 	.4byte GetFont__Q36nw4hbm3lyt16ResourceAccessorFPCc
 	.4byte 0x00000000
-.sym lbl_8054D9F0, local
+.sym lbl_8054D9F0, global
 	.4byte 0x000A0000

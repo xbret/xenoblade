@@ -986,15 +986,15 @@
 # 0x80518A60 - 0x80518A68
 .rodata
 .balign 8
-.sym lbl_80518A60, local
+.sym lbl_80518A60, global
 	.4byte 0x00000000
-.sym lbl_80518A64, local
+.sym lbl_80518A64, global
 	.4byte 0x3F000000
 
 # 0x8054D7F8 - 0x8054D848
 .data
 .balign 8
-.sym lbl_8054D7F8, local
+.sym lbl_8054D7F8, global
 	.4byte lbl_8054D840
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt6LayoutFv
@@ -1008,12 +1008,12 @@
 	.4byte Draw__Q36nw4hbm3lyt6LayoutFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte Animate__Q36nw4hbm3lyt6LayoutFUl
 	.4byte SetTagProcessor__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm2ut19TagProcessorBase_w_
-.sym lbl_8054D82C, local
+.sym lbl_8054D82C, global
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
 	.4byte 0x3A4C6179
 	.4byte 0x6F757400
-.sym lbl_8054D840, local
+.sym lbl_8054D840, global
 	.4byte lbl_8054D82C
 	.4byte 0x00000000

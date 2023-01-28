@@ -1042,26 +1042,26 @@
 # 0x8066C458 - 0x8066C488
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C458, local
+.sym lbl_8066C458, global
 	.4byte 0x00000000
-.sym lbl_8066C45C, local
+.sym lbl_8066C45C, global
 	.4byte 0x41700000
-.sym lbl_8066C460, local
+.sym lbl_8066C460, global
 	.4byte 0x3F800000
-.sym lbl_8066C464, local
+.sym lbl_8066C464, global
 	.4byte 0x42700000
-.sym lbl_8066C468, local
+.sym lbl_8066C468, global
 	.4byte 0x3FAAAAAB
-.sym lbl_8066C46C, local
+.sym lbl_8066C46C, global
 	.4byte 0x3DCCCCCD
-.sym lbl_8066C470, local
+.sym lbl_8066C470, global
 	.4byte 0x447A0000
-.sym lbl_8066C474, local
+.sym lbl_8066C474, global
 	.4byte 0x3F000000
-.sym lbl_8066C478, local
+.sym lbl_8066C478, global
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C480, local
+.sym lbl_8066C480, global
 	.4byte 0xBF800000
-.sym lbl_8066C484, local
+.sym lbl_8066C484, global
 	.4byte 0x3F360B61

@@ -3,7 +3,7 @@
 
 # 0x8035F410 - 0x8035F530
 .text
-.balign 4
+.balign 16
 
 .fn PADControlMotor, global
 /* 8035F410 003289D0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -90,9 +90,9 @@
 # 0x80665BB8 - 0x80665BC0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665BB8, local
+.sym lbl_80665BB8, global
 	.4byte 0x00000300
-.sym lbl_80665BBC, local
+.sym lbl_80665BBC, global
 	.4byte 0x00000005
 
 # 0x80667B50 - 0x80667B58
@@ -102,5 +102,5 @@
 .obj __PADSpec, global
 	.skip 0x4
 .endobj __PADSpec
-.sym lbl_80667B54, local
+.sym lbl_80667B54, global
 	.skip 0x4

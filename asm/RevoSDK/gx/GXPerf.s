@@ -3,7 +3,7 @@
 
 # 0x8031EA70 - 0x8031F2A0
 .text
-.balign 4
+.balign 16
 
 .fn GXSetGPMetric, global
 /* 8031EA70 002E8030  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)

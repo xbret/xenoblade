@@ -30,7 +30,7 @@
 # 0x8050CFF8 - 0x8050D020
 .rodata
 .balign 8
-.sym lbl_8050CFF8, local
+.sym lbl_8050CFF8, global
 	.4byte 0x41737365
 	.4byte 0x7274696F
 	.4byte 0x6E202825

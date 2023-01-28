@@ -171,7 +171,7 @@
 # 0x8056E3C8 - 0x8056E3D8
 .data
 .balign 8
-.sym lbl_8056E3C8, local
+.sym lbl_8056E3C8, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r3snd6detail10PlayerHeapFv

@@ -1325,8 +1325,8 @@
 .L_802BD5C4:
 /* 802BD5C4 00286B84  C8 42 B4 B0 */	lfd f2, lbl_8066B830@sda21(r2)
 .L_802BD5C8:
-/* 802BD5C8 00286B88  3C 60 80 66 */	lis r3, lbl_8066588C@ha
-/* 802BD5CC 00286B8C  C0 23 58 8C */	lfs f1, lbl_8066588C@l(r3)
+/* 802BD5C8 00286B88  3C 60 80 66 */	lis r3, __float_huge@ha
+/* 802BD5CC 00286B8C  C0 23 58 8C */	lfs f1, __float_huge@l(r3)
 /* 802BD5D0 00286B90  48 00 D5 B9 */	bl copysign
 /* 802BD5D4 00286B94  48 00 06 68 */	b .L_802BDC3C
 .L_802BD5D8:
@@ -1451,8 +1451,8 @@
 .L_802BD798:
 /* 802BD798 00286D58  C8 42 B4 B0 */	lfd f2, lbl_8066B830@sda21(r2)
 .L_802BD79C:
-/* 802BD79C 00286D5C  3C 60 80 66 */	lis r3, lbl_8066588C@ha
-/* 802BD7A0 00286D60  C0 23 58 8C */	lfs f1, lbl_8066588C@l(r3)
+/* 802BD79C 00286D5C  3C 60 80 66 */	lis r3, __float_huge@ha
+/* 802BD7A0 00286D60  C0 23 58 8C */	lfs f1, __float_huge@l(r3)
 /* 802BD7A4 00286D64  48 00 D3 E5 */	bl copysign
 /* 802BD7A8 00286D68  48 00 04 94 */	b .L_802BDC3C
 .L_802BD7AC:
@@ -1785,7 +1785,7 @@
 # 0x8050CF18 - 0x8050CFF8
 .rodata
 .balign 8
-.sym lbl_8050CF18, local
+.sym lbl_8050CF18, global
 	.4byte 0x35343231
 	.4byte 0x30313038
 	.4byte 0x36323432
@@ -1923,7 +1923,7 @@
 	.rel __two_exp, .L_802BCA48
 .endobj jumptable_8053F230
 	.4byte 0x00000000
-.sym lbl_8053F358, local
+.sym lbl_8053F358, global
 	.4byte 0x40240000
 	.4byte 0x00000000
 	.4byte 0x40590000
@@ -1944,24 +1944,24 @@
 # 0x8066B820 - 0x8066B858
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066B820, local
+.sym lbl_8066B820, global
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066B828, local
+.sym lbl_8066B828, global
 	.4byte 0x3FF00000
 	.4byte 0x00000000
-.sym lbl_8066B830, local
+.sym lbl_8066B830, global
 	.4byte 0xBFF00000
 	.4byte 0x00000000
-.sym lbl_8066B838, local
+.sym lbl_8066B838, global
 	.4byte 0x40140000
 	.4byte 0x00000000
-.sym lbl_8066B840, local
+.sym lbl_8066B840, global
 	.4byte 0x7FEFFFFF
 	.4byte 0xFFFFFFFF
-.sym lbl_8066B848, local
+.sym lbl_8066B848, global
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066B850, local
+.sym lbl_8066B850, global
 	.4byte 0x43300000
 	.4byte 0x80000000

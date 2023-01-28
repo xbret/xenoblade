@@ -3,7 +3,7 @@
 
 # 0x8030F470 - 0x8030F6F0
 .text
-.balign 4
+.balign 16
 
 .fn __DVDClearWaitingQueue, global
 /* 8030F470 002D8A30  3C C0 80 5D */	lis r6, WaitingQueue@ha

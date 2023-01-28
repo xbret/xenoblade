@@ -34,7 +34,7 @@
 /* 8033915C 0030271C  4E 80 00 20 */	blr
 .endfn __dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv
 
-.fn fn_80339160, local
+.fn fn_80339160, global
 /* 80339160 00302720  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80339164 00302724  7C 08 02 A6 */	mflr r0
 /* 80339168 00302728  2C 04 00 0A */	cmpwi r4, 0xa
@@ -132,7 +132,7 @@
 .endfn fn_80339160
 /* 803392BC 0030287C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_803392C0, local
+.fn fn_803392C0, global
 /* 803392C0 00302880  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803392C4 00302884  7C 08 02 A6 */	mflr r0
 /* 803392C8 00302888  90 01 00 64 */	stw r0, 0x64(r1)
@@ -286,7 +286,7 @@
 /* 803394F8 00302AB8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803394FC 00302ABC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80339500, local
+.fn fn_80339500, global
 /* 80339500 00302AC0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80339504 00302AC4  7C 08 02 A6 */	mflr r0
 /* 80339508 00302AC8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -317,7 +317,7 @@
 /* 8033956C 00302B2C  4E 80 00 20 */	blr
 .endfn fn_80339500
 
-.fn fn_80339570, local
+.fn fn_80339570, global
 /* 80339570 00302B30  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80339574 00302B34  7C 08 02 A6 */	mflr r0
 /* 80339578 00302B38  90 01 00 44 */	stw r0, 0x44(r1)
@@ -395,7 +395,7 @@
 /* 8033967C 00302C3C  4E 80 00 20 */	blr
 .endfn __ct__Q36nw4hbm2ut19TagProcessorBase_w_Fv
 
-.fn fn_80339680, local
+.fn fn_80339680, global
 /* 80339680 00302C40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80339684 00302C44  7C 08 02 A6 */	mflr r0
 /* 80339688 00302C48  2C 03 00 00 */	cmpwi r3, 0x0
@@ -415,7 +415,7 @@
 /* 803396BC 00302C7C  4E 80 00 20 */	blr
 .endfn fn_80339680
 
-.fn fn_803396C0, local
+.fn fn_803396C0, global
 /* 803396C0 00302C80  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803396C4 00302C84  7C 08 02 A6 */	mflr r0
 /* 803396C8 00302C88  2C 04 00 0A */	cmpwi r4, 0xa
@@ -513,7 +513,7 @@
 .endfn fn_803396C0
 /* 8033981C 00302DDC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80339820, local
+.fn fn_80339820, global
 /* 80339820 00302DE0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80339824 00302DE4  7C 08 02 A6 */	mflr r0
 /* 80339828 00302DE8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -667,7 +667,7 @@
 /* 80339A58 00303018  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80339A5C 0030301C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80339A60, local
+.fn fn_80339A60, global
 /* 80339A60 00303020  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80339A64 00303024  7C 08 02 A6 */	mflr r0
 /* 80339A68 00303028  90 01 00 34 */	stw r0, 0x34(r1)
@@ -698,7 +698,7 @@
 /* 80339ACC 0030308C  4E 80 00 20 */	blr
 .endfn fn_80339A60
 
-.fn fn_80339AD0, local
+.fn fn_80339AD0, global
 /* 80339AD0 00303090  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80339AD4 00303094  7C 08 02 A6 */	mflr r0
 /* 80339AD8 00303098  90 01 00 44 */	stw r0, 0x44(r1)
@@ -771,7 +771,7 @@
 # 0x80518B38 - 0x80518B40
 .rodata
 .balign 8
-.sym lbl_80518B38, local
+.sym lbl_80518B38, global
 	.4byte 0x43300000
 	.4byte 0x80000000
 
@@ -785,7 +785,7 @@
 	.4byte fn_80339680
 	.4byte fn_803396C0
 	.4byte fn_80339820
-.sym lbl_8054EE84, local
+.sym lbl_8054EE84, global
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x75743A3A
@@ -797,16 +797,16 @@
 	.4byte 0x61725F74
 	.4byte 0x3E000000
 	.4byte 0x00000000
-.sym lbl_8054EEB0, local
+.sym lbl_8054EEB0, global
 	.4byte lbl_8054EE84
 	.4byte 0x00000000
-.sym lbl_8054EEB8, local
+.sym lbl_8054EEB8, global
 	.4byte lbl_8054EEF0
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv
 	.4byte fn_80339160
 	.4byte fn_803392C0
-.sym lbl_8054EECC, local
+.sym lbl_8054EECC, global
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x75743A3A
@@ -816,6 +816,6 @@
 	.4byte 0x42617365
 	.4byte 0x3C636861
 	.4byte 0x723E0000
-.sym lbl_8054EEF0, local
+.sym lbl_8054EEF0, global
 	.4byte lbl_8054EECC
 	.4byte 0x00000000

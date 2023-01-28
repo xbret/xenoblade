@@ -315,7 +315,7 @@
 /* 8038CB98 00356158  4E 80 00 20 */	blr
 .endfn AHXSJD_Stop
 
-.fn fn_8038CB9C, local
+.fn fn_8038CB9C, global
 /* 8038CB9C 0035615C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8038CBA0 00356160  7C 08 02 A6 */	mflr r0
 /* 8038CBA4 00356164  90 01 00 34 */	stw r0, 0x34(r1)
@@ -548,13 +548,13 @@
 /* 8038CED8 00356498  4E 80 00 20 */	blr
 .endfn AHXSJD_GetDecNumSmpl
 
-.fn fn_8038CEDC, local
+.fn fn_8038CEDC, global
 /* 8038CEDC 0035649C  90 83 00 54 */	stw r4, 0x54(r3)
 /* 8038CEE0 003564A0  90 A3 00 58 */	stw r5, 0x58(r3)
 /* 8038CEE4 003564A4  4E 80 00 20 */	blr
 .endfn fn_8038CEDC
 
-.fn fn_8038CEE8, local
+.fn fn_8038CEE8, global
 /* 8038CEE8 003564A8  80 63 00 00 */	lwz r3, 0x0(r3)
 /* 8038CEEC 003564AC  48 00 19 18 */	b AHXDCD_SetExtPrm
 .endfn fn_8038CEE8
@@ -564,7 +564,7 @@
 /* 8038CEF4 003564B4  4E 80 00 20 */	blr
 .endfn .L_8038CEF0
 
-.fn fn_8038CEF8, local
+.fn fn_8038CEF8, global
 /* 8038CEF8 003564B8  38 00 00 01 */	li r0, 0x1
 /* 8038CEFC 003564BC  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8038CF00 003564C0  4E 80 00 20 */	blr
@@ -573,7 +573,7 @@
 # 0x8051ABD8 - 0x8051AC10
 .rodata
 .balign 8
-.sym lbl_8051ABD8, local
+.sym lbl_8051ABD8, global
 	.4byte 0x0A414858
 	.4byte 0x2F574949
 	.4byte 0x20566572
@@ -586,12 +586,12 @@
 	.4byte 0x31303A35
 	.4byte 0x323A3534
 	.4byte 0x0A000000
-.sym lbl_8051AC08, local
+.sym lbl_8051AC08, global
 	.4byte lbl_8051ABD8
 	.4byte 0x00000000
 
 # 0x805E9B00 - 0x805E9B08
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E9B00, local
+.sym lbl_805E9B00, global
 	.skip 0x8

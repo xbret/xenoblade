@@ -502,13 +502,13 @@
 # 0x8056E6E8 - 0x8056E710
 .data
 .balign 8
-.sym lbl_8056E6E8, local
+.sym lbl_8056E6E8, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r2ut19TagProcessorBase_w_Fv
 	.4byte Process__Q34nw4r2ut19TagProcessorBase_w_FUsPQ34nw4r2ut15PrintContext_w
 	.4byte CalcRect__Q34nw4r2ut19TagProcessorBase_w_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_w
-.sym lbl_8056E6FC, local
+.sym lbl_8056E6FC, global
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r2ut19TagProcessorBase_c_Fv
@@ -518,6 +518,6 @@
 # 0x8066C930 - 0x8066C938
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C930, local
+.sym lbl_8066C930, global
 	.4byte 0x43300000
 	.4byte 0x80000000

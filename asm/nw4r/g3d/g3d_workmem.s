@@ -44,5 +44,5 @@
 # 0x80622D00 - 0x8063AD00
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80622D00, local
+.sym lbl_80622D00, global
 	.skip 0x18000

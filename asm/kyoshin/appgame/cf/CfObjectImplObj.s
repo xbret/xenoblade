@@ -65,7 +65,7 @@
 .text
 .balign 4
 
-.fn fn_800CA4EC, local
+.fn fn_800CA4EC, global
 /* 800CA4EC 00093AAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800CA4F0 00093AB0  7C 08 02 A6 */	mflr r0
 /* 800CA4F4 00093AB4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -87,12 +87,12 @@
 /* 800CA534 00093AF4  4E 80 00 20 */	blr
 .endfn fn_800CA4EC
 
-.fn fn_800CA538, local
+.fn fn_800CA538, global
 /* 800CA538 00093AF8  38 63 00 68 */	addi r3, r3, 0x68
 /* 800CA53C 00093AFC  4E 80 00 20 */	blr
 .endfn fn_800CA538
 
-.fn fn_800CA540, local
+.fn fn_800CA540, global
 /* 800CA540 00093B00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800CA544 00093B04  7C 08 02 A6 */	mflr r0
 /* 800CA548 00093B08  90 01 00 14 */	stw r0, 0x14(r1)
@@ -111,17 +111,17 @@
 /* 800CA57C 00093B3C  4E 80 00 20 */	blr
 .endfn fn_800CA540
 
-.fn fn_800CA580, local
+.fn fn_800CA580, global
 /* 800CA580 00093B40  38 A0 00 01 */	li r5, 0x1
 /* 800CA584 00093B44  38 63 03 68 */	addi r3, r3, 0x368
 /* 800CA588 00093B48  48 0C 8B 18 */	b fn_801930A0
 .endfn fn_800CA580
 
-.fn fn_800CA58C, local
+.fn fn_800CA58C, global
 /* 800CA58C 00093B4C  4E 80 00 20 */	blr
 .endfn fn_800CA58C
 
-.fn fn_800CA590, local
+.fn fn_800CA590, global
 /* 800CA590 00093B50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800CA594 00093B54  7C 08 02 A6 */	mflr r0
 /* 800CA598 00093B58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -184,7 +184,7 @@
 /* 800CA66C 00093C2C  4E 80 00 20 */	blr
 .endfn fn_800CA590
 
-.fn fn_800CA670, local
+.fn fn_800CA670, global
 /* 800CA670 00093C30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800CA674 00093C34  7C 08 02 A6 */	mflr r0
 /* 800CA678 00093C38  2C 03 00 00 */	cmpwi r3, 0x0
@@ -211,17 +211,17 @@
 /* 800CA6C8 00093C88  4E 80 00 20 */	blr
 .endfn fn_800CA670
 
-.fn fn_800CA6CC, local
+.fn fn_800CA6CC, global
 /* 800CA6CC 00093C8C  38 63 FF F4 */	addi r3, r3, -0xc
 /* 800CA6D0 00093C90  48 00 47 58 */	b fn_800CEE28
 .endfn fn_800CA6CC
 
-.fn fn_800CA6D4, local
+.fn fn_800CA6D4, global
 /* 800CA6D4 00093C94  38 63 FF F4 */	addi r3, r3, -0xc
 /* 800CA6D8 00093C98  4B FF FF 98 */	b fn_800CA670
 .endfn fn_800CA6D4
 
-.fn fn_800CA6DC, local
+.fn fn_800CA6DC, global
 /* 800CA6DC 00093C9C  38 63 FF F0 */	addi r3, r3, -0x10
 /* 800CA6E0 00093CA0  4B FF FF 90 */	b fn_800CA670
 .endfn fn_800CA6DC

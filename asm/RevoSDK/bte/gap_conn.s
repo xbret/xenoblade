@@ -834,7 +834,7 @@
 # 0x805462D0 - 0x805463A0
 .data
 .balign 8
-.sym lbl_805462D0, local
+.sym lbl_805462D0, global
 	.4byte 0x5741524E
 	.4byte 0x494E473A
 	.4byte 0x20474150
@@ -852,7 +852,7 @@
 	.4byte 0x73636F6E
 	.4byte 0x6E656374
 	.4byte 0x696E6700
-.sym lbl_80546314, local
+.sym lbl_80546314, global
 	.4byte 0x4741505F
 	.4byte 0x434F4E4E
 	.4byte 0x202D2052
@@ -864,7 +864,7 @@
 	.4byte 0x4349443A
 	.4byte 0x20307825
 	.4byte 0x78000000
-.sym lbl_80546340, local
+.sym lbl_80546340, global
 	.4byte 0x4741505F
 	.4byte 0x434F4E4E
 	.4byte 0x202D2052
@@ -875,7 +875,7 @@
 	.4byte 0x4349443A
 	.4byte 0x20307825
 	.4byte 0x78000000
-.sym lbl_80546368, local
+.sym lbl_80546368, global
 	.4byte 0x4741505F
 	.4byte 0x434F4E4E
 	.4byte 0x202D2052
@@ -894,12 +894,12 @@
 # 0x805C21C0 - 0x805C2570
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805C21C0, local
+.sym lbl_805C21C0, global
 	.skip 0x3B0
 
 # 0x80665940 - 0x80665948
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665940, local
+.sym lbl_80665940, global
 	.4byte 0x2A2A2A2A
 	.4byte 0x2A2A2A00

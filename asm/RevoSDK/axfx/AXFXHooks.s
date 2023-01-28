@@ -3,7 +3,7 @@
 
 # 0x802DAB00 - 0x802DAB50
 .text
-.balign 4
+.balign 16
 
 .fn __AXFXAllocFunction, global
 /* 802DAB00 002A40C0  7C 64 1B 78 */	mr r4, r3
@@ -40,7 +40,7 @@
 # 0x806658C0 - 0x806658C8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806658C0, local
+.sym lbl_806658C0, global
 	.4byte __AXFXAllocFunction
-.sym lbl_806658C4, local
+.sym lbl_806658C4, global
 	.4byte __AXFXFreeFunction
