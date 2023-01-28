@@ -3662,7 +3662,7 @@ lbl_80666BD0:
 float_80666BD4:
 	.skip 0x4
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000EAAC
 lbl_8000EAAC:
@@ -3880,7 +3880,7 @@ lbl_8000EC44:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CMenuPTGauge
 	.4byte 0x000000EC

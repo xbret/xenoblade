@@ -1559,7 +1559,7 @@ float_80669228:
 float_8066922C:
 	.float 1000 #0x447A0000
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80009480
 lbl_80009480:
@@ -1693,7 +1693,7 @@ lbl_80009548:
 	.4byte func_80081C20
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_800AC62C
 	.4byte 0x00000130

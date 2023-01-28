@@ -1,6 +1,7 @@
 #include "kyoshin/appgame/code_802AEB74.hpp"
 
 //namespace cf {
+
 u32** func_802AEB74(){
     return lbl_80665708;
 }
@@ -40,4 +41,5 @@ u32** func_802AEBB4(){
 u32** func_802AEBBC(){
     return lbl_8066572C;
 }
+
 //}

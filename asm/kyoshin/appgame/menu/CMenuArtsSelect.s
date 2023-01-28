@@ -7998,7 +7998,7 @@ lbl_80666818:
 lbl_8066681C:
 	.skip 0x4
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000AF14
 lbl_8000AF14:
@@ -8196,7 +8196,7 @@ lbl_8000B0A4:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte __ct__CMenuArtsSelect
 	.4byte 0x00000288

@@ -1019,7 +1019,7 @@ CMMTex_typestr:
 float_80669994:
 	.float 11 #0x41300000
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000B804
 lbl_8000B804:
@@ -1091,7 +1091,7 @@ lbl_8000B8C8:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_8011B778
 	.4byte 0x000003A0

@@ -1275,7 +1275,7 @@ __RTTI__cf_CInfoCf:
 lbl_80666B40:
 	.skip 0x8
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000DD00
 lbl_8000DD00:
@@ -1369,7 +1369,7 @@ lbl_8000DDC4:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80166724
 	.4byte 0x00000048

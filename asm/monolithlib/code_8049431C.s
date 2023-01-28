@@ -244,7 +244,7 @@ func_80494540:
 /* 80494670 0045DC30  38 21 00 30 */	addi r1, r1, 0x30
 /* 80494674 0045DC34  4E 80 00 20 */	blr
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001EEEC
 lbl_8001EEEC:
@@ -272,7 +272,7 @@ lbl_8001EF0C:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8049431C
 	.4byte 0x00000084

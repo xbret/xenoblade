@@ -1702,7 +1702,7 @@ float_8066AE04:
 .global double_8066AE08
 double_8066AE08:
 	.8byte 0x4330000000000000 #unsigned int to float constant
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80014E60
 lbl_80014E60:
@@ -1858,7 +1858,7 @@ lbl_80014F64:
 	.4byte func_8045F8C8
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80222740
 	.4byte 0x000000A8

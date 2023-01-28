@@ -80,6 +80,7 @@ protected:
     int left; //0x9C0
     BOOL initialized; //0x9C4
     u32* pNext; //0x9C8
+    u32 unk9D0;
 
 public:
     MTRand() {

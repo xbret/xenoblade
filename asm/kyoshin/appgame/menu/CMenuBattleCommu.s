@@ -1952,7 +1952,7 @@ float_8066A6A4:
 lbl_80666C80:
 	.skip 0x8
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000FC5C
 lbl_8000FC5C:
@@ -2034,7 +2034,7 @@ lbl_8000FD1C:
 	.4byte 0x180A0000
 	.4byte 0
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CMenuBattleCommu
 	.4byte 0x000000D8

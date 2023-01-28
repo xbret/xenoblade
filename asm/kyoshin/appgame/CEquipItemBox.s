@@ -3828,7 +3828,7 @@ double_8066B3C0:
 float_8066B3C8:
 	.float 200 #0x43480000
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80018D18
 lbl_80018D18:
@@ -4010,7 +4010,7 @@ lbl_80018E30:
 	.4byte 0x20080000
 	.4byte 0
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_802824B4
 	.4byte 0x000000C0

@@ -619,7 +619,7 @@ __RTTI__CNBanner:
 	.4byte CNBanner_typestr
 	.4byte CNBanner_hierarchy
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80020FD4
 lbl_80020FD4:
@@ -657,7 +657,7 @@ lbl_80021010:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_804F5158
 	.4byte 0x000000CC
@@ -678,10 +678,12 @@ lbl_80021010:
 	.4byte 0x00000104
 	.4byte lbl_80021010
 
-	.global _eti_init_info
-_eti_init_info:
+#	.global _eti_init_info
+#_eti_init_info:
+	.global _eti_init_inf
+_eti_init_inf:
 	.4byte extabTable
-	.4byte _eti_init_info
+	.4byte _eti_init_inf #_eti_init_info
 	.4byte __ct__CGame
 	.4byte sz_text
 	.4byte 0

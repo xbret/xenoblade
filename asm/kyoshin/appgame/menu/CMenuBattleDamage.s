@@ -2604,7 +2604,7 @@ double_80669850:
 lbl_80666820:
 	.skip 0x8
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000B0AC
 lbl_8000B0AC:
@@ -2717,7 +2717,7 @@ lbl_8000B19C:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte __ct__CMenuBattleDamage
 	.4byte 0x000001D0

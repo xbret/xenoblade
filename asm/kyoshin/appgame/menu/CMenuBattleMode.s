@@ -196,7 +196,7 @@ __RTTI__CMenuBattleMode:
 lbl_80666C08:
 	.skip 0x8
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000F600
 lbl_8000F600:
@@ -216,7 +216,7 @@ lbl_8000F600:
 
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte __ct__CMenuBattleMode
 	.4byte 0x00000118

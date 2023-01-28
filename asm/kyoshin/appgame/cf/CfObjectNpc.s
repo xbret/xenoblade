@@ -628,7 +628,7 @@ __RTTI__cf_CfObjectNpc:
 	.4byte cf_CfObjectNpc_typestr
 	.4byte cf_CfObjectNpc_hierarchy
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80009EB8
 lbl_80009EB8:
@@ -720,7 +720,7 @@ float_806693C4:
 .global double_806693C8
 double_806693C8:
 	.8byte 0x4330000000000000 #unsigned int to float constant
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_800BF340
 	.4byte 0x000000B8

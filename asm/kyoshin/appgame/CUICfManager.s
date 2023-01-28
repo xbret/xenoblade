@@ -12986,7 +12986,7 @@ lbl_80666973:
 lbl_80666974:
 	.skip 0x4
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000C450
 lbl_8000C450:
@@ -13869,7 +13869,7 @@ lbl_8000CB48:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte __ct__CUICfManager
 	.4byte 0x00000248

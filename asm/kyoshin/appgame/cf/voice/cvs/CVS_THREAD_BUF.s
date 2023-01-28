@@ -758,7 +758,7 @@ __RTTI__cf_CVS_THREAD_BUF:
 	.4byte cf_CVS_THREAD_BUF_typestr
 	.4byte cf_CVS_THREAD_BUF_hierarchy
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001AB44
 lbl_8001AB44:
@@ -795,7 +795,7 @@ lbl_8001AB88:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A4E48
 	.4byte 0x0000015C

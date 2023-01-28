@@ -3117,7 +3117,7 @@ float_8066A724:
 lbl_80579068:
 	.skip 0xA8
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000FFAC
 lbl_8000FFAC:
@@ -3277,7 +3277,7 @@ lbl_800100D0:
 
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801BA14C
 	.4byte 0x00000090

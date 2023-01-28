@@ -537,7 +537,7 @@ __RTTI__cf_CChainActorEne:
 	.4byte cf_CChainActorEne_typestr
 	.4byte cf_CChainActorEne_hierarchy
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80018C50
 lbl_80018C50:
@@ -584,7 +584,7 @@ lbl_80018C90:
 	.4byte 0x00080000
 	.4byte 0
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80281308
 	.4byte 0x00000034

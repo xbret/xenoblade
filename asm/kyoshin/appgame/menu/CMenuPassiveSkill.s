@@ -1043,7 +1043,7 @@ float_8066B1A8:
 lbl_80667168:
 	.skip 0x8
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800177E8
 lbl_800177E8:
@@ -1165,7 +1165,7 @@ lbl_80017914:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CMenuPassiveSkill
 	.4byte 0x000000D0

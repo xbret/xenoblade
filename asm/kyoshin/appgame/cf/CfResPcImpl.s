@@ -7191,7 +7191,7 @@ float_8066A354:
 lbl_80666BF0:
 	.skip 0x8
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000EFE0
 lbl_8000EFE0:
@@ -7569,7 +7569,7 @@ lbl_8000F28C:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8018C9C4
 	.4byte 0x00000098

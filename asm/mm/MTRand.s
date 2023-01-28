@@ -693,7 +693,7 @@ lbl_80667E60:
 lbl_80667E68:
 	.skip 0x8
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001C040
 lbl_8001C040:
@@ -726,7 +726,7 @@ lbl_8001C068:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte getInstanceMTRand__Q22mm3mtlFv
 	.4byte 0x00000238

@@ -911,7 +911,7 @@ __RTTI__cf_CChainActorPc:
 	.4byte cf_CChainActorPc_typestr
 	.4byte cf_CChainActorPc_hierarchy
 
-.section .sdata, "wa"  # 0x80664180 - 0x80666600
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .global float_8066B390
 float_8066B390:
@@ -933,7 +933,7 @@ float_8066B398:
 double_8066B3A0:
 	.8byte 0x4330000080000000 #signed int to float constant
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80018C98
 lbl_80018C98:
@@ -1006,7 +1006,7 @@ lbl_80018CF8:
 	.4byte 0x82000008
 	.4byte func_80043E88
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80281924
 	.4byte 0x00000034

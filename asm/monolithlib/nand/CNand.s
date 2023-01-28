@@ -382,7 +382,7 @@ CNand_typestr:
 lbl_806625C0:
 	.skip 0x130
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80020650
 lbl_80020650:
@@ -550,7 +550,7 @@ lbl_80020750:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_804DA0B8
 	.4byte 0x0000005C

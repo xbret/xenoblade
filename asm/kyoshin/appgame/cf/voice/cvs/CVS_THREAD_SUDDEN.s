@@ -188,7 +188,7 @@ __RTTI__cf_CVS_THREAD_SUDDEN:
 	.4byte cf_CVS_THREAD_SUDDEN_typestr
 	.4byte cf_CVS_THREAD_SUDDEN_hierarchy
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001AE98
 lbl_8001AE98:
@@ -220,7 +220,7 @@ lbl_8001AED4:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A8C04
 	.4byte 0x000000C8

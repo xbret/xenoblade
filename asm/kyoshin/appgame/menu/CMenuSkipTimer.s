@@ -700,7 +700,7 @@ __RTTI__CMenuSkipTimer:
 lbl_80667330:
 	.skip 0x8
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001A5AC
 lbl_8001A5AC:
@@ -807,7 +807,7 @@ lbl_8001A6C0:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CMenuSkipTimer
 	.4byte 0x000000C0

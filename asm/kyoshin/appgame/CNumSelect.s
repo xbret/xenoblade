@@ -2607,7 +2607,7 @@ lbl_8066A9B0:
 	.asciz "legg1"
 	.balign 4
 	
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80011AD8
 lbl_80011AD8:
@@ -2744,7 +2744,7 @@ lbl_80011BBC:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801EADC0
 	.4byte 0x00000078

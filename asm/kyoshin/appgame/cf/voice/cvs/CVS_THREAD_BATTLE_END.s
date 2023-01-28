@@ -517,7 +517,7 @@ __RTTI__cf_CVS_THREAD_BATTLE_END:
 	.4byte cf_CVS_THREAD_BATTLE_END_typestr
 	.4byte cf_CVS_THREAD_BATTLE_END_hierarchy
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001AAF8
 lbl_8001AAF8:
@@ -554,7 +554,7 @@ lbl_8001AB3C:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802A4870
 	.4byte 0x0000010C

@@ -908,7 +908,7 @@ __RTTI__cf_CVS_THREAD_LIB:
 	.4byte cf_CVS_THREAD_LIB_typestr
 	.4byte 0
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001B62C
 lbl_8001B62C:
@@ -960,7 +960,7 @@ lbl_8001B688:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802AFA80
 	.4byte 0x000001D4

@@ -721,7 +721,7 @@ __RTTI__CScriptCode:
 lbl_80667E90:
 	.skip 0x8
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001C2CC
 lbl_8001C2CC:
@@ -774,7 +774,7 @@ lbl_8001C310:
 	.4byte func_80437AC8
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8043A0E0
 	.4byte 0x000000F4

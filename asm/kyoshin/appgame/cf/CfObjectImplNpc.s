@@ -371,7 +371,7 @@ lbl_80669510:
 lbl_80669518:
 	.asciz "np45080"
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000A394
 lbl_8000A394:
@@ -394,7 +394,7 @@ lbl_8000A3AC:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_800CA6E4
 	.4byte 0x000000D0

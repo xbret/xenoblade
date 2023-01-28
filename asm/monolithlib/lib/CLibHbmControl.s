@@ -269,7 +269,7 @@ __RTTI__CLibHbmControl:
 	.4byte CLibHbmControl_typestr
 	.4byte CLibHbmControl_hierarchy
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001D7A8
 lbl_8001D7A8:
@@ -287,7 +287,7 @@ lbl_8001D7B8:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8045ECC4
 	.4byte 0x000000C8

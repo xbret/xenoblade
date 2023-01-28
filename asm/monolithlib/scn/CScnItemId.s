@@ -196,7 +196,7 @@ __RTTI__CScnItemId:
 	.4byte CScnItemId_typestr
 	.4byte CScnItemId_hierarchy
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001E238
 lbl_8001E238:
@@ -224,7 +224,7 @@ lbl_8001E254:
 	.4byte func_80482054
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80482094
 	.4byte 0x00000064

@@ -4845,7 +4845,7 @@ lbl_806668B0:
 lbl_806668B4:
 	.skip 0x4
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000B6A8
 lbl_8000B6A8:
@@ -4959,7 +4959,7 @@ lbl_8000B79C:
 	.4byte __dt__IWorkEvent
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80117A18
 	.4byte 0x000001B0

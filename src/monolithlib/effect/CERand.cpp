@@ -34,21 +34,21 @@ void CERandomizerSimple::execute(float time) {
 }
 
 void CERand::init() {
-    randomizerSimple.create(CERand::defaultSeed);
+    ceRandomizerSimple.create(CERand::defaultSeed);
 }
 
 void CERand::execute(float time) {
-    randomizerSimple.execute(time);
+    ceRandomizerSimple.execute(time);
 }
 
 void CERand::randVec(Vec3* v) {
-    v->x = randomizer.randFHalf();
-    v->y = randomizer.randFHalf();
-    v->z = randomizer.randFHalf();
+    v->x = ceRandomizer.randFHalf();
+    v->y = ceRandomizer.randFHalf();
+    v->z = ceRandomizer.randFHalf();
 }
 
 void CERand::randSignVec(Vec3* v) {
-    v->x *= randomizer.randSign();
-    v->y *= randomizer.randSign();
-    v->z *= randomizer.randSign();
+    v->x *= ceRandomizer.randSign();
+    v->y *= ceRandomizer.randSign();
+    v->z *= ceRandomizer.randSign();
 }

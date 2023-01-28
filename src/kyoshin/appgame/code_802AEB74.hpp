@@ -25,6 +25,7 @@ u32** func_802AEBA4();
 u32** func_802AEBAC();
 u32** func_802AEBB4();
 u32** func_802AEBBC();
+
 //}
 
 #endif

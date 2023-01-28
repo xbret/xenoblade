@@ -758,7 +758,7 @@ CTitle_typestr:
 	.4byte 0
 
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001BBB4
 lbl_8001BBB4:
@@ -861,7 +861,7 @@ lbl_8001BC4C:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802B6930
 .4byte 0x00000040

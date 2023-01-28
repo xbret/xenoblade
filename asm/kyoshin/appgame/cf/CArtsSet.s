@@ -408,7 +408,7 @@ __RTTI__cf__sArtsSet:
 	.4byte 0
 
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000D32C
 lbl_8000D32C:
@@ -426,7 +426,7 @@ lbl_8000D33C:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte __ct__cf__sArtsSet
 	.4byte 0x00000044

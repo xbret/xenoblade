@@ -934,7 +934,7 @@ float_8066CA78:
 .global double_8066CA80
 double_8066CA80:
 	.8byte 0x4330000080000000 #signed int to float constant
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001C1B4
 lbl_8001C1B4:
@@ -995,7 +995,7 @@ lbl_8001C228:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CProc
 	.4byte 0x0000012C

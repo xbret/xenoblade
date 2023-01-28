@@ -982,7 +982,7 @@ lbl_806682EC:
 staticArcFilenameString:
 	.skip 0x8
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80020830
 lbl_80020830:
@@ -1079,7 +1079,7 @@ lbl_800208EC:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CWorkSystemPack
 	.4byte 0x0000016C

@@ -554,7 +554,7 @@ __RTTI__cf_CChainCombo:
 .global double_8066B440
 double_8066B440:
 	.8byte 0x4330000080000000 #signed int to float constant
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80019930
 lbl_80019930:
@@ -640,7 +640,7 @@ lbl_800199F8:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80293D90
 	.4byte 0x0000005C

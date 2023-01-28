@@ -23,7 +23,7 @@ func_802B8604:
 /* 802B8644 00281C04  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B8648 00281C08  4E 80 00 20 */	blr 
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001BE10
 lbl_8001BE10:
@@ -31,7 +31,7 @@ lbl_8001BE10:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802B8604
 	.4byte 0x00000048

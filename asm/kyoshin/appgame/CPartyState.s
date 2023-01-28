@@ -3042,7 +3042,7 @@ lbl_8066AB20:
 lbl_8066AB28:
 	.asciz "synchro"
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_800127E4
 lbl_800127E4:
@@ -3254,7 +3254,7 @@ lbl_80012958:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_801FCE70
 	.4byte 0x0000008C

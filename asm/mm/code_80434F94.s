@@ -312,7 +312,7 @@ lbl_80525D70:
 	.2byte 0
 
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001C020
 lbl_8001C020:
@@ -334,8 +334,39 @@ lbl_8001C038:
 	.4byte 0x40080000
 	.4byte 0
 
+#MTRand extab (temporary)
+	.global lbl_8001C040
+lbl_8001C040:
+	.4byte 0x08080000
+	.4byte 0
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.global lbl_8001C048
+lbl_8001C048:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C050
+lbl_8001C050:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C058
+lbl_8001C058:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_8001C060
+lbl_8001C060:
+	.4byte 0x080A0000
+	.4byte 0
+
+.global lbl_8001C068
+lbl_8001C068:
+	.4byte 0x080A0000
+	.4byte 0
+
+
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80434F94
 	.4byte 0x0000007C
@@ -349,3 +380,23 @@ lbl_8001C038:
 	.4byte func_80435220
 	.4byte 0x0000017C
 	.4byte lbl_8001C038
+
+#MTRand extabindex (temporary)
+		.4byte getInstanceMTRand__Q22mm3mtlFv
+	.4byte 0x00000238
+	.4byte lbl_8001C040
+	.4byte mtInit__Q32mm3mtl6MTRandFUl
+	.4byte 0x00000214
+	.4byte lbl_8001C048
+	.4byte nextMt__Q32mm3mtl6MTRandFv
+	.4byte 0x000002F4
+	.4byte lbl_8001C050
+	.4byte rand__Q32mm3mtl6MTRandFv
+	.4byte 0x00000080
+	.4byte lbl_8001C058
+	.4byte randFloat__Q32mm3mtl6MTRandFv
+	.4byte 0x0000009C
+	.4byte lbl_8001C060
+	.4byte randFloat1__Q32mm3mtl6MTRandFv
+	.4byte 0x000000A4
+	.4byte lbl_8001C068

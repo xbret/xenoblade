@@ -86,7 +86,7 @@ CfCamDirectionIntf_setLookat:
 /* 8006B500 00034AC0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8006B504 00034AC4  4E 80 00 20 */	blr 
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80008088
 lbl_80008088:
@@ -99,7 +99,7 @@ lbl_80008090:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte CfCamDirectionIntf_setDir
 	.4byte 0x00000074

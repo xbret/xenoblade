@@ -2,9 +2,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CGame.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/IWorkEvent.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CGameRestart.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/main_1.o \
-	$(BUILD_DIR)/src/kyoshin/appgame/main.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/main_2.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/main.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_8003A53C.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGame.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskGameCf.o \
@@ -994,7 +992,7 @@ MM_O_FILES :=\
 	$(BUILD_DIR)/asm/mm/MemManager.o \
 	$(BUILD_DIR)/asm/mm/Operators.o \
 	$(BUILD_DIR)/asm/mm/code_80434F94.o \
-	$(BUILD_DIR)/asm/mm/MTRand.o \
+	$(BUILD_DIR)/src/mm/MTRand.o \
 	$(BUILD_DIR)/asm/mm/Globals1.o \
 	$(BUILD_DIR)/asm/mm/code_80435D28.o \
 	$(BUILD_DIR)/asm/mm/code_80435DF8.o \

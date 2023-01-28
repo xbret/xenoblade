@@ -1080,7 +1080,7 @@ lbl_8066B664:
 lbl_8066B66C:
 	.4byte 0x03050607
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001B0C8
 lbl_8001B0C8:
@@ -1112,7 +1112,7 @@ lbl_8001B104:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802AB5F0
 	.4byte 0x00000310

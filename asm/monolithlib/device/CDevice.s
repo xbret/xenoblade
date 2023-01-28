@@ -404,7 +404,7 @@ __RTTI__CDevice:
 	.4byte CDevice_typestr
 	.4byte CDevice_hierarchy
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001CCD8
 lbl_8001CCD8:
@@ -437,7 +437,7 @@ lbl_8001CD00:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CDeviceException
 	.4byte 0x000000A8

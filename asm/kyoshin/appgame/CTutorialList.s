@@ -1703,7 +1703,7 @@ double_8066B690:
 lbl_806674D8:
 	.skip 0x8
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001B2D0
 lbl_8001B2D0:
@@ -1926,7 +1926,7 @@ lbl_8001B4D0:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_802ACE24
 	.4byte 0x000001C4

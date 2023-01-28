@@ -2,6 +2,122 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.global func_80039EFC
+func_80039EFC:
+/* 80039EFC 000034BC  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80039F00 000034C0  7C 08 02 A6 */	mflr r0
+/* 80039F04 000034C4  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80039F08 000034C8  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80039F0C 000034CC  7C 7F 1B 78 */	mr r31, r3
+/* 80039F10 000034D0  48 00 0B 41 */	bl func_8003AA50
+/* 80039F14 000034D4  7F E4 FB 78 */	mr r4, r31
+/* 80039F18 000034D8  38 60 00 00 */	li r3, 0
+/* 80039F1C 000034DC  48 00 0B 5D */	bl func_8003AA78
+/* 80039F20 000034E0  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80039F24 000034E4  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80039F28 000034E8  7C 08 03 A6 */	mtlr r0
+/* 80039F2C 000034EC  38 21 00 10 */	addi r1, r1, 0x10
+/* 80039F30 000034F0  4E 80 00 20 */	blr
+
+
+.global func_80039F34
+func_80039F34:
+/* 80039F34 000034F4  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80039F38 000034F8  7C 08 02 A6 */	mflr r0
+/* 80039F3C 000034FC  38 60 00 00 */	li r3, 0
+/* 80039F40 00003500  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80039F44 00003504  48 00 0B 49 */	bl func_8003AA8C
+/* 80039F48 00003508  48 00 0B 09 */	bl func_8003AA50
+/* 80039F4C 0000350C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80039F50 00003510  7C 08 03 A6 */	mtlr r0
+/* 80039F54 00003514  38 21 00 10 */	addi r1, r1, 0x10
+/* 80039F58 00003518  4E 80 00 20 */	blr
+
+.global func_80039F5C
+func_80039F5C:
+/* 80039F5C 0000351C  48 11 09 10 */	b func_8014A86C
+
+.global func_80039F60
+func_80039F60:
+/* 80039F60 00003520  48 11 09 98 */	b func_8014A8F8
+
+.global func_80039F64
+func_80039F64:
+/* 80039F64 00003524  48 42 35 1C */	b func_8045D480
+
+.global func_80039F68
+func_80039F68:
+/* 80039F68 00003528  48 42 35 94 */	b func_8045D4FC
+
+.global func_80039F6C
+func_80039F6C:
+/* 80039F6C 0000352C  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80039F70 00003530  7C 08 02 A6 */	mflr r0
+/* 80039F74 00003534  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80039F78 00003538  48 46 5D 35 */	bl func_8049FCAC
+/* 80039F7C 0000353C  48 00 B8 99 */	bl func_80045814
+/* 80039F80 00003540  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80039F84 00003544  7C 08 03 A6 */	mtlr r0
+/* 80039F88 00003548  38 21 00 10 */	addi r1, r1, 0x10
+/* 80039F8C 0000354C  4E 80 00 20 */	blr
+
+.global func_80039F90
+func_80039F90:
+/* 80039F90 00003550  48 46 5D 1C */	b func_8049FCAC
+
+.global main
+main:
+/* 80039F94 00003554  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80039F98 00003558  7C 08 02 A6 */	mflr r0
+/* 80039F9C 0000355C  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80039FA0 00003560  48 27 4B D5 */	bl func_802AEB74__Fv
+/* 80039FA4 00003564  48 41 6B 71 */	bl func_80450B14__FPPUl
+/* 80039FA8 00003568  48 27 4B D5 */	bl func_802AEB7C__Fv
+/* 80039FAC 0000356C  48 41 6B 71 */	bl func_80450B1C__FPPUl
+/* 80039FB0 00003570  48 27 4B D5 */	bl func_802AEB84__Fv
+/* 80039FB4 00003574  48 41 6B 71 */	bl func_80450B24__FPPUl
+/* 80039FB8 00003578  48 27 4B F5 */	bl func_802AEBAC__Fv
+/* 80039FBC 0000357C  48 4A 0A D5 */	bl func_804DAA90
+/* 80039FC0 00003580  48 27 4B F5 */	bl func_802AEBB4__Fv
+/* 80039FC4 00003584  48 4A 0A D5 */	bl func_804DAA98
+/* 80039FC8 00003588  48 27 4B F5 */	bl func_802AEBBC__Fv
+/* 80039FCC 0000358C  48 4A 0A D5 */	bl func_804DAAA0
+/* 80039FD0 00003590  38 00 00 00 */	li r0, 0x0
+/* 80039FD4 00003594  98 0D A2 B8 */	stb r0, lbl_80666438@sda21(r13)
+/* 80039FD8 00003598  3C 60 00 68 */	lis r3, 0x68
+/* 80039FDC 0000359C  38 80 00 00 */	li r4, 0x0
+/* 80039FE0 000035A0  48 3F 97 05 */	bl SetArenaMemorySize
+/* 80039FE4 000035A4  38 60 00 00 */	li r3, 0x0
+/* 80039FE8 000035A8  48 40 EE 91 */	bl func_80448E78
+/* 80039FEC 000035AC  38 60 00 00 */	li r3, 0x0
+/* 80039FF0 000035B0  3C 80 00 18 */	lis r4, 0x18
+/* 80039FF4 000035B4  48 41 B9 B5 */	bl func_804559A8
+/* 80039FF8 000035B8  3C 60 80 53 */	lis r3, lbl_80528380@ha
+/* 80039FFC 000035BC  38 80 00 01 */	li r4, 0x1
+/* 8003A000 000035C0  38 63 83 80 */	addi r3, r3, lbl_80528380@l
+/* 8003A004 000035C4  48 41 BF C5 */	bl CDesktop_SaveStartFunctionCallback
+/* 8003A008 000035C8  3C 60 80 53 */	lis r3, lbl_80528390@ha
+/* 8003A00C 000035CC  38 63 83 90 */	addi r3, r3, lbl_80528390@l
+/* 8003A010 000035D0  48 42 5B A1 */	bl func_8045FBB0
+/* 8003A014 000035D4  3C 60 80 04 */	lis r3, func_80039F6C@ha
+/* 8003A018 000035D8  3C 80 80 04 */	lis r4, func_80039F90@ha
+/* 8003A01C 000035DC  38 63 9F 6C */	addi r3, r3, func_80039F6C@l
+/* 8003A020 000035E0  38 84 9F 90 */	addi r4, r4, func_80039F90@l
+/* 8003A024 000035E4  48 42 62 19 */	bl CLibVM_SetCallbacks
+/* 8003A028 000035E8  38 62 80 20 */	addi r3, r2, staticArcStr@sda21
+/* 8003A02C 000035EC  48 4A 3E 09 */	bl SaveStaticArcFilenameStringPtr
+/* 8003A030 000035F0  3C 60 80 4F */	lis r3, pkhFilenames@ha
+/* 8003A034 000035F4  38 63 5B E0 */	addi r3, r3, pkhFilenames@l
+/* 8003A038 000035F8  48 4A 3D F5 */	bl SavePkhFilenamesArrayPtr
+/* 8003A03C 000035FC  48 01 DC A1 */	bl func_80057CDC
+/* 8003A040 00003600  38 60 00 01 */	li r3, 0x1
+/* 8003A044 00003604  48 42 35 85 */	bl func_8045D5C8
+/* 8003A048 00003608  48 40 A2 91 */	bl CWorkRoot_Run
+/* 8003A04C 0000360C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 8003A050 00003610  7C 08 03 A6 */	mtlr r0
+/* 8003A054 00003614  38 21 00 10 */	addi r1, r1, 0x10
+/* 8003A058 00003618  4E 80 00 20 */	blr
+
 .global put
 put:
 /* 8003A05C 0000361C  38 60 00 00 */	li r3, 0
@@ -536,6 +652,20 @@ lbl_80528520:
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.global lbl_804F5B88
+lbl_804F5B88:
+	#ゲームメイン
+	.4byte 0x8351815B
+	.4byte 0x83808381
+	.4byte 0x83438393
+	.4byte 0
+	.balign 4
+
+.global lbl_804F5B98
+lbl_804F5B98:
+	.asciz "static.arc"
+	.balign 4
+
 .global lbl_804F5BA4
 lbl_804F5BA4:
 	.asciz "common.pkh"
@@ -670,6 +800,11 @@ lbl_80573D38:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.global staticArcStr
+staticArcStr:
+	.4byte lbl_804F5B98
+	.4byte 0
+
 .balign 8
 .global lbl_806683A8
 lbl_806683A8:
@@ -788,8 +923,27 @@ lbl_80668460:
 	.asciz "thread"
 	.balign 4
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
+.global lbl_800067C4
+lbl_800067C4:
+	.4byte 0x08080000
+	.4byte 0
+
+.global lbl_800067CC
+lbl_800067CC:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_800067D4
+lbl_800067D4:
+	.4byte 0x00080000
+	.4byte 0
+
+.global lbl_800067DC
+lbl_800067DC:
+	.4byte 0x00080000
+	.4byte 0
 
 .global lbl_800067E4
 lbl_800067E4:
@@ -857,9 +1011,20 @@ lbl_80006844:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
-
+	.4byte func_80039EFC
+	.4byte 0x00000038
+	.4byte lbl_800067C4
+	.4byte func_80039F34
+	.4byte 0x00000028
+	.4byte lbl_800067CC
+	.4byte func_80039F6C
+	.4byte 0x00000024
+	.4byte lbl_800067D4
+	.4byte main
+	.4byte 0x000000C8
+	.4byte lbl_800067DC
 	.4byte performanceStart
 	.4byte 0x00000034
 	.4byte lbl_800067E4

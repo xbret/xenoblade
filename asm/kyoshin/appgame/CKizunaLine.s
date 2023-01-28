@@ -3737,7 +3737,7 @@ func_8025B5D4:
 /* 8025B5F0 00224BB0  98 03 00 03 */	stb r0, 3(r3)
 /* 8025B5F4 00224BB4  4E 80 00 20 */	blr 
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80017384
 lbl_80017384:
@@ -3840,7 +3840,7 @@ lbl_8001741C:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8025808C
 	.4byte 0x00000040

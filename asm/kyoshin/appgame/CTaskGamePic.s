@@ -770,7 +770,7 @@ float_8066B460:
 .global double_8066B468
 double_8066B468:
 	.8byte 0x4330000080000000 #signed int to float constant
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80019AB8
 lbl_80019AB8:
@@ -844,7 +844,7 @@ lbl_80019B48:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80294CB4
 	.4byte 0x00000100

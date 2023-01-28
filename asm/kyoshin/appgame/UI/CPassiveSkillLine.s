@@ -7507,7 +7507,7 @@ __RTTI__UI_CPassiveSkillCur:
 	.4byte UI_CPassiveSkillCur_typestr
 	.4byte 0
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80017A54
 lbl_80017A54:
@@ -7772,7 +7772,7 @@ lbl_80017C0C:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80266A34
 	.4byte 0x000000E4

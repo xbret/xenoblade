@@ -112,7 +112,7 @@ __RTTI__CScnItemLightNw4r:
 	.4byte CScnItemLightNw4r_typestr
 	.4byte CScnItemLightNw4r_hierarchy
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001E2B8
 lbl_8001E2B8:
@@ -120,7 +120,7 @@ lbl_8001E2B8:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_80482440
 	.4byte 0x000000E8

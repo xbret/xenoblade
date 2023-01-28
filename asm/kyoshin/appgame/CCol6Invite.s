@@ -128,7 +128,7 @@ func_80164118:
 /* 80164118 0012D6D8  38 63 FF 94 */	addi r3, r3, -108
 /* 8016411C 0012D6DC  4B FF FB EC */	b func_80163D08
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8000DA98
 lbl_8000DA98:
@@ -136,7 +136,7 @@ lbl_8000DA98:
 	.4byte 0
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 	.4byte func_80163FB8
 	.4byte 0x00000118

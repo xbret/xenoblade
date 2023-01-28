@@ -2104,7 +2104,7 @@ lbl_80667FDD:
 lbl_80667FE0:
 	.skip 0x8
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_8001D700
 lbl_8001D700:
@@ -2200,7 +2200,7 @@ lbl_8001D790:
 	.4byte func_804561AC
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte __ct__CLibHbm
 	.4byte 0x000000A0

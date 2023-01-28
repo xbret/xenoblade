@@ -6834,7 +6834,7 @@ lbl_80667160:
 lbl_80667164:
 	.skip 0x4
 
-.section extab, "a"  # 0x800066E0 - 0x80021020
+.section extab_, "a"  # 0x800066E0 - 0x80021020
 
 .global lbl_80017608
 lbl_80017608:
@@ -7089,7 +7089,7 @@ lbl_80017798:
 	.4byte __dt__Q34nw4r2ut17TextWriterBase_w_Fv
 
 
-.section extabindex, "a"  # 0x80021020 - 0x80039220
+.section extabindex_, "a"  # 0x80021020 - 0x80039220
 
 .4byte func_8025D794
 	.4byte 0x0000008C
