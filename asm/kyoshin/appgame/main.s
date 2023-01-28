@@ -1002,7 +1002,6 @@
 # 0x80573C80 - 0x80573DD0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80573C80, local
 	.skip 0x48
 .sym lbl_80573CC8, local
 	.skip 0x70

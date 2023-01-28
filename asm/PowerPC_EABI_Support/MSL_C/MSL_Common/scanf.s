@@ -202,9 +202,9 @@
 /* 802C13E0 0028A9A0  98 A1 00 0B */	stb r5, 0xb(r1)
 /* 802C13E4 0028A9A4  28 00 00 37 */	cmplwi r0, 0x37
 /* 802C13E8 0028A9A8  41 81 03 6C */	bgt .L_802C1754
-/* 802C13EC 0028A9AC  3C A0 80 54 */	lis r5, lbl_8053F7C0@ha
+/* 802C13EC 0028A9AC  3C A0 80 54 */	lis r5, jumptable_8053F7C0@ha
 /* 802C13F0 0028A9B0  54 00 10 3A */	slwi r0, r0, 2
-/* 802C13F4 0028A9B4  38 A5 F7 C0 */	addi r5, r5, lbl_8053F7C0@l
+/* 802C13F4 0028A9B4  38 A5 F7 C0 */	addi r5, r5, jumptable_8053F7C0@l
 /* 802C13F8 0028A9B8  7C A5 00 2E */	lwzx r5, r5, r0
 /* 802C13FC 0028A9BC  7C A9 03 A6 */	mtctr r5
 /* 802C1400 0028A9C0  4E 80 04 20 */	bctr
@@ -1551,7 +1551,6 @@
 # 0x8053F7C0 - 0x8053FA30
 .data
 .balign 8
-.sym lbl_8053F7C0, local
 
 .obj jumptable_8053F7C0, local
 	.rel parse_format, .L_802C141C

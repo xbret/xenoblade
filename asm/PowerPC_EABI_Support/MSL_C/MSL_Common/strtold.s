@@ -1451,15 +1451,6 @@
 /* 802C3DA8 0028D368  4E 80 00 20 */	blr
 .endfn strtof
 
-# 0x8066588C - 0x80665898
-.section .sdata, "wa"
-.balign 4
-.sym lbl_8066588C, local
-	.4byte 0x7F800000
-.sym lbl_80665890, local
-	.4byte 0x7FF00000
-	.4byte 0x00000000
-
 # 0x8066B878 - 0x8066B898
 .section .sdata2, "a"
 .balign 8

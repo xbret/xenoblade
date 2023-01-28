@@ -253,9 +253,9 @@
 /* 80342E0C 0030C3CC  60 04 00 08 */	ori r4, r0, 0x8
 /* 80342E10 0030C3D0  4B FF FC 61 */	bl IPCWriteReg
 .L_80342E14:
-/* 80342E14 0030C3D4  3C 80 80 5D */	lis r4, lbl_805CE3C0@ha
-/* 80342E18 0030C3D8  38 64 E3 C0 */	addi r3, r4, lbl_805CE3C0@l
-/* 80342E1C 0030C3DC  80 84 E3 C0 */	lwz r4, lbl_805CE3C0@l(r4)
+/* 80342E14 0030C3D4  3C 80 80 5D */	lis r4, __responses@ha
+/* 80342E18 0030C3D8  38 64 E3 C0 */	addi r3, r4, __responses@l
+/* 80342E1C 0030C3DC  80 84 E3 C0 */	lwz r4, __responses@l(r4)
 /* 80342E20 0030C3E0  80 03 00 04 */	lwz r0, 0x4(r3)
 /* 80342E24 0030C3E4  7C 00 20 40 */	cmplw r0, r4
 /* 80342E28 0030C3E8  40 80 00 0C */	bge .L_80342E34
@@ -268,8 +268,8 @@
 .L_80342E40:
 /* 80342E40 0030C400  2C 00 00 00 */	cmpwi r0, 0x0
 /* 80342E44 0030C404  40 82 00 90 */	bne .L_80342ED4
-/* 80342E48 0030C408  3C 60 80 5D */	lis r3, lbl_805CE3C0@ha
-/* 80342E4C 0030C40C  38 63 E3 C0 */	addi r3, r3, lbl_805CE3C0@l
+/* 80342E48 0030C408  3C 60 80 5D */	lis r3, __responses@ha
+/* 80342E4C 0030C40C  38 63 E3 C0 */	addi r3, r3, __responses@l
 /* 80342E50 0030C410  80 03 00 08 */	lwz r0, 0x8(r3)
 /* 80342E54 0030C414  54 00 10 3A */	slwi r0, r0, 2
 /* 80342E58 0030C418  7C 63 02 14 */	add r3, r3, r0
@@ -286,14 +286,14 @@
 /* 80342E80 0030C440  3C 84 80 00 */	addis r4, r4, 0x8000
 /* 80342E84 0030C444  38 60 00 00 */	li r3, 0x0
 /* 80342E88 0030C448  4B FF FB E9 */	bl IPCWriteReg
-/* 80342E8C 0030C44C  3C E0 80 5D */	lis r7, lbl_805CE3C0@ha
+/* 80342E8C 0030C44C  3C E0 80 5D */	lis r7, __responses@ha
 /* 80342E90 0030C450  80 6D 98 D0 */	lwz r3, __mailboxAck@sda21(r13)
-/* 80342E94 0030C454  38 C7 E3 C0 */	addi r6, r7, lbl_805CE3C0@l
-/* 80342E98 0030C458  80 87 E3 C0 */	lwz r4, lbl_805CE3C0@l(r7)
+/* 80342E94 0030C454  38 C7 E3 C0 */	addi r6, r7, __responses@l
+/* 80342E98 0030C458  80 87 E3 C0 */	lwz r4, __responses@l(r7)
 /* 80342E9C 0030C45C  80 A6 00 08 */	lwz r5, 0x8(r6)
 /* 80342EA0 0030C460  38 03 FF FF */	addi r0, r3, -0x1
 /* 80342EA4 0030C464  38 64 00 01 */	addi r3, r4, 0x1
-/* 80342EA8 0030C468  90 67 E3 C0 */	stw r3, lbl_805CE3C0@l(r7)
+/* 80342EA8 0030C468  90 67 E3 C0 */	stw r3, __responses@l(r7)
 /* 80342EAC 0030C46C  38 85 00 01 */	addi r4, r5, 0x1
 /* 80342EB0 0030C470  54 84 07 3E */	clrlwi r4, r4, 28
 /* 80342EB4 0030C474  90 86 00 08 */	stw r4, 0x8(r6)
@@ -1700,10 +1700,10 @@
 /* 803441C4 0030D784  38 80 00 20 */	li r4, 0x20
 /* 803441C8 0030D788  48 00 FD E9 */	bl DCFlushRange
 /* 803441CC 0030D78C  48 01 47 E5 */	bl OSDisableInterrupts
-/* 803441D0 0030D790  3C 80 80 5D */	lis r4, lbl_805CE3C0@ha
+/* 803441D0 0030D790  3C 80 80 5D */	lis r4, __responses@ha
 /* 803441D4 0030D794  7C 7E 1B 78 */	mr r30, r3
-/* 803441D8 0030D798  38 64 E3 C0 */	addi r3, r4, lbl_805CE3C0@l
-/* 803441DC 0030D79C  80 04 E3 C0 */	lwz r0, lbl_805CE3C0@l(r4)
+/* 803441D8 0030D798  38 64 E3 C0 */	addi r3, r4, __responses@l
+/* 803441DC 0030D79C  80 04 E3 C0 */	lwz r0, __responses@l(r4)
 /* 803441E0 0030D7A0  80 63 00 04 */	lwz r3, 0x4(r3)
 /* 803441E4 0030D7A4  3B E0 00 00 */	li r31, 0x0
 /* 803441E8 0030D7A8  7C 03 00 40 */	cmplw r3, r0
@@ -1725,9 +1725,9 @@
 /* 80344220 0030D7E0  3B E0 FF F8 */	li r31, -0x8
 /* 80344224 0030D7E4  48 00 00 44 */	b .L_80344268
 .L_80344228:
-/* 80344228 0030D7E8  3C C0 80 5D */	lis r6, lbl_805CE3C0@ha
+/* 80344228 0030D7E8  3C C0 80 5D */	lis r6, __responses@ha
 /* 8034422C 0030D7EC  7F A3 EB 78 */	mr r3, r29
-/* 80344230 0030D7F0  38 C6 E3 C0 */	addi r6, r6, lbl_805CE3C0@l
+/* 80344230 0030D7F0  38 C6 E3 C0 */	addi r6, r6, __responses@l
 /* 80344234 0030D7F4  80 06 00 0C */	lwz r0, 0xc(r6)
 /* 80344238 0030D7F8  54 00 10 3A */	slwi r0, r0, 2
 /* 8034423C 0030D7FC  7C 86 02 14 */	add r4, r6, r0
@@ -1751,9 +1751,9 @@
 /* 8034427C 0030D83C  80 0D 98 D0 */	lwz r0, __mailboxAck@sda21(r13)
 /* 80344280 0030D840  2C 00 00 00 */	cmpwi r0, 0x0
 /* 80344284 0030D844  40 81 00 C8 */	ble .L_8034434C
-/* 80344288 0030D848  3C 80 80 5D */	lis r4, lbl_805CE3C0@ha
-/* 8034428C 0030D84C  38 64 E3 C0 */	addi r3, r4, lbl_805CE3C0@l
-/* 80344290 0030D850  80 04 E3 C0 */	lwz r0, lbl_805CE3C0@l(r4)
+/* 80344288 0030D848  3C 80 80 5D */	lis r4, __responses@ha
+/* 8034428C 0030D84C  38 64 E3 C0 */	addi r3, r4, __responses@l
+/* 80344290 0030D850  80 04 E3 C0 */	lwz r0, __responses@l(r4)
 /* 80344294 0030D854  80 63 00 04 */	lwz r3, 0x4(r3)
 /* 80344298 0030D858  7C 03 00 40 */	cmplw r3, r0
 /* 8034429C 0030D85C  40 80 00 10 */	bge .L_803442AC
@@ -1767,8 +1767,8 @@
 .L_803442B8:
 /* 803442B8 0030D878  2C 00 00 00 */	cmpwi r0, 0x0
 /* 803442BC 0030D87C  40 82 00 90 */	bne .L_8034434C
-/* 803442C0 0030D880  3C 60 80 5D */	lis r3, lbl_805CE3C0@ha
-/* 803442C4 0030D884  38 63 E3 C0 */	addi r3, r3, lbl_805CE3C0@l
+/* 803442C0 0030D880  3C 60 80 5D */	lis r3, __responses@ha
+/* 803442C4 0030D884  38 63 E3 C0 */	addi r3, r3, __responses@l
 /* 803442C8 0030D888  80 03 00 08 */	lwz r0, 0x8(r3)
 /* 803442CC 0030D88C  54 00 10 3A */	slwi r0, r0, 2
 /* 803442D0 0030D890  7C 63 02 14 */	add r3, r3, r0
@@ -1785,14 +1785,14 @@
 /* 803442F8 0030D8B8  3C 84 80 00 */	addis r4, r4, 0x8000
 /* 803442FC 0030D8BC  38 60 00 00 */	li r3, 0x0
 /* 80344300 0030D8C0  4B FF E7 71 */	bl IPCWriteReg
-/* 80344304 0030D8C4  3C E0 80 5D */	lis r7, lbl_805CE3C0@ha
+/* 80344304 0030D8C4  3C E0 80 5D */	lis r7, __responses@ha
 /* 80344308 0030D8C8  80 6D 98 D0 */	lwz r3, __mailboxAck@sda21(r13)
-/* 8034430C 0030D8CC  38 C7 E3 C0 */	addi r6, r7, lbl_805CE3C0@l
-/* 80344310 0030D8D0  80 87 E3 C0 */	lwz r4, lbl_805CE3C0@l(r7)
+/* 8034430C 0030D8CC  38 C7 E3 C0 */	addi r6, r7, __responses@l
+/* 80344310 0030D8D0  80 87 E3 C0 */	lwz r4, __responses@l(r7)
 /* 80344314 0030D8D4  80 A6 00 08 */	lwz r5, 0x8(r6)
 /* 80344318 0030D8D8  38 03 FF FF */	addi r0, r3, -0x1
 /* 8034431C 0030D8DC  38 64 00 01 */	addi r3, r4, 0x1
-/* 80344320 0030D8E0  90 67 E3 C0 */	stw r3, lbl_805CE3C0@l(r7)
+/* 80344320 0030D8E0  90 67 E3 C0 */	stw r3, __responses@l(r7)
 /* 80344324 0030D8E4  38 85 00 01 */	addi r4, r5, 0x1
 /* 80344328 0030D8E8  54 84 07 3E */	clrlwi r4, r4, 28
 /* 8034432C 0030D8EC  90 86 00 08 */	stw r4, 0x8(r6)
@@ -1836,12 +1836,10 @@
 # 0x805CE3C0 - 0x805CE480
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CE3C0, local
 
 .obj __responses, local
 	.skip 0x50
 .endobj __responses
-.sym lbl_805CE410, local
 
 .obj __timeout_alarm, local
 	.skip 0x30
@@ -1852,12 +1850,10 @@
 # 0x80665A50 - 0x80665A58
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665A50, local
 
 .obj __mailboxAck, local
 	.4byte 0x00000001
 .endobj __mailboxAck
-.sym lbl_80665A54, local
 
 .obj hid, local
 	.4byte 0xFFFFFFFF
@@ -1872,7 +1868,6 @@
 	.skip 0x4
 .sym lbl_80667988, local
 	.skip 0x4
-.sym lbl_8066798C, local
 
 # IPCCltInit()::initialized
 .obj "@LOCAL@IPCCltInit__Fv@initialized", weak

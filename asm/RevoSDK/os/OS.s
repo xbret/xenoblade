@@ -465,8 +465,8 @@
 /* 80351EC0 0031B480  48 00 20 F1 */	bl DCFlushRange
 /* 80351EC4 0031B484  48 00 01 68 */	b .L_8035202C
 .L_80351EC8:
-/* 80351EC8 0031B488  3F E0 80 5D */	lis r31, lbl_805D4340@ha
-/* 80351ECC 0031B48C  3B FF 43 40 */	addi r31, r31, lbl_805D4340@l
+/* 80351EC8 0031B488  3F E0 80 5D */	lis r31, __OSRebootParams@ha
+/* 80351ECC 0031B48C  3B FF 43 40 */	addi r31, r31, __OSRebootParams@l
 /* 80351ED0 0031B490  80 1F 00 0C */	lwz r0, 0xc(r31)
 /* 80351ED4 0031B494  2C 00 00 00 */	cmpwi r0, 0x0
 /* 80351ED8 0031B498  41 82 00 14 */	beq .L_80351EEC
@@ -543,8 +543,8 @@
 /* 80351FD0 0031B590  7F C3 F3 78 */	mr r3, r30
 /* 80351FD4 0031B594  3C 80 00 04 */	lis r4, 0x4
 /* 80351FD8 0031B598  48 00 1F D9 */	bl DCFlushRange
-/* 80351FDC 0031B59C  3C 60 80 5D */	lis r3, lbl_805D4340@ha
-/* 80351FE0 0031B5A0  38 63 43 40 */	addi r3, r3, lbl_805D4340@l
+/* 80351FDC 0031B59C  3C 60 80 5D */	lis r3, __OSRebootParams@ha
+/* 80351FE0 0031B5A0  38 63 43 40 */	addi r3, r3, __OSRebootParams@l
 /* 80351FE4 0031B5A4  83 E3 00 10 */	lwz r31, 0x10(r3)
 /* 80351FE8 0031B5A8  48 00 19 C9 */	bl OSGetMEM2ArenaHi
 /* 80351FEC 0031B5AC  7C 03 F8 40 */	cmplw r3, r31
@@ -1556,7 +1556,6 @@
 # 0x80551300 - 0x805517A8
 .data
 .balign 8
-.sym lbl_80551300, local
 
 .obj "@1", local
 	.4byte 0x3C3C2052
@@ -1863,7 +1862,6 @@
 # 0x805D4340 - 0x805D43B0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D4340, local
 
 .obj __OSRebootParams, global
 	.skip 0x1C
@@ -1875,31 +1873,26 @@
 # 0x80665B28 - 0x80665B58
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B28, local
 
 .obj __OSVersion, global
 	.4byte "@1"
 .endobj __OSVersion
-.sym lbl_80665B2C, local
 
 .obj "@1784", local
 	.4byte 0x52564120
 	.byte 0x31, 0x0A, 0x00
 .endobj "@1784"
 	.byte 0x00
-.sym lbl_80665B34, local
 
 .obj "@1794", local
 	.4byte 0x25303878
 	.2byte 0x0A00
 .endobj "@1794"
 	.2byte 0x0000
-.sym lbl_80665B3C, local
 
 .obj "@1854", local
 	.4byte 0x25730A00
 .endobj "@1854"
-.sym lbl_80665B40, local
 
 .obj "@1856", local
 	.4byte 0x4F532E63
@@ -1916,61 +1909,50 @@
 # 0x80667A00 - 0x80667A48
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667A00, local
 
 .obj __OSInIPL, global
 	.skip 0x4
 .endobj __OSInIPL
-.sym lbl_80667A04, local
 
 .obj __OSInNandBoot, global
 	.skip 0x4
 .endobj __OSInNandBoot
-.sym lbl_80667A08, local
 
 .obj __OSIsGcam, weak
 	.skip 0x4
 .endobj __OSIsGcam
-.sym lbl_80667A0C, local
 
 .obj AreWeInitialized, local
 	.skip 0x4
 .endobj AreWeInitialized
-.sym lbl_80667A10, local
 
 .obj OSExceptionTable, local
 	.skip 0x4
 .endobj OSExceptionTable
 	.skip 0x4
-.sym lbl_80667A18, local
 
 .obj ZeroPS, local
 	.skip 0x8
 .endobj ZeroPS
-.sym lbl_80667A20, local
 
 .obj ZeroF, local
 	.skip 0x8
 .endobj ZeroF
 .sym lbl_80667A28, local
 	.skip 0x8
-.sym lbl_80667A30, local
 
 .obj BI2DebugFlagHolder, local
 	.skip 0x4
 .endobj BI2DebugFlagHolder
-.sym lbl_80667A34, local
 
 .obj BI2DebugFlag, local
 	.skip 0x4
 .endobj BI2DebugFlag
-.sym lbl_80667A38, local
 
 .obj BootInfo, local
 	.skip 0x4
 .endobj BootInfo
 	.skip 0x4
-.sym lbl_80667A40, local
 
 .obj __OSStartTime, global
 	.skip 0x4
@@ -1981,12 +1963,10 @@
 # 0x8066C188 - 0x8066C190
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C188, local
 
 .obj "@1009", local
 	.4byte 0x0000FF00
 .endobj "@1009"
-.sym lbl_8066C18C, local
 
 .obj "@1011", local
 	.4byte 0xFFFFFF00

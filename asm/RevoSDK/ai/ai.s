@@ -455,10 +455,9 @@
 	.4byte lbl_8053FFB8
 	.4byte 0x00000000
 
-# 0x806675C4 - 0x80667608
+# 0x806675C8 - 0x80667608
 .section .sbss, "wa", @nobits
-.balign 4
-	.skip 0x4
+.balign 8
 .sym lbl_806675C8, local
 	.skip 0x4
 .sym lbl_806675CC, local

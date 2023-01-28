@@ -254,7 +254,7 @@
 	.4byte 0x00000000
 	.byte 0x00, 0x00, 0x00
 
-# 0x806675B0 - 0x806675C4
+# 0x806675B0 - 0x806675C8
 .section .sbss, "wa", @nobits
 .balign 8
 
@@ -278,3 +278,4 @@
 .obj __DBRecvDataSize, local
 	.skip 0x4
 .endobj __DBRecvDataSize
+	.skip 0x4

@@ -48,11 +48,11 @@
 
 .fn MEMIntrruptHandler, local
 /* 803594F0 00322AB0  3D 00 CC 00 */	lis r8, 0xcc00
-/* 803594F4 00322AB4  3C 60 80 5D */	lis r3, lbl_805D43B0@ha
+/* 803594F4 00322AB4  3C 60 80 5D */	lis r3, __OSErrorTable@ha
 /* 803594F8 00322AB8  A0 A8 40 1E */	lhz r5, 0x401e(r8)
 /* 803594FC 00322ABC  38 00 00 00 */	li r0, 0x0
 /* 80359500 00322AC0  A0 E8 40 24 */	lhz r7, 0x4024(r8)
-/* 80359504 00322AC4  38 63 43 B0 */	addi r3, r3, lbl_805D43B0@l
+/* 80359504 00322AC4  38 63 43 B0 */	addi r3, r3, __OSErrorTable@l
 /* 80359508 00322AC8  A0 C8 40 22 */	lhz r6, 0x4022(r8)
 /* 8035950C 00322ACC  50 E6 81 9E */	rlwimi r6, r7, 16, 6, 15
 /* 80359510 00322AD0  B0 08 40 20 */	sth r0, 0x4020(r8)
@@ -553,7 +553,6 @@
 # 0x80552AE0 - 0x80552AF0
 .data
 .balign 8
-.sym lbl_80552AE0, local
 
 .obj ShutdownFunctionInfo, local
 	.4byte OnShutdown
@@ -565,7 +564,6 @@
 # 0x80667AA8 - 0x80667AB0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667AA8, local
 
 # __OSInitMemoryProtection()::initialized
 .obj "@LOCAL@__OSInitMemoryProtection__Fv@initialized", weak

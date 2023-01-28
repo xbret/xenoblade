@@ -1628,7 +1628,6 @@
 	.skip 0x4
 .sym lbl_80667A70, local
 	.skip 0x4
-.sym lbl_80667A74, local
 
 .obj __OSInReboot, global
 	.skip 0x4

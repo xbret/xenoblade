@@ -691,8 +691,8 @@
 /* 8035BC68 00325228  93 DF 03 10 */	stw r30, 0x310(r31)
 /* 8035BC6C 0032522C  93 DF 03 14 */	stw r30, 0x314(r31)
 /* 8035BC70 00325230  4B FF CD 41 */	bl OSDisableInterrupts
-/* 8035BC74 00325234  3C 80 80 5D */	lis r4, lbl_805D43B0@ha
-/* 8035BC78 00325238  38 84 43 B0 */	addi r4, r4, lbl_805D43B0@l
+/* 8035BC74 00325234  3C 80 80 5D */	lis r4, __OSErrorTable@ha
+/* 8035BC78 00325238  38 84 43 B0 */	addi r4, r4, __OSErrorTable@l
 /* 8035BC7C 0032523C  80 04 00 40 */	lwz r0, 0x40(r4)
 /* 8035BC80 00325240  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8035BC84 00325244  41 82 01 48 */	beq .L_8035BDCC
@@ -1665,7 +1665,6 @@
 # 0x805D4758 - 0x805D5160
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D4758, local
 
 .obj DefaultThread, local
 	.skip 0x318
@@ -1678,7 +1677,6 @@
 # 0x80665B90 - 0x80665B98
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B90, local
 
 .obj SwitchThreadCallback, local
 	.4byte DefaultSwitchThreadCallback
@@ -1688,17 +1686,14 @@
 # 0x80667AC8 - 0x80667AD8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667AC8, local
 
 .obj Reschedule, local
 	.skip 0x4
 .endobj Reschedule
-.sym lbl_80667ACC, local
 
 .obj RunQueueHint, local
 	.skip 0x4
 .endobj RunQueueHint
-.sym lbl_80667AD0, local
 
 .obj RunQueueBits, local
 	.skip 0x4

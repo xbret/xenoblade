@@ -66,17 +66,17 @@
 /* 8035F5F8 00328BB8  38 00 00 01 */	li r0, 0x1
 /* 8035F5FC 00328BBC  98 0D B9 D8 */	stb r0, BgJobStatus@sda21(r13)
 /* 8035F600 00328BC0  4B FF 93 F1 */	bl OSRestoreInterrupts
-/* 8035F604 00328BC4  3F E0 80 5D */	lis r31, lbl_805D5540@ha
-/* 8035F608 00328BC8  3B FF 55 40 */	addi r31, r31, lbl_805D5540@l
+/* 8035F604 00328BC4  3F E0 80 5D */	lis r31, Control@ha
+/* 8035F608 00328BC8  3B FF 55 40 */	addi r31, r31, Control@l
 /* 8035F60C 00328BCC  80 7F 01 6C */	lwz r3, 0x16c(r31)
 /* 8035F610 00328BD0  80 9F 01 7C */	lwz r4, 0x17c(r31)
 /* 8035F614 00328BD4  48 00 05 8D */	bl ParseConfBuf
 /* 8035F618 00328BD8  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8035F61C 00328BDC  40 82 00 40 */	bne .L_8035F65C
 /* 8035F620 00328BE0  4B FF 93 91 */	bl OSDisableInterrupts
-/* 8035F624 00328BE4  3C A0 80 5D */	lis r5, lbl_805D56E0@ha
+/* 8035F624 00328BE4  3C A0 80 5D */	lis r5, ConfBuf@ha
 /* 8035F628 00328BE8  80 9F 01 6C */	lwz r4, 0x16c(r31)
-/* 8035F62C 00328BEC  38 A5 56 E0 */	addi r5, r5, lbl_805D56E0@l
+/* 8035F62C 00328BEC  38 A5 56 E0 */	addi r5, r5, ConfBuf@l
 /* 8035F630 00328BF0  7C 7D 1B 78 */	mr r29, r3
 /* 8035F634 00328BF4  7C 05 20 40 */	cmplw r5, r4
 /* 8035F638 00328BF8  41 82 00 10 */	beq .L_8035F648
@@ -218,9 +218,9 @@
 /* 8035F820 00328DE0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8035F824 00328DE4  7C 7F 1B 78 */	mr r31, r3
 /* 8035F828 00328DE8  40 82 00 44 */	bne .L_8035F86C
-/* 8035F82C 00328DEC  3C 80 80 5D */	lis r4, lbl_805D5540@ha
+/* 8035F82C 00328DEC  3C 80 80 5D */	lis r4, Control@ha
 /* 8035F830 00328DF0  3C C0 80 36 */	lis r6, ReadCallbackFromReload@ha
-/* 8035F834 00328DF4  38 84 55 40 */	addi r4, r4, lbl_805D5540@l
+/* 8035F834 00328DF4  38 84 55 40 */	addi r4, r4, Control@l
 /* 8035F838 00328DF8  38 A0 00 01 */	li r5, 0x1
 /* 8035F83C 00328DFC  88 04 01 5A */	lbz r0, 0x15a(r4)
 /* 8035F840 00328E00  38 64 00 08 */	addi r3, r4, 0x8
@@ -235,16 +235,16 @@
 /* 8035F864 00328E24  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8035F868 00328E28  41 82 00 64 */	beq .L_8035F8CC
 .L_8035F86C:
-/* 8035F86C 00328E2C  3C 60 80 5D */	lis r3, lbl_805D5540@ha
-/* 8035F870 00328E30  38 63 55 40 */	addi r3, r3, lbl_805D5540@l
+/* 8035F86C 00328E2C  3C 60 80 5D */	lis r3, Control@ha
+/* 8035F870 00328E30  38 63 55 40 */	addi r3, r3, Control@l
 /* 8035F874 00328E34  88 03 01 5A */	lbz r0, 0x15a(r3)
 /* 8035F878 00328E38  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8035F87C 00328E3C  40 82 00 08 */	bne .L_8035F884
 /* 8035F880 00328E40  93 E3 01 60 */	stw r31, 0x160(r3)
 .L_8035F884:
-/* 8035F884 00328E44  3C A0 80 5D */	lis r5, lbl_805D5540@ha
+/* 8035F884 00328E44  3C A0 80 5D */	lis r5, Control@ha
 /* 8035F888 00328E48  38 80 00 00 */	li r4, 0x0
-/* 8035F88C 00328E4C  38 A5 55 40 */	addi r5, r5, lbl_805D5540@l
+/* 8035F88C 00328E4C  38 A5 55 40 */	addi r5, r5, Control@l
 /* 8035F890 00328E50  88 05 01 5A */	lbz r0, 0x15a(r5)
 /* 8035F894 00328E54  54 00 10 3A */	slwi r0, r0, 2
 /* 8035F898 00328E58  7C 65 02 14 */	add r3, r5, r0
@@ -272,9 +272,9 @@
 .fn ReadCallbackFromReload, global
 /* 8035F8E0 00328EA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035F8E4 00328EA4  7C 08 02 A6 */	mflr r0
-/* 8035F8E8 00328EA8  3C A0 80 5D */	lis r5, lbl_805D5540@ha
+/* 8035F8E8 00328EA8  3C A0 80 5D */	lis r5, Control@ha
 /* 8035F8EC 00328EAC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8035F8F0 00328EB0  38 A5 55 40 */	addi r5, r5, lbl_805D5540@l
+/* 8035F8F0 00328EB0  38 A5 55 40 */	addi r5, r5, Control@l
 /* 8035F8F4 00328EB4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8035F8F8 00328EB8  7C 7F 1B 78 */	mr r31, r3
 /* 8035F8FC 00328EBC  88 05 01 5A */	lbz r0, 0x15a(r5)
@@ -294,8 +294,8 @@
 /* 8035F934 00328EF4  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8035F938 00328EF8  41 82 00 7C */	beq .L_8035F9B4
 .L_8035F93C:
-/* 8035F93C 00328EFC  3C 60 80 5D */	lis r3, lbl_805D5540@ha
-/* 8035F940 00328F00  38 63 55 40 */	addi r3, r3, lbl_805D5540@l
+/* 8035F93C 00328EFC  3C 60 80 5D */	lis r3, Control@ha
+/* 8035F940 00328F00  38 63 55 40 */	addi r3, r3, Control@l
 /* 8035F944 00328F04  88 03 01 5A */	lbz r0, 0x15a(r3)
 /* 8035F948 00328F08  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8035F94C 00328F0C  40 82 00 20 */	bne .L_8035F96C
@@ -304,13 +304,13 @@
 /* 8035F958 00328F18  41 82 00 08 */	beq .L_8035F960
 /* 8035F95C 00328F1C  7F E0 FB 78 */	mr r0, r31
 .L_8035F960:
-/* 8035F960 00328F20  3C 60 80 5D */	lis r3, lbl_805D5540@ha
-/* 8035F964 00328F24  38 63 55 40 */	addi r3, r3, lbl_805D5540@l
+/* 8035F960 00328F20  3C 60 80 5D */	lis r3, Control@ha
+/* 8035F964 00328F24  38 63 55 40 */	addi r3, r3, Control@l
 /* 8035F968 00328F28  90 03 01 60 */	stw r0, 0x160(r3)
 .L_8035F96C:
-/* 8035F96C 00328F2C  3C A0 80 5D */	lis r5, lbl_805D5540@ha
+/* 8035F96C 00328F2C  3C A0 80 5D */	lis r5, Control@ha
 /* 8035F970 00328F30  38 80 00 00 */	li r4, 0x0
-/* 8035F974 00328F34  38 A5 55 40 */	addi r5, r5, lbl_805D5540@l
+/* 8035F974 00328F34  38 A5 55 40 */	addi r5, r5, Control@l
 /* 8035F978 00328F38  88 05 01 5A */	lbz r0, 0x15a(r5)
 /* 8035F97C 00328F3C  54 00 10 3A */	slwi r0, r0, 2
 /* 8035F980 00328F40  7C 65 02 14 */	add r3, r5, r0
@@ -346,16 +346,16 @@
 /* 8035F9E4 00328FA4  48 00 00 7D */	bl FinishFromReload
 /* 8035F9E8 00328FA8  48 00 00 64 */	b .L_8035FA4C
 .L_8035F9EC:
-/* 8035F9EC 00328FAC  3C 80 80 5D */	lis r4, lbl_805D5540@ha
-/* 8035F9F0 00328FB0  38 84 55 40 */	addi r4, r4, lbl_805D5540@l
+/* 8035F9EC 00328FAC  3C 80 80 5D */	lis r4, Control@ha
+/* 8035F9F0 00328FB0  38 84 55 40 */	addi r4, r4, Control@l
 /* 8035F9F4 00328FB4  88 04 01 5A */	lbz r0, 0x15a(r4)
 /* 8035F9F8 00328FB8  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8035F9FC 00328FBC  40 82 00 08 */	bne .L_8035FA04
 /* 8035FA00 00328FC0  90 64 01 60 */	stw r3, 0x160(r4)
 .L_8035FA04:
-/* 8035FA04 00328FC4  3C A0 80 5D */	lis r5, lbl_805D5540@ha
+/* 8035FA04 00328FC4  3C A0 80 5D */	lis r5, Control@ha
 /* 8035FA08 00328FC8  38 80 00 00 */	li r4, 0x0
-/* 8035FA0C 00328FCC  38 A5 55 40 */	addi r5, r5, lbl_805D5540@l
+/* 8035FA0C 00328FCC  38 A5 55 40 */	addi r5, r5, Control@l
 /* 8035FA10 00328FD0  88 05 01 5A */	lbz r0, 0x15a(r5)
 /* 8035FA14 00328FD4  54 00 10 3A */	slwi r0, r0, 2
 /* 8035FA18 00328FD8  7C 65 02 14 */	add r3, r5, r0
@@ -389,8 +389,8 @@
 /* 8035FA74 00329034  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8035FA78 00329038  3F C0 80 36 */	lis r30, OpenCallbackFromReload@ha
 /* 8035FA7C 0032903C  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 8035FA80 00329040  3F A0 80 5D */	lis r29, lbl_805D5540@ha
-/* 8035FA84 00329044  3B BD 55 40 */	addi r29, r29, lbl_805D5540@l
+/* 8035FA80 00329040  3F A0 80 5D */	lis r29, Control@ha
+/* 8035FA84 00329044  3B BD 55 40 */	addi r29, r29, Control@l
 /* 8035FA88 00329048  93 81 00 10 */	stw r28, 0x10(r1)
 .L_8035FA8C:
 /* 8035FA8C 0032904C  88 7D 01 5A */	lbz r3, 0x15a(r29)
@@ -439,9 +439,9 @@
 .L_8035FB30:
 /* 8035FB30 003290F0  3C 60 80 00 */	lis r3, 0x8000
 /* 8035FB34 003290F4  3B C0 00 00 */	li r30, 0x0
-/* 8035FB38 003290F8  3F E0 80 5D */	lis r31, lbl_805D5540@ha
+/* 8035FB38 003290F8  3F E0 80 5D */	lis r31, Control@ha
 /* 8035FB3C 003290FC  9B C3 38 FF */	stb r30, 0x38ff(r3)
-/* 8035FB40 00329100  3B FF 55 40 */	addi r31, r31, lbl_805D5540@l
+/* 8035FB40 00329100  3B FF 55 40 */	addi r31, r31, Control@l
 /* 8035FB44 00329104  81 9F 01 5C */	lwz r12, 0x15c(r31)
 /* 8035FB48 00329108  2C 0C 00 00 */	cmpwi r12, 0x0
 /* 8035FB4C 0032910C  41 82 00 14 */	beq .L_8035FB60
@@ -754,8 +754,8 @@
 /* 8035FF7C 0032953C  39 61 00 30 */	addi r11, r1, 0x30
 /* 8035FF80 00329540  4B F5 A1 C9 */	bl _savegpr_24
 /* 8035FF84 00329544  80 0D B9 E4 */	lwz r0, lbl_80667B64@sda21(r13)
-/* 8035FF88 00329548  3F E0 80 5D */	lis r31, lbl_805D56E0@ha
-/* 8035FF8C 0032954C  3B FF 56 E0 */	addi r31, r31, lbl_805D56E0@l
+/* 8035FF88 00329548  3F E0 80 5D */	lis r31, ConfBuf@ha
+/* 8035FF8C 0032954C  3B FF 56 E0 */	addi r31, r31, ConfBuf@l
 /* 8035FF90 00329550  7C 03 00 40 */	cmplw r3, r0
 /* 8035FF94 00329554  40 80 01 58 */	bge .L_803600EC
 /* 8035FF98 00329558  80 8D B9 E8 */	lwz r4, ItemIDOffsetTblOffset@sda21(r13)
@@ -870,14 +870,14 @@
 /* 8036011C 003296DC  39 61 00 30 */	addi r11, r1, 0x30
 /* 80360120 003296E0  4B F5 A0 21 */	bl _savegpr_22
 /* 80360124 003296E4  80 0D B9 E4 */	lwz r0, lbl_80667B64@sda21(r13)
-/* 80360128 003296E8  3F E0 80 5D */	lis r31, lbl_805D56E0@ha
+/* 80360128 003296E8  3F E0 80 5D */	lis r31, ConfBuf@ha
 /* 8036012C 003296EC  3C E0 80 56 */	lis r7, lbl_8055EF88@ha
 /* 80360130 003296F0  7C 77 1B 78 */	mr r23, r3
 /* 80360134 003296F4  7C 03 00 40 */	cmplw r3, r0
 /* 80360138 003296F8  7C 98 23 78 */	mr r24, r4
 /* 8036013C 003296FC  7C B9 2B 78 */	mr r25, r5
 /* 80360140 00329700  7C DA 33 78 */	mr r26, r6
-/* 80360144 00329704  3B FF 56 E0 */	addi r31, r31, lbl_805D56E0@l
+/* 80360144 00329704  3B FF 56 E0 */	addi r31, r31, ConfBuf@l
 /* 80360148 00329708  38 E7 EF 88 */	addi r7, r7, lbl_8055EF88@l
 /* 8036014C 0032970C  3B A0 00 01 */	li r29, 0x1
 /* 80360150 00329710  40 80 02 1C */	bge .L_8036036C
@@ -1059,8 +1059,8 @@
 /* 803603C0 00329980  7C 1B 00 40 */	cmplw r27, r0
 /* 803603C4 00329984  41 82 00 88 */	beq .L_8036044C
 /* 803603C8 00329988  80 0D B9 E4 */	lwz r0, lbl_80667B64@sda21(r13)
-/* 803603CC 0032998C  3C A0 80 5D */	lis r5, lbl_805D56E0@ha
-/* 803603D0 00329990  38 A5 56 E0 */	addi r5, r5, lbl_805D56E0@l
+/* 803603CC 0032998C  3C A0 80 5D */	lis r5, ConfBuf@ha
+/* 803603D0 00329990  38 A5 56 E0 */	addi r5, r5, ConfBuf@l
 /* 803603D4 00329994  7C 1D 00 40 */	cmplw r29, r0
 /* 803603D8 00329998  40 80 00 3C */	bge .L_80360414
 /* 803603DC 0032999C  80 6D B9 E8 */	lwz r3, ItemIDOffsetTblOffset@sda21(r13)
@@ -1121,8 +1121,8 @@
 /* 803604A0 00329A60  7C 1B 00 40 */	cmplw r27, r0
 /* 803604A4 00329A64  41 82 00 CC */	beq .L_80360570
 /* 803604A8 00329A68  80 0D B9 E4 */	lwz r0, lbl_80667B64@sda21(r13)
-/* 803604AC 00329A6C  3C A0 80 5D */	lis r5, lbl_805D56E0@ha
-/* 803604B0 00329A70  38 A5 56 E0 */	addi r5, r5, lbl_805D56E0@l
+/* 803604AC 00329A6C  3C A0 80 5D */	lis r5, ConfBuf@ha
+/* 803604B0 00329A70  38 A5 56 E0 */	addi r5, r5, ConfBuf@l
 /* 803604B4 00329A74  7C 1D 00 40 */	cmplw r29, r0
 /* 803604B8 00329A78  40 80 00 3C */	bge .L_803604F4
 /* 803604BC 00329A7C  80 6D B9 E8 */	lwz r3, ItemIDOffsetTblOffset@sda21(r13)
@@ -1203,10 +1203,10 @@
 /* 803605C4 00329B84  7C 7C 1B 78 */	mr r28, r3
 /* 803605C8 00329B88  4B FF 83 E9 */	bl OSDisableInterrupts
 /* 803605CC 00329B8C  80 0D B9 E4 */	lwz r0, lbl_80667B64@sda21(r13)
-/* 803605D0 00329B90  3C A0 80 5D */	lis r5, lbl_805D56E0@ha
+/* 803605D0 00329B90  3C A0 80 5D */	lis r5, ConfBuf@ha
 /* 803605D4 00329B94  7C 7F 1B 78 */	mr r31, r3
 /* 803605D8 00329B98  7C 1D 00 40 */	cmplw r29, r0
-/* 803605DC 00329B9C  38 A5 56 E0 */	addi r5, r5, lbl_805D56E0@l
+/* 803605DC 00329B9C  38 A5 56 E0 */	addi r5, r5, ConfBuf@l
 /* 803605E0 00329BA0  40 80 00 3C */	bge .L_8036061C
 /* 803605E4 00329BA4  80 6D B9 E8 */	lwz r3, ItemIDOffsetTblOffset@sda21(r13)
 /* 803605E8 00329BA8  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1265,10 +1265,10 @@
 /* 803606A4 00329C64  7C 7C 1B 78 */	mr r28, r3
 /* 803606A8 00329C68  4B FF 83 09 */	bl OSDisableInterrupts
 /* 803606AC 00329C6C  80 0D B9 E4 */	lwz r0, lbl_80667B64@sda21(r13)
-/* 803606B0 00329C70  3C A0 80 5D */	lis r5, lbl_805D56E0@ha
+/* 803606B0 00329C70  3C A0 80 5D */	lis r5, ConfBuf@ha
 /* 803606B4 00329C74  7C 7F 1B 78 */	mr r31, r3
 /* 803606B8 00329C78  7C 1D 00 40 */	cmplw r29, r0
-/* 803606BC 00329C7C  38 A5 56 E0 */	addi r5, r5, lbl_805D56E0@l
+/* 803606BC 00329C7C  38 A5 56 E0 */	addi r5, r5, ConfBuf@l
 /* 803606C0 00329C80  40 80 00 3C */	bge .L_803606FC
 /* 803606C4 00329C84  80 6D B9 E8 */	lwz r3, ItemIDOffsetTblOffset@sda21(r13)
 /* 803606C8 00329C88  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1327,10 +1327,10 @@
 /* 80360784 00329D44  7C 7C 1B 78 */	mr r28, r3
 /* 80360788 00329D48  4B FF 82 29 */	bl OSDisableInterrupts
 /* 8036078C 00329D4C  80 0D B9 E4 */	lwz r0, lbl_80667B64@sda21(r13)
-/* 80360790 00329D50  3C A0 80 5D */	lis r5, lbl_805D56E0@ha
+/* 80360790 00329D50  3C A0 80 5D */	lis r5, ConfBuf@ha
 /* 80360794 00329D54  7C 7F 1B 78 */	mr r31, r3
 /* 80360798 00329D58  7C 1D 00 40 */	cmplw r29, r0
-/* 8036079C 00329D5C  38 A5 56 E0 */	addi r5, r5, lbl_805D56E0@l
+/* 8036079C 00329D5C  38 A5 56 E0 */	addi r5, r5, ConfBuf@l
 /* 803607A0 00329D60  40 80 00 3C */	bge .L_803607DC
 /* 803607A4 00329D64  80 6D B9 E8 */	lwz r3, ItemIDOffsetTblOffset@sda21(r13)
 /* 803607A8 00329D68  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1386,10 +1386,10 @@
 /* 80360858 00329E18  98 61 00 08 */	stb r3, 0x8(r1)
 /* 8036085C 00329E1C  4B FF 81 55 */	bl OSDisableInterrupts
 /* 80360860 00329E20  80 0D B9 E4 */	lwz r0, lbl_80667B64@sda21(r13)
-/* 80360864 00329E24  3C A0 80 5D */	lis r5, lbl_805D56E0@ha
+/* 80360864 00329E24  3C A0 80 5D */	lis r5, ConfBuf@ha
 /* 80360868 00329E28  7C 7F 1B 78 */	mr r31, r3
 /* 8036086C 00329E2C  7C 1E 00 40 */	cmplw r30, r0
-/* 80360870 00329E30  38 A5 56 E0 */	addi r5, r5, lbl_805D56E0@l
+/* 80360870 00329E30  38 A5 56 E0 */	addi r5, r5, ConfBuf@l
 /* 80360874 00329E34  40 80 00 3C */	bge .L_803608B0
 /* 80360878 00329E38  80 6D B9 E8 */	lwz r3, ItemIDOffsetTblOffset@sda21(r13)
 /* 8036087C 00329E3C  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1454,8 +1454,8 @@
 /* 8036094C 00329F0C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
 .fn __SCFlushSyncCallback, local
-/* 80360950 00329F10  3C 60 80 5D */	lis r3, lbl_805D5540@ha
-/* 80360954 00329F14  38 63 55 40 */	addi r3, r3, lbl_805D5540@l
+/* 80360950 00329F10  3C 60 80 5D */	lis r3, Control@ha
+/* 80360954 00329F14  38 63 55 40 */	addi r3, r3, Control@l
 /* 80360958 00329F18  4B FF BE 08 */	b OSWakeupThread
 .endfn __SCFlushSyncCallback
 /* 8036095C 00329F1C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
@@ -1468,8 +1468,8 @@
 /* 80360970 00329F30  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80360974 00329F34  7C 7E 1B 78 */	mr r30, r3
 /* 80360978 00329F38  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 8036097C 00329F3C  3F A0 80 5D */	lis r29, lbl_805D5540@ha
-/* 80360980 00329F40  3B BD 55 40 */	addi r29, r29, lbl_805D5540@l
+/* 8036097C 00329F3C  3F A0 80 5D */	lis r29, Control@ha
+/* 80360980 00329F40  3B BD 55 40 */	addi r29, r29, Control@l
 /* 80360984 00329F44  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80360988 00329F48  3B 9D 00 00 */	addi r28, r29, 0x0
 /* 8036098C 00329F4C  4B FF 80 25 */	bl OSDisableInterrupts
@@ -1536,10 +1536,10 @@
 /* 80360A68 0032A028  4B CA 35 99 */	bl memcpy
 /* 80360A6C 0032A02C  7F E3 FB 78 */	mr r3, r31
 /* 80360A70 0032A030  4B FF 7F 81 */	bl OSRestoreInterrupts
-/* 80360A74 0032A034  3C 60 80 52 */	lis r3, lbl_80518D40@ha
+/* 80360A74 0032A034  3C 60 80 52 */	lis r3, ConfFileName@ha
 /* 80360A78 0032A038  3F E0 80 36 */	lis r31, MyNandCallback@ha
 /* 80360A7C 0032A03C  9B DC 01 58 */	stb r30, 0x158(r28)
-/* 80360A80 0032A040  38 63 8D 40 */	addi r3, r3, lbl_80518D40@l
+/* 80360A80 0032A040  38 63 8D 40 */	addi r3, r3, ConfFileName@l
 /* 80360A84 0032A044  38 9C 01 50 */	addi r4, r28, 0x150
 /* 80360A88 0032A048  38 BF 0B 80 */	addi r5, r31, MyNandCallback@l
 /* 80360A8C 0032A04C  38 DC 00 94 */	addi r6, r28, 0x94
@@ -1616,9 +1616,9 @@
 .fn MyNandCallback, local
 /* 80360B80 0032A140  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80360B84 0032A144  7C 08 02 A6 */	mflr r0
-/* 80360B88 0032A148  3C E0 80 5D */	lis r7, lbl_805D5540@ha
+/* 80360B88 0032A148  3C E0 80 5D */	lis r7, Control@ha
 /* 80360B8C 0032A14C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80360B90 0032A150  38 E7 55 40 */	addi r7, r7, lbl_805D5540@l
+/* 80360B90 0032A150  38 E7 55 40 */	addi r7, r7, Control@l
 /* 80360B94 0032A154  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80360B98 0032A158  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 80360B9C 0032A15C  88 07 01 58 */	lbz r0, 0x158(r7)
@@ -1637,10 +1637,10 @@
 /* 80360BCC 0032A18C  28 00 00 01 */	cmplwi r0, 0x1
 /* 80360BD0 0032A190  40 82 00 48 */	bne .L_80360C18
 /* 80360BD4 0032A194  38 00 00 01 */	li r0, 0x1
-/* 80360BD8 0032A198  3C 60 80 52 */	lis r3, lbl_80518D40@ha
+/* 80360BD8 0032A198  3C 60 80 52 */	lis r3, ConfFileName@ha
 /* 80360BDC 0032A19C  3C A0 80 36 */	lis r5, MyNandCallback@ha
 /* 80360BE0 0032A1A0  98 07 01 58 */	stb r0, 0x158(r7)
-/* 80360BE4 0032A1A4  38 63 8D 40 */	addi r3, r3, lbl_80518D40@l
+/* 80360BE4 0032A1A4  38 63 8D 40 */	addi r3, r3, ConfFileName@l
 /* 80360BE8 0032A1A8  38 87 01 50 */	addi r4, r7, 0x150
 /* 80360BEC 0032A1AC  38 A5 0B 80 */	addi r5, r5, MyNandCallback@l
 /* 80360BF0 0032A1B0  38 C7 00 94 */	addi r6, r7, 0x94
@@ -1656,10 +1656,10 @@
 /* 80360C14 0032A1D4  41 82 00 DC */	beq .L_80360CF0
 .L_80360C18:
 /* 80360C18 0032A1D8  38 00 00 02 */	li r0, 0x2
-/* 80360C1C 0032A1DC  3C 60 80 52 */	lis r3, lbl_80518D40@ha
+/* 80360C1C 0032A1DC  3C 60 80 52 */	lis r3, ConfFileName@ha
 /* 80360C20 0032A1E0  3C 80 80 36 */	lis r4, MyNandCallback@ha
 /* 80360C24 0032A1E4  98 07 01 58 */	stb r0, 0x158(r7)
-/* 80360C28 0032A1E8  38 63 8D 40 */	addi r3, r3, lbl_80518D40@l
+/* 80360C28 0032A1E8  38 63 8D 40 */	addi r3, r3, ConfFileName@l
 /* 80360C2C 0032A1EC  38 A7 00 94 */	addi r5, r7, 0x94
 /* 80360C30 0032A1F0  38 84 0B 80 */	addi r4, r4, MyNandCallback@l
 /* 80360C34 0032A1F4  4B FE E0 3D */	bl NANDPrivateDeleteAsync
@@ -1701,10 +1701,10 @@
 /* 80360CB8 0032A278  48 00 01 E8 */	b .L_80360EA0
 .L_80360CBC:
 /* 80360CBC 0032A27C  38 00 00 05 */	li r0, 0x5
-/* 80360CC0 0032A280  3C 60 80 52 */	lis r3, lbl_80518D40@ha
+/* 80360CC0 0032A280  3C 60 80 52 */	lis r3, ConfFileName@ha
 /* 80360CC4 0032A284  3C C0 80 36 */	lis r6, MyNandCallback@ha
 /* 80360CC8 0032A288  98 07 01 58 */	stb r0, 0x158(r7)
-/* 80360CCC 0032A28C  38 63 8D 40 */	addi r3, r3, lbl_80518D40@l
+/* 80360CCC 0032A28C  38 63 8D 40 */	addi r3, r3, ConfFileName@l
 /* 80360CD0 0032A290  38 E7 00 94 */	addi r7, r7, 0x94
 /* 80360CD4 0032A294  38 C6 0B 80 */	addi r6, r6, MyNandCallback@l
 /* 80360CD8 0032A298  38 80 00 3F */	li r4, 0x3f
@@ -1715,11 +1715,11 @@
 /* 80360CEC 0032A2AC  48 00 01 B4 */	b .L_80360EA0
 .L_80360CF0:
 /* 80360CF0 0032A2B0  38 00 00 06 */	li r0, 0x6
-/* 80360CF4 0032A2B4  3C 60 80 52 */	lis r3, lbl_80518D40@ha
+/* 80360CF4 0032A2B4  3C 60 80 52 */	lis r3, ConfFileName@ha
 /* 80360CF8 0032A2B8  3C C0 80 36 */	lis r6, MyNandCallback@ha
 /* 80360CFC 0032A2BC  98 07 01 58 */	stb r0, 0x158(r7)
 /* 80360D00 0032A2C0  38 87 00 08 */	addi r4, r7, 0x8
-/* 80360D04 0032A2C4  38 63 8D 40 */	addi r3, r3, lbl_80518D40@l
+/* 80360D04 0032A2C4  38 63 8D 40 */	addi r3, r3, ConfFileName@l
 /* 80360D08 0032A2C8  38 C6 0B 80 */	addi r6, r6, MyNandCallback@l
 /* 80360D0C 0032A2CC  38 E7 00 94 */	addi r7, r7, 0x94
 /* 80360D10 0032A2D0  38 A0 00 02 */	li r5, 0x2
@@ -1765,8 +1765,8 @@
 /* 80360DA4 0032A364  2C 03 00 00 */	cmpwi r3, 0x0
 /* 80360DA8 0032A368  40 82 00 60 */	bne .L_80360E08
 .L_80360DAC:
-/* 80360DAC 0032A36C  3F C0 80 5D */	lis r30, lbl_805D5540@ha
-/* 80360DB0 0032A370  3B DE 55 40 */	addi r30, r30, lbl_805D5540@l
+/* 80360DAC 0032A36C  3F C0 80 5D */	lis r30, Control@ha
+/* 80360DB0 0032A370  3B DE 55 40 */	addi r30, r30, Control@l
 /* 80360DB4 0032A374  80 1E 01 88 */	lwz r0, 0x188(r30)
 /* 80360DB8 0032A378  2C 00 00 00 */	cmpwi r0, 0x0
 /* 80360DBC 0032A37C  41 82 00 0C */	beq .L_80360DC8
@@ -1791,9 +1791,9 @@
 /* 80360E00 0032A3C0  98 0D B9 D8 */	stb r0, BgJobStatus@sda21(r13)
 /* 80360E04 0032A3C4  48 00 00 9C */	b .L_80360EA0
 .L_80360E08:
-/* 80360E08 0032A3C8  3C A0 80 5D */	lis r5, lbl_805D5540@ha
+/* 80360E08 0032A3C8  3C A0 80 5D */	lis r5, Control@ha
 /* 80360E0C 0032A3CC  38 60 00 02 */	li r3, 0x2
-/* 80360E10 0032A3D0  38 A5 55 40 */	addi r5, r5, lbl_805D5540@l
+/* 80360E10 0032A3D0  38 A5 55 40 */	addi r5, r5, Control@l
 /* 80360E14 0032A3D4  88 05 01 59 */	lbz r0, 0x159(r5)
 /* 80360E18 0032A3D8  90 65 01 88 */	stw r3, 0x188(r5)
 /* 80360E1C 0032A3DC  2C 00 00 00 */	cmpwi r0, 0x0
@@ -1808,8 +1808,8 @@
 /* 80360E40 0032A400  2C 03 00 00 */	cmpwi r3, 0x0
 /* 80360E44 0032A404  41 82 00 5C */	beq .L_80360EA0
 .L_80360E48:
-/* 80360E48 0032A408  3F C0 80 5D */	lis r30, lbl_805D5540@ha
-/* 80360E4C 0032A40C  3B DE 55 40 */	addi r30, r30, lbl_805D5540@l
+/* 80360E48 0032A408  3F C0 80 5D */	lis r30, Control@ha
+/* 80360E4C 0032A40C  3B DE 55 40 */	addi r30, r30, Control@l
 /* 80360E50 0032A410  80 1E 01 88 */	lwz r0, 0x188(r30)
 /* 80360E54 0032A414  2C 00 00 00 */	cmpwi r0, 0x0
 /* 80360E58 0032A418  41 82 00 0C */	beq .L_80360E64
@@ -1851,7 +1851,6 @@
 	.4byte 0x72656432
 	.4byte 0x2F737973
 	.4byte 0x00000000
-.sym lbl_80518D40, local
 
 .obj ConfFileName, local
 	.4byte 0x2F736861
@@ -1862,7 +1861,6 @@
 	.byte 0x00
 .endobj ConfFileName
 	.byte 0x00, 0x00, 0x00
-.sym lbl_80518D58, local
 
 .obj ProductInfoFileName, local
 	.4byte 0x2F746974
@@ -2018,13 +2016,11 @@
 # 0x805D5540 - 0x805DD6E0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D5540, local
 
 .obj Control, local
 	.skip 0x190
 .endobj Control
 	.skip 0x10
-.sym lbl_805D56E0, local
 
 .obj ConfBuf, local
 	.skip 0x4000
@@ -2035,7 +2031,6 @@
 # 0x80665BC0 - 0x80665CD0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665BC0, local
 
 .obj __SCVersion, global
 	.4byte lbl_8055EEF8
@@ -2134,14 +2129,12 @@
 .sym lbl_80665CB8, local
 	.4byte 0x49504C2E
 	.4byte 0x54494400
-.sym lbl_80665CC0, local
 
 .obj "@2434", local
 	.4byte 0x53437630
 	.byte 0x00
 .endobj "@2434"
 	.byte 0x00, 0x00, 0x00
-.sym lbl_80665CC8, local
 
 .obj "@2435", local
 	.4byte 0x53436564
@@ -2152,37 +2145,31 @@
 # 0x80667B58 - 0x80667B70
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667B58, local
 
 .obj BgJobStatus, local
 	.skip 0x1
 .endobj BgJobStatus
 	.skip 0x3
-.sym lbl_80667B5C, local
 
 .obj ItemRestSize, local
 	.skip 0x4
 .endobj ItemRestSize
-.sym lbl_80667B60, local
 
 .obj ItemNumTotal, local
 	.skip 0x4
 .endobj ItemNumTotal
 .sym lbl_80667B64, local
 	.skip 0x4
-.sym lbl_80667B68, local
 
 .obj ItemIDOffsetTblOffset, local
 	.skip 0x4
 .endobj ItemIDOffsetTblOffset
-.sym lbl_80667B6C, local
 
 .obj IsDevKit, local
 	.skip 0x1
 .endobj IsDevKit
 .sym lbl_80667B6D, local
 	.skip 0x1
-.sym lbl_80667B6E, local
 
 .obj Initialized, local
 	.skip 0x1

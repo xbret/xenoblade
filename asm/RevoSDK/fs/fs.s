@@ -1573,7 +1573,6 @@
 # 0x8054B658 - 0x8054B680
 .data
 .balign 8
-.sym lbl_8054B658, local
 
 .obj "@1687", local
 	.4byte 0x41505020
@@ -1592,13 +1591,11 @@
 # 0x806659E0 - 0x806659F0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806659E0, local
 
 .obj __fsFd, local
 	.4byte 0xFFFFFFFF
 .endobj __fsFd
 	.4byte 0x00000000
-.sym lbl_806659E8, local
 
 .obj "@1688", local
 	.4byte 0x2F646576
@@ -1608,29 +1605,24 @@
 # 0x806678F0 - 0x80667908
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806678F0, local
 
 .obj __fsInitialized, local
 	.skip 0x4
 .endobj __fsInitialized
-.sym lbl_806678F4, local
 
 .obj __devfs, local
 	.skip 0x4
 .endobj __devfs
 .sym lbl_806678F8, local
 	.skip 0x4
-.sym lbl_806678FC, local
 
 .obj lo$688, local
 	.skip 0x4
 .endobj lo$688
-.sym lbl_80667900, local
 
 .obj hi$689, local
 	.skip 0x4
 .endobj hi$689
-.sym lbl_80667904, local
 
 .obj hId, local
 	.skip 0x4

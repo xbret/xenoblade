@@ -247,9 +247,9 @@
 /* 802C503C 0028E5FC  38 03 FF BF */	addi r0, r3, -0x41
 /* 802C5040 0028E600  28 00 00 37 */	cmplwi r0, 0x37
 /* 802C5044 0028E604  41 81 02 0C */	bgt .L_802C5250
-/* 802C5048 0028E608  3C 60 80 54 */	lis r3, lbl_8053FA30@ha
+/* 802C5048 0028E608  3C 60 80 54 */	lis r3, jumptable_8053FA30@ha
 /* 802C504C 0028E60C  54 00 10 3A */	slwi r0, r0, 2
-/* 802C5050 0028E610  38 63 FA 30 */	addi r3, r3, lbl_8053FA30@l
+/* 802C5050 0028E610  38 63 FA 30 */	addi r3, r3, jumptable_8053FA30@l
 /* 802C5054 0028E614  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802C5058 0028E618  7C 69 03 A6 */	mtctr r3
 /* 802C505C 0028E61C  4E 80 04 20 */	bctr
@@ -2528,7 +2528,6 @@
 # 0x8053FA30 - 0x8053FCD0
 .data
 .balign 8
-.sym lbl_8053FA30, local
 
 .obj jumptable_8053FA30, local
 	.rel parse_format, .L_802C50F0

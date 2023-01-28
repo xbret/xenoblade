@@ -6,13 +6,13 @@
 .balign 4
 
 .fn IPCiProfInit, global
-/* 803448E0 0030DEA0  3C A0 80 5D */	lis r5, lbl_805CE580@ha
-/* 803448E4 0030DEA4  3C C0 80 5D */	lis r6, lbl_805CE500@ha
+/* 803448E0 0030DEA0  3C A0 80 5D */	lis r5, IpcReqPtrArray@ha
+/* 803448E4 0030DEA4  3C C0 80 5D */	lis r6, IpcFdArray@ha
 /* 803448E8 0030DEA8  38 80 00 00 */	li r4, 0x0
 /* 803448EC 0030DEAC  38 00 00 02 */	li r0, 0x2
 /* 803448F0 0030DEB0  90 8D B8 10 */	stw r4, IpcNumPendingReqs@sda21(r13)
-/* 803448F4 0030DEB4  38 A5 E5 80 */	addi r5, r5, lbl_805CE580@l
-/* 803448F8 0030DEB8  38 C6 E5 00 */	addi r6, r6, lbl_805CE500@l
+/* 803448F4 0030DEB4  38 A5 E5 80 */	addi r5, r5, IpcReqPtrArray@l
+/* 803448F8 0030DEB8  38 C6 E5 00 */	addi r6, r6, IpcFdArray@l
 /* 803448FC 0030DEBC  38 60 FF FF */	li r3, -0x1
 /* 80344900 0030DEC0  90 8D B8 14 */	stw r4, IpcNumUnIssuedReqs@sda21(r13)
 /* 80344904 0030DEC4  7C 09 03 A6 */	mtctr r0
@@ -107,13 +107,13 @@
 
 .fn IPCiProfReply, global
 /* 80344A40 0030E000  80 AD B8 10 */	lwz r5, IpcNumPendingReqs@sda21(r13)
-/* 80344A44 0030E004  3C C0 80 5D */	lis r6, lbl_805CE580@ha
-/* 80344A48 0030E008  3C E0 80 5D */	lis r7, lbl_805CE500@ha
+/* 80344A44 0030E004  3C C0 80 5D */	lis r6, IpcReqPtrArray@ha
+/* 80344A48 0030E008  3C E0 80 5D */	lis r7, IpcFdArray@ha
 /* 80344A4C 0030E00C  38 00 00 20 */	li r0, 0x20
 /* 80344A50 0030E010  38 A5 FF FF */	addi r5, r5, -0x1
 /* 80344A54 0030E014  90 AD B8 10 */	stw r5, IpcNumPendingReqs@sda21(r13)
-/* 80344A58 0030E018  38 C6 E5 80 */	addi r6, r6, lbl_805CE580@l
-/* 80344A5C 0030E01C  38 E7 E5 00 */	addi r7, r7, lbl_805CE500@l
+/* 80344A58 0030E018  38 C6 E5 80 */	addi r6, r6, IpcReqPtrArray@l
+/* 80344A5C 0030E01C  38 E7 E5 00 */	addi r7, r7, IpcFdArray@l
 /* 80344A60 0030E020  38 A0 00 00 */	li r5, 0x0
 /* 80344A64 0030E024  7C 09 03 A6 */	mtctr r0
 .L_80344A68:
@@ -123,12 +123,12 @@
 /* 80344A74 0030E034  80 07 00 00 */	lwz r0, 0x0(r7)
 /* 80344A78 0030E038  7C 04 00 00 */	cmpw r4, r0
 /* 80344A7C 0030E03C  40 82 00 2C */	bne .L_80344AA8
-/* 80344A80 0030E040  3C 80 80 5D */	lis r4, lbl_805CE580@ha
-/* 80344A84 0030E044  3C 60 80 5D */	lis r3, lbl_805CE500@ha
+/* 80344A80 0030E040  3C 80 80 5D */	lis r4, IpcReqPtrArray@ha
+/* 80344A84 0030E044  3C 60 80 5D */	lis r3, IpcFdArray@ha
 /* 80344A88 0030E048  54 A6 10 3A */	slwi r6, r5, 2
 /* 80344A8C 0030E04C  38 A0 00 00 */	li r5, 0x0
-/* 80344A90 0030E050  38 84 E5 80 */	addi r4, r4, lbl_805CE580@l
-/* 80344A94 0030E054  38 63 E5 00 */	addi r3, r3, lbl_805CE500@l
+/* 80344A90 0030E050  38 84 E5 80 */	addi r4, r4, IpcReqPtrArray@l
+/* 80344A94 0030E054  38 63 E5 00 */	addi r3, r3, IpcFdArray@l
 /* 80344A98 0030E058  38 00 FF FF */	li r0, -0x1
 /* 80344A9C 0030E05C  7C A4 31 2E */	stwx r5, r4, r6
 /* 80344AA0 0030E060  7C 03 31 2E */	stwx r0, r3, r6
@@ -145,12 +145,10 @@
 # 0x805CE500 - 0x805CE600
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CE500, local
 
 .obj IpcFdArray, local
 	.skip 0x80
 .endobj IpcFdArray
-.sym lbl_805CE580, local
 
 .obj IpcReqPtrArray, local
 	.skip 0x80
@@ -159,12 +157,10 @@
 # 0x80667990 - 0x80667998
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667990, local
 
 .obj IpcNumPendingReqs, local
 	.skip 0x4
 .endobj IpcNumPendingReqs
-.sym lbl_80667994, local
 
 .obj IpcNumUnIssuedReqs, local
 	.skip 0x4

@@ -678,10 +678,10 @@
 .L_803506D0:
 /* 803506D0 00319C90  2C 00 00 00 */	cmpwi r0, 0x0
 /* 803506D4 00319C94  41 82 00 1C */	beq .L_803506F0
-/* 803506D8 00319C98  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 803506D8 00319C98  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 803506DC 00319C9C  7F A5 EB 78 */	mr r5, r29
 /* 803506E0 00319CA0  38 7E 00 34 */	addi r3, r30, 0x34
-/* 803506E4 00319CA4  38 84 10 E0 */	addi r4, r4, lbl_805510E0@l
+/* 803506E4 00319CA4  38 84 10 E0 */	addi r4, r4, s_currentDir@l
 /* 803506E8 00319CA8  4B FF F9 39 */	bl nandConvertPath
 /* 803506EC 00319CAC  48 00 00 40 */	b .L_8035072C
 .L_803506F0:
@@ -765,10 +765,10 @@
 .L_80350808:
 /* 80350808 00319DC8  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8035080C 00319DCC  41 82 00 1C */	beq .L_80350828
-/* 80350810 00319DD0  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 80350810 00319DD0  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 80350814 00319DD4  7F A5 EB 78 */	mr r5, r29
 /* 80350818 00319DD8  38 61 00 10 */	addi r3, r1, 0x10
-/* 8035081C 00319DDC  38 84 10 E0 */	addi r4, r4, lbl_805510E0@l
+/* 8035081C 00319DDC  38 84 10 E0 */	addi r4, r4, s_currentDir@l
 /* 80350820 00319DE0  4B FF F8 01 */	bl nandConvertPath
 /* 80350824 00319DE4  48 00 00 44 */	b .L_80350868
 .L_80350828:
@@ -816,9 +816,9 @@
 /* 803508BC 00319E7C  7C 7F 1B 78 */	mr r31, r3
 /* 803508C0 00319E80  40 82 00 24 */	bne .L_803508E4
 /* 803508C4 00319E84  48 00 80 ED */	bl OSDisableInterrupts
-/* 803508C8 00319E88  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 803508C8 00319E88  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 803508CC 00319E8C  7C 7E 1B 78 */	mr r30, r3
-/* 803508D0 00319E90  38 64 10 E0 */	addi r3, r4, lbl_805510E0@l
+/* 803508D0 00319E90  38 64 10 E0 */	addi r3, r4, s_currentDir@l
 /* 803508D4 00319E94  38 81 00 10 */	addi r4, r1, 0x10
 /* 803508D8 00319E98  4B F7 1D E1 */	bl strcpy
 /* 803508DC 00319E9C  7F C3 F3 78 */	mr r3, r30
@@ -875,9 +875,9 @@
 /* 80350980 00319F40  7C 7D 1B 78 */	mr r29, r3
 /* 80350984 00319F44  40 82 00 24 */	bne .L_803509A8
 /* 80350988 00319F48  48 00 80 29 */	bl OSDisableInterrupts
-/* 8035098C 00319F4C  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 8035098C 00319F4C  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 80350990 00319F50  7C 7E 1B 78 */	mr r30, r3
-/* 80350994 00319F54  38 64 10 E0 */	addi r3, r4, lbl_805510E0@l
+/* 80350994 00319F54  38 64 10 E0 */	addi r3, r4, s_currentDir@l
 /* 80350998 00319F58  38 9F 00 34 */	addi r4, r31, 0x34
 /* 8035099C 00319F5C  4B F7 1D 1D */	bl strcpy
 /* 803509A0 00319F60  7F C3 F3 78 */	mr r3, r30
@@ -920,10 +920,10 @@
 /* 80350A1C 00319FDC  48 00 00 28 */	b .L_80350A44
 .L_80350A20:
 /* 80350A20 00319FE0  48 00 7F 91 */	bl OSDisableInterrupts
-/* 80350A24 00319FE4  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 80350A24 00319FE4  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 80350A28 00319FE8  7C 7F 1B 78 */	mr r31, r3
 /* 80350A2C 00319FEC  7F C3 F3 78 */	mr r3, r30
-/* 80350A30 00319FF0  38 84 10 E0 */	addi r4, r4, lbl_805510E0@l
+/* 80350A30 00319FF0  38 84 10 E0 */	addi r4, r4, s_currentDir@l
 /* 80350A34 00319FF4  4B F7 1C 85 */	bl strcpy
 /* 80350A38 00319FF8  7F E3 FB 78 */	mr r3, r31
 /* 80350A3C 00319FFC  48 00 7F B5 */	bl OSRestoreInterrupts
@@ -955,8 +955,8 @@
 /* 80350A8C 0031A04C  38 60 FF 80 */	li r3, -0x80
 /* 80350A90 0031A050  48 00 00 14 */	b .L_80350AA4
 .L_80350A94:
-/* 80350A94 0031A054  3C 80 80 5D */	lis r4, lbl_805D4000@ha
-/* 80350A98 0031A058  38 84 40 00 */	addi r4, r4, lbl_805D4000@l
+/* 80350A94 0031A054  3C 80 80 5D */	lis r4, s_homeDir@ha
+/* 80350A98 0031A058  38 84 40 00 */	addi r4, r4, s_homeDir@l
 /* 80350A9C 0031A05C  4B F7 1C 1D */	bl strcpy
 /* 80350AA0 0031A060  38 60 00 00 */	li r3, 0x0
 .L_80350AA4:
@@ -1026,10 +1026,10 @@
 .L_80350B7C:
 /* 80350B7C 0031A13C  2C 00 00 00 */	cmpwi r0, 0x0
 /* 80350B80 0031A140  41 82 00 1C */	beq .L_80350B9C
-/* 80350B84 0031A144  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 80350B84 0031A144  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 80350B88 0031A148  7F 65 DB 78 */	mr r5, r27
 /* 80350B8C 0031A14C  38 7C 00 34 */	addi r3, r28, 0x34
-/* 80350B90 0031A150  38 84 10 E0 */	addi r4, r4, lbl_805510E0@l
+/* 80350B90 0031A150  38 84 10 E0 */	addi r4, r4, s_currentDir@l
 /* 80350B94 0031A154  4B FF F4 8D */	bl nandConvertPath
 /* 80350B98 0031A158  48 00 00 40 */	b .L_80350BD8
 .L_80350B9C:
@@ -1117,10 +1117,10 @@
 .L_80350CC4:
 /* 80350CC4 0031A284  2C 00 00 00 */	cmpwi r0, 0x0
 /* 80350CC8 0031A288  41 82 00 1C */	beq .L_80350CE4
-/* 80350CCC 0031A28C  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 80350CCC 0031A28C  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 80350CD0 0031A290  7F 65 DB 78 */	mr r5, r27
 /* 80350CD4 0031A294  38 61 00 10 */	addi r3, r1, 0x10
-/* 80350CD8 0031A298  38 84 10 E0 */	addi r4, r4, lbl_805510E0@l
+/* 80350CD8 0031A298  38 84 10 E0 */	addi r4, r4, s_currentDir@l
 /* 80350CDC 0031A29C  4B FF F3 45 */	bl nandConvertPath
 /* 80350CE0 0031A2A0  48 00 00 44 */	b .L_80350D24
 .L_80350CE4:
@@ -1260,8 +1260,8 @@
 /* 80350EAC 0031A46C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
 .fn nandGetHomeDir, global
-/* 80350EB0 0031A470  3C 60 80 5D */	lis r3, lbl_805D4000@ha
-/* 80350EB4 0031A474  38 63 40 00 */	addi r3, r3, lbl_805D4000@l
+/* 80350EB0 0031A470  3C 60 80 5D */	lis r3, s_homeDir@ha
+/* 80350EB4 0031A474  38 63 40 00 */	addi r3, r3, s_homeDir@l
 /* 80350EB8 0031A478  4E 80 00 20 */	blr
 .endfn nandGetHomeDir
 /* 80350EBC 0031A47C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
@@ -1332,7 +1332,6 @@
 # 0x80518BC8 - 0x80518D10
 .rodata
 .balign 8
-.sym lbl_80518BC8, local
 
 .obj "@3037", local
 	.4byte 0x00000000
@@ -1422,7 +1421,6 @@
 # 0x80551080 - 0x805511D0
 .data
 .balign 8
-.sym lbl_80551080, local
 
 .obj "@2834", local
 	.4byte 0x3C3C2052
@@ -1451,7 +1449,6 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.byte 0x00, 0x00, 0x00
-.sym lbl_805510E0, local
 
 .obj s_currentDir, local
 	.4byte 0x2F000000
@@ -1521,7 +1518,6 @@
 # 0x805D4000 - 0x805D4040
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D4000, local
 
 .obj s_homeDir, local
 	.skip 0x40
@@ -1530,14 +1526,12 @@
 # 0x80665AE8 - 0x80665B10
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665AE8, local
 
 .obj __NANDVersion, global
 	.4byte "@2834"
 .endobj __NANDVersion
 .sym lbl_80665AEC, local
 	.4byte 0x2F000000
-.sym lbl_80665AF0, local
 
 .obj "@3775", local
 	.byte 0x00
@@ -1560,7 +1554,6 @@
 # 0x806679F0 - 0x806679F8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806679F0, local
 
 .obj s_libState, local
 	.skip 0x4

@@ -27,7 +27,6 @@
 # 0x80667568 - 0x80667570
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667568, local
 
 .obj TRK_mainError, local
 	.skip 0x4

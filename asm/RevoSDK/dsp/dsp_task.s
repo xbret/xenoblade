@@ -725,13 +725,3 @@
 	.4byte 0x78253038
 	.4byte 0x580A0000
 	.4byte 0x00000000
-
-# 0x8066779C - 0x806677A8
-.section .sbss, "wa", @nobits
-.balign 4
-.sym lbl_8066779C, local
-	.skip 0x4
-.sym lbl_806677A0, local
-	.skip 0x4
-.sym lbl_806677A4, local
-	.skip 0x4

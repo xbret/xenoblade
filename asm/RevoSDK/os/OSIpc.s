@@ -33,7 +33,6 @@
 # 0x80665B98 - 0x80665BA0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B98, local
 
 .obj IpcBufferLo, local
 	.4byte 0xFFFFFFFF
@@ -43,7 +42,6 @@
 # 0x80667AD8 - 0x80667AE0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667AD8, local
 
 .obj IpcBufferHi, local
 	.skip 0x4

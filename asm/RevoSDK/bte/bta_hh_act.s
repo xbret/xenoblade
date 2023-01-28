@@ -986,9 +986,9 @@
 /* 802E2E60 002AC420  41 80 00 6C */	blt .L_802E2ECC
 /* 802E2E64 002AC424  28 04 00 09 */	cmplwi r4, 0x9
 /* 802E2E68 002AC428  41 81 00 54 */	bgt .L_802E2EBC
-/* 802E2E6C 002AC42C  3C 60 80 54 */	lis r3, lbl_8054449C@ha
+/* 802E2E6C 002AC42C  3C 60 80 54 */	lis r3, jumptable_8054449C@ha
 /* 802E2E70 002AC430  54 80 10 3A */	slwi r0, r4, 2
-/* 802E2E74 002AC434  38 63 44 9C */	addi r3, r3, lbl_8054449C@l
+/* 802E2E74 002AC434  38 63 44 9C */	addi r3, r3, jumptable_8054449C@l
 /* 802E2E78 002AC438  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802E2E7C 002AC43C  7C 69 03 A6 */	mtctr r3
 /* 802E2E80 002AC440  4E 80 04 20 */	bctr
@@ -1907,7 +1907,6 @@
 	.4byte 0x345F6576
 	.4byte 0x745B2573
 	.4byte 0x5D000000
-.sym lbl_8054449C, local
 
 .obj jumptable_8054449C, local
 	.rel bta_hh_ctrl_dat_act, .L_802E2EBC

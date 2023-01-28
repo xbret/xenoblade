@@ -2977,7 +2977,7 @@ PowerPC_EABI_Support/MSL_C/MSL_Common/rand.o:
 	.sdata      start:0x80665880 end:0x80665888
 
 PowerPC_EABI_Support/MSL_C/MSL_Common/float.o:
-	.sdata      start:0x80665888 end:0x8066588C
+	.sdata      start:0x80665888 end:0x80665898
 
 PowerPC_EABI_Support/MSL_C/MSL_Common/scanf.o:
 	.text       start:0x802C112C end:0x802C2610
@@ -2992,7 +2992,6 @@ PowerPC_EABI_Support/MSL_C/MSL_Common/string.o:
 
 PowerPC_EABI_Support/MSL_C/MSL_Common/strtold.o:
 	.text       start:0x802C2A2C end:0x802C3DAC
-	.sdata      start:0x8066588C end:0x80665898
 	.sdata2     start:0x8066B878 end:0x8066B898
 
 PowerPC_EABI_Support/MSL_C/MSL_Common/strtoul.o:
@@ -3264,7 +3263,7 @@ PowerPC_EABI_Support/MetroTRK/target_options.o:
 NdevExi2A/DebuggerDriver.o:
 	.text       start:0x802D05D4 end:0x802D0908
 	.sdata      start:0x80665898 end:0x806658A0
-	.sbss       start:0x806675B0 end:0x806675C4
+	.sbss       start:0x806675B0 end:0x806675C8
 
 NdevExi2A/exi2.o:
 	.text       start:0x802D0908 end:0x802D10A0
@@ -3273,7 +3272,7 @@ RevoSDK/ai/ai.o:
 	.text       start:0x802D10A0 end:0x802D1670 align:16
 	.data       start:0x8053FFB8 end:0x80540000
 	.sdata      start:0x806658A0 end:0x806658A8
-	.sbss       start:0x806675C4 end:0x80667608
+	.sbss       start:0x806675C8 end:0x80667608
 
 RevoSDK/arc/arc.o:
 	.text       start:0x802D1670 end:0x802D2050 align:16
@@ -3677,7 +3676,7 @@ RevoSDK/dsp/dsp.o:
 	.text       start:0x80309210 end:0x803094B0 align:16
 	.data       start:0x805495F8 end:0x80549678
 	.sdata      start:0x80665968 end:0x80665970
-	.sbss       start:0x80667788 end:0x8066779C
+	.sbss       start:0x80667788 end:0x806677A8
 
 RevoSDK/dsp/dsp_debug.o:
 	.text       start:0x803094B0 end:0x80309500 align:16
@@ -3685,7 +3684,6 @@ RevoSDK/dsp/dsp_debug.o:
 RevoSDK/dsp/dsp_task.o:
 	.text       start:0x80309500 end:0x80309DA0 align:16
 	.data       start:0x80549678 end:0x805497B8
-	.sbss       start:0x8066779C end:0x806677A8
 
 RevoSDK/dvd/dvdfs.o:
 	.text       start:0x80309DA0 end:0x8030A8A0 align:16
@@ -4280,7 +4278,7 @@ RevoSDK/os/OSPlayTime.o:
 	.data       start:0x8055EEB8 end:0x8055EEF8
 	.bss        start:0x805D5500 end:0x805D5540
 	.sdata      start:0x80665BB0 end:0x80665BB8
-	.sbss       start:0x80667B38 end:0x80667B54
+	.sbss       start:0x80667B38 end:0x80667B50
 	.sdata2     start:0x8066C1D8 end:0x8066C1E8
 
 RevoSDK/os/OSCrc.o:
@@ -4297,7 +4295,7 @@ RevoSDK/os/__ppc_eabi_init.o:
 RevoSDK/pad/Pad.o:
 	.text       start:0x8035F410 end:0x8035F530 align:16
 	.sdata      start:0x80665BB8 end:0x80665BC0
-	.sbss       start:0x80667B54 end:0x80667B58
+	.sbss       start:0x80667B50 end:0x80667B58
 
 RevoSDK/sc/scsystem.o:
 	.text       start:0x8035F530 end:0x80360EC0 align:16

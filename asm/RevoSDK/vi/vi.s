@@ -3502,7 +3502,6 @@
 	.skip 0x4
 .sym lbl_80667C04, local
 	.skip 0x4
-.sym lbl_80667C08, local
 
 .obj CurrTvMode, local
 	.skip 0x4

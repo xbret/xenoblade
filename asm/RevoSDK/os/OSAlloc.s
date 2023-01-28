@@ -251,8 +251,10 @@
 # 0x80665B58 - 0x80665B60
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B58, local
+
+.obj lbl_80665B58, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_80665B58
 	.4byte 0x00000000
 
 # 0x80667A50 - 0x80667A60

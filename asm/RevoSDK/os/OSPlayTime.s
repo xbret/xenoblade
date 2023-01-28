@@ -7,7 +7,7 @@
 
 .fn OSPlayTimeIsLimited, global
 /* 8035E820 00327DE0  80 0D B9 C8 */	lwz r0, __OSExpireTime@sda21(r13)
-/* 8035E824 00327DE4  80 6D B9 CC */	lwz r3, lbl_80667B4C@sda21(r13)
+/* 8035E824 00327DE4  80 6D B9 CC */	lwz r3, __OSExpireTime+0x4@sda21(r13)
 /* 8035E828 00327DE8  7C 60 03 78 */	or r0, r3, r0
 /* 8035E82C 00327DEC  30 60 FF FF */	addic r3, r0, -0x1
 /* 8035E830 00327DF0  7C 63 01 10 */	subfe r3, r3, r0
@@ -580,7 +580,6 @@
 	.4byte 0x2F657870
 	.4byte 0x69726564
 	.4byte 0x00000000
-.sym lbl_8055EECC, local
 
 .obj "@1519", local
 	.4byte 0x4F53506C
@@ -589,7 +588,6 @@
 	.byte 0x00
 .endobj "@1519"
 	.byte 0x00, 0x00, 0x00
-.sym lbl_8055EEDC, local
 
 .obj "@1521", local
 	.4byte 0x506C6179
@@ -605,7 +603,6 @@
 # 0x805D5500 - 0x805D5540
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D5500, local
 
 .obj __OSExpireAlarm, global
 	.skip 0x30
@@ -615,41 +612,30 @@
 # 0x80665BB0 - 0x80665BB8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665BB0, local
 
 .obj "@1520", local
 	.4byte 0x45787069
 	.4byte 0x72656400
 .endobj "@1520"
 
-# 0x80667B38 - 0x80667B54
+# 0x80667B38 - 0x80667B50
 .section .sbss, "wa", @nobits
 .balign 8
 .sym lbl_80667B38, local
 	.skip 0x4
-.sym lbl_80667B3C, local
 
 .obj __OSExpireSetExpiredFlag, global
 	.skip 0x4
 .endobj __OSExpireSetExpiredFlag
-.sym lbl_80667B40, local
 
 .obj __OSExpireCallback, global
 	.skip 0x4
 .endobj __OSExpireCallback
 	.skip 0x4
-.sym lbl_80667B48, local
 
 .obj __OSExpireTime, global
-	.skip 0x4
-.sym lbl_80667B4C, local
-	.skip 0x4
+	.skip 0x8
 .endobj __OSExpireTime
-.sym lbl_80667B50, local
-
-.obj __PADSpec, global
-	.skip 0x4
-.endobj __PADSpec
 
 # 0x8066C1D8 - 0x8066C1E8
 .section .sdata2, "a"

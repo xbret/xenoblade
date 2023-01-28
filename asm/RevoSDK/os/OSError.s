@@ -59,9 +59,9 @@
 /* 80354F9C 0031E55C  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80354FA0 0031E560  7C 9C 23 78 */	mr r28, r4
 /* 80354FA4 0031E564  48 00 3A 0D */	bl OSDisableInterrupts
-/* 80354FA8 0031E568  3C 80 80 5D */	lis r4, lbl_805D43B0@ha
+/* 80354FA8 0031E568  3C 80 80 5D */	lis r4, __OSErrorTable@ha
 /* 80354FAC 0031E56C  57 A0 13 BA */	clrlslwi r0, r29, 16, 2
-/* 80354FB0 0031E570  38 84 43 B0 */	addi r4, r4, lbl_805D43B0@l
+/* 80354FB0 0031E570  38 84 43 B0 */	addi r4, r4, __OSErrorTable@l
 /* 80354FB4 0031E574  28 1D 00 10 */	cmplwi r29, 0x10
 /* 80354FB8 0031E578  7F C4 00 2E */	lwzx r30, r4, r0
 /* 80354FBC 0031E57C  7C 7D 1B 78 */	mr r29, r3
@@ -436,7 +436,6 @@
 # 0x80551C50 - 0x80551F30
 .data
 .balign 8
-.sym lbl_80551C50, local
 
 .obj "@641", local
 	.4byte 0x20696E20
@@ -629,7 +628,6 @@
 # 0x805D43B0 - 0x805D4400
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D43B0, local
 
 .obj __OSErrorTable, global
 	.skip 0x44
@@ -641,7 +639,6 @@
 .balign 8
 .sym lbl_80665B68, local
 	.4byte 0x000000F8
-.sym lbl_80665B6C, local
 
 .obj "@703", local
 	.2byte 0x0A00

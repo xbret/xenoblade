@@ -79,7 +79,6 @@
 # 0x80667B80 - 0x80667B88
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667B80, local
 
 .obj SamplingRate, local
 	.skip 0x4

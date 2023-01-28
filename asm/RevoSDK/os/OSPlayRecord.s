@@ -556,7 +556,6 @@
 # 0x80665BA0 - 0x80665BA8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665BA0, local
 
 .obj PlayRecordState, local
 	.4byte 0x00000009
@@ -566,32 +565,26 @@
 # 0x80667B08 - 0x80667B28
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667B08, local
 
 .obj PlayRecordGet, local
 	.skip 0x4
 .endobj PlayRecordGet
-.sym lbl_80667B0C, local
 
 .obj PlayRecordError, local
 	.skip 0x4
 .endobj PlayRecordError
-.sym lbl_80667B10, local
 
 .obj PlayRecordTerminate, local
 	.skip 0x4
 .endobj PlayRecordTerminate
-.sym lbl_80667B14, local
 
 .obj PlayRecordTerminated, local
 	.skip 0x4
 .endobj PlayRecordTerminated
-.sym lbl_80667B18, local
 
 .obj PlayRecordRetry, local
 	.skip 0x4
 .endobj PlayRecordRetry
-.sym lbl_80667B1C, local
 
 .obj PlayRecordLastError, local
 	.skip 0x4

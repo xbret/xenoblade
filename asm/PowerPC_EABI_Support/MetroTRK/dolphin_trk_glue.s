@@ -248,9 +248,9 @@
 .endfn UnreserveEXI2Port
 
 .fn TRK_board_display, global
-/* 802CC554 00295B14  3C A0 80 54 */	lis r5, lbl_8053FD80@ha
+/* 802CC554 00295B14  3C A0 80 54 */	lis r5, "@stringBase0"@ha
 /* 802CC558 00295B18  7C 64 1B 78 */	mr r4, r3
-/* 802CC55C 00295B1C  38 A5 FD 80 */	addi r5, r5, lbl_8053FD80@l
+/* 802CC55C 00295B1C  38 A5 FD 80 */	addi r5, r5, "@stringBase0"@l
 /* 802CC560 00295B20  38 65 00 DD */	addi r3, r5, 0xdd
 /* 802CC564 00295B24  4C C6 31 82 */	crclr 4*cr1+eq
 /* 802CC568 00295B28  48 08 89 88 */	b OSReport
@@ -283,7 +283,6 @@
 # 0x8053FD80 - 0x8053FE68
 .data
 .balign 8
-.sym lbl_8053FD80, local
 
 .obj "@stringBase0", local
 	.4byte 0x4465766B
@@ -358,7 +357,6 @@
 # 0x80667578 - 0x80667580
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667578, local
 
 .obj TRK_Use_BBA, global
 	.skip 0x1

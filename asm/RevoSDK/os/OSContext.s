@@ -751,7 +751,6 @@
 	.4byte 0x20202020
 	.4byte 0x30782530
 	.4byte 0x38780A00
-.sym lbl_80551C28, local
 
 .obj "@733", local
 	.4byte 0x4650552D

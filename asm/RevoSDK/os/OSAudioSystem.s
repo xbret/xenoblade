@@ -348,7 +348,6 @@
 # 0x805517B8 - 0x80551838
 .data
 .balign 8
-.sym lbl_805517B8, local
 
 .obj DSPInitCode, local
 	.4byte 0x029F0010

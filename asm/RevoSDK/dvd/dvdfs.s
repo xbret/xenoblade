@@ -946,7 +946,6 @@
 # 0x80665970 - 0x80665980
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665970, local
 
 .obj __DVDLongFileNameFlag, global
 	.4byte 0x00000001
@@ -961,27 +960,22 @@
 .balign 8
 .sym lbl_806677A8, local
 	.skip 0x8
-.sym lbl_806677B0, local
 
 .obj __DVDThreadQueue, global
 	.skip 0x8
 .endobj __DVDThreadQueue
-.sym lbl_806677B8, local
 
 .obj MaxEntryNum, local
 	.skip 0x4
 .endobj MaxEntryNum
-.sym lbl_806677BC, local
 
 .obj FstStringStart, local
 	.skip 0x4
 .endobj FstStringStart
-.sym lbl_806677C0, local
 
 .obj FstStart, local
 	.skip 0x4
 .endobj FstStart
-.sym lbl_806677C4, local
 
 .obj BootInfo, local
 	.skip 0x4

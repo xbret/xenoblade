@@ -35,12 +35,10 @@
 .balign 8
 .sym lbl_80667540, local
 	.skip 0x4
-.sym lbl_80667544, local
 
 .obj __stdio_exit, global
 	.skip 0x4
 .endobj __stdio_exit
-.sym lbl_80667548, local
 
 .obj __msl_constraint_handler, local
 	.skip 0x4

@@ -646,7 +646,6 @@
 # 0x805517A8 - 0x805517B8
 .data
 .balign 8
-.sym lbl_805517A8, local
 
 .obj ShutdownFunctionInfo, local
 	.4byte OnReset
@@ -658,7 +657,6 @@
 # 0x80667A48 - 0x80667A50
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667A48, local
 
 .obj AlarmQueue, local
 	.skip 0x8

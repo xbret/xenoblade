@@ -622,14 +622,14 @@
 /* 8030FF9C 002D955C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8030FFA0 002D9560  40 82 00 18 */	bne .L_8030FFB8
 /* 8030FFA4 002D9564  48 00 26 FD */	bl DVDLowGetControlRegister
-/* 8030FFA8 002D9568  3C 80 80 5D */	lis r4, lbl_805CCB40@ha
-/* 8030FFAC 002D956C  38 84 CB 40 */	addi r4, r4, lbl_805CCB40@l
+/* 8030FFA8 002D9568  3C 80 80 5D */	lis r4, __ErrorInfo@ha
+/* 8030FFAC 002D956C  38 84 CB 40 */	addi r4, r4, __ErrorInfo@l
 /* 8030FFB0 002D9570  90 64 00 14 */	stw r3, 0x14(r4)
 /* 8030FFB4 002D9574  48 00 00 14 */	b .L_8030FFC8
 .L_8030FFB8:
-/* 8030FFB8 002D9578  3C 60 80 5D */	lis r3, lbl_805CCB40@ha
+/* 8030FFB8 002D9578  3C 60 80 5D */	lis r3, __ErrorInfo@ha
 /* 8030FFBC 002D957C  38 00 FF FF */	li r0, -0x1
-/* 8030FFC0 002D9580  38 63 CB 40 */	addi r3, r3, lbl_805CCB40@l
+/* 8030FFC0 002D9580  38 63 CB 40 */	addi r3, r3, __ErrorInfo@l
 /* 8030FFC4 002D9584  90 03 00 14 */	stw r0, 0x14(r3)
 .L_8030FFC8:
 /* 8030FFC8 002D9588  3C 60 80 55 */	lis r3, lbl_80549D4C@ha
@@ -664,14 +664,14 @@
 /* 8031002C 002D95EC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80310030 002D95F0  40 82 00 18 */	bne .L_80310048
 /* 80310034 002D95F4  48 00 26 5D */	bl DVDLowGetStatusRegister
-/* 80310038 002D95F8  3C 80 80 5D */	lis r4, lbl_805CCB40@ha
-/* 8031003C 002D95FC  38 84 CB 40 */	addi r4, r4, lbl_805CCB40@l
+/* 80310038 002D95F8  3C 80 80 5D */	lis r4, __ErrorInfo@ha
+/* 8031003C 002D95FC  38 84 CB 40 */	addi r4, r4, __ErrorInfo@l
 /* 80310040 002D9600  90 64 00 10 */	stw r3, 0x10(r4)
 /* 80310044 002D9604  48 00 00 14 */	b .L_80310058
 .L_80310048:
-/* 80310048 002D9608  3C 60 80 5D */	lis r3, lbl_805CCB40@ha
+/* 80310048 002D9608  3C 60 80 5D */	lis r3, __ErrorInfo@ha
 /* 8031004C 002D960C  38 00 FF FF */	li r0, -0x1
-/* 80310050 002D9610  38 63 CB 40 */	addi r3, r3, lbl_805CCB40@l
+/* 80310050 002D9610  38 63 CB 40 */	addi r3, r3, __ErrorInfo@l
 /* 80310054 002D9614  90 03 00 10 */	stw r0, 0x10(r3)
 .L_80310058:
 /* 80310058 002D9618  3C 60 80 31 */	lis r3, cbForPrepareControlRegister@ha
@@ -751,7 +751,6 @@
 	.skip 0x8C
 .sym lbl_805CCA6C, local
 	.skip 0xD4
-.sym lbl_805CCB40, local
 
 .obj __ErrorInfo, global
 	.skip 0x80
@@ -765,7 +764,6 @@
 	.skip 0x4
 .sym lbl_8066787C, local
 	.skip 0x4
-.sym lbl_80667880, local
 
 .obj Callback, local
 	.skip 0x4

@@ -541,9 +541,9 @@
 /* 800CABA4 00094164  38 1D FF FA */	addi r0, r29, -0x6
 /* 800CABA8 00094168  28 00 00 0A */	cmplwi r0, 0xa
 /* 800CABAC 0009416C  41 81 06 30 */	bgt .L_800CB1DC
-/* 800CABB0 00094170  3C 60 80 53 */	lis r3, lbl_8052E310@ha
+/* 800CABB0 00094170  3C 60 80 53 */	lis r3, jumptable_8052E310@ha
 /* 800CABB4 00094174  54 00 10 3A */	slwi r0, r0, 2
-/* 800CABB8 00094178  38 63 E3 10 */	addi r3, r3, lbl_8052E310@l
+/* 800CABB8 00094178  38 63 E3 10 */	addi r3, r3, jumptable_8052E310@l
 /* 800CABBC 0009417C  7C 63 00 2E */	lwzx r3, r3, r0
 /* 800CABC0 00094180  7C 69 03 A6 */	mtctr r3
 /* 800CABC4 00094184  4E 80 04 20 */	bctr
@@ -6372,7 +6372,6 @@
 # 0x8052E310 - 0x8052E590
 .data
 .balign 8
-.sym lbl_8052E310, local
 
 .obj jumptable_8052E310, local
 	.rel fn_800CAB30, .L_800CAEE8

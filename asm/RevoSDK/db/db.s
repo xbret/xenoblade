@@ -99,12 +99,10 @@
 # 0x80667780 - 0x80667788
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667780, local
 
 .obj __DBInterface, global
 	.skip 0x4
 .endobj __DBInterface
-.sym lbl_80667784, local
 
 .obj DBVerbose, global
 	.skip 0x4

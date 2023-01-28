@@ -112,7 +112,6 @@
 # 0x8053FE88 - 0x8053FEA8
 .data
 .balign 8
-.sym lbl_8053FE88, local
 
 .obj "@stringBase0", local
 	.4byte 0x4D657472
@@ -131,7 +130,6 @@
 .balign 8
 .sym lbl_80667580, local
 	.skip 0x8
-.sym lbl_80667588, local
 
 .obj gTRKInputPendingPtr, global
 	.skip 0x4

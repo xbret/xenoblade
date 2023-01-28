@@ -110,8 +110,8 @@
 /* 803513F4 0031A9B4  7C 08 02 A6 */	mflr r0
 /* 803513F8 0031A9B8  90 01 00 94 */	stw r0, 0x94(r1)
 /* 803513FC 0031A9BC  93 E1 00 8C */	stw r31, 0x8c(r1)
-/* 80351400 0031A9C0  3F E0 80 5D */	lis r31, lbl_805D4040@ha
-/* 80351404 0031A9C4  3B FF 40 40 */	addi r31, r31, lbl_805D4040@l
+/* 80351400 0031A9C0  3F E0 80 5D */	lis r31, s_message@ha
+/* 80351404 0031A9C4  3B FF 40 40 */	addi r31, r31, s_message@l
 /* 80351408 0031A9C8  93 C1 00 88 */	stw r30, 0x88(r1)
 /* 8035140C 0031A9CC  7C 7E 1B 78 */	mr r30, r3
 /* 80351410 0031A9D0  80 8D B8 7C */	lwz r4, s_stage@sda21(r13)
@@ -420,7 +420,6 @@
 # 0x805512B8 - 0x80551300
 .data
 .balign 8
-.sym lbl_805512B8, local
 
 .obj "@1208", local
 	.4byte 0x2F736861
@@ -448,7 +447,6 @@
 # 0x805D4040 - 0x805D4340
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D4040, local
 
 .obj s_message, local
 	.skip 0x100
@@ -465,12 +463,10 @@
 # 0x806679F8 - 0x80667A00
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806679F8, local
 
 .obj s_callback, local
 	.skip 0x4
 .endobj s_callback
-.sym lbl_806679FC, local
 
 .obj s_stage, local
 	.skip 0x4

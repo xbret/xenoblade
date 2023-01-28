@@ -463,7 +463,6 @@
 # 0x806659C8 - 0x806659D8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806659C8, local
 
 .obj __esFd, local
 	.4byte 0xFFFFFFFF

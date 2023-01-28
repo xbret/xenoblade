@@ -111,12 +111,10 @@
 # 0x80665B60 - 0x80665B68
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B60, local
 
 .obj __OSArenaLo, local
 	.4byte 0xFFFFFFFF
 .endobj __OSArenaLo
-.sym lbl_80665B64, local
 
 .obj s_mem2ArenaLo, local
 	.4byte 0xFFFFFFFF
@@ -125,12 +123,10 @@
 # 0x80667A60 - 0x80667A68
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667A60, local
 
 .obj __OSArenaHi, local
 	.skip 0x4
 .endobj __OSArenaHi
-.sym lbl_80667A64, local
 
 .obj s_mem2ArenaHi, local
 	.skip 0x4

@@ -33,9 +33,9 @@
 /* 8030F4C4 002D8A84  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8030F4C8 002D8A88  7C 7E 1B 78 */	mr r30, r3
 /* 8030F4CC 002D8A8C  48 04 94 E5 */	bl OSDisableInterrupts
-/* 8030F4D0 002D8A90  3C 80 80 5D */	lis r4, lbl_805CC9B0@ha
+/* 8030F4D0 002D8A90  3C 80 80 5D */	lis r4, WaitingQueue@ha
 /* 8030F4D4 002D8A94  57 C0 18 38 */	slwi r0, r30, 3
-/* 8030F4D8 002D8A98  38 84 C9 B0 */	addi r4, r4, lbl_805CC9B0@l
+/* 8030F4D8 002D8A98  38 84 C9 B0 */	addi r4, r4, WaitingQueue@l
 /* 8030F4DC 002D8A9C  7C A4 02 14 */	add r5, r4, r0
 /* 8030F4E0 002D8AA0  80 85 00 04 */	lwz r4, 0x4(r5)
 /* 8030F4E4 002D8AA4  93 E4 00 00 */	stw r31, 0x0(r4)
@@ -61,10 +61,10 @@
 /* 8030F528 002D8AE8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8030F52C 002D8AEC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8030F530 002D8AF0  48 04 94 81 */	bl OSDisableInterrupts
-/* 8030F534 002D8AF4  3C 80 80 5D */	lis r4, lbl_805CC9B0@ha
+/* 8030F534 002D8AF4  3C 80 80 5D */	lis r4, WaitingQueue@ha
 /* 8030F538 002D8AF8  38 00 00 04 */	li r0, 0x4
 /* 8030F53C 002D8AFC  3B E0 00 00 */	li r31, 0x0
-/* 8030F540 002D8B00  38 84 C9 B0 */	addi r4, r4, lbl_805CC9B0@l
+/* 8030F540 002D8B00  38 84 C9 B0 */	addi r4, r4, WaitingQueue@l
 /* 8030F544 002D8B04  7C 09 03 A6 */	mtctr r0
 .L_8030F548:
 /* 8030F548 002D8B08  80 04 00 00 */	lwz r0, 0x0(r4)
@@ -72,9 +72,9 @@
 /* 8030F550 002D8B10  41 82 00 48 */	beq .L_8030F598
 /* 8030F554 002D8B14  48 04 94 9D */	bl OSRestoreInterrupts
 /* 8030F558 002D8B18  48 04 94 59 */	bl OSDisableInterrupts
-/* 8030F55C 002D8B1C  3C 80 80 5D */	lis r4, lbl_805CC9B0@ha
+/* 8030F55C 002D8B1C  3C 80 80 5D */	lis r4, WaitingQueue@ha
 /* 8030F560 002D8B20  57 E0 18 38 */	slwi r0, r31, 3
-/* 8030F564 002D8B24  38 84 C9 B0 */	addi r4, r4, lbl_805CC9B0@l
+/* 8030F564 002D8B24  38 84 C9 B0 */	addi r4, r4, WaitingQueue@l
 /* 8030F568 002D8B28  7F E4 00 2E */	lwzx r31, r4, r0
 /* 8030F56C 002D8B2C  7C A4 02 14 */	add r5, r4, r0
 /* 8030F570 002D8B30  80 1F 00 00 */	lwz r0, 0x0(r31)
@@ -106,9 +106,9 @@
 /* 8030F5C4 002D8B84  7C 08 02 A6 */	mflr r0
 /* 8030F5C8 002D8B88  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8030F5CC 002D8B8C  48 04 93 E5 */	bl OSDisableInterrupts
-/* 8030F5D0 002D8B90  3C 80 80 5D */	lis r4, lbl_805CC9B0@ha
+/* 8030F5D0 002D8B90  3C 80 80 5D */	lis r4, WaitingQueue@ha
 /* 8030F5D4 002D8B94  38 00 00 04 */	li r0, 0x4
-/* 8030F5D8 002D8B98  38 84 C9 B0 */	addi r4, r4, lbl_805CC9B0@l
+/* 8030F5D8 002D8B98  38 84 C9 B0 */	addi r4, r4, WaitingQueue@l
 /* 8030F5DC 002D8B9C  7C 09 03 A6 */	mtctr r0
 .L_8030F5E0:
 /* 8030F5E0 002D8BA0  80 04 00 00 */	lwz r0, 0x0(r4)
@@ -137,9 +137,9 @@
 /* 8030F628 002D8BE8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8030F62C 002D8BEC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8030F630 002D8BF0  48 04 93 81 */	bl OSDisableInterrupts
-/* 8030F634 002D8BF4  3C 80 80 5D */	lis r4, lbl_805CC9B0@ha
+/* 8030F634 002D8BF4  3C 80 80 5D */	lis r4, WaitingQueue@ha
 /* 8030F638 002D8BF8  38 00 00 04 */	li r0, 0x4
-/* 8030F63C 002D8BFC  38 84 C9 B0 */	addi r4, r4, lbl_805CC9B0@l
+/* 8030F63C 002D8BFC  38 84 C9 B0 */	addi r4, r4, WaitingQueue@l
 /* 8030F640 002D8C00  7C 09 03 A6 */	mtctr r0
 /* 8030F644 002D8C04  60 00 00 00 */	nop
 .L_8030F648:
@@ -198,7 +198,6 @@
 # 0x805CC9B0 - 0x805CC9E0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CC9B0, local
 
 .obj WaitingQueue, local
 	.skip 0x20

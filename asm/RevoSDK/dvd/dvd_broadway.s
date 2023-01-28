@@ -15,8 +15,8 @@
 /* 80310618 002D9BD8  3C 05 01 15 */	addis r0, r5, 0x115
 /* 8031061C 002D9BDC  28 00 DA ED */	cmplwi r0, 0xdaed
 /* 80310620 002D9BE0  41 82 00 24 */	beq .L_80310644
-/* 80310624 002D9BE4  3C 60 80 55 */	lis r3, lbl_8054A6C0@ha
-/* 80310628 002D9BE8  38 63 A6 C0 */	addi r3, r3, lbl_8054A6C0@l
+/* 80310624 002D9BE4  3C 60 80 55 */	lis r3, "@3815"@ha
+/* 80310628 002D9BE8  38 63 A6 C0 */	addi r3, r3, "@3815"@l
 /* 8031062C 002D9BEC  4C C6 31 82 */	crclr 4*cr1+eq
 /* 80310630 002D9BF0  48 04 48 C1 */	bl OSReport
 /* 80310634 002D9BF4  3C 60 FE EC */	lis r3, 0xfeec
@@ -63,10 +63,10 @@
 .fn doPrepareCoverRegisterCallback, global
 /* 803106C0 002D9C80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803106C4 002D9C84  7C 08 02 A6 */	mflr r0
-/* 803106C8 002D9C88  3C A0 80 5D */	lis r5, lbl_805CCCE0@ha
+/* 803106C8 002D9C88  3C A0 80 5D */	lis r5, diRegValCache@ha
 /* 803106CC 002D9C8C  3C C0 80 5D */	lis r6, lbl_805CCD00@ha
 /* 803106D0 002D9C90  90 01 00 14 */	stw r0, 0x14(r1)
-/* 803106D4 002D9C94  38 A5 CC E0 */	addi r5, r5, lbl_805CCCE0@l
+/* 803106D4 002D9C94  38 A5 CC E0 */	addi r5, r5, diRegValCache@l
 /* 803106D8 002D9C98  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803106DC 002D9C9C  7C 9F 23 78 */	mr r31, r4
 /* 803106E0 002D9CA0  80 06 CD 00 */	lwz r0, lbl_805CCD00@l(r6)
@@ -77,8 +77,8 @@
 /* 803106F4 002D9CB4  3C 05 01 15 */	addis r0, r5, 0x115
 /* 803106F8 002D9CB8  28 00 DA ED */	cmplwi r0, 0xdaed
 /* 803106FC 002D9CBC  41 82 00 24 */	beq .L_80310720
-/* 80310700 002D9CC0  3C 60 80 55 */	lis r3, lbl_8054A6C0@ha
-/* 80310704 002D9CC4  38 63 A6 C0 */	addi r3, r3, lbl_8054A6C0@l
+/* 80310700 002D9CC0  3C 60 80 55 */	lis r3, "@3815"@ha
+/* 80310704 002D9CC4  38 63 A6 C0 */	addi r3, r3, "@3815"@l
 /* 80310708 002D9CC8  4C C6 31 82 */	crclr 4*cr1+eq
 /* 8031070C 002D9CCC  48 04 47 E5 */	bl OSReport
 /* 80310710 002D9CD0  3C 60 FE EC */	lis r3, 0xfeec
@@ -144,8 +144,8 @@
 /* 803107D4 002D9D94  7C 08 02 A6 */	mflr r0
 /* 803107D8 002D9D98  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803107DC 002D9D9C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803107E0 002D9DA0  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 803107E4 002D9DA4  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 803107E0 002D9DA0  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 803107E4 002D9DA4  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 803107E8 002D9DA8  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 803107EC 002D9DAC  88 0D B7 25 */	lbz r0, lbl_806678A5@sda21(r13)
 /* 803107F0 002D9DB0  2C 00 00 00 */	cmpwi r0, 0x0
@@ -227,8 +227,8 @@
 /* 803108FC 002D9EBC  2C 00 00 00 */	cmpwi r0, 0x0
 /* 80310900 002D9EC0  40 82 00 78 */	bne .L_80310978
 /* 80310904 002D9EC4  38 A0 00 00 */	li r5, 0x0
-/* 80310908 002D9EC8  3C 80 80 5D */	lis r4, lbl_805CCC60@ha
-/* 8031090C 002D9ECC  94 A4 CC 60 */	stwu r5, lbl_805CCC60@l(r4)
+/* 80310908 002D9EC8  3C 80 80 5D */	lis r4, dvdContexts@ha
+/* 8031090C 002D9ECC  94 A4 CC 60 */	stwu r5, dvdContexts@l(r4)
 /* 80310910 002D9ED0  3C 60 FE EC */	lis r3, 0xfeec
 /* 80310914 002D9ED4  38 00 00 01 */	li r0, 0x1
 /* 80310918 002D9ED8  38 C0 00 02 */	li r6, 0x2
@@ -318,13 +318,13 @@
 .fn DVDLowReadDiskID, global
 /* 80310A40 002DA000  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80310A44 002DA004  7C 08 02 A6 */	mflr r0
-/* 80310A48 002DA008  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
+/* 80310A48 002DA008  3C E0 80 5D */	lis r7, dvdContexts@ha
 /* 80310A4C 002DA00C  39 40 00 01 */	li r10, 0x1
 /* 80310A50 002DA010  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80310A54 002DA014  38 E7 CC 60 */	addi r7, r7, lbl_805CCC60@l
+/* 80310A54 002DA014  38 E7 CC 60 */	addi r7, r7, dvdContexts@l
 /* 80310A58 002DA018  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80310A5C 002DA01C  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 80310A60 002DA020  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 80310A5C 002DA01C  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 80310A60 002DA020  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 80310A64 002DA024  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80310A68 002DA028  7C 7E 1B 78 */	mr r30, r3
 /* 80310A6C 002DA02C  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -369,10 +369,10 @@
 /* 80310AF8 002DA0B8  38 00 00 00 */	li r0, 0x0
 /* 80310AFC 002DA0BC  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_80310B00:
-/* 80310B00 002DA0C0  3C 80 80 5D */	lis r4, lbl_805CCC60@ha
+/* 80310B00 002DA0C0  3C 80 80 5D */	lis r4, dvdContexts@ha
 /* 80310B04 002DA0C4  2C 03 00 00 */	cmpwi r3, 0x0
 /* 80310B08 002DA0C8  55 20 28 34 */	slwi r0, r9, 5
-/* 80310B0C 002DA0CC  38 84 CC 60 */	addi r4, r4, lbl_805CCC60@l
+/* 80310B0C 002DA0CC  38 84 CC 60 */	addi r4, r4, dvdContexts@l
 /* 80310B10 002DA0D0  7F A4 02 14 */	add r29, r4, r0
 /* 80310B14 002DA0D4  40 82 00 10 */	bne .L_80310B24
 /* 80310B18 002DA0D8  38 7F 02 E8 */	addi r3, r31, 0x2e8
@@ -430,13 +430,13 @@
 .fn DVDLowOpenPartition, global
 /* 80310BD0 002DA190  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80310BD4 002DA194  7C 08 02 A6 */	mflr r0
-/* 80310BD8 002DA198  3D 20 80 5D */	lis r9, lbl_805CCC60@ha
+/* 80310BD8 002DA198  3D 20 80 5D */	lis r9, dvdContexts@ha
 /* 80310BDC 002DA19C  2C 04 00 00 */	cmpwi r4, 0x0
 /* 80310BE0 002DA1A0  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80310BE4 002DA1A4  39 29 CC 60 */	addi r9, r9, lbl_805CCC60@l
+/* 80310BE4 002DA1A4  39 29 CC 60 */	addi r9, r9, dvdContexts@l
 /* 80310BE8 002DA1A8  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80310BEC 002DA1AC  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 80310BF0 002DA1B0  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 80310BEC 002DA1AC  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 80310BF0 002DA1B0  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 80310BF4 002DA1B4  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80310BF8 002DA1B8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80310BFC 002DA1BC  93 81 00 10 */	stw r28, 0x10(r1)
@@ -608,10 +608,10 @@
 /* 80310E4C 002DA40C  39 61 00 20 */	addi r11, r1, 0x20
 /* 80310E50 002DA410  4B FA 93 05 */	bl _savegpr_27
 /* 80310E54 002DA414  2C 08 00 00 */	cmpwi r8, 0x0
-/* 80310E58 002DA418  3D 40 80 5D */	lis r10, lbl_805CCC60@ha
-/* 80310E5C 002DA41C  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 80310E60 002DA420  39 4A CC 60 */	addi r10, r10, lbl_805CCC60@l
-/* 80310E64 002DA424  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 80310E58 002DA418  3D 40 80 5D */	lis r10, dvdContexts@ha
+/* 80310E5C 002DA41C  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 80310E60 002DA420  39 4A CC 60 */	addi r10, r10, dvdContexts@l
+/* 80310E64 002DA424  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 80310E68 002DA428  41 82 00 14 */	beq .L_80310E7C
 /* 80310E6C 002DA42C  55 00 06 FF */	clrlwi. r0, r8, 27
 /* 80310E70 002DA430  41 82 00 0C */	beq .L_80310E7C
@@ -781,8 +781,8 @@
 /* 803110B8 002DA678  2C 04 00 00 */	cmpwi r4, 0x0
 /* 803110BC 002DA67C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803110C0 002DA680  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803110C4 002DA684  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 803110C8 002DA688  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 803110C4 002DA684  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 803110C8 002DA688  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 803110CC 002DA68C  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 803110D0 002DA690  41 82 00 0C */	beq .L_803110DC
 /* 803110D4 002DA694  2C 05 00 00 */	cmpwi r5, 0x0
@@ -814,11 +814,11 @@
 /* 80311130 002DA6F0  48 00 01 78 */	b .L_803112A8
 .L_80311134:
 /* 80311134 002DA6F4  81 6D B7 20 */	lwz r11, freeDvdContext@sda21(r13)
-/* 80311138 002DA6F8  3D 20 80 5D */	lis r9, lbl_805CCC60@ha
+/* 80311138 002DA6F8  3D 20 80 5D */	lis r9, dvdContexts@ha
 /* 8031113C 002DA6FC  39 80 00 01 */	li r12, 0x1
 /* 80311140 002DA700  99 8D B7 18 */	stb r12, requestInProgress@sda21(r13)
 /* 80311144 002DA704  55 6A 28 34 */	slwi r10, r11, 5
-/* 80311148 002DA708  39 29 CC 60 */	addi r9, r9, lbl_805CCC60@l
+/* 80311148 002DA708  39 29 CC 60 */	addi r9, r9, dvdContexts@l
 /* 8031114C 002DA70C  7D 09 52 14 */	add r8, r9, r10
 /* 80311150 002DA710  88 E8 00 08 */	lbz r7, 0x8(r8)
 /* 80311154 002DA714  7C 07 00 D0 */	neg r0, r7
@@ -858,10 +858,10 @@
 /* 803111CC 002DA78C  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_803111D0:
 /* 803111D0 002DA790  80 CD B7 1C */	lwz r6, freeCommandBuf@sda21(r13)
-/* 803111D4 002DA794  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
+/* 803111D4 002DA794  3C E0 80 5D */	lis r7, dvdContexts@ha
 /* 803111D8 002DA798  55 68 28 34 */	slwi r8, r11, 5
 /* 803111DC 002DA79C  38 06 00 01 */	addi r0, r6, 0x1
-/* 803111E0 002DA7A0  38 E7 CC 60 */	addi r7, r7, lbl_805CCC60@l
+/* 803111E0 002DA7A0  38 E7 CC 60 */	addi r7, r7, dvdContexts@l
 /* 803111E4 002DA7A4  2C 00 00 04 */	cmpwi r0, 0x4
 /* 803111E8 002DA7A8  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 /* 803111EC 002DA7AC  7F C7 42 14 */	add r30, r7, r8
@@ -929,9 +929,9 @@
 /* 803112CC 002DA88C  39 61 00 30 */	addi r11, r1, 0x30
 /* 803112D0 002DA890  4B FA 8E 79 */	bl _savegpr_24
 /* 803112D4 002DA894  2C 04 00 00 */	cmpwi r4, 0x0
-/* 803112D8 002DA898  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
+/* 803112D8 002DA898  3F E0 80 55 */	lis r31, "@3815"@ha
 /* 803112DC 002DA89C  83 81 00 38 */	lwz r28, 0x38(r1)
-/* 803112E0 002DA8A0  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 803112E0 002DA8A0  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 803112E4 002DA8A4  41 82 00 34 */	beq .L_80311318
 /* 803112E8 002DA8A8  2C 05 00 00 */	cmpwi r5, 0x0
 /* 803112EC 002DA8AC  41 82 00 2C */	beq .L_80311318
@@ -976,11 +976,11 @@
 /* 8031137C 002DA93C  48 00 01 C4 */	b .L_80311540
 .L_80311380:
 /* 80311380 002DA940  83 4D B7 20 */	lwz r26, freeDvdContext@sda21(r13)
-/* 80311384 002DA944  3F 00 80 5D */	lis r24, lbl_805CCC60@ha
+/* 80311384 002DA944  3F 00 80 5D */	lis r24, dvdContexts@ha
 /* 80311388 002DA948  3B 60 00 01 */	li r27, 0x1
 /* 8031138C 002DA94C  9B 6D B7 18 */	stb r27, requestInProgress@sda21(r13)
 /* 80311390 002DA950  57 59 28 34 */	slwi r25, r26, 5
-/* 80311394 002DA954  3B 18 CC 60 */	addi r24, r24, lbl_805CCC60@l
+/* 80311394 002DA954  3B 18 CC 60 */	addi r24, r24, dvdContexts@l
 /* 80311398 002DA958  7D 98 CA 14 */	add r12, r24, r25
 /* 8031139C 002DA95C  89 6C 00 08 */	lbz r11, 0x8(r12)
 /* 803113A0 002DA960  7C 0B 00 D0 */	neg r0, r11
@@ -1019,10 +1019,10 @@
 /* 80311414 002DA9D4  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_80311418:
 /* 80311418 002DA9D8  81 6D B7 1C */	lwz r11, freeCommandBuf@sda21(r13)
-/* 8031141C 002DA9DC  3D 80 80 5D */	lis r12, lbl_805CCC60@ha
+/* 8031141C 002DA9DC  3D 80 80 5D */	lis r12, dvdContexts@ha
 /* 80311420 002DA9E0  57 58 28 34 */	slwi r24, r26, 5
 /* 80311424 002DA9E4  38 0B 00 01 */	addi r0, r11, 0x1
-/* 80311428 002DA9E8  39 8C CC 60 */	addi r12, r12, lbl_805CCC60@l
+/* 80311428 002DA9E8  39 8C CC 60 */	addi r12, r12, dvdContexts@l
 /* 8031142C 002DA9EC  2C 00 00 04 */	cmpwi r0, 0x4
 /* 80311430 002DA9F0  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 /* 80311434 002DA9F4  7F CC C2 14 */	add r30, r12, r24
@@ -1110,8 +1110,8 @@
 /* 80311564 002DAB24  7C 08 02 A6 */	mflr r0
 /* 80311568 002DAB28  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8031156C 002DAB2C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80311570 002DAB30  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 80311574 002DAB34  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 80311570 002DAB30  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 80311574 002DAB34  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 80311578 002DAB38  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8031157C 002DAB3C  80 8D B7 1C */	lwz r4, freeCommandBuf@sda21(r13)
 /* 80311580 002DAB40  38 04 00 01 */	addi r0, r4, 0x1
@@ -1122,12 +1122,12 @@
 /* 80311594 002DAB54  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 .L_80311598:
 /* 80311598 002DAB58  80 8D B7 34 */	lwz r4, diCommand@sda21(r13)
-/* 8031159C 002DAB5C  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
+/* 8031159C 002DAB5C  3C E0 80 5D */	lis r7, dvdContexts@ha
 /* 803115A0 002DAB60  54 00 28 34 */	slwi r0, r0, 5
 /* 803115A4 002DAB64  38 A0 00 8C */	li r5, 0x8c
 /* 803115A8 002DAB68  7C A4 01 AE */	stbx r5, r4, r0
 /* 803115AC 002DAB6C  39 20 00 01 */	li r9, 0x1
-/* 803115B0 002DAB70  38 E7 CC 60 */	addi r7, r7, lbl_805CCC60@l
+/* 803115B0 002DAB70  38 E7 CC 60 */	addi r7, r7, dvdContexts@l
 /* 803115B4 002DAB74  80 8D B7 20 */	lwz r4, freeDvdContext@sda21(r13)
 /* 803115B8 002DAB78  99 2D B7 18 */	stb r9, requestInProgress@sda21(r13)
 /* 803115BC 002DAB7C  54 88 28 34 */	slwi r8, r4, 5
@@ -1169,10 +1169,10 @@
 /* 8031163C 002DABFC  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_80311640:
 /* 80311640 002DAC00  80 0D B7 1C */	lwz r0, freeCommandBuf@sda21(r13)
-/* 80311644 002DAC04  3C 60 80 5D */	lis r3, lbl_805CCC60@ha
+/* 80311644 002DAC04  3C 60 80 5D */	lis r3, dvdContexts@ha
 /* 80311648 002DAC08  54 85 28 34 */	slwi r5, r4, 5
 /* 8031164C 002DAC0C  80 8D B7 34 */	lwz r4, diCommand@sda21(r13)
-/* 80311650 002DAC10  38 63 CC 60 */	addi r3, r3, lbl_805CCC60@l
+/* 80311650 002DAC10  38 63 CC 60 */	addi r3, r3, dvdContexts@l
 /* 80311654 002DAC14  3D 20 80 31 */	lis r9, doTransactionCallback@ha
 /* 80311658 002DAC18  7F C3 2A 14 */	add r30, r3, r5
 /* 8031165C 002DAC1C  54 00 28 34 */	slwi r0, r0, 5
@@ -1211,13 +1211,13 @@
 .fn DVDLowUnencryptedRead, global
 /* 803116D0 002DAC90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803116D4 002DAC94  7C 08 02 A6 */	mflr r0
-/* 803116D8 002DAC98  3D 20 80 5D */	lis r9, lbl_805CCC60@ha
+/* 803116D8 002DAC98  3D 20 80 5D */	lis r9, dvdContexts@ha
 /* 803116DC 002DAC9C  39 80 00 01 */	li r12, 0x1
 /* 803116E0 002DACA0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 803116E4 002DACA4  39 29 CC 60 */	addi r9, r9, lbl_805CCC60@l
+/* 803116E4 002DACA4  39 29 CC 60 */	addi r9, r9, dvdContexts@l
 /* 803116E8 002DACA8  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803116EC 002DACAC  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 803116F0 002DACB0  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 803116EC 002DACAC  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 803116F0 002DACB0  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 803116F4 002DACB4  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 803116F8 002DACB8  81 6D B7 20 */	lwz r11, freeDvdContext@sda21(r13)
 /* 803116FC 002DACBC  99 8D B7 18 */	stb r12, requestInProgress@sda21(r13)
@@ -1261,11 +1261,11 @@
 /* 80311784 002DAD44  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_80311788:
 /* 80311788 002DAD48  80 CD B7 1C */	lwz r6, freeCommandBuf@sda21(r13)
-/* 8031178C 002DAD4C  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
+/* 8031178C 002DAD4C  3C E0 80 5D */	lis r7, dvdContexts@ha
 /* 80311790 002DAD50  90 8D B7 2C */	stw r4, lbl_806678AC@sda21(r13)
 /* 80311794 002DAD54  55 68 28 34 */	slwi r8, r11, 5
 /* 80311798 002DAD58  38 06 00 01 */	addi r0, r6, 0x1
-/* 8031179C 002DAD5C  38 E7 CC 60 */	addi r7, r7, lbl_805CCC60@l
+/* 8031179C 002DAD5C  38 E7 CC 60 */	addi r7, r7, dvdContexts@l
 /* 803117A0 002DAD60  2C 00 00 04 */	cmpwi r0, 0x4
 /* 803117A4 002DAD64  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 /* 803117A8 002DAD68  7F C7 42 14 */	add r30, r7, r8
@@ -1441,13 +1441,13 @@
 .fn DVDLowInquiry, global
 /* 80311A10 002DAFD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80311A14 002DAFD4  7C 08 02 A6 */	mflr r0
-/* 80311A18 002DAFD8  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
+/* 80311A18 002DAFD8  3C E0 80 5D */	lis r7, dvdContexts@ha
 /* 80311A1C 002DAFDC  39 40 00 01 */	li r10, 0x1
 /* 80311A20 002DAFE0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80311A24 002DAFE4  38 E7 CC 60 */	addi r7, r7, lbl_805CCC60@l
+/* 80311A24 002DAFE4  38 E7 CC 60 */	addi r7, r7, dvdContexts@l
 /* 80311A28 002DAFE8  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80311A2C 002DAFEC  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 80311A30 002DAFF0  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 80311A2C 002DAFEC  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 80311A30 002DAFF0  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 80311A34 002DAFF4  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 80311A38 002DAFF8  81 2D B7 20 */	lwz r9, freeDvdContext@sda21(r13)
 /* 80311A3C 002DAFFC  99 4D B7 18 */	stb r10, requestInProgress@sda21(r13)
@@ -1491,10 +1491,10 @@
 /* 80311AC4 002DB084  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_80311AC8:
 /* 80311AC8 002DB088  80 8D B7 1C */	lwz r4, freeCommandBuf@sda21(r13)
-/* 80311ACC 002DB08C  3C A0 80 5D */	lis r5, lbl_805CCC60@ha
+/* 80311ACC 002DB08C  3C A0 80 5D */	lis r5, dvdContexts@ha
 /* 80311AD0 002DB090  55 26 28 34 */	slwi r6, r9, 5
 /* 80311AD4 002DB094  38 04 00 01 */	addi r0, r4, 0x1
-/* 80311AD8 002DB098  38 A5 CC 60 */	addi r5, r5, lbl_805CCC60@l
+/* 80311AD8 002DB098  38 A5 CC 60 */	addi r5, r5, dvdContexts@l
 /* 80311ADC 002DB09C  2C 00 00 04 */	cmpwi r0, 0x4
 /* 80311AE0 002DB0A0  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 /* 80311AE4 002DB0A4  7F C5 32 14 */	add r30, r5, r6
@@ -1544,13 +1544,13 @@
 .fn DVDLowRequestError, global
 /* 80311B80 002DB140  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80311B84 002DB144  7C 08 02 A6 */	mflr r0
-/* 80311B88 002DB148  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
+/* 80311B88 002DB148  3C E0 80 5D */	lis r7, dvdContexts@ha
 /* 80311B8C 002DB14C  39 20 00 01 */	li r9, 0x1
 /* 80311B90 002DB150  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80311B94 002DB154  38 E7 CC 60 */	addi r7, r7, lbl_805CCC60@l
+/* 80311B94 002DB154  38 E7 CC 60 */	addi r7, r7, dvdContexts@l
 /* 80311B98 002DB158  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80311B9C 002DB15C  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 80311BA0 002DB160  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 80311B9C 002DB15C  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 80311BA0 002DB160  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 80311BA4 002DB164  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 80311BA8 002DB168  80 8D B7 20 */	lwz r4, freeDvdContext@sda21(r13)
 /* 80311BAC 002DB16C  99 2D B7 18 */	stb r9, requestInProgress@sda21(r13)
@@ -1592,10 +1592,10 @@
 /* 80311C2C 002DB1EC  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_80311C30:
 /* 80311C30 002DB1F0  80 6D B7 1C */	lwz r3, freeCommandBuf@sda21(r13)
-/* 80311C34 002DB1F4  3C A0 80 5D */	lis r5, lbl_805CCC60@ha
+/* 80311C34 002DB1F4  3C A0 80 5D */	lis r5, dvdContexts@ha
 /* 80311C38 002DB1F8  54 84 28 34 */	slwi r4, r4, 5
 /* 80311C3C 002DB1FC  38 03 00 01 */	addi r0, r3, 0x1
-/* 80311C40 002DB200  38 A5 CC 60 */	addi r5, r5, lbl_805CCC60@l
+/* 80311C40 002DB200  38 A5 CC 60 */	addi r5, r5, dvdContexts@l
 /* 80311C44 002DB204  2C 00 00 04 */	cmpwi r0, 0x4
 /* 80311C48 002DB208  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 /* 80311C4C 002DB20C  7F C5 22 14 */	add r30, r5, r4
@@ -1604,13 +1604,13 @@
 /* 80311C58 002DB218  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 .L_80311C5C:
 /* 80311C5C 002DB21C  80 6D B7 34 */	lwz r3, diCommand@sda21(r13)
-/* 80311C60 002DB220  3C E0 80 5D */	lis r7, lbl_805CCCE0@ha
+/* 80311C60 002DB220  3C E0 80 5D */	lis r7, diRegValCache@ha
 /* 80311C64 002DB224  54 00 28 34 */	slwi r0, r0, 5
 /* 80311C68 002DB228  38 80 00 E0 */	li r4, 0xe0
 /* 80311C6C 002DB22C  7C 83 01 AE */	stbx r4, r3, r0
 /* 80311C70 002DB230  3D 20 80 31 */	lis r9, doTransactionCallback@ha
 /* 80311C74 002DB234  7F CA F3 78 */	mr r10, r30
-/* 80311C78 002DB238  38 E7 CC E0 */	addi r7, r7, lbl_805CCCE0@l
+/* 80311C78 002DB238  38 E7 CC E0 */	addi r7, r7, diRegValCache@l
 /* 80311C7C 002DB23C  80 0D B7 1C */	lwz r0, freeCommandBuf@sda21(r13)
 /* 80311C80 002DB240  39 29 06 00 */	addi r9, r9, doTransactionCallback@l
 /* 80311C84 002DB244  80 AD B7 34 */	lwz r5, diCommand@sda21(r13)
@@ -1761,13 +1761,13 @@
 .fn DVDLowAudioBufferConfig, global
 /* 80311E80 002DB440  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80311E84 002DB444  7C 08 02 A6 */	mflr r0
-/* 80311E88 002DB448  3D 00 80 5D */	lis r8, lbl_805CCC60@ha
+/* 80311E88 002DB448  3D 00 80 5D */	lis r8, dvdContexts@ha
 /* 80311E8C 002DB44C  39 60 00 01 */	li r11, 0x1
 /* 80311E90 002DB450  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80311E94 002DB454  39 08 CC 60 */	addi r8, r8, lbl_805CCC60@l
+/* 80311E94 002DB454  39 08 CC 60 */	addi r8, r8, dvdContexts@l
 /* 80311E98 002DB458  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80311E9C 002DB45C  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 80311EA0 002DB460  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 80311E9C 002DB45C  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 80311EA0 002DB460  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 80311EA4 002DB464  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 80311EA8 002DB468  81 4D B7 20 */	lwz r10, freeDvdContext@sda21(r13)
 /* 80311EAC 002DB46C  99 6D B7 18 */	stb r11, requestInProgress@sda21(r13)
@@ -1811,10 +1811,10 @@
 /* 80311F34 002DB4F4  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_80311F38:
 /* 80311F38 002DB4F8  80 AD B7 1C */	lwz r5, freeCommandBuf@sda21(r13)
-/* 80311F3C 002DB4FC  3C C0 80 5D */	lis r6, lbl_805CCC60@ha
+/* 80311F3C 002DB4FC  3C C0 80 5D */	lis r6, dvdContexts@ha
 /* 80311F40 002DB500  55 47 28 34 */	slwi r7, r10, 5
 /* 80311F44 002DB504  38 05 00 01 */	addi r0, r5, 0x1
-/* 80311F48 002DB508  38 C6 CC 60 */	addi r6, r6, lbl_805CCC60@l
+/* 80311F48 002DB508  38 C6 CC 60 */	addi r6, r6, dvdContexts@l
 /* 80311F4C 002DB50C  2C 00 00 04 */	cmpwi r0, 0x4
 /* 80311F50 002DB510  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 /* 80311F54 002DB514  7F C6 3A 14 */	add r30, r6, r7
@@ -1823,13 +1823,13 @@
 /* 80311F60 002DB520  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 .L_80311F64:
 /* 80311F64 002DB524  80 AD B7 34 */	lwz r5, diCommand@sda21(r13)
-/* 80311F68 002DB528  3C E0 80 5D */	lis r7, lbl_805CCCE0@ha
+/* 80311F68 002DB528  3C E0 80 5D */	lis r7, diRegValCache@ha
 /* 80311F6C 002DB52C  54 00 28 34 */	slwi r0, r0, 5
 /* 80311F70 002DB530  38 C0 00 E4 */	li r6, 0xe4
 /* 80311F74 002DB534  7C C5 01 AE */	stbx r6, r5, r0
 /* 80311F78 002DB538  3D 20 80 31 */	lis r9, doTransactionCallback@ha
 /* 80311F7C 002DB53C  7F CA F3 78 */	mr r10, r30
-/* 80311F80 002DB540  38 E7 CC E0 */	addi r7, r7, lbl_805CCCE0@l
+/* 80311F80 002DB540  38 E7 CC E0 */	addi r7, r7, diRegValCache@l
 /* 80311F84 002DB544  80 0D B7 1C */	lwz r0, freeCommandBuf@sda21(r13)
 /* 80311F88 002DB548  39 29 06 00 */	addi r9, r9, doTransactionCallback@l
 /* 80311F8C 002DB54C  80 AD B7 34 */	lwz r5, diCommand@sda21(r13)
@@ -1876,13 +1876,13 @@
 .fn DVDLowReportKey, global
 /* 80312020 002DB5E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80312024 002DB5E4  7C 08 02 A6 */	mflr r0
-/* 80312028 002DB5E8  3D 20 80 5D */	lis r9, lbl_805CCC60@ha
+/* 80312028 002DB5E8  3D 20 80 5D */	lis r9, dvdContexts@ha
 /* 8031202C 002DB5EC  39 80 00 01 */	li r12, 0x1
 /* 80312030 002DB5F0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80312034 002DB5F4  39 29 CC 60 */	addi r9, r9, lbl_805CCC60@l
+/* 80312034 002DB5F4  39 29 CC 60 */	addi r9, r9, dvdContexts@l
 /* 80312038 002DB5F8  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8031203C 002DB5FC  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 80312040 002DB600  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 8031203C 002DB5FC  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 80312040 002DB600  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 80312044 002DB604  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 80312048 002DB608  81 6D B7 20 */	lwz r11, freeDvdContext@sda21(r13)
 /* 8031204C 002DB60C  99 8D B7 18 */	stb r12, requestInProgress@sda21(r13)
@@ -1926,10 +1926,10 @@
 /* 803120D4 002DB694  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_803120D8:
 /* 803120D8 002DB698  80 CD B7 1C */	lwz r6, freeCommandBuf@sda21(r13)
-/* 803120DC 002DB69C  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
+/* 803120DC 002DB69C  3C E0 80 5D */	lis r7, dvdContexts@ha
 /* 803120E0 002DB6A0  55 68 28 34 */	slwi r8, r11, 5
 /* 803120E4 002DB6A4  38 06 00 01 */	addi r0, r6, 0x1
-/* 803120E8 002DB6A8  38 E7 CC 60 */	addi r7, r7, lbl_805CCC60@l
+/* 803120E8 002DB6A8  38 E7 CC 60 */	addi r7, r7, dvdContexts@l
 /* 803120EC 002DB6AC  2C 00 00 04 */	cmpwi r0, 0x4
 /* 803120F0 002DB6B0  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 /* 803120F4 002DB6B4  7F C7 42 14 */	add r30, r7, r8
@@ -1991,13 +1991,13 @@
 .fn DVDLowSetMaximumRotation, global
 /* 803121C0 002DB780  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803121C4 002DB784  7C 08 02 A6 */	mflr r0
-/* 803121C8 002DB788  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
+/* 803121C8 002DB788  3C E0 80 5D */	lis r7, dvdContexts@ha
 /* 803121CC 002DB78C  39 40 00 01 */	li r10, 0x1
 /* 803121D0 002DB790  90 01 00 14 */	stw r0, 0x14(r1)
-/* 803121D4 002DB794  38 E7 CC 60 */	addi r7, r7, lbl_805CCC60@l
+/* 803121D4 002DB794  38 E7 CC 60 */	addi r7, r7, dvdContexts@l
 /* 803121D8 002DB798  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803121DC 002DB79C  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 803121E0 002DB7A0  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 803121DC 002DB79C  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 803121E0 002DB7A0  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 803121E4 002DB7A4  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 803121E8 002DB7A8  81 2D B7 20 */	lwz r9, freeDvdContext@sda21(r13)
 /* 803121EC 002DB7AC  99 4D B7 18 */	stb r10, requestInProgress@sda21(r13)
@@ -2041,10 +2041,10 @@
 /* 80312274 002DB834  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_80312278:
 /* 80312278 002DB838  80 8D B7 1C */	lwz r4, freeCommandBuf@sda21(r13)
-/* 8031227C 002DB83C  3C A0 80 5D */	lis r5, lbl_805CCC60@ha
+/* 8031227C 002DB83C  3C A0 80 5D */	lis r5, dvdContexts@ha
 /* 80312280 002DB840  55 26 28 34 */	slwi r6, r9, 5
 /* 80312284 002DB844  38 04 00 01 */	addi r0, r4, 0x1
-/* 80312288 002DB848  38 A5 CC 60 */	addi r5, r5, lbl_805CCC60@l
+/* 80312288 002DB848  38 A5 CC 60 */	addi r5, r5, dvdContexts@l
 /* 8031228C 002DB84C  2C 00 00 04 */	cmpwi r0, 0x4
 /* 80312290 002DB850  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 /* 80312294 002DB854  7F C5 32 14 */	add r30, r5, r6
@@ -2105,8 +2105,8 @@
 /* 80312358 002DB918  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8031235C 002DB91C  54 60 06 FF */	clrlwi. r0, r3, 27
 /* 80312360 002DB920  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80312364 002DB924  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 80312368 002DB928  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 80312364 002DB924  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 80312368 002DB928  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 8031236C 002DB92C  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 80312370 002DB930  41 82 00 18 */	beq .L_80312388
 /* 80312374 002DB934  38 7F 0C 8C */	addi r3, r31, 0xc8c
@@ -2116,11 +2116,11 @@
 /* 80312384 002DB944  48 00 01 64 */	b .L_803124E8
 .L_80312388:
 /* 80312388 002DB948  81 6D B7 20 */	lwz r11, freeDvdContext@sda21(r13)
-/* 8031238C 002DB94C  3D 20 80 5D */	lis r9, lbl_805CCC60@ha
+/* 8031238C 002DB94C  3D 20 80 5D */	lis r9, dvdContexts@ha
 /* 80312390 002DB950  39 80 00 01 */	li r12, 0x1
 /* 80312394 002DB954  99 8D B7 18 */	stb r12, requestInProgress@sda21(r13)
 /* 80312398 002DB958  55 6A 28 34 */	slwi r10, r11, 5
-/* 8031239C 002DB95C  39 29 CC 60 */	addi r9, r9, lbl_805CCC60@l
+/* 8031239C 002DB95C  39 29 CC 60 */	addi r9, r9, dvdContexts@l
 /* 803123A0 002DB960  7D 09 52 14 */	add r8, r9, r10
 /* 803123A4 002DB964  88 E8 00 08 */	lbz r7, 0x8(r8)
 /* 803123A8 002DB968  7C 07 00 D0 */	neg r0, r7
@@ -2159,11 +2159,11 @@
 /* 8031241C 002DB9DC  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_80312420:
 /* 80312420 002DB9E0  80 CD B7 1C */	lwz r6, freeCommandBuf@sda21(r13)
-/* 80312424 002DB9E4  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
+/* 80312424 002DB9E4  3C E0 80 5D */	lis r7, dvdContexts@ha
 /* 80312428 002DB9E8  90 8D B7 2C */	stw r4, lbl_806678AC@sda21(r13)
 /* 8031242C 002DB9EC  55 68 28 34 */	slwi r8, r11, 5
 /* 80312430 002DB9F0  38 06 00 01 */	addi r0, r6, 0x1
-/* 80312434 002DB9F4  38 E7 CC 60 */	addi r7, r7, lbl_805CCC60@l
+/* 80312434 002DB9F4  38 E7 CC 60 */	addi r7, r7, dvdContexts@l
 /* 80312438 002DB9F8  2C 00 00 04 */	cmpwi r0, 0x4
 /* 8031243C 002DB9FC  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 /* 80312440 002DBA00  7F C7 42 14 */	add r30, r7, r8
@@ -2222,13 +2222,13 @@
 .fn DVDLowSeek, global
 /* 80312500 002DBAC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80312504 002DBAC4  7C 08 02 A6 */	mflr r0
-/* 80312508 002DBAC8  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
+/* 80312508 002DBAC8  3C E0 80 5D */	lis r7, dvdContexts@ha
 /* 8031250C 002DBACC  39 40 00 01 */	li r10, 0x1
 /* 80312510 002DBAD0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80312514 002DBAD4  38 E7 CC 60 */	addi r7, r7, lbl_805CCC60@l
+/* 80312514 002DBAD4  38 E7 CC 60 */	addi r7, r7, dvdContexts@l
 /* 80312518 002DBAD8  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8031251C 002DBADC  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 80312520 002DBAE0  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 8031251C 002DBADC  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 80312520 002DBAE0  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 80312524 002DBAE4  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 80312528 002DBAE8  81 2D B7 20 */	lwz r9, freeDvdContext@sda21(r13)
 /* 8031252C 002DBAEC  99 4D B7 18 */	stb r10, requestInProgress@sda21(r13)
@@ -2272,10 +2272,10 @@
 /* 803125B4 002DBB74  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_803125B8:
 /* 803125B8 002DBB78  80 8D B7 1C */	lwz r4, freeCommandBuf@sda21(r13)
-/* 803125BC 002DBB7C  3C A0 80 5D */	lis r5, lbl_805CCC60@ha
+/* 803125BC 002DBB7C  3C A0 80 5D */	lis r5, dvdContexts@ha
 /* 803125C0 002DBB80  55 26 28 34 */	slwi r6, r9, 5
 /* 803125C4 002DBB84  38 04 00 01 */	addi r0, r4, 0x1
-/* 803125C8 002DBB88  38 A5 CC 60 */	addi r5, r5, lbl_805CCC60@l
+/* 803125C8 002DBB88  38 A5 CC 60 */	addi r5, r5, dvdContexts@l
 /* 803125CC 002DBB8C  2C 00 00 04 */	cmpwi r0, 0x4
 /* 803125D0 002DBB90  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 /* 803125D4 002DBB94  7F C5 32 14 */	add r30, r5, r6
@@ -2327,8 +2327,8 @@
 .endfn DVDLowSeek
 
 .fn DVDLowGetCoverRegister, global
-/* 80312680 002DBC40  3C 60 80 5D */	lis r3, lbl_805CCCE0@ha
-/* 80312684 002DBC44  38 63 CC E0 */	addi r3, r3, lbl_805CCCE0@l
+/* 80312680 002DBC40  3C 60 80 5D */	lis r3, diRegValCache@ha
+/* 80312684 002DBC44  38 63 CC E0 */	addi r3, r3, diRegValCache@l
 /* 80312688 002DBC48  80 63 00 04 */	lwz r3, 0x4(r3)
 /* 8031268C 002DBC4C  4E 80 00 20 */	blr
 .endfn DVDLowGetCoverRegister
@@ -2352,8 +2352,8 @@
 /* 803126B4 002DBC74  7C 08 02 A6 */	mflr r0
 /* 803126B8 002DBC78  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803126BC 002DBC7C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803126C0 002DBC80  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 803126C4 002DBC84  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 803126C0 002DBC80  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 803126C4 002DBC84  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 803126C8 002DBC88  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 803126CC 002DBC8C  80 8D B7 1C */	lwz r4, freeCommandBuf@sda21(r13)
 /* 803126D0 002DBC90  38 04 00 01 */	addi r0, r4, 0x1
@@ -2364,12 +2364,12 @@
 /* 803126E4 002DBCA4  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 .L_803126E8:
 /* 803126E8 002DBCA8  80 8D B7 34 */	lwz r4, diCommand@sda21(r13)
-/* 803126EC 002DBCAC  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
+/* 803126EC 002DBCAC  3C E0 80 5D */	lis r7, dvdContexts@ha
 /* 803126F0 002DBCB0  54 00 28 34 */	slwi r0, r0, 5
 /* 803126F4 002DBCB4  38 A0 00 7A */	li r5, 0x7a
 /* 803126F8 002DBCB8  7C A4 01 AE */	stbx r5, r4, r0
 /* 803126FC 002DBCBC  39 20 00 01 */	li r9, 0x1
-/* 80312700 002DBCC0  38 E7 CC 60 */	addi r7, r7, lbl_805CCC60@l
+/* 80312700 002DBCC0  38 E7 CC 60 */	addi r7, r7, dvdContexts@l
 /* 80312704 002DBCC4  80 8D B7 20 */	lwz r4, freeDvdContext@sda21(r13)
 /* 80312708 002DBCC8  99 2D B7 18 */	stb r9, requestInProgress@sda21(r13)
 /* 8031270C 002DBCCC  54 88 28 34 */	slwi r8, r4, 5
@@ -2411,10 +2411,10 @@
 /* 8031278C 002DBD4C  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_80312790:
 /* 80312790 002DBD50  80 0D B7 1C */	lwz r0, freeCommandBuf@sda21(r13)
-/* 80312794 002DBD54  3C 60 80 5D */	lis r3, lbl_805CCC60@ha
+/* 80312794 002DBD54  3C 60 80 5D */	lis r3, dvdContexts@ha
 /* 80312798 002DBD58  54 85 28 34 */	slwi r5, r4, 5
 /* 8031279C 002DBD5C  80 8D B7 34 */	lwz r4, diCommand@sda21(r13)
-/* 803127A0 002DBD60  38 63 CC 60 */	addi r3, r3, lbl_805CCC60@l
+/* 803127A0 002DBD60  38 63 CC 60 */	addi r3, r3, dvdContexts@l
 /* 803127A4 002DBD64  3C E0 80 5D */	lis r7, lbl_805CCD00@ha
 /* 803127A8 002DBD68  7F C3 2A 14 */	add r30, r3, r5
 /* 803127AC 002DBD6C  54 00 28 34 */	slwi r0, r0, 5
@@ -2455,8 +2455,8 @@
 /* 80312824 002DBDE4  7C 08 02 A6 */	mflr r0
 /* 80312828 002DBDE8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8031282C 002DBDEC  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80312830 002DBDF0  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 80312834 002DBDF4  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 80312830 002DBDF0  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 80312834 002DBDF4  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 80312838 002DBDF8  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8031283C 002DBDFC  80 8D B7 1C */	lwz r4, freeCommandBuf@sda21(r13)
 /* 80312840 002DBE00  38 04 00 01 */	addi r0, r4, 0x1
@@ -2467,12 +2467,12 @@
 /* 80312854 002DBE14  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 .L_80312858:
 /* 80312858 002DBE18  80 8D B7 34 */	lwz r4, diCommand@sda21(r13)
-/* 8031285C 002DBE1C  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
+/* 8031285C 002DBE1C  3C E0 80 5D */	lis r7, dvdContexts@ha
 /* 80312860 002DBE20  54 00 28 34 */	slwi r0, r0, 5
 /* 80312864 002DBE24  38 A0 00 95 */	li r5, 0x95
 /* 80312868 002DBE28  7C A4 01 AE */	stbx r5, r4, r0
 /* 8031286C 002DBE2C  39 20 00 01 */	li r9, 0x1
-/* 80312870 002DBE30  38 E7 CC 60 */	addi r7, r7, lbl_805CCC60@l
+/* 80312870 002DBE30  38 E7 CC 60 */	addi r7, r7, dvdContexts@l
 /* 80312874 002DBE34  80 8D B7 20 */	lwz r4, freeDvdContext@sda21(r13)
 /* 80312878 002DBE38  99 2D B7 18 */	stb r9, requestInProgress@sda21(r13)
 /* 8031287C 002DBE3C  54 88 28 34 */	slwi r8, r4, 5
@@ -2514,10 +2514,10 @@
 /* 803128FC 002DBEBC  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_80312900:
 /* 80312900 002DBEC0  80 0D B7 1C */	lwz r0, freeCommandBuf@sda21(r13)
-/* 80312904 002DBEC4  3C 60 80 5D */	lis r3, lbl_805CCC60@ha
+/* 80312904 002DBEC4  3C 60 80 5D */	lis r3, dvdContexts@ha
 /* 80312908 002DBEC8  54 85 28 34 */	slwi r5, r4, 5
 /* 8031290C 002DBECC  80 8D B7 34 */	lwz r4, diCommand@sda21(r13)
-/* 80312910 002DBED0  38 63 CC 60 */	addi r3, r3, lbl_805CCC60@l
+/* 80312910 002DBED0  38 63 CC 60 */	addi r3, r3, dvdContexts@l
 /* 80312914 002DBED4  3C E0 80 5D */	lis r7, lbl_805CCDE0@ha
 /* 80312918 002DBED8  7F C3 2A 14 */	add r30, r3, r5
 /* 8031291C 002DBEDC  54 00 28 34 */	slwi r0, r0, 5
@@ -2558,8 +2558,8 @@
 /* 80312994 002DBF54  7C 08 02 A6 */	mflr r0
 /* 80312998 002DBF58  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8031299C 002DBF5C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803129A0 002DBF60  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 803129A4 002DBF64  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 803129A0 002DBF60  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 803129A4 002DBF64  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 803129A8 002DBF68  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 803129AC 002DBF6C  80 8D B7 1C */	lwz r4, freeCommandBuf@sda21(r13)
 /* 803129B0 002DBF70  38 04 00 01 */	addi r0, r4, 0x1
@@ -2570,12 +2570,12 @@
 /* 803129C4 002DBF84  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 .L_803129C8:
 /* 803129C8 002DBF88  80 8D B7 34 */	lwz r4, diCommand@sda21(r13)
-/* 803129CC 002DBF8C  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
+/* 803129CC 002DBF8C  3C E0 80 5D */	lis r7, dvdContexts@ha
 /* 803129D0 002DBF90  54 00 28 34 */	slwi r0, r0, 5
 /* 803129D4 002DBF94  38 A0 00 96 */	li r5, 0x96
 /* 803129D8 002DBF98  7C A4 01 AE */	stbx r5, r4, r0
 /* 803129DC 002DBF9C  39 20 00 01 */	li r9, 0x1
-/* 803129E0 002DBFA0  38 E7 CC 60 */	addi r7, r7, lbl_805CCC60@l
+/* 803129E0 002DBFA0  38 E7 CC 60 */	addi r7, r7, dvdContexts@l
 /* 803129E4 002DBFA4  80 8D B7 20 */	lwz r4, freeDvdContext@sda21(r13)
 /* 803129E8 002DBFA8  99 2D B7 18 */	stb r9, requestInProgress@sda21(r13)
 /* 803129EC 002DBFAC  54 88 28 34 */	slwi r8, r4, 5
@@ -2617,10 +2617,10 @@
 /* 80312A6C 002DC02C  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_80312A70:
 /* 80312A70 002DC030  80 0D B7 1C */	lwz r0, freeCommandBuf@sda21(r13)
-/* 80312A74 002DC034  3C 60 80 5D */	lis r3, lbl_805CCC60@ha
+/* 80312A74 002DC034  3C 60 80 5D */	lis r3, dvdContexts@ha
 /* 80312A78 002DC038  54 85 28 34 */	slwi r5, r4, 5
 /* 80312A7C 002DC03C  80 8D B7 34 */	lwz r4, diCommand@sda21(r13)
-/* 80312A80 002DC040  38 63 CC 60 */	addi r3, r3, lbl_805CCC60@l
+/* 80312A80 002DC040  38 63 CC 60 */	addi r3, r3, dvdContexts@l
 /* 80312A84 002DC044  3C E0 80 5D */	lis r7, lbl_805CCE00@ha
 /* 80312A88 002DC048  7F C3 2A 14 */	add r30, r3, r5
 /* 80312A8C 002DC04C  54 00 28 34 */	slwi r0, r0, 5
@@ -2657,8 +2657,8 @@
 /* 80312AFC 002DC0BC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
 .fn DVDLowGetImmBufferReg, global
-/* 80312B00 002DC0C0  3C 60 80 5D */	lis r3, lbl_805CCCE0@ha
-/* 80312B04 002DC0C4  80 63 CC E0 */	lwz r3, lbl_805CCCE0@l(r3)
+/* 80312B00 002DC0C0  3C 60 80 5D */	lis r3, diRegValCache@ha
+/* 80312B04 002DC0C4  80 63 CC E0 */	lwz r3, diRegValCache@l(r3)
 /* 80312B08 002DC0C8  4E 80 00 20 */	blr
 .endfn DVDLowGetImmBufferReg
 /* 80312B0C 002DC0CC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
@@ -2682,8 +2682,8 @@
 /* 80312B34 002DC0F4  7C 08 02 A6 */	mflr r0
 /* 80312B38 002DC0F8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80312B3C 002DC0FC  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80312B40 002DC100  3F E0 80 55 */	lis r31, lbl_8054A6C0@ha
-/* 80312B44 002DC104  3B FF A6 C0 */	addi r31, r31, lbl_8054A6C0@l
+/* 80312B40 002DC100  3F E0 80 55 */	lis r31, "@3815"@ha
+/* 80312B44 002DC104  3B FF A6 C0 */	addi r31, r31, "@3815"@l
 /* 80312B48 002DC108  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 80312B4C 002DC10C  80 8D B7 1C */	lwz r4, freeCommandBuf@sda21(r13)
 /* 80312B50 002DC110  38 04 00 01 */	addi r0, r4, 0x1
@@ -2694,12 +2694,12 @@
 /* 80312B64 002DC124  90 0D B7 1C */	stw r0, freeCommandBuf@sda21(r13)
 .L_80312B68:
 /* 80312B68 002DC128  80 8D B7 34 */	lwz r4, diCommand@sda21(r13)
-/* 80312B6C 002DC12C  3C E0 80 5D */	lis r7, lbl_805CCC60@ha
+/* 80312B6C 002DC12C  3C E0 80 5D */	lis r7, dvdContexts@ha
 /* 80312B70 002DC130  54 00 28 34 */	slwi r0, r0, 5
 /* 80312B74 002DC134  38 A0 00 86 */	li r5, 0x86
 /* 80312B78 002DC138  7C A4 01 AE */	stbx r5, r4, r0
 /* 80312B7C 002DC13C  39 20 00 01 */	li r9, 0x1
-/* 80312B80 002DC140  38 E7 CC 60 */	addi r7, r7, lbl_805CCC60@l
+/* 80312B80 002DC140  38 E7 CC 60 */	addi r7, r7, dvdContexts@l
 /* 80312B84 002DC144  80 8D B7 20 */	lwz r4, freeDvdContext@sda21(r13)
 /* 80312B88 002DC148  99 2D B7 18 */	stb r9, requestInProgress@sda21(r13)
 /* 80312B8C 002DC14C  54 88 28 34 */	slwi r8, r4, 5
@@ -2741,10 +2741,10 @@
 /* 80312C0C 002DC1CC  90 0D B7 20 */	stw r0, freeDvdContext@sda21(r13)
 .L_80312C10:
 /* 80312C10 002DC1D0  80 0D B7 1C */	lwz r0, freeCommandBuf@sda21(r13)
-/* 80312C14 002DC1D4  3C 60 80 5D */	lis r3, lbl_805CCC60@ha
+/* 80312C14 002DC1D4  3C 60 80 5D */	lis r3, dvdContexts@ha
 /* 80312C18 002DC1D8  54 85 28 34 */	slwi r5, r4, 5
 /* 80312C1C 002DC1DC  80 8D B7 34 */	lwz r4, diCommand@sda21(r13)
-/* 80312C20 002DC1E0  38 63 CC 60 */	addi r3, r3, lbl_805CCC60@l
+/* 80312C20 002DC1E0  38 63 CC 60 */	addi r3, r3, dvdContexts@l
 /* 80312C24 002DC1E4  3D 20 80 31 */	lis r9, doTransactionCallback@ha
 /* 80312C28 002DC1E8  7F C3 2A 14 */	add r30, r3, r5
 /* 80312C2C 002DC1EC  54 00 28 34 */	slwi r0, r0, 5
@@ -2790,7 +2790,6 @@
 # 0x8054A6C0 - 0x8054B5C8
 .data
 .balign 8
-.sym lbl_8054A6C0, local
 
 .obj "@3815", local
 	.4byte 0x28646F54
@@ -3762,12 +3761,10 @@
 # 0x805CCC60 - 0x805CCE20
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CCC60, local
 
 .obj dvdContexts, local
 	.skip 0x80
 .endobj dvdContexts
-.sym lbl_805CCCE0, local
 
 .obj diRegValCache, local
 	.skip 0x20
@@ -3784,7 +3781,6 @@
 # 0x806659A8 - 0x806659B8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806659A8, local
 
 .obj DiFD, global
 	.4byte 0xFFFFFFFF
@@ -3797,19 +3793,16 @@
 # 0x80667898 - 0x806678C0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667898, local
 
 .obj requestInProgress, local
 	.skip 0x1
 .endobj requestInProgress
 .sym lbl_80667899, local
 	.skip 0x3
-.sym lbl_8066789C, local
 
 .obj freeCommandBuf, local
 	.skip 0x4
 .endobj freeCommandBuf
-.sym lbl_806678A0, local
 
 .obj freeDvdContext, local
 	.skip 0x4
@@ -3818,7 +3811,6 @@
 	.skip 0x1
 .sym lbl_806678A5, local
 	.skip 0x3
-.sym lbl_806678A8, local
 
 .obj spinUpValue, local
 	.skip 0x4
@@ -3827,7 +3819,6 @@
 	.skip 0x4
 .sym lbl_806678B0, local
 	.skip 0x4
-.sym lbl_806678B4, local
 
 .obj diCommand, local
 	.skip 0x4

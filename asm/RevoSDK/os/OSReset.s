@@ -347,9 +347,9 @@
 /* 8035A388 00323948  48 00 2E 79 */	bl __OSInitSTM
 .L_8035A38C:
 /* 8035A38C 0032394C  48 00 30 15 */	bl __OSHotReset
-/* 8035A390 00323950  3C 60 80 55 */	lis r3, lbl_80552AF0@ha
+/* 8035A390 00323950  3C 60 80 55 */	lis r3, "@2083"@ha
 /* 8035A394 00323954  3C A0 80 55 */	lis r5, lbl_80552AFC@ha
-/* 8035A398 00323958  38 63 2A F0 */	addi r3, r3, lbl_80552AF0@l
+/* 8035A398 00323958  38 63 2A F0 */	addi r3, r3, "@2083"@l
 /* 8035A39C 0032395C  38 80 04 0A */	li r4, 0x40a
 /* 8035A3A0 00323960  38 A5 2A FC */	addi r5, r5, lbl_80552AFC@l
 /* 8035A3A4 00323964  4C C6 31 82 */	crclr 4*cr1+eq
@@ -569,8 +569,8 @@
 /* 8035A6A8 00323C68  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8035A6AC 00323C6C  38 61 00 08 */	addi r3, r1, 0x8
 /* 8035A6B0 00323C70  93 E1 00 2C */	stw r31, 0x2c(r1)
-/* 8035A6B4 00323C74  3F E0 80 55 */	lis r31, lbl_80552AF0@ha
-/* 8035A6B8 00323C78  3B FF 2A F0 */	addi r31, r31, lbl_80552AF0@l
+/* 8035A6B4 00323C74  3F E0 80 55 */	lis r31, "@2083"@ha
+/* 8035A6B8 00323C78  3B FF 2A F0 */	addi r31, r31, "@2083"@l
 /* 8035A6BC 00323C7C  48 00 38 85 */	bl __OSReadStateFlags
 /* 8035A6C0 00323C80  38 60 00 02 */	li r3, 0x2
 /* 8035A6C4 00323C84  38 00 00 03 */	li r0, 0x3
@@ -626,9 +626,9 @@
 /* 8035A774 00323D34  48 00 2A 8D */	bl __OSInitSTM
 .L_8035A778:
 /* 8035A778 00323D38  48 00 2C 29 */	bl __OSHotReset
-/* 8035A77C 00323D3C  3C 60 80 55 */	lis r3, lbl_80552AF0@ha
+/* 8035A77C 00323D3C  3C 60 80 55 */	lis r3, "@2083"@ha
 /* 8035A780 00323D40  3C A0 80 55 */	lis r5, lbl_80552AFC@ha
-/* 8035A784 00323D44  38 63 2A F0 */	addi r3, r3, lbl_80552AF0@l
+/* 8035A784 00323D44  38 63 2A F0 */	addi r3, r3, "@2083"@l
 /* 8035A788 00323D48  38 80 04 0A */	li r4, 0x40a
 /* 8035A78C 00323D4C  38 A5 2A FC */	addi r5, r5, lbl_80552AFC@l
 /* 8035A790 00323D50  4C C6 31 82 */	crclr 4*cr1+eq
@@ -642,11 +642,11 @@
 /* 8035A7AC 00323D6C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
 .fn OSGetResetCode, global
-/* 8035A7B0 00323D70  3C 60 80 5D */	lis r3, lbl_805D4340@ha
-/* 8035A7B4 00323D74  80 03 43 40 */	lwz r0, lbl_805D4340@l(r3)
+/* 8035A7B0 00323D70  3C 60 80 5D */	lis r3, __OSRebootParams@ha
+/* 8035A7B4 00323D74  80 03 43 40 */	lwz r0, __OSRebootParams@l(r3)
 /* 8035A7B8 00323D78  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8035A7BC 00323D7C  41 82 00 14 */	beq .L_8035A7D0
-/* 8035A7C0 00323D80  38 63 43 40 */	addi r3, r3, lbl_805D4340@l
+/* 8035A7C0 00323D80  38 63 43 40 */	addi r3, r3, __OSRebootParams@l
 /* 8035A7C4 00323D84  80 03 00 04 */	lwz r0, 0x4(r3)
 /* 8035A7C8 00323D88  64 03 80 00 */	oris r3, r0, 0x8000
 /* 8035A7CC 00323D8C  4E 80 00 20 */	blr
@@ -671,7 +671,6 @@
 # 0x80552AF0 - 0x80552D58
 .data
 .balign 8
-.sym lbl_80552AF0, local
 
 .obj "@2083", local
 	.4byte 0x4F535265
@@ -704,7 +703,6 @@
 	.4byte 0x6D206D65
 	.4byte 0x6E752E0A
 	.4byte 0x00000000
-.sym lbl_80552B5C, local
 
 .obj "@2131", local
 	.4byte 0x4F535265
@@ -805,7 +803,6 @@
 	.4byte 0x25642E20
 	.4byte 0x200A0000
 	.byte 0x00
-.sym lbl_80552CDC, local
 
 .obj "@2163", local
 	.4byte 0x4F535265
@@ -849,7 +846,6 @@
 	.skip 0x4
 .sym lbl_80667ABC, local
 	.skip 0x4
-.sym lbl_80667AC0, local
 
 .obj ShutdownFunctionQueue, local
 	.skip 0x8

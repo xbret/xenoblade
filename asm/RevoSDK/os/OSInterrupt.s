@@ -650,25 +650,21 @@
 # 0x80667A90 - 0x80667AA8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667A90, local
 
 .obj __OSLastInterruptSrr0, global
 	.skip 0x4
 .endobj __OSLastInterruptSrr0
-.sym lbl_80667A94, local
 
 .obj __OSLastInterrupt, global
 	.skip 0x2
 .endobj __OSLastInterrupt
 	.skip 0x2
-.sym lbl_80667A98, local
 
 .obj __OSLastInterruptTime, global
 	.skip 0x4
 .sym lbl_80667A9C, local
 	.skip 0x4
 .endobj __OSLastInterruptTime
-.sym lbl_80667AA0, local
 
 .obj InterruptHandlerTable, local
 	.skip 0x4

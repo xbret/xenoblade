@@ -522,7 +522,6 @@
 # 0x80551838 - 0x80551A70
 .data
 .balign 8
-.sym lbl_80551838, local
 
 .obj "@878", local
 	.4byte 0x3E3E3E20

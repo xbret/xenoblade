@@ -661,7 +661,6 @@
 # 0x80667888 - 0x80667890
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667888, local
 
 .obj FatalFunc, local
 	.skip 0x4

@@ -14,8 +14,8 @@
 /* 802BC2E0 002858A0  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 802BC2E4 002858A4  3B C0 00 03 */	li r30, 0x3
 /* 802BC2E8 002858A8  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 802BC2EC 002858AC  3F A0 80 54 */	lis r29, lbl_8053F0F0@ha
-/* 802BC2F0 002858B0  3B BD F0 F0 */	addi r29, r29, lbl_8053F0F0@l
+/* 802BC2EC 002858AC  3F A0 80 54 */	lis r29, __files@ha
+/* 802BC2F0 002858B0  3B BD F0 F0 */	addi r29, r29, __files@l
 /* 802BC2F4 002858B4  48 00 00 58 */	b .L_802BC34C
 .L_802BC2F8:
 /* 802BC2F8 002858B8  80 1D 00 04 */	lwz r0, 0x4(r29)
@@ -60,8 +60,8 @@
 /* 802BC37C 0028593C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802BC380 00285940  3B E0 00 00 */	li r31, 0x0
 /* 802BC384 00285944  93 C1 00 08 */	stw r30, 0x8(r1)
-/* 802BC388 00285948  3F C0 80 54 */	lis r30, lbl_8053F0F0@ha
-/* 802BC38C 0028594C  3B DE F0 F0 */	addi r30, r30, lbl_8053F0F0@l
+/* 802BC388 00285948  3F C0 80 54 */	lis r30, __files@ha
+/* 802BC38C 0028594C  3B DE F0 F0 */	addi r30, r30, __files@l
 /* 802BC390 00285950  48 00 00 28 */	b .L_802BC3B8
 .L_802BC394:
 /* 802BC394 00285954  80 1E 00 04 */	lwz r0, 0x4(r30)
@@ -89,7 +89,6 @@
 # 0x8053F0F0 - 0x8053F230
 .data
 .balign 8
-.sym lbl_8053F0F0, local
 
 .obj __files, global
 	.4byte 0x00000000

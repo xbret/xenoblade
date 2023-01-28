@@ -200,7 +200,6 @@
 # 0x8050E3E0 - 0x8050E400
 .rodata
 .balign 8
-.sym lbl_8050E3E0, local
 
 .obj __DVDDeviceErrorMessage, global
 	.4byte lbl_8054A528
@@ -329,7 +328,6 @@
 # 0x805CCC40 - 0x805CCC60
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CCC40, local
 
 .obj CheckBuffer, local
 	.skip 0x20
@@ -338,7 +336,6 @@
 # 0x806659A0 - 0x806659A8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806659A0, local
 
 .obj lowDone, local
 	.4byte 0x00000001
@@ -348,7 +345,6 @@
 # 0x80667890 - 0x80667898
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667890, local
 
 .obj lowIntType, local
 	.skip 0x4
@@ -358,7 +354,6 @@
 # 0x8066BF90 - 0x8066BF98
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF90, local
 
 .obj "@850", local
 	.4byte 0xFFFFFF00

@@ -95,8 +95,12 @@
 .sym lbl_80665BBC, local
 	.4byte 0x00000005
 
-# 0x80667B54 - 0x80667B58
+# 0x80667B50 - 0x80667B58
 .section .sbss, "wa", @nobits
-.balign 4
+.balign 8
+
+.obj __PADSpec, global
+	.skip 0x4
+.endobj __PADSpec
 .sym lbl_80667B54, local
 	.skip 0x4

@@ -30,12 +30,12 @@
 /* 8035D06C 0032662C  40 82 00 60 */	bne .L_8035D0CC
 /* 8035D070 00326630  4B FF B9 41 */	bl OSDisableInterrupts
 /* 8035D074 00326634  7C 7F 1B 78 */	mr r31, r3
-/* 8035D078 00326638  3C A0 80 5D */	lis r5, lbl_805D5160@ha
-/* 8035D07C 0032663C  3C E0 80 5D */	lis r7, lbl_805D5180@ha
+/* 8035D078 00326638  3C A0 80 5D */	lis r5, StmEhInBuf@ha
+/* 8035D07C 0032663C  3C E0 80 5D */	lis r7, StmEhOutBuf@ha
 /* 8035D080 00326640  3D 20 80 36 */	lis r9, __OSStateEventHandler@ha
 /* 8035D084 00326644  80 6D B9 6C */	lwz r3, StmEhDesc@sda21(r13)
-/* 8035D088 00326648  38 A5 51 60 */	addi r5, r5, lbl_805D5160@l
-/* 8035D08C 0032664C  38 E7 51 80 */	addi r7, r7, lbl_805D5180@l
+/* 8035D088 00326648  38 A5 51 60 */	addi r5, r5, StmEhInBuf@l
+/* 8035D08C 0032664C  38 E7 51 80 */	addi r7, r7, StmEhOutBuf@l
 /* 8035D090 00326650  39 29 D5 D0 */	addi r9, r9, __OSStateEventHandler@l
 /* 8035D094 00326654  38 80 10 00 */	li r4, 0x1000
 /* 8035D098 00326658  38 C0 00 20 */	li r6, 0x20
@@ -100,12 +100,12 @@
 /* 8035D15C 0032671C  40 82 00 60 */	bne .L_8035D1BC
 /* 8035D160 00326720  4B FF B8 51 */	bl OSDisableInterrupts
 /* 8035D164 00326724  7C 7F 1B 78 */	mr r31, r3
-/* 8035D168 00326728  3C A0 80 5D */	lis r5, lbl_805D5160@ha
-/* 8035D16C 0032672C  3C E0 80 5D */	lis r7, lbl_805D5180@ha
+/* 8035D168 00326728  3C A0 80 5D */	lis r5, StmEhInBuf@ha
+/* 8035D16C 0032672C  3C E0 80 5D */	lis r7, StmEhOutBuf@ha
 /* 8035D170 00326730  3D 20 80 36 */	lis r9, __OSStateEventHandler@ha
 /* 8035D174 00326734  80 6D B9 6C */	lwz r3, StmEhDesc@sda21(r13)
-/* 8035D178 00326738  38 A5 51 60 */	addi r5, r5, lbl_805D5160@l
-/* 8035D17C 0032673C  38 E7 51 80 */	addi r7, r7, lbl_805D5180@l
+/* 8035D178 00326738  38 A5 51 60 */	addi r5, r5, StmEhInBuf@l
+/* 8035D17C 0032673C  38 E7 51 80 */	addi r7, r7, StmEhOutBuf@l
 /* 8035D180 00326740  39 29 D5 D0 */	addi r9, r9, __OSStateEventHandler@l
 /* 8035D184 00326744  38 80 10 00 */	li r4, 0x1000
 /* 8035D188 00326748  38 C0 00 20 */	li r6, 0x20
@@ -445,9 +445,9 @@
 /* 8035D5FC 00326BBC  4C C6 31 82 */	crclr 4*cr1+eq
 /* 8035D600 00326BC0  48 19 0E 95 */	bl OSPanic
 .L_8035D604:
-/* 8035D604 00326BC4  3C 60 80 5D */	lis r3, lbl_805D5180@ha
+/* 8035D604 00326BC4  3C 60 80 5D */	lis r3, StmEhOutBuf@ha
 /* 8035D608 00326BC8  38 00 00 00 */	li r0, 0x0
-/* 8035D60C 00326BCC  80 63 51 80 */	lwz r3, lbl_805D5180@l(r3)
+/* 8035D60C 00326BCC  80 63 51 80 */	lwz r3, StmEhOutBuf@l(r3)
 /* 8035D610 00326BD0  90 0D B9 70 */	stw r0, StmEhRegistered@sda21(r13)
 /* 8035D614 00326BD4  3C 03 FF FE */	addis r0, r3, 0xfffe
 /* 8035D618 00326BD8  28 00 00 00 */	cmplwi r0, 0x0
@@ -479,12 +479,12 @@
 .L_8035D678:
 /* 8035D678 00326C38  4B FF B3 39 */	bl OSDisableInterrupts
 /* 8035D67C 00326C3C  7C 7F 1B 78 */	mr r31, r3
-/* 8035D680 00326C40  3C A0 80 5D */	lis r5, lbl_805D5160@ha
-/* 8035D684 00326C44  3C E0 80 5D */	lis r7, lbl_805D5180@ha
+/* 8035D680 00326C40  3C A0 80 5D */	lis r5, StmEhInBuf@ha
+/* 8035D684 00326C44  3C E0 80 5D */	lis r7, StmEhOutBuf@ha
 /* 8035D688 00326C48  3D 20 80 36 */	lis r9, __OSStateEventHandler@ha
 /* 8035D68C 00326C4C  80 6D B9 6C */	lwz r3, StmEhDesc@sda21(r13)
-/* 8035D690 00326C50  38 A5 51 60 */	addi r5, r5, lbl_805D5160@l
-/* 8035D694 00326C54  38 E7 51 80 */	addi r7, r7, lbl_805D5180@l
+/* 8035D690 00326C50  38 A5 51 60 */	addi r5, r5, StmEhInBuf@l
+/* 8035D694 00326C54  38 E7 51 80 */	addi r7, r7, StmEhOutBuf@l
 /* 8035D698 00326C58  39 29 D5 D0 */	addi r9, r9, __OSStateEventHandler@l
 /* 8035D69C 00326C5C  38 80 10 00 */	li r4, 0x1000
 /* 8035D6A0 00326C60  38 C0 00 20 */	li r6, 0x20
@@ -503,8 +503,8 @@
 /* 8035D6CC 00326C8C  7F E3 FB 78 */	mr r3, r31
 /* 8035D6D0 00326C90  4B FF B3 21 */	bl OSRestoreInterrupts
 .L_8035D6D4:
-/* 8035D6D4 00326C94  3C 60 80 5D */	lis r3, lbl_805D5180@ha
-/* 8035D6D8 00326C98  80 03 51 80 */	lwz r0, lbl_805D5180@l(r3)
+/* 8035D6D4 00326C94  3C 60 80 5D */	lis r3, StmEhOutBuf@ha
+/* 8035D6D8 00326C98  80 03 51 80 */	lwz r0, StmEhOutBuf@l(r3)
 /* 8035D6DC 00326C9C  28 00 08 00 */	cmplwi r0, 0x800
 /* 8035D6E0 00326CA0  40 82 00 2C */	bne .L_8035D70C
 /* 8035D6E4 00326CA4  4B FF B2 CD */	bl OSDisableInterrupts
@@ -532,7 +532,6 @@
 # 0x8055EBF8 - 0x8055ECC0
 .data
 .balign 8
-.sym lbl_8055EBF8, local
 
 .obj "@980", local
 	.4byte 0x2F646576
@@ -542,7 +541,6 @@
 	.byte 0x74, 0x65, 0x00
 .endobj "@980"
 	.byte 0x00
-.sym lbl_8055EC0C, local
 
 .obj "@981", local
 	.4byte 0x2F646576
@@ -600,12 +598,10 @@
 # 0x805D5160 - 0x805D5220
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D5160, local
 
 .obj StmEhInBuf, local
 	.skip 0x20
 .endobj StmEhInBuf
-.sym lbl_805D5180, local
 
 .obj StmEhOutBuf, local
 	.skip 0x20
@@ -622,42 +618,34 @@
 # 0x80667AE0 - 0x80667B00
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667AE0, local
 
 .obj ResetDown, local
 	.skip 0x4
 .endobj ResetDown
-.sym lbl_80667AE4, local
 
 .obj StmReady, local
 	.skip 0x4
 .endobj StmReady
-.sym lbl_80667AE8, local
 
 .obj StmImDesc, local
 	.skip 0x4
 .endobj StmImDesc
-.sym lbl_80667AEC, local
 
 .obj StmEhDesc, local
 	.skip 0x4
 .endobj StmEhDesc
-.sym lbl_80667AF0, local
 
 .obj StmEhRegistered, local
 	.skip 0x4
 .endobj StmEhRegistered
-.sym lbl_80667AF4, local
 
 .obj StmVdInUse, local
 	.skip 0x4
 .endobj StmVdInUse
-.sym lbl_80667AF8, local
 
 .obj PowerCallback, local
 	.skip 0x4
 .endobj PowerCallback
-.sym lbl_80667AFC, local
 
 .obj ResetCallback, local
 	.skip 0x4

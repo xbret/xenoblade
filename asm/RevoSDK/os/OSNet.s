@@ -442,7 +442,6 @@
 # 0x8055ED30 - 0x8055EE98
 .data
 .balign 8
-.sym lbl_8055ED30, local
 
 .obj "@1040", local
 	.4byte 0x4661696C
