@@ -276,31 +276,31 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainEffect.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CCharVoice.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CCharVoiceMan.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_BATTLE_END.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_BUF.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_CHAIN.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_DOWN.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_EHP.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_FAINT.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_HAGE.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_HP.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_PARTY_GAGE.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_REVIVE.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_SUDDEN.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_TENSION_UP.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_VISION_BREAK.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_VISION_TELL.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_END.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BUF.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_CHAIN.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_DOWN.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_EHP.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_FAINT.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_HAGE.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_HP.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_PARTY_GAGE.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_REVIVE.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_SUDDEN.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_TENSION_UP.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_VISION_BREAK.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_VISION_TELL.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuBattleChain.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_BATTLE_END_SP.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_END_SP.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfGimmickSaveOff.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuTutorialList.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTutorialList.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CLoad.o \
 	$(BUILD_DIR)/src/kyoshin/appgame/code_802AEB74.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_802AEBC4.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_BATTLE_MAIN.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_BATTLE_BEGIN.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_MAIN.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_BEGIN.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuGCItem.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuGameClear.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfHikariItemManager.o \
@@ -334,7 +334,7 @@ GAME_O_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_Sp.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_Talk.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_Target.o \
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CVS/CVS_THREAD_ORDER.o \
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_ORDER.o \
 	$(BUILD_DIR)/asm/kyoshin/appgame/CBattery.o \
 
 
