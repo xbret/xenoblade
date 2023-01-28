@@ -35,10 +35,7 @@ S_FILES := $(wildcard asm/*.s)
 C_FILES := $(wildcard src/*.c)
 CPP_FILES := $(wildcard src/*.cpp)
 CPP_FILES += $(wildcard src/*.cp)
-LDSCRIPT_DOL := $(BUILD_DIR)/ldscript.lcf
-LDSCRIPT_REL := $(BUILD_DIR)/partial.lcf
-ELF2REL_ARGS := -i 1 -o 0x0 -l 0x2F -c 14
-REL_LDFLAGS := -nodefaults -fp hard -r1 -m _prolog -g
+LDSCRIPT_DOL := ldscript.lcf
 
 # Outputs
 DOL     := $(BUILD_DIR)/main.dol
@@ -77,7 +74,6 @@ ifeq ($(WINDOWS),1)
   WINE :=
   AS      := $(DEVKITPPC)/bin/powerpc-eabi-as.exe
   CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp.exe -P
-  SHA1SUM := sha1sum
   PYTHON  := python
 else
   WIBO   := $(shell command -v wibo 2> /dev/null)
@@ -93,15 +89,13 @@ else
   DEPENDS   := $(DEPENDS:.d=.d.unix)
   AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
   CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
-  SHA1SUM := shasum
   PYTHON  := python3
 endif
-CC      = $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
-LD     := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
-ELF2DOL := tools/elf2dol
-ELF2REL := tools/elf2rel
-
-DTK := tools/dtk
+CC      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
+LD      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
+DTK     := build/dtk
+ELF2DOL := $(DTK) elf2dol
+SHASUM  := $(DTK) shasum
 
 # Options
 INCLUDES := -i include/ -i src/
@@ -167,12 +161,9 @@ DUMMY != mkdir -p $(ALL_DIRS)
 
 .PHONY: tools
 
-$(LDSCRIPT_DOL): ldscript.lcf
-	$(QUIET) $(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
-
-$(DOL): $(ELF) | tools
+$(DOL): $(ELF) | $(DTK)
 	$(QUIET) $(ELF2DOL) $< $@
-	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
+	$(QUIET) $(SHASUM) -c sha1/$(NAME).$(VERSION).sha1
 ifneq ($(findstring -map,$(LDFLAGS)),)
 	$(QUIET) $(PYTHON) tools/calcprogress.py $@ $(MAP)
 endif
@@ -188,7 +179,7 @@ tools:
 	$(MAKE) -C tools
 
 $(DTK): tools/dtk_version
-	@echo "DOWNLOAD "$@
+	@echo "Downloading $@"
 	$(QUIET) $(PYTHON) tools/download_dtk.py $< $@
 
 # ELF creation makefile instructions

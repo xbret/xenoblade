@@ -1,17 +1,20 @@
 .include "macros.inc"
+.file "nw4r/snd/snd_BiquadFilterPreset.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x80413B14 - 0x80413DE0
+.text
+.balign 4
 
-.global GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef:
+# nw4r::snd::detail::BiquadFilterLpf::GetCoef(int, float, nw4r::snd::BiquadFilterCallback::BiquadCoef*) const
+.fn GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef, global
 /* 80413B14 003DD0D4  38 80 00 6F */	li r4, 0x6f
 /* 80413B18 003DD0D8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80413B1C 003DD0DC  3C 00 43 30 */	lis r0, 0x4330
-/* 80413B20 003DD0E0  C8 42 C3 78 */	lfd f2, double_8066C6F8@sda21(r2)
+/* 80413B20 003DD0E0  C8 42 C3 78 */	lfd f2, lbl_8066C6F8@sda21(r2)
 /* 80413B24 003DD0E4  6C 83 80 00 */	xoris r3, r4, 0x8000
-/* 80413B28 003DD0E8  90 01 00 08 */	stw r0, 8(r1)
+/* 80413B28 003DD0E8  90 01 00 08 */	stw r0, 0x8(r1)
 /* 80413B2C 003DD0EC  90 61 00 0C */	stw r3, 0xc(r1)
-/* 80413B30 003DD0F0  C8 01 00 08 */	lfd f0, 8(r1)
+/* 80413B30 003DD0F0  C8 01 00 08 */	lfd f0, 0x8(r1)
 /* 80413B34 003DD0F4  EC 00 10 28 */	fsubs f0, f0, f2
 /* 80413B38 003DD0F8  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80413B3C 003DD0FC  FC 00 00 1E */	fctiwz f0, f0
@@ -21,7 +24,7 @@ GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallba
 /* 80413B4C 003DD10C  40 81 00 08 */	ble .L_80413B54
 /* 80413B50 003DD110  48 00 00 0C */	b .L_80413B5C
 .L_80413B54:
-/* 80413B54 003DD114  7C 60 FE 70 */	srawi r0, r3, 0x1f
+/* 80413B54 003DD114  7C 60 FE 70 */	srawi r0, r3, 31
 /* 80413B58 003DD118  7C 64 00 78 */	andc r4, r3, r0
 .L_80413B5C:
 /* 80413B5C 003DD11C  1C 04 00 0A */	mulli r0, r4, 0xa
@@ -29,29 +32,29 @@ GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallba
 /* 80413B64 003DD124  38 63 21 20 */	addi r3, r3, lbl_80522120@l
 /* 80413B68 003DD128  7C E3 02 14 */	add r7, r3, r0
 /* 80413B6C 003DD12C  7D 03 02 2E */	lhzx r8, r3, r0
-/* 80413B70 003DD130  A0 C7 00 02 */	lhz r6, 2(r7)
-/* 80413B74 003DD134  A0 87 00 04 */	lhz r4, 4(r7)
-/* 80413B78 003DD138  A0 67 00 06 */	lhz r3, 6(r7)
-/* 80413B7C 003DD13C  A0 07 00 08 */	lhz r0, 8(r7)
-/* 80413B80 003DD140  B1 05 00 00 */	sth r8, 0(r5)
-/* 80413B84 003DD144  B0 C5 00 02 */	sth r6, 2(r5)
-/* 80413B88 003DD148  B0 85 00 04 */	sth r4, 4(r5)
-/* 80413B8C 003DD14C  B0 65 00 06 */	sth r3, 6(r5)
-/* 80413B90 003DD150  B0 05 00 08 */	sth r0, 8(r5)
+/* 80413B70 003DD130  A0 C7 00 02 */	lhz r6, 0x2(r7)
+/* 80413B74 003DD134  A0 87 00 04 */	lhz r4, 0x4(r7)
+/* 80413B78 003DD138  A0 67 00 06 */	lhz r3, 0x6(r7)
+/* 80413B7C 003DD13C  A0 07 00 08 */	lhz r0, 0x8(r7)
+/* 80413B80 003DD140  B1 05 00 00 */	sth r8, 0x0(r5)
+/* 80413B84 003DD144  B0 C5 00 02 */	sth r6, 0x2(r5)
+/* 80413B88 003DD148  B0 85 00 04 */	sth r4, 0x4(r5)
+/* 80413B8C 003DD14C  B0 65 00 06 */	sth r3, 0x6(r5)
+/* 80413B90 003DD150  B0 05 00 08 */	sth r0, 0x8(r5)
 /* 80413B94 003DD154  38 21 00 20 */	addi r1, r1, 0x20
 /* 80413B98 003DD158  4E 80 00 20 */	blr
+.endfn GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
-
-.global GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef:
+# nw4r::snd::detail::BiquadFilterHpf::GetCoef(int, float, nw4r::snd::BiquadFilterCallback::BiquadCoef*) const
+.fn GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef, global
 /* 80413B9C 003DD15C  38 80 00 60 */	li r4, 0x60
 /* 80413BA0 003DD160  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80413BA4 003DD164  3C 00 43 30 */	lis r0, 0x4330
-/* 80413BA8 003DD168  C8 42 C3 78 */	lfd f2, double_8066C6F8@sda21(r2)
+/* 80413BA8 003DD168  C8 42 C3 78 */	lfd f2, lbl_8066C6F8@sda21(r2)
 /* 80413BAC 003DD16C  6C 83 80 00 */	xoris r3, r4, 0x8000
-/* 80413BB0 003DD170  90 01 00 08 */	stw r0, 8(r1)
+/* 80413BB0 003DD170  90 01 00 08 */	stw r0, 0x8(r1)
 /* 80413BB4 003DD174  90 61 00 0C */	stw r3, 0xc(r1)
-/* 80413BB8 003DD178  C8 01 00 08 */	lfd f0, 8(r1)
+/* 80413BB8 003DD178  C8 01 00 08 */	lfd f0, 0x8(r1)
 /* 80413BBC 003DD17C  EC 00 10 28 */	fsubs f0, f0, f2
 /* 80413BC0 003DD180  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80413BC4 003DD184  FC 00 00 1E */	fctiwz f0, f0
@@ -61,7 +64,7 @@ GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallba
 /* 80413BD4 003DD194  40 81 00 08 */	ble .L_80413BDC
 /* 80413BD8 003DD198  48 00 00 0C */	b .L_80413BE4
 .L_80413BDC:
-/* 80413BDC 003DD19C  7C 60 FE 70 */	srawi r0, r3, 0x1f
+/* 80413BDC 003DD19C  7C 60 FE 70 */	srawi r0, r3, 31
 /* 80413BE0 003DD1A0  7C 64 00 78 */	andc r4, r3, r0
 .L_80413BE4:
 /* 80413BE4 003DD1A4  1C 04 00 0A */	mulli r0, r4, 0xa
@@ -69,32 +72,32 @@ GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallba
 /* 80413BEC 003DD1AC  38 63 25 80 */	addi r3, r3, lbl_80522580@l
 /* 80413BF0 003DD1B0  7C E3 02 14 */	add r7, r3, r0
 /* 80413BF4 003DD1B4  7D 03 02 2E */	lhzx r8, r3, r0
-/* 80413BF8 003DD1B8  A0 C7 00 02 */	lhz r6, 2(r7)
-/* 80413BFC 003DD1BC  A0 87 00 04 */	lhz r4, 4(r7)
-/* 80413C00 003DD1C0  A0 67 00 06 */	lhz r3, 6(r7)
-/* 80413C04 003DD1C4  A0 07 00 08 */	lhz r0, 8(r7)
-/* 80413C08 003DD1C8  B1 05 00 00 */	sth r8, 0(r5)
-/* 80413C0C 003DD1CC  B0 C5 00 02 */	sth r6, 2(r5)
-/* 80413C10 003DD1D0  B0 85 00 04 */	sth r4, 4(r5)
-/* 80413C14 003DD1D4  B0 65 00 06 */	sth r3, 6(r5)
-/* 80413C18 003DD1D8  B0 05 00 08 */	sth r0, 8(r5)
+/* 80413BF8 003DD1B8  A0 C7 00 02 */	lhz r6, 0x2(r7)
+/* 80413BFC 003DD1BC  A0 87 00 04 */	lhz r4, 0x4(r7)
+/* 80413C00 003DD1C0  A0 67 00 06 */	lhz r3, 0x6(r7)
+/* 80413C04 003DD1C4  A0 07 00 08 */	lhz r0, 0x8(r7)
+/* 80413C08 003DD1C8  B1 05 00 00 */	sth r8, 0x0(r5)
+/* 80413C0C 003DD1CC  B0 C5 00 02 */	sth r6, 0x2(r5)
+/* 80413C10 003DD1D0  B0 85 00 04 */	sth r4, 0x4(r5)
+/* 80413C14 003DD1D4  B0 65 00 06 */	sth r3, 0x6(r5)
+/* 80413C18 003DD1D8  B0 05 00 08 */	sth r0, 0x8(r5)
 /* 80413C1C 003DD1DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80413C20 003DD1E0  4E 80 00 20 */	blr
+.endfn GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
-
-.global GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef:
-/* 80413C24 003DD1E4  C0 02 C3 80 */	lfs f0, float_8066C700@sda21(r2)
+# nw4r::snd::detail::BiquadFilterBpf512::GetCoef(int, float, nw4r::snd::BiquadFilterCallback::BiquadCoef*) const
+.fn GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef, global
+/* 80413C24 003DD1E4  C0 02 C3 80 */	lfs f0, lbl_8066C700@sda21(r2)
 /* 80413C28 003DD1E8  38 80 00 79 */	li r4, 0x79
 /* 80413C2C 003DD1EC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80413C30 003DD1F0  6C 83 80 00 */	xoris r3, r4, 0x8000
 /* 80413C34 003DD1F4  3C 00 43 30 */	lis r0, 0x4330
 /* 80413C38 003DD1F8  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80413C3C 003DD1FC  90 61 00 0C */	stw r3, 0xc(r1)
-/* 80413C40 003DD200  C8 42 C3 78 */	lfd f2, double_8066C6F8@sda21(r2)
-/* 80413C44 003DD204  90 01 00 08 */	stw r0, 8(r1)
+/* 80413C40 003DD200  C8 42 C3 78 */	lfd f2, lbl_8066C6F8@sda21(r2)
+/* 80413C44 003DD204  90 01 00 08 */	stw r0, 0x8(r1)
 /* 80413C48 003DD208  EC 21 00 32 */	fmuls f1, f1, f0
-/* 80413C4C 003DD20C  C8 01 00 08 */	lfd f0, 8(r1)
+/* 80413C4C 003DD20C  C8 01 00 08 */	lfd f0, 0x8(r1)
 /* 80413C50 003DD210  EC 00 10 28 */	fsubs f0, f0, f2
 /* 80413C54 003DD214  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80413C58 003DD218  FC 00 00 1E */	fctiwz f0, f0
@@ -104,7 +107,7 @@ GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCal
 /* 80413C68 003DD228  40 81 00 08 */	ble .L_80413C70
 /* 80413C6C 003DD22C  48 00 00 0C */	b .L_80413C78
 .L_80413C70:
-/* 80413C70 003DD230  7C 60 FE 70 */	srawi r0, r3, 0x1f
+/* 80413C70 003DD230  7C 60 FE 70 */	srawi r0, r3, 31
 /* 80413C74 003DD234  7C 64 00 78 */	andc r4, r3, r0
 .L_80413C78:
 /* 80413C78 003DD238  1C 04 00 0A */	mulli r0, r4, 0xa
@@ -112,32 +115,32 @@ GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCal
 /* 80413C80 003DD240  38 63 29 4C */	addi r3, r3, lbl_8052294C@l
 /* 80413C84 003DD244  7C E3 02 14 */	add r7, r3, r0
 /* 80413C88 003DD248  7D 03 02 2E */	lhzx r8, r3, r0
-/* 80413C8C 003DD24C  A0 C7 00 02 */	lhz r6, 2(r7)
-/* 80413C90 003DD250  A0 87 00 04 */	lhz r4, 4(r7)
-/* 80413C94 003DD254  A0 67 00 06 */	lhz r3, 6(r7)
-/* 80413C98 003DD258  A0 07 00 08 */	lhz r0, 8(r7)
-/* 80413C9C 003DD25C  B1 05 00 00 */	sth r8, 0(r5)
-/* 80413CA0 003DD260  B0 C5 00 02 */	sth r6, 2(r5)
-/* 80413CA4 003DD264  B0 85 00 04 */	sth r4, 4(r5)
-/* 80413CA8 003DD268  B0 65 00 06 */	sth r3, 6(r5)
-/* 80413CAC 003DD26C  B0 05 00 08 */	sth r0, 8(r5)
+/* 80413C8C 003DD24C  A0 C7 00 02 */	lhz r6, 0x2(r7)
+/* 80413C90 003DD250  A0 87 00 04 */	lhz r4, 0x4(r7)
+/* 80413C94 003DD254  A0 67 00 06 */	lhz r3, 0x6(r7)
+/* 80413C98 003DD258  A0 07 00 08 */	lhz r0, 0x8(r7)
+/* 80413C9C 003DD25C  B1 05 00 00 */	sth r8, 0x0(r5)
+/* 80413CA0 003DD260  B0 C5 00 02 */	sth r6, 0x2(r5)
+/* 80413CA4 003DD264  B0 85 00 04 */	sth r4, 0x4(r5)
+/* 80413CA8 003DD268  B0 65 00 06 */	sth r3, 0x6(r5)
+/* 80413CAC 003DD26C  B0 05 00 08 */	sth r0, 0x8(r5)
 /* 80413CB0 003DD270  38 21 00 20 */	addi r1, r1, 0x20
 /* 80413CB4 003DD274  4E 80 00 20 */	blr
+.endfn GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
-
-.global GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef:
-/* 80413CB8 003DD278  C0 02 C3 80 */	lfs f0, float_8066C700@sda21(r2)
+# nw4r::snd::detail::BiquadFilterBpf1024::GetCoef(int, float, nw4r::snd::BiquadFilterCallback::BiquadCoef*) const
+.fn GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef, global
+/* 80413CB8 003DD278  C0 02 C3 80 */	lfs f0, lbl_8066C700@sda21(r2)
 /* 80413CBC 003DD27C  38 80 00 5C */	li r4, 0x5c
 /* 80413CC0 003DD280  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80413CC4 003DD284  6C 83 80 00 */	xoris r3, r4, 0x8000
 /* 80413CC8 003DD288  3C 00 43 30 */	lis r0, 0x4330
 /* 80413CCC 003DD28C  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80413CD0 003DD290  90 61 00 0C */	stw r3, 0xc(r1)
-/* 80413CD4 003DD294  C8 42 C3 78 */	lfd f2, double_8066C6F8@sda21(r2)
-/* 80413CD8 003DD298  90 01 00 08 */	stw r0, 8(r1)
+/* 80413CD4 003DD294  C8 42 C3 78 */	lfd f2, lbl_8066C6F8@sda21(r2)
+/* 80413CD8 003DD298  90 01 00 08 */	stw r0, 0x8(r1)
 /* 80413CDC 003DD29C  EC 21 00 32 */	fmuls f1, f1, f0
-/* 80413CE0 003DD2A0  C8 01 00 08 */	lfd f0, 8(r1)
+/* 80413CE0 003DD2A0  C8 01 00 08 */	lfd f0, 0x8(r1)
 /* 80413CE4 003DD2A4  EC 00 10 28 */	fsubs f0, f0, f2
 /* 80413CE8 003DD2A8  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80413CEC 003DD2AC  FC 00 00 1E */	fctiwz f0, f0
@@ -147,7 +150,7 @@ GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCa
 /* 80413CFC 003DD2BC  40 81 00 08 */	ble .L_80413D04
 /* 80413D00 003DD2C0  48 00 00 0C */	b .L_80413D0C
 .L_80413D04:
-/* 80413D04 003DD2C4  7C 60 FE 70 */	srawi r0, r3, 0x1f
+/* 80413D04 003DD2C4  7C 60 FE 70 */	srawi r0, r3, 31
 /* 80413D08 003DD2C8  7C 64 00 78 */	andc r4, r3, r0
 .L_80413D0C:
 /* 80413D0C 003DD2CC  1C 04 00 0A */	mulli r0, r4, 0xa
@@ -155,32 +158,32 @@ GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCa
 /* 80413D14 003DD2D4  38 63 2E 10 */	addi r3, r3, lbl_80522E10@l
 /* 80413D18 003DD2D8  7C E3 02 14 */	add r7, r3, r0
 /* 80413D1C 003DD2DC  7D 03 02 2E */	lhzx r8, r3, r0
-/* 80413D20 003DD2E0  A0 C7 00 02 */	lhz r6, 2(r7)
-/* 80413D24 003DD2E4  A0 87 00 04 */	lhz r4, 4(r7)
-/* 80413D28 003DD2E8  A0 67 00 06 */	lhz r3, 6(r7)
-/* 80413D2C 003DD2EC  A0 07 00 08 */	lhz r0, 8(r7)
-/* 80413D30 003DD2F0  B1 05 00 00 */	sth r8, 0(r5)
-/* 80413D34 003DD2F4  B0 C5 00 02 */	sth r6, 2(r5)
-/* 80413D38 003DD2F8  B0 85 00 04 */	sth r4, 4(r5)
-/* 80413D3C 003DD2FC  B0 65 00 06 */	sth r3, 6(r5)
-/* 80413D40 003DD300  B0 05 00 08 */	sth r0, 8(r5)
+/* 80413D20 003DD2E0  A0 C7 00 02 */	lhz r6, 0x2(r7)
+/* 80413D24 003DD2E4  A0 87 00 04 */	lhz r4, 0x4(r7)
+/* 80413D28 003DD2E8  A0 67 00 06 */	lhz r3, 0x6(r7)
+/* 80413D2C 003DD2EC  A0 07 00 08 */	lhz r0, 0x8(r7)
+/* 80413D30 003DD2F0  B1 05 00 00 */	sth r8, 0x0(r5)
+/* 80413D34 003DD2F4  B0 C5 00 02 */	sth r6, 0x2(r5)
+/* 80413D38 003DD2F8  B0 85 00 04 */	sth r4, 0x4(r5)
+/* 80413D3C 003DD2FC  B0 65 00 06 */	sth r3, 0x6(r5)
+/* 80413D40 003DD300  B0 05 00 08 */	sth r0, 0x8(r5)
 /* 80413D44 003DD304  38 21 00 20 */	addi r1, r1, 0x20
 /* 80413D48 003DD308  4E 80 00 20 */	blr
+.endfn GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
-
-.global GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef:
-/* 80413D4C 003DD30C  C0 02 C3 80 */	lfs f0, float_8066C700@sda21(r2)
+# nw4r::snd::detail::BiquadFilterBpf2048::GetCoef(int, float, nw4r::snd::BiquadFilterCallback::BiquadCoef*) const
+.fn GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef, global
+/* 80413D4C 003DD30C  C0 02 C3 80 */	lfs f0, lbl_8066C700@sda21(r2)
 /* 80413D50 003DD310  38 80 00 5C */	li r4, 0x5c
 /* 80413D54 003DD314  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80413D58 003DD318  6C 83 80 00 */	xoris r3, r4, 0x8000
 /* 80413D5C 003DD31C  3C 00 43 30 */	lis r0, 0x4330
 /* 80413D60 003DD320  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80413D64 003DD324  90 61 00 0C */	stw r3, 0xc(r1)
-/* 80413D68 003DD328  C8 42 C3 78 */	lfd f2, double_8066C6F8@sda21(r2)
-/* 80413D6C 003DD32C  90 01 00 08 */	stw r0, 8(r1)
+/* 80413D68 003DD328  C8 42 C3 78 */	lfd f2, lbl_8066C6F8@sda21(r2)
+/* 80413D6C 003DD32C  90 01 00 08 */	stw r0, 0x8(r1)
 /* 80413D70 003DD330  EC 21 00 32 */	fmuls f1, f1, f0
-/* 80413D74 003DD334  C8 01 00 08 */	lfd f0, 8(r1)
+/* 80413D74 003DD334  C8 01 00 08 */	lfd f0, 0x8(r1)
 /* 80413D78 003DD338  EC 00 10 28 */	fsubs f0, f0, f2
 /* 80413D7C 003DD33C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80413D80 003DD340  FC 00 00 1E */	fctiwz f0, f0
@@ -190,7 +193,7 @@ GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCa
 /* 80413D90 003DD350  40 81 00 08 */	ble .L_80413D98
 /* 80413D94 003DD354  48 00 00 0C */	b .L_80413DA0
 .L_80413D98:
-/* 80413D98 003DD358  7C 60 FE 70 */	srawi r0, r3, 0x1f
+/* 80413D98 003DD358  7C 60 FE 70 */	srawi r0, r3, 31
 /* 80413D9C 003DD35C  7C 64 00 78 */	andc r4, r3, r0
 .L_80413DA0:
 /* 80413DA0 003DD360  1C 04 00 0A */	mulli r0, r4, 0xa
@@ -198,23 +201,23 @@ GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCa
 /* 80413DA8 003DD368  38 63 31 B4 */	addi r3, r3, lbl_805231B4@l
 /* 80413DAC 003DD36C  7C E3 02 14 */	add r7, r3, r0
 /* 80413DB0 003DD370  7D 03 02 2E */	lhzx r8, r3, r0
-/* 80413DB4 003DD374  A0 C7 00 02 */	lhz r6, 2(r7)
-/* 80413DB8 003DD378  A0 87 00 04 */	lhz r4, 4(r7)
-/* 80413DBC 003DD37C  A0 67 00 06 */	lhz r3, 6(r7)
-/* 80413DC0 003DD380  A0 07 00 08 */	lhz r0, 8(r7)
-/* 80413DC4 003DD384  B1 05 00 00 */	sth r8, 0(r5)
-/* 80413DC8 003DD388  B0 C5 00 02 */	sth r6, 2(r5)
-/* 80413DCC 003DD38C  B0 85 00 04 */	sth r4, 4(r5)
-/* 80413DD0 003DD390  B0 65 00 06 */	sth r3, 6(r5)
-/* 80413DD4 003DD394  B0 05 00 08 */	sth r0, 8(r5)
+/* 80413DB4 003DD374  A0 C7 00 02 */	lhz r6, 0x2(r7)
+/* 80413DB8 003DD378  A0 87 00 04 */	lhz r4, 0x4(r7)
+/* 80413DBC 003DD37C  A0 67 00 06 */	lhz r3, 0x6(r7)
+/* 80413DC0 003DD380  A0 07 00 08 */	lhz r0, 0x8(r7)
+/* 80413DC4 003DD384  B1 05 00 00 */	sth r8, 0x0(r5)
+/* 80413DC8 003DD388  B0 C5 00 02 */	sth r6, 0x2(r5)
+/* 80413DCC 003DD38C  B0 85 00 04 */	sth r4, 0x4(r5)
+/* 80413DD0 003DD390  B0 65 00 06 */	sth r3, 0x6(r5)
+/* 80413DD4 003DD394  B0 05 00 08 */	sth r0, 0x8(r5)
 /* 80413DD8 003DD398  38 21 00 20 */	addi r1, r1, 0x20
-/* 80413DDC 003DD39C  4E 80 00 20 */	blr 
+/* 80413DDC 003DD39C  4E 80 00 20 */	blr
+.endfn GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
-.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-
-
-.global lbl_80522120
-lbl_80522120:
+# 0x80522120 - 0x80523558
+.rodata
+.balign 8
+.sym lbl_80522120, local
 	.4byte 0x3AB37566
 	.4byte 0x3AB383B8
 	.4byte 0xC391371B
@@ -495,10 +498,7 @@ lbl_80522120:
 	.4byte 0xC25A0004
 	.4byte 0x00070004
 	.4byte 0x7DB0C241
-
-
-.global lbl_80522580
-lbl_80522580:
+.sym lbl_80522580, local
 	.4byte 0x3BB58895
 	.4byte 0x3BB57E7B
 	.4byte 0xC17F3BAD
@@ -742,10 +742,7 @@ lbl_80522580:
 	.4byte 0x167BD30A
 	.4byte 0x167B0DC1
 	.4byte 0xEE800000
-
-
-.global lbl_8052294C
-lbl_8052294C:
+.sym lbl_8052294C, local
 	.4byte 0x2EFA0000
 	.4byte 0xD10621D7
 	.4byte 0x1DF42E8F
@@ -1051,10 +1048,7 @@ lbl_8052294C:
 	.4byte 0xC5430244
 	.4byte 0x0000FDBC
 	.4byte 0x7ADFC488
-
-
-.global lbl_80522E10
-lbl_80522E10:
+.sym lbl_80522E10, local
 	.4byte 0x2F040000
 	.4byte 0xD0FC21DE
 	.4byte 0x1E082E99
@@ -1288,10 +1282,7 @@ lbl_80522E10:
 	.4byte 0x038A0000
 	.4byte 0xFC7676C8
 	.4byte 0xC7140000
-
-
-.global lbl_805231B4
-lbl_805231B4:
+.sym lbl_805231B4, local
 	.4byte 0x3F420000
 	.4byte 0xC0BE0136
 	.4byte 0x3E833E8A
@@ -1526,13 +1517,12 @@ lbl_805231B4:
 	.4byte 0xF94A6A89
 	.4byte 0xCD6C0000
 
-.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-
-.global double_8066C6F8
-double_8066C6F8:
-	.8byte 0x4330000080000000 #signed int to float constant
-
-.global float_8066C700
-float_8066C700:
-	.float 2 #0x40000000
-	.4byte 0
+# 0x8066C6F8 - 0x8066C708
+.section .sdata2, "a"
+.balign 8
+.sym lbl_8066C6F8, local
+	.4byte 0x43300000
+	.4byte 0x80000000
+.sym lbl_8066C700, local
+	.4byte 0x40000000
+	.4byte 0x00000000

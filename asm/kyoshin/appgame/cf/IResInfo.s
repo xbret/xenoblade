@@ -1,661 +1,611 @@
 .include "macros.inc"
+.file "kyoshin/appgame/cf/IResInfo.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x80068990 - 0x80068A20
+.text
+.balign 4
 
+.fn fn_80068990, local
+/* 80068990 00031F50  38 60 00 00 */	li r3, 0x0
+/* 80068994 00031F54  4E 80 00 20 */	blr
+.endfn fn_80068990
 
+.fn fn_80068998, local
+/* 80068998 00031F58  38 60 00 01 */	li r3, 0x1
+/* 8006899C 00031F5C  4E 80 00 20 */	blr
+.endfn fn_80068998
 
-#IResInfo
-.global func_80068990
-func_80068990:
-/* 80068990 00031F50  38 60 00 00 */	li r3, 0
-/* 80068994 00031F54  4E 80 00 20 */	blr 
+.fn fn_800689A0, local
+/* 800689A0 00031F60  4E 80 00 20 */	blr
+.endfn fn_800689A0
 
-#IResInfo
-.global func_80068998
-func_80068998:
-/* 80068998 00031F58  38 60 00 01 */	li r3, 1
-/* 8006899C 00031F5C  4E 80 00 20 */	blr 
+.fn fn_800689A4, local
+/* 800689A4 00031F64  38 60 00 00 */	li r3, 0x0
+/* 800689A8 00031F68  4E 80 00 20 */	blr
+.endfn fn_800689A4
 
-#IResInfo
-.global func_800689A0
-func_800689A0:
-/* 800689A0 00031F60  4E 80 00 20 */	blr 
+.fn fn_800689AC, local
+/* 800689AC 00031F6C  3C 60 00 01 */	lis r3, 0x1
+/* 800689B0 00031F70  38 63 00 04 */	addi r3, r3, 0x4
+/* 800689B4 00031F74  4E 80 00 20 */	blr
+.endfn fn_800689AC
 
-#IResInfo
-.global func_800689A4
-func_800689A4:
-/* 800689A4 00031F64  38 60 00 00 */	li r3, 0
-/* 800689A8 00031F68  4E 80 00 20 */	blr 
+.fn fn_800689B8, local
+/* 800689B8 00031F78  38 60 00 04 */	li r3, 0x4
+/* 800689BC 00031F7C  4E 80 00 20 */	blr
+.endfn fn_800689B8
 
-#IResInfoEneNpcEvent
-.global func_800689AC
-func_800689AC:
-/* 800689AC 00031F6C  3C 60 00 01 */	lis r3, 0x00010004@ha
-/* 800689B0 00031F70  38 63 00 04 */	addi r3, r3, 0x00010004@l
-/* 800689B4 00031F74  4E 80 00 20 */	blr 
+.fn fn_800689C0, local
+/* 800689C0 00031F80  38 60 00 00 */	li r3, 0x0
+/* 800689C4 00031F84  4E 80 00 20 */	blr
+.endfn fn_800689C0
 
-#IResInfoEneNpc
-.global func_800689B8
-func_800689B8:
-/* 800689B8 00031F78  38 60 00 04 */	li r3, 4
-/* 800689BC 00031F7C  4E 80 00 20 */	blr 
+.fn fn_800689C8, local
+/* 800689C8 00031F88  38 60 00 02 */	li r3, 0x2
+/* 800689CC 00031F8C  4E 80 00 20 */	blr
+.endfn fn_800689C8
 
-#IResInfo
-.global func_800689C0
-func_800689C0:
-/* 800689C0 00031F80  38 60 00 00 */	li r3, 0
-/* 800689C4 00031F84  4E 80 00 20 */	blr 
+.fn fn_800689D0, local
+/* 800689D0 00031F90  38 60 00 00 */	li r3, 0x0
+/* 800689D4 00031F94  4E 80 00 20 */	blr
+.endfn fn_800689D0
 
-#IResInfoPc
-.global func_800689C8
-func_800689C8:
-/* 800689C8 00031F88  38 60 00 02 */	li r3, 2
-/* 800689CC 00031F8C  4E 80 00 20 */	blr 
+.fn fn_800689D8, local
+/* 800689D8 00031F98  38 60 00 00 */	li r3, 0x0
+/* 800689DC 00031F9C  4E 80 00 20 */	blr
+.endfn fn_800689D8
 
-#IResInfo
-.global func_800689D0
-func_800689D0:
-/* 800689D0 00031F90  38 60 00 00 */	li r3, 0
-/* 800689D4 00031F94  4E 80 00 20 */	blr 
-
-#IResInfo
-.global func_800689D8
-func_800689D8:
-/* 800689D8 00031F98  38 60 00 00 */	li r3, 0
-/* 800689DC 00031F9C  4E 80 00 20 */	blr 
-
-#IResInfoObj
-.global func_800689E0
-func_800689E0:
+.fn fn_800689E0, local
 /* 800689E0 00031FA0  38 60 02 00 */	li r3, 0x200
-/* 800689E4 00031FA4  4E 80 00 20 */	blr 
+/* 800689E4 00031FA4  4E 80 00 20 */	blr
+.endfn fn_800689E0
 
-#IResInfoTBox
-.global func_800689E8
-func_800689E8:
+.fn fn_800689E8, local
 /* 800689E8 00031FA8  38 60 02 00 */	li r3, 0x200
-/* 800689EC 00031FAC  4E 80 00 20 */	blr 
+/* 800689EC 00031FAC  4E 80 00 20 */	blr
+.endfn fn_800689E8
 
-#IResInfoSe
-.global func_800689F0
-func_800689F0:
+.fn fn_800689F0, local
 /* 800689F0 00031FB0  38 60 02 00 */	li r3, 0x200
-/* 800689F4 00031FB4  4E 80 00 20 */	blr 
+/* 800689F4 00031FB4  4E 80 00 20 */	blr
+.endfn fn_800689F0
 
-#IResInfoEffect
-.global func_800689F8
-func_800689F8:
+.fn fn_800689F8, local
 /* 800689F8 00031FB8  38 60 00 20 */	li r3, 0x20
-/* 800689FC 00031FBC  4E 80 00 20 */	blr 
+/* 800689FC 00031FBC  4E 80 00 20 */	blr
+.endfn fn_800689F8
 
-#IResInfoLOD
-.global func_80068A00
-func_80068A00:
+.fn fn_80068A00, local
 /* 80068A00 00031FC0  38 60 02 00 */	li r3, 0x200
-/* 80068A04 00031FC4  4E 80 00 20 */	blr 
+/* 80068A04 00031FC4  4E 80 00 20 */	blr
+.endfn fn_80068A00
 
-#IResInfoID
-.global func_80068A08
-func_80068A08:
+.fn fn_80068A08, local
 /* 80068A08 00031FC8  38 60 02 00 */	li r3, 0x200
-/* 80068A0C 00031FCC  4E 80 00 20 */	blr 
+/* 80068A0C 00031FCC  4E 80 00 20 */	blr
+.endfn fn_80068A08
 
-#IResInfoPreloadMap
-.global func_80068A10
-func_80068A10:
+.fn fn_80068A10, local
 /* 80068A10 00031FD0  38 60 02 00 */	li r3, 0x200
-/* 80068A14 00031FD4  4E 80 00 20 */	blr 
+/* 80068A14 00031FD4  4E 80 00 20 */	blr
+.endfn fn_80068A10
 
-#IResInfoMap
-.global func_80068A18
-func_80068A18:
+.fn fn_80068A18, local
 /* 80068A18 00031FD8  38 60 02 00 */	li r3, 0x200
-/* 80068A1C 00031FDC  4E 80 00 20 */	blr 
+/* 80068A1C 00031FDC  4E 80 00 20 */	blr
+.endfn fn_80068A18
 
+# 0x804F6A78 - 0x804F6B98
+.rodata
+.balign 8
 
+.obj reslist_unsigned_short_typestr, global
+	.4byte 0x7265736C
+	.4byte 0x6973743C
+	.4byte 0x756E7369
+	.4byte 0x676E6564
+	.4byte 0x2073686F
+	.4byte 0x72743E00
 
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
+.obj _reslist_base_unsigned_short_typestr, global
+	.4byte 0x5F726573
+	.4byte 0x6C697374
+	.4byte 0x5F626173
+	.4byte 0x653C756E
+	.4byte 0x7369676E
+	.4byte 0x65642073
+	.4byte 0x686F7274
+	.4byte 0x3E000000
 
-.global __vt__reslist_unsigned_short
-__vt__reslist_unsigned_short:
+.obj cf_IResInfoEneNpcEvent_typestr, global
+	.4byte 0x63663A3A
+	.4byte 0x49526573
+	.4byte 0x496E666F
+	.4byte 0x456E654E
+	.4byte 0x70634576
+	.4byte 0x656E7400
+
+.obj cf_IResInfoEneNpc_typestr, global
+	.4byte 0x63663A3A
+	.4byte 0x49526573
+	.4byte 0x496E666F
+	.4byte 0x456E654E
+	.4byte 0x70630000
+
+.obj cf_IResInfoPc_typestr, global
+	.4byte 0x63663A3A
+	.4byte 0x49526573
+	.4byte 0x496E666F
+	.4byte 0x50630000
+	.4byte 0x00000000
+
+.obj cf_IResInfoObj_typestr, global
+	.4byte 0x63663A3A
+	.4byte 0x49526573
+	.4byte 0x496E666F
+	.4byte 0x4F626A00
+
+.obj cf_IResInfoTBox_typestr, global
+	.4byte 0x63663A3A
+	.4byte 0x49526573
+	.4byte 0x496E666F
+	.4byte 0x54426F78
+	.4byte 0x00000000
+
+.obj cf_IResInfoSe_typestr, global
+	.4byte 0x63663A3A
+	.4byte 0x49526573
+	.4byte 0x496E666F
+	.4byte 0x53650000
+
+.obj cf_IResInfoEffect_typestr, global
+	.4byte 0x63663A3A
+	.4byte 0x49526573
+	.4byte 0x496E666F
+	.4byte 0x45666665
+	.4byte 0x63740000
+
+.obj cf_IResInfoLOD_typestr, global
+	.4byte 0x63663A3A
+	.4byte 0x49526573
+	.4byte 0x496E666F
+	.4byte 0x4C4F4400
+
+.obj cf_IResInfoID_typestr, global
+	.4byte 0x63663A3A
+	.4byte 0x49526573
+	.4byte 0x496E666F
+	.4byte 0x49440000
+
+.obj cf_IResInfoPreloadMap_typestr, global
+	.4byte 0x63663A3A
+	.4byte 0x49526573
+	.4byte 0x496E666F
+	.4byte 0x5072656C
+	.4byte 0x6F61644D
+	.4byte 0x61700000
+
+.obj cf_IResInfoMap_typestr, global
+	.4byte 0x63663A3A
+	.4byte 0x49526573
+	.4byte 0x496E666F
+	.4byte 0x4D617000
+
+.obj cf_IResInfo_typestr, global
+	.4byte 0x63663A3A
+	.4byte 0x49526573
+	.4byte 0x496E666F
+	.4byte 0x00000000
+.sym lbl_804F6B90, local
+	.4byte 0x4B595000
+	.4byte 0x00000000
+
+# 0x8052A150 - 0x8052A5A0
+.data
+.balign 8
+
+.obj __vt__reslist_unsigned_short, global
 	.4byte __RTTI__reslist_unsigned_short
-	.4byte 0
-	.4byte func_80067494
+	.4byte 0x00000000
+	.4byte fn_80067494
 
-.global reslist_unsigned_short_hierarchy
-reslist_unsigned_short_hierarchy:
+.obj reslist_unsigned_short_hierarchy, global
 	.4byte __RTTI___reslist_base_unsigned_short
-	.4byte 0
-	.4byte 0
+	.4byte 0x00000000
+	.4byte 0x00000000
 
-
-.global __vt___reslist_base_unsigned_short
-__vt___reslist_base_unsigned_short:
+.obj __vt___reslist_base_unsigned_short, global
 	.4byte __RTTI___reslist_base_unsigned_short
-	.4byte 0
-	.4byte func_800673E0
+	.4byte 0x00000000
+	.4byte fn_800673E0
 
-
-.global __vt__cf_IResInfoEneNpcEvent
-__vt__cf_IResInfoEneNpcEvent:
+.obj __vt__cf_IResInfoEneNpcEvent, global
 	.4byte __RTTI__cf_IResInfoEneNpcEvent
-	.4byte 0
-	.4byte func_80066374
-	.4byte func_800689AC
-	.4byte func_800689A4
-	.4byte func_800689A0
-	.4byte func_8006638C
-	.4byte func_800663D8
-	.4byte func_80066424
-	.4byte func_8006646C
-	.4byte func_800664B8
-	.4byte func_8006650C
-	.4byte func_80066554
-	.4byte func_800665F4
-	.4byte func_8006660C
-	.4byte func_80065C48
-	.4byte func_80065C5C
-	.4byte func_80065C80
-	.4byte func_80068998
-	.4byte func_80068990
-	.4byte func_800665A0
+	.4byte 0x00000000
+	.4byte fn_80066374
+	.4byte fn_800689AC
+	.4byte fn_800689A4
+	.4byte fn_800689A0
+	.4byte fn_8006638C
+	.4byte fn_800663D8
+	.4byte fn_80066424
+	.4byte fn_8006646C
+	.4byte fn_800664B8
+	.4byte fn_8006650C
+	.4byte fn_80066554
+	.4byte fn_800665F4
+	.4byte fn_8006660C
+	.4byte fn_80065C48
+	.4byte fn_80065C5C
+	.4byte fn_80065C80
+	.4byte fn_80068998
+	.4byte fn_80068990
+	.4byte fn_800665A0
 
-.global cf_IResInfoEneNpcEvent_hierarchy
-cf_IResInfoEneNpcEvent_hierarchy:
+.obj cf_IResInfoEneNpcEvent_hierarchy, global
 	.4byte __RTTI__cf_IResInfo
-	.4byte 0
+	.4byte 0x00000000
 	.4byte __RTTI__cf_IResInfoEneNpc
-	.4byte 0
-	.4byte 0
+	.4byte 0x00000000
+	.4byte 0x00000000
 
-
-.global __vt__cf_IResInfoEneNpc
-__vt__cf_IResInfoEneNpc:
+.obj __vt__cf_IResInfoEneNpc, global
 	.4byte __RTTI__cf_IResInfoEneNpc
-	.4byte 0
-	.4byte func_80066374
-	.4byte func_800689B8
-	.4byte func_800689A4
-	.4byte func_800689A0
-	.4byte func_8006638C
-	.4byte func_800663D8
-	.4byte func_80066424
-	.4byte func_8006646C
-	.4byte func_800664B8
-	.4byte func_8006650C
-	.4byte func_80066554
-	.4byte func_800665F4
-	.4byte func_8006660C
-	.4byte func_80065C48
-	.4byte func_80065C5C
-	.4byte func_80065C80
-	.4byte func_80068998
-	.4byte func_80068990
-	.4byte func_800665A0
+	.4byte 0x00000000
+	.4byte fn_80066374
+	.4byte fn_800689B8
+	.4byte fn_800689A4
+	.4byte fn_800689A0
+	.4byte fn_8006638C
+	.4byte fn_800663D8
+	.4byte fn_80066424
+	.4byte fn_8006646C
+	.4byte fn_800664B8
+	.4byte fn_8006650C
+	.4byte fn_80066554
+	.4byte fn_800665F4
+	.4byte fn_8006660C
+	.4byte fn_80065C48
+	.4byte fn_80065C5C
+	.4byte fn_80065C80
+	.4byte fn_80068998
+	.4byte fn_80068990
+	.4byte fn_800665A0
 
-.global cf_IResInfoEneNpc_hierarchy
-cf_IResInfoEneNpc_hierarchy:
+.obj cf_IResInfoEneNpc_hierarchy, global
 	.4byte __RTTI__cf_IResInfo
-	.4byte 0
-	.4byte 0
-	.4byte 0
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
-
-.global __vt__cf_IResInfoPc
-__vt__cf_IResInfoPc:
+.obj __vt__cf_IResInfoPc, global
 	.4byte __RTTI__cf_IResInfoPc
-	.4byte 0
-	.4byte func_80065FB4
-	.4byte func_800689C8
-	.4byte func_800689A4
-	.4byte func_800689A0
-	.4byte func_80064388
-	.4byte func_800643A8
-	.4byte func_80066184
-	.4byte func_800643E8
-	.4byte func_8006611C
-	.4byte func_80066160
-	.4byte func_800689C0
-	.4byte func_8006626C
-	.4byte func_80066290
-	.4byte func_80065C48
-	.4byte func_80065C5C
-	.4byte func_80065C80
-	.4byte func_80068998
-	.4byte func_800661A8
+	.4byte 0x00000000
+	.4byte fn_80065FB4
+	.4byte fn_800689C8
+	.4byte fn_800689A4
+	.4byte fn_800689A0
+	.4byte fn_80064388
+	.4byte fn_800643A8
+	.4byte fn_80066184
+	.4byte fn_800643E8
+	.4byte fn_8006611C
+	.4byte fn_80066160
+	.4byte fn_800689C0
+	.4byte fn_8006626C
+	.4byte fn_80066290
+	.4byte fn_80065C48
+	.4byte fn_80065C5C
+	.4byte fn_80065C80
+	.4byte fn_80068998
+	.4byte fn_800661A8
 
-.global cf_IResInfoPc_hierarchy
-cf_IResInfoPc_hierarchy:
+.obj cf_IResInfoPc_hierarchy, global
 	.4byte __RTTI__cf_IResInfo
-	.4byte 0
-	.4byte 0
-	.4byte 0
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
-
-.global __vt__cf_IResInfoObj
-__vt__cf_IResInfoObj:
+.obj __vt__cf_IResInfoObj, global
 	.4byte __RTTI__cf_IResInfoObj
-	.4byte 0
-	.4byte func_80065F1C
-	.4byte func_800689E0
-	.4byte func_800689A4
-	.4byte func_800689A0
-	.4byte func_80064388
-	.4byte func_800643A8
-	.4byte func_800689D8
-	.4byte func_800643E8
-	.4byte func_800643C8
-	.4byte func_800689D0
-	.4byte func_800689C0
-	.4byte func_80065F20
-	.4byte func_80065F24
-	.4byte func_80065C48
-	.4byte func_80065C5C
-	.4byte func_80065C80
-	.4byte func_80068998
-	.4byte func_80068990
+	.4byte 0x00000000
+	.4byte fn_80065F1C
+	.4byte fn_800689E0
+	.4byte fn_800689A4
+	.4byte fn_800689A0
+	.4byte fn_80064388
+	.4byte fn_800643A8
+	.4byte fn_800689D8
+	.4byte fn_800643E8
+	.4byte fn_800643C8
+	.4byte fn_800689D0
+	.4byte fn_800689C0
+	.4byte fn_80065F20
+	.4byte fn_80065F24
+	.4byte fn_80065C48
+	.4byte fn_80065C5C
+	.4byte fn_80065C80
+	.4byte fn_80068998
+	.4byte fn_80068990
 
-.global cf_IResInfoObj_hierarchy
-cf_IResInfoObj_hierarchy:
+.obj cf_IResInfoObj_hierarchy, global
 	.4byte __RTTI__cf_IResInfo
-	.4byte 0
-	.4byte 0
-	.4byte 0
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
-
-.global __vt__cf_IResInfoTBox
-__vt__cf_IResInfoTBox:
+.obj __vt__cf_IResInfoTBox, global
 	.4byte __RTTI__cf_IResInfoTBox
-	.4byte 0
-	.4byte func_80065F18
-	.4byte func_800689E8
-	.4byte func_800689A4
-	.4byte func_800689A0
-	.4byte func_80064388
-	.4byte func_800643A8
-	.4byte func_800689D8
-	.4byte func_800643E8
-	.4byte func_800643C8
-	.4byte func_800689D0
-	.4byte func_800689C0
-	.4byte func_80063C2C
-	.4byte func_80063C78
-	.4byte func_80065C48
-	.4byte func_80065C5C
-	.4byte func_80065C80
-	.4byte func_80068998
-	.4byte func_80068990
+	.4byte 0x00000000
+	.4byte fn_80065F18
+	.4byte fn_800689E8
+	.4byte fn_800689A4
+	.4byte fn_800689A0
+	.4byte fn_80064388
+	.4byte fn_800643A8
+	.4byte fn_800689D8
+	.4byte fn_800643E8
+	.4byte fn_800643C8
+	.4byte fn_800689D0
+	.4byte fn_800689C0
+	.4byte fn_80063C2C
+	.4byte fn_80063C78
+	.4byte fn_80065C48
+	.4byte fn_80065C5C
+	.4byte fn_80065C80
+	.4byte fn_80068998
+	.4byte fn_80068990
 
-.global cf_IResInfoTBox_hierarchy
-cf_IResInfoTBox_hierarchy:
+.obj cf_IResInfoTBox_hierarchy, global
 	.4byte __RTTI__cf_IResInfo
-	.4byte 0
-	.4byte 0
-	.4byte 0
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
-
-.global __vt__cf_IResInfoSe
-__vt__cf_IResInfoSe:
+.obj __vt__cf_IResInfoSe, global
 	.4byte __RTTI__cf_IResInfoSe
-	.4byte 0
-	.4byte func_80065E08
-	.4byte func_800689F0
-	.4byte func_800689A4
-	.4byte func_800689A0
-	.4byte func_80064388
-	.4byte func_800643A8
-	.4byte func_800689D8
-	.4byte func_800643E8
-	.4byte func_800643C8
-	.4byte func_800689D0
-	.4byte func_800689C0
-	.4byte func_80065E2C
-	.4byte func_80065E54
-	.4byte func_80065C48
-	.4byte func_80065C5C
-	.4byte func_80065C80
-	.4byte func_80068998
-	.4byte func_80068990
+	.4byte 0x00000000
+	.4byte fn_80065E08
+	.4byte fn_800689F0
+	.4byte fn_800689A4
+	.4byte fn_800689A0
+	.4byte fn_80064388
+	.4byte fn_800643A8
+	.4byte fn_800689D8
+	.4byte fn_800643E8
+	.4byte fn_800643C8
+	.4byte fn_800689D0
+	.4byte fn_800689C0
+	.4byte fn_80065E2C
+	.4byte fn_80065E54
+	.4byte fn_80065C48
+	.4byte fn_80065C5C
+	.4byte fn_80065C80
+	.4byte fn_80068998
+	.4byte fn_80068990
 
-.global cf_IResInfoSe_hierarchy
-cf_IResInfoSe_hierarchy:
+.obj cf_IResInfoSe_hierarchy, global
 	.4byte __RTTI__cf_IResInfo
-	.4byte 0
-	.4byte 0
-	.4byte 0
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
-
-.global __vt__cf_IResInfoEffect
-__vt__cf_IResInfoEffect:
+.obj __vt__cf_IResInfoEffect, global
 	.4byte __RTTI__cf_IResInfoEffect
-	.4byte 0
-	.4byte func_80065D88
-	.4byte func_800689F8
-	.4byte func_800689A4
-	.4byte func_800689A0
-	.4byte func_80064388
-	.4byte func_800643A8
-	.4byte func_800689D8
-	.4byte func_800643E8
-	.4byte func_800643C8
-	.4byte func_80065E00
-	.4byte func_800689C0
-	.4byte func_80065D8C
-	.4byte func_80065D90
-	.4byte func_80065C48
-	.4byte func_80065C5C
-	.4byte func_80065C80
-	.4byte func_80068998
-	.4byte func_80068990
+	.4byte 0x00000000
+	.4byte fn_80065D88
+	.4byte fn_800689F8
+	.4byte fn_800689A4
+	.4byte fn_800689A0
+	.4byte fn_80064388
+	.4byte fn_800643A8
+	.4byte fn_800689D8
+	.4byte fn_800643E8
+	.4byte fn_800643C8
+	.4byte fn_80065E00
+	.4byte fn_800689C0
+	.4byte fn_80065D8C
+	.4byte fn_80065D90
+	.4byte fn_80065C48
+	.4byte fn_80065C5C
+	.4byte fn_80065C80
+	.4byte fn_80068998
+	.4byte fn_80068990
 
-.global cf_IResInfoEffect_hierarchy
-cf_IResInfoEffect_hierarchy:
+.obj cf_IResInfoEffect_hierarchy, global
 	.4byte __RTTI__cf_IResInfo
-	.4byte 0
-	.4byte 0
-	.4byte 0
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
-
-.global __vt__cf_IResInfoLOD
-__vt__cf_IResInfoLOD:
+.obj __vt__cf_IResInfoLOD, global
 	.4byte __RTTI__cf_IResInfoLOD
-	.4byte 0
-	.4byte func_80065D84
-	.4byte func_80068A00
-	.4byte func_800689A4
-	.4byte func_800689A0
-	.4byte func_80064388
-	.4byte func_800643A8
-	.4byte func_800689D8
-	.4byte func_800643E8
-	.4byte func_800643C8
-	.4byte func_800689D0
-	.4byte func_800689C0
-	.4byte func_80063C2C
-	.4byte func_80063C78
-	.4byte func_80065C48
-	.4byte func_80065C5C
-	.4byte func_80065C80
-	.4byte func_80068998
-	.4byte func_80068990
+	.4byte 0x00000000
+	.4byte fn_80065D84
+	.4byte fn_80068A00
+	.4byte fn_800689A4
+	.4byte fn_800689A0
+	.4byte fn_80064388
+	.4byte fn_800643A8
+	.4byte fn_800689D8
+	.4byte fn_800643E8
+	.4byte fn_800643C8
+	.4byte fn_800689D0
+	.4byte fn_800689C0
+	.4byte fn_80063C2C
+	.4byte fn_80063C78
+	.4byte fn_80065C48
+	.4byte fn_80065C5C
+	.4byte fn_80065C80
+	.4byte fn_80068998
+	.4byte fn_80068990
 
-.global cf_IResInfoLOD_hierarchy
-cf_IResInfoLOD_hierarchy:
+.obj cf_IResInfoLOD_hierarchy, global
 	.4byte __RTTI__cf_IResInfo
-	.4byte 0
-	.4byte 0
-	.4byte 0
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
-
-.global __vt__cf_IResInfoID
-__vt__cf_IResInfoID:
+.obj __vt__cf_IResInfoID, global
 	.4byte __RTTI__cf_IResInfoID
-	.4byte 0
-	.4byte func_80065D80
-	.4byte func_80068A08
-	.4byte func_800689A4
-	.4byte func_800689A0
-	.4byte func_80064388
-	.4byte func_800643A8
-	.4byte func_800689D8
-	.4byte func_800643E8
-	.4byte func_800643C8
-	.4byte func_800689D0
-	.4byte func_800689C0
-	.4byte func_80063C2C
-	.4byte func_80063C78
-	.4byte func_80065C48
-	.4byte func_80065C5C
-	.4byte func_80065C80
-	.4byte func_80068998
-	.4byte func_80068990
+	.4byte 0x00000000
+	.4byte fn_80065D80
+	.4byte fn_80068A08
+	.4byte fn_800689A4
+	.4byte fn_800689A0
+	.4byte fn_80064388
+	.4byte fn_800643A8
+	.4byte fn_800689D8
+	.4byte fn_800643E8
+	.4byte fn_800643C8
+	.4byte fn_800689D0
+	.4byte fn_800689C0
+	.4byte fn_80063C2C
+	.4byte fn_80063C78
+	.4byte fn_80065C48
+	.4byte fn_80065C5C
+	.4byte fn_80065C80
+	.4byte fn_80068998
+	.4byte fn_80068990
 
-.global cf_IResInfoID_hierarchy
-cf_IResInfoID_hierarchy:
+.obj cf_IResInfoID_hierarchy, global
 	.4byte __RTTI__cf_IResInfo
-	.4byte 0
-	.4byte 0
-	.4byte 0
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
-
-.global __vt__cf_IResInfoPreloadMap
-__vt__cf_IResInfoPreloadMap:
+.obj __vt__cf_IResInfoPreloadMap, global
 	.4byte __RTTI__cf_IResInfoPreloadMap
-	.4byte 0
-	.4byte func_80065D74
-	.4byte func_80068A10
-	.4byte func_800689A4
-	.4byte func_800689A0
-	.4byte func_80064388
-	.4byte func_800643A8
-	.4byte func_800689D8
-	.4byte func_800643E8
-	.4byte func_800643C8
-	.4byte func_800689D0
-	.4byte func_800689C0
-	.4byte func_80065D78
-	.4byte func_80065D7C
-	.4byte func_80065C48
-	.4byte func_80065C5C
-	.4byte func_80065C80
-	.4byte func_80068998
-	.4byte func_80068990
+	.4byte 0x00000000
+	.4byte fn_80065D74
+	.4byte fn_80068A10
+	.4byte fn_800689A4
+	.4byte fn_800689A0
+	.4byte fn_80064388
+	.4byte fn_800643A8
+	.4byte fn_800689D8
+	.4byte fn_800643E8
+	.4byte fn_800643C8
+	.4byte fn_800689D0
+	.4byte fn_800689C0
+	.4byte fn_80065D78
+	.4byte fn_80065D7C
+	.4byte fn_80065C48
+	.4byte fn_80065C5C
+	.4byte fn_80065C80
+	.4byte fn_80068998
+	.4byte fn_80068990
 
-.global cf_IResInfoPreloadMap_hierarchy
-cf_IResInfoPreloadMap_hierarchy:
+.obj cf_IResInfoPreloadMap_hierarchy, global
 	.4byte __RTTI__cf_IResInfo
-	.4byte 0
-	.4byte 0
-	.4byte 0
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
-
-.global __vt__cf_IResInfoMap
-__vt__cf_IResInfoMap:
+.obj __vt__cf_IResInfoMap, global
 	.4byte __RTTI__cf_IResInfoMap
-	.4byte 0
-	.4byte func_80065D08
-	.4byte func_80068A18
-	.4byte func_800689A4
-	.4byte func_800689A0
-	.4byte func_80064388
-	.4byte func_800643A8
-	.4byte func_800689D8
-	.4byte func_800643E8
-	.4byte func_800643C8
-	.4byte func_800689D0
-	.4byte func_800689C0
-	.4byte func_80063C2C
-	.4byte func_80063C78
-	.4byte func_80065C48
-	.4byte func_80065D0C
-	.4byte func_80065C80
-	.4byte func_80065D64
-	.4byte func_80068990
+	.4byte 0x00000000
+	.4byte fn_80065D08
+	.4byte fn_80068A18
+	.4byte fn_800689A4
+	.4byte fn_800689A0
+	.4byte fn_80064388
+	.4byte fn_800643A8
+	.4byte fn_800689D8
+	.4byte fn_800643E8
+	.4byte fn_800643C8
+	.4byte fn_800689D0
+	.4byte fn_800689C0
+	.4byte fn_80063C2C
+	.4byte fn_80063C78
+	.4byte fn_80065C48
+	.4byte fn_80065D0C
+	.4byte fn_80065C80
+	.4byte fn_80065D64
+	.4byte fn_80068990
 
-.global cf_IResInfoMap_hierarchy
-cf_IResInfoMap_hierarchy:
+.obj cf_IResInfoMap_hierarchy, global
 	.4byte __RTTI__cf_IResInfo
-	.4byte 0
-	.4byte 0
-	.4byte 0
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 
+# 0x80664348 - 0x806643B8
+.section .sdata, "wa"
+.balign 8
 
-.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-
-.global reslist_unsigned_short_typestr
-reslist_unsigned_short_typestr:
-	.asciz "reslist<unsigned short>"
-
-.global _reslist_base_unsigned_short_typestr
-_reslist_base_unsigned_short_typestr:
-	.asciz "_reslist_base<unsigned short>"
-	.balign 4
-
-.global cf_IResInfoEneNpcEvent_typestr
-cf_IResInfoEneNpcEvent_typestr:
-	.asciz "cf::IResInfoEneNpcEvent"
-
-.global cf_IResInfoEneNpc_typestr
-cf_IResInfoEneNpc_typestr:
-	.asciz "cf::IResInfoEneNpc"
-	.balign 4
-
-.global cf_IResInfoPc_typestr
-cf_IResInfoPc_typestr:
-	.asciz "cf::IResInfoPc"
-	.balign 4
-	.4byte 0
-
-.global cf_IResInfoObj_typestr
-cf_IResInfoObj_typestr:
-	.asciz "cf::IResInfoObj"
-
-.global cf_IResInfoTBox_typestr
-cf_IResInfoTBox_typestr:
-	.asciz "cf::IResInfoTBox"
-	.balign 4
-
-.global cf_IResInfoSe_typestr
-cf_IResInfoSe_typestr:
-	.asciz "cf::IResInfoSe"
-	.balign 4
-
-.global cf_IResInfoEffect_typestr
-cf_IResInfoEffect_typestr:
-	.asciz "cf::IResInfoEffect"
-	.balign 4
-
-.global cf_IResInfoLOD_typestr
-cf_IResInfoLOD_typestr:
-	.asciz "cf::IResInfoLOD"
-
-.global cf_IResInfoID_typestr
-cf_IResInfoID_typestr:
-	.asciz "cf::IResInfoID"
-	.balign 4
-
-.global cf_IResInfoPreloadMap_typestr
-cf_IResInfoPreloadMap_typestr:
-	.asciz "cf::IResInfoPreloadMap"
-	.balign 4
-
-.global cf_IResInfoMap_typestr
-cf_IResInfoMap_typestr:
-	.asciz "cf::IResInfoMap"
-
-.global cf_IResInfo_typestr
-cf_IResInfo_typestr:
-	.asciz "cf::IResInfo"
-	.balign 4
-
-
-.global lbl_804F6B90
-lbl_804F6B90:
-	.asciz "KYP"
-	.4byte 0
-
-.section .sdata, "wa"  # 0x80664180 - 0x80666600
-
-
-
-.global __RTTI__reslist_unsigned_short
-__RTTI__reslist_unsigned_short:
+.obj __RTTI__reslist_unsigned_short, global
 	.4byte reslist_unsigned_short_typestr
 	.4byte reslist_unsigned_short_hierarchy
 
-.global __RTTI___reslist_base_unsigned_short
-__RTTI___reslist_base_unsigned_short:
+.obj __RTTI___reslist_base_unsigned_short, global
 	.4byte _reslist_base_unsigned_short_typestr
-	.4byte 0
+	.4byte 0x00000000
 
-.global __RTTI__cf_IResInfoEneNpcEvent
-__RTTI__cf_IResInfoEneNpcEvent:
+.obj __RTTI__cf_IResInfoEneNpcEvent, global
 	.4byte cf_IResInfoEneNpcEvent_typestr
 	.4byte cf_IResInfoEneNpcEvent_hierarchy
 
-.global __RTTI__cf_IResInfoEneNpc
-__RTTI__cf_IResInfoEneNpc:
+.obj __RTTI__cf_IResInfoEneNpc, global
 	.4byte cf_IResInfoEneNpc_typestr
 	.4byte cf_IResInfoEneNpc_hierarchy
 
-.global __RTTI__cf_IResInfoPc
-__RTTI__cf_IResInfoPc:
+.obj __RTTI__cf_IResInfoPc, global
 	.4byte cf_IResInfoPc_typestr
 	.4byte cf_IResInfoPc_hierarchy
 
-.global __RTTI__cf_IResInfoObj
-__RTTI__cf_IResInfoObj:
+.obj __RTTI__cf_IResInfoObj, global
 	.4byte cf_IResInfoObj_typestr
 	.4byte cf_IResInfoObj_hierarchy
 
-.global __RTTI__cf_IResInfoTBox
-__RTTI__cf_IResInfoTBox:
+.obj __RTTI__cf_IResInfoTBox, global
 	.4byte cf_IResInfoTBox_typestr
 	.4byte cf_IResInfoTBox_hierarchy
 
-.global __RTTI__cf_IResInfoSe
-__RTTI__cf_IResInfoSe:
+.obj __RTTI__cf_IResInfoSe, global
 	.4byte cf_IResInfoSe_typestr
 	.4byte cf_IResInfoSe_hierarchy
 
-.global __RTTI__cf_IResInfoEffect
-__RTTI__cf_IResInfoEffect:
+.obj __RTTI__cf_IResInfoEffect, global
 	.4byte cf_IResInfoEffect_typestr
 	.4byte cf_IResInfoEffect_hierarchy
 
-.global __RTTI__cf_IResInfoLOD
-__RTTI__cf_IResInfoLOD:
+.obj __RTTI__cf_IResInfoLOD, global
 	.4byte cf_IResInfoLOD_typestr
 	.4byte cf_IResInfoLOD_hierarchy
 
-.global __RTTI__cf_IResInfoID
-__RTTI__cf_IResInfoID:
+.obj __RTTI__cf_IResInfoID, global
 	.4byte cf_IResInfoID_typestr
 	.4byte cf_IResInfoID_hierarchy
 
-.global __RTTI__cf_IResInfoPreloadMap
-__RTTI__cf_IResInfoPreloadMap:
+.obj __RTTI__cf_IResInfoPreloadMap, global
 	.4byte cf_IResInfoPreloadMap_typestr
 	.4byte cf_IResInfoPreloadMap_hierarchy
 
-.global __RTTI__cf_IResInfoMap
-__RTTI__cf_IResInfoMap:
+.obj __RTTI__cf_IResInfoMap, global
 	.4byte cf_IResInfoMap_typestr
 	.4byte cf_IResInfoMap_hierarchy
 
-.global __RTTI__cf_IResInfo
-__RTTI__cf_IResInfo:
+.obj __RTTI__cf_IResInfo, global
 	.4byte cf_IResInfo_typestr
-	.4byte 0
+	.4byte 0x00000000
 
-.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-
-
-.global float_80668A88
-float_80668A88:
-	.float 0
-
-
-.global float_80668A8C
-float_80668A8C:
-	.float 3 #0x40400000
-
-
-.global float_80668A90
-float_80668A90:
-	.float 120 #0x42F00000
-
-
-.global float_80668A94
-float_80668A94:
-	.float 1.0
-
-.global float_80668A98
-float_80668A98:
-	.float 30 #0x41F00000
-
-.section .sbss, "wa"  # 0x80666600 - 0x8066836F
-
-.global lbl_80666688
-lbl_80666688:
+# 0x80666688 - 0x80666690
+.section .sbss, "wa", @nobits
+.balign 8
+.sym lbl_80666688, local
 	.skip 0x8
+
+# 0x80668A88 - 0x80668A9C
+.section .sdata2, "a"
+.balign 8
+.sym lbl_80668A88, local
+	.4byte 0x00000000
+.sym lbl_80668A8C, local
+	.4byte 0x40400000
+.sym lbl_80668A90, local
+	.4byte 0x42F00000
+.sym lbl_80668A94, local
+	.4byte 0x3F800000
+.sym lbl_80668A98, local
+	.4byte 0x41F00000

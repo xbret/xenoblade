@@ -1,9 +1,11 @@
 .include "macros.inc"
+.file "CriWare/adx/adxt/adx_tlk2.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x8038238C - 0x8038259C
+.text
+.balign 4
 
-.global ADXT_StartAfs
-ADXT_StartAfs:
+.fn ADXT_StartAfs, global
 /* 8038238C 0034B94C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80382390 0034B950  7C 08 02 A6 */	mflr r0
 /* 80382394 0034B954  90 01 00 24 */	stw r0, 0x24(r1)
@@ -25,13 +27,13 @@ ADXT_StartAfs:
 /* 803823D4 0034B994  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 803823D8 0034B998  7C 08 03 A6 */	mtlr r0
 /* 803823DC 0034B99C  38 21 00 20 */	addi r1, r1, 0x20
-/* 803823E0 0034B9A0  4E 80 00 20 */	blr 
+/* 803823E0 0034B9A0  4E 80 00 20 */	blr
+.endfn ADXT_StartAfs
 
-.global adxt_StartAfs
-adxt_StartAfs:
+.fn adxt_StartAfs, global
 /* 803823E4 0034B9A4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803823E8 0034B9A8  7C 08 02 A6 */	mflr r0
-/* 803823EC 0034B9AC  2C 03 00 00 */	cmpwi r3, 0
+/* 803823EC 0034B9AC  2C 03 00 00 */	cmpwi r3, 0x0
 /* 803823F0 0034B9B0  90 01 00 44 */	stw r0, 0x44(r1)
 /* 803823F4 0034B9B4  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 803823F8 0034B9B8  7C BF 2B 78 */	mr r31, r5
@@ -49,14 +51,14 @@ adxt_StartAfs:
 /* 80382424 0034B9E4  80 BD 00 AC */	lwz r5, 0xac(r29)
 /* 80382428 0034B9E8  7F C3 F3 78 */	mr r3, r30
 /* 8038242C 0034B9EC  7F E4 FB 78 */	mr r4, r31
-/* 80382430 0034B9F0  38 C1 00 08 */	addi r6, r1, 8
+/* 80382430 0034B9F0  38 C1 00 08 */	addi r6, r1, 0x8
 /* 80382434 0034B9F4  38 E1 00 10 */	addi r7, r1, 0x10
 /* 80382438 0034B9F8  39 01 00 0C */	addi r8, r1, 0xc
 /* 8038243C 0034B9FC  4B FF CE 25 */	bl ADXF_GetFnameRangeEx
-/* 80382440 0034BA00  2C 03 00 00 */	cmpwi r3, 0
+/* 80382440 0034BA00  2C 03 00 00 */	cmpwi r3, 0x0
 /* 80382444 0034BA04  40 82 00 88 */	bne .L_803824CC
-/* 80382448 0034BA08  80 1D 00 08 */	lwz r0, 8(r29)
-/* 8038244C 0034BA0C  2C 00 00 00 */	cmpwi r0, 0
+/* 80382448 0034BA08  80 1D 00 08 */	lwz r0, 0x8(r29)
+/* 8038244C 0034BA0C  2C 00 00 00 */	cmpwi r0, 0x0
 /* 80382450 0034BA10  40 82 00 40 */	bne .L_80382490
 /* 80382454 0034BA14  7F C3 F3 78 */	mr r3, r30
 /* 80382458 0034BA18  7F E4 FB 78 */	mr r4, r31
@@ -68,26 +70,26 @@ adxt_StartAfs:
 /* 80382470 0034BA30  38 63 98 38 */	addi r3, r3, lbl_80519838@l
 /* 80382474 0034BA34  38 63 00 29 */	addi r3, r3, 0x29
 /* 80382478 0034BA38  48 00 7E 25 */	bl ADXERR_CallErrFunc2_
-/* 8038247C 0034BA3C  38 60 FF FF */	li r3, -1
-/* 80382480 0034BA40  38 00 00 06 */	li r0, 6
+/* 8038247C 0034BA3C  38 60 FF FF */	li r3, -0x1
+/* 80382480 0034BA40  38 00 00 06 */	li r0, 0x6
 /* 80382484 0034BA44  B0 7D 00 60 */	sth r3, 0x60(r29)
-/* 80382488 0034BA48  98 1D 00 01 */	stb r0, 1(r29)
+/* 80382488 0034BA48  98 1D 00 01 */	stb r0, 0x1(r29)
 /* 8038248C 0034BA4C  48 00 00 40 */	b .L_803824CC
 .L_80382490:
 /* 80382490 0034BA50  80 BD 00 AC */	lwz r5, 0xac(r29)
-/* 80382494 0034BA54  38 00 00 01 */	li r0, 1
+/* 80382494 0034BA54  38 00 00 01 */	li r0, 0x1
 /* 80382498 0034BA58  7F A3 EB 78 */	mr r3, r29
-/* 8038249C 0034BA5C  38 80 00 00 */	li r4, 0
+/* 8038249C 0034BA5C  38 80 00 00 */	li r4, 0x0
 /* 803824A0 0034BA60  90 BD 00 B0 */	stw r5, 0xb0(r29)
-/* 803824A4 0034BA64  80 A1 00 08 */	lwz r5, 8(r1)
+/* 803824A4 0034BA64  80 A1 00 08 */	lwz r5, 0x8(r1)
 /* 803824A8 0034BA68  90 BD 00 B4 */	stw r5, 0xb4(r29)
 /* 803824AC 0034BA6C  80 A1 00 10 */	lwz r5, 0x10(r1)
 /* 803824B0 0034BA70  90 BD 00 B8 */	stw r5, 0xb8(r29)
 /* 803824B4 0034BA74  80 A1 00 0C */	lwz r5, 0xc(r1)
 /* 803824B8 0034BA78  90 BD 00 BC */	stw r5, 0xbc(r29)
-/* 803824BC 0034BA7C  98 1D 00 01 */	stb r0, 1(r29)
+/* 803824BC 0034BA7C  98 1D 00 01 */	stb r0, 0x1(r29)
 /* 803824C0 0034BA80  98 1D 00 A8 */	stb r0, 0xa8(r29)
-/* 803824C4 0034BA84  98 1D 00 02 */	stb r0, 2(r29)
+/* 803824C4 0034BA84  98 1D 00 02 */	stb r0, 0x2(r29)
 /* 803824C8 0034BA88  48 00 1F 35 */	bl ADXT_SetLnkSw
 .L_803824CC:
 /* 803824CC 0034BA8C  80 01 00 44 */	lwz r0, 0x44(r1)
@@ -96,21 +98,21 @@ adxt_StartAfs:
 /* 803824D8 0034BA98  83 A1 00 34 */	lwz r29, 0x34(r1)
 /* 803824DC 0034BA9C  7C 08 03 A6 */	mtlr r0
 /* 803824E0 0034BAA0  38 21 00 40 */	addi r1, r1, 0x40
-/* 803824E4 0034BAA4  4E 80 00 20 */	blr 
+/* 803824E4 0034BAA4  4E 80 00 20 */	blr
+.endfn adxt_StartAfs
 
-.global ADXT_StartFnameRange
-ADXT_StartFnameRange:
+.fn ADXT_StartFnameRange, global
 /* 803824E8 0034BAA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803824EC 0034BAAC  7C 08 02 A6 */	mflr r0
 /* 803824F0 0034BAB0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803824F4 0034BAB4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803824F8 0034BAB8  7C 9F 23 78 */	mr r31, r4
-/* 803824FC 0034BABC  93 C1 00 08 */	stw r30, 8(r1)
+/* 803824FC 0034BABC  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 80382500 0034BAC0  7C 7E 1B 78 */	mr r30, r3
 /* 80382504 0034BAC4  48 00 6F 01 */	bl ADXCRS_Enter
-/* 80382508 0034BAC8  2C 1E 00 00 */	cmpwi r30, 0
+/* 80382508 0034BAC8  2C 1E 00 00 */	cmpwi r30, 0x0
 /* 8038250C 0034BACC  41 82 00 0C */	beq .L_80382518
-/* 80382510 0034BAD0  2C 1F 00 00 */	cmpwi r31, 0
+/* 80382510 0034BAD0  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 80382514 0034BAD4  40 82 00 18 */	bne .L_8038252C
 .L_80382518:
 /* 80382518 0034BAD8  3C 60 80 52 */	lis r3, lbl_80519838@ha
@@ -126,40 +128,107 @@ ADXT_StartFnameRange:
 /* 8038253C 0034BAFC  38 80 01 00 */	li r4, 0x100
 /* 80382540 0034BB00  48 01 8E DD */	bl criCrw_Strcpy
 /* 80382544 0034BB04  80 9E 00 AC */	lwz r4, 0xac(r30)
-/* 80382548 0034BB08  3C 60 00 10 */	lis r3, 0x000FFFFF@ha
-/* 8038254C 0034BB0C  38 C0 00 00 */	li r6, 0
-/* 80382550 0034BB10  38 00 00 01 */	li r0, 1
-/* 80382554 0034BB14  38 A3 FF FF */	addi r5, r3, 0x000FFFFF@l
+/* 80382548 0034BB08  3C 60 00 10 */	lis r3, 0x10
+/* 8038254C 0034BB0C  38 C0 00 00 */	li r6, 0x0
+/* 80382550 0034BB10  38 00 00 01 */	li r0, 0x1
+/* 80382554 0034BB14  38 A3 FF FF */	addi r5, r3, -0x1
 /* 80382558 0034BB18  90 9E 00 B0 */	stw r4, 0xb0(r30)
 /* 8038255C 0034BB1C  7F C3 F3 78 */	mr r3, r30
-/* 80382560 0034BB20  38 80 00 00 */	li r4, 0
+/* 80382560 0034BB20  38 80 00 00 */	li r4, 0x0
 /* 80382564 0034BB24  90 DE 00 B4 */	stw r6, 0xb4(r30)
 /* 80382568 0034BB28  90 DE 00 B8 */	stw r6, 0xb8(r30)
 /* 8038256C 0034BB2C  90 BE 00 BC */	stw r5, 0xbc(r30)
-/* 80382570 0034BB30  98 1E 00 01 */	stb r0, 1(r30)
+/* 80382570 0034BB30  98 1E 00 01 */	stb r0, 0x1(r30)
 /* 80382574 0034BB34  98 1E 00 A8 */	stb r0, 0xa8(r30)
-/* 80382578 0034BB38  98 DE 00 02 */	stb r6, 2(r30)
+/* 80382578 0034BB38  98 DE 00 02 */	stb r6, 0x2(r30)
 /* 8038257C 0034BB3C  48 00 1E 81 */	bl ADXT_SetLnkSw
 .L_80382580:
 /* 80382580 0034BB40  48 00 6E 89 */	bl ADXCRS_Leave
 /* 80382584 0034BB44  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80382588 0034BB48  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8038258C 0034BB4C  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8038258C 0034BB4C  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 80382590 0034BB50  7C 08 03 A6 */	mtlr r0
 /* 80382594 0034BB54  38 21 00 10 */	addi r1, r1, 0x10
-/* 80382598 0034BB58  4E 80 00 20 */	blr 
+/* 80382598 0034BB58  4E 80 00 20 */	blr
+.endfn ADXT_StartFnameRange
 
-.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-
-
-.global lbl_80519838
-lbl_80519838:
-	.asciz "E02080811 adxt_StartAfs: parameter error"
-	.asciz "E8101202 adxt_StartAfs: can't open "
-	.asciz "E02080807 adxt_StartFnameRange: parameter error"
-	.asciz "E02080809 adxt_StartMem2: parameter error"
-	.asciz "E8101207: can't create sj (adxt_StartMem)"
-	.asciz "E02080810 adxt_StartMemIdx: parameter error"
-	.asciz "E8101207: can't create sj (adxt_StartMemIdx)"
-	.balign 4
-	.4byte 0
+# 0x80519838 - 0x80519968
+.rodata
+.balign 8
+.sym lbl_80519838, local
+	.4byte 0x45303230
+	.4byte 0x38303831
+	.4byte 0x31206164
+	.4byte 0x78745F53
+	.4byte 0x74617274
+	.4byte 0x4166733A
+	.4byte 0x20706172
+	.4byte 0x616D6574
+	.4byte 0x65722065
+	.4byte 0x72726F72
+	.4byte 0x00453831
+	.4byte 0x30313230
+	.4byte 0x32206164
+	.4byte 0x78745F53
+	.4byte 0x74617274
+	.4byte 0x4166733A
+	.4byte 0x2063616E
+	.4byte 0x2774206F
+	.4byte 0x70656E20
+	.4byte 0x00453032
+	.4byte 0x30383038
+	.4byte 0x30372061
+	.4byte 0x6478745F
+	.4byte 0x53746172
+	.4byte 0x74466E61
+	.4byte 0x6D655261
+	.4byte 0x6E67653A
+	.4byte 0x20706172
+	.4byte 0x616D6574
+	.4byte 0x65722065
+	.4byte 0x72726F72
+	.4byte 0x00453032
+	.4byte 0x30383038
+	.4byte 0x30392061
+	.4byte 0x6478745F
+	.4byte 0x53746172
+	.4byte 0x744D656D
+	.4byte 0x323A2070
+	.4byte 0x6172616D
+	.4byte 0x65746572
+	.4byte 0x20657272
+	.4byte 0x6F720045
+	.4byte 0x38313031
+	.4byte 0x3230373A
+	.4byte 0x2063616E
+	.4byte 0x27742063
+	.4byte 0x72656174
+	.4byte 0x6520736A
+	.4byte 0x20286164
+	.4byte 0x78745F53
+	.4byte 0x74617274
+	.4byte 0x4D656D29
+	.4byte 0x00453032
+	.4byte 0x30383038
+	.4byte 0x31302061
+	.4byte 0x6478745F
+	.4byte 0x53746172
+	.4byte 0x744D656D
+	.4byte 0x4964783A
+	.4byte 0x20706172
+	.4byte 0x616D6574
+	.4byte 0x65722065
+	.4byte 0x72726F72
+	.4byte 0x00453831
+	.4byte 0x30313230
+	.4byte 0x373A2063
+	.4byte 0x616E2774
+	.4byte 0x20637265
+	.4byte 0x61746520
+	.4byte 0x736A2028
+	.4byte 0x61647874
+	.4byte 0x5F537461
+	.4byte 0x72744D65
+	.4byte 0x6D496478
+	.4byte 0x29000000
+	.4byte 0x00000000

@@ -1,7 +1,10 @@
 .include "macros.inc"
+.file "CriWare/adx/sj/sj_err.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x80396998 - 0x8039699C
+.text
+.balign 4
 
-.global SJERR_CallErr
-SJERR_CallErr:
+.fn SJERR_CallErr, global
 /* 80396998 0035FF58  48 00 01 D4 */	b SVM_CallErr1
+.endfn SJERR_CallErr

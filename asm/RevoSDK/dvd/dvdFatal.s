@@ -1,34 +1,35 @@
 .include "macros.inc"
+.file "RevoSDK/dvd/dvdFatal.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x80310200 - 0x80310370
+.text
+.balign 4
 
-.balign 16, 0
-.global __DVDShowFatalMessage
-__DVDShowFatalMessage:
+.fn __DVDShowFatalMessage, global
 /* 80310200 002D97C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80310204 002D97C4  7C 08 02 A6 */	mflr r0
 /* 80310208 002D97C8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8031020C 002D97CC  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80310210 002D97D0  3B E0 00 00 */	li r31, 0
+/* 80310210 002D97D0  3B E0 00 00 */	li r31, 0x0
 /* 80310214 002D97D4  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80310218 002D97D8  83 C2 BC 08 */	lwz r30, lbl_8066BF88@sda21(r2)
 /* 8031021C 002D97DC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80310220 002D97E0  48 05 0D F1 */	bl SCGetLanguage
-/* 80310224 002D97E4  54 60 06 3F */	clrlwi. r0, r3, 0x18
+/* 80310224 002D97E4  54 60 06 3F */	clrlwi. r0, r3, 24
 /* 80310228 002D97E8  40 82 00 10 */	bne .L_80310238
-/* 8031022C 002D97EC  38 60 00 01 */	li r3, 1
+/* 8031022C 002D97EC  38 60 00 01 */	li r3, 0x1
 /* 80310230 002D97F0  48 04 77 E1 */	bl OSSetFontEncode
 /* 80310234 002D97F4  48 00 00 0C */	b .L_80310240
 .L_80310238:
-/* 80310238 002D97F8  38 60 00 00 */	li r3, 0
+/* 80310238 002D97F8  38 60 00 00 */	li r3, 0x0
 /* 8031023C 002D97FC  48 04 77 D5 */	bl OSSetFontEncode
 .L_80310240:
 /* 80310240 002D9800  48 05 13 91 */	bl SCGetProductSN
 /* 80310244 002D9804  7C 63 07 74 */	extsb r3, r3
-/* 80310248 002D9808  38 03 FF FC */	addi r0, r3, -4
-/* 8031024C 002D980C  28 00 00 01 */	cmplwi r0, 1
+/* 80310248 002D9808  38 03 FF FC */	addi r0, r3, -0x4
+/* 8031024C 002D980C  28 00 00 01 */	cmplwi r0, 0x1
 /* 80310250 002D9810  40 81 00 24 */	ble .L_80310274
-/* 80310254 002D9814  2C 03 00 02 */	cmpwi r3, 2
+/* 80310254 002D9814  2C 03 00 02 */	cmpwi r3, 0x2
 /* 80310258 002D9818  41 82 00 10 */	beq .L_80310268
 /* 8031025C 002D981C  3F A0 80 51 */	lis r29, lbl_8050E3A8@ha
 /* 80310260 002D9820  3B BD E3 A8 */	addi r29, r29, lbl_8050E3A8@l
@@ -41,19 +42,19 @@ __DVDShowFatalMessage:
 /* 80310274 002D9834  3B AD 98 18 */	addi r29, r13, lbl_80665998@sda21
 .L_80310278:
 /* 80310278 002D9838  48 05 0D 99 */	bl SCGetLanguage
-/* 8031027C 002D983C  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 80310280 002D9840  28 00 00 06 */	cmplwi r0, 6
+/* 8031027C 002D983C  54 60 06 3E */	clrlwi r0, r3, 24
+/* 80310280 002D9840  28 00 00 06 */	cmplwi r0, 0x6
 /* 80310284 002D9844  40 81 00 0C */	ble .L_80310290
-/* 80310288 002D9848  80 BD 00 04 */	lwz r5, 4(r29)
+/* 80310288 002D9848  80 BD 00 04 */	lwz r5, 0x4(r29)
 /* 8031028C 002D984C  48 00 00 10 */	b .L_8031029C
 .L_80310290:
 /* 80310290 002D9850  48 05 0D 81 */	bl SCGetLanguage
-/* 80310294 002D9854  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
+/* 80310294 002D9854  54 60 15 BA */	clrlslwi r0, r3, 24, 2
 /* 80310298 002D9858  7C BD 00 2E */	lwzx r5, r29, r0
 .L_8031029C:
-/* 8031029C 002D985C  93 E1 00 08 */	stw r31, 8(r1)
+/* 8031029C 002D985C  93 E1 00 08 */	stw r31, 0x8(r1)
 /* 803102A0 002D9860  38 61 00 0C */	addi r3, r1, 0xc
-/* 803102A4 002D9864  38 81 00 08 */	addi r4, r1, 8
+/* 803102A4 002D9864  38 81 00 08 */	addi r4, r1, 0x8
 /* 803102A8 002D9868  93 C1 00 0C */	stw r30, 0xc(r1)
 /* 803102AC 002D986C  48 04 6C 95 */	bl OSFatal
 /* 803102B0 002D9870  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -62,58 +63,64 @@ __DVDShowFatalMessage:
 /* 803102BC 002D987C  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 803102C0 002D9880  7C 08 03 A6 */	mtlr r0
 /* 803102C4 002D9884  38 21 00 20 */	addi r1, r1, 0x20
-/* 803102C8 002D9888  4E 80 00 20 */	blr 
+/* 803102C8 002D9888  4E 80 00 20 */	blr
+.endfn __DVDShowFatalMessage
+/* 803102CC 002D988C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-.global DVDSetAutoFatalMessaging
-DVDSetAutoFatalMessaging:
+.fn DVDSetAutoFatalMessaging, global
 /* 803102D0 002D9890  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803102D4 002D9894  7C 08 02 A6 */	mflr r0
 /* 803102D8 002D9898  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803102DC 002D989C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803102E0 002D98A0  7C 7F 1B 78 */	mr r31, r3
 /* 803102E4 002D98A4  48 04 86 CD */	bl OSDisableInterrupts
-/* 803102E8 002D98A8  80 AD B7 08 */	lwz r5, lbl_80667888@sda21(r13)
-/* 803102EC 002D98AC  2C 1F 00 00 */	cmpwi r31, 0
-/* 803102F0 002D98B0  38 80 00 00 */	li r4, 0
+/* 803102E8 002D98A8  80 AD B7 08 */	lwz r5, FatalFunc@sda21(r13)
+/* 803102EC 002D98AC  2C 1F 00 00 */	cmpwi r31, 0x0
+/* 803102F0 002D98B0  38 80 00 00 */	li r4, 0x0
 /* 803102F4 002D98B4  7C 05 00 D0 */	neg r0, r5
 /* 803102F8 002D98B8  7C 00 2B 78 */	or r0, r0, r5
-/* 803102FC 002D98BC  54 1F 0F FE */	srwi r31, r0, 0x1f
+/* 803102FC 002D98BC  54 1F 0F FE */	srwi r31, r0, 31
 /* 80310300 002D98C0  41 82 00 0C */	beq .L_8031030C
 /* 80310304 002D98C4  3C 80 80 31 */	lis r4, __DVDShowFatalMessage@ha
 /* 80310308 002D98C8  38 84 02 00 */	addi r4, r4, __DVDShowFatalMessage@l
 .L_8031030C:
-/* 8031030C 002D98CC  90 8D B7 08 */	stw r4, lbl_80667888@sda21(r13)
+/* 8031030C 002D98CC  90 8D B7 08 */	stw r4, FatalFunc@sda21(r13)
 /* 80310310 002D98D0  48 04 86 E1 */	bl OSRestoreInterrupts
 /* 80310314 002D98D4  7F E3 FB 78 */	mr r3, r31
 /* 80310318 002D98D8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8031031C 002D98DC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80310320 002D98E0  7C 08 03 A6 */	mtlr r0
 /* 80310324 002D98E4  38 21 00 10 */	addi r1, r1, 0x10
-/* 80310328 002D98E8  4E 80 00 20 */	blr 
+/* 80310328 002D98E8  4E 80 00 20 */	blr
+.endfn DVDSetAutoFatalMessaging
+/* 8031032C 002D98EC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-.global __DVDGetAutoFatalMessaging
-__DVDGetAutoFatalMessaging:
-/* 80310330 002D98F0  80 6D B7 08 */	lwz r3, lbl_80667888@sda21(r13)
+.fn __DVDGetAutoFatalMessaging, global
+/* 80310330 002D98F0  80 6D B7 08 */	lwz r3, FatalFunc@sda21(r13)
 /* 80310334 002D98F4  7C 03 00 D0 */	neg r0, r3
 /* 80310338 002D98F8  7C 00 1B 78 */	or r0, r0, r3
-/* 8031033C 002D98FC  54 03 0F FE */	srwi r3, r0, 0x1f
-/* 80310340 002D9900  4E 80 00 20 */	blr 
+/* 8031033C 002D98FC  54 03 0F FE */	srwi r3, r0, 31
+/* 80310340 002D9900  4E 80 00 20 */	blr
+.endfn __DVDGetAutoFatalMessaging
+/* 80310344 002D9904  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+/* 80310348 002D9908  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+/* 8031034C 002D990C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-.global __DVDPrintFatalMessage
-__DVDPrintFatalMessage:
-/* 80310350 002D9910  81 8D B7 08 */	lwz r12, lbl_80667888@sda21(r13)
-/* 80310354 002D9914  2C 0C 00 00 */	cmpwi r12, 0
-/* 80310358 002D9918  4D 82 00 20 */	beqlr 
+.fn __DVDPrintFatalMessage, global
+/* 80310350 002D9910  81 8D B7 08 */	lwz r12, FatalFunc@sda21(r13)
+/* 80310354 002D9914  2C 0C 00 00 */	cmpwi r12, 0x0
+/* 80310358 002D9918  4D 82 00 20 */	beqlr
 /* 8031035C 002D991C  7D 89 03 A6 */	mtctr r12
-/* 80310360 002D9920  4E 80 04 20 */	bctr 
+/* 80310360 002D9920  4E 80 04 20 */	bctr
 /* 80310364 002D9924  4E 80 00 20 */	blr
+.endfn __DVDPrintFatalMessage
+/* 80310368 002D9928  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+/* 8031036C 002D992C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-.global lbl_8050E3A8
-lbl_8050E3A8:
+# 0x8050E3A8 - 0x8050E3E0
+.rodata
+.balign 8
+.sym lbl_8050E3A8, local
 	.4byte lbl_80549D60
 	.4byte lbl_80549DF0
 	.4byte lbl_80549EA0
@@ -121,10 +128,7 @@ lbl_8050E3A8:
 	.4byte lbl_8054A008
 	.4byte lbl_8054A0A8
 	.4byte lbl_8054A154
-
-
-.global lbl_8050E3C4
-lbl_8050E3C4:
+.sym lbl_8050E3C4, local
 	.4byte lbl_80549D60
 	.4byte lbl_8054A1E8
 	.4byte lbl_80549EA0
@@ -133,13 +137,10 @@ lbl_8050E3C4:
 	.4byte lbl_8054A0A8
 	.4byte lbl_8054A154
 
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
-
-.global lbl_80549D60
-lbl_80549D60:
-	#"\n\n\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
-.global lbl_80549D60
-lbl_80549D60:
+# 0x80549D60 - 0x8054A528
+.data
+.balign 8
+.sym lbl_80549D60, local
 	.4byte 0x0A0A0A83
 	.4byte 0x47838981
 	.4byte 0x5B82AA94
@@ -176,17 +177,52 @@ lbl_80549D60:
 	.4byte 0x82AD82BE
 	.4byte 0x82B382A2
 	.4byte 0x81420000
-
-.global lbl_80549DF0
-lbl_80549DF0:
-	.asciz "\n\n\nAn error has occurred.\nPress the Eject Button, remove the\nGame Disc, and turn off the power to the\nconsole. Please read the Wii Operations\nManual for further instructions."
-	.balign 4
-
-.global lbl_80549EA0
-lbl_80549EA0:
-	#"\n\n\nEin Fehler ist aufgetreten.\nDrücke den Ausgabeknopf, entnimm die\nDisc und schalte die Wii-Konsole aus.\nBitte lies die Wii-Bedienungsanleitung,\num weitere Informationen zu erhalten."
-.global lbl_80549EA0
-lbl_80549EA0:
+.sym lbl_80549DF0, local
+	.4byte 0x0A0A0A41
+	.4byte 0x6E206572
+	.4byte 0x726F7220
+	.4byte 0x68617320
+	.4byte 0x6F636375
+	.4byte 0x72726564
+	.4byte 0x2E0A5072
+	.4byte 0x65737320
+	.4byte 0x74686520
+	.4byte 0x456A6563
+	.4byte 0x74204275
+	.4byte 0x74746F6E
+	.4byte 0x2C207265
+	.4byte 0x6D6F7665
+	.4byte 0x20746865
+	.4byte 0x0A47616D
+	.4byte 0x65204469
+	.4byte 0x73632C20
+	.4byte 0x616E6420
+	.4byte 0x7475726E
+	.4byte 0x206F6666
+	.4byte 0x20746865
+	.4byte 0x20706F77
+	.4byte 0x65722074
+	.4byte 0x6F207468
+	.4byte 0x650A636F
+	.4byte 0x6E736F6C
+	.4byte 0x652E2050
+	.4byte 0x6C656173
+	.4byte 0x65207265
+	.4byte 0x61642074
+	.4byte 0x68652057
+	.4byte 0x6969204F
+	.4byte 0x70657261
+	.4byte 0x74696F6E
+	.4byte 0x730A4D61
+	.4byte 0x6E75616C
+	.4byte 0x20666F72
+	.4byte 0x20667572
+	.4byte 0x74686572
+	.4byte 0x20696E73
+	.4byte 0x74727563
+	.4byte 0x74696F6E
+	.4byte 0x732E0000
+.sym lbl_80549EA0, local
 	.4byte 0x0A0A0A45
 	.4byte 0x696E2046
 	.4byte 0x65686C65
@@ -196,13 +232,44 @@ lbl_80549EA0:
 	.4byte 0x72657465
 	.4byte 0x6E2E0A44
 	.4byte 0x72FC636B
-	.asciz "e den Ausgabeknopf, entnimm die\nDisc und schalte die Wii-Konsole aus.\nBitte lies die Wii-Bedienungsanleitung,\num weitere Informationen zu erhalten."
-
-.global lbl_80549F58
-lbl_80549F58:
-	#.asciz "\n\n\nUne erreur est survenue.\nAppuyez sur le bouton EJECT, retirez\nle disque et éteignez la console.\nVeuillez vous référer au Mode d'emploi\nde la Wii pour plus de détails."
-.global lbl_80549F58
-lbl_80549F58:
+	.4byte 0x65206465
+	.4byte 0x6E204175
+	.4byte 0x73676162
+	.4byte 0x656B6E6F
+	.4byte 0x70662C20
+	.4byte 0x656E746E
+	.4byte 0x696D6D20
+	.4byte 0x6469650A
+	.4byte 0x44697363
+	.4byte 0x20756E64
+	.4byte 0x20736368
+	.4byte 0x616C7465
+	.4byte 0x20646965
+	.4byte 0x20576969
+	.4byte 0x2D4B6F6E
+	.4byte 0x736F6C65
+	.4byte 0x20617573
+	.4byte 0x2E0A4269
+	.4byte 0x74746520
+	.4byte 0x6C696573
+	.4byte 0x20646965
+	.4byte 0x20576969
+	.4byte 0x2D426564
+	.4byte 0x69656E75
+	.4byte 0x6E677361
+	.4byte 0x6E6C6569
+	.4byte 0x74756E67
+	.4byte 0x2C0A756D
+	.4byte 0x20776569
+	.4byte 0x74657265
+	.4byte 0x20496E66
+	.4byte 0x6F726D61
+	.4byte 0x74696F6E
+	.4byte 0x656E207A
+	.4byte 0x75206572
+	.4byte 0x68616C74
+	.4byte 0x656E2E00
+.sym lbl_80549F58, local
 	.4byte 0x0A0A0A55
 	.4byte 0x6E652065
 	.4byte 0x72726575
@@ -244,15 +311,10 @@ lbl_80549F58:
 	.4byte 0x20706C75
 	.4byte 0x73206465
 	.4byte 0x2064E974
-	.asciz "ails."
-	.balign 4
-	.4byte 0
-
-.global lbl_8054A008
-lbl_8054A008:
-	#"\n\n\nOcurrió un Error.\nOprime el Botón EJECT, saca el disco\ny apaga la consola. Consulta el manual\nde operaciones de la consola Wii para\nobtener más información."
-.global lbl_8054A008
-lbl_8054A008:
+	.4byte 0x61696C73
+	.4byte 0x2E000000
+	.4byte 0x00000000
+.sym lbl_8054A008, local
 	.4byte 0x0A0A0A4F
 	.4byte 0x63757272
 	.4byte 0x69F32075
@@ -293,31 +355,131 @@ lbl_8054A008:
 	.4byte 0x6E666F72
 	.4byte 0x6D616369
 	.4byte 0xF36E2E00
-
-.global lbl_8054A0A8
-lbl_8054A0A8:
-	#"\n\n\nSi è verificato un errore.\nPremi il pulsante EJECT, estrai il disco\ne spegni la console. Per maggiori\ninformazioni, consulta il manuale di\nistruzioni della console Wii."
-.global lbl_8054A0A8
-lbl_8054A0A8:
+.sym lbl_8054A0A8, local
 	.4byte 0x0A0A0A53
 	.4byte 0x6920E820
-	.asciz "verificato un errore.\nPremi il pulsante EJECT, estrai il disco\ne spegni la console. Per maggiori\ninformazioni, consulta il manuale di\nistruzioni della console Wii."
-
-.global lbl_8054A154
-lbl_8054A154:
-	.asciz "\n\n\nEr is een fout opgetreden.\nDruk op de EJECT-knop, verwijder de\ndisk en zet het Wii-systeem uit. Lees\nde Wii-handleiding voor meer informatie."
-	.balign 4
-
-.global lbl_8054A1E8
-lbl_8054A1E8:
-	.asciz "\n\n\nAn error has occurred.\nPress the EJECT Button, remove the Disc,\nand turn off the power to the console.\nPlease refer to the Wii Operations Manual\nfor details."
-	.balign 4
-
-.global lbl_8054A28C
-lbl_8054A28C:
-	#"\n\n\nUne erreur est survenue.\nAppuyez sur le bouton EJECT, retirez\nle disque et éteignez la console.\nVeuillez vous référer au mode d'emploi\nWii pour plus de détails."
-.global lbl_8054A28C
-lbl_8054A28C:
+	.4byte 0x76657269
+	.4byte 0x66696361
+	.4byte 0x746F2075
+	.4byte 0x6E206572
+	.4byte 0x726F7265
+	.4byte 0x2E0A5072
+	.4byte 0x656D6920
+	.4byte 0x696C2070
+	.4byte 0x756C7361
+	.4byte 0x6E746520
+	.4byte 0x454A4543
+	.4byte 0x542C2065
+	.4byte 0x73747261
+	.4byte 0x6920696C
+	.4byte 0x20646973
+	.4byte 0x636F0A65
+	.4byte 0x20737065
+	.4byte 0x676E6920
+	.4byte 0x6C612063
+	.4byte 0x6F6E736F
+	.4byte 0x6C652E20
+	.4byte 0x50657220
+	.4byte 0x6D616767
+	.4byte 0x696F7269
+	.4byte 0x0A696E66
+	.4byte 0x6F726D61
+	.4byte 0x7A696F6E
+	.4byte 0x692C2063
+	.4byte 0x6F6E7375
+	.4byte 0x6C746120
+	.4byte 0x696C206D
+	.4byte 0x616E7561
+	.4byte 0x6C652064
+	.4byte 0x690A6973
+	.4byte 0x7472757A
+	.4byte 0x696F6E69
+	.4byte 0x2064656C
+	.4byte 0x6C612063
+	.4byte 0x6F6E736F
+	.4byte 0x6C652057
+	.4byte 0x69692E00
+.sym lbl_8054A154, local
+	.4byte 0x0A0A0A45
+	.4byte 0x72206973
+	.4byte 0x2065656E
+	.4byte 0x20666F75
+	.4byte 0x74206F70
+	.4byte 0x67657472
+	.4byte 0x6564656E
+	.4byte 0x2E0A4472
+	.4byte 0x756B206F
+	.4byte 0x70206465
+	.4byte 0x20454A45
+	.4byte 0x43542D6B
+	.4byte 0x6E6F702C
+	.4byte 0x20766572
+	.4byte 0x77696A64
+	.4byte 0x65722064
+	.4byte 0x650A6469
+	.4byte 0x736B2065
+	.4byte 0x6E207A65
+	.4byte 0x74206865
+	.4byte 0x74205769
+	.4byte 0x692D7379
+	.4byte 0x73746565
+	.4byte 0x6D207569
+	.4byte 0x742E204C
+	.4byte 0x6565730A
+	.4byte 0x64652057
+	.4byte 0x69692D68
+	.4byte 0x616E646C
+	.4byte 0x65696469
+	.4byte 0x6E672076
+	.4byte 0x6F6F7220
+	.4byte 0x6D656572
+	.4byte 0x20696E66
+	.4byte 0x6F726D61
+	.4byte 0x7469652E
+	.4byte 0x00000000
+.sym lbl_8054A1E8, local
+	.4byte 0x0A0A0A41
+	.4byte 0x6E206572
+	.4byte 0x726F7220
+	.4byte 0x68617320
+	.4byte 0x6F636375
+	.4byte 0x72726564
+	.4byte 0x2E0A5072
+	.4byte 0x65737320
+	.4byte 0x74686520
+	.4byte 0x454A4543
+	.4byte 0x54204275
+	.4byte 0x74746F6E
+	.4byte 0x2C207265
+	.4byte 0x6D6F7665
+	.4byte 0x20746865
+	.4byte 0x20446973
+	.4byte 0x632C0A61
+	.4byte 0x6E642074
+	.4byte 0x75726E20
+	.4byte 0x6F666620
+	.4byte 0x74686520
+	.4byte 0x706F7765
+	.4byte 0x7220746F
+	.4byte 0x20746865
+	.4byte 0x20636F6E
+	.4byte 0x736F6C65
+	.4byte 0x2E0A506C
+	.4byte 0x65617365
+	.4byte 0x20726566
+	.4byte 0x65722074
+	.4byte 0x6F207468
+	.4byte 0x65205769
+	.4byte 0x69204F70
+	.4byte 0x65726174
+	.4byte 0x696F6E73
+	.4byte 0x204D616E
+	.4byte 0x75616C0A
+	.4byte 0x666F7220
+	.4byte 0x64657461
+	.4byte 0x696C732E
+	.4byte 0x00000000
+.sym lbl_8054A28C, local
 	.4byte 0x0A0A0A55
 	.4byte 0x6E652065
 	.4byte 0x72726575
@@ -359,13 +521,7 @@ lbl_8054A28C:
 	.4byte 0x64652064
 	.4byte 0xE9746169
 	.4byte 0x6C732E00
-
-.global lbl_8054A330
-lbl_8054A330:
-	#"\n\n\nSe ha producido un error.\nPulsa el Botón EJECT, extrae el disco y\napaga la consola. Consulta el manual de\ninstrucciones de la consola Wii para\nobtener más información."
-	#.byte 0
-.global lbl_8054A330
-lbl_8054A330:
+.sym lbl_8054A330, local
 	.4byte 0x0A0A0A53
 	.4byte 0x65206861
 	.4byte 0x2070726F
@@ -409,12 +565,7 @@ lbl_8054A330:
 	.4byte 0x666F726D
 	.4byte 0x616369F3
 	.4byte 0x6E2E0000
-	
-.global lbl_8054A3DC
-lbl_8054A3DC:
-	#"\n\nエラーコード１０４。\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
-.global lbl_8054A3DC
-lbl_8054A3DC:
+.sym lbl_8054A3DC, local
 	.4byte 0x0A0A8347
 	.4byte 0x8389815B
 	.4byte 0x8352815B
@@ -456,28 +607,70 @@ lbl_8054A3DC:
 	.4byte 0x82AD82BE
 	.4byte 0x82B382A2
 	.4byte 0x81420000
+.sym lbl_8054A480, local
+	.4byte 0x0A0A4572
+	.4byte 0x726F7220
+	.4byte 0x23313034
+	.4byte 0x2C0A416E
+	.4byte 0x20657272
+	.4byte 0x6F722068
+	.4byte 0x6173206F
+	.4byte 0x63637572
+	.4byte 0x7265642E
+	.4byte 0x0A507265
+	.4byte 0x73732074
+	.4byte 0x68652045
+	.4byte 0x4A454354
+	.4byte 0x20427574
+	.4byte 0x746F6E2C
+	.4byte 0x2072656D
+	.4byte 0x6F766520
+	.4byte 0x7468650A
+	.4byte 0x47616D65
+	.4byte 0x20446973
+	.4byte 0x632C2061
+	.4byte 0x6E642074
+	.4byte 0x75726E20
+	.4byte 0x74686520
+	.4byte 0x706F7765
+	.4byte 0x72206F66
+	.4byte 0x662E0A50
+	.4byte 0x6C656173
+	.4byte 0x65207265
+	.4byte 0x61642074
+	.4byte 0x68652057
+	.4byte 0x6969204F
+	.4byte 0x70657261
+	.4byte 0x74696F6E
+	.4byte 0x73204D61
+	.4byte 0x6E75616C
+	.4byte 0x0A666F72
+	.4byte 0x206D6F72
+	.4byte 0x6520696E
+	.4byte 0x666F726D
+	.4byte 0x6174696F
+	.4byte 0x6E2E0000
 
-.global lbl_8054A480
-lbl_8054A480:
-	.asciz "\n\nError #104,\nAn error has occurred.\nPress the EJECT Button, remove the\nGame Disc, and turn the power off.\nPlease read the Wii Operations Manual\nfor more information."
-	.balign 4
-
-.section .sdata, "wa"  # 0x80664180 - 0x80666600
-
-.global lbl_80665998
-lbl_80665998:
+# 0x80665998 - 0x806659A0
+.section .sdata, "wa"
+.balign 8
+.sym lbl_80665998, local
 	.4byte lbl_8054A3DC
 	.4byte lbl_8054A480
 
-.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+# 0x80667888 - 0x80667890
+.section .sbss, "wa", @nobits
+.balign 8
+.sym lbl_80667888, local
 
-.global lbl_8066BF88
-lbl_8066BF88:
+.obj FatalFunc, local
+	.skip 0x4
+.endobj FatalFunc
+	.skip 0x4
+
+# 0x8066BF88 - 0x8066BF90
+.section .sdata2, "a"
+.balign 8
+.sym lbl_8066BF88, local
 	.4byte 0xFFFFFF00
-	.4byte 0
-
-.section .sbss, "wa"  # 0x80666600 - 0x8066836F
-
-.global lbl_80667888
-lbl_80667888:
-	.skip 0x8
+	.4byte 0x00000000

@@ -1,18 +1,22 @@
 .include "macros.inc"
+.file "RevoSDK/axfx/AXFXLfoTable.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x802DAAD0 - 0x802DAAE0
+.text
+.balign 4
 
-.balign 16, 0
-.global __AXFXGetLfoSinTable
-__AXFXGetLfoSinTable:
+.fn __AXFXGetLfoSinTable, global
 /* 802DAAD0 002A4090  3C 60 80 54 */	lis r3, lbl_805433E0@ha
 /* 802DAAD4 002A4094  38 63 33 E0 */	addi r3, r3, lbl_805433E0@l
-/* 802DAAD8 002A4098  4E 80 00 20 */	blr 
+/* 802DAAD8 002A4098  4E 80 00 20 */	blr
+.endfn __AXFXGetLfoSinTable
+/* 802DAADC 002A409C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
-.global lbl_805433E0
-lbl_805433E0:
-	.4byte 0
+# 0x805433E0 - 0x805435E0
+.data
+.balign 8
+.sym lbl_805433E0, local
+	.4byte 0x00000000
 	.4byte 0x00064855
 	.4byte 0x000C8FB3
 	.4byte 0x0012D520

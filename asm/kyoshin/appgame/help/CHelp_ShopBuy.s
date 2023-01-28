@@ -1,8 +1,10 @@
 .include "macros.inc"
+.file "kyoshin/appgame/help/CHelp_ShopBuy.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x802B864C - 0x802B8650
+.text
+.balign 4
 
-
-.global func_802B864C
-func_802B864C:
-/* 802B864C 00281C0C  4B ED 3B 34 */	b func_8018C180
+.fn fn_802B864C, local
+/* 802B864C 00281C0C  4B ED 3B 34 */	b fn_8018C180
+.endfn fn_802B864C

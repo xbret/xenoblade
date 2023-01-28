@@ -1,9 +1,11 @@
 .include "macros.inc"
+.file "RevoSDK/bte/hidd_conn.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x802F3640 - 0x802F3700
+.text
+.balign 4
 
-.global hidd_conn_initiate
-hidd_conn_initiate:
+.fn hidd_conn_initiate, global
 /* 802F3640 002BCC00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F3644 002BCC04  7C 08 02 A6 */	mflr r0
 /* 802F3648 002BCC08  90 01 00 24 */	stw r0, 0x24(r1)
@@ -13,16 +15,16 @@ hidd_conn_initiate:
 /* 802F3658 002BCC18  3F A0 80 5C */	lis r29, lbl_805C2570@ha
 /* 802F365C 002BCC1C  3B BD 25 70 */	addi r29, r29, lbl_805C2570@l
 /* 802F3660 002BCC20  88 1D 01 41 */	lbz r0, 0x141(r29)
-/* 802F3664 002BCC24  28 00 00 04 */	cmplwi r0, 4
+/* 802F3664 002BCC24  28 00 00 04 */	cmplwi r0, 0x4
 /* 802F3668 002BCC28  41 80 00 18 */	blt .L_802F3680
-/* 802F366C 002BCC2C  3C 60 00 1E */	lis r3, 0x001E0003@ha
+/* 802F366C 002BCC2C  3C 60 00 1E */	lis r3, 0x1e
 /* 802F3670 002BCC30  3C 80 80 54 */	lis r4, lbl_80546690@ha
-/* 802F3674 002BCC34  38 63 00 03 */	addi r3, r3, 0x001E0003@l
+/* 802F3674 002BCC34  38 63 00 03 */	addi r3, r3, 0x3
 /* 802F3678 002BCC38  38 84 66 90 */	addi r4, r4, lbl_80546690@l
 /* 802F367C 002BCC3C  4B FE A9 25 */	bl LogMsg_0
 .L_802F3680:
-/* 802F3680 002BCC40  38 00 00 00 */	li r0, 0
-/* 802F3684 002BCC44  3B C0 00 01 */	li r30, 1
+/* 802F3680 002BCC40  38 00 00 00 */	li r0, 0x0
+/* 802F3684 002BCC44  3B C0 00 01 */	li r30, 0x1
 /* 802F3688 002BCC48  3F E0 80 5C */	lis r31, lbl_805C2570@ha
 /* 802F368C 002BCC4C  B0 1D 00 14 */	sth r0, 0x14(r29)
 /* 802F3690 002BCC50  38 9F 25 70 */	addi r4, r31, lbl_805C2570@l
@@ -30,16 +32,16 @@ hidd_conn_initiate:
 /* 802F3698 002BCC58  B0 1D 00 16 */	sth r0, 0x16(r29)
 /* 802F369C 002BCC5C  9B DD 00 11 */	stb r30, 0x11(r29)
 /* 802F36A0 002BCC60  48 00 34 91 */	bl L2CA_ConnectReq
-/* 802F36A4 002BCC64  54 60 04 3F */	clrlwi. r0, r3, 0x10
+/* 802F36A4 002BCC64  54 60 04 3F */	clrlwi. r0, r3, 16
 /* 802F36A8 002BCC68  B0 7D 00 14 */	sth r3, 0x14(r29)
 /* 802F36AC 002BCC6C  40 82 00 30 */	bne .L_802F36DC
 /* 802F36B0 002BCC70  38 7F 25 70 */	addi r3, r31, lbl_805C2570@l
 /* 802F36B4 002BCC74  88 03 01 41 */	lbz r0, 0x141(r3)
-/* 802F36B8 002BCC78  28 00 00 02 */	cmplwi r0, 2
+/* 802F36B8 002BCC78  28 00 00 02 */	cmplwi r0, 0x2
 /* 802F36BC 002BCC7C  41 80 00 18 */	blt .L_802F36D4
-/* 802F36C0 002BCC80  3C 60 00 1E */	lis r3, 0x001E0001@ha
+/* 802F36C0 002BCC80  3C 60 00 1E */	lis r3, 0x1e
 /* 802F36C4 002BCC84  3C 80 80 54 */	lis r4, lbl_805466A8@ha
-/* 802F36C8 002BCC88  38 63 00 01 */	addi r3, r3, 0x001E0001@l
+/* 802F36C8 002BCC88  38 63 00 01 */	addi r3, r3, 0x1
 /* 802F36CC 002BCC8C  38 84 66 A8 */	addi r4, r4, lbl_805466A8@l
 /* 802F36D0 002BCC90  4B FE A8 D1 */	bl LogMsg_0
 .L_802F36D4:
@@ -47,7 +49,7 @@ hidd_conn_initiate:
 /* 802F36D8 002BCC98  48 00 00 0C */	b .L_802F36E4
 .L_802F36DC:
 /* 802F36DC 002BCC9C  9B DD 00 10 */	stb r30, 0x10(r29)
-/* 802F36E0 002BCCA0  38 60 00 00 */	li r3, 0
+/* 802F36E0 002BCCA0  38 60 00 00 */	li r3, 0x0
 .L_802F36E4:
 /* 802F36E4 002BCCA4  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 802F36E8 002BCCA8  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -56,14 +58,22 @@ hidd_conn_initiate:
 /* 802F36F4 002BCCB4  7C 08 03 A6 */	mtlr r0
 /* 802F36F8 002BCCB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F36FC 002BCCBC  4E 80 00 20 */	blr
+.endfn hidd_conn_initiate
 
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
-.global lbl_80546690
-lbl_80546690:
-	.asciz "HID - Originate started"
-
-
-.global lbl_805466A8
-lbl_805466A8:
-	.asciz "HID - Originate failed"
-	.balign 4
+# 0x80546690 - 0x805466C0
+.data
+.balign 8
+.sym lbl_80546690, local
+	.4byte 0x48494420
+	.4byte 0x2D204F72
+	.4byte 0x6967696E
+	.4byte 0x61746520
+	.4byte 0x73746172
+	.4byte 0x74656400
+.sym lbl_805466A8, local
+	.4byte 0x48494420
+	.4byte 0x2D204F72
+	.4byte 0x6967696E
+	.4byte 0x61746520
+	.4byte 0x6661696C
+	.4byte 0x65640000

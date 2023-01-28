@@ -1,90 +1,92 @@
 .include "macros.inc"
+.file "PowerPC_EABI_Support/MetroTRK/nubinit.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x802CC7EC - 0x802CC93C
+.text
+.balign 4
 
-.global TRKInitializeNub
-TRKInitializeNub:
+.fn TRKInitializeNub, global
 /* 802CC7EC 00295DAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC7F0 00295DB0  7C 08 02 A6 */	mflr r0
 /* 802CC7F4 00295DB4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802CC7F8 00295DB8  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802CC7FC 00295DBC  93 C1 00 08 */	stw r30, 8(r1)
-/* 802CC800 00295DC0  48 00 00 C9 */	bl TRK_InitializeEndian
-/* 802CC804 00295DC4  2C 03 00 00 */	cmpwi r3, 0
+/* 802CC7FC 00295DBC  93 C1 00 08 */	stw r30, 0x8(r1)
+/* 802CC800 00295DC0  48 00 00 C9 */	bl TRKInitializeEndian
+/* 802CC804 00295DC4  2C 03 00 00 */	cmpwi r3, 0x0
 /* 802CC808 00295DC8  7C 7F 1B 78 */	mr r31, r3
 /* 802CC80C 00295DCC  40 82 00 0C */	bne .L_802CC818
 /* 802CC810 00295DD0  4B FF FE 41 */	bl TRKInitializeEventQueue
 /* 802CC814 00295DD4  7C 7F 1B 78 */	mr r31, r3
 .L_802CC818:
-/* 802CC818 00295DD8  2C 1F 00 00 */	cmpwi r31, 0
+/* 802CC818 00295DD8  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 802CC81C 00295DDC  40 82 00 0C */	bne .L_802CC828
 /* 802CC820 00295DE0  48 00 0C 65 */	bl TRKInitializeMessageBuffers
 /* 802CC824 00295DE4  7C 7F 1B 78 */	mr r31, r3
 .L_802CC828:
 /* 802CC828 00295DE8  4B FF FD 45 */	bl InitializeProgramEndTrap
-/* 802CC82C 00295DEC  2C 1F 00 00 */	cmpwi r31, 0
+/* 802CC82C 00295DEC  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 802CC830 00295DF0  40 82 00 0C */	bne .L_802CC83C
 /* 802CC834 00295DF4  48 00 02 41 */	bl TRKInitializeSerialHandler
 /* 802CC838 00295DF8  7C 7F 1B 78 */	mr r31, r3
 .L_802CC83C:
-/* 802CC83C 00295DFC  2C 1F 00 00 */	cmpwi r31, 0
+/* 802CC83C 00295DFC  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 802CC840 00295E00  40 82 00 0C */	bne .L_802CC84C
 /* 802CC844 00295E04  4B FF F9 89 */	bl TRKInitializeTarget
 /* 802CC848 00295E08  7C 7F 1B 78 */	mr r31, r3
 .L_802CC84C:
-/* 802CC84C 00295E0C  2C 1F 00 00 */	cmpwi r31, 0
+/* 802CC84C 00295E0C  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 802CC850 00295E10  40 82 00 2C */	bne .L_802CC87C
-/* 802CC854 00295E14  38 60 00 01 */	li r3, 1
-/* 802CC858 00295E18  38 80 00 00 */	li r4, 0
-/* 802CC85C 00295E1C  38 AD B4 08 */	addi r5, r13, lbl_80667588@sda21
+/* 802CC854 00295E14  38 60 00 01 */	li r3, 0x1
+/* 802CC858 00295E18  38 80 00 00 */	li r4, 0x0
+/* 802CC85C 00295E1C  38 AD B4 08 */	addi r5, r13, gTRKInputPendingPtr@sda21
 /* 802CC860 00295E20  4B FF FB C1 */	bl TRKInitializeIntDrivenUART
 /* 802CC864 00295E24  7C 7E 1B 78 */	mr r30, r3
-/* 802CC868 00295E28  80 6D B4 08 */	lwz r3, lbl_80667588@sda21(r13)
+/* 802CC868 00295E28  80 6D B4 08 */	lwz r3, gTRKInputPendingPtr@sda21(r13)
 /* 802CC86C 00295E2C  48 00 3C B1 */	bl TRKTargetSetInputPendingPtr
-/* 802CC870 00295E30  2C 1E 00 00 */	cmpwi r30, 0
+/* 802CC870 00295E30  2C 1E 00 00 */	cmpwi r30, 0x0
 /* 802CC874 00295E34  41 82 00 08 */	beq .L_802CC87C
 /* 802CC878 00295E38  7F DF F3 78 */	mr r31, r30
 .L_802CC87C:
 /* 802CC87C 00295E3C  7F E3 FB 78 */	mr r3, r31
 /* 802CC880 00295E40  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 802CC884 00295E44  83 C1 00 08 */	lwz r30, 8(r1)
+/* 802CC884 00295E44  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 802CC888 00295E48  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802CC88C 00295E4C  7C 08 03 A6 */	mtlr r0
 /* 802CC890 00295E50  38 21 00 10 */	addi r1, r1, 0x10
-/* 802CC894 00295E54  4E 80 00 20 */	blr 
+/* 802CC894 00295E54  4E 80 00 20 */	blr
+.endfn TRKInitializeNub
 
-.global TRKTerminateNub
-TRKTerminateNub:
+.fn TRKTerminateNub, global
 /* 802CC898 00295E58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC89C 00295E5C  7C 08 02 A6 */	mflr r0
 /* 802CC8A0 00295E60  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802CC8A4 00295E64  48 00 01 D9 */	bl TRKTerminateSerialHandler
 /* 802CC8A8 00295E68  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 802CC8AC 00295E6C  38 60 00 00 */	li r3, 0
+/* 802CC8AC 00295E6C  38 60 00 00 */	li r3, 0x0
 /* 802CC8B0 00295E70  7C 08 03 A6 */	mtlr r0
 /* 802CC8B4 00295E74  38 21 00 10 */	addi r1, r1, 0x10
-/* 802CC8B8 00295E78  4E 80 00 20 */	blr 
+/* 802CC8B8 00295E78  4E 80 00 20 */	blr
+.endfn TRKTerminateNub
 
-.global TRKNubWelcome
-TRKNubWelcome:
-/* 802CC8BC 00295E7C  3C 60 80 54 */	lis r3, lbl_8053FE88@ha
-/* 802CC8C0 00295E80  38 63 FE 88 */	addi r3, r3, lbl_8053FE88@l
+.fn TRKNubWelcome, global
+/* 802CC8BC 00295E7C  3C 60 80 54 */	lis r3, "@stringBase0"@ha
+/* 802CC8C0 00295E80  38 63 FE 88 */	addi r3, r3, "@stringBase0"@l
 /* 802CC8C4 00295E84  4B FF FC 90 */	b TRK_board_display
+.endfn TRKNubWelcome
 
-.global TRK_InitializeEndian
-TRK_InitializeEndian:
+.fn TRKInitializeEndian, global
 /* 802CC8C8 00295E88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC8CC 00295E8C  38 60 00 12 */	li r3, 0x12
 /* 802CC8D0 00295E90  38 A0 00 34 */	li r5, 0x34
 /* 802CC8D4 00295E94  38 80 00 56 */	li r4, 0x56
 /* 802CC8D8 00295E98  38 00 00 78 */	li r0, 0x78
-/* 802CC8DC 00295E9C  98 61 00 08 */	stb r3, 8(r1)
-/* 802CC8E0 00295EA0  38 C0 00 01 */	li r6, 1
-/* 802CC8E4 00295EA4  38 60 00 00 */	li r3, 0
-/* 802CC8E8 00295EA8  98 A1 00 09 */	stb r5, 9(r1)
+/* 802CC8DC 00295E9C  98 61 00 08 */	stb r3, 0x8(r1)
+/* 802CC8E0 00295EA0  38 C0 00 01 */	li r6, 0x1
+/* 802CC8E4 00295EA4  38 60 00 00 */	li r3, 0x0
+/* 802CC8E8 00295EA8  98 A1 00 09 */	stb r5, 0x9(r1)
 /* 802CC8EC 00295EAC  98 81 00 0A */	stb r4, 0xa(r1)
 /* 802CC8F0 00295EB0  98 01 00 0B */	stb r0, 0xb(r1)
-/* 802CC8F4 00295EB4  80 81 00 08 */	lwz r4, 8(r1)
+/* 802CC8F4 00295EB4  80 81 00 08 */	lwz r4, 0x8(r1)
 /* 802CC8F8 00295EB8  90 CD B4 00 */	stw r6, lbl_80667580@sda21(r13)
 /* 802CC8FC 00295EBC  3C 04 ED CC */	addis r0, r4, 0xedcc
 /* 802CC900 00295EC0  28 00 56 78 */	cmplwi r0, 0x5678
@@ -95,28 +97,43 @@ TRK_InitializeEndian:
 /* 802CC910 00295ED0  3C 04 87 AA */	addis r0, r4, 0x87aa
 /* 802CC914 00295ED4  28 00 34 12 */	cmplwi r0, 0x3412
 /* 802CC918 00295ED8  40 82 00 0C */	bne .L_802CC924
-/* 802CC91C 00295EDC  38 00 00 00 */	li r0, 0
+/* 802CC91C 00295EDC  38 00 00 00 */	li r0, 0x0
 /* 802CC920 00295EE0  90 0D B4 00 */	stw r0, lbl_80667580@sda21(r13)
 .L_802CC924:
 /* 802CC924 00295EE4  3C 04 87 AA */	addis r0, r4, 0x87aa
 /* 802CC928 00295EE8  28 00 34 12 */	cmplwi r0, 0x3412
 /* 802CC92C 00295EEC  41 82 00 08 */	beq .L_802CC934
-/* 802CC930 00295EF0  38 60 00 01 */	li r3, 1
+/* 802CC930 00295EF0  38 60 00 01 */	li r3, 0x1
 .L_802CC934:
 /* 802CC934 00295EF4  38 21 00 10 */	addi r1, r1, 0x10
-/* 802CC938 00295EF8  4E 80 00 20 */	blr 
+/* 802CC938 00295EF8  4E 80 00 20 */	blr
+.endfn TRKInitializeEndian
 
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
+# 0x8053FE88 - 0x8053FEA8
+.data
+.balign 8
+.sym lbl_8053FE88, local
 
-.global lbl_8053FE88
-lbl_8053FE88:
-	.asciz "MetroTRK for Revolution v0.4"
-	.balign 4
+.obj "@stringBase0", local
+	.4byte 0x4D657472
+	.4byte 0x6F54524B
+	.4byte 0x20666F72
+	.4byte 0x20526576
+	.4byte 0x6F6C7574
+	.4byte 0x696F6E20
+	.4byte 0x76302E34
+	.byte 0x00
+.endobj "@stringBase0"
+	.byte 0x00, 0x00, 0x00
 
-.section .sbss, "wa"  # 0x80666600 - 0x8066836F
-.global lbl_80667580
-lbl_80667580:
+# 0x80667580 - 0x80667590
+.section .sbss, "wa", @nobits
+.balign 8
+.sym lbl_80667580, local
 	.skip 0x8
-.global lbl_80667588
-lbl_80667588:
-	.skip 0x8
+.sym lbl_80667588, local
+
+.obj gTRKInputPendingPtr, global
+	.skip 0x4
+.endobj gTRKInputPendingPtr
+	.skip 0x4

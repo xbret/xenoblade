@@ -1,10 +1,12 @@
 .include "macros.inc"
+.file "RevoSDK/hbm/nw4hbm/lyt/lyt_bounding.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x8032C410 - 0x8032C590
+.text
+.balign 4
 
-.balign 16, 0
-.global __ct__Q36nw4hbm3lyt8BoundingFPCQ46nw4hbm3lyt3res8BoundingRCQ36nw4hbm3lyt11ResBlockSet
-__ct__Q36nw4hbm3lyt8BoundingFPCQ46nw4hbm3lyt3res8BoundingRCQ36nw4hbm3lyt11ResBlockSet:
+# nw4hbm::lyt::Bounding::Bounding(const nw4hbm::lyt::res::Bounding*, const nw4hbm::lyt::ResBlockSet&)
+.fn __ct__Q36nw4hbm3lyt8BoundingFPCQ46nw4hbm3lyt3res8BoundingRCQ36nw4hbm3lyt11ResBlockSet, global
 /* 8032C410 002F59D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032C414 002F59D4  7C 08 02 A6 */	mflr r0
 /* 8032C418 002F59D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -14,63 +16,66 @@ __ct__Q36nw4hbm3lyt8BoundingFPCQ46nw4hbm3lyt3res8BoundingRCQ36nw4hbm3lyt11ResBlo
 /* 8032C428 002F59E8  3C 80 80 55 */	lis r4, lbl_8054D6B8@ha
 /* 8032C42C 002F59EC  7F E3 FB 78 */	mr r3, r31
 /* 8032C430 002F59F0  38 84 D6 B8 */	addi r4, r4, lbl_8054D6B8@l
-/* 8032C434 002F59F4  90 9F 00 00 */	stw r4, 0(r31)
+/* 8032C434 002F59F4  90 9F 00 00 */	stw r4, 0x0(r31)
 /* 8032C438 002F59F8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8032C43C 002F59FC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8032C440 002F5A00  7C 08 03 A6 */	mtlr r0
 /* 8032C444 002F5A04  38 21 00 10 */	addi r1, r1, 0x10
-/* 8032C448 002F5A08  4E 80 00 20 */	blr 
+/* 8032C448 002F5A08  4E 80 00 20 */	blr
+.endfn __ct__Q36nw4hbm3lyt8BoundingFPCQ46nw4hbm3lyt3res8BoundingRCQ36nw4hbm3lyt11ResBlockSet
+/* 8032C44C 002F5A0C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-.global __dt__Q36nw4hbm3lyt8BoundingFv
-__dt__Q36nw4hbm3lyt8BoundingFv:
+# nw4hbm::lyt::Bounding::~Bounding()
+.fn __dt__Q36nw4hbm3lyt8BoundingFv, global
 /* 8032C450 002F5A10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032C454 002F5A14  7C 08 02 A6 */	mflr r0
-/* 8032C458 002F5A18  2C 03 00 00 */	cmpwi r3, 0
+/* 8032C458 002F5A18  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8032C45C 002F5A1C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8032C460 002F5A20  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8032C464 002F5A24  7C 9F 23 78 */	mr r31, r4
-/* 8032C468 002F5A28  93 C1 00 08 */	stw r30, 8(r1)
+/* 8032C468 002F5A28  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8032C46C 002F5A2C  7C 7E 1B 78 */	mr r30, r3
 /* 8032C470 002F5A30  41 82 00 1C */	beq .L_8032C48C
-/* 8032C474 002F5A34  38 80 00 00 */	li r4, 0
+/* 8032C474 002F5A34  38 80 00 00 */	li r4, 0x0
 /* 8032C478 002F5A38  48 00 53 E9 */	bl __dt__Q36nw4hbm3lyt4PaneFv
-/* 8032C47C 002F5A3C  2C 1F 00 00 */	cmpwi r31, 0
+/* 8032C47C 002F5A3C  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 8032C480 002F5A40  40 81 00 0C */	ble .L_8032C48C
 /* 8032C484 002F5A44  7F C3 F3 78 */	mr r3, r30
 /* 8032C488 002F5A48  48 10 87 A5 */	bl __dl__FPv
 .L_8032C48C:
 /* 8032C48C 002F5A4C  7F C3 F3 78 */	mr r3, r30
 /* 8032C490 002F5A50  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8032C494 002F5A54  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8032C494 002F5A54  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 8032C498 002F5A58  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8032C49C 002F5A5C  7C 08 03 A6 */	mtlr r0
 /* 8032C4A0 002F5A60  38 21 00 10 */	addi r1, r1, 0x10
-/* 8032C4A4 002F5A64  4E 80 00 20 */	blr 
+/* 8032C4A4 002F5A64  4E 80 00 20 */	blr
+.endfn __dt__Q36nw4hbm3lyt8BoundingFv
+/* 8032C4A8 002F5A68  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+/* 8032C4AC 002F5A6C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-.global DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo
-DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo:
+# nw4hbm::lyt::Bounding::DrawSelf(const nw4hbm::lyt::DrawInfo&)
+.fn DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo, global
 /* 8032C4B0 002F5A70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032C4B4 002F5A74  7C 08 02 A6 */	mflr r0
 /* 8032C4B8 002F5A78  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8032C4BC 002F5A7C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8032C4C0 002F5A80  7C 7F 1B 78 */	mr r31, r3
 /* 8032C4C4 002F5A84  88 04 00 50 */	lbz r0, 0x50(r4)
-/* 8032C4C8 002F5A88  54 00 EF FF */	rlwinm. r0, r0, 0x1d, 0x1f, 0x1f
+/* 8032C4C8 002F5A88  54 00 EF FF */	extrwi. r0, r0, 1, 28
 /* 8032C4CC 002F5A8C  41 82 00 40 */	beq .L_8032C50C
-/* 8032C4D0 002F5A90  81 83 00 00 */	lwz r12, 0(r3)
+/* 8032C4D0 002F5A90  81 83 00 00 */	lwz r12, 0x0(r3)
 /* 8032C4D4 002F5A94  81 8C 00 60 */	lwz r12, 0x60(r12)
 /* 8032C4D8 002F5A98  7D 89 03 A6 */	mtctr r12
-/* 8032C4DC 002F5A9C  4E 80 04 21 */	bctrl 
-/* 8032C4E0 002F5AA0  3C 80 00 FF */	lis r4, 0x00FF00FF@ha
+/* 8032C4DC 002F5A9C  4E 80 04 21 */	bctrl
+/* 8032C4E0 002F5AA0  3C 80 00 FF */	lis r4, 0xff
 /* 8032C4E4 002F5AA4  7F E3 FB 78 */	mr r3, r31
-/* 8032C4E8 002F5AA8  38 04 00 FF */	addi r0, r4, 0x00FF00FF@l
-/* 8032C4EC 002F5AAC  90 01 00 08 */	stw r0, 8(r1)
-/* 8032C4F0 002F5AB0  48 00 61 41 */	bl func_80332630
+/* 8032C4E8 002F5AA8  38 04 00 FF */	addi r0, r4, 0xff
+/* 8032C4EC 002F5AAC  90 01 00 08 */	stw r0, 0x8(r1)
+/* 8032C4F0 002F5AB0  48 00 61 41 */	bl fn_80332630
 /* 8032C4F4 002F5AB4  90 81 00 14 */	stw r4, 0x14(r1)
 /* 8032C4F8 002F5AB8  38 9F 00 4C */	addi r4, r31, 0x4c
-/* 8032C4FC 002F5ABC  38 A1 00 08 */	addi r5, r1, 8
+/* 8032C4FC 002F5ABC  38 A1 00 08 */	addi r5, r1, 0x8
 /* 8032C500 002F5AC0  90 61 00 10 */	stw r3, 0x10(r1)
 /* 8032C504 002F5AC4  38 61 00 10 */	addi r3, r1, 0x10
 /* 8032C508 002F5AC8  48 00 0C 39 */	bl DrawLine__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm3lyt4SizeQ36nw4hbm2ut5Color
@@ -80,18 +85,18 @@ DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo:
 /* 8032C514 002F5AD4  7C 08 03 A6 */	mtlr r0
 /* 8032C518 002F5AD8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032C51C 002F5ADC  4E 80 00 20 */	blr
+.endfn DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo
 
-.balign 16, 0
-.global __dt__Q36nw4hbm2ut5ColorFv
-__dt__Q36nw4hbm2ut5ColorFv:
+# nw4hbm::ut::Color::~Color()
+.fn __dt__Q36nw4hbm2ut5ColorFv, global
 /* 8032C520 002F5AE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032C524 002F5AE4  7C 08 02 A6 */	mflr r0
-/* 8032C528 002F5AE8  2C 03 00 00 */	cmpwi r3, 0
+/* 8032C528 002F5AE8  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8032C52C 002F5AEC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8032C530 002F5AF0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8032C534 002F5AF4  7C 7F 1B 78 */	mr r31, r3
 /* 8032C538 002F5AF8  41 82 00 10 */	beq .L_8032C548
-/* 8032C53C 002F5AFC  2C 04 00 00 */	cmpwi r4, 0
+/* 8032C53C 002F5AFC  2C 04 00 00 */	cmpwi r4, 0x0
 /* 8032C540 002F5B00  40 81 00 08 */	ble .L_8032C548
 /* 8032C544 002F5B04  48 10 86 E9 */	bl __dl__FPv
 .L_8032C548:
@@ -100,105 +105,106 @@ __dt__Q36nw4hbm2ut5ColorFv:
 /* 8032C550 002F5B10  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8032C554 002F5B14  7C 08 03 A6 */	mtlr r0
 /* 8032C558 002F5B18  38 21 00 10 */	addi r1, r1, 0x10
-/* 8032C55C 002F5B1C  4E 80 00 20 */	blr 
+/* 8032C55C 002F5B1C  4E 80 00 20 */	blr
+.endfn __dt__Q36nw4hbm2ut5ColorFv
 
-.balign 16, 0
-.global GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv
-GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv:
+# nw4hbm::lyt::Bounding::GetRuntimeTypeInfo() const
+.fn GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv, global
 /* 8032C560 002F5B20  3C 60 80 5D */	lis r3, lbl_805CD788@ha
 /* 8032C564 002F5B24  38 63 D7 88 */	addi r3, r3, lbl_805CD788@l
-/* 8032C568 002F5B28  4E 80 00 20 */	blr 
+/* 8032C568 002F5B28  4E 80 00 20 */	blr
+.endfn GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv
+/* 8032C56C 002F5B2C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-#__sinit_\lyt_bounding_cpp
-.global __sinit_lyt_bounding_cpp
-__sinit_lyt_bounding_cpp:
+.fn __sinit_lyt_bounding_cpp, global
 /* 8032C570 002F5B30  3C 80 80 5D */	lis r4, lbl_805CD7C0@ha
 /* 8032C574 002F5B34  3C 60 80 5D */	lis r3, lbl_805CD788@ha
 /* 8032C578 002F5B38  38 84 D7 C0 */	addi r4, r4, lbl_805CD7C0@l
 /* 8032C57C 002F5B3C  90 83 D7 88 */	stw r4, lbl_805CD788@l(r3)
-/* 8032C580 002F5B40  4E 80 00 20 */	blr 
+/* 8032C580 002F5B40  4E 80 00 20 */	blr
+.endfn __sinit_lyt_bounding_cpp
+/* 8032C584 002F5B44  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+/* 8032C588 002F5B48  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+/* 8032C58C 002F5B4C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+# 0x804F59E8 - 0x804F59EC
+.section .ctors, "a"
+.balign 4
+	.4byte __sinit_lyt_bounding_cpp
 
-.4byte __sinit_lyt_bounding_cpp
-
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
-
-.global lbl_8054D6B8
-lbl_8054D6B8:
+# 0x8054D6B8 - 0x8054D7A0
+.data
+.balign 8
+.sym lbl_8054D6B8, local
 	.4byte lbl_8054D748
-	.4byte 0
+	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt8BoundingFv
 	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv
-	.4byte func_80331CD0
-	.4byte func_80331FD0
+	.4byte fn_80331CD0
+	.4byte fn_80331FD0
 	.4byte DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo
-	.4byte func_803320E0
-	.4byte func_80332170
-	.4byte func_80331AC0
-	.4byte func_80331AD0
-	.4byte func_80331AE0
-	.4byte func_80331B10
-	.4byte func_80331B40
-	.4byte func_80331B50
-	.4byte func_80331B60
-	.4byte func_80331C10
-	.4byte func_80332230
-	.4byte func_80332250
-	.4byte func_803322E0
-	.4byte func_80332300
-	.4byte func_803323E0
-	.4byte func_80332460
-	.4byte func_80332710
-	.4byte func_80332520
-
-.global lbl_8054D71C
-lbl_8054D71C:
-	.asciz "nw4hbm::lyt::Bounding"
-	.balign 4
-
-.global lbl_8054D734
-lbl_8054D734:
+	.4byte fn_803320E0
+	.4byte fn_80332170
+	.4byte fn_80331AC0
+	.4byte fn_80331AD0
+	.4byte fn_80331AE0
+	.4byte fn_80331B10
+	.4byte fn_80331B40
+	.4byte fn_80331B50
+	.4byte fn_80331B60
+	.4byte fn_80331C10
+	.4byte fn_80332230
+	.4byte fn_80332250
+	.4byte fn_803322E0
+	.4byte fn_80332300
+	.4byte fn_803323E0
+	.4byte fn_80332460
+	.4byte fn_80332710
+	.4byte fn_80332520
+.sym lbl_8054D71C, local
+	.4byte 0x6E773468
+	.4byte 0x626D3A3A
+	.4byte 0x6C79743A
+	.4byte 0x3A426F75
+	.4byte 0x6E64696E
+	.4byte 0x67000000
+.sym lbl_8054D734, local
 	.4byte lbl_8054D798
-	.4byte 0
+	.4byte 0x00000000
 	.4byte lbl_8054D770
-	.4byte 0
-	.4byte 0
-
-.global lbl_8054D748
-lbl_8054D748:
+	.4byte 0x00000000
+	.4byte 0x00000000
+.sym lbl_8054D748, local
 	.4byte lbl_8054D71C
 	.4byte lbl_8054D734
-
-.global lbl_8054D750
-lbl_8054D750:
-	.asciz "nw4hbm::lyt::Pane"
-	.balign 4
-
-.global lbl_8054D764
-lbl_8054D764:
+.sym lbl_8054D750, local
+	.4byte 0x6E773468
+	.4byte 0x626D3A3A
+	.4byte 0x6C79743A
+	.4byte 0x3A50616E
+	.4byte 0x65000000
+.sym lbl_8054D764, local
 	.4byte lbl_8054D798
-	.4byte 0
-	.4byte 0
-
-.global lbl_8054D770
-lbl_8054D770:
+	.4byte 0x00000000
+	.4byte 0x00000000
+.sym lbl_8054D770, local
 	.4byte lbl_8054D750
 	.4byte lbl_8054D764
-
-.global lbl_8054D778
-lbl_8054D778:
-	.asciz "nw4hbm::lyt::detail::PaneBase"
-	.balign 4
-
-.global lbl_8054D798
-lbl_8054D798:
+.sym lbl_8054D778, local
+	.4byte 0x6E773468
+	.4byte 0x626D3A3A
+	.4byte 0x6C79743A
+	.4byte 0x3A646574
+	.4byte 0x61696C3A
+	.4byte 0x3A50616E
+	.4byte 0x65426173
+	.4byte 0x65000000
+.sym lbl_8054D798, local
 	.4byte lbl_8054D778
-	.4byte 0
+	.4byte 0x00000000
 
-.section .bss, "wa"  # 0x80573C80 - 0x8066417B
-
-.global lbl_805CD788
-lbl_805CD788:
+# 0x805CD788 - 0x805CD790
+.section .bss, "wa", @nobits
+.balign 8
+.sym lbl_805CD788, local
 	.skip 0x8

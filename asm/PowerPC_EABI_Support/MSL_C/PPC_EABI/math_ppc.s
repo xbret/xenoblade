@@ -1,7 +1,10 @@
 .include "macros.inc"
+.file "PowerPC_EABI_Support/MSL_C/PPC_EABI/math_ppc.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x802CB464 - 0x802CB468
+.text
+.balign 4
 
-.global nan
-nan:
-/* 802CB464 00294A24  4E 80 00 20 */	blr 
+.fn nan, global
+/* 802CB464 00294A24  4E 80 00 20 */	blr
+.endfn nan

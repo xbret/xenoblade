@@ -1,52 +1,38 @@
 .include "macros.inc"
+.file "mm/Globals1.o"
 
-.section .bss, "wa"  # 0x80573C80 - 0x8066417B
-
-.global lbl_80659DB0
-lbl_80659DB0:
+# 0x80659DB0 - 0x8065A068
+.section .bss, "wa", @nobits
+.balign 8
+.sym lbl_80659DB0, local
 	.skip 0xC
-.global lbl_80659DBC
-lbl_80659DBC:
+.sym lbl_80659DBC, local
 	.skip 0xC
-.global lbl_80659DC8
-lbl_80659DC8:
+.sym lbl_80659DC8, local
 	.skip 0xC
-.global lbl_80659DD4
-lbl_80659DD4:
+.sym lbl_80659DD4, local
 	.skip 0xC
-.global lbl_80659DE0
-lbl_80659DE0:
+.sym lbl_80659DE0, local
 	.skip 0x10
-.global lbl_80659DF0
-lbl_80659DF0:
+.sym lbl_80659DF0, local
 	.skip 0x50
-.global lbl_80659E40
-lbl_80659E40:
+.sym lbl_80659E40, local
 	.skip 0x18
-.global lbl_80659E58
-lbl_80659E58:
+.sym lbl_80659E58, local
 	.skip 0xC
-.global lbl_80659E64
-lbl_80659E64:
+.sym lbl_80659E64, local
 	.skip 0x64
-.global lbl_80659EC8
-lbl_80659EC8:
+.sym lbl_80659EC8, local
 	.skip 0x20
-.global lbl_80659EE8
-lbl_80659EE8:
+.sym lbl_80659EE8, local
 	.skip 0x10
-.global lbl_80659EF8
-lbl_80659EF8:
+.sym lbl_80659EF8, local
 	.skip 0x90
-.global lbl_80659F88
-lbl_80659F88:
+.sym lbl_80659F88, local
 	.skip 0x30
-.global lbl_80659FB8
-lbl_80659FB8:
+.sym lbl_80659FB8, local
 	.skip 0x30
-.global lbl_80659FE8
-lbl_80659FE8:
+.sym lbl_80659FE8, local
 	.skip 0x40
-.global lbl_8065A028
-lbl_8065A028:
+.sym lbl_8065A028, local
 	.skip 0x40

@@ -1,7 +1,10 @@
 .include "macros.inc"
+.file "CriWare/adx/adxf/adx_fcch.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x8037F578 - 0x8037F57C
+.text
+.balign 4
 
-.global ADXF_Ocbi
-ADXF_Ocbi:
+.fn ADXF_Ocbi, global
 /* 8037F578 00348B38  4B FD 4A 08 */	b DCInvalidateRange
+.endfn ADXF_Ocbi

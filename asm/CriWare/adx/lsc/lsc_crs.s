@@ -1,19 +1,22 @@
 .include "macros.inc"
+.file "CriWare/adx/lsc/lsc_crs.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x8039280C - 0x8039281C
+.text
+.balign 4
 
-.global LSC_Enter
-LSC_Enter:
-/* 8039280C 0035BDCC  4E 80 00 20 */	blr 
+.fn LSC_Enter, global
+/* 8039280C 0035BDCC  4E 80 00 20 */	blr
+.endfn LSC_Enter
 
-.global LSC_Leave
-LSC_Leave:
-/* 80392810 0035BDD0  4E 80 00 20 */	blr 
+.fn LSC_Leave, global
+/* 80392810 0035BDD0  4E 80 00 20 */	blr
+.endfn LSC_Leave
 
-.global LSC_LockCrs
-LSC_LockCrs:
+.fn LSC_LockCrs, global
 /* 80392814 0035BDD4  48 00 41 88 */	b SVM_Lock
+.endfn LSC_LockCrs
 
-.global LSC_UnlockCrs
-LSC_UnlockCrs:
+.fn LSC_UnlockCrs, global
 /* 80392818 0035BDD8  48 00 41 EC */	b SVM_Unlock
+.endfn LSC_UnlockCrs

@@ -1,9 +1,11 @@
 .include "macros.inc"
+.file "PowerPC_EABI_Support/MetroTRK/mslsupp.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x802CEC14 - 0x802CEDA0
+.text
+.balign 4
 
-.global __read_console
-__read_console:
+.fn __read_console, global
 /* 802CEC14 002981D4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CEC18 002981D8  7C 08 02 A6 */	mflr r0
 /* 802CEC1C 002981DC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -14,15 +16,15 @@ __read_console:
 /* 802CEC30 002981F0  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 802CEC34 002981F4  7C 9D 23 78 */	mr r29, r4
 /* 802CEC38 002981F8  48 00 19 95 */	bl GetUseSerialIO
-/* 802CEC3C 002981FC  54 60 06 3F */	clrlwi. r0, r3, 0x18
+/* 802CEC3C 002981FC  54 60 06 3F */	clrlwi. r0, r3, 24
 /* 802CEC40 00298200  40 82 00 0C */	bne .L_802CEC4C
-/* 802CEC44 00298204  38 60 00 01 */	li r3, 1
+/* 802CEC44 00298204  38 60 00 01 */	li r3, 0x1
 /* 802CEC48 00298208  48 00 00 18 */	b .L_802CEC60
 .L_802CEC4C:
 /* 802CEC4C 0029820C  7F A4 EB 78 */	mr r4, r29
 /* 802CEC50 00298210  7F C5 F3 78 */	mr r5, r30
 /* 802CEC54 00298214  7F E6 FB 78 */	mr r6, r31
-/* 802CEC58 00298218  38 60 00 00 */	li r3, 0
+/* 802CEC58 00298218  38 60 00 00 */	li r3, 0x0
 /* 802CEC5C 0029821C  48 00 00 89 */	bl __read_file
 .L_802CEC60:
 /* 802CEC60 00298220  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -31,10 +33,10 @@ __read_console:
 /* 802CEC6C 0029822C  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 802CEC70 00298230  7C 08 03 A6 */	mtlr r0
 /* 802CEC74 00298234  38 21 00 20 */	addi r1, r1, 0x20
-/* 802CEC78 00298238  4E 80 00 20 */	blr 
+/* 802CEC78 00298238  4E 80 00 20 */	blr
+.endfn __read_console
 
-.global __TRK_write_console
-__TRK_write_console:
+.fn __TRK_write_console, global
 /* 802CEC7C 0029823C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CEC80 00298240  7C 08 02 A6 */	mflr r0
 /* 802CEC84 00298244  90 01 00 24 */	stw r0, 0x24(r1)
@@ -45,15 +47,15 @@ __TRK_write_console:
 /* 802CEC98 00298258  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 802CEC9C 0029825C  7C 9D 23 78 */	mr r29, r4
 /* 802CECA0 00298260  48 00 19 2D */	bl GetUseSerialIO
-/* 802CECA4 00298264  54 60 06 3F */	clrlwi. r0, r3, 0x18
+/* 802CECA4 00298264  54 60 06 3F */	clrlwi. r0, r3, 24
 /* 802CECA8 00298268  40 82 00 0C */	bne .L_802CECB4
-/* 802CECAC 0029826C  38 60 00 01 */	li r3, 1
+/* 802CECAC 0029826C  38 60 00 01 */	li r3, 0x1
 /* 802CECB0 00298270  48 00 00 18 */	b .L_802CECC8
 .L_802CECB4:
 /* 802CECB4 00298274  7F A4 EB 78 */	mr r4, r29
 /* 802CECB8 00298278  7F C5 F3 78 */	mr r5, r30
 /* 802CECBC 0029827C  7F E6 FB 78 */	mr r6, r31
-/* 802CECC0 00298280  38 60 00 01 */	li r3, 1
+/* 802CECC0 00298280  38 60 00 01 */	li r3, 0x1
 /* 802CECC4 00298284  48 00 00 29 */	bl __write_file
 .L_802CECC8:
 /* 802CECC8 00298288  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -62,21 +64,20 @@ __TRK_write_console:
 /* 802CECD4 00298294  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 802CECD8 00298298  7C 08 03 A6 */	mtlr r0
 /* 802CECDC 0029829C  38 21 00 20 */	addi r1, r1, 0x20
-/* 802CECE0 002982A0  4E 80 00 20 */	blr 
+/* 802CECE0 002982A0  4E 80 00 20 */	blr
+.endfn __TRK_write_console
 
-.global __read_file
-__read_file:
+.fn __read_file, global
 /* 802CECE4 002982A4  38 E0 00 D1 */	li r7, 0xd1
 /* 802CECE8 002982A8  48 00 00 0C */	b __access_file
+.endfn __read_file
 
-.global __write_file
-__write_file:
+.fn __write_file, global
 /* 802CECEC 002982AC  38 E0 00 D0 */	li r7, 0xd0
 /* 802CECF0 002982B0  48 00 00 04 */	b __access_file
+.endfn __write_file
 
-
-.global __access_file
-__access_file:
+.fn __access_file, global
 /* 802CECF4 002982B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CECF8 002982B8  7C 08 02 A6 */	mflr r0
 /* 802CECFC 002982BC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -89,33 +90,33 @@ __access_file:
 /* 802CED18 002982D8  93 81 00 10 */	stw r28, 0x10(r1)
 /* 802CED1C 002982DC  7C 7C 1B 78 */	mr r28, r3
 /* 802CED20 002982E0  4B FF EF 71 */	bl GetTRKConnected
-/* 802CED24 002982E4  2C 03 00 00 */	cmpwi r3, 0
+/* 802CED24 002982E4  2C 03 00 00 */	cmpwi r3, 0x0
 /* 802CED28 002982E8  40 82 00 0C */	bne .L_802CED34
-/* 802CED2C 002982EC  38 60 00 01 */	li r3, 1
+/* 802CED2C 002982EC  38 60 00 01 */	li r3, 0x1
 /* 802CED30 002982F0  48 00 00 50 */	b .L_802CED80
 .L_802CED34:
-/* 802CED34 002982F4  80 1E 00 00 */	lwz r0, 0(r30)
+/* 802CED34 002982F4  80 1E 00 00 */	lwz r0, 0x0(r30)
 /* 802CED38 002982F8  7F E3 FB 78 */	mr r3, r31
-/* 802CED3C 002982FC  90 01 00 08 */	stw r0, 8(r1)
+/* 802CED3C 002982FC  90 01 00 08 */	stw r0, 0x8(r1)
 /* 802CED40 00298300  7F 84 E3 78 */	mr r4, r28
 /* 802CED44 00298304  7F A6 EB 78 */	mr r6, r29
-/* 802CED48 00298308  38 A1 00 08 */	addi r5, r1, 8
+/* 802CED48 00298308  38 A1 00 08 */	addi r5, r1, 0x8
 /* 802CED4C 0029830C  4B FF C7 C1 */	bl TRKAccessFile
-/* 802CED50 00298310  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 802CED54 00298314  80 61 00 08 */	lwz r3, 8(r1)
-/* 802CED58 00298318  90 7E 00 00 */	stw r3, 0(r30)
+/* 802CED50 00298310  54 60 06 3F */	clrlwi. r0, r3, 24
+/* 802CED54 00298314  80 61 00 08 */	lwz r3, 0x8(r1)
+/* 802CED58 00298318  90 7E 00 00 */	stw r3, 0x0(r30)
 /* 802CED5C 0029831C  41 82 00 10 */	beq .L_802CED6C
-/* 802CED60 00298320  2C 00 00 02 */	cmpwi r0, 2
+/* 802CED60 00298320  2C 00 00 02 */	cmpwi r0, 0x2
 /* 802CED64 00298324  41 82 00 10 */	beq .L_802CED74
 /* 802CED68 00298328  48 00 00 14 */	b .L_802CED7C
 .L_802CED6C:
-/* 802CED6C 0029832C  38 60 00 00 */	li r3, 0
+/* 802CED6C 0029832C  38 60 00 00 */	li r3, 0x0
 /* 802CED70 00298330  48 00 00 10 */	b .L_802CED80
 .L_802CED74:
-/* 802CED74 00298334  38 60 00 02 */	li r3, 2
+/* 802CED74 00298334  38 60 00 02 */	li r3, 0x2
 /* 802CED78 00298338  48 00 00 08 */	b .L_802CED80
 .L_802CED7C:
-/* 802CED7C 0029833C  38 60 00 01 */	li r3, 1
+/* 802CED7C 0029833C  38 60 00 01 */	li r3, 0x1
 .L_802CED80:
 /* 802CED80 00298340  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 802CED84 00298344  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -124,4 +125,5 @@ __access_file:
 /* 802CED90 00298350  83 81 00 10 */	lwz r28, 0x10(r1)
 /* 802CED94 00298354  7C 08 03 A6 */	mtlr r0
 /* 802CED98 00298358  38 21 00 20 */	addi r1, r1, 0x20
-/* 802CED9C 0029835C  4E 80 00 20 */	blr 
+/* 802CED9C 0029835C  4E 80 00 20 */	blr
+.endfn __access_file

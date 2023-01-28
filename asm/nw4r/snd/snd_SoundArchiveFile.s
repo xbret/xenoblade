@@ -1,10 +1,13 @@
 .include "macros.inc"
+.file "nw4r/snd/snd_SoundArchiveFile.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x8041CAD4 - 0x8041DB84
+.text
+.balign 4
 
-.global __ct__Q44nw4r3snd6detail22SoundArchiveFileReaderFv
-__ct__Q44nw4r3snd6detail22SoundArchiveFileReaderFv:
-/* 8041CAD4 003E6094  38 00 00 00 */	li r0, 0
+# nw4r::snd::detail::SoundArchiveFileReader::SoundArchiveFileReader()
+.fn __ct__Q44nw4r3snd6detail22SoundArchiveFileReaderFv, global
+/* 8041CAD4 003E6094  38 00 00 00 */	li r0, 0x0
 /* 8041CAD8 003E6098  90 03 00 28 */	stw r0, 0x28(r3)
 /* 8041CADC 003E609C  90 03 00 2C */	stw r0, 0x2c(r3)
 /* 8041CAE0 003E60A0  90 03 00 30 */	stw r0, 0x30(r3)
@@ -12,23 +15,24 @@ __ct__Q44nw4r3snd6detail22SoundArchiveFileReaderFv:
 /* 8041CAE8 003E60A8  90 03 00 38 */	stw r0, 0x38(r3)
 /* 8041CAEC 003E60AC  90 03 00 3C */	stw r0, 0x3c(r3)
 /* 8041CAF0 003E60B0  90 03 00 40 */	stw r0, 0x40(r3)
-/* 8041CAF4 003E60B4  4E 80 00 20 */	blr 
+/* 8041CAF4 003E60B4  4E 80 00 20 */	blr
+.endfn __ct__Q44nw4r3snd6detail22SoundArchiveFileReaderFv
 
-.global Init__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCv
-Init__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCv:
-/* 8041CAF8 003E60B8  80 A4 00 00 */	lwz r5, 0(r4)
+# nw4r::snd::detail::SoundArchiveFileReader::Init(const void*)
+.fn Init__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCv, global
+/* 8041CAF8 003E60B8  80 A4 00 00 */	lwz r5, 0x0(r4)
 /* 8041CAFC 003E60BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041CB00 003E60C0  3C 05 AD AD */	addis r0, r5, 0xadad
 /* 8041CB04 003E60C4  28 00 41 52 */	cmplwi r0, 0x4152
 /* 8041CB08 003E60C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8041CB0C 003E60CC  41 82 00 0C */	beq .L_8041CB18
-/* 8041CB10 003E60D0  38 00 00 00 */	li r0, 0
+/* 8041CB10 003E60D0  38 00 00 00 */	li r0, 0x0
 /* 8041CB14 003E60D4  48 00 00 30 */	b .L_8041CB44
 .L_8041CB18:
-/* 8041CB18 003E60D8  A0 C4 00 06 */	lhz r6, 6(r4)
+/* 8041CB18 003E60D8  A0 C4 00 06 */	lhz r6, 0x6(r4)
 /* 8041CB1C 003E60DC  28 06 01 00 */	cmplwi r6, 0x100
 /* 8041CB20 003E60E0  40 80 00 0C */	bge .L_8041CB2C
-/* 8041CB24 003E60E4  38 00 00 00 */	li r0, 0
+/* 8041CB24 003E60E4  38 00 00 00 */	li r0, 0x0
 /* 8041CB28 003E60E8  48 00 00 1C */	b .L_8041CB44
 .L_8041CB2C:
 /* 8041CB2C 003E60EC  20 06 01 04 */	subfic r0, r6, 0x104
@@ -36,13 +40,13 @@ Init__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCv:
 /* 8041CB34 003E60F4  7C A5 33 38 */	orc r5, r5, r6
 /* 8041CB38 003E60F8  54 00 F8 7E */	srwi r0, r0, 1
 /* 8041CB3C 003E60FC  7C 00 28 50 */	subf r0, r0, r5
-/* 8041CB40 003E6100  54 00 0F FE */	srwi r0, r0, 0x1f
+/* 8041CB40 003E6100  54 00 0F FE */	srwi r0, r0, 31
 .L_8041CB44:
-/* 8041CB44 003E6104  2C 00 00 00 */	cmpwi r0, 0
+/* 8041CB44 003E6104  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041CB48 003E6108  41 82 00 54 */	beq .L_8041CB9C
-/* 8041CB4C 003E610C  83 E4 00 00 */	lwz r31, 0(r4)
-/* 8041CB50 003E6110  81 84 00 04 */	lwz r12, 4(r4)
-/* 8041CB54 003E6114  81 64 00 08 */	lwz r11, 8(r4)
+/* 8041CB4C 003E610C  83 E4 00 00 */	lwz r31, 0x0(r4)
+/* 8041CB50 003E6110  81 84 00 04 */	lwz r12, 0x4(r4)
+/* 8041CB54 003E6114  81 64 00 08 */	lwz r11, 0x8(r4)
 /* 8041CB58 003E6118  81 44 00 0C */	lwz r10, 0xc(r4)
 /* 8041CB5C 003E611C  81 24 00 10 */	lwz r9, 0x10(r4)
 /* 8041CB60 003E6120  81 04 00 14 */	lwz r8, 0x14(r4)
@@ -50,9 +54,9 @@ Init__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCv:
 /* 8041CB68 003E6128  80 C4 00 1C */	lwz r6, 0x1c(r4)
 /* 8041CB6C 003E612C  80 A4 00 20 */	lwz r5, 0x20(r4)
 /* 8041CB70 003E6130  80 04 00 24 */	lwz r0, 0x24(r4)
-/* 8041CB74 003E6134  93 E3 00 00 */	stw r31, 0(r3)
-/* 8041CB78 003E6138  91 83 00 04 */	stw r12, 4(r3)
-/* 8041CB7C 003E613C  91 63 00 08 */	stw r11, 8(r3)
+/* 8041CB74 003E6134  93 E3 00 00 */	stw r31, 0x0(r3)
+/* 8041CB78 003E6138  91 83 00 04 */	stw r12, 0x4(r3)
+/* 8041CB7C 003E613C  91 63 00 08 */	stw r11, 0x8(r3)
 /* 8041CB80 003E6140  91 43 00 0C */	stw r10, 0xc(r3)
 /* 8041CB84 003E6144  91 23 00 10 */	stw r9, 0x10(r3)
 /* 8041CB88 003E6148  91 03 00 14 */	stw r8, 0x14(r3)
@@ -63,105 +67,108 @@ Init__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCv:
 .L_8041CB9C:
 /* 8041CB9C 003E615C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8041CBA0 003E6160  38 21 00 10 */	addi r1, r1, 0x10
-/* 8041CBA4 003E6164  4E 80 00 20 */	blr 
+/* 8041CBA4 003E6164  4E 80 00 20 */	blr
+.endfn Init__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCv
 
-.global SetStringChunk__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCvUl
-SetStringChunk__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCvUl:
-/* 8041CBA8 003E6168  80 04 00 08 */	lwz r0, 8(r4)
-/* 8041CBAC 003E616C  38 A4 00 08 */	addi r5, r4, 8
+# nw4r::snd::detail::SoundArchiveFileReader::SetStringChunk(const void*, unsigned long)
+.fn SetStringChunk__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCvUl, global
+/* 8041CBA8 003E6168  80 04 00 08 */	lwz r0, 0x8(r4)
+/* 8041CBAC 003E616C  38 A4 00 08 */	addi r5, r4, 0x8
 /* 8041CBB0 003E6170  90 A3 00 2C */	stw r5, 0x2c(r3)
-/* 8041CBB4 003E6174  2C 00 00 00 */	cmpwi r0, 0
+/* 8041CBB4 003E6174  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041CBB8 003E6178  40 82 00 0C */	bne .L_8041CBC4
-/* 8041CBBC 003E617C  38 00 00 00 */	li r0, 0
+/* 8041CBBC 003E617C  38 00 00 00 */	li r0, 0x0
 /* 8041CBC0 003E6180  48 00 00 08 */	b .L_8041CBC8
 .L_8041CBC4:
 /* 8041CBC4 003E6184  7C 00 2A 14 */	add r0, r0, r5
 .L_8041CBC8:
-/* 8041CBC8 003E6188  80 85 00 04 */	lwz r4, 4(r5)
+/* 8041CBC8 003E6188  80 85 00 04 */	lwz r4, 0x4(r5)
 /* 8041CBCC 003E618C  90 03 00 30 */	stw r0, 0x30(r3)
-/* 8041CBD0 003E6190  2C 04 00 00 */	cmpwi r4, 0
+/* 8041CBD0 003E6190  2C 04 00 00 */	cmpwi r4, 0x0
 /* 8041CBD4 003E6194  80 03 00 2C */	lwz r0, 0x2c(r3)
 /* 8041CBD8 003E6198  40 82 00 0C */	bne .L_8041CBE4
-/* 8041CBDC 003E619C  38 00 00 00 */	li r0, 0
+/* 8041CBDC 003E619C  38 00 00 00 */	li r0, 0x0
 /* 8041CBE0 003E61A0  48 00 00 08 */	b .L_8041CBE8
 .L_8041CBE4:
 /* 8041CBE4 003E61A4  7C 04 02 14 */	add r0, r4, r0
 .L_8041CBE8:
-/* 8041CBE8 003E61A8  80 85 00 08 */	lwz r4, 8(r5)
+/* 8041CBE8 003E61A8  80 85 00 08 */	lwz r4, 0x8(r5)
 /* 8041CBEC 003E61AC  90 03 00 34 */	stw r0, 0x34(r3)
-/* 8041CBF0 003E61B0  2C 04 00 00 */	cmpwi r4, 0
+/* 8041CBF0 003E61B0  2C 04 00 00 */	cmpwi r4, 0x0
 /* 8041CBF4 003E61B4  80 03 00 2C */	lwz r0, 0x2c(r3)
 /* 8041CBF8 003E61B8  40 82 00 0C */	bne .L_8041CC04
-/* 8041CBFC 003E61BC  38 00 00 00 */	li r0, 0
+/* 8041CBFC 003E61BC  38 00 00 00 */	li r0, 0x0
 /* 8041CC00 003E61C0  48 00 00 08 */	b .L_8041CC08
 .L_8041CC04:
 /* 8041CC04 003E61C4  7C 04 02 14 */	add r0, r4, r0
 .L_8041CC08:
 /* 8041CC08 003E61C8  80 85 00 0C */	lwz r4, 0xc(r5)
 /* 8041CC0C 003E61CC  90 03 00 38 */	stw r0, 0x38(r3)
-/* 8041CC10 003E61D0  2C 04 00 00 */	cmpwi r4, 0
+/* 8041CC10 003E61D0  2C 04 00 00 */	cmpwi r4, 0x0
 /* 8041CC14 003E61D4  80 03 00 2C */	lwz r0, 0x2c(r3)
 /* 8041CC18 003E61D8  40 82 00 0C */	bne .L_8041CC24
-/* 8041CC1C 003E61DC  38 00 00 00 */	li r0, 0
+/* 8041CC1C 003E61DC  38 00 00 00 */	li r0, 0x0
 /* 8041CC20 003E61E0  48 00 00 08 */	b .L_8041CC28
 .L_8041CC24:
 /* 8041CC24 003E61E4  7C 04 02 14 */	add r0, r4, r0
 .L_8041CC28:
 /* 8041CC28 003E61E8  80 85 00 10 */	lwz r4, 0x10(r5)
 /* 8041CC2C 003E61EC  90 03 00 3C */	stw r0, 0x3c(r3)
-/* 8041CC30 003E61F0  2C 04 00 00 */	cmpwi r4, 0
+/* 8041CC30 003E61F0  2C 04 00 00 */	cmpwi r4, 0x0
 /* 8041CC34 003E61F4  80 03 00 2C */	lwz r0, 0x2c(r3)
 /* 8041CC38 003E61F8  40 82 00 0C */	bne .L_8041CC44
-/* 8041CC3C 003E61FC  38 00 00 00 */	li r0, 0
+/* 8041CC3C 003E61FC  38 00 00 00 */	li r0, 0x0
 /* 8041CC40 003E6200  48 00 00 08 */	b .L_8041CC48
 .L_8041CC44:
 /* 8041CC44 003E6204  7C 04 02 14 */	add r0, r4, r0
 .L_8041CC48:
 /* 8041CC48 003E6208  90 03 00 40 */	stw r0, 0x40(r3)
-/* 8041CC4C 003E620C  4E 80 00 20 */	blr 
+/* 8041CC4C 003E620C  4E 80 00 20 */	blr
+.endfn SetStringChunk__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCvUl
 
-.global SetInfoChunk__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCvUl
-SetInfoChunk__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCvUl:
-/* 8041CC50 003E6210  38 04 00 08 */	addi r0, r4, 8
+# nw4r::snd::detail::SoundArchiveFileReader::SetInfoChunk(const void*, unsigned long)
+.fn SetInfoChunk__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCvUl, global
+/* 8041CC50 003E6210  38 04 00 08 */	addi r0, r4, 0x8
 /* 8041CC54 003E6214  90 03 00 28 */	stw r0, 0x28(r3)
-/* 8041CC58 003E6218  4E 80 00 20 */	blr 
+/* 8041CC58 003E6218  4E 80 00 20 */	blr
+.endfn SetInfoChunk__Q44nw4r3snd6detail22SoundArchiveFileReaderFPCvUl
 
-.global GetSoundType__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUl
-GetSoundType__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUl:
+# nw4r::snd::detail::SoundArchiveFileReader::GetSoundType(unsigned long) const
+.fn GetSoundType__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUl, global
 /* 8041CC5C 003E621C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041CC60 003E6220  7C 08 02 A6 */	mflr r0
 /* 8041CC64 003E6224  80 A3 00 28 */	lwz r5, 0x28(r3)
 /* 8041CC68 003E6228  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041CC6C 003E622C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8041CC70 003E6230  7C 9F 23 78 */	mr r31, r4
-/* 8041CC74 003E6234  93 C1 00 08 */	stw r30, 8(r1)
+/* 8041CC74 003E6234  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8041CC78 003E6238  7C 7E 1B 78 */	mr r30, r3
-/* 8041CC7C 003E623C  88 65 00 00 */	lbz r3, 0(r5)
-/* 8041CC80 003E6240  80 85 00 04 */	lwz r4, 4(r5)
+/* 8041CC7C 003E623C  88 65 00 00 */	lbz r3, 0x0(r5)
+/* 8041CC80 003E6240  80 85 00 04 */	lwz r4, 0x4(r5)
 /* 8041CC84 003E6244  48 00 CB A5 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041CC88 003E6248  2C 03 00 00 */	cmpwi r3, 0
+/* 8041CC88 003E6248  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041CC8C 003E624C  40 82 00 0C */	bne .L_8041CC98
-/* 8041CC90 003E6250  38 60 00 00 */	li r3, 0
+/* 8041CC90 003E6250  38 60 00 00 */	li r3, 0x0
 /* 8041CC94 003E6254  48 00 00 A0 */	b .L_8041CD34
 .L_8041CC98:
-/* 8041CC98 003E6258  80 03 00 00 */	lwz r0, 0(r3)
+/* 8041CC98 003E6258  80 03 00 00 */	lwz r0, 0x0(r3)
 /* 8041CC9C 003E625C  7C 1F 00 40 */	cmplw r31, r0
 /* 8041CCA0 003E6260  41 80 00 0C */	blt .L_8041CCAC
-/* 8041CCA4 003E6264  38 60 00 00 */	li r3, 0
+/* 8041CCA4 003E6264  38 60 00 00 */	li r3, 0x0
 /* 8041CCA8 003E6268  48 00 00 8C */	b .L_8041CD34
 .L_8041CCAC:
-/* 8041CCAC 003E626C  A0 1E 00 06 */	lhz r0, 6(r30)
+/* 8041CCAC 003E626C  A0 1E 00 06 */	lhz r0, 0x6(r30)
 /* 8041CCB0 003E6270  28 00 01 01 */	cmplwi r0, 0x101
 /* 8041CCB4 003E6274  41 80 00 34 */	blt .L_8041CCE8
 /* 8041CCB8 003E6278  57 E0 18 38 */	slwi r0, r31, 3
 /* 8041CCBC 003E627C  80 BE 00 28 */	lwz r5, 0x28(r30)
 /* 8041CCC0 003E6280  7C 83 02 14 */	add r4, r3, r0
-/* 8041CCC4 003E6284  88 64 00 04 */	lbz r3, 4(r4)
-/* 8041CCC8 003E6288  80 84 00 08 */	lwz r4, 8(r4)
+/* 8041CCC4 003E6284  88 64 00 04 */	lbz r3, 0x4(r4)
+/* 8041CCC8 003E6288  80 84 00 08 */	lwz r4, 0x8(r4)
 /* 8041CCCC 003E628C  48 00 CB 5D */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041CCD0 003E6290  2C 03 00 00 */	cmpwi r3, 0
+/* 8041CCD0 003E6290  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041CCD4 003E6294  40 82 00 0C */	bne .L_8041CCE0
-/* 8041CCD8 003E6298  38 60 00 00 */	li r3, 0
+/* 8041CCD8 003E6298  38 60 00 00 */	li r3, 0x0
 /* 8041CCDC 003E629C  48 00 00 58 */	b .L_8041CD34
 .L_8041CCE0:
 /* 8041CCE0 003E62A0  88 03 00 16 */	lbz r0, 0x16(r3)
@@ -169,39 +176,40 @@ GetSoundType__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUl:
 .L_8041CCE8:
 /* 8041CCE8 003E62A8  57 E0 18 38 */	slwi r0, r31, 3
 /* 8041CCEC 003E62AC  7C 63 02 14 */	add r3, r3, r0
-/* 8041CCF0 003E62B0  88 03 00 05 */	lbz r0, 5(r3)
+/* 8041CCF0 003E62B0  88 03 00 05 */	lbz r0, 0x5(r3)
 .L_8041CCF4:
-/* 8041CCF4 003E62B4  2C 00 00 02 */	cmpwi r0, 2
+/* 8041CCF4 003E62B4  2C 00 00 02 */	cmpwi r0, 0x2
 /* 8041CCF8 003E62B8  41 82 00 28 */	beq .L_8041CD20
 /* 8041CCFC 003E62BC  40 80 00 10 */	bge .L_8041CD0C
-/* 8041CD00 003E62C0  2C 00 00 01 */	cmpwi r0, 1
+/* 8041CD00 003E62C0  2C 00 00 01 */	cmpwi r0, 0x1
 /* 8041CD04 003E62C4  40 80 00 14 */	bge .L_8041CD18
 /* 8041CD08 003E62C8  48 00 00 28 */	b .L_8041CD30
 .L_8041CD0C:
-/* 8041CD0C 003E62CC  2C 00 00 04 */	cmpwi r0, 4
+/* 8041CD0C 003E62CC  2C 00 00 04 */	cmpwi r0, 0x4
 /* 8041CD10 003E62D0  40 80 00 20 */	bge .L_8041CD30
 /* 8041CD14 003E62D4  48 00 00 14 */	b .L_8041CD28
 .L_8041CD18:
-/* 8041CD18 003E62D8  38 60 00 01 */	li r3, 1
+/* 8041CD18 003E62D8  38 60 00 01 */	li r3, 0x1
 /* 8041CD1C 003E62DC  48 00 00 18 */	b .L_8041CD34
 .L_8041CD20:
-/* 8041CD20 003E62E0  38 60 00 02 */	li r3, 2
+/* 8041CD20 003E62E0  38 60 00 02 */	li r3, 0x2
 /* 8041CD24 003E62E4  48 00 00 10 */	b .L_8041CD34
 .L_8041CD28:
-/* 8041CD28 003E62E8  38 60 00 03 */	li r3, 3
+/* 8041CD28 003E62E8  38 60 00 03 */	li r3, 0x3
 /* 8041CD2C 003E62EC  48 00 00 08 */	b .L_8041CD34
 .L_8041CD30:
-/* 8041CD30 003E62F0  38 60 00 00 */	li r3, 0
+/* 8041CD30 003E62F0  38 60 00 00 */	li r3, 0x0
 .L_8041CD34:
 /* 8041CD34 003E62F4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041CD38 003E62F8  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8041CD3C 003E62FC  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8041CD3C 003E62FC  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 8041CD40 003E6300  7C 08 03 A6 */	mtlr r0
 /* 8041CD44 003E6304  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041CD48 003E6308  4E 80 00 20 */	blr
+.endfn GetSoundType__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUl
 
-.global ReadSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive9SoundInfo
-ReadSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive9SoundInfo:
+# nw4r::snd::detail::SoundArchiveFileReader::ReadSoundInfo(unsigned long, nw4r::snd::SoundArchive::SoundInfo*) const
+.fn ReadSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive9SoundInfo, global
 /* 8041CD4C 003E630C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041CD50 003E6310  7C 08 02 A6 */	mflr r0
 /* 8041CD54 003E6314  80 C3 00 28 */	lwz r6, 0x28(r3)
@@ -213,50 +221,50 @@ ReadSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12Sound
 /* 8041CD6C 003E632C  7C 9E 23 78 */	mr r30, r4
 /* 8041CD70 003E6330  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8041CD74 003E6334  7C 7D 1B 78 */	mr r29, r3
-/* 8041CD78 003E6338  88 66 00 00 */	lbz r3, 0(r6)
-/* 8041CD7C 003E633C  80 86 00 04 */	lwz r4, 4(r6)
+/* 8041CD78 003E6338  88 66 00 00 */	lbz r3, 0x0(r6)
+/* 8041CD7C 003E633C  80 86 00 04 */	lwz r4, 0x4(r6)
 /* 8041CD80 003E6340  48 00 CA A9 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041CD84 003E6344  2C 03 00 00 */	cmpwi r3, 0
+/* 8041CD84 003E6344  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041CD88 003E6348  40 82 00 0C */	bne .L_8041CD94
-/* 8041CD8C 003E634C  38 60 00 00 */	li r3, 0
+/* 8041CD8C 003E634C  38 60 00 00 */	li r3, 0x0
 /* 8041CD90 003E6350  48 00 00 54 */	b .L_8041CDE4
 .L_8041CD94:
-/* 8041CD94 003E6354  80 03 00 00 */	lwz r0, 0(r3)
+/* 8041CD94 003E6354  80 03 00 00 */	lwz r0, 0x0(r3)
 /* 8041CD98 003E6358  7C 1E 00 40 */	cmplw r30, r0
 /* 8041CD9C 003E635C  41 80 00 0C */	blt .L_8041CDA8
-/* 8041CDA0 003E6360  38 60 00 00 */	li r3, 0
+/* 8041CDA0 003E6360  38 60 00 00 */	li r3, 0x0
 /* 8041CDA4 003E6364  48 00 00 40 */	b .L_8041CDE4
 .L_8041CDA8:
-/* 8041CDA8 003E6368  A0 1D 00 06 */	lhz r0, 6(r29)
+/* 8041CDA8 003E6368  A0 1D 00 06 */	lhz r0, 0x6(r29)
 /* 8041CDAC 003E636C  28 00 01 01 */	cmplwi r0, 0x101
 /* 8041CDB0 003E6370  41 80 00 20 */	blt .L_8041CDD0
 /* 8041CDB4 003E6374  57 C0 18 38 */	slwi r0, r30, 3
 /* 8041CDB8 003E6378  80 BD 00 28 */	lwz r5, 0x28(r29)
 /* 8041CDBC 003E637C  7C 83 02 14 */	add r4, r3, r0
-/* 8041CDC0 003E6380  88 64 00 04 */	lbz r3, 4(r4)
-/* 8041CDC4 003E6384  80 84 00 08 */	lwz r4, 8(r4)
+/* 8041CDC0 003E6380  88 64 00 04 */	lbz r3, 0x4(r4)
+/* 8041CDC4 003E6384  80 84 00 08 */	lwz r4, 0x8(r4)
 /* 8041CDC8 003E6388  48 00 CA 61 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 /* 8041CDCC 003E638C  48 00 00 18 */	b .L_8041CDE4
 .L_8041CDD0:
 /* 8041CDD0 003E6390  57 C4 18 38 */	slwi r4, r30, 3
 /* 8041CDD4 003E6394  80 1D 00 28 */	lwz r0, 0x28(r29)
 /* 8041CDD8 003E6398  7C 63 22 14 */	add r3, r3, r4
-/* 8041CDDC 003E639C  80 63 00 08 */	lwz r3, 8(r3)
+/* 8041CDDC 003E639C  80 63 00 08 */	lwz r3, 0x8(r3)
 /* 8041CDE0 003E63A0  7C 63 02 14 */	add r3, r3, r0
 .L_8041CDE4:
-/* 8041CDE4 003E63A4  2C 03 00 00 */	cmpwi r3, 0
+/* 8041CDE4 003E63A4  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041CDE8 003E63A8  40 82 00 0C */	bne .L_8041CDF4
-/* 8041CDEC 003E63AC  38 60 00 00 */	li r3, 0
+/* 8041CDEC 003E63AC  38 60 00 00 */	li r3, 0x0
 /* 8041CDF0 003E63B0  48 00 00 68 */	b .L_8041CE58
 .L_8041CDF4:
-/* 8041CDF4 003E63B4  80 83 00 04 */	lwz r4, 4(r3)
-/* 8041CDF8 003E63B8  A0 1D 00 06 */	lhz r0, 6(r29)
-/* 8041CDFC 003E63BC  90 9F 00 00 */	stw r4, 0(r31)
+/* 8041CDF4 003E63B4  80 83 00 04 */	lwz r4, 0x4(r3)
+/* 8041CDF8 003E63B8  A0 1D 00 06 */	lhz r0, 0x6(r29)
+/* 8041CDFC 003E63BC  90 9F 00 00 */	stw r4, 0x0(r31)
 /* 8041CE00 003E63C0  28 00 01 02 */	cmplwi r0, 0x102
-/* 8041CE04 003E63C4  80 03 00 08 */	lwz r0, 8(r3)
-/* 8041CE08 003E63C8  90 1F 00 04 */	stw r0, 4(r31)
+/* 8041CE04 003E63C4  80 03 00 08 */	lwz r0, 0x8(r3)
+/* 8041CE08 003E63C8  90 1F 00 04 */	stw r0, 0x4(r31)
 /* 8041CE0C 003E63CC  88 03 00 2A */	lbz r0, 0x2a(r3)
-/* 8041CE10 003E63D0  90 1F 00 08 */	stw r0, 8(r31)
+/* 8041CE10 003E63D0  90 1F 00 08 */	stw r0, 0x8(r31)
 /* 8041CE14 003E63D4  88 03 00 15 */	lbz r0, 0x15(r3)
 /* 8041CE18 003E63D8  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 8041CE1C 003E63DC  88 03 00 14 */	lbz r0, 0x14(r3)
@@ -270,12 +278,12 @@ ReadSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12Sound
 /* 8041CE3C 003E63FC  90 1F 00 1C */	stw r0, 0x1c(r31)
 /* 8041CE40 003E6400  48 00 00 14 */	b .L_8041CE54
 .L_8041CE44:
-/* 8041CE44 003E6404  38 60 00 01 */	li r3, 1
-/* 8041CE48 003E6408  38 00 00 00 */	li r0, 0
+/* 8041CE44 003E6404  38 60 00 01 */	li r3, 0x1
+/* 8041CE48 003E6408  38 00 00 00 */	li r0, 0x0
 /* 8041CE4C 003E640C  90 7F 00 18 */	stw r3, 0x18(r31)
 /* 8041CE50 003E6410  90 1F 00 1C */	stw r0, 0x1c(r31)
 .L_8041CE54:
-/* 8041CE54 003E6414  38 60 00 01 */	li r3, 1
+/* 8041CE54 003E6414  38 60 00 01 */	li r3, 0x1
 .L_8041CE58:
 /* 8041CE58 003E6418  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8041CE5C 003E641C  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -284,9 +292,10 @@ ReadSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12Sound
 /* 8041CE68 003E6428  7C 08 03 A6 */	mtlr r0
 /* 8041CE6C 003E642C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041CE70 003E6430  4E 80 00 20 */	blr
+.endfn ReadSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive9SoundInfo
 
-.global ReadSeqSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive12SeqSoundInfo
-ReadSeqSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive12SeqSoundInfo:
+# nw4r::snd::detail::SoundArchiveFileReader::ReadSeqSoundInfo(unsigned long, nw4r::snd::SoundArchive::SeqSoundInfo*) const
+.fn ReadSeqSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive12SeqSoundInfo, global
 /* 8041CE74 003E6434  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041CE78 003E6438  7C 08 02 A6 */	mflr r0
 /* 8041CE7C 003E643C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -297,52 +306,52 @@ ReadSeqSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12So
 /* 8041CE90 003E6450  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8041CE94 003E6454  7C 7D 1B 78 */	mr r29, r3
 /* 8041CE98 003E6458  4B FF FD C5 */	bl GetSoundType__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUl
-/* 8041CE9C 003E645C  2C 03 00 01 */	cmpwi r3, 1
+/* 8041CE9C 003E645C  2C 03 00 01 */	cmpwi r3, 0x1
 /* 8041CEA0 003E6460  41 82 00 0C */	beq .L_8041CEAC
-/* 8041CEA4 003E6464  38 60 00 00 */	li r3, 0
+/* 8041CEA4 003E6464  38 60 00 00 */	li r3, 0x0
 /* 8041CEA8 003E6468  48 00 00 34 */	b .L_8041CEDC
 .L_8041CEAC:
 /* 8041CEAC 003E646C  7F A3 EB 78 */	mr r3, r29
 /* 8041CEB0 003E6470  7F C4 F3 78 */	mr r4, r30
-/* 8041CEB4 003E6474  38 A1 00 08 */	addi r5, r1, 8
+/* 8041CEB4 003E6474  38 A1 00 08 */	addi r5, r1, 0x8
 /* 8041CEB8 003E6478  48 00 0B CD */	bl impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef_v_Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo_
-/* 8041CEBC 003E647C  2C 03 00 00 */	cmpwi r3, 0
+/* 8041CEBC 003E647C  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041CEC0 003E6480  40 82 00 0C */	bne .L_8041CECC
-/* 8041CEC4 003E6484  38 60 00 00 */	li r3, 0
+/* 8041CEC4 003E6484  38 60 00 00 */	li r3, 0x0
 /* 8041CEC8 003E6488  48 00 00 14 */	b .L_8041CEDC
 .L_8041CECC:
-/* 8041CECC 003E648C  88 61 00 08 */	lbz r3, 8(r1)
+/* 8041CECC 003E648C  88 61 00 08 */	lbz r3, 0x8(r1)
 /* 8041CED0 003E6490  80 81 00 0C */	lwz r4, 0xc(r1)
 /* 8041CED4 003E6494  80 BD 00 28 */	lwz r5, 0x28(r29)
 /* 8041CED8 003E6498  48 00 C9 51 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 .L_8041CEDC:
-/* 8041CEDC 003E649C  2C 03 00 00 */	cmpwi r3, 0
+/* 8041CEDC 003E649C  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041CEE0 003E64A0  40 82 00 0C */	bne .L_8041CEEC
-/* 8041CEE4 003E64A4  38 60 00 00 */	li r3, 0
+/* 8041CEE4 003E64A4  38 60 00 00 */	li r3, 0x0
 /* 8041CEE8 003E64A8  48 00 00 54 */	b .L_8041CF3C
 .L_8041CEEC:
-/* 8041CEEC 003E64AC  80 83 00 00 */	lwz r4, 0(r3)
-/* 8041CEF0 003E64B0  A0 1D 00 06 */	lhz r0, 6(r29)
-/* 8041CEF4 003E64B4  90 9F 00 00 */	stw r4, 0(r31)
+/* 8041CEEC 003E64AC  80 83 00 00 */	lwz r4, 0x0(r3)
+/* 8041CEF0 003E64B0  A0 1D 00 06 */	lhz r0, 0x6(r29)
+/* 8041CEF4 003E64B4  90 9F 00 00 */	stw r4, 0x0(r31)
 /* 8041CEF8 003E64B8  28 00 01 03 */	cmplwi r0, 0x103
-/* 8041CEFC 003E64BC  80 03 00 04 */	lwz r0, 4(r3)
-/* 8041CF00 003E64C0  90 1F 00 04 */	stw r0, 4(r31)
+/* 8041CEFC 003E64BC  80 03 00 04 */	lwz r0, 0x4(r3)
+/* 8041CF00 003E64C0  90 1F 00 04 */	stw r0, 0x4(r31)
 /* 8041CF04 003E64C4  88 03 00 0C */	lbz r0, 0xc(r3)
 /* 8041CF08 003E64C8  90 1F 00 0C */	stw r0, 0xc(r31)
-/* 8041CF0C 003E64CC  80 03 00 08 */	lwz r0, 8(r3)
-/* 8041CF10 003E64D0  90 1F 00 08 */	stw r0, 8(r31)
+/* 8041CF0C 003E64CC  80 03 00 08 */	lwz r0, 0x8(r3)
+/* 8041CF10 003E64D0  90 1F 00 08 */	stw r0, 0x8(r31)
 /* 8041CF14 003E64D4  41 80 00 1C */	blt .L_8041CF30
 /* 8041CF18 003E64D8  88 63 00 0D */	lbz r3, 0xd(r3)
 /* 8041CF1C 003E64DC  7C 03 00 D0 */	neg r0, r3
 /* 8041CF20 003E64E0  7C 00 1B 78 */	or r0, r0, r3
-/* 8041CF24 003E64E4  54 00 0F FE */	srwi r0, r0, 0x1f
+/* 8041CF24 003E64E4  54 00 0F FE */	srwi r0, r0, 31
 /* 8041CF28 003E64E8  98 1F 00 10 */	stb r0, 0x10(r31)
 /* 8041CF2C 003E64EC  48 00 00 0C */	b .L_8041CF38
 .L_8041CF30:
-/* 8041CF30 003E64F0  38 00 00 00 */	li r0, 0
+/* 8041CF30 003E64F0  38 00 00 00 */	li r0, 0x0
 /* 8041CF34 003E64F4  98 1F 00 10 */	stb r0, 0x10(r31)
 .L_8041CF38:
-/* 8041CF38 003E64F8  38 60 00 01 */	li r3, 1
+/* 8041CF38 003E64F8  38 60 00 01 */	li r3, 0x1
 .L_8041CF3C:
 /* 8041CF3C 003E64FC  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8041CF40 003E6500  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -351,9 +360,10 @@ ReadSeqSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12So
 /* 8041CF4C 003E650C  7C 08 03 A6 */	mtlr r0
 /* 8041CF50 003E6510  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041CF54 003E6514  4E 80 00 20 */	blr
+.endfn ReadSeqSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive12SeqSoundInfo
 
-.global ReadStrmSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive13StrmSoundInfo
-ReadStrmSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive13StrmSoundInfo:
+# nw4r::snd::detail::SoundArchiveFileReader::ReadStrmSoundInfo(unsigned long, nw4r::snd::SoundArchive::StrmSoundInfo*) const
+.fn ReadStrmSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive13StrmSoundInfo, global
 /* 8041CF58 003E6518  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041CF5C 003E651C  7C 08 02 A6 */	mflr r0
 /* 8041CF60 003E6520  90 01 00 24 */	stw r0, 0x24(r1)
@@ -364,64 +374,64 @@ ReadStrmSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12S
 /* 8041CF74 003E6534  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8041CF78 003E6538  7C 7D 1B 78 */	mr r29, r3
 /* 8041CF7C 003E653C  4B FF FC E1 */	bl GetSoundType__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUl
-/* 8041CF80 003E6540  2C 03 00 02 */	cmpwi r3, 2
+/* 8041CF80 003E6540  2C 03 00 02 */	cmpwi r3, 0x2
 /* 8041CF84 003E6544  41 82 00 0C */	beq .L_8041CF90
-/* 8041CF88 003E6548  38 60 00 00 */	li r3, 0
+/* 8041CF88 003E6548  38 60 00 00 */	li r3, 0x0
 /* 8041CF8C 003E654C  48 00 00 34 */	b .L_8041CFC0
 .L_8041CF90:
 /* 8041CF90 003E6550  7F A3 EB 78 */	mr r3, r29
 /* 8041CF94 003E6554  7F C4 F3 78 */	mr r4, r30
-/* 8041CF98 003E6558  38 A1 00 08 */	addi r5, r1, 8
+/* 8041CF98 003E6558  38 A1 00 08 */	addi r5, r1, 0x8
 /* 8041CF9C 003E655C  48 00 0A E9 */	bl impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef_v_Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo_
-/* 8041CFA0 003E6560  2C 03 00 00 */	cmpwi r3, 0
+/* 8041CFA0 003E6560  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041CFA4 003E6564  40 82 00 0C */	bne .L_8041CFB0
-/* 8041CFA8 003E6568  38 60 00 00 */	li r3, 0
+/* 8041CFA8 003E6568  38 60 00 00 */	li r3, 0x0
 /* 8041CFAC 003E656C  48 00 00 14 */	b .L_8041CFC0
 .L_8041CFB0:
-/* 8041CFB0 003E6570  88 61 00 08 */	lbz r3, 8(r1)
+/* 8041CFB0 003E6570  88 61 00 08 */	lbz r3, 0x8(r1)
 /* 8041CFB4 003E6574  80 81 00 0C */	lwz r4, 0xc(r1)
 /* 8041CFB8 003E6578  80 BD 00 28 */	lwz r5, 0x28(r29)
 /* 8041CFBC 003E657C  48 00 C8 6D */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 .L_8041CFC0:
-/* 8041CFC0 003E6580  2C 03 00 00 */	cmpwi r3, 0
+/* 8041CFC0 003E6580  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041CFC4 003E6584  40 82 00 0C */	bne .L_8041CFD0
-/* 8041CFC8 003E6588  38 60 00 00 */	li r3, 0
+/* 8041CFC8 003E6588  38 60 00 00 */	li r3, 0x0
 /* 8041CFCC 003E658C  48 00 00 74 */	b .L_8041D040
 .L_8041CFD0:
-/* 8041CFD0 003E6590  80 83 00 00 */	lwz r4, 0(r3)
-/* 8041CFD4 003E6594  A0 1D 00 06 */	lhz r0, 6(r29)
-/* 8041CFD8 003E6598  90 9F 00 00 */	stw r4, 0(r31)
+/* 8041CFD0 003E6590  80 83 00 00 */	lwz r4, 0x0(r3)
+/* 8041CFD4 003E6594  A0 1D 00 06 */	lhz r0, 0x6(r29)
+/* 8041CFD8 003E6598  90 9F 00 00 */	stw r4, 0x0(r31)
 /* 8041CFDC 003E659C  28 00 01 04 */	cmplwi r0, 0x104
-/* 8041CFE0 003E65A0  A0 03 00 06 */	lhz r0, 6(r3)
-/* 8041CFE4 003E65A4  B0 1F 00 06 */	sth r0, 6(r31)
+/* 8041CFE0 003E65A0  A0 03 00 06 */	lhz r0, 0x6(r3)
+/* 8041CFE4 003E65A4  B0 1F 00 06 */	sth r0, 0x6(r31)
 /* 8041CFE8 003E65A8  41 80 00 10 */	blt .L_8041CFF8
-/* 8041CFEC 003E65AC  A0 03 00 04 */	lhz r0, 4(r3)
-/* 8041CFF0 003E65B0  B0 1F 00 04 */	sth r0, 4(r31)
+/* 8041CFEC 003E65AC  A0 03 00 04 */	lhz r0, 0x4(r3)
+/* 8041CFF0 003E65B0  B0 1F 00 04 */	sth r0, 0x4(r31)
 /* 8041CFF4 003E65B4  48 00 00 48 */	b .L_8041D03C
 .L_8041CFF8:
-/* 8041CFF8 003E65B8  38 00 00 00 */	li r0, 0
-/* 8041CFFC 003E65BC  B0 1F 00 04 */	sth r0, 4(r31)
-/* 8041D000 003E65C0  A0 83 00 04 */	lhz r4, 4(r3)
+/* 8041CFF8 003E65B8  38 00 00 00 */	li r0, 0x0
+/* 8041CFFC 003E65BC  B0 1F 00 04 */	sth r0, 0x4(r31)
+/* 8041D000 003E65C0  A0 83 00 04 */	lhz r4, 0x4(r3)
 /* 8041D004 003E65C4  48 00 00 30 */	b .L_8041D034
 .L_8041D008:
-/* 8041D008 003E65C8  54 80 07 FF */	clrlwi. r0, r4, 0x1f
+/* 8041D008 003E65C8  54 80 07 FF */	clrlwi. r0, r4, 31
 /* 8041D00C 003E65CC  41 82 00 14 */	beq .L_8041D020
-/* 8041D010 003E65D0  A0 7F 00 04 */	lhz r3, 4(r31)
-/* 8041D014 003E65D4  38 03 00 01 */	addi r0, r3, 1
-/* 8041D018 003E65D8  B0 1F 00 04 */	sth r0, 4(r31)
+/* 8041D010 003E65D0  A0 7F 00 04 */	lhz r3, 0x4(r31)
+/* 8041D014 003E65D4  38 03 00 01 */	addi r0, r3, 0x1
+/* 8041D018 003E65D8  B0 1F 00 04 */	sth r0, 0x4(r31)
 /* 8041D01C 003E65DC  48 00 00 14 */	b .L_8041D030
 .L_8041D020:
-/* 8041D020 003E65E0  54 80 04 3F */	clrlwi. r0, r4, 0x10
+/* 8041D020 003E65E0  54 80 04 3F */	clrlwi. r0, r4, 16
 /* 8041D024 003E65E4  41 82 00 0C */	beq .L_8041D030
-/* 8041D028 003E65E8  38 60 00 00 */	li r3, 0
+/* 8041D028 003E65E8  38 60 00 00 */	li r3, 0x0
 /* 8041D02C 003E65EC  48 00 00 14 */	b .L_8041D040
 .L_8041D030:
-/* 8041D030 003E65F0  54 84 FC 7E */	rlwinm r4, r4, 0x1f, 0x11, 0x1f
+/* 8041D030 003E65F0  54 84 FC 7E */	extrwi r4, r4, 15, 16
 .L_8041D034:
-/* 8041D034 003E65F4  54 80 04 3F */	clrlwi. r0, r4, 0x10
+/* 8041D034 003E65F4  54 80 04 3F */	clrlwi. r0, r4, 16
 /* 8041D038 003E65F8  40 82 FF D0 */	bne .L_8041D008
 .L_8041D03C:
-/* 8041D03C 003E65FC  38 60 00 01 */	li r3, 1
+/* 8041D03C 003E65FC  38 60 00 01 */	li r3, 0x1
 .L_8041D040:
 /* 8041D040 003E6600  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8041D044 003E6604  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -430,9 +440,10 @@ ReadStrmSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12S
 /* 8041D050 003E6610  7C 08 03 A6 */	mtlr r0
 /* 8041D054 003E6614  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041D058 003E6618  4E 80 00 20 */	blr
+.endfn ReadStrmSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive13StrmSoundInfo
 
-.global ReadWaveSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive13WaveSoundInfo
-ReadWaveSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive13WaveSoundInfo:
+# nw4r::snd::detail::SoundArchiveFileReader::ReadWaveSoundInfo(unsigned long, nw4r::snd::SoundArchive::WaveSoundInfo*) const
+.fn ReadWaveSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive13WaveSoundInfo, global
 /* 8041D05C 003E661C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041D060 003E6620  7C 08 02 A6 */	mflr r0
 /* 8041D064 003E6624  90 01 00 24 */	stw r0, 0x24(r1)
@@ -443,48 +454,48 @@ ReadWaveSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12S
 /* 8041D078 003E6638  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8041D07C 003E663C  7C 7D 1B 78 */	mr r29, r3
 /* 8041D080 003E6640  4B FF FB DD */	bl GetSoundType__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUl
-/* 8041D084 003E6644  2C 03 00 03 */	cmpwi r3, 3
+/* 8041D084 003E6644  2C 03 00 03 */	cmpwi r3, 0x3
 /* 8041D088 003E6648  41 82 00 0C */	beq .L_8041D094
-/* 8041D08C 003E664C  38 60 00 00 */	li r3, 0
+/* 8041D08C 003E664C  38 60 00 00 */	li r3, 0x0
 /* 8041D090 003E6650  48 00 00 34 */	b .L_8041D0C4
 .L_8041D094:
 /* 8041D094 003E6654  7F A3 EB 78 */	mr r3, r29
 /* 8041D098 003E6658  7F C4 F3 78 */	mr r4, r30
-/* 8041D09C 003E665C  38 A1 00 08 */	addi r5, r1, 8
+/* 8041D09C 003E665C  38 A1 00 08 */	addi r5, r1, 0x8
 /* 8041D0A0 003E6660  48 00 09 E5 */	bl impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef_v_Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo_
-/* 8041D0A4 003E6664  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D0A4 003E6664  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D0A8 003E6668  40 82 00 0C */	bne .L_8041D0B4
-/* 8041D0AC 003E666C  38 60 00 00 */	li r3, 0
+/* 8041D0AC 003E666C  38 60 00 00 */	li r3, 0x0
 /* 8041D0B0 003E6670  48 00 00 14 */	b .L_8041D0C4
 .L_8041D0B4:
-/* 8041D0B4 003E6674  88 61 00 08 */	lbz r3, 8(r1)
+/* 8041D0B4 003E6674  88 61 00 08 */	lbz r3, 0x8(r1)
 /* 8041D0B8 003E6678  80 81 00 0C */	lwz r4, 0xc(r1)
 /* 8041D0BC 003E667C  80 BD 00 28 */	lwz r5, 0x28(r29)
 /* 8041D0C0 003E6680  48 00 C7 69 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 .L_8041D0C4:
-/* 8041D0C4 003E6684  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D0C4 003E6684  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D0C8 003E6688  40 82 00 0C */	bne .L_8041D0D4
-/* 8041D0CC 003E668C  38 60 00 00 */	li r3, 0
+/* 8041D0CC 003E668C  38 60 00 00 */	li r3, 0x0
 /* 8041D0D0 003E6690  48 00 00 44 */	b .L_8041D114
 .L_8041D0D4:
-/* 8041D0D4 003E6694  80 83 00 00 */	lwz r4, 0(r3)
-/* 8041D0D8 003E6698  A0 1D 00 06 */	lhz r0, 6(r29)
-/* 8041D0DC 003E669C  90 9F 00 00 */	stw r4, 0(r31)
+/* 8041D0D4 003E6694  80 83 00 00 */	lwz r4, 0x0(r3)
+/* 8041D0D8 003E6698  A0 1D 00 06 */	lhz r0, 0x6(r29)
+/* 8041D0DC 003E669C  90 9F 00 00 */	stw r4, 0x0(r31)
 /* 8041D0E0 003E66A0  28 00 01 03 */	cmplwi r0, 0x103
-/* 8041D0E4 003E66A4  88 03 00 08 */	lbz r0, 8(r3)
-/* 8041D0E8 003E66A8  90 1F 00 04 */	stw r0, 4(r31)
+/* 8041D0E4 003E66A4  88 03 00 08 */	lbz r0, 0x8(r3)
+/* 8041D0E8 003E66A8  90 1F 00 04 */	stw r0, 0x4(r31)
 /* 8041D0EC 003E66AC  41 80 00 1C */	blt .L_8041D108
-/* 8041D0F0 003E66B0  88 63 00 09 */	lbz r3, 9(r3)
+/* 8041D0F0 003E66B0  88 63 00 09 */	lbz r3, 0x9(r3)
 /* 8041D0F4 003E66B4  7C 03 00 D0 */	neg r0, r3
 /* 8041D0F8 003E66B8  7C 00 1B 78 */	or r0, r0, r3
-/* 8041D0FC 003E66BC  54 00 0F FE */	srwi r0, r0, 0x1f
-/* 8041D100 003E66C0  98 1F 00 08 */	stb r0, 8(r31)
+/* 8041D0FC 003E66BC  54 00 0F FE */	srwi r0, r0, 31
+/* 8041D100 003E66C0  98 1F 00 08 */	stb r0, 0x8(r31)
 /* 8041D104 003E66C4  48 00 00 0C */	b .L_8041D110
 .L_8041D108:
-/* 8041D108 003E66C8  38 00 00 00 */	li r0, 0
-/* 8041D10C 003E66CC  98 1F 00 08 */	stb r0, 8(r31)
+/* 8041D108 003E66C8  38 00 00 00 */	li r0, 0x0
+/* 8041D10C 003E66CC  98 1F 00 08 */	stb r0, 0x8(r31)
 .L_8041D110:
-/* 8041D110 003E66D0  38 60 00 01 */	li r3, 1
+/* 8041D110 003E66D0  38 60 00 01 */	li r3, 0x1
 .L_8041D114:
 /* 8041D114 003E66D4  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8041D118 003E66D8  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -493,9 +504,10 @@ ReadWaveSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12S
 /* 8041D124 003E66E4  7C 08 03 A6 */	mtlr r0
 /* 8041D128 003E66E8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041D12C 003E66EC  4E 80 00 20 */	blr
+.endfn ReadWaveSoundInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive13WaveSoundInfo
 
-.global ReadBankInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive8BankInfo
-ReadBankInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive8BankInfo:
+# nw4r::snd::detail::SoundArchiveFileReader::ReadBankInfo(unsigned long, nw4r::snd::SoundArchive::BankInfo*) const
+.fn ReadBankInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive8BankInfo, global
 /* 8041D130 003E66F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041D134 003E66F4  7C 08 02 A6 */	mflr r0
 /* 8041D138 003E66F8  80 C3 00 28 */	lwz r6, 0x28(r3)
@@ -507,35 +519,35 @@ ReadBankInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundA
 /* 8041D150 003E6710  7C 9E 23 78 */	mr r30, r4
 /* 8041D154 003E6714  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8041D158 003E6718  7C 7D 1B 78 */	mr r29, r3
-/* 8041D15C 003E671C  88 66 00 08 */	lbz r3, 8(r6)
+/* 8041D15C 003E671C  88 66 00 08 */	lbz r3, 0x8(r6)
 /* 8041D160 003E6720  80 86 00 0C */	lwz r4, 0xc(r6)
 /* 8041D164 003E6724  48 00 C6 C5 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D168 003E6728  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D168 003E6728  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D16C 003E672C  40 82 00 0C */	bne .L_8041D178
-/* 8041D170 003E6730  38 60 00 00 */	li r3, 0
+/* 8041D170 003E6730  38 60 00 00 */	li r3, 0x0
 /* 8041D174 003E6734  48 00 00 30 */	b .L_8041D1A4
 .L_8041D178:
-/* 8041D178 003E6738  80 03 00 00 */	lwz r0, 0(r3)
+/* 8041D178 003E6738  80 03 00 00 */	lwz r0, 0x0(r3)
 /* 8041D17C 003E673C  7C 1E 00 40 */	cmplw r30, r0
 /* 8041D180 003E6740  41 80 00 0C */	blt .L_8041D18C
-/* 8041D184 003E6744  38 60 00 00 */	li r3, 0
+/* 8041D184 003E6744  38 60 00 00 */	li r3, 0x0
 /* 8041D188 003E6748  48 00 00 1C */	b .L_8041D1A4
 .L_8041D18C:
 /* 8041D18C 003E674C  57 C0 18 38 */	slwi r0, r30, 3
 /* 8041D190 003E6750  80 BD 00 28 */	lwz r5, 0x28(r29)
 /* 8041D194 003E6754  7C 83 02 14 */	add r4, r3, r0
-/* 8041D198 003E6758  88 64 00 04 */	lbz r3, 4(r4)
-/* 8041D19C 003E675C  80 84 00 08 */	lwz r4, 8(r4)
+/* 8041D198 003E6758  88 64 00 04 */	lbz r3, 0x4(r4)
+/* 8041D19C 003E675C  80 84 00 08 */	lwz r4, 0x8(r4)
 /* 8041D1A0 003E6760  48 00 C6 89 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 .L_8041D1A4:
-/* 8041D1A4 003E6764  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D1A4 003E6764  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D1A8 003E6768  40 82 00 0C */	bne .L_8041D1B4
-/* 8041D1AC 003E676C  38 60 00 00 */	li r3, 0
+/* 8041D1AC 003E676C  38 60 00 00 */	li r3, 0x0
 /* 8041D1B0 003E6770  48 00 00 10 */	b .L_8041D1C0
 .L_8041D1B4:
-/* 8041D1B4 003E6774  80 03 00 04 */	lwz r0, 4(r3)
-/* 8041D1B8 003E6778  38 60 00 01 */	li r3, 1
-/* 8041D1BC 003E677C  90 1F 00 00 */	stw r0, 0(r31)
+/* 8041D1B4 003E6774  80 03 00 04 */	lwz r0, 0x4(r3)
+/* 8041D1B8 003E6778  38 60 00 01 */	li r3, 0x1
+/* 8041D1BC 003E677C  90 1F 00 00 */	stw r0, 0x0(r31)
 .L_8041D1C0:
 /* 8041D1C0 003E6780  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8041D1C4 003E6784  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -544,9 +556,10 @@ ReadBankInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundA
 /* 8041D1D0 003E6790  7C 08 03 A6 */	mtlr r0
 /* 8041D1D4 003E6794  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041D1D8 003E6798  4E 80 00 20 */	blr
+.endfn ReadBankInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive8BankInfo
 
-.global ReadPlayerInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive10PlayerInfo
-ReadPlayerInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive10PlayerInfo:
+# nw4r::snd::detail::SoundArchiveFileReader::ReadPlayerInfo(unsigned long, nw4r::snd::SoundArchive::PlayerInfo*) const
+.fn ReadPlayerInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive10PlayerInfo, global
 /* 8041D1DC 003E679C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041D1E0 003E67A0  7C 08 02 A6 */	mflr r0
 /* 8041D1E4 003E67A4  80 C3 00 28 */	lwz r6, 0x28(r3)
@@ -561,35 +574,35 @@ ReadPlayerInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12Soun
 /* 8041D208 003E67C8  88 66 00 10 */	lbz r3, 0x10(r6)
 /* 8041D20C 003E67CC  80 86 00 14 */	lwz r4, 0x14(r6)
 /* 8041D210 003E67D0  48 00 C6 19 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D214 003E67D4  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D214 003E67D4  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D218 003E67D8  40 82 00 0C */	bne .L_8041D224
-/* 8041D21C 003E67DC  38 80 00 00 */	li r4, 0
+/* 8041D21C 003E67DC  38 80 00 00 */	li r4, 0x0
 /* 8041D220 003E67E0  48 00 00 34 */	b .L_8041D254
 .L_8041D224:
-/* 8041D224 003E67E4  80 03 00 00 */	lwz r0, 0(r3)
+/* 8041D224 003E67E4  80 03 00 00 */	lwz r0, 0x0(r3)
 /* 8041D228 003E67E8  7C 1E 00 40 */	cmplw r30, r0
 /* 8041D22C 003E67EC  41 80 00 0C */	blt .L_8041D238
-/* 8041D230 003E67F0  38 80 00 00 */	li r4, 0
+/* 8041D230 003E67F0  38 80 00 00 */	li r4, 0x0
 /* 8041D234 003E67F4  48 00 00 20 */	b .L_8041D254
 .L_8041D238:
 /* 8041D238 003E67F8  57 C0 18 38 */	slwi r0, r30, 3
 /* 8041D23C 003E67FC  80 BD 00 28 */	lwz r5, 0x28(r29)
 /* 8041D240 003E6800  7C 83 02 14 */	add r4, r3, r0
-/* 8041D244 003E6804  88 64 00 04 */	lbz r3, 4(r4)
-/* 8041D248 003E6808  80 84 00 08 */	lwz r4, 8(r4)
+/* 8041D244 003E6804  88 64 00 04 */	lbz r3, 0x4(r4)
+/* 8041D248 003E6808  80 84 00 08 */	lwz r4, 0x8(r4)
 /* 8041D24C 003E680C  48 00 C5 DD */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 /* 8041D250 003E6810  7C 64 1B 78 */	mr r4, r3
 .L_8041D254:
-/* 8041D254 003E6814  2C 04 00 00 */	cmpwi r4, 0
+/* 8041D254 003E6814  2C 04 00 00 */	cmpwi r4, 0x0
 /* 8041D258 003E6818  40 82 00 0C */	bne .L_8041D264
-/* 8041D25C 003E681C  38 60 00 00 */	li r3, 0
+/* 8041D25C 003E681C  38 60 00 00 */	li r3, 0x0
 /* 8041D260 003E6820  48 00 00 18 */	b .L_8041D278
 .L_8041D264:
-/* 8041D264 003E6824  88 04 00 04 */	lbz r0, 4(r4)
-/* 8041D268 003E6828  38 60 00 01 */	li r3, 1
-/* 8041D26C 003E682C  90 1F 00 00 */	stw r0, 0(r31)
-/* 8041D270 003E6830  80 04 00 08 */	lwz r0, 8(r4)
-/* 8041D274 003E6834  90 1F 00 04 */	stw r0, 4(r31)
+/* 8041D264 003E6824  88 04 00 04 */	lbz r0, 0x4(r4)
+/* 8041D268 003E6828  38 60 00 01 */	li r3, 0x1
+/* 8041D26C 003E682C  90 1F 00 00 */	stw r0, 0x0(r31)
+/* 8041D270 003E6830  80 04 00 08 */	lwz r0, 0x8(r4)
+/* 8041D274 003E6834  90 1F 00 04 */	stw r0, 0x4(r31)
 .L_8041D278:
 /* 8041D278 003E6838  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8041D27C 003E683C  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -597,10 +610,11 @@ ReadPlayerInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12Soun
 /* 8041D284 003E6844  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 8041D288 003E6848  7C 08 03 A6 */	mtlr r0
 /* 8041D28C 003E684C  38 21 00 20 */	addi r1, r1, 0x20
-/* 8041D290 003E6850  4E 80 00 20 */	blr 
+/* 8041D290 003E6850  4E 80 00 20 */	blr
+.endfn ReadPlayerInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive10PlayerInfo
 
-.global ReadGroupInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive9GroupInfo
-ReadGroupInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive9GroupInfo:
+# nw4r::snd::detail::SoundArchiveFileReader::ReadGroupInfo(unsigned long, nw4r::snd::SoundArchive::GroupInfo*) const
+.fn ReadGroupInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive9GroupInfo, global
 /* 8041D294 003E6854  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041D298 003E6858  7C 08 02 A6 */	mflr r0
 /* 8041D29C 003E685C  80 C3 00 28 */	lwz r6, 0x28(r3)
@@ -616,56 +630,56 @@ ReadGroupInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12Sound
 /* 8041D2C4 003E6884  88 66 00 20 */	lbz r3, 0x20(r6)
 /* 8041D2C8 003E6888  80 86 00 24 */	lwz r4, 0x24(r6)
 /* 8041D2CC 003E688C  48 00 C5 5D */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D2D0 003E6890  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D2D0 003E6890  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D2D4 003E6894  40 82 00 0C */	bne .L_8041D2E0
-/* 8041D2D8 003E6898  3B C0 00 00 */	li r30, 0
+/* 8041D2D8 003E6898  3B C0 00 00 */	li r30, 0x0
 /* 8041D2DC 003E689C  48 00 00 34 */	b .L_8041D310
 .L_8041D2E0:
-/* 8041D2E0 003E68A0  80 03 00 00 */	lwz r0, 0(r3)
+/* 8041D2E0 003E68A0  80 03 00 00 */	lwz r0, 0x0(r3)
 /* 8041D2E4 003E68A4  7C 1E 00 40 */	cmplw r30, r0
 /* 8041D2E8 003E68A8  41 80 00 0C */	blt .L_8041D2F4
-/* 8041D2EC 003E68AC  3B C0 00 00 */	li r30, 0
+/* 8041D2EC 003E68AC  3B C0 00 00 */	li r30, 0x0
 /* 8041D2F0 003E68B0  48 00 00 20 */	b .L_8041D310
 .L_8041D2F4:
 /* 8041D2F4 003E68B4  57 C0 18 38 */	slwi r0, r30, 3
 /* 8041D2F8 003E68B8  80 BC 00 28 */	lwz r5, 0x28(r28)
 /* 8041D2FC 003E68BC  7C 83 02 14 */	add r4, r3, r0
-/* 8041D300 003E68C0  88 64 00 04 */	lbz r3, 4(r4)
-/* 8041D304 003E68C4  80 84 00 08 */	lwz r4, 8(r4)
+/* 8041D300 003E68C0  88 64 00 04 */	lbz r3, 0x4(r4)
+/* 8041D304 003E68C4  80 84 00 08 */	lwz r4, 0x8(r4)
 /* 8041D308 003E68C8  48 00 C5 21 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 /* 8041D30C 003E68CC  7C 7E 1B 78 */	mr r30, r3
 .L_8041D310:
-/* 8041D310 003E68D0  2C 1E 00 00 */	cmpwi r30, 0
+/* 8041D310 003E68D0  2C 1E 00 00 */	cmpwi r30, 0x0
 /* 8041D314 003E68D4  40 82 00 0C */	bne .L_8041D320
-/* 8041D318 003E68D8  38 60 00 00 */	li r3, 0
+/* 8041D318 003E68D8  38 60 00 00 */	li r3, 0x0
 /* 8041D31C 003E68DC  48 00 00 68 */	b .L_8041D384
 .L_8041D320:
 /* 8041D320 003E68E0  88 7E 00 20 */	lbz r3, 0x20(r30)
 /* 8041D324 003E68E4  80 9E 00 24 */	lwz r4, 0x24(r30)
 /* 8041D328 003E68E8  80 BC 00 28 */	lwz r5, 0x28(r28)
 /* 8041D32C 003E68EC  48 00 C4 FD */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D330 003E68F0  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D330 003E68F0  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D334 003E68F4  7C 7F 1B 78 */	mr r31, r3
 /* 8041D338 003E68F8  40 82 00 0C */	bne .L_8041D344
-/* 8041D33C 003E68FC  38 60 00 00 */	li r3, 0
+/* 8041D33C 003E68FC  38 60 00 00 */	li r3, 0x0
 /* 8041D340 003E6900  48 00 00 44 */	b .L_8041D384
 .L_8041D344:
-/* 8041D344 003E6904  88 7E 00 08 */	lbz r3, 8(r30)
+/* 8041D344 003E6904  88 7E 00 08 */	lbz r3, 0x8(r30)
 /* 8041D348 003E6908  80 9E 00 0C */	lwz r4, 0xc(r30)
 /* 8041D34C 003E690C  80 BC 00 28 */	lwz r5, 0x28(r28)
 /* 8041D350 003E6910  48 00 C4 D9 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D354 003E6914  90 7D 00 04 */	stw r3, 4(r29)
-/* 8041D358 003E6918  38 60 00 01 */	li r3, 1
+/* 8041D354 003E6914  90 7D 00 04 */	stw r3, 0x4(r29)
+/* 8041D358 003E6918  38 60 00 01 */	li r3, 0x1
 /* 8041D35C 003E691C  80 1E 00 10 */	lwz r0, 0x10(r30)
-/* 8041D360 003E6920  90 1D 00 08 */	stw r0, 8(r29)
+/* 8041D360 003E6920  90 1D 00 08 */	stw r0, 0x8(r29)
 /* 8041D364 003E6924  80 1E 00 14 */	lwz r0, 0x14(r30)
 /* 8041D368 003E6928  90 1D 00 0C */	stw r0, 0xc(r29)
 /* 8041D36C 003E692C  80 1E 00 18 */	lwz r0, 0x18(r30)
 /* 8041D370 003E6930  90 1D 00 10 */	stw r0, 0x10(r29)
 /* 8041D374 003E6934  80 1E 00 1C */	lwz r0, 0x1c(r30)
 /* 8041D378 003E6938  90 1D 00 14 */	stw r0, 0x14(r29)
-/* 8041D37C 003E693C  80 1F 00 00 */	lwz r0, 0(r31)
-/* 8041D380 003E6940  90 1D 00 00 */	stw r0, 0(r29)
+/* 8041D37C 003E693C  80 1F 00 00 */	lwz r0, 0x0(r31)
+/* 8041D380 003E6940  90 1D 00 00 */	stw r0, 0x0(r29)
 .L_8041D384:
 /* 8041D384 003E6944  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8041D388 003E6948  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -674,10 +688,11 @@ ReadGroupInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12Sound
 /* 8041D394 003E6954  83 81 00 10 */	lwz r28, 0x10(r1)
 /* 8041D398 003E6958  7C 08 03 A6 */	mtlr r0
 /* 8041D39C 003E695C  38 21 00 20 */	addi r1, r1, 0x20
-/* 8041D3A0 003E6960  4E 80 00 20 */	blr 
+/* 8041D3A0 003E6960  4E 80 00 20 */	blr
+.endfn ReadGroupInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive9GroupInfo
 
-.global ReadGroupItemInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlUlPQ44nw4r3snd12SoundArchive13GroupItemInfo
-ReadGroupItemInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlUlPQ44nw4r3snd12SoundArchive13GroupItemInfo:
+# nw4r::snd::detail::SoundArchiveFileReader::ReadGroupItemInfo(unsigned long, unsigned long, nw4r::snd::SoundArchive::GroupItemInfo*) const
+.fn ReadGroupItemInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlUlPQ44nw4r3snd12SoundArchive13GroupItemInfo, global
 /* 8041D3A4 003E6964  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041D3A8 003E6968  7C 08 02 A6 */	mflr r0
 /* 8041D3AC 003E696C  80 E3 00 28 */	lwz r7, 0x28(r3)
@@ -694,66 +709,66 @@ ReadGroupItemInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlUlPQ44nw4r3snd1
 /* 8041D3D8 003E6998  88 67 00 20 */	lbz r3, 0x20(r7)
 /* 8041D3DC 003E699C  80 87 00 24 */	lwz r4, 0x24(r7)
 /* 8041D3E0 003E69A0  48 00 C4 49 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D3E4 003E69A4  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D3E4 003E69A4  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D3E8 003E69A8  40 82 00 0C */	bne .L_8041D3F4
-/* 8041D3EC 003E69AC  38 80 00 00 */	li r4, 0
+/* 8041D3EC 003E69AC  38 80 00 00 */	li r4, 0x0
 /* 8041D3F0 003E69B0  48 00 00 34 */	b .L_8041D424
 .L_8041D3F4:
-/* 8041D3F4 003E69B4  80 03 00 00 */	lwz r0, 0(r3)
+/* 8041D3F4 003E69B4  80 03 00 00 */	lwz r0, 0x0(r3)
 /* 8041D3F8 003E69B8  7C 1D 00 40 */	cmplw r29, r0
 /* 8041D3FC 003E69BC  41 80 00 0C */	blt .L_8041D408
-/* 8041D400 003E69C0  38 80 00 00 */	li r4, 0
+/* 8041D400 003E69C0  38 80 00 00 */	li r4, 0x0
 /* 8041D404 003E69C4  48 00 00 20 */	b .L_8041D424
 .L_8041D408:
 /* 8041D408 003E69C8  57 A0 18 38 */	slwi r0, r29, 3
 /* 8041D40C 003E69CC  80 BC 00 28 */	lwz r5, 0x28(r28)
 /* 8041D410 003E69D0  7C 83 02 14 */	add r4, r3, r0
-/* 8041D414 003E69D4  88 64 00 04 */	lbz r3, 4(r4)
-/* 8041D418 003E69D8  80 84 00 08 */	lwz r4, 8(r4)
+/* 8041D414 003E69D4  88 64 00 04 */	lbz r3, 0x4(r4)
+/* 8041D418 003E69D8  80 84 00 08 */	lwz r4, 0x8(r4)
 /* 8041D41C 003E69DC  48 00 C4 0D */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 /* 8041D420 003E69E0  7C 64 1B 78 */	mr r4, r3
 .L_8041D424:
-/* 8041D424 003E69E4  2C 04 00 00 */	cmpwi r4, 0
+/* 8041D424 003E69E4  2C 04 00 00 */	cmpwi r4, 0x0
 /* 8041D428 003E69E8  40 82 00 0C */	bne .L_8041D434
-/* 8041D42C 003E69EC  38 60 00 00 */	li r3, 0
+/* 8041D42C 003E69EC  38 60 00 00 */	li r3, 0x0
 /* 8041D430 003E69F0  48 00 00 8C */	b .L_8041D4BC
 .L_8041D434:
 /* 8041D434 003E69F4  88 64 00 20 */	lbz r3, 0x20(r4)
 /* 8041D438 003E69F8  80 84 00 24 */	lwz r4, 0x24(r4)
 /* 8041D43C 003E69FC  80 BC 00 28 */	lwz r5, 0x28(r28)
 /* 8041D440 003E6A00  48 00 C3 E9 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D444 003E6A04  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D444 003E6A04  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D448 003E6A08  40 82 00 0C */	bne .L_8041D454
-/* 8041D44C 003E6A0C  38 60 00 00 */	li r3, 0
+/* 8041D44C 003E6A0C  38 60 00 00 */	li r3, 0x0
 /* 8041D450 003E6A10  48 00 00 6C */	b .L_8041D4BC
 .L_8041D454:
-/* 8041D454 003E6A14  80 03 00 00 */	lwz r0, 0(r3)
+/* 8041D454 003E6A14  80 03 00 00 */	lwz r0, 0x0(r3)
 /* 8041D458 003E6A18  7C 1E 00 40 */	cmplw r30, r0
 /* 8041D45C 003E6A1C  41 80 00 0C */	blt .L_8041D468
-/* 8041D460 003E6A20  38 60 00 00 */	li r3, 0
+/* 8041D460 003E6A20  38 60 00 00 */	li r3, 0x0
 /* 8041D464 003E6A24  48 00 00 58 */	b .L_8041D4BC
 .L_8041D468:
 /* 8041D468 003E6A28  57 C0 18 38 */	slwi r0, r30, 3
 /* 8041D46C 003E6A2C  80 BC 00 28 */	lwz r5, 0x28(r28)
 /* 8041D470 003E6A30  7C 83 02 14 */	add r4, r3, r0
-/* 8041D474 003E6A34  88 64 00 04 */	lbz r3, 4(r4)
-/* 8041D478 003E6A38  80 84 00 08 */	lwz r4, 8(r4)
+/* 8041D474 003E6A34  88 64 00 04 */	lbz r3, 0x4(r4)
+/* 8041D478 003E6A38  80 84 00 08 */	lwz r4, 0x8(r4)
 /* 8041D47C 003E6A3C  48 00 C3 AD */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D480 003E6A40  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D480 003E6A40  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D484 003E6A44  40 82 00 0C */	bne .L_8041D490
-/* 8041D488 003E6A48  38 60 00 00 */	li r3, 0
+/* 8041D488 003E6A48  38 60 00 00 */	li r3, 0x0
 /* 8041D48C 003E6A4C  48 00 00 30 */	b .L_8041D4BC
 .L_8041D490:
-/* 8041D490 003E6A50  80 03 00 00 */	lwz r0, 0(r3)
-/* 8041D494 003E6A54  90 1F 00 00 */	stw r0, 0(r31)
-/* 8041D498 003E6A58  80 03 00 04 */	lwz r0, 4(r3)
-/* 8041D49C 003E6A5C  90 1F 00 04 */	stw r0, 4(r31)
-/* 8041D4A0 003E6A60  80 03 00 08 */	lwz r0, 8(r3)
-/* 8041D4A4 003E6A64  90 1F 00 08 */	stw r0, 8(r31)
+/* 8041D490 003E6A50  80 03 00 00 */	lwz r0, 0x0(r3)
+/* 8041D494 003E6A54  90 1F 00 00 */	stw r0, 0x0(r31)
+/* 8041D498 003E6A58  80 03 00 04 */	lwz r0, 0x4(r3)
+/* 8041D49C 003E6A5C  90 1F 00 04 */	stw r0, 0x4(r31)
+/* 8041D4A0 003E6A60  80 03 00 08 */	lwz r0, 0x8(r3)
+/* 8041D4A4 003E6A64  90 1F 00 08 */	stw r0, 0x8(r31)
 /* 8041D4A8 003E6A68  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 8041D4AC 003E6A6C  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 8041D4B0 003E6A70  80 03 00 10 */	lwz r0, 0x10(r3)
-/* 8041D4B4 003E6A74  38 60 00 01 */	li r3, 1
+/* 8041D4B4 003E6A74  38 60 00 01 */	li r3, 0x1
 /* 8041D4B8 003E6A78  90 1F 00 10 */	stw r0, 0x10(r31)
 .L_8041D4BC:
 /* 8041D4BC 003E6A7C  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -764,9 +779,10 @@ ReadGroupItemInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlUlPQ44nw4r3snd1
 /* 8041D4D0 003E6A90  7C 08 03 A6 */	mtlr r0
 /* 8041D4D4 003E6A94  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041D4D8 003E6A98  4E 80 00 20 */	blr
+.endfn ReadGroupItemInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlUlPQ44nw4r3snd12SoundArchive13GroupItemInfo
 
-.global ReadSoundArchivePlayerInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFPQ44nw4r3snd12SoundArchive22SoundArchivePlayerInfo
-ReadSoundArchivePlayerInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFPQ44nw4r3snd12SoundArchive22SoundArchivePlayerInfo:
+# nw4r::snd::detail::SoundArchiveFileReader::ReadSoundArchivePlayerInfo(nw4r::snd::SoundArchive::SoundArchivePlayerInfo*) const
+.fn ReadSoundArchivePlayerInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFPQ44nw4r3snd12SoundArchive22SoundArchivePlayerInfo, global
 /* 8041D4DC 003E6A9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041D4E0 003E6AA0  7C 08 02 A6 */	mflr r0
 /* 8041D4E4 003E6AA4  80 A3 00 28 */	lwz r5, 0x28(r3)
@@ -776,25 +792,25 @@ ReadSoundArchivePlayerInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFPQ44nw4r
 /* 8041D4F4 003E6AB4  88 65 00 28 */	lbz r3, 0x28(r5)
 /* 8041D4F8 003E6AB8  80 85 00 2C */	lwz r4, 0x2c(r5)
 /* 8041D4FC 003E6ABC  48 00 C3 2D */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D500 003E6AC0  2C 1F 00 00 */	cmpwi r31, 0
+/* 8041D500 003E6AC0  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 8041D504 003E6AC4  40 82 00 0C */	bne .L_8041D510
-/* 8041D508 003E6AC8  38 60 00 00 */	li r3, 0
+/* 8041D508 003E6AC8  38 60 00 00 */	li r3, 0x0
 /* 8041D50C 003E6ACC  48 00 00 40 */	b .L_8041D54C
 .L_8041D510:
-/* 8041D510 003E6AD0  A0 03 00 00 */	lhz r0, 0(r3)
-/* 8041D514 003E6AD4  90 1F 00 00 */	stw r0, 0(r31)
-/* 8041D518 003E6AD8  A0 03 00 02 */	lhz r0, 2(r3)
-/* 8041D51C 003E6ADC  90 1F 00 04 */	stw r0, 4(r31)
-/* 8041D520 003E6AE0  A0 03 00 04 */	lhz r0, 4(r3)
-/* 8041D524 003E6AE4  90 1F 00 08 */	stw r0, 8(r31)
-/* 8041D528 003E6AE8  A0 03 00 06 */	lhz r0, 6(r3)
+/* 8041D510 003E6AD0  A0 03 00 00 */	lhz r0, 0x0(r3)
+/* 8041D514 003E6AD4  90 1F 00 00 */	stw r0, 0x0(r31)
+/* 8041D518 003E6AD8  A0 03 00 02 */	lhz r0, 0x2(r3)
+/* 8041D51C 003E6ADC  90 1F 00 04 */	stw r0, 0x4(r31)
+/* 8041D520 003E6AE0  A0 03 00 04 */	lhz r0, 0x4(r3)
+/* 8041D524 003E6AE4  90 1F 00 08 */	stw r0, 0x8(r31)
+/* 8041D528 003E6AE8  A0 03 00 06 */	lhz r0, 0x6(r3)
 /* 8041D52C 003E6AEC  90 1F 00 0C */	stw r0, 0xc(r31)
-/* 8041D530 003E6AF0  A0 03 00 08 */	lhz r0, 8(r3)
+/* 8041D530 003E6AF0  A0 03 00 08 */	lhz r0, 0x8(r3)
 /* 8041D534 003E6AF4  90 1F 00 10 */	stw r0, 0x10(r31)
 /* 8041D538 003E6AF8  A0 03 00 0A */	lhz r0, 0xa(r3)
 /* 8041D53C 003E6AFC  90 1F 00 14 */	stw r0, 0x14(r31)
 /* 8041D540 003E6B00  A0 03 00 0C */	lhz r0, 0xc(r3)
-/* 8041D544 003E6B04  38 60 00 01 */	li r3, 1
+/* 8041D544 003E6B04  38 60 00 01 */	li r3, 0x1
 /* 8041D548 003E6B08  90 1F 00 18 */	stw r0, 0x18(r31)
 .L_8041D54C:
 /* 8041D54C 003E6B0C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -802,30 +818,32 @@ ReadSoundArchivePlayerInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFPQ44nw4r
 /* 8041D554 003E6B14  7C 08 03 A6 */	mtlr r0
 /* 8041D558 003E6B18  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041D55C 003E6B1C  4E 80 00 20 */	blr
+.endfn ReadSoundArchivePlayerInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFPQ44nw4r3snd12SoundArchive22SoundArchivePlayerInfo
 
-.global GetSoundCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv
-GetSoundCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv:
+# nw4r::snd::detail::SoundArchiveFileReader::GetSoundCount() const
+.fn GetSoundCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv, global
 /* 8041D560 003E6B20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041D564 003E6B24  7C 08 02 A6 */	mflr r0
 /* 8041D568 003E6B28  80 A3 00 28 */	lwz r5, 0x28(r3)
 /* 8041D56C 003E6B2C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8041D570 003E6B30  88 65 00 00 */	lbz r3, 0(r5)
-/* 8041D574 003E6B34  80 85 00 04 */	lwz r4, 4(r5)
+/* 8041D570 003E6B30  88 65 00 00 */	lbz r3, 0x0(r5)
+/* 8041D574 003E6B34  80 85 00 04 */	lwz r4, 0x4(r5)
 /* 8041D578 003E6B38  48 00 C2 B1 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D57C 003E6B3C  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D57C 003E6B3C  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D580 003E6B40  40 82 00 0C */	bne .L_8041D58C
-/* 8041D584 003E6B44  38 60 00 00 */	li r3, 0
+/* 8041D584 003E6B44  38 60 00 00 */	li r3, 0x0
 /* 8041D588 003E6B48  48 00 00 08 */	b .L_8041D590
 .L_8041D58C:
-/* 8041D58C 003E6B4C  80 63 00 00 */	lwz r3, 0(r3)
+/* 8041D58C 003E6B4C  80 63 00 00 */	lwz r3, 0x0(r3)
 .L_8041D590:
 /* 8041D590 003E6B50  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041D594 003E6B54  7C 08 03 A6 */	mtlr r0
 /* 8041D598 003E6B58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041D59C 003E6B5C  4E 80 00 20 */	blr
+.endfn GetSoundCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv
 
-.global GetPlayerCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv
-GetPlayerCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv:
+# nw4r::snd::detail::SoundArchiveFileReader::GetPlayerCount() const
+.fn GetPlayerCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv, global
 /* 8041D5A0 003E6B60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041D5A4 003E6B64  7C 08 02 A6 */	mflr r0
 /* 8041D5A8 003E6B68  80 A3 00 28 */	lwz r5, 0x28(r3)
@@ -833,20 +851,21 @@ GetPlayerCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv:
 /* 8041D5B0 003E6B70  88 65 00 10 */	lbz r3, 0x10(r5)
 /* 8041D5B4 003E6B74  80 85 00 14 */	lwz r4, 0x14(r5)
 /* 8041D5B8 003E6B78  48 00 C2 71 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D5BC 003E6B7C  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D5BC 003E6B7C  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D5C0 003E6B80  40 82 00 0C */	bne .L_8041D5CC
-/* 8041D5C4 003E6B84  38 60 00 00 */	li r3, 0
+/* 8041D5C4 003E6B84  38 60 00 00 */	li r3, 0x0
 /* 8041D5C8 003E6B88  48 00 00 08 */	b .L_8041D5D0
 .L_8041D5CC:
-/* 8041D5CC 003E6B8C  80 63 00 00 */	lwz r3, 0(r3)
+/* 8041D5CC 003E6B8C  80 63 00 00 */	lwz r3, 0x0(r3)
 .L_8041D5D0:
 /* 8041D5D0 003E6B90  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041D5D4 003E6B94  7C 08 03 A6 */	mtlr r0
 /* 8041D5D8 003E6B98  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041D5DC 003E6B9C  4E 80 00 20 */	blr
+.endfn GetPlayerCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv
 
-.global GetGroupCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv
-GetGroupCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv:
+# nw4r::snd::detail::SoundArchiveFileReader::GetGroupCount() const
+.fn GetGroupCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv, global
 /* 8041D5E0 003E6BA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041D5E4 003E6BA4  7C 08 02 A6 */	mflr r0
 /* 8041D5E8 003E6BA8  80 A3 00 28 */	lwz r5, 0x28(r3)
@@ -854,77 +873,78 @@ GetGroupCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv:
 /* 8041D5F0 003E6BB0  88 65 00 20 */	lbz r3, 0x20(r5)
 /* 8041D5F4 003E6BB4  80 85 00 24 */	lwz r4, 0x24(r5)
 /* 8041D5F8 003E6BB8  48 00 C2 31 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D5FC 003E6BBC  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D5FC 003E6BBC  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D600 003E6BC0  40 82 00 0C */	bne .L_8041D60C
-/* 8041D604 003E6BC4  38 60 00 00 */	li r3, 0
+/* 8041D604 003E6BC4  38 60 00 00 */	li r3, 0x0
 /* 8041D608 003E6BC8  48 00 00 0C */	b .L_8041D614
 .L_8041D60C:
-/* 8041D60C 003E6BCC  80 63 00 00 */	lwz r3, 0(r3)
-/* 8041D610 003E6BD0  38 63 FF FF */	addi r3, r3, -1
+/* 8041D60C 003E6BCC  80 63 00 00 */	lwz r3, 0x0(r3)
+/* 8041D610 003E6BD0  38 63 FF FF */	addi r3, r3, -0x1
 .L_8041D614:
 /* 8041D614 003E6BD4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041D618 003E6BD8  7C 08 03 A6 */	mtlr r0
 /* 8041D61C 003E6BDC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041D620 003E6BE0  4E 80 00 20 */	blr
+.endfn GetGroupCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv
 
-#not sure about this label
-.global GetSoundUserParam__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUl
-GetSoundUserParam__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUl:
+# nw4r::snd::detail::SoundArchiveFileReader::GetSoundUserParam(unsigned long) const
+.fn GetSoundUserParam__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUl, global
 /* 8041D624 003E6BE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041D628 003E6BE8  7C 08 02 A6 */	mflr r0
 /* 8041D62C 003E6BEC  80 A3 00 28 */	lwz r5, 0x28(r3)
 /* 8041D630 003E6BF0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041D634 003E6BF4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8041D638 003E6BF8  7C 9F 23 78 */	mr r31, r4
-/* 8041D63C 003E6BFC  93 C1 00 08 */	stw r30, 8(r1)
+/* 8041D63C 003E6BFC  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8041D640 003E6C00  7C 7E 1B 78 */	mr r30, r3
-/* 8041D644 003E6C04  88 65 00 00 */	lbz r3, 0(r5)
-/* 8041D648 003E6C08  80 85 00 04 */	lwz r4, 4(r5)
+/* 8041D644 003E6C04  88 65 00 00 */	lbz r3, 0x0(r5)
+/* 8041D648 003E6C08  80 85 00 04 */	lwz r4, 0x4(r5)
 /* 8041D64C 003E6C0C  48 00 C1 DD */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D650 003E6C10  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D650 003E6C10  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D654 003E6C14  40 82 00 0C */	bne .L_8041D660
-/* 8041D658 003E6C18  38 60 00 00 */	li r3, 0
+/* 8041D658 003E6C18  38 60 00 00 */	li r3, 0x0
 /* 8041D65C 003E6C1C  48 00 00 54 */	b .L_8041D6B0
 .L_8041D660:
-/* 8041D660 003E6C20  80 03 00 00 */	lwz r0, 0(r3)
+/* 8041D660 003E6C20  80 03 00 00 */	lwz r0, 0x0(r3)
 /* 8041D664 003E6C24  7C 1F 00 40 */	cmplw r31, r0
 /* 8041D668 003E6C28  41 80 00 0C */	blt .L_8041D674
-/* 8041D66C 003E6C2C  38 60 00 00 */	li r3, 0
+/* 8041D66C 003E6C2C  38 60 00 00 */	li r3, 0x0
 /* 8041D670 003E6C30  48 00 00 40 */	b .L_8041D6B0
 .L_8041D674:
-/* 8041D674 003E6C34  A0 1E 00 06 */	lhz r0, 6(r30)
+/* 8041D674 003E6C34  A0 1E 00 06 */	lhz r0, 0x6(r30)
 /* 8041D678 003E6C38  28 00 01 01 */	cmplwi r0, 0x101
 /* 8041D67C 003E6C3C  41 80 00 20 */	blt .L_8041D69C
 /* 8041D680 003E6C40  57 E0 18 38 */	slwi r0, r31, 3
 /* 8041D684 003E6C44  80 BE 00 28 */	lwz r5, 0x28(r30)
 /* 8041D688 003E6C48  7C 83 02 14 */	add r4, r3, r0
-/* 8041D68C 003E6C4C  88 64 00 04 */	lbz r3, 4(r4)
-/* 8041D690 003E6C50  80 84 00 08 */	lwz r4, 8(r4)
+/* 8041D68C 003E6C4C  88 64 00 04 */	lbz r3, 0x4(r4)
+/* 8041D690 003E6C50  80 84 00 08 */	lwz r4, 0x8(r4)
 /* 8041D694 003E6C54  48 00 C1 95 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 /* 8041D698 003E6C58  48 00 00 18 */	b .L_8041D6B0
 .L_8041D69C:
 /* 8041D69C 003E6C5C  57 E4 18 38 */	slwi r4, r31, 3
 /* 8041D6A0 003E6C60  80 1E 00 28 */	lwz r0, 0x28(r30)
 /* 8041D6A4 003E6C64  7C 63 22 14 */	add r3, r3, r4
-/* 8041D6A8 003E6C68  80 63 00 08 */	lwz r3, 8(r3)
+/* 8041D6A8 003E6C68  80 63 00 08 */	lwz r3, 0x8(r3)
 /* 8041D6AC 003E6C6C  7C 63 02 14 */	add r3, r3, r0
 .L_8041D6B0:
-/* 8041D6B0 003E6C70  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D6B0 003E6C70  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D6B4 003E6C74  40 82 00 0C */	bne .L_8041D6C0
-/* 8041D6B8 003E6C78  38 60 00 00 */	li r3, 0
+/* 8041D6B8 003E6C78  38 60 00 00 */	li r3, 0x0
 /* 8041D6BC 003E6C7C  48 00 00 08 */	b .L_8041D6C4
 .L_8041D6C0:
 /* 8041D6C0 003E6C80  80 63 00 20 */	lwz r3, 0x20(r3)
 .L_8041D6C4:
 /* 8041D6C4 003E6C84  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041D6C8 003E6C88  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8041D6CC 003E6C8C  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8041D6CC 003E6C8C  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 8041D6D0 003E6C90  7C 08 03 A6 */	mtlr r0
 /* 8041D6D4 003E6C94  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041D6D8 003E6C98  4E 80 00 20 */	blr
+.endfn GetSoundUserParam__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUl
 
-.global GetFileCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv
-GetFileCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv:
+# nw4r::snd::detail::SoundArchiveFileReader::GetFileCount() const
+.fn GetFileCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv, global
 /* 8041D6DC 003E6C9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041D6E0 003E6CA0  7C 08 02 A6 */	mflr r0
 /* 8041D6E4 003E6CA4  80 A3 00 28 */	lwz r5, 0x28(r3)
@@ -932,20 +952,21 @@ GetFileCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv:
 /* 8041D6EC 003E6CAC  88 65 00 18 */	lbz r3, 0x18(r5)
 /* 8041D6F0 003E6CB0  80 85 00 1C */	lwz r4, 0x1c(r5)
 /* 8041D6F4 003E6CB4  48 00 C1 35 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D6F8 003E6CB8  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D6F8 003E6CB8  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D6FC 003E6CBC  40 82 00 0C */	bne .L_8041D708
-/* 8041D700 003E6CC0  38 60 00 00 */	li r3, 0
+/* 8041D700 003E6CC0  38 60 00 00 */	li r3, 0x0
 /* 8041D704 003E6CC4  48 00 00 08 */	b .L_8041D70C
 .L_8041D708:
-/* 8041D708 003E6CC8  80 63 00 00 */	lwz r3, 0(r3)
+/* 8041D708 003E6CC8  80 63 00 00 */	lwz r3, 0x0(r3)
 .L_8041D70C:
 /* 8041D70C 003E6CCC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041D710 003E6CD0  7C 08 03 A6 */	mtlr r0
 /* 8041D714 003E6CD4  38 21 00 10 */	addi r1, r1, 0x10
-/* 8041D718 003E6CD8  4E 80 00 20 */	blr 
+/* 8041D718 003E6CD8  4E 80 00 20 */	blr
+.endfn GetFileCount__Q44nw4r3snd6detail22SoundArchiveFileReaderCFv
 
-.global ReadFileInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive8FileInfo
-ReadFileInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive8FileInfo:
+# nw4r::snd::detail::SoundArchiveFileReader::ReadFileInfo(unsigned long, nw4r::snd::SoundArchive::FileInfo*) const
+.fn ReadFileInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive8FileInfo, global
 /* 8041D71C 003E6CDC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041D720 003E6CE0  7C 08 02 A6 */	mflr r0
 /* 8041D724 003E6CE4  80 C3 00 28 */	lwz r6, 0x28(r3)
@@ -961,50 +982,50 @@ ReadFileInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundA
 /* 8041D74C 003E6D0C  88 66 00 18 */	lbz r3, 0x18(r6)
 /* 8041D750 003E6D10  80 86 00 1C */	lwz r4, 0x1c(r6)
 /* 8041D754 003E6D14  48 00 C0 D5 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D758 003E6D18  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D758 003E6D18  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D75C 003E6D1C  40 82 00 0C */	bne .L_8041D768
-/* 8041D760 003E6D20  38 60 00 00 */	li r3, 0
+/* 8041D760 003E6D20  38 60 00 00 */	li r3, 0x0
 /* 8041D764 003E6D24  48 00 00 98 */	b .L_8041D7FC
 .L_8041D768:
-/* 8041D768 003E6D28  80 03 00 00 */	lwz r0, 0(r3)
+/* 8041D768 003E6D28  80 03 00 00 */	lwz r0, 0x0(r3)
 /* 8041D76C 003E6D2C  7C 1E 00 40 */	cmplw r30, r0
 /* 8041D770 003E6D30  41 80 00 0C */	blt .L_8041D77C
-/* 8041D774 003E6D34  38 60 00 00 */	li r3, 0
+/* 8041D774 003E6D34  38 60 00 00 */	li r3, 0x0
 /* 8041D778 003E6D38  48 00 00 84 */	b .L_8041D7FC
 .L_8041D77C:
 /* 8041D77C 003E6D3C  57 C0 18 38 */	slwi r0, r30, 3
 /* 8041D780 003E6D40  80 BC 00 28 */	lwz r5, 0x28(r28)
 /* 8041D784 003E6D44  7C 83 02 14 */	add r4, r3, r0
-/* 8041D788 003E6D48  88 64 00 04 */	lbz r3, 4(r4)
-/* 8041D78C 003E6D4C  80 84 00 08 */	lwz r4, 8(r4)
+/* 8041D788 003E6D48  88 64 00 04 */	lbz r3, 0x4(r4)
+/* 8041D78C 003E6D4C  80 84 00 08 */	lwz r4, 0x8(r4)
 /* 8041D790 003E6D50  48 00 C0 99 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D794 003E6D54  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D794 003E6D54  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D798 003E6D58  7C 7E 1B 78 */	mr r30, r3
 /* 8041D79C 003E6D5C  40 82 00 0C */	bne .L_8041D7A8
-/* 8041D7A0 003E6D60  38 60 00 00 */	li r3, 0
+/* 8041D7A0 003E6D60  38 60 00 00 */	li r3, 0x0
 /* 8041D7A4 003E6D64  48 00 00 58 */	b .L_8041D7FC
 .L_8041D7A8:
 /* 8041D7A8 003E6D68  88 63 00 14 */	lbz r3, 0x14(r3)
 /* 8041D7AC 003E6D6C  80 9E 00 18 */	lwz r4, 0x18(r30)
 /* 8041D7B0 003E6D70  80 BC 00 28 */	lwz r5, 0x28(r28)
 /* 8041D7B4 003E6D74  48 00 C0 75 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D7B8 003E6D78  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D7B8 003E6D78  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D7BC 003E6D7C  7C 7F 1B 78 */	mr r31, r3
 /* 8041D7C0 003E6D80  40 82 00 0C */	bne .L_8041D7CC
-/* 8041D7C4 003E6D84  38 60 00 00 */	li r3, 0
+/* 8041D7C4 003E6D84  38 60 00 00 */	li r3, 0x0
 /* 8041D7C8 003E6D88  48 00 00 34 */	b .L_8041D7FC
 .L_8041D7CC:
-/* 8041D7CC 003E6D8C  80 1E 00 00 */	lwz r0, 0(r30)
+/* 8041D7CC 003E6D8C  80 1E 00 00 */	lwz r0, 0x0(r30)
 /* 8041D7D0 003E6D90  80 BC 00 28 */	lwz r5, 0x28(r28)
-/* 8041D7D4 003E6D94  90 1D 00 00 */	stw r0, 0(r29)
-/* 8041D7D8 003E6D98  80 1E 00 04 */	lwz r0, 4(r30)
-/* 8041D7DC 003E6D9C  90 1D 00 04 */	stw r0, 4(r29)
+/* 8041D7D4 003E6D94  90 1D 00 00 */	stw r0, 0x0(r29)
+/* 8041D7D8 003E6D98  80 1E 00 04 */	lwz r0, 0x4(r30)
+/* 8041D7DC 003E6D9C  90 1D 00 04 */	stw r0, 0x4(r29)
 /* 8041D7E0 003E6DA0  88 7E 00 0C */	lbz r3, 0xc(r30)
 /* 8041D7E4 003E6DA4  80 9E 00 10 */	lwz r4, 0x10(r30)
 /* 8041D7E8 003E6DA8  48 00 C0 41 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D7EC 003E6DAC  90 7D 00 08 */	stw r3, 8(r29)
-/* 8041D7F0 003E6DB0  38 60 00 01 */	li r3, 1
-/* 8041D7F4 003E6DB4  80 1F 00 00 */	lwz r0, 0(r31)
+/* 8041D7EC 003E6DAC  90 7D 00 08 */	stw r3, 0x8(r29)
+/* 8041D7F0 003E6DB0  38 60 00 01 */	li r3, 0x1
+/* 8041D7F4 003E6DB4  80 1F 00 00 */	lwz r0, 0x0(r31)
 /* 8041D7F8 003E6DB8  90 1D 00 0C */	stw r0, 0xc(r29)
 .L_8041D7FC:
 /* 8041D7FC 003E6DBC  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -1014,10 +1035,11 @@ ReadFileInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundA
 /* 8041D80C 003E6DCC  83 81 00 10 */	lwz r28, 0x10(r1)
 /* 8041D810 003E6DD0  7C 08 03 A6 */	mtlr r0
 /* 8041D814 003E6DD4  38 21 00 20 */	addi r1, r1, 0x20
-/* 8041D818 003E6DD8  4E 80 00 20 */	blr 
+/* 8041D818 003E6DD8  4E 80 00 20 */	blr
+.endfn ReadFileInfo__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ44nw4r3snd12SoundArchive8FileInfo
 
-.global ReadFilePos__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlUlPQ44nw4r3snd12SoundArchive7FilePos
-ReadFilePos__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlUlPQ44nw4r3snd12SoundArchive7FilePos:
+# nw4r::snd::detail::SoundArchiveFileReader::ReadFilePos(unsigned long, unsigned long, nw4r::snd::SoundArchive::FilePos*) const
+.fn ReadFilePos__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlUlPQ44nw4r3snd12SoundArchive7FilePos, global
 /* 8041D81C 003E6DDC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041D820 003E6DE0  7C 08 02 A6 */	mflr r0
 /* 8041D824 003E6DE4  80 E3 00 28 */	lwz r7, 0x28(r3)
@@ -1034,60 +1056,60 @@ ReadFilePos__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlUlPQ44nw4r3snd12Sound
 /* 8041D850 003E6E10  88 67 00 18 */	lbz r3, 0x18(r7)
 /* 8041D854 003E6E14  80 87 00 1C */	lwz r4, 0x1c(r7)
 /* 8041D858 003E6E18  48 00 BF D1 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D85C 003E6E1C  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D85C 003E6E1C  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D860 003E6E20  40 82 00 0C */	bne .L_8041D86C
-/* 8041D864 003E6E24  38 60 00 00 */	li r3, 0
+/* 8041D864 003E6E24  38 60 00 00 */	li r3, 0x0
 /* 8041D868 003E6E28  48 00 00 B4 */	b .L_8041D91C
 .L_8041D86C:
-/* 8041D86C 003E6E2C  80 03 00 00 */	lwz r0, 0(r3)
+/* 8041D86C 003E6E2C  80 03 00 00 */	lwz r0, 0x0(r3)
 /* 8041D870 003E6E30  7C 1D 00 40 */	cmplw r29, r0
 /* 8041D874 003E6E34  41 80 00 0C */	blt .L_8041D880
-/* 8041D878 003E6E38  38 60 00 00 */	li r3, 0
+/* 8041D878 003E6E38  38 60 00 00 */	li r3, 0x0
 /* 8041D87C 003E6E3C  48 00 00 A0 */	b .L_8041D91C
 .L_8041D880:
 /* 8041D880 003E6E40  57 A0 18 38 */	slwi r0, r29, 3
 /* 8041D884 003E6E44  80 BC 00 28 */	lwz r5, 0x28(r28)
 /* 8041D888 003E6E48  7C 83 02 14 */	add r4, r3, r0
-/* 8041D88C 003E6E4C  88 64 00 04 */	lbz r3, 4(r4)
-/* 8041D890 003E6E50  80 84 00 08 */	lwz r4, 8(r4)
+/* 8041D88C 003E6E4C  88 64 00 04 */	lbz r3, 0x4(r4)
+/* 8041D890 003E6E50  80 84 00 08 */	lwz r4, 0x8(r4)
 /* 8041D894 003E6E54  48 00 BF 95 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D898 003E6E58  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D898 003E6E58  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D89C 003E6E5C  7C 64 1B 78 */	mr r4, r3
 /* 8041D8A0 003E6E60  40 82 00 0C */	bne .L_8041D8AC
-/* 8041D8A4 003E6E64  38 60 00 00 */	li r3, 0
+/* 8041D8A4 003E6E64  38 60 00 00 */	li r3, 0x0
 /* 8041D8A8 003E6E68  48 00 00 74 */	b .L_8041D91C
 .L_8041D8AC:
 /* 8041D8AC 003E6E6C  88 63 00 14 */	lbz r3, 0x14(r3)
 /* 8041D8B0 003E6E70  80 84 00 18 */	lwz r4, 0x18(r4)
 /* 8041D8B4 003E6E74  80 BC 00 28 */	lwz r5, 0x28(r28)
 /* 8041D8B8 003E6E78  48 00 BF 71 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D8BC 003E6E7C  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D8BC 003E6E7C  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D8C0 003E6E80  40 82 00 0C */	bne .L_8041D8CC
-/* 8041D8C4 003E6E84  38 60 00 00 */	li r3, 0
+/* 8041D8C4 003E6E84  38 60 00 00 */	li r3, 0x0
 /* 8041D8C8 003E6E88  48 00 00 54 */	b .L_8041D91C
 .L_8041D8CC:
-/* 8041D8CC 003E6E8C  80 03 00 00 */	lwz r0, 0(r3)
+/* 8041D8CC 003E6E8C  80 03 00 00 */	lwz r0, 0x0(r3)
 /* 8041D8D0 003E6E90  7C 1E 00 40 */	cmplw r30, r0
 /* 8041D8D4 003E6E94  41 80 00 0C */	blt .L_8041D8E0
-/* 8041D8D8 003E6E98  38 60 00 00 */	li r3, 0
+/* 8041D8D8 003E6E98  38 60 00 00 */	li r3, 0x0
 /* 8041D8DC 003E6E9C  48 00 00 40 */	b .L_8041D91C
 .L_8041D8E0:
 /* 8041D8E0 003E6EA0  57 C0 18 38 */	slwi r0, r30, 3
 /* 8041D8E4 003E6EA4  80 BC 00 28 */	lwz r5, 0x28(r28)
 /* 8041D8E8 003E6EA8  7C 83 02 14 */	add r4, r3, r0
-/* 8041D8EC 003E6EAC  88 64 00 04 */	lbz r3, 4(r4)
-/* 8041D8F0 003E6EB0  80 84 00 08 */	lwz r4, 8(r4)
+/* 8041D8EC 003E6EAC  88 64 00 04 */	lbz r3, 0x4(r4)
+/* 8041D8F0 003E6EB0  80 84 00 08 */	lwz r4, 0x8(r4)
 /* 8041D8F4 003E6EB4  48 00 BF 35 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041D8F8 003E6EB8  2C 03 00 00 */	cmpwi r3, 0
+/* 8041D8F8 003E6EB8  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041D8FC 003E6EBC  40 82 00 0C */	bne .L_8041D908
-/* 8041D900 003E6EC0  38 60 00 00 */	li r3, 0
+/* 8041D900 003E6EC0  38 60 00 00 */	li r3, 0x0
 /* 8041D904 003E6EC4  48 00 00 18 */	b .L_8041D91C
 .L_8041D908:
-/* 8041D908 003E6EC8  80 03 00 00 */	lwz r0, 0(r3)
-/* 8041D90C 003E6ECC  90 1F 00 00 */	stw r0, 0(r31)
-/* 8041D910 003E6ED0  80 03 00 04 */	lwz r0, 4(r3)
-/* 8041D914 003E6ED4  38 60 00 01 */	li r3, 1
-/* 8041D918 003E6ED8  90 1F 00 04 */	stw r0, 4(r31)
+/* 8041D908 003E6EC8  80 03 00 00 */	lwz r0, 0x0(r3)
+/* 8041D90C 003E6ECC  90 1F 00 00 */	stw r0, 0x0(r31)
+/* 8041D910 003E6ED0  80 03 00 04 */	lwz r0, 0x4(r3)
+/* 8041D914 003E6ED4  38 60 00 01 */	li r3, 0x1
+/* 8041D918 003E6ED8  90 1F 00 04 */	stw r0, 0x4(r31)
 .L_8041D91C:
 /* 8041D91C 003E6EDC  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8041D920 003E6EE0  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -1097,12 +1119,13 @@ ReadFilePos__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlUlPQ44nw4r3snd12Sound
 /* 8041D930 003E6EF0  7C 08 03 A6 */	mtlr r0
 /* 8041D934 003E6EF4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041D938 003E6EF8  4E 80 00 20 */	blr
+.endfn ReadFilePos__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlUlPQ44nw4r3snd12SoundArchive7FilePos
 
-.global ConvertLabelStringToId__Q44nw4r3snd6detail22SoundArchiveFileReaderCFPCQ54nw4r3snd6detail16SoundArchiveFile10StringTreePCc
-ConvertLabelStringToId__Q44nw4r3snd6detail22SoundArchiveFileReaderCFPCQ54nw4r3snd6detail16SoundArchiveFile10StringTreePCc:
+# nw4r::snd::detail::SoundArchiveFileReader::ConvertLabelStringToId(const nw4r::snd::detail::SoundArchiveFile::StringTree*, const char*) const
+.fn ConvertLabelStringToId__Q44nw4r3snd6detail22SoundArchiveFileReaderCFPCQ54nw4r3snd6detail16SoundArchiveFile10StringTreePCc, global
 /* 8041D93C 003E6EFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041D940 003E6F00  7C 08 02 A6 */	mflr r0
-/* 8041D944 003E6F04  2C 04 00 00 */	cmpwi r4, 0
+/* 8041D944 003E6F04  2C 04 00 00 */	cmpwi r4, 0x0
 /* 8041D948 003E6F08  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8041D94C 003E6F0C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8041D950 003E6F10  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -1112,79 +1135,79 @@ ConvertLabelStringToId__Q44nw4r3snd6detail22SoundArchiveFileReaderCFPCQ54nw4r3sn
 /* 8041D960 003E6F20  93 81 00 10 */	stw r28, 0x10(r1)
 /* 8041D964 003E6F24  7C 7C 1B 78 */	mr r28, r3
 /* 8041D968 003E6F28  40 82 00 0C */	bne .L_8041D974
-/* 8041D96C 003E6F2C  38 60 FF FF */	li r3, -1
+/* 8041D96C 003E6F2C  38 60 FF FF */	li r3, -0x1
 /* 8041D970 003E6F30  48 00 00 F4 */	b .L_8041DA64
 .L_8041D974:
-/* 8041D974 003E6F34  80 64 00 00 */	lwz r3, 0(r4)
-/* 8041D978 003E6F38  80 04 00 04 */	lwz r0, 4(r4)
+/* 8041D974 003E6F34  80 64 00 00 */	lwz r3, 0x0(r4)
+/* 8041D978 003E6F38  80 04 00 04 */	lwz r0, 0x4(r4)
 /* 8041D97C 003E6F3C  7C 03 00 40 */	cmplw r3, r0
 /* 8041D980 003E6F40  41 80 00 0C */	blt .L_8041D98C
-/* 8041D984 003E6F44  38 60 FF FF */	li r3, -1
+/* 8041D984 003E6F44  38 60 FF FF */	li r3, -0x1
 /* 8041D988 003E6F48  48 00 00 DC */	b .L_8041DA64
 .L_8041D98C:
 /* 8041D98C 003E6F4C  1C 03 00 14 */	mulli r0, r3, 0x14
 /* 8041D990 003E6F50  7F C3 F3 78 */	mr r3, r30
 /* 8041D994 003E6F54  7C 84 02 14 */	add r4, r4, r0
-/* 8041D998 003E6F58  3B E4 00 08 */	addi r31, r4, 8
+/* 8041D998 003E6F58  3B E4 00 08 */	addi r31, r4, 0x8
 /* 8041D99C 003E6F5C  4B E9 BC 1D */	bl strlen
-/* 8041D9A0 003E6F60  38 A0 00 01 */	li r5, 1
+/* 8041D9A0 003E6F60  38 A0 00 01 */	li r5, 0x1
 /* 8041D9A4 003E6F64  48 00 00 48 */	b .L_8041D9EC
 .L_8041D9A8:
-/* 8041D9A8 003E6F68  A0 1F 00 02 */	lhz r0, 2(r31)
+/* 8041D9A8 003E6F68  A0 1F 00 02 */	lhz r0, 0x2(r31)
 /* 8041D9AC 003E6F6C  7C 04 1E 70 */	srawi r4, r0, 3
-/* 8041D9B0 003E6F70  54 06 07 7E */	clrlwi r6, r0, 0x1d
+/* 8041D9B0 003E6F70  54 06 07 7E */	clrlwi r6, r0, 29
 /* 8041D9B4 003E6F74  7C 04 18 00 */	cmpw r4, r3
 /* 8041D9B8 003E6F78  40 80 00 24 */	bge .L_8041D9DC
 /* 8041D9BC 003E6F7C  7C 1E 20 AE */	lbzx r0, r30, r4
-/* 8041D9C0 003E6F80  20 86 00 07 */	subfic r4, r6, 7
+/* 8041D9C0 003E6F80  20 86 00 07 */	subfic r4, r6, 0x7
 /* 8041D9C4 003E6F84  7C A4 20 30 */	slw r4, r5, r4
 /* 8041D9C8 003E6F88  7C 00 07 74 */	extsb r0, r0
 /* 8041D9CC 003E6F8C  7C 80 00 39 */	and. r0, r4, r0
 /* 8041D9D0 003E6F90  41 82 00 0C */	beq .L_8041D9DC
-/* 8041D9D4 003E6F94  80 1F 00 08 */	lwz r0, 8(r31)
+/* 8041D9D4 003E6F94  80 1F 00 08 */	lwz r0, 0x8(r31)
 /* 8041D9D8 003E6F98  48 00 00 08 */	b .L_8041D9E0
 .L_8041D9DC:
-/* 8041D9DC 003E6F9C  80 1F 00 04 */	lwz r0, 4(r31)
+/* 8041D9DC 003E6F9C  80 1F 00 04 */	lwz r0, 0x4(r31)
 .L_8041D9E0:
 /* 8041D9E0 003E6FA0  1C 00 00 14 */	mulli r0, r0, 0x14
 /* 8041D9E4 003E6FA4  7C 9D 02 14 */	add r4, r29, r0
-/* 8041D9E8 003E6FA8  3B E4 00 08 */	addi r31, r4, 8
+/* 8041D9E8 003E6FA8  3B E4 00 08 */	addi r31, r4, 0x8
 .L_8041D9EC:
-/* 8041D9EC 003E6FAC  A0 1F 00 00 */	lhz r0, 0(r31)
-/* 8041D9F0 003E6FB0  54 00 07 FF */	clrlwi. r0, r0, 0x1f
+/* 8041D9EC 003E6FAC  A0 1F 00 00 */	lhz r0, 0x0(r31)
+/* 8041D9F0 003E6FB0  54 00 07 FF */	clrlwi. r0, r0, 31
 /* 8041D9F4 003E6FB4  41 82 FF B4 */	beq .L_8041D9A8
 /* 8041D9F8 003E6FB8  80 7F 00 0C */	lwz r3, 0xc(r31)
-/* 8041D9FC 003E6FBC  3C 03 00 01 */	addis r0, r3, 1
+/* 8041D9FC 003E6FBC  3C 03 00 01 */	addis r0, r3, 0x1
 /* 8041DA00 003E6FC0  28 00 FF FF */	cmplwi r0, 0xffff
 /* 8041DA04 003E6FC4  40 82 00 0C */	bne .L_8041DA10
-/* 8041DA08 003E6FC8  38 80 00 00 */	li r4, 0
+/* 8041DA08 003E6FC8  38 80 00 00 */	li r4, 0x0
 /* 8041DA0C 003E6FCC  48 00 00 3C */	b .L_8041DA48
 .L_8041DA10:
 /* 8041DA10 003E6FD0  80 BC 00 30 */	lwz r5, 0x30(r28)
-/* 8041DA14 003E6FD4  2C 05 00 00 */	cmpwi r5, 0
+/* 8041DA14 003E6FD4  2C 05 00 00 */	cmpwi r5, 0x0
 /* 8041DA18 003E6FD8  40 82 00 0C */	bne .L_8041DA24
-/* 8041DA1C 003E6FDC  38 80 00 00 */	li r4, 0
+/* 8041DA1C 003E6FDC  38 80 00 00 */	li r4, 0x0
 /* 8041DA20 003E6FE0  48 00 00 28 */	b .L_8041DA48
 .L_8041DA24:
 /* 8041DA24 003E6FE4  54 60 10 3A */	slwi r0, r3, 2
 /* 8041DA28 003E6FE8  80 9C 00 2C */	lwz r4, 0x2c(r28)
 /* 8041DA2C 003E6FEC  7C 65 02 14 */	add r3, r5, r0
-/* 8041DA30 003E6FF0  80 03 00 04 */	lwz r0, 4(r3)
-/* 8041DA34 003E6FF4  2C 00 00 00 */	cmpwi r0, 0
+/* 8041DA30 003E6FF0  80 03 00 04 */	lwz r0, 0x4(r3)
+/* 8041DA34 003E6FF4  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041DA38 003E6FF8  40 82 00 0C */	bne .L_8041DA44
-/* 8041DA3C 003E6FFC  38 80 00 00 */	li r4, 0
+/* 8041DA3C 003E6FFC  38 80 00 00 */	li r4, 0x0
 /* 8041DA40 003E7000  48 00 00 08 */	b .L_8041DA48
 .L_8041DA44:
 /* 8041DA44 003E7004  7C 80 22 14 */	add r4, r0, r4
 .L_8041DA48:
 /* 8041DA48 003E7008  7F C3 F3 78 */	mr r3, r30
 /* 8041DA4C 003E700C  4B EA 4D E9 */	bl strcmp
-/* 8041DA50 003E7010  2C 03 00 00 */	cmpwi r3, 0
+/* 8041DA50 003E7010  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041DA54 003E7014  40 82 00 0C */	bne .L_8041DA60
 /* 8041DA58 003E7018  80 7F 00 10 */	lwz r3, 0x10(r31)
 /* 8041DA5C 003E701C  48 00 00 08 */	b .L_8041DA64
 .L_8041DA60:
-/* 8041DA60 003E7020  38 60 FF FF */	li r3, -1
+/* 8041DA60 003E7020  38 60 FF FF */	li r3, -0x1
 .L_8041DA64:
 /* 8041DA64 003E7024  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8041DA68 003E7028  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -1193,11 +1216,11 @@ ConvertLabelStringToId__Q44nw4r3snd6detail22SoundArchiveFileReaderCFPCQ54nw4r3sn
 /* 8041DA74 003E7034  83 81 00 10 */	lwz r28, 0x10(r1)
 /* 8041DA78 003E7038  7C 08 03 A6 */	mtlr r0
 /* 8041DA7C 003E703C  38 21 00 20 */	addi r1, r1, 0x20
-/* 8041DA80 003E7040  4E 80 00 20 */	blr 
+/* 8041DA80 003E7040  4E 80 00 20 */	blr
+.endfn ConvertLabelStringToId__Q44nw4r3snd6detail22SoundArchiveFileReaderCFPCQ54nw4r3snd6detail16SoundArchiveFile10StringTreePCc
 
-#impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef<v,Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo,Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo,Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo>
-.global impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef_v_Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo_
-impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef_v_Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo_:
+# nw4r::snd::detail::SoundArchiveFileReader::impl_GetSoundInfoOffset(unsigned long, nw4r::snd::detail::Util::DataRef_v_Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo_*) const
+.fn impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef_v_Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo_, global
 /* 8041DA84 003E7044  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041DA88 003E7048  7C 08 02 A6 */	mflr r0
 /* 8041DA8C 003E704C  80 C3 00 28 */	lwz r6, 0x28(r3)
@@ -1209,56 +1232,56 @@ impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3
 /* 8041DAA4 003E7064  7C 9E 23 78 */	mr r30, r4
 /* 8041DAA8 003E7068  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8041DAAC 003E706C  7C 7D 1B 78 */	mr r29, r3
-/* 8041DAB0 003E7070  88 66 00 00 */	lbz r3, 0(r6)
-/* 8041DAB4 003E7074  80 86 00 04 */	lwz r4, 4(r6)
+/* 8041DAB0 003E7070  88 66 00 00 */	lbz r3, 0x0(r6)
+/* 8041DAB4 003E7074  80 86 00 04 */	lwz r4, 0x4(r6)
 /* 8041DAB8 003E7078  48 00 BD 71 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041DABC 003E707C  2C 03 00 00 */	cmpwi r3, 0
+/* 8041DABC 003E707C  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041DAC0 003E7080  40 82 00 0C */	bne .L_8041DACC
-/* 8041DAC4 003E7084  38 60 00 00 */	li r3, 0
+/* 8041DAC4 003E7084  38 60 00 00 */	li r3, 0x0
 /* 8041DAC8 003E7088  48 00 00 A0 */	b .L_8041DB68
 .L_8041DACC:
-/* 8041DACC 003E708C  80 03 00 00 */	lwz r0, 0(r3)
+/* 8041DACC 003E708C  80 03 00 00 */	lwz r0, 0x0(r3)
 /* 8041DAD0 003E7090  7C 1E 00 40 */	cmplw r30, r0
 /* 8041DAD4 003E7094  41 80 00 0C */	blt .L_8041DAE0
-/* 8041DAD8 003E7098  38 60 00 00 */	li r3, 0
+/* 8041DAD8 003E7098  38 60 00 00 */	li r3, 0x0
 /* 8041DADC 003E709C  48 00 00 8C */	b .L_8041DB68
 .L_8041DAE0:
-/* 8041DAE0 003E70A0  A0 1D 00 06 */	lhz r0, 6(r29)
+/* 8041DAE0 003E70A0  A0 1D 00 06 */	lhz r0, 0x6(r29)
 /* 8041DAE4 003E70A4  28 00 01 01 */	cmplwi r0, 0x101
 /* 8041DAE8 003E70A8  41 80 00 54 */	blt .L_8041DB3C
 /* 8041DAEC 003E70AC  57 C0 18 38 */	slwi r0, r30, 3
 /* 8041DAF0 003E70B0  80 BD 00 28 */	lwz r5, 0x28(r29)
 /* 8041DAF4 003E70B4  7C 83 02 14 */	add r4, r3, r0
-/* 8041DAF8 003E70B8  88 64 00 04 */	lbz r3, 4(r4)
-/* 8041DAFC 003E70BC  80 84 00 08 */	lwz r4, 8(r4)
+/* 8041DAF8 003E70B8  88 64 00 04 */	lbz r3, 0x4(r4)
+/* 8041DAFC 003E70BC  80 84 00 08 */	lwz r4, 0x8(r4)
 /* 8041DB00 003E70C0  48 00 BD 29 */	bl GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-/* 8041DB04 003E70C4  2C 03 00 00 */	cmpwi r3, 0
+/* 8041DB04 003E70C4  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041DB08 003E70C8  40 82 00 0C */	bne .L_8041DB14
-/* 8041DB0C 003E70CC  38 60 00 00 */	li r3, 0
+/* 8041DB0C 003E70CC  38 60 00 00 */	li r3, 0x0
 /* 8041DB10 003E70D0  48 00 00 58 */	b .L_8041DB68
 .L_8041DB14:
 /* 8041DB14 003E70D4  88 03 00 18 */	lbz r0, 0x18(r3)
-/* 8041DB18 003E70D8  98 1F 00 00 */	stb r0, 0(r31)
+/* 8041DB18 003E70D8  98 1F 00 00 */	stb r0, 0x0(r31)
 /* 8041DB1C 003E70DC  88 03 00 19 */	lbz r0, 0x19(r3)
-/* 8041DB20 003E70E0  98 1F 00 01 */	stb r0, 1(r31)
+/* 8041DB20 003E70E0  98 1F 00 01 */	stb r0, 0x1(r31)
 /* 8041DB24 003E70E4  A0 03 00 1A */	lhz r0, 0x1a(r3)
-/* 8041DB28 003E70E8  B0 1F 00 02 */	sth r0, 2(r31)
+/* 8041DB28 003E70E8  B0 1F 00 02 */	sth r0, 0x2(r31)
 /* 8041DB2C 003E70EC  80 03 00 1C */	lwz r0, 0x1c(r3)
-/* 8041DB30 003E70F0  38 60 00 01 */	li r3, 1
-/* 8041DB34 003E70F4  90 1F 00 04 */	stw r0, 4(r31)
+/* 8041DB30 003E70F0  38 60 00 01 */	li r3, 0x1
+/* 8041DB34 003E70F4  90 1F 00 04 */	stw r0, 0x4(r31)
 /* 8041DB38 003E70F8  48 00 00 30 */	b .L_8041DB68
 .L_8041DB3C:
 /* 8041DB3C 003E70FC  57 C0 18 38 */	slwi r0, r30, 3
 /* 8041DB40 003E7100  7C C3 02 14 */	add r6, r3, r0
-/* 8041DB44 003E7104  38 60 00 01 */	li r3, 1
-/* 8041DB48 003E7108  80 86 00 08 */	lwz r4, 8(r6)
-/* 8041DB4C 003E710C  88 A6 00 05 */	lbz r5, 5(r6)
-/* 8041DB50 003E7110  88 06 00 04 */	lbz r0, 4(r6)
+/* 8041DB44 003E7104  38 60 00 01 */	li r3, 0x1
+/* 8041DB48 003E7108  80 86 00 08 */	lwz r4, 0x8(r6)
+/* 8041DB4C 003E710C  88 A6 00 05 */	lbz r5, 0x5(r6)
+/* 8041DB50 003E7110  88 06 00 04 */	lbz r0, 0x4(r6)
 /* 8041DB54 003E7114  38 84 00 1C */	addi r4, r4, 0x1c
-/* 8041DB58 003E7118  98 1F 00 00 */	stb r0, 0(r31)
-/* 8041DB5C 003E711C  98 BF 00 01 */	stb r5, 1(r31)
-/* 8041DB60 003E7120  B0 FF 00 02 */	sth r7, 2(r31)
-/* 8041DB64 003E7124  90 9F 00 04 */	stw r4, 4(r31)
+/* 8041DB58 003E7118  98 1F 00 00 */	stb r0, 0x0(r31)
+/* 8041DB5C 003E711C  98 BF 00 01 */	stb r5, 0x1(r31)
+/* 8041DB60 003E7120  B0 FF 00 02 */	sth r7, 0x2(r31)
+/* 8041DB64 003E7124  90 9F 00 04 */	stw r4, 0x4(r31)
 .L_8041DB68:
 /* 8041DB68 003E7128  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8041DB6C 003E712C  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -1266,4 +1289,5 @@ impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3
 /* 8041DB74 003E7134  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 8041DB78 003E7138  7C 08 03 A6 */	mtlr r0
 /* 8041DB7C 003E713C  38 21 00 20 */	addi r1, r1, 0x20
-/* 8041DB80 003E7140  4E 80 00 20 */	blr 
+/* 8041DB80 003E7140  4E 80 00 20 */	blr
+.endfn impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef_v_Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo_

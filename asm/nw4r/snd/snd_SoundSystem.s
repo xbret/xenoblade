@@ -1,18 +1,21 @@
 .include "macros.inc"
+.file "nw4r/snd/snd_SoundSystem.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x80421020 - 0x804212E4
+.text
+.balign 4
 
-.global InitSoundSystem__Q34nw4r3snd11SoundSystemFll
-InitSoundSystem__Q34nw4r3snd11SoundSystemFll:
+# nw4r::snd::SoundSystem::InitSoundSystem(long, long)
+.fn InitSoundSystem__Q34nw4r3snd11SoundSystemFll, global
 /* 80421020 003EA5E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80421024 003EA5E4  7C 08 02 A6 */	mflr r0
-/* 80421028 003EA5E8  3C A0 00 01 */	lis r5, 0x00016E00@ha
+/* 80421028 003EA5E8  3C A0 00 01 */	lis r5, 0x1
 /* 8042102C 003EA5EC  3C C0 80 64 */	lis r6, lbl_8063BE40@ha
 /* 80421030 003EA5F0  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80421034 003EA5F4  38 00 40 00 */	li r0, 0x4000
-/* 80421038 003EA5F8  38 A5 6E 00 */	addi r5, r5, 0x00016E00@l
-/* 8042103C 003EA5FC  90 61 00 08 */	stw r3, 8(r1)
-/* 80421040 003EA600  38 61 00 08 */	addi r3, r1, 8
+/* 80421038 003EA5F8  38 A5 6E 00 */	addi r5, r5, 0x6e00
+/* 8042103C 003EA5FC  90 61 00 08 */	stw r3, 0x8(r1)
+/* 80421040 003EA600  38 61 00 08 */	addi r3, r1, 0x8
 /* 80421044 003EA604  90 81 00 10 */	stw r4, 0x10(r1)
 /* 80421048 003EA608  38 86 BE 40 */	addi r4, r6, lbl_8063BE40@l
 /* 8042104C 003EA60C  90 01 00 0C */	stw r0, 0xc(r1)
@@ -21,10 +24,11 @@ InitSoundSystem__Q34nw4r3snd11SoundSystemFll:
 /* 80421058 003EA618  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8042105C 003EA61C  7C 08 03 A6 */	mtlr r0
 /* 80421060 003EA620  38 21 00 20 */	addi r1, r1, 0x20
-/* 80421064 003EA624  4E 80 00 20 */	blr 
+/* 80421064 003EA624  4E 80 00 20 */	blr
+.endfn InitSoundSystem__Q34nw4r3snd11SoundSystemFll
 
-.global InitSoundSystem__Q34nw4r3snd11SoundSystemFRCQ44nw4r3snd11SoundSystem16SoundSystemParamPvUl
-InitSoundSystem__Q34nw4r3snd11SoundSystemFRCQ44nw4r3snd11SoundSystem16SoundSystemParamPvUl:
+# nw4r::snd::SoundSystem::InitSoundSystem(const nw4r::snd::SoundSystem::SoundSystemParam&, void*, unsigned long)
+.fn InitSoundSystem__Q34nw4r3snd11SoundSystemFRCQ44nw4r3snd11SoundSystem16SoundSystemParamPvUl, global
 /* 80421068 003EA628  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042106C 003EA62C  7C 08 02 A6 */	mflr r0
 /* 80421070 003EA630  90 01 00 24 */	stw r0, 0x24(r1)
@@ -33,9 +37,9 @@ InitSoundSystem__Q34nw4r3snd11SoundSystemFRCQ44nw4r3snd11SoundSystem16SoundSyste
 /* 8042107C 003EA63C  88 0D BC 68 */	lbz r0, lbl_80667DE8@sda21(r13)
 /* 80421080 003EA640  7C 7A 1B 78 */	mr r26, r3
 /* 80421084 003EA644  7C 9B 23 78 */	mr r27, r4
-/* 80421088 003EA648  2C 00 00 00 */	cmpwi r0, 0
+/* 80421088 003EA648  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8042108C 003EA64C  40 82 01 7C */	bne .L_80421208
-/* 80421090 003EA650  38 00 00 01 */	li r0, 1
+/* 80421090 003EA650  38 00 00 01 */	li r0, 0x1
 /* 80421094 003EA654  80 6D 9C 98 */	lwz r3, lbl_80665E18@sda21(r13)
 /* 80421098 003EA658  98 0D BC 68 */	stb r0, lbl_80667DE8@sda21(r13)
 /* 8042109C 003EA65C  4B F3 1C 65 */	bl OSRegisterVersion
@@ -44,44 +48,44 @@ InitSoundSystem__Q34nw4r3snd11SoundSystemFRCQ44nw4r3snd11SoundSystem16SoundSyste
 /* 804210A8 003EA668  4B F3 E4 89 */	bl SCInit
 .L_804210AC:
 /* 804210AC 003EA66C  4B F3 E5 25 */	bl SCCheckStatus
-/* 804210B0 003EA670  28 03 00 01 */	cmplwi r3, 1
+/* 804210B0 003EA670  28 03 00 01 */	cmplwi r3, 0x1
 /* 804210B4 003EA674  41 82 FF F8 */	beq .L_804210AC
 /* 804210B8 003EA678  4B F4 00 89 */	bl SCGetSoundMode
-/* 804210BC 003EA67C  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 804210C0 003EA680  2C 00 00 01 */	cmpwi r0, 1
+/* 804210BC 003EA67C  54 60 06 3E */	clrlwi r0, r3, 24
+/* 804210C0 003EA680  2C 00 00 01 */	cmpwi r0, 0x1
 /* 804210C4 003EA684  41 82 00 30 */	beq .L_804210F4
 /* 804210C8 003EA688  40 80 00 10 */	bge .L_804210D8
-/* 804210CC 003EA68C  2C 00 00 00 */	cmpwi r0, 0
+/* 804210CC 003EA68C  2C 00 00 00 */	cmpwi r0, 0x0
 /* 804210D0 003EA690  40 80 00 14 */	bge .L_804210E4
 /* 804210D4 003EA694  48 00 00 40 */	b .L_80421114
 .L_804210D8:
-/* 804210D8 003EA698  2C 00 00 03 */	cmpwi r0, 3
+/* 804210D8 003EA698  2C 00 00 03 */	cmpwi r0, 0x3
 /* 804210DC 003EA69C  40 80 00 38 */	bge .L_80421114
 /* 804210E0 003EA6A0  48 00 00 24 */	b .L_80421104
 .L_804210E4:
 /* 804210E4 003EA6A4  4B FE B8 A1 */	bl GetInstance__Q44nw4r3snd6detail9AxManagerFv
-/* 804210E8 003EA6A8  38 80 00 03 */	li r4, 3
+/* 804210E8 003EA6A8  38 80 00 03 */	li r4, 0x3
 /* 804210EC 003EA6AC  4B FE C0 45 */	bl SetOutputMode__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd10OutputMode
 /* 804210F0 003EA6B0  48 00 00 30 */	b .L_80421120
 .L_804210F4:
 /* 804210F4 003EA6B4  4B FE B8 91 */	bl GetInstance__Q44nw4r3snd6detail9AxManagerFv
-/* 804210F8 003EA6B8  38 80 00 00 */	li r4, 0
+/* 804210F8 003EA6B8  38 80 00 00 */	li r4, 0x0
 /* 804210FC 003EA6BC  4B FE C0 35 */	bl SetOutputMode__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd10OutputMode
 /* 80421100 003EA6C0  48 00 00 20 */	b .L_80421120
 .L_80421104:
 /* 80421104 003EA6C4  4B FE B8 81 */	bl GetInstance__Q44nw4r3snd6detail9AxManagerFv
-/* 80421108 003EA6C8  38 80 00 02 */	li r4, 2
+/* 80421108 003EA6C8  38 80 00 02 */	li r4, 0x2
 /* 8042110C 003EA6CC  4B FE C0 25 */	bl SetOutputMode__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd10OutputMode
 /* 80421110 003EA6D0  48 00 00 10 */	b .L_80421120
 .L_80421114:
 /* 80421114 003EA6D4  4B FE B8 71 */	bl GetInstance__Q44nw4r3snd6detail9AxManagerFv
-/* 80421118 003EA6D8  38 80 00 00 */	li r4, 0
+/* 80421118 003EA6D8  38 80 00 00 */	li r4, 0x0
 /* 8042111C 003EA6DC  4B FE C0 15 */	bl SetOutputMode__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd10OutputMode
 .L_80421120:
 /* 80421120 003EA6E0  4B FF 82 35 */	bl GetInstance__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
 /* 80421124 003EA6E4  4B FF 82 D9 */	bl Setup__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
 /* 80421128 003EA6E8  80 7A 00 0C */	lwz r3, 0xc(r26)
-/* 8042112C 003EA6EC  80 1A 00 04 */	lwz r0, 4(r26)
+/* 8042112C 003EA6EC  80 1A 00 04 */	lwz r0, 0x4(r26)
 /* 80421130 003EA6F0  7F DB 1A 14 */	add r30, r27, r3
 /* 80421134 003EA6F4  7F DD F3 78 */	mr r29, r30
 /* 80421138 003EA6F8  7F DE 02 14 */	add r30, r30, r0
@@ -126,15 +130,15 @@ InitSoundSystem__Q34nw4r3snd11SoundSystemFRCQ44nw4r3snd11SoundSystem16SoundSyste
 /* 804211D4 003EA794  4B FF 2C F5 */	bl Setup__Q44nw4r3snd6detail14ChannelManagerFPvUl
 /* 804211D8 003EA798  4B FF 85 31 */	bl InitSeqPlayer__Q44nw4r3snd6detail9SeqPlayerFv
 /* 804211DC 003EA79C  3C 60 80 64 */	lis r3, lbl_8063BB10@ha
-/* 804211E0 003EA7A0  80 9A 00 08 */	lwz r4, 8(r26)
+/* 804211E0 003EA7A0  80 9A 00 08 */	lwz r4, 0x8(r26)
 /* 804211E4 003EA7A4  80 DA 00 0C */	lwz r6, 0xc(r26)
 /* 804211E8 003EA7A8  7F 65 DB 78 */	mr r5, r27
 /* 804211EC 003EA7AC  38 63 BB 10 */	addi r3, r3, lbl_8063BB10@l
 /* 804211F0 003EA7B0  48 00 4D D9 */	bl Create__Q44nw4r3snd6detail10TaskThreadFlPvUl
 /* 804211F4 003EA7B4  48 00 00 F1 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
-/* 804211F8 003EA7B8  80 9A 00 00 */	lwz r4, 0(r26)
+/* 804211F8 003EA7B8  80 9A 00 00 */	lwz r4, 0x0(r26)
 /* 804211FC 003EA7BC  7F A5 EB 78 */	mr r5, r29
-/* 80421200 003EA7C0  80 DA 00 04 */	lwz r6, 4(r26)
+/* 80421200 003EA7C0  80 DA 00 04 */	lwz r6, 0x4(r26)
 /* 80421204 003EA7C4  48 00 02 15 */	bl Create__Q44nw4r3snd6detail11SoundThreadFlPvUl
 .L_80421208:
 /* 80421208 003EA7C8  39 61 00 20 */	addi r11, r1, 0x20
@@ -142,15 +146,16 @@ InitSoundSystem__Q34nw4r3snd11SoundSystemFRCQ44nw4r3snd11SoundSystem16SoundSyste
 /* 80421210 003EA7D0  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80421214 003EA7D4  7C 08 03 A6 */	mtlr r0
 /* 80421218 003EA7D8  38 21 00 20 */	addi r1, r1, 0x20
-/* 8042121C 003EA7DC  4E 80 00 20 */	blr 
+/* 8042121C 003EA7DC  4E 80 00 20 */	blr
+.endfn InitSoundSystem__Q34nw4r3snd11SoundSystemFRCQ44nw4r3snd11SoundSystem16SoundSystemParamPvUl
 
-.global ShutdownSoundSystem__Q34nw4r3snd11SoundSystemFv
-ShutdownSoundSystem__Q34nw4r3snd11SoundSystemFv:
+# nw4r::snd::SoundSystem::ShutdownSoundSystem()
+.fn ShutdownSoundSystem__Q34nw4r3snd11SoundSystemFv, global
 /* 80421220 003EA7E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80421224 003EA7E4  7C 08 02 A6 */	mflr r0
 /* 80421228 003EA7E8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8042122C 003EA7EC  88 0D BC 68 */	lbz r0, lbl_80667DE8@sda21(r13)
-/* 80421230 003EA7F0  2C 00 00 00 */	cmpwi r0, 0
+/* 80421230 003EA7F0  2C 00 00 00 */	cmpwi r0, 0x0
 /* 80421234 003EA7F4  41 82 00 50 */	beq .L_80421284
 /* 80421238 003EA7F8  48 00 00 AD */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8042123C 003EA7FC  48 00 03 15 */	bl Shutdown__Q44nw4r3snd6detail11SoundThreadFv
@@ -169,22 +174,22 @@ ShutdownSoundSystem__Q34nw4r3snd11SoundSystemFv:
 /* 80421270 003EA830  4B FE FB 01 */	bl Shutdown__Q44nw4r3snd6detail14AxVoiceManagerFv
 /* 80421274 003EA834  4B FE B7 11 */	bl GetInstance__Q44nw4r3snd6detail9AxManagerFv
 /* 80421278 003EA838  4B FE B9 05 */	bl Shutdown__Q44nw4r3snd6detail9AxManagerFv
-/* 8042127C 003EA83C  38 00 00 00 */	li r0, 0
+/* 8042127C 003EA83C  38 00 00 00 */	li r0, 0x0
 /* 80421280 003EA840  98 0D BC 68 */	stb r0, lbl_80667DE8@sda21(r13)
 .L_80421284:
 /* 80421284 003EA844  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80421288 003EA848  7C 08 03 A6 */	mtlr r0
 /* 8042128C 003EA84C  38 21 00 10 */	addi r1, r1, 0x10
-/* 80421290 003EA850  4E 80 00 20 */	blr 
+/* 80421290 003EA850  4E 80 00 20 */	blr
+.endfn ShutdownSoundSystem__Q34nw4r3snd11SoundSystemFv
 
-.global IsInitializedSoundSystem__Q34nw4r3snd11SoundSystemFv
-IsInitializedSoundSystem__Q34nw4r3snd11SoundSystemFv:
+# nw4r::snd::SoundSystem::IsInitializedSoundSystem()
+.fn IsInitializedSoundSystem__Q34nw4r3snd11SoundSystemFv, global
 /* 80421294 003EA854  88 6D BC 68 */	lbz r3, lbl_80667DE8@sda21(r13)
 /* 80421298 003EA858  4E 80 00 20 */	blr
+.endfn IsInitializedSoundSystem__Q34nw4r3snd11SoundSystemFv
 
-
-.global sinit_8042129C
-sinit_8042129C:
+.fn sinit_8042129C, global
 /* 8042129C 003EA85C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804212A0 003EA860  7C 08 02 A6 */	mflr r0
 /* 804212A4 003EA864  90 01 00 14 */	stw r0, 0x14(r1)
@@ -202,43 +207,60 @@ sinit_8042129C:
 /* 804212D4 003EA894  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804212D8 003EA898  7C 08 03 A6 */	mtlr r0
 /* 804212DC 003EA89C  38 21 00 10 */	addi r1, r1, 0x10
-/* 804212E0 003EA8A0  4E 80 00 20 */	blr 
+/* 804212E0 003EA8A0  4E 80 00 20 */	blr
+.endfn sinit_8042129C
 
-.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+# 0x804F5A24 - 0x804F5A28
+.section .ctors, "a"
+.balign 4
+	.4byte sinit_8042129C
 
-.4byte sinit_8042129C
+# 0x8056E510 - 0x8056E558
+.data
+.balign 8
+.sym lbl_8056E510, local
+	.4byte 0x3C3C204E
+	.4byte 0x57345220
+	.4byte 0x2020202D
+	.4byte 0x20534E44
+	.4byte 0x20096669
+	.4byte 0x6E616C20
+	.4byte 0x20206275
+	.4byte 0x696C643A
+	.4byte 0x204E6F76
+	.4byte 0x20323020
+	.4byte 0x32303038
+	.4byte 0x2030333A
+	.4byte 0x34303A30
+	.4byte 0x30202830
+	.4byte 0x78343139
+	.4byte 0x395F3630
+	.4byte 0x38333129
+	.4byte 0x203E3E00
 
-
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
-
-.global lbl_8056E510
-lbl_8056E510:
-	.asciz "<< NW4R    - SND \tfinal   build: Nov 20 2008 03:40:00 (0x4199_60831) >>"
-
-.section .sdata, "wa"  # 0x80664180 - 0x80666600
-
-.global lbl_80665E18
-lbl_80665E18:
-	.4byte lbl_8056E510
-	.4byte 0
-
-.section .bss, "wa"  # 0x80573C80 - 0x8066417B
-
-.global lbl_8063BB00
-lbl_8063BB00:
+# 0x8063BB00 - 0x80652C40
+.section .bss, "wa", @nobits
+.balign 8
+.sym lbl_8063BB00, local
 	.skip 0x10
-.global lbl_8063BB10
-lbl_8063BB10:
+.sym lbl_8063BB10, local
 	.skip 0x330
-.global lbl_8063BE40
-lbl_8063BE40:
-	.skip 0x16E00
+.sym lbl_8063BE40, local
+	.skip 0x4278
+.sym lbl_806400B8, local
+	.skip 0x12B88
 
-.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+# 0x80665E18 - 0x80665E20
+.section .sdata, "wa"
+.balign 8
+.sym lbl_80665E18, local
+	.4byte lbl_8056E510
+	.4byte 0x00000000
 
-.global lbl_80667DE8
-lbl_80667DE8:
+# 0x80667DE8 - 0x80667DF0
+.section .sbss, "wa", @nobits
+.balign 8
+.sym lbl_80667DE8, local
 	.skip 0x4
-.global lbl_80667DEC
-lbl_80667DEC:
+.sym lbl_80667DEC, local
 	.skip 0x4

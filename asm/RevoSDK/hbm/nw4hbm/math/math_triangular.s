@@ -1,10 +1,12 @@
 .include "macros.inc"
+.file "RevoSDK/hbm/nw4hbm/math/math_triangular.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x80336640 - 0x803368F0
+.text
+.balign 4
 
-.balign 16, 0
-.global SinFIdx__Q26nw4hbm4mathFf
-SinFIdx__Q26nw4hbm4mathFf:
+# nw4hbm::math::SinFIdx(float)
+.fn SinFIdx__Q26nw4hbm4mathFf, global
 /* 80336640 002FFC00  3C 60 80 52 */	lis r3, lbl_80518AF0@ha
 /* 80336644 002FFC04  FC 40 0A 10 */	fabs f2, f1
 /* 80336648 002FFC08  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -15,22 +17,22 @@ SinFIdx__Q26nw4hbm4mathFf:
 /* 80336658 002FFC18  EC 42 00 28 */	fsubs f2, f2, f0
 .L_8033665C:
 /* 8033665C 002FFC1C  FC 02 00 40 */	fcmpo cr0, f2, f0
-/* 80336660 002FFC20  4C 41 13 82 */	cror 2, 1, 2
+/* 80336660 002FFC20  4C 41 13 82 */	cror eq, gt, eq
 /* 80336664 002FFC24  41 82 FF F4 */	beq .L_80336658
 /* 80336668 002FFC28  38 61 00 0C */	addi r3, r1, 0xc
-/* 8033666C 002FFC2C  F0 43 B0 00 */	psq_st f2, 0(r3), 1, qr3
-/* 80336670 002FFC30  38 61 00 08 */	addi r3, r1, 8
+/* 8033666C 002FFC2C  F0 43 B0 00 */	psq_st f2, 0x0(r3), 1, qr3
+/* 80336670 002FFC30  38 61 00 08 */	addi r3, r1, 0x8
 /* 80336674 002FFC34  A0 01 00 0C */	lhz r0, 0xc(r1)
-/* 80336678 002FFC38  B0 01 00 08 */	sth r0, 8(r1)
-/* 8033667C 002FFC3C  E0 03 B0 00 */	psq_l f0, 0(r3), 1, qr3
+/* 80336678 002FFC38  B0 01 00 08 */	sth r0, 0x8(r1)
+/* 8033667C 002FFC3C  E0 03 B0 00 */	psq_l f0, 0x0(r3), 1, qr3
 /* 80336680 002FFC40  3C A0 80 55 */	lis r5, lbl_8054DB88@ha
-/* 80336684 002FFC44  54 00 25 36 */	rlwinm r0, r0, 4, 0x14, 0x1b
+/* 80336684 002FFC44  54 00 25 36 */	clrlslwi r0, r0, 24, 4
 /* 80336688 002FFC48  3C 60 80 52 */	lis r3, lbl_80518AF4@ha
 /* 8033668C 002FFC4C  38 A5 DB 88 */	addi r5, r5, lbl_8054DB88@l
 /* 80336690 002FFC50  EC 82 00 28 */	fsubs f4, f2, f0
 /* 80336694 002FFC54  7C 85 02 14 */	add r4, r5, r0
 /* 80336698 002FFC58  C0 03 8A F4 */	lfs f0, lbl_80518AF4@l(r3)
-/* 8033669C 002FFC5C  C0 64 00 08 */	lfs f3, 8(r4)
+/* 8033669C 002FFC5C  C0 64 00 08 */	lfs f3, 0x8(r4)
 /* 803366A0 002FFC60  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 803366A4 002FFC64  7C 45 04 2E */	lfsx f2, r5, r0
 /* 803366A8 002FFC68  EC 04 00 F2 */	fmuls f0, f4, f3
@@ -39,48 +41,49 @@ SinFIdx__Q26nw4hbm4mathFf:
 /* 803366B4 002FFC74  FC 20 08 50 */	fneg f1, f1
 .L_803366B8:
 /* 803366B8 002FFC78  38 21 00 10 */	addi r1, r1, 0x10
-/* 803366BC 002FFC7C  4E 80 00 20 */	blr 
+/* 803366BC 002FFC7C  4E 80 00 20 */	blr
+.endfn SinFIdx__Q26nw4hbm4mathFf
 
-.balign 16, 0
-.global CosFIdx__Q26nw4hbm4mathFf
-CosFIdx__Q26nw4hbm4mathFf:
+# nw4hbm::math::CosFIdx(float)
+.fn CosFIdx__Q26nw4hbm4mathFf, global
 /* 803366C0 002FFC80  3C 60 80 52 */	lis r3, lbl_80518AF0@ha
 /* 803366C4 002FFC84  FC 20 0A 10 */	fabs f1, f1
 /* 803366C8 002FFC88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803366CC 002FFC8C  C0 03 8A F0 */	lfs f0, lbl_80518AF0@l(r3)
 /* 803366D0 002FFC90  48 00 00 0C */	b .L_803366DC
-/* 803366D4 002FFC94  60 00 00 00 */	nop 
+/* 803366D4 002FFC94  60 00 00 00 */	nop
 .L_803366D8:
 /* 803366D8 002FFC98  EC 21 00 28 */	fsubs f1, f1, f0
 .L_803366DC:
 /* 803366DC 002FFC9C  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 803366E0 002FFCA0  4C 41 13 82 */	cror 2, 1, 2
+/* 803366E0 002FFCA0  4C 41 13 82 */	cror eq, gt, eq
 /* 803366E4 002FFCA4  41 82 FF F4 */	beq .L_803366D8
 /* 803366E8 002FFCA8  38 61 00 0C */	addi r3, r1, 0xc
-/* 803366EC 002FFCAC  F0 23 B0 00 */	psq_st f1, 0(r3), 1, qr3
-/* 803366F0 002FFCB0  38 61 00 08 */	addi r3, r1, 8
+/* 803366EC 002FFCAC  F0 23 B0 00 */	psq_st f1, 0x0(r3), 1, qr3
+/* 803366F0 002FFCB0  38 61 00 08 */	addi r3, r1, 0x8
 /* 803366F4 002FFCB4  A0 01 00 0C */	lhz r0, 0xc(r1)
-/* 803366F8 002FFCB8  B0 01 00 08 */	sth r0, 8(r1)
-/* 803366FC 002FFCBC  E0 03 B0 00 */	psq_l f0, 0(r3), 1, qr3
+/* 803366F8 002FFCB8  B0 01 00 08 */	sth r0, 0x8(r1)
+/* 803366FC 002FFCBC  E0 03 B0 00 */	psq_l f0, 0x0(r3), 1, qr3
 /* 80336700 002FFCC0  3C 60 80 55 */	lis r3, lbl_8054DB88@ha
-/* 80336704 002FFCC4  54 00 25 36 */	rlwinm r0, r0, 4, 0x14, 0x1b
+/* 80336704 002FFCC4  54 00 25 36 */	clrlslwi r0, r0, 24, 4
 /* 80336708 002FFCC8  38 63 DB 88 */	addi r3, r3, lbl_8054DB88@l
 /* 8033670C 002FFCCC  EC 41 00 28 */	fsubs f2, f1, f0
 /* 80336710 002FFCD0  7C 63 02 14 */	add r3, r3, r0
 /* 80336714 002FFCD4  C0 23 00 0C */	lfs f1, 0xc(r3)
-/* 80336718 002FFCD8  C0 03 00 04 */	lfs f0, 4(r3)
+/* 80336718 002FFCD8  C0 03 00 04 */	lfs f0, 0x4(r3)
 /* 8033671C 002FFCDC  EC 22 00 72 */	fmuls f1, f2, f1
 /* 80336720 002FFCE0  EC 20 08 2A */	fadds f1, f0, f1
 /* 80336724 002FFCE4  38 21 00 10 */	addi r1, r1, 0x10
-/* 80336728 002FFCE8  4E 80 00 20 */	blr 
+/* 80336728 002FFCE8  4E 80 00 20 */	blr
+.endfn CosFIdx__Q26nw4hbm4mathFf
+/* 8033672C 002FFCEC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-.global Atan2FIdx__Q26nw4hbm4mathFff
-Atan2FIdx__Q26nw4hbm4mathFff:
+# nw4hbm::math::Atan2FIdx(float, float)
+.fn Atan2FIdx__Q26nw4hbm4mathFff, global
 /* 80336730 002FFCF0  3C 60 80 52 */	lis r3, lbl_80518AF0@ha
 /* 80336734 002FFCF4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80336738 002FFCF8  38 63 8A F0 */	addi r3, r3, lbl_80518AF0@l
-/* 8033673C 002FFCFC  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8033673C 002FFCFC  C0 03 00 04 */	lfs f0, 0x4(r3)
 /* 80336740 002FFD00  FC 00 10 00 */	fcmpu cr0, f0, f2
 /* 80336744 002FFD04  40 82 00 14 */	bne .L_80336758
 /* 80336748 002FFD08  FC 00 08 00 */	fcmpu cr0, f0, f1
@@ -88,91 +91,91 @@ Atan2FIdx__Q26nw4hbm4mathFff:
 /* 80336750 002FFD10  FC 20 00 90 */	fmr f1, f0
 /* 80336754 002FFD14  48 00 01 94 */	b .L_803368E8
 .L_80336758:
-/* 80336758 002FFD18  C0 83 00 04 */	lfs f4, 4(r3)
+/* 80336758 002FFD18  C0 83 00 04 */	lfs f4, 0x4(r3)
 /* 8033675C 002FFD1C  FC 02 20 40 */	fcmpo cr0, f2, f4
-/* 80336760 002FFD20  4C 41 13 82 */	cror 2, 1, 2
+/* 80336760 002FFD20  4C 41 13 82 */	cror eq, gt, eq
 /* 80336764 002FFD24  40 82 00 6C */	bne .L_803367D0
 /* 80336768 002FFD28  FC 01 20 40 */	fcmpo cr0, f1, f4
-/* 8033676C 002FFD2C  4C 41 13 82 */	cror 2, 1, 2
+/* 8033676C 002FFD2C  4C 41 13 82 */	cror eq, gt, eq
 /* 80336770 002FFD30  40 82 00 30 */	bne .L_803367A0
 /* 80336774 002FFD34  FC 02 08 40 */	fcmpo cr0, f2, f1
-/* 80336778 002FFD38  4C 41 13 82 */	cror 2, 1, 2
+/* 80336778 002FFD38  4C 41 13 82 */	cror eq, gt, eq
 /* 8033677C 002FFD3C  40 82 00 10 */	bne .L_8033678C
 /* 80336780 002FFD40  FC 60 10 90 */	fmr f3, f2
-/* 80336784 002FFD44  38 00 00 00 */	li r0, 0
+/* 80336784 002FFD44  38 00 00 00 */	li r0, 0x0
 /* 80336788 002FFD48  48 00 00 BC */	b .L_80336844
 .L_8033678C:
 /* 8033678C 002FFD4C  FC 60 08 90 */	fmr f3, f1
 /* 80336790 002FFD50  C0 83 00 10 */	lfs f4, 0x10(r3)
 /* 80336794 002FFD54  FC 20 10 90 */	fmr f1, f2
-/* 80336798 002FFD58  38 00 00 01 */	li r0, 1
+/* 80336798 002FFD58  38 00 00 01 */	li r0, 0x1
 /* 8033679C 002FFD5C  48 00 00 A8 */	b .L_80336844
 .L_803367A0:
 /* 803367A0 002FFD60  FC 20 08 50 */	fneg f1, f1
 /* 803367A4 002FFD64  FC 02 08 40 */	fcmpo cr0, f2, f1
-/* 803367A8 002FFD68  4C 41 13 82 */	cror 2, 1, 2
+/* 803367A8 002FFD68  4C 41 13 82 */	cror eq, gt, eq
 /* 803367AC 002FFD6C  40 82 00 10 */	bne .L_803367BC
 /* 803367B0 002FFD70  FC 60 10 90 */	fmr f3, f2
-/* 803367B4 002FFD74  38 00 00 01 */	li r0, 1
+/* 803367B4 002FFD74  38 00 00 01 */	li r0, 0x1
 /* 803367B8 002FFD78  48 00 00 8C */	b .L_80336844
 .L_803367BC:
 /* 803367BC 002FFD7C  FC 60 08 90 */	fmr f3, f1
 /* 803367C0 002FFD80  C0 83 00 18 */	lfs f4, 0x18(r3)
 /* 803367C4 002FFD84  FC 20 10 90 */	fmr f1, f2
-/* 803367C8 002FFD88  38 00 00 00 */	li r0, 0
+/* 803367C8 002FFD88  38 00 00 00 */	li r0, 0x0
 /* 803367CC 002FFD8C  48 00 00 78 */	b .L_80336844
 .L_803367D0:
 /* 803367D0 002FFD90  FC 01 20 40 */	fcmpo cr0, f1, f4
-/* 803367D4 002FFD94  4C 41 13 82 */	cror 2, 1, 2
+/* 803367D4 002FFD94  4C 41 13 82 */	cror eq, gt, eq
 /* 803367D8 002FFD98  40 82 00 38 */	bne .L_80336810
 /* 803367DC 002FFD9C  FC 00 10 50 */	fneg f0, f2
 /* 803367E0 002FFDA0  FC 00 08 40 */	fcmpo cr0, f0, f1
-/* 803367E4 002FFDA4  4C 41 13 82 */	cror 2, 1, 2
+/* 803367E4 002FFDA4  4C 41 13 82 */	cror eq, gt, eq
 /* 803367E8 002FFDA8  40 82 00 14 */	bne .L_803367FC
 /* 803367EC 002FFDAC  FC 60 00 90 */	fmr f3, f0
 /* 803367F0 002FFDB0  C0 83 00 1C */	lfs f4, 0x1c(r3)
-/* 803367F4 002FFDB4  38 00 00 01 */	li r0, 1
+/* 803367F4 002FFDB4  38 00 00 01 */	li r0, 0x1
 /* 803367F8 002FFDB8  48 00 00 4C */	b .L_80336844
 .L_803367FC:
 /* 803367FC 002FFDBC  FC 60 08 90 */	fmr f3, f1
 /* 80336800 002FFDC0  C0 83 00 10 */	lfs f4, 0x10(r3)
 /* 80336804 002FFDC4  FC 20 00 90 */	fmr f1, f0
-/* 80336808 002FFDC8  38 00 00 00 */	li r0, 0
+/* 80336808 002FFDC8  38 00 00 00 */	li r0, 0x0
 /* 8033680C 002FFDCC  48 00 00 38 */	b .L_80336844
 .L_80336810:
 /* 80336810 002FFDD0  FC 00 10 50 */	fneg f0, f2
 /* 80336814 002FFDD4  FC 20 08 50 */	fneg f1, f1
 /* 80336818 002FFDD8  FC 00 08 40 */	fcmpo cr0, f0, f1
-/* 8033681C 002FFDDC  4C 41 13 82 */	cror 2, 1, 2
+/* 8033681C 002FFDDC  4C 41 13 82 */	cror eq, gt, eq
 /* 80336820 002FFDE0  40 82 00 14 */	bne .L_80336834
 /* 80336824 002FFDE4  FC 60 00 90 */	fmr f3, f0
 /* 80336828 002FFDE8  C0 83 00 20 */	lfs f4, 0x20(r3)
-/* 8033682C 002FFDEC  38 00 00 00 */	li r0, 0
+/* 8033682C 002FFDEC  38 00 00 00 */	li r0, 0x0
 /* 80336830 002FFDF0  48 00 00 14 */	b .L_80336844
 .L_80336834:
 /* 80336834 002FFDF4  FC 60 08 90 */	fmr f3, f1
 /* 80336838 002FFDF8  C0 83 00 18 */	lfs f4, 0x18(r3)
 /* 8033683C 002FFDFC  FC 20 00 90 */	fmr f1, f0
-/* 80336840 002FFE00  38 00 00 01 */	li r0, 1
+/* 80336840 002FFE00  38 00 00 01 */	li r0, 0x1
 .L_80336844:
-/* 80336844 002FFE04  2C 00 00 00 */	cmpwi r0, 0
+/* 80336844 002FFE04  2C 00 00 00 */	cmpwi r0, 0x0
 /* 80336848 002FFE08  41 82 00 54 */	beq .L_8033689C
 /* 8033684C 002FFE0C  EC 21 18 24 */	fdivs f1, f1, f3
 /* 80336850 002FFE10  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80336854 002FFE14  38 61 00 10 */	addi r3, r1, 0x10
 /* 80336858 002FFE18  EC 21 00 32 */	fmuls f1, f1, f0
-/* 8033685C 002FFE1C  F0 23 B0 00 */	psq_st f1, 0(r3), 1, qr3
+/* 8033685C 002FFE1C  F0 23 B0 00 */	psq_st f1, 0x0(r3), 1, qr3
 /* 80336860 002FFE20  38 61 00 0A */	addi r3, r1, 0xa
 /* 80336864 002FFE24  A0 01 00 10 */	lhz r0, 0x10(r1)
 /* 80336868 002FFE28  B0 01 00 0A */	sth r0, 0xa(r1)
-/* 8033686C 002FFE2C  E0 03 B0 00 */	psq_l f0, 0(r3), 1, qr3
+/* 8033686C 002FFE2C  E0 03 B0 00 */	psq_l f0, 0x0(r3), 1, qr3
 /* 80336870 002FFE30  3C 80 80 55 */	lis r4, lbl_8054EB98@ha
 /* 80336874 002FFE34  54 00 18 38 */	slwi r0, r0, 3
 /* 80336878 002FFE38  38 84 EB 98 */	addi r4, r4, lbl_8054EB98@l
 /* 8033687C 002FFE3C  EC 41 00 28 */	fsubs f2, f1, f0
 /* 80336880 002FFE40  7C 64 02 14 */	add r3, r4, r0
 /* 80336884 002FFE44  7C 04 04 2E */	lfsx f0, r4, r0
-/* 80336888 002FFE48  C0 23 00 04 */	lfs f1, 4(r3)
+/* 80336888 002FFE48  C0 23 00 04 */	lfs f1, 0x4(r3)
 /* 8033688C 002FFE4C  EC 22 00 72 */	fmuls f1, f2, f1
 /* 80336890 002FFE50  EC 00 08 2A */	fadds f0, f0, f1
 /* 80336894 002FFE54  EC 24 00 28 */	fsubs f1, f4, f0
@@ -182,1145 +185,1138 @@ Atan2FIdx__Q26nw4hbm4mathFff:
 /* 803368A0 002FFE60  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 803368A4 002FFE64  38 61 00 0C */	addi r3, r1, 0xc
 /* 803368A8 002FFE68  EC 21 00 32 */	fmuls f1, f1, f0
-/* 803368AC 002FFE6C  F0 23 B0 00 */	psq_st f1, 0(r3), 1, qr3
-/* 803368B0 002FFE70  38 61 00 08 */	addi r3, r1, 8
+/* 803368AC 002FFE6C  F0 23 B0 00 */	psq_st f1, 0x0(r3), 1, qr3
+/* 803368B0 002FFE70  38 61 00 08 */	addi r3, r1, 0x8
 /* 803368B4 002FFE74  A0 01 00 0C */	lhz r0, 0xc(r1)
-/* 803368B8 002FFE78  B0 01 00 08 */	sth r0, 8(r1)
-/* 803368BC 002FFE7C  E0 03 B0 00 */	psq_l f0, 0(r3), 1, qr3
+/* 803368B8 002FFE78  B0 01 00 08 */	sth r0, 0x8(r1)
+/* 803368BC 002FFE7C  E0 03 B0 00 */	psq_l f0, 0x0(r3), 1, qr3
 /* 803368C0 002FFE80  3C 80 80 55 */	lis r4, lbl_8054EB98@ha
 /* 803368C4 002FFE84  54 00 18 38 */	slwi r0, r0, 3
 /* 803368C8 002FFE88  38 84 EB 98 */	addi r4, r4, lbl_8054EB98@l
 /* 803368CC 002FFE8C  EC 41 00 28 */	fsubs f2, f1, f0
 /* 803368D0 002FFE90  7C 64 02 14 */	add r3, r4, r0
 /* 803368D4 002FFE94  7C 04 04 2E */	lfsx f0, r4, r0
-/* 803368D8 002FFE98  C0 23 00 04 */	lfs f1, 4(r3)
+/* 803368D8 002FFE98  C0 23 00 04 */	lfs f1, 0x4(r3)
 /* 803368DC 002FFE9C  EC 22 00 72 */	fmuls f1, f2, f1
 /* 803368E0 002FFEA0  EC 00 08 2A */	fadds f0, f0, f1
 /* 803368E4 002FFEA4  EC 24 00 2A */	fadds f1, f4, f0
 .L_803368E8:
 /* 803368E8 002FFEA8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803368EC 002FFEAC  4E 80 00 20 */	blr
+.endfn Atan2FIdx__Q26nw4hbm4mathFff
 
-.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-
-
-.global lbl_80518AF0
-lbl_80518AF0:
-	.float 65536 #0x47800000
-
-
-.global lbl_80518AF4
-lbl_80518AF4:
-	.4byte 0
-	.float 1.0
+# 0x80518AF0 - 0x80518B18
+.rodata
+.balign 8
+.sym lbl_80518AF0, local
+	.4byte 0x47800000
+.sym lbl_80518AF4, local
+	.4byte 0x00000000
+	.4byte 0x3F800000
 	.4byte 0x42000000
 	.4byte 0x42800000
-	.float -1.0
+	.4byte 0xBF800000
 	.4byte 0xC2800000
 	.4byte 0x43000000
 	.4byte 0xC3000000
-	.4byte 0
+	.4byte 0x00000000
 
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
-
-
-.global lbl_8054DB88
-lbl_8054DB88:
-    .float 0 #0
-    .float 1.0
-    .float 0.024541 #0x3CC90A35
-    .float -0.00030099999 #0xB99DCF89
-    .float 0.024541 #0x3CC90A35
-    .float 0.999699 #0x3F7FEC46
-    .float 0.024526 #0x3CC8EAC0
-    .float -0.00090300001 #0xBA6CB74E
-    .float 0.049068 #0x3D48FB87
-    .float 0.99879497 #0x3F7FB107
-    .float 0.024497001 #0x3CC8ADEF
-    .float -0.0015050001 #0xBAC5436C
-    .float 0.073564999 #0x3D96A93F
-    .float 0.99729002 #0x3F7F4E66
-    .float 0.024452999 #0x3CC851A8
-    .float -0.002106 #0xBB0A04D1
-    .float 0.098017 #0x3DC8BD23
-    .float 0.99518502 #0x3F7EC472
-    .float 0.024394 #0x3CC7D5ED
-    .float -0.0027050001 #0xBB31465F
-    .float 0.122411 #0x3DFAB29E
-    .float 0.99247998 #0x3F7E132B
-    .float 0.024320001 #0x3CC73ABD
-    .float -0.003303 #0xBB587725
-    .float 0.14673001 #0x3E164064
-    .float 0.98917699 #0x3F7D3AB4
-    .float 0.024231 #0x3CC68017
-    .float -0.0038989999 #0xBB7F865D
-    .float 0.17096201 #0x3E2F10AA
-    .float 0.98527801 #0x3F7C3B2E
-    .float 0.024127999 #0x3CC5A815
-    .float -0.0044920002 #0xBB9331A1
-    .float 0.19509 #0x3E47C5AC
-    .float 0.98078501 #0x3F7B14BA
-    .float 0.024010999 #0x3CC4B2B7
-    .float -0.0050829998 #0xBBA68F4B
-    .float 0.219101 #0x3E605C03
-    .float 0.97570199 #0x3F79C79B
-    .float 0.023879001 #0x3CC39DE5
-    .float -0.0056710001 #0xBBB9D3CC
-    .float 0.24298 #0x3E78CFC0
-    .float 0.97003102 #0x3F7853F4
-    .float 0.023732999 #0x3CC26BB5
-    .float -0.0062549999 #0xBBCCF6BE
-    .float 0.26671299 #0x3E888E9B
-    .float 0.96377599 #0x3F76BA06
-    .float 0.023572 #0x3CC11A11
-    .float -0.0068359999 #0xBBE00086
-    .float 0.29028499 #0x3E94A03C
-    .float 0.95694 #0x3F74FA05
-    .float 0.023397001 #0x3CBFAB11
-    .float -0.0074120001 #0xBBF2E05D
-    .float 0.31368199 #0x3EA09AED
-    .float 0.94952798 #0x3F731444
-    .float 0.023208 #0x3CBE1EB4
-    .float -0.0079840003 #0xBC02CF53
-    .float 0.33689001 #0x3EAC7CD9
-    .float 0.941544 #0x3F710907
-    .float 0.023004999 #0x3CBC74FB
-    .float -0.0085509997 #0xBC0C197E
-    .float 0.35989499 #0x3EB84428
-    .float 0.93299299 #0x3F6ED8A1
-    .float 0.022787999 #0x3CBAADE6
-    .float -0.0091129998 #0xBC154EB1
-    .float 0.38268301 #0x3EC3EF07
-    .float 0.92387998 #0x3F6C8366
-    .float 0.022558 #0x3CB8CB8E
-    .float -0.0096699996 #0xBC1E6EEB
-    .float 0.40524101 #0x3ECF7BC0
-    .float 0.91421002 #0x3F6A09AB
-    .float 0.022314001 #0x3CB6CBDA
-    .float -0.01022 #0xBC2771C9
-    .float 0.42755499 #0x3EDAE87D
-    .float 0.90398902 #0x3F676BD3
-    .float 0.022056 #0x3CB4AEC9
-    .float -0.010765 #0xBC305FAF
-    .float 0.44961101 #0x3EE6336A
-    .float 0.893224 #0x3F64AA54
-    .float 0.021785 #0x3CB27675
-    .float -0.011303 #0xBC393038
-    .float 0.47139701 #0x3EF15AF3
-    .float 0.88192099 #0x3F61C593
-    .float 0.021500999 #0x3CB022DD
-    .float -0.011834 #0xBC41E365
-    .float 0.49289799 #0x3EFC5D20
-    .float 0.87008703 #0x3F5EBE06
-    .float 0.021205001 #0x3CADB61C
-    .float -0.012358 #0xBC4A7935
-    .float 0.514103 #0x3F039C41
-    .float 0.85772902 #0x3F5B9421
-    .float 0.020895001 #0x3CAB2BFE
-    .float -0.012875 #0xBC52F1AA
-    .float 0.534998 #0x3F08F5A1
-    .float 0.844854 #0x3F58485A
-    .float 0.020572999 #0x3CA888B5
-    .float -0.013384 #0xBC5B4891
-    .float 0.55557001 #0x3F0E39D6
-    .float 0.83147001 #0x3F54DB38
-    .float 0.020238001 #0x3CA5CA2A
-    .float -0.013885 #0xBC637DE9
-    .float 0.57580799 #0x3F136827
-    .float 0.81758499 #0x3F514D40
-    .float 0.019890999 #0x3CA2F273
-    .float -0.014377 #0xBC6B8D82
-    .float 0.59569901 #0x3F187FBB
-    .float 0.80320799 #0x3F4D9F0A
-    .float 0.019532001 #0x3CA00193
-    .float -0.014861 #0xBC737B8D
-    .float 0.61523199 #0x3F1D7FD8
-    .float 0.78834599 #0x3F49D10B
-    .float 0.019161999 #0x3C9CF9A0
-    .float -0.015336 #0xBC7B43D9
-    .float 0.63439298 #0x3F226794
-    .float 0.77301002 #0x3F45E3FC
-    .float 0.018780001 #0x3C99D884
-    .float -0.015802 #0xBC817332
-    .float 0.65317303 #0x3F273659
-    .float 0.757209 #0x3F41D873
-    .float 0.018386001 #0x3C969E3D
-    .float -0.016257999 #0xBC852F7F
-    .float 0.67155898 #0x3F2BEB4A
-    .float 0.740951 #0x3F3DAEF7
-    .float 0.017982 #0x3C934EFD
-    .float -0.016704001 #0xBC88D6D4
-    .float 0.68954098 #0x3F3085C2
-    .float 0.72424698 #0x3F396840
-    .float 0.017565999 #0x3C8FE692
-    .float -0.017139999 #0xBC8C692F
-    .float 0.70710701 #0x3F3504F7
-    .float 0.70710701 #0x3F3504F7
-    .float 0.017139999 #0x3C8C692F
-    .float -0.017565999 #0xBC8FE692
-    .float 0.72424698 #0x3F396840
-    .float 0.68954098 #0x3F3085C2
-    .float 0.016704001 #0x3C88D6D4
-    .float -0.017982 #0xBC934EFD
-    .float 0.740951 #0x3F3DAEF7
-    .float 0.67155898 #0x3F2BEB4A
-    .float 0.016257999 #0x3C852F7F
-    .float -0.018386001 #0xBC969E3D
-    .float 0.757209 #0x3F41D873
-    .float 0.65317303 #0x3F273659
-    .float 0.015802 #0x3C817332
-    .float -0.018780001 #0xBC99D884
-    .float 0.77301002 #0x3F45E3FC
-    .float 0.63439298 #0x3F226794
-    .float 0.015336 #0x3C7B43D9
-    .float -0.019161999 #0xBC9CF9A0
-    .float 0.78834599 #0x3F49D10B
-    .float 0.61523199 #0x3F1D7FD8
-    .float 0.014861 #0x3C737B8D
-    .float -0.019532001 #0xBCA00193
-    .float 0.80320799 #0x3F4D9F0A
-    .float 0.59569901 #0x3F187FBB
-    .float 0.014377 #0x3C6B8D82
-    .float -0.019890999 #0xBCA2F273
-    .float 0.81758499 #0x3F514D40
-    .float 0.57580799 #0x3F136827
-    .float 0.013885 #0x3C637DE9
-    .float -0.020238001 #0xBCA5CA2A
-    .float 0.83147001 #0x3F54DB38
-    .float 0.55557001 #0x3F0E39D6
-    .float 0.013384 #0x3C5B4891
-    .float -0.020572999 #0xBCA888B5
-    .float 0.844854 #0x3F58485A
-    .float 0.534998 #0x3F08F5A1
-    .float 0.012875 #0x3C52F1AA
-    .float -0.020895001 #0xBCAB2BFE
-    .float 0.85772902 #0x3F5B9421
-    .float 0.514103 #0x3F039C41
-    .float 0.012358 #0x3C4A7935
-    .float -0.021205001 #0xBCADB61C
-    .float 0.87008703 #0x3F5EBE06
-    .float 0.49289799 #0x3EFC5D20
-    .float 0.011834 #0x3C41E365
-    .float -0.021500999 #0xBCB022DD
-    .float 0.88192099 #0x3F61C593
-    .float 0.47139701 #0x3EF15AF3
-    .float 0.011303 #0x3C393038
-    .float -0.021785 #0xBCB27675
-    .float 0.893224 #0x3F64AA54
-    .float 0.44961101 #0x3EE6336A
-    .float 0.010765 #0x3C305FAF
-    .float -0.022056 #0xBCB4AEC9
-    .float 0.90398902 #0x3F676BD3
-    .float 0.42755499 #0x3EDAE87D
-    .float 0.01022 #0x3C2771C9
-    .float -0.022314001 #0xBCB6CBDA
-    .float 0.91421002 #0x3F6A09AB
-    .float 0.40524101 #0x3ECF7BC0
-    .float 0.0096699996 #0x3C1E6EEB
-    .float -0.022558 #0xBCB8CB8E
-    .float 0.92387998 #0x3F6C8366
-    .float 0.38268301 #0x3EC3EF07
-    .float 0.0091129998 #0x3C154EB1
-    .float -0.022787999 #0xBCBAADE6
-    .float 0.93299299 #0x3F6ED8A1
-    .float 0.35989499 #0x3EB84428
-    .float 0.0085509997 #0x3C0C197E
-    .float -0.023004999 #0xBCBC74FB
-    .float 0.941544 #0x3F710907
-    .float 0.33689001 #0x3EAC7CD9
-    .float 0.0079840003 #0x3C02CF53
-    .float -0.023208 #0xBCBE1EB4
-    .float 0.94952798 #0x3F731444
-    .float 0.31368199 #0x3EA09AED
-    .float 0.0074120001 #0x3BF2E05D
-    .float -0.023397001 #0xBCBFAB11
-    .float 0.95694 #0x3F74FA05
-    .float 0.29028499 #0x3E94A03C
-    .float 0.0068359999 #0x3BE00086
-    .float -0.023572 #0xBCC11A11
-    .float 0.96377599 #0x3F76BA06
-    .float 0.26671299 #0x3E888E9B
-    .float 0.0062549999 #0x3BCCF6BE
-    .float -0.023732999 #0xBCC26BB5
-    .float 0.97003102 #0x3F7853F4
-    .float 0.24298 #0x3E78CFC0
-    .float 0.0056710001 #0x3BB9D3CC
-    .float -0.023879001 #0xBCC39DE5
-    .float 0.97570199 #0x3F79C79B
-    .float 0.219101 #0x3E605C03
-    .float 0.0050829998 #0x3BA68F4B
-    .float -0.024010999 #0xBCC4B2B7
-    .float 0.98078501 #0x3F7B14BA
-    .float 0.19509 #0x3E47C5AC
-    .float 0.0044920002 #0x3B9331A1
-    .float -0.024127999 #0xBCC5A815
-    .float 0.98527801 #0x3F7C3B2E
-    .float 0.17096201 #0x3E2F10AA
-    .float 0.0038989999 #0x3B7F865D
-    .float -0.024231 #0xBCC68017
-    .float 0.98917699 #0x3F7D3AB4
-    .float 0.14673001 #0x3E164064
-    .float 0.003303 #0x3B587725
-    .float -0.024320001 #0xBCC73ABD
-    .float 0.99247998 #0x3F7E132B
-    .float 0.122411 #0x3DFAB29E
-    .float 0.0027050001 #0x3B31465F
-    .float -0.024394 #0xBCC7D5ED
-    .float 0.99518502 #0x3F7EC472
-    .float 0.098017 #0x3DC8BD23
-    .float 0.002106 #0x3B0A04D1
-    .float -0.024452999 #0xBCC851A8
-    .float 0.99729002 #0x3F7F4E66
-    .float 0.073564999 #0x3D96A93F
-    .float 0.0015050001 #0x3AC5436C
-    .float -0.024497001 #0xBCC8ADEF
-    .float 0.99879497 #0x3F7FB107
-    .float 0.049068 #0x3D48FB87
-    .float 0.00090300001 #0x3A6CB74E
-    .float -0.024526 #0xBCC8EAC0
-    .float 0.999699 #0x3F7FEC46
-    .float 0.024541 #0x3CC90A35
-    .float 0.00030099999 #0x399DCF89
-    .float -0.024541 #0xBCC90A35
-    .float 1.0
-    .float 0 #0
-    .float -0.00030099999 #0xB99DCF89
-    .float -0.024541 #0xBCC90A35
-    .float 0.999699 #0x3F7FEC46
-    .float -0.024541 #0xBCC90A35
-    .float -0.00090300001 #0xBA6CB74E
-    .float -0.024526 #0xBCC8EAC0
-    .float 0.99879497 #0x3F7FB107
-    .float -0.049068 #0xBD48FB87
-    .float -0.0015050001 #0xBAC5436C
-    .float -0.024497001 #0xBCC8ADEF
-    .float 0.99729002 #0x3F7F4E66
-    .float -0.073564999 #0xBD96A93F
-    .float -0.002106 #0xBB0A04D1
-    .float -0.024452999 #0xBCC851A8
-    .float 0.99518502 #0x3F7EC472
-    .float -0.098017 #0xBDC8BD23
-    .float -0.0027050001 #0xBB31465F
-    .float -0.024394 #0xBCC7D5ED
-    .float 0.99247998 #0x3F7E132B
-    .float -0.122411 #0xBDFAB29E
-    .float -0.003303 #0xBB587725
-    .float -0.024320001 #0xBCC73ABD
-    .float 0.98917699 #0x3F7D3AB4
-    .float -0.14673001 #0xBE164064
-    .float -0.0038989999 #0xBB7F865D
-    .float -0.024231 #0xBCC68017
-    .float 0.98527801 #0x3F7C3B2E
-    .float -0.17096201 #0xBE2F10AA
-    .float -0.0044920002 #0xBB9331A1
-    .float -0.024127999 #0xBCC5A815
-    .float 0.98078501 #0x3F7B14BA
-    .float -0.19509 #0xBE47C5AC
-    .float -0.0050829998 #0xBBA68F4B
-    .float -0.024010999 #0xBCC4B2B7
-    .float 0.97570199 #0x3F79C79B
-    .float -0.219101 #0xBE605C03
-    .float -0.0056710001 #0xBBB9D3CC
-    .float -0.023879001 #0xBCC39DE5
-    .float 0.97003102 #0x3F7853F4
-    .float -0.24298 #0xBE78CFC0
-    .float -0.0062549999 #0xBBCCF6BE
-    .float -0.023732999 #0xBCC26BB5
-    .float 0.96377599 #0x3F76BA06
-    .float -0.26671299 #0xBE888E9B
-    .float -0.0068359999 #0xBBE00086
-    .float -0.023572 #0xBCC11A11
-    .float 0.95694 #0x3F74FA05
-    .float -0.29028499 #0xBE94A03C
-    .float -0.0074120001 #0xBBF2E05D
-    .float -0.023397001 #0xBCBFAB11
-    .float 0.94952798 #0x3F731444
-    .float -0.31368199 #0xBEA09AED
-    .float -0.0079840003 #0xBC02CF53
-    .float -0.023208 #0xBCBE1EB4
-    .float 0.941544 #0x3F710907
-    .float -0.33689001 #0xBEAC7CD9
-    .float -0.0085509997 #0xBC0C197E
-    .float -0.023004999 #0xBCBC74FB
-    .float 0.93299299 #0x3F6ED8A1
-    .float -0.35989499 #0xBEB84428
-    .float -0.0091129998 #0xBC154EB1
-    .float -0.022787999 #0xBCBAADE6
-    .float 0.92387998 #0x3F6C8366
-    .float -0.38268301 #0xBEC3EF07
-    .float -0.0096699996 #0xBC1E6EEB
-    .float -0.022558 #0xBCB8CB8E
-    .float 0.91421002 #0x3F6A09AB
-    .float -0.40524101 #0xBECF7BC0
-    .float -0.01022 #0xBC2771C9
-    .float -0.022314001 #0xBCB6CBDA
-    .float 0.90398902 #0x3F676BD3
-    .float -0.42755499 #0xBEDAE87D
-    .float -0.010765 #0xBC305FAF
-    .float -0.022056 #0xBCB4AEC9
-    .float 0.893224 #0x3F64AA54
-    .float -0.44961101 #0xBEE6336A
-    .float -0.011303 #0xBC393038
-    .float -0.021785 #0xBCB27675
-    .float 0.88192099 #0x3F61C593
-    .float -0.47139701 #0xBEF15AF3
-    .float -0.011834 #0xBC41E365
-    .float -0.021500999 #0xBCB022DD
-    .float 0.87008703 #0x3F5EBE06
-    .float -0.49289799 #0xBEFC5D20
-    .float -0.012358 #0xBC4A7935
-    .float -0.021205001 #0xBCADB61C
-    .float 0.85772902 #0x3F5B9421
-    .float -0.514103 #0xBF039C41
-    .float -0.012875 #0xBC52F1AA
-    .float -0.020895001 #0xBCAB2BFE
-    .float 0.844854 #0x3F58485A
-    .float -0.534998 #0xBF08F5A1
-    .float -0.013384 #0xBC5B4891
-    .float -0.020572999 #0xBCA888B5
-    .float 0.83147001 #0x3F54DB38
-    .float -0.55557001 #0xBF0E39D6
-    .float -0.013885 #0xBC637DE9
-    .float -0.020238001 #0xBCA5CA2A
-    .float 0.81758499 #0x3F514D40
-    .float -0.57580799 #0xBF136827
-    .float -0.014377 #0xBC6B8D82
-    .float -0.019890999 #0xBCA2F273
-    .float 0.80320799 #0x3F4D9F0A
-    .float -0.59569901 #0xBF187FBB
-    .float -0.014861 #0xBC737B8D
-    .float -0.019532001 #0xBCA00193
-    .float 0.78834599 #0x3F49D10B
-    .float -0.61523199 #0xBF1D7FD8
-    .float -0.015336 #0xBC7B43D9
-    .float -0.019161999 #0xBC9CF9A0
-    .float 0.77301002 #0x3F45E3FC
-    .float -0.63439298 #0xBF226794
-    .float -0.015802 #0xBC817332
-    .float -0.018780001 #0xBC99D884
-    .float 0.757209 #0x3F41D873
-    .float -0.65317303 #0xBF273659
-    .float -0.016257999 #0xBC852F7F
-    .float -0.018386001 #0xBC969E3D
-    .float 0.740951 #0x3F3DAEF7
-    .float -0.67155898 #0xBF2BEB4A
-    .float -0.016704001 #0xBC88D6D4
-    .float -0.017982 #0xBC934EFD
-    .float 0.72424698 #0x3F396840
-    .float -0.68954098 #0xBF3085C2
-    .float -0.017139999 #0xBC8C692F
-    .float -0.017565999 #0xBC8FE692
-    .float 0.70710701 #0x3F3504F7
-    .float -0.70710701 #0xBF3504F7
-    .float -0.017565999 #0xBC8FE692
-    .float -0.017139999 #0xBC8C692F
-    .float 0.68954098 #0x3F3085C2
-    .float -0.72424698 #0xBF396840
-    .float -0.017982 #0xBC934EFD
-    .float -0.016704001 #0xBC88D6D4
-    .float 0.67155898 #0x3F2BEB4A
-    .float -0.740951 #0xBF3DAEF7
-    .float -0.018386001 #0xBC969E3D
-    .float -0.016257999 #0xBC852F7F
-    .float 0.65317303 #0x3F273659
-    .float -0.757209 #0xBF41D873
-    .float -0.018780001 #0xBC99D884
-    .float -0.015802 #0xBC817332
-    .float 0.63439298 #0x3F226794
-    .float -0.77301002 #0xBF45E3FC
-    .float -0.019161999 #0xBC9CF9A0
-    .float -0.015336 #0xBC7B43D9
-    .float 0.61523199 #0x3F1D7FD8
-    .float -0.78834599 #0xBF49D10B
-    .float -0.019532001 #0xBCA00193
-    .float -0.014861 #0xBC737B8D
-    .float 0.59569901 #0x3F187FBB
-    .float -0.80320799 #0xBF4D9F0A
-    .float -0.019890999 #0xBCA2F273
-    .float -0.014377 #0xBC6B8D82
-    .float 0.57580799 #0x3F136827
-    .float -0.81758499 #0xBF514D40
-    .float -0.020238001 #0xBCA5CA2A
-    .float -0.013885 #0xBC637DE9
-    .float 0.55557001 #0x3F0E39D6
-    .float -0.83147001 #0xBF54DB38
-    .float -0.020572999 #0xBCA888B5
-    .float -0.013384 #0xBC5B4891
-    .float 0.534998 #0x3F08F5A1
-    .float -0.844854 #0xBF58485A
-    .float -0.020895001 #0xBCAB2BFE
-    .float -0.012875 #0xBC52F1AA
-    .float 0.514103 #0x3F039C41
-    .float -0.85772902 #0xBF5B9421
-    .float -0.021205001 #0xBCADB61C
-    .float -0.012358 #0xBC4A7935
-    .float 0.49289799 #0x3EFC5D20
-    .float -0.87008703 #0xBF5EBE06
-    .float -0.021500999 #0xBCB022DD
-    .float -0.011834 #0xBC41E365
-    .float 0.47139701 #0x3EF15AF3
-    .float -0.88192099 #0xBF61C593
-    .float -0.021785 #0xBCB27675
-    .float -0.011303 #0xBC393038
-    .float 0.44961101 #0x3EE6336A
-    .float -0.893224 #0xBF64AA54
-    .float -0.022056 #0xBCB4AEC9
-    .float -0.010765 #0xBC305FAF
-    .float 0.42755499 #0x3EDAE87D
-    .float -0.90398902 #0xBF676BD3
-    .float -0.022314001 #0xBCB6CBDA
-    .float -0.01022 #0xBC2771C9
-    .float 0.40524101 #0x3ECF7BC0
-    .float -0.91421002 #0xBF6A09AB
-    .float -0.022558 #0xBCB8CB8E
-    .float -0.0096699996 #0xBC1E6EEB
-    .float 0.38268301 #0x3EC3EF07
-    .float -0.92387998 #0xBF6C8366
-    .float -0.022787999 #0xBCBAADE6
-    .float -0.0091129998 #0xBC154EB1
-    .float 0.35989499 #0x3EB84428
-    .float -0.93299299 #0xBF6ED8A1
-    .float -0.023004999 #0xBCBC74FB
-    .float -0.0085509997 #0xBC0C197E
-    .float 0.33689001 #0x3EAC7CD9
-    .float -0.941544 #0xBF710907
-    .float -0.023208 #0xBCBE1EB4
-    .float -0.0079840003 #0xBC02CF53
-    .float 0.31368199 #0x3EA09AED
-    .float -0.94952798 #0xBF731444
-    .float -0.023397001 #0xBCBFAB11
-    .float -0.0074120001 #0xBBF2E05D
-    .float 0.29028499 #0x3E94A03C
-    .float -0.95694 #0xBF74FA05
-    .float -0.023572 #0xBCC11A11
-    .float -0.0068359999 #0xBBE00086
-    .float 0.26671299 #0x3E888E9B
-    .float -0.96377599 #0xBF76BA06
-    .float -0.023732999 #0xBCC26BB5
-    .float -0.0062549999 #0xBBCCF6BE
-    .float 0.24298 #0x3E78CFC0
-    .float -0.97003102 #0xBF7853F4
-    .float -0.023879001 #0xBCC39DE5
-    .float -0.0056710001 #0xBBB9D3CC
-    .float 0.219101 #0x3E605C03
-    .float -0.97570199 #0xBF79C79B
-    .float -0.024010999 #0xBCC4B2B7
-    .float -0.0050829998 #0xBBA68F4B
-    .float 0.19509 #0x3E47C5AC
-    .float -0.98078501 #0xBF7B14BA
-    .float -0.024127999 #0xBCC5A815
-    .float -0.0044920002 #0xBB9331A1
-    .float 0.17096201 #0x3E2F10AA
-    .float -0.98527801 #0xBF7C3B2E
-    .float -0.024231 #0xBCC68017
-    .float -0.0038989999 #0xBB7F865D
-    .float 0.14673001 #0x3E164064
-    .float -0.98917699 #0xBF7D3AB4
-    .float -0.024320001 #0xBCC73ABD
-    .float -0.003303 #0xBB587725
-    .float 0.122411 #0x3DFAB29E
-    .float -0.99247998 #0xBF7E132B
-    .float -0.024394 #0xBCC7D5ED
-    .float -0.0027050001 #0xBB31465F
-    .float 0.098017 #0x3DC8BD23
-    .float -0.99518502 #0xBF7EC472
-    .float -0.024452999 #0xBCC851A8
-    .float -0.002106 #0xBB0A04D1
-    .float 0.073564999 #0x3D96A93F
-    .float -0.99729002 #0xBF7F4E66
-    .float -0.024497001 #0xBCC8ADEF
-    .float -0.0015050001 #0xBAC5436C
-    .float 0.049068 #0x3D48FB87
-    .float -0.99879497 #0xBF7FB107
-    .float -0.024526 #0xBCC8EAC0
-    .float -0.00090300001 #0xBA6CB74E
-    .float 0.024541 #0x3CC90A35
-    .float -0.999699 #0xBF7FEC46
-    .float -0.024541 #0xBCC90A35
-    .float -0.00030099999 #0xB99DCF89
-    .float 0 #0
-    .float -1.0
-    .float -0.024541 #0xBCC90A35
-    .float 0.00030099999 #0x399DCF89
-    .float -0.024541 #0xBCC90A35
-    .float -0.999699 #0xBF7FEC46
-    .float -0.024526 #0xBCC8EAC0
-    .float 0.00090300001 #0x3A6CB74E
-    .float -0.049068 #0xBD48FB87
-    .float -0.99879497 #0xBF7FB107
-    .float -0.024497001 #0xBCC8ADEF
-    .float 0.0015050001 #0x3AC5436C
-    .float -0.073564999 #0xBD96A93F
-    .float -0.99729002 #0xBF7F4E66
-    .float -0.024452999 #0xBCC851A8
-    .float 0.002106 #0x3B0A04D1
-    .float -0.098017 #0xBDC8BD23
-    .float -0.99518502 #0xBF7EC472
-    .float -0.024394 #0xBCC7D5ED
-    .float 0.0027050001 #0x3B31465F
-    .float -0.122411 #0xBDFAB29E
-    .float -0.99247998 #0xBF7E132B
-    .float -0.024320001 #0xBCC73ABD
-    .float 0.003303 #0x3B587725
-    .float -0.14673001 #0xBE164064
-    .float -0.98917699 #0xBF7D3AB4
-    .float -0.024231 #0xBCC68017
-    .float 0.0038989999 #0x3B7F865D
-    .float -0.17096201 #0xBE2F10AA
-    .float -0.98527801 #0xBF7C3B2E
-    .float -0.024127999 #0xBCC5A815
-    .float 0.0044920002 #0x3B9331A1
-    .float -0.19509 #0xBE47C5AC
-    .float -0.98078501 #0xBF7B14BA
-    .float -0.024010999 #0xBCC4B2B7
-    .float 0.0050829998 #0x3BA68F4B
-    .float -0.219101 #0xBE605C03
-    .float -0.97570199 #0xBF79C79B
-    .float -0.023879001 #0xBCC39DE5
-    .float 0.0056710001 #0x3BB9D3CC
-    .float -0.24298 #0xBE78CFC0
-    .float -0.97003102 #0xBF7853F4
-    .float -0.023732999 #0xBCC26BB5
-    .float 0.0062549999 #0x3BCCF6BE
-    .float -0.26671299 #0xBE888E9B
-    .float -0.96377599 #0xBF76BA06
-    .float -0.023572 #0xBCC11A11
-    .float 0.0068359999 #0x3BE00086
-    .float -0.29028499 #0xBE94A03C
-    .float -0.95694 #0xBF74FA05
-    .float -0.023397001 #0xBCBFAB11
-    .float 0.0074120001 #0x3BF2E05D
-    .float -0.31368199 #0xBEA09AED
-    .float -0.94952798 #0xBF731444
-    .float -0.023208 #0xBCBE1EB4
-    .float 0.0079840003 #0x3C02CF53
-    .float -0.33689001 #0xBEAC7CD9
-    .float -0.941544 #0xBF710907
-    .float -0.023004999 #0xBCBC74FB
-    .float 0.0085509997 #0x3C0C197E
-    .float -0.35989499 #0xBEB84428
-    .float -0.93299299 #0xBF6ED8A1
-    .float -0.022787999 #0xBCBAADE6
-    .float 0.0091129998 #0x3C154EB1
-    .float -0.38268301 #0xBEC3EF07
-    .float -0.92387998 #0xBF6C8366
-    .float -0.022558 #0xBCB8CB8E
-    .float 0.0096699996 #0x3C1E6EEB
-    .float -0.40524101 #0xBECF7BC0
-    .float -0.91421002 #0xBF6A09AB
-    .float -0.022314001 #0xBCB6CBDA
-    .float 0.01022 #0x3C2771C9
-    .float -0.42755499 #0xBEDAE87D
-    .float -0.90398902 #0xBF676BD3
-    .float -0.022056 #0xBCB4AEC9
-    .float 0.010765 #0x3C305FAF
-    .float -0.44961101 #0xBEE6336A
-    .float -0.893224 #0xBF64AA54
-    .float -0.021785 #0xBCB27675
-    .float 0.011303 #0x3C393038
-    .float -0.47139701 #0xBEF15AF3
-    .float -0.88192099 #0xBF61C593
-    .float -0.021500999 #0xBCB022DD
-    .float 0.011834 #0x3C41E365
-    .float -0.49289799 #0xBEFC5D20
-    .float -0.87008703 #0xBF5EBE06
-    .float -0.021205001 #0xBCADB61C
-    .float 0.012358 #0x3C4A7935
-    .float -0.514103 #0xBF039C41
-    .float -0.85772902 #0xBF5B9421
-    .float -0.020895001 #0xBCAB2BFE
-    .float 0.012875 #0x3C52F1AA
-    .float -0.534998 #0xBF08F5A1
-    .float -0.844854 #0xBF58485A
-    .float -0.020572999 #0xBCA888B5
-    .float 0.013384 #0x3C5B4891
-    .float -0.55557001 #0xBF0E39D6
-    .float -0.83147001 #0xBF54DB38
-    .float -0.020238001 #0xBCA5CA2A
-    .float 0.013885 #0x3C637DE9
-    .float -0.57580799 #0xBF136827
-    .float -0.81758499 #0xBF514D40
-    .float -0.019890999 #0xBCA2F273
-    .float 0.014377 #0x3C6B8D82
-    .float -0.59569901 #0xBF187FBB
-    .float -0.80320799 #0xBF4D9F0A
-    .float -0.019532001 #0xBCA00193
-    .float 0.014861 #0x3C737B8D
-    .float -0.61523199 #0xBF1D7FD8
-    .float -0.78834599 #0xBF49D10B
-    .float -0.019161999 #0xBC9CF9A0
-    .float 0.015336 #0x3C7B43D9
-    .float -0.63439298 #0xBF226794
-    .float -0.77301002 #0xBF45E3FC
-    .float -0.018780001 #0xBC99D884
-    .float 0.015802 #0x3C817332
-    .float -0.65317303 #0xBF273659
-    .float -0.757209 #0xBF41D873
-    .float -0.018386001 #0xBC969E3D
-    .float 0.016257999 #0x3C852F7F
-    .float -0.67155898 #0xBF2BEB4A
-    .float -0.740951 #0xBF3DAEF7
-    .float -0.017982 #0xBC934EFD
-    .float 0.016704001 #0x3C88D6D4
-    .float -0.68954098 #0xBF3085C2
-    .float -0.72424698 #0xBF396840
-    .float -0.017565999 #0xBC8FE692
-    .float 0.017139999 #0x3C8C692F
-    .float -0.70710701 #0xBF3504F7
-    .float -0.70710701 #0xBF3504F7
-    .float -0.017139999 #0xBC8C692F
-    .float 0.017565999 #0x3C8FE692
-    .float -0.72424698 #0xBF396840
-    .float -0.68954098 #0xBF3085C2
-    .float -0.016704001 #0xBC88D6D4
-    .float 0.017982 #0x3C934EFD
-    .float -0.740951 #0xBF3DAEF7
-    .float -0.67155898 #0xBF2BEB4A
-    .float -0.016257999 #0xBC852F7F
-    .float 0.018386001 #0x3C969E3D
-    .float -0.757209 #0xBF41D873
-    .float -0.65317303 #0xBF273659
-    .float -0.015802 #0xBC817332
-    .float 0.018780001 #0x3C99D884
-    .float -0.77301002 #0xBF45E3FC
-    .float -0.63439298 #0xBF226794
-    .float -0.015336 #0xBC7B43D9
-    .float 0.019161999 #0x3C9CF9A0
-    .float -0.78834599 #0xBF49D10B
-    .float -0.61523199 #0xBF1D7FD8
-    .float -0.014861 #0xBC737B8D
-    .float 0.019532001 #0x3CA00193
-    .float -0.80320799 #0xBF4D9F0A
-    .float -0.59569901 #0xBF187FBB
-    .float -0.014377 #0xBC6B8D82
-    .float 0.019890999 #0x3CA2F273
-    .float -0.81758499 #0xBF514D40
-    .float -0.57580799 #0xBF136827
-    .float -0.013885 #0xBC637DE9
-    .float 0.020238001 #0x3CA5CA2A
-    .float -0.83147001 #0xBF54DB38
-    .float -0.55557001 #0xBF0E39D6
-    .float -0.013384 #0xBC5B4891
-    .float 0.020572999 #0x3CA888B5
-    .float -0.844854 #0xBF58485A
-    .float -0.534998 #0xBF08F5A1
-    .float -0.012875 #0xBC52F1AA
-    .float 0.020895001 #0x3CAB2BFE
-    .float -0.85772902 #0xBF5B9421
-    .float -0.514103 #0xBF039C41
-    .float -0.012358 #0xBC4A7935
-    .float 0.021205001 #0x3CADB61C
-    .float -0.87008703 #0xBF5EBE06
-    .float -0.49289799 #0xBEFC5D20
-    .float -0.011834 #0xBC41E365
-    .float 0.021500999 #0x3CB022DD
-    .float -0.88192099 #0xBF61C593
-    .float -0.47139701 #0xBEF15AF3
-    .float -0.011303 #0xBC393038
-    .float 0.021785 #0x3CB27675
-    .float -0.893224 #0xBF64AA54
-    .float -0.44961101 #0xBEE6336A
-    .float -0.010765 #0xBC305FAF
-    .float 0.022056 #0x3CB4AEC9
-    .float -0.90398902 #0xBF676BD3
-    .float -0.42755499 #0xBEDAE87D
-    .float -0.01022 #0xBC2771C9
-    .float 0.022314001 #0x3CB6CBDA
-    .float -0.91421002 #0xBF6A09AB
-    .float -0.40524101 #0xBECF7BC0
-    .float -0.0096699996 #0xBC1E6EEB
-    .float 0.022558 #0x3CB8CB8E
-    .float -0.92387998 #0xBF6C8366
-    .float -0.38268301 #0xBEC3EF07
-    .float -0.0091129998 #0xBC154EB1
-    .float 0.022787999 #0x3CBAADE6
-    .float -0.93299299 #0xBF6ED8A1
-    .float -0.35989499 #0xBEB84428
-    .float -0.0085509997 #0xBC0C197E
-    .float 0.023004999 #0x3CBC74FB
-    .float -0.941544 #0xBF710907
-    .float -0.33689001 #0xBEAC7CD9
-    .float -0.0079840003 #0xBC02CF53
-    .float 0.023208 #0x3CBE1EB4
-    .float -0.94952798 #0xBF731444
-    .float -0.31368199 #0xBEA09AED
-    .float -0.0074120001 #0xBBF2E05D
-    .float 0.023397001 #0x3CBFAB11
-    .float -0.95694 #0xBF74FA05
-    .float -0.29028499 #0xBE94A03C
-    .float -0.0068359999 #0xBBE00086
-    .float 0.023572 #0x3CC11A11
-    .float -0.96377599 #0xBF76BA06
-    .float -0.26671299 #0xBE888E9B
-    .float -0.0062549999 #0xBBCCF6BE
-    .float 0.023732999 #0x3CC26BB5
-    .float -0.97003102 #0xBF7853F4
-    .float -0.24298 #0xBE78CFC0
-    .float -0.0056710001 #0xBBB9D3CC
-    .float 0.023879001 #0x3CC39DE5
-    .float -0.97570199 #0xBF79C79B
-    .float -0.219101 #0xBE605C03
-    .float -0.0050829998 #0xBBA68F4B
-    .float 0.024010999 #0x3CC4B2B7
-    .float -0.98078501 #0xBF7B14BA
-    .float -0.19509 #0xBE47C5AC
-    .float -0.0044920002 #0xBB9331A1
-    .float 0.024127999 #0x3CC5A815
-    .float -0.98527801 #0xBF7C3B2E
-    .float -0.17096201 #0xBE2F10AA
-    .float -0.0038989999 #0xBB7F865D
-    .float 0.024231 #0x3CC68017
-    .float -0.98917699 #0xBF7D3AB4
-    .float -0.14673001 #0xBE164064
-    .float -0.003303 #0xBB587725
-    .float 0.024320001 #0x3CC73ABD
-    .float -0.99247998 #0xBF7E132B
-    .float -0.122411 #0xBDFAB29E
-    .float -0.0027050001 #0xBB31465F
-    .float 0.024394 #0x3CC7D5ED
-    .float -0.99518502 #0xBF7EC472
-    .float -0.098017 #0xBDC8BD23
-    .float -0.002106 #0xBB0A04D1
-    .float 0.024452999 #0x3CC851A8
-    .float -0.99729002 #0xBF7F4E66
-    .float -0.073564999 #0xBD96A93F
-    .float -0.0015050001 #0xBAC5436C
-    .float 0.024497001 #0x3CC8ADEF
-    .float -0.99879497 #0xBF7FB107
-    .float -0.049068 #0xBD48FB87
-    .float -0.00090300001 #0xBA6CB74E
-    .float 0.024526 #0x3CC8EAC0
-    .float -0.999699 #0xBF7FEC46
-    .float -0.024541 #0xBCC90A35
-    .float -0.00030099999 #0xB99DCF89
-    .float 0.024541 #0x3CC90A35
-    .float -1.0
-    .float -0 #0x80000000
-    .float 0.00030099999 #0x399DCF89
-    .float 0.024541 #0x3CC90A35
-    .float -0.999699 #0xBF7FEC46
-    .float 0.024541 #0x3CC90A35
-    .float 0.00090300001 #0x3A6CB74E
-    .float 0.024526 #0x3CC8EAC0
-    .float -0.99879497 #0xBF7FB107
-    .float 0.049068 #0x3D48FB87
-    .float 0.0015050001 #0x3AC5436C
-    .float 0.024497001 #0x3CC8ADEF
-    .float -0.99729002 #0xBF7F4E66
-    .float 0.073564999 #0x3D96A93F
-    .float 0.002106 #0x3B0A04D1
-    .float 0.024452999 #0x3CC851A8
-    .float -0.99518502 #0xBF7EC472
-    .float 0.098017 #0x3DC8BD23
-    .float 0.0027050001 #0x3B31465F
-    .float 0.024394 #0x3CC7D5ED
-    .float -0.99247998 #0xBF7E132B
-    .float 0.122411 #0x3DFAB29E
-    .float 0.003303 #0x3B587725
-    .float 0.024320001 #0x3CC73ABD
-    .float -0.98917699 #0xBF7D3AB4
-    .float 0.14673001 #0x3E164064
-    .float 0.0038989999 #0x3B7F865D
-    .float 0.024231 #0x3CC68017
-    .float -0.98527801 #0xBF7C3B2E
-    .float 0.17096201 #0x3E2F10AA
-    .float 0.0044920002 #0x3B9331A1
-    .float 0.024127999 #0x3CC5A815
-    .float -0.98078501 #0xBF7B14BA
-    .float 0.19509 #0x3E47C5AC
-    .float 0.0050829998 #0x3BA68F4B
-    .float 0.024010999 #0x3CC4B2B7
-    .float -0.97570199 #0xBF79C79B
-    .float 0.219101 #0x3E605C03
-    .float 0.0056710001 #0x3BB9D3CC
-    .float 0.023879001 #0x3CC39DE5
-    .float -0.97003102 #0xBF7853F4
-    .float 0.24298 #0x3E78CFC0
-    .float 0.0062549999 #0x3BCCF6BE
-    .float 0.023732999 #0x3CC26BB5
-    .float -0.96377599 #0xBF76BA06
-    .float 0.26671299 #0x3E888E9B
-    .float 0.0068359999 #0x3BE00086
-    .float 0.023572 #0x3CC11A11
-    .float -0.95694 #0xBF74FA05
-    .float 0.29028499 #0x3E94A03C
-    .float 0.0074120001 #0x3BF2E05D
-    .float 0.023397001 #0x3CBFAB11
-    .float -0.94952798 #0xBF731444
-    .float 0.31368199 #0x3EA09AED
-    .float 0.0079840003 #0x3C02CF53
-    .float 0.023208 #0x3CBE1EB4
-    .float -0.941544 #0xBF710907
-    .float 0.33689001 #0x3EAC7CD9
-    .float 0.0085509997 #0x3C0C197E
-    .float 0.023004999 #0x3CBC74FB
-    .float -0.93299299 #0xBF6ED8A1
-    .float 0.35989499 #0x3EB84428
-    .float 0.0091129998 #0x3C154EB1
-    .float 0.022787999 #0x3CBAADE6
-    .float -0.92387998 #0xBF6C8366
-    .float 0.38268301 #0x3EC3EF07
-    .float 0.0096699996 #0x3C1E6EEB
-    .float 0.022558 #0x3CB8CB8E
-    .float -0.91421002 #0xBF6A09AB
-    .float 0.40524101 #0x3ECF7BC0
-    .float 0.01022 #0x3C2771C9
-    .float 0.022314001 #0x3CB6CBDA
-    .float -0.90398902 #0xBF676BD3
-    .float 0.42755499 #0x3EDAE87D
-    .float 0.010765 #0x3C305FAF
-    .float 0.022056 #0x3CB4AEC9
-    .float -0.893224 #0xBF64AA54
-    .float 0.44961101 #0x3EE6336A
-    .float 0.011303 #0x3C393038
-    .float 0.021785 #0x3CB27675
-    .float -0.88192099 #0xBF61C593
-    .float 0.47139701 #0x3EF15AF3
-    .float 0.011834 #0x3C41E365
-    .float 0.021500999 #0x3CB022DD
-    .float -0.87008703 #0xBF5EBE06
-    .float 0.49289799 #0x3EFC5D20
-    .float 0.012358 #0x3C4A7935
-    .float 0.021205001 #0x3CADB61C
-    .float -0.85772902 #0xBF5B9421
-    .float 0.514103 #0x3F039C41
-    .float 0.012875 #0x3C52F1AA
-    .float 0.020895001 #0x3CAB2BFE
-    .float -0.844854 #0xBF58485A
-    .float 0.534998 #0x3F08F5A1
-    .float 0.013384 #0x3C5B4891
-    .float 0.020572999 #0x3CA888B5
-    .float -0.83147001 #0xBF54DB38
-    .float 0.55557001 #0x3F0E39D6
-    .float 0.013885 #0x3C637DE9
-    .float 0.020238001 #0x3CA5CA2A
-    .float -0.81758499 #0xBF514D40
-    .float 0.57580799 #0x3F136827
-    .float 0.014377 #0x3C6B8D82
-    .float 0.019890999 #0x3CA2F273
-    .float -0.80320799 #0xBF4D9F0A
-    .float 0.59569901 #0x3F187FBB
-    .float 0.014861 #0x3C737B8D
-    .float 0.019532001 #0x3CA00193
-    .float -0.78834599 #0xBF49D10B
-    .float 0.61523199 #0x3F1D7FD8
-    .float 0.015336 #0x3C7B43D9
-    .float 0.019161999 #0x3C9CF9A0
-    .float -0.77301002 #0xBF45E3FC
-    .float 0.63439298 #0x3F226794
-    .float 0.015802 #0x3C817332
-    .float 0.018780001 #0x3C99D884
-    .float -0.757209 #0xBF41D873
-    .float 0.65317303 #0x3F273659
-    .float 0.016257999 #0x3C852F7F
-    .float 0.018386001 #0x3C969E3D
-    .float -0.740951 #0xBF3DAEF7
-    .float 0.67155898 #0x3F2BEB4A
-    .float 0.016704001 #0x3C88D6D4
-    .float 0.017982 #0x3C934EFD
-    .float -0.72424698 #0xBF396840
-    .float 0.68954098 #0x3F3085C2
-    .float 0.017139999 #0x3C8C692F
-    .float 0.017565999 #0x3C8FE692
-    .float -0.70710701 #0xBF3504F7
-    .float 0.70710701 #0x3F3504F7
-    .float 0.017565999 #0x3C8FE692
-    .float 0.017139999 #0x3C8C692F
-    .float -0.68954098 #0xBF3085C2
-    .float 0.72424698 #0x3F396840
-    .float 0.017982 #0x3C934EFD
-    .float 0.016704001 #0x3C88D6D4
-    .float -0.67155898 #0xBF2BEB4A
-    .float 0.740951 #0x3F3DAEF7
-    .float 0.018386001 #0x3C969E3D
-    .float 0.016257999 #0x3C852F7F
-    .float -0.65317303 #0xBF273659
-    .float 0.757209 #0x3F41D873
-    .float 0.018780001 #0x3C99D884
-    .float 0.015802 #0x3C817332
-    .float -0.63439298 #0xBF226794
-    .float 0.77301002 #0x3F45E3FC
-    .float 0.019161999 #0x3C9CF9A0
-    .float 0.015336 #0x3C7B43D9
-    .float -0.61523199 #0xBF1D7FD8
-    .float 0.78834599 #0x3F49D10B
-    .float 0.019532001 #0x3CA00193
-    .float 0.014861 #0x3C737B8D
-    .float -0.59569901 #0xBF187FBB
-    .float 0.80320799 #0x3F4D9F0A
-    .float 0.019890999 #0x3CA2F273
-    .float 0.014377 #0x3C6B8D82
-    .float -0.57580799 #0xBF136827
-    .float 0.81758499 #0x3F514D40
-    .float 0.020238001 #0x3CA5CA2A
-    .float 0.013885 #0x3C637DE9
-    .float -0.55557001 #0xBF0E39D6
-    .float 0.83147001 #0x3F54DB38
-    .float 0.020572999 #0x3CA888B5
-    .float 0.013384 #0x3C5B4891
-    .float -0.534998 #0xBF08F5A1
-    .float 0.844854 #0x3F58485A
-    .float 0.020895001 #0x3CAB2BFE
-    .float 0.012875 #0x3C52F1AA
-    .float -0.514103 #0xBF039C41
-    .float 0.85772902 #0x3F5B9421
-    .float 0.021205001 #0x3CADB61C
-    .float 0.012358 #0x3C4A7935
-    .float -0.49289799 #0xBEFC5D20
-    .float 0.87008703 #0x3F5EBE06
-    .float 0.021500999 #0x3CB022DD
-    .float 0.011834 #0x3C41E365
-    .float -0.47139701 #0xBEF15AF3
-    .float 0.88192099 #0x3F61C593
-    .float 0.021785 #0x3CB27675
-    .float 0.011303 #0x3C393038
-    .float -0.44961101 #0xBEE6336A
-    .float 0.893224 #0x3F64AA54
-    .float 0.022056 #0x3CB4AEC9
-    .float 0.010765 #0x3C305FAF
-    .float -0.42755499 #0xBEDAE87D
-    .float 0.90398902 #0x3F676BD3
-    .float 0.022314001 #0x3CB6CBDA
-    .float 0.01022 #0x3C2771C9
-    .float -0.40524101 #0xBECF7BC0
-    .float 0.91421002 #0x3F6A09AB
-    .float 0.022558 #0x3CB8CB8E
-    .float 0.0096699996 #0x3C1E6EEB
-    .float -0.38268301 #0xBEC3EF07
-    .float 0.92387998 #0x3F6C8366
-    .float 0.022787999 #0x3CBAADE6
-    .float 0.0091129998 #0x3C154EB1
-    .float -0.35989499 #0xBEB84428
-    .float 0.93299299 #0x3F6ED8A1
-    .float 0.023004999 #0x3CBC74FB
-    .float 0.0085509997 #0x3C0C197E
-    .float -0.33689001 #0xBEAC7CD9
-    .float 0.941544 #0x3F710907
-    .float 0.023208 #0x3CBE1EB4
-    .float 0.0079840003 #0x3C02CF53
-    .float -0.31368199 #0xBEA09AED
-    .float 0.94952798 #0x3F731444
-    .float 0.023397001 #0x3CBFAB11
-    .float 0.0074120001 #0x3BF2E05D
-    .float -0.29028499 #0xBE94A03C
-    .float 0.95694 #0x3F74FA05
-    .float 0.023572 #0x3CC11A11
-    .float 0.0068359999 #0x3BE00086
-    .float -0.26671299 #0xBE888E9B
-    .float 0.96377599 #0x3F76BA06
-    .float 0.023732999 #0x3CC26BB5
-    .float 0.0062549999 #0x3BCCF6BE
-    .float -0.24298 #0xBE78CFC0
-    .float 0.97003102 #0x3F7853F4
-    .float 0.023879001 #0x3CC39DE5
-    .float 0.0056710001 #0x3BB9D3CC
-    .float -0.219101 #0xBE605C03
-    .float 0.97570199 #0x3F79C79B
-    .float 0.024010999 #0x3CC4B2B7
-    .float 0.0050829998 #0x3BA68F4B
-    .float -0.19509 #0xBE47C5AC
-    .float 0.98078501 #0x3F7B14BA
-    .float 0.024127999 #0x3CC5A815
-    .float 0.0044920002 #0x3B9331A1
-    .float -0.17096201 #0xBE2F10AA
-    .float 0.98527801 #0x3F7C3B2E
-    .float 0.024231 #0x3CC68017
-    .float 0.0038989999 #0x3B7F865D
-    .float -0.14673001 #0xBE164064
-    .float 0.98917699 #0x3F7D3AB4
-    .float 0.024320001 #0x3CC73ABD
-    .float 0.003303 #0x3B587725
-    .float -0.122411 #0xBDFAB29E
-    .float 0.99247998 #0x3F7E132B
-    .float 0.024394 #0x3CC7D5ED
-    .float 0.0027050001 #0x3B31465F
-    .float -0.098017 #0xBDC8BD23
-    .float 0.99518502 #0x3F7EC472
-    .float 0.024452999 #0x3CC851A8
-    .float 0.002106 #0x3B0A04D1
-    .float -0.073564999 #0xBD96A93F
-    .float 0.99729002 #0x3F7F4E66
-    .float 0.024497001 #0x3CC8ADEF
-    .float 0.0015050001 #0x3AC5436C
-    .float -0.049068 #0xBD48FB87
-    .float 0.99879497 #0x3F7FB107
-    .float 0.024526 #0x3CC8EAC0
-    .float 0.00090300001 #0x3A6CB74E
-    .float -0.024541 #0xBCC90A35
-    .float 0.999699 #0x3F7FEC46
-    .float 0.024541 #0x3CC90A35
-    .float 0.00030099999 #0x399DCF89
-    .float -0 #0x80000000
-    .float 1.0
-    .float 0.024541 #0x3CC90A35
-    .float -0.00030099999 #0xB99DCF89
-
-
-.global lbl_8054EB98
-lbl_8054EB98:
-    .float 0 #0
-    .float 1.2728254 #0x3FA2EBF1
-    .float 1.2728254 #0x3FA2EBF1
-    .float 1.2703458 #0x3FA29AB1
-    .float 2.5431712 #0x4022C351
-    .float 1.2654155 #0x3FA1F923
-    .float 3.8085866 #0x4073BFE2
-    .float 1.2580916 #0x3FA10925
-    .float 5.0666785 #0x40A2223B
-    .float 1.2484571 #0x3F9FCD71
-    .float 6.3151355 #0x40CA1597
-    .float 1.2366195 #0x3F9E498C
-    .float 7.551755 #0x40F1A7FA
-    .float 1.2227072 #0x3F9C81AB
-    .float 8.7744617 #0x410C6432
-    .float 1.2068666 #0x3F9A7A9B
-    .float 9.981329 #0x411FB386
-    .float 1.1892582 #0x3F98399D
-    .float 11.170587 #0x4132BAB9
-    .float 1.1700529 #0x3F95C44B
-    .float 12.34064 #0x41457343
-    .float 1.149428 #0x3F932075
-    .float 13.49006748 #0x4157D751
-    .float 1.1275644 #0x3F905408
-    .float 14.617632 #0x4169E1D2
-    .float 1.1046423 #0x3F8D64EB
-    .float 15.722275 #0x417B8E70
-    .float 1.0808387 #0x3F8A58EC
-    .float 16.803114 #0x41866CC7
-    .float 1.0563251 #0x3F8735A9
-    .float 17.859438 #0x418EE021
-    .float 1.0312649 #0x3F84007D
-    .float 18.890703 #0x41972029
-    .float 1.005812 #0x3F80BE73
-    .float 19.896515 #0x419F2C10
-    .float 0.98010963 #0x3F7AE877
-    .float 20.876625 #0x41A70354
-    .float 0.95428908 #0x3F744C4A
-    .float 21.830914 #0x41AEA5B6
-    .float 0.92846978 #0x3F6DB032
-    .float 22.759384 #0x41B61338
-    .float 0.90275896 #0x3F671B36
-    .float 23.662142 #0x41BD4C11
-    .float 0.87725157 #0x3F60938F
-    .float 24.539394 #0x41C450AE
-    .float 0.85203087 #0x3F5A1EB2
-    .float 25.391424 #0x41CB21A3
-    .float 0.82716888 #0x3F53C157
-    .float 26.218594 #0x41D1BFAE
-    .float 0.80272698 #0x3F4D7F84
-    .float 27.02132 #0x41D82BAA
-    .float 0.77875656 #0x3F475C97
-    .float 27.800077 #0x41DE668F
-    .float 0.7553001 #0x3F415B59
-    .float 28.555378 #0x41E4716A
-    .float 0.73239148 #0x3F3B7E02
-    .float 29.287769 #0x41EA4D5A
-    .float 0.71005738 #0x3F35C652
-    .float 29.997826 #0x41EFFB8C
-    .float 0.68831748 #0x3F303593
-    .float 30.686144 #0x41F57D39
-    .float 0.66718566 #0x3F2ACCAE
-    .float 31.353329 #0x41FAD39E
-    .float 0.64667052 #0x3F258C33
-    .float 32 #0x42000000
-    .float 0.62677616 #0x3F207467
+# 0x8054DB88 - 0x8054ECA0
+.data
+.balign 8
+.sym lbl_8054DB88, local
+	.4byte 0x00000000
+	.4byte 0x3F800000
+	.4byte 0x3CC90A35
+	.4byte 0xB99DCF89
+	.4byte 0x3CC90A35
+	.4byte 0x3F7FEC46
+	.4byte 0x3CC8EAC0
+	.4byte 0xBA6CB74E
+	.4byte 0x3D48FB87
+	.4byte 0x3F7FB107
+	.4byte 0x3CC8ADEF
+	.4byte 0xBAC5436C
+	.4byte 0x3D96A93F
+	.4byte 0x3F7F4E66
+	.4byte 0x3CC851A8
+	.4byte 0xBB0A04D1
+	.4byte 0x3DC8BD23
+	.4byte 0x3F7EC472
+	.4byte 0x3CC7D5ED
+	.4byte 0xBB31465F
+	.4byte 0x3DFAB29E
+	.4byte 0x3F7E132B
+	.4byte 0x3CC73ABD
+	.4byte 0xBB587725
+	.4byte 0x3E164064
+	.4byte 0x3F7D3AB4
+	.4byte 0x3CC68017
+	.4byte 0xBB7F865D
+	.4byte 0x3E2F10AA
+	.4byte 0x3F7C3B2E
+	.4byte 0x3CC5A815
+	.4byte 0xBB9331A1
+	.4byte 0x3E47C5AC
+	.4byte 0x3F7B14BA
+	.4byte 0x3CC4B2B7
+	.4byte 0xBBA68F4B
+	.4byte 0x3E605C03
+	.4byte 0x3F79C79B
+	.4byte 0x3CC39DE5
+	.4byte 0xBBB9D3CC
+	.4byte 0x3E78CFC0
+	.4byte 0x3F7853F4
+	.4byte 0x3CC26BB5
+	.4byte 0xBBCCF6BE
+	.4byte 0x3E888E9B
+	.4byte 0x3F76BA06
+	.4byte 0x3CC11A11
+	.4byte 0xBBE00086
+	.4byte 0x3E94A03C
+	.4byte 0x3F74FA05
+	.4byte 0x3CBFAB11
+	.4byte 0xBBF2E05D
+	.4byte 0x3EA09AED
+	.4byte 0x3F731444
+	.4byte 0x3CBE1EB4
+	.4byte 0xBC02CF53
+	.4byte 0x3EAC7CD9
+	.4byte 0x3F710907
+	.4byte 0x3CBC74FB
+	.4byte 0xBC0C197E
+	.4byte 0x3EB84428
+	.4byte 0x3F6ED8A1
+	.4byte 0x3CBAADE6
+	.4byte 0xBC154EB1
+	.4byte 0x3EC3EF07
+	.4byte 0x3F6C8366
+	.4byte 0x3CB8CB8E
+	.4byte 0xBC1E6EEB
+	.4byte 0x3ECF7BC0
+	.4byte 0x3F6A09AB
+	.4byte 0x3CB6CBDA
+	.4byte 0xBC2771C9
+	.4byte 0x3EDAE87D
+	.4byte 0x3F676BD3
+	.4byte 0x3CB4AEC9
+	.4byte 0xBC305FAF
+	.4byte 0x3EE6336A
+	.4byte 0x3F64AA54
+	.4byte 0x3CB27675
+	.4byte 0xBC393038
+	.4byte 0x3EF15AF3
+	.4byte 0x3F61C593
+	.4byte 0x3CB022DD
+	.4byte 0xBC41E365
+	.4byte 0x3EFC5D20
+	.4byte 0x3F5EBE06
+	.4byte 0x3CADB61C
+	.4byte 0xBC4A7935
+	.4byte 0x3F039C41
+	.4byte 0x3F5B9421
+	.4byte 0x3CAB2BFE
+	.4byte 0xBC52F1AA
+	.4byte 0x3F08F5A1
+	.4byte 0x3F58485A
+	.4byte 0x3CA888B5
+	.4byte 0xBC5B4891
+	.4byte 0x3F0E39D6
+	.4byte 0x3F54DB38
+	.4byte 0x3CA5CA2A
+	.4byte 0xBC637DE9
+	.4byte 0x3F136827
+	.4byte 0x3F514D40
+	.4byte 0x3CA2F273
+	.4byte 0xBC6B8D82
+	.4byte 0x3F187FBB
+	.4byte 0x3F4D9F0A
+	.4byte 0x3CA00193
+	.4byte 0xBC737B8D
+	.4byte 0x3F1D7FD8
+	.4byte 0x3F49D10B
+	.4byte 0x3C9CF9A0
+	.4byte 0xBC7B43D9
+	.4byte 0x3F226794
+	.4byte 0x3F45E3FC
+	.4byte 0x3C99D884
+	.4byte 0xBC817332
+	.4byte 0x3F273659
+	.4byte 0x3F41D873
+	.4byte 0x3C969E3D
+	.4byte 0xBC852F7F
+	.4byte 0x3F2BEB4A
+	.4byte 0x3F3DAEF7
+	.4byte 0x3C934EFD
+	.4byte 0xBC88D6D4
+	.4byte 0x3F3085C2
+	.4byte 0x3F396840
+	.4byte 0x3C8FE692
+	.4byte 0xBC8C692F
+	.4byte 0x3F3504F7
+	.4byte 0x3F3504F7
+	.4byte 0x3C8C692F
+	.4byte 0xBC8FE692
+	.4byte 0x3F396840
+	.4byte 0x3F3085C2
+	.4byte 0x3C88D6D4
+	.4byte 0xBC934EFD
+	.4byte 0x3F3DAEF7
+	.4byte 0x3F2BEB4A
+	.4byte 0x3C852F7F
+	.4byte 0xBC969E3D
+	.4byte 0x3F41D873
+	.4byte 0x3F273659
+	.4byte 0x3C817332
+	.4byte 0xBC99D884
+	.4byte 0x3F45E3FC
+	.4byte 0x3F226794
+	.4byte 0x3C7B43D9
+	.4byte 0xBC9CF9A0
+	.4byte 0x3F49D10B
+	.4byte 0x3F1D7FD8
+	.4byte 0x3C737B8D
+	.4byte 0xBCA00193
+	.4byte 0x3F4D9F0A
+	.4byte 0x3F187FBB
+	.4byte 0x3C6B8D82
+	.4byte 0xBCA2F273
+	.4byte 0x3F514D40
+	.4byte 0x3F136827
+	.4byte 0x3C637DE9
+	.4byte 0xBCA5CA2A
+	.4byte 0x3F54DB38
+	.4byte 0x3F0E39D6
+	.4byte 0x3C5B4891
+	.4byte 0xBCA888B5
+	.4byte 0x3F58485A
+	.4byte 0x3F08F5A1
+	.4byte 0x3C52F1AA
+	.4byte 0xBCAB2BFE
+	.4byte 0x3F5B9421
+	.4byte 0x3F039C41
+	.4byte 0x3C4A7935
+	.4byte 0xBCADB61C
+	.4byte 0x3F5EBE06
+	.4byte 0x3EFC5D20
+	.4byte 0x3C41E365
+	.4byte 0xBCB022DD
+	.4byte 0x3F61C593
+	.4byte 0x3EF15AF3
+	.4byte 0x3C393038
+	.4byte 0xBCB27675
+	.4byte 0x3F64AA54
+	.4byte 0x3EE6336A
+	.4byte 0x3C305FAF
+	.4byte 0xBCB4AEC9
+	.4byte 0x3F676BD3
+	.4byte 0x3EDAE87D
+	.4byte 0x3C2771C9
+	.4byte 0xBCB6CBDA
+	.4byte 0x3F6A09AB
+	.4byte 0x3ECF7BC0
+	.4byte 0x3C1E6EEB
+	.4byte 0xBCB8CB8E
+	.4byte 0x3F6C8366
+	.4byte 0x3EC3EF07
+	.4byte 0x3C154EB1
+	.4byte 0xBCBAADE6
+	.4byte 0x3F6ED8A1
+	.4byte 0x3EB84428
+	.4byte 0x3C0C197E
+	.4byte 0xBCBC74FB
+	.4byte 0x3F710907
+	.4byte 0x3EAC7CD9
+	.4byte 0x3C02CF53
+	.4byte 0xBCBE1EB4
+	.4byte 0x3F731444
+	.4byte 0x3EA09AED
+	.4byte 0x3BF2E05D
+	.4byte 0xBCBFAB11
+	.4byte 0x3F74FA05
+	.4byte 0x3E94A03C
+	.4byte 0x3BE00086
+	.4byte 0xBCC11A11
+	.4byte 0x3F76BA06
+	.4byte 0x3E888E9B
+	.4byte 0x3BCCF6BE
+	.4byte 0xBCC26BB5
+	.4byte 0x3F7853F4
+	.4byte 0x3E78CFC0
+	.4byte 0x3BB9D3CC
+	.4byte 0xBCC39DE5
+	.4byte 0x3F79C79B
+	.4byte 0x3E605C03
+	.4byte 0x3BA68F4B
+	.4byte 0xBCC4B2B7
+	.4byte 0x3F7B14BA
+	.4byte 0x3E47C5AC
+	.4byte 0x3B9331A1
+	.4byte 0xBCC5A815
+	.4byte 0x3F7C3B2E
+	.4byte 0x3E2F10AA
+	.4byte 0x3B7F865D
+	.4byte 0xBCC68017
+	.4byte 0x3F7D3AB4
+	.4byte 0x3E164064
+	.4byte 0x3B587725
+	.4byte 0xBCC73ABD
+	.4byte 0x3F7E132B
+	.4byte 0x3DFAB29E
+	.4byte 0x3B31465F
+	.4byte 0xBCC7D5ED
+	.4byte 0x3F7EC472
+	.4byte 0x3DC8BD23
+	.4byte 0x3B0A04D1
+	.4byte 0xBCC851A8
+	.4byte 0x3F7F4E66
+	.4byte 0x3D96A93F
+	.4byte 0x3AC5436C
+	.4byte 0xBCC8ADEF
+	.4byte 0x3F7FB107
+	.4byte 0x3D48FB87
+	.4byte 0x3A6CB74E
+	.4byte 0xBCC8EAC0
+	.4byte 0x3F7FEC46
+	.4byte 0x3CC90A35
+	.4byte 0x399DCF89
+	.4byte 0xBCC90A35
+	.4byte 0x3F800000
+	.4byte 0x00000000
+	.4byte 0xB99DCF89
+	.4byte 0xBCC90A35
+	.4byte 0x3F7FEC46
+	.4byte 0xBCC90A35
+	.4byte 0xBA6CB74E
+	.4byte 0xBCC8EAC0
+	.4byte 0x3F7FB107
+	.4byte 0xBD48FB87
+	.4byte 0xBAC5436C
+	.4byte 0xBCC8ADEF
+	.4byte 0x3F7F4E66
+	.4byte 0xBD96A93F
+	.4byte 0xBB0A04D1
+	.4byte 0xBCC851A8
+	.4byte 0x3F7EC472
+	.4byte 0xBDC8BD23
+	.4byte 0xBB31465F
+	.4byte 0xBCC7D5ED
+	.4byte 0x3F7E132B
+	.4byte 0xBDFAB29E
+	.4byte 0xBB587725
+	.4byte 0xBCC73ABD
+	.4byte 0x3F7D3AB4
+	.4byte 0xBE164064
+	.4byte 0xBB7F865D
+	.4byte 0xBCC68017
+	.4byte 0x3F7C3B2E
+	.4byte 0xBE2F10AA
+	.4byte 0xBB9331A1
+	.4byte 0xBCC5A815
+	.4byte 0x3F7B14BA
+	.4byte 0xBE47C5AC
+	.4byte 0xBBA68F4B
+	.4byte 0xBCC4B2B7
+	.4byte 0x3F79C79B
+	.4byte 0xBE605C03
+	.4byte 0xBBB9D3CC
+	.4byte 0xBCC39DE5
+	.4byte 0x3F7853F4
+	.4byte 0xBE78CFC0
+	.4byte 0xBBCCF6BE
+	.4byte 0xBCC26BB5
+	.4byte 0x3F76BA06
+	.4byte 0xBE888E9B
+	.4byte 0xBBE00086
+	.4byte 0xBCC11A11
+	.4byte 0x3F74FA05
+	.4byte 0xBE94A03C
+	.4byte 0xBBF2E05D
+	.4byte 0xBCBFAB11
+	.4byte 0x3F731444
+	.4byte 0xBEA09AED
+	.4byte 0xBC02CF53
+	.4byte 0xBCBE1EB4
+	.4byte 0x3F710907
+	.4byte 0xBEAC7CD9
+	.4byte 0xBC0C197E
+	.4byte 0xBCBC74FB
+	.4byte 0x3F6ED8A1
+	.4byte 0xBEB84428
+	.4byte 0xBC154EB1
+	.4byte 0xBCBAADE6
+	.4byte 0x3F6C8366
+	.4byte 0xBEC3EF07
+	.4byte 0xBC1E6EEB
+	.4byte 0xBCB8CB8E
+	.4byte 0x3F6A09AB
+	.4byte 0xBECF7BC0
+	.4byte 0xBC2771C9
+	.4byte 0xBCB6CBDA
+	.4byte 0x3F676BD3
+	.4byte 0xBEDAE87D
+	.4byte 0xBC305FAF
+	.4byte 0xBCB4AEC9
+	.4byte 0x3F64AA54
+	.4byte 0xBEE6336A
+	.4byte 0xBC393038
+	.4byte 0xBCB27675
+	.4byte 0x3F61C593
+	.4byte 0xBEF15AF3
+	.4byte 0xBC41E365
+	.4byte 0xBCB022DD
+	.4byte 0x3F5EBE06
+	.4byte 0xBEFC5D20
+	.4byte 0xBC4A7935
+	.4byte 0xBCADB61C
+	.4byte 0x3F5B9421
+	.4byte 0xBF039C41
+	.4byte 0xBC52F1AA
+	.4byte 0xBCAB2BFE
+	.4byte 0x3F58485A
+	.4byte 0xBF08F5A1
+	.4byte 0xBC5B4891
+	.4byte 0xBCA888B5
+	.4byte 0x3F54DB38
+	.4byte 0xBF0E39D6
+	.4byte 0xBC637DE9
+	.4byte 0xBCA5CA2A
+	.4byte 0x3F514D40
+	.4byte 0xBF136827
+	.4byte 0xBC6B8D82
+	.4byte 0xBCA2F273
+	.4byte 0x3F4D9F0A
+	.4byte 0xBF187FBB
+	.4byte 0xBC737B8D
+	.4byte 0xBCA00193
+	.4byte 0x3F49D10B
+	.4byte 0xBF1D7FD8
+	.4byte 0xBC7B43D9
+	.4byte 0xBC9CF9A0
+	.4byte 0x3F45E3FC
+	.4byte 0xBF226794
+	.4byte 0xBC817332
+	.4byte 0xBC99D884
+	.4byte 0x3F41D873
+	.4byte 0xBF273659
+	.4byte 0xBC852F7F
+	.4byte 0xBC969E3D
+	.4byte 0x3F3DAEF7
+	.4byte 0xBF2BEB4A
+	.4byte 0xBC88D6D4
+	.4byte 0xBC934EFD
+	.4byte 0x3F396840
+	.4byte 0xBF3085C2
+	.4byte 0xBC8C692F
+	.4byte 0xBC8FE692
+	.4byte 0x3F3504F7
+	.4byte 0xBF3504F7
+	.4byte 0xBC8FE692
+	.4byte 0xBC8C692F
+	.4byte 0x3F3085C2
+	.4byte 0xBF396840
+	.4byte 0xBC934EFD
+	.4byte 0xBC88D6D4
+	.4byte 0x3F2BEB4A
+	.4byte 0xBF3DAEF7
+	.4byte 0xBC969E3D
+	.4byte 0xBC852F7F
+	.4byte 0x3F273659
+	.4byte 0xBF41D873
+	.4byte 0xBC99D884
+	.4byte 0xBC817332
+	.4byte 0x3F226794
+	.4byte 0xBF45E3FC
+	.4byte 0xBC9CF9A0
+	.4byte 0xBC7B43D9
+	.4byte 0x3F1D7FD8
+	.4byte 0xBF49D10B
+	.4byte 0xBCA00193
+	.4byte 0xBC737B8D
+	.4byte 0x3F187FBB
+	.4byte 0xBF4D9F0A
+	.4byte 0xBCA2F273
+	.4byte 0xBC6B8D82
+	.4byte 0x3F136827
+	.4byte 0xBF514D40
+	.4byte 0xBCA5CA2A
+	.4byte 0xBC637DE9
+	.4byte 0x3F0E39D6
+	.4byte 0xBF54DB38
+	.4byte 0xBCA888B5
+	.4byte 0xBC5B4891
+	.4byte 0x3F08F5A1
+	.4byte 0xBF58485A
+	.4byte 0xBCAB2BFE
+	.4byte 0xBC52F1AA
+	.4byte 0x3F039C41
+	.4byte 0xBF5B9421
+	.4byte 0xBCADB61C
+	.4byte 0xBC4A7935
+	.4byte 0x3EFC5D20
+	.4byte 0xBF5EBE06
+	.4byte 0xBCB022DD
+	.4byte 0xBC41E365
+	.4byte 0x3EF15AF3
+	.4byte 0xBF61C593
+	.4byte 0xBCB27675
+	.4byte 0xBC393038
+	.4byte 0x3EE6336A
+	.4byte 0xBF64AA54
+	.4byte 0xBCB4AEC9
+	.4byte 0xBC305FAF
+	.4byte 0x3EDAE87D
+	.4byte 0xBF676BD3
+	.4byte 0xBCB6CBDA
+	.4byte 0xBC2771C9
+	.4byte 0x3ECF7BC0
+	.4byte 0xBF6A09AB
+	.4byte 0xBCB8CB8E
+	.4byte 0xBC1E6EEB
+	.4byte 0x3EC3EF07
+	.4byte 0xBF6C8366
+	.4byte 0xBCBAADE6
+	.4byte 0xBC154EB1
+	.4byte 0x3EB84428
+	.4byte 0xBF6ED8A1
+	.4byte 0xBCBC74FB
+	.4byte 0xBC0C197E
+	.4byte 0x3EAC7CD9
+	.4byte 0xBF710907
+	.4byte 0xBCBE1EB4
+	.4byte 0xBC02CF53
+	.4byte 0x3EA09AED
+	.4byte 0xBF731444
+	.4byte 0xBCBFAB11
+	.4byte 0xBBF2E05D
+	.4byte 0x3E94A03C
+	.4byte 0xBF74FA05
+	.4byte 0xBCC11A11
+	.4byte 0xBBE00086
+	.4byte 0x3E888E9B
+	.4byte 0xBF76BA06
+	.4byte 0xBCC26BB5
+	.4byte 0xBBCCF6BE
+	.4byte 0x3E78CFC0
+	.4byte 0xBF7853F4
+	.4byte 0xBCC39DE5
+	.4byte 0xBBB9D3CC
+	.4byte 0x3E605C03
+	.4byte 0xBF79C79B
+	.4byte 0xBCC4B2B7
+	.4byte 0xBBA68F4B
+	.4byte 0x3E47C5AC
+	.4byte 0xBF7B14BA
+	.4byte 0xBCC5A815
+	.4byte 0xBB9331A1
+	.4byte 0x3E2F10AA
+	.4byte 0xBF7C3B2E
+	.4byte 0xBCC68017
+	.4byte 0xBB7F865D
+	.4byte 0x3E164064
+	.4byte 0xBF7D3AB4
+	.4byte 0xBCC73ABD
+	.4byte 0xBB587725
+	.4byte 0x3DFAB29E
+	.4byte 0xBF7E132B
+	.4byte 0xBCC7D5ED
+	.4byte 0xBB31465F
+	.4byte 0x3DC8BD23
+	.4byte 0xBF7EC472
+	.4byte 0xBCC851A8
+	.4byte 0xBB0A04D1
+	.4byte 0x3D96A93F
+	.4byte 0xBF7F4E66
+	.4byte 0xBCC8ADEF
+	.4byte 0xBAC5436C
+	.4byte 0x3D48FB87
+	.4byte 0xBF7FB107
+	.4byte 0xBCC8EAC0
+	.4byte 0xBA6CB74E
+	.4byte 0x3CC90A35
+	.4byte 0xBF7FEC46
+	.4byte 0xBCC90A35
+	.4byte 0xB99DCF89
+	.4byte 0x00000000
+	.4byte 0xBF800000
+	.4byte 0xBCC90A35
+	.4byte 0x399DCF89
+	.4byte 0xBCC90A35
+	.4byte 0xBF7FEC46
+	.4byte 0xBCC8EAC0
+	.4byte 0x3A6CB74E
+	.4byte 0xBD48FB87
+	.4byte 0xBF7FB107
+	.4byte 0xBCC8ADEF
+	.4byte 0x3AC5436C
+	.4byte 0xBD96A93F
+	.4byte 0xBF7F4E66
+	.4byte 0xBCC851A8
+	.4byte 0x3B0A04D1
+	.4byte 0xBDC8BD23
+	.4byte 0xBF7EC472
+	.4byte 0xBCC7D5ED
+	.4byte 0x3B31465F
+	.4byte 0xBDFAB29E
+	.4byte 0xBF7E132B
+	.4byte 0xBCC73ABD
+	.4byte 0x3B587725
+	.4byte 0xBE164064
+	.4byte 0xBF7D3AB4
+	.4byte 0xBCC68017
+	.4byte 0x3B7F865D
+	.4byte 0xBE2F10AA
+	.4byte 0xBF7C3B2E
+	.4byte 0xBCC5A815
+	.4byte 0x3B9331A1
+	.4byte 0xBE47C5AC
+	.4byte 0xBF7B14BA
+	.4byte 0xBCC4B2B7
+	.4byte 0x3BA68F4B
+	.4byte 0xBE605C03
+	.4byte 0xBF79C79B
+	.4byte 0xBCC39DE5
+	.4byte 0x3BB9D3CC
+	.4byte 0xBE78CFC0
+	.4byte 0xBF7853F4
+	.4byte 0xBCC26BB5
+	.4byte 0x3BCCF6BE
+	.4byte 0xBE888E9B
+	.4byte 0xBF76BA06
+	.4byte 0xBCC11A11
+	.4byte 0x3BE00086
+	.4byte 0xBE94A03C
+	.4byte 0xBF74FA05
+	.4byte 0xBCBFAB11
+	.4byte 0x3BF2E05D
+	.4byte 0xBEA09AED
+	.4byte 0xBF731444
+	.4byte 0xBCBE1EB4
+	.4byte 0x3C02CF53
+	.4byte 0xBEAC7CD9
+	.4byte 0xBF710907
+	.4byte 0xBCBC74FB
+	.4byte 0x3C0C197E
+	.4byte 0xBEB84428
+	.4byte 0xBF6ED8A1
+	.4byte 0xBCBAADE6
+	.4byte 0x3C154EB1
+	.4byte 0xBEC3EF07
+	.4byte 0xBF6C8366
+	.4byte 0xBCB8CB8E
+	.4byte 0x3C1E6EEB
+	.4byte 0xBECF7BC0
+	.4byte 0xBF6A09AB
+	.4byte 0xBCB6CBDA
+	.4byte 0x3C2771C9
+	.4byte 0xBEDAE87D
+	.4byte 0xBF676BD3
+	.4byte 0xBCB4AEC9
+	.4byte 0x3C305FAF
+	.4byte 0xBEE6336A
+	.4byte 0xBF64AA54
+	.4byte 0xBCB27675
+	.4byte 0x3C393038
+	.4byte 0xBEF15AF3
+	.4byte 0xBF61C593
+	.4byte 0xBCB022DD
+	.4byte 0x3C41E365
+	.4byte 0xBEFC5D20
+	.4byte 0xBF5EBE06
+	.4byte 0xBCADB61C
+	.4byte 0x3C4A7935
+	.4byte 0xBF039C41
+	.4byte 0xBF5B9421
+	.4byte 0xBCAB2BFE
+	.4byte 0x3C52F1AA
+	.4byte 0xBF08F5A1
+	.4byte 0xBF58485A
+	.4byte 0xBCA888B5
+	.4byte 0x3C5B4891
+	.4byte 0xBF0E39D6
+	.4byte 0xBF54DB38
+	.4byte 0xBCA5CA2A
+	.4byte 0x3C637DE9
+	.4byte 0xBF136827
+	.4byte 0xBF514D40
+	.4byte 0xBCA2F273
+	.4byte 0x3C6B8D82
+	.4byte 0xBF187FBB
+	.4byte 0xBF4D9F0A
+	.4byte 0xBCA00193
+	.4byte 0x3C737B8D
+	.4byte 0xBF1D7FD8
+	.4byte 0xBF49D10B
+	.4byte 0xBC9CF9A0
+	.4byte 0x3C7B43D9
+	.4byte 0xBF226794
+	.4byte 0xBF45E3FC
+	.4byte 0xBC99D884
+	.4byte 0x3C817332
+	.4byte 0xBF273659
+	.4byte 0xBF41D873
+	.4byte 0xBC969E3D
+	.4byte 0x3C852F7F
+	.4byte 0xBF2BEB4A
+	.4byte 0xBF3DAEF7
+	.4byte 0xBC934EFD
+	.4byte 0x3C88D6D4
+	.4byte 0xBF3085C2
+	.4byte 0xBF396840
+	.4byte 0xBC8FE692
+	.4byte 0x3C8C692F
+	.4byte 0xBF3504F7
+	.4byte 0xBF3504F7
+	.4byte 0xBC8C692F
+	.4byte 0x3C8FE692
+	.4byte 0xBF396840
+	.4byte 0xBF3085C2
+	.4byte 0xBC88D6D4
+	.4byte 0x3C934EFD
+	.4byte 0xBF3DAEF7
+	.4byte 0xBF2BEB4A
+	.4byte 0xBC852F7F
+	.4byte 0x3C969E3D
+	.4byte 0xBF41D873
+	.4byte 0xBF273659
+	.4byte 0xBC817332
+	.4byte 0x3C99D884
+	.4byte 0xBF45E3FC
+	.4byte 0xBF226794
+	.4byte 0xBC7B43D9
+	.4byte 0x3C9CF9A0
+	.4byte 0xBF49D10B
+	.4byte 0xBF1D7FD8
+	.4byte 0xBC737B8D
+	.4byte 0x3CA00193
+	.4byte 0xBF4D9F0A
+	.4byte 0xBF187FBB
+	.4byte 0xBC6B8D82
+	.4byte 0x3CA2F273
+	.4byte 0xBF514D40
+	.4byte 0xBF136827
+	.4byte 0xBC637DE9
+	.4byte 0x3CA5CA2A
+	.4byte 0xBF54DB38
+	.4byte 0xBF0E39D6
+	.4byte 0xBC5B4891
+	.4byte 0x3CA888B5
+	.4byte 0xBF58485A
+	.4byte 0xBF08F5A1
+	.4byte 0xBC52F1AA
+	.4byte 0x3CAB2BFE
+	.4byte 0xBF5B9421
+	.4byte 0xBF039C41
+	.4byte 0xBC4A7935
+	.4byte 0x3CADB61C
+	.4byte 0xBF5EBE06
+	.4byte 0xBEFC5D20
+	.4byte 0xBC41E365
+	.4byte 0x3CB022DD
+	.4byte 0xBF61C593
+	.4byte 0xBEF15AF3
+	.4byte 0xBC393038
+	.4byte 0x3CB27675
+	.4byte 0xBF64AA54
+	.4byte 0xBEE6336A
+	.4byte 0xBC305FAF
+	.4byte 0x3CB4AEC9
+	.4byte 0xBF676BD3
+	.4byte 0xBEDAE87D
+	.4byte 0xBC2771C9
+	.4byte 0x3CB6CBDA
+	.4byte 0xBF6A09AB
+	.4byte 0xBECF7BC0
+	.4byte 0xBC1E6EEB
+	.4byte 0x3CB8CB8E
+	.4byte 0xBF6C8366
+	.4byte 0xBEC3EF07
+	.4byte 0xBC154EB1
+	.4byte 0x3CBAADE6
+	.4byte 0xBF6ED8A1
+	.4byte 0xBEB84428
+	.4byte 0xBC0C197E
+	.4byte 0x3CBC74FB
+	.4byte 0xBF710907
+	.4byte 0xBEAC7CD9
+	.4byte 0xBC02CF53
+	.4byte 0x3CBE1EB4
+	.4byte 0xBF731444
+	.4byte 0xBEA09AED
+	.4byte 0xBBF2E05D
+	.4byte 0x3CBFAB11
+	.4byte 0xBF74FA05
+	.4byte 0xBE94A03C
+	.4byte 0xBBE00086
+	.4byte 0x3CC11A11
+	.4byte 0xBF76BA06
+	.4byte 0xBE888E9B
+	.4byte 0xBBCCF6BE
+	.4byte 0x3CC26BB5
+	.4byte 0xBF7853F4
+	.4byte 0xBE78CFC0
+	.4byte 0xBBB9D3CC
+	.4byte 0x3CC39DE5
+	.4byte 0xBF79C79B
+	.4byte 0xBE605C03
+	.4byte 0xBBA68F4B
+	.4byte 0x3CC4B2B7
+	.4byte 0xBF7B14BA
+	.4byte 0xBE47C5AC
+	.4byte 0xBB9331A1
+	.4byte 0x3CC5A815
+	.4byte 0xBF7C3B2E
+	.4byte 0xBE2F10AA
+	.4byte 0xBB7F865D
+	.4byte 0x3CC68017
+	.4byte 0xBF7D3AB4
+	.4byte 0xBE164064
+	.4byte 0xBB587725
+	.4byte 0x3CC73ABD
+	.4byte 0xBF7E132B
+	.4byte 0xBDFAB29E
+	.4byte 0xBB31465F
+	.4byte 0x3CC7D5ED
+	.4byte 0xBF7EC472
+	.4byte 0xBDC8BD23
+	.4byte 0xBB0A04D1
+	.4byte 0x3CC851A8
+	.4byte 0xBF7F4E66
+	.4byte 0xBD96A93F
+	.4byte 0xBAC5436C
+	.4byte 0x3CC8ADEF
+	.4byte 0xBF7FB107
+	.4byte 0xBD48FB87
+	.4byte 0xBA6CB74E
+	.4byte 0x3CC8EAC0
+	.4byte 0xBF7FEC46
+	.4byte 0xBCC90A35
+	.4byte 0xB99DCF89
+	.4byte 0x3CC90A35
+	.4byte 0xBF800000
+	.4byte 0x80000000
+	.4byte 0x399DCF89
+	.4byte 0x3CC90A35
+	.4byte 0xBF7FEC46
+	.4byte 0x3CC90A35
+	.4byte 0x3A6CB74E
+	.4byte 0x3CC8EAC0
+	.4byte 0xBF7FB107
+	.4byte 0x3D48FB87
+	.4byte 0x3AC5436C
+	.4byte 0x3CC8ADEF
+	.4byte 0xBF7F4E66
+	.4byte 0x3D96A93F
+	.4byte 0x3B0A04D1
+	.4byte 0x3CC851A8
+	.4byte 0xBF7EC472
+	.4byte 0x3DC8BD23
+	.4byte 0x3B31465F
+	.4byte 0x3CC7D5ED
+	.4byte 0xBF7E132B
+	.4byte 0x3DFAB29E
+	.4byte 0x3B587725
+	.4byte 0x3CC73ABD
+	.4byte 0xBF7D3AB4
+	.4byte 0x3E164064
+	.4byte 0x3B7F865D
+	.4byte 0x3CC68017
+	.4byte 0xBF7C3B2E
+	.4byte 0x3E2F10AA
+	.4byte 0x3B9331A1
+	.4byte 0x3CC5A815
+	.4byte 0xBF7B14BA
+	.4byte 0x3E47C5AC
+	.4byte 0x3BA68F4B
+	.4byte 0x3CC4B2B7
+	.4byte 0xBF79C79B
+	.4byte 0x3E605C03
+	.4byte 0x3BB9D3CC
+	.4byte 0x3CC39DE5
+	.4byte 0xBF7853F4
+	.4byte 0x3E78CFC0
+	.4byte 0x3BCCF6BE
+	.4byte 0x3CC26BB5
+	.4byte 0xBF76BA06
+	.4byte 0x3E888E9B
+	.4byte 0x3BE00086
+	.4byte 0x3CC11A11
+	.4byte 0xBF74FA05
+	.4byte 0x3E94A03C
+	.4byte 0x3BF2E05D
+	.4byte 0x3CBFAB11
+	.4byte 0xBF731444
+	.4byte 0x3EA09AED
+	.4byte 0x3C02CF53
+	.4byte 0x3CBE1EB4
+	.4byte 0xBF710907
+	.4byte 0x3EAC7CD9
+	.4byte 0x3C0C197E
+	.4byte 0x3CBC74FB
+	.4byte 0xBF6ED8A1
+	.4byte 0x3EB84428
+	.4byte 0x3C154EB1
+	.4byte 0x3CBAADE6
+	.4byte 0xBF6C8366
+	.4byte 0x3EC3EF07
+	.4byte 0x3C1E6EEB
+	.4byte 0x3CB8CB8E
+	.4byte 0xBF6A09AB
+	.4byte 0x3ECF7BC0
+	.4byte 0x3C2771C9
+	.4byte 0x3CB6CBDA
+	.4byte 0xBF676BD3
+	.4byte 0x3EDAE87D
+	.4byte 0x3C305FAF
+	.4byte 0x3CB4AEC9
+	.4byte 0xBF64AA54
+	.4byte 0x3EE6336A
+	.4byte 0x3C393038
+	.4byte 0x3CB27675
+	.4byte 0xBF61C593
+	.4byte 0x3EF15AF3
+	.4byte 0x3C41E365
+	.4byte 0x3CB022DD
+	.4byte 0xBF5EBE06
+	.4byte 0x3EFC5D20
+	.4byte 0x3C4A7935
+	.4byte 0x3CADB61C
+	.4byte 0xBF5B9421
+	.4byte 0x3F039C41
+	.4byte 0x3C52F1AA
+	.4byte 0x3CAB2BFE
+	.4byte 0xBF58485A
+	.4byte 0x3F08F5A1
+	.4byte 0x3C5B4891
+	.4byte 0x3CA888B5
+	.4byte 0xBF54DB38
+	.4byte 0x3F0E39D6
+	.4byte 0x3C637DE9
+	.4byte 0x3CA5CA2A
+	.4byte 0xBF514D40
+	.4byte 0x3F136827
+	.4byte 0x3C6B8D82
+	.4byte 0x3CA2F273
+	.4byte 0xBF4D9F0A
+	.4byte 0x3F187FBB
+	.4byte 0x3C737B8D
+	.4byte 0x3CA00193
+	.4byte 0xBF49D10B
+	.4byte 0x3F1D7FD8
+	.4byte 0x3C7B43D9
+	.4byte 0x3C9CF9A0
+	.4byte 0xBF45E3FC
+	.4byte 0x3F226794
+	.4byte 0x3C817332
+	.4byte 0x3C99D884
+	.4byte 0xBF41D873
+	.4byte 0x3F273659
+	.4byte 0x3C852F7F
+	.4byte 0x3C969E3D
+	.4byte 0xBF3DAEF7
+	.4byte 0x3F2BEB4A
+	.4byte 0x3C88D6D4
+	.4byte 0x3C934EFD
+	.4byte 0xBF396840
+	.4byte 0x3F3085C2
+	.4byte 0x3C8C692F
+	.4byte 0x3C8FE692
+	.4byte 0xBF3504F7
+	.4byte 0x3F3504F7
+	.4byte 0x3C8FE692
+	.4byte 0x3C8C692F
+	.4byte 0xBF3085C2
+	.4byte 0x3F396840
+	.4byte 0x3C934EFD
+	.4byte 0x3C88D6D4
+	.4byte 0xBF2BEB4A
+	.4byte 0x3F3DAEF7
+	.4byte 0x3C969E3D
+	.4byte 0x3C852F7F
+	.4byte 0xBF273659
+	.4byte 0x3F41D873
+	.4byte 0x3C99D884
+	.4byte 0x3C817332
+	.4byte 0xBF226794
+	.4byte 0x3F45E3FC
+	.4byte 0x3C9CF9A0
+	.4byte 0x3C7B43D9
+	.4byte 0xBF1D7FD8
+	.4byte 0x3F49D10B
+	.4byte 0x3CA00193
+	.4byte 0x3C737B8D
+	.4byte 0xBF187FBB
+	.4byte 0x3F4D9F0A
+	.4byte 0x3CA2F273
+	.4byte 0x3C6B8D82
+	.4byte 0xBF136827
+	.4byte 0x3F514D40
+	.4byte 0x3CA5CA2A
+	.4byte 0x3C637DE9
+	.4byte 0xBF0E39D6
+	.4byte 0x3F54DB38
+	.4byte 0x3CA888B5
+	.4byte 0x3C5B4891
+	.4byte 0xBF08F5A1
+	.4byte 0x3F58485A
+	.4byte 0x3CAB2BFE
+	.4byte 0x3C52F1AA
+	.4byte 0xBF039C41
+	.4byte 0x3F5B9421
+	.4byte 0x3CADB61C
+	.4byte 0x3C4A7935
+	.4byte 0xBEFC5D20
+	.4byte 0x3F5EBE06
+	.4byte 0x3CB022DD
+	.4byte 0x3C41E365
+	.4byte 0xBEF15AF3
+	.4byte 0x3F61C593
+	.4byte 0x3CB27675
+	.4byte 0x3C393038
+	.4byte 0xBEE6336A
+	.4byte 0x3F64AA54
+	.4byte 0x3CB4AEC9
+	.4byte 0x3C305FAF
+	.4byte 0xBEDAE87D
+	.4byte 0x3F676BD3
+	.4byte 0x3CB6CBDA
+	.4byte 0x3C2771C9
+	.4byte 0xBECF7BC0
+	.4byte 0x3F6A09AB
+	.4byte 0x3CB8CB8E
+	.4byte 0x3C1E6EEB
+	.4byte 0xBEC3EF07
+	.4byte 0x3F6C8366
+	.4byte 0x3CBAADE6
+	.4byte 0x3C154EB1
+	.4byte 0xBEB84428
+	.4byte 0x3F6ED8A1
+	.4byte 0x3CBC74FB
+	.4byte 0x3C0C197E
+	.4byte 0xBEAC7CD9
+	.4byte 0x3F710907
+	.4byte 0x3CBE1EB4
+	.4byte 0x3C02CF53
+	.4byte 0xBEA09AED
+	.4byte 0x3F731444
+	.4byte 0x3CBFAB11
+	.4byte 0x3BF2E05D
+	.4byte 0xBE94A03C
+	.4byte 0x3F74FA05
+	.4byte 0x3CC11A11
+	.4byte 0x3BE00086
+	.4byte 0xBE888E9B
+	.4byte 0x3F76BA06
+	.4byte 0x3CC26BB5
+	.4byte 0x3BCCF6BE
+	.4byte 0xBE78CFC0
+	.4byte 0x3F7853F4
+	.4byte 0x3CC39DE5
+	.4byte 0x3BB9D3CC
+	.4byte 0xBE605C03
+	.4byte 0x3F79C79B
+	.4byte 0x3CC4B2B7
+	.4byte 0x3BA68F4B
+	.4byte 0xBE47C5AC
+	.4byte 0x3F7B14BA
+	.4byte 0x3CC5A815
+	.4byte 0x3B9331A1
+	.4byte 0xBE2F10AA
+	.4byte 0x3F7C3B2E
+	.4byte 0x3CC68017
+	.4byte 0x3B7F865D
+	.4byte 0xBE164064
+	.4byte 0x3F7D3AB4
+	.4byte 0x3CC73ABD
+	.4byte 0x3B587725
+	.4byte 0xBDFAB29E
+	.4byte 0x3F7E132B
+	.4byte 0x3CC7D5ED
+	.4byte 0x3B31465F
+	.4byte 0xBDC8BD23
+	.4byte 0x3F7EC472
+	.4byte 0x3CC851A8
+	.4byte 0x3B0A04D1
+	.4byte 0xBD96A93F
+	.4byte 0x3F7F4E66
+	.4byte 0x3CC8ADEF
+	.4byte 0x3AC5436C
+	.4byte 0xBD48FB87
+	.4byte 0x3F7FB107
+	.4byte 0x3CC8EAC0
+	.4byte 0x3A6CB74E
+	.4byte 0xBCC90A35
+	.4byte 0x3F7FEC46
+	.4byte 0x3CC90A35
+	.4byte 0x399DCF89
+	.4byte 0x80000000
+	.4byte 0x3F800000
+	.4byte 0x3CC90A35
+	.4byte 0xB99DCF89
+.sym lbl_8054EB98, local
+	.4byte 0x00000000
+	.4byte 0x3FA2EBF1
+	.4byte 0x3FA2EBF1
+	.4byte 0x3FA29AB1
+	.4byte 0x4022C351
+	.4byte 0x3FA1F923
+	.4byte 0x4073BFE2
+	.4byte 0x3FA10925
+	.4byte 0x40A2223B
+	.4byte 0x3F9FCD71
+	.4byte 0x40CA1597
+	.4byte 0x3F9E498C
+	.4byte 0x40F1A7FA
+	.4byte 0x3F9C81AB
+	.4byte 0x410C6432
+	.4byte 0x3F9A7A9B
+	.4byte 0x411FB386
+	.4byte 0x3F98399D
+	.4byte 0x4132BAB9
+	.4byte 0x3F95C44B
+	.4byte 0x41457343
+	.4byte 0x3F932075
+	.4byte 0x4157D751
+	.4byte 0x3F905408
+	.4byte 0x4169E1D2
+	.4byte 0x3F8D64EB
+	.4byte 0x417B8E70
+	.4byte 0x3F8A58EC
+	.4byte 0x41866CC7
+	.4byte 0x3F8735A9
+	.4byte 0x418EE021
+	.4byte 0x3F84007D
+	.4byte 0x41972029
+	.4byte 0x3F80BE73
+	.4byte 0x419F2C10
+	.4byte 0x3F7AE877
+	.4byte 0x41A70354
+	.4byte 0x3F744C4A
+	.4byte 0x41AEA5B6
+	.4byte 0x3F6DB032
+	.4byte 0x41B61338
+	.4byte 0x3F671B36
+	.4byte 0x41BD4C11
+	.4byte 0x3F60938F
+	.4byte 0x41C450AE
+	.4byte 0x3F5A1EB2
+	.4byte 0x41CB21A3
+	.4byte 0x3F53C157
+	.4byte 0x41D1BFAE
+	.4byte 0x3F4D7F84
+	.4byte 0x41D82BAA
+	.4byte 0x3F475C97
+	.4byte 0x41DE668F
+	.4byte 0x3F415B59
+	.4byte 0x41E4716A
+	.4byte 0x3F3B7E02
+	.4byte 0x41EA4D5A
+	.4byte 0x3F35C652
+	.4byte 0x41EFFB8C
+	.4byte 0x3F303593
+	.4byte 0x41F57D39
+	.4byte 0x3F2ACCAE
+	.4byte 0x41FAD39E
+	.4byte 0x3F258C33
+	.4byte 0x42000000
+	.4byte 0x3F207467

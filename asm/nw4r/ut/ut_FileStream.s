@@ -1,30 +1,32 @@
 .include "macros.inc"
+.file "nw4r/ut/ut_FileStream.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x8042BDFC - 0x8042BE14
+.text
+.balign 4
 
-#Seek__Q34nw4r2ut10FileStreamFlUl or Cancel__Q34nw4r2ut10FileStreamFv
-.global func_8042BDFC
-func_8042BDFC:
-/* 8042BDFC 003F53BC  4E 80 00 20 */	blr 
+.fn fn_8042BDFC, local
+/* 8042BDFC 003F53BC  4E 80 00 20 */	blr
+.endfn fn_8042BDFC
 
-#GetBufferAlign__Q34nw4r2ut8IOStreamCFv, GetSizeAlign__Q34nw4r2ut8IOStreamCFv or GetOffsetAlign__Q34nw4r2ut8IOStreamCFv
-.global func_8042BE00
-func_8042BE00:
-/* 8042BE00 003F53C0  38 60 00 01 */	li r3, 1
+.fn fn_8042BE00, local
+/* 8042BE00 003F53C0  38 60 00 01 */	li r3, 0x1
 /* 8042BE04 003F53C4  4E 80 00 20 */	blr
+.endfn fn_8042BE00
 
-.global sinit_8042BE08
-sinit_8042BE08:
+.fn sinit_8042BE08, global
 /* 8042BE08 003F53C8  38 0D BC A0 */	addi r0, r13, lbl_80667E20@sda21
 /* 8042BE0C 003F53CC  90 0D BC A8 */	stw r0, lbl_80667E28@sda21(r13)
 /* 8042BE10 003F53D0  4E 80 00 20 */	blr
+.endfn sinit_8042BE08
 
-.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+# 0x804F5A34 - 0x804F5A38
+.section .ctors, "a"
+.balign 4
+	.4byte sinit_8042BE08
 
-.4byte sinit_8042BE08
-
-.section .sbss, "wa"  # 0x80666600 - 0x8066836F
-
-.global lbl_80667E20
-lbl_80667E20:
+# 0x80667E20 - 0x80667E28
+.section .sbss, "wa", @nobits
+.balign 8
+.sym lbl_80667E20, local
 	.skip 0x8

@@ -1,10 +1,11 @@
 .include "macros.inc"
+.file "RevoSDK/os/OSError.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x80354EF0 - 0x80355510
+.text
+.balign 4
 
-.balign 16, 0
-.global OSReport
-OSReport:
+.fn OSReport, global
 /* 80354EF0 0031E4B0  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80354EF4 0031E4B4  7C 08 02 A6 */	mflr r0
 /* 80354EF8 0031E4B8  90 01 00 84 */	stw r0, 0x84(r1)
@@ -19,11 +20,11 @@ OSReport:
 /* 80354F1C 0031E4DC  D9 01 00 60 */	stfd f8, 0x60(r1)
 .L_80354F20:
 /* 80354F20 0031E4E0  39 61 00 88 */	addi r11, r1, 0x88
-/* 80354F24 0031E4E4  38 01 00 08 */	addi r0, r1, 8
+/* 80354F24 0031E4E4  38 01 00 08 */	addi r0, r1, 0x8
 /* 80354F28 0031E4E8  3D 80 01 00 */	lis r12, 0x100
 /* 80354F2C 0031E4EC  90 81 00 0C */	stw r4, 0xc(r1)
 /* 80354F30 0031E4F0  38 81 00 68 */	addi r4, r1, 0x68
-/* 80354F34 0031E4F4  90 61 00 08 */	stw r3, 8(r1)
+/* 80354F34 0031E4F4  90 61 00 08 */	stw r3, 0x8(r1)
 /* 80354F38 0031E4F8  90 A1 00 10 */	stw r5, 0x10(r1)
 /* 80354F3C 0031E4FC  90 C1 00 14 */	stw r6, 0x14(r1)
 /* 80354F40 0031E500  90 E1 00 18 */	stw r7, 0x18(r1)
@@ -37,16 +38,17 @@ OSReport:
 /* 80354F60 0031E520  80 01 00 84 */	lwz r0, 0x84(r1)
 /* 80354F64 0031E524  7C 08 03 A6 */	mtlr r0
 /* 80354F68 0031E528  38 21 00 80 */	addi r1, r1, 0x80
-/* 80354F6C 0031E52C  4E 80 00 20 */	blr 
+/* 80354F6C 0031E52C  4E 80 00 20 */	blr
+.endfn OSReport
 
-.balign 16, 0
-.global OSVReport
-OSVReport:
+.fn OSVReport, global
 /* 80354F70 0031E530  4B F6 BE 4C */	b vprintf
+.endfn OSVReport
+/* 80354F74 0031E534  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+/* 80354F78 0031E538  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+/* 80354F7C 0031E53C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-.global OSSetErrorHandler
-OSSetErrorHandler:
+.fn OSSetErrorHandler, global
 /* 80354F80 0031E540  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80354F84 0031E544  7C 08 02 A6 */	mflr r0
 /* 80354F88 0031E548  90 01 00 24 */	stw r0, 0x24(r1)
@@ -58,7 +60,7 @@ OSSetErrorHandler:
 /* 80354FA0 0031E560  7C 9C 23 78 */	mr r28, r4
 /* 80354FA4 0031E564  48 00 3A 0D */	bl OSDisableInterrupts
 /* 80354FA8 0031E568  3C 80 80 5D */	lis r4, lbl_805D43B0@ha
-/* 80354FAC 0031E56C  57 A0 13 BA */	rlwinm r0, r29, 2, 0xe, 0x1d
+/* 80354FAC 0031E56C  57 A0 13 BA */	clrlslwi r0, r29, 16, 2
 /* 80354FB0 0031E570  38 84 43 B0 */	addi r4, r4, lbl_805D43B0@l
 /* 80354FB4 0031E574  28 1D 00 10 */	cmplwi r29, 0x10
 /* 80354FB8 0031E578  7F C4 00 2E */	lwzx r30, r4, r0
@@ -70,38 +72,38 @@ OSSetErrorHandler:
 /* 80354FD0 0031E590  60 63 20 00 */	ori r3, r3, 0x2000
 /* 80354FD4 0031E594  4B F8 5B 8D */	bl PPCMtmsr
 /* 80354FD8 0031E598  4B F8 5C 79 */	bl PPCMffpscr
-/* 80354FDC 0031E59C  2C 1C 00 00 */	cmpwi r28, 0
+/* 80354FDC 0031E59C  2C 1C 00 00 */	cmpwi r28, 0x0
 /* 80354FE0 0031E5A0  41 82 01 9C */	beq .L_8035517C
-/* 80354FE4 0031E5A4  3C A0 80 00 */	lis r5, 0x800000DC@ha
-/* 80354FE8 0031E5A8  3C 80 60 06 */	lis r4, 0x6005F8FF@ha
-/* 80354FEC 0031E5AC  81 25 00 DC */	lwz r9, 0x800000DC@l(r5)
-/* 80354FF0 0031E5B0  38 A4 F8 FF */	addi r5, r4, 0x6005F8FF@l
-/* 80354FF4 0031E5B4  39 00 FF FF */	li r8, -1
-/* 80354FF8 0031E5B8  38 E0 00 04 */	li r7, 4
-/* 80354FFC 0031E5BC  38 00 00 02 */	li r0, 2
+/* 80354FE4 0031E5A4  3C A0 80 00 */	lis r5, 0x8000
+/* 80354FE8 0031E5A8  3C 80 60 06 */	lis r4, 0x6006
+/* 80354FEC 0031E5AC  81 25 00 DC */	lwz r9, 0xdc(r5)
+/* 80354FF0 0031E5B0  38 A4 F8 FF */	addi r5, r4, -0x701
+/* 80354FF4 0031E5B4  39 00 FF FF */	li r8, -0x1
+/* 80354FF8 0031E5B8  38 E0 00 04 */	li r7, 0x4
+/* 80354FFC 0031E5BC  38 00 00 02 */	li r0, 0x2
 /* 80355000 0031E5C0  48 00 01 60 */	b .L_80355160
-/* 80355004 0031E5C4  60 00 00 00 */	nop 
+/* 80355004 0031E5C4  60 00 00 00 */	nop
 .L_80355008:
 /* 80355008 0031E5C8  80 89 01 9C */	lwz r4, 0x19c(r9)
 /* 8035500C 0031E5CC  60 84 09 00 */	ori r4, r4, 0x900
 /* 80355010 0031E5D0  90 89 01 9C */	stw r4, 0x19c(r9)
 /* 80355014 0031E5D4  A0 C9 01 A2 */	lhz r6, 0x1a2(r9)
-/* 80355018 0031E5D8  54 C4 07 FF */	clrlwi. r4, r6, 0x1f
+/* 80355018 0031E5D8  54 C4 07 FF */	clrlwi. r4, r6, 31
 /* 8035501C 0031E5DC  40 82 01 28 */	bne .L_80355144
-/* 80355020 0031E5E0  60 C4 00 01 */	ori r4, r6, 1
+/* 80355020 0031E5E0  60 C4 00 01 */	ori r4, r6, 0x1
 /* 80355024 0031E5E4  B0 89 01 A2 */	sth r4, 0x1a2(r9)
 /* 80355028 0031E5E8  38 89 00 90 */	addi r4, r9, 0x90
 /* 8035502C 0031E5EC  38 C9 01 C8 */	addi r6, r9, 0x1c8
 /* 80355030 0031E5F0  7C 09 03 A6 */	mtctr r0
 .L_80355034:
-/* 80355034 0031E5F4  91 04 00 04 */	stw r8, 4(r4)
-/* 80355038 0031E5F8  91 04 00 00 */	stw r8, 0(r4)
-/* 8035503C 0031E5FC  91 06 00 04 */	stw r8, 4(r6)
-/* 80355040 0031E600  91 06 00 00 */	stw r8, 0(r6)
+/* 80355034 0031E5F4  91 04 00 04 */	stw r8, 0x4(r4)
+/* 80355038 0031E5F8  91 04 00 00 */	stw r8, 0x0(r4)
+/* 8035503C 0031E5FC  91 06 00 04 */	stw r8, 0x4(r6)
+/* 80355040 0031E600  91 06 00 00 */	stw r8, 0x0(r6)
 /* 80355044 0031E604  91 04 00 0C */	stw r8, 0xc(r4)
-/* 80355048 0031E608  91 04 00 08 */	stw r8, 8(r4)
+/* 80355048 0031E608  91 04 00 08 */	stw r8, 0x8(r4)
 /* 8035504C 0031E60C  91 06 00 0C */	stw r8, 0xc(r6)
-/* 80355050 0031E610  91 06 00 08 */	stw r8, 8(r6)
+/* 80355050 0031E610  91 06 00 08 */	stw r8, 0x8(r6)
 /* 80355054 0031E614  91 04 00 14 */	stw r8, 0x14(r4)
 /* 80355058 0031E618  91 04 00 10 */	stw r8, 0x10(r4)
 /* 8035505C 0031E61C  91 06 00 14 */	stw r8, 0x14(r6)
@@ -165,44 +167,44 @@ OSSetErrorHandler:
 .L_80355144:
 /* 80355144 0031E704  80 8D 99 E8 */	lwz r4, lbl_80665B68@sda21(r13)
 /* 80355148 0031E708  80 C9 01 94 */	lwz r6, 0x194(r9)
-/* 8035514C 0031E70C  54 84 06 38 */	rlwinm r4, r4, 0, 0x18, 0x1c
+/* 8035514C 0031E70C  54 84 06 38 */	rlwinm r4, r4, 0, 24, 28
 /* 80355150 0031E710  7C C4 23 78 */	or r4, r6, r4
 /* 80355154 0031E714  7C 84 28 38 */	and r4, r4, r5
 /* 80355158 0031E718  90 89 01 94 */	stw r4, 0x194(r9)
 /* 8035515C 0031E71C  81 29 02 FC */	lwz r9, 0x2fc(r9)
 .L_80355160:
-/* 80355160 0031E720  2C 09 00 00 */	cmpwi r9, 0
+/* 80355160 0031E720  2C 09 00 00 */	cmpwi r9, 0x0
 /* 80355164 0031E724  40 82 FE A4 */	bne .L_80355008
 /* 80355168 0031E728  80 0D 99 E8 */	lwz r0, lbl_80665B68@sda21(r13)
 /* 8035516C 0031E72C  63 FF 09 00 */	ori r31, r31, 0x900
-/* 80355170 0031E730  54 00 06 38 */	rlwinm r0, r0, 0, 0x18, 0x1c
+/* 80355170 0031E730  54 00 06 38 */	rlwinm r0, r0, 0, 24, 28
 /* 80355174 0031E734  7C 64 03 78 */	or r4, r3, r0
 /* 80355178 0031E738  48 00 00 50 */	b .L_803551C8
 .L_8035517C:
-/* 8035517C 0031E73C  3C A0 80 00 */	lis r5, 0x800000DC@ha
-/* 80355180 0031E740  3C 80 60 06 */	lis r4, 0x6005F8FF@ha
-/* 80355184 0031E744  80 C5 00 DC */	lwz r6, 0x800000DC@l(r5)
-/* 80355188 0031E748  38 84 F8 FF */	addi r4, r4, 0x6005F8FF@l
-/* 8035518C 0031E74C  38 A0 F6 FF */	li r5, -2305
+/* 8035517C 0031E73C  3C A0 80 00 */	lis r5, 0x8000
+/* 80355180 0031E740  3C 80 60 06 */	lis r4, 0x6006
+/* 80355184 0031E744  80 C5 00 DC */	lwz r6, 0xdc(r5)
+/* 80355188 0031E748  38 84 F8 FF */	addi r4, r4, -0x701
+/* 8035518C 0031E74C  38 A0 F6 FF */	li r5, -0x901
 /* 80355190 0031E750  48 00 00 24 */	b .L_803551B4
 .L_80355194:
 /* 80355194 0031E754  80 06 01 9C */	lwz r0, 0x19c(r6)
 /* 80355198 0031E758  7C 00 28 38 */	and r0, r0, r5
 /* 8035519C 0031E75C  90 06 01 9C */	stw r0, 0x19c(r6)
 /* 803551A0 0031E760  80 06 01 94 */	lwz r0, 0x194(r6)
-/* 803551A4 0031E764  54 00 07 6E */	rlwinm r0, r0, 0, 0x1d, 0x17
+/* 803551A4 0031E764  54 00 07 6E */	rlwinm r0, r0, 0, 29, 23
 /* 803551A8 0031E768  7C 00 20 38 */	and r0, r0, r4
 /* 803551AC 0031E76C  90 06 01 94 */	stw r0, 0x194(r6)
 /* 803551B0 0031E770  80 C6 02 FC */	lwz r6, 0x2fc(r6)
 .L_803551B4:
-/* 803551B4 0031E774  2C 06 00 00 */	cmpwi r6, 0
+/* 803551B4 0031E774  2C 06 00 00 */	cmpwi r6, 0x0
 /* 803551B8 0031E778  40 82 FF DC */	bne .L_80355194
-/* 803551BC 0031E77C  38 00 F6 FF */	li r0, -2305
-/* 803551C0 0031E780  54 64 07 6E */	rlwinm r4, r3, 0, 0x1d, 0x17
+/* 803551BC 0031E77C  38 00 F6 FF */	li r0, -0x901
+/* 803551C0 0031E780  54 64 07 6E */	rlwinm r4, r3, 0, 29, 23
 /* 803551C4 0031E784  7F FF 00 38 */	and r31, r31, r0
 .L_803551C8:
-/* 803551C8 0031E788  3C 60 60 06 */	lis r3, 0x6005F8FF@ha
-/* 803551CC 0031E78C  38 03 F8 FF */	addi r0, r3, 0x6005F8FF@l
+/* 803551C8 0031E788  3C 60 60 06 */	lis r3, 0x6006
+/* 803551CC 0031E78C  38 03 F8 FF */	addi r0, r3, -0x701
 /* 803551D0 0031E790  7C 83 00 38 */	and r3, r4, r0
 /* 803551D4 0031E794  4B F8 5A 9D */	bl PPCMtfpscr
 /* 803551D8 0031E798  7F E3 FB 78 */	mr r3, r31
@@ -218,63 +220,63 @@ OSSetErrorHandler:
 /* 803551FC 0031E7BC  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80355200 0031E7C0  7C 08 03 A6 */	mtlr r0
 /* 80355204 0031E7C4  38 21 00 20 */	addi r1, r1, 0x20
-/* 80355208 0031E7C8  4E 80 00 20 */	blr 
+/* 80355208 0031E7C8  4E 80 00 20 */	blr
+.endfn OSSetErrorHandler
+/* 8035520C 0031E7CC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-.global __OSUnhandledException
-__OSUnhandledException:
+.fn __OSUnhandledException, global
 /* 80355210 0031E7D0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80355214 0031E7D4  7C 08 02 A6 */	mflr r0
 /* 80355218 0031E7D8  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8035521C 0031E7DC  39 61 00 30 */	addi r11, r1, 0x30
 /* 80355220 0031E7E0  4B F6 4F 25 */	bl _savegpr_23
-/* 80355224 0031E7E4  3F E0 80 55 */	lis r31, lbl_80551C50@ha
+/* 80355224 0031E7E4  3F E0 80 55 */	lis r31, "@641"@ha
 /* 80355228 0031E7E8  7C 79 1B 78 */	mr r25, r3
 /* 8035522C 0031E7EC  7C 9A 23 78 */	mr r26, r4
 /* 80355230 0031E7F0  7C BB 2B 78 */	mr r27, r5
 /* 80355234 0031E7F4  7C DC 33 78 */	mr r28, r6
-/* 80355238 0031E7F8  3B FF 1C 50 */	addi r31, r31, lbl_80551C50@l
+/* 80355238 0031E7F8  3B FF 1C 50 */	addi r31, r31, "@641"@l
 /* 8035523C 0031E7FC  48 00 77 25 */	bl OSGetTime
 /* 80355240 0031E800  80 BA 01 9C */	lwz r5, 0x19c(r26)
 /* 80355244 0031E804  7C 9D 23 78 */	mr r29, r4
 /* 80355248 0031E808  7C 7E 1B 78 */	mr r30, r3
-/* 8035524C 0031E80C  54 A0 07 BD */	rlwinm. r0, r5, 0, 0x1e, 0x1e
+/* 8035524C 0031E80C  54 A0 07 BD */	rlwinm. r0, r5, 0, 30, 30
 /* 80355250 0031E810  40 82 00 18 */	bne .L_80355268
 /* 80355254 0031E814  7F 24 CB 78 */	mr r4, r25
 /* 80355258 0031E818  38 7F 00 5C */	addi r3, r31, 0x5c
-/* 8035525C 0031E81C  4C C6 31 82 */	crclr 6
+/* 8035525C 0031E81C  4C C6 31 82 */	crclr 4*cr1+eq
 /* 80355260 0031E820  4B FF FC 91 */	bl OSReport
 /* 80355264 0031E824  48 00 01 60 */	b .L_803553C4
 .L_80355268:
-/* 80355268 0031E828  28 19 00 06 */	cmplwi r25, 6
+/* 80355268 0031E828  28 19 00 06 */	cmplwi r25, 0x6
 /* 8035526C 0031E82C  40 82 00 EC */	bne .L_80355358
-/* 80355270 0031E830  54 A0 02 D7 */	rlwinm. r0, r5, 0, 0xb, 0xb
+/* 80355270 0031E830  54 A0 02 D7 */	rlwinm. r0, r5, 0, 11, 11
 /* 80355274 0031E834  41 82 00 E4 */	beq .L_80355358
-/* 80355278 0031E838  3C 60 80 5D */	lis r3, lbl_805D43B0@ha
-/* 8035527C 0031E83C  38 63 43 B0 */	addi r3, r3, lbl_805D43B0@l
+/* 80355278 0031E838  3C 60 80 5D */	lis r3, __OSErrorTable@ha
+/* 8035527C 0031E83C  38 63 43 B0 */	addi r3, r3, __OSErrorTable@l
 /* 80355280 0031E840  80 03 00 40 */	lwz r0, 0x40(r3)
-/* 80355284 0031E844  2C 00 00 00 */	cmpwi r0, 0
+/* 80355284 0031E844  2C 00 00 00 */	cmpwi r0, 0x0
 /* 80355288 0031E848  41 82 00 D0 */	beq .L_80355358
 /* 8035528C 0031E84C  3B 20 00 10 */	li r25, 0x10
 /* 80355290 0031E850  4B F8 58 C1 */	bl PPCMfmsr
 /* 80355294 0031E854  7C 77 1B 78 */	mr r23, r3
 /* 80355298 0031E858  60 63 20 00 */	ori r3, r3, 0x2000
 /* 8035529C 0031E85C  4B F8 58 C5 */	bl PPCMtmsr
-/* 803552A0 0031E860  3C 60 80 00 */	lis r3, 0x800000D8@ha
-/* 803552A4 0031E864  80 63 00 D8 */	lwz r3, 0x800000D8@l(r3)
-/* 803552A8 0031E868  2C 03 00 00 */	cmpwi r3, 0
+/* 803552A0 0031E860  3C 60 80 00 */	lis r3, 0x8000
+/* 803552A4 0031E864  80 63 00 D8 */	lwz r3, 0xd8(r3)
+/* 803552A8 0031E868  2C 03 00 00 */	cmpwi r3, 0x0
 /* 803552AC 0031E86C  41 82 00 08 */	beq .L_803552B4
 /* 803552B0 0031E870  4B FF F5 C1 */	bl OSSaveFPUContext
 .L_803552B4:
 /* 803552B4 0031E874  4B F8 59 9D */	bl PPCMffpscr
-/* 803552B8 0031E878  3F 00 60 06 */	lis r24, 0x6005F8FF@ha
-/* 803552BC 0031E87C  38 18 F8 FF */	addi r0, r24, 0x6005F8FF@l
+/* 803552B8 0031E878  3F 00 60 06 */	lis r24, 0x6006
+/* 803552BC 0031E87C  38 18 F8 FF */	addi r0, r24, -0x701
 /* 803552C0 0031E880  7C 63 00 38 */	and r3, r3, r0
 /* 803552C4 0031E884  4B F8 59 AD */	bl PPCMtfpscr
 /* 803552C8 0031E888  7E E3 BB 78 */	mr r3, r23
 /* 803552CC 0031E88C  4B F8 58 95 */	bl PPCMtmsr
-/* 803552D0 0031E890  3E E0 80 00 */	lis r23, 0x800000D8@ha
-/* 803552D4 0031E894  80 17 00 D8 */	lwz r0, 0x800000D8@l(r23)
+/* 803552D0 0031E890  3E E0 80 00 */	lis r23, 0x8000
+/* 803552D4 0031E894  80 17 00 D8 */	lwz r0, 0xd8(r23)
 /* 803552D8 0031E898  7C 00 D0 40 */	cmplw r0, r26
 /* 803552DC 0031E89C  40 82 00 60 */	bne .L_8035533C
 /* 803552E0 0031E8A0  48 00 63 11 */	bl OSDisableScheduler
@@ -282,16 +284,16 @@ __OSUnhandledException:
 /* 803552E8 0031E8A8  7F 65 DB 78 */	mr r5, r27
 /* 803552EC 0031E8AC  7F 86 E3 78 */	mr r6, r28
 /* 803552F0 0031E8B0  38 60 00 10 */	li r3, 0x10
-/* 803552F4 0031E8B4  4C C6 31 82 */	crclr 6
-/* 803552F8 0031E8B8  3C E0 80 5D */	lis r7, lbl_805D43B0@ha
-/* 803552FC 0031E8BC  38 E7 43 B0 */	addi r7, r7, lbl_805D43B0@l
+/* 803552F4 0031E8B4  4C C6 31 82 */	crclr 4*cr1+eq
+/* 803552F8 0031E8B8  3C E0 80 5D */	lis r7, __OSErrorTable@ha
+/* 803552FC 0031E8BC  38 E7 43 B0 */	addi r7, r7, __OSErrorTable@l
 /* 80355300 0031E8C0  81 87 00 40 */	lwz r12, 0x40(r7)
 /* 80355304 0031E8C4  7D 89 03 A6 */	mtctr r12
-/* 80355308 0031E8C8  4E 80 04 21 */	bctrl 
+/* 80355308 0031E8C8  4E 80 04 21 */	bctrl
 /* 8035530C 0031E8CC  80 9A 01 9C */	lwz r4, 0x19c(r26)
-/* 80355310 0031E8D0  38 60 00 00 */	li r3, 0
-/* 80355314 0031E8D4  38 18 F8 FF */	addi r0, r24, 0x6005F8FF@l
-/* 80355318 0031E8D8  54 84 04 E2 */	rlwinm r4, r4, 0, 0x13, 0x11
+/* 80355310 0031E8D0  38 60 00 00 */	li r3, 0x0
+/* 80355314 0031E8D4  38 18 F8 FF */	addi r0, r24, -0x701
+/* 80355318 0031E8D8  54 84 04 E2 */	rlwinm r4, r4, 0, 19, 17
 /* 8035531C 0031E8DC  90 9A 01 9C */	stw r4, 0x19c(r26)
 /* 80355320 0031E8E0  90 77 00 D8 */	stw r3, 0xd8(r23)
 /* 80355324 0031E8E4  80 7A 01 94 */	lwz r3, 0x194(r26)
@@ -302,66 +304,66 @@ __OSUnhandledException:
 /* 80355338 0031E8F8  48 00 00 18 */	b .L_80355350
 .L_8035533C:
 /* 8035533C 0031E8FC  80 7A 01 9C */	lwz r3, 0x19c(r26)
-/* 80355340 0031E900  38 00 00 00 */	li r0, 0
-/* 80355344 0031E904  54 63 04 E2 */	rlwinm r3, r3, 0, 0x13, 0x11
+/* 80355340 0031E900  38 00 00 00 */	li r0, 0x0
+/* 80355344 0031E904  54 63 04 E2 */	rlwinm r3, r3, 0, 19, 17
 /* 80355348 0031E908  90 7A 01 9C */	stw r3, 0x19c(r26)
 /* 8035534C 0031E90C  90 17 00 D8 */	stw r0, 0xd8(r23)
 .L_80355350:
 /* 80355350 0031E910  7F 43 D3 78 */	mr r3, r26
 /* 80355354 0031E914  4B FF F6 1D */	bl OSLoadContext
 .L_80355358:
-/* 80355358 0031E918  3F 00 80 5D */	lis r24, lbl_805D43B0@ha
-/* 8035535C 0031E91C  57 37 15 BA */	rlwinm r23, r25, 2, 0x16, 0x1d
-/* 80355360 0031E920  3B 18 43 B0 */	addi r24, r24, lbl_805D43B0@l
+/* 80355358 0031E918  3F 00 80 5D */	lis r24, __OSErrorTable@ha
+/* 8035535C 0031E91C  57 37 15 BA */	clrlslwi r23, r25, 24, 2
+/* 80355360 0031E920  3B 18 43 B0 */	addi r24, r24, __OSErrorTable@l
 /* 80355364 0031E924  7C 18 B8 2E */	lwzx r0, r24, r23
-/* 80355368 0031E928  2C 00 00 00 */	cmpwi r0, 0
+/* 80355368 0031E928  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8035536C 0031E92C  41 82 00 38 */	beq .L_803553A4
 /* 80355370 0031E930  48 00 62 81 */	bl OSDisableScheduler
 /* 80355374 0031E934  7F 23 CB 78 */	mr r3, r25
 /* 80355378 0031E938  7F 44 D3 78 */	mr r4, r26
 /* 8035537C 0031E93C  7F 65 DB 78 */	mr r5, r27
 /* 80355380 0031E940  7F 86 E3 78 */	mr r6, r28
-/* 80355384 0031E944  4C C6 31 82 */	crclr 6
+/* 80355384 0031E944  4C C6 31 82 */	crclr 4*cr1+eq
 /* 80355388 0031E948  7D 98 B8 2E */	lwzx r12, r24, r23
 /* 8035538C 0031E94C  7D 89 03 A6 */	mtctr r12
-/* 80355390 0031E950  4E 80 04 21 */	bctrl 
+/* 80355390 0031E950  4E 80 04 21 */	bctrl
 /* 80355394 0031E954  48 00 62 9D */	bl OSEnableScheduler
 /* 80355398 0031E958  48 00 67 B9 */	bl __OSReschedule
 /* 8035539C 0031E95C  7F 43 D3 78 */	mr r3, r26
 /* 803553A0 0031E960  4B FF F5 D1 */	bl OSLoadContext
 .L_803553A4:
-/* 803553A4 0031E964  28 19 00 08 */	cmplwi r25, 8
+/* 803553A4 0031E964  28 19 00 08 */	cmplwi r25, 0x8
 /* 803553A8 0031E968  40 82 00 0C */	bne .L_803553B4
 /* 803553AC 0031E96C  7F 43 D3 78 */	mr r3, r26
 /* 803553B0 0031E970  4B FF F5 C1 */	bl OSLoadContext
 .L_803553B4:
 /* 803553B4 0031E974  7F 24 CB 78 */	mr r4, r25
 /* 803553B8 0031E978  38 7F 00 7C */	addi r3, r31, 0x7c
-/* 803553BC 0031E97C  4C C6 31 82 */	crclr 6
+/* 803553BC 0031E97C  4C C6 31 82 */	crclr 4*cr1+eq
 /* 803553C0 0031E980  4B FF FB 31 */	bl OSReport
 .L_803553C4:
-/* 803553C4 0031E984  38 6D 99 EC */	addi r3, r13, lbl_80665B6C@sda21
-/* 803553C8 0031E988  4C C6 31 82 */	crclr 6
+/* 803553C4 0031E984  38 6D 99 EC */	addi r3, r13, "@703"@sda21
+/* 803553C8 0031E988  4C C6 31 82 */	crclr 4*cr1+eq
 /* 803553CC 0031E98C  4B FF FB 25 */	bl OSReport
 /* 803553D0 0031E990  7F 43 D3 78 */	mr r3, r26
 /* 803553D4 0031E994  4B FF F7 DD */	bl OSDumpContext
 /* 803553D8 0031E998  7F 64 DB 78 */	mr r4, r27
 /* 803553DC 0031E99C  7F 85 E3 78 */	mr r5, r28
 /* 803553E0 0031E9A0  38 7F 00 94 */	addi r3, r31, 0x94
-/* 803553E4 0031E9A4  4C C6 31 82 */	crclr 6
+/* 803553E4 0031E9A4  4C C6 31 82 */	crclr 4*cr1+eq
 /* 803553E8 0031E9A8  4B FF FB 09 */	bl OSReport
 /* 803553EC 0031E9AC  7F A6 EB 78 */	mr r6, r29
 /* 803553F0 0031E9B0  7F C5 F3 78 */	mr r5, r30
 /* 803553F4 0031E9B4  38 7F 00 C8 */	addi r3, r31, 0xc8
-/* 803553F8 0031E9B8  4C C6 31 82 */	crclr 6
+/* 803553F8 0031E9B8  4C C6 31 82 */	crclr 4*cr1+eq
 /* 803553FC 0031E9BC  4B FF FA F5 */	bl OSReport
-/* 80355400 0031E9C0  2C 19 00 02 */	cmpwi r25, 2
+/* 80355400 0031E9C0  2C 19 00 02 */	cmpwi r25, 0x2
 /* 80355404 0031E9C4  41 82 00 28 */	beq .L_8035542C
-/* 80355408 0031E9C8  2C 19 00 03 */	cmpwi r25, 3
+/* 80355408 0031E9C8  2C 19 00 03 */	cmpwi r25, 0x3
 /* 8035540C 0031E9CC  41 82 00 38 */	beq .L_80355444
-/* 80355410 0031E9D0  2C 19 00 05 */	cmpwi r25, 5
+/* 80355410 0031E9D0  2C 19 00 05 */	cmpwi r25, 0x5
 /* 80355414 0031E9D4  41 82 00 44 */	beq .L_80355458
-/* 80355418 0031E9D8  2C 19 00 06 */	cmpwi r25, 6
+/* 80355418 0031E9D8  2C 19 00 06 */	cmpwi r25, 0x6
 /* 8035541C 0031E9DC  41 82 00 54 */	beq .L_80355470
 /* 80355420 0031E9E0  2C 19 00 0F */	cmpwi r25, 0xf
 /* 80355424 0031E9E4  41 82 00 64 */	beq .L_80355488
@@ -370,56 +372,56 @@ __OSUnhandledException:
 /* 8035542C 0031E9EC  80 9A 01 98 */	lwz r4, 0x198(r26)
 /* 80355430 0031E9F0  7F 85 E3 78 */	mr r5, r28
 /* 80355434 0031E9F4  38 7F 00 D8 */	addi r3, r31, 0xd8
-/* 80355438 0031E9F8  4C C6 31 82 */	crclr 6
+/* 80355438 0031E9F8  4C C6 31 82 */	crclr 4*cr1+eq
 /* 8035543C 0031E9FC  4B FF FA B5 */	bl OSReport
 /* 80355440 0031EA00  48 00 00 94 */	b .L_803554D4
 .L_80355444:
 /* 80355444 0031EA04  80 9A 01 98 */	lwz r4, 0x198(r26)
 /* 80355448 0031EA08  38 7F 01 38 */	addi r3, r31, 0x138
-/* 8035544C 0031EA0C  4C C6 31 82 */	crclr 6
+/* 8035544C 0031EA0C  4C C6 31 82 */	crclr 4*cr1+eq
 /* 80355450 0031EA10  4B FF FA A1 */	bl OSReport
 /* 80355454 0031EA14  48 00 00 80 */	b .L_803554D4
 .L_80355458:
 /* 80355458 0031EA18  80 9A 01 98 */	lwz r4, 0x198(r26)
 /* 8035545C 0031EA1C  7F 85 E3 78 */	mr r5, r28
 /* 80355460 0031EA20  38 7F 01 84 */	addi r3, r31, 0x184
-/* 80355464 0031EA24  4C C6 31 82 */	crclr 6
+/* 80355464 0031EA24  4C C6 31 82 */	crclr 4*cr1+eq
 /* 80355468 0031EA28  4B FF FA 89 */	bl OSReport
 /* 8035546C 0031EA2C  48 00 00 68 */	b .L_803554D4
 .L_80355470:
 /* 80355470 0031EA30  80 9A 01 98 */	lwz r4, 0x198(r26)
 /* 80355474 0031EA34  7F 85 E3 78 */	mr r5, r28
 /* 80355478 0031EA38  38 7F 01 E8 */	addi r3, r31, 0x1e8
-/* 8035547C 0031EA3C  4C C6 31 82 */	crclr 6
+/* 8035547C 0031EA3C  4C C6 31 82 */	crclr 4*cr1+eq
 /* 80355480 0031EA40  4B FF FA 71 */	bl OSReport
 /* 80355484 0031EA44  48 00 00 50 */	b .L_803554D4
 .L_80355488:
-/* 80355488 0031EA48  38 6D 99 EC */	addi r3, r13, lbl_80665B6C@sda21
-/* 8035548C 0031EA4C  4C C6 31 82 */	crclr 6
+/* 80355488 0031EA48  38 6D 99 EC */	addi r3, r13, "@703"@sda21
+/* 8035548C 0031EA4C  4C C6 31 82 */	crclr 4*cr1+eq
 /* 80355490 0031EA50  4B FF FA 61 */	bl OSReport
-/* 80355494 0031EA54  3F 20 CC 00 */	lis r25, 0xCC005030@ha
+/* 80355494 0031EA54  3F 20 CC 00 */	lis r25, 0xcc00
 /* 80355498 0031EA58  38 7F 02 48 */	addi r3, r31, 0x248
-/* 8035549C 0031EA5C  A0 99 50 30 */	lhz r4, 0xCC005030@l(r25)
+/* 8035549C 0031EA5C  A0 99 50 30 */	lhz r4, 0x5030(r25)
 /* 803554A0 0031EA60  A0 B9 50 32 */	lhz r5, 0x5032(r25)
-/* 803554A4 0031EA64  4C C6 31 82 */	crclr 6
+/* 803554A4 0031EA64  4C C6 31 82 */	crclr 4*cr1+eq
 /* 803554A8 0031EA68  4B FF FA 49 */	bl OSReport
 /* 803554AC 0031EA6C  A0 99 50 20 */	lhz r4, 0x5020(r25)
 /* 803554B0 0031EA70  38 7F 02 68 */	addi r3, r31, 0x268
 /* 803554B4 0031EA74  A0 B9 50 22 */	lhz r5, 0x5022(r25)
-/* 803554B8 0031EA78  4C C6 31 82 */	crclr 6
+/* 803554B8 0031EA78  4C C6 31 82 */	crclr 4*cr1+eq
 /* 803554BC 0031EA7C  4B FF FA 35 */	bl OSReport
-/* 803554C0 0031EA80  3C 80 CD 00 */	lis r4, 0xCD006014@ha
+/* 803554C0 0031EA80  3C 80 CD 00 */	lis r4, 0xcd00
 /* 803554C4 0031EA84  38 7F 02 88 */	addi r3, r31, 0x288
-/* 803554C8 0031EA88  80 84 60 14 */	lwz r4, 0xCD006014@l(r4)
-/* 803554CC 0031EA8C  4C C6 31 82 */	crclr 6
+/* 803554C8 0031EA88  80 84 60 14 */	lwz r4, 0x6014(r4)
+/* 803554CC 0031EA8C  4C C6 31 82 */	crclr 4*cr1+eq
 /* 803554D0 0031EA90  4B FF FA 21 */	bl OSReport
 .L_803554D4:
-/* 803554D4 0031EA94  A8 8D B9 14 */	lha r4, lbl_80667A94@sda21(r13)
+/* 803554D4 0031EA94  A8 8D B9 14 */	lha r4, __OSLastInterrupt@sda21(r13)
 /* 803554D8 0031EA98  38 7F 02 A4 */	addi r3, r31, 0x2a4
-/* 803554DC 0031EA9C  80 AD B9 10 */	lwz r5, lbl_80667A90@sda21(r13)
-/* 803554E0 0031EAA0  80 ED B9 18 */	lwz r7, lbl_80667A98@sda21(r13)
-/* 803554E4 0031EAA4  81 0D B9 1C */	lwz r8, lbl_80667A9C@sda21(r13)
-/* 803554E8 0031EAA8  4C C6 31 82 */	crclr 6
+/* 803554DC 0031EA9C  80 AD B9 10 */	lwz r5, __OSLastInterruptSrr0@sda21(r13)
+/* 803554E0 0031EAA0  80 ED B9 18 */	lwz r7, __OSLastInterruptTime@sda21(r13)
+/* 803554E4 0031EAA4  81 0D B9 1C */	lwz r8, __OSLastInterruptTime+0x4@sda21(r13)
+/* 803554E8 0031EAA8  4C C6 31 82 */	crclr 4*cr1+eq
 /* 803554EC 0031EAAC  4B FF FA 05 */	bl OSReport
 /* 803554F0 0031EAB0  4B F8 56 E1 */	bl PPCHalt
 /* 803554F4 0031EAB4  39 61 00 30 */	addi r11, r1, 0x30
@@ -427,52 +429,221 @@ __OSUnhandledException:
 /* 803554FC 0031EABC  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 80355500 0031EAC0  7C 08 03 A6 */	mtlr r0
 /* 80355504 0031EAC4  38 21 00 30 */	addi r1, r1, 0x30
-/* 80355508 0031EAC8  4E 80 00 20 */	blr 
+/* 80355508 0031EAC8  4E 80 00 20 */	blr
+.endfn __OSUnhandledException
+/* 8035550C 0031EACC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
+# 0x80551C50 - 0x80551F30
+.data
+.balign 8
+.sym lbl_80551C50, local
 
-.global lbl_80551C50
-lbl_80551C50:
-	.asciz " in \"%s\" on line %d.\n"
-	.balign 4
-	.asciz "\nAddress:      Back Chain    LR Save\n"
-	.balign 4
-	.asciz "0x%08x:   0x%08x    0x%08x\n"
-	.asciz "Non-recoverable Exception %d"
-	.balign 4
-	.asciz "Unhandled Exception %d"
-	.balign 4
-	.asciz "\nDSISR = 0x%08x                   DAR  = 0x%08x\n"
-	.balign 4
-	.asciz "TB = 0x%016llx\n"
-	.asciz "\nInstruction at 0x%x (read from SRR0) attempted to access invalid address 0x%x (read from DAR)\n"
-	.asciz "\nAttempted to fetch instruction from invalid address 0x%x (read from SRR0)\n"
-	.asciz "\nInstruction at 0x%x (read from SRR0) attempted to access unaligned address 0x%x (read from DAR)\n"
-	.balign 4
-	.asciz "\nProgram exception : Possible illegal instruction/operation at or around 0x%x (read from SRR0)\n"
-	.asciz "AI DMA Address =   0x%04x%04x\n"
-	.balign 4
-	.asciz "ARAM DMA Address = 0x%04x%04x\n"
-	.balign 4
-	.asciz "DI DMA Address =   0x%08x\n"
-	.balign 4
-	.asciz "\nLast interrupt (%d): SRR0 = 0x%08x  TB = 0x%016llx\n"
-	.balign 4
-	.4byte 0
+.obj "@641", local
+	.4byte 0x20696E20
+	.4byte 0x22257322
+	.4byte 0x206F6E20
+	.4byte 0x6C696E65
+	.4byte 0x2025642E
+	.2byte 0x0A00
+.endobj "@641"
+	.4byte 0x00000A41
+	.4byte 0x64647265
+	.4byte 0x73733A20
+	.4byte 0x20202020
+	.4byte 0x20426163
+	.4byte 0x6B204368
+	.4byte 0x61696E20
+	.4byte 0x2020204C
+	.4byte 0x52205361
+	.4byte 0x76650A00
+	.4byte 0x00003078
+	.4byte 0x25303878
+	.4byte 0x3A202020
+	.4byte 0x30782530
+	.4byte 0x38782020
+	.4byte 0x20203078
+	.4byte 0x25303878
+	.4byte 0x0A004E6F
+	.4byte 0x6E2D7265
+	.4byte 0x636F7665
+	.4byte 0x7261626C
+	.4byte 0x65204578
+	.4byte 0x63657074
+	.4byte 0x696F6E20
+	.4byte 0x25640000
+	.4byte 0x0000556E
+	.4byte 0x68616E64
+	.4byte 0x6C656420
+	.4byte 0x45786365
+	.4byte 0x7074696F
+	.4byte 0x6E202564
+	.4byte 0x00000A44
+	.4byte 0x53495352
+	.4byte 0x203D2030
+	.4byte 0x78253038
+	.4byte 0x78202020
+	.4byte 0x20202020
+	.4byte 0x20202020
+	.4byte 0x20202020
+	.4byte 0x20202020
+	.4byte 0x44415220
+	.4byte 0x203D2030
+	.4byte 0x78253038
+	.4byte 0x780A0000
+	.4byte 0x00005442
+	.4byte 0x203D2030
+	.4byte 0x78253031
+	.4byte 0x366C6C78
+	.4byte 0x0A000A49
+	.4byte 0x6E737472
+	.4byte 0x75637469
+	.4byte 0x6F6E2061
+	.4byte 0x74203078
+	.4byte 0x25782028
+	.4byte 0x72656164
+	.4byte 0x2066726F
+	.4byte 0x6D205352
+	.4byte 0x52302920
+	.4byte 0x61747465
+	.4byte 0x6D707465
+	.4byte 0x6420746F
+	.4byte 0x20616363
+	.4byte 0x65737320
+	.4byte 0x696E7661
+	.4byte 0x6C696420
+	.4byte 0x61646472
+	.4byte 0x65737320
+	.4byte 0x30782578
+	.4byte 0x20287265
+	.4byte 0x61642066
+	.4byte 0x726F6D20
+	.4byte 0x44415229
+	.4byte 0x0A000A41
+	.4byte 0x7474656D
+	.4byte 0x70746564
+	.4byte 0x20746F20
+	.4byte 0x66657463
+	.4byte 0x6820696E
+	.4byte 0x73747275
+	.4byte 0x6374696F
+	.4byte 0x6E206672
+	.4byte 0x6F6D2069
+	.4byte 0x6E76616C
+	.4byte 0x69642061
+	.4byte 0x64647265
+	.4byte 0x73732030
+	.4byte 0x78257820
+	.4byte 0x28726561
+	.4byte 0x64206672
+	.4byte 0x6F6D2053
+	.4byte 0x52523029
+	.4byte 0x0A000A49
+	.4byte 0x6E737472
+	.4byte 0x75637469
+	.4byte 0x6F6E2061
+	.4byte 0x74203078
+	.4byte 0x25782028
+	.4byte 0x72656164
+	.4byte 0x2066726F
+	.4byte 0x6D205352
+	.4byte 0x52302920
+	.4byte 0x61747465
+	.4byte 0x6D707465
+	.4byte 0x6420746F
+	.4byte 0x20616363
+	.4byte 0x65737320
+	.4byte 0x756E616C
+	.4byte 0x69676E65
+	.4byte 0x64206164
+	.4byte 0x64726573
+	.4byte 0x73203078
+	.4byte 0x25782028
+	.4byte 0x72656164
+	.4byte 0x2066726F
+	.4byte 0x6D204441
+	.4byte 0x52290A00
+	.4byte 0x00000A50
+	.4byte 0x726F6772
+	.4byte 0x616D2065
+	.4byte 0x78636570
+	.4byte 0x74696F6E
+	.4byte 0x203A2050
+	.4byte 0x6F737369
+	.4byte 0x626C6520
+	.4byte 0x696C6C65
+	.4byte 0x67616C20
+	.4byte 0x696E7374
+	.4byte 0x72756374
+	.4byte 0x696F6E2F
+	.4byte 0x6F706572
+	.4byte 0x6174696F
+	.4byte 0x6E206174
+	.4byte 0x206F7220
+	.4byte 0x61726F75
+	.4byte 0x6E642030
+	.4byte 0x78257820
+	.4byte 0x28726561
+	.4byte 0x64206672
+	.4byte 0x6F6D2053
+	.4byte 0x52523029
+	.4byte 0x0A004149
+	.4byte 0x20444D41
+	.4byte 0x20416464
+	.4byte 0x72657373
+	.4byte 0x203D2020
+	.4byte 0x20307825
+	.4byte 0x30347825
+	.4byte 0x3034780A
+	.4byte 0x00004152
+	.4byte 0x414D2044
+	.4byte 0x4D412041
+	.4byte 0x64647265
+	.4byte 0x7373203D
+	.4byte 0x20307825
+	.4byte 0x30347825
+	.4byte 0x3034780A
+	.4byte 0x00004449
+	.4byte 0x20444D41
+	.4byte 0x20416464
+	.4byte 0x72657373
+	.4byte 0x203D2020
+	.4byte 0x20307825
+	.4byte 0x3038780A
+	.4byte 0x00000A4C
+	.4byte 0x61737420
+	.4byte 0x696E7465
+	.4byte 0x72727570
+	.4byte 0x74202825
+	.4byte 0x64293A20
+	.4byte 0x53525230
+	.4byte 0x203D2030
+	.4byte 0x78253038
+	.4byte 0x78202054
+	.4byte 0x42203D20
+	.4byte 0x30782530
+	.4byte 0x31366C6C
+	.4byte 0x780A0000
+	.4byte 0x00000000
+	.2byte 0x0000
 
-.section .sdata, "wa"  # 0x80664180 - 0x80666600
+# 0x805D43B0 - 0x805D4400
+.section .bss, "wa", @nobits
+.balign 8
+.sym lbl_805D43B0, local
 
-.global lbl_80665B68
-lbl_80665B68:
+.obj __OSErrorTable, global
+	.skip 0x44
+.endobj __OSErrorTable
+	.skip 0xC
+
+# 0x80665B68 - 0x80665B70
+.section .sdata, "wa"
+.balign 8
+.sym lbl_80665B68, local
 	.4byte 0x000000F8
+.sym lbl_80665B6C, local
 
-
-.global lbl_80665B6C
-lbl_80665B6C:
-	.4byte 0x0A000000
-
-.section .bss, "wa"  # 0x80573C80 - 0x8066417B
-
-.global lbl_805D43B0
-lbl_805D43B0:
-	.skip 0x50
+.obj "@703", local
+	.2byte 0x0A00
+.endobj "@703"
+	.2byte 0x0000

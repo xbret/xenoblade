@@ -1,15 +1,18 @@
 .include "macros.inc"
+.file "nw4r/snd/snd_StrmChannel.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x804219C8 - 0x80421BE8
+.text
+.balign 4
 
-.global Setup__Q44nw4r3snd6detail14StrmBufferPoolFPvUli
-Setup__Q44nw4r3snd6detail14StrmBufferPoolFPvUli:
+# nw4r::snd::detail::StrmBufferPool::Setup(void*, unsigned long, int)
+.fn Setup__Q44nw4r3snd6detail14StrmBufferPoolFPvUli, global
 /* 804219C8 003EAF88  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804219CC 003EAF8C  7C 08 02 A6 */	mflr r0
 /* 804219D0 003EAF90  90 01 00 24 */	stw r0, 0x24(r1)
 /* 804219D4 003EAF94  39 61 00 20 */	addi r11, r1, 0x20
 /* 804219D8 003EAF98  4B E9 87 7D */	bl _savegpr_27
-/* 804219DC 003EAF9C  2C 06 00 00 */	cmpwi r6, 0
+/* 804219DC 003EAF9C  2C 06 00 00 */	cmpwi r6, 0x0
 /* 804219E0 003EAFA0  7C 7B 1B 78 */	mr r27, r3
 /* 804219E4 003EAFA4  7C 9C 23 78 */	mr r28, r4
 /* 804219E8 003EAFA8  7C BD 2B 78 */	mr r29, r5
@@ -17,14 +20,14 @@ Setup__Q44nw4r3snd6detail14StrmBufferPoolFPvUli:
 /* 804219F0 003EAFB0  41 82 00 40 */	beq .L_80421A30
 /* 804219F4 003EAFB4  4B F3 6F BD */	bl OSDisableInterrupts
 /* 804219F8 003EAFB8  7C 9D F3 96 */	divwu r4, r29, r30
-/* 804219FC 003EAFBC  38 00 00 00 */	li r0, 0
+/* 804219FC 003EAFBC  38 00 00 00 */	li r0, 0x0
 /* 80421A00 003EAFC0  7C 7F 1B 78 */	mr r31, r3
-/* 80421A04 003EAFC4  93 9B 00 00 */	stw r28, 0(r27)
+/* 80421A04 003EAFC4  93 9B 00 00 */	stw r28, 0x0(r27)
 /* 80421A08 003EAFC8  38 7B 00 14 */	addi r3, r27, 0x14
-/* 80421A0C 003EAFCC  93 BB 00 04 */	stw r29, 4(r27)
-/* 80421A10 003EAFD0  90 9B 00 08 */	stw r4, 8(r27)
-/* 80421A14 003EAFD4  38 80 00 00 */	li r4, 0
-/* 80421A18 003EAFD8  38 A0 00 04 */	li r5, 4
+/* 80421A0C 003EAFCC  93 BB 00 04 */	stw r29, 0x4(r27)
+/* 80421A10 003EAFD0  90 9B 00 08 */	stw r4, 0x8(r27)
+/* 80421A14 003EAFD4  38 80 00 00 */	li r4, 0x0
+/* 80421A18 003EAFD8  38 A0 00 04 */	li r5, 0x4
 /* 80421A1C 003EAFDC  93 DB 00 0C */	stw r30, 0xc(r27)
 /* 80421A20 003EAFE0  90 1B 00 10 */	stw r0, 0x10(r27)
 /* 80421A24 003EAFE4  4B BE 29 2D */	bl memset
@@ -36,30 +39,32 @@ Setup__Q44nw4r3snd6detail14StrmBufferPoolFPvUli:
 /* 80421A38 003EAFF8  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80421A3C 003EAFFC  7C 08 03 A6 */	mtlr r0
 /* 80421A40 003EB000  38 21 00 20 */	addi r1, r1, 0x20
-/* 80421A44 003EB004  4E 80 00 20 */	blr 
+/* 80421A44 003EB004  4E 80 00 20 */	blr
+.endfn Setup__Q44nw4r3snd6detail14StrmBufferPoolFPvUli
 
-.global Shutdown__Q44nw4r3snd6detail14StrmBufferPoolFv
-Shutdown__Q44nw4r3snd6detail14StrmBufferPoolFv:
+# nw4r::snd::detail::StrmBufferPool::Shutdown()
+.fn Shutdown__Q44nw4r3snd6detail14StrmBufferPoolFv, global
 /* 80421A48 003EB008  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80421A4C 003EB00C  7C 08 02 A6 */	mflr r0
 /* 80421A50 003EB010  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80421A54 003EB014  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80421A58 003EB018  7C 7F 1B 78 */	mr r31, r3
 /* 80421A5C 003EB01C  4B F3 6F 55 */	bl OSDisableInterrupts
-/* 80421A60 003EB020  38 00 00 00 */	li r0, 0
-/* 80421A64 003EB024  90 1F 00 00 */	stw r0, 0(r31)
-/* 80421A68 003EB028  90 1F 00 04 */	stw r0, 4(r31)
-/* 80421A6C 003EB02C  90 1F 00 08 */	stw r0, 8(r31)
+/* 80421A60 003EB020  38 00 00 00 */	li r0, 0x0
+/* 80421A64 003EB024  90 1F 00 00 */	stw r0, 0x0(r31)
+/* 80421A68 003EB028  90 1F 00 04 */	stw r0, 0x4(r31)
+/* 80421A6C 003EB02C  90 1F 00 08 */	stw r0, 0x8(r31)
 /* 80421A70 003EB030  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 80421A74 003EB034  4B F3 6F 7D */	bl OSRestoreInterrupts
 /* 80421A78 003EB038  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80421A7C 003EB03C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80421A80 003EB040  7C 08 03 A6 */	mtlr r0
 /* 80421A84 003EB044  38 21 00 10 */	addi r1, r1, 0x10
-/* 80421A88 003EB048  4E 80 00 20 */	blr 
+/* 80421A88 003EB048  4E 80 00 20 */	blr
+.endfn Shutdown__Q44nw4r3snd6detail14StrmBufferPoolFv
 
-.global Alloc__Q44nw4r3snd6detail14StrmBufferPoolFv
-Alloc__Q44nw4r3snd6detail14StrmBufferPoolFv:
+# nw4r::snd::detail::StrmBufferPool::Alloc()
+.fn Alloc__Q44nw4r3snd6detail14StrmBufferPoolFv, global
 /* 80421A8C 003EB04C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80421A90 003EB050  7C 08 02 A6 */	mflr r0
 /* 80421A94 003EB054  90 01 00 14 */	stw r0, 0x14(r1)
@@ -71,14 +76,14 @@ Alloc__Q44nw4r3snd6detail14StrmBufferPoolFv:
 /* 80421AAC 003EB06C  7C 00 20 00 */	cmpw r0, r4
 /* 80421AB0 003EB070  41 80 00 10 */	blt .L_80421AC0
 /* 80421AB4 003EB074  4B F3 6F 3D */	bl OSRestoreInterrupts
-/* 80421AB8 003EB078  38 60 00 00 */	li r3, 0
+/* 80421AB8 003EB078  38 60 00 00 */	li r3, 0x0
 /* 80421ABC 003EB07C  48 00 00 A0 */	b .L_80421B5C
 .L_80421AC0:
-/* 80421AC0 003EB080  38 04 00 07 */	addi r0, r4, 7
-/* 80421AC4 003EB084  39 00 00 00 */	li r8, 0
-/* 80421AC8 003EB088  54 04 00 38 */	rlwinm r4, r0, 0, 0, 0x1c
+/* 80421AC0 003EB080  38 04 00 07 */	addi r0, r4, 0x7
+/* 80421AC4 003EB084  39 00 00 00 */	li r8, 0x0
+/* 80421AC8 003EB088  54 04 00 38 */	clrrwi r4, r0, 3
 /* 80421ACC 003EB08C  7C 84 1E 70 */	srawi r4, r4, 3
-/* 80421AD0 003EB090  38 00 00 08 */	li r0, 8
+/* 80421AD0 003EB090  38 00 00 08 */	li r0, 0x8
 /* 80421AD4 003EB094  7C E4 01 94 */	addze r7, r4
 /* 80421AD8 003EB098  48 00 00 74 */	b .L_80421B4C
 .L_80421ADC:
@@ -86,8 +91,8 @@ Alloc__Q44nw4r3snd6detail14StrmBufferPoolFv:
 /* 80421AE0 003EB0A0  88 A6 00 14 */	lbz r5, 0x14(r6)
 /* 80421AE4 003EB0A4  28 05 00 FF */	cmplwi r5, 0xff
 /* 80421AE8 003EB0A8  41 82 00 60 */	beq .L_80421B48
-/* 80421AEC 003EB0AC  39 20 00 01 */	li r9, 1
-/* 80421AF0 003EB0B0  39 40 00 00 */	li r10, 0
+/* 80421AEC 003EB0AC  39 20 00 01 */	li r9, 0x1
+/* 80421AF0 003EB0B0  39 40 00 00 */	li r10, 0x0
 /* 80421AF4 003EB0B4  7C 09 03 A6 */	mtctr r0
 .L_80421AF8:
 /* 80421AF8 003EB0B8  7C A4 48 39 */	and. r4, r5, r9
@@ -97,63 +102,65 @@ Alloc__Q44nw4r3snd6detail14StrmBufferPoolFv:
 /* 80421B08 003EB0C8  7C 0A 02 14 */	add r0, r10, r0
 /* 80421B0C 003EB0CC  7C 84 4B 78 */	or r4, r4, r9
 /* 80421B10 003EB0D0  98 86 00 14 */	stb r4, 0x14(r6)
-/* 80421B14 003EB0D4  80 9F 00 08 */	lwz r4, 8(r31)
+/* 80421B14 003EB0D4  80 9F 00 08 */	lwz r4, 0x8(r31)
 /* 80421B18 003EB0D8  80 BF 00 10 */	lwz r5, 0x10(r31)
 /* 80421B1C 003EB0DC  7C 84 01 D6 */	mullw r4, r4, r0
-/* 80421B20 003EB0E0  80 1F 00 00 */	lwz r0, 0(r31)
-/* 80421B24 003EB0E4  38 A5 00 01 */	addi r5, r5, 1
+/* 80421B20 003EB0E0  80 1F 00 00 */	lwz r0, 0x0(r31)
+/* 80421B24 003EB0E4  38 A5 00 01 */	addi r5, r5, 0x1
 /* 80421B28 003EB0E8  90 BF 00 10 */	stw r5, 0x10(r31)
 /* 80421B2C 003EB0EC  7F E4 02 14 */	add r31, r4, r0
 /* 80421B30 003EB0F0  4B F3 6E C1 */	bl OSRestoreInterrupts
 /* 80421B34 003EB0F4  7F E3 FB 78 */	mr r3, r31
 /* 80421B38 003EB0F8  48 00 00 24 */	b .L_80421B5C
 .L_80421B3C:
-/* 80421B3C 003EB0FC  55 29 0E 3C */	rlwinm r9, r9, 1, 0x18, 0x1e
-/* 80421B40 003EB100  39 4A 00 01 */	addi r10, r10, 1
+/* 80421B3C 003EB0FC  55 29 0E 3C */	clrlslwi r9, r9, 25, 1
+/* 80421B40 003EB100  39 4A 00 01 */	addi r10, r10, 0x1
 /* 80421B44 003EB104  42 00 FF B4 */	bdnz .L_80421AF8
 .L_80421B48:
-/* 80421B48 003EB108  39 08 00 01 */	addi r8, r8, 1
+/* 80421B48 003EB108  39 08 00 01 */	addi r8, r8, 0x1
 .L_80421B4C:
 /* 80421B4C 003EB10C  7C 08 38 00 */	cmpw r8, r7
 /* 80421B50 003EB110  41 80 FF 8C */	blt .L_80421ADC
 /* 80421B54 003EB114  4B F3 6E 9D */	bl OSRestoreInterrupts
-/* 80421B58 003EB118  38 60 00 00 */	li r3, 0
+/* 80421B58 003EB118  38 60 00 00 */	li r3, 0x0
 .L_80421B5C:
 /* 80421B5C 003EB11C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80421B60 003EB120  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80421B64 003EB124  7C 08 03 A6 */	mtlr r0
 /* 80421B68 003EB128  38 21 00 10 */	addi r1, r1, 0x10
-/* 80421B6C 003EB12C  4E 80 00 20 */	blr 
+/* 80421B6C 003EB12C  4E 80 00 20 */	blr
+.endfn Alloc__Q44nw4r3snd6detail14StrmBufferPoolFv
 
-.global Free__Q44nw4r3snd6detail14StrmBufferPoolFPv
-Free__Q44nw4r3snd6detail14StrmBufferPoolFPv:
+# nw4r::snd::detail::StrmBufferPool::Free(void*)
+.fn Free__Q44nw4r3snd6detail14StrmBufferPoolFPv, global
 /* 80421B70 003EB130  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80421B74 003EB134  7C 08 02 A6 */	mflr r0
 /* 80421B78 003EB138  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80421B7C 003EB13C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80421B80 003EB140  7C 9F 23 78 */	mr r31, r4
-/* 80421B84 003EB144  93 C1 00 08 */	stw r30, 8(r1)
+/* 80421B84 003EB144  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 80421B88 003EB148  7C 7E 1B 78 */	mr r30, r3
 /* 80421B8C 003EB14C  4B F3 6E 25 */	bl OSDisableInterrupts
-/* 80421B90 003EB150  80 BE 00 00 */	lwz r5, 0(r30)
-/* 80421B94 003EB154  38 80 00 01 */	li r4, 1
-/* 80421B98 003EB158  80 1E 00 08 */	lwz r0, 8(r30)
+/* 80421B90 003EB150  80 BE 00 00 */	lwz r5, 0x0(r30)
+/* 80421B94 003EB154  38 80 00 01 */	li r4, 0x1
+/* 80421B98 003EB158  80 1E 00 08 */	lwz r0, 0x8(r30)
 /* 80421B9C 003EB15C  7C A5 F8 50 */	subf r5, r5, r31
 /* 80421BA0 003EB160  7C A5 03 96 */	divwu r5, r5, r0
 /* 80421BA4 003EB164  54 A0 E8 FE */	srwi r0, r5, 3
 /* 80421BA8 003EB168  7C DE 02 14 */	add r6, r30, r0
-/* 80421BAC 003EB16C  54 A0 07 7E */	clrlwi r0, r5, 0x1d
+/* 80421BAC 003EB16C  54 A0 07 7E */	clrlwi r0, r5, 29
 /* 80421BB0 003EB170  88 A6 00 14 */	lbz r5, 0x14(r6)
 /* 80421BB4 003EB174  7C 80 00 30 */	slw r0, r4, r0
 /* 80421BB8 003EB178  7C A0 00 78 */	andc r0, r5, r0
 /* 80421BBC 003EB17C  98 06 00 14 */	stb r0, 0x14(r6)
 /* 80421BC0 003EB180  80 9E 00 10 */	lwz r4, 0x10(r30)
-/* 80421BC4 003EB184  38 04 FF FF */	addi r0, r4, -1
+/* 80421BC4 003EB184  38 04 FF FF */	addi r0, r4, -0x1
 /* 80421BC8 003EB188  90 1E 00 10 */	stw r0, 0x10(r30)
 /* 80421BCC 003EB18C  4B F3 6E 25 */	bl OSRestoreInterrupts
 /* 80421BD0 003EB190  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80421BD4 003EB194  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80421BD8 003EB198  83 C1 00 08 */	lwz r30, 8(r1)
+/* 80421BD8 003EB198  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 80421BDC 003EB19C  7C 08 03 A6 */	mtlr r0
 /* 80421BE0 003EB1A0  38 21 00 10 */	addi r1, r1, 0x10
-/* 80421BE4 003EB1A4  4E 80 00 20 */	blr 
+/* 80421BE4 003EB1A4  4E 80 00 20 */	blr
+.endfn Free__Q44nw4r3snd6detail14StrmBufferPoolFPv

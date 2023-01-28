@@ -1,85 +1,86 @@
 .include "macros.inc"
+.file "RevoSDK/ax/AXSPB.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x802D4320 - 0x802D4760
+.text
+.balign 4
 
-.balign 16, 0
-.global __AXGetStudio
-__AXGetStudio:
+.fn __AXGetStudio, global
 /* 802D4320 0029D8E0  3C 60 80 58 */	lis r3, lbl_805819C0@ha
 /* 802D4324 0029D8E4  38 63 19 C0 */	addi r3, r3, lbl_805819C0@l
-/* 802D4328 0029D8E8  4E 80 00 20 */	blr 
+/* 802D4328 0029D8E8  4E 80 00 20 */	blr
+.endfn __AXGetStudio
+/* 802D432C 0029D8EC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-.global __AXDepopFadeMain
-__AXDepopFadeMain:
-/* 802D4330 0029D8F0  3C C0 2A AB */	lis r6, 0x2AAAAAAB@ha
-/* 802D4334 0029D8F4  80 E3 00 00 */	lwz r7, 0(r3)
-/* 802D4338 0029D8F8  38 06 AA AB */	addi r0, r6, 0x2AAAAAAB@l
+.fn __AXDepopFadeMain, global
+/* 802D4330 0029D8F0  3C C0 2A AB */	lis r6, 0x2aab
+/* 802D4334 0029D8F4  80 E3 00 00 */	lwz r7, 0x0(r3)
+/* 802D4338 0029D8F8  38 06 AA AB */	addi r0, r6, -0x5555
 /* 802D433C 0029D8FC  7C 00 38 96 */	mulhw r0, r0, r7
 /* 802D4340 0029D900  7C 00 26 70 */	srawi r0, r0, 4
-/* 802D4344 0029D904  54 06 0F FE */	srwi r6, r0, 0x1f
+/* 802D4344 0029D904  54 06 0F FE */	srwi r6, r0, 31
 /* 802D4348 0029D908  7C 00 32 15 */	add. r0, r0, r6
 /* 802D434C 0029D90C  41 82 00 3C */	beq .L_802D4388
 /* 802D4350 0029D910  2C 00 00 14 */	cmpwi r0, 0x14
 /* 802D4354 0029D914  40 81 00 08 */	ble .L_802D435C
 /* 802D4358 0029D918  38 00 00 14 */	li r0, 0x14
 .L_802D435C:
-/* 802D435C 0029D91C  2C 00 FF EC */	cmpwi r0, -20
+/* 802D435C 0029D91C  2C 00 FF EC */	cmpwi r0, -0x14
 /* 802D4360 0029D920  40 80 00 08 */	bge .L_802D4368
-/* 802D4364 0029D924  38 00 FF EC */	li r0, -20
+/* 802D4364 0029D924  38 00 FF EC */	li r0, -0x14
 .L_802D4368:
-/* 802D4368 0029D928  90 E4 00 00 */	stw r7, 0(r4)
+/* 802D4368 0029D928  90 E4 00 00 */	stw r7, 0x0(r4)
 /* 802D436C 0029D92C  1C C0 00 60 */	mulli r6, r0, 0x60
 /* 802D4370 0029D930  7C 00 00 D0 */	neg r0, r0
-/* 802D4374 0029D934  80 83 00 00 */	lwz r4, 0(r3)
+/* 802D4374 0029D934  80 83 00 00 */	lwz r4, 0x0(r3)
 /* 802D4378 0029D938  7C 86 20 50 */	subf r4, r6, r4
-/* 802D437C 0029D93C  90 83 00 00 */	stw r4, 0(r3)
-/* 802D4380 0029D940  B0 05 00 00 */	sth r0, 0(r5)
+/* 802D437C 0029D93C  90 83 00 00 */	stw r4, 0x0(r3)
+/* 802D4380 0029D940  B0 05 00 00 */	sth r0, 0x0(r5)
 /* 802D4384 0029D944  4E 80 00 20 */	blr
 .L_802D4388:
-/* 802D4388 0029D948  38 00 00 00 */	li r0, 0
-/* 802D438C 0029D94C  90 03 00 00 */	stw r0, 0(r3)
-/* 802D4390 0029D950  90 04 00 00 */	stw r0, 0(r4)
-/* 802D4394 0029D954  B0 05 00 00 */	sth r0, 0(r5)
-/* 802D4398 0029D958  4E 80 00 20 */	blr 
+/* 802D4388 0029D948  38 00 00 00 */	li r0, 0x0
+/* 802D438C 0029D94C  90 03 00 00 */	stw r0, 0x0(r3)
+/* 802D4390 0029D950  90 04 00 00 */	stw r0, 0x0(r4)
+/* 802D4394 0029D954  B0 05 00 00 */	sth r0, 0x0(r5)
+/* 802D4398 0029D958  4E 80 00 20 */	blr
+.endfn __AXDepopFadeMain
+/* 802D439C 0029D95C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-.global __AXDepopFadeRmt
-__AXDepopFadeRmt:
-/* 802D43A0 0029D960  3C C0 38 E4 */	lis r6, 0x38E38E39@ha
-/* 802D43A4 0029D964  80 E3 00 00 */	lwz r7, 0(r3)
-/* 802D43A8 0029D968  38 06 8E 39 */	addi r0, r6, 0x38E38E39@l
+.fn __AXDepopFadeRmt, global
+/* 802D43A0 0029D960  3C C0 38 E4 */	lis r6, 0x38e4
+/* 802D43A4 0029D964  80 E3 00 00 */	lwz r7, 0x0(r3)
+/* 802D43A8 0029D968  38 06 8E 39 */	addi r0, r6, -0x71c7
 /* 802D43AC 0029D96C  7C 00 38 96 */	mulhw r0, r0, r7
 /* 802D43B0 0029D970  7C 00 16 70 */	srawi r0, r0, 2
-/* 802D43B4 0029D974  54 06 0F FE */	srwi r6, r0, 0x1f
+/* 802D43B4 0029D974  54 06 0F FE */	srwi r6, r0, 31
 /* 802D43B8 0029D978  7C 00 32 15 */	add. r0, r0, r6
 /* 802D43BC 0029D97C  41 82 00 3C */	beq .L_802D43F8
 /* 802D43C0 0029D980  2C 00 00 14 */	cmpwi r0, 0x14
 /* 802D43C4 0029D984  40 81 00 08 */	ble .L_802D43CC
 /* 802D43C8 0029D988  38 00 00 14 */	li r0, 0x14
 .L_802D43CC:
-/* 802D43CC 0029D98C  2C 00 FF EC */	cmpwi r0, -20
+/* 802D43CC 0029D98C  2C 00 FF EC */	cmpwi r0, -0x14
 /* 802D43D0 0029D990  40 80 00 08 */	bge .L_802D43D8
-/* 802D43D4 0029D994  38 00 FF EC */	li r0, -20
+/* 802D43D4 0029D994  38 00 FF EC */	li r0, -0x14
 .L_802D43D8:
-/* 802D43D8 0029D998  90 E4 00 00 */	stw r7, 0(r4)
+/* 802D43D8 0029D998  90 E4 00 00 */	stw r7, 0x0(r4)
 /* 802D43DC 0029D99C  1C C0 00 12 */	mulli r6, r0, 0x12
 /* 802D43E0 0029D9A0  7C 00 00 D0 */	neg r0, r0
-/* 802D43E4 0029D9A4  80 83 00 00 */	lwz r4, 0(r3)
+/* 802D43E4 0029D9A4  80 83 00 00 */	lwz r4, 0x0(r3)
 /* 802D43E8 0029D9A8  7C 86 20 50 */	subf r4, r6, r4
-/* 802D43EC 0029D9AC  90 83 00 00 */	stw r4, 0(r3)
-/* 802D43F0 0029D9B0  B0 05 00 00 */	sth r0, 0(r5)
+/* 802D43EC 0029D9AC  90 83 00 00 */	stw r4, 0x0(r3)
+/* 802D43F0 0029D9B0  B0 05 00 00 */	sth r0, 0x0(r5)
 /* 802D43F4 0029D9B4  4E 80 00 20 */	blr
 .L_802D43F8:
-/* 802D43F8 0029D9B8  38 00 00 00 */	li r0, 0
-/* 802D43FC 0029D9BC  90 03 00 00 */	stw r0, 0(r3)
-/* 802D4400 0029D9C0  90 04 00 00 */	stw r0, 0(r4)
-/* 802D4404 0029D9C4  B0 05 00 00 */	sth r0, 0(r5)
-/* 802D4408 0029D9C8  4E 80 00 20 */	blr 
+/* 802D43F8 0029D9B8  38 00 00 00 */	li r0, 0x0
+/* 802D43FC 0029D9BC  90 03 00 00 */	stw r0, 0x0(r3)
+/* 802D4400 0029D9C0  90 04 00 00 */	stw r0, 0x0(r4)
+/* 802D4404 0029D9C4  B0 05 00 00 */	sth r0, 0x0(r5)
+/* 802D4408 0029D9C8  4E 80 00 20 */	blr
+.endfn __AXDepopFadeRmt
+/* 802D440C 0029D9CC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-.global __AXPrintStudio
-__AXPrintStudio:
+.fn __AXPrintStudio, global
 /* 802D4410 0029D9D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D4414 0029D9D4  7C 08 02 A6 */	mflr r0
 /* 802D4418 0029D9D8  38 6D B5 94 */	addi r3, r13, lbl_80667714@sda21
@@ -87,11 +88,11 @@ __AXPrintStudio:
 /* 802D4420 0029D9E0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802D4424 0029D9E4  3F E0 80 58 */	lis r31, lbl_805819C0@ha
 /* 802D4428 0029D9E8  38 9F 19 C0 */	addi r4, r31, lbl_805819C0@l
-/* 802D442C 0029D9EC  38 A4 00 04 */	addi r5, r4, 4
+/* 802D442C 0029D9EC  38 A4 00 04 */	addi r5, r4, 0x4
 /* 802D4430 0029D9F0  4B FF FF 01 */	bl __AXDepopFadeMain
 /* 802D4434 0029D9F4  3B FF 19 C0 */	addi r31, r31, lbl_805819C0@l
 /* 802D4438 0029D9F8  38 6D B5 90 */	addi r3, r13, lbl_80667710@sda21
-/* 802D443C 0029D9FC  38 9F 00 06 */	addi r4, r31, 6
+/* 802D443C 0029D9FC  38 9F 00 06 */	addi r4, r31, 0x6
 /* 802D4440 0029DA00  38 BF 00 0A */	addi r5, r31, 0xa
 /* 802D4444 0029DA04  4B FF FE ED */	bl __AXDepopFadeMain
 /* 802D4448 0029DA08  38 9F 00 0C */	addi r4, r31, 0xc
@@ -173,12 +174,13 @@ __AXPrintStudio:
 /* 802D4578 0029DB38  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D457C 0029DB3C  7C 08 03 A6 */	mtlr r0
 /* 802D4580 0029DB40  38 21 00 10 */	addi r1, r1, 0x10
-/* 802D4584 0029DB44  4E 80 00 20 */	blr 
+/* 802D4584 0029DB44  4E 80 00 20 */	blr
+.endfn __AXPrintStudio
+/* 802D4588 0029DB48  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+/* 802D458C 0029DB4C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-.global __AXSPBInit
-__AXSPBInit:
-/* 802D4590 0029DB50  38 00 00 00 */	li r0, 0
+.fn __AXSPBInit, global
+/* 802D4590 0029DB50  38 00 00 00 */	li r0, 0x0
 /* 802D4594 0029DB54  90 0D B5 48 */	stw r0, lbl_806676C8@sda21(r13)
 /* 802D4598 0029DB58  90 0D B5 4C */	stw r0, lbl_806676CC@sda21(r13)
 /* 802D459C 0029DB5C  90 0D B5 50 */	stw r0, lbl_806676D0@sda21(r13)
@@ -199,19 +201,22 @@ __AXSPBInit:
 /* 802D45D8 0029DB98  90 0D B5 8C */	stw r0, lbl_8066770C@sda21(r13)
 /* 802D45DC 0029DB9C  90 0D B5 90 */	stw r0, lbl_80667710@sda21(r13)
 /* 802D45E0 0029DBA0  90 0D B5 94 */	stw r0, lbl_80667714@sda21(r13)
-/* 802D45E4 0029DBA4  4E 80 00 20 */	blr 
+/* 802D45E4 0029DBA4  4E 80 00 20 */	blr
+.endfn __AXSPBInit
+/* 802D45E8 0029DBA8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+/* 802D45EC 0029DBAC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-.global __AXSPBQuit
-__AXSPBQuit:
-/* 802D45F0 0029DBB0  4E 80 00 20 */	blr 
+.fn __AXSPBQuit, global
+/* 802D45F0 0029DBB0  4E 80 00 20 */	blr
+.endfn __AXSPBQuit
+/* 802D45F4 0029DBB4  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+/* 802D45F8 0029DBB8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+/* 802D45FC 0029DBBC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.balign 16, 0
-.global __AXDepopVoice
-__AXDepopVoice:
+.fn __AXDepopVoice, global
 /* 802D4600 0029DBC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D4604 0029DBC4  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802D4608 0029DBC8  93 C1 00 08 */	stw r30, 8(r1)
+/* 802D4608 0029DBC8  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 802D460C 0029DBCC  80 8D B5 94 */	lwz r4, lbl_80667714@sda21(r13)
 /* 802D4610 0029DBD0  A8 03 00 52 */	lha r0, 0x52(r3)
 /* 802D4614 0029DBD4  80 CD B5 88 */	lwz r6, lbl_80667708@sda21(r13)
@@ -293,73 +298,58 @@ __AXDepopVoice:
 /* 802D4744 0029DD04  7C 04 02 14 */	add r0, r4, r0
 /* 802D4748 0029DD08  90 0D B5 48 */	stw r0, lbl_806676C8@sda21(r13)
 /* 802D474C 0029DD0C  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 802D4750 0029DD10  83 C1 00 08 */	lwz r30, 8(r1)
+/* 802D4750 0029DD10  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 802D4754 0029DD14  38 21 00 10 */	addi r1, r1, 0x10
-/* 802D4758 0029DD18  4E 80 00 20 */	blr 
+/* 802D4758 0029DD18  4E 80 00 20 */	blr
+.endfn __AXDepopVoice
+/* 802D475C 0029DD1C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.section .bss, "wa"  # 0x80573C80 - 0x8066417B
-.global lbl_805819C0
-lbl_805819C0:
+# 0x805819C0 - 0x80581A40
+.section .bss, "wa", @nobits
+.balign 8
+.sym lbl_805819C0, local
 	.skip 0x80
 
-.section .sbss, "wa"  # 0x80666600 - 0x8066836F
-.global lbl_806676C8
-lbl_806676C8:
+# 0x806676C8 - 0x80667718
+.section .sbss, "wa", @nobits
+.balign 8
+.sym lbl_806676C8, local
 	.skip 0x4
-.global lbl_806676CC
-lbl_806676CC:
+.sym lbl_806676CC, local
 	.skip 0x4
-.global lbl_806676D0
-lbl_806676D0:
+.sym lbl_806676D0, local
 	.skip 0x4
-.global lbl_806676D4
-lbl_806676D4:
+.sym lbl_806676D4, local
 	.skip 0x4
-.global lbl_806676D8
-lbl_806676D8:
+.sym lbl_806676D8, local
 	.skip 0x4
-.global lbl_806676DC
-lbl_806676DC:
+.sym lbl_806676DC, local
 	.skip 0x4
-.global lbl_806676E0
-lbl_806676E0:
+.sym lbl_806676E0, local
 	.skip 0x4
-.global lbl_806676E4
-lbl_806676E4:
+.sym lbl_806676E4, local
 	.skip 0x4
-.global lbl_806676E8
-lbl_806676E8:
+.sym lbl_806676E8, local
 	.skip 0x4
-.global lbl_806676EC
-lbl_806676EC:
+.sym lbl_806676EC, local
 	.skip 0x4
-.global lbl_806676F0
-lbl_806676F0:
+.sym lbl_806676F0, local
 	.skip 0x4
-.global lbl_806676F4
-lbl_806676F4:
+.sym lbl_806676F4, local
 	.skip 0x4
-.global lbl_806676F8
-lbl_806676F8:
+.sym lbl_806676F8, local
 	.skip 0x4
-.global lbl_806676FC
-lbl_806676FC:
+.sym lbl_806676FC, local
 	.skip 0x4
-.global lbl_80667700
-lbl_80667700:
+.sym lbl_80667700, local
 	.skip 0x4
-.global lbl_80667704
-lbl_80667704:
+.sym lbl_80667704, local
 	.skip 0x4
-.global lbl_80667708
-lbl_80667708:
+.sym lbl_80667708, local
 	.skip 0x4
-.global lbl_8066770C
-lbl_8066770C:
+.sym lbl_8066770C, local
 	.skip 0x4
-.global lbl_80667710
-lbl_80667710:
+.sym lbl_80667710, local
 	.skip 0x4
-.global lbl_80667714
-lbl_80667714:
+.sym lbl_80667714, local
 	.skip 0x4

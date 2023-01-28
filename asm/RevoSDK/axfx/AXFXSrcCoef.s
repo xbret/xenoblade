@@ -1,20 +1,25 @@
 .include "macros.inc"
+.file "RevoSDK/axfx/AXFXSrcCoef.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x802DAAE0 - 0x802DAB00
+.text
+.balign 4
 
-.balign 16, 0
-.global __AXFXGetSrcCoef
-__AXFXGetSrcCoef:
+.fn __AXFXGetSrcCoef, global
 /* 802DAAE0 002A40A0  3C 80 80 54 */	lis r4, lbl_805435E0@ha
 /* 802DAAE4 002A40A4  54 60 20 36 */	slwi r0, r3, 4
 /* 802DAAE8 002A40A8  38 84 35 E0 */	addi r4, r4, lbl_805435E0@l
 /* 802DAAEC 002A40AC  7C 64 02 14 */	add r3, r4, r0
-/* 802DAAF0 002A40B0  4E 80 00 20 */	blr 
+/* 802DAAF0 002A40B0  4E 80 00 20 */	blr
+.endfn __AXFXGetSrcCoef
+/* 802DAAF4 002A40B4  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+/* 802DAAF8 002A40B8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
+/* 802DAAFC 002A40BC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
-.global lbl_805435E0
-lbl_805435E0:
+# 0x805435E0 - 0x80543DE0
+.data
+.balign 8
+.sym lbl_805435E0, local
 	.4byte 0x3DC7B000
 	.4byte 0x3F4D5E00
 	.4byte 0x3DD01000

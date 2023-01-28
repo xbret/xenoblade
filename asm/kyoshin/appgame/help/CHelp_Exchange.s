@@ -1,7 +1,10 @@
 .include "macros.inc"
+.file "kyoshin/appgame/help/CHelp_Exchange.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x802B80F0 - 0x802B80F4
+.text
+.balign 4
 
-.global func_802B80F0
-func_802B80F0:
-/* 802B80F0 002816B0  4B F0 6D 6C */	b func_801BEE5C
+.fn fn_802B80F0, local
+/* 802B80F0 002816B0  4B F0 6D 6C */	b fn_801BEE5C
+.endfn fn_802B80F0

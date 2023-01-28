@@ -1,25 +1,29 @@
 .include "macros.inc"
+.file "nw4r/snd/snd_SeqTrack.o"
 
-.section .text, "ax"  # 0x80039220 - 0x804F5900
+# 0x8041B33C - 0x8041C77C
+.text
+.balign 4
 
-.global SetPlayerTrackNo__Q44nw4r3snd6detail8SeqTrackFi
-SetPlayerTrackNo__Q44nw4r3snd6detail8SeqTrackFi:
-/* 8041B33C 003E48FC  98 83 00 04 */	stb r4, 4(r3)
-/* 8041B340 003E4900  4E 80 00 20 */	blr 
+# nw4r::snd::detail::SeqTrack::SetPlayerTrackNo(int)
+.fn SetPlayerTrackNo__Q44nw4r3snd6detail8SeqTrackFi, global
+/* 8041B33C 003E48FC  98 83 00 04 */	stb r4, 0x4(r3)
+/* 8041B340 003E4900  4E 80 00 20 */	blr
+.endfn SetPlayerTrackNo__Q44nw4r3snd6detail8SeqTrackFi
 
-.global __ct__Q44nw4r3snd6detail8SeqTrackFv
-__ct__Q44nw4r3snd6detail8SeqTrackFv:
+# nw4r::snd::detail::SeqTrack::SeqTrack()
+.fn __ct__Q44nw4r3snd6detail8SeqTrackFv, global
 /* 8041B344 003E4904  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041B348 003E4908  7C 08 02 A6 */	mflr r0
 /* 8041B34C 003E490C  3C 80 80 57 */	lis r4, lbl_8056E490@ha
 /* 8041B350 003E4910  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041B354 003E4914  38 84 E4 90 */	addi r4, r4, lbl_8056E490@l
 /* 8041B358 003E4918  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8041B35C 003E491C  3B E0 00 00 */	li r31, 0
-/* 8041B360 003E4920  93 C1 00 08 */	stw r30, 8(r1)
+/* 8041B35C 003E491C  3B E0 00 00 */	li r31, 0x0
+/* 8041B360 003E4920  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8041B364 003E4924  7C 7E 1B 78 */	mr r30, r3
-/* 8041B368 003E4928  9B E3 00 05 */	stb r31, 5(r3)
-/* 8041B36C 003E492C  90 83 00 00 */	stw r4, 0(r3)
+/* 8041B368 003E4928  9B E3 00 05 */	stb r31, 0x5(r3)
+/* 8041B36C 003E492C  90 83 00 00 */	stw r4, 0x0(r3)
 /* 8041B370 003E4930  38 63 00 58 */	addi r3, r3, 0x58
 /* 8041B374 003E4934  4B FF BB ED */	bl Init__Q44nw4r3snd6detail8LfoParamFv
 /* 8041B378 003E4938  9B FE 00 70 */	stb r31, 0x70(r30)
@@ -40,17 +44,18 @@ __ct__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041B3B4 003E4974  48 00 01 25 */	bl InitParam__Q44nw4r3snd6detail8SeqTrackFv
 /* 8041B3B8 003E4978  7F C3 F3 78 */	mr r3, r30
 /* 8041B3BC 003E497C  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8041B3C0 003E4980  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8041B3C0 003E4980  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 8041B3C4 003E4984  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041B3C8 003E4988  7C 08 03 A6 */	mtlr r0
 /* 8041B3CC 003E498C  38 21 00 10 */	addi r1, r1, 0x10
-/* 8041B3D0 003E4990  4E 80 00 20 */	blr 
+/* 8041B3D0 003E4990  4E 80 00 20 */	blr
+.endfn __ct__Q44nw4r3snd6detail8SeqTrackFv
 
-.global __dt__Q44nw4r3snd6detail8SeqTrackFv
-__dt__Q44nw4r3snd6detail8SeqTrackFv:
+# nw4r::snd::detail::SeqTrack::~SeqTrack()
+.fn __dt__Q44nw4r3snd6detail8SeqTrackFv, global
 /* 8041B3D4 003E4994  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041B3D8 003E4998  7C 08 02 A6 */	mflr r0
-/* 8041B3DC 003E499C  2C 03 00 00 */	cmpwi r3, 0
+/* 8041B3DC 003E499C  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041B3E0 003E49A0  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8041B3E4 003E49A4  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8041B3E8 003E49A8  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -60,7 +65,7 @@ __dt__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041B3F8 003E49B8  41 82 00 C0 */	beq .L_8041B4B8
 /* 8041B3FC 003E49BC  3C 80 80 57 */	lis r4, lbl_8056E490@ha
 /* 8041B400 003E49C0  38 84 E4 90 */	addi r4, r4, lbl_8056E490@l
-/* 8041B404 003E49C4  90 83 00 00 */	stw r4, 0(r3)
+/* 8041B404 003E49C4  90 83 00 00 */	stw r4, 0x0(r3)
 /* 8041B408 003E49C8  48 00 5E DD */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B40C 003E49CC  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041B410 003E49D0  4B F3 E8 51 */	bl OSLockMutex
@@ -73,14 +78,14 @@ __dt__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041B42C 003E49EC  48 00 00 1C */	b .L_8041B448
 .L_8041B430:
 /* 8041B430 003E49F0  88 1F 00 36 */	lbz r0, 0x36(r31)
-/* 8041B434 003E49F4  2C 00 00 00 */	cmpwi r0, 0
+/* 8041B434 003E49F4  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041B438 003E49F8  41 82 00 0C */	beq .L_8041B444
 /* 8041B43C 003E49FC  7F E3 FB 78 */	mr r3, r31
 /* 8041B440 003E4A00  4B FF 96 49 */	bl Release__Q44nw4r3snd6detail7ChannelFv
 .L_8041B444:
 /* 8041B444 003E4A04  83 FF 00 F4 */	lwz r31, 0xf4(r31)
 .L_8041B448:
-/* 8041B448 003E4A08  2C 1F 00 00 */	cmpwi r31, 0
+/* 8041B448 003E4A08  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 8041B44C 003E4A0C  40 82 FF E4 */	bne .L_8041B430
 /* 8041B450 003E4A10  48 00 5E 95 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B454 003E4A14  38 63 03 54 */	addi r3, r3, 0x354
@@ -95,18 +100,18 @@ __dt__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041B474 003E4A34  4B FF 9B A9 */	bl FreeChannel__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail7Channel
 /* 8041B478 003E4A38  83 FF 00 F4 */	lwz r31, 0xf4(r31)
 .L_8041B47C:
-/* 8041B47C 003E4A3C  2C 1F 00 00 */	cmpwi r31, 0
+/* 8041B47C 003E4A3C  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 8041B480 003E4A40  40 82 FF F0 */	bne .L_8041B470
-/* 8041B484 003E4A44  3B E0 00 00 */	li r31, 0
+/* 8041B484 003E4A44  3B E0 00 00 */	li r31, 0x0
 /* 8041B488 003E4A48  93 FD 00 C4 */	stw r31, 0xc4(r29)
 /* 8041B48C 003E4A4C  48 00 5E 59 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B490 003E4A50  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041B494 003E4A54  4B F3 E8 AD */	bl OSUnlockMutex
-/* 8041B498 003E4A58  9B FD 00 05 */	stb r31, 5(r29)
+/* 8041B498 003E4A58  9B FD 00 05 */	stb r31, 0x5(r29)
 /* 8041B49C 003E4A5C  48 00 5E 49 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B4A0 003E4A60  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041B4A4 003E4A64  4B F3 E8 9D */	bl OSUnlockMutex
-/* 8041B4A8 003E4A68  2C 1E 00 00 */	cmpwi r30, 0
+/* 8041B4A8 003E4A68  2C 1E 00 00 */	cmpwi r30, 0x0
 /* 8041B4AC 003E4A6C  40 81 00 0C */	ble .L_8041B4B8
 /* 8041B4B0 003E4A70  7F A3 EB 78 */	mr r3, r29
 /* 8041B4B4 003E4A74  48 01 97 79 */	bl __dl__FPv
@@ -118,21 +123,22 @@ __dt__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041B4C8 003E4A88  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8041B4CC 003E4A8C  7C 08 03 A6 */	mtlr r0
 /* 8041B4D0 003E4A90  38 21 00 20 */	addi r1, r1, 0x20
-/* 8041B4D4 003E4A94  4E 80 00 20 */	blr 
+/* 8041B4D4 003E4A94  4E 80 00 20 */	blr
+.endfn __dt__Q44nw4r3snd6detail8SeqTrackFv
 
-.global InitParam__Q44nw4r3snd6detail8SeqTrackFv
-InitParam__Q44nw4r3snd6detail8SeqTrackFv:
+# nw4r::snd::detail::SeqTrack::InitParam()
+.fn InitParam__Q44nw4r3snd6detail8SeqTrackFv, global
 /* 8041B4D8 003E4A98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041B4DC 003E4A9C  7C 08 02 A6 */	mflr r0
-/* 8041B4E0 003E4AA0  C0 22 C4 98 */	lfs f1, float_8066C818@sda21(r2)
+/* 8041B4E0 003E4AA0  C0 22 C4 98 */	lfs f1, lbl_8066C818@sda21(r2)
 /* 8041B4E4 003E4AA4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8041B4E8 003E4AA8  38 00 00 01 */	li r0, 1
-/* 8041B4EC 003E4AAC  C0 02 C4 9C */	lfs f0, float_8066C81C@sda21(r2)
+/* 8041B4E8 003E4AA8  38 00 00 01 */	li r0, 0x1
+/* 8041B4EC 003E4AAC  C0 02 C4 9C */	lfs f0, lbl_8066C81C@sda21(r2)
 /* 8041B4F0 003E4AB0  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8041B4F4 003E4AB4  3B E0 00 00 */	li r31, 0
-/* 8041B4F8 003E4AB8  93 C1 00 08 */	stw r30, 8(r1)
+/* 8041B4F4 003E4AB4  3B E0 00 00 */	li r31, 0x0
+/* 8041B4F8 003E4AB8  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8041B4FC 003E4ABC  7C 7E 1B 78 */	mr r30, r3
-/* 8041B500 003E4AC0  D0 23 00 08 */	stfs f1, 8(r3)
+/* 8041B500 003E4AC0  D0 23 00 08 */	stfs f1, 0x8(r3)
 /* 8041B504 003E4AC4  D0 23 00 0C */	stfs f1, 0xc(r3)
 /* 8041B508 003E4AC8  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 8041B50C 003E4ACC  D0 03 00 14 */	stfs f0, 0x14(r3)
@@ -154,14 +160,14 @@ InitParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041B54C 003E4B0C  93 E3 00 54 */	stw r31, 0x54(r3)
 /* 8041B550 003E4B10  38 63 00 58 */	addi r3, r3, 0x58
 /* 8041B554 003E4B14  4B FF BA 0D */	bl Init__Q44nw4r3snd6detail8LfoParamFv
-/* 8041B558 003E4B18  C0 02 C4 9C */	lfs f0, float_8066C81C@sda21(r2)
+/* 8041B558 003E4B18  C0 02 C4 9C */	lfs f0, lbl_8066C81C@sda21(r2)
 /* 8041B55C 003E4B1C  38 E0 00 7F */	li r7, 0x7f
 /* 8041B560 003E4B20  38 60 00 FF */	li r3, 0xff
-/* 8041B564 003E4B24  38 C0 00 02 */	li r6, 2
+/* 8041B564 003E4B24  38 C0 00 02 */	li r6, 0x2
 /* 8041B568 003E4B28  38 A0 00 40 */	li r5, 0x40
 /* 8041B56C 003E4B2C  38 80 00 3C */	li r4, 0x3c
 /* 8041B570 003E4B30  9B FE 00 68 */	stb r31, 0x68(r30)
-/* 8041B574 003E4B34  38 00 FF FF */	li r0, -1
+/* 8041B574 003E4B34  38 00 FF FF */	li r0, -0x1
 /* 8041B578 003E4B38  D0 1E 00 6C */	stfs f0, 0x6c(r30)
 /* 8041B57C 003E4B3C  98 FE 00 70 */	stb r7, 0x70(r30)
 /* 8041B580 003E4B40  98 FE 00 71 */	stb r7, 0x71(r30)
@@ -214,35 +220,38 @@ InitParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041B63C 003E4BFC  B0 1E 00 BE */	sth r0, 0xbe(r30)
 /* 8041B640 003E4C00  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041B644 003E4C04  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8041B648 003E4C08  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8041B648 003E4C08  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 8041B64C 003E4C0C  7C 08 03 A6 */	mtlr r0
 /* 8041B650 003E4C10  38 21 00 10 */	addi r1, r1, 0x10
-/* 8041B654 003E4C14  4E 80 00 20 */	blr 
+/* 8041B654 003E4C14  4E 80 00 20 */	blr
+.endfn InitParam__Q44nw4r3snd6detail8SeqTrackFv
 
-.global SetSeqData__Q44nw4r3snd6detail8SeqTrackFPCvl
-SetSeqData__Q44nw4r3snd6detail8SeqTrackFPCvl:
+# nw4r::snd::detail::SeqTrack::SetSeqData(const void*, long)
+.fn SetSeqData__Q44nw4r3snd6detail8SeqTrackFPCvl, global
 /* 8041B658 003E4C18  7C 04 2A 14 */	add r0, r4, r5
 /* 8041B65C 003E4C1C  90 83 00 1C */	stw r4, 0x1c(r3)
 /* 8041B660 003E4C20  90 03 00 20 */	stw r0, 0x20(r3)
-/* 8041B664 003E4C24  4E 80 00 20 */	blr 
+/* 8041B664 003E4C24  4E 80 00 20 */	blr
+.endfn SetSeqData__Q44nw4r3snd6detail8SeqTrackFPCvl
 
-.global Open__Q44nw4r3snd6detail8SeqTrackFv
-Open__Q44nw4r3snd6detail8SeqTrackFv:
-/* 8041B668 003E4C28  38 80 00 00 */	li r4, 0
-/* 8041B66C 003E4C2C  38 00 00 01 */	li r0, 1
+# nw4r::snd::detail::SeqTrack::Open()
+.fn Open__Q44nw4r3snd6detail8SeqTrackFv, global
+/* 8041B668 003E4C28  38 80 00 00 */	li r4, 0x0
+/* 8041B66C 003E4C2C  38 00 00 01 */	li r0, 0x1
 /* 8041B670 003E4C30  98 83 00 4A */	stb r4, 0x4a(r3)
 /* 8041B674 003E4C34  98 83 00 40 */	stb r4, 0x40(r3)
 /* 8041B678 003E4C38  90 83 00 44 */	stw r4, 0x44(r3)
-/* 8041B67C 003E4C3C  98 03 00 05 */	stb r0, 5(r3)
-/* 8041B680 003E4C40  4E 80 00 20 */	blr 
+/* 8041B67C 003E4C3C  98 03 00 05 */	stb r0, 0x5(r3)
+/* 8041B680 003E4C40  4E 80 00 20 */	blr
+.endfn Open__Q44nw4r3snd6detail8SeqTrackFv
 
-.global Close__Q44nw4r3snd6detail8SeqTrackFv
-Close__Q44nw4r3snd6detail8SeqTrackFv:
+# nw4r::snd::detail::SeqTrack::Close()
+.fn Close__Q44nw4r3snd6detail8SeqTrackFv, global
 /* 8041B684 003E4C44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041B688 003E4C48  7C 08 02 A6 */	mflr r0
 /* 8041B68C 003E4C4C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041B690 003E4C50  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8041B694 003E4C54  93 C1 00 08 */	stw r30, 8(r1)
+/* 8041B694 003E4C54  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8041B698 003E4C58  7C 7E 1B 78 */	mr r30, r3
 /* 8041B69C 003E4C5C  48 00 5C 49 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B6A0 003E4C60  38 63 03 54 */	addi r3, r3, 0x354
@@ -256,14 +265,14 @@ Close__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041B6C0 003E4C80  48 00 00 1C */	b .L_8041B6DC
 .L_8041B6C4:
 /* 8041B6C4 003E4C84  88 1F 00 36 */	lbz r0, 0x36(r31)
-/* 8041B6C8 003E4C88  2C 00 00 00 */	cmpwi r0, 0
+/* 8041B6C8 003E4C88  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041B6CC 003E4C8C  41 82 00 0C */	beq .L_8041B6D8
 /* 8041B6D0 003E4C90  7F E3 FB 78 */	mr r3, r31
 /* 8041B6D4 003E4C94  4B FF 93 B5 */	bl Release__Q44nw4r3snd6detail7ChannelFv
 .L_8041B6D8:
 /* 8041B6D8 003E4C98  83 FF 00 F4 */	lwz r31, 0xf4(r31)
 .L_8041B6DC:
-/* 8041B6DC 003E4C9C  2C 1F 00 00 */	cmpwi r31, 0
+/* 8041B6DC 003E4C9C  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 8041B6E0 003E4CA0  40 82 FF E4 */	bne .L_8041B6C4
 /* 8041B6E4 003E4CA4  48 00 5C 01 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B6E8 003E4CA8  38 63 03 54 */	addi r3, r3, 0x354
@@ -278,37 +287,38 @@ Close__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041B708 003E4CC8  4B FF 99 15 */	bl FreeChannel__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail7Channel
 /* 8041B70C 003E4CCC  83 FF 00 F4 */	lwz r31, 0xf4(r31)
 .L_8041B710:
-/* 8041B710 003E4CD0  2C 1F 00 00 */	cmpwi r31, 0
+/* 8041B710 003E4CD0  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 8041B714 003E4CD4  40 82 FF F0 */	bne .L_8041B704
-/* 8041B718 003E4CD8  3B E0 00 00 */	li r31, 0
+/* 8041B718 003E4CD8  3B E0 00 00 */	li r31, 0x0
 /* 8041B71C 003E4CDC  93 FE 00 C4 */	stw r31, 0xc4(r30)
 /* 8041B720 003E4CE0  48 00 5B C5 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B724 003E4CE4  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041B728 003E4CE8  4B F3 E6 19 */	bl OSUnlockMutex
-/* 8041B72C 003E4CEC  9B FE 00 05 */	stb r31, 5(r30)
+/* 8041B72C 003E4CEC  9B FE 00 05 */	stb r31, 0x5(r30)
 /* 8041B730 003E4CF0  48 00 5B B5 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B734 003E4CF4  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041B738 003E4CF8  4B F3 E6 09 */	bl OSUnlockMutex
 /* 8041B73C 003E4CFC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041B740 003E4D00  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8041B744 003E4D04  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8041B744 003E4D04  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 8041B748 003E4D08  7C 08 03 A6 */	mtlr r0
 /* 8041B74C 003E4D0C  38 21 00 10 */	addi r1, r1, 0x10
-/* 8041B750 003E4D10  4E 80 00 20 */	blr 
+/* 8041B750 003E4D10  4E 80 00 20 */	blr
+.endfn Close__Q44nw4r3snd6detail8SeqTrackFv
 
-.global UpdateChannelLength__Q44nw4r3snd6detail8SeqTrackFv
-UpdateChannelLength__Q44nw4r3snd6detail8SeqTrackFv:
+# nw4r::snd::detail::SeqTrack::UpdateChannelLength()
+.fn UpdateChannelLength__Q44nw4r3snd6detail8SeqTrackFv, global
 /* 8041B754 003E4D14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041B758 003E4D18  7C 08 02 A6 */	mflr r0
 /* 8041B75C 003E4D1C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041B760 003E4D20  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8041B764 003E4D24  93 C1 00 08 */	stw r30, 8(r1)
+/* 8041B764 003E4D24  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8041B768 003E4D28  7C 7E 1B 78 */	mr r30, r3
 /* 8041B76C 003E4D2C  48 00 5B 79 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B770 003E4D30  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041B774 003E4D34  4B F3 E4 ED */	bl OSLockMutex
-/* 8041B778 003E4D38  88 1E 00 05 */	lbz r0, 5(r30)
-/* 8041B77C 003E4D3C  2C 00 00 00 */	cmpwi r0, 0
+/* 8041B778 003E4D38  88 1E 00 05 */	lbz r0, 0x5(r30)
+/* 8041B77C 003E4D3C  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041B780 003E4D40  40 82 00 14 */	bne .L_8041B794
 /* 8041B784 003E4D44  48 00 5B 61 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B788 003E4D48  38 63 03 54 */	addi r3, r3, 0x354
@@ -319,33 +329,33 @@ UpdateChannelLength__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041B798 003E4D58  48 00 00 60 */	b .L_8041B7F8
 .L_8041B79C:
 /* 8041B79C 003E4D5C  80 7F 00 D0 */	lwz r3, 0xd0(r31)
-/* 8041B7A0 003E4D60  2C 03 00 00 */	cmpwi r3, 0
+/* 8041B7A0 003E4D60  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041B7A4 003E4D64  40 81 00 0C */	ble .L_8041B7B0
-/* 8041B7A8 003E4D68  38 03 FF FF */	addi r0, r3, -1
+/* 8041B7A8 003E4D68  38 03 FF FF */	addi r0, r3, -0x1
 /* 8041B7AC 003E4D6C  90 1F 00 D0 */	stw r0, 0xd0(r31)
 .L_8041B7B0:
 /* 8041B7B0 003E4D70  80 1F 00 D0 */	lwz r0, 0xd0(r31)
-/* 8041B7B4 003E4D74  2C 00 00 00 */	cmpwi r0, 0
+/* 8041B7B4 003E4D74  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041B7B8 003E4D78  40 82 00 24 */	bne .L_8041B7DC
-/* 8041B7BC 003E4D7C  80 1F 00 00 */	lwz r0, 0(r31)
-/* 8041B7C0 003E4D80  2C 00 00 04 */	cmpwi r0, 4
+/* 8041B7BC 003E4D7C  80 1F 00 00 */	lwz r0, 0x0(r31)
+/* 8041B7C0 003E4D80  2C 00 00 04 */	cmpwi r0, 0x4
 /* 8041B7C4 003E4D84  41 82 00 18 */	beq .L_8041B7DC
 /* 8041B7C8 003E4D88  88 1E 00 4C */	lbz r0, 0x4c(r30)
-/* 8041B7CC 003E4D8C  2C 00 00 00 */	cmpwi r0, 0
+/* 8041B7CC 003E4D8C  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041B7D0 003E4D90  40 82 00 0C */	bne .L_8041B7DC
 /* 8041B7D4 003E4D94  7F E3 FB 78 */	mr r3, r31
 /* 8041B7D8 003E4D98  4B FF 93 19 */	bl NoteOff__Q44nw4r3snd6detail7ChannelFv
 .L_8041B7DC:
 /* 8041B7DC 003E4D9C  88 1F 00 38 */	lbz r0, 0x38(r31)
-/* 8041B7E0 003E4DA0  2C 00 00 00 */	cmpwi r0, 0
+/* 8041B7E0 003E4DA0  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041B7E4 003E4DA4  40 82 00 10 */	bne .L_8041B7F4
 /* 8041B7E8 003E4DA8  7F E3 FB 78 */	mr r3, r31
-/* 8041B7EC 003E4DAC  38 80 00 01 */	li r4, 1
+/* 8041B7EC 003E4DAC  38 80 00 01 */	li r4, 0x1
 /* 8041B7F0 003E4DB0  4B FF 94 A1 */	bl UpdateSweep__Q44nw4r3snd6detail7ChannelFi
 .L_8041B7F4:
 /* 8041B7F4 003E4DB4  83 FF 00 F4 */	lwz r31, 0xf4(r31)
 .L_8041B7F8:
-/* 8041B7F8 003E4DB8  2C 1F 00 00 */	cmpwi r31, 0
+/* 8041B7F8 003E4DB8  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 8041B7FC 003E4DBC  40 82 FF A0 */	bne .L_8041B79C
 /* 8041B800 003E4DC0  48 00 5A E5 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B804 003E4DC4  38 63 03 54 */	addi r3, r3, 0x354
@@ -353,126 +363,128 @@ UpdateChannelLength__Q44nw4r3snd6detail8SeqTrackFv:
 .L_8041B80C:
 /* 8041B80C 003E4DCC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041B810 003E4DD0  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8041B814 003E4DD4  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8041B814 003E4DD4  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 8041B818 003E4DD8  7C 08 03 A6 */	mtlr r0
 /* 8041B81C 003E4DDC  38 21 00 10 */	addi r1, r1, 0x10
-/* 8041B820 003E4DE0  4E 80 00 20 */	blr 
+/* 8041B820 003E4DE0  4E 80 00 20 */	blr
+.endfn UpdateChannelLength__Q44nw4r3snd6detail8SeqTrackFv
 
-.global ParseNextTick__Q44nw4r3snd6detail8SeqTrackFb
-ParseNextTick__Q44nw4r3snd6detail8SeqTrackFb:
+# nw4r::snd::detail::SeqTrack::ParseNextTick(bool)
+.fn ParseNextTick__Q44nw4r3snd6detail8SeqTrackFb, global
 /* 8041B824 003E4DE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041B828 003E4DE8  7C 08 02 A6 */	mflr r0
 /* 8041B82C 003E4DEC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041B830 003E4DF0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8041B834 003E4DF4  7C 9F 23 78 */	mr r31, r4
-/* 8041B838 003E4DF8  93 C1 00 08 */	stw r30, 8(r1)
+/* 8041B838 003E4DF8  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8041B83C 003E4DFC  7C 7E 1B 78 */	mr r30, r3
 /* 8041B840 003E4E00  48 00 5A A5 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B844 003E4E04  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041B848 003E4E08  4B F3 E4 19 */	bl OSLockMutex
-/* 8041B84C 003E4E0C  88 1E 00 05 */	lbz r0, 5(r30)
-/* 8041B850 003E4E10  2C 00 00 00 */	cmpwi r0, 0
+/* 8041B84C 003E4E0C  88 1E 00 05 */	lbz r0, 0x5(r30)
+/* 8041B850 003E4E10  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041B854 003E4E14  40 82 00 18 */	bne .L_8041B86C
 /* 8041B858 003E4E18  48 00 5A 8D */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B85C 003E4E1C  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041B860 003E4E20  4B F3 E4 E1 */	bl OSUnlockMutex
-/* 8041B864 003E4E24  38 60 00 00 */	li r3, 0
+/* 8041B864 003E4E24  38 60 00 00 */	li r3, 0x0
 /* 8041B868 003E4E28  48 00 01 18 */	b .L_8041B980
 .L_8041B86C:
 /* 8041B86C 003E4E2C  A8 7E 00 74 */	lha r3, 0x74(r30)
 /* 8041B870 003E4E30  A8 1E 00 72 */	lha r0, 0x72(r30)
 /* 8041B874 003E4E34  7C 03 00 00 */	cmpw r3, r0
 /* 8041B878 003E4E38  40 80 00 0C */	bge .L_8041B884
-/* 8041B87C 003E4E3C  38 03 00 01 */	addi r0, r3, 1
+/* 8041B87C 003E4E3C  38 03 00 01 */	addi r0, r3, 0x1
 /* 8041B880 003E4E40  B0 1E 00 74 */	sth r0, 0x74(r30)
 .L_8041B884:
 /* 8041B884 003E4E44  A8 7E 00 7A */	lha r3, 0x7a(r30)
 /* 8041B888 003E4E48  A8 1E 00 78 */	lha r0, 0x78(r30)
 /* 8041B88C 003E4E4C  7C 03 00 00 */	cmpw r3, r0
 /* 8041B890 003E4E50  40 80 00 0C */	bge .L_8041B89C
-/* 8041B894 003E4E54  38 03 00 01 */	addi r0, r3, 1
+/* 8041B894 003E4E54  38 03 00 01 */	addi r0, r3, 0x1
 /* 8041B898 003E4E58  B0 1E 00 7A */	sth r0, 0x7a(r30)
 .L_8041B89C:
 /* 8041B89C 003E4E5C  A8 7E 00 80 */	lha r3, 0x80(r30)
 /* 8041B8A0 003E4E60  A8 1E 00 7E */	lha r0, 0x7e(r30)
 /* 8041B8A4 003E4E64  7C 03 00 00 */	cmpw r3, r0
 /* 8041B8A8 003E4E68  40 80 00 0C */	bge .L_8041B8B4
-/* 8041B8AC 003E4E6C  38 03 00 01 */	addi r0, r3, 1
+/* 8041B8AC 003E4E6C  38 03 00 01 */	addi r0, r3, 0x1
 /* 8041B8B0 003E4E70  B0 1E 00 80 */	sth r0, 0x80(r30)
 .L_8041B8B4:
 /* 8041B8B4 003E4E74  88 1E 00 4A */	lbz r0, 0x4a(r30)
-/* 8041B8B8 003E4E78  2C 00 00 00 */	cmpwi r0, 0
+/* 8041B8B8 003E4E78  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041B8BC 003E4E7C  41 82 00 2C */	beq .L_8041B8E8
 /* 8041B8C0 003E4E80  80 1E 00 C4 */	lwz r0, 0xc4(r30)
-/* 8041B8C4 003E4E84  2C 00 00 00 */	cmpwi r0, 0
+/* 8041B8C4 003E4E84  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041B8C8 003E4E88  41 82 00 18 */	beq .L_8041B8E0
 /* 8041B8CC 003E4E8C  48 00 5A 19 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B8D0 003E4E90  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041B8D4 003E4E94  4B F3 E4 6D */	bl OSUnlockMutex
-/* 8041B8D8 003E4E98  38 60 00 01 */	li r3, 1
+/* 8041B8D8 003E4E98  38 60 00 01 */	li r3, 0x1
 /* 8041B8DC 003E4E9C  48 00 00 A4 */	b .L_8041B980
 .L_8041B8E0:
-/* 8041B8E0 003E4EA0  38 00 00 00 */	li r0, 0
+/* 8041B8E0 003E4EA0  38 00 00 00 */	li r0, 0x0
 /* 8041B8E4 003E4EA4  98 1E 00 4A */	stb r0, 0x4a(r30)
 .L_8041B8E8:
 /* 8041B8E8 003E4EA8  80 7E 00 44 */	lwz r3, 0x44(r30)
-/* 8041B8EC 003E4EAC  2C 03 00 00 */	cmpwi r3, 0
+/* 8041B8EC 003E4EAC  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041B8F0 003E4EB0  40 81 00 24 */	ble .L_8041B914
-/* 8041B8F4 003E4EB4  34 03 FF FF */	addic. r0, r3, -1
+/* 8041B8F4 003E4EB4  34 03 FF FF */	addic. r0, r3, -0x1
 /* 8041B8F8 003E4EB8  90 1E 00 44 */	stw r0, 0x44(r30)
 /* 8041B8FC 003E4EBC  40 81 00 18 */	ble .L_8041B914
 /* 8041B900 003E4EC0  48 00 59 E5 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B904 003E4EC4  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041B908 003E4EC8  4B F3 E4 39 */	bl OSUnlockMutex
-/* 8041B90C 003E4ECC  38 60 00 01 */	li r3, 1
+/* 8041B90C 003E4ECC  38 60 00 01 */	li r3, 0x1
 /* 8041B910 003E4ED0  48 00 00 70 */	b .L_8041B980
 .L_8041B914:
 /* 8041B914 003E4ED4  80 1E 00 20 */	lwz r0, 0x20(r30)
-/* 8041B918 003E4ED8  2C 00 00 00 */	cmpwi r0, 0
+/* 8041B918 003E4ED8  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041B91C 003E4EDC  41 82 00 54 */	beq .L_8041B970
 /* 8041B920 003E4EE0  48 00 00 38 */	b .L_8041B958
 .L_8041B924:
-/* 8041B924 003E4EE4  81 9E 00 00 */	lwz r12, 0(r30)
+/* 8041B924 003E4EE4  81 9E 00 00 */	lwz r12, 0x0(r30)
 /* 8041B928 003E4EE8  7F C3 F3 78 */	mr r3, r30
 /* 8041B92C 003E4EEC  7F E4 FB 78 */	mr r4, r31
 /* 8041B930 003E4EF0  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 8041B934 003E4EF4  7D 89 03 A6 */	mtctr r12
-/* 8041B938 003E4EF8  4E 80 04 21 */	bctrl 
-/* 8041B93C 003E4EFC  2C 03 00 01 */	cmpwi r3, 1
+/* 8041B938 003E4EF8  4E 80 04 21 */	bctrl
+/* 8041B93C 003E4EFC  2C 03 00 01 */	cmpwi r3, 0x1
 /* 8041B940 003E4F00  40 82 00 18 */	bne .L_8041B958
 /* 8041B944 003E4F04  48 00 59 A1 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B948 003E4F08  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041B94C 003E4F0C  4B F3 E3 F5 */	bl OSUnlockMutex
-/* 8041B950 003E4F10  38 60 FF FF */	li r3, -1
+/* 8041B950 003E4F10  38 60 FF FF */	li r3, -0x1
 /* 8041B954 003E4F14  48 00 00 2C */	b .L_8041B980
 .L_8041B958:
 /* 8041B958 003E4F18  80 1E 00 44 */	lwz r0, 0x44(r30)
-/* 8041B95C 003E4F1C  2C 00 00 00 */	cmpwi r0, 0
+/* 8041B95C 003E4F1C  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041B960 003E4F20  40 82 00 10 */	bne .L_8041B970
 /* 8041B964 003E4F24  88 1E 00 4A */	lbz r0, 0x4a(r30)
-/* 8041B968 003E4F28  2C 00 00 00 */	cmpwi r0, 0
+/* 8041B968 003E4F28  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041B96C 003E4F2C  41 82 FF B8 */	beq .L_8041B924
 .L_8041B970:
 /* 8041B970 003E4F30  48 00 59 75 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B974 003E4F34  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041B978 003E4F38  4B F3 E3 C9 */	bl OSUnlockMutex
-/* 8041B97C 003E4F3C  38 60 00 01 */	li r3, 1
+/* 8041B97C 003E4F3C  38 60 00 01 */	li r3, 0x1
 .L_8041B980:
 /* 8041B980 003E4F40  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041B984 003E4F44  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8041B988 003E4F48  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8041B988 003E4F48  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 8041B98C 003E4F4C  7C 08 03 A6 */	mtlr r0
 /* 8041B990 003E4F50  38 21 00 10 */	addi r1, r1, 0x10
-/* 8041B994 003E4F54  4E 80 00 20 */	blr 
+/* 8041B994 003E4F54  4E 80 00 20 */	blr
+.endfn ParseNextTick__Q44nw4r3snd6detail8SeqTrackFb
 
-.global ReleaseAllChannel__Q44nw4r3snd6detail8SeqTrackFi
-ReleaseAllChannel__Q44nw4r3snd6detail8SeqTrackFi:
+# nw4r::snd::detail::SeqTrack::ReleaseAllChannel(int)
+.fn ReleaseAllChannel__Q44nw4r3snd6detail8SeqTrackFi, global
 /* 8041B998 003E4F58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041B99C 003E4F5C  7C 08 02 A6 */	mflr r0
 /* 8041B9A0 003E4F60  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041B9A4 003E4F64  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8041B9A8 003E4F68  7C 7F 1B 78 */	mr r31, r3
-/* 8041B9AC 003E4F6C  93 C1 00 08 */	stw r30, 8(r1)
+/* 8041B9AC 003E4F6C  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8041B9B0 003E4F70  7C 9E 23 78 */	mr r30, r4
 /* 8041B9B4 003E4F74  48 00 59 31 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041B9B8 003E4F78  38 63 03 54 */	addi r3, r3, 0x354
@@ -483,12 +495,12 @@ ReleaseAllChannel__Q44nw4r3snd6detail8SeqTrackFi:
 /* 8041B9CC 003E4F8C  48 00 00 30 */	b .L_8041B9FC
 .L_8041B9D0:
 /* 8041B9D0 003E4F90  88 1F 00 36 */	lbz r0, 0x36(r31)
-/* 8041B9D4 003E4F94  2C 00 00 00 */	cmpwi r0, 0
+/* 8041B9D4 003E4F94  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041B9D8 003E4F98  41 82 00 20 */	beq .L_8041B9F8
-/* 8041B9DC 003E4F9C  2C 1E 00 00 */	cmpwi r30, 0
+/* 8041B9DC 003E4F9C  2C 1E 00 00 */	cmpwi r30, 0x0
 /* 8041B9E0 003E4FA0  41 80 00 10 */	blt .L_8041B9F0
 /* 8041B9E4 003E4FA4  7F E3 FB 78 */	mr r3, r31
-/* 8041B9E8 003E4FA8  57 C4 06 3E */	clrlwi r4, r30, 0x18
+/* 8041B9E8 003E4FA8  57 C4 06 3E */	clrlwi r4, r30, 24
 /* 8041B9EC 003E4FAC  4B FF 9C D5 */	bl SetRelease__Q44nw4r3snd6detail12EnvGeneratorFi
 .L_8041B9F0:
 /* 8041B9F0 003E4FB0  7F E3 FB 78 */	mr r3, r31
@@ -496,26 +508,27 @@ ReleaseAllChannel__Q44nw4r3snd6detail8SeqTrackFi:
 .L_8041B9F8:
 /* 8041B9F8 003E4FB8  83 FF 00 F4 */	lwz r31, 0xf4(r31)
 .L_8041B9FC:
-/* 8041B9FC 003E4FBC  2C 1F 00 00 */	cmpwi r31, 0
+/* 8041B9FC 003E4FBC  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 8041BA00 003E4FC0  40 82 FF D0 */	bne .L_8041B9D0
 /* 8041BA04 003E4FC4  48 00 58 E1 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041BA08 003E4FC8  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041BA0C 003E4FCC  4B F3 E3 35 */	bl OSUnlockMutex
 /* 8041BA10 003E4FD0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041BA14 003E4FD4  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8041BA18 003E4FD8  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8041BA18 003E4FD8  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 8041BA1C 003E4FDC  7C 08 03 A6 */	mtlr r0
 /* 8041BA20 003E4FE0  38 21 00 10 */	addi r1, r1, 0x10
-/* 8041BA24 003E4FE4  4E 80 00 20 */	blr 
+/* 8041BA24 003E4FE4  4E 80 00 20 */	blr
+.endfn ReleaseAllChannel__Q44nw4r3snd6detail8SeqTrackFi
 
-.global PauseAllChannel__Q44nw4r3snd6detail8SeqTrackFb
-PauseAllChannel__Q44nw4r3snd6detail8SeqTrackFb:
+# nw4r::snd::detail::SeqTrack::PauseAllChannel(bool)
+.fn PauseAllChannel__Q44nw4r3snd6detail8SeqTrackFb, global
 /* 8041BA28 003E4FE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041BA2C 003E4FEC  7C 08 02 A6 */	mflr r0
 /* 8041BA30 003E4FF0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041BA34 003E4FF4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8041BA38 003E4FF8  7C 7F 1B 78 */	mr r31, r3
-/* 8041BA3C 003E4FFC  93 C1 00 08 */	stw r30, 8(r1)
+/* 8041BA3C 003E4FFC  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8041BA40 003E5000  7C 9E 23 78 */	mr r30, r4
 /* 8041BA44 003E5004  48 00 58 A1 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041BA48 003E5008  38 63 03 54 */	addi r3, r3, 0x354
@@ -524,12 +537,12 @@ PauseAllChannel__Q44nw4r3snd6detail8SeqTrackFb:
 /* 8041BA54 003E5014  48 00 00 3C */	b .L_8041BA90
 .L_8041BA58:
 /* 8041BA58 003E5018  88 1F 00 36 */	lbz r0, 0x36(r31)
-/* 8041BA5C 003E501C  2C 00 00 00 */	cmpwi r0, 0
+/* 8041BA5C 003E501C  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041BA60 003E5020  41 82 00 2C */	beq .L_8041BA8C
 /* 8041BA64 003E5024  88 7F 00 35 */	lbz r3, 0x35(r31)
 /* 8041BA68 003E5028  7C 03 00 D0 */	neg r0, r3
 /* 8041BA6C 003E502C  7C 00 1B 78 */	or r0, r0, r3
-/* 8041BA70 003E5030  54 00 0F FE */	srwi r0, r0, 0x1f
+/* 8041BA70 003E5030  54 00 0F FE */	srwi r0, r0, 31
 /* 8041BA74 003E5034  7C 1E 00 40 */	cmplw r30, r0
 /* 8041BA78 003E5038  41 82 00 14 */	beq .L_8041BA8C
 /* 8041BA7C 003E503C  9B DF 00 35 */	stb r30, 0x35(r31)
@@ -539,45 +552,46 @@ PauseAllChannel__Q44nw4r3snd6detail8SeqTrackFb:
 .L_8041BA8C:
 /* 8041BA8C 003E504C  83 FF 00 F4 */	lwz r31, 0xf4(r31)
 .L_8041BA90:
-/* 8041BA90 003E5050  2C 1F 00 00 */	cmpwi r31, 0
+/* 8041BA90 003E5050  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 8041BA94 003E5054  40 82 FF C4 */	bne .L_8041BA58
 /* 8041BA98 003E5058  48 00 58 4D */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041BA9C 003E505C  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041BAA0 003E5060  4B F3 E2 A1 */	bl OSUnlockMutex
 /* 8041BAA4 003E5064  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041BAA8 003E5068  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8041BAAC 003E506C  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8041BAAC 003E506C  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 8041BAB0 003E5070  7C 08 03 A6 */	mtlr r0
 /* 8041BAB4 003E5074  38 21 00 10 */	addi r1, r1, 0x10
-/* 8041BAB8 003E5078  4E 80 00 20 */	blr 
+/* 8041BAB8 003E5078  4E 80 00 20 */	blr
+.endfn PauseAllChannel__Q44nw4r3snd6detail8SeqTrackFb
 
-.global UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv
-UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
+# nw4r::snd::detail::SeqTrack::UpdateChannelParam()
+.fn UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv, global
 /* 8041BABC 003E507C  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 8041BAC0 003E5080  7C 08 02 A6 */	mflr r0
 /* 8041BAC4 003E5084  90 01 01 24 */	stw r0, 0x124(r1)
 /* 8041BAC8 003E5088  DB E1 01 10 */	stfd f31, 0x110(r1)
-/* 8041BACC 003E508C  F3 E1 01 18 */	psq_st f31, 280(r1), 0, qr0
+/* 8041BACC 003E508C  F3 E1 01 18 */	psq_st f31, 0x118(r1), 0, qr0
 /* 8041BAD0 003E5090  DB C1 01 00 */	stfd f30, 0x100(r1)
-/* 8041BAD4 003E5094  F3 C1 01 08 */	psq_st f30, 264(r1), 0, qr0
+/* 8041BAD4 003E5094  F3 C1 01 08 */	psq_st f30, 0x108(r1), 0, qr0
 /* 8041BAD8 003E5098  DB A1 00 F0 */	stfd f29, 0xf0(r1)
-/* 8041BADC 003E509C  F3 A1 00 F8 */	psq_st f29, 248(r1), 0, qr0
+/* 8041BADC 003E509C  F3 A1 00 F8 */	psq_st f29, 0xf8(r1), 0, qr0
 /* 8041BAE0 003E50A0  DB 81 00 E0 */	stfd f28, 0xe0(r1)
-/* 8041BAE4 003E50A4  F3 81 00 E8 */	psq_st f28, 232(r1), 0, qr0
+/* 8041BAE4 003E50A4  F3 81 00 E8 */	psq_st f28, 0xe8(r1), 0, qr0
 /* 8041BAE8 003E50A8  DB 61 00 D0 */	stfd f27, 0xd0(r1)
-/* 8041BAEC 003E50AC  F3 61 00 D8 */	psq_st f27, 216(r1), 0, qr0
+/* 8041BAEC 003E50AC  F3 61 00 D8 */	psq_st f27, 0xd8(r1), 0, qr0
 /* 8041BAF0 003E50B0  DB 41 00 C0 */	stfd f26, 0xc0(r1)
-/* 8041BAF4 003E50B4  F3 41 00 C8 */	psq_st f26, 200(r1), 0, qr0
+/* 8041BAF4 003E50B4  F3 41 00 C8 */	psq_st f26, 0xc8(r1), 0, qr0
 /* 8041BAF8 003E50B8  DB 21 00 B0 */	stfd f25, 0xb0(r1)
-/* 8041BAFC 003E50BC  F3 21 00 B8 */	psq_st f25, 184(r1), 0, qr0
+/* 8041BAFC 003E50BC  F3 21 00 B8 */	psq_st f25, 0xb8(r1), 0, qr0
 /* 8041BB00 003E50C0  DB 01 00 A0 */	stfd f24, 0xa0(r1)
-/* 8041BB04 003E50C4  F3 01 00 A8 */	psq_st f24, 168(r1), 0, qr0
+/* 8041BB04 003E50C4  F3 01 00 A8 */	psq_st f24, 0xa8(r1), 0, qr0
 /* 8041BB08 003E50C8  DA E1 00 90 */	stfd f23, 0x90(r1)
-/* 8041BB0C 003E50CC  F2 E1 00 98 */	psq_st f23, 152(r1), 0, qr0
+/* 8041BB0C 003E50CC  F2 E1 00 98 */	psq_st f23, 0x98(r1), 0, qr0
 /* 8041BB10 003E50D0  DA C1 00 80 */	stfd f22, 0x80(r1)
-/* 8041BB14 003E50D4  F2 C1 00 88 */	psq_st f22, 136(r1), 0, qr0
+/* 8041BB14 003E50D4  F2 C1 00 88 */	psq_st f22, 0x88(r1), 0, qr0
 /* 8041BB18 003E50D8  DA A1 00 70 */	stfd f21, 0x70(r1)
-/* 8041BB1C 003E50DC  F2 A1 00 78 */	psq_st f21, 120(r1), 0, qr0
+/* 8041BB1C 003E50DC  F2 A1 00 78 */	psq_st f21, 0x78(r1), 0, qr0
 /* 8041BB20 003E50E0  39 61 00 70 */	addi r11, r1, 0x70
 /* 8041BB24 003E50E4  4B E9 E6 25 */	bl _savegpr_24
 /* 8041BB28 003E50E8  3C 00 43 30 */	lis r0, 0x4330
@@ -587,8 +601,8 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BB38 003E50F8  48 00 57 AD */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041BB3C 003E50FC  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041BB40 003E5100  4B F3 E1 21 */	bl OSLockMutex
-/* 8041BB44 003E5104  88 1D 00 05 */	lbz r0, 5(r29)
-/* 8041BB48 003E5108  2C 00 00 00 */	cmpwi r0, 0
+/* 8041BB44 003E5104  88 1D 00 05 */	lbz r0, 0x5(r29)
+/* 8041BB48 003E5108  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041BB4C 003E510C  40 82 00 14 */	bne .L_8041BB60
 /* 8041BB50 003E5110  48 00 57 95 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041BB54 003E5114  38 63 03 54 */	addi r3, r3, 0x354
@@ -596,7 +610,7 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BB5C 003E511C  48 00 04 B0 */	b .L_8041C00C
 .L_8041BB60:
 /* 8041BB60 003E5120  80 1D 00 C4 */	lwz r0, 0xc4(r29)
-/* 8041BB64 003E5124  2C 00 00 00 */	cmpwi r0, 0
+/* 8041BB64 003E5124  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041BB68 003E5128  40 82 00 14 */	bne .L_8041BB7C
 /* 8041BB6C 003E512C  48 00 57 79 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041BB70 003E5130  38 63 03 54 */	addi r3, r3, 0x354
@@ -605,7 +619,7 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 .L_8041BB7C:
 /* 8041BB7C 003E513C  A8 9D 00 72 */	lha r4, 0x72(r29)
 /* 8041BB80 003E5140  A8 7D 00 74 */	lha r3, 0x74(r29)
-/* 8041BB84 003E5144  C3 A2 C4 98 */	lfs f29, float_8066C818@sda21(r2)
+/* 8041BB84 003E5144  C3 A2 C4 98 */	lfs f29, lbl_8066C818@sda21(r2)
 /* 8041BB88 003E5148  7C 03 20 00 */	cmpw r3, r4
 /* 8041BB8C 003E514C  41 80 00 0C */	blt .L_8041BB98
 /* 8041BB90 003E5150  88 1D 00 71 */	lbz r0, 0x71(r29)
@@ -617,18 +631,18 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BBA4 003E5164  7C 03 01 D6 */	mullw r0, r3, r0
 /* 8041BBA8 003E5168  7C 00 23 D6 */	divw r0, r0, r4
 /* 8041BBAC 003E516C  7C 05 02 14 */	add r0, r5, r0
-/* 8041BBB0 003E5170  54 00 06 3E */	clrlwi r0, r0, 0x18
+/* 8041BBB0 003E5170  54 00 06 3E */	clrlwi r0, r0, 24
 .L_8041BBB4:
 /* 8041BBB4 003E5174  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 8041BBB8 003E5178  88 1D 00 82 */	lbz r0, 0x82(r29)
 /* 8041BBBC 003E517C  80 7D 00 C0 */	lwz r3, 0xc0(r29)
 /* 8041BBC0 003E5180  90 01 00 44 */	stw r0, 0x44(r1)
-/* 8041BBC4 003E5184  C9 02 C4 B8 */	lfd f8, double_8066C838@sda21(r2)
+/* 8041BBC4 003E5184  C9 02 C4 B8 */	lfd f8, lbl_8066C838@sda21(r2)
 /* 8041BBC8 003E5188  C8 21 00 38 */	lfd f1, 0x38(r1)
 /* 8041BBCC 003E518C  88 03 01 08 */	lbz r0, 0x108(r3)
 /* 8041BBD0 003E5190  C8 01 00 40 */	lfd f0, 0x40(r1)
 /* 8041BBD4 003E5194  EC 21 40 28 */	fsubs f1, f1, f8
-/* 8041BBD8 003E5198  C0 E2 C4 A0 */	lfs f7, float_8066C820@sda21(r2)
+/* 8041BBD8 003E5198  C0 E2 C4 A0 */	lfs f7, lbl_8066C820@sda21(r2)
 /* 8041BBDC 003E519C  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 8041BBE0 003E51A0  EC 00 40 28 */	fsubs f0, f0, f8
 /* 8041BBE4 003E51A4  EC 41 38 24 */	fdivs f2, f1, f7
@@ -638,19 +652,19 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BBF4 003E51B4  88 1D 00 85 */	lbz r0, 0x85(r29)
 /* 8041BBF8 003E51B8  6C 84 80 00 */	xoris r4, r4, 0x8000
 /* 8041BBFC 003E51BC  EC A2 00 B2 */	fmuls f5, f2, f2
-/* 8041BC00 003E51C0  C3 62 C4 98 */	lfs f27, float_8066C818@sda21(r2)
+/* 8041BC00 003E51C0  C3 62 C4 98 */	lfs f27, lbl_8066C818@sda21(r2)
 /* 8041BC04 003E51C4  EC C1 40 28 */	fsubs f6, f1, f8
 /* 8041BC08 003E51C8  90 81 00 44 */	stw r4, 0x44(r1)
 /* 8041BC0C 003E51CC  ED 20 38 24 */	fdivs f9, f0, f7
-/* 8041BC10 003E51D0  C8 62 C4 C0 */	lfd f3, double_8066C840@sda21(r2)
+/* 8041BC10 003E51D0  C8 62 C4 C0 */	lfd f3, lbl_8066C840@sda21(r2)
 /* 8041BC14 003E51D4  C8 01 00 40 */	lfd f0, 0x40(r1)
 /* 8041BC18 003E51D8  90 01 00 3C */	stw r0, 0x3c(r1)
-/* 8041BC1C 003E51DC  C0 9D 00 08 */	lfs f4, 8(r29)
+/* 8041BC1C 003E51DC  C0 9D 00 08 */	lfs f4, 0x8(r29)
 /* 8041BC20 003E51E0  C8 21 00 38 */	lfd f1, 0x38(r1)
 /* 8041BC24 003E51E4  ED 46 38 24 */	fdivs f10, f6, f7
-/* 8041BC28 003E51E8  C0 C3 00 08 */	lfs f6, 8(r3)
-/* 8041BC2C 003E51EC  C0 42 C4 A4 */	lfs f2, float_8066C824@sda21(r2)
-/* 8041BC30 003E51F0  C0 E3 00 04 */	lfs f7, 4(r3)
+/* 8041BC28 003E51E8  C0 C3 00 08 */	lfs f6, 0x8(r3)
+/* 8041BC2C 003E51EC  C0 42 C4 A4 */	lfs f2, lbl_8066C824@sda21(r2)
+/* 8041BC30 003E51F0  C0 E3 00 04 */	lfs f7, 0x4(r3)
 /* 8041BC34 003E51F4  A8 DD 00 78 */	lha r6, 0x78(r29)
 /* 8041BC38 003E51F8  A8 BD 00 7A */	lha r5, 0x7a(r29)
 /* 8041BC3C 003E51FC  EC 60 18 28 */	fsubs f3, f0, f3
@@ -658,7 +672,7 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BC44 003E5204  EF 7B 01 B2 */	fmuls f27, f27, f6
 /* 8041BC48 003E5208  7C 05 30 00 */	cmpw r5, r6
 /* 8041BC4C 003E520C  EF BD 01 72 */	fmuls f29, f29, f5
-/* 8041BC50 003E5210  C3 42 C4 9C */	lfs f26, float_8066C81C@sda21(r2)
+/* 8041BC50 003E5210  C3 42 C4 9C */	lfs f26, lbl_8066C81C@sda21(r2)
 /* 8041BC54 003E5214  EC C9 02 72 */	fmuls f6, f9, f9
 /* 8041BC58 003E5218  EC AA 02 B2 */	fmuls f5, f10, f10
 /* 8041BC5C 003E521C  EC 43 00 B2 */	fmuls f2, f3, f2
@@ -685,18 +699,18 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BCAC 003E526C  7C 00 07 74 */	extsb r0, r0
 .L_8041BCB0:
 /* 8041BCB0 003E5270  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 8041BCB4 003E5274  C8 42 C4 C0 */	lfd f2, double_8066C840@sda21(r2)
+/* 8041BCB4 003E5274  C8 42 C4 C0 */	lfd f2, lbl_8066C840@sda21(r2)
 /* 8041BCB8 003E5278  90 01 00 44 */	stw r0, 0x44(r1)
-/* 8041BCBC 003E527C  C0 02 C4 A8 */	lfs f0, float_8066C828@sda21(r2)
+/* 8041BCBC 003E527C  C0 02 C4 A8 */	lfs f0, lbl_8066C828@sda21(r2)
 /* 8041BCC0 003E5280  C8 21 00 40 */	lfd f1, 0x40(r1)
-/* 8041BCC4 003E5284  C0 62 C4 98 */	lfs f3, float_8066C818@sda21(r2)
+/* 8041BCC4 003E5284  C0 62 C4 98 */	lfs f3, lbl_8066C818@sda21(r2)
 /* 8041BCC8 003E5288  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8041BCCC 003E528C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8041BCD0 003E5290  FC 00 18 40 */	fcmpo cr0, f0, f3
 /* 8041BCD4 003E5294  40 81 00 08 */	ble .L_8041BCDC
 /* 8041BCD8 003E5298  48 00 00 18 */	b .L_8041BCF0
 .L_8041BCDC:
-/* 8041BCDC 003E529C  C0 62 C4 AC */	lfs f3, float_8066C82C@sda21(r2)
+/* 8041BCDC 003E529C  C0 62 C4 AC */	lfs f3, lbl_8066C82C@sda21(r2)
 /* 8041BCE0 003E52A0  FC 00 18 40 */	fcmpo cr0, f0, f3
 /* 8041BCE4 003E52A4  40 80 00 08 */	bge .L_8041BCEC
 /* 8041BCE8 003E52A8  48 00 00 08 */	b .L_8041BCF0
@@ -712,7 +726,7 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BD08 003E52C8  A8 DD 00 7E */	lha r6, 0x7e(r29)
 /* 8041BD0C 003E52CC  A8 BD 00 80 */	lha r5, 0x80(r29)
 /* 8041BD10 003E52D0  EF 5A 00 B2 */	fmuls f26, f26, f2
-/* 8041BD14 003E52D4  C3 22 C4 9C */	lfs f25, float_8066C81C@sda21(r2)
+/* 8041BD14 003E52D4  C3 22 C4 9C */	lfs f25, lbl_8066C81C@sda21(r2)
 /* 8041BD18 003E52D8  7C 05 30 00 */	cmpw r5, r6
 /* 8041BD1C 003E52DC  EF 5A 00 2A */	fadds f26, f26, f0
 /* 8041BD20 003E52E0  EF 5A 08 2A */	fadds f26, f26, f1
@@ -732,18 +746,18 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BD54 003E5314  7C 00 07 74 */	extsb r0, r0
 .L_8041BD58:
 /* 8041BD58 003E5318  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 8041BD5C 003E531C  C8 42 C4 C0 */	lfd f2, double_8066C840@sda21(r2)
+/* 8041BD5C 003E531C  C8 42 C4 C0 */	lfd f2, lbl_8066C840@sda21(r2)
 /* 8041BD60 003E5320  90 01 00 3C */	stw r0, 0x3c(r1)
-/* 8041BD64 003E5324  C0 02 C4 A8 */	lfs f0, float_8066C828@sda21(r2)
+/* 8041BD64 003E5324  C0 02 C4 A8 */	lfs f0, lbl_8066C828@sda21(r2)
 /* 8041BD68 003E5328  C8 21 00 38 */	lfd f1, 0x38(r1)
-/* 8041BD6C 003E532C  C0 62 C4 B0 */	lfs f3, float_8066C830@sda21(r2)
+/* 8041BD6C 003E532C  C0 62 C4 B0 */	lfs f3, lbl_8066C830@sda21(r2)
 /* 8041BD70 003E5330  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8041BD74 003E5334  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8041BD78 003E5338  FC 00 18 40 */	fcmpo cr0, f0, f3
 /* 8041BD7C 003E533C  40 81 00 08 */	ble .L_8041BD84
 /* 8041BD80 003E5340  48 00 00 18 */	b .L_8041BD98
 .L_8041BD84:
-/* 8041BD84 003E5344  C0 62 C4 9C */	lfs f3, float_8066C81C@sda21(r2)
+/* 8041BD84 003E5344  C0 62 C4 9C */	lfs f3, lbl_8066C81C@sda21(r2)
 /* 8041BD88 003E5348  FC 00 18 40 */	fcmpo cr0, f0, f3
 /* 8041BD8C 003E534C  40 80 00 08 */	bge .L_8041BD94
 /* 8041BD90 003E5350  48 00 00 08 */	b .L_8041BD98
@@ -752,14 +766,14 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 .L_8041BD98:
 /* 8041BD98 003E5358  EF 39 18 2A */	fadds f25, f25, f3
 /* 8041BD9C 003E535C  C0 3D 00 14 */	lfs f1, 0x14(r29)
-/* 8041BDA0 003E5360  C3 02 C4 9C */	lfs f24, float_8066C81C@sda21(r2)
+/* 8041BDA0 003E5360  C3 02 C4 9C */	lfs f24, lbl_8066C81C@sda21(r2)
 /* 8041BDA4 003E5364  C0 1D 00 98 */	lfs f0, 0x98(r29)
 /* 8041BDA8 003E5368  EF 39 08 2A */	fadds f25, f25, f1
 /* 8041BDAC 003E536C  C0 23 00 10 */	lfs f1, 0x10(r3)
 /* 8041BDB0 003E5370  EF 18 00 2A */	fadds f24, f24, f0
 /* 8041BDB4 003E5374  88 03 00 1C */	lbz r0, 0x1c(r3)
 /* 8041BDB8 003E5378  C0 03 00 14 */	lfs f0, 0x14(r3)
-/* 8041BDBC 003E537C  2C 00 00 00 */	cmpwi r0, 0
+/* 8041BDBC 003E537C  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041BDC0 003E5380  EF 39 08 2A */	fadds f25, f25, f1
 /* 8041BDC4 003E5384  8B FD 00 96 */	lbz r31, 0x96(r29)
 /* 8041BDC8 003E5388  EF 18 00 2A */	fadds f24, f24, f0
@@ -770,15 +784,15 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 .L_8041BDDC:
 /* 8041BDDC 003E539C  88 1D 00 92 */	lbz r0, 0x92(r29)
 /* 8041BDE0 003E53A0  3B 21 00 28 */	addi r25, r1, 0x28
-/* 8041BDE4 003E53A4  C2 C2 C4 9C */	lfs f22, float_8066C81C@sda21(r2)
-/* 8041BDE8 003E53A8  3B 40 00 00 */	li r26, 0
+/* 8041BDE4 003E53A4  C2 C2 C4 9C */	lfs f22, lbl_8066C81C@sda21(r2)
+/* 8041BDE8 003E53A8  3B 40 00 00 */	li r26, 0x0
 /* 8041BDEC 003E53AC  90 01 00 44 */	stw r0, 0x44(r1)
-/* 8041BDF0 003E53B0  CB C2 C4 B8 */	lfd f30, double_8066C838@sda21(r2)
+/* 8041BDF0 003E53B0  CB C2 C4 B8 */	lfd f30, lbl_8066C838@sda21(r2)
 /* 8041BDF4 003E53B4  FE A0 B0 90 */	fmr f21, f22
 /* 8041BDF8 003E53B8  C8 21 00 40 */	lfd f1, 0x40(r1)
-/* 8041BDFC 003E53BC  C3 E2 C4 A0 */	lfs f31, float_8066C820@sda21(r2)
+/* 8041BDFC 003E53BC  C3 E2 C4 A0 */	lfs f31, lbl_8066C820@sda21(r2)
 /* 8041BE00 003E53C0  EC 21 F0 28 */	fsubs f1, f1, f30
-/* 8041BE04 003E53C4  C0 02 C4 98 */	lfs f0, float_8066C818@sda21(r2)
+/* 8041BE04 003E53C4  C0 02 C4 98 */	lfs f0, lbl_8066C818@sda21(r2)
 /* 8041BE08 003E53C8  C0 43 00 28 */	lfs f2, 0x28(r3)
 /* 8041BE0C 003E53CC  8B 83 00 1D */	lbz r28, 0x1d(r3)
 /* 8041BE10 003E53D0  EC 21 F8 24 */	fdivs f1, f1, f31
@@ -790,45 +804,45 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BE24 003E53E4  FC 00 A8 18 */	frsp f0, f21
 /* 8041BE28 003E53E8  88 03 00 93 */	lbz r0, 0x93(r3)
 /* 8041BE2C 003E53EC  7F 44 D3 78 */	mr r4, r26
-/* 8041BE30 003E53F0  D2 B9 00 00 */	stfs f21, 0(r25)
+/* 8041BE30 003E53F0  D2 B9 00 00 */	stfs f21, 0x0(r25)
 /* 8041BE34 003E53F4  80 7D 00 C0 */	lwz r3, 0xc0(r29)
 /* 8041BE38 003E53F8  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 8041BE3C 003E53FC  C8 21 00 38 */	lfd f1, 0x38(r1)
 /* 8041BE40 003E5400  EC 21 F0 28 */	fsubs f1, f1, f30
 /* 8041BE44 003E5404  EC 21 F8 24 */	fdivs f1, f1, f31
 /* 8041BE48 003E5408  EC 00 08 2A */	fadds f0, f0, f1
-/* 8041BE4C 003E540C  D0 19 00 00 */	stfs f0, 0(r25)
+/* 8041BE4C 003E540C  D0 19 00 00 */	stfs f0, 0x0(r25)
 /* 8041BE50 003E5410  4B FF 65 AD */	bl GetFxSend__Q44nw4r3snd6detail11BasicPlayerCFQ34nw4r3snd6AuxBus
-/* 8041BE54 003E5414  C0 19 00 00 */	lfs f0, 0(r25)
-/* 8041BE58 003E5418  3B 5A 00 01 */	addi r26, r26, 1
-/* 8041BE5C 003E541C  2C 1A 00 03 */	cmpwi r26, 3
+/* 8041BE54 003E5414  C0 19 00 00 */	lfs f0, 0x0(r25)
+/* 8041BE58 003E5418  3B 5A 00 01 */	addi r26, r26, 0x1
+/* 8041BE5C 003E541C  2C 1A 00 03 */	cmpwi r26, 0x3
 /* 8041BE60 003E5420  EC 00 08 2A */	fadds f0, f0, f1
-/* 8041BE64 003E5424  D0 19 00 00 */	stfs f0, 0(r25)
-/* 8041BE68 003E5428  3B 39 00 04 */	addi r25, r25, 4
+/* 8041BE64 003E5424  D0 19 00 00 */	stfs f0, 0x0(r25)
+/* 8041BE68 003E5428  3B 39 00 04 */	addi r25, r25, 0x4
 /* 8041BE6C 003E542C  41 80 FF B4 */	blt .L_8041BE20
-/* 8041BE70 003E5430  C3 C2 C4 9C */	lfs f30, float_8066C81C@sda21(r2)
+/* 8041BE70 003E5430  C3 C2 C4 9C */	lfs f30, lbl_8066C81C@sda21(r2)
 /* 8041BE74 003E5434  3B 21 00 18 */	addi r25, r1, 0x18
-/* 8041BE78 003E5438  3B 41 00 08 */	addi r26, r1, 8
-/* 8041BE7C 003E543C  3B 60 00 00 */	li r27, 0
+/* 8041BE78 003E5438  3B 41 00 08 */	addi r26, r1, 0x8
+/* 8041BE7C 003E543C  3B 60 00 00 */	li r27, 0x0
 .L_8041BE80:
-/* 8041BE80 003E5440  D3 D9 00 00 */	stfs f30, 0(r25)
+/* 8041BE80 003E5440  D3 D9 00 00 */	stfs f30, 0x0(r25)
 /* 8041BE84 003E5444  7F 64 DB 78 */	mr r4, r27
 /* 8041BE88 003E5448  80 7D 00 C0 */	lwz r3, 0xc0(r29)
 /* 8041BE8C 003E544C  4B FF 65 B5 */	bl GetRemoteSend__Q44nw4r3snd6detail11BasicPlayerCFi
-/* 8041BE90 003E5450  C0 19 00 00 */	lfs f0, 0(r25)
+/* 8041BE90 003E5450  C0 19 00 00 */	lfs f0, 0x0(r25)
 /* 8041BE94 003E5454  7F 64 DB 78 */	mr r4, r27
-/* 8041BE98 003E5458  D3 DA 00 00 */	stfs f30, 0(r26)
+/* 8041BE98 003E5458  D3 DA 00 00 */	stfs f30, 0x0(r26)
 /* 8041BE9C 003E545C  EC 00 08 2A */	fadds f0, f0, f1
 /* 8041BEA0 003E5460  80 7D 00 C0 */	lwz r3, 0xc0(r29)
-/* 8041BEA4 003E5464  D0 19 00 00 */	stfs f0, 0(r25)
+/* 8041BEA4 003E5464  D0 19 00 00 */	stfs f0, 0x0(r25)
 /* 8041BEA8 003E5468  4B FF 65 A9 */	bl GetRemoteFxSend__Q44nw4r3snd6detail11BasicPlayerCFi
-/* 8041BEAC 003E546C  C0 1A 00 00 */	lfs f0, 0(r26)
-/* 8041BEB0 003E5470  3B 7B 00 01 */	addi r27, r27, 1
-/* 8041BEB4 003E5474  2C 1B 00 04 */	cmpwi r27, 4
-/* 8041BEB8 003E5478  3B 39 00 04 */	addi r25, r25, 4
+/* 8041BEAC 003E546C  C0 1A 00 00 */	lfs f0, 0x0(r26)
+/* 8041BEB0 003E5470  3B 7B 00 01 */	addi r27, r27, 0x1
+/* 8041BEB4 003E5474  2C 1B 00 04 */	cmpwi r27, 0x4
+/* 8041BEB8 003E5478  3B 39 00 04 */	addi r25, r25, 0x4
 /* 8041BEBC 003E547C  EC 00 08 2A */	fadds f0, f0, f1
-/* 8041BEC0 003E5480  D0 1A 00 00 */	stfs f0, 0(r26)
-/* 8041BEC4 003E5484  3B 5A 00 04 */	addi r26, r26, 4
+/* 8041BEC0 003E5480  D0 1A 00 00 */	stfs f0, 0x0(r26)
+/* 8041BEC4 003E5484  3B 5A 00 04 */	addi r26, r26, 0x4
 /* 8041BEC8 003E5488  41 80 FF B8 */	blt .L_8041BE80
 /* 8041BECC 003E548C  83 DD 00 C4 */	lwz r30, 0xc4(r29)
 /* 8041BED0 003E5490  C2 A1 00 28 */	lfs f21, 0x28(r1)
@@ -849,9 +863,9 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BF08 003E54C8  9B 9E 00 3C */	stb r28, 0x3c(r30)
 /* 8041BF0C 003E54CC  7F DB F3 78 */	mr r27, r30
 /* 8041BF10 003E54D0  3B 41 00 18 */	addi r26, r1, 0x18
-/* 8041BF14 003E54D4  3B 21 00 08 */	addi r25, r1, 8
+/* 8041BF14 003E54D4  3B 21 00 08 */	addi r25, r1, 0x8
 /* 8041BF18 003E54D8  80 7D 00 C0 */	lwz r3, 0xc0(r29)
-/* 8041BF1C 003E54DC  3B 00 00 00 */	li r24, 0
+/* 8041BF1C 003E54DC  3B 00 00 00 */	li r24, 0x0
 /* 8041BF20 003E54E0  80 03 00 20 */	lwz r0, 0x20(r3)
 /* 8041BF24 003E54E4  90 1E 00 58 */	stw r0, 0x58(r30)
 /* 8041BF28 003E54E8  80 7D 00 C0 */	lwz r3, 0xc0(r29)
@@ -865,19 +879,19 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BF44 003E5504  80 7D 00 C0 */	lwz r3, 0xc0(r29)
 /* 8041BF48 003E5508  7F 04 C3 78 */	mr r4, r24
 /* 8041BF4C 003E550C  4B FF 64 E5 */	bl GetRemoteOutVolume__Q44nw4r3snd6detail11BasicPlayerCFi
-/* 8041BF50 003E5510  C0 1A 00 00 */	lfs f0, 0(r26)
-/* 8041BF54 003E5514  3B 18 00 01 */	addi r24, r24, 1
+/* 8041BF50 003E5510  C0 1A 00 00 */	lfs f0, 0x0(r26)
+/* 8041BF54 003E5514  3B 18 00 01 */	addi r24, r24, 0x1
 /* 8041BF58 003E5518  D0 3B 00 70 */	stfs f1, 0x70(r27)
-/* 8041BF5C 003E551C  2C 18 00 04 */	cmpwi r24, 4
-/* 8041BF60 003E5520  C0 39 00 00 */	lfs f1, 0(r25)
-/* 8041BF64 003E5524  3B 5A 00 04 */	addi r26, r26, 4
+/* 8041BF5C 003E551C  2C 18 00 04 */	cmpwi r24, 0x4
+/* 8041BF60 003E5520  C0 39 00 00 */	lfs f1, 0x0(r25)
+/* 8041BF64 003E5524  3B 5A 00 04 */	addi r26, r26, 0x4
 /* 8041BF68 003E5528  D0 1B 00 80 */	stfs f0, 0x80(r27)
-/* 8041BF6C 003E552C  3B 39 00 04 */	addi r25, r25, 4
+/* 8041BF6C 003E552C  3B 39 00 04 */	addi r25, r25, 0x4
 /* 8041BF70 003E5530  D0 3B 00 90 */	stfs f1, 0x90(r27)
-/* 8041BF74 003E5534  3B 7B 00 04 */	addi r27, r27, 4
+/* 8041BF74 003E5534  3B 7B 00 04 */	addi r27, r27, 0x4
 /* 8041BF78 003E5538  41 80 FF CC */	blt .L_8041BF44
-/* 8041BF7C 003E553C  3B 00 00 00 */	li r24, 0
-/* 8041BF80 003E5540  3B 60 00 00 */	li r27, 0
+/* 8041BF7C 003E553C  3B 00 00 00 */	li r24, 0x0
+/* 8041BF80 003E5540  3B 60 00 00 */	li r27, 0x0
 /* 8041BF84 003E5544  48 00 00 20 */	b .L_8041BFA4
 .L_8041BF88:
 /* 8041BF88 003E5548  7C A3 DA 14 */	add r5, r3, r27
@@ -886,7 +900,7 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BF94 003E5554  38 A5 00 70 */	addi r5, r5, 0x70
 /* 8041BF98 003E5558  48 00 B6 25 */	bl SetVoiceOutParam__Q44nw4r3snd6detail5VoiceFiRCQ34nw4r3snd13VoiceOutParam
 /* 8041BF9C 003E555C  3B 7B 00 18 */	addi r27, r27, 0x18
-/* 8041BFA0 003E5560  3B 18 00 01 */	addi r24, r24, 1
+/* 8041BFA0 003E5560  3B 18 00 01 */	addi r24, r24, 0x1
 .L_8041BFA4:
 /* 8041BFA4 003E5564  80 7D 00 C0 */	lwz r3, 0xc0(r29)
 /* 8041BFA8 003E5568  80 03 01 04 */	lwz r0, 0x104(r3)
@@ -910,48 +924,49 @@ UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041BFF0 003E55B0  98 1E 00 34 */	stb r0, 0x34(r30)
 /* 8041BFF4 003E55B4  83 DE 00 F4 */	lwz r30, 0xf4(r30)
 .L_8041BFF8:
-/* 8041BFF8 003E55B8  2C 1E 00 00 */	cmpwi r30, 0
+/* 8041BFF8 003E55B8  2C 1E 00 00 */	cmpwi r30, 0x0
 /* 8041BFFC 003E55BC  40 82 FE E4 */	bne .L_8041BEE0
 /* 8041C000 003E55C0  48 00 52 E5 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041C004 003E55C4  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041C008 003E55C8  4B F3 DD 39 */	bl OSUnlockMutex
 .L_8041C00C:
-/* 8041C00C 003E55CC  E3 E1 01 18 */	psq_l f31, 280(r1), 0, qr0
+/* 8041C00C 003E55CC  E3 E1 01 18 */	psq_l f31, 0x118(r1), 0, qr0
 /* 8041C010 003E55D0  CB E1 01 10 */	lfd f31, 0x110(r1)
-/* 8041C014 003E55D4  E3 C1 01 08 */	psq_l f30, 264(r1), 0, qr0
+/* 8041C014 003E55D4  E3 C1 01 08 */	psq_l f30, 0x108(r1), 0, qr0
 /* 8041C018 003E55D8  CB C1 01 00 */	lfd f30, 0x100(r1)
-/* 8041C01C 003E55DC  E3 A1 00 F8 */	psq_l f29, 248(r1), 0, qr0
+/* 8041C01C 003E55DC  E3 A1 00 F8 */	psq_l f29, 0xf8(r1), 0, qr0
 /* 8041C020 003E55E0  CB A1 00 F0 */	lfd f29, 0xf0(r1)
-/* 8041C024 003E55E4  E3 81 00 E8 */	psq_l f28, 232(r1), 0, qr0
+/* 8041C024 003E55E4  E3 81 00 E8 */	psq_l f28, 0xe8(r1), 0, qr0
 /* 8041C028 003E55E8  CB 81 00 E0 */	lfd f28, 0xe0(r1)
-/* 8041C02C 003E55EC  E3 61 00 D8 */	psq_l f27, 216(r1), 0, qr0
+/* 8041C02C 003E55EC  E3 61 00 D8 */	psq_l f27, 0xd8(r1), 0, qr0
 /* 8041C030 003E55F0  CB 61 00 D0 */	lfd f27, 0xd0(r1)
-/* 8041C034 003E55F4  E3 41 00 C8 */	psq_l f26, 200(r1), 0, qr0
+/* 8041C034 003E55F4  E3 41 00 C8 */	psq_l f26, 0xc8(r1), 0, qr0
 /* 8041C038 003E55F8  CB 41 00 C0 */	lfd f26, 0xc0(r1)
-/* 8041C03C 003E55FC  E3 21 00 B8 */	psq_l f25, 184(r1), 0, qr0
+/* 8041C03C 003E55FC  E3 21 00 B8 */	psq_l f25, 0xb8(r1), 0, qr0
 /* 8041C040 003E5600  CB 21 00 B0 */	lfd f25, 0xb0(r1)
-/* 8041C044 003E5604  E3 01 00 A8 */	psq_l f24, 168(r1), 0, qr0
+/* 8041C044 003E5604  E3 01 00 A8 */	psq_l f24, 0xa8(r1), 0, qr0
 /* 8041C048 003E5608  CB 01 00 A0 */	lfd f24, 0xa0(r1)
-/* 8041C04C 003E560C  E2 E1 00 98 */	psq_l f23, 152(r1), 0, qr0
+/* 8041C04C 003E560C  E2 E1 00 98 */	psq_l f23, 0x98(r1), 0, qr0
 /* 8041C050 003E5610  CA E1 00 90 */	lfd f23, 0x90(r1)
-/* 8041C054 003E5614  E2 C1 00 88 */	psq_l f22, 136(r1), 0, qr0
+/* 8041C054 003E5614  E2 C1 00 88 */	psq_l f22, 0x88(r1), 0, qr0
 /* 8041C058 003E5618  CA C1 00 80 */	lfd f22, 0x80(r1)
-/* 8041C05C 003E561C  E2 A1 00 78 */	psq_l f21, 120(r1), 0, qr0
+/* 8041C05C 003E561C  E2 A1 00 78 */	psq_l f21, 0x78(r1), 0, qr0
 /* 8041C060 003E5620  39 61 00 70 */	addi r11, r1, 0x70
 /* 8041C064 003E5624  CA A1 00 70 */	lfd f21, 0x70(r1)
 /* 8041C068 003E5628  4B E9 E1 2D */	bl _restgpr_24
 /* 8041C06C 003E562C  80 01 01 24 */	lwz r0, 0x124(r1)
 /* 8041C070 003E5630  7C 08 03 A6 */	mtlr r0
 /* 8041C074 003E5634  38 21 01 20 */	addi r1, r1, 0x120
-/* 8041C078 003E5638  4E 80 00 20 */	blr 
+/* 8041C078 003E5638  4E 80 00 20 */	blr
+.endfn UpdateChannelParam__Q44nw4r3snd6detail8SeqTrackFv
 
-.global FreeAllChannel__Q44nw4r3snd6detail8SeqTrackFv
-FreeAllChannel__Q44nw4r3snd6detail8SeqTrackFv:
+# nw4r::snd::detail::SeqTrack::FreeAllChannel()
+.fn FreeAllChannel__Q44nw4r3snd6detail8SeqTrackFv, global
 /* 8041C07C 003E563C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041C080 003E5640  7C 08 02 A6 */	mflr r0
 /* 8041C084 003E5644  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041C088 003E5648  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8041C08C 003E564C  93 C1 00 08 */	stw r30, 8(r1)
+/* 8041C08C 003E564C  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8041C090 003E5650  7C 7E 1B 78 */	mr r30, r3
 /* 8041C094 003E5654  48 00 52 51 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041C098 003E5658  38 63 03 54 */	addi r3, r3, 0x354
@@ -963,22 +978,23 @@ FreeAllChannel__Q44nw4r3snd6detail8SeqTrackFv:
 /* 8041C0AC 003E566C  4B FF 8F 71 */	bl FreeChannel__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail7Channel
 /* 8041C0B0 003E5670  83 FF 00 F4 */	lwz r31, 0xf4(r31)
 .L_8041C0B4:
-/* 8041C0B4 003E5674  2C 1F 00 00 */	cmpwi r31, 0
+/* 8041C0B4 003E5674  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 8041C0B8 003E5678  40 82 FF F0 */	bne .L_8041C0A8
-/* 8041C0BC 003E567C  38 00 00 00 */	li r0, 0
+/* 8041C0BC 003E567C  38 00 00 00 */	li r0, 0x0
 /* 8041C0C0 003E5680  90 1E 00 C4 */	stw r0, 0xc4(r30)
 /* 8041C0C4 003E5684  48 00 52 21 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041C0C8 003E5688  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041C0CC 003E568C  4B F3 DC 75 */	bl OSUnlockMutex
 /* 8041C0D0 003E5690  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041C0D4 003E5694  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8041C0D8 003E5698  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8041C0D8 003E5698  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 8041C0DC 003E569C  7C 08 03 A6 */	mtlr r0
 /* 8041C0E0 003E56A0  38 21 00 10 */	addi r1, r1, 0x10
-/* 8041C0E4 003E56A4  4E 80 00 20 */	blr 
+/* 8041C0E4 003E56A4  4E 80 00 20 */	blr
+.endfn FreeAllChannel__Q44nw4r3snd6detail8SeqTrackFv
 
-.global ChannelCallbackFunc__Q44nw4r3snd6detail8SeqTrackFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl
-ChannelCallbackFunc__Q44nw4r3snd6detail8SeqTrackFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl:
+# nw4r::snd::detail::SeqTrack::ChannelCallbackFunc(nw4r::snd::detail::Channel*, nw4r::snd::detail::Channel::ChannelCallbackStatus, unsigned long)
+.fn ChannelCallbackFunc__Q44nw4r3snd6detail8SeqTrackFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl, global
 /* 8041C0E8 003E56A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041C0EC 003E56AC  7C 08 02 A6 */	mflr r0
 /* 8041C0F0 003E56B0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -991,27 +1007,27 @@ ChannelCallbackFunc__Q44nw4r3snd6detail8SeqTrackFPQ44nw4r3snd6detail7ChannelQ54n
 /* 8041C10C 003E56CC  48 00 51 D9 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041C110 003E56D0  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041C114 003E56D4  4B F3 DB 4D */	bl OSLockMutex
-/* 8041C118 003E56D8  2C 1E 00 01 */	cmpwi r30, 1
+/* 8041C118 003E56D8  2C 1E 00 01 */	cmpwi r30, 0x1
 /* 8041C11C 003E56DC  41 82 00 24 */	beq .L_8041C140
 /* 8041C120 003E56E0  40 80 00 10 */	bge .L_8041C130
-/* 8041C124 003E56E4  2C 1E 00 00 */	cmpwi r30, 0
+/* 8041C124 003E56E4  2C 1E 00 00 */	cmpwi r30, 0x0
 /* 8041C128 003E56E8  40 80 00 10 */	bge .L_8041C138
 /* 8041C12C 003E56EC  48 00 00 14 */	b .L_8041C140
 .L_8041C130:
-/* 8041C130 003E56F0  2C 1E 00 03 */	cmpwi r30, 3
+/* 8041C130 003E56F0  2C 1E 00 03 */	cmpwi r30, 0x3
 /* 8041C134 003E56F4  40 80 00 0C */	bge .L_8041C140
 .L_8041C138:
 /* 8041C138 003E56F8  7F A3 EB 78 */	mr r3, r29
 /* 8041C13C 003E56FC  4B FF 8E E1 */	bl FreeChannel__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail7Channel
 .L_8041C140:
 /* 8041C140 003E5700  80 7F 00 C0 */	lwz r3, 0xc0(r31)
-/* 8041C144 003E5704  2C 03 00 00 */	cmpwi r3, 0
+/* 8041C144 003E5704  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041C148 003E5708  41 82 00 18 */	beq .L_8041C160
-/* 8041C14C 003E570C  81 83 00 00 */	lwz r12, 0(r3)
+/* 8041C14C 003E570C  81 83 00 00 */	lwz r12, 0x0(r3)
 /* 8041C150 003E5710  7F A4 EB 78 */	mr r4, r29
 /* 8041C154 003E5714  81 8C 00 58 */	lwz r12, 0x58(r12)
 /* 8041C158 003E5718  7D 89 03 A6 */	mtctr r12
-/* 8041C15C 003E571C  4E 80 04 21 */	bctrl 
+/* 8041C15C 003E571C  4E 80 04 21 */	bctrl
 .L_8041C160:
 /* 8041C160 003E5720  80 7F 00 C4 */	lwz r3, 0xc4(r31)
 /* 8041C164 003E5724  7C 03 E8 40 */	cmplw r3, r29
@@ -1036,7 +1052,7 @@ ChannelCallbackFunc__Q44nw4r3snd6detail8SeqTrackFPQ44nw4r3snd6detail7ChannelQ54n
 /* 8041C1A8 003E5768  7C 03 03 78 */	mr r3, r0
 .L_8041C1AC:
 /* 8041C1AC 003E576C  80 03 00 F4 */	lwz r0, 0xf4(r3)
-/* 8041C1B0 003E5770  2C 00 00 00 */	cmpwi r0, 0
+/* 8041C1B0 003E5770  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041C1B4 003E5774  40 82 FF D4 */	bne .L_8041C188
 /* 8041C1B8 003E5778  48 00 51 2D */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041C1BC 003E577C  38 63 03 54 */	addi r3, r3, 0x354
@@ -1048,33 +1064,34 @@ ChannelCallbackFunc__Q44nw4r3snd6detail8SeqTrackFPQ44nw4r3snd6detail7ChannelQ54n
 /* 8041C1D0 003E5790  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 8041C1D4 003E5794  7C 08 03 A6 */	mtlr r0
 /* 8041C1D8 003E5798  38 21 00 20 */	addi r1, r1, 0x20
-/* 8041C1DC 003E579C  4E 80 00 20 */	blr 
+/* 8041C1DC 003E579C  4E 80 00 20 */	blr
+.endfn ChannelCallbackFunc__Q44nw4r3snd6detail8SeqTrackFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl
 
-.global SetMute__Q44nw4r3snd6detail8SeqTrackFQ34nw4r3snd7SeqMute
-SetMute__Q44nw4r3snd6detail8SeqTrackFQ34nw4r3snd7SeqMute:
+# nw4r::snd::detail::SeqTrack::SetMute(nw4r::snd::SeqMute)
+.fn SetMute__Q44nw4r3snd6detail8SeqTrackFQ34nw4r3snd7SeqMute, global
 /* 8041C1E0 003E57A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041C1E4 003E57A4  7C 08 02 A6 */	mflr r0
 /* 8041C1E8 003E57A8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041C1EC 003E57AC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8041C1F0 003E57B0  7C 9F 23 78 */	mr r31, r4
-/* 8041C1F4 003E57B4  93 C1 00 08 */	stw r30, 8(r1)
+/* 8041C1F4 003E57B4  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 8041C1F8 003E57B8  7C 7E 1B 78 */	mr r30, r3
 /* 8041C1FC 003E57BC  48 00 50 E9 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041C200 003E57C0  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041C204 003E57C4  4B F3 DA 5D */	bl OSLockMutex
-/* 8041C208 003E57C8  2C 1F 00 02 */	cmpwi r31, 2
+/* 8041C208 003E57C8  2C 1F 00 02 */	cmpwi r31, 0x2
 /* 8041C20C 003E57CC  41 82 00 80 */	beq .L_8041C28C
 /* 8041C210 003E57D0  40 80 00 14 */	bge .L_8041C224
-/* 8041C214 003E57D4  2C 1F 00 00 */	cmpwi r31, 0
+/* 8041C214 003E57D4  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 8041C218 003E57D8  41 82 00 18 */	beq .L_8041C230
 /* 8041C21C 003E57DC  40 80 01 00 */	bge .L_8041C31C
 /* 8041C220 003E57E0  48 00 01 04 */	b .L_8041C324
 .L_8041C224:
-/* 8041C224 003E57E4  2C 1F 00 04 */	cmpwi r31, 4
+/* 8041C224 003E57E4  2C 1F 00 04 */	cmpwi r31, 0x4
 /* 8041C228 003E57E8  40 80 00 FC */	bge .L_8041C324
 /* 8041C22C 003E57EC  48 00 00 10 */	b .L_8041C23C
 .L_8041C230:
-/* 8041C230 003E57F0  38 00 00 00 */	li r0, 0
+/* 8041C230 003E57F0  38 00 00 00 */	li r0, 0x0
 /* 8041C234 003E57F4  98 1E 00 48 */	stb r0, 0x48(r30)
 /* 8041C238 003E57F8  48 00 00 EC */	b .L_8041C324
 .L_8041C23C:
@@ -1090,14 +1107,14 @@ SetMute__Q44nw4r3snd6detail8SeqTrackFQ34nw4r3snd7SeqMute:
 /* 8041C25C 003E581C  4B FF 89 09 */	bl Stop__Q44nw4r3snd6detail7ChannelFv
 /* 8041C260 003E5820  83 FF 00 F4 */	lwz r31, 0xf4(r31)
 .L_8041C264:
-/* 8041C264 003E5824  2C 1F 00 00 */	cmpwi r31, 0
+/* 8041C264 003E5824  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 8041C268 003E5828  40 82 FF E8 */	bne .L_8041C250
-/* 8041C26C 003E582C  38 00 00 00 */	li r0, 0
+/* 8041C26C 003E582C  38 00 00 00 */	li r0, 0x0
 /* 8041C270 003E5830  90 1E 00 C4 */	stw r0, 0xc4(r30)
 /* 8041C274 003E5834  48 00 50 71 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041C278 003E5838  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041C27C 003E583C  4B F3 DA C5 */	bl OSUnlockMutex
-/* 8041C280 003E5840  38 00 00 01 */	li r0, 1
+/* 8041C280 003E5840  38 00 00 01 */	li r0, 0x1
 /* 8041C284 003E5844  98 1E 00 48 */	stb r0, 0x48(r30)
 /* 8041C288 003E5848  48 00 00 9C */	b .L_8041C324
 .L_8041C28C:
@@ -1110,14 +1127,14 @@ SetMute__Q44nw4r3snd6detail8SeqTrackFQ34nw4r3snd7SeqMute:
 /* 8041C2A4 003E5864  48 00 00 1C */	b .L_8041C2C0
 .L_8041C2A8:
 /* 8041C2A8 003E5868  88 1F 00 36 */	lbz r0, 0x36(r31)
-/* 8041C2AC 003E586C  2C 00 00 00 */	cmpwi r0, 0
+/* 8041C2AC 003E586C  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041C2B0 003E5870  41 82 00 0C */	beq .L_8041C2BC
 /* 8041C2B4 003E5874  7F E3 FB 78 */	mr r3, r31
 /* 8041C2B8 003E5878  4B FF 87 D1 */	bl Release__Q44nw4r3snd6detail7ChannelFv
 .L_8041C2BC:
 /* 8041C2BC 003E587C  83 FF 00 F4 */	lwz r31, 0xf4(r31)
 .L_8041C2C0:
-/* 8041C2C0 003E5880  2C 1F 00 00 */	cmpwi r31, 0
+/* 8041C2C0 003E5880  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 8041C2C4 003E5884  40 82 FF E4 */	bne .L_8041C2A8
 /* 8041C2C8 003E5888  48 00 50 1D */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041C2CC 003E588C  38 63 03 54 */	addi r3, r3, 0x354
@@ -1132,18 +1149,18 @@ SetMute__Q44nw4r3snd6detail8SeqTrackFQ34nw4r3snd7SeqMute:
 /* 8041C2EC 003E58AC  4B FF 8D 31 */	bl FreeChannel__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail7Channel
 /* 8041C2F0 003E58B0  83 FF 00 F4 */	lwz r31, 0xf4(r31)
 .L_8041C2F4:
-/* 8041C2F4 003E58B4  2C 1F 00 00 */	cmpwi r31, 0
+/* 8041C2F4 003E58B4  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 8041C2F8 003E58B8  40 82 FF F0 */	bne .L_8041C2E8
-/* 8041C2FC 003E58BC  38 00 00 00 */	li r0, 0
+/* 8041C2FC 003E58BC  38 00 00 00 */	li r0, 0x0
 /* 8041C300 003E58C0  90 1E 00 C4 */	stw r0, 0xc4(r30)
 /* 8041C304 003E58C4  48 00 4F E1 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041C308 003E58C8  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041C30C 003E58CC  4B F3 DA 35 */	bl OSUnlockMutex
-/* 8041C310 003E58D0  38 00 00 01 */	li r0, 1
+/* 8041C310 003E58D0  38 00 00 01 */	li r0, 0x1
 /* 8041C314 003E58D4  98 1E 00 48 */	stb r0, 0x48(r30)
 /* 8041C318 003E58D8  48 00 00 0C */	b .L_8041C324
 .L_8041C31C:
-/* 8041C31C 003E58DC  38 00 00 01 */	li r0, 1
+/* 8041C31C 003E58DC  38 00 00 01 */	li r0, 0x1
 /* 8041C320 003E58E0  98 1E 00 48 */	stb r0, 0x48(r30)
 .L_8041C324:
 /* 8041C324 003E58E4  48 00 4F C1 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
@@ -1151,13 +1168,14 @@ SetMute__Q44nw4r3snd6detail8SeqTrackFQ34nw4r3snd7SeqMute:
 /* 8041C32C 003E58EC  4B F3 DA 15 */	bl OSUnlockMutex
 /* 8041C330 003E58F0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041C334 003E58F4  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8041C338 003E58F8  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8041C338 003E58F8  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 8041C33C 003E58FC  7C 08 03 A6 */	mtlr r0
 /* 8041C340 003E5900  38 21 00 10 */	addi r1, r1, 0x10
-/* 8041C344 003E5904  4E 80 00 20 */	blr 
+/* 8041C344 003E5904  4E 80 00 20 */	blr
+.endfn SetMute__Q44nw4r3snd6detail8SeqTrackFQ34nw4r3snd7SeqMute
 
-.global GetVariablePtr__Q44nw4r3snd6detail8SeqTrackFi
-GetVariablePtr__Q44nw4r3snd6detail8SeqTrackFi:
+# nw4r::snd::detail::SeqTrack::GetVariablePtr(int)
+.fn GetVariablePtr__Q44nw4r3snd6detail8SeqTrackFi, global
 /* 8041C348 003E5908  2C 04 00 10 */	cmpwi r4, 0x10
 /* 8041C34C 003E590C  40 80 00 14 */	bge .L_8041C360
 /* 8041C350 003E5910  54 80 08 3C */	slwi r0, r4, 1
@@ -1165,11 +1183,12 @@ GetVariablePtr__Q44nw4r3snd6detail8SeqTrackFi:
 /* 8041C358 003E5918  38 63 00 A0 */	addi r3, r3, 0xa0
 /* 8041C35C 003E591C  4E 80 00 20 */	blr
 .L_8041C360:
-/* 8041C360 003E5920  38 60 00 00 */	li r3, 0
+/* 8041C360 003E5920  38 60 00 00 */	li r3, 0x0
 /* 8041C364 003E5924  4E 80 00 20 */	blr
+.endfn GetVariablePtr__Q44nw4r3snd6detail8SeqTrackFi
 
-.global NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb
-NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
+# nw4r::snd::detail::SeqTrack::NoteOn(int, int, long, bool)
+.fn NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb, global
 /* 8041C368 003E5928  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8041C36C 003E592C  7C 08 02 A6 */	mflr r0
 /* 8041C370 003E5930  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1187,27 +1206,27 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C3A0 003E5960  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041C3A4 003E5964  4B F3 D8 BD */	bl OSLockMutex
 /* 8041C3A8 003E5968  88 19 00 83 */	lbz r0, 0x83(r25)
-/* 8041C3AC 003E596C  3C 60 81 02 */	lis r3, 0x81020409@ha
-/* 8041C3B0 003E5970  38 63 04 09 */	addi r3, r3, 0x81020409@l
-/* 8041C3B4 003E5974  2C 1D 00 00 */	cmpwi r29, 0
+/* 8041C3AC 003E596C  3C 60 81 02 */	lis r3, 0x8102
+/* 8041C3B0 003E5970  38 63 04 09 */	addi r3, r3, 0x409
+/* 8041C3B4 003E5974  2C 1D 00 00 */	cmpwi r29, 0x0
 /* 8041C3B8 003E5978  7C 1B 01 D6 */	mullw r0, r27, r0
 /* 8041C3BC 003E597C  83 F9 00 C0 */	lwz r31, 0xc0(r25)
-/* 8041C3C0 003E5980  3B C0 00 00 */	li r30, 0
+/* 8041C3C0 003E5980  3B C0 00 00 */	li r30, 0x0
 /* 8041C3C4 003E5984  7C 63 00 96 */	mulhw r3, r3, r0
 /* 8041C3C8 003E5988  7C 03 02 14 */	add r0, r3, r0
 /* 8041C3CC 003E598C  7C 00 36 70 */	srawi r0, r0, 6
-/* 8041C3D0 003E5990  54 03 0F FE */	srwi r3, r0, 0x1f
+/* 8041C3D0 003E5990  54 03 0F FE */	srwi r3, r0, 31
 /* 8041C3D4 003E5994  7F 60 1A 14 */	add r27, r0, r3
 /* 8041C3D8 003E5998  41 82 00 3C */	beq .L_8041C414
 /* 8041C3DC 003E599C  83 D9 00 C4 */	lwz r30, 0xc4(r25)
-/* 8041C3E0 003E59A0  2C 1E 00 00 */	cmpwi r30, 0
+/* 8041C3E0 003E59A0  2C 1E 00 00 */	cmpwi r30, 0x0
 /* 8041C3E4 003E59A4  41 82 00 30 */	beq .L_8041C414
 /* 8041C3E8 003E59A8  6F 60 80 00 */	xoris r0, r27, 0x8000
-/* 8041C3EC 003E59AC  57 43 06 3E */	clrlwi r3, r26, 0x18
+/* 8041C3EC 003E59AC  57 43 06 3E */	clrlwi r3, r26, 24
 /* 8041C3F0 003E59B0  90 01 00 34 */	stw r0, 0x34(r1)
-/* 8041C3F4 003E59B4  C8 42 C4 C0 */	lfd f2, double_8066C840@sda21(r2)
+/* 8041C3F4 003E59B4  C8 42 C4 C0 */	lfd f2, lbl_8066C840@sda21(r2)
 /* 8041C3F8 003E59B8  C8 21 00 30 */	lfd f1, 0x30(r1)
-/* 8041C3FC 003E59BC  C0 02 C4 A0 */	lfs f0, float_8066C820@sda21(r2)
+/* 8041C3FC 003E59BC  C0 02 C4 A0 */	lfs f0, lbl_8066C820@sda21(r2)
 /* 8041C400 003E59C0  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8041C404 003E59C4  90 7E 00 C8 */	stw r3, 0xc8(r30)
 /* 8041C408 003E59C8  EC 01 00 24 */	fdivs f0, f1, f0
@@ -1215,25 +1234,25 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C410 003E59D0  D0 1E 00 B0 */	stfs f0, 0xb0(r30)
 .L_8041C414:
 /* 8041C414 003E59D4  88 19 00 27 */	lbz r0, 0x27(r25)
-/* 8041C418 003E59D8  2C 00 00 00 */	cmpwi r0, 0
+/* 8041C418 003E59D8  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041C41C 003E59DC  41 82 00 5C */	beq .L_8041C478
 /* 8041C420 003E59E0  83 D9 00 C4 */	lwz r30, 0xc4(r25)
-/* 8041C424 003E59E4  2C 1E 00 00 */	cmpwi r30, 0
+/* 8041C424 003E59E4  2C 1E 00 00 */	cmpwi r30, 0x0
 /* 8041C428 003E59E8  41 82 00 50 */	beq .L_8041C478
-/* 8041C42C 003E59EC  80 1E 00 00 */	lwz r0, 0(r30)
-/* 8041C430 003E59F0  2C 00 00 04 */	cmpwi r0, 4
+/* 8041C42C 003E59EC  80 1E 00 00 */	lwz r0, 0x0(r30)
+/* 8041C430 003E59F0  2C 00 00 04 */	cmpwi r0, 0x4
 /* 8041C434 003E59F4  40 82 00 14 */	bne .L_8041C448
 /* 8041C438 003E59F8  7F C3 F3 78 */	mr r3, r30
 /* 8041C43C 003E59FC  4B FF 87 29 */	bl Stop__Q44nw4r3snd6detail7ChannelFv
-/* 8041C440 003E5A00  3B C0 00 00 */	li r30, 0
+/* 8041C440 003E5A00  3B C0 00 00 */	li r30, 0x0
 /* 8041C444 003E5A04  48 00 00 34 */	b .L_8041C478
 .L_8041C448:
 /* 8041C448 003E5A08  6F 60 80 00 */	xoris r0, r27, 0x8000
-/* 8041C44C 003E5A0C  57 43 06 3E */	clrlwi r3, r26, 0x18
+/* 8041C44C 003E5A0C  57 43 06 3E */	clrlwi r3, r26, 24
 /* 8041C450 003E5A10  90 01 00 3C */	stw r0, 0x3c(r1)
-/* 8041C454 003E5A14  C8 42 C4 C0 */	lfd f2, double_8066C840@sda21(r2)
+/* 8041C454 003E5A14  C8 42 C4 C0 */	lfd f2, lbl_8066C840@sda21(r2)
 /* 8041C458 003E5A18  C8 21 00 38 */	lfd f1, 0x38(r1)
-/* 8041C45C 003E5A1C  C0 02 C4 A0 */	lfs f0, float_8066C820@sda21(r2)
+/* 8041C45C 003E5A1C  C0 02 C4 A0 */	lfs f0, lbl_8066C820@sda21(r2)
 /* 8041C460 003E5A20  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8041C464 003E5A24  90 7E 00 C8 */	stw r3, 0xc8(r30)
 /* 8041C468 003E5A28  EC 01 00 24 */	fdivs f0, f1, f0
@@ -1241,21 +1260,21 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C470 003E5A30  D0 1E 00 B0 */	stfs f0, 0xb0(r30)
 /* 8041C474 003E5A34  93 9E 00 D0 */	stw r28, 0xd0(r30)
 .L_8041C478:
-/* 8041C478 003E5A38  2C 1E 00 00 */	cmpwi r30, 0
+/* 8041C478 003E5A38  2C 1E 00 00 */	cmpwi r30, 0x0
 /* 8041C47C 003E5A3C  40 82 01 2C */	bne .L_8041C5A8
 /* 8041C480 003E5A40  3C 60 80 52 */	lis r3, lbl_80523880@ha
 /* 8041C484 003E5A44  85 63 38 80 */	lwzu r11, lbl_80523880@l(r3)
-/* 8041C488 003E5A48  2C 1D 00 00 */	cmpwi r29, 0
-/* 8041C48C 003E5A4C  38 00 FF FF */	li r0, -1
-/* 8041C490 003E5A50  81 43 00 04 */	lwz r10, 4(r3)
-/* 8041C494 003E5A54  81 23 00 08 */	lwz r9, 8(r3)
+/* 8041C488 003E5A48  2C 1D 00 00 */	cmpwi r29, 0x0
+/* 8041C48C 003E5A4C  38 00 FF FF */	li r0, -0x1
+/* 8041C490 003E5A50  81 43 00 04 */	lwz r10, 0x4(r3)
+/* 8041C494 003E5A54  81 23 00 08 */	lwz r9, 0x8(r3)
 /* 8041C498 003E5A58  81 03 00 0C */	lwz r8, 0xc(r3)
 /* 8041C49C 003E5A5C  80 E3 00 10 */	lwz r7, 0x10(r3)
 /* 8041C4A0 003E5A60  80 C3 00 14 */	lwz r6, 0x14(r3)
 /* 8041C4A4 003E5A64  80 A3 00 18 */	lwz r5, 0x18(r3)
 /* 8041C4A8 003E5A68  80 83 00 1C */	lwz r4, 0x1c(r3)
 /* 8041C4AC 003E5A6C  80 63 00 20 */	lwz r3, 0x20(r3)
-/* 8041C4B0 003E5A70  91 61 00 08 */	stw r11, 8(r1)
+/* 8041C4B0 003E5A70  91 61 00 08 */	stw r11, 0x8(r1)
 /* 8041C4B4 003E5A74  91 41 00 0C */	stw r10, 0xc(r1)
 /* 8041C4B8 003E5A78  91 21 00 10 */	stw r9, 0x10(r1)
 /* 8041C4BC 003E5A7C  91 01 00 14 */	stw r8, 0x14(r1)
@@ -1265,14 +1284,14 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C4CC 003E5A8C  90 81 00 24 */	stw r4, 0x24(r1)
 /* 8041C4D0 003E5A90  90 61 00 28 */	stw r3, 0x28(r1)
 /* 8041C4D4 003E5A94  80 79 00 54 */	lwz r3, 0x54(r25)
-/* 8041C4D8 003E5A98  90 61 00 08 */	stw r3, 8(r1)
+/* 8041C4D8 003E5A98  90 61 00 08 */	stw r3, 0x8(r1)
 /* 8041C4DC 003E5A9C  93 41 00 0C */	stw r26, 0xc(r1)
 /* 8041C4E0 003E5AA0  93 61 00 10 */	stw r27, 0x10(r1)
 /* 8041C4E4 003E5AA4  40 82 00 08 */	bne .L_8041C4EC
 /* 8041C4E8 003E5AA8  7F 80 E3 78 */	mr r0, r28
 .L_8041C4EC:
 /* 8041C4EC 003E5AAC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8041C4F0 003E5AB0  38 A1 00 08 */	addi r5, r1, 8
+/* 8041C4F0 003E5AB0  38 A1 00 08 */	addi r5, r1, 0x8
 /* 8041C4F4 003E5AB4  88 19 00 86 */	lbz r0, 0x86(r25)
 /* 8041C4F8 003E5AB8  7C 00 07 74 */	extsb r0, r0
 /* 8041C4FC 003E5ABC  90 01 00 18 */	stw r0, 0x18(r1)
@@ -1287,17 +1306,17 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C520 003E5AE0  80 79 00 C0 */	lwz r3, 0xc0(r25)
 /* 8041C524 003E5AE4  80 99 00 50 */	lwz r4, 0x50(r25)
 /* 8041C528 003E5AE8  4B FF E6 59 */	bl NoteOn__Q44nw4r3snd6detail9SeqPlayerFiRCQ44nw4r3snd6detail10NoteOnInfo
-/* 8041C52C 003E5AEC  2C 03 00 00 */	cmpwi r3, 0
+/* 8041C52C 003E5AEC  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8041C530 003E5AF0  7C 7E 1B 78 */	mr r30, r3
 /* 8041C534 003E5AF4  40 82 00 18 */	bne .L_8041C54C
 /* 8041C538 003E5AF8  48 00 4D AD */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8041C53C 003E5AFC  38 63 03 54 */	addi r3, r3, 0x354
 /* 8041C540 003E5B00  4B F3 D8 01 */	bl OSUnlockMutex
-/* 8041C544 003E5B04  38 60 00 00 */	li r3, 0
+/* 8041C544 003E5B04  38 60 00 00 */	li r3, 0x0
 /* 8041C548 003E5B08  48 00 02 14 */	b .L_8041C75C
 .L_8041C54C:
 /* 8041C54C 003E5B0C  80 03 00 DC */	lwz r0, 0xdc(r3)
-/* 8041C550 003E5B10  2C 00 00 00 */	cmpwi r0, 0
+/* 8041C550 003E5B10  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041C554 003E5B14  40 81 00 30 */	ble .L_8041C584
 /* 8041C558 003E5B18  83 79 00 C4 */	lwz r27, 0xc4(r25)
 /* 8041C55C 003E5B1C  48 00 00 20 */	b .L_8041C57C
@@ -1311,7 +1330,7 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 .L_8041C578:
 /* 8041C578 003E5B38  83 7B 00 F4 */	lwz r27, 0xf4(r27)
 .L_8041C57C:
-/* 8041C57C 003E5B3C  2C 1B 00 00 */	cmpwi r27, 0
+/* 8041C57C 003E5B3C  2C 1B 00 00 */	cmpwi r27, 0x0
 /* 8041C580 003E5B40  40 82 FF E0 */	bne .L_8041C560
 .L_8041C584:
 /* 8041C584 003E5B44  48 00 4D 61 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
@@ -1356,10 +1375,10 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 .L_8041C60C:
 /* 8041C60C 003E5BCC  88 19 00 4B */	lbz r0, 0x4b(r25)
 /* 8041C610 003E5BD0  C0 39 00 6C */	lfs f1, 0x6c(r25)
-/* 8041C614 003E5BD4  2C 00 00 00 */	cmpwi r0, 0
+/* 8041C614 003E5BD4  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041C618 003E5BD8  41 82 00 24 */	beq .L_8041C63C
 /* 8041C61C 003E5BDC  88 19 00 89 */	lbz r0, 0x89(r25)
-/* 8041C620 003E5BE0  C8 42 C4 C0 */	lfd f2, double_8066C840@sda21(r2)
+/* 8041C620 003E5BE0  C8 42 C4 C0 */	lfd f2, lbl_8066C840@sda21(r2)
 /* 8041C624 003E5BE4  7C 1A 00 50 */	subf r0, r26, r0
 /* 8041C628 003E5BE8  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8041C62C 003E5BEC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1368,18 +1387,18 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C638 003E5BF8  EC 21 00 2A */	fadds f1, f1, f0
 .L_8041C63C:
 /* 8041C63C 003E5BFC  88 19 00 8A */	lbz r0, 0x8a(r25)
-/* 8041C640 003E5C00  2C 00 00 00 */	cmpwi r0, 0
+/* 8041C640 003E5C00  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8041C644 003E5C04  40 82 00 18 */	bne .L_8041C65C
 /* 8041C648 003E5C08  7F C3 F3 78 */	mr r3, r30
 /* 8041C64C 003E5C0C  7F 84 E3 78 */	mr r4, r28
-/* 8041C650 003E5C10  38 A0 00 00 */	li r5, 0
+/* 8041C650 003E5C10  38 A0 00 00 */	li r5, 0x0
 /* 8041C654 003E5C14  4B FF 86 5D */	bl SetSweepParam__Q44nw4r3snd6detail7ChannelFfib
 /* 8041C658 003E5C18  48 00 00 60 */	b .L_8041C6B8
 .L_8041C65C:
-/* 8041C65C 003E5C1C  C0 02 C4 9C */	lfs f0, float_8066C81C@sda21(r2)
+/* 8041C65C 003E5C1C  C0 02 C4 9C */	lfs f0, lbl_8066C81C@sda21(r2)
 /* 8041C660 003E5C20  7C 00 01 D6 */	mullw r0, r0, r0
 /* 8041C664 003E5C24  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8041C668 003E5C28  4C 41 13 82 */	cror 2, 1, 2
+/* 8041C668 003E5C28  4C 41 13 82 */	cror eq, gt, eq
 /* 8041C66C 003E5C2C  40 82 00 0C */	bne .L_8041C678
 /* 8041C670 003E5C30  FC 60 08 90 */	fmr f3, f1
 /* 8041C674 003E5C34  48 00 00 08 */	b .L_8041C67C
@@ -1387,10 +1406,10 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C678 003E5C38  FC 60 08 50 */	fneg f3, f1
 .L_8041C67C:
 /* 8041C67C 003E5C3C  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 8041C680 003E5C40  C8 42 C4 C0 */	lfd f2, double_8066C840@sda21(r2)
+/* 8041C680 003E5C40  C8 42 C4 C0 */	lfd f2, lbl_8066C840@sda21(r2)
 /* 8041C684 003E5C44  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 8041C688 003E5C48  7F C3 F3 78 */	mr r3, r30
-/* 8041C68C 003E5C4C  38 A0 00 01 */	li r5, 1
+/* 8041C68C 003E5C4C  38 A0 00 01 */	li r5, 0x1
 /* 8041C690 003E5C50  C8 01 00 38 */	lfd f0, 0x38(r1)
 /* 8041C694 003E5C54  EC 00 10 28 */	fsubs f0, f0, f2
 /* 8041C698 003E5C58  EC 00 00 F2 */	fmuls f0, f0, f3
@@ -1409,7 +1428,7 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C6C8 003E5C88  7C 03 00 D0 */	neg r0, r3
 /* 8041C6CC 003E5C8C  7C 00 1B 78 */	or r0, r0, r3
 /* 8041C6D0 003E5C90  7C 04 28 40 */	cmplw r4, r5
-/* 8041C6D4 003E5C94  54 03 0F FE */	srwi r3, r0, 0x1f
+/* 8041C6D4 003E5C94  54 03 0F FE */	srwi r3, r0, 31
 /* 8041C6D8 003E5C98  41 80 00 0C */	blt .L_8041C6E4
 /* 8041C6DC 003E5C9C  88 9E 00 C1 */	lbz r4, 0xc1(r30)
 /* 8041C6E0 003E5CA0  48 00 00 20 */	b .L_8041C700
@@ -1420,15 +1439,15 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C6F0 003E5CB0  7C 04 01 D6 */	mullw r0, r4, r0
 /* 8041C6F4 003E5CB4  7C 00 2B D6 */	divw r0, r0, r5
 /* 8041C6F8 003E5CB8  7C 06 02 14 */	add r0, r6, r0
-/* 8041C6FC 003E5CBC  54 04 06 3E */	clrlwi r4, r0, 0x18
+/* 8041C6FC 003E5CBC  54 04 06 3E */	clrlwi r4, r0, 24
 .L_8041C700:
 /* 8041C700 003E5CC0  7C 03 00 D0 */	neg r0, r3
 /* 8041C704 003E5CC4  98 9E 00 C0 */	stb r4, 0xc0(r30)
 /* 8041C708 003E5CC8  7C 00 1B 78 */	or r0, r0, r3
 /* 8041C70C 003E5CCC  38 60 00 FF */	li r3, 0xff
-/* 8041C710 003E5CD0  7C 04 FE 70 */	srawi r4, r0, 0x1f
+/* 8041C710 003E5CD0  7C 04 FE 70 */	srawi r4, r0, 31
 /* 8041C714 003E5CD4  7C 63 20 78 */	andc r3, r3, r4
-/* 8041C718 003E5CD8  38 00 00 00 */	li r0, 0
+/* 8041C718 003E5CD8  38 00 00 00 */	li r0, 0x0
 /* 8041C71C 003E5CDC  98 7E 00 C1 */	stb r3, 0xc1(r30)
 /* 8041C720 003E5CE0  B0 1E 00 C2 */	sth r0, 0xc2(r30)
 /* 8041C724 003E5CE4  B0 1E 00 C4 */	sth r0, 0xc4(r30)
@@ -1452,82 +1471,59 @@ NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb:
 /* 8041C768 003E5D28  7C 08 03 A6 */	mtlr r0
 /* 8041C76C 003E5D2C  38 21 00 70 */	addi r1, r1, 0x70
 /* 8041C770 003E5D30  4E 80 00 20 */	blr
+.endfn NoteOn__Q44nw4r3snd6detail8SeqTrackFiilb
 
-.global detail_ConvertLabelStringToSoundId__Q34nw4r3snd18SoundArchivePlayerFPCc
-detail_ConvertLabelStringToSoundId__Q34nw4r3snd18SoundArchivePlayerFPCc:
+# nw4r::snd::SoundArchivePlayer::detail_ConvertLabelStringToSoundId(const char*)
+.fn detail_ConvertLabelStringToSoundId__Q34nw4r3snd18SoundArchivePlayerFPCc, global
 /* 8041C774 003E5D34  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8041C778 003E5D38  48 00 00 B4 */	b ConvertLabelStringToSoundId__Q34nw4r3snd12SoundArchiveCFPCc
+.endfn detail_ConvertLabelStringToSoundId__Q34nw4r3snd18SoundArchivePlayerFPCc
 
-
-.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-
-
-.global lbl_80523880
-lbl_80523880:
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
+# 0x80523880 - 0x805238A8
+.rodata
+.balign 8
+.sym lbl_80523880, local
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
 	.4byte ChannelCallbackFunc__Q44nw4r3snd6detail8SeqTrackFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl
-	.4byte 0
-	.4byte 0
+	.4byte 0x00000000
+	.4byte 0x00000000
 
-
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
-
-.global lbl_8056E490
-lbl_8056E490:
-	.4byte 0
-	.4byte 0
+# 0x8056E490 - 0x8056E4A0
+.data
+.balign 8
+.sym lbl_8056E490, local
+	.4byte 0x00000000
+	.4byte 0x00000000
 	.4byte __dt__Q44nw4r3snd6detail8SeqTrackFv
-	.4byte 0
+	.4byte 0x00000000
 
-.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-
-.global float_8066C818
-float_8066C818:
-	.float 1.0
-
-
-.global float_8066C81C
-float_8066C81C:
-	.float 0
-
-
-.global float_8066C820
-float_8066C820:
-	.float 127 #0x42FE0000
-
-
-.global float_8066C824
-float_8066C824:
-	.float 0.0078125 #0x3C000000
-
-
-.global float_8066C828
-float_8066C828:
-	.float 63 #0x427C0000
-
-
-.global float_8066C82C
-float_8066C82C:
-	.float -1.0
-
-
-.global float_8066C830
-float_8066C830:
-	.float 2 #0x40000000
-	.4byte 0
-
-
-.global double_8066C838
-double_8066C838:
-	.8byte 0x4330000000000000 #unsigned int to float constant
-
-.global double_8066C840
-double_8066C840:
+# 0x8066C818 - 0x8066C848
+.section .sdata2, "a"
+.balign 8
+.sym lbl_8066C818, local
+	.4byte 0x3F800000
+.sym lbl_8066C81C, local
+	.4byte 0x00000000
+.sym lbl_8066C820, local
+	.4byte 0x42FE0000
+.sym lbl_8066C824, local
+	.4byte 0x3C000000
+.sym lbl_8066C828, local
+	.4byte 0x427C0000
+.sym lbl_8066C82C, local
+	.4byte 0xBF800000
+.sym lbl_8066C830, local
+	.4byte 0x40000000
+	.4byte 0x00000000
+.sym lbl_8066C838, local
+	.4byte 0x43300000
+	.4byte 0x00000000
+.sym lbl_8066C840, local
 	.4byte 0x43300000
 	.4byte 0x80000000
