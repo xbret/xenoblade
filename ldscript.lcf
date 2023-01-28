@@ -8,8 +8,8 @@ SECTIONS
     GROUP:
     {
         .init ALIGN(0x20):{}
-        extab_ ALIGN(0x20):{}
-        extabindex_ ALIGN(0x20):{}
+        extab ALIGN(0x20):{}
+        extabindex ALIGN(0x20):{}
         .text ALIGN(0x20):{}
         .ctors ALIGN(0x20):{}
         .dtors ALIGN(0x20):{}
@@ -24,8 +24,8 @@ SECTIONS
 
     } > text
     sz_init = SIZEOF(.init);
-    szextab = SIZEOF(extab_);
-    szextabindex = SIZEOF(extabindex_);
+    szextab = SIZEOF(extab);
+    szextabindex = SIZEOF(extabindex);
     sz_text = SIZEOF(.text);
     sz_ctors = SIZEOF(.ctors);
     sz_dtors = SIZEOF(.dtors);
@@ -40,7 +40,7 @@ SECTIONS
     _stack_end = _f_sbss2 + SIZEOF(.sbss2);
     _db_stack_addr = (_stack_addr + 0x2000);
     _db_stack_end = _stack_addr;
-    __ArenaLo = (_stack_addr + 0x1f) & ~0x1f;
+    __ArenaLo = (_db_stack_addr + 0x1f) & ~0x1f;
     __ArenaHi = 0x81700000;
 }
 

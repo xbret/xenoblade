@@ -125,13 +125,13 @@ $(GAME_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
 $(MM_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
 $(MONOLITHLIB_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
 
-$(NDEV_O_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
+$(NDEV_O_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults  -func_align 4 $(INCLUDES)
 #All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
 $(RVL_SDK_O_FILES): CFLAGS += -Cpp_exceptions off -func_align 16
 $(MW_O_FILES): CFLAGS += -Cpp_exceptions off
 
 #arc.c doesn't use -use_lmw_stmw on, and uses -ipa file and (maybe rest of wii sdk too?)
-$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
+$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults -func_align 16 $(INCLUDES)
 #Runtime has defaults and exceptions turned on
 $(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/%.o: CFLAGS = -use_lmw_stmw on -inline on -proc gekko -fp hard -O4,p -func_align 4 $(INCLUDES)
 

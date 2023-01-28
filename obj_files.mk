@@ -444,8 +444,8 @@ MW_O_FILES :=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/target_options.o \
 
 NDEV_O_FILES :=\
-	$(BUILD_DIR)/src/NdevExi2A/DebuggerDriver.o \
-	$(BUILD_DIR)/src/NdevExi2A/exi2.o \
+	$(BUILD_DIR)/asm/NdevExi2A/DebuggerDriver.o \
+	$(BUILD_DIR)/asm/NdevExi2A/exi2.o \
 
 RVL_SDK_O_FILES :=\
 	$(BUILD_DIR)/asm/RevoSDK/ai/ai.o \
@@ -990,7 +990,6 @@ NW4R_O_FILES :=\
 MM_O_FILES :=\
 	$(BUILD_DIR)/asm/mm/code_80432678.o \
 	$(BUILD_DIR)/asm/mm/MemManager.o \
-	$(BUILD_DIR)/asm/mm/Operators.o \
 	$(BUILD_DIR)/asm/mm/code_80434F94.o \
 	$(BUILD_DIR)/src/mm/MTRand.o \
 	$(BUILD_DIR)/asm/mm/Globals1.o \

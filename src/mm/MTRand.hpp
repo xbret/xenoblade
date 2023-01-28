@@ -117,7 +117,7 @@ MTRand* getInstanceMTRand(){
     return &instance;
 }
 
-bool func_80435C9C(s16*, s16*);
+bool fn_80435C9C(s16*, s16*);
 
 }
 }
