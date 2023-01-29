@@ -1143,8 +1143,8 @@
 /* 801D3F04 0019D4C4  4E 80 00 20 */	blr
 .endfn func_801D3C74
 
-# 0x805019C0 - 0x80501B1C
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805019C0
 lbl_805019C0:
@@ -1263,8 +1263,8 @@ lbl_80501B00:
 	.4byte lbl_80501AE8
 	.4byte lbl_80501AF4
 
-# 0x80538170 - 0x80538220
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80538170
 lbl_80538170:
@@ -1319,8 +1319,8 @@ CSortMenu_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664FC0 - 0x80664FC8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CSortMenu
@@ -1328,8 +1328,8 @@ __RTTI__CSortMenu:
 	.4byte CSortMenu_typestr
 	.4byte CSortMenu_hierarchy
 
-# 0x8066A8B0 - 0x8066A8C8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A8B0
 lbl_8066A8B0:
@@ -1344,8 +1344,8 @@ lbl_8066A8C0:
 	.4byte 0x3F800000
 	.4byte 0x00000000
 
-# 0x8001162C - 0x80011708
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001162C", local
@@ -1475,8 +1475,8 @@ lbl_8066A8C0:
 	.4byte 0x00000000
 .endobj "@etb_80011700"
 
-# 0x8002B9F4 - 0x8002BACC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002B9F4", local

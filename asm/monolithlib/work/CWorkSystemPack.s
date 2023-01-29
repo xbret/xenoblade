@@ -825,8 +825,8 @@
 /* 804DE388 004A7948  4E 80 00 20 */	blr
 .endfn func_804DE268
 
-# 0x80527F88 - 0x80527FFC
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CWorkSystemPack_typestr
@@ -873,8 +873,8 @@ _reslist_base_CPackItem_typestr:
 	.4byte 0x74656D20
 	.4byte 0x2A3E0000
 
-# 0x805736A0 - 0x805737A0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CWorkSystemPack
@@ -965,8 +965,8 @@ __vt___reslist_base_CPackItem:
 	.4byte func_804DDA60
 	.4byte 0x00000000
 
-# 0x806664E8 - 0x80666510
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CWorkSystemPack
@@ -994,8 +994,8 @@ __RTTI___reslist_base_CPackItem:
 	.4byte _reslist_base_CPackItem_typestr
 	.4byte 0x00000000
 
-# 0x806682E8 - 0x806682F8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806682E8
 lbl_806682E8:
@@ -1008,8 +1008,8 @@ lbl_806682EC:
 staticArcFilenameString:
 	.skip 0x8
 
-# 0x80020830 - 0x800208F4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020830", local
@@ -1121,8 +1121,8 @@ staticArcFilenameString:
 	.4byte 0x00000000
 .endobj "@etb_800208EC"
 
-# 0x80038894 - 0x80038948
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80038894", local

@@ -561,8 +561,8 @@
 /* 804DEB10 004A80D0  4E 80 00 20 */	blr
 .endfn func_804DEA08
 
-# 0x80527FFC - 0x80528008
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 4
 
 .global CPackItem_typestr
@@ -571,8 +571,8 @@ CPackItem_typestr:
 	.4byte 0x6B497465
 	.4byte 0x6D000000
 
-# 0x805737A0 - 0x80573828
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CPackItem
@@ -612,8 +612,8 @@ __vt__CPackItem:
 	.4byte func_80039D44
 	.4byte func_80039D40
 
-# 0x80666510 - 0x80666518
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CPackItem
@@ -621,8 +621,8 @@ __RTTI__CPackItem:
 	.4byte CPackItem_typestr
 	.4byte 0x00000000
 
-# 0x800208F4 - 0x80020938
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800208F4", local
@@ -666,8 +666,8 @@ __RTTI__CPackItem:
 	.4byte 0x00000000
 .endobj "@etb_80020930"
 
-# 0x80038948 - 0x80038990
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80038948", local

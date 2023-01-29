@@ -153,8 +153,8 @@
 /* 8034E078 00317638  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8034E07C 0031763C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8066C148 - 0x8066C160
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C148
 lbl_8066C148:

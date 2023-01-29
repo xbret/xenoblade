@@ -897,8 +897,8 @@
 /* 803F2D98 003BC358  4E 80 00 20 */	blr
 .endfn CalcWorldMtx_Maya_SSC_Apply__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3UlPCQ34nw4r3g3d12ChrAnmResult
 
-# 0x80520FD8 - 0x80521010
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520FD8
 lbl_80520FD8:
@@ -919,8 +919,8 @@ lbl_80520FF4:
 	.4byte ProductTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_S__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 
-# 0x8066C498 - 0x8066C4B0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C498
 lbl_8066C498:

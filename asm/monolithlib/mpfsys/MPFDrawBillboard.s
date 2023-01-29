@@ -18,8 +18,8 @@
 /* 80479F00 004434C0  4E 80 00 20 */	blr
 .endfn func_80479EDC
 
-# 0x80668178 - 0x80668180
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80668178
 lbl_80668178:

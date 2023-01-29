@@ -173,8 +173,8 @@
 /* 803968C8 0035FE88  4E 80 00 20 */	blr
 .endfn SJ_SearchTag
 
-# 0x80569368 - 0x80569528
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global sj_val_to_hexstr_tbl

@@ -8478,8 +8478,8 @@
 /* 803706F8 00339CB8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803706FC 00339CBC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80518DC8 - 0x80518E08
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518DC8
 lbl_80518DC8:
@@ -8502,8 +8502,8 @@ lbl_80518DF8:
 	.4byte 0x1F030000
 	.4byte 0x00000000
 
-# 0x80560608 - 0x80560A30
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80560608
 lbl_80560608:
@@ -8812,8 +8812,8 @@ jumptable_805609EC:
 	.rel WPADiSendSetReportType, .L_8036FFE8
 	.4byte 0x00000000
 
-# 0x805DDAA0 - 0x805E1200
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global _wpadManageAlarm
@@ -8840,8 +8840,8 @@ lbl_805E0004:
 lbl_805E0008:
 	.skip 0x11F8
 
-# 0x80665D38 - 0x80665D80
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665D38
 lbl_80665D38:
@@ -8882,8 +8882,8 @@ lbl_80665D78:
 	.4byte 0x5755442E
 	.4byte 0x63000000
 
-# 0x80667C68 - 0x80667CC0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667C68
 lbl_80667C68:
@@ -8982,8 +8982,8 @@ lbl_80667CB8:
 lbl_80667CBC:
 	.skip 0x4
 
-# 0x8066C1F8 - 0x8066C200
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C1F8
 lbl_8066C1F8:

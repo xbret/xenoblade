@@ -193,8 +193,8 @@
 /* 8045EF80 00428540  4E 80 00 20 */	blr
 .endfn func_8045EF30
 
-# 0x80526A98 - 0x80526AD8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CLibHbmControl_typestr
@@ -218,8 +218,8 @@ lbl_80526AA8:
 	.4byte 0x6E74726F
 	.4byte 0x6C000000
 
-# 0x80570AD8 - 0x80570B98
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CLibHbmControl
@@ -276,8 +276,8 @@ CLibHbmControl_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806660F0 - 0x806660F8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CLibHbmControl
@@ -285,8 +285,8 @@ __RTTI__CLibHbmControl:
 	.4byte CLibHbmControl_typestr
 	.4byte CLibHbmControl_hierarchy
 
-# 0x8001D7A8 - 0x8001D7C0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001D7A8", local
@@ -307,8 +307,8 @@ __RTTI__CLibHbmControl:
 	.4byte 0x00000000
 .endobj "@etb_8001D7B8"
 
-# 0x800353B4 - 0x800353D8
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800353B4", local

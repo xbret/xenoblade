@@ -419,8 +419,8 @@
 /* 802E4150 002AD710  4E 80 00 20 */	blr
 .endfn bta_hh_evt_code
 
-# 0x8050E1B8 - 0x8050E240
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050E1B8
 lbl_8050E1B8:
@@ -467,8 +467,8 @@ lbl_8050E230:
 	.4byte lbl_8050E218
 	.4byte 0x00000000
 
-# 0x805446C0 - 0x805449A0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805446C0
 lbl_805446C0:

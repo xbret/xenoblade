@@ -2046,8 +2046,8 @@
 /* 803DD1BC 003A677C  4E 80 00 20 */	blr
 .endfn GetResTex__Q34nw4r3g3d14ResTexPlttInfoCFv
 
-# 0x8066C268 - 0x8066C2A0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C268
 lbl_8066C268:

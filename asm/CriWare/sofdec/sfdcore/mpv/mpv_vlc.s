@@ -2975,8 +2975,8 @@
 /* 803AC464 00375A24  4E 80 00 20 */	blr
 .endfn mpvvlc_SetVlcRunLevel
 
-# 0x8051F830 - 0x8051F8E0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051F830
 lbl_8051F830:
@@ -3025,8 +3025,8 @@ lbl_8051F830:
 	.4byte 0x0401010F
 	.4byte 0x010E0204
 
-# 0x806064B8 - 0x80607B28
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_806064B8
 lbl_806064B8:

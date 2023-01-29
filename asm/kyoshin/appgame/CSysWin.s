@@ -1168,8 +1168,8 @@
 /* 8022C6B0 001F5C70  4E 80 00 20 */	blr
 .endfn func_8022C544
 
-# 0x80505B80 - 0x80505D20
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80505B80
 lbl_80505B80:
@@ -1278,8 +1278,8 @@ lbl_80505B80:
 	.4byte 0x62726C61
 	.4byte 0x6E000000
 
-# 0x80539CC8 - 0x80539D60
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CSysWin
@@ -1326,8 +1326,8 @@ CSysWin_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665170 - 0x80665178
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CSysWin
@@ -1335,8 +1335,8 @@ __RTTI__CSysWin:
 	.4byte CSysWin_typestr
 	.4byte CSysWin_hierarchy
 
-# 0x8066AE58 - 0x8066AEC0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AE58
 lbl_8066AE58:
@@ -1410,8 +1410,8 @@ CSysWin_typestr:
 	.4byte 0x43537973
 	.4byte 0x57696E00
 
-# 0x800155E0 - 0x8001567C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800155E0", local
@@ -1513,8 +1513,8 @@ CSysWin_typestr:
 	.4byte func_8045F8C8
 .endobj "@etb_80015664"
 
-# 0x8002E4E4 - 0x8002E598
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002E4E4", local

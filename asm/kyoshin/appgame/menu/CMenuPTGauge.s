@@ -3404,13 +3404,13 @@
 /* 80189DE4 001533A4  4E 80 00 20 */	blr
 .endfn sinit_80189D68
 
-# 0x804F596C - 0x804F5970
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80189D68
 
-# 0x804FF1E0 - 0x804FF2F8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuPTGauge_typestr
@@ -3490,8 +3490,8 @@ lbl_804FF2D8:
 	.4byte 0x2F006C6F
 	.4byte 0x6F700000
 
-# 0x80535BC8 - 0x80535D20
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80535BC8
 lbl_80535BC8:
@@ -3590,8 +3590,8 @@ CMenuPTGauge_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80578F90 - 0x80578FD8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80578F90
 lbl_80578F90:
@@ -3600,8 +3600,8 @@ lbl_80578F90:
 lbl_80578FB4:
 	.skip 0x24
 
-# 0x80664D80 - 0x80664DA0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuPTGauge
@@ -3625,8 +3625,8 @@ lbl_80664D98:
 	.4byte 0x3E4CCCCD
 	.4byte 0x00000000
 
-# 0x80666BC8 - 0x80666BD8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666BC8
 lbl_80666BC8:
@@ -3638,8 +3638,8 @@ lbl_80666BD0:
 lbl_80666BD4:
 	.skip 0x4
 
-# 0x8066A2A0 - 0x8066A2E0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A2A0
 lbl_8066A2A0:
@@ -3684,8 +3684,8 @@ lbl_8066A2D8:
 	.4byte 0x3D8F5C29
 	.4byte 0x00000000
 
-# 0x8000EAAC - 0x8000EC4C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000EAAC", local
@@ -3940,8 +3940,8 @@ lbl_8066A2D8:
 	.4byte 0x00000000
 .endobj "@etb_8000EC44"
 
-# 0x80029A20 - 0x80029BDC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80029A20", local

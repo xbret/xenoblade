@@ -1067,8 +1067,8 @@
 /* 803892FC 003528BC  4E 80 00 20 */	blr
 .endfn ADXB_ExecOneWav
 
-# 0x8051AA78 - 0x8051AA98
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051AA78
 lbl_8051AA78:
@@ -1085,8 +1085,8 @@ lbl_8051AA88:
 	.4byte 0x45000000
 	.4byte 0x00000000
 
-# 0x80563728 - 0x80563730
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80563728
 lbl_80563728:

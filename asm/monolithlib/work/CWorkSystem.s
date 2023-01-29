@@ -351,8 +351,8 @@
 /* 804448B4 0040DE74  4E 80 00 20 */	blr
 .endfn func_8044487C
 
-# 0x805260A8 - 0x80526130
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CWorkSystem_typestr
@@ -394,8 +394,8 @@ lbl_805260B4:
 	.4byte 0x7374656D
 	.4byte 0x00000000
 
-# 0x8056F268 - 0x8056F320
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CWorkSystem
@@ -450,8 +450,8 @@ CWorkSystem_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665EF0 - 0x80665EF8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CWorkSystem
@@ -459,8 +459,8 @@ __RTTI__CWorkSystem:
 	.4byte CWorkSystem_typestr
 	.4byte CWorkSystem_hierarchy
 
-# 0x80667EF8 - 0x80667F00
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667EF8
 lbl_80667EF8:
@@ -469,8 +469,8 @@ lbl_80667EF8:
 lbl_80667EFC:
 	.skip 0x4
 
-# 0x8001C838 - 0x8001C870
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C838", local
@@ -515,8 +515,8 @@ lbl_80667EFC:
 	.4byte 0x00000000
 .endobj "@etb_8001C868"
 
-# 0x80034430 - 0x80034484
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034430", local

@@ -1552,8 +1552,8 @@
 /* 80352DBC 0031C37C  4E 80 00 20 */	blr
 .endfn OSGetAppType
 
-# 0x80551300 - 0x805517A8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .obj "@1", local
@@ -1858,8 +1858,8 @@
 	.4byte 0x0A000000
 	.byte 0x00, 0x00, 0x00
 
-# 0x805D4340 - 0x805D43B0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global __OSRebootParams
@@ -1870,8 +1870,8 @@ __OSRebootParams:
 lbl_805D4360:
 	.skip 0x50
 
-# 0x80665B28 - 0x80665B58
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __OSVersion
@@ -1908,8 +1908,8 @@ lbl_80665B50:
 	.4byte lbl_80665B48
 	.4byte 0x00000000
 
-# 0x80667A00 - 0x80667A48
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 .global __OSInIPL
@@ -1956,8 +1956,8 @@ __OSStartTime:
 lbl_80667A44:
 	.skip 0x4
 
-# 0x8066C188 - 0x8066C190
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@1009", local

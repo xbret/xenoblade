@@ -1176,8 +1176,8 @@
 /* 803AEFC4 00378584  4E 80 00 20 */	blr
 .endfn MPVMC16_OneRef4p_TuneC
 
-# 0x8051F8E0 - 0x8051F8F0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051F8E0
 lbl_8051F8E0:
@@ -1186,8 +1186,8 @@ lbl_8051F8E0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8056A938 - 0x8056A958
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8056A938:

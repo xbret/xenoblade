@@ -60,8 +60,8 @@
 /* 80448FD8 00412598  4E 80 00 20 */	blr
 .endfn func_80448F7C
 
-# 0x80526368 - 0x80526378
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CDeviceVICb_typestr
@@ -71,8 +71,8 @@ CDeviceVICb_typestr:
 	.4byte 0x49436200
 	.4byte 0x00000000
 
-# 0x8056F7A8 - 0x8056F7C0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CDeviceVICb
@@ -84,8 +84,8 @@ __vt__CDeviceVICb:
 	.4byte func_8016662C
 	.4byte func_80448A40
 
-# 0x80665F40 - 0x80665F48
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CDeviceVICb
@@ -93,8 +93,8 @@ __RTTI__CDeviceVICb:
 	.4byte CDeviceVICb_typestr
 	.4byte 0x00000000
 
-# 0x8001CB68 - 0x8001CB78
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001CB68", local
@@ -109,8 +109,8 @@ __RTTI__CDeviceVICb:
 	.4byte 0x00000000
 .endobj "@etb_8001CB70"
 
-# 0x80034760 - 0x80034778
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034760", local

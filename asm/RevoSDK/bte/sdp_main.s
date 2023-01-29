@@ -820,8 +820,8 @@
 /* 803067D0 002CFD90  4E 80 00 20 */	blr
 .endfn sdp_conn_timeout
 
-# 0x80549148 - 0x805494A8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80549148
 lbl_80549148:
@@ -1064,8 +1064,8 @@ lbl_80549478:
 	.4byte 0x78000000
 	.4byte 0x00000000
 
-# 0x805C36C0 - 0x805C7D00
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805C36C0
 lbl_805C36C0:

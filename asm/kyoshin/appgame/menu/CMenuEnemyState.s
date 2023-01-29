@@ -4687,13 +4687,13 @@
 /* 801135DC 000DCB9C  4B FF BD E4 */	b func_8010F3C0
 .endfn func_801135D8
 
-# 0x804F5948 - 0x804F594C
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_801134E8
 
-# 0x804F93B0 - 0x804F96E0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804F93B0
 lbl_804F93B0:
@@ -4918,8 +4918,8 @@ lbl_804F9440:
 	.4byte 0x6E000000
 	.4byte 0x00000000
 
-# 0x8052FC08 - 0x8052FD10
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMenuEnemyState
@@ -4997,15 +4997,15 @@ __vt__CPcSelectCursor:
 	.4byte 0x00000000
 	.4byte func_8010EAE8
 
-# 0x80577258 - 0x80577268
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80577258
 lbl_80577258:
 	.skip 0x10
 
-# 0x80664720 - 0x80664730
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuEnemyState
@@ -5018,8 +5018,8 @@ __RTTI__CPcSelectCursor:
 	.4byte CPcSelectCursor_typestr
 	.4byte 0x00000000
 
-# 0x80666848 - 0x80666898
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666848
 lbl_80666848:
@@ -5058,8 +5058,8 @@ lbl_80666888:
 lbl_80666890:
 	.skip 0x8
 
-# 0x806698B0 - 0x80669920
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_806698B0
 lbl_806698B0:
@@ -5144,8 +5144,8 @@ lbl_80669918:
 lbl_8066991C:
 	.4byte 0x41F80000
 
-# 0x8000B370 - 0x8000B4C0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000B370", local
@@ -5304,8 +5304,8 @@ lbl_8066991C:
 	.4byte 0x00000000
 .endobj "@etb_8000B4B8"
 
-# 0x80026A80 - 0x80026B58
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80026A80", local

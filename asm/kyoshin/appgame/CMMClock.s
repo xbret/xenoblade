@@ -903,13 +903,13 @@
 /* 8011C448 000E5A08  4B FF F2 8C */	b func_8011B6D4
 .endfn func_8011C444
 
-# 0x804F594C - 0x804F5950
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8011C418
 
-# 0x80530258 - 0x805303E0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMMClock
@@ -1032,8 +1032,8 @@ lbl_805303D0:
 	.4byte 0x2E680000
 	.4byte 0x00000000
 
-# 0x80664760 - 0x80664768
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMMClock
@@ -1041,8 +1041,8 @@ __RTTI__CMMClock:
 	.4byte CMMClock_typestr
 	.4byte CMMClock_hierarchy
 
-# 0x8066998C - 0x80669998
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 4
 
 .global CMMTex_typestr
@@ -1053,8 +1053,8 @@ CMMTex_typestr:
 lbl_80669994:
 	.4byte 0x41300000
 
-# 0x8000B804 - 0x8000B8D0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000B804", local
@@ -1132,8 +1132,8 @@ lbl_80669994:
 	.4byte 0x00000000
 .endobj "@etb_8000B8C8"
 
-# 0x80026D14 - 0x80026D5C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80026D14", local

@@ -133,15 +133,15 @@
 /* 802DE078 002A7638  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 802DE07C 002A763C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805BDCC0 - 0x805BE4A0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805BDCC0
 lbl_805BDCC0:
 	.skip 0x7E0
 
-# 0x80667768 - 0x8066776C
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667768
 lbl_80667768:

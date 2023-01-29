@@ -872,8 +872,8 @@
 /* 80244F4C 0020E50C  4E 80 00 20 */	blr
 .endfn func_80244DD8
 
-# 0x80506CA0 - 0x80506CE8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80506CA0
 lbl_80506CA0:
@@ -896,8 +896,8 @@ lbl_80506CA0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8053A660 - 0x8053A6F8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CFade
@@ -944,8 +944,8 @@ CFade_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806651E0 - 0x806651E8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CFade
@@ -953,8 +953,8 @@ __RTTI__CFade:
 	.4byte CFade_typestr
 	.4byte CFade_hierarchy
 
-# 0x8066B008 - 0x8066B018
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B008
 lbl_8066B008:
@@ -966,8 +966,8 @@ CFade_typestr:
 	.4byte 0x65000000
 	.4byte 0x00000000
 
-# 0x80016474 - 0x80016508
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80016474", local
@@ -1063,8 +1063,8 @@ CFade_typestr:
 	.4byte 0x00000000
 .endobj "@etb_80016500"
 
-# 0x8002F2A0 - 0x8002F348
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002F2A0", local

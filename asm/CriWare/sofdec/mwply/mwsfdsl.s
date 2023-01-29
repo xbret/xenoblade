@@ -908,8 +908,8 @@
 /* 8039DB1C 003670DC  4E 80 00 20 */	blr
 .endfn mwPlyExecInfiniteLoopHandle
 
-# 0x8051D1D0 - 0x8051D508
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051D1D0
 lbl_8051D1D0:

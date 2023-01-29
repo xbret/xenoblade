@@ -736,8 +736,8 @@
 /* 803A1D50 0036B310  4E 80 00 20 */	blr
 .endfn MWSFD_IsEndPrepareStop
 
-# 0x8051E7B0 - 0x8051ED98
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051E7B0
 lbl_8051E7B0:
@@ -1124,8 +1124,8 @@ lbl_8051E7C0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80569BD4 - 0x8056A41C
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 4
 .global lbl_80569BD4
 lbl_80569BD4:

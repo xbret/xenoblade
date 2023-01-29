@@ -416,8 +416,8 @@
 /* 80351878 0031AE38  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8035187C 0031AE3C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805512B8 - 0x80551300
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .obj "@1208", local
@@ -444,24 +444,24 @@ lbl_805512D4:
 	.4byte 0x25730000
 	.4byte 0x00000000
 
-# 0x805D4040 - 0x805D4340
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 s_message:
 	.skip 0x100
 	.skip 0x200
 
-# 0x80665B20 - 0x80665B28
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665B20
 lbl_80665B20:
 	.4byte 0xFFFFFF01
 	.4byte 0x00000000
 
-# 0x806679F8 - 0x80667A00
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 s_callback:

@@ -636,8 +636,8 @@
 /* 80354EE8 0031E4A8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80354EEC 0031E4AC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80551A70 - 0x80551C50
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80551A70
 lbl_80551A70:

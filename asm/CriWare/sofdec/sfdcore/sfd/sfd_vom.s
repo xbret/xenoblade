@@ -168,8 +168,8 @@
 /* 803CEE5C 0039841C  4E 80 00 20 */	blr
 .endfn SFVOM_Seek
 
-# 0x805206B0 - 0x805206E8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805206B0
 lbl_805206B0:

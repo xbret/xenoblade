@@ -3152,8 +3152,8 @@
 /* 803FBF78 003C5538  4E 80 00 20 */	blr
 .endfn GetTypeObj__Q34nw4r3g3d6ScnMdlCFv
 
-# 0x805210D8 - 0x805210E8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805210D8
 lbl_805210D8:
@@ -3162,8 +3162,8 @@ lbl_805210D8:
 	.4byte 0x646C0000
 	.4byte 0x00000000
 
-# 0x8056D080 - 0x8056D0C8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056D080
 lbl_8056D080:

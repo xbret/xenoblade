@@ -375,8 +375,8 @@
 /* 802BC2C8 00285888  4E 80 00 20 */	blr
 .endfn free
 
-# 0x8050CF00 - 0x8050CF18
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050CF00
 lbl_8050CF00:
@@ -387,15 +387,15 @@ lbl_8050CF00:
 	.4byte 0x00000034
 	.4byte 0x00000044
 
-# 0x8057B010 - 0x8057B048
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057B010
 lbl_8057B010:
 	.skip 0x38
 
-# 0x80667524 - 0x80667530
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 4
 	.skip 0x4
 .global lbl_80667528

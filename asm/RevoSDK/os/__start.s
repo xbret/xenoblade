@@ -230,8 +230,8 @@
 /* 800065B8 000026B8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 800065BC 000026BC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80667B00 - 0x80667B08
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 Debug_BBA:

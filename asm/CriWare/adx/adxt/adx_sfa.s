@@ -20,8 +20,8 @@
 /* 8037F9B8 00348F78  4E 80 00 20 */	blr
 .endfn SFA_Finish
 
-# 0x805E69B8 - 0x805E69C0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805E69B8
 lbl_805E69B8:

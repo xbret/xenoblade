@@ -1492,8 +1492,8 @@
 /* 802DC1F8 002A57B8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 802DC1FC 002A57BC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80543E18 - 0x80543F60
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80543E18
 lbl_80543E18:
@@ -1590,8 +1590,8 @@ lbl_80543F48:
 	.4byte 0x6C000000
 	.4byte 0x00000000
 
-# 0x80593140 - 0x805BBC20
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80593140
 lbl_80593140:

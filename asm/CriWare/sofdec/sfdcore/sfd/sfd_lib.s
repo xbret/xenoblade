@@ -300,8 +300,8 @@
 /* 803C0E3C 0038A3FC  4B FD 5B C8 */	b SVM_Unlock
 .endfn SFLIB_UnlockCs
 
-# 0x8051FF80 - 0x805202A0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global SFLIB_version_str
@@ -619,8 +619,8 @@ lbl_80520294:
 	.4byte 0x69740000
 	.4byte 0x00000000
 
-# 0x8056B5B8 - 0x8056C5F0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056B5B8
 lbl_8056B5B8:
@@ -1707,8 +1707,8 @@ lbl_8056C580:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8060A2D8 - 0x8060A518
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8060A2D8
 lbl_8060A2D8:

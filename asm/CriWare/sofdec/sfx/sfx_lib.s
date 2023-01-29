@@ -296,8 +296,8 @@
 /* 803D5C14 0039F1D4  4E 80 00 20 */	blr
 .endfn SFX_GetForceSplitField
 
-# 0x80520A90 - 0x80520B30
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520A90
 lbl_80520A90:
@@ -344,8 +344,8 @@ lbl_80520AC4:
 	.4byte 0x652E0000
 	.4byte 0x00000000
 
-# 0x8061CE38 - 0x8061D370
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8061CE38
 lbl_8061CE38:

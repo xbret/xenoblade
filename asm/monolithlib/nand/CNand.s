@@ -325,13 +325,13 @@
 /* 804DA4C8 004A3A88  4B FF FC 8C */	b func_804DA154
 .endfn sinit_804DA4C0
 
-# 0x804F5ACC - 0x804F5AD0
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_804DA4C0
 
-# 0x80527ED0 - 0x80527EF8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CNReqtask_typestr
@@ -352,8 +352,8 @@ CNRequest_typestr:
 	.4byte 0x74000000
 	.4byte 0x00000000
 
-# 0x80573590 - 0x805735A0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CNand
@@ -363,15 +363,15 @@ __vt__CNand:
 	.4byte func_804DA0B8
 	.4byte 0x00000000
 
-# 0x806625C0 - 0x806626F0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_806625C0
 lbl_806625C0:
 	.skip 0x130
 
-# 0x80666478 - 0x80666480
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CNand
@@ -379,8 +379,8 @@ __RTTI__CNand:
 	.4byte CNand_typestr
 	.4byte 0x00000000
 
-# 0x8066D9C0 - 0x8066D9C8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .global CNand_typestr
@@ -388,8 +388,8 @@ CNand_typestr:
 	.4byte 0x434E616E
 	.4byte 0x64000000
 
-# 0x80020650 - 0x800206A0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020650", local
@@ -452,8 +452,8 @@ CNand_typestr:
 	.4byte 0x00000000
 .endobj "@etb_80020698"
 
-# 0x800385C4 - 0x8003863C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800385C4", local

@@ -837,8 +837,8 @@
 /* 8006B3E8 000349A8  4E 80 00 20 */	blr
 .endfn func_8006B310
 
-# 0x804F6C80 - 0x804F6CF0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CfCamEvent_typestr
@@ -887,8 +887,8 @@ cf_CfCamFollow_typestr:
 	.4byte 0x6D466F6C
 	.4byte 0x6C6F7700
 
-# 0x8052A818 - 0x8052A924
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CfCamEvent
@@ -982,8 +982,8 @@ cf_CfCamDirectionIntf_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806643F8 - 0x80664428
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CfCamEvent
@@ -1016,8 +1016,8 @@ __RTTI__cf_CfCamFollow:
 	.4byte cf_CfCamFollow_typestr
 	.4byte cf_CfCamFollow_hierarchy
 
-# 0x806666B0 - 0x806666C8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806666B0
 lbl_806666B0:
@@ -1038,8 +1038,8 @@ lbl_806666C0:
 lbl_806666C4:
 	.skip 0x4
 
-# 0x80668AF0 - 0x80668B10
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80668AF0
 lbl_80668AF0:
@@ -1066,8 +1066,8 @@ lbl_80668B08:
 lbl_80668B0C:
 	.4byte 0x40A00000
 
-# 0x8000800C - 0x80008088
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000800C", local
@@ -1153,8 +1153,8 @@ lbl_80668B0C:
 	.4byte func_8006BF20
 .endobj "@etb_8000806C"
 
-# 0x80023300 - 0x8002339C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80023300", local

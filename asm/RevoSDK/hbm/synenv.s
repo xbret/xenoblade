@@ -276,8 +276,8 @@
 .endfn func_803415C0
 /* 803416CC 0030AC8C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80518B58 - 0x80518B78
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518B58
 lbl_80518B58:
@@ -290,8 +290,8 @@ lbl_80518B58:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x8054FA90 - 0x8054FC90
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054FA90
 lbl_8054FA90:

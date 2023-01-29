@@ -2575,8 +2575,8 @@
 /* 801245E8 000EDBA8  4B FF DD C8 */	b func_801223B0
 .endfn func_801245E4
 
-# 0x804FA048 - 0x804FA7D8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804FA048
 lbl_804FA048:
@@ -3184,8 +3184,8 @@ lbl_804FA4C4:
 	.4byte 0x73320000
 	.4byte 0x00000000
 
-# 0x80530750 - 0x80530A48
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80530750
 lbl_80530750:
@@ -3408,8 +3408,8 @@ CTTask_IUIWindow_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806647B0 - 0x806647D0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806647B0
 lbl_806647B0:
@@ -3431,8 +3431,8 @@ __RTTI__CTTask_IUIWindow:
 	.4byte CTTask_IUIWindow_typestr
 	.4byte CTTask_IUIWindow_hierarchy
 
-# 0x806668C8 - 0x806668D0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806668C8
 lbl_806668C8:
@@ -3441,8 +3441,8 @@ lbl_806668C8:
 lbl_806668CC:
 	.skip 0x4
 
-# 0x80669A00 - 0x80669A48
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669A00
 lbl_80669A00:
@@ -3489,8 +3489,8 @@ lbl_80669A40:
 lbl_80669A44:
 	.4byte lbl_80669A38
 
-# 0x8000BC10 - 0x8000BDB4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000BC10", local
@@ -3678,8 +3678,8 @@ lbl_80669A44:
 	.4byte 0x00000000
 .endobj "@etb_8000BDAC"
 
-# 0x80026F6C - 0x8002705C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80026F6C", local

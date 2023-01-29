@@ -64,8 +64,8 @@
 /* 8039B35C 0036491C  4E 80 00 20 */	blr
 .endfn ADXWII_SetupDvdFs
 
-# 0x8051CD48 - 0x8051CD90
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051CD48
 lbl_8051CD48:

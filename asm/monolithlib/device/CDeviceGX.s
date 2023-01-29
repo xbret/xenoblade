@@ -666,8 +666,8 @@
 /* 804559C8 0041EF88  4B FF F8 30 */	b func_804551F8
 .endfn func_804559C4
 
-# 0x805267E8 - 0x805267F8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CDeviceGX_typestr
@@ -677,8 +677,8 @@ CDeviceGX_typestr:
 	.4byte 0x58000000
 	.4byte 0x00000000
 
-# 0x805701A8 - 0x80570290
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CDeviceGX
@@ -745,8 +745,8 @@ CDeviceGX_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80666078 - 0x80666088
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80666078
 lbl_80666078:
@@ -760,8 +760,8 @@ __RTTI__CDeviceGX:
 	.4byte CDeviceGX_typestr
 	.4byte CDeviceGX_hierarchy
 
-# 0x80667F70 - 0x80667F7C
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667F70
 lbl_80667F70:
@@ -773,8 +773,8 @@ lbl_80667F74:
 lbl_80667F78:
 	.skip 0x4
 
-# 0x8066CBE8 - 0x8066CC10
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CBE8
 lbl_8066CBE8:
@@ -799,8 +799,8 @@ lbl_8066CC08:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x8001D224 - 0x8001D2E4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001D224", local
@@ -883,8 +883,8 @@ lbl_8066CC08:
 	.4byte 0x00000000
 .endobj "@etb_8001D2DC"
 
-# 0x80034EBC - 0x80034F1C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034EBC", local

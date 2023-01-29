@@ -14307,13 +14307,13 @@
 /* 801D1FBC 0019B57C  4E 80 00 20 */	blr
 .endfn func_801D1F9C
 
-# 0x804F598C - 0x804F5990
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_801D1E30
 
-# 0x80500D98 - 0x80501588
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80500D98
 lbl_80500D98:
@@ -14858,8 +14858,8 @@ lbl_80500E74:
 	.4byte 0x78000000
 	.4byte 0x00000000
 
-# 0x80537D50 - 0x80537FE0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_80537D50:
@@ -15061,8 +15061,8 @@ __vt__CQuestItem:
 	.4byte func_801C4B74
 	.4byte func_801C4BB4
 
-# 0x80664F58 - 0x80664F78
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CItemBoxGrid
@@ -15085,8 +15085,8 @@ __RTTI__CQuestItem:
 	.4byte CQuestItem_typestr
 	.4byte 0x00000000
 
-# 0x80666D78 - 0x80666E08
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666D78
 lbl_80666D78:
@@ -15149,8 +15149,8 @@ lbl_80666E00:
 lbl_80666E04:
 	.skip 0x4
 
-# 0x8066A7F0 - 0x8066A860
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A7F0
 lbl_8066A7F0:
@@ -15223,8 +15223,8 @@ lbl_8066A858:
 	.4byte 0x43B80000
 	.4byte 0x00000000
 
-# 0x800109D8 - 0x800114EC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800109D8", local
@@ -16384,8 +16384,8 @@ lbl_8066A858:
 	.4byte 0x00000000
 .endobj "@etb_800114E4"
 
-# 0x8002B2D4 - 0x8002B814
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002B2D4", local

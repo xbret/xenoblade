@@ -4561,8 +4561,8 @@
 /* 80131EA4 000FB464  4E 80 00 20 */	blr
 .endfn func_80131820
 
-# 0x804FB6D0 - 0x804FB800
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CUIBattleManager_typestr
@@ -4661,8 +4661,8 @@ lbl_804FB76C:
 	.4byte 0x65000000
 	.4byte 0x00000000
 
-# 0x80531878 - 0x80531A58
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80531878
 lbl_80531878:
@@ -4822,8 +4822,8 @@ CTTask_CUIBattleManager_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664A70 - 0x80664AA0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CUIBattleManager
@@ -4856,8 +4856,8 @@ __RTTI__CTTask_CUIBattleManager:
 	.4byte CTTask_CUIBattleManager_typestr
 	.4byte CTTask_CUIBattleManager_hierarchy
 
-# 0x80666940 - 0x80666948
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666940
 lbl_80666940:
@@ -4866,15 +4866,15 @@ lbl_80666940:
 lbl_80666944:
 	.skip 0x4
 
-# 0x80669B90 - 0x80669B94
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669B90
 lbl_80669B90:
 	.4byte 0x3F800000
 
-# 0x8000C2EC - 0x8000C450
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000C2EC", local
@@ -5106,8 +5106,8 @@ lbl_80669B90:
 	.4byte 0x00000000
 .endobj "@etb_8000C448"
 
-# 0x80027578 - 0x8002771C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80027578", local

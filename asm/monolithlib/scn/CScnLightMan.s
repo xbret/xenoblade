@@ -128,8 +128,8 @@
 /* 8048D1C0 00456780  4E 80 04 20 */	bctr
 .endfn func_8048D1B0
 
-# 0x80527880 - 0x80527890
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CScnLightMan_typestr
@@ -139,8 +139,8 @@ CScnLightMan_typestr:
 	.4byte 0x744D616E
 	.4byte 0x00000000
 
-# 0x80571DB0 - 0x80571DC0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnLightMan
@@ -150,8 +150,8 @@ __vt__CScnLightMan:
 	.4byte func_8048D0E4
 	.4byte 0x00000000
 
-# 0x80666270 - 0x80666278
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CScnLightMan
@@ -159,8 +159,8 @@ __RTTI__CScnLightMan:
 	.4byte CScnLightMan_typestr
 	.4byte 0x00000000
 
-# 0x8001EB70 - 0x8001EB90
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001EB70", local
@@ -187,8 +187,8 @@ __RTTI__CScnLightMan:
 	.4byte 0x00000000
 .endobj "@etb_8001EB88"
 
-# 0x80036740 - 0x80036770
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80036740", local

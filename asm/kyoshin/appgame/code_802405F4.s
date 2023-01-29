@@ -1934,8 +1934,8 @@
 /* 80242218 0020B7D8  4E 80 00 20 */	blr
 .endfn func_80242144
 
-# 0x8053A4B0 - 0x8053A4E0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8053A4B0:
@@ -1952,8 +1952,8 @@ jumptable_8053A4B0:
 	.rel func_80241E3C, .L_802420AC
 	.rel func_80241E3C, .L_802420F0
 
-# 0x80667078 - 0x80667088
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667078
 lbl_80667078:
@@ -1962,8 +1962,8 @@ lbl_80667078:
 lbl_80667080:
 	.skip 0x8
 
-# 0x8066AFC0 - 0x8066AFE0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AFC0
 lbl_8066AFC0:
@@ -1990,8 +1990,8 @@ lbl_8066AFD8:
 lbl_8066AFDC:
 	.4byte 0x4222F983
 
-# 0x80016138 - 0x80016290
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80016138", local
@@ -2128,8 +2128,8 @@ lbl_8066AFDC:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 .endobj "@etb_80016278"
 
-# 0x8002F0C0 - 0x8002F150
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002F0C0", local

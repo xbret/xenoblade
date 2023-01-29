@@ -1154,8 +1154,8 @@
 /* 80396660 0035FC20  4E 80 00 20 */	blr
 .endfn SJUNI_GetNumChunk
 
-# 0x8051C430 - 0x8051C590
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051C430
 lbl_8051C430:
@@ -1250,8 +1250,8 @@ lbl_8051C440:
 	.4byte 0x30393032
 	.4byte 0x38320000
 
-# 0x80569338 - 0x80569368
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global sjuni_vtbl
@@ -1269,8 +1269,8 @@ sjuni_vtbl:
 	.4byte SJUNI_IsGetChunk
 	.4byte SJUNI_EntryErrFunc
 
-# 0x805F5118 - 0x805F5D20
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global sjuni_init_cnt

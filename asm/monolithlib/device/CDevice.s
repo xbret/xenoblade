@@ -229,13 +229,13 @@
 /* 8044DB20 004170E0  4E 80 00 20 */	blr
 .endfn sinit_8044DAFC
 
-# 0x804F5A74 - 0x804F5A78
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8044DAFC
 
-# 0x805263A0 - 0x80526460
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805263A0
 lbl_805263A0:
@@ -295,8 +295,8 @@ lbl_805263E8:
 	.4byte 0x76696365
 	.4byte 0x00000000
 
-# 0x8056F840 - 0x8056F9B0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt___unnamed_CDevice_cpp_CDeviceException
@@ -403,8 +403,8 @@ CDevice_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665F98 - 0x80665FB8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665F98
 lbl_80665F98:
@@ -429,8 +429,8 @@ __RTTI__CDevice:
 	.4byte CDevice_typestr
 	.4byte CDevice_hierarchy
 
-# 0x8001CCD8 - 0x8001CD08
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001CCD8", local
@@ -469,8 +469,8 @@ __RTTI__CDevice:
 	.4byte 0x00000000
 .endobj "@etb_8001CD00"
 
-# 0x80034958 - 0x800349A0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034958", local

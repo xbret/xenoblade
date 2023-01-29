@@ -465,8 +465,8 @@
 /* 8043C2C0 00405880  4E 80 00 20 */	blr
 .endfn func_8043C268
 
-# 0x80525EA0 - 0x80525EF8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global _unnamed_CTaskManager_cpp_CRootProc_typestr
@@ -497,8 +497,8 @@ CTTask_unnamed_CTaskManager_cpp_CRootProc_typestr:
 	.4byte 0x50726F63
 	.4byte 0x3E000000
 
-# 0x8056EDB0 - 0x8056EE38
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt___unnamed_CTaskManager_cpp_CRootProc
@@ -547,8 +547,8 @@ CTTask_unnamed_CTaskManager_cpp_CRootProc_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665E90 - 0x80665EA0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI___unnamed_CTaskManager_cpp_CRootProc
@@ -561,8 +561,8 @@ __RTTI__CTTask_unnamed_CTaskManager_cpp_CRootProc:
 	.4byte CTTask_unnamed_CTaskManager_cpp_CRootProc_typestr
 	.4byte CTTask_unnamed_CTaskManager_cpp_CRootProc_hierarchy
 
-# 0x80667E98 - 0x80667EA8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667E98
 lbl_80667E98:
@@ -577,8 +577,8 @@ lbl_80667EA0:
 lbl_80667EA4:
 	.skip 0x4
 
-# 0x8001C380 - 0x8001C3C0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C380", local
@@ -629,8 +629,8 @@ lbl_80667EA4:
 	.4byte 0x00000000
 .endobj "@etb_8001C3B8"
 
-# 0x80034004 - 0x80034064
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034004", local

@@ -351,8 +351,8 @@
 /* 8040B484 003D4A44  4E 80 00 20 */	blr
 .endfn MTX44Copy__Q24nw4r4mathFPQ34nw4r4math5MTX44PCQ34nw4r4math5MTX44
 
-# 0x8066C640 - 0x8066C658
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C640
 lbl_8066C640:

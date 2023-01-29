@@ -1181,13 +1181,13 @@
 /* 8033272C 002FBCEC  4E 80 00 20 */	blr
 .endfn sinit_80332720
 
-# 0x804F59EC - 0x804F59F0
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80332720
 
-# 0x80518A98 - 0x80518AB8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518A98
 lbl_80518A98:
@@ -1202,8 +1202,8 @@ lbl_80518AB0:
 	.4byte 0x3F000000
 	.4byte 0x3B808081
 
-# 0x8054D8D0 - 0x8054D938
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054D8D0
 lbl_8054D8D0:

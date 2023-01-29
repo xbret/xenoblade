@@ -528,8 +528,8 @@
 /* 8035D728 00326CE8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8035D72C 00326CEC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8055EBF8 - 0x8055ECC0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .obj "@980", local
@@ -598,8 +598,8 @@ lbl_8055EC9C:
 	.4byte 0x646C6572
 	.4byte 0x0A000000
 
-# 0x805D5160 - 0x805D5220
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 StmEhInBuf:
@@ -620,8 +620,8 @@ lbl_805D51E0:
 lbl_805D5200:
 	.skip 0x20
 
-# 0x80667AE0 - 0x80667B00
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 ResetDown:

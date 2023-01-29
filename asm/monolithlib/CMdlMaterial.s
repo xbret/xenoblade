@@ -1223,8 +1223,8 @@
 /* 804E6540 004AFB00  4E 80 00 20 */	blr
 .endfn func_804E64B0
 
-# 0x80528090 - 0x805280A0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMdlMaterial_typestr
@@ -1234,8 +1234,8 @@ CMdlMaterial_typestr:
 	.4byte 0x7269616C
 	.4byte 0x00000000
 
-# 0x80573920 - 0x805739F8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMdlMaterial
@@ -1311,8 +1311,8 @@ lbl_805739E8:
 	.4byte 0x61745F61
 	.4byte 0x632E6800
 
-# 0x80666548 - 0x80666570
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80666548
 lbl_80666548:
@@ -1344,8 +1344,8 @@ lbl_80666568:
 lbl_8066656C:
 	.4byte 0x72656600
 
-# 0x8066DAA0 - 0x8066DAB0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066DAA0
 lbl_8066DAA0:
@@ -1358,8 +1358,8 @@ lbl_8066DAA8:
 lbl_8066DAAC:
 	.4byte 0x437F0000
 
-# 0x80020C88 - 0x80020CD0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020C88", local
@@ -1416,8 +1416,8 @@ lbl_8066DAAC:
 	.4byte 0x00000000
 .endobj "@etb_80020CC8"
 
-# 0x80038D8C - 0x80038DF8
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80038D8C", local

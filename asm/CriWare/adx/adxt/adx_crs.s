@@ -48,8 +48,8 @@
 /* 80389408 003529C8  4E 80 00 20 */	blr
 .endfn ADXCRS_Leave
 
-# 0x805E99B8 - 0x805E99C0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805E99B8
 lbl_805E99B8:

@@ -2159,8 +2159,8 @@
 /* 802E6240 002AF800  4E 80 00 20 */	blr
 .endfn btm_chg_all_acl_pkt_types
 
-# 0x80544C60 - 0x80545080
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80544C60
 lbl_80544C60:

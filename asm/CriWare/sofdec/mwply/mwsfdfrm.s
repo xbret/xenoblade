@@ -1334,8 +1334,8 @@
 /* 8039CE54 00366414  4E 80 00 20 */	blr
 .endfn func_8039CD7C
 
-# 0x8051CEB0 - 0x8051D1D0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051CEB0
 lbl_8051CEB0:
@@ -1540,8 +1540,8 @@ lbl_8051CEB0:
 	.4byte 0x6E76616C
 	.4byte 0x69642E00
 
-# 0x805697A8 - 0x805697D0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_805697A8:

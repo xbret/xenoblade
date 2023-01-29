@@ -7399,8 +7399,8 @@
 /* 8026D4BC 00236A7C  4E 80 00 20 */	blr
 .endfn func_8026D3CC
 
-# 0x8053B0D8 - 0x8053B1D8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8053B0D8:
@@ -7484,8 +7484,8 @@ __vt__UI_CPassiveSkillCur:
 	.4byte 0x00000000
 	.4byte func_80263EF0
 
-# 0x80665288 - 0x806652A8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__UI_CPassiveSkill
@@ -7508,8 +7508,8 @@ __RTTI__UI_CPassiveSkillCur:
 	.4byte UI_CPassiveSkillCur_typestr
 	.4byte 0x00000000
 
-# 0x80017A54 - 0x80017C14
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80017A54", local
@@ -7824,8 +7824,8 @@ __RTTI__UI_CPassiveSkillCur:
 	.4byte 0x00000000
 .endobj "@etb_80017C0C"
 
-# 0x800302B4 - 0x8003050C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800302B4", local

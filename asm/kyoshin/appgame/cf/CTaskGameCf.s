@@ -704,8 +704,8 @@
 /* 80044AB4 0000E074  4E 80 00 20 */	blr
 .endfn func_80044A70
 
-# 0x804F61B0 - 0x804F61D8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CTaskGameCf_typestr
@@ -724,8 +724,8 @@ CTTask_cf_CTaskGameCf_typestr:
 	.4byte 0x47616D65
 	.4byte 0x43663E00
 
-# 0x80529310 - 0x80529438
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80529310
 lbl_80529310:
@@ -840,8 +840,8 @@ CTTask_cf_CTaskGameCf_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664260 - 0x80664270
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CTaskGameCf
@@ -854,15 +854,15 @@ __RTTI__CTTask_cf_CTaskGameCf:
 	.4byte CTTask_cf_CTaskGameCf_typestr
 	.4byte CTTask_cf_CTaskGameCf_hierarchy
 
-# 0x80666638 - 0x80666640
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666638
 lbl_80666638:
 	.skip 0x8
 
-# 0x80668620 - 0x80668628
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80668620
 lbl_80668620:
@@ -871,8 +871,8 @@ lbl_80668620:
 lbl_80668624:
 	.4byte 0x3F800000
 
-# 0x80006E68 - 0x80006EC8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80006E68", local
@@ -947,8 +947,8 @@ lbl_80668624:
 	.4byte 0x00000000
 .endobj "@etb_80006EC0"
 
-# 0x80021A64 - 0x80021AF4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80021A64", local

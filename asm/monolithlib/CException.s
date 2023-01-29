@@ -2011,8 +2011,8 @@
 /* 8045978C 00422D4C  4E 80 00 20 */	blr
 .endfn func_804596F4
 
-# 0x80526888 - 0x805268F8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CException_typestr
@@ -2050,8 +2050,8 @@ lbl_805268A8:
 	.4byte 0xBD00434C
 	.4byte 0x69620000
 
-# 0x80570528 - 0x805705E8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CException
@@ -2108,15 +2108,15 @@ CException_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8065A808 - 0x8065A848
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8065A808
 lbl_8065A808:
 	.skip 0x40
 
-# 0x806660A8 - 0x806660B0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CException
@@ -2124,8 +2124,8 @@ __RTTI__CException:
 	.4byte CException_typestr
 	.4byte CException_hierarchy
 
-# 0x80667F98 - 0x80667FB0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667F98
 lbl_80667F98:
@@ -2143,8 +2143,8 @@ lbl_80667FA4:
 lbl_80667FA8:
 	.skip 0x8
 
-# 0x8066CC40 - 0x8066CC88
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CC40
 lbl_8066CC40:
@@ -2193,8 +2193,8 @@ lbl_8066CC80:
 	.4byte 0x3D23D70A
 	.4byte 0x00000000
 
-# 0x8001D3C0 - 0x8001D498
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001D3C0", local
@@ -2311,8 +2311,8 @@ lbl_8066CC80:
 	.4byte 0x00000000
 .endobj "@etb_8001D490"
 
-# 0x80035048 - 0x800350FC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80035048", local

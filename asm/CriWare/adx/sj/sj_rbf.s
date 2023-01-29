@@ -1402,8 +1402,8 @@
 /* 80395674 0035EC34  4E 80 00 20 */	blr
 .endfn SJRBF_GetFlowCnt
 
-# 0x8051C1F8 - 0x8051C430
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global sjrbf_uuid
@@ -1553,8 +1553,8 @@ lbl_8051C208:
 	.4byte 0x33300000
 	.4byte 0x00000000
 
-# 0x80569308 - 0x80569338
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global sjrbf_vtbl
@@ -1572,8 +1572,8 @@ sjrbf_vtbl:
 	.4byte SJRBF_IsGetChunk
 	.4byte SJRBF_EntryErrFunc
 
-# 0x805F0910 - 0x805F5118
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global sjrbf_init_cnt

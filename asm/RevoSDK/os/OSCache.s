@@ -518,8 +518,8 @@
 /* 80354608 0031DBC8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8035460C 0031DBCC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80551838 - 0x80551A70
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .obj "@878", local

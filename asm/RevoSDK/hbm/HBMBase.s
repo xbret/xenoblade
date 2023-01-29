@@ -9661,8 +9661,8 @@
 /* 8032B4BC 002F4A7C  4E 80 00 20 */	blr
 .endfn update_sound__Q210homebutton10HomeButtonFv
 
-# 0x805186C8 - 0x80518A28
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805186C8
 lbl_805186C8:
@@ -9893,8 +9893,8 @@ lbl_805189F8:
 	.4byte 0x00000004
 	.4byte 0x00000003
 
-# 0x8054C878 - 0x8054D5B8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054C878
 lbl_8054C878:
@@ -11073,8 +11073,8 @@ lbl_8054D568:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x805CD758 - 0x805CD788
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805CD758
 lbl_805CD758:

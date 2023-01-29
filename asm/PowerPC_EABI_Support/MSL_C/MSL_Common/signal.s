@@ -55,8 +55,8 @@
 /* 802C26B4 0028BC74  4E 80 00 20 */	blr
 .endfn raise
 
-# 0x8057B348 - 0x8057B368
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057B348
 lbl_8057B348:

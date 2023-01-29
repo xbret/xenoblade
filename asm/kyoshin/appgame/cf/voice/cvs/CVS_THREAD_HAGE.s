@@ -286,8 +286,8 @@
 /* 802A7250 00270810  4E 80 00 20 */	blr
 .endfn func_802A724C
 
-# 0x8050BDB0 - 0x8050BDC8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CVS_THREAD_HAGE_typestr
@@ -299,8 +299,8 @@ cf_CVS_THREAD_HAGE_typestr:
 	.4byte 0x41474500
 	.4byte 0x00000000
 
-# 0x8053D338 - 0x8053D388
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053D338
 lbl_8053D338:
@@ -335,8 +335,8 @@ cf_CVS_THREAD_HAGE_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665600 - 0x80665608
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CVS_THREAD_HAGE
@@ -344,8 +344,8 @@ __RTTI__cf_CVS_THREAD_HAGE:
 	.4byte cf_CVS_THREAD_HAGE_typestr
 	.4byte cf_CVS_THREAD_HAGE_hierarchy
 
-# 0x8001ACF0 - 0x8001AD3C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001ACF0", local
@@ -387,8 +387,8 @@ __RTTI__cf_CVS_THREAD_HAGE:
 	.4byte 0x00000000
 .endobj "@etb_8001AD34"
 
-# 0x80032B94 - 0x80032BD0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80032B94", local

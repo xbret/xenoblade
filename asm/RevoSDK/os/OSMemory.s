@@ -549,8 +549,8 @@
 .endfn __OSInitMemoryProtection
 /* 80359C1C 003231DC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80552AE0 - 0x80552AF0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 ShutdownFunctionInfo:
@@ -559,8 +559,8 @@ ShutdownFunctionInfo:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80667AA8 - 0x80667AB0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 # __OSInitMemoryProtection()::initialized

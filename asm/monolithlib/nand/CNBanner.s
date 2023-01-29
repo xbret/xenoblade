@@ -554,8 +554,8 @@
 /* 804F58E8 004BEEA8  4E 80 00 20 */	blr
 .endfn func_804F57E8
 
-# 0x805281B8 - 0x805281C8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CNBanner_typestr
@@ -567,8 +567,8 @@ CNBanner_typestr:
 lbl_805281C4:
 	.4byte 0x00000000
 
-# 0x80573BC0 - 0x80573C54
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CNBanner
@@ -614,8 +614,8 @@ CNBanner_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806665F8 - 0x80666600
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CNBanner
@@ -623,8 +623,8 @@ __RTTI__CNBanner:
 	.4byte CNBanner_typestr
 	.4byte CNBanner_hierarchy
 
-# 0x80020FD4 - 0x80021018
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020FD4", local
@@ -667,8 +667,8 @@ __RTTI__CNBanner:
 	.4byte 0x30080000
 	.4byte 0x00000000
 
-# 0x800391B8 - 0x80039200
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800391B8", local

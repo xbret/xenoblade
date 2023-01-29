@@ -224,8 +224,8 @@
 /* 8049E8C0 00467E80  4E 80 00 20 */	blr
 .endfn func_8049E8BC
 
-# 0x80527B70 - 0x80527B80
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CScnItemAnim_typestr
@@ -235,8 +235,8 @@ CScnItemAnim_typestr:
 	.4byte 0x416E696D
 	.4byte 0x00000000
 
-# 0x805724D8 - 0x80572508
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnItemAnim
@@ -257,8 +257,8 @@ CScnItemAnim_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806663A0 - 0x806663B0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CScnItemAnim
@@ -270,8 +270,8 @@ lbl_806663A8:
 	.4byte 0x72656600
 	.4byte 0x00000000
 
-# 0x8001F700 - 0x8001F75C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001F700", local
@@ -309,8 +309,8 @@ lbl_806663A8:
 	.4byte 0x8D000018
 .endobj "@etb_8001F724"
 
-# 0x800371C0 - 0x800371E4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800371C0", local

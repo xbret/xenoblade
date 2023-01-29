@@ -1388,8 +1388,8 @@
 /* 801BDDA0 00187360  4B FF ED A0 */	b func_801BCB40
 .endfn func_801BDD9C
 
-# 0x80500928 - 0x80500B28
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuKizunaTalk_typestr
@@ -1525,8 +1525,8 @@ lbl_80500938:
 	.4byte 0x6C697374
 	.4byte 0x00000000
 
-# 0x80537250 - 0x80537350
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMenuKizunaTalk
@@ -1599,8 +1599,8 @@ CMenuKizunaTalk_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664F10 - 0x80664F18
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuKizunaTalk
@@ -1608,8 +1608,8 @@ __RTTI__CMenuKizunaTalk:
 	.4byte CMenuKizunaTalk_typestr
 	.4byte CMenuKizunaTalk_hierarchy
 
-# 0x80666D10 - 0x80666D18
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666D10
 lbl_80666D10:
@@ -1618,8 +1618,8 @@ lbl_80666D10:
 lbl_80666D14:
 	.skip 0x4
 
-# 0x8066A728 - 0x8066A738
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A728
 lbl_8066A728:
@@ -1632,8 +1632,8 @@ lbl_8066A730:
 	.4byte 0x43300000
 	.4byte 0x00000000
 
-# 0x800100D8 - 0x80010234
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800100D8", local
@@ -1779,8 +1779,8 @@ lbl_8066A730:
 	.4byte func_8045F8C8
 .endobj "@etb_8001021C"
 
-# 0x8002ACBC - 0x8002AD64
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002ACBC", local

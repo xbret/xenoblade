@@ -601,8 +601,8 @@
 /* 8031F29C 002E885C  4E 80 00 20 */	blr
 .endfn GXClearGPMetric
 
-# 0x8054C130 - 0x8054C218
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8054C130:

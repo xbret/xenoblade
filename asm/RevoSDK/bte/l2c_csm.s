@@ -1506,8 +1506,8 @@
 /* 802F89A8 002C1F68  4E 80 00 20 */	blr
 .endfn forward_peer_data
 
-# 0x80547370 - 0x80547BA8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_80547370:
@@ -2068,8 +2068,8 @@ lbl_80547B80:
 	.4byte 0x65743A20
 	.4byte 0x25640000
 
-# 0x805C2AC0 - 0x805C32A8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805C2AC0
 lbl_805C2AC0:

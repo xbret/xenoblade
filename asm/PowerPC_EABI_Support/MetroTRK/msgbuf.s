@@ -617,8 +617,8 @@
 /* 802CDC8C 0029724C  4E 80 00 20 */	blr
 .endfn TRKReadBuffer_ui32
 
-# 0x8053FF18 - 0x8053FF40
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053FF18
 lbl_8053FF18:
@@ -633,8 +633,8 @@ lbl_8053FF18:
 	.4byte 0x696C6162
 	.4byte 0x6C650A00
 
-# 0x8057B8D8 - 0x8057D280
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057B8D8
 lbl_8057B8D8:

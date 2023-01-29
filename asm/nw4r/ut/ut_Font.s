@@ -54,8 +54,8 @@
 /* 8042C070 003F5630  4E 80 00 20 */	blr
 .endfn InitReaderFunc__Q34nw4r2ut4FontFQ34nw4r2ut12FontEncoding
 
-# 0x8056E710 - 0x8056E740
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E710
 lbl_8056E710:

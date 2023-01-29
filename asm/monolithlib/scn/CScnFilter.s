@@ -103,8 +103,8 @@
 /* 8049C944 00465F04  4E 80 00 20 */	blr
 .endfn func_8049C868
 
-# 0x805723A8 - 0x805723C0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnFilter
@@ -116,8 +116,8 @@ __vt__CScnFilter:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8066D350 - 0x8066D360
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D350
 lbl_8066D350:
@@ -128,8 +128,8 @@ lbl_8066D358:
 	.4byte 0x43300000
 	.4byte 0x00000000
 
-# 0x8001F4E4 - 0x8001F4F4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001F4E4", local
@@ -144,8 +144,8 @@ lbl_8066D358:
 	.4byte 0x00000000
 .endobj "@etb_8001F4EC"
 
-# 0x80036F74 - 0x80036F8C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80036F74", local

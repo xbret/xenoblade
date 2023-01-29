@@ -1005,8 +1005,8 @@
 /* 803FE0B4 003C7674  4E 80 00 20 */	blr
 .endfn SelectAmbLightObj__Q34nw4r3g3d8LightSetFi
 
-# 0x8066C500 - 0x8066C530
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C500
 lbl_8066C500:

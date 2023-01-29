@@ -84,8 +84,8 @@
 /* 803FCE34 003C63F4  4B FE E0 B4 */	b Invalidate__Q34nw4r3g3d8G3DStateFUl
 .endfn G3dReset__Q24nw4r3g3dFv
 
-# 0x8056D108 - 0x8056D150
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056D108
 lbl_8056D108:
@@ -108,8 +108,8 @@ lbl_8056D108:
 	.4byte 0x38333129
 	.4byte 0x203E3E00
 
-# 0x80665DE0 - 0x80665DE8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665DE0
 lbl_80665DE0:

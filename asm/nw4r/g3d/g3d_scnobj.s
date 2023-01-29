@@ -1856,8 +1856,8 @@
 /* 803F5C3C 003BF1FC  4E 80 00 20 */	blr
 .endfn GetTypeObj__Q34nw4r3g3d6ScnObjCFv
 
-# 0x80521080 - 0x80521090
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80521080
 lbl_80521080:
@@ -1866,8 +1866,8 @@ lbl_80521080:
 	.4byte 0x626A0000
 	.4byte 0x00000000
 
-# 0x8056CED8 - 0x8056CFA0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8056CED8:
@@ -1928,8 +1928,8 @@ lbl_8056CF68:
 	.4byte CalcWorldMtx__Q34nw4r3g3d6ScnObjFPCQ34nw4r4math5MTX34PUl
 	.4byte 0x00000000
 
-# 0x8066C4D8 - 0x8066C4E0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C4D8
 lbl_8066C4D8:

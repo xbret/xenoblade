@@ -4092,8 +4092,8 @@
 /* 804434F8 0040CAB8  4E 80 00 20 */	blr
 .endfn func_80443388
 
-# 0x80525F68 - 0x80525F78
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CViewFrame_typestr
@@ -4103,8 +4103,8 @@ CViewFrame_typestr:
 	.4byte 0x6D650000
 	.4byte 0x00000000
 
-# 0x8056EF78 - 0x8056EF88
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CViewFrame
@@ -4114,8 +4114,8 @@ __vt__CViewFrame:
 	.4byte func_8043C5DC
 	.4byte 0x00000000
 
-# 0x80665EC8 - 0x80665ED0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CViewFrame
@@ -4123,8 +4123,8 @@ __RTTI__CViewFrame:
 	.4byte CViewFrame_typestr
 	.4byte 0x00000000
 
-# 0x80667EB0 - 0x80667EB8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667EB0
 lbl_80667EB0:
@@ -4133,8 +4133,8 @@ lbl_80667EB0:
 lbl_80667EB4:
 	.skip 0x4
 
-# 0x8066CAE8 - 0x8066CB20
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CAE8
 lbl_8066CAE8:
@@ -4175,8 +4175,8 @@ lbl_8066CB18:
 	.4byte 0x3F99999A
 	.4byte 0x00000000
 
-# 0x8001C5E0 - 0x8001C6D8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C5E0", local
@@ -4329,8 +4329,8 @@ lbl_8066CB18:
 	.4byte 0x00000000
 .endobj "@etb_8001C6D0"
 
-# 0x800341F0 - 0x800342F8
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800341F0", local

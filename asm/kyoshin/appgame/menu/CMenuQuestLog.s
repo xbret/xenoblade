@@ -1149,8 +1149,8 @@
 /* 8011D420 000E69E0  4E 80 00 20 */	blr
 .endfn func_8011D338
 
-# 0x804F9D48 - 0x804F9D68
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuQuestLog_typestr
@@ -1166,8 +1166,8 @@ lbl_804F9D58:
 	.4byte 0x74006E61
 	.4byte 0x6D650000
 
-# 0x805303E0 - 0x80530478
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_805303E0:
@@ -1216,8 +1216,8 @@ CMenuQuestLog_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664768 - 0x80664770
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuQuestLog
@@ -1225,15 +1225,15 @@ __RTTI__CMenuQuestLog:
 	.4byte CMenuQuestLog_typestr
 	.4byte CMenuQuestLog_hierarchy
 
-# 0x806668B8 - 0x806668C0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806668B8
 lbl_806668B8:
 	.skip 0x8
 
-# 0x8000B8D0 - 0x8000BA94
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000B8D0", local
@@ -1429,8 +1429,8 @@ lbl_806668B8:
 	.4byte 0x00000000
 .endobj "@etb_8000BA8C"
 
-# 0x80026D5C - 0x80026E4C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80026D5C", local

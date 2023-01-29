@@ -148,8 +148,8 @@
 /* 8041177C 003DAD3C  4E 80 00 20 */	blr
 .endfn Free__Q44nw4r3snd6detail8AxfxImplFPv
 
-# 0x80667DA8 - 0x80667DB0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667DA8
 lbl_80667DA8:

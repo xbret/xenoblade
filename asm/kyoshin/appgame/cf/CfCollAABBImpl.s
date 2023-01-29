@@ -135,8 +135,8 @@
 /* 800AB00C 000745CC  4B FF AF DC */	b func_800A5FE8
 .endfn func_800AAFF4
 
-# 0x80009394 - 0x800093AC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80009394", local
@@ -149,8 +149,8 @@
 	.4byte func_804561AC
 .endobj "@etb_80009394"
 
-# 0x80024BE4 - 0x80024BF0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80024BE4", local

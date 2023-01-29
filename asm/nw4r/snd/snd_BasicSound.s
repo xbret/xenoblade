@@ -1669,20 +1669,20 @@
 /* 80413B10 003DD0D0  4E 80 00 20 */	blr
 .endfn sinit_80413B08
 
-# 0x804F5A1C - 0x804F5A20
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80413B08
 
-# 0x80667DB0 - 0x80667DB8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667DB0
 lbl_80667DB0:
 	.skip 0x8
 
-# 0x8066C6E8 - 0x8066C6F8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C6E8
 lbl_8066C6E8:

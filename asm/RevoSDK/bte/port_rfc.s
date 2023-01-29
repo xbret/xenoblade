@@ -1451,8 +1451,8 @@
 /* 802FDE74 002C7434  4E 80 00 20 */	blr
 .endfn port_rfc_closed
 
-# 0x80548200 - 0x80548530
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80548200
 lbl_80548200:

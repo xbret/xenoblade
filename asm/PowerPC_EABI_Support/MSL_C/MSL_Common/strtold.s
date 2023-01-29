@@ -1450,8 +1450,8 @@
 /* 802C3DA8 0028D368  4E 80 00 20 */	blr
 .endfn strtof
 
-# 0x8066B878 - 0x8066B898
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B878
 lbl_8066B878:

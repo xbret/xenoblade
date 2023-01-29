@@ -747,8 +747,8 @@
 /* 801809B4 00149F74  4E 80 00 20 */	blr
 .endfn func_801809B0
 
-# 0x804FEEF8 - 0x804FEF48
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CREvtCamera_typestr
@@ -776,8 +776,8 @@ lbl_804FEF08:
 	.4byte 0x4F440000
 	.4byte 0x00000000
 
-# 0x805354B8 - 0x805354F0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CREvtCamera
@@ -800,8 +800,8 @@ cf_CREvtCamera_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664D40 - 0x80664D50
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80664D40
 lbl_80664D40:
@@ -815,15 +815,15 @@ __RTTI__cf_CREvtCamera:
 	.4byte cf_CREvtCamera_typestr
 	.4byte cf_CREvtCamera_hierarchy
 
-# 0x80666B98 - 0x80666BA0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666B98
 lbl_80666B98:
 	.skip 0x8
 
-# 0x8066A158 - 0x8066A180
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A158
 lbl_8066A158:
@@ -850,8 +850,8 @@ lbl_8066A178:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x8000E600 - 0x8000E668
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000E600", local
@@ -912,8 +912,8 @@ lbl_8066A178:
 	.4byte 0x00000000
 .endobj "@etb_8000E660"
 
-# 0x80029630 - 0x80029690
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80029630", local

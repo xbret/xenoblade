@@ -1871,13 +1871,13 @@
 /* 8025D46C 00226A2C  4E 80 00 20 */	blr
 .endfn sinit_8025D304
 
-# 0x804F59BC - 0x804F59C0
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8025D304
 
-# 0x80508168 - 0x80508EE0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CKizunagram_typestr
@@ -2759,8 +2759,8 @@ lbl_805081A8:
 	.4byte 0x616D5F74
 	.4byte 0x65780000
 
-# 0x8053ACD8 - 0x8053ADD0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8053ACD8:
@@ -2845,8 +2845,8 @@ __vt__CKizunaRadar:
 	.4byte func_80257ABC
 	.4byte 0x00000000
 
-# 0x80665240 - 0x80665268
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CKizunagram
@@ -2874,8 +2874,8 @@ __RTTI__CKizunaRadar:
 	.4byte CKizunaRadar_typestr
 	.4byte 0x00000000
 
-# 0x806670D8 - 0x80667150
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806670D8
 lbl_806670D8:
@@ -2926,8 +2926,8 @@ lbl_80667148:
 lbl_8066714A:
 	.skip 0x6
 
-# 0x8066B0D8 - 0x8066B128
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B0D8
 lbl_8066B0D8:
@@ -2986,8 +2986,8 @@ lbl_8066B120:
 	.4byte 0x40400000
 	.4byte 0x00000000
 
-# 0x80017454 - 0x800175E0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80017454", local
@@ -3189,8 +3189,8 @@ lbl_8066B120:
 	.4byte 0x00000000
 .endobj "@etb_800175D8"
 
-# 0x8002FCC0 - 0x8002FDEC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002FCC0", local

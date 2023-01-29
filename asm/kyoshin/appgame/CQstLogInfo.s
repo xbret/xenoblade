@@ -2383,8 +2383,8 @@
 /* 8022B614 001F4BD4  4E 80 00 20 */	blr
 .endfn func_8022B35C
 
-# 0x80505380 - 0x80505B80
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80505380
 lbl_80505380:
@@ -3012,8 +3012,8 @@ lbl_805057C4:
 	.4byte 0x676F6C64
 	.4byte 0x30310000
 
-# 0x80539AD8 - 0x80539CC8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80539AD8
 lbl_80539AD8:
@@ -3154,8 +3154,8 @@ CQstLogInfo_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665168 - 0x80665170
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CQstLogInfo
@@ -3163,16 +3163,16 @@ __RTTI__CQstLogInfo:
 	.4byte CQstLogInfo_typestr
 	.4byte CQstLogInfo_hierarchy
 
-# 0x8066AE50 - 0x8066AE58
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AE50
 lbl_8066AE50:
 	.4byte 0x3F800000
 	.4byte 0x00000000
 
-# 0x8001550C - 0x800155E0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001550C", local
@@ -3316,8 +3316,8 @@ lbl_8066AE50:
 	.4byte func_8045F8C8
 .endobj "@etb_800155C8"
 
-# 0x8002E3DC - 0x8002E4E4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002E3DC", local

@@ -501,8 +501,8 @@
 /* 80389AC0 00353080  4E 80 00 20 */	blr
 .endfn ADX_DecodeSte4
 
-# 0x8051AA98 - 0x8051AAD8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051AA98
 lbl_8051AA98:

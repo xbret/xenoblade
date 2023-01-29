@@ -856,8 +856,8 @@
 /* 802824B0 0024BA70  4B FF 47 FC */	b func_80276CAC
 .endfn func_80282490
 
-# 0x8050A5B0 - 0x8050A5C8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CChainActorPc_typestr
@@ -869,8 +869,8 @@ cf_CChainActorPc_typestr:
 	.4byte 0x63000000
 	.4byte 0x00000000
 
-# 0x8053BC98 - 0x8053BD20
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CChainActorPc
@@ -913,8 +913,8 @@ cf_CChainActorPc_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665398 - 0x806653A0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CChainActorPc
@@ -922,8 +922,8 @@ __RTTI__cf_CChainActorPc:
 	.4byte cf_CChainActorPc_typestr
 	.4byte cf_CChainActorPc_hierarchy
 
-# 0x8066B390 - 0x8066B3A8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B390
 lbl_8066B390:
@@ -940,8 +940,8 @@ lbl_8066B3A0:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x80018C98 - 0x80018D18
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80018C98", local
@@ -1028,8 +1028,8 @@ lbl_8066B3A0:
 	.4byte func_80043E88
 .endobj "@etb_80018CF8"
 
-# 0x800312D4 - 0x80031370
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800312D4", local

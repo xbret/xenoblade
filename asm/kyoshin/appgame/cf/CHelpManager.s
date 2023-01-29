@@ -1116,13 +1116,13 @@
 /* 80296894 0025FE54  4E 80 00 20 */	blr
 .endfn sinit_80295DB0
 
-# 0x804F59CC - 0x804F59D0
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80295DB0
 
-# 0x8050B438 - 0x8050B550
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CHelp_EtherMakeTIPS_typestr
@@ -1236,8 +1236,8 @@ lbl_8050B540:
 	.4byte 0x35300000
 	.4byte 0x00000000
 
-# 0x8053C4E0 - 0x8053C8E0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053C4E0
 lbl_8053C4E0:
@@ -1580,8 +1580,8 @@ __vt__cf_CHelpManager:
 	.4byte 0x00000000
 	.4byte func_8029596C
 
-# 0x8057A408 - 0x8057A9C8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057A408
 lbl_8057A408:
@@ -1857,8 +1857,8 @@ lbl_8057A9AC:
 lbl_8057A9B8:
 	.skip 0x10
 
-# 0x80665438 - 0x80665538
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665438
 lbl_80665438:
@@ -2002,8 +2002,8 @@ __RTTI__cf_CHelpManager:
 	.4byte cf_CHelpManager_typestr
 	.4byte 0x00000000
 
-# 0x8066B470 - 0x8066B478
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B470
 lbl_8066B470:
@@ -2012,8 +2012,8 @@ lbl_8066B470:
 lbl_8066B474:
 	.4byte 0x43960000
 
-# 0x80019BA8 - 0x80019BF8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80019BA8", local
@@ -2076,8 +2076,8 @@ lbl_8066B474:
 	.4byte 0x00000000
 .endobj "@etb_80019BF0"
 
-# 0x80031E08 - 0x80031E80
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80031E08", local

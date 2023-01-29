@@ -10624,13 +10624,13 @@
 /* 801EADBC 001B437C  4E 80 00 20 */	blr
 .endfn sinit_801EABC4
 
-# 0x804F5990 - 0x804F5994
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_801EABC4
 
-# 0x80538248 - 0x80538378
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CItemBoxInfo2
@@ -10721,8 +10721,8 @@ CItemBoxInfo_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664FC8 - 0x80664FD8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CItemBoxInfo2
@@ -10735,8 +10735,8 @@ __RTTI__CItemBoxInfo:
 	.4byte CItemBoxInfo_typestr
 	.4byte CItemBoxInfo_hierarchy
 
-# 0x80011904 - 0x80011AD8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80011904", local
@@ -11028,8 +11028,8 @@ __RTTI__CItemBoxInfo:
 	.4byte 0x00000000
 .endobj "@etb_80011AD0"
 
-# 0x8002BD0C - 0x8002BF10
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002BD0C", local

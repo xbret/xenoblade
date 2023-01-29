@@ -725,8 +725,8 @@
 /* 80310108 002D96C8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8031010C 002D96CC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80549D30 - 0x80549D60
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80549D30
 lbl_80549D30:
@@ -745,8 +745,8 @@ lbl_80549D4C:
 	.4byte 0x74320000
 	.4byte 0x00000000
 
-# 0x805CC9E0 - 0x805CCC40
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805CC9E0
 lbl_805CC9E0:
@@ -760,8 +760,8 @@ __ErrorInfo:
 	.skip 0x80
 	.skip 0x80
 
-# 0x80667878 - 0x80667888
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667878
 lbl_80667878:

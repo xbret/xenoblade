@@ -2382,8 +2382,8 @@
 /* 803EE5BC 003B7B7C  4E 80 00 20 */	blr
 .endfn CalcView_LC_DMA_ModelMtx__Q24nw4r3g3dFPQ34nw4r4math5MTX34PQ34nw4r4math5MTX33PCQ34nw4r4math5MTX34PCUlUlPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlPQ34nw4r4math5MTX34
 
-# 0x80520FB8 - 0x80520FD8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520FB8
 lbl_80520FB8:
@@ -2396,8 +2396,8 @@ lbl_80520FB8:
 	.4byte Calc_BILLBOARD_PERSP_Y__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
 	.4byte 0x00000000
 
-# 0x8066C430 - 0x8066C440
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C430
 lbl_8066C430:

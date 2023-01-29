@@ -1334,8 +1334,8 @@
 /* 80271DD0 0023B390  4E 80 00 20 */	blr
 .endfn func_80271AE4
 
-# 0x80509E40 - 0x80509FE0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CPlayAwardList_typestr
@@ -1447,8 +1447,8 @@ lbl_80509E50:
 	.4byte 0x64000000
 	.4byte 0x00000000
 
-# 0x8053B3D8 - 0x8053B470
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CPlayAwardList
@@ -1495,8 +1495,8 @@ CPlayAwardList_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806652C8 - 0x806652D0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CPlayAwardList
@@ -1504,8 +1504,8 @@ __RTTI__CPlayAwardList:
 	.4byte CPlayAwardList_typestr
 	.4byte CPlayAwardList_hierarchy
 
-# 0x8066B260 - 0x8066B270
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B260
 lbl_8066B260:
@@ -1518,8 +1518,8 @@ lbl_8066B268:
 	.4byte 0x3F800000
 	.4byte 0x00000000
 
-# 0x80017F98 - 0x80018134
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80017F98", local
@@ -1725,8 +1725,8 @@ lbl_8066B268:
 	.4byte func_8045F8C8
 .endobj "@etb_8001811C"
 
-# 0x8003077C - 0x800308A8
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8003077C", local

@@ -399,8 +399,8 @@
 /* 8015D204 001267C4  4E 80 00 20 */	blr
 .endfn func_8015D144
 
-# 0x804FD678 - 0x804FD838
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804FD678
 lbl_804FD678:
@@ -535,8 +535,8 @@ cf_CCharEffectPc_typestr:
 	.4byte 0x63000000
 	.4byte 0x00000000
 
-# 0x805335A8 - 0x80533668
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CCharEffectEne
@@ -611,8 +611,8 @@ cf_CCharEffectPc_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664C30 - 0x80664C50
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CCharEffectEne
@@ -635,8 +635,8 @@ __RTTI__cf_CCharEffectPc:
 	.4byte cf_CCharEffectPc_typestr
 	.4byte cf_CCharEffectPc_hierarchy
 
-# 0x8000D67C - 0x8000D6D0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000D67C", local
@@ -692,8 +692,8 @@ __RTTI__cf_CCharEffectPc:
 	.4byte 0x00000000
 .endobj "@etb_8000D6C8"
 
-# 0x80028988 - 0x800289E8
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80028988", local

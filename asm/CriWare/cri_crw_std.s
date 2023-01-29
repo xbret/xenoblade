@@ -300,8 +300,8 @@
 /* 8039B7F4 00364DB4  4E 80 00 20 */	blr
 .endfn func_8039B4E0
 
-# 0x8051CD90 - 0x8051CDF0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051CD90
 lbl_8051CD90:
@@ -330,8 +330,8 @@ lbl_8051CD90:
 	.4byte 0x0A000000
 	.4byte 0x00000000
 
-# 0x80601360 - 0x80601380
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80601360
 lbl_80601360:

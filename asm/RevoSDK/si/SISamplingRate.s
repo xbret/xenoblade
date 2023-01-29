@@ -75,8 +75,8 @@
 /* 803627B8 0032BD78  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803627BC 0032BD7C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8055F1A8 - 0x8055F240
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 XYNTSC:
@@ -119,8 +119,8 @@ XYNTSC:
 	.4byte 0x742E0000
 	.4byte 0x00000000
 
-# 0x80667B80 - 0x80667B88
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 SamplingRate:

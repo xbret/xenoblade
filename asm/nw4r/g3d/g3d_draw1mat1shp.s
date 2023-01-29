@@ -950,8 +950,8 @@
 /* 803EC3E0 003B59A0  4E 80 00 20 */	blr
 .endfn Draw1Mat1ShpDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMatQ34nw4r3g3d6ResShpPCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34UlPQ34nw4r3g3d16Draw1Mat1ShpSwapPQ44nw4r3g3d8G3DState8IndMtxOp
 
-# 0x80520FA8 - 0x80520FB8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520FA8
 lbl_80520FA8:
@@ -960,8 +960,8 @@ lbl_80520FA8:
 	.4byte 0x00000001
 	.4byte 0x00000003
 
-# 0x8066C410 - 0x8066C430
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C410
 lbl_8066C410:

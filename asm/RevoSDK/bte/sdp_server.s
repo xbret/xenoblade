@@ -925,8 +925,8 @@
 /* 803074E0 002D0AA0  4E 80 00 20 */	blr
 .endfn process_service_search_attr_req
 
-# 0x805494A8 - 0x805494E8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805494A8
 lbl_805494A8:

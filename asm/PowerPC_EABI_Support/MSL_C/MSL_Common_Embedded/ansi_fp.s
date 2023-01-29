@@ -1781,8 +1781,8 @@
 /* 802BDC58 00287218  4E 80 00 20 */	blr
 .endfn __dec2num
 
-# 0x8050CF18 - 0x8050CFF8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050CF18
 lbl_8050CF18:
@@ -1843,8 +1843,8 @@ lbl_8050CF18:
 	.4byte 0x34313531
 	.4byte 0x00000000
 
-# 0x8053F230 - 0x8053F398
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8053F230:
@@ -1941,8 +1941,8 @@ lbl_8053F358:
 	.4byte 0x4197D784
 	.4byte 0x00000000
 
-# 0x8066B820 - 0x8066B858
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B820
 lbl_8066B820:

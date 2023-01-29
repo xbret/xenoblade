@@ -95,8 +95,8 @@
 /* 8040AD28 003D42E8  4E 80 00 20 */	blr
 .endfn FrSqrt__Q24nw4r4mathFf
 
-# 0x8056D5B0 - 0x8056DEC0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056D5B0
 lbl_8056D5B0:
@@ -683,8 +683,8 @@ lbl_8056D6B8:
 	.4byte 0x3F317218
 	.4byte 0x3AFFC014
 
-# 0x8066C600 - 0x8066C620
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C600
 lbl_8066C600:

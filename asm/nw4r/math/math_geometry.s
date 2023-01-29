@@ -1109,16 +1109,16 @@
 /* 8040C460 003D5A20  4E 80 00 20 */	blr
 .endfn IntersectAABB_Ex__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math4AABB
 
-# 0x80665E00 - 0x80665E08
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665E00
 lbl_80665E00:
 	.4byte 0x38D1B717
 	.4byte 0x00000000
 
-# 0x8066C658 - 0x8066C678
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C658
 lbl_8066C658:

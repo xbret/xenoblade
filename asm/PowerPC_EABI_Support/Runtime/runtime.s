@@ -636,8 +636,8 @@
 /* 802BA770 00283D30  4E 80 00 20 */	blr
 .endfn __cvt_dbl_ull
 
-# 0x8050CE78 - 0x8050CE90
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050CE78
 lbl_8050CE78:

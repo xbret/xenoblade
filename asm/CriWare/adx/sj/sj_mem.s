@@ -1034,8 +1034,8 @@
 /* 803942EC 0035D8AC  4E 80 00 20 */	blr
 .endfn SJMEM_GetBufSize
 
-# 0x8051C098 - 0x8051C1F8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global sjmem_uuid
@@ -1131,8 +1131,8 @@ lbl_8051C0A8:
 	.4byte 0x30393032
 	.4byte 0x35320000
 
-# 0x805692D8 - 0x80569308
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global sjmem_vtbl
@@ -1150,8 +1150,8 @@ sjmem_vtbl:
 	.4byte SJMEM_IsGetChunk
 	.4byte SJMEM_EntryErrFunc
 
-# 0x805F0488 - 0x805F0910
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global sjmem_init_cnt

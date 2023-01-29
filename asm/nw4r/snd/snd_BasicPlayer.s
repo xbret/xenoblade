@@ -314,8 +314,8 @@
 /* 8041249C 003DBA5C  4E 80 00 20 */	blr
 .endfn __dt__Q44nw4r3snd6detail11BasicPlayerFv
 
-# 0x8066C6E0 - 0x8066C6E8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C6E0
 lbl_8066C6E0:

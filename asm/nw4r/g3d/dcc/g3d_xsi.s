@@ -820,8 +820,8 @@
 /* 803F3958 003BCF18  4E 80 00 20 */	blr
 .endfn CalcWorldMtx_Xsi__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3UlPCQ34nw4r3g3d12ChrAnmResult
 
-# 0x80521010 - 0x80521048
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80521010
 lbl_80521010:
@@ -842,8 +842,8 @@ lbl_8052102C:
 	.4byte ProductTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_S__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 
-# 0x8066C4B0 - 0x8066C4C0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C4B0
 lbl_8066C4B0:

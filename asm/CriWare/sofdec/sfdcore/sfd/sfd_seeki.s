@@ -429,8 +429,8 @@
 /* 803D060C 00399BCC  4E 80 00 20 */	blr
 .endfn func_803D05AC
 
-# 0x80520778 - 0x805207F8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520778
 lbl_80520778:

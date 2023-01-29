@@ -803,8 +803,8 @@
 /* 8022F404 001F89C4  4E 80 00 20 */	blr
 .endfn func_8022F364
 
-# 0x80506128 - 0x80506188
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMCCrystalSupport_typestr
@@ -836,8 +836,8 @@ lbl_8050613C:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80539F28 - 0x80539FC0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMCCrystalSupport
@@ -884,8 +884,8 @@ CMCCrystalSupport_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665190 - 0x80665198
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMCCrystalSupport
@@ -893,8 +893,8 @@ __RTTI__CMCCrystalSupport:
 	.4byte CMCCrystalSupport_typestr
 	.4byte CMCCrystalSupport_hierarchy
 
-# 0x8066AEF0 - 0x8066AEF8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AEF0
 lbl_8066AEF0:
@@ -903,8 +903,8 @@ lbl_8066AEF0:
 lbl_8066AEF4:
 	.4byte 0x3F800000
 
-# 0x800157D4 - 0x800158A8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800157D4", local
@@ -1004,8 +1004,8 @@ lbl_8066AEF4:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 .endobj "@etb_80015890"
 
-# 0x8002E730 - 0x8002E7B4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002E730", local

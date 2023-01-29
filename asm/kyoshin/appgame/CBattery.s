@@ -290,8 +290,8 @@
 /* 802B95B4 00282B74  4E 80 00 20 */	blr
 .endfn func_802B94D0
 
-# 0x8050CDB8 - 0x8050CE00
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CBattery_typestr
@@ -318,8 +318,8 @@ CBattery_strpool:
 	.4byte 0x792E6272
 	.4byte 0x6C797400
 
-# 0x8053EFA8 - 0x8053F040
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CBattery
@@ -366,8 +366,8 @@ CBattery_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665850 - 0x80665858
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CBattery
@@ -375,8 +375,8 @@ __RTTI__CBattery:
 	.4byte CBattery_typestr
 	.4byte CBattery_hierarchy
 
-# 0x8001BE94 - 0x8001BEE8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001BE94", local
@@ -424,8 +424,8 @@ __RTTI__CBattery:
 	.4byte func_8045F8C8
 .endobj "@etb_8001BED0"
 
-# 0x80033A34 - 0x80033A7C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033A34", local

@@ -196,8 +196,8 @@
 .endfn __DVDCheckDevice
 /* 803105FC 002D9BBC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8050E3E0 - 0x8050E400
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global __DVDDeviceErrorMessage
@@ -211,8 +211,8 @@ __DVDDeviceErrorMessage:
 	.4byte lbl_8054A690
 	.4byte 0x00000000
 
-# 0x8054A528 - 0x8054A6C0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054A528
 lbl_8054A528:
@@ -331,31 +331,31 @@ lbl_8054A690:
 	.4byte 0x6F6E6465
 	.4byte 0x6E2E0000
 
-# 0x805CCC40 - 0x805CCC60
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 CheckBuffer:
 	.skip 0x20
 
-# 0x806659A0 - 0x806659A8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 lowDone:
 	.4byte 0x00000001
 	.4byte 0x00000000
 
-# 0x80667890 - 0x80667898
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 lowIntType:
 	.skip 0x4
 	.skip 0x4
 
-# 0x8066BF90 - 0x8066BF98
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@850", local

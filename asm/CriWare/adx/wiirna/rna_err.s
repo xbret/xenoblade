@@ -38,8 +38,8 @@
 /* 80399010 003625D0  4E 80 00 20 */	blr
 .endfn RNAERR_CallErrFunc
 
-# 0x805F60B8 - 0x805F61C0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805F60B8
 lbl_805F60B8:

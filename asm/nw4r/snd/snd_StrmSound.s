@@ -582,13 +582,13 @@
 /* 80425748 003EED08  4E 80 00 20 */	blr
 .endfn sinit_80425740
 
-# 0x804F5A28 - 0x804F5A2C
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80425740
 
-# 0x8056E5D0 - 0x8056E608
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E5D0
 lbl_8056E5D0:
@@ -607,15 +607,15 @@ lbl_8056E5D0:
 	.4byte UpdateMoveValue__Q44nw4r3snd6detail9StrmSoundFv
 	.4byte UpdateParam__Q44nw4r3snd6detail9StrmSoundFv
 
-# 0x80667E00 - 0x80667E08
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667E00
 lbl_80667E00:
 	.skip 0x8
 
-# 0x8066C888 - 0x8066C898
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C888
 lbl_8066C888:

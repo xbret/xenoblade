@@ -44,8 +44,8 @@
 /* 804946F8 0045DCB8  4E 80 00 20 */	blr
 .endfn func_804946BC
 
-# 0x80527978 - 0x8052798C
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CVirtualLightAmb_typestr
@@ -56,8 +56,8 @@ CVirtualLightAmb_typestr:
 	.4byte 0x74416D62
 	.4byte 0x00000000
 
-# 0x805720C0 - 0x805720E0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CVirtualLightAmb
@@ -74,8 +74,8 @@ CVirtualLightAmb_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806662E8 - 0x806662F0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CVirtualLightAmb
@@ -83,8 +83,8 @@ __RTTI__CVirtualLightAmb:
 	.4byte CVirtualLightAmb_typestr
 	.4byte CVirtualLightAmb_hierarchy
 
-# 0x8001EF14 - 0x8001EF24
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001EF14", local
@@ -99,8 +99,8 @@ __RTTI__CVirtualLightAmb:
 	.4byte 0x00000000
 .endobj "@etb_8001EF1C"
 
-# 0x80036AC4 - 0x80036ADC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80036AC4", local

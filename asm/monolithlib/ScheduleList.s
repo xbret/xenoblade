@@ -1269,8 +1269,8 @@
 /* 804E5440 004AEA00  4E 80 00 20 */	blr
 .endfn func_804E53D8
 
-# 0x80528038 - 0x80528090
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global ScheduleList_typestr
@@ -1307,8 +1307,8 @@ IScheduleContainer_typestr:
 	.4byte 0x7461696E
 	.4byte 0x65720000
 
-# 0x805738C0 - 0x80573920
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__ScheduleList
@@ -1350,8 +1350,8 @@ __vt___reslist_base_CSchedule:
 	.4byte 0x00000000
 	.4byte func_804E4334
 
-# 0x80666528 - 0x80666548
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__ScheduleList
@@ -1374,8 +1374,8 @@ __RTTI__IScheduleContainer:
 	.4byte IScheduleContainer_typestr
 	.4byte 0x00000000
 
-# 0x80668328 - 0x80668330
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80668328
 lbl_80668328:
@@ -1384,8 +1384,8 @@ lbl_80668328:
 lbl_8066832C:
 	.skip 0x4
 
-# 0x80020B78 - 0x80020C88
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020B78", local
@@ -1528,8 +1528,8 @@ lbl_8066832C:
 	.4byte 0x00000000
 .endobj "@etb_80020C80"
 
-# 0x80038CB4 - 0x80038D8C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80038CB4", local

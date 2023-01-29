@@ -3246,8 +3246,8 @@
 /* 8037F574 00348B34  4E 80 00 20 */	blr
 .endfn func_8037F530
 
-# 0x80518E78 - 0x80519650
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518E78
 lbl_80518E78:
@@ -3754,8 +3754,8 @@ lbl_80518E78:
 	.4byte 0x642E0000
 	.4byte 0x00000000
 
-# 0x805E3430 - 0x805E5D30
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805E3430
 lbl_805E3430:

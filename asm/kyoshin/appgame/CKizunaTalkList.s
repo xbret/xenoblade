@@ -1393,13 +1393,13 @@
 /* 802744D0 0023DA90  4E 80 00 20 */	blr
 .endfn sinit_80274458
 
-# 0x804F59C0 - 0x804F59C4
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80274458
 
-# 0x8050A008 - 0x8050A238
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CKizunaTalkList_typestr
@@ -1547,8 +1547,8 @@ lbl_8050A018:
 	.4byte 0x6E616C69
 	.4byte 0x73740000
 
-# 0x8053B4E0 - 0x8053B578
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CKizunaTalkList
@@ -1595,8 +1595,8 @@ CKizunaTalkList_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806652D8 - 0x806652E0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CKizunaTalkList
@@ -1604,8 +1604,8 @@ __RTTI__CKizunaTalkList:
 	.4byte CKizunaTalkList_typestr
 	.4byte CKizunaTalkList_hierarchy
 
-# 0x806671A8 - 0x806671D0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806671A8
 lbl_806671A8:
@@ -1623,8 +1623,8 @@ lbl_806671C0:
 lbl_806671C8:
 	.skip 0x8
 
-# 0x8066B270 - 0x8066B280
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B270
 lbl_8066B270:
@@ -1639,8 +1639,8 @@ lbl_8066B278:
 lbl_8066B27C:
 	.4byte 0x3F800000
 
-# 0x80018278 - 0x8001840C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80018278", local
@@ -1840,8 +1840,8 @@ lbl_8066B27C:
 	.4byte 0x00000000
 .endobj "@etb_80018404"
 
-# 0x80030968 - 0x80030A88
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80030968", local

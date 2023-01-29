@@ -1375,13 +1375,13 @@
 /* 801A1860 0016AE20  4E 80 00 20 */	blr
 .endfn sinit_801A1818
 
-# 0x804F5970 - 0x804F5974
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_801A1818
 
-# 0x804FF610 - 0x804FF628
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global COccCulling_typestr
@@ -1395,8 +1395,8 @@ lbl_804FF61C:
 	.4byte 0x43554C4C
 	.4byte 0x00000000
 
-# 0x80536688 - 0x80536698
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__COccCulling
@@ -1406,15 +1406,15 @@ __vt__COccCulling:
 	.4byte func_801A0580
 	.4byte 0x00000000
 
-# 0x80578FE8 - 0x80579018
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80578FE8
 lbl_80578FE8:
 	.skip 0x30
 
-# 0x80664E50 - 0x80664E58
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__COccCulling
@@ -1422,8 +1422,8 @@ __RTTI__COccCulling:
 	.4byte COccCulling_typestr
 	.4byte 0x00000000
 
-# 0x8066A548 - 0x8066A560
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A548
 lbl_8066A548:
@@ -1442,8 +1442,8 @@ lbl_8066A558:
 	.4byte 0x3F000000
 	.4byte 0x00000000
 
-# 0x8000F634 - 0x8000F6B0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000F634", local
@@ -1513,8 +1513,8 @@ lbl_8066A558:
 	.4byte 0x00000000
 .endobj "@etb_8000F6A8"
 
-# 0x8002A4B8 - 0x8002A524
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002A4B8", local

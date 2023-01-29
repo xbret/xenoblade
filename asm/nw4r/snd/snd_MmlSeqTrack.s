@@ -59,8 +59,8 @@
 /* 80418838 003E1DF8  4E 80 00 20 */	blr
 .endfn __dt__Q44nw4r3snd6detail11MmlSeqTrackFv
 
-# 0x8056E390 - 0x8056E3B0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E390
 lbl_8056E390:

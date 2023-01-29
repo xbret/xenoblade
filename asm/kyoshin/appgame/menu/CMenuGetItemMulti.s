@@ -8500,13 +8500,13 @@
 /* 801BA148 00183708  4B FF 88 0C */	b func_801B2954
 .endfn func_801BA144
 
-# 0x804F597C - 0x804F5980
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_801B9FC8
 
-# 0x80500248 - 0x805008D0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuGetItemMulti_typestr
@@ -8932,8 +8932,8 @@ lbl_8050025C:
 	.4byte 0x7263656E
 	.4byte 0x74000000
 
-# 0x80536F40 - 0x80537178
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_80536F40:
@@ -9096,8 +9096,8 @@ CMenuGetItemMulti_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664ED0 - 0x80664ED8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuGetItemMulti
@@ -9105,8 +9105,8 @@ __RTTI__CMenuGetItemMulti:
 	.4byte CMenuGetItemMulti_typestr
 	.4byte CMenuGetItemMulti_hierarchy
 
-# 0x80666C90 - 0x80666D10
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666C90
 lbl_80666C90:
@@ -9160,8 +9160,8 @@ lbl_80666D04:
 lbl_80666D08:
 	.skip 0x8
 
-# 0x8066A6C0 - 0x8066A6F0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A6C0
 lbl_8066A6C0:
@@ -9194,8 +9194,8 @@ lbl_8066A6E8:
 lbl_8066A6EC:
 	.4byte 0x3E800000
 
-# 0x8000FD5C - 0x8000FFAC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000FD5C", local
@@ -9454,8 +9454,8 @@ lbl_8066A6EC:
 	.4byte 0x00000000
 .endobj "@etb_8000FFA4"
 
-# 0x8002AA34 - 0x8002AB78
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002AA34", local

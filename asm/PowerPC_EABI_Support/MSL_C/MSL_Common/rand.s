@@ -15,8 +15,8 @@
 /* 802C1128 0028A6E8  4E 80 00 20 */	blr
 .endfn rand
 
-# 0x80665880 - 0x80665888
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 next:

@@ -774,8 +774,8 @@
 /* 802D70B8 002A0678  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 802D70BC 002A067C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8066BE20 - 0x8066BE38
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BE20
 lbl_8066BE20:

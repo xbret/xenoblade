@@ -1628,8 +1628,8 @@
 /* 80409C44 003D3204  4E 80 00 20 */	blr
 .endfn UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform
 
-# 0x8056D558 - 0x8056D580
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056D558
 lbl_8056D558:
@@ -1644,8 +1644,8 @@ lbl_8056D558:
 	.4byte Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt8Material
 	.4byte 0x00000000
 
-# 0x8066C5D8 - 0x8066C5F8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C5D8
 lbl_8066C5D8:

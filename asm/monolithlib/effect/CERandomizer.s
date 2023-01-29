@@ -421,13 +421,13 @@
 /* 804DB97C 004A4F3C  4B F5 A5 5C */	b mtRand__2mlFv
 .endfn rand__12CERandomizerFv
 
-# 0x804F5AE4 - 0x804F5AE8
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte __sinit_CERand_cpp
 
-# 0x80527F58 - 0x80527F88
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CERandomizerSimple_typestr
@@ -451,8 +451,8 @@ CERandomizer_typestr:
 	.4byte 0x697A6572
 	.4byte 0x00000000
 
-# 0x80573650 - 0x805736A0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 # CERandomizerSimple::__vtable
@@ -488,16 +488,16 @@ CERandomizer_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80662930 - 0x80662940
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global ceRandomizerSimple
 ceRandomizerSimple:
 	.skip 0x10
 
-# 0x806664D0 - 0x806664E8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CERandomizerSimple
@@ -515,16 +515,16 @@ __RTTI__CERandomizer:
 	.4byte CERandomizer_typestr
 	.4byte CERandomizer_hierarchy
 
-# 0x806682E0 - 0x806682E8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 .global ceRandomizer
 ceRandomizer:
 	.skip 0x8
 
-# 0x8066D9D8 - 0x8066DA08
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D9D8
 lbl_8066D9D8:
@@ -555,8 +555,8 @@ lbl_8066DA00:
 	.4byte 0x43300000
 	.4byte 0x00000000
 
-# 0x80020798 - 0x800207E8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020798", local
@@ -619,8 +619,8 @@ lbl_8066DA00:
 	.4byte 0x00000000
 .endobj "@etb_800207E0"
 
-# 0x800387B0 - 0x80038828
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800387B0", local

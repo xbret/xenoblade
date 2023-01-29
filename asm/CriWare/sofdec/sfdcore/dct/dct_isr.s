@@ -1767,8 +1767,8 @@
 /* 803BB714 00384CD4  4E 80 00 20 */	blr
 .endfn IdctColumn_1111_1
 
-# 0x8051F928 - 0x8051FE30
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 sfsd_short_cut:
@@ -2102,8 +2102,8 @@ scale8_f:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8056B558 - 0x8056B5B8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8056B558:
@@ -2134,8 +2134,8 @@ jumptable_8056B598:
 	.rel MSID_JRevDctDense, .L_803BA69C
 	.rel MSID_JRevDctDense, .L_803BA6F8
 
-# 0x80607F80 - 0x8060A288
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 lbl_80607F80:

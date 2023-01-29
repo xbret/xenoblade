@@ -23,8 +23,8 @@
 /* 802CBA8C 0029504C  4E 80 00 20 */	blr
 .endfn TRK_main
 
-# 0x80667568 - 0x80667570
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 TRK_mainError:

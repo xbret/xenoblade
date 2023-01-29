@@ -586,13 +586,13 @@
 /* 8041B300 003E48C0  4E 80 00 20 */	blr
 .endfn sinit_8041B2F8
 
-# 0x804F5A20 - 0x804F5A24
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8041B2F8
 
-# 0x8056E440 - 0x8056E490
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E440
 lbl_8056E440:
@@ -619,8 +619,8 @@ lbl_8056E478:
 	.4byte Cancel__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
 	.4byte OnCancel__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
 
-# 0x80667DD8 - 0x80667DE0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667DD8
 lbl_80667DD8:

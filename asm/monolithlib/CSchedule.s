@@ -307,8 +307,8 @@
 /* 804E36D8 004ACC98  4E 80 00 20 */	blr
 .endfn func_804E3614
 
-# 0x80528028 - 0x80528038
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CSchedule_typestr
@@ -318,8 +318,8 @@ CSchedule_typestr:
 	.4byte 0x65000000
 	.4byte 0x00000000
 
-# 0x805738B0 - 0x805738C0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CSchedule
@@ -329,8 +329,8 @@ __vt__CSchedule:
 	.4byte func_804E3340
 	.4byte 0x00000000
 
-# 0x80666520 - 0x80666528
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CSchedule
@@ -338,8 +338,8 @@ __RTTI__CSchedule:
 	.4byte CSchedule_typestr
 	.4byte 0x00000000
 
-# 0x80020B08 - 0x80020B20
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020B08", local
@@ -360,8 +360,8 @@ __RTTI__CSchedule:
 	.4byte 0x00000000
 .endobj "@etb_80020B18"
 
-# 0x80038C0C - 0x80038C30
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80038C0C", local

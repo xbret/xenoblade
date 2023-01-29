@@ -99,8 +99,8 @@
 /* 8034180C 0030ADCC  4E 80 00 20 */	blr
 .endfn __HBMSYNUpdateMix
 
-# 0x8054FC90 - 0x80550020
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054FC90
 lbl_8054FC90:

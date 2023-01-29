@@ -11,8 +11,8 @@
 .endfn __AXFXGetLfoSinTable
 /* 802DAADC 002A409C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805433E0 - 0x805435E0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805433E0
 lbl_805433E0:

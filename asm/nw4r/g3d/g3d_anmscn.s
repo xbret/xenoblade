@@ -1671,8 +1671,8 @@
 /* 803E7290 003B0850  4E 80 00 20 */	blr
 .endfn GetTypeObj__Q34nw4r3g3d6AnmScnCFv
 
-# 0x80520F38 - 0x80520F58
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520F38
 lbl_80520F38:
@@ -1687,8 +1687,8 @@ lbl_80520F48:
 	.4byte 0x636E5265
 	.4byte 0x73000000
 
-# 0x8056CD70 - 0x8056CE90
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056CD70
 lbl_8056CD70:
@@ -1767,8 +1767,8 @@ lbl_8056CE00:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8066C3A0 - 0x8066C3C0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C3A0
 lbl_8066C3A0:

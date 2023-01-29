@@ -163,8 +163,8 @@
 /* 803FD320 003C68E0  4E 80 00 20 */	blr
 .endfn SetGP__Q34nw4r3g3d3FogCFv
 
-# 0x8066C4F8 - 0x8066C500
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C4F8
 lbl_8066C4F8:

@@ -1275,8 +1275,8 @@
 /* 8034F8A8 00318E68  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8034F8AC 00318E6C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80665AE0 - 0x80665AE8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665AE0
 lbl_80665AE0:

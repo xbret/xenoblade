@@ -1021,8 +1021,8 @@
 /* 803A31BC 0036C77C  4E 80 00 20 */	blr
 .endfn mwPlyExecRequestServer
 
-# 0x8051F450 - 0x8051F510
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051F450
 lbl_8051F450:
@@ -1075,8 +1075,8 @@ lbl_8051F450:
 	.4byte 0x6561642E
 	.4byte 0x00000000
 
-# 0x8056A41C - 0x8056A918
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 4
 .global lbl_8056A41C
 lbl_8056A41C:
@@ -1410,8 +1410,8 @@ lbl_8056A840:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80605EB0 - 0x80605EC0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80605EB0
 lbl_80605EB0:

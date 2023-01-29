@@ -403,8 +403,8 @@
 /* 801C3ECC 0018D48C  4E 80 00 20 */	blr
 .endfn func_801C3E58
 
-# 0x80500B88 - 0x80500CB8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80500B88
 lbl_80500B88:
@@ -485,8 +485,8 @@ lbl_80500B88:
 	.4byte 0x61726300
 	.4byte 0x00000000
 
-# 0x80537580 - 0x80537618
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CBgTex
@@ -533,8 +533,8 @@ CBgTex_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664F48 - 0x80664F50
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CBgTex
@@ -542,8 +542,8 @@ __RTTI__CBgTex:
 	.4byte CBgTex_typestr
 	.4byte CBgTex_hierarchy
 
-# 0x80666D50 - 0x80666D58
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666D50
 lbl_80666D50:
@@ -552,8 +552,8 @@ lbl_80666D50:
 lbl_80666D54:
 	.skip 0x4
 
-# 0x8066A7D8 - 0x8066A7E0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .global CBgTex_typestr
@@ -561,8 +561,8 @@ CBgTex_typestr:
 	.4byte 0x43426754
 	.4byte 0x65780000
 
-# 0x800108B0 - 0x8001090C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800108B0", local
@@ -612,8 +612,8 @@ CBgTex_typestr:
 	.4byte 0x00000000
 .endobj "@etb_80010904"
 
-# 0x8002B190 - 0x8002B1D8
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002B190", local

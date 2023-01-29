@@ -2321,8 +2321,8 @@
 /* 804D8D8C 004A234C  4E 80 00 20 */	blr
 .endfn func_804D8C68
 
-# 0x80527E50 - 0x80527E88
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global reslist_CETrail_POINT_typestr
@@ -2345,8 +2345,8 @@ _reslist_base_CETrail_POINT_typestr:
 	.4byte 0x4F494E54
 	.4byte 0x3E000000
 
-# 0x80573488 - 0x805734B8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CETrail
@@ -2373,8 +2373,8 @@ __vt___reslist_base_CETrail_POINT:
 	.4byte 0x00000000
 	.4byte func_804D7110
 
-# 0x80662560 - 0x806625C0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80662560
 lbl_80662560:
@@ -2383,8 +2383,8 @@ lbl_80662560:
 lbl_80662590:
 	.skip 0x30
 
-# 0x80666440 - 0x80666460
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CETrail
@@ -2408,8 +2408,8 @@ lbl_80666458:
 lbl_8066645C:
 	.4byte 0x01000000
 
-# 0x80668290 - 0x806682A0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80668290
 lbl_80668290:
@@ -2421,8 +2421,8 @@ lbl_80668294:
 lbl_80668298:
 	.skip 0x8
 
-# 0x8066D920 - 0x8066D990
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D920
 lbl_8066D920:
@@ -2492,8 +2492,8 @@ lbl_8066D988:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x80020518 - 0x800205C4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020518", local
@@ -2615,8 +2615,8 @@ lbl_8066D988:
 	.4byte 0x00000000
 .endobj "@etb_800205BC"
 
-# 0x8003845C - 0x80038540
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8003845C", local

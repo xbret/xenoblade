@@ -304,8 +304,8 @@
 /* 80294CB0 0025E270  4E 80 00 20 */	blr
 .endfn func_80294CB0
 
-# 0x8050B3C0 - 0x8050B3E8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CREvtMovie_typestr
@@ -323,8 +323,8 @@ lbl_8050B3D0:
 	.4byte 0x66640000
 	.4byte 0x00000000
 
-# 0x8053C258 - 0x8053C290
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CREvtMovie
@@ -347,8 +347,8 @@ cf_CREvtMovie_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665410 - 0x80665418
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CREvtMovie
@@ -356,8 +356,8 @@ __RTTI__cf_CREvtMovie:
 	.4byte cf_CREvtMovie_typestr
 	.4byte cf_CREvtMovie_hierarchy
 
-# 0x80019A74 - 0x80019AB8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80019A74", local
@@ -401,8 +401,8 @@ __RTTI__cf_CREvtMovie:
 	.4byte 0x00000000
 .endobj "@etb_80019AB0"
 
-# 0x80031CE8 - 0x80031D30
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80031CE8", local

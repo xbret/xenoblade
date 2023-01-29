@@ -213,8 +213,8 @@
 /* 80413DDC 003DD39C  4E 80 00 20 */	blr
 .endfn GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
-# 0x80522120 - 0x80523558
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80522120
 lbl_80522120:
@@ -1521,8 +1521,8 @@ lbl_805231B4:
 	.4byte 0xF94A6A89
 	.4byte 0xCD6C0000
 
-# 0x8066C6F8 - 0x8066C708
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C6F8
 lbl_8066C6F8:

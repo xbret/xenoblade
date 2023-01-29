@@ -4544,8 +4544,8 @@
 /* 80486094 0044F654  4E 80 00 20 */	blr
 .endfn func_80486090
 
-# 0x805715B8 - 0x80571698
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnItemModel
@@ -4607,8 +4607,8 @@ __vt__CScnItemModel:
 	.4byte func_804857F0
 	.4byte 0x00000000
 
-# 0x8066D080 - 0x8066D090
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D080
 lbl_8066D080:
@@ -4621,8 +4621,8 @@ lbl_8066D088:
 	.4byte 0xBF800000
 	.4byte 0x00000000
 
-# 0x8001E2C0 - 0x8001E444
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001E2C0", local
@@ -4854,8 +4854,8 @@ lbl_8066D088:
 	.4byte 0x00000000
 .endobj "@etb_8001E43C"
 
-# 0x80036224 - 0x800363B0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80036224", local

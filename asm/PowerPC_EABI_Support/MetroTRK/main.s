@@ -206,8 +206,8 @@
 /* 802CB7A0 00294D60  4E 80 00 20 */	blr
 .endfn gdev_cc_initinterrupts
 
-# 0x8057B368 - 0x8057B888
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057B368
 lbl_8057B368:
@@ -216,8 +216,8 @@ lbl_8057B368:
 lbl_8057B868:
 	.skip 0x20
 
-# 0x80667560 - 0x80667568
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667560
 lbl_80667560:

@@ -1018,8 +1018,8 @@
 /* 804900B8 00459678  4E 80 00 20 */	blr
 .endfn func_804900A0
 
-# 0x805278F8 - 0x80527938
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CScnRootNw4r_typestr
@@ -1043,8 +1043,8 @@ lbl_80527908:
 	.4byte 0x6D284129
 	.4byte 0x00000000
 
-# 0x80571FB0 - 0x80572018
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnRootNw4r
@@ -1079,8 +1079,8 @@ CScnRootNw4r_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806662C0 - 0x806662C8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CScnRootNw4r
@@ -1088,8 +1088,8 @@ __RTTI__CScnRootNw4r:
 	.4byte CScnRootNw4r_typestr
 	.4byte CScnRootNw4r_hierarchy
 
-# 0x8001EC30 - 0x8001ECBC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001EC30", local
@@ -1171,8 +1171,8 @@ __RTTI__CScnRootNw4r:
 	.4byte 0x00000000
 .endobj "@etb_8001ECB4"
 
-# 0x80036830 - 0x800368B4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80036830", local

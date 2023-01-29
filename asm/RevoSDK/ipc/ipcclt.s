@@ -1832,8 +1832,8 @@
 .endfn IOS_IoctlvReboot
 /* 803443AC 0030D96C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805CE3C0 - 0x805CE480
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 __responses:
@@ -1845,8 +1845,8 @@ __timeout_alarm:
 lbl_805CE440:
 	.skip 0x40
 
-# 0x80665A50 - 0x80665A58
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 __mailboxAck:
@@ -1855,8 +1855,8 @@ __mailboxAck:
 hid:
 	.4byte 0xFFFFFFFF
 
-# 0x80667980 - 0x80667990
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667980
 lbl_80667980:

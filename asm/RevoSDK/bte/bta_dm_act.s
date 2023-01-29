@@ -2578,8 +2578,8 @@
 /* 802E10FC 002AA6BC  4E 80 00 20 */	blr
 .endfn bta_dm_send_hci_reset
 
-# 0x8050DFE8 - 0x8050E090
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050DFE8
 lbl_8050DFE8:
@@ -2630,8 +2630,8 @@ lbl_8050E078:
 	.4byte bta_dm_authentication_complete_cback
 	.4byte 0x00000000
 
-# 0x80544008 - 0x80544148
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80544008
 lbl_80544008:
@@ -2728,8 +2728,8 @@ lbl_80544108:
 	.4byte 0x25640000
 	.4byte 0x00000000
 
-# 0x805BF4D0 - 0x805BF7C8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805BF4D0
 lbl_805BF4D0:
@@ -2753,8 +2753,8 @@ lbl_805BF694:
 lbl_805BF798:
 	.skip 0x30
 
-# 0x8066BF48 - 0x8066BF50
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BF48
 lbl_8066BF48:

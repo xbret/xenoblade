@@ -1618,8 +1618,8 @@
 /* 803BE8C4 00387E84  4E 80 00 20 */	blr
 .endfn SFADXT_Seek
 
-# 0x8051FEE0 - 0x8051FF48
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051FEE0
 lbl_8051FEE0:
@@ -1652,8 +1652,8 @@ lbl_8051FF18:
 	.4byte 0x28632943
 	.4byte 0x52490000
 
-# 0x8060A2A0 - 0x8060A2C8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global sfadxt_para

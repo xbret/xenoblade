@@ -570,8 +570,8 @@
 /* 804293CC 003F298C  4E 80 00 20 */	blr
 .endfn UpdateAllVoicesSync__Q44nw4r3snd6detail12VoiceManagerFUl
 
-# 0x80657060 - 0x80657088
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80657060
 lbl_80657060:
@@ -580,8 +580,8 @@ lbl_80657060:
 lbl_8065706C:
 	.skip 0x1C
 
-# 0x80667E10 - 0x80667E18
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667E10
 lbl_80667E10:

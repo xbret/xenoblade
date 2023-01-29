@@ -243,8 +243,8 @@
 /* 802D0904 00299EC4  4E 80 00 20 */	blr
 .endfn DBClose
 
-# 0x80665898 - 0x806658A0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 l_byOffsetCounter$99:
@@ -252,8 +252,8 @@ l_byOffsetCounter$99:
 	.4byte 0x00000000
 	.byte 0x00, 0x00, 0x00
 
-# 0x806675B0 - 0x806675C8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 __DBMtrCallback:

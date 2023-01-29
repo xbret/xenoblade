@@ -304,8 +304,8 @@
 /* 8038D2FC 003568BC  4E 80 00 20 */	blr
 .endfn AHXTBL_GetMtblInfo
 
-# 0x8056607C - 0x80569190
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 4
 .global lbl_8056607C
 lbl_8056607C:

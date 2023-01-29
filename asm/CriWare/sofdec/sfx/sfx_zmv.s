@@ -1252,8 +1252,8 @@
 /* 803D7008 003A05C8  4E 80 00 20 */	blr
 .endfn sfxzmv_MakeZ32TblFromOrgZ32
 
-# 0x80520B30 - 0x80520D60
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520B30
 lbl_80520B30:
@@ -1404,8 +1404,8 @@ lbl_80520B6C:
 	.4byte 0x2E000000
 	.4byte 0x00000000
 
-# 0x8061D498 - 0x8061D708
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8061D498
 lbl_8061D498:

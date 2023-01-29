@@ -274,8 +274,8 @@
 /* 802C7DD0 00291390  4E 80 00 20 */	blr
 .endfn __ieee754_fmod
 
-# 0x8050DB90 - 0x8050DBA0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 Zero:

@@ -2277,8 +2277,8 @@
 /* 803F9504 003C2AC4  4E 80 00 20 */	blr
 .endfn GetTypeObj__Q34nw4r3g3d12ScnMdlSimpleCFv
 
-# 0x805210C0 - 0x805210D8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805210C0
 lbl_805210C0:
@@ -2289,8 +2289,8 @@ lbl_805210C0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8056D010 - 0x8056D080
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8056D010:
@@ -2327,8 +2327,8 @@ lbl_8056D038:
 	.4byte GetAnmObj__Q34nw4r3g3d12ScnMdlSimpleFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 	.4byte GetAnmObj__Q34nw4r3g3d12ScnMdlSimpleCFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 
-# 0x80665DC0 - 0x80665DD8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665DC0
 lbl_80665DC0:
@@ -2343,8 +2343,8 @@ lbl_80665DD0:
 	.4byte 0x44726177
 	.4byte 0x586C7500
 
-# 0x8066C4E8 - 0x8066C4F0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C4E8
 lbl_8066C4E8:

@@ -2967,8 +2967,8 @@
 /* 8042032C 003E98EC  4B FF DB 78 */	b __dt__Q34nw4r3snd18SoundArchivePlayerFv
 .endfn _12___dt__Q34nw4r3snd18SoundArchivePlayerFv
 
-# 0x8056E4C0 - 0x8056E510
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E4C0
 lbl_8056E4C0:
@@ -2997,8 +2997,8 @@ lbl_8056E500:
 	.4byte func_8041DCBC
 	.4byte NoteOn__Q44nw4r3snd18SoundArchivePlayer17SeqNoteOnCallbackFPQ44nw4r3snd6detail9SeqPlayeriRCQ44nw4r3snd6detail10NoteOnInfo
 
-# 0x8066C848 - 0x8066C858
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C848
 lbl_8066C848:

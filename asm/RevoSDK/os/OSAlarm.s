@@ -642,8 +642,8 @@
 /* 80353678 0031CC38  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8035367C 0031CC3C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805517A8 - 0x805517B8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 ShutdownFunctionInfo:
@@ -652,8 +652,8 @@ ShutdownFunctionInfo:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80667A48 - 0x80667A50
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 AlarmQueue:

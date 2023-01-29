@@ -269,8 +269,8 @@
 /* 80295884 0025EE44  4B FF FD CC */	b func_80295650
 .endfn func_80295880
 
-# 0x8050B410 - 0x8050B438
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CTaskGameEvt_typestr
@@ -289,8 +289,8 @@ CTTask_CTaskGameEvt_typestr:
 	.4byte 0x4576743E
 	.4byte 0x00000000
 
-# 0x8053C3B8 - 0x8053C4E0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CTaskGameEvt
@@ -379,8 +379,8 @@ CTTask_CTaskGameEvt_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665428 - 0x80665438
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CTaskGameEvt
@@ -393,8 +393,8 @@ __RTTI__CTTask_CTaskGameEvt:
 	.4byte CTTask_CTaskGameEvt_typestr
 	.4byte CTTask_CTaskGameEvt_hierarchy
 
-# 0x80019B50 - 0x80019BA8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80019B50", local
@@ -447,8 +447,8 @@ __RTTI__CTTask_CTaskGameEvt:
 	.4byte 0x00000000
 .endobj "@etb_80019BA0"
 
-# 0x80031DB4 - 0x80031E08
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80031DB4", local

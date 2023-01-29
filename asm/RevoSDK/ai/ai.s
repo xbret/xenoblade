@@ -424,8 +424,8 @@
 .endfn __AI_SRC_INIT
 /* 802D166C 0029AC2C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8053FFB8 - 0x80540000
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053FFB8
 lbl_8053FFB8:
@@ -448,16 +448,16 @@ lbl_8053FFB8:
 	.4byte 0x29203E3E
 	.4byte 0x00000000
 
-# 0x806658A0 - 0x806658A8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806658A0
 lbl_806658A0:
 	.4byte lbl_8053FFB8
 	.4byte 0x00000000
 
-# 0x806675C8 - 0x80667608
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806675C8
 lbl_806675C8:

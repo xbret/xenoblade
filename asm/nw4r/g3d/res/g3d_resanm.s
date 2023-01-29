@@ -160,8 +160,8 @@
 /* 803DDCD0 003A7290  4E 80 00 20 */	blr
 .endfn GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf
 
-# 0x8066C2B0 - 0x8066C2C8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C2B0
 lbl_8066C2B0:

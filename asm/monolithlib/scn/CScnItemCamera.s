@@ -1344,13 +1344,13 @@
 /* 8049FCA8 00469268  4E 80 00 20 */	blr
 .endfn sinit_8049FC60
 
-# 0x804F5AA0 - 0x804F5AA4
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8049FC60
 
-# 0x80527B80 - 0x80527B90
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80527B80
 lbl_80527B80:
@@ -1359,8 +1359,8 @@ lbl_80527B80:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80572508 - 0x80572530
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnItemCamera
@@ -1376,8 +1376,8 @@ __vt__CScnItemCamera:
 	.4byte 0x00000000
 	.4byte func_8049EBF0
 
-# 0x8065AF10 - 0x8065AF38
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8065AF10
 lbl_8065AF10:
@@ -1386,8 +1386,8 @@ lbl_8065AF10:
 lbl_8065AF1C:
 	.skip 0x1C
 
-# 0x8066D3A0 - 0x8066D3F0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D3A0
 lbl_8066D3A0:
@@ -1442,8 +1442,8 @@ lbl_8066D3E8:
 	.4byte 0x41A00000
 	.4byte 0x00000000
 
-# 0x8001F75C - 0x8001F850
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001F75C", local
@@ -1559,8 +1559,8 @@ lbl_8066D3E8:
 	.4byte 0x8D000030
 .endobj "@etb_8001F824"
 
-# 0x800371E4 - 0x80037280
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800371E4", local

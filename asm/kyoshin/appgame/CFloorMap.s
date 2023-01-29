@@ -5870,13 +5870,13 @@
 /* 80250D20 0021A2E0  4E 80 00 20 */	blr
 .endfn sinit_80250CB4
 
-# 0x804F59B8 - 0x804F59BC
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80250CB4
 
-# 0x80506E98 - 0x80507C20
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80506E98
 lbl_80506E98:
@@ -6872,8 +6872,8 @@ lbl_80507540:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8053A768 - 0x8053A8C8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8053A768:
@@ -6993,8 +6993,8 @@ __vt__CFloorCur:
 	.4byte 0x00000000
 	.4byte func_80244944
 
-# 0x806651E8 - 0x80665210
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CFloorMap
@@ -7022,8 +7022,8 @@ __RTTI__CFloorCur:
 	.4byte CFloorCur_typestr
 	.4byte 0x00000000
 
-# 0x80667088 - 0x806670B0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667088
 lbl_80667088:
@@ -7044,8 +7044,8 @@ lbl_806670A0:
 lbl_806670A8:
 	.skip 0x8
 
-# 0x8066B050 - 0x8066B070
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B050
 lbl_8066B050:
@@ -7072,8 +7072,8 @@ lbl_8066B068:
 lbl_8066B06C:
 	.4byte 0x40000000
 
-# 0x80016600 - 0x80016A70
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80016600", local
@@ -7476,8 +7476,8 @@ lbl_8066B06C:
 	.4byte func_8045F8C8
 .endobj "@etb_80016A48"
 
-# 0x8002F4BC - 0x8002F618
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002F4BC", local

@@ -86,8 +86,8 @@
 .endfn __PADDisableRecalibration
 /* 8035F52C 00328AEC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80665BB8 - 0x80665BC0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665BB8
 lbl_80665BB8:
@@ -96,8 +96,8 @@ lbl_80665BB8:
 lbl_80665BBC:
 	.4byte 0x00000005
 
-# 0x80667B50 - 0x80667B58
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 .global __PADSpec

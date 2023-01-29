@@ -2517,16 +2517,16 @@
 /* 802C6F28 002904E8  4E 80 00 20 */	blr
 .endfn vswprintf
 
-# 0x8050DB88 - 0x8050DB90
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050DB88
 lbl_8050DB88:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8053FA30 - 0x8053FCD0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8053FA30:
@@ -2703,8 +2703,8 @@ lbl_8053FC60:
 	.4byte 0x006E0000
 	.4byte 0x00000000
 
-# 0x8066B898 - 0x8066B8A0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B898
 lbl_8066B898:

@@ -141,8 +141,8 @@
 .endfn IPCiProfReply
 /* 80344ABC 0030E07C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805CE500 - 0x805CE600
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 IpcFdArray:
@@ -151,8 +151,8 @@ IpcFdArray:
 IpcReqPtrArray:
 	.skip 0x80
 
-# 0x80667990 - 0x80667998
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 IpcNumPendingReqs:

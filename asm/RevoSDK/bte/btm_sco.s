@@ -1044,8 +1044,8 @@
 /* 802EB988 002B4F48  4E 80 00 20 */	blr
 .endfn btm_is_sco_active_by_bdaddr
 
-# 0x8050E250 - 0x8050E260
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050E250
 lbl_8050E250:
@@ -1054,8 +1054,8 @@ lbl_8050E250:
 	.4byte 0x000A0060
 	.4byte 0x003F0100
 
-# 0x80545530 - 0x80545830
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80545530
 lbl_80545530:

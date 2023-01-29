@@ -638,8 +638,8 @@
 /* 802759C4 0023EF84  4B FF FF A4 */	b func_80275968
 .endfn func_802759C0
 
-# 0x8050A270 - 0x8050A2E0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_ICamControlClassic_typestr
@@ -685,8 +685,8 @@ cf_CfObjectImplTbox_typestr:
 	.4byte 0x54626F78
 	.4byte 0x00000000
 
-# 0x8053B678 - 0x8053B880
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053B678
 lbl_8053B678:
@@ -847,8 +847,8 @@ cf_CfObjectImplTbox_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806652E8 - 0x80665310
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_ICamControlClassic
@@ -876,8 +876,8 @@ __RTTI__cf_CfObjectImplTbox:
 	.4byte cf_CfObjectImplTbox_typestr
 	.4byte cf_CfObjectImplTbox_hierarchy
 
-# 0x806671D8 - 0x806671F0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806671D8
 lbl_806671D8:
@@ -898,8 +898,8 @@ lbl_806671E8:
 lbl_806671EC:
 	.skip 0x4
 
-# 0x8066B280 - 0x8066B2A8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B280
 lbl_8066B280:
@@ -930,8 +930,8 @@ lbl_8066B2A0:
 	.4byte 0x3ECCCCCD
 	.4byte 0x00000000
 
-# 0x80018570 - 0x800185E0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80018570", local
@@ -1018,8 +1018,8 @@ lbl_8066B2A0:
 	.4byte 0x00000000
 .endobj "@etb_800185D8"
 
-# 0x80030BE4 - 0x80030C8C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80030BE4", local

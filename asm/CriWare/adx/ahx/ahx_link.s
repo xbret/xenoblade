@@ -251,8 +251,8 @@
 /* 8038A9AC 00353F6C  4E 80 00 20 */	blr
 .endfn func_8038A888
 
-# 0x8051AB10 - 0x8051ABB8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051AB10
 lbl_8051AB10:
@@ -299,8 +299,8 @@ lbl_8051AB10:
 	.4byte 0x65642E00
 	.4byte 0x00000000
 
-# 0x805657B4 - 0x805657B8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 4
 .global lbl_805657B4
 lbl_805657B4:

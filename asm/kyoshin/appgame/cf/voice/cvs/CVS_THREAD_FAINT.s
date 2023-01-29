@@ -293,8 +293,8 @@
 /* 802A6E80 00270440  4E 80 00 20 */	blr
 .endfn func_802A6DF4
 
-# 0x8050BD98 - 0x8050BDB0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CVS_THREAD_FAINT_typestr
@@ -306,8 +306,8 @@ cf_CVS_THREAD_FAINT_typestr:
 	.4byte 0x41494E54
 	.4byte 0x00000000
 
-# 0x8053D2E8 - 0x8053D338
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053D2E8
 lbl_8053D2E8:
@@ -342,8 +342,8 @@ cf_CVS_THREAD_FAINT_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806655F8 - 0x80665600
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CVS_THREAD_FAINT
@@ -351,8 +351,8 @@ __RTTI__cf_CVS_THREAD_FAINT:
 	.4byte cf_CVS_THREAD_FAINT_typestr
 	.4byte cf_CVS_THREAD_FAINT_hierarchy
 
-# 0x8001AC9C - 0x8001ACF0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001AC9C", local
@@ -400,8 +400,8 @@ __RTTI__cf_CVS_THREAD_FAINT:
 	.4byte 0x00000000
 .endobj "@etb_8001ACE8"
 
-# 0x80032B4C - 0x80032B94
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80032B4C", local

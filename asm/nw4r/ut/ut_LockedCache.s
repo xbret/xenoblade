@@ -152,13 +152,13 @@
 /* 8042BFC8 003F5588  4B F2 DC 58 */	b OSInitMutex
 .endfn sinit_8042BFB4
 
-# 0x804F5A3C - 0x804F5A40
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8042BFB4
 
-# 0x80657088 - 0x806570A8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80657088
 lbl_80657088:

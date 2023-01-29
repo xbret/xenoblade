@@ -2449,8 +2449,8 @@
 /* 80384744 0034DD04  4E 80 00 20 */	blr
 .endfn adxt_InsertSilence
 
-# 0x80519968 - 0x8051A120
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80519968
 lbl_80519968:
@@ -2955,8 +2955,8 @@ lbl_80519990:
 	.4byte 0x72206572
 	.4byte 0x726F7200
 
-# 0x80563720 - 0x80563728
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80563720
 lbl_80563720:
@@ -2965,8 +2965,8 @@ lbl_80563720:
 lbl_80563724:
 	.4byte 0x00000001
 
-# 0x805E8570 - 0x805E85F0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805E8570
 lbl_805E8570:

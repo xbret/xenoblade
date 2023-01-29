@@ -150,8 +150,8 @@
 /* 802A8DE4 002723A4  4E 80 00 20 */	blr
 .endfn func_802A8DE0
 
-# 0x8050BE18 - 0x8050BE30
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CVS_THREAD_SUDDEN_typestr
@@ -163,8 +163,8 @@ cf_CVS_THREAD_SUDDEN_typestr:
 	.4byte 0x55444445
 	.4byte 0x4E000000
 
-# 0x8053D478 - 0x8053D4B0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053D478
 lbl_8053D478:
@@ -189,8 +189,8 @@ cf_CVS_THREAD_SUDDEN_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665628 - 0x80665630
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CVS_THREAD_SUDDEN
@@ -198,8 +198,8 @@ __RTTI__cf_CVS_THREAD_SUDDEN:
 	.4byte cf_CVS_THREAD_SUDDEN_typestr
 	.4byte cf_CVS_THREAD_SUDDEN_hierarchy
 
-# 0x8001AE98 - 0x8001AEDC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001AE98", local
@@ -235,8 +235,8 @@ __RTTI__cf_CVS_THREAD_SUDDEN:
 	.4byte 0x00000000
 .endobj "@etb_8001AED4"
 
-# 0x80032D38 - 0x80032D68
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80032D38", local

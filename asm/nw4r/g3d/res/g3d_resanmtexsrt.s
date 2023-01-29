@@ -314,8 +314,8 @@
 /* 803DE5EC 003A7BAC  4E 80 00 20 */	blr
 .endfn GetAnmResult__Q34nw4r3g3d12ResAnmTexSrtCFPQ34nw4r3g3d15TexSrtAnmResultUlf
 
-# 0x8066C2D8 - 0x8066C2E0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C2D8
 lbl_8066C2D8:

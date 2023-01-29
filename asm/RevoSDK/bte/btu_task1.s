@@ -333,8 +333,8 @@
 /* 802DE630 002A7BF0  4B FF E0 30 */	b GKI_remove_from_timer_list
 .endfn btu_stop_timer
 
-# 0x80667770 - 0x80667778
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667770
 lbl_80667770:

@@ -763,15 +763,15 @@
 /* 802D3A68 0029D028  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 802D3A6C 0029D02C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80580AC0 - 0x80580BC0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80580AC0
 lbl_80580AC0:
 	.skip 0x100
 
-# 0x80667660 - 0x80667688
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667660
 lbl_80667660:

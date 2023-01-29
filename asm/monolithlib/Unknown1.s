@@ -1,7 +1,7 @@
 .include "macros.inc"
 
-# 0x80666438 - 0x80666440
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80666438
 lbl_80666438:

@@ -857,8 +857,8 @@
 /* 80319D78 002E3338  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80319D7C 002E333C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8054B8F0 - 0x8054BE70
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8054B8F0:
@@ -1257,8 +1257,8 @@ lbl_8054BE34:
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
 
-# 0x806659F8 - 0x80665A08
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806659F8
 lbl_806659F8:

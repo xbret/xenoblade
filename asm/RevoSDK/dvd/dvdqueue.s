@@ -194,8 +194,8 @@
 /* 8030F6EC 002D8CAC  4E 80 00 20 */	blr
 .endfn __DVDDequeueWaitingQueue
 
-# 0x805CC9B0 - 0x805CC9E0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 WaitingQueue:

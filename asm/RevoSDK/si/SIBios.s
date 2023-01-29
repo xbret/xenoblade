@@ -1154,8 +1154,8 @@
 /* 803626C8 0032BC88  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803626CC 0032BC8C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8055F138 - 0x8055F1A8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8055F138
 lbl_8055F138:
@@ -1192,8 +1192,8 @@ Type:
 	.4byte 0x00000008
 	.4byte 0x00000008
 
-# 0x805DD6E0 - 0x805DD900
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 Packet:
@@ -1208,8 +1208,8 @@ TypeTime:
 lbl_805DD7A0:
 	.skip 0x160
 
-# 0x80665CE0 - 0x80665CE8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __SIVersion
@@ -1217,8 +1217,8 @@ __SIVersion:
 	.4byte lbl_8055F138
 	.4byte 0x00000000
 
-# 0x80667B70 - 0x80667B80
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667B70
 lbl_80667B70:

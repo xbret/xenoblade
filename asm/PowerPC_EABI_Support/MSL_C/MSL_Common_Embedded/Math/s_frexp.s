@@ -44,8 +44,8 @@
 /* 802CAE50 00294410  4E 80 00 20 */	blr
 .endfn frexp
 
-# 0x8066BD68 - 0x8066BD70
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@17", local

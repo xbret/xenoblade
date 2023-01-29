@@ -498,8 +498,8 @@
 /* 8042BDCC 003F538C  4E 80 00 20 */	blr
 .endfn CalcRect__Q34nw4r2ut19TagProcessorBase_w_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_w
 
-# 0x8056E6E8 - 0x8056E710
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E6E8
 lbl_8056E6E8:
@@ -516,8 +516,8 @@ lbl_8056E6FC:
 	.4byte Process__Q34nw4r2ut19TagProcessorBase_c_FUsPQ34nw4r2ut15PrintContext_c
 	.4byte CalcRect__Q34nw4r2ut19TagProcessorBase_c_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_c
 
-# 0x8066C930 - 0x8066C938
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C930
 lbl_8066C930:

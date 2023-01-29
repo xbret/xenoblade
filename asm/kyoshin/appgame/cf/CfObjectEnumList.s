@@ -10388,8 +10388,8 @@
 /* 800FDB48 000C7108  4E 80 00 20 */	blr
 .endfn func_800FD774
 
-# 0x804F84B8 - 0x804F8550
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CfObjEnumList_typestr
@@ -10444,8 +10444,8 @@ lbl_804F8544:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8052F550 - 0x8052F5A8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CfObjEnumList
@@ -10481,15 +10481,15 @@ cf_CfObjEnumList_OBJ_LIST_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80577228 - 0x80577258
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80577228
 lbl_80577228:
 	.skip 0x30
 
-# 0x80664688 - 0x806646A8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CfObjEnumList
@@ -10512,15 +10512,15 @@ __RTTI__fixvector_cf_CfObjEnumList_sObjInfo_384:
 	.4byte fixvector_cf_CfObjEnumList_sObjInfo_384_typestr
 	.4byte 0x00000000
 
-# 0x80666800 - 0x80666808
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666800
 lbl_80666800:
 	.skip 0x8
 
-# 0x80669780 - 0x806697CC
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669780
 lbl_80669780:
@@ -10570,8 +10570,8 @@ lbl_806697C4:
 lbl_806697C8:
 	.4byte 0x3F000000
 
-# 0x8000ABE0 - 0x8000ACF4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000ABE0", local
@@ -10771,8 +10771,8 @@ lbl_806697C8:
 	.4byte 0x00000000
 .endobj "@etb_8000ACEC"
 
-# 0x80026468 - 0x800265E8
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80026468", local

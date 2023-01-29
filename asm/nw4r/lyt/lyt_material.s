@@ -3420,8 +3420,8 @@
 /* 804082F8 003D18B8  4E 80 00 20 */	blr
 .endfn GetTextureSize__Q34nw4r3lyt6detailFPQ34nw4r3lyt8MaterialUc
 
-# 0x8056D4D8 - 0x8056D548
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056D4D8
 lbl_8056D4D8:
@@ -3458,8 +3458,8 @@ lbl_8056D518:
 	.4byte SetAnimationEnable__Q34nw4r3lyt8MaterialFPQ34nw4r3lyt13AnimTransformb
 	.4byte SetAnimationEnable__Q34nw4r3lyt8MaterialFRCQ34nw4r3lyt12AnimResourceb
 
-# 0x8066C598 - 0x8066C5B8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C598
 lbl_8066C598:

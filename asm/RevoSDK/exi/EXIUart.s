@@ -233,8 +233,8 @@
 .endfn __OSEnableBarnacle
 /* 80315D2C 002DF2EC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x806678E0 - 0x806678F0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806678E0
 lbl_806678E0:

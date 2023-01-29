@@ -5430,8 +5430,8 @@
 /* 8030F468 002D8A28  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8030F46C 002D8A2C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80549920 - 0x80549D30
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80549920
 lbl_80549920:
@@ -5712,8 +5712,8 @@ jumptable_80549C90:
 	.rel DVDCancel, .L_8030F0A8
 	.4byte 0x00000000
 
-# 0x805C7D00 - 0x805CC9B0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 __DVDTicketViewBuffer:
@@ -5751,8 +5751,8 @@ lbl_805CC920:
 lbl_805CC950:
 	.skip 0x60
 
-# 0x80665980 - 0x80665998
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __DVDVersion
@@ -5772,8 +5772,8 @@ lbl_8066598C:
 lbl_80665994:
 	.4byte 0xFFFFFFFF
 
-# 0x806677E0 - 0x80667878
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806677E0
 lbl_806677E0:

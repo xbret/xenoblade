@@ -185,8 +185,8 @@
 /* 80223F8C 001ED54C  4E 80 00 20 */	blr
 .endfn func_80223F44
 
-# 0x80504C58 - 0x80505110
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMCEffCylinder_typestr
@@ -526,8 +526,8 @@ lbl_80504CFC:
 	.4byte 0x6D000000
 	.4byte 0x00000000
 
-# 0x805397D0 - 0x805398E0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMCEffCylinder
@@ -649,8 +649,8 @@ __vt__CMCEffStart:
 	.4byte func_80223DB0
 	.4byte func_80223F24
 
-# 0x806650F8 - 0x80665150
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMCEffCylinder
@@ -708,8 +708,8 @@ __RTTI__CMCEffStart:
 	.4byte CMCEffStart_typestr
 	.4byte 0x00000000
 
-# 0x8066AE10 - 0x8066AE28
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AE10
 lbl_8066AE10:
@@ -726,8 +726,8 @@ lbl_8066AE20:
 	.4byte 0x40A00000
 	.4byte 0x00000000
 
-# 0x80014F8C - 0x80014FB4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80014F8C", local
@@ -760,8 +760,8 @@ lbl_8066AE20:
 	.4byte 0x00000000
 .endobj "@etb_80014FAC"
 
-# 0x8002DE00 - 0x8002DE3C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002DE00", local

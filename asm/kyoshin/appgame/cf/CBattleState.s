@@ -4554,8 +4554,8 @@
 /* 8014977C 00112D3C  4E 80 00 20 */	blr
 .endfn func_80149778
 
-# 0x804FD0D8 - 0x804FD0F0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804FD0D8
 lbl_804FD0D8:
@@ -4566,8 +4566,8 @@ lbl_804FD0D8:
 	.4byte 0x6C656D00
 	.4byte 0x00000000
 
-# 0x80532180 - 0x80532210
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CBattleState
@@ -4609,16 +4609,16 @@ __vt__cf_CBattleState:
 	.4byte func_80149610
 	.4byte 0x00000000
 
-# 0x80664B40 - 0x80664B48
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80664B40
 lbl_80664B40:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80669CC0 - 0x80669CD8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669CC0
 lbl_80669CC0:
@@ -4637,8 +4637,8 @@ lbl_80669CD0:
 lbl_80669CD4:
 	.4byte 0x3F666666
 
-# 0x8000CFE4 - 0x8000D04C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000CFE4", local
@@ -4719,8 +4719,8 @@ lbl_80669CD4:
 	.4byte 0x00000000
 .endobj "@etb_8000D044"
 
-# 0x800282BC - 0x80028358
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800282BC", local

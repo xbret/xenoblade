@@ -12,8 +12,8 @@
 /* 8039BBF8 003651B8  4B FF FC 00 */	b CFT_Ycc420plnToArgb8888Init
 .endfn CFT_Init
 
-# 0x8051CE58 - 0x8051CEB0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051CE58
 lbl_8051CE58:
@@ -40,8 +40,8 @@ lbl_8051CE58:
 	.4byte 0x63683032
 	.4byte 0x0A000000
 
-# 0x80602788 - 0x80602790
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80602788
 lbl_80602788:

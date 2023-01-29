@@ -67,13 +67,13 @@
 /* 80405484 003CEA44  4E 80 00 20 */	blr
 .endfn sinit_8040547C
 
-# 0x804F5A14 - 0x804F5A18
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8040547C
 
-# 0x8056D460 - 0x8056D4D8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056D460
 lbl_8056D460:
@@ -108,8 +108,8 @@ lbl_8056D460:
 	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte 0x00000000
 
-# 0x80667D78 - 0x80667D80
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667D78
 lbl_80667D78:

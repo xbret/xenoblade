@@ -134,8 +134,8 @@
 /* 80449160 00412720  48 00 9A 18 */	b func_80452B78
 .endfn func_80449160
 
-# 0x8056F7C0 - 0x8056F7D0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CFontLayer
@@ -145,8 +145,8 @@ __vt__CFontLayer:
 	.4byte func_80449018
 	.4byte 0x00000000
 
-# 0x8001CB78 - 0x8001CB90
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001CB78", local
@@ -167,8 +167,8 @@ __vt__CFontLayer:
 	.4byte 0x00000000
 .endobj "@etb_8001CB88"
 
-# 0x80034778 - 0x8003479C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034778", local

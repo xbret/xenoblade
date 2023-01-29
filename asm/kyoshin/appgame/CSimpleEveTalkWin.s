@@ -1213,8 +1213,8 @@
 /* 801A29C8 0016BF88  4B FF EF 9C */	b func_801A1964
 .endfn func_801A29C4
 
-# 0x804FF628 - 0x804FF750
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CSimpleEveTalkWin_typestr
@@ -1296,8 +1296,8 @@ lbl_804FF63C:
 	.4byte 0x5F6D6573
 	.4byte 0x00000000
 
-# 0x80536698 - 0x80536798
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CSimpleEveTalkWin
@@ -1370,8 +1370,8 @@ CSimpleEveTalkWin_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664E58 - 0x80664E60
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CSimpleEveTalkWin
@@ -1379,8 +1379,8 @@ __RTTI__CSimpleEveTalkWin:
 	.4byte CSimpleEveTalkWin_typestr
 	.4byte CSimpleEveTalkWin_hierarchy
 
-# 0x80666C10 - 0x80666C18
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666C10
 lbl_80666C10:
@@ -1389,8 +1389,8 @@ lbl_80666C10:
 lbl_80666C14:
 	.skip 0x4
 
-# 0x8066A560 - 0x8066A578
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A560
 lbl_8066A560:
@@ -1409,8 +1409,8 @@ lbl_8066A570:
 	.4byte 0x3F800000
 	.4byte 0x00000000
 
-# 0x8000F6B0 - 0x8000F790
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000F6B0", local
@@ -1505,8 +1505,8 @@ lbl_8066A570:
 	.4byte 0x00000000
 .endobj "@etb_8000F788"
 
-# 0x8002A524 - 0x8002A590
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002A524", local

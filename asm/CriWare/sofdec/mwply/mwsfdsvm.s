@@ -202,8 +202,8 @@
 /* 8039DDCC 0036738C  4E 80 00 20 */	blr
 .endfn MWSFSVM_GotoIdleBorder
 
-# 0x80602790 - 0x806028A0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80602790
 lbl_80602790:

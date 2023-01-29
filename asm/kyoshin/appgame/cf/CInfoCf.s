@@ -1248,8 +1248,8 @@
 /* 801678EC 00130EAC  4E 80 00 20 */	blr
 .endfn func_8016784C
 
-# 0x804FE850 - 0x804FE860
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CInfoCf_typestr
@@ -1259,8 +1259,8 @@ cf_CInfoCf_typestr:
 	.4byte 0x6F436600
 	.4byte 0x00000000
 
-# 0x80534180 - 0x80534190
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CInfoCf
@@ -1270,8 +1270,8 @@ __vt__cf_CInfoCf:
 	.4byte func_80166724
 	.4byte 0x00000000
 
-# 0x80664C90 - 0x80664C98
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CInfoCf
@@ -1279,15 +1279,15 @@ __RTTI__cf_CInfoCf:
 	.4byte cf_CInfoCf_typestr
 	.4byte 0x00000000
 
-# 0x80666B40 - 0x80666B48
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666B40
 lbl_80666B40:
 	.skip 0x8
 
-# 0x8000DD00 - 0x8000DDDC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000DD00", local
@@ -1393,8 +1393,8 @@ lbl_80666B40:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 .endobj "@etb_8000DDC4"
 
-# 0x80028D24 - 0x80028DB4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80028D24", local

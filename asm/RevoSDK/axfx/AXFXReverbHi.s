@@ -57,8 +57,8 @@
 /* 802D57B8 0029ED78  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 802D57BC 0029ED7C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8066BDD8 - 0x8066BDE0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BDD8
 lbl_8066BDD8:

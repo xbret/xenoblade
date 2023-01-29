@@ -4391,13 +4391,13 @@
 /* 801AFE18 001793D8  4B FF C1 FC */	b func_801AC014
 .endfn func_801AFE14
 
-# 0x804F5978 - 0x804F597C
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_801AFCE8
 
-# 0x804FF998 - 0x80500010
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804FF998
 lbl_804FF998:
@@ -4845,8 +4845,8 @@ lbl_804FFA90:
 	.4byte 0x6D650069
 	.4byte 0x636F6E00
 
-# 0x80536C58 - 0x80536DF0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_80536C58:
@@ -4963,15 +4963,15 @@ CMenuVision_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80579050 - 0x80579068
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80579050
 lbl_80579050:
 	.skip 0x18
 
-# 0x80664E78 - 0x80664EB8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80664E78
 lbl_80664E78:
@@ -5021,8 +5021,8 @@ __RTTI__CMenuVision:
 	.4byte CMenuVision_typestr
 	.4byte CMenuVision_hierarchy
 
-# 0x80666C28 - 0x80666C80
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666C28
 lbl_80666C28:
@@ -5064,8 +5064,8 @@ lbl_80666C70:
 lbl_80666C78:
 	.skip 0x8
 
-# 0x8066A680 - 0x8066A6A0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A680
 lbl_8066A680:
@@ -5092,8 +5092,8 @@ lbl_8066A698:
 lbl_8066A69C:
 	.4byte 0x40400000
 
-# 0x8000FB84 - 0x8000FC5C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000FB84", local
@@ -5198,8 +5198,8 @@ lbl_8066A69C:
 	.4byte 0x00000000
 .endobj "@etb_8000FC54"
 
-# 0x8002A8D8 - 0x8002A968
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002A8D8", local

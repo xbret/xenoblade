@@ -1860,8 +1860,8 @@
 /* 802E8294 002B1854  4E 80 00 20 */	blr
 .endfn btm_report_device_status
 
-# 0x80545080 - 0x805452E0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80545080
 lbl_80545080:
@@ -2034,8 +2034,8 @@ lbl_805452A8:
 	.4byte 0x73000000
 	.4byte 0x00000000
 
-# 0x80665928 - 0x80665940
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665928
 lbl_80665928:

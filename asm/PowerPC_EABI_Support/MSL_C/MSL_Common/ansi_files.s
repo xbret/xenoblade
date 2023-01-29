@@ -85,8 +85,8 @@
 /* 802BC3D8 00285998  4E 80 00 20 */	blr
 .endfn __flush_all
 
-# 0x8053F0F0 - 0x8053F230
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __files
@@ -180,8 +180,8 @@ lbl_8053F1E0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8057B048 - 0x8057B348
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057B048
 lbl_8057B048:

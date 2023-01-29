@@ -1026,8 +1026,8 @@
 /* 803D581C 0039EDDC  4E 80 00 20 */	blr
 .endfn SFX_Make2PlaneCftDstBuf
 
-# 0x80520850 - 0x80520A90
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520850
 lbl_80520850:

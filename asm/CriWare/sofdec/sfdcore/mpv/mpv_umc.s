@@ -1746,8 +1746,8 @@
 /* 803ADE58 00377418  4E 80 00 20 */	blr
 .endfn MPVUMC_BpicSkipped
 
-# 0x80607B28 - 0x80607B68
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80607B28
 lbl_80607B28:

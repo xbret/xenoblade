@@ -772,8 +772,8 @@
 /* 800D84F8 000A1AB8  4E 80 00 20 */	blr
 .endfn func_800D81A8
 
-# 0x80669698 - 0x806696B4
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669698
 lbl_80669698:
@@ -795,8 +795,8 @@ lbl_806696A8:
 lbl_806696B0:
 	.4byte 0x3F000000
 
-# 0x8000A5FC - 0x8000A61C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000A5FC", local
@@ -823,8 +823,8 @@ lbl_806696B0:
 	.4byte 0x00000000
 .endobj "@etb_8000A614"
 
-# 0x80026144 - 0x80026174
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80026144", local

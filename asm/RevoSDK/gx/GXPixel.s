@@ -541,8 +541,8 @@
 /* 8031E46C 002E7A2C  4E 80 00 20 */	blr
 .endfn GXSetFieldMode
 
-# 0x8054C110 - 0x8054C130
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054C110
 lbl_8054C110:
@@ -555,8 +555,8 @@ lbl_8054C110:
 	.4byte 0x00000004
 	.4byte 0x00000005
 
-# 0x8066C050 - 0x8066C0A0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C050
 lbl_8066C050:

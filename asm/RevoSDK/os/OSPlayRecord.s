@@ -520,8 +520,8 @@
 .endfn __OSStopPlayRecord
 /* 8035DE4C 0032740C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8055ECC0 - 0x8055ED08
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8055ECC0
 lbl_8055ECC0:
@@ -546,23 +546,23 @@ jumptable_8055ECEC:
 	.rel PlayRecordCallback, .L_8035D8B0
 	.rel PlayRecordCallback, .L_8035D938
 
-# 0x805D5220 - 0x805D5420
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805D5220
 lbl_805D5220:
 	.skip 0x200
 
-# 0x80665BA0 - 0x80665BA8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 PlayRecordState:
 	.4byte 0x00000009
 	.4byte 0x00000000
 
-# 0x80667B08 - 0x80667B28
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 PlayRecordGet:

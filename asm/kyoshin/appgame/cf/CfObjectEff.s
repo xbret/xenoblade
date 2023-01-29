@@ -1417,8 +1417,8 @@
 /* 800AD884 00076E44  4E 80 00 20 */	blr
 .endfn func_800AD860
 
-# 0x8052C028 - 0x8052C1E8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8052C028
 lbl_8052C028:
@@ -1538,8 +1538,8 @@ __vt__cf_CfObjectEff:
 	.4byte func_800ACBCC
 	.4byte func_800AD818
 
-# 0x80669220 - 0x80669230
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669220
 lbl_80669220:
@@ -1554,8 +1554,8 @@ lbl_80669228:
 lbl_8066922C:
 	.4byte 0x447A0000
 
-# 0x80009480 - 0x80009584
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80009480", local
@@ -1711,8 +1711,8 @@ lbl_8066922C:
 	.4byte func_80081C20
 .endobj "@etb_80009548"
 
-# 0x80024D10 - 0x80024E18
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80024D10", local

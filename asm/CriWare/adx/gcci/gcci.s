@@ -1051,8 +1051,8 @@
 /* 80391798 0035AD58  4E 80 00 20 */	blr
 .endfn gcci_rd_cbfn
 
-# 0x8051B830 - 0x8051BA28
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051B830
 lbl_8051B830:
@@ -1183,8 +1183,8 @@ lbl_8051B830:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80569208 - 0x80569270
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global gcci_vtbl
@@ -1216,8 +1216,8 @@ gcci_vtbl:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x805EA1B0 - 0x805EB270
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805EA1B0
 lbl_805EA1B0:

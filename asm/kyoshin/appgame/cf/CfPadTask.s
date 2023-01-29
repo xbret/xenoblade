@@ -2119,8 +2119,8 @@
 /* 801C35A4 0018CB64  4B FF FB 18 */	b func_801C30BC
 .endfn func_801C358C
 
-# 0x80500B50 - 0x80500B78
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CfPadTask_typestr
@@ -2139,8 +2139,8 @@ CTTask_cf_CfPadTask_typestr:
 	.4byte 0x5461736B
 	.4byte 0x3E000000
 
-# 0x80537448 - 0x80537548
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CfPadTask
@@ -2223,15 +2223,15 @@ lbl_80537538:
 	.4byte 0x722E6800
 	.4byte 0x00000000
 
-# 0x80579D30 - 0x80579D48
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80579D30
 lbl_80579D30:
 	.skip 0x18
 
-# 0x80664F28 - 0x80664F40
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80664F28
 lbl_80664F28:
@@ -2248,8 +2248,8 @@ __RTTI__CTTask_cf_CfPadTask:
 	.4byte CTTask_cf_CfPadTask_typestr
 	.4byte CTTask_cf_CfPadTask_hierarchy
 
-# 0x80666D30 - 0x80666D50
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666D30
 lbl_80666D30:
@@ -2282,8 +2282,8 @@ lbl_80666D44:
 lbl_80666D48:
 	.skip 0x8
 
-# 0x8066A768 - 0x8066A7C8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A768
 lbl_8066A768:
@@ -2356,8 +2356,8 @@ lbl_8066A7C0:
 lbl_8066A7C4:
 	.4byte 0x3F333333
 
-# 0x8001061C - 0x80010874
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001061C", local
@@ -2606,8 +2606,8 @@ lbl_8066A7C4:
 	.4byte 0x00000000
 .endobj "@etb_8001086C"
 
-# 0x8002B034 - 0x8002B154
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002B034", local

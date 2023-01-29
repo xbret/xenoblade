@@ -54,8 +54,8 @@
 /* 802BBDB4 00285374  4E 80 00 20 */	blr
 .endfn __sys_free
 
-# 0x8050CE90 - 0x8050CF00
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050CE90
 lbl_8050CE90:

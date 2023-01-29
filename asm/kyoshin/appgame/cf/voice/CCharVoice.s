@@ -624,8 +624,8 @@
 /* 802A13B8 0026A978  4E 80 00 20 */	blr
 .endfn func_802A13B8
 
-# 0x8050BCC0 - 0x8050BCF0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050BCC0
 lbl_8050BCC0:
@@ -647,8 +647,8 @@ cf_CCharVoice_typestr:
 lbl_8050BCEC:
 	.4byte 0x00000000
 
-# 0x8053D040 - 0x8053D050
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CCharVoice
@@ -658,8 +658,8 @@ __vt__cf_CCharVoice:
 	.4byte func_80080500
 	.4byte 0x00000000
 
-# 0x80665590 - 0x806655A0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665590
 lbl_80665590:
@@ -671,8 +671,8 @@ __RTTI__cf_CCharVoice:
 	.4byte cf_CCharVoice_typestr
 	.4byte 0x00000000
 
-# 0x8066B500 - 0x8066B510
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B500
 lbl_8066B500:
@@ -687,8 +687,8 @@ lbl_8066B508:
 lbl_8066B50C:
 	.4byte 0x00000000
 
-# 0x8001A880 - 0x8001A8B8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001A880", local
@@ -733,8 +733,8 @@ lbl_8066B50C:
 	.4byte 0x00000000
 .endobj "@etb_8001A8B0"
 
-# 0x8003266C - 0x800326C0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8003266C", local

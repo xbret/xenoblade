@@ -61,8 +61,8 @@
 /* 802F37C4 002BCD84  4E 80 00 20 */	blr
 .endfn hidd_proc_repage_timeout
 
-# 0x805466C0 - 0x805466E0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805466C0
 lbl_805466C0:

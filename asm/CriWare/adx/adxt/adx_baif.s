@@ -812,8 +812,8 @@
 /* 8038696C 0034FF2C  4B FF F9 50 */	b ADXB_ExecOneAiff16
 .endfn ADXB_ExecOneAiff
 
-# 0x8051A1B8 - 0x8051A1C8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051A1B8
 lbl_8051A1B8:

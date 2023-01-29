@@ -591,8 +591,8 @@
 /* 80302EB8 002CC478  4E 80 00 20 */	blr
 .endfn rfc_check_send_cmd
 
-# 0x8050E298 - 0x8050E398
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050E298
 lbl_8050E298:
@@ -661,8 +661,8 @@ lbl_8050E298:
 	.4byte 0xBA2B59C8
 	.4byte 0xBD2C5ECF
 
-# 0x80548E70 - 0x80548F00
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80548E70
 lbl_80548E70:

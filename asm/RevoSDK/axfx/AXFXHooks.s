@@ -36,8 +36,8 @@
 /* 802DAB48 002A4108  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 802DAB4C 002A410C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x806658C0 - 0x806658C8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806658C0
 lbl_806658C0:

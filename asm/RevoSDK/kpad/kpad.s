@@ -4551,8 +4551,8 @@
 /* 80348B48 00312108  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80348B4C 0031210C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80550490 - 0x805504F0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80550490
 lbl_80550490:
@@ -4583,8 +4583,8 @@ lbl_805504D8:
 	.4byte 0x000C000C
 	.4byte 0x000A000A
 
-# 0x805CE600 - 0x805CFC50
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805CE600
 lbl_805CE600:
@@ -4599,8 +4599,8 @@ lbl_805CFC10:
 lbl_805CFC30:
 	.skip 0x20
 
-# 0x80665A58 - 0x80665AD8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665A58
 lbl_80665A58:
@@ -4699,8 +4699,8 @@ lbl_80665AD0:
 lbl_80665AD4:
 	.4byte 0x41C00000
 
-# 0x80667998 - 0x806679D0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667998
 lbl_80667998:
@@ -4754,8 +4754,8 @@ lbl_806679C8:
 lbl_806679CC:
 	.skip 0x4
 
-# 0x8066C0B0 - 0x8066C120
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C0B0
 lbl_8066C0B0:

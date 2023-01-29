@@ -2213,8 +2213,8 @@
 /* 802FCA28 002C5FE8  4E 80 00 20 */	blr
 .endfn l2cu_lcb_disconnecting
 
-# 0x80548118 - 0x80548200
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80548118
 lbl_80548118:
@@ -2287,8 +2287,8 @@ lbl_805481D8:
 	.4byte 0x655F636F
 	.4byte 0x6E6E0000
 
-# 0x80665948 - 0x80665958
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665948
 lbl_80665948:

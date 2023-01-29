@@ -583,8 +583,8 @@
 /* 804600DC 0042969C  4E 80 00 20 */	blr
 .endfn func_80460060
 
-# 0x80526AF8 - 0x80526B20
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CLibStaticData_typestr
@@ -603,8 +603,8 @@ CLibStaticData_CItem_typestr:
 	.4byte 0x43497465
 	.4byte 0x6D000000
 
-# 0x80570C50 - 0x80570D90
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CLibStaticData
@@ -696,8 +696,8 @@ __vt__CLibStaticData_CItem:
 	.4byte func_80039D44
 	.4byte func_80039D40
 
-# 0x80666100 - 0x80666110
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CLibStaticData
@@ -710,8 +710,8 @@ __RTTI__CLibStaticData_CItem:
 	.4byte CLibStaticData_CItem_typestr
 	.4byte 0x00000000
 
-# 0x80667FF0 - 0x80667FF8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667FF0
 lbl_80667FF0:
@@ -720,8 +720,8 @@ lbl_80667FF0:
 lbl_80667FF4:
 	.skip 0x4
 
-# 0x8001D89C - 0x8001D940
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001D89C", local
@@ -801,8 +801,8 @@ lbl_80667FF4:
 	.4byte 0x00000000
 .endobj "@etb_8001D938"
 
-# 0x80035498 - 0x80035504
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80035498", local

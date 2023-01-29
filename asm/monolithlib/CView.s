@@ -4181,13 +4181,13 @@
 /* 8043FBC0 00409180  4E 80 00 20 */	blr
 .endfn sinit_8043FB70
 
-# 0x804F5A64 - 0x804F5A68
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8043FB70
 
-# 0x80525EF8 - 0x80525F68
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMsgParam_10_typestr
@@ -4232,8 +4232,8 @@ lbl_80525F48:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8056EE38 - 0x8056EF78
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8056EE38:
@@ -4336,8 +4336,8 @@ __vt___reslist_base_IWorkEvent:
 	.4byte func_8043C61C
 	.4byte 0x00000000
 
-# 0x8065A0C8 - 0x8065A0E8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8065A0C8
 lbl_8065A0C8:
@@ -4346,8 +4346,8 @@ lbl_8065A0C8:
 lbl_8065A0D8:
 	.skip 0x10
 
-# 0x80665EA0 - 0x80665EC8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CView
@@ -4375,15 +4375,15 @@ __RTTI__CFontLayer:
 	.4byte CFontLayer_typestr
 	.4byte 0x00000000
 
-# 0x80667EA8 - 0x80667EB0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667EA8
 lbl_80667EA8:
 	.skip 0x8
 
-# 0x8066CAD0 - 0x8066CAE8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CAD0
 lbl_8066CAD0:
@@ -4403,8 +4403,8 @@ lbl_8066CAE0:
 lbl_8066CAE4:
 	.4byte 0x3F000000
 
-# 0x8001C3C0 - 0x8001C5E0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C3C0", local
@@ -4675,8 +4675,8 @@ lbl_8066CAE4:
 	.4byte 0x00000000
 .endobj "@etb_8001C5D8"
 
-# 0x80034064 - 0x800341F0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034064", local

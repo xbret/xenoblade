@@ -1842,8 +1842,8 @@
 /* 80360EB8 0032A478  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80360EBC 0032A47C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80518D30 - 0x80518D88
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518D30
 lbl_80518D30:
@@ -1876,8 +1876,8 @@ ProductInfoFileName:
 	.4byte 0x00000000
 	.2byte 0x0000
 
-# 0x8055EEF8 - 0x8055F0D8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8055EEF8
 lbl_8055EEF8:
@@ -2018,8 +2018,8 @@ jumptable_8055F0B0:
 	.rel MyNandCallback, .L_80360DA4
 	.rel MyNandCallback, .L_80360DAC
 
-# 0x805D5540 - 0x805DD6E0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 Control:
@@ -2032,8 +2032,8 @@ ConfBuf:
 lbl_805D96E0:
 	.skip 0x4000
 
-# 0x80665BC0 - 0x80665CD0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __SCVersion
@@ -2177,8 +2177,8 @@ lbl_80665CB8:
 .endobj "@2435"
 	.byte 0x00, 0x00, 0x00
 
-# 0x80667B58 - 0x80667B70
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 BgJobStatus:

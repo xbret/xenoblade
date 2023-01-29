@@ -1675,8 +1675,8 @@
 /* 80438C2C 004021EC  4E 80 00 20 */	blr
 .endfn func_80438BD8
 
-# 0x80525D8C - 0x80525DE0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 4
 
 .global CMsgParam_8_typestr
@@ -1711,8 +1711,8 @@ lbl_80525DD8:
 	.4byte 0x20000000
 	.4byte 0x00000000
 
-# 0x8056E958 - 0x8056EA58
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8056E958:
@@ -1796,8 +1796,8 @@ __vt___reslist_base_CWorkThread:
 	.4byte 0x00000000
 	.4byte func_80437904
 
-# 0x80665E48 - 0x80665E60
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMsgParam_8
@@ -1815,8 +1815,8 @@ __RTTI___reslist_base_CWorkThread:
 	.4byte _reslist_base_CWorkThread_typestr
 	.4byte 0x00000000
 
-# 0x8001C100 - 0x8001C1B4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C100", local
@@ -1932,8 +1932,8 @@ __RTTI___reslist_base_CWorkThread:
 	.4byte 0x00000000
 .endobj "@etb_8001C1AC"
 
-# 0x80033D4C - 0x80033E18
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033D4C", local

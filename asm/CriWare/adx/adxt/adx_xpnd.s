@@ -316,8 +316,8 @@
 /* 80385B04 0034F0C4  4E 80 00 20 */	blr
 .endfn ADXPD_ExecHndl
 
-# 0x805E8600 - 0x805E89C8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805E8600
 lbl_805E8600:

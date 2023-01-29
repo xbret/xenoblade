@@ -175,13 +175,13 @@
 /* 804DAF6C 004A452C  4E 80 00 20 */	blr
 .endfn sinit_804DAF58
 
-# 0x804F5AD0 - 0x804F5AD4
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_804DAF58
 
-# 0x80527EF8 - 0x80527F10
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CNReqtaskSave_typestr
@@ -195,8 +195,8 @@ lbl_80527F08:
 	.4byte 0x25732573
 	.4byte 0x00000000
 
-# 0x805735B0 - 0x805735D0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CNReqtaskSave
@@ -213,15 +213,15 @@ CNReqtaskSave_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80662908 - 0x80662930
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80662908
 lbl_80662908:
 	.skip 0x28
 
-# 0x806664A0 - 0x806664B0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806664A0
 lbl_806664A0:
@@ -233,23 +233,23 @@ __RTTI__CNReqtaskSave:
 	.4byte CNReqtaskSave_typestr
 	.4byte CNReqtaskSave_hierarchy
 
-# 0x806682BC - 0x806682C0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 4
 .global lbl_806682BC
 lbl_806682BC:
 	.skip 0x4
 
-# 0x8066D9D0 - 0x8066D9D8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D9D0
 lbl_8066D9D0:
 	.4byte 0x2F746D70
 	.4byte 0x2F000000
 
-# 0x80020758 - 0x80020768
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020758", local
@@ -264,8 +264,8 @@ lbl_8066D9D0:
 	.4byte 0x00000000
 .endobj "@etb_80020760"
 
-# 0x80038750 - 0x80038768
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80038750", local

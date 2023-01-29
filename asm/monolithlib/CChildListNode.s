@@ -45,8 +45,8 @@
 /* 80446768 0040FD28  4E 80 00 20 */	blr
 .endfn CChildListNode_Reset
 
-# 0x80526160 - 0x80526188
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global TChildListHeader_CChildListNode_typestr
@@ -62,8 +62,8 @@ TChildListHeader_CChildListNode_typestr:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8056F418 - 0x8056F438
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CChildListNode
@@ -80,8 +80,8 @@ __vt__TChildListHeader_CChildListNode:
 	.4byte func_80444AB8
 	.4byte 0x00000000
 
-# 0x80665F08 - 0x80665F10
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__TChildListHeader_CChildListNode
@@ -89,8 +89,8 @@ __RTTI__TChildListHeader_CChildListNode:
 	.4byte TChildListHeader_CChildListNode_typestr
 	.4byte 0x00000000
 
-# 0x8001C9A4 - 0x8001C9B4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C9A4", local
@@ -105,8 +105,8 @@ __RTTI__TChildListHeader_CChildListNode:
 	.4byte 0x00000000
 .endobj "@etb_8001C9AC"
 
-# 0x8003458C - 0x800345A4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8003458C", local

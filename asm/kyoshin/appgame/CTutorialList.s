@@ -1582,8 +1582,8 @@
 /* 802AE438 002779F8  4E 80 00 20 */	blr
 .endfn func_802AE38C
 
-# 0x8050C180 - 0x8050C2D8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CTutorialList_typestr
@@ -1677,8 +1677,8 @@ lbl_8050C190:
 	.4byte 0x7474726C
 	.4byte 0x00000000
 
-# 0x8053DA38 - 0x8053DAD0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CTutorialList
@@ -1725,8 +1725,8 @@ CTutorialList_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806656E8 - 0x806656F0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CTutorialList
@@ -1734,15 +1734,15 @@ __RTTI__CTutorialList:
 	.4byte CTutorialList_typestr
 	.4byte CTutorialList_hierarchy
 
-# 0x806674D8 - 0x806674E0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806674D8
 lbl_806674D8:
 	.skip 0x8
 
-# 0x8066B680 - 0x8066B698
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B680
 lbl_8066B680:
@@ -1761,8 +1761,8 @@ lbl_8066B690:
 	.4byte 0x43300000
 	.4byte 0x00000000
 
-# 0x8001B2D0 - 0x8001B4D8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001B2D0", local
@@ -2015,8 +2015,8 @@ lbl_8066B690:
 	.4byte 0x00000000
 .endobj "@etb_8001B4D0"
 
-# 0x80033014 - 0x8003317C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033014", local

@@ -2308,13 +2308,13 @@
 /* 8016ED4C 0013830C  4E 80 00 20 */	blr
 .endfn sinit_8016ED44
 
-# 0x804F5968 - 0x804F596C
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8016ED44
 
-# 0x804FE958 - 0x804FEA60
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CfResReloadImpl_typestr
@@ -2388,8 +2388,8 @@ lbl_804FE970:
 	.4byte 0x5F574200
 	.4byte 0x00000000
 
-# 0x80534790 - 0x80534850
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80534790
 lbl_80534790:
@@ -2450,8 +2450,8 @@ lbl_80534838:
 	.4byte lbl_80669FB4
 	.4byte 0x00000000
 
-# 0x80664CD8 - 0x80664CE0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CfResReloadImpl
@@ -2459,8 +2459,8 @@ __RTTI__cf_CfResReloadImpl:
 	.4byte cf_CfResReloadImpl_typestr
 	.4byte cf_CfResReloadImpl_hierarchy
 
-# 0x80666B68 - 0x80666B80
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666B68
 lbl_80666B68:
@@ -2484,8 +2484,8 @@ lbl_80666B74:
 lbl_80666B78:
 	.skip 0x8
 
-# 0x80669F58 - 0x80669FC0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669F58
 lbl_80669F58:
@@ -2550,8 +2550,8 @@ lbl_80669FB4:
 	.4byte 0x5F4E0000
 	.4byte 0x00000000
 
-# 0x8000E078 - 0x8000E150
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000E078", local
@@ -2716,8 +2716,8 @@ lbl_80669FB4:
 	.4byte 0x00000000
 .endobj "@etb_8000E148"
 
-# 0x8002903C - 0x80029180
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002903C", local

@@ -392,8 +392,8 @@
 /* 802A8C00 002721C0  4E 80 00 20 */	blr
 .endfn func_802A8B6C
 
-# 0x8050BE00 - 0x8050BE18
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CVS_THREAD_REVIVE_typestr
@@ -405,8 +405,8 @@ cf_CVS_THREAD_REVIVE_typestr:
 	.4byte 0x45564956
 	.4byte 0x45000000
 
-# 0x8053D428 - 0x8053D478
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053D428
 lbl_8053D428:
@@ -441,8 +441,8 @@ cf_CVS_THREAD_REVIVE_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665620 - 0x80665628
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CVS_THREAD_REVIVE
@@ -450,8 +450,8 @@ __RTTI__cf_CVS_THREAD_REVIVE:
 	.4byte cf_CVS_THREAD_REVIVE_typestr
 	.4byte cf_CVS_THREAD_REVIVE_hierarchy
 
-# 0x8001AE3C - 0x8001AE98
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001AE3C", local
@@ -505,8 +505,8 @@ __RTTI__cf_CVS_THREAD_REVIVE:
 	.4byte 0x00000000
 .endobj "@etb_8001AE90"
 
-# 0x80032CE4 - 0x80032D38
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80032CE4", local

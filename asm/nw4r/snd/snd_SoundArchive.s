@@ -328,8 +328,8 @@
 /* 8041CAD0 003E6090  4E 80 00 20 */	blr
 .endfn detail_OpenFileStream__Q34nw4r3snd12SoundArchiveCFUlPvi
 
-# 0x8056E4A0 - 0x8056E4C0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E4A0
 lbl_8056E4A0:

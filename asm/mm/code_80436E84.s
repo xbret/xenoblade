@@ -46,13 +46,13 @@
 /* 80436F1C 004004DC  4E 80 00 20 */	blr
 .endfn sinit_80436E84
 
-# 0x804F5A5C - 0x804F5A60
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80436E84
 
-# 0x8066CA58 - 0x8066CA60
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CA58
 lbl_8066CA58:

@@ -876,8 +876,8 @@
 /* 802F74CC 002C0A8C  4E 80 00 20 */	blr
 .endfn L2CA_RegisterCompression
 
-# 0x80546BE0 - 0x80547370
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80546BE0
 lbl_80546BE0:
@@ -1388,8 +1388,8 @@ lbl_805471B0:
 	.4byte 0x25640000
 	.4byte 0x00000000
 
-# 0x8066BF80 - 0x8066BF88
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BF80
 lbl_8066BF80:

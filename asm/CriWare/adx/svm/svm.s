@@ -1197,8 +1197,8 @@
 /* 80397A08 00360FC8  4E 80 00 20 */	blr
 .endfn SVM_TestAndSet
 
-# 0x8051C590 - 0x8051C748
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051C590
 lbl_8051C590:
@@ -1313,8 +1313,8 @@ lbl_8051C590:
 	.4byte 0x79706500
 	.4byte 0x00000000
 
-# 0x805F5D30 - 0x805F60B8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805F5D30
 lbl_805F5D30:

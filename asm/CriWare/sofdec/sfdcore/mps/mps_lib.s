@@ -433,8 +433,8 @@
 /* 803BD2A4 00386864  4E 80 00 20 */	blr
 .endfn MPS_Destroy
 
-# 0x8051FE88 - 0x8051FEE0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global MPSLIB_version_str
@@ -462,8 +462,8 @@ MPSLIB_version_str:
 	.4byte 0x74636830
 	.4byte 0x320A0000
 
-# 0x8060A290 - 0x8060A2A0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global cri_mps_verstr_ptr

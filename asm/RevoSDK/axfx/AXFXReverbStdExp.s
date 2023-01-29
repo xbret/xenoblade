@@ -948,8 +948,8 @@
 .endfn __InitParams
 /* 802D86BC 002A1C7C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805432C0 - 0x80543350
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805432C0
 lbl_805432C0:
@@ -992,8 +992,8 @@ lbl_805432E0:
 	.4byte 0x0000023B
 	.4byte 0x000000B3
 
-# 0x8066BE50 - 0x8066BE90
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BE50
 lbl_8066BE50:

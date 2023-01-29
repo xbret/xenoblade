@@ -91,8 +91,8 @@
 /* 8035F138 003286F8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8035F13C 003286FC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80518D10 - 0x80518D30
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518D10
 lbl_80518D10:

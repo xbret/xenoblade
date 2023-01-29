@@ -7169,8 +7169,8 @@
 /* 8037BFD8 00345598  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8037BFDC 0034559C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805622C8 - 0x80563470
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 _wudWiiRemoteDescriptor:
@@ -8377,8 +8377,8 @@ lbl_8056311C:
 	.4byte 0x64205742
 	.4byte 0x430A0000
 
-# 0x805E1280 - 0x805E3428
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global __rvl_wudcb
@@ -8469,8 +8469,8 @@ lbl_805E33E8:
 lbl_805E3408:
 	.skip 0x20
 
-# 0x80667CE0 - 0x80667D18
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667CE0
 lbl_80667CE0:
@@ -8533,8 +8533,8 @@ lbl_80667D16:
 lbl_80667D17:
 	.skip 0x1
 
-# 0x8066C260 - 0x8066C268
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C260
 lbl_8066C260:

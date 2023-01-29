@@ -43,8 +43,8 @@
 .endfn MEMInitAllocatorForExpHeap
 /* 80349ACC 0031308C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8066C120 - 0x8066C128
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C120
 lbl_8066C120:

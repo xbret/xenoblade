@@ -1091,8 +1091,8 @@
 /* 80375A8C 0033F04C  4E 80 00 20 */	blr
 .endfn WPADiDecode
 
-# 0x80560FA0 - 0x805622C8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80560FA0
 lbl_80560FA0:
@@ -2323,8 +2323,8 @@ lbl_80560FA0:
 	.4byte 0x25642025
 	.4byte 0x640A0000
 
-# 0x80667CD8 - 0x80667CE0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667CD8
 lbl_80667CD8:

@@ -639,8 +639,8 @@
 /* 802D7988 002A0F48  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 802D798C 002A0F4C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8066BE38 - 0x8066BE50
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BE38
 lbl_8066BE38:

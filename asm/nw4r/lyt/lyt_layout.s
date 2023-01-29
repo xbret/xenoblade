@@ -1235,8 +1235,8 @@
 /* 80400C5C 003CA21C  4E 80 00 20 */	blr
 .endfn BuildPaneObj__Q34nw4r3lyt6LayoutFlPCvRCQ34nw4r3lyt11ResBlockSet
 
-# 0x8056D258 - 0x8056D298
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056D258
 lbl_8056D258:
@@ -1257,8 +1257,8 @@ lbl_8056D258:
 	.4byte Animate__Q34nw4r3lyt6LayoutFUl
 	.4byte SetTagProcessor__Q34nw4r3lyt6LayoutFPQ34nw4r2ut19TagProcessorBase_w
 
-# 0x8066C558 - 0x8066C560
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C558
 lbl_8066C558:

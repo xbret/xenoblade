@@ -731,8 +731,8 @@
 /* 8031A758 002E3D18  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8031A75C 002E3D1C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80667950 - 0x80667968
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667950
 lbl_80667950:

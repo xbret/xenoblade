@@ -1190,8 +1190,8 @@
 /* 803BFD34 003892F4  4E 80 00 20 */	blr
 .endfn func_803BFD20
 
-# 0x8060A2C8 - 0x8060A2D8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global sfbuf_sjrbf_uuid

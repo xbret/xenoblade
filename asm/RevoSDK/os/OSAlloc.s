@@ -247,8 +247,8 @@
 /* 8035399C 0031CF5C  4E 80 00 20 */	blr
 .endfn OSCreateHeap
 
-# 0x80665B58 - 0x80665B60
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global lbl_80665B58
@@ -256,8 +256,8 @@ lbl_80665B58:
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000000
 
-# 0x80667A50 - 0x80667A60
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667A50
 lbl_80667A50:

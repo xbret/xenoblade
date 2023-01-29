@@ -2805,8 +2805,8 @@
 /* 802F35D4 002BCB94  4B FF B9 34 */	b btu_hcif_send_cmd
 .endfn btsnd_hcic_vendor_spec_cmd
 
-# 0x8050E260 - 0x8050E270
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050E260
 lbl_8050E260:

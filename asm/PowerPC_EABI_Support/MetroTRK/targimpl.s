@@ -1749,8 +1749,8 @@
 /* 802D05C0 00299B80  4E 80 00 20 */	blr
 .endfn GetThreadInfo
 
-# 0x8050DEA8 - 0x8050DF30
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050DEA8
 lbl_8050DEA8:
@@ -1795,8 +1795,8 @@ lbl_8050DF08:
 	.4byte 0x60000000
 	.4byte 0x60000000
 
-# 0x8053FFA8 - 0x8053FFB8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 gTRKExceptionStatus:
@@ -1805,8 +1805,8 @@ gTRKExceptionStatus:
 	.4byte 0x00000000
 	.4byte 0x01000000
 
-# 0x8057D280 - 0x8057D828
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global gTRKRestoreFlags
@@ -1834,8 +1834,8 @@ gTRKState:
 gTRKCPUState:
 	.skip 0x430
 
-# 0x806675A0 - 0x806675A8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 TRK_saved_exceptionID:

@@ -757,8 +757,8 @@
 /* 803EF19C 003B875C  4E 80 00 20 */	blr
 .endfn CalcSkinning__Q24nw4r3g3dFPQ34nw4r4math5MTX34PUlQ34nw4r3g3d6ResMdlPCUc
 
-# 0x8056CEC8 - 0x8056CED8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056CEC8
 lbl_8056CEC8:
@@ -767,16 +767,16 @@ lbl_8056CEC8:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665DA0 - 0x80665DA8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665DA0
 lbl_80665DA0:
 	.4byte 0x4E6F6465
 	.4byte 0x4D697800
 
-# 0x8066C440 - 0x8066C448
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C440
 lbl_8066C440:

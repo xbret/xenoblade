@@ -341,8 +341,8 @@
 .endfn func_80340E40
 /* 80340E4C 0030A40C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805CDEE8 - 0x805CE3B8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805CDEE8
 lbl_805CDEE8:

@@ -1698,8 +1698,8 @@
 /* 802E382C 002ACDEC  4E 80 00 20 */	blr
 .endfn bta_hh_cback
 
-# 0x80544198 - 0x80544690
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80544198
 lbl_80544198:
@@ -2050,23 +2050,23 @@ jumptable_8054466C:
 	.rel bta_hh_cback, .L_802E3634
 	.rel bta_hh_cback, .L_802E363C
 
-# 0x805BF7C8 - 0x805BF9F8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805BF7C8
 lbl_805BF7C8:
 	.skip 0x230
 
-# 0x80665920 - 0x80665928
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665920
 lbl_80665920:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80667778 - 0x80667780
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667778
 lbl_80667778:

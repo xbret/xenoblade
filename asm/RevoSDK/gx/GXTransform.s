@@ -416,8 +416,8 @@
 /* 8031EA68 002E8028  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8031EA6C 002E802C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8066C0A0 - 0x8066C0B0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C0A0
 lbl_8066C0A0:

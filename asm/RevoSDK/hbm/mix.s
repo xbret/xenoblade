@@ -1863,8 +1863,8 @@
 .endfn HBMFreeIndexByKey
 /* 803409AC 00309F6C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8054EF00 - 0x8054FA90
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054EF00
 lbl_8054EF00:
@@ -2609,8 +2609,8 @@ lbl_8054EF00:
 	.4byte 0xFFF4FFF4
 	.4byte 0xFFF4FFF5
 
-# 0x805CD828 - 0x805CDEE8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805CD828
 lbl_805CD828:

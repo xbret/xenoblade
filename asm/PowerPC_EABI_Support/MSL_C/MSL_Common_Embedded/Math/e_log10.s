@@ -81,15 +81,15 @@
 /* 802C8198 00291758  4E 80 00 20 */	blr
 .endfn __ieee754_log10
 
-# 0x80667558 - 0x80667560
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 zero:
 	.skip 0x8
 
-# 0x8066BA88 - 0x8066BAB8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@22", local

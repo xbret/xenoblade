@@ -10,13 +10,13 @@
 /* 8042BE1C 003F53DC  4E 80 00 20 */	blr
 .endfn sinit_8042BE14
 
-# 0x804F5A38 - 0x804F5A3C
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8042BE14
 
-# 0x80667E28 - 0x80667E38
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667E28
 lbl_80667E28:

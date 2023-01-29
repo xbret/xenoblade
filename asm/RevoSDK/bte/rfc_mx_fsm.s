@@ -903,8 +903,8 @@
 /* 802FF9C4 002C8F84  4E 80 00 20 */	blr
 .endfn rfc_mx_conf_ind
 
-# 0x805487B8 - 0x80548A70
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_805487B8:

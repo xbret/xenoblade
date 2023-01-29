@@ -193,15 +193,15 @@
 /* 804195D0 003E2B90  4E 80 00 20 */	blr
 .endfn RemoteSpeakerAlarmProc__Q44nw4r3snd6detail20RemoteSpeakerManagerFP7OSAlarmP9OSContext
 
-# 0x8063B1E8 - 0x8063B4C0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8063B1E8
 lbl_8063B1E8:
 	.skip 0x2D8
 
-# 0x80667DD0 - 0x80667DD8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667DD0
 lbl_80667DD0:

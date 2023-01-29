@@ -1323,8 +1323,8 @@
 /* 802EFBA8 002B9168  4E 80 00 20 */	blr
 .endfn btu_hcif_link_key_notification_evt
 
-# 0x80546240 - 0x805462D0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80546240
 lbl_80546240:

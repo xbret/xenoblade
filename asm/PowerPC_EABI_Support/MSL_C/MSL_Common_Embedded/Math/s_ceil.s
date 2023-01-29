@@ -104,8 +104,8 @@
 /* 802CAB84 00294144  4E 80 00 20 */	blr
 .endfn ceil
 
-# 0x8066BD40 - 0x8066BD50
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@53", local

@@ -1,7 +1,7 @@
 .include "macros.inc"
 
-# 0x8066C9F8 - 0x8066CA14
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 # mm::pi

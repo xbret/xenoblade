@@ -710,13 +710,13 @@
 /* 80444414 0040D9D4  4E 80 00 20 */	blr
 .endfn sinit_804443D0
 
-# 0x804F5A68 - 0x804F5A6C
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_804443D0
 
-# 0x80526030 - 0x805260A8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global _unnamed_CWorkRoot_cpp_CWorkRootThread_typestr
@@ -754,8 +754,8 @@ lbl_8052605C:
 	.4byte 0x6F672065
 	.4byte 0x6E640A00
 
-# 0x8056F1B0 - 0x8056F268
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt___unnamed_CWorkRoot_cpp_CWorkRootThread
@@ -810,8 +810,8 @@ _unnamed_CWorkRoot_cpp_CWorkRootThread_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8065A0E8 - 0x8065A3F8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8065A0E8
 lbl_8065A0E8:
@@ -820,8 +820,8 @@ lbl_8065A0E8:
 lbl_8065A0F8:
 	.skip 0x300
 
-# 0x80665EE8 - 0x80665EF0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI___unnamed_CWorkRoot_cpp_CWorkRootThread
@@ -829,8 +829,8 @@ __RTTI___unnamed_CWorkRoot_cpp_CWorkRootThread:
 	.4byte _unnamed_CWorkRoot_cpp_CWorkRootThread_typestr
 	.4byte _unnamed_CWorkRoot_cpp_CWorkRootThread_hierarchy
 
-# 0x80667EE8 - 0x80667EF8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 .global cDesktopPointer
@@ -843,8 +843,8 @@ lbl_80667EEC:
 lbl_80667EF0:
 	.skip 0x8
 
-# 0x8001C774 - 0x8001C838
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C774", local
@@ -956,8 +956,8 @@ lbl_80667EF0:
 	.4byte 0x00000000
 .endobj "@etb_8001C830"
 
-# 0x8003437C - 0x80034430
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8003437C", local

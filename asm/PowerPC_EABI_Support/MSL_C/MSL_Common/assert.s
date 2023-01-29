@@ -26,8 +26,8 @@
 /* 802BDCC4 00287284  4E 80 00 20 */	blr
 .endfn __msl_assertion_failed
 
-# 0x8050CFF8 - 0x8050D020
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050CFF8
 lbl_8050CFF8:

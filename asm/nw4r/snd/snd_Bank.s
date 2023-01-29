@@ -179,8 +179,8 @@
 /* 804119EC 003DAFAC  4E 80 00 20 */	blr
 .endfn NoteOn__Q44nw4r3snd6detail4BankCFRCQ44nw4r3snd6detail10NoteOnInfo
 
-# 0x8066C6B8 - 0x8066C6D8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C6B8
 lbl_8066C6B8:

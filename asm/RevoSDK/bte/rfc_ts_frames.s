@@ -1591,8 +1591,8 @@
 /* 803026D8 002CBC98  4E 80 00 20 */	blr
 .endfn rfc_process_mx_message
 
-# 0x80548D98 - 0x80548E70
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80548D98
 lbl_80548D98:
@@ -1651,8 +1651,8 @@ lbl_80548D98:
 	.4byte 0x6672616D
 	.4byte 0x65000000
 
-# 0x80665958 - 0x80665968
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665958
 lbl_80665958:

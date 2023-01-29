@@ -1368,8 +1368,8 @@
 /* 8022E884 001F7E44  4E 80 00 20 */	blr
 .endfn func_8022E868
 
-# 0x80505F40 - 0x80506128
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CPresentWin_typestr
@@ -1499,8 +1499,8 @@ lbl_80505F4C:
 	.4byte 0x5F747970
 	.4byte 0x65320000
 
-# 0x80539E90 - 0x80539F28
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CPresentWin
@@ -1547,8 +1547,8 @@ CPresentWin_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665188 - 0x80665190
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CPresentWin
@@ -1556,8 +1556,8 @@ __RTTI__CPresentWin:
 	.4byte CPresentWin_typestr
 	.4byte CPresentWin_hierarchy
 
-# 0x8066AEE0 - 0x8066AEF0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AEE0
 lbl_8066AEE0:
@@ -1570,8 +1570,8 @@ lbl_8066AEE8:
 lbl_8066AEEC:
 	.4byte 0x3F800000
 
-# 0x8001575C - 0x800157D4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001575C", local
@@ -1664,8 +1664,8 @@ lbl_8066AEEC:
 	.4byte 0x00000000
 .endobj "@etb_800157CC"
 
-# 0x8002E67C - 0x8002E730
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002E67C", local

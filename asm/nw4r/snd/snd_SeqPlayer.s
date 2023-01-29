@@ -1543,8 +1543,8 @@
 /* 8041ABB8 003E4178  4B FF EC E4 */	b __dt__Q44nw4r3snd6detail9SeqPlayerFv
 .endfn _192___dt__Q44nw4r3snd6detail9SeqPlayerFv
 
-# 0x8056E3D8 - 0x8056E440
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E3D8
 lbl_8056E3D8:
@@ -1575,15 +1575,15 @@ lbl_8056E3D8:
 	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte 0x00000000
 
-# 0x8063B4C0 - 0x8063B4E0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8063B4C0
 lbl_8063B4C0:
 	.skip 0x20
 
-# 0x8066C800 - 0x8066C818
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C800
 lbl_8066C800:

@@ -677,8 +677,8 @@
 /* 802FED80 002C8340  4E 80 00 20 */	blr
 .endfn rfc_save_lcid_mcb
 
-# 0x80548678 - 0x805487B8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80548678
 lbl_80548678:
@@ -763,8 +763,8 @@ lbl_80548678:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x805C32A8 - 0x805C36C0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805C32A8
 lbl_805C32A8:

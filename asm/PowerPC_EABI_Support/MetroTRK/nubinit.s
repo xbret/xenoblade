@@ -108,8 +108,8 @@
 /* 802CC938 00295EF8  4E 80 00 20 */	blr
 .endfn TRKInitializeEndian
 
-# 0x8053FE88 - 0x8053FEA8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .obj "@stringBase0", local
@@ -124,8 +124,8 @@
 .endobj "@stringBase0"
 	.byte 0x00, 0x00, 0x00
 
-# 0x80667580 - 0x80667590
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667580
 lbl_80667580:

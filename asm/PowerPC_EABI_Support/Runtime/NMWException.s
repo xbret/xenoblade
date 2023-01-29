@@ -456,8 +456,8 @@
 /* 802B9CEC 002832AC  4E 80 00 20 */	blr
 .endfn __destroy_new_array
 
-# 0x80665858 - 0x80665868
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__std_exception
@@ -469,8 +469,8 @@ lbl_80665860:
 	.4byte dthandler__3stdFv
 	.4byte 0x00000000
 
-# 0x8001BEE8 - 0x8001BF30
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001BEE8", local
@@ -511,8 +511,8 @@ lbl_80665860:
 	.4byte 0x00000000
 .endobj "@etb_8001BF28"
 
-# 0x80033A7C - 0x80033AB8
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033A7C", local

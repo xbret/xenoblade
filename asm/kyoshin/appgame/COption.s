@@ -2765,13 +2765,13 @@
 /* 8029E7E0 00267DA0  4B FF 82 24 */	b func_80296A04
 .endfn sinit_8029E7D8
 
-# 0x804F59D4 - 0x804F59D8
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8029E7D8
 
-# 0x8050B9C8 - 0x8050BB20
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050B9C8
 lbl_8050B9C8:
@@ -2862,8 +2862,8 @@ lbl_8050B9C8:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8053CAF0 - 0x8053CF10
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053CAF0
 lbl_8053CAF0:
@@ -3156,15 +3156,15 @@ CCur19_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8057AA08 - 0x8057AA48
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057AA08
 lbl_8057AA08:
 	.skip 0x40
 
-# 0x80665558 - 0x80665568
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__COption
@@ -3177,8 +3177,8 @@ __RTTI__CCur19:
 	.4byte CCur19_typestr
 	.4byte CCur19_hierarchy
 
-# 0x8066B4B8 - 0x8066B4D8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B4B8
 lbl_8066B4B8:
@@ -3203,8 +3203,8 @@ CCur19_typestr:
 	.4byte 0x43437572
 	.4byte 0x31390000
 
-# 0x8001A338 - 0x8001A5AC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001A338", local
@@ -3500,8 +3500,8 @@ CCur19_typestr:
 	.4byte func_8045F8C8
 .endobj "@etb_8001A594"
 
-# 0x80032294 - 0x8003242C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80032294", local

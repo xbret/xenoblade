@@ -409,8 +409,8 @@
 /* 80124B7C 000EE13C  4E 80 00 20 */	blr
 .endfn func_80124B78
 
-# 0x804FA7D8 - 0x804FA7F8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CSysWinSelect_typestr
@@ -427,8 +427,8 @@ CSystemWindow_typestr:
 	.4byte 0x696E646F
 	.4byte 0x77000000
 
-# 0x80530A48 - 0x80530C48
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CSysWinSelect
@@ -571,8 +571,8 @@ CSystemWindow_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806647D0 - 0x806647E0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CSysWinSelect
@@ -585,8 +585,8 @@ __RTTI__CSystemWindow:
 	.4byte CSystemWindow_typestr
 	.4byte CSystemWindow_hierarchy
 
-# 0x806668D0 - 0x806668D8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806668D0
 lbl_806668D0:
@@ -595,8 +595,8 @@ lbl_806668D0:
 lbl_806668D4:
 	.skip 0x4
 
-# 0x8000BDB4 - 0x8000BE54
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000BDB4", local
@@ -667,8 +667,8 @@ lbl_806668D4:
 	.4byte 0x00000000
 .endobj "@etb_8000BE4C"
 
-# 0x8002705C - 0x800270B0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002705C", local

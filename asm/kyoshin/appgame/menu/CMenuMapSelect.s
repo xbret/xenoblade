@@ -1023,8 +1023,8 @@
 /* 802430A8 0020C668  4B FF E3 C4 */	b func_8024146C
 .endfn func_802430A4
 
-# 0x80506B88 - 0x80506BA8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuMapSelect_typestr
@@ -1040,8 +1040,8 @@ lbl_80506B98:
 	.4byte 0x6E616D65
 	.4byte 0x00000000
 
-# 0x8053A4E0 - 0x8053A550
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMenuMapSelect
@@ -1078,8 +1078,8 @@ CMenuMapSelect_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806651D0 - 0x806651D8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuMapSelect
@@ -1087,8 +1087,8 @@ __RTTI__CMenuMapSelect:
 	.4byte CMenuMapSelect_typestr
 	.4byte CMenuMapSelect_hierarchy
 
-# 0x8066AFE0 - 0x8066AFF0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AFE0
 lbl_8066AFE0:
@@ -1101,8 +1101,8 @@ lbl_8066AFE8:
 	.4byte 0x41200000
 	.4byte 0x00000000
 
-# 0x80016290 - 0x80016320
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80016290", local
@@ -1157,8 +1157,8 @@ lbl_8066AFE8:
 	.4byte 0x00000000
 .endobj "@etb_80016318"
 
-# 0x8002F150 - 0x8002F180
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002F150", local

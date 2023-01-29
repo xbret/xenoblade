@@ -214,8 +214,8 @@
 /* 802BA028 002835E8  4E 80 00 20 */	blr
 .endfn what__Q23std8bad_castCFv
 
-# 0x8050CE00 - 0x8050CE78
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global std_exception_typestr
@@ -258,8 +258,8 @@ lbl_8050CE30:
 	.4byte 0x5F636173
 	.4byte 0x74212100
 
-# 0x8053F040 - 0x8053F068
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 # std::bad_cast::__vtable
@@ -281,8 +281,8 @@ lbl_8053F05C:
 	.4byte 0x63617374
 	.4byte 0x00000000
 
-# 0x80665868 - 0x80665870
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 # std::bad_cast::__RTTI
@@ -291,8 +291,8 @@ __RTTI__Q23std8bad_cast:
 	.4byte std_bad_cast_typestr
 	.4byte std_bad_cast_hierarchy
 
-# 0x8001BF30 - 0x8001BF40
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001BF30", local
@@ -307,8 +307,8 @@ __RTTI__Q23std8bad_cast:
 	.4byte 0x00000000
 .endobj "@etb_8001BF38"
 
-# 0x80033AB8 - 0x80033AD0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033AB8", local

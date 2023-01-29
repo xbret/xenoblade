@@ -429,8 +429,8 @@
 /* 802A4E44 0026E404  4E 80 00 20 */	blr
 .endfn func_802A4E40
 
-# 0x8050BD18 - 0x8050BD38
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CVS_THREAD_BATTLE_END_typestr
@@ -444,8 +444,8 @@ cf_CVS_THREAD_BATTLE_END_typestr:
 	.4byte 0x44000000
 	.4byte 0x00000000
 
-# 0x8053D0E8 - 0x8053D170
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053D0E8
 lbl_8053D0E8:
@@ -500,8 +500,8 @@ cf_CVS_THREAD_BATTLE_END_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806655C0 - 0x806655D8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806655C0
 lbl_806655C0:
@@ -517,8 +517,8 @@ __RTTI__cf_CVS_THREAD_BATTLE_END:
 	.4byte cf_CVS_THREAD_BATTLE_END_typestr
 	.4byte cf_CVS_THREAD_BATTLE_END_hierarchy
 
-# 0x8001AAF8 - 0x8001AB44
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001AAF8", local
@@ -560,8 +560,8 @@ __RTTI__cf_CVS_THREAD_BATTLE_END:
 	.4byte 0x00000000
 .endobj "@etb_8001AB3C"
 
-# 0x800329E4 - 0x80032A20
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800329E4", local

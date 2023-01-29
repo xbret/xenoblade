@@ -1487,8 +1487,8 @@
 .endfn IUSB_WriteCtrlMsgAsync
 /* 80363F2C 0032D4EC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8055F270 - 0x8055FAA0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8055F270
 lbl_8055F270:
@@ -2017,8 +2017,8 @@ lbl_8055F270:
 	.4byte 0x733A2025
 	.4byte 0x640A0000
 
-# 0x80665CF0 - 0x80665D00
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665CF0
 lbl_80665CF0:
@@ -2031,8 +2031,8 @@ lbl_80665CF8:
 	.4byte 0x5553423A
 	.4byte 0x20000000
 
-# 0x80667B88 - 0x80667B98
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667B88
 lbl_80667B88:

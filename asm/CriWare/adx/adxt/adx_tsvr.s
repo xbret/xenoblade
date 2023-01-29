@@ -1119,8 +1119,8 @@
 /* 8038571C 0034ECDC  4E 80 00 20 */	blr
 .endfn adxt_ExecHndl
 
-# 0x8051A120 - 0x8051A1B8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051A120
 lbl_8051A120:
@@ -1163,8 +1163,8 @@ lbl_8051A120:
 	.4byte 0x72000000
 	.4byte 0x00000000
 
-# 0x805E85F0 - 0x805E8600
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805E85F0
 lbl_805E85F0:

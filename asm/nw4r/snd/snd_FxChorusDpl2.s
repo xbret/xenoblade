@@ -438,8 +438,8 @@
 /* 80415FAC 003DF56C  4E 80 00 20 */	blr
 .endfn OnChangeOutputMode__Q34nw4r3snd12FxChorusDpl2Fv
 
-# 0x8056E078 - 0x8056E0A0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E078
 lbl_8056E078:
@@ -454,8 +454,8 @@ lbl_8056E078:
 	.4byte ReleaseWorkBuffer__Q34nw4r3snd12FxChorusDpl2Fv
 	.4byte 0x00000000
 
-# 0x8066C760 - 0x8066C780
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C760
 lbl_8066C760:

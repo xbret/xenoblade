@@ -504,8 +504,8 @@
 /* 804219C4 003EAF84  4E 80 00 20 */	blr
 .endfn FrameProcess__Q44nw4r3snd6detail11SoundThreadFv
 
-# 0x80652C40 - 0x80653000
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80652C40
 lbl_80652C40:
@@ -514,8 +514,8 @@ lbl_80652C40:
 lbl_80652C50:
 	.skip 0x3B0
 
-# 0x80667DF0 - 0x80667DF8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667DF0
 lbl_80667DF0:

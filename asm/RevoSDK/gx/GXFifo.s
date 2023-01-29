@@ -854,8 +854,8 @@
 /* 8031922C 002E27EC  4E 80 00 20 */	blr
 .endfn __GXCleanGPFifo
 
-# 0x8054B8C0 - 0x8054B8F0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054B8C0
 lbl_8054B8C0:
@@ -874,8 +874,8 @@ lbl_8054B8D8:
 	.4byte 0x25303858
 	.4byte 0x0A000000
 
-# 0x805CD560 - 0x805CD5A8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805CD560
 lbl_805CD560:
@@ -884,8 +884,8 @@ lbl_805CD560:
 lbl_805CD584:
 	.skip 0x24
 
-# 0x80667930 - 0x80667950
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667930
 lbl_80667930:

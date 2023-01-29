@@ -6996,13 +6996,13 @@
 /* 8023BCEC 002052AC  4E 80 00 20 */	blr
 .endfn sinit_8023BC8C
 
-# 0x804F59B0 - 0x804F59B4
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8023BC8C
 
-# 0x80506700 - 0x80506B40
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CArtsInfo_typestr
@@ -7283,8 +7283,8 @@ CArtsInfo_stringpool:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8053A158 - 0x8053A2D8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8053A158:
@@ -7393,8 +7393,8 @@ CArtsInfo_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806651B0 - 0x806651B8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CArtsInfo
@@ -7402,8 +7402,8 @@ __RTTI__CArtsInfo:
 	.4byte CArtsInfo_typestr
 	.4byte CArtsInfo_hierarchy
 
-# 0x80667038 - 0x80667058
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667038
 lbl_80667038:
@@ -7418,8 +7418,8 @@ lbl_80667048:
 lbl_80667050:
 	.skip 0x8
 
-# 0x8066AF40 - 0x8066AF90
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AF40
 lbl_8066AF40:
@@ -7472,8 +7472,8 @@ lbl_8066AF88:
 	.4byte 0x43EE0000
 	.4byte 0x00000000
 
-# 0x80015D20 - 0x80015FE4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80015D20", local
@@ -7969,8 +7969,8 @@ lbl_8066AF88:
 	.4byte 0x00000000
 .endobj "@etb_80015FDC"
 
-# 0x8002EBA4 - 0x8002EF58
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002EBA4", local

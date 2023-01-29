@@ -184,8 +184,8 @@
 /* 802C7A50 00291010  4E 80 00 20 */	blr
 .endfn __ieee754_atan2
 
-# 0x8066B9B0 - 0x8066BA08
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@68", local

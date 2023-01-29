@@ -385,8 +385,8 @@
 /* 8005A3F8 000239B8  4E 80 00 20 */	blr
 .endfn func_8005A374
 
-# 0x804F6908 - 0x804F6968
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CTimeLightGrp_typestr
@@ -425,8 +425,8 @@ _reslist_base_CVirtualLightObj_typestr:
 	.4byte 0x626A202A
 	.4byte 0x3E000000
 
-# 0x80529C48 - 0x80529C88
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CTimeLightGrp
@@ -460,8 +460,8 @@ __vt___reslist_base_CVirtualLightObj:
 	.4byte func_8005A07C
 	.4byte 0x00000000
 
-# 0x806642D8 - 0x806642F8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CTimeLightGrp
@@ -484,16 +484,16 @@ __RTTI___reslist_base_CVirtualLightObj:
 	.4byte _reslist_base_CVirtualLightObj_typestr
 	.4byte 0x00000000
 
-# 0x806688C8 - 0x806688D0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_806688C8
 lbl_806688C8:
 	.4byte 0x3F800000
 	.4byte 0x00000000
 
-# 0x80007794 - 0x800077EC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80007794", local
@@ -546,8 +546,8 @@ lbl_806688C8:
 	.4byte 0x00000000
 .endobj "@etb_800077E4"
 
-# 0x8002279C - 0x800227F0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002279C", local

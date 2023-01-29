@@ -479,13 +479,13 @@
 /* 804012B8 003CA878  4E 80 00 20 */	blr
 .endfn sinit_804012B0
 
-# 0x804F5A08 - 0x804F5A0C
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_804012B0
 
-# 0x8056D298 - 0x8056D310
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056D298
 lbl_8056D298:
@@ -520,15 +520,15 @@ lbl_8056D298:
 	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte Append__Q34nw4r3lyt7PictureFRCQ34nw4r3lyt6TexMap
 
-# 0x80667D60 - 0x80667D68
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667D60
 lbl_80667D60:
 	.skip 0x8
 
-# 0x8066C560 - 0x8066C568
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C560
 lbl_8066C560:

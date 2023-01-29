@@ -2719,8 +2719,8 @@
 /* 802C1108 0028A6C8  4E 80 00 20 */	blr
 .endfn sprintf
 
-# 0x8050D020 - 0x8050DB88
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050D020
 lbl_8050D020:
@@ -3488,8 +3488,8 @@ __wupper_mapC:
 	.4byte 0x00FC00FD
 	.4byte 0x00FE00FF
 
-# 0x8053F398 - 0x8053F7C0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053F398
 lbl_8053F398:
@@ -3785,8 +3785,8 @@ jumptable_8053F590:
 	.rel __pformatter, .L_802C05E4
 .endobj "@2934"
 
-# 0x80665878 - 0x80665880
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .obj "@wstringBase0", local
@@ -3795,8 +3795,8 @@ jumptable_8053F590:
 	.4byte 0x00000000
 	.2byte 0x0000
 
-# 0x8066B858 - 0x8066B878
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B858
 lbl_8066B858:

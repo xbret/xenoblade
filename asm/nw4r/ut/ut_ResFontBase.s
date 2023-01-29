@@ -735,8 +735,8 @@
 /* 8042C924 003F5EE4  4E 80 00 20 */	blr
 .endfn GetGlyphFromIndex__Q44nw4r2ut6detail11ResFontBaseCFPQ34nw4r2ut5GlyphUs
 
-# 0x8056E740 - 0x8056E808
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E740
 lbl_8056E740:

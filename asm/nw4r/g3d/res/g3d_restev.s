@@ -634,8 +634,8 @@
 /* 803DB77C 003A4D3C  4B F7 88 C4 */	b DCStoreRangeNoSync
 .endfn DCStore__Q34nw4r3g3d6ResTevFb
 
-# 0x80520DB8 - 0x80520E18
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520DB8
 lbl_80520DB8:
@@ -666,8 +666,8 @@ lbl_80520DD8:
 	.4byte 0x000001E0
 	.4byte 0x000001E0
 
-# 0x8056C9A0 - 0x8056C9C0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056C9A0
 lbl_8056C9A0:

@@ -298,8 +298,8 @@
 .endfn OSTicksToCalendarTime
 /* 8035CD8C 0032634C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80552D58 - 0x80552DB8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80552D58
 lbl_80552D58:

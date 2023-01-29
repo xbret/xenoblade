@@ -334,8 +334,8 @@
 /* 802E1568 002AAB28  4E 80 00 20 */	blr
 .endfn BTA_DmSendHciReset
 
-# 0x8066BF50 - 0x8066BF60
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BF50
 lbl_8066BF50:

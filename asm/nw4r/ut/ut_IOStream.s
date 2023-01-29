@@ -30,7 +30,7 @@
 /* 8042BDF8 003F53B8  4E 80 00 20 */	blr
 .endfn sinit_8042BDF0
 
-# 0x804F5A30 - 0x804F5A34
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8042BDF0

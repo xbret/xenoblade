@@ -3564,8 +3564,8 @@
 /* 8044D81C 00416DDC  4E 80 00 20 */	blr
 .endfn func_8044D818
 
-# 0x8065A6F8 - 0x8065A780
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8065A6F8
 lbl_8065A6F8:
@@ -3574,8 +3574,8 @@ lbl_8065A6F8:
 lbl_8065A73C:
 	.skip 0x44
 
-# 0x80667F30 - 0x80667F38
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667F30
 lbl_80667F30:
@@ -3584,8 +3584,8 @@ lbl_80667F30:
 lbl_80667F34:
 	.skip 0x4
 
-# 0x8001CC10 - 0x8001CCD8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001CC10", local
@@ -3738,8 +3738,8 @@ lbl_80667F34:
 	.4byte 0x00000000
 .endobj "@etb_8001CCD0"
 
-# 0x8003482C - 0x80034958
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8003482C", local

@@ -3039,8 +3039,8 @@
 /* 801FBDC4 001C5384  4B FF D5 C8 */	b func_801F938C
 .endfn func_801FBDC0
 
-# 0x805033D0 - 0x80503428
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805033D0
 lbl_805033D0:
@@ -3072,8 +3072,8 @@ lbl_805033EC:
 	.4byte 0x6D000000
 	.4byte 0x00000000
 
-# 0x80538A40 - 0x80538B48
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_80538A40:
@@ -3150,8 +3150,8 @@ CPartyStateWin_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665010 - 0x80665018
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CPartyStateWin
@@ -3159,8 +3159,8 @@ __RTTI__CPartyStateWin:
 	.4byte CPartyStateWin_typestr
 	.4byte CPartyStateWin_hierarchy
 
-# 0x8066AA98 - 0x8066AAA8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AA98
 lbl_8066AA98:
@@ -3175,8 +3175,8 @@ lbl_8066AAA0:
 lbl_8066AAA4:
 	.4byte 0x10121113
 
-# 0x80012460 - 0x800126F8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80012460", local
@@ -3485,8 +3485,8 @@ lbl_8066AAA4:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 .endobj "@etb_800126E0"
 
-# 0x8002C5D0 - 0x8002C774
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002C5D0", local

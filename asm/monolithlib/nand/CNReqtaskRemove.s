@@ -88,13 +88,13 @@
 /* 804DB344 004A4904  4E 80 00 20 */	blr
 .endfn sinit_804DB330
 
-# 0x804F5ADC - 0x804F5AE0
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_804DB330
 
-# 0x80527F38 - 0x80527F48
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CNReqtaskRemove_typestr
@@ -104,8 +104,8 @@ CNReqtaskRemove_typestr:
 	.4byte 0x6B52656D
 	.4byte 0x6F766500
 
-# 0x80573610 - 0x80573630
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CNReqtaskRemove
@@ -122,8 +122,8 @@ CNReqtaskRemove_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806664C0 - 0x806664C8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CNReqtaskRemove
@@ -131,15 +131,15 @@ __RTTI__CNReqtaskRemove:
 	.4byte CNReqtaskRemove_typestr
 	.4byte CNReqtaskRemove_hierarchy
 
-# 0x806682D0 - 0x806682D8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806682D0
 lbl_806682D0:
 	.skip 0x8
 
-# 0x80020780 - 0x80020790
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020780", local
@@ -154,8 +154,8 @@ lbl_806682D0:
 	.4byte 0x00000000
 .endobj "@etb_80020788"
 
-# 0x8003878C - 0x800387A4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8003878C", local

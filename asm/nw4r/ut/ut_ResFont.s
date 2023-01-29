@@ -233,8 +233,8 @@
 /* 8042CC28 003F61E8  4E 80 00 20 */	blr
 .endfn Rebuild__Q34nw4r2ut7ResFontFPQ34nw4r2ut16BinaryFileHeader
 
-# 0x8056E808 - 0x8056E868
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E808
 lbl_8056E808:

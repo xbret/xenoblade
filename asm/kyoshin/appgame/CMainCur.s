@@ -3114,8 +3114,8 @@
 /* 8010201C 000CB5DC  4B FF CD 4C */	b func_800FED68
 .endfn func_80102018
 
-# 0x806697D8 - 0x806697F0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_806697D8
 lbl_806697D8:
@@ -3133,8 +3133,8 @@ IUICf_typestr:
 	.4byte 0x49554943
 	.4byte 0x66000000
 
-# 0x8000AE84 - 0x8000AF14
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000AE84", local
@@ -3229,8 +3229,8 @@ IUICf_typestr:
 	.4byte 0x00000000
 .endobj "@etb_8000AF0C"
 
-# 0x800266B4 - 0x8002675C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800266B4", local

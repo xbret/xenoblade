@@ -2786,8 +2786,8 @@
 /* 80166700 0012FCC0  4B FF DC 14 */	b func_80164314
 .endfn func_801666FC
 
-# 0x804FDD20 - 0x804FE850
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804FDD20
 lbl_804FDD20:
@@ -3902,8 +3902,8 @@ lbl_804FE838:
 	.4byte 0x63640000
 	.4byte 0x00000000
 
-# 0x80533AD0 - 0x80534180
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80533AD0
 lbl_80533AD0:
@@ -4354,8 +4354,8 @@ CTTask_cf_CTaskREvent_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664C78 - 0x80664C90
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80664C78
 lbl_80664C78:
@@ -4374,8 +4374,8 @@ __RTTI__CTTask_cf_CTaskREvent:
 	.4byte CTTask_cf_CTaskREvent_typestr
 	.4byte CTTask_cf_CTaskREvent_hierarchy
 
-# 0x80666B30 - 0x80666B40
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666B30
 lbl_80666B30:
@@ -4387,8 +4387,8 @@ lbl_80666B34:
 lbl_80666B38:
 	.skip 0x8
 
-# 0x80669E48 - 0x80669F10
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669E48
 lbl_80669E48:
@@ -4497,8 +4497,8 @@ lbl_80669F08:
 	.4byte 0x47A60400
 	.4byte 0x00000000
 
-# 0x8000DAA0 - 0x8000DD00
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000DAA0", local
@@ -4769,8 +4769,8 @@ lbl_80669F08:
 	.4byte 0x00000000
 .endobj "@etb_8000DCF8"
 
-# 0x80028BC8 - 0x80028D24
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80028BC8", local

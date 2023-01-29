@@ -262,8 +262,8 @@
 /* 803140EC 002DD6AC  4E 80 00 20 */	blr
 .endfn WriteUARTN
 
-# 0x806678C8 - 0x806678D8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806678C8
 lbl_806678C8:
@@ -278,8 +278,8 @@ lbl_806678D0:
 lbl_806678D4:
 	.skip 0x4
 
-# 0x8066BF98 - 0x8066BFA0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BF98
 lbl_8066BF98:

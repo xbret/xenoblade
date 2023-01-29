@@ -667,8 +667,8 @@
 .endfn OSResetSystem
 /* 8035A7FC 00323DBC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80552AF0 - 0x80552D58
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .obj "@2083", local
@@ -839,8 +839,8 @@ lbl_80552AFC:
 	.4byte 0x00000000
 	.byte 0x00
 
-# 0x80667AB8 - 0x80667AC8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667AB8
 lbl_80667AB8:

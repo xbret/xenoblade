@@ -43,8 +43,8 @@
 __destroy_global_chain_reference:
 	.4byte __destroy_global_chain
 
-# 0x80667520 - 0x80667524
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 .global __global_destructor_chain

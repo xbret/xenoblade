@@ -356,8 +356,8 @@
 /* 802A9B88 00273148  4E 80 00 20 */	blr
 .endfn func_802A9B84
 
-# 0x8050BE70 - 0x8050BE90
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CVS_THREAD_VISION_TELL_typestr
@@ -371,8 +371,8 @@ cf_CVS_THREAD_VISION_TELL_typestr:
 	.4byte 0x4C4C0000
 	.4byte 0x00000000
 
-# 0x8053D540 - 0x8053D590
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053D540
 lbl_8053D540:
@@ -407,8 +407,8 @@ cf_CVS_THREAD_VISION_TELL_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665650 - 0x80665668
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665650
 lbl_80665650:
@@ -424,8 +424,8 @@ __RTTI__cf_CVS_THREAD_VISION_TELL:
 	.4byte cf_CVS_THREAD_VISION_TELL_typestr
 	.4byte cf_CVS_THREAD_VISION_TELL_hierarchy
 
-# 0x8001AF74 - 0x8001AFC0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001AF74", local
@@ -467,8 +467,8 @@ __RTTI__cf_CVS_THREAD_VISION_TELL:
 	.4byte 0x00000000
 .endobj "@etb_8001AFB8"
 
-# 0x80032DE0 - 0x80032E1C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80032DE0", local

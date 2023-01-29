@@ -29,8 +29,8 @@
 /* 802C7230 002907F0  4E 80 00 20 */	blr
 .endfn __msl_runtime_constraint_violation_s
 
-# 0x80667540 - 0x80667550
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667540
 lbl_80667540:

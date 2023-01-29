@@ -220,8 +220,8 @@
 /* 8040AFFC 003D45BC  4E 80 00 20 */	blr
 .endfn Atan2FIdx__Q24nw4r4mathFff
 
-# 0x80521110 - 0x80522120
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80521110
 lbl_80521110:
@@ -1254,8 +1254,8 @@ lbl_80521110:
 	.4byte 0x3CC90A35
 	.4byte 0xB99DCF89
 
-# 0x8056DEC0 - 0x8056DFC8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056DEC0
 lbl_8056DEC0:
@@ -1326,8 +1326,8 @@ lbl_8056DEC0:
 	.4byte 0x42000000
 	.4byte 0x3F207467
 
-# 0x8066C620 - 0x8066C640
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C620
 lbl_8066C620:

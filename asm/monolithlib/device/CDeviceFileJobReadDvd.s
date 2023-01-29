@@ -275,8 +275,8 @@
 /* 80452298 0041B858  4E 80 00 20 */	blr
 .endfn func_80452254
 
-# 0x80526668 - 0x80526680
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CDeviceFileJobReadDvd_typestr
@@ -288,8 +288,8 @@ CDeviceFileJobReadDvd_typestr:
 	.4byte 0x61644476
 	.4byte 0x64000000
 
-# 0x8056FDE0 - 0x8056FEA8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CDeviceFileJobReadDvd
@@ -348,8 +348,8 @@ CDeviceFileJobReadDvd_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80666018 - 0x80666020
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CDeviceFileJobReadDvd
@@ -357,8 +357,8 @@ __RTTI__CDeviceFileJobReadDvd:
 	.4byte CDeviceFileJobReadDvd_typestr
 	.4byte CDeviceFileJobReadDvd_hierarchy
 
-# 0x8001CFAC - 0x8001CFEC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001CFAC", local
@@ -409,8 +409,8 @@ __RTTI__CDeviceFileJobReadDvd:
 	.4byte 0x00000000
 .endobj "@etb_8001CFE4"
 
-# 0x80034C7C - 0x80034CDC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034C7C", local

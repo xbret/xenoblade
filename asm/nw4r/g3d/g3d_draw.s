@@ -2160,8 +2160,8 @@
 /* 803F0FF8 003BA5B8  4E 80 00 20 */	blr
 .endfn __sort132_RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_PQ54nw4r3g3d6detail7workmem4MdlZ___3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZRPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v
 
-# 0x80665DA8 - 0x80665DB0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665DA8
 lbl_80665DA8:
@@ -2170,8 +2170,8 @@ lbl_80665DA8:
 lbl_80665DAC:
 	.4byte 0xFFFFFFFC
 
-# 0x8066C448 - 0x8066C458
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C448
 lbl_8066C448:

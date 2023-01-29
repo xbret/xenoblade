@@ -1781,8 +1781,8 @@
 /* 803159E8 002DEFA8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803159EC 002DEFAC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8054B610 - 0x8054B658
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054B610
 lbl_8054B610:
@@ -1805,15 +1805,15 @@ lbl_8054B610:
 	.4byte 0x3529203E
 	.4byte 0x3E000000
 
-# 0x805CCE20 - 0x805CCEE0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 Ecb:
 	.skip 0xC0
 
-# 0x806659D8 - 0x806659E0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __EXIVersion
@@ -1821,8 +1821,8 @@ __EXIVersion:
 	.4byte lbl_8054B610
 	.4byte 0x00000000
 
-# 0x806678D8 - 0x806678E0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 IDSerialPort1:

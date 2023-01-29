@@ -6914,13 +6914,13 @@
 /* 80221E68 001EB428  4B FF A7 2C */	b func_8021C594
 .endfn func_80221E64
 
-# 0x804F59A8 - 0x804F59AC
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80221DDC
 
-# 0x805047F0 - 0x80504920
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805047F0
 lbl_805047F0:
@@ -7006,8 +7006,8 @@ lbl_80504814:
 	.4byte 0x72630000
 	.4byte 0x00000000
 
-# 0x80539548 - 0x80539700
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80539548
 lbl_80539548:
@@ -7132,8 +7132,8 @@ CModelDispMakeCrystal_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80579E50 - 0x80579E68
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80579E50
 lbl_80579E50:
@@ -7142,8 +7142,8 @@ lbl_80579E50:
 lbl_80579E5C:
 	.skip 0xC
 
-# 0x806650E0 - 0x806650E8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CModelDispMakeCrystal
@@ -7151,15 +7151,15 @@ __RTTI__CModelDispMakeCrystal:
 	.4byte CModelDispMakeCrystal_typestr
 	.4byte CModelDispMakeCrystal_hierarchy
 
-# 0x80667008 - 0x80667010
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667008
 lbl_80667008:
 	.skip 0x8
 
-# 0x8066AD60 - 0x8066ADD8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AD60
 lbl_8066AD60:
@@ -7251,8 +7251,8 @@ lbl_8066ADD0:
 	.4byte 0xC1A00000
 	.4byte 0x00000000
 
-# 0x80013F30 - 0x80014DE8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80013F30", local
@@ -8477,8 +8477,8 @@ lbl_8066ADD0:
 	.4byte 0x00000000
 .endobj "@etb_80014DE0"
 
-# 0x8002D8CC - 0x8002DC14
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002D8CC", local

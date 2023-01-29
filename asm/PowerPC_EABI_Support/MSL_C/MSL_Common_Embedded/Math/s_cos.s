@@ -64,8 +64,8 @@
 /* 802CAC78 00294238  4E 80 00 20 */	blr
 .endfn cos
 
-# 0x8066BD50 - 0x8066BD58
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@23", local

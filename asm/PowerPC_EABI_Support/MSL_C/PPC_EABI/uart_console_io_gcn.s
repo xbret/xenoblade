@@ -68,8 +68,8 @@
 /* 802C71E4 002907A4  4E 80 00 20 */	blr
 .endfn __close_console
 
-# 0x80667534 - 0x80667540
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 4
 	.skip 0x4
 .global lbl_80667538

@@ -4144,13 +4144,13 @@
 /* 8010EA60 000D8020  4B FF CA 24 */	b func_8010B484
 .endfn func_8010EA5C
 
-# 0x804F5944 - 0x804F5948
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8010E9F8
 
-# 0x804F8F28 - 0x804F93B0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804F8F28
 lbl_804F8F28:
@@ -4453,8 +4453,8 @@ lbl_804F8F68:
 	.4byte 0x636F6E5F
 	.4byte 0x68000000
 
-# 0x8052FB00 - 0x8052FBFC
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMenuBattlePlayerState
@@ -4526,8 +4526,8 @@ CMenuBattlePlayerState_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664710 - 0x80664718
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuBattlePlayerState
@@ -4537,8 +4537,8 @@ __RTTI__CMenuBattlePlayerState:
 lbl_80664714:
 	.4byte CMenuBattlePlayerState_hierarchy
 
-# 0x80666828 - 0x80666848
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666828
 lbl_80666828:
@@ -4553,8 +4553,8 @@ lbl_80666838:
 lbl_80666840:
 	.skip 0x8
 
-# 0x80669858 - 0x806698B0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669858
 lbl_80669858:
@@ -4615,8 +4615,8 @@ lbl_806698A8:
 lbl_806698AC:
 	.4byte 0x41700000
 
-# 0x8000B1A4 - 0x8000B330
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000B1A4", local
@@ -4774,8 +4774,8 @@ lbl_806698AC:
 	.4byte 0x00000000
 .endobj "@etb_8000B328"
 
-# 0x80026990 - 0x80026A38
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80026990", local

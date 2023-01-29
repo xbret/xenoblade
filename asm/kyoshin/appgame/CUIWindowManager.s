@@ -6146,13 +6146,13 @@
 /* 801414C8 0010AA88  4E 80 00 20 */	blr
 .endfn func_8014148C
 
-# 0x804F5958 - 0x804F595C
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_801413F8
 
-# 0x804FC110 - 0x804FC5A8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CUIWindowManager_typestr
@@ -6475,8 +6475,8 @@ lbl_804FC280:
 	.4byte 0x6174655F
 	.4byte 0x42340000
 
-# 0x80531D70 - 0x80531EC0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CUIWindowManager
@@ -6596,8 +6596,8 @@ CTTask_CUIWindowManager_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80577448 - 0x80577580
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80577448
 lbl_80577448:
@@ -6606,8 +6606,8 @@ lbl_80577448:
 lbl_80577510:
 	.skip 0x70
 
-# 0x80664AF0 - 0x80664B20
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CUIWindowManager
@@ -6640,8 +6640,8 @@ __RTTI__CTTask_CUIWindowManager:
 	.4byte CTTask_CUIWindowManager_typestr
 	.4byte CTTask_CUIWindowManager_hierarchy
 
-# 0x80666978 - 0x80666980
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666978
 lbl_80666978:
@@ -6650,8 +6650,8 @@ lbl_80666978:
 lbl_8066697C:
 	.skip 0x4
 
-# 0x8000CB50 - 0x8000CD8C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000CB50", local
@@ -7033,8 +7033,8 @@ lbl_8066697C:
 	.4byte 0x00000000
 .endobj "@etb_8000CD84"
 
-# 0x80027DDC - 0x800280A0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80027DDC", local

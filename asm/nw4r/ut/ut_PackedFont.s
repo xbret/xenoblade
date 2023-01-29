@@ -1433,8 +1433,8 @@
 /* 8042EEDC 003F849C  4E 80 00 20 */	blr
 .endfn ConstructOpPrepairCopyPackedSheet__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 
-# 0x8056E8C8 - 0x8056E958
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8056E8C8:
@@ -1477,8 +1477,8 @@ lbl_8056E8FC:
 	.4byte HasGlyph__Q44nw4r2ut6detail15ArchiveFontBaseCFUs
 	.4byte GetEncoding__Q44nw4r2ut6detail11ResFontBaseCFv
 
-# 0x8066C938 - 0x8066C940
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C938
 lbl_8066C938:

@@ -492,8 +492,8 @@
 .endfn hcisu_h2_handle_event
 /* 802DD15C 002A671C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80543F60 - 0x80543FD0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80543F60
 lbl_80543F60:
@@ -528,15 +528,15 @@ lbl_80543F9C:
 	.4byte 0x652E0000
 	.4byte 0x00000000
 
-# 0x805BBC20 - 0x805BBC60
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805BBC20
 lbl_805BBC20:
 	.skip 0x40
 
-# 0x8066BF30 - 0x8066BF40
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BF30
 lbl_8066BF30:

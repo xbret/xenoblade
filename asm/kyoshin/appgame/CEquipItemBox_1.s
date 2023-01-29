@@ -8857,13 +8857,13 @@
 /* 8028DCA8 00257268  4E 80 00 20 */	blr
 .endfn sinit_8028DAB0
 
-# 0x804F59C4 - 0x804F59C8
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8028DAB0
 
-# 0x8050A5FC - 0x8050AE18
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 4
 .global lbl_8050A5FC
 lbl_8050A5FC:
@@ -9399,8 +9399,8 @@ lbl_8050A654:
 	.4byte 0x6C000000
 	.4byte 0x00000000
 
-# 0x8053BD78 - 0x8053BEC8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8053BD78:
@@ -9508,8 +9508,8 @@ __vt__CEIBCur:
 	.4byte 0x00000000
 	.4byte func_80285994
 
-# 0x806653A0 - 0x806653B8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CEquipItemBox
@@ -9527,8 +9527,8 @@ __RTTI__CEIBCur:
 	.4byte CEIBCur_typestr
 	.4byte 0x00000000
 
-# 0x80667210 - 0x806672D8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667210
 lbl_80667210:
@@ -9606,8 +9606,8 @@ lbl_806672C8:
 lbl_806672D0:
 	.skip 0x8
 
-# 0x8066B3CC - 0x8066B410
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 4
 .global lbl_8066B3CC
 lbl_8066B3CC:
@@ -9660,8 +9660,8 @@ CEIBCur_typestr:
 	.4byte 0x43454942
 	.4byte 0x43757200
 
-# 0x80018E80 - 0x800192F8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80018E80", local
@@ -10186,8 +10186,8 @@ CEIBCur_typestr:
 	.4byte 0x00000000
 .endobj "@etb_800192F0"
 
-# 0x8003158C - 0x80031850
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8003158C", local

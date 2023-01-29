@@ -570,8 +570,8 @@
 /* 8035EFF8 003285B8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8035EFFC 003285BC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8055EEB8 - 0x8055EEF8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8055EEB8
 lbl_8055EEB8:
@@ -600,8 +600,8 @@ lbl_8055EEB8:
 .endobj "@1521"
 	.byte 0x00
 
-# 0x805D5500 - 0x805D5540
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global __OSExpireAlarm
@@ -609,8 +609,8 @@ __OSExpireAlarm:
 	.skip 0x30
 	.skip 0x10
 
-# 0x80665BB0 - 0x80665BB8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .obj "@1520", local
@@ -618,8 +618,8 @@ __OSExpireAlarm:
 	.4byte 0x72656400
 .endobj "@1520"
 
-# 0x80667B38 - 0x80667B50
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667B38
 lbl_80667B38:
@@ -638,8 +638,8 @@ __OSExpireCallback:
 __OSExpireTime:
 	.skip 0x8
 
-# 0x8066C1D8 - 0x8066C1E8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C1D8
 lbl_8066C1D8:

@@ -163,8 +163,8 @@
 /* 8045D350 00426910  4E 80 00 20 */	blr
 .endfn func_8045D300
 
-# 0x80570938 - 0x805709F0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CLibG3d
@@ -219,8 +219,8 @@ CLibG3d_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806660D8 - 0x806660E0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CLibG3d
@@ -228,15 +228,15 @@ __RTTI__CLibG3d:
 	.4byte CLibG3d_typestr
 	.4byte CLibG3d_hierarchy
 
-# 0x80667FC8 - 0x80667FD0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667FC8
 lbl_80667FC8:
 	.skip 0x8
 
-# 0x8066CCE8 - 0x8066CCF0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .global CLibG3d_typestr
@@ -244,8 +244,8 @@ CLibG3d_typestr:
 	.4byte 0x434C6962
 	.4byte 0x47336400
 
-# 0x8001D6E0 - 0x8001D700
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001D6E0", local
@@ -272,8 +272,8 @@ CLibG3d_typestr:
 	.4byte 0x00000000
 .endobj "@etb_8001D6F8"
 
-# 0x800352B8 - 0x800352E8
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800352B8", local

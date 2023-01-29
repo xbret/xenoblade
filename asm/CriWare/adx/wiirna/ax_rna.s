@@ -1888,8 +1888,8 @@
 /* 8039AA14 00363FD4  4E 80 00 20 */	blr
 .endfn func_8039A8E0
 
-# 0x8051C760 - 0x8051CCE0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051C760
 lbl_8051C760:
@@ -2250,8 +2250,8 @@ lbl_8051C790:
 	.4byte 0x0A000000
 	.4byte 0x00000000
 
-# 0x80569728 - 0x805697A8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global axrna_def_src_type
@@ -2291,8 +2291,8 @@ lbl_8056972C:
 	.4byte 0x0000007B
 	.4byte 0x0000007F
 
-# 0x805F61C0 - 0x805F7010
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global axrna_init_cnt

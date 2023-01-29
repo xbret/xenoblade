@@ -641,16 +641,16 @@
 /* 80367318 003308D8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8036731C 003308DC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80665D20 - 0x80665D28
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665D20
 lbl_80665D20:
 	.4byte 0x00000001
 	.4byte 0x00000000
 
-# 0x80667C48 - 0x80667C50
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667C48
 lbl_80667C48:

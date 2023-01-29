@@ -113,8 +113,8 @@
 /* 802DE1EC 002A77AC  4E 80 00 20 */	blr
 .endfn bta_usb_close_evt
 
-# 0x8050DF30 - 0x8050DFE8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050DF30
 lbl_8050DF30:
@@ -177,8 +177,8 @@ lbl_8050DFD8:
 	.4byte 0x04000000
 	.4byte 0x00000000
 
-# 0x805BE4A0 - 0x805BF4D0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805BE4A0
 lbl_805BE4A0:
@@ -190,8 +190,8 @@ lbl_805BED3E:
 lbl_805BF4A0:
 	.skip 0x30
 
-# 0x806658D8 - 0x80665920
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806658D8
 lbl_806658D8:
@@ -236,8 +236,8 @@ lbl_80665918:
 lbl_8066591C:
 	.4byte 0x00000001
 
-# 0x8066776C - 0x80667770
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 4
 .global lbl_8066776C
 lbl_8066776C:

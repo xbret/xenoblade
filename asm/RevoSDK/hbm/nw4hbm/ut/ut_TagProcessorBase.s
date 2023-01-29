@@ -767,16 +767,16 @@
 /* 80339BC8 00303188  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80339BCC 0030318C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80518B38 - 0x80518B40
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518B38
 lbl_80518B38:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x8054EE70 - 0x8054EEF8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__8054EE70

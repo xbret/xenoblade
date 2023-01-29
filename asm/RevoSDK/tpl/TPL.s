@@ -154,8 +154,8 @@
 /* 803629DC 0032BF9C  4E 80 00 20 */	blr
 .endfn TPLGetGXTexObjFromPalette
 
-# 0x8055F240 - 0x8055F270
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8055F240
 lbl_8055F240:
@@ -172,16 +172,16 @@ lbl_8055F240:
 	.4byte 0x74650000
 	.4byte 0x00000000
 
-# 0x80665CE8 - 0x80665CF0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665CE8
 lbl_80665CE8:
 	.4byte 0x54504C2E
 	.4byte 0x63000000
 
-# 0x8066C1E8 - 0x8066C1F0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C1E8
 lbl_8066C1E8:

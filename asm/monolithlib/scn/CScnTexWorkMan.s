@@ -2109,8 +2109,8 @@
 /* 80491E70 0045B430  4E 80 00 20 */	blr
 .endfn func_80491764
 
-# 0x80527938 - 0x80527958
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CScnTexWorkMan_typestr
@@ -2126,8 +2126,8 @@ lbl_80527948:
 	.4byte 0x6F726B4D
 	.4byte 0x616E0000
 
-# 0x80572018 - 0x805720B0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnTexWorkMan
@@ -2182,8 +2182,8 @@ lbl_80572098:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806662C8 - 0x806662E0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806662C8
 lbl_806662C8:
@@ -2203,8 +2203,8 @@ lbl_806662D8:
 lbl_806662DC:
 	.4byte 0x72656600
 
-# 0x806681C0 - 0x806681E0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806681C0
 lbl_806681C0:
@@ -2228,8 +2228,8 @@ lbl_806681D4:
 lbl_806681D8:
 	.skip 0x8
 
-# 0x8066D1C0 - 0x8066D1D0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D1C0
 lbl_8066D1C0:
@@ -2242,8 +2242,8 @@ lbl_8066D1C8:
 	.4byte 0xC9742400
 	.4byte 0x00000000
 
-# 0x8001ECBC - 0x8001ED44
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001ECBC", local
@@ -2328,8 +2328,8 @@ lbl_8066D1C8:
 	.4byte 0x00000000
 .endobj "@etb_8001ED3C"
 
-# 0x800368B4 - 0x80036944
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800368B4", local

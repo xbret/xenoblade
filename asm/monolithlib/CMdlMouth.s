@@ -487,8 +487,8 @@
 /* 804E6C10 004B01D0  4E 80 00 20 */	blr
 .endfn func_804E6A28
 
-# 0x805280A0 - 0x805280C8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805280A0
 lbl_805280A0:
@@ -508,8 +508,8 @@ CMdlMouth_typestr:
 	.4byte 0x68000000
 	.4byte 0x00000000
 
-# 0x805739F8 - 0x80573A08
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMdlMouth
@@ -519,8 +519,8 @@ __vt__CMdlMouth:
 	.4byte func_804E658C
 	.4byte 0x00000000
 
-# 0x80666570 - 0x80666588
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80666570
 lbl_80666570:
@@ -540,8 +540,8 @@ lbl_80666580:
 lbl_80666584:
 	.4byte 0x72656600
 
-# 0x8066DAB0 - 0x8066DAE8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066DAB0
 lbl_8066DAB0:
@@ -578,8 +578,8 @@ lbl_8066DAE0:
 	.4byte 0x40800000
 	.4byte 0x00000000
 
-# 0x80020CD0 - 0x80020CF8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020CD0", local
@@ -612,8 +612,8 @@ lbl_8066DAE0:
 	.4byte 0x00000000
 .endobj "@etb_80020CF0"
 
-# 0x80038DF8 - 0x80038E34
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80038DF8", local

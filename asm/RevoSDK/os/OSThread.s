@@ -1661,8 +1661,8 @@
 /* 8035C958 00325F18  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8035C95C 00325F1C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805D4758 - 0x805D5160
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 DefaultThread:
@@ -1674,16 +1674,16 @@ lbl_805D4A70:
 lbl_805D4B70:
 	.skip 0x5F0
 
-# 0x80665B90 - 0x80665B98
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 SwitchThreadCallback:
 	.4byte DefaultSwitchThreadCallback
 	.4byte 0x00000000
 
-# 0x80667AC8 - 0x80667AD8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 Reschedule:

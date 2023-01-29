@@ -982,8 +982,8 @@
 .endfn BuildPaneObj__Q36nw4hbm3lyt6LayoutFlPCvRCQ36nw4hbm3lyt11ResBlockSet
 /* 8032E4CC 002F7A8C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80518A60 - 0x80518A68
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518A60
 lbl_80518A60:
@@ -992,8 +992,8 @@ lbl_80518A60:
 lbl_80518A64:
 	.4byte 0x3F000000
 
-# 0x8054D7F8 - 0x8054D848
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054D7F8
 lbl_8054D7F8:

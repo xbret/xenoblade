@@ -2027,8 +2027,8 @@
 /* 801F4F64 001BE524  4E 80 00 20 */	blr
 .endfn func_801F4ED8
 
-# 0x805030F0 - 0x805031F8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805030F0
 lbl_805030F0:
@@ -2126,8 +2126,8 @@ lbl_805031A4:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80538560 - 0x80538628
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80538560
 lbl_80538560:
@@ -2190,8 +2190,8 @@ CScrollBar_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664FF0 - 0x80664FF8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CScrollBar
@@ -2199,15 +2199,15 @@ __RTTI__CScrollBar:
 	.4byte CScrollBar_typestr
 	.4byte CScrollBar_hierarchy
 
-# 0x80666F48 - 0x80666F50
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666F48
 lbl_80666F48:
 	.skip 0x8
 
-# 0x8066A9F8 - 0x8066AA28
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A9F8
 lbl_8066A9F8:
@@ -2242,8 +2242,8 @@ lbl_8066AA20:
 lbl_8066AA24:
 	.4byte 0x40600000
 
-# 0x800121F4 - 0x80012308
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800121F4", local
@@ -2435,8 +2435,8 @@ lbl_8066AA24:
 	.4byte 0x00000000
 .endobj "@etb_80012300"
 
-# 0x8002C2DC - 0x8002C444
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002C2DC", local

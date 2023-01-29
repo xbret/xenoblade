@@ -75,8 +75,8 @@
 /* 8037F670 00348C30  4E 80 00 20 */	blr
 .endfn adxt_ExecFsSvr
 
-# 0x805E5D30 - 0x805E5D48
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805E5D30
 lbl_805E5D30:

@@ -182,8 +182,8 @@
 /* 802C77F8 00290DB8  4E 80 00 20 */	blr
 .endfn __ieee754_asin
 
-# 0x8066B928 - 0x8066B9B0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@43", local

@@ -1420,8 +1420,8 @@
 /* 80451E4C 0041B40C  4B FE 7C A4 */	b func_80439AF0
 .endfn func_80451E48
 
-# 0x805265C0 - 0x80526658
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CDeviceFileDvd_typestr
@@ -1467,8 +1467,8 @@ lbl_805265D0:
 	.4byte 0x45000000
 	.4byte 0x00000000
 
-# 0x8056FC68 - 0x8056FD20
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CDeviceFileDvd
@@ -1523,8 +1523,8 @@ CDeviceFileDvd_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80666008 - 0x80666010
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CDeviceFileDvd
@@ -1532,15 +1532,15 @@ __RTTI__CDeviceFileDvd:
 	.4byte CDeviceFileDvd_typestr
 	.4byte CDeviceFileDvd_hierarchy
 
-# 0x80667F50 - 0x80667F58
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667F50
 lbl_80667F50:
 	.skip 0x8
 
-# 0x8001CF14 - 0x8001CF9C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001CF14", local
@@ -1645,8 +1645,8 @@ lbl_80667F50:
 	.4byte 0x00000000
 .endobj "@etb_8001CF94"
 
-# 0x80034B98 - 0x80034C64
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034B98", local

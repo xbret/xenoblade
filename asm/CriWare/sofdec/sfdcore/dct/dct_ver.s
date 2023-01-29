@@ -12,8 +12,8 @@
 /* 803BB728 00384CE8  4E 80 00 20 */	blr
 .endfn DCT_GetVerStr
 
-# 0x8051FE30 - 0x8051FE88
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global DCT_version_str
@@ -41,8 +41,8 @@ DCT_version_str:
 	.4byte 0x74636830
 	.4byte 0x320A0000
 
-# 0x8060A288 - 0x8060A290
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global cri_verstr_ptr

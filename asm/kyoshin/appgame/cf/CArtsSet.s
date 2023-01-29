@@ -252,8 +252,8 @@
 /* 80153EFC 0011D4BC  4E 80 00 20 */	blr
 .endfn func_80153EF0
 
-# 0x804FD1A8 - 0x804FD2D0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804FD1A8
 lbl_804FD1A8:
@@ -358,8 +358,8 @@ cf_CAttackParam_typestr:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80532D78 - 0x80532DB8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CAttackSet
@@ -393,8 +393,8 @@ __vt__cf__sArtsSet:
 	.4byte func_80153C30
 	.4byte 0x00000000
 
-# 0x80664B50 - 0x80664B70
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CAttackSet
@@ -417,8 +417,8 @@ __RTTI__cf__sArtsSet:
 	.4byte cf__sArtsSet_typestr
 	.4byte 0x00000000
 
-# 0x8000D32C - 0x8000D344
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000D32C", local
@@ -439,8 +439,8 @@ __RTTI__cf__sArtsSet:
 	.4byte 0x00000000
 .endobj "@etb_8000D33C"
 
-# 0x800284C0 - 0x800284E4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800284C0", local

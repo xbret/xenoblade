@@ -1328,8 +1328,8 @@
 .endfn NANDInitBanner
 /* 80350F9C 0031A55C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80518BC8 - 0x80518D10
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .obj "@3037", local
@@ -1417,8 +1417,8 @@
 	.4byte 0xFFFFFFC0
 .endobj "@3037"
 
-# 0x80551080 - 0x805511D0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .obj "@2834", local
@@ -1515,15 +1515,15 @@ lbl_8055113C:
 	.4byte 0x746F7279
 	.4byte 0x2E0A0000
 
-# 0x805D4000 - 0x805D4040
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 s_homeDir:
 	.skip 0x40
 
-# 0x80665AE8 - 0x80665B10
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __NANDVersion
@@ -1557,8 +1557,8 @@ lbl_80665B08:
 lbl_80665B0C:
 	.4byte 0x00200000
 
-# 0x806679F0 - 0x806679F8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 s_libState:

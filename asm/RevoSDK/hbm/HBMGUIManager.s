@@ -1884,8 +1884,8 @@
 /* 80320D78 002EA338  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80320D7C 002EA33C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80518670 - 0x80518680
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518670
 lbl_80518670:
@@ -1894,8 +1894,8 @@ lbl_80518670:
 	.4byte 0x3F000000
 	.4byte 0x3F800000
 
-# 0x8054C288 - 0x8054C4F8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__homebutton_gui_PaneComponent
@@ -2108,8 +2108,8 @@ __RTTI__homebutton_gui_Interface:
 	.4byte homebutton_gui_Interface_typestr
 	.4byte 0x00000000
 
-# 0x805CD5A8 - 0x805CD5B0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805CD5A8
 lbl_805CD5A8:

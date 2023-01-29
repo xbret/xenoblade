@@ -262,8 +262,8 @@
 /* 802A5B84 0026F144  4E 80 00 20 */	blr
 .endfn func_802A5B04
 
-# 0x8050BD50 - 0x8050BD68
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CVS_THREAD_CHAIN_typestr
@@ -275,8 +275,8 @@ cf_CVS_THREAD_CHAIN_typestr:
 	.4byte 0x4841494E
 	.4byte 0x00000000
 
-# 0x8053D1C0 - 0x8053D1F8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053D1C0
 lbl_8053D1C0:
@@ -301,8 +301,8 @@ cf_CVS_THREAD_CHAIN_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806655E0 - 0x806655E8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CVS_THREAD_CHAIN
@@ -310,8 +310,8 @@ __RTTI__cf_CVS_THREAD_CHAIN:
 	.4byte cf_CVS_THREAD_CHAIN_typestr
 	.4byte cf_CVS_THREAD_CHAIN_hierarchy
 
-# 0x8001AB90 - 0x8001ABE4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001AB90", local
@@ -359,8 +359,8 @@ __RTTI__cf_CVS_THREAD_CHAIN:
 	.4byte 0x00000000
 .endobj "@etb_8001ABDC"
 
-# 0x80032A5C - 0x80032AA4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80032A5C", local

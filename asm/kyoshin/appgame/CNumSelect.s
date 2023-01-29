@@ -2148,8 +2148,8 @@
 /* 801ECB80 001B6140  4E 80 00 20 */	blr
 .endfn func_801EC9E0
 
-# 0x805023A0 - 0x80502910
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CNumSelect_typestr
@@ -2587,8 +2587,8 @@ lbl_805028F4:
 	.4byte 0x40000000
 	.4byte 0x40200000
 
-# 0x80538378 - 0x80538410
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CNumSelect
@@ -2635,8 +2635,8 @@ CNumSelect_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664FD8 - 0x80664FE0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CNumSelect
@@ -2644,8 +2644,8 @@ __RTTI__CNumSelect:
 	.4byte CNumSelect_typestr
 	.4byte CNumSelect_hierarchy
 
-# 0x8066A948 - 0x8066A9B8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A948
 lbl_8066A948:
@@ -2708,8 +2708,8 @@ lbl_8066A9B0:
 	.4byte 0x6C656767
 	.4byte 0x31000000
 
-# 0x80011AD8 - 0x80011BC4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80011AD8", local
@@ -2871,8 +2871,8 @@ lbl_8066A9B0:
 	.4byte 0x00000000
 .endobj "@etb_80011BBC"
 
-# 0x8002BF10 - 0x8002C03C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002BF10", local

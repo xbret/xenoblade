@@ -279,8 +279,8 @@
 /* 802CC5BC 00295B7C  4E 80 00 20 */	blr
 .endfn InitializeProgramEndTrap
 
-# 0x8053FD80 - 0x8053FE68
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .obj "@stringBase0", local
@@ -345,16 +345,16 @@
 	.4byte 0x00000000
 	.byte 0x00, 0x00, 0x00
 
-# 0x8057B888 - 0x8057B8B0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global gDBCommTable
 gDBCommTable:
 	.skip 0x28
 
-# 0x80667578 - 0x80667580
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 .global TRK_Use_BBA
@@ -362,8 +362,8 @@ TRK_Use_BBA:
 	.skip 0x1
 	.skip 0x7
 
-# 0x8066BDB0 - 0x8066BDB8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BDB0
 lbl_8066BDB0:

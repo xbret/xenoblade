@@ -133,16 +133,16 @@
 .endfn calc__Q210homebutton15FrameControllerFv
 /* 8031F44C 002E8A0C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80518668 - 0x80518670
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518668
 lbl_80518668:
 	.4byte 0x3F800000
 	.4byte 0x00000000
 
-# 0x8054C218 - 0x8054C240
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global homebutton_FrameController_typestr

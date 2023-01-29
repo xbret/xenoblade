@@ -258,8 +258,8 @@
 /* 80434F90 003FE550  4E 80 00 20 */	blr
 .endfn __dla__FPv
 
-# 0x8001C010 - 0x8001C020
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C010", local
@@ -274,8 +274,8 @@
 	.4byte 0x00000000
 .endobj "@etb_8001C018"
 
-# 0x80033BE4 - 0x80033BFC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033BE4", local

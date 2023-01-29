@@ -632,8 +632,8 @@
 .endfn ENCiFindSjisFromUnicode
 /* 8031374C 002DCD0C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8050E400 - 0x80518668
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 enc_tbl_jp_mbtowc:
@@ -11037,8 +11037,8 @@ enc_offset_jp:
 	.4byte 0x1CAB1CC6
 	.4byte 0x1CE31CFB
 
-# 0x806659C0 - 0x806659C8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806659C0
 lbl_806659C0:

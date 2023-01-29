@@ -440,16 +440,16 @@
 /* 803A4608 0036DBC8  4E 80 00 20 */	blr
 .endfn mpvcdec_NintraBlocksInt1
 
-# 0x8051F5F8 - 0x8051F600
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051F5F8
 lbl_8051F5F8:
 	.4byte mpvcdec_IntraBlocksInt1
 	.4byte mpvcdec_NintraBlocksInt1
 
-# 0x80605F10 - 0x80605F38
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80605F10
 lbl_80605F10:

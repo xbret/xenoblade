@@ -763,8 +763,8 @@
 /* 802D2048 0029B608  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 802D204C 0029B60C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80540000 - 0x80540070
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .obj "@658", local
@@ -803,8 +803,8 @@
 	.4byte 0x00000000
 	.2byte 0x0000
 
-# 0x806658A8 - 0x806658B0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .obj "@657", local

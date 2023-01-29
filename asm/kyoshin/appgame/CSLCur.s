@@ -448,8 +448,8 @@
 /* 8028EFD8 00258598  4E 80 00 20 */	blr
 .endfn func_8028EF74
 
-# 0x80019448 - 0x800194B0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80019448", local
@@ -530,8 +530,8 @@
 	.4byte 0x00000000
 .endobj "@etb_800194A8"
 
-# 0x80031904 - 0x800319A0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80031904", local

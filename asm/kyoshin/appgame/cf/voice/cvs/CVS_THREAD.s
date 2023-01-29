@@ -1050,8 +1050,8 @@
 /* 802A486C 0026DE2C  4E 80 00 20 */	blr
 .endfn func_802A4798
 
-# 0x8050BD08 - 0x8050BD18
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CVS_THREAD_typestr
@@ -1061,8 +1061,8 @@ cf_CVS_THREAD_typestr:
 	.4byte 0x54485245
 	.4byte 0x41440000
 
-# 0x8053D088 - 0x8053D0E8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053D088
 lbl_8053D088:
@@ -1098,8 +1098,8 @@ jumptable_8053D0C0:
 	.rel func_802A4430, .L_802A46F4
 	.4byte 0x00000000
 
-# 0x806655A8 - 0x806655C0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806655A8
 lbl_806655A8:
@@ -1117,16 +1117,16 @@ __RTTI__cf_CVS_THREAD:
 	.4byte cf_CVS_THREAD_typestr
 	.4byte 0x00000000
 
-# 0x8066B530 - 0x8066B538
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B530
 lbl_8066B530:
 	.4byte 0x3F800000
 	.4byte 0x00000000
 
-# 0x8001AA90 - 0x8001AAF8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001AA90", local
@@ -1207,8 +1207,8 @@ lbl_8066B530:
 	.4byte 0x00000000
 .endobj "@etb_8001AAF0"
 
-# 0x80032948 - 0x800329E4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80032948", local

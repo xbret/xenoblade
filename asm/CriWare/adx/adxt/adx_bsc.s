@@ -1912,8 +1912,8 @@
 /* 803883B8 00351978  4E 80 00 20 */	blr
 .endfn ADXB_ExecHndl
 
-# 0x8051A1C8 - 0x8051AA78
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051A1C8
 lbl_8051A1C8:
@@ -2476,8 +2476,8 @@ lbl_8051A9C8:
 	.4byte 0x30385800
 	.4byte 0x00000000
 
-# 0x805E89D8 - 0x805E99B8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global skg_init_count

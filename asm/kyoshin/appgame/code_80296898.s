@@ -211,20 +211,20 @@
 /* 80296B40 00260100  4B FF FE F4 */	b func_80296A34
 .endfn sinit_80296B38
 
-# 0x804F59D0 - 0x804F59D4
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80296B38
 
-# 0x8057A9C8 - 0x8057AA08
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057A9C8
 lbl_8057A9C8:
 	.skip 0x40
 
-# 0x80019BF8 - 0x80019C20
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80019BF8", local
@@ -257,8 +257,8 @@ lbl_8057A9C8:
 	.4byte 0x00000000
 .endobj "@etb_80019C18"
 
-# 0x80031E80 - 0x80031EBC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80031E80", local

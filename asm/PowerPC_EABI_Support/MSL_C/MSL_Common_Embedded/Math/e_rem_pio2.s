@@ -247,8 +247,8 @@
 /* 802C8D30 002922F0  4E 80 00 20 */	blr
 .endfn __ieee754_rem_pio2
 
-# 0x8050DBD0 - 0x8050DD58
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 two_over_pi:
@@ -353,8 +353,8 @@ npio2_hw:
 	.4byte 0x404858EB
 	.4byte 0x404921FB
 
-# 0x8066BBC8 - 0x8066BC20
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@84", local

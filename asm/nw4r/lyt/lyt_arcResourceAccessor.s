@@ -274,8 +274,8 @@
 /* 8040A024 003D35E4  4E 80 00 20 */	blr
 .endfn GetFont__Q34nw4r3lyt19ArcResourceAccessorFPCc
 
-# 0x8056D598 - 0x8056D5B0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056D598
 lbl_8056D598:
@@ -286,8 +286,8 @@ lbl_8056D598:
 	.4byte GetFont__Q34nw4r3lyt19ArcResourceAccessorFPCc
 	.4byte 0x00000000
 
-# 0x80665DF8 - 0x80665E00
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665DF8
 lbl_80665DF8:

@@ -435,8 +435,8 @@
 /* 802FE44C 002C7A0C  4E 80 00 20 */	blr
 .endfn port_flow_control_peer
 
-# 0x80548530 - 0x80548678
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80548530
 lbl_80548530:

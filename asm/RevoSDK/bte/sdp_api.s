@@ -1040,8 +1040,8 @@
 /* 80303D20 002CD2E0  4E 80 00 20 */	blr
 .endfn SDP_SetTraceLevel
 
-# 0x80548F00 - 0x80548F50
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80548F00
 lbl_80548F00:

@@ -115,8 +115,8 @@
 /* 803A3BA8 0036D168  4E 80 00 20 */	blr
 .endfn func_803A3BA4
 
-# 0x8051F510 - 0x8051F538
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051F510
 lbl_8051F510:

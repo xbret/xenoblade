@@ -127,8 +127,8 @@
 /* 802CC7E8 00295DA8  48 00 0D 7C */	b TRKReleaseBuffer
 .endfn TRKDestructEvent
 
-# 0x8053FE68 - 0x8053FE88
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053FE68
 lbl_8053FE68:
@@ -141,8 +141,8 @@ lbl_8053FE68:
 	.4byte 0x756C6C0A
 	.4byte 0x00000000
 
-# 0x8057B8B0 - 0x8057B8D8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057B8B0
 lbl_8057B8B0:

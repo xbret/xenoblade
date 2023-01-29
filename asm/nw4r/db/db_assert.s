@@ -352,8 +352,8 @@
 /* 803D780C 003A0DCC  48 05 89 7C */	b UpdateVertexColor__Q34nw4r2ut10CharWriterFv
 .endfn SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
 
-# 0x8056C7B0 - 0x8056C840
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056C7B0
 lbl_8056C7B0:
@@ -398,15 +398,15 @@ lbl_8056C820:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8061D710 - 0x8061D740
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8061D710
 lbl_8061D710:
 	.skip 0x30
 
-# 0x80665D80 - 0x80665D88
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665D80
 lbl_80665D80:
@@ -415,8 +415,8 @@ lbl_80665D80:
 lbl_80665D84:
 	.4byte 0x0A000000
 
-# 0x80667D18 - 0x80667D28
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667D18
 lbl_80667D18:

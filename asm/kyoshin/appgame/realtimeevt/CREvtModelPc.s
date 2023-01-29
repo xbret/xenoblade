@@ -1449,8 +1449,8 @@
 /* 80184B10 0014E0D0  4B FF ED 4C */	b func_8018385C
 .endfn func_80184B0C
 
-# 0x804FEFD0 - 0x804FF018
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804FEFD0
 lbl_804FEFD0:
@@ -1476,8 +1476,8 @@ cf_CREvtModelPc_typestr:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80535950 - 0x80535AA8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80535950
 lbl_80535950:
@@ -1590,8 +1590,8 @@ cf_CREvtModelPc_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664D60 - 0x80664D68
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CREvtModelPc
@@ -1599,8 +1599,8 @@ __RTTI__cf_CREvtModelPc:
 	.4byte cf_CREvtModelPc_typestr
 	.4byte cf_CREvtModelPc_hierarchy
 
-# 0x8066A1D8 - 0x8066A1E8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A1D8
 lbl_8066A1D8:
@@ -1611,8 +1611,8 @@ lbl_8066A1E0:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x8000E834 - 0x8000E8E8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000E834", local
@@ -1708,8 +1708,8 @@ lbl_8066A1E0:
 	.4byte 0x00000000
 .endobj "@etb_8000E8E0"
 
-# 0x800297B0 - 0x80029840
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800297B0", local

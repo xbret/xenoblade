@@ -199,8 +199,8 @@
 /* 80361658 0032AC18  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8036165C 0032AC1C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8055F0D8 - 0x8055F138
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8055F0D8
 lbl_8055F0D8:
@@ -231,8 +231,8 @@ lbl_8055F120:
 	.4byte 0x05434E00
 	.4byte 0xFF000000
 
-# 0x80665CD0 - 0x80665CE0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665CD0
 lbl_80665CD0:

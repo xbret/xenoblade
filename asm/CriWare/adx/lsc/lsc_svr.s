@@ -259,8 +259,8 @@
 /* 80391D54 0035B314  4E 80 00 20 */	blr
 .endfn lsc_ExecHndl
 
-# 0x8051BA60 - 0x8051BAB8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051BA60
 lbl_8051BA60:

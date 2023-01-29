@@ -1153,8 +1153,8 @@
 /* 8018B6B4 00154C74  4B FF F0 44 */	b func_8018A6F8
 .endfn func_8018B6B0
 
-# 0x804FF318 - 0x804FF338
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuShopSell_typestr
@@ -1170,8 +1170,8 @@ lbl_804FF328:
 	.4byte 0x006E616D
 	.4byte 0x65000000
 
-# 0x80535E20 - 0x80535E90
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMenuShopSell
@@ -1208,8 +1208,8 @@ CMenuShopSell_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664DA8 - 0x80664DB0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuShopSell
@@ -1217,15 +1217,15 @@ __RTTI__CMenuShopSell:
 	.4byte CMenuShopSell_typestr
 	.4byte CMenuShopSell_hierarchy
 
-# 0x80666BE0 - 0x80666BE8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666BE0
 lbl_80666BE0:
 	.skip 0x8
 
-# 0x8000ED90 - 0x8000EEAC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000ED90", local
@@ -1343,8 +1343,8 @@ lbl_80666BE0:
 	.4byte 0x00000000
 .endobj "@etb_8000EEA4"
 
-# 0x80029C60 - 0x80029CE4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80029C60", local

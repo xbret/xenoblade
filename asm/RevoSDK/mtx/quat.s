@@ -314,8 +314,8 @@
 .endfn C_QUATSlerp
 /* 8034E72C 00317CEC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80518BB8 - 0x80518BC8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518BB8
 lbl_80518BB8:
@@ -324,8 +324,8 @@ lbl_80518BB8:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8066C170 - 0x8066C188
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C170
 lbl_8066C170:

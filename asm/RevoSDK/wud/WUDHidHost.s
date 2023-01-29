@@ -439,8 +439,8 @@
 /* 8037C5C8 00345B88  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8037C5CC 00345B8C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80563470 - 0x80563708
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80563470
 lbl_80563470:

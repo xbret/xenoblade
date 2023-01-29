@@ -643,8 +643,8 @@
 /* 8043A980 00403F40  4E 80 00 20 */	blr
 .endfn func_8043A8D8
 
-# 0x80525E58 - 0x80525E70
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CScriptCode_typestr
@@ -658,8 +658,8 @@ lbl_80525E64:
 	.4byte 0x69707443
 	.4byte 0x6F646500
 
-# 0x8056EC90 - 0x8056ED48
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScriptCode
@@ -714,8 +714,8 @@ CScriptCode_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665E80 - 0x80665E88
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CScriptCode
@@ -723,15 +723,15 @@ __RTTI__CScriptCode:
 	.4byte CScriptCode_typestr
 	.4byte CScriptCode_hierarchy
 
-# 0x80667E90 - 0x80667E98
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667E90
 lbl_80667E90:
 	.skip 0x8
 
-# 0x8001C2CC - 0x8001C340
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C2CC", local
@@ -791,8 +791,8 @@ lbl_80667E90:
 	.4byte func_80437AC8
 .endobj "@etb_8001C310"
 
-# 0x80033F50 - 0x80033FA4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033F50", local

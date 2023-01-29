@@ -1906,8 +1906,8 @@
 /* 803D95D0 003A2B90  4E 80 00 20 */	blr
 .endfn func_803D95B4
 
-# 0x8056C840 - 0x8056C9A0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056C840
 lbl_8056C840:

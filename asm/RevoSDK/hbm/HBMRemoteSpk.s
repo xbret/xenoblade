@@ -681,8 +681,8 @@
 .endfn isPlayReady__Q210homebutton9RemoteSpkCFl
 /* 803222AC 002EB86C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8054C4F8 - 0x8054C528
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__homebutton_RemoteSpk
@@ -706,8 +706,8 @@ __RTTI__homebutton_RemoteSpk:
 	.4byte homebutton_RemoteSpk_typestr
 	.4byte 0x00000000
 
-# 0x805CD748 - 0x805CD750
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805CD748
 lbl_805CD748:

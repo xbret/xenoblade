@@ -8823,13 +8823,13 @@
 /* 804C8680 00491C40  4E 80 00 20 */	blr
 .endfn sinit_804C8174
 
-# 0x804F5AC0 - 0x804F5AC4
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_804C8174
 
-# 0x80527D90 - 0x80527E08
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global reslist_IScnEnvCtl_typestr
@@ -8878,8 +8878,8 @@ lbl_80527DF8:
 	.4byte 0x00000010
 	.4byte 0x00000020
 
-# 0x805731A8 - 0x80573458
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__reslist_IScnEnvCtl
@@ -9075,8 +9075,8 @@ lbl_805732B0:
 	.4byte func_804C7880
 	.4byte 0x00000000
 
-# 0x80662300 - 0x806624A8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80662300
 lbl_80662300:
@@ -9088,8 +9088,8 @@ lbl_806623B8:
 lbl_80662490:
 	.skip 0x18
 
-# 0x80666408 - 0x80666438
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80666408
 lbl_80666408:
@@ -9124,8 +9124,8 @@ __RTTI__IScnEnvCtl:
 	.4byte IScnEnvCtl_typestr
 	.4byte 0x00000000
 
-# 0x8066D780 - 0x8066D838
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D780
 lbl_8066D780:
@@ -9248,8 +9248,8 @@ lbl_8066D830:
 	.4byte 0x4222F983
 	.4byte 0x00000000
 
-# 0x80020058 - 0x800202E8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020058", local
@@ -9704,8 +9704,8 @@ lbl_8066D830:
 	.4byte 0x00000000
 .endobj "@etb_800202E0"
 
-# 0x80037DB4 - 0x80038114
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80037DB4", local

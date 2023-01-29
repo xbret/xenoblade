@@ -936,8 +936,8 @@
 /* 803049EC 002CDFAC  4E 80 00 20 */	blr
 .endfn SDP_DeleteAttribute
 
-# 0x80548F50 - 0x80548FE8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80548F50
 lbl_80548F50:

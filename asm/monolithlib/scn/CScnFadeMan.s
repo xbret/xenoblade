@@ -275,8 +275,8 @@
 /* 8049C7F4 00465DB4  4E 80 00 20 */	blr
 .endfn func_8049C7B0
 
-# 0x80527A50 - 0x80527A60
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CScnFadeMan_typestr
@@ -286,8 +286,8 @@ CScnFadeMan_typestr:
 	.4byte 0x4D616E00
 	.4byte 0x00000000
 
-# 0x80572398 - 0x805723A8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnFadeMan
@@ -297,8 +297,8 @@ __vt__CScnFadeMan:
 	.4byte func_8049C4CC
 	.4byte func_8049C678
 
-# 0x80666358 - 0x80666360
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CScnFadeMan
@@ -306,8 +306,8 @@ __RTTI__CScnFadeMan:
 	.4byte CScnFadeMan_typestr
 	.4byte 0x00000000
 
-# 0x8066D338 - 0x8066D350
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D338
 lbl_8066D338:
@@ -324,8 +324,8 @@ lbl_8066D348:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x8001F48C - 0x8001F4E4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001F48C", local
@@ -366,8 +366,8 @@ lbl_8066D348:
 	.4byte func_804561AC
 .endobj "@etb_8001F4CC"
 
-# 0x80036F44 - 0x80036F74
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80036F44", local

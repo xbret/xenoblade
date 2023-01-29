@@ -559,8 +559,8 @@
 /* 8022CE6C 001F642C  4E 80 00 20 */	blr
 .endfn func_8022CA88
 
-# 0x80505D20 - 0x80505E30
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CSelShopWin_typestr
@@ -636,8 +636,8 @@ lbl_80505D2C:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80539D60 - 0x80539DF8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CSelShopWin
@@ -684,8 +684,8 @@ CSelShopWin_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665178 - 0x80665180
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CSelShopWin
@@ -693,8 +693,8 @@ __RTTI__CSelShopWin:
 	.4byte CSelShopWin_typestr
 	.4byte CSelShopWin_hierarchy
 
-# 0x8066AEC0 - 0x8066AED0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AEC0
 lbl_8066AEC0:
@@ -705,8 +705,8 @@ lbl_8066AEC8:
 	.4byte 0x43300000
 	.4byte 0x00000000
 
-# 0x8001567C - 0x800156E8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001567C", local
@@ -772,8 +772,8 @@ lbl_8066AEC8:
 	.4byte func_8045F8C8
 .endobj "@etb_800156D0"
 
-# 0x8002E598 - 0x8002E604
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002E598", local

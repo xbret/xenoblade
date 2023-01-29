@@ -40,8 +40,8 @@
 /* 803EE6D8 003B7C98  4E 80 00 20 */	blr
 .endfn GetBillboardMtxTemporary__Q44nw4r3g3d6detail7workmemFv
 
-# 0x80622D00 - 0x8063AD00
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80622D00
 lbl_80622D00:

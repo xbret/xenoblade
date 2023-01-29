@@ -158,8 +158,8 @@
 /* 803A5AE8 0036F0A8  4E 80 00 20 */	blr
 .endfn MPV_SearchDelim
 
-# 0x8051F608 - 0x8051F708
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051F608
 lbl_8051F608:

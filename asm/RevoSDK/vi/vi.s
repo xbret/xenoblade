@@ -3048,8 +3048,8 @@
 /* 803669FC 0032FFBC  4E 80 00 20 */	blr
 .endfn __VIResetRFIdle
 
-# 0x8055FAA0 - 0x8055FFF8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8055FAA0
 lbl_8055FAA0:
@@ -3413,8 +3413,8 @@ jumptable_8055FFD4:
 	.rel VISetTimeToDimming, .L_80366914
 	.rel VISetTimeToDimming, .L_80366914
 
-# 0x805DD900 - 0x805DDA70
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805DD900
 lbl_805DD900:
@@ -3429,8 +3429,8 @@ lbl_805DD9F0:
 lbl_805DDA48:
 	.skip 0x28
 
-# 0x80665D00 - 0x80665D20
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665D00
 lbl_80665D00:
@@ -3455,8 +3455,8 @@ lbl_80665D18:
 	.4byte 0x76692E63
 	.4byte 0x00000000
 
-# 0x80667B98 - 0x80667C48
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667B98
 lbl_80667B98:

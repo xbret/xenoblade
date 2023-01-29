@@ -1954,8 +1954,8 @@
 /* 803F7650 003C0C10  4E 80 00 20 */	blr
 .endfn GetTypeObj__Q34nw4r3g3d7ScnRootCFv
 
-# 0x80521090 - 0x805210C0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80521090
 lbl_80521090:
@@ -1976,8 +1976,8 @@ lbl_805210B0:
 	.4byte 0x6F6F7400
 	.4byte 0x00000000
 
-# 0x8056CFA0 - 0x8056D010
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056CFA0
 lbl_8056CFA0:
@@ -2012,8 +2012,8 @@ lbl_8056CFD0:
 	.4byte Remove__Q34nw4r3g3d8ScnGroupFUl
 	.4byte Remove__Q34nw4r3g3d8ScnGroupFPQ34nw4r3g3d6ScnObj
 
-# 0x80665DB0 - 0x80665DC0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665DB0
 lbl_80665DB0:
@@ -2028,15 +2028,15 @@ lbl_80665DB8:
 lbl_80665DBC:
 	.4byte 0xFFFFFFFC
 
-# 0x80667D48 - 0x80667D50
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667D48
 lbl_80667D48:
 	.skip 0x8
 
-# 0x8066C4E0 - 0x8066C4E8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C4E0
 lbl_8066C4E0:

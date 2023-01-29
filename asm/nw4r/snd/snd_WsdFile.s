@@ -274,8 +274,8 @@
 /* 8042A328 003F38E8  4E 80 00 20 */	blr
 .endfn ReadWaveInfo__Q44nw4r3snd6detail13WsdFileReaderCFiPQ44nw4r3snd6detail8WaveInfoPCv
 
-# 0x8066C900 - 0x8066C908
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C900
 lbl_8066C900:

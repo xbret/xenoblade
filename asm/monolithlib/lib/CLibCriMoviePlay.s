@@ -1679,8 +1679,8 @@
 /* 8045B3E8 004249A8  4B FF E9 94 */	b func_80459D7C
 .endfn func_8045B3E4
 
-# 0x80526928 - 0x80526970
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CLibCriMoviePlay_typestr
@@ -1706,8 +1706,8 @@ lbl_8052693C:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80570790 - 0x80570870
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CLibCriMoviePlay
@@ -1772,8 +1772,8 @@ CLibCriMoviePlay_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806660C0 - 0x806660C8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CLibCriMoviePlay
@@ -1781,15 +1781,15 @@ __RTTI__CLibCriMoviePlay:
 	.4byte CLibCriMoviePlay_typestr
 	.4byte CLibCriMoviePlay_hierarchy
 
-# 0x80667FB8 - 0x80667FC0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667FB8
 lbl_80667FB8:
 	.skip 0x8
 
-# 0x8066CC98 - 0x8066CCC0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CC98
 lbl_8066CC98:
@@ -1820,8 +1820,8 @@ lbl_8066CCB8:
 	.4byte 0x426FC28F
 	.4byte 0x00000000
 
-# 0x8001D564 - 0x8001D614
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001D564", local
@@ -1928,8 +1928,8 @@ lbl_8066CCB8:
 	.4byte 0x00000000
 .endobj "@etb_8001D60C"
 
-# 0x80035150 - 0x80035204
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80035150", local

@@ -600,8 +600,8 @@
 /* 803A39A8 0036CF68  4E 80 00 20 */	blr
 .endfn MWSST_Destroy
 
-# 0x80605EC0 - 0x80605ED0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80605EC0
 lbl_80605EC0:

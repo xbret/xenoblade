@@ -69,8 +69,8 @@
 /* 803E7464 003B0A24  4E 80 00 20 */	blr
 .endfn TestAnmFlag__Q34nw4r3g3d6AnmObjCFQ44nw4r3g3d6AnmObj7AnmFlag
 
-# 0x80520F68 - 0x80520F78
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520F68
 lbl_80520F68:
@@ -79,8 +79,8 @@ lbl_80520F68:
 	.4byte 0x626A0000
 	.4byte 0x00000000
 
-# 0x80665D88 - 0x80665D98
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665D88
 lbl_80665D88:
@@ -91,8 +91,8 @@ lbl_80665D90:
 	.4byte 0x3F800000
 	.4byte 0x00000000
 
-# 0x8066C3C0 - 0x8066C3C8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C3C0
 lbl_8066C3C0:

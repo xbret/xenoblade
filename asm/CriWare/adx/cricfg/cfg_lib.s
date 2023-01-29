@@ -60,8 +60,8 @@
 /* 8038F590 00358B50  4E 80 00 20 */	blr
 .endfn CRICFG_Read
 
-# 0x805E9D20 - 0x805E9D28
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805E9D20
 lbl_805E9D20:

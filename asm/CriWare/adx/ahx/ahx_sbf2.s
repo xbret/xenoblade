@@ -58,8 +58,8 @@
 /* 8038C428 003559E8  4E 80 00 20 */	blr
 .endfn AHXSBF_Synthesize
 
-# 0x805657B8 - 0x805657F8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805657B8
 lbl_805657B8:

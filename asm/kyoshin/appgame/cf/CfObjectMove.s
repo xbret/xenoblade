@@ -4106,8 +4106,8 @@
 /* 800BF33C 000888FC  4E 80 00 20 */	blr
 .endfn func_800BF324
 
-# 0x804F7D78 - 0x804F7D98
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804F7D78
 lbl_804F7D78:
@@ -4120,8 +4120,8 @@ lbl_804F7D78:
 	.4byte 0x6E740000
 	.4byte 0x00000000
 
-# 0x8052CE60 - 0x8052D088
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CfObjectMove
@@ -4265,8 +4265,8 @@ __vt__cf_CfObjectMove:
 	.4byte func_800BE858
 	.4byte 0x00000000
 
-# 0x80669350 - 0x806693A8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669350
 lbl_80669350:
@@ -4333,8 +4333,8 @@ lbl_806693A0:
 	.4byte 0x4019999A
 	.4byte 0x00000000
 
-# 0x80009C8C - 0x80009EB8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80009C8C", local
@@ -4676,8 +4676,8 @@ lbl_806693A0:
 	.4byte 0x00000000
 .endobj "@etb_80009EB0"
 
-# 0x80025784 - 0x800259DC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80025784", local

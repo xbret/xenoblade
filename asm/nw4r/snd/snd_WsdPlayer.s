@@ -1213,8 +1213,8 @@
 /* 8042B380 003F4940  4B FF E8 C0 */	b __dt__Q44nw4r3snd6detail9WsdPlayerFv
 .endfn _192___dt__Q44nw4r3snd6detail9WsdPlayerFv
 
-# 0x8056E688 - 0x8056E6E8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E688
 lbl_8056E688:
@@ -1243,8 +1243,8 @@ lbl_8056E688:
 	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
 	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
 
-# 0x8066C908 - 0x8066C930
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C908
 lbl_8066C908:

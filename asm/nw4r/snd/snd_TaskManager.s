@@ -570,8 +570,8 @@
 /* 80425F2C 003EF4EC  4E 80 00 20 */	blr
 .endfn CancelWaitTask__Q44nw4r3snd6detail11TaskManagerFv
 
-# 0x80657018 - 0x80657060
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80657018
 lbl_80657018:
@@ -580,8 +580,8 @@ lbl_80657018:
 lbl_80657024:
 	.skip 0x3C
 
-# 0x80667E08 - 0x80667E10
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667E08
 lbl_80667E08:

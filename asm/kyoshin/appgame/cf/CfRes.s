@@ -3519,8 +3519,8 @@
 /* 8006898C 00031F4C  4E 80 00 20 */	blr
 .endfn func_80068928
 
-# 0x804F6A20 - 0x804F6A78
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CfResTask_typestr
@@ -3556,8 +3556,8 @@ lbl_804F6A54:
 	.4byte 0x64002E6C
 	.4byte 0x6F640000
 
-# 0x80529FD4 - 0x8052A150
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 4
 
 .global __vt__cf_CfResTask
@@ -3677,8 +3677,8 @@ jumptable_8052A124:
 	.rel func_800661A8, .L_80066224
 	.rel func_800661A8, .L_80066230
 
-# 0x80664328 - 0x80664348
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CfResTask
@@ -3700,8 +3700,8 @@ lbl_80664340:
 	.4byte 0x2E000000
 	.4byte 0x00000000
 
-# 0x80007C78 - 0x80007E2C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80007C78", local
@@ -3989,8 +3989,8 @@ lbl_80664340:
 	.4byte 0x00000000
 .endobj "@etb_80007E24"
 
-# 0x80022E68 - 0x80023078
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80022E68", local

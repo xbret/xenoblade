@@ -65,20 +65,20 @@
 /* 80039EF8 000034B8  4E 80 00 20 */	blr
 .endfn func_80039EEC
 
-# 0x804F5904 - 0x804F5908
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80039EE0
 
-# 0x8066660C - 0x80666610
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 4
 .global lbl_8066660C
 lbl_8066660C:
 	.skip 0x4
 
-# 0x800067B4 - 0x800067C4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800067B4", local
@@ -93,8 +93,8 @@ lbl_8066660C:
 	.4byte 0x00000000
 .endobj "@etb_800067BC"
 
-# 0x800210EC - 0x80021104
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800210EC", local

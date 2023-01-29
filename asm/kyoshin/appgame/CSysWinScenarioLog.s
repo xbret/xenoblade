@@ -3379,8 +3379,8 @@
 /* 80281304 0024A8C4  4E 80 00 20 */	blr
 .endfn func_8028120C
 
-# 0x8050A490 - 0x8050A598
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CSysWinScenarioLog_typestr
@@ -3454,8 +3454,8 @@ lbl_8050A4A8:
 	.4byte 0x63656E61
 	.4byte 0x72696F00
 
-# 0x8053BB10 - 0x8053BC10
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CSysWinScenarioLog
@@ -3528,8 +3528,8 @@ CSysWinScenarioLog_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665388 - 0x80665390
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CSysWinScenarioLog
@@ -3537,8 +3537,8 @@ __RTTI__CSysWinScenarioLog:
 	.4byte CSysWinScenarioLog_typestr
 	.4byte CSysWinScenarioLog_hierarchy
 
-# 0x806671F8 - 0x80667210
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806671F8
 lbl_806671F8:
@@ -3562,8 +3562,8 @@ lbl_80667204:
 lbl_80667208:
 	.skip 0x8
 
-# 0x8066B378 - 0x8066B390
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B378
 lbl_8066B378:
@@ -3580,8 +3580,8 @@ lbl_8066B388:
 lbl_8066B38C:
 	.4byte 0x3E19999A
 
-# 0x80018ACC - 0x80018C50
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80018ACC", local
@@ -3805,8 +3805,8 @@ lbl_8066B38C:
 	.4byte 0x00000000
 .endobj "@etb_80018C48"
 
-# 0x800310F4 - 0x80031268
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800310F4", local

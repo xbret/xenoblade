@@ -246,8 +246,8 @@
 /* 802A0AF8 0026A0B8  4E 80 00 20 */	blr
 .endfn func_802A0AE0
 
-# 0x8050BCA8 - 0x8050BCC0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CChainEffect_typestr
@@ -259,8 +259,8 @@ cf_CChainEffect_typestr:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8053D020 - 0x8053D040
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CChainEffect
@@ -277,8 +277,8 @@ cf_CChainEffect_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665588 - 0x80665590
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CChainEffect
@@ -286,16 +286,16 @@ __RTTI__cf_CChainEffect:
 	.4byte cf_CChainEffect_typestr
 	.4byte cf_CChainEffect_hierarchy
 
-# 0x8066B4F8 - 0x8066B500
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B4F8
 lbl_8066B4F8:
 	.4byte 0x3F19999A
 	.4byte 0x00000000
 
-# 0x8001A868 - 0x8001A880
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001A868", local
@@ -316,8 +316,8 @@ lbl_8066B4F8:
 	.4byte 0x00000000
 .endobj "@etb_8001A878"
 
-# 0x80032648 - 0x8003266C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80032648", local

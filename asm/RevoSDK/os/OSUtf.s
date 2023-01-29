@@ -191,8 +191,8 @@
 /* 8035CFDC 0032659C  4E 80 00 20 */	blr
 .endfn OSUTF32toSJIS
 
-# 0x80552DB8 - 0x8055EBF8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80552DB8
 lbl_80552DB8:

@@ -940,8 +940,8 @@
 /* 80393498 0035CA58  4E 80 00 20 */	blr
 .endfn mfCiOptFn1
 
-# 0x8051BE50 - 0x8051C098
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051BE50
 lbl_8051BE50:
@@ -1097,8 +1097,8 @@ lbl_8051BE84:
 	.4byte 0x74727929
 	.4byte 0x00000000
 
-# 0x80569270 - 0x805692D8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global mfci_vtbl
@@ -1130,8 +1130,8 @@ mfci_vtbl:
 	.4byte mfCiOptFn1
 	.4byte 0x00000000
 
-# 0x805EFA90 - 0x805F0488
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global mfci_err_func

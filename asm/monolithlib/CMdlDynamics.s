@@ -5455,8 +5455,8 @@
 /* 804EE0F0 004B76B0  4E 80 00 20 */	blr
 .endfn func_804ED67C
 
-# 0x80528128 - 0x80528168
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMdlDynamics_typestr
@@ -5480,8 +5480,8 @@ lbl_80528138:
 	.4byte 0x00446C6C
 	.4byte 0x656E0000
 
-# 0x80573A38 - 0x80573A90
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80573A38
 lbl_80573A38:
@@ -5515,8 +5515,8 @@ lbl_80573A78:
 	.4byte 0x2E680000
 	.4byte 0x00000000
 
-# 0x806665C8 - 0x806665E8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMdlDynamics
@@ -5540,8 +5540,8 @@ lbl_806665E0:
 	.4byte 0x72656600
 	.4byte 0x00000000
 
-# 0x8066DB60 - 0x8066DBA8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066DB60
 lbl_8066DB60:
@@ -5592,8 +5592,8 @@ lbl_8066DBA0:
 lbl_8066DBA4:
 	.4byte 0x3DCCCCCD
 
-# 0x80020D50 - 0x80020EB4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020D50", local
@@ -5797,8 +5797,8 @@ lbl_8066DBA4:
 	.4byte func_804EA1D0
 .endobj "@etb_80020E88"
 
-# 0x80038EB8 - 0x80039008
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80038EB8", local

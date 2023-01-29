@@ -2356,8 +2356,8 @@
 /* 8010ADA0 000D4360  4E 80 00 20 */	blr
 .endfn func_8010ACC4
 
-# 0x804F8D30 - 0x804F8F28
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuBattleDamage_typestr
@@ -2491,8 +2491,8 @@ lbl_804F8D44:
 	.4byte 0x69635F69
 	.4byte 0x63000000
 
-# 0x8052F96C - 0x8052FB00
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 4
 
 .global IUIBattle_hierarchy
@@ -2613,8 +2613,8 @@ CMenuBattleDamage_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664708 - 0x80664710
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuBattleDamage
@@ -2622,15 +2622,15 @@ __RTTI__CMenuBattleDamage:
 	.4byte CMenuBattleDamage_typestr
 	.4byte CMenuBattleDamage_hierarchy
 
-# 0x80666820 - 0x80666828
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666820
 lbl_80666820:
 	.skip 0x8
 
-# 0x80669830 - 0x80669858
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669830
 lbl_80669830:
@@ -2659,8 +2659,8 @@ lbl_80669850:
 	.4byte 0x43300000
 	.4byte 0x00000000
 
-# 0x8000B0AC - 0x8000B1A4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000B0AC", local
@@ -2789,8 +2789,8 @@ lbl_80669850:
 	.4byte 0x00000000
 .endobj "@etb_8000B19C"
 
-# 0x800268D0 - 0x80026990
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800268D0", local

@@ -667,8 +667,8 @@
 /* 804C0BE0 0048A1A0  4E 80 00 20 */	blr
 .endfn func_804C09E8
 
-# 0x80573198 - 0x805731A8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CLight
@@ -678,8 +678,8 @@ __vt__CLight:
 	.4byte func_80492034
 	.4byte 0x00000000
 
-# 0x80666400 - 0x80666408
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CLight
@@ -687,8 +687,8 @@ __RTTI__CLight:
 	.4byte CLight_typestr
 	.4byte 0x00000000
 
-# 0x8066D758 - 0x8066D780
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D758
 lbl_8066D758:
@@ -718,8 +718,8 @@ CLight_typestr:
 	.4byte 0x68740000
 	.4byte 0x00000000
 
-# 0x80020020 - 0x80020058
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020020", local
@@ -764,8 +764,8 @@ CLight_typestr:
 	.4byte 0x00000000
 .endobj "@etb_80020050"
 
-# 0x80037D60 - 0x80037DB4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80037D60", local

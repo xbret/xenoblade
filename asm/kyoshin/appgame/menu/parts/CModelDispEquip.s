@@ -2687,13 +2687,13 @@
 /* 80201A80 001CB040  4B FF DC DC */	b func_801FF75C
 .endfn func_80201A7C
 
-# 0x804F5998 - 0x804F599C
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_802019F8
 
-# 0x80503728 - 0x805037B8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80503728
 lbl_80503728:
@@ -2741,8 +2741,8 @@ lbl_80503750:
 	.4byte 0x6D6F756E
 	.4byte 0x74000000
 
-# 0x80538C80 - 0x80538D68
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CModelDispEquip
@@ -2809,8 +2809,8 @@ CModelDispEquip_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80579D48 - 0x80579D60
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80579D48
 lbl_80579D48:
@@ -2819,8 +2819,8 @@ lbl_80579D48:
 lbl_80579D54:
 	.skip 0xC
 
-# 0x80665030 - 0x80665040
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665030
 lbl_80665030:
@@ -2832,8 +2832,8 @@ __RTTI__CModelDispEquip:
 	.4byte CModelDispEquip_typestr
 	.4byte CModelDispEquip_hierarchy
 
-# 0x8066AB30 - 0x8066AB60
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AB30
 lbl_8066AB30:
@@ -2872,8 +2872,8 @@ lbl_8066AB58:
 lbl_8066AB5C:
 	.4byte 0x3FC00000
 
-# 0x80012960 - 0x80012AD4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80012960", local
@@ -3093,8 +3093,8 @@ lbl_8066AB5C:
 	.4byte 0x00000000
 .endobj "@etb_80012ACC"
 
-# 0x8002C9F0 - 0x8002CB64
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002C9F0", local

@@ -66,8 +66,8 @@
 /* 80385DE0 0034F3A0  4E 80 00 20 */	blr
 .endfn ADXB_AhxTermSupply
 
-# 0x805E89C8 - 0x805E89D8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global ahxsetsjifunc

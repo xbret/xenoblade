@@ -197,8 +197,8 @@
 /* 804DEDA4 004A8364  4E 80 00 20 */	blr
 .endfn func_804DED18
 
-# 0x80528008 - 0x80528028
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CArcItem_typestr
@@ -214,8 +214,8 @@ lbl_80528014:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80573828 - 0x805738B0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CArcItem
@@ -255,8 +255,8 @@ __vt__CArcItem:
 	.4byte func_80039D44
 	.4byte func_80039D40
 
-# 0x80666518 - 0x80666520
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CArcItem
@@ -264,8 +264,8 @@ __RTTI__CArcItem:
 	.4byte CArcItem_typestr
 	.4byte 0x00000000
 
-# 0x80020938 - 0x80020980
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020938", local
@@ -302,8 +302,8 @@ __RTTI__CArcItem:
 	.4byte 0x00000000
 .endobj "@etb_80020978"
 
-# 0x80038990 - 0x800389C0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80038990", local

@@ -1587,13 +1587,13 @@
 /* 8021BC6C 001E522C  4E 80 00 20 */	blr
 .endfn sinit_8021BBC4
 
-# 0x804F59A4 - 0x804F59A8
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8021BBC4
 
-# 0x80504500 - 0x805047F0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMCCrystalInfo_typestr
@@ -1789,8 +1789,8 @@ lbl_80504510:
 	.4byte 0x54657800
 	.4byte 0x00000000
 
-# 0x805394B0 - 0x80539548
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMCCrystalInfo
@@ -1837,8 +1837,8 @@ CMCCrystalInfo_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806650D8 - 0x806650E0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMCCrystalInfo
@@ -1846,8 +1846,8 @@ __RTTI__CMCCrystalInfo:
 	.4byte CMCCrystalInfo_typestr
 	.4byte CMCCrystalInfo_hierarchy
 
-# 0x80666FC8 - 0x80667008
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666FC8
 lbl_80666FC8:
@@ -1874,16 +1874,16 @@ lbl_80666FF8:
 lbl_80667000:
 	.skip 0x8
 
-# 0x8066AD58 - 0x8066AD60
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AD58
 lbl_8066AD58:
 	.4byte 0x3F800000
 	.4byte 0x00000000
 
-# 0x80013E0C - 0x80013F30
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80013E0C", local
@@ -2059,8 +2059,8 @@ lbl_8066AD58:
 	.4byte 0x00000000
 .endobj "@etb_80013F28"
 
-# 0x8002D7A0 - 0x8002D8CC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002D7A0", local

@@ -514,8 +514,8 @@
 /* 80339108 003026C8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8033910C 003026CC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8054ECA0 - 0x8054EE70
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054ECA0
 lbl_8054ECA0:

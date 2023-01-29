@@ -1762,13 +1762,13 @@
 /* 80059EB4 00023474  4E 80 00 20 */	blr
 .endfn sinit_80059D60
 
-# 0x804F5910 - 0x804F5914
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80059D60
 
-# 0x804F68D8 - 0x804F6908
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CTaskEnvironment_typestr
@@ -1789,8 +1789,8 @@ CTTask_CTaskEnvironment_typestr:
 	.4byte 0x656E743E
 	.4byte 0x00000000
 
-# 0x80529BC0 - 0x80529C48
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CTaskEnvironment
@@ -1839,8 +1839,8 @@ CTTask_CTaskEnvironment_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80574028 - 0x805740C8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80574028
 lbl_80574028:
@@ -1852,8 +1852,8 @@ lbl_80574058:
 lbl_805740B8:
 	.skip 0x10
 
-# 0x806642C8 - 0x806642D8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CTaskEnvironment
@@ -1866,15 +1866,15 @@ __RTTI__CTTask_CTaskEnvironment:
 	.4byte CTTask_CTaskEnvironment_typestr
 	.4byte CTTask_CTaskEnvironment_hierarchy
 
-# 0x80666658 - 0x80666660
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666658
 lbl_80666658:
 	.skip 0x8
 
-# 0x80668830 - 0x806688C8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80668830
 lbl_80668830:
@@ -1985,8 +1985,8 @@ lbl_806688C0:
 	.4byte 0x3F008081
 	.4byte 0x00000000
 
-# 0x80007714 - 0x80007794
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80007714", local
@@ -2085,8 +2085,8 @@ lbl_806688C0:
 	.4byte 0x00000000
 .endobj "@etb_8000778C"
 
-# 0x800226DC - 0x8002279C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800226DC", local

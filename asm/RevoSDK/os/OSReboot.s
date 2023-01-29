@@ -46,8 +46,8 @@
 /* 80359F08 003234C8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80359F0C 003234CC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80667AB0 - 0x80667AB8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667AB0
 lbl_80667AB0:

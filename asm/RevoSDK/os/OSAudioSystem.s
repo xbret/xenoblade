@@ -344,8 +344,8 @@
 /* 80353F5C 0031D51C  4E 80 00 20 */	blr
 .endfn __OSStopAudioSystem
 
-# 0x805517B8 - 0x80551838
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 DSPInitCode:

@@ -102,8 +102,8 @@
 /* 802E16C8 002AAC88  4E 80 00 20 */	blr
 .endfn bta_dm_search_sm_execute
 
-# 0x8050E090 - 0x8050E1B8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050E090
 lbl_8050E090:

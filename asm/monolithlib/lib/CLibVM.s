@@ -2907,8 +2907,8 @@
 /* 80462900 0042BEC0  48 00 B2 C8 */	b func_8046DBC8
 .endfn func_804628FC
 
-# 0x80526B20 - 0x80527688
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80526B20
 lbl_80526B20:
@@ -3657,8 +3657,8 @@ lbl_80527648:
 	.4byte 0x001D001D
 	.4byte 0x00400040
 
-# 0x80570D90 - 0x80570EC0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CLibVM
@@ -3745,8 +3745,8 @@ jumptable_80570E48:
 	.rel func_80460F58, .L_80461E84
 	.4byte 0x00000000
 
-# 0x80666110 - 0x80666118
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CLibVM
@@ -3754,8 +3754,8 @@ __RTTI__CLibVM:
 	.4byte CLibVM_typestr
 	.4byte CLibVM_hierarchy
 
-# 0x80667FF8 - 0x80668008
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667FF8
 lbl_80667FF8:
@@ -3767,8 +3767,8 @@ lbl_80667FFC:
 lbl_80668000:
 	.skip 0x8
 
-# 0x8066CD70 - 0x8066CD78
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .global CLibVM_typestr
@@ -3776,8 +3776,8 @@ CLibVM_typestr:
 	.4byte 0x434C6962
 	.4byte 0x564D0000
 
-# 0x8001D940 - 0x8001D9C4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001D940", local
@@ -3869,8 +3869,8 @@ CLibVM_typestr:
 	.4byte 0x00000000
 .endobj "@etb_8001D9BC"
 
-# 0x80035504 - 0x800355AC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80035504", local

@@ -58,8 +58,8 @@
 /* 80408718 003D1CD8  4E 80 00 20 */	blr
 .endfn __dt__Q34nw4r3lyt8DrawInfoFv
 
-# 0x8056D548 - 0x8056D558
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056D548
 lbl_8056D548:
@@ -68,8 +68,8 @@ lbl_8056D548:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 	.4byte 0x00000000
 
-# 0x8066C5D0 - 0x8066C5D8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C5D0
 lbl_8066C5D0:

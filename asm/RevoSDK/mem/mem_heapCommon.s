@@ -336,8 +336,8 @@
 .endfn MEMiFinalizeHeap
 /* 80348FBC 0031257C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805CFC50 - 0x805CFC78
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805CFC50
 lbl_805CFC50:
@@ -346,8 +346,8 @@ lbl_805CFC50:
 lbl_805CFC60:
 	.skip 0x18
 
-# 0x806679D0 - 0x806679D8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806679D0
 lbl_806679D0:

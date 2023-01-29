@@ -340,8 +340,8 @@
 /* 801F92D4 001C2894  4E 80 00 20 */	blr
 .endfn func_801F92B0
 
-# 0x805033B8 - 0x805033D0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CfResTboxImpl_typestr
@@ -353,8 +353,8 @@ cf_CfResTboxImpl_typestr:
 	.4byte 0x6C000000
 	.4byte 0x00000000
 
-# 0x80538998 - 0x80538A40
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80538998
 lbl_80538998:
@@ -407,8 +407,8 @@ cf_CfResTboxImpl_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665008 - 0x80665010
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CfResTboxImpl
@@ -416,15 +416,15 @@ __RTTI__cf_CfResTboxImpl:
 	.4byte cf_CfResTboxImpl_typestr
 	.4byte cf_CfResTboxImpl_hierarchy
 
-# 0x80666F50 - 0x80666F58
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666F50
 lbl_80666F50:
 	.skip 0x8
 
-# 0x8066AA90 - 0x8066AA98
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AA90
 lbl_8066AA90:
@@ -433,8 +433,8 @@ lbl_8066AA90:
 lbl_8066AA94:
 	.4byte 0x41A00000
 
-# 0x80012438 - 0x80012460
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80012438", local
@@ -467,8 +467,8 @@ lbl_8066AA94:
 	.4byte 0x00000000
 .endobj "@etb_80012458"
 
-# 0x8002C594 - 0x8002C5D0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002C594", local

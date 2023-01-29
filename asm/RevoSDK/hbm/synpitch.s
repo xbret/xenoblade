@@ -179,8 +179,8 @@
 .endfn __HBMSYNUpdateSrc
 /* 80341A8C 0030B04C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80518B78 - 0x80518B90
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518B78
 lbl_80518B78:
@@ -197,8 +197,8 @@ lbl_80518B88:
 	.4byte 0x47800000
 	.4byte 0x00000000
 
-# 0x80550020 - 0x80550410
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80550020
 lbl_80550020:

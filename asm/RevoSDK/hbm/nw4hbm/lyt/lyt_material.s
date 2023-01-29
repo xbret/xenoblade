@@ -3481,8 +3481,8 @@
 /* 8033173C 002FACFC  4E 80 00 20 */	blr
 .endfn GetTextureSize__Q36nw4hbm3lyt6detailFPQ36nw4hbm3lyt8MaterialUc
 
-# 0x80518A68 - 0x80518A98
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518A68
 lbl_80518A68:
@@ -3507,8 +3507,8 @@ lbl_80518A90:
 	.4byte 0x43300000
 	.4byte 0x00000000
 
-# 0x8054D848 - 0x8054D8D0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054D848
 lbl_8054D848:

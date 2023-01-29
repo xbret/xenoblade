@@ -203,8 +203,8 @@
 /* 803F20D8 003BB698  4E 80 00 20 */	blr
 .endfn CalcWorldMtx_Basic__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3UlPCQ34nw4r3g3d12ChrAnmResult
 
-# 0x8066C488 - 0x8066C498
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C488
 lbl_8066C488:

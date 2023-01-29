@@ -873,13 +873,13 @@
 /* 80436E80 00400440  4E 80 00 20 */	blr
 .endfn sinit_80436E08
 
-# 0x804F5A58 - 0x804F5A5C
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80436E08
 
-# 0x8066CA40 - 0x8066CA58
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CA40
 lbl_8066CA40:
@@ -898,8 +898,8 @@ lbl_8066CA50:
 	.4byte 0x3CC90FDB
 	.4byte 0x00000000
 
-# 0x8001C0B0 - 0x8001C0D0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C0B0", local
@@ -926,8 +926,8 @@ lbl_8066CA50:
 	.4byte 0x00000000
 .endobj "@etb_8001C0C8"
 
-# 0x80033CD4 - 0x80033D04
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033CD4", local

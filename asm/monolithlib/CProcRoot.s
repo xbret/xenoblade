@@ -428,8 +428,8 @@
 /* 80439CB0 00403270  4E 80 00 20 */	blr
 .endfn func_80439C24
 
-# 0x80525E20 - 0x80525E40
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CProcRoot_typestr
@@ -445,8 +445,8 @@ lbl_80525E2C:
 	.4byte 0x6F63526F
 	.4byte 0x6F740000
 
-# 0x8056EB20 - 0x8056EBD8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CProcRoot
@@ -501,15 +501,15 @@ CProcRoot_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8065A088 - 0x8065A0C8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8065A088
 lbl_8065A088:
 	.skip 0x40
 
-# 0x80665E70 - 0x80665E78
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CProcRoot
@@ -517,8 +517,8 @@ __RTTI__CProcRoot:
 	.4byte CProcRoot_typestr
 	.4byte CProcRoot_hierarchy
 
-# 0x80667E80 - 0x80667E90
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667E80
 lbl_80667E80:
@@ -527,8 +527,8 @@ lbl_80667E80:
 lbl_80667E88:
 	.skip 0x8
 
-# 0x8001C230 - 0x8001C278
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C230", local
@@ -585,8 +585,8 @@ lbl_80667E88:
 	.4byte 0x00000000
 .endobj "@etb_8001C270"
 
-# 0x80033E84 - 0x80033EF0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033E84", local

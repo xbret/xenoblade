@@ -4931,8 +4931,8 @@
 /* 80122160 000EB720  4B FF ED 94 */	b func_80120EF4
 .endfn func_8012215C
 
-# 0x804F9F18 - 0x804FA048
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804F9F18
 lbl_804F9F18:
@@ -5024,8 +5024,8 @@ lbl_804F9F60:
 	.4byte 0x706F735A
 	.4byte 0x00000000
 
-# 0x80530508 - 0x80530750
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80530508
 lbl_80530508:
@@ -5206,8 +5206,8 @@ lbl_8053073C:
 	.4byte 0x61632E68
 	.4byte 0x00000000
 
-# 0x80664770 - 0x806647B0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CArrow3D
@@ -5247,15 +5247,15 @@ lbl_806647A8:
 lbl_806647AC:
 	.4byte 0x72656600
 
-# 0x806668C0 - 0x806668C8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806668C0
 lbl_806668C0:
 	.skip 0x8
 
-# 0x80669998 - 0x80669A00
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669998
 lbl_80669998:
@@ -5332,8 +5332,8 @@ lbl_806699F8:
 	.4byte 0xBF000000
 	.4byte 0x00000000
 
-# 0x8000BB10 - 0x8000BC10
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000BB10", local
@@ -5488,8 +5488,8 @@ lbl_806699F8:
 	.4byte 0x00000000
 .endobj "@etb_8000BC08"
 
-# 0x80026E64 - 0x80026F6C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80026E64", local

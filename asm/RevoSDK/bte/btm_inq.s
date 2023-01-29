@@ -1966,8 +1966,8 @@
 /* 802E9E60 002B3420  4E 80 00 20 */	blr
 .endfn btm_inq_rmt_name_failed
 
-# 0x805452E0 - 0x805454F0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805452E0
 lbl_805452E0:
@@ -2120,8 +2120,8 @@ lbl_805454B4:
 	.4byte 0x64000000
 	.4byte 0x00000000
 
-# 0x8066BF68 - 0x8066BF70
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BF68
 lbl_8066BF68:

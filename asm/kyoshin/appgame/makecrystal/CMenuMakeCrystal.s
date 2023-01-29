@@ -1691,8 +1691,8 @@
 /* 80212500 001DBAC0  4B FF E7 E0 */	b func_80210CE0
 .endfn func_802124FC
 
-# 0x80503F30 - 0x80503F48
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuMakeCrystal_typestr
@@ -1704,8 +1704,8 @@ CMenuMakeCrystal_typestr:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80539288 - 0x805392F8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMenuMakeCrystal
@@ -1742,8 +1742,8 @@ CMenuMakeCrystal_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806650C0 - 0x806650C8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuMakeCrystal
@@ -1751,15 +1751,15 @@ __RTTI__CMenuMakeCrystal:
 	.4byte CMenuMakeCrystal_typestr
 	.4byte CMenuMakeCrystal_hierarchy
 
-# 0x80666FB8 - 0x80666FC0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 .obj instance, local
 	.skip 0x8
 
-# 0x800132FC - 0x800133E8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800132FC", local
@@ -1865,8 +1865,8 @@ __RTTI__CMenuMakeCrystal:
 	.4byte 0x00000000
 .endobj "@etb_800133E0"
 
-# 0x8002D29C - 0x8002D320
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002D29C", local

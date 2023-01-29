@@ -733,8 +733,8 @@
 /* 802E20E4 002AB6A4  4B FF F9 E8 */	b bta_dm_pm_set_mode
 .endfn bta_dm_pm_timer
 
-# 0x80544148 - 0x80544198
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80544148
 lbl_80544148:

@@ -1461,8 +1461,8 @@
 /* 80390974 00359F34  4E 80 00 20 */	blr
 .endfn cvFsIsAvailableRetry
 
-# 0x8051ACB0 - 0x8051B830
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051ACB0
 lbl_8051ACB0:
@@ -2203,8 +2203,8 @@ lbl_8051ACB0:
 	.4byte 0x616E646C
 	.4byte 0x65000000
 
-# 0x805E9D28 - 0x805EA1B0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805E9D28
 lbl_805E9D28:

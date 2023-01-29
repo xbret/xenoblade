@@ -264,8 +264,8 @@
 /* 803A3F88 0036D548  4E 80 00 20 */	blr
 .endfn MPVBDEC_StartFrame
 
-# 0x8051F538 - 0x8051F5F8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051F538
 lbl_8051F538:
@@ -318,8 +318,8 @@ lbl_8051F538:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80605ED0 - 0x80605F10
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80605ED0
 lbl_80605ED0:

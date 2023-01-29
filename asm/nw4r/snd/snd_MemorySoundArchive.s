@@ -376,8 +376,8 @@
 /* 80417598 003E0B58  4E 80 00 20 */	blr
 .endfn __dt__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv
 
-# 0x8056E0F0 - 0x8056E170
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E0F0
 lbl_8056E0F0:

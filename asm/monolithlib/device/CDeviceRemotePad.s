@@ -1296,8 +1296,8 @@
 /* 804478FC 00410EBC  4E 80 00 20 */	blr
 .endfn func_80447890
 
-# 0x80526188 - 0x8052628C
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80526188
 lbl_80526188:
@@ -1372,8 +1372,8 @@ CDeviceRemotePad_typestr:
 	.4byte 0x65506164
 	.4byte 0x00000000
 
-# 0x8056F438 - 0x8056F4F8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CDeviceRemotePad
@@ -1430,15 +1430,15 @@ CDeviceRemotePad_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8065A438 - 0x8065A6B8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8065A438
 lbl_8065A438:
 	.skip 0x280
 
-# 0x80665F10 - 0x80665F18
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CDeviceRemotePad
@@ -1446,15 +1446,15 @@ __RTTI__CDeviceRemotePad:
 	.4byte CDeviceRemotePad_typestr
 	.4byte CDeviceRemotePad_hierarchy
 
-# 0x80667F10 - 0x80667F18
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667F10
 lbl_80667F10:
 	.skip 0x8
 
-# 0x8066CB20 - 0x8066CB60
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CB20
 lbl_8066CB20:
@@ -1495,8 +1495,8 @@ lbl_8066CB58:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8001C9B4 - 0x8001CA1C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C9B4", local
@@ -1577,8 +1577,8 @@ lbl_8066CB58:
 	.4byte 0x00000000
 .endobj "@etb_8001CA14"
 
-# 0x800345A4 - 0x80034640
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800345A4", local

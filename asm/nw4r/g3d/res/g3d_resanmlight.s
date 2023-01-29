@@ -303,8 +303,8 @@
 /* 803E094C 003A9F0C  4E 80 00 20 */	blr
 .endfn GetAnmResult__Q34nw4r3g3d11ResAnmLightCFPQ34nw4r3g3d14LightAnmResultf
 
-# 0x8066C320 - 0x8066C330
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C320
 lbl_8066C320:

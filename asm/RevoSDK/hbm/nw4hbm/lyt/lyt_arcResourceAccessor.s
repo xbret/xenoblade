@@ -276,8 +276,8 @@
 /* 8032C40C 002F59CC  4E 80 00 20 */	blr
 .endfn GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc
 
-# 0x8054D638 - 0x8054D6B8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054D638
 lbl_8054D638:

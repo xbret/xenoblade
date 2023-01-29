@@ -50,15 +50,15 @@
 /* 8014A900 00113EC0  4E 80 00 20 */	blr
 .endfn func_8014A8F8
 
-# 0x80666AA0 - 0x80666AA8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666AA0
 lbl_80666AA0:
 	.skip 0x8
 
-# 0x8000D194 - 0x8000D19C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000D194", local
@@ -67,8 +67,8 @@ lbl_80666AA0:
 	.4byte 0x00000000
 .endobj "@etb_8000D194"
 
-# 0x8002840C - 0x80028418
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002840C", local

@@ -7801,13 +7801,13 @@
 /* 8007C0F4 000456B4  4E 80 00 20 */	blr
 .endfn sinit_8007BE74
 
-# 0x804F5920 - 0x804F5924
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8007BE74
 
-# 0x804F6E40 - 0x804F7020
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804F6E40
 lbl_804F6E40:
@@ -7932,8 +7932,8 @@ lbl_804F6E40:
 	.4byte 0x72616D65
 	.4byte 0x00000000
 
-# 0x8052AB98 - 0x8052AE18
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8052AB98
 lbl_8052AB98:
@@ -8100,30 +8100,30 @@ lbl_8052AE08:
 	.4byte 0x31000000
 	.4byte 0x00000000
 
-# 0x80574488 - 0x805744D8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80574488
 lbl_80574488:
 	.skip 0x50
 
-# 0x806644B0 - 0x806644B8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806644B0
 lbl_806644B0:
 	.4byte 0x72617465
 	.4byte 0x31000000
 
-# 0x806666F0 - 0x806666F8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806666F0
 lbl_806666F0:
 	.skip 0x8
 
-# 0x80668CA0 - 0x80668D20
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80668CA0
 lbl_80668CA0:
@@ -8214,8 +8214,8 @@ lbl_80668D18:
 	.4byte 0x3F19999A
 	.4byte 0x00000000
 
-# 0x8000836C - 0x8000841C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000836C", local
@@ -8350,8 +8350,8 @@ lbl_80668D18:
 	.4byte 0x00000000
 .endobj "@etb_80008414"
 
-# 0x800237D4 - 0x800238DC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800237D4", local

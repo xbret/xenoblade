@@ -187,8 +187,8 @@
 /* 803CF0E4 003986A4  4E 80 00 20 */	blr
 .endfn SFTMR_AddTsum
 
-# 0x8061CE00 - 0x8061CE08
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8061CE00
 lbl_8061CE00:

@@ -10,8 +10,8 @@
 /* 8037F990 00348F50  4E 80 00 20 */	blr
 .endfn ADXMNG_SetFramework
 
-# 0x80563708 - 0x80563710
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global adxm_framework

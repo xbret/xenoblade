@@ -1838,8 +1838,8 @@
 /* 8049ACB8 00464278  4E 80 00 20 */	blr
 .endfn func_8049AA74
 
-# 0x805279E0 - 0x80527A00
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CScnBloom_typestr
@@ -1856,8 +1856,8 @@ CScnBloomBase_typestr:
 	.4byte 0x65000000
 	.4byte 0x00000000
 
-# 0x80572250 - 0x80572288
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnBloom
@@ -1880,8 +1880,8 @@ CScnBloom_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80666318 - 0x80666328
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CScnBloom
@@ -1894,8 +1894,8 @@ __RTTI__CScnBloomBase:
 	.4byte CScnBloomBase_typestr
 	.4byte 0x00000000
 
-# 0x8066D2B0 - 0x8066D308
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D2B0
 lbl_8066D2B0:
@@ -1950,8 +1950,8 @@ lbl_8066D300:
 	.4byte 0x437F0000
 	.4byte 0x00000000
 
-# 0x8001F2E4 - 0x8001F374
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001F2E4", local
@@ -2042,8 +2042,8 @@ lbl_8066D300:
 	.4byte 0x00000000
 .endobj "@etb_8001F36C"
 
-# 0x80036D64 - 0x80036E00
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80036D64", local

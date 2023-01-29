@@ -1574,8 +1574,8 @@
 /* 80430620 003F9BE0  4E 80 00 20 */	blr
 .endfn SetupGXWithColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
 
-# 0x806570A8 - 0x806570C8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_806570A8
 lbl_806570A8:
@@ -1584,8 +1584,8 @@ lbl_806570A8:
 lbl_806570B8:
 	.skip 0x10
 
-# 0x80667E38 - 0x80667E40
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667E38
 lbl_80667E38:
@@ -1603,8 +1603,8 @@ lbl_80667E3E:
 lbl_80667E3F:
 	.skip 0x1
 
-# 0x8066C940 - 0x8066C960
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C940
 lbl_8066C940:

@@ -4529,13 +4529,13 @@
 /* 80205A78 001CF038  4E 80 00 20 */	blr
 .endfn sinit_802059E8
 
-# 0x804F599C - 0x804F59A0
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_802059E8
 
-# 0x805037B8 - 0x80503AE8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805037B8
 lbl_805037B8:
@@ -4779,8 +4779,8 @@ lbl_805038B8:
 	.4byte 0x65546578
 	.4byte 0x00000000
 
-# 0x80538D68 - 0x80538ED8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_80538D68:
@@ -4889,15 +4889,15 @@ CEquipChange_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80579D60 - 0x80579D98
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80579D60
 lbl_80579D60:
 	.skip 0x38
 
-# 0x80665040 - 0x80665048
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CEquipChange
@@ -4905,8 +4905,8 @@ __RTTI__CEquipChange:
 	.4byte CEquipChange_typestr
 	.4byte CEquipChange_hierarchy
 
-# 0x80666F58 - 0x80666F90
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666F58
 lbl_80666F58:
@@ -4933,8 +4933,8 @@ lbl_80666F88:
 lbl_80666F8C:
 	.skip 0x4
 
-# 0x8066AB60 - 0x8066AB70
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AB60
 lbl_8066AB60:
@@ -4947,8 +4947,8 @@ lbl_8066AB68:
 	.4byte 0x3F800000
 	.4byte 0x00000000
 
-# 0x80012AD4 - 0x80012E10
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80012AD4", local
@@ -5318,8 +5318,8 @@ lbl_8066AB68:
 	.4byte 0x00000000
 .endobj "@etb_80012E08"
 
-# 0x8002CB64 - 0x8002CD44
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002CB64", local

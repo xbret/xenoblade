@@ -834,22 +834,22 @@
 /* 8040AB7C 003D413C  4E 80 00 20 */	blr
 .endfn DrawQuad__Q34nw4r3lyt6detailFRCQ34nw4r4math4VEC2RCQ34nw4r3lyt4SizeUcPA4_CQ34nw4r4math4VEC2PCQ34nw4r2ut5ColorUc
 
-# 0x8063AD00 - 0x8063AD20
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8063AD00
 lbl_8063AD00:
 	.skip 0x20
 
-# 0x80667D80 - 0x80667D88
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667D80
 lbl_80667D80:
 	.skip 0x8
 
-# 0x8066C5F8 - 0x8066C600
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C5F8
 lbl_8066C5F8:

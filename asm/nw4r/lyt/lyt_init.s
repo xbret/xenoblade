@@ -29,8 +29,8 @@
 /* 803FE900 003C7EC0  4E 80 00 20 */	blr
 .endfn LytInit__Q24nw4r3lytFv
 
-# 0x8056D188 - 0x8056D1D0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056D188
 lbl_8056D188:
@@ -53,8 +53,8 @@ lbl_8056D188:
 	.4byte 0x38333129
 	.4byte 0x203E3E00
 
-# 0x80665DE8 - 0x80665DF0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665DE8
 lbl_80665DE8:

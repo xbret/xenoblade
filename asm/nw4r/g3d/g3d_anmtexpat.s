@@ -806,8 +806,8 @@
 /* 803E3394 003AC954  4E 80 00 20 */	blr
 .endfn GetTypeObj__Q34nw4r3g3d12AnmObjTexPatCFv
 
-# 0x80520E78 - 0x80520EA8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520E78
 lbl_80520E78:
@@ -826,8 +826,8 @@ lbl_80520E90:
 	.4byte 0x52657300
 	.4byte 0x00000000
 
-# 0x8056CAF0 - 0x8056CB80
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056CAF0
 lbl_8056CAF0:
@@ -870,8 +870,8 @@ lbl_8056CB38:
 	.4byte Detach__Q34nw4r3g3d12AnmObjTexPatFi
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexPatFv
 
-# 0x8066C358 - 0x8066C368
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C358
 lbl_8066C358:

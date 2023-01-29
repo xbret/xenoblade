@@ -4424,8 +4424,8 @@
 /* 802331B0 001FC770  4E 80 00 20 */	blr
 .endfn func_80232C78
 
-# 0x80506188 - 0x80506360
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuArtsSet_typestr
@@ -4607,8 +4607,8 @@ lbl_8050634C:
 	.4byte lbl_80506334
 	.4byte lbl_80506340
 
-# 0x80539FC0 - 0x8053A0C0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMenuArtsSet
@@ -4689,8 +4689,8 @@ jumptable_8053A09C:
 	.rel func_80231014, .L_802310D8
 	.rel func_80231014, .L_802310E0
 
-# 0x80665198 - 0x806651A8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuArtsSet
@@ -4702,15 +4702,15 @@ lbl_806651A0:
 	.4byte 0x01000000
 	.4byte 0x00000000
 
-# 0x80667030 - 0x80667038
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667030
 lbl_80667030:
 	.skip 0x8
 
-# 0x8066AEF8 - 0x8066AF40
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AEF8
 lbl_8066AEF8:
@@ -4761,8 +4761,8 @@ lbl_8066AF38:
 lbl_8066AF3C:
 	.4byte 0x41C80000
 
-# 0x800158A8 - 0x80015A88
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800158A8", local
@@ -5089,8 +5089,8 @@ lbl_8066AF3C:
 	.4byte 0x00000000
 .endobj "@etb_80015A80"
 
-# 0x8002E7B4 - 0x8002EA18
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002E7B4", local

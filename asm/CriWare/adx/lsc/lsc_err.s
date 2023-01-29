@@ -78,8 +78,8 @@
 /* 803918A8 0035AE68  4E 80 00 20 */	blr
 .endfn LSC_CallErrFunc_
 
-# 0x805EB270 - 0x805EB378
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805EB270
 lbl_805EB270:

@@ -2209,13 +2209,13 @@
 /* 80432674 003FBC34  4E 80 00 20 */	blr
 .endfn sinit_804325F4
 
-# 0x804F5A40 - 0x804F5A44
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_804325F4
 
-# 0x806570C8 - 0x806570E0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_806570C8
 lbl_806570C8:
@@ -2224,8 +2224,8 @@ lbl_806570C8:
 lbl_806570D4:
 	.skip 0xC
 
-# 0x80667E40 - 0x80667E50
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667E40
 lbl_80667E40:
@@ -2240,8 +2240,8 @@ lbl_80667E48:
 lbl_80667E49:
 	.skip 0x7
 
-# 0x8066C960 - 0x8066C978
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C960
 lbl_8066C960:

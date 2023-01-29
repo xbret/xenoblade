@@ -208,8 +208,8 @@
 /* 802DAD5C 002A431C  4E 80 00 20 */	blr
 .endfn PPCMthid4
 
-# 0x80543DE0 - 0x80543E18
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .obj "@98", local

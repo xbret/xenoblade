@@ -446,8 +446,8 @@
 /* 802CD0C0 00296680  4E 80 00 20 */	blr
 .endfn HandlePositionFileSupportRequest
 
-# 0x8053FEA8 - 0x8053FEF0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053FEA8
 lbl_8053FEA8:

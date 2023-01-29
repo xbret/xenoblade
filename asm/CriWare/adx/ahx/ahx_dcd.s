@@ -1914,8 +1914,8 @@
 /* 8038F4DC 00358A9C  4E 80 00 20 */	blr
 .endfn AHXDCD_GetSample_Dequantize_Denormalize
 
-# 0x8051AC98 - 0x8051ACB0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051AC98
 lbl_8051AC98:
@@ -1930,8 +1930,8 @@ lbl_8051ACA8:
 	.4byte 0x4352492D
 	.4byte 0x4D570000
 
-# 0x80569190 - 0x80569208
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80569190
 lbl_80569190:
@@ -1970,8 +1970,8 @@ lbl_805691E0:
 	.4byte 0x000000FF
 	.4byte 0x00000000
 
-# 0x805E9B10 - 0x805E9D20
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global skg_init_count_1

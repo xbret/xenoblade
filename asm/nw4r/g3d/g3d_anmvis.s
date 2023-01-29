@@ -101,8 +101,8 @@
 /* 803E1BE4 003AB1A4  4E 80 00 20 */	blr
 .endfn ApplyVisAnmResult__Q24nw4r3g3dFPUcQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjVis
 
-# 0x80520E38 - 0x80520E48
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520E38
 lbl_80520E38:

@@ -1249,8 +1249,8 @@
 /* 8017FF74 00149534  4B FF EF 74 */	b func_8017EEE8
 .endfn func_8017FF70
 
-# 0x804FEC78 - 0x804FEEF8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuZeal_typestr
@@ -1418,8 +1418,8 @@ lbl_804FEC84:
 	.4byte 0x66000000
 	.4byte 0x00000000
 
-# 0x805353B8 - 0x805354B8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMenuZeal
@@ -1492,8 +1492,8 @@ CMenuZeal_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664D38 - 0x80664D40
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuZeal
@@ -1501,15 +1501,15 @@ __RTTI__CMenuZeal:
 	.4byte CMenuZeal_typestr
 	.4byte CMenuZeal_hierarchy
 
-# 0x80666B90 - 0x80666B98
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666B90
 lbl_80666B90:
 	.skip 0x8
 
-# 0x8066A130 - 0x8066A158
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A130
 lbl_8066A130:
@@ -1540,8 +1540,8 @@ lbl_8066A150:
 	.4byte 0x42080000
 	.4byte 0x00000000
 
-# 0x8000E540 - 0x8000E600
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000E540", local
@@ -1628,8 +1628,8 @@ lbl_8066A150:
 	.4byte 0x00000000
 .endobj "@etb_8000E5F8"
 
-# 0x800295C4 - 0x80029630
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800295C4", local

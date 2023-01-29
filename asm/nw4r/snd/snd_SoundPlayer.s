@@ -890,8 +890,8 @@
 /* 80420FBC 003EA57C  4E 80 00 20 */	blr
 .endfn detail_FreePlayerHeap__Q34nw4r3snd11SoundPlayerFPQ44nw4r3snd6detail10BasicSound
 
-# 0x8063B4E0 - 0x8063BB00
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8063B4E0
 lbl_8063B4E0:
@@ -900,15 +900,15 @@ lbl_8063B4E0:
 lbl_8063B4F0:
 	.skip 0x610
 
-# 0x80667DE0 - 0x80667DE8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667DE0
 lbl_80667DE0:
 	.skip 0x8
 
-# 0x8066C858 - 0x8066C860
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C858
 lbl_8066C858:

@@ -514,8 +514,8 @@
 /* 803A23D0 0036B990  4E 80 00 20 */	blr
 .endfn mwsfsvr_SyncStartSst
 
-# 0x8051ED98 - 0x8051F450
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051ED98
 lbl_8051ED98:

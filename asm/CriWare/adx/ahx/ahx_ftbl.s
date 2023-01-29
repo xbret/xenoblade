@@ -1,7 +1,7 @@
 .include "macros.inc"
 
-# 0x80563730 - 0x805657B4
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global ahxsbf_synthesis_filter_table

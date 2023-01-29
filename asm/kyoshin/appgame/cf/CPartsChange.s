@@ -7338,8 +7338,8 @@
 /* 801993C0 00162980  4E 80 00 20 */	blr
 .endfn func_8019922C
 
-# 0x804FF410 - 0x804FF538
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CPartsChange_typestr
@@ -7429,8 +7429,8 @@ lbl_804FF470:
 	.4byte 0x645F4944
 	.4byte 0x00000000
 
-# 0x80536260 - 0x80536318
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CPartsChange
@@ -7495,8 +7495,8 @@ lbl_805362A8:
 	.4byte func_8019922C
 	.4byte 0x00000000
 
-# 0x80664DE0 - 0x80664E38
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80664DE0
 lbl_80664DE0:
@@ -7550,8 +7550,8 @@ __RTTI___reslist_base_cf_CfPartyInfo:
 	.4byte _reslist_base_cf_CfPartyInfo_typestr
 	.4byte 0x00000000
 
-# 0x80666BF8 - 0x80666C08
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666BF8
 lbl_80666BF8:
@@ -7569,8 +7569,8 @@ lbl_80666C02:
 lbl_80666C04:
 	.skip 0x4
 
-# 0x8066A370 - 0x8066A420
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A370
 lbl_8066A370:
@@ -7689,8 +7689,8 @@ lbl_8066A418:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x8000F308 - 0x8000F4CC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000F308", local
@@ -8022,8 +8022,8 @@ lbl_8066A418:
 	.4byte 0x00000000
 .endobj "@etb_8000F4C4"
 
-# 0x8002A0C8 - 0x8002A350
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002A0C8", local

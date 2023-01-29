@@ -137,8 +137,8 @@
 /* 803D5DC0 0039F380  4E 80 00 20 */	blr
 .endfn SFXA_IsNeedUpdateLumiTbl
 
-# 0x8061D370 - 0x8061D498
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global sfxa_work

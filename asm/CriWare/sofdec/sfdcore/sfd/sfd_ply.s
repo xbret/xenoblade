@@ -2929,8 +2929,8 @@
 /* 803CB854 00394E14  4E 80 00 20 */	blr
 .endfn SFD_SetSupplySj
 
-# 0x805203F0 - 0x805205D8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805203F0
 lbl_805203F0:
@@ -3061,8 +3061,8 @@ lbl_80520588:
 	.4byte 0x256C6400
 	.4byte 0x00000000
 
-# 0x8056C5F0 - 0x8056C610
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8056C5F0:
@@ -3075,8 +3075,8 @@ jumptable_8056C5F0:
 	.rel sfply_ExecOne, .L_803C95C8
 	.4byte 0x00000000
 
-# 0x8061CDD8 - 0x8061CDE4
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8061CDD8
 lbl_8061CDD8:

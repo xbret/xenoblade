@@ -877,8 +877,8 @@
 /* 803A970C 00372CCC  4E 80 00 20 */	blr
 .endfn MPVMC08_OneRef4p_TuneC
 
-# 0x8051F820 - 0x8051F830
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051F820
 lbl_8051F820:
@@ -887,8 +887,8 @@ lbl_8051F820:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8056A918 - 0x8056A938
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8056A918:

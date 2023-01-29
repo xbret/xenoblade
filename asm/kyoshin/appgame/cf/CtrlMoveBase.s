@@ -1680,8 +1680,8 @@
 /* 8008A0C4 00053684  4E 80 00 20 */	blr
 .endfn func_8008A0C4
 
-# 0x804F7200 - 0x804F7214
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CtrlMoveBase_typestr
@@ -1692,8 +1692,8 @@ cf_CtrlMoveBase_typestr:
 	.4byte 0x42617365
 	.4byte 0x00000000
 
-# 0x8052AFD8 - 0x8052AFE4
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CtrlMoveBase
@@ -1702,8 +1702,8 @@ __vt__cf_CtrlMoveBase:
 	.4byte 0x00000000
 	.4byte func_80089628
 
-# 0x80664510 - 0x80664518
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CtrlMoveBase
@@ -1711,8 +1711,8 @@ __RTTI__cf_CtrlMoveBase:
 	.4byte cf_CtrlMoveBase_typestr
 	.4byte 0x00000000
 
-# 0x80668E20 - 0x80668E48
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80668E20
 lbl_80668E20:
@@ -1745,8 +1745,8 @@ lbl_80668E40:
 lbl_80668E44:
 	.4byte 0x3F350481
 
-# 0x80008B54 - 0x80008BB4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80008B54", local
@@ -1821,8 +1821,8 @@ lbl_80668E44:
 	.4byte 0x00000000
 .endobj "@etb_80008BAC"
 
-# 0x8002411C - 0x800241AC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002411C", local

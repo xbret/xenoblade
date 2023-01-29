@@ -267,8 +267,8 @@
 /* 804153C0 003DE980  4E 80 00 20 */	blr
 .endfn DisposeWave__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv
 
-# 0x8063B1D0 - 0x8063B1E8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8063B1D0
 lbl_8063B1D0:
@@ -277,8 +277,8 @@ lbl_8063B1D0:
 lbl_8063B1DC:
 	.skip 0xC
 
-# 0x80667DC0 - 0x80667DC8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667DC0
 lbl_80667DC0:

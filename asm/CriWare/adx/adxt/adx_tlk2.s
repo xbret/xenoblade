@@ -151,8 +151,8 @@
 /* 80382598 0034BB58  4E 80 00 20 */	blr
 .endfn ADXT_StartFnameRange
 
-# 0x80519838 - 0x80519968
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80519838
 lbl_80519838:

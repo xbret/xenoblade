@@ -84,8 +84,8 @@
 /* 8030920C 002D27CC  4E 80 00 20 */	blr
 .endfn DBPrintf
 
-# 0x805495E0 - 0x805495F8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805495E0
 lbl_805495E0:
@@ -96,8 +96,8 @@ lbl_805495E0:
 	.4byte 0x6E617469
 	.4byte 0x6F6E0A00
 
-# 0x80667780 - 0x80667788
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 .global __DBInterface

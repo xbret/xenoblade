@@ -151,8 +151,8 @@
 /* 8035E818 00327DD8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8035E81C 00327DDC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8055EE98 - 0x8055EEB8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8055EE98
 lbl_8055EE98:

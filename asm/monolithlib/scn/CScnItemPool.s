@@ -1404,8 +1404,8 @@
 /* 8048D020 004565E0  4B FF F1 F8 */	b func_8048C218
 .endfn func_8048D01C
 
-# 0x80527840 - 0x80527880
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CScnItemPool_typestr
@@ -1433,8 +1433,8 @@ _reslist_base_CScnItem_typestr:
 	.4byte 0x656D202A
 	.4byte 0x3E000000
 
-# 0x80571CD0 - 0x80571DB0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnItemPool
@@ -1508,8 +1508,8 @@ __vt___reslist_base_CScnItem:
 	.4byte func_8048BF80
 	.4byte 0x00000000
 
-# 0x80666258 - 0x80666270
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CScnItemPool
@@ -1527,8 +1527,8 @@ __RTTI___reslist_base_CScnItem:
 	.4byte _reslist_base_CScnItem_typestr
 	.4byte 0x00000000
 
-# 0x8001E990 - 0x8001EB70
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001E990", local
@@ -1743,8 +1743,8 @@ __RTTI___reslist_base_CScnItem:
 	.4byte 0x00000000
 .endobj "@etb_8001EB68"
 
-# 0x8003662C - 0x80036740
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8003662C", local

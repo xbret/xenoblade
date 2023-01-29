@@ -3138,8 +3138,8 @@
 /* 80424FB8 003EE578  4B FF D7 88 */	b __dt__Q44nw4r3snd6detail10StrmPlayerFv
 .endfn _208___dt__Q44nw4r3snd6detail10StrmPlayerFv
 
-# 0x8056E558 - 0x8056E5D0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E558
 lbl_8056E558:
@@ -3178,8 +3178,8 @@ lbl_8056E5B8:
 	.4byte Cancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
 	.4byte OnCancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
 
-# 0x80653000 - 0x80657018
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80653000
 lbl_80653000:
@@ -3188,15 +3188,15 @@ lbl_80653000:
 lbl_80657000:
 	.skip 0x18
 
-# 0x80667DF8 - 0x80667E00
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667DF8
 lbl_80667DF8:
 	.skip 0x8
 
-# 0x8066C860 - 0x8066C888
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C860
 lbl_8066C860:

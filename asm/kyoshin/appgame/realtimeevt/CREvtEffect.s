@@ -824,8 +824,8 @@
 /* 8018568C 0014EC4C  4B FF F5 B0 */	b func_80184C3C
 .endfn func_80185688
 
-# 0x804FF018 - 0x804FF040
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CREvtEffect_typestr
@@ -843,8 +843,8 @@ lbl_804FF028:
 	.4byte 0x6F6E6F52
 	.4byte 0x47420000
 
-# 0x80535AA8 - 0x80535AF0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CREvtEffect
@@ -871,8 +871,8 @@ cf_CREvtEffect_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664D68 - 0x80664D80
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80664D68
 lbl_80664D68:
@@ -890,8 +890,8 @@ __RTTI__cf_CREvtEffect:
 	.4byte cf_CREvtEffect_typestr
 	.4byte cf_CREvtEffect_hierarchy
 
-# 0x8066A1E8 - 0x8066A228
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A1E8
 lbl_8066A1E8:
@@ -934,8 +934,8 @@ lbl_8066A220:
 	.4byte 0x3DCCCCCD
 	.4byte 0x00000000
 
-# 0x8000E8E8 - 0x8000E984
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000E8E8", local
@@ -1013,8 +1013,8 @@ lbl_8066A220:
 	.4byte 0x00000000
 .endobj "@etb_8000E97C"
 
-# 0x80029840 - 0x800298AC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80029840", local

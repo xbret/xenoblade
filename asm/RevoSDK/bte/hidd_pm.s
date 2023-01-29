@@ -255,8 +255,8 @@
 /* 802F3B40 002BD100  4E 80 00 20 */	blr
 .endfn hidd_pm_inact_timeout
 
-# 0x805C2570 - 0x805C26B8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805C2570
 lbl_805C2570:

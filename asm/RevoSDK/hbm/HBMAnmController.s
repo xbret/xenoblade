@@ -89,8 +89,8 @@
 /* 8031F55C 002E8B1C  4E 80 00 20 */	blr
 .endfn do_calc__Q210homebutton18GroupAnmControllerFv
 
-# 0x8054C240 - 0x8054C288
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__homebutton_GroupAnmController

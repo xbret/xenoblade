@@ -90,8 +90,8 @@
 /* 803C0EEC 0038A4AC  4E 80 00 20 */	blr
 .endfn SFMEM_Seek
 
-# 0x805202A0 - 0x805202D8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805202A0
 lbl_805202A0:

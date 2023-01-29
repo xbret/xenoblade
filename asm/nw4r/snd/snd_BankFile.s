@@ -512,8 +512,8 @@
 /* 804120A8 003DB668  4E 80 00 20 */	blr
 .endfn ReadWaveInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8WaveInfoRCQ54nw4r3snd6detail8InstInfo16WaveDataLocationPCvPPCQ44nw4r3snd6detail8WaveInfo
 
-# 0x8066C6D8 - 0x8066C6E0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C6D8
 lbl_8066C6D8:

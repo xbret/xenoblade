@@ -3366,8 +3366,8 @@
 /* 80410B7C 003DA13C  4E 80 00 20 */	blr
 .endfn SetVoiceRmtIIRCoefs__Q44nw4r3snd6detail17AxVoiceParamBlockFUse
 
-# 0x8066C690 - 0x8066C6B8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C690
 lbl_8066C690:

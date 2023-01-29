@@ -1378,8 +1378,8 @@
 /* 8027311C 0023C6DC  4E 80 00 20 */	blr
 .endfn func_8027305C
 
-# 0x80509FE0 - 0x8050A008
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuKizunaTalkList_typestr
@@ -1397,8 +1397,8 @@ lbl_80509FF8:
 	.4byte 0x74650069
 	.4byte 0x6E666F00
 
-# 0x8053B470 - 0x8053B4E0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMenuKizunaTalkList
@@ -1435,8 +1435,8 @@ CMenuKizunaTalkList_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806652D0 - 0x806652D8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuKizunaTalkList
@@ -1444,15 +1444,15 @@ __RTTI__CMenuKizunaTalkList:
 	.4byte CMenuKizunaTalkList_typestr
 	.4byte CMenuKizunaTalkList_hierarchy
 
-# 0x806671A0 - 0x806671A8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806671A0
 lbl_806671A0:
 	.skip 0x8
 
-# 0x80018134 - 0x80018278
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80018134", local
@@ -1600,8 +1600,8 @@ lbl_806671A0:
 	.4byte 0x00000000
 .endobj "@etb_80018270"
 
-# 0x800308A8 - 0x80030968
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800308A8", local

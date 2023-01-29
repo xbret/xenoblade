@@ -636,8 +636,8 @@
 /* 80295560 0025EB20  4B FF F8 A4 */	b func_80294E04
 .endfn func_8029555C
 
-# 0x8050B3E8 - 0x8050B410
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CTaskGamePic_typestr
@@ -656,8 +656,8 @@ CTTask_CTaskGamePic_typestr:
 	.4byte 0x5069633E
 	.4byte 0x00000000
 
-# 0x8053C290 - 0x8053C3B8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CTaskGamePic
@@ -746,8 +746,8 @@ CTTask_CTaskGamePic_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665418 - 0x80665428
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CTaskGamePic
@@ -760,8 +760,8 @@ __RTTI__CTTask_CTaskGamePic:
 	.4byte CTTask_CTaskGamePic_typestr
 	.4byte CTTask_CTaskGamePic_hierarchy
 
-# 0x8066B458 - 0x8066B470
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B458
 lbl_8066B458:
@@ -778,8 +778,8 @@ lbl_8066B468:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x80019AB8 - 0x80019B50
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80019AB8", local
@@ -864,8 +864,8 @@ lbl_8066B468:
 	.4byte 0x00000000
 .endobj "@etb_80019B48"
 
-# 0x80031D30 - 0x80031DB4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80031D30", local

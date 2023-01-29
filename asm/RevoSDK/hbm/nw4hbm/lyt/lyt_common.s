@@ -1050,8 +1050,8 @@
 /* 8032D41C 002F69DC  4E 80 00 20 */	blr
 .endfn InitGXTexObjFromTPL__Q36nw4hbm3lyt6detailFP9_GXTexObjP10TPLPaletteUl
 
-# 0x80518A48 - 0x80518A58
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518A48
 lbl_80518A48:
@@ -1064,8 +1064,8 @@ lbl_80518A50:
 	.4byte 0x43300000
 	.4byte 0x00000000
 
-# 0x805CD790 - 0x805CD7B8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805CD790
 lbl_805CD790:

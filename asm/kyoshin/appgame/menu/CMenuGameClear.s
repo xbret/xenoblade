@@ -337,8 +337,8 @@
 /* 802B2630 0027BBF0  4E 80 00 20 */	blr
 .endfn func_802B262C
 
-# 0x8050C938 - 0x8050C990
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuGameClear_typestr
@@ -368,8 +368,8 @@ lbl_8050C948:
 	.4byte 0x6D650000
 	.4byte 0x00000000
 
-# 0x8053E538 - 0x8053E5A8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMenuGameClear
@@ -406,8 +406,8 @@ CMenuGameClear_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665758 - 0x80665760
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuGameClear
@@ -415,15 +415,15 @@ __RTTI__CMenuGameClear:
 	.4byte CMenuGameClear_typestr
 	.4byte CMenuGameClear_hierarchy
 
-# 0x806674E8 - 0x806674F0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806674E8
 lbl_806674E8:
 	.skip 0x8
 
-# 0x8001B840 - 0x8001B8B4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001B840", local
@@ -467,8 +467,8 @@ lbl_806674E8:
 	.4byte 0x00000000
 .endobj "@etb_8001B8AC"
 
-# 0x800333E0 - 0x80033404
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800333E0", local

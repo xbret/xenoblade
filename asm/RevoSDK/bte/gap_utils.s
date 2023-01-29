@@ -488,8 +488,8 @@
 /* 802F0EB8 002BA478  4E 80 00 20 */	blr
 .endfn gap_convert_btm_status
 
-# 0x805463A0 - 0x80546690
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805463A0
 lbl_805463A0:

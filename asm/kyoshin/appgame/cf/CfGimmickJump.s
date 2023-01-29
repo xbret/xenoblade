@@ -1353,8 +1353,8 @@
 /* 80210260 001D9820  4E 80 00 20 */	blr
 .endfn func_8020FD2C
 
-# 0x80503E48 - 0x80503EB8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CfGimmickJump_typestr
@@ -1390,8 +1390,8 @@ lbl_80503E5C:
 	.4byte 0x65000000
 	.4byte 0x00000000
 
-# 0x805391A0 - 0x80539208
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805391A0
 lbl_805391A0:
@@ -1428,8 +1428,8 @@ cf_CfGimmickJump_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806650A8 - 0x806650B0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CfGimmickJump
@@ -1437,8 +1437,8 @@ __RTTI__cf_CfGimmickJump:
 	.4byte cf_CfGimmickJump_typestr
 	.4byte cf_CfGimmickJump_hierarchy
 
-# 0x8066ACC0 - 0x8066ACF8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066ACC0
 lbl_8066ACC0:
@@ -1477,8 +1477,8 @@ lbl_8066ACF0:
 	.4byte 0x43160000
 	.4byte 0x00000000
 
-# 0x80013224 - 0x80013294
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80013224", local
@@ -1545,8 +1545,8 @@ lbl_8066ACF0:
 	.4byte 0x00000000
 .endobj "@etb_8001328C"
 
-# 0x8002D1D0 - 0x8002D23C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002D1D0", local

@@ -536,13 +536,13 @@
 /* 802AEB70 00278130  4E 80 00 20 */	blr
 .endfn func_802AEB1C
 
-# 0x804F59E0 - 0x804F59E4
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_802AEA88
 
-# 0x8050C2D8 - 0x8050C880
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050C2D8
 lbl_8050C2D8:
@@ -951,8 +951,8 @@ lbl_8050C808:
 	.4byte 0x30553044
 	.4byte 0x30020000
 
-# 0x8053DAD0 - 0x8053DBB0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CLoad
@@ -1021,8 +1021,8 @@ lbl_8053DB8C:
 	.4byte 0x00000002
 	.4byte 0x00000000
 
-# 0x8057AA48 - 0x8057AD80
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057AA48
 lbl_8057AA48:
@@ -1031,8 +1031,8 @@ lbl_8057AA48:
 lbl_8057AA58:
 	.skip 0x328
 
-# 0x806656F0 - 0x80665730
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CLoad
@@ -1080,8 +1080,8 @@ lbl_80665728:
 lbl_8066572C:
 	.4byte lbl_8050C808
 
-# 0x8066B698 - 0x8066B6A8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B698
 lbl_8066B698:
@@ -1095,8 +1095,8 @@ CLoad_typestr:
 	.4byte 0x434C6F61
 	.4byte 0x64000000
 
-# 0x8001B4D8 - 0x8001B570
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001B4D8", local
@@ -1185,8 +1185,8 @@ CLoad_typestr:
 	.4byte 0x00000000
 .endobj "@etb_8001B568"
 
-# 0x8003317C - 0x8003320C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8003317C", local

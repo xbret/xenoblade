@@ -2063,8 +2063,8 @@
 /* 802B2198 0027B758  4E 80 00 20 */	blr
 .endfn func_802B2104
 
-# 0x8050C918 - 0x8050C938
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuGCItem_typestr
@@ -2080,8 +2080,8 @@ lbl_8050C924:
 	.4byte 0x65000000
 	.4byte 0x00000000
 
-# 0x8053E420 - 0x8053E538
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMenuGCItem
@@ -2162,8 +2162,8 @@ jumptable_8053E490:
 	.rel func_802B1440, .L_802B2034
 	.4byte 0x00000000
 
-# 0x80665750 - 0x80665758
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuGCItem
@@ -2171,23 +2171,23 @@ __RTTI__CMenuGCItem:
 	.4byte CMenuGCItem_typestr
 	.4byte CMenuGCItem_hierarchy
 
-# 0x806674E0 - 0x806674E8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806674E0
 lbl_806674E0:
 	.skip 0x8
 
-# 0x8066B6C0 - 0x8066B6C8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B6C0
 lbl_8066B6C0:
 	.4byte 0x25262728
 	.4byte 0x00000000
 
-# 0x8001B690 - 0x8001B840
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001B690", local
@@ -2346,8 +2346,8 @@ lbl_8066B6C0:
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 .endobj "@etb_8001B828"
 
-# 0x80033350 - 0x800333E0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033350", local

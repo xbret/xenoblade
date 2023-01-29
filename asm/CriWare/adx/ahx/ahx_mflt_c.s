@@ -327,8 +327,8 @@
 /* 8038AEA4 00354464  4E 80 00 20 */	blr
 .endfn ahxsbf_mult_flt_ex
 
-# 0x8051ABB8 - 0x8051ABC0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051ABB8
 lbl_8051ABB8:

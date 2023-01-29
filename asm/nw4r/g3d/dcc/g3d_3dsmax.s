@@ -740,8 +740,8 @@
 /* 803F4408 003BD9C8  4E 80 00 20 */	blr
 .endfn CalcTexMtx_3dsmax__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4Flag
 
-# 0x80521048 - 0x80521080
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80521048
 lbl_80521048:
@@ -762,8 +762,8 @@ lbl_80521064:
 	.4byte ProductTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 
-# 0x8066C4C0 - 0x8066C4D8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C4C0
 lbl_8066C4C0:

@@ -108,8 +108,8 @@
 /* 802CAFBC 0029457C  4E 80 00 20 */	blr
 .endfn ldexp
 
-# 0x8066BD70 - 0x8066BD98
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@30", local

@@ -30,8 +30,8 @@
 /* 802B80EC 002816AC  4B F5 A3 A4 */	b func_80212490
 .endfn func_802B80EC
 
-# 0x8001BD98 - 0x8001BDA0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001BD98", local
@@ -40,8 +40,8 @@
 	.4byte 0x00000000
 .endobj "@etb_8001BD98"
 
-# 0x8003392C - 0x80033938
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8003392C", local

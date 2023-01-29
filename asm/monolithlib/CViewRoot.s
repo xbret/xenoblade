@@ -144,8 +144,8 @@
 /* 80443714 0040CCD4  4E 80 00 20 */	blr
 .endfn func_804434FC
 
-# 0x80525F78 - 0x80525F90
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CViewRoot_typestr
@@ -159,8 +159,8 @@ lbl_80525F84:
 	.4byte 0x77526F6F
 	.4byte 0x74000000
 
-# 0x8056EF88 - 0x8056F040
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CViewRoot
@@ -215,8 +215,8 @@ CViewRoot_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665ED0 - 0x80665ED8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CViewRoot
@@ -224,8 +224,8 @@ __RTTI__CViewRoot:
 	.4byte CViewRoot_typestr
 	.4byte CViewRoot_hierarchy
 
-# 0x8001C6D8 - 0x8001C724
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C6D8", local
@@ -251,8 +251,8 @@ __RTTI__CViewRoot:
 	.4byte func_80437AC8
 .endobj "@etb_8001C6D8"
 
-# 0x800342F8 - 0x80034304
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800342F8", local

@@ -15,8 +15,8 @@
 /* 802DAAF8 002A40B8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 802DAAFC 002A40BC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805435E0 - 0x80543DE0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805435E0
 lbl_805435E0:

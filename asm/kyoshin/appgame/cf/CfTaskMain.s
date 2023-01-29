@@ -186,8 +186,8 @@
 /* 80069948 00032F08  4B FF FE 20 */	b func_80069768
 .endfn func_80069944
 
-# 0x804F6BE8 - 0x804F6C10
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CfTaskMain_typestr
@@ -206,8 +206,8 @@ CTTask_cf_CfTaskMain_typestr:
 	.4byte 0x6B4D6169
 	.4byte 0x6E3E0000
 
-# 0x8052A650 - 0x8052A768
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CfTaskMain
@@ -292,8 +292,8 @@ CTTask_cf_CfTaskMain_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806643D0 - 0x806643E0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CfTaskMain
@@ -306,8 +306,8 @@ __RTTI__CTTask_cf_CfTaskMain:
 	.4byte CTTask_cf_CfTaskMain_typestr
 	.4byte CTTask_cf_CfTaskMain_hierarchy
 
-# 0x80007F28 - 0x80007F64
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80007F28", local
@@ -345,8 +345,8 @@ __RTTI__CTTask_cf_CfTaskMain:
 	.4byte 0x00000000
 .endobj "@etb_80007F5C"
 
-# 0x800231C8 - 0x80023204
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800231C8", local

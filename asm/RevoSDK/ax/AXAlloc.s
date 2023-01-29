@@ -417,8 +417,8 @@
 .endfn AXSetVoicePriority
 /* 802D26AC 0029BC6C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8057D828 - 0x8057D940
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057D828
 lbl_8057D828:
@@ -427,8 +427,8 @@ lbl_8057D828:
 lbl_8057D8A8:
 	.skip 0x98
 
-# 0x80667610 - 0x80667618
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667610
 lbl_80667610:

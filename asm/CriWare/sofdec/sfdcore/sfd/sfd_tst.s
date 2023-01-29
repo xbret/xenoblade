@@ -1073,8 +1073,8 @@
 /* 803D002C 003995EC  4E 80 00 20 */	blr
 .endfn sftst_CalcSub
 
-# 0x805206E8 - 0x80520778
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805206E8
 lbl_805206E8:
@@ -1115,8 +1115,8 @@ lbl_805206E8:
 	.4byte 0x6C64200A
 	.4byte 0x00000000
 
-# 0x8056C610 - 0x8056C728
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056C610
 lbl_8056C610:
@@ -1191,8 +1191,8 @@ lbl_8056C610:
 	.4byte 0x0A000000
 	.4byte 0x00000000
 
-# 0x8061CE08 - 0x8061CE20
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8061CE08
 lbl_8061CE08:

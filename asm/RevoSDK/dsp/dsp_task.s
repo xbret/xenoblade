@@ -640,8 +640,8 @@
 /* 80309D98 002D3358  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80309D9C 002D335C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80549678 - 0x805497B8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80549678
 lbl_80549678:

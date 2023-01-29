@@ -94,8 +94,8 @@
 /* 80068A1C 00031FDC  4E 80 00 20 */	blr
 .endfn func_80068A18
 
-# 0x804F6A78 - 0x804F6B98
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global reslist_unsigned_short_typestr
@@ -214,8 +214,8 @@ lbl_804F6B90:
 	.4byte 0x4B595000
 	.4byte 0x00000000
 
-# 0x8052A150 - 0x8052A5A0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__reslist_unsigned_short
@@ -569,8 +569,8 @@ cf_IResInfoMap_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664348 - 0x806643B8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__reslist_unsigned_short
@@ -643,15 +643,15 @@ __RTTI__cf_IResInfo:
 	.4byte cf_IResInfo_typestr
 	.4byte 0x00000000
 
-# 0x80666688 - 0x80666690
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666688
 lbl_80666688:
 	.skip 0x8
 
-# 0x80668A88 - 0x80668A9C
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80668A88
 lbl_80668A88:

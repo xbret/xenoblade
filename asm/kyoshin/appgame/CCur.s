@@ -1177,8 +1177,8 @@
 /* 801D2F7C 0019C53C  4E 80 00 20 */	blr
 .endfn func_801D2ED8
 
-# 0x80501588 - 0x805019C0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80501588
 lbl_80501588:
@@ -1461,8 +1461,8 @@ lbl_805015B8:
 	.4byte 0x5F723030
 	.4byte 0x00000000
 
-# 0x80537FE0 - 0x80538170
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80537FE0
 lbl_80537FE0:
@@ -1623,8 +1623,8 @@ lbl_80538158:
 	.4byte func_801D2144
 	.4byte func_801D2180
 
-# 0x80664F78 - 0x80664FC0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CSubCur
@@ -1672,8 +1672,8 @@ __RTTI__CCur07:
 	.4byte CCur07_typestr
 	.4byte CCur07_hierarchy
 
-# 0x8066A860 - 0x8066A8B0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A860
 lbl_8066A860:
@@ -1727,8 +1727,8 @@ CCur07_typestr:
 	.4byte 0x43437572
 	.4byte 0x30370000
 
-# 0x800114EC - 0x8001162C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800114EC", local
@@ -1971,8 +1971,8 @@ CCur07_typestr:
 	.4byte 0x00000000
 .endobj "@etb_80011624"
 
-# 0x8002B814 - 0x8002B9F4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002B814", local

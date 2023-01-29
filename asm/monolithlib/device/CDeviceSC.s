@@ -205,8 +205,8 @@
 /* 80447DD0 00411390  4E 80 00 20 */	blr
 .endfn func_80447D80
 
-# 0x80526298 - 0x805262A8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CDeviceSC_typestr
@@ -216,8 +216,8 @@ CDeviceSC_typestr:
 	.4byte 0x43000000
 	.4byte 0x00000000
 
-# 0x8056F5B0 - 0x8056F670
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CDeviceSC
@@ -274,8 +274,8 @@ CDeviceSC_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665F20 - 0x80665F28
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CDeviceSC
@@ -283,15 +283,15 @@ __RTTI__CDeviceSC:
 	.4byte CDeviceSC_typestr
 	.4byte CDeviceSC_hierarchy
 
-# 0x80667F20 - 0x80667F28
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667F20
 lbl_80667F20:
 	.skip 0x8
 
-# 0x8001CA3C - 0x8001CA70
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001CA3C", local
@@ -323,8 +323,8 @@ lbl_80667F20:
 	.4byte 0x00000000
 .endobj "@etb_8001CA68"
 
-# 0x80034670 - 0x800346A0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034670", local

@@ -5706,8 +5706,8 @@
 /* 80058410 000219D0  4E 80 00 20 */	blr
 .endfn func_8005834C
 
-# 0x80529B68 - 0x80529B78
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CActParamData
@@ -5717,8 +5717,8 @@ __vt__CActParamData:
 	.4byte func_80053A50
 	.4byte 0x00000000
 
-# 0x80573DE8 - 0x80574028
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80573DE8
 lbl_80573DE8:
@@ -5727,8 +5727,8 @@ lbl_80573DE8:
 lbl_80573F80:
 	.skip 0xA8
 
-# 0x806642B8 - 0x806642C0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CActParamData
@@ -5736,15 +5736,15 @@ __RTTI__CActParamData:
 	.4byte CActParamData_typestr
 	.4byte 0x00000000
 
-# 0x80666650 - 0x80666658
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666650
 lbl_80666650:
 	.skip 0x8
 
-# 0x80668808 - 0x80668830
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80668808
 lbl_80668808:
@@ -5772,8 +5772,8 @@ lbl_80668828:
 	.4byte 0x80000000
 
 
-# 0x800075E4 - 0x80007704
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800075E4", local
@@ -5992,8 +5992,8 @@ lbl_80668828:
 	.4byte 0x00000000
 .endobj "@etb_800076FC"
 
-# 0x80022514 - 0x800226C4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80022514", local

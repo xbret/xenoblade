@@ -405,8 +405,8 @@
 /* 802A86C8 00271C88  4E 80 00 20 */	blr
 .endfn func_802A8628
 
-# 0x8050BDE0 - 0x8050BE00
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CVS_THREAD_PARTY_GAGE_typestr
@@ -420,8 +420,8 @@ cf_CVS_THREAD_PARTY_GAGE_typestr:
 	.4byte 0x45000000
 	.4byte 0x00000000
 
-# 0x8053D3D8 - 0x8053D428
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053D3D8
 lbl_8053D3D8:
@@ -456,8 +456,8 @@ cf_CVS_THREAD_PARTY_GAGE_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665610 - 0x80665620
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665610
 lbl_80665610:
@@ -469,8 +469,8 @@ __RTTI__cf_CVS_THREAD_PARTY_GAGE:
 	.4byte cf_CVS_THREAD_PARTY_GAGE_typestr
 	.4byte cf_CVS_THREAD_PARTY_GAGE_hierarchy
 
-# 0x8001ADE8 - 0x8001AE3C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001ADE8", local
@@ -518,8 +518,8 @@ __RTTI__cf_CVS_THREAD_PARTY_GAGE:
 	.4byte 0x00000000
 .endobj "@etb_8001AE34"
 
-# 0x80032C9C - 0x80032CE4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80032C9C", local

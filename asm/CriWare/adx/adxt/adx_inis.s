@@ -201,8 +201,8 @@
 /* 8037F91C 00348EDC  4E 80 00 20 */	blr
 .endfn ADXT_Finish
 
-# 0x80519650 - 0x80519750
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global adxt_build
@@ -274,8 +274,8 @@ lbl_805196A8:
 	.4byte 0x61637469
 	.4byte 0x76652E00
 
-# 0x805E5D48 - 0x805E5D54
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805E5D48
 lbl_805E5D48:

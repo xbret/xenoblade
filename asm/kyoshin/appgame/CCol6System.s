@@ -5893,8 +5893,8 @@
 /* 80163FB4 0012D574  4E 80 00 20 */	blr
 .endfn func_80163E78
 
-# 0x80533668 - 0x80533AD0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_80533668:
@@ -6205,8 +6205,8 @@ CCol6CheckBat_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664C58 - 0x80664C78
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CCol6Invite
@@ -6229,8 +6229,8 @@ __RTTI__CCol6CheckBat:
 	.4byte CCol6CheckBat_typestr
 	.4byte CCol6CheckBat_hierarchy
 
-# 0x8000D824 - 0x8000DA98
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000D824", local
@@ -6494,8 +6494,8 @@ __RTTI__CCol6CheckBat:
 	.4byte 0x00000000
 .endobj "@etb_8000DA90"
 
-# 0x80028A84 - 0x80028BBC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80028A84", local

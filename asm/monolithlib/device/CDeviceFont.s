@@ -1251,8 +1251,8 @@
 /* 804532D0 0041C890  4E 80 00 20 */	blr
 .endfn func_804531B8
 
-# 0x80526680 - 0x80526718
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80526680
 lbl_80526680:
@@ -1308,8 +1308,8 @@ lbl_805266F4:
 	.4byte 0x4C6F6164
 	.4byte 0x65720000
 
-# 0x8056FEA8 - 0x8056FF88
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CDeviceFont
@@ -1383,8 +1383,8 @@ __vt___reslist_base_IDeviceFontInfo:
 	.4byte 0x00000000
 	.4byte func_80452380
 
-# 0x80666020 - 0x80666040
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80666020
 lbl_80666020:
@@ -1408,23 +1408,23 @@ __RTTI___reslist_base_IDeviceFontInfo:
 	.4byte _reslist_base_IDeviceFontInfo_typestr
 	.4byte 0x00000000
 
-# 0x80667F58 - 0x80667F60
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667F58
 lbl_80667F58:
 	.skip 0x8
 
-# 0x8066CBB8 - 0x8066CBC0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CBB8
 lbl_8066CBB8:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x8001CFEC - 0x8001D080
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001CFEC", local
@@ -1512,8 +1512,8 @@ lbl_8066CBB8:
 	.4byte 0x00000000
 .endobj "@etb_8001D078"
 
-# 0x80034CDC - 0x80034D6C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034CDC", local

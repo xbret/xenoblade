@@ -29,16 +29,16 @@
 /* 8035D018 003265D8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8035D01C 003265DC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80665B98 - 0x80665BA0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 IpcBufferLo:
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000000
 
-# 0x80667AD8 - 0x80667AE0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 IpcBufferHi:

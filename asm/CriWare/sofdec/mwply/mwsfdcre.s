@@ -2242,8 +2242,8 @@
 /* 803A0C5C 0036A21C  4E 80 00 20 */	blr
 .endfn func_803A0C20
 
-# 0x8051DA00 - 0x8051E1E0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051DA00
 lbl_8051DA00:
@@ -2778,8 +2778,8 @@ lbl_8051E1CC:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x805697D0 - 0x80569BD4
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805697D0
 lbl_805697D0:
@@ -3051,8 +3051,8 @@ lbl_80569B00:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806028A0 - 0x80602958
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_806028A0
 lbl_806028A0:

@@ -274,8 +274,8 @@
 /* 802E44FC 002ADABC  4E 80 00 20 */	blr
 .endfn bta_hh_trace_dev_db
 
-# 0x805449A0 - 0x80544C60
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805449A0
 lbl_805449A0:

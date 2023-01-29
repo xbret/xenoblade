@@ -116,8 +116,8 @@
 /* 801F8E30 001C23F0  4E 80 00 20 */	blr
 .endfn func_801F8E20
 
-# 0x80538770 - 0x80538998
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CfObjectTbox
@@ -261,8 +261,8 @@ __vt__cf_CfObjectTbox:
 	.4byte func_800BE858
 	.4byte 0x00000000
 
-# 0x800123F8 - 0x80012438
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800123F8", local
@@ -293,8 +293,8 @@ __vt__cf_CfObjectTbox:
 	.4byte 0x00000000
 .endobj "@etb_80012430"
 
-# 0x8002C570 - 0x8002C594
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002C570", local

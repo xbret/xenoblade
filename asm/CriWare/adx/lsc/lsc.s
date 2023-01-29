@@ -789,8 +789,8 @@
 /* 80392808 0035BDC8  4E 80 00 20 */	blr
 .endfn LSC_SetLpFlg
 
-# 0x8051BAB8 - 0x8051BE50
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051BAB8
 lbl_8051BAB8:
@@ -1025,8 +1025,8 @@ lbl_8051BAB8:
 	.4byte 0x0A000000
 	.4byte 0x00000000
 
-# 0x805EB380 - 0x805EFA90
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global lsc_obj

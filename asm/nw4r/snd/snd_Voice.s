@@ -3291,8 +3291,8 @@
 /* 80428C54 003F2214  4E 80 00 20 */	blr
 .endfn InvalidateData__Q44nw4r3snd6detail5VoiceFPCvPCv
 
-# 0x8056E608 - 0x8056E640
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8056E608:
@@ -3313,8 +3313,8 @@ lbl_8056E62C:
 	.4byte InvalidateData__Q44nw4r3snd6detail5VoiceFPCvPCv
 	.4byte InvalidateWaveData__Q44nw4r3snd6detail5VoiceFPCvPCv
 
-# 0x8066C898 - 0x8066C8D0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C898
 lbl_8066C898:

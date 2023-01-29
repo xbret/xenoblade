@@ -482,8 +482,8 @@
 /* 80281920 0024AEE0  4E 80 00 20 */	blr
 .endfn func_802818F8
 
-# 0x8050A598 - 0x8050A5B0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CChainActorEne_typestr
@@ -495,8 +495,8 @@ cf_CChainActorEne_typestr:
 	.4byte 0x6E650000
 	.4byte 0x00000000
 
-# 0x8053BC10 - 0x8053BC98
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CChainActorEne
@@ -539,8 +539,8 @@ cf_CChainActorEne_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665390 - 0x80665398
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CChainActorEne
@@ -548,8 +548,8 @@ __RTTI__cf_CChainActorEne:
 	.4byte cf_CChainActorEne_typestr
 	.4byte cf_CChainActorEne_hierarchy
 
-# 0x80018C50 - 0x80018C98
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80018C50", local
@@ -606,8 +606,8 @@ __RTTI__cf_CChainActorEne:
 	.4byte 0x00000000
 .endobj "@etb_80018C90"
 
-# 0x80031268 - 0x800312D4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80031268", local

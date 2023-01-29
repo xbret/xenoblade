@@ -154,8 +154,8 @@
 /* 8035E068 00327628  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8035E06C 0032762C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8055ED08 - 0x8055ED30
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8055ED08
 lbl_8055ED08:
@@ -170,8 +170,8 @@ lbl_8055ED08:
 	.4byte 0x6174652E
 	.4byte 0x64617400
 
-# 0x805D5420 - 0x805D5440
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805D5420
 lbl_805D5420:

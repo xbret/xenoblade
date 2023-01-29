@@ -252,8 +252,8 @@
 .endfn FindGroupByName__Q36nw4hbm3lyt14GroupContainerFPCc
 /* 8032D82C 002F6DEC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8054D7D0 - 0x8054D7F8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054D7D0
 lbl_8054D7D0:

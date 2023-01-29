@@ -1531,8 +1531,8 @@
 /* 802BBCFC 002852BC  4E 80 00 20 */	blr
 .endfn __throw
 
-# 0x8053F068 - 0x8053F0F0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8053F068:
@@ -1573,15 +1573,15 @@ jumptable_8053F0AC:
 	.rel ThrowContext$7ExPPC_UnwindStack, .L_802BB668
 	.rel ThrowContext$7ExPPC_UnwindStack, .L_802BB608
 
-# 0x8057AE90 - 0x8057B010
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057AE90
 lbl_8057AE90:
 	.skip 0x180
 
-# 0x8001BF40 - 0x8001BF80
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001BF40", local
@@ -1620,8 +1620,8 @@ lbl_8057AE90:
 	.4byte 0x8E000000
 .endobj "@etb_8001BF6C"
 
-# 0x80033AD0 - 0x80033B0C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033AD0", local

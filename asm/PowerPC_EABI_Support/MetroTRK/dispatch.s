@@ -92,8 +92,8 @@
 /* 802CBEFC 002954BC  4E 80 00 20 */	blr
 .endfn TRKDispatchMessage
 
-# 0x8053FCD0 - 0x8053FD40
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .obj "@23", local

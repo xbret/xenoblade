@@ -939,8 +939,8 @@
 /* 8049B990 00464F50  4E 80 00 20 */	blr
 .endfn func_8049B834
 
-# 0x80527A00 - 0x80527A30
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80527A00
 lbl_80527A00:
@@ -960,8 +960,8 @@ CScnCameraMan_typestr:
 	.4byte 0x72614D61
 	.4byte 0x6E000000
 
-# 0x80572288 - 0x80572320
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnCameraMan
@@ -1008,8 +1008,8 @@ CScnCameraMan_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80666328 - 0x80666338
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80666328
 lbl_80666328:
@@ -1023,8 +1023,8 @@ __RTTI__CScnCameraMan:
 	.4byte CScnCameraMan_typestr
 	.4byte CScnCameraMan_hierarchy
 
-# 0x8066D308 - 0x8066D330
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D308
 lbl_8066D308:
@@ -1051,8 +1051,8 @@ lbl_8066D328:
 lbl_8066D32C:
 	.4byte 0x3F726E98
 
-# 0x8001F374 - 0x8001F42C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001F374", local
@@ -1161,8 +1161,8 @@ lbl_8066D32C:
 	.4byte 0x00000000
 .endobj "@etb_8001F424"
 
-# 0x80036E00 - 0x80036EB4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80036E00", local

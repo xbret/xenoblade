@@ -301,8 +301,8 @@
 /* 80168038 001315F8  4E 80 00 20 */	blr
 .endfn func_80168028
 
-# 0x804FE880 - 0x804FE890
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CREvtMem_typestr
@@ -312,8 +312,8 @@ cf_CREvtMem_typestr:
 	.4byte 0x744D656D
 	.4byte 0x00000000
 
-# 0x80534200 - 0x80534210
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CREvtMem
@@ -323,8 +323,8 @@ __vt__cf_CREvtMem:
 	.4byte func_80167C84
 	.4byte 0x00000000
 
-# 0x80664CA0 - 0x80664CA8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CREvtMem
@@ -332,23 +332,23 @@ __RTTI__cf_CREvtMem:
 	.4byte cf_CREvtMem_typestr
 	.4byte 0x00000000
 
-# 0x80666B50 - 0x80666B58
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666B50
 lbl_80666B50:
 	.skip 0x8
 
-# 0x80669F10 - 0x80669F18
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669F10
 lbl_80669F10:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8000DE34 - 0x8000DE54
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000DE34", local
@@ -375,8 +375,8 @@ lbl_80669F10:
 	.4byte 0x00000000
 .endobj "@etb_8000DE4C"
 
-# 0x80028DCC - 0x80028DFC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80028DCC", local

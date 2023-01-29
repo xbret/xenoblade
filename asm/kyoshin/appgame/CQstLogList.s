@@ -2031,13 +2031,13 @@
 /* 802293EC 001F29AC  4E 80 00 20 */	blr
 .endfn func_80229398
 
-# 0x804F59AC - 0x804F59B0
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80229378
 
-# 0x805051B8 - 0x80505380
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CQstLogList_typestr
@@ -2159,8 +2159,8 @@ lbl_805051C4:
 	.4byte 0x69743031
 	.4byte 0x00000000
 
-# 0x805399E0 - 0x80539AD8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_805399E0:
@@ -2233,15 +2233,15 @@ CQstLogList_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80579E68 - 0x8057A2C0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80579E68
 lbl_80579E68:
 	.skip 0x458
 
-# 0x80665158 - 0x80665168
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665158
 lbl_80665158:
@@ -2253,8 +2253,8 @@ __RTTI__CQstLogList:
 	.4byte CQstLogList_typestr
 	.4byte CQstLogList_hierarchy
 
-# 0x80667018 - 0x80667030
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667018
 lbl_80667018:
@@ -2272,8 +2272,8 @@ lbl_80667024:
 lbl_80667028:
 	.skip 0x8
 
-# 0x8066AE38 - 0x8066AE50
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AE38
 lbl_8066AE38:
@@ -2292,8 +2292,8 @@ lbl_8066AE48:
 	.4byte 0x43300000
 	.4byte 0x00000000
 
-# 0x80015304 - 0x8001550C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80015304", local
@@ -2542,8 +2542,8 @@ lbl_8066AE48:
 	.4byte 0x00000000
 .endobj "@etb_80015504"
 
-# 0x8002E280 - 0x8002E3DC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002E280", local

@@ -2786,8 +2786,8 @@
 /* 80312CA8 002DC268  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80312CAC 002DC26C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8054A6C0 - 0x8054B5C8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .obj "@3815", local
@@ -3758,8 +3758,8 @@ lbl_8054A720:
 	.4byte 0x3A202564
 	.4byte 0x0A000000
 
-# 0x805CCC60 - 0x805CCE20
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 dvdContexts:
@@ -3780,8 +3780,8 @@ lbl_805CCDE0:
 lbl_805CCE00:
 	.skip 0x20
 
-# 0x806659A8 - 0x806659B8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global DiFD
@@ -3793,8 +3793,8 @@ lbl_806659B0:
 	.4byte 0x2F646576
 	.4byte 0x2F646900
 
-# 0x80667898 - 0x806678C0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 requestInProgress:

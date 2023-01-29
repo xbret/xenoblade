@@ -181,8 +181,8 @@
 /* 80312EEC 002DC4AC  4E 80 00 20 */	blr
 .endfn ENCiWriteBreakType
 
-# 0x8054B5C8 - 0x8054B610
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054B5C8
 lbl_8054B5C8:
@@ -205,16 +205,16 @@ lbl_8054B5C8:
 	.4byte 0x3529203E
 	.4byte 0x3E000000
 
-# 0x806659B8 - 0x806659C0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806659B8
 lbl_806659B8:
 	.4byte lbl_8054B5C8
 	.4byte 0x00000000
 
-# 0x806678C0 - 0x806678C8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806678C0
 lbl_806678C0:

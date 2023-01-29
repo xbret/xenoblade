@@ -177,8 +177,8 @@
 /* 802ABDAC 0027536C  4E 80 00 20 */	blr
 .endfn func_802ABCB4
 
-# 0x8050C128 - 0x8050C148
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CfGimmickSaveOff_typestr
@@ -194,8 +194,8 @@ lbl_8050C140:
 	.4byte 0x6E617669
 	.4byte 0x4F666600
 
-# 0x8053D970 - 0x8053D9A8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CfGimmickSaveOff
@@ -218,8 +218,8 @@ cf_CfGimmickSaveOff_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806656D8 - 0x806656E0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CfGimmickSaveOff
@@ -227,8 +227,8 @@ __RTTI__cf_CfGimmickSaveOff:
 	.4byte cf_CfGimmickSaveOff_typestr
 	.4byte cf_CfGimmickSaveOff_hierarchy
 
-# 0x8001B10C - 0x8001B138
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001B10C", local
@@ -254,8 +254,8 @@ __RTTI__cf_CfGimmickSaveOff:
 	.4byte 0x00000000
 .endobj "@etb_8001B130"
 
-# 0x80032F24 - 0x80032F48
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80032F24", local

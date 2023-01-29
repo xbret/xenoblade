@@ -801,8 +801,8 @@
 /* 802D9F48 002A3508  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 802D9F4C 002A350C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8066BED0 - 0x8066BF00
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BED0
 lbl_8066BED0:

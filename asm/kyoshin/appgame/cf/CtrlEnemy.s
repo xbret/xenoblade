@@ -1425,8 +1425,8 @@
 /* 80088900 00051EC0  4E 80 00 20 */	blr
 .endfn func_800888FC
 
-# 0x804F7060 - 0x804F7200
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_IObjectInfo_typestr
@@ -1556,8 +1556,8 @@ CActInput_typestr:
 	.4byte 0x496E7075
 	.4byte 0x74000000
 
-# 0x8052AEF8 - 0x8052AFD8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global cf_CfObjectImpl_hierarchy
@@ -1631,8 +1631,8 @@ cf_CtrlBase_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806644D8 - 0x80664510
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_IObjectInfo
@@ -1670,8 +1670,8 @@ __RTTI__CActInput:
 	.4byte CActInput_typestr
 	.4byte 0x00000000
 
-# 0x80668DF8 - 0x80668E20
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80668DF8
 lbl_80668DF8:
@@ -1700,8 +1700,8 @@ lbl_80668E18:
 	.4byte 0x41F00000
 	.4byte 0x00000000
 
-# 0x80008AAC - 0x80008B54
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80008AAC", local
@@ -1786,8 +1786,8 @@ lbl_80668E18:
 	.4byte 0x00000000
 .endobj "@etb_80008B4C"
 
-# 0x800240A4 - 0x8002411C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800240A4", local

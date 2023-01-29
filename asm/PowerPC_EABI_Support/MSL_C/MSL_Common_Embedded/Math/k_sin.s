@@ -58,8 +58,8 @@
 /* 802CA5B8 00293B78  4E 80 00 20 */	blr
 .endfn __kernel_sin
 
-# 0x8066BCA8 - 0x8066BCE0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@19", local

@@ -921,8 +921,8 @@
 /* 802EAB50 002B4110  4E 80 00 20 */	blr
 .endfn btm_pm_proc_mode_change
 
-# 0x8050E240 - 0x8050E250
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050E240
 lbl_8050E240:
@@ -931,8 +931,8 @@ lbl_8050E240:
 	.4byte 0x03000000
 	.4byte 0x00000000
 
-# 0x805454F0 - 0x80545530
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805454F0
 lbl_805454F0:
@@ -953,8 +953,8 @@ lbl_805454F0:
 	.4byte 0x25303278
 	.4byte 0x00000000
 
-# 0x8066BF70 - 0x8066BF78
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BF70
 lbl_8066BF70:

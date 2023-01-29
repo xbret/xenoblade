@@ -2713,13 +2713,13 @@
 /* 80494318 0045D8D8  4B BA C4 B0 */	b func_800407C8
 .endfn sinit_80494300
 
-# 0x804F5A9C - 0x804F5AA0
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80494300
 
-# 0x80527958 - 0x80527978
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CScnVirtualLight_typestr
@@ -2735,8 +2735,8 @@ lbl_8052796C:
 	.4byte 0x204D656D
 	.4byte 0x00000000
 
-# 0x805720B0 - 0x805720C0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnVirtualLight
@@ -2746,15 +2746,15 @@ __vt__CScnVirtualLight:
 	.4byte func_80492298
 	.4byte 0x00000000
 
-# 0x8065AF00 - 0x8065AF10
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8065AF00
 lbl_8065AF00:
 	.skip 0x10
 
-# 0x806662E0 - 0x806662E8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CScnVirtualLight
@@ -2762,8 +2762,8 @@ __RTTI__CScnVirtualLight:
 	.4byte CScnVirtualLight_typestr
 	.4byte 0x00000000
 
-# 0x8066D1D0 - 0x8066D240
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D1D0
 lbl_8066D1D0:
@@ -2848,8 +2848,8 @@ lbl_8066D238:
 	.4byte 0x3D23D70A
 	.4byte 0x00000000
 
-# 0x8001ED44 - 0x8001EEEC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001ED44", local
@@ -3066,8 +3066,8 @@ lbl_8066D238:
 	.4byte 0x00000000
 .endobj "@etb_8001EEE4"
 
-# 0x80036944 - 0x80036A88
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80036944", local

@@ -398,21 +398,21 @@
 /* 80332C88 002FC248  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80332C8C 002FC24C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x804F59F0 - 0x804F59F4
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte __sinit_lyt_picture_cpp
 
-# 0x80518AB8 - 0x80518AC0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518AB8
 lbl_80518AB8:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8054D938 - 0x8054D9D8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__8054D938
@@ -464,8 +464,8 @@ lbl_8054D9D0:
 	.4byte lbl_8054D9A4
 	.4byte lbl_8054D9BC
 
-# 0x805CD7B8 - 0x805CD7D0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805CD7B8
 lbl_805CD7B8:

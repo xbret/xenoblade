@@ -318,8 +318,8 @@
 /* 8043A0DC 0040369C  4E 80 00 20 */	blr
 .endfn func_8043A07C
 
-# 0x80525E40 - 0x80525E58
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CRsrcData_typestr
@@ -333,8 +333,8 @@ lbl_80525E4C:
 	.4byte 0x63446174
 	.4byte 0x61000000
 
-# 0x8056EBD8 - 0x8056EC90
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CRsrcData
@@ -389,8 +389,8 @@ CRsrcData_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665E78 - 0x80665E80
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CRsrcData
@@ -398,8 +398,8 @@ __RTTI__CRsrcData:
 	.4byte CRsrcData_typestr
 	.4byte CRsrcData_hierarchy
 
-# 0x8001C278 - 0x8001C2CC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C278", local
@@ -455,8 +455,8 @@ __RTTI__CRsrcData:
 	.4byte 0x00000000
 .endobj "@etb_8001C2C4"
 
-# 0x80033EF0 - 0x80033F50
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033EF0", local

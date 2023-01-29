@@ -126,13 +126,13 @@
 /* 8032C588 002F5B48  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8032C58C 002F5B4C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x804F59E8 - 0x804F59EC
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte __sinit_lyt_bounding_cpp
 
-# 0x8054D6B8 - 0x8054D7A0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054D6B8
 lbl_8054D6B8:
@@ -211,8 +211,8 @@ lbl_8054D798:
 	.4byte lbl_8054D778
 	.4byte 0x00000000
 
-# 0x805CD788 - 0x805CD790
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805CD788
 lbl_805CD788:

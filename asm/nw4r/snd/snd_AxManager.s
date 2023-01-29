@@ -1923,13 +1923,13 @@
 /* 8040DEBC 003D747C  4E 80 00 20 */	blr
 .endfn func_8040DE80
 
-# 0x804F5A18 - 0x804F5A1C
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8040DCB4
 
-# 0x8056DFC8 - 0x8056E078
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056DFC8
 lbl_8056DFC8:
@@ -1990,8 +1990,8 @@ lbl_8056E068:
 	.4byte func_8040DD80
 	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
-# 0x8063AD20 - 0x8063B168
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8063AD20
 lbl_8063AD20:
@@ -2006,8 +2006,8 @@ lbl_8063B05C:
 lbl_8063B068:
 	.skip 0x100
 
-# 0x80667D88 - 0x80667DA0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667D88
 lbl_80667D88:
@@ -2028,8 +2028,8 @@ lbl_80667D98:
 lbl_80667D9C:
 	.skip 0x4
 
-# 0x8066C678 - 0x8066C690
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C678
 lbl_8066C678:

@@ -59,8 +59,8 @@
 /* 802F36FC 002BCCBC  4E 80 00 20 */	blr
 .endfn hidd_conn_initiate
 
-# 0x80546690 - 0x805466C0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80546690
 lbl_80546690:

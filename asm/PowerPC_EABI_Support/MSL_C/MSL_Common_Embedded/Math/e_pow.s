@@ -569,8 +569,8 @@
 /* 802C89AC 00291F6C  4E 80 00 20 */	blr
 .endfn __ieee754_pow
 
-# 0x8050DBA0 - 0x8050DBD0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .obj ...rodata.0, local
@@ -591,8 +591,8 @@ dp_l:
 	.4byte 0x3E4CFDEB
 	.4byte 0x43CFD006
 
-# 0x8066BAB8 - 0x8066BBC8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@237", local

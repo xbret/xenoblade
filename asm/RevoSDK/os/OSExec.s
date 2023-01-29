@@ -1567,8 +1567,8 @@
 /* 80356AEC 003200AC  4E 80 00 20 */	blr
 .endfn __OSBootDol
 
-# 0x80551F30 - 0x80551FA0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80551F30
 lbl_80551F30:
@@ -1605,15 +1605,15 @@ lbl_80551F90:
 	.4byte 0x30310000
 	.4byte 0x00000000
 
-# 0x805D4400 - 0x805D4420
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805D4400
 lbl_805D4400:
 	.skip 0x20
 
-# 0x80665B70 - 0x80665B80
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665B70
 lbl_80665B70:
@@ -1624,8 +1624,8 @@ lbl_80665B78:
 	.4byte 0x25640000
 	.4byte 0x00000000
 
-# 0x80667A68 - 0x80667A80
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667A68
 lbl_80667A68:

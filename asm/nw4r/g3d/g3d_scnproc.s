@@ -234,8 +234,8 @@
 /* 803FD124 003C66E4  4E 80 00 20 */	blr
 .endfn __dt__Q34nw4r3g3d7ScnProcFv
 
-# 0x80521100 - 0x80521110
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80521100
 lbl_80521100:
@@ -244,8 +244,8 @@ lbl_80521100:
 	.4byte 0x726F6300
 	.4byte 0x00000000
 
-# 0x8056D150 - 0x8056D188
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056D150
 lbl_8056D150:
@@ -264,8 +264,8 @@ lbl_8056D150:
 	.4byte CalcWorldMtx__Q34nw4r3g3d7ScnLeafFPCQ34nw4r4math5MTX34PUl
 	.4byte 0x00000000
 
-# 0x8066C4F0 - 0x8066C4F8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C4F0
 lbl_8066C4F0:

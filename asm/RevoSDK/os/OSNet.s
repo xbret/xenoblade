@@ -438,8 +438,8 @@
 .endfn CallbackAsyncIpc
 /* 8035E60C 00327BCC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8055ED30 - 0x8055EE98
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .obj "@1040", local
@@ -542,8 +542,8 @@ lbl_8055EE80:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x805D5440 - 0x805D5500
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805D5440
 lbl_805D5440:
@@ -564,16 +564,16 @@ lbl_805D54C0:
 lbl_805D54E0:
 	.skip 0x20
 
-# 0x80665BA8 - 0x80665BB0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665BA8
 lbl_80665BA8:
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000000
 
-# 0x80667B28 - 0x80667B38
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667B28
 lbl_80667B28:

@@ -2424,8 +2424,8 @@
 /* 80256964 0021FF24  4E 80 00 20 */	blr
 .endfn func_8025650C
 
-# 0x80507D30 - 0x80508130
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80507D30
 lbl_80507D30:
@@ -2691,8 +2691,8 @@ lbl_80507D78:
 	.4byte 0x6C000000
 	.4byte 0x00000000
 
-# 0x8053AB30 - 0x8053AC38
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8053AB30:
@@ -2774,8 +2774,8 @@ __vt__CCLPCur:
 	.4byte 0x00000000
 	.4byte func_80253204
 
-# 0x806670C8 - 0x806670D0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806670C8
 lbl_806670C8:
@@ -2784,8 +2784,8 @@ lbl_806670C8:
 lbl_806670CC:
 	.skip 0x4
 
-# 0x8066B0A0 - 0x8066B0D8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B0A0
 lbl_8066B0A0:
@@ -2823,8 +2823,8 @@ CCLPCur_typestr:
 	.4byte 0x43434C50
 	.4byte 0x43757200
 
-# 0x80016E20 - 0x80017130
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80016E20", local
@@ -3163,8 +3163,8 @@ CCLPCur_typestr:
 	.4byte func_8045F8C8
 .endobj "@etb_80017108"
 
-# 0x8002F8A0 - 0x8002FA44
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002F8A0", local

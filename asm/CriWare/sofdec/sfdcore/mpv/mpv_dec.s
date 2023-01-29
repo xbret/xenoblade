@@ -1296,8 +1296,8 @@
 /* 803A5904 0036EEC4  4E 80 00 20 */	blr
 .endfn MPVDEC_DecBpicMb
 
-# 0x8051F600 - 0x8051F608
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051F600
 lbl_8051F600:

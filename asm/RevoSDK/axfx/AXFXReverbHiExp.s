@@ -1006,8 +1006,8 @@
 /* 802D65E8 0029FBA8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 802D65EC 0029FBAC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80543120 - 0x805432C0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80543120
 lbl_80543120:
@@ -1118,8 +1118,8 @@ lbl_805431E0:
 	.4byte 0x00000049
 	.4byte 0x00000043
 
-# 0x8066BDE0 - 0x8066BE20
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BDE0
 lbl_8066BDE0:

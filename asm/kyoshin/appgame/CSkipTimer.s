@@ -972,13 +972,13 @@
 /* 802A07F0 00269DB0  4E 80 00 20 */	blr
 .endfn sinit_802A07D8
 
-# 0x804F59D8 - 0x804F59DC
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_802A07D8
 
-# 0x8050BB40 - 0x8050BCA8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CSkipTimer_typestr
@@ -1079,8 +1079,8 @@ lbl_8050BB58:
 	.4byte 0x726C616E
 	.4byte 0x00000000
 
-# 0x8053CF80 - 0x8053D020
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CSkipTimer
@@ -1132,8 +1132,8 @@ __vt__CSkipTimer2:
 	.4byte 0x00000000
 	.4byte func_8029F114
 
-# 0x80665570 - 0x80665588
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665570
 lbl_80665570:
@@ -1150,15 +1150,15 @@ __RTTI__CSkipTimer2:
 	.4byte CSkipTimer2_typestr
 	.4byte 0x00000000
 
-# 0x80667338 - 0x80667340
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667338
 lbl_80667338:
 	.skip 0x8
 
-# 0x8066B4D8 - 0x8066B4F8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B4D8
 lbl_8066B4D8:
@@ -1179,8 +1179,8 @@ lbl_8066B4F0:
 lbl_8066B4F4:
 	.4byte 0x42700000
 
-# 0x8001A740 - 0x8001A868
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001A740", local
@@ -1341,8 +1341,8 @@ lbl_8066B4F4:
 	.4byte func_8045F8C8
 .endobj "@etb_8001A850"
 
-# 0x8003254C - 0x80032648
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8003254C", local

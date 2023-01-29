@@ -184,8 +184,8 @@
 /* 802DEB9C 002A815C  4E 80 00 20 */	blr
 .endfn bta_sys_set_trace_level
 
-# 0x80543FD0 - 0x80544008
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80543FD0
 lbl_80543FD0:
@@ -206,8 +206,8 @@ lbl_80543FE4:
 	.4byte 0x64202564
 	.4byte 0x00000000
 
-# 0x8066BF40 - 0x8066BF48
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BF40
 lbl_8066BF40:

@@ -294,8 +294,8 @@
 /* 8041575C 003DED1C  4E 80 00 20 */	blr
 .endfn SetRelease__Q44nw4r3snd6detail12EnvGeneratorFi
 
-# 0x80523558 - 0x80523858
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80523558
 lbl_80523558:
@@ -494,8 +494,8 @@ lbl_80523658:
 	.4byte 0x3EA8E5A3
 	.4byte 0x00000000
 
-# 0x8066C734 - 0x8066C760
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 4
 .global lbl_8066C734
 lbl_8066C734:

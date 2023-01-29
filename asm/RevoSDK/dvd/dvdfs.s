@@ -844,8 +844,8 @@
 /* 8030A898 002D3E58  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8030A89C 002D3E5C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805497B8 - 0x80549920
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805497B8
 lbl_805497B8:
@@ -946,8 +946,8 @@ lbl_805498EC:
 	.4byte 0x20200000
 	.4byte 0x00000000
 
-# 0x80665970 - 0x80665980
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __DVDLongFileNameFlag
@@ -959,8 +959,8 @@ lbl_80665978:
 	.4byte 0x64766466
 	.4byte 0x732E6300
 
-# 0x806677A8 - 0x806677E0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806677A8
 lbl_806677A8:

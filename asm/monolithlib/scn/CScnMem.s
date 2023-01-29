@@ -217,8 +217,8 @@
 /* 8048ED20 004582E0  4B FF FE 9C */	b func_8048EBBC
 .endfn func_8048ED1C
 
-# 0x805278C0 - 0x805278E8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805278C0
 lbl_805278C0:
@@ -239,8 +239,8 @@ CTTask_CScn_typestr:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80571E00 - 0x80571F78
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnMem
@@ -356,8 +356,8 @@ lbl_80571F68:
 	.4byte 0x626A2E68
 	.4byte 0x00000000
 
-# 0x80666298 - 0x806662B8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CScnMem
@@ -380,8 +380,8 @@ __RTTI__CTTask_CScn:
 	.4byte CTTask_CScn_typestr
 	.4byte CTTask_CScn_hierarchy
 
-# 0x8066D198 - 0x8066D1A8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .global CScnMem_typestr
@@ -394,8 +394,8 @@ CScn_typestr:
 	.4byte 0x4353636E
 	.4byte 0x00000000
 
-# 0x8001EBC8 - 0x8001EBF0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001EBC8", local
@@ -428,8 +428,8 @@ CScn_typestr:
 	.4byte 0x00000000
 .endobj "@etb_8001EBE8"
 
-# 0x800367C4 - 0x80036800
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800367C4", local

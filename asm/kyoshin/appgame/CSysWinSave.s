@@ -273,8 +273,8 @@
 /* 80294870 0025DE30  4E 80 00 20 */	blr
 .endfn func_80294844
 
-# 0x8050B398 - 0x8050B3C0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CSysWinSave_typestr
@@ -292,8 +292,8 @@ lbl_8050B3A4:
 	.4byte 0x6573006E
 	.4byte 0x616D6500
 
-# 0x8053C158 - 0x8053C258
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CSysWinSave
@@ -366,8 +366,8 @@ CSysWinSave_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665408 - 0x80665410
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CSysWinSave
@@ -375,8 +375,8 @@ __RTTI__CSysWinSave:
 	.4byte CSysWinSave_typestr
 	.4byte CSysWinSave_hierarchy
 
-# 0x806672F8 - 0x80667308
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806672F8
 lbl_806672F8:
@@ -385,8 +385,8 @@ lbl_806672F8:
 lbl_80667300:
 	.skip 0x8
 
-# 0x8066B448 - 0x8066B458
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B448
 lbl_8066B448:
@@ -399,8 +399,8 @@ lbl_8066B450:
 	.4byte 0x40000000
 	.4byte 0x00000000
 
-# 0x80019A10 - 0x80019A74
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80019A10", local
@@ -436,8 +436,8 @@ lbl_8066B450:
 	.4byte 0x00000000
 .endobj "@etb_80019A6C"
 
-# 0x80031CD0 - 0x80031CE8
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80031CD0", local

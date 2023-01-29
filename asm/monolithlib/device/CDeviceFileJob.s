@@ -72,8 +72,8 @@
 /* 80451F1C 0041B4DC  4E 80 00 20 */	blr
 .endfn func_80451EC8
 
-# 0x80526658 - 0x80526668
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CDeviceFileJob_typestr
@@ -83,8 +83,8 @@ CDeviceFileJob_typestr:
 	.4byte 0x696C654A
 	.4byte 0x6F620000
 
-# 0x8056FD20 - 0x8056FDE0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CDeviceFileJob
@@ -141,8 +141,8 @@ CDeviceFileJob_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80666010 - 0x80666018
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CDeviceFileJob
@@ -150,8 +150,8 @@ __RTTI__CDeviceFileJob:
 	.4byte CDeviceFileJob_typestr
 	.4byte CDeviceFileJob_hierarchy
 
-# 0x8001CF9C - 0x8001CFAC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001CF9C", local
@@ -166,8 +166,8 @@ __RTTI__CDeviceFileJob:
 	.4byte 0x00000000
 .endobj "@etb_8001CFA4"
 
-# 0x80034C64 - 0x80034C7C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034C64", local

@@ -39,8 +39,8 @@
 /* 80409C9C 003D325C  4E 80 00 20 */	blr
 .endfn GetFont__Q34nw4r3lyt16ResourceAccessorFPCc
 
-# 0x8056D580 - 0x8056D598
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056D580
 lbl_8056D580:

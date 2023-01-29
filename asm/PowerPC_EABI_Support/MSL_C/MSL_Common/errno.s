@@ -1,7 +1,7 @@
 .include "macros.inc"
 
-# 0x80667530 - 0x80667534
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 .global errno

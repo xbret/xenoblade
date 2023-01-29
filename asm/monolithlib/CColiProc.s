@@ -764,13 +764,13 @@
 /* 804B2FEC 0047C5AC  4E 80 00 20 */	blr
 .endfn sinit_804B2FB4
 
-# 0x804F5AA8 - 0x804F5AAC
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_804B2FB4
 
-# 0x80527D40 - 0x80527D50
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CColiResCall_typestr
@@ -780,8 +780,8 @@ CColiResCall_typestr:
 	.4byte 0x43616C6C
 	.4byte 0x00000000
 
-# 0x80572BE0 - 0x80572CB0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CColiProc
@@ -857,15 +857,15 @@ lbl_80572C8C:
 	.4byte func_804B46A8
 	.4byte func_804B476C
 
-# 0x8065F9A8 - 0x8065F9F8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8065F9A8
 lbl_8065F9A8:
 	.skip 0x50
 
-# 0x806663C0 - 0x806663C8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CColiResCall
@@ -873,8 +873,8 @@ __RTTI__CColiResCall:
 	.4byte CColiResCall_typestr
 	.4byte CColiResCall_hierarchy
 
-# 0x80668218 - 0x80668238
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80668218
 lbl_80668218:
@@ -895,16 +895,16 @@ lbl_80668228:
 lbl_80668230:
 	.skip 0x8
 
-# 0x8066D658 - 0x8066D660
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D658
 lbl_8066D658:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8001FC50 - 0x8001FC88
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001FC50", local
@@ -949,8 +949,8 @@ lbl_8066D658:
 	.4byte 0x00000000
 .endobj "@etb_8001FC80"
 
-# 0x80037880 - 0x800378D4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80037880", local

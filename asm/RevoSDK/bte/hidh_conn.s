@@ -2311,8 +2311,8 @@
 /* 802F6900 002BFEC0  4E 80 00 20 */	blr
 .endfn hidh_conn_dereg
 
-# 0x8050E270 - 0x8050E298
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050E270
 lbl_8050E270:
@@ -2327,8 +2327,8 @@ lbl_8050E270:
 	.4byte hidh_l2cif_data_ind
 	.4byte hidh_l2cif_cong_ind
 
-# 0x805467F8 - 0x80546BE0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805467F8
 lbl_805467F8:
@@ -2607,8 +2607,8 @@ lbl_80546BB0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x805C26B8 - 0x805C2AC0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805C26B8
 lbl_805C26B8:

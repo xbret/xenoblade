@@ -184,8 +184,8 @@
 /* 804550E0 0041E6A0  4E 80 00 20 */	blr
 .endfn func_80455074
 
-# 0x805267D0 - 0x805267E8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CDeviceFontLoader_typestr
@@ -197,8 +197,8 @@ CDeviceFontLoader_typestr:
 	.4byte 0x72000000
 	.4byte 0x00000000
 
-# 0x805700F0 - 0x805701A8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CDeviceFontLoader
@@ -253,8 +253,8 @@ CDeviceFontLoader_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80666070 - 0x80666078
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CDeviceFontLoader
@@ -262,8 +262,8 @@ __RTTI__CDeviceFontLoader:
 	.4byte CDeviceFontLoader_typestr
 	.4byte CDeviceFontLoader_hierarchy
 
-# 0x8001D1F4 - 0x8001D224
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001D1F4", local
@@ -302,8 +302,8 @@ __RTTI__CDeviceFontLoader:
 	.4byte 0x00000000
 .endobj "@etb_8001D21C"
 
-# 0x80034E74 - 0x80034EBC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034E74", local

@@ -1608,8 +1608,8 @@
 /* 8025471C 0021DCDC  4E 80 00 20 */	blr
 .endfn func_802545C0
 
-# 0x8053AAC8 - 0x8053AB30
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053AAC8
 lbl_8053AAC8:
@@ -1640,8 +1640,8 @@ lbl_8053AAC8:
 	.rel func_80253B3C, .L_80253BD0
 	.rel func_80253B3C, .L_80253BD0
 
-# 0x80016D78 - 0x80016E20
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80016D78", local
@@ -1770,8 +1770,8 @@ lbl_8053AAC8:
 	.4byte 0x00000000
 .endobj "@etb_80016E18"
 
-# 0x8002F7A4 - 0x8002F8A0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002F7A4", local

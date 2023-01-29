@@ -2125,8 +2125,8 @@
 /* 803E0318 003A98D8  4E 80 00 20 */	blr
 .endfn SetTranslate__Q34nw4r3g3d12ChrAnmResultFPCQ34nw4r4math4VEC3
 
-# 0x80520E18 - 0x80520E38
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520E18
 lbl_80520E18:
@@ -2139,8 +2139,8 @@ lbl_80520E18:
 	.4byte GetAnmResult_RT__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
 	.4byte GetAnmResult_SRT__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
 
-# 0x8066C2E0 - 0x8066C310
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C2E0
 lbl_8066C2E0:

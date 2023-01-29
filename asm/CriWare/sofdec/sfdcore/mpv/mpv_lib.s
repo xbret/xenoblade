@@ -791,8 +791,8 @@
 /* 803A8A08 00371FC8  4E 80 00 20 */	blr
 .endfn MPVLIB_CheckHn
 
-# 0x8051F778 - 0x8051F820
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051F778
 lbl_8051F778:
@@ -843,8 +843,8 @@ lbl_8051F814:
 	.4byte 0x39000000
 	.4byte 0x00000000
 
-# 0x80606040 - 0x806064B8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80606040
 lbl_80606040:

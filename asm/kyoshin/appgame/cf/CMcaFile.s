@@ -107,8 +107,8 @@
 /* 80058578 00021B38  4E 80 00 20 */	blr
 .endfn func_800584B8
 
-# 0x804F68C8 - 0x804F68D8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMcaFile_typestr
@@ -118,8 +118,8 @@ CMcaFile_typestr:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80529B78 - 0x80529BC0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMcaFile
@@ -147,8 +147,8 @@ lbl_80529BAC:
 	.4byte 0x61632E68
 	.4byte 0x00000000
 
-# 0x806642C0 - 0x806642C8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMcaFile
@@ -156,8 +156,8 @@ __RTTI__CMcaFile:
 	.4byte CMcaFile_typestr
 	.4byte 0x00000000
 
-# 0x80007704 - 0x80007714
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80007704", local
@@ -172,8 +172,8 @@ __RTTI__CMcaFile:
 	.4byte 0x00000000
 .endobj "@etb_8000770C"
 
-# 0x800226C4 - 0x800226DC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800226C4", local

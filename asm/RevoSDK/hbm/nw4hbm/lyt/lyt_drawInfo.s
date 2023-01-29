@@ -61,8 +61,8 @@
 /* 8032D4DC 002F6A9C  4E 80 00 20 */	blr
 .endfn __dt__Q36nw4hbm3lyt8DrawInfoFv
 
-# 0x80518A58 - 0x80518A60
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518A58
 lbl_80518A58:
@@ -71,8 +71,8 @@ lbl_80518A58:
 lbl_80518A5C:
 	.4byte 0x3F800000
 
-# 0x8054D7A0 - 0x8054D7D0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054D7A0
 lbl_8054D7A0:

@@ -204,8 +204,8 @@
 /* 803368EC 002FFEAC  4E 80 00 20 */	blr
 .endfn Atan2FIdx__Q26nw4hbm4mathFff
 
-# 0x80518AF0 - 0x80518B18
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518AF0
 lbl_80518AF0:
@@ -222,8 +222,8 @@ lbl_80518AF4:
 	.4byte 0xC3000000
 	.4byte 0x00000000
 
-# 0x8054DB88 - 0x8054ECA0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054DB88
 lbl_8054DB88:

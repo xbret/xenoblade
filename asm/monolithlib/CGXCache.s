@@ -1412,8 +1412,8 @@
 /* 8044A574 00413B34  4E 80 00 20 */	blr
 .endfn func_80449D68
 
-# 0x80526378 - 0x805263A0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CGXCache_typestr
@@ -1435,8 +1435,8 @@ IStateCache_typestr:
 	.4byte 0x74654361
 	.4byte 0x63686500
 
-# 0x8056F7D0 - 0x8056F840
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8056F7D0:
@@ -1481,8 +1481,8 @@ __vt__IStateCache:
 	.4byte func_8044940C
 	.4byte 0x00000000
 
-# 0x80665F48 - 0x80665F98
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665F48
 lbl_80665F48:
@@ -1540,8 +1540,8 @@ __RTTI__IStateCache:
 	.4byte IStateCache_typestr
 	.4byte 0x00000000
 
-# 0x8066CB78 - 0x8066CBB0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CB78
 lbl_8066CB78:
@@ -1579,8 +1579,8 @@ CDevice_typestr:
 	.4byte 0x43446576
 	.4byte 0x69636500
 
-# 0x8001CB90 - 0x8001CC10
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001CB90", local
@@ -1663,8 +1663,8 @@ CDevice_typestr:
 	.4byte 0x00000000
 .endobj "@etb_8001CC08"
 
-# 0x8003479C - 0x8003482C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8003479C", local

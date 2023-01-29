@@ -116,16 +116,16 @@
 /* 803D4860 0039DE20  4E 80 00 20 */	blr
 .endfn UTY_GetTmrUnit
 
-# 0x80520838 - 0x80520840
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520838
 lbl_80520838:
 	.4byte 0x544D525F
 	.4byte 0x43480000
 
-# 0x8061CE28 - 0x8061CE38
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8061CE28
 lbl_8061CE28:

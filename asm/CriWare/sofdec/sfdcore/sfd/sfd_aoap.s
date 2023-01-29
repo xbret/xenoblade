@@ -346,8 +346,8 @@
 /* 803BECFC 003882BC  4E 80 00 20 */	blr
 .endfn SFAOAP_Seek
 
-# 0x8051FF48 - 0x8051FF80
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051FF48
 lbl_8051FF48:

@@ -5132,13 +5132,13 @@
 /* 80240610 00209BD0  4B FF BA 08 */	b func_8023C018
 .endfn func_8024060C
 
-# 0x804F59B4 - 0x804F59B8
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_802405F0
 
-# 0x80506B40 - 0x80506B88
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CfNandManager_typestr
@@ -5167,8 +5167,8 @@ lbl_80506B70:
 	.4byte 0x6E006E61
 	.4byte 0x6D650000
 
-# 0x8053A2D8 - 0x8053A4B0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053A2D8
 lbl_8053A2D8:
@@ -5305,8 +5305,8 @@ CTTask_cf_CfNandManager_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8057A2C0 - 0x8057A3F8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057A2C0
 lbl_8057A2C0:
@@ -5315,8 +5315,8 @@ lbl_8057A2C0:
 lbl_8057A3C0:
 	.skip 0x38
 
-# 0x806651B8 - 0x806651D0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806651B8
 lbl_806651B8:
@@ -5333,8 +5333,8 @@ __RTTI__CTTask_cf_CfNandManager:
 	.4byte CTTask_cf_CfNandManager_typestr
 	.4byte CTTask_cf_CfNandManager_hierarchy
 
-# 0x80667058 - 0x80667078
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667058
 lbl_80667058:
@@ -5367,8 +5367,8 @@ lbl_8066706C:
 lbl_80667070:
 	.skip 0x8
 
-# 0x8066AF90 - 0x8066AFC0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AF90
 lbl_8066AF90:
@@ -5395,8 +5395,8 @@ lbl_8066AFB8:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x80015FE4 - 0x80016138
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80015FE4", local
@@ -5604,8 +5604,8 @@ lbl_8066AFB8:
 	.4byte 0x00000000
 .endobj "@etb_80016130"
 
-# 0x8002EF58 - 0x8002F0C0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002EF58", local

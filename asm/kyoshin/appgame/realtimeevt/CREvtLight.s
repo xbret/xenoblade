@@ -281,8 +281,8 @@
 /* 801C3970 0018CF30  4E 80 00 20 */	blr
 .endfn func_801C3850
 
-# 0x80500B78 - 0x80500B88
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CREvtLight_typestr
@@ -292,8 +292,8 @@ cf_CREvtLight_typestr:
 	.4byte 0x744C6967
 	.4byte 0x68740000
 
-# 0x80537548 - 0x80537580
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CREvtLight
@@ -316,8 +316,8 @@ cf_CREvtLight_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664F40 - 0x80664F48
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CREvtLight
@@ -325,8 +325,8 @@ __RTTI__cf_CREvtLight:
 	.4byte cf_CREvtLight_typestr
 	.4byte cf_CREvtLight_hierarchy
 
-# 0x8066A7C8 - 0x8066A7D8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A7C8
 lbl_8066A7C8:
@@ -339,8 +339,8 @@ lbl_8066A7D0:
 	.4byte 0x40000000
 	.4byte 0x00000000
 
-# 0x80010874 - 0x800108B0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80010874", local
@@ -378,8 +378,8 @@ lbl_8066A7D0:
 	.4byte 0x00000000
 .endobj "@etb_800108A8"
 
-# 0x8002B154 - 0x8002B190
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002B154", local

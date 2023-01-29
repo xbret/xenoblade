@@ -1314,8 +1314,8 @@
 /* 80415030 003DE5F0  4E 80 00 20 */	blr
 .endfn FreeChannel__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail7Channel
 
-# 0x8063B1A0 - 0x8063B1D0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8063B1A0
 lbl_8063B1A0:
@@ -1324,15 +1324,15 @@ lbl_8063B1A0:
 lbl_8063B1B0:
 	.skip 0x20
 
-# 0x80667DB8 - 0x80667DC0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667DB8
 lbl_80667DB8:
 	.skip 0x8
 
-# 0x8066C708 - 0x8066C734
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C708
 lbl_8066C708:

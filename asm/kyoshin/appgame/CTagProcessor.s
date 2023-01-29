@@ -7646,13 +7646,13 @@
 /* 8012BC40 000F5200  4E 80 00 20 */	blr
 .endfn func_8012BC34
 
-# 0x804F5950 - 0x804F5954
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8012BA00
 
-# 0x804FA7F8 - 0x804FB4D8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804FA7F8
 lbl_804FA7F8:
@@ -8703,8 +8703,8 @@ lbl_804FB488:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80530C48 - 0x80531740
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80530C48
 lbl_80530C48:
@@ -9645,8 +9645,8 @@ lbl_80531730:
 	.4byte 0x65722E68
 	.4byte 0x00000000
 
-# 0x806647E0 - 0x80664A68
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal
@@ -10018,8 +10018,8 @@ lbl_80664A58:
 	.4byte 0x00450000
 	.4byte 0x00000000
 
-# 0x806668D8 - 0x80666938
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806668D8
 lbl_806668D8:
@@ -10091,8 +10091,8 @@ lbl_8066692C:
 lbl_80666930:
 	.skip 0x8
 
-# 0x80669A48 - 0x80669B30
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669A48
 lbl_80669A48:
@@ -10241,8 +10241,8 @@ lbl_80669B28:
 lbl_80669B2C:
 	.4byte 0x3F19999A
 
-# 0x8000BF38 - 0x8000C21C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000BF38", local
@@ -10758,8 +10758,8 @@ lbl_80669B2C:
 	.4byte 0x00000000
 .endobj "@etb_8000C214"
 
-# 0x8002711C - 0x800274F4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002711C", local

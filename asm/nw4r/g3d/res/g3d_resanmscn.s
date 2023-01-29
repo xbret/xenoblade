@@ -804,8 +804,8 @@
 /* 803E17AC 003AAD6C  4E 80 00 20 */	blr
 .endfn Bind__Q34nw4r3g3d9ResAnmScnFQ34nw4r3g3d9ResAnmScn
 
-# 0x8056C9C0 - 0x8056CA60
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056C9C0
 lbl_8056C9C0:

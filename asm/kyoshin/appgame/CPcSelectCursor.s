@@ -501,8 +501,8 @@
 /* 8010F16C 000D872C  4E 80 00 20 */	blr
 .endfn func_8010EE40
 
-# 0x8052FBFC - 0x8052FC08
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 4
 
 .global __vt__CPcSelectCursor01
@@ -511,8 +511,8 @@ __vt__CPcSelectCursor01:
 	.4byte 0x00000000
 	.4byte func_8010A694
 
-# 0x80664718 - 0x80664720
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CPcSelectCursor01
@@ -520,8 +520,8 @@ __RTTI__CPcSelectCursor01:
 	.4byte CPcSelectCursor01_typestr
 	.4byte 0x00000000
 
-# 0x8000B330 - 0x8000B370
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000B330", local
@@ -564,8 +564,8 @@ __RTTI__CPcSelectCursor01:
 	.4byte 0x00000000
 .endobj "@etb_8000B368"
 
-# 0x80026A38 - 0x80026A80
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80026A38", local

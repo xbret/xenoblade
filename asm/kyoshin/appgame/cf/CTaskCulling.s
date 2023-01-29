@@ -569,13 +569,13 @@
 /* 801A30D4 0016C694  4B FF FA 84 */	b func_801A2B58
 .endfn func_801A30D0
 
-# 0x804F5974 - 0x804F5978
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_801A3038
 
-# 0x804FF750 - 0x804FF788
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CTaskCulling_typestr
@@ -600,8 +600,8 @@ lbl_804FF780:
 	.4byte 0x2F006F63
 	.4byte 0x63000000
 
-# 0x80536798 - 0x805368E0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CTaskCulling
@@ -698,15 +698,15 @@ CTTask_cf_CTaskCulling_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80579018 - 0x80579050
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80579018
 lbl_80579018:
 	.skip 0x38
 
-# 0x80664E60 - 0x80664E70
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CTaskCulling
@@ -719,15 +719,15 @@ __RTTI__CTTask_cf_CTaskCulling:
 	.4byte CTTask_cf_CTaskCulling_typestr
 	.4byte CTTask_cf_CTaskCulling_hierarchy
 
-# 0x80666C18 - 0x80666C20
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666C18
 lbl_80666C18:
 	.skip 0x8
 
-# 0x8066A578 - 0x8066A590
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A578
 lbl_8066A578:
@@ -748,8 +748,8 @@ lbl_8066A588:
 lbl_8066A58C:
 	.4byte 0x3E4CCCCD
 
-# 0x8000F790 - 0x8000F864
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000F790", local
@@ -845,8 +845,8 @@ lbl_8066A58C:
 	.4byte 0x00000000
 .endobj "@etb_8000F85C"
 
-# 0x8002A590 - 0x8002A608
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002A590", local

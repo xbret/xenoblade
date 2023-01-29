@@ -1527,8 +1527,8 @@
 /* 80145B18 0010F0D8  4E 80 00 20 */	blr
 .endfn func_80145AA8
 
-# 0x804FCF40 - 0x804FD0D8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuLandTelop_typestr
@@ -1638,8 +1638,8 @@ lbl_804FCF50:
 	.4byte 0x745F6172
 	.4byte 0x65610000
 
-# 0x80532080 - 0x80532180
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMenuLandTelop
@@ -1712,8 +1712,8 @@ CMenuLandTelop_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664B38 - 0x80664B40
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuLandTelop
@@ -1721,15 +1721,15 @@ __RTTI__CMenuLandTelop:
 	.4byte CMenuLandTelop_typestr
 	.4byte CMenuLandTelop_hierarchy
 
-# 0x80666A90 - 0x80666A98
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666A90
 lbl_80666A90:
 	.skip 0x8
 
-# 0x80669C88 - 0x80669CC0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669C88
 lbl_80669C88:
@@ -1764,8 +1764,8 @@ lbl_80669CB8:
 	.4byte 0x43300000
 	.4byte 0x00000000
 
-# 0x8000CF14 - 0x8000CFE4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000CF14", local
@@ -1864,8 +1864,8 @@ lbl_80669CB8:
 	.4byte 0x00000000
 .endobj "@etb_8000CFDC"
 
-# 0x80028238 - 0x800282BC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80028238", local

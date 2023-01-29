@@ -5315,8 +5315,8 @@
 /* 8016C7EC 00135DAC  4B FF BB 58 */	b func_80168344
 .endfn func_8016C7E8
 
-# 0x804FE890 - 0x804FE930
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CTaskREvtSequence_typestr
@@ -5367,8 +5367,8 @@ lbl_804FE8C8:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80534210 - 0x805344C0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80534210
 lbl_80534210:
@@ -5581,8 +5581,8 @@ CTTask_cf_CTaskREvtSequence_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664CA8 - 0x80664CC8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CTaskREvtSequence
@@ -5607,15 +5607,15 @@ lbl_80664CC0:
 lbl_80664CC4:
 	.4byte 0x72656600
 
-# 0x80666B58 - 0x80666B60
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666B58
 lbl_80666B58:
 	.skip 0x8
 
-# 0x80669F18 - 0x80669F50
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669F18
 lbl_80669F18:
@@ -5656,8 +5656,8 @@ lbl_80669F48:
 	.4byte 0x3C23D70A
 	.4byte 0x00000000
 
-# 0x8000DE54 - 0x8000E048
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000DE54", local
@@ -5953,8 +5953,8 @@ lbl_80669F48:
 	.4byte 0x00000000
 .endobj "@etb_8000E040"
 
-# 0x80028DFC - 0x80028FF4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80028DFC", local

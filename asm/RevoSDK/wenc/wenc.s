@@ -206,8 +206,8 @@
 /* 80368D68 00332328  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80368D6C 0033232C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80518D88 - 0x80518DC8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518D88
 lbl_80518D88:
@@ -228,8 +228,8 @@ lbl_80518D88:
 	.4byte 0x40033000
 	.4byte 0x00000000
 
-# 0x8066C1F0 - 0x8066C1F8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C1F0
 lbl_8066C1F0:

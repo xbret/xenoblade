@@ -68,8 +68,8 @@
 /* 80396994 0035FF54  4E 80 00 20 */	blr
 .endfn SJCRS_Unlock
 
-# 0x805F5D20 - 0x805F5D30
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global sjcrs_lvl

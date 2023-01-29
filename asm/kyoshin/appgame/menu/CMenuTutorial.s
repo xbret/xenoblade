@@ -625,8 +625,8 @@
 /* 8029A930 00263EF0  4B FF F8 A8 */	b func_8029A1D8
 .endfn func_8029A92C
 
-# 0x8050B848 - 0x8050B878
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuTutorial_typestr
@@ -646,8 +646,8 @@ lbl_8050B858:
 	.4byte 0x69746C65
 	.4byte 0x00000000
 
-# 0x8053C978 - 0x8053C9E8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMenuTutorial
@@ -684,8 +684,8 @@ CMenuTutorial_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665540 - 0x80665548
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuTutorial
@@ -693,15 +693,15 @@ __RTTI__CMenuTutorial:
 	.4byte CMenuTutorial_typestr
 	.4byte CMenuTutorial_hierarchy
 
-# 0x80667318 - 0x80667320
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667318
 lbl_80667318:
 	.skip 0x8
 
-# 0x8001A020 - 0x8001A110
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001A020", local
@@ -808,8 +808,8 @@ lbl_80667318:
 	.4byte 0x00000000
 .endobj "@etb_8001A108"
 
-# 0x80032084 - 0x80032108
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80032084", local

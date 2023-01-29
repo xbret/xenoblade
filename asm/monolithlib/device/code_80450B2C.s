@@ -23,13 +23,13 @@
 /* 80450B50 0041A110  4B FF EB 4C */	b func_8044F69C
 .endfn func_80450B4C
 
-# 0x804F5A78 - 0x804F5A7C
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80450B2C
 
-# 0x8065A780 - 0x8065A808
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8065A780
 lbl_8065A780:

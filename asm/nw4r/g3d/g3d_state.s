@@ -4258,13 +4258,13 @@
 /* 803EB6AC 003B4C6C  4E 80 00 20 */	blr
 .endfn __dt__Q54nw4r3g3d8G3DState23_unnamed_g3d_state_cpp_10LightStateFv
 
-# 0x804F5A00 - 0x804F5A04
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_803EB3B4
 
-# 0x80520F78 - 0x80520FA8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520F78
 lbl_80520F78:
@@ -4281,8 +4281,8 @@ lbl_80520F78:
 	.4byte 0x00000000
 	.4byte 0x3F800000
 
-# 0x8056CEB0 - 0x8056CEC8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056CEB0
 lbl_8056CEB0:
@@ -4293,8 +4293,8 @@ lbl_8056CEB0:
 	.4byte Reset__Q44nw4r3g3d8G3DState11IndMtxOpStdFv
 	.4byte SetNrmMapMtx__Q44nw4r3g3d8G3DState11IndMtxOpStdF14_GXIndTexMtxIDPCQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34Q44nw4r3g3d14ResMatMiscData14IndirectMethod
 
-# 0x8061D740 - 0x80622D00
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8061D740
 lbl_8061D740:
@@ -4339,8 +4339,8 @@ lbl_80622C40:
 lbl_80622CD8:
 	.skip 0x28
 
-# 0x80665D98 - 0x80665DA0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665D98
 lbl_80665D98:
@@ -4349,8 +4349,8 @@ lbl_80665D98:
 lbl_80665D9C:
 	.4byte lbl_80622C40
 
-# 0x80667D28 - 0x80667D48
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667D28
 lbl_80667D28:
@@ -4371,8 +4371,8 @@ lbl_80667D38:
 lbl_80667D40:
 	.skip 0x8
 
-# 0x8066C3E8 - 0x8066C410
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C3E8
 lbl_8066C3E8:

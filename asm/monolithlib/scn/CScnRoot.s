@@ -439,8 +439,8 @@
 /* 8048F334 004588F4  4E 80 00 20 */	blr
 .endfn func_8048F2F0
 
-# 0x805278E8 - 0x805278F8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CScnRoot_typestr
@@ -450,8 +450,8 @@ CScnRoot_typestr:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80571F78 - 0x80571FB0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnRoot
@@ -471,8 +471,8 @@ __vt__CScnRoot:
 	.4byte func_8048EDD0
 	.4byte 0x00000000
 
-# 0x806662B8 - 0x806662C0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CScnRoot
@@ -480,8 +480,8 @@ __RTTI__CScnRoot:
 	.4byte CScnRoot_typestr
 	.4byte 0x00000000
 
-# 0x8066D1A8 - 0x8066D1C0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D1A8
 lbl_8066D1A8:
@@ -500,8 +500,8 @@ lbl_8066D1B8:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x8001EBF0 - 0x8001EC30
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001EBF0", local
@@ -536,8 +536,8 @@ lbl_8066D1B8:
 	.4byte 0x00000000
 .endobj "@etb_8001EC28"
 
-# 0x80036800 - 0x80036830
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80036800", local

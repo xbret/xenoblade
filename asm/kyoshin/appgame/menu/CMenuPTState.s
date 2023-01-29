@@ -243,8 +243,8 @@
 /* 80192DE4 0015C3A4  4E 80 00 20 */	blr
 .endfn func_80192CB0
 
-# 0x804FF400 - 0x804FF410
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMenuPTState_typestr
@@ -254,8 +254,8 @@ CMenuPTState_typestr:
 	.4byte 0x74617465
 	.4byte 0x00000000
 
-# 0x805361F0 - 0x80536260
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CMenuPTState
@@ -292,8 +292,8 @@ CMenuPTState_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80664DD8 - 0x80664DE0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMenuPTState
@@ -301,8 +301,8 @@ __RTTI__CMenuPTState:
 	.4byte CMenuPTState_typestr
 	.4byte CMenuPTState_hierarchy
 
-# 0x8066A358 - 0x8066A370
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A358
 lbl_8066A358:
@@ -319,8 +319,8 @@ lbl_8066A368:
 	.4byte 0x3D088889
 	.4byte 0x00000000
 
-# 0x8000F2A4 - 0x8000F308
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000F2A4", local
@@ -360,8 +360,8 @@ lbl_8066A368:
 	.4byte func_80043E88
 .endobj "@etb_8000F2E8"
 
-# 0x8002A0A4 - 0x8002A0C8
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002A0A4", local

@@ -15,8 +15,8 @@
 /* 803E5D24 003AF2E4  4E 80 00 20 */	blr
 .endfn TestExistence__Q34nw4r3g3d9AnmObjShpCFUl
 
-# 0x80520F28 - 0x80520F38
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520F28
 lbl_80520F28:

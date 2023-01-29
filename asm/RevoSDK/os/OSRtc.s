@@ -757,8 +757,8 @@
 /* 8035B2AC 0032486C  4E 80 00 20 */	blr
 .endfn __OSClearRTCFlags
 
-# 0x805D4700 - 0x805D4758
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 Scb:

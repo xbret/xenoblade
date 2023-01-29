@@ -636,8 +636,8 @@
 /* 8039B28C 0036484C  4E 80 00 20 */	blr
 .endfn ADXM_ShutdownFramework
 
-# 0x8051CCE0 - 0x8051CD48
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051CCE0
 lbl_8051CCE0:
@@ -672,8 +672,8 @@ lbl_8051CD14:
 	.4byte 0x72646572
 	.4byte 0x00000000
 
-# 0x805F7010 - 0x80601360
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805F7010
 lbl_805F7010:

@@ -534,8 +534,8 @@
 /* 80416CA4 003E0264  4E 80 00 20 */	blr
 .endfn OnChangeOutputMode__Q34nw4r3snd15FxReverbStdDpl2Fv
 
-# 0x8056E0C8 - 0x8056E0F0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E0C8
 lbl_8056E0C8:
@@ -550,8 +550,8 @@ lbl_8056E0C8:
 	.4byte ReleaseWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2Fv
 	.4byte 0x00000000
 
-# 0x8066C798 - 0x8066C7B0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C798
 lbl_8066C798:

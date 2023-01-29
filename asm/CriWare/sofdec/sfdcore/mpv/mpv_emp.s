@@ -497,8 +497,8 @@
 /* 803A6150 0036F710  4E 80 00 20 */	blr
 .endfn MPV_IsEmptyPpic
 
-# 0x8051F708 - 0x8051F750
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051F708
 lbl_8051F708:

@@ -145,8 +145,8 @@
 /* 803D4A10 0039DFD0  4E 80 00 20 */	blr
 .endfn SFX_ShiftYccPtrByPix
 
-# 0x80520840 - 0x80520850
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520840
 lbl_80520840:

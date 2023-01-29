@@ -1604,8 +1604,8 @@
 /* 80450B10 0041A0D0  4E 80 00 20 */	blr
 .endfn func_80450AB8
 
-# 0x805265A8 - 0x805265C0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CDeviceFileCri_typestr
@@ -1619,8 +1619,8 @@ lbl_805265B8:
 	.4byte 0x2F000000
 	.4byte 0x00000000
 
-# 0x8056FB70 - 0x8056FC68
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8056FB70:
@@ -1695,8 +1695,8 @@ lbl_8056FC5C:
 	.4byte 0x00540041
 	.4byte 0x004C0000
 
-# 0x80665FF0 - 0x80666008
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665FF0
 lbl_80665FF0:
@@ -1714,23 +1714,23 @@ __RTTI__CDeviceFileCri:
 	.4byte CDeviceFileCri_typestr
 	.4byte CDeviceFileCri_hierarchy
 
-# 0x80667F48 - 0x80667F50
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667F48
 lbl_80667F48:
 	.skip 0x8
 
-# 0x8066CBB0 - 0x8066CBB8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CBB0
 lbl_8066CBB0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8001CE38 - 0x8001CF14
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001CE38", local
@@ -1856,8 +1856,8 @@ lbl_8066CBB0:
 	.4byte 0x00000000
 .endobj "@etb_8001CF0C"
 
-# 0x80034ACC - 0x80034B98
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034ACC", local

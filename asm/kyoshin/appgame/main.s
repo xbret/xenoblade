@@ -499,13 +499,13 @@
 /* 8003A538 00003AF8  4E 80 00 20 */	blr
 .endfn sinit_8003A4F8
 
-# 0x804F5908 - 0x804F590C
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8003A4F8
 
-# 0x804F5B88 - 0x804F5D50
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .obj "@3", local
@@ -673,8 +673,8 @@ lbl_804F5D40:
 	.4byte 0x65000000
 	.4byte 0x00000000
 
-# 0x80528380 - 0x80528530
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80528380
 lbl_80528380:
@@ -801,8 +801,8 @@ lbl_80528520:
 	.4byte 0x00000000
 	.4byte lbl_805284C8
 
-# 0x80573C80 - 0x80573DD0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 	.skip 0x48
 .global lbl_80573CC8
@@ -812,8 +812,8 @@ lbl_80573CC8:
 lbl_80573D38:
 	.skip 0x98
 
-# 0x806683A0 - 0x80668468
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 staticArcStr:
@@ -920,8 +920,8 @@ lbl_80668460:
 	.4byte 0x74687265
 	.4byte 0x61640000
 
-# 0x800067C4 - 0x8000684C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800067C4", local
@@ -1025,8 +1025,8 @@ lbl_80668460:
 	.4byte 0x00000000
 .endobj "@etb_80006844"
 
-# 0x80021104 - 0x800211D0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80021104", local

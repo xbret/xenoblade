@@ -7459,13 +7459,13 @@
 /* 8015BAA4 00125064  4E 80 00 20 */	blr
 .endfn sinit_8015B9D8
 
-# 0x804F5964 - 0x804F5968
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8015B9D8
 
-# 0x804FD2D0 - 0x804FD5D0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804FD2D0
 lbl_804FD2D0:
@@ -7730,8 +7730,8 @@ lbl_804FD488:
 	.4byte 0x69746D25
 	.4byte 0x64494400
 
-# 0x80532DF8 - 0x805334D8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80532DF8
 lbl_80532DF8:
@@ -8238,8 +8238,8 @@ cf_ItemDummyImpl_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80577610 - 0x80577888
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80577610
 lbl_80577610:
@@ -8257,8 +8257,8 @@ lbl_805777FC:
 lbl_80577840:
 	.skip 0x48
 
-# 0x80664B80 - 0x80664C28
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80664B80
 lbl_80664B80:
@@ -8374,8 +8374,8 @@ __RTTI__cf_ItemImpl:
 	.4byte cf_ItemImpl_typestr
 	.4byte 0x00000000
 
-# 0x80666AA8 - 0x80666B18
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666AA8
 lbl_80666AA8:
@@ -8468,8 +8468,8 @@ lbl_80666B10:
 lbl_80666B14:
 	.skip 0x4
 
-# 0x80669D60 - 0x80669DF0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669D60
 lbl_80669D60:
@@ -8544,8 +8544,8 @@ lbl_80669DE8:
 	.4byte 0x61727473
 	.4byte 0x31000000
 
-# 0x8000D3AC - 0x8000D614
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000D3AC", local
@@ -9010,8 +9010,8 @@ lbl_80669DE8:
 	.4byte 0x00000000
 .endobj "@etb_8000D60C"
 
-# 0x80028550 - 0x800288EC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80028550", local

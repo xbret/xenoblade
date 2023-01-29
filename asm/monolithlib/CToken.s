@@ -1351,8 +1351,8 @@
 /* 8043BC80 00405240  4E 80 00 20 */	blr
 .endfn func_8043BAA4
 
-# 0x80525E70 - 0x80525EA0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80525E70
 lbl_80525E70:
@@ -1369,8 +1369,8 @@ lbl_80525E70:
 	.4byte 0x00000002
 	.4byte 0x00000000
 
-# 0x8056ED48 - 0x8056EDB0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056ED48
 lbl_8056ED48:
@@ -1406,8 +1406,8 @@ __vt__CToken:
 	.4byte 0x00000000
 	.4byte func_8043A9DC
 
-# 0x80665E88 - 0x80665E90
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CToken
@@ -1415,8 +1415,8 @@ __RTTI__CToken:
 	.4byte CToken_typestr
 	.4byte 0x00000000
 
-# 0x8066CA88 - 0x8066CAD0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CA88
 lbl_8066CA88:
@@ -1464,8 +1464,8 @@ CToken_typestr:
 	.4byte 0x43546F6B
 	.4byte 0x656E0000
 
-# 0x8001C340 - 0x8001C380
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C340", local
@@ -1516,8 +1516,8 @@ CToken_typestr:
 	.4byte 0x00000000
 .endobj "@etb_8001C378"
 
-# 0x80033FA4 - 0x80034004
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033FA4", local

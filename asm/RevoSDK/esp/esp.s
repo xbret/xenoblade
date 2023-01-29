@@ -459,8 +459,8 @@
 /* 80313D6C 002DD32C  4E 80 00 20 */	blr
 .endfn ESP_GetConsumption
 
-# 0x806659C8 - 0x806659D8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 __esFd:

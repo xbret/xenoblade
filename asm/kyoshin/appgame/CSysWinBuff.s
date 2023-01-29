@@ -474,8 +474,8 @@
 /* 80274B24 0023E0E4  4E 80 00 20 */	blr
 .endfn func_80274B24
 
-# 0x8050A238 - 0x8050A270
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CSysWinBuff_typestr
@@ -497,8 +497,8 @@ lbl_8050A244:
 	.4byte 0x66000000
 	.4byte 0x00000000
 
-# 0x8053B578 - 0x8053B678
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CSysWinBuff
@@ -571,8 +571,8 @@ CSysWinBuff_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806652E0 - 0x806652E8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CSysWinBuff
@@ -580,8 +580,8 @@ __RTTI__CSysWinBuff:
 	.4byte CSysWinBuff_typestr
 	.4byte CSysWinBuff_hierarchy
 
-# 0x806671D0 - 0x806671D8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806671D0
 lbl_806671D0:
@@ -590,8 +590,8 @@ lbl_806671D0:
 lbl_806671D4:
 	.skip 0x4
 
-# 0x8001840C - 0x800184C0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001840C", local
@@ -667,8 +667,8 @@ lbl_806671D4:
 	.4byte 0x00000000
 .endobj "@etb_800184B8"
 
-# 0x80030A88 - 0x80030ADC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80030A88", local

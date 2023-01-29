@@ -238,8 +238,8 @@
 /* 802CC220 002957E0  48 08 E5 C0 */	b OSResetSystem
 .endfn __TRKreset
 
-# 0x8053FD40 - 0x8053FD80
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053FD40
 lbl_8053FD40:
@@ -260,8 +260,8 @@ lbl_8053FD40:
 	.4byte 0x00001700
 	.4byte 0x00000000
 
-# 0x80667570 - 0x80667578
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667570
 lbl_80667570:

@@ -1681,8 +1681,8 @@
 /* 80213BEC 001DD1AC  4E 80 00 20 */	blr
 .endfn func_80213B1C
 
-# 0x80503F48 - 0x80503F90
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CMakeCrystalWin_typestr
@@ -1708,8 +1708,8 @@ lbl_80503F58:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x805392F8 - 0x805393D8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_805392F8:
@@ -1776,8 +1776,8 @@ CMakeCrystalWin_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806650C8 - 0x806650D0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMakeCrystalWin
@@ -1785,8 +1785,8 @@ __RTTI__CMakeCrystalWin:
 	.4byte CMakeCrystalWin_typestr
 	.4byte CMakeCrystalWin_hierarchy
 
-# 0x8066AD10 - 0x8066AD30
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AD10
 lbl_8066AD10:
@@ -1809,8 +1809,8 @@ lbl_8066AD28:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x800133E8 - 0x800135AC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800133E8", local
@@ -2034,8 +2034,8 @@ lbl_8066AD28:
 	.4byte 0x00000000
 .endobj "@etb_800135A4"
 
-# 0x8002D320 - 0x8002D464
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002D320", local

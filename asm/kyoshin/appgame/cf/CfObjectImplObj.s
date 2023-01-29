@@ -165,8 +165,8 @@
 /* 800CA6E0 00093CA0  4B FF FF 90 */	b func_800CA670
 .endfn func_800CA6DC
 
-# 0x804F7FB8 - 0x804F7FD0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CfObjectImplObj_typestr
@@ -178,8 +178,8 @@ cf_CfObjectImplObj_typestr:
 	.4byte 0x4F626A00
 	.4byte 0x00000000
 
-# 0x8052E0B8 - 0x8052E1D0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CfObjectImplObj
@@ -258,8 +258,8 @@ cf_CfObjectImplObj_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8000A374 - 0x8000A394
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000A374", local
@@ -286,8 +286,8 @@ cf_CfObjectImplObj_hierarchy:
 	.4byte 0x00000000
 .endobj "@etb_8000A38C"
 
-# 0x80025E14 - 0x80025E44
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80025E14", local

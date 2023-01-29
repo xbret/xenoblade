@@ -965,8 +965,8 @@
 /* 802D942C 002A29EC  4E 80 00 20 */	blr
 .endfn __InitParams
 
-# 0x80543350 - 0x805433E0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80543350
 lbl_80543350:
@@ -1009,8 +1009,8 @@ lbl_80543370:
 	.4byte 0x0000023B
 	.4byte 0x000000B3
 
-# 0x8066BE90 - 0x8066BED0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BE90
 lbl_8066BE90:

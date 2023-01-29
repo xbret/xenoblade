@@ -67,8 +67,8 @@
 /* 8006B5D0 00034B90  4E 80 00 20 */	blr
 .endfn CamLookatIntf_setLookat
 
-# 0x80008098 - 0x800080A0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80008098", local
@@ -77,8 +77,8 @@
 	.4byte 0x00000000
 .endobj "@etb_80008098"
 
-# 0x800233B4 - 0x800233C0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800233B4", local

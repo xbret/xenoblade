@@ -459,8 +459,8 @@
 /* 8044E144 00417704  4E 80 00 20 */	blr
 .endfn func_8044E0DC
 
-# 0x80526460 - 0x805264B8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CDeviceClock_typestr
@@ -494,8 +494,8 @@ _reslist_base_IDeviceClockFrame_typestr:
 	.4byte 0x2A3E0000
 	.4byte 0x00000000
 
-# 0x8056F9B0 - 0x8056FA90
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CDeviceClock
@@ -569,8 +569,8 @@ __vt___reslist_base_IDeviceClockFrame:
 	.4byte 0x00000000
 	.4byte func_8044DC8C
 
-# 0x80665FB8 - 0x80665FD0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CDeviceClock
@@ -588,15 +588,15 @@ __RTTI___reslist_base_IDeviceClockFrame:
 	.4byte _reslist_base_IDeviceClockFrame_typestr
 	.4byte 0x00000000
 
-# 0x80667F38 - 0x80667F40
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667F38
 lbl_80667F38:
 	.skip 0x8
 
-# 0x8001CD08 - 0x8001CD84
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001CD08", local
@@ -666,8 +666,8 @@ lbl_80667F38:
 	.4byte 0x00000000
 .endobj "@etb_8001CD7C"
 
-# 0x800349A0 - 0x80034A0C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800349A0", local

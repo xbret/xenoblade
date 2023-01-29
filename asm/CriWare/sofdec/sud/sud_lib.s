@@ -128,8 +128,8 @@
 /* 803D7240 003A0800  4E 80 00 20 */	blr
 .endfn SUD_SearchSudDat
 
-# 0x80520D60 - 0x80520DB8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520D60
 lbl_80520D60:
@@ -158,8 +158,8 @@ lbl_80520D94:
 	.4byte 0x0041003C
 	.4byte 0x00000000
 
-# 0x8061D708 - 0x8061D710
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8061D708
 lbl_8061D708:

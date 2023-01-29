@@ -2697,8 +2697,8 @@
 /* 801725E0 0013BBA0  4B F3 B3 48 */	b func_800AD928
 .endfn func_801725DC
 
-# 0x80534860 - 0x80534E4C
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80534860
 lbl_80534860:
@@ -3088,8 +3088,8 @@ CScnMaruShadowNw4r_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80669FF8 - 0x8066A030
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669FF8
 lbl_80669FF8:
@@ -3126,8 +3126,8 @@ lbl_8066A028:
 lbl_8066A02C:
 	.4byte 0xBF800000
 
-# 0x8000E1BC - 0x8000E254
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000E1BC", local
@@ -3224,8 +3224,8 @@ lbl_8066A02C:
 	.4byte 0x00000000
 .endobj "@etb_8000E24C"
 
-# 0x80029204 - 0x800292AC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80029204", local

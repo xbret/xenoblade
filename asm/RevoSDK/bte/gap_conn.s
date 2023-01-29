@@ -830,8 +830,8 @@
 /* 802F089C 002B9E5C  4E 80 00 20 */	blr
 .endfn gap_congestion_ind
 
-# 0x805462D0 - 0x805463A0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805462D0
 lbl_805462D0:
@@ -894,15 +894,15 @@ lbl_80546368:
 	.4byte 0x25780000
 	.4byte 0x00000000
 
-# 0x805C21C0 - 0x805C2570
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805C21C0
 lbl_805C21C0:
 	.skip 0x3B0
 
-# 0x80665940 - 0x80665948
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665940
 lbl_80665940:

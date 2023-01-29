@@ -1546,8 +1546,8 @@
 /* 80382388 0034B948  4E 80 00 20 */	blr
 .endfn ADXSTM_IsOpenedFile
 
-# 0x805197E0 - 0x80519838
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805197E0
 lbl_805197E0:
@@ -1574,8 +1574,8 @@ lbl_805197E0:
 	.4byte 0x20000000
 	.4byte 0x00000000
 
-# 0x80563710 - 0x80563720
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80563710
 lbl_80563710:
@@ -1584,8 +1584,8 @@ lbl_80563710:
 	.4byte 0x00000010
 	.4byte 0x00000000
 
-# 0x805E7518 - 0x805E8570
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global adxstm_init_count

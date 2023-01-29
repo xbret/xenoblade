@@ -1661,13 +1661,13 @@
 /* 8015565C 0011EC1C  4E 80 00 20 */	blr
 .endfn sinit_801555E4
 
-# 0x804F5960 - 0x804F5964
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_801555E4
 
-# 0x80532DB8 - 0x80532DF8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CArtsParam
@@ -1695,15 +1695,15 @@ __vt__cf_CAttackParam:
 	.4byte func_800989F4
 	.4byte func_800D29E4
 
-# 0x80577580 - 0x80577610
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80577580
 lbl_80577580:
 	.skip 0x90
 
-# 0x80664B70 - 0x80664B80
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CArtsParam
@@ -1716,8 +1716,8 @@ __RTTI__cf_CAttackParam:
 	.4byte cf_CAttackParam_typestr
 	.4byte 0x00000000
 
-# 0x80669D20 - 0x80669D60
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669D20
 lbl_80669D20:
@@ -1764,8 +1764,8 @@ lbl_80669D58:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x8000D344 - 0x8000D3AC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000D344", local
@@ -1830,8 +1830,8 @@ lbl_80669D58:
 	.4byte 0x00000000
 .endobj "@etb_8000D3A4"
 
-# 0x800284E4 - 0x80028550
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800284E4", local

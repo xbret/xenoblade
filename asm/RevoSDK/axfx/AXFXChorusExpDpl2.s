@@ -826,8 +826,8 @@
 /* 802DAAC8 002A4088  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 802DAACC 002A408C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8066BF00 - 0x8066BF30
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BF00
 lbl_8066BF00:

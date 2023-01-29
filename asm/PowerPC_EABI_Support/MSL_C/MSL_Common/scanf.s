@@ -1547,8 +1547,8 @@
 /* 802C260C 0028BBCC  4E 80 00 20 */	blr
 .endfn sscanf
 
-# 0x8053F7C0 - 0x8053FA30
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8053F7C0:

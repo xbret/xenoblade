@@ -2342,8 +2342,8 @@
 /* 803C2E94 0038C454  4E 80 00 20 */	blr
 .endfn SFMPS_GetConcatCnt
 
-# 0x805202D8 - 0x80520320
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805202D8
 lbl_805202D8:
@@ -2368,8 +2368,8 @@ lbl_80520310:
 	.4byte sfmps_CopyPrvate
 	.4byte sfmps_CopyPadding
 
-# 0x8060A518 - 0x8060AD30
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global sfmps_libwork

@@ -838,8 +838,8 @@
 /* 8034DDE8 003173A8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8034DDEC 003173AC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80665AD8 - 0x80665AE0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global Unit01
@@ -847,8 +847,8 @@ Unit01:
 	.4byte 0x00000000
 	.4byte 0x3F800000
 
-# 0x8066C128 - 0x8066C148
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .global one_c

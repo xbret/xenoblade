@@ -707,8 +707,8 @@
 /* 802088DC 001D1E9C  4E 80 00 20 */	blr
 .endfn func_80208890
 
-# 0x80503BC8 - 0x80503CB8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CItemBoxGridSubMenu_typestr
@@ -776,8 +776,8 @@ lbl_80503BDC:
 	.4byte 0x30310000
 	.4byte 0x00000000
 
-# 0x80538F08 - 0x80538FA0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CItemBoxGridSubMenu
@@ -824,8 +824,8 @@ CItemBoxGridSubMenu_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665070 - 0x80665078
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CItemBoxGridSubMenu
@@ -833,8 +833,8 @@ __RTTI__CItemBoxGridSubMenu:
 	.4byte CItemBoxGridSubMenu_typestr
 	.4byte CItemBoxGridSubMenu_hierarchy
 
-# 0x8066ABB8 - 0x8066ABE0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066ABB8
 lbl_8066ABB8:
@@ -865,8 +865,8 @@ lbl_8066ABD8:
 lbl_8066ABDC:
 	.4byte 0x3F800000
 
-# 0x80012EC0 - 0x80012F00
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80012EC0", local
@@ -917,8 +917,8 @@ lbl_8066ABDC:
 	.4byte 0x00000000
 .endobj "@etb_80012EF8"
 
-# 0x8002CE1C - 0x8002CE7C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002CE1C", local

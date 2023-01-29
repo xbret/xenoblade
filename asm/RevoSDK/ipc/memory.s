@@ -379,8 +379,8 @@
 /* 803448D8 0030DE98  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803448DC 0030DE9C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805CE480 - 0x805CE500
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805CE480
 lbl_805CE480:

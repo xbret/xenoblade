@@ -1,7 +1,7 @@
 .include "macros.inc"
 
-# 0x80665888 - 0x80665898
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __float_nan

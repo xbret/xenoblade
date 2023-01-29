@@ -371,8 +371,8 @@
 /* 80429848 003F2E08  4E 80 00 20 */	blr
 .endfn GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 
-# 0x805238A8 - 0x80525D28
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805238A8
 lbl_805238A8:
@@ -2727,8 +2727,8 @@ lbl_80525CF8:
 	.4byte 0x1F402800
 	.4byte 0x32003E80
 
-# 0x8056E640 - 0x8056E650
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E640
 lbl_8056E640:
@@ -2737,16 +2737,16 @@ lbl_8056E640:
 	.4byte lbl_805253F4
 	.4byte 0x00000000
 
-# 0x80665E20 - 0x80665E28
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665E20
 lbl_80665E20:
 	.4byte 0x12345678
 	.4byte 0x00000000
 
-# 0x8066C8D0 - 0x8066C900
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C8D0
 lbl_8066C8D0:

@@ -1130,8 +1130,8 @@
 /* 80398F9C 0036255C  4B FF F4 60 */	b ADXB_ExecOneAu16
 .endfn ADXB_ExecOneAu
 
-# 0x8051C750 - 0x8051C760
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051C750
 lbl_8051C750:
@@ -1140,8 +1140,8 @@ lbl_8051C750:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80569528 - 0x80569728
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80569528
 lbl_80569528:

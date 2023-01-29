@@ -1231,8 +1231,8 @@
 /* 8016FE64 00139424  4E 80 00 20 */	blr
 .endfn func_8016FE34
 
-# 0x804FEA60 - 0x804FEB30
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CfMapEffectManager_typestr
@@ -1292,8 +1292,8 @@ lbl_804FEA78:
 	.4byte 0x65000000
 	.4byte 0x00000000
 
-# 0x80534850 - 0x80534860
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CfMapEffectManager
@@ -1303,8 +1303,8 @@ __vt__cf_CfMapEffectManager:
 	.4byte func_8016EDF8
 	.4byte func_8016FC98
 
-# 0x80664CE0 - 0x80664CF0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80664CE0
 lbl_80664CE0:
@@ -1318,15 +1318,15 @@ __RTTI__cf_CfMapEffectManager:
 	.4byte cf_CfMapEffectManager_typestr
 	.4byte 0x00000000
 
-# 0x80666B80 - 0x80666B88
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666B80
 lbl_80666B80:
 	.skip 0x8
 
-# 0x80669FC0 - 0x80669FF8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80669FC0
 lbl_80669FC0:
@@ -1359,8 +1359,8 @@ lbl_80669FF0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8000E150 - 0x8000E1BC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000E150", local
@@ -1434,8 +1434,8 @@ lbl_80669FF0:
 	.4byte 0x00000000
 .endobj "@etb_8000E1B4"
 
-# 0x80029180 - 0x80029204
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80029180", local

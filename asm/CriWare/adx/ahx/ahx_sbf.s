@@ -234,16 +234,16 @@
 /* 8038C75C 00355D1C  4B C7 7B F4 */	b memset
 .endfn AHXSBF_Destroy
 
-# 0x8051ABD0 - 0x8051ABD8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051ABD0
 lbl_8051ABD0:
 	.4byte 0x4F000000
 	.4byte 0x00000000
 
-# 0x805E9AE8 - 0x805E9B00
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805E9AE8
 lbl_805E9AE8:

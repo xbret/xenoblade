@@ -1444,8 +1444,8 @@
 /* 8038C364 00355924  4E 80 00 20 */	blr
 .endfn ahxsbf_mult_float_win15
 
-# 0x8051ABC0 - 0x8051ABD0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051ABC0
 lbl_8051ABC0:

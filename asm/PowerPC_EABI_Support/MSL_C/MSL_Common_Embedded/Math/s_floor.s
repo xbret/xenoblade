@@ -105,8 +105,8 @@
 /* 802CADC8 00294388  4E 80 00 20 */	blr
 .endfn floor
 
-# 0x8066BD58 - 0x8066BD68
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@53", local

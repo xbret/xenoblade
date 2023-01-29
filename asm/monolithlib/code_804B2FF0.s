@@ -3014,13 +3014,13 @@
 /* 804B59C4 0047EF84  4E 80 00 20 */	blr
 .endfn sinit_804B598C
 
-# 0x804F5AAC - 0x804F5AB0
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_804B598C
 
-# 0x80527D50 - 0x80527D90
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CTaskColiManager_typestr
@@ -3048,8 +3048,8 @@ CColiManCall_typestr:
 	.4byte 0x43616C6C
 	.4byte 0x00000000
 
-# 0x80572CB0 - 0x80572D50
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CTaskColiManager
@@ -3110,15 +3110,15 @@ CColiManCall_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8065F9F8 - 0x8065FA60
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8065F9F8
 lbl_8065F9F8:
 	.skip 0x68
 
-# 0x806663C8 - 0x806663E8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806663C8
 lbl_806663C8:
@@ -3140,8 +3140,8 @@ __RTTI__CColiManCall:
 	.4byte CColiManCall_typestr
 	.4byte CColiManCall_hierarchy
 
-# 0x8066D660 - 0x8066D680
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D660
 lbl_8066D660:
@@ -3164,8 +3164,8 @@ lbl_8066D678:
 	.4byte 0x49742400
 	.4byte 0x00000000
 
-# 0x8001FC88 - 0x8001FD84
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001FC88", local
@@ -3347,8 +3347,8 @@ lbl_8066D678:
 	.4byte 0x00000000
 .endobj "@etb_8001FD7C"
 
-# 0x800378D4 - 0x80037A30
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800378D4", local

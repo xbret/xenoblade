@@ -497,8 +497,8 @@
 /* 8038D9C4 00356F84  4E 80 00 20 */	blr
 .endfn AHXBSR_SearchSync
 
-# 0x8051AC10 - 0x8051AC98
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051AC10
 lbl_8051AC10:

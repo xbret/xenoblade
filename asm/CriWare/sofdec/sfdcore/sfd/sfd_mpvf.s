@@ -1207,8 +1207,8 @@
 /* 803C8BA4 00392164  4E 80 00 20 */	blr
 .endfn SFMPVF_ChkImageSize
 
-# 0x8061CD58 - 0x8061CDD8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8061CD58
 lbl_8061CD58:

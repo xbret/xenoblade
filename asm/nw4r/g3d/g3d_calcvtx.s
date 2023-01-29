@@ -577,8 +577,8 @@
 /* 803FE8AC 003C7E6C  4E 80 00 20 */	blr
 .endfn CalcVtx__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjShpPPQ34nw4r3g3d13ResVtxPosDataPPQ34nw4r3g3d13ResVtxNrmDataPPQ34nw4r3g3d13ResVtxClrData
 
-# 0x8066C530 - 0x8066C538
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C530
 lbl_8066C530:

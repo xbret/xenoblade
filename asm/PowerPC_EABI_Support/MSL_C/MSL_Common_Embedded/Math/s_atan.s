@@ -161,8 +161,8 @@
 /* 802CAA38 00293FF8  4E 80 00 20 */	blr
 .endfn atan
 
-# 0x8050DE10 - 0x8050DEA8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .obj ...rodata.0, local
@@ -209,8 +209,8 @@ aT:
 	.4byte 0x3F90AD3A
 	.4byte 0xE322DA11
 
-# 0x8066BD18 - 0x8066BD40
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@51", local

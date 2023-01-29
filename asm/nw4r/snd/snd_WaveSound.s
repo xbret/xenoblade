@@ -292,13 +292,13 @@
 /* 80429F34 003F34F4  4E 80 00 20 */	blr
 .endfn sinit_80429F2C
 
-# 0x804F5A2C - 0x804F5A30
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_80429F2C
 
-# 0x8056E650 - 0x8056E688
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E650
 lbl_8056E650:
@@ -317,8 +317,8 @@ lbl_8056E650:
 	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
 	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
 
-# 0x80667E18 - 0x80667E20
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667E18
 lbl_80667E18:

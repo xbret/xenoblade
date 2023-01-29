@@ -3425,8 +3425,8 @@
 /* 802EE94C 002B7F0C  4E 80 00 20 */	blr
 .endfn btm_read_trusted_mask
 
-# 0x80545830 - 0x80546240
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80545830
 lbl_80545830:
@@ -4107,8 +4107,8 @@ lbl_80546224:
 	.4byte 0x6D656F75
 	.4byte 0x74282900
 
-# 0x805BF9F8 - 0x805C21C0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805BF9F8
 lbl_805BF9F8:
@@ -4129,8 +4129,8 @@ lbl_805C10E6:
 lbl_805C10F6:
 	.skip 0x10CA
 
-# 0x8066BF78 - 0x8066BF80
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BF78
 lbl_8066BF78:

@@ -2650,8 +2650,8 @@
 /* 80235704 001FECC4  4E 80 00 20 */	blr
 .endfn func_802352A8
 
-# 0x80506360 - 0x80506700
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CArtsList_typestr
@@ -2891,8 +2891,8 @@ lbl_8050636C:
 	.4byte 0x33000000
 	.4byte 0x00000000
 
-# 0x8053A0C0 - 0x8053A158
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CArtsList
@@ -2939,8 +2939,8 @@ CArtsList_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806651A8 - 0x806651B0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CArtsList
@@ -2948,8 +2948,8 @@ __RTTI__CArtsList:
 	.4byte CArtsList_typestr
 	.4byte CArtsList_hierarchy
 
-# 0x80015A88 - 0x80015D20
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80015A88", local
@@ -3250,8 +3250,8 @@ __RTTI__CArtsList:
 	.4byte func_8045F8C8
 .endobj "@etb_80015D08"
 
-# 0x8002EA18 - 0x8002EBA4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002EA18", local

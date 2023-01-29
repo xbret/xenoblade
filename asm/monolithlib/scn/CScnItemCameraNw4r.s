@@ -171,8 +171,8 @@
 /* 80482090 0044B650  4E 80 00 20 */	blr
 .endfn func_80482054
 
-# 0x80527798 - 0x805277C0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CScnItemCameraNw4r_typestr
@@ -191,8 +191,8 @@ CScnItemCamera_typestr:
 	.4byte 0x72610000
 	.4byte 0x00000000
 
-# 0x805714D8 - 0x80571520
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnItemCameraNw4r
@@ -222,8 +222,8 @@ CScnItemCamera_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806661C8 - 0x806661D8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CScnItemCameraNw4r
@@ -236,8 +236,8 @@ __RTTI__CScnItemCamera:
 	.4byte CScnItemCamera_typestr
 	.4byte CScnItemCamera_hierarchy
 
-# 0x8001E210 - 0x8001E238
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001E210", local
@@ -270,8 +270,8 @@ __RTTI__CScnItemCamera:
 	.4byte 0x00000000
 .endobj "@etb_8001E230"
 
-# 0x80036194 - 0x800361D0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80036194", local

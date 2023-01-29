@@ -80,8 +80,8 @@
 /* 802C8E40 00292400  4E 80 00 20 */	blr
 .endfn __kernel_cos
 
-# 0x8066BC20 - 0x8066BC68
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@23", local

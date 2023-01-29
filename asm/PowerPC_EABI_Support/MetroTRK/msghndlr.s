@@ -1119,8 +1119,8 @@
 /* 802CEC10 002981D0  4E 80 00 20 */	blr
 .endfn TRKDoSetOption
 
-# 0x8053FF40 - 0x8053FFA8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8053FF40:
@@ -1155,8 +1155,8 @@ lbl_8053FF78:
 	.4byte 0x69736162
 	.4byte 0x6C650A00
 
-# 0x80667598 - 0x806675A0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667598
 lbl_80667598:

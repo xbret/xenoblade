@@ -1038,8 +1038,8 @@
 /* 803F1E14 003BB3D4  4E 80 00 20 */	blr
 .endfn UpdateCameraMtx__Q34nw4r3g3d6CameraCFv
 
-# 0x8066C458 - 0x8066C488
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C458
 lbl_8066C458:

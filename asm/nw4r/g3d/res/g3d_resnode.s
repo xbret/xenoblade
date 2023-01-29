@@ -238,8 +238,8 @@
 /* 803DDAA4 003A7064  4E 80 00 20 */	blr
 .endfn func_803DDA88
 
-# 0x8066C2A0 - 0x8066C2B0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C2A0
 lbl_8066C2A0:

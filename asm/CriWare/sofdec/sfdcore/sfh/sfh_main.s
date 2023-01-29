@@ -676,8 +676,8 @@
 /* 803D0D74 0039A334  4E 80 00 20 */	blr
 .endfn func_803D0D54
 
-# 0x8061CE20 - 0x8061CE28
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8061CE20
 lbl_8061CE20:

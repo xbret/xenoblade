@@ -70,8 +70,8 @@
 /* 8049E454 00467A14  4E 80 00 20 */	blr
 .endfn func_8049E3E8
 
-# 0x80527B50 - 0x80527B60
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CScnFrame_typestr
@@ -81,8 +81,8 @@ CScnFrame_typestr:
 	.4byte 0x65000000
 	.4byte 0x00000000
 
-# 0x805724B8 - 0x805724C8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CScnFrame
@@ -92,8 +92,8 @@ __vt__CScnFrame:
 	.4byte func_8049E3A8
 	.4byte 0x00000000
 
-# 0x80666390 - 0x80666398
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CScnFrame
@@ -101,8 +101,8 @@ __RTTI__CScnFrame:
 	.4byte CScnFrame_typestr
 	.4byte 0x00000000
 
-# 0x8066D390 - 0x8066D3A0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D390
 lbl_8066D390:
@@ -115,8 +115,8 @@ lbl_8066D398:
 	.4byte 0x43300000
 	.4byte 0x00000000
 
-# 0x8001F6A8 - 0x8001F6B8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001F6A8", local
@@ -131,8 +131,8 @@ lbl_8066D398:
 	.4byte 0x00000000
 .endobj "@etb_8001F6B0"
 
-# 0x80037178 - 0x80037190
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80037178", local

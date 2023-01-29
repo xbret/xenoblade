@@ -114,8 +114,8 @@
 /* 80443B04 0040D0C4  4E 80 00 20 */	blr
 .endfn func_80443B00
 
-# 0x80526020 - 0x80526030
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CWorkFlowSetup_typestr
@@ -125,8 +125,8 @@ CWorkFlowSetup_typestr:
 	.4byte 0x77536574
 	.4byte 0x75700000
 
-# 0x8056F0F8 - 0x8056F1B0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CWorkFlowSetup
@@ -181,8 +181,8 @@ CWorkFlowSetup_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665EE0 - 0x80665EE8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CWorkFlowSetup
@@ -190,8 +190,8 @@ __RTTI__CWorkFlowSetup:
 	.4byte CWorkFlowSetup_typestr
 	.4byte CWorkFlowSetup_hierarchy
 
-# 0x80667EC0 - 0x80667EE8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667EC0
 lbl_80667EC0:
@@ -209,8 +209,8 @@ lbl_80667ED8:
 lbl_80667EE0:
 	.skip 0x8
 
-# 0x8001C75C - 0x8001C774
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001C75C", local
@@ -231,8 +231,8 @@ lbl_80667EE0:
 	.4byte 0x00000000
 .endobj "@etb_8001C76C"
 
-# 0x80034358 - 0x8003437C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034358", local

@@ -56,13 +56,13 @@
 /* 804C8714 00491CD4  4E 80 00 20 */	blr
 .endfn sinit_804C86C0
 
-# 0x804F5AC4 - 0x804F5AC8
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_804C86C0
 
-# 0x806624A8 - 0x806624D8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_806624A8
 lbl_806624A8:
@@ -71,15 +71,15 @@ lbl_806624A8:
 lbl_806624C8:
 	.skip 0x10
 
-# 0x80668278 - 0x80668280
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80668278
 lbl_80668278:
 	.skip 0x8
 
-# 0x8066D838 - 0x8066D850
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D838
 lbl_8066D838:

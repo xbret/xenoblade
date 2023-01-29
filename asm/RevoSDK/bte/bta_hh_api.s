@@ -281,8 +281,8 @@
 /* 802E3BFC 002AD1BC  4E 80 00 20 */	blr
 .endfn BTA_HhGetAclQueueInfo
 
-# 0x80544690 - 0x805446C0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80544690
 lbl_80544690:
@@ -299,8 +299,8 @@ lbl_80544690:
 	.4byte 0x75657374
 	.4byte 0x2E000000
 
-# 0x8066BF60 - 0x8066BF68
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066BF60
 lbl_8066BF60:

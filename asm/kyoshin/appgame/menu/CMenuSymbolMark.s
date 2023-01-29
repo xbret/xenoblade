@@ -409,8 +409,8 @@
 /* 8011DA30 000E6FF0  4E 80 00 20 */	blr
 .endfn func_8011D9C0
 
-# 0x804F9D68 - 0x804F9F18
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_804F9D68
 lbl_804F9D68:
@@ -575,8 +575,8 @@ lbl_804F9F08:
 	.4byte 0x73743234
 	.4byte 0x30310000
 
-# 0x80530478 - 0x80530508
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80530478
 lbl_80530478:
@@ -617,8 +617,8 @@ lbl_80530478:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8000BA94 - 0x8000BB10
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000BA94", local
@@ -660,8 +660,8 @@ lbl_80530478:
 	.4byte __dt__IWorkEvent
 .endobj "@etb_8000BADC"
 
-# 0x80026E4C - 0x80026E64
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80026E4C", local

@@ -115,8 +115,8 @@
 /* 803A62C0 0036F880  4E 80 00 20 */	blr
 .endfn MPVERR_SetCode
 
-# 0x80605F38 - 0x80605F50
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80605F38
 lbl_80605F38:

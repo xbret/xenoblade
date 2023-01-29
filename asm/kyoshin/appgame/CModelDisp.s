@@ -1203,8 +1203,8 @@
 /* 801FCE6C 001C642C  4E 80 00 20 */	blr
 .endfn func_801FCDB4
 
-# 0x80503428 - 0x80503460
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80503428
 lbl_80503428:
@@ -1230,8 +1230,8 @@ lbl_8050344C:
 	.4byte 0x636F7265
 	.4byte 0x00000000
 
-# 0x80538B48 - 0x80538B80
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CModelDisp
@@ -1254,8 +1254,8 @@ CModelDisp_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80665018 - 0x80665020
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CModelDisp
@@ -1263,8 +1263,8 @@ __RTTI__CModelDisp:
 	.4byte CModelDisp_typestr
 	.4byte CModelDisp_hierarchy
 
-# 0x8066AAA8 - 0x8066AAD8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AAA8
 lbl_8066AAA8:
@@ -1301,8 +1301,8 @@ lbl_8066AAD0:
 	.4byte 0x3DCCCCCD
 	.4byte 0x00000000
 
-# 0x800126F8 - 0x800127E4
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800126F8", local
@@ -1424,8 +1424,8 @@ lbl_8066AAD0:
 	.4byte 0x00000000
 .endobj "@etb_800127DC"
 
-# 0x8002C774 - 0x8002C828
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002C774", local

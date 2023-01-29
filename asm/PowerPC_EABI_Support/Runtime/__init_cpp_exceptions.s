@@ -61,8 +61,8 @@ __destroy_global_chain_reference:
 __fini_cpp_exceptions_reference:
 	.4byte __fini_cpp_exceptions
 
-# 0x80665870 - 0x80665878
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 fragmentID:

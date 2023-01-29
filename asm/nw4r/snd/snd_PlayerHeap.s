@@ -167,8 +167,8 @@
 /* 80418B64 003E2124  4E 80 00 20 */	blr
 .endfn DetachSound__Q44nw4r3snd6detail10PlayerHeapFPQ44nw4r3snd6detail10BasicSound
 
-# 0x8056E3C8 - 0x8056E3D8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E3C8
 lbl_8056E3C8:

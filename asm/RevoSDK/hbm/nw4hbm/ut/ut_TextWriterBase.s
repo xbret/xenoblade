@@ -5833,13 +5833,13 @@
 /* 8033F038 003085F8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8033F03C 003085FC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x804F59FC - 0x804F5A00
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_8033EF90
 
-# 0x80518B40 - 0x80518B58
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80518B40
 lbl_80518B40:
@@ -5854,8 +5854,8 @@ lbl_80518B50:
 	.4byte 0x3F000000
 	.4byte 0x00000000
 
-# 0x8054EEF8 - 0x8054EF00
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8054EEF8
 lbl_8054EEF8:
@@ -5864,8 +5864,8 @@ lbl_8054EEF8:
 lbl_8054EEFC:
 	.4byte 0x00000100
 
-# 0x805CD7F8 - 0x805CD828
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805CD7F8
 lbl_805CD7F8:

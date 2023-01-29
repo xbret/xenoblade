@@ -5044,8 +5044,8 @@
 /* 80479840 00442E00  4E 80 00 20 */	blr
 .endfn func_80479840
 
-# 0x805276C0 - 0x805276F0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global mpfsys_MPFDrawDisplayList_typestr
@@ -5066,8 +5066,8 @@ mpfsys_MPFDraw_typestr:
 	.4byte 0x4D504644
 	.4byte 0x72617700
 
-# 0x805713E8 - 0x80571408
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__mpfsys_MPFDrawDisplayList
@@ -5084,8 +5084,8 @@ mpfsys_MPFDrawDisplayList_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8065ACC8 - 0x8065ADA0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8065ACC8
 lbl_8065ACC8:
@@ -5103,8 +5103,8 @@ lbl_8065AD10:
 lbl_8065AD40:
 	.skip 0x60
 
-# 0x80666188 - 0x80666198
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__mpfsys_MPFDrawDisplayList
@@ -5117,15 +5117,15 @@ __RTTI__mpfsys_MPFDraw:
 	.4byte mpfsys_MPFDraw_typestr
 	.4byte 0x00000000
 
-# 0x80668160 - 0x80668168
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80668160
 lbl_80668160:
 	.skip 0x8
 
-# 0x8066CFA0 - 0x8066D008
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CFA0
 lbl_8066CFA0:
@@ -5202,8 +5202,8 @@ lbl_8066D000:
 lbl_8066D004:
 	.4byte 0x437F0000
 
-# 0x8001DFA8 - 0x8001E020
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001DFA8", local
@@ -5296,8 +5296,8 @@ lbl_8066D004:
 	.4byte 0x00000000
 .endobj "@etb_8001E018"
 
-# 0x80035DF8 - 0x80035EAC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80035DF8", local

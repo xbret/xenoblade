@@ -382,8 +382,8 @@
 /* 80397F6C 0036152C  4E 80 00 20 */	blr
 .endfn ADXB_CheckSpsd
 
-# 0x8051C748 - 0x8051C750
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051C748
 lbl_8051C748:

@@ -303,15 +303,15 @@
 .endfn __AXDepopVoice
 /* 802D475C 0029DD1C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x805819C0 - 0x80581A40
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805819C0
 lbl_805819C0:
 	.skip 0x80
 
-# 0x806676C8 - 0x80667718
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806676C8
 lbl_806676C8:

@@ -34,8 +34,8 @@
 /* 802CD480 00296A40  4E 80 00 20 */	blr
 .endfn TRKMessageSend
 
-# 0x8053FEF0 - 0x8053FF18
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8053FEF0
 lbl_8053FEF0:
@@ -50,8 +50,8 @@ lbl_8053FEF0:
 	.4byte 0x65642025
 	.4byte 0x6C640A00
 
-# 0x80667590 - 0x80667598
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667590
 lbl_80667590:

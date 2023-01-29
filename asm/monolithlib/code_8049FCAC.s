@@ -21092,13 +21092,13 @@
 /* 804B2574 0047BB34  4E 80 00 20 */	blr
 .endfn sinit_804B2524
 
-# 0x804F5AA4 - 0x804F5AA8
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_804B2524
 
-# 0x80527B90 - 0x80527D40
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80527B90
 lbl_80527B90:
@@ -21280,8 +21280,8 @@ CColiObjCall_typestr:
 	.4byte 0x43616C6C
 	.4byte 0x00000000
 
-# 0x80572530 - 0x80572BE0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80572530
 lbl_80572530:
@@ -21730,8 +21730,8 @@ CColiObjCall_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8065AF38 - 0x8065F9A8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8065AF38
 lbl_8065AF38:
@@ -21749,8 +21749,8 @@ lbl_8065F860:
 lbl_8065F960:
 	.skip 0x48
 
-# 0x806663B0 - 0x806663C0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806663B0
 lbl_806663B0:
@@ -21762,8 +21762,8 @@ __RTTI__CColiObjCall:
 	.4byte CColiObjCall_typestr
 	.4byte CColiObjCall_hierarchy
 
-# 0x806681E8 - 0x80668218
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806681E8
 lbl_806681E8:
@@ -21799,8 +21799,8 @@ lbl_8066820C:
 lbl_80668210:
 	.skip 0x8
 
-# 0x8066D3F0 - 0x8066D658
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D3F0
 lbl_8066D3F0:
@@ -22159,8 +22159,8 @@ lbl_8066D650:
 	.4byte 0x3F800000
 	.4byte 0x00000000
 
-# 0x8001F850 - 0x8001FC50
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001F850", local
@@ -22931,8 +22931,8 @@ lbl_8066D650:
 	.4byte 0x00000000
 .endobj "@etb_8001FC48"
 
-# 0x80037280 - 0x80037880
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80037280", local

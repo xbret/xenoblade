@@ -1117,8 +1117,8 @@
 /* 8042DADC 003F709C  4E 80 00 20 */	blr
 .endfn RequestData__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextUl
 
-# 0x8056E868 - 0x8056E8C8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E868
 lbl_8056E868:

@@ -4662,13 +4662,13 @@
 /* 8029313C 0025C6FC  4E 80 00 20 */	blr
 .endfn sinit_802930E0
 
-# 0x804F59C8 - 0x804F59CC
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_802930E0
 
-# 0x8050AE38 - 0x8050B228
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global CSaveLoad_typestr
@@ -4934,8 +4934,8 @@ cf_CAwardBase_typestr:
 	.4byte 0x73650000
 	.4byte 0x00000000
 
-# 0x8053BF38 - 0x8053C040
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_8053BF38:
@@ -5021,15 +5021,15 @@ cf_CfAward_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8057A3F8 - 0x8057A408
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057A3F8
 lbl_8057A3F8:
 	.skip 0x10
 
-# 0x806653C0 - 0x806653F0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_806653C0
 lbl_806653C0:
@@ -5062,8 +5062,8 @@ __RTTI__cf_CAwardBase:
 	.4byte cf_CAwardBase_typestr
 	.4byte 0x00000000
 
-# 0x806672E4 - 0x806672F0
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 4
 .global lbl_806672E4
 lbl_806672E4:
@@ -5072,8 +5072,8 @@ lbl_806672E4:
 lbl_806672E8:
 	.skip 0x8
 
-# 0x8066B410 - 0x8066B428
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B410
 lbl_8066B410:
@@ -5093,8 +5093,8 @@ CSLCur_typestr:
 	.4byte 0x43534C43
 	.4byte 0x75720000
 
-# 0x800194B0 - 0x80019828
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800194B0", local
@@ -5511,8 +5511,8 @@ CSLCur_typestr:
 	.4byte func_801320F0
 .endobj "@etb_8001980C"
 
-# 0x800319A0 - 0x80031BE0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800319A0", local

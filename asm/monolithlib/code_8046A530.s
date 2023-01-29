@@ -2898,8 +2898,8 @@
 /* 8046CFDC 0043659C  48 00 48 58 */	b func_80471834
 .endfn func_8046CFD8
 
-# 0x80666138 - 0x80666148
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80666138
 lbl_80666138:
@@ -2912,8 +2912,8 @@ lbl_80666140:
 	.4byte 0x3BA3D70A
 	.4byte 0x00000000
 
-# 0x8066CE18 - 0x8066CE80
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CE18
 lbl_8066CE18:
@@ -2992,8 +2992,8 @@ lbl_8066CE78:
 lbl_8066CE7C:
 	.4byte 0xBF800000
 
-# 0x8001DCEC - 0x8001DD2C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001DCEC", local
@@ -3044,8 +3044,8 @@ lbl_8066CE7C:
 	.4byte 0x00000000
 .endobj "@etb_8001DD24"
 
-# 0x80035A2C - 0x80035A8C
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80035A2C", local

@@ -107,8 +107,8 @@
 /* 803E0AAC 003AA06C  4E 80 00 20 */	blr
 .endfn GetAnmResult__Q34nw4r3g3d9ResAnmFogCFPQ34nw4r3g3d12FogAnmResultf
 
-# 0x8066C330 - 0x8066C340
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C330
 lbl_8066C330:

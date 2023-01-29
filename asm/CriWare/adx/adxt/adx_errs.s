@@ -353,16 +353,16 @@
 /* 8038A664 00353C24  4E 80 00 20 */	blr
 .endfn ADXERR_ItoA2
 
-# 0x8051AB08 - 0x8051AB10
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051AB08
 lbl_8051AB08:
 	.4byte 0x4572726F
 	.4byte 0x72002000
 
-# 0x805E99C0 - 0x805E9AE8
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805E99C0
 lbl_805E99C0:

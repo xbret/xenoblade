@@ -7499,8 +7499,8 @@
 /* 8021A630 001E3BF0  4E 80 00 20 */	blr
 .endfn func_80219D24
 
-# 0x80503F90 - 0x80504500
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80503F90
 lbl_80503F90:
@@ -7858,8 +7858,8 @@ lbl_80503FAC:
 	.4byte 0x6B696C6C
 	.4byte 0x00000000
 
-# 0x805393D8 - 0x805394B0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_805393D8:
@@ -7924,8 +7924,8 @@ CMCCrystalBox_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x806650D0 - 0x806650D8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__CMCCrystalBox
@@ -7933,15 +7933,15 @@ __RTTI__CMCCrystalBox:
 	.4byte CMCCrystalBox_typestr
 	.4byte CMCCrystalBox_hierarchy
 
-# 0x80666FC0 - 0x80666FC8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80666FC0
 lbl_80666FC0:
 	.skip 0x8
 
-# 0x8066AD30 - 0x8066AD58
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066AD30
 lbl_8066AD30:
@@ -7972,8 +7972,8 @@ lbl_8066AD50:
 	.4byte 0x43B90000
 	.4byte 0x00000000
 
-# 0x800135AC - 0x80013E0C
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800135AC", local
@@ -8788,8 +8788,8 @@ lbl_8066AD50:
 	.4byte func_8045F8C8
 .endobj "@etb_80013DE4"
 
-# 0x8002D464 - 0x8002D7A0
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002D464", local

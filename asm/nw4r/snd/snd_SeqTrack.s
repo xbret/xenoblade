@@ -1478,8 +1478,8 @@
 /* 8041C778 003E5D38  48 00 00 B4 */	b ConvertLabelStringToSoundId__Q34nw4r3snd12SoundArchiveCFPCc
 .endfn detail_ConvertLabelStringToSoundId__Q34nw4r3snd18SoundArchivePlayerFPCc
 
-# 0x80523880 - 0x805238A8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80523880
 lbl_80523880:
@@ -1494,8 +1494,8 @@ lbl_80523880:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8056E490 - 0x8056E4A0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056E490
 lbl_8056E490:
@@ -1504,8 +1504,8 @@ lbl_8056E490:
 	.4byte __dt__Q44nw4r3snd6detail8SeqTrackFv
 	.4byte 0x00000000
 
-# 0x8066C818 - 0x8066C848
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C818
 lbl_8066C818:

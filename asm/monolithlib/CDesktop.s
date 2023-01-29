@@ -2429,8 +2429,8 @@
 /* 80457B98 00421158  4E 80 00 20 */	blr
 .endfn func_804577B4
 
-# 0x805267F8 - 0x80526888
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global _unnamed_CDesktop_cpp_CDesktopException_typestr
@@ -2480,8 +2480,8 @@ lbl_8052685C:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80570290 - 0x80570528
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt___unnamed_CDesktop_cpp_CDesktopException
@@ -2672,8 +2672,8 @@ jumptable_805704FC:
 	.rel func_804565C8, .L_80456650
 	.rel func_804565C8, .L_80456664
 
-# 0x80666088 - 0x806660A8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80666088
 lbl_80666088:
@@ -2695,8 +2695,8 @@ __RTTI__CDesktop:
 	.4byte CDesktop_typestr
 	.4byte CDesktop_hierarchy
 
-# 0x80667F7C - 0x80667F98
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 4
 .global lbl_80667F7C
 lbl_80667F7C:
@@ -2718,8 +2718,8 @@ lbl_80667F8C:
 lbl_80667F90:
 	.skip 0x8
 
-# 0x8066CC10 - 0x8066CC40
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066CC10
 lbl_8066CC10:
@@ -2752,8 +2752,8 @@ lbl_8066CC38:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x8001D2E4 - 0x8001D3C0
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001D2E4", local
@@ -2911,8 +2911,8 @@ lbl_8066CC38:
 	.4byte 0x00000000
 .endobj "@etb_8001D3B8"
 
-# 0x80034F1C - 0x80035048
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80034F1C", local

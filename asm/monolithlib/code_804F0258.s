@@ -5037,8 +5037,8 @@
 /* 804F4D78 004BE338  4B E2 97 C8 */	b GXSetProjection
 .endfn func_804F4D74
 
-# 0x806640C8 - 0x80664158
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_806640C8
 lbl_806640C8:
@@ -5056,8 +5056,8 @@ lbl_80664118:
 lbl_80664148:
 	.skip 0x10
 
-# 0x80668340 - 0x80668368
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80668340
 lbl_80668340:
@@ -5087,8 +5087,8 @@ lbl_80668361:
 lbl_80668362:
 	.skip 0x6
 
-# 0x8066DBE8 - 0x8066DCD0
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066DBE8
 lbl_8066DBE8:
@@ -5239,8 +5239,8 @@ lbl_8066DCC8:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x80020F2C - 0x80020FBC
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_80020F2C", local
@@ -5351,8 +5351,8 @@ lbl_8066DCC8:
 	.4byte 0x00000000
 .endobj "@etb_80020FB4"
 
-# 0x800390BC - 0x80039194
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800390BC", local

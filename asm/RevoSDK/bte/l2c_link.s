@@ -1291,8 +1291,8 @@
 /* 802F9B34 002C30F4  4E 80 00 20 */	blr
 .endfn l2c_pin_code_request
 
-# 0x80547BA8 - 0x80547E18
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80547BA8
 lbl_80547BA8:

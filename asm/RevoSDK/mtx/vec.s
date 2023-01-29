@@ -171,8 +171,8 @@
 /* 8034E2B8 00317878  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8034E2BC 0031787C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8066C160 - 0x8066C170
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066C160
 lbl_8066C160:

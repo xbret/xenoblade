@@ -2366,13 +2366,13 @@
 /* 802B489C 0027DE5C  4E 80 00 20 */	blr
 .endfn sinit_802B46E0
 
-# 0x804F59E4 - 0x804F59E8
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_802B46E0
 
-# 0x8050C990 - 0x8050C9E0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CfHikariItemManager_typestr
@@ -2406,8 +2406,8 @@ lbl_8050C9D0:
 	.4byte 0x3DCCCCCD
 	.4byte 0x3D088889
 
-# 0x8053E5A8 - 0x8053E5C8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CfHikariItemManager
@@ -2424,8 +2424,8 @@ cf_CfHikariItemManager_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x8057AD80 - 0x8057AE90
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_8057AD80
 lbl_8057AD80:
@@ -2434,8 +2434,8 @@ lbl_8057AD80:
 lbl_8057AE50:
 	.skip 0x40
 
-# 0x80665760 - 0x80665768
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CfHikariItemManager
@@ -2443,8 +2443,8 @@ __RTTI__cf_CfHikariItemManager:
 	.4byte cf_CfHikariItemManager_typestr
 	.4byte cf_CfHikariItemManager_hierarchy
 
-# 0x806674F0 - 0x80667508
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_806674F0
 lbl_806674F0:
@@ -2462,8 +2462,8 @@ lbl_80667500:
 lbl_80667504:
 	.skip 0x4
 
-# 0x8066B6C8 - 0x8066B7B8
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B6C8
 lbl_8066B6C8:
@@ -2638,8 +2638,8 @@ lbl_8066B7B0:
 lbl_8066B7B4:
 	.4byte 0x433E0000
 
-# 0x8001B8B4 - 0x8001B954
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001B8B4", local
@@ -2742,8 +2742,8 @@ lbl_8066B7B4:
 	.4byte 0x00000000
 .endobj "@etb_8001B94C"
 
-# 0x80033404 - 0x800334B8
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033404", local

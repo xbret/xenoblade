@@ -2916,13 +2916,13 @@
 /* 801BCA34 00185FF4  4E 80 00 20 */	blr
 .endfn sinit_801BC86C
 
-# 0x804F5980 - 0x804F5984
-.section .ctors, "a"
+.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+
 .balign 4
 	.4byte sinit_801BC86C
 
-# 0x805008D0 - 0x80500928
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_805008D0
 lbl_805008D0:
@@ -2952,8 +2952,8 @@ cf_CSuddenCommu_typestr:
 	.4byte 0x65637449
 	.4byte 0x6E666F00
 
-# 0x80537178 - 0x80537250
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__cf_CSuddenCommu
@@ -3016,15 +3016,15 @@ cf_CSuddenCommu_hierarchy:
 	.4byte 0xFFFFFFFF
 	.4byte func_801BBC38
 
-# 0x80579068 - 0x80579110
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80579068
 lbl_80579068:
 	.skip 0xA8
 
-# 0x80664ED8 - 0x80664F10
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80664ED8
 lbl_80664ED8:
@@ -3058,8 +3058,8 @@ __RTTI__cf_CSuddenCommu:
 	.4byte cf_CSuddenCommu_typestr
 	.4byte cf_CSuddenCommu_hierarchy
 
-# 0x8066A6F0 - 0x8066A728
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066A6F0
 lbl_8066A6F0:
@@ -3100,8 +3100,8 @@ lbl_8066A720:
 lbl_8066A724:
 	.4byte 0x42B40000
 
-# 0x8000FFAC - 0x800100D8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8000FFAC", local
@@ -3287,8 +3287,8 @@ lbl_8066A724:
 	.4byte 0x00000000
 .endobj "@etb_800100D0"
 
-# 0x8002AB78 - 0x8002ACBC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_8002AB78", local

@@ -1212,8 +1212,8 @@
 /* 80308528 002D1AE8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8030852C 002D1AEC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x8050E398 - 0x8050E3A8
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8050E398
 lbl_8050E398:
@@ -1222,8 +1222,8 @@ lbl_8050E398:
 	.4byte 0x80000080
 	.4byte 0x5F9B34FB
 
-# 0x805494E8 - 0x805495E0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 jumptable_805494E8:

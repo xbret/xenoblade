@@ -193,8 +193,8 @@
 /* 802C7560 00290B20  4E 80 00 20 */	blr
 .endfn __ieee754_acos
 
-# 0x8066B8A0 - 0x8066B928
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 
 .obj "@52", local

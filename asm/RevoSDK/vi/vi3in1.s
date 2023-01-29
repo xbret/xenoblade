@@ -1589,8 +1589,8 @@
 /* 80368A88 00332048  4E 80 00 20 */	blr
 .endfn __VISetRevolutionModeSimple
 
-# 0x8055FFF8 - 0x80560608
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 gammaSet:
@@ -2044,15 +2044,15 @@ VIProgressiveACPType:
 .endobj "@2141"
 	.byte 0x00, 0x00, 0x00
 
-# 0x805DDA70 - 0x805DDAA0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805DDA70
 lbl_805DDA70:
 	.skip 0x30
 
-# 0x80665D28 - 0x80665D38
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 .global lbl_80665D28
 lbl_80665D28:
@@ -2094,8 +2094,8 @@ lbl_80665D36:
 lbl_80665D37:
 	.byte 0xFF
 
-# 0x80667C50 - 0x80667C68
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667C50
 lbl_80667C50:

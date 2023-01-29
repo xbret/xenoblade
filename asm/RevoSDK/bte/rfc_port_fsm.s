@@ -1302,8 +1302,8 @@
 /* 80300B64 002CA124  4E 80 00 20 */	blr
 .endfn rfc_set_port_state
 
-# 0x80548A70 - 0x80548D98
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80548A70
 lbl_80548A70:

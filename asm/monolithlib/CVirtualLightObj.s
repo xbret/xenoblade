@@ -1424,8 +1424,8 @@
 /* 80495C28 0045F1E8  4E 80 00 20 */	blr
 .endfn func_80495AF4
 
-# 0x80572100 - 0x80572118
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__CVirtualLightObj
@@ -1437,8 +1437,8 @@ __vt__CVirtualLightObj:
 	.4byte func_8049488C
 	.4byte 0x00000000
 
-# 0x8066D248 - 0x8066D270
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066D248
 lbl_8066D248:
@@ -1467,8 +1467,8 @@ lbl_8066D268:
 lbl_8066D26C:
 	.4byte 0x3F000000
 
-# 0x8001EF34 - 0x8001F168
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001EF34", local
@@ -1676,8 +1676,8 @@ lbl_8066D26C:
 	.4byte 0x00000000
 .endobj "@etb_8001F160"
 
-# 0x80036AF4 - 0x80036BB4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80036AF4", local

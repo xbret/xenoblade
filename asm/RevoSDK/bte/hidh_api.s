@@ -983,8 +983,8 @@
 /* 802F48C0 002BDE80  4E 80 00 20 */	blr
 .endfn HID_HostSetSecurityLevel
 
-# 0x805466E0 - 0x805467F8
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_805466E0
 lbl_805466E0:

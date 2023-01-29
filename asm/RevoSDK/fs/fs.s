@@ -1569,8 +1569,8 @@
 /* 8031746C 002E0A2C  4E 80 00 20 */	blr
 .endfn ISFS_ShutdownAsync
 
-# 0x8054B658 - 0x8054B680
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .obj "@1687", local
@@ -1587,8 +1587,8 @@
 	.4byte 0x00000000
 	.byte 0x00, 0x00, 0x00
 
-# 0x806659E0 - 0x806659F0
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 __fsFd:
@@ -1600,8 +1600,8 @@ __fsFd:
 	.4byte 0x2F667300
 .endobj "@1688"
 
-# 0x806678F0 - 0x80667908
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 __fsInitialized:

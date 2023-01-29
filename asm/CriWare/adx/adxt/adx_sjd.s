@@ -1551,8 +1551,8 @@
 /* 80380E6C 0034A42C  48 00 6B EC */	b ADXB_RestoreSnapshot
 .endfn ADXSJD_RestoreSnapshot
 
-# 0x80519750 - 0x805197E0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80519750
 lbl_80519750:
@@ -1593,8 +1593,8 @@ lbl_80519750:
 	.4byte 0x756F7573
 	.4byte 0x6C792E00
 
-# 0x805E69C0 - 0x805E7518
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_805E69C0
 lbl_805E69C0:

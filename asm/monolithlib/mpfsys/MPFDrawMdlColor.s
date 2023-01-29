@@ -468,8 +468,8 @@
 /* 80479ED8 00443498  4E 80 00 20 */	blr
 .endfn func_80479D40
 
-# 0x805276F0 - 0x80527798
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global mpfsys_MPFDrawMdlColor_typestr
@@ -533,8 +533,8 @@ mpfsys_MPFDrawBillboard_typestr:
 	.4byte 0x6F617264
 	.4byte 0x00000000
 
-# 0x80571408 - 0x805714B0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 
 .global __vt__mpfsys_MPFDrawMdlColor
@@ -609,8 +609,8 @@ mpfsys_MPFDrawBillboard_hierarchy:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-# 0x80666198 - 0x806661C8
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__mpfsys_MPFDrawMdlColor
@@ -642,8 +642,8 @@ lbl_806661C0:
 	.4byte 0x3EAAAAAB
 	.4byte 0x00000000
 
-# 0x80668170 - 0x80668178
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80668170
 lbl_80668170:
@@ -652,8 +652,8 @@ lbl_80668170:
 lbl_80668174:
 	.skip 0x4
 
-# 0x8001E020 - 0x8001E040
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001E020", local
@@ -680,8 +680,8 @@ lbl_80668174:
 	.4byte 0x00000000
 .endobj "@etb_8001E038"
 
-# 0x80035EAC - 0x80035EDC
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80035EAC", local

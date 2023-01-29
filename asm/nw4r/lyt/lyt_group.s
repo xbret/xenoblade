@@ -249,8 +249,8 @@
 /* 803FFC70 003C9230  4E 80 00 20 */	blr
 .endfn FindGroupByName__Q34nw4r3lyt14GroupContainerFPCc
 
-# 0x8056D248 - 0x8056D258
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_8056D248
 lbl_8056D248:

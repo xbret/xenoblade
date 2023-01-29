@@ -5507,8 +5507,8 @@
 /* 803C7BAC 0039116C  4E 80 00 20 */	blr
 .endfn sfmpv_ReprocessShc
 
-# 0x80520320 - 0x805203F0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_80520320
 lbl_80520320:
@@ -5569,8 +5569,8 @@ lbl_805203C0:
 	.4byte 0x74650000
 	.4byte 0x00000000
 
-# 0x8060AD30 - 0x8061CD58
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 
 .global sfmpv_work

@@ -107,8 +107,8 @@
 /* 80353A98 0031D058  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80353A9C 0031D05C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80665B60 - 0x80665B68
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 __OSArenaLo:
@@ -117,8 +117,8 @@ __OSArenaLo:
 s_mem2ArenaLo:
 	.4byte 0xFFFFFFFF
 
-# 0x80667A60 - 0x80667A68
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 __OSArenaHi:

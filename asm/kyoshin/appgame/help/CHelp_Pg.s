@@ -31,16 +31,16 @@
 /* 802B8600 00281BC0  4E 80 00 20 */	blr
 .endfn func_802B85A4
 
-# 0x8066B800 - 0x8066B808
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_8066B800
 lbl_8066B800:
 	.4byte 0x43300000
 	.4byte 0x80000000
 
-# 0x8001BE08 - 0x8001BE10
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_8001BE08", local
@@ -49,8 +49,8 @@ lbl_8066B800:
 	.4byte 0x00000000
 .endobj "@etb_8001BE08"
 
-# 0x80033998 - 0x800339A4
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_80033998", local

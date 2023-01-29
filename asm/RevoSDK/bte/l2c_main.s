@@ -1132,8 +1132,8 @@
 /* 802FAB64 002C4124  4E 80 00 20 */	blr
 .endfn l2c_process_held_packets
 
-# 0x80547E18 - 0x80548118
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80547E18
 lbl_80547E18:

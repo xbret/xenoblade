@@ -499,8 +499,8 @@
 /* 803A1334 0036A8F4  4E 80 00 20 */	blr
 .endfn MWSFLIB_SfdErrFunc
 
-# 0x8051E1E0 - 0x8051E7B0
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051E1E0
 lbl_8051E1E0:
@@ -919,8 +919,8 @@ lbl_8051E408:
 	.4byte 0x28253038
 	.4byte 0x58290000
 
-# 0x80602958 - 0x80605EB0
-.section .bss, "wa", @nobits
+.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+
 .balign 8
 .global lbl_80602958
 lbl_80602958:

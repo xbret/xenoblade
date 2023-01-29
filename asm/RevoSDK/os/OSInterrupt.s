@@ -629,8 +629,8 @@
 /* 80359198 00322758  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8035919C 0032275C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# 0x80552AB0 - 0x80552AE0
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 8
 .global lbl_80552AB0
 lbl_80552AB0:
@@ -647,8 +647,8 @@ lbl_80552AB0:
 	.4byte 0x00004000
 	.4byte 0xFFFFFFFF
 
-# 0x80667A90 - 0x80667AA8
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 
 .global __OSLastInterruptSrr0

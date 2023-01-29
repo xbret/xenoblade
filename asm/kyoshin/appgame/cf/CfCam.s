@@ -422,8 +422,8 @@
 /* 8006BC28 000351E8  4E 80 00 20 */	blr
 .endfn func_8006BC1C
 
-# 0x804F6CF0 - 0x804F6E40
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 
 .global cf_CfCam_typestr
@@ -515,8 +515,8 @@ lbl_804F6D00:
 	.4byte 0x32660000
 	.4byte 0x00000000
 
-# 0x8052A924 - 0x8052AA14
-.data
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .balign 4
 
 .global cf_CfCamFollow_hierarchy
@@ -592,8 +592,8 @@ lbl_8052AA00:
 	.4byte 0x3DCCCCCD
 	.4byte 0x3D8F5C29
 
-# 0x80664428 - 0x80664448
-.section .sdata, "wa"
+.section .sdata, "wa" # 0x80664180 - 0x80666600
+
 .balign 8
 
 .global __RTTI__cf_CfCam
@@ -619,8 +619,8 @@ lbl_80664440:
 lbl_80664444:
 	.4byte 0x40F00000
 
-# 0x80668B10 - 0x80668B78
-.section .sdata2, "a"
+.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+
 .balign 8
 .global lbl_80668B10
 lbl_80668B10:
@@ -691,8 +691,8 @@ lbl_80668B70:
 	.4byte 0x3F847AE1
 	.4byte 0x40000000
 
-# 0x800080A8 - 0x800080D8
-.section extab, "a"
+.section extab, "a" # 0x800066E0 - 0x80021020
+
 .balign 4
 
 .obj "@etb_800080A8", local
@@ -731,8 +731,8 @@ lbl_80668B70:
 	.4byte 0x00000000
 .endobj "@etb_800080D0"
 
-# 0x800233CC - 0x80023414
-.section extabindex, "a"
+.section extabindex, "a" # 0x80021020 - 0x80039220
+
 .balign 4
 
 .obj "@eti_800233CC", local

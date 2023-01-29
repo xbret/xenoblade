@@ -515,8 +515,8 @@
 /* 8038A184 00353744  4E 80 00 20 */	blr
 .endfn ADX_DecodeFooter
 
-# 0x8051AAD8 - 0x8051AB08
-.rodata
+.section .rodata, "a" # 0x804F5B20 - 0x805281E0
+
 .balign 8
 .global lbl_8051AAD8
 lbl_8051AAD8:

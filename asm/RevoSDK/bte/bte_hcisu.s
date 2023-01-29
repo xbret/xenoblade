@@ -71,8 +71,8 @@
 /* 802DDEAC 002A746C  4B FF D7 F4 */	b GKI_send_msg
 .endfn bta_ci_hci_msg_handler
 
-# 0x80667760 - 0x80667768
-.section .sbss, "wa", @nobits
+.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+
 .balign 8
 .global lbl_80667760
 lbl_80667760:
