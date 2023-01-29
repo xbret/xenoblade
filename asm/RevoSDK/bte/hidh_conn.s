@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/hidh_conn.o"
 
-# 0x802F48C4 - 0x802F6904
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn hidh_conn_reg, global
@@ -2315,7 +2314,8 @@
 # 0x8050E270 - 0x8050E298
 .rodata
 .balign 8
-.sym lbl_8050E270, global
+.global lbl_8050E270
+lbl_8050E270:
 	.4byte hidh_l2cif_connect_ind
 	.4byte hidh_l2cif_connect_cfm
 	.4byte 0x00000000
@@ -2330,7 +2330,8 @@
 # 0x805467F8 - 0x80546BE0
 .data
 .balign 8
-.sym lbl_805467F8, global
+.global lbl_805467F8
+lbl_805467F8:
 	.4byte 0x48494420
 	.4byte 0x436F6E74
 	.4byte 0x726F6C20
@@ -2339,7 +2340,8 @@
 	.4byte 0x74696F6E
 	.4byte 0x20666169
 	.4byte 0x6C656400
-.sym lbl_80546818, global
+.global lbl_80546818
+lbl_80546818:
 	.4byte 0x48494420
 	.4byte 0x496E7465
 	.4byte 0x72727570
@@ -2349,7 +2351,8 @@
 	.4byte 0x6F6E2066
 	.4byte 0x61696C65
 	.4byte 0x64000000
-.sym lbl_8054683C, global
+.global lbl_8054683C
+lbl_8054683C:
 	.4byte 0x48494420
 	.4byte 0x2D206469
 	.4byte 0x73636F6E
@@ -2422,7 +2425,8 @@
 	.4byte 0x20434944
 	.4byte 0x20307825
 	.4byte 0x78000000
-.sym lbl_8054695C, global
+.global lbl_8054695C
+lbl_8054695C:
 	.4byte 0x48494420
 	.4byte 0x2D204F72
 	.4byte 0x6967696E
@@ -2469,7 +2473,8 @@
 	.4byte 0x49443A20
 	.4byte 0x30782578
 	.4byte 0x00000000
-.sym lbl_80546A14, global
+.global lbl_80546A14
+lbl_80546A14:
 	.4byte 0x48494420
 	.4byte 0x2D205263
 	.4byte 0x7664204C
@@ -2481,7 +2486,8 @@
 	.4byte 0x6E204349
 	.4byte 0x443A2030
 	.4byte 0x78257800
-.sym lbl_80546A40, global
+.global lbl_80546A40
+lbl_80546A40:
 	.4byte 0x48494420
 	.4byte 0x2D205263
 	.4byte 0x76642063
@@ -2504,7 +2510,8 @@
 	.4byte 0x6573756C
 	.4byte 0x743A2025
 	.4byte 0x64000000
-.sym lbl_80546A98, global
+.global lbl_80546A98
+lbl_80546A98:
 	.4byte 0x48494420
 	.4byte 0x2D205263
 	.4byte 0x7664204C
@@ -2516,7 +2523,8 @@
 	.4byte 0x49443A20
 	.4byte 0x30782578
 	.4byte 0x00000000
-.sym lbl_80546AC4, global
+.global lbl_80546AC4
+lbl_80546AC4:
 	.4byte 0x48494420
 	.4byte 0x2D205263
 	.4byte 0x7664204C
@@ -2526,7 +2534,8 @@
 	.4byte 0x49443A20
 	.4byte 0x30782578
 	.4byte 0x00000000
-.sym lbl_80546AE8, global
+.global lbl_80546AE8
+lbl_80546AE8:
 	.4byte 0x48494420
 	.4byte 0x2D205263
 	.4byte 0x7664204C
@@ -2539,7 +2548,8 @@
 	.4byte 0x49443A20
 	.4byte 0x30782578
 	.4byte 0x00000000
-.sym lbl_80546B18, global
+.global lbl_80546B18
+lbl_80546B18:
 	.4byte 0x48494420
 	.4byte 0x2D205263
 	.4byte 0x7664204C
@@ -2550,7 +2560,8 @@
 	.4byte 0x49443A20
 	.4byte 0x30782578
 	.4byte 0x00000000
-.sym lbl_80546B40, global
+.global lbl_80546B40
+lbl_80546B40:
 	.4byte 0x48494420
 	.4byte 0x2D205263
 	.4byte 0x7664204C
@@ -2565,7 +2576,8 @@
 	.4byte 0x4349443A
 	.4byte 0x20307825
 	.4byte 0x78000000
-.sym lbl_80546B78, global
+.global lbl_80546B78
+lbl_80546B78:
 	.4byte 0x48494420
 	.4byte 0x2D205263
 	.4byte 0x7664204C
@@ -2580,7 +2592,8 @@
 	.4byte 0x78202043
 	.4byte 0x6F6E673A
 	.4byte 0x20256400
-.sym lbl_80546BB0, global
+.global lbl_80546BB0
+lbl_80546BB0:
 	.4byte 0x48494420
 	.4byte 0x2D205263
 	.4byte 0x7664204C
@@ -2597,5 +2610,6 @@
 # 0x805C26B8 - 0x805C2AC0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805C26B8, global
+.global lbl_805C26B8
+lbl_805C26B8:
 	.skip 0x408

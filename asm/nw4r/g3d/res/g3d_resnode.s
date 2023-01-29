@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_resnode.o"
 
-# 0x803DD784 - 0x803DDAA8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ResNode::PatchChrAnmResult(nw4r::g3d::ChrAnmResult*) const
@@ -227,7 +226,7 @@
 /* 803DDA84 003A7044  4E 80 00 20 */	blr
 .endfn CalcChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult
 
-.fn fn_803DDA88, global
+.fn func_803DDA88, global
 /* 803DDA88 003A7048  80 63 00 00 */	lwz r3, 0x0(r3)
 /* 803DDA8C 003A704C  80 03 00 6C */	lwz r0, 0x6c(r3)
 /* 803DDA90 003A7050  2C 00 00 00 */	cmpwi r0, 0x0
@@ -237,15 +236,18 @@
 .L_803DDAA0:
 /* 803DDAA0 003A7060  38 60 00 00 */	li r3, 0x0
 /* 803DDAA4 003A7064  4E 80 00 20 */	blr
-.endfn fn_803DDA88
+.endfn func_803DDA88
 
 # 0x8066C2A0 - 0x8066C2B0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C2A0, global
+.global lbl_8066C2A0
+lbl_8066C2A0:
 	.4byte 0x3F800000
-.sym lbl_8066C2A4, global
+.global lbl_8066C2A4
+lbl_8066C2A4:
 	.4byte 0x3F360B61
-.sym lbl_8066C2A8, global
+.global lbl_8066C2A8
+lbl_8066C2A8:
 	.4byte 0x00000000
 	.4byte 0x00000000

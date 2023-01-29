@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/synvoice.o"
 
-# 0x80341F10 - 0x803420C0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __HBMSYNClearVoiceReferences, global
@@ -15,9 +14,9 @@
 /* 80341F28 0030B4E8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80341F2C 0030B4EC  83 C3 00 14 */	lwz r30, 0x14(r3)
 /* 80341F30 0030B4F0  80 63 00 18 */	lwz r3, 0x18(r3)
-/* 80341F34 0030B4F4  4B FF E9 FD */	bl fn_80340930
+/* 80341F34 0030B4F4  4B FF E9 FD */	bl func_80340930
 /* 80341F38 0030B4F8  7C 7D 1B 78 */	mr r29, r3
-/* 80341F3C 0030B4FC  4B FF EA 15 */	bl fn_80340950
+/* 80341F3C 0030B4FC  4B FF EA 15 */	bl func_80340950
 /* 80341F40 0030B500  3C 80 80 5D */	lis r4, lbl_805CDEEC@ha
 /* 80341F44 0030B504  7F E3 FB 78 */	mr r3, r31
 /* 80341F48 0030B508  1C 1D 00 4C */	mulli r0, r29, 0x4c
@@ -53,14 +52,14 @@
 /* 80341FB8 0030B578  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80341FBC 0030B57C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80341FC0, global
+.fn func_80341FC0, global
 /* 80341FC0 0030B580  38 00 00 03 */	li r0, 0x3
 /* 80341FC4 0030B584  90 03 00 30 */	stw r0, 0x30(r3)
 /* 80341FC8 0030B588  4E 80 00 20 */	blr
-.endfn fn_80341FC0
+.endfn func_80341FC0
 /* 80341FCC 0030B58C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80341FD0, global
+.fn func_80341FD0, global
 /* 80341FD0 0030B590  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341FD4 0030B594  7C 08 02 A6 */	mflr r0
 /* 80341FD8 0030B598  3C 80 80 5D */	lis r4, lbl_805CDEEC@ha
@@ -96,7 +95,7 @@
 /* 8034204C 0030B60C  90 1E 00 30 */	stw r0, 0x30(r30)
 .L_80342050:
 /* 80342050 0030B610  7F C3 F3 78 */	mr r3, r30
-/* 80342054 0030B614  4B FF F5 6D */	bl fn_803415C0
+/* 80342054 0030B614  4B FF F5 6D */	bl func_803415C0
 /* 80342058 0030B618  80 1E 00 30 */	lwz r0, 0x30(r30)
 /* 8034205C 0030B61C  28 00 00 04 */	cmplwi r0, 0x4
 /* 80342060 0030B620  40 82 00 38 */	bne .L_80342098
@@ -125,4 +124,4 @@
 /* 803420B4 0030B674  7C 08 03 A6 */	mtlr r0
 /* 803420B8 0030B678  38 21 00 10 */	addi r1, r1, 0x10
 /* 803420BC 0030B67C  4E 80 00 20 */	blr
-.endfn fn_80341FD0
+.endfn func_80341FD0

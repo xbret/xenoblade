@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/Runtime/GCN_mem_alloc.o"
 
-# 0x802BBD00 - 0x802BBDB8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __sys_free, global
@@ -58,7 +57,8 @@
 # 0x8050CE90 - 0x8050CF00
 .rodata
 .balign 8
-.sym lbl_8050CE90, global
+.global lbl_8050CE90
+lbl_8050CE90:
 	.4byte 0x47434E5F
 	.4byte 0x4D656D5F
 	.4byte 0x416C6C6F

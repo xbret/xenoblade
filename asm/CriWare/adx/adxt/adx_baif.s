@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_baif.o"
 
-# 0x80385DE4 - 0x80386970
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn AIFF_GetInfo, global
@@ -816,7 +815,8 @@
 # 0x8051A1B8 - 0x8051A1C8
 .rodata
 .balign 8
-.sym lbl_8051A1B8, global
+.global lbl_8051A1B8
+lbl_8051A1B8:
 	.4byte 0x464F524D
 	.4byte 0x00414946
 	.4byte 0x46000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "NdevExi2A/DebuggerDriver.o"
 
-# 0x802D05D4 - 0x802D0908
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __DBMtrHandler, global
@@ -248,9 +247,8 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj l_byOffsetCounter$99, local
+l_byOffsetCounter$99:
 	.byte 0x80
-.endobj l_byOffsetCounter$99
 	.4byte 0x00000000
 	.byte 0x00, 0x00, 0x00
 
@@ -258,24 +256,19 @@
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj __DBMtrCallback, local
+__DBMtrCallback:
 	.skip 0x4
-.endobj __DBMtrCallback
 
-.obj __DBDbgCallback, local
+__DBDbgCallback:
 	.skip 0x4
-.endobj __DBDbgCallback
 
-.obj __DBEXIInputFlag, local
+__DBEXIInputFlag:
 	.skip 0x1
-.endobj __DBEXIInputFlag
 	.skip 0x3
 
-.obj __DBRecvMail, local
+__DBRecvMail:
 	.skip 0x4
-.endobj __DBRecvMail
 
-.obj __DBRecvDataSize, local
+__DBRecvDataSize:
 	.skip 0x4
-.endobj __DBRecvDataSize
 	.skip 0x4

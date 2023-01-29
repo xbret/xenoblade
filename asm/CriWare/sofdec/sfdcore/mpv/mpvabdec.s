@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mpv/mpvabdec.o"
 
-# 0x803AEFF8 - 0x803B96F4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPVABDEC_Init, global
@@ -11326,7 +11325,8 @@
 # 0x8051F8F0 - 0x8051F900
 .rodata
 .balign 8
-.sym lbl_8051F8F0, global
+.global lbl_8051F8F0
+lbl_8051F8F0:
 	.4byte mpvabdec_IntraBlock_Isr
 	.4byte mpvabdec_IntraBlockDc11_Isr
 	.4byte mpvabdec_NintraBlock_Isr
@@ -11336,7 +11336,7 @@
 .data
 .balign 8
 
-.obj jumptable_8056A958, local
+jumptable_8056A958:
 	.rel mpvabdec_IntraBlock_Isr, .L_803B1B44
 	.rel mpvabdec_IntraBlock_Isr, .L_803B1A80
 	.rel mpvabdec_IntraBlock_Isr, .L_803B19BC
@@ -11593,9 +11593,8 @@
 	.rel mpvabdec_IntraBlock_Isr, .L_803AF148
 	.rel mpvabdec_IntraBlock_Isr, .L_803B1C70
 	.rel mpvabdec_IntraBlock_Isr, .L_803AF148
-.endobj jumptable_8056A958
 
-.obj jumptable_8056AD58, local
+jumptable_8056AD58:
 	.rel mpvabdec_IntraBlockDc11_Isr, .L_803B5164
 	.rel mpvabdec_IntraBlockDc11_Isr, .L_803B50A0
 	.rel mpvabdec_IntraBlockDc11_Isr, .L_803B4FDC
@@ -11852,9 +11851,8 @@
 	.rel mpvabdec_IntraBlockDc11_Isr, .L_803B2768
 	.rel mpvabdec_IntraBlockDc11_Isr, .L_803B5290
 	.rel mpvabdec_IntraBlockDc11_Isr, .L_803B2768
-.endobj jumptable_8056AD58
 
-.obj jumptable_8056B158, local
+jumptable_8056B158:
 	.rel mpvabdec_NintraBlock_Isr, .L_803B8B8C
 	.rel mpvabdec_NintraBlock_Isr, .L_803B8AC4
 	.rel mpvabdec_NintraBlock_Isr, .L_803B89FC
@@ -12111,10 +12109,10 @@
 	.rel mpvabdec_NintraBlock_Isr, .L_803B6008
 	.rel mpvabdec_NintraBlock_Isr, .L_803B8CBC
 	.rel mpvabdec_NintraBlock_Isr, .L_803B6008
-.endobj jumptable_8056B158
 
 # 0x80607B68 - 0x80607B78
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80607B68, global
+.global lbl_80607B68
+lbl_80607B68:
 	.skip 0x10

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/wiirna/rna_err.o"
 
-# 0x80398FA8 - 0x80399014
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn RNAERR_EntryErrFunc, global
@@ -42,7 +41,9 @@
 # 0x805F60B8 - 0x805F61C0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805F60B8, global
+.global lbl_805F60B8
+lbl_805F60B8:
 	.skip 0x4
-.sym lbl_805F60BC, global
+.global lbl_805F60BC
+lbl_805F60BC:
 	.skip 0x104

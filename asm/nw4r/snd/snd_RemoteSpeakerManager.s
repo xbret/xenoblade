@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_RemoteSpeakerManager.o"
 
-# 0x80419354 - 0x804195D4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::RemoteSpeakerManager::GetInstance()
@@ -197,11 +196,13 @@
 # 0x8063B1E8 - 0x8063B4C0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8063B1E8, global
+.global lbl_8063B1E8
+lbl_8063B1E8:
 	.skip 0x2D8
 
 # 0x80667DD0 - 0x80667DD8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DD0, global
+.global lbl_80667DD0
+lbl_80667DD0:
 	.skip 0x8

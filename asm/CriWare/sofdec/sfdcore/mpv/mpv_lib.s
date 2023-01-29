@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mpv/mpv_lib.o"
 
-# 0x803A7F30 - 0x803A8A0C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPV_Init, global
@@ -62,7 +61,7 @@
 /* 803A7FF4 003715B4  93 63 00 54 */	stw r27, 0x54(r3)
 /* 803A7FF8 003715B8  93 C3 00 58 */	stw r30, 0x58(r3)
 /* 803A7FFC 003715BC  4B FF E1 59 */	bl MPVERR_Init
-/* 803A8000 003715C0  4B FF D9 B1 */	bl fn_803A59B0
+/* 803A8000 003715C0  4B FF D9 B1 */	bl func_803A59B0
 /* 803A8004 003715C4  4B FF E7 19 */	bl MPVHDEC_Init
 /* 803A8008 003715C8  4B FF E2 BD */	bl MPVFRM_Init
 /* 803A800C 003715CC  48 01 16 E9 */	bl MPVSL_Init
@@ -483,11 +482,11 @@
 /* 803A85F4 00371BB4  38 84 00 20 */	addi r4, r4, 0x20
 /* 803A85F8 00371BB8  42 00 FF F4 */	bdnz .L_803A85EC
 .L_803A85FC:
-/* 803A85FC 00371BBC  48 00 00 08 */	b fn_803A8604
+/* 803A85FC 00371BBC  48 00 00 08 */	b func_803A8604
 /* 803A8600 00371BC0  4E 80 00 20 */	blr
 .endfn MPV_Create
 
-.fn fn_803A8604, global
+.fn func_803A8604, global
 /* 803A8604 00371BC4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803A8608 00371BC8  7C 08 02 A6 */	mflr r0
 /* 803A860C 00371BCC  3C 80 80 60 */	lis r4, lbl_80606048@ha
@@ -599,15 +598,15 @@
 /* 803A87B0 00371D70  7C 08 03 A6 */	mtlr r0
 /* 803A87B4 00371D74  38 21 00 30 */	addi r1, r1, 0x30
 /* 803A87B8 00371D78  4E 80 00 20 */	blr
-.endfn fn_803A8604
+.endfn func_803A8604
 
-.fn fn_803A87BC, global
+.fn func_803A87BC, global
 /* 803A87BC 00371D7C  80 03 0A 10 */	lwz r0, 0xa10(r3)
 /* 803A87C0 00371D80  90 04 00 00 */	stw r0, 0x0(r4)
 /* 803A87C4 00371D84  80 03 0A 14 */	lwz r0, 0xa14(r3)
 /* 803A87C8 00371D88  90 05 00 00 */	stw r0, 0x0(r5)
 /* 803A87CC 00371D8C  4E 80 00 20 */	blr
-.endfn fn_803A87BC
+.endfn func_803A87BC
 
 .fn MPV_Destroy, global
 /* 803A87D0 00371D90  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -730,7 +729,7 @@
 /* 803A8954 00371F14  4E 80 00 20 */	blr
 .endfn MPV_SetCond
 
-.fn fn_803A8958, global
+.fn func_803A8958, global
 /* 803A8958 00371F18  2C 03 00 00 */	cmpwi r3, 0x0
 /* 803A895C 00371F1C  40 82 00 10 */	bne .L_803A896C
 /* 803A8960 00371F20  3C C0 80 60 */	lis r6, lbl_80606048@ha
@@ -765,7 +764,7 @@
 /* 803A89BC 00371F7C  7C 06 00 2E */	lwzx r0, r6, r0
 /* 803A89C0 00371F80  90 05 00 00 */	stw r0, 0x0(r5)
 /* 803A89C4 00371F84  4E 80 00 20 */	blr
-.endfn fn_803A8958
+.endfn func_803A8958
 
 .fn MPV_SetMbCb, global
 /* 803A89C8 00371F88  90 83 0B 50 */	stw r4, 0xb50(r3)
@@ -795,7 +794,8 @@
 # 0x8051F778 - 0x8051F820
 .rodata
 .balign 8
-.sym lbl_8051F778, global
+.global lbl_8051F778
+lbl_8051F778:
 	.4byte 0x0A435249
 	.4byte 0x204D5056
 	.4byte 0x2F574949
@@ -818,7 +818,8 @@
 	.4byte 0x30385061
 	.4byte 0x74636830
 	.4byte 0x320A0000
-.sym lbl_8051F7D0, global
+.global lbl_8051F7D0
+lbl_8051F7D0:
 	.4byte 0x00000000
 	.4byte 0x00000001
 	.4byte 0x00000001
@@ -836,7 +837,8 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x5A5A5A5A
-.sym lbl_8051F814, global
+.global lbl_8051F814
+lbl_8051F814:
 	.4byte 0x322E3035
 	.4byte 0x39000000
 	.4byte 0x00000000
@@ -844,13 +846,18 @@
 # 0x80606040 - 0x806064B8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80606040, global
+.global lbl_80606040
+lbl_80606040:
 	.skip 0x8
-.sym lbl_80606048, global
+.global lbl_80606048
+lbl_80606048:
 	.skip 0x60
-.sym lbl_806060A8, global
+.global lbl_806060A8
+lbl_806060A8:
 	.skip 0x400
-.sym lbl_806064A8, global
+.global lbl_806064A8
+lbl_806064A8:
 	.skip 0x4
-.sym lbl_806064AC, global
+.global lbl_806064AC
+lbl_806064AC:
 	.skip 0xC

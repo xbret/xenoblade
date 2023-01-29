@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/ahx/ahx_dcd.o"
 
-# 0x8038D9E8 - 0x8038F4E0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SKG_GenerateKey, local
@@ -1918,20 +1917,24 @@
 # 0x8051AC98 - 0x8051ACB0
 .rodata
 .balign 8
-.sym lbl_8051AC98, global
+.global lbl_8051AC98
+lbl_8051AC98:
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8051ACA0, global
+.global lbl_8051ACA0
+lbl_8051ACA0:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8051ACA8, global
+.global lbl_8051ACA8
+lbl_8051ACA8:
 	.4byte 0x4352492D
 	.4byte 0x4D570000
 
 # 0x80569190 - 0x80569208
 .data
 .balign 8
-.sym lbl_80569190, global
+.global lbl_80569190
+lbl_80569190:
 	.4byte 0x00005622
 	.4byte 0x00005DC0
 	.4byte 0x00003E80
@@ -1940,7 +1943,8 @@
 	.4byte 0x0000BB80
 	.4byte 0x00007D00
 	.4byte 0x00000000
-.sym lbl_805691B0, global
+.global lbl_805691B0
+lbl_805691B0:
 	.4byte 0x00000004
 	.4byte 0x00000008
 	.4byte 0x0000000C
@@ -1953,7 +1957,8 @@
 	.4byte 0x00000004
 	.4byte 0x00000008
 	.4byte 0x00000010
-.sym lbl_805691E0, global
+.global lbl_805691E0
+lbl_805691E0:
 	.4byte 0x00000000
 	.4byte 0x00000001
 	.4byte 0x00000003
@@ -1969,12 +1974,16 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj skg_init_count_1, global
+.global skg_init_count_1
+skg_init_count_1:
 	.skip 0x4
-.sym lbl_805E9B14, global
+.global lbl_805E9B14
+lbl_805E9B14:
 	.skip 0x4
 
-.obj ahxdcd_init_cnt, global
+.global ahxdcd_init_cnt
+ahxdcd_init_cnt:
 	.skip 0x8
-.sym lbl_805E9B20, global
+.global lbl_805E9B20
+lbl_805E9B20:
 	.skip 0x200

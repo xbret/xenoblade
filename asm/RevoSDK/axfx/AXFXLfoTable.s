@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/axfx/AXFXLfoTable.o"
 
-# 0x802DAAD0 - 0x802DAAE0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __AXFXGetLfoSinTable, global
@@ -15,7 +14,8 @@
 # 0x805433E0 - 0x805435E0
 .data
 .balign 8
-.sym lbl_805433E0, global
+.global lbl_805433E0
+lbl_805433E0:
 	.4byte 0x00000000
 	.4byte 0x00064855
 	.4byte 0x000C8FB3

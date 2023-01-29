@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxf/adx_fcch.o"
 
-# 0x8037F578 - 0x8037F57C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADXF_Ocbi, global

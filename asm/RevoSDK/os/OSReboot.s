@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSReboot.o"
 
-# 0x80359E80 - 0x80359F10
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __OSReboot, global
@@ -50,7 +49,9 @@
 # 0x80667AB0 - 0x80667AB8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667AB0, global
+.global lbl_80667AB0
+lbl_80667AB0:
 	.skip 0x4
-.sym lbl_80667AB4, global
+.global lbl_80667AB4
+lbl_80667AB4:
 	.skip 0x4

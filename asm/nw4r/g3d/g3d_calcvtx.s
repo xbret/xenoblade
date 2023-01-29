@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_calcvtx.o"
 
-# 0x803FE0B8 - 0x803FE8B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::CalcVtx(nw4r::g3d::ResMdl, nw4r::g3d::AnmObjShp*, nw4r::g3d::ResVtxPosData**, nw4r::g3d::ResVtxNrmData**, nw4r::g3d::ResVtxClrData**)
@@ -581,6 +580,7 @@
 # 0x8066C530 - 0x8066C538
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C530, global
+.global lbl_8066C530
+lbl_8066C530:
 	.4byte 0x00000000
 	.4byte 0x00000000

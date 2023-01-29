@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/platform/g3d_cpu.o"
 
-# 0x803E7978 - 0x803E7B9C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::detail::Copy32ByteBlocks(void*, const void*, unsigned long)
@@ -166,6 +165,7 @@
 # 0x8066C3E0 - 0x8066C3E8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C3E0, global
+.global lbl_8066C3E0
+lbl_8066C3E0:
 	.4byte 0x00000000
 	.4byte 0x00000000

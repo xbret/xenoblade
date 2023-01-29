@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_SoundPlayer.o"
 
-# 0x80420418 - 0x80420FC0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::SoundPlayer::SoundPlayer()
@@ -894,21 +893,26 @@
 # 0x8063B4E0 - 0x8063BB00
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8063B4E0, global
+.global lbl_8063B4E0
+lbl_8063B4E0:
 	.skip 0x10
-.sym lbl_8063B4F0, global
+.global lbl_8063B4F0
+lbl_8063B4F0:
 	.skip 0x610
 
 # 0x80667DE0 - 0x80667DE8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DE0, global
+.global lbl_80667DE0
+lbl_80667DE0:
 	.skip 0x8
 
 # 0x8066C858 - 0x8066C860
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C858, global
+.global lbl_8066C858
+lbl_8066C858:
 	.4byte 0x3F800000
-.sym lbl_8066C85C, global
+.global lbl_8066C85C
+lbl_8066C85C:
 	.4byte 0x00000000

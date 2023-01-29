@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/sdp_server.o"
 
-# 0x803067D4 - 0x803074E4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn sdp_server_handle_client_req, global
@@ -929,7 +928,8 @@
 # 0x805494A8 - 0x805494E8
 .data
 .balign 8
-.sym lbl_805494A8, global
+.global lbl_805494A8
+lbl_805494A8:
 	.4byte 0x53445020
 	.4byte 0x2D207365
 	.4byte 0x72766572
@@ -939,7 +939,8 @@
 	.4byte 0x20504455
 	.4byte 0x3A203078
 	.4byte 0x25780000
-.sym lbl_805494CC, global
+.global lbl_805494CC
+lbl_805494CC:
 	.4byte 0x53445020
 	.4byte 0x2D206E6F
 	.4byte 0x20627566

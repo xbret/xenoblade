@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_tlk2.o"
 
-# 0x8038238C - 0x8038259C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADXT_StartAfs, global
@@ -155,7 +154,8 @@
 # 0x80519838 - 0x80519968
 .rodata
 .balign 8
-.sym lbl_80519838, global
+.global lbl_80519838
+lbl_80519838:
 	.4byte 0x45303230
 	.4byte 0x38303831
 	.4byte 0x31206164

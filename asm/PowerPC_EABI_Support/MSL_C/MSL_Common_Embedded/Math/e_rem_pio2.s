@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/e_rem_pio2.o"
 
-# 0x802C89B0 - 0x802C8D34
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __ieee754_rem_pio2, global
@@ -252,7 +251,7 @@
 .rodata
 .balign 8
 
-.obj two_over_pi, local
+two_over_pi:
 	.4byte 0x00A2F983
 	.4byte 0x006E4E44
 	.4byte 0x001529FC
@@ -319,9 +318,8 @@
 	.4byte 0x0073A8C9
 	.4byte 0x0060E27B
 	.4byte 0x00C08C6B
-.endobj two_over_pi
 
-.obj npio2_hw, local
+npio2_hw:
 	.4byte 0x3FF921FB
 	.4byte 0x400921FB
 	.4byte 0x4012D97C
@@ -354,7 +352,6 @@
 	.4byte 0x40478FDB
 	.4byte 0x404858EB
 	.4byte 0x404921FB
-.endobj npio2_hw
 
 # 0x8066BBC8 - 0x8066BC20
 .section .sdata2, "a"

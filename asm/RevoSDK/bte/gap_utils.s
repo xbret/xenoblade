@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/gap_utils.o"
 
-# 0x802F08A0 - 0x802F0EBC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn btm_cback, global
@@ -492,7 +491,8 @@
 # 0x805463A0 - 0x80546690
 .data
 .balign 8
-.sym lbl_805463A0, global
+.global lbl_805463A0
+lbl_805463A0:
 	.4byte 0x20202047
 	.4byte 0x41502049
 	.4byte 0x6E717569
@@ -545,7 +545,7 @@
 	.4byte 0x25303478
 	.4byte 0x29000000
 
-.obj jumptable_8054646C, local
+jumptable_8054646C:
 	.rel btm_cback, .L_802F09CC
 	.rel btm_cback, .L_802F09D4
 	.rel btm_cback, .L_802F09DC
@@ -555,7 +555,6 @@
 	.rel btm_cback, .L_802F09EC
 	.rel btm_cback, .L_802F09F4
 	.rel btm_cback, .L_802F09FC
-.endobj jumptable_8054646C
 	.4byte 0x47415020
 	.4byte 0x496E7175
 	.4byte 0x69727920
@@ -590,7 +589,8 @@
 	.4byte 0x20307825
 	.4byte 0x30347829
 	.4byte 0x00000000
-.sym lbl_80546518, global
+.global lbl_80546518
+lbl_80546518:
 	.4byte 0x20202047
 	.4byte 0x41503A20
 	.4byte 0x46696E64
@@ -608,7 +608,8 @@
 	.4byte 0x204E616D
 	.4byte 0x65205B25
 	.4byte 0x735D2900
-.sym lbl_8054655C, global
+.global lbl_8054655C
+lbl_8054655C:
 	.4byte 0x20202047
 	.4byte 0x41503A20
 	.4byte 0x46696E64
@@ -625,7 +626,7 @@
 	.4byte 0x30347829
 	.4byte 0x00000000
 
-.obj jumptable_80546598, local
+jumptable_80546598:
 	.rel gap_find_addr_name_cb, .L_802F0C24
 	.rel gap_find_addr_name_cb, .L_802F0C2C
 	.rel gap_find_addr_name_cb, .L_802F0C34
@@ -635,9 +636,8 @@
 	.rel gap_find_addr_name_cb, .L_802F0C44
 	.rel gap_find_addr_name_cb, .L_802F0C4C
 	.rel gap_find_addr_name_cb, .L_802F0C54
-.endobj jumptable_80546598
 
-.obj jumptable_805465BC, local
+jumptable_805465BC:
 	.rel gap_find_addr_name_cb, .L_802F0B8C
 	.rel gap_find_addr_name_cb, .L_802F0B94
 	.rel gap_find_addr_name_cb, .L_802F0B9C
@@ -647,8 +647,8 @@
 	.rel gap_find_addr_name_cb, .L_802F0BAC
 	.rel gap_find_addr_name_cb, .L_802F0BB4
 	.rel gap_find_addr_name_cb, .L_802F0BBC
-.endobj jumptable_805465BC
-.sym lbl_805465E0, global
+.global lbl_805465E0
+lbl_805465E0:
 	.4byte 0x20202047
 	.4byte 0x41503A20
 	.4byte 0x46696E64
@@ -667,7 +667,7 @@
 	.4byte 0x29202564
 	.4byte 0x29000000
 
-.obj jumptable_80546624, local
+jumptable_80546624:
 	.rel gap_find_addr_inq_cb, .L_802F0DD8
 	.rel gap_find_addr_inq_cb, .L_802F0DE0
 	.rel gap_find_addr_inq_cb, .L_802F0DE8
@@ -677,9 +677,8 @@
 	.rel gap_find_addr_inq_cb, .L_802F0DF8
 	.rel gap_find_addr_inq_cb, .L_802F0E00
 	.rel gap_find_addr_inq_cb, .L_802F0E08
-.endobj jumptable_80546624
 
-.obj jumptable_80546648, local
+jumptable_80546648:
 	.rel gap_find_addr_inq_cb, .L_802F0D68
 	.rel gap_find_addr_inq_cb, .L_802F0D70
 	.rel gap_find_addr_inq_cb, .L_802F0D78
@@ -689,9 +688,8 @@
 	.rel gap_find_addr_inq_cb, .L_802F0D88
 	.rel gap_find_addr_inq_cb, .L_802F0D90
 	.rel gap_find_addr_inq_cb, .L_802F0D98
-.endobj jumptable_80546648
 
-.obj jumptable_8054666C, local
+jumptable_8054666C:
 	.rel gap_convert_btm_status, .L_802F0E7C
 	.rel gap_convert_btm_status, .L_802F0E84
 	.rel gap_convert_btm_status, .L_802F0E8C
@@ -701,4 +699,3 @@
 	.rel gap_convert_btm_status, .L_802F0E9C
 	.rel gap_convert_btm_status, .L_802F0EA4
 	.rel gap_convert_btm_status, .L_802F0EAC
-.endobj jumptable_8054666C

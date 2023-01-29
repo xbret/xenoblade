@@ -1,39 +1,17 @@
 .include "macros.inc"
-.file "kyoshin/appgame/help/CHelp_GameOver.o"
 
-# 0x8001BDA0 - 0x8001BDA8
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_8001BDA0", local
-.hidden "@etb_8001BDA0"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_8001BDA0"
-
-# 0x80033938 - 0x80033944
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80033938", local
-.hidden "@eti_80033938"
-	.4byte fn_802B80F4
-	.4byte 0x0000008C
-	.4byte "@etb_8001BDA0"
-.endobj "@eti_80033938"
-
-# 0x802B80F4 - 0x802B8180
-.text
-.balign 4
-
-.fn fn_802B80F4, global
+.fn func_802B80F4, global
 /* 802B80F4 002816B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B80F8 002816B8  7C 08 02 A6 */	mflr r0
 /* 802B80FC 002816BC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802B8100 002816C0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802B8104 002816C4  7C 7F 1B 78 */	mr r31, r3
 /* 802B8108 002816C8  80 6D B1 80 */	lwz r3, lbl_80667300@sda21(r13)
-/* 802B810C 002816CC  4B FD DC 25 */	bl fn_80295D30
+/* 802B810C 002816CC  4B FD DC 25 */	bl func_80295D30
 /* 802B8110 002816D0  2C 03 00 00 */	cmpwi r3, 0x0
 /* 802B8114 002816D4  40 82 00 0C */	bne .L_802B8120
 /* 802B8118 002816D8  38 60 00 00 */	li r3, 0x0
@@ -42,7 +20,7 @@
 /* 802B8120 002816E0  80 1F 00 0C */	lwz r0, 0xc(r31)
 /* 802B8124 002816E4  2C 00 00 00 */	cmpwi r0, 0x0
 /* 802B8128 002816E8  41 82 00 1C */	beq .L_802B8144
-/* 802B812C 002816EC  4B DC A1 C9 */	bl fn_800822F4
+/* 802B812C 002816EC  4B DC A1 C9 */	bl func_800822F4
 /* 802B8130 002816F0  80 1F 00 0C */	lwz r0, 0xc(r31)
 /* 802B8134 002816F4  7C 03 00 00 */	cmpw r3, r0
 /* 802B8138 002816F8  40 80 00 0C */	bge .L_802B8144
@@ -66,4 +44,25 @@
 /* 802B8174 00281734  7C 08 03 A6 */	mtlr r0
 /* 802B8178 00281738  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B817C 0028173C  4E 80 00 20 */	blr
-.endfn fn_802B80F4
+.endfn func_802B80F4
+
+# 0x8001BDA0 - 0x8001BDA8
+.section extab, "a"
+.balign 4
+
+.obj "@etb_8001BDA0", local
+.hidden "@etb_8001BDA0"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_8001BDA0"
+
+# 0x80033938 - 0x80033944
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80033938", local
+.hidden "@eti_80033938"
+	.4byte func_802B80F4
+	.4byte 0x0000008C
+	.4byte "@etb_8001BDA0"
+.endobj "@eti_80033938"

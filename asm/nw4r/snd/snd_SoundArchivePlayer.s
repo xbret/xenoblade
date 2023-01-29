@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_SoundArchivePlayer.o"
 
-# 0x8041DB84 - 0x80420330
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::SoundArchivePlayer::SoundArchivePlayer()
@@ -87,7 +86,7 @@
 /* 8041DCB8 003E7278  4E 80 00 20 */	blr
 .endfn __ct__Q34nw4r3snd18SoundArchivePlayerFv
 
-.fn fn_8041DCBC, global
+.fn func_8041DCBC, global
 /* 8041DCBC 003E727C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041DCC0 003E7280  7C 08 02 A6 */	mflr r0
 /* 8041DCC4 003E7284  2C 03 00 00 */	cmpwi r3, 0x0
@@ -105,9 +104,9 @@
 /* 8041DCF0 003E72B0  7C 08 03 A6 */	mtlr r0
 /* 8041DCF4 003E72B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041DCF8 003E72B8  4E 80 00 20 */	blr
-.endfn fn_8041DCBC
+.endfn func_8041DCBC
 
-.fn fn_8041DCFC, global
+.fn func_8041DCFC, global
 /* 8041DCFC 003E72BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041DD00 003E72C0  7C 08 02 A6 */	mflr r0
 /* 8041DD04 003E72C4  2C 03 00 00 */	cmpwi r3, 0x0
@@ -125,7 +124,7 @@
 /* 8041DD30 003E72F0  7C 08 03 A6 */	mtlr r0
 /* 8041DD34 003E72F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041DD38 003E72F8  4E 80 00 20 */	blr
-.endfn fn_8041DCFC
+.endfn func_8041DCFC
 
 # nw4r::ut::LinkList_Q44nw4r3snd6detail8SeqSound_240_::LinkList_Q44nw4r3snd6detail8SeqSound_240_()
 .fn __ct__Q34nw4r2ut41LinkList_Q44nw4r3snd6detail8SeqSound_240_Fv, global
@@ -2971,7 +2970,8 @@
 # 0x8056E4C0 - 0x8056E510
 .data
 .balign 8
-.sym lbl_8056E4C0, global
+.global lbl_8056E4C0
+lbl_8056E4C0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3snd18SoundArchivePlayerFv
@@ -2984,23 +2984,27 @@
 	.4byte _12_detail_ConvertLabelStringToSoundId__Q34nw4r3snd18SoundArchivePlayerFPCc
 	.4byte detail_ConvertLabelStringToSoundId__Q34nw4r3snd18SoundArchivePlayerFPCc
 	.4byte detail_SetupSound__Q34nw4r3snd18SoundArchivePlayerFPQ34nw4r3snd11SoundHandleUlbPCQ44nw4r3snd14SoundStartable9StartInfo
-.sym lbl_8056E4F0, global
+.global lbl_8056E4F0
+lbl_8056E4F0:
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte fn_8041DCFC
+	.4byte func_8041DCFC
 	.4byte GetWaveSoundData__Q44nw4r3snd18SoundArchivePlayer11WsdCallbackCFPQ44nw4r3snd6detail13WaveSoundInfoPQ44nw4r3snd6detail17WaveSoundNoteInfoPQ44nw4r3snd6detail8WaveInfoPCviiUl
-.sym lbl_8056E500, global
+.global lbl_8056E500
+lbl_8056E500:
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte fn_8041DCBC
+	.4byte func_8041DCBC
 	.4byte NoteOn__Q44nw4r3snd18SoundArchivePlayer17SeqNoteOnCallbackFPQ44nw4r3snd6detail9SeqPlayeriRCQ44nw4r3snd6detail10NoteOnInfo
 
 # 0x8066C848 - 0x8066C858
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C848, global
+.global lbl_8066C848
+lbl_8066C848:
 	.4byte 0x42FE0000
 	.4byte 0x00000000
-.sym lbl_8066C850, global
+.global lbl_8066C850
+lbl_8066C850:
 	.4byte 0x43300000
 	.4byte 0x80000000

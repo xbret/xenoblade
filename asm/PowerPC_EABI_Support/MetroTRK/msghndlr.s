@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MetroTRK/msghndlr.o"
 
-# 0x802CDC90 - 0x802CEC14
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn GetTRKConnected, global
@@ -1124,7 +1123,7 @@
 .data
 .balign 8
 
-.obj jumptable_8053FF40, local
+jumptable_8053FF40:
 	.rel TRKDoReadMemory, .L_802CE000
 	.rel TRKDoReadMemory, .L_802CE020
 	.rel TRKDoReadMemory, .L_802CDFF8
@@ -1132,9 +1131,8 @@
 	.rel TRKDoReadMemory, .L_802CE008
 	.rel TRKDoReadMemory, .L_802CE010
 	.rel TRKDoReadMemory, .L_802CE018
-.endobj jumptable_8053FF40
 
-.obj jumptable_8053FF5C, local
+jumptable_8053FF5C:
 	.rel TRKDoWriteMemory, .L_802CE210
 	.rel TRKDoWriteMemory, .L_802CE230
 	.rel TRKDoWriteMemory, .L_802CE208
@@ -1142,8 +1140,8 @@
 	.rel TRKDoWriteMemory, .L_802CE218
 	.rel TRKDoWriteMemory, .L_802CE220
 	.rel TRKDoWriteMemory, .L_802CE228
-.endobj jumptable_8053FF5C
-.sym lbl_8053FF78, global
+.global lbl_8053FF78
+lbl_8053FF78:
 	.4byte 0x0A4D6574
 	.4byte 0x726F5452
 	.4byte 0x4B204F70
@@ -1160,7 +1158,9 @@
 # 0x80667598 - 0x806675A0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667598, global
+.global lbl_80667598
+lbl_80667598:
 	.skip 0x4
-.sym lbl_8066759C, global
+.global lbl_8066759C
+lbl_8066759C:
 	.skip 0x4

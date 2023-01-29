@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MetroTRK/flush_cache.o"
 
-# 0x802CBA1C - 0x802CBA54
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn TRK_flush_cache, global

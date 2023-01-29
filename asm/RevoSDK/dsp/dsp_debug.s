@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/dsp/dsp_debug.o"
 
-# 0x803094B0 - 0x80309500
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __DSP_debug_printf, global

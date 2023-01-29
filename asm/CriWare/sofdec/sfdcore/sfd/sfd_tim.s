@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/sfd/sfd_tim.o"
 
-# 0x803CC71C - 0x803CE3F0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFTIM_Init, global
@@ -1182,7 +1181,7 @@
 /* 803CD728 00396CE8  4E 80 00 20 */	blr
 .endfn SFTIM_Tc2Time
 
-.fn fn_803CD72C, global
+.fn func_803CD72C, global
 /* 803CD72C 00396CEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD730 00396CF0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803CD734 00396CF4  3B E0 03 E8 */	li r31, 0x3e8
@@ -1214,9 +1213,9 @@
 /* 803CD79C 00396D5C  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 803CD7A0 00396D60  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD7A4 00396D64  4E 80 00 20 */	blr
-.endfn fn_803CD72C
+.endfn func_803CD72C
 
-.fn fn_803CD7A8, global
+.fn func_803CD7A8, global
 /* 803CD7A8 00396D68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD7AC 00396D6C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803CD7B0 00396D70  3B E0 5D C0 */	li r31, 0x5dc0
@@ -1250,9 +1249,9 @@
 /* 803CD820 00396DE0  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 803CD824 00396DE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD828 00396DE8  4E 80 00 20 */	blr
-.endfn fn_803CD7A8
+.endfn func_803CD7A8
 
-.fn fn_803CD82C, global
+.fn func_803CD82C, global
 /* 803CD82C 00396DEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD830 00396DF0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803CD834 00396DF4  3B E0 75 30 */	li r31, 0x7530
@@ -1286,9 +1285,9 @@
 /* 803CD8A4 00396E64  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 803CD8A8 00396E68  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD8AC 00396E6C  4E 80 00 20 */	blr
-.endfn fn_803CD82C
+.endfn func_803CD82C
 
-.fn fn_803CD8B0, global
+.fn func_803CD8B0, global
 /* 803CD8B0 00396E70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD8B4 00396E74  3D 00 00 01 */	lis r8, 0x1
 /* 803CD8B8 00396E78  93 E1 00 0C */	stw r31, 0xc(r1)
@@ -1323,7 +1322,7 @@
 /* 803CD92C 00396EEC  83 C1 00 08 */	lwz r30, 0x8(r1)
 /* 803CD930 00396EF0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD934 00396EF4  4E 80 00 20 */	blr
-.endfn fn_803CD8B0
+.endfn func_803CD8B0
 
 .fn sftim_Tc2Time23D, global
 /* 803CD938 00396EF8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1373,7 +1372,7 @@
 /* 803CD9E8 00396FA8  4E 80 00 20 */	blr
 .endfn sftim_Tc2Time23D
 
-.fn fn_803CD9EC, global
+.fn func_803CD9EC, global
 /* 803CD9EC 00396FAC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CD9F0 00396FB0  38 00 03 E8 */	li r0, 0x3e8
 /* 803CD9F4 00396FB4  3D 20 66 66 */	lis r9, 0x6666
@@ -1419,7 +1418,7 @@
 /* 803CDA94 00397054  83 81 00 10 */	lwz r28, 0x10(r1)
 /* 803CDA98 00397058  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CDA9C 0039705C  4E 80 00 20 */	blr
-.endfn fn_803CD9EC
+.endfn func_803CD9EC
 
 .fn sftim_Tc2Time59D, global
 /* 803CDAA0 00397060  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2076,12 +2075,12 @@
 /* 803CE374 00397934  4E 80 00 20 */	blr
 .endfn SFD_CalcCycleFromFps
 
-.fn fn_803CE378, global
+.fn func_803CE378, global
 /* 803CE378 00397938  90 83 13 8C */	stw r4, 0x138c(r3)
 /* 803CE37C 0039793C  4E 80 00 20 */	blr
-.endfn fn_803CE378
+.endfn func_803CE378
 
-.fn fn_803CE380, global
+.fn func_803CE380, global
 /* 803CE380 00397940  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CE384 00397944  7C 08 02 A6 */	mflr r0
 /* 803CE388 00397948  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2114,12 +2113,13 @@
 /* 803CE3E4 003979A4  7C 08 03 A6 */	mtlr r0
 /* 803CE3E8 003979A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CE3EC 003979AC  4E 80 00 20 */	blr
-.endfn fn_803CE380
+.endfn func_803CE380
 
 # 0x805205D8 - 0x80520678
 .rodata
 .balign 8
-.sym lbl_805205D8, global
+.global lbl_805205D8
+lbl_805205D8:
 	.4byte 0x00000001
 	.4byte 0x00005DA8
 	.4byte 0x00005DC0
@@ -2130,25 +2130,26 @@
 	.4byte 0x0000EA24
 	.4byte 0x0000EA60
 	.4byte 0x00000000
-.sym lbl_80520600, global
+.global lbl_80520600
+lbl_80520600:
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte fn_803CD7A8
+	.4byte func_803CD7A8
 	.4byte sftim_Tc2Time23D
-	.4byte fn_803CD72C
-	.4byte fn_803CD72C
-	.4byte fn_803CD72C
-	.4byte fn_803CD72C
-	.4byte fn_803CD82C
-	.4byte fn_803CD9EC
-	.4byte fn_803CD72C
-	.4byte fn_803CD72C
-	.4byte fn_803CD72C
-	.4byte fn_803CD72C
-	.4byte fn_803CD8B0
+	.4byte func_803CD72C
+	.4byte func_803CD72C
+	.4byte func_803CD72C
+	.4byte func_803CD72C
+	.4byte func_803CD82C
+	.4byte func_803CD9EC
+	.4byte func_803CD72C
+	.4byte func_803CD72C
+	.4byte func_803CD72C
+	.4byte func_803CD72C
+	.4byte func_803CD8B0
 	.4byte sftim_Tc2Time59D
-	.4byte fn_803CD72C
-	.4byte fn_803CD72C
+	.4byte func_803CD72C
+	.4byte func_803CD72C
 	.4byte 0x3ECCCCCD
 	.4byte 0x3F000000
 	.4byte 0x3F800000
@@ -2165,13 +2166,18 @@
 # 0x8061CDE4 - 0x8061CE00
 .section .bss, "wa", @nobits
 .balign 4
-.sym lbl_8061CDE4, global
+.global lbl_8061CDE4
+lbl_8061CDE4:
 	.skip 0x4
-.sym lbl_8061CDE8, global
+.global lbl_8061CDE8
+lbl_8061CDE8:
 	.skip 0x8
-.sym lbl_8061CDF0, global
+.global lbl_8061CDF0
+lbl_8061CDF0:
 	.skip 0x4
-.sym lbl_8061CDF4, global
+.global lbl_8061CDF4
+lbl_8061CDF4:
 	.skip 0x4
-.sym lbl_8061CDF8, global
+.global lbl_8061CDF8
+lbl_8061CDF8:
 	.skip 0x8

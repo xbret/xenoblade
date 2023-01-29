@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfx/sfx_lib.o"
 
-# 0x803D5828 - 0x803D5C18
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFX_Init, global
@@ -300,7 +299,8 @@
 # 0x80520A90 - 0x80520B30
 .rodata
 .balign 8
-.sym lbl_80520A90, global
+.global lbl_80520A90
+lbl_80520A90:
 	.4byte 0x0A435249
 	.4byte 0x20534658
 	.4byte 0x2F574949
@@ -314,7 +314,8 @@
 	.4byte 0x31383A32
 	.4byte 0x323A3039
 	.4byte 0x0A000000
-.sym lbl_80520AC4, global
+.global lbl_80520AC4
+lbl_80520AC4:
 	.4byte 0x45323031
 	.4byte 0x3139343A
 	.4byte 0x20736678
@@ -346,10 +347,13 @@
 # 0x8061CE38 - 0x8061D370
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061CE38, global
+.global lbl_8061CE38
+lbl_8061CE38:
 	.skip 0x4
-.sym lbl_8061CE3C, global
+.global lbl_8061CE3C
+lbl_8061CE3C:
 	.skip 0xC
 
-.obj sfx_libwork, global
+.global sfx_libwork
+sfx_libwork:
 	.skip 0x528

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_bau.o"
 
-# 0x80397F70 - 0x80398FA0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn AU_GetInfo, global
@@ -1134,7 +1133,8 @@
 # 0x8051C750 - 0x8051C760
 .rodata
 .balign 8
-.sym lbl_8051C750, global
+.global lbl_8051C750
+lbl_8051C750:
 	.4byte 0x2E736E64
 	.4byte 0x002E7364
 	.4byte 0x00000000
@@ -1143,7 +1143,8 @@
 # 0x80569528 - 0x80569728
 .data
 .balign 8
-.sym lbl_80569528, global
+.global lbl_80569528
+lbl_80569528:
 	.4byte 0x82848684
 	.4byte 0x8A848E84
 	.4byte 0x92849684

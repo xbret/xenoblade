@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_resanmtexpat.o"
 
-# 0x803DDE40 - 0x803DE1DC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::_unnamed_g3d_resanmtexpat_cpp_::SearchFrame(const nw4r::g3d::ResAnmTexPatAnmData*, float)

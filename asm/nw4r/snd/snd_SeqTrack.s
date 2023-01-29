@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_SeqTrack.o"
 
-# 0x8041B33C - 0x8041C77C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::SeqTrack::SetPlayerTrackNo(int)
@@ -1482,7 +1481,8 @@
 # 0x80523880 - 0x805238A8
 .rodata
 .balign 8
-.sym lbl_80523880, global
+.global lbl_80523880
+lbl_80523880:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1497,7 +1497,8 @@
 # 0x8056E490 - 0x8056E4A0
 .data
 .balign 8
-.sym lbl_8056E490, global
+.global lbl_8056E490
+lbl_8056E490:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r3snd6detail8SeqTrackFv
@@ -1506,24 +1507,33 @@
 # 0x8066C818 - 0x8066C848
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C818, global
+.global lbl_8066C818
+lbl_8066C818:
 	.4byte 0x3F800000
-.sym lbl_8066C81C, global
+.global lbl_8066C81C
+lbl_8066C81C:
 	.4byte 0x00000000
-.sym lbl_8066C820, global
+.global lbl_8066C820
+lbl_8066C820:
 	.4byte 0x42FE0000
-.sym lbl_8066C824, global
+.global lbl_8066C824
+lbl_8066C824:
 	.4byte 0x3C000000
-.sym lbl_8066C828, global
+.global lbl_8066C828
+lbl_8066C828:
 	.4byte 0x427C0000
-.sym lbl_8066C82C, global
+.global lbl_8066C82C
+lbl_8066C82C:
 	.4byte 0xBF800000
-.sym lbl_8066C830, global
+.global lbl_8066C830
+lbl_8066C830:
 	.4byte 0x40000000
 	.4byte 0x00000000
-.sym lbl_8066C838, global
+.global lbl_8066C838
+lbl_8066C838:
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C840, global
+.global lbl_8066C840
+lbl_8066C840:
 	.4byte 0x43300000
 	.4byte 0x80000000

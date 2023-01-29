@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/synpitch.o"
 
-# 0x80341810 - 0x80341A90
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __HBMSYNGetRelativePitch, global
@@ -79,7 +78,7 @@
 /* 8034191C 0030AEDC  4E 80 00 20 */	blr
 .endfn __HBMSYNGetRelativePitch
 
-.fn fn_80341920, global
+.fn func_80341920, global
 /* 80341920 0030AEE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341924 0030AEE4  3C 00 43 30 */	lis r0, 0x4330
 /* 80341928 0030AEE8  3C A0 80 52 */	lis r5, lbl_80518B80@ha
@@ -106,11 +105,11 @@
 /* 8034197C 0030AF3C  90 03 00 28 */	stw r0, 0x28(r3)
 /* 80341980 0030AF40  38 21 00 10 */	addi r1, r1, 0x10
 /* 80341984 0030AF44  4E 80 00 20 */	blr
-.endfn fn_80341920
+.endfn func_80341920
 /* 80341988 0030AF48  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8034198C 0030AF4C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80341990, global
+.fn func_80341990, global
 /* 80341990 0030AF50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341994 0030AF54  7C 08 02 A6 */	mflr r0
 /* 80341998 0030AF58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -150,7 +149,7 @@
 /* 80341A20 0030AFE0  7C 08 03 A6 */	mtlr r0
 /* 80341A24 0030AFE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80341A28 0030AFE8  4E 80 00 20 */	blr
-.endfn fn_80341990
+.endfn func_80341990
 /* 80341A2C 0030AFEC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
 .fn __HBMSYNUpdateSrc, global
@@ -183,21 +182,26 @@
 # 0x80518B78 - 0x80518B90
 .rodata
 .balign 8
-.sym lbl_80518B78, global
+.global lbl_80518B78
+lbl_80518B78:
 	.4byte 0x3F800000
-.sym lbl_80518B7C, global
+.global lbl_80518B7C
+lbl_80518B7C:
 	.4byte 0x46FA0000
-.sym lbl_80518B80, global
+.global lbl_80518B80
+lbl_80518B80:
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_80518B88, global
+.global lbl_80518B88
+lbl_80518B88:
 	.4byte 0x47800000
 	.4byte 0x00000000
 
 # 0x80550020 - 0x80550410
 .data
 .balign 8
-.sym lbl_80550020, global
+.global lbl_80550020
+lbl_80550020:
 	.4byte 0x3F800000
 	.4byte 0x3F8012F1
 	.4byte 0x3F8025E1
@@ -216,7 +220,8 @@
 	.4byte 0x3F811D26
 	.4byte 0x3F813040
 	.4byte 0x3F81435B
-.sym lbl_80550068, global
+.global lbl_80550068
+lbl_80550068:
 	.4byte 0x3F815675
 	.4byte 0x3F816998
 	.4byte 0x3F817CBB

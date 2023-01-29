@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_scnmdlexpand.o"
 
-# 0x803FBF7C - 0x803FC92C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ScnMdlExpand::Construct(MEMAllocator*, unsigned long*, unsigned long, nw4r::g3d::ScnMdlSimple*)
@@ -195,7 +194,7 @@
 /* 803FC218 003C57D8  4E 80 00 20 */	blr
 .endfn PushBack__Q34nw4r3g3d12ScnMdlExpandFPQ34nw4r3g3d6ScnObjUl
 
-.fn fn_803FC21C, global
+.fn func_803FC21C, global
 /* 803FC21C 003C57DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803FC220 003C57E0  7C 08 02 A6 */	mflr r0
 /* 803FC224 003C57E4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -285,7 +284,7 @@
 /* 803FC360 003C5920  7C 08 03 A6 */	mtlr r0
 /* 803FC364 003C5924  38 21 00 20 */	addi r1, r1, 0x20
 /* 803FC368 003C5928  4E 80 00 20 */	blr
-.endfn fn_803FC21C
+.endfn func_803FC21C
 
 # nw4r::g3d::ScnMdlExpand::Remove(unsigned long)
 .fn Remove__Q34nw4r3g3d12ScnMdlExpandFUl, global
@@ -718,7 +717,8 @@
 # 0x805210E8 - 0x80521100
 .rodata
 .balign 8
-.sym lbl_805210E8, global
+.global lbl_805210E8
+lbl_805210E8:
 	.4byte 0x0000000D
 	.4byte 0x53636E4D
 	.4byte 0x646C4578
@@ -730,7 +730,8 @@
 .data
 .balign 8
 
-.obj __vt__g3d_scnmdlexpand, global
+.global __vt__g3d_scnmdlexpand
+__vt__g3d_scnmdlexpand:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d12ScnMdlExpandCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -744,13 +745,14 @@
 	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
 	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
 	.4byte CalcWorldMtx__Q34nw4r3g3d6ScnObjFPCQ34nw4r4math5MTX34PUl
-	.4byte fn_803FC21C
+	.4byte func_803FC21C
 	.4byte Remove__Q34nw4r3g3d12ScnMdlExpandFUl
 	.4byte Remove__Q34nw4r3g3d12ScnMdlExpandFPQ34nw4r3g3d6ScnObj
 
 # 0x80665DD8 - 0x80665DE0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665DD8, global
+.global lbl_80665DD8
+lbl_80665DD8:
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/port_api.o"
 
-# 0x802FCA2C - 0x802FCA7C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn RFCOMM_Init, global

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mps/mps_lib.o"
 
-# 0x803BCCEC - 0x803BD2A8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPS_Init, global
@@ -438,7 +437,8 @@
 .rodata
 .balign 8
 
-.obj MPSLIB_version_str, global
+.global MPSLIB_version_str
+MPSLIB_version_str:
 	.4byte 0x0A435249
 	.4byte 0x204D5053
 	.4byte 0x2F574949
@@ -466,11 +466,14 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj cri_mps_verstr_ptr, global
+.global cri_mps_verstr_ptr
+cri_mps_verstr_ptr:
 	.skip 0x4
 
-.obj MPSLIB_libwork, global
+.global MPSLIB_libwork
+MPSLIB_libwork:
 	.skip 0x4
 
-.obj mpslib_hn_last, global
+.global mpslib_hn_last
+mpslib_hn_last:
 	.skip 0x8

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_FxChorusDpl2.o"
 
-# 0x80415A0C - 0x80415FB0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::FxChorusDpl2::FxChorusDpl2()
@@ -442,10 +441,11 @@
 # 0x8056E078 - 0x8056E0A0
 .data
 .balign 8
-.sym lbl_8056E078, global
+.global lbl_8056E078
+lbl_8056E078:
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte fn_801C2E34
+	.4byte func_801C2E34
 	.4byte StartUp__Q34nw4r3snd12FxChorusDpl2Fv
 	.4byte Shutdown__Q34nw4r3snd12FxChorusDpl2Fv
 	.4byte UpdateBuffer__Q34nw4r3snd12FxChorusDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode
@@ -457,19 +457,27 @@
 # 0x8066C760 - 0x8066C780
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C760, global
+.global lbl_8066C760
+lbl_8066C760:
 	.4byte 0x41200000
-.sym lbl_8066C764, global
+.global lbl_8066C764
+lbl_8066C764:
 	.4byte 0x3F000000
-.sym lbl_8066C768, global
+.global lbl_8066C768
+lbl_8066C768:
 	.4byte 0x3F800000
-.sym lbl_8066C76C, global
+.global lbl_8066C76C
+lbl_8066C76C:
 	.4byte 0x00000000
-.sym lbl_8066C770, global
+.global lbl_8066C770
+lbl_8066C770:
 	.4byte 0x42480000
-.sym lbl_8066C774, global
+.global lbl_8066C774
+lbl_8066C774:
 	.4byte 0x3DCCCCCD
-.sym lbl_8066C778, global
+.global lbl_8066C778
+lbl_8066C778:
 	.4byte 0x40000000
-.sym lbl_8066C77C, global
+.global lbl_8066C77C
+lbl_8066C77C:
 	.4byte 0x3F7D70A4

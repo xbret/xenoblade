@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/pad/Pad.o"
 
-# 0x8035F410 - 0x8035F530
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn PADControlMotor, global
@@ -90,17 +89,20 @@
 # 0x80665BB8 - 0x80665BC0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665BB8, global
+.global lbl_80665BB8
+lbl_80665BB8:
 	.4byte 0x00000300
-.sym lbl_80665BBC, global
+.global lbl_80665BBC
+lbl_80665BBC:
 	.4byte 0x00000005
 
 # 0x80667B50 - 0x80667B58
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj __PADSpec, global
+.global __PADSpec
+__PADSpec:
 	.skip 0x4
-.endobj __PADSpec
-.sym lbl_80667B54, global
+.global lbl_80667B54
+lbl_80667B54:
 	.skip 0x4

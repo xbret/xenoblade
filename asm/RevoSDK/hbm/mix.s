@@ -1,11 +1,10 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/mix.o"
 
-# 0x8033F040 - 0x803409B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
-.fn fn_8033F040, global
+.fn func_8033F040, global
 /* 8033F040 00308600  3C 80 80 5D */	lis r4, lbl_805CD898@ha
 /* 8033F044 00308604  3C C0 80 55 */	lis r6, lbl_8054EF00@ha
 /* 8033F048 00308608  80 04 D8 98 */	lwz r0, lbl_805CD898@l(r4)
@@ -47,9 +46,9 @@
 /* 8033F0D4 00308694  90 03 00 28 */	stw r0, 0x28(r3)
 /* 8033F0D8 00308698  90 03 00 2C */	stw r0, 0x2c(r3)
 /* 8033F0DC 0030869C  4E 80 00 20 */	blr
-.endfn fn_8033F040
+.endfn func_8033F040
 
-.fn fn_8033F0E0, global
+.fn func_8033F0E0, global
 /* 8033F0E0 003086A0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8033F0E4 003086A4  7C 08 02 A6 */	mflr r0
 /* 8033F0E8 003086A8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -166,7 +165,7 @@
 /* 8033F29C 0030885C  B3 83 00 38 */	sth r28, 0x38(r3)
 /* 8033F2A0 00308860  B3 83 00 34 */	sth r28, 0x34(r3)
 /* 8033F2A4 00308864  B3 83 00 30 */	sth r28, 0x30(r3)
-/* 8033F2A8 00308868  4B FF FD 99 */	bl fn_8033F040
+/* 8033F2A8 00308868  4B FF FD 99 */	bl func_8033F040
 /* 8033F2AC 0030886C  3B 39 00 01 */	addi r25, r25, 0x1
 /* 8033F2B0 00308870  3B 5A 00 64 */	addi r26, r26, 0x64
 /* 8033F2B4 00308874  2C 19 00 10 */	cmpwi r25, 0x10
@@ -181,16 +180,16 @@
 /* 8033F2D4 00308894  7C 08 03 A6 */	mtlr r0
 /* 8033F2D8 00308898  38 21 00 30 */	addi r1, r1, 0x30
 /* 8033F2DC 0030889C  4E 80 00 20 */	blr
-.endfn fn_8033F0E0
+.endfn func_8033F0E0
 
-.fn fn_8033F2E0, global
+.fn func_8033F2E0, global
 /* 8033F2E0 003088A0  3C 80 80 5D */	lis r4, lbl_805CD89C@ha
 /* 8033F2E4 003088A4  3C 60 80 5D */	lis r3, lbl_805CDEE0@ha
 /* 8033F2E8 003088A8  38 00 00 00 */	li r0, 0x0
 /* 8033F2EC 003088AC  90 04 D8 9C */	stw r0, lbl_805CD89C@l(r4)
 /* 8033F2F0 003088B0  90 03 DE E0 */	stw r0, lbl_805CDEE0@l(r3)
 /* 8033F2F4 003088B4  4E 80 00 20 */	blr
-.endfn fn_8033F2E0
+.endfn func_8033F2E0
 /* 8033F2F8 003088B8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8033F2FC 003088BC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
@@ -201,7 +200,7 @@
 .endfn HBMMIXSetSoundMode
 /* 8033F30C 003088CC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_8033F310, global
+.fn func_8033F310, global
 /* 8033F310 003088D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8033F314 003088D4  7C 08 02 A6 */	mflr r0
 /* 8033F318 003088D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -228,7 +227,7 @@
 /* 8033F36C 0030892C  90 BE 00 0C */	stw r5, 0xc(r30)
 /* 8033F370 00308930  90 DE 00 10 */	stw r6, 0x10(r30)
 /* 8033F374 00308934  90 FE 00 14 */	stw r7, 0x14(r30)
-/* 8033F378 00308938  4B FF FC C9 */	bl fn_8033F040
+/* 8033F378 00308938  4B FF FC C9 */	bl func_8033F040
 /* 8033F37C 0030893C  2C 1D FC 78 */	cmpwi r29, -0x388
 /* 8033F380 00308940  41 81 00 0C */	bgt .L_8033F38C
 /* 8033F384 00308944  38 00 00 00 */	li r0, 0x0
@@ -875,7 +874,7 @@
 /* 8033FC4C 0030920C  7C 08 03 A6 */	mtlr r0
 /* 8033FC50 00309210  38 21 00 20 */	addi r1, r1, 0x20
 /* 8033FC54 00309214  4E 80 00 20 */	blr
-.endfn fn_8033F310
+.endfn func_8033F310
 /* 8033FC58 00309218  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8033FC5C 0030921C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
@@ -958,7 +957,7 @@
 .L_8033FD64:
 /* 8033FD64 00309324  90 1F 00 10 */	stw r0, 0x10(r31)
 /* 8033FD68 00309328  7F E3 FB 78 */	mr r3, r31
-/* 8033FD6C 0030932C  4B FF F2 D5 */	bl fn_8033F040
+/* 8033FD6C 0030932C  4B FF F2 D5 */	bl func_8033F040
 /* 8033FD70 00309330  80 1F 00 04 */	lwz r0, 0x4(r31)
 /* 8033FD74 00309334  64 00 40 00 */	oris r0, r0, 0x4000
 /* 8033FD78 00309338  90 1F 00 04 */	stw r0, 0x4(r31)
@@ -988,7 +987,7 @@
 /* 8033FDC8 00309388  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8033FDCC 0030938C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_8033FDD0, global
+.fn func_8033FDD0, global
 /* 8033FDD0 00309390  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8033FDD4 00309394  3C C0 80 5D */	lis r6, lbl_805CD828@ha
 /* 8033FDD8 00309398  38 C6 D8 28 */	addi r6, r6, lbl_805CD828@l
@@ -1790,11 +1789,11 @@
 /* 803408BC 00309E7C  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 803408C0 00309E80  38 21 00 20 */	addi r1, r1, 0x20
 /* 803408C4 00309E84  4E 80 00 20 */	blr
-.endfn fn_8033FDD0
+.endfn func_8033FDD0
 /* 803408C8 00309E88  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803408CC 00309E8C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_803408D0, global
+.fn func_803408D0, global
 /* 803408D0 00309E90  3C 80 80 5D */	lis r4, lbl_805CD828@ha
 /* 803408D4 00309E94  38 00 00 10 */	li r0, 0x10
 /* 803408D8 00309E98  38 84 D8 28 */	addi r4, r4, lbl_805CD828@l
@@ -1819,22 +1818,22 @@
 /* 8034091C 00309EDC  42 00 FF CC */	bdnz .L_803408E8
 /* 80340920 00309EE0  38 60 FF FF */	li r3, -0x1
 /* 80340924 00309EE4  4E 80 00 20 */	blr
-.endfn fn_803408D0
+.endfn func_803408D0
 /* 80340928 00309EE8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8034092C 00309EEC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80340930, global
+.fn func_80340930, global
 /* 80340930 00309EF0  3C 80 80 5D */	lis r4, lbl_805CD838@ha
 /* 80340934 00309EF4  38 84 D8 38 */	addi r4, r4, lbl_805CD838@l
 /* 80340938 00309EF8  7C 64 18 AE */	lbzx r3, r4, r3
 /* 8034093C 00309EFC  7C 63 07 74 */	extsb r3, r3
 /* 80340940 00309F00  4E 80 00 20 */	blr
-.endfn fn_80340930
+.endfn func_80340930
 /* 80340944 00309F04  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80340948 00309F08  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8034094C 00309F0C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80340950, global
+.fn func_80340950, global
 /* 80340950 00309F10  3C A0 80 5D */	lis r5, lbl_805CD828@ha
 /* 80340954 00309F14  3C 80 80 5D */	lis r4, lbl_805CD838@ha
 /* 80340958 00309F18  38 A5 D8 28 */	addi r5, r5, lbl_805CD828@l
@@ -1845,7 +1844,7 @@
 /* 8034096C 00309F2C  7C 05 19 AE */	stbx r0, r5, r3
 /* 80340970 00309F30  7C 04 31 AE */	stbx r0, r4, r6
 /* 80340974 00309F34  4E 80 00 20 */	blr
-.endfn fn_80340950
+.endfn func_80340950
 /* 80340978 00309F38  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8034097C 00309F3C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
@@ -1867,7 +1866,8 @@
 # 0x8054EF00 - 0x8054FA90
 .data
 .balign 8
-.sym lbl_8054EF00, global
+.global lbl_8054EF00
+lbl_8054EF00:
 	.4byte 0x00000001
 	.4byte 0x00010001
 	.4byte 0x00010001
@@ -2612,13 +2612,18 @@
 # 0x805CD828 - 0x805CDEE8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CD828, global
+.global lbl_805CD828
+lbl_805CD828:
 	.skip 0x10
-.sym lbl_805CD838, global
+.global lbl_805CD838
+lbl_805CD838:
 	.skip 0x60
-.sym lbl_805CD898, global
+.global lbl_805CD898
+lbl_805CD898:
 	.skip 0x4
-.sym lbl_805CD89C, global
+.global lbl_805CD89C
+lbl_805CD89C:
 	.skip 0x644
-.sym lbl_805CDEE0, global
+.global lbl_805CDEE0
+lbl_805CDEE0:
 	.skip 0x8

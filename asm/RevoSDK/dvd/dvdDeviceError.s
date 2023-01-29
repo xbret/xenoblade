@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/dvd/dvdDeviceError.o"
 
-# 0x80310370 - 0x80310600
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn lowCallback, local
@@ -201,7 +200,8 @@
 .rodata
 .balign 8
 
-.obj __DVDDeviceErrorMessage, global
+.global __DVDDeviceErrorMessage
+__DVDDeviceErrorMessage:
 	.4byte lbl_8054A528
 	.4byte lbl_8054A564
 	.4byte lbl_8054A59C
@@ -209,13 +209,13 @@
 	.4byte lbl_8054A618
 	.4byte lbl_8054A654
 	.4byte lbl_8054A690
-.endobj __DVDDeviceErrorMessage
 	.4byte 0x00000000
 
 # 0x8054A528 - 0x8054A6C0
 .data
 .balign 8
-.sym lbl_8054A528, global
+.global lbl_8054A528
+lbl_8054A528:
 	.4byte 0x0A0A0A83
 	.4byte 0x47838981
 	.4byte 0x5B835281
@@ -231,7 +231,8 @@
 	.4byte 0x82DC82B5
 	.4byte 0x82BD8142
 	.4byte 0x00000000
-.sym lbl_8054A564, global
+.global lbl_8054A564
+lbl_8054A564:
 	.4byte 0x0A0A0A45
 	.4byte 0x72726F72
 	.4byte 0x20233030
@@ -246,7 +247,8 @@
 	.4byte 0x64657465
 	.4byte 0x63746564
 	.4byte 0x2E000000
-.sym lbl_8054A59C, global
+.global lbl_8054A59C
+lbl_8054A59C:
 	.4byte 0x0A0A0A46
 	.4byte 0x65686C65
 	.4byte 0x72202330
@@ -263,7 +265,8 @@
 	.4byte 0x0A656E74
 	.4byte 0x6465636B
 	.4byte 0x742E0000
-.sym lbl_8054A5DC, global
+.global lbl_8054A5DC
+lbl_8054A5DC:
 	.4byte 0x0A0A0A45
 	.4byte 0x72726575
 	.4byte 0x72203030
@@ -279,7 +282,8 @@
 	.4byte 0x64E97465
 	.4byte 0x6374E92E
 	.4byte 0x00000000
-.sym lbl_8054A618, global
+.global lbl_8054A618
+lbl_8054A618:
 	.4byte 0x0A0A0A45
 	.4byte 0x72726F72
 	.4byte 0x20303031
@@ -295,7 +299,8 @@
 	.4byte 0x6175746F
 	.4byte 0x72697A61
 	.4byte 0x646F2E00
-.sym lbl_8054A654, global
+.global lbl_8054A654
+lbl_8054A654:
 	.4byte 0x0A0A0A45
 	.4byte 0x72726F72
 	.4byte 0x65202330
@@ -311,7 +316,8 @@
 	.4byte 0x72697A7A
 	.4byte 0x61746F2E
 	.4byte 0x00000000
-.sym lbl_8054A690, global
+.global lbl_8054A690
+lbl_8054A690:
 	.4byte 0x0A0A0A46
 	.4byte 0x6F757420
 	.4byte 0x23303031
@@ -329,26 +335,23 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj CheckBuffer, local
+CheckBuffer:
 	.skip 0x20
-.endobj CheckBuffer
 
 # 0x806659A0 - 0x806659A8
 .section .sdata, "wa"
 .balign 8
 
-.obj lowDone, local
+lowDone:
 	.4byte 0x00000001
-.endobj lowDone
 	.4byte 0x00000000
 
 # 0x80667890 - 0x80667898
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj lowIntType, local
+lowIntType:
 	.skip 0x4
-.endobj lowIntType
 	.skip 0x4
 
 # 0x8066BF90 - 0x8066BF98

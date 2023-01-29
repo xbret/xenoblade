@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/gx/GXPerf.o"
 
-# 0x8031EA70 - 0x8031F2A0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn GXSetGPMetric, global
@@ -606,7 +605,7 @@
 .data
 .balign 8
 
-.obj jumptable_8054C130, local
+jumptable_8054C130:
 	.rel GXSetGPMetric, .L_8031EFB0
 	.rel GXSetGPMetric, .L_8031EFCC
 	.rel GXSetGPMetric, .L_8031EFE8
@@ -629,9 +628,8 @@
 	.rel GXSetGPMetric, .L_8031F264
 	.rel GXSetGPMetric, .L_8031F274
 	.rel GXSetGPMetric, .L_8031F03C
-.endobj jumptable_8054C130
 
-.obj jumptable_8054C188, local
+jumptable_8054C188:
 	.rel GXSetGPMetric, .L_8031EB8C
 	.rel GXSetGPMetric, .L_8031EBAC
 	.rel GXSetGPMetric, .L_8031EBCC
@@ -667,5 +665,4 @@
 	.rel GXSetGPMetric, .L_8031EF58
 	.rel GXSetGPMetric, .L_8031EF74
 	.rel GXSetGPMetric, .L_8031ECCC
-.endobj jumptable_8054C188
 	.4byte 0x00000000

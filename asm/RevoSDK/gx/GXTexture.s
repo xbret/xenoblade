@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/gx/GXTexture.o"
 
-# 0x8031C0C0 - 0x8031D160
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn GXGetTexBufferSize, global
@@ -1233,7 +1232,7 @@
 .data
 .balign 8
 
-.obj jumptable_8054BE70, local
+jumptable_8054BE70:
 	.rel GXGetTexBufferSize, .L_8031C0E0
 	.rel GXGetTexBufferSize, .L_8031C0EC
 	.rel GXGetTexBufferSize, .L_8031C0EC
@@ -1295,9 +1294,8 @@
 	.rel GXGetTexBufferSize, .L_8031C0EC
 	.rel GXGetTexBufferSize, .L_8031C104
 	.rel GXGetTexBufferSize, .L_8031C0F8
-.endobj jumptable_8054BE70
 
-.obj jumptable_8054BF64, local
+jumptable_8054BF64:
 	.rel __GetImageTileCount, .L_8031C210
 	.rel __GetImageTileCount, .L_8031C21C
 	.rel __GetImageTileCount, .L_8031C21C
@@ -1359,9 +1357,8 @@
 	.rel __GetImageTileCount, .L_8031C21C
 	.rel __GetImageTileCount, .L_8031C234
 	.rel __GetImageTileCount, .L_8031C228
-.endobj jumptable_8054BF64
 
-.obj jumptable_8054C058, local
+jumptable_8054C058:
 	.rel GXInitTexObj, .L_8031C3F4
 	.rel GXInitTexObj, .L_8031C408
 	.rel GXInitTexObj, .L_8031C408
@@ -1377,65 +1374,84 @@
 	.rel GXInitTexObj, .L_8031C458
 	.rel GXInitTexObj, .L_8031C458
 	.rel GXInitTexObj, .L_8031C444
-.endobj jumptable_8054C058
 	.4byte 0x00000000
 
 # 0x80665A08 - 0x80665A50
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665A08, global
+.global lbl_80665A08
+lbl_80665A08:
 	.4byte 0x80818283
 	.4byte 0xA0A1A2A3
-.sym lbl_80665A10, global
+.global lbl_80665A10
+lbl_80665A10:
 	.4byte 0x84858687
 	.4byte 0xA4A5A6A7
-.sym lbl_80665A18, global
+.global lbl_80665A18
+lbl_80665A18:
 	.4byte 0x88898A8B
 	.4byte 0xA8A9AAAB
-.sym lbl_80665A20, global
+.global lbl_80665A20
+lbl_80665A20:
 	.4byte 0x8C8D8E8F
 	.4byte 0xACADAEAF
-.sym lbl_80665A28, global
+.global lbl_80665A28
+lbl_80665A28:
 	.4byte 0x90919293
 	.4byte 0xB0B1B2B3
-.sym lbl_80665A30, global
+.global lbl_80665A30
+lbl_80665A30:
 	.4byte 0x94959697
 	.4byte 0xB4B5B6B7
-.sym lbl_80665A38, global
+.global lbl_80665A38
+lbl_80665A38:
 	.4byte 0x98999A9B
 	.4byte 0xB8B9BABB
-.sym lbl_80665A40, global
+.global lbl_80665A40
+lbl_80665A40:
 	.4byte 0x00040105
 	.4byte 0x02060000
-.sym lbl_80665A48, global
+.global lbl_80665A48
+lbl_80665A48:
 	.4byte 0x00020400
 	.4byte 0x01030500
 
 # 0x8066C010 - 0x8066C048
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C010, global
+.global lbl_8066C010
+lbl_8066C010:
 	.4byte 0x41800000
 	.4byte 0x00000000
-.sym lbl_8066C018, global
+.global lbl_8066C018
+lbl_8066C018:
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C020, global
+.global lbl_8066C020
+lbl_8066C020:
 	.4byte 0xC0800000
-.sym lbl_8066C024, global
+.global lbl_8066C024
+lbl_8066C024:
 	.4byte 0x407F5C29
-.sym lbl_8066C028, global
+.global lbl_8066C028
+lbl_8066C028:
 	.4byte 0x40800000
-.sym lbl_8066C02C, global
+.global lbl_8066C02C
+lbl_8066C02C:
 	.4byte 0x42000000
-.sym lbl_8066C030, global
+.global lbl_8066C030
+lbl_8066C030:
 	.4byte 0x00000000
-.sym lbl_8066C034, global
+.global lbl_8066C034
+lbl_8066C034:
 	.4byte 0x41200000
-.sym lbl_8066C038, global
+.global lbl_8066C038
+lbl_8066C038:
 	.4byte 0x3D800000
-.sym lbl_8066C03C, global
+.global lbl_8066C03C
+lbl_8066C03C:
 	.4byte 0x3D000000
-.sym lbl_8066C040, global
+.global lbl_8066C040
+lbl_8066C040:
 	.4byte 0x43300000
 	.4byte 0x80000000

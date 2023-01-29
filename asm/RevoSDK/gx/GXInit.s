@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/gx/GXInit.o"
 
-# 0x80317470 - 0x80318600
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __GXDefaultTexRegionCallback, global
@@ -1183,7 +1182,8 @@
 # 0x8054B680 - 0x8054B8C0
 .data
 .balign 8
-.sym lbl_8054B680, global
+.global lbl_8054B680
+lbl_8054B680:
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -1276,7 +1276,8 @@
 	.4byte 0xC0000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8054B7F0, global
+.global lbl_8054B7F0
+lbl_8054B7F0:
 	.4byte 0x00000000
 	.4byte 0x00010000
 	.4byte 0x00020000
@@ -1325,7 +1326,8 @@
 	.4byte 0x00050000
 	.4byte 0x000A0000
 	.4byte 0x00070000
-.sym lbl_8054B8B0, global
+.global lbl_8054B8B0
+lbl_8054B8B0:
 	.4byte __GXShutdown
 	.4byte 0x0000007F
 	.4byte 0x00000000
@@ -1334,58 +1336,78 @@
 # 0x805CCEE0 - 0x805CD560
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CCEE0, global
+.global lbl_805CCEE0
+lbl_805CCEE0:
 	.skip 0x80
-.sym lbl_805CCF60, global
+.global lbl_805CCF60
+lbl_805CCF60:
 	.skip 0x600
 
 # 0x806659F0 - 0x806659F8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806659F0, global
+.global lbl_806659F0
+lbl_806659F0:
 	.4byte lbl_8054B680
 	.4byte 0x00000000
 
 # 0x80667908 - 0x80667930
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667908, global
+.global lbl_80667908
+lbl_80667908:
 	.skip 0x4
-.sym lbl_8066790C, global
+.global lbl_8066790C
+lbl_8066790C:
 	.skip 0x4
-.sym lbl_80667910, global
+.global lbl_80667910
+lbl_80667910:
 	.skip 0x4
-.sym lbl_80667914, global
+.global lbl_80667914
+lbl_80667914:
 	.skip 0x4
-.sym lbl_80667918, global
+.global lbl_80667918
+lbl_80667918:
 	.skip 0x8
-.sym lbl_80667920, global
+.global lbl_80667920
+lbl_80667920:
 	.skip 0x4
-.sym lbl_80667924, global
+.global lbl_80667924
+lbl_80667924:
 	.skip 0x4
-.sym lbl_80667928, global
+.global lbl_80667928
+lbl_80667928:
 	.skip 0x4
-.sym lbl_8066792C, global
+.global lbl_8066792C
+lbl_8066792C:
 	.skip 0x4
 
 # 0x8066BFA0 - 0x8066BFC8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BFA0, global
+.global lbl_8066BFA0
+lbl_8066BFA0:
 	.4byte lbl_805CCF60
-.sym lbl_8066BFA4, global
+.global lbl_8066BFA4
+lbl_8066BFA4:
 	.4byte 0x4B800000
-.sym lbl_8066BFA8, global
+.global lbl_8066BFA8
+lbl_8066BFA8:
 	.4byte 0x00000000
-.sym lbl_8066BFAC, global
+.global lbl_8066BFAC
+lbl_8066BFAC:
 	.4byte 0x404040FF
-.sym lbl_8066BFB0, global
+.global lbl_8066BFB0
+lbl_8066BFB0:
 	.4byte 0xFFFFFFFF
-.sym lbl_8066BFB4, global
+.global lbl_8066BFB4
+lbl_8066BFB4:
 	.4byte 0x3F800000
-.sym lbl_8066BFB8, global
+.global lbl_8066BFB8
+lbl_8066BFB8:
 	.4byte 0x3DCCCCCD
 	.4byte 0x00000000
-.sym lbl_8066BFC0, global
+.global lbl_8066BFC0
+lbl_8066BFC0:
 	.4byte 0x43300000
 	.4byte 0x00000000

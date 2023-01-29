@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/sc/scapi_prdinfo.o"
 
-# 0x803613D0 - 0x80361660
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __SCF1, global
@@ -203,7 +202,8 @@
 # 0x8055F0D8 - 0x8055F138
 .data
 .balign 8
-.sym lbl_8055F0D8, global
+.global lbl_8055F0D8
+lbl_8055F0D8:
 	.4byte 0x004A504E
 	.4byte 0x00015553
 	.4byte 0x41000245
@@ -222,7 +222,8 @@
 	.4byte 0x0B43484E
 	.4byte 0x00FF0000
 	.4byte 0x00000000
-.sym lbl_8055F120, global
+.global lbl_8055F120
+lbl_8055F120:
 	.4byte 0x004A5000
 	.4byte 0x01555300
 	.4byte 0x02455500
@@ -233,9 +234,11 @@
 # 0x80665CD0 - 0x80665CE0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665CD0, global
+.global lbl_80665CD0
+lbl_80665CD0:
 	.4byte 0x41524541
 	.4byte 0x00000000
-.sym lbl_80665CD8, global
+.global lbl_80665CD8
+lbl_80665CD8:
 	.4byte 0x47414D45
 	.4byte 0x00000000

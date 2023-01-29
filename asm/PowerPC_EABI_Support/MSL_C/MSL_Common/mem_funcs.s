@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common/mem_funcs.o"
 
-# 0x802BE878 - 0x802BEB48
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __copy_longs_aligned, global

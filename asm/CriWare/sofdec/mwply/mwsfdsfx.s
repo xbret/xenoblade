@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/mwply/mwsfdsfx.o"
 
-# 0x8039DED4 - 0x8039ECA4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MWSFSFX_Init, global
@@ -300,7 +299,7 @@
 /* 8039E294 00367854  4E 80 00 20 */	blr
 .endfn MWSFD_CnvFrmInfToSfx
 
-.fn fn_8039E298, global
+.fn func_8039E298, global
 /* 8039E298 00367858  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039E29C 0036785C  7C 08 02 A6 */	mflr r0
 /* 8039E2A0 00367860  90 01 00 14 */	stw r0, 0x14(r1)
@@ -337,7 +336,7 @@
 /* 8039E310 003678D0  7C 08 03 A6 */	mtlr r0
 /* 8039E314 003678D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039E318 003678D8  4E 80 00 20 */	blr
-.endfn fn_8039E298
+.endfn func_8039E298
 
 .fn MWSFD_IsColAdjFrame, global
 /* 8039E31C 003678DC  54 80 E8 04 */	slwi r0, r4, 29
@@ -544,7 +543,7 @@
 /* 8039E5B4 00367B74  4C C6 31 82 */	crclr 4*cr1+eq
 /* 8039E5B8 00367B78  4B FF F6 81 */	bl MWSFSVM_Error
 /* 8039E5BC 00367B7C  7F E3 FB 78 */	mr r3, r31
-/* 8039E5C0 00367B80  48 00 23 F5 */	bl fn_803A09B4
+/* 8039E5C0 00367B80  48 00 23 F5 */	bl func_803A09B4
 /* 8039E5C4 00367B84  38 60 00 00 */	li r3, 0x0
 .L_8039E5C8:
 /* 8039E5C8 00367B88  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -799,7 +798,7 @@
 /* 8039E924 00367EE4  4E 80 00 20 */	blr
 .endfn mwsftag_GetAinfFromSj
 
-.fn fn_8039E928, global
+.fn func_8039E928, global
 /* 8039E928 00367EE8  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 8039E92C 00367EEC  7C 08 02 A6 */	mflr r0
 /* 8039E930 00367EF0  90 01 00 C4 */	stw r0, 0xc4(r1)
@@ -1059,12 +1058,13 @@
 /* 8039EC98 00368258  7C 08 03 A6 */	mtlr r0
 /* 8039EC9C 0036825C  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 8039ECA0 00368260  4E 80 00 20 */	blr
-.endfn fn_8039E928
+.endfn func_8039E928
 
 # 0x8051D508 - 0x8051DA00
 .rodata
 .balign 8
-.sym lbl_8051D508, global
+.global lbl_8051D508
+lbl_8051D508:
 	.4byte 0x45323031
 	.4byte 0x31383420
 	.4byte 0x4D777366

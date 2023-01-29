@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_anmtexsrt.o"
 
-# 0x803E3398 - 0x803E3E14
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::AnmObjTexSrt::TestExistence(unsigned long) const
@@ -842,14 +841,16 @@
 # 0x80520EA8 - 0x80520ED8
 .rodata
 .balign 8
-.sym lbl_80520EA8, global
+.global lbl_80520EA8
+lbl_80520EA8:
 	.4byte 0x0000000D
 	.4byte 0x416E6D4F
 	.4byte 0x626A5465
 	.4byte 0x78537274
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_80520EC0, global
+.global lbl_80520EC0
+lbl_80520EC0:
 	.4byte 0x00000010
 	.4byte 0x416E6D4F
 	.4byte 0x626A5465
@@ -860,7 +861,8 @@
 # 0x8056CB80 - 0x8056CC10
 .data
 .balign 8
-.sym lbl_8056CB80, global
+.global lbl_8056CB80
+lbl_8056CB80:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d15AnmObjTexSrtResCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -879,7 +881,8 @@
 	.4byte Attach__Q34nw4r3g3d12AnmObjTexSrtFiPQ34nw4r3g3d15AnmObjTexSrtRes
 	.4byte Detach__Q34nw4r3g3d12AnmObjTexSrtFi
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexSrtFv
-.sym lbl_8056CBC8, global
+.global lbl_8056CBC8
+lbl_8056CBC8:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjTexSrtCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -902,16 +905,21 @@
 # 0x8066C368 - 0x8066C388
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C368, global
+.global lbl_8066C368
+lbl_8066C368:
 	.4byte 0x00000000
-.sym lbl_8066C36C, global
+.global lbl_8066C36C
+lbl_8066C36C:
 	.4byte 0x3F800000
-.sym lbl_8066C370, global
+.global lbl_8066C370
+lbl_8066C370:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C378, global
+.global lbl_8066C378
+lbl_8066C378:
 	.4byte 0x219392EF
 	.4byte 0x00000000
-.sym lbl_8066C380, global
+.global lbl_8066C380
+lbl_8066C380:
 	.4byte 0x3FF00000
 	.4byte 0x00000000

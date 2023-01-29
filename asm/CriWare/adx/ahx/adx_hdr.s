@@ -1,11 +1,10 @@
 .include "macros.inc"
-.file "CriWare/adx/ahx/adx_hdr.o"
 
-# 0x8038CF04 - 0x8038D300
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.fn fn_8038CF04, global
+.fn func_8038CF04, global
 /* 8038CF04 003564C4  2C 04 00 00 */	cmpwi r4, 0x0
 /* 8038CF08 003564C8  40 82 00 10 */	bne .L_8038CF18
 /* 8038CF0C 003564CC  38 00 00 00 */	li r0, 0x0
@@ -15,7 +14,7 @@
 /* 8038CF18 003564D8  38 00 00 01 */	li r0, 0x1
 /* 8038CF1C 003564DC  90 03 00 38 */	stw r0, 0x38(r3)
 /* 8038CF20 003564E0  4E 80 00 20 */	blr
-.endfn fn_8038CF04
+.endfn func_8038CF04
 
 .fn AHXTBL_GetWtblInfo, global
 /* 8038CF24 003564E4  2C 03 00 00 */	cmpwi r3, 0x0
@@ -308,9 +307,11 @@
 # 0x8056607C - 0x80569190
 .data
 .balign 4
-.sym lbl_8056607C, global
+.global lbl_8056607C
+lbl_8056607C:
 	.4byte 0x00000880
-.sym lbl_80566080, global
+.global lbl_80566080
+lbl_80566080:
 	.4byte 0x00000000
 	.4byte 0x00000004
 	.4byte 0x00000000
@@ -3384,7 +3385,8 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-.obj ahxcmn_multiple_tbl, global
+.global ahxcmn_multiple_tbl
+ahxcmn_multiple_tbl:
 	.4byte 0x40000000
 	.4byte 0x3FCB2FF5
 	.4byte 0x3FA14518
@@ -3449,11 +3451,15 @@
 	.4byte 0x35CB2FF5
 	.4byte 0x35A14518
 	.4byte 0x1E3CE508
-.sym lbl_80569180, global
+.global lbl_80569180
+lbl_80569180:
 	.4byte lbl_80566080
-.sym lbl_80569184, global
+.global lbl_80569184
+lbl_80569184:
 	.4byte 0x00003000
-.sym lbl_80569188, global
+.global lbl_80569188
+lbl_80569188:
 	.4byte ahxcmn_multiple_tbl
-.sym lbl_8056918C, global
+.global lbl_8056918C
+lbl_8056918C:
 	.4byte 0x00000100

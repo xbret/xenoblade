@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/gki_ppc.o"
 
-# 0x802DC790 - 0x802DCAA0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn GKI_init, global

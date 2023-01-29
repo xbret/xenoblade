@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSCrc.o"
 
-# 0x8035F000 - 0x8035F140
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn NETCalcCRC16, global
@@ -95,7 +94,8 @@
 # 0x80518D10 - 0x80518D30
 .rodata
 .balign 8
-.sym lbl_80518D10, global
+.global lbl_80518D10
+lbl_80518D10:
 	.4byte 0x0000CC01
 	.4byte 0xD8011400
 	.4byte 0xF0013C00

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mps/mps_dec.o"
 
-# 0x803BB730 - 0x803BCA04
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPSDEC_Init, global

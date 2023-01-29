@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/ax/AXOut.o"
 
-# 0x802D3A70 - 0x802D4320
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __AXOutNewFrame, global
@@ -639,53 +638,74 @@
 # 0x80580BC0 - 0x805819C0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80580BC0, global
+.global lbl_80580BC0
+lbl_80580BC0:
 	.skip 0x40
-.sym lbl_80580C00, global
+.global lbl_80580C00
+lbl_80580C00:
 	.skip 0x8A0
-.sym lbl_805814A0, global
+.global lbl_805814A0
+lbl_805814A0:
 	.skip 0x480
-.sym lbl_80581920, global
+.global lbl_80581920
+lbl_80581920:
 	.skip 0x60
-.sym lbl_80581980, global
+.global lbl_80581980
+lbl_80581980:
 	.skip 0x40
 
 # 0x806658B8 - 0x806658C0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806658B8, global
+.global lbl_806658B8
+lbl_806658B8:
 	.2byte 0x0010
-.sym lbl_806658BA, global
+.global lbl_806658BA
+lbl_806658BA:
 	.2byte 0x0037
-.sym lbl_806658BC, global
+.global lbl_806658BC
+lbl_806658BC:
 	.4byte 0x20000000
 
 # 0x80667688 - 0x806676C8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667688, global
+.global lbl_80667688
+lbl_80667688:
 	.skip 0x4
-.sym lbl_8066768C, global
+.global lbl_8066768C
+lbl_8066768C:
 	.skip 0x4
-.sym lbl_80667690, global
+.global lbl_80667690
+lbl_80667690:
 	.skip 0x4
-.sym lbl_80667694, global
+.global lbl_80667694
+lbl_80667694:
 	.skip 0x4
-.sym lbl_80667698, global
+.global lbl_80667698
+lbl_80667698:
 	.skip 0x8
-.sym lbl_806676A0, global
+.global lbl_806676A0
+lbl_806676A0:
 	.skip 0x8
-.sym lbl_806676A8, global
+.global lbl_806676A8
+lbl_806676A8:
 	.skip 0x4
-.sym lbl_806676AC, global
+.global lbl_806676AC
+lbl_806676AC:
 	.skip 0x4
-.sym lbl_806676B0, global
+.global lbl_806676B0
+lbl_806676B0:
 	.skip 0x4
-.sym lbl_806676B4, global
+.global lbl_806676B4
+lbl_806676B4:
 	.skip 0x4
-.sym lbl_806676B8, global
+.global lbl_806676B8
+lbl_806676B8:
 	.skip 0x4
-.sym lbl_806676BC, global
+.global lbl_806676BC
+lbl_806676BC:
 	.skip 0x4
-.sym lbl_806676C0, global
+.global lbl_806676C0
+lbl_806676C0:
 	.skip 0x8

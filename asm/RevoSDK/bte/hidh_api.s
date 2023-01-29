@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/hidh_api.o"
 
-# 0x802F3B44 - 0x802F48C4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn HID_HostGetSDPRecord, global
@@ -987,7 +986,8 @@
 # 0x805466E0 - 0x805467F8
 .data
 .balign 8
-.sym lbl_805466E0, global
+.global lbl_805466E0
+lbl_805466E0:
 	.4byte 0x4849445F
 	.4byte 0x4552525F
 	.4byte 0x4E4F545F

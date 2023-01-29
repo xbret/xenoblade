@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/lyt/lyt_window.o"
 
-# 0x80402E28 - 0x804053DC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::lyt::Window::Window(const nw4r::lyt::res::Window*, const nw4r::lyt::ResBlockSet&)
@@ -19,12 +18,12 @@
 /* 80402E4C 003CC40C  3C 60 80 57 */	lis r3, lbl_8056D3D4@ha
 /* 80402E50 003CC410  3C 80 80 40 */	lis r4, __ct__Q34nw4r2ut5ColorFv@ha
 /* 80402E54 003CC414  38 63 D3 D4 */	addi r3, r3, lbl_8056D3D4@l
-/* 80402E58 003CC418  3C A0 80 12 */	lis r5, fn_801252D0@ha
+/* 80402E58 003CC418  3C A0 80 12 */	lis r5, func_801252D0@ha
 /* 80402E5C 003CC41C  3B 99 00 E8 */	addi r28, r25, 0xe8
 /* 80402E60 003CC420  90 79 00 00 */	stw r3, 0x0(r25)
 /* 80402E64 003CC424  7F 83 E3 78 */	mr r3, r28
 /* 80402E68 003CC428  38 84 0C 60 */	addi r4, r4, __ct__Q34nw4r2ut5ColorFv@l
-/* 80402E6C 003CC42C  38 A5 52 D0 */	addi r5, r5, fn_801252D0@l
+/* 80402E6C 003CC42C  38 A5 52 D0 */	addi r5, r5, func_801252D0@l
 /* 80402E70 003CC430  38 C0 00 04 */	li r6, 0x4
 /* 80402E74 003CC434  38 E0 00 04 */	li r7, 0x4
 /* 80402E78 003CC438  4B EB 6C 89 */	bl __construct_array
@@ -255,9 +254,9 @@
 /* 80403198 003CC758  48 00 6F 25 */	bl Free__Q44nw4r3lyt6detail11TexCoordAryFv
 /* 8040319C 003CC75C  34 79 00 E8 */	addic. r3, r25, 0xe8
 /* 804031A0 003CC760  41 82 00 18 */	beq .L_804031B8
-/* 804031A4 003CC764  3C 80 80 12 */	lis r4, fn_801252D0@ha
+/* 804031A4 003CC764  3C 80 80 12 */	lis r4, func_801252D0@ha
 /* 804031A8 003CC768  38 A0 00 04 */	li r5, 0x4
-/* 804031AC 003CC76C  38 84 52 D0 */	addi r4, r4, fn_801252D0@l
+/* 804031AC 003CC76C  38 84 52 D0 */	addi r4, r4, func_801252D0@l
 /* 804031B0 003CC770  38 C0 00 04 */	li r6, 0x4
 /* 804031B4 003CC774  4B EB 6A 45 */	bl __destroy_arr
 .L_804031B8:
@@ -2573,7 +2572,8 @@
 # 0x8056D398 - 0x8056D460
 .data
 .balign 8
-.sym lbl_8056D398, global
+.global lbl_8056D398
+lbl_8056D398:
 	.4byte 0x00000100
 	.4byte 0x00010101
 	.4byte 0x00010100
@@ -2589,7 +2589,8 @@
 	.4byte 0x00010100
 	.4byte 0x01010000
 	.4byte 0x00010100
-.sym lbl_8056D3D4, global
+.global lbl_8056D3D4
+lbl_8056D3D4:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt6WindowFv
@@ -2629,18 +2630,22 @@
 # 0x80667D70 - 0x80667D78
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D70, global
+.global lbl_80667D70
+lbl_80667D70:
 	.skip 0x8
 
 # 0x8066C580 - 0x8066C598
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C580, global
+.global lbl_8066C580
+lbl_8066C580:
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066C588, global
+.global lbl_8066C588
+lbl_8066C588:
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C590, global
+.global lbl_8066C590
+lbl_8066C590:
 	.4byte 0x43300000
 	.4byte 0x80000000

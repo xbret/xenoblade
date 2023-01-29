@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_bsps.o"
 
-# 0x80397A0C - 0x80397F70
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADX_DecodeInfoSpsd, global
@@ -386,6 +385,7 @@
 # 0x8051C748 - 0x8051C750
 .rodata
 .balign 8
-.sym lbl_8051C748, global
+.global lbl_8051C748
+lbl_8051C748:
 	.4byte 0x53505344
 	.4byte 0x00000000

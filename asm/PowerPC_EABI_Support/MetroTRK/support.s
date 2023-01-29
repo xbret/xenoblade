@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MetroTRK/support.o"
 
-# 0x802CCAA0 - 0x802CD0C4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn TRKSuppAccessFile, global
@@ -450,7 +449,8 @@
 # 0x8053FEA8 - 0x8053FEF0
 .data
 .balign 8
-.sym lbl_8053FEA8, global
+.global lbl_8053FEA8
+lbl_8053FEA8:
 	.4byte 0x4D657472
 	.4byte 0x6F54524B
 	.4byte 0x202D2062

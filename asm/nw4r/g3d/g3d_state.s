@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_state.o"
 
-# 0x803E7B9C - 0x803EB6B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::detail::ScnDependentMtxFunc::EnvironmentMapping(nw4r::math::MTX34*, signed char, signed char)
@@ -4267,7 +4266,8 @@
 # 0x80520F78 - 0x80520FA8
 .rodata
 .balign 8
-.sym lbl_80520F78, global
+.global lbl_80520F78
+lbl_80520F78:
 	.4byte 0x3F000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -4284,7 +4284,8 @@
 # 0x8056CEB0 - 0x8056CEC8
 .data
 .balign 8
-.sym lbl_8056CEB0, global
+.global lbl_8056CEB0
+lbl_8056CEB0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __cl__Q44nw4r3g3d8G3DState11IndMtxOpStdFPQ44nw4r3g3d8G3DState13IndTexMtxInfo
@@ -4295,77 +4296,107 @@
 # 0x8061D740 - 0x80622D00
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061D740, global
+.global lbl_8061D740
+lbl_8061D740:
 	.skip 0xC
-.sym lbl_8061D74C, global
+.global lbl_8061D74C
+lbl_8061D74C:
 	.skip 0x74
-.sym lbl_8061D7C0, global
+.global lbl_8061D7C0
+lbl_8061D7C0:
 	.skip 0x120
-.sym lbl_8061D8E0, global
+.global lbl_8061D8E0
+lbl_8061D8E0:
 	.skip 0x70
-.sym lbl_8061D950, global
+.global lbl_8061D950
+lbl_8061D950:
 	.skip 0x20
-.sym lbl_8061D970, global
+.global lbl_8061D970
+lbl_8061D970:
 	.skip 0x10
-.sym lbl_8061D980, global
+.global lbl_8061D980
+lbl_8061D980:
 	.skip 0x800
-.sym lbl_8061E180, global
+.global lbl_8061E180
+lbl_8061E180:
 	.skip 0x8
-.sym lbl_8061E188, global
+.global lbl_8061E188
+lbl_8061E188:
 	.skip 0x60C
-.sym lbl_8061E794, global
+.global lbl_8061E794
+lbl_8061E794:
 	.skip 0x2A2C
-.sym lbl_806211C0, global
+.global lbl_806211C0
+lbl_806211C0:
 	.skip 0x1A34
-.sym lbl_80622BF4, global
+.global lbl_80622BF4
+lbl_80622BF4:
 	.skip 0x4C
-.sym lbl_80622C40, global
+.global lbl_80622C40
+lbl_80622C40:
 	.skip 0x98
-.sym lbl_80622CD8, global
+.global lbl_80622CD8
+lbl_80622CD8:
 	.skip 0x28
 
 # 0x80665D98 - 0x80665DA0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665D98, global
+.global lbl_80665D98
+lbl_80665D98:
 	.4byte 0xFFFFFFFF
-.sym lbl_80665D9C, global
+.global lbl_80665D9C
+lbl_80665D9C:
 	.4byte lbl_80622C40
 
 # 0x80667D28 - 0x80667D48
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D28, global
+.global lbl_80667D28
+lbl_80667D28:
 	.skip 0x4
-.sym lbl_80667D2C, global
+.global lbl_80667D2C
+lbl_80667D2C:
 	.skip 0x4
-.sym lbl_80667D30, global
+.global lbl_80667D30
+lbl_80667D30:
 	.skip 0x4
-.sym lbl_80667D34, global
+.global lbl_80667D34
+lbl_80667D34:
 	.skip 0x4
-.sym lbl_80667D38, global
+.global lbl_80667D38
+lbl_80667D38:
 	.skip 0x8
-.sym lbl_80667D40, global
+.global lbl_80667D40
+lbl_80667D40:
 	.skip 0x8
 
 # 0x8066C3E8 - 0x8066C410
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C3E8, global
+.global lbl_8066C3E8
+lbl_8066C3E8:
 	.4byte 0x00020103
-.sym lbl_8066C3EC, global
+.global lbl_8066C3EC
+lbl_8066C3EC:
 	.4byte 0x00000000
-.sym lbl_8066C3F0, global
+.global lbl_8066C3F0
+lbl_8066C3F0:
 	.4byte 0xBF800000
-.sym lbl_8066C3F4, global
+.global lbl_8066C3F4
+lbl_8066C3F4:
 	.4byte 0x358637BD
-.sym lbl_8066C3F8, global
+.global lbl_8066C3F8
+lbl_8066C3F8:
 	.4byte 0x3F800000
-.sym lbl_8066C3FC, global
+.global lbl_8066C3FC
+lbl_8066C3FC:
 	.4byte 0x3F000000
-.sym lbl_8066C400, global
+.global lbl_8066C400
+lbl_8066C400:
 	.4byte 0x3B808081
 	.4byte 0x00000000
-.sym lbl_8066C408, global
+.global lbl_8066C408
+lbl_8066C408:
 	.4byte 0x43300000
 	.4byte 0x80000000

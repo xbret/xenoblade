@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_resshp.o"
 
-# 0x803DA660 - 0x803DAEF4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ResShp::GetResVtxPos() const

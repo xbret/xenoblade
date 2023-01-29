@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MetroTRK/targimpl.o"
 
-# 0x802CEDA0 - 0x802D05C4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __TRK_get_MSR, global
@@ -1753,12 +1752,14 @@
 # 0x8050DEA8 - 0x8050DF30
 .rodata
 .balign 8
-.sym lbl_8050DEA8, global
+.global lbl_8050DEA8
+lbl_8050DEA8:
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000001
 	.4byte 0x00000001
-.sym lbl_8050DEB8, global
+.global lbl_8050DEB8
+lbl_8050DEB8:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
@@ -1769,7 +1770,8 @@
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
-.sym lbl_8050DEE0, global
+.global lbl_8050DEE0
+lbl_8050DEE0:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
@@ -1780,7 +1782,8 @@
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
-.sym lbl_8050DF08, global
+.global lbl_8050DF08
+lbl_8050DF08:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
@@ -1796,45 +1799,45 @@
 .data
 .balign 8
 
-.obj gTRKExceptionStatus, local
+gTRKExceptionStatus:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x01000000
-.endobj gTRKExceptionStatus
 
 # 0x8057D280 - 0x8057D828
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj gTRKRestoreFlags, global
+.global gTRKRestoreFlags
+gTRKRestoreFlags:
 	.skip 0x9
-.endobj gTRKRestoreFlags
 	.skip 0x7
-.sym lbl_8057D290, global
+.global lbl_8057D290
+lbl_8057D290:
 	.skip 0x18
 
-.obj gTRKSaveState, global
+.global gTRKSaveState
+gTRKSaveState:
 	.skip 0x94
-.endobj gTRKSaveState
 	.skip 0x4
-.sym lbl_8057D340, global
+.global lbl_8057D340
+lbl_8057D340:
 	.skip 0x10
 
-.obj gTRKState, global
+.global gTRKState
+gTRKState:
 	.skip 0xA4
-.endobj gTRKState
 	.skip 0x4
 
-.obj gTRKCPUState, global
+.global gTRKCPUState
+gTRKCPUState:
 	.skip 0x430
-.endobj gTRKCPUState
 
 # 0x806675A0 - 0x806675A8
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj TRK_saved_exceptionID, local
+TRK_saved_exceptionID:
 	.skip 0x2
-.endobj TRK_saved_exceptionID
 	.skip 0x6

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MetroTRK/notify.o"
 
-# 0x802CC5C0 - 0x802CC650
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn TRKDoNotifyStopped, global

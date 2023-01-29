@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mpv/mpv_deli.o"
 
-# 0x803A5908 - 0x803A5AEC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPV_CheckDelim, global
@@ -59,7 +58,7 @@
 /* 803A59AC 0036EF6C  4E 80 00 20 */	blr
 .endfn MPV_CheckDelim
 
-.fn fn_803A59B0, global
+.fn func_803A59B0, global
 /* 803A59B0 0036EF70  94 21 FE F0 */	stwu r1, -0x110(r1)
 /* 803A59B4 0036EF74  7C 08 02 A6 */	mflr r0
 /* 803A59B8 0036EF78  90 01 01 14 */	stw r0, 0x114(r1)
@@ -79,9 +78,9 @@
 /* 803A59E8 0036EFA8  7C 08 03 A6 */	mtlr r0
 /* 803A59EC 0036EFAC  38 21 01 10 */	addi r1, r1, 0x110
 /* 803A59F0 0036EFB0  4E 80 00 20 */	blr
-.endfn fn_803A59B0
+.endfn func_803A59B0
 
-.fn fn_803A59F4, global
+.fn func_803A59F4, global
 /* 803A59F4 0036EFB4  88 A3 00 00 */	lbz r5, 0x0(r3)
 /* 803A59F8 0036EFB8  88 83 00 01 */	lbz r4, 0x1(r3)
 /* 803A59FC 0036EFBC  54 A5 40 2E */	slwi r5, r5, 8
@@ -99,7 +98,7 @@
 /* 803A5A28 0036EFE8  38 84 F6 08 */	addi r4, r4, lbl_8051F608@l
 /* 803A5A2C 0036EFEC  7C 64 00 AE */	lbzx r3, r4, r0
 /* 803A5A30 0036EFF0  4E 80 00 20 */	blr
-.endfn fn_803A59F4
+.endfn func_803A59F4
 
 .fn MPV_BsearchDelim, global
 /* 803A5A34 0036EFF4  3C C0 80 52 */	lis r6, lbl_8051F608@ha
@@ -162,7 +161,8 @@
 # 0x8051F608 - 0x8051F708
 .rodata
 .balign 8
-.sym lbl_8051F608, global
+.global lbl_8051F608
+lbl_8051F608:
 	.4byte 0x04030101
 	.4byte 0x01010101
 	.4byte 0x01010101

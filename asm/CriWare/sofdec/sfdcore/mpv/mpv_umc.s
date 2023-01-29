@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mpv/mpv_umc.o"
 
-# 0x803AC468 - 0x803ADE5C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPVUMC_Init, global
@@ -1750,7 +1749,9 @@
 # 0x80607B28 - 0x80607B68
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80607B28, global
+.global lbl_80607B28
+lbl_80607B28:
 	.skip 0x20
-.sym lbl_80607B48, global
+.global lbl_80607B48
+lbl_80607B48:
 	.skip 0x20

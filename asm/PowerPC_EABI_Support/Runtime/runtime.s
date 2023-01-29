@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/Runtime/runtime.o"
 
-# 0x802BA02C - 0x802BA774
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __cvt_fp2unsigned, global
@@ -640,7 +639,8 @@
 # 0x8050CE78 - 0x8050CE90
 .rodata
 .balign 8
-.sym lbl_8050CE78, global
+.global lbl_8050CE78
+lbl_8050CE78:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x41F00000

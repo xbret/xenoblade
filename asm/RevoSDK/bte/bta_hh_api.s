@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/bta_hh_api.o"
 
-# 0x802E3830 - 0x802E3C00
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn BTA_HhEnable, global
@@ -285,7 +284,8 @@
 # 0x80544690 - 0x805446C0
 .data
 .balign 8
-.sym lbl_80544690, global
+.global lbl_80544690
+lbl_80544690:
 	.4byte 0x4E6F2072
 	.4byte 0x65736F75
 	.4byte 0x72636520
@@ -302,6 +302,7 @@
 # 0x8066BF60 - 0x8066BF68
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF60, global
+.global lbl_8066BF60
+lbl_8066BF60:
 	.4byte bta_hh_hdl_event
 	.4byte BTA_HhDisable

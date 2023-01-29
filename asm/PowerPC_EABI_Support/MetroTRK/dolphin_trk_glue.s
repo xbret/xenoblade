@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MetroTRK/dolphin_trk_glue.o"
 
-# 0x802CC224 - 0x802CC5C0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn TRKLoadContext, global
@@ -350,22 +349,23 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj gDBCommTable, global
+.global gDBCommTable
+gDBCommTable:
 	.skip 0x28
-.endobj gDBCommTable
 
 # 0x80667578 - 0x80667580
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj TRK_Use_BBA, global
+.global TRK_Use_BBA
+TRK_Use_BBA:
 	.skip 0x1
-.endobj TRK_Use_BBA
 	.skip 0x7
 
 # 0x8066BDB0 - 0x8066BDB8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BDB0, global
+.global lbl_8066BDB0
+lbl_8066BDB0:
 	.4byte 0x00454E44
 	.4byte 0x00000000

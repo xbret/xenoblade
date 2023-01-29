@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/mfci/mfci.o"
 
-# 0x8039281C - 0x8039349C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn mfCiGetInterface, global
@@ -50,9 +49,9 @@
 /* 803928A0 0035BE60  4E 80 00 20 */	blr
 .endfn mfci_str_to_uint_ptr
 
-.fn fn_803928A4, global
+.fn func_803928A4, global
 /* 803928A4 0035BE64  4E 80 00 20 */	blr
-.endfn fn_803928A4
+.endfn func_803928A4
 
 .fn mfCiEntryErrFunc, global
 /* 803928A8 0035BE68  3C C0 80 5F */	lis r6, mfci_err_func@ha
@@ -62,7 +61,7 @@
 /* 803928B8 0035BE78  4E 80 00 20 */	blr
 .endfn mfCiEntryErrFunc
 
-.fn fn_803928BC, global
+.fn func_803928BC, global
 /* 803928BC 0035BE7C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803928C0 0035BE80  7C 08 02 A6 */	mflr r0
 /* 803928C4 0035BE84  90 01 00 24 */	stw r0, 0x24(r1)
@@ -118,7 +117,7 @@
 /* 80392980 0035BF40  7C 08 03 A6 */	mtlr r0
 /* 80392984 0035BF44  38 21 00 20 */	addi r1, r1, 0x20
 /* 80392988 0035BF48  4E 80 00 20 */	blr
-.endfn fn_803928BC
+.endfn func_803928BC
 
 .fn mfCiOpen, global
 /* 8039298C 0035BF4C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -944,7 +943,8 @@
 # 0x8051BE50 - 0x8051C098
 .rodata
 .balign 8
-.sym lbl_8051BE50, global
+.global lbl_8051BE50
+lbl_8051BE50:
 	.4byte 0x0A4D4643
 	.4byte 0x492F5749
 	.4byte 0x49205665
@@ -958,9 +958,11 @@
 	.4byte 0x35323A35
 	.4byte 0x380A0000
 
-.obj mfci_build, global
+.global mfci_build
+mfci_build:
 	.4byte lbl_8051BE50
-.sym lbl_8051BE84, global
+.global lbl_8051BE84
+lbl_8051BE84:
 	.4byte 0x45303131
 	.4byte 0x30303330
 	.4byte 0x383A6C65
@@ -1099,10 +1101,11 @@
 .data
 .balign 8
 
-.obj mfci_vtbl, global
-	.4byte fn_803928A4
+.global mfci_vtbl
+mfci_vtbl:
+	.4byte func_803928A4
 	.4byte mfCiEntryErrFunc
-	.4byte fn_803928BC
+	.4byte func_803928BC
 	.4byte 0x00000000
 	.4byte mfCiOpen
 	.4byte mfCiClose
@@ -1131,8 +1134,10 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj mfci_err_func, global
+.global mfci_err_func
+mfci_err_func:
 	.skip 0x4
 
-.obj mfci_err_obj, global
+.global mfci_err_obj
+mfci_err_obj:
 	.skip 0x9F4

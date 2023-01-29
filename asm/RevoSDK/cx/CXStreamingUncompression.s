@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/cx/CXStreamingUncompression.o"
 
-# 0x80308530 - 0x80308D70
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn CXInitUncompContextLH, global

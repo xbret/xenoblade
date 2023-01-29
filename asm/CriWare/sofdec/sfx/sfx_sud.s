@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfx/sfx_sud.o"
 
-# 0x803D700C - 0x803D7010
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFXSUD_Init, global

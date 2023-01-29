@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/ahx/ahx_mflt_c.o"
 
-# 0x8038A9B0 - 0x8038AEA8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ahxsbf_mult_flt_ex, global
@@ -331,6 +330,7 @@
 # 0x8051ABB8 - 0x8051ABC0
 .rodata
 .balign 8
-.sym lbl_8051ABB8, global
+.global lbl_8051ABB8
+lbl_8051ABB8:
 	.4byte 0x00000000
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/platform/g3d_gpu.o"
 
-# 0x803E7468 - 0x803E7978
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::fifo::GDSetGenMode2(unsigned char, unsigned char, unsigned char, unsigned char, _GXCullMode)
@@ -365,15 +364,21 @@
 # 0x8066C3C8 - 0x8066C3E0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C3C8, global
+.global lbl_8066C3C8
+lbl_8066C3C8:
 	.4byte 0x00020103
-.sym lbl_8066C3CC, global
+.global lbl_8066C3CC
+lbl_8066C3CC:
 	.4byte 0x3F800000
-.sym lbl_8066C3D0, global
+.global lbl_8066C3D0
+lbl_8066C3D0:
 	.4byte 0x3F000000
-.sym lbl_8066C3D4, global
+.global lbl_8066C3D4
+lbl_8066C3D4:
 	.4byte 0x40000000
-.sym lbl_8066C3D8, global
+.global lbl_8066C3D8
+lbl_8066C3D8:
 	.4byte 0x44800000
-.sym lbl_8066C3DC, global
+.global lbl_8066C3DC
+lbl_8066C3DC:
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mpv/mpv_frm.o"
 
-# 0x803A62C4 - 0x803A6504
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPVFRM_Init, global

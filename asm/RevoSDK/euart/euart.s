@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/euart/euart.o"
 
-# 0x80313D70 - 0x803140F0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn EUARTInit, global
@@ -266,18 +265,23 @@
 # 0x806678C8 - 0x806678D8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806678C8, global
+.global lbl_806678C8
+lbl_806678C8:
 	.skip 0x4
-.sym lbl_806678CC, global
+.global lbl_806678CC
+lbl_806678CC:
 	.skip 0x4
-.sym lbl_806678D0, global
+.global lbl_806678D0
+lbl_806678D0:
 	.skip 0x4
-.sym lbl_806678D4, global
+.global lbl_806678D4
+lbl_806678D4:
 	.skip 0x4
 
 # 0x8066BF98 - 0x8066BFA0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF98, global
+.global lbl_8066BF98
+lbl_8066BF98:
 	.4byte 0x00000004
 	.4byte 0x00000000

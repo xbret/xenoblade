@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSCache.o"
 
-# 0x80353F60 - 0x80354610
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn DCEnable, global

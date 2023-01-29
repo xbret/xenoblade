@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/mwply/mwsfdlib.o"
 
-# 0x803A0C60 - 0x803A1338
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MWSFLIB_GetLibWorkPtr, global
@@ -151,9 +150,9 @@
 /* 803A0E6C 0036A42C  38 63 26 C4 */	addi r3, r3, MWSFSVR_MainThrdProc@l
 /* 803A0E70 0036A430  38 80 00 00 */	li r4, 0x0
 /* 803A0E74 0036A434  4B FF CD 81 */	bl MWSFSVM_EntryMainFunc
-/* 803A0E78 0036A438  3C 60 80 3A */	lis r3, fn_803A2908@ha
+/* 803A0E78 0036A438  3C 60 80 3A */	lis r3, func_803A2908@ha
 /* 803A0E7C 0036A43C  38 BE 00 93 */	addi r5, r30, 0x93
-/* 803A0E80 0036A440  38 63 29 08 */	addi r3, r3, fn_803A2908@l
+/* 803A0E80 0036A440  38 63 29 08 */	addi r3, r3, func_803A2908@l
 /* 803A0E84 0036A444  38 80 00 00 */	li r4, 0x0
 /* 803A0E88 0036A448  4B FF CD 2D */	bl MWSFSVM_EntryIdleFunc
 .L_803A0E8C:
@@ -293,7 +292,7 @@
 /* 803A1050 0036A610  38 60 00 00 */	li r3, 0x0
 /* 803A1054 0036A614  38 84 10 98 */	addi r4, r4, MWSFLIB_SfdErrFunc@l
 /* 803A1058 0036A618  38 A0 00 00 */	li r5, 0x0
-/* 803A105C 0036A61C  48 01 FD 39 */	bl fn_803C0D94
+/* 803A105C 0036A61C  48 01 FD 39 */	bl func_803C0D94
 /* 803A1060 0036A620  2C 03 00 00 */	cmpwi r3, 0x0
 /* 803A1064 0036A624  41 82 00 1C */	beq .L_803A1080
 /* 803A1068 0036A628  3C 80 80 60 */	lis r4, mwsfd_libwork@ha
@@ -503,12 +502,14 @@
 # 0x8051E1E0 - 0x8051E7B0
 .rodata
 .balign 8
-.sym lbl_8051E1E0, global
+.global lbl_8051E1E0
+lbl_8051E1E0:
 	.4byte 0x6D77506C
 	.4byte 0x79537461
 	.4byte 0x7274466E
 	.4byte 0x616D6500
-.sym lbl_8051E1F0, global
+.global lbl_8051E1F0
+lbl_8051E1F0:
 	.4byte 0x666E616D
 	.4byte 0x65000000
 	.4byte 0x6D77506C
@@ -542,13 +543,15 @@
 	.4byte 0x70617469
 	.4byte 0x64000000
 	.4byte 0x66696400
-.sym lbl_8051E274, global
+.global lbl_8051E274
+lbl_8051E274:
 	.4byte 0x6D77506C
 	.4byte 0x79537461
 	.4byte 0x7274466E
 	.4byte 0x616D654C
 	.4byte 0x70000000
-.sym lbl_8051E288, global
+.global lbl_8051E288
+lbl_8051E288:
 	.4byte 0x6D77506C
 	.4byte 0x7952656C
 	.4byte 0x65617365
@@ -563,34 +566,40 @@
 	.4byte 0x616D6552
 	.4byte 0x616E6765
 	.4byte 0x4C700000
-.sym lbl_8051E2C0, global
+.global lbl_8051E2C0
+lbl_8051E2C0:
 	.4byte 0x6D77506C
 	.4byte 0x79456E74
 	.4byte 0x7279466E
 	.4byte 0x616D6500
-.sym lbl_8051E2D0, global
+.global lbl_8051E2D0
+lbl_8051E2D0:
 	.4byte 0x6D77506C
 	.4byte 0x79537461
 	.4byte 0x72745365
 	.4byte 0x616D6C65
 	.4byte 0x73730000
-.sym lbl_8051E2E4, global
+.global lbl_8051E2E4
+lbl_8051E2E4:
 	.4byte 0x6D77506C
 	.4byte 0x7952656C
 	.4byte 0x65617365
 	.4byte 0x5365616D
 	.4byte 0x6C657373
 	.4byte 0x00000000
-.sym lbl_8051E2FC, global
+.global lbl_8051E2FC
+lbl_8051E2FC:
 	.4byte 0x6D77506C
 	.4byte 0x79536574
 	.4byte 0x5365616D
 	.4byte 0x6C657373
 	.4byte 0x4C700000
-.sym lbl_8051E310, global
+.global lbl_8051E310
+lbl_8051E310:
 	.4byte 0x666C6167
 	.4byte 0x00000000
-.sym lbl_8051E318, global
+.global lbl_8051E318
+lbl_8051E318:
 	.4byte 0x6D77506C
 	.4byte 0x7953746F
 	.4byte 0x70000000
@@ -599,70 +608,82 @@
 	.4byte 0x75657374
 	.4byte 0x53746F70
 	.4byte 0x00000000
-.sym lbl_8051E338, global
+.global lbl_8051E338
+lbl_8051E338:
 	.4byte 0x4D575346
 	.4byte 0x53564D5F
 	.4byte 0x4572726F
 	.4byte 0x72000000
-.sym lbl_8051E348, global
+.global lbl_8051E348
+lbl_8051E348:
 	.4byte 0x65727273
 	.4byte 0x74720000
-.sym lbl_8051E350, global
+.global lbl_8051E350
+lbl_8051E350:
 	.4byte 0x4D575346
 	.4byte 0x53564D5F
 	.4byte 0x476F746F
 	.4byte 0x49646C65
 	.4byte 0x426F7264
 	.4byte 0x65720000
-.sym lbl_8051E368, global
+.global lbl_8051E368
+lbl_8051E368:
 	.4byte 0x4D575346
 	.4byte 0x5356525F
 	.4byte 0x5673796E
 	.4byte 0x63546872
 	.4byte 0x6450726F
 	.4byte 0x63000000
-.sym lbl_8051E380, global
+.global lbl_8051E380
+lbl_8051E380:
 	.4byte 0x72656D61
 	.4byte 0x696E5F77
 	.4byte 0x6F726B5F
 	.4byte 0x666C6167
 	.4byte 0x00000000
-.sym lbl_8051E394, global
+.global lbl_8051E394
+lbl_8051E394:
 	.4byte 0x4D575346
 	.4byte 0x5356525F
 	.4byte 0x4D61696E
 	.4byte 0x54687264
 	.4byte 0x50726F63
 	.4byte 0x00000000
-.sym lbl_8051E3AC, global
+.global lbl_8051E3AC
+lbl_8051E3AC:
 	.4byte 0x4D575346
 	.4byte 0x5356525F
 	.4byte 0x49646C65
 	.4byte 0x54687264
 	.4byte 0x50726F63
 	.4byte 0x00000000
-.sym lbl_8051E3C4, global
+.global lbl_8051E3C4
+lbl_8051E3C4:
 	.4byte 0x4D575346
 	.4byte 0x5356525F
 	.4byte 0x4465636F
 	.4byte 0x64655365
 	.4byte 0x72766572
 	.4byte 0x00000000
-.sym lbl_8051E3DC, global
+.global lbl_8051E3DC
+lbl_8051E3DC:
 	.4byte 0x6D777366
 	.4byte 0x645F4578
 	.4byte 0x65635376
 	.4byte 0x72486E64
 	.4byte 0x6C000000
-.sym lbl_8051E3F0, global
+.global lbl_8051E3F0
+lbl_8051E3F0:
 	.4byte 0x6D775366
 	.4byte 0x64567379
 	.4byte 0x6E630000
 	.4byte 0x3F000000
 	.4byte 0x447A0000
-.sym lbl_8051E404, global
+.global lbl_8051E404
+lbl_8051E404:
 	.4byte 0x426FC28F
-.sym lbl_8051E408, global
+.global lbl_8051E408
+lbl_8051E408:
 	.4byte 0x45313132
 	.4byte 0x32363131
 	.4byte 0x206D7750
@@ -901,12 +922,16 @@
 # 0x80602958 - 0x80605EB0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80602958, global
+.global lbl_80602958
+lbl_80602958:
 	.skip 0x4
-.sym lbl_8060295C, global
+.global lbl_8060295C
+lbl_8060295C:
 	.skip 0x4
-.sym lbl_80602960, global
+.global lbl_80602960
+lbl_80602960:
 	.skip 0x8
 
-.obj mwsfd_libwork, global
+.global mwsfd_libwork
+mwsfd_libwork:
 	.skip 0x3548

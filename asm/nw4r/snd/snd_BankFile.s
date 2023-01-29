@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_BankFile.o"
 
-# 0x804119F0 - 0x804120AC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::BankFileReader::BankFileReader(const void*)
@@ -516,6 +515,7 @@
 # 0x8066C6D8 - 0x8066C6E0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C6D8, global
+.global lbl_8066C6D8
+lbl_8066C6D8:
 	.4byte 0x3F800000
 	.4byte 0x00000000

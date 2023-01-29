@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/l2c_main.o"
 
-# 0x802F9B38 - 0x802FAB68
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 8
 
 .fn l2c_init, global
@@ -1136,7 +1135,8 @@
 # 0x80547E18 - 0x80548118
 .data
 .balign 8
-.sym lbl_80547E18, global
+.global lbl_80547E18
+lbl_80547E18:
 	.4byte 0x4C324341
 	.4byte 0x50202D20
 	.4byte 0x65787065
@@ -1307,7 +1307,7 @@
 	.4byte 0x3A202564
 	.4byte 0x00000000
 
-.obj jumptable_805480BC, local
+jumptable_805480BC:
 	.rel process_l2cap_cmd, .L_802FA998
 	.rel process_l2cap_cmd, .L_802FA048
 	.rel process_l2cap_cmd, .L_802FA11C
@@ -1320,14 +1320,15 @@
 	.rel process_l2cap_cmd, .L_802FA954
 	.rel process_l2cap_cmd, .L_802FA974
 	.rel process_l2cap_cmd, .L_802F9FC8
-.endobj jumptable_805480BC
-.sym lbl_805480EC, global
+.global lbl_805480EC
+lbl_805480EC:
 	.4byte 0x4C324341
 	.4byte 0x5020484F
 	.4byte 0x4C442043
 	.4byte 0x4F4E5449
 	.4byte 0x4E554500
-.sym lbl_80548100, global
+.global lbl_80548100
+lbl_80548100:
 	.4byte 0x4C324341
 	.4byte 0x5020484F
 	.4byte 0x4C442054

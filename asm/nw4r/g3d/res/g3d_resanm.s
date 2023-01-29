@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_resanm.o"
 
-# 0x803DDAA8 - 0x803DDCD4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::detail::GetResKeyFrameAnmResult(const nw4r::g3d::ResKeyFrameAnmData*, float)
@@ -164,14 +163,19 @@
 # 0x8066C2B0 - 0x8066C2C8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C2B0, global
+.global lbl_8066C2B0
+lbl_8066C2B0:
 	.4byte 0x3F800000
-.sym lbl_8066C2B4, global
+.global lbl_8066C2B4
+lbl_8066C2B4:
 	.4byte 0x40000000
-.sym lbl_8066C2B8, global
+.global lbl_8066C2B8
+lbl_8066C2B8:
 	.4byte 0x40400000
-.sym lbl_8066C2BC, global
+.global lbl_8066C2BC
+lbl_8066C2BC:
 	.4byte 0x00000000
-.sym lbl_8066C2C0, global
+.global lbl_8066C2C0
+lbl_8066C2C0:
 	.4byte 0x47000000
 	.4byte 0x00000000

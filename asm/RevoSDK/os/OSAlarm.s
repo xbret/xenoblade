@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSAlarm.o"
 
-# 0x80352DC0 - 0x80353680
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __OSInitAlarm, global
@@ -647,17 +646,15 @@
 .data
 .balign 8
 
-.obj ShutdownFunctionInfo, local
+ShutdownFunctionInfo:
 	.4byte OnReset
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000000
 	.4byte 0x00000000
-.endobj ShutdownFunctionInfo
 
 # 0x80667A48 - 0x80667A50
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj AlarmQueue, local
+AlarmQueue:
 	.skip 0x8
-.endobj AlarmQueue

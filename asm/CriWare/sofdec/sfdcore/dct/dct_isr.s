@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/dct/dct_isr.o"
 
-# 0x803B9DEC - 0x803BB718
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn DCT_IsrInit, global
@@ -1772,7 +1771,7 @@
 .rodata
 .balign 8
 
-.obj sfsd_short_cut, local
+sfsd_short_cut:
 	.4byte 0x800100FF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
@@ -2029,9 +2028,9 @@
 	.4byte 0x07070707
 	.4byte 0x0707FFFF
 	.4byte 0xFFFFFFFF
-.endobj sfsd_short_cut
 
-.obj idct_column_func, global
+.global idct_column_func
+idct_column_func:
 	.4byte IdctColumn_0000_1
 	.4byte IdctColumn_0000_0
 	.4byte IdctColumn_0001_1
@@ -2064,14 +2063,12 @@
 	.4byte IdctColumn_1111_0
 	.4byte IdctColumn_1111_1
 	.4byte IdctColumn_1111_0
-.endobj idct_column_func
 
-.obj col_sw_off_msk, local
+col_sw_off_msk:
 	.4byte 0x7FF7BFFB
 	.4byte 0xDFFDEFFE
-.endobj col_sw_off_msk
 
-.obj scale8_f, local
+scale8_f:
 	.4byte 0x3FD6A09E
 	.4byte 0x667F3BCD
 	.4byte 0x3FDF6297
@@ -2088,7 +2085,6 @@
 	.4byte 0xA6AEA963
 	.4byte 0x3FB8F8B8
 	.4byte 0x3C69A60B
-.endobj scale8_f
 	.4byte 0x0000000B
 	.4byte 0x00000010
 	.4byte 0x00000010
@@ -2110,7 +2106,7 @@
 .data
 .balign 8
 
-.obj jumptable_8056B558, local
+jumptable_8056B558:
 	.rel MSID_JRevDctDense, .L_803BA770
 	.rel MSID_JRevDctDense, .L_803BA7B4
 	.rel MSID_JRevDctDense, .L_803BA7EC
@@ -2127,9 +2123,8 @@
 	.rel MSID_JRevDctDense, .L_803BA9E8
 	.rel MSID_JRevDctDense, .L_803BAA08
 	.rel MSID_JRevDctDense, .L_803BAA40
-.endobj jumptable_8056B558
 
-.obj jumptable_8056B598, local
+jumptable_8056B598:
 	.rel MSID_JRevDctDense, .L_803BA51C
 	.rel MSID_JRevDctDense, .L_803BA550
 	.rel MSID_JRevDctDense, .L_803BA580
@@ -2138,28 +2133,22 @@
 	.rel MSID_JRevDctDense, .L_803BA648
 	.rel MSID_JRevDctDense, .L_803BA69C
 	.rel MSID_JRevDctDense, .L_803BA6F8
-.endobj jumptable_8056B598
 
 # 0x80607F80 - 0x8060A288
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj lbl_80607F80, local
+lbl_80607F80:
 	.skip 0x8
-.endobj lbl_80607F80
 
-.obj sfsd_scale_tbl_f, local
+sfsd_scale_tbl_f:
 	.skip 0x200
-.endobj sfsd_scale_tbl_f
 
-.obj sfsd_scale_tbl, local
+sfsd_scale_tbl:
 	.skip 0x80
-.endobj sfsd_scale_tbl
 
-.obj sfsd_scale_tbl2, local
+sfsd_scale_tbl2:
 	.skip 0x80
-.endobj sfsd_scale_tbl2
 
-.obj PreIDCT, local
+PreIDCT:
 	.skip 0x2000
-.endobj PreIDCT

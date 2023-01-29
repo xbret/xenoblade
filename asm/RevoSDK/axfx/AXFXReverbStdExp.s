@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/axfx/AXFXReverbStdExp.o"
 
-# 0x802D7990 - 0x802D86C0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn AXFXReverbStdExpGetMemSize, global
@@ -952,7 +951,8 @@
 # 0x805432C0 - 0x80543350
 .data
 .balign 8
-.sym lbl_805432C0, global
+.global lbl_805432C0
+lbl_805432C0:
 	.4byte 0x000000A3
 	.4byte 0x0000013D
 	.4byte 0x000001DF
@@ -961,7 +961,8 @@
 	.4byte 0x000003C7
 	.4byte 0x00000463
 	.4byte 0x00000503
-.sym lbl_805432E0, global
+.global lbl_805432E0
+lbl_805432E0:
 	.4byte 0x000006FD
 	.4byte 0x000007CF
 	.4byte 0x000001B1
@@ -994,30 +995,41 @@
 # 0x8066BE50 - 0x8066BE90
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BE50, global
+.global lbl_8066BE50
+lbl_8066BE50:
 	.4byte 0x46FA0000
-.sym lbl_8066BE54, global
+.global lbl_8066BE54
+lbl_8066BE54:
 	.4byte 0x00000000
-.sym lbl_8066BE58, global
+.global lbl_8066BE58
+lbl_8066BE58:
 	.4byte 0x3F800000
-.sym lbl_8066BE5C, global
+.global lbl_8066BE5C
+lbl_8066BE5C:
 	.4byte 0x3F19999A
-.sym lbl_8066BE60, global
+.global lbl_8066BE60
+lbl_8066BE60:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066BE68, global
+.global lbl_8066BE68
+lbl_8066BE68:
 	.4byte 0xBEA8F5C3
-.sym lbl_8066BE6C, global
+.global lbl_8066BE6C
+lbl_8066BE6C:
 	.4byte 0x3EA8F5C3
-.sym lbl_8066BE70, global
+.global lbl_8066BE70
+lbl_8066BE70:
 	.4byte 0xC0400000
 	.4byte 0x00000000
-.sym lbl_8066BE78, global
+.global lbl_8066BE78
+lbl_8066BE78:
 	.4byte 0x40240000
 	.4byte 0x00000000
-.sym lbl_8066BE80, global
+.global lbl_8066BE80
+lbl_8066BE80:
 	.4byte 0x3F733333
 	.4byte 0x00000000
-.sym lbl_8066BE88, global
+.global lbl_8066BE88
+lbl_8066BE88:
 	.4byte 0x43300000
 	.4byte 0x00000000

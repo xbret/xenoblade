@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mpv/mpv_dec.o"
 
-# 0x803A4704 - 0x803A5908
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPVDEC_CheckVersion, global
@@ -1300,6 +1299,7 @@
 # 0x8051F600 - 0x8051F608
 .rodata
 .balign 8
-.sym lbl_8051F600, global
+.global lbl_8051F600
+lbl_8051F600:
 	.4byte 0x322E3035
 	.4byte 0x39000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_anmchr.o"
 
-# 0x803E3E14 - 0x803E5D0C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::AnmObjChr::Release()
@@ -2396,24 +2395,28 @@
 # 0x80520ED8 - 0x80520F28
 .rodata
 .balign 8
-.sym lbl_80520ED8, global
+.global lbl_80520ED8
+lbl_80520ED8:
 	.4byte 0x0000000A
 	.4byte 0x416E6D4F
 	.4byte 0x626A4368
 	.4byte 0x72000000
-.sym lbl_80520EE8, global
+.global lbl_80520EE8
+lbl_80520EE8:
 	.4byte 0x0000000E
 	.4byte 0x416E6D4F
 	.4byte 0x626A4368
 	.4byte 0x724E6F64
 	.4byte 0x65000000
-.sym lbl_80520EFC, global
+.global lbl_80520EFC
+lbl_80520EFC:
 	.4byte 0x0000000F
 	.4byte 0x416E6D4F
 	.4byte 0x626A4368
 	.4byte 0x72426C65
 	.4byte 0x6E640000
-.sym lbl_80520F10, global
+.global lbl_80520F10
+lbl_80520F10:
 	.4byte 0x0000000D
 	.4byte 0x416E6D4F
 	.4byte 0x626A4368
@@ -2424,7 +2427,8 @@
 # 0x8056CC10 - 0x8056CD70
 .data
 .balign 8
-.sym lbl_8056CC10, global
+.global lbl_8056CC10
+lbl_8056CC10:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjChrResCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2447,7 +2451,8 @@
 	.4byte GetWeight__Q34nw4r3g3d9AnmObjChrCFi
 	.4byte Bind__Q34nw4r3g3d15AnmObjTexSrtResFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
 	.4byte Release__Q34nw4r3g3d12AnmObjChrResFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
-.sym lbl_8056CC68, global
+.global lbl_8056CC68
+lbl_8056CC68:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d14AnmObjChrBlendCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2470,7 +2475,8 @@
 	.4byte GetWeight__Q34nw4r3g3d14AnmObjChrBlendCFi
 	.4byte Bind__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
 	.4byte Release__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
-.sym lbl_8056CCC0, global
+.global lbl_8056CCC0
+lbl_8056CCC0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d13AnmObjChrNodeCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2493,7 +2499,8 @@
 	.4byte GetWeight__Q34nw4r3g3d9AnmObjChrCFi
 	.4byte Bind__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
 	.4byte Release__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
-.sym lbl_8056CD18, global
+.global lbl_8056CD18
+lbl_8056CD18:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d9AnmObjChrCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2520,13 +2527,17 @@
 # 0x8066C388 - 0x8066C3A0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C388, global
+.global lbl_8066C388
+lbl_8066C388:
 	.4byte 0x00000000
-.sym lbl_8066C38C, global
+.global lbl_8066C38C
+lbl_8066C38C:
 	.4byte 0x3F800000
-.sym lbl_8066C390, global
+.global lbl_8066C390
+lbl_8066C390:
 	.4byte 0x7FC00000
 	.4byte 0x00000000
-.sym lbl_8066C398, global
+.global lbl_8066C398
+lbl_8066C398:
 	.4byte 0x43300000
 	.4byte 0x80000000

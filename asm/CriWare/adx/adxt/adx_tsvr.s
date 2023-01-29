@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_tsvr.o"
 
-# 0x80384748 - 0x80385720
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn adxt_trap_entry_lps, global
@@ -279,7 +278,7 @@
 /* 80384B34 0034E0F4  80 01 00 2C */	lwz r0, 0x2c(r1)
 /* 80384B38 0034E0F8  7C 63 E2 14 */	add r3, r3, r28
 /* 80384B3C 0034E0FC  7C 9C 00 50 */	subf r4, r28, r0
-/* 80384B40 0034E100  48 00 47 C1 */	bl fn_80389300
+/* 80384B40 0034E100  48 00 47 C1 */	bl func_80389300
 /* 80384B44 0034E104  2C 03 00 00 */	cmpwi r3, 0x0
 /* 80384B48 0034E108  7C 7B 1B 78 */	mr r27, r3
 /* 80384B4C 0034E10C  40 82 00 0C */	bne .L_80384B58
@@ -289,7 +288,7 @@
 /* 80384B58 0034E118  80 61 00 18 */	lwz r3, 0x18(r1)
 /* 80384B5C 0034E11C  38 A1 00 08 */	addi r5, r1, 0x8
 /* 80384B60 0034E120  80 81 00 1C */	lwz r4, 0x1c(r1)
-/* 80384B64 0034E124  48 00 47 9D */	bl fn_80389300
+/* 80384B64 0034E124  48 00 47 9D */	bl func_80389300
 /* 80384B68 0034E128  48 00 00 40 */	b .L_80384BA8
 .L_80384B6C:
 /* 80384B6C 0034E12C  80 61 00 28 */	lwz r3, 0x28(r1)
@@ -829,7 +828,7 @@
 /* 8038531C 0034E8DC  4E 80 00 20 */	blr
 .endfn adxt_stat_prep
 
-.fn fn_80385320, global
+.fn func_80385320, global
 /* 80385320 0034E8E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80385324 0034E8E4  7C 08 02 A6 */	mflr r0
 /* 80385328 0034E8E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -844,12 +843,12 @@
 /* 8038534C 0034E90C  88 03 00 73 */	lbz r0, 0x73(r3)
 /* 80385350 0034E910  7C 00 07 75 */	extsb. r0, r0
 /* 80385354 0034E914  40 82 00 3C */	bne .L_80385390
-/* 80385358 0034E918  4B FF E9 71 */	bl fn_80383CC8
+/* 80385358 0034E918  4B FF E9 71 */	bl func_80383CC8
 /* 8038535C 0034E91C  2C 03 00 00 */	cmpwi r3, 0x0
 /* 80385360 0034E920  40 82 00 F0 */	bne .L_80385450
 /* 80385364 0034E924  7F E3 FB 78 */	mr r3, r31
 /* 80385368 0034E928  38 80 00 00 */	li r4, 0x0
-/* 8038536C 0034E92C  4B FF E9 C9 */	bl fn_80383D34
+/* 8038536C 0034E92C  4B FF E9 C9 */	bl func_80383D34
 /* 80385370 0034E930  2C 03 00 00 */	cmpwi r3, 0x0
 /* 80385374 0034E934  40 82 00 DC */	bne .L_80385450
 /* 80385378 0034E938  7F 83 E3 78 */	mr r3, r28
@@ -871,12 +870,12 @@
 /* 803853B4 0034E974  7C 1D 03 78 */	mr r29, r0
 .L_803853B8:
 /* 803853B8 0034E978  7F E3 FB 78 */	mr r3, r31
-/* 803853BC 0034E97C  4B FF E9 0D */	bl fn_80383CC8
+/* 803853BC 0034E97C  4B FF E9 0D */	bl func_80383CC8
 /* 803853C0 0034E980  7C 03 E8 00 */	cmpw r3, r29
 /* 803853C4 0034E984  40 81 00 8C */	ble .L_80385450
 /* 803853C8 0034E988  7F E3 FB 78 */	mr r3, r31
 /* 803853CC 0034E98C  38 80 00 00 */	li r4, 0x0
-/* 803853D0 0034E990  4B FF E9 65 */	bl fn_80383D34
+/* 803853D0 0034E990  4B FF E9 65 */	bl func_80383D34
 /* 803853D4 0034E994  2C 03 00 00 */	cmpwi r3, 0x0
 /* 803853D8 0034E998  40 81 00 78 */	ble .L_80385450
 /* 803853DC 0034E99C  7F 83 E3 78 */	mr r3, r28
@@ -916,7 +915,7 @@
 /* 80385458 0034EA18  7C 08 03 A6 */	mtlr r0
 /* 8038545C 0034EA1C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80385460 0034EA20  4E 80 00 20 */	blr
-.endfn fn_80385320
+.endfn func_80385320
 
 .fn adxt_stat_playing, global
 /* 80385464 0034EA24  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -977,7 +976,7 @@
 /* 80385530 0034EAF0  98 1B 00 01 */	stb r0, 0x1(r27)
 .L_80385534:
 /* 80385534 0034EAF4  7F 63 DB 78 */	mr r3, r27
-/* 80385538 0034EAF8  4B FF FD E9 */	bl fn_80385320
+/* 80385538 0034EAF8  4B FF FD E9 */	bl func_80385320
 /* 8038553C 0034EAFC  BB 61 00 0C */	lmw r27, 0xc(r1)
 /* 80385540 0034EB00  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80385544 0034EB04  7C 08 03 A6 */	mtlr r0
@@ -1123,7 +1122,8 @@
 # 0x8051A120 - 0x8051A1B8
 .rodata
 .balign 8
-.sym lbl_8051A120, global
+.global lbl_8051A120
+lbl_8051A120:
 	.4byte 0x45383130
 	.4byte 0x31323031
 	.4byte 0x20616478
@@ -1166,13 +1166,17 @@
 # 0x805E85F0 - 0x805E8600
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E85F0, global
+.global lbl_805E85F0
+lbl_805E85F0:
 	.skip 0x4
-.sym lbl_805E85F4, global
+.global lbl_805E85F4
+lbl_805E85F4:
 	.skip 0x4
 
-.obj adxt_dbg_ndt, global
+.global adxt_dbg_ndt
+adxt_dbg_ndt:
 	.skip 0x4
 
-.obj adxt_dbg_rna_ndata, global
+.global adxt_dbg_rna_ndata
+adxt_dbg_rna_ndata:
 	.skip 0x4

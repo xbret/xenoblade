@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/ut/ut_Font.o"
 
-# 0x80338490 - 0x80338540
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4hbm::ut::Font::InitReaderFunc(nw4hbm::ut::FontEncoding)

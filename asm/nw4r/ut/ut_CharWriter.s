@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/ut/ut_CharWriter.o"
 
-# 0x8042EEE0 - 0x80430624
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::ut::CharWriter::CharWriter()
@@ -235,10 +234,10 @@
 /* 8042F218 003F87D8  88 0D BC B8 */	lbz r0, lbl_80667E38@sda21(r13)
 /* 8042F21C 003F87DC  7C 00 07 75 */	extsb. r0, r0
 /* 8042F220 003F87E0  40 82 00 28 */	bne .L_8042F248
-/* 8042F224 003F87E4  3C 80 80 12 */	lis r4, fn_801252D0@ha
+/* 8042F224 003F87E4  3C 80 80 12 */	lis r4, func_801252D0@ha
 /* 8042F228 003F87E8  3C A0 80 65 */	lis r5, lbl_806570A8@ha
 /* 8042F22C 003F87EC  93 ED BC BC */	stw r31, lbl_80667E3C@sda21(r13)
-/* 8042F230 003F87F0  38 84 52 D0 */	addi r4, r4, fn_801252D0@l
+/* 8042F230 003F87F0  38 84 52 D0 */	addi r4, r4, func_801252D0@l
 /* 8042F234 003F87F4  38 A5 70 A8 */	addi r5, r5, lbl_806570A8@l
 /* 8042F238 003F87F8  38 6D BC BC */	addi r3, r13, lbl_80667E3C@sda21
 /* 8042F23C 003F87FC  4B E8 A4 61 */	bl __register_global_object
@@ -376,10 +375,10 @@
 /* 8042F444 003F8A04  88 0D BC B8 */	lbz r0, lbl_80667E38@sda21(r13)
 /* 8042F448 003F8A08  7C 00 07 75 */	extsb. r0, r0
 /* 8042F44C 003F8A0C  40 82 00 28 */	bne .L_8042F474
-/* 8042F450 003F8A10  3C 80 80 12 */	lis r4, fn_801252D0@ha
+/* 8042F450 003F8A10  3C 80 80 12 */	lis r4, func_801252D0@ha
 /* 8042F454 003F8A14  3C A0 80 65 */	lis r5, lbl_806570A8@ha
 /* 8042F458 003F8A18  93 ED BC BC */	stw r31, lbl_80667E3C@sda21(r13)
-/* 8042F45C 003F8A1C  38 84 52 D0 */	addi r4, r4, fn_801252D0@l
+/* 8042F45C 003F8A1C  38 84 52 D0 */	addi r4, r4, func_801252D0@l
 /* 8042F460 003F8A20  38 A5 70 A8 */	addi r5, r5, lbl_806570A8@l
 /* 8042F464 003F8A24  38 6D BC BC */	addi r3, r13, lbl_80667E3C@sda21
 /* 8042F468 003F8A28  4B E8 A2 35 */	bl __register_global_object
@@ -494,10 +493,10 @@
 /* 8042F614 003F8BD4  88 0D BC B8 */	lbz r0, lbl_80667E38@sda21(r13)
 /* 8042F618 003F8BD8  7C 00 07 75 */	extsb. r0, r0
 /* 8042F61C 003F8BDC  40 82 00 28 */	bne .L_8042F644
-/* 8042F620 003F8BE0  3C 80 80 12 */	lis r4, fn_801252D0@ha
+/* 8042F620 003F8BE0  3C 80 80 12 */	lis r4, func_801252D0@ha
 /* 8042F624 003F8BE4  3C A0 80 65 */	lis r5, lbl_806570A8@ha
 /* 8042F628 003F8BE8  93 ED BC BC */	stw r31, lbl_80667E3C@sda21(r13)
-/* 8042F62C 003F8BEC  38 84 52 D0 */	addi r4, r4, fn_801252D0@l
+/* 8042F62C 003F8BEC  38 84 52 D0 */	addi r4, r4, func_801252D0@l
 /* 8042F630 003F8BF0  38 A5 70 A8 */	addi r5, r5, lbl_806570A8@l
 /* 8042F634 003F8BF4  38 6D BC BC */	addi r3, r13, lbl_80667E3C@sda21
 /* 8042F638 003F8BF8  4B E8 A0 65 */	bl __register_global_object
@@ -613,10 +612,10 @@
 /* 8042F7E8 003F8DA8  7C 00 07 75 */	extsb. r0, r0
 /* 8042F7EC 003F8DAC  40 82 00 2C */	bne .L_8042F818
 /* 8042F7F0 003F8DB0  38 00 00 00 */	li r0, 0x0
-/* 8042F7F4 003F8DB4  3C 80 80 12 */	lis r4, fn_801252D0@ha
+/* 8042F7F4 003F8DB4  3C 80 80 12 */	lis r4, func_801252D0@ha
 /* 8042F7F8 003F8DB8  3C A0 80 65 */	lis r5, lbl_806570A8@ha
 /* 8042F7FC 003F8DBC  90 0D BC BC */	stw r0, lbl_80667E3C@sda21(r13)
-/* 8042F800 003F8DC0  38 84 52 D0 */	addi r4, r4, fn_801252D0@l
+/* 8042F800 003F8DC0  38 84 52 D0 */	addi r4, r4, func_801252D0@l
 /* 8042F804 003F8DC4  38 6D BC BC */	addi r3, r13, lbl_80667E3C@sda21
 /* 8042F808 003F8DC8  38 A5 70 A8 */	addi r5, r5, lbl_806570A8@l
 /* 8042F80C 003F8DCC  4B E8 9E 91 */	bl __register_global_object
@@ -731,10 +730,10 @@
 /* 8042F9B8 003F8F78  88 0D BC B8 */	lbz r0, lbl_80667E38@sda21(r13)
 /* 8042F9BC 003F8F7C  7C 00 07 75 */	extsb. r0, r0
 /* 8042F9C0 003F8F80  40 82 00 28 */	bne .L_8042F9E8
-/* 8042F9C4 003F8F84  3C 80 80 12 */	lis r4, fn_801252D0@ha
+/* 8042F9C4 003F8F84  3C 80 80 12 */	lis r4, func_801252D0@ha
 /* 8042F9C8 003F8F88  3C A0 80 65 */	lis r5, lbl_806570A8@ha
 /* 8042F9CC 003F8F8C  93 ED BC BC */	stw r31, lbl_80667E3C@sda21(r13)
-/* 8042F9D0 003F8F90  38 84 52 D0 */	addi r4, r4, fn_801252D0@l
+/* 8042F9D0 003F8F90  38 84 52 D0 */	addi r4, r4, func_801252D0@l
 /* 8042F9D4 003F8F94  38 A5 70 A8 */	addi r5, r5, lbl_806570A8@l
 /* 8042F9D8 003F8F98  38 6D BC BC */	addi r3, r13, lbl_80667E3C@sda21
 /* 8042F9DC 003F8F9C  4B E8 9C C1 */	bl __register_global_object
@@ -1372,10 +1371,10 @@
 /* 804302F8 003F98B8  7C 00 07 75 */	extsb. r0, r0
 /* 804302FC 003F98BC  40 82 00 2C */	bne .L_80430328
 /* 80430300 003F98C0  38 00 00 00 */	li r0, 0x0
-/* 80430304 003F98C4  3C 80 80 12 */	lis r4, fn_801252D0@ha
+/* 80430304 003F98C4  3C 80 80 12 */	lis r4, func_801252D0@ha
 /* 80430308 003F98C8  3C A0 80 65 */	lis r5, lbl_806570A8@ha
 /* 8043030C 003F98CC  90 0D BC BC */	stw r0, lbl_80667E3C@sda21(r13)
-/* 80430310 003F98D0  38 84 52 D0 */	addi r4, r4, fn_801252D0@l
+/* 80430310 003F98D0  38 84 52 D0 */	addi r4, r4, func_801252D0@l
 /* 80430314 003F98D4  38 6D BC BC */	addi r3, r13, lbl_80667E3C@sda21
 /* 80430318 003F98D8  38 A5 70 A8 */	addi r5, r5, lbl_806570A8@l
 /* 8043031C 003F98DC  4B E8 93 81 */	bl __register_global_object
@@ -1578,38 +1577,50 @@
 # 0x806570A8 - 0x806570C8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_806570A8, global
+.global lbl_806570A8
+lbl_806570A8:
 	.skip 0x10
-.sym lbl_806570B8, global
+.global lbl_806570B8
+lbl_806570B8:
 	.skip 0x10
 
 # 0x80667E38 - 0x80667E40
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E38, global
+.global lbl_80667E38
+lbl_80667E38:
 	.skip 0x4
-.sym lbl_80667E3C, global
+.global lbl_80667E3C
+lbl_80667E3C:
 	.skip 0x1
-.sym lbl_80667E3D, global
+.global lbl_80667E3D
+lbl_80667E3D:
 	.skip 0x1
-.sym lbl_80667E3E, global
+.global lbl_80667E3E
+lbl_80667E3E:
 	.skip 0x1
-.sym lbl_80667E3F, global
+.global lbl_80667E3F
+lbl_80667E3F:
 	.skip 0x1
 
 # 0x8066C940 - 0x8066C960
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C940, global
+.global lbl_8066C940
+lbl_8066C940:
 	.4byte 0x00000000
-.sym lbl_8066C944, global
+.global lbl_8066C944
+lbl_8066C944:
 	.4byte 0x3F800000
-.sym lbl_8066C948, global
+.global lbl_8066C948
+lbl_8066C948:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C950, global
+.global lbl_8066C950
+lbl_8066C950:
 	.4byte 0x3F000000
 	.4byte 0x00000000
-.sym lbl_8066C958, global
+.global lbl_8066C958
+lbl_8066C958:
 	.4byte 0x43300000
 	.4byte 0x00000000

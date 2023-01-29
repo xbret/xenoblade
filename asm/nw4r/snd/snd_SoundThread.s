@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_SoundThread.o"
 
-# 0x804212E4 - 0x804219C8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::SoundThread::GetInstance()
@@ -508,13 +507,16 @@
 # 0x80652C40 - 0x80653000
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80652C40, global
+.global lbl_80652C40
+lbl_80652C40:
 	.skip 0x10
-.sym lbl_80652C50, global
+.global lbl_80652C50
+lbl_80652C50:
 	.skip 0x3B0
 
 # 0x80667DF0 - 0x80667DF8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DF0, global
+.global lbl_80667DF0
+lbl_80667DF0:
 	.skip 0x8

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_dcd.o"
 
-# 0x80389AC4 - 0x8038A188
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADX_GetCoefficient, global
@@ -519,7 +518,8 @@
 # 0x8051AAD8 - 0x8051AB08
 .rodata
 .balign 8
-.sym lbl_8051AAD8, global
+.global lbl_8051AAD8
+lbl_8051AAD8:
 	.4byte 0x40C90FDB
 	.4byte 0x00000000
 	.4byte 0x40000000

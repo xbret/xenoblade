@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfx/sfx_set.o"
 
-# 0x803D4864 - 0x803D4A14
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFX_SetCompoMode, global
@@ -149,7 +148,8 @@
 # 0x80520840 - 0x80520850
 .rodata
 .balign 8
-.sym lbl_80520840, global
+.global lbl_80520840
+lbl_80520840:
 	.4byte 0x5346585A
 	.4byte 0x00534658
 	.4byte 0x494E4645

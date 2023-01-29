@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/dcc/g3d_xsi.o"
 
-# 0x803F2D9C - 0x803F395C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::detail::dcc::_unnamed_g3d_xsi_cpp_::MakeTexSrtMtx_S(nw4r::math::MTX34*, const nw4r::g3d::TexSrt&)
@@ -824,7 +823,8 @@
 # 0x80521010 - 0x80521048
 .rodata
 .balign 8
-.sym lbl_80521010, global
+.global lbl_80521010
+lbl_80521010:
 	.4byte MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -832,7 +832,8 @@
 	.4byte MakeTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc21_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.sym lbl_8052102C, global
+.global lbl_8052102C
+lbl_8052102C:
 	.4byte ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -844,10 +845,13 @@
 # 0x8066C4B0 - 0x8066C4C0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C4B0, global
+.global lbl_8066C4B0
+lbl_8066C4B0:
 	.4byte 0x00000000
-.sym lbl_8066C4B4, global
+.global lbl_8066C4B4
+lbl_8066C4B4:
 	.4byte 0x3F800000
-.sym lbl_8066C4B8, global
+.global lbl_8066C4B8
+lbl_8066C4B8:
 	.4byte 0x3F360B61
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_bsc.o"
 
-# 0x80386970 - 0x803883BC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SKG_GenerateKey, local
@@ -510,11 +509,11 @@
 /* 803870FC 003506BC  4E 80 00 20 */	blr
 .endfn SKG_GenerateKey
 
-.fn fn_80387100, global
+.fn func_80387100, global
 /* 80387100 003506C0  3C 60 80 5F */	lis r3, adxb_dec_err_mode@ha
 /* 80387104 003506C4  80 63 89 F0 */	lwz r3, adxb_dec_err_mode@l(r3)
 /* 80387108 003506C8  4E 80 00 20 */	blr
-.endfn fn_80387100
+.endfn func_80387100
 
 .fn ADXB_Init, global
 /* 8038710C 003506CC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1322,7 +1321,7 @@
 /* 80387BB8 00351178  4E 80 00 20 */	blr
 .endfn adxb_get_key
 
-.fn fn_80387BBC, global
+.fn func_80387BBC, global
 /* 80387BBC 0035117C  2C 04 00 00 */	cmpwi r4, 0x0
 /* 80387BC0 00351180  40 82 00 10 */	bne .L_80387BD0
 /* 80387BC4 00351184  38 00 00 00 */	li r0, 0x0
@@ -1332,7 +1331,7 @@
 /* 80387BD0 00351190  38 00 00 01 */	li r0, 0x1
 /* 80387BD4 00351194  90 03 00 AC */	stw r0, 0xac(r3)
 /* 80387BD8 00351198  4E 80 00 20 */	blr
-.endfn fn_80387BBC
+.endfn func_80387BBC
 
 .fn ADXB_GetStat, global
 /* 80387BDC 0035119C  80 63 00 04 */	lwz r3, 0x4(r3)
@@ -1407,7 +1406,7 @@
 /* 80387CC0 00351280  4E 80 00 20 */	blr
 .endfn ADXB_Stop
 
-.fn fn_80387CC4, global
+.fn func_80387CC4, global
 /* 80387CC4 00351284  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80387CC8 00351288  7C 08 02 A6 */	mflr r0
 /* 80387CCC 0035128C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1427,7 +1426,7 @@
 /* 80387D00 003512C0  7C 08 03 A6 */	mtlr r0
 /* 80387D04 003512C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80387D08 003512C8  4E 80 00 20 */	blr
-.endfn fn_80387CC4
+.endfn func_80387CC4
 
 .fn ADXB_GetDecDtLen, global
 /* 80387D0C 003512CC  80 63 00 94 */	lwz r3, 0x94(r3)
@@ -1916,7 +1915,8 @@
 # 0x8051A1C8 - 0x8051AA78
 .rodata
 .balign 8
-.sym lbl_8051A1C8, global
+.global lbl_8051A1C8
+lbl_8051A1C8:
 	.4byte 0x401B4021
 	.4byte 0x4025402B
 	.4byte 0x4031403F
@@ -2429,7 +2429,8 @@
 	.4byte 0x68036809
 	.4byte 0x68116817
 	.4byte 0x682D6839
-.sym lbl_8051A9C8, global
+.global lbl_8051A9C8
+lbl_8051A9C8:
 	.4byte 0x45303431
 	.4byte 0x30323530
 	.4byte 0x31206164
@@ -2479,19 +2480,25 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj skg_init_count, global
+.global skg_init_count
+skg_init_count:
 	.skip 0x4
 
-.obj ahxsetextfunc, global
+.global ahxsetextfunc
+ahxsetextfunc:
 	.skip 0x4
 
-.obj pl2encodefunc, global
+.global pl2encodefunc
+pl2encodefunc:
 	.skip 0x4
 
-.obj pl2resetfunc, global
+.global pl2resetfunc
+pl2resetfunc:
 	.skip 0xC
 
-.obj adxb_dec_err_mode, global
+.global adxb_dec_err_mode
+adxb_dec_err_mode:
 	.skip 0x8
-.sym lbl_805E89F8, global
+.global lbl_805E89F8
+lbl_805E89F8:
 	.skip 0xFC0

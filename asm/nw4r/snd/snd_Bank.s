@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_Bank.o"
 
-# 0x80411780 - 0x804119F0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::Bank::Bank(const void*)
@@ -183,16 +182,21 @@
 # 0x8066C6B8 - 0x8066C6D8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C6B8, global
+.global lbl_8066C6B8
+lbl_8066C6B8:
 	.4byte 0x42FE0000
-.sym lbl_8066C6BC, global
+.global lbl_8066C6BC
+lbl_8066C6BC:
 	.4byte 0x427C0000
-.sym lbl_8066C6C0, global
+.global lbl_8066C6C0
+lbl_8066C6C0:
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066C6C8, global
+.global lbl_8066C6C8
+lbl_8066C6C8:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C6D0, global
+.global lbl_8066C6D0
+lbl_8066C6D0:
 	.4byte 0x43300000
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/bta_dm_pm.o"
 
-# 0x802E16CC - 0x802E20E8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn bta_dm_init_pm, global
@@ -737,7 +736,8 @@
 # 0x80544148 - 0x80544198
 .data
 .balign 8
-.sym lbl_80544148, global
+.global lbl_80544148
+lbl_80544148:
 	.4byte 0x6274615F
 	.4byte 0x646D5F61
 	.4byte 0x6374206E
@@ -749,7 +749,8 @@
 	.4byte 0x76696365
 	.4byte 0x20636273
 	.4byte 0x00000000
-.sym lbl_80544174, global
+.global lbl_80544174
+lbl_80544174:
 	.4byte 0x6274615F
 	.4byte 0x646D5F61
 	.4byte 0x6374206E
@@ -763,5 +764,6 @@
 # 0x8066DCE0 - 0x8066DCE8
 .section .sbss2, "a", @nobits
 .balign 8
-.sym lbl_8066DCE0, global
+.global lbl_8066DCE0
+lbl_8066DCE0:
 	.skip 0x8

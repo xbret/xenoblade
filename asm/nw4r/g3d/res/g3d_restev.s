@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_restev.o"
 
-# 0x803DAEF4 - 0x803DB780
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ResTev::GXGetTevSwapModeTable(_GXTevSwapSel, _GXTevColorChan*, _GXTevColorChan*, _GXTevColorChan*, _GXTevColorChan*) const
@@ -638,7 +637,8 @@
 # 0x80520DB8 - 0x80520E18
 .rodata
 .balign 8
-.sym lbl_80520DB8, global
+.global lbl_80520DB8
+lbl_80520DB8:
 	.4byte 0x00000004
 	.4byte 0x00000005
 	.4byte 0x000000FF
@@ -647,7 +647,8 @@
 	.4byte 0x00000007
 	.4byte 0x00000008
 	.4byte 0x00000006
-.sym lbl_80520DD8, global
+.global lbl_80520DD8
+lbl_80520DD8:
 	.4byte 0x000000A0
 	.4byte 0x000000A0
 	.4byte 0x000000C0
@@ -668,7 +669,8 @@
 # 0x8056C9A0 - 0x8056C9C0
 .data
 .balign 8
-.sym lbl_8056C9A0, global
+.global lbl_8056C9A0
+lbl_8056C9A0:
 	.4byte 0x00010001
 	.4byte 0x00010705
 	.4byte 0x06000000

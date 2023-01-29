@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/uty/uty_tmr.o"
 
-# 0x803D46F8 - 0x803D4864
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn UTY_InitTmr, global
@@ -120,17 +119,21 @@
 # 0x80520838 - 0x80520840
 .rodata
 .balign 8
-.sym lbl_80520838, global
+.global lbl_80520838
+lbl_80520838:
 	.4byte 0x544D525F
 	.4byte 0x43480000
 
 # 0x8061CE28 - 0x8061CE38
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061CE28, global
+.global lbl_8061CE28
+lbl_8061CE28:
 	.skip 0x4
-.sym lbl_8061CE2C, global
+.global lbl_8061CE2C
+lbl_8061CE2C:
 	.skip 0x4
 
-.obj utytmr_unit, global
+.global utytmr_unit
+utytmr_unit:
 	.skip 0x8

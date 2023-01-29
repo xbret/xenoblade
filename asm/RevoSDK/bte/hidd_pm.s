@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/hidd_pm.o"
 
-# 0x802F37C8 - 0x802F3B44
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 8
 
 .fn hidd_pm_set_now, global
@@ -259,5 +258,6 @@
 # 0x805C2570 - 0x805C26B8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805C2570, global
+.global lbl_805C2570
+lbl_805C2570:
 	.skip 0x148

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSLaunch.o"
 
-# 0x8035F140 - 0x8035F350
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __OSRelaunchTitle, global

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common/scanf.o"
 
-# 0x802C112C - 0x802C2610
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn parse_format, local
@@ -1552,7 +1551,7 @@
 .data
 .balign 8
 
-.obj jumptable_8053F7C0, local
+jumptable_8053F7C0:
 	.rel parse_format, .L_802C141C
 	.rel parse_format, .L_802C1754
 	.rel parse_format, .L_802C1754
@@ -1609,9 +1608,8 @@
 	.rel parse_format, .L_802C1754
 	.rel parse_format, .L_802C1754
 	.rel parse_format, .L_802C1404
-.endobj jumptable_8053F7C0
 
-.obj jumptable_8053F8A0, local
+jumptable_8053F8A0:
 	.rel __sformatter, .L_802C1D2C
 	.rel __sformatter, .L_802C1D34
 	.rel __sformatter, .L_802C1D3C
@@ -1620,9 +1618,8 @@
 	.rel __sformatter, .L_802C1D60
 	.rel __sformatter, .L_802C1D68
 	.rel __sformatter, .L_802C1D70
-.endobj jumptable_8053F8A0
 
-.obj jumptable_8053F8C0, local
+jumptable_8053F8C0:
 	.rel __sformatter, .L_802C1B94
 	.rel __sformatter, .L_802C1B9C
 	.rel __sformatter, .L_802C1BA4
@@ -1631,9 +1628,8 @@
 	.rel __sformatter, .L_802C1BC8
 	.rel __sformatter, .L_802C1BD0
 	.rel __sformatter, .L_802C1BD8
-.endobj jumptable_8053F8C0
 
-.obj jumptable_8053F8E0, local
+jumptable_8053F8E0:
 	.rel __sformatter, .L_802C1FE8
 	.rel __sformatter, .L_802C240C
 	.rel __sformatter, .L_802C240C
@@ -1718,4 +1714,3 @@
 	.rel __sformatter, .L_802C240C
 	.rel __sformatter, .L_802C240C
 	.rel __sformatter, .L_802C1C0C
-.endobj jumptable_8053F8E0

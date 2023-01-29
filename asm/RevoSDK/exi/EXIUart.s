@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/exi/EXIUart.o"
 
-# 0x803159F0 - 0x80315D30
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn ProbeBarnacle, global
@@ -237,11 +236,15 @@
 # 0x806678E0 - 0x806678F0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806678E0, global
+.global lbl_806678E0
+lbl_806678E0:
 	.skip 0x4
-.sym lbl_806678E4, global
+.global lbl_806678E4
+lbl_806678E4:
 	.skip 0x4
-.sym lbl_806678E8, global
+.global lbl_806678E8
+lbl_806678E8:
 	.skip 0x4
-.sym lbl_806678EC, global
+.global lbl_806678EC
+lbl_806678EC:
 	.skip 0x4

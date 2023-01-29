@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common/file_io.o"
 
-# 0x802BE0B0 - 0x802BE2A0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn fclose, global

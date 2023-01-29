@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/btm_dev.o"
 
-# 0x802E6244 - 0x802E6910
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn BTM_SecAddDevice, global

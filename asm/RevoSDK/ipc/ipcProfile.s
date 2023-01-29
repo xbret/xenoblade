@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/ipc/ipcProfile.o"
 
-# 0x803448E0 - 0x80344AC0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn IPCiProfInit, global
@@ -146,22 +145,18 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj IpcFdArray, local
+IpcFdArray:
 	.skip 0x80
-.endobj IpcFdArray
 
-.obj IpcReqPtrArray, local
+IpcReqPtrArray:
 	.skip 0x80
-.endobj IpcReqPtrArray
 
 # 0x80667990 - 0x80667998
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj IpcNumPendingReqs, local
+IpcNumPendingReqs:
 	.skip 0x4
-.endobj IpcNumPendingReqs
 
-.obj IpcNumUnIssuedReqs, local
+IpcNumUnIssuedReqs:
 	.skip 0x4
-.endobj IpcNumUnIssuedReqs

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_transform.o"
 
-# 0x803E17B0 - 0x803E1AA0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::detail::CalcViewNrmMtx(nw4r::math::MTX33*, const nw4r::math::MTX34*)
@@ -212,6 +211,7 @@
 # 0x8066C340 - 0x8066C348
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C340, global
+.global lbl_8066C340
+lbl_8066C340:
 	.4byte 0x03AA2425
 	.4byte 0x00000000

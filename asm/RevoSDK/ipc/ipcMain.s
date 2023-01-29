@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/ipc/ipcMain.o"
 
-# 0x803429C0 - 0x80342AB0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn IPCInit, global
@@ -90,13 +89,18 @@
 # 0x80667968 - 0x80667980
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667968, global
+.global lbl_80667968
+lbl_80667968:
 	.skip 0x4
-.sym lbl_8066796C, global
+.global lbl_8066796C
+lbl_8066796C:
 	.skip 0x4
-.sym lbl_80667970, global
+.global lbl_80667970
+lbl_80667970:
 	.skip 0x4
-.sym lbl_80667974, global
+.global lbl_80667974
+lbl_80667974:
 	.skip 0x4
-.sym lbl_80667978, global
+.global lbl_80667978
+lbl_80667978:
 	.skip 0x8

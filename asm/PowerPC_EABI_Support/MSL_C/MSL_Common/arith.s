@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common/arith.o"
 
-# 0x802BDC5C - 0x802BDC7C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn abs, global

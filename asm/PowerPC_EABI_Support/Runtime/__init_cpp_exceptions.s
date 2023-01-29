@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/Runtime/__init_cpp_exceptions.o"
 
-# 0x802BA774 - 0x802BA7E4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __init_cpp_exceptions, global
@@ -45,31 +44,27 @@
 .section .ctors$10, "a"
 .balign 4
 
-.obj __init_cpp_exceptions_reference, local
+__init_cpp_exceptions_reference:
 	.4byte __init_cpp_exceptions
-.endobj __init_cpp_exceptions_reference
 
 # 0x804F5B00 - 0x804F5B04
 .section .dtors$10, "a"
 .balign 4
 
-.obj __destroy_global_chain_reference, local
+__destroy_global_chain_reference:
 	.4byte __destroy_global_chain
-.endobj __destroy_global_chain_reference
 
 # 0x804F5B04 - 0x804F5B08
 .section .dtors$15, "a"
 .balign 4
 
-.obj __fini_cpp_exceptions_reference, local
+__fini_cpp_exceptions_reference:
 	.4byte __fini_cpp_exceptions
-.endobj __fini_cpp_exceptions_reference
 
 # 0x80665870 - 0x80665878
 .section .sdata, "wa"
 .balign 8
 
-.obj fragmentID, local
+fragmentID:
 	.4byte 0xFFFFFFFE
-.endobj fragmentID
 	.4byte 0x00000000

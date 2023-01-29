@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/gx/GXGeometry.o"
 
-# 0x8031A760 - 0x8031AD70
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __GXSetDirtyState, global

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/lyt/lyt_arcResourceAccessor.o"
 
-# 0x8032C070 - 0x8032C410
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # _unnamed_lyt_arcResourceAccessor_cpp_::FindNameResource(ARCHandle*, const char*)
@@ -280,17 +279,21 @@
 # 0x8054D638 - 0x8054D6B8
 .data
 .balign 8
-.sym lbl_8054D638, global
+.global lbl_8054D638
+lbl_8054D638:
 	.4byte 0x2E000000
-.sym lbl_8054D63C, global
+.global lbl_8054D63C
+lbl_8054D63C:
 	.4byte 0x2E2E0000
-.sym lbl_8054D640, global
+.global lbl_8054D640
+lbl_8054D640:
 	.4byte lbl_8054D688
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt19ArcResourceAccessorFv
 	.4byte GetResource__Q36nw4hbm3lyt19ArcResourceAccessorFUlPCcPUl
 	.4byte GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc
-.sym lbl_8054D654, global
+.global lbl_8054D654
+lbl_8054D654:
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
@@ -300,15 +303,18 @@
 	.4byte 0x41636365
 	.4byte 0x73736F72
 	.4byte 0x00000000
-.sym lbl_8054D678, global
+.global lbl_8054D678
+lbl_8054D678:
 	.4byte lbl_8054D6B0
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8054D688, global
+.global lbl_8054D688
+lbl_8054D688:
 	.4byte lbl_8054D654
 	.4byte lbl_8054D678
-.sym lbl_8054D690, global
+.global lbl_8054D690
+lbl_8054D690:
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
@@ -317,6 +323,7 @@
 	.4byte 0x65416363
 	.4byte 0x6573736F
 	.4byte 0x72000000
-.sym lbl_8054D6B0, global
+.global lbl_8054D6B0
+lbl_8054D6B0:
 	.4byte lbl_8054D690
 	.4byte 0x00000000

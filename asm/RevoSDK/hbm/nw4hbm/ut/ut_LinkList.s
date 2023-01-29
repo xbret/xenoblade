@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/ut/ut_LinkList.o"
 
-# 0x80338540 - 0x80338650
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4hbm::ut::detail::LinkListImpl::~LinkListImpl()
@@ -48,7 +47,7 @@
 /* 803385C8 00301B88  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803385CC 00301B8C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_803385D0, global
+.fn func_803385D0, global
 /* 803385D0 00301B90  80 C4 00 00 */	lwz r6, 0x0(r4)
 /* 803385D4 00301B94  38 00 00 00 */	li r0, 0x0
 /* 803385D8 00301B98  80 A6 00 00 */	lwz r5, 0x0(r6)
@@ -69,11 +68,11 @@
 /* 8033860C 00301BCC  40 82 FF D4 */	bne .L_803385E0
 /* 80338610 00301BD0  7C A3 2B 78 */	mr r3, r5
 /* 80338614 00301BD4  4E 80 00 20 */	blr
-.endfn fn_803385D0
+.endfn func_803385D0
 /* 80338618 00301BD8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8033861C 00301BDC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80338620, global
+.fn func_80338620, global
 /* 80338620 00301BE0  80 84 00 00 */	lwz r4, 0x0(r4)
 /* 80338624 00301BE4  80 C4 00 04 */	lwz r6, 0x4(r4)
 /* 80338628 00301BE8  90 C5 00 04 */	stw r6, 0x4(r5)
@@ -85,5 +84,5 @@
 /* 80338640 00301C00  90 03 00 00 */	stw r0, 0x0(r3)
 /* 80338644 00301C04  7C A3 2B 78 */	mr r3, r5
 /* 80338648 00301C08  4E 80 00 20 */	blr
-.endfn fn_80338620
+.endfn func_80338620
 /* 8033864C 00301C0C  00 00 00 00 */	.4byte 0x00000000 /* invalid */

@@ -1,11 +1,10 @@
 .include "macros.inc"
-.file "monolithlib/mpfsys/MPFDrawCross.o"
 
-# 0x80479F04 - 0x80479F2C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.fn fn_80479F04, global
+.fn func_80479F04, global
 /* 80479F04 004434C4  88 0D C0 00 */	lbz r0, lbl_80668180@sda21(r13)
 /* 80479F08 004434C8  7C 00 07 75 */	extsb. r0, r0
 /* 80479F0C 004434CC  40 82 00 18 */	bne .L_80479F24
@@ -17,12 +16,14 @@
 .L_80479F24:
 /* 80479F24 004434E4  38 6D C0 04 */	addi r3, r13, lbl_80668184@sda21
 /* 80479F28 004434E8  4E 80 00 20 */	blr
-.endfn fn_80479F04
+.endfn func_80479F04
 
 # 0x80668180 - 0x80668188
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80668180, global
+.global lbl_80668180
+lbl_80668180:
 	.skip 0x4
-.sym lbl_80668184, global
+.global lbl_80668184
+lbl_80668184:
 	.skip 0x4

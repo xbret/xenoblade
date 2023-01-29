@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/mix/mix.o"
 
-# 0x80349BF0 - 0x8034CC90
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __MIXSetPan, global
@@ -3622,7 +3621,8 @@
 # 0x805504F0 - 0x80551080
 .data
 .balign 8
-.sym lbl_805504F0, global
+.global lbl_805504F0
+lbl_805504F0:
 	.4byte 0x00000001
 	.4byte 0x00010001
 	.4byte 0x00010001
@@ -4367,21 +4367,28 @@
 # 0x805CFC78 - 0x805D4000
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CFC78, global
+.global lbl_805CFC78
+lbl_805CFC78:
 	.skip 0x2A00
-.sym lbl_805D2678, global
+.global lbl_805D2678
+lbl_805D2678:
 	.skip 0x1988
 
 # 0x806679D8 - 0x806679F0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806679D8, global
+.global lbl_806679D8
+lbl_806679D8:
 	.skip 0x4
-.sym lbl_806679DC, global
+.global lbl_806679DC
+lbl_806679DC:
 	.skip 0x4
-.sym lbl_806679E0, global
+.global lbl_806679E0
+lbl_806679E0:
 	.skip 0x4
-.sym lbl_806679E4, global
+.global lbl_806679E4
+lbl_806679E4:
 	.skip 0x4
-.sym lbl_806679E8, global
+.global lbl_806679E8
+lbl_806679E8:
 	.skip 0x8

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_anmshp.o"
 
-# 0x803E5D0C - 0x803E5D28
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::AnmObjShp::TestExistence(unsigned long) const
@@ -19,7 +18,8 @@
 # 0x80520F28 - 0x80520F38
 .rodata
 .balign 8
-.sym lbl_80520F28, global
+.global lbl_80520F28
+lbl_80520F28:
 	.4byte 0x0000000A
 	.4byte 0x416E6D4F
 	.4byte 0x626A5368

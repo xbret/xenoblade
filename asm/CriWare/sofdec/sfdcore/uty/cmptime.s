@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/uty/cmptime.o"
 
-# 0x803D43DC - 0x803D440C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn UTY_CmpTime, global

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_errs.o"
 
-# 0x8038A188 - 0x8038A668
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADXERR_Init, global
@@ -357,14 +356,17 @@
 # 0x8051AB08 - 0x8051AB10
 .rodata
 .balign 8
-.sym lbl_8051AB08, global
+.global lbl_8051AB08
+lbl_8051AB08:
 	.4byte 0x4572726F
 	.4byte 0x72002000
 
 # 0x805E99C0 - 0x805E9AE8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E99C0, global
+.global lbl_805E99C0
+lbl_805E99C0:
 	.skip 0x108
-.sym lbl_805E9AC8, global
+.global lbl_805E9AC8
+lbl_805E9AC8:
 	.skip 0x20

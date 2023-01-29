@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_anmvis.o"
 
-# 0x803E1AA0 - 0x803E1BE8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ApplyVisAnmResult(nw4r::g3d::ResMdl, nw4r::g3d::AnmObjVis*)
@@ -105,7 +104,8 @@
 # 0x80520E38 - 0x80520E48
 .rodata
 .balign 8
-.sym lbl_80520E38, global
+.global lbl_80520E38
+lbl_80520E38:
 	.4byte 0x0000000A
 	.4byte 0x416E6D4F
 	.4byte 0x626A5669

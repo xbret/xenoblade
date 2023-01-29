@@ -1,45 +1,10 @@
 .include "macros.inc"
-.file "kyoshin/appgame/cf/CMcaFile.o"
 
-# 0x80007704 - 0x80007714
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_80007704", local
-.hidden "@etb_80007704"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_80007704"
-
-.obj "@etb_8000770C", local
-.hidden "@etb_8000770C"
-	.4byte 0x18080000
-	.4byte 0x00000000
-.endobj "@etb_8000770C"
-
-# 0x800226C4 - 0x800226DC
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_800226C4", local
-.hidden "@eti_800226C4"
-	.4byte fn_80058478
-	.4byte 0x00000040
-	.4byte "@etb_80007704"
-.endobj "@eti_800226C4"
-
-.obj "@eti_800226D0", local
-.hidden "@eti_800226D0"
-	.4byte fn_800584B8
-	.4byte 0x000000C4
-	.4byte "@etb_8000770C"
-.endobj "@eti_800226D0"
-
-# 0x80058414 - 0x8005857C
-.text
-.balign 4
-
-.fn fn_80058414, global
+.fn func_80058414, global
 /* 80058414 000219D4  3C A0 80 53 */	lis r5, __vt__CMcaFile@ha
 /* 80058418 000219D8  38 00 00 00 */	li r0, 0x0
 /* 8005841C 000219DC  38 A5 9B 78 */	addi r5, r5, __vt__CMcaFile@l
@@ -65,9 +30,9 @@
 /* 8005846C 00021A2C  7C 04 02 14 */	add r0, r4, r0
 /* 80058470 00021A30  90 03 00 0C */	stw r0, 0xc(r3)
 /* 80058474 00021A34  4E 80 00 20 */	blr
-.endfn fn_80058414
+.endfn func_80058414
 
-.fn fn_80058478, global
+.fn func_80058478, global
 /* 80058478 00021A38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005847C 00021A3C  7C 08 02 A6 */	mflr r0
 /* 80058480 00021A40  2C 03 00 00 */	cmpwi r3, 0x0
@@ -85,9 +50,9 @@
 /* 800584AC 00021A6C  7C 08 03 A6 */	mtlr r0
 /* 800584B0 00021A70  38 21 00 10 */	addi r1, r1, 0x10
 /* 800584B4 00021A74  4E 80 00 20 */	blr
-.endfn fn_80058478
+.endfn func_80058478
 
-.fn fn_800584B8, global
+.fn func_800584B8, global
 /* 800584B8 00021A78  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 800584BC 00021A7C  7C 08 02 A6 */	mflr r0
 /* 800584C0 00021A80  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -118,20 +83,20 @@
 /* 80058520 00021AE0  41 82 00 24 */	beq .L_80058544
 /* 80058524 00021AE4  7C A4 2B 78 */	mr r4, r5
 /* 80058528 00021AE8  38 61 00 4C */	addi r3, r1, 0x4c
-/* 8005852C 00021AEC  48 3D CB 4D */	bl fn_80435078
+/* 8005852C 00021AEC  48 3D CB 4D */	bl func_80435078
 /* 80058530 00021AF0  7F A3 EB 78 */	mr r3, r29
 /* 80058534 00021AF4  7F E4 FB 78 */	mr r4, r31
 /* 80058538 00021AF8  38 A1 00 4C */	addi r5, r1, 0x4c
-/* 8005853C 00021AFC  48 43 D9 71 */	bl fn_80495EAC
+/* 8005853C 00021AFC  48 43 D9 71 */	bl func_80495EAC
 /* 80058540 00021B00  48 00 00 20 */	b .L_80058560
 .L_80058544:
 /* 80058544 00021B04  7C A4 2B 78 */	mr r4, r5
 /* 80058548 00021B08  38 61 00 08 */	addi r3, r1, 0x8
-/* 8005854C 00021B0C  48 3D CB 2D */	bl fn_80435078
+/* 8005854C 00021B0C  48 3D CB 2D */	bl func_80435078
 /* 80058550 00021B10  7F A3 EB 78 */	mr r3, r29
 /* 80058554 00021B14  7F C4 F3 78 */	mr r4, r30
 /* 80058558 00021B18  38 A1 00 08 */	addi r5, r1, 0x8
-/* 8005855C 00021B1C  48 43 D9 51 */	bl fn_80495EAC
+/* 8005855C 00021B1C  48 43 D9 51 */	bl func_80495EAC
 .L_80058560:
 /* 80058560 00021B20  80 01 00 A4 */	lwz r0, 0xa4(r1)
 /* 80058564 00021B24  83 E1 00 9C */	lwz r31, 0x9c(r1)
@@ -140,13 +105,14 @@
 /* 80058570 00021B30  7C 08 03 A6 */	mtlr r0
 /* 80058574 00021B34  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 80058578 00021B38  4E 80 00 20 */	blr
-.endfn fn_800584B8
+.endfn func_800584B8
 
 # 0x804F68C8 - 0x804F68D8
 .rodata
 .balign 8
 
-.obj CMcaFile_typestr, global
+.global CMcaFile_typestr
+CMcaFile_typestr:
 	.4byte 0x434D6361
 	.4byte 0x46696C65
 	.4byte 0x00000000
@@ -156,11 +122,13 @@
 .data
 .balign 8
 
-.obj __vt__CMcaFile, global
+.global __vt__CMcaFile
+__vt__CMcaFile:
 	.4byte __RTTI__CMcaFile
 	.4byte 0x00000000
-	.4byte fn_80058478
-.sym lbl_80529B84, global
+	.4byte func_80058478
+.global lbl_80529B84
+lbl_80529B84:
 	.4byte 0x4E573452
 	.4byte 0x3A466169
 	.4byte 0x6C656420
@@ -171,7 +139,8 @@
 	.4byte 0x29702026
 	.4byte 0x20307831
 	.4byte 0x66290000
-.sym lbl_80529BAC, global
+.global lbl_80529BAC
+lbl_80529BAC:
 	.4byte 0x6733645F
 	.4byte 0x72657366
 	.4byte 0x696C655F
@@ -182,6 +151,41 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj __RTTI__CMcaFile, global
+.global __RTTI__CMcaFile
+__RTTI__CMcaFile:
 	.4byte CMcaFile_typestr
 	.4byte 0x00000000
+
+# 0x80007704 - 0x80007714
+.section extab, "a"
+.balign 4
+
+.obj "@etb_80007704", local
+.hidden "@etb_80007704"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_80007704"
+
+.obj "@etb_8000770C", local
+.hidden "@etb_8000770C"
+	.4byte 0x18080000
+	.4byte 0x00000000
+.endobj "@etb_8000770C"
+
+# 0x800226C4 - 0x800226DC
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_800226C4", local
+.hidden "@eti_800226C4"
+	.4byte func_80058478
+	.4byte 0x00000040
+	.4byte "@etb_80007704"
+.endobj "@eti_800226C4"
+
+.obj "@eti_800226D0", local
+.hidden "@eti_800226D0"
+	.4byte func_800584B8
+	.4byte 0x000000C4
+	.4byte "@etb_8000770C"
+.endobj "@eti_800226D0"

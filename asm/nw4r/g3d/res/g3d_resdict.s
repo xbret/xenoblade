@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_resdict.o"
 
-# 0x803D7960 - 0x803D7CE4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ResDic::Get(nw4r::g3d::ResName) const

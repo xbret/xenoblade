@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MetroTRK/target_options.o"
 
-# 0x802D05C4 - 0x802D05D4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SetUseSerialIO, global
@@ -19,7 +18,6 @@
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj bUseSerialIO, local
+bUseSerialIO:
 	.skip 0x1
-.endobj bUseSerialIO
 	.skip 0x7

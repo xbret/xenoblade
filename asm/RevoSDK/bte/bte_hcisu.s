@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/bte_hcisu.o"
 
-# 0x802DDDE0 - 0x802DDEB0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn bte_hcisu_send, global
@@ -75,7 +74,9 @@
 # 0x80667760 - 0x80667768
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667760, global
+.global lbl_80667760
+lbl_80667760:
 	.skip 0x4
-.sym lbl_80667764, global
+.global lbl_80667764
+lbl_80667764:
 	.skip 0x4

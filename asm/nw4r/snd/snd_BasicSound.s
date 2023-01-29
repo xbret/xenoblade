@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_BasicSound.o"
 
-# 0x804124A0 - 0x80413B14
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::BasicSound::BasicSound(int, int)
@@ -1448,10 +1447,10 @@
 /* 80413880 003DCE40  4E 80 00 20 */	blr
 .endfn SetVolume__Q44nw4r3snd6detail10BasicSoundFfi
 
-.fn fn_80413884, global
+.fn func_80413884, global
 /* 80413884 003DCE44  D0 23 00 B0 */	stfs f1, 0xb0(r3)
 /* 80413888 003DCE48  4E 80 00 20 */	blr
-.endfn fn_80413884
+.endfn func_80413884
 
 # nw4r::snd::detail::BasicSound::SetRemoteFilter(int)
 .fn SetRemoteFilter__Q44nw4r3snd6detail10BasicSoundFi, global
@@ -1678,16 +1677,20 @@
 # 0x80667DB0 - 0x80667DB8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DB0, global
+.global lbl_80667DB0
+lbl_80667DB0:
 	.skip 0x8
 
 # 0x8066C6E8 - 0x8066C6F8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C6E8, global
+.global lbl_8066C6E8
+lbl_8066C6E8:
 	.4byte 0x3F800000
-.sym lbl_8066C6EC, global
+.global lbl_8066C6EC
+lbl_8066C6EC:
 	.4byte 0x00000000
-.sym lbl_8066C6F0, global
+.global lbl_8066C6F0
+lbl_8066C6F0:
 	.4byte 0x43300000
 	.4byte 0x80000000

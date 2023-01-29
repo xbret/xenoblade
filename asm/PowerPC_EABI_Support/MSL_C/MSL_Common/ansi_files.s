@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.o"
 
-# 0x802BC2CC - 0x802BC3DC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __close_all, global
@@ -90,11 +89,13 @@
 .data
 .balign 8
 
-.obj __files, global
+.global __files
+__files:
 	.4byte 0x00000000
 	.4byte 0x0A800000
 	.4byte 0x00000000
-.sym lbl_8053F0FC, global
+.global lbl_8053F0FC
+lbl_8053F0FC:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -112,7 +113,8 @@
 	.4byte __close_console
 	.4byte 0x00000000
 	.4byte lbl_8053F140
-.sym lbl_8053F140, global
+.global lbl_8053F140
+lbl_8053F140:
 	.4byte 0x00000001
 	.4byte 0x12800000
 	.4byte 0x00000000
@@ -133,7 +135,8 @@
 	.4byte __close_console
 	.4byte 0x00000000
 	.4byte lbl_8053F190
-.sym lbl_8053F190, global
+.global lbl_8053F190
+lbl_8053F190:
 	.4byte 0x00000002
 	.4byte 0x10800000
 	.4byte 0x00000000
@@ -154,7 +157,8 @@
 	.4byte __close_console
 	.4byte 0x00000000
 	.4byte lbl_8053F1E0
-.sym lbl_8053F1E0, global
+.global lbl_8053F1E0
+lbl_8053F1E0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -175,14 +179,16 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.endobj __files
 
 # 0x8057B048 - 0x8057B348
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057B048, global
+.global lbl_8057B048
+lbl_8057B048:
 	.skip 0x100
-.sym lbl_8057B148, global
+.global lbl_8057B148
+lbl_8057B148:
 	.skip 0x100
-.sym lbl_8057B248, global
+.global lbl_8057B248
+lbl_8057B248:
 	.skip 0x100

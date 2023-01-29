@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/exi/EXICommon.o"
 
-# 0x80315D30 - 0x80315EC0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn EXIWriteReg, global

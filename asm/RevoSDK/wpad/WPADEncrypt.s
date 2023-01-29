@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/wpad/WPADEncrypt.o"
 
-# 0x803749D0 - 0x80375A90
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn WPADiCreateKey, global
@@ -1095,7 +1094,8 @@
 # 0x80560FA0 - 0x805622C8
 .data
 .balign 8
-.sym lbl_80560FA0, global
+.global lbl_80560FA0
+lbl_80560FA0:
 	.4byte 0xA877A6E0
 	.4byte 0xF7435A35
 	.4byte 0x85E27297
@@ -1149,7 +1149,7 @@
 	.4byte 0xCE9FBFD3
 	.4byte 0xCB767A7E
 	.4byte 0x82018A9A
-	.4byte fn_801D0E88+0x28
+	.4byte func_801D0E88+0x28
 	.4byte 0x5CD43862
 	.4byte 0xF430E08E
 	.4byte 0x53B70257
@@ -2326,11 +2326,15 @@
 # 0x80667CD8 - 0x80667CE0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667CD8, global
+.global lbl_80667CD8
+lbl_80667CD8:
 	.skip 0x1
-.sym lbl_80667CD9, global
+.global lbl_80667CD9
+lbl_80667CD9:
 	.skip 0x1
-.sym lbl_80667CDA, global
+.global lbl_80667CDA
+lbl_80667CDA:
 	.skip 0x1
-.sym lbl_80667CDB, global
+.global lbl_80667CDB
+lbl_80667CDB:
 	.skip 0x5

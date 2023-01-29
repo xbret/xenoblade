@@ -1,42 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/Runtime/MWRTTI.o"
 
-# 0x8001BF30 - 0x8001BF40
-.section extab, "a"
-.balign 4
+.section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.obj "@etb_8001BF30", local
-.hidden "@etb_8001BF30"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_8001BF30"
-
-.obj "@etb_8001BF38", local
-.hidden "@etb_8001BF38"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_8001BF38"
-
-# 0x80033AB8 - 0x80033AD0
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80033AB8", local
-.hidden "@eti_80033AB8"
-	.4byte __dynamic_cast
-	.4byte 0x0000025C
-	.4byte "@etb_8001BF30"
-.endobj "@eti_80033AB8"
-
-.obj "@eti_80033AC4", local
-.hidden "@eti_80033AC4"
-	.4byte __dt__Q23std8bad_castFv
-	.4byte 0x00000040
-	.4byte "@etb_8001BF38"
-.endobj "@eti_80033AC4"
-
-# 0x802B9D84 - 0x802BA02C
-.text
 .balign 4
 
 .fn __dynamic_cast, global
@@ -253,23 +218,27 @@
 .rodata
 .balign 8
 
-.obj std_exception_typestr, global
+.global std_exception_typestr
+std_exception_typestr:
 	.4byte 0x7374643A
 	.4byte 0x3A657863
 	.4byte 0x65707469
 	.4byte 0x6F6E0000
-.sym lbl_8050CE10, global
+.global lbl_8050CE10
+lbl_8050CE10:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-.obj std_bad_cast_typestr, global
+.global std_bad_cast_typestr
+std_bad_cast_typestr:
 	.4byte 0x7374643A
 	.4byte 0x3A626164
 	.4byte 0x5F636173
 	.4byte 0x74000000
-.sym lbl_8050CE30, global
+.global lbl_8050CE30
+lbl_8050CE30:
 	.4byte 0x3F3F3F00
 	.4byte 0x21737464
 	.4byte 0x3A3A6578
@@ -294,18 +263,20 @@
 .balign 8
 
 # std::bad_cast::__vtable
-.obj __vt__Q23std8bad_cast, global
+.global __vt__Q23std8bad_cast
+__vt__Q23std8bad_cast:
 	.4byte __RTTI__Q23std8bad_cast
 	.4byte 0x00000000
 	.4byte __dt__Q23std8bad_castFv
 	.4byte what__Q23std8bad_castCFv
-.endobj __vt__Q23std8bad_cast
 
-.obj std_bad_cast_hierarchy, global
+.global std_bad_cast_hierarchy
+std_bad_cast_hierarchy:
 	.4byte __RTTI__std_exception
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8053F05C, global
+.global lbl_8053F05C
+lbl_8053F05C:
 	.4byte 0x6261645F
 	.4byte 0x63617374
 	.4byte 0x00000000
@@ -315,7 +286,41 @@
 .balign 8
 
 # std::bad_cast::__RTTI
-.obj __RTTI__Q23std8bad_cast, global
+.global __RTTI__Q23std8bad_cast
+__RTTI__Q23std8bad_cast:
 	.4byte std_bad_cast_typestr
 	.4byte std_bad_cast_hierarchy
-.endobj __RTTI__Q23std8bad_cast
+
+# 0x8001BF30 - 0x8001BF40
+.section extab, "a"
+.balign 4
+
+.obj "@etb_8001BF30", local
+.hidden "@etb_8001BF30"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_8001BF30"
+
+.obj "@etb_8001BF38", local
+.hidden "@etb_8001BF38"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_8001BF38"
+
+# 0x80033AB8 - 0x80033AD0
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80033AB8", local
+.hidden "@eti_80033AB8"
+	.4byte __dynamic_cast
+	.4byte 0x0000025C
+	.4byte "@etb_8001BF30"
+.endobj "@eti_80033AB8"
+
+.obj "@eti_80033AC4", local
+.hidden "@eti_80033AC4"
+	.4byte __dt__Q23std8bad_castFv
+	.4byte 0x00000040
+	.4byte "@etb_8001BF38"
+.endobj "@eti_80033AC4"

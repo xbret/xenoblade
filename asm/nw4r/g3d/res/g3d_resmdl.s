@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_resmdl.o"
 
-# 0x803D95D4 - 0x803DA660
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ResMdl::GetResByteCode(const char*) const
@@ -574,7 +573,7 @@
 /* 803D9C30 003A31F0  4E 80 00 20 */	blr
 .endfn GetResMatNumEntries__Q34nw4r3g3d6ResMdlCFv
 
-.fn fn_803D9C34, global
+.fn func_803D9C34, global
 /* 803D9C34 003A31F4  80 63 00 00 */	lwz r3, 0x0(r3)
 /* 803D9C38 003A31F8  80 03 00 34 */	lwz r0, 0x34(r3)
 /* 803D9C3C 003A31FC  2C 00 00 00 */	cmpwi r0, 0x0
@@ -600,7 +599,7 @@
 .L_803D9C80:
 /* 803D9C80 003A3240  38 60 00 00 */	li r3, 0x0
 /* 803D9C84 003A3244  4E 80 00 20 */	blr
-.endfn fn_803D9C34
+.endfn func_803D9C34
 
 # nw4r::g3d::ResMdl::GetResShp(int) const
 .fn GetResShp__Q34nw4r3g3d6ResMdlCFi, global
@@ -680,7 +679,7 @@
 /* 803D9D60 003A3320  4E 80 00 20 */	blr
 .endfn GetResShpNumEntries__Q34nw4r3g3d6ResMdlCFv
 
-.fn fn_803D9D64, global
+.fn func_803D9D64, global
 /* 803D9D64 003A3324  80 63 00 00 */	lwz r3, 0x0(r3)
 /* 803D9D68 003A3328  80 03 00 3C */	lwz r0, 0x3c(r3)
 /* 803D9D6C 003A332C  2C 00 00 00 */	cmpwi r0, 0x0
@@ -706,7 +705,7 @@
 .L_803D9DB0:
 /* 803D9DB0 003A3370  38 60 00 00 */	li r3, 0x0
 /* 803D9DB4 003A3374  4E 80 00 20 */	blr
-.endfn fn_803D9D64
+.endfn func_803D9D64
 
 # nw4r::g3d::ResMdl::GetResTexPlttInfoOffsetFromTexNameNumEntries() const
 .fn GetResTexPlttInfoOffsetFromTexNameNumEntries__Q34nw4r3g3d6ResMdlCFv, global

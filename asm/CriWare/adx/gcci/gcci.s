@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/gcci/gcci.o"
 
-# 0x80390978 - 0x8039179C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn gcCiGetInterface, global
@@ -1055,7 +1054,8 @@
 # 0x8051B830 - 0x8051BA28
 .rodata
 .balign 8
-.sym lbl_8051B830, global
+.global lbl_8051B830
+lbl_8051B830:
 	.4byte 0x45303039
 	.4byte 0x32393031
 	.4byte 0x3A666E61
@@ -1187,7 +1187,8 @@
 .data
 .balign 8
 
-.obj gcci_vtbl, global
+.global gcci_vtbl
+gcci_vtbl:
 	.4byte gcCiExecServer
 	.4byte gcCiEntryErrFunc
 	.4byte gcCiGetFileSize
@@ -1218,17 +1219,24 @@
 # 0x805EA1B0 - 0x805EB270
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805EA1B0, global
+.global lbl_805EA1B0
+lbl_805EA1B0:
 	.skip 0x4
-.sym lbl_805EA1B4, global
+.global lbl_805EA1B4
+lbl_805EA1B4:
 	.skip 0x4
-.sym lbl_805EA1B8, global
+.global lbl_805EA1B8
+lbl_805EA1B8:
 	.skip 0x4
-.sym lbl_805EA1BC, global
+.global lbl_805EA1BC
+lbl_805EA1BC:
 	.skip 0xC
-.sym lbl_805EA1C8, global
+.global lbl_805EA1C8
+lbl_805EA1C8:
 	.skip 0xFA0
-.sym lbl_805EB168, global
+.global lbl_805EB168
+lbl_805EB168:
 	.skip 0x8
-.sym lbl_805EB170, global
+.global lbl_805EB170
+lbl_805EB170:
 	.skip 0x100

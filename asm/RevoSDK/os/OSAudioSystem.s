@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSAudioSystem.o"
 
-# 0x80353AA0 - 0x80353F60
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __AIClockInit, local
@@ -349,7 +348,7 @@
 .data
 .balign 8
 
-.obj DSPInitCode, local
+DSPInitCode:
 	.4byte 0x029F0010
 	.4byte 0x029F0033
 	.4byte 0x029F0034
@@ -382,4 +381,3 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.endobj DSPInitCode

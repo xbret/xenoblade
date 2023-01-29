@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/ptim.o"
 
-# 0x802DEBA0 - 0x802DED80
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn ptim_init, global

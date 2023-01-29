@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/nand/NANDCore.o"
 
-# 0x8034FDC0 - 0x80350FA0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn nandRemoveTailToken, global
@@ -1450,7 +1449,7 @@
 	.4byte 0x00000000
 	.byte 0x00, 0x00, 0x00
 
-.obj s_currentDir, local
+s_currentDir:
 	.4byte 0x2F000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1467,16 +1466,17 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.endobj s_currentDir
 	.4byte nandOnShutdown
 	.4byte 0x000000FF
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_80551130, global
+.global lbl_80551130
+lbl_80551130:
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x00000000
-.sym lbl_8055113C, global
+.global lbl_8055113C
+lbl_8055113C:
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x2F000000
@@ -1519,43 +1519,48 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj s_homeDir, local
+s_homeDir:
 	.skip 0x40
-.endobj s_homeDir
 
 # 0x80665AE8 - 0x80665B10
 .section .sdata, "wa"
 .balign 8
 
-.obj __NANDVersion, global
+.global __NANDVersion
+__NANDVersion:
 	.4byte "@2834"
-.endobj __NANDVersion
-.sym lbl_80665AEC, global
+.global lbl_80665AEC
+lbl_80665AEC:
 	.4byte 0x2F000000
 
 .obj "@3775", local
 	.byte 0x00
 .endobj "@3775"
 	.byte 0x00, 0x00, 0x00
-.sym lbl_80665AF4, global
+.global lbl_80665AF4
+lbl_80665AF4:
 	.4byte 0x2E000000
-.sym lbl_80665AF8, global
+.global lbl_80665AF8
+lbl_80665AF8:
 	.4byte 0x2E2E0000
-.sym lbl_80665AFC, global
+.global lbl_80665AFC
+lbl_80665AFC:
 	.4byte 0x2F257300
-.sym lbl_80665B00, global
+.global lbl_80665B00
+lbl_80665B00:
 	.4byte 0x25732F25
 	.4byte 0x73000000
-.sym lbl_80665B08, global
+.global lbl_80665B08
+lbl_80665B08:
 	.4byte 0x00000000
-.sym lbl_80665B0C, global
+.global lbl_80665B0C
+lbl_80665B0C:
 	.4byte 0x00200000
 
 # 0x806679F0 - 0x806679F8
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj s_libState, local
+s_libState:
 	.skip 0x4
-.endobj s_libState
 	.skip 0x4

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_tlk.o"
 
-# 0x8038259C - 0x80384748
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADXT_Create, global
@@ -1680,7 +1679,7 @@
 /* 80383CC4 0034D284  4E 80 00 20 */	blr
 .endfn ADXT_SetSvrFreq
 
-.fn fn_80383CC8, global
+.fn func_80383CC8, global
 /* 80383CC8 0034D288  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80383CCC 0034D28C  7C 08 02 A6 */	mflr r0
 /* 80383CD0 0034D290  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1711,9 +1710,9 @@
 /* 80383D28 0034D2E8  7C 08 03 A6 */	mtlr r0
 /* 80383D2C 0034D2EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80383D30 0034D2F0  4E 80 00 20 */	blr
-.endfn fn_80383CC8
+.endfn func_80383CC8
 
-.fn fn_80383D34, global
+.fn func_80383D34, global
 /* 80383D34 0034D2F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80383D38 0034D2F8  7C 08 02 A6 */	mflr r0
 /* 80383D3C 0034D2FC  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1750,7 +1749,7 @@
 /* 80383DA8 0034D368  7C 08 03 A6 */	mtlr r0
 /* 80383DAC 0034D36C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80383DB0 0034D370  4E 80 00 20 */	blr
-.endfn fn_80383D34
+.endfn func_80383D34
 
 .fn ADXT_SetAutoRcvr, global
 /* 80383DB4 0034D374  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2137,7 +2136,7 @@
 .L_803842E0:
 /* 803842E0 0034D8A0  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 803842E4 0034D8A4  7F 84 E3 78 */	mr r4, r28
-/* 803842E8 0034D8A8  48 01 70 F5 */	bl fn_8039B3DC
+/* 803842E8 0034D8A8  48 01 70 F5 */	bl func_8039B3DC
 /* 803842EC 0034D8AC  7C 7C 1B 78 */	mr r28, r3
 /* 803842F0 0034D8B0  48 00 51 15 */	bl ADXCRS_Enter
 /* 803842F4 0034D8B4  4B FF FB 29 */	bl adxt_ExecServer
@@ -2453,20 +2452,24 @@
 # 0x80519968 - 0x8051A120
 .rodata
 .balign 8
-.sym lbl_80519968, global
+.global lbl_80519968
+lbl_80519968:
 	.4byte 0x3F59999A
 	.4byte 0x00000000
-.sym lbl_80519970, global
+.global lbl_80519970
+lbl_80519970:
 	.4byte 0x43300000
 	.4byte 0x80000000
 	.4byte 0x00000000
 	.4byte 0x447A0000
 	.4byte 0x42700000
 	.4byte 0xC2700000
-.sym lbl_80519988, global
+.global lbl_80519988
+lbl_80519988:
 	.4byte 0x42C80000
 	.4byte 0xBF800000
-.sym lbl_80519990, global
+.global lbl_80519990
+lbl_80519990:
 	.4byte 0x45303230
 	.4byte 0x38303830
 	.4byte 0x34206164
@@ -2955,25 +2958,34 @@
 # 0x80563720 - 0x80563728
 .data
 .balign 8
-.sym lbl_80563720, global
+.global lbl_80563720
+lbl_80563720:
 	.4byte 0x00000019
-.sym lbl_80563724, global
+.global lbl_80563724
+lbl_80563724:
 	.4byte 0x00000001
 
 # 0x805E8570 - 0x805E85F0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E8570, global
+.global lbl_805E8570
+lbl_805E8570:
 	.skip 0x20
-.sym lbl_805E8590, global
+.global lbl_805E8590
+lbl_805E8590:
 	.skip 0x8
-.sym lbl_805E8598, global
+.global lbl_805E8598
+lbl_805E8598:
 	.skip 0x4
-.sym lbl_805E859C, global
+.global lbl_805E859C
+lbl_805E859C:
 	.skip 0x4
-.sym lbl_805E85A0, global
+.global lbl_805E85A0
+lbl_805E85A0:
 	.skip 0x4
-.sym lbl_805E85A4, global
+.global lbl_805E85A4
+lbl_805E85A4:
 	.skip 0x4
-.sym lbl_805E85A8, global
+.global lbl_805E85A8
+lbl_805E85A8:
 	.skip 0x48

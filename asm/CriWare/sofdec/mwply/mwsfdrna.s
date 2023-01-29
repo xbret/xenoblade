@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/mwply/mwsfdrna.o"
 
-# 0x8039CE58 - 0x8039CE70
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MWSFRNA_SetOutVol, global

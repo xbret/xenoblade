@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_resanmlight.o"
 
-# 0x803E0558 - 0x803E0950
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ResAnmLight::GetAnmResult(nw4r::g3d::LightAnmResult*, float) const
@@ -307,9 +306,11 @@
 # 0x8066C320 - 0x8066C330
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C320, global
+.global lbl_8066C320
+lbl_8066C320:
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066C328, global
+.global lbl_8066C328
+lbl_8066C328:
 	.4byte 0x43300000
 	.4byte 0x00000000

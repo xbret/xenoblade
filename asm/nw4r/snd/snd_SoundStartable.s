@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_SoundStartable.o"
 
-# 0x80420FC0 - 0x80421020
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::SoundStartable::detail_StartSound(nw4r::snd::SoundHandle*, unsigned long, const nw4r::snd::SoundStartable::StartInfo*)

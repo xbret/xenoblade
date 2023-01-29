@@ -1,42 +1,7 @@
 .include "macros.inc"
-.file "monolithlib/CChildListNode.o"
 
-# 0x8001C9A4 - 0x8001C9B4
-.section extab, "a"
-.balign 4
+.section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.obj "@etb_8001C9A4", local
-.hidden "@etb_8001C9A4"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_8001C9A4"
-
-.obj "@etb_8001C9AC", local
-.hidden "@etb_8001C9AC"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_8001C9AC"
-
-# 0x8003458C - 0x800345A4
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_8003458C", local
-.hidden "@eti_8003458C"
-	.4byte __ct__CChildListNode
-	.4byte 0x00000054
-	.4byte "@etb_8001C9A4"
-.endobj "@eti_8003458C"
-
-.obj "@eti_80034598", local
-.hidden "@eti_80034598"
-	.4byte CChildListNode_Reset
-	.4byte 0x00000038
-	.4byte "@etb_8001C9AC"
-.endobj "@eti_80034598"
-
-# 0x804466E0 - 0x8044676C
-.text
 .balign 4
 
 .fn __ct__CChildListNode, global
@@ -84,7 +49,8 @@
 .rodata
 .balign 8
 
-.obj TChildListHeader_CChildListNode_typestr, global
+.global TChildListHeader_CChildListNode_typestr
+TChildListHeader_CChildListNode_typestr:
 	.4byte 0x54436869
 	.4byte 0x6C644C69
 	.4byte 0x73744865
@@ -100,22 +66,59 @@
 .data
 .balign 8
 
-.obj __vt__CChildListNode, global
+.global __vt__CChildListNode
+__vt__CChildListNode:
 	.4byte __RTTI__CChildListNode
 	.4byte 0x00000000
-	.4byte fn_80444A78
+	.4byte func_80444A78
 	.4byte CChildListNode_Reset
 
-.obj __vt__TChildListHeader_CChildListNode, global
+.global __vt__TChildListHeader_CChildListNode
+__vt__TChildListHeader_CChildListNode:
 	.4byte __RTTI__TChildListHeader_CChildListNode
 	.4byte 0x00000000
-	.4byte fn_80444AB8
+	.4byte func_80444AB8
 	.4byte 0x00000000
 
 # 0x80665F08 - 0x80665F10
 .section .sdata, "wa"
 .balign 8
 
-.obj __RTTI__TChildListHeader_CChildListNode, global
+.global __RTTI__TChildListHeader_CChildListNode
+__RTTI__TChildListHeader_CChildListNode:
 	.4byte TChildListHeader_CChildListNode_typestr
 	.4byte 0x00000000
+
+# 0x8001C9A4 - 0x8001C9B4
+.section extab, "a"
+.balign 4
+
+.obj "@etb_8001C9A4", local
+.hidden "@etb_8001C9A4"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_8001C9A4"
+
+.obj "@etb_8001C9AC", local
+.hidden "@etb_8001C9AC"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_8001C9AC"
+
+# 0x8003458C - 0x800345A4
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_8003458C", local
+.hidden "@eti_8003458C"
+	.4byte __ct__CChildListNode
+	.4byte 0x00000054
+	.4byte "@etb_8001C9A4"
+.endobj "@eti_8003458C"
+
+.obj "@eti_80034598", local
+.hidden "@eti_80034598"
+	.4byte CChildListNode_Reset
+	.4byte 0x00000038
+	.4byte "@etb_8001C9AC"
+.endobj "@eti_80034598"

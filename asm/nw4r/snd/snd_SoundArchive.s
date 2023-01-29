@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_SoundArchive.o"
 
-# 0x8041C77C - 0x8041CAD4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::SoundArchive::SoundArchive()
@@ -332,7 +331,8 @@
 # 0x8056E4A0 - 0x8056E4C0
 .data
 .balign 8
-.sym lbl_8056E4A0, global
+.global lbl_8056E4A0
+lbl_8056E4A0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3snd12SoundArchiveFv

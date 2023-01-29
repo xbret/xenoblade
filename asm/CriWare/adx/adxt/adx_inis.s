@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_inis.o"
 
-# 0x8037F674 - 0x8037F920
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn adxini_rnaerr_cbfn, global
@@ -206,7 +205,8 @@
 .rodata
 .balign 8
 
-.obj adxt_build, global
+.global adxt_build
+adxt_build:
 	.4byte 0x0A414458
 	.4byte 0x542F5749
 	.4byte 0x49205665
@@ -229,7 +229,8 @@
 	.4byte 0x61746368
 	.4byte 0x30320A00
 	.4byte 0x00000000
-.sym lbl_805196A8, global
+.global lbl_805196A8
+lbl_805196A8:
 	.4byte 0x61647874
 	.4byte 0x5F657865
 	.4byte 0x635F7473
@@ -276,5 +277,6 @@
 # 0x805E5D48 - 0x805E5D54
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E5D48, global
+.global lbl_805E5D48
+lbl_805E5D48:
 	.skip 0xC

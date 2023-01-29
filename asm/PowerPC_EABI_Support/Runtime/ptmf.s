@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/Runtime/ptmf.o"
 
-# 0x802B9CF0 - 0x802B9D84
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __ptmf_test, global

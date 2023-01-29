@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/ax/AXProf.o"
 
-# 0x802D56D0 - 0x802D5710
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __AXGetCurrentProfile, global
@@ -28,11 +27,15 @@
 # 0x80667738 - 0x80667748
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667738, global
+.global lbl_80667738
+lbl_80667738:
 	.skip 0x4
-.sym lbl_8066773C, global
+.global lbl_8066773C
+lbl_8066773C:
 	.skip 0x4
-.sym lbl_80667740, global
+.global lbl_80667740
+lbl_80667740:
 	.skip 0x4
-.sym lbl_80667744, global
+.global lbl_80667744
+lbl_80667744:
 	.skip 0x4

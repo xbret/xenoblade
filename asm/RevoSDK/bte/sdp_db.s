@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/sdp_db.o"
 
-# 0x80303D24 - 0x803049F0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn sdp_db_service_search, global
@@ -940,7 +939,8 @@
 # 0x80548F50 - 0x80548FE8
 .data
 .balign 8
-.sym lbl_80548F50, global
+.global lbl_80548F50
+lbl_80548F50:
 	.4byte 0x5344505F
 	.4byte 0x41646441
 	.4byte 0x74747269
@@ -956,7 +956,8 @@
 	.4byte 0x20746F20
 	.4byte 0x28256429
 	.4byte 0x00000000
-.sym lbl_80548F8C, global
+.global lbl_80548F8C
+lbl_80548F8C:
 	.4byte 0x5344505F
 	.4byte 0x41646455
 	.4byte 0x75696453
@@ -970,7 +971,8 @@
 	.4byte 0x75696473
 	.4byte 0x206F6620
 	.4byte 0x25640000
-.sym lbl_80548FC0, global
+.global lbl_80548FC0
+lbl_80548FC0:
 	.4byte 0x44656C65
 	.4byte 0x74696E67
 	.4byte 0x20617474

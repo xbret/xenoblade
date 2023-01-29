@@ -1,29 +1,7 @@
 .include "macros.inc"
-.file "kyoshin/appgame/cf/CfCamLookatIntf.o"
 
-# 0x80008098 - 0x800080A0
-.section extab, "a"
-.balign 4
+.section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.obj "@etb_80008098", local
-.hidden "@etb_80008098"
-	.4byte 0x100A0000
-	.4byte 0x00000000
-.endobj "@etb_80008098"
-
-# 0x800233B4 - 0x800233C0
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_800233B4", local
-.hidden "@eti_800233B4"
-	.4byte CamLookatIntf_setDir
-	.4byte 0x00000074
-	.4byte "@etb_80008098"
-.endobj "@eti_800233B4"
-
-# 0x8006B508 - 0x8006B5D4
-.text
 .balign 4
 
 .fn CamLookatIntf_update, global
@@ -56,7 +34,7 @@
 /* 8006B558 00034B18  7C 9E 23 78 */	mr r30, r4
 /* 8006B55C 00034B1C  C0 24 02 84 */	lfs f1, 0x284(r4)
 /* 8006B560 00034B20  38 84 02 68 */	addi r4, r4, 0x268
-/* 8006B564 00034B24  48 00 8F 25 */	bl fn_80074488
+/* 8006B564 00034B24  48 00 8F 25 */	bl func_80074488
 /* 8006B568 00034B28  80 61 00 08 */	lwz r3, 0x8(r1)
 /* 8006B56C 00034B2C  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8006B570 00034B30  90 1E 02 78 */	stw r0, 0x278(r30)
@@ -88,3 +66,24 @@
 /* 8006B5CC 00034B8C  D0 04 02 64 */	stfs f0, 0x264(r4)
 /* 8006B5D0 00034B90  4E 80 00 20 */	blr
 .endfn CamLookatIntf_setLookat
+
+# 0x80008098 - 0x800080A0
+.section extab, "a"
+.balign 4
+
+.obj "@etb_80008098", local
+.hidden "@etb_80008098"
+	.4byte 0x100A0000
+	.4byte 0x00000000
+.endobj "@etb_80008098"
+
+# 0x800233B4 - 0x800233C0
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_800233B4", local
+.hidden "@eti_800233B4"
+	.4byte CamLookatIntf_setDir
+	.4byte 0x00000074
+	.4byte "@etb_80008098"
+.endobj "@eti_800233B4"

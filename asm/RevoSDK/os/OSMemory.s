@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSMemory.o"
 
-# 0x80359480 - 0x80359C20
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn OSGetPhysicalMem2Size, global
@@ -554,12 +553,11 @@
 .data
 .balign 8
 
-.obj ShutdownFunctionInfo, local
+ShutdownFunctionInfo:
 	.4byte OnShutdown
 	.4byte 0x0000007F
 	.4byte 0x00000000
 	.4byte 0x00000000
-.endobj ShutdownFunctionInfo
 
 # 0x80667AA8 - 0x80667AB0
 .section .sbss, "wa", @nobits

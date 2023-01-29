@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/arc/arc.o"
 
-# 0x802D1670 - 0x802D2050
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn ARCInitHandle, global

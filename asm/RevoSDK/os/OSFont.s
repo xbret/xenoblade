@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSFont.o"
 
-# 0x80357720 - 0x803589B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn GetFontCode, global
@@ -1333,7 +1332,8 @@
 # 0x80551FA0 - 0x80552AB0
 .data
 .balign 8
-.sym lbl_80551FA0, global
+.global lbl_80551FA0
+lbl_80551FA0:
 	.4byte 0x020C020D
 	.4byte 0x020E020F
 	.4byte 0x02100211
@@ -1430,7 +1430,8 @@
 	.4byte 0x02A402A5
 	.4byte 0x02A602A7
 	.4byte 0x02A802A9
-.sym lbl_80552120, global
+.global lbl_80552120
+lbl_80552120:
 	.4byte 0x00000001
 	.4byte 0x00020003
 	.4byte 0x00040005
@@ -2047,26 +2048,33 @@
 # 0x80665B88 - 0x80665B90
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B88, global
+.global lbl_80665B88
+lbl_80665B88:
 	.4byte 0xFFFF0000
 	.4byte 0x00000000
 
 # 0x80667A80 - 0x80667A90
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667A80, global
+.global lbl_80667A80
+lbl_80667A80:
 	.skip 0x4
-.sym lbl_80667A84, global
+.global lbl_80667A84
+lbl_80667A84:
 	.skip 0x4
-.sym lbl_80667A88, global
+.global lbl_80667A88
+lbl_80667A88:
 	.skip 0x4
-.sym lbl_80667A8C, global
+.global lbl_80667A8C
+lbl_80667A8C:
 	.skip 0x4
 
 # 0x8066C1D0 - 0x8066C1D8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C1D0, global
+.global lbl_8066C1D0
+lbl_8066C1D0:
 	.4byte 0x2ABE003D
-.sym lbl_8066C1D4, global
+.global lbl_8066C1D4
+lbl_8066C1D4:
 	.4byte 0x003D003D

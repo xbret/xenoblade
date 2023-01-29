@@ -1,5 +1,4 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/Runtime/__exception.o"
 
 # 0x80004380 - 0x800062C0
 .section .init, "ax"

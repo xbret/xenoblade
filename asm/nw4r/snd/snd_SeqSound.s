@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_SeqSound.o"
 
-# 0x8041ABBC - 0x8041B304
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::SeqSound::SeqSound(nw4r::snd::detail::SoundInstanceManager_Q44nw4r3snd6detail8SeqSound_*, int, int)
@@ -595,7 +594,8 @@
 # 0x8056E440 - 0x8056E490
 .data
 .balign 8
-.sym lbl_8056E440, global
+.global lbl_8056E440
+lbl_8056E440:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail8SeqSoundCFv
@@ -610,7 +610,8 @@
 	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail8SeqSoundFv
 	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
 	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
-.sym lbl_8056E478, global
+.global lbl_8056E478
+lbl_8056E478:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
@@ -621,5 +622,6 @@
 # 0x80667DD8 - 0x80667DE0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DD8, global
+.global lbl_80667DD8
+lbl_80667DD8:
 	.skip 0x8

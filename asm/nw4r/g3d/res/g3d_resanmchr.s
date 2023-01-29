@@ -1,11 +1,10 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_resanmchr.o"
 
-# 0x803DE5F0 - 0x803E031C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.fn fn_803DE5F0, global
+.fn func_803DE5F0, global
 /* 803DE5F0 003A7BB0  80 63 00 00 */	lwz r3, 0x0(r3)
 /* 803DE5F4 003A7BB4  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 803DE5F8 003A7BB8  2C 00 00 00 */	cmpwi r0, 0x0
@@ -15,7 +14,7 @@
 .L_803DE608:
 /* 803DE608 003A7BC8  38 60 00 00 */	li r3, 0x0
 /* 803DE60C 003A7BCC  4E 80 00 20 */	blr
-.endfn fn_803DE5F0
+.endfn func_803DE5F0
 
 # nw4r::g3d::_unnamed_g3d_resanmchr_cpp_::GetAnmScale(nw4r::math::VEC3*, const nw4r::g3d::ResAnmChrNodeData*, const nw4r::g3d::ResAnmChrNodeData::AnmData*, float)
 .fn GetAnmScale__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf, global
@@ -2129,7 +2128,8 @@
 # 0x80520E18 - 0x80520E38
 .rodata
 .balign 8
-.sym lbl_80520E18, global
+.global lbl_80520E18
+lbl_80520E18:
 	.4byte GetAnmResult___Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
 	.4byte GetAnmResult_S__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
 	.4byte GetAnmResult_R__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
@@ -2142,24 +2142,33 @@
 # 0x8066C2E0 - 0x8066C310
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C2E0, global
+.global lbl_8066C2E0
+lbl_8066C2E0:
 	.4byte 0x00000000
-.sym lbl_8066C2E4, global
+.global lbl_8066C2E4
+lbl_8066C2E4:
 	.4byte 0x3F800000
-.sym lbl_8066C2E8, global
+.global lbl_8066C2E8
+lbl_8066C2E8:
 	.4byte 0x40000000
-.sym lbl_8066C2EC, global
+.global lbl_8066C2EC
+lbl_8066C2EC:
 	.4byte 0x40400000
-.sym lbl_8066C2F0, global
+.global lbl_8066C2F0
+lbl_8066C2F0:
 	.4byte 0x3F360B61
 	.4byte 0x00000000
-.sym lbl_8066C2F8, global
+.global lbl_8066C2F8
+lbl_8066C2F8:
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C300, global
+.global lbl_8066C300
+lbl_8066C300:
 	.4byte 0x3FB40000
-.sym lbl_8066C304, global
+.global lbl_8066C304
+lbl_8066C304:
 	.4byte 0x42B40000
-.sym lbl_8066C308, global
+.global lbl_8066C308
+lbl_8066C308:
 	.4byte 0xC2B40000
 	.4byte 0x00000000

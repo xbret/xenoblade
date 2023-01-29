@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_EnvGenerator.o"
 
-# 0x804153C4 - 0x80415760
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::EnvGenerator::EnvGenerator()
@@ -298,7 +297,8 @@
 # 0x80523558 - 0x80523858
 .rodata
 .balign 8
-.sym lbl_80523558, global
+.global lbl_80523558
+lbl_80523558:
 	.4byte 0xFD2DFD2E
 	.4byte 0xFD2FFD75
 	.4byte 0xFDA7FDCE
@@ -363,7 +363,8 @@
 	.4byte 0xFFF9FFFA
 	.4byte 0xFFFCFFFD
 	.4byte 0xFFFF0000
-.sym lbl_80523658, global
+.global lbl_80523658
+lbl_80523658:
 	.4byte 0x3F7FCCB8
 	.4byte 0x3F7F9947
 	.4byte 0x3F7F65AD
@@ -496,23 +497,32 @@
 # 0x8066C734 - 0x8066C760
 .section .sdata2, "a"
 .balign 4
-.sym lbl_8066C734, global
+.global lbl_8066C734
+lbl_8066C734:
 	.4byte 0x477FFF00
-.sym lbl_8066C738, global
+.global lbl_8066C738
+lbl_8066C738:
 	.4byte 0x41200000
-.sym lbl_8066C73C, global
+.global lbl_8066C73C
+lbl_8066C73C:
 	.4byte 0x00000000
-.sym lbl_8066C740, global
+.global lbl_8066C740
+lbl_8066C740:
 	.4byte 0xBD000000
 	.4byte 0x00000000
-.sym lbl_8066C748, global
+.global lbl_8066C748
+lbl_8066C748:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C750, global
+.global lbl_8066C750
+lbl_8066C750:
 	.4byte 0x41C00000
-.sym lbl_8066C754, global
+.global lbl_8066C754
+lbl_8066C754:
 	.4byte 0x3C000000
-.sym lbl_8066C758, global
+.global lbl_8066C758
+lbl_8066C758:
 	.4byte 0x40A00000
-.sym lbl_8066C75C, global
+.global lbl_8066C75C
+lbl_8066C75C:
 	.4byte 0x42700000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/wud/debug_msg.o"
 
-# 0x8037C5D0 - 0x8037C620
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn WUD_DEBUGPrint, global

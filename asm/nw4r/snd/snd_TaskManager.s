@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_TaskManager.o"
 
-# 0x804257C4 - 0x80425F30
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::TaskManager::GetInstance()
@@ -574,13 +573,16 @@
 # 0x80657018 - 0x80657060
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80657018, global
+.global lbl_80657018
+lbl_80657018:
 	.skip 0xC
-.sym lbl_80657024, global
+.global lbl_80657024
+lbl_80657024:
 	.skip 0x3C
 
 # 0x80667E08 - 0x80667E10
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E08, global
+.global lbl_80667E08
+lbl_80667E08:
 	.skip 0x8

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common/wprintf.o"
 
-# 0x802C4D0C - 0x802C6F2C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn parse_format, local
@@ -2521,7 +2520,8 @@
 # 0x8050DB88 - 0x8050DB90
 .rodata
 .balign 8
-.sym lbl_8050DB88, global
+.global lbl_8050DB88
+lbl_8050DB88:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
@@ -2529,7 +2529,7 @@
 .data
 .balign 8
 
-.obj jumptable_8053FA30, local
+jumptable_8053FA30:
 	.rel parse_format, .L_802C50F0
 	.rel parse_format, .L_802C5250
 	.rel parse_format, .L_802C5250
@@ -2586,9 +2586,8 @@
 	.rel parse_format, .L_802C5250
 	.rel parse_format, .L_802C5250
 	.rel parse_format, .L_802C5060
-.endobj jumptable_8053FA30
 
-.obj jumptable_8053FB10, local
+jumptable_8053FB10:
 	.rel __wpformatter, .L_802C6C28
 	.rel __wpformatter, .L_802C6C38
 	.rel __wpformatter, .L_802C6C38
@@ -2673,8 +2672,8 @@
 	.rel __wpformatter, .L_802C6C38
 	.rel __wpformatter, .L_802C6C38
 	.rel __wpformatter, .L_802C6718
-.endobj jumptable_8053FB10
-.sym lbl_8053FC60, global
+.global lbl_8053FC60
+lbl_8053FC60:
 	.4byte 0x002D0030
 	.4byte 0x00580030
 	.4byte 0x0000002D
@@ -2707,6 +2706,7 @@
 # 0x8066B898 - 0x8066B8A0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066B898, global
+.global lbl_8066B898
+lbl_8066B898:
 	.4byte 0x00000000
 	.4byte 0x00000000

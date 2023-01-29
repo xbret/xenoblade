@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/e_log10.o"
 
-# 0x802C8088 - 0x802C819C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __ieee754_log10, global
@@ -86,9 +85,8 @@
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj zero, local
+zero:
 	.skip 0x8
-.endobj zero
 
 # 0x8066BA88 - 0x8066BAB8
 .section .sdata2, "a"

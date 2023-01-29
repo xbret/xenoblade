@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/bta_dm_api.o"
 
-# 0x802E1100 - 0x802E156C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn BTA_EnableBluetooth, global
@@ -338,9 +337,11 @@
 # 0x8066BF50 - 0x8066BF60
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF50, global
+.global lbl_8066BF50
+lbl_8066BF50:
 	.4byte bta_dm_sm_execute
 	.4byte 0x00000000
-.sym lbl_8066BF58, global
+.global lbl_8066BF58
+lbl_8066BF58:
 	.4byte bta_dm_search_sm_execute
 	.4byte 0x00000000

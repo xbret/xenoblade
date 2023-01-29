@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/lyt/lyt_util.o"
 
-# 0x8040AB80 - 0x8040ABF0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::lyt::BindAnimation(nw4r::lyt::Group*, nw4r::lyt::AnimTransform*, bool, bool)

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/ahx/ahx_sbf.o"
 
-# 0x8038C42C - 0x8038C760
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn AHXDCD_SetupFtbl, global
@@ -238,20 +237,26 @@
 # 0x8051ABD0 - 0x8051ABD8
 .rodata
 .balign 8
-.sym lbl_8051ABD0, global
+.global lbl_8051ABD0
+lbl_8051ABD0:
 	.4byte 0x4F000000
 	.4byte 0x00000000
 
 # 0x805E9AE8 - 0x805E9B00
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E9AE8, global
+.global lbl_805E9AE8
+lbl_805E9AE8:
 	.skip 0x4
-.sym lbl_805E9AEC, global
+.global lbl_805E9AEC
+lbl_805E9AEC:
 	.skip 0x4
-.sym lbl_805E9AF0, global
+.global lbl_805E9AF0
+lbl_805E9AF0:
 	.skip 0x8
-.sym lbl_805E9AF8, global
+.global lbl_805E9AF8
+lbl_805E9AF8:
 	.skip 0x4
-.sym lbl_805E9AFC, global
+.global lbl_805E9AFC
+lbl_805E9AFC:
 	.skip 0x4

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/sj/sj_uni.o"
 
-# 0x80395678 - 0x80396664
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SJUNI_Error, global
@@ -1158,12 +1157,14 @@
 # 0x8051C430 - 0x8051C590
 .rodata
 .balign 8
-.sym lbl_8051C430, global
+.global lbl_8051C430
+lbl_8051C430:
 	.4byte 0x2E534FA3
 	.4byte 0xAF9711D2
 	.4byte 0xA5270060
 	.4byte 0x089448BC
-.sym lbl_8051C440, global
+.global lbl_8051C440
+lbl_8051C440:
 	.4byte 0x534A554E
 	.4byte 0x49204572
 	.4byte 0x726F7200
@@ -1253,7 +1254,8 @@
 .data
 .balign 8
 
-.obj sjuni_vtbl, global
+.global sjuni_vtbl
+sjuni_vtbl:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1271,8 +1273,10 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj sjuni_init_cnt, global
+.global sjuni_init_cnt
+sjuni_init_cnt:
 	.skip 0x8
 
-.obj sjuni_obj, global
+.global sjuni_obj
+sjuni_obj:
 	.skip 0xC00

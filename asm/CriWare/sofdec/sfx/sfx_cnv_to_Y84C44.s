@@ -1,21 +1,20 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfx/sfx_cnv_to_Y84C44.o"
 
-# 0x803D7010 - 0x803D70B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFX_CnvFrmY84C44ByCbFunc, global
 /* 803D7010 003A05D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D7014 003A05D4  7C 08 02 A6 */	mflr r0
-/* 803D7018 003A05D8  3C C0 80 3A */	lis r6, fn_8039B960@ha
+/* 803D7018 003A05D8  3C C0 80 3A */	lis r6, func_8039B960@ha
 /* 803D701C 003A05DC  90 01 00 24 */	stw r0, 0x24(r1)
 /* 803D7020 003A05E0  38 00 00 00 */	li r0, 0x0
 /* 803D7024 003A05E4  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 803D7028 003A05E8  7C BF 2B 78 */	mr r31, r5
 /* 803D702C 003A05EC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 803D7030 003A05F0  7C 9E 23 78 */	mr r30, r4
-/* 803D7034 003A05F4  38 86 B9 60 */	addi r4, r6, fn_8039B960@l
+/* 803D7034 003A05F4  38 86 B9 60 */	addi r4, r6, func_8039B960@l
 /* 803D7038 003A05F8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 803D703C 003A05FC  7C 7D 1B 78 */	mr r29, r3
 /* 803D7040 003A0600  90 03 00 50 */	stw r0, 0x50(r3)

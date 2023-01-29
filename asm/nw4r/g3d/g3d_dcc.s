@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_dcc.o"
 
-# 0x803EE5C0 - 0x803EE69C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::CalcTexMtx(nw4r::math::MTX34*, bool, const nw4r::g3d::TexSrt&, nw4r::g3d::TexSrt::Flag, nw4r::g3d::TexSrtTypedef::TexMatrixMode)

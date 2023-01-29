@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/hidd_api.o"
 
-# 0x802F35D8 - 0x802F3640
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 8
 
 .fn HID_DevInit, global

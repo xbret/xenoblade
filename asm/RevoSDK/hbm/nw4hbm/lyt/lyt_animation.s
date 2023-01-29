@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/lyt/lyt_animation.o"
 
-# 0x8032B4C0 - 0x8032C070
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # _unnamed_lyt_animation_cpp_::GetStepCurveValue(float, const nw4hbm::lyt::res::StepKey*, unsigned long)
@@ -412,7 +411,7 @@
 /* 8032BA2C 002F4FEC  B3 C4 00 0C */	sth r30, 0xc(r4)
 /* 8032BA30 002F4FF0  80 1B 00 18 */	lwz r0, 0x18(r27)
 /* 8032BA34 002F4FF4  7C 80 2A 14 */	add r4, r0, r5
-/* 8032BA38 002F4FF8  48 00 69 69 */	bl fn_803323A0
+/* 8032BA38 002F4FF8  48 00 69 69 */	bl func_803323A0
 /* 8032BA3C 002F4FFC  48 00 00 44 */	b .L_8032BA80
 .L_8032BA40:
 /* 8032BA40 002F5000  81 9C 00 00 */	lwz r12, 0x0(r28)
@@ -741,7 +740,7 @@
 /* 8032BEB8 002F5478  8B 35 00 01 */	lbz r25, 0x1(r21)
 /* 8032BEBC 002F547C  8A B5 00 00 */	lbz r21, 0x0(r21)
 /* 8032BEC0 002F5480  7E E3 BB 78 */	mr r3, r23
-/* 8032BEC4 002F5484  48 00 42 2D */	bl fn_803300F0
+/* 8032BEC4 002F5484  48 00 42 2D */	bl func_803300F0
 /* 8032BEC8 002F5488  1C 95 00 14 */	mulli r4, r21, 0x14
 /* 8032BECC 002F548C  57 20 10 3A */	slwi r0, r25, 2
 /* 8032BED0 002F5490  7C 63 22 14 */	add r3, r3, r4
@@ -811,7 +810,7 @@
 /* 8032BFB0 002F5570  8A B9 00 01 */	lbz r21, 0x1(r25)
 /* 8032BFB4 002F5574  8B 39 00 00 */	lbz r25, 0x0(r25)
 /* 8032BFB8 002F5578  7E E3 BB 78 */	mr r3, r23
-/* 8032BFBC 002F557C  48 00 41 75 */	bl fn_80330130
+/* 8032BFBC 002F557C  48 00 41 75 */	bl func_80330130
 /* 8032BFC0 002F5580  1C 99 00 14 */	mulli r4, r25, 0x14
 /* 8032BFC4 002F5584  56 A0 10 3A */	slwi r0, r21, 2
 /* 8032BFC8 002F5588  7C 63 22 14 */	add r3, r3, r4
@@ -872,23 +871,28 @@
 # 0x80518A28 - 0x80518A48
 .rodata
 .balign 8
-.sym lbl_80518A28, global
+.global lbl_80518A28
+lbl_80518A28:
 	.4byte 0xBA83126F
-.sym lbl_80518A2C, global
+.global lbl_80518A2C
+lbl_80518A2C:
 	.4byte 0x3A83126F
 	.4byte 0x3F800000
 	.4byte 0x40000000
 	.4byte 0x40400000
 	.4byte 0xC0000000
-.sym lbl_80518A40, global
+.global lbl_80518A40
+lbl_80518A40:
 	.4byte 0x00000000
-.sym lbl_80518A44, global
+.global lbl_80518A44
+lbl_80518A44:
 	.4byte 0x3F000000
 
 # 0x8054D5B8 - 0x8054D638
 .data
 .balign 8
-.sym lbl_8054D5B8, global
+.global lbl_8054D5B8
+lbl_8054D5B8:
 	.4byte lbl_8054D608
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt18AnimTransformBasicFv
@@ -897,7 +901,8 @@
 	.4byte Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt8Material
 	.4byte Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt4Pane
 	.4byte Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt8Material
-.sym lbl_8054D5D8, global
+.global lbl_8054D5D8
+lbl_8054D5D8:
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
@@ -906,15 +911,18 @@
 	.4byte 0x6E73666F
 	.4byte 0x726D4261
 	.4byte 0x73696300
-.sym lbl_8054D5F8, global
+.global lbl_8054D5F8
+lbl_8054D5F8:
 	.4byte lbl_8054D630
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8054D608, global
+.global lbl_8054D608
+lbl_8054D608:
 	.4byte lbl_8054D5D8
 	.4byte lbl_8054D5F8
-.sym lbl_8054D610, global
+.global lbl_8054D610
+lbl_8054D610:
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
@@ -923,6 +931,7 @@
 	.4byte 0x6E73666F
 	.4byte 0x726D0000
 	.4byte 0x00000000
-.sym lbl_8054D630, global
+.global lbl_8054D630
+lbl_8054D630:
 	.4byte lbl_8054D610
 	.4byte 0x00000000

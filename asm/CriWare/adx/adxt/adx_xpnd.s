@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_xpnd.o"
 
-# 0x80385720 - 0x80385B08
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADXPD_Init, global
@@ -320,8 +319,10 @@
 # 0x805E8600 - 0x805E89C8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E8600, global
+.global lbl_805E8600
+lbl_805E8600:
 	.skip 0x3C0
 
-.obj adxpd_internal_error, global
+.global adxpd_internal_error
+adxpd_internal_error:
 	.skip 0x8

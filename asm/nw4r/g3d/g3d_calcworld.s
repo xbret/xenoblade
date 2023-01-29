@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_calcworld.o"
 
-# 0x803EE6DC - 0x803EF1A0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::CalcWorld(nw4r::math::MTX34*, unsigned long*, const unsigned char*, const nw4r::math::MTX34*, nw4r::g3d::ResMdl, nw4r::g3d::AnmObjChr*, nw4r::g3d::FuncObjCalcWorld*, unsigned long)
@@ -761,7 +760,8 @@
 # 0x8056CEC8 - 0x8056CED8
 .data
 .balign 8
-.sym lbl_8056CEC8, global
+.global lbl_8056CEC8
+lbl_8056CEC8:
 	.4byte 0x4E6F6465
 	.4byte 0x54726565
 	.4byte 0x00000000
@@ -770,14 +770,17 @@
 # 0x80665DA0 - 0x80665DA8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665DA0, global
+.global lbl_80665DA0
+lbl_80665DA0:
 	.4byte 0x4E6F6465
 	.4byte 0x4D697800
 
 # 0x8066C440 - 0x8066C448
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C440, global
+.global lbl_8066C440
+lbl_8066C440:
 	.4byte 0x3F800000
-.sym lbl_8066C444, global
+.global lbl_8066C444
+lbl_8066C444:
 	.4byte 0x00000000

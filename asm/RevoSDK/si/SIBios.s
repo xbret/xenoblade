@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/si/SIBios.o"
 
-# 0x80361660 - 0x803626D0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn CompleteTransfer, global
@@ -1158,7 +1157,8 @@
 # 0x8055F138 - 0x8055F1A8
 .data
 .balign 8
-.sym lbl_8055F138, global
+.global lbl_8055F138
+lbl_8055F138:
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -1178,51 +1178,50 @@
 	.4byte 0x29203E3E
 	.4byte 0x00000000
 
-.obj Si, local
+Si:
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.endobj Si
 	.4byte 0x00000000
 
-.obj Type, local
+Type:
 	.4byte 0x00000008
 	.4byte 0x00000008
 	.4byte 0x00000008
 	.4byte 0x00000008
-.endobj Type
 
 # 0x805DD6E0 - 0x805DD900
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj Packet, local
+Packet:
 	.skip 0x80
-.endobj Packet
-.sym lbl_805DD760, global
+.global lbl_805DD760
+lbl_805DD760:
 	.skip 0x20
 
-.obj TypeTime, local
+TypeTime:
 	.skip 0x20
-.endobj TypeTime
-.sym lbl_805DD7A0, global
+.global lbl_805DD7A0
+lbl_805DD7A0:
 	.skip 0x160
 
 # 0x80665CE0 - 0x80665CE8
 .section .sdata, "wa"
 .balign 8
 
-.obj __SIVersion, global
+.global __SIVersion
+__SIVersion:
 	.4byte lbl_8055F138
-.endobj __SIVersion
 	.4byte 0x00000000
 
 # 0x80667B70 - 0x80667B80
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667B70, global
+.global lbl_80667B70
+lbl_80667B70:
 	.skip 0x4
 
 # SIInit()::Initialized
@@ -1234,5 +1233,6 @@
 .obj "@LOCAL@SIGetType__Fl@cmdTypeAndStatus", weak
 	.skip 0x4
 .endobj "@LOCAL@SIGetType__Fl@cmdTypeAndStatus"
-.sym lbl_80667B7C, global
+.global lbl_80667B7C
+lbl_80667B7C:
 	.skip 0x4

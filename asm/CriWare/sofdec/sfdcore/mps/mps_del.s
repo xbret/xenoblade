@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mps/mps_del.o"
 
-# 0x803BCA04 - 0x803BCA80
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPS_CheckDelim, global

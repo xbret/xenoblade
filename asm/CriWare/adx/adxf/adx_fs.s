@@ -1,11 +1,10 @@
 .include "macros.inc"
-.file "CriWare/adx/adxf/adx_fs.o"
 
-# 0x8037C778 - 0x8037F578
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.fn fn_8037C778, global
+.fn func_8037C778, global
 /* 8037C778 00345D38  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8037C77C 00345D3C  7C 08 02 A6 */	mflr r0
 /* 8037C780 00345D40  90 01 00 34 */	stw r0, 0x34(r1)
@@ -48,7 +47,7 @@
 /* 8037C814 00345DD4  7C 08 03 A6 */	mtlr r0
 /* 8037C818 00345DD8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8037C81C 00345DDC  4E 80 00 20 */	blr
-.endfn fn_8037C778
+.endfn func_8037C778
 
 .fn adxf_LoadPtBothNw, global
 /* 8037C820 00345DE0  94 21 FF A0 */	stwu r1, -0x60(r1)
@@ -3226,7 +3225,7 @@
 /* 8037F52C 00348AEC  4E 80 00 20 */	blr
 .endfn adxf_GetFnameRangeEx
 
-.fn fn_8037F530, global
+.fn func_8037F530, global
 /* 8037F530 00348AF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037F534 00348AF4  7C 08 02 A6 */	mflr r0
 /* 8037F538 00348AF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3245,12 +3244,13 @@
 /* 8037F56C 00348B2C  7C 08 03 A6 */	mtlr r0
 /* 8037F570 00348B30  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037F574 00348B34  4E 80 00 20 */	blr
-.endfn fn_8037F530
+.endfn func_8037F530
 
 # 0x80518E78 - 0x80519650
 .rodata
 .balign 8
-.sym lbl_80518E78, global
+.global lbl_80518E78
+lbl_80518E78:
 	.4byte 0x45393034
 	.4byte 0x30383031
 	.4byte 0x3A706172
@@ -3757,36 +3757,50 @@
 # 0x805E3430 - 0x805E5D30
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E3430, global
+.global lbl_805E3430
+lbl_805E3430:
 	.skip 0x340
-.sym lbl_805E3770, global
+.global lbl_805E3770
+lbl_805E3770:
 	.skip 0x400
-.sym lbl_805E3B70, global
+.global lbl_805E3B70
+lbl_805E3B70:
 	.skip 0x100
 
-.obj adxf_cmd_ncall, global
+.global adxf_cmd_ncall
+adxf_cmd_ncall:
 	.skip 0x20
 
-.obj adxf_hstry_no, global
+.global adxf_hstry_no
+adxf_hstry_no:
 	.skip 0x4
-.sym lbl_805E3C94, global
+.global lbl_805E3C94
+lbl_805E3C94:
 	.skip 0x4
-.sym lbl_805E3C98, global
-	.skip 0x4
-
-.obj adxf_ldptnw_hn, global
-	.skip 0x4
-.sym lbl_805E3CA0, global
-	.skip 0x4
-.sym lbl_805E3CA4, global
+.global lbl_805E3C98
+lbl_805E3C98:
 	.skip 0x4
 
-.obj adxf_ldpt_buf, global
+.global adxf_ldptnw_hn
+adxf_ldptnw_hn:
+	.skip 0x4
+.global lbl_805E3CA0
+lbl_805E3CA0:
+	.skip 0x4
+.global lbl_805E3CA4
+lbl_805E3CA4:
 	.skip 0x4
 
-.obj adxf_ldpt_rdsct, global
+.global adxf_ldpt_buf
+adxf_ldpt_buf:
 	.skip 0x4
-.sym lbl_805E3CB0, global
+
+.global adxf_ldpt_rdsct
+adxf_ldpt_rdsct:
+	.skip 0x4
+.global lbl_805E3CB0
+lbl_805E3CB0:
 	.skip 0x1169
-.sym lbl_805E4E19, global
+.global lbl_805E4E19
+lbl_805E4E19:
 	.skip 0xF17

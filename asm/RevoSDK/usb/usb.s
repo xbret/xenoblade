@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/usb/usb.o"
 
-# 0x803629E0 - 0x80363F30
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn USB_LOG, global
@@ -1491,7 +1490,8 @@
 # 0x8055F270 - 0x8055FAA0
 .data
 .balign 8
-.sym lbl_8055F270, global
+.global lbl_8055F270
+lbl_8055F270:
 	.4byte 0x55534220
 	.4byte 0x4552523A
 	.4byte 0x20000000
@@ -2020,20 +2020,26 @@
 # 0x80665CF0 - 0x80665D00
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665CF0, global
+.global lbl_80665CF0
+lbl_80665CF0:
 	.4byte 0xFFFFFFFF
-.sym lbl_80665CF4, global
+.global lbl_80665CF4
+lbl_80665CF4:
 	.4byte 0x01000000
-.sym lbl_80665CF8, global
+.global lbl_80665CF8
+lbl_80665CF8:
 	.4byte 0x5553423A
 	.4byte 0x20000000
 
 # 0x80667B88 - 0x80667B98
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667B88, global
+.global lbl_80667B88
+lbl_80667B88:
 	.skip 0x4
-.sym lbl_80667B8C, global
+.global lbl_80667B8C
+lbl_80667B8C:
 	.skip 0x4
-.sym lbl_80667B90, global
+.global lbl_80667B90
+lbl_80667B90:
 	.skip 0x8

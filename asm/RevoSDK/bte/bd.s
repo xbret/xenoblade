@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/bd.o"
 
-# 0x802DE634 - 0x802DE708
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn bdcpy, global

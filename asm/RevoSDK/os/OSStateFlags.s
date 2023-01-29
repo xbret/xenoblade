@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSStateFlags.o"
 
-# 0x8035DE50 - 0x8035E070
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __OSWriteStateFlags, global
@@ -158,7 +157,8 @@
 # 0x8055ED08 - 0x8055ED30
 .data
 .balign 8
-.sym lbl_8055ED08, global
+.global lbl_8055ED08
+lbl_8055ED08:
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303030
@@ -173,5 +173,6 @@
 # 0x805D5420 - 0x805D5440
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D5420, global
+.global lbl_805D5420
+lbl_805D5420:
 	.skip 0x20

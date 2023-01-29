@@ -1,58 +1,10 @@
 .include "macros.inc"
-.file "monolithlib/CFontLayer.o"
 
-# 0x8001CB78 - 0x8001CB90
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_8001CB78", local
-.hidden "@etb_8001CB78"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_8001CB78"
-
-.obj "@etb_8001CB80", local
-.hidden "@etb_8001CB80"
-	.4byte 0x10080000
-	.4byte 0x00000000
-.endobj "@etb_8001CB80"
-
-.obj "@etb_8001CB88", local
-.hidden "@etb_8001CB88"
-	.4byte 0x20080000
-	.4byte 0x00000000
-.endobj "@etb_8001CB88"
-
-# 0x80034778 - 0x8003479C
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80034778", local
-.hidden "@eti_80034778"
-	.4byte fn_80448FDC
-	.4byte 0x0000003C
-	.4byte "@etb_8001CB78"
-.endobj "@eti_80034778"
-
-.obj "@eti_80034784", local
-.hidden "@eti_80034784"
-	.4byte fn_80449018
-	.4byte 0x00000060
-	.4byte "@etb_8001CB80"
-.endobj "@eti_80034784"
-
-.obj "@eti_80034790", local
-.hidden "@eti_80034790"
-	.4byte fn_80449078
-	.4byte 0x000000D0
-	.4byte "@etb_8001CB88"
-.endobj "@eti_80034790"
-
-# 0x80448FDC - 0x80449164
-.text
-.balign 4
-
-.fn fn_80448FDC, global
+.fn func_80448FDC, global
 /* 80448FDC 0041259C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448FE0 004125A0  7C 08 02 A6 */	mflr r0
 /* 80448FE4 004125A4  3C 80 80 57 */	lis r4, __vt__CFontLayer@ha
@@ -61,16 +13,16 @@
 /* 80448FF0 004125B0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80448FF4 004125B4  7C 7F 1B 78 */	mr r31, r3
 /* 80448FF8 004125B8  90 83 00 00 */	stw r4, 0x0(r3)
-/* 80448FFC 004125BC  48 00 95 F5 */	bl fn_804525F0
+/* 80448FFC 004125BC  48 00 95 F5 */	bl func_804525F0
 /* 80449000 004125C0  7F E3 FB 78 */	mr r3, r31
 /* 80449004 004125C4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80449008 004125C8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8044900C 004125CC  7C 08 03 A6 */	mtlr r0
 /* 80449010 004125D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80449014 004125D4  4E 80 00 20 */	blr
-.endfn fn_80448FDC
+.endfn func_80448FDC
 
-.fn fn_80449018, global
+.fn func_80449018, global
 /* 80449018 004125D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044901C 004125DC  7C 08 02 A6 */	mflr r0
 /* 80449020 004125E0  2C 03 00 00 */	cmpwi r3, 0x0
@@ -83,7 +35,7 @@
 /* 8044903C 004125FC  3C 80 80 57 */	lis r4, __vt__CFontLayer@ha
 /* 80449040 00412600  38 84 F7 C0 */	addi r4, r4, __vt__CFontLayer@l
 /* 80449044 00412604  90 83 00 00 */	stw r4, 0x0(r3)
-/* 80449048 00412608  48 00 96 49 */	bl fn_80452690
+/* 80449048 00412608  48 00 96 49 */	bl func_80452690
 /* 8044904C 0041260C  2C 1F 00 00 */	cmpwi r31, 0x0
 /* 80449050 00412610  40 81 00 0C */	ble .L_8044905C
 /* 80449054 00412614  7F C3 F3 78 */	mr r3, r30
@@ -96,9 +48,9 @@
 /* 8044906C 0041262C  7C 08 03 A6 */	mtlr r0
 /* 80449070 00412630  38 21 00 10 */	addi r1, r1, 0x10
 /* 80449074 00412634  4E 80 00 20 */	blr
-.endfn fn_80449018
+.endfn func_80449018
 
-.fn fn_80449078, global
+.fn func_80449078, global
 /* 80449078 00412638  94 21 FD 70 */	stwu r1, -0x290(r1)
 /* 8044907C 0041263C  7C 08 02 A6 */	mflr r0
 /* 80449080 00412640  90 01 02 94 */	stw r0, 0x294(r1)
@@ -143,7 +95,7 @@
 /* 80449118 004126D8  7F A4 EB 78 */	mr r4, r29
 /* 8044911C 004126DC  7F C5 F3 78 */	mr r5, r30
 /* 80449120 004126E0  38 C1 00 78 */	addi r6, r1, 0x78
-/* 80449124 004126E4  48 00 95 F9 */	bl fn_8045271C
+/* 80449124 004126E4  48 00 95 F9 */	bl func_8045271C
 /* 80449128 004126E8  80 01 02 94 */	lwz r0, 0x294(r1)
 /* 8044912C 004126EC  83 E1 02 8C */	lwz r31, 0x28c(r1)
 /* 80449130 004126F0  83 C1 02 88 */	lwz r30, 0x288(r1)
@@ -152,42 +104,90 @@
 /* 8044913C 004126FC  7C 08 03 A6 */	mtlr r0
 /* 80449140 00412700  38 21 02 90 */	addi r1, r1, 0x290
 /* 80449144 00412704  4E 80 00 20 */	blr
-.endfn fn_80449078
+.endfn func_80449078
 
-.fn fn_80449148, global
-/* 80449148 00412708  48 00 96 5C */	b fn_804527A4
-.endfn fn_80449148
+.fn func_80449148, global
+/* 80449148 00412708  48 00 96 5C */	b func_804527A4
+.endfn func_80449148
 
-.fn fn_8044914C, global
-/* 8044914C 0041270C  48 00 96 F0 */	b fn_8045283C
-.endfn fn_8044914C
+.fn func_8044914C, global
+/* 8044914C 0041270C  48 00 96 F0 */	b func_8045283C
+.endfn func_8044914C
 
-.fn fn_80449150, global
-/* 80449150 00412710  48 00 97 74 */	b fn_804528C4
-.endfn fn_80449150
+.fn func_80449150, global
+/* 80449150 00412710  48 00 97 74 */	b func_804528C4
+.endfn func_80449150
 
-.fn fn_80449154, global
-/* 80449154 00412714  48 00 97 F8 */	b fn_8045294C
-.endfn fn_80449154
+.fn func_80449154, global
+/* 80449154 00412714  48 00 97 F8 */	b func_8045294C
+.endfn func_80449154
 
-.fn fn_80449158, global
-/* 80449158 00412718  48 00 98 7C */	b fn_804529D4
-.endfn fn_80449158
+.fn func_80449158, global
+/* 80449158 00412718  48 00 98 7C */	b func_804529D4
+.endfn func_80449158
 
-.fn fn_8044915C, global
-/* 8044915C 0041271C  48 00 9B 9C */	b fn_80452CF8
-.endfn fn_8044915C
+.fn func_8044915C, global
+/* 8044915C 0041271C  48 00 9B 9C */	b func_80452CF8
+.endfn func_8044915C
 
-.fn fn_80449160, global
-/* 80449160 00412720  48 00 9A 18 */	b fn_80452B78
-.endfn fn_80449160
+.fn func_80449160, global
+/* 80449160 00412720  48 00 9A 18 */	b func_80452B78
+.endfn func_80449160
 
 # 0x8056F7C0 - 0x8056F7D0
 .data
 .balign 8
 
-.obj __vt__CFontLayer, global
+.global __vt__CFontLayer
+__vt__CFontLayer:
 	.4byte __RTTI__CFontLayer
 	.4byte 0x00000000
-	.4byte fn_80449018
+	.4byte func_80449018
 	.4byte 0x00000000
+
+# 0x8001CB78 - 0x8001CB90
+.section extab, "a"
+.balign 4
+
+.obj "@etb_8001CB78", local
+.hidden "@etb_8001CB78"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_8001CB78"
+
+.obj "@etb_8001CB80", local
+.hidden "@etb_8001CB80"
+	.4byte 0x10080000
+	.4byte 0x00000000
+.endobj "@etb_8001CB80"
+
+.obj "@etb_8001CB88", local
+.hidden "@etb_8001CB88"
+	.4byte 0x20080000
+	.4byte 0x00000000
+.endobj "@etb_8001CB88"
+
+# 0x80034778 - 0x8003479C
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80034778", local
+.hidden "@eti_80034778"
+	.4byte func_80448FDC
+	.4byte 0x0000003C
+	.4byte "@etb_8001CB78"
+.endobj "@eti_80034778"
+
+.obj "@eti_80034784", local
+.hidden "@eti_80034784"
+	.4byte func_80449018
+	.4byte 0x00000060
+	.4byte "@etb_8001CB80"
+.endobj "@eti_80034784"
+
+.obj "@eti_80034790", local
+.hidden "@eti_80034790"
+	.4byte func_80449078
+	.4byte 0x000000D0
+	.4byte "@etb_8001CB88"
+.endobj "@eti_80034790"

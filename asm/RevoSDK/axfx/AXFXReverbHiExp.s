@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/axfx/AXFXReverbHiExp.o"
 
-# 0x802D57C0 - 0x802D65F0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn AXFXReverbHiExpInit, global
@@ -1010,7 +1009,8 @@
 # 0x80543120 - 0x805432C0
 .data
 .balign 8
-.sym lbl_80543120, global
+.global lbl_80543120
+lbl_80543120:
 	.4byte 0x0000009D
 	.4byte 0x000001DF
 	.4byte 0x0000033D
@@ -1059,7 +1059,8 @@
 	.4byte 0xBF800000
 	.4byte 0x3F333333
 	.4byte 0x3E99999A
-.sym lbl_805431E0, global
+.global lbl_805431E0
+lbl_805431E0:
 	.4byte 0x000006FD
 	.4byte 0x000007CF
 	.4byte 0x0000091D
@@ -1120,29 +1121,39 @@
 # 0x8066BDE0 - 0x8066BE20
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BDE0, global
+.global lbl_8066BDE0
+lbl_8066BDE0:
 	.4byte 0x46FA0000
-.sym lbl_8066BDE4, global
+.global lbl_8066BDE4
+lbl_8066BDE4:
 	.4byte 0x00000000
-.sym lbl_8066BDE8, global
+.global lbl_8066BDE8
+lbl_8066BDE8:
 	.4byte 0x3F800000
-.sym lbl_8066BDEC, global
+.global lbl_8066BDEC
+lbl_8066BDEC:
 	.4byte 0x3F19999A
-.sym lbl_8066BDF0, global
+.global lbl_8066BDF0
+lbl_8066BDF0:
 	.4byte 0x3F000000
 	.4byte 0x00000000
-.sym lbl_8066BDF8, global
+.global lbl_8066BDF8
+lbl_8066BDF8:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066BE00, global
+.global lbl_8066BE00
+lbl_8066BE00:
 	.4byte 0xC0400000
 	.4byte 0x00000000
-.sym lbl_8066BE08, global
+.global lbl_8066BE08
+lbl_8066BE08:
 	.4byte 0x40240000
 	.4byte 0x00000000
-.sym lbl_8066BE10, global
+.global lbl_8066BE10
+lbl_8066BE10:
 	.4byte 0x3F733333
 	.4byte 0x00000000
-.sym lbl_8066BE18, global
+.global lbl_8066BE18
+lbl_8066BE18:
 	.4byte 0x43300000
 	.4byte 0x00000000

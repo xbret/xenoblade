@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/math/math_geometry.o"
 
-# 0x8040B488 - 0x8040C464
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::math::AABB::Set(const nw4r::math::VEC3*, unsigned int)
@@ -1113,24 +1112,31 @@
 # 0x80665E00 - 0x80665E08
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665E00, global
+.global lbl_80665E00
+lbl_80665E00:
 	.4byte 0x38D1B717
 	.4byte 0x00000000
 
 # 0x8066C658 - 0x8066C678
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C658, global
+.global lbl_8066C658
+lbl_8066C658:
 	.4byte 0x3F000000
-.sym lbl_8066C65C, global
+.global lbl_8066C65C
+lbl_8066C65C:
 	.4byte 0x00000000
-.sym lbl_8066C660, global
+.global lbl_8066C660
+lbl_8066C660:
 	.4byte 0x3CC90FDB
-.sym lbl_8066C664, global
+.global lbl_8066C664
+lbl_8066C664:
 	.4byte 0x3F360B61
-.sym lbl_8066C668, global
+.global lbl_8066C668
+lbl_8066C668:
 	.4byte 0x3F800000
 	.4byte 0x00000000
-.sym lbl_8066C670, global
+.global lbl_8066C670
+lbl_8066C670:
 	.4byte 0x00000000
 	.4byte 0x00000000

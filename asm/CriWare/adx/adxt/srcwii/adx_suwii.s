@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/srcwii/adx_suwii.o"
 
-# 0x8039B290 - 0x8039B360
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn adxwii_err_dvd, global
@@ -68,7 +67,8 @@
 # 0x8051CD48 - 0x8051CD90
 .rodata
 .balign 8
-.sym lbl_8051CD48, global
+.global lbl_8051CD48
+lbl_8051CD48:
 	.4byte 0x0A414458
 	.4byte 0x57494953
 	.4byte 0x444B2056
@@ -84,8 +84,10 @@
 	.4byte 0x38203130
 	.4byte 0x3A35333A
 	.4byte 0x30310A00
-.sym lbl_8051CD84, global
+.global lbl_8051CD84
+lbl_8051CD84:
 	.4byte lbl_8051CD48
-.sym lbl_8051CD88, global
+.global lbl_8051CD88
+lbl_8051CD88:
 	.4byte 0x4D465300
 	.4byte 0x47434400

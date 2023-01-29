@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/ut/ut_ResFont.o"
 
-# 0x8042C928 - 0x8042CC2C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::ut::ResFont::ResFont()
@@ -237,7 +236,8 @@
 # 0x8056E808 - 0x8056E868
 .data
 .balign 8
-.sym lbl_8056E808, global
+.global lbl_8056E808
+lbl_8056E808:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r2ut7ResFontFv

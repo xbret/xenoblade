@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/bte_logmsg.o"
 
-# 0x802DDEE0 - 0x802DE080
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn LogMsg, global
@@ -137,11 +136,13 @@
 # 0x805BDCC0 - 0x805BE4A0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805BDCC0, global
+.global lbl_805BDCC0
+lbl_805BDCC0:
 	.skip 0x7E0
 
 # 0x80667768 - 0x8066776C
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667768, global
+.global lbl_80667768
+lbl_80667768:
 	.skip 0x4

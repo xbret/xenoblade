@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_InstancePool.o"
 
-# 0x80416CA8 - 0x80416F60
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::PoolImpl::CreateImpl(void*, unsigned long, unsigned long)

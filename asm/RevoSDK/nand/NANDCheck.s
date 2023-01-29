@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/nand/NANDCheck.o"
 
-# 0x80350FA0 - 0x80351290
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn NANDCheckAsync, global
@@ -217,47 +216,56 @@
 # 0x805511D0 - 0x805512B8
 .data
 .balign 8
-.sym lbl_805511D0, global
+.global lbl_805511D0
+lbl_805511D0:
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303130
 	.4byte 0x30303000
-.sym lbl_805511E0, global
+.global lbl_805511E0
+lbl_805511E0:
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303130
 	.4byte 0x30303100
-.sym lbl_805511F0, global
+.global lbl_805511F0
+lbl_805511F0:
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303130
 	.4byte 0x30303300
-.sym lbl_80551200, global
+.global lbl_80551200
+lbl_80551200:
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303130
 	.4byte 0x30303400
-.sym lbl_80551210, global
+.global lbl_80551210
+lbl_80551210:
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303130
 	.4byte 0x30303500
-.sym lbl_80551220, global
+.global lbl_80551220
+lbl_80551220:
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303130
 	.4byte 0x30303600
-.sym lbl_80551230, global
+.global lbl_80551230
+lbl_80551230:
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303130
 	.4byte 0x30303700
-.sym lbl_80551240, global
+.global lbl_80551240
+lbl_80551240:
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x2F746974
 	.4byte 0x6C650000
-.sym lbl_80551250, global
+.global lbl_80551250
+lbl_80551250:
 	.4byte lbl_80665B10
 	.4byte lbl_80665B18
 	.4byte lbl_805511D0
@@ -269,14 +277,16 @@
 	.4byte lbl_80551230
 	.4byte lbl_80551240
 	.4byte 0x00000000
-.sym lbl_8055127C, global
+.global lbl_8055127C
+lbl_8055127C:
 	.4byte 0x6E616E64
 	.4byte 0x55736572
 	.4byte 0x41726561
 	.4byte 0x43616C6C
 	.4byte 0x6261636B
 	.4byte 0x00000000
-.sym lbl_80551294, global
+.global lbl_80551294
+lbl_80551294:
 	.4byte 0x496C6C65
 	.4byte 0x67616C20
 	.4byte 0x73746174
@@ -290,9 +300,11 @@
 # 0x80665B10 - 0x80665B20
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B10, global
+.global lbl_80665B10
+lbl_80665B10:
 	.4byte 0x2F6D6574
 	.4byte 0x61000000
-.sym lbl_80665B18, global
+.global lbl_80665B18
+lbl_80665B18:
 	.4byte 0x2F746963
 	.4byte 0x6B657400

@@ -1,11 +1,10 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/code_80389300.o"
 
-# 0x80389300 - 0x803893A4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.fn fn_80389300, global
+.fn func_80389300, global
 /* 80389300 003528C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80389304 003528C4  7C 08 02 A6 */	mflr r0
 /* 80389308 003528C8  3C C0 80 00 */	lis r6, 0x8000
@@ -53,4 +52,4 @@
 /* 80389398 00352958  7C 08 03 A6 */	mtlr r0
 /* 8038939C 0035295C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803893A0 00352960  4E 80 00 20 */	blr
-.endfn fn_80389300
+.endfn func_80389300

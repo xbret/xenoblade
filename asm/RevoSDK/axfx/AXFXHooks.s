@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/axfx/AXFXHooks.o"
 
-# 0x802DAB00 - 0x802DAB50
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __AXFXAllocFunction, global
@@ -40,7 +39,9 @@
 # 0x806658C0 - 0x806658C8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806658C0, global
+.global lbl_806658C0
+lbl_806658C0:
 	.4byte __AXFXAllocFunction
-.sym lbl_806658C4, global
+.global lbl_806658C4
+lbl_806658C4:
 	.4byte __AXFXFreeFunction

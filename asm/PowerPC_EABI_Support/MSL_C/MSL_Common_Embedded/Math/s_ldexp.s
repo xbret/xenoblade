@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/s_ldexp.o"
 
-# 0x802CAE54 - 0x802CAFC0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ldexp, global

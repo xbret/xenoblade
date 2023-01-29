@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/mtx/vec.o"
 
-# 0x8034E080 - 0x8034E2C0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn PSVECAdd, global
@@ -175,10 +174,13 @@
 # 0x8066C160 - 0x8066C170
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C160, global
+.global lbl_8066C160
+lbl_8066C160:
 	.4byte 0x3F000000
-.sym lbl_8066C164, global
+.global lbl_8066C164
+lbl_8066C164:
 	.4byte 0x40400000
-.sym lbl_8066C168, global
+.global lbl_8066C168
+lbl_8066C168:
 	.4byte 0x00000000
 	.4byte 0x00000000

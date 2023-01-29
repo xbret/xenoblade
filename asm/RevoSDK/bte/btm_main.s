@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/btm_main.o"
 
-# 0x802E9E64 - 0x802E9EC0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn btm_init, global

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_obj.o"
 
-# 0x803E7294 - 0x803E73B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::G3dObj::~G3dObj()
@@ -102,7 +101,8 @@
 # 0x80520F58 - 0x80520F68
 .rodata
 .balign 8
-.sym lbl_80520F58, global
+.global lbl_80520F58
+lbl_80520F58:
 	.4byte 0x00000007
 	.4byte 0x4733644F
 	.4byte 0x626A0000
@@ -111,7 +111,8 @@
 # 0x8056CE90 - 0x8056CEB0
 .data
 .balign 8
-.sym lbl_8056CE90, global
+.global lbl_8056CE90
+lbl_8056CE90:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d6G3dObjCFQ44nw4r3g3d6G3dObj7TypeObj

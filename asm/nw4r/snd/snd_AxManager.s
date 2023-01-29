@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_AxManager.o"
 
-# 0x8040C464 - 0x8040DEC0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::AxManager::AxManager()
@@ -260,9 +259,9 @@
 /* 8040C810 003D5DD0  38 C6 00 10 */	addi r6, r6, 0x10
 /* 8040C814 003D5DD4  42 00 FF EC */	bdnz .L_8040C800
 .L_8040C818:
-/* 8040C818 003D5DD8  3C 80 80 41 */	lis r4, fn_8040C90C@ha
+/* 8040C818 003D5DD8  3C 80 80 41 */	lis r4, func_8040C90C@ha
 /* 8040C81C 003D5DDC  3C A0 80 41 */	lis r5, __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv@ha
-/* 8040C820 003D5DE0  38 84 C9 0C */	addi r4, r4, fn_8040C90C@l
+/* 8040C820 003D5DE0  38 84 C9 0C */	addi r4, r4, func_8040C90C@l
 /* 8040C824 003D5DE4  38 C0 00 0C */	li r6, 0xc
 /* 8040C828 003D5DE8  38 A5 C9 2C */	addi r5, r5, __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv@l
 /* 8040C82C 003D5DEC  38 E0 00 03 */	li r7, 0x3
@@ -323,7 +322,7 @@
 /* 8040C908 003D5EC8  4E 80 00 20 */	blr
 .endfn __ct__Q44nw4r3snd6detail9AxManagerFv
 
-.fn fn_8040C90C, global
+.fn func_8040C90C, global
 /* 8040C90C 003D5ECC  38 00 00 00 */	li r0, 0x0
 /* 8040C910 003D5ED0  38 83 00 04 */	addi r4, r3, 0x4
 /* 8040C914 003D5ED4  90 03 00 04 */	stw r0, 0x4(r3)
@@ -332,7 +331,7 @@
 /* 8040C920 003D5EE0  90 83 00 04 */	stw r4, 0x4(r3)
 /* 8040C924 003D5EE4  90 83 00 08 */	stw r4, 0x8(r3)
 /* 8040C928 003D5EE8  4E 80 00 20 */	blr
-.endfn fn_8040C90C
+.endfn func_8040C90C
 
 # nw4r::ut::LinkList_Q34nw4r3snd6FxBase_4_::~LinkList_Q34nw4r3snd6FxBase_4_()
 .fn __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv, global
@@ -1774,10 +1773,10 @@
 /* 8040DCB4 003D7274  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DCB8 003D7278  7C 08 02 A6 */	mflr r0
 /* 8040DCBC 003D727C  3C 60 80 57 */	lis r3, lbl_8056E068@ha
-/* 8040DCC0 003D7280  3C 80 80 41 */	lis r4, fn_8040DD80@ha
+/* 8040DCC0 003D7280  3C 80 80 41 */	lis r4, func_8040DD80@ha
 /* 8040DCC4 003D7284  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8040DCC8 003D7288  38 63 E0 68 */	addi r3, r3, lbl_8056E068@l
-/* 8040DCCC 003D728C  38 84 DD 80 */	addi r4, r4, fn_8040DD80@l
+/* 8040DCCC 003D728C  38 84 DD 80 */	addi r4, r4, func_8040DD80@l
 /* 8040DCD0 003D7290  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8040DCD4 003D7294  3F E0 80 64 */	lis r31, lbl_8063AD20@ha
 /* 8040DCD8 003D7298  3B FF AD 20 */	addi r31, r31, lbl_8063AD20@l
@@ -1786,35 +1785,35 @@
 /* 8040DCE4 003D72A4  38 BF 03 00 */	addi r5, r31, 0x300
 /* 8040DCE8 003D72A8  4B EA B9 B5 */	bl __register_global_object
 /* 8040DCEC 003D72AC  3C 60 80 57 */	lis r3, lbl_8056E058@ha
-/* 8040DCF0 003D72B0  3C 80 80 41 */	lis r4, fn_8040DDC0@ha
+/* 8040DCF0 003D72B0  3C 80 80 41 */	lis r4, func_8040DDC0@ha
 /* 8040DCF4 003D72B4  38 63 E0 58 */	addi r3, r3, lbl_8056E058@l
 /* 8040DCF8 003D72B8  38 BF 03 0C */	addi r5, r31, 0x30c
 /* 8040DCFC 003D72BC  90 6D BC 0C */	stw r3, lbl_80667D8C@sda21(r13)
-/* 8040DD00 003D72C0  38 84 DD C0 */	addi r4, r4, fn_8040DDC0@l
+/* 8040DD00 003D72C0  38 84 DD C0 */	addi r4, r4, func_8040DDC0@l
 /* 8040DD04 003D72C4  38 6D BC 0C */	addi r3, r13, lbl_80667D8C@sda21
 /* 8040DD08 003D72C8  4B EA B9 95 */	bl __register_global_object
 /* 8040DD0C 003D72CC  3C 60 80 57 */	lis r3, lbl_8056E048@ha
-/* 8040DD10 003D72D0  3C 80 80 41 */	lis r4, fn_8040DE00@ha
+/* 8040DD10 003D72D0  3C 80 80 41 */	lis r4, func_8040DE00@ha
 /* 8040DD14 003D72D4  38 63 E0 48 */	addi r3, r3, lbl_8056E048@l
 /* 8040DD18 003D72D8  38 BF 03 18 */	addi r5, r31, 0x318
 /* 8040DD1C 003D72DC  90 6D BC 10 */	stw r3, lbl_80667D90@sda21(r13)
-/* 8040DD20 003D72E0  38 84 DE 00 */	addi r4, r4, fn_8040DE00@l
+/* 8040DD20 003D72E0  38 84 DE 00 */	addi r4, r4, func_8040DE00@l
 /* 8040DD24 003D72E4  38 6D BC 10 */	addi r3, r13, lbl_80667D90@sda21
 /* 8040DD28 003D72E8  4B EA B9 75 */	bl __register_global_object
 /* 8040DD2C 003D72EC  3C 60 80 57 */	lis r3, lbl_8056E038@ha
-/* 8040DD30 003D72F0  3C 80 80 41 */	lis r4, fn_8040DE40@ha
+/* 8040DD30 003D72F0  3C 80 80 41 */	lis r4, func_8040DE40@ha
 /* 8040DD34 003D72F4  38 63 E0 38 */	addi r3, r3, lbl_8056E038@l
 /* 8040DD38 003D72F8  38 BF 03 24 */	addi r5, r31, 0x324
 /* 8040DD3C 003D72FC  90 6D BC 14 */	stw r3, lbl_80667D94@sda21(r13)
-/* 8040DD40 003D7300  38 84 DE 40 */	addi r4, r4, fn_8040DE40@l
+/* 8040DD40 003D7300  38 84 DE 40 */	addi r4, r4, func_8040DE40@l
 /* 8040DD44 003D7304  38 6D BC 14 */	addi r3, r13, lbl_80667D94@sda21
 /* 8040DD48 003D7308  4B EA B9 55 */	bl __register_global_object
 /* 8040DD4C 003D730C  3C 60 80 57 */	lis r3, lbl_8056E028@ha
-/* 8040DD50 003D7310  3C 80 80 41 */	lis r4, fn_8040DE80@ha
+/* 8040DD50 003D7310  3C 80 80 41 */	lis r4, func_8040DE80@ha
 /* 8040DD54 003D7314  38 63 E0 28 */	addi r3, r3, lbl_8056E028@l
 /* 8040DD58 003D7318  38 BF 03 30 */	addi r5, r31, 0x330
 /* 8040DD5C 003D731C  90 6D BC 18 */	stw r3, lbl_80667D98@sda21(r13)
-/* 8040DD60 003D7320  38 84 DE 80 */	addi r4, r4, fn_8040DE80@l
+/* 8040DD60 003D7320  38 84 DE 80 */	addi r4, r4, func_8040DE80@l
 /* 8040DD64 003D7324  38 6D BC 18 */	addi r3, r13, lbl_80667D98@sda21
 /* 8040DD68 003D7328  4B EA B9 35 */	bl __register_global_object
 /* 8040DD6C 003D732C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1824,7 +1823,7 @@
 /* 8040DD7C 003D733C  4E 80 00 20 */	blr
 .endfn sinit_8040DCB4
 
-.fn fn_8040DD80, global
+.fn func_8040DD80, global
 /* 8040DD80 003D7340  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DD84 003D7344  7C 08 02 A6 */	mflr r0
 /* 8040DD88 003D7348  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1842,9 +1841,9 @@
 /* 8040DDB4 003D7374  7C 08 03 A6 */	mtlr r0
 /* 8040DDB8 003D7378  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DDBC 003D737C  4E 80 00 20 */	blr
-.endfn fn_8040DD80
+.endfn func_8040DD80
 
-.fn fn_8040DDC0, global
+.fn func_8040DDC0, global
 /* 8040DDC0 003D7380  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DDC4 003D7384  7C 08 02 A6 */	mflr r0
 /* 8040DDC8 003D7388  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1862,9 +1861,9 @@
 /* 8040DDF4 003D73B4  7C 08 03 A6 */	mtlr r0
 /* 8040DDF8 003D73B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DDFC 003D73BC  4E 80 00 20 */	blr
-.endfn fn_8040DDC0
+.endfn func_8040DDC0
 
-.fn fn_8040DE00, global
+.fn func_8040DE00, global
 /* 8040DE00 003D73C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DE04 003D73C4  7C 08 02 A6 */	mflr r0
 /* 8040DE08 003D73C8  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1882,9 +1881,9 @@
 /* 8040DE34 003D73F4  7C 08 03 A6 */	mtlr r0
 /* 8040DE38 003D73F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DE3C 003D73FC  4E 80 00 20 */	blr
-.endfn fn_8040DE00
+.endfn func_8040DE00
 
-.fn fn_8040DE40, global
+.fn func_8040DE40, global
 /* 8040DE40 003D7400  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DE44 003D7404  7C 08 02 A6 */	mflr r0
 /* 8040DE48 003D7408  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1902,9 +1901,9 @@
 /* 8040DE74 003D7434  7C 08 03 A6 */	mtlr r0
 /* 8040DE78 003D7438  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DE7C 003D743C  4E 80 00 20 */	blr
-.endfn fn_8040DE40
+.endfn func_8040DE40
 
-.fn fn_8040DE80, global
+.fn func_8040DE80, global
 /* 8040DE80 003D7440  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DE84 003D7444  7C 08 02 A6 */	mflr r0
 /* 8040DE88 003D7448  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1922,7 +1921,7 @@
 /* 8040DEB4 003D7474  7C 08 03 A6 */	mtlr r0
 /* 8040DEB8 003D7478  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DEBC 003D747C  4E 80 00 20 */	blr
-.endfn fn_8040DE80
+.endfn func_8040DE80
 
 # 0x804F5A18 - 0x804F5A1C
 .section .ctors, "a"
@@ -1932,7 +1931,8 @@
 # 0x8056DFC8 - 0x8056E078
 .data
 .balign 8
-.sym lbl_8056DFC8, global
+.global lbl_8056DFC8
+lbl_8056DFC8:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r3snd6detail11BasicPlayerFv
@@ -1943,7 +1943,8 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056DFF0, global
+.global lbl_8056DFF0
+lbl_8056DFF0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail10BasicSoundCFv
@@ -1958,71 +1959,91 @@
 	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail10BasicSoundFv
 	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
 	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
-.sym lbl_8056E028, global
+.global lbl_8056E028
+lbl_8056E028:
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte fn_8040DE80
+	.4byte func_8040DE80
 	.4byte GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-.sym lbl_8056E038, global
+.global lbl_8056E038
+lbl_8056E038:
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte fn_8040DE40
+	.4byte func_8040DE40
 	.4byte GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-.sym lbl_8056E048, global
+.global lbl_8056E048
+lbl_8056E048:
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte fn_8040DE00
+	.4byte func_8040DE00
 	.4byte GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-.sym lbl_8056E058, global
+.global lbl_8056E058
+lbl_8056E058:
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte fn_8040DDC0
+	.4byte func_8040DDC0
 	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-.sym lbl_8056E068, global
+.global lbl_8056E068
+lbl_8056E068:
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte fn_8040DD80
+	.4byte func_8040DD80
 	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
 # 0x8063AD20 - 0x8063B168
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8063AD20, global
+.global lbl_8063AD20
+lbl_8063AD20:
 	.skip 0x100
-.sym lbl_8063AE20, global
+.global lbl_8063AE20
+lbl_8063AE20:
 	.skip 0x23C
-.sym lbl_8063B05C, global
+.global lbl_8063B05C
+lbl_8063B05C:
 	.skip 0xC
-.sym lbl_8063B068, global
+.global lbl_8063B068
+lbl_8063B068:
 	.skip 0x100
 
 # 0x80667D88 - 0x80667DA0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D88, global
+.global lbl_80667D88
+lbl_80667D88:
 	.skip 0x4
-.sym lbl_80667D8C, global
+.global lbl_80667D8C
+lbl_80667D8C:
 	.skip 0x4
-.sym lbl_80667D90, global
+.global lbl_80667D90
+lbl_80667D90:
 	.skip 0x4
-.sym lbl_80667D94, global
+.global lbl_80667D94
+lbl_80667D94:
 	.skip 0x4
-.sym lbl_80667D98, global
+.global lbl_80667D98
+lbl_80667D98:
 	.skip 0x4
-.sym lbl_80667D9C, global
+.global lbl_80667D9C
+lbl_80667D9C:
 	.skip 0x4
 
 # 0x8066C678 - 0x8066C690
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C678, global
+.global lbl_8066C678
+lbl_8066C678:
 	.4byte 0x00000000
-.sym lbl_8066C67C, global
+.global lbl_8066C67C
+lbl_8066C67C:
 	.4byte 0x3F800000
-.sym lbl_8066C680, global
+.global lbl_8066C680
+lbl_8066C680:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C688, global
+.global lbl_8066C688
+lbl_8066C688:
 	.4byte 0x47000000
-.sym lbl_8066C68C, global
+.global lbl_8066C68C
+lbl_8066C68C:
 	.4byte 0x46FA0000

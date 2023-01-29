@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/axfx/AXFXChorusExpDpl2.o"
 
-# 0x802D9F50 - 0x802DAAD0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn AXFXChorusExpGetMemSizeDpl2, global
@@ -830,26 +829,37 @@
 # 0x8066BF00 - 0x8066BF30
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF00, global
+.global lbl_8066BF00
+lbl_8066BF00:
 	.4byte 0x42000000
-.sym lbl_8066BF04, global
+.global lbl_8066BF04
+lbl_8066BF04:
 	.4byte 0x00000000
-.sym lbl_8066BF08, global
+.global lbl_8066BF08
+lbl_8066BF08:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066BF10, global
+.global lbl_8066BF10
+lbl_8066BF10:
 	.4byte 0x3DCCCCCD
-.sym lbl_8066BF14, global
+.global lbl_8066BF14
+lbl_8066BF14:
 	.4byte 0x42480000
-.sym lbl_8066BF18, global
+.global lbl_8066BF18
+lbl_8066BF18:
 	.4byte 0x3F800000
-.sym lbl_8066BF1C, global
+.global lbl_8066BF1C
+lbl_8066BF1C:
 	.4byte 0x40000000
-.sym lbl_8066BF20, global
+.global lbl_8066BF20
+lbl_8066BF20:
 	.4byte 0x47800000
-.sym lbl_8066BF24, global
+.global lbl_8066BF24
+lbl_8066BF24:
 	.4byte 0x43800000
-.sym lbl_8066BF28, global
+.global lbl_8066BF28
+lbl_8066BF28:
 	.4byte 0x46FA0000
-.sym lbl_8066BF2C, global
+.global lbl_8066BF2C
+lbl_8066BF2C:
 	.4byte 0x3B800000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "mm/code_80436E84.o"
 
-# 0x80436E84 - 0x80436F20
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn sinit_80436E84, global
@@ -55,7 +54,9 @@
 # 0x8066CA58 - 0x8066CA60
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066CA58, global
+.global lbl_8066CA58
+lbl_8066CA58:
 	.4byte 0x00000000
-.sym lbl_8066CA5C, global
+.global lbl_8066CA5C
+lbl_8066CA5C:
 	.4byte 0x3F800000

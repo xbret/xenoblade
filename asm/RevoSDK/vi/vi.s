@@ -1,11 +1,10 @@
 .include "macros.inc"
-.file "RevoSDK/vi/vi.o"
 
-# 0x80363F30 - 0x80366A00
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
-.fn fn_80363F30, global
+.fn func_80363F30, global
 /* 80363F30 0032D4F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80363F34 0032D4F4  7C 08 02 A6 */	mflr r0
 /* 80363F38 0032D4F8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -118,7 +117,7 @@
 /* 803640BC 0032D67C  7C 08 03 A6 */	mtlr r0
 /* 803640C0 0032D680  38 21 00 20 */	addi r1, r1, 0x20
 /* 803640C4 0032D684  4E 80 00 20 */	blr
-.endfn fn_80363F30
+.endfn func_80363F30
 /* 803640C8 0032D688  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803640CC 0032D68C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
@@ -2910,7 +2909,7 @@
 /* 80366838 0032FDF8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8036683C 0032FDFC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80366840, global
+.fn func_80366840, global
 /* 80366840 0032FE00  80 0D BA 34 */	lwz r0, lbl_80667BB4@sda21(r13)
 /* 80366844 0032FE04  80 AD BA 28 */	lwz r5, lbl_80667BA8@sda21(r13)
 /* 80366848 0032FE08  80 6D BA 34 */	lwz r3, lbl_80667BB4@sda21(r13)
@@ -2921,7 +2920,7 @@
 /* 8036685C 0032FE1C  7C 03 00 50 */	subf r0, r3, r0
 /* 80366860 0032FE20  7C 03 20 78 */	andc r3, r0, r4
 /* 80366864 0032FE24  4E 80 00 20 */	blr
-.endfn fn_80366840
+.endfn func_80366840
 /* 80366868 0032FE28  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8036686C 0032FE2C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
@@ -3052,7 +3051,8 @@
 # 0x8055FAA0 - 0x8055FFF8
 .data
 .balign 8
-.sym lbl_8055FAA0, global
+.global lbl_8055FAA0
+lbl_8055FAA0:
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -3071,7 +3071,8 @@
 	.4byte 0x5F313435
 	.4byte 0x29203E3E
 	.4byte 0x00000000
-.sym lbl_8055FAE8, global
+.global lbl_8055FAE8
+lbl_8055FAE8:
 	.4byte 0x060000F0
 	.4byte 0x00180019
 	.4byte 0x00030002
@@ -3177,7 +3178,8 @@
 	.4byte 0x404B6AAC
 	.4byte 0x017C7A00
 	.4byte 0x019C0000
-.sym lbl_8055FC8C, global
+.global lbl_8055FC8C
+lbl_8055FC8C:
 	.4byte 0x01F001DC
 	.4byte 0x01AE0174
 	.4byte 0x012900DB
@@ -3237,13 +3239,14 @@
 	.4byte 0x0C100C08
 	.4byte 0x04000000
 	.4byte 0x00000000
-.sym lbl_8055FD78, global
-	.4byte fn_80363F30
+.global lbl_8055FD78
+lbl_8055FD78:
+	.4byte func_80363F30
 	.4byte 0x0000007F
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-.obj jumptable_8055FD88, local
+jumptable_8055FD88:
 	.rel __VIRetraceHandler, .L_80364420
 	.rel __VIRetraceHandler, .L_80364428
 	.rel __VIRetraceHandler, .L_80364430
@@ -3253,9 +3256,8 @@
 	.rel __VIRetraceHandler, .L_80364420
 	.rel __VIRetraceHandler, .L_80364420
 	.rel __VIRetraceHandler, .L_80364420
-.endobj jumptable_8055FD88
 
-.obj jumptable_8055FDAC, local
+jumptable_8055FDAC:
 	.rel getTiming, .L_803649A0
 	.rel getTiming, .L_803649AC
 	.rel getTiming, .L_80364A18
@@ -3291,9 +3293,8 @@
 	.rel getTiming, .L_80364A90
 	.rel getTiming, .L_80364A90
 	.rel getTiming, .L_80364A88
-.endobj jumptable_8055FDAC
 
-.obj jumptable_8055FE38, local
+jumptable_8055FE38:
 	.rel VIInit, .L_80365134
 	.rel VIInit, .L_8036513C
 	.rel VIInit, .L_80365144
@@ -3303,7 +3304,6 @@
 	.rel VIInit, .L_80365134
 	.rel VIInit, .L_80365134
 	.rel VIInit, .L_80365134
-.endobj jumptable_8055FE38
 	.4byte 0x2A2A2A2A
 	.4byte 0x2A2A2A2A
 	.4byte 0x2A2A2A2A
@@ -3402,7 +3402,7 @@
 	.rel VIGetTvFormat, .L_80366538
 .endobj "@4022"
 
-.obj jumptable_8055FFD4, local
+jumptable_8055FFD4:
 	.rel VISetTimeToDimming, .L_80366914
 	.rel VISetTimeToDimming, .L_8036691C
 	.rel VISetTimeToDimming, .L_80366920
@@ -3412,123 +3412,172 @@
 	.rel VISetTimeToDimming, .L_80366914
 	.rel VISetTimeToDimming, .L_80366914
 	.rel VISetTimeToDimming, .L_80366914
-.endobj jumptable_8055FFD4
 
 # 0x805DD900 - 0x805DDA70
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805DD900, global
+.global lbl_805DD900
+lbl_805DD900:
 	.skip 0x78
-.sym lbl_805DD978, global
+.global lbl_805DD978
+lbl_805DD978:
 	.skip 0x78
-.sym lbl_805DD9F0, global
+.global lbl_805DD9F0
+lbl_805DD9F0:
 	.skip 0x58
-.sym lbl_805DDA48, global
+.global lbl_805DDA48
+lbl_805DDA48:
 	.skip 0x28
 
 # 0x80665D00 - 0x80665D20
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665D00, global
+.global lbl_80665D00
+lbl_80665D00:
 	.4byte lbl_8055FAA0
-.sym lbl_80665D04, global
+.global lbl_80665D04
+lbl_80665D04:
 	.4byte 0x00000001
-.sym lbl_80665D08, global
+.global lbl_80665D08
+lbl_80665D08:
 	.4byte 0x000003E7
-.sym lbl_80665D0C, global
+.global lbl_80665D0C
+lbl_80665D0C:
 	.4byte 0x000003E7
-.sym lbl_80665D10, global
+.global lbl_80665D10
+lbl_80665D10:
 	.4byte 0x00000001
-.sym lbl_80665D14, global
+.global lbl_80665D14
+lbl_80665D14:
 	.4byte 0x00000001
-.sym lbl_80665D18, global
+.global lbl_80665D18
+lbl_80665D18:
 	.4byte 0x76692E63
 	.4byte 0x00000000
 
 # 0x80667B98 - 0x80667C48
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667B98, global
+.global lbl_80667B98
+lbl_80667B98:
 	.skip 0x4
-.sym lbl_80667B9C, global
+.global lbl_80667B9C
+lbl_80667B9C:
 	.skip 0x4
-.sym lbl_80667BA0, global
+.global lbl_80667BA0
+lbl_80667BA0:
 	.skip 0x4
-.sym lbl_80667BA4, global
+.global lbl_80667BA4
+lbl_80667BA4:
 	.skip 0x4
-.sym lbl_80667BA8, global
+.global lbl_80667BA8
+lbl_80667BA8:
 	.skip 0x4
-.sym lbl_80667BAC, global
+.global lbl_80667BAC
+lbl_80667BAC:
 	.skip 0x4
-.sym lbl_80667BB0, global
+.global lbl_80667BB0
+lbl_80667BB0:
 	.skip 0x4
-.sym lbl_80667BB4, global
+.global lbl_80667BB4
+lbl_80667BB4:
 	.skip 0x4
-.sym lbl_80667BB8, global
+.global lbl_80667BB8
+lbl_80667BB8:
 	.skip 0x4
-.sym lbl_80667BBC, global
+.global lbl_80667BBC
+lbl_80667BBC:
 	.skip 0x4
-.sym lbl_80667BC0, global
+.global lbl_80667BC0
+lbl_80667BC0:
 	.skip 0x4
-.sym lbl_80667BC4, global
+.global lbl_80667BC4
+lbl_80667BC4:
 	.skip 0x2
-.sym lbl_80667BC6, global
+.global lbl_80667BC6
+lbl_80667BC6:
 	.skip 0x2
-.sym lbl_80667BC8, global
+.global lbl_80667BC8
+lbl_80667BC8:
 	.skip 0x8
-.sym lbl_80667BD0, global
+.global lbl_80667BD0
+lbl_80667BD0:
 	.skip 0x4
-.sym lbl_80667BD4, global
+.global lbl_80667BD4
+lbl_80667BD4:
 	.skip 0x4
-.sym lbl_80667BD8, global
+.global lbl_80667BD8
+lbl_80667BD8:
 	.skip 0x8
-.sym lbl_80667BE0, global
+.global lbl_80667BE0
+lbl_80667BE0:
 	.skip 0x4
-.sym lbl_80667BE4, global
+.global lbl_80667BE4
+lbl_80667BE4:
 	.skip 0x4
-.sym lbl_80667BE8, global
+.global lbl_80667BE8
+lbl_80667BE8:
 	.skip 0x4
-.sym lbl_80667BEC, global
+.global lbl_80667BEC
+lbl_80667BEC:
 	.skip 0x4
-.sym lbl_80667BF0, global
+.global lbl_80667BF0
+lbl_80667BF0:
 	.skip 0x4
-.sym lbl_80667BF4, global
+.global lbl_80667BF4
+lbl_80667BF4:
 	.skip 0x4
-.sym lbl_80667BF8, global
+.global lbl_80667BF8
+lbl_80667BF8:
 	.skip 0x4
-.sym lbl_80667BFC, global
+.global lbl_80667BFC
+lbl_80667BFC:
 	.skip 0x4
-.sym lbl_80667C00, global
+.global lbl_80667C00
+lbl_80667C00:
 	.skip 0x4
-.sym lbl_80667C04, global
+.global lbl_80667C04
+lbl_80667C04:
 	.skip 0x4
 
-.obj CurrTvMode, local
+CurrTvMode:
 	.skip 0x4
-.endobj CurrTvMode
-.sym lbl_80667C0C, global
+.global lbl_80667C0C
+lbl_80667C0C:
 	.skip 0x4
-.sym lbl_80667C10, global
+.global lbl_80667C10
+lbl_80667C10:
 	.skip 0x4
-.sym lbl_80667C14, global
+.global lbl_80667C14
+lbl_80667C14:
 	.skip 0x4
-.sym lbl_80667C18, global
+.global lbl_80667C18
+lbl_80667C18:
 	.skip 0x8
-.sym lbl_80667C20, global
+.global lbl_80667C20
+lbl_80667C20:
 	.skip 0x8
-.sym lbl_80667C28, global
+.global lbl_80667C28
+lbl_80667C28:
 	.skip 0x4
-.sym lbl_80667C2C, global
+.global lbl_80667C2C
+lbl_80667C2C:
 	.skip 0x4
-.sym lbl_80667C30, global
+.global lbl_80667C30
+lbl_80667C30:
 	.skip 0x4
-.sym lbl_80667C34, global
+.global lbl_80667C34
+lbl_80667C34:
 	.skip 0x4
-.sym lbl_80667C38, global
+.global lbl_80667C38
+lbl_80667C38:
 	.skip 0x4
-.sym lbl_80667C3C, global
+.global lbl_80667C3C
+lbl_80667C3C:
 	.skip 0x4
-.sym lbl_80667C40, global
+.global lbl_80667C40
+lbl_80667C40:
 	.skip 0x4
-.sym lbl_80667C44, global
+.global lbl_80667C44
+lbl_80667C44:
 	.skip 0x4

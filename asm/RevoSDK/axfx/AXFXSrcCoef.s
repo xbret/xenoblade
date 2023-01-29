@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/axfx/AXFXSrcCoef.o"
 
-# 0x802DAAE0 - 0x802DAB00
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __AXFXGetSrcCoef, global
@@ -19,7 +18,8 @@
 # 0x805435E0 - 0x80543DE0
 .data
 .balign 8
-.sym lbl_805435E0, global
+.global lbl_805435E0
+lbl_805435E0:
 	.4byte 0x3DC7B000
 	.4byte 0x3F4D5E00
 	.4byte 0x3DD01000

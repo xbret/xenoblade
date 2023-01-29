@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_anmscn.o"
 
-# 0x803E5D28 - 0x803E7294
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::_unnamed_g3d_anmscn_cpp_::MakeDiffuseLightObj(nw4r::g3d::LightObj*, const nw4r::g3d::LightAnmResult*)
@@ -1675,12 +1674,14 @@
 # 0x80520F38 - 0x80520F58
 .rodata
 .balign 8
-.sym lbl_80520F38, global
+.global lbl_80520F38
+lbl_80520F38:
 	.4byte 0x00000007
 	.4byte 0x416E6D53
 	.4byte 0x636E0000
 	.4byte 0x00000000
-.sym lbl_80520F48, global
+.global lbl_80520F48
+lbl_80520F48:
 	.4byte 0x0000000A
 	.4byte 0x416E6D53
 	.4byte 0x636E5265
@@ -1689,7 +1690,8 @@
 # 0x8056CD70 - 0x8056CE90
 .data
 .balign 8
-.sym lbl_8056CD70, global
+.global lbl_8056CD70
+lbl_8056CD70:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d9AnmScnResCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1726,7 +1728,8 @@
 	.4byte GetLightResult__Q34nw4r3g3d9AnmScnResFPQ34nw4r3g3d14LightAnmResultUl
 	.4byte GetFogResult__Q34nw4r3g3d9AnmScnResFPQ34nw4r3g3d12FogAnmResultUl
 	.4byte GetCameraResult__Q34nw4r3g3d9AnmScnResFPQ34nw4r3g3d15CameraAnmResultUl
-.sym lbl_8056CE00, global
+.global lbl_8056CE00
+lbl_8056CE00:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d6AnmScnCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1767,16 +1770,21 @@
 # 0x8066C3A0 - 0x8066C3C0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C3A0, global
+.global lbl_8066C3A0
+lbl_8066C3A0:
 	.4byte 0x00000000
-.sym lbl_8066C3A4, global
+.global lbl_8066C3A4
+lbl_8066C3A4:
 	.4byte 0xD01502F9
-.sym lbl_8066C3A8, global
+.global lbl_8066C3A8
+lbl_8066C3A8:
 	.4byte 0x3F800000
 	.4byte 0x00000000
-.sym lbl_8066C3B0, global
+.global lbl_8066C3B0
+lbl_8066C3B0:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C3B8, global
+.global lbl_8066C3B8
+lbl_8066C3B8:
 	.4byte 0x3F000000
 	.4byte 0x00000000

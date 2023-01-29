@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/cft/srcgc/cftyp422_ppc.o"
 
-# 0x8039B7F8 - 0x8039BBE8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn CFT_Ycc420plnToArgb8888Init, global
@@ -99,7 +98,7 @@
 /* 8039B95C 00364F1C  4E 80 00 20 */	blr
 .endfn CFT_Ycc420plnToArgb8888Init
 
-.fn fn_8039B960, global
+.fn func_8039B960, global
 /* 8039B960 00364F20  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8039B964 00364F24  38 C0 00 08 */	li r6, 0x8
 /* 8039B968 00364F28  80 03 00 10 */	lwz r0, 0x10(r3)
@@ -270,12 +269,13 @@
 /* 8039BBDC 0036519C  BA 81 00 10 */	lmw r20, 0x10(r1)
 /* 8039BBE0 003651A0  38 21 00 40 */	addi r1, r1, 0x40
 /* 8039BBE4 003651A4  4E 80 00 20 */	blr
-.endfn fn_8039B960
+.endfn func_8039B960
 
 # 0x8051CDF0 - 0x8051CE58
 .rodata
 .balign 8
-.sym lbl_8051CDF0, global
+.global lbl_8051CDF0
+lbl_8051CDF0:
 	.4byte 0x3F950A85
 	.4byte 0x3F000000
 	.4byte 0xBEC880BB
@@ -306,5 +306,6 @@
 # 0x80601380 - 0x80602788
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80601380, global
+.global lbl_80601380
+lbl_80601380:
 	.skip 0x1408

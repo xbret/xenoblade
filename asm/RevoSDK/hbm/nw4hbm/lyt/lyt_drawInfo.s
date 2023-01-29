@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/lyt/lyt_drawInfo.o"
 
-# 0x8032D420 - 0x8032D4E0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4hbm::lyt::DrawInfo::DrawInfo()
@@ -65,19 +64,23 @@
 # 0x80518A58 - 0x80518A60
 .rodata
 .balign 8
-.sym lbl_80518A58, global
+.global lbl_80518A58
+lbl_80518A58:
 	.4byte 0x00000000
-.sym lbl_80518A5C, global
+.global lbl_80518A5C
+lbl_80518A5C:
 	.4byte 0x3F800000
 
 # 0x8054D7A0 - 0x8054D7D0
 .data
 .balign 8
-.sym lbl_8054D7A0, global
+.global lbl_8054D7A0
+lbl_8054D7A0:
 	.4byte lbl_8054D7C8
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt8DrawInfoFv
-.sym lbl_8054D7AC, global
+.global lbl_8054D7AC
+lbl_8054D7AC:
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
@@ -85,6 +88,7 @@
 	.4byte 0x77496E66
 	.4byte 0x6F000000
 	.4byte 0x00000000
-.sym lbl_8054D7C8, global
+.global lbl_8054D7C8
+lbl_8054D7C8:
 	.4byte lbl_8054D7AC
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/db/db_assert.o"
 
-# 0x803D733C - 0x803D7810
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn Assertion_Printf___Q24nw4r2dbFPCce, global
@@ -48,7 +47,7 @@
 /* 803D73D0 003A0990  4E 80 00 20 */	blr
 .endfn Assertion_Printf___Q24nw4r2dbFPCce
 
-.fn fn_803D73D4, global
+.fn func_803D73D4, global
 /* 803D73D4 003A0994  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D73D8 003A0998  7C 08 02 A6 */	mflr r0
 /* 803D73DC 003A099C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -94,7 +93,7 @@
 /* 803D7474 003A0A34  7C 08 03 A6 */	mtlr r0
 /* 803D7478 003A0A38  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D747C 003A0A3C  4E 80 00 20 */	blr
-.endfn fn_803D73D4
+.endfn func_803D73D4
 
 # nw4r::db::VPanic(const char*, int, const char*, __va_list_struct*, bool)
 .fn VPanic__Q24nw4r2dbFPCciPCcP16__va_list_structb, global
@@ -116,7 +115,7 @@
 /* 803D74BC 003A0A7C  38 60 00 00 */	li r3, 0x0
 /* 803D74C0 003A0A80  4B F8 D4 71 */	bl VISetPostRetraceCallback
 /* 803D74C4 003A0A84  7F C3 F3 78 */	mr r3, r30
-/* 803D74C8 003A0A88  4B FF FF 0D */	bl fn_803D73D4
+/* 803D74C8 003A0A88  4B FF FF 0D */	bl func_803D73D4
 /* 803D74CC 003A0A8C  80 6D BB 9C */	lwz r3, lbl_80667D1C@sda21(r13)
 /* 803D74D0 003A0A90  2C 03 00 00 */	cmpwi r3, 0x0
 /* 803D74D4 003A0A94  41 82 00 5C */	beq .L_803D7530
@@ -356,7 +355,8 @@
 # 0x8056C7B0 - 0x8056C840
 .data
 .balign 8
-.sym lbl_8056C7B0, global
+.global lbl_8056C7B0
+lbl_8056C7B0:
 	.4byte 0x2D2D2D2D
 	.4byte 0x2D2D2D2D
 	.4byte 0x2D2D2D2D
@@ -381,12 +381,14 @@
 	.4byte 0x20202025
 	.4byte 0x30385820
 	.4byte 0x00000000
-.sym lbl_8056C810, global
+.global lbl_8056C810
+lbl_8056C810:
 	.4byte 0x25733A25
 	.4byte 0x64205061
 	.4byte 0x6E69633A
 	.4byte 0x00000000
-.sym lbl_8056C820, global
+.global lbl_8056C820
+lbl_8056C820:
 	.4byte 0x25733A25
 	.4byte 0x64205761
 	.4byte 0x726E696E
@@ -399,23 +401,29 @@
 # 0x8061D710 - 0x8061D740
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061D710, global
+.global lbl_8061D710
+lbl_8061D710:
 	.skip 0x30
 
 # 0x80665D80 - 0x80665D88
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665D80, global
+.global lbl_80665D80
+lbl_80665D80:
 	.4byte 0x01000000
-.sym lbl_80665D84, global
+.global lbl_80665D84
+lbl_80665D84:
 	.4byte 0x0A000000
 
 # 0x80667D18 - 0x80667D28
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D18, global
+.global lbl_80667D18
+lbl_80667D18:
 	.skip 0x4
-.sym lbl_80667D1C, global
+.global lbl_80667D1C
+lbl_80667D1C:
 	.skip 0x4
-.sym lbl_80667D20, global
+.global lbl_80667D20
+lbl_80667D20:
 	.skip 0x8

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_MemorySoundArchive.o"
 
-# 0x80417168 - 0x8041759C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::MemorySoundArchive::MemorySoundArchive()
@@ -380,17 +379,18 @@
 # 0x8056E0F0 - 0x8056E170
 .data
 .balign 8
-.sym lbl_8056E0F0, global
+.global lbl_8056E0F0
+lbl_8056E0F0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte GetRuntimeTypeInfo__Q34nw4r2ut10FileStreamCFv
 	.4byte __dt__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv
 	.4byte Close__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv
 	.4byte Read__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFPvUl
-	.4byte fn_8042BDD0
-	.4byte fn_8042BDD8
-	.4byte fn_8042BDE0
-	.4byte fn_8042BDE8
+	.4byte func_8042BDD0
+	.4byte func_8042BDD8
+	.4byte func_8042BDE0
+	.4byte func_8042BDE8
 	.4byte CanAsync__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte CanRead__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte CanWrite__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
@@ -399,13 +399,14 @@
 	.4byte GetBufferAlign__Q34nw4r2ut8IOStreamCFv
 	.4byte GetSize__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte Seek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFlUl
-	.4byte fn_8042BDFC
-	.4byte fn_8042BE00
+	.4byte func_8042BDFC
+	.4byte func_8042BE00
 	.4byte CanSeek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte CanCancel__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte Tell__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte 0x00000000
-.sym lbl_8056E150, global
+.global lbl_8056E150
+lbl_8056E150:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3snd18MemorySoundArchiveFv

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/sfd/sfd_vom.o"
 
-# 0x803CEC9C - 0x803CEE60
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFVOM_Init, global
@@ -172,7 +171,8 @@
 # 0x805206B0 - 0x805206E8
 .rodata
 .balign 8
-.sym lbl_805206B0, global
+.global lbl_805206B0
+lbl_805206B0:
 	.4byte SFVOM_Init
 	.4byte SFVOM_Finish
 	.4byte SFVOM_ExecServer

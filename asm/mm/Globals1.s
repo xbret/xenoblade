@@ -1,38 +1,53 @@
 .include "macros.inc"
-.file "mm/Globals1.o"
 
 # 0x80659DB0 - 0x8065A068
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80659DB0, global
+.global lbl_80659DB0
+lbl_80659DB0:
 	.skip 0xC
-.sym lbl_80659DBC, global
+.global lbl_80659DBC
+lbl_80659DBC:
 	.skip 0xC
-.sym lbl_80659DC8, global
+.global lbl_80659DC8
+lbl_80659DC8:
 	.skip 0xC
-.sym lbl_80659DD4, global
+.global lbl_80659DD4
+lbl_80659DD4:
 	.skip 0xC
-.sym lbl_80659DE0, global
+.global lbl_80659DE0
+lbl_80659DE0:
 	.skip 0x10
-.sym lbl_80659DF0, global
+.global lbl_80659DF0
+lbl_80659DF0:
 	.skip 0x50
-.sym lbl_80659E40, global
+.global lbl_80659E40
+lbl_80659E40:
 	.skip 0x18
-.sym lbl_80659E58, global
+.global lbl_80659E58
+lbl_80659E58:
 	.skip 0xC
-.sym lbl_80659E64, global
+.global lbl_80659E64
+lbl_80659E64:
 	.skip 0x64
-.sym lbl_80659EC8, global
+.global lbl_80659EC8
+lbl_80659EC8:
 	.skip 0x20
-.sym lbl_80659EE8, global
+.global lbl_80659EE8
+lbl_80659EE8:
 	.skip 0x10
-.sym lbl_80659EF8, global
+.global lbl_80659EF8
+lbl_80659EF8:
 	.skip 0x90
-.sym lbl_80659F88, global
+.global lbl_80659F88
+lbl_80659F88:
 	.skip 0x30
-.sym lbl_80659FB8, global
+.global lbl_80659FB8
+lbl_80659FB8:
 	.skip 0x30
-.sym lbl_80659FE8, global
+.global lbl_80659FE8
+lbl_80659FE8:
 	.skip 0x40
-.sym lbl_8065A028, global
+.global lbl_8065A028
+lbl_8065A028:
 	.skip 0x40

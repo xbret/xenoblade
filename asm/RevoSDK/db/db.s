@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/db/db.o"
 
-# 0x80309110 - 0x80309210
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn DBInit, global
@@ -88,7 +87,8 @@
 # 0x805495E0 - 0x805495F8
 .data
 .balign 8
-.sym lbl_805495E0, global
+.global lbl_805495E0
+lbl_805495E0:
 	.4byte 0x44424578
 	.4byte 0x63657074
 	.4byte 0x696F6E44
@@ -100,10 +100,10 @@
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj __DBInterface, global
+.global __DBInterface
+__DBInterface:
 	.skip 0x4
-.endobj __DBInterface
 
-.obj DBVerbose, global
+.global DBVerbose
+DBVerbose:
 	.skip 0x4
-.endobj DBVerbose

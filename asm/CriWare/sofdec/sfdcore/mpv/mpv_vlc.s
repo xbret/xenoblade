@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mpv/mpv_vlc.o"
 
-# 0x803A9710 - 0x803AC468
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPVVLC_IsVlcSizErr, global
@@ -2979,7 +2978,8 @@
 # 0x8051F830 - 0x8051F8E0
 .rodata
 .balign 8
-.sym lbl_8051F830, global
+.global lbl_8051F830
+lbl_8051F830:
 	.4byte 0x12011101
 	.4byte 0x10010F01
 	.4byte 0x03060210
@@ -3028,80 +3028,118 @@
 # 0x806064B8 - 0x80607B28
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_806064B8, global
+.global lbl_806064B8
+lbl_806064B8:
 	.skip 0x400
-.sym lbl_806068B8, global
+.global lbl_806068B8
+lbl_806068B8:
 	.skip 0x8
-.sym lbl_806068C0, global
+.global lbl_806068C0
+lbl_806068C0:
 	.skip 0x80
-.sym lbl_80606940, global
+.global lbl_80606940
+lbl_80606940:
 	.skip 0x8
-.sym lbl_80606948, global
+.global lbl_80606948
+lbl_80606948:
 	.skip 0x80
-.sym lbl_806069C8, global
+.global lbl_806069C8
+lbl_806069C8:
 	.skip 0x8
-.sym lbl_806069D0, global
+.global lbl_806069D0
+lbl_806069D0:
 	.skip 0x100
-.sym lbl_80606AD0, global
+.global lbl_80606AD0
+lbl_80606AD0:
 	.skip 0x8
-.sym lbl_80606AD8, global
+.global lbl_80606AD8
+lbl_80606AD8:
 	.skip 0x40
-.sym lbl_80606B18, global
+.global lbl_80606B18
+lbl_80606B18:
 	.skip 0x8
-.sym lbl_80606B20, global
+.global lbl_80606B20
+lbl_80606B20:
 	.skip 0x40
-.sym lbl_80606B60, global
+.global lbl_80606B60
+lbl_80606B60:
 	.skip 0x8
-.sym lbl_80606B68, global
+.global lbl_80606B68
+lbl_80606B68:
 	.skip 0x80
-.sym lbl_80606BE8, global
+.global lbl_80606BE8
+lbl_80606BE8:
 	.skip 0x200
-.sym lbl_80606DE8, global
+.global lbl_80606DE8
+lbl_80606DE8:
 	.skip 0x80
-.sym lbl_80606E68, global
+.global lbl_80606E68
+lbl_80606E68:
 	.skip 0x100
-.sym lbl_80606F68, global
+.global lbl_80606F68
+lbl_80606F68:
 	.skip 0x40
-.sym lbl_80606FA8, global
+.global lbl_80606FA8
+lbl_80606FA8:
 	.skip 0x100
-.sym lbl_806070A8, global
+.global lbl_806070A8
+lbl_806070A8:
 	.skip 0x40
-.sym lbl_806070E8, global
+.global lbl_806070E8
+lbl_806070E8:
 	.skip 0x400
-.sym lbl_806074E8, global
+.global lbl_806074E8
+lbl_806074E8:
 	.skip 0x400
-.sym lbl_806078E8, global
+.global lbl_806078E8
+lbl_806078E8:
 	.skip 0x200
-.sym lbl_80607AE8, global
+.global lbl_80607AE8
+lbl_80607AE8:
 	.skip 0x4
-.sym lbl_80607AEC, global
+.global lbl_80607AEC
+lbl_80607AEC:
 	.skip 0x4
-.sym lbl_80607AF0, global
+.global lbl_80607AF0
+lbl_80607AF0:
 	.skip 0x4
-.sym lbl_80607AF4, global
+.global lbl_80607AF4
+lbl_80607AF4:
 	.skip 0x4
-.sym lbl_80607AF8, global
+.global lbl_80607AF8
+lbl_80607AF8:
 	.skip 0x4
-.sym lbl_80607AFC, global
+.global lbl_80607AFC
+lbl_80607AFC:
 	.skip 0x4
-.sym lbl_80607B00, global
+.global lbl_80607B00
+lbl_80607B00:
 	.skip 0x4
-.sym lbl_80607B04, global
+.global lbl_80607B04
+lbl_80607B04:
 	.skip 0x4
-.sym lbl_80607B08, global
+.global lbl_80607B08
+lbl_80607B08:
 	.skip 0x4
 
-.obj mpvvlc_run_level_0c, global
+.global mpvvlc_run_level_0c
+mpvvlc_run_level_0c:
 	.skip 0x4
-.sym lbl_80607B10, global
+.global lbl_80607B10
+lbl_80607B10:
 	.skip 0x4
-.sym lbl_80607B14, global
+.global lbl_80607B14
+lbl_80607B14:
 	.skip 0x4
-.sym lbl_80607B18, global
+.global lbl_80607B18
+lbl_80607B18:
 	.skip 0x4
-.sym lbl_80607B1C, global
+.global lbl_80607B1C
+lbl_80607B1C:
 	.skip 0x4
-.sym lbl_80607B20, global
+.global lbl_80607B20
+lbl_80607B20:
 	.skip 0x4
-.sym lbl_80607B24, global
+.global lbl_80607B24
+lbl_80607B24:
 	.skip 0x4

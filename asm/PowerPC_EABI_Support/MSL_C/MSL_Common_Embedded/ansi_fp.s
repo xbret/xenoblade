@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/ansi_fp.o"
 
-# 0x802BC3DC - 0x802BDC5C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __ull2dec, global
@@ -1785,7 +1784,8 @@
 # 0x8050CF18 - 0x8050CFF8
 .rodata
 .balign 8
-.sym lbl_8050CF18, global
+.global lbl_8050CF18
+lbl_8050CF18:
 	.4byte 0x35343231
 	.4byte 0x30313038
 	.4byte 0x36323432
@@ -1847,7 +1847,7 @@
 .data
 .balign 8
 
-.obj jumptable_8053F230, local
+jumptable_8053F230:
 	.rel __two_exp, .L_802BC86C
 	.rel __two_exp, .L_802BCA60
 	.rel __two_exp, .L_802BCA60
@@ -1921,9 +1921,9 @@
 	.rel __two_exp, .L_802BCA18
 	.rel __two_exp, .L_802BCA30
 	.rel __two_exp, .L_802BCA48
-.endobj jumptable_8053F230
 	.4byte 0x00000000
-.sym lbl_8053F358, global
+.global lbl_8053F358
+lbl_8053F358:
 	.4byte 0x40240000
 	.4byte 0x00000000
 	.4byte 0x40590000
@@ -1944,24 +1944,31 @@
 # 0x8066B820 - 0x8066B858
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066B820, global
+.global lbl_8066B820
+lbl_8066B820:
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066B828, global
+.global lbl_8066B828
+lbl_8066B828:
 	.4byte 0x3FF00000
 	.4byte 0x00000000
-.sym lbl_8066B830, global
+.global lbl_8066B830
+lbl_8066B830:
 	.4byte 0xBFF00000
 	.4byte 0x00000000
-.sym lbl_8066B838, global
+.global lbl_8066B838
+lbl_8066B838:
 	.4byte 0x40140000
 	.4byte 0x00000000
-.sym lbl_8066B840, global
+.global lbl_8066B840
+lbl_8066B840:
 	.4byte 0x7FEFFFFF
 	.4byte 0xFFFFFFFF
-.sym lbl_8066B848, global
+.global lbl_8066B848
+lbl_8066B848:
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066B850, global
+.global lbl_8066B850
+lbl_8066B850:
 	.4byte 0x43300000
 	.4byte 0x80000000

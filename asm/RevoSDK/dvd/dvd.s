@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/dvd/dvd.o"
 
-# 0x8030A8A0 - 0x8030F470
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn StampCommand, global
@@ -5434,7 +5433,8 @@
 # 0x80549920 - 0x80549D30
 .data
 .balign 8
-.sym lbl_80549920, global
+.global lbl_80549920
+lbl_80549920:
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -5453,7 +5453,8 @@
 	.4byte 0x325F3134
 	.4byte 0x3529203E
 	.4byte 0x3E000000
-.sym lbl_80549968, global
+.global lbl_80549968
+lbl_80549968:
 	.4byte 0x44564443
 	.4byte 0x68616E67
 	.4byte 0x65446973
@@ -5468,7 +5469,7 @@
 	.4byte 0x6269672E
 	.4byte 0x20202000
 
-.obj jumptable_8054999C, local
+jumptable_8054999C:
 	.rel stateCoverClosed, .L_8030CBA8
 	.rel stateCoverClosed, .L_8030CB9C
 	.rel stateCoverClosed, .L_8030CB9C
@@ -5512,9 +5513,8 @@
 	.rel stateCoverClosed, .L_8030CBA8
 	.rel stateCoverClosed, .L_8030CB48
 	.rel stateCoverClosed, .L_8030CB48
-.endobj jumptable_8054999C
 
-.obj jumptable_80549A48, local
+jumptable_80549A48:
 	.rel stateBusy, .L_8030DEF0
 	.rel stateBusy, .L_8030DA84
 	.rel stateBusy, .L_8030DBAC
@@ -5558,9 +5558,8 @@
 	.rel stateBusy, .L_8030DE1C
 	.rel stateBusy, .L_8030DE48
 	.rel stateBusy, .L_8030DEBC
-.endobj jumptable_80549A48
 
-.obj jumptable_80549AF4, local
+jumptable_80549AF4:
 	.rel stateBusy, .L_8030DA3C
 	.rel stateBusy, .L_8030DA3C
 	.rel stateBusy, .L_8030D9B8
@@ -5604,13 +5603,13 @@
 	.rel stateBusy, .L_8030DA3C
 	.rel stateBusy, .L_8030D9B8
 	.rel stateBusy, .L_8030D9B8
-.endobj jumptable_80549AF4
-.sym lbl_80549BA0, global
+.global lbl_80549BA0
+lbl_80549BA0:
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 
-.obj jumptable_80549BAC, local
+jumptable_80549BAC:
 	.rel DVDCancelAsync, .L_8030EE64
 	.rel DVDCancelAsync, .L_8030EE04
 	.rel DVDCancelAsync, .L_8030EE04
@@ -5654,9 +5653,8 @@
 	.rel DVDCancelAsync, .L_8030EE64
 	.rel DVDCancelAsync, .L_8030EDE4
 	.rel DVDCancelAsync, .L_8030EDE4
-.endobj jumptable_80549BAC
 
-.obj jumptable_80549C58, local
+jumptable_80549C58:
 	.rel DVDCancelAsync, .L_8030ECF0
 	.rel DVDCancelAsync, .L_8030ECF0
 	.rel DVDCancelAsync, .L_8030ED10
@@ -5671,9 +5669,8 @@
 	.rel DVDCancelAsync, .L_8030ECF0
 	.rel DVDCancelAsync, .L_8030EE90
 	.rel DVDCancelAsync, .L_8030EF8C
-.endobj jumptable_80549C58
 
-.obj jumptable_80549C90, local
+jumptable_80549C90:
 	.rel DVDCancel, .L_8030F0A8
 	.rel DVDCancel, .L_8030F0A8
 	.rel DVDCancel, .L_8030F09C
@@ -5713,165 +5710,172 @@
 	.rel DVDCancel, .L_8030F09C
 	.rel DVDCancel, .L_8030F0A8
 	.rel DVDCancel, .L_8030F0A8
-.endobj jumptable_80549C90
 	.4byte 0x00000000
 
 # 0x805C7D00 - 0x805CC9B0
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj __DVDTicketViewBuffer, local
+__DVDTicketViewBuffer:
 	.skip 0xE0
-.endobj __DVDTicketViewBuffer
 	.skip 0x20
 
-.obj __DVDTmdBuffer, local
+__DVDTmdBuffer:
 	.skip 0x4A00
-.endobj __DVDTmdBuffer
-.sym lbl_805CC800, global
+.global lbl_805CC800
+lbl_805CC800:
 	.skip 0x20
 
-.obj DummyCommandBlock, local
+DummyCommandBlock:
 	.skip 0x30
-.endobj DummyCommandBlock
-.sym lbl_805CC850, global
+.global lbl_805CC850
+lbl_805CC850:
 	.skip 0x30
 
-.obj CoverAlarm, local
+CoverAlarm:
 	.skip 0x30
-.endobj CoverAlarm
 	.skip 0x10
-.sym lbl_805CC8C0, global
+.global lbl_805CC8C0
+lbl_805CC8C0:
 	.skip 0x20
-.sym lbl_805CC8E0, global
+.global lbl_805CC8E0
+lbl_805CC8E0:
 	.skip 0x20
-.sym lbl_805CC900, global
+.global lbl_805CC900
+lbl_805CC900:
 	.skip 0x20
-.sym lbl_805CC920, global
+.global lbl_805CC920
+lbl_805CC920:
 	.skip 0x30
-.sym lbl_805CC950, global
+.global lbl_805CC950
+lbl_805CC950:
 	.skip 0x60
 
 # 0x80665980 - 0x80665998
 .section .sdata, "wa"
 .balign 8
 
-.obj __DVDVersion, global
+.global __DVDVersion
+__DVDVersion:
 	.4byte lbl_80549920
-.endobj __DVDVersion
-.sym lbl_80665984, global
+.global lbl_80665984
+lbl_80665984:
 	.4byte 0x00000001
-.sym lbl_80665988, global
+.global lbl_80665988
+lbl_80665988:
 	.4byte defaultOptionalCommandChecker
-.sym lbl_8066598C, global
+.global lbl_8066598C
+lbl_8066598C:
 	.4byte 0x6476642E
 	.4byte 0x63000000
-.sym lbl_80665994, global
+.global lbl_80665994
+lbl_80665994:
 	.4byte 0xFFFFFFFF
 
 # 0x806677E0 - 0x80667878
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806677E0, global
+.global lbl_806677E0
+lbl_806677E0:
 	.skip 0x4
 
-.obj PauseFlag, local
-	.skip 0x4
-.endobj PauseFlag
-
-.obj PausingFlag, local
-	.skip 0x4
-.endobj PausingFlag
-
-.obj FatalErrorFlag, local
-	.skip 0x4
-.endobj FatalErrorFlag
-.sym lbl_806677F0, global
+PauseFlag:
 	.skip 0x4
 
-.obj ResumeFromHere, local
-	.skip 0x4
-.endobj ResumeFromHere
-.sym lbl_806677F8, global
+PausingFlag:
 	.skip 0x4
 
-.obj FirstTimeInBootrom, local
+FatalErrorFlag:
 	.skip 0x4
-.endobj FirstTimeInBootrom
-.sym lbl_80667800, global
-	.skip 0x4
-
-.obj WaitingForCoverOpen, local
-	.skip 0x4
-.endobj WaitingForCoverOpen
-
-.obj WaitingForCoverClose, local
-	.skip 0x4
-.endobj WaitingForCoverClose
-
-.obj MotorStopped, local
-	.skip 0x4
-.endobj MotorStopped
-.sym lbl_80667810, global
-	.skip 0x4
-.sym lbl_80667814, global
+.global lbl_806677F0
+lbl_806677F0:
 	.skip 0x4
 
-.obj __DVDLayoutFormat, global
+ResumeFromHere:
 	.skip 0x4
-.endobj __DVDLayoutFormat
+.global lbl_806677F8
+lbl_806677F8:
+	.skip 0x4
 
-.obj DVDInitialized, local
+FirstTimeInBootrom:
 	.skip 0x4
-.endobj DVDInitialized
-.sym lbl_80667820, global
+.global lbl_80667800
+lbl_80667800:
 	.skip 0x4
-.sym lbl_80667824, global
+
+WaitingForCoverOpen:
 	.skip 0x4
-.sym lbl_80667828, global
+
+WaitingForCoverClose:
 	.skip 0x4
-.sym lbl_8066782C, global
+
+MotorStopped:
 	.skip 0x4
-.sym lbl_80667830, global
+.global lbl_80667810
+lbl_80667810:
+	.skip 0x4
+.global lbl_80667814
+lbl_80667814:
+	.skip 0x4
+
+.global __DVDLayoutFormat
+__DVDLayoutFormat:
+	.skip 0x4
+
+DVDInitialized:
+	.skip 0x4
+.global lbl_80667820
+lbl_80667820:
+	.skip 0x4
+.global lbl_80667824
+lbl_80667824:
+	.skip 0x4
+.global lbl_80667828
+lbl_80667828:
+	.skip 0x4
+.global lbl_8066782C
+lbl_8066782C:
+	.skip 0x4
+.global lbl_80667830
+lbl_80667830:
 	.skip 0x10
 
-.obj __DVDNumTmdBytes, local
+__DVDNumTmdBytes:
 	.skip 0x4
-.endobj __DVDNumTmdBytes
 	.skip 0x4
-.sym lbl_80667848, global
+.global lbl_80667848
+lbl_80667848:
 	.skip 0x4
-.sym lbl_8066784C, global
-	.skip 0x4
-
-.obj MotorState, local
-	.skip 0x4
-.endobj MotorState
-.sym lbl_80667854, global
-	.skip 0x4
-.sym lbl_80667858, global
+.global lbl_8066784C
+lbl_8066784C:
 	.skip 0x4
 
-.obj CancelLastError, local
+MotorState:
 	.skip 0x4
-.endobj CancelLastError
-.sym lbl_80667860, global
+.global lbl_80667854
+lbl_80667854:
+	.skip 0x4
+.global lbl_80667858
+lbl_80667858:
 	.skip 0x4
 
-.obj CurrCommand, local
+CancelLastError:
 	.skip 0x4
-.endobj CurrCommand
+.global lbl_80667860
+lbl_80667860:
+	.skip 0x4
 
-.obj bootInfo, local
+CurrCommand:
 	.skip 0x4
-.endobj bootInfo
 
-.obj IDShouldBe, local
+bootInfo:
 	.skip 0x4
-.endobj IDShouldBe
 
-.obj executing, local
+IDShouldBe:
 	.skip 0x4
-.endobj executing
-.sym lbl_80667874, global
+
+executing:
+	.skip 0x4
+.global lbl_80667874
+lbl_80667874:
 	.skip 0x4

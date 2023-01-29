@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/svm/svm.o"
 
-# 0x8039699C - 0x80397A0C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SVM_Lock, global
@@ -1201,7 +1200,8 @@
 # 0x8051C590 - 0x8051C748
 .rodata
 .balign 8
-.sym lbl_8051C590, global
+.global lbl_8051C590
+lbl_8051C590:
 	.4byte 0x32313033
 	.4byte 0x3130323A
 	.4byte 0x53564D3A
@@ -1316,17 +1316,24 @@
 # 0x805F5D30 - 0x805F60B8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805F5D30, global
+.global lbl_805F5D30
+lbl_805F5D30:
 	.skip 0x10
-.sym lbl_805F5D40, global
+.global lbl_805F5D40
+lbl_805F5D40:
 	.skip 0x8
-.sym lbl_805F5D48, global
+.global lbl_805F5D48
+lbl_805F5D48:
 	.skip 0x8
-.sym lbl_805F5D50, global
+.global lbl_805F5D50
+lbl_805F5D50:
 	.skip 0x80
-.sym lbl_805F5DD0, global
+.global lbl_805F5DD0
+lbl_805F5DD0:
 	.skip 0x248
-.sym lbl_805F6018, global
+.global lbl_805F6018
+lbl_805F6018:
 	.skip 0x98
-.sym lbl_805F60B0, global
+.global lbl_805F60B0
+lbl_805F60B0:
 	.skip 0x8

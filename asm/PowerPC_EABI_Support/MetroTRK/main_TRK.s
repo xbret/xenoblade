@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MetroTRK/main_TRK.o"
 
-# 0x802CBA54 - 0x802CBA90
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn TRK_main, global
@@ -28,7 +27,6 @@
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj TRK_mainError, local
+TRK_mainError:
 	.skip 0x4
-.endobj TRK_mainError
 	.skip 0x4

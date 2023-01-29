@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_bwav.o"
 
-# 0x803883BC - 0x80389300
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADX_DecodeInfoWav, global
@@ -1071,13 +1070,16 @@
 # 0x8051AA78 - 0x8051AA98
 .rodata
 .balign 8
-.sym lbl_8051AA78, global
+.global lbl_8051AA78
+lbl_8051AA78:
 	.4byte 0x666D7420
 	.4byte 0x00000000
-.sym lbl_8051AA80, global
+.global lbl_8051AA80
+lbl_8051AA80:
 	.4byte 0x64617461
 	.4byte 0x00000000
-.sym lbl_8051AA88, global
+.global lbl_8051AA88
+lbl_8051AA88:
 	.4byte 0x52494646
 	.4byte 0x00574156
 	.4byte 0x45000000
@@ -1086,7 +1088,9 @@
 # 0x80563728 - 0x80563730
 .data
 .balign 8
-.sym lbl_80563728, global
+.global lbl_80563728
+lbl_80563728:
 	.4byte lbl_8051AA78
-.sym lbl_8056372C, global
+.global lbl_8056372C
+lbl_8056372C:
 	.4byte lbl_8051AA80

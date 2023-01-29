@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_resanmcamera.o"
 
-# 0x803E0AB0 - 0x803E0DC8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ResAnmCamera::GetAnmResult(nw4r::g3d::CameraAnmResult*, float) const

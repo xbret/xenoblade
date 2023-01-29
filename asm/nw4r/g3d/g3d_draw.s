@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_draw.o"
 
-# 0x803EF1A0 - 0x803F0FFC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::detail::GetIndMtxOp(nw4r::g3d::ResMat, nw4r::g3d::ResNode, nw4r::g3d::ResShp)
@@ -2164,18 +2163,23 @@
 # 0x80665DA8 - 0x80665DB0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665DA8, global
+.global lbl_80665DA8
+lbl_80665DA8:
 	.4byte 0xFFFFFFFC
-.sym lbl_80665DAC, global
+.global lbl_80665DAC
+lbl_80665DAC:
 	.4byte 0xFFFFFFFC
 
 # 0x8066C448 - 0x8066C458
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C448, global
+.global lbl_8066C448
+lbl_8066C448:
 	.4byte 0x00000000
-.sym lbl_8066C44C, global
+.global lbl_8066C44C
+lbl_8066C44C:
 	.4byte 0xC0000000
-.sym lbl_8066C450, global
+.global lbl_8066C450
+lbl_8066C450:
 	.4byte 0x3F800000
 	.4byte 0x00000000

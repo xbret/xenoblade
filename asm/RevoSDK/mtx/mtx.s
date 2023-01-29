@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/mtx/mtx.o"
 
-# 0x8034D1E0 - 0x8034DDF0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn PSMTXIdentity, global
@@ -843,7 +842,8 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj Unit01, global
+.global Unit01
+Unit01:
 	.4byte 0x00000000
 	.4byte 0x3F800000
 
@@ -851,19 +851,26 @@
 .section .sdata2, "a"
 .balign 8
 
-.obj one_c, global
+.global one_c
+one_c:
 	.4byte 0x3F800000
 
-.obj zero_c, global
+.global zero_c
+zero_c:
 	.4byte 0x00000000
-.sym lbl_8066C130, global
+.global lbl_8066C130
+lbl_8066C130:
 	.4byte 0x3F000000
-.sym lbl_8066C134, global
+.global lbl_8066C134
+lbl_8066C134:
 	.4byte 0x40400000
-.sym lbl_8066C138, global
+.global lbl_8066C138
+lbl_8066C138:
 	.4byte 0x40000000
-.sym lbl_8066C13C, global
+.global lbl_8066C13C
+lbl_8066C13C:
 	.4byte 0xBF800000
-.sym lbl_8066C140, global
+.global lbl_8066C140
+lbl_8066C140:
 	.4byte 0x3C8EFA35
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_calcmaterial.o"
 
-# 0x803FC92C - 0x803FCD3C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::CalcMaterialDirectly(nw4r::g3d::ResMdl, nw4r::g3d::AnmObjTexPat*, nw4r::g3d::AnmObjTexSrt*, nw4r::g3d::AnmObjMatClr*)

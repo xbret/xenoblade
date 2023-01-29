@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSExec.o"
 
-# 0x80355510 - 0x80356AF0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn PackArgs, global
@@ -1571,7 +1570,8 @@
 # 0x80551F30 - 0x80551FA0
 .data
 .balign 8
-.sym lbl_80551F30, global
+.global lbl_80551F30
+lbl_80551F30:
 	.4byte 0x0A4F5345
 	.4byte 0x78656328
 	.4byte 0x293A2046
@@ -1581,7 +1581,8 @@
 	.4byte 0x63202564
 	.4byte 0x20696E20
 	.4byte 0x25640A00
-.sym lbl_80551F54, global
+.global lbl_80551F54
+lbl_80551F54:
 	.4byte 0x0A4F5345
 	.4byte 0x78656328
 	.4byte 0x293A2054
@@ -1597,7 +1598,8 @@
 	.4byte 0x68652064
 	.4byte 0x6973630A
 	.4byte 0x00000000
-.sym lbl_80551F90, global
+.global lbl_80551F90
+lbl_80551F90:
 	.4byte 0x32303034
 	.4byte 0x2F30322F
 	.4byte 0x30310000
@@ -1606,31 +1608,38 @@
 # 0x805D4400 - 0x805D4420
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D4400, global
+.global lbl_805D4400
+lbl_805D4400:
 	.skip 0x20
 
 # 0x80665B70 - 0x80665B80
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B70, global
+.global lbl_80665B70
+lbl_80665B70:
 	.4byte 0x25303136
 	.4byte 0x6C6C7800
-.sym lbl_80665B78, global
+.global lbl_80665B78
+lbl_80665B78:
 	.4byte 0x25640000
 	.4byte 0x00000000
 
 # 0x80667A68 - 0x80667A80
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667A68, global
+.global lbl_80667A68
+lbl_80667A68:
 	.skip 0x4
-.sym lbl_80667A6C, global
+.global lbl_80667A6C
+lbl_80667A6C:
 	.skip 0x4
-.sym lbl_80667A70, global
+.global lbl_80667A70
+lbl_80667A70:
 	.skip 0x4
 
-.obj __OSInReboot, global
+.global __OSInReboot
+__OSInReboot:
 	.skip 0x4
-.endobj __OSInReboot
-.sym lbl_80667A78, global
+.global lbl_80667A78
+lbl_80667A78:
 	.skip 0x8

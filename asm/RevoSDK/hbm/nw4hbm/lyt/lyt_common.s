@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/lyt/lyt_common.o"
 
-# 0x8032C590 - 0x8032D420
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4hbm::lyt::detail::EqualsPaneName(const char*, const char*)
@@ -1054,18 +1053,23 @@
 # 0x80518A48 - 0x80518A58
 .rodata
 .balign 8
-.sym lbl_80518A48, global
+.global lbl_80518A48
+lbl_80518A48:
 	.4byte 0x00000000
-.sym lbl_80518A4C, global
+.global lbl_80518A4C
+lbl_80518A4C:
 	.4byte 0x3F800000
-.sym lbl_80518A50, global
+.global lbl_80518A50
+lbl_80518A50:
 	.4byte 0x43300000
 	.4byte 0x00000000
 
 # 0x805CD790 - 0x805CD7B8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CD790, global
+.global lbl_805CD790
+lbl_805CD790:
 	.skip 0x8
-.sym lbl_805CD798, global
+.global lbl_805CD798
+lbl_805CD798:
 	.skip 0x20

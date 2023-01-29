@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_ExternalSoundPlayer.o"
 
-# 0x80415760 - 0x80415A0C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::ExternalSoundPlayer::AppendSound(nw4r::snd::detail::BasicSound*)

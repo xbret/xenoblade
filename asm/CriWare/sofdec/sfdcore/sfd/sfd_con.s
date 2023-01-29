@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/sfd/sfd_con.o"
 
-# 0x803BFD38 - 0x803C005C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFD_SetConcatPlay, global

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MetroTRK/custconn/CircleBuffer.o"
 
-# 0x802CB7E0 - 0x802CBA1C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn CBGetBytesAvailableForRead, global

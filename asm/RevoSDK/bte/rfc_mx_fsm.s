@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/rfc_mx_fsm.o"
 
-# 0x802FED84 - 0x802FF9C8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn rfc_mx_sm_execute, global
@@ -908,7 +907,7 @@
 .data
 .balign 8
 
-.obj jumptable_805487B8, local
+jumptable_805487B8:
 	.rel rfc_mx_sm_execute, .L_802FEDA8
 	.rel rfc_mx_sm_execute, .L_802FEDAC
 	.rel rfc_mx_sm_execute, .L_802FEDB0
@@ -916,7 +915,6 @@
 	.rel rfc_mx_sm_execute, .L_802FEDB8
 	.rel rfc_mx_sm_execute, .L_802FEDBC
 	.rel rfc_mx_sm_execute, .L_802FEDC0
-.endobj jumptable_805487B8
 	.4byte 0x7266635F
 	.4byte 0x6D785F73
 	.4byte 0x6D5F7374
@@ -938,7 +936,8 @@
 	.4byte 0x636F6E66
 	.4byte 0x69675F72
 	.4byte 0x65710000
-.sym lbl_80548828, global
+.global lbl_80548828
+lbl_80548828:
 	.4byte 0x5246434F
 	.4byte 0x4D4D204D
 	.4byte 0x58206967
@@ -950,7 +949,7 @@
 	.4byte 0x6174653A
 	.4byte 0x25640000
 
-.obj jumptable_80548850, local
+jumptable_80548850:
 	.rel rfc_mx_sm_state_idle, .L_802FEF90
 	.rel rfc_mx_sm_state_idle, .L_802FEF64
 	.rel rfc_mx_sm_state_idle, .L_802FEF64
@@ -964,7 +963,6 @@
 	.rel rfc_mx_sm_state_idle, .L_802FEEB0
 	.rel rfc_mx_sm_state_idle, .L_802FEE84
 	.rel rfc_mx_sm_state_idle, .L_802FEE84
-.endobj jumptable_80548850
 	.4byte 0x7266635F
 	.4byte 0x6D785F73
 	.4byte 0x6D5F7374
@@ -985,7 +983,7 @@
 	.4byte 0x6576743A
 	.4byte 0x25640000
 
-.obj jumptable_805488D0, local
+jumptable_805488D0:
 	.rel rfc_mx_sm_state_configure, .L_802FF214
 	.rel rfc_mx_sm_state_configure, .L_802FF274
 	.rel rfc_mx_sm_state_configure, .L_802FF274
@@ -995,7 +993,6 @@
 	.rel rfc_mx_sm_state_configure, .L_802FF240
 	.rel rfc_mx_sm_state_configure, .L_802FF274
 	.rel rfc_mx_sm_state_configure, .L_802FF260
-.endobj jumptable_805488D0
 	.4byte 0x7266635F
 	.4byte 0x6D785F73
 	.4byte 0x6D5F7361
@@ -1006,7 +1003,7 @@
 	.4byte 0x743A2564
 	.4byte 0x00000000
 
-.obj jumptable_80548918, local
+jumptable_80548918:
 	.rel rfc_mx_sm_sabme_wait_ua, .L_802FF3E8
 	.rel rfc_mx_sm_sabme_wait_ua, .L_802FF398
 	.rel rfc_mx_sm_sabme_wait_ua, .L_802FF3C0
@@ -1022,8 +1019,8 @@
 	.rel rfc_mx_sm_sabme_wait_ua, .L_802FF364
 	.rel rfc_mx_sm_sabme_wait_ua, .L_802FF3E8
 	.rel rfc_mx_sm_sabme_wait_ua, .L_802FF384
-.endobj jumptable_80548918
-.sym lbl_80548954, global
+.global lbl_80548954
+lbl_80548954:
 	.4byte 0x7266635F
 	.4byte 0x6D785F73
 	.4byte 0x6D5F7374
@@ -1033,7 +1030,8 @@
 	.4byte 0x6D65202D
 	.4byte 0x20657674
 	.4byte 0x3A256400
-.sym lbl_80548978, global
+.global lbl_80548978
+lbl_80548978:
 	.4byte 0x7266635F
 	.4byte 0x6D785F73
 	.4byte 0x6D5F7374
@@ -1044,7 +1042,7 @@
 	.4byte 0x6576743A
 	.4byte 0x25640000
 
-.obj jumptable_8054899C, local
+jumptable_8054899C:
 	.rel rfc_mx_sm_state_connected, .L_802FF5F8
 	.rel rfc_mx_sm_state_connected, .L_802FF624
 	.rel rfc_mx_sm_state_connected, .L_802FF5C0
@@ -1057,8 +1055,8 @@
 	.rel rfc_mx_sm_state_connected, .L_802FF624
 	.rel rfc_mx_sm_state_connected, .L_802FF624
 	.rel rfc_mx_sm_state_connected, .L_802FF5E4
-.endobj jumptable_8054899C
-.sym lbl_805489CC, global
+.global lbl_805489CC
+lbl_805489CC:
 	.4byte 0x7266635F
 	.4byte 0x6D785F73
 	.4byte 0x6D5F7374
@@ -1070,7 +1068,7 @@
 	.4byte 0x76743A25
 	.4byte 0x64000000
 
-.obj jumptable_805489F4, local
+jumptable_805489F4:
 	.rel rfc_mx_sm_state_disc_wait_ua, .L_802FF798
 	.rel rfc_mx_sm_state_disc_wait_ua, .L_802FF6DC
 	.rel rfc_mx_sm_state_disc_wait_ua, .L_802FF6DC
@@ -1086,8 +1084,8 @@
 	.rel rfc_mx_sm_state_disc_wait_ua, .L_802FF798
 	.rel rfc_mx_sm_state_disc_wait_ua, .L_802FF798
 	.rel rfc_mx_sm_state_disc_wait_ua, .L_802FF780
-.endobj jumptable_805489F4
-.sym lbl_80548A30, global
+.global lbl_80548A30
+lbl_80548A30:
 	.4byte 0x7266635F
 	.4byte 0x6D785F63
 	.4byte 0x6F6E665F
@@ -1097,7 +1095,8 @@
 	.4byte 0x38782072
 	.4byte 0x65733A25
 	.4byte 0x64200000
-.sym lbl_80548A54, global
+.global lbl_80548A54
+lbl_80548A54:
 	.4byte 0x7266635F
 	.4byte 0x6D785F63
 	.4byte 0x6F6E665F

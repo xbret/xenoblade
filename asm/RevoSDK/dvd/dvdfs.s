@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/dvd/dvdfs.o"
 
-# 0x80309DA0 - 0x8030A8A0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __DVDFSInit, global
@@ -848,7 +847,8 @@
 # 0x805497B8 - 0x80549920
 .data
 .balign 8
-.sym lbl_805497B8, global
+.global lbl_805497B8
+lbl_805497B8:
 	.4byte 0x44564443
 	.4byte 0x6F6E7665
 	.4byte 0x7274456E
@@ -899,7 +899,8 @@
 	.4byte 0x6D6F7665
 	.4byte 0x6420736F
 	.4byte 0x6F6E0A00
-.sym lbl_80549880, global
+.global lbl_80549880
+lbl_80549880:
 	.4byte 0x5761726E
 	.4byte 0x696E673A
 	.4byte 0x20445644
@@ -914,7 +915,8 @@
 	.4byte 0x756E6465
 	.4byte 0x72202573
 	.4byte 0x2E0A0000
-.sym lbl_805498B8, global
+.global lbl_805498B8
+lbl_805498B8:
 	.4byte 0x44564452
 	.4byte 0x65616441
 	.4byte 0x73796E63
@@ -928,7 +930,8 @@
 	.4byte 0x20746865
 	.4byte 0x2066696C
 	.4byte 0x65202000
-.sym lbl_805498EC, global
+.global lbl_805498EC
+lbl_805498EC:
 	.4byte 0x44564452
 	.4byte 0x65616428
 	.4byte 0x293A2073
@@ -947,37 +950,35 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj __DVDLongFileNameFlag, global
+.global __DVDLongFileNameFlag
+__DVDLongFileNameFlag:
 	.4byte 0x00000001
-.endobj __DVDLongFileNameFlag
 	.4byte 0x00000000
-.sym lbl_80665978, global
+.global lbl_80665978
+lbl_80665978:
 	.4byte 0x64766466
 	.4byte 0x732E6300
 
 # 0x806677A8 - 0x806677E0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806677A8, global
+.global lbl_806677A8
+lbl_806677A8:
 	.skip 0x8
 
-.obj __DVDThreadQueue, global
+.global __DVDThreadQueue
+__DVDThreadQueue:
 	.skip 0x8
-.endobj __DVDThreadQueue
 
-.obj MaxEntryNum, local
+MaxEntryNum:
 	.skip 0x4
-.endobj MaxEntryNum
 
-.obj FstStringStart, local
+FstStringStart:
 	.skip 0x4
-.endobj FstStringStart
 
-.obj FstStart, local
+FstStart:
 	.skip 0x4
-.endobj FstStart
 
-.obj BootInfo, local
+BootInfo:
 	.skip 0x4
-.endobj BootInfo
 	.skip 0x18

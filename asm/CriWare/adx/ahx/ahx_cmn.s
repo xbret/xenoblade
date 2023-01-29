@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/ahx/ahx_cmn.o"
 
-# 0x8038D9C8 - 0x8038D9E8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn AHXDCD_SetupAtbl, global
@@ -22,5 +21,6 @@
 # 0x805E9B08 - 0x805E9B10
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E9B08, global
+.global lbl_805E9B08
+lbl_805E9B08:
 	.skip 0x8

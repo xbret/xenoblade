@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfx/sfx_inf.o"
 
-# 0x803D5820 - 0x803D5828
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFXINF_GetStmInf, global

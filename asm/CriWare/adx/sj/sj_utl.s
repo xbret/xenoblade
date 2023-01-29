@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/sj/sj_utl.o"
 
-# 0x80396664 - 0x803968CC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SJ_SplitChunk, global
@@ -178,7 +177,8 @@
 .data
 .balign 8
 
-.obj sj_val_to_hexstr_tbl, global
+.global sj_val_to_hexstr_tbl
+sj_val_to_hexstr_tbl:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000

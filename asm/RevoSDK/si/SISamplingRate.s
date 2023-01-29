@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/si/SISamplingRate.o"
 
-# 0x803626D0 - 0x803627C0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn SISetSamplingRate, global
@@ -80,7 +79,7 @@
 .data
 .balign 8
 
-.obj XYNTSC, local
+XYNTSC:
 	.4byte 0x00F60200
 	.4byte 0x000E1300
 	.4byte 0x001E0900
@@ -93,7 +92,6 @@
 	.4byte 0x00830200
 	.4byte 0x00830200
 	.4byte 0x00830200
-.endobj XYNTSC
 	.4byte 0x01280200
 	.4byte 0x000F1500
 	.4byte 0x001D0B00
@@ -125,7 +123,6 @@
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj SamplingRate, local
+SamplingRate:
 	.skip 0x4
-.endobj SamplingRate
 	.skip 0x4

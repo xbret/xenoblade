@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/ipc/memory.o"
 
-# 0x803443B0 - 0x803448E0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn iosCreateHeap, global
@@ -383,5 +382,6 @@
 # 0x805CE480 - 0x805CE500
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CE480, global
+.global lbl_805CE480
+lbl_805CE480:
 	.skip 0x80

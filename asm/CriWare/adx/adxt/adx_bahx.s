@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_bahx.o"
 
-# 0x80385D20 - 0x80385DE4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADXB_SetAhxInSj, global
@@ -71,14 +70,18 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj ahxsetsjifunc, global
+.global ahxsetsjifunc
+ahxsetsjifunc:
 	.skip 0x4
 
-.obj ahxsetdecsmplfunc, global
+.global ahxsetdecsmplfunc
+ahxsetdecsmplfunc:
 	.skip 0x4
 
-.obj ahxtermsupplyfunc, global
+.global ahxtermsupplyfunc
+ahxtermsupplyfunc:
 	.skip 0x4
 
-.obj ahxexecfunc, global
+.global ahxexecfunc
+ahxexecfunc:
 	.skip 0x4

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSAlloc.o"
 
-# 0x80353680 - 0x803539A0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn DLInsert, global
@@ -252,19 +251,23 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj lbl_80665B58, global
+.global lbl_80665B58
+lbl_80665B58:
 	.4byte 0xFFFFFFFF
-.endobj lbl_80665B58
 	.4byte 0x00000000
 
 # 0x80667A50 - 0x80667A60
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667A50, global
+.global lbl_80667A50
+lbl_80667A50:
 	.skip 0x4
-.sym lbl_80667A54, global
+.global lbl_80667A54
+lbl_80667A54:
 	.skip 0x4
-.sym lbl_80667A58, global
+.global lbl_80667A58
+lbl_80667A58:
 	.skip 0x4
-.sym lbl_80667A5C, global
+.global lbl_80667A5C
+lbl_80667A5C:
 	.skip 0x4

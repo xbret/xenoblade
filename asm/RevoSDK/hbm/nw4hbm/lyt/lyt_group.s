@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/lyt/lyt_group.o"
 
-# 0x8032D4E0 - 0x8032D830
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4hbm::lyt::Group::Group(const nw4hbm::lyt::res::Group*, nw4hbm::lyt::Pane*)
@@ -61,7 +60,7 @@
 /* 8032D5A4 002F6B64  38 77 00 0C */	addi r3, r23, 0xc
 /* 8032D5A8 002F6B68  38 81 00 08 */	addi r4, r1, 0x8
 /* 8032D5AC 002F6B6C  90 01 00 08 */	stw r0, 0x8(r1)
-/* 8032D5B0 002F6B70  48 00 B0 71 */	bl fn_80338620
+/* 8032D5B0 002F6B70  48 00 B0 71 */	bl func_80338620
 .L_8032D5B4:
 /* 8032D5B4 002F6B74  3B 9C 00 10 */	addi r28, r28, 0x10
 /* 8032D5B8 002F6B78  3B 5A 00 01 */	addi r26, r26, 0x1
@@ -105,7 +104,7 @@
 /* 8032D638 002F6BF8  38 7A 00 0C */	addi r3, r26, 0xc
 /* 8032D63C 002F6BFC  38 81 00 08 */	addi r4, r1, 0x8
 /* 8032D640 002F6C00  93 81 00 08 */	stw r28, 0x8(r1)
-/* 8032D644 002F6C04  48 00 AF 8D */	bl fn_803385D0
+/* 8032D644 002F6C04  48 00 AF 8D */	bl func_803385D0
 /* 8032D648 002F6C08  80 7D D7 B8 */	lwz r3, lbl_805CD7B8@l(r29)
 /* 8032D64C 002F6C0C  7F 84 E3 78 */	mr r4, r28
 /* 8032D650 002F6C10  48 01 C4 51 */	bl MEMFreeToAllocator
@@ -154,7 +153,7 @@
 /* 8032D6DC 002F6C9C  7F 43 D3 78 */	mr r3, r26
 /* 8032D6E0 002F6CA0  38 81 00 08 */	addi r4, r1, 0x8
 /* 8032D6E4 002F6CA4  93 81 00 08 */	stw r28, 0x8(r1)
-/* 8032D6E8 002F6CA8  48 00 AE E9 */	bl fn_803385D0
+/* 8032D6E8 002F6CA8  48 00 AE E9 */	bl func_803385D0
 /* 8032D6EC 002F6CAC  88 1C 00 24 */	lbz r0, 0x24(r28)
 /* 8032D6F0 002F6CB0  2C 00 00 00 */	cmpwi r0, 0x0
 /* 8032D6F4 002F6CB4  40 82 00 2C */	bne .L_8032D720
@@ -203,7 +202,7 @@
 /* 8032D784 002F6D44  38 81 00 08 */	addi r4, r1, 0x8
 /* 8032D788 002F6D48  38 A5 00 04 */	addi r5, r5, 0x4
 /* 8032D78C 002F6D4C  90 01 00 08 */	stw r0, 0x8(r1)
-/* 8032D790 002F6D50  48 00 AE 91 */	bl fn_80338620
+/* 8032D790 002F6D50  48 00 AE 91 */	bl func_80338620
 /* 8032D794 002F6D54  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8032D798 002F6D58  7C 08 03 A6 */	mtlr r0
 /* 8032D79C 002F6D5C  38 21 00 10 */	addi r1, r1, 0x10
@@ -256,16 +255,19 @@
 # 0x8054D7D0 - 0x8054D7F8
 .data
 .balign 8
-.sym lbl_8054D7D0, global
+.global lbl_8054D7D0
+lbl_8054D7D0:
 	.4byte lbl_8054D7F0
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt5GroupFv
-.sym lbl_8054D7DC, global
+.global lbl_8054D7DC
+lbl_8054D7DC:
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
 	.4byte 0x3A47726F
 	.4byte 0x75700000
-.sym lbl_8054D7F0, global
+.global lbl_8054D7F0
+lbl_8054D7F0:
 	.4byte lbl_8054D7DC
 	.4byte 0x00000000

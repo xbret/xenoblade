@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/db/db_console.o"
 
-# 0x803D7244 - 0x803D733C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::db::Console_Printf(nw4r::db::detail::ConsoleHead*, const char*, ...)

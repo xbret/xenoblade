@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSPlayRecord.o"
 
-# 0x8035D730 - 0x8035DE50
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn PlayRecordAlarmCallback, global
@@ -524,7 +523,8 @@
 # 0x8055ECC0 - 0x8055ED08
 .data
 .balign 8
-.sym lbl_8055ECC0, global
+.global lbl_8055ECC0
+lbl_8055ECC0:
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303030
@@ -537,7 +537,7 @@
 	.4byte 0x65632E64
 	.4byte 0x61740000
 
-.obj jumptable_8055ECEC, local
+jumptable_8055ECEC:
 	.rel PlayRecordCallback, .L_8035D7B0
 	.rel PlayRecordCallback, .L_8035D7BC
 	.rel PlayRecordCallback, .L_8035D838
@@ -545,51 +545,46 @@
 	.rel PlayRecordCallback, .L_8035D8A4
 	.rel PlayRecordCallback, .L_8035D8B0
 	.rel PlayRecordCallback, .L_8035D938
-.endobj jumptable_8055ECEC
 
 # 0x805D5220 - 0x805D5420
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D5220, global
+.global lbl_805D5220
+lbl_805D5220:
 	.skip 0x200
 
 # 0x80665BA0 - 0x80665BA8
 .section .sdata, "wa"
 .balign 8
 
-.obj PlayRecordState, local
+PlayRecordState:
 	.4byte 0x00000009
-.endobj PlayRecordState
 	.4byte 0x00000000
 
 # 0x80667B08 - 0x80667B28
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj PlayRecordGet, local
+PlayRecordGet:
 	.skip 0x4
-.endobj PlayRecordGet
 
-.obj PlayRecordError, local
+PlayRecordError:
 	.skip 0x4
-.endobj PlayRecordError
 
-.obj PlayRecordTerminate, local
+PlayRecordTerminate:
 	.skip 0x4
-.endobj PlayRecordTerminate
 
-.obj PlayRecordTerminated, local
+PlayRecordTerminated:
 	.skip 0x4
-.endobj PlayRecordTerminated
 
-.obj PlayRecordRetry, local
+PlayRecordRetry:
 	.skip 0x4
-.endobj PlayRecordRetry
 
-.obj PlayRecordLastError, local
+PlayRecordLastError:
 	.skip 0x4
-.endobj PlayRecordLastError
-.sym lbl_80667B20, global
+.global lbl_80667B20
+lbl_80667B20:
 	.skip 0x4
-.sym lbl_80667B24, global
+.global lbl_80667B24
+lbl_80667B24:
 	.skip 0x4

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common/assert.o"
 
-# 0x802BDC7C - 0x802BDCC8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __msl_assertion_failed, global
@@ -30,7 +29,8 @@
 # 0x8050CFF8 - 0x8050D020
 .rodata
 .balign 8
-.sym lbl_8050CFF8, global
+.global lbl_8050CFF8
+lbl_8050CFF8:
 	.4byte 0x41737365
 	.4byte 0x7274696F
 	.4byte 0x6E202825

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSContext.o"
 
-# 0x80354610 - 0x80354EF0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __OSLoadFPUContext, local
@@ -640,7 +639,8 @@
 # 0x80551A70 - 0x80551C50
 .data
 .balign 8
-.sym lbl_80551A70, global
+.global lbl_80551A70
+lbl_80551A70:
 	.4byte 0x2D2D2D2D
 	.4byte 0x2D2D2D2D
 	.4byte 0x2D2D2D2D

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_SeqFile.o"
 
-# 0x804195D4 - 0x80419708
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::SeqFileReader::SeqFileReader(const void*)

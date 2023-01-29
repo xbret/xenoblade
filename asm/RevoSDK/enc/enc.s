@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/enc/enc.o"
 
-# 0x80312EF0 - 0x80313750
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn ENCConvertStringSjisToUnicode, global
@@ -637,7 +636,7 @@
 .rodata
 .balign 8
 
-.obj enc_tbl_jp_mbtowc, local
+enc_tbl_jp_mbtowc:
 	.4byte 0x30003001
 	.4byte 0x3002FF0C
 	.4byte 0xFF0E30FB
@@ -5338,9 +5337,8 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.endobj enc_tbl_jp_mbtowc
 
-.obj enc_tbl_jp_wctomb, local
+enc_tbl_jp_wctomb:
 	.4byte 0x2281CD25
 	.4byte 0x849F3081
 	.4byte 0x404E88EA
@@ -10906,11 +10904,10 @@
 	.4byte 0x92FBDC97
 	.4byte 0x8BBF998F
 	.byte 0x78
-.endobj enc_tbl_jp_wctomb
 	.4byte 0x00000000
 	.byte 0x00, 0x00, 0x00
 
-.obj enc_offset_jp, local
+enc_offset_jp:
 	.4byte 0x001B0039
 	.4byte 0x00560075
 	.4byte 0x008F00AB
@@ -11039,11 +11036,11 @@
 	.4byte 0x1C6C1C92
 	.4byte 0x1CAB1CC6
 	.4byte 0x1CE31CFB
-.endobj enc_offset_jp
 
 # 0x806659C0 - 0x806659C8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806659C0, global
+.global lbl_806659C0
+lbl_806659C0:
 	.4byte 0x00000001
 	.4byte 0x00000000

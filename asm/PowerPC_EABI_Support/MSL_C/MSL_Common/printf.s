@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common/printf.o"
 
-# 0x802BEC4C - 0x802C110C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn parse_format, local
@@ -2723,7 +2722,8 @@
 # 0x8050D020 - 0x8050DB88
 .rodata
 .balign 8
-.sym lbl_8050D020, global
+.global lbl_8050D020
+lbl_8050D020:
 	.4byte 0x00040004
 	.4byte 0x00040004
 	.4byte 0x00040004
@@ -2853,7 +2853,8 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-.obj __lower_mapC, global
+.global __lower_mapC
+__lower_mapC:
 	.4byte 0x00010203
 	.4byte 0x04050607
 	.4byte 0x08090A0B
@@ -2919,7 +2920,8 @@
 	.4byte 0xF8F9FAFB
 	.4byte 0xFCFDFEFF
 
-.obj __upper_mapC, global
+.global __upper_mapC
+__upper_mapC:
 	.4byte 0x00010203
 	.4byte 0x04050607
 	.4byte 0x08090A0B
@@ -2984,20 +2986,24 @@
 	.4byte 0xF4F5F6F7
 	.4byte 0xF8F9FAFB
 	.4byte 0xFCFDFEFF
-.sym lbl_8050D420, global
+.global lbl_8050D420
+lbl_8050D420:
 	.4byte 0x25612025
 	.4byte 0x62202565
 	.4byte 0x20255420
 	.4byte 0x25590000
-.sym lbl_8050D430, global
+.global lbl_8050D430
+lbl_8050D430:
 	.4byte 0x25493A25
 	.4byte 0x4D3A2553
 	.4byte 0x20257000
-.sym lbl_8050D43C, global
+.global lbl_8050D43C
+lbl_8050D43C:
 	.4byte 0x256D2F25
 	.4byte 0x642F2579
 	.4byte 0x00000000
-.sym lbl_8050D448, global
+.global lbl_8050D448
+lbl_8050D448:
 	.4byte 0x53756E7C
 	.4byte 0x53756E64
 	.4byte 0x61797C4D
@@ -3020,7 +3026,8 @@
 	.4byte 0x53617475
 	.4byte 0x72646179
 	.4byte 0x00000000
-.sym lbl_8050D4A0, global
+.global lbl_8050D4A0
+lbl_8050D4A0:
 	.4byte 0x4A616E7C
 	.4byte 0x4A616E75
 	.4byte 0x6172797C
@@ -3069,7 +3076,8 @@
 	.byte 0x00
 .endobj "@stringBase0"
 	.byte 0x00, 0x00, 0x00
-.sym lbl_8050D550, global
+.global lbl_8050D550
+lbl_8050D550:
 	.4byte 0x00000000
 	.4byte 0x7FFFFFFF
 	.4byte 0x00000000
@@ -3080,13 +3088,15 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8050D578, global
+.global lbl_8050D578
+lbl_8050D578:
 	.4byte 0x494E4649
 	.4byte 0x4E495459
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-.obj __wctype_mapC, global
+.global __wctype_mapC
+__wctype_mapC:
 	.4byte 0x00040004
 	.4byte 0x00040004
 	.4byte 0x00040004
@@ -3216,7 +3226,8 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-.obj __wlower_mapC, global
+.global __wlower_mapC
+__wlower_mapC:
 	.4byte 0x00000001
 	.4byte 0x00020003
 	.4byte 0x00040005
@@ -3346,7 +3357,8 @@
 	.4byte 0x00FC00FD
 	.4byte 0x00FE00FF
 
-.obj __wupper_mapC, global
+.global __wupper_mapC
+__wupper_mapC:
 	.4byte 0x00000001
 	.4byte 0x00020003
 	.4byte 0x00040005
@@ -3479,7 +3491,8 @@
 # 0x8053F398 - 0x8053F7C0
 .data
 .balign 8
-.sym lbl_8053F398, global
+.global lbl_8053F398
+lbl_8053F398:
 	.4byte lbl_8066B858
 	.4byte lbl_8066B85C
 	.4byte lbl_8066B85C
@@ -3495,7 +3508,8 @@
 	.4byte 0x7F7F7F7F
 	.4byte 0x7F7F7F00
 
-.obj _loc_ctyp_C, global
+.global _loc_ctyp_C
+_loc_ctyp_C:
 	.4byte 0x43000000
 	.4byte 0x00000000
 	.4byte lbl_8050D020
@@ -3506,7 +3520,8 @@
 	.4byte __wlower_mapC
 	.4byte __mbtowc_noconv
 	.4byte __wctomb_noconv
-.sym lbl_8053F3F8, global
+.global lbl_8053F3F8
+lbl_8053F3F8:
 	.4byte 0x00010002
 	.4byte 0x00030004
 	.4byte 0x00050006
@@ -3556,7 +3571,8 @@
 	.4byte 0x001E001F
 	.4byte 0x00200000
 
-.obj _loc_coll_C, global
+.global _loc_coll_C
+_loc_coll_C:
 	.4byte 0x43000000
 	.4byte 0x00000000
 	.4byte 0x00000020
@@ -3565,7 +3581,8 @@
 	.4byte lbl_8053F3F8
 	.4byte 0x00000000
 
-.obj _loc_mon_C, global
+.global _loc_mon_C
+_loc_mon_C:
 	.4byte 0x43000000
 	.4byte 0x00000000
 	.4byte lbl_8066B85C
@@ -3580,7 +3597,8 @@
 	.4byte 0x7F7F7F7F
 	.4byte 0x7F7F7F00
 
-.obj _loc_num_C, global
+.global _loc_num_C
+_loc_num_C:
 	.4byte 0x43000000
 	.4byte 0x00000000
 	.4byte lbl_8066B858
@@ -3588,7 +3606,8 @@
 	.4byte lbl_8066B85C
 	.4byte 0x00000000
 
-.obj _loc_tim_C, global
+.global _loc_tim_C
+_loc_tim_C:
 	.4byte 0x43000000
 	.4byte 0x00000000
 	.4byte lbl_8066B860
@@ -3600,7 +3619,8 @@
 	.4byte lbl_8050D4A0
 	.4byte lbl_8066B85C
 
-.obj _current_locale, global
+.global _current_locale
+_current_locale:
 	.4byte 0x00000000
 	.4byte 0x43000000
 	.4byte 0x00000000
@@ -3620,7 +3640,7 @@
 	.4byte _loc_num_C
 	.4byte _loc_tim_C
 
-.obj jumptable_8053F590, local
+jumptable_8053F590:
 	.rel parse_format, .L_802BF070
 	.rel parse_format, .L_802BF1C0
 	.rel parse_format, .L_802BF1C0
@@ -3677,7 +3697,6 @@
 	.rel parse_format, .L_802BF1C0
 	.rel parse_format, .L_802BF1C0
 	.rel parse_format, .L_802BEFE0
-.endobj jumptable_8053F590
 
 .obj "@2934", local
 	.rel __pformatter, .L_802C0A1C
@@ -3779,16 +3798,21 @@
 # 0x8066B858 - 0x8066B878
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066B858, global
+.global lbl_8066B858
+lbl_8066B858:
 	.4byte 0x2E000000
-.sym lbl_8066B85C, global
+.global lbl_8066B85C
+lbl_8066B85C:
 	.4byte 0x00000000
-.sym lbl_8066B860, global
+.global lbl_8066B860
+lbl_8066B860:
 	.4byte 0x414D7C50
 	.4byte 0x4D000000
-.sym lbl_8066B868, global
+.global lbl_8066B868
+lbl_8066B868:
 	.4byte 0x25540000
 	.4byte 0x00000000
-.sym lbl_8066B870, global
+.global lbl_8066B870
+lbl_8066B870:
 	.4byte 0x00000000
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/nand/NANDLogging.o"
 
-# 0x80351290 - 0x80351880
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn reserveFileDescriptor, local
@@ -431,7 +430,8 @@
 	.byte 0x6F, 0x67, 0x00
 .endobj "@1208"
 	.byte 0x00
-.sym lbl_805512D4, global
+.global lbl_805512D4
+lbl_805512D4:
 	.4byte 0x25642025
 	.4byte 0x3034642F
 	.4byte 0x25303264
@@ -448,15 +448,15 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj s_message, local
+s_message:
 	.skip 0x100
-.endobj s_message
 	.skip 0x200
 
 # 0x80665B20 - 0x80665B28
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B20, global
+.global lbl_80665B20
+lbl_80665B20:
 	.4byte 0xFFFFFF01
 	.4byte 0x00000000
 
@@ -464,10 +464,8 @@
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj s_callback, local
+s_callback:
 	.skip 0x4
-.endobj s_callback
 
-.obj s_stage, local
+s_stage:
 	.skip 0x4
-.endobj s_stage

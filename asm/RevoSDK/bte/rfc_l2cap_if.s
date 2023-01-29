@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/rfc_l2cap_if.o"
 
-# 0x802FE450 - 0x802FED84
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn rfcomm_l2cap_if_init, global
@@ -681,7 +680,8 @@
 # 0x80548678 - 0x805487B8
 .data
 .balign 8
-.sym lbl_80548678, global
+.global lbl_80548678
+lbl_80548678:
 	.4byte 0x7266635F
 	.4byte 0x66696E64
 	.4byte 0x5F6C6369
@@ -766,11 +766,15 @@
 # 0x805C32A8 - 0x805C36C0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805C32A8, global
+.global lbl_805C32A8
+lbl_805C32A8:
 	.skip 0x68
-.sym lbl_805C3310, global
+.global lbl_805C3310
+lbl_805C3310:
 	.skip 0x88
-.sym lbl_805C3398, global
+.global lbl_805C3398
+lbl_805C3398:
 	.skip 0x4
-.sym lbl_805C339C, global
+.global lbl_805C339C
+lbl_805C339C:
 	.skip 0x324

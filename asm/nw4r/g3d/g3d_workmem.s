@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_workmem.o"
 
-# 0x803EE69C - 0x803EE6DC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::detail::workmem::GetScaleTemporary()
@@ -44,5 +43,6 @@
 # 0x80622D00 - 0x8063AD00
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80622D00, global
+.global lbl_80622D00
+lbl_80622D00:
 	.skip 0x18000

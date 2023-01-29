@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/math/math_triangular.o"
 
-# 0x8040AD2C - 0x8040B000
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::math::SinFIdx(float)
@@ -224,7 +223,8 @@
 # 0x80521110 - 0x80522120
 .rodata
 .balign 8
-.sym lbl_80521110, global
+.global lbl_80521110
+lbl_80521110:
 	.4byte 0x00000000
 	.4byte 0x3F800000
 	.4byte 0x3CC90A35
@@ -1257,7 +1257,8 @@
 # 0x8056DEC0 - 0x8056DFC8
 .data
 .balign 8
-.sym lbl_8056DEC0, global
+.global lbl_8056DEC0
+lbl_8056DEC0:
 	.4byte 0x00000000
 	.4byte 0x3FA2EBF1
 	.4byte 0x3FA2EBF1
@@ -1328,18 +1329,25 @@
 # 0x8066C620 - 0x8066C640
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C620, global
+.global lbl_8066C620
+lbl_8066C620:
 	.4byte 0x47800000
-.sym lbl_8066C624, global
+.global lbl_8066C624
+lbl_8066C624:
 	.4byte 0x00000000
-.sym lbl_8066C628, global
+.global lbl_8066C628
+lbl_8066C628:
 	.4byte 0x42000000
-.sym lbl_8066C62C, global
+.global lbl_8066C62C
+lbl_8066C62C:
 	.4byte 0x42800000
-.sym lbl_8066C630, global
+.global lbl_8066C630
+lbl_8066C630:
 	.4byte 0xC2800000
-.sym lbl_8066C634, global
+.global lbl_8066C634
+lbl_8066C634:
 	.4byte 0x43000000
-.sym lbl_8066C638, global
+.global lbl_8066C638
+lbl_8066C638:
 	.4byte 0xC3000000
 	.4byte 0x00000000

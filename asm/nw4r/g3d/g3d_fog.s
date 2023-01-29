@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_fog.o"
 
-# 0x803FD128 - 0x803FD324
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::Fog::Fog(nw4r::g3d::FogData*)
@@ -167,6 +166,7 @@
 # 0x8066C4F8 - 0x8066C500
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C4F8, global
+.global lbl_8066C4F8
+lbl_8066C4F8:
 	.4byte 0x00000000
 	.4byte 0x00000000

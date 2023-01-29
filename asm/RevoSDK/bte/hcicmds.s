@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/hcicmds.o"
 
-# 0x802F0EBC - 0x802F35D8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn btsnd_hcic_inquiry, global
@@ -2809,7 +2808,8 @@
 # 0x8050E260 - 0x8050E270
 .rodata
 .balign 8
-.sym lbl_8050E260, global
+.global lbl_8050E260
+lbl_8050E260:
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFF7F0000

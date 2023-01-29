@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/k_rem_pio2.o"
 
-# 0x802C8E44 - 0x802CA4FC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __kernel_rem_pio2, global
@@ -1592,14 +1591,13 @@
 .rodata
 .balign 8
 
-.obj init_jk, local
+init_jk:
 	.4byte 0x00000002
 	.4byte 0x00000003
 	.4byte 0x00000004
 	.4byte 0x00000006
-.endobj init_jk
 
-.obj PIo2, local
+PIo2:
 	.4byte 0x3FF921FB
 	.4byte 0x40000000
 	.4byte 0x3E74442D
@@ -1616,7 +1614,6 @@
 	.4byte 0x80000000
 	.4byte 0x3569F31D
 	.4byte 0x00000000
-.endobj PIo2
 
 # 0x8066BC68 - 0x8066BCA8
 .section .sdata2, "a"

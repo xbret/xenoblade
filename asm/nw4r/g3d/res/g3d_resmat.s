@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_resmat.o"
 
-# 0x803DB780 - 0x803DD1C0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ResMat::GetParent()
@@ -768,7 +767,7 @@
 /* 803DC094 003A5654  4E 80 00 20 */	blr
 .endfn GXGetBlendMode__Q34nw4r3g3d9ResMatPixCFP12_GXBlendModeP14_GXBlendFactorP14_GXBlendFactorP10_GXLogicOp
 
-.fn fn_803DC098, global
+.fn func_803DC098, global
 /* 803DC098 003A5658  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803DC09C 003A565C  7C 08 02 A6 */	mflr r0
 /* 803DC0A0 003A5660  90 01 00 24 */	stw r0, 0x24(r1)
@@ -815,7 +814,7 @@
 /* 803DC13C 003A56FC  7C 08 03 A6 */	mtlr r0
 /* 803DC140 003A5700  38 21 00 20 */	addi r1, r1, 0x20
 /* 803DC144 003A5704  4E 80 00 20 */	blr
-.endfn fn_803DC098
+.endfn func_803DC098
 
 # nw4r::g3d::ResMatTevColor::GXGetTevColor(_GXTevRegID, _GXColor*) const
 .fn GXGetTevColor__Q34nw4r3g3d14ResMatTevColorCF11_GXTevRegIDP8_GXColor, global
@@ -1824,7 +1823,7 @@
 /* 803DCEB4 003A6474  4E 80 00 20 */	blr
 .endfn GetResMatFur__Q34nw4r3g3d6ResMatFv
 
-.fn fn_803DCEB8, global
+.fn func_803DCEB8, global
 /* 803DCEB8 003A6478  80 63 00 00 */	lwz r3, 0x0(r3)
 /* 803DCEBC 003A647C  80 03 00 38 */	lwz r0, 0x38(r3)
 /* 803DCEC0 003A6480  2C 00 00 00 */	cmpwi r0, 0x0
@@ -1834,7 +1833,7 @@
 .L_803DCED0:
 /* 803DCED0 003A6490  38 60 00 00 */	li r3, 0x0
 /* 803DCED4 003A6494  4E 80 00 20 */	blr
-.endfn fn_803DCEB8
+.endfn func_803DCEB8
 
 # nw4r::g3d::ResTexPlttInfo::Bind(nw4r::g3d::ResFile, nw4r::g3d::ResTexObj, nw4r::g3d::ResTlutObj)
 .fn Bind__Q34nw4r3g3d14ResTexPlttInfoFQ34nw4r3g3d7ResFileQ34nw4r3g3d9ResTexObjQ34nw4r3g3d10ResTlutObj, global
@@ -2050,26 +2049,35 @@
 # 0x8066C268 - 0x8066C2A0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C268, global
+.global lbl_8066C268
+lbl_8066C268:
 	.4byte 0x00000000
-.sym lbl_8066C26C, global
+.global lbl_8066C26C
+lbl_8066C26C:
 	.4byte 0x3F800000
-.sym lbl_8066C270, global
+.global lbl_8066C270
+lbl_8066C270:
 	.4byte 0x3FE33333
 	.4byte 0x40000000
-.sym lbl_8066C278, global
+.global lbl_8066C278
+lbl_8066C278:
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C280, global
+.global lbl_8066C280
+lbl_8066C280:
 	.4byte 0x40000000
-.sym lbl_8066C284, global
+.global lbl_8066C284
+lbl_8066C284:
 	.4byte 0x3F000000
-.sym lbl_8066C288, global
+.global lbl_8066C288
+lbl_8066C288:
 	.4byte 0x3A800000
 	.4byte 0x00000000
-.sym lbl_8066C290, global
+.global lbl_8066C290
+lbl_8066C290:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C298, global
+.global lbl_8066C298
+lbl_8066C298:
 	.4byte 0x44800000
 	.4byte 0x00000000

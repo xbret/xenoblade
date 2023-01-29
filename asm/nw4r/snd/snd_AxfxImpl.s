@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_AxfxImpl.o"
 
-# 0x804115B4 - 0x80411780
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::AxfxImpl::CreateHeap(void*, unsigned long)
@@ -152,7 +151,9 @@
 # 0x80667DA8 - 0x80667DB0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DA8, global
+.global lbl_80667DA8
+lbl_80667DA8:
 	.skip 0x4
-.sym lbl_80667DAC, global
+.global lbl_80667DAC
+lbl_80667DAC:
 	.skip 0x4

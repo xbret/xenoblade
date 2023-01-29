@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/wpad/WPAD.o"
 
-# 0x80368D70 - 0x80370700
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __wpadNoAlloc, global
@@ -113,7 +112,7 @@
 /* 80368E8C 0033244C  4E 80 00 20 */	blr
 .endfn WBCGetTGCWeightDummy
 
-.fn fn_80368E90, global
+.fn func_80368E90, global
 /* 80368E90 00332450  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80368E94 00332454  7C 08 02 A6 */	mflr r0
 /* 80368E98 00332458  90 01 00 14 */	stw r0, 0x14(r1)
@@ -245,7 +244,7 @@
 /* 8036904C 0033260C  7C 08 03 A6 */	mtlr r0
 /* 80369050 00332610  38 21 00 10 */	addi r1, r1, 0x10
 /* 80369054 00332614  4E 80 00 20 */	blr
-.endfn fn_80368E90
+.endfn func_80368E90
 /* 80369058 00332618  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8036905C 0033261C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
@@ -8482,7 +8481,8 @@
 # 0x80518DC8 - 0x80518E08
 .rodata
 .balign 8
-.sym lbl_80518DC8, global
+.global lbl_80518DC8
+lbl_80518DC8:
 	.4byte 0x02000071
 	.4byte 0x01006400
 	.4byte 0xFE020000
@@ -8495,7 +8495,8 @@
 	.4byte 0x07000071
 	.4byte 0x01007200
 	.4byte 0x20000000
-.sym lbl_80518DF8, global
+.global lbl_80518DF8
+lbl_80518DF8:
 	.4byte 0xFD05B304
 	.4byte 0x63033503
 	.4byte 0x1F030000
@@ -8504,7 +8505,8 @@
 # 0x80560608 - 0x80560A30
 .data
 .balign 8
-.sym lbl_80560608, global
+.global lbl_80560608
+lbl_80560608:
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -8523,26 +8525,30 @@
 	.4byte 0x30325F31
 	.4byte 0x34352920
 	.4byte 0x3E3E0000
-.sym lbl_80560650, global
+.global lbl_80560650
+lbl_80560650:
 	.4byte 0x57424352
 	.4byte 0x65616444
 	.4byte 0x756D6D79
 	.4byte 0x0A000000
-.sym lbl_80560660, global
+.global lbl_80560660
+lbl_80560660:
 	.4byte 0x57424353
 	.4byte 0x65745A45
 	.4byte 0x524F506F
 	.4byte 0x696E7444
 	.4byte 0x756D6D79
 	.4byte 0x0A000000
-.sym lbl_80560678, global
+.global lbl_80560678
+lbl_80560678:
 	.4byte 0x57424347
 	.4byte 0x65745447
 	.4byte 0x43576569
 	.4byte 0x67687444
 	.4byte 0x756D6D79
 	.4byte 0x0A000000
-.sym lbl_80560690, global
+.global lbl_80560690
+lbl_80560690:
 	.4byte 0x57616974
 	.4byte 0x20666F72
 	.4byte 0x20256420
@@ -8553,12 +8559,14 @@
 	.4byte 0x65636F6E
 	.4byte 0x6E656374
 	.4byte 0x210A0000
-.sym lbl_805606B8, global
-	.4byte fn_80368E90
+.global lbl_805606B8
+lbl_805606B8:
+	.4byte func_80368E90
 	.4byte 0x0000007F
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_805606C8, global
+.global lbl_805606C8
+lbl_805606C8:
 	.4byte 0x68616E64
 	.4byte 0x6C65203D
 	.4byte 0x2025642C
@@ -8567,7 +8575,7 @@
 	.4byte 0x20253032
 	.4byte 0x780A0000
 
-.obj jumptable_805606E4, local
+jumptable_805606E4:
 	.rel IsControllerDataChanged, .L_803696E0
 	.rel IsControllerDataChanged, .L_803696E0
 	.rel IsControllerDataChanged, .L_803696E0
@@ -8581,7 +8589,6 @@
 	.rel IsControllerDataChanged, .L_80369BA8
 	.rel IsControllerDataChanged, .L_80369BA8
 	.rel IsControllerDataChanged, .L_80369858
-.endobj jumptable_805606E4
 	.4byte 0x5265636F
 	.4byte 0x6E6E6563
 	.4byte 0x74205374
@@ -8604,11 +8611,13 @@
 	.4byte 0x616E6E65
 	.4byte 0x6C203D20
 	.4byte 0x25640A00
-.sym lbl_80560770, global
+.global lbl_80560770
+lbl_80560770:
 	.4byte 0x57504144
 	.4byte 0x496E6974
 	.4byte 0x28290A00
-.sym lbl_8056077C, global
+.global lbl_8056077C
+lbl_8056077C:
 	.4byte 0x203D3D3E
 	.4byte 0x74686973
 	.4byte 0x20657272
@@ -8623,12 +8632,14 @@
 	.4byte 0x72204E44
 	.4byte 0x45562025
 	.4byte 0x730A0000
-.sym lbl_805607B4, global
+.global lbl_805607B4
+lbl_805607B4:
 	.4byte 0x322E3120
 	.4byte 0x6F72206C
 	.4byte 0x61746572
 	.4byte 0x00000000
-.sym lbl_805607C4, global
+.global lbl_805607C4
+lbl_805607C4:
 	.4byte 0x4E696E74
 	.4byte 0x656E646F
 	.4byte 0x2052564C
@@ -8668,14 +8679,16 @@
 	.4byte 0x6E6E656C
 	.4byte 0x2E0A0000
 	.4byte 0x00000000
-.sym lbl_80560860, global
+.global lbl_80560860
+lbl_80560860:
 	.4byte 0x48494420
 	.4byte 0x50617273
 	.4byte 0x65722072
 	.4byte 0x65706F72
 	.4byte 0x74733A20
 	.4byte 0x25640A00
-.sym lbl_80560878, global
+.global lbl_80560878
+lbl_80560878:
 	.4byte 0x5741524E
 	.4byte 0x494E473A
 	.4byte 0x204F7665
@@ -8689,7 +8702,8 @@
 	.4byte 0x20627920
 	.4byte 0x4B504144
 	.4byte 0x2E0A0000
-.sym lbl_805608AC, global
+.global lbl_805608AC
+lbl_805608AC:
 	.4byte 0x20202020
 	.4byte 0x20202020
 	.4byte 0x20506C65
@@ -8711,7 +8725,8 @@
 	.4byte 0x616C6C62
 	.4byte 0x61636B2E
 	.4byte 0x0A000000
-.sym lbl_80560900, global
+.global lbl_80560900
+lbl_80560900:
 	.4byte 0x20202020
 	.4byte 0x20202020
 	.4byte 0x20506C65
@@ -8733,7 +8748,7 @@
 	.4byte 0x6C626163
 	.4byte 0x6B2E0A00
 
-.obj jumptable_80560950, local
+jumptable_80560950:
 	.rel WPADRead, .L_8036CBE4
 	.rel WPADRead, .L_8036CBE4
 	.rel WPADRead, .L_8036CBE4
@@ -8747,9 +8762,8 @@
 	.rel WPADRead, .L_8036CC04
 	.rel WPADRead, .L_8036CC04
 	.rel WPADRead, .L_8036CBEC
-.endobj jumptable_80560950
 
-.obj jumptable_80560984, local
+jumptable_80560984:
 	.rel WPADSetAutoSamplingBuf, .L_8036CCD0
 	.rel WPADSetAutoSamplingBuf, .L_8036CCD0
 	.rel WPADSetAutoSamplingBuf, .L_8036CCD0
@@ -8763,9 +8777,8 @@
 	.rel WPADSetAutoSamplingBuf, .L_8036CCF0
 	.rel WPADSetAutoSamplingBuf, .L_8036CCF0
 	.rel WPADSetAutoSamplingBuf, .L_8036CCD8
-.endobj jumptable_80560984
 
-.obj jumptable_805609B8, local
+jumptable_805609B8:
 	.rel WPADiCopyOut, .L_8036CFA4
 	.rel WPADiCopyOut, .L_8036CFA4
 	.rel WPADiCopyOut, .L_8036CFA4
@@ -8779,9 +8792,8 @@
 	.rel WPADiCopyOut, .L_8036CFC4
 	.rel WPADiCopyOut, .L_8036CFC4
 	.rel WPADiCopyOut, .L_8036CFAC
-.endobj jumptable_805609B8
 
-.obj jumptable_805609EC, local
+jumptable_805609EC:
 	.rel WPADiSendSetReportType, .L_8036FF58
 	.rel WPADiSendSetReportType, .L_8036FF64
 	.rel WPADiSendSetReportType, .L_8036FF70
@@ -8798,136 +8810,187 @@
 	.rel WPADiSendSetReportType, .L_80370000
 	.rel WPADiSendSetReportType, .L_8037000C
 	.rel WPADiSendSetReportType, .L_8036FFE8
-.endobj jumptable_805609EC
 	.4byte 0x00000000
 
 # 0x805DDAA0 - 0x805E1200
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj _wpadManageAlarm, global
+.global _wpadManageAlarm
+_wpadManageAlarm:
 	.skip 0x30
 
-.obj __rvl_p_wpadcb, global
+.global __rvl_p_wpadcb
+__rvl_p_wpadcb:
 	.skip 0x10
 
-.obj _wpadHandle2PortTable, global
+.global _wpadHandle2PortTable
+_wpadHandle2PortTable:
 	.skip 0x1000
-.sym lbl_805DEAE0, global
+.global lbl_805DEAE0
+lbl_805DEAE0:
 	.skip 0x1521
-.sym lbl_805E0001, global
+.global lbl_805E0001
+lbl_805E0001:
 	.skip 0x3
-.sym lbl_805E0004, global
+.global lbl_805E0004
+lbl_805E0004:
 	.skip 0x4
-.sym lbl_805E0008, global
+.global lbl_805E0008
+lbl_805E0008:
 	.skip 0x11F8
 
 # 0x80665D38 - 0x80665D80
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665D38, global
+.global lbl_80665D38
+lbl_80665D38:
 	.4byte lbl_80560608
-.sym lbl_80665D3C, global
+.global lbl_80665D3C
+lbl_80665D3C:
 	.4byte 0xFFFFFFFF
-.sym lbl_80665D40, global
+.global lbl_80665D40
+lbl_80665D40:
 	.4byte 0x00060004
 	.4byte 0x00060000
-.sym lbl_80665D48, global
+.global lbl_80665D48
+lbl_80665D48:
 	.4byte 0x001E001E
 	.4byte 0x001E0000
-.sym lbl_80665D50, global
+.global lbl_80665D50
+lbl_80665D50:
 	.4byte 0x322E3000
-.sym lbl_80665D54, global
+.global lbl_80665D54
+lbl_80665D54:
 	.4byte 0x6F70656E
 	.4byte 0x65640000
-.sym lbl_80665D5C, global
+.global lbl_80665D5C
+lbl_80665D5C:
 	.4byte 0x636C6F73
 	.4byte 0x65640000
 	.4byte 0x00000000
-.sym lbl_80665D68, global
+.global lbl_80665D68
+lbl_80665D68:
 	.4byte 0x2025730A
 	.4byte 0x00000000
-.sym lbl_80665D70, global
+.global lbl_80665D70
+lbl_80665D70:
 	.4byte 0x52464E4A
 	.4byte 0x00000000
-.sym lbl_80665D78, global
+.global lbl_80665D78
+lbl_80665D78:
 	.4byte 0x5755442E
 	.4byte 0x63000000
 
 # 0x80667C68 - 0x80667CC0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667C68, global
+.global lbl_80667C68
+lbl_80667C68:
 	.skip 0x2
-.sym lbl_80667C6A, global
+.global lbl_80667C6A
+lbl_80667C6A:
 	.skip 0x2
-.sym lbl_80667C6C, global
+.global lbl_80667C6C
+lbl_80667C6C:
 	.skip 0x2
-.sym lbl_80667C6E, global
+.global lbl_80667C6E
+lbl_80667C6E:
 	.skip 0x2
-.sym lbl_80667C70, global
+.global lbl_80667C70
+lbl_80667C70:
 	.skip 0x1
-.sym lbl_80667C71, global
+.global lbl_80667C71
+lbl_80667C71:
 	.skip 0x3
-.sym lbl_80667C74, global
+.global lbl_80667C74
+lbl_80667C74:
 	.skip 0x1
-.sym lbl_80667C75, global
+.global lbl_80667C75
+lbl_80667C75:
 	.skip 0x3
-.sym lbl_80667C78, global
+.global lbl_80667C78
+lbl_80667C78:
 	.skip 0x4
-.sym lbl_80667C7C, global
+.global lbl_80667C7C
+lbl_80667C7C:
 	.skip 0x4
-.sym lbl_80667C80, global
+.global lbl_80667C80
+lbl_80667C80:
 	.skip 0x4
-.sym lbl_80667C84, global
+.global lbl_80667C84
+lbl_80667C84:
 	.skip 0x4
-.sym lbl_80667C88, global
+.global lbl_80667C88
+lbl_80667C88:
 	.skip 0x4
-.sym lbl_80667C8C, global
+.global lbl_80667C8C
+lbl_80667C8C:
 	.skip 0x4
-.sym lbl_80667C90, global
+.global lbl_80667C90
+lbl_80667C90:
 	.skip 0x4
-.sym lbl_80667C94, global
+.global lbl_80667C94
+lbl_80667C94:
 	.skip 0x4
-.sym lbl_80667C98, global
+.global lbl_80667C98
+lbl_80667C98:
 	.skip 0x4
-.sym lbl_80667C9C, global
+.global lbl_80667C9C
+lbl_80667C9C:
 	.skip 0x4
-.sym lbl_80667CA0, global
+.global lbl_80667CA0
+lbl_80667CA0:
 	.skip 0x4
-.sym lbl_80667CA4, global
+.global lbl_80667CA4
+lbl_80667CA4:
 	.skip 0x4
-.sym lbl_80667CA8, global
+.global lbl_80667CA8
+lbl_80667CA8:
 	.skip 0x1
-.sym lbl_80667CA9, global
+.global lbl_80667CA9
+lbl_80667CA9:
 	.skip 0x3
-.sym lbl_80667CAC, global
+.global lbl_80667CAC
+lbl_80667CAC:
 	.skip 0x1
-.sym lbl_80667CAD, global
+.global lbl_80667CAD
+lbl_80667CAD:
 	.skip 0x1
-.sym lbl_80667CAE, global
+.global lbl_80667CAE
+lbl_80667CAE:
 	.skip 0x1
-.sym lbl_80667CAF, global
+.global lbl_80667CAF
+lbl_80667CAF:
 	.skip 0x1
-.sym lbl_80667CB0, global
+.global lbl_80667CB0
+lbl_80667CB0:
 	.skip 0x4
-.sym lbl_80667CB4, global
+.global lbl_80667CB4
+lbl_80667CB4:
 	.skip 0x1
-.sym lbl_80667CB5, global
+.global lbl_80667CB5
+lbl_80667CB5:
 	.skip 0x1
-.sym lbl_80667CB6, global
+.global lbl_80667CB6
+lbl_80667CB6:
 	.skip 0x2
-.sym lbl_80667CB8, global
+.global lbl_80667CB8
+lbl_80667CB8:
 	.skip 0x4
-.sym lbl_80667CBC, global
+.global lbl_80667CBC
+lbl_80667CBC:
 	.skip 0x4
 
 # 0x8066C1F8 - 0x8066C200
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C1F8, global
+.global lbl_8066C1F8
+lbl_8066C1F8:
 	.4byte 0x0000D007
-.sym lbl_8066C1FC, global
+.global lbl_8066C1FC
+lbl_8066C1FC:
 	.2byte 0x400C
-.sym lbl_8066C1FE, global
+.global lbl_8066C1FE
+lbl_8066C1FE:
 	.2byte 0x0E00

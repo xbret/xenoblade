@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/sj/sj_rbf.o"
 
-# 0x803942F0 - 0x80395678
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SJRBF_Error, global
@@ -1407,12 +1406,14 @@
 .rodata
 .balign 8
 
-.obj sjrbf_uuid, global
+.global sjrbf_uuid
+sjrbf_uuid:
 	.4byte 0x3B9A9E81
 	.4byte 0x0DBB11D2
 	.4byte 0xA6BF4445
 	.4byte 0x53540000
-.sym lbl_8051C208, global
+.global lbl_8051C208
+lbl_8051C208:
 	.4byte 0x534A5242
 	.4byte 0x46204572
 	.4byte 0x726F7200
@@ -1556,7 +1557,8 @@
 .data
 .balign 8
 
-.obj sjrbf_vtbl, global
+.global sjrbf_vtbl
+sjrbf_vtbl:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1574,8 +1576,10 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj sjrbf_init_cnt, global
+.global sjrbf_init_cnt
+sjrbf_init_cnt:
 	.skip 0x8
 
-.obj sjrbf_obj, global
+.global sjrbf_obj
+sjrbf_obj:
 	.skip 0x4800

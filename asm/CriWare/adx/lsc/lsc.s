@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/lsc/lsc.o"
 
-# 0x80391D58 - 0x8039280C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn LSC_Create, global
@@ -793,7 +792,8 @@
 # 0x8051BAB8 - 0x8051BE50
 .rodata
 .balign 8
-.sym lbl_8051BAB8, global
+.global lbl_8051BAB8
+lbl_8051BAB8:
 	.4byte 0x45323030
 	.4byte 0x35303132
 	.4byte 0x3830313A
@@ -1029,7 +1029,9 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj lsc_obj, global
+.global lsc_obj
+lsc_obj:
 	.skip 0x4700
-.sym lbl_805EFA80, global
+.global lbl_805EFA80
+lbl_805EFA80:
 	.skip 0x10

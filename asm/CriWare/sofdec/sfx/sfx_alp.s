@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfx/sfx_alp.o"
 
-# 0x803D5C18 - 0x803D5DC4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFXA_Init, global
@@ -142,5 +141,6 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj sfxa_work, global
+.global sfxa_work
+sfxa_work:
 	.skip 0x128

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/math/math_triangular.o"
 
-# 0x80336640 - 0x803368F0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4hbm::math::SinFIdx(float)
@@ -208,9 +207,11 @@
 # 0x80518AF0 - 0x80518B18
 .rodata
 .balign 8
-.sym lbl_80518AF0, global
+.global lbl_80518AF0
+lbl_80518AF0:
 	.4byte 0x47800000
-.sym lbl_80518AF4, global
+.global lbl_80518AF4
+lbl_80518AF4:
 	.4byte 0x00000000
 	.4byte 0x3F800000
 	.4byte 0x42000000
@@ -224,7 +225,8 @@
 # 0x8054DB88 - 0x8054ECA0
 .data
 .balign 8
-.sym lbl_8054DB88, global
+.global lbl_8054DB88
+lbl_8054DB88:
 	.4byte 0x00000000
 	.4byte 0x3F800000
 	.4byte 0x3CC90A35
@@ -1253,7 +1255,8 @@
 	.4byte 0x3F800000
 	.4byte 0x3CC90A35
 	.4byte 0xB99DCF89
-.sym lbl_8054EB98, global
+.global lbl_8054EB98
+lbl_8054EB98:
 	.4byte 0x00000000
 	.4byte 0x3FA2EBF1
 	.4byte 0x3FA2EBF1

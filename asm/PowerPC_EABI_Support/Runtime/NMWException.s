@@ -1,89 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/Runtime/NMWException.o"
 
-# 0x8001BEE8 - 0x8001BF30
-.section extab, "a"
-.balign 4
+.section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.obj "@etb_8001BEE8", local
-.hidden "@etb_8001BEE8"
-	.4byte 0x28080000
-	.4byte 0x00000070
-	.4byte 0x00000010
-	.4byte 0x00000000
-	.4byte 0x82000008
-	.4byte __dt__26__partial_array_destructorFv
-.endobj "@etb_8001BEE8"
-
-.obj "@etb_8001BF00", local
-.hidden "@etb_8001BF00"
-	.4byte 0x18080000
-	.4byte 0x00000000
-.endobj "@etb_8001BF00"
-
-.obj "@etb_8001BF08", local
-.hidden "@etb_8001BF08"
-	.4byte 0x20080000
-	.4byte 0x0000005C
-	.4byte 0x00000010
-	.4byte 0x00000000
-	.4byte 0x82000008
-	.4byte __dt__26__partial_array_destructorFv
-.endobj "@etb_8001BF08"
-
-.obj "@etb_8001BF20", local
-.hidden "@etb_8001BF20"
-	.4byte 0x20080000
-	.4byte 0x00000000
-.endobj "@etb_8001BF20"
-
-.obj "@etb_8001BF28", local
-.hidden "@etb_8001BF28"
-	.4byte 0x30080000
-	.4byte 0x00000000
-.endobj "@etb_8001BF28"
-
-# 0x80033A7C - 0x80033AB8
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80033A7C", local
-.hidden "@eti_80033A7C"
-	.4byte __construct_new_array
-	.4byte 0x00000104
-	.4byte "@etb_8001BEE8"
-.endobj "@eti_80033A7C"
-
-.obj "@eti_80033A88", local
-.hidden "@eti_80033A88"
-	.4byte __dt__26__partial_array_destructorFv
-	.4byte 0x000000BC
-	.4byte "@etb_8001BF00"
-.endobj "@eti_80033A88"
-
-.obj "@eti_80033A94", local
-.hidden "@eti_80033A94"
-	.4byte __construct_array
-	.4byte 0x000000F8
-	.4byte "@etb_8001BF08"
-.endobj "@eti_80033A94"
-
-.obj "@eti_80033AA0", local
-.hidden "@eti_80033AA0"
-	.4byte __destroy_arr
-	.4byte 0x00000078
-	.4byte "@etb_8001BF20"
-.endobj "@eti_80033AA0"
-
-.obj "@eti_80033AAC", local
-.hidden "@eti_80033AAC"
-	.4byte __destroy_new_array
-	.4byte 0x00000080
-	.4byte "@etb_8001BF28"
-.endobj "@eti_80033AAC"
-
-# 0x802B96FC - 0x802B9CF0
-.text
 .balign 4
 
 # std::dthandler()
@@ -542,9 +460,92 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj __RTTI__std_exception, global
+.global __RTTI__std_exception
+__RTTI__std_exception:
 	.4byte std_exception_typestr
 	.4byte 0x00000000
-.sym lbl_80665860, global
+.global lbl_80665860
+lbl_80665860:
 	.4byte dthandler__3stdFv
 	.4byte 0x00000000
+
+# 0x8001BEE8 - 0x8001BF30
+.section extab, "a"
+.balign 4
+
+.obj "@etb_8001BEE8", local
+.hidden "@etb_8001BEE8"
+	.4byte 0x28080000
+	.4byte 0x00000070
+	.4byte 0x00000010
+	.4byte 0x00000000
+	.4byte 0x82000008
+	.4byte __dt__26__partial_array_destructorFv
+.endobj "@etb_8001BEE8"
+
+.obj "@etb_8001BF00", local
+.hidden "@etb_8001BF00"
+	.4byte 0x18080000
+	.4byte 0x00000000
+.endobj "@etb_8001BF00"
+
+.obj "@etb_8001BF08", local
+.hidden "@etb_8001BF08"
+	.4byte 0x20080000
+	.4byte 0x0000005C
+	.4byte 0x00000010
+	.4byte 0x00000000
+	.4byte 0x82000008
+	.4byte __dt__26__partial_array_destructorFv
+.endobj "@etb_8001BF08"
+
+.obj "@etb_8001BF20", local
+.hidden "@etb_8001BF20"
+	.4byte 0x20080000
+	.4byte 0x00000000
+.endobj "@etb_8001BF20"
+
+.obj "@etb_8001BF28", local
+.hidden "@etb_8001BF28"
+	.4byte 0x30080000
+	.4byte 0x00000000
+.endobj "@etb_8001BF28"
+
+# 0x80033A7C - 0x80033AB8
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80033A7C", local
+.hidden "@eti_80033A7C"
+	.4byte __construct_new_array
+	.4byte 0x00000104
+	.4byte "@etb_8001BEE8"
+.endobj "@eti_80033A7C"
+
+.obj "@eti_80033A88", local
+.hidden "@eti_80033A88"
+	.4byte __dt__26__partial_array_destructorFv
+	.4byte 0x000000BC
+	.4byte "@etb_8001BF00"
+.endobj "@eti_80033A88"
+
+.obj "@eti_80033A94", local
+.hidden "@eti_80033A94"
+	.4byte __construct_array
+	.4byte 0x000000F8
+	.4byte "@etb_8001BF08"
+.endobj "@eti_80033A94"
+
+.obj "@eti_80033AA0", local
+.hidden "@eti_80033AA0"
+	.4byte __destroy_arr
+	.4byte 0x00000078
+	.4byte "@etb_8001BF20"
+.endobj "@eti_80033AA0"
+
+.obj "@eti_80033AAC", local
+.hidden "@eti_80033AAC"
+	.4byte __destroy_new_array
+	.4byte 0x00000080
+	.4byte "@etb_8001BF28"
+.endobj "@eti_80033AAC"

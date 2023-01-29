@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_MmlSeqTrack.o"
 
-# 0x80418794 - 0x8041883C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::MmlSeqTrack::MmlSeqTrack()
@@ -63,12 +62,14 @@
 # 0x8056E390 - 0x8056E3B0
 .data
 .balign 8
-.sym lbl_8056E390, global
+.global lbl_8056E390
+lbl_8056E390:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte CommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackUlll
 	.4byte NoteOnCommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackiilb
-.sym lbl_8056E3A0, global
+.global lbl_8056E3A0
+lbl_8056E3A0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r3snd6detail11MmlSeqTrackFv

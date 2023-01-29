@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/enc/encutility.o"
 
-# 0x80312CB0 - 0x80312EF0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn ENCiCheckParameters, global
@@ -185,7 +184,8 @@
 # 0x8054B5C8 - 0x8054B610
 .data
 .balign 8
-.sym lbl_8054B5C8, global
+.global lbl_8054B5C8
+lbl_8054B5C8:
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -208,12 +208,14 @@
 # 0x806659B8 - 0x806659C0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806659B8, global
+.global lbl_806659B8
+lbl_806659B8:
 	.4byte lbl_8054B5C8
 	.4byte 0x00000000
 
 # 0x806678C0 - 0x806678C8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806678C0, global
+.global lbl_806678C0
+lbl_806678C0:
 	.skip 0x8

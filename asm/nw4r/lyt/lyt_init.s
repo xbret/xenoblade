@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/lyt/lyt_init.o"
 
-# 0x803FE8B0 - 0x803FE904
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::lyt::LytInit()
@@ -33,7 +32,8 @@
 # 0x8056D188 - 0x8056D1D0
 .data
 .balign 8
-.sym lbl_8056D188, global
+.global lbl_8056D188
+lbl_8056D188:
 	.4byte 0x3C3C204E
 	.4byte 0x57345220
 	.4byte 0x2020202D
@@ -56,6 +56,7 @@
 # 0x80665DE8 - 0x80665DF0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665DE8, global
+.global lbl_80665DE8
+lbl_80665DE8:
 	.4byte lbl_8056D188
 	.4byte 0x00000000

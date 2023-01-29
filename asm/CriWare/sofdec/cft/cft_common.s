@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/cft/cft_common.o"
 
-# 0x8039BBE8 - 0x8039BBFC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn CFT_Init, global
@@ -16,7 +15,8 @@
 # 0x8051CE58 - 0x8051CEB0
 .rodata
 .balign 8
-.sym lbl_8051CE58, global
+.global lbl_8051CE58
+lbl_8051CE58:
 	.4byte 0x0A435249
 	.4byte 0x20434654
 	.4byte 0x2F574949
@@ -43,5 +43,6 @@
 # 0x80602788 - 0x80602790
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80602788, global
+.global lbl_80602788
+lbl_80602788:
 	.skip 0x8

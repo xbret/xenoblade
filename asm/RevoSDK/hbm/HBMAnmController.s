@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/HBMAnmController.o"
 
-# 0x8031F450 - 0x8031F560
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 # homebutton::GroupAnmController::GroupAnmController()
@@ -94,13 +93,15 @@
 .data
 .balign 8
 
-.obj __vt__homebutton_GroupAnmController, global
+.global __vt__homebutton_GroupAnmController
+__vt__homebutton_GroupAnmController:
 	.4byte __RTTI__homebutton_GroupAnmController
 	.4byte 0x00000000
 	.4byte __dt__Q210homebutton15FrameControllerFv
 	.4byte calc__Q210homebutton15FrameControllerFv
 
-.obj homebutton_GroupAnmController_typestr, global
+.global homebutton_GroupAnmController_typestr
+homebutton_GroupAnmController_typestr:
 	.4byte 0x686F6D65
 	.4byte 0x62757474
 	.4byte 0x6F6E3A3A
@@ -110,12 +111,14 @@
 	.4byte 0x726F6C6C
 	.4byte 0x65720000
 
-.obj homebutton_GroupAnmController_hierarchy, global
+.global homebutton_GroupAnmController_hierarchy
+homebutton_GroupAnmController_hierarchy:
 	.4byte __RTTI__homebutton_FrameController
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-.obj __RTTI__homebutton_GroupAnmController, global
+.global __RTTI__homebutton_GroupAnmController
+__RTTI__homebutton_GroupAnmController:
 	.4byte homebutton_GroupAnmController_typestr
 	.4byte homebutton_GroupAnmController_hierarchy

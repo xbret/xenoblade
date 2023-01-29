@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/HBMFrameController.o"
 
-# 0x8031F2A0 - 0x8031F450
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 # homebutton::FrameController::init(int, float, float, float)
@@ -137,7 +136,8 @@
 # 0x80518668 - 0x80518670
 .rodata
 .balign 8
-.sym lbl_80518668, global
+.global lbl_80518668
+lbl_80518668:
 	.4byte 0x3F800000
 	.4byte 0x00000000
 
@@ -145,7 +145,8 @@
 .data
 .balign 8
 
-.obj homebutton_FrameController_typestr, global
+.global homebutton_FrameController_typestr
+homebutton_FrameController_typestr:
 	.4byte 0x686F6D65
 	.4byte 0x62757474
 	.4byte 0x6F6E3A3A
@@ -155,6 +156,7 @@
 	.4byte 0x6C657200
 	.4byte 0x00000000
 
-.obj __RTTI__homebutton_FrameController, global
+.global __RTTI__homebutton_FrameController
+__RTTI__homebutton_FrameController:
 	.4byte homebutton_FrameController_typestr
 	.4byte 0x00000000

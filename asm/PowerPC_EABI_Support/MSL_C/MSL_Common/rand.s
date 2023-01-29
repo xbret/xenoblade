@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common/rand.o"
 
-# 0x802C110C - 0x802C112C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn rand, global
@@ -20,7 +19,6 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj next, local
+next:
 	.4byte 0x00000001
-.endobj next
 	.4byte 0x00000000

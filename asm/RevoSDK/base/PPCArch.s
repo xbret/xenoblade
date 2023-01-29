@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/base/PPCArch.o"
 
-# 0x802DAB50 - 0x802DAD60
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn PPCMfmsr, global

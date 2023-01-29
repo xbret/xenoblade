@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/gap_api.o"
 
-# 0x802EFD04 - 0x802EFD64
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn GAP_Init, global

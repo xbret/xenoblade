@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/ut/code_8042BE14.o"
 
-# 0x8042BE14 - 0x8042BE20
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn sinit_8042BE14, global
@@ -19,7 +18,9 @@
 # 0x80667E28 - 0x80667E38
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E28, global
+.global lbl_80667E28
+lbl_80667E28:
 	.skip 0x8
-.sym lbl_80667E30, global
+.global lbl_80667E30
+lbl_80667E30:
 	.skip 0x8

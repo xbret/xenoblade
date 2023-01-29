@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/dcc/g3d_maya.o"
 
-# 0x803F20DC - 0x803F2D9C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::detail::dcc::_unnamed_g3d_maya_cpp_::MakeTexSrtMtx_S(nw4r::math::MTX34*, const nw4r::g3d::TexSrt&)
@@ -901,7 +900,8 @@
 # 0x80520FD8 - 0x80521010
 .rodata
 .balign 8
-.sym lbl_80520FD8, global
+.global lbl_80520FD8
+lbl_80520FD8:
 	.4byte MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -909,7 +909,8 @@
 	.4byte MakeTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.sym lbl_80520FF4, global
+.global lbl_80520FF4
+lbl_80520FF4:
 	.4byte ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_maya_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -921,14 +922,19 @@
 # 0x8066C498 - 0x8066C4B0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C498, global
+.global lbl_8066C498
+lbl_8066C498:
 	.4byte 0x00000000
-.sym lbl_8066C49C, global
+.global lbl_8066C49C
+lbl_8066C49C:
 	.4byte 0x3F800000
-.sym lbl_8066C4A0, global
+.global lbl_8066C4A0
+lbl_8066C4A0:
 	.4byte 0x3F360B61
-.sym lbl_8066C4A4, global
+.global lbl_8066C4A4
+lbl_8066C4A4:
 	.4byte 0x3F000000
-.sym lbl_8066C4A8, global
+.global lbl_8066C4A8
+lbl_8066C4A8:
 	.4byte 0xBF000000
 	.4byte 0x00000000

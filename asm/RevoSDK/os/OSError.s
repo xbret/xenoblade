@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSError.o"
 
-# 0x80354EF0 - 0x80355510
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn OSReport, global
@@ -629,15 +628,16 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj __OSErrorTable, global
+.global __OSErrorTable
+__OSErrorTable:
 	.skip 0x44
-.endobj __OSErrorTable
 	.skip 0xC
 
 # 0x80665B68 - 0x80665B70
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665B68, global
+.global lbl_80665B68
+lbl_80665B68:
 	.4byte 0x000000F8
 
 .obj "@703", local

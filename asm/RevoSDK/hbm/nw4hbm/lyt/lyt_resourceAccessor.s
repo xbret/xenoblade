@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/lyt/lyt_resourceAccessor.o"
 
-# 0x80332C90 - 0x80332CF0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4hbm::lyt::ResourceAccessor::~ResourceAccessor()
@@ -45,12 +44,14 @@
 # 0x8054D9D8 - 0x8054D9F4
 .data
 .balign 8
-.sym lbl_8054D9D8, global
+.global lbl_8054D9D8
+lbl_8054D9D8:
 	.4byte lbl_8054D6B0
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt16ResourceAccessorFv
 	.4byte 0x00000000
 	.4byte GetFont__Q36nw4hbm3lyt16ResourceAccessorFPCc
 	.4byte 0x00000000
-.sym lbl_8054D9F0, global
+.global lbl_8054D9F0
+lbl_8054D9F0:
 	.4byte 0x000A0000

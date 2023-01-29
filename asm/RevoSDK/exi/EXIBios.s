@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/exi/EXIBios.o"
 
-# 0x803140F0 - 0x803159F0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn SetExiInterruptMask, local
@@ -1785,7 +1784,8 @@
 # 0x8054B610 - 0x8054B658
 .data
 .balign 8
-.sym lbl_8054B610, global
+.global lbl_8054B610
+lbl_8054B610:
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -1809,24 +1809,22 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj Ecb, local
+Ecb:
 	.skip 0xC0
-.endobj Ecb
 
 # 0x806659D8 - 0x806659E0
 .section .sdata, "wa"
 .balign 8
 
-.obj __EXIVersion, global
+.global __EXIVersion
+__EXIVersion:
 	.4byte lbl_8054B610
-.endobj __EXIVersion
 	.4byte 0x00000000
 
 # 0x806678D8 - 0x806678E0
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj IDSerialPort1, local
+IDSerialPort1:
 	.skip 0x4
-.endobj IDSerialPort1
 	.skip 0x4

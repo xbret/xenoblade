@@ -1,18 +1,17 @@
 .include "macros.inc"
-.file "nw4r/ut/ut_FileStream.o"
 
-# 0x8042BDFC - 0x8042BE14
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.fn fn_8042BDFC, global
+.fn func_8042BDFC, global
 /* 8042BDFC 003F53BC  4E 80 00 20 */	blr
-.endfn fn_8042BDFC
+.endfn func_8042BDFC
 
-.fn fn_8042BE00, global
+.fn func_8042BE00, global
 /* 8042BE00 003F53C0  38 60 00 01 */	li r3, 0x1
 /* 8042BE04 003F53C4  4E 80 00 20 */	blr
-.endfn fn_8042BE00
+.endfn func_8042BE00
 
 .fn sinit_8042BE08, global
 /* 8042BE08 003F53C8  38 0D BC A0 */	addi r0, r13, lbl_80667E20@sda21
@@ -28,5 +27,6 @@
 # 0x80667E20 - 0x80667E28
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E20, global
+.global lbl_80667E20
+lbl_80667E20:
 	.skip 0x8

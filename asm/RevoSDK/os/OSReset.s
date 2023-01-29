@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSReset.o"
 
-# 0x80359F10 - 0x8035A800
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn OSRegisterShutdownFunction, global
@@ -678,7 +677,8 @@
 	.2byte 0x6300
 .endobj "@2083"
 	.2byte 0x0000
-.sym lbl_80552AFC, global
+.global lbl_80552AFC
+lbl_80552AFC:
 	.4byte 0x5F5F4F53
 	.4byte 0x486F7452
 	.4byte 0x65736574
@@ -842,11 +842,12 @@
 # 0x80667AB8 - 0x80667AC8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667AB8, global
+.global lbl_80667AB8
+lbl_80667AB8:
 	.skip 0x4
-.sym lbl_80667ABC, global
+.global lbl_80667ABC
+lbl_80667ABC:
 	.skip 0x4
 
-.obj ShutdownFunctionQueue, local
+ShutdownFunctionQueue:
 	.skip 0x8
-.endobj ShutdownFunctionQueue

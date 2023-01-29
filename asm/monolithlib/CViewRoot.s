@@ -1,49 +1,10 @@
 .include "macros.inc"
-.file "monolithlib/CViewRoot.o"
 
-# 0x8001C6D8 - 0x8001C724
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_8001C6D8", local
-.hidden "@etb_8001C6D8"
-	.4byte 0x18080000
-	.4byte 0x000000FC
-	.4byte 0x00000010
-	.4byte 0x00000000
-	.4byte 0x0780001E
-	.4byte 0x000004F4
-	.4byte fn_80438E10
-	.4byte 0x0780001E
-	.4byte 0x000003E4
-	.4byte fn_80442084
-	.4byte 0x0780001E
-	.4byte 0x000002D4
-	.4byte fn_80442084
-	.4byte 0x0780001E
-	.4byte 0x000001C4
-	.4byte fn_80442084
-	.4byte 0x8680001E
-	.4byte 0x00000000
-	.4byte fn_80437AC8
-.endobj "@etb_8001C6D8"
-
-# 0x800342F8 - 0x80034304
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_800342F8", local
-.hidden "@eti_800342F8"
-	.4byte fn_804434FC
-	.4byte 0x0000021C
-	.4byte "@etb_8001C6D8"
-.endobj "@eti_800342F8"
-
-# 0x804434FC - 0x80443718
-.text
-.balign 4
-
-.fn fn_804434FC, global
+.fn func_804434FC, global
 /* 804434FC 0040CABC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80443500 0040CAC0  7C 08 02 A6 */	mflr r0
 /* 80443504 0040CAC4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -53,7 +14,7 @@
 /* 80443514 0040CAD4  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80443518 0040CAD8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8044351C 0040CADC  7C 7D 1B 78 */	mr r29, r3
-/* 80443520 0040CAE0  4B FF 40 95 */	bl fn_804375B4
+/* 80443520 0040CAE0  4B FF 40 95 */	bl func_804375B4
 /* 80443524 0040CAE4  7C 64 1B 78 */	mr r4, r3
 /* 80443528 0040CAE8  38 60 05 20 */	li r3, 0x520
 /* 8044352C 0040CAEC  4B FF 15 31 */	bl mm_malloc
@@ -106,7 +67,7 @@
 /* 804435E8 0040CBA8  93 CD BD 30 */	stw r30, lbl_80667EB0@sda21(r13)
 /* 804435EC 0040CBAC  90 1E 00 50 */	stw r0, 0x50(r30)
 /* 804435F0 0040CBB0  80 9E 00 54 */	lwz r4, 0x54(r30)
-/* 804435F4 0040CBB4  4B FF 14 8D */	bl fn_80434A80
+/* 804435F4 0040CBB4  4B FF 14 8D */	bl func_80434A80
 /* 804435F8 0040CBB8  38 00 00 08 */	li r0, 0x8
 /* 804435FC 0040CBBC  90 7E 05 08 */	stw r3, 0x508(r30)
 /* 80443600 0040CBC0  38 80 00 00 */	li r4, 0x0
@@ -169,10 +130,10 @@
 /* 804436DC 0040CC9C  7F C3 F3 78 */	mr r3, r30
 /* 804436E0 0040CCA0  7F A4 EB 78 */	mr r4, r29
 /* 804436E4 0040CCA4  38 A0 00 00 */	li r5, 0x0
-/* 804436E8 0040CCA8  4B FF 54 F1 */	bl fn_80438BD8
+/* 804436E8 0040CCA8  4B FF 54 F1 */	bl func_80438BD8
 /* 804436EC 0040CCAC  7F C3 F3 78 */	mr r3, r30
 /* 804436F0 0040CCB0  38 80 00 00 */	li r4, 0x0
-/* 804436F4 0040CCB4  4B FF 4E D9 */	bl fn_804385CC
+/* 804436F4 0040CCB4  4B FF 4E D9 */	bl func_804385CC
 /* 804436F8 0040CCB8  7F C3 F3 78 */	mr r3, r30
 /* 804436FC 0040CCBC  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80443700 0040CCC0  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -181,17 +142,19 @@
 /* 8044370C 0040CCCC  7C 08 03 A6 */	mtlr r0
 /* 80443710 0040CCD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80443714 0040CCD4  4E 80 00 20 */	blr
-.endfn fn_804434FC
+.endfn func_804434FC
 
 # 0x80525F78 - 0x80525F90
 .rodata
 .balign 8
 
-.obj CViewRoot_typestr, global
+.global CViewRoot_typestr
+CViewRoot_typestr:
 	.4byte 0x43566965
 	.4byte 0x77526F6F
 	.4byte 0x74000000
-.sym lbl_80525F84, global
+.global lbl_80525F84
+lbl_80525F84:
 	.4byte 0x43566965
 	.4byte 0x77526F6F
 	.4byte 0x74000000
@@ -200,49 +163,51 @@
 .data
 .balign 8
 
-.obj __vt__CViewRoot, global
+.global __vt__CViewRoot
+__vt__CViewRoot:
 	.4byte __RTTI__CViewRoot
 	.4byte 0x00000000
-	.4byte fn_804420D0
-	.4byte fn_80039E28
-	.4byte fn_80039E20
-	.4byte fn_80039E18
-	.4byte fn_80039E10
-	.4byte fn_80039E0C
-	.4byte fn_80039E04
-	.4byte fn_80039DFC
-	.4byte fn_80039DF4
-	.4byte fn_80039DEC
-	.4byte fn_80039DE4
-	.4byte fn_80039DDC
-	.4byte fn_80039DD4
-	.4byte fn_80039DCC
-	.4byte fn_80039DC4
-	.4byte fn_80039DBC
-	.4byte fn_80039DB4
-	.4byte fn_80039DAC
-	.4byte fn_80039DA4
-	.4byte fn_80039D9C
-	.4byte fn_80039D94
-	.4byte fn_80039D8C
-	.4byte fn_80039D84
-	.4byte fn_80039D7C
-	.4byte fn_80039D74
-	.4byte fn_80039D6C
-	.4byte fn_80039D64
-	.4byte fn_80039D5C
-	.4byte fn_80039D54
-	.4byte fn_80039D4C
-	.4byte fn_80039D44
-	.4byte fn_80039D40
-	.4byte fn_80438A50
-	.4byte fn_80039E3C
-	.4byte fn_80039E38
-	.4byte fn_80443214
-	.4byte fn_80443388
-	.4byte fn_80039E30
+	.4byte func_804420D0
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
+	.4byte func_80438A50
+	.4byte func_80039E3C
+	.4byte func_80039E38
+	.4byte func_80443214
+	.4byte func_80443388
+	.4byte func_80039E30
 
-.obj CViewRoot_hierarchy, global
+.global CViewRoot_hierarchy
+CViewRoot_hierarchy:
 	.4byte __RTTI__IWorkEvent
 	.4byte 0x00000000
 	.4byte __RTTI__CWorkThread
@@ -254,6 +219,45 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj __RTTI__CViewRoot, global
+.global __RTTI__CViewRoot
+__RTTI__CViewRoot:
 	.4byte CViewRoot_typestr
 	.4byte CViewRoot_hierarchy
+
+# 0x8001C6D8 - 0x8001C724
+.section extab, "a"
+.balign 4
+
+.obj "@etb_8001C6D8", local
+.hidden "@etb_8001C6D8"
+	.4byte 0x18080000
+	.4byte 0x000000FC
+	.4byte 0x00000010
+	.4byte 0x00000000
+	.4byte 0x0780001E
+	.4byte 0x000004F4
+	.4byte func_80438E10
+	.4byte 0x0780001E
+	.4byte 0x000003E4
+	.4byte func_80442084
+	.4byte 0x0780001E
+	.4byte 0x000002D4
+	.4byte func_80442084
+	.4byte 0x0780001E
+	.4byte 0x000001C4
+	.4byte func_80442084
+	.4byte 0x8680001E
+	.4byte 0x00000000
+	.4byte func_80437AC8
+.endobj "@etb_8001C6D8"
+
+# 0x800342F8 - 0x80034304
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_800342F8", local
+.hidden "@eti_800342F8"
+	.4byte func_804434FC
+	.4byte 0x0000021C
+	.4byte "@etb_8001C6D8"
+.endobj "@eti_800342F8"

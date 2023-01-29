@@ -1,29 +1,7 @@
 .include "macros.inc"
-.file "mm/code_80436138.o"
 
-# 0x8001C0A8 - 0x8001C0B0
-.section extab, "a"
-.balign 4
+.section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.obj "@etb_8001C0A8", local
-.hidden "@etb_8001C0A8"
-	.4byte 0x180A0000
-	.4byte 0x00000000
-.endobj "@etb_8001C0A8"
-
-# 0x80033CC8 - 0x80033CD4
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80033CC8", local
-.hidden "@eti_80033CC8"
-	.4byte sinit_80436138
-	.4byte 0x00000128
-	.4byte "@etb_8001C0A8"
-.endobj "@eti_80033CC8"
-
-# 0x80436138 - 0x80436260
-.text
 .balign 4
 
 .fn sinit_80436138, global
@@ -111,10 +89,34 @@
 # 0x8066CA30 - 0x8066CA40
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066CA30, global
+.global lbl_8066CA30
+lbl_8066CA30:
 	.4byte 0x3F800000
-.sym lbl_8066CA34, global
+.global lbl_8066CA34
+lbl_8066CA34:
 	.4byte 0x3F000000
-.sym lbl_8066CA38, global
+.global lbl_8066CA38
+lbl_8066CA38:
 	.4byte 0x00000000
 	.4byte 0x00000000
+
+# 0x8001C0A8 - 0x8001C0B0
+.section extab, "a"
+.balign 4
+
+.obj "@etb_8001C0A8", local
+.hidden "@etb_8001C0A8"
+	.4byte 0x180A0000
+	.4byte 0x00000000
+.endobj "@etb_8001C0A8"
+
+# 0x80033CC8 - 0x80033CD4
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80033CC8", local
+.hidden "@eti_80033CC8"
+	.4byte sinit_80436138
+	.4byte 0x00000128
+	.4byte "@etb_8001C0A8"
+.endobj "@eti_80033CC8"

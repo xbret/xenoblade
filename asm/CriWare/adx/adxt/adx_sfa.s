@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_sfa.o"
 
-# 0x8037F994 - 0x8037F9BC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFA_Init, global
@@ -24,5 +23,6 @@
 # 0x805E69B8 - 0x805E69C0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E69B8, global
+.global lbl_805E69B8
+lbl_805E69B8:
 	.skip 0x8

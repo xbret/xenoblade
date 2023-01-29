@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/ax/AXCL.o"
 
-# 0x802D2F70 - 0x802D3A70
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __AXGetCommandListCycles, global
@@ -767,31 +766,43 @@
 # 0x80580AC0 - 0x80580BC0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80580AC0, global
+.global lbl_80580AC0
+lbl_80580AC0:
 	.skip 0x100
 
 # 0x80667660 - 0x80667688
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667660, global
+.global lbl_80667660
+lbl_80667660:
 	.skip 0x2
-.sym lbl_80667662, global
+.global lbl_80667662
+lbl_80667662:
 	.skip 0x2
-.sym lbl_80667664, global
+.global lbl_80667664
+lbl_80667664:
 	.skip 0x2
-.sym lbl_80667666, global
+.global lbl_80667666
+lbl_80667666:
 	.skip 0x2
-.sym lbl_80667668, global
+.global lbl_80667668
+lbl_80667668:
 	.skip 0x4
-.sym lbl_8066766C, global
+.global lbl_8066766C
+lbl_8066766C:
 	.skip 0x4
-.sym lbl_80667670, global
+.global lbl_80667670
+lbl_80667670:
 	.skip 0x4
-.sym lbl_80667674, global
+.global lbl_80667674
+lbl_80667674:
 	.skip 0x4
-.sym lbl_80667678, global
+.global lbl_80667678
+lbl_80667678:
 	.skip 0x4
-.sym lbl_8066767C, global
+.global lbl_8066767C
+lbl_8066767C:
 	.skip 0x4
-.sym lbl_80667680, global
+.global lbl_80667680
+lbl_80667680:
 	.skip 0x8

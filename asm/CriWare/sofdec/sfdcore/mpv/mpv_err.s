@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mpv/mpv_err.o"
 
-# 0x803A6154 - 0x803A62C4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPVERR_Init, global
@@ -119,5 +118,6 @@
 # 0x80605F38 - 0x80605F50
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80605F38, global
+.global lbl_80605F38
+lbl_80605F38:
 	.skip 0x18

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/btm_pm.o"
 
-# 0x802E9EC0 - 0x802EAB54
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn BTM_PmRegister, global
@@ -925,7 +924,8 @@
 # 0x8050E240 - 0x8050E250
 .rodata
 .balign 8
-.sym lbl_8050E240, global
+.global lbl_8050E240
+lbl_8050E240:
 	.4byte 0x03020201
 	.4byte 0x03010102
 	.4byte 0x03000000
@@ -934,7 +934,8 @@
 # 0x805454F0 - 0x80545530
 .data
 .balign 8
-.sym lbl_805454F0, global
+.global lbl_805454F0
+lbl_805454F0:
 	.4byte 0x62746D20
 	.4byte 0x6D6F6465
 	.4byte 0x20636861
@@ -955,7 +956,9 @@
 # 0x8066BF70 - 0x8066BF78
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF70, global
+.global lbl_8066BF70
+lbl_8066BF70:
 	.4byte 0x00000100
-.sym lbl_8066BF74, global
+.global lbl_8066BF74
+lbl_8066BF74:
 	.4byte 0x40800100

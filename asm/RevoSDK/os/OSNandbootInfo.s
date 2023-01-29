@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSNandbootInfo.o"
 
-# 0x8035E610 - 0x8035E820
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __OSCreateNandbootInfo, global
@@ -155,7 +154,8 @@
 # 0x8055EE98 - 0x8055EEB8
 .data
 .balign 8
-.sym lbl_8055EE98, global
+.global lbl_8055EE98
+lbl_8055EE98:
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x2F737973

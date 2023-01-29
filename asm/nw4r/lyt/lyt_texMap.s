@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/lyt/lyt_texMap.o"
 
-# 0x804082FC - 0x80408668
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::lyt::TexMap::Get(_GXTexObj*) const
@@ -255,12 +254,15 @@
 # 0x8066C5B8 - 0x8066C5D0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C5B8, global
+.global lbl_8066C5B8
+lbl_8066C5B8:
 	.4byte 0x3B800000
 	.4byte 0x00000000
-.sym lbl_8066C5C0, global
+.global lbl_8066C5C0
+lbl_8066C5C0:
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C5C8, global
+.global lbl_8066C5C8
+lbl_8066C5C8:
 	.4byte 0x43800000
 	.4byte 0x00000000

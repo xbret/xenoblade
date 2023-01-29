@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/dvd/dvdqueue.o"
 
-# 0x8030F470 - 0x8030F6F0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __DVDClearWaitingQueue, global
@@ -199,7 +198,6 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj WaitingQueue, local
+WaitingQueue:
 	.skip 0x20
-.endobj WaitingQueue
 	.skip 0x10

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/cx/CXUncompression.o"
 
-# 0x80308D70 - 0x80308F10
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn CXGetUncompressedSize, global

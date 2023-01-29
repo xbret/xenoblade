@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/mtx/mtxvec.o"
 
-# 0x8034DDF0 - 0x8034DE50
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn PSMTXMultVec, global

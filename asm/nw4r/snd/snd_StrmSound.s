@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_StrmSound.o"
 
-# 0x80424FBC - 0x8042574C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::StrmSound::StrmSound(nw4r::snd::detail::SoundInstanceManager_Q44nw4r3snd6detail9StrmSound_*, int, int)
@@ -591,7 +590,8 @@
 # 0x8056E5D0 - 0x8056E608
 .data
 .balign 8
-.sym lbl_8056E5D0, global
+.global lbl_8056E5D0
+lbl_8056E5D0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv
@@ -610,16 +610,20 @@
 # 0x80667E00 - 0x80667E08
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E00, global
+.global lbl_80667E00
+lbl_80667E00:
 	.skip 0x8
 
 # 0x8066C888 - 0x8066C898
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C888, global
+.global lbl_8066C888
+lbl_8066C888:
 	.4byte 0x00000000
-.sym lbl_8066C88C, global
+.global lbl_8066C88C
+lbl_8066C88C:
 	.4byte 0x3F800000
-.sym lbl_8066C890, global
+.global lbl_8066C890
+lbl_8066C890:
 	.4byte 0x43300000
 	.4byte 0x80000000

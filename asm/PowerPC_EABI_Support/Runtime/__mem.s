@@ -1,5 +1,4 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/Runtime/__mem.o"
 
 # 0x80004000 - 0x80004380
 .section .init, "ax"

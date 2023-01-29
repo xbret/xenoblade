@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/HBMController.o"
 
-# 0x80320D80 - 0x80321990
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 # homebutton::Controller::wpadConnectCallback(long, long)
@@ -920,23 +919,31 @@
 # 0x80518680 - 0x80518690
 .rodata
 .balign 8
-.sym lbl_80518680, global
+.global lbl_80518680
+lbl_80518680:
 	.4byte 0x3F800000
-.sym lbl_80518684, global
+.global lbl_80518684
+lbl_80518684:
 	.4byte 0xC61C4000
-.sym lbl_80518688, global
+.global lbl_80518688
+lbl_80518688:
 	.4byte 0xC66A6000
-.sym lbl_8051868C, global
+.global lbl_8051868C
+lbl_8051868C:
 	.4byte 0x41200000
 
 # 0x805CD5B0 - 0x805CD748
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CD5B0, global
+.global lbl_805CD5B0
+lbl_805CD5B0:
 	.skip 0x8
-.sym lbl_805CD5B8, global
+.global lbl_805CD5B8
+lbl_805CD5B8:
 	.skip 0xC0
-.sym lbl_805CD678, global
+.global lbl_805CD678
+lbl_805CD678:
 	.skip 0xC0
-.sym lbl_805CD738, global
+.global lbl_805CD738
+lbl_805CD738:
 	.skip 0x10

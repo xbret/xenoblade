@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_AxVoiceManager.o"
 
-# 0x80410B80 - 0x804115B4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::AxVoiceManager::GetInstance()
@@ -211,7 +210,7 @@
 .L_80410E2C:
 /* 80410E2C 003DA3EC  7F 83 E3 78 */	mr r3, r28
 /* 80410E30 003DA3F0  38 80 FF FF */	li r4, -0x1
-/* 80410E34 003DA3F4  4B FF D0 D1 */	bl fn_8040DF04
+/* 80410E34 003DA3F4  4B FF D0 D1 */	bl func_8040DF04
 /* 80410E38 003DA3F8  4B F4 7B 79 */	bl OSDisableInterrupts
 /* 80410E3C 003DA3FC  88 1C 00 1D */	lbz r0, 0x1d(r28)
 /* 80410E40 003DA400  7C 7D 1B 78 */	mr r29, r3
@@ -285,7 +284,7 @@
 .L_80410F34:
 /* 80410F34 003DA4F4  7F 83 E3 78 */	mr r3, r28
 /* 80410F38 003DA4F8  38 80 FF FF */	li r4, -0x1
-/* 80410F3C 003DA4FC  4B FF CF C9 */	bl fn_8040DF04
+/* 80410F3C 003DA4FC  4B FF CF C9 */	bl func_8040DF04
 /* 80410F40 003DA500  4B F4 7A 71 */	bl OSDisableInterrupts
 /* 80410F44 003DA504  88 1C 00 1D */	lbz r0, 0x1d(r28)
 /* 80410F48 003DA508  7C 7E 1B 78 */	mr r30, r3
@@ -325,7 +324,7 @@
 /* 80410FC0 003DA580  48 01 A4 D5 */	bl Erase__Q44nw4r2ut6detail12LinkListImplFQ54nw4r2ut6detail12LinkListImpl8Iterator
 /* 80410FC4 003DA584  38 7C FF C0 */	addi r3, r28, -0x40
 /* 80410FC8 003DA588  38 80 FF FF */	li r4, -0x1
-/* 80410FCC 003DA58C  4B FF CF 39 */	bl fn_8040DF04
+/* 80410FCC 003DA58C  4B FF CF 39 */	bl func_8040DF04
 .L_80410FD0:
 /* 80410FD0 003DA590  80 1F 00 0C */	lwz r0, 0xc(r31)
 /* 80410FD4 003DA594  2C 00 00 00 */	cmpwi r0, 0x0
@@ -419,7 +418,7 @@
 .L_80411114:
 /* 80411114 003DA6D4  7F 23 CB 78 */	mr r3, r25
 /* 80411118 003DA6D8  38 80 FF FF */	li r4, -0x1
-/* 8041111C 003DA6DC  4B FF CD E9 */	bl fn_8040DF04
+/* 8041111C 003DA6DC  4B FF CD E9 */	bl func_8040DF04
 /* 80411120 003DA6E0  4B F4 78 91 */	bl OSDisableInterrupts
 /* 80411124 003DA6E4  88 19 00 1D */	lbz r0, 0x1d(r25)
 /* 80411128 003DA6E8  7C 71 1B 78 */	mr r17, r3
@@ -497,7 +496,7 @@
 /* 80411228 003DA7E8  40 82 00 78 */	bne .L_804112A0
 /* 8041122C 003DA7EC  7E 43 93 78 */	mr r3, r18
 /* 80411230 003DA7F0  38 80 FF FF */	li r4, -0x1
-/* 80411234 003DA7F4  4B FF CC D1 */	bl fn_8040DF04
+/* 80411234 003DA7F4  4B FF CC D1 */	bl func_8040DF04
 /* 80411238 003DA7F8  4B F4 77 79 */	bl OSDisableInterrupts
 /* 8041123C 003DA7FC  88 12 00 1D */	lbz r0, 0x1d(r18)
 /* 80411240 003DA800  7C 71 1B 78 */	mr r17, r3
@@ -564,7 +563,7 @@
 .L_80411314:
 /* 80411314 003DA8D4  7F A3 EB 78 */	mr r3, r29
 /* 80411318 003DA8D8  38 80 FF FF */	li r4, -0x1
-/* 8041131C 003DA8DC  4B FF CB E9 */	bl fn_8040DF04
+/* 8041131C 003DA8DC  4B FF CB E9 */	bl func_8040DF04
 /* 80411320 003DA8E0  4B F4 76 91 */	bl OSDisableInterrupts
 /* 80411324 003DA8E4  88 1D 00 1D */	lbz r0, 0x1d(r29)
 /* 80411328 003DA8E8  7C 7E 1B 78 */	mr r30, r3
@@ -711,7 +710,7 @@
 .L_80411528:
 /* 80411528 003DAAE8  7E A3 AB 78 */	mr r3, r21
 /* 8041152C 003DAAEC  38 80 FF FF */	li r4, -0x1
-/* 80411530 003DAAF0  4B FF C9 D5 */	bl fn_8040DF04
+/* 80411530 003DAAF0  4B FF C9 D5 */	bl func_8040DF04
 /* 80411534 003DAAF4  4B F4 74 7D */	bl OSDisableInterrupts
 /* 80411538 003DAAF8  88 15 00 1D */	lbz r0, 0x1d(r21)
 /* 8041153C 003DAAFC  7C 7D 1B 78 */	mr r29, r3
@@ -753,13 +752,16 @@
 # 0x8063B168 - 0x8063B1A0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8063B168, global
+.global lbl_8063B168
+lbl_8063B168:
 	.skip 0xC
-.sym lbl_8063B174, global
+.global lbl_8063B174
+lbl_8063B174:
 	.skip 0x2C
 
 # 0x80667DA0 - 0x80667DA8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DA0, global
+.global lbl_80667DA0
+lbl_80667DA0:
 	.skip 0x8

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSStateTM.o"
 
-# 0x8035D020 - 0x8035D730
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn OSSetResetCallback, global
@@ -550,11 +549,13 @@
 	.byte 0x6F, 0x6B, 0x00
 .endobj "@981"
 	.byte 0x00
-.sym lbl_8055EC20, global
+.global lbl_8055EC20
+lbl_8055EC20:
 	.4byte 0x4F535374
 	.4byte 0x61746554
 	.4byte 0x4D2E6300
-.sym lbl_8055EC2C, global
+.global lbl_8055EC2C
+lbl_8055EC2C:
 	.4byte 0x4572726F
 	.4byte 0x723A2054
 	.4byte 0x68652066
@@ -569,7 +570,8 @@
 	.4byte 0x20666561
 	.4byte 0x74757265
 	.4byte 0x2E0A0000
-.sym lbl_8055EC64, global
+.global lbl_8055EC64
+lbl_8055EC64:
 	.4byte 0x4572726F
 	.4byte 0x723A2054
 	.4byte 0x68652066
@@ -584,7 +586,8 @@
 	.4byte 0x65617475
 	.4byte 0x72652E0A
 	.4byte 0x00000000
-.sym lbl_8055EC9C, global
+.global lbl_8055EC9C
+lbl_8055EC9C:
 	.4byte 0x4572726F
 	.4byte 0x72206F6E
 	.4byte 0x2053544D
@@ -599,54 +602,48 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj StmEhInBuf, local
+StmEhInBuf:
 	.skip 0x20
-.endobj StmEhInBuf
 
-.obj StmEhOutBuf, local
+StmEhOutBuf:
 	.skip 0x20
-.endobj StmEhOutBuf
-.sym lbl_805D51A0, global
+.global lbl_805D51A0
+lbl_805D51A0:
 	.skip 0x20
-.sym lbl_805D51C0, global
+.global lbl_805D51C0
+lbl_805D51C0:
 	.skip 0x20
-.sym lbl_805D51E0, global
+.global lbl_805D51E0
+lbl_805D51E0:
 	.skip 0x20
-.sym lbl_805D5200, global
+.global lbl_805D5200
+lbl_805D5200:
 	.skip 0x20
 
 # 0x80667AE0 - 0x80667B00
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj ResetDown, local
+ResetDown:
 	.skip 0x4
-.endobj ResetDown
 
-.obj StmReady, local
+StmReady:
 	.skip 0x4
-.endobj StmReady
 
-.obj StmImDesc, local
+StmImDesc:
 	.skip 0x4
-.endobj StmImDesc
 
-.obj StmEhDesc, local
+StmEhDesc:
 	.skip 0x4
-.endobj StmEhDesc
 
-.obj StmEhRegistered, local
+StmEhRegistered:
 	.skip 0x4
-.endobj StmEhRegistered
 
-.obj StmVdInUse, local
+StmVdInUse:
 	.skip 0x4
-.endobj StmVdInUse
 
-.obj PowerCallback, local
+PowerCallback:
 	.skip 0x4
-.endobj PowerCallback
 
-.obj ResetCallback, local
+ResetCallback:
 	.skip 0x4
-.endobj ResetCallback

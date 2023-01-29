@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_light.o"
 
-# 0x803FD324 - 0x803FE0B8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::LightObj::LightObj(const nw4r::g3d::LightObj&)
@@ -1009,38 +1008,55 @@
 # 0x8066C500 - 0x8066C530
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C500, global
+.global lbl_8066C500
+lbl_8066C500:
 	.4byte 0x00000000
-.sym lbl_8066C504, global
+.global lbl_8066C504
+lbl_8066C504:
 	.4byte 0x3F800000
-.sym lbl_8066C508, global
+.global lbl_8066C508
+lbl_8066C508:
 	.4byte 0x3F000000
-.sym lbl_8066C50C, global
+.global lbl_8066C50C
+lbl_8066C50C:
 	.byte 0xFF
-.sym lbl_8066C50D, global
+.global lbl_8066C50D
+lbl_8066C50D:
 	.byte 0xFF
-.sym lbl_8066C50E, global
+.global lbl_8066C50E
+lbl_8066C50E:
 	.byte 0xFF
-.sym lbl_8066C50F, global
+.global lbl_8066C50F
+lbl_8066C50F:
 	.byte 0xFF
-.sym lbl_8066C510, global
+.global lbl_8066C510
+lbl_8066C510:
 	.byte 0xFF
-.sym lbl_8066C511, global
+.global lbl_8066C511
+lbl_8066C511:
 	.byte 0xFF
-.sym lbl_8066C512, global
+.global lbl_8066C512
+lbl_8066C512:
 	.byte 0xFF
-.sym lbl_8066C513, global
+.global lbl_8066C513
+lbl_8066C513:
 	.byte 0xFF
-.sym lbl_8066C514, global
+.global lbl_8066C514
+lbl_8066C514:
 	.4byte 0x4A742400
-.sym lbl_8066C518, global
+.global lbl_8066C518
+lbl_8066C518:
 	.4byte 0xBF800000
-.sym lbl_8066C51C, global
+.global lbl_8066C51C
+lbl_8066C51C:
 	.4byte 0x42B40000
-.sym lbl_8066C520, global
+.global lbl_8066C520
+lbl_8066C520:
 	.4byte 0x41200000
-.sym lbl_8066C524, global
+.global lbl_8066C524
+lbl_8066C524:
 	.4byte 0x41000000
-.sym lbl_8066C528, global
+.global lbl_8066C528
+lbl_8066C528:
 	.4byte 0xC0E00000
 	.4byte 0x00000000

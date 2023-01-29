@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/axfx/AXFXReverbHi.o"
 
-# 0x802D5710 - 0x802D57C0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn AXFXReverbHiInit, global
@@ -61,7 +60,9 @@
 # 0x8066BDD8 - 0x8066BDE0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BDD8, global
+.global lbl_8066BDD8
+lbl_8066BDD8:
 	.4byte 0x00000000
-.sym lbl_8066BDDC, global
+.global lbl_8066BDDC
+lbl_8066BDDC:
 	.4byte 0x3F800000

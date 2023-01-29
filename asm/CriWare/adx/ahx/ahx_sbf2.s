@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/ahx/ahx_sbf2.o"
 
-# 0x8038C368 - 0x8038C42C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn AHXSBF_Synthesize, global
@@ -62,7 +61,8 @@
 # 0x805657B8 - 0x805657F8
 .data
 .balign 8
-.sym lbl_805657B8, global
+.global lbl_805657B8
+lbl_805657B8:
 	.4byte ahxsbf_mult_float_win0
 	.4byte ahxsbf_mult_float_win1
 	.4byte ahxsbf_mult_float_win2

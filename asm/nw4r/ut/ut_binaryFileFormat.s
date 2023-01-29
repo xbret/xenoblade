@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/ut/ut_binaryFileFormat.o"
 
-# 0x8042B57C - 0x8042B5F0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::ut::IsValidBinaryFile(const nw4r::ut::BinaryFileHeader*, unsigned long, unsigned short, unsigned short)

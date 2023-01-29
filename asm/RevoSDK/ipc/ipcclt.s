@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/ipc/ipcclt.o"
 
-# 0x80342AB0 - 0x803443B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn strnlen, global
@@ -1837,36 +1836,36 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj __responses, local
+__responses:
 	.skip 0x50
-.endobj __responses
 
-.obj __timeout_alarm, local
+__timeout_alarm:
 	.skip 0x30
-.endobj __timeout_alarm
-.sym lbl_805CE440, global
+.global lbl_805CE440
+lbl_805CE440:
 	.skip 0x40
 
 # 0x80665A50 - 0x80665A58
 .section .sdata, "wa"
 .balign 8
 
-.obj __mailboxAck, local
+__mailboxAck:
 	.4byte 0x00000001
-.endobj __mailboxAck
 
-.obj hid, local
+hid:
 	.4byte 0xFFFFFFFF
-.endobj hid
 
 # 0x80667980 - 0x80667990
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667980, global
+.global lbl_80667980
+lbl_80667980:
 	.skip 0x4
-.sym lbl_80667984, global
+.global lbl_80667984
+lbl_80667984:
 	.skip 0x4
-.sym lbl_80667988, global
+.global lbl_80667988
+lbl_80667988:
 	.skip 0x4
 
 # IPCCltInit()::initialized

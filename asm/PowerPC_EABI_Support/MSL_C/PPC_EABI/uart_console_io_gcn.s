@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/PPC_EABI/uart_console_io_gcn.o"
 
-# 0x802C7110 - 0x802C71E8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __write_console, global
@@ -73,5 +72,6 @@
 .section .sbss, "wa", @nobits
 .balign 4
 	.skip 0x4
-.sym lbl_80667538, global
+.global lbl_80667538
+lbl_80667538:
 	.skip 0x8

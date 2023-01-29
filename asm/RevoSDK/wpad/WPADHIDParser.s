@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/wpad/WPADHIDParser.o"
 
-# 0x80370700 - 0x803749D0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __wpadAbortInitExtension, global
@@ -3057,7 +3056,7 @@
 .endfn __parse_cl_data
 /* 8037334C 0033C90C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80373350, global
+.fn func_80373350, global
 /* 80373350 0033C910  80 64 00 00 */	lwz r3, 0x0(r4)
 /* 80373354 0033C914  28 87 00 15 */	cmplwi cr1, r7, 0x15
 /* 80373358 0033C918  88 06 00 00 */	lbz r0, 0x0(r6)
@@ -3170,7 +3169,7 @@
 /* 80373500 0033CAC0  88 06 00 14 */	lbz r0, 0x14(r6)
 /* 80373504 0033CAC4  98 03 00 49 */	stb r0, 0x49(r3)
 /* 80373508 0033CAC8  4E 80 00 20 */	blr
-.endfn fn_80373350
+.endfn func_80373350
 /* 8037350C 0033CACC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
 .fn __a1_30_data_type, global
@@ -3934,7 +3933,7 @@
 /* 80374014 0033D5D4  38 DB 00 06 */	addi r6, r27, 0x6
 /* 80374018 0033D5D8  54 05 06 3E */	clrlwi r5, r0, 24
 /* 8037401C 0033D5DC  38 E0 00 10 */	li r7, 0x10
-/* 80374020 0033D5E0  4B FF F3 31 */	bl fn_80373350
+/* 80374020 0033D5E0  4B FF F3 31 */	bl func_80373350
 .L_80374024:
 /* 80374024 0033D5E4  3C 60 80 5E */	lis r3, lbl_805E1250@ha
 /* 80374028 0033D5E8  3C 80 80 52 */	lis r4, lbl_80518E08@ha
@@ -4331,7 +4330,7 @@
 /* 803745E0 0033DBA0  38 DD 00 01 */	addi r6, r29, 0x1
 /* 803745E4 0033DBA4  54 05 06 3E */	clrlwi r5, r0, 24
 /* 803745E8 0033DBA8  38 E0 00 15 */	li r7, 0x15
-/* 803745EC 0033DBAC  4B FF ED 65 */	bl fn_80373350
+/* 803745EC 0033DBAC  4B FF ED 65 */	bl func_80373350
 .L_803745F0:
 /* 803745F0 0033DBB0  3C 60 80 5E */	lis r3, lbl_805E1250@ha
 /* 803745F4 0033DBB4  3C 80 80 52 */	lis r4, lbl_80518E08@ha
@@ -4606,7 +4605,8 @@
 # 0x80518E08 - 0x80518E20
 .rodata
 .balign 8
-.sym lbl_80518E08, global
+.global lbl_80518E08
+lbl_80518E08:
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
@@ -4617,7 +4617,8 @@
 # 0x80560A30 - 0x80560FA0
 .data
 .balign 8
-.sym lbl_80560A30, global
+.global lbl_80560A30
+lbl_80560A30:
 	.4byte __a1_20_status_report
 	.4byte __a1_21_user_data
 	.4byte __a1_22_ack
@@ -4650,7 +4651,8 @@
 	.4byte __a1_3d_data_type
 	.4byte __a1_3e_data_type
 	.4byte __a1_3f_data_type
-.sym lbl_80560AB0, global
+.global lbl_80560AB0
+lbl_80560AB0:
 	.4byte 0x64657461
 	.4byte 0x6368696E
 	.4byte 0x67206578
@@ -4889,13 +4891,15 @@
 	.4byte 0x6C696272
 	.4byte 0x6174696F
 	.4byte 0x6E210A00
-.sym lbl_80560E68, global
+.global lbl_80560E68
+lbl_80560E68:
 	.4byte 0x52656365
 	.4byte 0x69766564
 	.4byte 0x20726570
 	.4byte 0x6F727420
 	.4byte 0x32300A00
-.sym lbl_80560E7C, global
+.global lbl_80560E7C
+lbl_80560E7C:
 	.4byte 0x696E6974
 	.4byte 0x69616C69
 	.4byte 0x7A652061
@@ -4973,69 +4977,95 @@
 # 0x805E1200 - 0x805E1280
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E1200, global
+.global lbl_805E1200
+lbl_805E1200:
 	.skip 0x50
-.sym lbl_805E1250, global
+.global lbl_805E1250
+lbl_805E1250:
 	.skip 0x30
 
 # 0x80667CC0 - 0x80667CD8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667CC0, global
+.global lbl_80667CC0
+lbl_80667CC0:
 	.skip 0x4
-.sym lbl_80667CC4, global
+.global lbl_80667CC4
+lbl_80667CC4:
 	.skip 0x4
-.sym lbl_80667CC8, global
+.global lbl_80667CC8
+lbl_80667CC8:
 	.skip 0x4
-.sym lbl_80667CCC, global
+.global lbl_80667CCC
+lbl_80667CCC:
 	.skip 0x4
-.sym lbl_80667CD0, global
+.global lbl_80667CD0
+lbl_80667CD0:
 	.skip 0x4
-.sym lbl_80667CD4, global
+.global lbl_80667CD4
+lbl_80667CD4:
 	.skip 0x4
 
 # 0x8066C200 - 0x8066C260
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C200, global
+.global lbl_8066C200
+lbl_8066C200:
 	.4byte 0x007F0380
-.sym lbl_8066C204, global
+.global lbl_8066C204
+lbl_8066C204:
 	.4byte 0x0380007F
-.sym lbl_8066C208, global
+.global lbl_8066C208
+lbl_8066C208:
 	.4byte 0x005D005D
-.sym lbl_8066C20C, global
+.global lbl_8066C20C
+lbl_8066C20C:
 	.4byte 0x02A202A2
-.sym lbl_8066C210, global
+.global lbl_8066C210
+lbl_8066C210:
 	.4byte 0x00000000
-.sym lbl_8066C214, global
+.global lbl_8066C214
+lbl_8066C214:
 	.4byte 0x3E800000
-.sym lbl_8066C218, global
+.global lbl_8066C218
+lbl_8066C218:
 	.4byte 0x42FD0000
-.sym lbl_8066C21C, global
+.global lbl_8066C21C
+lbl_8066C21C:
 	.4byte 0x44A69000
-.sym lbl_8066C220, global
+.global lbl_8066C220
+lbl_8066C220:
 	.4byte 0x3FB84D9D
 	.4byte 0xE0000000
-.sym lbl_8066C228, global
+.global lbl_8066C228
+lbl_8066C228:
 	.4byte 0x42BA0000
-.sym lbl_8066C22C, global
+.global lbl_8066C22C
+lbl_8066C22C:
 	.4byte 0x44A72CCD
-.sym lbl_8066C230, global
+.global lbl_8066C230
+lbl_8066C230:
 	.4byte 0x3FB1CD3C
 	.4byte 0x80000000
-.sym lbl_8066C238, global
+.global lbl_8066C238
+lbl_8066C238:
 	.4byte 0xBF800000
-.sym lbl_8066C23C, global
+.global lbl_8066C23C
+lbl_8066C23C:
 	.4byte 0x43BFC000
-.sym lbl_8066C240, global
+.global lbl_8066C240
+lbl_8066C240:
 	.4byte 0x43FFC000
 	.4byte 0x00000000
-.sym lbl_8066C248, global
+.global lbl_8066C248
+lbl_8066C248:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C250, global
+.global lbl_8066C250
+lbl_8066C250:
 	.4byte 0x40490FD8
 	.4byte 0x00000000
-.sym lbl_8066C258, global
+.global lbl_8066C258
+lbl_8066C258:
 	.4byte 0x43300000
 	.4byte 0x00000000

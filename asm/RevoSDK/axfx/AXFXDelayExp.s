@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/axfx/AXFXDelayExp.o"
 
-# 0x802D65F0 - 0x802D70C0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn AXFXDelayExpGetMemSize, global
@@ -778,14 +777,19 @@
 # 0x8066BE20 - 0x8066BE38
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BE20, global
+.global lbl_8066BE20
+lbl_8066BE20:
 	.4byte 0x42000000
-.sym lbl_8066BE24, global
+.global lbl_8066BE24
+lbl_8066BE24:
 	.4byte 0x00000000
-.sym lbl_8066BE28, global
+.global lbl_8066BE28
+lbl_8066BE28:
 	.4byte 0x3F800000
-.sym lbl_8066BE2C, global
+.global lbl_8066BE2C
+lbl_8066BE2C:
 	.4byte 0x43000000
-.sym lbl_8066BE30, global
+.global lbl_8066BE30
+lbl_8066BE30:
 	.4byte 0x3F733333
 	.4byte 0x00000000

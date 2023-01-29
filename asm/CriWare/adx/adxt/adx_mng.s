@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_mng.o"
 
-# 0x8037F988 - 0x8037F994
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADXMNG_SetFramework, global
@@ -15,6 +14,7 @@
 .data
 .balign 8
 
-.obj adxm_framework, global
+.global adxm_framework
+adxm_framework:
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/ut/ut_Font.o"
 
-# 0x8042BFCC - 0x8042C074
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::ut::Font::InitReaderFunc(nw4r::ut::FontEncoding)
@@ -58,7 +57,8 @@
 # 0x8056E710 - 0x8056E740
 .data
 .balign 8
-.sym lbl_8056E710, global
+.global lbl_8056E710
+lbl_8056E710:
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte ReadNextCharUTF8__Q34nw4r2ut14CharStrmReaderFv

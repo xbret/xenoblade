@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/lsc/lsc_svr.o"
 
-# 0x803919C0 - 0x80391D58
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn lsc_StatWait, global
@@ -263,7 +262,8 @@
 # 0x8051BA60 - 0x8051BAB8
 .rodata
 .balign 8
-.sym lbl_8051BA60, global
+.global lbl_8051BA60
+lbl_8051BA60:
 	.4byte 0x45303031
 	.4byte 0x333A2027
 	.4byte 0x25732720

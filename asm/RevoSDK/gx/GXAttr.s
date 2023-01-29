@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/gx/GXAttr.o"
 
-# 0x80319230 - 0x80319D80
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn GXSetVtxDesc, global
@@ -862,7 +861,7 @@
 .data
 .balign 8
 
-.obj jumptable_8054B8F0, local
+jumptable_8054B8F0:
 	.rel GXSetVtxDesc, .L_80319250
 	.rel GXSetVtxDesc, .L_80319264
 	.rel GXSetVtxDesc, .L_80319278
@@ -889,9 +888,8 @@
 	.rel GXSetVtxDesc, .L_80319444
 	.rel GXSetVtxDesc, .L_80319444
 	.rel GXSetVtxDesc, .L_8031934C
-.endobj jumptable_8054B8F0
 
-.obj jumptable_8054B958, local
+jumptable_8054B958:
 	.rel GXSetVtxAttrFmt, .L_803196F0
 	.rel GXSetVtxAttrFmt, .L_80319708
 	.rel GXSetVtxAttrFmt, .L_80319744
@@ -909,9 +907,8 @@
 	.rel GXSetVtxAttrFmt, .L_80319830
 	.rel GXSetVtxAttrFmt, .L_80319830
 	.rel GXSetVtxAttrFmt, .L_80319708
-.endobj jumptable_8054B958
 
-.obj jumptable_8054B99C, local
+jumptable_8054B99C:
 	.rel GXSetVtxAttrFmtv, .L_803198A8
 	.rel GXSetVtxAttrFmtv, .L_803198C0
 	.rel GXSetVtxAttrFmtv, .L_803198FC
@@ -929,9 +926,8 @@
 	.rel GXSetVtxAttrFmtv, .L_803199E8
 	.rel GXSetVtxAttrFmtv, .L_803199E8
 	.rel GXSetVtxAttrFmtv, .L_803198C0
-.endobj jumptable_8054B99C
 
-.obj jumptable_8054B9E0, local
+jumptable_8054B9E0:
 	.rel GXSetTexCoordGen2, .L_80319B2C
 	.rel GXSetTexCoordGen2, .L_80319B38
 	.rel GXSetTexCoordGen2, .L_80319B44
@@ -953,9 +949,9 @@
 	.rel GXSetTexCoordGen2, .L_80319BA8
 	.rel GXSetTexCoordGen2, .L_80319B5C
 	.rel GXSetTexCoordGen2, .L_80319B64
-.endobj jumptable_8054B9E0
 	.4byte 0x00000000
-.sym lbl_8054BA38, global
+.global lbl_8054BA38
+lbl_8054BA38:
 	.4byte 0x00000001
 	.4byte 0x028000F0
 	.4byte 0x00F00028
@@ -971,7 +967,8 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BA74, global
+.global lbl_8054BA74
+lbl_8054BA74:
 	.4byte 0x00000000
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -987,7 +984,8 @@
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
-.sym lbl_8054BAB0, global
+.global lbl_8054BAB0
+lbl_8054BAB0:
 	.4byte 0x00000000
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1003,7 +1001,8 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BAEC, global
+.global lbl_8054BAEC
+lbl_8054BAEC:
 	.4byte 0x00000002
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1019,7 +1018,8 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BB28, global
+.global lbl_8054BB28
+lbl_8054BB28:
 	.4byte 0x00000002
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1035,7 +1035,8 @@
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
-.sym lbl_8054BB64, global
+.global lbl_8054BB64
+lbl_8054BB64:
 	.4byte 0x00000009
 	.4byte 0x028000F0
 	.4byte 0x00F00028
@@ -1051,7 +1052,8 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BBA0, global
+.global lbl_8054BBA0
+lbl_8054BBA0:
 	.4byte 0x00000008
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1067,7 +1069,8 @@
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
-.sym lbl_8054BBDC, global
+.global lbl_8054BBDC
+lbl_8054BBDC:
 	.4byte 0x00000008
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1083,7 +1086,8 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BC18, global
+.global lbl_8054BC18
+lbl_8054BC18:
 	.4byte 0x0000000A
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1099,7 +1103,8 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BC54, global
+.global lbl_8054BC54
+lbl_8054BC54:
 	.4byte 0x0000000A
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1115,7 +1120,8 @@
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
-.sym lbl_8054BC90, global
+.global lbl_8054BC90
+lbl_8054BC90:
 	.4byte 0x00000005
 	.4byte 0x02800108
 	.4byte 0x01080028
@@ -1131,7 +1137,8 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BCCC, global
+.global lbl_8054BCCC
+lbl_8054BCCC:
 	.4byte 0x00000004
 	.4byte 0x02800210
 	.4byte 0x02100028
@@ -1147,7 +1154,8 @@
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
-.sym lbl_8054BD08, global
+.global lbl_8054BD08
+lbl_8054BD08:
 	.4byte 0x00000004
 	.4byte 0x02800210
 	.4byte 0x02100028
@@ -1163,7 +1171,8 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BD44, global
+.global lbl_8054BD44
+lbl_8054BD44:
 	.4byte 0x00000015
 	.4byte 0x028000F0
 	.4byte 0x00F00028
@@ -1179,7 +1188,8 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BD80, global
+.global lbl_8054BD80
+lbl_8054BD80:
 	.4byte 0x00000014
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1195,7 +1205,8 @@
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
-.sym lbl_8054BDBC, global
+.global lbl_8054BDBC
+lbl_8054BDBC:
 	.4byte 0x00000014
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1211,7 +1222,8 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BDF8, global
+.global lbl_8054BDF8
+lbl_8054BDF8:
 	.4byte 0x00000016
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1227,7 +1239,8 @@
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0x00000000
-.sym lbl_8054BE34, global
+.global lbl_8054BE34
+lbl_8054BE34:
 	.4byte 0x00000016
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1247,10 +1260,13 @@
 # 0x806659F8 - 0x80665A08
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806659F8, global
+.global lbl_806659F8
+lbl_806659F8:
 	.4byte 0x00040102
-.sym lbl_806659FC, global
+.global lbl_806659FC
+lbl_806659FC:
 	.4byte 0x00080102
-.sym lbl_80665A00, global
+.global lbl_80665A00
+lbl_80665A00:
 	.4byte 0x000C0102
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/lyt/lyt_common.o"
 
-# 0x8040A028 - 0x8040AB80
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::lyt::detail::EqualsResName(const char*, const char*)
@@ -838,19 +837,23 @@
 # 0x8063AD00 - 0x8063AD20
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8063AD00, global
+.global lbl_8063AD00
+lbl_8063AD00:
 	.skip 0x20
 
 # 0x80667D80 - 0x80667D88
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D80, global
+.global lbl_80667D80
+lbl_80667D80:
 	.skip 0x8
 
 # 0x8066C5F8 - 0x8066C600
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C5F8, global
+.global lbl_8066C5F8
+lbl_8066C5F8:
 	.4byte 0x00000000
-.sym lbl_8066C5FC, global
+.global lbl_8066C5FC
+lbl_8066C5FC:
 	.4byte 0x3F800000

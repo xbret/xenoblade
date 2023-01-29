@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/ut/ut_TagProcessorBase.o"
 
-# 0x8042B700 - 0x8042BDD0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::ut::TagProcessorBase_c_::TagProcessorBase_c_()
@@ -502,13 +501,15 @@
 # 0x8056E6E8 - 0x8056E710
 .data
 .balign 8
-.sym lbl_8056E6E8, global
+.global lbl_8056E6E8
+lbl_8056E6E8:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r2ut19TagProcessorBase_w_Fv
 	.4byte Process__Q34nw4r2ut19TagProcessorBase_w_FUsPQ34nw4r2ut15PrintContext_w
 	.4byte CalcRect__Q34nw4r2ut19TagProcessorBase_w_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_w
-.sym lbl_8056E6FC, global
+.global lbl_8056E6FC
+lbl_8056E6FC:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r2ut19TagProcessorBase_c_Fv
@@ -518,6 +519,7 @@
 # 0x8066C930 - 0x8066C938
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C930, global
+.global lbl_8066C930
+lbl_8066C930:
 	.4byte 0x43300000
 	.4byte 0x80000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/mwply/mwsfx_Y84C44.o"
 
-# 0x803A39AC - 0x803A3A48
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn mwPlyFxCnvFrmY84C44, global

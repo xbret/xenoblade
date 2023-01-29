@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/tpl/TPL.o"
 
-# 0x803627C0 - 0x803629E0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn TPLBind, global
@@ -158,7 +157,8 @@
 # 0x8055F240 - 0x8055F270
 .data
 .balign 8
-.sym lbl_8055F240, global
+.global lbl_8055F240
+lbl_8055F240:
 	.4byte 0x696E7661
 	.4byte 0x6C696420
 	.4byte 0x76657273
@@ -175,13 +175,15 @@
 # 0x80665CE8 - 0x80665CF0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665CE8, global
+.global lbl_80665CE8
+lbl_80665CE8:
 	.4byte 0x54504C2E
 	.4byte 0x63000000
 
 # 0x8066C1E8 - 0x8066C1F0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C1E8, global
+.global lbl_8066C1E8
+lbl_8066C1E8:
 	.4byte 0x43300000
 	.4byte 0x00000000

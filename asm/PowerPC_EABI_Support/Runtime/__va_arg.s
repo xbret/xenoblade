@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/Runtime/__va_arg.o"
 
-# 0x802B95D4 - 0x802B969C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __va_arg, global

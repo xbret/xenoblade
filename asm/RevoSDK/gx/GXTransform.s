@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/gx/GXTransform.o"
 
-# 0x8031E4F0 - 0x8031EA70
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __GXSetProjection, global
@@ -420,10 +419,13 @@
 # 0x8066C0A0 - 0x8066C0B0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C0A0, global
+.global lbl_8066C0A0
+lbl_8066C0A0:
 	.4byte 0x00000000
-.sym lbl_8066C0A4, global
+.global lbl_8066C0A4
+lbl_8066C0A4:
 	.4byte 0x3F000000
-.sym lbl_8066C0A8, global
+.global lbl_8066C0A8
+lbl_8066C0A8:
 	.4byte 0x43AB0000
 	.4byte 0x00000000

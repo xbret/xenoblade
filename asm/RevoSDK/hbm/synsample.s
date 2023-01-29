@@ -1,11 +1,10 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/synsample.o"
 
-# 0x80341A90 - 0x80341F10
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
-.fn fn_80341A90, global
+.fn func_80341A90, global
 /* 80341A90 0030B050  80 C3 00 10 */	lwz r6, 0x10(r3)
 /* 80341A94 0030B054  80 83 00 04 */	lwz r4, 0x4(r3)
 /* 80341A98 0030B058  80 A6 00 08 */	lwz r5, 0x8(r6)
@@ -140,12 +139,12 @@
 /* 80341C98 0030B258  60 00 84 00 */	ori r0, r0, 0x8400
 /* 80341C9C 0030B25C  90 04 00 1C */	stw r0, 0x1c(r4)
 /* 80341CA0 0030B260  4E 80 00 20 */	blr
-.endfn fn_80341A90
+.endfn func_80341A90
 /* 80341CA4 0030B264  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80341CA8 0030B268  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80341CAC 0030B26C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80341CB0, global
+.fn func_80341CB0, global
 /* 80341CB0 0030B270  81 43 00 10 */	lwz r10, 0x10(r3)
 /* 80341CB4 0030B274  80 83 00 04 */	lwz r4, 0x4(r3)
 /* 80341CB8 0030B278  80 AA 00 08 */	lwz r5, 0x8(r10)
@@ -216,9 +215,9 @@
 /* 80341DB4 0030B374  60 00 84 00 */	ori r0, r0, 0x8400
 /* 80341DB8 0030B378  90 04 00 1C */	stw r0, 0x1c(r4)
 /* 80341DBC 0030B37C  4E 80 00 20 */	blr
-.endfn fn_80341CB0
+.endfn func_80341CB0
 
-.fn fn_80341DC0, global
+.fn func_80341DC0, global
 /* 80341DC0 0030B380  81 43 00 10 */	lwz r10, 0x10(r3)
 /* 80341DC4 0030B384  80 83 00 04 */	lwz r4, 0x4(r3)
 /* 80341DC8 0030B388  80 AA 00 08 */	lwz r5, 0x8(r10)
@@ -289,7 +288,7 @@
 /* 80341EC4 0030B484  60 00 84 00 */	ori r0, r0, 0x8400
 /* 80341EC8 0030B488  90 04 00 1C */	stw r0, 0x1c(r4)
 /* 80341ECC 0030B48C  4E 80 00 20 */	blr
-.endfn fn_80341DC0
+.endfn func_80341DC0
 
 .fn __HBMSYNSetupSample, global
 /* 80341ED0 0030B490  80 83 00 18 */	lwz r4, 0x18(r3)
@@ -302,11 +301,11 @@
 /* 80341EEC 0030B4AC  41 82 00 10 */	beq .L_80341EFC
 /* 80341EF0 0030B4B0  4E 80 00 20 */	blr
 .L_80341EF4:
-/* 80341EF4 0030B4B4  4B FF FB 9C */	b fn_80341A90
+/* 80341EF4 0030B4B4  4B FF FB 9C */	b func_80341A90
 .L_80341EF8:
-/* 80341EF8 0030B4B8  4B FF FD B8 */	b fn_80341CB0
+/* 80341EF8 0030B4B8  4B FF FD B8 */	b func_80341CB0
 .L_80341EFC:
-/* 80341EFC 0030B4BC  4B FF FE C4 */	b fn_80341DC0
+/* 80341EFC 0030B4BC  4B FF FE C4 */	b func_80341DC0
 /* 80341F00 0030B4C0  4E 80 00 20 */	blr
 .endfn __HBMSYNSetupSample
 /* 80341F04 0030B4C4  00 00 00 00 */	.4byte 0x00000000 /* invalid */

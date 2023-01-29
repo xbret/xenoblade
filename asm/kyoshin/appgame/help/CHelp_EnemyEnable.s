@@ -1,45 +1,23 @@
 .include "macros.inc"
-.file "kyoshin/appgame/help/CHelp_EnemyEnable.o"
 
-# 0x8001BD90 - 0x8001BD98
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_8001BD90", local
-.hidden "@etb_8001BD90"
-	.4byte 0x10080000
-	.4byte 0x00000000
-.endobj "@etb_8001BD90"
-
-# 0x80033920 - 0x8003392C
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80033920", local
-.hidden "@eti_80033920"
-	.4byte fn_802B8028
-	.4byte 0x0000007C
-	.4byte "@etb_8001BD90"
-.endobj "@eti_80033920"
-
-# 0x802B8028 - 0x802B80A4
-.text
-.balign 4
-
-.fn fn_802B8028, global
+.fn func_802B8028, global
 /* 802B8028 002815E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B802C 002815EC  7C 08 02 A6 */	mflr r0
 /* 802B8030 002815F0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802B8034 002815F4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802B8038 002815F8  93 C1 00 08 */	stw r30, 0x8(r1)
-/* 802B803C 002815FC  4B DF EB 8D */	bl fn_800B6BC8
+/* 802B803C 002815FC  4B DF EB 8D */	bl func_800B6BC8
 /* 802B8040 00281600  80 83 00 04 */	lwz r4, 0x4(r3)
 /* 802B8044 00281604  7C 7F 1B 78 */	mr r31, r3
 /* 802B8048 00281608  83 C4 00 00 */	lwz r30, 0x0(r4)
 /* 802B804C 0028160C  48 00 00 30 */	b .L_802B807C
 .L_802B8050:
 /* 802B8050 00281610  80 7E 00 08 */	lwz r3, 0x8(r30)
-/* 802B8054 00281614  4B DF 58 0D */	bl fn_800AD860
+/* 802B8054 00281614  4B DF 58 0D */	bl func_800AD860
 /* 802B8058 00281618  85 83 3E 9C */	lwzu r12, 0x3e9c(r3)
 /* 802B805C 0028161C  81 8C 00 74 */	lwz r12, 0x74(r12)
 /* 802B8060 00281620  7D 89 03 A6 */	mtctr r12
@@ -62,4 +40,25 @@
 /* 802B8098 00281658  7C 08 03 A6 */	mtlr r0
 /* 802B809C 0028165C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B80A0 00281660  4E 80 00 20 */	blr
-.endfn fn_802B8028
+.endfn func_802B8028
+
+# 0x8001BD90 - 0x8001BD98
+.section extab, "a"
+.balign 4
+
+.obj "@etb_8001BD90", local
+.hidden "@etb_8001BD90"
+	.4byte 0x10080000
+	.4byte 0x00000000
+.endobj "@etb_8001BD90"
+
+# 0x80033920 - 0x8003392C
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80033920", local
+.hidden "@eti_80033920"
+	.4byte func_802B8028
+	.4byte 0x0000007C
+	.4byte "@etb_8001BD90"
+.endobj "@eti_80033920"

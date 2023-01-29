@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/e_pow.o"
 
-# 0x802C819C - 0x802C89B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __ieee754_pow, global
@@ -580,19 +579,17 @@
 	.4byte 0x3FF80000
 	.4byte 0x00000000
 
-.obj dp_h, local
+dp_h:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x3FE2B803
 	.4byte 0x40000000
-.endobj dp_h
 
-.obj dp_l, local
+dp_l:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x3E4CFDEB
 	.4byte 0x43CFD006
-.endobj dp_l
 
 # 0x8066BAB8 - 0x8066BBC8
 .section .sdata2, "a"

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/lyt/lyt_layout.o"
 
-# 0x803FFC74 - 0x80400C60
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SetTagProcessorImpl__Q34nw4r3lyt24_unnamed_lyt_layout_cpp_FPQ34nw4r3lyt4PanePQ34nw4r2ut19TagProcessorBase_w, global
@@ -1239,7 +1238,8 @@
 # 0x8056D258 - 0x8056D298
 .data
 .balign 8
-.sym lbl_8056D258, global
+.global lbl_8056D258
+lbl_8056D258:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt6LayoutFv
@@ -1260,7 +1260,9 @@
 # 0x8066C558 - 0x8066C560
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C558, global
+.global lbl_8066C558
+lbl_8066C558:
 	.4byte 0x00000000
-.sym lbl_8066C55C, global
+.global lbl_8066C55C
+lbl_8066C55C:
 	.4byte 0x3F000000

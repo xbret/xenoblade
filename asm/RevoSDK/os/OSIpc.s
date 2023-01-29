@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSIpc.o"
 
-# 0x8035CFE0 - 0x8035D020
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __OSGetIPCBufferHi, global
@@ -34,16 +33,14 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj IpcBufferLo, local
+IpcBufferLo:
 	.4byte 0xFFFFFFFF
-.endobj IpcBufferLo
 	.4byte 0x00000000
 
 # 0x80667AD8 - 0x80667AE0
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj IpcBufferHi, local
+IpcBufferHi:
 	.skip 0x4
-.endobj IpcBufferHi
 	.skip 0x4

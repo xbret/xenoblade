@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/utl.o"
 
-# 0x802DED80 - 0x802DEDC4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn utl_freebuf, global

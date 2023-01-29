@@ -1,146 +1,7 @@
 .include "macros.inc"
-.file "monolithlib/effect/CERandomizer.o"
 
-# 0x80020798 - 0x800207E8
-.section extab, "a"
-.balign 4
+.section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.obj "@etb_80020798", local
-.hidden "@etb_80020798"
-	.4byte 0x000A0000
-	.4byte 0x00000000
-.endobj "@etb_80020798"
-
-.obj "@etb_800207A0", local
-.hidden "@etb_800207A0"
-	.4byte 0x000A0000
-	.4byte 0x00000000
-.endobj "@etb_800207A0"
-
-.obj "@etb_800207A8", local
-.hidden "@etb_800207A8"
-	.4byte 0x100A0000
-	.4byte 0x00000000
-.endobj "@etb_800207A8"
-
-.obj "@etb_800207B0", local
-.hidden "@etb_800207B0"
-	.4byte 0x000A0000
-	.4byte 0x00000000
-.endobj "@etb_800207B0"
-
-.obj "@etb_800207B8", local
-.hidden "@etb_800207B8"
-	.4byte 0x080A0000
-	.4byte 0x00000000
-.endobj "@etb_800207B8"
-
-.obj "@etb_800207C0", local
-.hidden "@etb_800207C0"
-	.4byte 0x000A0000
-	.4byte 0x00000000
-.endobj "@etb_800207C0"
-
-.obj "@etb_800207C8", local
-.hidden "@etb_800207C8"
-	.4byte 0x000A0000
-	.4byte 0x00000000
-.endobj "@etb_800207C8"
-
-.obj "@etb_800207D0", local
-.hidden "@etb_800207D0"
-	.4byte 0x000A0000
-	.4byte 0x00000000
-.endobj "@etb_800207D0"
-
-.obj "@etb_800207D8", local
-.hidden "@etb_800207D8"
-	.4byte 0x000A0000
-	.4byte 0x00000000
-.endobj "@etb_800207D8"
-
-.obj "@etb_800207E0", local
-.hidden "@etb_800207E0"
-	.4byte 0x000A0000
-	.4byte 0x00000000
-.endobj "@etb_800207E0"
-
-# 0x800387B0 - 0x80038828
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_800387B0", local
-.hidden "@eti_800387B0"
-	.4byte execute__18CERandomizerSimpleFf
-	.4byte 0x0000007C
-	.4byte "@etb_80020798"
-.endobj "@eti_800387B0"
-
-.obj "@eti_800387BC", local
-.hidden "@eti_800387BC"
-	.4byte execute__6CERandFf
-	.4byte 0x00000084
-	.4byte "@etb_800207A0"
-.endobj "@eti_800387BC"
-
-.obj "@eti_800387C8", local
-.hidden "@eti_800387C8"
-	.4byte randVec__6CERandFP4Vec3
-	.4byte 0x000000C4
-	.4byte "@etb_800207A8"
-.endobj "@eti_800387C8"
-
-.obj "@eti_800387D4", local
-.hidden "@eti_800387D4"
-	.4byte randFHalf__12CERandomizerFv
-	.4byte 0x0000004C
-	.4byte "@etb_800207B0"
-.endobj "@eti_800387D4"
-
-.obj "@eti_800387E0", local
-.hidden "@eti_800387E0"
-	.4byte randSignVec__6CERandFP4Vec3
-	.4byte 0x000000B8
-	.4byte "@etb_800207B8"
-.endobj "@eti_800387E0"
-
-.obj "@eti_800387EC", local
-.hidden "@eti_800387EC"
-	.4byte randSign__12CERandomizerFv
-	.4byte 0x00000040
-	.4byte "@etb_800207C0"
-.endobj "@eti_800387EC"
-
-.obj "@eti_800387F8", local
-.hidden "@eti_800387F8"
-	.4byte randSign__18CERandomizerSimpleFv
-	.4byte 0x00000040
-	.4byte "@etb_800207C8"
-.endobj "@eti_800387F8"
-
-.obj "@eti_80038804", local
-.hidden "@eti_80038804"
-	.4byte randFHalf__18CERandomizerSimpleFv
-	.4byte 0x00000054
-	.4byte "@etb_800207D0"
-.endobj "@eti_80038804"
-
-.obj "@eti_80038810", local
-.hidden "@eti_80038810"
-	.4byte randF__18CERandomizerSimpleFv
-	.4byte 0x0000004C
-	.4byte "@etb_800207D8"
-.endobj "@eti_80038810"
-
-.obj "@eti_8003881C", local
-.hidden "@eti_8003881C"
-	.4byte randF__12CERandomizerFv
-	.4byte 0x00000044
-	.4byte "@etb_800207E0"
-.endobj "@eti_8003881C"
-
-# 0x804DB438 - 0x804DB980
-.text
 .balign 4
 
 # CERandomizerSimple::CERandomizerSimple()
@@ -569,19 +430,22 @@
 .rodata
 .balign 8
 
-.obj CERandomizerSimple_typestr, global
+.global CERandomizerSimple_typestr
+CERandomizerSimple_typestr:
 	.4byte 0x43455261
 	.4byte 0x6E646F6D
 	.4byte 0x697A6572
 	.4byte 0x53696D70
 	.4byte 0x6C650000
 
-.obj IRandomizer_typestr, global
+.global IRandomizer_typestr
+IRandomizer_typestr:
 	.4byte 0x4952616E
 	.4byte 0x646F6D69
 	.4byte 0x7A657200
 
-.obj CERandomizer_typestr, global
+.global CERandomizer_typestr
+CERandomizer_typestr:
 	.4byte 0x43455261
 	.4byte 0x6E646F6D
 	.4byte 0x697A6572
@@ -592,7 +456,8 @@
 .balign 8
 
 # CERandomizerSimple::__vtable
-.obj __vt__18CERandomizerSimple, global
+.global __vt__18CERandomizerSimple
+__vt__18CERandomizerSimple:
 	.4byte __RTTI__CERandomizerSimple
 	.4byte 0x00000000
 	.4byte rand__18CERandomizerSimpleFv
@@ -600,13 +465,15 @@
 	.4byte randFHalf__18CERandomizerSimpleFv
 	.4byte randSign__18CERandomizerSimpleFv
 
-.obj CERandomizerSimple_hierarchy, global
+.global CERandomizerSimple_hierarchy
+CERandomizerSimple_hierarchy:
 	.4byte __RTTI__IRandomizer
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-.obj __vt__CERandomizer, global
+.global __vt__CERandomizer
+__vt__CERandomizer:
 	.4byte __RTTI__CERandomizer
 	.4byte 0x00000000
 	.4byte rand__12CERandomizerFv
@@ -614,7 +481,8 @@
 	.4byte randFHalf__12CERandomizerFv
 	.4byte randSign__12CERandomizerFv
 
-.obj CERandomizer_hierarchy, global
+.global CERandomizer_hierarchy
+CERandomizer_hierarchy:
 	.4byte __RTTI__IRandomizer
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -624,22 +492,26 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj ceRandomizerSimple, global
+.global ceRandomizerSimple
+ceRandomizerSimple:
 	.skip 0x10
 
 # 0x806664D0 - 0x806664E8
 .section .sdata, "wa"
 .balign 8
 
-.obj __RTTI__CERandomizerSimple, global
+.global __RTTI__CERandomizerSimple
+__RTTI__CERandomizerSimple:
 	.4byte CERandomizerSimple_typestr
 	.4byte CERandomizerSimple_hierarchy
 
-.obj __RTTI__IRandomizer, global
+.global __RTTI__IRandomizer
+__RTTI__IRandomizer:
 	.4byte IRandomizer_typestr
 	.4byte 0x00000000
 
-.obj __RTTI__CERandomizer, global
+.global __RTTI__CERandomizer
+__RTTI__CERandomizer:
 	.4byte CERandomizer_typestr
 	.4byte CERandomizer_hierarchy
 
@@ -647,29 +519,176 @@
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj ceRandomizer, global
+.global ceRandomizer
+ceRandomizer:
 	.skip 0x8
 
 # 0x8066D9D8 - 0x8066DA08
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066D9D8, global
+.global lbl_8066D9D8
+lbl_8066D9D8:
 	.4byte 0x00000000
-.sym lbl_8066D9DC, global
+.global lbl_8066D9DC
+lbl_8066D9DC:
 	.4byte 0x4F000000
-.sym lbl_8066D9E0, global
+.global lbl_8066D9E0
+lbl_8066D9E0:
 	.4byte 0x3F000000
 	.4byte 0x00000000
-.sym lbl_8066D9E8, global
+.global lbl_8066D9E8
+lbl_8066D9E8:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066D9F0, global
+.global lbl_8066D9F0
+lbl_8066D9F0:
 	.4byte 0x3F800000
-.sym lbl_8066D9F4, global
+.global lbl_8066D9F4
+lbl_8066D9F4:
 	.4byte 0xBF800000
-.sym lbl_8066D9F8, global
+.global lbl_8066D9F8
+lbl_8066D9F8:
 	.4byte 0x461C5800
 	.4byte 0x00000000
-.sym lbl_8066DA00, global
+.global lbl_8066DA00
+lbl_8066DA00:
 	.4byte 0x43300000
 	.4byte 0x00000000
+
+# 0x80020798 - 0x800207E8
+.section extab, "a"
+.balign 4
+
+.obj "@etb_80020798", local
+.hidden "@etb_80020798"
+	.4byte 0x000A0000
+	.4byte 0x00000000
+.endobj "@etb_80020798"
+
+.obj "@etb_800207A0", local
+.hidden "@etb_800207A0"
+	.4byte 0x000A0000
+	.4byte 0x00000000
+.endobj "@etb_800207A0"
+
+.obj "@etb_800207A8", local
+.hidden "@etb_800207A8"
+	.4byte 0x100A0000
+	.4byte 0x00000000
+.endobj "@etb_800207A8"
+
+.obj "@etb_800207B0", local
+.hidden "@etb_800207B0"
+	.4byte 0x000A0000
+	.4byte 0x00000000
+.endobj "@etb_800207B0"
+
+.obj "@etb_800207B8", local
+.hidden "@etb_800207B8"
+	.4byte 0x080A0000
+	.4byte 0x00000000
+.endobj "@etb_800207B8"
+
+.obj "@etb_800207C0", local
+.hidden "@etb_800207C0"
+	.4byte 0x000A0000
+	.4byte 0x00000000
+.endobj "@etb_800207C0"
+
+.obj "@etb_800207C8", local
+.hidden "@etb_800207C8"
+	.4byte 0x000A0000
+	.4byte 0x00000000
+.endobj "@etb_800207C8"
+
+.obj "@etb_800207D0", local
+.hidden "@etb_800207D0"
+	.4byte 0x000A0000
+	.4byte 0x00000000
+.endobj "@etb_800207D0"
+
+.obj "@etb_800207D8", local
+.hidden "@etb_800207D8"
+	.4byte 0x000A0000
+	.4byte 0x00000000
+.endobj "@etb_800207D8"
+
+.obj "@etb_800207E0", local
+.hidden "@etb_800207E0"
+	.4byte 0x000A0000
+	.4byte 0x00000000
+.endobj "@etb_800207E0"
+
+# 0x800387B0 - 0x80038828
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_800387B0", local
+.hidden "@eti_800387B0"
+	.4byte execute__18CERandomizerSimpleFf
+	.4byte 0x0000007C
+	.4byte "@etb_80020798"
+.endobj "@eti_800387B0"
+
+.obj "@eti_800387BC", local
+.hidden "@eti_800387BC"
+	.4byte execute__6CERandFf
+	.4byte 0x00000084
+	.4byte "@etb_800207A0"
+.endobj "@eti_800387BC"
+
+.obj "@eti_800387C8", local
+.hidden "@eti_800387C8"
+	.4byte randVec__6CERandFP4Vec3
+	.4byte 0x000000C4
+	.4byte "@etb_800207A8"
+.endobj "@eti_800387C8"
+
+.obj "@eti_800387D4", local
+.hidden "@eti_800387D4"
+	.4byte randFHalf__12CERandomizerFv
+	.4byte 0x0000004C
+	.4byte "@etb_800207B0"
+.endobj "@eti_800387D4"
+
+.obj "@eti_800387E0", local
+.hidden "@eti_800387E0"
+	.4byte randSignVec__6CERandFP4Vec3
+	.4byte 0x000000B8
+	.4byte "@etb_800207B8"
+.endobj "@eti_800387E0"
+
+.obj "@eti_800387EC", local
+.hidden "@eti_800387EC"
+	.4byte randSign__12CERandomizerFv
+	.4byte 0x00000040
+	.4byte "@etb_800207C0"
+.endobj "@eti_800387EC"
+
+.obj "@eti_800387F8", local
+.hidden "@eti_800387F8"
+	.4byte randSign__18CERandomizerSimpleFv
+	.4byte 0x00000040
+	.4byte "@etb_800207C8"
+.endobj "@eti_800387F8"
+
+.obj "@eti_80038804", local
+.hidden "@eti_80038804"
+	.4byte randFHalf__18CERandomizerSimpleFv
+	.4byte 0x00000054
+	.4byte "@etb_800207D0"
+.endobj "@eti_80038804"
+
+.obj "@eti_80038810", local
+.hidden "@eti_80038810"
+	.4byte randF__18CERandomizerSimpleFv
+	.4byte 0x0000004C
+	.4byte "@etb_800207D8"
+.endobj "@eti_80038810"
+
+.obj "@eti_8003881C", local
+.hidden "@eti_8003881C"
+	.4byte randF__12CERandomizerFv
+	.4byte 0x00000044
+	.4byte "@etb_800207E0"
+.endobj "@eti_8003881C"

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_MmlParser.o"
 
-# 0x804175F0 - 0x80418794
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::MmlParser::Parse(nw4r::snd::detail::MmlSeqTrack*, bool) const
@@ -853,7 +852,7 @@
 .L_80418168:
 /* 80418168 003E1728  7F 63 DB 78 */	mr r3, r27
 /* 8041816C 003E172C  7F 24 CB 78 */	mr r4, r25
-/* 80418170 003E1730  48 00 22 6D */	bl fn_8041A3DC
+/* 80418170 003E1730  48 00 22 6D */	bl func_8041A3DC
 /* 80418174 003E1734  2C 03 00 00 */	cmpwi r3, 0x0
 /* 80418178 003E1738  7C 7B 1B 78 */	mr r27, r3
 /* 8041817C 003E173C  41 82 04 40 */	beq .L_804185BC
@@ -1319,7 +1318,8 @@
 # 0x8056E170 - 0x8056E390
 .data
 .balign 8
-.sym lbl_8056E170, global
+.global lbl_8056E170
+lbl_8056E170:
 	.4byte 0x23253038
 	.4byte 0x785B2564
 	.4byte 0x5D3A2070
@@ -1331,7 +1331,7 @@
 	.4byte 0x203D2025
 	.4byte 0x640A0000
 
-.obj jumptable_8056E198, local
+jumptable_8056E198:
 	.rel CommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackUlll, .L_80417D48
 	.rel CommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackUlll, .L_804185BC
 	.rel CommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackUlll, .L_804185BC
@@ -1457,40 +1457,49 @@
 	.rel CommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackUlll, .L_80417F88
 	.rel CommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackUlll, .L_80418280
 	.rel CommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackUlll, .L_804181F8
-.endobj jumptable_8056E198
 	.4byte 0x00000000
 
 # 0x80665E08 - 0x80665E18
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665E08, global
+.global lbl_80665E08
+lbl_80665E08:
 	.4byte 0x54000000
-.sym lbl_80665E0C, global
+.global lbl_80665E0C
+lbl_80665E0C:
 	.4byte 0x47000000
-.sym lbl_80665E10, global
+.global lbl_80665E10
+lbl_80665E10:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
 # 0x80667DC8 - 0x80667DD0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DC8, global
+.global lbl_80667DC8
+lbl_80667DC8:
 	.skip 0x8
 
 # 0x8066C7E0 - 0x8066C800
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C7E0, global
+.global lbl_8066C7E0
+lbl_8066C7E0:
 	.4byte 0x3C000000
-.sym lbl_8066C7E4, global
+.global lbl_8066C7E4
+lbl_8066C7E4:
 	.4byte 0x3EC80000
-.sym lbl_8066C7E8, global
+.global lbl_8066C7E8
+lbl_8066C7E8:
 	.4byte 0x3C800000
-.sym lbl_8066C7EC, global
+.global lbl_8066C7EC
+lbl_8066C7EC:
 	.4byte 0x42FE0000
-.sym lbl_8066C7F0, global
+.global lbl_8066C7F0
+lbl_8066C7F0:
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C7F8, global
+.global lbl_8066C7F8
+lbl_8066C7F8:
 	.4byte 0x43300000
 	.4byte 0x80000000

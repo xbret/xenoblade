@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/sdp_api.o"
 
-# 0x80302EBC - 0x80303D24
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SDP_InitDiscoveryDb, global
@@ -1044,7 +1043,8 @@
 # 0x80548F00 - 0x80548F50
 .data
 .balign 8
-.sym lbl_80548F00, global
+.global lbl_80548F00
+lbl_80548F00:
 	.4byte 0x5344505F
 	.4byte 0x496E6974
 	.4byte 0x44697363

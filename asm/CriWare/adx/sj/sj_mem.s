@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/sj/sj_mem.o"
 
-# 0x8039349C - 0x803942F0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SJMEM_Error, global
@@ -1039,12 +1038,14 @@
 .rodata
 .balign 8
 
-.obj sjmem_uuid, global
+.global sjmem_uuid
+sjmem_uuid:
 	.4byte 0xDD9EEE41
 	.4byte 0x167911D2
 	.4byte 0x936C0060
 	.4byte 0x089448BC
-.sym lbl_8051C0A8, global
+.global lbl_8051C0A8
+lbl_8051C0A8:
 	.4byte 0x534A4D45
 	.4byte 0x4D204572
 	.4byte 0x726F7200
@@ -1134,7 +1135,8 @@
 .data
 .balign 8
 
-.obj sjmem_vtbl, global
+.global sjmem_vtbl
+sjmem_vtbl:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1152,8 +1154,10 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj sjmem_init_cnt, global
+.global sjmem_init_cnt
+sjmem_init_cnt:
 	.skip 0x8
 
-.obj sjmem_obj, global
+.global sjmem_obj
+sjmem_obj:
 	.skip 0x480

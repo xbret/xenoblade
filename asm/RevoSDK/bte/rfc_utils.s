@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/rfc_utils.o"
 
-# 0x803026DC - 0x80302EBC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn rfc_calc_fcs, global
@@ -595,7 +594,8 @@
 # 0x8050E298 - 0x8050E398
 .rodata
 .balign 8
-.sym lbl_8050E298, global
+.global lbl_8050E298
+lbl_8050E298:
 	.4byte 0x0091E372
 	.4byte 0x0796E475
 	.4byte 0x0E9FED7C
@@ -664,12 +664,14 @@
 # 0x80548E70 - 0x80548F00
 .data
 .balign 8
-.sym lbl_80548E70, global
+.global lbl_80548E70
+lbl_80548E70:
 	.4byte 0x7266635F
 	.4byte 0x74696D65
 	.4byte 0x725F7374
 	.4byte 0x6F700000
-.sym lbl_80548E80, global
+.global lbl_80548E80
+lbl_80548E80:
 	.4byte 0x7266635F
 	.4byte 0x74696D65
 	.4byte 0x725F7374
@@ -678,7 +680,8 @@
 	.4byte 0x6D656F75
 	.4byte 0x743A2564
 	.4byte 0x00000000
-.sym lbl_80548EA0, global
+.global lbl_80548EA0
+lbl_80548EA0:
 	.4byte 0x7266635F
 	.4byte 0x706F7274
 	.4byte 0x5F74696D
@@ -688,7 +691,8 @@
 	.4byte 0x696D656F
 	.4byte 0x75743A25
 	.4byte 0x64000000
-.sym lbl_80548EC4, global
+.global lbl_80548EC4
+lbl_80548EC4:
 	.4byte 0x7266635F
 	.4byte 0x706F7274
 	.4byte 0x5F74696D
@@ -698,7 +702,8 @@
 	.4byte 0x706F7274
 	.4byte 0x5F636C6F
 	.4byte 0x73656400
-.sym lbl_80548EE8, global
+.global lbl_80548EE8
+lbl_80548EE8:
 	.4byte 0x7266635F
 	.4byte 0x696E635F
 	.4byte 0x63726564

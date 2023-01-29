@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/ai/ai.o"
 
-# 0x802D10A0 - 0x802D1670
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn AIRegisterDMACallback, global
@@ -428,7 +427,8 @@
 # 0x8053FFB8 - 0x80540000
 .data
 .balign 8
-.sym lbl_8053FFB8, global
+.global lbl_8053FFB8
+lbl_8053FFB8:
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -451,40 +451,56 @@
 # 0x806658A0 - 0x806658A8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806658A0, global
+.global lbl_806658A0
+lbl_806658A0:
 	.4byte lbl_8053FFB8
 	.4byte 0x00000000
 
 # 0x806675C8 - 0x80667608
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806675C8, global
+.global lbl_806675C8
+lbl_806675C8:
 	.skip 0x4
-.sym lbl_806675CC, global
+.global lbl_806675CC
+lbl_806675CC:
 	.skip 0x4
-.sym lbl_806675D0, global
+.global lbl_806675D0
+lbl_806675D0:
 	.skip 0x4
-.sym lbl_806675D4, global
+.global lbl_806675D4
+lbl_806675D4:
 	.skip 0x4
-.sym lbl_806675D8, global
+.global lbl_806675D8
+lbl_806675D8:
 	.skip 0x4
-.sym lbl_806675DC, global
+.global lbl_806675DC
+lbl_806675DC:
 	.skip 0x4
-.sym lbl_806675E0, global
+.global lbl_806675E0
+lbl_806675E0:
 	.skip 0x4
-.sym lbl_806675E4, global
+.global lbl_806675E4
+lbl_806675E4:
 	.skip 0x4
-.sym lbl_806675E8, global
+.global lbl_806675E8
+lbl_806675E8:
 	.skip 0x4
-.sym lbl_806675EC, global
+.global lbl_806675EC
+lbl_806675EC:
 	.skip 0x4
-.sym lbl_806675F0, global
+.global lbl_806675F0
+lbl_806675F0:
 	.skip 0x4
-.sym lbl_806675F4, global
+.global lbl_806675F4
+lbl_806675F4:
 	.skip 0x4
-.sym lbl_806675F8, global
+.global lbl_806675F8
+lbl_806675F8:
 	.skip 0x4
-.sym lbl_806675FC, global
+.global lbl_806675FC
+lbl_806675FC:
 	.skip 0x4
-.sym lbl_80667600, global
+.global lbl_80667600
+lbl_80667600:
 	.skip 0x8

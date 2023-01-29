@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/bta_hh_main.o"
 
-# 0x802E3C00 - 0x802E4154
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn bta_hh_sm_execute, global
@@ -423,7 +422,8 @@
 # 0x8050E1B8 - 0x8050E240
 .rodata
 .balign 8
-.sym lbl_8050E1B8, global
+.global lbl_8050E1B8
+lbl_8050E1B8:
 	.4byte bta_hh_api_disc_act
 	.4byte bta_hh_open_act
 	.4byte bta_hh_close_act
@@ -436,28 +436,32 @@
 	.4byte bta_hh_get_dscp_act
 	.4byte bta_hh_maint_dev_act
 	.4byte bta_hh_open_cmpl_act
-.sym lbl_8050E1E8, global
+.global lbl_8050E1E8
+lbl_8050E1E8:
 	.4byte 0x06020C01
 	.4byte 0x01020201
 	.4byte 0x0C010C01
 	.4byte 0x0C010C01
 	.4byte 0x0C010C01
 	.4byte 0x0A010C01
-.sym lbl_8050E200, global
+.global lbl_8050E200
+lbl_8050E200:
 	.4byte 0x0C020C01
 	.4byte 0x01020201
 	.4byte 0x0C020C02
 	.4byte 0x0C020702
 	.4byte 0x0C020C02
 	.4byte 0x0A010B03
-.sym lbl_8050E218, global
+.global lbl_8050E218
+lbl_8050E218:
 	.4byte 0x0C030003
 	.4byte 0x01030201
 	.4byte 0x03030403
 	.4byte 0x05030C03
 	.4byte 0x08030903
 	.4byte 0x0A030C03
-.sym lbl_8050E230, global
+.global lbl_8050E230
+lbl_8050E230:
 	.4byte lbl_8050E1E8
 	.4byte lbl_8050E200
 	.4byte lbl_8050E218
@@ -466,7 +470,8 @@
 # 0x805446C0 - 0x805449A0
 .data
 .balign 8
-.sym lbl_805446C0, global
+.global lbl_805446C0
+lbl_805446C0:
 	.4byte 0x77726F6E
 	.4byte 0x67206465
 	.4byte 0x76696365
@@ -522,7 +527,8 @@
 	.4byte 0x4576656E
 	.4byte 0x74205B25
 	.4byte 0x735D0000
-.sym lbl_8054479C, global
+.global lbl_8054479C
+lbl_8054479C:
 	.4byte 0x6274615F
 	.4byte 0x68685F68
 	.4byte 0x646C5F65
@@ -637,7 +643,7 @@
 	.4byte 0x6E742063
 	.4byte 0x6F646500
 
-.obj jumptable_80544960, local
+jumptable_80544960:
 	.rel bta_hh_evt_code, .L_802E40DC
 	.rel bta_hh_evt_code, .L_802E40E4
 	.rel bta_hh_evt_code, .L_802E40EC
@@ -654,4 +660,3 @@
 	.rel bta_hh_evt_code, .L_802E40CC
 	.rel bta_hh_evt_code, .L_802E4144
 	.rel bta_hh_evt_code, .L_802E4124
-.endobj jumptable_80544960

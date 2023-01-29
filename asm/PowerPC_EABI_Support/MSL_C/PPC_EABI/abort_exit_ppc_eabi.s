@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/PPC_EABI/abort_exit_ppc_eabi.o"
 
-# 0x802C71E8 - 0x802C7234
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn abort, global
@@ -33,14 +32,14 @@
 # 0x80667540 - 0x80667550
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667540, global
+.global lbl_80667540
+lbl_80667540:
 	.skip 0x4
 
-.obj __stdio_exit, global
+.global __stdio_exit
+__stdio_exit:
 	.skip 0x4
-.endobj __stdio_exit
 
-.obj __msl_constraint_handler, local
+__msl_constraint_handler:
 	.skip 0x4
-.endobj __msl_constraint_handler
 	.skip 0x4

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/wiirna/ax_rna.o"
 
-# 0x80399014 - 0x8039AA18
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn AXRNA_EntryErrFunc, global
@@ -406,7 +405,7 @@
 /* 80399594 00362B54  41 80 FF E8 */	blt .L_8039957C
 /* 80399598 00362B58  7F E3 FB 78 */	mr r3, r31
 /* 8039959C 00362B5C  38 80 00 10 */	li r4, 0x10
-/* 803995A0 00362B60  48 00 13 41 */	bl fn_8039A8E0
+/* 803995A0 00362B60  48 00 13 41 */	bl func_8039A8E0
 /* 803995A4 00362B64  38 60 00 00 */	li r3, 0x0
 /* 803995A8 00362B68  38 00 00 01 */	li r0, 0x1
 /* 803995AC 00362B6C  98 7F 00 01 */	stb r3, 0x1(r31)
@@ -1103,7 +1102,7 @@
 /* 80399F48 00363508  4E 80 00 20 */	blr
 .endfn axrna_start_trans
 
-.fn fn_80399F4C, global
+.fn func_80399F4C, global
 /* 80399F4C 0036350C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80399F50 00363510  7C 08 02 A6 */	mflr r0
 /* 80399F54 00363514  3C 80 51 EC */	lis r4, 0x51ec
@@ -1248,7 +1247,7 @@
 /* 8039A16C 0036372C  7F 24 CB 78 */	mr r4, r25
 /* 8039A170 00363730  80 A1 00 10 */	lwz r5, 0x10(r1)
 /* 8039A174 00363734  7F 06 C3 78 */	mr r6, r24
-/* 8039A178 00363738  48 00 13 69 */	bl fn_8039B4E0
+/* 8039A178 00363738  48 00 13 69 */	bl func_8039B4E0
 /* 8039A17C 0036373C  80 7D 00 C8 */	lwz r3, 0xc8(r29)
 /* 8039A180 00363740  38 A1 00 10 */	addi r5, r1, 0x10
 /* 8039A184 00363744  38 80 00 01 */	li r4, 0x1
@@ -1363,7 +1362,7 @@
 /* 8039A31C 003638DC  7C 08 03 A6 */	mtlr r0
 /* 8039A320 003638E0  38 21 00 60 */	addi r1, r1, 0x60
 /* 8039A324 003638E4  4E 80 00 20 */	blr
-.endfn fn_80399F4C
+.endfn func_80399F4C
 
 .fn axrna_start_flash, global
 /* 8039A328 003638E8  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1502,7 +1501,7 @@
 /* 8039A508 00363AC8  2C 00 00 01 */	cmpwi r0, 0x1
 /* 8039A50C 00363ACC  40 82 00 10 */	bne .L_8039A51C
 /* 8039A510 00363AD0  7F E3 FB 78 */	mr r3, r31
-/* 8039A514 00363AD4  4B FF FA 39 */	bl fn_80399F4C
+/* 8039A514 00363AD4  4B FF FA 39 */	bl func_80399F4C
 /* 8039A518 00363AD8  48 00 00 48 */	b .L_8039A560
 .L_8039A51C:
 /* 8039A51C 00363ADC  7F E3 FB 78 */	mr r3, r31
@@ -1726,15 +1725,15 @@
 /* 8039A800 00363DC0  4E 80 00 20 */	blr
 .endfn AXRNA_SetBitPerSmpl
 
-.fn fn_8039A804, global
+.fn func_8039A804, global
 /* 8039A804 00363DC4  38 60 00 00 */	li r3, 0x0
 /* 8039A808 00363DC8  4E 80 00 20 */	blr
-.endfn fn_8039A804
+.endfn func_8039A804
 
-.fn fn_8039A80C, global
+.fn func_8039A80C, global
 /* 8039A80C 00363DCC  38 60 00 00 */	li r3, 0x0
 /* 8039A810 00363DD0  4E 80 00 20 */	blr
-.endfn fn_8039A80C
+.endfn func_8039A80C
 
 .fn AXRNA_SetMain, global
 /* 8039A814 00363DD4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1797,7 +1796,7 @@
 /* 8039A8DC 00363E9C  4E 80 00 20 */	blr
 .endfn AXRNA_SetMain
 
-.fn fn_8039A8E0, global
+.fn func_8039A8E0, global
 /* 8039A8E0 00363EA0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8039A8E4 00363EA4  7C 08 02 A6 */	mflr r0
 /* 8039A8E8 00363EA8  2C 03 00 00 */	cmpwi r3, 0x0
@@ -1887,12 +1886,13 @@
 /* 8039AA0C 00363FCC  7C 08 03 A6 */	mtlr r0
 /* 8039AA10 00363FD0  38 21 00 50 */	addi r1, r1, 0x50
 /* 8039AA14 00363FD4  4E 80 00 20 */	blr
-.endfn fn_8039A8E0
+.endfn func_8039A8E0
 
 # 0x8051C760 - 0x8051CCE0
 .rodata
 .balign 8
-.sym lbl_8051C760, global
+.global lbl_8051C760
+lbl_8051C760:
 	.4byte 0x0A415852
 	.4byte 0x4E412056
 	.4byte 0x65722E31
@@ -1904,9 +1904,11 @@
 	.4byte 0x38203130
 	.4byte 0x3A35333A
 	.4byte 0x30300A00
-.sym lbl_8051C78C, global
+.global lbl_8051C78C
+lbl_8051C78C:
 	.4byte lbl_8051C760
-.sym lbl_8051C790, global
+.global lbl_8051C790
+lbl_8051C790:
 	.4byte 0x45313037
 	.4byte 0x30333031
 	.4byte 0x3A496E76
@@ -2252,9 +2254,11 @@
 .data
 .balign 8
 
-.obj axrna_def_src_type, global
+.global axrna_def_src_type
+axrna_def_src_type:
 	.4byte 0x00000001
-.sym lbl_8056972C, global
+.global lbl_8056972C
+lbl_8056972C:
 	.4byte 0x00000000
 	.4byte 0x00000004
 	.4byte 0x00000008
@@ -2291,15 +2295,21 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj axrna_init_cnt, global
+.global axrna_init_cnt
+axrna_init_cnt:
 	.skip 0x4
-.sym lbl_805F61C4, global
+.global lbl_805F61C4
+lbl_805F61C4:
 	.skip 0x4
-.sym lbl_805F61C8, global
+.global lbl_805F61C8
+lbl_805F61C8:
 	.skip 0x8
-.sym lbl_805F61D0, global
+.global lbl_805F61D0
+lbl_805F61D0:
 	.skip 0xE38
-.sym lbl_805F7008, global
+.global lbl_805F7008
+lbl_805F7008:
 	.skip 0x4
-.sym lbl_805F700C, global
+.global lbl_805F700C
+lbl_805F700C:
 	.skip 0x4

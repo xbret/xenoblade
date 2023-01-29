@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/gap_conn.o"
 
-# 0x802EFD64 - 0x802F08A0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn gap_conn_init, global
@@ -834,7 +833,8 @@
 # 0x805462D0 - 0x805463A0
 .data
 .balign 8
-.sym lbl_805462D0, global
+.global lbl_805462D0
+lbl_805462D0:
 	.4byte 0x5741524E
 	.4byte 0x494E473A
 	.4byte 0x20474150
@@ -852,7 +852,8 @@
 	.4byte 0x73636F6E
 	.4byte 0x6E656374
 	.4byte 0x696E6700
-.sym lbl_80546314, global
+.global lbl_80546314
+lbl_80546314:
 	.4byte 0x4741505F
 	.4byte 0x434F4E4E
 	.4byte 0x202D2052
@@ -864,7 +865,8 @@
 	.4byte 0x4349443A
 	.4byte 0x20307825
 	.4byte 0x78000000
-.sym lbl_80546340, global
+.global lbl_80546340
+lbl_80546340:
 	.4byte 0x4741505F
 	.4byte 0x434F4E4E
 	.4byte 0x202D2052
@@ -875,7 +877,8 @@
 	.4byte 0x4349443A
 	.4byte 0x20307825
 	.4byte 0x78000000
-.sym lbl_80546368, global
+.global lbl_80546368
+lbl_80546368:
 	.4byte 0x4741505F
 	.4byte 0x434F4E4E
 	.4byte 0x202D2052
@@ -894,12 +897,14 @@
 # 0x805C21C0 - 0x805C2570
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805C21C0, global
+.global lbl_805C21C0
+lbl_805C21C0:
 	.skip 0x3B0
 
 # 0x80665940 - 0x80665948
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665940, global
+.global lbl_80665940
+lbl_80665940:
 	.4byte 0x2A2A2A2A
 	.4byte 0x2A2A2A00

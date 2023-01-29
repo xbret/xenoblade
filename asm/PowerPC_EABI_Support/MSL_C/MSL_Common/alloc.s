@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common/alloc.o"
 
-# 0x802BBDB8 - 0x802BC2CC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn Block_link, global
@@ -379,7 +378,8 @@
 # 0x8050CF00 - 0x8050CF18
 .rodata
 .balign 8
-.sym lbl_8050CF00, global
+.global lbl_8050CF00
+lbl_8050CF00:
 	.4byte 0x00000004
 	.4byte 0x0000000C
 	.4byte 0x00000014
@@ -390,12 +390,14 @@
 # 0x8057B010 - 0x8057B048
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057B010, global
+.global lbl_8057B010
+lbl_8057B010:
 	.skip 0x38
 
 # 0x80667524 - 0x80667530
 .section .sbss, "wa", @nobits
 .balign 4
 	.skip 0x4
-.sym lbl_80667528, global
+.global lbl_80667528
+lbl_80667528:
 	.skip 0x8

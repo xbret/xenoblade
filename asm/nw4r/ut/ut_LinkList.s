@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/ut/ut_LinkList.o"
 
-# 0x8042B410 - 0x8042B57C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::ut::detail::LinkListImpl::~LinkListImpl()

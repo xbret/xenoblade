@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/cri_crw_std.o"
 
-# 0x8039B408 - 0x8039B7F8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn criCrw_GetVersion, global
@@ -81,7 +80,7 @@
 /* 8039B4DC 00364A9C  4B F2 59 E4 */	b vsprintf
 .endfn criCrw_Vsprintf
 
-.fn fn_8039B4E0, global
+.fn func_8039B4E0, global
 /* 8039B4E0 00364AA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039B4E4 00364AA4  7C 08 02 A6 */	mflr r0
 /* 8039B4E8 00364AA8  7C 04 30 00 */	cmpw r4, r6
@@ -299,12 +298,13 @@
 /* 8039B7EC 00364DAC  7C 08 03 A6 */	mtlr r0
 /* 8039B7F0 00364DB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039B7F4 00364DB4  4E 80 00 20 */	blr
-.endfn fn_8039B4E0
+.endfn func_8039B4E0
 
 # 0x8051CD90 - 0x8051CDF0
 .rodata
 .balign 8
-.sym lbl_8051CD90, global
+.global lbl_8051CD90
+lbl_8051CD90:
 	.4byte 0x0A435249
 	.4byte 0x20435257
 	.4byte 0x3A535444
@@ -333,5 +333,6 @@
 # 0x80601360 - 0x80601380
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80601360, global
+.global lbl_80601360
+lbl_80601360:
 	.skip 0x20

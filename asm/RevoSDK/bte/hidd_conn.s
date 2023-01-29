@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/hidd_conn.o"
 
-# 0x802F3640 - 0x802F3700
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn hidd_conn_initiate, global
@@ -63,14 +62,16 @@
 # 0x80546690 - 0x805466C0
 .data
 .balign 8
-.sym lbl_80546690, global
+.global lbl_80546690
+lbl_80546690:
 	.4byte 0x48494420
 	.4byte 0x2D204F72
 	.4byte 0x6967696E
 	.4byte 0x61746520
 	.4byte 0x73746172
 	.4byte 0x74656400
-.sym lbl_805466A8, global
+.global lbl_805466A8
+lbl_805466A8:
 	.4byte 0x48494420
 	.4byte 0x2D204F72
 	.4byte 0x6967696E

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/cvfs/cri_cvfs.o"
 
-# 0x8038F594 - 0x80390978
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn cvFsCallUsrErrFn, global
@@ -1465,7 +1464,8 @@
 # 0x8051ACB0 - 0x8051B830
 .rodata
 .balign 8
-.sym lbl_8051ACB0, global
+.global lbl_8051ACB0
+lbl_8051ACB0:
 	.4byte 0x63764673
 	.4byte 0x41646444
 	.4byte 0x65762023
@@ -2206,9 +2206,12 @@
 # 0x805E9D28 - 0x805EA1B0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E9D28, global
+.global lbl_805E9D28
+lbl_805E9D28:
 	.skip 0x4
-.sym lbl_805E9D2C, global
+.global lbl_805E9D2C
+lbl_805E9D2C:
 	.skip 0x14C
-.sym lbl_805E9E78, global
+.global lbl_805E9E78
+lbl_805E9E78:
 	.skip 0x338

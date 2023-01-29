@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/dcc/g3d_3dsmax.o"
 
-# 0x803F395C - 0x803F440C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::detail::dcc::_unnamed_g3d_3dsmax_cpp_::MakeTexSrtMtx_S(nw4r::math::MTX34*, const nw4r::g3d::TexSrt&)
@@ -744,7 +743,8 @@
 # 0x80521048 - 0x80521080
 .rodata
 .balign 8
-.sym lbl_80521048, global
+.global lbl_80521048
+lbl_80521048:
 	.4byte MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -752,7 +752,8 @@
 	.4byte MakeTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.sym lbl_80521064, global
+.global lbl_80521064
+lbl_80521064:
 	.4byte ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -764,14 +765,19 @@
 # 0x8066C4C0 - 0x8066C4D8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C4C0, global
+.global lbl_8066C4C0
+lbl_8066C4C0:
 	.4byte 0x00000000
-.sym lbl_8066C4C4, global
+.global lbl_8066C4C4
+lbl_8066C4C4:
 	.4byte 0x3F000000
-.sym lbl_8066C4C8, global
+.global lbl_8066C4C8
+lbl_8066C4C8:
 	.4byte 0x3F800000
-.sym lbl_8066C4CC, global
+.global lbl_8066C4CC
+lbl_8066C4CC:
 	.4byte 0x3F360B61
-.sym lbl_8066C4D0, global
+.global lbl_8066C4D0
+lbl_8066C4D0:
 	.4byte 0xBF000000
 	.4byte 0x00000000

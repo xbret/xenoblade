@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/uusb_ppc.o"
 
-# 0x802DD160 - 0x802DDDE0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn uusb_CloseDeviceCB, local
@@ -896,39 +895,53 @@
 # 0x805BBC60 - 0x805BDCC0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805BBC60, global
+.global lbl_805BBC60
+lbl_805BBC60:
 	.skip 0x60
-.sym lbl_805BBCC0, global
+.global lbl_805BBCC0
+lbl_805BBCC0:
 	.skip 0x1000
-.sym lbl_805BCCC0, global
+.global lbl_805BCCC0
+lbl_805BCCC0:
 	.skip 0x1000
 
 # 0x806658C8 - 0x806658D8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806658C8, global
+.global lbl_806658C8
+lbl_806658C8:
 	.4byte 0x00000001
-.sym lbl_806658CC, global
+.global lbl_806658CC
+lbl_806658CC:
 	.4byte 0xFFFFFFFF
-.sym lbl_806658D0, global
+.global lbl_806658D0
+lbl_806658D0:
 	.4byte 0x6F683000
-.sym lbl_806658D4, global
+.global lbl_806658D4
+lbl_806658D4:
 	.4byte 0x6F683100
 
 # 0x80667748 - 0x80667760
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667748, global
+.global lbl_80667748
+lbl_80667748:
 	.skip 0x1
-.sym lbl_80667749, global
+.global lbl_80667749
+lbl_80667749:
 	.skip 0x3
-.sym lbl_8066774C, global
+.global lbl_8066774C
+lbl_8066774C:
 	.skip 0x4
-.sym lbl_80667750, global
+.global lbl_80667750
+lbl_80667750:
 	.skip 0x4
-.sym lbl_80667754, global
+.global lbl_80667754
+lbl_80667754:
 	.skip 0x4
-.sym lbl_80667758, global
+.global lbl_80667758
+lbl_80667758:
 	.skip 0x4
-.sym lbl_8066775C, global
+.global lbl_8066775C
+lbl_8066775C:
 	.skip 0x4

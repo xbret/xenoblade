@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/lyt/lyt_drawInfo.o"
 
-# 0x80408668 - 0x8040871C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::lyt::DrawInfo::DrawInfo()
@@ -62,7 +61,8 @@
 # 0x8056D548 - 0x8056D558
 .data
 .balign 8
-.sym lbl_8056D548, global
+.global lbl_8056D548
+lbl_8056D548:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
@@ -71,7 +71,9 @@
 # 0x8066C5D0 - 0x8066C5D8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C5D0, global
+.global lbl_8066C5D0
+lbl_8066C5D0:
 	.4byte 0x00000000
-.sym lbl_8066C5D4, global
+.global lbl_8066C5D4
+lbl_8066C5D4:
 	.4byte 0x3F800000

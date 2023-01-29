@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxf/adx_fini.o"
 
-# 0x8037C620 - 0x8037C778
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADXF_Init, global
@@ -103,7 +102,8 @@
 .rodata
 .balign 8
 
-.obj adxf_build, global
+.global adxf_build
+adxf_build:
 	.4byte 0x0A414458
 	.4byte 0x462F5749
 	.4byte 0x49205665
@@ -130,5 +130,6 @@
 # 0x805E3428 - 0x805E3430
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E3428, global
+.global lbl_805E3428
+lbl_805E3428:
 	.skip 0x8

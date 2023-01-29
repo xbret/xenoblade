@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/gcci/gcci_sub.o"
 
-# 0x8039179C - 0x803917A8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn gcCiSetRdMode, global

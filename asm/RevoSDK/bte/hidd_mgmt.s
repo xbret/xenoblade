@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/hidd_mgmt.o"
 
-# 0x802F3700 - 0x802F37C8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn hidd_proc_repage_timeout, global
@@ -65,7 +64,8 @@
 # 0x805466C0 - 0x805466E0
 .data
 .balign 8
-.sym lbl_805466C0, global
+.global lbl_805466C0
+lbl_805466C0:
 	.4byte 0x68696464
 	.4byte 0x5F70726F
 	.4byte 0x635F7265

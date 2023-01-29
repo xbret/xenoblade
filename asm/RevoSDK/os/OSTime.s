@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSTime.o"
 
-# 0x8035C960 - 0x8035CD90
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn OSGetTime, global
@@ -302,7 +301,8 @@
 # 0x80552D58 - 0x80552DB8
 .data
 .balign 8
-.sym lbl_80552D58, global
+.global lbl_80552D58
+lbl_80552D58:
 	.4byte 0x00000000
 	.4byte 0x0000001F
 	.4byte 0x0000003B
@@ -315,7 +315,8 @@
 	.4byte 0x00000111
 	.4byte 0x00000130
 	.4byte 0x0000014E
-.sym lbl_80552D88, global
+.global lbl_80552D88
+lbl_80552D88:
 	.4byte 0x00000000
 	.4byte 0x0000001F
 	.4byte 0x0000003C

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/lyt/lyt_resourceAccessor.o"
 
-# 0x80409C48 - 0x80409CA0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::lyt::ResourceAccessor::~ResourceAccessor()
@@ -43,7 +42,8 @@
 # 0x8056D580 - 0x8056D598
 .data
 .balign 8
-.sym lbl_8056D580, global
+.global lbl_8056D580
+lbl_8056D580:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt16ResourceAccessorFv

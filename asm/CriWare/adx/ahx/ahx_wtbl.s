@@ -1,11 +1,11 @@
 .include "macros.inc"
-.file "CriWare/adx/ahx/ahx_wtbl.o"
 
 # 0x805657F8 - 0x8056607C
 .data
 .balign 8
 
-.obj ahxsbf_synthesis_window_table, global
+.global ahxsbf_synthesis_window_table
+ahxsbf_synthesis_window_table:
 	.4byte 0x00000000
 	.4byte 0xB9E80004
 	.4byte 0x3B550000
@@ -68,7 +68,8 @@
 	.4byte 0x3D7DF000
 	.4byte 0x3D026FFF
 	.4byte 0x3B930000
-.sym lbl_805658F0, global
+.global lbl_805658F0
+lbl_805658F0:
 	.4byte 0x3B440001
 	.4byte 0x39A8000F
 	.4byte 0xB7800074
@@ -551,5 +552,6 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_80566078, global
+.global lbl_80566078
+lbl_80566078:
 	.4byte ahxsbf_synthesis_window_table

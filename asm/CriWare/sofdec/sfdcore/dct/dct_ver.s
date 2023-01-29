@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/dct/dct_ver.o"
 
-# 0x803BB718 - 0x803BB72C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn DCT_GetVerStr, global
@@ -17,7 +16,8 @@
 .rodata
 .balign 8
 
-.obj DCT_version_str, global
+.global DCT_version_str
+DCT_version_str:
 	.4byte 0x0A435249
 	.4byte 0x20444354
 	.4byte 0x2F574949
@@ -45,5 +45,6 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj cri_verstr_ptr, global
+.global cri_verstr_ptr
+cri_verstr_ptr:
 	.skip 0x8

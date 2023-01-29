@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_resanmclr.o"
 
-# 0x803DDCD4 - 0x803DDE40
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ResAnmClr::GetAnmResult(nw4r::g3d::ClrAnmResult*, unsigned long, float) const
@@ -116,9 +115,11 @@
 # 0x8066C2C8 - 0x8066C2D8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C2C8, global
+.global lbl_8066C2C8
+lbl_8066C2C8:
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066C2D0, global
+.global lbl_8066C2D0
+lbl_8066C2D0:
 	.4byte 0x43300000
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_FxReverbStdDpl2.o"
 
-# 0x804165B0 - 0x80416CA8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::FxReverbStdDpl2::FxReverbStdDpl2()
@@ -538,10 +537,11 @@
 # 0x8056E0C8 - 0x8056E0F0
 .data
 .balign 8
-.sym lbl_8056E0C8, global
+.global lbl_8056E0C8
+lbl_8056E0C8:
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte fn_801C2D78
+	.4byte func_801C2D78
 	.4byte StartUp__Q34nw4r3snd15FxReverbStdDpl2Fv
 	.4byte Shutdown__Q34nw4r3snd15FxReverbStdDpl2Fv
 	.4byte UpdateBuffer__Q34nw4r3snd15FxReverbStdDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode
@@ -553,15 +553,21 @@
 # 0x8066C798 - 0x8066C7B0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C798, global
+.global lbl_8066C798
+lbl_8066C798:
 	.4byte 0x3CA3D70A
-.sym lbl_8066C79C, global
+.global lbl_8066C79C
+lbl_8066C79C:
 	.4byte 0x40400000
-.sym lbl_8066C7A0, global
+.global lbl_8066C7A0
+lbl_8066C7A0:
 	.4byte 0x3F19999A
-.sym lbl_8066C7A4, global
+.global lbl_8066C7A4
+lbl_8066C7A4:
 	.4byte 0x3ECCCCCD
-.sym lbl_8066C7A8, global
+.global lbl_8066C7A8
+lbl_8066C7A8:
 	.4byte 0x3F800000
-.sym lbl_8066C7AC, global
+.global lbl_8066C7AC
+lbl_8066C7AC:
 	.4byte 0x00000000

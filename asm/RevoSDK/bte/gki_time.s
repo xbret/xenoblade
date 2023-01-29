@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/gki_time.o"
 
-# 0x802DC200 - 0x802DC790
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn gki_timers_init, global

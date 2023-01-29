@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_Util.o"
 
-# 0x804293D0 - 0x8042984C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::Util::CalcPitchRatio(int)
@@ -375,7 +374,8 @@
 # 0x805238A8 - 0x80525D28
 .rodata
 .balign 8
-.sym lbl_805238A8, global
+.global lbl_805238A8
+lbl_805238A8:
 	.4byte 0x3F800000
 	.4byte 0x3F879C7D
 	.4byte 0x3F8FACD6
@@ -388,7 +388,8 @@
 	.4byte 0x3FD744FD
 	.4byte 0x3FE411F0
 	.4byte 0x3FF1A1BF
-.sym lbl_805238D8, global
+.global lbl_805238D8
+lbl_805238D8:
 	.4byte 0x3F800000
 	.4byte 0x3F800765
 	.4byte 0x3F800ECA
@@ -645,7 +646,8 @@
 	.4byte 0x3F8784FF
 	.4byte 0x3F878CD3
 	.4byte 0x3F8794A8
-.sym lbl_80523CD8, global
+.global lbl_80523CD8
+lbl_80523CD8:
 	.4byte 0x00000000
 	.4byte 0x380021F4
 	.4byte 0x38019DD8
@@ -1611,7 +1613,8 @@
 	.4byte 0x3FF99482
 	.4byte 0x3FFC7859
 	.4byte 0x3FFF64C1
-.sym lbl_80524BEC, global
+.global lbl_80524BEC
+lbl_80524BEC:
 	.4byte 0x3F800000
 	.4byte 0x3F7F7FE0
 	.4byte 0x3F7EFF80
@@ -1869,7 +1872,8 @@
 	.4byte 0x3DB504F3
 	.4byte 0x3D800000
 	.4byte 0x00000000
-.sym lbl_80524FF0, global
+.global lbl_80524FF0
+lbl_80524FF0:
 	.4byte 0x3F800000
 	.4byte 0x3F7FFEC4
 	.4byte 0x3F7FFB11
@@ -2127,7 +2131,8 @@
 	.4byte 0x3C490E90
 	.4byte 0x3BC90F89
 	.4byte 0x00000000
-.sym lbl_805253F4, global
+.global lbl_805253F4
+lbl_805253F4:
 	.4byte 0x3F800000
 	.4byte 0x3F7F0000
 	.4byte 0x3F7E0000
@@ -2385,7 +2390,8 @@
 	.4byte 0x3C000000
 	.4byte 0x3B800000
 	.4byte 0x00000000
-.sym lbl_805257F8, global
+.global lbl_805257F8
+lbl_805257F8:
 	.4byte 0x387C70F7
 	.4byte 0x387C8144
 	.4byte 0xC13E3549
@@ -2706,7 +2712,8 @@
 	.4byte 0xC0F00001
 	.4byte 0x00010001
 	.4byte 0x7F18C0E6
-.sym lbl_80525CF8, global
+.global lbl_80525CF8
+lbl_80525CF8:
 	.4byte 0x00500064
 	.4byte 0x008000A0
 	.4byte 0x00C80100
@@ -2723,7 +2730,8 @@
 # 0x8056E640 - 0x8056E650
 .data
 .balign 8
-.sym lbl_8056E640, global
+.global lbl_8056E640
+lbl_8056E640:
 	.4byte lbl_80524BEC
 	.4byte lbl_80524FF0
 	.4byte lbl_805253F4
@@ -2732,34 +2740,47 @@
 # 0x80665E20 - 0x80665E28
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665E20, global
+.global lbl_80665E20
+lbl_80665E20:
 	.4byte 0x12345678
 	.4byte 0x00000000
 
 # 0x8066C8D0 - 0x8066C900
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C8D0, global
+.global lbl_8066C8D0
+lbl_8066C8D0:
 	.4byte 0x3F800000
-.sym lbl_8066C8D4, global
+.global lbl_8066C8D4
+lbl_8066C8D4:
 	.4byte 0x40000000
-.sym lbl_8066C8D8, global
+.global lbl_8066C8D8
+lbl_8066C8D8:
 	.4byte 0x3F000000
-.sym lbl_8066C8DC, global
+.global lbl_8066C8DC
+lbl_8066C8DC:
 	.4byte 0x40C00000
-.sym lbl_8066C8E0, global
+.global lbl_8066C8E0
+lbl_8066C8E0:
 	.4byte 0xC2B4CCCD
-.sym lbl_8066C8E4, global
+.global lbl_8066C8E4
+lbl_8066C8E4:
 	.4byte 0x41200000
-.sym lbl_8066C8E8, global
+.global lbl_8066C8E8
+lbl_8066C8E8:
 	.4byte 0xBF800000
-.sym lbl_8066C8EC, global
+.global lbl_8066C8EC
+lbl_8066C8EC:
 	.4byte 0x43800000
-.sym lbl_8066C8F0, global
+.global lbl_8066C8F0
+lbl_8066C8F0:
 	.4byte 0x00000000
-.sym lbl_8066C8F4, global
+.global lbl_8066C8F4
+lbl_8066C8F4:
 	.4byte 0x3E0ADE7F
-.sym lbl_8066C8F8, global
+.global lbl_8066C8F8
+lbl_8066C8F8:
 	.4byte 0x3F666666
-.sym lbl_8066C8FC, global
+.global lbl_8066C8FC
+lbl_8066C8FC:
 	.4byte 0x3D088889

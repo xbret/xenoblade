@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/sfd/sfd_mps.o"
 
-# 0x803C0EF0 - 0x803C2E98
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFD_SetElementOutSj, global
@@ -330,7 +329,7 @@
 /* 803C1360 0038A920  38 81 00 20 */	addi r4, r1, 0x20
 /* 803C1364 0038A924  38 A1 00 1C */	addi r5, r1, 0x1c
 /* 803C1368 0038A928  38 E1 00 14 */	addi r7, r1, 0x14
-/* 803C136C 0038A92C  48 00 01 25 */	bl fn_803C1490
+/* 803C136C 0038A92C  48 00 01 25 */	bl func_803C1490
 /* 803C1370 0038A930  2C 03 00 00 */	cmpwi r3, 0x0
 /* 803C1374 0038A934  7C 7E 1B 78 */	mr r30, r3
 /* 803C1378 0038A938  40 82 00 D0 */	bne .L_803C1448
@@ -340,7 +339,7 @@
 /* 803C1388 0038A948  38 C1 00 18 */	addi r6, r1, 0x18
 /* 803C138C 0038A94C  81 01 00 14 */	lwz r8, 0x14(r1)
 /* 803C1390 0038A950  38 E1 00 10 */	addi r7, r1, 0x10
-/* 803C1394 0038A954  48 00 01 F1 */	bl fn_803C1584
+/* 803C1394 0038A954  48 00 01 F1 */	bl func_803C1584
 /* 803C1398 0038A958  2C 03 00 00 */	cmpwi r3, 0x0
 /* 803C139C 0038A95C  7C 7E 1B 78 */	mr r30, r3
 /* 803C13A0 0038A960  40 82 00 A8 */	bne .L_803C1448
@@ -409,7 +408,7 @@
 /* 803C148C 0038AA4C  4E 80 00 20 */	blr
 .endfn sfmps_DecodeSomeUnit
 
-.fn fn_803C1490, global
+.fn func_803C1490, global
 /* 803C1490 0038AA50  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803C1494 0038AA54  7C 08 02 A6 */	mflr r0
 /* 803C1498 0038AA58  90 01 00 44 */	stw r0, 0x44(r1)
@@ -470,17 +469,17 @@
 /* 803C1564 0038AB24  7C 08 03 A6 */	mtlr r0
 /* 803C1568 0038AB28  38 21 00 40 */	addi r1, r1, 0x40
 /* 803C156C 0038AB2C  4E 80 00 20 */	blr
-.endfn fn_803C1490
+.endfn func_803C1490
 
-.fn fn_803C1570, global
+.fn func_803C1570, global
 /* 803C1570 0038AB30  2C 03 00 00 */	cmpwi r3, 0x0
 /* 803C1574 0038AB34  4D 82 00 20 */	beqlr
 /* 803C1578 0038AB38  90 83 39 74 */	stw r4, 0x3974(r3)
 /* 803C157C 0038AB3C  90 A3 39 78 */	stw r5, 0x3978(r3)
 /* 803C1580 0038AB40  4E 80 00 20 */	blr
-.endfn fn_803C1570
+.endfn func_803C1570
 
-.fn fn_803C1584, global
+.fn func_803C1584, global
 /* 803C1584 0038AB44  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803C1588 0038AB48  7C 08 02 A6 */	mflr r0
 /* 803C158C 0038AB4C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -710,7 +709,7 @@
 /* 803C18B0 0038AE70  7C 08 03 A6 */	mtlr r0
 /* 803C18B4 0038AE74  38 21 00 40 */	addi r1, r1, 0x40
 /* 803C18B8 0038AE78  4E 80 00 20 */	blr
-.endfn fn_803C1584
+.endfn func_803C1584
 
 .fn sfmps_pesfn, global
 /* 803C18BC 0038AE7C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2346,7 +2345,8 @@
 # 0x805202D8 - 0x80520320
 .rodata
 .balign 8
-.sym lbl_805202D8, global
+.global lbl_805202D8
+lbl_805202D8:
 	.4byte SFMPS_Init
 	.4byte SFMPS_Finish
 	.4byte SFMPS_ExecServer
@@ -2361,7 +2361,8 @@
 	.4byte SFMPS_GetRead
 	.4byte SFMPS_AddRead
 	.4byte SFMPS_Seek
-.sym lbl_80520310, global
+.global lbl_80520310
+lbl_80520310:
 	.4byte sfmps_CopyAudio
 	.4byte sfmps_CopyVideo
 	.4byte sfmps_CopyPrvate
@@ -2371,8 +2372,10 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj sfmps_libwork, global
+.global sfmps_libwork
+sfmps_libwork:
 	.skip 0x810
 
-.obj copy_sj_error, global
+.global copy_sj_error
+copy_sj_error:
 	.skip 0x8

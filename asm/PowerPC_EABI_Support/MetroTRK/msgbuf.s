@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MetroTRK/msgbuf.o"
 
-# 0x802CD484 - 0x802CDC90
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn TRKInitializeMessageBuffers, global
@@ -621,7 +620,8 @@
 # 0x8053FF18 - 0x8053FF40
 .data
 .balign 8
-.sym lbl_8053FF18, global
+.global lbl_8053FF18
+lbl_8053FF18:
 	.4byte 0x4D657472
 	.4byte 0x6F54524B
 	.4byte 0x202D2045
@@ -636,5 +636,6 @@
 # 0x8057B8D8 - 0x8057D280
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057B8D8, global
+.global lbl_8057B8D8
+lbl_8057B8D8:
 	.skip 0x19A8

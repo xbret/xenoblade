@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/sfd/sfd_trn.o"
 
-# 0x803CE3F0 - 0x803CEA54
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFTRN_Init, global

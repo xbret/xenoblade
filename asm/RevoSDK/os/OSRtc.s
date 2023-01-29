@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSRtc.o"
 
-# 0x8035A800 - 0x8035B2B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn WriteSramCallback, global
@@ -762,7 +761,6 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj Scb, local
+Scb:
 	.skip 0x54
-.endobj Scb
 	.skip 0x4

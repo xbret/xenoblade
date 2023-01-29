@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/ut/ut_TextWriterBase.o"
 
-# 0x80430624 - 0x80432678
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::ut::TextWriterBase_c_::GetLineHeight() const
@@ -2218,33 +2217,43 @@
 # 0x806570C8 - 0x806570E0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_806570C8, global
+.global lbl_806570C8
+lbl_806570C8:
 	.skip 0xC
-.sym lbl_806570D4, global
+.global lbl_806570D4
+lbl_806570D4:
 	.skip 0xC
 
 # 0x80667E40 - 0x80667E50
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E40, global
+.global lbl_80667E40
+lbl_80667E40:
 	.skip 0x4
-.sym lbl_80667E44, global
+.global lbl_80667E44
+lbl_80667E44:
 	.skip 0x4
-.sym lbl_80667E48, global
+.global lbl_80667E48
+lbl_80667E48:
 	.skip 0x1
-.sym lbl_80667E49, global
+.global lbl_80667E49
+lbl_80667E49:
 	.skip 0x7
 
 # 0x8066C960 - 0x8066C978
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C960, global
+.global lbl_8066C960
+lbl_8066C960:
 	.4byte 0x7F7FFFFF
-.sym lbl_8066C964, global
+.global lbl_8066C964
+lbl_8066C964:
 	.4byte 0x00000000
-.sym lbl_8066C968, global
+.global lbl_8066C968
+lbl_8066C968:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C970, global
+.global lbl_8066C970
+lbl_8066C970:
 	.4byte 0x3F000000
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/lyt/lyt_bounding.o"
 
-# 0x804053DC - 0x80405488
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::lyt::Bounding::Bounding(const nw4r::lyt::res::Bounding*, const nw4r::lyt::ResBlockSet&)
@@ -76,7 +75,8 @@
 # 0x8056D460 - 0x8056D4D8
 .data
 .balign 8
-.sym lbl_8056D460, global
+.global lbl_8056D460
+lbl_8056D460:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt8BoundingFv
@@ -111,5 +111,6 @@
 # 0x80667D78 - 0x80667D80
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D78, global
+.global lbl_80667D78
+lbl_80667D78:
 	.skip 0x8

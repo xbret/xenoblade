@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/sfd/sfd_adxt.o"
 
-# 0x803BD2A8 - 0x803BE8C8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFADXT_SetOutPan, global
@@ -190,11 +189,11 @@
 /* 803BD514 00386AD4  4E 80 00 20 */	blr
 .endfn SFADXT_Finish
 
-.fn fn_803BD518, global
+.fn func_803BD518, global
 /* 803BD518 00386AD8  7C C5 33 78 */	mr r5, r6
 /* 803BD51C 00386ADC  7C E4 3B 78 */	mr r4, r7
 /* 803BD520 00386AE0  48 00 29 D0 */	b SFCON_WriteTotSmplQue
-.endfn fn_803BD518
+.endfn func_803BD518
 
 .fn SFADXT_ExecServer, global
 /* 803BD524 00386AE4  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -1058,10 +1057,10 @@
 /* 803BE0F8 003876B8  48 00 2B 5D */	bl SFLIB_SetErr
 /* 803BE0FC 003876BC  48 00 00 F0 */	b .L_803BE1EC
 .L_803BE100:
-/* 803BE100 003876C0  3C 80 80 3C */	lis r4, fn_803BD518@ha
+/* 803BE100 003876C0  3C 80 80 3C */	lis r4, func_803BD518@ha
 /* 803BE104 003876C4  7F C3 F3 78 */	mr r3, r30
 /* 803BE108 003876C8  7F A5 EB 78 */	mr r5, r29
-/* 803BE10C 003876CC  38 84 D5 18 */	addi r4, r4, fn_803BD518@l
+/* 803BE10C 003876CC  38 84 D5 18 */	addi r4, r4, func_803BD518@l
 /* 803BE110 003876D0  4B FC 63 41 */	bl ADXT_EntryFltFunc
 /* 803BE114 003876D4  80 7F 00 10 */	lwz r3, 0x10(r31)
 /* 803BE118 003876D8  80 9F 00 08 */	lwz r4, 0x8(r31)
@@ -1622,7 +1621,8 @@
 # 0x8051FEE0 - 0x8051FF48
 .rodata
 .balign 8
-.sym lbl_8051FEE0, global
+.global lbl_8051FEE0
+lbl_8051FEE0:
 	.4byte SFADXT_Init
 	.4byte SFADXT_Finish
 	.4byte SFADXT_ExecServer
@@ -1637,7 +1637,8 @@
 	.4byte SFADXT_GetRead
 	.4byte SFADXT_AddRead
 	.4byte SFADXT_Seek
-.sym lbl_8051FF18, global
+.global lbl_8051FF18
+lbl_8051FF18:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1655,11 +1656,15 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj sfadxt_para, global
+.global sfadxt_para
+sfadxt_para:
 	.skip 0x1C
-.sym lbl_8060A2BC, global
+.global lbl_8060A2BC
+lbl_8060A2BC:
 	.skip 0x4
-.sym lbl_8060A2C0, global
+.global lbl_8060A2C0
+lbl_8060A2C0:
 	.skip 0x4
-.sym lbl_8060A2C4, global
+.global lbl_8060A2C4
+lbl_8060A2C4:
 	.skip 0x4

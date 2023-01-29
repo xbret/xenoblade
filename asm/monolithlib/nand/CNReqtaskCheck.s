@@ -1,32 +1,10 @@
 .include "macros.inc"
-.file "monolithlib/nand/CNReqtaskCheck.o"
 
-# 0x80020790 - 0x80020798
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_80020790", local
-.hidden "@etb_80020790"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_80020790"
-
-# 0x800387A4 - 0x800387B0
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_800387A4", local
-.hidden "@eti_800387A4"
-	.4byte fn_804DB364
-	.4byte 0x000000BC
-	.4byte "@etb_80020790"
-.endobj "@eti_800387A4"
-
-# 0x804DB348 - 0x804DB438
-.text
-.balign 4
-
-.fn fn_804DB348, global
+.fn func_804DB348, global
 /* 804DB348 004A4908  38 00 00 00 */	li r0, 0x0
 /* 804DB34C 004A490C  90 83 00 00 */	stw r4, 0x0(r3)
 /* 804DB350 004A4910  90 A3 00 04 */	stw r5, 0x4(r3)
@@ -34,9 +12,9 @@
 /* 804DB358 004A4918  98 03 00 0C */	stb r0, 0xc(r3)
 /* 804DB35C 004A491C  38 6D C1 58 */	addi r3, r13, lbl_806682D8@sda21
 /* 804DB360 004A4920  4E 80 00 20 */	blr
-.endfn fn_804DB348
+.endfn func_804DB348
 
-.fn fn_804DB364, global
+.fn func_804DB364, global
 /* 804DB364 004A4924  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB368 004A4928  7C 08 02 A6 */	mflr r0
 /* 804DB36C 004A492C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -68,7 +46,7 @@
 /* 804DB3C8 004A4988  80 64 00 00 */	lwz r3, 0x0(r4)
 /* 804DB3CC 004A498C  80 84 00 04 */	lwz r4, 0x4(r4)
 /* 804DB3D0 004A4990  80 BF 00 08 */	lwz r5, 0x8(r31)
-/* 804DB3D4 004A4994  4B FF F1 0D */	bl fn_804DA4E0
+/* 804DB3D4 004A4994  4B FF F1 0D */	bl func_804DA4E0
 /* 804DB3D8 004A4998  2C 03 00 00 */	cmpwi r3, 0x0
 /* 804DB3DC 004A499C  41 82 00 0C */	beq .L_804DB3E8
 /* 804DB3E0 004A49A0  38 60 00 02 */	li r3, 0x2
@@ -92,7 +70,7 @@
 /* 804DB414 004A49D4  7C 08 03 A6 */	mtlr r0
 /* 804DB418 004A49D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB41C 004A49DC  4E 80 00 20 */	blr
-.endfn fn_804DB364
+.endfn func_804DB364
 
 .fn sinit_804DB420, global
 /* 804DB420 004A49E0  38 6D C1 58 */	addi r3, r13, lbl_806682D8@sda21
@@ -113,7 +91,8 @@
 .rodata
 .balign 8
 
-.obj CNReqtaskCheck_typestr, global
+.global CNReqtaskCheck_typestr
+CNReqtaskCheck_typestr:
 	.4byte 0x434E5265
 	.4byte 0x71746173
 	.4byte 0x6B436865
@@ -123,13 +102,15 @@
 .data
 .balign 8
 
-.obj __vt__CNReqtaskCheck, global
+.global __vt__CNReqtaskCheck
+__vt__CNReqtaskCheck:
 	.4byte __RTTI__CNReqtaskCheck
 	.4byte 0x00000000
-	.4byte fn_804DB364
-	.4byte fn_804DA4CC
+	.4byte func_804DB364
+	.4byte func_804DA4CC
 
-.obj CNReqtaskCheck_hierarchy, global
+.global CNReqtaskCheck_hierarchy
+CNReqtaskCheck_hierarchy:
 	.4byte __RTTI__CNReqtask
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -139,12 +120,35 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj __RTTI__CNReqtaskCheck, global
+.global __RTTI__CNReqtaskCheck
+__RTTI__CNReqtaskCheck:
 	.4byte CNReqtaskCheck_typestr
 	.4byte CNReqtaskCheck_hierarchy
 
 # 0x806682D8 - 0x806682E0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806682D8, global
+.global lbl_806682D8
+lbl_806682D8:
 	.skip 0x8
+
+# 0x80020790 - 0x80020798
+.section extab, "a"
+.balign 4
+
+.obj "@etb_80020790", local
+.hidden "@etb_80020790"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_80020790"
+
+# 0x800387A4 - 0x800387B0
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_800387A4", local
+.hidden "@eti_800387A4"
+	.4byte func_804DB364
+	.4byte 0x000000BC
+	.4byte "@etb_80020790"
+.endobj "@eti_800387A4"

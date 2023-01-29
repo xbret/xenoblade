@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/btu_init.o"
 
-# 0x802EFBAC - 0x802EFC24
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn btu_init_core, global

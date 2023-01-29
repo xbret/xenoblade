@@ -1,45 +1,10 @@
 .include "macros.inc"
-.file "monolithlib/nand/CNReqtaskRemove.o"
 
-# 0x80020780 - 0x80020790
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_80020780", local
-.hidden "@etb_80020780"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_80020780"
-
-.obj "@etb_80020788", local
-.hidden "@etb_80020788"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_80020788"
-
-# 0x8003878C - 0x800387A4
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_8003878C", local
-.hidden "@eti_8003878C"
-	.4byte fn_804DB240
-	.4byte 0x00000038
-	.4byte "@etb_80020780"
-.endobj "@eti_8003878C"
-
-.obj "@eti_80038798", local
-.hidden "@eti_80038798"
-	.4byte fn_804DB278
-	.4byte 0x000000B8
-	.4byte "@etb_80020788"
-.endobj "@eti_80038798"
-
-# 0x804DB240 - 0x804DB348
-.text
-.balign 4
-
-.fn fn_804DB240, global
+.fn func_804DB240, global
 /* 804DB240 004A4800  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB244 004A4804  7C 08 02 A6 */	mflr r0
 /* 804DB248 004A4808  90 01 00 14 */	stw r0, 0x14(r1)
@@ -54,9 +19,9 @@
 /* 804DB26C 004A482C  7C 08 03 A6 */	mtlr r0
 /* 804DB270 004A4830  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB274 004A4834  4E 80 00 20 */	blr
-.endfn fn_804DB240
+.endfn func_804DB240
 
-.fn fn_804DB278, global
+.fn func_804DB278, global
 /* 804DB278 004A4838  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB27C 004A483C  7C 08 02 A6 */	mflr r0
 /* 804DB280 004A4840  90 01 00 14 */	stw r0, 0x14(r1)
@@ -86,8 +51,8 @@
 /* 804DB2D8 004A4898  48 00 00 40 */	b .L_804DB318
 .L_804DB2DC:
 /* 804DB2DC 004A489C  7F E3 FB 78 */	mr r3, r31
-/* 804DB2E0 004A48A0  4B FF F6 E5 */	bl fn_804DA9C4
-/* 804DB2E4 004A48A4  4B FF F4 89 */	bl fn_804DA76C
+/* 804DB2E0 004A48A0  4B FF F6 E5 */	bl func_804DA9C4
+/* 804DB2E4 004A48A4  4B FF F4 89 */	bl func_804DA76C
 /* 804DB2E8 004A48A8  2C 03 00 00 */	cmpwi r3, 0x0
 /* 804DB2EC 004A48AC  41 82 00 0C */	beq .L_804DB2F8
 /* 804DB2F0 004A48B0  38 60 00 02 */	li r3, 0x2
@@ -111,7 +76,7 @@
 /* 804DB324 004A48E4  7C 08 03 A6 */	mtlr r0
 /* 804DB328 004A48E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB32C 004A48EC  4E 80 00 20 */	blr
-.endfn fn_804DB278
+.endfn func_804DB278
 
 .fn sinit_804DB330, global
 /* 804DB330 004A48F0  38 6D C1 50 */	addi r3, r13, lbl_806682D0@sda21
@@ -132,7 +97,8 @@
 .rodata
 .balign 8
 
-.obj CNReqtaskRemove_typestr, global
+.global CNReqtaskRemove_typestr
+CNReqtaskRemove_typestr:
 	.4byte 0x434E5265
 	.4byte 0x71746173
 	.4byte 0x6B52656D
@@ -142,13 +108,15 @@
 .data
 .balign 8
 
-.obj __vt__CNReqtaskRemove, global
+.global __vt__CNReqtaskRemove
+__vt__CNReqtaskRemove:
 	.4byte __RTTI__CNReqtaskRemove
 	.4byte 0x00000000
-	.4byte fn_804DB278
-	.4byte fn_804DA4CC
+	.4byte func_804DB278
+	.4byte func_804DA4CC
 
-.obj CNReqtaskRemove_hierarchy, global
+.global CNReqtaskRemove_hierarchy
+CNReqtaskRemove_hierarchy:
 	.4byte __RTTI__CNReqtask
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -158,12 +126,48 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj __RTTI__CNReqtaskRemove, global
+.global __RTTI__CNReqtaskRemove
+__RTTI__CNReqtaskRemove:
 	.4byte CNReqtaskRemove_typestr
 	.4byte CNReqtaskRemove_hierarchy
 
 # 0x806682D0 - 0x806682D8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806682D0, global
+.global lbl_806682D0
+lbl_806682D0:
 	.skip 0x8
+
+# 0x80020780 - 0x80020790
+.section extab, "a"
+.balign 4
+
+.obj "@etb_80020780", local
+.hidden "@etb_80020780"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_80020780"
+
+.obj "@etb_80020788", local
+.hidden "@etb_80020788"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_80020788"
+
+# 0x8003878C - 0x800387A4
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_8003878C", local
+.hidden "@eti_8003878C"
+	.4byte func_804DB240
+	.4byte 0x00000038
+	.4byte "@etb_80020780"
+.endobj "@eti_8003878C"
+
+.obj "@eti_80038798", local
+.hidden "@eti_80038798"
+	.4byte func_804DB278
+	.4byte 0x000000B8
+	.4byte "@etb_80020788"
+.endobj "@eti_80038798"

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/esp/esp.o"
 
-# 0x80313750 - 0x80313D70
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn ESP_InitLib, global
@@ -464,10 +463,10 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj __esFd, local
+__esFd:
 	.4byte 0xFFFFFFFF
-.endobj __esFd
 	.4byte 0x00000000
-.sym lbl_806659D0, global
+.global lbl_806659D0
+lbl_806659D0:
 	.4byte 0x2F646576
 	.4byte 0x2F657300

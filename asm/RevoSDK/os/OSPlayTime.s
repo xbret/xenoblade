@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSPlayTime.o"
 
-# 0x8035E820 - 0x8035F000
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn OSPlayTimeIsLimited, global
@@ -574,7 +573,8 @@
 # 0x8055EEB8 - 0x8055EEF8
 .data
 .balign 8
-.sym lbl_8055EEB8, global
+.global lbl_8055EEB8
+lbl_8055EEB8:
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x2F657870
@@ -604,9 +604,9 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj __OSExpireAlarm, global
+.global __OSExpireAlarm
+__OSExpireAlarm:
 	.skip 0x30
-.endobj __OSExpireAlarm
 	.skip 0x10
 
 # 0x80665BB0 - 0x80665BB8
@@ -621,28 +621,31 @@
 # 0x80667B38 - 0x80667B50
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667B38, global
+.global lbl_80667B38
+lbl_80667B38:
 	.skip 0x4
 
-.obj __OSExpireSetExpiredFlag, global
-	.skip 0x4
-.endobj __OSExpireSetExpiredFlag
-
-.obj __OSExpireCallback, global
-	.skip 0x4
-.endobj __OSExpireCallback
+.global __OSExpireSetExpiredFlag
+__OSExpireSetExpiredFlag:
 	.skip 0x4
 
-.obj __OSExpireTime, global
+.global __OSExpireCallback
+__OSExpireCallback:
+	.skip 0x4
+	.skip 0x4
+
+.global __OSExpireTime
+__OSExpireTime:
 	.skip 0x8
-.endobj __OSExpireTime
 
 # 0x8066C1D8 - 0x8066C1E8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C1D8, global
+.global lbl_8066C1D8
+lbl_8066C1D8:
 	.4byte 0x3F7EB852
 	.4byte 0x00000000
-.sym lbl_8066C1E0, global
+.global lbl_8066C1E0
+lbl_8066C1E0:
 	.4byte 0x43300000
 	.4byte 0x80000000

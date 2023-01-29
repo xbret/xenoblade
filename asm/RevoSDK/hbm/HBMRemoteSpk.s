@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/HBMRemoteSpk.o"
 
-# 0x80321990 - 0x803222B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 # homebutton::RemoteSpk::UpdateSpeaker(OSAlarm*, OSContext*)
@@ -686,12 +685,14 @@
 .data
 .balign 8
 
-.obj __vt__homebutton_RemoteSpk, global
+.global __vt__homebutton_RemoteSpk
+__vt__homebutton_RemoteSpk:
 	.4byte __RTTI__homebutton_RemoteSpk
 	.4byte 0x00000000
 	.4byte __dt__Q210homebutton9RemoteSpkFv
 
-.obj homebutton_RemoteSpk_typestr, global
+.global homebutton_RemoteSpk_typestr
+homebutton_RemoteSpk_typestr:
 	.4byte 0x686F6D65
 	.4byte 0x62757474
 	.4byte 0x6F6E3A3A
@@ -700,12 +701,14 @@
 	.4byte 0x6B000000
 	.4byte 0x00000000
 
-.obj __RTTI__homebutton_RemoteSpk, global
+.global __RTTI__homebutton_RemoteSpk
+__RTTI__homebutton_RemoteSpk:
 	.4byte homebutton_RemoteSpk_typestr
 	.4byte 0x00000000
 
 # 0x805CD748 - 0x805CD750
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CD748, global
+.global lbl_805CD748
+lbl_805CD748:
 	.skip 0x8

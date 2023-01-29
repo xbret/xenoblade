@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/btm_discovery.o"
 
-# 0x802E8298 - 0x802E83CC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 8
 
 .fn btm_discovery_db_init, global

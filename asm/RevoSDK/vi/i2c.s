@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/vi/i2c.o"
 
-# 0x80366A00 - 0x80367320
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn WaitMicroTime, global
@@ -645,12 +644,14 @@
 # 0x80665D20 - 0x80665D28
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665D20, global
+.global lbl_80665D20
+lbl_80665D20:
 	.4byte 0x00000001
 	.4byte 0x00000000
 
 # 0x80667C48 - 0x80667C50
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667C48, global
+.global lbl_80667C48
+lbl_80667C48:
 	.skip 0x8

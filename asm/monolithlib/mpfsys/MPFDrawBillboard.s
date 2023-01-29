@@ -1,11 +1,10 @@
 .include "macros.inc"
-.file "monolithlib/mpfsys/MPFDrawBillboard.o"
 
-# 0x80479EDC - 0x80479F04
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.fn fn_80479EDC, global
+.fn func_80479EDC, global
 /* 80479EDC 0044349C  88 0D BF F8 */	lbz r0, lbl_80668178@sda21(r13)
 /* 80479EE0 004434A0  7C 00 07 75 */	extsb. r0, r0
 /* 80479EE4 004434A4  40 82 00 18 */	bne .L_80479EFC
@@ -17,12 +16,14 @@
 .L_80479EFC:
 /* 80479EFC 004434BC  38 6D BF FC */	addi r3, r13, lbl_8066817C@sda21
 /* 80479F00 004434C0  4E 80 00 20 */	blr
-.endfn fn_80479EDC
+.endfn func_80479EDC
 
 # 0x80668178 - 0x80668180
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80668178, global
+.global lbl_80668178
+lbl_80668178:
 	.skip 0x4
-.sym lbl_8066817C, global
+.global lbl_8066817C
+lbl_8066817C:
 	.skip 0x4

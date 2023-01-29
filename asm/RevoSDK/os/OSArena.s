@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSArena.o"
 
-# 0x803539A0 - 0x80353AA0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn OSGetMEM1ArenaHi, global
@@ -112,22 +111,18 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj __OSArenaLo, local
+__OSArenaLo:
 	.4byte 0xFFFFFFFF
-.endobj __OSArenaLo
 
-.obj s_mem2ArenaLo, local
+s_mem2ArenaLo:
 	.4byte 0xFFFFFFFF
-.endobj s_mem2ArenaLo
 
 # 0x80667A60 - 0x80667A68
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj __OSArenaHi, local
+__OSArenaHi:
 	.skip 0x4
-.endobj __OSArenaHi
 
-.obj s_mem2ArenaHi, local
+s_mem2ArenaHi:
 	.skip 0x4
-.endobj s_mem2ArenaHi

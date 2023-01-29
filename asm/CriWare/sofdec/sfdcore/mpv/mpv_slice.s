@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mpv/mpv_slice.o"
 
-# 0x803B96F4 - 0x803B9AC8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPVSL_Init, global
@@ -71,7 +70,7 @@
 /* 803B97B0 00382D70  2C 00 00 04 */	cmpwi r0, 0x4
 /* 803B97B4 00382D74  41 80 00 44 */	blt .L_803B97F8
 /* 803B97B8 00382D78  80 61 00 08 */	lwz r3, 0x8(r1)
-/* 803B97BC 00382D7C  4B FE C2 39 */	bl fn_803A59F4
+/* 803B97BC 00382D7C  4B FE C2 39 */	bl func_803A59F4
 /* 803B97C0 00382D80  54 60 07 FF */	clrlwi. r0, r3, 31
 /* 803B97C4 00382D84  41 82 00 34 */	beq .L_803B97F8
 /* 803B97C8 00382D88  A8 DF 0C 30 */	lha r6, 0xc30(r31)

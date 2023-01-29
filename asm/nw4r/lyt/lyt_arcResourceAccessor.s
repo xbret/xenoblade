@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/lyt/lyt_arcResourceAccessor.o"
 
-# 0x80409CA0 - 0x8040A028
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # _unnamed_lyt_arcResourceAccessor_cpp_::FindNameResource(ARCHandle*, const char*)
@@ -278,10 +277,11 @@
 # 0x8056D598 - 0x8056D5B0
 .data
 .balign 8
-.sym lbl_8056D598, global
+.global lbl_8056D598
+lbl_8056D598:
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte fn_8003997C
+	.4byte func_8003997C
 	.4byte GetResource__Q34nw4r3lyt19ArcResourceAccessorFUlPCcPUl
 	.4byte GetFont__Q34nw4r3lyt19ArcResourceAccessorFPCc
 	.4byte 0x00000000
@@ -289,7 +289,9 @@
 # 0x80665DF8 - 0x80665E00
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665DF8, global
+.global lbl_80665DF8
+lbl_80665DF8:
 	.4byte 0x2E000000
-.sym lbl_80665DFC, global
+.global lbl_80665DFC
+lbl_80665DFC:
 	.4byte 0x2E2E0000

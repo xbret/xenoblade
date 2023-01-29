@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_restex.o"
 
-# 0x803DD580 - 0x803DD784
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ResPltt::DCStore(bool)
@@ -30,7 +29,7 @@
 /* 803DD5B8 003A6B78  4E 80 00 20 */	blr
 .endfn CheckRevision__Q34nw4r3g3d7ResPlttCFv
 
-.fn fn_803DD5BC, global
+.fn func_803DD5BC, global
 /* 803DD5BC 003A6B7C  80 63 00 00 */	lwz r3, 0x0(r3)
 /* 803DD5C0 003A6B80  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 803DD5C4 003A6B84  2C 00 00 00 */	cmpwi r0, 0x0
@@ -40,7 +39,7 @@
 .L_803DD5D4:
 /* 803DD5D4 003A6B94  38 60 00 00 */	li r3, 0x0
 /* 803DD5D8 003A6B98  4E 80 00 20 */	blr
-.endfn fn_803DD5BC
+.endfn func_803DD5BC
 
 # nw4r::g3d::ResTex::GetTexObjParam(void**, unsigned short*, unsigned short*, _GXTexFmt*, float*, float*, unsigned char*) const
 .fn GetTexObjParam__Q34nw4r3g3d6ResTexCFPPvPUsPUsP9_GXTexFmtPfPfPUc, global

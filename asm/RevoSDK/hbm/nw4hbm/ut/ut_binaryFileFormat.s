@@ -1,11 +1,10 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/ut/ut_binaryFileFormat.o"
 
-# 0x803368F0 - 0x80336A90
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.fn fn_803368F0, global
+.fn func_803368F0, global
 /* 803368F0 002FFEB0  80 03 00 00 */	lwz r0, 0x0(r3)
 /* 803368F4 002FFEB4  7C 00 20 40 */	cmplw r0, r4
 /* 803368F8 002FFEB8  41 82 00 0C */	beq .L_80336904
@@ -39,12 +38,12 @@
 /* 80336958 002FFF18  7C 00 18 50 */	subf r0, r0, r3
 /* 8033695C 002FFF1C  54 03 0F FE */	srwi r3, r0, 31
 /* 80336960 002FFF20  4E 80 00 20 */	blr
-.endfn fn_803368F0
+.endfn func_803368F0
 /* 80336964 002FFF24  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80336968 002FFF28  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8033696C 002FFF2C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80336970, global
+.fn func_80336970, global
 /* 80336970 002FFF30  80 E3 00 00 */	lwz r7, 0x0(r3)
 /* 80336974 002FFF34  88 C7 00 00 */	lbz r6, 0x0(r7)
 /* 80336978 002FFF38  54 C0 06 31 */	rlwinm. r0, r6, 0, 24, 24
@@ -78,11 +77,11 @@
 .L_803369E0:
 /* 803369E0 002FFFA0  7C C3 33 78 */	mr r3, r6
 /* 803369E4 002FFFA4  4E 80 00 20 */	blr
-.endfn fn_80336970
+.endfn func_80336970
 /* 803369E8 002FFFA8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803369EC 002FFFAC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_803369F0, global
+.fn func_803369F0, global
 /* 803369F0 002FFFB0  80 A3 00 00 */	lwz r5, 0x0(r3)
 /* 803369F4 002FFFB4  7C 66 1B 78 */	mr r6, r3
 /* 803369F8 002FFFB8  80 83 00 00 */	lwz r4, 0x0(r3)
@@ -90,10 +89,10 @@
 /* 80336A00 002FFFC0  38 04 00 02 */	addi r0, r4, 0x2
 /* 80336A04 002FFFC4  90 06 00 00 */	stw r0, 0x0(r6)
 /* 80336A08 002FFFC8  4E 80 00 20 */	blr
-.endfn fn_803369F0
+.endfn func_803369F0
 /* 80336A0C 002FFFCC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80336A10, global
+.fn func_80336A10, global
 /* 80336A10 002FFFD0  80 A3 00 00 */	lwz r5, 0x0(r3)
 /* 80336A14 002FFFD4  7C 66 1B 78 */	mr r6, r3
 /* 80336A18 002FFFD8  80 83 00 00 */	lwz r4, 0x0(r3)
@@ -101,10 +100,10 @@
 /* 80336A20 002FFFE0  38 04 00 01 */	addi r0, r4, 0x1
 /* 80336A24 002FFFE4  90 06 00 00 */	stw r0, 0x0(r6)
 /* 80336A28 002FFFE8  4E 80 00 20 */	blr
-.endfn fn_80336A10
+.endfn func_80336A10
 /* 80336A2C 002FFFEC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80336A30, global
+.fn func_80336A30, global
 /* 80336A30 002FFFF0  80 83 00 00 */	lwz r4, 0x0(r3)
 /* 80336A34 002FFFF4  38 00 00 00 */	li r0, 0x0
 /* 80336A38 002FFFF8  88 A4 00 00 */	lbz r5, 0x0(r4)
@@ -134,4 +133,4 @@
 .L_80336A88:
 /* 80336A88 00300048  7C C3 33 78 */	mr r3, r6
 /* 80336A8C 0030004C  4E 80 00 20 */	blr
-.endfn fn_80336A30
+.endfn func_80336A30

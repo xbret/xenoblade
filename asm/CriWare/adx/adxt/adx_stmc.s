@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_stmc.o"
 
-# 0x80380E70 - 0x8038238C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADXSTM_Init, global
@@ -1550,7 +1549,8 @@
 # 0x805197E0 - 0x80519838
 .rodata
 .balign 8
-.sym lbl_805197E0, global
+.global lbl_805197E0
+lbl_805197E0:
 	.4byte 0x45303231
 	.4byte 0x31303530
 	.4byte 0x31206164
@@ -1577,7 +1577,8 @@
 # 0x80563710 - 0x80563720
 .data
 .balign 8
-.sym lbl_80563710, global
+.global lbl_80563710
+lbl_80563710:
 	.4byte 0x00000018
 	.4byte 0x00000018
 	.4byte 0x00000010
@@ -1587,16 +1588,22 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj adxstm_init_count, global
+.global adxstm_init_count
+adxstm_init_count:
 	.skip 0x4
 
-.obj adxstmf_rtim_ofst, global
+.global adxstmf_rtim_ofst
+adxstmf_rtim_ofst:
 	.skip 0x4
-.sym lbl_805E7520, global
+.global lbl_805E7520
+lbl_805E7520:
 	.skip 0x4
-.sym lbl_805E7524, global
+.global lbl_805E7524
+lbl_805E7524:
 	.skip 0x4
-.sym lbl_805E7528, global
+.global lbl_805E7528
+lbl_805E7528:
 	.skip 0x1040
-.sym lbl_805E8568, global
+.global lbl_805E8568
+lbl_805E8568:
 	.skip 0x8

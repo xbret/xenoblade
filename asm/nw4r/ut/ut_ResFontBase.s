@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/ut/ut_ResFontBase.o"
 
-# 0x8042C074 - 0x8042C928
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::ut::detail::ResFontBase::ResFontBase()
@@ -739,7 +738,8 @@
 # 0x8056E740 - 0x8056E808
 .data
 .balign 8
-.sym lbl_8056E740, global
+.global lbl_8056E740
+lbl_8056E740:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r2ut4FontFv
@@ -764,11 +764,13 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8056E7A0, global
+.global lbl_8056E7A0
+lbl_8056E7A0:
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte ReadNextCharCP1252__Q34nw4r2ut14CharStrmReaderFv
-.sym lbl_8056E7AC, global
+.global lbl_8056E7AC
+lbl_8056E7AC:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r2ut6detail11ResFontBaseFv

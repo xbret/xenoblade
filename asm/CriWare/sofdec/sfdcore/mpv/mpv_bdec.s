@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mpv/mpv_bdec.o"
 
-# 0x803A3BAC - 0x803A3F8C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPVBDEC_Init, global
@@ -268,7 +267,8 @@
 # 0x8051F538 - 0x8051F5F8
 .rodata
 .balign 8
-.sym lbl_8051F538, global
+.global lbl_8051F538
+lbl_8051F538:
 	.4byte 0xFFFF7FFF
 	.4byte 0x3FFF1FFF
 	.4byte 0x0FFF07FF
@@ -321,5 +321,6 @@
 # 0x80605ED0 - 0x80605F10
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80605ED0, global
+.global lbl_80605ED0
+lbl_80605ED0:
 	.skip 0x40

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_PlayerHeap.o"
 
-# 0x80418968 - 0x80418B68
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::PlayerHeap::PlayerHeap()
@@ -171,7 +170,8 @@
 # 0x8056E3C8 - 0x8056E3D8
 .data
 .balign 8
-.sym lbl_8056E3C8, global
+.global lbl_8056E3C8
+lbl_8056E3C8:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r3snd6detail10PlayerHeapFv

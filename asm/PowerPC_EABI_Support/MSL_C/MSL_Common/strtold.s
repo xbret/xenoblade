@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common/strtold.o"
 
-# 0x802C2A2C - 0x802C3DAC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __strtold, global
@@ -1454,16 +1453,21 @@
 # 0x8066B878 - 0x8066B898
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066B878, global
+.global lbl_8066B878
+lbl_8066B878:
 	.4byte 0x4E414E28
-.sym lbl_8066B87C, global
+.global lbl_8066B87C
+lbl_8066B87C:
 	.4byte 0x00000000
-.sym lbl_8066B880, global
+.global lbl_8066B880
+lbl_8066B880:
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066B888, global
+.global lbl_8066B888
+lbl_8066B888:
 	.4byte 0x00100000
 	.4byte 0x00000000
-.sym lbl_8066B890, global
+.global lbl_8066B890
+lbl_8066B890:
 	.4byte 0x7FEFFFFF
 	.4byte 0xFFFFFFFF

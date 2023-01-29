@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/port_rfc.o"
 
-# 0x802FCA7C - 0x802FDE78
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn PORT_StartCnf, global
@@ -1455,7 +1454,8 @@
 # 0x80548200 - 0x80548530
 .data
 .balign 8
-.sym lbl_80548200, global
+.global lbl_80548200
+lbl_80548200:
 	.4byte 0x706F7274
 	.4byte 0x5F6F7065
 	.4byte 0x6E5F636F
@@ -1470,14 +1470,16 @@
 	.4byte 0x20636861
 	.4byte 0x6E6E656C
 	.4byte 0x00000000
-.sym lbl_80548238, global
+.global lbl_80548238
+lbl_80548238:
 	.4byte 0x504F5254
 	.4byte 0x5F537461
 	.4byte 0x7274436E
 	.4byte 0x66207265
 	.4byte 0x73756C74
 	.4byte 0x3A256400
-.sym lbl_80548250, global
+.global lbl_80548250
+lbl_80548250:
 	.4byte 0x504F5254
 	.4byte 0x5F537461
 	.4byte 0x7274436E
@@ -1486,12 +1488,14 @@
 	.4byte 0x20726573
 	.4byte 0x756C743A
 	.4byte 0x25640000
-.sym lbl_80548270, global
+.global lbl_80548270
+lbl_80548270:
 	.4byte 0x504F5254
 	.4byte 0x5F537461
 	.4byte 0x7274496E
 	.4byte 0x64000000
-.sym lbl_80548280, global
+.global lbl_80548280
+lbl_80548280:
 	.4byte 0x504F5254
 	.4byte 0x5F506172
 	.4byte 0x4E656749
@@ -1500,7 +1504,8 @@
 	.4byte 0x2564206D
 	.4byte 0x74753A25
 	.4byte 0x64000000
-.sym lbl_805482A0, global
+.global lbl_805482A0
+lbl_805482A0:
 	.4byte 0x504F5254
 	.4byte 0x5F506172
 	.4byte 0x4E656749
@@ -1509,7 +1514,8 @@
 	.4byte 0x206E6F74
 	.4byte 0x20666F75
 	.4byte 0x6E640000
-.sym lbl_805482C0, global
+.global lbl_805482C0
+lbl_805482C0:
 	.4byte 0x504F5254
 	.4byte 0x5F506172
 	.4byte 0x4E656743
@@ -1521,7 +1527,8 @@
 	.4byte 0x3A202564
 	.4byte 0x206B3A20
 	.4byte 0x25640000
-.sym lbl_805482EC, global
+.global lbl_805482EC
+lbl_805482EC:
 	.4byte 0x504F5254
 	.4byte 0x5F446C63
 	.4byte 0x45737461
@@ -1531,7 +1538,8 @@
 	.4byte 0x693A2564
 	.4byte 0x206D7475
 	.4byte 0x3A256400
-.sym lbl_80548310, global
+.global lbl_80548310
+lbl_80548310:
 	.4byte 0x504F5254
 	.4byte 0x5F446C63
 	.4byte 0x45737461
@@ -1544,7 +1552,8 @@
 	.4byte 0x72657375
 	.4byte 0x6C743A25
 	.4byte 0x64000000
-.sym lbl_80548340, global
+.global lbl_80548340
+lbl_80548340:
 	.4byte 0x504F5254
 	.4byte 0x5F506F72
 	.4byte 0x744E6567
@@ -1569,12 +1578,14 @@
 	.4byte 0x61647920
 	.4byte 0x73656E74
 	.4byte 0x00000000
-.sym lbl_805483A0, global
+.global lbl_805483A0
+lbl_805483A0:
 	.4byte 0x504F5254
 	.4byte 0x5F436F6E
 	.4byte 0x74726F6C
 	.4byte 0x496E6400
-.sym lbl_805483B0, global
+.global lbl_805483B0
+lbl_805483B0:
 	.4byte 0x504F5254
 	.4byte 0x5F436F6E
 	.4byte 0x74726F6C
@@ -1591,36 +1602,42 @@
 	.4byte 0x20444344
 	.4byte 0x203A2025
 	.4byte 0x64000000
-.sym lbl_805483F0, global
+.global lbl_805483F0
+lbl_805483F0:
 	.4byte 0x504F5254
 	.4byte 0x5F436F6E
 	.4byte 0x74726F6C
 	.4byte 0x436E6600
-.sym lbl_80548400, global
+.global lbl_80548400
+lbl_80548400:
 	.4byte 0x504F5254
 	.4byte 0x5F4C696E
 	.4byte 0x65537461
 	.4byte 0x74757349
 	.4byte 0x6E640000
-.sym lbl_80548414, global
+.global lbl_80548414
+lbl_80548414:
 	.4byte 0x504F5254
 	.4byte 0x5F446C63
 	.4byte 0x52656C65
 	.4byte 0x61736549
 	.4byte 0x6E640000
-.sym lbl_80548428, global
+.global lbl_80548428
+lbl_80548428:
 	.4byte 0x504F5254
 	.4byte 0x5F436C6F
 	.4byte 0x7365496E
 	.4byte 0x64000000
-.sym lbl_80548438, global
+.global lbl_80548438
+lbl_80548438:
 	.4byte 0x506F7274
 	.4byte 0x5F54696D
 	.4byte 0x654F7574
 	.4byte 0x436C6F73
 	.4byte 0x654D7578
 	.4byte 0x00000000
-.sym lbl_80548450, global
+.global lbl_80548450
+lbl_80548450:
 	.4byte 0x504F5254
 	.4byte 0x5F446174
 	.4byte 0x61496E64
@@ -1630,7 +1647,8 @@
 	.4byte 0x656E6774
 	.4byte 0x68202564
 	.4byte 0x00000000
-.sym lbl_80548474, global
+.global lbl_80548474
+lbl_80548474:
 	.4byte 0x504F5254
 	.4byte 0x5F446174
 	.4byte 0x61496E64
@@ -1644,20 +1662,23 @@
 	.4byte 0x74686520
 	.4byte 0x62756666
 	.4byte 0x65720000
-.sym lbl_805484A8, global
+.global lbl_805484A8
+lbl_805484A8:
 	.4byte 0x504F5254
 	.4byte 0x5F466C6F
 	.4byte 0x77496E64
 	.4byte 0x2066633A
 	.4byte 0x25640000
-.sym lbl_805484BC, global
+.global lbl_805484BC
+lbl_805484BC:
 	.4byte 0x53656E64
 	.4byte 0x696E6720
 	.4byte 0x5246434F
 	.4byte 0x4D4D5F44
 	.4byte 0x61746152
 	.4byte 0x65710000
-.sym lbl_805484D4, global
+.global lbl_805484D4
+lbl_805484D4:
 	.4byte 0x706F7274
 	.4byte 0x5F726663
 	.4byte 0x5F636C6F
@@ -1669,7 +1690,8 @@
 	.4byte 0x2069676E
 	.4byte 0x6F726564
 	.4byte 0x00000000
-.sym lbl_80548500, global
+.global lbl_80548500
+lbl_80548500:
 	.4byte 0x706F7274
 	.4byte 0x5F726663
 	.4byte 0x5F636C6F

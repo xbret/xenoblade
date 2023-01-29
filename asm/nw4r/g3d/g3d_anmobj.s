@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_anmobj.o"
 
-# 0x803E73B0 - 0x803E7468
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::PlayPolicy_Onetime(float, float, float)
@@ -73,7 +72,8 @@
 # 0x80520F68 - 0x80520F78
 .rodata
 .balign 8
-.sym lbl_80520F68, global
+.global lbl_80520F68
+lbl_80520F68:
 	.4byte 0x00000007
 	.4byte 0x416E6D4F
 	.4byte 0x626A0000
@@ -82,16 +82,19 @@
 # 0x80665D88 - 0x80665D98
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665D88, global
+.global lbl_80665D88
+lbl_80665D88:
 	.4byte PlayPolicy_Onetime__Q24nw4r3g3dFfff
 	.4byte PlayPolicy_Loop__Q24nw4r3g3dFfff
-.sym lbl_80665D90, global
+.global lbl_80665D90
+lbl_80665D90:
 	.4byte 0x3F800000
 	.4byte 0x00000000
 
 # 0x8066C3C0 - 0x8066C3C8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C3C0, global
+.global lbl_8066C3C0
+lbl_8066C3C0:
 	.4byte 0x00000000
 	.4byte 0x00000000

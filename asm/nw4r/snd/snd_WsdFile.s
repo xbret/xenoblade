@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_WsdFile.o"
 
-# 0x80429F70 - 0x8042A32C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::WsdFileReader::WsdFileReader(const void*)
@@ -278,6 +277,7 @@
 # 0x8066C900 - 0x8066C908
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C900, global
+.global lbl_8066C900
+lbl_8066C900:
 	.4byte 0x3F800000
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/sfd/sfd_mem.o"
 
-# 0x803C0E40 - 0x803C0EF0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFMEM_Init, global
@@ -94,7 +93,8 @@
 # 0x805202A0 - 0x805202D8
 .rodata
 .balign 8
-.sym lbl_805202A0, global
+.global lbl_805202A0
+lbl_805202A0:
 	.4byte SFMEM_Init
 	.4byte SFMEM_Finish
 	.4byte SFMEM_ExecServer

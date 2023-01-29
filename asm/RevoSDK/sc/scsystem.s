@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/sc/scsystem.o"
 
-# 0x8035F530 - 0x80360EC0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn SCInit, global
@@ -1846,23 +1845,23 @@
 # 0x80518D30 - 0x80518D88
 .rodata
 .balign 8
-.sym lbl_80518D30, global
+.global lbl_80518D30
+lbl_80518D30:
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x2F737973
 	.4byte 0x00000000
 
-.obj ConfFileName, local
+ConfFileName:
 	.4byte 0x2F736861
 	.4byte 0x72656432
 	.4byte 0x2F737973
 	.4byte 0x2F535953
 	.4byte 0x434F4E46
 	.byte 0x00
-.endobj ConfFileName
 	.byte 0x00, 0x00, 0x00
 
-.obj ProductInfoFileName, local
+ProductInfoFileName:
 	.4byte 0x2F746974
 	.4byte 0x6C652F30
 	.4byte 0x30303030
@@ -1874,14 +1873,14 @@
 	.4byte 0x7474696E
 	.4byte 0x672E7478
 	.2byte 0x7400
-.endobj ProductInfoFileName
 	.4byte 0x00000000
 	.2byte 0x0000
 
 # 0x8055EEF8 - 0x8055F0D8
 .data
 .balign 8
-.sym lbl_8055EEF8, global
+.global lbl_8055EEF8
+lbl_8055EEF8:
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -1900,31 +1899,38 @@
 	.4byte 0x5F313435
 	.4byte 0x29203E3E
 	.4byte 0x00000000
-.sym lbl_8055EF40, global
+.global lbl_8055EF40
+lbl_8055EF40:
 	.4byte 0x49504C2E
 	.4byte 0x45554C41
 	.4byte 0x00000000
-.sym lbl_8055EF4C, global
+.global lbl_8055EF4C
+lbl_8055EF4C:
 	.4byte 0x49504C2E
 	.4byte 0x53414452
 	.4byte 0x00000000
-.sym lbl_8055EF58, global
+.global lbl_8055EF58
+lbl_8055EF58:
 	.4byte 0x4E45542E
 	.4byte 0x43545043
 	.4byte 0x00000000
-.sym lbl_8055EF64, global
+.global lbl_8055EF64
+lbl_8055EF64:
 	.4byte 0x4E45542E
 	.4byte 0x50524F46
 	.4byte 0x00000000
-.sym lbl_8055EF70, global
+.global lbl_8055EF70
+lbl_8055EF70:
 	.4byte 0x4E45542E
 	.4byte 0x57435043
 	.4byte 0x00000000
-.sym lbl_8055EF7C, global
+.global lbl_8055EF7C
+lbl_8055EF7C:
 	.4byte 0x4E45542E
 	.4byte 0x57434647
 	.4byte 0x00000000
-.sym lbl_8055EF88, global
+.global lbl_8055EF88
+lbl_8055EF88:
 	.4byte lbl_80665BC4
 	.4byte 0x00000000
 	.4byte lbl_80665BCC
@@ -2000,7 +2006,7 @@
 	.4byte lbl_80665CB8
 	.4byte 0x00000024
 
-.obj jumptable_8055F0B0, local
+jumptable_8055F0B0:
 	.rel MyNandCallback, .L_80360BC0
 	.rel MyNandCallback, .L_80360C04
 	.rel MyNandCallback, .L_80360C44
@@ -2011,122 +2017,151 @@
 	.rel MyNandCallback, .L_80360D68
 	.rel MyNandCallback, .L_80360DA4
 	.rel MyNandCallback, .L_80360DAC
-.endobj jumptable_8055F0B0
 
 # 0x805D5540 - 0x805DD6E0
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj Control, local
+Control:
 	.skip 0x190
-.endobj Control
 	.skip 0x10
 
-.obj ConfBuf, local
+ConfBuf:
 	.skip 0x4000
-.endobj ConfBuf
-.sym lbl_805D96E0, global
+.global lbl_805D96E0
+lbl_805D96E0:
 	.skip 0x4000
 
 # 0x80665BC0 - 0x80665CD0
 .section .sdata, "wa"
 .balign 8
 
-.obj __SCVersion, global
+.global __SCVersion
+__SCVersion:
 	.4byte lbl_8055EEF8
-.endobj __SCVersion
-.sym lbl_80665BC4, global
+.global lbl_80665BC4
+lbl_80665BC4:
 	.4byte 0x49504C2E
 	.4byte 0x43420000
-.sym lbl_80665BCC, global
+.global lbl_80665BCC
+lbl_80665BCC:
 	.4byte 0x49504C2E
 	.4byte 0x41520000
 	.4byte 0x00000000
-.sym lbl_80665BD8, global
+.global lbl_80665BD8
+lbl_80665BD8:
 	.4byte 0x49504C2E
 	.4byte 0x41524E00
-.sym lbl_80665BE0, global
+.global lbl_80665BE0
+lbl_80665BE0:
 	.4byte 0x49504C2E
 	.4byte 0x43440000
-.sym lbl_80665BE8, global
+.global lbl_80665BE8
+lbl_80665BE8:
 	.4byte 0x49504C2E
 	.4byte 0x43443200
-.sym lbl_80665BF0, global
+.global lbl_80665BF0
+lbl_80665BF0:
 	.4byte 0x49504C2E
 	.4byte 0x44480000
-.sym lbl_80665BF8, global
+.global lbl_80665BF8
+lbl_80665BF8:
 	.4byte 0x49504C2E
 	.4byte 0x45363000
-.sym lbl_80665C00, global
+.global lbl_80665C00
+lbl_80665C00:
 	.4byte 0x49504C2E
 	.4byte 0x46524300
-.sym lbl_80665C08, global
+.global lbl_80665C08
+lbl_80665C08:
 	.4byte 0x49504C2E
 	.4byte 0x49444C00
-.sym lbl_80665C10, global
+.global lbl_80665C10
+lbl_80665C10:
 	.4byte 0x49504C2E
 	.4byte 0x494E4300
-.sym lbl_80665C18, global
+.global lbl_80665C18
+lbl_80665C18:
 	.4byte 0x49504C2E
 	.4byte 0x4C4E4700
-.sym lbl_80665C20, global
+.global lbl_80665C20
+lbl_80665C20:
 	.4byte 0x49504C2E
 	.4byte 0x4E494B00
-.sym lbl_80665C28, global
+.global lbl_80665C28
+lbl_80665C28:
 	.4byte 0x49504C2E
 	.4byte 0x50430000
-.sym lbl_80665C30, global
+.global lbl_80665C30
+lbl_80665C30:
 	.4byte 0x49504C2E
 	.4byte 0x50475300
-.sym lbl_80665C38, global
+.global lbl_80665C38
+lbl_80665C38:
 	.4byte 0x49504C2E
 	.4byte 0x53535600
-.sym lbl_80665C40, global
+.global lbl_80665C40
+lbl_80665C40:
 	.4byte 0x49504C2E
 	.4byte 0x534E4400
-.sym lbl_80665C48, global
+.global lbl_80665C48
+lbl_80665C48:
 	.4byte 0x49504C2E
 	.4byte 0x55505400
-.sym lbl_80665C50, global
+.global lbl_80665C50
+lbl_80665C50:
 	.4byte 0x4E45542E
 	.4byte 0x434E4600
-.sym lbl_80665C58, global
+.global lbl_80665C58
+lbl_80665C58:
 	.4byte 0x4445562E
 	.4byte 0x42544D00
-.sym lbl_80665C60, global
+.global lbl_80665C60
+lbl_80665C60:
 	.4byte 0x4445562E
 	.4byte 0x56494D00
-.sym lbl_80665C68, global
+.global lbl_80665C68
+lbl_80665C68:
 	.4byte 0x4445562E
 	.4byte 0x43544300
-.sym lbl_80665C70, global
+.global lbl_80665C70
+lbl_80665C70:
 	.4byte 0x4445562E
 	.4byte 0x44534D00
-.sym lbl_80665C78, global
+.global lbl_80665C78
+lbl_80665C78:
 	.4byte 0x42542E44
 	.4byte 0x494E4600
-.sym lbl_80665C80, global
+.global lbl_80665C80
+lbl_80665C80:
 	.4byte 0x42542E43
 	.4byte 0x44494600
-.sym lbl_80665C88, global
+.global lbl_80665C88
+lbl_80665C88:
 	.4byte 0x42542E53
 	.4byte 0x454E5300
-.sym lbl_80665C90, global
+.global lbl_80665C90
+lbl_80665C90:
 	.4byte 0x42542E53
 	.4byte 0x504B5600
-.sym lbl_80665C98, global
+.global lbl_80665C98
+lbl_80665C98:
 	.4byte 0x42542E4D
 	.4byte 0x4F540000
-.sym lbl_80665CA0, global
+.global lbl_80665CA0
+lbl_80665CA0:
 	.4byte 0x42542E42
 	.4byte 0x41520000
-.sym lbl_80665CA8, global
+.global lbl_80665CA8
+lbl_80665CA8:
 	.4byte 0x4456442E
 	.4byte 0x434E4600
-.sym lbl_80665CB0, global
+.global lbl_80665CB0
+lbl_80665CB0:
 	.4byte 0x5757572E
 	.4byte 0x52535400
-.sym lbl_80665CB8, global
+.global lbl_80665CB8
+lbl_80665CB8:
 	.4byte 0x49504C2E
 	.4byte 0x54494400
 
@@ -2146,32 +2181,28 @@
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj BgJobStatus, local
+BgJobStatus:
 	.skip 0x1
-.endobj BgJobStatus
 	.skip 0x3
 
-.obj ItemRestSize, local
-	.skip 0x4
-.endobj ItemRestSize
-
-.obj ItemNumTotal, local
-	.skip 0x4
-.endobj ItemNumTotal
-.sym lbl_80667B64, global
+ItemRestSize:
 	.skip 0x4
 
-.obj ItemIDOffsetTblOffset, local
+ItemNumTotal:
 	.skip 0x4
-.endobj ItemIDOffsetTblOffset
+.global lbl_80667B64
+lbl_80667B64:
+	.skip 0x4
 
-.obj IsDevKit, local
+ItemIDOffsetTblOffset:
+	.skip 0x4
+
+IsDevKit:
 	.skip 0x1
-.endobj IsDevKit
-.sym lbl_80667B6D, global
+.global lbl_80667B6D
+lbl_80667B6D:
 	.skip 0x1
 
-.obj Initialized, local
+Initialized:
 	.skip 0x1
-.endobj Initialized
 	.skip 0x1

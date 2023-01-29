@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_WaveSound.o"
 
-# 0x80429BD8 - 0x80429F38
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::WaveSound::WaveSound(nw4r::snd::detail::SoundInstanceManager_Q44nw4r3snd6detail9WaveSound_*, int, int)
@@ -301,7 +300,8 @@
 # 0x8056E650 - 0x8056E688
 .data
 .balign 8
-.sym lbl_8056E650, global
+.global lbl_8056E650
+lbl_8056E650:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail9WaveSoundCFv
@@ -320,5 +320,6 @@
 # 0x80667E18 - 0x80667E20
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E18, global
+.global lbl_80667E18
+lbl_80667E18:
 	.skip 0x8

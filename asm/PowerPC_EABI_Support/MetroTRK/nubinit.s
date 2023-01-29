@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MetroTRK/nubinit.o"
 
-# 0x802CC7EC - 0x802CC93C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn TRKInitializeNub, global
@@ -128,10 +127,11 @@
 # 0x80667580 - 0x80667590
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667580, global
+.global lbl_80667580
+lbl_80667580:
 	.skip 0x8
 
-.obj gTRKInputPendingPtr, global
+.global gTRKInputPendingPtr
+gTRKInputPendingPtr:
 	.skip 0x4
-.endobj gTRKInputPendingPtr
 	.skip 0x4

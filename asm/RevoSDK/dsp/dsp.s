@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/dsp/dsp.o"
 
-# 0x80309210 - 0x803094B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn DSPCheckMailToDSP, global
@@ -209,7 +208,8 @@
 # 0x805495F8 - 0x80549678
 .data
 .balign 8
-.sym lbl_805495F8, global
+.global lbl_805495F8
+lbl_805495F8:
 	.4byte 0x3C3C2052
 	.4byte 0x564C5F53
 	.4byte 0x444B202D
@@ -246,24 +246,32 @@
 # 0x80665968 - 0x80665970
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665968, global
+.global lbl_80665968
+lbl_80665968:
 	.4byte lbl_805495F8
 	.4byte 0x00000000
 
 # 0x80667788 - 0x806677A8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667788, global
+.global lbl_80667788
+lbl_80667788:
 	.skip 0x8
-.sym lbl_80667790, global
+.global lbl_80667790
+lbl_80667790:
 	.skip 0x4
-.sym lbl_80667794, global
+.global lbl_80667794
+lbl_80667794:
 	.skip 0x4
-.sym lbl_80667798, global
+.global lbl_80667798
+lbl_80667798:
 	.skip 0x4
-.sym lbl_8066779C, global
+.global lbl_8066779C
+lbl_8066779C:
 	.skip 0x4
-.sym lbl_806677A0, global
+.global lbl_806677A0
+lbl_806677A0:
 	.skip 0x4
-.sym lbl_806677A4, global
+.global lbl_806677A4
+lbl_806677A4:
 	.skip 0x4

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_McsSoundArchive.o"
 
-# 0x80417150 - 0x80417168
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::ut::IOStream::GetBufferAlign() const

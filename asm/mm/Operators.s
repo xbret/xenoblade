@@ -1,42 +1,7 @@
 .include "macros.inc"
-.file "mm/Operators.o"
 
-# 0x8001C010 - 0x8001C020
-.section extab, "a"
-.balign 4
+.section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.obj "@etb_8001C010", local
-.hidden "@etb_8001C010"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_8001C010"
-
-.obj "@etb_8001C018", local
-.hidden "@etb_8001C018"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_8001C018"
-
-# 0x80033BE4 - 0x80033BFC
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80033BE4", local
-.hidden "@eti_80033BE4"
-	.4byte __dl__FPv
-	.4byte 0x000001B4
-	.4byte "@etb_8001C010"
-.endobj "@eti_80033BE4"
-
-.obj "@eti_80033BF0", local
-.hidden "@eti_80033BF0"
-	.4byte __dla__FPv
-	.4byte 0x000001B4
-	.4byte "@etb_8001C018"
-.endobj "@eti_80033BF0"
-
-# 0x80434C24 - 0x80434F94
-.text
 .balign 4
 
 # operator new(unsigned long)
@@ -102,7 +67,7 @@
 /* 80434CEC 003FE2AC  90 1F 00 0C */	stw r0, 0xc(r31)
 .L_80434CF0:
 /* 80434CF0 003FE2B0  7F E3 FB 78 */	mr r3, r31
-/* 80434CF4 003FE2B4  4B FF EC C5 */	bl fn_804339B8
+/* 80434CF4 003FE2B4  4B FF EC C5 */	bl func_804339B8
 /* 80434CF8 003FE2B8  80 A3 00 00 */	lwz r5, 0x0(r3)
 /* 80434CFC 003FE2BC  2C 05 00 00 */	cmpwi r5, 0x0
 /* 80434D00 003FE2C0  41 82 00 4C */	beq .L_80434D4C
@@ -156,7 +121,7 @@
 /* 80434DB0 003FE370  2C 04 00 00 */	cmpwi r4, 0x0
 /* 80434DB4 003FE374  41 82 00 0C */	beq .L_80434DC0
 /* 80434DB8 003FE378  7F E3 FB 78 */	mr r3, r31
-/* 80434DBC 003FE37C  4B FF EC ED */	bl fn_80433AA8
+/* 80434DBC 003FE37C  4B FF EC ED */	bl func_80433AA8
 .L_80434DC0:
 /* 80434DC0 003FE380  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 80434DC4 003FE384  38 03 FF FF */	addi r0, r3, -0x1
@@ -226,7 +191,7 @@
 /* 80434EA0 003FE460  90 1F 00 0C */	stw r0, 0xc(r31)
 .L_80434EA4:
 /* 80434EA4 003FE464  7F E3 FB 78 */	mr r3, r31
-/* 80434EA8 003FE468  4B FF EB 11 */	bl fn_804339B8
+/* 80434EA8 003FE468  4B FF EB 11 */	bl func_804339B8
 /* 80434EAC 003FE46C  80 A3 00 00 */	lwz r5, 0x0(r3)
 /* 80434EB0 003FE470  2C 05 00 00 */	cmpwi r5, 0x0
 /* 80434EB4 003FE474  41 82 00 4C */	beq .L_80434F00
@@ -280,7 +245,7 @@
 /* 80434F64 003FE524  2C 04 00 00 */	cmpwi r4, 0x0
 /* 80434F68 003FE528  41 82 00 0C */	beq .L_80434F74
 /* 80434F6C 003FE52C  7F E3 FB 78 */	mr r3, r31
-/* 80434F70 003FE530  4B FF EB 39 */	bl fn_80433AA8
+/* 80434F70 003FE530  4B FF EB 39 */	bl func_80433AA8
 .L_80434F74:
 /* 80434F74 003FE534  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 80434F78 003FE538  38 03 FF FF */	addi r0, r3, -0x1
@@ -292,3 +257,37 @@
 /* 80434F8C 003FE54C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80434F90 003FE550  4E 80 00 20 */	blr
 .endfn __dla__FPv
+
+# 0x8001C010 - 0x8001C020
+.section extab, "a"
+.balign 4
+
+.obj "@etb_8001C010", local
+.hidden "@etb_8001C010"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_8001C010"
+
+.obj "@etb_8001C018", local
+.hidden "@etb_8001C018"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_8001C018"
+
+# 0x80033BE4 - 0x80033BFC
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80033BE4", local
+.hidden "@eti_80033BE4"
+	.4byte __dl__FPv
+	.4byte 0x000001B4
+	.4byte "@etb_8001C010"
+.endobj "@eti_80033BE4"
+
+.obj "@eti_80033BF0", local
+.hidden "@eti_80033BF0"
+	.4byte __dla__FPv
+	.4byte 0x000001B4
+	.4byte "@etb_8001C018"
+.endobj "@eti_80033BF0"

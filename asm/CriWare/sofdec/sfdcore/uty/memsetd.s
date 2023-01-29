@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/uty/memsetd.o"
 
-# 0x803D44D0 - 0x803D4548
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn UTY_MemsetDword, global

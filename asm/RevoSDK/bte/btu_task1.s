@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/btu_task1.o"
 
-# 0x802DE1F0 - 0x802DE634
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn btu_task_init, global
@@ -337,7 +336,9 @@
 # 0x80667770 - 0x80667778
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667770, global
+.global lbl_80667770
+lbl_80667770:
 	.skip 0x4
-.sym lbl_80667774, global
+.global lbl_80667774
+lbl_80667774:
 	.skip 0x4

@@ -1,5 +1,4 @@
 .include "macros.inc"
-.file "RevoSDK/os/__start.o"
 
 # 0x800062C0 - 0x800065C0
 .section .init, "ax"
@@ -235,7 +234,6 @@
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj Debug_BBA, local
+Debug_BBA:
 	.skip 0x1
-.endobj Debug_BBA
 	.skip 0x7

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/l2c_utils.o"
 
-# 0x802FAB68 - 0x802FCA2C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 8
 
 .fn l2cu_allocate_lcb, global
@@ -2217,7 +2216,8 @@
 # 0x80548118 - 0x80548200
 .data
 .balign 8
-.sym lbl_80548118, global
+.global lbl_80548118
+lbl_80548118:
 	.4byte 0x4C324341
 	.4byte 0x50202D20
 	.4byte 0x6E6F2062
@@ -2225,7 +2225,8 @@
 	.4byte 0x7220636D
 	.4byte 0x645F7265
 	.4byte 0x6A000000
-.sym lbl_80548134, global
+.global lbl_80548134
+lbl_80548134:
 	.4byte 0x4C324341
 	.4byte 0x50202D20
 	.4byte 0x6E6F2062
@@ -2234,7 +2235,8 @@
 	.4byte 0x7220636F
 	.4byte 0x6E6E5F72
 	.4byte 0x65710000
-.sym lbl_80548154, global
+.global lbl_80548154
+lbl_80548154:
 	.4byte 0x4C324341
 	.4byte 0x50202D20
 	.4byte 0x6E6F2062
@@ -2243,7 +2245,8 @@
 	.4byte 0x72206366
 	.4byte 0x675F7265
 	.4byte 0x6A000000
-.sym lbl_80548174, global
+.global lbl_80548174
+lbl_80548174:
 	.4byte 0x4C324341
 	.4byte 0x50202D20
 	.4byte 0x6E6F2062
@@ -2252,7 +2255,8 @@
 	.4byte 0x72206563
 	.4byte 0x686F5F72
 	.4byte 0x65710000
-.sym lbl_80548194, global
+.global lbl_80548194
+lbl_80548194:
 	.4byte 0x6C326375
 	.4byte 0x5F637265
 	.4byte 0x6174655F
@@ -2270,7 +2274,8 @@
 	.4byte 0x61637469
 	.4byte 0x7665203D
 	.4byte 0x20257300
-.sym lbl_805481D8, global
+.global lbl_805481D8
+lbl_805481D8:
 	.4byte 0x4C324341
 	.4byte 0x50202D20
 	.4byte 0x6E6F2062
@@ -2285,9 +2290,11 @@
 # 0x80665948 - 0x80665958
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665948, global
+.global lbl_80665948
+lbl_80665948:
 	.4byte 0x54525545
 	.4byte 0x00000000
-.sym lbl_80665950, global
+.global lbl_80665950
+lbl_80665950:
 	.4byte 0x46414C53
 	.4byte 0x45000000

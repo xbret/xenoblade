@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/ax/AXAux.o"
 
-# 0x802D26B0 - 0x802D2F70
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __AXAuxInit, global
@@ -652,49 +651,70 @@
 # 0x8057D940 - 0x80580AC0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057D940, global
+.global lbl_8057D940
+lbl_8057D940:
 	.skip 0x1200
-.sym lbl_8057EB40, global
+.global lbl_8057EB40
+lbl_8057EB40:
 	.skip 0x1200
-.sym lbl_8057FD40, global
+.global lbl_8057FD40
+lbl_8057FD40:
 	.skip 0xD80
 
 # 0x80667618 - 0x80667660
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667618, global
+.global lbl_80667618
+lbl_80667618:
 	.skip 0x4
-.sym lbl_8066761C, global
+.global lbl_8066761C
+lbl_8066761C:
 	.skip 0x4
-.sym lbl_80667620, global
+.global lbl_80667620
+lbl_80667620:
 	.skip 0x4
-.sym lbl_80667624, global
+.global lbl_80667624
+lbl_80667624:
 	.skip 0x4
-.sym lbl_80667628, global
+.global lbl_80667628
+lbl_80667628:
 	.skip 0x4
-.sym lbl_8066762C, global
+.global lbl_8066762C
+lbl_8066762C:
 	.skip 0x4
-.sym lbl_80667630, global
+.global lbl_80667630
+lbl_80667630:
 	.skip 0x4
-.sym lbl_80667634, global
+.global lbl_80667634
+lbl_80667634:
 	.skip 0x4
-.sym lbl_80667638, global
+.global lbl_80667638
+lbl_80667638:
 	.skip 0x4
-.sym lbl_8066763C, global
+.global lbl_8066763C
+lbl_8066763C:
 	.skip 0x4
-.sym lbl_80667640, global
+.global lbl_80667640
+lbl_80667640:
 	.skip 0x4
-.sym lbl_80667644, global
+.global lbl_80667644
+lbl_80667644:
 	.skip 0x4
-.sym lbl_80667648, global
+.global lbl_80667648
+lbl_80667648:
 	.skip 0x4
-.sym lbl_8066764C, global
+.global lbl_8066764C
+lbl_8066764C:
 	.skip 0x4
-.sym lbl_80667650, global
+.global lbl_80667650
+lbl_80667650:
 	.skip 0x4
-.sym lbl_80667654, global
+.global lbl_80667654
+lbl_80667654:
 	.skip 0x4
-.sym lbl_80667658, global
+.global lbl_80667658
+lbl_80667658:
 	.skip 0x4
-.sym lbl_8066765C, global
+.global lbl_8066765C
+lbl_8066765C:
 	.skip 0x4

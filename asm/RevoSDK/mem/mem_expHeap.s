@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/mem/mem_expHeap.o"
 
-# 0x80348FC0 - 0x80349770
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn AllocUsedBlockFromFreeBlock_, global

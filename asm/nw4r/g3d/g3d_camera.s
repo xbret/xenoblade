@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_camera.o"
 
-# 0x803F0FFC - 0x803F1E18
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::Camera::Camera(nw4r::g3d::CameraData*)
@@ -1042,26 +1041,37 @@
 # 0x8066C458 - 0x8066C488
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C458, global
+.global lbl_8066C458
+lbl_8066C458:
 	.4byte 0x00000000
-.sym lbl_8066C45C, global
+.global lbl_8066C45C
+lbl_8066C45C:
 	.4byte 0x41700000
-.sym lbl_8066C460, global
+.global lbl_8066C460
+lbl_8066C460:
 	.4byte 0x3F800000
-.sym lbl_8066C464, global
+.global lbl_8066C464
+lbl_8066C464:
 	.4byte 0x42700000
-.sym lbl_8066C468, global
+.global lbl_8066C468
+lbl_8066C468:
 	.4byte 0x3FAAAAAB
-.sym lbl_8066C46C, global
+.global lbl_8066C46C
+lbl_8066C46C:
 	.4byte 0x3DCCCCCD
-.sym lbl_8066C470, global
+.global lbl_8066C470
+lbl_8066C470:
 	.4byte 0x447A0000
-.sym lbl_8066C474, global
+.global lbl_8066C474
+lbl_8066C474:
 	.4byte 0x3F000000
-.sym lbl_8066C478, global
+.global lbl_8066C478
+lbl_8066C478:
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C480, global
+.global lbl_8066C480
+lbl_8066C480:
 	.4byte 0xBF800000
-.sym lbl_8066C484, global
+.global lbl_8066C484
+lbl_8066C484:
 	.4byte 0x3F360B61

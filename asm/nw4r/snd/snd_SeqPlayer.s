@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_SeqPlayer.o"
 
-# 0x80419708 - 0x8041ABBC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::SeqPlayer::InitSeqPlayer()
@@ -950,7 +949,7 @@
 /* 8041A3D8 003E3998  4E 80 00 20 */	blr
 .endfn InvalidateData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
 
-.fn fn_8041A3DC, global
+.fn func_8041A3DC, global
 /* 8041A3DC 003E399C  2C 04 00 0F */	cmpwi r4, 0xf
 /* 8041A3E0 003E39A0  40 81 00 0C */	ble .L_8041A3EC
 /* 8041A3E4 003E39A4  38 60 00 00 */	li r3, 0x0
@@ -960,7 +959,7 @@
 /* 8041A3F0 003E39B0  7C 63 02 14 */	add r3, r3, r0
 /* 8041A3F4 003E39B4  80 63 01 20 */	lwz r3, 0x120(r3)
 /* 8041A3F8 003E39B8  4E 80 00 20 */	blr
-.endfn fn_8041A3DC
+.endfn func_8041A3DC
 
 # nw4r::snd::detail::SeqPlayer::ParseNextTick(bool)
 .fn ParseNextTick__Q44nw4r3snd6detail9SeqPlayerFb, global
@@ -1530,9 +1529,9 @@
 /* 8041ABA4 003E4164  4E 80 04 20 */	bctr
 .endfn NoteOn__Q44nw4r3snd6detail9SeqPlayerFiRCQ44nw4r3snd6detail10NoteOnInfo
 
-.fn fn_8041ABA8, global
+.fn func_8041ABA8, global
 /* 8041ABA8 003E4168  4E 80 00 20 */	blr
-.endfn fn_8041ABA8
+.endfn func_8041ABA8
 
 .fn _180___dt__Q44nw4r3snd6detail9SeqPlayerFv, global
 /* 8041ABAC 003E416C  38 63 FF 2C */	addi r3, r3, -0xd4
@@ -1547,7 +1546,8 @@
 # 0x8056E3D8 - 0x8056E440
 .data
 .balign 8
-.sym lbl_8056E3D8, global
+.global lbl_8056E3D8
+lbl_8056E3D8:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q44nw4r3snd6detail9SeqPlayerFv
@@ -1570,7 +1570,7 @@
 	.4byte _220_OnShutdownSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte InvalidateData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
 	.4byte InvalidateWaveData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
-	.4byte fn_8041ABA8
+	.4byte func_8041ABA8
 	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte 0x00000000
@@ -1578,19 +1578,24 @@
 # 0x8063B4C0 - 0x8063B4E0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8063B4C0, global
+.global lbl_8063B4C0
+lbl_8063B4C0:
 	.skip 0x20
 
 # 0x8066C800 - 0x8066C818
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C800, global
+.global lbl_8066C800
+lbl_8066C800:
 	.4byte 0x3F800000
-.sym lbl_8066C804, global
+.global lbl_8066C804
+lbl_8066C804:
 	.4byte 0x00000000
-.sym lbl_8066C808, global
+.global lbl_8066C808
+lbl_8066C808:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C810, global
+.global lbl_8066C810
+lbl_8066C810:
 	.4byte 0x476A6000
 	.4byte 0x00000000

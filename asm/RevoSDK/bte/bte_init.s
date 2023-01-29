@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/bte_init.o"
 
-# 0x802DDEB0 - 0x802DDEE0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn BTE_InitStack, global

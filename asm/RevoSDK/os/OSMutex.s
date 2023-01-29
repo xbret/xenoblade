@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSMutex.o"
 
-# 0x80359C20 - 0x80359E80
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn OSInitMutex, global

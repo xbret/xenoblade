@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/wenc/wenc.o"
 
-# 0x80368A8C - 0x80368D70
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn WENCGetEncodeData, global
@@ -210,7 +209,8 @@
 # 0x80518D88 - 0x80518DC8
 .rodata
 .balign 8
-.sym lbl_80518D88, global
+.global lbl_80518D88
+lbl_80518D88:
 	.4byte 0x3FECC000
 	.4byte 0x00000000
 	.4byte 0x3FECC000
@@ -231,6 +231,7 @@
 # 0x8066C1F0 - 0x8066C1F8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C1F0, global
+.global lbl_8066C1F0
+lbl_8066C1F0:
 	.4byte 0x43300000
 	.4byte 0x80000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/dsp/dsp_task.o"
 
-# 0x80309500 - 0x80309DA0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __DSPHandler, global
@@ -644,7 +643,8 @@
 # 0x80549678 - 0x805497B8
 .data
 .balign 8
-.sym lbl_80549678, global
+.global lbl_80549678
+lbl_80549678:
 	.4byte 0x44535020
 	.4byte 0x69732062
 	.4byte 0x6F6F7469

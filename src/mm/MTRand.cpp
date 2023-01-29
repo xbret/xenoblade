@@ -69,12 +69,12 @@ namespace mtl{
     /* Could also be 1/4294967296, but since it doesn't make a difference there's
         no way to know */
 
-    //fn_80435B5C
+    //func_80435B5C
     float MTRand::randFloat() {
         return float(randInt()) * float(1.0/4294967295.0);
     }
 
-    //fn_80435BF8
+    //func_80435BF8
     float MTRand::randFloat1() {
         return (float(randInt()) + 0.5f) * float(1.0/4294967295.0);
     }

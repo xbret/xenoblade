@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_Task.o"
 
-# 0x80425784 - 0x804257C4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::Task::~Task()

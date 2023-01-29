@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_resanmfog.o"
 
-# 0x803E0950 - 0x803E0AB0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ResAnmFog::GetAnmResult(nw4r::g3d::FogAnmResult*, float) const
@@ -111,9 +110,11 @@
 # 0x8066C330 - 0x8066C340
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C330, global
+.global lbl_8066C330
+lbl_8066C330:
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066C338, global
+.global lbl_8066C338
+lbl_8066C338:
 	.4byte 0x43300000
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/lyt/lyt_material.o"
 
-# 0x8032E4D0 - 0x80331740
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # _unnamed_lyt_material_cpp_::CalcTextureMtx(nw4hbm::math::MTX34*, const nw4hbm::lyt::TexSRT&)
@@ -1902,18 +1901,18 @@
 /* 803300E8 002F96A8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 803300EC 002F96AC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_803300F0, global
+.fn func_803300F0, global
 /* 803300F0 002F96B0  80 03 00 4C */	lwz r0, 0x4c(r3)
 /* 803300F4 002F96B4  80 63 00 58 */	lwz r3, 0x58(r3)
 /* 803300F8 002F96B8  54 00 4D F4 */	rlwinm r0, r0, 9, 23, 26
 /* 803300FC 002F96BC  7C 63 02 14 */	add r3, r3, r0
 /* 80330100 002F96C0  4E 80 00 20 */	blr
-.endfn fn_803300F0
+.endfn func_803300F0
 /* 80330104 002F96C4  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80330108 002F96C8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8033010C 002F96CC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80330110, global
+.fn func_80330110, global
 /* 80330110 002F96D0  80 83 00 4C */	lwz r4, 0x4c(r3)
 /* 80330114 002F96D4  80 A3 00 58 */	lwz r5, 0x58(r3)
 /* 80330118 002F96D8  54 80 47 3E */	extrwi r0, r4, 4, 4
@@ -1922,9 +1921,9 @@
 /* 80330124 002F96E4  7C 05 02 14 */	add r0, r5, r0
 /* 80330128 002F96E8  7C 63 02 14 */	add r3, r3, r0
 /* 8033012C 002F96EC  4E 80 00 20 */	blr
-.endfn fn_80330110
+.endfn func_80330110
 
-.fn fn_80330130, global
+.fn func_80330130, global
 /* 80330130 002F96F0  81 23 00 4C */	lwz r9, 0x4c(r3)
 /* 80330134 002F96F4  81 63 00 58 */	lwz r11, 0x58(r3)
 /* 80330138 002F96F8  55 20 47 3E */	extrwi r0, r9, 4, 4
@@ -1947,7 +1946,7 @@
 /* 8033017C 002F973C  7C 0B 02 14 */	add r0, r11, r0
 /* 80330180 002F9740  7C 63 02 14 */	add r3, r3, r0
 /* 80330184 002F9744  4E 80 00 20 */	blr
-.endfn fn_80330130
+.endfn func_80330130
 /* 80330188 002F9748  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8033018C 002F974C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
@@ -3290,7 +3289,7 @@
 /* 803314B8 002FAA78  93 81 00 08 */	stw r28, 0x8(r1)
 /* 803314BC 002FAA7C  38 7A 00 18 */	addi r3, r26, 0x18
 /* 803314C0 002FAA80  38 81 00 08 */	addi r4, r1, 0x8
-/* 803314C4 002FAA84  48 00 71 0D */	bl fn_803385D0
+/* 803314C4 002FAA84  48 00 71 0D */	bl func_803385D0
 /* 803314C8 002FAA88  93 BC 00 08 */	stw r29, 0x8(r28)
 /* 803314CC 002FAA8C  B3 BC 00 0C */	sth r29, 0xc(r28)
 .L_803314D0:
@@ -3365,7 +3364,7 @@
 /* 803315A4 002FAB64  38 63 00 18 */	addi r3, r3, 0x18
 /* 803315A8 002FAB68  38 81 00 08 */	addi r4, r1, 0x8
 /* 803315AC 002FAB6C  90 01 00 08 */	stw r0, 0x8(r1)
-/* 803315B0 002FAB70  48 00 70 71 */	bl fn_80338620
+/* 803315B0 002FAB70  48 00 70 71 */	bl func_80338620
 /* 803315B4 002FAB74  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 803315B8 002FAB78  7C 08 03 A6 */	mtlr r0
 /* 803315BC 002FAB7C  38 21 00 10 */	addi r1, r1, 0x10
@@ -3485,28 +3484,34 @@
 # 0x80518A68 - 0x80518A98
 .rodata
 .balign 8
-.sym lbl_80518A68, global
+.global lbl_80518A68
+lbl_80518A68:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00FF00FF
 	.4byte 0x00FF00FF
 	.4byte 0x3F000000
-.sym lbl_80518A7C, global
+.global lbl_80518A7C
+lbl_80518A7C:
 	.4byte 0x3F360B61
-.sym lbl_80518A80, global
+.global lbl_80518A80
+lbl_80518A80:
 	.4byte 0x00000000
-.sym lbl_80518A84, global
+.global lbl_80518A84
+lbl_80518A84:
 	.4byte 0x3F800000
 	.4byte 0x40000000
 	.4byte 0x00000000
-.sym lbl_80518A90, global
+.global lbl_80518A90
+lbl_80518A90:
 	.4byte 0x43300000
 	.4byte 0x00000000
 
 # 0x8054D848 - 0x8054D8D0
 .data
 .balign 8
-.sym lbl_8054D848, global
+.global lbl_8054D848
+lbl_8054D848:
 	.4byte 0x0000001F
 	.4byte 0x0000001B
 	.4byte 0x00000017
@@ -3515,7 +3520,8 @@
 	.4byte 0x0000001A
 	.4byte 0x00000016
 	.4byte 0x00000012
-.sym lbl_8054D868, global
+.global lbl_8054D868
+lbl_8054D868:
 	.4byte 0x0000001F
 	.4byte 0x0000001B
 	.4byte 0x00000017
@@ -3524,7 +3530,8 @@
 	.4byte 0x0000001A
 	.4byte 0x00000016
 	.4byte 0x00000012
-.sym lbl_8054D888, global
+.global lbl_8054D888
+lbl_8054D888:
 	.4byte lbl_8054D8C8
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt8MaterialFv
@@ -3535,13 +3542,15 @@
 	.4byte Animate__Q36nw4hbm3lyt8MaterialFv
 	.4byte FindAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform
 	.4byte SetAnimationEnable__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransformb
-.sym lbl_8054D8B0, global
+.global lbl_8054D8B0
+lbl_8054D8B0:
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
 	.4byte 0x3A4D6174
 	.4byte 0x65726961
 	.4byte 0x6C000000
-.sym lbl_8054D8C8, global
+.global lbl_8054D8C8
+lbl_8054D8C8:
 	.4byte lbl_8054D8B0
 	.4byte 0x00000000

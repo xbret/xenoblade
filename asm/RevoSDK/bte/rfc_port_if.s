@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/rfc_port_if.o"
 
-# 0x80300B68 - 0x80301094
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 8
 
 .fn RFCOMM_StartRsp, global

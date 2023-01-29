@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSThread.o"
 
-# 0x8035B330 - 0x8035C960
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn DefaultSwitchThreadCallback, global
@@ -1666,36 +1665,33 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj DefaultThread, local
+DefaultThread:
 	.skip 0x318
-.endobj DefaultThread
-.sym lbl_805D4A70, global
+.global lbl_805D4A70
+lbl_805D4A70:
 	.skip 0x100
-.sym lbl_805D4B70, global
+.global lbl_805D4B70
+lbl_805D4B70:
 	.skip 0x5F0
 
 # 0x80665B90 - 0x80665B98
 .section .sdata, "wa"
 .balign 8
 
-.obj SwitchThreadCallback, local
+SwitchThreadCallback:
 	.4byte DefaultSwitchThreadCallback
-.endobj SwitchThreadCallback
 	.4byte 0x00000000
 
 # 0x80667AC8 - 0x80667AD8
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj Reschedule, local
+Reschedule:
 	.skip 0x4
-.endobj Reschedule
 
-.obj RunQueueHint, local
+RunQueueHint:
 	.skip 0x4
-.endobj RunQueueHint
 
-.obj RunQueueBits, local
+RunQueueBits:
 	.skip 0x4
-.endobj RunQueueBits
 	.skip 0x4

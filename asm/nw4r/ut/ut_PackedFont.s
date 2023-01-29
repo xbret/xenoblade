@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/ut/ut_PackedFont.o"
 
-# 0x8042DAE0 - 0x8042EEE0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::ut::PackedFont::PackedFont()
@@ -1438,7 +1437,7 @@
 .data
 .balign 8
 
-.obj jumptable_8056E8C8, local
+jumptable_8056E8C8:
 	.rel StreamingConstruct__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPCvUl, .L_8042DE1C
 	.rel StreamingConstruct__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPCvUl, .L_8042DE30
 	.rel StreamingConstruct__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPCvUl, .L_8042DE44
@@ -1452,8 +1451,8 @@
 	.rel StreamingConstruct__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPCvUl, .L_8042DEAC
 	.rel StreamingConstruct__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPCvUl, .L_8042DF38
 	.rel StreamingConstruct__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPCvUl, .L_8042DEC0
-.endobj jumptable_8056E8C8
-.sym lbl_8056E8FC, global
+.global lbl_8056E8FC
+lbl_8056E8FC:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r2ut10PackedFontFv
@@ -1481,6 +1480,7 @@
 # 0x8066C938 - 0x8066C940
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C938, global
+.global lbl_8066C938
+lbl_8066C938:
 	.4byte 0x43300000
 	.4byte 0x80000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/uty/muldivr.o"
 
-# 0x803D45A0 - 0x803D46F8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn UTY_MulDivRound64, global

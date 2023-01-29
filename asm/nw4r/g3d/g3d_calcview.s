@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_calcview.o"
 
-# 0x803EC3E4 - 0x803EE5C0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::_unnamed_g3d_calcview_cpp_::GetModelLocalAxisY2(nw4r::math::VEC3*, const nw4r::math::MTX34*, const nw4r::math::MTX34*)
@@ -728,7 +727,7 @@
 /* 803ECE24 003B63E4  4E 80 00 20 */	blr
 .endfn Calc_BILLBOARD_ROT__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
 
-.fn fn_803ECE28, global
+.fn func_803ECE28, global
 /* 803ECE28 003B63E8  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803ECE2C 003B63EC  7C 08 02 A6 */	mflr r0
 /* 803ECE30 003B63F0  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1001,7 +1000,7 @@
 /* 803ED20C 003B67CC  7C 08 03 A6 */	mtlr r0
 /* 803ED210 003B67D0  38 21 00 70 */	addi r1, r1, 0x70
 /* 803ED214 003B67D4  4E 80 00 20 */	blr
-.endfn fn_803ECE28
+.endfn func_803ECE28
 
 # nw4r::g3d::_unnamed_g3d_calcview_cpp_::Calc_BILLBOARD_Y(nw4r::math::MTX34*, const nw4r::math::MTX34*, bool, const nw4r::math::MTX34*, nw4r::g3d::ResMdl, unsigned long)
 .fn Calc_BILLBOARD_Y__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl, global
@@ -2386,12 +2385,13 @@
 # 0x80520FB8 - 0x80520FD8
 .rodata
 .balign 8
-.sym lbl_80520FB8, global
+.global lbl_80520FB8
+lbl_80520FB8:
 	.4byte 0x00000000
 	.4byte Calc_BILLBOARD_STD__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
 	.4byte Calc_BILLBOARD_PERSP_STD__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
 	.4byte Calc_BILLBOARD_ROT__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
-	.4byte fn_803ECE28
+	.4byte func_803ECE28
 	.4byte Calc_BILLBOARD_Y__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
 	.4byte Calc_BILLBOARD_PERSP_Y__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
 	.4byte 0x00000000
@@ -2399,10 +2399,13 @@
 # 0x8066C430 - 0x8066C440
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C430, global
+.global lbl_8066C430
+lbl_8066C430:
 	.4byte 0x00000000
-.sym lbl_8066C434, global
+.global lbl_8066C434
+lbl_8066C434:
 	.4byte 0x219392EF
-.sym lbl_8066C438, global
+.global lbl_8066C438
+lbl_8066C438:
 	.4byte 0x219392EF
 	.4byte 0x00000000

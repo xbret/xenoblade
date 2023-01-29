@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_MidiSeqPlayer.o"
 
-# 0x8041759C - 0x804175F0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::SeqPlayer::OnUpdateFrameSoundThread()

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/gx/GXMisc.o"
 
-# 0x80319D80 - 0x8031A760
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn GXSetMisc, global
@@ -735,11 +734,15 @@
 # 0x80667950 - 0x80667968
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667950, global
+.global lbl_80667950
+lbl_80667950:
 	.skip 0x8
-.sym lbl_80667958, global
+.global lbl_80667958
+lbl_80667958:
 	.skip 0x4
-.sym lbl_8066795C, global
+.global lbl_8066795C
+lbl_8066795C:
 	.skip 0x4
-.sym lbl_80667960, global
+.global lbl_80667960
+lbl_80667960:
 	.skip 0x8

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mpv/mpv_mcy.o"
 
-# 0x803ADE5C - 0x803AEFC8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPVMC16_Init, global
@@ -1180,7 +1179,8 @@
 # 0x8051F8E0 - 0x8051F8F0
 .rodata
 .balign 8
-.sym lbl_8051F8E0, global
+.global lbl_8051F8E0
+lbl_8051F8E0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1190,7 +1190,7 @@
 .data
 .balign 8
 
-.obj jumptable_8056A938, local
+jumptable_8056A938:
 	.rel MPVMC16_OneRef1p_TuneC, .L_803ADEB4
 	.rel MPVMC16_OneRef1p_TuneC, .L_803AE3B4
 	.rel MPVMC16_OneRef1p_TuneC, .L_803AE2E4
@@ -1199,4 +1199,3 @@
 	.rel MPVMC16_OneRef1p_TuneC, .L_803AE3B4
 	.rel MPVMC16_OneRef1p_TuneC, .L_803AE2E4
 	.rel MPVMC16_OneRef1p_TuneC, .L_803AE42C
-.endobj jumptable_8056A938

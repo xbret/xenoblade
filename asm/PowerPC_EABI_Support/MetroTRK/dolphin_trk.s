@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MetroTRK/dolphin_trk.o"
 
-# 0x802CBF00 - 0x802CC224
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn InitMetroTRK, global
@@ -242,7 +241,8 @@
 # 0x8053FD40 - 0x8053FD80
 .data
 .balign 8
-.sym lbl_8053FD40, global
+.global lbl_8053FD40
+lbl_8053FD40:
 	.4byte 0x00000100
 	.4byte 0x00000200
 	.4byte 0x00000300
@@ -263,5 +263,6 @@
 # 0x80667570 - 0x80667578
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667570, global
+.global lbl_80667570
+lbl_80667570:
 	.skip 0x8

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/mtx/mtx44.o"
 
-# 0x8034DE50 - 0x8034E080
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn C_MTXFrustum, global
@@ -157,15 +156,21 @@
 # 0x8066C148 - 0x8066C160
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C148, global
+.global lbl_8066C148
+lbl_8066C148:
 	.4byte 0x3F800000
-.sym lbl_8066C14C, global
+.global lbl_8066C14C
+lbl_8066C14C:
 	.4byte 0x40000000
-.sym lbl_8066C150, global
+.global lbl_8066C150
+lbl_8066C150:
 	.4byte 0x00000000
-.sym lbl_8066C154, global
+.global lbl_8066C154
+lbl_8066C154:
 	.4byte 0xBF800000
-.sym lbl_8066C158, global
+.global lbl_8066C158
+lbl_8066C158:
 	.4byte 0x3F000000
-.sym lbl_8066C15C, global
+.global lbl_8066C15C
+lbl_8066C15C:
 	.4byte 0x3C8EFA35

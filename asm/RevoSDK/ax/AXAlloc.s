@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/ax/AXAlloc.o"
 
-# 0x802D2110 - 0x802D26B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __AXGetStackHead, global
@@ -421,13 +420,16 @@
 # 0x8057D828 - 0x8057D940
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057D828, global
+.global lbl_8057D828
+lbl_8057D828:
 	.skip 0x80
-.sym lbl_8057D8A8, global
+.global lbl_8057D8A8
+lbl_8057D8A8:
 	.skip 0x98
 
 # 0x80667610 - 0x80667618
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667610, global
+.global lbl_80667610
+lbl_80667610:
 	.skip 0x8

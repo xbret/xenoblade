@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/mem/mem_heapCommon.o"
 
-# 0x80348B50 - 0x80348FC0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn FindContainHeap_, global
@@ -340,13 +339,16 @@
 # 0x805CFC50 - 0x805CFC78
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CFC50, global
+.global lbl_805CFC50
+lbl_805CFC50:
 	.skip 0x10
-.sym lbl_805CFC60, global
+.global lbl_805CFC60
+lbl_805CFC60:
 	.skip 0x18
 
 # 0x806679D0 - 0x806679D8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806679D0, global
+.global lbl_806679D0
+lbl_806679D0:
 	.skip 0x8

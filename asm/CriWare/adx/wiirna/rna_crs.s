@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/wiirna/rna_crs.o"
 
-# 0x80398FA0 - 0x80398FA8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn GCRNA_LockCs, global

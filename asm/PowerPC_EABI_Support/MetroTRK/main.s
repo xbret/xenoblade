@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MetroTRK/main.o"
 
-# 0x802CB52C - 0x802CB7A4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn gdev_cc_initialize, global
@@ -210,13 +209,16 @@
 # 0x8057B368 - 0x8057B888
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057B368, global
+.global lbl_8057B368
+lbl_8057B368:
 	.skip 0x500
-.sym lbl_8057B868, global
+.global lbl_8057B868
+lbl_8057B868:
 	.skip 0x20
 
 # 0x80667560 - 0x80667568
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667560, global
+.global lbl_80667560
+lbl_80667560:
 	.skip 0x8

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/wbt_ext.o"
 
-# 0x802EFC24 - 0x802EFD04
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn WBT_ExtCreateRecord, global

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_MmlSeqTrackAllocator.o"
 
-# 0x8041883C - 0x80418968
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::MmlSeqTrackAllocator::AllocTrack(nw4r::snd::detail::SeqPlayer*)
@@ -88,7 +87,7 @@
 /* 80418924 003E1EE4  4B FF E5 48 */	b CountImpl__Q44nw4r3snd6detail8PoolImplCFv
 .endfn GetAllocatableTrackCount__Q44nw4r3snd6detail20MmlSeqTrackAllocatorCFv
 
-.fn fn_80418928, global
+.fn func_80418928, global
 /* 80418928 003E1EE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041892C 003E1EEC  7C 08 02 A6 */	mflr r0
 /* 80418930 003E1EF0  2C 03 00 00 */	cmpwi r3, 0x0
@@ -106,15 +105,16 @@
 /* 8041895C 003E1F1C  7C 08 03 A6 */	mtlr r0
 /* 80418960 003E1F20  38 21 00 10 */	addi r1, r1, 0x10
 /* 80418964 003E1F24  4E 80 00 20 */	blr
-.endfn fn_80418928
+.endfn func_80418928
 
 # 0x8056E3B0 - 0x8056E3C8
 .data
 .balign 8
-.sym lbl_8056E3B0, global
+.global lbl_8056E3B0
+lbl_8056E3B0:
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte fn_80418928
+	.4byte func_80418928
 	.4byte AllocTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail9SeqPlayer
 	.4byte FreeTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail8SeqTrack
 	.4byte GetAllocatableTrackCount__Q44nw4r3snd6detail20MmlSeqTrackAllocatorCFv

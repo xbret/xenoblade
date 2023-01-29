@@ -1,9 +1,9 @@
 .include "macros.inc"
-.file "monolithlib/Unknown1.o"
 
 # 0x80666438 - 0x80666440
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80666438, global
+.global lbl_80666438
+lbl_80666438:
 	.4byte 0x01000000
 	.4byte 0x00000000

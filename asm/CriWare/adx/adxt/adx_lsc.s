@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_lsc.o"
 
-# 0x8037F920 - 0x8037F988
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADXT_ExecLscSvr, global
@@ -39,11 +38,15 @@
 # 0x805E5D54 - 0x805E69B8
 .section .bss, "wa", @nobits
 .balign 4
-.sym lbl_805E5D54, global
+.global lbl_805E5D54
+lbl_805E5D54:
 	.skip 0x8
-.sym lbl_805E5D5C, global
+.global lbl_805E5D5C
+lbl_805E5D5C:
 	.skip 0xC
-.sym lbl_805E5D68, global
+.global lbl_805E5D68
+lbl_805E5D68:
 	.skip 0xC40
-.sym lbl_805E69A8, global
+.global lbl_805E69A8
+lbl_805E69A8:
 	.skip 0x10

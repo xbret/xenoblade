@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/dcc/g3d_basic.o"
 
-# 0x803F1E18 - 0x803F20DC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::detail::dcc::CalcTexMtx_Basic(nw4r::math::MTX34*, bool, const nw4r::g3d::TexSrt&, nw4r::g3d::TexSrt::Flag)
@@ -207,10 +206,13 @@
 # 0x8066C488 - 0x8066C498
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C488, global
+.global lbl_8066C488
+lbl_8066C488:
 	.4byte 0x3F360B61
-.sym lbl_8066C48C, global
+.global lbl_8066C48C
+lbl_8066C48C:
 	.4byte 0x00000000
-.sym lbl_8066C490, global
+.global lbl_8066C490
+lbl_8066C490:
 	.4byte 0x3F800000
 	.4byte 0x00000000

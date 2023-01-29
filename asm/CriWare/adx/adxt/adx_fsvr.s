@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_fsvr.o"
 
-# 0x8037F57C - 0x8037F674
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADXT_ExecFsSvr, global
@@ -79,5 +78,6 @@
 # 0x805E5D30 - 0x805E5D48
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E5D30, global
+.global lbl_805E5D30
+lbl_805E5D30:
 	.skip 0x18

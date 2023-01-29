@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/sfd/sfd_tmr.o"
 
-# 0x803CEE60 - 0x803CF0E8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFTMR_GetTmr, global
@@ -191,5 +190,6 @@
 # 0x8061CE00 - 0x8061CE08
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061CE00, global
+.global lbl_8061CE00
+lbl_8061CE00:
 	.skip 0x8

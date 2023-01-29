@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/e_fmod.o"
 
-# 0x802C7A54 - 0x802C7DD4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __ieee754_fmod, global
@@ -279,9 +278,8 @@
 .rodata
 .balign 8
 
-.obj Zero, local
+Zero:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x80000000
 	.4byte 0x00000000
-.endobj Zero

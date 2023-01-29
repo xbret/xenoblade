@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/btm_sco.o"
 
-# 0x802EAB54 - 0x802EB98C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn btm_sco_init, global
@@ -1048,7 +1047,8 @@
 # 0x8050E250 - 0x8050E260
 .rodata
 .balign 8
-.sym lbl_8050E250, global
+.global lbl_8050E250
+lbl_8050E250:
 	.4byte 0x00001F40
 	.4byte 0x00001F40
 	.4byte 0x000A0060
@@ -1057,7 +1057,8 @@
 # 0x80545530 - 0x80545830
 .data
 .balign 8
-.sym lbl_80545530, global
+.global lbl_80545530
+lbl_80545530:
 	.4byte 0x62746D5F
 	.4byte 0x6573636F
 	.4byte 0x5F636F6E
@@ -1093,7 +1094,8 @@
 	.4byte 0x72656420
 	.4byte 0x54797065
 	.4byte 0x20256400
-.sym lbl_805455BC, global
+.global lbl_805455BC
+lbl_805455BC:
 	.4byte 0x20202020
 	.4byte 0x20207478
 	.4byte 0x62772030
@@ -1114,7 +1116,8 @@
 	.4byte 0x74203078
 	.4byte 0x25303478
 	.4byte 0x00000000
-.sym lbl_8054560C, global
+.global lbl_8054560C
+lbl_8054560C:
 	.4byte 0x62746D5F
 	.4byte 0x73636F5F
 	.4byte 0x63686B5F
@@ -1135,7 +1138,8 @@
 	.4byte 0x64205479
 	.4byte 0x70652025
 	.4byte 0x64000000
-.sym lbl_8054565C, global
+.global lbl_8054565C
+lbl_8054565C:
 	.4byte 0x62746D5F
 	.4byte 0x73636F5F
 	.4byte 0x636F6E6E
@@ -1238,7 +1242,8 @@
 	.4byte 0x646C6520
 	.4byte 0x30782530
 	.4byte 0x34780000
-.sym lbl_805457F4, global
+.global lbl_805457F4
+lbl_805457F4:
 	.4byte 0x62746D5F
 	.4byte 0x6573636F
 	.4byte 0x5F70726F

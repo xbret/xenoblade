@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/cricfg/cfg_lib.o"
 
-# 0x8038F4E0 - 0x8038F594
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn CRICFG_Read, global
@@ -64,7 +63,9 @@
 # 0x805E9D20 - 0x805E9D28
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E9D20, global
+.global lbl_805E9D20
+lbl_805E9D20:
 	.skip 0x4
-.sym lbl_805E9D24, global
+.global lbl_805E9D24
+lbl_805E9D24:
 	.skip 0x4

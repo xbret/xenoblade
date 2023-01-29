@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/sc/scapi.o"
 
-# 0x80360EC0 - 0x803613D0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn SCGetAspectRatio, global

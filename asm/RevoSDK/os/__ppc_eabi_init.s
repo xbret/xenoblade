@@ -1,5 +1,4 @@
 .include "macros.inc"
-.file "RevoSDK/os/__ppc_eabi_init.o"
 
 # 0x800065C0 - 0x80006624
 .section .init, "ax"
@@ -37,8 +36,8 @@
 /* 80006620 00002720  4E 80 00 20 */	blr
 .endfn __flush_cache
 
-# 0x8035F350 - 0x8035F410
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __init_user, global

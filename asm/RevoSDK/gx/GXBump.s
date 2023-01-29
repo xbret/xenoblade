@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/gx/GXBump.o"
 
-# 0x8031D160 - 0x8031D620
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn GXSetTevIndirect, global
@@ -358,6 +357,7 @@
 # 0x8066C048 - 0x8066C050
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C048, global
+.global lbl_8066C048
+lbl_8066C048:
 	.4byte 0x44800000
 	.4byte 0x00000000

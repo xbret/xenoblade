@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/fs/fs.o"
 
-# 0x80315EC0 - 0x80317470
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn ISFS_OpenLib, global
@@ -1592,9 +1591,8 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj __fsFd, local
+__fsFd:
 	.4byte 0xFFFFFFFF
-.endobj __fsFd
 	.4byte 0x00000000
 
 .obj "@1688", local
@@ -1606,24 +1604,20 @@
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj __fsInitialized, local
-	.skip 0x4
-.endobj __fsInitialized
-
-.obj __devfs, local
-	.skip 0x4
-.endobj __devfs
-.sym lbl_806678F8, global
+__fsInitialized:
 	.skip 0x4
 
-.obj lo$688, local
+__devfs:
 	.skip 0x4
-.endobj lo$688
+.global lbl_806678F8
+lbl_806678F8:
+	.skip 0x4
 
-.obj hi$689, local
+lo$688:
 	.skip 0x4
-.endobj hi$689
 
-.obj hId, local
+hi$689:
 	.skip 0x4
-.endobj hId
+
+hId:
+	.skip 0x4

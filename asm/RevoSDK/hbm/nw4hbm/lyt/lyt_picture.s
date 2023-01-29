@@ -1,11 +1,10 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/lyt/lyt_picture.o"
 
-# 0x80332730 - 0x80332C90
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.fn fn_80332730, global
+.fn func_80332730, global
 /* 80332730 002FBCF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80332734 002FBCF4  7C 08 02 A6 */	mflr r0
 /* 80332738 002FBCF8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -85,11 +84,11 @@
 /* 8033284C 002FBE0C  7C 08 03 A6 */	mtlr r0
 /* 80332850 002FBE10  38 21 00 20 */	addi r1, r1, 0x20
 /* 80332854 002FBE14  4E 80 00 20 */	blr
-.endfn fn_80332730
+.endfn func_80332730
 /* 80332858 002FBE18  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8033285C 002FBE1C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80332860, global
+.fn func_80332860, global
 /* 80332860 002FBE20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80332864 002FBE24  7C 08 02 A6 */	mflr r0
 /* 80332868 002FBE28  2C 03 00 00 */	cmpwi r3, 0x0
@@ -144,9 +143,9 @@
 /* 80332924 002FBEE4  7C 08 03 A6 */	mtlr r0
 /* 80332928 002FBEE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8033292C 002FBEEC  4E 80 00 20 */	blr
-.endfn fn_80332860
+.endfn func_80332860
 
-.fn fn_80332930, global
+.fn func_80332930, global
 /* 80332930 002FBEF0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80332934 002FBEF4  7C 08 02 A6 */	mflr r0
 /* 80332938 002FBEF8  38 A0 00 00 */	li r5, 0x0
@@ -166,10 +165,10 @@
 /* 80332970 002FBF30  7C 08 03 A6 */	mtlr r0
 /* 80332974 002FBF34  38 21 00 30 */	addi r1, r1, 0x30
 /* 80332978 002FBF38  4E 80 00 20 */	blr
-.endfn fn_80332930
+.endfn func_80332930
 /* 8033297C 002FBF3C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80332980, global
+.fn func_80332980, global
 /* 80332980 002FBF40  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80332984 002FBF44  7C 08 02 A6 */	mflr r0
 /* 80332988 002FBF48  90 01 00 34 */	stw r0, 0x34(r1)
@@ -214,7 +213,7 @@
 /* 80332A20 002FBFE0  98 01 00 0A */	stb r0, 0xa(r1)
 /* 80332A24 002FBFE4  80 01 00 08 */	lwz r0, 0x8(r1)
 /* 80332A28 002FBFE8  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80332A2C 002FBFEC  4B FF D6 E5 */	bl fn_80330110
+/* 80332A2C 002FBFEC  4B FF D6 E5 */	bl func_80330110
 /* 80332A30 002FBFF0  57 80 15 BA */	clrlslwi r0, r28, 24, 2
 /* 80332A34 002FBFF4  88 81 00 0C */	lbz r4, 0xc(r1)
 /* 80332A38 002FBFF8  7C A3 02 14 */	add r5, r3, r0
@@ -265,20 +264,20 @@
 /* 80332AE4 002FC0A4  7C 08 03 A6 */	mtlr r0
 /* 80332AE8 002FC0A8  38 21 00 30 */	addi r1, r1, 0x30
 /* 80332AEC 002FC0AC  4E 80 00 20 */	blr
-.endfn fn_80332980
+.endfn func_80332980
 
-.fn fn_80332AF0, global
+.fn func_80332AF0, global
 /* 80332AF0 002FC0B0  54 A0 10 3A */	slwi r0, r5, 2
 /* 80332AF4 002FC0B4  7C 84 02 14 */	add r4, r4, r0
 /* 80332AF8 002FC0B8  80 04 00 D4 */	lwz r0, 0xd4(r4)
 /* 80332AFC 002FC0BC  90 03 00 00 */	stw r0, 0x0(r3)
 /* 80332B00 002FC0C0  4E 80 00 20 */	blr
-.endfn fn_80332AF0
+.endfn func_80332AF0
 /* 80332B04 002FC0C4  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80332B08 002FC0C8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 80332B0C 002FC0CC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_80332B10, global
+.fn func_80332B10, global
 /* 80332B10 002FC0D0  54 80 10 3A */	slwi r0, r4, 2
 /* 80332B14 002FC0D4  88 C5 00 00 */	lbz r6, 0x0(r5)
 /* 80332B18 002FC0D8  7C 83 02 14 */	add r4, r3, r0
@@ -290,7 +289,7 @@
 /* 80332B30 002FC0F0  98 64 00 D6 */	stb r3, 0xd6(r4)
 /* 80332B34 002FC0F4  98 04 00 D7 */	stb r0, 0xd7(r4)
 /* 80332B38 002FC0F8  4E 80 00 20 */	blr
-.endfn fn_80332B10
+.endfn func_80332B10
 /* 80332B3C 002FC0FC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
 # nw4hbm::lyt::Picture::GetVtxColorElement(unsigned long) const
@@ -358,7 +357,7 @@
 /* 80332C08 002FC1C8  83 BC 00 E8 */	lwz r29, 0xe8(r28)
 /* 80332C0C 002FC1CC  7F 83 E3 78 */	mr r3, r28
 /* 80332C10 002FC1D0  8B FC 00 E5 */	lbz r31, 0xe5(r28)
-/* 80332C14 002FC1D4  4B FF FA 1D */	bl fn_80332630
+/* 80332C14 002FC1D4  4B FF FA 1D */	bl func_80332630
 /* 80332C18 002FC1D8  90 81 00 0C */	stw r4, 0xc(r1)
 /* 80332C1C 002FC1DC  7F E5 FB 78 */	mr r5, r31
 /* 80332C20 002FC1E0  7F A6 EB 78 */	mr r6, r29
@@ -407,7 +406,8 @@
 # 0x80518AB8 - 0x80518AC0
 .rodata
 .balign 8
-.sym lbl_80518AB8, global
+.global lbl_80518AB8
+lbl_80518AB8:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
@@ -415,57 +415,64 @@
 .data
 .balign 8
 
-.obj __vt__8054D938, global
+.global __vt__8054D938
+__vt__8054D938:
 	.4byte lbl_8054D9D0
 	.4byte 0x00000000
-	.4byte fn_80332860
+	.4byte func_80332860
 	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt7PictureCFv
-	.4byte fn_80331CD0
-	.4byte fn_80331FD0
+	.4byte func_80331CD0
+	.4byte func_80331FD0
 	.4byte DrawSelf__Q36nw4hbm3lyt7PictureFRCQ36nw4hbm3lyt8DrawInfo
-	.4byte fn_803320E0
-	.4byte fn_80332170
-	.4byte fn_80332AF0
-	.4byte fn_80332B10
-	.4byte fn_80331AE0
-	.4byte fn_80331B10
+	.4byte func_803320E0
+	.4byte func_80332170
+	.4byte func_80332AF0
+	.4byte func_80332B10
+	.4byte func_80331AE0
+	.4byte func_80331B10
 	.4byte GetVtxColorElement__Q36nw4hbm3lyt7PictureCFUl
 	.4byte SetVtxColorElement__Q36nw4hbm3lyt7PictureFUlUc
-	.4byte fn_80331B60
-	.4byte fn_80331C10
-	.4byte fn_80332230
-	.4byte fn_80332250
-	.4byte fn_803322E0
-	.4byte fn_80332300
-	.4byte fn_803323E0
-	.4byte fn_80332460
-	.4byte fn_80332710
-	.4byte fn_80332520
-	.4byte fn_80332930
-	.4byte fn_80332980
-.sym lbl_8054D9A4, global
+	.4byte func_80331B60
+	.4byte func_80331C10
+	.4byte func_80332230
+	.4byte func_80332250
+	.4byte func_803322E0
+	.4byte func_80332300
+	.4byte func_803323E0
+	.4byte func_80332460
+	.4byte func_80332710
+	.4byte func_80332520
+	.4byte func_80332930
+	.4byte func_80332980
+.global lbl_8054D9A4
+lbl_8054D9A4:
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
 	.4byte 0x3A506963
 	.4byte 0x74757265
 	.4byte 0x00000000
-.sym lbl_8054D9BC, global
+.global lbl_8054D9BC
+lbl_8054D9BC:
 	.4byte lbl_8054D798
 	.4byte 0x00000000
 	.4byte lbl_8054D770
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8054D9D0, global
+.global lbl_8054D9D0
+lbl_8054D9D0:
 	.4byte lbl_8054D9A4
 	.4byte lbl_8054D9BC
 
 # 0x805CD7B8 - 0x805CD7D0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CD7B8, global
+.global lbl_805CD7B8
+lbl_805CD7B8:
 	.skip 0x8
-.sym lbl_805CD7C0, global
+.global lbl_805CD7C0
+lbl_805CD7C0:
 	.skip 0x8
-.sym lbl_805CD7C8, global
+.global lbl_805CD7C8
+lbl_805CD7C8:
 	.skip 0x8

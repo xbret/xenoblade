@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/vi/vi3in1.o"
 
-# 0x80367320 - 0x80368A8C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __VISetYUVSEL, global
@@ -1594,7 +1593,7 @@
 .data
 .balign 8
 
-.obj gammaSet, local
+gammaSet:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -1859,10 +1858,10 @@
 	.4byte 0x8A40A740
 	.4byte 0xC040D680
 	.2byte 0xEB00
-.endobj gammaSet
 	.2byte 0x0000
 
-.obj VINtscACPType1, global
+.global VINtscACPType1
+VINtscACPType1:
 	.4byte 0x36000000
 	.4byte 0x00000000
 	.4byte 0x1B1B2407
@@ -1870,10 +1869,10 @@
 	.4byte 0x0F600000
 	.4byte 0x00000000
 	.2byte 0x0000
-.endobj VINtscACPType1
 	.2byte 0x0000
 
-.obj VINtscACPType2, global
+.global VINtscACPType2
+VINtscACPType2:
 	.4byte 0x3E1D1125
 	.4byte 0x11010700
 	.4byte 0x1B1B2407
@@ -1881,10 +1880,10 @@
 	.4byte 0x0F60010A
 	.4byte 0x00050403
 	.2byte 0xFF00
-.endobj VINtscACPType2
 	.2byte 0x0000
 
-.obj VINtscACPType3, global
+.global VINtscACPType3
+VINtscACPType3:
 	.4byte 0x3E171521
 	.4byte 0x15050502
 	.4byte 0x1B1B2407
@@ -1892,10 +1891,10 @@
 	.4byte 0x0F60010A
 	.4byte 0x00050403
 	.2byte 0xFF00
-.endobj VINtscACPType3
 	.2byte 0x0000
 
-.obj VIPalACPType1, global
+.global VIPalACPType1
+VIPalACPType1:
 	.4byte 0x361A222A
 	.4byte 0x22050200
 	.4byte 0x1C3D1403
@@ -1903,10 +1902,10 @@
 	.4byte 0x7E600008
 	.4byte 0x00040701
 	.2byte 0x5501
-.endobj VIPalACPType1
 	.2byte 0x0000
 
-.obj VIPalACPType2, global
+.global VIPalACPType2
+VIPalACPType2:
 	.4byte 0x361A222A
 	.4byte 0x22050200
 	.4byte 0x1C3D1403
@@ -1914,10 +1913,10 @@
 	.4byte 0x7E600008
 	.4byte 0x00040701
 	.2byte 0x5501
-.endobj VIPalACPType2
 	.2byte 0x0000
 
-.obj VIPalACPType3, global
+.global VIPalACPType3
+VIPalACPType3:
 	.4byte 0x361A222A
 	.4byte 0x22050200
 	.4byte 0x1C3D1403
@@ -1925,10 +1924,10 @@
 	.4byte 0x7E600008
 	.4byte 0x00040701
 	.2byte 0x5501
-.endobj VIPalACPType3
 	.2byte 0x0000
 
-.obj VIEurgb60ACPType1, global
+.global VIEurgb60ACPType1
+VIEurgb60ACPType1:
 	.4byte 0x36000000
 	.4byte 0x00000000
 	.4byte 0x1B1B2407
@@ -1936,10 +1935,10 @@
 	.4byte 0x1E600000
 	.4byte 0x00000000
 	.2byte 0x0001
-.endobj VIEurgb60ACPType1
 	.2byte 0x0000
 
-.obj VIEurgb60ACPType2, global
+.global VIEurgb60ACPType2
+VIEurgb60ACPType2:
 	.4byte 0x361D1125
 	.4byte 0x11010700
 	.4byte 0x1B1B2407
@@ -1947,10 +1946,10 @@
 	.4byte 0x1E60010A
 	.4byte 0x00050403
 	.2byte 0xFF01
-.endobj VIEurgb60ACPType2
 	.2byte 0x0000
 
-.obj VIEurgb60ACPType3, global
+.global VIEurgb60ACPType3
+VIEurgb60ACPType3:
 	.4byte 0x36171521
 	.4byte 0x15050502
 	.4byte 0x1B1B2407
@@ -1958,10 +1957,10 @@
 	.4byte 0x1E60010A
 	.4byte 0x00050403
 	.2byte 0xFF01
-.endobj VIEurgb60ACPType3
 	.2byte 0x0000
 
-.obj VIMpalACPType1, global
+.global VIMpalACPType1
+VIMpalACPType1:
 	.4byte 0x36000000
 	.4byte 0x00000000
 	.4byte 0x1B1B2407
@@ -1969,10 +1968,10 @@
 	.4byte 0x0F600000
 	.4byte 0x00000000
 	.2byte 0x0000
-.endobj VIMpalACPType1
 	.2byte 0x0000
 
-.obj VIMpalACPType2, global
+.global VIMpalACPType2
+VIMpalACPType2:
 	.4byte 0x361D1125
 	.4byte 0x11010700
 	.4byte 0x1B1B2407
@@ -1980,10 +1979,10 @@
 	.4byte 0x0F60010A
 	.4byte 0x00050403
 	.2byte 0xFF00
-.endobj VIMpalACPType2
 	.2byte 0x0000
 
-.obj VIMpalACPType3, global
+.global VIMpalACPType3
+VIMpalACPType3:
 	.4byte 0x36171521
 	.4byte 0x15050502
 	.4byte 0x1B1B2407
@@ -1991,10 +1990,10 @@
 	.4byte 0x0F60010A
 	.4byte 0x00050403
 	.2byte 0xFF00
-.endobj VIMpalACPType3
 	.2byte 0x0000
 
-.obj VIProgressiveACPType, global
+.global VIProgressiveACPType
+VIProgressiveACPType:
 	.4byte 0x01000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -2002,7 +2001,6 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.2byte 0x0000
-.endobj VIProgressiveACPType
 	.2byte 0x0000
 
 .obj "@2140", local
@@ -2049,51 +2047,71 @@
 # 0x805DDA70 - 0x805DDAA0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805DDA70, global
+.global lbl_805DDA70
+lbl_805DDA70:
 	.skip 0x30
 
 # 0x80665D28 - 0x80665D38
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665D28, global
+.global lbl_80665D28
+lbl_80665D28:
 	.4byte 0x000000FF
-.sym lbl_80665D2C, global
+.global lbl_80665D2C
+lbl_80665D2C:
 	.byte 0xFF
-.sym lbl_80665D2D, global
+.global lbl_80665D2D
+lbl_80665D2D:
 	.byte 0xFF
-.sym lbl_80665D2E, global
+.global lbl_80665D2E
+lbl_80665D2E:
 	.byte 0xFF
-.sym lbl_80665D2F, global
+.global lbl_80665D2F
+lbl_80665D2F:
 	.byte 0xFF
-.sym lbl_80665D30, global
+.global lbl_80665D30
+lbl_80665D30:
 	.byte 0xFF
-.sym lbl_80665D31, global
+.global lbl_80665D31
+lbl_80665D31:
 	.byte 0xFF
-.sym lbl_80665D32, global
+.global lbl_80665D32
+lbl_80665D32:
 	.byte 0xFF
-.sym lbl_80665D33, global
+.global lbl_80665D33
+lbl_80665D33:
 	.byte 0xFF
-.sym lbl_80665D34, global
+.global lbl_80665D34
+lbl_80665D34:
 	.byte 0xFF
-.sym lbl_80665D35, global
+.global lbl_80665D35
+lbl_80665D35:
 	.byte 0xFF
-.sym lbl_80665D36, global
+.global lbl_80665D36
+lbl_80665D36:
 	.byte 0xFF
-.sym lbl_80665D37, global
+.global lbl_80665D37
+lbl_80665D37:
 	.byte 0xFF
 
 # 0x80667C50 - 0x80667C68
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667C50, global
+.global lbl_80667C50
+lbl_80667C50:
 	.skip 0x4
-.sym lbl_80667C54, global
+.global lbl_80667C54
+lbl_80667C54:
 	.skip 0x4
-.sym lbl_80667C58, global
+.global lbl_80667C58
+lbl_80667C58:
 	.skip 0x4
-.sym lbl_80667C5C, global
+.global lbl_80667C5C
+lbl_80667C5C:
 	.skip 0x4
-.sym lbl_80667C60, global
+.global lbl_80667C60
+lbl_80667C60:
 	.skip 0x4
-.sym lbl_80667C64, global
+.global lbl_80667C64
+lbl_80667C64:
 	.skip 0x4

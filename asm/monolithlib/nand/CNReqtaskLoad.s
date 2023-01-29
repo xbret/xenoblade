@@ -1,45 +1,10 @@
 .include "macros.inc"
-.file "monolithlib/nand/CNReqtaskLoad.o"
 
-# 0x80020768 - 0x80020778
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_80020768", local
-.hidden "@etb_80020768"
-	.4byte 0x18080000
-	.4byte 0x00000000
-.endobj "@etb_80020768"
-
-.obj "@etb_80020770", local
-.hidden "@etb_80020770"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_80020770"
-
-# 0x80038768 - 0x80038780
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80038768", local
-.hidden "@eti_80038768"
-	.4byte fn_804DAF70
-	.4byte 0x00000048
-	.4byte "@etb_80020768"
-.endobj "@eti_80038768"
-
-.obj "@eti_80038774", local
-.hidden "@eti_80038774"
-	.4byte fn_804DAFB8
-	.4byte 0x00000120
-	.4byte "@etb_80020770"
-.endobj "@eti_80038774"
-
-# 0x804DAF70 - 0x804DB0F0
-.text
-.balign 4
-
-.fn fn_804DAF70, global
+.fn func_804DAF70, global
 /* 804DAF70 004A4530  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804DAF74 004A4534  7C 08 02 A6 */	mflr r0
 /* 804DAF78 004A4538  90 01 00 24 */	stw r0, 0x24(r1)
@@ -58,9 +23,9 @@
 /* 804DAFAC 004A456C  7C 08 03 A6 */	mtlr r0
 /* 804DAFB0 004A4570  38 21 00 20 */	addi r1, r1, 0x20
 /* 804DAFB4 004A4574  4E 80 00 20 */	blr
-.endfn fn_804DAF70
+.endfn func_804DAF70
 
-.fn fn_804DAFB8, global
+.fn func_804DAFB8, global
 /* 804DAFB8 004A4578  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DAFBC 004A457C  7C 08 02 A6 */	mflr r0
 /* 804DAFC0 004A4580  90 01 00 14 */	stw r0, 0x14(r1)
@@ -94,9 +59,9 @@
 /* 804DB028 004A45E8  48 00 00 98 */	b .L_804DB0C0
 .L_804DB02C:
 /* 804DB02C 004A45EC  7F E3 FB 78 */	mr r3, r31
-/* 804DB030 004A45F0  4B FF F9 95 */	bl fn_804DA9C4
+/* 804DB030 004A45F0  4B FF F9 95 */	bl func_804DA9C4
 /* 804DB034 004A45F4  38 80 00 01 */	li r4, 0x1
-/* 804DB038 004A45F8  4B FF F5 09 */	bl fn_804DA540
+/* 804DB038 004A45F8  4B FF F5 09 */	bl func_804DA540
 /* 804DB03C 004A45FC  2C 03 00 00 */	cmpwi r3, 0x0
 /* 804DB040 004A4600  41 82 00 0C */	beq .L_804DB04C
 /* 804DB044 004A4604  38 60 00 02 */	li r3, 0x2
@@ -108,7 +73,7 @@
 .L_804DB058:
 /* 804DB058 004A4618  80 64 00 10 */	lwz r3, 0x10(r4)
 /* 804DB05C 004A461C  80 84 00 14 */	lwz r4, 0x14(r4)
-/* 804DB060 004A4620  4B FF F5 55 */	bl fn_804DA5B4
+/* 804DB060 004A4620  4B FF F5 55 */	bl func_804DA5B4
 /* 804DB064 004A4624  2C 03 00 00 */	cmpwi r3, 0x0
 /* 804DB068 004A4628  41 82 00 0C */	beq .L_804DB074
 /* 804DB06C 004A462C  38 60 00 02 */	li r3, 0x2
@@ -118,7 +83,7 @@
 /* 804DB078 004A4638  98 1F 00 18 */	stb r0, 0x18(r31)
 /* 804DB07C 004A463C  48 00 00 44 */	b .L_804DB0C0
 .L_804DB080:
-/* 804DB080 004A4640  4B FF F6 1D */	bl fn_804DA69C
+/* 804DB080 004A4640  4B FF F6 1D */	bl func_804DA69C
 /* 804DB084 004A4644  2C 03 00 00 */	cmpwi r3, 0x0
 /* 804DB088 004A4648  41 82 00 0C */	beq .L_804DB094
 /* 804DB08C 004A464C  38 60 00 02 */	li r3, 0x2
@@ -145,7 +110,7 @@
 /* 804DB0CC 004A468C  7C 08 03 A6 */	mtlr r0
 /* 804DB0D0 004A4690  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB0D4 004A4694  4E 80 00 20 */	blr
-.endfn fn_804DAFB8
+.endfn func_804DAFB8
 
 .fn sinit_804DB0D8, global
 /* 804DB0D8 004A4698  38 6D C1 40 */	addi r3, r13, lbl_806682C0@sda21
@@ -166,7 +131,8 @@
 .rodata
 .balign 8
 
-.obj CNReqtaskLoad_typestr, global
+.global CNReqtaskLoad_typestr
+CNReqtaskLoad_typestr:
 	.4byte 0x434E5265
 	.4byte 0x71746173
 	.4byte 0x6B4C6F61
@@ -176,13 +142,15 @@
 .data
 .balign 8
 
-.obj __vt__CNReqtaskLoad, global
+.global __vt__CNReqtaskLoad
+__vt__CNReqtaskLoad:
 	.4byte __RTTI__CNReqtaskLoad
 	.4byte 0x00000000
-	.4byte fn_804DAFB8
-	.4byte fn_804DA4CC
+	.4byte func_804DAFB8
+	.4byte func_804DA4CC
 
-.obj CNReqtaskLoad_hierarchy, global
+.global CNReqtaskLoad_hierarchy
+CNReqtaskLoad_hierarchy:
 	.4byte __RTTI__CNReqtask
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -192,12 +160,48 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj __RTTI__CNReqtaskLoad, global
+.global __RTTI__CNReqtaskLoad
+__RTTI__CNReqtaskLoad:
 	.4byte CNReqtaskLoad_typestr
 	.4byte CNReqtaskLoad_hierarchy
 
 # 0x806682C0 - 0x806682C8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806682C0, global
+.global lbl_806682C0
+lbl_806682C0:
 	.skip 0x8
+
+# 0x80020768 - 0x80020778
+.section extab, "a"
+.balign 4
+
+.obj "@etb_80020768", local
+.hidden "@etb_80020768"
+	.4byte 0x18080000
+	.4byte 0x00000000
+.endobj "@etb_80020768"
+
+.obj "@etb_80020770", local
+.hidden "@etb_80020770"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_80020770"
+
+# 0x80038768 - 0x80038780
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80038768", local
+.hidden "@eti_80038768"
+	.4byte func_804DAF70
+	.4byte 0x00000048
+	.4byte "@etb_80020768"
+.endobj "@eti_80038768"
+
+.obj "@eti_80038774", local
+.hidden "@eti_80038774"
+	.4byte func_804DAFB8
+	.4byte 0x00000120
+	.4byte "@etb_80020770"
+.endobj "@eti_80038774"

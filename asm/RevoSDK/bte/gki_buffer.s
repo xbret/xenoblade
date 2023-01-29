@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/gki_buffer.o"
 
-# 0x802DAD60 - 0x802DC200
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn gki_init_free_queue, global
@@ -1496,14 +1495,16 @@
 # 0x80543E18 - 0x80543F60
 .data
 .balign 8
-.sym lbl_80543E18, global
+.global lbl_80543E18
+lbl_80543E18:
 	.4byte 0x67657462
 	.4byte 0x75663A20
 	.4byte 0x53697A65
 	.4byte 0x20697320
 	.4byte 0x7A65726F
 	.4byte 0x00000000
-.sym lbl_80543E30, global
+.global lbl_80543E30
+lbl_80543E30:
 	.4byte 0x67657462
 	.4byte 0x75663A20
 	.4byte 0x53697A65
@@ -1542,7 +1543,8 @@
 	.4byte 0x72206C69
 	.4byte 0x6E6B6564
 	.4byte 0x00000000
-.sym lbl_80543EC8, global
+.global lbl_80543EC8
+lbl_80543EC8:
 	.4byte 0x456E7175
 	.4byte 0x65756520
 	.4byte 0x2D204275
@@ -1550,7 +1552,8 @@
 	.4byte 0x20636F72
 	.4byte 0x72757074
 	.4byte 0x65640000
-.sym lbl_80543EE4, global
+.global lbl_80543EE4
+lbl_80543EE4:
 	.4byte 0x456E6575
 	.4byte 0x65756520
 	.4byte 0x2D206275
@@ -1559,7 +1562,8 @@
 	.4byte 0x79206C69
 	.4byte 0x6E6B6564
 	.4byte 0x00000000
-.sym lbl_80543F04, global
+.global lbl_80543F04
+lbl_80543F04:
 	.4byte 0x456E6575
 	.4byte 0x65756520
 	.4byte 0x68656164
@@ -1577,7 +1581,8 @@
 	.4byte 0x62616420
 	.4byte 0x61646472
 	.4byte 0x00000000
-.sym lbl_80543F48, global
+.global lbl_80543F48
+lbl_80543F48:
 	.4byte 0x44656C65
 	.4byte 0x74696E67
 	.4byte 0x20626164
@@ -1588,115 +1593,171 @@
 # 0x80593140 - 0x805BBC20
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80593140, global
+.global lbl_80593140
+lbl_80593140:
 	.skip 0x92EC
-.sym lbl_8059C42C, global
+.global lbl_8059C42C
+lbl_8059C42C:
 	.skip 0xD458
-.sym lbl_805A9884, global
+.global lbl_805A9884
+lbl_805A9884:
 	.skip 0x120A4
-.sym lbl_805BB928, global
+.global lbl_805BB928
+lbl_805BB928:
 	.skip 0x1A
-.sym lbl_805BB942, global
+.global lbl_805BB942
+lbl_805BB942:
 	.skip 0xA
-.sym lbl_805BB94C, global
+.global lbl_805BB94C
+lbl_805BB94C:
 	.skip 0x1C
-.sym lbl_805BB968, global
+.global lbl_805BB968
+lbl_805BB968:
 	.skip 0x10
-.sym lbl_805BB978, global
+.global lbl_805BB978
+lbl_805BB978:
 	.skip 0x4
-.sym lbl_805BB97C, global
+.global lbl_805BB97C
+lbl_805BB97C:
 	.skip 0x4
-.sym lbl_805BB980, global
+.global lbl_805BB980
+lbl_805BB980:
 	.skip 0x4
-.sym lbl_805BB984, global
+.global lbl_805BB984
+lbl_805BB984:
 	.skip 0x4
-.sym lbl_805BB988, global
+.global lbl_805BB988
+lbl_805BB988:
 	.skip 0x4
-.sym lbl_805BB98C, global
+.global lbl_805BB98C
+lbl_805BB98C:
 	.skip 0x4
-.sym lbl_805BB990, global
+.global lbl_805BB990
+lbl_805BB990:
 	.skip 0x4
-.sym lbl_805BB994, global
+.global lbl_805BB994
+lbl_805BB994:
 	.skip 0x4
-.sym lbl_805BB998, global
+.global lbl_805BB998
+lbl_805BB998:
 	.skip 0x4
-.sym lbl_805BB99C, global
+.global lbl_805BB99C
+lbl_805BB99C:
 	.skip 0x4
-.sym lbl_805BB9A0, global
+.global lbl_805BB9A0
+lbl_805BB9A0:
 	.skip 0x4
-.sym lbl_805BB9A4, global
+.global lbl_805BB9A4
+lbl_805BB9A4:
 	.skip 0x4
-.sym lbl_805BB9A8, global
+.global lbl_805BB9A8
+lbl_805BB9A8:
 	.skip 0x4
-.sym lbl_805BB9AC, global
+.global lbl_805BB9AC
+lbl_805BB9AC:
 	.skip 0x4
-.sym lbl_805BB9B0, global
+.global lbl_805BB9B0
+lbl_805BB9B0:
 	.skip 0x4
-.sym lbl_805BB9B4, global
+.global lbl_805BB9B4
+lbl_805BB9B4:
 	.skip 0x4
-.sym lbl_805BB9B8, global
+.global lbl_805BB9B8
+lbl_805BB9B8:
 	.skip 0x4
-.sym lbl_805BB9BC, global
+.global lbl_805BB9BC
+lbl_805BB9BC:
 	.skip 0x4
-.sym lbl_805BB9C0, global
+.global lbl_805BB9C0
+lbl_805BB9C0:
 	.skip 0x4
-.sym lbl_805BB9C4, global
+.global lbl_805BB9C4
+lbl_805BB9C4:
 	.skip 0x4
-.sym lbl_805BB9C8, global
+.global lbl_805BB9C8
+lbl_805BB9C8:
 	.skip 0x4
-.sym lbl_805BB9CC, global
+.global lbl_805BB9CC
+lbl_805BB9CC:
 	.skip 0x4
-.sym lbl_805BB9D0, global
+.global lbl_805BB9D0
+lbl_805BB9D0:
 	.skip 0x4
-.sym lbl_805BB9D4, global
+.global lbl_805BB9D4
+lbl_805BB9D4:
 	.skip 0x4
-.sym lbl_805BB9D8, global
+.global lbl_805BB9D8
+lbl_805BB9D8:
 	.skip 0x4
-.sym lbl_805BB9DC, global
+.global lbl_805BB9DC
+lbl_805BB9DC:
 	.skip 0x4
-.sym lbl_805BB9E0, global
+.global lbl_805BB9E0
+lbl_805BB9E0:
 	.skip 0x4
-.sym lbl_805BB9E4, global
+.global lbl_805BB9E4
+lbl_805BB9E4:
 	.skip 0x4
-.sym lbl_805BB9E8, global
+.global lbl_805BB9E8
+lbl_805BB9E8:
 	.skip 0x4
-.sym lbl_805BB9EC, global
+.global lbl_805BB9EC
+lbl_805BB9EC:
 	.skip 0x4
-.sym lbl_805BB9F0, global
+.global lbl_805BB9F0
+lbl_805BB9F0:
 	.skip 0x4
-.sym lbl_805BB9F4, global
+.global lbl_805BB9F4
+lbl_805BB9F4:
 	.skip 0x4
-.sym lbl_805BB9F8, global
+.global lbl_805BB9F8
+lbl_805BB9F8:
 	.skip 0x4
-.sym lbl_805BB9FC, global
+.global lbl_805BB9FC
+lbl_805BB9FC:
 	.skip 0x4
-.sym lbl_805BBA00, global
+.global lbl_805BBA00
+lbl_805BBA00:
 	.skip 0x4
-.sym lbl_805BBA04, global
+.global lbl_805BBA04
+lbl_805BBA04:
 	.skip 0x4
-.sym lbl_805BBA08, global
+.global lbl_805BBA08
+lbl_805BBA08:
 	.skip 0x4
-.sym lbl_805BBA0C, global
+.global lbl_805BBA0C
+lbl_805BBA0C:
 	.skip 0x4
-.sym lbl_805BBA10, global
+.global lbl_805BBA10
+lbl_805BBA10:
 	.skip 0x4
-.sym lbl_805BBA14, global
+.global lbl_805BBA14
+lbl_805BBA14:
 	.skip 0x4
-.sym lbl_805BBA18, global
+.global lbl_805BBA18
+lbl_805BBA18:
 	.skip 0x4
-.sym lbl_805BBA1C, global
+.global lbl_805BBA1C
+lbl_805BBA1C:
 	.skip 0x1F4
-.sym lbl_805BBC10, global
+.global lbl_805BBC10
+lbl_805BBC10:
 	.skip 0x2
-.sym lbl_805BBC12, global
+.global lbl_805BBC12
+lbl_805BBC12:
 	.skip 0x1
-.sym lbl_805BBC13, global
+.global lbl_805BBC13
+lbl_805BBC13:
 	.skip 0x1
-.sym lbl_805BBC14, global
+.global lbl_805BBC14
+lbl_805BBC14:
 	.skip 0x1
-.sym lbl_805BBC15, global
+.global lbl_805BBC15
+lbl_805BBC15:
 	.skip 0x1
-.sym lbl_805BBC16, global
+.global lbl_805BBC16
+lbl_805BBC16:
 	.skip 0x5
-.sym lbl_805BBC1B, global
+.global lbl_805BBC1B
+lbl_805BBC1B:
 	.skip 0x5

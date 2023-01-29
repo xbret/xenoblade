@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSInterrupt.o"
 
-# 0x803589B0 - 0x803591A0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn OSDisableInterrupts, global
@@ -633,7 +632,8 @@
 # 0x80552AB0 - 0x80552AE0
 .data
 .balign 8
-.sym lbl_80552AB0, global
+.global lbl_80552AB0
+lbl_80552AB0:
 	.4byte 0x00000100
 	.4byte 0x00000040
 	.4byte 0xF8000000
@@ -651,22 +651,22 @@
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj __OSLastInterruptSrr0, global
+.global __OSLastInterruptSrr0
+__OSLastInterruptSrr0:
 	.skip 0x4
-.endobj __OSLastInterruptSrr0
 
-.obj __OSLastInterrupt, global
+.global __OSLastInterrupt
+__OSLastInterrupt:
 	.skip 0x2
-.endobj __OSLastInterrupt
 	.skip 0x2
 
-.obj __OSLastInterruptTime, global
+.global __OSLastInterruptTime
+__OSLastInterruptTime:
 	.skip 0x4
-.sym lbl_80667A9C, global
+.global lbl_80667A9C
+lbl_80667A9C:
 	.skip 0x4
-.endobj __OSLastInterruptTime
 
-.obj InterruptHandlerTable, local
+InterruptHandlerTable:
 	.skip 0x4
-.endobj InterruptHandlerTable
 	.skip 0x4

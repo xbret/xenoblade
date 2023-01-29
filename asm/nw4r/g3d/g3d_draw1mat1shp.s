@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_draw1mat1shp.o"
 
-# 0x803EB6B0 - 0x803EC3E4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::detail::LoadMaterial(nw4r::g3d::ResMat, unsigned long, nw4r::g3d::Draw1Mat1ShpSwap*, nw4r::g3d::G3DState::IndMtxOp*, bool)
@@ -954,7 +953,8 @@
 # 0x80520FA8 - 0x80520FB8
 .rodata
 .balign 8
-.sym lbl_80520FA8, global
+.global lbl_80520FA8
+lbl_80520FA8:
 	.4byte 0x00000000
 	.4byte 0x00000002
 	.4byte 0x00000001
@@ -963,15 +963,19 @@
 # 0x8066C410 - 0x8066C430
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C410, global
+.global lbl_8066C410
+lbl_8066C410:
 	.4byte 0x3F800000
 	.4byte 0x00000000
-.sym lbl_8066C418, global
+.global lbl_8066C418
+lbl_8066C418:
 	.4byte 0x40100000
 	.4byte 0x00000000
-.sym lbl_8066C420, global
+.global lbl_8066C420
+lbl_8066C420:
 	.4byte 0x437F0000
 	.4byte 0x00000000
-.sym lbl_8066C428, global
+.global lbl_8066C428
+lbl_8066C428:
 	.4byte 0x43300000
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSSync.o"
 
-# 0x8035B2B0 - 0x8035B330
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn SystemCallVector, global

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_sjd.o"
 
-# 0x8037F9BC - 0x80380E70
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADXSJD_Init, global
@@ -405,7 +404,7 @@
 /* 8037FF28 003494E8  81 86 00 1C */	lwz r12, 0x1c(r6)
 /* 8037FF2C 003494EC  7D 89 03 A6 */	mtctr r12
 /* 8037FF30 003494F0  4E 80 04 21 */	bctrl
-/* 8037FF34 003494F4  48 00 71 CD */	bl fn_80387100
+/* 8037FF34 003494F4  48 00 71 CD */	bl func_80387100
 /* 8037FF38 003494F8  2C 03 00 00 */	cmpwi r3, 0x0
 /* 8037FF3C 003494FC  40 82 00 14 */	bne .L_8037FF50
 /* 8037FF40 00349500  3C 60 80 52 */	lis r3, lbl_80519750@ha
@@ -993,7 +992,7 @@
 /* 80380794 00349D54  90 BD 00 34 */	stw r5, 0x34(r29)
 /* 80380798 00349D58  90 9D 00 40 */	stw r4, 0x40(r29)
 /* 8038079C 00349D5C  90 1D 00 44 */	stw r0, 0x44(r29)
-/* 803807A0 00349D60  48 00 75 25 */	bl fn_80387CC4
+/* 803807A0 00349D60  48 00 75 25 */	bl func_80387CC4
 /* 803807A4 00349D64  BB 01 00 20 */	lmw r24, 0x20(r1)
 /* 803807A8 00349D68  80 01 00 44 */	lwz r0, 0x44(r1)
 /* 803807AC 00349D6C  7C 08 03 A6 */	mtlr r0
@@ -1386,7 +1385,7 @@
 .fn ADXSJD_SetLnkSw, global
 /* 80380CE8 0034A2A8  90 83 00 A4 */	stw r4, 0xa4(r3)
 /* 80380CEC 0034A2AC  80 63 00 04 */	lwz r3, 0x4(r3)
-/* 80380CF0 0034A2B0  48 00 6E CC */	b fn_80387BBC
+/* 80380CF0 0034A2B0  48 00 6E CC */	b func_80387BBC
 .endfn ADXSJD_SetLnkSw
 
 .fn ADXSJD_EntryFltFunc, global
@@ -1555,7 +1554,8 @@
 # 0x80519750 - 0x805197E0
 .rodata
 .balign 8
-.sym lbl_80519750, global
+.global lbl_80519750
+lbl_80519750:
 	.4byte 0x45303330
 	.4byte 0x31303930
 	.4byte 0x31204144
@@ -1596,9 +1596,12 @@
 # 0x805E69C0 - 0x805E7518
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E69C0, global
+.global lbl_805E69C0
+lbl_805E69C0:
 	.skip 0x14
-.sym lbl_805E69D4, global
+.global lbl_805E69D4
+lbl_805E69D4:
 	.skip 0x4
-.sym lbl_805E69D8, global
+.global lbl_805E69D8
+lbl_805E69D8:
 	.skip 0xB40

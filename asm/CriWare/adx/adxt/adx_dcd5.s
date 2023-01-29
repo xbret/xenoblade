@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_dcd5.o"
 
-# 0x8038940C - 0x80389AC4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADX_DecodeMono4, global
@@ -505,7 +504,8 @@
 # 0x8051AA98 - 0x8051AAD8
 .rodata
 .balign 8
-.sym lbl_8051AA98, global
+.global lbl_8051AA98
+lbl_8051AA98:
 	.4byte 0x00000000
 	.4byte 0x00000001
 	.4byte 0x00000002

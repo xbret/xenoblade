@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/gx/GXDisplayList.o"
 
-# 0x8031E470 - 0x8031E4F0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn GXCallDisplayList, global

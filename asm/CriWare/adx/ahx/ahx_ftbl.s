@@ -1,11 +1,11 @@
 .include "macros.inc"
-.file "CriWare/adx/ahx/ahx_ftbl.o"
 
 # 0x80563730 - 0x805657B4
 .data
 .balign 8
 
-.obj ahxsbf_synthesis_filter_table, global
+.global ahxsbf_synthesis_filter_table
+ahxsbf_synthesis_filter_table:
 	.4byte 0x3F3504F4
 	.4byte 0xBF3504F4
 	.4byte 0xBF3504F4
@@ -2086,5 +2086,6 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_805657B0, global
+.global lbl_805657B0
+lbl_805657B0:
 	.4byte ahxsbf_synthesis_filter_table

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sud/sud_lib.o"
 
-# 0x803D70B0 - 0x803D7244
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SUD_Init, global
@@ -132,7 +131,8 @@
 # 0x80520D60 - 0x80520DB8
 .rodata
 .balign 8
-.sym lbl_80520D60, global
+.global lbl_80520D60
+lbl_80520D60:
 	.4byte 0x0A435249
 	.4byte 0x20535544
 	.4byte 0x2F574949
@@ -146,7 +146,8 @@
 	.4byte 0x31383A32
 	.4byte 0x323A3130
 	.4byte 0x0A000000
-.sym lbl_80520D94, global
+.global lbl_80520D94
+lbl_80520D94:
 	.4byte 0x3C535544
 	.4byte 0x50535F3E
 	.4byte 0x003C2530
@@ -160,7 +161,9 @@
 # 0x8061D708 - 0x8061D710
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061D708, global
+.global lbl_8061D708
+lbl_8061D708:
 	.skip 0x4
-.sym lbl_8061D70C, global
+.global lbl_8061D70C
+lbl_8061D70C:
 	.skip 0x4

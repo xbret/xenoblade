@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/bta_hh_utils.o"
 
-# 0x802E4154 - 0x802E4500
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn bta_hh_find_cb, global
@@ -278,7 +277,8 @@
 # 0x805449A0 - 0x80544C60
 .data
 .balign 8
-.sym lbl_805449A0, global
+.global lbl_805449A0
+lbl_805449A0:
 	.4byte 0x666F756E
 	.4byte 0x64206B64
 	.4byte 0x65765F63
@@ -312,7 +312,8 @@
 	.4byte 0x65206D61
 	.4byte 0x78203D20
 	.4byte 0x25640000
-.sym lbl_80544A24, global
+.global lbl_80544A24
+lbl_80544A24:
 	.4byte 0x73756263
 	.4byte 0x6C617373
 	.4byte 0x203D2030
@@ -461,7 +462,7 @@
 .section .sbss2, "a", @nobits
 .balign 8
 
-.obj obj_8066DCE8, global
+.global obj_8066DCE8
+obj_8066DCE8:
 	.skip 0x6
-.endobj obj_8066DCE8
 	.skip 0x2

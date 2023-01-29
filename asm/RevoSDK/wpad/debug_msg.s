@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/wpad/debug_msg.o"
 
-# 0x80375B90 - 0x80375BE0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn DEBUGPrint, global

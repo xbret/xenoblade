@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/math/math_types.o"
 
-# 0x8040B000 - 0x8040B488
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::math::MTX33Identity(nw4r::math::MTX33*)
@@ -355,13 +354,17 @@
 # 0x8066C640 - 0x8066C658
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C640, global
+.global lbl_8066C640
+lbl_8066C640:
 	.4byte 0x00000000
-.sym lbl_8066C644, global
+.global lbl_8066C644
+lbl_8066C644:
 	.4byte 0x3F800000
-.sym lbl_8066C648, global
+.global lbl_8066C648
+lbl_8066C648:
 	.4byte 0x3CC90FDB
 	.4byte 0x00000000
-.sym lbl_8066C650, global
+.global lbl_8066C650
+lbl_8066C650:
 	.4byte 0x47800000
 	.4byte 0x47800000

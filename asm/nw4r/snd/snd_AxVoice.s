@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_AxVoice.o"
 
-# 0x8040DEC0 - 0x80410B80
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::AxVoice::AxVoice()
@@ -26,7 +25,7 @@
 /* 8040DF00 003D74C0  4E 80 00 20 */	blr
 .endfn __ct__Q44nw4r3snd6detail7AxVoiceFv
 
-.fn fn_8040DF04, global
+.fn func_8040DF04, global
 /* 8040DF04 003D74C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DF08 003D74C8  7C 08 02 A6 */	mflr r0
 /* 8040DF0C 003D74CC  2C 03 00 00 */	cmpwi r3, 0x0
@@ -44,7 +43,7 @@
 /* 8040DF38 003D74F8  7C 08 03 A6 */	mtlr r0
 /* 8040DF3C 003D74FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DF40 003D7500  4E 80 00 20 */	blr
-.endfn fn_8040DF04
+.endfn func_8040DF04
 
 # nw4r::snd::detail::AxVoice::Setup(const void*, nw4r::snd::SampleFormat, int)
 .fn Setup__Q44nw4r3snd6detail7AxVoiceFPCvQ34nw4r3snd12SampleFormati, global
@@ -3370,21 +3369,29 @@
 # 0x8066C690 - 0x8066C6B8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C690, global
+.global lbl_8066C690
+lbl_8066C690:
 	.4byte 0x46FA0000
-.sym lbl_8066C694, global
+.global lbl_8066C694
+lbl_8066C694:
 	.4byte 0x3FAAAAAB
-.sym lbl_8066C698, global
+.global lbl_8066C698
+lbl_8066C698:
 	.4byte 0x3F800000
 	.4byte 0x00000000
-.sym lbl_8066C6A0, global
+.global lbl_8066C6A0
+lbl_8066C6A0:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C6A8, global
+.global lbl_8066C6A8
+lbl_8066C6A8:
 	.4byte 0x477FFF00
-.sym lbl_8066C6AC, global
+.global lbl_8066C6AC
+lbl_8066C6AC:
 	.4byte 0x00000000
-.sym lbl_8066C6B0, global
+.global lbl_8066C6B0
+lbl_8066C6B0:
 	.4byte 0x47800000
-.sym lbl_8066C6B4, global
+.global lbl_8066C6B4
+lbl_8066C6B4:
 	.4byte 0x46FFFE00

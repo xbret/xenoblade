@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/adx_crs.o"
 
-# 0x803893A4 - 0x8038940C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADXCRS_Init, global
@@ -52,7 +51,9 @@
 # 0x805E99B8 - 0x805E99C0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805E99B8, global
+.global lbl_805E99B8
+lbl_805E99B8:
 	.skip 0x4
-.sym lbl_805E99BC, global
+.global lbl_805E99BC
+lbl_805E99BC:
 	.skip 0x4

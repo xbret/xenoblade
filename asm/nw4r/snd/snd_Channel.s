@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_Channel.o"
 
-# 0x80413DE0 - 0x80415034
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::ChannelManager::GetInstance()
@@ -1318,36 +1317,47 @@
 # 0x8063B1A0 - 0x8063B1D0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8063B1A0, global
+.global lbl_8063B1A0
+lbl_8063B1A0:
 	.skip 0x10
-.sym lbl_8063B1B0, global
+.global lbl_8063B1B0
+lbl_8063B1B0:
 	.skip 0x20
 
 # 0x80667DB8 - 0x80667DC0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DB8, global
+.global lbl_80667DB8
+lbl_80667DB8:
 	.skip 0x8
 
 # 0x8066C708 - 0x8066C734
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C708, global
+.global lbl_8066C708
+lbl_8066C708:
 	.4byte 0x00000000
-.sym lbl_8066C70C, global
+.global lbl_8066C70C
+lbl_8066C70C:
 	.4byte 0x3F800000
-.sym lbl_8066C710, global
+.global lbl_8066C710
+lbl_8066C710:
 	.4byte 0x437F0000
-.sym lbl_8066C714, global
+.global lbl_8066C714
+lbl_8066C714:
 	.4byte 0x40C00000
-.sym lbl_8066C718, global
+.global lbl_8066C718
+lbl_8066C718:
 	.4byte 0x43800000
 	.4byte 0x00000000
-.sym lbl_8066C720, global
+.global lbl_8066C720
+lbl_8066C720:
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C728, global
+.global lbl_8066C728
+lbl_8066C728:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C730, global
+.global lbl_8066C730
+lbl_8066C730:
 	.4byte 0xC2B4CCCD

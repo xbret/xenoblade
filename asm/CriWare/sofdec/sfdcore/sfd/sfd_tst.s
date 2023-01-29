@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/sfd/sfd_tst.o"
 
-# 0x803CF0E8 - 0x803D0030
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFTST_Create, global
@@ -1077,7 +1076,8 @@
 # 0x805206E8 - 0x80520778
 .rodata
 .balign 8
-.sym lbl_805206E8, global
+.global lbl_805206E8
+lbl_805206E8:
 	.4byte 0x25702C20
 	.4byte 0x256C642C
 	.4byte 0x20256C64
@@ -1118,7 +1118,8 @@
 # 0x8056C610 - 0x8056C728
 .data
 .balign 8
-.sym lbl_8056C610, global
+.global lbl_8056C610
+lbl_8056C610:
 	.4byte 0x7473742C
 	.4byte 0x2068656C
 	.4byte 0x705F7469
@@ -1193,5 +1194,6 @@
 # 0x8061CE08 - 0x8061CE20
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061CE08, global
+.global lbl_8061CE08
+lbl_8061CE08:
 	.skip 0x18

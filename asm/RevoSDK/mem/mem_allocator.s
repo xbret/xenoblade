@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/mem/mem_allocator.o"
 
-# 0x80349A70 - 0x80349AD0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn AllocatorAllocForExpHeap_, global
@@ -47,6 +46,7 @@
 # 0x8066C120 - 0x8066C128
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C120, global
+.global lbl_8066C120
+lbl_8066C120:
 	.4byte AllocatorAllocForExpHeap_
 	.4byte AllocatorFreeForExpHeap_

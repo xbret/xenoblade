@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/sdp_utils.o"
 
-# 0x803074E4 - 0x80308530
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn sdpu_find_ccb_by_cid, global
@@ -1216,7 +1215,8 @@
 # 0x8050E398 - 0x8050E3A8
 .rodata
 .balign 8
-.sym lbl_8050E398, global
+.global lbl_8050E398
+lbl_8050E398:
 	.4byte 0x00000000
 	.4byte 0x00001000
 	.4byte 0x80000080
@@ -1226,7 +1226,7 @@
 .data
 .balign 8
 
-.obj jumptable_805494E8, local
+jumptable_805494E8:
 	.rel sdpu_build_attrib_entry, .L_803078FC
 	.rel sdpu_build_attrib_entry, .L_8030789C
 	.rel sdpu_build_attrib_entry, .L_803078AC
@@ -1244,8 +1244,8 @@
 	.rel sdpu_build_attrib_entry, .L_803078FC
 	.rel sdpu_build_attrib_entry, .L_803078FC
 	.rel sdpu_build_attrib_entry, .L_803078E8
-.endobj jumptable_805494E8
-.sym lbl_8054952C, global
+.global lbl_8054952C
+lbl_8054952C:
 	.4byte 0x53445020
 	.4byte 0x2D207364
 	.4byte 0x70755F62
@@ -1260,7 +1260,8 @@
 	.4byte 0x49443A20
 	.4byte 0x30782578
 	.4byte 0x00000000
-.sym lbl_80549564, global
+.global lbl_80549564
+lbl_80549564:
 	.4byte 0x53445020
 	.4byte 0x2D206E6F
 	.4byte 0x20627566
@@ -1269,7 +1270,7 @@
 	.4byte 0x206D7367
 	.4byte 0x00000000
 
-.obj jumptable_80549580, local
+jumptable_80549580:
 	.rel sdpu_extract_uid_seq, .L_80307C0C
 	.rel sdpu_extract_uid_seq, .L_80307B9C
 	.rel sdpu_extract_uid_seq, .L_80307BA4
@@ -1278,9 +1279,8 @@
 	.rel sdpu_extract_uid_seq, .L_80307BB4
 	.rel sdpu_extract_uid_seq, .L_80307BC0
 	.rel sdpu_extract_uid_seq, .L_80307BDC
-.endobj jumptable_80549580
 
-.obj jumptable_805495A0, local
+jumptable_805495A0:
 	.rel sdpu_extract_uid_seq, .L_80307B38
 	.rel sdpu_extract_uid_seq, .L_80307AC8
 	.rel sdpu_extract_uid_seq, .L_80307AD0
@@ -1289,9 +1289,8 @@
 	.rel sdpu_extract_uid_seq, .L_80307AE0
 	.rel sdpu_extract_uid_seq, .L_80307AEC
 	.rel sdpu_extract_uid_seq, .L_80307B08
-.endobj jumptable_805495A0
 
-.obj jumptable_805495C0, local
+jumptable_805495C0:
 	.rel sdpu_get_len_from_type, .L_80308048
 	.rel sdpu_get_len_from_type, .L_80308054
 	.rel sdpu_get_len_from_type, .L_80308060
@@ -1300,4 +1299,3 @@
 	.rel sdpu_get_len_from_type, .L_80308084
 	.rel sdpu_get_len_from_type, .L_80308094
 	.rel sdpu_get_len_from_type, .L_803080B4
-.endobj jumptable_805495C0

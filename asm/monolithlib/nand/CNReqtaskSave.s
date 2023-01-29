@@ -1,45 +1,10 @@
 .include "macros.inc"
-.file "monolithlib/nand/CNReqtaskSave.o"
 
-# 0x80020758 - 0x80020768
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_80020758", local
-.hidden "@etb_80020758"
-	.4byte 0x10080000
-	.4byte 0x00000000
-.endobj "@etb_80020758"
-
-.obj "@etb_80020760", local
-.hidden "@etb_80020760"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_80020760"
-
-# 0x80038750 - 0x80038768
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80038750", local
-.hidden "@eti_80038750"
-	.4byte fn_804DAD38
-	.4byte 0x000001B0
-	.4byte "@etb_80020758"
-.endobj "@eti_80038750"
-
-.obj "@eti_8003875C", local
-.hidden "@eti_8003875C"
-	.4byte fn_804DAEE8
-	.4byte 0x00000070
-	.4byte "@etb_80020760"
-.endobj "@eti_8003875C"
-
-# 0x804DAD38 - 0x804DAF70
-.text
-.balign 4
-
-.fn fn_804DAD38, global
+.fn func_804DAD38, global
 /* 804DAD38 004A42F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DAD3C 004A42FC  7C 08 02 A6 */	mflr r0
 /* 804DAD40 004A4300  90 01 00 14 */	stw r0, 0x14(r1)
@@ -78,9 +43,9 @@
 /* 804DADBC 004A437C  48 00 01 14 */	b .L_804DAED0
 .L_804DADC0:
 /* 804DADC0 004A4380  7F C3 F3 78 */	mr r3, r30
-/* 804DADC4 004A4384  48 00 01 25 */	bl fn_804DAEE8
+/* 804DADC4 004A4384  48 00 01 25 */	bl func_804DAEE8
 /* 804DADC8 004A4388  38 80 00 02 */	li r4, 0x2
-/* 804DADCC 004A438C  4B FF F7 75 */	bl fn_804DA540
+/* 804DADCC 004A438C  4B FF F7 75 */	bl func_804DA540
 /* 804DADD0 004A4390  2C 03 00 00 */	cmpwi r3, 0x0
 /* 804DADD4 004A4394  41 82 00 0C */	beq .L_804DADE0
 /* 804DADD8 004A4398  38 60 00 02 */	li r3, 0x2
@@ -96,10 +61,10 @@
 /* 804DADF8 004A43B8  2C 00 FF F4 */	cmpwi r0, -0xc
 /* 804DADFC 004A43BC  40 82 00 34 */	bne .L_804DAE30
 /* 804DAE00 004A43C0  7F C3 F3 78 */	mr r3, r30
-/* 804DAE04 004A43C4  48 00 00 E5 */	bl fn_804DAEE8
+/* 804DAE04 004A43C4  48 00 00 E5 */	bl func_804DAEE8
 /* 804DAE08 004A43C8  88 9E 00 18 */	lbz r4, 0x18(r30)
 /* 804DAE0C 004A43CC  38 A0 00 00 */	li r5, 0x0
-/* 804DAE10 004A43D0  4B FF F8 FD */	bl fn_804DA70C
+/* 804DAE10 004A43D0  4B FF F8 FD */	bl func_804DA70C
 /* 804DAE14 004A43D4  2C 03 00 00 */	cmpwi r3, 0x0
 /* 804DAE18 004A43D8  41 82 00 0C */	beq .L_804DAE24
 /* 804DAE1C 004A43DC  38 60 00 02 */	li r3, 0x2
@@ -114,7 +79,7 @@
 .L_804DAE38:
 /* 804DAE38 004A43F8  80 64 00 10 */	lwz r3, 0x10(r4)
 /* 804DAE3C 004A43FC  80 84 00 14 */	lwz r4, 0x14(r4)
-/* 804DAE40 004A4400  4B FF F7 E9 */	bl fn_804DA628
+/* 804DAE40 004A4400  4B FF F7 E9 */	bl func_804DA628
 /* 804DAE44 004A4404  2C 03 00 00 */	cmpwi r3, 0x0
 /* 804DAE48 004A4408  41 82 00 0C */	beq .L_804DAE54
 /* 804DAE4C 004A440C  38 60 00 02 */	li r3, 0x2
@@ -124,7 +89,7 @@
 /* 804DAE58 004A4418  98 1E 00 19 */	stb r0, 0x19(r30)
 /* 804DAE5C 004A441C  48 00 00 74 */	b .L_804DAED0
 .L_804DAE60:
-/* 804DAE60 004A4420  4B FF F8 3D */	bl fn_804DA69C
+/* 804DAE60 004A4420  4B FF F8 3D */	bl func_804DA69C
 /* 804DAE64 004A4424  2C 03 00 00 */	cmpwi r3, 0x0
 /* 804DAE68 004A4428  41 82 00 0C */	beq .L_804DAE74
 /* 804DAE6C 004A442C  38 60 00 02 */	li r3, 0x2
@@ -134,12 +99,12 @@
 /* 804DAE78 004A4438  98 1E 00 19 */	stb r0, 0x19(r30)
 /* 804DAE7C 004A443C  48 00 00 54 */	b .L_804DAED0
 .L_804DAE80:
-/* 804DAE80 004A4440  4B FF FB 0D */	bl fn_804DA98C
+/* 804DAE80 004A4440  4B FF FB 0D */	bl func_804DA98C
 /* 804DAE84 004A4444  7C 7F 1B 78 */	mr r31, r3
 /* 804DAE88 004A4448  7F C3 F3 78 */	mr r3, r30
-/* 804DAE8C 004A444C  48 00 00 5D */	bl fn_804DAEE8
+/* 804DAE8C 004A444C  48 00 00 5D */	bl func_804DAEE8
 /* 804DAE90 004A4450  7F E4 FB 78 */	mr r4, r31
-/* 804DAE94 004A4454  4B FF F9 39 */	bl fn_804DA7CC
+/* 804DAE94 004A4454  4B FF F9 39 */	bl func_804DA7CC
 /* 804DAE98 004A4458  2C 03 00 00 */	cmpwi r3, 0x0
 /* 804DAE9C 004A445C  41 82 00 0C */	beq .L_804DAEA8
 /* 804DAEA0 004A4460  38 60 00 02 */	li r3, 0x2
@@ -166,9 +131,9 @@
 /* 804DAEDC 004A449C  7C 08 03 A6 */	mtlr r0
 /* 804DAEE0 004A44A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DAEE4 004A44A4  4E 80 00 20 */	blr
-.endfn fn_804DAD38
+.endfn func_804DAD38
 
-.fn fn_804DAEE8, global
+.fn func_804DAEE8, global
 /* 804DAEE8 004A44A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DAEEC 004A44AC  7C 08 02 A6 */	mflr r0
 /* 804DAEF0 004A44B0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -191,14 +156,14 @@
 /* 804DAF30 004A44F0  38 7F 29 08 */	addi r3, r31, lbl_80662908@l
 /* 804DAF34 004A44F4  38 84 7F 08 */	addi r4, r4, lbl_80527F08@l
 /* 804DAF38 004A44F8  4C C6 31 82 */	crclr 4*cr1+eq
-/* 804DAF3C 004A44FC  4B B6 90 7D */	bl fn_80043FB8
+/* 804DAF3C 004A44FC  4B B6 90 7D */	bl func_80043FB8
 /* 804DAF40 004A4500  38 7F 29 08 */	addi r3, r31, lbl_80662908@l
 /* 804DAF44 004A4504  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804DAF48 004A4508  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804DAF4C 004A450C  7C 08 03 A6 */	mtlr r0
 /* 804DAF50 004A4510  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DAF54 004A4514  4E 80 00 20 */	blr
-.endfn fn_804DAEE8
+.endfn func_804DAEE8
 
 .fn sinit_804DAF58, global
 /* 804DAF58 004A4518  38 6D C1 38 */	addi r3, r13, lbl_806682B8@sda21
@@ -219,12 +184,14 @@
 .rodata
 .balign 8
 
-.obj CNReqtaskSave_typestr, global
+.global CNReqtaskSave_typestr
+CNReqtaskSave_typestr:
 	.4byte 0x434E5265
 	.4byte 0x71746173
 	.4byte 0x6B536176
 	.4byte 0x65000000
-.sym lbl_80527F08, global
+.global lbl_80527F08
+lbl_80527F08:
 	.4byte 0x25732573
 	.4byte 0x00000000
 
@@ -232,13 +199,15 @@
 .data
 .balign 8
 
-.obj __vt__CNReqtaskSave, global
+.global __vt__CNReqtaskSave
+__vt__CNReqtaskSave:
 	.4byte __RTTI__CNReqtaskSave
 	.4byte 0x00000000
-	.4byte fn_804DAD38
-	.4byte fn_804DA4CC
+	.4byte func_804DAD38
+	.4byte func_804DA4CC
 
-.obj CNReqtaskSave_hierarchy, global
+.global CNReqtaskSave_hierarchy
+CNReqtaskSave_hierarchy:
 	.4byte __RTTI__CNReqtask
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -247,29 +216,68 @@
 # 0x80662908 - 0x80662930
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80662908, global
+.global lbl_80662908
+lbl_80662908:
 	.skip 0x28
 
 # 0x806664A0 - 0x806664B0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_806664A0, global
+.global lbl_806664A0
+lbl_806664A0:
 	.4byte lbl_8066D9D0
 	.4byte 0x00000000
 
-.obj __RTTI__CNReqtaskSave, global
+.global __RTTI__CNReqtaskSave
+__RTTI__CNReqtaskSave:
 	.4byte CNReqtaskSave_typestr
 	.4byte CNReqtaskSave_hierarchy
 
 # 0x806682BC - 0x806682C0
 .section .sbss, "wa", @nobits
 .balign 4
-.sym lbl_806682BC, global
+.global lbl_806682BC
+lbl_806682BC:
 	.skip 0x4
 
 # 0x8066D9D0 - 0x8066D9D8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066D9D0, global
+.global lbl_8066D9D0
+lbl_8066D9D0:
 	.4byte 0x2F746D70
 	.4byte 0x2F000000
+
+# 0x80020758 - 0x80020768
+.section extab, "a"
+.balign 4
+
+.obj "@etb_80020758", local
+.hidden "@etb_80020758"
+	.4byte 0x10080000
+	.4byte 0x00000000
+.endobj "@etb_80020758"
+
+.obj "@etb_80020760", local
+.hidden "@etb_80020760"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_80020760"
+
+# 0x80038750 - 0x80038768
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80038750", local
+.hidden "@eti_80038750"
+	.4byte func_804DAD38
+	.4byte 0x000001B0
+	.4byte "@etb_80020758"
+.endobj "@eti_80038750"
+
+.obj "@eti_8003875C", local
+.hidden "@eti_8003875C"
+	.4byte func_804DAEE8
+	.4byte 0x00000070
+	.4byte "@etb_80020760"
+.endobj "@eti_8003875C"

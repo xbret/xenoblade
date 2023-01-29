@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/uty/memcpyd.o"
 
-# 0x803D440C - 0x803D44D0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn UTY_MemcpyDword, global

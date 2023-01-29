@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/sfd/sfd_buf.o"
 
-# 0x803BED00 - 0x803BFD38
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFBUF_Init, global
@@ -1182,23 +1181,26 @@
 /* 803BFD1C 003892DC  4E 80 00 20 */	blr
 .endfn SFBUF_UpdateFlowCnt
 
-.fn fn_803BFD20, global
+.fn func_803BFD20, global
 /* 803BFD20 003892E0  3C 80 80 61 */	lis r4, lbl_8060A2D0@ha
 /* 803BFD24 003892E4  80 64 A2 D0 */	lwz r3, lbl_8060A2D0@l(r4)
 /* 803BFD28 003892E8  38 03 00 01 */	addi r0, r3, 0x1
 /* 803BFD2C 003892EC  90 04 A2 D0 */	stw r0, lbl_8060A2D0@l(r4)
 /* 803BFD30 003892F0  80 04 A2 D0 */	lwz r0, lbl_8060A2D0@l(r4)
 /* 803BFD34 003892F4  4E 80 00 20 */	blr
-.endfn fn_803BFD20
+.endfn func_803BFD20
 
 # 0x8060A2C8 - 0x8060A2D8
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj sfbuf_sjrbf_uuid, global
+.global sfbuf_sjrbf_uuid
+sfbuf_sjrbf_uuid:
 	.skip 0x4
 
-.obj sfbuf_sjmem_uuid, global
+.global sfbuf_sjmem_uuid
+sfbuf_sjmem_uuid:
 	.skip 0x4
-.sym lbl_8060A2D0, global
+.global lbl_8060A2D0
+lbl_8060A2D0:
 	.skip 0x8

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/bta_dm_main.o"
 
-# 0x802E156C - 0x802E16CC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn bta_dm_sm_execute, global
@@ -106,7 +105,8 @@
 # 0x8050E090 - 0x8050E1B8
 .rodata
 .balign 8
-.sym lbl_8050E090, global
+.global lbl_8050E090
+lbl_8050E090:
 	.4byte bta_dm_enable
 	.4byte bta_dm_disable
 	.4byte bta_dm_set_dev_name
@@ -120,7 +120,8 @@
 	.4byte bta_dm_pm_timer
 	.4byte bta_dm_keep_acl
 	.4byte bta_dm_send_hci_reset
-.sym lbl_8050E0C4, global
+.global lbl_8050E0C4
+lbl_8050E0C4:
 	.4byte 0x000D0001
 	.4byte 0x0D00020D
 	.4byte 0x00030D00
@@ -132,7 +133,8 @@
 	.4byte 0x000B0D00
 	.4byte 0x0C0D0000
 	.4byte 0x00000000
-.sym lbl_8050E0F0, global
+.global lbl_8050E0F0
+lbl_8050E0F0:
 	.4byte bta_dm_search_start
 	.4byte bta_dm_search_cancel
 	.4byte bta_dm_discover
@@ -151,7 +153,8 @@
 	.4byte bta_dm_search_cancel_transac_cmpl
 	.4byte bta_dm_disc_rmt_name
 	.4byte bta_dm_cancel_rmt_name
-.sym lbl_8050E138, global
+.global lbl_8050E138
+lbl_8050E138:
 	.4byte 0x0012010E
 	.4byte 0x12000212
 	.4byte 0x03121200
@@ -159,7 +162,8 @@
 	.4byte 0x12000712
 	.4byte 0x00121200
 	.4byte 0x12120000
-.sym lbl_8050E154, global
+.global lbl_8050E154
+lbl_8050E154:
 	.4byte 0x12120101
 	.4byte 0x12021212
 	.4byte 0x01031201
@@ -167,7 +171,8 @@
 	.4byte 0x12010512
 	.4byte 0x01061200
 	.4byte 0x09120100
-.sym lbl_8050E170, global
+.global lbl_8050E170
+lbl_8050E170:
 	.4byte 0x0A12020C
 	.4byte 0x0E020B12
 	.4byte 0x020D1200
@@ -175,7 +180,8 @@
 	.4byte 0x12020F0D
 	.4byte 0x000D1200
 	.4byte 0x0D120000
-.sym lbl_8050E18C, global
+.global lbl_8050E18C
+lbl_8050E18C:
 	.4byte 0x1212030E
 	.4byte 0x12031212
 	.4byte 0x03121203
@@ -183,7 +189,8 @@
 	.4byte 0x12030512
 	.4byte 0x03121200
 	.4byte 0x08120300
-.sym lbl_8050E1A8, global
+.global lbl_8050E1A8
+lbl_8050E1A8:
 	.4byte lbl_8050E138
 	.4byte lbl_8050E154
 	.4byte lbl_8050E170

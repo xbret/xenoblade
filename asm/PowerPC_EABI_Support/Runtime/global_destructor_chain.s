@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/Runtime/global_destructor_chain.o"
 
-# 0x802B969C - 0x802B96FC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __register_global_object, global
@@ -41,14 +40,13 @@
 .section .dtors$10, "a"
 .balign 4
 
-.obj __destroy_global_chain_reference, local
+__destroy_global_chain_reference:
 	.4byte __destroy_global_chain
-.endobj __destroy_global_chain_reference
 
 # 0x80667520 - 0x80667524
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj __global_destructor_chain, global
+.global __global_destructor_chain
+__global_destructor_chain:
 	.skip 0x4
-.endobj __global_destructor_chain

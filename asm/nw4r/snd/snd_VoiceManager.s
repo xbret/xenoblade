@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_VoiceManager.o"
 
-# 0x80428C58 - 0x804293D0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::VoiceManager::GetInstance()
@@ -574,13 +573,16 @@
 # 0x80657060 - 0x80657088
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80657060, global
+.global lbl_80657060
+lbl_80657060:
 	.skip 0xC
-.sym lbl_8065706C, global
+.global lbl_8065706C
+lbl_8065706C:
 	.skip 0x1C
 
 # 0x80667E10 - 0x80667E18
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667E10, global
+.global lbl_80667E10
+lbl_80667E10:
 	.skip 0x8

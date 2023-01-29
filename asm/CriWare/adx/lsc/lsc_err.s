@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/lsc/lsc_err.o"
 
-# 0x803917A8 - 0x803918AC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn LSC_EntryErrFunc, global
@@ -82,7 +81,9 @@
 # 0x805EB270 - 0x805EB378
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805EB270, global
+.global lbl_805EB270
+lbl_805EB270:
 	.skip 0x4
-.sym lbl_805EB274, global
+.global lbl_805EB274
+lbl_805EB274:
 	.skip 0x104

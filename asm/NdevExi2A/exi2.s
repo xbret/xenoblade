@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "NdevExi2A/exi2.o"
 
-# 0x802D0908 - 0x802D10A0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn __EXI2Imm, global

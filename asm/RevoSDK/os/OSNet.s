@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OSNet.o"
 
-# 0x8035E070 - 0x8035E610
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __OSInitNet, global
@@ -494,7 +493,8 @@
 	.4byte 0x68757464
 	.4byte 0x6F776E00
 	.2byte 0x0000
-.sym lbl_8055EDF0, global
+.global lbl_8055EDF0
+lbl_8055EDF0:
 	.4byte 0x2F646576
 	.4byte 0x2F6E6574
 	.4byte 0x2F6B642F
@@ -518,7 +518,8 @@
 	.4byte 0x74536875
 	.4byte 0x74646F77
 	.4byte 0x6E000000
-.sym lbl_8055EE4C, global
+.global lbl_8055EE4C
+lbl_8055EE4C:
 	.4byte 0x4E574332
 	.4byte 0x34536875
 	.4byte 0x74646F77
@@ -532,7 +533,8 @@
 	.4byte 0x436F756E
 	.4byte 0x7465725F
 	.4byte 0x00000000
-.sym lbl_8055EE80, global
+.global lbl_8055EE80
+lbl_8055EE80:
 	.4byte 0x2F646576
 	.4byte 0x2F6E6574
 	.4byte 0x2F6B642F
@@ -543,34 +545,45 @@
 # 0x805D5440 - 0x805D5500
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805D5440, global
+.global lbl_805D5440
+lbl_805D5440:
 	.skip 0x20
-.sym lbl_805D5460, global
+.global lbl_805D5460
+lbl_805D5460:
 	.skip 0x20
-.sym lbl_805D5480, global
+.global lbl_805D5480
+lbl_805D5480:
 	.skip 0x20
-.sym lbl_805D54A0, global
+.global lbl_805D54A0
+lbl_805D54A0:
 	.skip 0x20
-.sym lbl_805D54C0, global
+.global lbl_805D54C0
+lbl_805D54C0:
 	.skip 0x20
-.sym lbl_805D54E0, global
+.global lbl_805D54E0
+lbl_805D54E0:
 	.skip 0x20
 
 # 0x80665BA8 - 0x80665BB0
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665BA8, global
+.global lbl_80665BA8
+lbl_80665BA8:
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000000
 
 # 0x80667B28 - 0x80667B38
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667B28, global
+.global lbl_80667B28
+lbl_80667B28:
 	.skip 0x4
-.sym lbl_80667B2C, global
+.global lbl_80667B2C
+lbl_80667B2C:
 	.skip 0x4
-.sym lbl_80667B30, global
+.global lbl_80667B30
+lbl_80667B30:
 	.skip 0x4
-.sym lbl_80667B34, global
+.global lbl_80667B34
+lbl_80667B34:
 	.skip 0x4

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/dvd/dvd_broadway.o"
 
-# 0x80310600 - 0x80312CB0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn doTransactionCallback, local
@@ -2818,7 +2817,8 @@
 	.4byte 0x6D616E67
 	.4byte 0x6C656421
 	.2byte 0x0A00
-.sym lbl_8054A720, global
+.global lbl_8054A720
+lbl_8054A720:
 	.4byte 0x28445644
 	.4byte 0x4C6F7746
 	.4byte 0x696E6973
@@ -3762,31 +3762,34 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj dvdContexts, local
+dvdContexts:
 	.skip 0x80
-.endobj dvdContexts
 
-.obj diRegValCache, local
+diRegValCache:
 	.skip 0x20
-.endobj diRegValCache
-.sym lbl_805CCD00, global
+.global lbl_805CCD00
+lbl_805CCD00:
 	.skip 0x20
-.sym lbl_805CCD20, global
+.global lbl_805CCD20
+lbl_805CCD20:
 	.skip 0xC0
-.sym lbl_805CCDE0, global
+.global lbl_805CCDE0
+lbl_805CCDE0:
 	.skip 0x20
-.sym lbl_805CCE00, global
+.global lbl_805CCE00
+lbl_805CCE00:
 	.skip 0x20
 
 # 0x806659A8 - 0x806659B8
 .section .sdata, "wa"
 .balign 8
 
-.obj DiFD, global
+.global DiFD
+DiFD:
 	.4byte 0xFFFFFFFF
-.endobj DiFD
 	.4byte 0x00000000
-.sym lbl_806659B0, global
+.global lbl_806659B0
+lbl_806659B0:
 	.4byte 0x2F646576
 	.4byte 0x2F646900
 
@@ -3794,34 +3797,35 @@
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj requestInProgress, local
+requestInProgress:
 	.skip 0x1
-.endobj requestInProgress
-.sym lbl_80667899, global
+.global lbl_80667899
+lbl_80667899:
 	.skip 0x3
 
-.obj freeCommandBuf, local
+freeCommandBuf:
 	.skip 0x4
-.endobj freeCommandBuf
 
-.obj freeDvdContext, local
+freeDvdContext:
 	.skip 0x4
-.endobj freeDvdContext
-.sym lbl_806678A4, global
+.global lbl_806678A4
+lbl_806678A4:
 	.skip 0x1
-.sym lbl_806678A5, global
+.global lbl_806678A5
+lbl_806678A5:
 	.skip 0x3
 
-.obj spinUpValue, local
+spinUpValue:
 	.skip 0x4
-.endobj spinUpValue
-.sym lbl_806678AC, global
+.global lbl_806678AC
+lbl_806678AC:
 	.skip 0x4
-.sym lbl_806678B0, global
+.global lbl_806678B0
+lbl_806678B0:
 	.skip 0x4
 
-.obj diCommand, local
+diCommand:
 	.skip 0x4
-.endobj diCommand
-.sym lbl_806678B8, global
+.global lbl_806678B8
+lbl_806678B8:
 	.skip 0x8

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/mix/remote.o"
 
-# 0x8034CC90 - 0x8034D1E0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn MIXRmtSetVolumes, global

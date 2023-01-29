@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/gx/GXLight.o"
 
-# 0x8031B950 - 0x8031C0C0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn GXInitLightAttn, global
@@ -567,30 +566,43 @@
 # 0x8066BFD8 - 0x8066C010
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BFD8, global
+.global lbl_8066BFD8
+lbl_8066BFD8:
 	.4byte 0x00000000
-.sym lbl_8066BFDC, global
+.global lbl_8066BFDC
+lbl_8066BFDC:
 	.4byte 0x42B40000
-.sym lbl_8066BFE0, global
+.global lbl_8066BFE0
+lbl_8066BFE0:
 	.4byte 0x40490FDB
-.sym lbl_8066BFE4, global
+.global lbl_8066BFE4
+lbl_8066BFE4:
 	.4byte 0x43340000
-.sym lbl_8066BFE8, global
+.global lbl_8066BFE8
+lbl_8066BFE8:
 	.4byte 0xC47A0000
-.sym lbl_8066BFEC, global
+.global lbl_8066BFEC
+lbl_8066BFEC:
 	.4byte 0x447A0000
-.sym lbl_8066BFF0, global
+.global lbl_8066BFF0
+lbl_8066BFF0:
 	.4byte 0x3F800000
-.sym lbl_8066BFF4, global
+.global lbl_8066BFF4
+lbl_8066BFF4:
 	.4byte 0x40000000
-.sym lbl_8066BFF8, global
+.global lbl_8066BFF8
+lbl_8066BFF8:
 	.4byte 0xC0800000
-.sym lbl_8066BFFC, global
+.global lbl_8066BFFC
+lbl_8066BFFC:
 	.4byte 0x40800000
-.sym lbl_8066C000, global
+.global lbl_8066C000
+lbl_8066C000:
 	.4byte 0xC0000000
-.sym lbl_8066C004, global
+.global lbl_8066C004
+lbl_8066C004:
 	.4byte 0x3F000000
-.sym lbl_8066C008, global
+.global lbl_8066C008
+lbl_8066C008:
 	.4byte 0xDD5E0B6B
 	.4byte 0x00000000

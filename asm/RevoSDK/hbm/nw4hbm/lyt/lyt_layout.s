@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/lyt/lyt_layout.o"
 
-# 0x8032D830 - 0x8032E4D0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # _unnamed_lyt_layout_cpp_::SetTagProcessorImpl(nw4hbm::lyt::Pane*, nw4hbm::ut::TagProcessorBase_w_*)
@@ -211,7 +210,7 @@
 /* 8032DABC 002F707C  38 7A 00 04 */	addi r3, r26, 0x4
 /* 8032DAC0 002F7080  38 81 00 08 */	addi r4, r1, 0x8
 /* 8032DAC4 002F7084  93 81 00 08 */	stw r28, 0x8(r1)
-/* 8032DAC8 002F7088  48 00 AB 09 */	bl fn_803385D0
+/* 8032DAC8 002F7088  48 00 AB 09 */	bl func_803385D0
 /* 8032DACC 002F708C  3B 9C FF FC */	addi r28, r28, -0x4
 /* 8032DAD0 002F7090  38 80 FF FF */	li r4, -0x1
 /* 8032DAD4 002F7094  81 9C 00 00 */	lwz r12, 0x0(r28)
@@ -388,7 +387,7 @@
 /* 8032DD2C 002F72EC  41 82 00 10 */	beq .L_8032DD3C
 /* 8032DD30 002F72F0  7E 83 A3 78 */	mr r3, r20
 /* 8032DD34 002F72F4  7E A4 AB 78 */	mr r4, r21
-/* 8032DD38 002F72F8  48 00 3C 69 */	bl fn_803319A0
+/* 8032DD38 002F72F8  48 00 3C 69 */	bl func_803319A0
 .L_8032DD3C:
 /* 8032DD3C 002F72FC  7E B3 AB 78 */	mr r19, r21
 /* 8032DD40 002F7300  48 00 00 D0 */	b .L_8032DE10
@@ -550,7 +549,7 @@
 /* 8032DF54 002F7514  38 78 00 04 */	addi r3, r24, 0x4
 /* 8032DF58 002F7518  38 81 00 08 */	addi r4, r1, 0x8
 /* 8032DF5C 002F751C  38 BB 00 04 */	addi r5, r27, 0x4
-/* 8032DF60 002F7520  48 00 A6 C1 */	bl fn_80338620
+/* 8032DF60 002F7520  48 00 A6 C1 */	bl func_80338620
 .L_8032DF64:
 /* 8032DF64 002F7524  80 1C 00 04 */	lwz r0, 0x4(r28)
 /* 8032DF68 002F7528  3B 5A 00 01 */	addi r26, r26, 0x1
@@ -895,7 +894,7 @@
 /* 8032E390 002F7950  41 82 01 28 */	beq .L_8032E4B8
 /* 8032E394 002F7954  7F E4 FB 78 */	mr r4, r31
 /* 8032E398 002F7958  38 A1 00 38 */	addi r5, r1, 0x38
-/* 8032E39C 002F795C  48 00 43 95 */	bl fn_80332730
+/* 8032E39C 002F795C  48 00 43 95 */	bl func_80332730
 /* 8032E3A0 002F7960  48 00 01 18 */	b .L_8032E4B8
 .L_8032E3A4:
 /* 8032E3A4 002F7964  38 60 00 00 */	li r3, 0x0
@@ -986,15 +985,18 @@
 # 0x80518A60 - 0x80518A68
 .rodata
 .balign 8
-.sym lbl_80518A60, global
+.global lbl_80518A60
+lbl_80518A60:
 	.4byte 0x00000000
-.sym lbl_80518A64, global
+.global lbl_80518A64
+lbl_80518A64:
 	.4byte 0x3F000000
 
 # 0x8054D7F8 - 0x8054D848
 .data
 .balign 8
-.sym lbl_8054D7F8, global
+.global lbl_8054D7F8
+lbl_8054D7F8:
 	.4byte lbl_8054D840
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt6LayoutFv
@@ -1008,12 +1010,14 @@
 	.4byte Draw__Q36nw4hbm3lyt6LayoutFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte Animate__Q36nw4hbm3lyt6LayoutFUl
 	.4byte SetTagProcessor__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm2ut19TagProcessorBase_w_
-.sym lbl_8054D82C, global
+.global lbl_8054D82C
+lbl_8054D82C:
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
 	.4byte 0x3A4C6179
 	.4byte 0x6F757400
-.sym lbl_8054D840, global
+.global lbl_8054D840
+lbl_8054D840:
 	.4byte lbl_8054D82C
 	.4byte 0x00000000

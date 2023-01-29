@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/gx/GXFrameBuf.o"
 
-# 0x8031AD70 - 0x8031B950
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn GXAdjustForOverscan, global
@@ -856,9 +855,11 @@
 # 0x8066BFC8 - 0x8066BFD8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BFC8, global
+.global lbl_8066BFC8
+lbl_8066BFC8:
 	.4byte 0x43800000
 	.4byte 0x00000000
-.sym lbl_8066BFD0, global
+.global lbl_8066BFD0
+lbl_8066BFD0:
 	.4byte 0x43300000
 	.4byte 0x00000000

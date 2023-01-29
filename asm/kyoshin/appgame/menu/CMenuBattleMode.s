@@ -1,40 +1,7 @@
 .include "macros.inc"
-.file "kyoshin/appgame/menu/CMenuBattleMode.o"
 
-# 0x8000F600 - 0x8000F634
-.section extab, "a"
-.balign 4
+.section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.obj "@etb_8000F600", local
-.hidden "@etb_8000F600"
-	.4byte 0x20080000
-	.4byte 0x000000CC
-	.4byte 0x00000010
-	.4byte 0x00000000
-	.4byte 0x0680001E
-	.4byte 0x0000005C
-	.4byte fn_8004031C
-	.4byte 0x0680001E
-	.4byte 0x00000058
-	.4byte __dt__IWorkEvent
-	.4byte 0x8680001E
-	.4byte 0x00000000
-	.4byte fn_800FED0C
-.endobj "@etb_8000F600"
-
-# 0x8002A4AC - 0x8002A4B8
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_8002A4AC", local
-.hidden "@eti_8002A4AC"
-	.4byte __ct__CMenuBattleMode
-	.4byte 0x00000118
-	.4byte "@etb_8000F600"
-.endobj "@eti_8002A4AC"
-
-# 0x801A0374 - 0x801A04A4
-.text
 .balign 4
 
 .fn __ct__CMenuBattleMode, global
@@ -53,7 +20,7 @@
 /* 801A03A4 00169964  38 60 00 00 */	li r3, 0x0
 /* 801A03A8 00169968  48 00 00 C4 */	b .L_801A046C
 .L_801A03AC:
-/* 801A03AC 0016996C  48 29 72 09 */	bl fn_804375B4
+/* 801A03AC 0016996C  48 29 72 09 */	bl func_804375B4
 /* 801A03B0 00169970  7C 64 1B 78 */	mr r4, r3
 /* 801A03B4 00169974  38 60 00 84 */	li r3, 0x84
 /* 801A03B8 00169978  48 29 46 A5 */	bl mm_malloc
@@ -89,7 +56,7 @@
 /* 801A0430 001699F0  90 BE 00 10 */	stw r5, 0x10(r30)
 /* 801A0434 001699F4  90 9E 00 58 */	stw r4, 0x58(r30)
 /* 801A0438 001699F8  90 1E 00 5C */	stw r0, 0x5c(r30)
-/* 801A043C 001699FC  48 2B F1 29 */	bl fn_8045F564
+/* 801A043C 001699FC  48 2B F1 29 */	bl func_8045F564
 /* 801A0440 00169A00  93 BE 00 70 */	stw r29, 0x70(r30)
 /* 801A0444 00169A04  93 FE 00 74 */	stw r31, 0x74(r30)
 /* 801A0448 00169A08  93 FE 00 78 */	stw r31, 0x78(r30)
@@ -100,7 +67,7 @@
 /* 801A0458 00169A18  7F C3 F3 78 */	mr r3, r30
 /* 801A045C 00169A1C  7F 84 E3 78 */	mr r4, r28
 /* 801A0460 00169A20  38 A0 00 00 */	li r5, 0x0
-/* 801A0464 00169A24  48 2A 48 11 */	bl fn_80444C74
+/* 801A0464 00169A24  48 2A 48 11 */	bl func_80444C74
 /* 801A0468 00169A28  80 6D AA 88 */	lwz r3, lbl_80666C08@sda21(r13)
 .L_801A046C:
 /* 801A046C 00169A2C  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -113,31 +80,33 @@
 /* 801A0488 00169A48  4E 80 00 20 */	blr
 .endfn __ct__CMenuBattleMode
 
-.fn fn_801A048C, global
+.fn func_801A048C, global
 /* 801A048C 00169A4C  38 63 FF A8 */	addi r3, r3, -0x58
-/* 801A0490 00169A50  4B FF F9 C0 */	b fn_8019FE50
-.endfn fn_801A048C
+/* 801A0490 00169A50  4B FF F9 C0 */	b func_8019FE50
+.endfn func_801A048C
 
-.fn fn_801A0494, global
+.fn func_801A0494, global
 /* 801A0494 00169A54  38 63 FF A4 */	addi r3, r3, -0x5c
-/* 801A0498 00169A58  4B FF FE 28 */	b fn_801A02C0
-.endfn fn_801A0494
+/* 801A0498 00169A58  4B FF FE 28 */	b func_801A02C0
+.endfn func_801A0494
 
-.fn fn_801A049C, global
+.fn func_801A049C, global
 /* 801A049C 00169A5C  38 63 FF A4 */	addi r3, r3, -0x5c
-/* 801A04A0 00169A60  4B FF F9 B0 */	b fn_8019FE50
-.endfn fn_801A049C
+/* 801A04A0 00169A60  4B FF F9 B0 */	b func_8019FE50
+.endfn func_801A049C
 
 # 0x804FF598 - 0x804FF610
 .rodata
 .balign 8
 
-.obj CMenuBattleMode_typestr, global
+.global CMenuBattleMode_typestr
+CMenuBattleMode_typestr:
 	.4byte 0x434D656E
 	.4byte 0x75426174
 	.4byte 0x746C654D
 	.4byte 0x6F646500
-.sym lbl_804FF5A8, global
+.global lbl_804FF5A8
+lbl_804FF5A8:
 	.4byte 0x434D656E
 	.4byte 0x75426174
 	.4byte 0x746C654D
@@ -169,57 +138,59 @@
 .data
 .balign 8
 
-.obj __vt__CMenuBattleMode, global
+.global __vt__CMenuBattleMode
+__vt__CMenuBattleMode:
 	.4byte __RTTI__CMenuBattleMode
 	.4byte 0x00000000
-	.4byte fn_8019FE50
+	.4byte func_8019FE50
 	.4byte CChildListNode_Reset
-	.4byte fn_8019FEC4
-	.4byte fn_8019FFF8
-	.4byte fn_801A0078
-	.4byte fn_80101FB8
-	.4byte fn_80043F20
+	.4byte func_8019FEC4
+	.4byte func_8019FFF8
+	.4byte func_801A0078
+	.4byte func_80101FB8
+	.4byte func_80043F20
 	.4byte __RTTI__CMenuBattleMode
 	.4byte 0xFFFFFFA8
-	.4byte fn_801A048C
-	.4byte fn_80039E28
-	.4byte fn_80039E20
-	.4byte fn_80039E18
-	.4byte fn_80039E10
-	.4byte fn_80039E0C
-	.4byte fn_80039E04
-	.4byte fn_80039DFC
-	.4byte fn_80039DF4
-	.4byte fn_80039DEC
-	.4byte fn_80039DE4
-	.4byte fn_80039DDC
-	.4byte fn_80039DD4
-	.4byte fn_80039DCC
-	.4byte fn_80039DC4
-	.4byte fn_80039DBC
-	.4byte fn_80039DB4
-	.4byte fn_80039DAC
-	.4byte fn_80039DA4
-	.4byte fn_80039D9C
-	.4byte fn_80039D94
-	.4byte fn_80039D8C
-	.4byte fn_80039D84
-	.4byte fn_80039D7C
-	.4byte fn_80039D74
-	.4byte fn_80039D6C
-	.4byte fn_80039D64
-	.4byte fn_80039D5C
-	.4byte fn_80039D54
-	.4byte fn_80039D4C
-	.4byte fn_80039D44
-	.4byte fn_80039D40
+	.4byte func_801A048C
+	.4byte func_80039E28
+	.4byte func_80039E20
+	.4byte func_80039E18
+	.4byte func_80039E10
+	.4byte func_80039E0C
+	.4byte func_80039E04
+	.4byte func_80039DFC
+	.4byte func_80039DF4
+	.4byte func_80039DEC
+	.4byte func_80039DE4
+	.4byte func_80039DDC
+	.4byte func_80039DD4
+	.4byte func_80039DCC
+	.4byte func_80039DC4
+	.4byte func_80039DBC
+	.4byte func_80039DB4
+	.4byte func_80039DAC
+	.4byte func_80039DA4
+	.4byte func_80039D9C
+	.4byte func_80039D94
+	.4byte func_80039D8C
+	.4byte func_80039D84
+	.4byte func_80039D7C
+	.4byte func_80039D74
+	.4byte func_80039D6C
+	.4byte func_80039D64
+	.4byte func_80039D5C
+	.4byte func_80039D54
+	.4byte func_80039D4C
+	.4byte func_80039D44
+	.4byte func_80039D40
 	.4byte __RTTI__CMenuBattleMode
 	.4byte 0xFFFFFFA4
-	.4byte fn_801A049C
-	.4byte fn_801A0494
-	.4byte fn_801A02C0
+	.4byte func_801A049C
+	.4byte func_801A0494
+	.4byte func_801A02C0
 
-.obj CMenuBattleMode_hierarchy, global
+.global CMenuBattleMode_hierarchy
+CMenuBattleMode_hierarchy:
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -241,12 +212,46 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj __RTTI__CMenuBattleMode, global
+.global __RTTI__CMenuBattleMode
+__RTTI__CMenuBattleMode:
 	.4byte CMenuBattleMode_typestr
 	.4byte CMenuBattleMode_hierarchy
 
 # 0x80666C08 - 0x80666C10
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80666C08, global
+.global lbl_80666C08
+lbl_80666C08:
 	.skip 0x8
+
+# 0x8000F600 - 0x8000F634
+.section extab, "a"
+.balign 4
+
+.obj "@etb_8000F600", local
+.hidden "@etb_8000F600"
+	.4byte 0x20080000
+	.4byte 0x000000CC
+	.4byte 0x00000010
+	.4byte 0x00000000
+	.4byte 0x0680001E
+	.4byte 0x0000005C
+	.4byte func_8004031C
+	.4byte 0x0680001E
+	.4byte 0x00000058
+	.4byte __dt__IWorkEvent
+	.4byte 0x8680001E
+	.4byte 0x00000000
+	.4byte func_800FED0C
+.endobj "@etb_8000F600"
+
+# 0x8002A4AC - 0x8002A4B8
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_8002A4AC", local
+.hidden "@eti_8002A4AC"
+	.4byte __ct__CMenuBattleMode
+	.4byte 0x00000118
+	.4byte "@etb_8000F600"
+.endobj "@eti_8002A4AC"

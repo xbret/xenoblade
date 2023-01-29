@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/mtx/quat.o"
 
-# 0x8034E2C0 - 0x8034E730
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn PSQUATMultiply, global
@@ -318,7 +317,8 @@
 # 0x80518BB8 - 0x80518BC8
 .rodata
 .balign 8
-.sym lbl_80518BB8, global
+.global lbl_80518BB8
+lbl_80518BB8:
 	.4byte 0x00000001
 	.4byte 0x00000002
 	.4byte 0x00000000
@@ -327,15 +327,21 @@
 # 0x8066C170 - 0x8066C188
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C170, global
+.global lbl_8066C170
+lbl_8066C170:
 	.4byte 0x3727C5AC
-.sym lbl_8066C174, global
+.global lbl_8066C174
+lbl_8066C174:
 	.4byte 0x3F800000
-.sym lbl_8066C178, global
+.global lbl_8066C178
+lbl_8066C178:
 	.4byte 0x00000000
-.sym lbl_8066C17C, global
+.global lbl_8066C17C
+lbl_8066C17C:
 	.4byte 0x3F000000
-.sym lbl_8066C180, global
+.global lbl_8066C180
+lbl_8066C180:
 	.4byte 0x40400000
-.sym lbl_8066C184, global
+.global lbl_8066C184
+lbl_8066C184:
 	.4byte 0x3F7FFF58

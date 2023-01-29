@@ -1,32 +1,10 @@
 .include "macros.inc"
-.file "monolithlib/nand/CNReqtaskReaddir.o"
 
-# 0x80020778 - 0x80020780
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_80020778", local
-.hidden "@etb_80020778"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_80020778"
-
-# 0x80038780 - 0x8003878C
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80038780", local
-.hidden "@eti_80038780"
-	.4byte fn_804DB114
-	.4byte 0x00000114
-	.4byte "@etb_80020778"
-.endobj "@eti_80038780"
-
-# 0x804DB0F0 - 0x804DB240
-.text
-.balign 4
-
-.fn fn_804DB0F0, global
+.fn func_804DB0F0, global
 /* 804DB0F0 004A46B0  90 83 00 00 */	stw r4, 0x0(r3)
 /* 804DB0F4 004A46B4  38 00 00 00 */	li r0, 0x0
 /* 804DB0F8 004A46B8  90 A3 00 04 */	stw r5, 0x4(r3)
@@ -36,9 +14,9 @@
 /* 804DB108 004A46C8  98 04 00 00 */	stb r0, 0x0(r4)
 /* 804DB10C 004A46CC  90 06 00 00 */	stw r0, 0x0(r6)
 /* 804DB110 004A46D0  4E 80 00 20 */	blr
-.endfn fn_804DB0F0
+.endfn func_804DB0F0
 
-.fn fn_804DB114, global
+.fn func_804DB114, global
 /* 804DB114 004A46D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB118 004A46D8  7C 08 02 A6 */	mflr r0
 /* 804DB11C 004A46DC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -83,7 +61,7 @@
 .L_804DB1AC:
 /* 804DB1AC 004A476C  80 84 00 08 */	lwz r4, 0x8(r4)
 /* 804DB1B0 004A4770  38 60 00 00 */	li r3, 0x0
-/* 804DB1B4 004A4774  4B FF F6 E5 */	bl fn_804DA898
+/* 804DB1B4 004A4774  4B FF F6 E5 */	bl func_804DA898
 /* 804DB1B8 004A4778  2C 03 00 00 */	cmpwi r3, 0x0
 /* 804DB1BC 004A477C  41 82 00 0C */	beq .L_804DB1C8
 /* 804DB1C0 004A4780  38 60 00 02 */	li r3, 0x2
@@ -95,7 +73,7 @@
 .L_804DB1D4:
 /* 804DB1D4 004A4794  80 64 00 00 */	lwz r3, 0x0(r4)
 /* 804DB1D8 004A4798  80 84 00 08 */	lwz r4, 0x8(r4)
-/* 804DB1DC 004A479C  4B FF F6 BD */	bl fn_804DA898
+/* 804DB1DC 004A479C  4B FF F6 BD */	bl func_804DA898
 /* 804DB1E0 004A47A0  2C 03 00 00 */	cmpwi r3, 0x0
 /* 804DB1E4 004A47A4  41 82 00 0C */	beq .L_804DB1F0
 /* 804DB1E8 004A47A8  38 60 00 02 */	li r3, 0x2
@@ -119,7 +97,7 @@
 /* 804DB21C 004A47DC  7C 08 03 A6 */	mtlr r0
 /* 804DB220 004A47E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB224 004A47E4  4E 80 00 20 */	blr
-.endfn fn_804DB114
+.endfn func_804DB114
 
 .fn sinit_804DB228, global
 /* 804DB228 004A47E8  38 6D C1 48 */	addi r3, r13, lbl_806682C8@sda21
@@ -140,7 +118,8 @@
 .rodata
 .balign 8
 
-.obj CNReqtaskReaddir_typestr, global
+.global CNReqtaskReaddir_typestr
+CNReqtaskReaddir_typestr:
 	.4byte 0x434E5265
 	.4byte 0x71746173
 	.4byte 0x6B526561
@@ -152,13 +131,15 @@
 .data
 .balign 8
 
-.obj __vt__CNReqtaskReaddir, global
+.global __vt__CNReqtaskReaddir
+__vt__CNReqtaskReaddir:
 	.4byte __RTTI__CNReqtaskReaddir
 	.4byte 0x00000000
-	.4byte fn_804DB114
-	.4byte fn_804DA4CC
+	.4byte func_804DB114
+	.4byte func_804DA4CC
 
-.obj CNReqtaskReaddir_hierarchy, global
+.global CNReqtaskReaddir_hierarchy
+CNReqtaskReaddir_hierarchy:
 	.4byte __RTTI__CNReqtask
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -168,12 +149,35 @@
 .section .sdata, "wa"
 .balign 8
 
-.obj __RTTI__CNReqtaskReaddir, global
+.global __RTTI__CNReqtaskReaddir
+__RTTI__CNReqtaskReaddir:
 	.4byte CNReqtaskReaddir_typestr
 	.4byte CNReqtaskReaddir_hierarchy
 
 # 0x806682C8 - 0x806682D0
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_806682C8, global
+.global lbl_806682C8
+lbl_806682C8:
 	.skip 0x8
+
+# 0x80020778 - 0x80020780
+.section extab, "a"
+.balign 4
+
+.obj "@etb_80020778", local
+.hidden "@etb_80020778"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_80020778"
+
+# 0x80038780 - 0x8003878C
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80038780", local
+.hidden "@eti_80038780"
+	.4byte func_804DB114
+	.4byte 0x00000114
+	.4byte "@etb_80020778"
+.endobj "@eti_80038780"

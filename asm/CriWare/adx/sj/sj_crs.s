@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/sj/sj_crs.o"
 
-# 0x803968CC - 0x80396998
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SJCRS_Init, global
@@ -73,11 +72,14 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj sjcrs_lvl, global
+.global sjcrs_lvl
+sjcrs_lvl:
 	.skip 0x4
 
-.obj sjcrs_msk, global
+.global sjcrs_msk
+sjcrs_msk:
 	.skip 0x4
 
-.obj sj_init_count, global
+.global sj_init_count
+sj_init_count:
 	.skip 0x8

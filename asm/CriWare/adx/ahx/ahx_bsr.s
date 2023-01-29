@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/ahx/ahx_bsr.o"
 
-# 0x8038D300 - 0x8038D9C8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn AHXBSR_Create, global
@@ -501,7 +500,8 @@
 # 0x8051AC10 - 0x8051AC98
 .rodata
 .balign 8
-.sym lbl_8051AC10, global
+.global lbl_8051AC10
+lbl_8051AC10:
 	.4byte 0x00000000
 	.4byte 0x00000001
 	.4byte 0x00000003

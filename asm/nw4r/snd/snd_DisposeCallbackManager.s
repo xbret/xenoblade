@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_DisposeCallbackManager.o"
 
-# 0x80415034 - 0x804153C4
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::DisposeCallbackManager::GetInstance()
@@ -271,13 +270,16 @@
 # 0x8063B1D0 - 0x8063B1E8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8063B1D0, global
+.global lbl_8063B1D0
+lbl_8063B1D0:
 	.skip 0xC
-.sym lbl_8063B1DC, global
+.global lbl_8063B1DC
+lbl_8063B1DC:
 	.skip 0xC
 
 # 0x80667DC0 - 0x80667DC8
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667DC0, global
+.global lbl_80667DC0
+lbl_80667DC0:
 	.skip 0x8

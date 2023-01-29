@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/res/g3d_resanmtexsrt.o"
 
-# 0x803DE1DC - 0x803DE5F0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ResAnmTexSrt::GetAnmResult(nw4r::g3d::TexSrtAnmResult*, unsigned long, float) const
@@ -318,7 +317,9 @@
 # 0x8066C2D8 - 0x8066C2E0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C2D8, global
+.global lbl_8066C2D8
+lbl_8066C2D8:
 	.4byte 0x3F800000
-.sym lbl_8066C2DC, global
+.global lbl_8066C2DC
+lbl_8066C2DC:
 	.4byte 0x00000000

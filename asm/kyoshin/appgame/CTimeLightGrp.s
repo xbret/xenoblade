@@ -1,118 +1,10 @@
 .include "macros.inc"
-.file "kyoshin/appgame/CTimeLightGrp.o"
 
-# 0x80007794 - 0x800077EC
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_80007794", local
-.hidden "@etb_80007794"
-	.4byte 0x100A0000
-	.4byte 0x00000080
-	.4byte 0x00030010
-	.4byte 0x00000000
-	.4byte 0x0780001E
-	.4byte 0x00000008
-	.4byte fn_8005A130
-	.4byte 0x8680001E
-	.4byte 0x00000000
-	.4byte fn_8005A03C
-.endobj "@etb_80007794"
-
-.obj "@etb_800077BC", local
-.hidden "@etb_800077BC"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_800077BC"
-
-.obj "@etb_800077C4", local
-.hidden "@etb_800077C4"
-	.4byte 0x10080000
-	.4byte 0x00000000
-.endobj "@etb_800077C4"
-
-.obj "@etb_800077CC", local
-.hidden "@etb_800077CC"
-	.4byte 0x10080000
-	.4byte 0x00000000
-.endobj "@etb_800077CC"
-
-.obj "@etb_800077D4", local
-.hidden "@etb_800077D4"
-	.4byte 0x18080000
-	.4byte 0x00000000
-.endobj "@etb_800077D4"
-
-.obj "@etb_800077DC", local
-.hidden "@etb_800077DC"
-	.4byte 0x08180000
-	.4byte 0x00000000
-.endobj "@etb_800077DC"
-
-.obj "@etb_800077E4", local
-.hidden "@etb_800077E4"
-	.4byte 0x000A0000
-	.4byte 0x00000000
-.endobj "@etb_800077E4"
-
-# 0x8002279C - 0x800227F0
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_8002279C", local
-.hidden "@eti_8002279C"
-	.4byte fn_80059EB8
-	.4byte 0x00000184
-	.4byte "@etb_80007794"
-.endobj "@eti_8002279C"
-
-.obj "@eti_800227A8", local
-.hidden "@eti_800227A8"
-	.4byte fn_8005A03C
-	.4byte 0x00000040
-	.4byte "@etb_800077BC"
-.endobj "@eti_800227A8"
-
-.obj "@eti_800227B4", local
-.hidden "@eti_800227B4"
-	.4byte fn_8005A07C
-	.4byte 0x000000B4
-	.4byte "@etb_800077C4"
-.endobj "@eti_800227B4"
-
-.obj "@eti_800227C0", local
-.hidden "@eti_800227C0"
-	.4byte fn_8005A130
-	.4byte 0x000000B8
-	.4byte "@etb_800077CC"
-.endobj "@eti_800227C0"
-
-.obj "@eti_800227CC", local
-.hidden "@eti_800227CC"
-	.4byte fn_8005A1E8
-	.4byte 0x00000108
-	.4byte "@etb_800077D4"
-.endobj "@eti_800227CC"
-
-.obj "@eti_800227D8", local
-.hidden "@eti_800227D8"
-	.4byte fn_8005A2F0
-	.4byte 0x00000084
-	.4byte "@etb_800077DC"
-.endobj "@eti_800227D8"
-
-.obj "@eti_800227E4", local
-.hidden "@eti_800227E4"
-	.4byte fn_8005A374
-	.4byte 0x00000088
-	.4byte "@etb_800077E4"
-.endobj "@eti_800227E4"
-
-# 0x80059EB8 - 0x8005A3FC
-.text
-.balign 4
-
-.fn fn_80059EB8, global
+.fn func_80059EB8, global
 /* 80059EB8 00023478  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80059EBC 0002347C  7C 08 02 A6 */	mflr r0
 /* 80059EC0 00023480  3C A0 80 53 */	lis r5, __vt__CTimeLightGrp@ha
@@ -144,10 +36,10 @@
 /* 80059F28 000234E8  D0 03 00 34 */	stfs f0, 0x34(r3)
 /* 80059F2C 000234EC  D0 03 00 38 */	stfs f0, 0x38(r3)
 /* 80059F30 000234F0  7C 83 23 78 */	mr r3, r4
-/* 80059F34 000234F4  48 43 C0 D1 */	bl fn_80496004
+/* 80059F34 000234F4  48 43 C0 D1 */	bl func_80496004
 /* 80059F38 000234F8  7C 64 1B 78 */	mr r4, r3
 /* 80059F3C 000234FC  38 60 01 80 */	li r3, 0x180
-/* 80059F40 00023500  48 3D AB 41 */	bl fn_80434A80
+/* 80059F40 00023500  48 3D AB 41 */	bl func_80434A80
 /* 80059F44 00023504  38 00 00 02 */	li r0, 0x2
 /* 80059F48 00023508  90 7E 00 1C */	stw r3, 0x1c(r30)
 /* 80059F4C 0002350C  38 80 00 00 */	li r4, 0x0
@@ -211,9 +103,9 @@
 /* 8005A030 000235F0  7C 08 03 A6 */	mtlr r0
 /* 8005A034 000235F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8005A038 000235F8  4E 80 00 20 */	blr
-.endfn fn_80059EB8
+.endfn func_80059EB8
 
-.fn fn_8005A03C, global
+.fn func_8005A03C, global
 /* 8005A03C 000235FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005A040 00023600  7C 08 02 A6 */	mflr r0
 /* 8005A044 00023604  2C 03 00 00 */	cmpwi r3, 0x0
@@ -231,9 +123,9 @@
 /* 8005A070 00023630  7C 08 03 A6 */	mtlr r0
 /* 8005A074 00023634  38 21 00 10 */	addi r1, r1, 0x10
 /* 8005A078 00023638  4E 80 00 20 */	blr
-.endfn fn_8005A03C
+.endfn func_8005A03C
 
-.fn fn_8005A07C, global
+.fn func_8005A07C, global
 /* 8005A07C 0002363C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005A080 00023640  7C 08 02 A6 */	mflr r0
 /* 8005A084 00023644  2C 03 00 00 */	cmpwi r3, 0x0
@@ -283,9 +175,9 @@
 /* 8005A124 000236E4  7C 08 03 A6 */	mtlr r0
 /* 8005A128 000236E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8005A12C 000236EC  4E 80 00 20 */	blr
-.endfn fn_8005A07C
+.endfn func_8005A07C
 
-.fn fn_8005A130, global
+.fn func_8005A130, global
 /* 8005A130 000236F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005A134 000236F4  7C 08 02 A6 */	mflr r0
 /* 8005A138 000236F8  2C 03 00 00 */	cmpwi r3, 0x0
@@ -336,9 +228,9 @@
 /* 8005A1DC 0002379C  7C 08 03 A6 */	mtlr r0
 /* 8005A1E0 000237A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8005A1E4 000237A4  4E 80 00 20 */	blr
-.endfn fn_8005A130
+.endfn func_8005A130
 
-.fn fn_8005A1E8, global
+.fn func_8005A1E8, global
 /* 8005A1E8 000237A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8005A1EC 000237AC  7C 08 02 A6 */	mflr r0
 /* 8005A1F0 000237B0  2C 03 00 00 */	cmpwi r3, 0x0
@@ -411,9 +303,9 @@
 /* 8005A2E4 000238A4  7C 08 03 A6 */	mtlr r0
 /* 8005A2E8 000238A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8005A2EC 000238AC  4E 80 00 20 */	blr
-.endfn fn_8005A1E8
+.endfn func_8005A1E8
 
-.fn fn_8005A2F0, global
+.fn func_8005A2F0, global
 /* 8005A2F0 000238B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8005A2F4 000238B4  38 C0 00 00 */	li r6, 0x0
 /* 8005A2F8 000238B8  38 E0 00 00 */	li r7, 0x0
@@ -451,9 +343,9 @@
 /* 8005A368 00023928  83 FF 00 2C */	lwz r31, 0x2c(r31)
 /* 8005A36C 0002392C  80 21 00 00 */	lwz r1, 0x0(r1)
 /* 8005A370 00023930  4E 80 00 20 */	blr
-.endfn fn_8005A2F0
+.endfn func_8005A2F0
 
-.fn fn_8005A374, global
+.fn func_8005A374, global
 /* 8005A374 00023934  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8005A378 00023938  C0 63 00 38 */	lfs f3, 0x38(r3)
 /* 8005A37C 0002393C  C0 43 00 30 */	lfs f2, 0x30(r3)
@@ -491,25 +383,28 @@
 /* 8005A3F0 000239B0  40 82 FF D4 */	bne .L_8005A3C4
 /* 8005A3F4 000239B4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8005A3F8 000239B8  4E 80 00 20 */	blr
-.endfn fn_8005A374
+.endfn func_8005A374
 
 # 0x804F6908 - 0x804F6968
 .rodata
 .balign 8
 
-.obj CTimeLightGrp_typestr, global
+.global CTimeLightGrp_typestr
+CTimeLightGrp_typestr:
 	.4byte 0x4354696D
 	.4byte 0x654C6967
 	.4byte 0x68744772
 	.4byte 0x70000000
 
-.obj CTimeLightObj_typestr, global
+.global CTimeLightObj_typestr
+CTimeLightObj_typestr:
 	.4byte 0x4354696D
 	.4byte 0x654C6967
 	.4byte 0x68744F62
 	.4byte 0x6A000000
 
-.obj reslist_CVirtualLightObj_typestr, global
+.global reslist_CVirtualLightObj_typestr
+reslist_CVirtualLightObj_typestr:
 	.4byte 0x7265736C
 	.4byte 0x6973743C
 	.4byte 0x43566972
@@ -518,7 +413,8 @@
 	.4byte 0x744F626A
 	.4byte 0x202A3E00
 
-.obj _reslist_base_CVirtualLightObj_typestr, global
+.global _reslist_base_CVirtualLightObj_typestr
+_reslist_base_CVirtualLightObj_typestr:
 	.4byte 0x5F726573
 	.4byte 0x6C697374
 	.4byte 0x5F626173
@@ -533,55 +429,172 @@
 .data
 .balign 8
 
-.obj __vt__CTimeLightGrp, global
+.global __vt__CTimeLightGrp
+__vt__CTimeLightGrp:
 	.4byte __RTTI__CTimeLightGrp
 	.4byte 0x00000000
-	.4byte fn_8005A1E8
+	.4byte func_8005A1E8
 
-.obj CTimeLightGrp_hierarchy, global
+.global CTimeLightGrp_hierarchy
+CTimeLightGrp_hierarchy:
 	.4byte __RTTI__CTimeLightObj
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-.obj __vt__reslist_CVirtualLightObj, global
+.global __vt__reslist_CVirtualLightObj
+__vt__reslist_CVirtualLightObj:
 	.4byte __RTTI__reslist_CVirtualLightObj
 	.4byte 0x00000000
-	.4byte fn_8005A130
+	.4byte func_8005A130
 
-.obj reslist_CVirtualLightObj_hierarchy, global
+.global reslist_CVirtualLightObj_hierarchy
+reslist_CVirtualLightObj_hierarchy:
 	.4byte __RTTI___reslist_base_CVirtualLightObj
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-.obj __vt___reslist_base_CVirtualLightObj, global
+.global __vt___reslist_base_CVirtualLightObj
+__vt___reslist_base_CVirtualLightObj:
 	.4byte __RTTI___reslist_base_CVirtualLightObj
 	.4byte 0x00000000
-	.4byte fn_8005A07C
+	.4byte func_8005A07C
 	.4byte 0x00000000
 
 # 0x806642D8 - 0x806642F8
 .section .sdata, "wa"
 .balign 8
 
-.obj __RTTI__CTimeLightGrp, global
+.global __RTTI__CTimeLightGrp
+__RTTI__CTimeLightGrp:
 	.4byte CTimeLightGrp_typestr
 	.4byte CTimeLightGrp_hierarchy
 
-.obj __RTTI__CTimeLightObj, global
+.global __RTTI__CTimeLightObj
+__RTTI__CTimeLightObj:
 	.4byte CTimeLightObj_typestr
 	.4byte 0x00000000
 
-.obj __RTTI__reslist_CVirtualLightObj, global
+.global __RTTI__reslist_CVirtualLightObj
+__RTTI__reslist_CVirtualLightObj:
 	.4byte reslist_CVirtualLightObj_typestr
 	.4byte reslist_CVirtualLightObj_hierarchy
 
-.obj __RTTI___reslist_base_CVirtualLightObj, global
+.global __RTTI___reslist_base_CVirtualLightObj
+__RTTI___reslist_base_CVirtualLightObj:
 	.4byte _reslist_base_CVirtualLightObj_typestr
 	.4byte 0x00000000
 
 # 0x806688C8 - 0x806688D0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_806688C8, global
+.global lbl_806688C8
+lbl_806688C8:
 	.4byte 0x3F800000
 	.4byte 0x00000000
+
+# 0x80007794 - 0x800077EC
+.section extab, "a"
+.balign 4
+
+.obj "@etb_80007794", local
+.hidden "@etb_80007794"
+	.4byte 0x100A0000
+	.4byte 0x00000080
+	.4byte 0x00030010
+	.4byte 0x00000000
+	.4byte 0x0780001E
+	.4byte 0x00000008
+	.4byte func_8005A130
+	.4byte 0x8680001E
+	.4byte 0x00000000
+	.4byte func_8005A03C
+.endobj "@etb_80007794"
+
+.obj "@etb_800077BC", local
+.hidden "@etb_800077BC"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_800077BC"
+
+.obj "@etb_800077C4", local
+.hidden "@etb_800077C4"
+	.4byte 0x10080000
+	.4byte 0x00000000
+.endobj "@etb_800077C4"
+
+.obj "@etb_800077CC", local
+.hidden "@etb_800077CC"
+	.4byte 0x10080000
+	.4byte 0x00000000
+.endobj "@etb_800077CC"
+
+.obj "@etb_800077D4", local
+.hidden "@etb_800077D4"
+	.4byte 0x18080000
+	.4byte 0x00000000
+.endobj "@etb_800077D4"
+
+.obj "@etb_800077DC", local
+.hidden "@etb_800077DC"
+	.4byte 0x08180000
+	.4byte 0x00000000
+.endobj "@etb_800077DC"
+
+.obj "@etb_800077E4", local
+.hidden "@etb_800077E4"
+	.4byte 0x000A0000
+	.4byte 0x00000000
+.endobj "@etb_800077E4"
+
+# 0x8002279C - 0x800227F0
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_8002279C", local
+.hidden "@eti_8002279C"
+	.4byte func_80059EB8
+	.4byte 0x00000184
+	.4byte "@etb_80007794"
+.endobj "@eti_8002279C"
+
+.obj "@eti_800227A8", local
+.hidden "@eti_800227A8"
+	.4byte func_8005A03C
+	.4byte 0x00000040
+	.4byte "@etb_800077BC"
+.endobj "@eti_800227A8"
+
+.obj "@eti_800227B4", local
+.hidden "@eti_800227B4"
+	.4byte func_8005A07C
+	.4byte 0x000000B4
+	.4byte "@etb_800077C4"
+.endobj "@eti_800227B4"
+
+.obj "@eti_800227C0", local
+.hidden "@eti_800227C0"
+	.4byte func_8005A130
+	.4byte 0x000000B8
+	.4byte "@etb_800077CC"
+.endobj "@eti_800227C0"
+
+.obj "@eti_800227CC", local
+.hidden "@eti_800227CC"
+	.4byte func_8005A1E8
+	.4byte 0x00000108
+	.4byte "@etb_800077D4"
+.endobj "@eti_800227CC"
+
+.obj "@eti_800227D8", local
+.hidden "@eti_800227D8"
+	.4byte func_8005A2F0
+	.4byte 0x00000084
+	.4byte "@etb_800077DC"
+.endobj "@eti_800227D8"
+
+.obj "@eti_800227E4", local
+.hidden "@eti_800227E4"
+	.4byte func_8005A374
+	.4byte 0x00000088
+	.4byte "@etb_800077E4"
+.endobj "@eti_800227E4"

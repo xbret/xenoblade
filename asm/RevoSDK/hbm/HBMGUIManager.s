@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/HBMGUIManager.o"
 
-# 0x8031F560 - 0x80320D80
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn drawLine___Q210homebutton3guiFfffffUcR8_GXColor, global
@@ -1481,7 +1480,7 @@
 /* 80320890 002E9E50  80 9E 00 2C */	lwz r4, 0x2c(r30)
 /* 80320894 002E9E54  7F E5 FB 78 */	mr r5, r31
 /* 80320898 002E9E58  38 61 00 18 */	addi r3, r1, 0x18
-/* 8032089C 002E9E5C  48 01 11 55 */	bl fn_803319F0
+/* 8032089C 002E9E5C  48 01 11 55 */	bl func_803319F0
 /* 803208A0 002E9E60  C0 01 00 18 */	lfs f0, 0x18(r1)
 /* 803208A4 002E9E64  C0 21 00 28 */	lfs f1, 0x28(r1)
 /* 803208A8 002E9E68  FC 00 08 40 */	fcmpo cr0, f0, f1
@@ -1888,7 +1887,8 @@
 # 0x80518670 - 0x80518680
 .rodata
 .balign 8
-.sym lbl_80518670, global
+.global lbl_80518670
+lbl_80518670:
 	.4byte 0x00000000
 	.4byte 0xFF0000FF
 	.4byte 0x3F000000
@@ -1898,7 +1898,8 @@
 .data
 .balign 8
 
-.obj __vt__homebutton_gui_PaneComponent, global
+.global __vt__homebutton_gui_PaneComponent
+__vt__homebutton_gui_PaneComponent:
 	.4byte __RTTI__homebutton_gui_PaneComponent
 	.4byte 0x00000000
 	.4byte create__Q310homebutton3gui9InterfaceFv
@@ -1926,7 +1927,8 @@
 	.4byte setPane__Q310homebutton3gui13PaneComponentFPQ36nw4hbm3lyt4Pane
 	.4byte getPane__Q310homebutton3gui13PaneComponentFv
 
-.obj homebutton_gui_PaneComponent_typestr, global
+.global homebutton_gui_PaneComponent_typestr
+homebutton_gui_PaneComponent_typestr:
 	.4byte 0x686F6D65
 	.4byte 0x62757474
 	.4byte 0x6F6E3A3A
@@ -1936,7 +1938,8 @@
 	.4byte 0x706F6E65
 	.4byte 0x6E740000
 
-.obj homebutton_gui_PaneComponent_hierarchy, global
+.global homebutton_gui_PaneComponent_hierarchy
+homebutton_gui_PaneComponent_hierarchy:
 	.4byte __RTTI__homebutton_gui_Interface
 	.4byte 0x00000000
 	.4byte __RTTI__homebutton_gui_Component
@@ -1944,11 +1947,13 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-.obj __RTTI__homebutton_gui_PaneComponent, global
+.global __RTTI__homebutton_gui_PaneComponent
+__RTTI__homebutton_gui_PaneComponent:
 	.4byte homebutton_gui_PaneComponent_typestr
 	.4byte homebutton_gui_PaneComponent_hierarchy
 
-.obj __vt__homebutton_gui_PaneManager, global
+.global __vt__homebutton_gui_PaneManager
+__vt__homebutton_gui_PaneManager:
 	.4byte __RTTI__homebutton_gui_PaneManager
 	.4byte 0x00000000
 	.4byte create__Q310homebutton3gui9InterfaceFv
@@ -1975,7 +1980,8 @@
 	.4byte walkinchildren__q310homebutton3gui11panemanagerfrq36nw4hbm2ut30linklist_Q36nw4hbm3lyt4Pane_4_
 	.4byte walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList_Q36nw4hbm3lyt4Pane_4_
 
-.obj homebutton_gui_PaneManager_typestr, global
+.global homebutton_gui_PaneManager_typestr
+homebutton_gui_PaneManager_typestr:
 	.4byte 0x686F6D65
 	.4byte 0x62757474
 	.4byte 0x6F6E3A3A
@@ -1985,18 +1991,21 @@
 	.4byte 0x61676572
 	.4byte 0x00000000
 
-.obj homebutton_gui_PaneManager_hierarchy, global
+.global homebutton_gui_PaneManager_hierarchy
+homebutton_gui_PaneManager_hierarchy:
 	.4byte __RTTI__homebutton_gui_Interface
 	.4byte 0x00000000
 	.4byte __RTTI__homebutton_gui_Manager
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-.obj __RTTI__homebutton_gui_PaneManager, global
+.global __RTTI__homebutton_gui_PaneManager
+__RTTI__homebutton_gui_PaneManager:
 	.4byte homebutton_gui_PaneManager_typestr
 	.4byte homebutton_gui_PaneManager_hierarchy
 
-.obj __vt__homebutton_gui_Manager, global
+.global __vt__homebutton_gui_Manager
+__vt__homebutton_gui_Manager:
 	.4byte __RTTI__homebutton_gui_Manager
 	.4byte 0x00000000
 	.4byte create__Q310homebutton3gui9InterfaceFv
@@ -2014,7 +2023,8 @@
 	.4byte setAllComponentTriggerTarget__Q310homebutton3gui7ManagerFb
 	.4byte setEventHandler__Q310homebutton3gui7ManagerFPQ310homebutton3gui12EventHandler
 
-.obj homebutton_gui_Manager_typestr, global
+.global homebutton_gui_Manager_typestr
+homebutton_gui_Manager_typestr:
 	.4byte 0x686F6D65
 	.4byte 0x62757474
 	.4byte 0x6F6E3A3A
@@ -2023,16 +2033,19 @@
 	.4byte 0x61676572
 	.4byte 0x00000000
 
-.obj homebutton_gui_Manager_hierarchy, global
+.global homebutton_gui_Manager_hierarchy
+homebutton_gui_Manager_hierarchy:
 	.4byte __RTTI__homebutton_gui_Interface
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-.obj __RTTI__homebutton_gui_Manager, global
+.global __RTTI__homebutton_gui_Manager
+__RTTI__homebutton_gui_Manager:
 	.4byte homebutton_gui_Manager_typestr
 	.4byte homebutton_gui_Manager_hierarchy
 
-.obj __vt__homebutton_gui_Component, global
+.global __vt__homebutton_gui_Component
+__vt__homebutton_gui_Component:
 	.4byte __RTTI__homebutton_gui_Component
 	.4byte 0x00000000
 	.4byte create__Q310homebutton3gui9InterfaceFv
@@ -2058,7 +2071,8 @@
 	.4byte isVisible__Q310homebutton3gui9ComponentFv
 	.4byte 0x00000000
 
-.obj homebutton_gui_Component_typestr, global
+.global homebutton_gui_Component_typestr
+homebutton_gui_Component_typestr:
 	.4byte 0x686F6D65
 	.4byte 0x62757474
 	.4byte 0x6F6E3A3A
@@ -2067,16 +2081,19 @@
 	.4byte 0x706F6E65
 	.4byte 0x6E740000
 
-.obj homebutton_gui_Component_hierarchy, global
+.global homebutton_gui_Component_hierarchy
+homebutton_gui_Component_hierarchy:
 	.4byte __RTTI__homebutton_gui_Interface
 	.4byte 0x00000000
 	.4byte 0x00000000
 
-.obj __RTTI__homebutton_gui_Component, global
+.global __RTTI__homebutton_gui_Component
+__RTTI__homebutton_gui_Component:
 	.4byte homebutton_gui_Component_typestr
 	.4byte homebutton_gui_Component_hierarchy
 
-.obj homebutton_gui_Interface_typestr, global
+.global homebutton_gui_Interface_typestr
+homebutton_gui_Interface_typestr:
 	.4byte 0x686F6D65
 	.4byte 0x62757474
 	.4byte 0x6F6E3A3A
@@ -2086,12 +2103,14 @@
 	.4byte 0x63650000
 	.4byte 0x00000000
 
-.obj __RTTI__homebutton_gui_Interface, global
+.global __RTTI__homebutton_gui_Interface
+__RTTI__homebutton_gui_Interface:
 	.4byte homebutton_gui_Interface_typestr
 	.4byte 0x00000000
 
 # 0x805CD5A8 - 0x805CD5B0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CD5A8, global
+.global lbl_805CD5A8
+lbl_805CD5A8:
 	.skip 0x8

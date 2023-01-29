@@ -1,58 +1,10 @@
 .include "macros.inc"
-.file "monolithlib/CSchedule.o"
 
-# 0x80020B08 - 0x80020B20
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_80020B08", local
-.hidden "@etb_80020B08"
-	.4byte 0x28080000
-	.4byte 0x00000000
-.endobj "@etb_80020B08"
-
-.obj "@etb_80020B10", local
-.hidden "@etb_80020B10"
-	.4byte 0x100A0000
-	.4byte 0x00000000
-.endobj "@etb_80020B10"
-
-.obj "@etb_80020B18", local
-.hidden "@etb_80020B18"
-	.4byte 0x18080000
-	.4byte 0x00000000
-.endobj "@etb_80020B18"
-
-# 0x80038C0C - 0x80038C30
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80038C0C", local
-.hidden "@eti_80038C0C"
-	.4byte fn_804E3340
-	.4byte 0x000000F4
-	.4byte "@etb_80020B08"
-.endobj "@eti_80038C0C"
-
-.obj "@eti_80038C18", local
-.hidden "@eti_80038C18"
-	.4byte fn_804E3434
-	.4byte 0x000001E0
-	.4byte "@etb_80020B10"
-.endobj "@eti_80038C18"
-
-.obj "@eti_80038C24", local
-.hidden "@eti_80038C24"
-	.4byte fn_804E3614
-	.4byte 0x000000C8
-	.4byte "@etb_80020B18"
-.endobj "@eti_80038C24"
-
-# 0x804E3294 - 0x804E36DC
-.text
-.balign 4
-
-.fn fn_804E3294, global
+.fn func_804E3294, global
 /* 804E3294 004AC854  3C A0 80 57 */	lis r5, __vt__CSchedule@ha
 /* 804E3298 004AC858  38 80 00 00 */	li r4, 0x0
 /* 804E329C 004AC85C  38 A5 38 B0 */	addi r5, r5, __vt__CSchedule@l
@@ -96,9 +48,9 @@
 /* 804E3334 004AC8F4  B0 03 00 D4 */	sth r0, 0xd4(r3)
 /* 804E3338 004AC8F8  B0 03 00 D6 */	sth r0, 0xd6(r3)
 /* 804E333C 004AC8FC  4E 80 00 20 */	blr
-.endfn fn_804E3294
+.endfn func_804E3294
 
-.fn fn_804E3340, global
+.fn func_804E3340, global
 /* 804E3340 004AC900  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804E3344 004AC904  7C 08 02 A6 */	mflr r0
 /* 804E3348 004AC908  2C 03 00 00 */	cmpwi r3, 0x0
@@ -139,7 +91,7 @@
 /* 804E33C8 004AC988  A8 7D 00 98 */	lha r3, 0x98(r29)
 /* 804E33CC 004AC98C  2C 03 00 00 */	cmpwi r3, 0x0
 /* 804E33D0 004AC990  41 80 00 0C */	blt .L_804E33DC
-/* 804E33D4 004AC994  4B FF C7 B5 */	bl fn_804DFB88
+/* 804E33D4 004AC994  4B FF C7 B5 */	bl func_804DFB88
 /* 804E33D8 004AC998  B3 FD 00 98 */	sth r31, 0x98(r29)
 .L_804E33DC:
 /* 804E33DC 004AC99C  3B DE 00 01 */	addi r30, r30, 0x1
@@ -167,9 +119,9 @@
 /* 804E3428 004AC9E8  7C 08 03 A6 */	mtlr r0
 /* 804E342C 004AC9EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 804E3430 004AC9F0  4E 80 00 20 */	blr
-.endfn fn_804E3340
+.endfn func_804E3340
 
-.fn fn_804E3434, global
+.fn func_804E3434, global
 /* 804E3434 004AC9F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E3438 004AC9F8  7C 08 02 A6 */	mflr r0
 /* 804E343C 004AC9FC  2C 04 00 00 */	cmpwi r4, 0x0
@@ -285,7 +237,7 @@
 /* 804E35EC 004ACBAC  9B FE 00 D8 */	stb r31, 0xd8(r30)
 /* 804E35F0 004ACBB0  7F C3 F3 78 */	mr r3, r30
 /* 804E35F4 004ACBB4  9B FE 00 D9 */	stb r31, 0xd9(r30)
-/* 804E35F8 004ACBB8  48 00 00 1D */	bl fn_804E3614
+/* 804E35F8 004ACBB8  48 00 00 1D */	bl func_804E3614
 .L_804E35FC:
 /* 804E35FC 004ACBBC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804E3600 004ACBC0  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -293,9 +245,9 @@
 /* 804E3608 004ACBC8  7C 08 03 A6 */	mtlr r0
 /* 804E360C 004ACBCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 804E3610 004ACBD0  4E 80 00 20 */	blr
-.endfn fn_804E3434
+.endfn func_804E3434
 
-.fn fn_804E3614, global
+.fn func_804E3614, global
 /* 804E3614 004ACBD4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804E3618 004ACBD8  7C 08 02 A6 */	mflr r0
 /* 804E361C 004ACBDC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -324,7 +276,7 @@
 /* 804E366C 004ACC2C  80 7D 00 04 */	lwz r3, 0x4(r29)
 /* 804E3670 004ACC30  7F E4 FB 78 */	mr r4, r31
 /* 804E3674 004ACC34  7F A5 EB 78 */	mr r5, r29
-/* 804E3678 004ACC38  4B FF C4 0D */	bl fn_804DFA84
+/* 804E3678 004ACC38  4B FF C4 0D */	bl func_804DFA84
 /* 804E367C 004ACC3C  7C 60 07 35 */	extsh. r0, r3
 /* 804E3680 004ACC40  40 80 00 0C */	bge .L_804E368C
 /* 804E3684 004ACC44  38 60 00 00 */	li r3, 0x0
@@ -353,13 +305,14 @@
 /* 804E36D0 004ACC90  7C 08 03 A6 */	mtlr r0
 /* 804E36D4 004ACC94  38 21 00 20 */	addi r1, r1, 0x20
 /* 804E36D8 004ACC98  4E 80 00 20 */	blr
-.endfn fn_804E3614
+.endfn func_804E3614
 
 # 0x80528028 - 0x80528038
 .rodata
 .balign 8
 
-.obj CSchedule_typestr, global
+.global CSchedule_typestr
+CSchedule_typestr:
 	.4byte 0x43536368
 	.4byte 0x6564756C
 	.4byte 0x65000000
@@ -369,16 +322,65 @@
 .data
 .balign 8
 
-.obj __vt__CSchedule, global
+.global __vt__CSchedule
+__vt__CSchedule:
 	.4byte __RTTI__CSchedule
 	.4byte 0x00000000
-	.4byte fn_804E3340
+	.4byte func_804E3340
 	.4byte 0x00000000
 
 # 0x80666520 - 0x80666528
 .section .sdata, "wa"
 .balign 8
 
-.obj __RTTI__CSchedule, global
+.global __RTTI__CSchedule
+__RTTI__CSchedule:
 	.4byte CSchedule_typestr
 	.4byte 0x00000000
+
+# 0x80020B08 - 0x80020B20
+.section extab, "a"
+.balign 4
+
+.obj "@etb_80020B08", local
+.hidden "@etb_80020B08"
+	.4byte 0x28080000
+	.4byte 0x00000000
+.endobj "@etb_80020B08"
+
+.obj "@etb_80020B10", local
+.hidden "@etb_80020B10"
+	.4byte 0x100A0000
+	.4byte 0x00000000
+.endobj "@etb_80020B10"
+
+.obj "@etb_80020B18", local
+.hidden "@etb_80020B18"
+	.4byte 0x18080000
+	.4byte 0x00000000
+.endobj "@etb_80020B18"
+
+# 0x80038C0C - 0x80038C30
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80038C0C", local
+.hidden "@eti_80038C0C"
+	.4byte func_804E3340
+	.4byte 0x000000F4
+	.4byte "@etb_80020B08"
+.endobj "@eti_80038C0C"
+
+.obj "@eti_80038C18", local
+.hidden "@eti_80038C18"
+	.4byte func_804E3434
+	.4byte 0x000001E0
+	.4byte "@etb_80020B10"
+.endobj "@eti_80038C18"
+
+.obj "@eti_80038C24", local
+.hidden "@eti_80038C24"
+	.4byte func_804E3614
+	.4byte 0x000000C8
+	.4byte "@etb_80020B18"
+.endobj "@eti_80038C24"

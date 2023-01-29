@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/mpv/mpv_emp.o"
 
-# 0x803A5AEC - 0x803A6154
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MPV_IsEmptyBpic, global
@@ -438,7 +437,7 @@
 /* 803A6084 0036F644  38 60 00 00 */	li r3, 0x0
 /* 803A6088 0036F648  48 00 00 B0 */	b .L_803A6138
 .L_803A608C:
-/* 803A608C 0036F64C  4B FF F9 69 */	bl fn_803A59F4
+/* 803A608C 0036F64C  4B FF F9 69 */	bl func_803A59F4
 /* 803A6090 0036F650  54 60 07 7B */	rlwinm. r0, r3, 0, 29, 29
 /* 803A6094 0036F654  41 82 00 30 */	beq .L_803A60C4
 /* 803A6098 0036F658  88 1D 00 06 */	lbz r0, 0x6(r29)
@@ -501,7 +500,8 @@
 # 0x8051F708 - 0x8051F750
 .rodata
 .balign 8
-.sym lbl_8051F708, global
+.global lbl_8051F708
+lbl_8051F708:
 	.4byte 0x00000101
 	.4byte 0x03030203
 	.4byte 0x03040204

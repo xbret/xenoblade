@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_BasicPlayer.o"
 
-# 0x804120AC - 0x804124A0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::PlayerParamSet::Init()
@@ -318,7 +317,9 @@
 # 0x8066C6E0 - 0x8066C6E8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C6E0, global
+.global lbl_8066C6E0
+lbl_8066C6E0:
 	.4byte 0x3F800000
-.sym lbl_8066C6E4, global
+.global lbl_8066C6E4
+lbl_8066C6E4:
 	.4byte 0x00000000

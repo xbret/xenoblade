@@ -1,45 +1,10 @@
 .include "macros.inc"
-.file "monolithlib/scn/CScnFilter.o"
 
-# 0x8001F4E4 - 0x8001F4F4
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_8001F4E4", local
-.hidden "@etb_8001F4E4"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_8001F4E4"
-
-.obj "@etb_8001F4EC", local
-.hidden "@etb_8001F4EC"
-	.4byte 0x000A0000
-	.4byte 0x00000000
-.endobj "@etb_8001F4EC"
-
-# 0x80036F74 - 0x80036F8C
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80036F74", local
-.hidden "@eti_80036F74"
-	.4byte fn_8049C828
-	.4byte 0x00000040
-	.4byte "@etb_8001F4E4"
-.endobj "@eti_80036F74"
-
-.obj "@eti_80036F80", local
-.hidden "@eti_80036F80"
-	.4byte fn_8049C868
-	.4byte 0x000000E0
-	.4byte "@etb_8001F4EC"
-.endobj "@eti_80036F80"
-
-# 0x8049C7F8 - 0x8049C948
-.text
-.balign 4
-
-.fn fn_8049C7F8, global
+.fn func_8049C7F8, global
 /* 8049C7F8 00465DB8  38 80 00 00 */	li r4, 0x0
 /* 8049C7FC 00465DBC  C0 02 CF D0 */	lfs f0, lbl_8066D350@sda21(r2)
 /* 8049C800 00465DC0  3C A0 80 57 */	lis r5, __vt__CScnFilter@ha
@@ -52,9 +17,9 @@
 /* 8049C81C 00465DDC  90 83 00 14 */	stw r4, 0x14(r3)
 /* 8049C820 00465DE0  90 03 00 08 */	stw r0, 0x8(r3)
 /* 8049C824 00465DE4  4E 80 00 20 */	blr
-.endfn fn_8049C7F8
+.endfn func_8049C7F8
 
-.fn fn_8049C828, global
+.fn func_8049C828, global
 /* 8049C828 00465DE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049C82C 00465DEC  7C 08 02 A6 */	mflr r0
 /* 8049C830 00465DF0  2C 03 00 00 */	cmpwi r3, 0x0
@@ -72,9 +37,9 @@
 /* 8049C85C 00465E1C  7C 08 03 A6 */	mtlr r0
 /* 8049C860 00465E20  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049C864 00465E24  4E 80 00 20 */	blr
-.endfn fn_8049C828
+.endfn func_8049C828
 
-.fn fn_8049C868, global
+.fn func_8049C868, global
 /* 8049C868 00465E28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049C86C 00465E2C  7C 08 02 A6 */	mflr r0
 /* 8049C870 00465E30  7C 65 1B 78 */	mr r5, r3
@@ -136,26 +101,63 @@
 /* 8049C93C 00465EFC  7C 08 03 A6 */	mtlr r0
 /* 8049C940 00465F00  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049C944 00465F04  4E 80 00 20 */	blr
-.endfn fn_8049C868
+.endfn func_8049C868
 
 # 0x805723A8 - 0x805723C0
 .data
 .balign 8
 
-.obj __vt__CScnFilter, global
+.global __vt__CScnFilter
+__vt__CScnFilter:
 	.4byte __RTTI__CScnFilter
 	.4byte 0x00000000
-	.4byte fn_8049C828
-	.4byte fn_8049C868
+	.4byte func_8049C828
+	.4byte func_8049C868
 	.4byte 0x00000000
 	.4byte 0x00000000
 
 # 0x8066D350 - 0x8066D360
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066D350, global
+.global lbl_8066D350
+lbl_8066D350:
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066D358, global
+.global lbl_8066D358
+lbl_8066D358:
 	.4byte 0x43300000
 	.4byte 0x00000000
+
+# 0x8001F4E4 - 0x8001F4F4
+.section extab, "a"
+.balign 4
+
+.obj "@etb_8001F4E4", local
+.hidden "@etb_8001F4E4"
+	.4byte 0x08080000
+	.4byte 0x00000000
+.endobj "@etb_8001F4E4"
+
+.obj "@etb_8001F4EC", local
+.hidden "@etb_8001F4EC"
+	.4byte 0x000A0000
+	.4byte 0x00000000
+.endobj "@etb_8001F4EC"
+
+# 0x80036F74 - 0x80036F8C
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80036F74", local
+.hidden "@eti_80036F74"
+	.4byte func_8049C828
+	.4byte 0x00000040
+	.4byte "@etb_8001F4E4"
+.endobj "@eti_80036F74"
+
+.obj "@eti_80036F80", local
+.hidden "@eti_80036F80"
+	.4byte func_8049C868
+	.4byte 0x000000E0
+	.4byte "@etb_8001F4EC"
+.endobj "@eti_80036F80"

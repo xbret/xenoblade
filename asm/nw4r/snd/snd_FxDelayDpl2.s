@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_FxDelayDpl2.o"
 
-# 0x80415FB0 - 0x804165B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::FxDelayDpl2::FxDelayDpl2()
@@ -468,10 +467,11 @@
 # 0x8056E0A0 - 0x8056E0C8
 .data
 .balign 8
-.sym lbl_8056E0A0, global
+.global lbl_8056E0A0
+lbl_8056E0A0:
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte fn_801C2EB0
+	.4byte func_801C2EB0
 	.4byte StartUp__Q34nw4r3snd11FxDelayDpl2Fv
 	.4byte Shutdown__Q34nw4r3snd11FxDelayDpl2Fv
 	.4byte UpdateBuffer__Q34nw4r3snd11FxDelayDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode
@@ -483,15 +483,21 @@
 # 0x8066C780 - 0x8066C798
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C780, global
+.global lbl_8066C780
+lbl_8066C780:
 	.4byte 0x43200000
-.sym lbl_8066C784, global
+.global lbl_8066C784
+lbl_8066C784:
 	.4byte 0x3ECCCCCD
-.sym lbl_8066C788, global
+.global lbl_8066C788
+lbl_8066C788:
 	.4byte 0x3F800000
-.sym lbl_8066C78C, global
+.global lbl_8066C78C
+lbl_8066C78C:
 	.4byte 0x3D23D70A
-.sym lbl_8066C790, global
+.global lbl_8066C790
+lbl_8066C790:
 	.4byte 0x3F7D70A4
-.sym lbl_8066C794, global
+.global lbl_8066C794
+lbl_8066C794:
 	.4byte 0x00000000

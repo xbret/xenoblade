@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MetroTRK/nubevent.o"
 
-# 0x802CC650 - 0x802CC7EC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn TRKInitializeEventQueue, global
@@ -131,7 +130,8 @@
 # 0x8053FE68 - 0x8053FE88
 .data
 .balign 8
-.sym lbl_8053FE68, global
+.global lbl_8053FE68
+lbl_8053FE68:
 	.4byte 0x4D657472
 	.4byte 0x6F54524B
 	.4byte 0x202D2045
@@ -144,5 +144,6 @@
 # 0x8057B8B0 - 0x8057B8D8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057B8B0, global
+.global lbl_8057B8B0
+lbl_8057B8B0:
 	.skip 0x28

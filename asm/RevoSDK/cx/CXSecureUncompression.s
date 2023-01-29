@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/cx/CXSecureUncompression.o"
 
-# 0x80308F10 - 0x80309110
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn CXiLHVerifyTable, global

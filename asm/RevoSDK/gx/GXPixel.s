@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/gx/GXPixel.o"
 
-# 0x8031DCF0 - 0x8031E470
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn GXSetFog, global
@@ -545,7 +544,8 @@
 # 0x8054C110 - 0x8054C130
 .data
 .balign 8
-.sym lbl_8054C110, global
+.global lbl_8054C110
+lbl_8054C110:
 	.4byte 0x00000000
 	.4byte 0x00000001
 	.4byte 0x00000002
@@ -558,35 +558,47 @@
 # 0x8066C050 - 0x8066C0A0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C050, global
+.global lbl_8066C050
+lbl_8066C050:
 	.4byte 0x00000000
-.sym lbl_8066C054, global
+.global lbl_8066C054
+lbl_8066C054:
 	.4byte 0x3F800000
-.sym lbl_8066C058, global
+.global lbl_8066C058
+lbl_8066C058:
 	.4byte 0x3F000000
 	.4byte 0x00000000
-.sym lbl_8066C060, global
+.global lbl_8066C060
+lbl_8066C060:
 	.4byte 0x3FF00000
 	.4byte 0x00000000
-.sym lbl_8066C068, global
+.global lbl_8066C068
+lbl_8066C068:
 	.4byte 0x40000000
 	.4byte 0x00000000
-.sym lbl_8066C070, global
+.global lbl_8066C070
+lbl_8066C070:
 	.4byte 0x3FE00000
 	.4byte 0x00000000
-.sym lbl_8066C078, global
+.global lbl_8066C078
+lbl_8066C078:
 	.4byte 0x4B00001E
 	.4byte 0x00000000
-.sym lbl_8066C080, global
+.global lbl_8066C080
+lbl_8066C080:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C088, global
+.global lbl_8066C088
+lbl_8066C088:
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8066C090, global
+.global lbl_8066C090
+lbl_8066C090:
 	.4byte 0x3FDDB3D0
-.sym lbl_8066C094, global
+.global lbl_8066C094
+lbl_8066C094:
 	.4byte 0x43800000
-.sym lbl_8066C098, global
+.global lbl_8066C098
+lbl_8066C098:
 	.4byte 0x43300000
 	.4byte 0x00000000

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/lyt/lyt_group.o"
 
-# 0x803FF934 - 0x803FFC74
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::lyt::Group::Group(const nw4r::lyt::res::Group*, nw4r::lyt::Pane*)
@@ -253,7 +252,8 @@
 # 0x8056D248 - 0x8056D258
 .data
 .balign 8
-.sym lbl_8056D248, global
+.global lbl_8056D248
+lbl_8056D248:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt5GroupFv

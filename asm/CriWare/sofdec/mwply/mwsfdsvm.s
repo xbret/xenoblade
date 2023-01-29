@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/mwply/mwsfdsvm.o"
 
-# 0x8039DB20 - 0x8039DDD0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn MWSFSVM_Init, global
@@ -206,13 +205,18 @@
 # 0x80602790 - 0x806028A0
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80602790, global
+.global lbl_80602790
+lbl_80602790:
 	.skip 0x4
-.sym lbl_80602794, global
+.global lbl_80602794
+lbl_80602794:
 	.skip 0x4
-.sym lbl_80602798, global
+.global lbl_80602798
+lbl_80602798:
 	.skip 0x4
-.sym lbl_8060279C, global
+.global lbl_8060279C
+lbl_8060279C:
 	.skip 0x4
-.sym lbl_806027A0, global
+.global lbl_806027A0
+lbl_806027A0:
 	.skip 0x100

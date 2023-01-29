@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/s_atan.o"
 
-# 0x802CA80C - 0x802CAA3C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn atan, global
@@ -176,7 +175,7 @@
 	.4byte 0x3FF921FB
 	.4byte 0x54442D18
 
-.obj atanlo, local
+atanlo:
 	.4byte 0x3C7A2B7F
 	.4byte 0x222F65E2
 	.4byte 0x3C81A626
@@ -185,9 +184,8 @@
 	.4byte 0x7AF0CBBD
 	.4byte 0x3C91A626
 	.4byte 0x33145C07
-.endobj atanlo
 
-.obj aT, local
+aT:
 	.4byte 0x3FD55555
 	.4byte 0x5555550D
 	.4byte 0xBFC99999
@@ -210,7 +208,6 @@
 	.4byte 0x2C6A6C2F
 	.4byte 0x3F90AD3A
 	.4byte 0xE322DA11
-.endobj aT
 
 # 0x8066BD18 - 0x8066BD40
 .section .sdata2, "a"

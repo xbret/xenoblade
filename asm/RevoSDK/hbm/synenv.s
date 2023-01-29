@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/synenv.o"
 
-# 0x803412F0 - 0x803416D0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __HBMSYNSetupVolumeEnvelope, global
@@ -199,7 +198,7 @@
 .endfn __HBMSYNSetupVolumeEnvelope
 /* 803415BC 0030AB7C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-.fn fn_803415C0, global
+.fn func_803415C0, global
 /* 803415C0 0030AB80  80 03 00 30 */	lwz r0, 0x30(r3)
 /* 803415C4 0030AB84  2C 00 00 00 */	cmpwi r0, 0x0
 /* 803415C8 0030AB88  41 82 00 18 */	beq .L_803415E0
@@ -274,13 +273,14 @@
 /* 803416C0 0030AC80  7C 04 02 14 */	add r0, r4, r0
 /* 803416C4 0030AC84  90 03 00 34 */	stw r0, 0x34(r3)
 /* 803416C8 0030AC88  4E 80 00 20 */	blr
-.endfn fn_803415C0
+.endfn func_803415C0
 /* 803416CC 0030AC8C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
 # 0x80518B58 - 0x80518B78
 .rodata
 .balign 8
-.sym lbl_80518B58, global
+.global lbl_80518B58
+lbl_80518B58:
 	.4byte 0x40000000
 	.4byte 0x00000000
 	.4byte 0x4C960000
@@ -293,7 +293,8 @@
 # 0x8054FA90 - 0x8054FC90
 .data
 .balign 8
-.sym lbl_8054FA90, global
+.global lbl_8054FA90
+lbl_8054FA90:
 	.4byte 0x00000000
 	.4byte 0x3C000219
 	.4byte 0x3C800000

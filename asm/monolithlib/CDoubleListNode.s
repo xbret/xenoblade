@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "monolithlib/CDoubleListNode.o"
 
-# 0x80446578 - 0x804466E0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # CDoubleListNode::CDoubleListNode()
@@ -127,7 +126,8 @@
 .data
 .balign 8
 
-.obj __vt__CDoubleListNode, global
+.global __vt__CDoubleListNode
+__vt__CDoubleListNode:
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0x00000000
 	.4byte __dt__15CDoubleListNodeFv

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/os/OS.o"
 
-# 0x80351880 - 0x80352DC0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn __OSFPRInit, global
@@ -1863,20 +1862,21 @@
 .section .bss, "wa", @nobits
 .balign 8
 
-.obj __OSRebootParams, global
+.global __OSRebootParams
+__OSRebootParams:
 	.skip 0x1C
-.endobj __OSRebootParams
 	.skip 0x4
-.sym lbl_805D4360, global
+.global lbl_805D4360
+lbl_805D4360:
 	.skip 0x50
 
 # 0x80665B28 - 0x80665B58
 .section .sdata, "wa"
 .balign 8
 
-.obj __OSVersion, global
+.global __OSVersion
+__OSVersion:
 	.4byte "@1"
-.endobj __OSVersion
 
 .obj "@1784", local
 	.4byte 0x52564120
@@ -1899,10 +1899,12 @@
 	.byte 0x00
 .endobj "@1856"
 	.byte 0x00, 0x00, 0x00
-.sym lbl_80665B48, global
+.global lbl_80665B48
+lbl_80665B48:
 	.4byte 0x48414541
 	.4byte 0x00000000
-.sym lbl_80665B50, global
+.global lbl_80665B50
+lbl_80665B50:
 	.4byte lbl_80665B48
 	.4byte 0x00000000
 
@@ -1910,55 +1912,49 @@
 .section .sbss, "wa", @nobits
 .balign 8
 
-.obj __OSInIPL, global
+.global __OSInIPL
+__OSInIPL:
 	.skip 0x4
-.endobj __OSInIPL
 
-.obj __OSInNandBoot, global
+.global __OSInNandBoot
+__OSInNandBoot:
 	.skip 0x4
-.endobj __OSInNandBoot
 
 .obj __OSIsGcam, weak
 	.skip 0x4
-.endobj __OSIsGcam
 
-.obj AreWeInitialized, local
-	.skip 0x4
-.endobj AreWeInitialized
-
-.obj OSExceptionTable, local
-	.skip 0x4
-.endobj OSExceptionTable
+AreWeInitialized:
 	.skip 0x4
 
-.obj ZeroPS, local
-	.skip 0x8
-.endobj ZeroPS
+OSExceptionTable:
+	.skip 0x4
+	.skip 0x4
 
-.obj ZeroF, local
-	.skip 0x8
-.endobj ZeroF
-.sym lbl_80667A28, global
+ZeroPS:
 	.skip 0x8
 
-.obj BI2DebugFlagHolder, local
-	.skip 0x4
-.endobj BI2DebugFlagHolder
+ZeroF:
+	.skip 0x8
+.global lbl_80667A28
+lbl_80667A28:
+	.skip 0x8
 
-.obj BI2DebugFlag, local
-	.skip 0x4
-.endobj BI2DebugFlag
-
-.obj BootInfo, local
-	.skip 0x4
-.endobj BootInfo
+BI2DebugFlagHolder:
 	.skip 0x4
 
-.obj __OSStartTime, global
+BI2DebugFlag:
 	.skip 0x4
-.sym lbl_80667A44, global
+
+BootInfo:
 	.skip 0x4
-.endobj __OSStartTime
+	.skip 0x4
+
+.global __OSStartTime
+__OSStartTime:
+	.skip 0x4
+.global lbl_80667A44
+lbl_80667A44:
+	.skip 0x4
 
 # 0x8066C188 - 0x8066C190
 .section .sdata2, "a"

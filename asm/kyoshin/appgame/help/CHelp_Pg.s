@@ -1,38 +1,16 @@
 .include "macros.inc"
-.file "kyoshin/appgame/help/CHelp_Pg.o"
 
-# 0x8001BE08 - 0x8001BE10
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_8001BE08", local
-.hidden "@etb_8001BE08"
-	.4byte 0x080A0000
-	.4byte 0x00000000
-.endobj "@etb_8001BE08"
-
-# 0x80033998 - 0x800339A4
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80033998", local
-.hidden "@eti_80033998"
-	.4byte fn_802B85A4
-	.4byte 0x00000060
-	.4byte "@etb_8001BE08"
-.endobj "@eti_80033998"
-
-# 0x802B85A4 - 0x802B8604
-.text
-.balign 4
-
-.fn fn_802B85A4, global
+.fn func_802B85A4, global
 /* 802B85A4 00281B64  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B85A8 00281B68  7C 08 02 A6 */	mflr r0
 /* 802B85AC 00281B6C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802B85B0 00281B70  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802B85B4 00281B74  7C 7F 1B 78 */	mr r31, r3
-/* 802B85B8 00281B78  4B E2 0B D1 */	bl fn_800D9188
+/* 802B85B8 00281B78  4B E2 0B D1 */	bl func_800D9188
 /* 802B85BC 00281B7C  80 63 01 94 */	lwz r3, 0x194(r3)
 /* 802B85C0 00281B80  3C 00 43 30 */	lis r0, 0x4330
 /* 802B85C4 00281B84  90 01 00 08 */	stw r0, 0x8(r1)
@@ -51,11 +29,33 @@
 /* 802B85F8 00281BB8  7C 08 03 A6 */	mtlr r0
 /* 802B85FC 00281BBC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B8600 00281BC0  4E 80 00 20 */	blr
-.endfn fn_802B85A4
+.endfn func_802B85A4
 
 # 0x8066B800 - 0x8066B808
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066B800, global
+.global lbl_8066B800
+lbl_8066B800:
 	.4byte 0x43300000
 	.4byte 0x80000000
+
+# 0x8001BE08 - 0x8001BE10
+.section extab, "a"
+.balign 4
+
+.obj "@etb_8001BE08", local
+.hidden "@etb_8001BE08"
+	.4byte 0x080A0000
+	.4byte 0x00000000
+.endobj "@etb_8001BE08"
+
+# 0x80033998 - 0x800339A4
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80033998", local
+.hidden "@eti_80033998"
+	.4byte func_802B85A4
+	.4byte 0x00000060
+	.4byte "@etb_8001BE08"
+.endobj "@eti_80033998"

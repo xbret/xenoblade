@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/MSL_C/MSL_Common/signal.o"
 
-# 0x802C2610 - 0x802C26B8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn raise, global
@@ -59,5 +58,6 @@
 # 0x8057B348 - 0x8057B368
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057B348, global
+.global lbl_8057B348
+lbl_8057B348:
 	.skip 0x20

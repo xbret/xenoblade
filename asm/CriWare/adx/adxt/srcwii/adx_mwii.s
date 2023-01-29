@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/adxt/srcwii/adx_mwii.o"
 
-# 0x8039AA18 - 0x8039B290
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn ADXM_WaitVsync, global
@@ -304,9 +303,9 @@
 /* 8039ADF4 003643B4  4E 80 00 20 */	blr
 .endfn adxm_mwidle_proc
 
-.fn fn_8039ADF8, global
+.fn func_8039ADF8, global
 /* 8039ADF8 003643B8  4B FF C6 28 */	b SVM_SetCbErr
-.endfn fn_8039ADF8
+.endfn func_8039ADF8
 
 .fn adxm_create_base_thread, global
 /* 8039ADFC 003643BC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -640,7 +639,8 @@
 # 0x8051CCE0 - 0x8051CD48
 .rodata
 .balign 8
-.sym lbl_8051CCE0, global
+.global lbl_8051CCE0
+lbl_8051CCE0:
 	.4byte 0x0A414458
 	.4byte 0x57494920
 	.4byte 0x5665722E
@@ -653,9 +653,11 @@
 	.4byte 0x303A3533
 	.4byte 0x3A30310A
 	.4byte 0x00000000
-.sym lbl_8051CD10, global
+.global lbl_8051CD10
+lbl_8051CD10:
 	.4byte lbl_8051CCE0
-.sym lbl_8051CD14, global
+.global lbl_8051CD14
+lbl_8051CD14:
 	.4byte 0x31303630
 	.4byte 0x3130323A
 	.4byte 0x20496E74
@@ -673,14 +675,19 @@
 # 0x805F7010 - 0x80601360
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805F7010, global
+.global lbl_805F7010
+lbl_805F7010:
 	.skip 0x1052
-.sym lbl_805F8062, global
+.global lbl_805F8062
+lbl_805F8062:
 	.skip 0x6FD6
-.sym lbl_805FF038, global
+.global lbl_805FF038
+lbl_805FF038:
 	.skip 0x4
-.sym lbl_805FF03C, global
+.global lbl_805FF03C
+lbl_805FF03C:
 	.skip 0x2320
 
-.obj adxm_wii_framework, global
+.global adxm_wii_framework
+adxm_wii_framework:
 	.skip 0x4

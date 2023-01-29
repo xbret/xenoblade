@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/mem/mem_list.o"
 
-# 0x80349AD0 - 0x80349BF0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn MEMInitList, global

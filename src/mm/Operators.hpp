@@ -11,8 +11,8 @@ struct HeapListEntry {
     u16 unk10;
 };
 
-extern HeapListEntry* fn_804339B8(void*, HeapListEntry*);
-extern void fn_80433AA8(void*, HeapListEntry*);
+extern HeapListEntry* func_804339B8(void*, HeapListEntry*);
+extern void func_80433AA8(void*, HeapListEntry*);
 extern void* mm_malloc(size_t size, int param);
 
 extern u32 memoryAllocHeapArray[80][28];
@@ -24,7 +24,7 @@ void operator delete[](void*);
 
 /* Allocates the needed amount of memory for the class through mm_malloc, and returns it
 Not sure what the second param is
-The second parameter is often the result from fn_804375B4. They might've used some
+The second parameter is often the result from func_804375B4. They might've used some
 type of macro for those cases? */
 inline void* operator new(size_t size, int param){
     return mm_malloc(size,param);

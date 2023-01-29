@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/bta_hh_act.o"
 
-# 0x802E20E8 - 0x802E3830
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 8
 
 .fn bta_hh_api_enable, global
@@ -1702,7 +1701,8 @@
 # 0x80544198 - 0x80544690
 .data
 .balign 8
-.sym lbl_80544198, global
+.global lbl_80544198
+lbl_80544198:
 	.4byte 0x6274615F
 	.4byte 0x68685F73
 	.4byte 0x64705F63
@@ -1725,7 +1725,8 @@
 	.4byte 0x61736B20
 	.4byte 0x30782530
 	.4byte 0x32780000
-.sym lbl_805441F0, global
+.global lbl_805441F0
+lbl_805441F0:
 	.4byte 0x6274615F
 	.4byte 0x68685F73
 	.4byte 0x74617274
@@ -1738,7 +1739,8 @@
 	.4byte 0x6E206465
 	.4byte 0x76696365
 	.4byte 0x73000000
-.sym lbl_80544220, global
+.global lbl_80544220
+lbl_80544220:
 	.4byte 0x6274615F
 	.4byte 0x68685F73
 	.4byte 0x74617274
@@ -1759,7 +1761,8 @@
 	.4byte 0x75732030
 	.4byte 0x78253258
 	.4byte 0x00000000
-.sym lbl_80544270, global
+.global lbl_80544270
+lbl_80544270:
 	.4byte 0x6274615F
 	.4byte 0x68685F73
 	.4byte 0x64705F63
@@ -1768,7 +1771,8 @@
 	.4byte 0x61747573
 	.4byte 0x20307825
 	.4byte 0x32580000
-.sym lbl_80544290, global
+.global lbl_80544290
+lbl_80544290:
 	.4byte 0x6274615F
 	.4byte 0x68685F73
 	.4byte 0x64705F63
@@ -1788,7 +1792,8 @@
 	.4byte 0x61747573
 	.4byte 0x20307825
 	.4byte 0x32580000
-.sym lbl_805442DC, global
+.global lbl_805442DC
+lbl_805442DC:
 	.4byte 0x6274615F
 	.4byte 0x68685F6F
 	.4byte 0x70656E5F
@@ -1859,7 +1864,7 @@
 	.4byte 0x74797065
 	.4byte 0x00000000
 
-.obj jumptable_805443F0, local
+jumptable_805443F0:
 	.rel bta_hh_handsk_act, .L_802E2CF8
 	.rel bta_hh_handsk_act, .L_802E2CF8
 	.rel bta_hh_handsk_act, .L_802E2C8C
@@ -1870,9 +1875,8 @@
 	.rel bta_hh_handsk_act, .L_802E2C1C
 	.rel bta_hh_handsk_act, .L_802E2B9C
 	.rel bta_hh_handsk_act, .L_802E2C1C
-.endobj jumptable_805443F0
 
-.obj jumptable_80544418, local
+jumptable_80544418:
 	.rel bta_hh_handsk_act, .L_802E2B64
 	.rel bta_hh_handsk_act, .L_802E2B64
 	.rel bta_hh_handsk_act, .L_802E2B5C
@@ -1883,7 +1887,6 @@
 	.rel bta_hh_handsk_act, .L_802E2B44
 	.rel bta_hh_handsk_act, .L_802E2B4C
 	.rel bta_hh_handsk_act, .L_802E2B54
-.endobj jumptable_80544418
 	.4byte 0x4374726C
 	.4byte 0x20444154
 	.4byte 0x41207265
@@ -1908,7 +1911,7 @@
 	.4byte 0x745B2573
 	.4byte 0x5D000000
 
-.obj jumptable_8054449C, local
+jumptable_8054449C:
 	.rel bta_hh_ctrl_dat_act, .L_802E2EBC
 	.rel bta_hh_ctrl_dat_act, .L_802E2EBC
 	.rel bta_hh_ctrl_dat_act, .L_802E2EB4
@@ -1919,9 +1922,8 @@
 	.rel bta_hh_ctrl_dat_act, .L_802E2E9C
 	.rel bta_hh_ctrl_dat_act, .L_802E2EA4
 	.rel bta_hh_ctrl_dat_act, .L_802E2EAC
-.endobj jumptable_8054449C
 
-.obj jumptable_805444C4, local
+jumptable_805444C4:
 	.rel bta_hh_ctrl_dat_act, .L_802E2DD8
 	.rel bta_hh_ctrl_dat_act, .L_802E2DD8
 	.rel bta_hh_ctrl_dat_act, .L_802E2DD0
@@ -1932,14 +1934,15 @@
 	.rel bta_hh_ctrl_dat_act, .L_802E2DB8
 	.rel bta_hh_ctrl_dat_act, .L_802E2DC0
 	.rel bta_hh_ctrl_dat_act, .L_802E2DC8
-.endobj jumptable_805444C4
 	.4byte 0x00000000
-.sym lbl_805444F0, global
+.global lbl_805444F0
+lbl_805444F0:
 	.4byte 0x696E7661
 	.4byte 0x6C696420
 	.4byte 0x636F6D6D
 	.4byte 0x616E6400
-.sym lbl_80544500, global
+.global lbl_80544500
+lbl_80544500:
 	.4byte 0x4849445F
 	.4byte 0x486F7374
 	.4byte 0x57726974
@@ -1947,7 +1950,8 @@
 	.4byte 0x20457272
 	.4byte 0x6F722025
 	.4byte 0x64000000
-.sym lbl_8054451C, global
+.global lbl_8054451C
+lbl_8054451C:
 	.4byte 0x6274615F
 	.4byte 0x68685F77
 	.4byte 0x72697465
@@ -2024,7 +2028,7 @@
 	.4byte 0x5B25735D
 	.4byte 0x00000000
 
-.obj jumptable_80544648, local
+jumptable_80544648:
 	.rel bta_hh_cback, .L_802E3674
 	.rel bta_hh_cback, .L_802E367C
 	.rel bta_hh_cback, .L_802E37E0
@@ -2034,9 +2038,8 @@
 	.rel bta_hh_cback, .L_802E369C
 	.rel bta_hh_cback, .L_802E368C
 	.rel bta_hh_cback, .L_802E36A8
-.endobj jumptable_80544648
 
-.obj jumptable_8054466C, local
+jumptable_8054466C:
 	.rel bta_hh_cback, .L_802E35FC
 	.rel bta_hh_cback, .L_802E3604
 	.rel bta_hh_cback, .L_802E360C
@@ -2046,23 +2049,25 @@
 	.rel bta_hh_cback, .L_802E362C
 	.rel bta_hh_cback, .L_802E3634
 	.rel bta_hh_cback, .L_802E363C
-.endobj jumptable_8054466C
 
 # 0x805BF7C8 - 0x805BF9F8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805BF7C8, global
+.global lbl_805BF7C8
+lbl_805BF7C8:
 	.skip 0x230
 
 # 0x80665920 - 0x80665928
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665920, global
+.global lbl_80665920
+lbl_80665920:
 	.4byte 0x00000000
 	.4byte 0x00000000
 
 # 0x80667778 - 0x80667780
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667778, global
+.global lbl_80667778
+lbl_80667778:
 	.skip 0x8

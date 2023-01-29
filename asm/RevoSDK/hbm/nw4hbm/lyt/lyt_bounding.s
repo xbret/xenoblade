@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/lyt/lyt_bounding.o"
 
-# 0x8032C410 - 0x8032C590
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4hbm::lyt::Bounding::Bounding(const nw4hbm::lyt::res::Bounding*, const nw4hbm::lyt::ResBlockSet&)
@@ -72,7 +71,7 @@
 /* 8032C4E4 002F5AA4  7F E3 FB 78 */	mr r3, r31
 /* 8032C4E8 002F5AA8  38 04 00 FF */	addi r0, r4, 0xff
 /* 8032C4EC 002F5AAC  90 01 00 08 */	stw r0, 0x8(r1)
-/* 8032C4F0 002F5AB0  48 00 61 41 */	bl fn_80332630
+/* 8032C4F0 002F5AB0  48 00 61 41 */	bl func_80332630
 /* 8032C4F4 002F5AB4  90 81 00 14 */	stw r4, 0x14(r1)
 /* 8032C4F8 002F5AB8  38 9F 00 4C */	addi r4, r31, 0x4c
 /* 8032C4FC 002F5ABC  38 A1 00 08 */	addi r5, r1, 0x8
@@ -135,62 +134,70 @@
 # 0x8054D6B8 - 0x8054D7A0
 .data
 .balign 8
-.sym lbl_8054D6B8, global
+.global lbl_8054D6B8
+lbl_8054D6B8:
 	.4byte lbl_8054D748
 	.4byte 0x00000000
 	.4byte __dt__Q36nw4hbm3lyt8BoundingFv
 	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv
-	.4byte fn_80331CD0
-	.4byte fn_80331FD0
+	.4byte func_80331CD0
+	.4byte func_80331FD0
 	.4byte DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo
-	.4byte fn_803320E0
-	.4byte fn_80332170
-	.4byte fn_80331AC0
-	.4byte fn_80331AD0
-	.4byte fn_80331AE0
-	.4byte fn_80331B10
-	.4byte fn_80331B40
-	.4byte fn_80331B50
-	.4byte fn_80331B60
-	.4byte fn_80331C10
-	.4byte fn_80332230
-	.4byte fn_80332250
-	.4byte fn_803322E0
-	.4byte fn_80332300
-	.4byte fn_803323E0
-	.4byte fn_80332460
-	.4byte fn_80332710
-	.4byte fn_80332520
-.sym lbl_8054D71C, global
+	.4byte func_803320E0
+	.4byte func_80332170
+	.4byte func_80331AC0
+	.4byte func_80331AD0
+	.4byte func_80331AE0
+	.4byte func_80331B10
+	.4byte func_80331B40
+	.4byte func_80331B50
+	.4byte func_80331B60
+	.4byte func_80331C10
+	.4byte func_80332230
+	.4byte func_80332250
+	.4byte func_803322E0
+	.4byte func_80332300
+	.4byte func_803323E0
+	.4byte func_80332460
+	.4byte func_80332710
+	.4byte func_80332520
+.global lbl_8054D71C
+lbl_8054D71C:
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
 	.4byte 0x3A426F75
 	.4byte 0x6E64696E
 	.4byte 0x67000000
-.sym lbl_8054D734, global
+.global lbl_8054D734
+lbl_8054D734:
 	.4byte lbl_8054D798
 	.4byte 0x00000000
 	.4byte lbl_8054D770
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8054D748, global
+.global lbl_8054D748
+lbl_8054D748:
 	.4byte lbl_8054D71C
 	.4byte lbl_8054D734
-.sym lbl_8054D750, global
+.global lbl_8054D750
+lbl_8054D750:
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
 	.4byte 0x3A50616E
 	.4byte 0x65000000
-.sym lbl_8054D764, global
+.global lbl_8054D764
+lbl_8054D764:
 	.4byte lbl_8054D798
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_8054D770, global
+.global lbl_8054D770
+lbl_8054D770:
 	.4byte lbl_8054D750
 	.4byte lbl_8054D764
-.sym lbl_8054D778, global
+.global lbl_8054D778
+lbl_8054D778:
 	.4byte 0x6E773468
 	.4byte 0x626D3A3A
 	.4byte 0x6C79743A
@@ -199,12 +206,14 @@
 	.4byte 0x3A50616E
 	.4byte 0x65426173
 	.4byte 0x65000000
-.sym lbl_8054D798, global
+.global lbl_8054D798
+lbl_8054D798:
 	.4byte lbl_8054D778
 	.4byte 0x00000000
 
 # 0x805CD788 - 0x805CD790
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_805CD788, global
+.global lbl_805CD788
+lbl_805CD788:
 	.skip 0x8

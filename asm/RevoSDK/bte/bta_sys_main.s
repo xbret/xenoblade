@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/bta_sys_main.o"
 
-# 0x802DE95C - 0x802DEBA0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn bta_sys_init, global
@@ -188,13 +187,15 @@
 # 0x80543FD0 - 0x80544008
 .data
 .balign 8
-.sym lbl_80543FD0, global
+.global lbl_80543FD0
+lbl_80543FD0:
 	.4byte 0x42544120
 	.4byte 0x676F7420
 	.4byte 0x6576656E
 	.4byte 0x74203078
 	.4byte 0x25780000
-.sym lbl_80543FE4, global
+.global lbl_80543FE4
+lbl_80543FE4:
 	.4byte 0x42544120
 	.4byte 0x676F7420
 	.4byte 0x756E7265
@@ -208,6 +209,7 @@
 # 0x8066BF40 - 0x8066BF48
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066BF40, global
+.global lbl_8066BF40
+lbl_8066BF40:
 	.4byte 0x00040201
 	.4byte 0x00000000

@@ -14,7 +14,7 @@ u32 lbl_80665E30 = -1;
 
 /*Operator new seems to have been inlined in Monolithsoft's code, with it following this general pattern:
 
-int r4; //seems to often be the result of fn_804375B4, but not always
+int r4; //seems to often be the result of func_804375B4, but not always
 void* p = mm_malloc(sizeof(Class),r4);
 Class* c;
 
@@ -22,7 +22,7 @@ if(p != null){
     c = Class(p,...); //can be any one of the class's constructors, with/without params
 }
 
-bl fn_804375B4
+bl func_804375B4
 mr r4, r3
 li r3, size
 bl mm_malloc
@@ -67,7 +67,7 @@ void operator delete(void* p) {
                 memoryAllocHeapArray_ptr[3] = (u32)temp_r4->prev;
             }
         
-            HeapListEntry* var_r3 = fn_804339B8(memoryAllocHeapArray_ptr, temp_r4);
+            HeapListEntry* var_r3 = func_804339B8(memoryAllocHeapArray_ptr, temp_r4);
             HeapListEntry* temp_r5 = var_r3->prev;
         
             if (temp_r5 != NULL) {   
@@ -112,7 +112,7 @@ void operator delete(void* p) {
                 var_r4 = var_r4->next;
             
                 if (var_r4 != NULL) {
-                    fn_80433AA8(memoryAllocHeapArray_ptr, var_r4);
+                    func_80433AA8(memoryAllocHeapArray_ptr, var_r4);
                 }
             }
             

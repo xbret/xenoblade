@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/hbm/nw4hbm/ut/ut_list.o"
 
-# 0x80338650 - 0x803387C0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4hbm::ut::List_Init(nw4hbm::ut::List*, unsigned short)

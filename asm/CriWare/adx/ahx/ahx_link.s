@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/adx/ahx/ahx_link.o"
 
-# 0x8038A668 - 0x8038A9B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn AHXTBL_GetFtblInfo, global
@@ -75,23 +74,23 @@
 /* 8038A750 00353D10  48 00 00 78 */	b .L_8038A7C8
 .L_8038A754:
 /* 8038A754 00353D14  3F A0 80 39 */	lis r29, AHXLINK_DetachAhx@ha
-/* 8038A758 00353D18  3F E0 80 39 */	lis r31, fn_8038A888@ha
-/* 8038A75C 00353D1C  3D 60 80 39 */	lis r11, fn_8038A884@ha
+/* 8038A758 00353D18  3F E0 80 39 */	lis r31, func_8038A888@ha
+/* 8038A75C 00353D1C  3D 60 80 39 */	lis r11, func_8038A884@ha
 /* 8038A760 00353D20  3D 20 80 39 */	lis r9, AHXLINK_ExecOneAhx@ha
 /* 8038A764 00353D24  3C E0 80 39 */	lis r7, AHXSJD_SetInSj@ha
-/* 8038A768 00353D28  3C A0 80 39 */	lis r5, fn_8038CEE8@ha
+/* 8038A768 00353D28  3C A0 80 39 */	lis r5, func_8038CEE8@ha
 /* 8038A76C 00353D2C  90 7E 00 B8 */	stw r3, 0xb8(r30)
 /* 8038A770 00353D30  3B BD A7 F8 */	addi r29, r29, AHXLINK_DetachAhx@l
 /* 8038A774 00353D34  3F C0 80 5F */	lis r30, lbl_805E85A0@ha
-/* 8038A778 00353D38  3B FF A8 88 */	addi r31, r31, fn_8038A888@l
+/* 8038A778 00353D38  3B FF A8 88 */	addi r31, r31, func_8038A888@l
 /* 8038A77C 00353D3C  3D 80 80 5F */	lis r12, ahxexecfunc@ha
-/* 8038A780 00353D40  39 6B A8 84 */	addi r11, r11, fn_8038A884@l
+/* 8038A780 00353D40  39 6B A8 84 */	addi r11, r11, func_8038A884@l
 /* 8038A784 00353D44  3D 40 80 5F */	lis r10, ahxtermsupplyfunc@ha
 /* 8038A788 00353D48  39 29 A8 80 */	addi r9, r9, AHXLINK_ExecOneAhx@l
 /* 8038A78C 00353D4C  3D 00 80 5F */	lis r8, ahxsetdecsmplfunc@ha
 /* 8038A790 00353D50  38 E7 CA D8 */	addi r7, r7, AHXSJD_SetInSj@l
 /* 8038A794 00353D54  3C C0 80 5F */	lis r6, ahxsetsjifunc@ha
-/* 8038A798 00353D58  38 A5 CE E8 */	addi r5, r5, fn_8038CEE8@l
+/* 8038A798 00353D58  38 A5 CE E8 */	addi r5, r5, func_8038CEE8@l
 /* 8038A79C 00353D5C  3C 80 80 5F */	lis r4, ahxsetextfunc@ha
 /* 8038A7A0 00353D60  93 BE 85 A0 */	stw r29, lbl_805E85A0@l(r30)
 /* 8038A7A4 00353D64  93 EC 89 D4 */	stw r31, ahxexecfunc@l(r12)
@@ -101,7 +100,7 @@
 /* 8038A7B4 00353D74  90 A4 89 DC */	stw r5, ahxsetextfunc@l(r4)
 /* 8038A7B8 00353D78  80 9C 00 58 */	lwz r4, 0x58(r28)
 /* 8038A7BC 00353D7C  80 BC 00 5C */	lwz r5, 0x5c(r28)
-/* 8038A7C0 00353D80  48 00 27 1D */	bl fn_8038CEDC
+/* 8038A7C0 00353D80  48 00 27 1D */	bl func_8038CEDC
 /* 8038A7C4 00353D84  48 01 02 61 */	bl ADXM_Unlock
 .L_8038A7C8:
 /* 8038A7C8 00353D88  BB 41 00 08 */	lmw r26, 0x8(r1)
@@ -164,11 +163,11 @@
 /* 8038A880 00353E40  48 00 26 70 */	b .L_8038CEF0
 .endfn AHXLINK_ExecOneAhx
 
-.fn fn_8038A884, global
-/* 8038A884 00353E44  48 00 26 74 */	b fn_8038CEF8
-.endfn fn_8038A884
+.fn func_8038A884, global
+/* 8038A884 00353E44  48 00 26 74 */	b func_8038CEF8
+.endfn func_8038A884
 
-.fn fn_8038A888, global
+.fn func_8038A888, global
 /* 8038A888 00353E48  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038A88C 00353E4C  7C 08 02 A6 */	mflr r0
 /* 8038A890 00353E50  90 01 00 24 */	stw r0, 0x24(r1)
@@ -196,12 +195,12 @@
 /* 8038A8E4 00353EA4  40 82 00 14 */	bne .L_8038A8F8
 /* 8038A8E8 00353EA8  7F C3 F3 78 */	mr r3, r30
 /* 8038A8EC 00353EAC  38 80 00 00 */	li r4, 0x0
-/* 8038A8F0 00353EB0  48 00 26 15 */	bl fn_8038CF04
+/* 8038A8F0 00353EB0  48 00 26 15 */	bl func_8038CF04
 /* 8038A8F4 00353EB4  48 00 00 10 */	b .L_8038A904
 .L_8038A8F8:
 /* 8038A8F8 00353EB8  7F C3 F3 78 */	mr r3, r30
 /* 8038A8FC 00353EBC  38 80 00 01 */	li r4, 0x1
-/* 8038A900 00353EC0  48 00 26 05 */	bl fn_8038CF04
+/* 8038A900 00353EC0  48 00 26 05 */	bl func_8038CF04
 .L_8038A904:
 /* 8038A904 00353EC4  38 00 00 00 */	li r0, 0x0
 /* 8038A908 00353EC8  7F C3 F3 78 */	mr r3, r30
@@ -250,12 +249,13 @@
 /* 8038A9A4 00353F64  7C 08 03 A6 */	mtlr r0
 /* 8038A9A8 00353F68  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038A9AC 00353F6C  4E 80 00 20 */	blr
-.endfn fn_8038A888
+.endfn func_8038A888
 
 # 0x8051AB10 - 0x8051ABB8
 .rodata
 .balign 8
-.sym lbl_8051AB10, global
+.global lbl_8051AB10
+lbl_8051AB10:
 	.4byte 0x45323030
 	.4byte 0x35303932
 	.4byte 0x32303320
@@ -302,5 +302,6 @@
 # 0x805657B4 - 0x805657B8
 .data
 .balign 4
-.sym lbl_805657B4, global
+.global lbl_805657B4
+lbl_805657B4:
 	.4byte 0x00002080

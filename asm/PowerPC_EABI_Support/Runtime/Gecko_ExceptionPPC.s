@@ -1,87 +1,7 @@
 .include "macros.inc"
-.file "PowerPC_EABI_Support/Runtime/Gecko_ExceptionPPC.o"
 
-# 0x8001BF40 - 0x8001BF80
-.section extab, "a"
-.balign 4
+.section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.obj "@etb_8001BF40", local
-.hidden "@etb_8001BF40"
-	.4byte 0x10080000
-	.4byte 0x00000000
-.endobj "@etb_8001BF40"
-
-.obj "@etb_8001BF48", local
-.hidden "@etb_8001BF48"
-	.4byte 0x10080000
-	.4byte 0x00000000
-.endobj "@etb_8001BF48"
-
-.obj "@etb_8001BF50", local
-.hidden "@etb_8001BF50"
-	.4byte 0x280A0000
-	.4byte 0x00000000
-.endobj "@etb_8001BF50"
-
-.obj "@etb_8001BF58", local
-.hidden "@etb_8001BF58"
-	.4byte 0x50080000
-	.4byte 0x00000054
-	.4byte 0x01250010
-	.4byte 0x00000000
-	.4byte 0x8E000000
-.endobj "@etb_8001BF58"
-
-.obj "@etb_8001BF6C", local
-.hidden "@etb_8001BF6C"
-	.4byte 0x28080000
-	.4byte 0x00000274
-	.4byte 0x000F0010
-	.4byte 0x00000000
-	.4byte 0x8E000000
-.endobj "@etb_8001BF6C"
-
-# 0x80033AD0 - 0x80033B0C
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80033AD0", local
-.hidden "@eti_80033AD0"
-	.4byte MWExceptionInfo$7ExPPC_FindExceptionRecord
-	.4byte 0x000001B0
-	.4byte "@etb_8001BF40"
-.endobj "@eti_80033AD0"
-
-.obj "@eti_80033ADC", local
-.hidden "@eti_80033ADC"
-	.4byte ActionIterator$7ExPPC_NextAction
-	.4byte 0x000001B0
-	.4byte "@etb_8001BF48"
-.endobj "@eti_80033ADC"
-
-.obj "@eti_80033AE8", local
-.hidden "@eti_80033AE8"
-	.4byte ThrowContext$7ExPPC_PopStackFrame
-	.4byte 0x00000554
-	.4byte "@etb_8001BF50"
-.endobj "@eti_80033AE8"
-
-.obj "@eti_80033AF4", local
-.hidden "@eti_80033AF4"
-	.4byte ThrowContext$7ExPPC_UnwindStack
-	.4byte 0x0000050C
-	.4byte "@etb_8001BF58"
-.endobj "@eti_80033AF4"
-
-.obj "@eti_80033B00", local
-.hidden "@eti_80033B00"
-	.4byte ThrowContext$7ExPPC_ThrowHandler
-	.4byte 0x00000408
-	.4byte "@etb_8001BF6C"
-.endobj "@eti_80033B00"
-
-# 0x802BA7E4 - 0x802BBD00
-.text
 .balign 4
 
 .fn __register_fragment, global
@@ -1615,7 +1535,7 @@
 .data
 .balign 8
 
-.obj jumptable_8053F068, local
+jumptable_8053F068:
 	.rel ActionIterator$7ExPPC_NextAction, .L_802BAC08
 	.rel ActionIterator$7ExPPC_NextAction, .L_802BAC08
 	.rel ActionIterator$7ExPPC_NextAction, .L_802BAB60
@@ -1633,9 +1553,8 @@
 	.rel ActionIterator$7ExPPC_NextAction, .L_802BAC08
 	.rel ActionIterator$7ExPPC_NextAction, .L_802BABF0
 	.rel ActionIterator$7ExPPC_NextAction, .L_802BABD8
-.endobj jumptable_8053F068
 
-.obj jumptable_8053F0AC, local
+jumptable_8053F0AC:
 	.rel ThrowContext$7ExPPC_UnwindStack, .L_802BB688
 	.rel ThrowContext$7ExPPC_UnwindStack, .L_802BB240
 	.rel ThrowContext$7ExPPC_UnwindStack, .L_802BB254
@@ -1653,10 +1572,89 @@
 	.rel ThrowContext$7ExPPC_UnwindStack, .L_802BB688
 	.rel ThrowContext$7ExPPC_UnwindStack, .L_802BB668
 	.rel ThrowContext$7ExPPC_UnwindStack, .L_802BB608
-.endobj jumptable_8053F0AC
 
 # 0x8057AE90 - 0x8057B010
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8057AE90, global
+.global lbl_8057AE90
+lbl_8057AE90:
 	.skip 0x180
+
+# 0x8001BF40 - 0x8001BF80
+.section extab, "a"
+.balign 4
+
+.obj "@etb_8001BF40", local
+.hidden "@etb_8001BF40"
+	.4byte 0x10080000
+	.4byte 0x00000000
+.endobj "@etb_8001BF40"
+
+.obj "@etb_8001BF48", local
+.hidden "@etb_8001BF48"
+	.4byte 0x10080000
+	.4byte 0x00000000
+.endobj "@etb_8001BF48"
+
+.obj "@etb_8001BF50", local
+.hidden "@etb_8001BF50"
+	.4byte 0x280A0000
+	.4byte 0x00000000
+.endobj "@etb_8001BF50"
+
+.obj "@etb_8001BF58", local
+.hidden "@etb_8001BF58"
+	.4byte 0x50080000
+	.4byte 0x00000054
+	.4byte 0x01250010
+	.4byte 0x00000000
+	.4byte 0x8E000000
+.endobj "@etb_8001BF58"
+
+.obj "@etb_8001BF6C", local
+.hidden "@etb_8001BF6C"
+	.4byte 0x28080000
+	.4byte 0x00000274
+	.4byte 0x000F0010
+	.4byte 0x00000000
+	.4byte 0x8E000000
+.endobj "@etb_8001BF6C"
+
+# 0x80033AD0 - 0x80033B0C
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80033AD0", local
+.hidden "@eti_80033AD0"
+	.4byte MWExceptionInfo$7ExPPC_FindExceptionRecord
+	.4byte 0x000001B0
+	.4byte "@etb_8001BF40"
+.endobj "@eti_80033AD0"
+
+.obj "@eti_80033ADC", local
+.hidden "@eti_80033ADC"
+	.4byte ActionIterator$7ExPPC_NextAction
+	.4byte 0x000001B0
+	.4byte "@etb_8001BF48"
+.endobj "@eti_80033ADC"
+
+.obj "@eti_80033AE8", local
+.hidden "@eti_80033AE8"
+	.4byte ThrowContext$7ExPPC_PopStackFrame
+	.4byte 0x00000554
+	.4byte "@etb_8001BF50"
+.endobj "@eti_80033AE8"
+
+.obj "@eti_80033AF4", local
+.hidden "@eti_80033AF4"
+	.4byte ThrowContext$7ExPPC_UnwindStack
+	.4byte 0x0000050C
+	.4byte "@etb_8001BF58"
+.endobj "@eti_80033AF4"
+
+.obj "@eti_80033B00", local
+.hidden "@eti_80033B00"
+	.4byte ThrowContext$7ExPPC_ThrowHandler
+	.4byte 0x00000408
+	.4byte "@etb_8001BF6C"
+.endobj "@eti_80033B00"

@@ -1,45 +1,10 @@
 .include "macros.inc"
-.file "kyoshin/appgame/cf/CfCollCylinderImpl.o"
 
-# 0x800093AC - 0x800093BC
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_800093AC", local
-.hidden "@etb_800093AC"
-	.4byte 0x000A0000
-	.4byte 0x00000000
-.endobj "@etb_800093AC"
-
-.obj "@etb_800093B4", local
-.hidden "@etb_800093B4"
-	.4byte 0x000A0000
-	.4byte 0x00000000
-.endobj "@etb_800093B4"
-
-# 0x80024BF0 - 0x80024C08
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80024BF0", local
-.hidden "@eti_80024BF0"
-	.4byte fn_800AB010
-	.4byte 0x00000238
-	.4byte "@etb_800093AC"
-.endobj "@eti_80024BF0"
-
-.obj "@eti_80024BFC", local
-.hidden "@eti_80024BFC"
-	.4byte fn_800AB248
-	.4byte 0x0000009C
-	.4byte "@etb_800093B4"
-.endobj "@eti_80024BFC"
-
-# 0x800AB010 - 0x800AB2E4
-.text
-.balign 4
-
-.fn fn_800AB010, global
+.fn func_800AB010, global
 /* 800AB010 000745D0  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 800AB014 000745D4  7C 08 02 A6 */	mflr r0
 /* 800AB018 000745D8  90 01 00 94 */	stw r0, 0x94(r1)
@@ -184,14 +149,14 @@
 /* 800AB228 000747E8  38 64 00 A0 */	addi r3, r4, 0xa0
 /* 800AB22C 000747EC  38 A1 00 78 */	addi r5, r1, 0x78
 /* 800AB230 000747F0  38 84 00 AC */	addi r4, r4, 0xac
-/* 800AB234 000747F4  4B FF C3 B9 */	bl fn_800A75EC
+/* 800AB234 000747F4  4B FF C3 B9 */	bl func_800A75EC
 /* 800AB238 000747F8  80 01 00 94 */	lwz r0, 0x94(r1)
 /* 800AB23C 000747FC  7C 08 03 A6 */	mtlr r0
 /* 800AB240 00074800  38 21 00 90 */	addi r1, r1, 0x90
 /* 800AB244 00074804  4E 80 00 20 */	blr
-.endfn fn_800AB010
+.endfn func_800AB010
 
-.fn fn_800AB248, global
+.fn func_800AB248, global
 /* 800AB248 00074808  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800AB24C 0007480C  7C 08 02 A6 */	mflr r0
 /* 800AB250 00074810  C0 02 8E 88 */	lfs f0, lbl_80669208@sda21(r2)
@@ -207,7 +172,7 @@
 /* 800AB278 00074838  7C C5 33 78 */	mr r5, r6
 /* 800AB27C 0007483C  38 84 00 A0 */	addi r4, r4, 0xa0
 /* 800AB280 00074840  EC 20 08 2A */	fadds f1, f0, f1
-/* 800AB284 00074844  4B FF A8 95 */	bl fn_800A5B18
+/* 800AB284 00074844  4B FF A8 95 */	bl func_800A5B18
 /* 800AB288 00074848  48 00 00 4C */	b .L_800AB2D4
 .L_800AB28C:
 /* 800AB28C 0007484C  C0 04 00 A0 */	lfs f0, 0xa0(r4)
@@ -227,10 +192,44 @@
 /* 800AB2C4 00074884  EC 42 00 2A */	fadds f2, f2, f0
 /* 800AB2C8 00074888  C0 07 00 B8 */	lfs f0, 0xb8(r7)
 /* 800AB2CC 0007488C  EC 20 08 2A */	fadds f1, f0, f1
-/* 800AB2D0 00074890  4B FF A8 49 */	bl fn_800A5B18
+/* 800AB2D0 00074890  4B FF A8 49 */	bl func_800A5B18
 .L_800AB2D4:
 /* 800AB2D4 00074894  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 800AB2D8 00074898  7C 08 03 A6 */	mtlr r0
 /* 800AB2DC 0007489C  38 21 00 20 */	addi r1, r1, 0x20
 /* 800AB2E0 000748A0  4E 80 00 20 */	blr
-.endfn fn_800AB248
+.endfn func_800AB248
+
+# 0x800093AC - 0x800093BC
+.section extab, "a"
+.balign 4
+
+.obj "@etb_800093AC", local
+.hidden "@etb_800093AC"
+	.4byte 0x000A0000
+	.4byte 0x00000000
+.endobj "@etb_800093AC"
+
+.obj "@etb_800093B4", local
+.hidden "@etb_800093B4"
+	.4byte 0x000A0000
+	.4byte 0x00000000
+.endobj "@etb_800093B4"
+
+# 0x80024BF0 - 0x80024C08
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80024BF0", local
+.hidden "@eti_80024BF0"
+	.4byte func_800AB010
+	.4byte 0x00000238
+	.4byte "@etb_800093AC"
+.endobj "@eti_80024BF0"
+
+.obj "@eti_80024BFC", local
+.hidden "@eti_80024BFC"
+	.4byte func_800AB248
+	.4byte 0x0000009C
+	.4byte "@etb_800093B4"
+.endobj "@eti_80024BFC"

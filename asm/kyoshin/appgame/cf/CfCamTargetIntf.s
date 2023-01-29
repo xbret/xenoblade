@@ -1,29 +1,7 @@
 .include "macros.inc"
-.file "kyoshin/appgame/cf/CfCamTargetIntf.o"
 
-# 0x800080A0 - 0x800080A8
-.section extab, "a"
-.balign 4
+.section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.obj "@etb_800080A0", local
-.hidden "@etb_800080A0"
-	.4byte 0x100A0000
-	.4byte 0x00000000
-.endobj "@etb_800080A0"
-
-# 0x800233C0 - 0x800233CC
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_800233C0", local
-.hidden "@eti_800233C0"
-	.4byte CfCamTargetIntf_setDir
-	.4byte 0x00000074
-	.4byte "@etb_800080A0"
-.endobj "@eti_800233C0"
-
-# 0x8006B5D4 - 0x8006B6A0
-.text
 .balign 4
 
 .fn CfCamTargetIntf_update, global
@@ -56,7 +34,7 @@
 /* 8006B624 00034BE4  7C 9E 23 78 */	mr r30, r4
 /* 8006B628 00034BE8  C0 24 02 84 */	lfs f1, 0x284(r4)
 /* 8006B62C 00034BEC  38 84 02 68 */	addi r4, r4, 0x268
-/* 8006B630 00034BF0  48 00 8E 59 */	bl fn_80074488
+/* 8006B630 00034BF0  48 00 8E 59 */	bl func_80074488
 /* 8006B634 00034BF4  80 61 00 08 */	lwz r3, 0x8(r1)
 /* 8006B638 00034BF8  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8006B63C 00034BFC  90 1E 02 78 */	stw r0, 0x278(r30)
@@ -88,3 +66,24 @@
 /* 8006B698 00034C58  D0 04 02 64 */	stfs f0, 0x264(r4)
 /* 8006B69C 00034C5C  4E 80 00 20 */	blr
 .endfn CfCamTargetIntf_setLookat
+
+# 0x800080A0 - 0x800080A8
+.section extab, "a"
+.balign 4
+
+.obj "@etb_800080A0", local
+.hidden "@etb_800080A0"
+	.4byte 0x100A0000
+	.4byte 0x00000000
+.endobj "@etb_800080A0"
+
+# 0x800233C0 - 0x800233CC
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_800233C0", local
+.hidden "@eti_800233C0"
+	.4byte CfCamTargetIntf_setDir
+	.4byte 0x00000074
+	.4byte "@etb_800080A0"
+.endobj "@eti_800233C0"

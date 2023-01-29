@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/bta_sys_conn.o"
 
-# 0x802DE708 - 0x802DE95C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 8
 
 .fn bta_sys_rm_register, global

@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/lyt/lyt_pane.o"
 
-# 0x803FE904 - 0x803FF934
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::lyt::Pane::Pane()
@@ -1267,7 +1266,8 @@
 # 0x8056D1D0 - 0x8056D248
 .data
 .balign 8
-.sym lbl_8056D1D0, global
+.global lbl_8056D1D0
+lbl_8056D1D0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte __dt__Q34nw4r3lyt4PaneFv
@@ -1302,25 +1302,33 @@
 # 0x80667D50 - 0x80667D60
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80667D50, global
+.global lbl_80667D50
+lbl_80667D50:
 	.skip 0x8
-.sym lbl_80667D58, global
+.global lbl_80667D58
+lbl_80667D58:
 	.skip 0x8
 
 # 0x8066C538 - 0x8066C558
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C538, global
+.global lbl_8066C538
+lbl_8066C538:
 	.4byte 0x00000000
-.sym lbl_8066C53C, global
+.global lbl_8066C53C
+lbl_8066C53C:
 	.4byte 0x3F800000
-.sym lbl_8066C540, global
+.global lbl_8066C540
+lbl_8066C540:
 	.4byte 0x3C8EFA35
-.sym lbl_8066C544, global
+.global lbl_8066C544
+lbl_8066C544:
 	.4byte 0x3B808081
-.sym lbl_8066C548, global
+.global lbl_8066C548
+lbl_8066C548:
 	.4byte 0x43300000
 	.4byte 0x00000000
-.sym lbl_8066C550, global
+.global lbl_8066C550
+lbl_8066C550:
 	.4byte 0x3F000000
 	.4byte 0x00000000

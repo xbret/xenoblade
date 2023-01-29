@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_scnproc.o"
 
-# 0x803FCE38 - 0x803FD128
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::ScnProc::Construct(MEMAllocator*, unsigned long*, void (*)(nw4r::g3d::ScnProc*, bool), bool, bool, unsigned long)
@@ -238,7 +237,8 @@
 # 0x80521100 - 0x80521110
 .rodata
 .balign 8
-.sym lbl_80521100, global
+.global lbl_80521100
+lbl_80521100:
 	.4byte 0x00000008
 	.4byte 0x53636E50
 	.4byte 0x726F6300
@@ -247,7 +247,8 @@
 # 0x8056D150 - 0x8056D188
 .data
 .balign 8
-.sym lbl_8056D150, global
+.global lbl_8056D150
+lbl_8056D150:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte IsDerivedFrom__Q34nw4r3g3d7ScnProcCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -266,6 +267,7 @@
 # 0x8066C4F0 - 0x8066C4F8
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C4F0, global
+.global lbl_8066C4F0
+lbl_8066C4F0:
 	.4byte 0x3F800000
 	.4byte 0x00000000

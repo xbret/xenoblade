@@ -1,4 +1,4 @@
-HeapListEntry* fn_804339B8(HeapListEntry** memoryAllocHeapArray_ptr, HeapListEntry* arg1) {
+HeapListEntry* func_804339B8(HeapListEntry** memoryAllocHeapArray_ptr, HeapListEntry* arg1) {
     HeapListEntry* var_r4 = arg1;
     HeapListEntry* temp_r31 = var_r4->unk8;
     
@@ -48,7 +48,7 @@ HeapListEntry* fn_804339B8(HeapListEntry** memoryAllocHeapArray_ptr, HeapListEnt
 }
 
 
-HeapListEntry* fn_80433AA8(HeapListEntry* arg0, HeapListEntry* arg1) {
+HeapListEntry* func_80433AA8(HeapListEntry* arg0, HeapListEntry* arg1) {
 
     HeapListEntry* var_r31 = arg1;
     HeapListEntry* temp_r6 = arg1->prev;
@@ -86,7 +86,7 @@ HeapListEntry* fn_80433AA8(HeapListEntry* arg0, HeapListEntry* arg1) {
             }
         }
         if (var_r5->next != NULL) {
-            fn_80433AA8(arg0, var_r5->next);
+            func_80433AA8(arg0, var_r5->next);
         }
     }
     

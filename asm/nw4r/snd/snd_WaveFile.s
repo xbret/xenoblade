@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_WaveFile.o"
 
-# 0x8042984C - 0x80429BD8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::WaveArchiveReader::WaveArchiveReader(const void*)

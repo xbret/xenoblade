@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/sfd/sfd_uo.o"
 
-# 0x803CEA54 - 0x803CEC9C
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFD_SetUsrSj, global
@@ -205,7 +204,8 @@
 # 0x80520678 - 0x805206B0
 .rodata
 .balign 8
-.sym lbl_80520678, global
+.global lbl_80520678
+lbl_80520678:
 	.4byte SFUO_Init
 	.4byte SFUO_Finish
 	.4byte SFUO_ExecServer

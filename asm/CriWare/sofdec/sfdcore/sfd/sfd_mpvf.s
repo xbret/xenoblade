@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/sfd/sfd_mpvf.o"
 
-# 0x803C7BB0 - 0x803C8BA8
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFMPVF_InitPool, global
@@ -782,7 +781,7 @@
 /* 803C8630 00391BF0  4E 80 00 20 */	blr
 .endfn SFMPVF_IsTermDec
 
-.fn fn_803C8634, global
+.fn func_803C8634, global
 /* 803C8634 00391BF4  80 A3 28 44 */	lwz r5, 0x2844(r3)
 /* 803C8638 00391BF8  38 83 28 50 */	addi r4, r3, 0x2850
 /* 803C863C 00391BFC  38 00 00 01 */	li r0, 0x1
@@ -801,7 +800,7 @@
 /* 803C8664 00391C24  38 84 01 08 */	addi r4, r4, 0x108
 /* 803C8668 00391C28  42 00 FF E4 */	bdnz .L_803C864C
 /* 803C866C 00391C2C  4E 80 00 20 */	blr
-.endfn fn_803C8634
+.endfn func_803C8634
 
 .fn SFMPVF_GetNumFrm, global
 /* 803C8670 00391C30  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1211,5 +1210,6 @@
 # 0x8061CD58 - 0x8061CDD8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061CD58, global
+.global lbl_8061CD58
+lbl_8061CD58:
 	.skip 0x80

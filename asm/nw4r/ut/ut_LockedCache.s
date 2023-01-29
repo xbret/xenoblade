@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/ut/ut_LockedCache.o"
 
-# 0x8042BE20 - 0x8042BFCC
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::ut::LC::Enable()
@@ -161,5 +160,6 @@
 # 0x80657088 - 0x806570A8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_80657088, global
+.global lbl_80657088
+lbl_80657088:
 	.skip 0x20

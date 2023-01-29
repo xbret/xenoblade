@@ -74,6 +74,7 @@ ifeq ($(WINDOWS),1)
   WINE :=
   AS      := $(DEVKITPPC)/bin/powerpc-eabi-as.exe
   CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp.exe -P
+  SHA1SUM := sha1sum
   PYTHON  := python
 else
   WIBO   := $(shell command -v wibo 2> /dev/null)
@@ -89,13 +90,13 @@ else
   DEPENDS   := $(DEPENDS:.d=.d.unix)
   AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
   CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
+  SHA1SUM := shasum
   PYTHON  := python3
 endif
 CC      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
 LD      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
-DTK     := build/dtk
+DTK     := tools/dtk
 ELF2DOL := $(DTK) elf2dol
-SHASUM  := $(DTK) shasum
 
 # Options
 INCLUDES := -i include/ -i src/
@@ -161,9 +162,9 @@ DUMMY != mkdir -p $(ALL_DIRS)
 
 .PHONY: tools
 
-$(DOL): $(ELF) | $(DTK)
+$(DOL): $(ELF) | tools
 	$(QUIET) $(ELF2DOL) $< $@
-	$(QUIET) $(SHASUM) -c sha1/$(NAME).$(VERSION).sha1
+	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
 ifneq ($(findstring -map,$(LDFLAGS)),)
 	$(QUIET) $(PYTHON) tools/calcprogress.py $@ $(MAP)
 endif

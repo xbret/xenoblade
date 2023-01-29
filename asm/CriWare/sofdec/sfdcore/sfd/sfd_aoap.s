@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/sfd/sfd_aoap.o"
 
-# 0x803BE8C8 - 0x803BED00
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFD_SetOutVol, global
@@ -350,7 +349,8 @@
 # 0x8051FF48 - 0x8051FF80
 .rodata
 .balign 8
-.sym lbl_8051FF48, global
+.global lbl_8051FF48
+lbl_8051FF48:
 	.4byte SFAOAP_Init
 	.4byte SFAOAP_Finish
 	.4byte SFAOAP_ExecServer

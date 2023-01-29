@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/g3d/g3d_init.o"
 
-# 0x803FCD3C - 0x803FCE38
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::g3d::G3dInit(bool)
@@ -88,7 +87,8 @@
 # 0x8056D108 - 0x8056D150
 .data
 .balign 8
-.sym lbl_8056D108, global
+.global lbl_8056D108
+lbl_8056D108:
 	.4byte 0x3C3C204E
 	.4byte 0x57345220
 	.4byte 0x2020202D
@@ -111,6 +111,7 @@
 # 0x80665DE0 - 0x80665DE8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665DE0, global
+.global lbl_80665DE0
+lbl_80665DE0:
 	.4byte lbl_8056D108
 	.4byte 0x00000000

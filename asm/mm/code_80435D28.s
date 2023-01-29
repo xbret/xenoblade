@@ -1,32 +1,10 @@
 .include "macros.inc"
-.file "mm/code_80435D28.o"
 
-# 0x8001C070 - 0x8001C078
-.section extab, "a"
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.obj "@etb_8001C070", local
-.hidden "@etb_8001C070"
-	.4byte 0x100A0000
-	.4byte 0x00000000
-.endobj "@etb_8001C070"
-
-# 0x80033C74 - 0x80033C80
-.section extabindex, "a"
-.balign 4
-
-.obj "@eti_80033C74", local
-.hidden "@eti_80033C74"
-	.4byte fn_80435D28
-	.4byte 0x0000006C
-	.4byte "@etb_8001C070"
-.endobj "@eti_80033C74"
-
-# 0x80435D28 - 0x80435DF8
-.text
-.balign 4
-
-.fn fn_80435D28, global
+.fn func_80435D28, global
 /* 80435D28 003FF2E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80435D2C 003FF2EC  7C 08 02 A6 */	mflr r0
 /* 80435D30 003FF2F0  C0 23 00 00 */	lfs f1, 0x0(r3)
@@ -35,15 +13,15 @@
 /* 80435D3C 003FF2FC  3B E0 00 00 */	li r31, 0x0
 /* 80435D40 003FF300  93 C1 00 08 */	stw r30, 0x8(r1)
 /* 80435D44 003FF304  7C 7E 1B 78 */	mr r30, r3
-/* 80435D48 003FF308  48 00 02 5D */	bl fn_80435FA4
+/* 80435D48 003FF308  48 00 02 5D */	bl func_80435FA4
 /* 80435D4C 003FF30C  2C 03 00 00 */	cmpwi r3, 0x0
 /* 80435D50 003FF310  40 82 00 24 */	bne .L_80435D74
 /* 80435D54 003FF314  C0 3E 00 04 */	lfs f1, 0x4(r30)
-/* 80435D58 003FF318  48 00 02 4D */	bl fn_80435FA4
+/* 80435D58 003FF318  48 00 02 4D */	bl func_80435FA4
 /* 80435D5C 003FF31C  2C 03 00 00 */	cmpwi r3, 0x0
 /* 80435D60 003FF320  40 82 00 14 */	bne .L_80435D74
 /* 80435D64 003FF324  C0 3E 00 08 */	lfs f1, 0x8(r30)
-/* 80435D68 003FF328  48 00 02 3D */	bl fn_80435FA4
+/* 80435D68 003FF328  48 00 02 3D */	bl func_80435FA4
 /* 80435D6C 003FF32C  2C 03 00 00 */	cmpwi r3, 0x0
 /* 80435D70 003FF330  41 82 00 08 */	beq .L_80435D78
 .L_80435D74:
@@ -56,7 +34,7 @@
 /* 80435D88 003FF348  7C 08 03 A6 */	mtlr r0
 /* 80435D8C 003FF34C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80435D90 003FF350  4E 80 00 20 */	blr
-.endfn fn_80435D28
+.endfn func_80435D28
 
 .fn sinit_80435D94, global
 /* 80435D94 003FF354  3D 00 80 66 */	lis r8, lbl_80659DB0@ha
@@ -94,7 +72,30 @@
 # 0x8066C9E8 - 0x8066C9F0
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C9E8, global
+.global lbl_8066C9E8
+lbl_8066C9E8:
 	.4byte 0x00000000
-.sym lbl_8066C9EC, global
+.global lbl_8066C9EC
+lbl_8066C9EC:
 	.4byte 0x3F800000
+
+# 0x8001C070 - 0x8001C078
+.section extab, "a"
+.balign 4
+
+.obj "@etb_8001C070", local
+.hidden "@etb_8001C070"
+	.4byte 0x100A0000
+	.4byte 0x00000000
+.endobj "@etb_8001C070"
+
+# 0x80033C74 - 0x80033C80
+.section extabindex, "a"
+.balign 4
+
+.obj "@eti_80033C74", local
+.hidden "@eti_80033C74"
+	.4byte func_80435D28
+	.4byte 0x0000006C
+	.4byte "@etb_8001C070"
+.endobj "@eti_80033C74"

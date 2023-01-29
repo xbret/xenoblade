@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/nand/nand.o"
 
-# 0x8034E730 - 0x8034F8B0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn NANDPrivateCreate, global
@@ -72,7 +71,7 @@
 /* 8034E81C 00317DDC  4E 80 00 20 */	blr
 .endfn NANDPrivateCreate
 
-.fn fn_8034E820, global
+.fn func_8034E820, global
 /* 8034E820 00317DE0  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8034E824 00317DE4  7C 08 02 A6 */	mflr r0
 /* 8034E828 00317DE8  90 01 00 74 */	stw r0, 0x74(r1)
@@ -148,7 +147,7 @@
 /* 8034E92C 00317EEC  7C 08 03 A6 */	mtlr r0
 /* 8034E930 00317EF0  38 21 00 70 */	addi r1, r1, 0x70
 /* 8034E934 00317EF4  4E 80 00 20 */	blr
-.endfn fn_8034E820
+.endfn func_8034E820
 /* 8034E938 00317EF8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 /* 8034E93C 00317EFC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
@@ -1279,7 +1278,9 @@
 # 0x80665AE0 - 0x80665AE8
 .section .sdata, "wa"
 .balign 8
-.sym lbl_80665AE0, global
+.global lbl_80665AE0
+lbl_80665AE0:
 	.4byte 0x2F000000
-.sym lbl_80665AE4, global
+.global lbl_80665AE4
+lbl_80665AE4:
 	.4byte 0x2F257300

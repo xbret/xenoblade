@@ -1,23 +1,22 @@
 .include "macros.inc"
-.file "monolithlib/code_804C8684.o"
 
-# 0x804C8684 - 0x804C8718
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
-.fn fn_804C8684, global
+.fn func_804C8684, global
 /* 804C8684 00491C44  4E 80 00 20 */	blr
-.endfn fn_804C8684
+.endfn func_804C8684
 
-.fn fn_804C8688, global
+.fn func_804C8688, global
 /* 804C8688 00491C48  4E 80 00 20 */	blr
-.endfn fn_804C8688
+.endfn func_804C8688
 
-.fn fn_804C868C, global
+.fn func_804C868C, global
 /* 804C868C 00491C4C  4E 80 00 20 */	blr
-.endfn fn_804C868C
+.endfn func_804C868C
 
-.fn fn_804C8690, global
+.fn func_804C8690, global
 /* 804C8690 00491C50  2C 04 00 00 */	cmpwi r4, 0x0
 /* 804C8694 00491C54  98 6D C0 F8 */	stb r3, lbl_80668278@sda21(r13)
 /* 804C8698 00491C58  4D 82 00 20 */	beqlr
@@ -30,7 +29,7 @@
 /* 804C86B4 00491C74  80 04 00 08 */	lwz r0, 0x8(r4)
 /* 804C86B8 00491C78  90 05 00 08 */	stw r0, 0x8(r5)
 /* 804C86BC 00491C7C  4E 80 00 20 */	blr
-.endfn fn_804C8690
+.endfn func_804C8690
 
 .fn sinit_804C86C0, global
 /* 804C86C0 00491C80  3C C0 80 66 */	lis r6, lbl_806624A8@ha
@@ -65,28 +64,36 @@
 # 0x806624A8 - 0x806624D8
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_806624A8, global
+.global lbl_806624A8
+lbl_806624A8:
 	.skip 0x20
-.sym lbl_806624C8, global
+.global lbl_806624C8
+lbl_806624C8:
 	.skip 0x10
 
 # 0x80668278 - 0x80668280
 .section .sbss, "wa", @nobits
 .balign 8
-.sym lbl_80668278, global
+.global lbl_80668278
+lbl_80668278:
 	.skip 0x8
 
 # 0x8066D838 - 0x8066D850
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066D838, global
+.global lbl_8066D838
+lbl_8066D838:
 	.4byte 0x3F800000
-.sym lbl_8066D83C, global
+.global lbl_8066D83C
+lbl_8066D83C:
 	.4byte 0x00000000
-.sym lbl_8066D840, global
+.global lbl_8066D840
+lbl_8066D840:
 	.4byte 0x3F4CCCCD
-.sym lbl_8066D844, global
+.global lbl_8066D844
+lbl_8066D844:
 	.4byte 0x40A00000
-.sym lbl_8066D848, global
+.global lbl_8066D848
+lbl_8066D848:
 	.4byte 0x43C58000
 	.4byte 0x00000000

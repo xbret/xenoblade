@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "nw4r/snd/snd_BiquadFilterPreset.o"
 
-# 0x80413B14 - 0x80413DE0
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 # nw4r::snd::detail::BiquadFilterLpf::GetCoef(int, float, nw4r::snd::BiquadFilterCallback::BiquadCoef*) const
@@ -217,7 +216,8 @@
 # 0x80522120 - 0x80523558
 .rodata
 .balign 8
-.sym lbl_80522120, global
+.global lbl_80522120
+lbl_80522120:
 	.4byte 0x3AB37566
 	.4byte 0x3AB383B8
 	.4byte 0xC391371B
@@ -498,7 +498,8 @@
 	.4byte 0xC25A0004
 	.4byte 0x00070004
 	.4byte 0x7DB0C241
-.sym lbl_80522580, global
+.global lbl_80522580
+lbl_80522580:
 	.4byte 0x3BB58895
 	.4byte 0x3BB57E7B
 	.4byte 0xC17F3BAD
@@ -742,7 +743,8 @@
 	.4byte 0x167BD30A
 	.4byte 0x167B0DC1
 	.4byte 0xEE800000
-.sym lbl_8052294C, global
+.global lbl_8052294C
+lbl_8052294C:
 	.4byte 0x2EFA0000
 	.4byte 0xD10621D7
 	.4byte 0x1DF42E8F
@@ -1048,7 +1050,8 @@
 	.4byte 0xC5430244
 	.4byte 0x0000FDBC
 	.4byte 0x7ADFC488
-.sym lbl_80522E10, global
+.global lbl_80522E10
+lbl_80522E10:
 	.4byte 0x2F040000
 	.4byte 0xD0FC21DE
 	.4byte 0x1E082E99
@@ -1282,7 +1285,8 @@
 	.4byte 0x038A0000
 	.4byte 0xFC7676C8
 	.4byte 0xC7140000
-.sym lbl_805231B4, global
+.global lbl_805231B4
+lbl_805231B4:
 	.4byte 0x3F420000
 	.4byte 0xC0BE0136
 	.4byte 0x3E833E8A
@@ -1520,9 +1524,11 @@
 # 0x8066C6F8 - 0x8066C708
 .section .sdata2, "a"
 .balign 8
-.sym lbl_8066C6F8, global
+.global lbl_8066C6F8
+lbl_8066C6F8:
 	.4byte 0x43300000
 	.4byte 0x80000000
-.sym lbl_8066C700, global
+.global lbl_8066C700
+lbl_8066C700:
 	.4byte 0x40000000
 	.4byte 0x00000000

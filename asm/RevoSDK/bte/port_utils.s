@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/port_utils.o"
 
-# 0x802FDE78 - 0x802FE450
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 8
 
 .fn port_select_mtu, global
@@ -439,7 +438,8 @@
 # 0x80548530 - 0x80548678
 .data
 .balign 8
-.sym lbl_80548530, global
+.global lbl_80548530
+lbl_80548530:
 	.4byte 0x706F7274
 	.4byte 0x5F73656C
 	.4byte 0x6563745F
@@ -504,14 +504,16 @@
 	.4byte 0x72697469
 	.4byte 0x63616C20
 	.4byte 0x25640000
-.sym lbl_80548630, global
+.global lbl_80548630
+lbl_80548630:
 	.4byte 0x7266635F
 	.4byte 0x706F7274
 	.4byte 0x5F636C6F
 	.4byte 0x73656420
 	.4byte 0x444F4E45
 	.4byte 0x00000000
-.sym lbl_80548648, global
+.global lbl_80548648
+lbl_80548648:
 	.4byte 0x504F5254
 	.4byte 0x5F446174
 	.4byte 0x61496E64

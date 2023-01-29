@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "CriWare/sofdec/sfdcore/sfd/sfd_ply.o"
 
-# 0x803C901C - 0x803CB858
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 4
 
 .fn SFPLY_Init, global
@@ -62,7 +61,7 @@
 /* 803C90D0 00392690  4E 80 00 20 */	blr
 .endfn SFD_IsHnSvrWait
 
-.fn fn_803C90D4, global
+.fn func_803C90D4, global
 /* 803C90D4 00392694  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C90D8 00392698  7C 08 02 A6 */	mflr r0
 /* 803C90DC 0039269C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -111,7 +110,7 @@
 /* 803C9178 00392738  7C 08 03 A6 */	mtlr r0
 /* 803C917C 0039273C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C9180 00392740  4E 80 00 20 */	blr
-.endfn fn_803C90D4
+.endfn func_803C90D4
 
 .fn sfply_ExecOne, global
 /* 803C9184 00392744  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1159,7 +1158,7 @@
 /* 803C9FBC 0039357C  4E 80 00 20 */	blr
 .endfn sfply_IsEtrg
 
-.fn fn_803C9FC0, global
+.fn func_803C9FC0, global
 /* 803C9FC0 00393580  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C9FC4 00393584  7C 08 02 A6 */	mflr r0
 /* 803C9FC8 00393588  38 80 00 01 */	li r4, 0x1
@@ -1203,7 +1202,7 @@
 /* 803CA04C 0039360C  7C 08 03 A6 */	mtlr r0
 /* 803CA050 00393610  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CA054 00393614  4E 80 00 20 */	blr
-.endfn fn_803C9FC0
+.endfn func_803C9FC0
 
 .fn sfply_IsPlayTimeAutoStop, global
 /* 803CA058 00393618  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1240,10 +1239,10 @@
 .L_803CA0C8:
 /* 803CA0C8 00393688  80 81 00 0C */	lwz r4, 0xc(r1)
 /* 803CA0CC 0039368C  7F E3 FB 78 */	mr r3, r31
-/* 803CA0D0 00393690  48 00 00 55 */	bl fn_803CA124
+/* 803CA0D0 00393690  48 00 00 55 */	bl func_803CA124
 /* 803CA0D4 00393694  7F E3 FB 78 */	mr r3, r31
 /* 803CA0D8 00393698  38 81 00 08 */	addi r4, r1, 0x8
-/* 803CA0DC 0039369C  48 00 42 A5 */	bl fn_803CE380
+/* 803CA0DC 0039369C  48 00 42 A5 */	bl func_803CE380
 /* 803CA0E0 003936A0  80 61 00 08 */	lwz r3, 0x8(r1)
 /* 803CA0E4 003936A4  2C 03 FF FF */	cmpwi r3, -0x1
 /* 803CA0E8 003936A8  40 82 00 0C */	bne .L_803CA0F4
@@ -1265,7 +1264,7 @@
 /* 803CA120 003936E0  4E 80 00 20 */	blr
 .endfn sfply_IsPlayTimeAutoStop
 
-.fn fn_803CA124, global
+.fn func_803CA124, global
 /* 803CA124 003936E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CA128 003936E8  7C 08 02 A6 */	mflr r0
 /* 803CA12C 003936EC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1350,7 +1349,7 @@
 /* 803CA244 00393804  7C 08 03 A6 */	mtlr r0
 /* 803CA248 00393808  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CA24C 0039380C  4E 80 00 20 */	blr
-.endfn fn_803CA124
+.endfn func_803CA124
 
 .fn SFD_Create, global
 /* 803CA250 00393810  94 21 FD C0 */	stwu r1, -0x240(r1)
@@ -2008,7 +2007,7 @@
 /* 803CAB78 00394138  4E 80 00 20 */	blr
 .endfn SFD_Start
 
-.fn fn_803CAB7C, global
+.fn func_803CAB7C, global
 /* 803CAB7C 0039413C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CAB80 00394140  7C 08 02 A6 */	mflr r0
 /* 803CAB84 00394144  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2107,7 +2106,7 @@
 /* 803CACD4 00394294  7C 08 03 A6 */	mtlr r0
 /* 803CACD8 00394298  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CACDC 0039429C  4E 80 00 20 */	blr
-.endfn fn_803CAB7C
+.endfn func_803CAB7C
 
 .fn SFPLY_GetResetFlg, global
 /* 803CACE0 003942A0  3C 60 80 61 */	lis r3, SFLIB_libwork@ha
@@ -2408,7 +2407,7 @@
 /* 803CB11C 003946DC  80 A1 02 F8 */	lwz r5, 0x2f8(r1)
 /* 803CB120 003946E0  7D E3 7B 78 */	mr r3, r15
 /* 803CB124 003946E4  7F C4 F3 78 */	mr r4, r30
-/* 803CB128 003946E8  4B FF 5C 6D */	bl fn_803C0D94
+/* 803CB128 003946E8  4B FF 5C 6D */	bl func_803C0D94
 .L_803CB12C:
 /* 803CB12C 003946EC  2C 1D 00 00 */	cmpwi r29, 0x0
 /* 803CB130 003946F0  41 82 00 14 */	beq .L_803CB144
@@ -2436,7 +2435,7 @@
 /* 803CB17C 0039473C  7D E3 7B 78 */	mr r3, r15
 /* 803CB180 00394740  7F 44 D3 78 */	mr r4, r26
 /* 803CB184 00394744  7F 25 CB 78 */	mr r5, r25
-/* 803CB188 00394748  4B FF DE 11 */	bl fn_803C8F98
+/* 803CB188 00394748  4B FF DE 11 */	bl func_803C8F98
 .L_803CB18C:
 /* 803CB18C 0039474C  80 81 00 44 */	lwz r4, 0x44(r1)
 /* 803CB190 00394750  2C 04 00 00 */	cmpwi r4, 0x0
@@ -2490,7 +2489,7 @@
 /* 803CB240 00394800  41 82 00 10 */	beq .L_803CB250
 /* 803CB244 00394804  7D E3 7B 78 */	mr r3, r15
 /* 803CB248 00394808  7E E4 BB 78 */	mr r4, r23
-/* 803CB24C 0039480C  48 00 31 2D */	bl fn_803CE378
+/* 803CB24C 0039480C  48 00 31 2D */	bl func_803CE378
 .L_803CB250:
 /* 803CB250 00394810  2C 16 00 00 */	cmpwi r22, 0x0
 /* 803CB254 00394814  41 82 00 44 */	beq .L_803CB298
@@ -2523,7 +2522,7 @@
 /* 803CB2B8 00394878  41 82 00 10 */	beq .L_803CB2C8
 /* 803CB2BC 0039487C  80 A1 00 1C */	lwz r5, 0x1c(r1)
 /* 803CB2C0 00394880  7D E3 7B 78 */	mr r3, r15
-/* 803CB2C4 00394884  4B FF 62 AD */	bl fn_803C1570
+/* 803CB2C4 00394884  4B FF 62 AD */	bl func_803C1570
 .L_803CB2C8:
 /* 803CB2C8 00394888  38 60 00 00 */	li r3, 0x0
 .L_803CB2CC:
@@ -2933,7 +2932,8 @@
 # 0x805203F0 - 0x805205D8
 .rodata
 .balign 8
-.sym lbl_805203F0, global
+.global lbl_805203F0
+lbl_805203F0:
 	.4byte 0x00000001
 	.4byte 0x00000001
 	.4byte 0x00000001
@@ -3035,9 +3035,11 @@
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.sym lbl_80520584, global
+.global lbl_80520584
+lbl_80520584:
 	.4byte 0x00000000
-.sym lbl_80520588, global
+.global lbl_80520588
+lbl_80520588:
 	.4byte 0x25702C20
 	.4byte 0x256C642C
 	.4byte 0x20256C64
@@ -3063,7 +3065,7 @@
 .data
 .balign 8
 
-.obj jumptable_8056C5F0, local
+jumptable_8056C5F0:
 	.rel sfply_ExecOne, .L_803C95C8
 	.rel sfply_ExecOne, .L_803C923C
 	.rel sfply_ExecOne, .L_803C9268
@@ -3071,16 +3073,18 @@
 	.rel sfply_ExecOne, .L_803C9348
 	.rel sfply_ExecOne, .L_803C95C8
 	.rel sfply_ExecOne, .L_803C95C8
-.endobj jumptable_8056C5F0
 	.4byte 0x00000000
 
 # 0x8061CDD8 - 0x8061CDE4
 .section .bss, "wa", @nobits
 .balign 8
-.sym lbl_8061CDD8, global
+.global lbl_8061CDD8
+lbl_8061CDD8:
 	.skip 0x4
 
-.obj sfply_last_hnctrl_wksiz, global
+.global sfply_last_hnctrl_wksiz
+sfply_last_hnctrl_wksiz:
 	.skip 0x4
-.sym lbl_8061CDE0, global
+.global lbl_8061CDE0
+lbl_8061CDE0:
 	.skip 0x4

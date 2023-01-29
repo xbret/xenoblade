@@ -1,8 +1,7 @@
 .include "macros.inc"
-.file "RevoSDK/bte/sdp_discovery.o"
 
-# 0x803049F0 - 0x80305C68
-.text
+.section .text, "ax"  # 0x80039220 - 0x804F5900
+
 .balign 16
 
 .fn sdpu_build_uuid_seq, global
@@ -1335,7 +1334,8 @@
 # 0x80548FE8 - 0x80549148
 .data
 .balign 8
-.sym lbl_80548FE8, global
+.global lbl_80548FE8
+lbl_80548FE8:
 	.4byte 0x53445020
 	.4byte 0x2D20556E
 	.4byte 0x6578702E
@@ -1346,7 +1346,8 @@
 	.4byte 0x653A2025
 	.4byte 0x64000000
 	.4byte 0x00000000
-.sym lbl_80549010, global
+.global lbl_80549010
+lbl_80549010:
 	.4byte 0x53445020
 	.4byte 0x2D205263
 	.4byte 0x76642053
@@ -1357,7 +1358,8 @@
 	.4byte 0x206E6F20
 	.4byte 0x6D617463
 	.4byte 0x68657300
-.sym lbl_80549038, global
+.global lbl_80549038
+lbl_80549038:
 	.4byte 0x53445020
 	.4byte 0x2D205772
 	.4byte 0x6F6E6720
@@ -1417,7 +1419,7 @@
 	.4byte 0x723A2025
 	.4byte 0x64000000
 
-.obj jumptable_80549120, local
+jumptable_80549120:
 	.rel add_attr, .L_80305BD0
 	.rel add_attr, .L_8030579C
 	.rel add_attr, .L_8030584C
@@ -1427,5 +1429,4 @@
 	.rel add_attr, .L_80305A9C
 	.rel add_attr, .L_80305A9C
 	.rel add_attr, .L_80305B50
-.endobj jumptable_80549120
 	.4byte 0x00000000
