@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.balign 4
+
 
 .fn func_804434FC, global
 /* 804434FC 0040CABC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -18,7 +18,7 @@
 /* 80443524 0040CAE4  7C 64 1B 78 */	mr r4, r3
 /* 80443528 0040CAE8  38 60 05 20 */	li r3, 0x520
 /* 8044352C 0040CAEC  4B FF 15 31 */	bl mm_malloc
-/* 80443530 0040CAF0  2C 03 00 00 */	cmpwi r3, 0x0
+/* 80443530 0040CAF0  2C 03 00 00 */	cmpwi r3, 0
 /* 80443534 0040CAF4  7C 7E 1B 78 */	mr r30, r3
 /* 80443538 0040CAF8  41 82 01 A4 */	beq .L_804436DC
 /* 8044353C 0040CAFC  7F E4 FB 78 */	mr r4, r31
@@ -28,12 +28,12 @@
 /* 8044354C 0040CB0C  3C 60 80 57 */	lis r3, __vt__CViewRoot@ha
 /* 80443550 0040CB10  3C C0 80 57 */	lis r6, __vt___reslist_base_unsigned_long@ha
 /* 80443554 0040CB14  38 63 EF 88 */	addi r3, r3, __vt__CViewRoot@l
-/* 80443558 0040CB18  90 7E 00 00 */	stw r3, 0x0(r30)
+/* 80443558 0040CB18  90 7E 00 00 */	stw r3, 0(r30)
 /* 8044355C 0040CB1C  39 20 00 20 */	li r9, 0x20
 /* 80443560 0040CB20  3C 80 80 57 */	lis r4, __vt__reslist_unsigned_long@ha
 /* 80443564 0040CB24  91 3E 02 D0 */	stw r9, 0x2d0(r30)
 /* 80443568 0040CB28  38 1E 01 C4 */	addi r0, r30, 0x1c4
-/* 8044356C 0040CB2C  3B E0 00 00 */	li r31, 0x0
+/* 8044356C 0040CB2C  3B E0 00 00 */	li r31, 0
 /* 80443570 0040CB30  39 1E 02 D4 */	addi r8, r30, 0x2d4
 /* 80443574 0040CB34  90 1E 02 C4 */	stw r0, 0x2c4(r30)
 /* 80443578 0040CB38  38 FE 03 E4 */	addi r7, r30, 0x3e4
@@ -57,9 +57,9 @@
 /* 804435C0 0040CB80  93 FE 05 0C */	stw r31, 0x50c(r30)
 /* 804435C4 0040CB84  9B FE 05 10 */	stb r31, 0x510(r30)
 /* 804435C8 0040CB88  90 BE 04 F8 */	stw r5, 0x4f8(r30)
-/* 804435CC 0040CB8C  90 A5 00 00 */	stw r5, 0x0(r5)
+/* 804435CC 0040CB8C  90 A5 00 00 */	stw r5, 0(r5)
 /* 804435D0 0040CB90  80 BE 04 F8 */	lwz r5, 0x4f8(r30)
-/* 804435D4 0040CB94  90 A5 00 04 */	stw r5, 0x4(r5)
+/* 804435D4 0040CB94  90 A5 00 04 */	stw r5, 4(r5)
 /* 804435D8 0040CB98  90 9E 04 F4 */	stw r4, 0x4f4(r30)
 /* 804435DC 0040CB9C  93 FE 05 14 */	stw r31, 0x514(r30)
 /* 804435E0 0040CBA0  93 FE 05 18 */	stw r31, 0x518(r30)
@@ -68,9 +68,9 @@
 /* 804435EC 0040CBAC  90 1E 00 50 */	stw r0, 0x50(r30)
 /* 804435F0 0040CBB0  80 9E 00 54 */	lwz r4, 0x54(r30)
 /* 804435F4 0040CBB4  4B FF 14 8D */	bl func_80434A80
-/* 804435F8 0040CBB8  38 00 00 08 */	li r0, 0x8
+/* 804435F8 0040CBB8  38 00 00 08 */	li r0, 8
 /* 804435FC 0040CBBC  90 7E 05 08 */	stw r3, 0x508(r30)
-/* 80443600 0040CBC0  38 80 00 00 */	li r4, 0x0
+/* 80443600 0040CBC0  38 80 00 00 */	li r4, 0
 /* 80443604 0040CBC4  7C 09 03 A6 */	mtctr r0
 .L_80443608:
 /* 80443608 0040CBC8  80 7E 05 08 */	lwz r3, 0x508(r30)
@@ -124,15 +124,15 @@
 /* 804436C8 0040CC88  42 00 FF 40 */	bdnz .L_80443608
 /* 804436CC 0040CC8C  38 00 00 80 */	li r0, 0x80
 /* 804436D0 0040CC90  90 1E 05 0C */	stw r0, 0x50c(r30)
-/* 804436D4 0040CC94  38 00 00 00 */	li r0, 0x0
+/* 804436D4 0040CC94  38 00 00 00 */	li r0, 0
 /* 804436D8 0040CC98  98 0D BD 34 */	stb r0, lbl_80667EB4@sda21(r13)
 .L_804436DC:
 /* 804436DC 0040CC9C  7F C3 F3 78 */	mr r3, r30
 /* 804436E0 0040CCA0  7F A4 EB 78 */	mr r4, r29
-/* 804436E4 0040CCA4  38 A0 00 00 */	li r5, 0x0
+/* 804436E4 0040CCA4  38 A0 00 00 */	li r5, 0
 /* 804436E8 0040CCA8  4B FF 54 F1 */	bl func_80438BD8
 /* 804436EC 0040CCAC  7F C3 F3 78 */	mr r3, r30
-/* 804436F0 0040CCB0  38 80 00 00 */	li r4, 0x0
+/* 804436F0 0040CCB0  38 80 00 00 */	li r4, 0
 /* 804436F4 0040CCB4  4B FF 4E D9 */	bl func_804385CC
 /* 804436F8 0040CCB8  7F C3 F3 78 */	mr r3, r30
 /* 804436FC 0040CCBC  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -141,32 +141,35 @@
 /* 80443708 0040CCC8  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8044370C 0040CCCC  7C 08 03 A6 */	mtlr r0
 /* 80443710 0040CCD0  38 21 00 20 */	addi r1, r1, 0x20
-/* 80443714 0040CCD4  4E 80 00 20 */	blr
+/* 80443714 0040CCD4  4E 80 00 20 */	blr 
 .endfn func_804434FC
 
-.section .rodata, "a" # 0x804F5B20 - 0x805281E0
 
-.balign 8
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global CViewRoot_typestr
 CViewRoot_typestr:
-	.4byte 0x43566965
-	.4byte 0x77526F6F
-	.4byte 0x74000000
+	.asciz "CViewRoot"
+	.balign 4
+
+
 .global lbl_80525F84
 lbl_80525F84:
-	.4byte 0x43566965
-	.4byte 0x77526F6F
-	.4byte 0x74000000
+	.asciz "CViewRoot"
+	.balign 4
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.balign 8
+
+
 
 .global __vt__CViewRoot
 __vt__CViewRoot:
 	.4byte __RTTI__CViewRoot
-	.4byte 0x00000000
+	.4byte 0
 	.4byte func_804420D0
 	.4byte func_80039E28
 	.4byte func_80039E20
@@ -209,15 +212,15 @@ __vt__CViewRoot:
 .global CViewRoot_hierarchy
 CViewRoot_hierarchy:
 	.4byte __RTTI__IWorkEvent
-	.4byte 0x00000000
+	.4byte 0
 	.4byte __RTTI__CWorkThread
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
+	.4byte 0
+	.4byte 0
+	.4byte 0
 
-.section .sdata, "wa" # 0x80664180 - 0x80666600
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.balign 8
+
 
 .global __RTTI__CViewRoot
 __RTTI__CViewRoot:

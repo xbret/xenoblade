@@ -2,9 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.balign 16
-
-.fn WUD_DEBUGPrint, global
+.balign 16, 0
+.global WUD_DEBUGPrint
+WUD_DEBUGPrint:
 /* 8037C5D0 00345B90  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8037C5D4 00345B94  40 86 00 24 */	bne cr1, .L_8037C5F8
 /* 8037C5D8 00345B98  D8 21 00 28 */	stfd f1, 0x28(r1)
@@ -16,7 +16,7 @@
 /* 8037C5F0 00345BB0  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 8037C5F4 00345BB4  D9 01 00 60 */	stfd f8, 0x60(r1)
 .L_8037C5F8:
-/* 8037C5F8 00345BB8  90 61 00 08 */	stw r3, 0x8(r1)
+/* 8037C5F8 00345BB8  90 61 00 08 */	stw r3, 8(r1)
 /* 8037C5FC 00345BBC  90 81 00 0C */	stw r4, 0xc(r1)
 /* 8037C600 00345BC0  90 A1 00 10 */	stw r5, 0x10(r1)
 /* 8037C604 00345BC4  90 C1 00 14 */	stw r6, 0x14(r1)
@@ -25,5 +25,4 @@
 /* 8037C610 00345BD0  91 21 00 20 */	stw r9, 0x20(r1)
 /* 8037C614 00345BD4  91 41 00 24 */	stw r10, 0x24(r1)
 /* 8037C618 00345BD8  38 21 00 70 */	addi r1, r1, 0x70
-/* 8037C61C 00345BDC  4E 80 00 20 */	blr
-.endfn WUD_DEBUGPrint
+/* 8037C61C 00345BDC  4E 80 00 20 */	blr 

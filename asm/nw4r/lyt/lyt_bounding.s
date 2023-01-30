@@ -2,9 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.balign 4
-
-# nw4r::lyt::Bounding::Bounding(const nw4r::lyt::res::Bounding*, const nw4r::lyt::ResBlockSet&)
 .fn __ct__Q34nw4r3lyt8BoundingFPCQ44nw4r3lyt3res8BoundingRCQ34nw4r3lyt11ResBlockSet, global
 /* 804053DC 003CE99C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804053E0 003CE9A0  7C 08 02 A6 */	mflr r0
@@ -15,7 +12,7 @@
 /* 804053F4 003CE9B4  3C 80 80 57 */	lis r4, lbl_8056D460@ha
 /* 804053F8 003CE9B8  7F E3 FB 78 */	mr r3, r31
 /* 804053FC 003CE9BC  38 84 D4 60 */	addi r4, r4, lbl_8056D460@l
-/* 80405400 003CE9C0  90 9F 00 00 */	stw r4, 0x0(r31)
+/* 80405400 003CE9C0  90 9F 00 00 */	stw r4, 0(r31)
 /* 80405404 003CE9C4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80405408 003CE9C8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8040540C 003CE9CC  7C 08 03 A6 */	mtlr r0
@@ -23,62 +20,60 @@
 /* 80405414 003CE9D4  4E 80 00 20 */	blr
 .endfn __ct__Q34nw4r3lyt8BoundingFPCQ44nw4r3lyt3res8BoundingRCQ34nw4r3lyt11ResBlockSet
 
-# nw4r::lyt::Bounding::~Bounding()
 .fn __dt__Q34nw4r3lyt8BoundingFv, global
 /* 80405418 003CE9D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040541C 003CE9DC  7C 08 02 A6 */	mflr r0
-/* 80405420 003CE9E0  2C 03 00 00 */	cmpwi r3, 0x0
+/* 80405420 003CE9E0  2C 03 00 00 */	cmpwi r3, 0
 /* 80405424 003CE9E4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80405428 003CE9E8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8040542C 003CE9EC  7C 9F 23 78 */	mr r31, r4
-/* 80405430 003CE9F0  93 C1 00 08 */	stw r30, 0x8(r1)
+/* 80405430 003CE9F0  93 C1 00 08 */	stw r30, 8(r1)
 /* 80405434 003CE9F4  7C 7E 1B 78 */	mr r30, r3
 /* 80405438 003CE9F8  41 82 00 1C */	beq .L_80405454
-/* 8040543C 003CE9FC  38 80 00 00 */	li r4, 0x0
+/* 8040543C 003CE9FC  38 80 00 00 */	li r4, 0
 /* 80405440 003CEA00  4B FF 97 29 */	bl __dt__Q34nw4r3lyt4PaneFv
-/* 80405444 003CEA04  2C 1F 00 00 */	cmpwi r31, 0x0
+/* 80405444 003CEA04  2C 1F 00 00 */	cmpwi r31, 0
 /* 80405448 003CEA08  40 81 00 0C */	ble .L_80405454
 /* 8040544C 003CEA0C  7F C3 F3 78 */	mr r3, r30
 /* 80405450 003CEA10  48 02 F7 DD */	bl __dl__FPv
 .L_80405454:
 /* 80405454 003CEA14  7F C3 F3 78 */	mr r3, r30
 /* 80405458 003CEA18  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8040545C 003CEA1C  83 C1 00 08 */	lwz r30, 0x8(r1)
+/* 8040545C 003CEA1C  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80405460 003CEA20  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80405464 003CEA24  7C 08 03 A6 */	mtlr r0
 /* 80405468 003CEA28  38 21 00 10 */	addi r1, r1, 0x10
-/* 8040546C 003CEA2C  4E 80 00 20 */	blr
+/* 8040546C 003CEA2C  4E 80 00 20 */	blr 
 .endfn __dt__Q34nw4r3lyt8BoundingFv
 
-# nw4r::lyt::Bounding::DrawSelf(const nw4r::lyt::DrawInfo&)
 .fn DrawSelf__Q34nw4r3lyt8BoundingFRCQ34nw4r3lyt8DrawInfo, global
 /* 80405470 003CEA30  4E 80 00 20 */	blr
 .endfn DrawSelf__Q34nw4r3lyt8BoundingFRCQ34nw4r3lyt8DrawInfo
 
-# nw4r::lyt::Bounding::GetRuntimeTypeInfo() const
 .fn GetRuntimeTypeInfo__Q34nw4r3lyt8BoundingCFv, global
 /* 80405474 003CEA34  38 6D BB F8 */	addi r3, r13, lbl_80667D78@sda21
 /* 80405478 003CEA38  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q34nw4r3lyt8BoundingCFv
 
+
 .fn sinit_8040547C, global
 /* 8040547C 003CEA3C  38 0D BB D0 */	addi r0, r13, lbl_80667D50@sda21
 /* 80405480 003CEA40  90 0D BB F8 */	stw r0, lbl_80667D78@sda21(r13)
-/* 80405484 003CEA44  4E 80 00 20 */	blr
+/* 80405484 003CEA44  4E 80 00 20 */	blr 
 .endfn sinit_8040547C
 
-.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
-.balign 4
-	.4byte sinit_8040547C
+.4byte sinit_8040547C
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.balign 8
+
 .global lbl_8056D460
 lbl_8056D460:
-	.4byte 0x00000000
-	.4byte 0x00000000
+	.4byte 0
+	.4byte 0
 	.4byte __dt__Q34nw4r3lyt8BoundingFv
 	.4byte GetRuntimeTypeInfo__Q34nw4r3lyt8BoundingCFv
 	.4byte CalculateMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
@@ -106,11 +101,10 @@ lbl_8056D460:
 	.4byte GetMaterial__Q34nw4r3lyt4PaneCFv
 	.4byte GetMaterial__Q34nw4r3lyt4PaneCFUl
 	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
-	.4byte 0x00000000
+	.4byte 0
 
-.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.balign 8
 .global lbl_80667D78
 lbl_80667D78:
 	.skip 0x8

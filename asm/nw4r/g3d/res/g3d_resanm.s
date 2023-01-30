@@ -2,40 +2,37 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.balign 4
-
-# nw4r::g3d::detail::GetResKeyFrameAnmResult(const nw4r::g3d::ResKeyFrameAnmData*, float)
 .fn GetResKeyFrameAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d18ResKeyFrameAnmDataf, global
-/* 803DDAA8 003A7068  A0 A3 00 00 */	lhz r5, 0x0(r3)
-/* 803DDAAC 003A706C  C0 43 00 08 */	lfs f2, 0x8(r3)
-/* 803DDAB0 003A7070  38 05 FF FF */	addi r0, r5, -0x1
+/* 803DDAA8 003A7068  A0 A3 00 00 */	lhz r5, 0(r3)
+/* 803DDAAC 003A706C  C0 43 00 08 */	lfs f2, 8(r3)
+/* 803DDAB0 003A7070  38 05 FF FF */	addi r0, r5, -1
 /* 803DDAB4 003A7074  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803DDAB8 003A7078  1C 00 00 0C */	mulli r0, r0, 0xc
 /* 803DDABC 003A707C  FC 01 10 40 */	fcmpo cr0, f1, f2
 /* 803DDAC0 003A7080  7C 83 02 14 */	add r4, r3, r0
-/* 803DDAC4 003A7084  4C 40 13 82 */	cror eq, lt, eq
+/* 803DDAC4 003A7084  4C 40 13 82 */	cror 2, 0, 2
 /* 803DDAC8 003A7088  40 82 00 0C */	bne .L_803DDAD4
 /* 803DDACC 003A708C  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 803DDAD0 003A7090  48 00 00 FC */	b .L_803DDBCC
 .L_803DDAD4:
-/* 803DDAD4 003A7094  C0 04 00 08 */	lfs f0, 0x8(r4)
+/* 803DDAD4 003A7094  C0 04 00 08 */	lfs f0, 8(r4)
 /* 803DDAD8 003A7098  FC 00 08 40 */	fcmpo cr0, f0, f1
-/* 803DDADC 003A709C  4C 40 13 82 */	cror eq, lt, eq
+/* 803DDADC 003A709C  4C 40 13 82 */	cror 2, 0, 2
 /* 803DDAE0 003A70A0  40 82 00 0C */	bne .L_803DDAEC
 /* 803DDAE4 003A70A4  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 803DDAE8 003A70A8  48 00 00 E4 */	b .L_803DDBCC
 .L_803DDAEC:
-/* 803DDAEC 003A70AC  B0 A1 00 08 */	sth r5, 0x8(r1)
+/* 803DDAEC 003A70AC  B0 A1 00 08 */	sth r5, 8(r1)
 /* 803DDAF0 003A70B0  EC 61 10 28 */	fsubs f3, f1, f2
-/* 803DDAF4 003A70B4  E0 41 B0 08 */	psq_l f2, 0x8(r1), 1, qr3
-/* 803DDAF8 003A70B8  C0 03 00 04 */	lfs f0, 0x4(r3)
+/* 803DDAF4 003A70B4  E0 41 B0 08 */	psq_l f2, 8(r1), 1, qr3
+/* 803DDAF8 003A70B8  C0 03 00 04 */	lfs f0, 4(r3)
 /* 803DDAFC 003A70BC  EC 43 00 B2 */	fmuls f2, f3, f2
 /* 803DDB00 003A70C0  EC 00 00 B2 */	fmuls f0, f0, f2
-/* 803DDB04 003A70C4  F0 01 B0 0C */	psq_st f0, 0xc(r1), 1, qr3
+/* 803DDB04 003A70C4  F0 01 B0 0C */	psq_st f0, 12(r1), 1, qr3
 /* 803DDB08 003A70C8  A0 01 00 0C */	lhz r0, 0xc(r1)
 /* 803DDB0C 003A70CC  1C 00 00 0C */	mulli r0, r0, 0xc
 /* 803DDB10 003A70D0  7C 63 02 14 */	add r3, r3, r0
-/* 803DDB14 003A70D4  C4 03 00 08 */	lfsu f0, 0x8(r3)
+/* 803DDB14 003A70D4  C4 03 00 08 */	lfsu f0, 8(r3)
 /* 803DDB18 003A70D8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 803DDB1C 003A70DC  40 80 00 14 */	bge .L_803DDB30
 .L_803DDB20:
@@ -46,27 +43,27 @@
 .L_803DDB30:
 /* 803DDB30 003A70F0  C4 03 00 0C */	lfsu f0, 0xc(r3)
 /* 803DDB34 003A70F4  FC 00 08 40 */	fcmpo cr0, f0, f1
-/* 803DDB38 003A70F8  4C 40 13 82 */	cror eq, lt, eq
+/* 803DDB38 003A70F8  4C 40 13 82 */	cror 2, 0, 2
 /* 803DDB3C 003A70FC  41 82 FF F4 */	beq .L_803DDB30
-/* 803DDB40 003A7100  38 63 FF F4 */	addi r3, r3, -0xc
+/* 803DDB40 003A7100  38 63 FF F4 */	addi r3, r3, -12
 .L_803DDB44:
-/* 803DDB44 003A7104  C0 63 00 00 */	lfs f3, 0x0(r3)
+/* 803DDB44 003A7104  C0 63 00 00 */	lfs f3, 0(r3)
 /* 803DDB48 003A7108  FC 03 08 00 */	fcmpu cr0, f3, f1
 /* 803DDB4C 003A710C  40 82 00 0C */	bne .L_803DDB58
-/* 803DDB50 003A7110  C0 23 00 04 */	lfs f1, 0x4(r3)
+/* 803DDB50 003A7110  C0 23 00 04 */	lfs f1, 4(r3)
 /* 803DDB54 003A7114  48 00 00 78 */	b .L_803DDBCC
 .L_803DDB58:
 /* 803DDB58 003A7118  C0 43 00 0C */	lfs f2, 0xc(r3)
 /* 803DDB5C 003A711C  ED 41 18 28 */	fsubs f10, f1, f3
-/* 803DDB60 003A7120  C0 02 BF 34 */	lfs f0, lbl_8066C2B4@sda21(r2)
+/* 803DDB60 003A7120  C0 02 BF 34 */	lfs f0, float_8066C2B4@sda21(r2)
 /* 803DDB64 003A7124  ED 62 18 28 */	fsubs f11, f2, f3
 /* 803DDB68 003A7128  C0 43 00 10 */	lfs f2, 0x10(r3)
-/* 803DDB6C 003A712C  C0 A3 00 04 */	lfs f5, 0x4(r3)
-/* 803DDB70 003A7130  C0 22 BF 38 */	lfs f1, lbl_8066C2B8@sda21(r2)
+/* 803DDB6C 003A712C  C0 A3 00 04 */	lfs f5, 4(r3)
+/* 803DDB70 003A7130  C0 22 BF 38 */	lfs f1, float_8066C2B8@sda21(r2)
 /* 803DDB74 003A7134  ED 00 58 30 */	fres f8, f11
-/* 803DDB78 003A7138  C0 82 BF 30 */	lfs f4, lbl_8066C2B0@sda21(r2)
+/* 803DDB78 003A7138  C0 82 BF 30 */	lfs f4, float_8066C2B0@sda21(r2)
 /* 803DDB7C 003A713C  C0 E3 00 14 */	lfs f7, 0x14(r3)
-/* 803DDB80 003A7140  C0 C3 00 08 */	lfs f6, 0x8(r3)
+/* 803DDB80 003A7140  C0 C3 00 08 */	lfs f6, 8(r3)
 /* 803DDB84 003A7144  11 28 40 2A */	ps_add f9, f8, f8
 /* 803DDB88 003A7148  11 08 02 32 */	ps_mul f8, f8, f8
 /* 803DDB8C 003A714C  EC 65 10 28 */	fsubs f3, f5, f2
@@ -87,10 +84,9 @@
 /* 803DDBC8 003A7188  EC 21 00 2A */	fadds f1, f1, f0
 .L_803DDBCC:
 /* 803DDBCC 003A718C  38 21 00 10 */	addi r1, r1, 0x10
-/* 803DDBD0 003A7190  4E 80 00 20 */	blr
+/* 803DDBD0 003A7190  4E 80 00 20 */	blr 
 .endfn GetResKeyFrameAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d18ResKeyFrameAnmDataf
 
-# nw4r::g3d::detail::GetResColorAnmResult(const nw4r::g3d::ResColorAnmFramesData*, float)
 .fn GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf, global
 /* 803DDBD4 003A7194  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803DDBD8 003A7198  7C 08 02 A6 */	mflr r0
@@ -101,7 +97,7 @@
 /* 803DDBEC 003A71AC  4B EE D3 D5 */	bl modf
 /* 803DDBF0 003A71B0  C8 41 00 18 */	lfd f2, 0x18(r1)
 /* 803DDBF4 003A71B4  FC 20 08 18 */	frsp f1, f1
-/* 803DDBF8 003A71B8  C0 02 BF 3C */	lfs f0, lbl_8066C2BC@sda21(r2)
+/* 803DDBF8 003A71B8  C0 02 BF 3C */	lfs f0, float_8066C2BC@sda21(r2)
 /* 803DDBFC 003A71BC  FC 40 10 18 */	frsp f2, f2
 /* 803DDC00 003A71C0  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 803DDC04 003A71C4  FC 00 10 1E */	fctiwz f0, f2
@@ -112,8 +108,8 @@
 /* 803DDC18 003A71D8  7C 7F 00 2E */	lwzx r3, r31, r0
 /* 803DDC1C 003A71DC  48 00 00 A4 */	b .L_803DDCC0
 .L_803DDC20:
-/* 803DDC20 003A71E0  38 03 00 01 */	addi r0, r3, 0x1
-/* 803DDC24 003A71E4  C0 02 BF 40 */	lfs f0, lbl_8066C2C0@sda21(r2)
+/* 803DDC20 003A71E0  38 03 00 01 */	addi r0, r3, 1
+/* 803DDC24 003A71E4  C0 02 BF 40 */	lfs f0, float_8066C2C0@sda21(r2)
 /* 803DDC28 003A71E8  54 63 10 3A */	slwi r3, r3, 2
 /* 803DDC2C 003A71EC  54 00 10 3A */	slwi r0, r0, 2
 /* 803DDC30 003A71F0  7C 7F 18 2E */	lwzx r3, r31, r3
@@ -121,10 +117,10 @@
 /* 803DDC38 003A71F8  EC 00 00 72 */	fmuls f0, f0, f1
 /* 803DDC3C 003A71FC  90 61 00 14 */	stw r3, 0x14(r1)
 /* 803DDC40 003A7200  90 01 00 10 */	stw r0, 0x10(r1)
-/* 803DDC44 003A7204  F0 01 D0 08 */	psq_st f0, 0x8(r1), 1, qr5
+/* 803DDC44 003A7204  F0 01 D0 08 */	psq_st f0, 8(r1), 1, qr5
 /* 803DDC48 003A7208  89 41 00 14 */	lbz r10, 0x14(r1)
 /* 803DDC4C 003A720C  88 01 00 10 */	lbz r0, 0x10(r1)
-/* 803DDC50 003A7210  A8 C1 00 08 */	lha r6, 0x8(r1)
+/* 803DDC50 003A7210  A8 C1 00 08 */	lha r6, 8(r1)
 /* 803DDC54 003A7214  7C 6A 00 50 */	subf r3, r10, r0
 /* 803DDC58 003A7218  88 E1 00 15 */	lbz r7, 0x15(r1)
 /* 803DDC5C 003A721C  7C A6 19 D6 */	mullw r5, r6, r3
@@ -135,20 +131,20 @@
 /* 803DDC70 003A7230  89 21 00 17 */	lbz r9, 0x17(r1)
 /* 803DDC74 003A7234  88 01 00 13 */	lbz r0, 0x13(r1)
 /* 803DDC78 003A7238  7C 68 18 50 */	subf r3, r8, r3
-/* 803DDC7C 003A723C  7C A5 7E 70 */	srawi r5, r5, 15
+/* 803DDC7C 003A723C  7C A5 7E 70 */	srawi r5, r5, 0xf
 /* 803DDC80 003A7240  7C 86 21 D6 */	mullw r4, r6, r4
 /* 803DDC84 003A7244  7C 09 00 50 */	subf r0, r9, r0
 /* 803DDC88 003A7248  7C AA 2A 14 */	add r5, r10, r5
 /* 803DDC8C 003A724C  98 A1 00 0C */	stb r5, 0xc(r1)
-/* 803DDC90 003A7250  7C 84 7E 70 */	srawi r4, r4, 15
+/* 803DDC90 003A7250  7C 84 7E 70 */	srawi r4, r4, 0xf
 /* 803DDC94 003A7254  7C 66 19 D6 */	mullw r3, r6, r3
 /* 803DDC98 003A7258  7C 87 22 14 */	add r4, r7, r4
 /* 803DDC9C 003A725C  98 81 00 0D */	stb r4, 0xd(r1)
-/* 803DDCA0 003A7260  7C 63 7E 70 */	srawi r3, r3, 15
+/* 803DDCA0 003A7260  7C 63 7E 70 */	srawi r3, r3, 0xf
 /* 803DDCA4 003A7264  7C 06 01 D6 */	mullw r0, r6, r0
 /* 803DDCA8 003A7268  7C 68 1A 14 */	add r3, r8, r3
 /* 803DDCAC 003A726C  98 61 00 0E */	stb r3, 0xe(r1)
-/* 803DDCB0 003A7270  7C 00 7E 70 */	srawi r0, r0, 15
+/* 803DDCB0 003A7270  7C 00 7E 70 */	srawi r0, r0, 0xf
 /* 803DDCB4 003A7274  7C 09 02 14 */	add r0, r9, r0
 /* 803DDCB8 003A7278  98 01 00 0F */	stb r0, 0xf(r1)
 /* 803DDCBC 003A727C  80 61 00 0C */	lwz r3, 0xc(r1)
@@ -157,25 +153,33 @@
 /* 803DDCC4 003A7284  83 E1 00 2C */	lwz r31, 0x2c(r1)
 /* 803DDCC8 003A7288  7C 08 03 A6 */	mtlr r0
 /* 803DDCCC 003A728C  38 21 00 30 */	addi r1, r1, 0x30
-/* 803DDCD0 003A7290  4E 80 00 20 */	blr
+/* 803DDCD0 003A7290  4E 80 00 20 */	blr 
 .endfn GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf
 
-.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.balign 8
-.global lbl_8066C2B0
-lbl_8066C2B0:
-	.4byte 0x3F800000
-.global lbl_8066C2B4
-lbl_8066C2B4:
-	.4byte 0x40000000
-.global lbl_8066C2B8
-lbl_8066C2B8:
-	.4byte 0x40400000
-.global lbl_8066C2BC
-lbl_8066C2BC:
-	.4byte 0x00000000
-.global lbl_8066C2C0
-lbl_8066C2C0:
-	.4byte 0x47000000
-	.4byte 0x00000000
+
+.global float_8066C2B0
+float_8066C2B0:
+	.float 1.0
+
+
+.global float_8066C2B4
+float_8066C2B4:
+	.float 2 #0x40000000
+
+
+.global float_8066C2B8
+float_8066C2B8:
+	.float 3 #0x40400000
+
+
+.global float_8066C2BC
+float_8066C2BC:
+	.float 0
+
+
+.global float_8066C2C0
+float_8066C2C0:
+	.float 32768 #0x47000000
+	.4byte 0

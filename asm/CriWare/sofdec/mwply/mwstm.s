@@ -2,11 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.balign 4
-
 .fn MWSTM_SetTrSct, global
-/* 8039DDD0 00367390  38 60 00 00 */	li r3, 0x0
-/* 8039DDD4 00367394  4E 80 00 20 */	blr
+/* 8039DDD0 00367390  38 60 00 00 */	li r3, 0
+/* 8039DDD4 00367394  4E 80 00 20 */	blr 
 .endfn MWSTM_SetTrSct
 
 .fn MWSTM_IsFsStatErr, global
@@ -14,20 +12,20 @@
 /* 8039DDDC 0036739C  7C 08 02 A6 */	mflr r0
 /* 8039DDE0 003673A0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8039DDE4 003673A4  4B FE 36 ED */	bl ADXSTM_GetStat
-/* 8039DDE8 003673A8  38 03 FF FC */	addi r0, r3, -0x4
+/* 8039DDE8 003673A8  38 03 FF FC */	addi r0, r3, -4
 /* 8039DDEC 003673AC  7C 00 00 34 */	cntlzw r0, r0
 /* 8039DDF0 003673B0  54 03 D9 7E */	srwi r3, r0, 5
 /* 8039DDF4 003673B4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8039DDF8 003673B8  7C 08 03 A6 */	mtlr r0
 /* 8039DDFC 003673BC  38 21 00 10 */	addi r1, r1, 0x10
-/* 8039DE00 003673C0  4E 80 00 20 */	blr
+/* 8039DE00 003673C0  4E 80 00 20 */	blr 
 .endfn MWSTM_IsFsStatErr
 
 .fn MWSTM_SetFlowLimit, global
-/* 8039DE04 003673C4  2C 03 00 00 */	cmpwi r3, 0x0
-/* 8039DE08 003673C8  4D 82 00 20 */	beqlr
+/* 8039DE04 003673C4  2C 03 00 00 */	cmpwi r3, 0
+/* 8039DE08 003673C8  4D 82 00 20 */	beqlr 
 /* 8039DE0C 003673CC  4B FE 43 4C */	b ADXSTM_SetBufSize
-/* 8039DE10 003673D0  4E 80 00 20 */	blr
+/* 8039DE10 003673D0  4E 80 00 20 */	blr 
 .endfn MWSTM_SetFlowLimit
 
 .fn MWSTM_GetReadFlg, global
@@ -35,7 +33,7 @@
 .endfn MWSTM_GetReadFlg
 
 .fn MWSTM_Create, global
-/* 8039DE18 003673D8  38 80 00 00 */	li r4, 0x0
+/* 8039DE18 003673D8  38 80 00 00 */	li r4, 0
 /* 8039DE1C 003673DC  4B FE 31 DC */	b ADXSTM_Create
 .endfn MWSTM_Create
 
@@ -54,14 +52,14 @@
 /* 8039DE40 00367400  7C DE 33 78 */	mr r30, r6
 /* 8039DE44 00367404  7C FF 3B 78 */	mr r31, r7
 /* 8039DE48 00367408  4B FE 34 A1 */	bl ADXSTM_ReleaseFileNw
-/* 8039DE4C 0036740C  7F E0 FE 70 */	srawi r0, r31, 31
+/* 8039DE4C 0036740C  7F E0 FE 70 */	srawi r0, r31, 0x1f
 /* 8039DE50 00367410  7F 63 DB 78 */	mr r3, r27
-/* 8039DE54 00367414  54 07 58 28 */	slwi r7, r0, 11
+/* 8039DE54 00367414  54 07 58 28 */	slwi r7, r0, 0xb
 /* 8039DE58 00367418  7F 84 E3 78 */	mr r4, r28
-/* 8039DE5C 0036741C  53 E7 5D 7E */	rlwimi r7, r31, 11, 21, 31
+/* 8039DE5C 0036741C  53 E7 5D 7E */	rlwimi r7, r31, 0xb, 0x15, 0x1f
 /* 8039DE60 00367420  7F A5 EB 78 */	mr r5, r29
 /* 8039DE64 00367424  7F C6 F3 78 */	mr r6, r30
-/* 8039DE68 00367428  57 E8 58 28 */	slwi r8, r31, 11
+/* 8039DE68 00367428  57 E8 58 28 */	slwi r8, r31, 0xb
 /* 8039DE6C 0036742C  4B FE 33 E9 */	bl ADXSTM_BindFileNw
 /* 8039DE70 00367430  7F 63 DB 78 */	mr r3, r27
 /* 8039DE74 00367434  7F E4 FB 78 */	mr r4, r31
@@ -70,7 +68,7 @@
 /* 8039DE80 00367440  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8039DE84 00367444  7C 08 03 A6 */	mtlr r0
 /* 8039DE88 00367448  38 21 00 20 */	addi r1, r1, 0x20
-/* 8039DE8C 0036744C  4E 80 00 20 */	blr
+/* 8039DE8C 0036744C  4E 80 00 20 */	blr 
 .endfn MWSTM_SetFileRange
 
 .fn MWSTM_ReqStart, global
@@ -90,7 +88,7 @@
 /* 8039DEB8 00367478  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8039DEBC 0036747C  7C 08 03 A6 */	mtlr r0
 /* 8039DEC0 00367480  38 21 00 10 */	addi r1, r1, 0x10
-/* 8039DEC4 00367484  4E 80 00 20 */	blr
+/* 8039DEC4 00367484  4E 80 00 20 */	blr 
 .endfn func_8039DE94
 
 .fn MWSTM_GetStat, global
@@ -98,9 +96,10 @@
 .endfn MWSTM_GetStat
 
 .fn func_8039DECC, global
-/* 8039DECC 0036748C  4E 80 00 20 */	blr
+/* 8039DECC 0036748C  4E 80 00 20 */	blr 
 .endfn func_8039DECC
 
 .fn func_8039DED0, global
-/* 8039DED0 00367490  4E 80 00 20 */	blr
+/* 8039DED0 00367490  4E 80 00 20 */	blr 
 .endfn func_8039DED0
+

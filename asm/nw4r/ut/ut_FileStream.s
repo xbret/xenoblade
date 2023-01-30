@@ -2,14 +2,14 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.balign 4
-
+#Seek__Q34nw4r2ut10FileStreamFlUl or Cancel__Q34nw4r2ut10FileStreamFv
 .fn func_8042BDFC, global
-/* 8042BDFC 003F53BC  4E 80 00 20 */	blr
+/* 8042BDFC 003F53BC  4E 80 00 20 */	blr 
 .endfn func_8042BDFC
 
+#GetBufferAlign__Q34nw4r2ut8IOStreamCFv, GetSizeAlign__Q34nw4r2ut8IOStreamCFv or GetOffsetAlign__Q34nw4r2ut8IOStreamCFv
 .fn func_8042BE00, global
-/* 8042BE00 003F53C0  38 60 00 01 */	li r3, 0x1
+/* 8042BE00 003F53C0  38 60 00 01 */	li r3, 1
 /* 8042BE04 003F53C4  4E 80 00 20 */	blr
 .endfn func_8042BE00
 
@@ -19,14 +19,12 @@
 /* 8042BE10 003F53D0  4E 80 00 20 */	blr
 .endfn sinit_8042BE08
 
-.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
-.balign 4
-	.4byte sinit_8042BE08
+.4byte sinit_8042BE08
 
-.section .sbss, "wa", @nobits # 0x80666600 - 0x8066836F
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.balign 8
 .global lbl_80667E20
 lbl_80667E20:
 	.skip 0x8

@@ -15,6 +15,7 @@ extern u32** lbl_80665720;
 extern u32** lbl_80665724;
 extern u32** lbl_80665728;
 extern u32** lbl_8066572C;
+}
 
 u32** func_802AEB74();
 u32** func_802AEB7C();
@@ -26,7 +27,7 @@ u32** func_802AEBA4();
 u32** func_802AEBAC();
 u32** func_802AEBB4();
 u32** func_802AEBBC();
-}
+
 
 //}
 

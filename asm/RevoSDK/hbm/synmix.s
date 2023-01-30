@@ -2,60 +2,53 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.balign 16
-
+.balign 16, 0
 .fn func_803416D0, global
 /* 803416D0 0030AC90  88 03 00 0E */	lbz r0, 0xe(r3)
 /* 803416D4 0030AC94  3C 80 80 55 */	lis r4, lbl_8054FC90@ha
 /* 803416D8 0030AC98  80 A3 00 10 */	lwz r5, 0x10(r3)
 /* 803416DC 0030AC9C  38 84 FC 90 */	addi r4, r4, lbl_8054FC90@l
 /* 803416E0 0030ACA0  54 00 10 3A */	slwi r0, r0, 2
-/* 803416E4 0030ACA4  80 A5 00 04 */	lwz r5, 0x4(r5)
+/* 803416E4 0030ACA4  80 A5 00 04 */	lwz r5, 4(r5)
 /* 803416E8 0030ACA8  7C 04 00 2E */	lwzx r0, r4, r0
 /* 803416EC 0030ACAC  7C 05 02 14 */	add r0, r5, r0
 /* 803416F0 0030ACB0  90 03 00 2C */	stw r0, 0x2c(r3)
-/* 803416F4 0030ACB4  4E 80 00 20 */	blr
+/* 803416F4 0030ACB4  4E 80 00 20 */	blr 
 .endfn func_803416D0
-/* 803416F8 0030ACB8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
-/* 803416FC 0030ACBC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
+.balign 16, 0
 .fn func_80341700, global
-/* 80341700 0030ACC0  80 83 00 08 */	lwz r4, 0x8(r3)
+/* 80341700 0030ACC0  80 83 00 08 */	lwz r4, 8(r3)
 /* 80341704 0030ACC4  88 03 00 0C */	lbz r0, 0xc(r3)
 /* 80341708 0030ACC8  7C 84 02 14 */	add r4, r4, r0
 /* 8034170C 0030ACCC  88 04 00 EC */	lbz r0, 0xec(r4)
 /* 80341710 0030ACD0  98 03 00 0F */	stb r0, 0xf(r3)
-/* 80341714 0030ACD4  4E 80 00 20 */	blr
+/* 80341714 0030ACD4  4E 80 00 20 */	blr 
 .endfn func_80341700
-/* 80341718 0030ACD8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
-/* 8034171C 0030ACDC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
+.balign 16, 0
 .fn func_80341720, global
 /* 80341720 0030ACE0  80 83 00 2C */	lwz r4, 0x2c(r3)
 /* 80341724 0030ACE4  80 03 00 34 */	lwz r0, 0x34(r3)
 /* 80341728 0030ACE8  7C 04 02 14 */	add r0, r4, r0
-/* 8034172C 0030ACEC  7C 03 86 70 */	srawi r3, r0, 16
-/* 80341730 0030ACF0  4E 80 00 20 */	blr
+/* 8034172C 0030ACEC  7C 03 86 70 */	srawi r3, r0, 0x10
+/* 80341730 0030ACF0  4E 80 00 20 */	blr 
 .endfn func_80341720
-/* 80341734 0030ACF4  00 00 00 00 */	.4byte 0x00000000 /* invalid */
-/* 80341738 0030ACF8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
-/* 8034173C 0030ACFC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
+.balign 16, 0
 .fn func_80341740, global
 /* 80341740 0030AD00  88 03 00 0C */	lbz r0, 0xc(r3)
-/* 80341744 0030AD04  80 83 00 08 */	lwz r4, 0x8(r3)
+/* 80341744 0030AD04  80 83 00 08 */	lwz r4, 8(r3)
 /* 80341748 0030AD08  54 00 10 3A */	slwi r0, r0, 2
 /* 8034174C 0030AD0C  7C 64 02 14 */	add r3, r4, r0
 /* 80341750 0030AD10  80 84 00 68 */	lwz r4, 0x68(r4)
 /* 80341754 0030AD14  80 03 00 6C */	lwz r0, 0x6c(r3)
 /* 80341758 0030AD18  7C 04 02 14 */	add r0, r4, r0
-/* 8034175C 0030AD1C  7C 03 86 70 */	srawi r3, r0, 16
-/* 80341760 0030AD20  4E 80 00 20 */	blr
+/* 8034175C 0030AD1C  7C 03 86 70 */	srawi r3, r0, 0x10
+/* 80341760 0030AD20  4E 80 00 20 */	blr 
 .endfn func_80341740
-/* 80341764 0030AD24  00 00 00 00 */	.4byte 0x00000000 /* invalid */
-/* 80341768 0030AD28  00 00 00 00 */	.4byte 0x00000000 /* invalid */
-/* 8034176C 0030AD2C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
+.balign 16, 0
 .fn __HBMSYNUpdateMix, global
 /* 80341770 0030AD30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341774 0030AD34  7C 08 02 A6 */	mflr r0
@@ -64,31 +57,31 @@
 /* 80341780 0030AD40  7C 7F 1B 78 */	mr r31, r3
 /* 80341784 0030AD44  80 9F 00 2C */	lwz r4, 0x2c(r31)
 /* 80341788 0030AD48  80 1F 00 34 */	lwz r0, 0x34(r31)
-/* 8034178C 0030AD4C  80 63 00 04 */	lwz r3, 0x4(r3)
+/* 8034178C 0030AD4C  80 63 00 04 */	lwz r3, 4(r3)
 /* 80341790 0030AD50  7C 04 02 14 */	add r0, r4, r0
-/* 80341794 0030AD54  7C 04 86 70 */	srawi r4, r0, 16
+/* 80341794 0030AD54  7C 04 86 70 */	srawi r4, r0, 0x10
 /* 80341798 0030AD58  4B FF E4 F9 */	bl HBMMIXSetInput
 /* 8034179C 0030AD5C  88 1F 00 0C */	lbz r0, 0xc(r31)
-/* 803417A0 0030AD60  80 9F 00 08 */	lwz r4, 0x8(r31)
+/* 803417A0 0030AD60  80 9F 00 08 */	lwz r4, 8(r31)
 /* 803417A4 0030AD64  54 00 10 3A */	slwi r0, r0, 2
-/* 803417A8 0030AD68  80 7F 00 04 */	lwz r3, 0x4(r31)
+/* 803417A8 0030AD68  80 7F 00 04 */	lwz r3, 4(r31)
 /* 803417AC 0030AD6C  7C 84 02 14 */	add r4, r4, r0
 /* 803417B0 0030AD70  80 04 00 AC */	lwz r0, 0xac(r4)
-/* 803417B4 0030AD74  7C 04 86 70 */	srawi r4, r0, 16
+/* 803417B4 0030AD74  7C 04 86 70 */	srawi r4, r0, 0x10
 /* 803417B8 0030AD78  4B FF E5 19 */	bl HBMMIXSetAuxA
 /* 803417BC 0030AD7C  88 1F 00 0C */	lbz r0, 0xc(r31)
-/* 803417C0 0030AD80  80 BF 00 08 */	lwz r5, 0x8(r31)
+/* 803417C0 0030AD80  80 BF 00 08 */	lwz r5, 8(r31)
 /* 803417C4 0030AD84  54 00 10 3A */	slwi r0, r0, 2
-/* 803417C8 0030AD88  80 7F 00 04 */	lwz r3, 0x4(r31)
+/* 803417C8 0030AD88  80 7F 00 04 */	lwz r3, 4(r31)
 /* 803417CC 0030AD8C  7C 85 02 14 */	add r4, r5, r0
 /* 803417D0 0030AD90  80 A5 00 68 */	lwz r5, 0x68(r5)
 /* 803417D4 0030AD94  80 04 00 6C */	lwz r0, 0x6c(r4)
 /* 803417D8 0030AD98  7C 05 02 14 */	add r0, r5, r0
-/* 803417DC 0030AD9C  7C 04 86 70 */	srawi r4, r0, 16
+/* 803417DC 0030AD9C  7C 04 86 70 */	srawi r4, r0, 0x10
 /* 803417E0 0030ADA0  4B FF E5 B1 */	bl HBMMIXSetFader
-/* 803417E4 0030ADA4  80 9F 00 08 */	lwz r4, 0x8(r31)
+/* 803417E4 0030ADA4  80 9F 00 08 */	lwz r4, 8(r31)
 /* 803417E8 0030ADA8  88 1F 00 0C */	lbz r0, 0xc(r31)
-/* 803417EC 0030ADAC  80 7F 00 04 */	lwz r3, 0x4(r31)
+/* 803417EC 0030ADAC  80 7F 00 04 */	lwz r3, 4(r31)
 /* 803417F0 0030ADB0  7C 84 02 14 */	add r4, r4, r0
 /* 803417F4 0030ADB4  88 84 00 EC */	lbz r4, 0xec(r4)
 /* 803417F8 0030ADB8  4B FF E5 19 */	bl HBMMIXSetPan
@@ -96,12 +89,11 @@
 /* 80341800 0030ADC0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80341804 0030ADC4  7C 08 03 A6 */	mtlr r0
 /* 80341808 0030ADC8  38 21 00 10 */	addi r1, r1, 0x10
-/* 8034180C 0030ADCC  4E 80 00 20 */	blr
+/* 8034180C 0030ADCC  4E 80 00 20 */	blr 
 .endfn __HBMSYNUpdateMix
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.balign 8
 .global lbl_8054FC90
 lbl_8054FC90:
 	.4byte 0xFC400000
@@ -231,7 +223,9 @@ lbl_8054FC90:
 	.4byte 0xFFFBD8E2
 	.4byte 0xFFFD3E16
 	.4byte 0xFFFEA072
-	.4byte 0x00000000
+	.4byte 0
+
+
 .global lbl_8054FE90
 lbl_8054FE90:
 	.4byte 0xFC400000
@@ -333,4 +327,4 @@ lbl_8054FE90:
 	.4byte 0xFFFD53C4
 	.4byte 0xFFFE3A31
 	.4byte 0xFFFF1E41
-	.4byte 0x00000000
+	.4byte 0

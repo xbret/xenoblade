@@ -1,8 +1,9 @@
 .include "macros.inc"
 
-.section .bss, "wa", @nobits # 0x80573C80 - 0x8066417B
+.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
 
-.balign 8
+
+
 .global lbl_80659DB0
 lbl_80659DB0:
 	.skip 0xC

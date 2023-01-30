@@ -1,8 +1,7 @@
 .include "macros.inc"
 
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.balign 8
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 .global ahxsbf_synthesis_filter_table
 ahxsbf_synthesis_filter_table:
@@ -518,37 +517,37 @@ ahxsbf_synthesis_filter_table:
 	.4byte 0xBE78CFCD
 	.4byte 0x3E164085
 	.4byte 0xBD48FB2E
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0x80000000
 	.4byte 0xBD48FB2E
 	.4byte 0x3E164085
@@ -1542,38 +1541,38 @@ ahxsbf_synthesis_filter_table:
 	.4byte 0x3F7853F9
 	.4byte 0x3F7D3AAC
 	.4byte 0x3F7FB10E
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
-	.4byte 0xBF800000
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
+	.float -1.0
 	.4byte 0xBF7FB10E
 	.4byte 0xBF7D3AAC
 	.4byte 0xBF7853F9
@@ -2054,38 +2053,40 @@ ahxsbf_synthesis_filter_table:
 	.4byte 0xBF5B941A
 	.4byte 0xBF187FC0
 	.4byte 0x3F3DAEF9
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
 .global lbl_805657B0
 lbl_805657B0:
 	.4byte ahxsbf_synthesis_filter_table

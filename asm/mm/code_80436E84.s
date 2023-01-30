@@ -2,18 +2,18 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.balign 4
+
 
 .fn sinit_80436E84, global
 /* 80436E84 00400444  3C C0 80 66 */	lis r6, lbl_80659FE8@ha
 /* 80436E88 00400448  3C 80 80 66 */	lis r4, lbl_8065A028@ha
-/* 80436E8C 0040044C  C0 22 C6 D8 */	lfs f1, lbl_8066CA58@sda21(r2)
+/* 80436E8C 0040044C  C0 22 C6 D8 */	lfs f1, float_8066CA58@sda21(r2)
 /* 80436E90 00400450  38 A6 9F E8 */	addi r5, r6, lbl_80659FE8@l
 /* 80436E94 00400454  38 64 A0 28 */	addi r3, r4, lbl_8065A028@l
-/* 80436E98 00400458  C0 02 C6 DC */	lfs f0, lbl_8066CA5C@sda21(r2)
+/* 80436E98 00400458  C0 02 C6 DC */	lfs f0, float_8066CA5C@sda21(r2)
 /* 80436E9C 0040045C  D0 26 9F E8 */	stfs f1, lbl_80659FE8@l(r6)
-/* 80436EA0 00400460  D0 25 00 04 */	stfs f1, 0x4(r5)
-/* 80436EA4 00400464  D0 25 00 08 */	stfs f1, 0x8(r5)
+/* 80436EA0 00400460  D0 25 00 04 */	stfs f1, 4(r5)
+/* 80436EA4 00400464  D0 25 00 08 */	stfs f1, 8(r5)
 /* 80436EA8 00400468  D0 25 00 0C */	stfs f1, 0xc(r5)
 /* 80436EAC 0040046C  D0 25 00 10 */	stfs f1, 0x10(r5)
 /* 80436EB0 00400470  D0 25 00 14 */	stfs f1, 0x14(r5)
@@ -28,8 +28,8 @@
 /* 80436ED4 00400494  D0 25 00 38 */	stfs f1, 0x38(r5)
 /* 80436ED8 00400498  D0 25 00 3C */	stfs f1, 0x3c(r5)
 /* 80436EDC 0040049C  D0 04 A0 28 */	stfs f0, lbl_8065A028@l(r4)
-/* 80436EE0 004004A0  D0 23 00 04 */	stfs f1, 0x4(r3)
-/* 80436EE4 004004A4  D0 23 00 08 */	stfs f1, 0x8(r3)
+/* 80436EE0 004004A0  D0 23 00 04 */	stfs f1, 4(r3)
+/* 80436EE4 004004A4  D0 23 00 08 */	stfs f1, 8(r3)
 /* 80436EE8 004004A8  D0 23 00 0C */	stfs f1, 0xc(r3)
 /* 80436EEC 004004AC  D0 23 00 10 */	stfs f1, 0x10(r3)
 /* 80436EF0 004004B0  D0 03 00 14 */	stfs f0, 0x14(r3)
@@ -46,17 +46,21 @@
 /* 80436F1C 004004DC  4E 80 00 20 */	blr
 .endfn sinit_80436E84
 
-.section .ctors, "wa" # 0x804F5900 - 0x804F5B00
+.section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
 .balign 4
-	.4byte sinit_80436E84
 
-.section .sdata2, "a" # 0x80668380 - 0x8066DCE0
+.4byte sinit_80436E84
 
-.balign 8
-.global lbl_8066CA58
-lbl_8066CA58:
-	.4byte 0x00000000
-.global lbl_8066CA5C
-lbl_8066CA5C:
-	.4byte 0x3F800000
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
+
+.global float_8066CA58
+float_8066CA58:
+	.float 0
+
+
+.global float_8066CA5C
+float_8066CA5C:
+	.float 1.0

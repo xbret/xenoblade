@@ -2,11 +2,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.balign 8
-
 .global ahxsbf_synthesis_window_table
 ahxsbf_synthesis_window_table:
-	.4byte 0x00000000
+	.4byte 0
 	.4byte 0xB9E80004
 	.4byte 0x3B550000
 	.4byte 0xBBE58000
@@ -68,8 +66,6 @@ ahxsbf_synthesis_window_table:
 	.4byte 0x3D7DF000
 	.4byte 0x3D026FFF
 	.4byte 0x3B930000
-.global lbl_805658F0
-lbl_805658F0:
 	.4byte 0x3B440001
 	.4byte 0x39A8000F
 	.4byte 0xB7800074
@@ -520,38 +516,40 @@ lbl_805658F0:
 	.4byte 0xBB5A0000
 	.4byte 0x39F7FFF0
 	.4byte 0x37800074
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
 .global lbl_80566078
 lbl_80566078:
 	.4byte ahxsbf_synthesis_window_table

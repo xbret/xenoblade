@@ -2,9 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.balign 4
-
-# _unnamed_lyt_arcResourceAccessor_cpp_::FindNameResource(ARCHandle*, const char*)
+.balign 16, 0
+#FindNameResource__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCc
 .fn FindNameResource__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCc, local
 /* 8032C070 002F5630  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8032C074 002F5634  7C 08 02 A6 */	mflr r0
@@ -13,7 +12,7 @@
 /* 8032C080 002F5640  38 A1 00 18 */	addi r5, r1, 0x18
 /* 8032C084 002F5644  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 8032C088 002F5648  93 C1 00 38 */	stw r30, 0x38(r1)
-/* 8032C08C 002F564C  3B C0 FF FF */	li r30, -0x1
+/* 8032C08C 002F564C  3B C0 FF FF */	li r30, -1
 /* 8032C090 002F5650  93 A1 00 34 */	stw r29, 0x34(r1)
 /* 8032C094 002F5654  7C 9D 23 78 */	mr r29, r4
 /* 8032C098 002F5658  38 86 D6 38 */	addi r4, r6, lbl_8054D638@l
@@ -24,7 +23,7 @@
 /* 8032C0AC 002F566C  48 00 00 60 */	b .L_8032C10C
 .L_8032C0B0:
 /* 8032C0B0 002F5670  80 01 00 10 */	lwz r0, 0x10(r1)
-/* 8032C0B4 002F5674  2C 00 00 00 */	cmpwi r0, 0x0
+/* 8032C0B4 002F5674  2C 00 00 00 */	cmpwi r0, 0
 /* 8032C0B8 002F5678  41 82 00 38 */	beq .L_8032C0F0
 /* 8032C0BC 002F567C  80 81 00 14 */	lwz r4, 0x14(r1)
 /* 8032C0C0 002F5680  7F 83 E3 78 */	mr r3, r28
@@ -36,22 +35,22 @@
 /* 8032C0D8 002F5698  7F 83 E3 78 */	mr r3, r28
 /* 8032C0DC 002F569C  38 9F D6 3C */	addi r4, r31, lbl_8054D63C@l
 /* 8032C0E0 002F56A0  4B FA 5D C1 */	bl ARCChangeDir
-/* 8032C0E4 002F56A4  2C 1E FF FF */	cmpwi r30, -0x1
+/* 8032C0E4 002F56A4  2C 1E FF FF */	cmpwi r30, -1
 /* 8032C0E8 002F56A8  40 82 00 38 */	bne .L_8032C120
 /* 8032C0EC 002F56AC  48 00 00 20 */	b .L_8032C10C
 .L_8032C0F0:
 /* 8032C0F0 002F56B0  80 81 00 14 */	lwz r4, 0x14(r1)
 /* 8032C0F4 002F56B4  7F A3 EB 78 */	mr r3, r29
 /* 8032C0F8 002F56B8  4B F9 F3 75 */	bl stricmp
-/* 8032C0FC 002F56BC  2C 03 00 00 */	cmpwi r3, 0x0
+/* 8032C0FC 002F56BC  2C 03 00 00 */	cmpwi r3, 0
 /* 8032C100 002F56C0  40 82 00 0C */	bne .L_8032C10C
 /* 8032C104 002F56C4  83 C1 00 0C */	lwz r30, 0xc(r1)
 /* 8032C108 002F56C8  48 00 00 18 */	b .L_8032C120
 .L_8032C10C:
 /* 8032C10C 002F56CC  38 61 00 18 */	addi r3, r1, 0x18
-/* 8032C110 002F56D0  38 81 00 08 */	addi r4, r1, 0x8
+/* 8032C110 002F56D0  38 81 00 08 */	addi r4, r1, 8
 /* 8032C114 002F56D4  4B FA 5E 6D */	bl ARCReadDir
-/* 8032C118 002F56D8  2C 03 00 00 */	cmpwi r3, 0x0
+/* 8032C118 002F56D8  2C 03 00 00 */	cmpwi r3, 0
 /* 8032C11C 002F56DC  40 82 FF 94 */	bne .L_8032C0B0
 .L_8032C120:
 /* 8032C120 002F56E0  38 61 00 18 */	addi r3, r1, 0x18
@@ -66,9 +65,9 @@
 /* 8032C144 002F5704  38 21 00 40 */	addi r1, r1, 0x40
 /* 8032C148 002F5708  4E 80 00 20 */	blr
 .endfn FindNameResource__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCc
-/* 8032C14C 002F570C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# _unnamed_lyt_arcResourceAccessor_cpp_::GetResourceSub(ARCHandle*, const char*, unsigned long, const char*, unsigned long*)
+.balign 16, 0
+#GetResourceSub__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCcUlPCcPUl
 .fn GetResourceSub__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCcUlPCcPUl, local
 /* 8032C150 002F5710  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8032C154 002F5714  7C 08 02 A6 */	mflr r0
@@ -80,16 +79,16 @@
 /* 8032C16C 002F572C  7C BC 2B 78 */	mr r28, r5
 /* 8032C170 002F5730  7C DD 33 78 */	mr r29, r6
 /* 8032C174 002F5734  7C FE 3B 78 */	mr r30, r7
-/* 8032C178 002F5738  3B E0 FF FF */	li r31, -0x1
+/* 8032C178 002F5738  3B E0 FF FF */	li r31, -1
 /* 8032C17C 002F573C  4B FA 58 95 */	bl ARCConvertPathToEntrynum
-/* 8032C180 002F5740  2C 03 FF FF */	cmpwi r3, -0x1
+/* 8032C180 002F5740  2C 03 FF FF */	cmpwi r3, -1
 /* 8032C184 002F5744  41 82 00 B0 */	beq .L_8032C234
 /* 8032C188 002F5748  7F 43 D3 78 */	mr r3, r26
 /* 8032C18C 002F574C  7F 64 DB 78 */	mr r4, r27
 /* 8032C190 002F5750  4B FA 5D 11 */	bl ARCChangeDir
-/* 8032C194 002F5754  2C 03 00 00 */	cmpwi r3, 0x0
+/* 8032C194 002F5754  2C 03 00 00 */	cmpwi r3, 0
 /* 8032C198 002F5758  41 82 00 9C */	beq .L_8032C234
-/* 8032C19C 002F575C  2C 1C 00 00 */	cmpwi r28, 0x0
+/* 8032C19C 002F575C  2C 1C 00 00 */	cmpwi r28, 0
 /* 8032C1A0 002F5760  40 82 00 18 */	bne .L_8032C1B8
 /* 8032C1A4 002F5764  7F 43 D3 78 */	mr r3, r26
 /* 8032C1A8 002F5768  7F A4 EB 78 */	mr r4, r29
@@ -97,24 +96,24 @@
 /* 8032C1B0 002F5770  7C 7F 1B 78 */	mr r31, r3
 /* 8032C1B4 002F5774  48 00 00 70 */	b .L_8032C224
 .L_8032C1B8:
-/* 8032C1B8 002F5778  57 83 46 3E */	srwi r3, r28, 24
-/* 8032C1BC 002F577C  57 86 84 3E */	srwi r6, r28, 16
+/* 8032C1B8 002F5778  57 83 46 3E */	srwi r3, r28, 0x18
+/* 8032C1BC 002F577C  57 86 84 3E */	srwi r6, r28, 0x10
 /* 8032C1C0 002F5780  57 85 C2 3E */	srwi r5, r28, 8
-/* 8032C1C4 002F5784  38 00 00 00 */	li r0, 0x0
-/* 8032C1C8 002F5788  98 61 00 08 */	stb r3, 0x8(r1)
+/* 8032C1C4 002F5784  38 00 00 00 */	li r0, 0
+/* 8032C1C8 002F5788  98 61 00 08 */	stb r3, 8(r1)
 /* 8032C1CC 002F578C  7F 43 D3 78 */	mr r3, r26
-/* 8032C1D0 002F5790  38 81 00 08 */	addi r4, r1, 0x8
-/* 8032C1D4 002F5794  98 C1 00 09 */	stb r6, 0x9(r1)
+/* 8032C1D0 002F5790  38 81 00 08 */	addi r4, r1, 8
+/* 8032C1D4 002F5794  98 C1 00 09 */	stb r6, 9(r1)
 /* 8032C1D8 002F5798  98 A1 00 0A */	stb r5, 0xa(r1)
 /* 8032C1DC 002F579C  9B 81 00 0B */	stb r28, 0xb(r1)
 /* 8032C1E0 002F57A0  98 01 00 0C */	stb r0, 0xc(r1)
 /* 8032C1E4 002F57A4  4B FA 58 2D */	bl ARCConvertPathToEntrynum
-/* 8032C1E8 002F57A8  2C 03 FF FF */	cmpwi r3, -0x1
+/* 8032C1E8 002F57A8  2C 03 FF FF */	cmpwi r3, -1
 /* 8032C1EC 002F57AC  41 82 00 38 */	beq .L_8032C224
 /* 8032C1F0 002F57B0  7F 43 D3 78 */	mr r3, r26
-/* 8032C1F4 002F57B4  38 81 00 08 */	addi r4, r1, 0x8
+/* 8032C1F4 002F57B4  38 81 00 08 */	addi r4, r1, 8
 /* 8032C1F8 002F57B8  4B FA 5C A9 */	bl ARCChangeDir
-/* 8032C1FC 002F57BC  2C 03 00 00 */	cmpwi r3, 0x0
+/* 8032C1FC 002F57BC  2C 03 00 00 */	cmpwi r3, 0
 /* 8032C200 002F57C0  41 82 00 24 */	beq .L_8032C224
 /* 8032C204 002F57C4  7F 43 D3 78 */	mr r3, r26
 /* 8032C208 002F57C8  7F A4 EB 78 */	mr r4, r29
@@ -130,7 +129,7 @@
 /* 8032C22C 002F57EC  38 84 D6 3C */	addi r4, r4, lbl_8054D63C@l
 /* 8032C230 002F57F0  4B FA 5C 71 */	bl ARCChangeDir
 .L_8032C234:
-/* 8032C234 002F57F4  2C 1F FF FF */	cmpwi r31, -0x1
+/* 8032C234 002F57F4  2C 1F FF FF */	cmpwi r31, -1
 /* 8032C238 002F57F8  41 82 00 44 */	beq .L_8032C27C
 /* 8032C23C 002F57FC  7F 43 D3 78 */	mr r3, r26
 /* 8032C240 002F5800  7F E4 FB 78 */	mr r4, r31
@@ -138,31 +137,29 @@
 /* 8032C248 002F5808  4B FA 57 79 */	bl ARCFastOpen
 /* 8032C24C 002F580C  38 61 00 10 */	addi r3, r1, 0x10
 /* 8032C250 002F5810  4B FA 5C 11 */	bl ARCGetStartAddrInMem
-/* 8032C254 002F5814  2C 1E 00 00 */	cmpwi r30, 0x0
+/* 8032C254 002F5814  2C 1E 00 00 */	cmpwi r30, 0
 /* 8032C258 002F5818  7C 7F 1B 78 */	mr r31, r3
 /* 8032C25C 002F581C  41 82 00 10 */	beq .L_8032C26C
 /* 8032C260 002F5820  38 61 00 10 */	addi r3, r1, 0x10
 /* 8032C264 002F5824  4B FA 5C 1D */	bl ARCGetLength
-/* 8032C268 002F5828  90 7E 00 00 */	stw r3, 0x0(r30)
+/* 8032C268 002F5828  90 7E 00 00 */	stw r3, 0(r30)
 .L_8032C26C:
 /* 8032C26C 002F582C  38 61 00 10 */	addi r3, r1, 0x10
 /* 8032C270 002F5830  4B FA 5C 21 */	bl ARCClose
 /* 8032C274 002F5834  7F E3 FB 78 */	mr r3, r31
 /* 8032C278 002F5838  48 00 00 08 */	b .L_8032C280
 .L_8032C27C:
-/* 8032C27C 002F583C  38 60 00 00 */	li r3, 0x0
+/* 8032C27C 002F583C  38 60 00 00 */	li r3, 0
 .L_8032C280:
 /* 8032C280 002F5840  39 61 00 40 */	addi r11, r1, 0x40
 /* 8032C284 002F5844  4B F8 DF 19 */	bl _restgpr_26
 /* 8032C288 002F5848  80 01 00 44 */	lwz r0, 0x44(r1)
 /* 8032C28C 002F584C  7C 08 03 A6 */	mtlr r0
 /* 8032C290 002F5850  38 21 00 40 */	addi r1, r1, 0x40
-/* 8032C294 002F5854  4E 80 00 20 */	blr
+/* 8032C294 002F5854  4E 80 00 20 */	blr 
 .endfn GetResourceSub__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCcUlPCcPUl
-/* 8032C298 002F5858  00 00 00 00 */	.4byte 0x00000000 /* invalid */
-/* 8032C29C 002F585C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# nw4hbm::lyt::ArcResourceAccessor::ArcResourceAccessor()
+.balign 16, 0
 .fn __ct__Q36nw4hbm3lyt19ArcResourceAccessorFv, global
 /* 8032C2A0 002F5860  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032C2A4 002F5864  7C 08 02 A6 */	mflr r0
@@ -172,11 +169,11 @@
 /* 8032C2B4 002F5874  48 00 6A 1D */	bl __ct__Q36nw4hbm3lyt16ResourceAccessorFv
 /* 8032C2B8 002F5878  3C 80 80 55 */	lis r4, lbl_8054D640@ha
 /* 8032C2BC 002F587C  38 BF 00 28 */	addi r5, r31, 0x28
-/* 8032C2C0 002F5880  38 00 00 00 */	li r0, 0x0
+/* 8032C2C0 002F5880  38 00 00 00 */	li r0, 0
 /* 8032C2C4 002F5884  90 1F 00 20 */	stw r0, 0x20(r31)
 /* 8032C2C8 002F5888  38 84 D6 40 */	addi r4, r4, lbl_8054D640@l
 /* 8032C2CC 002F588C  7F E3 FB 78 */	mr r3, r31
-/* 8032C2D0 002F5890  90 9F 00 00 */	stw r4, 0x0(r31)
+/* 8032C2D0 002F5890  90 9F 00 00 */	stw r4, 0(r31)
 /* 8032C2D4 002F5894  90 1F 00 24 */	stw r0, 0x24(r31)
 /* 8032C2D8 002F5898  90 BF 00 28 */	stw r5, 0x28(r31)
 /* 8032C2DC 002F589C  90 BF 00 2C */	stw r5, 0x2c(r31)
@@ -184,13 +181,10 @@
 /* 8032C2E4 002F58A4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8032C2E8 002F58A8  7C 08 03 A6 */	mtlr r0
 /* 8032C2EC 002F58AC  38 21 00 10 */	addi r1, r1, 0x10
-/* 8032C2F0 002F58B0  4E 80 00 20 */	blr
+/* 8032C2F0 002F58B0  4E 80 00 20 */	blr 
 .endfn __ct__Q36nw4hbm3lyt19ArcResourceAccessorFv
-/* 8032C2F4 002F58B4  00 00 00 00 */	.4byte 0x00000000 /* invalid */
-/* 8032C2F8 002F58B8  00 00 00 00 */	.4byte 0x00000000 /* invalid */
-/* 8032C2FC 002F58BC  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# nw4hbm::lyt::ArcResourceAccessor::Attach(void*, const char*)
+.balign 16, 0
 .fn Attach__Q36nw4hbm3lyt19ArcResourceAccessorFPvPCc, global
 /* 8032C300 002F58C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032C304 002F58C4  7C 08 02 A6 */	mflr r0
@@ -202,11 +196,11 @@
 /* 8032C31C 002F58DC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8032C320 002F58E0  7C 7D 1B 78 */	mr r29, r3
 /* 8032C324 002F58E4  7F C3 F3 78 */	mr r3, r30
-/* 8032C328 002F58E8  38 9D 00 04 */	addi r4, r29, 0x4
+/* 8032C328 002F58E8  38 9D 00 04 */	addi r4, r29, 4
 /* 8032C32C 002F58EC  4B FA 53 45 */	bl ARCInitHandle
-/* 8032C330 002F58F0  2C 03 00 00 */	cmpwi r3, 0x0
+/* 8032C330 002F58F0  2C 03 00 00 */	cmpwi r3, 0
 /* 8032C334 002F58F4  40 82 00 0C */	bne .L_8032C340
-/* 8032C338 002F58F8  38 60 00 00 */	li r3, 0x0
+/* 8032C338 002F58F8  38 60 00 00 */	li r3, 0
 /* 8032C33C 002F58FC  48 00 00 24 */	b .L_8032C360
 .L_8032C340:
 /* 8032C340 002F5900  93 DD 00 20 */	stw r30, 0x20(r29)
@@ -214,9 +208,9 @@
 /* 8032C348 002F5908  38 7D 00 30 */	addi r3, r29, 0x30
 /* 8032C34C 002F590C  38 A0 00 7F */	li r5, 0x7f
 /* 8032C350 002F5910  4B F9 64 29 */	bl strncpy
-/* 8032C354 002F5914  38 00 00 00 */	li r0, 0x0
+/* 8032C354 002F5914  38 00 00 00 */	li r0, 0
 /* 8032C358 002F5918  98 1D 00 AF */	stb r0, 0xaf(r29)
-/* 8032C35C 002F591C  38 60 00 01 */	li r3, 0x1
+/* 8032C35C 002F591C  38 60 00 01 */	li r3, 1
 .L_8032C360:
 /* 8032C360 002F5920  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8032C364 002F5924  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -224,11 +218,10 @@
 /* 8032C36C 002F592C  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 8032C370 002F5930  7C 08 03 A6 */	mtlr r0
 /* 8032C374 002F5934  38 21 00 20 */	addi r1, r1, 0x20
-/* 8032C378 002F5938  4E 80 00 20 */	blr
+/* 8032C378 002F5938  4E 80 00 20 */	blr 
 .endfn Attach__Q36nw4hbm3lyt19ArcResourceAccessorFPvPCc
-/* 8032C37C 002F593C  00 00 00 00 */	.4byte 0x00000000 /* invalid */
 
-# nw4hbm::lyt::ArcResourceAccessor::GetResource(unsigned long, const char*, unsigned long*)
+.balign 16, 0
 .fn GetResource__Q36nw4hbm3lyt19ArcResourceAccessorFUlPCcPUl, global
 /* 8032C380 002F5940  7C 88 23 78 */	mr r8, r4
 /* 8032C384 002F5944  7C A0 2B 78 */	mr r0, r5
@@ -236,11 +229,11 @@
 /* 8032C38C 002F594C  38 83 00 30 */	addi r4, r3, 0x30
 /* 8032C390 002F5950  7D 05 43 78 */	mr r5, r8
 /* 8032C394 002F5954  7C 06 03 78 */	mr r6, r0
-/* 8032C398 002F5958  38 63 00 04 */	addi r3, r3, 0x4
+/* 8032C398 002F5958  38 63 00 04 */	addi r3, r3, 4
 /* 8032C39C 002F595C  4B FF FD B4 */	b GetResourceSub__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCcUlPCcPUl
 .endfn GetResource__Q36nw4hbm3lyt19ArcResourceAccessorFUlPCcPUl
 
-# nw4hbm::lyt::MultiArcResourceAccessor::GetFont(const char*)
+.balign 16, 0
 .fn GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc, global
 /* 8032C3A0 002F5960  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032C3A4 002F5964  7C 08 02 A6 */	mflr r0
@@ -254,18 +247,18 @@
 /* 8032C3C4 002F5984  48 00 00 24 */	b .L_8032C3E8
 .L_8032C3C8:
 /* 8032C3C8 002F5988  7F A3 EB 78 */	mr r3, r29
-/* 8032C3CC 002F598C  38 9F 00 08 */	addi r4, r31, 0x8
+/* 8032C3CC 002F598C  38 9F 00 08 */	addi r4, r31, 8
 /* 8032C3D0 002F5990  4B F9 64 65 */	bl strcmp
-/* 8032C3D4 002F5994  2C 03 00 00 */	cmpwi r3, 0x0
+/* 8032C3D4 002F5994  2C 03 00 00 */	cmpwi r3, 0
 /* 8032C3D8 002F5998  40 82 00 0C */	bne .L_8032C3E4
 /* 8032C3DC 002F599C  80 7F 00 88 */	lwz r3, 0x88(r31)
 /* 8032C3E0 002F59A0  48 00 00 14 */	b .L_8032C3F4
 .L_8032C3E4:
-/* 8032C3E4 002F59A4  83 FF 00 00 */	lwz r31, 0x0(r31)
+/* 8032C3E4 002F59A4  83 FF 00 00 */	lwz r31, 0(r31)
 .L_8032C3E8:
 /* 8032C3E8 002F59A8  7C 1F F0 40 */	cmplw r31, r30
 /* 8032C3EC 002F59AC  40 82 FF DC */	bne .L_8032C3C8
-/* 8032C3F0 002F59B0  38 60 00 00 */	li r3, 0x0
+/* 8032C3F0 002F59B0  38 60 00 00 */	li r3, 0
 .L_8032C3F4:
 /* 8032C3F4 002F59B4  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8032C3F8 002F59B8  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -273,57 +266,52 @@
 /* 8032C400 002F59C0  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 8032C404 002F59C4  7C 08 03 A6 */	mtlr r0
 /* 8032C408 002F59C8  38 21 00 20 */	addi r1, r1, 0x20
-/* 8032C40C 002F59CC  4E 80 00 20 */	blr
+/* 8032C40C 002F59CC  4E 80 00 20 */	blr 
 .endfn GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.balign 8
 .global lbl_8054D638
 lbl_8054D638:
 	.4byte 0x2E000000
+
+
 .global lbl_8054D63C
 lbl_8054D63C:
 	.4byte 0x2E2E0000
+
+
 .global lbl_8054D640
 lbl_8054D640:
 	.4byte lbl_8054D688
-	.4byte 0x00000000
+	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt19ArcResourceAccessorFv
 	.4byte GetResource__Q36nw4hbm3lyt19ArcResourceAccessorFUlPCcPUl
 	.4byte GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc
+
 .global lbl_8054D654
 lbl_8054D654:
-	.4byte 0x6E773468
-	.4byte 0x626D3A3A
-	.4byte 0x6C79743A
-	.4byte 0x3A417263
-	.4byte 0x5265736F
-	.4byte 0x75726365
-	.4byte 0x41636365
-	.4byte 0x73736F72
-	.4byte 0x00000000
+	.asciz "nw4hbm::lyt::ArcResourceAccessor"
+	.balign 4
+
 .global lbl_8054D678
 lbl_8054D678:
 	.4byte lbl_8054D6B0
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
 .global lbl_8054D688
 lbl_8054D688:
 	.4byte lbl_8054D654
 	.4byte lbl_8054D678
+
 .global lbl_8054D690
 lbl_8054D690:
-	.4byte 0x6E773468
-	.4byte 0x626D3A3A
-	.4byte 0x6C79743A
-	.4byte 0x3A526573
-	.4byte 0x6F757263
-	.4byte 0x65416363
-	.4byte 0x6573736F
-	.4byte 0x72000000
+	.asciz "nw4hbm::lyt::ResourceAccessor"
+	.balign 4
+
 .global lbl_8054D6B0
 lbl_8054D6B0:
 	.4byte lbl_8054D690
-	.4byte 0x00000000
+	.4byte 0
