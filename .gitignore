@@ -1,5 +1,3 @@
-# Compiler binaries
-mwcc_compiler/
 
 # Build artifacts
 build/

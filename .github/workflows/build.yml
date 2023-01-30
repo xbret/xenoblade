@@ -23,7 +23,6 @@ jobs:
         sudo dpkg --add-architecture i386
         sudo apt-get update
         sudo apt-get -y install build-essential gcc-multilib g++-multilib libc6:i386
-        mkdir tools/mwcc_compiler
         curl -L https://cdn.discordapp.com/attachments/727918646525165659/917185027656286218/GC_WII_COMPILERS.zip \
           | bsdtar -xvf- -C tools/mwcc_compiler
     - name: Build WiBo
