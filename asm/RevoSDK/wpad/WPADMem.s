@@ -19,8 +19,7 @@
 
 .balign 16, 0
 #name might be wrong
-.global WPADWriteMemoryAsync
-WPADWriteMemoryAsync:
+.fn WPADWriteMemoryAsync, global
 /* 80375AC0 0033F080  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80375AC4 0033F084  7C 08 02 A6 */	mflr r0
 /* 80375AC8 0033F088  90 01 00 34 */	stw r0, 0x34(r1)
@@ -75,3 +74,4 @@ WPADWriteMemoryAsync:
 /* 80375B80 0033F140  7C 08 03 A6 */	mtlr r0
 /* 80375B84 0033F144  38 21 00 30 */	addi r1, r1, 0x30
 /* 80375B88 0033F148  4E 80 00 20 */	blr 
+.endfn WPADWriteMemoryAsync

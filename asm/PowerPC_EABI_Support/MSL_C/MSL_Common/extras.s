@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global stricmp
-stricmp:
+.fn stricmp, global
 /* 802CB46C 00294A2C  3C A0 80 54 */	lis r5, _current_locale@ha
 /* 802CB470 00294A30  38 A5 F5 48 */	addi r5, r5, _current_locale@l
 /* 802CB474 00294A34  80 C5 00 38 */	lwz r6, 0x38(r5)
@@ -53,3 +52,4 @@ stricmp:
 /* 802CB500 00294AC0  40 82 FF 78 */	bne .L_802CB478
 /* 802CB504 00294AC4  38 60 00 00 */	li r3, 0
 /* 802CB508 00294AC8  4E 80 00 20 */	blr 
+.endfn stricmp

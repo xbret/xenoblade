@@ -171,8 +171,8 @@
 /* 803DD774 003A6D34  4E 80 00 20 */	blr 
 .endfn CheckRevision__Q34nw4r3g3d6ResTexCFv
 
-.global Init__Q34nw4r3g3d6ResTexFv
-Init__Q34nw4r3g3d6ResTexFv:
+.fn Init__Q34nw4r3g3d6ResTexFv, global
 /* 803DD778 003A6D38  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DD77C 003A6D3C  80 83 00 04 */	lwz r4, 4(r3)
 /* 803DD780 003A6D40  4B F7 68 90 */	b DCFlushRangeNoSync
+.endfn Init__Q34nw4r3g3d6ResTexFv

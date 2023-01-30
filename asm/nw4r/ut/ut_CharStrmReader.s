@@ -58,8 +58,7 @@
 /* 8042B69C 003F4C5C  4E 80 00 20 */	blr 
 .endfn ReadNextCharCP1252__Q34nw4r2ut14CharStrmReaderFv
 
-.global ReadNextCharSJIS__Q34nw4r2ut14CharStrmReaderFv
-ReadNextCharSJIS__Q34nw4r2ut14CharStrmReaderFv:
+.fn ReadNextCharSJIS__Q34nw4r2ut14CharStrmReaderFv, global
 /* 8042B6A0 003F4C60  80 C3 00 00 */	lwz r6, 0(r3)
 /* 8042B6A4 003F4C64  38 00 00 00 */	li r0, 0
 /* 8042B6A8 003F4C68  88 A6 00 00 */	lbz r5, 0(r6)
@@ -89,3 +88,4 @@ ReadNextCharSJIS__Q34nw4r2ut14CharStrmReaderFv:
 .L_8042B6F8:
 /* 8042B6F8 003F4CB8  7C C3 33 78 */	mr r3, r6
 /* 8042B6FC 003F4CBC  4E 80 00 20 */	blr 
+.endfn ReadNextCharSJIS__Q34nw4r2ut14CharStrmReaderFv

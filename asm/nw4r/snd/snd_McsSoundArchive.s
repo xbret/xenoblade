@@ -14,7 +14,7 @@
 /* 8041715C 003E071C  4E 80 00 20 */	blr 
 .endfn GetSizeAlign__Q34nw4r2ut8IOStreamCFv
 
-.global GetOffsetAlign__Q34nw4r2ut8IOStreamCFv
-GetOffsetAlign__Q34nw4r2ut8IOStreamCFv:
+.fn GetOffsetAlign__Q34nw4r2ut8IOStreamCFv, global
 /* 80417160 003E0720  38 60 00 01 */	li r3, 1
 /* 80417164 003E0724  4E 80 00 20 */	blr 
+.endfn GetOffsetAlign__Q34nw4r2ut8IOStreamCFv

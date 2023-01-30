@@ -16,8 +16,7 @@
 /* 802EFBD4 002B9194  4E 80 00 20 */	blr 
 .endfn btu_init_core
 
-.global BTE_Init
-BTE_Init:
+.fn BTE_Init, global
 /* 802EFBD8 002B9198  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EFBDC 002B919C  7C 08 02 A6 */	mflr r0
 /* 802EFBE0 002B91A0  38 80 00 00 */	li r4, 0
@@ -37,3 +36,4 @@ BTE_Init:
 /* 802EFC18 002B91D8  7C 08 03 A6 */	mtlr r0
 /* 802EFC1C 002B91DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EFC20 002B91E0  4E 80 00 20 */	blr
+.endfn BTE_Init

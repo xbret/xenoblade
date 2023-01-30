@@ -14,6 +14,6 @@
 /* 80392814 0035BDD4  48 00 41 88 */	b SVM_Lock
 .endfn LSC_LockCrs
 
-.global LSC_UnlockCrs
-LSC_UnlockCrs:
+.fn LSC_UnlockCrs, global
 /* 80392818 0035BDD8  48 00 41 EC */	b SVM_Unlock
+.endfn LSC_UnlockCrs

@@ -314,8 +314,7 @@
 /* 803DD564 003A6B24  4B F7 6A DC */	b DCStoreRangeNoSync
 .endfn DCStore__Q34nw4r3g3d12ResVtxFurVecFb
 
-.global DCStore__Q34nw4r3g3d12ResVtxFurPosFb
-DCStore__Q34nw4r3g3d12ResVtxFurPosFb:
+.fn DCStore__Q34nw4r3g3d12ResVtxFurPosFb, global
 /* 803DD568 003A6B28  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DD56C 003A6B2C  2C 04 00 00 */	cmpwi r4, 0
 /* 803DD570 003A6B30  80 83 00 00 */	lwz r4, 0(r3)
@@ -323,3 +322,4 @@ DCStore__Q34nw4r3g3d12ResVtxFurPosFb:
 /* 803DD578 003A6B38  4B F7 6A 68 */	b DCStoreRange
 .L_803DD57C:
 /* 803DD57C 003A6B3C  4B F7 6A C4 */	b DCStoreRangeNoSync
+.endfn DCStore__Q34nw4r3g3d12ResVtxFurPosFb

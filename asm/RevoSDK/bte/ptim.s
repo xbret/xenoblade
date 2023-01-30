@@ -121,8 +121,7 @@
 /* 802DED3C 002A82FC  4E 80 00 20 */	blr
 .endfn ptim_start_timer
 
-.global ptim_stop_timer
-ptim_stop_timer:
+.fn ptim_stop_timer, global
 /* 802DED40 002A8300  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DED44 002A8304  7C 08 02 A6 */	mflr r0
 /* 802DED48 002A8308  90 01 00 14 */	stw r0, 0x14(r1)
@@ -140,3 +139,4 @@ ptim_stop_timer:
 /* 802DED74 002A8334  7C 08 03 A6 */	mtlr r0
 /* 802DED78 002A8338  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DED7C 002A833C  4E 80 00 20 */	blr
+.endfn ptim_stop_timer

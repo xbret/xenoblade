@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global EXIWriteReg
-EXIWriteReg:
+.fn EXIWriteReg, global
 /* 80315D30 002DF2F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80315D34 002DF2F4  7C 08 02 A6 */	mflr r0
 /* 80315D38 002DF2F8  2C 07 00 01 */	cmpwi r7, 1
@@ -110,3 +109,4 @@ EXIWriteReg:
 /* 80315EAC 002DF46C  7C 08 03 A6 */	mtlr r0
 /* 80315EB0 002DF470  38 21 00 20 */	addi r1, r1, 0x20
 /* 80315EB4 002DF474  4E 80 00 20 */	blr 
+.endfn EXIWriteReg

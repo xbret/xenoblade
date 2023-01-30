@@ -354,13 +354,13 @@
 /* 80364414 0032D9D4  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80364418 0032D9D8  7C 89 03 A6 */	mtctr r4
 /* 8036441C 0032D9DC  4E 80 04 20 */	bctr 
-switch_80364420:
+.L_80364420:
 /* 80364420 0032D9E0  3B A0 00 00 */	li r29, 0
 /* 80364424 0032D9E4  48 00 00 10 */	b .L_80364434
-switch_80364428:
+.L_80364428:
 /* 80364428 0032D9E8  3B A0 00 01 */	li r29, 1
 /* 8036442C 0032D9EC  48 00 00 08 */	b .L_80364434
-switch_80364430:
+.L_80364430:
 /* 80364430 0032D9F0  7C BD 2B 78 */	mr r29, r5
 .L_80364434:
 /* 80364434 0032D9F4  4B FF 45 BD */	bl OSRestoreInterrupts
@@ -755,90 +755,90 @@ switch_80364430:
 .balign 16, 0
 .fn getTiming, global
 /* 80364980 0032DF40  28 03 00 22 */	cmplwi r3, 0x22
-/* 80364984 0032DF44  41 81 01 0C */	bgt switch_80364A90
+/* 80364984 0032DF44  41 81 01 0C */	bgt .L_80364A90
 /* 80364988 0032DF48  3C 80 80 56 */	lis r4, lbl_8055FDAC@ha
 /* 8036498C 0032DF4C  54 60 10 3A */	slwi r0, r3, 2
 /* 80364990 0032DF50  38 84 FD AC */	addi r4, r4, lbl_8055FDAC@l
 /* 80364994 0032DF54  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80364998 0032DF58  7C 89 03 A6 */	mtctr r4
 /* 8036499C 0032DF5C  4E 80 04 20 */	bctr 
-switch_803649A0:
+.L_803649A0:
 /* 803649A0 0032DF60  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 803649A4 0032DF64  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 803649A8 0032DF68  4E 80 00 20 */	blr 
-switch_803649AC:
+.L_803649AC:
 /* 803649AC 0032DF6C  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 803649B0 0032DF70  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 803649B4 0032DF74  38 63 00 26 */	addi r3, r3, 0x26
 /* 803649B8 0032DF78  4E 80 00 20 */	blr 
-switch_803649BC:
+.L_803649BC:
 /* 803649BC 0032DF7C  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 803649C0 0032DF80  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 803649C4 0032DF84  38 63 00 4C */	addi r3, r3, 0x4c
 /* 803649C8 0032DF88  4E 80 00 20 */	blr 
-switch_803649CC:
+.L_803649CC:
 /* 803649CC 0032DF8C  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 803649D0 0032DF90  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 803649D4 0032DF94  38 63 00 72 */	addi r3, r3, 0x72
 /* 803649D8 0032DF98  4E 80 00 20 */	blr 
-switch_803649DC:
+.L_803649DC:
 /* 803649DC 0032DF9C  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 803649E0 0032DFA0  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 803649E4 0032DFA4  4E 80 00 20 */	blr 
-switch_803649E8:
+.L_803649E8:
 /* 803649E8 0032DFA8  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 803649EC 0032DFAC  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 803649F0 0032DFB0  38 63 00 26 */	addi r3, r3, 0x26
 /* 803649F4 0032DFB4  4E 80 00 20 */	blr 
-switch_803649F8:
+.L_803649F8:
 /* 803649F8 0032DFB8  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 803649FC 0032DFBC  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 80364A00 0032DFC0  38 63 00 98 */	addi r3, r3, 0x98
 /* 80364A04 0032DFC4  4E 80 00 20 */	blr 
-switch_80364A08:
+.L_80364A08:
 /* 80364A08 0032DFC8  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 80364A0C 0032DFCC  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 80364A10 0032DFD0  38 63 00 BE */	addi r3, r3, 0xbe
 /* 80364A14 0032DFD4  4E 80 00 20 */	blr 
-switch_80364A18:
+.L_80364A18:
 /* 80364A18 0032DFD8  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 80364A1C 0032DFDC  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 80364A20 0032DFE0  38 63 00 E4 */	addi r3, r3, 0xe4
 /* 80364A24 0032DFE4  4E 80 00 20 */	blr 
-switch_80364A28:
+.L_80364A28:
 /* 80364A28 0032DFE8  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 80364A2C 0032DFEC  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 80364A30 0032DFF0  38 63 01 0A */	addi r3, r3, 0x10a
 /* 80364A34 0032DFF4  4E 80 00 20 */	blr 
-switch_80364A38:
+.L_80364A38:
 /* 80364A38 0032DFF8  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 80364A3C 0032DFFC  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 80364A40 0032E000  38 63 00 4C */	addi r3, r3, 0x4c
 /* 80364A44 0032E004  4E 80 00 20 */	blr 
-switch_80364A48:
+.L_80364A48:
 /* 80364A48 0032E008  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 80364A4C 0032E00C  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 80364A50 0032E010  38 63 00 72 */	addi r3, r3, 0x72
 /* 80364A54 0032E014  4E 80 00 20 */	blr 
-switch_80364A58:
+.L_80364A58:
 /* 80364A58 0032E018  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 80364A5C 0032E01C  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 80364A60 0032E020  38 63 01 30 */	addi r3, r3, 0x130
 /* 80364A64 0032E024  4E 80 00 20 */	blr 
-switch_80364A68:
+.L_80364A68:
 /* 80364A68 0032E028  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 80364A6C 0032E02C  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 80364A70 0032E030  38 63 01 56 */	addi r3, r3, 0x156
 /* 80364A74 0032E034  4E 80 00 20 */	blr 
-switch_80364A78:
+.L_80364A78:
 /* 80364A78 0032E038  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
 /* 80364A7C 0032E03C  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
 /* 80364A80 0032E040  38 63 01 7C */	addi r3, r3, 0x17c
 /* 80364A84 0032E044  4E 80 00 20 */	blr 
-switch_80364A88:
+.L_80364A88:
 /* 80364A88 0032E048  80 6D BA 6C */	lwz r3, lbl_80667BEC@sda21(r13)
 /* 80364A8C 0032E04C  4E 80 00 20 */	blr
-switch_80364A90:
+.L_80364A90:
 /* 80364A90 0032E050  38 60 00 00 */	li r3, 0
 /* 80364A94 0032E054  4E 80 00 20 */	blr 
 .endfn getTiming
@@ -1283,13 +1283,13 @@ switch_80364A90:
 /* 80365128 0032E6E8  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8036512C 0032E6EC  7C 89 03 A6 */	mtctr r4
 /* 80365130 0032E6F0  4E 80 04 20 */	bctr 
-switch_80365134:
+.L_80365134:
 /* 80365134 0032E6F4  3B 80 00 00 */	li r28, 0
 /* 80365138 0032E6F8  48 00 00 10 */	b .L_80365148
-switch_8036513C:
+.L_8036513C:
 /* 8036513C 0032E6FC  3B 80 00 01 */	li r28, 1
 /* 80365140 0032E700  48 00 00 08 */	b .L_80365148
-switch_80365144:
+.L_80365144:
 /* 80365144 0032E704  7C BC 2B 78 */	mr r28, r5
 .L_80365148:
 /* 80365148 0032E708  4B FF 38 A9 */	bl OSRestoreInterrupts
@@ -2661,19 +2661,19 @@ switch_80365144:
 /* 80366510 0032FAD0  4B FF 24 A1 */	bl OSDisableInterrupts
 /* 80366514 0032FAD4  83 ED BA 88 */	lwz r31, lbl_80667C08@sda21(r13)
 /* 80366518 0032FAD8  28 1F 00 08 */	cmplwi r31, 8
-/* 8036651C 0032FADC  41 81 00 28 */	bgt switch_80366544
+/* 8036651C 0032FADC  41 81 00 28 */	bgt .L_80366544
 /* 80366520 0032FAE0  3C 80 80 56 */	lis r4, lbl_8055FFB0@ha
 /* 80366524 0032FAE4  57 E0 10 3A */	slwi r0, r31, 2
 /* 80366528 0032FAE8  38 84 FF B0 */	addi r4, r4, lbl_8055FFB0@l
 /* 8036652C 0032FAEC  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80366530 0032FAF0  7C 89 03 A6 */	mtctr r4
 /* 80366534 0032FAF4  4E 80 04 20 */	bctr
-switch_80366538:
+.L_80366538:
 /* 80366538 0032FAF8  3B E0 00 00 */	li r31, 0
-/* 8036653C 0032FAFC  48 00 00 08 */	b switch_80366544
-switch_80366540:
+/* 8036653C 0032FAFC  48 00 00 08 */	b .L_80366544
+.L_80366540:
 /* 80366540 0032FB00  3B E0 00 01 */	li r31, 1
-switch_80366544:
+.L_80366544:
 /* 80366544 0032FB04  4B FF 24 AD */	bl OSRestoreInterrupts
 /* 80366548 0032FB08  7F E3 FB 78 */	mr r3, r31
 /* 8036654C 0032FB0C  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -2946,19 +2946,19 @@ switch_80366544:
 /* 803668EC 0032FEAC  4B FF 20 C5 */	bl OSDisableInterrupts
 /* 803668F0 0032FEB0  83 ED BA 88 */	lwz r31, lbl_80667C08@sda21(r13)
 /* 803668F4 0032FEB4  28 1F 00 08 */	cmplwi r31, 8
-/* 803668F8 0032FEB8  41 81 00 28 */	bgt switch_80366920
+/* 803668F8 0032FEB8  41 81 00 28 */	bgt .L_80366920
 /* 803668FC 0032FEBC  3C 80 80 56 */	lis r4, lbl_8055FFD4@ha
 /* 80366900 0032FEC0  57 E0 10 3A */	slwi r0, r31, 2
 /* 80366904 0032FEC4  38 84 FF D4 */	addi r4, r4, lbl_8055FFD4@l
 /* 80366908 0032FEC8  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8036690C 0032FECC  7C 89 03 A6 */	mtctr r4
 /* 80366910 0032FED0  4E 80 04 20 */	bctr 
-switch_80366914:
+.L_80366914:
 /* 80366914 0032FED4  3B E0 00 00 */	li r31, 0
-/* 80366918 0032FED8  48 00 00 08 */	b switch_80366920
-switch_8036691C:
+/* 80366918 0032FED8  48 00 00 08 */	b .L_80366920
+.L_8036691C:
 /* 8036691C 0032FEDC  3B E0 00 01 */	li r31, 1
-switch_80366920:
+.L_80366920:
 /* 80366920 0032FEE0  4B FF 20 D1 */	bl OSRestoreInterrupts
 /* 80366924 0032FEE4  28 1F 00 01 */	cmplwi r31, 1
 /* 80366928 0032FEE8  40 82 00 44 */	bne .L_8036696C
@@ -3219,67 +3219,67 @@ lbl_8055FD78:
 
 .global lbl_8055FD88
 lbl_8055FD88:
-	.4byte switch_80364420
-	.4byte switch_80364428
-	.4byte switch_80364430
-	.4byte switch_80364420
-	.4byte switch_80364428
-	.4byte switch_80364430
-	.4byte switch_80364420
-	.4byte switch_80364420
-	.4byte switch_80364420
+	.4byte .L_80364420
+	.4byte .L_80364428
+	.4byte .L_80364430
+	.4byte .L_80364420
+	.4byte .L_80364428
+	.4byte .L_80364430
+	.4byte .L_80364420
+	.4byte .L_80364420
+	.4byte .L_80364420
 
 
 .global lbl_8055FDAC
 lbl_8055FDAC:
-	.4byte switch_803649A0
-	.4byte switch_803649AC
-	.4byte switch_80364A18
-	.4byte switch_80364A28
-	.4byte switch_803649BC
-	.4byte switch_803649CC
-	.4byte switch_80364A78
-	.4byte switch_80364A90
-	.4byte switch_803649F8
-	.4byte switch_80364A08
-	.4byte switch_80364A18
-	.4byte switch_80364A90
-	.4byte switch_80364A90
-	.4byte switch_80364A90
-	.4byte switch_80364A90
-	.4byte switch_80364A90
-	.4byte switch_80364A38
-	.4byte switch_80364A48
-	.4byte switch_80364A90
-	.4byte switch_80364A90
-	.4byte switch_803649DC
-	.4byte switch_803649E8
-	.4byte switch_80364A18
-	.4byte switch_80364A90
-	.4byte switch_80364A58
-	.4byte switch_80364A90
-	.4byte switch_80364A68
-	.4byte switch_80364A90
-	.4byte switch_80364A88
-	.4byte switch_80364A88
-	.4byte switch_80364A88
-	.4byte switch_80364A90
-	.4byte switch_80364A90
-	.4byte switch_80364A90
-	.4byte switch_80364A88
+	.4byte .L_803649A0
+	.4byte .L_803649AC
+	.4byte .L_80364A18
+	.4byte .L_80364A28
+	.4byte .L_803649BC
+	.4byte .L_803649CC
+	.4byte .L_80364A78
+	.4byte .L_80364A90
+	.4byte .L_803649F8
+	.4byte .L_80364A08
+	.4byte .L_80364A18
+	.4byte .L_80364A90
+	.4byte .L_80364A90
+	.4byte .L_80364A90
+	.4byte .L_80364A90
+	.4byte .L_80364A90
+	.4byte .L_80364A38
+	.4byte .L_80364A48
+	.4byte .L_80364A90
+	.4byte .L_80364A90
+	.4byte .L_803649DC
+	.4byte .L_803649E8
+	.4byte .L_80364A18
+	.4byte .L_80364A90
+	.4byte .L_80364A58
+	.4byte .L_80364A90
+	.4byte .L_80364A68
+	.4byte .L_80364A90
+	.4byte .L_80364A88
+	.4byte .L_80364A88
+	.4byte .L_80364A88
+	.4byte .L_80364A90
+	.4byte .L_80364A90
+	.4byte .L_80364A90
+	.4byte .L_80364A88
 
 
 .global lbl_8055FE38
 lbl_8055FE38:
-	.4byte switch_80365134
-	.4byte switch_8036513C
-	.4byte switch_80365144
-	.4byte switch_80365134
-	.4byte switch_8036513C
-	.4byte switch_80365144
-	.4byte switch_80365134
-	.4byte switch_80365134
-	.4byte switch_80365134
+	.4byte .L_80365134
+	.4byte .L_8036513C
+	.4byte .L_80365144
+	.4byte .L_80365134
+	.4byte .L_8036513C
+	.4byte .L_80365144
+	.4byte .L_80365134
+	.4byte .L_80365134
+	.4byte .L_80365134
 
 	.asciz "***************************************\n"
 	.balign 4
@@ -3299,28 +3299,28 @@ lbl_8055FE38:
 
 .global lbl_8055FFB0
 lbl_8055FFB0:
-	.4byte switch_80366538
-	.4byte switch_80366540
-	.4byte switch_80366544
-	.4byte switch_80366538
-	.4byte switch_80366540
-	.4byte switch_80366544
-	.4byte switch_80366538
-	.4byte switch_80366538
-	.4byte switch_80366538
+	.4byte .L_80366538
+	.4byte .L_80366540
+	.4byte .L_80366544
+	.4byte .L_80366538
+	.4byte .L_80366540
+	.4byte .L_80366544
+	.4byte .L_80366538
+	.4byte .L_80366538
+	.4byte .L_80366538
 
 
 .global lbl_8055FFD4
 lbl_8055FFD4:
-	.4byte switch_80366914
-	.4byte switch_8036691C
-	.4byte switch_80366920
-	.4byte switch_80366914
-	.4byte switch_8036691C
-	.4byte switch_80366920
-	.4byte switch_80366914
-	.4byte switch_80366914
-	.4byte switch_80366914
+	.4byte .L_80366914
+	.4byte .L_8036691C
+	.4byte .L_80366920
+	.4byte .L_80366914
+	.4byte .L_8036691C
+	.4byte .L_80366920
+	.4byte .L_80366914
+	.4byte .L_80366914
+	.4byte .L_80366914
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

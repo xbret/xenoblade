@@ -22,7 +22,7 @@
 /* 802CB7D4 00294D94  4E 80 00 20 */	blr
 .endfn MWEnterCriticalSection
 
-.global MWExitCriticalSection
-MWExitCriticalSection:
+.fn MWExitCriticalSection, global
 /* 802CB7D8 00294D98  80 63 00 00 */	lwz r3, 0(r3)
 /* 802CB7DC 00294D9C  48 08 D2 14 */	b OSRestoreInterrupts
+.endfn MWExitCriticalSection

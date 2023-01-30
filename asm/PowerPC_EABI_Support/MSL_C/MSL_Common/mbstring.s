@@ -108,8 +108,7 @@
 /* 802BE64C 00287C0C  4E 80 00 20 */	blr 
 .endfn mbstowc
 
-.global wcstombs
-wcstombs:
+.fn wcstombs, global
 /* 802BE650 00287C10  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802BE654 00287C14  7C 08 02 A6 */	mflr r0
 /* 802BE658 00287C18  2C 03 00 00 */	cmpwi r3, 0
@@ -163,3 +162,4 @@ wcstombs:
 /* 802BE6FC 00287CBC  7C 08 03 A6 */	mtlr r0
 /* 802BE700 00287CC0  38 21 00 30 */	addi r1, r1, 0x30
 /* 802BE704 00287CC4  4E 80 00 20 */	blr 
+.endfn wcstombs

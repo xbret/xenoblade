@@ -437,8 +437,7 @@
 /* 803CC244 00395804  4E 80 00 20 */	blr 
 .endfn sfsee_ExecFinAnaly
 
-.global sfsee_UpdateEByteRate
-sfsee_UpdateEByteRate:
+.fn sfsee_UpdateEByteRate, global
 /* 803CC248 00395808  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CC24C 0039580C  7C 08 02 A6 */	mflr r0
 /* 803CC250 00395810  90 01 00 14 */	stw r0, 0x14(r1)
@@ -491,3 +490,4 @@ sfsee_UpdateEByteRate:
 /* 803CC2F0 003958B0  7C 08 03 A6 */	mtlr r0
 /* 803CC2F4 003958B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CC2F8 003958B8  4E 80 00 20 */	blr 
+.endfn sfsee_UpdateEByteRate

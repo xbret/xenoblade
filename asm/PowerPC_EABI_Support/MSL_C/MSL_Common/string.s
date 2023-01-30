@@ -252,8 +252,7 @@
 /* 802C29BC 0028BF7C  4E 80 00 20 */	blr 
 .endfn strchr
 
-.global strstr
-strstr:
+.fn strstr, global
 /* 802C29C0 0028BF80  2C 04 00 00 */	cmpwi r4, 0
 /* 802C29C4 0028BF84  38 A3 FF FF */	addi r5, r3, -1
 /* 802C29C8 0028BF88  4D 82 00 20 */	beqlr 
@@ -285,3 +284,4 @@ strstr:
 /* 802C2A20 0028BFE0  40 82 FF C0 */	bne .L_802C29E0
 /* 802C2A24 0028BFE4  38 60 00 00 */	li r3, 0
 /* 802C2A28 0028BFE8  4E 80 00 20 */	blr 
+.endfn strstr

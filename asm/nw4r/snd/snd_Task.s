@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 #__dt__Q44nw4r3snd6detail4TaskFv or __dt__Q34nw4r2ut12LinkListNodeFv or __dt__Q44nw4r2ut22@unnamed@snd_Task_cpp@11NonCopyableFv
-.global __dt__Q44nw4r3snd6detail4TaskFv
-__dt__Q44nw4r3snd6detail4TaskFv:
+.fn __dt__Q44nw4r3snd6detail4TaskFv, global
 /* 80425784 003EED44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80425788 003EED48  7C 08 02 A6 */	mflr r0
 /* 8042578C 003EED4C  2C 03 00 00 */	cmpwi r3, 0
@@ -22,3 +21,4 @@ __dt__Q44nw4r3snd6detail4TaskFv:
 /* 804257B8 003EED78  7C 08 03 A6 */	mtlr r0
 /* 804257BC 003EED7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804257C0 003EED80  4E 80 00 20 */	blr 
+.endfn __dt__Q44nw4r3snd6detail4TaskFv

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global Bind__Q34nw4r3g3d11ResLightSetFQ34nw4r3g3d9ResAnmScn
-Bind__Q34nw4r3g3d11ResLightSetFQ34nw4r3g3d9ResAnmScn:
+.fn Bind__Q34nw4r3g3d11ResLightSetFQ34nw4r3g3d9ResAnmScn, global
 /* 803E031C 003A98DC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803E0320 003A98E0  7C 08 02 A6 */	mflr r0
 /* 803E0324 003A98E4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -105,3 +104,4 @@ Bind__Q34nw4r3g3d11ResLightSetFQ34nw4r3g3d9ResAnmScn:
 /* 803E047C 003A9A3C  7C 08 03 A6 */	mtlr r0
 /* 803E0480 003A9A40  38 21 00 30 */	addi r1, r1, 0x30
 /* 803E0484 003A9A44  4E 80 00 20 */	blr 
+.endfn Bind__Q34nw4r3g3d11ResLightSetFQ34nw4r3g3d9ResAnmScn

@@ -182,8 +182,7 @@
 /* 80416F14 003E04D4  4E 80 00 20 */	blr 
 .endfn AllocImpl__Q44nw4r3snd6detail8PoolImplFv
 
-.global FreeImpl__Q44nw4r3snd6detail8PoolImplFPv
-FreeImpl__Q44nw4r3snd6detail8PoolImplFPv:
+.fn FreeImpl__Q44nw4r3snd6detail8PoolImplFPv, global
 /* 80416F18 003E04D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80416F1C 003E04DC  7C 08 02 A6 */	mflr r0
 /* 80416F20 003E04E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -202,3 +201,4 @@ FreeImpl__Q44nw4r3snd6detail8PoolImplFPv:
 /* 80416F54 003E0514  7C 08 03 A6 */	mtlr r0
 /* 80416F58 003E0518  38 21 00 10 */	addi r1, r1, 0x10
 /* 80416F5C 003E051C  4E 80 00 20 */	blr 
+.endfn FreeImpl__Q44nw4r3snd6detail8PoolImplFPv

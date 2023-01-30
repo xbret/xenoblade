@@ -93,8 +93,7 @@
 /* 802CB910 00294ED0  4E 80 00 20 */	blr 
 .endfn CircleBufferReadBytes
 
-.global CircleBufferWriteBytes
-CircleBufferWriteBytes:
+.fn CircleBufferWriteBytes, global
 /* 802CB914 00294ED4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CB918 00294ED8  7C 08 02 A6 */	mflr r0
 /* 802CB91C 00294EDC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -166,3 +165,4 @@ CircleBufferWriteBytes:
 /* 802CBA10 00294FD0  7C 08 03 A6 */	mtlr r0
 /* 802CBA14 00294FD4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CBA18 00294FD8  4E 80 00 20 */	blr 
+.endfn CircleBufferWriteBytes

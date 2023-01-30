@@ -275,8 +275,7 @@
 /* 803CC68C 00395C4C  4E 80 00 20 */	blr 
 .endfn func_803CC684
 
-.global SFD_GetSofdecHeader
-SFD_GetSofdecHeader:
+.fn SFD_GetSofdecHeader, global
 /* 803CC690 00395C50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CC694 00395C54  7C 08 02 A6 */	mflr r0
 /* 803CC698 00395C58  90 01 00 24 */	stw r0, 0x24(r1)
@@ -316,3 +315,4 @@ SFD_GetSofdecHeader:
 /* 803CC710 00395CD0  7C 08 03 A6 */	mtlr r0
 /* 803CC714 00395CD4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CC718 00395CD8  4E 80 00 20 */	blr 
+.endfn SFD_GetSofdecHeader

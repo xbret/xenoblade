@@ -125,8 +125,7 @@
 /* 803A66A4 0036FC64  4E 80 00 20 */	blr 
 .endfn MPV_GetVbvBufSiz
 
-.global MPV_GetLinkFlg
-MPV_GetLinkFlg:
+.fn MPV_GetLinkFlg, global
 /* 803A66A8 0036FC68  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A66AC 0036FC6C  7C 08 02 A6 */	mflr r0
 /* 803A66B0 0036FC70  90 01 00 24 */	stw r0, 0x24(r1)
@@ -158,3 +157,4 @@ MPV_GetLinkFlg:
 /* 803A6710 0036FCD0  7C 08 03 A6 */	mtlr r0
 /* 803A6714 0036FCD4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A6718 0036FCD8  4E 80 00 20 */	blr 
+.endfn MPV_GetLinkFlg

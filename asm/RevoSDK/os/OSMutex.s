@@ -146,8 +146,7 @@
 .endfn OSUnlockMutex
 
 .balign 16, 0
-.global __OSUnlockAllMutex
-__OSUnlockAllMutex:
+.fn __OSUnlockAllMutex, global
 /* 80359E10 003233D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80359E14 003233D4  7C 08 02 A6 */	mflr r0
 /* 80359E18 003233D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -179,3 +178,4 @@ __OSUnlockAllMutex:
 /* 80359E70 00323430  7C 08 03 A6 */	mtlr r0
 /* 80359E74 00323434  38 21 00 10 */	addi r1, r1, 0x10
 /* 80359E78 00323438  4E 80 00 20 */	blr 
+.endfn __OSUnlockAllMutex

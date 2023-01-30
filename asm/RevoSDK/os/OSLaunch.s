@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __OSRelaunchTitle
-__OSRelaunchTitle:
+.fn __OSRelaunchTitle, global
 /* 8035F140 00328700  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 8035F144 00328704  7C 2C 0B 78 */	mr r12, r1
 /* 8035F148 00328708  21 6B FF 60 */	subfic r11, r11, -160
@@ -144,3 +143,4 @@ __OSRelaunchTitle:
 /* 8035F33C 003288FC  60 00 00 00 */	nop 
 .L_8035F340:
 /* 8035F340 00328900  48 00 00 00 */	b .L_8035F340
+.endfn __OSRelaunchTitle

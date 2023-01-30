@@ -55,7 +55,7 @@
 .endfn _220_OnShutdownSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
 
 #@220@OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
-.global _220_OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
-_220_OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv:
+.fn _220_OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv, global
 /* 804175E8 003E0BA8  38 63 FF 20 */	addi r3, r3, -224
 /* 804175EC 003E0BAC  4B FF FF B0 */	b OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
+.endfn _220_OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv

@@ -184,8 +184,7 @@
 /* 803BFF9C 0038955C  4E 80 00 20 */	blr 
 .endfn SFCON_WriteTotSmplQue
 
-.global SFCON_ReadTotSmplQue
-SFCON_ReadTotSmplQue:
+.fn SFCON_ReadTotSmplQue, global
 /* 803BFFA0 00389560  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BFFA4 00389564  7C 08 02 A6 */	mflr r0
 /* 803BFFA8 00389568  90 01 00 24 */	stw r0, 0x24(r1)
@@ -235,3 +234,4 @@ SFCON_ReadTotSmplQue:
 /* 803C0050 00389610  7C 08 03 A6 */	mtlr r0
 /* 803C0054 00389614  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C0058 00389618  4E 80 00 20 */	blr 
+.endfn SFCON_ReadTotSmplQue

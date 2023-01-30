@@ -125,8 +125,7 @@
 /* 80421B6C 003EB12C  4E 80 00 20 */	blr 
 .endfn Alloc__Q44nw4r3snd6detail14StrmBufferPoolFv
 
-.global Free__Q44nw4r3snd6detail14StrmBufferPoolFPv
-Free__Q44nw4r3snd6detail14StrmBufferPoolFPv:
+.fn Free__Q44nw4r3snd6detail14StrmBufferPoolFPv, global
 /* 80421B70 003EB130  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80421B74 003EB134  7C 08 02 A6 */	mflr r0
 /* 80421B78 003EB138  90 01 00 14 */	stw r0, 0x14(r1)
@@ -157,3 +156,4 @@ Free__Q44nw4r3snd6detail14StrmBufferPoolFPv:
 /* 80421BDC 003EB19C  7C 08 03 A6 */	mtlr r0
 /* 80421BE0 003EB1A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80421BE4 003EB1A4  4E 80 00 20 */	blr 
+.endfn Free__Q44nw4r3snd6detail14StrmBufferPoolFPv

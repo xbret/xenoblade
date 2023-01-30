@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global btm_init
-btm_init:
+.fn btm_init, global
 /* 802E9E64 002B3424  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E9E68 002B3428  7C 08 02 A6 */	mflr r0
 /* 802E9E6C 002B342C  38 80 00 00 */	li r4, 0
@@ -27,3 +26,4 @@ btm_init:
 /* 802E9EB4 002B3474  7C 08 03 A6 */	mtlr r0
 /* 802E9EB8 002B3478  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E9EBC 002B347C  4E 80 00 20 */	blr
+.endfn btm_init

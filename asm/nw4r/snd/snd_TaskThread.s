@@ -134,8 +134,7 @@
 .endfn Destroy__Q44nw4r3snd6detail10TaskThreadFv
 
 #could also be ThreadProc__Q44nw4r3snd6detail10TaskThreadFv
-.global ThreadFunc__Q44nw4r3snd6detail10TaskThreadFPv
-ThreadFunc__Q44nw4r3snd6detail10TaskThreadFPv:
+.fn ThreadFunc__Q44nw4r3snd6detail10TaskThreadFPv, global
 /* 804260F4 003EF6B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804260F8 003EF6B8  7C 08 02 A6 */	mflr r0
 /* 804260FC 003EF6BC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -161,3 +160,4 @@ ThreadFunc__Q44nw4r3snd6detail10TaskThreadFPv:
 /* 80426140 003EF700  7C 08 03 A6 */	mtlr r0
 /* 80426144 003EF704  38 21 00 10 */	addi r1, r1, 0x10
 /* 80426148 003EF708  4E 80 00 20 */	blr 
+.endfn ThreadFunc__Q44nw4r3snd6detail10TaskThreadFPv

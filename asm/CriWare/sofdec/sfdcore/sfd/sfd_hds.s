@@ -753,8 +753,7 @@
 /* 803C0A28 00389FE8  4E 80 00 20 */	blr 
 .endfn SFHDS_GetMuxVerNum
 
-.global SFHDS_GetColType
-SFHDS_GetColType:
+.fn SFHDS_GetColType, global
 /* 803C0A2C 00389FEC  80 03 00 84 */	lwz r0, 0x84(r3)
 /* 803C0A30 00389FF0  38 63 00 E0 */	addi r3, r3, 0xe0
 /* 803C0A34 00389FF4  2C 00 00 00 */	cmpwi r0, 0
@@ -770,3 +769,4 @@ SFHDS_GetColType:
 .L_803C0A58:
 /* 803C0A58 0038A018  38 60 FF FF */	li r3, -1
 /* 803C0A5C 0038A01C  4E 80 00 20 */	blr 
+.endfn SFHDS_GetColType

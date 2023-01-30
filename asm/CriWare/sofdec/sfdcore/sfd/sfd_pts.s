@@ -301,8 +301,7 @@
 /* 803CBC4C 0039520C  4E 80 00 20 */	blr 
 .endfn sfpts_SearchPtsQue
 
-.global SFPTS_IsPtsQueFull
-SFPTS_IsPtsQueFull:
+.fn SFPTS_IsPtsQueFull, global
 /* 803CBC50 00395210  1C 04 00 74 */	mulli r0, r4, 0x74
 /* 803CBC54 00395214  7C 63 02 14 */	add r3, r3, r0
 /* 803CBC58 00395218  80 03 13 E8 */	lwz r0, 0x13e8(r3)
@@ -318,3 +317,4 @@ SFPTS_IsPtsQueFull:
 /* 803CBC7C 0039523C  7C 00 28 10 */	subfc r0, r0, r5
 /* 803CBC80 00395240  7C 64 19 14 */	adde r3, r4, r3
 /* 803CBC84 00395244  4E 80 00 20 */	blr 
+.endfn SFPTS_IsPtsQueFull

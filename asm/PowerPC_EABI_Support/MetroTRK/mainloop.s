@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global TRKNubMainLoop
-TRKNubMainLoop:
+.fn TRKNubMainLoop, global
 /* 802CBA90 00295050  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CBA94 00295054  7C 08 02 A6 */	mflr r0
 /* 802CBA98 00295058  90 01 00 24 */	stw r0, 0x24(r1)
@@ -74,3 +73,4 @@ TRKNubMainLoop:
 /* 802CBB70 00295130  7C 08 03 A6 */	mtlr r0
 /* 802CBB74 00295134  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CBB78 00295138  4E 80 00 20 */	blr 
+.endfn TRKNubMainLoop

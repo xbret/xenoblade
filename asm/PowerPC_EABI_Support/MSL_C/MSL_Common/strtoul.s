@@ -707,8 +707,7 @@
 /* 802C470C 0028DCCC  4E 80 00 20 */	blr 
 .endfn strtoul
 
-.global atoi
-atoi:
+.fn atoi, global
 /* 802C4710 0028DCD0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802C4714 0028DCD4  7C 08 02 A6 */	mflr r0
 /* 802C4718 0028DCD8  3C A0 80 2C */	lis r5, __StringRead@ha
@@ -762,3 +761,4 @@ atoi:
 /* 802C47C8 0028DD88  7C 08 03 A6 */	mtlr r0
 /* 802C47CC 0028DD8C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802C47D0 0028DD90  4E 80 00 20 */	blr 
+.endfn atoi

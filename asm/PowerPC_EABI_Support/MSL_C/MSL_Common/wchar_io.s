@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global fwide
-fwide:
+.fn fwide, global
 /* 802C7098 00290658  2C 03 00 00 */	cmpwi r3, 0
 /* 802C709C 0029065C  41 82 00 10 */	beq .L_802C70AC
 /* 802C70A0 00290660  80 A3 00 04 */	lwz r5, 4(r3)
@@ -41,3 +40,4 @@ fwide:
 .L_802C7108:
 /* 802C7108 002906C8  7C 83 23 78 */	mr r3, r4
 /* 802C710C 002906CC  4E 80 00 20 */	blr
+.endfn fwide

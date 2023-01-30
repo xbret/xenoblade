@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global IsValidBinaryFile__Q24nw4r2utFPCQ34nw4r2ut16BinaryFileHeaderUlUsUs
-IsValidBinaryFile__Q24nw4r2utFPCQ34nw4r2ut16BinaryFileHeaderUlUsUs:
+.fn IsValidBinaryFile__Q24nw4r2utFPCQ34nw4r2ut16BinaryFileHeaderUlUsUs, global
 /* 8042B57C 003F4B3C  80 03 00 00 */	lwz r0, 0(r3)
 /* 8042B580 003F4B40  7C 00 20 40 */	cmplw r0, r4
 /* 8042B584 003F4B44  41 82 00 0C */	beq .L_8042B590
@@ -37,3 +36,4 @@ IsValidBinaryFile__Q24nw4r2utFPCQ34nw4r2ut16BinaryFileHeaderUlUsUs:
 /* 8042B5E4 003F4BA4  7C 00 18 50 */	subf r0, r0, r3
 /* 8042B5E8 003F4BA8  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 8042B5EC 003F4BAC  4E 80 00 20 */	blr 
+.endfn IsValidBinaryFile__Q24nw4r2utFPCQ34nw4r2ut16BinaryFileHeaderUlUsUs

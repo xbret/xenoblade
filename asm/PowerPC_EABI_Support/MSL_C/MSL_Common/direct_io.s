@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __fwrite
-__fwrite:
+.fn __fwrite, global
 /* 802BDDA8 00287368  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802BDDAC 0028736C  7C 08 02 A6 */	mflr r0
 /* 802BDDB0 00287370  90 01 00 34 */	stw r0, 0x34(r1)
@@ -221,3 +220,4 @@ __fwrite:
 /* 802BE0A4 00287664  7C 08 03 A6 */	mtlr r0
 /* 802BE0A8 00287668  38 21 00 30 */	addi r1, r1, 0x30
 /* 802BE0AC 0028766C  4E 80 00 20 */	blr 
+.endfn __fwrite

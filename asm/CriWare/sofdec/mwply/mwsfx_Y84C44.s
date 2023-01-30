@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global mwPlyFxCnvFrmY84C44
-mwPlyFxCnvFrmY84C44:
+.fn mwPlyFxCnvFrmY84C44, global
 /* 803A39AC 0036CF6C  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 803A39B0 0036CF70  7C 08 02 A6 */	mflr r0
 /* 803A39B4 0036CF74  90 01 01 24 */	stw r0, 0x124(r1)
@@ -43,3 +42,4 @@ mwPlyFxCnvFrmY84C44:
 /* 803A3A3C 0036CFFC  7C 08 03 A6 */	mtlr r0
 /* 803A3A40 0036D000  38 21 01 20 */	addi r1, r1, 0x120
 /* 803A3A44 0036D004  4E 80 00 20 */	blr 
+.endfn mwPlyFxCnvFrmY84C44

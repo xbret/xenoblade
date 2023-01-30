@@ -145,8 +145,7 @@
 /* 80415944 003DEF04  4E 80 00 20 */	blr 
 .endfn RemoveSound__Q44nw4r3snd6detail19ExternalSoundPlayerFPQ44nw4r3snd6detail10BasicSound
 
-.global detail_CanPlaySound__Q44nw4r3snd6detail19ExternalSoundPlayerFi
-detail_CanPlaySound__Q44nw4r3snd6detail19ExternalSoundPlayerFi:
+.fn detail_CanPlaySound__Q44nw4r3snd6detail19ExternalSoundPlayerFi, global
 /* 80415948 003DEF08  80 A3 00 0C */	lwz r5, 0xc(r3)
 /* 8041594C 003DEF0C  2C 05 00 00 */	cmpwi r5, 0
 /* 80415950 003DEF10  40 82 00 0C */	bne .L_8041595C
@@ -206,3 +205,4 @@ detail_CanPlaySound__Q44nw4r3snd6detail19ExternalSoundPlayerFi:
 .L_80415A04:
 /* 80415A04 003DEFC4  38 60 00 01 */	li r3, 1
 /* 80415A08 003DEFC8  4E 80 00 20 */	blr 
+.endfn detail_CanPlaySound__Q44nw4r3snd6detail19ExternalSoundPlayerFi

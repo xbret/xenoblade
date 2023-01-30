@@ -136,8 +136,7 @@
 /* 803BCC40 00386200  4E 80 00 20 */	blr 
 .endfn MPS_GetLastSysHd
 
-.global MPS_GetPketHd
-MPS_GetPketHd:
+.fn MPS_GetPketHd, global
 /* 803BCC44 00386204  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BCC48 00386208  7C 08 02 A6 */	mflr r0
 /* 803BCC4C 0038620C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -182,3 +181,4 @@ MPS_GetPketHd:
 /* 803BCCE0 003862A0  7C 08 03 A6 */	mtlr r0
 /* 803BCCE4 003862A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BCCE8 003862A8  4E 80 00 20 */	blr 
+.endfn MPS_GetPketHd

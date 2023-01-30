@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __DSP_debug_printf
-__DSP_debug_printf:
+.fn __DSP_debug_printf, global
 /* 803094B0 002D2A70  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803094B4 002D2A74  40 86 00 24 */	bne cr1, .L_803094D8
 /* 803094B8 002D2A78  D8 21 00 28 */	stfd f1, 0x28(r1)
@@ -26,3 +25,4 @@ __DSP_debug_printf:
 /* 803094F4 002D2AB4  91 41 00 24 */	stw r10, 0x24(r1)
 /* 803094F8 002D2AB8  38 21 00 70 */	addi r1, r1, 0x70
 /* 803094FC 002D2ABC  4E 80 00 20 */	blr
+.endfn __DSP_debug_printf

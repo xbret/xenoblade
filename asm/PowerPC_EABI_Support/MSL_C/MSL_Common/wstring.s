@@ -66,8 +66,7 @@
 /* 802C7068 00290628  4E 80 00 20 */	blr 
 .endfn wcscmp
 
-.global wcschr
-wcschr:
+.fn wcschr, global
 /* 802C706C 0029062C  38 63 FF FE */	addi r3, r3, -2
 /* 802C7070 00290630  48 00 00 0C */	b .L_802C707C
 .L_802C7074:
@@ -81,3 +80,4 @@ wcschr:
 /* 802C708C 0029064C  4D 82 00 20 */	beqlr 
 /* 802C7090 00290650  38 60 00 00 */	li r3, 0
 /* 802C7094 00290654  4E 80 00 20 */	blr 
+.endfn wcschr

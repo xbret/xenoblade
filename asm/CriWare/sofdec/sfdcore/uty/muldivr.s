@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global UTY_MulDivRound64
-UTY_MulDivRound64:
+.fn UTY_MulDivRound64, global
 /* 803D45A0 0039DB60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D45A4 0039DB64  7C 08 02 A6 */	mflr r0
 /* 803D45A8 0039DB68  7C AB 2B 78 */	mr r11, r5
@@ -96,3 +95,4 @@ UTY_MulDivRound64:
 /* 803D46EC 0039DCAC  7C 08 03 A6 */	mtlr r0
 /* 803D46F0 0039DCB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D46F4 0039DCB4  4E 80 00 20 */	blr 
+.endfn UTY_MulDivRound64

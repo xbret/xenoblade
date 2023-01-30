@@ -19,8 +19,7 @@
 .endfn __OSSystemCallVectorEnd
 
 .balign 16, 0
-.global __OSInitSystemCall
-__OSInitSystemCall:
+.fn __OSInitSystemCall, global
 /* 8035B2D0 00324890  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035B2D4 00324894  7C 08 02 A6 */	mflr r0
 /* 8035B2D8 00324898  3C 80 80 36 */	lis r4, SystemCallVector@ha
@@ -45,3 +44,4 @@ __OSInitSystemCall:
 /* 8035B324 003248E4  7C 08 03 A6 */	mtlr r0
 /* 8035B328 003248E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035B32C 003248EC  4E 80 00 20 */	blr 
+.endfn __OSInitSystemCall

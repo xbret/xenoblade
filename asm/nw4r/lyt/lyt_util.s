@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global BindAnimation__Q24nw4r3lytFPQ34nw4r3lyt5GroupPQ34nw4r3lyt13AnimTransformbb
-BindAnimation__Q24nw4r3lytFPQ34nw4r3lyt5GroupPQ34nw4r3lyt13AnimTransformbb:
+.fn BindAnimation__Q24nw4r3lytFPQ34nw4r3lyt5GroupPQ34nw4r3lyt13AnimTransformbb, global
 /* 8040AB80 003D4140  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040AB84 003D4144  7C 08 02 A6 */	mflr r0
 /* 8040AB88 003D4148  90 01 00 24 */	stw r0, 0x24(r1)
@@ -34,3 +33,4 @@ BindAnimation__Q24nw4r3lytFPQ34nw4r3lyt5GroupPQ34nw4r3lyt13AnimTransformbb:
 /* 8040ABE4 003D41A4  7C 08 03 A6 */	mtlr r0
 /* 8040ABE8 003D41A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040ABEC 003D41AC  4E 80 00 20 */	blr
+.endfn BindAnimation__Q24nw4r3lytFPQ34nw4r3lyt5GroupPQ34nw4r3lyt13AnimTransformbb

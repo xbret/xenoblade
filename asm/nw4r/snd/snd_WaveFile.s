@@ -235,8 +235,7 @@
 /* 80429B6C 003F312C  4E 80 00 20 */	blr 
 .endfn ReadWaveInfo__Q44nw4r3snd6detail14WaveFileReaderCFPQ44nw4r3snd6detail8WaveInfoPCv
 
-.global GetWaveDataAddress__Q44nw4r3snd6detail14WaveFileReaderCFPCQ54nw4r3snd6detail8WaveFile15WaveChannelInfoPCv
-GetWaveDataAddress__Q44nw4r3snd6detail14WaveFileReaderCFPCQ54nw4r3snd6detail8WaveFile15WaveChannelInfoPCv:
+.fn GetWaveDataAddress__Q44nw4r3snd6detail14WaveFileReaderCFPCQ54nw4r3snd6detail8WaveFile15WaveChannelInfoPCv, global
 /* 80429B70 003F3130  2C 05 00 00 */	cmpwi r5, 0
 /* 80429B74 003F3134  7C A0 00 34 */	cntlzw r0, r5
 /* 80429B78 003F3138  54 06 D9 7E */	srwi r6, r0, 5
@@ -268,3 +267,4 @@ GetWaveDataAddress__Q44nw4r3snd6detail14WaveFileReaderCFPCQ54nw4r3snd6detail8Wav
 /* 80429BCC 003F318C  80 04 00 00 */	lwz r0, 0(r4)
 /* 80429BD0 003F3190  7C 60 1A 14 */	add r3, r0, r3
 /* 80429BD4 003F3194  4E 80 00 20 */	blr 
+.endfn GetWaveDataAddress__Q44nw4r3snd6detail14WaveFileReaderCFPCQ54nw4r3snd6detail8WaveFile15WaveChannelInfoPCv

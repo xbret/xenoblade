@@ -1314,8 +1314,7 @@
 /* 803DA574 003A3B34  4E 80 00 20 */	blr 
 .endfn Init__Q34nw4r3g3d6ResMdlFv
 
-.global Terminate__Q34nw4r3g3d6ResMdlFv
-Terminate__Q34nw4r3g3d6ResMdlFv:
+.fn Terminate__Q34nw4r3g3d6ResMdlFv, global
 /* 803DA578 003A3B38  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803DA57C 003A3B3C  7C 08 02 A6 */	mflr r0
 /* 803DA580 003A3B40  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1386,3 +1385,4 @@ Terminate__Q34nw4r3g3d6ResMdlFv:
 /* 803DA654 003A3C14  7C 08 03 A6 */	mtlr r0
 /* 803DA658 003A3C18  38 21 00 20 */	addi r1, r1, 0x20
 /* 803DA65C 003A3C1C  4E 80 00 20 */	blr 
+.endfn Terminate__Q34nw4r3g3d6ResMdlFv

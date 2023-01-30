@@ -580,8 +580,7 @@
 /* 804223E0 003EB9A0  4E 80 00 20 */	blr 
 .endfn ReadAdpcmInfo__Q44nw4r3snd6detail14StrmFileLoaderCFPQ44nw4r3snd6detail10AdpcmParamPQ44nw4r3snd6detail14AdpcmLoopParami
 
-.global ReadAdpcBlockData__Q44nw4r3snd6detail14StrmFileLoaderFPUsPUsii
-ReadAdpcBlockData__Q44nw4r3snd6detail14StrmFileLoaderFPUsPUsii:
+.fn ReadAdpcBlockData__Q44nw4r3snd6detail14StrmFileLoaderFPUsPUsii, global
 /* 804223E4 003EB9A4  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 804223E8 003EB9A8  7C 2C 0B 78 */	mr r12, r1
 /* 804223EC 003EB9AC  21 6B FF A0 */	subfic r11, r11, -96
@@ -700,3 +699,4 @@ ReadAdpcBlockData__Q44nw4r3snd6detail14StrmFileLoaderFPUsPUsii:
 /* 8042258C 003EBB4C  7C 08 03 A6 */	mtlr r0
 /* 80422590 003EBB50  7D 41 53 78 */	mr r1, r10
 /* 80422594 003EBB54  4E 80 00 20 */	blr 
+.endfn ReadAdpcBlockData__Q44nw4r3snd6detail14StrmFileLoaderFPUsPUsii

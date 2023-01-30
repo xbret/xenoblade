@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global TRK_flush_cache
-TRK_flush_cache:
+.fn TRK_flush_cache, global
 /* 802CBA1C 00294FDC  3C A0 FF FF */	lis r5, 0xFFFFFFF1@h
 /* 802CBA20 00294FE0  60 A5 FF F1 */	ori r5, r5, 0xFFFFFFF1@l
 /* 802CBA24 00294FE4  7C A5 18 38 */	and r5, r5, r3
@@ -19,3 +18,4 @@ TRK_flush_cache:
 /* 802CBA48 00295008  40 80 FF E8 */	bge .L_802CBA30
 /* 802CBA4C 0029500C  4C 00 01 2C */	isync 
 /* 802CBA50 00295010  4E 80 00 20 */	blr
+.endfn TRK_flush_cache

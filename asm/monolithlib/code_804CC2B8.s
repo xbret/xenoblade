@@ -2398,7 +2398,7 @@
 /* 804CE558 00497B18  7C 84 00 2E */	lwzx r4, r4, r0
 /* 804CE55C 00497B1C  7C 89 03 A6 */	mtctr r4
 /* 804CE560 00497B20  4E 80 04 20 */	bctr
-switch_804CE564:
+.L_804CE564:
 /* 804CE564 00497B24  C0 23 02 D8 */	lfs f1, 0x2d8(r3)
 /* 804CE568 00497B28  C0 02 D5 0C */	lfs f0, float_8066D88C@sda21(r2)
 /* 804CE56C 00497B2C  FC 01 00 00 */	fcmpu cr0, f1, f0
@@ -2406,14 +2406,14 @@ switch_804CE564:
 /* 804CE574 00497B34  7F C3 F3 78 */	mr r3, r30
 /* 804CE578 00497B38  48 00 EF 81 */	bl func_804DD4F8
 /* 804CE57C 00497B3C  48 00 02 08 */	b .L_804CE784
-switch_804CE580:
+.L_804CE580:
 /* 804CE580 00497B40  80 A9 00 0C */	lwz r5, 0xc(r9)
 /* 804CE584 00497B44  7F C3 F3 78 */	mr r3, r30
 /* 804CE588 00497B48  38 89 02 D0 */	addi r4, r9, 0x2d0
 /* 804CE58C 00497B4C  80 A5 00 48 */	lwz r5, 0x48(r5)
 /* 804CE590 00497B50  48 00 D3 F1 */	bl func_804DB980
 /* 804CE594 00497B54  48 00 01 F0 */	b .L_804CE784
-switch_804CE598:
+.L_804CE598:
 /* 804CE598 00497B58  C0 03 02 D0 */	lfs f0, 0x2d0(r3)
 /* 804CE59C 00497B5C  38 81 00 14 */	addi r4, r1, 0x14
 /* 804CE5A0 00497B60  D0 01 00 14 */	stfs f0, 0x14(r1)
@@ -2477,7 +2477,7 @@ switch_804CE598:
 /* 804CE688 00497C48  90 1E 00 2C */	stw r0, 0x2c(r30)
 /* 804CE68C 00497C4C  90 7E 00 28 */	stw r3, 0x28(r30)
 /* 804CE690 00497C50  48 00 00 F4 */	b .L_804CE784
-switch_804CE694:
+.L_804CE694:
 /* 804CE694 00497C54  80 A3 02 D0 */	lwz r5, 0x2d0(r3)
 /* 804CE698 00497C58  38 81 00 08 */	addi r4, r1, 8
 /* 804CE69C 00497C5C  80 03 02 D4 */	lwz r0, 0x2d4(r3)
@@ -11740,17 +11740,17 @@ lbl_80527E40:
 
 .global lbl_80573458
 lbl_80573458:
-	.4byte switch_804CE564
-	.4byte switch_804CE564
-	.4byte switch_804CE580
-	.4byte switch_804CE580
-	.4byte switch_804CE598
-	.4byte switch_804CE694
-	.4byte switch_804CE564
-	.4byte switch_804CE564
-	.4byte switch_804CE580
-	.4byte switch_804CE580
-	.4byte switch_804CE598
+	.4byte .L_804CE564
+	.4byte .L_804CE564
+	.4byte .L_804CE580
+	.4byte .L_804CE580
+	.4byte .L_804CE598
+	.4byte .L_804CE694
+	.4byte .L_804CE564
+	.4byte .L_804CE564
+	.4byte .L_804CE580
+	.4byte .L_804CE580
+	.4byte .L_804CE598
 	.4byte 0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

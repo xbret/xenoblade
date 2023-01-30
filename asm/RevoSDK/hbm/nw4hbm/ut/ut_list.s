@@ -94,8 +94,7 @@
 .endfn List_GetNext__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListPCv
 
 .balign 16, 0
-.global List_GetNth__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListUs
-List_GetNth__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListUs:
+.fn List_GetNth__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListUs, global
 /* 80338770 00301D30  38 C0 00 00 */	li r6, 0
 /* 80338774 00301D34  38 A0 00 00 */	li r5, 0
 /* 80338778 00301D38  48 00 00 1C */	b .L_80338794
@@ -121,3 +120,4 @@ List_GetNth__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListUs:
 /* 803387B4 00301D74  40 82 FF CC */	bne .L_80338780
 /* 803387B8 00301D78  38 60 00 00 */	li r3, 0
 /* 803387BC 00301D7C  4E 80 00 20 */	blr 
+.endfn List_GetNth__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListUs

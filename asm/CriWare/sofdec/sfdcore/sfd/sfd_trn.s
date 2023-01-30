@@ -461,8 +461,7 @@
 /* 803CEA34 00397FF4  4E 80 00 20 */	blr 
 .endfn SFTRN_GetTermFlg
 
-.global SFTRN_IsSetup
-SFTRN_IsSetup:
+.fn SFTRN_IsSetup, global
 /* 803CEA38 00397FF8  1C 04 00 44 */	mulli r0, r4, 0x44
 /* 803CEA3C 00397FFC  7C 63 02 14 */	add r3, r3, r0
 /* 803CEA40 00398000  80 63 1F DC */	lwz r3, 0x1fdc(r3)
@@ -470,3 +469,4 @@ SFTRN_IsSetup:
 /* 803CEA48 00398008  7C 00 1B 78 */	or r0, r0, r3
 /* 803CEA4C 0039800C  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 803CEA50 00398010  4E 80 00 20 */	blr 
+.endfn SFTRN_IsSetup

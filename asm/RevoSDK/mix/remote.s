@@ -361,8 +361,7 @@
 .endfn __MIXRmtUpdateSettings
 
 .balign 16, 0
-.global __MIXRmtResetChannel
-__MIXRmtResetChannel:
+.fn __MIXRmtResetChannel, global
 /* 8034D180 00316740  1C 83 00 44 */	mulli r4, r3, 0x44
 /* 8034D184 00316744  80 AD B8 68 */	lwz r5, lbl_806679E8@sda21(r13)
 /* 8034D188 00316748  38 60 00 00 */	li r3, 0
@@ -385,3 +384,4 @@ __MIXRmtResetChannel:
 /* 8034D1CC 0031678C  B0 64 00 28 */	sth r3, 0x28(r4)
 /* 8034D1D0 00316790  B0 64 00 24 */	sth r3, 0x24(r4)
 /* 8034D1D4 00316794  4E 80 00 20 */	blr 
+.endfn __MIXRmtResetChannel

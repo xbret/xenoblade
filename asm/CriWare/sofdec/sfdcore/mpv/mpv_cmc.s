@@ -67,8 +67,7 @@
 /* 803A46E0 0036DCA0  4E 80 00 20 */	blr 
 .endfn MPVCMC_InitMcOiRt
 
-.global MPVCMC_SetCcnt
-MPVCMC_SetCcnt:
+.fn MPVCMC_SetCcnt, global
 /* 803A46E4 0036DCA4  80 03 0B 24 */	lwz r0, 0xb24(r3)
 /* 803A46E8 0036DCA8  38 80 00 04 */	li r4, 4
 /* 803A46EC 0036DCAC  2C 00 00 00 */	cmpwi r0, 0
@@ -78,3 +77,4 @@ MPVCMC_SetCcnt:
 /* 803A46F8 0036DCB8  90 83 0A D4 */	stw r4, 0xad4(r3)
 /* 803A46FC 0036DCBC  90 83 0A A0 */	stw r4, 0xaa0(r3)
 /* 803A4700 0036DCC0  4E 80 00 20 */	blr 
+.endfn MPVCMC_SetCcnt

@@ -17,7 +17,7 @@
 /* 802CB520 00294AE0  4E 80 00 20 */	blr
 .endfn TRKCloseFile
 
-.global TRKPositionFile
-TRKPositionFile:
+.fn TRKPositionFile, global
 /* 802CB524 00294AE4  0F E0 00 00 */	twui r0, 0
 /* 802CB528 00294AE8  4E 80 00 20 */	blr
+.endfn TRKPositionFile

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global scalbn
-scalbn:
+.fn scalbn, global
 /* 802C7258 00290818  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802C725C 0029081C  7C 08 02 A6 */	mflr r0
 /* 802C7260 00290820  90 01 00 24 */	stw r0, 0x24(r1)
@@ -20,3 +19,4 @@ scalbn:
 /* 802C728C 0029084C  7C 08 03 A6 */	mtlr r0
 /* 802C7290 00290850  38 21 00 20 */	addi r1, r1, 0x20
 /* 802C7294 00290854  4E 80 00 20 */	blr
+.endfn scalbn

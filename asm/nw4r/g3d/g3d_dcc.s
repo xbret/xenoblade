@@ -43,8 +43,7 @@
 /* 803EE644 003B7C04  4E 80 00 20 */	blr 
 .endfn CalcTexMtx__Q24nw4r3g3dFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4FlagQ44nw4r3g3d13TexSrtTypedef13TexMatrixMode
 
-.global CalcTexMtx__Q24nw4r3g3dFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4Flag
-CalcTexMtx__Q24nw4r3g3dFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4Flag:
+.fn CalcTexMtx__Q24nw4r3g3dFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4Flag, global
 /* 803EE648 003B7C08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803EE64C 003B7C0C  7C 08 02 A6 */	mflr r0
 /* 803EE650 003B7C10  90 01 00 14 */	stw r0, 0x14(r1)
@@ -67,3 +66,4 @@ CalcTexMtx__Q24nw4r3g3dFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexS
 /* 803EE690 003B7C50  7C 08 03 A6 */	mtlr r0
 /* 803EE694 003B7C54  38 21 00 10 */	addi r1, r1, 0x10
 /* 803EE698 003B7C58  4E 80 00 20 */	blr 
+.endfn CalcTexMtx__Q24nw4r3g3dFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4Flag

@@ -88,8 +88,7 @@
 /* 802CBCB4 00295274  4E 80 00 20 */	blr 
 .endfn TRK_memcpy
 
-.global TRK_memset
-TRK_memset:
+.fn TRK_memset, global
 /* 802CBCB8 00295278  2C 05 00 00 */	cmpwi r5, 0
 /* 802CBCBC 0029527C  54 88 06 3E */	clrlwi r8, r4, 0x18
 /* 802CBCC0 00295280  7C 67 1B 78 */	mr r7, r3
@@ -167,3 +166,4 @@ TRK_memset:
 /* 802CBDD4 00295394  90 0A 00 00 */	stw r0, 0(r10)
 /* 802CBDD8 00295398  42 00 FF D0 */	bdnz .L_802CBDA8
 /* 802CBDDC 0029539C  4E 80 00 20 */	blr 
+.endfn TRK_memset

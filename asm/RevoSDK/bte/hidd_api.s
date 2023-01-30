@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global HID_DevInit
-HID_DevInit:
+.fn HID_DevInit, global
 /* 802F35D8 002BCB98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F35DC 002BCB9C  7C 08 02 A6 */	mflr r0
 /* 802F35E0 002BCBA0  38 80 00 00 */	li r4, 0
@@ -30,3 +29,4 @@ HID_DevInit:
 /* 802F3634 002BCBF4  7C 08 03 A6 */	mtlr r0
 /* 802F3638 002BCBF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F363C 002BCBFC  4E 80 00 20 */	blr
+.endfn HID_DevInit

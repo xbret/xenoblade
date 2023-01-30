@@ -828,8 +828,7 @@
 /* 803BC220 003857E0  4E 80 00 20 */	blr 
 .endfn mpsdec_DecSysHd
 
-.global mpsdec_DecPketHd
-mpsdec_DecPketHd:
+.fn mpsdec_DecPketHd, global
 /* 803BC224 003857E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BC228 003857E8  38 04 00 03 */	addi r0, r4, 3
 /* 803BC22C 003857EC  54 09 00 3A */	rlwinm r9, r0, 0, 0, 0x1d
@@ -1431,3 +1430,4 @@ mpsdec_DecPketHd:
 /* 803BC9F8 00385FB8  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 803BC9FC 00385FBC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BCA00 00385FC0  4E 80 00 20 */	blr 
+.endfn mpsdec_DecPketHd

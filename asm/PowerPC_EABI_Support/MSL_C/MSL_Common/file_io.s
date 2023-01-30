@@ -58,8 +58,7 @@
 /* 802BE168 00287728  4E 80 00 20 */	blr 
 .endfn fclose
 
-.global fflush
-fflush:
+.fn fflush, global
 /* 802BE16C 0028772C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BE170 00287730  7C 08 02 A6 */	mflr r0
 /* 802BE174 00287734  2C 03 00 00 */	cmpwi r3, 0
@@ -148,3 +147,4 @@ fflush:
 /* 802BE294 00287854  7C 08 03 A6 */	mtlr r0
 /* 802BE298 00287858  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BE29C 0028785C  4E 80 00 20 */	blr 
+.endfn fflush

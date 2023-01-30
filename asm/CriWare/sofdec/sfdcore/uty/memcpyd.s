@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global UTY_MemcpyDword
-UTY_MemcpyDword:
+.fn UTY_MemcpyDword, global
 /* 803D440C 0039D9CC  54 A6 07 3E */	clrlwi r6, r5, 0x1c
 /* 803D4410 0039D9D0  38 C6 00 01 */	addi r6, r6, 1
 /* 803D4414 0039D9D4  48 00 00 14 */	b .L_803D4428
@@ -57,3 +56,4 @@ UTY_MemcpyDword:
 /* 803D44C4 0039DA84  35 08 FF FF */	addic. r8, r8, -1
 /* 803D44C8 0039DA88  40 82 FF 74 */	bne .L_803D443C
 /* 803D44CC 0039DA8C  4E 80 00 20 */	blr 
+.endfn UTY_MemcpyDword

@@ -296,8 +296,7 @@
 .endfn __HBMSYNMidiIn__FP11HBMSYNSYNTHPUc
 
 .balign 16, 0
-.global __HBMSYNRunInputBufferEvents
-__HBMSYNRunInputBufferEvents:
+.fn __HBMSYNRunInputBufferEvents, global
 /* 80341280 0030A840  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341284 0030A844  7C 08 02 A6 */	mflr r0
 /* 80341288 0030A848  90 01 00 14 */	stw r0, 0x14(r1)
@@ -326,3 +325,4 @@ __HBMSYNRunInputBufferEvents:
 /* 803412DC 0030A89C  7C 08 03 A6 */	mtlr r0
 /* 803412E0 0030A8A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803412E4 0030A8A4  4E 80 00 20 */	blr 
+.endfn __HBMSYNRunInputBufferEvents

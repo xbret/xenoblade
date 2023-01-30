@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global GetAnmResult__Q34nw4r3g3d12ResAnmCameraCFPQ34nw4r3g3d15CameraAnmResultf
-GetAnmResult__Q34nw4r3g3d12ResAnmCameraCFPQ34nw4r3g3d15CameraAnmResultf:
+.fn GetAnmResult__Q34nw4r3g3d12ResAnmCameraCFPQ34nw4r3g3d15CameraAnmResultf, global
 /* 803E0AB0 003AA070  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803E0AB4 003AA074  7C 08 02 A6 */	mflr r0
 /* 803E0AB8 003AA078  90 01 00 44 */	stw r0, 0x44(r1)
@@ -238,3 +237,4 @@ GetAnmResult__Q34nw4r3g3d12ResAnmCameraCFPQ34nw4r3g3d15CameraAnmResultf:
 /* 803E0DBC 003AA37C  7C 08 03 A6 */	mtlr r0
 /* 803E0DC0 003AA380  38 21 00 40 */	addi r1, r1, 0x40
 /* 803E0DC4 003AA384  4E 80 00 20 */	blr 
+.endfn GetAnmResult__Q34nw4r3g3d12ResAnmCameraCFPQ34nw4r3g3d15CameraAnmResultf

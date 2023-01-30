@@ -110,8 +110,7 @@
 /* 803B9848 00382E08  4E 80 00 20 */	blr 
 .endfn MPVSL_DecPicture
 
-.global MPVSL_DecSliceOne
-MPVSL_DecSliceOne:
+.fn MPVSL_DecSliceOne, global
 /* 803B984C 00382E0C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803B9850 00382E10  7C 08 02 A6 */	mflr r0
 /* 803B9854 00382E14  39 00 00 00 */	li r8, 0
@@ -284,3 +283,4 @@ MPVSL_DecSliceOne:
 /* 803B9ABC 0038307C  7C 08 03 A6 */	mtlr r0
 /* 803B9AC0 00383080  38 21 00 40 */	addi r1, r1, 0x40
 /* 803B9AC4 00383084  4E 80 00 20 */	blr 
+.endfn MPVSL_DecSliceOne

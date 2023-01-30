@@ -118,8 +118,7 @@
 /* 802CD2B8 00296878  4E 80 00 20 */	blr 
 .endfn TRKSaveExtended1Block
 
-.global TRKRestoreExtended1Block
-TRKRestoreExtended1Block:
+.fn TRKRestoreExtended1Block, global
 /* 802CD2BC 0029687C  3C 40 80 57 */	lis r2, gTRKCPUState@h
 /* 802CD2C0 00296880  60 42 D3 F8 */	ori r2, r2, gTRKCPUState@l
 /* 802CD2C4 00296884  3C A0 80 57 */	lis r5, lbl_8057D280@h
@@ -212,3 +211,4 @@ TRKRestoreExtended1Block:
 /* 802CD414 002969D4  7F D2 FB A6 */	mtspr 0x3f2, r30
 /* 802CD418 002969D8  7F FA 43 A6 */	mtspr 0x11a, r31
 /* 802CD41C 002969DC  4E 80 00 20 */	blr 
+.endfn TRKRestoreExtended1Block

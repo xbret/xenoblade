@@ -328,8 +328,7 @@
 .endfn GKI_add_to_timer_list
 
 .balign 16, 0
-.global GKI_remove_from_timer_list
-GKI_remove_from_timer_list:
+.fn GKI_remove_from_timer_list, global
 /* 802DC660 002A5C20  2C 04 00 00 */	cmpwi r4, 0
 /* 802DC664 002A5C24  4D 82 00 20 */	beqlr 
 /* 802DC668 002A5C28  88 04 00 16 */	lbz r0, 0x16(r4)
@@ -411,3 +410,4 @@ GKI_remove_from_timer_list:
 /* 802DC778 002A5D38  90 04 00 0C */	stw r0, 0xc(r4)
 /* 802DC77C 002A5D3C  98 64 00 16 */	stb r3, 0x16(r4)
 /* 802DC780 002A5D40  4E 80 00 20 */	blr
+.endfn GKI_remove_from_timer_list

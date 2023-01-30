@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global CalcMaterialDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d12AnmObjTexPatPQ34nw4r3g3d12AnmObjTexSrtPQ34nw4r3g3d12AnmObjMatClr
-CalcMaterialDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d12AnmObjTexPatPQ34nw4r3g3d12AnmObjTexSrtPQ34nw4r3g3d12AnmObjMatClr:
+.fn CalcMaterialDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d12AnmObjTexPatPQ34nw4r3g3d12AnmObjTexSrtPQ34nw4r3g3d12AnmObjMatClr, global
 /* 803FC92C 003C5EEC  94 21 FD F0 */	stwu r1, -0x210(r1)
 /* 803FC930 003C5EF0  7C 08 02 A6 */	mflr r0
 /* 803FC934 003C5EF4  90 01 02 14 */	stw r0, 0x214(r1)
@@ -289,3 +288,4 @@ CalcMaterialDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d12AnmObjTexPatPQ
 /* 803FCD30 003C62F0  7C 08 03 A6 */	mtlr r0
 /* 803FCD34 003C62F4  38 21 02 10 */	addi r1, r1, 0x210
 /* 803FCD38 003C62F8  4E 80 00 20 */	blr 
+.endfn CalcMaterialDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d12AnmObjTexPatPQ34nw4r3g3d12AnmObjTexSrtPQ34nw4r3g3d12AnmObjMatClr

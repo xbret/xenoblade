@@ -15,8 +15,7 @@
 /* 802BDCEC 002872AC  4E 80 00 20 */	blr 
 .endfn __prep_buffer
 
-.global __flush_buffer
-__flush_buffer:
+.fn __flush_buffer, global
 /* 802BDCF0 002872B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BDCF4 002872B4  7C 08 02 A6 */	mflr r0
 /* 802BDCF8 002872B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -67,3 +66,4 @@ __flush_buffer:
 /* 802BDD9C 0028735C  7C 08 03 A6 */	mtlr r0
 /* 802BDDA0 00287360  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BDDA4 00287364  4E 80 00 20 */	blr 
+.endfn __flush_buffer

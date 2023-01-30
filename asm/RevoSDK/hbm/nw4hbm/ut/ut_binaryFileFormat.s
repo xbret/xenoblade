@@ -101,8 +101,7 @@
 .endfn func_80336A10
 
 .balign 16, 0
-.global func_80336A30
-func_80336A30:
+.fn func_80336A30, global
 /* 80336A30 002FFFF0  80 83 00 00 */	lwz r4, 0(r3)
 /* 80336A34 002FFFF4  38 00 00 00 */	li r0, 0
 /* 80336A38 002FFFF8  88 A4 00 00 */	lbz r5, 0(r4)
@@ -132,3 +131,4 @@ func_80336A30:
 .L_80336A88:
 /* 80336A88 00300048  7C C3 33 78 */	mr r3, r6
 /* 80336A8C 0030004C  4E 80 00 20 */	blr
+.endfn func_80336A30

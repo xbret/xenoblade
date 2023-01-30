@@ -58,8 +58,7 @@
 /* 802BE348 00287908  4B FF FF 58 */	b _ftell
 .endfn ftell
 
-.global fseek
-fseek:
+.fn fseek, global
 /* 802BE34C 0028790C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BE350 00287910  7C 08 02 A6 */	mflr r0
 /* 802BE354 00287914  90 01 00 24 */	stw r0, 0x24(r1)
@@ -184,3 +183,4 @@ fseek:
 /* 802BE504 00287AC4  7C 08 03 A6 */	mtlr r0
 /* 802BE508 00287AC8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BE50C 00287ACC  4E 80 00 20 */	blr
+.endfn fseek

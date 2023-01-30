@@ -1730,13 +1730,13 @@
 /* 80228F9C 001F255C  57 63 06 3E */	clrlwi r3, r27, 0x18
 /* 80228FA0 001F2560  38 03 FF FA */	addi r0, r3, -6
 /* 80228FA4 001F2564  28 00 00 16 */	cmplwi r0, 0x16
-/* 80228FA8 001F2568  41 81 00 18 */	bgt switch_80228FC0
+/* 80228FA8 001F2568  41 81 00 18 */	bgt .L_80228FC0
 /* 80228FAC 001F256C  38 77 99 E0 */	addi r3, r23, lbl_805399E0@l
 /* 80228FB0 001F2570  54 00 10 3A */	slwi r0, r0, 2
 /* 80228FB4 001F2574  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80228FB8 001F2578  7C 69 03 A6 */	mtctr r3
 /* 80228FBC 001F257C  4E 80 04 20 */	bctr 
-switch_80228FC0:
+.L_80228FC0:
 /* 80228FC0 001F2580  57 76 06 3E */	clrlwi r22, r27, 0x18
 /* 80228FC4 001F2584  3B 80 00 01 */	li r28, 1
 /* 80228FC8 001F2588  48 00 00 5C */	b .L_80229024
@@ -1761,13 +1761,13 @@ switch_80228FC0:
 /* 80229010 001F25D0  57 20 06 3E */	clrlwi r0, r25, 0x18
 /* 80229014 001F25D4  3B 39 00 01 */	addi r25, r25, 1
 /* 80229018 001F25D8  7F 74 01 AE */	stbx r27, r20, r0
-/* 8022901C 001F25DC  48 00 00 10 */	b switch_8022902C
+/* 8022901C 001F25DC  48 00 00 10 */	b .L_8022902C
 .L_80229020:
 /* 80229020 001F25E0  3B 9C 00 01 */	addi r28, r28, 1
 .L_80229024:
 /* 80229024 001F25E4  7C 1C C0 00 */	cmpw r28, r24
 /* 80229028 001F25E8  40 81 FF A4 */	ble .L_80228FCC
-switch_8022902C:
+.L_8022902C:
 /* 8022902C 001F25EC  3B 7B 00 01 */	addi r27, r27, 1
 /* 80229030 001F25F0  28 1B 00 1C */	cmplwi r27, 0x1c
 /* 80229034 001F25F4  40 81 FF 68 */	ble .L_80228F9C
@@ -2094,29 +2094,29 @@ lbl_805051C4:
 
 .global lbl_805399E0
 lbl_805399E0:
-	.4byte switch_8022902C
-	.4byte switch_80228FC0
-	.4byte switch_80228FC0
-	.4byte switch_80228FC0
-	.4byte switch_8022902C
-	.4byte switch_8022902C
-	.4byte switch_80228FC0
-	.4byte switch_80228FC0
-	.4byte switch_8022902C
-	.4byte switch_80228FC0
-	.4byte switch_80228FC0
-	.4byte switch_80228FC0
-	.4byte switch_80228FC0
-	.4byte switch_80228FC0
-	.4byte switch_8022902C
-	.4byte switch_80228FC0
-	.4byte switch_8022902C
-	.4byte switch_80228FC0
-	.4byte switch_80228FC0
-	.4byte switch_8022902C
-	.4byte switch_8022902C
-	.4byte switch_80228FC0
-	.4byte switch_8022902C
+	.4byte .L_8022902C
+	.4byte .L_80228FC0
+	.4byte .L_80228FC0
+	.4byte .L_80228FC0
+	.4byte .L_8022902C
+	.4byte .L_8022902C
+	.4byte .L_80228FC0
+	.4byte .L_80228FC0
+	.4byte .L_8022902C
+	.4byte .L_80228FC0
+	.4byte .L_80228FC0
+	.4byte .L_80228FC0
+	.4byte .L_80228FC0
+	.4byte .L_80228FC0
+	.4byte .L_8022902C
+	.4byte .L_80228FC0
+	.4byte .L_8022902C
+	.4byte .L_80228FC0
+	.4byte .L_80228FC0
+	.4byte .L_8022902C
+	.4byte .L_8022902C
+	.4byte .L_80228FC0
+	.4byte .L_8022902C
 	.4byte 0
 
 

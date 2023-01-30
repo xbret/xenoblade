@@ -48,8 +48,7 @@
 /* 804203C4 003E9984  4E 80 00 20 */	blr 
 .endfn detail_AttachSound__Q34nw4r3snd11SoundHandleFPQ44nw4r3snd6detail10BasicSound
 
-.global DetachSound__Q34nw4r3snd11SoundHandleFv
-DetachSound__Q34nw4r3snd11SoundHandleFv:
+.fn DetachSound__Q34nw4r3snd11SoundHandleFv, global
 /* 804203C8 003E9988  80 83 00 00 */	lwz r4, 0(r3)
 /* 804203CC 003E998C  2C 04 00 00 */	cmpwi r4, 0
 /* 804203D0 003E9990  41 82 00 30 */	beq .L_80420400
@@ -72,3 +71,4 @@ DetachSound__Q34nw4r3snd11SoundHandleFv:
 /* 8042040C 003E99CC  38 00 00 00 */	li r0, 0
 /* 80420410 003E99D0  90 03 00 00 */	stw r0, 0(r3)
 /* 80420414 003E99D4  4E 80 00 20 */	blr 
+.endfn DetachSound__Q34nw4r3snd11SoundHandleFv

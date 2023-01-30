@@ -165,8 +165,7 @@
 /* 802DE924 002A7EE4  4E 80 00 20 */	blr 
 .endfn bta_sys_idle
 
-.global bta_sys_busy
-bta_sys_busy:
+.fn bta_sys_busy, global
 /* 802DE928 002A7EE8  3C C0 80 5C */	lis r6, lbl_805BF558@ha
 /* 802DE92C 002A7EEC  7C 80 23 78 */	mr r0, r4
 /* 802DE930 002A7EF0  38 C6 F5 58 */	addi r6, r6, lbl_805BF558@l
@@ -180,3 +179,4 @@ bta_sys_busy:
 /* 802DE950 002A7F10  7D 89 03 A6 */	mtctr r12
 /* 802DE954 002A7F14  4E 80 04 20 */	bctr 
 /* 802DE958 002A7F18  4E 80 00 20 */	blr
+.endfn bta_sys_busy

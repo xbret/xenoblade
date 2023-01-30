@@ -329,160 +329,160 @@
 /* 802BC844 00285E04  7C 7F 1B 78 */	mr r31, r3
 /* 802BC848 00285E08  93 C1 00 68 */	stw r30, 0x68(r1)
 /* 802BC84C 00285E0C  7C 9E 23 78 */	mr r30, r4
-/* 802BC850 00285E10  41 81 02 10 */	bgt switch_802BCA60
+/* 802BC850 00285E10  41 81 02 10 */	bgt .L_802BCA60
 /* 802BC854 00285E14  3C A0 80 54 */	lis r5, lbl_8053F230@ha
 /* 802BC858 00285E18  54 00 10 3A */	slwi r0, r0, 2
 /* 802BC85C 00285E1C  38 A5 F2 30 */	addi r5, r5, lbl_8053F230@l
 /* 802BC860 00285E20  7C A5 00 2E */	lwzx r5, r5, r0
 /* 802BC864 00285E24  7C A9 03 A6 */	mtctr r5
 /* 802BC868 00285E28  4E 80 04 20 */	bctr 
-switch_802BC86C:
+.L_802BC86C:
 /* 802BC86C 00285E2C  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC870 00285E30  38 A0 FF EC */	li r5, -20
 /* 802BC874 00285E34  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC878 00285E38  4B FF FE C9 */	bl __str2dec
 /* 802BC87C 00285E3C  48 00 02 B4 */	b .L_802BCB30
-switch_802BC880:
+.L_802BC880:
 /* 802BC880 00285E40  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC884 00285E44  38 A0 FF F0 */	li r5, -16
 /* 802BC888 00285E48  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC88C 00285E4C  38 84 00 2E */	addi r4, r4, 0x2e
 /* 802BC890 00285E50  4B FF FE B1 */	bl __str2dec
 /* 802BC894 00285E54  48 00 02 9C */	b .L_802BCB30
-switch_802BC898:
+.L_802BC898:
 /* 802BC898 00285E58  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC89C 00285E5C  38 A0 FF F6 */	li r5, -10
 /* 802BC8A0 00285E60  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC8A4 00285E64  38 84 00 55 */	addi r4, r4, 0x55
 /* 802BC8A8 00285E68  4B FF FE 99 */	bl __str2dec
 /* 802BC8AC 00285E6C  48 00 02 84 */	b .L_802BCB30
-switch_802BC8B0:
+.L_802BC8B0:
 /* 802BC8B0 00285E70  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC8B4 00285E74  38 A0 FF FB */	li r5, -5
 /* 802BC8B8 00285E78  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC8BC 00285E7C  38 84 00 6D */	addi r4, r4, 0x6d
 /* 802BC8C0 00285E80  4B FF FE 81 */	bl __str2dec
 /* 802BC8C4 00285E84  48 00 02 6C */	b .L_802BCB30
-switch_802BC8C8:
+.L_802BC8C8:
 /* 802BC8C8 00285E88  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC8CC 00285E8C  38 A0 FF FD */	li r5, -3
 /* 802BC8D0 00285E90  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC8D4 00285E94  38 84 00 7A */	addi r4, r4, 0x7a
 /* 802BC8D8 00285E98  4B FF FE 69 */	bl __str2dec
 /* 802BC8DC 00285E9C  48 00 02 54 */	b .L_802BCB30
-switch_802BC8E0:
+.L_802BC8E0:
 /* 802BC8E0 00285EA0  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC8E4 00285EA4  38 A0 FF FD */	li r5, -3
 /* 802BC8E8 00285EA8  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC8EC 00285EAC  38 84 00 81 */	addi r4, r4, 0x81
 /* 802BC8F0 00285EB0  4B FF FE 51 */	bl __str2dec
 /* 802BC8F4 00285EB4  48 00 02 3C */	b .L_802BCB30
-switch_802BC8F8:
+.L_802BC8F8:
 /* 802BC8F8 00285EB8  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC8FC 00285EBC  38 A0 FF FE */	li r5, -2
 /* 802BC900 00285EC0  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC904 00285EC4  38 84 00 87 */	addi r4, r4, 0x87
 /* 802BC908 00285EC8  4B FF FE 39 */	bl __str2dec
 /* 802BC90C 00285ECC  48 00 02 24 */	b .L_802BCB30
-switch_802BC910:
+.L_802BC910:
 /* 802BC910 00285ED0  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC914 00285ED4  38 A0 FF FE */	li r5, -2
 /* 802BC918 00285ED8  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC91C 00285EDC  38 84 00 8D */	addi r4, r4, 0x8d
 /* 802BC920 00285EE0  4B FF FE 21 */	bl __str2dec
 /* 802BC924 00285EE4  48 00 02 0C */	b .L_802BCB30
-switch_802BC928:
+.L_802BC928:
 /* 802BC928 00285EE8  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC92C 00285EEC  38 A0 FF FE */	li r5, -2
 /* 802BC930 00285EF0  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC934 00285EF4  38 84 00 92 */	addi r4, r4, 0x92
 /* 802BC938 00285EF8  4B FF FE 09 */	bl __str2dec
 /* 802BC93C 00285EFC  48 00 01 F4 */	b .L_802BCB30
-switch_802BC940:
+.L_802BC940:
 /* 802BC940 00285F00  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC944 00285F04  38 A0 FF FF */	li r5, -1
 /* 802BC948 00285F08  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC94C 00285F0C  38 84 00 96 */	addi r4, r4, 0x96
 /* 802BC950 00285F10  4B FF FD F1 */	bl __str2dec
 /* 802BC954 00285F14  48 00 01 DC */	b .L_802BCB30
-switch_802BC958:
+.L_802BC958:
 /* 802BC958 00285F18  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC95C 00285F1C  38 A0 FF FF */	li r5, -1
 /* 802BC960 00285F20  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC964 00285F24  38 84 00 9A */	addi r4, r4, 0x9a
 /* 802BC968 00285F28  4B FF FD D9 */	bl __str2dec
 /* 802BC96C 00285F2C  48 00 01 C4 */	b .L_802BCB30
-switch_802BC970:
+.L_802BC970:
 /* 802BC970 00285F30  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC974 00285F34  38 A0 FF FF */	li r5, -1
 /* 802BC978 00285F38  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC97C 00285F3C  38 84 00 9D */	addi r4, r4, 0x9d
 /* 802BC980 00285F40  4B FF FD C1 */	bl __str2dec
 /* 802BC984 00285F44  48 00 01 AC */	b .L_802BCB30
-switch_802BC988:
+.L_802BC988:
 /* 802BC988 00285F48  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC98C 00285F4C  38 A0 00 00 */	li r5, 0
 /* 802BC990 00285F50  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC994 00285F54  38 84 00 9F */	addi r4, r4, 0x9f
 /* 802BC998 00285F58  4B FF FD A9 */	bl __str2dec
 /* 802BC99C 00285F5C  48 00 01 94 */	b .L_802BCB30
-switch_802BC9A0:
+.L_802BC9A0:
 /* 802BC9A0 00285F60  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC9A4 00285F64  38 A0 00 00 */	li r5, 0
 /* 802BC9A8 00285F68  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC9AC 00285F6C  38 84 00 A1 */	addi r4, r4, 0xa1
 /* 802BC9B0 00285F70  4B FF FD 91 */	bl __str2dec
 /* 802BC9B4 00285F74  48 00 01 7C */	b .L_802BCB30
-switch_802BC9B8:
+.L_802BC9B8:
 /* 802BC9B8 00285F78  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC9BC 00285F7C  38 A0 00 00 */	li r5, 0
 /* 802BC9C0 00285F80  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC9C4 00285F84  38 84 00 A3 */	addi r4, r4, 0xa3
 /* 802BC9C8 00285F88  4B FF FD 79 */	bl __str2dec
 /* 802BC9CC 00285F8C  48 00 01 64 */	b .L_802BCB30
-switch_802BC9D0:
+.L_802BC9D0:
 /* 802BC9D0 00285F90  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC9D4 00285F94  38 A0 00 00 */	li r5, 0
 /* 802BC9D8 00285F98  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC9DC 00285F9C  38 84 00 A5 */	addi r4, r4, 0xa5
 /* 802BC9E0 00285FA0  4B FF FD 61 */	bl __str2dec
 /* 802BC9E4 00285FA4  48 00 01 4C */	b .L_802BCB30
-switch_802BC9E8:
+.L_802BC9E8:
 /* 802BC9E8 00285FA8  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BC9EC 00285FAC  38 A0 00 01 */	li r5, 1
 /* 802BC9F0 00285FB0  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BC9F4 00285FB4  38 84 00 A7 */	addi r4, r4, 0xa7
 /* 802BC9F8 00285FB8  4B FF FD 49 */	bl __str2dec
 /* 802BC9FC 00285FBC  48 00 01 34 */	b .L_802BCB30
-switch_802BCA00:
+.L_802BCA00:
 /* 802BCA00 00285FC0  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BCA04 00285FC4  38 A0 00 01 */	li r5, 1
 /* 802BCA08 00285FC8  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BCA0C 00285FCC  38 84 00 AA */	addi r4, r4, 0xaa
 /* 802BCA10 00285FD0  4B FF FD 31 */	bl __str2dec
 /* 802BCA14 00285FD4  48 00 01 1C */	b .L_802BCB30
-switch_802BCA18:
+.L_802BCA18:
 /* 802BCA18 00285FD8  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BCA1C 00285FDC  38 A0 00 01 */	li r5, 1
 /* 802BCA20 00285FE0  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BCA24 00285FE4  38 84 00 AD */	addi r4, r4, 0xad
 /* 802BCA28 00285FE8  4B FF FD 19 */	bl __str2dec
 /* 802BCA2C 00285FEC  48 00 01 04 */	b .L_802BCB30
-switch_802BCA30:
+.L_802BCA30:
 /* 802BCA30 00285FF0  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BCA34 00285FF4  38 A0 00 02 */	li r5, 2
 /* 802BCA38 00285FF8  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BCA3C 00285FFC  38 84 00 B0 */	addi r4, r4, 0xb0
 /* 802BCA40 00286000  4B FF FD 01 */	bl __str2dec
 /* 802BCA44 00286004  48 00 00 EC */	b .L_802BCB30
-switch_802BCA48:
+.L_802BCA48:
 /* 802BCA48 00286008  3C 80 80 51 */	lis r4, lbl_8050CF18@ha
 /* 802BCA4C 0028600C  38 A0 00 02 */	li r5, 2
 /* 802BCA50 00286010  38 84 CF 18 */	addi r4, r4, lbl_8050CF18@l
 /* 802BCA54 00286014  38 84 00 B4 */	addi r4, r4, 0xb4
 /* 802BCA58 00286018  4B FF FC E9 */	bl __str2dec
 /* 802BCA5C 0028601C  48 00 00 D4 */	b .L_802BCB30
-switch_802BCA60:
+.L_802BCA60:
 /* 802BCA60 00286020  54 80 0F FE */	srwi r0, r4, 0x1f
 /* 802BCA64 00286024  38 61 00 34 */	addi r3, r1, 0x34
 /* 802BCA68 00286028  7C 00 22 14 */	add r0, r0, r4
@@ -1782,79 +1782,79 @@ switch_802BCA60:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_8053F230
 lbl_8053F230:
-	.4byte switch_802BC86C
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BC880
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BC898
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BC8B0
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BCA60
-	.4byte switch_802BC8C8
-	.4byte switch_802BC8E0
-	.4byte switch_802BC8F8
-	.4byte switch_802BC910
-	.4byte switch_802BC928
-	.4byte switch_802BC940
-	.4byte switch_802BC958
-	.4byte switch_802BC970
-	.4byte switch_802BC988
-	.4byte switch_802BC9A0
-	.4byte switch_802BC9B8
-	.4byte switch_802BC9D0
-	.4byte switch_802BC9E8
-	.4byte switch_802BCA00
-	.4byte switch_802BCA18
-	.4byte switch_802BCA30
-	.4byte switch_802BCA48
+	.4byte .L_802BC86C
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BC880
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BC898
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BC8B0
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BCA60
+	.4byte .L_802BC8C8
+	.4byte .L_802BC8E0
+	.4byte .L_802BC8F8
+	.4byte .L_802BC910
+	.4byte .L_802BC928
+	.4byte .L_802BC940
+	.4byte .L_802BC958
+	.4byte .L_802BC970
+	.4byte .L_802BC988
+	.4byte .L_802BC9A0
+	.4byte .L_802BC9B8
+	.4byte .L_802BC9D0
+	.4byte .L_802BC9E8
+	.4byte .L_802BCA00
+	.4byte .L_802BCA18
+	.4byte .L_802BCA30
+	.4byte .L_802BCA48
 	.4byte 0
 
 

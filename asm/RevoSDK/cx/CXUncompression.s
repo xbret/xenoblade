@@ -24,8 +24,7 @@
 .endfn CXGetUncompressedSize
 
 .balign 16, 0
-.global CXUncompressHuffman
-CXUncompressHuffman:
+.fn CXUncompressHuffman, global
 /* 80308DB0 002D2370  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80308DB4 002D2374  7C 08 02 A6 */	mflr r0
 /* 80308DB8 002D2378  90 01 00 24 */	stw r0, 0x24(r1)
@@ -122,3 +121,4 @@ CXUncompressHuffman:
 /* 80308F04 002D24C4  7C 08 03 A6 */	mtlr r0
 /* 80308F08 002D24C8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80308F0C 002D24CC  4E 80 00 20 */	blr 
+.endfn CXUncompressHuffman

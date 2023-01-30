@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global WBT_ExtCreateRecord
-WBT_ExtCreateRecord:
+.fn WBT_ExtCreateRecord, global
 /* 802EFC24 002B91E4  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 802EFC28 002B91E8  7C 08 02 A6 */	mflr r0
 /* 802EFC2C 002B91EC  90 01 01 24 */	stw r0, 0x124(r1)
@@ -62,3 +61,4 @@ WBT_ExtCreateRecord:
 /* 802EFCF8 002B92B8  7C 08 03 A6 */	mtlr r0
 /* 802EFCFC 002B92BC  38 21 01 20 */	addi r1, r1, 0x120
 /* 802EFD00 002B92C0  4E 80 00 20 */	blr
+.endfn WBT_ExtCreateRecord

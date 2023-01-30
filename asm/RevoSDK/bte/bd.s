@@ -18,8 +18,7 @@
 /* 802DE664 002A7C24  4E 80 00 20 */	blr 
 .endfn bdcpy
 
-.global bdcmp
-bdcmp:
+.fn bdcmp, global
 /* 802DE668 002A7C28  88 A3 00 00 */	lbz r5, 0(r3)
 /* 802DE66C 002A7C2C  88 04 00 00 */	lbz r0, 0(r4)
 /* 802DE670 002A7C30  7C 05 00 40 */	cmplw r5, r0
@@ -66,3 +65,4 @@ bdcmp:
 .L_802DE700:
 /* 802DE700 002A7CC0  38 60 00 00 */	li r3, 0
 /* 802DE704 002A7CC4  4E 80 00 20 */	blr
+.endfn bdcmp

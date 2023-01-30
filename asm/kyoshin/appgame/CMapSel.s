@@ -94,7 +94,7 @@
 /* 80243204 0020C7C4  54 1D 06 3E */	clrlwi r29, r0, 0x18
 /* 80243208 0020C7C8  3E E0 80 54 */	lis r23, lbl_8053A550@ha
 /* 8024320C 0020C7CC  48 00 00 64 */	b .L_80243270
-switch_80243210:
+.L_80243210:
 /* 80243210 0020C7D0  57 F8 06 3E */	clrlwi r24, r31, 0x18
 /* 80243214 0020C7D4  3A C0 00 01 */	li r22, 1
 /* 80243218 0020C7D8  48 00 00 4C */	b .L_80243264
@@ -115,13 +115,13 @@ switch_80243210:
 /* 80243250 0020C810  38 04 00 01 */	addi r0, r4, 1
 /* 80243254 0020C814  9B E3 00 8E */	stb r31, 0x8e(r3)
 /* 80243258 0020C818  98 19 00 AE */	stb r0, 0xae(r25)
-/* 8024325C 0020C81C  48 00 00 10 */	b switch_8024326C
+/* 8024325C 0020C81C  48 00 00 10 */	b .L_8024326C
 .L_80243260:
 /* 80243260 0020C820  3A D6 00 01 */	addi r22, r22, 1
 .L_80243264:
 /* 80243264 0020C824  7C 16 D8 00 */	cmpw r22, r27
 /* 80243268 0020C828  40 81 FF B4 */	ble .L_8024321C
-switch_8024326C:
+.L_8024326C:
 /* 8024326C 0020C82C  3B FF 00 01 */	addi r31, r31, 1
 .L_80243270:
 /* 80243270 0020C830  57 E0 06 3E */	clrlwi r0, r31, 0x18
@@ -1340,35 +1340,35 @@ lbl_80506BA8:
 
 .global lbl_8053A550
 lbl_8053A550:
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_8024326C
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_8024326C
-	.4byte switch_80243210
-	.4byte switch_8024326C
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_80243210
-	.4byte switch_8024326C
-	.4byte switch_80243210
-	.4byte switch_8024326C
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_8024326C
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_8024326C
+	.4byte .L_80243210
+	.4byte .L_8024326C
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_80243210
+	.4byte .L_8024326C
+	.4byte .L_80243210
+	.4byte .L_8024326C
 	.4byte 0
 
 

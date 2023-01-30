@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global UTY_MemsetDword
-UTY_MemsetDword:
+.fn UTY_MemsetDword, global
 /* 803D44D0 0039DA90  54 A0 10 3A */	slwi r0, r5, 2
 /* 803D44D4 0039DA94  54 A6 07 3E */	clrlwi r6, r5, 0x1c
 /* 803D44D8 0039DA98  7C E3 02 14 */	add r7, r3, r0
@@ -38,3 +37,4 @@ UTY_MemsetDword:
 /* 803D453C 0039DAFC  34 00 FF FF */	addic. r0, r0, -1
 /* 803D4540 0039DB00  40 82 FF BC */	bne .L_803D44FC
 /* 803D4544 0039DB04  4E 80 00 20 */	blr 
+.endfn UTY_MemsetDword

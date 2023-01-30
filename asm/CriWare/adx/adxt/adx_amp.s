@@ -150,7 +150,7 @@
 /* 80385D14 0034F2D4  4E 80 00 20 */	blr 
 .endfn ADXAMP_Stop
 
-.global ADXAMP_SetSfreq
-ADXAMP_SetSfreq:
+.fn ADXAMP_SetSfreq, global
 /* 80385D18 0034F2D8  90 83 00 20 */	stw r4, 0x20(r3)
 /* 80385D1C 0034F2DC  4E 80 00 20 */	blr
+.endfn ADXAMP_SetSfreq

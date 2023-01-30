@@ -252,8 +252,7 @@
 /* 8000434C 0000044C  4E 80 00 20 */	blr 
 .endfn __fill_mem
 
-.global memset
-memset:
+.fn memset, global
 /* 80004350 00000450  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80004354 00000454  7C 08 02 A6 */	mflr r0
 /* 80004358 00000458  90 01 00 14 */	stw r0, 0x14(r1)
@@ -266,3 +265,4 @@ memset:
 /* 80004374 00000474  7C 08 03 A6 */	mtlr r0
 /* 80004378 00000478  38 21 00 10 */	addi r1, r1, 0x10
 /* 8000437C 0000047C  4E 80 00 20 */	blr 
+.endfn memset

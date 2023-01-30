@@ -219,6 +219,6 @@
 .endfn GKI_os_malloc
 
 .balign 16, 0
-.global GKI_os_free
-GKI_os_free:
+.fn GKI_os_free, global
 /* 802DCA90 002A6050  48 09 91 B0 */	b App_MEMfree
+.endfn GKI_os_free

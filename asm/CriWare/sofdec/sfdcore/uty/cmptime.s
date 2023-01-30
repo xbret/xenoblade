@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global UTY_CmpTime
-UTY_CmpTime:
+.fn UTY_CmpTime, global
 /* 803D43DC 0039D99C  7C E3 30 96 */	mulhw r7, r3, r6
 /* 803D43E0 0039D9A0  7C 05 20 96 */	mulhw r0, r5, r4
 /* 803D43E4 0039D9A4  6C E7 80 00 */	xoris r7, r7, 0x8000
@@ -17,3 +16,4 @@ UTY_CmpTime:
 /* 803D4400 0039D9C0  7C E7 00 D0 */	neg r7, r7
 /* 803D4404 0039D9C4  20 67 00 01 */	subfic r3, r7, 1
 /* 803D4408 0039D9C8  4E 80 00 20 */	blr 
+.endfn UTY_CmpTime

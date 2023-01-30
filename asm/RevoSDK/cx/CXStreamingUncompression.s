@@ -23,8 +23,7 @@
 .endfn CXInitUncompContextLH
 
 .balign 16, 0
-.global CXReadUncompLH
-CXReadUncompLH:
+.fn CXReadUncompLH, global
 /* 80308570 002D1B30  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80308574 002D1B34  7C 08 02 A6 */	mflr r0
 /* 80308578 002D1B38  90 01 00 34 */	stw r0, 0x34(r1)
@@ -612,3 +611,4 @@ CXReadUncompLH:
 /* 80308D64 002D2324  7C 08 03 A6 */	mtlr r0
 /* 80308D68 002D2328  38 21 00 30 */	addi r1, r1, 0x30
 /* 80308D6C 002D232C  4E 80 00 20 */	blr
+.endfn CXReadUncompLH

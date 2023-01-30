@@ -35,8 +35,7 @@
 /* 802B9D58 00283318  4E 80 00 20 */	blr 
 .endfn __ptmf_cmpr
 
-.global __ptmf_scall
-__ptmf_scall:
+.fn __ptmf_scall, global
 /* 802B9D5C 0028331C  80 0C 00 00 */	lwz r0, 0(r12)
 /* 802B9D60 00283320  81 6C 00 04 */	lwz r11, 4(r12)
 /* 802B9D64 00283324  81 8C 00 08 */	lwz r12, 8(r12)
@@ -48,3 +47,4 @@ __ptmf_scall:
 .L_802B9D7C:
 /* 802B9D7C 0028333C  7D 89 03 A6 */	mtctr r12
 /* 802B9D80 00283340  4E 80 04 20 */	bctr 
+.endfn __ptmf_scall

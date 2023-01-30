@@ -387,8 +387,7 @@
 /* 802E6774 002AFD34  4E 80 00 20 */	blr 
 .endfn btm_find_dev
 
-.global btm_find_oldest_dev
-btm_find_oldest_dev:
+.fn btm_find_oldest_dev, global
 /* 802E6778 002AFD38  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
 /* 802E677C 002AFD3C  38 00 00 04 */	li r0, 4
 /* 802E6780 002AFD40  38 63 F9 F8 */	addi r3, r3, lbl_805BF9F8@l
@@ -501,3 +500,4 @@ btm_find_oldest_dev:
 /* 802E6904 002AFEC4  38 84 00 88 */	addi r4, r4, 0x88
 /* 802E6908 002AFEC8  42 00 FF 6C */	bdnz .L_802E6874
 /* 802E690C 002AFECC  4E 80 00 20 */	blr
+.endfn btm_find_oldest_dev

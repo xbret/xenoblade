@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global detail_StartSound__Q34nw4r3snd14SoundStartableFPQ34nw4r3snd11SoundHandleUlPCQ44nw4r3snd14SoundStartable9StartInfo
-detail_StartSound__Q34nw4r3snd14SoundStartableFPQ34nw4r3snd11SoundHandleUlPCQ44nw4r3snd14SoundStartable9StartInfo:
+.fn detail_StartSound__Q34nw4r3snd14SoundStartableFPQ34nw4r3snd11SoundHandleUlPCQ44nw4r3snd14SoundStartable9StartInfo, global
 /* 80420FC0 003EA580  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80420FC4 003EA584  7C 08 02 A6 */	mflr r0
 /* 80420FC8 003EA588  7C C7 33 78 */	mr r7, r6
@@ -31,3 +30,4 @@ detail_StartSound__Q34nw4r3snd14SoundStartableFPQ34nw4r3snd11SoundHandleUlPCQ44n
 /* 80421014 003EA5D4  7C 08 03 A6 */	mtlr r0
 /* 80421018 003EA5D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042101C 003EA5DC  4E 80 00 20 */	blr 
+.endfn detail_StartSound__Q34nw4r3snd14SoundStartableFPQ34nw4r3snd11SoundHandleUlPCQ44nw4r3snd14SoundStartable9StartInfo

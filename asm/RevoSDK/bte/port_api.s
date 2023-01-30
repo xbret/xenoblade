@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global RFCOMM_Init
-RFCOMM_Init:
+.fn RFCOMM_Init, global
 /* 802FCA2C 002C5FEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FCA30 002C5FF0  7C 08 02 A6 */	mflr r0
 /* 802FCA34 002C5FF4  38 80 00 00 */	li r4, 0
@@ -24,3 +23,4 @@ RFCOMM_Init:
 /* 802FCA70 002C6030  7C 08 03 A6 */	mtlr r0
 /* 802FCA74 002C6034  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FCA78 002C6038  4E 80 00 20 */	blr
+.endfn RFCOMM_Init

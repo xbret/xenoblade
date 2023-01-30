@@ -140,8 +140,7 @@
 /* 803A649C 0036FA5C  4E 80 00 20 */	blr 
 .endfn MPV_SkipFrmSj
 
-.global MPV_RequestStop
-MPV_RequestStop:
+.fn MPV_RequestStop, global
 /* 803A64A0 0036FA60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A64A4 0036FA64  7C 08 02 A6 */	mflr r0
 /* 803A64A8 0036FA68  90 01 00 14 */	stw r0, 0x14(r1)
@@ -169,3 +168,4 @@ MPV_RequestStop:
 /* 803A64F8 0036FAB8  7C 08 03 A6 */	mtlr r0
 /* 803A64FC 0036FABC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A6500 0036FAC0  4E 80 00 20 */	blr 
+.endfn MPV_RequestStop

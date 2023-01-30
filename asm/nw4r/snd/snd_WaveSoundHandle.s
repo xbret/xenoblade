@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global DetachSound__Q34nw4r3snd15WaveSoundHandleFv
-DetachSound__Q34nw4r3snd15WaveSoundHandleFv:
+.fn DetachSound__Q34nw4r3snd15WaveSoundHandleFv, global
 /* 80429F38 003F34F8  80 83 00 00 */	lwz r4, 0(r3)
 /* 80429F3C 003F34FC  2C 04 00 00 */	cmpwi r4, 0
 /* 80429F40 003F3500  41 82 00 18 */	beq .L_80429F58
@@ -19,3 +18,4 @@ DetachSound__Q34nw4r3snd15WaveSoundHandleFv:
 /* 80429F64 003F3524  38 00 00 00 */	li r0, 0
 /* 80429F68 003F3528  90 03 00 00 */	stw r0, 0(r3)
 /* 80429F6C 003F352C  4E 80 00 20 */	blr 
+.endfn DetachSound__Q34nw4r3snd15WaveSoundHandleFv

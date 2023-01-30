@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 #could be SFX_CnvFrmARGB8888ByCbFunc in sfx_cnv_to_ARGB8888PLN.s
-.global SFX_CnvFrmY84C44ByCbFunc
-SFX_CnvFrmY84C44ByCbFunc:
+.fn SFX_CnvFrmY84C44ByCbFunc, global
 /* 803D7010 003A05D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D7014 003A05D4  7C 08 02 A6 */	mflr r0
 /* 803D7018 003A05D8  3C C0 80 3A */	lis r6, func_8039B960@ha
@@ -45,3 +44,4 @@ SFX_CnvFrmY84C44ByCbFunc:
 /* 803D70A4 003A0664  7C 08 03 A6 */	mtlr r0
 /* 803D70A8 003A0668  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D70AC 003A066C  4E 80 00 20 */	blr
+.endfn SFX_CnvFrmY84C44ByCbFunc

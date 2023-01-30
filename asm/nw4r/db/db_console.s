@@ -65,8 +65,7 @@
 .endfn Console_GetTotalLines__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHead
 
 #probably in a separate file (db_DbgPrintBase?)
-.global SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5Color
-SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5Color:
+.fn SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5Color, global
 /* 803D7318 003A08D8  88 E4 00 00 */	lbz r7, 0(r4)
 /* 803D731C 003A08DC  88 C4 00 01 */	lbz r6, 1(r4)
 /* 803D7320 003A08E0  88 A4 00 02 */	lbz r5, 2(r4)
@@ -76,3 +75,4 @@ SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5Color:
 /* 803D7330 003A08F0  98 A3 00 1A */	stb r5, 0x1a(r3)
 /* 803D7334 003A08F4  98 03 00 1B */	stb r0, 0x1b(r3)
 /* 803D7338 003A08F8  48 05 8E 50 */	b UpdateVertexColor__Q34nw4r2ut10CharWriterFv
+.endfn SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5Color

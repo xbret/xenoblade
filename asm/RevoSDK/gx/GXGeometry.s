@@ -434,8 +434,7 @@
 .endfn GXSetCoPlanar
 
 .balign 16, 0
-.global __GXSetGenMode
-__GXSetGenMode:
+.fn __GXSetGenMode, global
 /* 8031AD40 002E4300  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031AD44 002E4304  38 00 00 61 */	li r0, 0x61
 /* 8031AD48 002E4308  98 04 80 00 */	stb r0, 0xCC008000@l(r4)
@@ -445,3 +444,4 @@ __GXSetGenMode:
 /* 8031AD58 002E4318  90 64 80 00 */	stw r3, -0x8000(r4)
 /* 8031AD5C 002E431C  B0 05 00 02 */	sth r0, 2(r5)
 /* 8031AD60 002E4320  4E 80 00 20 */	blr 
+.endfn __GXSetGenMode

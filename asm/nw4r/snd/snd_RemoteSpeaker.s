@@ -555,8 +555,7 @@
 /* 804192E0 003E28A0  4E 80 00 20 */	blr
 .endfn ContinueAlarmHandler__Q34nw4r3snd13RemoteSpeakerFP7OSAlarmP9OSContext
 
-.global IntervalAlarmHandler__Q34nw4r3snd13RemoteSpeakerFP7OSAlarmP9OSContext
-IntervalAlarmHandler__Q34nw4r3snd13RemoteSpeakerFP7OSAlarmP9OSContext:
+.fn IntervalAlarmHandler__Q34nw4r3snd13RemoteSpeakerFP7OSAlarmP9OSContext, global
 /* 804192E4 003E28A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804192E8 003E28A8  7C 08 02 A6 */	mflr r0
 /* 804192EC 003E28AC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -586,3 +585,4 @@ IntervalAlarmHandler__Q34nw4r3snd13RemoteSpeakerFP7OSAlarmP9OSContext:
 /* 80419348 003E2908  7C 08 03 A6 */	mtlr r0
 /* 8041934C 003E290C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80419350 003E2910  4E 80 00 20 */	blr 
+.endfn IntervalAlarmHandler__Q34nw4r3snd13RemoteSpeakerFP7OSAlarmP9OSContext

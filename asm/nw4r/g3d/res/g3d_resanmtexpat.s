@@ -168,8 +168,7 @@
 /* 803DE068 003A7628  4E 80 00 20 */	blr 
 .endfn GetAnmResult__Q34nw4r3g3d12ResAnmTexPatCFPQ34nw4r3g3d15TexPatAnmResultUlf
 
-.global Bind__Q34nw4r3g3d12ResAnmTexPatFQ34nw4r3g3d7ResFile
-Bind__Q34nw4r3g3d12ResAnmTexPatFQ34nw4r3g3d7ResFile:
+.fn Bind__Q34nw4r3g3d12ResAnmTexPatFQ34nw4r3g3d7ResFile, global
 /* 803DE06C 003A762C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803DE070 003A7630  7C 08 02 A6 */	mflr r0
 /* 803DE074 003A7634  90 01 00 44 */	stw r0, 0x44(r1)
@@ -278,3 +277,4 @@ Bind__Q34nw4r3g3d12ResAnmTexPatFQ34nw4r3g3d7ResFile:
 /* 803DE1D0 003A7790  7C 08 03 A6 */	mtlr r0
 /* 803DE1D4 003A7794  38 21 00 40 */	addi r1, r1, 0x40
 /* 803DE1D8 003A7798  4E 80 00 20 */	blr 
+.endfn Bind__Q34nw4r3g3d12ResAnmTexPatFQ34nw4r3g3d7ResFile

@@ -100,7 +100,7 @@
 /* 802CCA78 00296038  4E 80 00 20 */	blr 
 .endfn TRKInitializeSerialHandler
 
-.global TRKTerminateSerialHandler
-TRKTerminateSerialHandler:
+.fn TRKTerminateSerialHandler, global
 /* 802CCA7C 0029603C  38 60 00 00 */	li r3, 0
 /* 802CCA80 00296040  4E 80 00 20 */	blr 
+.endfn TRKTerminateSerialHandler

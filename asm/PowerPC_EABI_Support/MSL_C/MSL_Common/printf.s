@@ -262,14 +262,14 @@
 /* 802BEFB8 00288578  38 06 FF BF */	addi r0, r6, -65
 /* 802BEFBC 0028857C  98 C1 00 0D */	stb r6, 0xd(r1)
 /* 802BEFC0 00288580  28 00 00 37 */	cmplwi r0, 0x37
-/* 802BEFC4 00288584  41 81 01 FC */	bgt switch_802BF1C0
+/* 802BEFC4 00288584  41 81 01 FC */	bgt .L_802BF1C0
 /* 802BEFC8 00288588  3C 60 80 54 */	lis r3, lbl_8053F590@ha
 /* 802BEFCC 0028858C  54 00 10 3A */	slwi r0, r0, 2
 /* 802BEFD0 00288590  38 63 F5 90 */	addi r3, r3, lbl_8053F590@l
 /* 802BEFD4 00288594  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802BEFD8 00288598  7C 69 03 A6 */	mtctr r3
 /* 802BEFDC 0028859C  4E 80 04 20 */	bctr 
-switch_802BEFE0:
+.L_802BEFE0:
 /* 802BEFE0 002885A0  88 01 00 0C */	lbz r0, 0xc(r1)
 /* 802BEFE4 002885A4  28 00 00 09 */	cmplwi r0, 9
 /* 802BEFE8 002885A8  40 82 00 10 */	bne .L_802BEFF8
@@ -290,7 +290,7 @@ switch_802BEFE0:
 /* 802BF01C 002885DC  38 00 00 01 */	li r0, 1
 /* 802BF020 002885E0  98 01 00 08 */	stb r0, 8(r1)
 /* 802BF024 002885E4  48 00 01 A4 */	b .L_802BF1C8
-switch_802BF028:
+.L_802BF028:
 /* 802BF028 002885E8  88 61 00 0C */	lbz r3, 0xc(r1)
 /* 802BF02C 002885EC  38 03 00 FA */	addi r0, r3, 0xfa
 /* 802BF030 002885F0  54 00 06 3E */	clrlwi r0, r0, 0x18
@@ -311,7 +311,7 @@ switch_802BF028:
 /* 802BF064 00288624  38 00 00 06 */	li r0, 6
 /* 802BF068 00288628  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802BF06C 0028862C  48 00 01 5C */	b .L_802BF1C8
-switch_802BF070:
+.L_802BF070:
 /* 802BF070 00288630  88 01 00 0A */	lbz r0, 0xa(r1)
 /* 802BF074 00288634  2C 00 00 00 */	cmpwi r0, 0
 /* 802BF078 00288638  40 82 00 0C */	bne .L_802BF084
@@ -333,13 +333,13 @@ switch_802BF070:
 /* 802BF0B0 00288670  38 00 00 FF */	li r0, 0xff
 /* 802BF0B4 00288674  98 01 00 0D */	stb r0, 0xd(r1)
 /* 802BF0B8 00288678  48 00 01 10 */	b .L_802BF1C8
-switch_802BF0BC:
+.L_802BF0BC:
 /* 802BF0BC 0028867C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802BF0C0 00288680  2C 00 00 00 */	cmpwi r0, 0
-/* 802BF0C4 00288684  40 82 00 0C */	bne switch_802BF0D0
+/* 802BF0C4 00288684  40 82 00 0C */	bne .L_802BF0D0
 /* 802BF0C8 00288688  38 00 00 01 */	li r0, 1
 /* 802BF0CC 0028868C  90 01 00 14 */	stw r0, 0x14(r1)
-switch_802BF0D0:
+.L_802BF0D0:
 /* 802BF0D0 00288690  88 61 00 0C */	lbz r3, 0xc(r1)
 /* 802BF0D4 00288694  38 03 00 FA */	addi r0, r3, 0xfa
 /* 802BF0D8 00288698  54 00 06 3E */	clrlwi r0, r0, 0x18
@@ -362,7 +362,7 @@ switch_802BF0D0:
 /* 802BF114 002886D4  38 00 00 06 */	li r0, 6
 /* 802BF118 002886D8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802BF11C 002886DC  48 00 00 AC */	b .L_802BF1C8
-switch_802BF120:
+.L_802BF120:
 /* 802BF120 002886E0  38 A0 00 78 */	li r5, 0x78
 /* 802BF124 002886E4  38 80 00 01 */	li r4, 1
 /* 802BF128 002886E8  38 60 00 03 */	li r3, 3
@@ -372,7 +372,7 @@ switch_802BF120:
 /* 802BF138 002886F8  98 61 00 0C */	stb r3, 0xc(r1)
 /* 802BF13C 002886FC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802BF140 00288700  48 00 00 88 */	b .L_802BF1C8
-switch_802BF144:
+.L_802BF144:
 /* 802BF144 00288704  88 61 00 0C */	lbz r3, 0xc(r1)
 /* 802BF148 00288708  28 03 00 03 */	cmplwi r3, 3
 /* 802BF14C 0028870C  40 82 00 10 */	bne .L_802BF15C
@@ -389,7 +389,7 @@ switch_802BF144:
 /* 802BF170 00288730  38 00 00 FF */	li r0, 0xff
 /* 802BF174 00288734  98 01 00 0D */	stb r0, 0xd(r1)
 /* 802BF178 00288738  48 00 00 50 */	b .L_802BF1C8
-switch_802BF17C:
+.L_802BF17C:
 /* 802BF17C 0028873C  88 01 00 0C */	lbz r0, 0xc(r1)
 /* 802BF180 00288740  28 00 00 03 */	cmplwi r0, 3
 /* 802BF184 00288744  40 82 00 10 */	bne .L_802BF194
@@ -402,14 +402,14 @@ switch_802BF17C:
 /* 802BF19C 0028875C  38 00 00 FF */	li r0, 0xff
 /* 802BF1A0 00288760  98 01 00 0D */	stb r0, 0xd(r1)
 /* 802BF1A4 00288764  48 00 00 24 */	b .L_802BF1C8
-switch_802BF1A8:
+.L_802BF1A8:
 /* 802BF1A8 00288768  88 01 00 0C */	lbz r0, 0xc(r1)
 /* 802BF1AC 0028876C  28 00 00 09 */	cmplwi r0, 9
 /* 802BF1B0 00288770  40 82 00 18 */	bne .L_802BF1C8
 /* 802BF1B4 00288774  38 00 00 FF */	li r0, 0xff
 /* 802BF1B8 00288778  98 01 00 0D */	stb r0, 0xd(r1)
 /* 802BF1BC 0028877C  48 00 00 0C */	b .L_802BF1C8
-switch_802BF1C0:
+.L_802BF1C0:
 /* 802BF1C0 00288780  38 00 00 FF */	li r0, 0xff
 /* 802BF1C4 00288784  98 01 00 0D */	stb r0, 0xd(r1)
 .L_802BF1C8:
@@ -1795,13 +1795,13 @@ switch_802BF1C0:
 /* 802C0464 00289A24  7C 6F 1B 78 */	mr r15, r3
 /* 802C0468 00289A28  38 04 FF DB */	addi r0, r4, -37
 /* 802C046C 00289A2C  28 00 00 53 */	cmplwi r0, 0x53
-/* 802C0470 00289A30  41 81 05 BC */	bgt switch_802C0A2C
+/* 802C0470 00289A30  41 81 05 BC */	bgt .L_802C0A2C
 /* 802C0474 00289A34  38 74 F6 70 */	addi r3, r20, lbl_8053F670@l
 /* 802C0478 00289A38  54 00 10 3A */	slwi r0, r0, 2
 /* 802C047C 00289A3C  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802C0480 00289A40  7C 69 03 A6 */	mtctr r3
 /* 802C0484 00289A44  4E 80 04 20 */	bctr 
-switch_802C0488:
+.L_802C0488:
 /* 802C0488 00289A48  88 01 00 74 */	lbz r0, 0x74(r1)
 /* 802C048C 00289A4C  28 00 00 03 */	cmplwi r0, 3
 /* 802C0490 00289A50  40 82 00 18 */	bne .L_802C04A8
@@ -1879,7 +1879,7 @@ switch_802C0488:
 /* 802C058C 00289B4C  4B FF EE BD */	bl longlong2str
 /* 802C0590 00289B50  2C 03 00 00 */	cmpwi r3, 0
 /* 802C0594 00289B54  7C 72 1B 78 */	mr r18, r3
-/* 802C0598 00289B58  41 82 04 94 */	beq switch_802C0A2C
+/* 802C0598 00289B58  41 82 04 94 */	beq .L_802C0A2C
 /* 802C059C 00289B5C  48 00 00 40 */	b .L_802C05DC
 .L_802C05A0:
 /* 802C05A0 00289B60  81 01 00 70 */	lwz r8, 0x70(r1)
@@ -1896,11 +1896,11 @@ switch_802C0488:
 /* 802C05CC 00289B8C  4B FF EC 3D */	bl long2str
 /* 802C05D0 00289B90  2C 03 00 00 */	cmpwi r3, 0
 /* 802C05D4 00289B94  7C 72 1B 78 */	mr r18, r3
-/* 802C05D8 00289B98  41 82 04 54 */	beq switch_802C0A2C
+/* 802C05D8 00289B98  41 82 04 54 */	beq .L_802C0A2C
 .L_802C05DC:
 /* 802C05DC 00289B9C  7E 72 A8 50 */	subf r19, r18, r21
 /* 802C05E0 00289BA0  48 00 04 90 */	b .L_802C0A70
-switch_802C05E4:
+.L_802C05E4:
 /* 802C05E4 00289BA4  88 01 00 74 */	lbz r0, 0x74(r1)
 /* 802C05E8 00289BA8  28 00 00 03 */	cmplwi r0, 3
 /* 802C05EC 00289BAC  40 82 00 18 */	bne .L_802C0604
@@ -1978,7 +1978,7 @@ switch_802C05E4:
 /* 802C06E8 00289CA8  4B FF ED 61 */	bl longlong2str
 /* 802C06EC 00289CAC  2C 03 00 00 */	cmpwi r3, 0
 /* 802C06F0 00289CB0  7C 72 1B 78 */	mr r18, r3
-/* 802C06F4 00289CB4  41 82 03 38 */	beq switch_802C0A2C
+/* 802C06F4 00289CB4  41 82 03 38 */	beq .L_802C0A2C
 /* 802C06F8 00289CB8  48 00 00 40 */	b .L_802C0738
 .L_802C06FC:
 /* 802C06FC 00289CBC  81 01 00 70 */	lwz r8, 0x70(r1)
@@ -1995,11 +1995,11 @@ switch_802C05E4:
 /* 802C0728 00289CE8  4B FF EA E1 */	bl long2str
 /* 802C072C 00289CEC  2C 03 00 00 */	cmpwi r3, 0
 /* 802C0730 00289CF0  7C 72 1B 78 */	mr r18, r3
-/* 802C0734 00289CF4  41 82 02 F8 */	beq switch_802C0A2C
+/* 802C0734 00289CF4  41 82 02 F8 */	beq .L_802C0A2C
 .L_802C0738:
 /* 802C0738 00289CF8  7E 72 A8 50 */	subf r19, r18, r21
 /* 802C073C 00289CFC  48 00 03 34 */	b .L_802C0A70
-switch_802C0740:
+.L_802C0740:
 /* 802C0740 00289D00  88 01 00 74 */	lbz r0, 0x74(r1)
 /* 802C0744 00289D04  28 00 00 09 */	cmplwi r0, 9
 /* 802C0748 00289D08  40 82 00 18 */	bne .L_802C0760
@@ -2027,10 +2027,10 @@ switch_802C0740:
 /* 802C0798 00289D58  4B FF F4 51 */	bl float2str
 /* 802C079C 00289D5C  2C 03 00 00 */	cmpwi r3, 0
 /* 802C07A0 00289D60  7C 72 1B 78 */	mr r18, r3
-/* 802C07A4 00289D64  41 82 02 88 */	beq switch_802C0A2C
+/* 802C07A4 00289D64  41 82 02 88 */	beq .L_802C0A2C
 /* 802C07A8 00289D68  7E 63 A8 50 */	subf r19, r3, r21
 /* 802C07AC 00289D6C  48 00 02 C4 */	b .L_802C0A70
-switch_802C07B0:
+.L_802C07B0:
 /* 802C07B0 00289D70  88 01 00 74 */	lbz r0, 0x74(r1)
 /* 802C07B4 00289D74  28 00 00 09 */	cmplwi r0, 9
 /* 802C07B8 00289D78  40 82 00 18 */	bne .L_802C07D0
@@ -2058,10 +2058,10 @@ switch_802C07B0:
 /* 802C0808 00289DC8  4B FF EE F1 */	bl double2hex
 /* 802C080C 00289DCC  2C 03 00 00 */	cmpwi r3, 0
 /* 802C0810 00289DD0  7C 72 1B 78 */	mr r18, r3
-/* 802C0814 00289DD4  41 82 02 18 */	beq switch_802C0A2C
+/* 802C0814 00289DD4  41 82 02 18 */	beq .L_802C0A2C
 /* 802C0818 00289DD8  7E 63 A8 50 */	subf r19, r3, r21
 /* 802C081C 00289DDC  48 00 02 54 */	b .L_802C0A70
-switch_802C0820:
+.L_802C0820:
 /* 802C0820 00289DE0  88 01 00 74 */	lbz r0, 0x74(r1)
 /* 802C0824 00289DE4  28 00 00 05 */	cmplwi r0, 5
 /* 802C0828 00289DE8  40 82 00 64 */	bne .L_802C088C
@@ -2088,7 +2088,7 @@ switch_802C0820:
 /* 802C0874 00289E34  38 A0 02 00 */	li r5, 0x200
 /* 802C0878 00289E38  4B FF DD D9 */	bl wcstombs
 /* 802C087C 00289E3C  2C 03 00 00 */	cmpwi r3, 0
-/* 802C0880 00289E40  41 80 01 AC */	blt switch_802C0A2C
+/* 802C0880 00289E40  41 80 01 AC */	blt .L_802C0A2C
 /* 802C0884 00289E44  3A 41 00 80 */	addi r18, r1, 0x80
 /* 802C0888 00289E48  48 00 00 14 */	b .L_802C089C
 .L_802C088C:
@@ -2143,7 +2143,7 @@ switch_802C0820:
 /* 802C0938 00289EF8  4B FF 8C 81 */	bl strlen
 /* 802C093C 00289EFC  7C 73 1B 78 */	mr r19, r3
 /* 802C0940 00289F00  48 00 01 30 */	b .L_802C0A70
-switch_802C0944:
+.L_802C0944:
 /* 802C0944 00289F04  7F 63 DB 78 */	mr r3, r27
 /* 802C0948 00289F08  38 80 00 01 */	li r4, 1
 /* 802C094C 00289F0C  4B FF 8C 89 */	bl __va_arg
@@ -2198,7 +2198,7 @@ switch_802C0944:
 /* 802C09F0 00289FB0  7E 20 FE 70 */	srawi r0, r17, 0x1f
 /* 802C09F4 00289FB4  90 03 00 00 */	stw r0, 0(r3)
 /* 802C09F8 00289FB8  48 00 02 14 */	b .L_802C0C0C
-switch_802C09FC:
+.L_802C09FC:
 /* 802C09FC 00289FBC  7F 63 DB 78 */	mr r3, r27
 /* 802C0A00 00289FC0  3A 41 00 80 */	addi r18, r1, 0x80
 /* 802C0A04 00289FC4  38 80 00 01 */	li r4, 1
@@ -2207,12 +2207,12 @@ switch_802C09FC:
 /* 802C0A10 00289FD0  3A 60 00 01 */	li r19, 1
 /* 802C0A14 00289FD4  98 01 00 80 */	stb r0, 0x80(r1)
 /* 802C0A18 00289FD8  48 00 00 58 */	b .L_802C0A70
-switch_802C0A1C:
+.L_802C0A1C:
 /* 802C0A1C 00289FDC  9A E1 00 80 */	stb r23, 0x80(r1)
 /* 802C0A20 00289FE0  3A 41 00 80 */	addi r18, r1, 0x80
 /* 802C0A24 00289FE4  3A 60 00 01 */	li r19, 1
 /* 802C0A28 00289FE8  48 00 00 48 */	b .L_802C0A70
-switch_802C0A2C:
+.L_802C0A2C:
 /* 802C0A2C 00289FEC  7E 03 83 78 */	mr r3, r16
 /* 802C0A30 00289FF0  4B FF 8B 89 */	bl strlen
 /* 802C0A34 00289FF4  2C 03 00 00 */	cmpwi r3, 0
@@ -2889,149 +2889,149 @@ _current_locale:
 
 .global lbl_8053F590
 lbl_8053F590:
-	.4byte switch_802BF070
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF0D0
-	.4byte switch_802BF028
-	.4byte switch_802BF0BC
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BEFE0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF070
-	.4byte switch_802BF1C0
-	.4byte switch_802BF144
-	.4byte switch_802BEFE0
-	.4byte switch_802BF0D0
-	.4byte switch_802BF028
-	.4byte switch_802BF0BC
-	.4byte switch_802BF1C0
-	.4byte switch_802BEFE0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1A8
-	.4byte switch_802BEFE0
-	.4byte switch_802BF120
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF17C
-	.4byte switch_802BF1C0
-	.4byte switch_802BEFE0
-	.4byte switch_802BF1C0
-	.4byte switch_802BF1C0
-	.4byte switch_802BEFE0
+	.4byte .L_802BF070
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF0D0
+	.4byte .L_802BF028
+	.4byte .L_802BF0BC
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BEFE0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF070
+	.4byte .L_802BF1C0
+	.4byte .L_802BF144
+	.4byte .L_802BEFE0
+	.4byte .L_802BF0D0
+	.4byte .L_802BF028
+	.4byte .L_802BF0BC
+	.4byte .L_802BF1C0
+	.4byte .L_802BEFE0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1A8
+	.4byte .L_802BEFE0
+	.4byte .L_802BF120
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF17C
+	.4byte .L_802BF1C0
+	.4byte .L_802BEFE0
+	.4byte .L_802BF1C0
+	.4byte .L_802BF1C0
+	.4byte .L_802BEFE0
 
 .global lbl_8053F670
 lbl_8053F670:
-	.4byte switch_802C0A1C #%
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C07B0 #A
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0740 #E
-	.4byte switch_802C0740 #F
-	.4byte switch_802C0740 #G
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C05E4 #X
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C07B0 #a
-	.4byte switch_802C0A2C
-	.4byte switch_802C09FC #c
-	.4byte switch_802C0488 #d
-	.4byte switch_802C0740 #e
-	.4byte switch_802C0740 #f
-	.4byte switch_802C0740 #g
-	.4byte switch_802C0A2C
-	.4byte switch_802C0488 #i
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0944 #n
-	.4byte switch_802C05E4 #o
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C0820 #s
-	.4byte switch_802C0A2C
-	.4byte switch_802C05E4 #u
-	.4byte switch_802C0A2C
-	.4byte switch_802C0A2C
-	.4byte switch_802C05E4 #x
+	.4byte .L_802C0A1C #%
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C07B0 #A
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0740 #E
+	.4byte .L_802C0740 #F
+	.4byte .L_802C0740 #G
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C05E4 #X
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C07B0 #a
+	.4byte .L_802C0A2C
+	.4byte .L_802C09FC #c
+	.4byte .L_802C0488 #d
+	.4byte .L_802C0740 #e
+	.4byte .L_802C0740 #f
+	.4byte .L_802C0740 #g
+	.4byte .L_802C0A2C
+	.4byte .L_802C0488 #i
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0944 #n
+	.4byte .L_802C05E4 #o
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C0820 #s
+	.4byte .L_802C0A2C
+	.4byte .L_802C05E4 #u
+	.4byte .L_802C0A2C
+	.4byte .L_802C0A2C
+	.4byte .L_802C05E4 #x
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 #needed to align MWRTTI.s

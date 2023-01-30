@@ -629,8 +629,7 @@
 /* 803DAE8C 003A444C  4E 80 00 20 */	blr 
 .endfn CallPrePrimitiveDisplayList__Q34nw4r3g3d6ResShpCFbb
 
-.global CallPrimitiveDisplayList__Q34nw4r3g3d6ResShpCFb
-CallPrimitiveDisplayList__Q34nw4r3g3d6ResShpCFb:
+.fn CallPrimitiveDisplayList__Q34nw4r3g3d6ResShpCFb, global
 /* 803DAE90 003A4450  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DAE94 003A4454  2C 04 00 00 */	cmpwi r4, 0
 /* 803DAE98 003A4458  38 83 00 24 */	addi r4, r3, 0x24
@@ -661,3 +660,4 @@ CallPrimitiveDisplayList__Q34nw4r3g3d6ResShpCFb:
 /* 803DAEE8 003A44A8  90 A3 80 00 */	stw r5, -0x8000(r3)
 /* 803DAEEC 003A44AC  90 83 80 00 */	stw r4, -0x8000(r3)
 /* 803DAEF0 003A44B0  4E 80 00 20 */	blr 
+.endfn CallPrimitiveDisplayList__Q34nw4r3g3d6ResShpCFb

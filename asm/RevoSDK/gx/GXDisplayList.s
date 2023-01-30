@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global GXCallDisplayList
-GXCallDisplayList:
+.fn GXCallDisplayList, global
 /* 8031E470 002E7A30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031E474 002E7A34  7C 08 02 A6 */	mflr r0
 /* 8031E478 002E7A38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -36,3 +35,4 @@ GXCallDisplayList:
 /* 8031E4D8 002E7A98  7C 08 03 A6 */	mtlr r0
 /* 8031E4DC 002E7A9C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031E4E0 002E7AA0  4E 80 00 20 */	blr 
+.endfn GXCallDisplayList

@@ -42,8 +42,7 @@
 /* 8041964C 003E2C0C  4E 80 00 20 */	blr
 .endfn GetBaseAddress__Q44nw4r3snd6detail13SeqFileReaderCFv
 
-.global ReadOffsetByLabel__Q44nw4r3snd6detail13SeqFileReaderCFPCcPUl
-ReadOffsetByLabel__Q44nw4r3snd6detail13SeqFileReaderCFPCcPUl:
+.fn ReadOffsetByLabel__Q44nw4r3snd6detail13SeqFileReaderCFPCcPUl, global
 /* 80419650 003E2C10  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80419654 003E2C14  7C 08 02 A6 */	mflr r0
 /* 80419658 003E2C18  90 01 00 34 */	stw r0, 0x34(r1)
@@ -95,3 +94,4 @@ ReadOffsetByLabel__Q44nw4r3snd6detail13SeqFileReaderCFPCcPUl:
 /* 804196FC 003E2CBC  7C 08 03 A6 */	mtlr r0
 /* 80419700 003E2CC0  38 21 00 30 */	addi r1, r1, 0x30
 /* 80419704 003E2CC4  4E 80 00 20 */	blr
+.endfn ReadOffsetByLabel__Q44nw4r3snd6detail13SeqFileReaderCFPCcPUl

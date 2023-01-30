@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPS_CheckDelim
-MPS_CheckDelim:
+.fn MPS_CheckDelim, global
 /* 803BCA04 00385FC4  88 03 00 00 */	lbz r0, 0(r3)
 /* 803BCA08 00385FC8  2C 00 00 00 */	cmpwi r0, 0
 /* 803BCA0C 00385FCC  40 82 00 6C */	bne .L_803BCA78
@@ -41,3 +40,4 @@ MPS_CheckDelim:
 .L_803BCA78:
 /* 803BCA78 00386038  38 60 00 00 */	li r3, 0
 /* 803BCA7C 0038603C  4E 80 00 20 */	blr 
+.endfn MPS_CheckDelim

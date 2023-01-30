@@ -81,8 +81,7 @@
 .endfn MEMRemoveListObject
 
 .balign 16, 0
-.global MEMGetNextListObject
-MEMGetNextListObject:
+.fn MEMGetNextListObject, global
 /* 80349BD0 00313190  2C 04 00 00 */	cmpwi r4, 0
 /* 80349BD4 00313194  40 82 00 0C */	bne .L_80349BE0
 /* 80349BD8 00313198  80 63 00 00 */	lwz r3, 0(r3)
@@ -92,3 +91,4 @@ MEMGetNextListObject:
 /* 80349BE4 003131A4  7C 64 02 14 */	add r3, r4, r0
 /* 80349BE8 003131A8  80 63 00 04 */	lwz r3, 4(r3)
 /* 80349BEC 003131AC  4E 80 00 20 */	blr 
+.endfn MEMGetNextListObject

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global DetachSound__Q34nw4r3snd14SeqSoundHandleFv
-DetachSound__Q34nw4r3snd14SeqSoundHandleFv:
+.fn DetachSound__Q34nw4r3snd14SeqSoundHandleFv, global
 /* 8041B304 003E48C4  80 83 00 00 */	lwz r4, 0(r3)
 /* 8041B308 003E48C8  2C 04 00 00 */	cmpwi r4, 0
 /* 8041B30C 003E48CC  41 82 00 18 */	beq .L_8041B324
@@ -19,3 +18,4 @@ DetachSound__Q34nw4r3snd14SeqSoundHandleFv:
 /* 8041B330 003E48F0  38 00 00 00 */	li r0, 0
 /* 8041B334 003E48F4  90 03 00 00 */	stw r0, 0(r3)
 /* 8041B338 003E48F8  4E 80 00 20 */	blr 
+.endfn DetachSound__Q34nw4r3snd14SeqSoundHandleFv

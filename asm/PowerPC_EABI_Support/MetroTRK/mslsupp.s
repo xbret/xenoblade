@@ -75,8 +75,7 @@
 .endfn __write_file
 
 
-.global __access_file
-__access_file:
+.fn __access_file, global
 /* 802CECF4 002982B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CECF8 002982B8  7C 08 02 A6 */	mflr r0
 /* 802CECFC 002982BC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -125,3 +124,4 @@ __access_file:
 /* 802CED94 00298354  7C 08 03 A6 */	mtlr r0
 /* 802CED98 00298358  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CED9C 0029835C  4E 80 00 20 */	blr 
+.endfn __access_file

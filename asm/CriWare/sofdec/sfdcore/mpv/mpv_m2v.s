@@ -37,6 +37,6 @@
 /* 803AEFF0 003785B0  4E 80 00 20 */	blr 
 .endfn MPVM2V_DecodeFrm
 
-.global MPVM2V_RequestStop
-MPVM2V_RequestStop:
+.fn MPVM2V_RequestStop, global
 /* 803AEFF4 003785B4  4E 80 00 20 */	blr 
+.endfn MPVM2V_RequestStop

@@ -745,7 +745,7 @@
 /* 80253BC4 0021D184  3B 20 00 02 */	li r25, 2
 /* 80253BC8 0021D188  3E 80 80 54 */	lis r20, lbl_8053AAC8@ha
 /* 80253BCC 0021D18C  48 00 00 80 */	b .L_80253C4C
-switch_80253BD0:
+.L_80253BD0:
 /* 80253BD0 0021D190  57 35 06 3E */	clrlwi r21, r25, 0x18
 /* 80253BD4 0021D194  3A C0 00 01 */	li r22, 1
 /* 80253BD8 0021D198  48 00 00 68 */	b .L_80253C40
@@ -773,13 +773,13 @@ switch_80253BD0:
 /* 80253C2C 0021D1EC  7C 7F 02 14 */	add r3, r31, r0
 /* 80253C30 0021D1F0  9B 23 00 04 */	stb r25, 4(r3)
 /* 80253C34 0021D1F4  98 9F 00 00 */	stb r4, 0(r31)
-/* 80253C38 0021D1F8  48 00 00 10 */	b switch_80253C48
+/* 80253C38 0021D1F8  48 00 00 10 */	b .L_80253C48
 .L_80253C3C:
 /* 80253C3C 0021D1FC  3A D6 00 01 */	addi r22, r22, 1
 .L_80253C40:
 /* 80253C40 0021D200  7C 16 F0 00 */	cmpw r22, r30
 /* 80253C44 0021D204  40 81 FF 98 */	ble .L_80253BDC
-switch_80253C48:
+.L_80253C48:
 /* 80253C48 0021D208  3B 39 00 01 */	addi r25, r25, 1
 .L_80253C4C:
 /* 80253C4C 0021D20C  57 20 06 3E */	clrlwi r0, r25, 0x18
@@ -1614,32 +1614,32 @@ switch_80253C48:
 
 .global lbl_8053AAC8
 lbl_8053AAC8:
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253C48
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253C48
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253C48
-	.4byte switch_80253BD0
-	.4byte switch_80253C48
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
-	.4byte switch_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253C48
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253C48
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253C48
+	.4byte .L_80253BD0
+	.4byte .L_80253C48
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

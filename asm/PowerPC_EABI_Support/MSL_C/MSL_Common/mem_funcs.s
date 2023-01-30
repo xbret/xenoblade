@@ -167,8 +167,7 @@
 /* 802BEA98 00288058  4E 80 00 20 */	blr 
 .endfn __copy_longs_unaligned
 
-.global __copy_longs_rev_unaligned
-__copy_longs_rev_unaligned:
+.fn __copy_longs_rev_unaligned, global
 /* 802BEA9C 0028805C  7D 83 2A 14 */	add r12, r3, r5
 /* 802BEAA0 00288060  7C 84 2A 14 */	add r4, r4, r5
 /* 802BEAA4 00288064  55 83 07 BF */	clrlwi. r3, r12, 0x1e
@@ -217,3 +216,4 @@ __copy_longs_rev_unaligned:
 /* 802BEB3C 002880FC  9C 0C FF FF */	stbu r0, -1(r12)
 /* 802BEB40 00288100  40 82 FF F4 */	bne .L_802BEB34
 /* 802BEB44 00288104  4E 80 00 20 */	blr 
+.endfn __copy_longs_rev_unaligned

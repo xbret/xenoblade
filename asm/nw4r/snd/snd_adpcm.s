@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global DecodeDspAdpcm__Q34nw4r3snd6detailFP10_AXPBADPCMUc
-DecodeDspAdpcm__Q34nw4r3snd6detailFP10_AXPBADPCMUc:
+.fn DecodeDspAdpcm__Q34nw4r3snd6detailFP10_AXPBADPCMUc, global
 /* 8042B384 003F4944  A0 E3 00 22 */	lhz r7, 0x22(r3)
 /* 8042B388 003F4948  54 80 63 26 */	rlwinm r0, r4, 0xc, 0xc, 0x13
 /* 8042B38C 003F494C  A1 23 00 24 */	lhz r9, 0x24(r3)
@@ -41,3 +40,4 @@ DecodeDspAdpcm__Q34nw4r3snd6detailFP10_AXPBADPCMUc:
 /* 8042B404 003F49C4  B0 E3 00 24 */	sth r7, 0x24(r3)
 /* 8042B408 003F49C8  7C E3 3B 78 */	mr r3, r7
 /* 8042B40C 003F49CC  4E 80 00 20 */	blr 
+.endfn DecodeDspAdpcm__Q34nw4r3snd6detailFP10_AXPBADPCMUc

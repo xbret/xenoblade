@@ -7,8 +7,7 @@
 /* 802C4CE0 0028E2A0  4B D3 F3 20 */	b memcpy
 .endfn wmemcpy
 
-.global wmemchr
-wmemchr:
+.fn wmemchr, global
 /* 802C4CE4 0028E2A4  7C A9 03 A6 */	mtctr r5
 /* 802C4CE8 0028E2A8  2C 05 00 00 */	cmpwi r5, 0
 /* 802C4CEC 0028E2AC  41 82 00 18 */	beq .L_802C4D04
@@ -21,3 +20,4 @@ wmemchr:
 .L_802C4D04:
 /* 802C4D04 0028E2C4  38 60 00 00 */	li r3, 0
 /* 802C4D08 0028E2C8  4E 80 00 20 */	blr 
+.endfn wmemchr

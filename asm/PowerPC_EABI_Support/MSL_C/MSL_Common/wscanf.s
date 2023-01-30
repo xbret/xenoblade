@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __wStringRead
-__wStringRead:
+.fn __wStringRead, global
 /* 802C6F2C 002904EC  2C 05 00 00 */	cmpwi r5, 0
 /* 802C6F30 002904F0  41 82 00 18 */	beq .L_802C6F48
 /* 802C6F34 002904F4  2C 05 00 01 */	cmpwi r5, 1
@@ -47,3 +46,4 @@ __wStringRead:
 .L_802C6FB4:
 /* 802C6FB4 00290574  38 60 00 00 */	li r3, 0
 /* 802C6FB8 00290578  4E 80 00 20 */	blr 
+.endfn __wStringRead

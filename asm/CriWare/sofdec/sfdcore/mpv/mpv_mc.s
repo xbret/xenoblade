@@ -28,7 +28,7 @@
 /* 803A8A58 00372018  7C 84 00 2E */	lwzx r4, r4, r0
 /* 803A8A5C 0037201C  7C 89 03 A6 */	mtctr r4
 /* 803A8A60 00372020  4E 80 04 20 */	bctr
-switch_803A8A64:
+.L_803A8A64:
 /* 803A8A64 00372024  80 03 00 20 */	lwz r0, 0x20(r3)
 /* 803A8A68 00372028  7C E8 3B 78 */	mr r8, r7
 /* 803A8A6C 0037202C  80 63 00 18 */	lwz r3, 0x18(r3)
@@ -49,7 +49,7 @@ switch_803A8A64:
 /* 803A8AA8 00372068  D8 C3 00 30 */	stfd f6, 0x30(r3)
 /* 803A8AAC 0037206C  D8 E3 00 38 */	stfd f7, 0x38(r3)
 /* 803A8AB0 00372070  4E 80 00 20 */	blr
-switch_803A8AB4:
+.L_803A8AB4:
 /* 803A8AB4 00372074  80 03 00 20 */	lwz r0, 0x20(r3)
 /* 803A8AB8 00372078  7C E4 3B 78 */	mr r4, r7
 /* 803A8ABC 0037207C  80 63 00 18 */	lwz r3, 0x18(r3)
@@ -86,7 +86,7 @@ switch_803A8AB4:
 /* 803A8B38 003720F8  91 03 00 38 */	stw r8, 0x38(r3)
 /* 803A8B3C 003720FC  90 E3 00 3C */	stw r7, 0x3c(r3)
 /* 803A8B40 00372100  4E 80 00 20 */	blr
-switch_803A8B44:
+.L_803A8B44:
 /* 803A8B44 00372104  81 07 00 02 */	lwz r8, 2(r7)
 /* 803A8B48 00372108  80 03 00 20 */	lwz r0, 0x20(r3)
 /* 803A8B4C 0037210C  A0 C7 00 06 */	lhz r6, 6(r7)
@@ -162,7 +162,7 @@ switch_803A8B44:
 /* 803A8C64 00372224  90 03 00 38 */	stw r0, 0x38(r3)
 /* 803A8C68 00372228  90 C3 00 3C */	stw r6, 0x3c(r3)
 /* 803A8C6C 0037222C  4E 80 00 20 */	blr
-switch_803A8C70:
+.L_803A8C70:
 /* 803A8C70 00372230  80 03 00 20 */	lwz r0, 0x20(r3)
 /* 803A8C74 00372234  80 63 00 18 */	lwz r3, 0x18(r3)
 /* 803A8C78 00372238  7C 07 02 2C */	dcbt r7, r0
@@ -244,7 +244,7 @@ switch_803A8C70:
 /* 803A8DA8 00372368  90 03 00 38 */	stw r0, 0x38(r3)
 /* 803A8DAC 0037236C  90 C3 00 3C */	stw r6, 0x3c(r3)
 /* 803A8DB0 00372370  4E 80 00 20 */	blr
-switch_803A8DB4:
+.L_803A8DB4:
 /* 803A8DB4 00372374  80 03 00 20 */	lwz r0, 0x20(r3)
 /* 803A8DB8 00372378  80 63 00 18 */	lwz r3, 0x18(r3)
 /* 803A8DBC 0037237C  7C 07 02 2C */	dcbt r7, r0
@@ -889,11 +889,11 @@ lbl_8051F820:
 
 .global lbl_8056A918
 lbl_8056A918:
-	.4byte switch_803A8A64
-	.4byte switch_803A8C70
-	.4byte switch_803A8B44
-	.4byte switch_803A8DB4
-	.4byte switch_803A8AB4
-	.4byte switch_803A8C70
-	.4byte switch_803A8B44
-	.4byte switch_803A8DB4
+	.4byte .L_803A8A64
+	.4byte .L_803A8C70
+	.4byte .L_803A8B44
+	.4byte .L_803A8DB4
+	.4byte .L_803A8AB4
+	.4byte .L_803A8C70
+	.4byte .L_803A8B44
+	.4byte .L_803A8DB4

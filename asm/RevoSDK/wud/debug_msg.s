@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global WUD_DEBUGPrint
-WUD_DEBUGPrint:
+.fn WUD_DEBUGPrint, global
 /* 8037C5D0 00345B90  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8037C5D4 00345B94  40 86 00 24 */	bne cr1, .L_8037C5F8
 /* 8037C5D8 00345B98  D8 21 00 28 */	stfd f1, 0x28(r1)
@@ -26,3 +25,4 @@ WUD_DEBUGPrint:
 /* 8037C614 00345BD4  91 41 00 24 */	stw r10, 0x24(r1)
 /* 8037C618 00345BD8  38 21 00 70 */	addi r1, r1, 0x70
 /* 8037C61C 00345BDC  4E 80 00 20 */	blr 
+.endfn WUD_DEBUGPrint

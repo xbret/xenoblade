@@ -153,8 +153,7 @@
 .endfn OSReceiveMessage
 
 .balign 16, 0
-.global OSJamMessage
-OSJamMessage:
+.fn OSJamMessage, global
 /* 803593B0 00322970  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803593B4 00322974  7C 08 02 A6 */	mflr r0
 /* 803593B8 00322978  90 01 00 24 */	stw r0, 0x24(r1)
@@ -211,3 +210,4 @@ OSJamMessage:
 /* 80359474 00322A34  7C 08 03 A6 */	mtlr r0
 /* 80359478 00322A38  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035947C 00322A3C  4E 80 00 20 */	blr 
+.endfn OSJamMessage

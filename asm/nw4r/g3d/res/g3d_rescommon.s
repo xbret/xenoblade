@@ -79,8 +79,7 @@
 /* 803D7908 003A0EC8  4E 80 00 20 */	blr 
 .endfn ResWriteCPCmd__Q34nw4r3g3d6detailFPUcUcUl
 
-.global ResWriteSSMask__Q34nw4r3g3d6detailFPUcUl
-ResWriteSSMask__Q34nw4r3g3d6detailFPUcUl:
+.fn ResWriteSSMask__Q34nw4r3g3d6detailFPUcUl, global
 /* 803D790C 003A0ECC  88 C3 00 02 */	lbz r6, 2(r3)
 /* 803D7910 003A0ED0  38 00 00 61 */	li r0, 0x61
 /* 803D7914 003A0ED4  88 A3 00 03 */	lbz r5, 3(r3)
@@ -102,3 +101,4 @@ ResWriteSSMask__Q34nw4r3g3d6detailFPUcUl:
 /* 803D7954 003A0F14  98 83 00 02 */	stb r4, 2(r3)
 /* 803D7958 003A0F18  98 03 00 03 */	stb r0, 3(r3)
 /* 803D795C 003A0F1C  4E 80 00 20 */	blr 
+.endfn ResWriteSSMask__Q34nw4r3g3d6detailFPUcUl

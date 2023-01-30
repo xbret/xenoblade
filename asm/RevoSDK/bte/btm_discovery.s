@@ -85,6 +85,6 @@
 /* 802E83C4 002B1984  4E 80 00 20 */	blr 
 .endfn btm_discovery_db_reset
 
-.global btm_discovery_timeout
-btm_discovery_timeout:
+.fn btm_discovery_timeout, global
 /* 802E83C8 002B1988  4E 80 00 20 */	blr
+.endfn btm_discovery_timeout

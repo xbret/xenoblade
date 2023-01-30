@@ -3201,14 +3201,14 @@
 .L_8023EB10:
 /* 8023EB10 002080D0  38 04 FF FD */	addi r0, r4, -3
 /* 8023EB14 002080D4  28 00 00 23 */	cmplwi r0, 0x23
-/* 8023EB18 002080D8  41 81 00 48 */	bgt switch_8023EB60
+/* 8023EB18 002080D8  41 81 00 48 */	bgt .L_8023EB60
 /* 8023EB1C 002080DC  3C A0 80 54 */	lis r5, lbl_8053A2E4@ha
 /* 8023EB20 002080E0  54 00 10 3A */	slwi r0, r0, 2
 /* 8023EB24 002080E4  38 A5 A2 E4 */	addi r5, r5, lbl_8053A2E4@l
 /* 8023EB28 002080E8  7C A5 00 2E */	lwzx r5, r5, r0
 /* 8023EB2C 002080EC  7C A9 03 A6 */	mtctr r5
 /* 8023EB30 002080F0  4E 80 04 20 */	bctr
-switch_8023EB34:
+.L_8023EB34:
 /* 8023EB34 002080F4  80 63 01 80 */	lwz r3, 0x180(r3)
 /* 8023EB38 002080F8  54 60 07 FF */	clrlwi. r0, r3, 0x1f
 /* 8023EB3C 002080FC  40 82 00 0C */	bne .L_8023EB48
@@ -3222,13 +3222,13 @@ switch_8023EB34:
 /* 8023EB54 00208114  38 00 00 02 */	li r0, 2
 /* 8023EB58 00208118  90 06 00 00 */	stw r0, 0(r6)
 /* 8023EB5C 0020811C  4E 80 00 20 */	blr
-switch_8023EB60:
+.L_8023EB60:
 /* 8023EB60 00208120  38 04 FF FA */	addi r0, r4, -6
 /* 8023EB64 00208124  28 00 00 01 */	cmplwi r0, 1
 /* 8023EB68 00208128  4D 81 00 20 */	bgtlr 
 /* 8023EB6C 0020812C  38 00 00 04 */	li r0, 4
 /* 8023EB70 00208130  90 06 00 00 */	stw r0, 0(r6)
-switch_8023EB74:
+.L_8023EB74:
 /* 8023EB74 00208134  4E 80 00 20 */	blr 
 .endfn func_8023EABC
 
@@ -5174,42 +5174,42 @@ lbl_8053A2D8:
 
 .global lbl_8053A2E4
 lbl_8053A2E4:
-	.4byte switch_8023EB74
-	.4byte switch_8023EB34
-	.4byte switch_8023EB34
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB74
-	.4byte switch_8023EB74
-	.4byte switch_8023EB60
-	.4byte switch_8023EB34
-	.4byte switch_8023EB34
-	.4byte switch_8023EB34
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB74
-	.4byte switch_8023EB74
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB60
-	.4byte switch_8023EB34
+	.4byte .L_8023EB74
+	.4byte .L_8023EB34
+	.4byte .L_8023EB34
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB74
+	.4byte .L_8023EB74
+	.4byte .L_8023EB60
+	.4byte .L_8023EB34
+	.4byte .L_8023EB34
+	.4byte .L_8023EB34
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB74
+	.4byte .L_8023EB74
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB60
+	.4byte .L_8023EB34
 
 
 .global __vt__cf_CfNandManager

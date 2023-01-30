@@ -526,8 +526,7 @@
 .endfn MEMAllocFromExpHeapEx
 
 .balign 16, 0
-.global MEMFreeToExpHeap
-MEMFreeToExpHeap:
+.fn MEMFreeToExpHeap, global
 /* 803496A0 00312C60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803496A4 00312C64  7C 08 02 A6 */	mflr r0
 /* 803496A8 00312C68  2C 04 00 00 */	cmpwi r4, 0
@@ -583,3 +582,4 @@ MEMFreeToExpHeap:
 /* 80349758 00312D18  7C 08 03 A6 */	mtlr r0
 /* 8034975C 00312D1C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80349760 00312D20  4E 80 00 20 */	blr 
+.endfn MEMFreeToExpHeap

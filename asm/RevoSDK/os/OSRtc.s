@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global WriteSramCallback
-WriteSramCallback:
+.fn WriteSramCallback, global
 /* 8035a800  94 21 ff e0 */		stwu r1, -0x20(r1)
 /* 8035a804  7c 08 02 a6 */		mflr r0
 /* 8035a808  3c c0 80 5d */		lis r6, lbl_805D4700@ha
@@ -87,6 +86,7 @@ WriteSramCallback:
 /* 8035a92c  7c 08 03 a6 */		mtlr r0
 /* 8035a930  38 21 00 20 */		addi r1,r1,32
 /* 8035a934  4e 80 00 20 */		blr
+.endfn WriteSramCallback
 .4byte 0
 .4byte 0
 

@@ -289,8 +289,7 @@
 .endfn func_80341DC0
 
 .balign 16, 0
-.global __HBMSYNSetupSample
-__HBMSYNSetupSample:
+.fn __HBMSYNSetupSample, global
 /* 80341ED0 0030B490  80 83 00 18 */	lwz r4, 0x18(r3)
 /* 80341ED4 0030B494  A0 04 00 00 */	lhz r0, 0(r4)
 /* 80341ED8 0030B498  2C 00 00 00 */	cmpwi r0, 0
@@ -307,3 +306,4 @@ __HBMSYNSetupSample:
 .L_80341EFC:
 /* 80341EFC 0030B4BC  4B FF FE C4 */	b func_80341DC0
 /* 80341F00 0030B4C0  4E 80 00 20 */	blr
+.endfn __HBMSYNSetupSample

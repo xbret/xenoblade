@@ -220,74 +220,74 @@
 .L_8042DDFC:
 /* 8042DDFC 003F73BC  80 1E 00 0C */	lwz r0, 0xc(r30)
 /* 8042DE00 003F73C0  28 00 00 0C */	cmplwi r0, 0xc
-/* 8042DE04 003F73C4  41 81 01 34 */	bgt switch_8042DF38
+/* 8042DE04 003F73C4  41 81 01 34 */	bgt .L_8042DF38
 /* 8042DE08 003F73C8  38 7C E8 C8 */	addi r3, r28, lbl_8056E8C8@l
 /* 8042DE0C 003F73CC  54 00 10 3A */	slwi r0, r0, 2
 /* 8042DE10 003F73D0  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8042DE14 003F73D4  7C 69 03 A6 */	mtctr r3
 /* 8042DE18 003F73D8  4E 80 04 20 */	bctr 
-switch_8042DE1C:
+.L_8042DE1C:
 /* 8042DE1C 003F73DC  7F C3 F3 78 */	mr r3, r30
 /* 8042DE20 003F73E0  7F 64 DB 78 */	mr r4, r27
 /* 8042DE24 003F73E4  4B FF F2 55 */	bl ConstructOpDispatch__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 /* 8042DE28 003F73E8  7C 7F 1B 78 */	mr r31, r3
 /* 8042DE2C 003F73EC  48 00 01 1C */	b .L_8042DF48
-switch_8042DE30:
+.L_8042DE30:
 /* 8042DE30 003F73F0  7F C3 F3 78 */	mr r3, r30
 /* 8042DE34 003F73F4  7F 64 DB 78 */	mr r4, r27
 /* 8042DE38 003F73F8  4B FF F4 39 */	bl ConstructOpAnalyzeFileHeader__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 /* 8042DE3C 003F73FC  7C 7F 1B 78 */	mr r31, r3
 /* 8042DE40 003F7400  48 00 01 08 */	b .L_8042DF48
-switch_8042DE44:
+.L_8042DE44:
 /* 8042DE44 003F7404  7F A3 EB 78 */	mr r3, r29
 /* 8042DE48 003F7408  7F C4 F3 78 */	mr r4, r30
 /* 8042DE4C 003F740C  7F 65 DB 78 */	mr r5, r27
 /* 8042DE50 003F7410  48 00 0B 35 */	bl ConstructOpAnalyzeGLGRPacked__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 /* 8042DE54 003F7414  7C 7F 1B 78 */	mr r31, r3
 /* 8042DE58 003F7418  48 00 00 F0 */	b .L_8042DF48
-switch_8042DE5C:
+.L_8042DE5C:
 /* 8042DE5C 003F741C  7F C3 F3 78 */	mr r3, r30
 /* 8042DE60 003F7420  7F 64 DB 78 */	mr r4, r27
 /* 8042DE64 003F7424  4B FF F5 41 */	bl ConstructOpAnalyzeFINF__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 /* 8042DE68 003F7428  7C 7F 1B 78 */	mr r31, r3
 /* 8042DE6C 003F742C  48 00 00 DC */	b .L_8042DF48
-switch_8042DE70:
+.L_8042DE70:
 /* 8042DE70 003F7430  7F C3 F3 78 */	mr r3, r30
 /* 8042DE74 003F7434  7F 64 DB 78 */	mr r4, r27
 /* 8042DE78 003F7438  4B FF F5 75 */	bl ConstructOpAnalyzeCMAP__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 /* 8042DE7C 003F743C  7C 7F 1B 78 */	mr r31, r3
 /* 8042DE80 003F7440  48 00 00 C8 */	b .L_8042DF48
-switch_8042DE84:
+.L_8042DE84:
 /* 8042DE84 003F7444  7F C3 F3 78 */	mr r3, r30
 /* 8042DE88 003F7448  7F 64 DB 78 */	mr r4, r27
 /* 8042DE8C 003F744C  4B FF F5 C5 */	bl ConstructOpAnalyzeCWDH__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 /* 8042DE90 003F7450  7C 7F 1B 78 */	mr r31, r3
 /* 8042DE94 003F7454  48 00 00 B4 */	b .L_8042DF48
-switch_8042DE98:
+.L_8042DE98:
 /* 8042DE98 003F7458  7F C3 F3 78 */	mr r3, r30
 /* 8042DE9C 003F745C  7F 64 DB 78 */	mr r4, r27
 /* 8042DEA0 003F7460  4B FF F8 21 */	bl ConstructOpCopy__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 /* 8042DEA4 003F7464  7C 7F 1B 78 */	mr r31, r3
 /* 8042DEA8 003F7468  48 00 00 A0 */	b .L_8042DF48
-switch_8042DEAC:
+.L_8042DEAC:
 /* 8042DEAC 003F746C  7F C3 F3 78 */	mr r3, r30
 /* 8042DEB0 003F7470  7F 64 DB 78 */	mr r4, r27
 /* 8042DEB4 003F7474  4B FF F9 05 */	bl ConstructOpSkip__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 /* 8042DEB8 003F7478  7C 7F 1B 78 */	mr r31, r3
 /* 8042DEBC 003F747C  48 00 00 8C */	b .L_8042DF48
-switch_8042DEC0:
+.L_8042DEC0:
 /* 8042DEC0 003F7480  7F C3 F3 78 */	mr r3, r30
 /* 8042DEC4 003F7484  7F 64 DB 78 */	mr r4, r27
 /* 8042DEC8 003F7488  4B FF F9 E9 */	bl ConstructOpFatalError__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 /* 8042DECC 003F748C  7C 7F 1B 78 */	mr r31, r3
 /* 8042DED0 003F7490  48 00 00 78 */	b .L_8042DF48
-switch_8042DED4:
+.L_8042DED4:
 /* 8042DED4 003F7494  7F C3 F3 78 */	mr r3, r30
 /* 8042DED8 003F7498  7F 64 DB 78 */	mr r4, r27
 /* 8042DEDC 003F749C  4B FF F5 D9 */	bl ConstructOpAnalyzeTGLP__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 /* 8042DEE0 003F74A0  7C 7F 1B 78 */	mr r31, r3
 /* 8042DEE4 003F74A4  48 00 00 64 */	b .L_8042DF48
-switch_8042DEE8:
+.L_8042DEE8:
 /* 8042DEE8 003F74A8  7F C3 F3 78 */	mr r3, r30
 /* 8042DEEC 003F74AC  7F 64 DB 78 */	mr r4, r27
 /* 8042DEF0 003F74B0  48 00 0E F5 */	bl ConstructOpPrepairCopyPackedSheet__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
@@ -304,12 +304,12 @@ switch_8042DEE8:
 /* 8042DF1C 003F74DC  38 03 00 01 */	addi r0, r3, 1
 /* 8042DF20 003F74E0  B0 1D 00 28 */	sth r0, 0x28(r29)
 /* 8042DF24 003F74E4  48 00 00 24 */	b .L_8042DF48
-switch_8042DF28:
+.L_8042DF28:
 /* 8042DF28 003F74E8  38 00 00 0C */	li r0, 0xc
 /* 8042DF2C 003F74EC  38 60 00 02 */	li r3, 2
 /* 8042DF30 003F74F0  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 8042DF34 003F74F4  48 00 01 00 */	b .L_8042E034
-switch_8042DF38:
+.L_8042DF38:
 /* 8042DF38 003F74F8  38 00 00 0C */	li r0, 0xc
 /* 8042DF3C 003F74FC  38 60 00 02 */	li r3, 2
 /* 8042DF40 003F7500  90 1E 00 0C */	stw r0, 0xc(r30)
@@ -1425,19 +1425,19 @@ switch_8042DF38:
 
 .global lbl_8056E8C8
 lbl_8056E8C8:
-	.4byte switch_8042DE1C
-	.4byte switch_8042DE30
-	.4byte switch_8042DE44
-	.4byte switch_8042DE5C
-	.4byte switch_8042DE70
-	.4byte switch_8042DE84
-	.4byte switch_8042DED4
-	.4byte switch_8042DF28
-	.4byte switch_8042DEE8
-	.4byte switch_8042DE98
-	.4byte switch_8042DEAC
-	.4byte switch_8042DF38
-	.4byte switch_8042DEC0
+	.4byte .L_8042DE1C
+	.4byte .L_8042DE30
+	.4byte .L_8042DE44
+	.4byte .L_8042DE5C
+	.4byte .L_8042DE70
+	.4byte .L_8042DE84
+	.4byte .L_8042DED4
+	.4byte .L_8042DF28
+	.4byte .L_8042DEE8
+	.4byte .L_8042DE98
+	.4byte .L_8042DEAC
+	.4byte .L_8042DF38
+	.4byte .L_8042DEC0
 
 .global lbl_8056E8FC
 lbl_8056E8FC:

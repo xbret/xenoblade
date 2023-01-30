@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global DVDCompareDiskID
-DVDCompareDiskID:
+.fn DVDCompareDiskID, global
 /* 80310110 002D96D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80310114 002D96D4  7C 08 02 A6 */	mflr r0
 /* 80310118 002D96D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -71,3 +70,4 @@ DVDCompareDiskID:
 /* 803101F4 002D97B4  7C 08 03 A6 */	mtlr r0
 /* 803101F8 002D97B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803101FC 002D97BC  4E 80 00 20 */	blr 
+.endfn DVDCompareDiskID
